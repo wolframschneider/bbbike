@@ -33,10 +33,9 @@ Mozartstr.: Asphalt	Q0 10462,-3149 10470,-3169 10460,-3199
 Eiswerder (Brücken, Straßen): Asphalt	Q0 -2675,15513 -2453,15476 -2447,15476 -2427,15493 -2324,15590 -2338,15636 -2150,15740 -2118,15709 -2038,15683 -1978,15684 -1923,15684 -1848,15686 -1835,15693 -1706,15768
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-spandau/presse/archiv/20051011.1220.31015.html
 Eiswerderstr.: Asphalt	Q0 -2883,15571 -2783,15538 -2702,15517 -2675,15513
-#: XXX ist hier mittlerweile asphaltiert oder existieren hier Radwege/-spuren?
-#: XXX Baumaßnahme 6.9 (Realisierung bis 2010)
-#: osm_watch: way id="23044831" version="12"
-Neue Kreisstr.: Kopfsteinpflaster	Q2 -7191,-1023 -7271,-1102 -7376,-1226 -7498,-1355 -7592,-1402
+# REMOVED --- #: XXX ist hier mittlerweile asphaltiert oder existieren hier Radwege/-spuren? --- #: XXX Baumaßnahme 6.9 (Realisierung bis 2010) --- #: osm_watch: way id="23044831" version="12"
+Neue Kreisstr.: Kopfsteinpflaster	Q2; -7619,-1406 -7482,-1319 -7387,-1218 -7310,-1131 -7191,-1023
+Neue Kreisstr.: Asphaltstreifen	Q0-; -7191,-1023 -7310,-1131 -7387,-1218 -7482,-1319 -7619,-1406
 Markgrafendamm: Asphalt	Q0 14558,10264 14608,10409 14641,10552 14675,10693 14671,10751 14674,10811
 Markgrafendamm/Hauptstr.: asphaltiert	Q0 14674,10811 14717,10855 14810,10832 14904,10812
 # REMOVED --- #: next_check_id: HAUPTSTR-2015 vvv --- #: XXX nach den Bauarbeiten vermutlich asphaltiert mit Radwegen oder -spuren vvv --- #: source_id: 2147339565 vvv --- #: last_checked: 2016-08-25 vvv --- #: next_check: 2016-08-29 vvv
@@ -84,7 +83,7 @@ Sinsheimer Weg: Betonstraße	Q0 13774,8849 13837,8932
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2018-2022) vvv
 #: by: http://www.berliner-woche.de/neukoelln/verkehr/verbesserung-fuer-radler-donaustrasse-erhaelt-asphaltdecke-d117499.html
 #: check_frequency: 60d vvv
-#: last_checked: 2017-12-22
+#: last_checked: 2018-02-20
 Donaustr.: schlechtes bis mäßiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895 12394,8729 12549,8616 12649,8535
 #: last_checked: 2018-02-15
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
@@ -1545,6 +1544,7 @@ Am Teltowkanal: Parkweg, teilweise mit schmalem Verbundsteinradweg	Q1 7994,4430 
 Am Teltowkanal: Parkweg	Q1 8784,5095 8881,5143 9171,5263 9196,5272
 Unterführung Emil-Schulz-Brücke: unbefestigt, Schotter	Q2- 4274,2717 4272,2704 4247,2652 4209,2641
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6416
+#: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6472
 #: XXX hat sich die Qualität verschlechtert?
 Teltowkanal: Parkweg, OK	Q1 4209,2641 4053,2300 3971,2106 3698,1450
 #: by: taztaz
@@ -2048,7 +2048,7 @@ Am Johannistisch: Verbundsteinpflaster	Q1 10029,9989 10111,9942
 (Markgrafendamm - Modersohnstr.; über das DB-Gelände): mäßiges bis schlechtes Kopfsteinpflaster	Q3+ 14558,10819 14352,10874
 #: next_check_id: DBWERKSTRASSE-2017
 #: XXX wann wird hier die letzte Deckschicht erstellt? vvv
-#: last_checked: 2018-02-15 vvv
+#: last_checked: 2018-02-19 vvv
 #: check_frequency: 14d vvv
 (Markgrafendamm - Modersohnstr.; über das DB-Gelände): Asphalt, letzte Deckschicht fehlt	Q1 14352,10874 14231,10907 14141,10931 14076,10949
 (Markgrafendamm - Modersohnstr.; über das DB-Gelände): Asphalt, letzte Deckschicht fehlt	Q1 14141,10931 14107,10911 14043,10928
@@ -2827,7 +2827,7 @@ Schwanheimer Str.: Asphalt	Q0 11404,6141 11432,6325
 Bambachstr.: Kopfsteinpflaster	Q2 12044,6707 12052,6660
 Edmundstr.: Kopfsteinpflaster	Q2 12981,6689 12953,6820
 Rübelandstr.: Beton	Q0 12787,7546 12818,7403
-Stubenrauchstr.: Asphalt	Q0 -7518,-1175 -7376,-1226
+Stubenrauchstr.: Asphalt	Q0 -7518,-1175 -7387,-1218
 Berlepschstr.: Asphalt	Q0 -1544,1448 -1446,1487
 Neuruppiner Str.: Beton	Q0 -1446,1487 -1329,1475 -1300,1472 -1225,1464 -1154,1456 -1081,1448 -1046,1444 -1001,1456 -930,1477 -894,1489 -828,1494 -766,1499 -700,1504 -623,1510 -546,1516 -464,1522 -419,1525 -198,1543 -163,1564
 Priorter Weg: Beton	Q0 -1300,1472 -1297,1518
@@ -10588,7 +10588,7 @@ Björnweg: Verbundsteinpflaster	Q1 17310,15186 17317,15059
 Lichtburgring: Asphalt	Q0 10004,15636 9933,15815
 Bärbel-Bohley-Ring: Asphalt	Q0 9933,15815 9917,15813 9744,15793
 Bärbel-Bohley-Ring: Betonpflaster	Q0- 9744,15793 9747,15847 9910,15876 9917,15813
-Wadzeckstr. - Mollstr.: Betonpflaster	Q1+ 11326,13196 11409,13327
+Wadzeckstr. - Mollstr.: Betonpflaster	Q1+ 11315,13210 11399,13333
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
