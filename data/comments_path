@@ -8,7 +8,7 @@ bis zur Ampel an der Scharnweberstr. auf dem linken Gehweg vorfahren	CP; 15335,1
 bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824,10904 6873,11011 6742,11099
 bereits bei der Ampel an der Corneliusstr. die Straßenseite wechseln	PI; 6880,11110 6882,11061 6873,11011 7002,11034
 auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6742,11099 6873,11011 6882,11061
-bereits an der Kreuzung An der Urania/Kurfürstenstr. die Straßenseite wechseln	PI; 6740,10755 6685,10690 6745,10619
+bereits an der Kreuzung An der Urania/Kurfürstenstr. die Straßenseite wechseln	PI; 6740,10755 6685,10690 6725,10641
 bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7001,8161 7158,8208 7250,8223
 am Domäne-Markt Richtung Hochbahnhof Hallesches Tor abbiegen	CP; 9536,10064 9579,10122 9599,10175
 auf linken Gehweg fahren, Straßenseite an der Fußgängerampel Yorckstr./Katzbachstr. wechseln	CP; 8774,9534 8679,9544 8595,9495
@@ -184,7 +184,7 @@ zur Kietzer Str.: gegenüber der Mauritiuskirchstr. in die Grünanlage einfahren	C
 Zufahrt zum Gartenbauamt	CP2; 9150,9152 9080,9163
 Ellwanger Str. - Attilastr.: Attilastr. in Höhe der Neckarsulmer Str. überqueren	CP; 7382,4503 7450,4397 7482,4416 7597,4499
 Attilastr. - Ellwanger Str.: bereits an der Rottweiler Str. die Straßenseite wechseln	PI; 7368,4342 7410,4373 7450,4397 7382,4503
-Bahndamm - Am Tierpark: auf dem linken Gehweg bis zur Ampel Gregoroviusweg fahren	CP; 18773,10028 18715,10003 18708,10000 18703,9997 18742,9903
+Bahndamm - Am Tierpark: auf dem linken Gehweg bis zur Ampel Gregoroviusweg fahren	CP; 18773,10028 18715,10003 18708,10000 18703,9997 18740,9907
 Treskowallee - Römerweg: bereits an der Ampel Römerweg die Straßenseite wechseln	PI; 18807,9746 18823,9708 18994,9707
 Cyclopstr. - Blomberger Weg: Einfahrt zum Parkplatz OSZ Enährungs-, Hauswirtschaft u. Drucktechnik nehmen	CP2; 5099,21410 5041,21343
 Prenzlauer Promenade - Laudaer Str.: bereits an der Binzstr. die Straßenseite wechseln	PI; 11849,17655 11839,17738 11785,17729
@@ -244,7 +244,7 @@ Heliosstr. - Vierlandenstr.: Überquerungsmöglichkeit der Straßenbahntrasse links
 Vierlandenstr. - Heliosstr.: Überquerungsmöglichkeit der Straßenbahntrasse rechts	CP; 20761,14589 20822,14594 20975,14601
 Allee der Kosmonauten - Vierlandenstr.: Straßenbahntrasse kurz vor der Heliosstr. überqueren	CP; 20756,14486 20822,14594 20761,14589
 Vierlandenstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse rechts	CP; 20761,14589 20822,14594 20868,14698
-Kleine Andreasstr.: Einfahrt befindet sich links von der Kaiser's-Parkplatzeinfahrt	CP2; 12279,12113 12211,12128
+Kleine Andreasstr.: Einfahrt befindet sich links von der Edeka-Parkplatzeinfahrt	CP2; 12279,12113 12211,12128
 Zitadelle - Am Juliusturm: bis zur Ampel am Zitadellenweg auf dem linken Gehweg vorfahren	CP; -2668,14635 -2656,14582 -2652,14559 -2647,14532 -2597,14532
 Am Juliusturm - Zitadelle: an der Ampel "An der Spreeschanze" die Straßenseite wechseln und zurückfahren	CP; -2794,14511 -2647,14532 -2652,14559 -2656,14582 -2668,14635
 Loewenhardtdamm - Höhndorfstr.: bereits an der General-Pape-Str. auf den linken Gehweg wechseln	PI; 8306,8722 8334,8655 8438,8676
@@ -345,7 +345,7 @@ Reußstr. - Streitstr.: auf den linken Gehweg bis zur Fußgängerampel fahren	CP; -
 Streitstr. - Reußstr: bereits an der Ampel Goltzstr. auf den linken Gehweg wechseln	PI; -3029,16823 -3023,16925 -3129,16931
 Treskowallee - Traberweg: bereits an der Ampel Hegemeisterweg auf den linken Gehweg wechseln	PI; 18406,7760 18577,8033 18567,8041 18490,8104
 Columbiadamm - Straße 645: ggfs. bereits an der Ampel Columbiadamm/Fontanestr. auf den linken Gehweg wechseln	PI; 11632,8302 11512,8278 11424,8284 11434,8194 11419,8077
-Am Tierpark [Nebenfahrbahn] - Am Tierpark: den linken Gehweg bis zur Ampel benutzen	CP; 18304,11407 18263,11393 18286,11275
+Am Tierpark [Nebenfahrbahn] - Am Tierpark: den linken Gehweg bis zur Ampel benutzen	CP; 18304,11407 18263,11393 18280,11266
 Salvador-Allende-Str. - Abzweig: bereits an der Ampel Fürstenwalder Damm auf den linken Gehweg wechseln	PI; 23402,5483 23403,5385 23428,5382
 Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichshagener Str. fahren	CP; 23428,5382 23403,5385 23404,5325
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441

@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2017 Slaven Rezic. All rights reserved.
+# Copyright (C) 2017,2018 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,6 +16,9 @@ use FindBin;
 use lib "$FindBin::RealBin/../lib";
 use Doit;
 use Doit::Log;
+use Doit::Util qw(copy_stat);
+use File::Basename qw(dirname basename);
+use File::Compare ();
 use Getopt::Long;
 use Cwd 'realpath';
 
@@ -178,6 +181,178 @@ sub action_check_handicap_directed {
 		   (map { ('-against', $_) } @against),
 		  );
 	$d->touch($dest);
+    }
+}
+
+######################################################################
+
+sub action_old_bbbike_data {
+    my $d = shift;
+
+    require Digest::MD5;
+    require Tie::IxHash;
+
+    $d->add_component('file');
+
+    my $old_bbbike_data_dir = "$persistenttmpdir/old-bbbike-data";
+    $d->mkdir($old_bbbike_data_dir);
+
+    my @files;
+    my %file2mtime;
+    my %file2md5;
+    {
+	open my $fh, '<', '.modified'
+	    or error "Can't open .modified: $!";
+	while(<$fh>) {
+	    chomp;
+	    if (my($file, $mtime, $md5) = $_ =~ m{^data/(\S+)\s+(\S+)\s+(\S+)}) {
+		push @files, $file;
+		$file2mtime{$file} = $mtime;
+		$file2md5{$file} = $md5;
+	    }
+	}
+    }
+
+    my $bbbike_ver_less_than = sub ($$) {
+	return 0 if $_[0] eq 'future';
+	return $_[0] < $_[1];
+    };
+    my $bbbike_ver_ge_than = sub ($$) {
+	return 1 if $_[0] eq 'future';
+	return $_[0] >= $_[1];
+    };
+    my $get_md5 = sub ($) {
+	my $destfile = shift;
+	my $ctx = Digest::MD5->new;
+	open my $fh, $destfile
+	    or error "Can't open $destfile: $!";
+	$ctx->addfile($fh);
+	return $ctx->hexdigest;
+    };
+
+    tie my %rules, 'Tie::IxHash',
+	(
+	 'strassen-NH' =>
+	 {
+	  bbbikever => sub { $bbbike_ver_less_than->($_[0], 3.17) },
+	  files     => qr{^(strassen|landstrassen|landstrassen2)$},
+	  action    => sub {
+	      my($src_file, $dest_file) = @_;
+	      if (_need_rebuild $dest_file, $src_file, $0) {
+		  open my $fh, '<', $src_file
+		      or error "Can't open $src_file: $!";
+		  my $changes = $d->file_atomic_write($dest_file,
+						      sub {
+							  my $ofh = shift;
+							  while(<$fh>) {
+							      s{\tNH }{\tN };
+							      print $ofh $_;
+							  }
+						      }, check_change => 1);
+		  if (!$changes) {
+		      $d->touch($dest_file); # so it's not rebuilt every time
+		  }
+		  $changes;
+	      } else {
+		  0;
+	      }
+	  },
+	 },
+
+	 'with-tendencies' =>
+	 {
+	  bbbikever => sub { $bbbike_ver_ge_than->($_[0], 3.19) },
+	  files     => qr{^(handicap|qualitaet)_(s|l)$},
+	  action    => sub {
+	      my($src_file, $dest_file) = @_;
+	      action_files_with_tendencies($d);
+	      $src_file = "$persistenttmpdir/" . basename($src_file);
+	      if (_need_rebuild $dest_file, $src_file, $0) {
+		  _make_writable($d, $dest_file);
+		  my $changes = $d->copy($src_file, $dest_file);
+		  $d->touch($dest_file);
+		  _make_readonly($d, $dest_file);
+		  $changes;
+	      } else {
+		  0;
+	      }
+	  },
+	 },
+	);
+
+    for my $bbbike_ver ('3.16', '3.17', '3.18', 'future') {
+	my $bbbike_ver_dir = "$old_bbbike_data_dir/$bbbike_ver";
+	$d->mkdir($bbbike_ver_dir);
+	my @new_modified;
+	for my $file (@files) {
+	    my $destfile;
+	    if ($file =~ m{/}) {
+		my $destdir = "$bbbike_ver_dir/" . dirname($file) . "/";
+		$d->mkdir($destdir);
+		$destfile = $destdir . basename($file);
+	    } else {
+		$destfile = "$bbbike_ver_dir/" . basename($file);
+	    }
+
+	    my $rule_applied;
+	    my $changes = 0;
+	    while(my($rulename, $rule) = each %rules) {
+		if ($rule->{bbbikever}->($bbbike_ver) &&
+		    $file =~ $rule->{files}) {
+		    #info "apply rule $rulename";
+		    $changes += $rule->{action}->($file, $destfile);
+		    $rule_applied = 1;
+		}
+	    }
+	    if (!$rule_applied) {
+		if (File::Compare::compare($file, $destfile) != 0) {
+		    if (!-w $destfile) {
+			_make_writable($d, $destfile);
+		    }
+		    $changes += $d->copy($file, $destfile);
+		    copy_stat $file, $destfile;
+		}
+	    }
+	    # XXX efficiency: read old .modified and recalculate checksum only on changes
+	    my $md5 = $get_md5->($destfile);
+	    my $mtime = $file2md5{$file} eq $md5 ? $file2mtime{$file} : (stat($destfile))[9];
+	    push @new_modified, "data/$file\t$mtime\t$md5";
+	}
+
+	if ($bbbike_ver_less_than->($bbbike_ver, 3.17)) {
+	    my $destfile = "$bbbike_ver_dir/label";
+	    $d->copy("label", $destfile);
+	    my $label_mtime = 1099869060; # this is the mtime of label in BBBike-3.16/data/.modified
+	    $d->utime(undef, $label_mtime, $destfile);
+	    my $md5 = $get_md5->($destfile);
+	    push @new_modified, "data/label\t$label_mtime\t$md5";
+	}
+
+	$d->file_atomic_write("$bbbike_ver_dir/.modified",
+			      sub {
+				  my $ofh = shift;
+				  for (@new_modified) {
+				      $ofh->print("$_\n");
+				  }
+			      }, check_change => 1);
+    }
+}
+
+######################################################################
+
+sub action_doit_update {
+    my $d = shift;
+    my $doitsrc  = "$ENV{HOME}/src/Doit/lib";
+    my $doitdest = "$bbbikedir/lib";
+    $d->mkdir("$doitdest/Doit");
+    $d->copy("$doitsrc/Doit.pm", "$doitdest/");
+    for my $component (qw(Brew File Git)) {
+	$d->copy("$doitsrc/Doit/$component.pm", "$doitdest/Doit/");
+	$d->change_file("$bbbikedir/MANIFEST",
+			{ add_if_missing => "lib/Doit/$component.pm",
+			  add_after => qr{^lib/Doit\.pm}, # XXX better would be a sorted insert
+			}
+		       );
     }
 }
 

@@ -7,8 +7,9 @@ Niemannstr.: Bauarbeiten, einige Meter Fahrbahn sind gesperrt	q3::inwork 14254,1
 Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261 14357,11148
 Lange Str.: Bauarbeiten, Einbahnstraßenregelung	q2::inwork; 12409,11902 12238,11931
 Rigaer Str.: Baustelle, Fußgänger	q3::inwork 14538,12371 14748,12314
-Heidelberger Str.: Baustelle, Fahrbahn an der Wildenbruchstr. gesperrt	q3::inwork 13491,9201 13421,9260
+Auerstr.: zwischen Richard-Sorge-Str. und Löwestr. Baustelle, Einbahnstraßenregelung	q2::inwork; 13273,12902 13202,12790
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607,15282
+Wadzeckstr. - Mollstr.: Behinderungen wegen Bauarbeiten möglich	q2::inwork 11315,13210 11399,13333
 Voltairestr.: Fahrbahn unter Umständen wegen Baustelle gesperrt, Ausweichen auf Gehweg	q2 11329,12497 11209,12430
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 Jerusalemer Str.: Bauarbeiten, Einbahnstraße	q3::inwork; 9945,11371 9936,11469
@@ -18,7 +19,7 @@ Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und 
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10008,12274 10058,12290
 Prinzengasse: einige Fußgänger, parkende Autos	q3::inwork 9955,12300 10002,12305
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
-Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwork; 9581,12588 9608,12380
+Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwork; 9581,12588 9613,12381
 Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364 9934,12420
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9883,12251 9876,12298
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9876,12298 9858,12410
@@ -28,12 +29,17 @@ Dönhoffstr.: Fahrbahn an der Treskowallee gesperrt, Ausweichen über Gehweg	q2::i
 Wandlitzstr.: Fahrbahn an der Treskowallee gesperrt, Ausweichen über Gehweg	q3::inwork 18627,8475 18704,8427
 Wilhelminenhofstr.: Bauarbeiten zwischen Siemensstr. und Edisonstr., Fahrbahn und teilweise auch Radweg gesperrt	q3::inwork 17826,6495 17991,6431
 Mariannenstr.: Bauarbeiten zwischen Naunynstr. und Mariannenplatz, Fahrbahn Richtung Norden gesperrt	q4::inwork; 11763,10635 11781,10696
-Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q2::inwork; 9022,10857 8941,10663 8926,10626
+Prinzenstr.: Bauarbeiten, gemeinsamer Rad- und Gehweg	q3::inwork; 10633,10369 10605,10312
+Bürknerstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11673,9720 11754,9735
+Böckhstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 11673,9720 11640,9710
+Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q3::inwork; 9022,10857 8941,10663 8926,10626
 Englische Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 5424,11944 5518,12159
 Schleswiger Ufer: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5894,12480 5944,12548
 Nansenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12412,9610 12374,9542
 Dieselstr., Umfahrung: Fußgänger, eng	q3::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14471,8046
 Karl-Marx-Str.: Bauarbeiten zwischen Werbellinstr. und Thomasstr., Richtung Süden auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12753,8187 12794,8103 12830,8031 12865,7923 12898,7832 12914,7785 12969,7610
+Helmstr.: an der Hauptstr. Bauarbeiten, Behinderungen	q3::inwork 7444,9148 7382,9187
+Vorbergstr.: an der Hauptstr. Bauarbeiten, Behinderungen	q3::inwork 7363,9152 7308,9163
 Wiltbergstr.: Bauarbeiten, Einbahnstraßenregelung, auf Gehweg ausweichen	q3::inwork; 16669,25373 16583,25440 16475,25526 16414,25575 16294,25683 16220,25716
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gefälle, Fußgänger	q4; 21970,12153 21998,12204
@@ -588,6 +594,7 @@ Uferweg: Fußgänger	q1 3862,12675 3938,12687 4147,12699 4206,12691 4242,12684
 (Neues Ufer - Kaiserin-Augusta-Allee): Fußgänger	q1 4456,12918 4514,12936 4581,13066 4576,13115 4547,13139 4561,13244
 (provisorischer Zugang zum Bahnhof Ostkreuz): Richtung S-Bahnhof viele Fußgänger	q3 14811,11067 14808,10978 14845,10954
 Bouchéstr.: Bodenschwellen	q0 13642,9624 13865,9866
+Bouchéstr.: eine Bodenschwelle	q0 13489,9456 13357,9313
 Radenzer Str.: zwei Bodenschwellen	q1 16220,6277 16304,6358
 Dornbrunner Str.: zwei Bodenschwellen	q1 16147,6545 16043,6414
 Meierottostr.: zwei Moabiter Kissen	q0 5463,9961 5246,10168
@@ -1203,7 +1210,6 @@ Waltershauser Str.: gemeinsamer Rad- und Gehweg, einige Fußgänger	q1 6534,1702 6
 (Gallwitzallee - Geraerstr./Trippsteinstr.): einige Fußgänger	q1 6759,2137 6722,2096 6695,2037 6534,1702 6526,1688
 (Seydlitzstr., Verlängerung): einige Fußgänger	q1 6597,2157 6695,2037
 (Hospitalgrabenpark): Fußgänger, Radfahren offiziell verboten	q4 7105,3040 7127,3077 7184,3142 7264,3122 7365,3199
-(Landschaftspark Herzberge - Arendsweg): Trampelpfad, Bordstein	q4 17266,14144 17287,14152 17323,14154 17330,14163
 (Genslerstr. - Landsberger Allee): Fußgänger	q2 16669,14438 16665,14420 16644,14401 16632,14390
 Schweriner Ring [9-19 ungerade]: enge Straße	q1 17444,19115 17259,19121
 (Weg auf dem Lärmschutzwall): Rampen, nicht sehr breit	q1 16665,19021 16699,19090 17197,18473 17275,18356 17564,18010 17585,17963
@@ -1567,7 +1573,6 @@ Falkenberger Str.: Bordstein	q3 15819,16857 15892,16834
 (Neuhausweg - Ramin-Park): einige Fußgänger, Bordstein	q2 -3964,14507 -3950,14519
 Földerichplatz: Fußgängerzone	q3 -3942,12559 -3941,12376
 (Marzahner Promenade - Landsberger Allee [Wohngebiet]): Fußgänger	q1 20759,15740 20789,15736
-Fischerstr.: Pollerreihe	q2; 15982,10765 16080,10743
 (Wasserweg - Treptower Park): einige Fußgänger, Bordstein, Zugang kann zugeparkt sein	q3 15680,8914 15617,8924
 Monumentenplatz: einige Fußgänger, Spielplatz	q2 8385,8923 8362,9007 8358,9068
 (Minna-Cauer-Str. - Lehrter Str.): Fußgänger, Radfahren offiziell verboten	q4 7879,13438 7837,13499 7775,13540
@@ -1686,6 +1691,8 @@ Steinrückweg: möglicher Bordstein	q1 4257,6856 4293,6719
 (Mehringbrücke - Mehringplatz): einige Fußgänger	q1 9404,10250 9535,10299
 (Gleimstr. - Mauerpark): Fußgänger	q2 10170,15659 10228,15488
 Gedonstr.: Bordsteine, parkende Autos, Fußgänger	q4 7915,17557 7916,17576 7917,17588
+Alexanderufer - Charité: durch das Tor schieben	q4 8371,13399 8363,13402 8356,13404
+Nöldnerplatz [Nöldnerstr. - Schlichtallee]: einige Fußgänger	q1 15932,10830 15970,10755
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schulhof, Radfahren verboten	q3 7242,8586 7288,8635
@@ -2631,7 +2638,7 @@ Am Tierpark, linker Gehweg	q1::igndisp; 18647,10172 18715,10003
 Treskowallee, linker Gehweg	q1::igndisp; 18715,10003 18748,9922
 Treskowallee, linker Gehweg	q3::igndisp; 18567,8041 18642,8169 18672,8238
 Treskowallee, linker Gehweg	q3::igndisp; 18650,8111 18406,7760
-Kreuzung Gregoroviusweg/Treskowallee	q1::igndisp; 18748,9922 18742,9903
+Kreuzung Gregoroviusweg/Treskowallee	q1::igndisp; 18748,9922 18740,9907
 Alt-Friedrichsfelde, linker Gehweg	q2::igndisp; 19735,11721 19005,11767 18778,11742 18624,11712 18520,11685 18216,11656
 Alt-Friedrichsfelde, linker Gehweg	q2::igndisp; 18626,11742 18624,11712
 Landsberger Allee, linker Gehweg	q2::igndisp; 15256,14237 15430,14272
@@ -2664,7 +2671,6 @@ Altentreptower Str., linker Gehweg	q3::igndisp; 21199,12258 21276,12241 21294,12
 Altentreptower Str., linker Gehweg	q2::igndisp; 21401,12155 21573,12140
 Wilhelmsruher Damm, linker Geh/Radweg bis zur Fußgängerampel	q3::igndisp; 5599,21025 5525,21022
 Frankfurter Allee, linker Gehweg bis zur Ampel	q3::igndisp; 15717,12010 15670,12022
-Otto-Braun-Str., linker Gehweg	q4::igndisp; 11354,13184 11451,13301
 Invalidenstr., linker Gehweg	q4::igndisp; 8183,13482 8332,13548
 Lichtenberger Brücke, linker Gehweg	q1::igndisp; 16818,11878 16978,11852
 Straße des 17. Juni, linker Geh/Radweg	q3::igndisp; 5813,11886 5758,11895

@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2015 Slaven Rezic. All rights reserved.
+# Copyright (C) 2015,2018 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -15,10 +15,10 @@ package BBBikeDataDownloadCompatPlack;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.02';
+$VERSION = '0.04';
 
 use Cwd ();
-use HTTP::Date qw(time2str);
+use HTTP::Date qw(time2str str2time);
 use Plack::Request ();
 use Plack::Util ();
 
@@ -45,8 +45,10 @@ sub get_app {
 		    warn qq{Doing "NH" fix in file <$filename> for <$ua>...\n};
 		    open my $fh, '<', $filename
 			or die "Can't open file <$filename> (should never happen): $!";
+		    my @stat = stat $filename;
 		    my $writer = $respond->([200, [
 						   'Content-Type' => 'text/plain',
+						   'Last-Modified' => HTTP::Date::time2str($stat[9]),
 						   'X-BBBike-Hacks' => 'NH',
 						  ]
 					    ]);
@@ -67,12 +69,12 @@ sub get_app {
 		    $writer->close;
 		};
 	    }
-	} elsif ($filename =~ m{/data/label$} && !-e $filename) {
+	} elsif ($filename =~ m{/data/(label|multi_bez_str)$} && !-e $filename) {
 	    if ($h->header('If-modified-since')) {
-		# data/label was removed from MANIFEST some time ago, but some
+		# data/label & multi_bez_str was removed from MANIFEST some time ago, but some
 		# clients maybe still access it
 		# Debugging. Remove some day XXX
-		warn qq{Faking <data/label> for <$ua>...\n};
+		warn qq{Faking <$filename> for <$ua>...\n};
 		return $req->new_response(304)->finalize;
 	    }
 	}
@@ -103,8 +105,7 @@ sub _not_modified {
     my($h, $filename) = @_;
     if (my $if_modified_since = $h->header('If-modified-since')) {
 	my($mtime) = (stat($filename))[9];
-	# RFC 2616 14.25 allows this, see also Plack::Middleware::ConditionalGET
-	if ($if_modified_since eq time2str($mtime)) {
+	if (defined $mtime && str2time($if_modified_since) >= $mtime) {
 	    return 1;
 	}
     }

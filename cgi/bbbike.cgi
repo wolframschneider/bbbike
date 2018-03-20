@@ -5,7 +5,7 @@
 # $Id: bbbike.cgi,v 9.30 2009/04/04 11:13:58 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2017 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2018 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -31,6 +31,7 @@ BEGIN {
     $main::datadir = $ENV{'DATA_DIR'} || "data";
     $ENV{LANG} = 'C'; 
 }
+
 use vars qw(@extra_libs);
 BEGIN { delete $INC{"FindBin.pm"} } # causes warnings, maybe try FindBin->again if available?
 use FindBin;
@@ -1092,7 +1093,7 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = '11.005';
+$VERSION = '11.006';
 
 use vars qw($delim $font);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
@@ -1587,7 +1588,7 @@ if ($use_file_cache) {
 		    warn "DEBUG: Cache hit for " . $q->query_string . "\n";
 		    http_req_logging();
 		}
-		http_header(@{ $meta->{headers} || [] });
+		http_header(@{ $meta->{headers} || [] }, '-X-bbbike-file-cache' => 'HIT');
 		$cache_entry->stream_content;
 		my_exit(0);
 	    }
@@ -1677,12 +1678,16 @@ if (defined $q->param('begin')) {
 		@no_cache,
 	       );
     for my $def (
-		 ['weekly filecache (e.g. for kml-track)', _get_weekly_filecache()],
-		 ['hourly filecache (e.g. for pdf files)', _get_hourly_filecache()],
+		 ['weekly filecache (e.g. for kml-track)', _get_weekly_filecache(), [only_synced => 1]],
+		 ['hourly filecache (e.g. for pdf files)', _get_hourly_filecache(), []],
 		) {
-	my($label, $file_cache) = @$def;
-	my $res = $file_cache->clean_expired_cache;
-	print "DONE. $res->{count_success} directory/ies deleted in $label, $res->{count_errors} error/s\n";
+	my($label, $file_cache, $extra_args) = @$def;
+	my $res = $file_cache->clean_expired_cache(@$extra_args);
+	print "DONE. $res->{count_success} directory/ies deleted in $label, $res->{count_errors} error/s";
+	if (defined $res->{count_skip_unsynced}) {
+	    print ", skipped $res->{count_skip_unsynced} unsynced directories";
+	}
+	print "\n";
     }
     my_exit(0);
 } elsif (defined $q->param('drawmap')) {
@@ -5104,7 +5109,7 @@ sub display_route {
 	my $gpx_output = $s_gpx->bbd2gpx(-as => "track");
 	print $gpx_output;
 	if ($cache_entry) {
-	    $cache_entry->put_content($gpx_output, {headers => \@headers});
+	    $cache_entry->put_content($gpx_output, {_additional_filecache_info($q), headers => \@headers});
 	}
 	return;
     }
@@ -5124,7 +5129,7 @@ sub display_route {
 	my $kml_output = $s_kml->bbd2kml(startgoalicons => 1);
 	print $kml_output;
 	if ($cache_entry) {
-	    $cache_entry->put_content($kml_output, {headers => \@headers});
+	    $cache_entry->put_content($kml_output, {_additional_filecache_info($q), headers => \@headers});
 	}
 	return;
     }
@@ -5741,7 +5746,7 @@ sub display_route {
 	    }
 	    print $json_output;
 	    if ($cache_entry) {
-		$cache_entry->put_content($json_output, {headers => \@headers});
+		$cache_entry->put_content($json_output, {_additional_filecache_info($q), headers => \@headers});
 	    }
 	} elsif ($output_as =~ m{^geojson(-short)?$}) {
 	    my $is_short = !!$1;
@@ -5775,7 +5780,7 @@ sub display_route {
 	    my $gpx_output = $s_gpx->bbd2gpx(-as => "route");
 	    print $gpx_output;
 	    if ($cache_entry) {
-		$cache_entry->put_content($gpx_output, {headers => \@headers});
+		$cache_entry->put_content($gpx_output, {_additional_filecache_info($q), headers => \@headers});
 	    }
 	} else { # xml
 	    require XML::Simple;
@@ -7247,7 +7252,7 @@ sub draw_route {
 		      );
 	if ($cache_entry) {
 	    $cache_file = $cache_entry->get_content_filename;
-	    $cache_entry->put_content(undef, {headers => \@headers});
+	    $cache_entry->put_content(undef, {_additional_filecache_info($q), headers => \@headers});
 	}
 	http_header(@headers);
 
@@ -9795,6 +9800,21 @@ sub _get_weekly_filecache { require BBBikeCGI::Cache; BBBikeCGI::Cache->new($Str
 sub _get_hourly_filecache { require BBBikeCGI::Cache; BBBikeCGI::Cache->new($Strassen::datadirs[0], _get_cache_prefix() . '_hourly', 'hourly') }
 sub _get_cache_prefix { $Strassen::Util::cacheprefix . ($is_beta ? '_beta' : '') . ($lang ? "_$lang" : '') }
 
+sub _additional_filecache_info {
+    my $q = shift;
+    my @info;
+    if ($q->query_string) {
+	push @info, query_string => scalar $q->query_string;
+    }
+    if ($q->user_agent) {
+	push @info, user_agent => scalar $q->user_agent;
+    }
+    if ($q->remote_addr) {
+	push @info, remote_addr => scalar $q->remote_addr;
+    }
+    @info;
+}
+
 sub http_req_logging {
     eval {
 	require JSON::XS;
@@ -10226,7 +10246,7 @@ Slaven Rezic <slaven@rezic.de>
 
 =head1 COPYRIGHT
 
-Copyright (C) 1998-2017 Slaven Rezic. All rights reserved.
+Copyright (C) 1998-2018 Slaven Rezic. All rights reserved.
 This is free software; you can redistribute it and/or modify it under the
 terms of the GNU General Public License, see the file COPYING.
 

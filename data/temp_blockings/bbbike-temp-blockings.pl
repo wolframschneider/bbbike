@@ -32,11 +32,11 @@ my $isodate2epoch = sub {
        text  => "Gesperrte Straßen am 28.5. zwischen 14 Und 24 Uhr während des Kirchentages (im Bereich Pariser Platz - Unter den Linden - Friedrichstr. - Gendarmenmarkt)",
        type  => "handicap",
      },
-     { from  => $isodate2epoch->("2017-06-01 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-06-05 23:59:59"),
+     { from  => $isodate2epoch->("2018-05-17 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-05-21 23:59:59"),
        periodic => 1,
        recurrences => [['easter', 47]], # zwei Tage vor Pfingsten
-       text  => 'Straßenfest rund um den Blücherplatz, 02.06.2017 bis 05.06.2017',
+       text  => 'Straßenfest rund um den Blücherplatz, 18.05.2018 bis 21.05.2018',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.berlin.de/tickets/suche/detail.php?id=810735
@@ -61,12 +61,12 @@ my $isodate2epoch = sub {
 	2::temp 9837,9856 9723,9842 9588,9827 9387,9804
 EOF
      },
-     { from  => $isodate2epoch->("2017-06-03 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-06-04 23:59:59"),
+     { from  => $isodate2epoch->("2018-05-19 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-05-20 23:59:59"),
        periodic => 1,
        recurrences => [['easter', 49]], # Pfingstsonntag
        source_id => 'http://www.karneval-berlin.de/de/',
-       text  => 'Karneval der Kulturen, 04.06.2016',
+       text  => 'Karneval der Kulturen, 20.05.2016',
        type  => 'gesperrt',
        data  => <<EOF,
 	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
@@ -286,7 +286,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LMS_1134638526559',
        data  => <<EOF,
-	2 15758,10578 15880,10680 15982,10765 16038,10818 16049,10844
+	2 15758,10578 15880,10680 15970,10755 16038,10818 16049,10844
 	2 15758,10578 15639,10469
 EOF
      },
@@ -373,11 +373,11 @@ EOF
 	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5434,13398 5368,13406 5248,13434
 EOF
      },
-     { from  => $isodate2epoch->("2017-04-30 12:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-05-01 23:59:59"),
+     { from  => $isodate2epoch->("2018-04-30 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-05-01 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 1, months => 5]],
-       text  => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2017',
+       text  => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2018',
        type  => 'gesperrt',
        data  => <<EOF,
 #: tempex: YYYY0431T1200-YYYY05020000 vvv
@@ -581,11 +581,11 @@ EOF
        source_id => 'IM_015896',
        file  => 'badstr.bbd',
      },
-     { from  => $isodate2epoch->("2017-07-14 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-07-16 23:59:59"),
+     { from  => $isodate2epoch->("2018-07-20 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-07-22 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6]],
-       text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (15.7.2017 bis 16.7.2017)',
+       text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (21.7.2018 bis 22.7.2018)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.stadtfest.berlin/de/index.html
@@ -1643,7 +1643,7 @@ EOF
        text  => 'Ringstr. (Steglitz) Richtung Finkensteinallee zwischen Drakestr. und Finckensteinallee Baustelle, Fahrtrichtung gesperrt (bis 12.2005)',
        type  => 'handicap',
        data  => <<EOF,
-	q4; 3507,3654 3372,3557 3228,3455 3184,3427 3050,3333 3011,3303 2781,3122 2701,3064 2661,3021 2637,2973 2625,2850
+	q4; 3507,3654 3372,3557 3228,3455 3184,3427 3050,3333 3011,3303 2781,3122 2698,3068 2655,3025 2632,2969 2625,2850
 EOF
      },
      { from  => 1110917391, # 2005-03-15 21:09
@@ -2207,10 +2207,10 @@ EOF
        text  => '300 Jahre Charlottenburg, 17.06.2005 bis 19.06.2005',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 3072,12222 3060,12311 3050,12394 3033,12509
+	2 3072,12222 3060,12311 3048,12413 3033,12509
 	2 3072,12222 3091,12071
-	2 3033,12509 2785,12479 2744,12474 2715,12470 2641,12458
-	2 3033,12509 3188,12524 3279,12533
+	2 3033,12509 2795,12480 2744,12474 2715,12470 2641,12458
+	2 3033,12509 3177,12522 3279,12533
 	2 3103,11968 3091,12071
 	3 3355,12258 3217,12239 3072,12222 2899,12200 2895,12217
 	3 2895,12217 2899,12200 3072,12222 3217,12239 3355,12258
@@ -3175,7 +3175,7 @@ EOF
        text  => 'Universitätsstr., Richtung Dorotheenstr. gesperrt (bis 2010) ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 9608,12380 9581,12588
+	q4::inwork; 9613,12381 9581,12588
 EOF
      },
      { from  => undef, # 
@@ -3730,7 +3730,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002885',
        data  => <<EOF,
-	q4; 15639,10469 15758,10578 15880,10680 15982,10765 16038,10818 16049,10844
+	q4; 15639,10469 15758,10578 15880,10680 15970,10755 16038,10818 16049,10844
 EOF
      },
      { from  => undef, # 
@@ -5326,7 +5326,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003129',
        data  => <<EOF,
-	1::inwork 2661,3021 2637,2973 2625,2850
+	1::inwork 2655,3025 2632,2969 2625,2850
 EOF
      },
      { from  => 1160591740, # 2006-10-11 20:35
@@ -6841,7 +6841,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_004168',
        data  => <<EOF,
-	q4::inwork; 6972,10665 6985,10597 7003,10513 7033,10396
+	q4::inwork; 6972,10665 6982,10610 7003,10513 7033,10396
 EOF
      },
      { from  => 1163977200, # 2006-11-20 00:00
@@ -8330,8 +8330,8 @@ EOF
        text  => 'L 040 Ragow-Dahlewitz OD Dahlewitz, Kno. Thälmannstr./ Dorfstr. Bau Kreisverkehr Vollsperrung 22.05.2007-31.08.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 13228,-9606 13576,-9738 13878,-9818
-	q4::inwork 13772,-10251 13576,-9738 13503,-9528
+	q4::inwork 13228,-9606 13560,-9733 13866,-9861
+	q4::inwork 13772,-10251 13560,-9733 13503,-9528
 EOF
      },
      { from  => 1152482400, # 2006-07-10 00:00
@@ -9461,7 +9461,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006236',
        data  => <<EOF,
-	1::inwork 16049,10844 15983,10836 15681,10801 15433,10765 15388,10758 15272,10790
+	1::inwork 16049,10844 15983,10836 15932,10830 15681,10801 15433,10765 15388,10758 15272,10790
 EOF
      },
      { from  => 1186081587, # 2007-08-02 21:06
@@ -11883,7 +11883,7 @@ EOF
        data  => <<EOF,
 	2::temp 8358,11477 8301,11469 8226,11458 8145,11438 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7413,10244 7238,10299 7131,10331 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6532,10529 6685,10690 6740,10755 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
 	2::temp 8553,11630 8548,11571 8542,11502 8479,11493 8374,11479
-	2::temp 9984,12426 9934,12420 9858,12410 9780,12401 9771,12400 9713,12392 9664,12387 9608,12380 9475,12365 9358,12351 9141,12320 9164,12172 9064,12156
+	2::temp 9984,12426 9934,12420 9858,12410 9780,12401 9771,12400 9713,12392 9664,12387 9613,12381 9475,12365 9358,12351 9141,12320 9164,12172 9064,12156
 	2::temp 8553,11638 8567,11799 8571,11846 8577,11896 8595,12066 8737,12098 8743,12099 8861,12125 9054,12154
 	3 6972,10665 6818,10725 6740,10755 6607,10801
 	3 8901,12008 8861,12125 8804,12280
@@ -11909,7 +11909,7 @@ EOF
 	3 8442,11555 8542,11502 8596,11508
 	3 6512,11608 6809,11570 6869,11567
 	3 7429,10366 7413,10244 7384,10127
-	3 6719,10347 6753,10446 6745,10619
+	3 6719,10347 6753,10446 6743,10615 6725,10641
 	3 8172,11679 8226,11458 8232,11414
 	3 7444,10479 7633,10394 7744,10372
 	3 9028,12307 9141,12320 9131,12438
@@ -11921,7 +11921,7 @@ EOF
 	3 8102,11099 8000,11137 7828,11133
 	3 7058,11809 6980,11790 6778,11742 6540,11754
 	3 7526,9969 7579,10183 7698,10147
-	3 6745,10619 6753,10446 6719,10347
+	3 6725,10641 6743,10615 6753,10446 6719,10347
 	3 9373,12197 9164,12172 9183,12076
 	3 6468,10550 6532,10529 6494,10440
 	3 7747,11075 7980,11070 8104,11037 8205,10979
@@ -12954,7 +12954,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010255',
        data  => <<EOF,
-	1::inwork 16049,10844 15983,10836 15681,10801 15433,10765 15388,10758 15272,10790
+	1::inwork 16049,10844 15983,10836 15932,10830 15681,10801 15433,10765 15388,10758 15272,10790
 EOF
      },
      { from  => 1223416800, # 2008-10-08 00:00
@@ -13129,7 +13129,7 @@ EOF
        text  => 'L 040 Thälmannstr. OD Dahlewitz, Höhe Rangsdorfer Weg Kanal- und Straßenbau Vollsperrung 05.11.2008-12.11.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 12805,-9035 13228,-9606 13576,-9738
+	q4::inwork 12805,-9035 13228,-9606 13560,-9733
 EOF
      },
      { from  => 1225666800, # 2008-11-03 00:00
@@ -13253,7 +13253,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010255',
        data  => <<EOF,
-	1::inwork 16049,10844 15983,10836 15681,10801 15433,10765 15388,10758 15272,10790
+	1::inwork 16049,10844 15983,10836 15932,10830 15681,10801 15433,10765 15388,10758 15272,10790
 EOF
      },
      { from  => 1228431600, # 2008-12-05 00:00
@@ -13860,7 +13860,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_011757',
        data  => <<EOF,
-	1::inwork 15982,10765 16038,10818 16049,10844
+	1::inwork 15970,10755 16038,10818 16049,10844
 EOF
      },
      { from  => 1239912306, # 2009-04-16 22:05
@@ -15240,7 +15240,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013849',
        data  => <<EOF,
-	q4::inwork 15639,10469 15758,10578 15880,10680 15982,10765 16038,10818 16049,10844
+	q4::inwork 15639,10469 15758,10578 15880,10680 15970,10755 16038,10818 16049,10844
 EOF
      },
      { from  => 1249768800, # 2009-08-09 00:00
@@ -16804,7 +16804,7 @@ EOF
        text  => 'Universitätsstraße Richtung Unter den Linden gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 9581,12588 9608,12380
+	q4::inwork; 9581,12588 9613,12381
 EOF
      },
      { ### INACTIVE ENTRY ###
@@ -18027,17 +18027,16 @@ EOF
 	2::inwork -50068,51237 -51018,51135
 EOF
      },
-     { from  => $isodate2epoch->("2017-07-21 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-07-22 23:59:59"),
+     { from  => $isodate2epoch->("2018-07-27 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-07-28 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 20, months => 6]],
-       source_id => 'http://csd-berlin.de/category/csd-2017/',
-       text  => 'CSD am 22.7.2016',
+       source_id => 'https://www.berlin.de/events/2096878-2229501-csd-christopher-street-day.html',
+       text  => 'CSD am 28.7.2018',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://csd-berlin.de/event-info-en/
-#: by: https://www.berlin.de/en/events/2096878-2842498-csd-christopher-street-day.en.html
-	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6985,10597 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
+	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6982,10610 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
 	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
 	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
 	3 6380,10704 6353,10583 6302,10462
@@ -18051,7 +18050,7 @@ EOF
 	3 7131,10331 7033,10328 7060,10221
 	3 4485,10307 4503,10497 4513,10702
 	3 6869,11567 6809,11570 6512,11608
-	3 6745,10619 6753,10446 6719,10347
+	3 6725,10641 6743,10615 6753,10446 6719,10347
 	3 4847,10677 4847,10589 4828,10356
 	3 4381,10583 4371,10465 4360,10320
 	3 5196,10398 5215,10711 5230,10919
@@ -18065,7 +18064,7 @@ EOF
 	3 7245,10499 7033,10396 7131,10331
 	3 4828,10356 4847,10589 4847,10677
 	3 4513,10702 4503,10497 4485,10307
-	3 6719,10347 6753,10446 6745,10619
+	3 6719,10347 6753,10446 6743,10615 6725,10641
 	3 6841,11114 6880,11110 7115,11220
 	3 6884,12006 6828,12031 7026,12054
 	3 5829,10964 5782,10884 5669,10704
@@ -18172,11 +18171,11 @@ EOF
 	2::temp 7429,12070 7031,12024 6884,12006
 EOF
      },
-     { from  => $isodate2epoch->("2017-06-29 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-07-02 23:59:59"),
+     { from  => $isodate2epoch->("2018-06-28 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-07-01 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 6]],
-       text  => 'Bergmannstraße (Kreuzberg): Veranstaltung (Bergmannstraßenfest), Straße vollständig zwischen Mehringdamm und Zossener Str. gesperrt (30. Juni 2017 bis 02. Juli 2016)',
+       text  => 'Bergmannstraße (Kreuzberg): Veranstaltung (Bergmannstraßenfest), Straße vollständig zwischen Mehringdamm und Zossener Str. gesperrt (29. Juni 2018 bis 01. Juli 2018)',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/events/1934675-2229501-bergmannstrassenfest.html',
        data  => <<EOF,
@@ -19253,15 +19252,15 @@ EOF
 	q4::temp 13206,10651 13305,10789 13332,10832
 EOF
      },
-     { from  => $isodate2epoch->("2017-04-27 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-05-20 23:59:59"), # 1 Tag Nachlauf
+     { from  => $isodate2epoch->("2018-04-26 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-05-22 23:59:59"), # 1 Tag Nachlauf
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 4]],
-       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 28.04.2017 bis 19.05.2017',
+       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 27.04.2018 bis 21.05.2018',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/tickets/suche/detail.php?id=1372899',
+       source_id => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2983315-2970764-neukoellner-maientage.html',
        data  => <<EOF,
-#: tempex: 20170428-T20170519 vvv
+#: tempex: 20180427-T20180521 vvv
 	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
 	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
 	q4::temp 11275,8387 11230,8402
@@ -19531,7 +19530,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_017503',
        data  => <<EOF,
-	2::temp 9858,12410 9780,12401 9771,12400 9713,12392 9664,12387 9608,12380 9475,12365 9358,12351
+	2::temp 9858,12410 9780,12401 9771,12400 9713,12392 9664,12387 9613,12381 9475,12365 9358,12351
 EOF
      },
      { from  => 1311883200, # 2011-07-28 22:00
@@ -19794,12 +19793,12 @@ EOF
 	2::inwork 3045,19032 2994,18979
 EOF
      },
-     { from  => $isodate2epoch->("2017-08-03 10:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-08-07 02:00:00"),
+     { from  => $isodate2epoch->("2018-08-02 10:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-08-05 02:00:00"),
        periodic => 1, # Internationales Berliner Bierfestival
        recurrences => [['yearly', days => 31, months => 7]],
        accept_multi_feature_distance => 1300,
-       text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (4.8.2017 bis 6.8.2017)',
+       text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (3.8.2018 bis 5.8.2018)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.bierfestival-berlin.de/?y=2017
@@ -20165,7 +20164,7 @@ EOF
        text  => 'Alfred-Kowalke-Str.: Bauarbeiten, teilweise muss auf den Gehweg ausgewichen werden',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 18286,11275 18229,11256 18202,11253 18061,11240
+	q4::inwork 18280,11266 18229,11256 18202,11253 18061,11240
 EOF
      },
      { from  => 1320534000, # 2011-11-06 00:00
@@ -20967,7 +20966,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120914.1355.375249.html',
        data  => <<EOF,
-	2::inwork 18286,11275 18421,11344 18477,11388 18619,11463
+	2::inwork 18280,11266 18421,11344 18477,11388 18619,11463
 EOF
      },
      { from  => 1378958400, # 2013-09-12 06:00
@@ -21015,7 +21014,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120921.1525.375622.html',
        data  => <<EOF,
-	q4::inwork 18988,8792 19073,8828 19116,8846 19163,8867 19299,8946 19500,9043 19621,9097
+	q4::inwork 18988,8792 19073,8828 19116,8845 19164,8863 19299,8946 19500,9043 19621,9097
 EOF
      },
      { from  => 1348376400, # 2012-09-23 07:00
@@ -21797,7 +21796,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2::temp 2411,12428 2641,12458
-	2::temp 3279,12533 3188,12524 3033,12509 2785,12479 2744,12474 2715,12470
+	2::temp 3279,12533 3177,12522 3033,12509 2795,12480 2744,12474 2715,12470
 EOF
      },
      { from  => 1371358800, # 2013-06-16 07:00
@@ -22574,7 +22573,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.potsdam.de/content/blauer-lichterglanz-der-potsdamer-innenstadt
 #: tempex: before(first_advent,mo) - YYYY1227
-	1::xmas -13556,-1182 -13643,-1220
+	1::xmas -13556,-1182 -13618,-1202 -13626,-1205
 EOF
      },
      { from  => undef, # 1385766000, # 2013-11-30 00:00
@@ -23753,6 +23752,7 @@ EOF
 #: note: am Fr, den 2017-09-22 gegen 18:20: offen
 #: note: am Mo, den 2017-12-04 gegen 18:45: geschlossen
 #: note: am Mi, den 2018-01-24 gegen 18:45: offen
+#: note: am Mo, den 2018-02-26 gegen 18:50: offen
 #: tempex: volatile vvv
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
@@ -25228,23 +25228,24 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # 1484934475, # -> ein Tor ist nach gesperrt-orig gewandert, das andere scheint jetzt immer offen zu sein
-       text  => 'Alexanderufer - Charité: Tor kann verschlossen sein',
+       until => undef, # 1484934475, # -> ein Tor ist nach gesperrt-orig gewandert, das andere ist werktags offen
+       text  => 'Alexanderufer - Charité: Tor ist nur montags bis freitags tagsüber (ca. 8-20 Uhr) offen',
        recurring => 1,
        type  => 'gesperrt',
        data  => <<EOF,
-#: note: verschlossen 2016-05-11 gegen 9 Uhr
-#: note: offen am 2016-06-16 gegen 9:30 Uhr
-#: note: offen am 2016-07-01 gegen 18:15 Uhr
-#: note: geschlossen am 2016-07-11 gegen 18:00 Uhr
-#: note: geschlossen am 2016-07-21 gegen 19:30 Uhr
-#: note: offen am 2016-09-21 gegen 18:15 Uhr
-#: note: offen am 2016-11-11 gegen 18:40 Uhr
-#: note: offen am 2016-11-22 gegen 18:30 Uhr
-#: note: offen am 2016-12-07 gegen 19:00 Uhr
-#: note: offen am 2016-12-12 gegen 09:45 Uhr
-#: note: verschlossen am 2018-01-14 (So) gegen 14:30 Uhr
-	2::temp 8362,13466 8369,13465 8377,13463
+# REMOVED --- #: note: verschlossen 2016-05-11 gegen 9 Uhr
+# REMOVED --- #: note: offen am 2016-06-16 gegen 9:30 Uhr
+# REMOVED --- #: note: offen am 2016-07-01 gegen 18:15 Uhr
+# REMOVED --- #: note: geschlossen am 2016-07-11 gegen 18:00 Uhr
+# REMOVED --- #: note: geschlossen am 2016-07-21 gegen 19:30 Uhr
+# REMOVED --- #: note: offen am 2016-09-21 gegen 18:15 Uhr
+# REMOVED --- #: note: offen am 2016-11-11 gegen 18:40 Uhr
+# REMOVED --- #: note: offen am 2016-11-22 gegen 18:30 Uhr
+# REMOVED --- #: note: offen am 2016-12-07 gegen 19:00 Uhr
+# REMOVED --- #: note: offen am 2016-12-12 gegen 09:45 Uhr
+# REMOVED --- #: note: verschlossen am 2018-01-14 (So) gegen 14:30 Uhr
+# REMOVED --- #: note: mittlerweile dauerhaft gesperrt
+# REMOVED --- 2::temp 8362,13466 8369,13465 8377,13463
 #: note: verschlossen am 2016-06-16 gegen 9:30 Uhr
 #: note: verschlossen am 2016-07-01 gegen 18:15 Uhr
 #: note: verschlossen am 2016-07-11 gegen 18:00 Uhr
@@ -25254,6 +25255,8 @@ EOF
 #: note: verschlossen am 2016-12-07 gegen 19:00 Uhr
 #: note: verschlossen am 2016-12-12 gegen 09:45 Uhr
 #: note: verschlossen am 2018-01-14 (So) gegen 14:30 Uhr
+#: XXX nochmal genauer prüfen: Mo bis Fr oder Sa? Stimmt auch 8-20 Uhr?
+#: priority: #A
 	2::temp 8371,13399 8363,13402 8356,13404
 EOF
      },
@@ -25662,7 +25665,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-02-19 vvv
+#: last_checked: 2018-03-10 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -25998,7 +26001,7 @@ EOF
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober; laut Pressemitteilung bis Ende 2017
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
-#: last_checked: 2018-02-15 vvv
+#: last_checked: 2018-03-11 vvv
 # REMOVED (weitgehend fertig) ---	q3::inwork 13384,8354 13217,8493
 # REMOVED	q3::inwork; 13217,8493 13262,8554
 # REMOVED	q3::inwork; 13262,8554 13301,8606 13314,8624
@@ -26043,10 +26046,10 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="548612558" version="1"
-#: last_checked: 2018-02-23
+#: last_checked: 2018-03-14
 #: check_frequency: 14d
 # REMOVED ---	q3::inwork; 7201,8870 7101,9027
-	q3::inwork; 7101,9027 7035,9161 7012,9222
+	q3::inwork; 7101,9027 7035,9161 7012,9222 7001,9291
 EOF
      },
      { from  => 1493652218, # 2017-05-01 17:23
@@ -26161,7 +26164,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2018-02-22
+#: last_checked: 2018-03-14
 	2::inwork 14231,10907 14141,10931 14076,10949
 	2::inwork 14141,10931 14107,10911
 # REMOVED ---	2::inwork 14107,10911 14224,10878 14231,10907
@@ -26196,7 +26199,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
        data  => <<EOF,
-	2::temp 7215,12295 7031,12320 7040,12366 7051,12426 7077,12575
+	2::temp 7215,12295 7031,12320 7051,12426 7077,12575
 	2::temp 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954 6744,11936 6809,11979 6828,12031 6787,12099 6831,12150 7001,12274 7031,12320 7383,12095
 	2::temp 6694,12627 7031,12320
 	3 7183,12372 7122,12384 7051,12426 6859,12567 6808,12604
@@ -26305,6 +26308,7 @@ EOF
        recurring => 1,
        source_id => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
        data  => <<EOF,
+#: source_id: 176001130
 	2::inwork 20533,29069 20537,29285
 EOF
      },
@@ -26451,13 +26455,14 @@ EOF
        text  => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
+#: next_check_id: CARSTENN-2017
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?bvgid=BVG131679 ("gültig bis: auf Weiteres")
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=30361
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
 #: by: mapillary (Gehweg für Radfahrer frei)
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2018-01-13 (mapillary)
-#: check_frequency: 60d
+#: last_checked: 2018-03-05 (mapillary)
+#: check_frequency: 30d
 	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
 EOF
@@ -26498,13 +26503,10 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1520542403, # -> jetzt in gesperrt_orig --- undef, # XXX
        text  => 'S-Bahn-Unterführung gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: osm_watch: way id="463642095" version="2"
-#: last_checked: 2017-08-19
-#: next_check: 2017-12-31
 	2::inwork 4117,22722 4176,22764
 EOF
      },
@@ -26547,7 +26549,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-02-20
+#: last_checked: 2018-03-04
 	2::inwork 14652,10201 14569,10055
 EOF
      },
@@ -26649,7 +26651,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Anhaltinerstr./Postplatz: Wochemarkt Samstag 9 bis 16 Uhr',
+       text  => 'Teltower Damm/Postplatz: Wochenmarkt Samstag 9 bis 16 Uhr',
        recurring => 1,
        type  => 'handicap',
        source_id => 'http://www.zehlendorfer-wochenmarkt.de/',
@@ -26665,8 +26667,8 @@ EOF
        text  => 'Anhaltinerstr.: mögliche Beeinträchtigungen durch Bauarbeiten',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2017-10-14
-#: check_frequency: 30d
+#: last_checked: 2018-03-11
+#: check_frequency: 60d
 	q3::inwork 186,2532 272,2548 638,2637
 EOF
      },
@@ -26741,7 +26743,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-02-19 vvv
+#: last_checked: 2018-03-09 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -26815,12 +26817,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1520622239, # -> gesperrt_orig --- undef, # XXX
        text  => 'Nordhafenpark West: Uferwege können wegen Bauarbeiten gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: NORDHAFENPARKWEST-2018
-#: last_checked: 2018-01-14
+# REMOVED --- #: next_check_id: NORDHAFENPARKWEST-2018
+# REMOVED --- #: last_checked: 2018-01-14
 	2::inwork 7551,14464 7426,14539
 EOF
      },
@@ -26829,7 +26831,7 @@ EOF
        text  => 'Wolliner Str./Granseer Str./Fürstenberger Str.: Bauarbeiten, Kreuzung muss umständlich umfahren werden, Bordsteine',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-02-12 vvv
+#: last_checked: 2018-02-28 vvv
 #: check_frequency: 14d vvv
 	q3::inwork 10277,14691 10320,14608
 	q2::inwork 10320,14608 10399,14429
@@ -26848,13 +26850,14 @@ EOF
 EOF
      },
      { from  => 1518290143, # 2018-02-10 20:15
-       until => $isodate2epoch->("2018-03-15 12:00:00"), # 1522533599, # 2018-03-31 23:59
-       text  => 'Berlepschstr.: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Mitte März 2018',
+       until => $isodate2epoch->("2018-05-15 12:00:00"),
+       text  => 'Berlepschstr.: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Mitte Mai 2018',
        type  => 'handicap',
        source_id => '2147341799',
        data  => <<EOF,
 #: by: http://www.berliner-woche.de/zehlendorf/bauen/fertigstellung-der-berlepschstrasse-verzoegert-sich-um-ein-halbes-jahr-d137942.html (sogar "bis Ende März")
-	q4::inwork -468,1919 -343,1983 -285,2015 -228,2045
+#: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.683398.php
+	q4::inwork -468,1919 -343,1983 -285,2015 -226,2048
 EOF
      },
      { from  => 1518462294, # 2018-02-12 20:04
@@ -26866,6 +26869,42 @@ EOF
 	q4::inwork 7382,9187 7444,9148
 	q4::inwork 7308,9163 7363,9152
 #: XXX ^^^
+EOF
+     },
+     { from  => 1520920800, # 2018-03-13 07:00
+       until => $isodate2epoch->("2018-03-22 12:00:00"), # 1522533599, # 2018-03-31 23:59
+       text  => 'Konstanzer Str.: Bauarbeiten, Sperrung zwischen Hohenzollerndamm und Berliner Str., evtl. sind auch Radfahrer betroffen, bis Ende März 2018',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147342320
+	q4::inwork 3919,9085 3952,8980
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Vorbergstr.: Bauarbeiten zwischen Gleditschstr. und Akazienstr., Fahrbahn gesperrt, Ende unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+# XXX_prog: eigentlich q3-
+	q3::inwork 7136,9223 7012,9222
+EOF
+     },
+     { from  => 1521060826, # 2018-03-14 21:53
+       until => 1530395999, # 2018-06-30 23:59
+       text  => 'Breitenbachstr.: Bauarbeiten zwischen Innungsstr. und Holzhauser Str., Fahrbahn Richtung Norden gesperrt, ggfs. auch Behinderungen für Radfahrer, bis Ende Juni 2018',
+       type  => 'handicap',
+       source_id => 'http://www.berliner-woche.de/wittenau/verkehr/sanierung-der-breitenbachstrasse-d143204.html',
+       data  => <<EOF,
+	q4::inwork; 3810,19133 3546,19477
+EOF
+     },
+     { from  => 1521140385, # 2018-03-15 19:59
+       until => $isodate2epoch->("2018-05-18 12:00:00"), # 1525211999, # 2018-05-01 23:59
+       text  => 'Pankgrafenstr./Bahnhofstr.: zwischen Hubertusdamm und Streckfußstr. Baustelle, ggfs. Behinderungen auch für Radfahrer, bis Anfang Mai 2018',
+       type  => 'handicap',
+       source_id => '2147342325',
+       data  => <<EOF,
+	q4::inwork 14632,23257 14597,23280 14573,23295 14539,23306 14442,23339
 EOF
      },
     );

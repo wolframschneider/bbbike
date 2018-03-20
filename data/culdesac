@@ -106,7 +106,7 @@ Sackgassenende, Schulhof	culdesac 13518,7477
 	culdesac 5405,12292
 	culdesac_pseudo 5299,12420
 	culdesac_pseudo 5225,12450
-Sackgassenende, kroatische Botschaft	culdesac 6890,10581
+Sackgassenende, kroatische Botschaft	culdesac 6871,10590
 	culdesac 6877,10492
 	culdesac 2212,9755
 	culdesac 3364,9142
@@ -149,7 +149,7 @@ Sackgassenende, mittlerer Strang	culdesac 18604,9535
 Sackgassenende, nördlicher Strang	culdesac 18610,9569
 	culdesac_pseudo 18715,9589
 	culdesac 18843,10028
-	culdesac 18925,10064
+	culdesac 18919,10061
 	culdesac 19023,10088
 	culdesac 19487,10205
 	culdesac 19810,10155
@@ -1281,3 +1281,4 @@ Sackgassenende am Herzberg	culdesac_pseudo -17600,398
 	culdesac_pseudo -17087,-302
 	culdesac -17025,-378
 	culdesac_pseudo -17413,130
+	culdesac 329,2246
