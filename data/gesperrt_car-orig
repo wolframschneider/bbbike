@@ -493,7 +493,7 @@ Krautstr. - Kleine Markusstr.: Barriere	3 11958,12112 11937,12127 11958,12195
 Spreewaldplatz	1 12243,10274 12292,10374 12274,10436
 Am Juliusturm/Zitadelle: Mittelstreifen	3nocross -2794,14511 -2647,14532 -2597,14532
 #: note: Luftbild:
-Thielallee: Mittelstreifen	3nocross 2585,5696 2556,5575 2444,5303
+Thielallee: Mittelstreifen	3nocross 2574,5688 2556,5575 2444,5303
 Kleine Hamburger - Torstr.	3 9744,13584 9670,13637 9579,13604
 Kleine Hamburger - Gartenstr.	3 9744,13584 9670,13637 9535,13801
 Torstr.: Straßenbahntrasse	3nocross 10319,13788 10459,13760 10572,13731
@@ -1204,3 +1204,4 @@ Siegfriedstr. - Rüdigerstr.: Abbiegen verboten	3 16826,12408 16820,12339 16918,1
 Frankfurter Allee - Wohngebiet: Mittelstreifen	3nocross 16127,11950 16207,11937 16317,11920
 Wadzeckstr.	1 11295,13224 11315,13210 11354,13184 11369,13174
 Zimmerstr.	1 -13637,-1164 -13876,-1226
+Alte Köpenicker Allee: Schranke bei der Einfahrt	2 20316,7637 20348,7634 20459,7445 20501,7472 20540,7532

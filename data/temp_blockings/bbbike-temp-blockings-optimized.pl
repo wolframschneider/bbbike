@@ -858,10 +858,51 @@ push @temp_blocking,
        undef,
        undef,
        undef,
+       {
+         'data' => '	2::temp 7101,9027 7035,9161 7012,9222 7001,9291
+	2::temp 6945,9142 7035,9161
+',
+         'from' => 1525989600,
+         'id' => 728,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              24,
+                              'months',
+                              4
+                            ]
+                          ],
+         'source_id' => 'http://www.volksfeste-in-deutschland.de/primavera-fruehling-auf-der-akazienstrasse-in-berlin-schoeneberg.html',
+         'text' => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (12.5.2018 und 13.5.2018)',
+         'type' => 'gesperrt',
+         'until' => 1526248799
+       },
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20170325
+	2::temp 7001,9291 7012,9222 7035,9161 7101,9027
+	2::temp 6945,9142 7035,9161
+	2::temp 6975,8944 7101,9027 7308,9163
+',
+         'from' => 1538730000,
+         'id' => 731,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 06.10.2018 bis 07.10.2018',
+         'type' => 'gesperrt',
+         'until' => 1538949599
+       },
        undef,
        undef,
        undef,
@@ -2547,7 +2588,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im April von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3254,11 +3295,65 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
+       {
+         'data' => '#: tempex: 20170520 vvv
+	2::temp 8055,12186 8119,12414
+	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 6828,12031 6884,12006
+	2::temp 6809,11979 6984,11859
+	2::temp 6778,11742 6980,11790
+	2::temp 6809,11570 6869,11567 7018,11615 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629 7623,11624 7649,11717 7701,11798 7706,11878 7717,11918 7658,11947 7634,11920 7559,11888 7449,11883
+	2::temp 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8034,12093 8057,12065 8052,12033 8022,12016 8020,11937 8095,11919 8132,11910 8221,11885 8244,11878 8262,11883 8453,12099 8522,12187 8538,12245
+	2::temp 8522,12239 8466,12197
+	3 7429,12070 7383,12095 7031,12320
+	3 7875,12363 7822,12201 7816,12150 7823,12120
+	3 7031,12320 7383,12095 7429,12070
+	3 7823,12120 7816,12150 7822,12201 7875,12363
+	3 8391,12389 8344,12221 8327,12174
+	3 8327,12174 8344,12221 8391,12389
+#: tempex ^^^
+',
+         'from' => 1527199200,
+         'id' => 2427,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.berliner-frauenlauf.de/?year=2018',
+         'text' => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 26. Mai 2018',
+         'type' => 'gesperrt',
+         'until' => 1527371999
+       },
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2018
+# REMOVED (müsste korrigiert werden) --- #: tempex: YYYY0429-YYYY0501
+	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+',
+         'from' => 1525298400,
+         'id' => 2431,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
+                              'months',
+                              4
+                            ]
+                          ],
+         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (04.05.2018 bis 06.05.2018)',
+         'type' => 'handicap',
+         'until' => 1525643999
+       },
        undef,
        undef,
        undef,
@@ -3524,7 +3619,33 @@ Kleistpark	2::night 7430,9576 7501,9573 7512,9572
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: tempex: YYYY0428T0000 - YYYY0502T0200 vvv
+	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
+	2::inwork 8573,12325 8540,12420
+	2::inwork 8303,12216 8344,12221 8538,12245 8592,12252
+	2::inwork 8089,12190 8214,12205
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+#: tempex ^^^
+',
+         'from' => 1524866400,
+         'id' => 2565,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              4
+                            ]
+                          ],
+         'source_id' => 'http://www.berlin.de/tickets/suche/detail.php?id=1372887',
+         'text' => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung des DGB), am 1. Mai 2018',
+         'type' => 'gesperrt',
+         'until' => 1525219200
+       },
        undef,
        undef,
        undef,
@@ -3795,6 +3916,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: LMS-BR_r_LMS-BR_51041
 #: source_id: 2147342003
 #: source_id: 2147342198
+#: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
 #: XXX laut fritz Ende Juni 2018, laut vmz Ende 2018
@@ -3934,7 +4056,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: note: laut fritz bis 2018-03-30, laut vmz bis März 2018
+         'data' => '#: note: laut fritz bis 2018-05-30, laut vmz bis Mai 2018
 #: by: http://www.berliner-woche.de/buckow/verkehr/der-lange-weg-zur-sanierten-strasse-bauarbeiten-am-buckower-damm-anwohner-aergern-sich-ueber-lkw-im-wohngebiet-d126968.html
 #: note: die Baustelle ist gewandert
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
@@ -3945,9 +4067,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1467661160,
          'id' => 2808,
          'source_id' => '2147341551',
-         'text' => 'Buckower Damm: Baustelle zwischen An den Achterhöfen und Mollnerweg, evtl. auch Einschränkungen für Radfahrer, voraussichtlich bis März 2018',
+         'text' => 'Buckower Damm: Baustelle zwischen An den Achterhöfen und Mollnerweg, evtl. auch Einschränkungen für Radfahrer, voraussichtlich bis Ende Mai 2018',
          'type' => 'handicap',
-         'until' => 1522404000
+         'until' => 1527674400
        },
        undef,
        undef,
@@ -3967,7 +4089,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-03-21 vvv
+#: last_checked: 2018-04-04 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -4066,24 +4188,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: laut fritz bis 8.12.2017, laut VMZ bis Mitte Dezember 2017
-#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.595041.php
-#: by: http://werbegemeinschaft-friedrichshagen.de/wp-content/uploads/2017/05/2017-05_Boelschestr_Anwohnerflyer_web.pdf
-#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.641756.php
-#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.643825.php
-#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.645164.php
-#: source_id: LMS-BR_r_LMS-BR_97860
-#: source_id: 2147341992
-# REMOVED ---	q4::inwork; 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
-	q4::inwork; 25539,5237 25524,5011 25519,4830
-',
-         'from' => 1509836400,
-         'id' => 2867,
-         'text' => 'Bölschestr.: Bauarbeiten, zwischen Aßmannstr. und Müggelseedamm Richtung Süden gesperrt, bis Ende März 2018',
-         'type' => 'handicap',
-         'until' => 1521802800
-       },
+       undef,
        undef,
        undef,
        {
@@ -4101,7 +4206,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2018-03-22
+#: last_checked: 2018-03-27
 	2::inwork 14231,10907 14141,10931 14076,10949
 	2::inwork 14141,10931 14107,10911
 # REMOVED ---	2::inwork 14107,10911 14224,10878 14231,10907
@@ -4208,7 +4313,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
 #: by: mapillary (Gehweg für Radfahrer frei)
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2018-03-05 (mapillary)
+#: last_checked: 2018-03-29 (mapillary)
 #: check_frequency: 30d
 	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
@@ -4229,7 +4334,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-03-04
+#: last_checked: 2018-04-03
 	2::inwork 14652,10201 14569,10055
 ',
          'from' => undef,
@@ -4239,16 +4344,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
-       {
-         'data' => '	q4::inwork; -2959,17507 -2517,17431
-',
-         'from' => 1506204000,
-         'id' => 2908,
-         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.629757.php',
-         'text' => 'Mertensstr.: Einbahnstraße zwischen Goltzstr. und Streitstr., offen Richtung Westen, voraussichtlich ab Ende September 2017 bis Frühjahr 2018',
-         'type' => 'handicap',
-         'until' => 1522576800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4298,7 +4394,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-03-09 vvv
+#: last_checked: 2018-04-04 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4370,7 +4466,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1525125599
        },
        {
-         'data' => '#: by: http://www.berliner-woche.de/zehlendorf/bauen/fertigstellung-der-berlepschstrasse-verzoegert-sich-um-ein-halbes-jahr-d137942.html (sogar "bis Ende März")
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_108511_LMS-BR_72
+#: by: http://www.berliner-woche.de/zehlendorf/bauen/fertigstellung-der-berlepschstrasse-verzoegert-sich-um-ein-halbes-jahr-d137942.html (sogar "bis Ende März")
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.683398.php
 #: by: http://www.berliner-woche.de/zehlendorf/bauen/strassensanierung-in-der-berlepschstrasse-vezoegert-sich-weiter-d146418.html (Ende Mai)
 	q4::inwork -468,1919 -343,1983 -285,2015 -226,2048
@@ -4383,7 +4480,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1527760800
        },
        undef,
-       undef,
+       {
+         'data' => '#: source_id: 2147342320
+	q4::inwork 3919,9085 3952,8980
+',
+         'from' => 1520920800,
+         'id' => 2934,
+         'text' => 'Konstanzer Str.: Bauarbeiten, Sperrung zwischen Hohenzollerndamm und Berliner Str., evtl. sind auch Radfahrer betroffen, bis 10. April 2018',
+         'type' => 'handicap',
+         'until' => 1523354400
+       },
        {
          'data' => '# XXX_prog: eigentlich q3-
 	q3::inwork 7136,9223 7012,9222
@@ -4436,6 +4542,89 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Rosenthaler Weg: Sperrung wegen Bauarbeiten, voraussichtlich vom 2. Mai 2018 bis 29. Juni 2018',
          'type' => 'gesperrt',
          'until' => 1530309599
+       },
+       {
+         'data' => '#: by: http://www.berliner-woche.de/adlershof/verkehr/wasserbetriebe-und-bvg-bauen-in-der-doerpfeldstrasse-d144226.html
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.687481.php
+#: source_id: 2147342367
+#: source_id: LMS-BR_r_LMS-BR_127098_LMS-BR_72
+	q4::inwork 20082,3578 20136,3609 20149,3617 20159,3623 20219,3661 20304,3714 20322,3725 20352,3744 20362,3750 20428,3786
+',
+         'from' => 1521928800,
+         'id' => 2940,
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.687481.php',
+         'text' => 'Dörpfeldstr.: Bauarbeiten zwischen Gellert- und Hackenbergstr., Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 26. März 2018 bis 17. April 2018',
+         'type' => 'handicap',
+         'until' => 1523970000
+       },
+       {
+         'data' => '#: last_checked: 2018-03-25
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet? Wird sich die Qualität der Fahrbahn nach den Bauarbeiten verbessern?
+	q4::inwork 17456,7132 17352,7051
+',
+         'from' => undef,
+         'id' => 2941,
+         'text' => 'Mentelinstr.: Bauarbeiten zwischen Nalepastr. und Otto-Krüger-Zeile, Fahrbahn gesperrt, Ende unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: last_checked: 2018-03-25 vvv
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
+	q4::inwork; 24629,5831 24798,5891
+	q3::inwork 24798,5891 24977,5880
+#: add_fragezeichen ^^^
+#: last_checked ^^^
+',
+         'from' => undef,
+         'id' => 2942,
+         'text' => 'Stillerzeile: Bauarbeiten, östlich des Löbauer Wegs einige Meter Fahrbahn gesperrt, westlich Einbahnstraßenregelung, offen Richtung Westen',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       undef,
+       {
+         'data' => '	q4::inwork 11616,10288 11512,10105
+',
+         'from' => 1522090587,
+         'id' => 2944,
+         'source_id' => '2147342376',
+         'text' => 'Mariannenstr.: Bauarbeiten zwischen Reichenberger Str. und Paul-Lincke-Ufer, Fahrbahn gesperrt, ab 26.03.2018 10:00 bis Ende April 2018',
+         'type' => 'handicap',
+         'until' => 1525093200
+       },
+       {
+         'data' => '#: source_id: 2147342379
+#: source_id: LMS-BR_r_LMS-BR_127414_LMS-BR_72
+	2::inwork 8971,864 9024,906 9129,986
+',
+         'from' => 1522326966,
+         'id' => 2945,
+         'text' => 'Säntisstr.: Bahnübergang bis 2021 gesperrt, ggfs. gibt es für Fußgänger eine Überquerungsmöglichkeit (tragen!)',
+         'type' => 'gesperrt',
+         'until' => 1622541600
+       },
+       {
+         'data' => '#: next_check_id: ORANIENBURGER-2018
+	q4::inwork; 5136,21738 5210,21636 5311,21495 5320,21432 5333,21332 5341,21266 5343,21250 5349,21198
+	q4::inwork; 5297,21243 5099,21410 5053,21452 5000,21488 4810,21730
+',
+         'from' => 1522789491,
+         'id' => 2946,
+         'source_id' => '2147341699',
+         'text' => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; bis Ende Mai 2018',
+         'type' => 'handicap',
+         'until' => 1527803999
+       },
+       {
+         'data' => '#: source_id: 2147342390
+	q4::inwork; 8901,12008 8861,12125 9054,12154
+',
+         'from' => 1522864912,
+         'id' => 2947,
+         'text' => 'Wilhelmstr. und Behrenstr.: Sperrung Richtung Norden zwischen Französische Str. und Behrenstr. sowie Richtung Osten zwischen Wilhelmstr. und Mauerstr., bis 4. Mai 2018',
+         'type' => 'handicap',
+         'until' => 1525449600
        }
      
 );

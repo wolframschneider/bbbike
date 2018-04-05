@@ -9,7 +9,6 @@ Lange Str.: Bauarbeiten, Einbahnstraﬂenregelung	q2::inwork; 12409,11902 12238,11
 Rigaer Str.: Baustelle, Fuﬂg‰nger	q3::inwork 14538,12371 14748,12314
 Auerstr.: zwischen Richard-Sorge-Str. und Lˆwestr. Baustelle, Einbahnstraﬂenregelung	q2::inwork; 13273,12902 13202,12790
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607,15282
-Wadzeckstr. - Mollstr.: Behinderungen wegen Bauarbeiten mˆglich	q2::inwork 11315,13210 11399,13333
 Voltairestr.: Fahrbahn unter Umst‰nden wegen Baustelle gesperrt, Ausweichen auf Gehweg	q3 11329,12497 11209,12430
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 Jerusalemer Str.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 9945,11371 9936,11469
@@ -39,8 +38,6 @@ Schleswiger Ufer: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5894,12480 5944,12
 Nansenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12412,9610 12374,9542
 Dieselstr., Umfahrung: Fuﬂg‰nger, eng	q3::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14471,8046
 Karl-Marx-Str.: Bauarbeiten zwischen Werbellinstr. und Thomasstr., Richtung S¸den auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12753,8187 12794,8103 12830,8031 12865,7923 12898,7832 12914,7785 12969,7610
-Helmstr.: an der Hauptstr. Bauarbeiten, Behinderungen	q3::inwork 7444,9148 7382,9187
-Vorbergstr.: an der Hauptstr. Bauarbeiten, Behinderungen	q3::inwork 7363,9152 7308,9163
 Wiltbergstr.: Bauarbeiten, Einbahnstraﬂenregelung, auf Gehweg ausweichen	q3::inwork; 16669,25373 16583,25440 16475,25526 16414,25575 16294,25683 16220,25716
 Wuhlewanderweg: steiler Anstieg, Fuﬂg‰nger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gef‰lle, Fuﬂg‰nger	q4; 21970,12153 21998,12204
@@ -68,14 +65,15 @@ Alt-Tegel: reger Fuﬂg‰ngerverkehr (Fuﬂg‰ngerzone)	q4 1907,20265 2015,20336
 Breitscheidplatz: starker Fuﬂg‰ngerverkehr, oft Veranstaltungen	q4 5656,10876 5652,11004
 Breitscheidplatz: starker Fuﬂg‰ngerverkehr, oft Veranstaltungen	q4 5782,10884 5829,10964
 Wilmersdorfer Str.: starker Fuﬂg‰ngerverkehr (Fuﬂg‰ngerzone), nachts und sonntags Radfahren erlaubt	q4 3717,11462 3749,11344 3770,11231 3795,11098 3827,10980
-(An der M¸ggelspree): Fuﬂg‰nger	q2 23444,4942 23461,4948 23461,5013 23461,5054 23620,5096 23776,5040 23852,5036 23962,5031 23982,5030 24147,4930 24378,4847 24834,4541 25030,4421 25131,4400 25200,4420 25315,4474 25403,4480 25429,4493 25479,4540 25565,4549
+(An der M¸ggelspree): Fuﬂg‰nger	q2 23444,4942 23461,4948 23461,5013 23461,5054 23620,5096 23776,5040 23852,5036 23962,5031 23982,5030 24147,4930 24378,4847 24834,4541 25030,4421 25131,4400 25200,4420 25315,4474 25403,4480 25429,4493 25458,4521 25565,4549
 Am M¸ggelsee: Fuﬂg‰nger	q2 25474,2848 25667,2787 25857,2654 26006,2615 26158,2647 26339,2667 26457,2660 26627,2610 26859,2596 26989,2570 27081,2528 27135,2500 27173,2444 27267,2414 27363,2448 27471,2527 27565,2637 27743,2842 27822,2910 27937,3016 28273,3143 28496,3253 28588,3285 28668,3297 28852,3293 28852,3277
 Pestalozzistr.: Fuﬂg‰ngerzone	q3 3721,11230 3770,11231 3822,11231
 (Zufahrt am NKZ): Fuﬂg‰nger/Lieferverkehr	q2 11291,10438 11317,10485 11344,10507
 (Zufahrt am NKZ): Fuﬂg‰nger, un¸bersichtlich	q3 11344,10507 11392,10520 11411,10515
 Dresdener Str. - NKZ: Bordsteine	q3 11344,10507 11334,10527
-Alexanderplatz: langsame Straﬂenbahnen, Fuﬂg‰ngerverkehr	q2 11139,13008 11064,12910 10970,12822 10923,12779
-Alexanderplatz [Richtung Alexa]: Fuﬂg‰ngerverkehr	q2 11134,12793 11064,12910
+Alexanderplatz: langsame Straﬂenbahnen, Fuﬂg‰ngerverkehr	q3 11139,13008 11064,12910 10970,12822
+Alexanderplatz: langsame Straﬂenbahnen, Fuﬂg‰ngerverkehr	q2 10970,12822 10923,12779
+Alexanderplatz [Richtung Alexa]: Fuﬂg‰ngerverkehr	q3 11134,12793 11064,12910
 Rathausstr.: Fuﬂg‰nger, Bauarbeiten	q2 10923,12779 10704,12595
 Dircksenstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10970,12822 10849,12944
 Dircksenstr.: Fuﬂg‰nger	q2 10970,12822 11007,12773 11030,12741 11087,12780 11105,12764
@@ -333,8 +331,9 @@ Barsekowstr.: Fuﬂg‰nger	q1 5336,4676 5406,4631 5465,4606 5521,4605 5588,4629
 (Stadtpark Steglitz): Fuﬂg‰nger	q1 5589,4617 5588,4629 5582,4675 5555,4743
 (Stadtpark Steglitz): Fuﬂg‰nger	q1 5509,4773 5453,4665 5406,4631
 (Stadtpark Steglitz): Fuﬂg‰nger	q1 5797,4846 5806,4840 5909,4798 5947,4791 6022,4746 6026,4744
-Dieffenbachstr.: Bodenschwellen	q0 11141,9732 11346,9655
-Dieffenbachstr.: Bodenschwellen, kˆnnen gut umfahren werden	q0 11346,9655 11541,9576
+Dieffenbachstr.: Bodenschwellen	q1 11141,9732 11346,9655
+Dieffenbachstr.: Bodenschwellen	q0 11346,9655 11541,9576
+Oppelner Str.: Bodenschwellen	q0 12897,10439 12978,10581
 Hoffmannstr.: Bodenschwellen (2x)	q1 14077,10016 14289,9870
 Lausitzer Platz: einige Bodenschwellen	q2 12197,10494 12172,10585
 Lausitzer Platz: einige Bodenschwellen	q2 12274,10612 12172,10585
@@ -408,8 +407,8 @@ Langhoffstr.: enge Straﬂe, Gegenverkehr	q1 19817,14371 19818,14064
 Zum Schlachtensee: wegen der groﬂen Steigung/Gef‰lles nur Schrittgeschwindigkeit mˆglich	q4 -1663,4218 -1592,4268
 (Treseburger Ufer - Rungiusstr.): nur f¸r Fuﬂg‰nger erlaubt	q4 12736,5913 13064,5953
 Treseburger Ufer: einige Fuﬂg‰nger	q1 12301,5783 12453,5844 12507,5860 12636,5896 12699,5909
-(Bellevuepark): einige Fuﬂg‰nger	q1 22798,5731 22796,5640 22796,5631 22787,5582 22855,5554 22835,5452 22851,5321
-(Bellevuepark): nur f¸r Fuﬂg‰nger erlaubt	q4 22787,5582 22733,5569 22701,5428 22628,5340
+(Bellevuepark): einige Fuﬂg‰nger	q1 22798,5731 22796,5640 22796,5631 22787,5582 22855,5554 22835,5452 22851,5327
+(Bellevuepark): nur f¸r Fuﬂg‰nger erlaubt	q4 22787,5582 22733,5569 22701,5428 22657,5328
 Walter-Nicklitz-Promenade: eng und kurvenreich, Fuﬂg‰nger	q2 8290,15304 8329,15397 8308,15409 8312,15470
 Gropiusstr.: Fuﬂg‰nger auf dem Uferweg	q1 8389,16214 8534,16355 8543,16364
 Pankeweg: Fuﬂg‰nger	q1 8286,14635 8322,14687 8292,14734 8275,14869 8264,14902
@@ -700,7 +699,7 @@ Maselakepark: Fuﬂg‰nger	q1 -2587,16600 -2632,16347
 Nordhafen: Fuﬂg‰nger	q1 -2477,16351 -2510,16357 -2632,16347 -2779,16330 -2972,16399 -2972,16420
 (Gr¸nheider Weg - Fredersdorfer Weg): starker Anstieg, nicht f¸r Fahrr‰der geeignet	q4 30867,3806 30862,3816 30849,3843 30823,3866
 Seidenbienenweg: sehr eng	q4 31914,2767 31909,2802 31884,2841
-(entlang des Tr‰nkegrabens): Fuﬂg‰nger, Radfahren erlaubt	q2 16900,9861 17041,9985 17078,10038 17138,10109 17154,10158 17157,10173 17143,10186 17144,10297 17160,10376 17249,10666 17249,10702 17310,10714 17415,10694 17527,10640 17625,10615 17705,10621 17847,10629 17870,10619 17897,10607 17999,10584 18034,10567 18059,10556 18150,10543
+(entlang des Tr‰nkegrabens): Fuﬂg‰nger, Radfahren erlaubt	q2 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158 17157,10173 17143,10186 17144,10297 17160,10376 17249,10666 17249,10702 17310,10714 17415,10694 17527,10640 17625,10615 17705,10621 17847,10629 17870,10619 17897,10607 17999,10584 18034,10567 18059,10556 18150,10543
 Hortensienplatz: einige Fuﬂg‰nger, Bordsteine	q3 4156,4784 4121,4841 4116,4850
 (Lustgarten entlang des Spreekanals): Fuﬂg‰nger	q2 10063,12438 9956,12617 9948,12631
 Blaurackenweg: enge Straﬂe, spielende Kinder	q1 17613,7989 17647,8071 17532,8125
@@ -774,7 +773,7 @@ Altrader Weg: Fuﬂg‰nger	q1 18008,-58 17946,-100
 (U Zwickauer Damm - Agnes-Straub-Weg): Fuﬂg‰nger	q1 15931,2061 15930,2112 15923,2129
 Lupinenweg: Fuﬂg‰nger	q1 16856,1839 16801,1791
 Zum kleinen Pfuhl: Fuﬂg‰nger	q2 12162,1651 12207,1704
-(Katzengrabensteg - Bellevuepark): Fuﬂg‰nger	q1 22581,4932 22632,4958 22726,5332
+(Katzengrabensteg - Bellevuepark): Fuﬂg‰nger	q1 22581,4932 22632,4958 22726,5328
 Katzengrabensteg: Fuﬂg‰nger	q1 22581,4932 22484,4868 22433,4887 22439,4838
 Samoastr.: Fuﬂg‰nger	q1 6886,15156 6833,15215
 Nazarethkirchstr.: einige Bodenschwellen	q0 7543,16016 7441,15909 7354,15817 7198,15656
@@ -1693,7 +1692,11 @@ Steinr¸ckweg: mˆglicher Bordstein	q1 4257,6856 4293,6719
 (Gleimstr. - Mauerpark): Fuﬂg‰nger	q2 10170,15659 10228,15488
 Gedonstr.: Bordsteine, parkende Autos, Fuﬂg‰nger	q4 7915,17557 7916,17576 7917,17588
 Alexanderufer - CharitÈ: durch das Tor schieben	q4 8371,13399 8363,13402 8356,13404
+Nˆldnerplatz [L¸ckstr. - Nˆldnerstr.]: einige Fuﬂg‰nger	q1 15903,10906 15932,10830
 Nˆldnerplatz [Nˆldnerstr. - Schlichtallee]: einige Fuﬂg‰nger	q1 15932,10830 15970,10755
+(Weg im Gr¸nzug): einige Fuﬂg‰nger	q1 17391,9746 17316,9797 17257,9869 17161,9921 17005,9953
+(Dolgenseestr. - Weg im Gr¸nzug): einige Fuﬂg‰nger	q1 17275,9892 17257,9869
+Wadzeckstr. - Mollstr.: einige Fuﬂg‰nger	q1 11315,13210 11399,13333
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schulhof, Radfahren verboten	q3 7242,8586 7288,8635

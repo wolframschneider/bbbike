@@ -755,7 +755,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX_prog Grüner Pfeil (Alt-Köpenick -> Lange Brücke)
 	X 22093,4499
 	X 21954,5229
-	X 22123,5452
+	X 22116,5442
 	X 22431,6068
 	X 18057,14549
 	X 15256,14237
@@ -1108,7 +1108,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14653,15738
 	X 15066,14579
 	X 11785,9437
-	X 2585,5696
+	X 2574,5688
 	X 2659,6499
 	X 2723,7029
 	X 2717,7093
@@ -2633,13 +2633,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
-#: last_checked: 2018-03-16
+#: last_checked: 2018-04-04
 #: next_check: 2018-06-28
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2018-03-10 vvv
+#: last_checked: 2018-04-04 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2784,6 +2784,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check_id: SONNENALLEE-2014
 #: osm_watch: node id="4006030833" version="4"
 #: last_checked: 2018-02-26
+#: next_check: 2018-05-31
 #: note: Radfahrer in Richtung Nordwesten müssen die Seite wechseln, hier Anforderungsampel
 	X::inwork 14174,7505
 # REMOVED -- #: note: Baustellenstraße kreuzt ---	X::inwork 14369,7376
@@ -2912,6 +2913,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 7382,9187
 #: note: Anforderungsampel
 	F 1485,8845
+	F 7740,1041
 # 
 ################################################################################
 #: note: Potsdam vvv
@@ -3600,8 +3602,12 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 #: note: eigentlich gehören alle Koordinaten hier (5416,-3014 5407,-3031 5399,-3049) zum Kreuzungsbereich
 	X 5407,-3031
 	X 7978,-4011
-#: by: mapillary
+#: by: mapillary vvv
 	X -7414,16351
+	X -8507,-9605
+	X -3184,-4161
+	X -3111,-4047
+#: by ^^^
 # 
 #: note: ^^^
 ################################################################################

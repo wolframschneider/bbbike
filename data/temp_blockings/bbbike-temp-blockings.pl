@@ -1072,7 +1072,7 @@ EOF
        text  => 'L 78; (Potsdamer Str.); OD Saarmund, Eisenbahnbrücke Brückensanierung Vollsperrung 04.10.2004-15.10.2004 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -9626,-6603 -9500,-6933 -9301,-7466 -8492,-9628 -8331,-9887
+	2 -9626,-6603 -9500,-6933 -9301,-7466 -9116,-7957 -8622,-9215 -8575,-9351 -8521,-9503 -8507,-9605 -8462,-9641 -8331,-9887
 EOF
      },
      { from  => 1096754400, # 2004-10-03 00:00
@@ -2229,7 +2229,7 @@ EOF
        text  => 'L 77; (Saarmund-Güterfelde); OD Philippsthal, zw. Kreisel u. OE Dreharbeiten Vollsperrung 17.06.2005-18.06.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -6319,-7823 -6659,-8210
+	q4 -6319,-7795 -6711,-8160
 EOF
      },
      { from  => 1118993118, # 2005-06-17 09:25 # FOR RECURRING ENTRY SEE BELOW
@@ -3364,7 +3364,7 @@ EOF
        text  => 'Stahnsdorf, Lindenstraße, Baustelle bis 30.04.2006, Der Verkehr wird an der Baustelle durch eine Lichtzeichenanlage halbseitig vorbeigeführt. ',
        type  => 'gesperrt',
        data  => <<EOF,
-	1 -1664,-1720 -1715,-1767 -1921,-1931 -2049,-2165
+	1 -1664,-1720 -1715,-1767 -1921,-1931 -2040,-2177
 EOF
      },
      { from  => $isodate2epoch->("2017-11-26 00:00:00"), # 1 Tag Vorlauf
@@ -4123,7 +4123,7 @@ EOF
        text  => 'L 077 Lindenstr. OD Stahnsdorf, zw. Streuobsthang u. Ruhlsdorfer Str. Geh- und Radwegbau halbseitig gesperrt; Einbahnstraße 03.04.2006-18.08.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	1 -2049,-2165 -1921,-1931 -1715,-1767
+	1 -2040,-2177 -1921,-1931 -1715,-1767
 EOF
      },
      { from  => 1144706400, # 2006-04-11 00:00
@@ -5863,7 +5863,7 @@ EOF
        text  => 'B 096 a zw. OL Schildow, Hauptstr. u. Schönfließ, Dorfstr. Deckenerneuerung Vollsperrung 04.10.2006-30.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 8021,26285 7395,26862
+	2::inwork 8021,26285 7617,26640
 EOF
      },
      { from  => 1157234400, # 2006-09-03 00:00
@@ -6254,13 +6254,13 @@ EOF
 	1::inwork 4356,12009 4337,11721
 EOF
      },
-     { from  => $isodate2epoch->("2017-05-12 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-05-14 23:59:59"),
+     { from  => $isodate2epoch->("2018-05-11 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-05-13 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 24, months => 4]],
-       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (13.5.2017 und 14.5.2017)',
+       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (12.5.2018 und 13.5.2018)',
        type  => 'gesperrt',
-       source_id => 'http://www.ms-event-agentur.com/primavera%202013.html?date=20170325',
+       source_id => 'http://www.volksfeste-in-deutschland.de/primavera-fruehling-auf-der-akazienstrasse-in-berlin-schoeneberg.html',
        data  => <<EOF,
 	2::temp 7101,9027 7035,9161 7012,9222 7001,9291
 	2::temp 6945,9142 7035,9161
@@ -6283,11 +6283,11 @@ EOF
 	2::inwork 17729,8850 17879,8773 17929,8742 17997,8695 18009,8687 18086,8634 18151,8589
 EOF
      },
-     { from  => $isodate2epoch->("2017-09-29 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-10-01 23:59:59"),
+     { from  => $isodate2epoch->("2018-10-05 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-10-07 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 30, months => 9]],
-       text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 30.09.2017 bis 01.10.2017',
+       text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 06.10.2018 bis 07.10.2018',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.ms-event-agentur.com/seite22.html?date=20170325
@@ -6849,7 +6849,7 @@ EOF
        text  => 'B 166 Berliner Str., Lindenallee OD Schwedt Deckenerneuerung Vollsperrung 21.11.2006-28.11.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 69480,73471 69302,73357 69238,73315
+	q4::inwork 69472,73461 69302,73357 69238,73315
 EOF
      },
      { from  => 1164612153, # 2006-11-27 08:22
@@ -7613,7 +7613,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005044',
        data  => <<EOF,
-	2::temp 2823,5672 2771,5674 2654,5678
+	2::temp 2823,5672 2771,5674 2669,5677
 EOF
      },
      { from  => 1174773600, # 2007-03-24 23:00
@@ -9659,7 +9659,7 @@ EOF
      },
      { from  => 1189353413, # undef
        until => 1189353419, # undef
-       text  => 'Oranienburger Str. (Reinickendorf) stadtauswärts, zwischen Lübarser Str. und WIttenauer Str. Baustelle, Fahrtrichtung gesperrt',
+       text  => 'Oranienburger Str. (Reinickendorf) stadtauswärts, zwischen Lübarser Str. und Wittenauer Str. Baustelle, Fahrtrichtung gesperrt',
        type  => 'gesperrt',
        source_id => 'IM_006352',
        data  => <<EOF,
@@ -13628,7 +13628,7 @@ EOF
        text  => 'L 077 Saarmund - Güterfelde Bereich KVK Philippsthal Radwegbau Vollsperrung 23.03.2009-14.04.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -5575,-6838 -6043,-7395 -6319,-7823
+	2::inwork -5575,-6838 -6021,-7385 -6319,-7795
 EOF
      },
      { from  => 1237676400, # 2009-03-22 00:00
@@ -13893,7 +13893,7 @@ EOF
        text  => 'L 077 Saarmund - Güterfelde Bereich KVK Philippsthal Radwegbau Vollsperrung 14.04.2009-30.04.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -6043,-7395 -5575,-6838
+	2::inwork -6021,-7385 -5575,-6838
 EOF
      },
      { from  => 1240005600, # 2009-04-18 00:00
@@ -16244,7 +16244,7 @@ EOF
        text  => 'B 096 Schönfließer Str.A OL Bergfelde, zw. Lindenallee und Ahornstr. Kranarbeiten Vollsperrung 19.09.2009-19.09.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 4167,29307 4267,29149 4412,28911 4807,28338
+	q4::inwork 4167,29307 4267,29149 4408,28909 4435,28862 4807,28338
 EOF
      },
      { from  => 1252792800, # 2009-09-13 00:00
@@ -18436,7 +18436,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/W-SG33-P/10/410',
        data  => <<EOF,
-	2::inwork -2815,-3574 -3170,-4140 -3368,-4430
+	2::inwork -2777,-3540 -3111,-4047 -3170,-4140 -3184,-4161 -3249,-4256 -3318,-4358 -3368,-4430
 EOF
      },
      { from  => 1290975348, # 2010-11-28 21:15
@@ -21502,13 +21502,13 @@ EOF
 	q4::xmas 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 EOF
      },
-     { from  => $isodate2epoch->("2017-05-19 00:00:00"), # 1431715044, # 1367560678, # 2013-05-03 07:57
-       until => $isodate2epoch->("2017-05-20 23:59:59"), # 1367704799, # 2013-05-04 23:59
+     { from  => $isodate2epoch->("2018-05-25 00:00:00"), # 1431715044, # 1367560678, # 2013-05-03 07:57
+       until => $isodate2epoch->("2018-05-26 23:59:59"), # 1367704799, # 2013-05-04 23:59
        periodic => 1,
        recurrences => [['yearly', days => 4, months => 5]],
-       text  => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 20. Mai 2017',
+       text  => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 26. Mai 2018',
        type  => 'gesperrt',
-       source_id => 'http://www.berliner-frauenlauf.de/?year=2016',
+       source_id => 'http://www.berliner-frauenlauf.de/?year=2018',
        data  => <<EOF,
 #: tempex: 20170520 vvv
 	2::temp 8055,12186 8119,12414
@@ -21532,6 +21532,7 @@ EOF
        until => $isodate2epoch->("2017-05-28 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 4, months => 5]],
+       recurrence_prewarn_days => 21, # findet es 2018 überhaupt statt?
        text  => 'Schöneberger Mai- und Spargelfest am 27. und 28. Mai 2017 in der Freiherr-vom-Stein-Straße',
        type  => 'gesperrt',
        source_id => 'http://www.ms-event-agentur.com/seite18.html?date=20170325',
@@ -21558,17 +21559,15 @@ EOF
 	q4::inwork; 7085,15226 7131,15109
 EOF
      },
-     { from  => $isodate2epoch->("2017-04-28 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-05-01 23:59:59"),
-       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (29.04.2017 bis 01.05.2017)',
+     { from  => $isodate2epoch->("2018-05-03 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-05-06 23:59:59"),
+       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (04.05.2018 bis 06.05.2018)',
        periodic => 1,
        recurrences => [['yearly', days => 29, months => 4]],
        type  => 'handicap',
        data  => <<EOF,
-#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2016
-#: by: http://www.berlin.de/tickets/suche/detail.php?id=954647
-#: by: http://www.volksfeste-in-deutschland.de/kunst-wein-in-lichtenrade.html
-#: tempex: YYYY0429-YYYY0501
+#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2018
+# REMOVED (müsste korrigiert werden) --- #: tempex: YYYY0429-YYYY0501
 	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
 EOF
      },
@@ -22948,11 +22947,11 @@ EOF
 	2::inwork 48229,74776 48296,74641
 EOF
      },
-     { from  => $isodate2epoch->("2017-04-28 00:00:00"), # 1398636000, # 2014-04-28 00:00
-       until => $isodate2epoch->("2017-05-02 02:00:00"), # 1398988800, # 2014-05-02 02:00
+     { from  => $isodate2epoch->("2018-04-28 00:00:00"),
+       until => $isodate2epoch->("2018-05-02 02:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 30, months => 4]],
-       text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung und Kinderfest des DGB), am 1. Mai 2017',
+       text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung des DGB), am 1. Mai 2018',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/tickets/suche/detail.php?id=1372887',
        data  => <<EOF,
@@ -23829,7 +23828,7 @@ EOF
        type  => 'gesperrt',
        source_id => '146901438',
        data  => <<EOF,
-	2::inwork -3068,-7423 -3462,-6437 -3616,-6170 -3851,-5870 -3877,-5370
+	2::inwork -3068,-7423 -3462,-6437 -3616,-6170 -3851,-5870 -3848,-5359
 EOF
      },
      { from  => 1413669600, # 2014-10-19 00:00
@@ -24713,6 +24712,7 @@ EOF
 #: source_id: LMS-BR_r_LMS-BR_51041
 #: source_id: 2147342003
 #: source_id: 2147342198
+#: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
 #: XXX laut fritz Ende Juni 2018, laut vmz Ende 2018
@@ -25478,12 +25478,12 @@ EOF
 EOF
      },
      { from  => 1467661160, # 2016-07-04 21:39
-       until => $isodate2epoch->("2018-03-30 12:00:00"),
-       text  => 'Buckower Damm: Baustelle zwischen An den Achterhöfen und Mollnerweg, evtl. auch Einschränkungen für Radfahrer, voraussichtlich bis März 2018',
+       until => $isodate2epoch->("2018-05-30 12:00:00"),
+       text  => 'Buckower Damm: Baustelle zwischen An den Achterhöfen und Mollnerweg, evtl. auch Einschränkungen für Radfahrer, voraussichtlich bis Ende Mai 2018',
        type  => 'handicap',
        source_id => '2147341551',
        data  => <<EOF,
-#: note: laut fritz bis 2018-03-30, laut vmz bis März 2018
+#: note: laut fritz bis 2018-05-30, laut vmz bis Mai 2018
 #: by: http://www.berliner-woche.de/buckow/verkehr/der-lange-weg-zur-sanierten-strasse-bauarbeiten-am-buckower-damm-anwohner-aergern-sich-ueber-lkw-im-wohngebiet-d126968.html
 #: note: die Baustelle ist gewandert
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
@@ -25665,7 +25665,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-03-21 vvv
+#: last_checked: 2018-04-04 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -26112,8 +26112,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2017-11-05 00:00:00"), # 1495918329, # 2017-05-27 22:52
-       until => $isodate2epoch->("2018-03-23 12:00:00"),
-       text  => 'Bölschestr.: Bauarbeiten, zwischen Aßmannstr. und Müggelseedamm Richtung Süden gesperrt, bis Ende März 2018',
+       until => 1521993580, # (keine Einschränkungen gesehen) --- $isodate2epoch->("2018-05-25 12:00:00"),
+       text  => 'Bölschestr.: Bauarbeiten, zwischen Aßmannstr. und Müggelseedamm Richtung Süden gesperrt, bis Ende Mai 2018',
        type  => 'handicap',
        data  => <<EOF,
 #: note: laut fritz bis 8.12.2017, laut VMZ bis Mitte Dezember 2017
@@ -26164,7 +26164,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2018-03-22
+#: last_checked: 2018-03-27
 	2::inwork 14231,10907 14141,10931 14076,10949
 	2::inwork 14141,10931 14107,10911
 # REMOVED ---	2::inwork 14107,10911 14224,10878 14231,10907
@@ -26461,7 +26461,7 @@ EOF
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
 #: by: mapillary (Gehweg für Radfahrer frei)
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2018-03-05 (mapillary)
+#: last_checked: 2018-03-29 (mapillary)
 #: check_frequency: 30d
 	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
@@ -26549,7 +26549,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-03-04
+#: last_checked: 2018-04-03
 	2::inwork 14652,10201 14569,10055
 EOF
      },
@@ -26743,7 +26743,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-03-09 vvv
+#: last_checked: 2018-04-04 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -26855,6 +26855,7 @@ EOF
        type  => 'handicap',
        source_id => '2147341799',
        data  => <<EOF,
+#: source_id: LMS-BR_r_LMS-BR_108511_LMS-BR_72
 #: by: http://www.berliner-woche.de/zehlendorf/bauen/fertigstellung-der-berlepschstrasse-verzoegert-sich-um-ein-halbes-jahr-d137942.html (sogar "bis Ende März")
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.683398.php
 #: by: http://www.berliner-woche.de/zehlendorf/bauen/strassensanierung-in-der-berlepschstrasse-vezoegert-sich-weiter-d146418.html (Ende Mai)
@@ -26873,8 +26874,8 @@ EOF
 EOF
      },
      { from  => 1520920800, # 2018-03-13 07:00
-       until => $isodate2epoch->("2018-03-22 12:00:00"), # 1522533599, # 2018-03-31 23:59
-       text  => 'Konstanzer Str.: Bauarbeiten, Sperrung zwischen Hohenzollerndamm und Berliner Str., evtl. sind auch Radfahrer betroffen, bis Ende März 2018',
+       until => $isodate2epoch->("2018-04-10 12:00:00"), # 1522533599, # 2018-03-31 23:59
+       text  => 'Konstanzer Str.: Bauarbeiten, Sperrung zwischen Hohenzollerndamm und Berliner Str., evtl. sind auch Radfahrer betroffen, bis 10. April 2018',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147342320
@@ -26937,6 +26938,90 @@ EOF
 #: next_check: 2018-05-02
 #: priority: #A
 	2::inwork 10228,21940 10312,21969 10377,21991 10436,22010 10493,22029 10554,22050 10613,22070 10673,22090 10709,22102 10769,22122 10828,22142 10892,22165 10935,22174 10999,22195
+EOF
+     },
+     { from  => 1521928800, # 2018-03-24 23:00
+       until => 1523970000, # 2018-04-17 15:00
+       text  => 'Dörpfeldstr.: Bauarbeiten zwischen Gellert- und Hackenbergstr., Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 26. März 2018 bis 17. April 2018',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.687481.php',
+       data  => <<EOF,
+#: by: http://www.berliner-woche.de/adlershof/verkehr/wasserbetriebe-und-bvg-bauen-in-der-doerpfeldstrasse-d144226.html
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.687481.php
+#: source_id: 2147342367
+#: source_id: LMS-BR_r_LMS-BR_127098_LMS-BR_72
+	q4::inwork 20082,3578 20136,3609 20149,3617 20159,3623 20219,3661 20304,3714 20322,3725 20352,3744 20362,3750 20428,3786
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Mentelinstr.: Bauarbeiten zwischen Nalepastr. und Otto-Krüger-Zeile, Fahrbahn gesperrt, Ende unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2018-03-25
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet? Wird sich die Qualität der Fahrbahn nach den Bauarbeiten verbessern?
+	q4::inwork 17456,7132 17352,7051
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Stillerzeile: Bauarbeiten, östlich des Löbauer Wegs einige Meter Fahrbahn gesperrt, westlich Einbahnstraßenregelung, offen Richtung Westen',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2018-03-25 vvv
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
+	q4::inwork; 24629,5831 24798,5891
+	q3::inwork 24798,5891 24977,5880
+#: add_fragezeichen ^^^
+#: last_checked ^^^
+EOF
+     },
+     { from  => 1522098513, # 2018-03-26 23:08
+       until => 1522786111, # (nein, Radfahrer sind nicht betroffen, siehe mapillary) --- 1523052000, # 2018-04-07 00:00
+       text  => 'Bäkestr.: Bauarbeiten, Sperrung, eventuell sind auch Radfahrer betroffen, bis 06.04.2018',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: source_id: LMS-BR_r_LMS-BR_127117_LMS-BR_72
+	2::inwork 4832,2975 4659,3065 4587,3097 4411,3180
+EOF
+     },
+     { from  => 1522090587, # 2018-03-26 20:56
+       until => 1525093200, # 2018-04-30 15:00
+       text  => 'Mariannenstr.: Bauarbeiten zwischen Reichenberger Str. und Paul-Lincke-Ufer, Fahrbahn gesperrt, ab 26.03.2018 10:00 bis Ende April 2018',
+       type  => 'handicap',
+       source_id => '2147342376',
+       data  => <<EOF,
+	q4::inwork 11616,10288 11512,10105
+EOF
+     },
+     { from  => 1522326966, # 2018-03-29 14:36
+       until => 1622541600, # 2021-06-01 12:00
+       text  => 'Säntisstr.: Bahnübergang bis 2021 gesperrt, ggfs. gibt es für Fußgänger eine Überquerungsmöglichkeit (tragen!)',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: source_id: 2147342379
+#: source_id: LMS-BR_r_LMS-BR_127414_LMS-BR_72
+	2::inwork 8971,864 9024,906 9129,986
+EOF
+     },
+     { from  => 1522789491, # 2018-04-03 23:04
+       until => 1527803999, # 2018-05-31 23:59
+       text  => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; bis Ende Mai 2018',
+       type  => 'handicap',
+       source_id => '2147341699',
+       data  => <<EOF,
+#: next_check_id: ORANIENBURGER-2018
+	q4::inwork; 5136,21738 5210,21636 5311,21495 5320,21432 5333,21332 5341,21266 5343,21250 5349,21198
+	q4::inwork; 5297,21243 5099,21410 5053,21452 5000,21488 4810,21730
+EOF
+     },
+     { from  => 1522864912, # 2018-04-04 20:01
+       until => 1525449600, # 2018-05-04 18:00
+       text  => 'Wilhelmstr. und Behrenstr.: Sperrung Richtung Norden zwischen Französische Str. und Behrenstr. sowie Richtung Osten zwischen Wilhelmstr. und Mauerstr., bis 4. Mai 2018',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147342390
+	q4::inwork; 8901,12008 8861,12125 9054,12154
 EOF
      },
     );

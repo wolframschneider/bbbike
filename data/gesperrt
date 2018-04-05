@@ -819,7 +819,6 @@ Fritz-Werner-Str.	1s 9102,2780 9076,2594
 Kraftwerk Reuter West	2 -447,14338 -495,14311 -650,14355 -792,14258 -1002,14162 -1020,14084
 Bechstedter Weg	1 3467,9045 3661,8815 3701,8849
 Floyd-L.-Parks-Weg	1 2352,1267 2315,1251 2370,1127
-Tor	2 8371,13399 8363,13402 8356,13404
 Gravensteinstr.	1s 12229,22457 12185,22465
 Hauptstr. (Französisch Buchholz)	1s 12199,22367 12229,22457
 Karlplatz	1 8676,12976 8711,12986
@@ -921,6 +920,7 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-859 -14910,-903 -15684,-966
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14173,-1013 -14186,-868
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14191,-818 -14199,-707 -14205,-644
+Damme	1s 49936,99617 49905,99587 49850,99561
 Karower Weg (Lindenberg)	1s 17825,21931 17837,21917 17895,21854
 Zehlendorfer Str. (Teltow)	1 1329,-753 1388,-685
 Poststr. (Hennigsdorf)	1 -3495,25739 -3438,25572
@@ -2066,8 +2066,8 @@ Mittelstreifen	3nocross::ignrte -2280,2177 -2074,2258 -2023,2279
 Wiesenschlag -> Potsdamer Chaussee: Mittelstreifen	3::igndisp -2036,2150 -2074,2258 -2280,2177
 Mittelstreifen	3nocross::ignrte -2023,2279 -1959,2305 -1646,2434
 Potsdamer Chaussee -> Mutter-Mochow-Weg: Mittelstreifen	3::igndisp -1646,2434 -1959,2305 -1849,2043
-Straßenbahntrasse	3nocross::ignrte 22123,5452 22087,5404 22043,5346 21954,5229
-Am Maria-Jankowski-Park -> Bhf.str.: Straßenbahntrasse	3::igndisp 22018,5452 22087,5404 22123,5452
+Straßenbahntrasse	3nocross::ignrte 22116,5442 22087,5404 22043,5346 21954,5229
+Am Maria-Jankowski-Park -> Bhf.str.: Straßenbahntrasse	3::igndisp 22018,5452 22087,5404 22116,5442
 Lindenstr. -> Bhf.str.: Straßenbahntrasse	3::igndisp 22046,5305 22043,5346 21954,5229
 Straßenbahngleise	3nocross::ignrte 20834,4035 21053,4162 21146,4229
 Dörpfeldstr. -> Freystadter Weg: Straßenbahngleise	3::igndisp 20834,4035 21053,4162 21017,4220
@@ -2932,6 +2932,8 @@ Drängelgitter	BNP:3:0:trailer=10 3783,-2079
 Drängelgitter	BNP:3:50:trailer=10 21618,5699
 Drängelgitter	BNP:3:85:trailer=10 22070,5876
 Drängelgitter	BNP:3:78:trailer=10 22097,5879
+Dolgenseestr.: wegen Bauarbeiten gesperrt	2::inwork 17273,9880 17407,9799 17493,9761
+Unterführung S-Bhf. Karlshorst: wegen Bauarbeiten gesperrt	2::inwork 18949,8437 18906,8394 18875,8365
 S-Bahn-Unterführung: zurzeit gesperrt, hier wird in Zukunft ein Steg verlaufen	2::inwork 4117,22722 4176,22764
 Zum Großen Herzberg (Potsdam-Golm): Straße wird noch gebaut	2::inwork -18017,333 -18026,357 -18049,424
 Wartenbergstr.	1s:inwork 15423,11667 15337,11639 15328,11636 15300,11584
@@ -2949,7 +2951,6 @@ Mauerstr.: Bauarbeiten, Einbahnstraße	1s:inwork 9108,11961 9138,11872
 (Marseillestr. - Straße 160): wegen Bauarbeiten gesperrt	2::inwork 12495,21397 12507,21391 12547,21372
 Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -6556,6663 -6661,6743
 An den Parkbäumen: Bauarbeiten, Fahrbahn gesperrt	2::inwork -6530,6699 -6556,6663
-Parkrosenweg: Bauarbeiten	2::inwork -6530,6699 -6381,6587
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5579,12231 5535,12206 5518,12159
 Wegelystr.: Einbahnstraße wegen Bauarbeiten	1s:inwork 5518,12159 5627,12105 5658,12082 5712,12033 5775,11975
 Gutenbergstr.: Einbahnstraße wegen Bauarbeiten	1s:inwork 5317,12242 5518,12159
@@ -2991,7 +2992,7 @@ Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwork 8106,13130 8102,13304
 B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich des alten Flughafens	2:inwork 18578,-1538 18680,-1506 18798,-1581 18853,-1656 18866,-1674
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
-Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,20603
+Tegeler Hafen: Weg gesperrt	2 1687,20645 1697,20623 1721,20603
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9876,12298
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9798,12267 9795,12293 9780,12401
