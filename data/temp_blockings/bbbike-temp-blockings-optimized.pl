@@ -1135,7 +1135,26 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	2::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+',
+         'from' => 1525989600,
+         'id' => 964,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              7,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.laubinger.de/termine/26-boelschefest-friedrichshagen/',
+         'text' => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (12. und 13. Mai 2018)',
+         'type' => 'gesperrt',
+         'until' => 1526248799
+       },
        undef,
        undef,
        undef,
@@ -1822,7 +1841,26 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html
+	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
+',
+         'from' => 1527199200,
+         'id' => 1642,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (26. und 27. Mai 2018)',
+         'type' => 'gesperrt',
+         'until' => 1527458399
+       },
        undef,
        undef,
        undef,
@@ -3813,18 +3851,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: STERNDAMM-2016
 #: by: http://unternehmen.bvg.de/de/Unternehmen/Medien/Presse/Pressemitteilungen/Detailansicht?newsid=2442
-#: XXX laut BA Treptow-Köpenick geht die Sperrung bis zum 2018-06-16
+#: note: laut BA Treptow-Köpenick geht die Sperrung bis zum 2018-06-16, laut vmz bis Mitte Juni 2018
 #: by http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20180406
-#: next_check: 2018-06-16
-#: priority: #A
+#: source_id: 2147342409
 	2::inwork 17886,5587 17736,5441
 ',
          'from' => 1523152800,
          'id' => 2684,
          'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.690450.php',
-         'text' => 'Sterndamm: Eisenbahnunterführung voll gesperrt, 09.04.2018 bis 30.04.2018',
+         'text' => 'Sterndamm: Eisenbahnunterführung voll gesperrt, 09.04.2018 bis 16.06.2018',
          'type' => 'gesperrt',
-         'until' => 1525068000
+         'until' => 1529128800
        },
        undef,
        {
@@ -4378,7 +4415,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       undef,
+       {
+         'data' => '#: source_id: 2147342009
+	2::inwork 15162,11458 15055,11505
+',
+         'from' => 1523311200,
+         'id' => 2919,
+         'text' => 'Wiesenweg: wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt, auch für Fußgänger, voraussichtlich ab 11.04.2018, 7 Uhr',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
        undef,
        undef,
        {
@@ -4430,8 +4476,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '#: last_checked: 2018-03-19 vvv
-#: check_frequency: 14d vvv
+         'data' => '#: last_checked: 2018-04-09 vvv
+#: check_frequency: 7d vvv
 	q3::inwork 10277,14691 10320,14608
 	q2::inwork 10320,14608 10399,14429
 	q3::inwork 10228,14564 10320,14608 10472,14632
@@ -4469,16 +4515,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1527760800
        },
        undef,
-       {
-         'data' => '#: source_id: 2147342320
-	q4::inwork 3919,9085 3952,8980
-',
-         'from' => 1520920800,
-         'id' => 2934,
-         'text' => 'Konstanzer Str.: Bauarbeiten, Sperrung zwischen Hohenzollerndamm und Berliner Str., evtl. sind auch Radfahrer betroffen, bis 10. April 2018',
-         'type' => 'handicap',
-         'until' => 1523354400
-       },
+       undef,
        {
          'data' => '# XXX_prog: eigentlich q3-
 #: last_checked: 2018-04-06

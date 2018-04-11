@@ -24,7 +24,6 @@ Oderberg - Brodowin: hier auch schlechtes Kopfsteinpflaster?	? 49981,54421 50245
 Neuendorf - Sandkrug: Qualität?	? 47100,53337 46649,53269 46521,53312 46084,53267 45373,53443 45019,53618 44728,53639 44504,53792 43991,53805 43522,54001 43307,53854 43047,53809 42554,53801 42125,53934
 Sandkrug - Neuendorf: Qualität?	? 49981,54421 51183,55005 51506,55009 51873,55078 52067,55167 52177,55296 52348,55277 52693,55282 53013,55094 53292,55124 53634,55048 53937,54875
 Elisenau - Börnicke: Privatgelände, ist die Durchfahrt uneingeschränkt möglich?	? 24360,26503 24427,26841
-Potzlow - Fergitz: ist die gesamte Straße asphaltiert worden?	? 38226,90609 38140,90535 37901,90258 37760,90005
 Basdorf - Bernauer Heide: Ist der Weg wegen der Bahnstrecke überhaupt passierbar? Qualität? Dürfen hier Autos fahren?	? 12854,36464 13740,36119
 Leipe - Lübbenau: Waldweg, teilweise muss getragen werden (wie oft und wo genau?)	? 55335,-60336 55150,-60225 54925,-60300 54337,-60275 53208,-60124 52537,-60162 52137,-60387 51162,-59762 50725,-59237 50575,-59287
 Leipe - Burg, nördliche Strecke: Qualität?	? 55850,-60475 56425,-59960 57291,-59826 57848,-59878 57989,-59765 58120,-59786 58010,-60210 58351,-60356 58665,-60426 58659,-60530 58845,-60667 58915,-60655 59466,-60914 59518,-60816 59850,-60929 59987,-60862 60417,-61057 60545,-61185 60600,-61166 61066,-61334 61416,-61334 61355,-61459 61581,-61648 61645,-61855 61889,-61953 61998,-62056 62017,-62175 61953,-62212
@@ -114,12 +113,13 @@ Waldsieversdorf, R1: Qualität?	? 55467,16024 56203,16301 56430,16237 56527,16199
 Münchehofe - Trebnitz: laut "Berliner Umland" geeignete Strecke	? 62416,15883 62873,15950 62934,15694 63366,15767 63561,15609 63598,15505 64140,15292 64969,15633 65335,15664 65572,15310
 Postbruch - Spitzmühle: Qualität?	? 39771,18075 39696,18175 39627,18334 39466,18441 39351,18445 39344,18821 39383,19014 39390,19261 39372,19476 39430,19619 39433,19884
 Elisabethstr. (Strausberg) etc.: Genaue Wegführung? Tatsächlich Hauptstraße?	? 42434,19150 42804,19034 42792,19590
-Altlandsberg - Wegendorf: wahrscheinlich schlechte Strecke	? 32550,18921 32600,19331 32859,19606 32882,19988 33051,20649 33574,21276 33710,21746 33822,22066 34125,22128
+Altlandsberg - Wegendorf: wahrscheinlich schlechte Strecke	? 32483,18870 32561,19092 32859,19606 32934,19984 33051,20649 33625,21374 33710,21746 33833,22055 33969,22104 34163,22156
 Garzin - Hasenholz: Qualität (auf Garziner Seite nur Waldweg)?	? 49700,16565 50037,16837 50175,17200 51475,17887 51867,18284 52288,18180 53427,17985
 Am Bötzsee: Genaue Wegführung, besonders zum Fängersee hin? Alternative Strecke näher am See? Qualität: durchgehend Waldweg?	? 38480,17478 38485,17786 38515,17931 38576,18071 38836,18622 38774,18856 38820,19366 38779,19684 38908,19853
 Badstr. am Straussee: Qualität?	? 42753,20225 42818,20290 42778,20387 42825,20490 42943,20578 43040,20818 43268,20903 43387,20971 43446,21007 43498,21028
 Alternative Strecke zum Roten Hof: Qualität?	? 43498,21028 43601,21073 43681,21175 44037,21303 44246,21496 44312,21556 44290,21668 44158,21724
-Krummensee - Wegendorf: laut "Berliner Umland" unterschiedliche Qualität (gut - schlecht)	? 29536,21843 30444,22044 31272,22232 33562,22062 33822,22066
+Krummensee - Wegendorf: laut "Berliner Umland" unterschiedliche Qualität (gut - schlecht)	? 29536,21843 30444,22044 31272,22232
+Krummensee - Wegendorf: laut "Berliner Umland" unterschiedliche Qualität (gut - schlecht)	? 33374,22059 33437,22053 33969,22104
 Hegemühlenstr. - Herrensee: genaue Wegführung? Qualität?	? 42850,17643 42806,17462 42218,17200 42175,16962 41993,16706 41900,16100 41725,16000 41675,15906 41681,15915
 Liepe - Bralitz: Qualität (vermutlich auch asphaltiert?)?	? 47975,51325 48022,51225 48133,51178
 Hohenwutzen - Bad Freienwalde: Qualität (zumindest am östlichen Ende asphaltiert)?	? 58211,48747 57884,48807 57505,48703 57396,48965 57328,48981
@@ -209,8 +209,9 @@ Alt Schadow - Leibsch [Spreeradweg/Gurkenradweg]: Qualität?	? 48393,-31006 48140
 Köthener See: Qualität?	? 40118,-36709 40012,-36612 39500,-36487 39312,-36212 38975,-36275 38775,-36150
 Groß Wasserburg - Krausnick [Hofjagdradweg]: Qualität?	? 41687,-38100 41462,-38325 41475,-38750 41700,-39425 41012,-40575 41000,-40763
 Köthen - Krausnick [Gurkenradweg]: Qualität?	? 39087,-36914 38750,-37212 38087,-37775 37875,-38037 39187,-38325 39625,-38175 40125,-38275 40337,-38625 40150,-39037 40500,-40325 40677,-40682 40813,-40775 40863,-40904
-Fabrikstr. (Hennigsdorf): Qualität? Hauptstraße oder Nebenstraße?	? -3018,25556 -3020,25628 -3099,25732 -3057,26034 -3209,26317
-Maurerstr. (Hennigsdorf): Qualität? Hauptstraße oder Nebenstraße?	? -3209,26317 -3297,26805 -3334,27381 -3488,27393
+Schulstr. (Hennigsdorf): Qualität? Hauptstraße oder Nebenstraße?	? -3049,25593 -3042,25667 -3094,25719
+Fabrikstr. (Hennigsdorf): Qualität? Hauptstraße oder Nebenstraße?	? -3094,25719 -3119,25786 -3063,26112 -3218,26335
+Maurerstr. (Hennigsdorf): Qualität? Hauptstraße oder Nebenstraße?	? -3218,26335 -3254,26516 -3300,26587 -3313,26931 -3347,27389 -3484,27387
 Glambeck - Seebeck: Qualität?	? -13622,58765 -14762,59783 -15310,59277 -15511,59070 -15889,58912 -16145,58887
 Seebeck - Lindow: Qualität?	? -16145,58887 -16346,58845 -16583,58871 -16962,58893 -16986,59052 -17748,60764 -17967,61148 -18497,61361 -18619,61447 -18887,61825 -18954,61849 -19113,61898
 Vielitz - Seebeck: Qualität?	? -17050,58123 -16860,58002 -16719,58021 -16567,58036 -16307,58144 -15975,58403 -15950,58625 -16145,58887
@@ -262,14 +263,15 @@ Schönholz - Spechthausen: Qualität? Ausschilderung? Ist die "Eiszeittour" ausges
 Grüntal - Melchow: Qualität?	? 32000,38200 32099,38418 31773,39105 31727,39438 31297,39883 31261,40051 31057,40384 30993,41018
 Tempelfelde: Qualität?	? 30837,34162 31057,34421
 Bei Börnicke: Qualität?	? 26930,28875 27084,29356
-Krummensee - Seefeld: Qualität?	? 30444,22044 30236,23181 29904,23151 29635,23562 29481,24246 29528,24348
-Krummensee - Werneuchen: Qualität?	? 30236,23181 31816,23512 32334,25152 32476,25350
-Werneuchen - Wesendahl: Qualität?	? 32826,25218 34215,24621 35610,24040 37250,23080 37588,22679
+Krummensee - Seefeld: Qualität?	? 30444,22044 30237,23202 29904,23151 29635,23562 29481,24246 29505,24363
+Krummensee - Werneuchen: Qualität?	? 30237,23202 31816,23512 31869,23830
+Werneuchen - Altlandsberg: Qualität? Ist hier auch asphaltiert?	? 32722,25286 32695,25270 32435,24545
+Werneuchen - Wesendahl: Qualität?	? 32829,25198 34215,24621 35610,24040 37250,23080 37588,22679
 Gamengrund - Tiefensee: Qualität?	? 40135,28824 40165,28951 40130,29073 40186,29180 40028,29703 39750,29812
 Gamensee - Tiefensee (südl.): Qualität?	? 40206,30002 40160,30018 40043,30084 39988,30216 39662,30500
 Gamensee - Tiefensee (nördl.): Qualität?	? 40302,30617 40191,30703 39469,30977 39362,31019
 Blumberg - Trappenfelde: Qualität?	? 25315,21433 26595,20119 26717,20063
-Altlandsberg - Neuenhagen (alternative Strecke): Qualität?	? 32293,18093 32527,18001 32090,15994 32156,15827 32024,15680 31953,15259 32014,14695 32009,14476 31841,13897 31694,13989 31480,14029 31303,13933 31277,13730 31161,13562 31181,13354
+Altlandsberg - Neuenhagen (alternative Strecke): Qualität?	? 32519,18076 32527,18001 32090,15994 32156,15827 32024,15680 31953,15259 32014,14695 32009,14476 31841,13897 31694,13989 31480,14029 31303,13933 31277,13730 31161,13562 31181,13354
 Spreeradweg: Qualität? ausgeschildert?	? 35912,-1171 35978,-1196 36008,-1254 36107,-1546 36176,-1661 36387,-1760 36625,-1843 36704,-1907 37316,-2196 37326,-2262 37405,-2468 37491,-2791 37532,-3029 38042,-3415 38179,-3448 38329,-3425 38774,-3522 38855,-3570 39150,-3862 39287,-3900 39355,-3877 39518,-3910 39805,-3908 39820,-3918 40013,-3857 40008,-3834 40168,-3811 40278,-3816
 Steinfurth - Spreeradweg: Qualität?	? 35828,-2672 35879,-2595 36001,-2511 36267,-2143 36290,-2080 36247,-1963 36308,-1922 36387,-1760
 Spreeradweg - Straße nach Hangelsberg: Qualität?	? 37316,-2196 37458,-2229 37613,-2204 37644,-1788 37560,-1526 37565,-1455 37661,-1285 37532,-1145 37527,-1102
@@ -599,7 +601,9 @@ Richard-Wagner-Str. (Groß Glienicke): Qualität im westlichen Abschnitt?	? -10234
 Grünz - Radewitz: Qualität?	? 59477,99336 59588,99540 59496,99728
 Grünz - Radewitz: Qualität?	? 58791,99029 58824,99187 59496,99728 59670,99855
 Hohenreinkendorf: Qualität?	? 71648,92361 71767,92617 71794,92835 71812,93044 71834,93124 71805,93237
-Kummerow - Kunow: Qualität?	? 63202,83842 63468,83897 63701,83897 64030,83689 64199,83388 64560,83095 65187,82762 65732,81931 65968,82128 66459,82296 66731,82468
+Kummerow - Kunow: Qualität?	? 63202,83842 63468,83897 63701,83897 64030,83689
+Kummerow - Kunow: Qualität? Laut osm grade3	? 64030,83689 64199,83388 64560,83095 65187,82762 65732,81931
+Kummerow - Kunow: Qualität? Laut osm Beton oder Betonplattenweg	? 65732,81931 65968,82128 66459,82296 66731,82468
 Kummerow - Jamikow: Qualität?	? 63202,83842 62902,83983 62597,84046 61889,84194 61598,84224 61349,84292
 Prädikow - Ihlow: Qualität? Für Autos gesperrt?	? 51867,25572 53381,24795 55410,24766
 Kastanienweg (Prädikow): Qualität?	? 51257,25175 51562,25039 51776,25017
@@ -920,7 +924,6 @@ Ahornallee (Woltersdorf): Qualität im mittleren und südlichen Abschnitt?	? 32630
 Am Heineberg (Potsdam): Qualität?	? -17646,1636 -17599,1890
 Am Heineberg (Potsdam): Qualität? Dürfen hier keine Autos fahren?	? -17599,1890 -17597,2000 -17624,2037 -17651,2197 -17555,2301
 Am Heineberg (Potsdam): Qualität?	? -17555,2301 -17292,2539
-Altlandsberge - Krummensee: existiert hier ein Radweg? Wegbeschaffenheit des Radwegs? Falls es ein Zweirichtungsradweg ist: auf welcher Seite befindet er sich?	? 32325,18434 31740,18675 31546,18803 31415,19073 31267,19338 30163,20992 30031,21271 29826,21526
 Luckenwalder Str. - Nottekanal: Qualität des Radwegs?	? 25098,-13447 24549,-12629 24506,-12527
 Radweg entalng der B179n: Qualität?	? 24549,-12629 24531,-12634 24483,-12540 24474,-12453 24408,-12045 24344,-11733 24367,-11520 24371,-11283 24361,-11236
 Telz - Zossen: wurde der geplante Radweg schon gebaut? Qualität? Auf welcher Seite führt der Zweirichtungsradweg entlang?	? 17227,-17782 17038,-18590 16856,-19255 16963,-19789 16836,-20130 16730,-20386 16071,-20727 15794,-20749 15178,-20983 15072,-21175
@@ -940,7 +943,6 @@ Kleiststr. (Stahnsdorf): Fahrbahnbeschaffenheit im südlichen Abschnitt?	? -569,-
 Schwarzer Weg (Kleinmachnow): Fahrbahnbeschaffenheit?	? -866,-1615 -872,-1602 -1036,-1315
 Bahnhofstr. (Stahnsdorf): Qualität des östlichen Endes?	? -2878,-3004 -2817,-2967 -2720,-2937 -2657,-2907
 Am Urnenfeld (Potsdam): Qualität?	? -18151,-1323 -18520,-1192 -18698,-1030 -18725,-827 -18682,-719
-ZR1: Qualität?	? 27750,19600 27953,19508 28467,19470 30460,19245 31169,18956 31415,19073
 Mies-van-der-Rohe-Str. (Potsdam): Qualität? Existiert die Straße schon? Existiert eine Verbindung zum Fußweg?	? -14216,372 -14086,337
 Peter-Behrens-Str. (Potsdam): Qualität? Existiert die Straße schon? Existiert eine Verbindung zum Fußweg?	? -14176,482 -14032,434
 Konrad-Wachsmann-Str. (Potsdam): Qualität? Existiert die Straße schon?	? -14114,580 -14254,659
@@ -1176,6 +1178,9 @@ Schönwerder - B198: zweispuriger Plattenweg (ist der Abschnitt nach Schönwerder 
 Horst - Gollmitz: mäßiger Asphalt (nach den Bauarbeiten bessere Qualität?)	? 32513,101100 30898,99869
 Steinhöfel - Stegelitz: Feld-/Waldweg (ist hier mittlerweile betoniert?)	? 40490,78193 40456,78396 40303,78665 40121,78765
 Steinhöfel - Stegelitz: Feld-/Waldweg, mit kurzen Kopfsteinpflasterabschnitten (ist hier mittlerweile asphaltiert?)	? 40012,79300 39918,79462 39896,79593 39806,79753 39790,79968 39612,80137 39581,80256
+Wollin - Schmölln: schlechtes Kopfsteinpflaster (ist hier mittlerweile auch asphaltiert?)	? 53767,97971 54343,98281 54506,98712 54856,98939
+Wollin - Schmölln: Betonplatten (ist hier mittlerweile auch asphaltiert?)	? 54856,98939 55359,99276
+Wollin - Schmölln: schlechtes Kopfsteinpflaster (ist hier mittlerweile auch asphaltiert?)	? 55359,99276 55894,99914
 Lützlow: Plattenweg (Straße wird neu gemacht, nach den Bauarbeiten vielleicht asphaltiert?)	? 52431,94119 52337,93968
 Lützlow: Asphalt (Straße wird neu gemacht, nach den Bauarbeiten vielleicht asphaltiert?)	? 52337,93968 52350,93856
 Randow - Lützlow: Feldweg, Schotter (nur das nördliche Ende gesehen, weiter südlich wahrscheinlich Plattenweg)	? 53971,92780 53361,93046 53126,92961 52699,93129

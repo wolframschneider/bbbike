@@ -21,17 +21,17 @@
 # REMOVED (fertig) --- #: XXX zurzeit Bauarbeiten bis 2017-06-13 --- evtl. wird die Qualit‰t danach besser? -> qualitaet_s-orig --- #: last_checked: 2017-06-07 --- #: next_check: 2017-06-13 --- Kinzigstr.: Bauarbeiten, Fahrbahn ist nicht befahrbar	q3::inwork 14589,11975 14471,11782
 # 
 #: XXX wenn beendet -> Eintrag in gesperrt-orig wieder aktivieren
-#: last_checked: 2018-04-06
+#: last_checked: 2018-04-10
 Niemannstr.: Bauarbeiten, einige Meter Fahrbahn sind gesperrt	q3::inwork 14254,11377 14211,11229
 # 
 # REMOVED --- #: last_checked: 2018-01-31 --- Revaler Str.: Bauarbeiten, unter Umst‰nden Ausweichen auf Gehweg notwendig	q3::inwork 14211,11229 14286,11186
 # REMOVED --- #: last_checked: 2017-12-09 --- #: check_frequency: 14d --- Haasestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 14328,11320 14286,11186
 # 
-#: last_checked: 2018-03-25
+#: last_checked: 2018-04-07
 #: check_frequency: 90d
 Dˆringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261 14357,11148
 # 
-#: last_checked: 2018-04-04
+#: last_checked: 2018-04-09
 Lange Str.: Bauarbeiten, Einbahnstraﬂenregelung	q2::inwork; 12409,11902 12238,11931
 # 
 #: next_check_id: RIGAER-2018
@@ -93,16 +93,27 @@ Auerstr.: zwischen Richard-Sorge-Str. und Lˆwestr. Baustelle, Einbahnstraﬂenrege
 # 
 ### Wedding ###
 # 
+#: source_id: LMS-BR_r_LMS-BR_127868_LMS-BR_72
+#: last_checked: 2018-04-10
+#: next_check: 2018-11-15
+#: valid: -20181115
+Friedrich-Krause-Ufer: Engstelle wegen Bauarbeiten, voraussichtlich bis Mitte November 2018	q2::inwork 7368,14573 7314,14599 7167,14666
+# 
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.641406.php
 #: valid: 20171026-
-#: last_checked: 2017-12-26
+#: last_checked: 2018-04-10
 #: check_frequency: 60d
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607,15282
 # 
 ### Mitte ###
 # 
 # REMOVED (mittlerweile existiert auch eine Absenkung) --- #: next_check_id: OTTOBRAUN-2015 --- #: XXX vermutlich im ausgebauten Zustand: q1  --- #: last_checked: 2018-03-16 --- #: check_frequency: 14d --- Wadzeckstr. - Mollstr.: Behinderungen wegen Bauarbeiten mˆglich	q2::inwork 11315,13210 11399,13333
-# REMOVED (existiert noch immer, allerdings gibt es hier keine Auﬂengastronomie mehr, deshalb nicht mehr so behindernd) --- #: last_checked: 2017-10-14 --- #: check_frequency: 21d --- M‰rkisches Ufer: Bauarbeiten, Engstelle	q3+::inwork 10687,11853 10869,11949
+# 
+#: next_check_id: ROSSSTRASSENBRUECKE-2018
+#: last_checked: 2018-04-09
+#: check_frequency: 21d
+M‰rkisches Ufer: Bauarbeiten, Engstelle	q3+::inwork 10687,11853 10869,11949
+# 
 # REMOVED --- #: source_id: 2147341587 --- #: last_checked: 2017-11-01 vvv --- #: check_frequency: 21d vvv --- J‰gerstr.: Bauarbeiten an der Friedrichstr., auf Gehweg ausweichen	q2::inwork 9195,11972 9393,12000 --- J‰gerstr.: Bauarbeiten an der Friedrichstr., auf Gehweg ausweichen	q3::inwork 9393,12000 9523,12019
 # REMOVED --- #: last_checked: 2015-06-10 --- Am Zirkus: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9167,13046 9137,13032 9090,13009
 # REMOVED --- #: last_checked: 2016-06-01 --- Kommandantenstr.: Bauarbeiten, Einbahnstraﬂe	q2::inwork; 10437,11352 10389,11390
@@ -120,7 +131,7 @@ Voltairestr.: Fahrbahn unter Umst‰nden wegen Baustelle gesperrt, Ausweichen auf 
 #: XXX Ende der Bauarbeiten?
 #: way id="507023458" version="1"
 #: by: http://www.dafmap.de/d/berlin.html?id=3204&mt=0&zoom=16
-#: last_checked: 2018-03-16
+#: last_checked: 2018-04-10
 #: check_frequency: 45d
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 # 
@@ -257,12 +268,13 @@ Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9876,12298 9858,12410
 #: XXX wird nach den Bauarbeiten die Fahrbahn noch bestehen bleiben?
 #: source_id: LMS-BR_r_LMS-BR_197
 #: osm_watch: way id="194962375" version="8"
-#: last_checked: 2018-04-04
+#: last_checked: 2018-04-09
 #: check_frequency: 14d
 Rathausstr.: Fuﬂg‰nger, enge Stelle vor dem Roten Rathaus	q4::inwork 10601,12521 10704,12595
 # 
 #: by: http://www.berliner-woche.de/mitte/bauen/rathausstrasse-wird-gesperrt-d140537.html vvv
-#: last_checked: 2018-04-04 vvv
+#: by: http://www.projekt-u5.de/de/rotes-rathaus/ (Webcam)
+#: last_checked: 2018-04-09 vvv
 #: check_frequency: 14d vvv
 Rathausstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 10476,12432 10584,12507
 Rathausstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10584,12507 10601,12521
@@ -319,9 +331,9 @@ Mariannenstr.: Bauarbeiten zwischen Naunynstr. und Mariannenplatz, Fahrbahn Rich
 # 
 #: source_id: 2147342287
 #: source_id: LMS-BR_r_LMS-BR_124656_LMS-BR_72
-#: last_checked: 2018-04-06
-#: next_check: 2018-04-10
-#: valid: -20180410
+#: last_checked: 2018-04-10
+#: next_check: 2018-04-16
+#: valid: -20180416
 #: priority: #A
 Prinzenstr.: Bauarbeiten, gemeinsamer Rad- und Gehweg	q3::inwork; 10633,10369 10605,10312
 # 
@@ -833,7 +845,7 @@ zum Tunnel S-Bhf. Grunewald: Fuﬂg‰nger	q1 693,9129 731,9103
 Tunnel S-Bhf. Grunewald: Fuﬂg‰nger, Radfahren nicht erlaubt, ggfs. absteigen	q3 731,9103 884,8954
 enge Kurven	q2 33531,2772 33419,2765 33406,2738
 # REMOVED (Bordsteine sind abgesenkt, aber man kommt trotzdem nicht voran...) --- #: XXX zur Schloﬂstr. sind die Bordsteine abgesenkt, wie sieht die Kieler aus? --- #: XXX_prog BS
-Kieler Str.: Fuﬂg‰nger	q3 4998,5817 5052,5788
+Kieler Str.: Fuﬂg‰nger	q3 4998,5817 5030,5800
 Fontanepromenade: enger Gehweg	q2 10781,9697 10760,9646
 S¸dstern: Fuﬂg‰nger	q3 10749,9342 10741,9344 10695,9315 10647,9337
 #: XXX_prog auf der s¸dlichen Seite ist ein relativ flacher Bord, auf der nˆrdlichen Seite eigentlich gut abgeflacht und kein Problem (ansonsten Eintrag entfernen)
@@ -936,7 +948,13 @@ Fritz-Schiff-Weg: Fuﬂg‰nger	q1 13457,12505 13476,12461 13448,12340
 (Molkenmarkt - Parochialstr.): Bordstein	q2 10738,12364 10831,12371
 #: note: von S¸den aus explizit f¸r Radfahrer verboten, von Norden aus fehlt so ein Schild
 (Crellestr. - Julius-Leber-Br¸cke): Fuﬂg‰nger	q2 7524,9093 7555,8978 7509,8929 7497,8916
-(Fischerinsel, Spreekanalufer): Fuﬂg‰nger	q1 10364,11896 10329,11842 10373,11781 10439,11772 10515,11785 10599,11819 10672,11870 10776,11942 10824,11992
+(Fischerinsel, Spreekanalufer): Fuﬂg‰nger	q1 10364,11896 10329,11842 10373,11781 10439,11772 10515,11785 10599,11819 10672,11870
+#: next_check_id: ROSSSTRASSENBRUECKE-2018
+#: last_checked: 2018-04-09
+#: check_frequency: 21d
+(Fischerinsel, Spreekanalufer): Bauarbeiten, Engstelle	q3+::inwork 10672,11870 10776,11942
+# XXX --- nach den Bauarbeiten wieder aktivieren --- (Fischerinsel, Spreekanalufer): Fuﬂg‰nger	q1 10672,11870 10776,11942
+(Fischerinsel, Spreekanalufer): Fuﬂg‰nger	q1 10776,11942 10824,11992
 (Baikalstr. - Rummelsburger Str.): Fuﬂg‰nger	q1 17281,10598 17249,10666
 (Baikalstr. - Rummelsburger Str.): Fuﬂg‰nger	q1 17249,10702 17247,10755 17261,10827 17257,10875
 (Tr‰nkegraben - Eggersdorfer Str./Rummelsburger Str.): Fuﬂg‰nger	q1 17261,10827 17226,10865
@@ -1097,7 +1115,7 @@ S-Bhf. Raoul-Wallenberg-Str.: lange Rampe	q3 20109,16264 20120,16297
 (B¸rgerpark Marzahn): einige Fuﬂg‰nger	q1 20898,16420 21020,16298
 (oberer Wuhlewanderweg - Alte Hellersdorfer Str.): einige Fuﬂg‰nger	q1 22851,14603 22876,14594 23057,14582
 Wuhlewanderweg: Fuﬂg‰nger	q1 22771,16194 22717,16142 22670,16063 22623,15959 22554,15780 22539,15729 22515,15620 22518,15510 22518,15417 22516,15399 22507,15373 22400,15321 22393,15292 22396,15254 22413,15187 22441,15118
-Wuhlewanderweg: Fuﬂg‰nger	q1 22441,15118 22573,15043 22741,14761 22806,14631 22840,14494 22843,14452 22827,14356 22839,14149 22825,14109 22611,13901 22562,13855 22462,13726 22457,13713 22447,13690 22359,13599 22295,13530
+Wuhlewanderweg: Fuﬂg‰nger	q1 22441,15118 22446,15103 22505,15075 22573,15043 22741,14761 22806,14631 22840,14494 22843,14452 22827,14356 22839,14149 22825,14109 22611,13901 22562,13855 22462,13726 22457,13713 22447,13690 22359,13599 22295,13530
 Wuhlewanderweg: enge Unterf¸hrung	q3 22359,13599 22259,13508
 Wuhlewanderweg: Fuﬂg‰nger	q1 22295,13530 22259,13508 22191,13414 22187,13304 22211,13040 22196,12961 22036,12367 21998,12204
 Wuhlewanderweg: Fuﬂg‰nger	q1 22242,11269 22244,11311 22073,11581 22009,11636 21882,11859 21885,11949 21907,12018 21936,12022
@@ -2174,8 +2192,8 @@ Wasserweg: Bordstein	q2 15680,8914 15873,8884
 (Ella-Trebe-Str. - Invalidenstr.): einige Fuﬂg‰nger	q1 7938,13302 7968,13335 8003,13374
 Europaplatz: einige Fuﬂg‰nger	q1 7880,13315 7938,13302
 Wuhlestr. [Wohngebiet]: Fuﬂg‰nger	q1 21580,13583 21430,13602
-(oberer Wuhlewanderweg): einige Fuﬂg‰nger	q1+ 22317,13521 22472,13698 22479,13734 22550,13821 22638,13902 22783,14034 22855,14114 22872,14175 22872,14233 22860,14440 22868,14477 22873,14498 22864,14556
-(oberer Wuhlewanderweg): Fuﬂg‰nger, Kinderspielpl‰tze	q1- 22864,14556 22851,14603 22756,14787 22599,15030 22577,15109
+(oberer Wuhlewanderweg): einige Fuﬂg‰nger	q1+ 22317,13521 22472,13698 22479,13734 22550,13821 22638,13902 22783,14034 22855,14114 22872,14175 22872,14224 22860,14440 22868,14477 22873,14498 22864,14556
+(oberer Wuhlewanderweg): Fuﬂg‰nger, Kinderspielpl‰tze	q1- 22864,14556 22851,14603 22756,14787 22702,14880 22690,14915 22643,14977 22599,15030 22588,15056 22577,15109
 #: XXX_prog BS an beiden Seiten, sonst entfernen
 Unterbaumstr.: Bordsteine	q2 8488,12920 8502,12935
 (Hofackerzeile - Kurt-Schumacher-Damm): einige Fuﬂg‰nger	q1 2769,14482 2793,14374
@@ -2596,7 +2614,10 @@ Dalandweg: schmale und kurvenreiche Straﬂe	q1 5120,4318 5226,4259 5250,4298 5311
 (KGA Am Freibad Oberspree): einige Fuﬂg‰nger	q1 20827,5431 20829,5418 20849,5266 20851,5255
 (Zufahrt zum Gewerbegebiet): Parkplatzverkehr	q1 25312,11186 25298,11118 25298,10966 25297,10892
 (Pilgramer Str. - Gewerbegebiet): Parkplatzverkehr	q1 25168,10963 25298,10966 25337,10967
-(Alte Hellersdorfer Str. - Hellersdorfer Str.): viele Fuﬂg‰nger (IGA-Eingang)	q3 23084,14472 23081,14418 23021,13982
+(Alte Hellersdorfer Str. - Hellersdorfer Str.): Fuﬂg‰nger	q1 23084,14472 23081,14418 23072,14353 23021,13982
+(Alte Hellersdorfer Str. - Gottfried-Funeck-Weg): Fuﬂg‰nger	q1 23072,14353 23018,14251 22967,14129 22903,14063 22854,14018
+(unterer Wuhlewanderweg - oberer Wuhlewanderweg): Fuﬂg‰nger	q1 22505,15075 22539,15074 22588,15056
+(oberer Wuhlewanderweg - Gottfried-Funeck-Weg): Fuﬂg‰nger	q1 22872,14175 22903,14063
 Wundtstr.: Bolzpl‰tze	q1 2623,11385 2764,11500
 Goldl‰rchenweg: schmal, einige Fuﬂg‰nger	q1 -6314,6104 -6301,6126 -6385,6185
 Mascha-KalÈko-Weg: enger Pfad	q3 -6449,5282 -6474,5216 -6474,5144
@@ -2661,6 +2682,8 @@ Nˆldnerplatz [Nˆldnerstr. - Schlichtallee]: einige Fuﬂg‰nger	q1 15932,10830 1597
 (Weg im Gr¸nzug): einige Fuﬂg‰nger	q1- 17391,9746 17316,9797 17257,9869 17161,9921 17005,9953
 (Dolgenseestr. - Weg im Gr¸nzug): einige Fuﬂg‰nger	q1- 17275,9892 17257,9869
 Wadzeckstr. - Mollstr.: einige Fuﬂg‰nger	q1 11315,13210 11399,13333
+(zum Poststadion): Parkplatzverkehr	q1 7452,13904 7417,13880 7445,13792 7431,13740 7343,13679 7338,13649
+(entlang des Vabali Spa): einige Fuﬂg‰nger	q1 7338,13649 7422,13487
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch vvv

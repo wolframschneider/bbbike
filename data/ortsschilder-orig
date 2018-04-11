@@ -491,6 +491,8 @@ Hönow	OS 26902,15658
 Altlandsberg	OS 32941,18121
 Altlandsberg	OS 31053,15975
 Altlandsberg	OS 30335,16649
+Altlandsberg	OS 32100,20082
+Altlandsberg	OS 31858,18605
 Niederlehme	OS 28628,-5900
 Schulzendorf|b. Eichwalde	OS 24437,-3333
 Eichwalde	OS 26931,-2871
@@ -942,7 +944,7 @@ Berlin	OS 21442,18880
 Berlin	OS -8825,3783
 Mehrow	OS 25327,19421
 Mehrow	OS 24484,18569
-Mehrow	OS 28467,19470
+Mehrow	OS 28471,19469
 Krummensee	OS 29275,21185
 Krummensee	OS 29536,21843
 Eiche	OS 22809,16240
@@ -1044,6 +1046,8 @@ Blumberg	OS 25239,21918
 Blumberg	OS 23479,22805
 Blumberg	OHT 23026,20493
 Blumberg	OHT 21734,21831
+#: by: mapillary
+Blumberg	OS 25878,22894
 Birkholz	OS 21833,24426
 Birkholz	OS 21433,24738
 Seeberg	OS 29269,16380
@@ -1078,17 +1082,31 @@ Jamikow	OS 61346,85020
 Jamikow	OS 61090,85518
 Schönow|(Uckermark)	OS 60206,86603
 Schönow|(Uckermark)	OS 59766,87273
+# 
 #: linked: Blumberg|bei Casekow vvv
 Blumberg	OS 59744,89598
 Blumberg	OS 59503,90395
 Blumberg	OS 60170,90017
 #: linked ^^^
+# 
 #: linked: Karlsberg|(bei Wartin) vvv
 Karlsberg	OS 58853,91488
 Karlsberg	OS 58910,91735
 #: linked ^^^
-#: linked: Seefeld|(Mark)
+# 
+#: linked: Seefeld|(Mark) vvv
 Seefeld-Löhme	OS 28921,23343
+#: by: mapillary vvv
+Seefeld	OS 30180,24560
+Seefeld	OS 28308,24301
+#: by ^^^
+#: linked ^^^
+# 
+#: by: mapillary vvv
+Werneuchen	OS 31636,25356
+Werneuchen	OS 33496,26264
+#: by ^^^
+# 
 #: linked: Schönermark|(Uckermark)
 Bahnhof Schönermark	OHT 51668,78605
 Falkensee	OS -7168,16258

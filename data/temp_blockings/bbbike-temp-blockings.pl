@@ -1145,7 +1145,7 @@ EOF
        text  => 'L 33; (Berliner Str.); OL Altlandsberg Vollsp. Vollsperrung 14.10.2004-16.10.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 32100,18012 31887,17453
+	q4 32096,18020 32003,17810 31917,17597 31887,17453
 EOF
      },
      { from  => 1138133685, # 2006-01-24 21:14
@@ -2269,7 +2269,7 @@ EOF
        text  => 'L 17; (LG Berlin-Hennigsdorf); zw. Kreisverkehr und Hennigsdorf Straßenbau Vollsperrung 08.08.2005-03.10.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	2 -2800,25478 -2446,25386
+	2 -2808,25489 -2446,25386
 EOF
      },
      { from  => 1119736800, # 2005-06-26 00:00
@@ -2430,8 +2430,8 @@ EOF
        text  => 'L 235; (Gielsdorf-Werneuchen); OD Wegendorf, Schulstr. Ersatzneubau Durchlass Vollsperrung 18.07.2005-29.07.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 34492,22176 34321,22151
-	q4 34125,22128 34321,22151
+	q4 34460,22169 34331,22145
+	q4 34163,22156 34331,22145
 EOF
      },
      { from  => 1122588000, # 2005-07-29 00:00
@@ -4470,9 +4470,9 @@ EOF
        text  => 'B 158 zw. OL Seefeld, Löhmer Ch. und Bahnübergang Gleis- u. Straßenbauarbeiten Vollsperrung 05.05.2006-12.05.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26936,23104 27283,23503
+	2 26915,23116 26968,23160 27254,23502
 	2 28246,24272 27608,23776
-	2 27283,23503 27608,23776
+	2 27254,23502 27608,23776
 EOF
      },
      { from  => 1146866400, # 2006-05-06 00:00
@@ -5006,7 +5006,7 @@ EOF
        text  => 'L 235 Gielsdorf-Werneuchen Schulstr. in der OL Wegendorf Straßen- u. Durchlassbau Vollsperrung; 06.07.2006-19.08.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34492,22176 34321,22151 34125,22128
+	q4::inwork 34460,22169 34331,22145 34163,22156
 EOF
      },
      { from  => 1151791200, # 2006-07-02 00:00
@@ -5638,7 +5638,7 @@ EOF
        text  => 'L 235 Gielsdorf-Werneuchen Schulstr. in der OL Wegendorf Straßen- u. Durchlassbau Vollsperrung 06.07.2006-30.09.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 34492,22176 34321,22151 34125,22128
+	2::inwork 34460,22169 34331,22145 34163,22156
 EOF
      },
      { from  => 1156541009, # 2006-08-25 23:23
@@ -8236,11 +8236,11 @@ EOF
 	q4::temp 6173,12396 6276,12506 6314,12518 6442,12545
 EOF
      },
-     { from  => $isodate2epoch->("2017-05-12 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-05-14 23:59:59"),
+     { from  => $isodate2epoch->("2018-05-11 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-05-13 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 7, months => 5]],
-       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (13. und 14. Mai 2017)',
+       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (12. und 13. Mai 2018)',
        type  => 'gesperrt',
        source_id => 'http://www.laubinger.de/termine/26-boelschefest-friedrichshagen/',
        data  => <<EOF,
@@ -8907,7 +8907,7 @@ EOF
        text  => 'L 235 Gielsdorf-Werneuchen OD Werneuchen Straßenausbau Vollsperrung 29.08.2007-20.12.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 32715,25292 32826,25218 33510,24304
+	q4::inwork 32706,25302 32722,25286 32829,25198 33510,24304
 EOF
      },
      { from  => 1182281851, # 2007-06-19 21:37
@@ -11178,7 +11178,7 @@ EOF
        text  => 'L 235 Gielsdorf-Werneuchen OD Werneuchen Straßenausbau Vollsperrung 10.03.2008-10.05.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 32715,25292 32826,25218 33510,24304
+	q4::inwork 32706,25302 32722,25286 32829,25198 33510,24304
 EOF
      },
      { from  => 1205622000, # 2008-03-16 00:00
@@ -12420,7 +12420,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED (mittlerweile in strassen_bab) ---	2::inwork 27178,15716 26908,15630
-	2::inwork 26908,15630 26493,15515 26336,15473
+	2::inwork 26908,15630 26532,15526 26493,15515 26336,15473
 EOF
      },
      { from  => 1219183200, # 2008-08-20 00:00
@@ -12805,7 +12805,7 @@ EOF
        text  => 'L 030 Fredersdorf - Altlandsberg - Bernau OD Altlandsberg, zw. OE und Strausberger Tor Straßenausbau Vollsperrung * 22.09.2008-30.04.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 33133,18131 32941,18121 32690,18122 32513,18082 32293,18093
+	q4::inwork 33133,18131 32941,18121 32690,18122 32519,18076 32293,18093
 EOF
      },
      { from  => 1221948000, # 2008-09-21 00:00
@@ -13794,7 +13794,7 @@ EOF
        text  => 'B 158 Blumberg - Werneuchen zw. Blumberg u. Seefeld Deckenerneuerung Vollsperrung 14.04.2009-13.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 28531,24375 28246,24272 27608,23776 27283,23503 26936,23104 26764,23083 25641,22864 25295,22655 24951,22681 24709,22522
+	2::inwork 28531,24375 28308,24301 28246,24272 27608,23776 27254,23502 26968,23160 26915,23116 26764,23083 25878,22894 25712,22856 25283,22666 24951,22681 24709,22522
 EOF
      },
      { from  => 1239919200, # 2009-04-17 00:00
@@ -14050,14 +14050,14 @@ EOF
 	q4::inwork 9098,42254 9043,42165 9032,42153
 EOF
      },
-     { from  => $isodate2epoch->("2017-05-12 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-05-14 23:59:59"),
+     { from  => $isodate2epoch->("2018-05-25 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-05-27 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 9, months => 5]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (13. und 14. Mai 2017)',
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (26. und 27. Mai 2018)',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.family-and-friends-ev.de/termine.html
+#: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html
 	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
 EOF
      },
@@ -14162,7 +14162,7 @@ EOF
        text  => 'B 158 Blumberg - Werneuchen zw. Seefeld und Werneuchen Deckenerneuerung Vollsperrung 11.05.2009-13.06.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 29103,24437 29528,24348 29791,24336 31924,25478 32253,25457
+	2::inwork 29103,24437 29334,24409 29414,24387 29505,24363 29651,24338 30180,24560 30712,24794 31636,25356 31885,25476 32101,25498 32253,25457
 EOF
      },
      { from  => 1242281874, # 2009-05-14 08:17
@@ -17438,7 +17438,7 @@ EOF
        type  => 'handicap',
        source_id => 'LSO-SG33-F10025',
        data  => <<EOF,
-	q4::inwork 34125,22128 34176,22704
+	q4::inwork 34163,22156 34158,22219 34116,22388 34172,22727
 EOF
      },
      { from  => 1269113662, # 2010-03-20 20:34
@@ -22637,6 +22637,7 @@ EOF
        until => $isodate2epoch->("2017-09-10 22:00:00"),
        periodic => 1, # erster Termin im Jahr
        recurrences => [["yearly", days => 9, months => 5]], # wechselnde Termine, kann auch erst Mitte September passieren
+       recurrence_prewarn_days => 14,
        text  => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 8.9.2017 15 Uhr bis 10.9.2017 22 Uhr',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/?date=20170409',
@@ -23396,7 +23397,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/721-E/14/067',
        data  => <<EOF,
-	2::inwork 33953,23796 34266,22939
+	2::inwork 33931,23737 34182,23113 34220,22896
 EOF
      },
      { from  => 1408226400, # 2014-08-17 00:00
@@ -24132,17 +24133,16 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2018-04-08 04:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2018-04-30 08:00:00"),
-       text  => 'Sterndamm: Eisenbahnunterführung voll gesperrt, 09.04.2018 bis 30.04.2018',
+       until => $isodate2epoch->("2018-06-16 08:00:00"),
+       text  => 'Sterndamm: Eisenbahnunterführung voll gesperrt, 09.04.2018 bis 16.06.2018',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.690450.php',
        data  => <<EOF,
 #: next_check_id: STERNDAMM-2016
 #: by: http://unternehmen.bvg.de/de/Unternehmen/Medien/Presse/Pressemitteilungen/Detailansicht?newsid=2442
-#: XXX laut BA Treptow-Köpenick geht die Sperrung bis zum 2018-06-16
+#: note: laut BA Treptow-Köpenick geht die Sperrung bis zum 2018-06-16, laut vmz bis Mitte Juni 2018
 #: by http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20180406
-#: next_check: 2018-06-16
-#: priority: #A
+#: source_id: 2147342409
 	2::inwork 17886,5587 17736,5441
 EOF
      },
@@ -24299,7 +24299,7 @@ EOF
        source_id => 'wosch',
        data  => <<EOF,
 # REMOVED (offen) --- #: confirmed_by: srt --- #: last_checked: 2015-08-16 --- #: check_frequency: 45d
-	2::inwork 7306,13418 7402,13475 7451,13504 7630,13584
+	2::inwork 7306,13418 7402,13475 7422,13487 7451,13504 7630,13584
 EOF
      },
      { from  => 1429736139, # 2015-04-22 22:55
@@ -26711,14 +26711,13 @@ EOF
 	q3::inwork 5306,15387 5134,15565
 EOF
      },
-     { from  => 1510034400, # 2017-11-07 07:00
-       until => 1510329600, # 2017-11-10 17:00
-       text  => 'Wiesenweg: wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg gesperrt, eventuell auch für Fußgänger und Radfahrer, von 08.11.2017 7:00 Uhr bis 10.11.2017 17:00 Uhr ',
+     { from  => 1523311200, # 2018-04-10 00:00
+       until => undef, # XXX
+       text  => 'Wiesenweg: wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt, auch für Fußgänger, voraussichtlich ab 11.04.2018, 7 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: fritz
 #: source_id: 2147342009
-	2::inwork 15055,11505 15162,11458
+	2::inwork 15162,11458 15055,11505
 EOF
      },
      { from  => 1510939800, # 2017-11-17 18:30
@@ -26837,8 +26836,8 @@ EOF
        text  => 'Wolliner Str./Granseer Str./Fürstenberger Str.: Bauarbeiten, Kreuzung muss umständlich umfahren werden, Bordsteine',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-03-19 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2018-04-09 vvv
+#: check_frequency: 7d vvv
 	q3::inwork 10277,14691 10320,14608
 	q2::inwork 10320,14608 10399,14429
 	q3::inwork 10228,14564 10320,14608 10472,14632

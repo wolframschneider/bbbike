@@ -316,7 +316,7 @@ Bus 247	busroute_N 10170,14905 10111,15018 10071,15096 10018,15211 9996,15400 99
 Bus 247	busroute_N 9642,15038 9432,14936 9270,14856 9108,14777 9048,14681 8953,14758 8870,14637
 Bus 247	busroute_N 8456,15235 8607,15426 8886,15799 8923,15850 9123,15963
 Bus 123	busroute_N 7759,13246 7651,13447 7647,13461 7653,13480 7660,13506 7655,13539
-Bus 120, Bus 123	busroute_N 7655,13539 7630,13584 7327,14130 7180,14419
+Bus 120, Bus 123	busroute_N 7655,13539 7630,13584 7452,13904 7366,14067 7331,14132 7180,14419
 Bus 100	busroute_N 7031,12320 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
 Bus 142	busroute_N 7458,14643 7263,14873 7223,14914 7192,14976 7182,14998 7131,15109 6945,15045 6739,14969 6652,15073 6626,15104
 Bus 247	busroute_N 7198,15656 7354,15817 7436,15746
@@ -627,7 +627,7 @@ ausgeschildert zum Golfplatz	CP2; 50181,171331 50016,171383
 #: add_fragezeichen: Heißt es tatsächlich "Luisenthal"?
 Ausschilderung nach Luisenthal (?) folgen	CS; 41134,76881 41143,76365
 ausgeschildert Richtung Campingplatz Warnitz	CP; 40652,83924 40702,84070 40703,84157 40753,84220 40736,84265 40768,84393
-ausgeschildert Richtung Werneuchen, Wegendorf	CP2; 32325,18434 32343,18775
+ausgeschildert Richtung Werneuchen, Wegendorf	CP2; 32325,18434 32338,18762
 ausgeschildert Richtung Drense	CP2; 47333,101140 47381,101165
 ausgeschildert Richtung Grünow	CP2; 45050,101273 45080,101325
 ausgeschildert nach Charlottenhof	CP2; -14500,-2012 -14536,-1943
@@ -1062,16 +1062,6 @@ Heinrich-Dathe-Platz: nicht ausgeschildert	CP2; 18442,10471 18456,10454
 Ahornsteig: nicht ausgeschildert	CS 7059,11978 7007,11923 6984,11859 6980,11790 6996,11661 7018,11615 7092,11593 7362,11561 7418,11566 7549,11608 7612,11597 7648,11592 7664,11597
 ausgeschildert Floraplatz	CP2; 8016,11770 8020,11937
 ausgeschildert Venusbassin	CP2; 8020,11937 8095,11919
-#: next_check_id: GRENZALLEE-2014 vvv
-#: valid: 20140224-20180630 vvv
-#: last_checked: 2016-08-23 vvv
-#: next_check: 2018-06-30 vvv
-#: XXX_prog Zeitverlust sollte automatisch eingebunden werden
-Überquerung der Kreuzung Neuköllnische Allee/Grenzallee nur über linken Gehweg möglich, Zeitverlust!	CP; 14567,6810 14344,7003 14196,7086
-#: next_check ^^^
-#: last_checked ^^^
-#: valid ^^^
-#: next_check_id ^^^
 am U-Bahn-Viadukt entlang fahren	CP2; 7906,10098 7928,10094
 ausgeschildert Parzelle 16-25	CP2; 17832,12244 18135,12246
 #: XXX_prog: deutlicher Zeitverlust, man muss drei langgeschaltete Ampeln benutzen (Rückrichtung geht besser)
@@ -1168,7 +1158,7 @@ Weg im Treptower Park: Radfahren im Treptower Park offiziell verboten	CS 14719,9
 Weg im Treptower Park: Radfahren im Treptower Park offiziell verboten	CS 14588,9473 14556,9581
 Weg im Treptower Park: Radfahren im Treptower Park offiziell verboten	CS 14531,9244 14485,9271 14398,9373
 #: by ^^^
-entlang des IGA-Eingangs	CP2; 23021,13982 23081,14418
+entlang des IGA-Eingangs	CP2; 23021,13982 23072,14353
 entlang des IGA-Busparkplatzes	CP2; 23084,14472 23081,14418
 Yorckstr. - Katzbachstr.: beim Linksabbiegen Ausschilderung befolgen	CP; 8679,9544 8595,9495 8598,9269
 #: next_check_id: PARKVIERTELKLADOW-2017 vvv
