@@ -368,7 +368,7 @@ asphaltiert	RW2;RW8 -29794,8456 -29594,8467 -28778,8193 -28724,8191 -28062,8160 
 #: by: http://www.nationaler-radverkehrsplan.de/neuigkeiten/news.php?id=1324
 	RW;RW -26075,21748 -26450,21882 -27692,22148 -28075,22250 -28302,22412 -28891,22560 -30773,23095 -31230,23101
 #: by: http://www.nationaler-radverkehrsplan.de/neuigkeiten/news.php?id=1324
-	RW;RW -31230,23101 -32007,22836 -34213,23540 -36413,24363 -36882,24414 -38092,24817 -38964,25106 -40033,25453
+	RW;RW -31230,23101 -32007,22836 -34213,23540 -36413,24363 -36882,24414 -38187,24847 -38964,25106 -40033,25453
 #: by: http://www.nationaler-radverkehrsplan.de/neuigkeiten/news.php?id=1644
 	RW;RW 88364,18235 90278,18738 91438,18959 92618,19763 92742,19890 92925,19897 92970,19935 92970,20194 93096,20241 93405,20640 93478,20733
 #: by: http://www.nationaler-radverkehrsplan.de/neuigkeiten/news.php?id=1644
@@ -403,13 +403,15 @@ Radweg auf Gehweg	RW2;RW 53289,-90355 53147,-90403 53144,-90435
 Radweg auf Gehweg	RW;RW 53510,-90531 53144,-90435
 Radweg auf Gehweg	RW2;RW2 53144,-90435 53039,-90432 52714,-90551
 Verbundsteinpflaster	RW8;RW2 52714,-90551 52580,-90602 52531,-90608 51535,-90752 51083,-90805 50891,-90838 50434,-90824 50146,-90787
-Verbundsteinpflaster	RW;RW2 -4,1133 -129,989 -203,906 -371,715 -475,568 -625,189 -749,-74 -797,-138 -840,-185 -927,-280 -1436,-887
-Radweg auf Gehweg	RW;RW -371,715 -426,773 -492,795 -531,807 -641,806 -818,789 -1196,724 -1427,684 -1642,659 -1709,653
+Verbundsteinpflaster	RW2;RW2 -4,1133 -129,989 -203,906 -371,715 -475,568
+Verbundsteinpflaster	RW;RW2 -475,568 -625,189 -749,-74 -797,-138 -840,-185 -927,-280 -1436,-887
+zusätzlich zu den Suggestivstreifen noch ein Radweg auf dem Gehweg	RW4; -371,715 -426,773 -492,795 -531,807 -641,806 -818,789 -1196,724 -1427,684 -1642,659 -1709,653
+Radweg auf Gehweg	RW; -1709,653 -1642,659 -1427,684 -1196,724 -818,789 -641,806 -531,807 -492,795 -426,773 -371,715
 Radweg auf Gehweg	RW1;RW1 -3082,-599 -3226,-453 -3412,-291 -3589,-150 -3663,-91 -3856,60
 Radweg auf Gehweg	RW1; -2968,-712 -3082,-599
 	RW2;RW8 -2747,-937 -2781,-946
 Radweg auf Gehweg	RW;RW 2745,89716 2797,89387
-	RW2;RW8 -2747,-937 -2760,-740
+	RW2;RW8 -2747,-937 -2745,-806 -2737,-719
 Verbundsteinpflasterradweg auf Gehweg	RW;RW 2797,89387 2480,89399 2111,89378 1907,89597 1782,89633 1544,89701 1090,89570
 asphaltiert	RW;RW8? 1090,89570 627,89430 234,89271
 Verbundsteinpflasterradweg auf Gehweg, teilweise sehr eng	RW;RW -8777,85887 -8775,85947 -8738,86096 -8726,86224 -8711,86273 -8641,86541
@@ -941,8 +943,12 @@ asphaltierter straßenbegleitender Radweg	RW;RW 6336,-50572 6733,-50847 6956,-518
 #: by: ^^^
 # 
 #: by: Werner Braun: vvv
-#: confirmed_by: M.Mende
-	RW;RW -2760,-740 -2832,-386 -3003,432
+#: confirmed_by: M.Mende vvv
+#: corrected_by: osm (keine Radwege!)
+	RW0;RW0 -2737,-719 -2771,-710 -2832,-386
+#: by: osm (separater Weg auf Ostseite)
+	RW;RW8? -2832,-386 -3003,432
+#: confirmed_by ^^^
 #: by: ^^^
 # 
 #: by: Torsten Fleischmann:
@@ -1150,6 +1156,8 @@ asphaltiert	RW8;RW2 7978,-4011 7924,-4240 7513,-5721 7356,-6995
 Verbundsteinpflaster	RW2;RW8 10070,-4597 10153,-4536 10182,-4527 10262,-4506 10652,-4460 10896,-4469 10994,-4472
 Verbundsteinpflaster	RW1; 10994,-4472 11302,-4489
 	RW2;RW8 -8450,15702 -8975,15899
+#: by: osm
+	RW7;RW7 -50048,24475 -50377,24536 -51297,24594 -51788,24542 -52726,24134 -53625,23953
 #: by: mapillary
 Gehweg für Radfahrer frei	RW1; 8303,28478 8337,28834
 #: by: mapillary

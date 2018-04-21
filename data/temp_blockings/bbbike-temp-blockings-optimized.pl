@@ -2638,7 +2638,26 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	2::temp 34421,1950 34359,2165 34250,2546
+',
+         'from' => 1527717600,
+         'id' => 2078,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              15,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.erkner.de/271.html?date=20170415',
+         'text' => 'Erkner: Heimatfest, 1.6.2018 bis 3.6.2018',
+         'type' => 'gesperrt',
+         'until' => 1527991200
+       },
        undef,
        undef,
        undef,
@@ -3326,7 +3345,27 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
          'type' => 'gesperrt',
          'until' => 1525039199
        },
-       undef,
+       {
+         'data' => '# REMOVED (was) : tempex: 20160714-20160717
+	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
+',
+         'from' => 1531864800,
+         'id' => 2420,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              13,
+                              'months',
+                              7
+                            ]
+                          ],
+         'source_id' => 'https://www.gratis-in-berlin.de/festivals/item/2035333-hafenfest-tegel-2018-mit-programm-und-feuerwerk',
+         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (19.07.2018 bis 22.07.2018)',
+         'type' => 'gesperrt',
+         'until' => 1532296799
+       },
        undef,
        undef,
        undef,
@@ -4126,7 +4165,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-04-04 vvv
+#: last_checked: 2018-04-15 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -4185,23 +4224,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober; laut Pressemitteilung bis Ende 2017
-#: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
-#: last_checked: 2018-03-11 vvv
-# REMOVED (weitgehend fertig) ---	q3::inwork 13384,8354 13217,8493
-# REMOVED	q3::inwork; 13217,8493 13262,8554
-# REMOVED	q3::inwork; 13262,8554 13301,8606 13314,8624
-# REMOVED	q4::inwork 13368,8689 13314,8624
-	q4::inwork 13301,8606 13314,8624 13368,8689
-#: last_checked ^^^
-',
-         'from' => 1491498639,
-         'id' => 2856,
-         'text' => 'Innstr.: Bauarbeiten, Fahrbahn gesperrt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4461,8 +4484,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '#: last_checked: 2018-04-09 vvv
-#: check_frequency: 7d vvv
+         'data' => '#: last_checked: 2018-04-20 vvv
+#: check_frequency: 3d vvv
 	q3::inwork 10277,14691 10320,14608
 	q2::inwork 10320,14608 10399,14429
 	q3::inwork 10228,14564 10320,14608 10472,14632
@@ -4543,6 +4566,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.386693.php
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/uebersichtsplan-umleitung_vollsperrung.pdf
+#: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.692745.php
 #: XXX prüfen, ob der Starttermin eingehalten wird
 #: next_check: 2018-05-02
 #: priority: #A
@@ -4555,20 +4579,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1530309599
        },
-       {
-         'data' => '#: by: http://www.berliner-woche.de/adlershof/verkehr/wasserbetriebe-und-bvg-bauen-in-der-doerpfeldstrasse-d144226.html
-#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.687481.php
-#: source_id: 2147342367
-#: source_id: LMS-BR_r_LMS-BR_127098_LMS-BR_72
-	q4::inwork 20082,3578 20136,3609 20149,3617 20159,3623 20219,3661 20304,3714 20322,3725 20352,3744 20362,3750 20428,3786
-',
-         'from' => 1521928800,
-         'id' => 2940,
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.687481.php',
-         'text' => 'Dörpfeldstr.: Bauarbeiten zwischen Gellert- und Hackenbergstr., Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 26. März 2018 bis 17. April 2018',
-         'type' => 'handicap',
-         'until' => 1523970000
-       },
+       undef,
        {
          'data' => '#: last_checked: 2018-03-25
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? Wird sich die Qualität der Fahrbahn nach den Bauarbeiten verbessern?
@@ -4605,17 +4616,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1525093200
        },
-       {
-         'data' => '#: source_id: 2147342379
-#: source_id: LMS-BR_r_LMS-BR_127414_LMS-BR_72
-	2::inwork 8971,864 9024,906 9129,986
-',
-         'from' => 1522326966,
-         'id' => 2945,
-         'text' => 'Säntisstr.: Bahnübergang bis 2021 gesperrt, ggfs. gibt es für Fußgänger eine Überquerungsmöglichkeit (tragen!)',
-         'type' => 'gesperrt',
-         'until' => 1622541600
-       },
+       undef,
        {
          'data' => '#: next_check_id: ORANIENBURGER-2018
 	q4::inwork; 5136,21738 5210,21636 5311,21495 5320,21432 5333,21332 5341,21266 5343,21250 5349,21198

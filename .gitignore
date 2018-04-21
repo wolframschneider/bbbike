@@ -1,6 +1,7 @@
 *.bak
 .DS_Store
 /.prove
+/BBBike-[1-9]*-DEVEL.tar.gz
 /BBBikeVar.tpl
 /ChangeLog
 /MYMETA.json

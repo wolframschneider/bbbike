@@ -1002,7 +1002,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 889,14392
 	B 21332,18819
 	B 10365,-2603
-	B 9024,906
+# REMOVED (wird zur Unterführung) ---	B 9024,906
 	B 19405,5284
 	B 20616,7292
 	B 20624,12133
@@ -1637,7 +1637,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 13438,14675
 	X 13543,13568
 #: note: Anforderungsampel
-	F 13644,14915
+	F 13647,14912
 	X 12870,15342
 #: off: night (seen 2013-05-30 0:30)
 	X 13273,12902
@@ -2310,7 +2310,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	X 13919,10583
 	X 21115,271
 	X 17483,6024
-	F 13737,14204
+	F 13731,14200
 	X 9509,12117
 #: note: Anforderungsampel, ist aber manchmal (tagsüber? oder immer?) automatisch aktiviert
 	F 13142,10530
@@ -3057,7 +3057,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -12653,-1723
 # REMOVED --- #: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust? --- #: XXX zurzeit auch nur in Richtung Südosten Zeitverlust --- #: source_id: IM_023940 --- #: last_checked: 2015-08-10 --- #: check_frequency: 14d ---	X::inwork 14018,9118
 #: next_check_id: KIEFHOLZ-2015 vvv
-#: last_checked: 2018-04-08 vvv
+#: last_checked: 2018-04-16 vvv
 #: check_frequency: 90d vvv
 	X::inwork 14151,8967
 	X::inwork 14363,8738

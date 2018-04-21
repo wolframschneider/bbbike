@@ -243,7 +243,7 @@ Am Finowkanal: Qualität?	? 28618,49522 27493,49402 27345,49402 26913,49272 26639
 Am Neuen Kanal/Trappenallee: Qualität?	? -3996,22969 -3994,23162 -3503,23811
 Dorfstr. Stolpe-Dorf: Qualität?	? -25,27812 237,28184 524,28171
 Weg am Flakensee: Qualität (Waldweg?)?	? 35021,2212 35000,2269 35045,2422 35024,2900 35088,3016 35167,3074 35353,3476 35347,3555 35252,3653 35143,3698 35103,3769 35134,3866 35103,3973 35170,4058 35207,4305 35134,4500
-Sputendorf - Struveshof: Qualität (wahrscheinlich asphaltiert)? Genaue Wegführung?	? -1316,-7721 -862,-9933
+Sputendorf - Struveshof: Qualität (wahrscheinlich Kopfsteinpflaster/Beton/Sand)? Genaue Wegführung?	? -1371,-7671 -862,-9933
 B198: laut Aktiv Regional viele Steigungen und Gefälle	? -8925,105645 -7570,105900 -7335,106120 -6848,106401 -6110,106473 -5887,106647 -4681,106367 -3724,105742 -3482,105401 -3330,105252 -2961,105166 -2570,105293
 Dewitz - Rosenhagen: laut Aktiv Regional viele Steigungen und Gefälle	? 6502,121010 6567,120649 7986,119379 8226,119058
 Brieselang - Finkenkrug: Ist der Weg neu asphaltiert?	? -14277,18001 -14603,18132
@@ -287,7 +287,7 @@ Kamp - Bargischow: Qualität (zumindest am östlichen Ende Plattenweg)?	? 34996,15
 Bargischow - Anklam: Qualität?	? 31360,159081 31045,159186 30639,159459 30132,159760 29255,160450 28732,160789 28665,160912 28572,161288
 Wünsdorf: steht hier mittlerweile eine Eisenbahnbrücke?	? 15229,-27157 15682,-26971 15960,-26906
 Radewege - Brielow: Qualität?	? -46132,7173 -46538,6977 -46760,6249 -47618,4983 -47806,5061 -48417,5162
-Brielow - Hohenferchesar: Qualität?	? -48390,5412 -49416,7055 -49898,7487 -50089,8223 -50533,8629 -50660,8921 -50856,8901 -51205,9530 -51535,9758 -51829,10290
+Brielow - Hohenferchesar: Qualität?	? -48390,5412 -49416,7055 -49898,7487 -50089,8223 -50533,8629 -50660,8921 -50856,8901 -51205,9530 -51568,9771 -51938,10290
 Radewege - Hohenferchesar: Qualität?	? -48290,7437 -48693,7461 -49378,7626 -49809,8261 -50089,8223
 Hohenferchesar - Fohrde: Qualität?	? -50533,8629 -50622,8172 -50749,7956 -51434,7677 -51827,7258 -52233,7271 -52436,7487 -52855,7334 -53058,7005
 Am Zernsee bis zur Eisenbahnbrücke: Qualität (nördlicher Abschnitt asphaltiert)? Nur für Radfahrer offen? Ausschilderung vorhanden? Existiert hier vielleicht auch ein Radweg?	? -20202,-673 -20399,-666 -20526,-1097 -20704,-1561 -20913,-1859 -20933,-1960
@@ -1165,7 +1165,6 @@ Neuruppin - Wuthenow - Gnewikow - Wustrau-Altfriesack: teilweise gut, teilweise 
 Jühnsdorf: Asphalt (existiert durch Jühnsdorf ein Radweg?)	? 9792,-12090 9345,-11425 9472,-11297 9578,-10891
 Dahlwitz - Neuenhagen: teilweise nur mäßiger Asphalt (nach den Bauarbeiten (2006-10-31) vielleicht besserer Asphalt?)	? 29093,13456 29743,14143
 Heinersdorf: schlechtes Kopfsteinpflaster, sandiger Rand evtl. OK (ist hier mittlerweile asphaltiert?)	? 5633,-2011 5292,-2221 5132,-2299
-Sputendorf: teilweise Kopfsteinpflaster, OK (Stimmt das oder ist das Stück in Sputendorf auch asphaltiert?)	? -1316,-7721 -1734,-7716 -2500,-7557
 Fahlhorst: schlechtes Kopfsteinpflaster (Stimmt das noch immer?)	? -5709,-10987 -5452,-11456
 Werder - Golm: relativ glatter Feldweg mit einigen Schlaglöchern (welche Nummer des F-Wegs?)	? -21063,-2021 -20933,-1960 -20719,-1956 -20528,-1962
 Marienwerder: Kopfsteinplaster, Gehwege OK (liegt hier noch immer Kopfsteinplaster?)	? 22907,48770 22394,48689
@@ -1207,7 +1206,7 @@ Brandenburgische Str.: Betonstraße (wie ist die Qualität ab Berliner Str. Richtu
 Biesenbrow - Briest: Feldweg oder Asphalt (Ist hier noch ein Feldweg, oder vielleicht (mäßig?) asphaltiert? Ist die Straße eine Privatstraße oder ist die Durchfahrt (trotzdem) möglich?)	? 54508,82572 54307,83141
 Kliestow - Wüste Kunersdorf: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 86555,-2783 86261,-1514 85834,181 86307,581
 Mühlental - Lebus: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 85662,1959 85885,2842 85956,3025 85940,3299
-Mützlitz: gutes Kopfsteinpflaster (nach Ende der Bauarbeiten (2006-10-06) vielleicht asphaltiert?)	? -50578,15920 -50493,15837 -50268,15901
+Mützlitz: gutes Kopfsteinpflaster (nach Ende der Bauarbeiten (2006-10-06) vielleicht asphaltiert?)	? -50578,15920 -50505,15845 -50271,15917
 Melzow - Warnitz: querliegende Betonplatten (Betonplatten zumindest auf der nördlichen Seite)	? 41910,85359 41901,85524 42245,86063
 Walther-Rathenau-Str. (Eichwalde): schlechtes Kopfsteinpflaster (liegt auch im östlichen Teil schlechtes Kopfsteinpflaster?)	? 24801,-3379 24943,-3325
 Leistikowstr.: Kopfsteinpflaster (liegt auch im östlichen Teil Kopfsteinpflaster?)	? 24842,-3485 24987,-3426
