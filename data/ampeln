@@ -954,7 +954,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7335,18257
 	X 7832,20219
 	X 9228,23643
-	X 15230,26560
+	X 15230,26548
 	X 12008,20368
 	X 11907,19749
 	X 8540,12420
@@ -1662,7 +1662,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 5413,2436
 	X 11673,16367
 	X 14488,12188
-	X 20525,11488
+	X 20521,11494
 S-Bahn und Regionalbahn	B 21562,12088
 	X 11940,22587
 	X 2394,9714
@@ -2170,7 +2170,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 13879,13967
 	X 8514,17634
 	F 8631,18441
-	X 10132,19993
+	X 10134,19981
 	F::inwork 9984,12426
 	X::inwork 9121,12514
 	X::inwork 9286,12886
@@ -2301,6 +2301,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 7382,9187
 	F 1485,8845
 	F 7740,1041
+	X 22092,999
+	X -5886,10837
 	X -17127,-554
 	F -12868,-502
 	X -12940,-1625

@@ -579,7 +579,7 @@ Deilingeweg: nicht ausgeschildert?	CP2; 6259,23379 6229,23415
 (Frithjofstr. - Rotkardinalweg): entlang der ehemaligen Industriebahn	CS 12696,19334 12650,19462 12543,19760 12552,19765
 Schönower Str. - An der Panke: Weg entlang Bahn und NSG "Faule Wiesen"	CS 18801,28360 18827,28385 18852,28381 19027,28536 19154,28637 19217,28681 19287,28718 19502,28812 19532,28867 19573,28968 19535,29067
 Albrechtstr. - Selerweg: an der Kreuzung Klingsorstr./Neue Filandastr. abbiegen	CP; 5527,5217 5583,5179 5633,5184
-(Verlängerte Hertzallee): TU-Gelände	CS 5352,11502 5296,11529 4950,11696 4905,11785
+(Verlängerte Hertzallee): TU-Gelände	CS 5352,11502 5171,11589 4950,11696 4905,11785
 Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3024,21286 3068,21150
 Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3068,21150 3024,21286
 Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
@@ -623,8 +623,7 @@ Goldlärchenweg: nicht ausgeschildert	CS -6314,6104 -6301,6126 -6385,6185
 Goldlärchenweg: nicht ausgeschildert	CS -6385,6185 -6437,6221 -6495,6131
 Rampe zum Zollpackhof	CS; 7945,12878 7907,12817
 ausgeschildert als Marie-Elisabeth-von-Humboldt-Str.	CP2; 20855,19299 20904,19284
-Lin-Jaldati-Weg: nicht ausgeschildert	CS 23762,14009 23751,14031 23724,14086
-Malevkeweg: nicht ausgeschildert	CS 24878,10861 24875,10919
+Malevkeweg: nicht ausgeschildert	CS 24877,10863 24875,10919 24819,10924
 (Welzower Steig - Senftenberger Ring): entlang des Packereigrabens	CS 6525,21630 6625,21600 6753,21542
 (Gundelfinger Str. - Römerweg): Treskow-Höfe	CS 18735,9421 18738,9467 18754,9584 18772,9694
 (Aristotelessteig - Treskowallee): Treskow-Höfe	CS 18715,9589 18754,9584 18835,9572 18865,9608
@@ -649,3 +648,4 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 Alter Radelander Weg: nicht ausgeschildert	CP2; 23457,35 24158,-1153
 Barnimstr.: nicht ausgeschildert	CS 11758,13210 11785,13241
+Karlinekenweg: noch nicht ausgeschildert	CS 11359,20297 11405,20196 11422,20202 11496,20068 11537,20087

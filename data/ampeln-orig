@@ -1085,7 +1085,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7335,18257
 	X 7832,20219
 	X 9228,23643
-	X 15230,26560
+	X 15230,26548
 #: note: Anforderung für linksabbiegende Radfahrer (Pasewalker -> Blankenburger)
 	X 12008,20368
 	X 11907,19749
@@ -1899,7 +1899,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 5413,2436
 	X 11673,16367
 	X 14488,12188
-	X 20525,11488
+	X 20521,11494
 S-Bahn und Regionalbahn	B 21562,12088
 #: XXX_prog: eigentlich zwei Ampeln (die Kreuzung mit der Mühlenstr. ist etwas versetzt), aber wahrscheinlich gleich geschaltet
 	X 11940,22587
@@ -2227,6 +2227,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
 #: note: Luftbild
 	F 4592,3762
 	F -306,1700
+#: note: am So, 2018-04-29, gegen 12:30 ausgeschaltet
 	X 20959,11472
 	F 21137,11294
 	X 7481,19400
@@ -2473,7 +2474,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 23059,4635
 #: XXX Baustellenampel; bleibt sie permanent?
 #: osm_watch: node id="76598376" version="11"
-#: last_checked: 2017-04-09
+#: last_checked: 2018-04-28
 #: check_frequency: 180d
 	X 13256,26863
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20100805.1445.305319.html
@@ -2626,7 +2627,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 8514,17634
 #: note: Anforderungsampel
 	F 8631,18441
-	X 10132,19993
+	X 10134,19981
 # REMOVED (existiert nicht mehr) --- F 5628,14063
 # 
 #: next_check_id: ZEUGHAUS-2014
@@ -2634,13 +2635,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
-#: last_checked: 2018-04-04
+#: last_checked: 2018-04-27
 #: next_check: 2018-06-28
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2018-04-04 vvv
+#: last_checked: 2018-04-27 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2862,7 +2863,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: by: Tsp vom 2018-01-22 (neue Ampeln --- 2019)
 #: source_id: 2147340715 vvv
 #: last_checked: 2018-04-10 vvv
-#: next_check: 2018-04-30 vvv
+#: next_check: 2018-05-15 vvv
 	X::inwork 8250,14672
 # REMOVED --- F::inwork 8732,14098
 #: next_check ^^^
@@ -2910,11 +2911,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX Gesamtmaßnahme bis Ende Mai 2018
 #: source_id: 2147342243
 #: source_id: 2147342260
-#: last_checked: 2018-04-06
+#: last_checked: 2018-04-30
 	F 7382,9187
 #: note: Anforderungsampel
 	F 1485,8845
 	F 7740,1041
+	X 22092,999
+	X -5886,10837
 # 
 ################################################################################
 #: note: Potsdam vvv

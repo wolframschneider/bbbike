@@ -9452,7 +9452,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006085',
        data  => <<EOF,
-	1::inwork 23206,206 22547,651 22351,862 22162,1067
+	1::inwork 23206,206 22916,402 22547,651 22351,862 22162,1067
 EOF
      },
      { from  => undef, # 
@@ -9844,7 +9844,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006462',
        data  => <<EOF,
-	2::temp 13909,20928 13562,20913 13576,20849
+	2::temp 13909,20928 13662,20917 13562,20913 13576,20849
 EOF
      },
      { from  => undef, # 
@@ -11835,7 +11835,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009192',
        data  => <<EOF,
-	1::inwork 11555,20051 11535,20092 11419,20327 11269,20667
+	1::inwork 11555,20051 11537,20087 11419,20327 11269,20667
 EOF
      },
      { from  => 1214257459, # 2008-06-23 23:44
@@ -15421,7 +15421,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013876',
        data  => <<EOF,
-	q4::inwork; 9348,19786 9404,19691 9468,19599 9562,19529 9588,19511 9688,19440 9791,19363
+	q4::inwork; 9349,19782 9404,19691 9468,19599 9562,19529 9588,19511 9688,19440 9791,19363
 EOF
      },
      { from  => 1249365600, # 2009-08-04 08:00
@@ -16213,7 +16213,7 @@ EOF
 #: XXX nach den Bauarbeiten fällt evtl. das Kopfsteinpflaster weg, es wird zumindest Richtung Norden Radwege geben
 #: last_checked: 2010-07-11
 #: next_check: 2010-10-01
-	q4::inwork; 10680,18380 10739,18262 10755,18231 10815,18074 10830,17985
+	q4::inwork; 10680,18380 10718,18304 10739,18262 10755,18231 10815,18074 10830,17985
 	q4::inwork; 10815,18074 10900,18113 10970,18164 10993,18203 11123,18343 11001,18528
 EOF
      },
@@ -18935,7 +18935,7 @@ EOF
        source_id => 'IM_018078',
        data  => <<EOF,
 #: next_check: 2012-05-15
-	q4::inwork; 10680,18380 10739,18262 10755,18231 10815,18074 10830,17985
+	q4::inwork; 10680,18380 10718,18304 10739,18262 10755,18231 10815,18074 10830,17985
 EOF
      },
      { from  => 1295721886, # 2011-01-22 19:44
@@ -21102,7 +21102,7 @@ EOF
 # REMOVED (bei VMZ abgelaufen) --- : next_check: 2013-09-01 --- #: XXX von 22.6.2013 für 10 Wochen in _beiden_ Richtungen gesperrt --- danach wieder die alte Situation herstellen --- #: XXX vmz-Eintrag dafür: Friedrich-Engels-Str. (Niederschönhausen) in beiden Richtungen zwischen Nordendstr. und Platanenstr. Geplant ab: 22.06.2013 07 Uhr, Baustelle, Straße vollständig gesperrt eine Umleitung ist eingerichtet (bis auf weiteres)	INKO_119074 --- #: priority: #A
 # REMOVED (ja) --- #: next_check: 2013-12-15 --- #: XXX danach bessere Straßenqualität? Radstreifen? --- #: osm_watch: way id="24930947" version="20"
 #: source_id: IM_020259 (zusätzlich)
-	q4::inwork; 9149,20336 9226,20124 9255,20038 9289,19947 9325,19851 9348,19786
+	q4::inwork; 9149,20336 9226,20124 9255,20038 9289,19947 9325,19851 9349,19782
 EOF
      },
      { from  => 1350252000, # 2012-10-15 00:00
@@ -21403,6 +21403,7 @@ EOF
 #: tempex: 20170421T1400-20170423 vvv
 	2::temp 22138,4642 22111,4562 22093,4499
 	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
+	2::temp 22111,4562 22162,4546 22214,4548
 #: tempex ^^^
 EOF
      },
@@ -21531,8 +21532,8 @@ EOF
      { from  => $isodate2epoch->("2017-05-26 11:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2017-05-28 20:00:00"),
        periodic => 1,
-       recurrences => [['yearly', days => 4, months => 5]],
-       recurrence_prewarn_days => 7, # findet es 2018 überhaupt statt?
+       #recurrences => [['yearly', days => 4, months => 5]],
+       #recurrence_prewarn_days => 7, # findet es 2018 überhaupt statt? -> kein Termin
        text  => 'Schöneberger Mai- und Spargelfest am 27. und 28. Mai 2017 in der Freiherr-vom-Stein-Straße',
        type  => 'gesperrt',
        source_id => 'http://www.ms-event-agentur.com/seite18.html?date=20170325',
@@ -21619,9 +21620,9 @@ EOF
 	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 11162,19844 11309,19923 11423,19982 11555,20051
 EOF
      },
-     { from  => $isodate2epoch->("2017-05-30 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-06-01 23:59:59"),
-       text  => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. Juni 2017',
+     { from  => $isodate2epoch->("2018-05-31 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-06-03 23:59:59"),
+       text  => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. bis 3. Juni 2018',
        periodic => 1,
        recurrences => [["yearly", "days" => 30, "months" => 5]],
        type  => 'gesperrt',
@@ -23058,7 +23059,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20140528.1315.397553.html',
        data  => <<EOF,
-	q2::inwork 11555,20051 11535,20092 11419,20327
+	q2::inwork 11555,20051 11537,20087 11419,20327
 EOF
      },
      { from  => 1402304400, # 2014-06-09 11:00
@@ -23884,7 +23885,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_023339',
        data  => <<EOF,
-	1::inwork 15230,26560 15589,27116
+	1::inwork 15230,26548 15589,27116
 EOF
      },
      { from  => $isodate2epoch->("2014-11-05 00:00:00"),
@@ -24531,7 +24532,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_025047',
        data  => <<EOF,
-	q4::inwork; 10132,19993 10167,19797 10195,19703 10224,19628 10257,19542
+	q4::inwork; 10134,19981 10167,19797 10195,19703 10224,19628 10257,19542
 EOF
      },
      { from  => undef,
@@ -25479,9 +25480,9 @@ EOF
 #: note: die Baustelle ist gewandert
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=20802
-#: XXX laut fritz mittlerweile in beiden Richtungen --- stimmt das?
+# REMOVED (ja) ---  XXX laut fritz mittlerweile in beiden Richtungen --- stimmt das?
 #: source_id: LMS-BR_r_LMS-BR_72519
-	q4::inwork; 12911,1815 12940,1547
+	q3::inwork 12911,1815 12940,1547
 EOF
      },
      { from  => 1466978400, # 2016-06-27 00:00
@@ -26037,10 +26038,11 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="548612558" version="1"
-#: last_checked: 2018-04-06
+#: last_checked: 2018-04-30
 #: check_frequency: 14d
 # REMOVED ---	q3::inwork; 7201,8870 7101,9027
-	q3::inwork; 7101,9027 7035,9161 7012,9222 7001,9291
+# RE;OVED ---	q3::inwork; 7101,9027 7035,9161
+	q4::inwork; 7035,9161 7012,9222 7001,9291
 EOF
      },
      { from  => 1493652218, # 2017-05-01 17:23
@@ -26532,7 +26534,7 @@ EOF
        data  => <<EOF,
 #: note: vmz meint Ende November 2017
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=35015 (bis 6.11.2017)
-	q3::inwork; 10066,20494 10064,20437 10066,20323 10068,20188 10106,20093 10117,20065 10132,19993 10167,19797
+	q3::inwork; 10066,20494 10064,20437 10066,20323 10068,20188 10106,20093 10117,20065 10134,19981 10167,19797
 EOF
      },
      { from  => undef, # 
@@ -26575,7 +26577,7 @@ EOF
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=35015 (bis 6.11.2017)
 #: source_id: LMS-BR_r_LMS-BR_108061_LMS-BR_72
 #: source_id: 2147341767
-	q3::inwork; 10167,19797 10132,19993 10117,20065 10106,20093 10068,20188 10066,20323 10064,20437 10066,20494
+	q3::inwork; 10167,19797 10134,19981 10117,20065 10106,20093 10068,20188 10066,20323 10064,20437 10066,20494
 EOF
      },
      { from  => undef, # 
@@ -26881,7 +26883,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # XXX_prog: eigentlich q3-
-#: last_checked: 2018-04-06
+#: last_checked: 2018-04-30
 	q3::inwork 7136,9223 7012,9222
 EOF
      },
@@ -26922,16 +26924,15 @@ EOF
      },
      { from  => 1525125600, # 2018-05-01 00:00
        until => 1530309599, # 2018-06-29 23:59
-       text  => 'Rosenthaler Weg: Sperrung wegen Bauarbeiten, voraussichtlich vom 2. Mai 2018 bis 29. Juni 2018',
+       text  => 'Rosenthaler Weg: Sperrung wegen Bauarbeiten, evtl. sind auch Radfahrer betroffen, voraussichtlich vom 2. Mai 2018 bis 29. Juni 2018',
        type  => 'gesperrt',
        source_id => 'http://www.berliner-woche.de/blankenfelde/verkehr/rosenthaler-weg-voll-gesperrt-wasserbetriebe-verlegen-rohre-d144397.html',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.386693.php
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/uebersichtsplan-umleitung_vollsperrung.pdf
 #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.692745.php
-#: XXX prüfen, ob der Starttermin eingehalten wird
-#: next_check: 2018-05-02
-#: priority: #A
+#: by: http://www.berliner-woche.de/pankow/verkehr/sperrung-rosenthaler-weg-umleitung-vom-2-mai-bis-zum-25-juni-d159605.html
+# REMOVED (ja, sieht so aus) --- #: XXX prüfen, ob der Starttermin eingehalten wird --- #: next_check: 2018-05-02 --- #: priority: #A
 	2::inwork 10228,21940 10312,21969 10377,21991 10436,22010 10493,22029 10554,22050 10613,22070 10673,22090 10709,22102 10769,22122 10828,22142 10892,22165 10935,22174 10999,22195
 EOF
      },
@@ -26963,7 +26964,7 @@ EOF
        text  => 'Stillerzeile: Bauarbeiten, östlich des Löbauer Wegs einige Meter Fahrbahn gesperrt, westlich Einbahnstraßenregelung, offen Richtung Westen',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-03-25 vvv
+#: last_checked: 2018-04-29 vvv
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
 	q4::inwork; 24629,5831 24798,5891
 	q3::inwork 24798,5891 24977,5880
@@ -27070,6 +27071,36 @@ EOF
 	2::temp 8332,13548 8354,13523 8362,13466 8365,13431 8356,13404 8314,13323
 	2::temp 8503,13553 8377,13463 8371,13399 8434,13310
 	2::temp 7021,13560 7056,13584 7132,13503 7122,13452 7109,13418
+EOF
+     },
+     { from  => undef, # 
+       until => 1547074800, # 2019-01-10 00:00
+       text  => 'Gervinusstr.: Einbahnstraße, gesperrt Richtung Wilmersdorfer Str., bis 09.01.2019',
+       type  => 'handicap',
+       source_id => 'LMS-BR_r_LMS-BR_122462_LMS-BR_72',
+       data  => <<EOF,
+	q4::inwork; 3623,10800 3835,10915
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Grumbkowstr.: Bauarbeiten, Fahrbahn zwischen Rolandstr. und Blankenburger Str. gesperrt, Ende unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=31981
+#: XXX wann sind die Bauarbeiten beendet?
+#: last_checked: 2018-04-28
+#: check_frequency: 60d
+	q4::inwork 11627,19907 11555,20051
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: last_checked: 2018-04-29
+	2::inwork 21696,5053 21600,5221 21512,5404 21487,5425
 EOF
      },
     );
