@@ -7666,7 +7666,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005053',
        data  => <<EOF,
-	2::inwork 8868,4498 8877,4356
+	2::inwork 8868,4498 8881,4360
 EOF
      },
      { from  => undef, # 
@@ -19594,7 +19594,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/W-SG33-P/11/412',
        data  => <<EOF,
-	2::inwork -1378,-1022 -1348,-1098
+	2::inwork -1345,-1016 -1331,-1092
 EOF
      },
      { from  => 1309928959, # 2011-07-06 07:09
@@ -19941,7 +19941,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_103963',
        data  => <<EOF,
-	2::inwork -7191,-1023 -7152,-1064 -7088,-1074 -7051,-1221
+	2::inwork -7196,-1029 -7162,-1053 -7088,-1074 -7039,-1220
 EOF
      },
      { from  => 1315087200, # 2011-09-04 00:00
@@ -25658,7 +25658,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-04-15 vvv
+#: last_checked: 2018-05-02 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -26455,7 +26455,7 @@ EOF
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
 #: by: mapillary (Gehweg für Radfahrer frei)
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2018-03-29 (mapillary)
+#: last_checked: 2018-05-01
 #: check_frequency: 30d
 	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
@@ -26701,12 +26701,13 @@ EOF
      },
      { from  => 1523311200, # 2018-04-10 00:00
        until => undef, # XXX
-       text  => 'Wiesenweg: wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt, auch für Fußgänger, voraussichtlich ab 11.04.2018, 7 Uhr',
+       text  => 'Wiesenweg: wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann ist die Durchfahrt gesperrt?
 #: source_id: 2147342009
-#: next_check: 2018-05-01
+#: last_checked: 2018-05-02
+#: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 EOF
      },
@@ -26797,18 +26798,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1525185620, # -> handicap_s-orig --- undef, # XXX
        text  => 'Moltkestraßenbrücke: Einbahnstraße, offen Richtung Norden',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.663347.php',
        data  => <<EOF,
-#: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.618687.php
-#: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.623391.php
-#: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.655961.php (Sperrung doch nicht erfolgt? Dafür Einbahnstraßenregelung ab Dez. 2017)
-#: XXX Einbahnstraßenregelung genauer anschauen; wann wird die Einschränkung beendet?
-#: osm_watch: way id="13860352" version="11"
-#: next_check: 2018-03-01
-	q4::inwork; 3859,4531 3898,4477
+	q4::inwork; 3867,4537 3905,4482
 EOF
      },
      { from  => undef, # 
