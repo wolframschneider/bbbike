@@ -8875,7 +8875,8 @@ Map data (&copy;) <a href="https://www.openstreetmap.org/copyright">OpenStreetMa
 <a href="/help.html#windowsphone">windows phone</a> -
 <a href="/tools.html">desktop</a> -
 <a href="//mc.bbbike.org/mc/">map compare</a> -
-<a href="//extract.bbbike.org/">osm extract service</a><br>
+<a href="//extract.bbbike.org/">osm extract service</a> -
+<a href="/support.html">@{[ M("commercial support") ]}</a><br>
 
 </div> <!-- copyright -->
 
