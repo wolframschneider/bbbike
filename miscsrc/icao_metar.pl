@@ -39,11 +39,13 @@ my $wettermeldung_compatible;
 my $near;
 my $o;
 my $retry_def;
+my $use_fallback;
 GetOptions("sitecode=s" => \$wanted_site_code,
 	   "wettermeldung!" => \$wettermeldung_compatible,
 	   "near=s" => \$near,
 	   "o|outfile=s" => \$o,
 	   "retry-def=s" => \$retry_def,
+	   "fallback!" => \$use_fallback,
 	  )
     or usage;
 
@@ -118,26 +120,9 @@ my $got_something = 0;
 for my $site_def (@sites) {
     my($site_code, $r) = @{$site_def}{qw(sitecode record)};
 
-    my $url = $metar_url_cb->($site_code);
-    my @use_retry_sleeps = @retry_sleeps;
-    my $resp;
-    while (1) {
-	$resp = $ua->get($url);
-	last if $resp->is_success;
-	if ($resp->code >= 500 && @use_retry_sleeps) {
-	    my $sleep = shift @use_retry_sleeps;
-	    warn "Fetching for $site_code failed with code " . $resp->code . ", but will retry in $sleep second(s)...\n";
-	    sleep $sleep;
-	} else {
-	    last;
-	}
-    }
-    if (!$resp->is_success) {
-	warn "Fetching for $site_code failed: " . $resp->status_line;
-	next;
-    }
+    my $content = $use_fallback ? get_metar_mesonet_fallback($site_code) : get_metar_standard($site_code);
+    next if !defined $content;
 
-    my $content = $resp->content;
     #$content =~ s/\n//g;
     $content =~ m/(\Q$site_code\E\s\d+Z.*)/g;
     my $metar = $1;
@@ -191,6 +176,63 @@ for my $site_def (@sites) {
 
 if (!$got_something && @retry_sleeps) {
     die "Did not get any data for " . join(", ", map { $_->{sitecode} } @sites) . "\n";
+}
+
+sub get_metar_standard {
+    my($site_code) = @_;
+
+    my $url = $metar_url_cb->($site_code);
+    my @use_retry_sleeps = @retry_sleeps;
+    my $resp;
+    while (1) {
+	$resp = $ua->get($url);
+	last if $resp->is_success;
+	if ($resp->code >= 500 && @use_retry_sleeps) {
+	    my $sleep = shift @use_retry_sleeps;
+	    warn "Fetching for $site_code failed with code " . $resp->code . ", but will retry in $sleep second(s)...\n";
+	    sleep $sleep;
+	} else {
+	    last;
+	}
+    }
+    if (!$resp->is_success) {
+	warn "Fetching for $site_code (url $url) failed: " . $resp->status_line;
+	return undef;
+    }
+
+    my $content = $resp->decoded_content;
+    $content;
+}
+
+sub get_metar_mesonet_fallback {
+    my($site_code) = @_;
+    require URI;
+    require URI::QueryParam;
+    my $u = URI->new("https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py");
+    my @tomorrow  = gmtime(time+86400);
+    my @yesterday = gmtime(time-86400);
+    $u->query_param(station     => $site_code);
+    $u->query_param(data        => 'metar');
+    $u->query_param(year1       => $yesterday[5]+1900);
+    $u->query_param(month1      => $yesterday[4]+1);
+    $u->query_param(day1        => $yesterday[3]);
+    $u->query_param(year2       => $tomorrow[5]+1900);
+    $u->query_param(month2      => $tomorrow[4]+1);
+    $u->query_param(day2        => $tomorrow[3]);
+    $u->query_param(tz          => 'Etc/UTC');
+    $u->query_param(format      => 'onlycomma');
+    $u->query_param(latlon      => 'no');
+    $u->query_param(direct      => 'no');
+    $u->query_param(report_type => '2');
+    my $url = $u->as_string;
+    my $resp = $ua->get($url);
+    if (!$resp->is_success) {
+	warn "Fetching for $site_code (url $url) failed: " . $resp->status_line;
+	return undef;
+    }
+    my $content = $resp->decoded_content;
+    my($last_line) = $content =~ m{\n[^,]+,[^,]+,(.*)\Z}; # also strip two first columns of csv
+    $last_line;
 }
 
 sub format_wettermeldung {
@@ -335,6 +377,10 @@ expected that 4xx errors are permanent.
 Additionally, if C<-retry-def> is specified and no site could be
 fetched, then the script will die. Otherwise there will be no output,
 but exit code will still be zero.
+
+=item C<-fallback>
+
+Use fallback URL (L<https://mesonet.agron.iastate.edu>).
 
 =back
 

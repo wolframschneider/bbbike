@@ -1902,7 +1902,7 @@ Beyschlagstr.	1 408,22184 184,22257
 Petriplatz -> Gertraudenstr.: Abbiegen verboten	3 10418,12016 10460,11979 10512,12039
 Schmohlstr.	1 13239,17269 13196,17223 13159,17196 13057,17120
 Kiehlufer	1 12913,9353 12901,9340 12895,9323
-Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14471,8046
+Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14484,8044
 Naumannstr.	1 7709,8777 7707,8915
 Schulenburgring	1 9030,8431 9028,8584 9011,8605
 Vereinssteg	1 8340,18984 8406,19081
@@ -1915,7 +1915,6 @@ Bärbel-Bohley-Ring	1 9917,15813 9910,15876 9747,15847 9744,15793
 Mittelstreifen	3nocross::ignrte 4867,690 4875,677 4948,562
 Osdorfer Str. -> Mercatorweg: Mittelstreifen	3::igndisp 4948,562 4875,677 4695,556
 Mercatorweg -> Osdorfer Str.: Mittelstreifen	3::igndisp 4695,556 4875,677 4867,690
-Rapsweg	1 21168,12794 21251,12767
 Siegfriedstr. - Rüdigerstr.: Abbiegen verboten	3 16826,12408 16820,12339 16918,12325
 Mittelstreifen	3nocross::ignrte 16127,11950 16207,11937 16317,11920
 Frankfurter Allee -> Alfredstr.: Mittelstreifen	3::igndisp 16127,11950 16207,11937 16246,12177
@@ -1931,3 +1930,5 @@ Bauhüttenweg: Anlieger frei	2:Anlieger 12703,2454 12774,2463 12835,2470 12948,24
 Mittelstreifen	3nocross::ignrte 5211,7783 5310,7839 5346,7860
 Varziner Str. -> Südwestkorso: Mittelstreifen	3::igndisp 5297,7861 5310,7839 5346,7860
 Südwestkorso -> Varziner Str.: Mittelstreifen	3::igndisp 5211,7783 5310,7839 5297,7861
+August-Bebel-Str. (Schulzendorf)	1 24343,-3387 24256,-3568
+Bornitzstr. [Wohngebiet]	1 16484,12871 16484,12825 16431,12825 16385,12825 16384,12874

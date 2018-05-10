@@ -850,7 +850,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="5"
 #: last_checked: 2018-04-30
-#: priority: #C
+#: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
 Scharnhorststr.: Poller	3 7877,14504 7804,14445 *
 Lindauer Allee: Mittelstreifen	3nocross 5635,18776 5713,18777 5791,18778
@@ -1183,8 +1183,8 @@ Kiehlufer	1 12913,9353 12901,9340 12895,9323
 # 
 #: osm_watch: way id="454034985" version="4"
 #: next_check_id: DIESEL-2015
-#: last_checked: 2018-04-06
-Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14471,8046
+#: last_checked: 2018-05-04
+Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14484,8044
 # 
 # REMOVED --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpartner/fahrrat/2016-07-28-prot-fahrratsitzung3.pdf --- #: XXX evtl wird die Straße für Radfahrer geöffnet --- #: osm_watch: way id="12307305" version="4" --- #: last_checked: 2017-08-22 --- #: check_frequency: 60d
 Naumannstr.	1 7709,8777 7707,8915
@@ -1196,10 +1196,7 @@ Hertelstr.	1 4891,6907 4787,6907
 Suermondtstr.: Straßenbahntrasse	3nocross 16653,16150 16753,16111 16880,16064
 Bärbel-Bohley-Ring	1 9917,15813 9910,15876 9747,15847 9744,15793
 Osdorfer Str.: Mittelstreifen	3nocross 4867,690 4875,677 4948,562
-#: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7491
-#: by: http://www.berliner-woche.de/biesdorf/verkehr/verkehrsberuhigung-im-getreideviertel-bezirk-kappt-zufahrt-zum-blumberger-damm-ueber-rapsweg-d140516.html
-#: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7561
-Rapsweg	1 21168,12794 21251,12767
+# REMOVED (wurde wieder abgeordnet) --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7491 --- #: by: http://www.berliner-woche.de/biesdorf/verkehr/verkehrsberuhigung-im-getreideviertel-bezirk-kappt-zufahrt-zum-blumberger-damm-ueber-rapsweg-d140516.html --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7561 --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/_assets/ba-beschluesse-2018/bvv-vorlage_0309_v_verkehrsregelung_rapsweg.pdf --- Rapsweg	1 21168,12794 21251,12767
 Siegfriedstr. - Rüdigerstr.: Abbiegen verboten	3 16826,12408 16820,12339 16918,12325
 Frankfurter Allee - Wohngebiet: Mittelstreifen	3nocross 16127,11950 16207,11937 16317,11920
 Wadzeckstr.	1 11295,13224 11315,13210 11354,13184 11369,13174
@@ -1207,3 +1204,5 @@ Zimmerstr.	1 -13637,-1164 -13876,-1226
 Alte Köpenicker Allee: Schranke bei der Einfahrt	2 20316,7637 20348,7634 20459,7445 20501,7472 20540,7532
 Bauhüttenweg: Anlieger frei	2:Anlieger 12703,2454 12774,2463 12835,2470 12948,2484 13064,2499 13180,2514 13238,2521 13302,2554 13348,2588
 Südwestkorso: Mittelstreifen	3nocross 5211,7783 5310,7839 5346,7860
+August-Bebel-Str. (Schulzendorf)	1 24343,-3387 24256,-3568
+Bornitzstr. [Wohngebiet]	1 16484,12871 16484,12825 16431,12825 16385,12825 16384,12874

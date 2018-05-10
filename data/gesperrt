@@ -92,7 +92,8 @@ Eichborndamm	1 4223,18982 4211,18882 4163,18676 4102,18298 4059,18107 4016,17918
 Spreestr.	1 17900,6072 17939,5968 17877,5860 17810,5736 17807,5730 17782,5698
 Buckower Chaussee	1 8742,475 8972,498 9002,471
 Archibaldweg	1s 15674,10851 15870,10938
-Nˆldnerplatz	1 15870,10938 15903,10906 16049,10844
+Nˆldnerplatz	1s 15870,10938 15903,10906
+Nˆldnerplatz	1 15903,10906 16049,10844
 Adlergestell (extra Radweg)	2 21998,1239 21541,1739 21475,1804
 Dorfplatz	1 21074,-475 20986,-529 20890,-546 20827,-537 20999,-489 21074,-475
 B96a (Kfz-Straﬂe)	2 20272,-501 20585,-272 20781,-82 21115,271 21286,449 21613,923 21656,989 21829,1351 21862,1532 21819,1595 21541,1739
@@ -833,6 +834,8 @@ Halenseestr.	2::igndisp 2086,10552 1961,10646 1928,10728
 (Suermondtstr. - Konrad-Wolf-Str.)	1s 16842,15932 16799,15974 16719,16005 16753,16111
 Alexanderufer - CharitÈ: Tor dauerhaft gesperrt	2 8362,13466 8369,13465 8377,13463
 Falkoniergasse: durch Tore abgesperrt	2 9939,12174 9909,12261
+Business Park BBI: dauerhaft gesperrt, Firmengel‰nde	2 20038,-1474 20394,-1397
+Ferdinandstr.	1s 5398,2422 5417,2383
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten M‰rkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
@@ -992,6 +995,8 @@ Waldstr. [Wohngebiet] (Eichwalde)	1 25461,-2744 25562,-2902 25606,-2880
 Humboldtstr. (Eichwalde)	1 25290,-3350 25186,-3196
 Paul-Merker-Str.	1 25464,-3027 25567,-3189
 Wilhelm-Busch-Str.	1 25206,-4014 25119,-4096
+Miersdorf	1 24955,-6980 25077,-6942 25186,-6969
+Miersdorf	1 25186,-6969 25092,-6993 24955,-6980
 Mittelstreifen nicht ¸berquerbar	3nocross::ignrte -974,128015 -724,127995 6,127935 298,127911
 B104: Neubrandenburg -> Feldstr.: Mittelstreifen nicht ¸berquerbar	3::igndisp -974,128015 -724,127995 -719,128043
 Feldstr. -> Pasewalk: Mittelstreifen nicht ¸berquerbar	3::igndisp -719,128043 -724,127995 6,127935
@@ -1797,8 +1802,8 @@ Sachsendamm -> Suadicanistr.: unbequem passierbarer Mittelstreifen	3::igndisp 76
 Suadicanistr. -> Sachsendamm: unbequem passierbarer Mittelstreifen	3::igndisp 7858,7506 7858,7462 7938,7406
 Mittelstreifen	3nocross::ignrte 12598,8390 12582,8408 12562,8432 12540,8458
 Boddinstr. -> Karl-Marx-Str.: Mittelstreifen	3::igndisp 12368,8356 12582,8408 12562,8432
-unbequemes ‹berqueren wegen parkender Autos	3nocross::ignrte 12830,8031 12865,7923 12898,7832
-Karl-Marx-Str. -> Saltykowstr.: unbequemes ‹berqueren wegen parkender Autos	3::igndisp 12898,7832 12865,7923 12726,7887
+unbequemes ‹berqueren wegen parkender Autos	3nocross::ignrte 12846,7981 12865,7923 12892,7850
+Karl-Marx-Str. -> Saltykowstr.: unbequemes ‹berqueren wegen parkender Autos	3::igndisp 12892,7850 12865,7923 12726,7887
 Mittelstreifen (nicht unpassierbar, aber unbequem)	3nocross::ignrte 11632,8302 11767,8330 11898,8362
 Flughafenstr. -> Weisestr.: Mittelstreifen (nicht unpassierbar, aber unbequem)	3::igndisp 11898,8362 11767,8330 11770,8292
 Weisestr. -> Flughafenstr.: Mittelstreifen (nicht unpassierbar, aber unbequem)	3::igndisp 11770,8292 11767,8330 11632,8302
@@ -2260,6 +2265,8 @@ abgeschlossenes Tor	3 15313,15393 15835,15092 15867,15073
 abgeschlossenes Tor	3 15867,15073 15835,15092 15313,15393
 abgeschlossenes Tor	3 10014,1123 10000,1131 9906,1166
 abgeschlossenes Tor	3 9906,1166 10000,1131 10014,1123
+abgeschlossenes Tor	3 14563,8243 14688,8355 14700,8368
+abgeschlossenes Tor	3 14700,8368 14688,8355 14563,8243
 tragen (3x12 Stufen)	0:35:-212 9005,912
 tragen (2x13 Stufen)	0:30:-122 9047,948
 tragen (28 Stufen)	0:30:-260 6138,12877
@@ -2499,8 +2506,8 @@ tragen (mehrere Treppen mit insgesamt 45 Stufen und Kinderwagenrampe)	0:90:-44 3
 tragen (Treppe, 18 Stufen)	0:25:-66 25902,-6006
 tragen (Treppe, 19 Stufen)	0:25:-194 25928,-5990
 tragen (Treppe)	0:120:-184 -14199,-707
-Dr‰ngelgitter	BNP:3:-14:trailer=10 12909,9085
-Dr‰ngelgitter	BNP:3:-28:trailer=10 12862,9273
+Dr‰ngelgitter	BNP:3:-175:trailer=10 16433,12626
+Dr‰ngelgitter	BNP:3:2:trailer=10 16428,12741
 Dr‰ngelgitter	BNP:3:4:trailer=10 7916,17576
 Dr‰ngelgitter	BNP:3:-2:trailer=10 22237,6211
 weites Dr‰ngelgitter	BNP:2:33:trailer=7 5628,23977
@@ -2677,7 +2684,7 @@ Tor	BNP:1:72:trailer=3 10476,14741
 Schranke, lichte Breite 120cm	BNP:1:-256:trailer=3 -7685,15092
 Poller, lichte Breite 100cm	BNP:1:-255:trailer=5 -7109,15286
 weites Dr‰ngelgitter	BNP:1:-237:trailer=5 -3437,14029
-Dr‰ngelgitter	BNP:3:-79:trailer=10 7928,10094
+Dr‰ngelgitter	BNP:2:-79:trailer=8 7928,10094
 enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark, falls Tor gesperrt ist	BNP:20:-19:trailer=no 10583,15208
 Tor zum Friedrich-Ludwig-Jahn-Sportpark, lichte Breite 85cm	BNP:5:-108:trailer=no 10781,15438
 Metallstange	BNP:3:-72:trailer=10 -5070,11199
@@ -2696,10 +2703,10 @@ Dr‰ngelgitter	BNP:3:2:trailer=10 -7598,12953
 Dr‰ngelgitter und Stufe	BNP:5:-26:trailer=15 -2704,2431
 Dr‰ngelgitter	BNP:3:-17:trailer=10 -2675,2336
 Dr‰ngelgitter	BNP:3:-245:trailer=10 13604,21825
-Dr‰ngelgitter und Tor	BNP:7:74:trailer=15 20783,-1266
-Dr‰ngelgitter und Tor	BNP:7:74:trailer=15 20396,-1370
+Dr‰ngelgitter und Tor	BNP:7:73:trailer=15 20789,-1275
+Dr‰ngelgitter und Tor	BNP:7:80:trailer=15 20396,-1370
 Dr‰ngelgitter und Tor	BNP:7:82:trailer=15 20373,-1375
-Dr‰ngelgitter und Tor	BNP:7:77:trailer=15 20046,-1449
+Dr‰ngelgitter und Tor	BNP:7:80:trailer=15 20046,-1449
 Dr‰ngelgitter und Tor	BNP:7:70:trailer=15 20018,-1456
 Dr‰ngelgitter und Tor	BNP:7:82:trailer=15 19727,-1526
 Dr‰ngelgitter und Tor	BNP:7:-262:trailer=15 19706,-1528
@@ -2937,6 +2944,14 @@ Dr‰ngelgitter	BNP:3:0:trailer=10 3783,-2079
 Dr‰ngelgitter	BNP:3:50:trailer=10 21618,5699
 Dr‰ngelgitter	BNP:3:85:trailer=10 22070,5876
 Dr‰ngelgitter	BNP:3:78:trailer=10 22097,5879
+Dr‰ngelgitter	BNP:3:26:trailer=10 24454,-14845
+Dr‰ngelgitter	BNP:3:36:trailer=10 24602,-14550
+Dr‰ngelgitter	BNP:3:21:trailer=10 24614,-14534
+Dr‰ngelgitter	BNP:3:11:trailer=10 24829,-13762
+Dr‰ngelgitter	BNP:3:-192:trailer=10 25307,-10467
+Dr‰ngelgitter	BNP:3:-192:trailer=10 25081,-9433
+Fanny-Zobel-Str.: wegen Bauarbeiten gesperrt, vielleicht sogar dauerhaft eingezogen	2::inwork 13975,10187 14049,10164
+Koppenstr.: Bauarbeiten, Fahrbahn Richtung R¸dersdorfer Str. gesperrt	1s:inwork 12573,12227 12596,12472
 Charlotte-von-Mahlsdorf-Ring: Baustraﬂe	2::inwork 24649,10710 24728,10722 24739,10645
 Hermineweg: Baustraﬂe, gesperrt	2::inwork 24831,10966 24906,10965
 Karlinekenweg: Bauarbeiten, gesperrt	2::inwork 11359,20297 11405,20196
@@ -2948,7 +2963,6 @@ Unterf¸hrung S-Bhf. Karlshorst: wegen Bauarbeiten gesperrt	2::inwork 18949,8437 
 S-Bahn-Unterf¸hrung: zurzeit gesperrt, hier wird in Zukunft ein Steg verlaufen	2::inwork 4117,22722 4176,22764
 Zum Groﬂen Herzberg (Potsdam-Golm): Straﬂe wird noch gebaut	2::inwork -18017,333 -18026,357 -18049,424
 Wartenbergstr.	1s:inwork 15423,11667 15337,11639 15328,11636 15300,11584
-Anni-Frid-Weg: Baustelle, gesperrt	2::inwork 17227,15054 17262,15056 17317,15059 17345,15061
 Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12677,-1536 -12685,-1449
 Friedenshorster Str.: Einbahnstraﬂe wegen Bauarbeiten	1s:inwork 18296,10027 18312,9985 18301,9946
 Friedenshorster Str.: Einbahnstraﬂe wegen Bauarbeiten	1s:inwork 18301,9946 18266,9853
@@ -2957,7 +2971,8 @@ Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
 Im Lichtenhain: neue Straﬂe, zurzeit Bauarbeiten; Qualit‰t, genaue Lage?	2::inwork 16497,10685 16462,10571
 Zufahrt Parkhaus: Abrissarbeiten, Straﬂe komplett gesperrt	2::inwork 8367,10745 8350,10662 8348,10636 8335,10518 8350,10499 8384,10507
 Merlitzstr.: Bauarbeiten, Straﬂe komplett gesperrt	2::inwork 19661,3421 19524,3286
-Mauerstr.: Bauarbeiten, Einbahnstraﬂe	1s:inwork 9108,11961 9138,11872
+Mauerstr. und J‰gerstr.: Bauarbeiten, Einbahnstraﬂe	1s:inwork 9195,11972 9108,11961 9076,12054
+Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:inwork 9076,12054 9064,12156
 (entlang der Erpe): Bauarbeiten der DB	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
 (Marseillestr. - Straﬂe 160): nur ein provisorischer Steg	2 12495,21397 12507,21391 12547,21372
 Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -6556,6663 -6661,6743
@@ -2990,8 +3005,6 @@ Clara-von-Simson-Str.: noch gesperrt	2 7652,14257 7757,14318 7802,14250 7697,141
 Weg nach Tiefwerder: kein Zugang wegen der Ersatzbr¸cke	2::inwork -3179,11763 -3217,11570
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 Rummelsburger Platz: zur H‰lfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
-Frauenauer Str.: Straﬂe fertig, aber Zufahrt von der Zwieseler Str. noch gesperrt	2::inwork 19663,9757 19858,9784
-Kirchdorfer Str.: Straﬂe fertig, aber Verbindung zur Teisnacher Str. noch gesperrt	2::inwork 19842,9895 19858,9784 19871,9680
 BBI-Park: wegen Bauarbeiten gesperrt	2::inwork 20038,-1474 19717,-1549
 Sterndamm: Eisenbahnunterf¸hrung in Richtung Groﬂ-Berliner Damm/S¸dostallee gesperrt	1::inwork 17886,5587 17736,5441
 Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,6895 14153,6795

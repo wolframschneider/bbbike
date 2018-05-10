@@ -1540,7 +1540,7 @@ EOF
        text  => 'K 6161; (Ernst-Thälmann-Str.); OD Schulzendorf, Kanal- und Straßenbau Vollsperrung 30.06.2005-30.11.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 25173,-3957 25150,-3949 25052,-3980 24933,-4017 24797,-4060 23408,-4513
+	q4 25173,-3957 25150,-3949 25052,-3980 24933,-4017 24797,-4060 24612,-4119 24200,-4252 23387,-4518
 EOF
      },
      { from  => 1107475200, # 2005-02-04 01:00
@@ -1627,7 +1627,7 @@ EOF
        text  => 'B 179; (Berliner Str.); OL Königs Wusterhausen, zw. Schloßplatz u. Funkerberg Kanalarbeiten halbseitig gesperrt (welche Richtung?); Einbahnstraße 01.03.2005-30.09.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4; 25859,-11559 25640,-11357
+	q4; 25859,-11559 25632,-11361
 EOF
      },
      { from  => 1109365909, # 2005-02-25 22:11
@@ -2388,7 +2388,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4 25240,-29746 25412,-29762
-	q4 25412,-29762 25541,-29875
+	q4 25412,-29762 25571,-29893
 EOF
      },
      { from  => 1151745684, # 2006-07-01 11:21
@@ -2933,7 +2933,7 @@ EOF
        text  => 'L 39; (Kolberg-Friedersdorf); OD Blossin, Haupstr. Straßenbauarbeiten Vollsperrung 04.10.2005-21.10.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 37885,-16100 37888,-15635
+	q4 37885,-16100 37886,-15713
 EOF
      },
      { from  => 1129068000, # 2005-10-12 00:00
@@ -3772,7 +3772,7 @@ EOF
        text  => 'B 179 Berliner Str. OL Königs Wusterhausen, zw. Schloßplatz u. Gartenweg Havarie SW-Schacht Vollsperrung 15.02.2006-03.03.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 25859,-11559 25640,-11357
+	q4 25859,-11559 25632,-11361
 EOF
      },
      { from  => undef, # 
@@ -6325,7 +6325,7 @@ EOF
        text  => 'L 040 Chausseestraße OD Diedersdorf, zw. Bhf.- u. Mahlower Str. Grundhafter Ausbau Vollsperrung 04.10.2006-01.12.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 7558,-7093 7981,-7165 9170,-7708
+	q4::inwork 7558,-7082 7701,-7141 7901,-7146 7967,-7152 8310,-7300 8373,-7328 9170,-7708
 EOF
      },
      { from  => 1160863200, # 2006-10-15 00:00
@@ -6373,7 +6373,7 @@ EOF
        text  => 'Karl-Marx-Straße, Straßenfest zwischen Flughafenstr. und Thomasstr, gesperrt, Dauer: 14.10.2006 05:00 Uhr bis 16.10.2006 00:00 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 12500,8504 12540,8458 12562,8432 12582,8408 12598,8390 12639,8344 12689,8289 12714,8249 12753,8187 12794,8103 12830,8031 12865,7923 12898,7832 12914,7785 12969,7610
+	2::temp 12500,8504 12540,8458 12562,8432 12582,8408 12598,8390 12639,8344 12689,8289 12714,8249 12753,8187 12794,8103 12830,8031 12846,7981 12865,7923 12892,7850 12898,7832 12914,7785 12969,7610
 EOF
      },
      { from  => 1161032658, # 2006-10-16 23:04
@@ -7369,7 +7369,7 @@ EOF
        text  => 'L 742 Klein Köris-Teupitz Bahnübergang in der OD Groß Köris Gleisumbauarbeiten Vollsperrung 09.03.2007-12.03.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 28494,-27010 27995,-27157 27824,-27205
+	2::inwork 28494,-27010 27995,-27157 27709,-27243
 EOF
      },
      { from  => 1173913200, # 2007-03-15 00:00
@@ -7740,7 +7740,7 @@ EOF
        text  => 'L 040 Blankenfelde-Großbeeren OD Diedersdorf, Mahlower Str.bis Kreisverkehr grundhafter Straßenausbau Vollsperrung 26.09.2007-09.11.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	2::inwork 7981,-7165 7558,-7093
+	2::inwork 7967,-7152 7901,-7146 7701,-7141 7558,-7082
 EOF
      },
      { from  => 1176242400, # 2007-04-11 00:00
@@ -8339,7 +8339,7 @@ EOF
        text  => 'L 040 Blankenfelde-Großbeeren OD Diedersdorf grundhafter Straßenausbau Vollsperrung 11.07.2006-20.09.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 7981,-7165 7558,-7093
+	q4::inwork 7967,-7152 7901,-7146 7701,-7141 7558,-7082
 EOF
      },
      { from  => 1180130400, # 2007-05-26 00:00
@@ -8753,7 +8753,7 @@ EOF
        text  => 'L 074 Am Markt OD Teupitz 700-Jahr-Feier Vollsperrung 31.08.2007-03.09.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 25190,-30385 25240,-29746 25412,-29762 25541,-29875
+	q4::inwork 25190,-30385 25240,-29746 25412,-29762 25571,-29893
 EOF
      },
      { from  => 1339797751, # 2012-06-16 00:02
@@ -9023,7 +9023,7 @@ EOF
        text  => 'L 030 Puschkinstr. OL Königs Wusterhausen Open-Air Konzert Vollsperrung 07.07.2007-08.07.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 25859,-11559 26177,-11648
+	2::temp 25859,-11559 25939,-11559 26177,-11648
 EOF
      },
      { from  => 1184450400, # 2007-07-15 00:00
@@ -11129,7 +11129,7 @@ EOF
        text  => 'K 6160 Friedensstr. Bahnübergang in der OD Eichwalde Gleisbauarbeiten Vollsperrung 27.03.2008-29.03.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 25187,-8934 25140,-9125
+	2::inwork 25192,-8936 25137,-9131
 EOF
      },
      { from  => 1207087200, # 2008-04-02 00:00
@@ -11309,7 +11309,7 @@ EOF
        text  => 'L 040 Potsdamer Damm OD Blankenfelde, zw. H.-von-Hülsen-Weg und Dorfstr. Deckeneinbau Vollsperrung 04.04.2008-05.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 9828,-8106 10115,-8276
+	q4::inwork 9994,-8220 10115,-8276
 EOF
      },
      { from  => 1206914400, # 2008-03-31 00:00
@@ -11382,7 +11382,7 @@ EOF
        text  => 'L 040 Potsdamer Damm OD Blankenfelde, am OA Ri. Diedersdorf Deckeneinbau Vollsperrung 12.04.2008-12.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 10115,-8276 9828,-8106
+	q4::inwork; 10115,-8276 9994,-8220
 EOF
      },
      { from  => 1208462457, # 2008-04-17 22:00
@@ -11976,7 +11976,7 @@ EOF
        text  => 'K 6160 Chausseestr. OD Wildau, zw. KVK und Am Kleingewerbegebiet Bau Kreisverkehr halbseitig gesperrt; Einbahnstraße 14.07.2008-22.08.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 25140,-9125 24478,-9578
+	q4::inwork; 25137,-9131 25096,-9239 24663,-9498 24396,-9665
 EOF
      },
      { from  => 1216332000, # 2008-07-18 00:00
@@ -12904,7 +12904,7 @@ EOF
        text  => 'L 074 OL Halbe Bahnübergang Gleisbauarbeiten Vollsperrung 09.10.2008-15.10.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 31593,-32938 31657,-32860 31700,-32810
+	2::inwork 31572,-32912 31605,-32901 31645,-32840 31668,-32814
 EOF
      },
      { from  => 1222552800, # 2008-09-28 00:00
@@ -12986,7 +12986,7 @@ EOF
        text  => 'L 030 Mittenwalde - Königs Wusterhausen zw. Schenkendorf und Königs Wusterhausen Straßenbauarbeiten Vollsperrung 22.10.2008-23.10.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 24843,-13725 25098,-13447 25148,-13393 25203,-13334
+	2::inwork 24843,-13725 24950,-13607 25098,-13447 25148,-13393 25203,-13334
 EOF
      },
      { from  => 1224367200, # 2008-10-19 00:00
@@ -13351,7 +13351,7 @@ EOF
        text  => 'L 401 Karl-Marx-Str., Friedrich-Engels-Str. OD Wildau, zw. Freiheitsstr. und Westkorso grundhafter Straßenneubau Wintersicherung 19.12.2008-31.01.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 26609,-7136 26700,-7334 26790,-7918 26786,-7968 26775,-8117 26749,-8475
+	q4::inwork 26609,-7136 26700,-7334 26790,-7918 26786,-7968 26775,-8117 26749,-8481
 EOF
      },
      { from  => 1231196400, # 2009-01-06 00:00
@@ -13978,7 +13978,7 @@ EOF
        text  => 'L 030 Gerichtsstr. (Puschkinstr.) OL Königs Wusterhausen, zw. Brückenstr. und Kirchplatz Kanal- und Straßenbau halbseitig gesperrt; Einbahnstraße 28.04.2009-28.04.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 25859,-11559 26177,-11648
+	q4::inwork 25859,-11559 25939,-11559 26177,-11648
 EOF
      },
      { from  => 1240783200, # 2009-04-27 00:00
@@ -16056,7 +16056,7 @@ EOF
        text  => 'L 030 Gerichtsstr. OL Königs Wusterhausen, zw. Schloßplatz u. Brückenstr. Schlossfest Vollsperrung 05.09.2009-05.09.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::temp 25859,-11559 26177,-11648
+	q4::temp 25859,-11559 25939,-11559 26177,-11648
 EOF
      },
      { from  => 1252188000, # 2009-09-06 00:00
@@ -18981,7 +18981,7 @@ EOF
        type  => 'handicap',
        source_id => 'LS/S-SG33-W/11/013',
        data  => <<EOF,
-	q4::inwork 23962,-30831 24550,-30862
+	q4::inwork 23962,-30831 24102,-30864 24203,-30854 24324,-30878 24407,-30857 24550,-30862
 EOF
      },
      { from  => 1296591853, # 2011-02-01 21:24
@@ -20734,7 +20734,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/S-SG33-W/11/268',
        data  => <<EOF,
-	2::inwork 24843,-13725 25098,-13447 25148,-13393
+	2::inwork 24843,-13725 24950,-13607 25098,-13447 25148,-13393
 EOF
      },
      { from  => 1341730800, # 2012-07-08 09:00
@@ -21586,15 +21586,15 @@ EOF
 	2::temp 13886,10939 13856,10864
 EOF
      },
-     { from  => $isodate2epoch->("2017-06-30 20:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-07-02 02:00:00"), 
-       text  => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 30.06.2017 bis 01.07.2017',
+     { from  => $isodate2epoch->("2018-06-01 20:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-06-03 02:00:00"), 
+       text  => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 02.06.2018 und 03.06.2018',
        periodic => 1,
-       recurrences => [['yearly', days => 3, months => 6]], # kann Anfang Juni oder Anfang Juli oder Ende August passieren
+       recurrences => [['yearly', days => 1, months => 6]], # kann Anfang Juni oder Anfang Juli oder Ende August passieren
        type  => 'gesperrt',
-       source_id => 'https://www.facebook.com/events/1813020918951796/',
+       source_id => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
        data  => <<EOF,
-#: tempex: 20170630T2000-20170701T2359
+# REMOVED --- #: tempex: 20170630T2000-20170701T2359
 	2::temp 14161,11930 14285,12190
 EOF
      },
@@ -21654,17 +21654,17 @@ EOF
 	2::temp 3976,11869 3807,11859
 EOF
      },
-     { from  => $isodate2epoch->("2017-06-15 04:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2017-06-19 04:00:00"), #
+     { from  => $isodate2epoch->("2018-06-08 04:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2018-06-11 04:00:00"), #
        periodic => 1,
        recurrences => [['yearly', days => 2, months => 6]],
-       text  => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 16.06.2017 bis 19.06.2017 früh',
+       text  => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 09.06.2018 bis 11.06.2018 früh',
        type  => 'handicap',
        source_id => 'IM_025248',
        data  => <<EOF,
 #: by: http://www.die-classic-days-berlin.de/programm-2/
 #: note: kann im Juni oder Juli stattfinden
-#: tempex: 20170616T0400-20170619T0400
+# REMOVED --- #: tempex: 20170616T0400-20170619T0400
 	q4::temp 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435
 EOF
      },
@@ -23755,6 +23755,7 @@ EOF
 #: note: am Mo, den 2017-12-04 gegen 18:45: geschlossen
 #: note: am Mi, den 2018-01-24 gegen 18:45: offen
 #: note: am Mo, den 2018-02-26 gegen 18:50: offen
+#: note: am Fr, den 2018-04-04 gegen 18:40: offen
 #: tempex: volatile vvv
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
@@ -25111,7 +25112,7 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef,
+       until => 1525455004, # -> dauerhaft nach gesperrt_orig gewandert # undef,
        text  => 'Mergenthalerring/Kiefholzstr.: Tor kann versperrt sein, auch tagsüber',
        recurring => 1,
        data  => <<EOF,
@@ -26032,14 +26033,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1525802518, # Bauarbeiten beendet --- undef, # XXX
        text  => 'Akazienstr.: Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: osm_watch: way id="548612558" version="1"
-#: last_checked: 2018-04-30
-#: check_frequency: 14d
+# REMOVED --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet? --- #: osm_watch: way id="548612558" version="1" --- #: last_checked: 2018-04-30 -- #: check_frequency: 14d
 # REMOVED ---	q3::inwork; 7201,8870 7101,9027
 # RE;OVED ---	q3::inwork; 7101,9027 7035,9161
 	q4::inwork; 7035,9161 7012,9222 7001,9291
@@ -26543,7 +26541,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-04-03
+#: last_checked: 2018-05-04
 	2::inwork 14652,10201 14569,10055
 EOF
      },
@@ -26689,7 +26687,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1525892281, # undef, # XXX
        text  => 'Uferweg Plötzensee: wegen Unterspülung gesperrt, Umfahrung über enge Pfade möglich',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.643712.php',
@@ -26701,12 +26699,13 @@ EOF
      },
      { from  => 1523311200, # 2018-04-10 00:00
        until => undef, # XXX
-       text  => 'Wiesenweg: wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
+       text  => 'Wiesenweg: kann insbesondere während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann ist die Durchfahrt gesperrt?
+#: note: am 2018-05-08 gegen 19:15 provisorisch offen
 #: source_id: 2147342009
-#: last_checked: 2018-05-02
+#: last_checked: 2018-05-08
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 EOF
@@ -26739,7 +26738,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-04-04 vvv
+#: last_checked: 2018-05-09 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -26878,7 +26877,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # XXX_prog: eigentlich q3-
-#: last_checked: 2018-04-30
+#: last_checked: 2018-05-08
 	q3::inwork 7136,9223 7012,9222
 EOF
      },
@@ -26918,15 +26917,11 @@ EOF
 EOF
      },
      { from  => 1525125600, # 2018-05-01 00:00
-       until => 1530309599, # 2018-06-29 23:59
+       until => 1525373471, # -> handicap_s-orig # 1530309599, # 2018-06-29 23:59
        text  => 'Rosenthaler Weg: Sperrung wegen Bauarbeiten, evtl. sind auch Radfahrer betroffen, voraussichtlich vom 2. Mai 2018 bis 29. Juni 2018',
        type  => 'gesperrt',
        source_id => 'http://www.berliner-woche.de/blankenfelde/verkehr/rosenthaler-weg-voll-gesperrt-wasserbetriebe-verlegen-rohre-d144397.html',
        data  => <<EOF,
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.386693.php
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/uebersichtsplan-umleitung_vollsperrung.pdf
-#: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.692745.php
-#: by: http://www.berliner-woche.de/pankow/verkehr/sperrung-rosenthaler-weg-umleitung-vom-2-mai-bis-zum-25-juni-d159605.html
 # REMOVED (ja, sieht so aus) --- #: XXX prüfen, ob der Starttermin eingehalten wird --- #: next_check: 2018-05-02 --- #: priority: #A
 	2::inwork 10228,21940 10312,21969 10377,21991 10436,22010 10493,22029 10554,22050 10613,22070 10673,22090 10709,22102 10769,22122 10828,22142 10892,22165 10935,22174 10999,22195
 EOF
@@ -26949,7 +26944,7 @@ EOF
        text  => 'Mentelinstr.: Bauarbeiten zwischen Nalepastr. und Otto-Krüger-Zeile, Fahrbahn gesperrt, Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-03-25
+#: last_checked: 2018-05-06
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? Wird sich die Qualität der Fahrbahn nach den Bauarbeiten verbessern?
 	q4::inwork 17456,7132 17352,7051
 EOF
@@ -27007,12 +27002,13 @@ EOF
 EOF
      },
      { from  => 1522864912, # 2018-04-04 20:01
-       until => 1525449600, # 2018-05-04 18:00
-       text  => 'Wilhelmstr. und Behrenstr.: Sperrung Richtung Norden zwischen Französische Str. und Behrenstr. sowie Richtung Osten zwischen Wilhelmstr. und Mauerstr., bis 4. Mai 2018',
+       until => $isodate2epoch->("2018-05-15 20:00:00"), # 1525449600, # 2018-05-04 18:00
+       text  => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Mauerstr., bis Mitte Mai 2018',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147342390
-	q4::inwork; 8901,12008 8861,12125 9054,12154
+# REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
+	q4::inwork; 8861,12125 9054,12154
 EOF
      },
      { from  => 1523631600, # 2018-04-13 17:00
@@ -27094,8 +27090,36 @@ EOF
        text  => 'Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2018-04-29
+#: last_checked: 2018-05-06
 	2::inwork 21696,5053 21600,5221 21512,5404 21487,5425
+EOF
+     },
+     { from  => undef, # 
+       until => undef, #
+       text  => 'Treptower Park: Radfahren im Treptower Park offiziell verboten',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: http://www.berliner-woche.de/alt-treptow/verkehr/radelverbot-im-park-bleibt-d122937.html
+#: by: http://www.berliner-woche.de/alt-treptow/bauen/der-vater-des-rosengartens-d156358.html
+	q4 15778,8990 15623,9028 15527,9096 15513,9144 15453,9259 15432,9322 15304,9464 15186,9550 15052,9584 14909,9649 14889,9660 14807,9704 14635,9786
+	q4 14635,9786 14500,9863 14467,9887
+	q4 14467,9887 14455,9892 14448,9922
+	q4 14488,9848 14500,9863
+	q4 14361,9772 14436,9784 14460,9814 14488,9848
+	q4 14404,9847 14466,9861 14488,9848
+	q4 14318,9688 14371,9726 14443,9731
+	q4 14361,9772 14443,9731 14495,9710 14577,9641 14627,9609 14695,9587 14792,9599 14867,9573 14918,9545 15025,9461 15133,9396 15184,9373 15268,9374 15325,9354 15453,9259
+	q4 15184,9373 15249,9337
+	q4 14577,9641 14604,9674 14645,9710 14697,9726 14853,9655 14909,9649
+	q4 14909,9649 14867,9573 14837,9517 14809,9466
+	q4 15623,9028 15633,9007 15630,8979 15623,8949 15617,8924 15608,8882 15591,8848
+	q4 15680,8914 15617,8924
+	q4 15630,8979 15658,9007
+	q4 14316,9542 14384,9565 14478,9545 14507,9529 14588,9473 14635,9441 14719,9419 14797,9396 14824,9390 14889,9381
+	q4 14475,9199 14531,9244 14655,9311 14673,9353 14669,9389 14635,9441
+	q4 14719,9419 14774,9437 14809,9466
+	q4 14588,9473 14556,9581
+	q4 14531,9244 14485,9271 14398,9373
 EOF
      },
     );

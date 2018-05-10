@@ -3397,29 +3397,29 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
+       undef,
+       undef,
        {
-         'data' => '#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2018
-# REMOVED (müsste korrigiert werden) --- #: tempex: YYYY0429-YYYY0501
-	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+         'data' => '# REMOVED --- #: tempex: 20170630T2000-20170701T2359
+	2::temp 14161,11930 14285,12190
 ',
-         'from' => 1525298400,
-         'id' => 2431,
+         'from' => 1527876000,
+         'id' => 2433,
          'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              29,
+                              1,
                               'months',
-                              4
+                              6
                             ]
                           ],
-         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (04.05.2018 bis 06.05.2018)',
-         'type' => 'handicap',
-         'until' => 1525643999
+         'source_id' => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
+         'text' => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 02.06.2018 und 03.06.2018',
+         'type' => 'gesperrt',
+         'until' => 1527984000
        },
-       undef,
-       undef,
        undef,
        undef,
        {
@@ -3450,7 +3450,29 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.die-classic-days-berlin.de/programm-2/
+#: note: kann im Juni oder Juli stattfinden
+# REMOVED --- #: tempex: 20170616T0400-20170619T0400
+	q4::temp 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435
+',
+         'from' => 1528423200,
+         'id' => 2439,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              2,
+                              'months',
+                              6
+                            ]
+                          ],
+         'source_id' => 'IM_025248',
+         'text' => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 09.06.2018 bis 11.06.2018 früh',
+         'type' => 'handicap',
+         'until' => 1528682400
+       },
        undef,
        undef,
        undef,
@@ -3810,6 +3832,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: am Mo, den 2017-12-04 gegen 18:45: geschlossen
 #: note: am Mi, den 2018-01-24 gegen 18:45: offen
 #: note: am Mo, den 2018-02-26 gegen 18:50: offen
+#: note: am Fr, den 2018-04-04 gegen 18:40: offen
 #: tempex: volatile vvv
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
@@ -4043,19 +4066,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
-#: tempex: volatile vvv
-	3::night 14700,8368 14688,8355 14563,8243
-	3::night 14563,8243 14688,8355 14700,8368
-#: tempex ^^^
-',
-         'from' => undef,
-         'id' => 2775,
-         'recurring' => 1,
-         'text' => 'Mergenthalerring/Kiefholzstr.: Tor kann versperrt sein, auch tagsüber',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4215,21 +4226,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: osm_watch: way id="548612558" version="1"
-#: last_checked: 2018-04-30
-#: check_frequency: 14d
-# REMOVED ---	q3::inwork; 7201,8870 7101,9027
-# RE;OVED ---	q3::inwork; 7101,9027 7035,9161
-	q4::inwork; 7035,9161 7012,9222 7001,9291
-',
-         'from' => undef,
-         'id' => 2860,
-         'text' => 'Akazienstr.: Einbahnstraßenregelung',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4356,7 +4353,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-04-03
+#: last_checked: 2018-05-04
 	2::inwork 14652,10201 14569,10055
 ',
          'from' => undef,
@@ -4399,28 +4396,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.berliner-woche.de/wedding/bauen/doppelter-bruch-am-ploetzensee-uferweg-sackte-ein-d136422.html
-#: last_checked: 2017-12-26
-	q3::inwork 5306,15387 5134,15565
-',
-         'from' => undef,
-         'id' => 2918,
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.643712.php',
-         'text' => 'Uferweg Plötzensee: wegen Unterspülung gesperrt, Umfahrung über enge Pfade möglich',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: XXX bis wann ist die Durchfahrt gesperrt?
+#: note: am 2018-05-08 gegen 19:15 provisorisch offen
 #: source_id: 2147342009
-#: last_checked: 2018-05-02
+#: last_checked: 2018-05-08
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 ',
          'from' => 1523311200,
          'id' => 2919,
-         'text' => 'Wiesenweg: wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
+         'text' => 'Wiesenweg: kann insbesondere während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4428,7 +4415,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-04-04 vvv
+#: last_checked: 2018-05-09 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4479,7 +4466,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '# XXX_prog: eigentlich q3-
-#: last_checked: 2018-04-30
+#: last_checked: 2018-05-08
 	q3::inwork 7136,9223 7012,9222
 ',
          'from' => undef,
@@ -4500,24 +4487,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.386693.php
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/uebersichtsplan-umleitung_vollsperrung.pdf
-#: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.692745.php
-#: by: http://www.berliner-woche.de/pankow/verkehr/sperrung-rosenthaler-weg-umleitung-vom-2-mai-bis-zum-25-juni-d159605.html
-# REMOVED (ja, sieht so aus) --- #: XXX prüfen, ob der Starttermin eingehalten wird --- #: next_check: 2018-05-02 --- #: priority: #A
-	2::inwork 10228,21940 10312,21969 10377,21991 10436,22010 10493,22029 10554,22050 10613,22070 10673,22090 10709,22102 10769,22122 10828,22142 10892,22165 10935,22174 10999,22195
-',
-         'from' => 1525125600,
-         'id' => 2939,
-         'source_id' => 'http://www.berliner-woche.de/blankenfelde/verkehr/rosenthaler-weg-voll-gesperrt-wasserbetriebe-verlegen-rohre-d144397.html',
-         'text' => 'Rosenthaler Weg: Sperrung wegen Bauarbeiten, evtl. sind auch Radfahrer betroffen, voraussichtlich vom 2. Mai 2018 bis 29. Juni 2018',
-         'type' => 'gesperrt',
-         'until' => 1530309599
-       },
+       undef,
        undef,
        {
-         'data' => '#: last_checked: 2018-03-25
+         'data' => '#: last_checked: 2018-05-06
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? Wird sich die Qualität der Fahrbahn nach den Bauarbeiten verbessern?
 	q4::inwork 17456,7132 17352,7051
 ',
@@ -4558,13 +4531,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: source_id: 2147342390
-	q4::inwork; 8901,12008 8861,12125 9054,12154
+# REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
+	q4::inwork; 8861,12125 9054,12154
 ',
          'from' => 1522864912,
          'id' => 2947,
-         'text' => 'Wilhelmstr. und Behrenstr.: Sperrung Richtung Norden zwischen Französische Str. und Behrenstr. sowie Richtung Osten zwischen Wilhelmstr. und Mauerstr., bis 4. Mai 2018',
+         'text' => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Mauerstr., bis Mitte Mai 2018',
          'type' => 'handicap',
-         'until' => 1525449600
+         'until' => 1526407200
        },
        undef,
        undef,
@@ -4592,12 +4566,41 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2018-04-29
+         'data' => '#: last_checked: 2018-05-06
 	2::inwork 21696,5053 21600,5221 21512,5404 21487,5425
 ',
          'from' => undef,
          'id' => 2952,
          'text' => 'Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: http://www.berliner-woche.de/alt-treptow/verkehr/radelverbot-im-park-bleibt-d122937.html
+#: by: http://www.berliner-woche.de/alt-treptow/bauen/der-vater-des-rosengartens-d156358.html
+	q4 15778,8990 15623,9028 15527,9096 15513,9144 15453,9259 15432,9322 15304,9464 15186,9550 15052,9584 14909,9649 14889,9660 14807,9704 14635,9786
+	q4 14635,9786 14500,9863 14467,9887
+	q4 14467,9887 14455,9892 14448,9922
+	q4 14488,9848 14500,9863
+	q4 14361,9772 14436,9784 14460,9814 14488,9848
+	q4 14404,9847 14466,9861 14488,9848
+	q4 14318,9688 14371,9726 14443,9731
+	q4 14361,9772 14443,9731 14495,9710 14577,9641 14627,9609 14695,9587 14792,9599 14867,9573 14918,9545 15025,9461 15133,9396 15184,9373 15268,9374 15325,9354 15453,9259
+	q4 15184,9373 15249,9337
+	q4 14577,9641 14604,9674 14645,9710 14697,9726 14853,9655 14909,9649
+	q4 14909,9649 14867,9573 14837,9517 14809,9466
+	q4 15623,9028 15633,9007 15630,8979 15623,8949 15617,8924 15608,8882 15591,8848
+	q4 15680,8914 15617,8924
+	q4 15630,8979 15658,9007
+	q4 14316,9542 14384,9565 14478,9545 14507,9529 14588,9473 14635,9441 14719,9419 14797,9396 14824,9390 14889,9381
+	q4 14475,9199 14531,9244 14655,9311 14673,9353 14669,9389 14635,9441
+	q4 14719,9419 14774,9437 14809,9466
+	q4 14588,9473 14556,9581
+	q4 14531,9244 14485,9271 14398,9373
+',
+         'from' => undef,
+         'id' => 2953,
+         'text' => 'Treptower Park: Radfahren im Treptower Park offiziell verboten',
          'type' => 'gesperrt',
          'until' => undef
        }
