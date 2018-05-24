@@ -35,7 +35,7 @@
 # REMOVED --- #: next_check_id: MOELLENDORFFSTR-2017 vvv --- #: last_checked: 2017-11-09 vvv --- #: next_check: 2017-11-30 vvv --- Gürtelstr. -> Möllendorffstr.: Umweg zur Ampel	DH:len=70 15294,11964 15361,12071 15420,12178 --- Gürtelstr. -> links in die Frankfurter Allee: Umweg zur Ampel	DH:len=70 15294,11964 15361,12071 15117,12106 --- Frankfurter Allee -> links in die Möllendorffstr.: Umweg bis Wilhelm-Guddorf-Str., Fußgänger	DH:len=270:h=q2-,270 15117,12106 15361,12071 15420,12178 --- Frankfurter Allee geradeaus: Umweg bis Wilhelm-Guddorf-Str., Fußgänger	DH:len=200:h=q2-,200 15117,12106 15361,12071 15670,12022 --- Möllendorffstr. -> links in die Frankfurter Allee: Umweg bis Wilhelm-Guddorf-Str., Fußgänger	DH:len=250:h=q2-,250 15420,12178 15361,12071 15670,12022 --- Frankfurter Allee -> Gürtelstr.: kleiner Umweg zur Ampel	DH:len=30:h=q3,30 15670,12022 15361,12071 15294,11964 --- #: next_check ^^^ --- #: last_checked ^^^ --- #: next_check_id ^^^
 # 
 #: next_check_id: ZEUGHAUS-2014 vvv
-#: last_checked: 2018-04-27 vvv
+#: last_checked: 2018-05-17 vvv
 #: next_check: 2018-06-28 vvv
 Schinkelplatz -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9996,12401 9984,12426 9956,12523
 UdL -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9934,12420 9984,12426 9956,12523
@@ -163,7 +163,7 @@ Zeppelinstr. -> Edisonstr.: Fußgängerampel	DH:len=20:tl 18041,6924 17919,6968 17
 # 
 #: next_check_id: HOLZMARKT-2017
 #: XXX hier wird noch eine zusätzliche Ampel entstehen
-#: last_checked: 2018-05-14 vvv
+#: last_checked: 2018-05-24 vvv
 #: next_check: 2018-06-30 vvv
 Schillingstr. -> Holzmarktstr.: Ampel	DH:len=90:tl 11452,12318 11388,12202 11513,12138
 Holzmarktstr. -> Schillingstr.: linker Gehweg	DH:h=q2,45 11347,12223 11388,12202 11452,12318
@@ -243,13 +243,7 @@ Neuköllnische Allee/Grenzallee: Überquerung der Kreuzung nur über linken Gehweg 
 # 
 Schulze-Boysen-Str. - Ruschstr.: Fußgängerampel auf der linken Seite benutzen	DH:t=15 15836,11840 15863,11992 15879,12131
 # 
-#: next_check_id: CHAUSSEESTR-2016 vvv
-#: XXX_prog werden zurzeit ignoriert, da die gesperrt-orig-Einträge Vorrang haben
-Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	DH:h=q4,100 8570,14299 8607,14253 8776,14364
-Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	DH:h=q4,100 8654,14194 8607,14253 8776,14364
-Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	DH:h=q4,100 8776,14364 8607,14253 8654,14194
-Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	DH:h=q4,100 8776,14364 8607,14253 8570,14299
-#: next_check_id ^^^
+# REMOVED (beendet) --- #: next_check_id: CHAUSSEESTR-2016 vvv --- #: XXX_prog werden zurzeit ignoriert, da die gesperrt-orig-Einträge Vorrang haben --- Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	DH:h=q4,100 8570,14299 8607,14253 8776,14364 --- Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	DH:h=q4,100 8654,14194 8607,14253 8776,14364 --- Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	DH:h=q4,100 8776,14364 8607,14253 8654,14194 --- Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	DH:h=q4,100 8776,14364 8607,14253 8570,14299 --- #: next_check_id ^^^
 # 
 Pasewalker Str. - Margaretenaue: linker Gehweg	DH:h=q3,40 12008,20368 12000,20327 12087,20312
 # 
@@ -272,3 +266,15 @@ Rennbahnstr. - Bernkastler Str.: Ampel auf der linken Seite benutzen	DH:t=20 145
 # 
 Berliner Allee - Falkenberger Str.: Fußgängerampel	DH:len=20:tl 14608,16772 14619,16682 14723,16691
 Falkenberger Str. - Berliner Allee: linker Gehweg zur Ampel	DH:h=q3,10 14723,16691 14619,16682 14619,16672
+# 
+Britzer Damm -> Wussowstr.: Fußgängerampel	DH:len=30:tl 12812,5526 12798,5580 12702,5553
+# 
+Müggelheimer Str. - Dorotheenstr.: linker Gehweg	DH:h=q3,25 22965,4124 22949,4136 22926,4123 22831,4070
+# 
+Rudower Str. - Köllnischer Platz: linker Gehweg	DH:h=q3,30 21585,4459 21781,4470 21789,4520
+# 
+Bahnhofstr. - Platz des 23. April: linker Gehweg	DH:h=q3,100 22116,5442 22087,5404 22043,5346 22046,5305
+# 
+Lidl-Parkplatz - Alt-Kaulsdorf: linker Gehweg	DH:h=q3,60 22982,11157 22996,11264 22937,11265
+Alt-Kaulsdorf - Lidl-Parkplatz: linker Gehweg	DH:h=q3,90 23101,11261 22996,11264 22982,11157
+# 

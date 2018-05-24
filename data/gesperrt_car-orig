@@ -223,7 +223,7 @@ Skalitzer/Admiralstr.	3nocross 11393,10390 11335,10375 11316,10372
 Gutenbergstr.	1 -12045,-757 -12227,-724
 Langhoffstr.	1 19817,14371 19818,14064
 #: by: Thomas Hallmann:
-Lintruper Str.	1 10307,922 10380,757
+Lintruper Str.	1 10324,925 10380,757
 Edison-/Siemensstr.	3 17991,6431 17962,6674 17860,6644
 Edisonstr.	1 17962,6674 17991,6431
 Brückenstr./Edisonstr.	1 17991,6431 17952,6246 17930,6175 17900,6072
@@ -374,9 +374,9 @@ Berliner Allee: Straßenbahntrasse	3nocross 13826,16026 13737,15994 13623,15954
 #: confirmed_by: srt
 Talsandweg: Einbahnstraße	1 3206,21179 3138,21372
 #: note: Luftbild: vvv
-Buckower Chaussee: Mittelstreifen	3nocross 10047,813 10187,872 10269,906
+Buckower Chaussee: Mittelstreifen	3nocross 10047,813 10187,872 10276,906
 Lichtenrader Damm: Mittelstreifen	3nocross 10485,807 10539,662 10590,525
-Lichtenrader Damm: Mittelstreifen	3nocross 10425,971 10485,807 10539,662
+Lichtenrader Damm: Mittelstreifen	3nocross 10427,968 10485,807 10539,662
 Lichtenrader Damm: Mittelstreifen	3nocross 10539,662 10590,525 10617,452 10620,445
 #: note: ^^^
 Lichtenrader Damm: Mittelstreifen	3nocross 10638,403 10676,299 10713,197 10737,132
@@ -1181,9 +1181,11 @@ Petriplatz -> Gertraudenstr.: Abbiegen verboten	3 10418,12016 10460,11979 10512,
 Schmohlstr.	1 13239,17269 13196,17223 13159,17196 13057,17120
 Kiehlufer	1 12913,9353 12901,9340 12895,9323
 # 
-#: osm_watch: way id="454034985" version="4"
+#: osm_watch: way id="454034985" version="5"
 #: next_check_id: DIESEL-2015
-#: last_checked: 2018-05-04
+#: XXX laut osm wieder offen
+#: last_checked: 2018-05-21
+#: next_check: 2018-05-24
 Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14484,8044
 # 
 # REMOVED --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpartner/fahrrat/2016-07-28-prot-fahrratsitzung3.pdf --- #: XXX evtl wird die Straße für Radfahrer geöffnet --- #: osm_watch: way id="12307305" version="4" --- #: last_checked: 2017-08-22 --- #: check_frequency: 60d
@@ -1206,3 +1208,9 @@ Bauhüttenweg: Anlieger frei	2:Anlieger 12703,2454 12774,2463 12835,2470 12948,24
 Südwestkorso: Mittelstreifen	3nocross 5211,7783 5310,7839 5346,7860
 August-Bebel-Str. (Schulzendorf)	1 24343,-3387 24256,-3568
 Bornitzstr. [Wohngebiet]	1 16484,12871 16484,12825 16431,12825 16385,12825 16384,12874
+Fridolinweg: Poller	3 21456,14491 21450,14576 21408,14591
+Fridolinweg: Poller	3 21408,14591 21450,14576 21456,14491
+Fichtenstr.	1 22154,9237 22200,9430
+#: note: die Straßenbahn fährt hier auch lang
+Zionskirchstr.	1 10391,14280 10426,14262
+Zionskirchplatz	1 10304,14254 10277,14350 10311,14391 10365,14372 10391,14280

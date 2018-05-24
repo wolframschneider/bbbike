@@ -131,7 +131,6 @@ Zufahrt zur Kolonie ist schwierig zu finden (enges Tor)	CP2; 10190,16930 10209,1
 Drängelgitter auf der linken Seite unter der Hochbahn	CP; 10754,16305 10997,16280 11295,16199
 Drängelgitter auf der rechten Seite unter der Hochbahn	CP; 11295,16199 10997,16280 10754,16305
 (Scottweg - Tharauer Allee): Weg beginnt links neben dem Garagenparkplatz	CP2; -1403,11279 -1505,11307
-Alexandrinenstr.: Gehweg benutzen, nicht die Straße zu den Parkplätzen	CP2; 10678,11172 10818,11269
 Spreehagen - Langendamm: der Weg startet etwas versteckt direkt hinter dem Ortsausgang Spreenhagen an einer großen Bushaltestelle auf der linken Seite.	CP; 43593,-6607 43695,-6701 43738,-6684
 Ella-Kay-Str. - Danziger Str.: zunächst den linken Gehweg bis zur Ampel an der Winsstr. benutzen	CP; 12089,14891 12056,14831 11990,14714 12025,14695
 Ladenbergstr. - Altensteinstr.: an der Kreuzung Habelschwerdter Allee Fußgängerampel auf der linken Seite benutzen	CP; 2858,4372 2997,4378 3037,4500
@@ -153,8 +152,8 @@ Clayallee - Flanaganstr.: Fußweg vor dem McDrive nehmen	CP; 1746,5922 1736,5850 
 Flanaganstr. - Clayallee: Fußweg am McDrive nehmen, bis zur Ampel an der Königin-Luise-Str. den linken Gehweg benutzen	PI; 1614,5738 1736,5850 1746,5922
 Helmholtzstr. - Zeppelinstr.: zum Überqueren der Edisonstr. Fußgängerampel benutzen	CP; 17845,6986 17919,6968 18041,6924
 Zeppelinstr. - Helmholtzstr.: zum Überqueren der Edisonstr. Fußgängerampel benutzen	CP; 18041,6924 17919,6968 17845,6986
-Mariendorfer Damm - Heinitzweg: bereits an der Buckower Chaussee die Straßenseite wechseln	PI; 10425,971 10379,1097 10329,1077
-Heinitzweg - Mariendorfer Damm: zunächst auf dem linken Gehweg/Radweg vorfahren	CP; 10329,1077 10379,1097 10329,1231
+Mariendorfer Damm - Heinitzweg: bereits an der Buckower Chaussee die Straßenseite wechseln	PI; 10427,968 10379,1097 10325,1083
+Heinitzweg - Mariendorfer Damm: zunächst auf dem linken Gehweg/Radweg vorfahren	CP; 10325,1083 10379,1097 10329,1231
 Zum Naturpark Schöneberg: Weg zwischen den Parkhäusern nehmen	CP2; 7774,7724 7787,7692
 Hochspannungsweg - Buckower Damm: zunächst zur Fußgängerampel links vorfahren	CP; 12593,2472 12694,2517 12694,2544
 Hochspannungsweg: zur Überquerung des Buckower Damms Fußgängerampel links nehmen	CP; 12593,2472 12694,2517 12825,2573
@@ -173,7 +172,7 @@ Hausdurchfahrt benutzen	CP2; 6492,9782 6529,9738
 Nach dem Steg kann man zunächst nur in der Mitte direkt am Ufer fahren, da Leitplanken das Übequeren verhindern, erst auf Höhe der Genthiner Str. kann man die Straße überquert werden	CS; 7252,11188 7248,11143 7461,11051
 Lützowufer - Hiroshimasteg: frühzeitig auf den linken Gehweg wechseln, Leitplanken verhindern das Überqueren	PI; 7002,11034 7248,11143 7252,11188
 Alexanderstr. - Schillingstr.: an der Ampel Voltairestr. die Straßenseite wechseln	CP2; 11329,12497 11353,12436
-Brunnenstr. - Humboldthain: unbequem passierbarer Mittelstreifen, ggfs. schon an der Ramlerstr. die Straßenseite wechseln	PI; 9309,15700 9267,15790 9255,15816 9092,15789
+Brunnenstr. - Humboldthain: unbequem passierbarer Mittelstreifen, ggfs. schon an der Ramlerstr. die Straßenseite wechseln	PI; 9309,15700 9291,15740 9267,15790 9255,15816 9092,15789
 Humboldthain - Brunnenstr.: unbequem passierbarer Mittelstreifen, ggfs. erst an der Böttgerstr. die Straßenseite wechseln	CP; 9092,15789 9255,15816 9242,15843
 Anzengruberstr. - Sonnenallee/Finowstr.: Sonnenallee links an der Finowstr. überqueren	CP; 12865,8346 13038,8394 13011,8416
 Sonnenallee - Anzengruberstr.: Sonnenallee erst an der Finowstr. überqueren	CP; 13102,8343 13038,8394 12865,8346
@@ -441,3 +440,6 @@ ausgeschildert "zur Sewanstraße"	CP2; 16900,9861 17005,9953
 Kaiserdamm - Witzlebenstr.: ggfs. schon an der Ampel Schloßstr./Kaiserdamm auf die linke Seite wechseln	PI; 3159,11562 3069,11551 2924,11309
 Rummelsburger Str. - Tränkegraben: ggfs schon an der Kreuzung Kraetkestr. auf die Fahrbahn wechseln (wegen Bordstein)	PI; 17466,10941 17257,10875 17261,10827
 Pasewalker Str. - Margaretenaue: ggfs. schon an der Ampel Blankenburger Str. auf die linke Seite wechseln	PI; 12008,20368 12000,20327 12087,20312
+Müggelheimer Str. - Dorotheenstr.: schon an der Ampel Pablo-Neruda-Str. auf die linke Seite wechseln	PI; 22965,4124 22949,4136 22926,4123 22831,4070
+Lidl-Parkplatz - Alt-Kaulsdorf: zunächst bis zur Ampel "Am Feldberg" den linken Gehweg benutzen	CP; 22982,11157 22996,11264 22937,11265
+Alt-Kaulsdorf - Lidl-Parkplatz: an der Ampel Myslowitzer Str. auf die linke Seite wechseln	PI; 23101,11261 22996,11264 22982,11157

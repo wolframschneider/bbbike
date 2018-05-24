@@ -5014,7 +5014,7 @@ EOF
        text  => 'B 183 Dresdner Str. OL Bad Liebenwerda, zw. Querspange u. Hainsche Str. Untersuchung Lubwartturm Vollsperrung 03.07.2006-03.07.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 12194,-98944 12593,-99029
+	2::inwork 12194,-98944 12362,-98997 12459,-99063 12601,-99090 12749,-99054
 EOF
      },
      { from  => 1152050400, # 2006-07-05 00:00
@@ -7062,7 +7062,7 @@ EOF
        text  => 'B 183 Dresdener Str. Bahnübergang in der OL Bad Liebenwerda Gleis- u. Tiefbauarbeiten Vollsperrung 19.01.2007-22.01.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 13828,-98986 13053,-99051 12593,-99029
+	2::inwork 13828,-98986 13053,-99051 12749,-99054
 EOF
      },
      { from  => 1169506800, # 2007-01-23 00:00
@@ -8216,7 +8216,7 @@ EOF
        text  => 'B 183 Dresdener Str. OL Bad Liebenwerda, zw. Querspange u. Roßmarkt Kleines Stadtfest Vollsperrung 19.05.2007-20.05.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 12194,-98944 12593,-99029
+	2::temp 12194,-98944 12362,-98997 12459,-99063 12601,-99090 12749,-99054
 EOF
      },
      { from  => 1179266400, # 2007-05-16 00:00
@@ -12821,7 +12821,7 @@ EOF
        text  => 'Unterführung unter Adlergestell und Bahn wegen Brückenerneuerung gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 20810,2398 20939,2413
+	2::inwork 20810,2398 20904,2426 20939,2413
 EOF
      },
      { from  => 1223320498, # 2008-10-06 21:14
@@ -14563,14 +14563,14 @@ EOF
 	2::inwork 25997,-6245 26040,-6233 26135,-6206
 EOF
      },
-     { from  => $isodate2epoch->("2017-06-15 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-06-18 23:59:59"),
+     { from  => $isodate2epoch->("2018-06-14 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-06-17 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6]],
-       text  => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain (16.06.2017 - 18.06.2017)',
+       text  => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain (15.06.2018 - 17.06.2018)',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/veranstaltungen/koepenicker-sommer-323856.php
+#: by: https://www.howoge.de/unternehmen/aktuelles/veranstaltungen/details/koepenicker-sommer-2018.html
 	2::temp 22111,4562 22093,4499 22076,4422
 	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562
 	2::temp 22138,4642 22074,4664
@@ -17231,7 +17231,7 @@ EOF
        text  => 'B 183 Dresdner Straße Brücke über die Schwarze Elster in Bad Liebenwerda Brückenneubau Vollsperrung 30.11.2009-31.08.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 12593,-99029 13053,-99051
+	2::inwork 12749,-99054 13053,-99051
 EOF
      },
      { from  => undef, # 
@@ -21511,7 +21511,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berliner-frauenlauf.de/?year=2018',
        data  => <<EOF,
-#: tempex: 20170520 vvv
+# REMOVED --- #: tempex: 20170520 vvv
 	2::temp 8055,12186 8119,12414
 	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
 	2::temp 6828,12031 6884,12006
@@ -21526,7 +21526,7 @@ EOF
 	3 7823,12120 7816,12150 7822,12201 7875,12363
 	3 8391,12389 8344,12221 8327,12174
 	3 8327,12174 8344,12221 8391,12389
-#: tempex ^^^
+# REMOVED --- #: tempex ^^^
 EOF
      },
      { from  => $isodate2epoch->("2017-05-26 11:00:00"), # 1 Tag Vorlauf
@@ -25659,7 +25659,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-05-10 vvv
+#: last_checked: 2018-05-18 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -26541,7 +26541,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-05-04
+#: last_checked: 2018-05-20
 	2::inwork 14652,10201 14569,10055
 EOF
      },
@@ -26703,9 +26703,10 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann ist die Durchfahrt gesperrt?
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00
 #: source_id: 2147342009
-#: last_checked: 2018-05-14
+#: osm_watch: way id="154381291" version="4"
+#: last_checked: 2018-05-23
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 EOF
@@ -26738,7 +26739,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-05-09 vvv
+#: last_checked: 2018-05-17 (mapillary) vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -26913,7 +26914,7 @@ EOF
 	2::temp 12509,10189 12502,10244 12543,10223 12580,10252 12608,10294
 	2::temp 12328,10442 12331,10409 12384,10368 12457,10309 12502,10244
 	2::temp 12504,10172 12507,10130
-	2::temp 12932,9900 12987,10007 13145,9920
+	2::temp 12932,9900 12960,9955 12987,10007 13145,9920
 EOF
      },
      { from  => 1525125600, # 2018-05-01 00:00
@@ -26944,7 +26945,7 @@ EOF
        text  => 'Mentelinstr.: Bauarbeiten zwischen Nalepastr. und Otto-Krüger-Zeile, Fahrbahn gesperrt, Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-05-06
+#: last_checked: 2018-05-20
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? Wird sich die Qualität der Fahrbahn nach den Bauarbeiten verbessern?
 	q4::inwork 17456,7132 17352,7051
 EOF
@@ -27074,14 +27075,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1526713587, # BVG: "Beendete Verkehrsstörung" --- undef, # XXX
        text  => 'Grumbkowstr.: Bauarbeiten, Fahrbahn zwischen Rolandstr. und Blankenburger Str. gesperrt, Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=31981
-#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2018-04-28
-#: check_frequency: 60d
+# REMOVED --- #: XXX wann sind die Bauarbeiten beendet? --- #: last_checked: 2018-04-28 --- #: check_frequency: 60d
 	q4::inwork 11627,19907 11555,20051
 EOF
      },
@@ -27124,13 +27123,88 @@ EOF
      },
      { from  => 1526323594, # 2018-05-14 20:46
        until => $isodate2epoch->("2018-09-14 18:00:00"), # 1537048799, # 2018-09-15 23:59
-       text  => 'Scheffelstr. und Eldenaer Str.: Bauarbeiten Richtung Ebertystr. zwischen Möllendorffstr. und Liebigstr., Ausweichen auf engen Gehweg erlaubt, bis Mitte September 2018',
+       text  => 'Scheffelstr. und Eldenaer Str.: Bauarbeiten Richtung Ebertystr. zwischen Möllendorffstr. und Liebigstr., Ausweichen auf engen Gehweg erlaubt, einige Bordsteine, bis Mitte September 2018',
        type  => 'handicap',
        source_id => '2147342574',
        data  => <<EOF,
 #: note: laut fritz bis 14.09.2018
 #: XXX_prog: eigentlich q3+
 	q3::inwork; 15516,12838 15367,12815 15357,12813 15233,12829 15098,12849 15074,12850 15010,12855 14940,12843 14906,12837 14836,12826 14750,12812 14661,12798 14556,12781 14435,12761 14355,12752 14096,12827
+EOF
+     },
+     { from  => 1526407304, # 2018-05-15 20:01
+       until => $isodate2epoch->("2018-06-29 20:00:00"), # 1530395999, # 2018-06-30 23:59
+       text  => 'Lise-Meitner-Str.: Bauarbeiten zwischen Gaußstr. und Ringbahnbrücke, Einbahnstraßenregelung, offen Richtung Süden, voraussichtlich bis Ende Juni 2018',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.701215.php',
+       data  => <<EOF,
+#: source_id: 2147342627
+	q4::inwork; 3739,13563 3724,13702 3713,13787 3702,13865
+EOF
+     },
+     { from  => undef,
+       until => 1526580146, # -> ampeln-orig # $isodate2epoch->("2018-12-31 18:00:00"),
+       text  => "Gleimtunnel: Bauarbeiten Richtung Schönhauser Allee, Fahrbahn gesperrt, möglicherweise sind auch Radfahrer von der Sperrung betroffen, bis Ende Dezember 2018",
+       source_id => "2147342588",
+       data  => <<EOF,
+# REMOVED (Radfahrer dürfen den Gehweg (mit dem alten Radweg) benutzen, ansonsten siehe ampeln-orig) --- #: add_fragezeichen: Ist der Gleimtunnel tatsächlich für Radfahrer gesperrt?
+	q4::inwork; 10004,15636 10130,15653
+EOF
+     },
+     { from  => undef,
+       until => $isodate2epoch->("2018-08-11 18:00:00"),
+       text  => "Karlshorster Str.: Stubenrauchbrücke in Richtung Osten gesperrt, Radfahrer müssen ggfs. auf den linken, sehr engen Gehweg ausweichen, bis Mitte August 2018",
+       source_id => "2147342600",
+       data  => <<EOF,
+#: note: genaues Endedatum by fritz
+# REMOVED (ja) --- #: add_fragezeichen: Ist die Stubenrauchbrücke tatsächlich für Radfahrer gesperrt?
+#: by: https://www.berliner-woche.de/oberschoeneweide/c-verkehr/spreequerung-bleibt-bis-august-voll-gesperrt_a164513
+	q4::inwork; 17432,6352 17492,6462 17528,6502
+EOF
+     },
+     { from  => 1527186631, # 2018-05-24 20:30
+       until => 1528495200, # 2018-06-09 00:00
+       text  => 'Elsa-Brändström-Str.: Bauarbeiten im Einmündungsbereich Berliner Str., evtl. sind auch Radfahrer betroffen, bis 08.06.2018',
+       type  => 'handicap',
+       source_id => '2147342636',
+       data  => <<EOF,
+#: XXX überprüfen
+#: priority: #C
+	q4::inwork 10908,17142 11116,17140
+EOF
+     },
+     { from  => 1527186729, # 2018-05-24 20:32
+       until => 1534888800, # 2018-08-22 00:00
+       text  => 'Gubener Str.: Bauarbeiten zwischen Graudenzer Str. und Hildegard-Jadamowitz-Str., eventuell sind auch Radfahrer betroffen, bis 21.08.2018',
+       type  => 'handicap',
+       source_id => '2147342639',
+       data  => <<EOF,
+#: XXX vielleicht wird die Fahrbahn repariert?
+#: XXX überprüfen
+#: priority: #A
+	q4::inwork 13198,12311 13243,12222
+EOF
+     },
+     { from  => 1527186792, # 2018-05-24 20:33
+       until => 1530741600, # 2018-07-05 00:00
+       text  => 'Weißenhöher Str. : Bauarbeiten zwischen Grabensprung und Gladauer Weg, eventuell sind auch Radfahrer betroffen, bis 04.07.2018',
+       type  => 'handicap',
+       source_id => '2147342638',
+       data  => <<EOF,
+#: XXX überprüfen
+#: priority: #B
+	q4::inwork 20354,11500 20521,11494
+EOF
+     },
+     { from  => 1527186848, # 2018-05-24 20:34
+       until => 1534543200, # 2018-08-18 00:00
+       text  => 'Am Spreebord: Bauarbeiten, eventuell sind auch Radfahrer betroffen, bis 17.08.2018',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: fritz
+#: XXX überprüfen
+#: priority: #C
+	q4::inwork 4303,12692 4234,12710 4124,12721 4055,12713 3949,12710 3734,12715
 EOF
      },
     );

@@ -13,7 +13,7 @@ Görlitzer Park	NL 12802,10097 12670,10160
 Görlitzer Park	NL 12767,10216 12763,10207 12757,10197
 Görlitzer Park	NL 12690,10062 12686,10045 12671,10042
 # REMOVED (nicht mehr der Fall?) --- #: note: Beleuchtung existiert, aber ist zumindest mitten in der Nacht nicht eingeschaltet --- Görlitzer Park, Rondell	NL 12690,10062 12737,10051 12802,10097 12801,10146 12757,10197 12712,10192 12670,10160 12659,10119 12690,10062
-Görlitzer Park	NL 13035,10076 13013,10068 13013,10047 12987,10007 12932,9900
+Görlitzer Park	NL 13035,10076 13013,10068 13013,10047 12987,10007 12960,9955 12932,9900
 Görlitzer Park	NL 12509,10189 12502,10244
 Hasenheide	NL 10709,9192 11141,9107
 Hasenheide (nur der Abschnitt Columbiadamm - Freilichtbühne ist beleuchtet)	NL 11279,8489 11255,8591 11182,8983 11141,9107 11136,9183
@@ -137,7 +137,7 @@ Wuhletal-Wanderweg	NL 22124,13606 22082,13542 22060,13446 22058,13366 22067,1333
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4350&options=4
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4507 (Antrag auf Umwidmung als Straßenland, aber seit Mai 2013 keine Bewegung bei der Drucksache)
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5749 (neue Drucksache)
-#: last_checked: 2018-03-25
+#: last_checked: 2018-05-21
 #: check_frequency: 150d
 (Wuhlewanderweg, östliches Ufer)	NL 22204,6016 22162,5919 22122,5884 22097,5879 22084,5877
 (Wuhlewanderweg, östliches Ufer)	NL 22084,5877 22070,5876 21846,5856 21744,5804 21618,5699 21602,5685 21507,5620
@@ -404,7 +404,7 @@ Bernhard-Wieck-Promenade	NL 1381,8023 1366,8032 1348,8010
 (Parkweg Reichsstr.)	NL -264,13009 -208,12938 -103,12841 -45,12778 23,12739
 (Machandelweg - Reichsstr.)	NL -166,12849 -103,12841 -85,12852
 Konitzer Str.	NL 14099,11505 14087,11467
-Alexandrinenstr. (paralleler Gehweg)	NL 10678,11172 10818,11269
+Alexandrinenstr. (paralleler Gehweg)	NL 10678,11172 10781,11243 10818,11269
 Uferweg an den Treptowers: nur am Allianz-Gebäude beleuchtet	NL 13918,10240 14126,10176 14202,10152
 Uferweg	NL 14373,10046 14432,10059 14509,9997 14464,9927 14459,9897 14467,9887
 Uferweg Stralau	NL 15739,9583 15749,9558 15819,9430 15813,9378 15793,9334
@@ -561,8 +561,15 @@ Kolonie Rehberge	NL 5223,16783 5141,16799 5091,16810 5035,16819 5012,16824 5005,
 (Götzstr. - Albrechtstr.)	NL 9460,6519 9453,6415 9404,6392 9389,6348 9381,6277 9374,6189 9373,6179 9367,6160 9366,6150 9376,6102 9349,6102 9339,6076
 #: confirmed_by: srt
 (Franckepark - Templerzeile)	NL 9381,6277 9426,6239 9463,6232 9683,6199
+# 
+#: XXX wird hier eine Beleuchtung entstehen? vvv
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6372
+#: next_check: 2020-01-01 vvv
 Kolonie Albrechtshöhe	NL 10260,5953 10215,5959 9955,5993
 (Ordensmeisterstr./Komturstr. - Kolonie Albrechtshöhe)	NL 10254,5921 10215,5959
+#: next_check ^^^
+#: XXX ^^^
+# 
 #: by: ^^^
 #: by: Christian Marwitz:
 Hönower Wiesenweg	NL 17380,8858 17416,8767 17483,8644 17554,8458 17620,8366 17704,8327 17753,8290
@@ -826,7 +833,7 @@ Kurze Str. (Baumschulenweg)	NL 16427,4334 16550,4529 16518,4551
 (entlang der Teltowkanalautobahn)	NL 18496,2471 18478,2488 18408,2486 18350,2533 18388,2509 18496,2409 18518,2370 18567,2218 18580,2121
 Seilerweg - Neuköllner Str.	NL 16547,1439 16605,1424 16643,1460
 Hirzerweg	NL 9359,3083 9416,2781
-Hirzerweg	NL 9487,2391 9541,2096
+Hirzerweg	NL 9487,2391 9539,2105
 Hochspannungsweg	NL 12593,2472 12391,2382 12384,2379 12373,2375 12280,2330 11747,2091 11626,2037 11373,1925 11343,1937
 #: by: Germar Molter: vvv
 #: confirmed_by: srt vvv
@@ -1651,12 +1658,8 @@ An der Alten Fahrt	NL -12265,-1434 -12485,-1482 -12474,-1559
 zur Mühsamstr.	NL 13067,12583 13091,12563 13232,12628
 # 
 # REMOVED (Beleuchtung existiert wieder) --- #: next_check_id: DBWERKSTRASSE-2017 --- #: XXX eventuell nur während der Bauarbeiten keine Beleuchtung mehr vvv --- #: last_checked: 2017-12-14 vvv --- Werkstraße	NL 14043,10928 14107,10911 14224,10878 14231,10907 --- Werkstraße	NL 14107,10911 14141,10931 14231,10907 --- #: last_checked ^^^ --- #: XXX ^^^
-# 
-#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5905
-#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6241
-#: XXX evtl. wird hier eine Beleuchtung entstehen?
-#: next_check: 2018-03-01
-(Buchsteinweg - Säntisstr.)	NL 9922,1896 9978,1854
+# REMOVED (nichts passiert, und bei der Drucksache geht's auch nicht weiter) --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5905 --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6241 --- #: XXX evtl. wird hier eine Beleuchtung entstehen? --- #: next_check: 2018-03-01
+(Buchsteinweg - Säntisstr.)	NL 9922,1896 9964,1839
 (Gutspark Lichtenberg)	NL 15746,12967 15749,12995 15717,13001 15612,13069 15526,13056
 (Richterstr. - Rathausstr./Alt-Mariendorf)	NL 9118,3983 9117,3898
 (Bucher Teiche - Schönerlinder Chaussee)	NL 14321,25216 14056,25378 14036,25433 14017,25482 13942,25711 13966,25777 13970,25785 14106,26057 14187,26214 14491,26714 14497,26727
@@ -1700,6 +1703,7 @@ Tegeler Forst	NL 605,20714 462,20694 65,20594 -105,20611 -329,20685 -750,20878 -
 (Nizzastr. - Dr.-Markus-Str.)	NL 12434,21160 12522,21208 12535,21282 12507,21391 12498,21450
 (Wiesenweg - Waldweg)	NL 9940,26273 9898,26310 9848,26349 9812,26385
 #: XXX wird die existierende Beleuchtung wieder hergestellt?
+#: osm_watch: way id="260138646" version="2"
 #: last_checked: 2018-04-27
 Marx-Engels-Forum	NL 10416,12394 10411,12471 10355,12551 10300,12587
 Nordhafenpark West	NL 7368,14573 7396,14569 7426,14539 7551,14464 7572,14432 7566,14404
@@ -1716,3 +1720,4 @@ Roedenbecksteig	NL -9390,433 -8629,175
 (Stolper Weg - Teerofenweg)	NL -4738,-748 -5184,-897 -5262,-900 -5305,-942 -5380,-990 -5510,-1070 -5628,-1051 -5796,-1125 -5912,-1260 -6046,-1208 -6051,-1169 -6275,-924 -6380,-848
 Heinrich-Laehr-Park	NL 1525,581 1655,615
 (Gotlindestr. - Bornitzstr.)	NL 16432,12612 16433,12626 16421,12682 16428,12741
+(Alt-Lichtenrade - Töpchiner Weg)	NL 10950,-438 11207,-413

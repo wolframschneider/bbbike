@@ -294,20 +294,14 @@ Travestr.	1 14835,11840 14897,11801 14981,11751
 Müggelstr.	1 14897,11801 14965,11921
 # REMOVED (stimmt nicht (mehr?)) --- Schmollerplatz/str.	1 13231,9422 13178,9363 13206,9335
 Isarstr.	1s:q4 12349,8464 12368,8356
-Zionskirchplatz	1 10304,14254 10277,14350 10311,14391 10365,14372 10391,14280
 Ohmstr.	1 11324,11689 11378,11856
 Anton-Saefkow-Str.	1 13183,14400 13084,14472 13013,14523 12901,14594 12862,14618 12789,14670 12700,14726 12528,14845
 Spilstr.	1 3865,6758 3826,6656 3836,6550
-#: next_check_id: CHAUSSEESTR-2016 vvv
-#: XXX wieder herstellen, wenn es dann noch eine Einbahnstraße gibt vvv
-##: note einige Radfahrer hier in der falschen Richtung angetroffen vvv
-#Wöhlertstr.	1s:q4 
-#8442,14456 8669,14550
-#Pflugstr.	1s:q4 8669,14550 8776,14364
-##: note ^^^
-#Schwartzkopffstr.	1s:q4 8776,14364 8607,14253
-#: XXX ^^^
-#: next_check_id ^^^
+#: note einige Radfahrer hier in der falschen Richtung angetroffen vvv
+Wöhlertstr.	1s:q4 8442,14456 8669,14550
+Pflugstr.	1s:q4 8669,14550 8776,14364
+#: note ^^^
+Schwartzkopffstr.	1s:q4 8776,14364 8607,14253
 Strausberger Str.	1 12416,13045 12368,13031 12247,12848
 Große Präsidentenstr.	1 10105,13004 10220,13098
 Gritznerstr.	1 4511,6318 4555,6403
@@ -954,7 +948,7 @@ Heinrich-Grüber-Platz	1 22877,11940 22858,11937 22843,11999 22856,12003 22870,12
 Boraweg	1s:q4 6763,2879 6710,2909 6658,2907
 Viktoriaplatz	1 3500,4146 3523,4139 3528,4118 3518,4106 3489,4115 3485,4137 3500,4146
 Glaserweg	1 10187,872 10237,749
-Lintruper Str.	1 10307,922 10380,757
+Lintruper Str.	1 10324,925 10380,757
 Alt-Buckow	1s:q3 12574,1866 12561,1931
 Alt-Buckow	1 12561,1931 12817,2031
 Alt-Schmöckwitz	1 27396,-3101 27428,-3137 27427,-3171 27413,-3196 27388,-3199 27378,-3183 27382,-3151 27396,-3101
@@ -1111,7 +1105,7 @@ Am Tierpark [Wohngebiet]	1 18552,10220 18538,10189 18484,10326
 (Freiherr-vom-Stein-Str. - Dominicusstr.)	1::igndisp 6477,8654 6454,8653
 Neue Jakobstr./Schulze-Delitzsch-Platz	1 11060,11753 11073,11774
 Edith-Kiss-Str.	1 12793,11132 12866,11256
-Garzauer Str.	1 21830,13688 21722,13708
+Garzauer Str.	1 21830,13688 21722,13708 21731,13789
 Flankenschanze	1 -3507,15341 -3534,15219
 Berliner Str. (Pankow, Prenzlauer Berg) [zur Tiroler Str.]	1 10862,17087 10891,17088 10917,17088
 Alt-Moabit - Invalidenstr.	1 7415,13060 7422,13012
@@ -1141,6 +1135,7 @@ Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8
 # REMOVED (dauerhaft) --- #: last_checked: 2014-07-23 --- #: check_frequency: 180d --- #: XXX evtl. permanent
 Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,12417 8399,12610
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5554
+#: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7540 (Freigabe vorgeschlagen)
 Kriemhildstr.	1s:q3 17300,12173 17314,12265
 Sportfliegerstr.: Betriebsgelände	2 18370,4511 18423,4459
 #: by: olaf skeries
@@ -1176,9 +1171,9 @@ Rosenfelder Str./Ring	1 17480,12003 17429,12030 17384,11976
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2017-03-16-prot-fahrratsitzung.pdf
 #: XXX evtl wird die Straße für Radfahrer geöffnet
 #: osm_watch: way id="31540773" version="12"
-#: last_checked: 2017-05-06
+#: last_checked: 2018-05-19
 #: check_frequency: 180d
-Fritz-Werner-Str.	1s:q3 9102,2780 9076,2594
+Fritz-Werner-Str.	1s:q3 9105,2779 9081,2594
 # 
 Kraftwerk Reuter West	2 -447,14338 -495,14311 -650,14355 -792,14258 -1002,14162 -1020,14084
 # 
@@ -1461,8 +1456,6 @@ Johanna-Spyri-Weg	1s:q1 3211,2221 3221,2479
 # 
 #: note: nach Anmerkungen von Sandra Franz mit "q3" versehen:
 Seelbuschring	1s:q3 8477,4615 8457,4707 8430,4723 8309,4700 8244,4649
-#: note: die Straßenbahn fährt hier auch lang
-Zionskirchstr.	1s:q1 10391,14280 10426,14262
 Walsroder Str.	1s:q3 6395,5154 6295,5158 6202,5163 6094,5171
 #: note: hier q4 wegen unübersichtlicher Kurve
 Hünensteig	1s:q4 6419,5048 6387,5057
@@ -1605,6 +1598,7 @@ Landsberger Allee: Mittelstreifen	3nocross 20260,15434 20532,15564 20580,15586
 Landsberger Allee: Mittelstreifen	3nocross 15256,14237 15430,14262 15850,14308
 Alt-Kaulsdorf: Mittelstreifen	3nocross 22483,11261 22756,11261 22937,11265
 Alt-Kaulsdorf: Mittelstreifen	3nocross 23101,11261 23362,11263 23447,11264 23648,11265
+Alt-Kaulsdorf: Mittelstreifen	3nocross 22937,11265 22996,11264 23101,11261
 Alt-Mahlsdorf: Mittelstreifen	3nocross 24175,11265 24019,11264 23848,11264 23648,11265
 Marienfelder Chaussee: Mittelstreifen	3nocross 11012,1210 11157,1269 11216,1293
 Marienfelder Chaussee: Mittelstreifen	3nocross 11865,1564 11765,1522 11476,1398
@@ -1639,7 +1633,7 @@ Blumberger Damm: Mittelstreifen	3nocross 21709,15808 21682,15673 21675,15636 216
 Allee der Kosmonauten: Straßenbahntrasse	3nocross 21242,15529 21228,15449 21187,15350 21163,15289
 Schönholzer Str.: Straßenbahn auf der Fahrbahn	3nocross 10089,18180 10054,18210 9909,18333
 #: by: stefan: (sw-...)
-Müggelheimer Str.: Straßenbahntrasse	3nocross 22674,4309 22812,4227 22888,4184 22965,4124
+Müggelheimer Str.: Straßenbahntrasse	3nocross 22674,4309 22812,4227 22888,4184 22949,4136 22965,4124
 Prenzlauer Promenade: Straßenbahntrasse	3nocross 12090,16199 12097,16263 12077,16380
 #: note: Luftbild: vvv
 Prenzlauer Promenade: Straßenbahntrasse	3nocross 12051,16535 12077,16380 12097,16263
@@ -2008,8 +2002,8 @@ tragen (4 Stufen)	0:6 27361,-1551
 tragen (2 Stufen)	0:5 3431,1987
 tragen	0:35 3580,4309
 tragen (ca. 34 Stufen)	0:35 22675,12008
-tragen (ca. 30 Stufen)	0:30 22859,12059
-tragen (ca. 30 Stufen)	0:30 22857,12014
+tragen (13+14 Stufen)	0:30 22859,12059
+tragen (12+13 Stufen)	0:30 22857,12014
 tragen (20 Stufen)	0:30 -1887,16673
 tragen (ca. 10 Stufen)	0:15 -2194,20135
 tragen (ca. 60 Stufen)	0:100 28016,71
@@ -2374,12 +2368,11 @@ Baumstamm als Barriere	BNP:0::trailer=5 -1527,18645
 mehrere Poller	BNP:1::trailer=6 12299,19143
 Poller	BNP:1::trailer=6 8350,10662
 Drängelgitter	BNP:3::trailer=10 10062,15927
-#: next_check_id: LORTZING-2014
 #: next_check_id: LICHTBURGRING-2017
 #: osm_watch: node id="2456723872" version="2"
 #: osm_watch: node id="2456723871" version="3"
 #: XXX eventuell temporär wegen der Baustraße (vielleicht für das Wohngebiet Lichtburgring?)
-#: last_checked: 2018-04-20
+#: last_checked: 2018-05-17
 zwei Drängelgitter	BNP:6::trailer=15 10038,15418
 Schranke	BNP:3 -7969,-1659
 # REMOVED (existiert nicht mehr) --- Drängelgitter	BNP:3::trailer=10 18126,9075
@@ -2654,8 +2647,7 @@ Drängelgitter	BNP:2::trailer=5 18167,2724
 Drängelgitter	BNP:2::trailer=5 17621,4063
 Drängelgitter	BNP:2::trailer=5 18833,3781
 Drängelgitter	BNP:2::trailer=5 18018,3276
-#: note: lichte Breite beträgt 90cm
-Schranke, ggfs. auf Gehweg ausweichen	BNP:2::trailer=6 16368,7425
+# REMOVED (existiert nicht mehr oder war offen?) --- #: note: lichte Breite beträgt 90cm --- Schranke, ggfs. auf Gehweg ausweichen	BNP:2::trailer=6 16368,7425
 Drängelgitter	BNP:3::trailer=10 23012,3598
 Tor	BNP:3::trailer=5 14425,8116
 Tor	BNP:3::trailer=5 14688,8355
@@ -2889,6 +2881,11 @@ Drängelgitter	BNP:3::trailer=10 25081,-9433
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: next_check_id: ALEXANDRINENSTR-2018
+#: last_checked: 2018-05-17
+#: check_frequency: 30d
+Alexandrinenstr.: für Anhänger zu eng	BNP:0::trailer=no 10781,11243
+# 
 #: XXX hat die "Einziehung von Straßenland" hier irgendwelche Konsequenzen?
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/54re.pdf/file?y=2013
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4709
@@ -2899,12 +2896,12 @@ Drängelgitter	BNP:3::trailer=10 25081,-9433
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.401555.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/buergerbeteiligung/xv-30b-ve-353886.php
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_56_6505_6588_online.pdf (Straßenlandeinziehung)
-#: osm_watch: way id="86812767" version="4"
+#: osm_watch: way id="86812767" version="5"
 #: last_checked: 2018-05-09
 Fanny-Zobel-Str.: wegen Bauarbeiten gesperrt, vielleicht sogar dauerhaft eingezogen	2::inwork 13975,10187 14049,10164
 # 
 #: source_id: 2147342570
-#: last_checked: 2018-05-14
+#: last_checked: 2018-05-22
 #: next_check: 2018-06-01
 #: valid: -20180601
 #: priority: #A
@@ -2926,7 +2923,7 @@ Hermineweg: Baustraße, gesperrt	2::inwork 24831,10966 24906,10965
 #: check_frequency: 60d
 Karlinekenweg: Bauarbeiten, gesperrt	2::inwork 11359,20297 11405,20196
 # 
-#: last_checked: 2018-04-27
+#: last_checked: 2018-05-24
 #: check_frequency: 360d
 Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,11133
 # 
@@ -2969,6 +2966,7 @@ Unterführung S-Bhf. Karlshorst: wegen Bauarbeiten gesperrt	2::inwork 18949,8437 
 S-Bahn-Unterführung: zurzeit gesperrt, hier wird in Zukunft ein Steg verlaufen	2::inwork 4117,22722 4176,22764
 # 
 #: XXX wie wird die Qualität hier sein: Asphalt oder Verbundsteinpflaster?
+#: osm_watch: way id="412161705" version="3" brb
 #: last_checked: 2018-02-17
 #: check_frequency: 60d
 Zum Großen Herzberg (Potsdam-Golm): Straße wird noch gebaut	2::inwork -18017,333 -18026,357 -18049,424
@@ -2999,7 +2997,7 @@ Friedenshorster Str.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 18301,9946 18
 #: by: https://www.berliner-zeitung.de/berlin/berliner-wasserbetriebe-tunnel-unterm-mauerpark-wird-zur-attraktion-25534506
 #: by: http://www.berliner-woche.de/prenzlauer-berg/bauen/baugruben-am-mauerpark-sind-jetzt-eingerichtet-d158178.html
 #: source_id: 2147342369
-#: last_checked: 2018-05-04 (Südseite) vvv
+#: last_checked: 2018-05-23 vvv
 #: check_frequency: 360d vvv
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10319,15090 10354,14987
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
@@ -3039,7 +3037,7 @@ Zufahrt Parkhaus: Abrissarbeiten, Straße komplett gesperrt	2::inwork 8367,10745 
 #: next_check: 2018-09-01
 Merlitzstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19661,3421 19524,3286
 # 
-#: last_checked: 2018-05-09
+#: last_checked: 2018-05-22
 #: check_frequency: 21d
 Mauerstr. und Jägerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9195,11972 9108,11961 9076,12054
 # 
@@ -3141,7 +3139,7 @@ Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11489 20631,1162
 # REMOVED (bei osm nicht mehr construction) --- #: XXX wie sieht es mit einer Anbindung an die Kasperstr. aus? --- ja, wird es geben --- #: osm_watch: way id="461214846" version="3" --- #: last_checked: 2017-08-10 --- #: check_frequency: 90d --- Traudelstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19169,1249 19140,1137
 # 
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2018-02-09
+#: last_checked: 2018-05-17
 #: check_frequency: 90d
 Schinkelplatz: Einbahnstraße	1s:q3:inwork 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
 # 
@@ -3171,50 +3169,25 @@ Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtun
 # 
 #: osm_watch: way id="466318949" version="4"
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
-#: last_checked: 2018-05-02
+#: last_checked: 2018-05-24
 Bouchéstr.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13298,9252 13188,9134
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
-#: last_checked: 2018-04-19
+#: last_checked: 2018-05-24
 Mengerzeile: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13176,9302 13098,9205
 # 
 # REMOVED (mittlerweile ist eine Ausweichmöglichkeit markiert) --- #: last_checked: 2017-03-01 --- Karl-Marx-Platz: Bauarbeiten, Einbahnstraße gilt nun auch für Radfahrer	1s:q3 12969,7610 13100,7626
 # REMOVED --- #: source_id: 2147340790 --- #: source_id: 2147340922 --- #: last_checked: 2017-03-20 --- #: next_check: 2017-03-24 --- # REMOVED --- : valid: -20170228 --- Puschkinallee: Fahrtrichtung gesperrt	1::inwork 13795,9941 13890,9894
 # REMOVED (offen) --- #: next_check_id: STRESEMANNPARKWEG-2016 --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2016/pressemitteilung.530316.php --- #: XXX "3-4 Wochen" --- #: XXX danach eine "bituminöse Befestigung" --- #: XXX evtl. wird die Beleuchtung auch erneuert? --- #: last_checked: 2016-12-16 --- #: check_frequency: 14d --- #: priority: #A --- Parkweg zwischen Stresemannstr. und Wilhemstr.: wird instandgesetzt, in dieser Zeit nicht befahrbar	2::inwork 9249,10562 9375,10616
 # 
-#: next_check_id: CHAUSSEESTR-2016 vvv
-#: XXX laut fritz und rbbtext bis 30.08.2017
-#: XXX Richtung Süden teilweise nun mit Radspur
-#: XXX offizielle Umleitungsstrecke für Radfahrer via Zinnowitzer Str., danach keine weiteren offiziellen U-Schilder für Radfahrer, vermutlich geht es über Gartenstr. weiter
-#: by: http://www.tagesspiegel.de/downloads/19754816/1/liste-rad-infrastruktur.pdf (evtl. gibt's hier später Radstreifen)
-#: source_id: 2147340715 vvv
-#: source_id: LMS-BR_r_LMS-BR_82028
-#: osm_watch: way id="42091230" version="24"
-#: last_checked: 2018-04-30 vvv
-# REMOVED (temporary) --- #: next_check: 2017-12-31 (vermutlich wird nur auf die neue Fahrbahnhälfte gewechselt werden) vvv
-#: next_check: 2018-05-14 vvv
-#: priority: #A vvv
-Chausseestr.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 8732,14098 8654,14194
-Chausseestr.: Baustelle, Einbahnstraßenregelung	1s:q4:inwork 8654,14194 8607,14253 8570,14299 8442,14456
-#
-#: XXX_prog eigentlich gehören diese nach handicap_directed-orig, aber erstmal sollte das CGI damit umgehen können
-Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	3 8570,14299 8607,14253 8776,14364
-Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	3 8654,14194 8607,14253 8776,14364
-Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	3 8776,14364 8607,14253 8654,14194
-Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	3 8776,14364 8607,14253 8570,14299
-#: priority ^^^
-#: next_check ^^^
-#: last_checked ^^^
-#: source_id ^^^
-#: next_check_id ^^^
-# 
+# REMOVED (beendet) --- #: next_check_id: CHAUSSEESTR-2016 vvv --- #: XXX laut fritz und rbbtext bis 30.08.2017 --- #: XXX Richtung Süden teilweise nun mit Radspur --- #: XXX offizielle Umleitungsstrecke für Radfahrer via Zinnowitzer Str., danach keine weiteren offiziellen U-Schilder für Radfahrer, vermutlich geht es über Gartenstr. weiter --- #: by: http://www.tagesspiegel.de/downloads/19754816/1/liste-rad-infrastruktur.pdf (evtl. gibt's hier später Radstreifen) --- #: source_id: 2147340715 vvv --- #: source_id: LMS-BR_r_LMS-BR_82028 --- #: osm_watch: way id="42091230" version="24" --- #: last_checked: 2018-04-30 vvv --- # REMOVED (temporary) --- #: next_check: 2017-12-31 (vermutlich wird nur auf die neue Fahrbahnhälfte gewechselt werden) vvv --- #: next_check: 2018-05-14 vvv --- #: priority: #A vvv --- Chausseestr.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 8732,14098 8654,14194 --- Chausseestr.: Baustelle, Einbahnstraßenregelung	1s:q4:inwork 8654,14194 8607,14253 8570,14299 8442,14456 --- # --- #: XXX_prog eigentlich gehören diese nach handicap_directed-orig, aber erstmal sollte das CGI damit umgehen können --- Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	3 8570,14299 8607,14253 8776,14364 --- Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	3 8654,14194 8607,14253 8776,14364 --- Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	3 8776,14364 8607,14253 8654,14194 --- Chausseestr. -> Schwartzkopffstr.: Abbiegen nur umständlich möglich	3 8776,14364 8607,14253 8570,14299 --- #: priority ^^^ --- #: next_check ^^^ --- #: last_checked ^^^ --- #: source_id ^^^ --- #: next_check_id ^^^
 # REMOVED --- #: by: http://www.s-bahn-berlin.de/bauinformationen/details/rummelsburg/4530 vvv --- #: last_checked: 2017-07-28 vvv
 # REMOVED (offen) --- (Unterführung S-Bhf. Rummelsburg): Bauarbeiten, komplett gesperrt	2::inwork 15433,10765 15409,10709 15372,10655
 # REMOVED (offen) --- Nöldnerstr.: Bauarbeiten, Einbahnstraße	1s:q4 15272,10790 15388,10758 15433,10765
 # REMOVED (nur der östliche Abschnitt ist geblieben, aber relativ breit und relativ wenig Verkehr) --- #: XXX Bauarbeiten der Berliner Wasserbetriebe bis Dezember 2017 --- #: last_checked: 2017-07-23 --- #: next_check: 2017-12-01 --- #: valid: -20171231 --- Türrschmidtstr.: Bauarbeiten, Einbahnstraße	1s:q3 15541,10892 15649,10922 15756,10966
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3853&mt=0&zoom=16
-#: last_checked: 2018-05-14
+#: last_checked: 2018-05-22
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8969,11814
 # 
 #: next_check_id: NORDHAFENPARKWEST-2018
@@ -3325,12 +3298,12 @@ Weg nach Tiefwerder: kein Zugang wegen der Ersatzbrücke	2::inwork -3179,11763 -3
 #: next_check_id ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2018-04-23
+#: last_checked: 2018-05-22
 #: check_frequency: 120d
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2018-04-23
+#: last_checked: 2018-05-22
 #: check_frequency: 90d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
@@ -3389,7 +3362,7 @@ Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,689
 #: source_id: LMS-BR_r_LMS-BR_44
 #: XXX_prog: ":inwork" kann als Attribut nicht genutzt werden! vvv
 #: XXX laut fritz bis 09.01.2018
-#: last_checked: 2018-04-27 vvv
+#: last_checked: 2018-05-17 vvv
 #: next_check: 2018-06-28 vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::inwork 9984,12426 9934,12420 9858,12410
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
@@ -3460,7 +3433,7 @@ Tegeler Hafen: Weg gesperrt	2 1687,20645 1697,20623 1721,20603
 #: by: http://www.berliner-woche.de/mitte/bauen/erdlawine-rollt-ueber-die-oranienburger-ab-juli-wird-auf-dem-tacheles-areal-die-elf-meter-tiefe-baugrube-ausgehoben-d119088.html (bis 2020)
 #: by: http://www.berliner-woche.de/mitte/bauen/tacheles-areal-wird-ausgebaggert-d160052.html
 #: osm_watch: way id="33036326" version="6"
-#: last_checked: 2018-04-10
+#: last_checked: 2018-05-15
 #: check_frequency: 360d
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 # 
@@ -3468,7 +3441,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: http://www.dafmap.de/d/berlin.html?id=3588&mt=0&zoom=16
 #: by: http://www.welt.de/kultur/buehne-konzert/article140641614/Ausschuss-prueft-Kostenexplosion-bei-Staatsoper.html (Eröffnung)
 #: XXX Spielbetrieb wird im Dezember 2017 aufgenommen
-#: last_checked: 2018-04-27 vvv
+#: last_checked: 2018-05-17 vvv
 #: check_frequency: 21d vvv
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9876,12298
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9798,12267 9795,12293 9780,12401
@@ -3487,7 +3460,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="2"
-#: last_checked: 2018-05-13
+#: last_checked: 2018-05-17 (mapillary)
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 
@@ -3744,6 +3717,7 @@ Treskowallee: Straßenbahntrasse	3nocross 18631,10167 18694,10018 18703,9997 1874
 Treskowallee: Straßenbahn	3nocross 18878,9517 18875,9570 18865,9608 18823,9708
 Treskowallee: Straßenbahn	3nocross 18807,9746 18823,9708 18865,9608
 #: by: Kay-Uwe Ludwig [AM] vvv
+#: confirmed_by: srt
 Niehofer Str.	1 16942,16174 16815,16214 16692,16253
 #: confirmed_by: srt
 Drängelgitter	BNP:3::trailer=10 17362,16189
