@@ -10,8 +10,7 @@
 # REMOVED (Bauarbeiten beendet) --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5898 --- #: note: oder man fährt auf dem mit zahlreichen Engstellen zugestellten Radweg, muss dann aber ggfs. warten --- #: last_checked: 2014-03-21 --- #: valid: -20140523 --- Bergmannstr.: während der Bauarbeiten zwischen Heim- und Friesenstr. Umleitung über gepflasterte Fahrbahn	Q2 9973,9232 9880,9233 9793,9241
 # 
 #: next_check_id: DIESEL-2015 vvv
-#: last_checked: 2018-05-21 vvv
-Dieselstr.: Asphalt	Q0 14326,8062 14366,8058 14384,8056 14425,8052 14484,8044
+#: last_checked: 2018-05-28 vvv
 Dieselstr., Umfahrung: Asphalt	Q0 14419,8112 14429,8074
 #: XXX_osm laut osm Asphalt, hier aber nicht!
 Dieselstr., Umfahrung: unbefestigt	Q2 14429,8074 14484,8044
@@ -38,7 +37,7 @@ Neue Kreisstr.: Asphaltstreifen	Q0-; -7196,-1029 -7310,-1131 -7383,-1211 -7482,-
 Markgrafendamm: Asphalt	Q0 14558,10264 14608,10409 14641,10552 14675,10693 14671,10751 14674,10811
 Markgrafendamm/Hauptstr.: asphaltiert	Q0 14674,10811 14717,10855 14810,10832 14904,10812
 # REMOVED --- #: next_check_id: HAUPTSTR-2015 vvv --- #: XXX nach den Bauarbeiten vermutlich asphaltiert mit Radwegen oder -spuren vvv --- #: source_id: 2147339565 vvv --- #: last_checked: 2016-08-25 vvv --- #: next_check: 2016-08-29 vvv
-Hauptstr.: Asphalt	Q0 14904,10812 15261,10738
+Hauptstr.: Asphalt	Q0 14904,10812 15000,10792 15261,10738
 Karlshorster Str.: Asphalt	Q0 15279,10862 15272,10790 15261,10738
 Cordesstr.: schlechtes Kopfsteinpflaster	Q3 1672,9836 1645,9862 1515,10002 1477,10073 1395,10122 1318,10031
 Werkstättenweg: mäßiges Kopfsteinpflaster	Q2- 2110,10101 1843,9867
@@ -790,7 +789,7 @@ Bänschstr.: Asphalt	Q0 14996,12462 14801,12517
 Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: XXX Asphaltierung soll 2018 erfolgen
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf
-#: last_checked: 2018-05-24
+#: last_checked: 2018-05-30
 #: next_check: 2018-12-31
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1354,14 +1353,10 @@ Esplanade: asphaltiert	Q0 10975,16896 10886,16893
 Esplanade: Kleinsteinpflaster	Q2+ 10886,16893 10655,16904
 Glinkastr.: Asphalt	Q0+ 9183,12076 9195,11972 9207,11880 9218,11793 9220,11781
 Ettaler Str.: Kopfsteinpflaster	Q2 5997,10286 5948,10152
-#: XXX Sanierung des Kleinsteinpflasters ab 2018-05-28 bis voraussichtlich Herbst 2018 -> ändert sich an der Qualität etwas? Gibt es während der Bauarbeiten Einschränkungen? vvv
-#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.703939.php
-#: next_check: 2018-05-28 vvv
+# REMOVED --- #: XXX Sanierung des Kleinsteinpflasters ab 2018-05-28 bis voraussichtlich Herbst 2018 -> ändert sich an der Qualität etwas? Gibt es während der Bauarbeiten Einschränkungen? vvv --- #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.703939.php --- #: next_check: 2018-05-28 vvv
 Fasanenplatz, zur Schaperstr.: Kleinsteinpflaster	Q1- 5224,10253 5192,10234
 Fasanenplatz: Kleinsteinpflaster	Q1- 5192,10234 5191,10190
 Fasanenplatz, zur Meierottostr.: Kleinsteinpflaster	Q1- 5191,10190 5220,10192 5246,10168
-#: next_check ^^^
-#: XXX: ^^^
 Meierottostr.: Asphalt mit einigen Schäden	Q0- 5246,10168 5463,9961
 Virchowstr.: Kopfsteinpflaster	Q2 12925,13373 12876,13440
 Dunckerstr.: Kopfsteinpflaster	Q2 11337,14946 11450,15173 11480,15229 11595,15460
@@ -1919,7 +1914,7 @@ Nalepastr.: sehr guter Asphalt	Q0 17190,7306 17211,7280 17286,7173 17352,7051 17
 Ernst-Grube-Str.: Asphalt	Q0 21364,5430 21363,5336 21362,5289 21345,5157 21343,5140 21324,4986
 Ernst-Grube-Str.: Kopfsteinpflaster	Q2 21324,4986 21306,4876 21300,4837 21264,4809 21287,4757 21332,4655
 Eiselenweg: Asphalt	Q0 21206,5420 21364,5430 21447,5414
-Ahornallee: asphaltiert	Q0 21324,4986 21375,4974 21454,4928 21509,4900
+Ahornallee: Beton	Q0 21324,4986 21375,4974 21454,4928 21509,4900
 Ahornallee: Kopfsteinpflaster	Q2 21509,4900 21607,4850 21684,4814
 Mentzelstr.: Kopfsteinpflaster	Q2 21726,4896 21684,4814 21579,4579
 Charlottenstr.: Asphalt	Q0 23041,3919 22966,3912 22855,3902
@@ -2009,7 +2004,8 @@ Flemmingstr. (Köpenick): Kopfsteinpflaster	Q2 21848,4882 21726,4537
 Flemmingstr. (Köpenick): Asphalt	Q0 21848,4882 21856,4910
 Gutenbergstr.: Asphalt	Q0 21789,4520 21903,4848 21848,4882
 Färberstr.: Kleinsteinpflaster, etwas wellig	Q1- 21494,4605 21607,4850
-Eiselenweg - Uferweg: etwas sandig	Q2 21447,5414 21487,5425
+Eiselenweg - Uferweg: etwas sandig	Q2 21447,5414 21481,5429
+#: next_check_id: MENTZELPARK-2018
 #: XXX Umbau in Asphaltwege
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110922.0700.359578.html
 #: osm_watch: way id="152046369" version="5"
@@ -2018,14 +2014,14 @@ Eiselenweg - Uferweg: etwas sandig	Q2 21447,5414 21487,5425
 #: XXX "Die Herstellung des Uferweges ist zum 31.12.2016 in Planung."
 #: XXX Maßnahme Kö.13
 #: XXX mittlerweile gibt's hier Bauarbeiten
-#: last_checked: 2018-04-29
+#: last_checked: 2018-05-29
 # REMOVED --- #: check_frequency: 90d
-(Uferweg, Mentzelpark): Schotterweg	Q1- 21487,5425 21512,5404 21600,5221 21696,5053
+(Uferweg, Mentzelpark): Schotterweg	Q1- 21481,5429 21512,5404 21600,5221 21696,5053
 (Uferweg, Mentzelpark): Asphalt	Q0 21696,5053 21740,5004 21761,4979
 (Uferweg, Mentzelpark): hauptsächlich feiner Schotter	Q1 21761,4979 21821,4918 21834,4889
 (Mentzelpark): Asphalt	Q0 21761,4979 21778,4916 21834,4889 21848,4882
 Färberstr.: Beton	Q0- 21607,4850 21649,4946
-Färberstr. - Uferweg: wassergebundene Decke	Q1- 21662,4974 21665,5035 21696,5053
+Färberstr. - Uferweg: wassergebundene Decke	Q1- 21662,4974 21670,4997 21665,5035 21696,5053
 Färberstr. - Uferweg: wassergebundene Decke	Q1 21649,4946 21662,4974 21740,5004
 Glanzstr.: Asphalt	Q0 16328,7005 16433,6892 16588,6724
 Rodelbergweg: Asphalt	Q0 16433,6892 16494,6948 16563,7012 16615,7062
@@ -7161,7 +7157,7 @@ Bebelplatz: gepflastert	Q1 9680,12232 9664,12387
 (Park am Gleisdreieck, mittlerer Weg): Asphalt	Q0 8579,10030 8521,9911
 (Park am Gleisdreieck, mittlerer Weg): Beton	Q0 8521,9911 8504,9870 8477,9867
 (Park am Gleisdreieck, mittlerer Weg): Asphalt	Q0 8477,9867 8464,9744 8446,9670 8426,9572
-(Hornstr. - Park am Gleisdreieck): Beton	Q0 8779,9829 8761,9765 8722,9743
+(Hornstr. - Park am Gleisdreieck): Beton	Q0 8779,9829 8761,9765 8729,9747 8722,9743
 (Park am Gleisdreieck, südöstlicher Weg): Asphalt	Q0 8722,9743 8565,9657 8540,9644 8508,9551 8477,9562 8426,9572
 (Rampe Hornstr. - Generalszug): Asphalt	Q0 8733,9841 8722,9743
 (Park am Gleisdreieck): Asphalt	Q0 8278,10384 8265,10348 8261,10337 8252,10308 8256,10264 8264,10192 8211,10083
@@ -9717,6 +9713,7 @@ Alfred-Scholz-Platz: gepflastert	Q1 12753,8187 12779,8188 12805,8194
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.515712.php?date=20170522
 #: by: http://www.berliner-woche.de/steglitz/bauen/bezirk-investiert-in-sanierung-von-strassen-und-radwegen-d140640.html
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6572
+#: by: https://www.berliner-woche.de/steglitz-zehlendorf/c-bauen/mit-geld-aus-dem-landeshaushalt-beginnen-2018-mehrere-vorhaben_a164600 (Baubeginn Juli 2018)
 #: last_checked: 2018-03-25 (mapillary)
 #: check_frequency: 90d
 Feuerbachstr.: Asphalt teilweise aufgebrochen	Q1; 5823,6413 6083,6451
@@ -10312,8 +10309,9 @@ Mergenthalerring: schlechtes Kopfsteinpflaster	Q3+ 14121,8147 14210,8227 14219,8
 (Marseillestr. - Straße 160): unbefestigte Baustraße	Q2- 12495,21397 12507,21391 12547,21372
 #: next_check_id: NIZZASTR-2014
 #: XXX wird hier vielleicht auch asphaltiert werden?
+#: XXX laut osm offen & Verbundsteinpflaster
 #: last_checked: 2018-04-28
-#: check_frequency: 60d
+#: next_check: 2018-05-27
 (Nizzastr. - Dr.-Markus-Str.): unbefestigt	Q2+ 12434,21160 12522,21208
 #: by: mapillary
 (Nizzastr. - Dr.-Markus-Str.): asphaltiert	Q0 12522,21208 12535,21282 12507,21391 12498,21450
@@ -10635,7 +10633,7 @@ Wolziger Zeile: Asphalt mit leichten Schäden	Q0- 10257,-2654 10085,-2643 9969,-2
 (Marseillestr. - Dr.-Markus-Str.): wassergebundene Decke	Q1 12364,21623 12402,21537
 #: next_check_id: KARLINEKENWEG-2018
 #: XXX hier wird vermutlich auch gepflastert
-#: last_checked: 2018-04-28
+#: last_checked: 2018-05-27 (osm)
 #: check_frequency: 60d
 Karlinekenweg: unbefestigte Baustraße	Q2- 11359,20297 11405,20196
 Karlinekenweg: Verbundsteinpflaster	Q1+ 11405,20196 11422,20202 11496,20068 11537,20087
@@ -10660,6 +10658,9 @@ Ramlerstr. [entlang der Swinemünder Brücke]: Kopfsteinpflaster	Q2 9666,15739 964
 (Bärbel-Bohley-Ring - Ramlerstr.): Asphalt	Q0 9744,15793 9644,15780
 (Alt-Lichtenrade - Töpchiner Weg): Betonpflaster	Q0 10950,-438 11207,-413
 Furkastr.: Beton	Q0 10329,2882 10422,3091 10439,3129 10504,3198
+Dieselstr.: Asphalt	Q0 14326,8062 14366,8058 14384,8056 14425,8052 14484,8044
+Möckernkiez: Beton	Q0 8778,9759 8735,9737
+Möckernkiez: Steinplatten	Q0- 8735,9737 8710,9725 8729,9670 8596,9595 8565,9657
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -12989,8 +12990,13 @@ Drosselweg (Dahlem): Kopfsteinpflaster	Q2 2412,5901 2587,5908
 Finkenstr. (Dahlem): Asphalt	Q1 2506,6606 2435,6580 2281,6469 2173,6424 2039,6394 1970,6392 1904,6415
 Franz-Cornelsen-Weg: Asphalt	Q1 3593,7176 3597,7192 3612,7335
 Franz-Cornelsen-Weg: wassergebundene Decke	Q1 3612,7335 3634,7601
+#: by: https://www.berliner-woche.de/steglitz-zehlendorf/c-bauen/auch-der-patschkauer-weg-steht-auf-der-liste-der-sanierungsbeduerftigen-strassen-hier-koennte-die-massnahme-in-diesem-jahr-beginnen_pic198143_a164600
+#: XXX wird sich hier die Qualität verbessern? vvv
+#: next_check: 2018-09-01 vvv
 Patschkauer Weg: Kopfsteinpflaster	Q2 2996,5005 3132,4803
 Patschkauer Weg: Kopfsteinpflaster	Q3 3132,4803 3344,4488
+#: next_check ^^^
+#: XXX ^^^
 Reichensteiner Weg: Kopfsteinpflaster	Q3 3095,4680 3243,4469
 Reichensteiner Weg: Kopfsteinpflaster	Q2 3061,4725 3095,4680
 Wichernstr. (Dahlem): Kopfsteinpflaster	Q2 2942,4638 3037,4500 3097,4409
@@ -16762,7 +16768,9 @@ Rhabarberweg: stellenweise brüchiger Beton	Q2+ 17175,2498 17059,2605 16957,2672 
 #: confirmed_by: srt
 Eibischstr.: guter Beton	Q0- 16899,2344 16911,2375 16934,2407 17027,2495
 #: confirmed_by: srt
-Krokusstr.: guter Asphalt	Q0 16610,1715 16767,1831 16797,2017 16809,2091 16822,2219 16812,2347 16788,2461 16770,2550 16738,2717 16739,2736 16677,2856
+Krokusstr.: guter Asphalt	Q0 16610,1715 16767,1831 16797,2017 16809,2091 16822,2219 16812,2347 16788,2461 16770,2550 16738,2717
+#: corrected_by: srt (guter Asphalt -> ...)
+Krokusstr.: Beton	Q0- 16738,2717 16739,2736 16677,2856
 #: note: die ADFC-Karte meint "gut geeignet"
 #: confirmed_by: srt (teilweise)
 Margueritenring: guter bis mäßiger Beton	Q1+ 16513,2217 16822,2219 16917,2218 17009,2095 17080,2074 17286,2053 17401,2036 17440,2068
@@ -20084,10 +20092,9 @@ Pölitzer Str.: Asphalt	Q0 23430,11576 23495,11753 23540,11943
 #: by: Volker (retzlaff): vvv
 #: confirmed_by: srt
 Diethelmweg: gutes Verbundsteinpflaster	Q1 21649,13995 21677,14241 21696,14430
-#: corrected_by: srt (guter Asphalt -> ..., evtl. neu gemacht)
-Ingeweg: sehr gutes Betonpflaster	Q0 21764,13981 21649,13995 21533,14009
-#: add_fragezeichen liegt hier noch immer Asphalt oder ist hier nun auch Betonpflaster?
-Ingeweg: guter Asphalt	Q0 21533,14009 21412,14023 21362,14028
+#: corrected_by: srt (guter Asphalt -> ..., evtl. neu gemacht), osm
+Ingeweg: sehr gutes Betonpflaster	Q0 21764,13981 21649,13995 21533,14009 21412,14023
+Ingeweg: guter Asphalt	Q0 21412,14023 21362,14028
 #: confirmed_by: srt
 Christelweg: guter Asphalt	Q0 21439,14273 21561,14257 21677,14241 21794,14229
 Alwineweg: guter Beton	Q0 21456,14491 21584,14459 21696,14430 21814,14407
@@ -25514,9 +25521,10 @@ Cuxhavener Str.: Asphalt	Q1 5894,12480 5919,12423
 (Zufahrt Parkplätze Bartningallee): Kopfsteinpflaster	Q2 6500,12605 6361,12617 6304,12603 6188,12553 6179,12513
 (Zufahrt Parkplätze Bartningallee): Gehwegplatten	Q1 6179,12513 6149,12454
 (Altonaer Str. - Flensburger Str.): Gehwegplatten	Q1 6173,12396 6149,12454 6137,12532 6160,12681
-Cuxhavener Str.: Kopfsteinpflaster	Q2 5919,12423 5951,12353 5999,12280
-(Zufahrt Parkplätze Kloppstockstr.): Kopfsteinpflaster	Q2 5917,12079 5880,12100 5999,12280
-(Cuxhavener Str. - Altonaer Str.): fester Sand	Q1 5999,12280 6090,12451
+Cuxhavener Str.: Kopfsteinpflaster	Q2 5919,12423 5951,12353 5982,12291
+#: corrected_by: srt (Q2 -> Q2-)
+(Zufahrt Parkplätze Kloppstockstr.): Kopfsteinpflaster	Q2- 5909,12073 5870,12106 5982,12291
+(Cuxhavener Str. - Altonaer Str.): fester Sand	Q1 5982,12291 6090,12451
 Hanseatenweg: Kopfsteinpflaster	Q1 6442,12545 6445,12495 6428,12439 6368,12455 6324,12455 6314,12518
 Am Waldfriedhof: Asphalt	Q0 922,4910 928,4996
 Am Waldfriedhof: Beton	Q0 928,4996 938,5088 966,5151 1004,5194 1090,5268 1114,5290 1139,5308 1212,5353

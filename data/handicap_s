@@ -8,6 +8,7 @@ Dˆringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261
 Lange Str.: Bauarbeiten, Einbahnstraﬂenregelung	q2::inwork; 12409,11902 12238,11931
 Singerstr.: Bauarbeiten an der Kreuzung Ifflandstr., Fahrbahn gesperrt, Bordstein	q2::inwork 11845,12292 11635,12398
 Singerstr.: Bauarbeiten an der Kreuzung Ifflandstr., Fahrbahn gesperrt, Bordstein	q4::inwork 11635,12398 11607,12412
+M¸ncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
 Rigaer Str.: Baustelle, Fuﬂg‰nger	q3::inwork 14538,12371 14748,12314
 Auerstr.: zwischen Richard-Sorge-Str. und Lˆwestr. Baustelle, Einbahnstraﬂenregelung	q2::inwork; 13273,12902 13202,12790
 Friedrich-Krause-Ufer: Engstelle wegen Bauarbeiten, voraussichtlich bis Mitte November 2018	q2::inwork 7368,14573 7314,14599 7167,14666
@@ -34,10 +35,11 @@ Wandlitzstr.: Fahrbahn an der Treskowallee gesperrt, Ausweichen ¸ber Gehweg	q3::
 Wilhelminenhofstr.: Bauarbeiten zwischen Siemensstr. und Edisonstr., Fahrbahn und teilweise auch Radweg gesperrt	q3::inwork 17826,6495 17991,6431
 Friesenstr.: Fahrbahn Richtung Zossener Str. gesperrt	q4::inwork; 9801,8683 9801,8889 9799,8962 9797,9063 9795,9162 9793,9241
 Mˆckernstr.: Bauarbeiten, Einbahnstraﬂe, ehemaliger Radweg kann benutzt werden	q3::inwork; 9022,10857 8941,10663 8926,10626
+Herbert-von-Karajan-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 7970,11441 7965,11467 8005,11627
+Ludwig-Beck-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 8301,11469 8309,11390
 Englische Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 5424,11944 5518,12159
 Schleswiger Ufer: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5894,12480 5944,12548
 Nansenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12412,9610 12374,9542
-Dieselstr., Umfahrung: Fuﬂg‰nger, Bordstein, schmal	q2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14484,8044
 Karl-Marx-Str.: Bauarbeiten zwischen Rollbergstr. und Briesestr., Richtung S¸den auf engen Gehweg ausweichen	q4::inwork; 12714,8249 12753,8187 12794,8103
 Gotlindestr.: Sperrung der Fahrbahn an der Ruschestr.	q4::inwork 15947,12626 16000,12625
 Helmstr.: an der Hauptstr. Bauarbeiten, Behinderungen	q2::inwork 7444,9148 7382,9187
@@ -392,8 +394,8 @@ Spreeuferweg: besonders an Wochenenden tags¸ber viele Fuﬂg‰nger	q1 7908,12804 79
 Spreeuferweg: besonders an Wochenenden tags¸ber viele Fuﬂg‰nger	q1 8257,13037 8277,13032 8317,13015 8408,12968 8464,12919 8498,12870 8529,12757 8538,12710 8574,12662 8635,12629 8754,12622
 Spreeuferweg: besonders an Wochenenden tags¸ber viele Fuﬂg‰nger	q1 8635,12629 8709,12605 8756,12608
 Helenenhof: enge Tore, Fuﬂg‰nger	q3 14506,11275 14395,11356
-F‰rberstr. - Uferweg: sehr eng	q2 21662,4974 21665,5035 21696,5053
-Uferweg, Mentzelpark: Fuﬂg‰nger	q1 21487,5425 21512,5404 21600,5221 21696,5053 21740,5004 21761,4979
+F‰rberstr. - Uferweg: sehr eng	q2 21662,4974 21670,4997 21665,5035 21696,5053
+Uferweg, Mentzelpark: Fuﬂg‰nger	q1 21481,5429 21512,5404 21600,5221 21696,5053 21740,5004 21761,4979
 Uferweg, Mentzelpark: Fuﬂg‰nger, eng	q3 21761,4979 21821,4918 21834,4889
 (Mentzelpark): Fuﬂg‰nger	q1 21761,4979 21778,4916 21834,4889 21848,4882
 (Mentzelpark): Fuﬂg‰nger	q1 21726,4896 21741,4889 21778,4916
@@ -1738,6 +1740,9 @@ Am Lichtenrader Graben: einige Fuﬂg‰nger	q1 10695,-1515 10615,-1772 10537,-1943 
 (Schwedter Str. - Alt-Lichtenrade): schmal	q2 11023,-374 11010,-378 10938,-405
 Dorotheenstr.: Bordstein, Fuﬂg‰nger	q3 22926,4123 22949,4136
 Elisabeth-Schiemann-Str.: einige Bodenschwellen, meist umfahrbar	q1 20586,18822 20553,18734 20533,18682 20512,18626 20448,18454 20458,18424
+(Potsdamer Platz - Linkstr.): Bordstein, einige Fuﬂg‰nger	q3 8474,11350 8481,11447
+(Gleisdreieckpark - Mˆckernkiez): eng	q3 8729,9747 8735,9737
+Mˆckernkiez: Rampe	q3 8778,9759 8735,9737
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schulhof, Radfahren verboten	q3 7242,8586 7288,8635
@@ -1905,7 +1910,7 @@ Br¸der-Grimm-Gasse: Fuﬂg‰nger	q2 8351,11163 8343,11133
 (Anhalter Steg - Anhalter Bahnhof): Fuﬂg‰nger	q1 8773,10429 8776,10548 8808,10598 8853,10708 8912,10846 8938,10872
 Fontaneplatz: Fuﬂg‰nger, Bordsteinkante	q3 8474,11350 8427,11365
 (Fontaneplatz - Alte Potsdamer Str.): Fuﬂg‰nger, schmal	q4 8427,11365 8389,11378
-Voxstr.: Fuﬂg‰nger	q3 8309,11390 8375,11368
+Voxstr.: Fuﬂg‰nger, Restaurantbetrieb	q4 8309,11390 8375,11368
 Alice-Salomon-Park: Fuﬂg‰nger, Umfahrung an der Rosenheimer Str.	q1 6851,9365 6771,9458 6727,9497
 Alice-Salomon-Park: Fuﬂg‰nger	q1 6771,9458 6728,9457
 (Geﬂlerstr. - Monumentenstr.): Fuﬂg‰nger, Kinder	q2 7973,8886 7970,9061 8009,9063
@@ -1995,7 +2000,7 @@ Schleswiger Ufer: schmal, Fuﬂg‰nger	q2 5858,12425 5894,12480
 Cuxhavener Str.: Wohngebiet, Fuﬂg‰nger	q2 5894,12480 5919,12423
 (Zufahrt Parkpl‰tze Bartningallee): schmal, un¸bersichtlich, Fuﬂg‰nger	q3 6179,12513 6149,12454
 (Altonaer Str. - Flensburger Str.): Einkaufszentrum, Fuﬂg‰nger	q2 6173,12396 6149,12454 6137,12532 6160,12681
-(Cuxhavener Str. - Altonaer Str.): schmal, Fuﬂg‰nger	q2 5999,12280 6090,12451
+(Cuxhavener Str. - Altonaer Str.): schmal, Fuﬂg‰nger	q2 5982,12291 6090,12451
 (Parkweg Ortelsburger Allee): Fuﬂg‰nger	q2 48,10922 37,11014 23,11137 16,11190
 (Parkweg Kranzallee): Fuﬂg‰nger	q1 -532,10994 -511,11127
 (Teufelsseechaussee - Waldschulallee): Fuﬂg‰nger	q1 194,10846 355,10740

@@ -8138,12 +8138,15 @@ EOF
 	2::temp 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359
 EOF
      },
-     { from  => $isodate2epoch->("2017-05-18 00:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2017-05-20 23:59:59"),
-       text  => 'Alt-Rudow: Frühlingsfest, Straße zwischen Bildhauerweg und Krokusstr. gesperrt (19. und 20. Mai 2017)',
+     { from  => $isodate2epoch->("2018-05-25 00:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2018-05-27 23:59:59"),
+       periodic => 1,
+       recurrences => [['yearly', days => 18, months => 5]],
+       text  => 'Alt-Rudow: Rudower Frühlingsmeile, Straße zwischen Köpenicker Str. und Bildhauerweg, sowie Krokusstr. bis Prieroser Str. gesperrt (26. und 27. Mai 2018)',
        type  => 'gesperrt',
        data  => <<EOF,
 	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
+	2::temp 16610,1715 16767,1831
 EOF
      },
      { from  => 1178564497, # 2007-05-07 21:01
@@ -23756,6 +23759,7 @@ EOF
 #: note: am Mi, den 2018-01-24 gegen 18:45: offen
 #: note: am Mo, den 2018-02-26 gegen 18:50: offen
 #: note: am Fr, den 2018-04-04 gegen 18:40: offen
+#: note: am Mo, den 2018-05-28 gegen 18:40: offen
 #: tempex: volatile vvv
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
@@ -24493,14 +24497,14 @@ EOF
 	q4; 15205,11080 15102,11120 15021,11152 14988,11130
 EOF
      },
-     { from  => $isodate2epoch->("2018-01-15 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-01-18 23:59:59"),
+     { from  => $isodate2epoch->("2018-07-02 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-07-07 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6]],
-       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 16.01.2018-18.01.2018',
+       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 03.07.2018-07.07.2018',
        type  => 'handicap',
-       source_id => '2147339708',
+       source_id => 'https://fashion-week-berlin.com/blog/single-news/das-sind-die-termine-fuer-2018.html',
        data  => <<EOF,
 #: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
 	q4::inwork 8634,10426 8384,10507 8527,10621
@@ -25659,8 +25663,8 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-05-18 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2018-05-30 vvv
+#: check_frequency: 7d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
 	q2::inwork; 11139,12243 11092,12375
@@ -26452,11 +26456,14 @@ EOF
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=30361
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
 #: by: mapillary (Gehweg für Radfahrer frei)
+#: source_id: 2147342671
 #: XXX wann sind die Bauarbeiten beendet?
 #: last_checked: 2018-05-01
 #: check_frequency: 30d
 	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
+#: XXX hier laut fritz nur bis 2018-07-05
+	q3::inwork; 2781,2493 2740,2588 2625,2850
 EOF
      },
      { from  => 1502483236, # 2017-08-11 22:27
@@ -26541,7 +26548,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-05-20
+#: last_checked: 2018-05-26
 	2::inwork 14652,10201 14569,10055
 EOF
      },
@@ -26699,14 +26706,14 @@ EOF
      },
      { from  => 1523311200, # 2018-04-10 00:00
        until => undef, # XXX
-       text  => 'Wiesenweg: kann insbesondere während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
+       text  => 'Wiesenweg: kann während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann ist die Durchfahrt gesperrt?
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="4"
-#: last_checked: 2018-05-23
+#: last_checked: 2018-05-25
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 EOF
@@ -26739,7 +26746,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-05-17 (mapillary) vvv
+#: last_checked: 2018-05-25 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -26874,12 +26881,13 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Vorbergstr.: Bauarbeiten zwischen Gleditschstr. und Akazienstr., Fahrbahn gesperrt, Ende unbekannt',
+       text  => 'Vorbergstr.: Bauarbeiten zwischen Gleditschstr. und Akazienstr., Fahrbahn gesperrt, außerdem Sperrung in der Gleditschstr., Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 # XXX_prog: eigentlich q3-
-#: last_checked: 2018-05-08
+#: last_checked: 2018-05-30
 	q3::inwork 7136,9223 7012,9222
+	q2::inwork 7136,9223 7130,9316
 EOF
      },
      { from  => 1521060826, # 2018-03-14 21:53
@@ -26992,7 +27000,7 @@ EOF
 EOF
      },
      { from  => 1522789491, # 2018-04-03 23:04
-       until => 1527803999, # 2018-05-31 23:59
+       until => 1527718780, # 1527803999, # 2018-05-31 23:59
        text  => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; bis Ende Mai 2018',
        type  => 'handicap',
        source_id => '2147341699',
@@ -27089,8 +27097,9 @@ EOF
        text  => 'Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2018-05-06
-	2::inwork 21696,5053 21600,5221 21512,5404 21487,5425
+#: next_check_id: MENTZELPARK-2018
+#: last_checked: 2018-05-29
+	2::inwork 21696,5053 21600,5221 21512,5404 21481,5429
 EOF
      },
      { from  => undef, # 
@@ -27175,14 +27184,16 @@ EOF
      },
      { from  => 1527186729, # 2018-05-24 20:32
        until => 1534888800, # 2018-08-22 00:00
-       text  => 'Gubener Str.: Bauarbeiten zwischen Graudenzer Str. und Hildegard-Jadamowitz-Str., eventuell sind auch Radfahrer betroffen, bis 21.08.2018',
+       text  => 'Gubener Str.: Bauarbeiten zwischen Graudenzer Str. und Hildegard-Jadamowitz-Str., Einbahnstraßenregelung, bis 21.08.2018',
        type  => 'handicap',
        source_id => '2147342639',
        data  => <<EOF,
 #: XXX vielleicht wird die Fahrbahn repariert?
 #: XXX überprüfen
+#: last_checked: 2018-05-28
+#: check_frequency: 14d
 #: priority: #A
-	q4::inwork 13198,12311 13243,12222
+	q3::inwork; 13198,12311 13243,12222
 EOF
      },
      { from  => 1527186792, # 2018-05-24 20:33
@@ -27205,6 +27216,47 @@ EOF
 #: XXX überprüfen
 #: priority: #C
 	q4::inwork 4303,12692 4234,12710 4124,12721 4055,12713 3949,12710 3734,12715
+EOF
+     },
+     { from  => undef, # 
+       until => 1527527586, # -> handicap_s # undef, # XXX
+       text  => 'Herbert-von-Karajan-Str.: Fahrbahn wegen Bauarbeiten gesperrt',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.681010.php',
+       data  => <<EOF,
+#: by: osm contributor
+#: osm_watch: way id="531952542" version="4"
+	2::inwork 7970,11441 7965,11467 8005,11627
+EOF
+     },
+     { from  => $isodate2epoch->("2018-05-25 00:00:00"),
+       until => 1546297200, # 2019-01-01 00:00
+       text  => 'Mühlenbeck - Schönerlinde: Neubau einer Brücke, 25.05.2018 bis 31.12.2018',
+       type  => 'gesperrt',
+       source_id => '181100105',
+       data  => <<EOF,
+	2::inwork 9690,28645 10701,28420
+EOF
+     },
+     { from  => 1527533410, # 2018-05-28 20:50
+       until => 1531691999, # 2018-07-15 23:59
+       text  => 'Weiskopffstr.: Gleisbauarbeiten zwischen An der Wuhlheide und Parkstr., Fahrbahn gesperrt, bis Mitte Juli 2018',
+       type  => 'handicap',
+       source_id => '2147342666',
+       data  => <<EOF,
+	q4::inwork 19958,5950 19681,5924
+EOF
+     },
+     { from  => undef, # 
+       until => 1538258400, # 2018-09-30 00:00
+       text  => 'Fasanenplatz: Bauarbeiten, Sperrung der Fahrbahn, Bordstein',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.703939.php',
+       data  => <<EOF,
+#: XXX Sanierung des Kleinsteinpflasters ab 2018-05-28 bis voraussichtlich Herbst 2018 -> ändert sich an der Qualität etwas?
+#: last_checked: 2018-05-30
+#: check_frequency: 14d
+	q4::inwork 5224,10253 5192,10234
 EOF
      },
     );
