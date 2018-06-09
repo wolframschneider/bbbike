@@ -2960,7 +2960,6 @@ Drängelgitter	BNP:3:-192:trailer=10 25081,-9433
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
 Alexandrinenstr.: für Anhänger zu eng	BNP:0:-124:trailer=no 10781,11243
 Fanny-Zobel-Str.: wegen Bauarbeiten gesperrt, vielleicht sogar dauerhaft eingezogen	2::inwork 13975,10187 14049,10164
-Koppenstr.: Bauarbeiten, Fahrbahn Richtung Rüdersdorfer Str. gesperrt	1s:inwork 12573,12227 12596,12472
 Charlotte-von-Mahlsdorf-Ring: Baustraße	2::inwork 24649,10710 24728,10722 24739,10645
 Hermineweg: Baustraße, gesperrt	2::inwork 24831,10966 24906,10965
 Karlinekenweg: Bauarbeiten, gesperrt	2::inwork 11359,20297 11405,20196
@@ -2973,8 +2972,6 @@ S-Bahn-Unterführung: zurzeit gesperrt, hier wird in Zukunft ein Steg verlaufen	2
 Zum Großen Herzberg (Potsdam-Golm): Straße wird noch gebaut	2::inwork -18017,333 -18026,357 -18049,424
 Wartenbergstr.	1s:inwork 15423,11667 15337,11639 15328,11636 15300,11584
 Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12677,-1536 -12685,-1449
-Friedenshorster Str.: Einbahnstraße wegen Bauarbeiten	1s:inwork 18296,10027 18312,9985 18301,9946
-Friedenshorster Str.: Einbahnstraße wegen Bauarbeiten	1s:inwork 18301,9946 18266,9853
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10319,15090 10354,14987
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
 Im Lichtenhain: neue Straße, zurzeit Bauarbeiten; Qualität, genaue Lage?	2::inwork 16497,10685 16462,10571

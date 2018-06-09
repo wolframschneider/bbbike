@@ -916,7 +916,7 @@ Gehweg für Radfahrer frei	RW1; 21002,5755 20880,5736
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=22111
 #: source_id: IM_023718
 #: source_id: 2147339540
-#: last_checked: 2018-06-01
+#: last_checked: 2018-06-06
 #: next_check: 2018-06-29
 # REMOVED --- #: check_frequency: 30d
 	RW2;RW8 14530,7301 14369,7376 14334,7395 14174,7505
@@ -1157,7 +1157,7 @@ neu asphaltiert, abgesperrt	RW0; 17681,7589 17619,7679
 #: XXX werden hier noch Radspuren oder ein neuer Radweg angelegt?
 #: source_id: 2147341340
 #: source_id: LMS-BR_r_LMS-BR_98104
-#: last_checked: 2018-05-30
+#: last_checked: 2018-06-06
 #: check_frequency: 60d
 	RW0; 17619,7679 17527,7812 17317,8115 17299,8140 17202,8391
 	RW1; 17202,8391 17143,8565 17105,8666
@@ -2509,8 +2509,10 @@ asphaltierter Gehweg für Radfahrer frei	RW1; 22062,773 22110,702 22162,452 22166
 Gehweg für Radfahrer frei	RW1; 18922,2238 18928,2319 18929,2454
 #: XXX eventuell wird hier eine Verbesserung passieren
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/praesentation-tief-9-ag-radverkehr.pdf ("Umsetzung frühestens 2018")
+#: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/tief-10-ag_radverkehr-12-03-2018-kompatibilitaetsmodus.pdf (2021)
 #: last_checked: 2018-04-29
-#: check_frequency: 90d
+# REMOVED --- #: check_frequency: 90d
+#: next_check: 2021-03-01
 Kein abgeflachter Bordstein bei der Auffahrt!	RW1; 18922,2238 18881,2062
 	RW1; 18881,2062 18922,2238
 	RW1;RW1 18881,2062 18863,1950 18804,1791 18807,1758 18839,1715 18888,1658 18916,1626 18974,1559 19061,1457 19107,1403 19251,1240 19333,1154
@@ -5154,5 +5156,5 @@ Tempo 10	RW6;RW6 -7275,-357 -7300,-292 -7444,-100 -7460,-33
 	RW6;RW6 17310,15186 17317,15059
 	RW6;RW6 17227,15054 17262,15056 17317,15059 17345,15061
 #: XXX wird hier noch ein Radwegschild aufgestellt?
-#: last_checked: 2018-06-05
-	RW3; 13330,13468 13228,13615
+#: last_checked: 2018-06-07
+	RW3; 13330,13468 13228,13615 13225,13620 13166,13707 13100,13803

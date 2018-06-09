@@ -2282,7 +2282,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 5187,22601
 	F -224,16095
 	F 3273,14738
-	X::inwork 8250,14672
 	F 14810,10832
 	X 7171,5831
 	X 19894,-835
@@ -2306,6 +2305,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 7740,1041
 	X 22092,999
 	X -5886,10837
+	X::inwork 16279,5170
 	X -17127,-554
 	F -12868,-502
 	X -12940,-1625

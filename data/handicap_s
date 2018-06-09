@@ -363,7 +363,7 @@ Fritz-Schiff-Weg: Fußgänger	q1 13457,12505 13476,12461 13448,12340
 (Molkenmarkt - Parochialstr.): Bordstein	q2 10738,12364 10831,12371
 (Crellestr. - Julius-Leber-Brücke): Fußgänger	q2 7524,9093 7555,8978 7509,8929 7497,8916
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10364,11896 10329,11842 10373,11781 10439,11772 10515,11785 10599,11819 10672,11870
-(Fischerinsel, Spreekanalufer): Bauarbeiten, Engstelle	q3::inwork 10672,11870 10776,11942
+(Fischerinsel, Spreekanalufer): Fußgänger	q1 10672,11870 10776,11942
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10776,11942 10824,11992
 (Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17281,10598 17249,10666
 (Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17249,10702 17247,10755 17261,10827 17257,10875
@@ -1745,6 +1745,7 @@ Elisabeth-Schiemann-Str.: einige Bodenschwellen, meist umfahrbar	q1 20586,18822 
 (Gleisdreieckpark - Möckernkiez): eng	q3 8729,9747 8735,9737
 Möckernkiez: Rampe	q3 8778,9759 8757,9748 8735,9737
 (Fredersdorfer Str. - Hildegard-Jadamowitz-Str.): zwei Bodenschwellen	q1 12908,12280 12883,12118 12893,12077 12923,12043
+Königsheide: enge und übersichtliche Stelle	q3 16279,5170 16320,5187
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schulhof, Radfahren verboten	q3 7242,8586 7288,8635
@@ -2670,10 +2671,7 @@ Sewanstr. - Balatonstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::ig
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich): gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
 Soorstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 1861,11284 1884,11126 1865,11082
-Koppenstr.: Bauarbeiten, Fahrbahn Richtung Rüdersdorfer Str. gesperrt: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2:inwork::igndisp; 12573,12227 12596,12472
 Wartenbergstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2:inwork::igndisp; 15423,11667 15337,11639 15328,11636 15300,11584
-Friedenshorster Str.: Einbahnstraße wegen Bauarbeiten: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2:inwork::igndisp; 18296,10027 18312,9985 18301,9946
-Friedenshorster Str.: Einbahnstraße wegen Bauarbeiten: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 18301,9946 18266,9853
 Mauerstr. und Jägerstr.: Bauarbeiten, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 9195,11972 9108,11961 9076,12054
 Gutenbergstr.: Einbahnstraße wegen Bauarbeiten: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 5317,12242 5518,12159
 Wegelystr.: Einbahnstraße wegen Bauarbeiten: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 5518,12159 5627,12105 5658,12082 5712,12033 5775,11975
