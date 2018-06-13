@@ -3145,29 +3145,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.die-classic-days-berlin.de/programm-2/
-#: note: kann im Juni oder Juli stattfinden
-# REMOVED --- #: tempex: 20170616T0400-20170619T0400
-	q4::temp 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435
-',
-         'from' => 1528423200,
-         'id' => 2439,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              2,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'IM_025248',
-         'text' => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 09.06.2018 bis 11.06.2018 früh',
-         'type' => 'handicap',
-         'until' => 1528682400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3870,26 +3848,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-06-07 vvv
-#: check_frequency: 1d vvv
-	q4::inwork 10954,12635 11059,12450
-	q4::inwork 11059,12450 11084,12395 11092,12375
-	q4::inwork 11139,12243 11092,12375
-	2::inwork 11032,12439 11059,12450
-	2::inwork 11049,12386 11084,12395
-# REMOVED (eh\' nur teilweise) --- q2::inwork; 11092,12375 11209,12430
-#: check_frequency ^^^
-#: last_checked ^^^
-#: XXX ^^^
-',
-         'from' => undef,
-         'id' => 2825,
-         'text' => 'Littenstr.: Bauarbeiten, Fahrbahn gesperrt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4111,10 +4070,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX bis wann ist die Durchfahrt gesperrt?
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="4"
-#: last_checked: 2018-05-25
+#: last_checked: 2018-06-11
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 ',
@@ -4128,7 +4087,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-05-25 vvv
+#: last_checked: 2018-06-08 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4234,7 +4193,19 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1530374400
        },
-       undef,
+       {
+         'data' => '#: source_id: 2147342390
+# REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
+#: last_checked: 2018-06-08
+#: check_frequency: 7d
+	q4::inwork; 8861,12125 9054,12154
+',
+         'from' => 1522864912,
+         'id' => 2947,
+         'text' => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Mauerstr.',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        undef,
        {
@@ -4411,27 +4382,28 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1531497600
        },
-       {
-         'data' => '#: note: laut fritz bis 10.06.2018, laut vmz nur bis Freitag
-#: source_id: 2147342707
-	q4::inwork; 14109,13449 14052,13389
-',
-         'from' => 1527976800,
-         'id' => 2967,
-         'source_id' => '2147342695',
-         'text' => 'Thaerstraßenbrücke: Baustelle Richtung Süden, Fahrbahn gesperrt, Radfahrer müssen auf den gegenüberliegenden Gehweg wechseln, bis 8. Juni 2018 ',
-         'type' => 'handicap',
-         'until' => 1528452000
-       },
+       undef,
        {
          'data' => '#: XXX eventuell hängen die Bauarbeiten mit den Bauarbeiten in der Eldenaer Str. zusammen
 #: XXX wird danach komplett asphaltiert sein?
-#: last_checked: 2018-06-07
+#: last_checked: 2018-06-08
 	q4::inwork 13767,12626 13786,12636 13863,12677 13911,12692
 ',
          'from' => undef,
          'id' => 2968,
          'text' => 'Weidenweg: Bauarbeiten, Fahrbahn gesperrt',
+         'type' => 'handicap',
+         'until' => 1536940800
+       },
+       {
+         'data' => '#: XXX eventuell hängen die Bauarbeiten mit den Bauarbeiten in der Eldenaer Str. zusammen
+#: XXX wird danach komplett asphaltiert sein?
+#: last_checked: 2018-06-08
+	q4::inwork; 14096,12827 14058,12709
+',
+         'from' => undef,
+         'id' => 2969,
+         'text' => 'Liebigstr.: Bauarbeiten, Einbahnstraßenregelung',
          'type' => 'handicap',
          'until' => 1536940800
        }

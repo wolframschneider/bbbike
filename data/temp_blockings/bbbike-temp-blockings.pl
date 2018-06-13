@@ -4706,7 +4706,7 @@ EOF
        text  => 'B 167 Neustädter Str. OD Neuruppin, zw. Damaschkeweg u. Zufahrt Lidl Straßen-u.Kanalbau,Mittelinsel Vollsperrung 06.06.2006-14.07.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -32062,56731 -33038,55844
+	q4 -32420,56439 -33038,55844
 EOF
      },
      { from  => 1149631200, # 2006-06-07 00:00
@@ -17149,7 +17149,7 @@ EOF
        text  => 'B 167 Neuruppin - AS Neuruppin zw. Bechlin u. AS Neuruppin Straßenbauarbeiten Vollsperrung 16.11.2009-29.11.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -35577,54824 -35059,54768 -34499,54966 -33922,55483
+	2::inwork -35577,54824 -35059,54768 -34557,54860 -33859,55398
 EOF
      },
      { from  => 1259276209, # 2009-11-26 23:56
@@ -19929,8 +19929,9 @@ EOF
      },
      { from  => $isodate2epoch->("2017-07-13 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2017-07-16 23:59:59"),
-       periodic => 1,
-       recurrences => [['yearly', days => 9, months => 7]], # kann auch erst im August stattfinden
+# findet nicht mehr statt, siehe https://de-de.facebook.com/WeissenseerBlumenfest/
+#       periodic => 1,
+#       recurrences => [['yearly', days => 9, months => 7]], # kann auch erst im August stattfinden
        text  => 'Berliner Allee (Weißensee): Veranstaltung (Weißenseer Blumenfest), Fahrtrichtung gesperrt stadteinwärts vom Weißen See bis zum Antonplatz, 14.7.2017 bis 16.7.2017',
        type  => 'handicap',
        source_id => 'http://www.weissenseer-blumenfest.de', # note: artificial query string not allowed (e.g. ?y=2017)
@@ -25658,21 +25659,21 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1528827442, # weitgehend beendet --- undef, # XXX
        text  => 'Littenstr.: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-06-07 vvv
-#: check_frequency: 1d vvv
+# REMOVED --- #: last_checked: 2018-06-07 vvv
+# REMOVED --- #: check_frequency: 1d vvv
 	q4::inwork 10954,12635 11059,12450
 	q4::inwork 11059,12450 11084,12395 11092,12375
 	q4::inwork 11139,12243 11092,12375
 	2::inwork 11032,12439 11059,12450
 	2::inwork 11049,12386 11084,12395
 # REMOVED (eh' nur teilweise) --- q2::inwork; 11092,12375 11209,12430
-#: check_frequency ^^^
-#: last_checked ^^^
+# REMOVED --- #: check_frequency ^^^
+# REMOVED --- #: last_checked ^^^
 #: XXX ^^^
 EOF
      },
@@ -26710,10 +26711,10 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann ist die Durchfahrt gesperrt?
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="4"
-#: last_checked: 2018-05-25
+#: last_checked: 2018-06-11
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 EOF
@@ -26746,7 +26747,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-05-25 vvv
+#: last_checked: 2018-06-08 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27012,12 +27013,14 @@ EOF
 EOF
      },
      { from  => 1522864912, # 2018-04-04 20:01
-       until => $isodate2epoch->("2018-05-15 20:00:00"), # 1525449600, # 2018-05-04 18:00
-       text  => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Mauerstr., bis Mitte Mai 2018',
+       until => undef, # $isodate2epoch->("2018-05-15 20:00:00"), # 1525449600, # 2018-05-04 18:00
+       text  => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Mauerstr.',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147342390
 # REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
+#: last_checked: 2018-06-08
+#: check_frequency: 7d
 	q4::inwork; 8861,12125 9054,12154
 EOF
      },
@@ -27289,8 +27292,19 @@ EOF
        data  => <<EOF,
 #: XXX eventuell hängen die Bauarbeiten mit den Bauarbeiten in der Eldenaer Str. zusammen
 #: XXX wird danach komplett asphaltiert sein?
-#: last_checked: 2018-06-07
+#: last_checked: 2018-06-08
 	q4::inwork 13767,12626 13786,12636 13863,12677 13911,12692
+EOF
+     },
+     { from  => undef,
+       until => $isodate2epoch->("2018-09-14 18:00:00"),
+       text  => 'Liebigstr.: Bauarbeiten, Einbahnstraßenregelung',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX eventuell hängen die Bauarbeiten mit den Bauarbeiten in der Eldenaer Str. zusammen
+#: XXX wird danach komplett asphaltiert sein?
+#: last_checked: 2018-06-08
+	q4::inwork; 14096,12827 14058,12709
 EOF
      },
     );
