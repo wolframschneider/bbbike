@@ -26850,11 +26850,12 @@ EOF
 EOF
      },
      { from  => 1517602202, # 2018-02-02 21:10
-       until => 1525125599, # 2018-04-30 23:59
-       text  => 'Ostburger Weg: Bauarbeiten zwischen Will-Meisel-Weg und Am Espenpfuhl, Fahrbahn gesperrt, bis Ende April 2018 ',
+       until => $isodate2epoch->("2018-09-17 18:00:00"), # 1525125599, # 2018-04-30 23:59
+       text  => 'Ostburger Weg: Bauarbeiten zwischen Will-Meisel-Weg und Am Espenpfuhl, Fahrbahn gesperrt, bis Mitte September 2018 ',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20180202',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/rudow/c-bauen/ostburger-weg-erst-im-herbst-fertig_a168854
 	2::inwork 18023,833 17928,764 17734,675
 EOF
      },
@@ -27014,8 +27015,8 @@ EOF
 EOF
      },
      { from  => 1522789491, # 2018-04-03 23:04
-       until => $isodate2epoch->("2018-06-30 18:00:00"), # 1527718780, # 1527803999, # 2018-05-31 23:59
-       text  => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; bis Ende Juni 2018',
+       until => $isodate2epoch->("2018-07-15 18:00:00"), # 1527718780, # 1527803999, # 2018-05-31 23:59
+       text  => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; bis Mitte Juli 2018',
        type  => 'handicap',
        source_id => '2147341699',
        data  => <<EOF,
@@ -27307,7 +27308,7 @@ EOF
 #: XXX wird danach komplett asphaltiert sein?
 #: source_id: 2147342618
 #: priority: #A
-#: last_checked: 2018-06-19
+#: last_checked: 2018-06-20
 #: next_check: 2018-07-13
 	q4::inwork 13767,12626 13786,12636 13863,12677 13911,12692
 EOF
@@ -27347,6 +27348,17 @@ EOF
        source_id => '2147342779',
        data  => <<EOF,
 	2::inwork 19414,15132 19424,15068 19347,14936
+EOF
+     },
+     { from  => 1530396000, # 2018-07-01 00:00
+       until => 1559339999, # 2019-05-31 23:59
+       text  => 'Verlängerte Werderstr.: Bauarbeiten, unter Umständen ist die Durchfahrt nicht möglich, vom 2. Juli 2018 bis Ende Mai 2019',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.713900.php',
+       data  => <<EOF,
+#: next_check_id: VERLWERDERSTR-2018
+#: add_fragezeichen: können Radfahrer vielleicht doch passieren?
+	2::inwork 20245,2152 20261,2114 20222,2037 20214,1988 20187,1930 20166,1864 20120,1791 20093,1776 20064,1777
 EOF
      },
     );
