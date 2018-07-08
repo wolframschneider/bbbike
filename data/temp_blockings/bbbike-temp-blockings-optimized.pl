@@ -3,6 +3,7 @@ push @temp_blocking,
 (
        {
          'data' => '#: by: http://www.stadtfest.berlin/de/index.html
+#: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/strassen-wegen-fest-gesperrt_a170723
 	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
 	2::temp 6729,10212 6971,10346
 	2::temp 6628,10318 6626,10155
@@ -2520,28 +2521,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '	2::temp 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252
-	3 9487,9209 9505,9306 9524,9426
-	3 9524,9426 9505,9306 9487,9209
-',
-         'from' => 1530136800,
-         'id' => 2089,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'https://www.berlin.de/events/1934675-2229501-bergmannstrassenfest.html',
-         'text' => 'Bergmannstraße (Kreuzberg): Veranstaltung (Bergmannstraßenfest), Straße vollständig zwischen Mehringdamm und Zossener Str. gesperrt (29. Juni 2018 bis 01. Juli 2018)',
-         'type' => 'gesperrt',
-         'until' => 1530482399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2695,26 +2675,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'data' => '	q3::temp 13178,10623 13206,10651
-	q4::temp 13206,10651 13305,10789 13332,10832
-',
-         'from' => 1530345600,
-         'id' => 2206,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Open Air Gallery am 1. Juli 2018 auf der Oberbaumbrücke (10:00 - 20:00)',
-         'type' => 'gesperrt',
-         'until' => 1530475200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2774,9 +2735,9 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
          'accept_multi_feature_distance' => 1300,
          'data' => '#: by: http://www.bierfestival-berlin.de/?y=2017
 #: tempex 20170804-20170806 vvv
-	2::temp 12360,12505 12362,12540 12364,12589
-	2::temp 12891,12549 12869,12425
-	2::temp 12632,12630 12596,12472
+	2::temp 12352,12509 12355,12541 12359,12592
+	2::temp 12891,12549 12878,12430
+	2::temp 12632,12630 12592,12472
 	2::temp 13448,12340 13476,12461
 	2::temp 13552,12435 13543,12326
 #zukünftig, wenn dieser Weg eingetragen ist:	2::temp 13163,12382 13176,12500
@@ -3908,7 +3869,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '	2::inwork 14338,22885 14276,22914
+         'data' => '#: source_id: 2147342863
+	2::inwork 14338,22885 14276,22914
 ',
          'from' => 1499280235,
          'id' => 2881,
@@ -3945,7 +3907,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
-       undef,
+       {
+         'data' => '#: next_check_id: RIGAER-2018
+#: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
+	2::inwork 14538,12371 14748,12314
+',
+         'from' => undef,
+         'id' => 2888,
+         'text' => 'Rigaer Str.: Baustelle, während der Arbeitszeiten (Mo bis Fr, 6 bis 17 Uhr) kein Durchgang möglich',
+         'type' => 'gesperrt',
+         'until' => 1551351600
+       },
        undef,
        undef,
        undef,
@@ -3961,19 +3933,24 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
 #: by: mapillary (Gehweg für Radfahrer frei)
 #: source_id: 2147342671
+#: source_id: 2147342861
+#: source_id: 2147342860
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2018-07-01
-#: check_frequency: 30d
+#: last_checked: 2018-07-01 vvv
+# REMOVED --- #: check_frequency: 30d
+#: next_check: 2018-08-15 vvv
 # REMOVED (hier fertig) ---	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
-#: XXX hier laut fritz nur bis 2018-07-05
+#: XXX hier laut fritz nur bis 2018-07-17
 	q3::inwork; 2781,2493 2740,2588 2625,2850
+#: next_check ^^^
+#: last_checked ^^^
 ',
          'from' => 1502386525,
          'id' => 2897,
-         'text' => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), Ende unbekannt',
+         'text' => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), bis Mitte August 2018',
          'type' => 'handicap',
-         'until' => undef
+         'until' => 1534327200
        },
        undef,
        undef,
@@ -4035,7 +4012,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="4"
-#: last_checked: 2018-06-26
+#: last_checked: 2018-07-06
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 ',
@@ -4144,20 +4121,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1533052800
        },
-       {
-         'data' => '#: source_id: 2147342390
-#: source_id: 2147342751
-# REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
-#: last_checked: 2018-06-08
-# REMOVED --- #: check_frequency: 7d
-	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
-',
-         'from' => 1522864912,
-         'id' => 2947,
-         'text' => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Glinkastr., voraussichtlich bis Mitte Juli 2018',
-         'type' => 'handicap',
-         'until' => 1531677600
-       },
+       undef,
        undef,
        undef,
        {
@@ -4173,7 +4137,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: MENTZELPARK-2018
-#: last_checked: 2018-05-29
+#: last_checked: 2018-07-03
 	2::inwork 21696,5053 21600,5221 21512,5404 21481,5429
 ',
          'from' => undef,
@@ -4337,7 +4301,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX wird danach komplett asphaltiert sein?
 #: source_id: 2147342618
 #: priority: #A
-#: last_checked: 2018-06-20
+#: last_checked: 2018-07-05
 #: next_check: 2018-07-13
 	q4::inwork 13767,12626 13786,12636 13863,12677 13911,12692
 ',
@@ -4360,16 +4324,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1536940800
        },
        undef,
-       {
-         'data' => '	q4::inwork; 9727,17804 9835,17797 10053,17777
-',
-         'from' => 1529348366,
-         'id' => 2971,
-         'source_id' => '2147342753',
-         'text' => 'Florastr.: Bauarbeiten, Richtung Mühlenstr. zwischen Wollankstr. und Görschstr. gesperrt, bis 6. Juli 2018',
-         'type' => 'handicap',
-         'until' => 1530892800
-       },
+       undef,
        {
          'data' => '	2::inwork 19414,15132 19424,15068 19347,14936
 ',
@@ -4416,6 +4371,73 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. undThorwaldsenstr., Einbahnstraße offen Richtung Osten, voraussichtlich von Mitte Juli 2018 bis Ende Dezember 2018',
          'type' => 'handicap',
          'until' => 1546297199
+       },
+       {
+         'data' => '#: note: laut fritz & vmz längere Sperrung
+#: source_id: 2147342845
+# REMOVED (hier nicht) --- q4::inwork; 25519,4830 25552,4829 25720,4832
+	q4::inwork; 25720,4832 25802,4823 25948,4823 26085,4865 26236,4926 26340,4942 26500,4936 26620,4936
+',
+         'from' => 1530482400,
+         'id' => 2977,
+         'source_id' => 'https://www.berliner-woche.de/friedrichshagen/c-verkehr/der-mueggelseedamm-ist-dicht_a170522',
+         'text' => 'Müggelseedamm: zwischen Scharnweberstr. und Werlseestr. Bauarbeiten, offen Richtung Westen, 3. Juli 2018 bis Anfang August 2018',
+         'type' => 'handicap',
+         'until' => 1533312000
+       },
+       {
+         'data' => '#: next_check_id: HEGEMEISTERWEG-2018
+	2::inwork 17522,8220 17202,8391
+',
+         'from' => 1530812949,
+         'id' => 2978,
+         'text' => 'Hegemeisterweg: Bauarbeiten, Straße kann unpassierbar sein, bis November 2018',
+         'type' => 'gesperrt',
+         'until' => 1542236400
+       },
+       {
+         'data' => '	q4::inwork; 4879,5017 4951,4920 4985,4884 5048,4798 5070,4770
+',
+         'from' => 1530655200,
+         'id' => 2979,
+         'source_id' => '2147342847',
+         'text' => 'Birkbuschstr.: Bauarbeiten zwischen Schützenstr. und Haydnstr., Richtung Siemensstr. gesperrt, bis Mitte August 2018',
+         'type' => 'handicap',
+         'until' => 1534521600
+       },
+       {
+         'data' => '#: XXX nach den Bauarbeiten bessere Qualität
+#: priority: #B
+#: last_checked: 2018-07-06
+#: check_frequency: 60d
+	q4::inwork 13391,16436 13630,16629
+',
+         'from' => undef,
+         'id' => 2980,
+         'source_id' => 'https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php',
+         'text' => 'Schönstr.: Bauarbeiten zwischen Mirbachplatz und Paul-Oestreich-Str., Fahrbahn kann gesperrt sein',
+         'type' => 'handicap',
+         'until' => 1622498400
+       },
+       {
+         'data' => '	q4::inwork; 9183,12076 9195,11972
+',
+         'from' => 1530907854,
+         'id' => 2981,
+         'source_id' => '2147342871',
+         'text' => 'Glinkastr.: Bauarbeiten zwischen Französische Str. und Jägerstr., Fahrbahn Richtung Süden gesperrt, evtl.. sind auch Radfahrer betroffen, bis Ende Juli 2018',
+         'type' => 'handicap',
+         'until' => 1533074399
+       },
+       {
+         'data' => '	2::inwork 21889,16817 21824,16506 21785,16273 21782,16253
+',
+         'from' => 1531000800,
+         'id' => 2982,
+         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.719553.php',
+         'text' => 'Blumberger Damm: Bauarbeiten zwischen Rudolf-Leonhard-Str. und Mehrower Allee, Fahrbahn gesperrt, vom 9. Juli 2018 bis voraussichtlich 20. August 2018',
+         'type' => 'gesperrt',
+         'until' => 1534780800
        }
      
 );
