@@ -1,3 +1,5 @@
+.git-fetch-status-eserte
+log.check-full
 *.bak
 .DS_Store
 /.prove
@@ -228,7 +230,6 @@ images/svg-hiking-small.png
 images/svg-osm-small.png
 images/svg-urbanight-small.png
 images/svg-wireframe-small.png
-log.check-full
 images/garmin-onroad-small.png
 images/garmin-onroad2-micro.png
 images/garmin-onroad2-small.png
@@ -257,7 +258,6 @@ images/osmand-openseamap-5km.png
 images/osmand-skimap-1000m.jpg
 images/osmand-skimap-200m.jpg
 images/osmand-skimap-500m.jpg
-.git-fetch-status-eserte
 images/garmin-opentopo-bad-120.png
 images/garmin-opentopo-bad-1200.png
 images/garmin-opentopo-bad-200.png
@@ -276,3 +276,9 @@ images/garmin-opentopo-berlin-500.png
 images/garmin-opentopo-berlin-80.png
 images/garmin-oseam-micro.png
 images/garmin-opentopo-berlin-120-micro.png
+images/geojson-micro.png
+images/geojson.png
+images/sqlite-micro.png
+images/sqlite.png
+images/text-micro.png
+images/text.png
