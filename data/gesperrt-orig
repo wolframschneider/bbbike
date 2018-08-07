@@ -1418,6 +1418,7 @@ Paul-Merker-Str.	1 25464,-3027 25567,-3189
 Wilhelm-Busch-Str.	1 25206,-4014 25119,-4096
 Miersdorf	1 24955,-6980 25077,-6942 25186,-6969
 Miersdorf	1 25186,-6969 25092,-6993 24955,-6980
+ehemalige B179	1 26445,-14110 26465,-14385
 ######################################################################
 # elsewhere not in Brandenburg
 B104: Mittelstreifen nicht überquerbar	3nocross -974,128015 -724,127995 6,127935 298,127911
@@ -1481,7 +1482,7 @@ Eichhornstr.	1s:q3 8232,11414 8253,11306 8280,11296
 #: add_fragezeichen: Ist die Einbahnstraße mittlerweile für Radfahrer offen? vvv
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_16_sitzung.pdf vvv
 #: osm_watch: way id="183614191" version="5"
-#: last_checked: 2018-04-27
+#: last_checked: 2018-08-04 (mapillary)
 #: check_frequency: 100d
 Ahornallee	1s:q3 1589,11483 1574,11379
 #: osm_watch: way id="24852084" version="9"
@@ -1494,7 +1495,8 @@ Gramzow (Dorfstr.?)	1s:q1 49779,90206 49810,90444
 Alt-Tegel	1s:q3 1668,20156 1753,20191 1907,20265
 Alt-Tegel	1s:q3 1668,20156 1529,20131 1543,20060 1630,20097 1668,20156
 May-Ayim-Ufer	1s:q1 13206,10651 13077,10747
-Jahnstr. (KW)	1s 26243,-12300 26028,-12312
+Jahnstr. (KW)	1s:q3 26243,-12300 26116,-12276 26031,-12300
+Maxim-Gorki-Str.	1s:q3 26296,-12053 26288,-12089 26274,-12153 26243,-12300
 Seestr. (Potsdam)	1s -11581,559 -11584,452
 Tizianstr. (Potsdam)	1s -11424,542 -11480,621 -11581,559
 Spitzmühlenweg	1s 41728,17918 41668,17984 41556,18146
@@ -2785,7 +2787,7 @@ Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14558,1008
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14597,10129
 # REMOVED während der Bauarbeiten entfernt (2010-10) --- wird es jemals wieder eingesetzt? --- Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14626,10162
 # REMOVED (entfernt) --- #: note: 90cm Öffnung, 90cm zum versetzten Gitter -> 63cm lichte Breite --- #: note: hmmm, heute (2012-10-16) habe ich einen Radfahrer mit Croozer da durchfahren gesehen -> trailer=no -> trailer=15 --- Drängelgitter --- mittlerweile gibt es eine Pollerreihe	BNP:3::trailer=15 12901,10134
-# REMOVED (wurde abmontiert --- dauerhaft?) --- #: note: relativ großzügige Öffnung --- Drängelgitter	BNP:1::trailer=3 12833,9998
+# REMOVED (wurde abmontiert --- dauerhaft? --- ja, jetzt gibt's hier auch eine Pollerreihe) --- #: note: relativ großzügige Öffnung --- Drängelgitter	BNP:1::trailer=3 12833,9998
 Schranke (Privatstr.)	BNP:5 25039,5304
 Schranke	BNP:2::trailer=4 9907,11752
 Schranke	BNP:3::trailer=10 10114,11789
@@ -2919,7 +2921,8 @@ Volkspark Anton Saefkow: Bauarbeiten, Wege sind gesperrt	2::inwork 12620,14979 1
 #: next_check_id: KAUFHOF-2018
 #: XXX bis wann gehen die Bauarbeiten?
 #: XXX ggfs. handicap_s-orig-Eintrag wieder aktivieren
-#: last_checked: 2018-06-29
+#: last_checked: 2018-08-06
+#: check_frequency: 90d
 Hermann-Stöhr-Platz: Gehweg vor dem ehemaligen Kaufhaus gesperrt	2::inwork 12522,11837 12409,11902
 # 
 #: priority: #C
@@ -3076,7 +3079,7 @@ Zufahrt Parkhaus: Abrissarbeiten, Straße komplett gesperrt	2::inwork 8367,10745 
 #: check_frequency: 90d
 Merlitzstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19661,3421 19524,3286
 # 
-#: last_checked: 2018-06-30
+#: last_checked: 2018-08-01
 #: check_frequency: 30d
 Mauerstr. und Jägerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9195,11972 9108,11961 9076,12054
 # 
@@ -3099,21 +3102,21 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 #: check_frequency: 90d
 (Marseillestr. - Straße 160): nur ein provisorischer Steg	2 12507,21391 12547,21372
 # 
-#: next_check_id: RIGAER-2018
-#: XXX_indoor sobald aktiv: temp_blockings-Eintrag deaktivieren
-#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.616518.php
-#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.616795.php
-#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.633456.php (Öffnung für Fußgänger)
-#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8329
-#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8383
-#: by: http://www.berliner-woche.de/friedrichshain/bauen/rigaer-strasse-soll-temporaer-wieder-passierbar-sein-d140803.html
-#: by: http://friedrichshainblog.de/rigaer-wieder-passierbar/
-#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.677127.php (Öffnung nachts (17-6) und am Wochenende, erstmal bis Juli 2018)
-#: last_checked: 2018-07-26
-#: next_check: 2018-08-01
-#: valid: 20180801-20190228
-#: priority: #A
-Rigaer Str.: Komplettsperrung zwischen Schreinerstr. und Voigtstr.	2::inwork 14538,12371 14748,12314
+# REMOVED (bleibt dauerhaft abends offen?) --- #: next_check_id: RIGAER-2018
+# REMOVED --- #: XXX_indoor sobald aktiv: temp_blockings-Eintrag deaktivieren
+# REMOVED --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.616518.php
+# REMOVED --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.616795.php
+# REMOVED --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.633456.php (Öffnung für Fußgänger)
+# REMOVED --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8329
+# REMOVED --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8383
+# REMOVED --- #: by: http://www.berliner-woche.de/friedrichshain/bauen/rigaer-strasse-soll-temporaer-wieder-passierbar-sein-d140803.html
+# REMOVED --- #: by: http://friedrichshainblog.de/rigaer-wieder-passierbar/
+# REMOVED --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.677127.php (Öffnung nachts (17-6) und am Wochenende, erstmal bis Juli 2018)
+# REMOVED --- #: last_checked: 2018-07-26
+# REMOVED --- #: next_check: 2018-08-01
+# REMOVED --- #: valid: 20180801-20190228
+# REMOVED --- #: priority: #A
+# REMOVED --- Rigaer Str.: Komplettsperrung zwischen Schreinerstr. und Voigtstr.	2::inwork 14538,12371 14748,12314
 # 
 # REMOVED (beendet?) --- #: by: http://www.berliner-woche.de/kladow/verkehr/ausbau-des-havel-radwegs-d128132.html --- #: by: https://gruen-berlin.de/projekt/havel-radweg --- #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.601832.php --- #: osm_watch: note 1050400 2 --- #: last_checked: 2017-07-15 --- #: next_check: 2017-10-01 --- #: priority: #A --- Gutspark Neukladow: Bauarbeiten, Weg komplett gesperrt	2::inwork -6366,5215 -6198,5357
 # 
@@ -3209,7 +3212,7 @@ Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtun
 # REMOVED (nur der östliche Abschnitt ist geblieben, aber relativ breit und relativ wenig Verkehr) --- #: XXX Bauarbeiten der Berliner Wasserbetriebe bis Dezember 2017 --- #: last_checked: 2017-07-23 --- #: next_check: 2017-12-01 --- #: valid: -20171231 --- Türrschmidtstr.: Bauarbeiten, Einbahnstraße	1s:q3 15541,10892 15649,10922 15756,10966
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3853&mt=0&zoom=16
-#: last_checked: 2018-06-08
+#: last_checked: 2018-08-01
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8969,11814
 # 
 #: next_check_id: NORDHAFENPARKWEST-2018
@@ -3217,7 +3220,7 @@ Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6146.html
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_13_1401_1520_online.pdf (Widmung als Grünanlage)
 #: source_id: 2147341188
-#: last_checked: 2018-07-26 vvv
+#: last_checked: 2018-08-04 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: way id="594591925" version="1"
 #: osm_watch: way id="594591926" version="1"
@@ -3245,7 +3248,7 @@ Nordhafenpark West: unter der Brücke gesperrt	2::inwork 7636,14414 7612,14449 75
 #: XXX Bauarbeiten (Erweiterung des Rütli-Campus?)
 #: XXX Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="137084083" version="9"
-#: last_checked: 2018-06-01
+#: last_checked: 2018-07-30
 #: check_frequency: 60d
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,9200 12548,9167
 # 
@@ -3261,7 +3264,7 @@ Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,
 # REMOVED --- #: XXX evtl. kann man hier als Fußgänger irgendwie vorbei --- #: last_checked: 2016-07-26 vvv --- #: check_frequency: 3d --- Treptower Park: Bauarbeiten, Weg abgesperrt	2::inwork 14448,9922 14467,9880 14500,9863 --- #: last_checked ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=4160&mt=0&zoom=16
-#: last_checked: 2018-06-22
+#: last_checked: 2018-08-01
 #: osm_watch: way id="57852078" version="4"
 E.T.A.-Hoffmann-Promenade: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 9679,10710 9777,10719
 # 
@@ -3322,12 +3325,12 @@ Weg nach Tiefwerder: kein Zugang wegen der Ersatzbrücke	2::inwork -3179,11763 -3
 #: next_check_id ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2018-06-26
+#: last_checked: 2018-08-01
 #: check_frequency: 120d
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2018-06-26
+#: last_checked: 2018-08-01
 #: check_frequency: 90d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
@@ -3453,10 +3456,11 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: http://www.dafmap.de/d/berlin.html?id=3588&mt=0&zoom=16
 #: by: http://www.welt.de/kultur/buehne-konzert/article140641614/Ausschuss-prueft-Kostenexplosion-bei-Staatsoper.html (Eröffnung)
 #: XXX Spielbetrieb wird im Dezember 2017 aufgenommen
-#: last_checked: 2018-06-30 vvv
-#: check_frequency: 30d vvv
+#: last_checked: 2018-08-01 vvv
+#: check_frequency: 14d vvv
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9876,12298
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9798,12267 9795,12293 9780,12401
+Oberwallstr.: Bauarbeiten, vollständig gesperrt	2::inwork 9883,12251 9876,12298
 # REMOVED (mittlerweile offen) --- Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9737,12238 9702,12307 9734,12395
 #: check_frequency ^^^
 #: last_checked: ^^^
@@ -3466,7 +3470,7 @@ Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9798,
 # 
 #: XXX Eröffnung 2019 geplant
 #: by: http://www.dafmap.de/d/berlin.html?id=3598&mt=0&zoom=16
-#: last_checked: 2018-06-30
+#: last_checked: 2018-08-01
 #: check_frequency: 120d
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 

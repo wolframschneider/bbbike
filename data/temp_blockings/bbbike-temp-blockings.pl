@@ -901,11 +901,11 @@ EOF
 	2 2624,1704 2824,1273
 EOF
      },
-     { from  => $isodate2epoch->("2017-08-31 17:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-09-03 23:59:59"),
+     { from  => $isodate2epoch->("2018-08-31 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-09-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 31, months => 8]],
-       text  => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (01.09.2017 bis 03.09.2017)',
+       text  => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (01.09.2018 bis 02.09.2018)',
        type  => 'gesperrt',
        data  => <<EOF,
 	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
@@ -1982,7 +1982,7 @@ EOF
        text  => 'B 179; (Cottbuser-/ Fichtestr.); OL Königs Wusterhausen, Bahnübergang Fichtestr. Umbau Bahnübergang Vollsp * 01.08.2005-14.08.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26313,-13049 26205,-12769 26138,-12596 26028,-12312
+	2 26313,-13049 26205,-12769 26138,-12596 26031,-12300
 EOF
      },
      { from  => 1114725600, # 2005-04-29 00:00
@@ -2647,7 +2647,7 @@ EOF
        text  => 'B 179; (Spreewaldstr.); OD Zeesen, Kno. Karl-Liebknecht-Str. Straßenausbau Vollsperrung 15.08.2005-30.09.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26583,-15677 26572,-15618 26612,-15094
+	2 26583,-15677 26572,-15618 26608,-15124
 EOF
      },
      { from  => 1122760800, # 2005-07-31 00:00
@@ -2720,7 +2720,7 @@ EOF
        text  => 'K 7237; (L 40 Klein Kienitz-Rangsdorf); zw. Südringcenter Rangsdorf u. Klein Kienitz Straßenbauarbeiten Vollsperrung 22.08.2005-04.09.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-# REMOVED (wrong?) ---	2 26583,-15677 26572,-15618 26612,-15094
+# REMOVED (wrong?) ---	2 26583,-15677 26572,-15618 26608,-15124
 	2 14327,-11767 15962,-10958
 EOF
      },
@@ -2836,7 +2836,7 @@ EOF
        text  => 'B 179; (Karl-Liebknecht-Str.); OD Zeesen, zw. Spreewaldstr. u. Weidendamm Straßenausbau Vollsperrung 19.09.2005-24.10.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26473,-14543 26567,-14915 26612,-15094
+	2 26471,-14570 26552,-14903 26608,-15124
 EOF
      },
      { from  => 1126994400, # 2005-09-18 00:00
@@ -3273,8 +3273,8 @@ EOF
        text  => 'B 246; (Bauptstr.); Bahnübergang in OL Bestensee Gleisbauarbeiten Vollsperrung 30.10.2005-02.11.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26639,-17861 26706,-17867
-	2 26832,-17882 26718,-17867 26706,-17867
+	2 26639,-17861 26703,-17858
+	2 27304,-17961 26716,-17857 26703,-17858
 EOF
      },
      { from  => 1130277600, # 2005-10-26 00:00
@@ -3637,7 +3637,7 @@ EOF
        text  => 'B 179 Cottbuser-/ Fichtestr. OL Königs Wusterhausen, Bahnübergang Fichtestr. Umbau Bahnübergang Vollsperrung 02.01.2006-23.01.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26313,-13049 26205,-12769 26138,-12596 26028,-12312
+	2 26313,-13049 26205,-12769 26138,-12596 26031,-12300
 EOF
      },
      { from  => 1134860400, # 2005-12-18 00:00
@@ -4873,7 +4873,7 @@ EOF
        text  => 'B 246 OL Bestensee, Hauptstraße OL Bestensee, Hauptstraße, Bahnübergang Bauarbeiten am Gleiskörper Vollsperrung 30.06.2006-04.07.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 26639,-17861 26706,-17867 26718,-17867 26832,-17882
+	2::inwork 26639,-17861 26703,-17858 26716,-17857 27304,-17961
 EOF
      },
      { from  => 1150840800, # 2006-06-21 00:00
@@ -6583,7 +6583,7 @@ EOF
        text  => 'B 246 Bahnübergang in der OD Bestensee Umbauarbeiten Vollsperrung 06.11.2006-17.11.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 26639,-17861 26706,-17867 26718,-17867 26832,-17882
+	2::inwork 26639,-17861 26703,-17858 26716,-17857 27304,-17961
 EOF
      },
      { from  => 1160604000, # 2006-10-12 00:00
@@ -11223,7 +11223,7 @@ EOF
        text  => 'L 222 Gransee - Menz zw. Menz und Kreuz. Zernickow Straßeninstandsetzung Vollsperrung 07.04.2008-09.05.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -13537,75287 -13950,75662 -14862,76637
+	2::inwork -13455,75227 -13950,75662 -14666,76428 -14862,76637
 EOF
      },
      { from  => 1205708400, # 2008-03-17 00:00
@@ -11231,7 +11231,7 @@ EOF
        text  => 'L 222 Gransee - Menz zw. OA Großwoltersdorf und Kreuz. Zernickow Straßeninstandsetzung Vollsperrung 18.03.2008-30.03.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -12250,73762 -12381,74147 -12575,74512 -13537,75287
+	2::inwork -12250,73762 -12381,74147 -12575,74512 -13455,75227
 EOF
      },
      { from  => 1205966138, # 2008-03-19 23:35
@@ -22656,7 +22656,7 @@ EOF
        until => $isodate2epoch->("2017-09-10 22:00:00"),
        periodic => 1, # erster Termin im Jahr
        #recurrences => [["yearly", days => 9, months => 5]], # wechselnde Termine, kann auch erst Mitte September passieren
-       #recurrence_prewarn_days => 14,
+       recurrence_prewarn_days => 14,
        recurrences => [["yearly", days => 1, months => 9]],
        text  => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 8.9.2017 15 Uhr bis 10.9.2017 22 Uhr',
        type  => 'gesperrt',
@@ -26471,6 +26471,7 @@ EOF
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=30361
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
 #: by: mapillary (Gehweg für Radfahrer frei)
+#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/kreuzungsumbau-bis-november_a172982
 #: source_id: 2147342671
 #: source_id: 2147342861
 #: source_id: 2147342860
@@ -26568,7 +26569,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-07-26
+#: last_checked: 2018-08-05
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26768,7 +26769,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-06-26 vvv
+#: last_checked: 2018-08-01 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27025,7 +27026,7 @@ EOF
 EOF
      },
      { from  => 1522789491, # 2018-04-03 23:04
-       until => $isodate2epoch->("2018-07-31 18:00:00"), # 1527718780, # 1527803999, # 2018-05-31 23:59
+       until => $isodate2epoch->("2018-08-17 18:00:00"), # 1527718780, # 1527803999, # 2018-05-31 23:59
        text  => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; bis Mitte Juli 2018',
        type  => 'handicap',
        source_id => '2147341699',
@@ -27218,7 +27219,7 @@ EOF
        source_id => '2147342639',
        data  => <<EOF,
 #: XXX vielleicht wird die Fahrbahn repariert?
-#: last_checked: 2018-07-26
+#: last_checked: 2018-07-29
 #: check_frequency: 14d
 #: priority: #A
 	q3::inwork; 13198,12311 13243,12222
@@ -27395,7 +27396,7 @@ EOF
 EOF
      },
      { from  => 1531519200, # 2018-07-14 00:00
-       until => $isodate2epoch->("2018-09-26 18:00:00"), # 1546297199, # 2018-12-31 23:59
+       until => $isodate2epoch->("2018-08-14 00:00:00"), # $isodate2epoch->("2018-09-26 18:00:00"), # 1546297199, # 2018-12-31 23:59
        text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, voraussichtlich bis Ende September 2018',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
@@ -27450,8 +27451,8 @@ EOF
 EOF
      },
      { from  => 1530907854, # 2018-07-06 22:10
-       until => 1533074399, # 2018-07-31 23:59
-       text  => 'Glinkastr.: Bauarbeiten zwischen Französische Str. und Jägerstr., Fahrbahn Richtung Süden gesperrt, evtl.. sind auch Radfahrer betroffen, bis Ende Juli 2018',
+       until => 1533144509, # Sperrung in die andere Richtung, aber hier gibt's eh eine Radspur --- $isodate2epoch->("2021-06-30 18:00:00"), # 1533074399, # 2018-07-31 23:59
+       text  => 'Glinkastr.: Bauarbeiten zwischen Französische Str. und Jägerstr., Fahrbahn Richtung Süden gesperrt, evtl.. sind auch Radfahrer betroffen, bis Ende Juni 2021',
        type  => 'handicap',
        source_id => '2147342871',
        data  => <<EOF,
@@ -27468,11 +27469,12 @@ EOF
 EOF
      },
      { from  => 1531605600, # 2018-07-15 00:00
-       until => $isodate2epoch->("2018-08-04 18:00:00"), # 1533160799, # 2018-08-01 23:59
+       until => 1533317444, # $isodate2epoch->("2018-08-04 18:00:00"), # 1533160799, # 2018-08-01 23:59
        text  => 'Ehrlichstr.: zwischen Blockdammweg und Wildensteiner Str. Gleisbauarbeiten, Richtung Treskowallee gesperrt, bis Anfang August 2018 ',
        type  => 'handicap',
        source_id => '2147342893',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/lichtenberg/c-verkehr/bvg-erneuert-tramgleise_a172247
 	q4::inwork; 17729,8850 17879,8773 17929,8742 17997,8695 18009,8687 18086,8634 18151,8589 18228,8537 18322,8470 18391,8425 18461,8377 18528,8331
 EOF
      },
@@ -27483,13 +27485,14 @@ EOF
        source_id => '2147342925',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.722387.php (nur Kreuzungsbereich betroffen)
+#: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/finckensteinallee-gesperrt_a171782
 	q4::inwork 2625,2850 2570,2844
 # REMOVED ---	q4::inwork 2570,2844 2290,2864
 EOF
      },
      { from  => 1532620085, # 2018-07-26 17:48
-       until => 1534370399, # 2018-08-15 23:59
-       text  => 'Gotlindestr.: Bauarbeiten zwischen Ruschestr. und Freesienweg, Fahrbahn gesperrt, bis Mitte August 2018',
+       until => 1533317340, # bei fritz entfernt --- $isodate2epoch->("2018-08-30 18:00:00"), # 1534370399, # 2018-08-15 23:59
+       text  => 'Gotlindestr.: Bauarbeiten zwischen Ruschestr. und Freesienweg, Fahrbahn gesperrt, bis Ende August 2018',
        type  => 'handicap',
        source_id => '2147342912',
        data  => <<EOF,
@@ -27511,6 +27514,7 @@ EOF
        type  => 'handicap',
        source_id => '2147342890',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/koepenick/c-verkehr/seelenbinderstrasse-bleibt-bis-ende-august-dicht_a172757
 	q3::inwork; 22292,5774 22513,5747 22608,5732 22696,5728 22798,5731 22900,5740 23106,5758 23333,5710
 EOF
      },
@@ -27521,6 +27525,57 @@ EOF
        source_id => 'LS/721-E/18/081',
        data  => <<EOF,
 	q4::inwork 7979,70212 7906,70007 7983,69794 7945,69489 7871,69412
+EOF
+     },
+     { from  => 1531519200, # 2018-07-14 00:00
+       until => 1537048799, # 2018-09-15 23:59
+       text  => 'Semmelweisstr.: zwischen Korkedamm und Lehmfeldsteig komplett gesperrt (geplatzte Wasserleitung)',
+       type  => 'gesperrt',
+       source_id => 'LMS-BR_r_LMS-BR_139053_LMS-BR_72',
+       data  => <<EOF,
+#: by: https://www.berliner-woche.de/altglienicke/c-bauen/rund-1000-kubikmeter-trinkwasser-liefen-in-untergrund-und-keller_a172811
+	2::inwork 19602,1989 19244,2141
+EOF
+     },
+     { from  => 1533225600, # 2018-08-02 18:00
+       until => 1534219200, # 2018-08-14 06:00
+       text  => 'Budapester Str. am Breitscheidplatz: Sperrung der Fahrbahn (Tribünenbau für die Leichtathletik-EM), ab 3. August 2018 18 Uhr bis 14. August 2018 6 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://www.berliner-woche.de/charlottenburg/c-verkehr/umleitung-wegen-leichtathletik-em_a174266',
+       data  => <<EOF,
+	2::temp 5986,10976 5829,10964 5716,10978 5652,11004
+	2::temp 5829,10964 5782,10884
+EOF
+     },
+     { from  => $isodate2epoch->("2018-08-14 00:00:00"), # 1531519200, # 2018-07-14 00:00
+       until => $isodate2epoch->("2018-12-31 18:00:00"), # 1546297199, # 2018-12-31 23:59
+       text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis Ende 2018',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
+       data  => <<EOF,
+#: next_check_id: FEUERBACH-2018
+#: XXX laut VMZ nur bis September 2018, laut BA Steglitz bis Dezember 2018
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.725875.php
+#: source_id: 2147342919
+	q4::inwork; 6168,6467 6083,6451 5823,6413
+	q4::inwork 6083,6451 6095,6358
+	q4::inwork; 6248,6388 6095,6358
+EOF
+     },
+     { from => 1533579833,
+       until => $isodate2epoch->("2018-08-19 18:00:00"),
+       text => 'Grünberger Str.: Sperrung der Fahrbahn zwischen Kadiner Str. und Warschauer Str., Richtung Osten, voraussichtlich bis zum 19. August 2018',
+       type => 'handicap',
+       data => <<EOF,
+	q4::inwork; 13515,11969 13696,11920
+EOF
+     },
+     { from  => 1533580222, # 2018-08-06 20:30
+       until => 1534543200, # 2018-08-18 00:00
+       text  => 'Chemnitzer Str.: zwischen Norastr, und Eschelberger Weg Bauarbeiten, Fahrbahn gesperrt, bis voraussichtlich 17.08.2018',
+       type  => 'handicap',
+       data  => <<EOF,
+	q4::inwork; 22147,9841 22129,9702 22116,9585
 EOF
      },
     );

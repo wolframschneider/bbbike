@@ -10,7 +10,7 @@
 # REMOVED (Bauarbeiten beendet) --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5898 --- #: note: oder man fährt auf dem mit zahlreichen Engstellen zugestellten Radweg, muss dann aber ggfs. warten --- #: last_checked: 2014-03-21 --- #: valid: -20140523 --- Bergmannstr.: während der Bauarbeiten zwischen Heim- und Friesenstr. Umleitung über gepflasterte Fahrbahn	Q2 9973,9232 9880,9233 9793,9241
 # 
 #: next_check_id: DIESEL-2015 vvv
-#: last_checked: 2018-07-01 vvv
+#: last_checked: 2018-07-31 vvv
 Dieselstr., Umfahrung: Asphalt	Q0 14419,8112 14429,8074
 #: XXX_osm laut osm Asphalt, hier aber nicht!
 Dieselstr., Umfahrung: unbefestigt	Q2 14429,8074 14484,8044
@@ -20,7 +20,8 @@ Dieselstr., Umfahrung: unbefestigt	Q2 14429,8074 14484,8044
 #: source_id: IM_023718
 #: source_id: 2147339540
 #: next_check_id: SONNENALLEE-2014
-#: last_checked: 2018-07-02
+#: last_checked: 2018-08-06
+#: check_frequency: 14d
 Sonnenallee: teilweise unfertige Radwege	Q1 14174,7505 14334,7395 14369,7376 14530,7301
 # 
 #: temporary ^^^
@@ -73,7 +74,7 @@ Hobrechtsfelder Chaussee (ab Kurve): Kopfsteinpflaster	Q2 15589,27116 15711,2792
 Wisbyer Str.: Asphalt	Q0 11019,16465 11289,16423 11397,16405 11448,16398 11470,16394 11542,16384 11632,16373 11673,16367 11727,16358 11750,16354 11808,16343 11829,16339 11889,16328 11936,16302 12012,16250 12090,16199
 #: note: die früheren schmalen Verbundsteinpflaster-Radwege werden nicht mehr genutzt (Fahrradstraße!)
 Weserstr.: asphaltiert	Q0 11888,9189 12005,9211 12074,9217 12148,9209 12180,9193 12322,9124
-Weserstr.: Kopfsteinpflaster, schmale Verbundsteinpflaster-Radwege	Q1- 12322,9124 12402,9080 12480,9037 12531,9009 12590,8977 12740,8862 12881,8750 13033,8628 13124,8562 13217,8493 13384,8354 13566,8212 13724,8090
+Weserstr.: Kopfsteinpflaster, schmale Verbundsteinpflaster-Radwege in teilweise schlechter Qualität	Q2+ 12322,9124 12402,9080 12480,9037 12531,9009 12590,8977 12740,8862 12881,8750 13033,8628 13124,8562 13217,8493 13384,8354 13566,8212 13724,8090
 Jessnerstr.: Asphalt mit Aufpflasterungen	Q0- 15080,11905 14981,11751 14946,11697 14849,11539
 Stuttgarter Str.: mäßiger Asphalt	Q1 13663,8011 13510,8138 13331,8283
 Stuttgarter Str.: Kopfsteinpflaster	Q2 13331,8283 13166,8423
@@ -87,7 +88,7 @@ Sinsheimer Weg: Betonstraße	Q0 13774,8849 13837,8932
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Beginn der Bauarbeiten Ende August 2018, Ende 2019)
 #: by: https://www.aktion-kms.de/projekte/umbau-donaustrasse/
 #: by: https://www.aktion-kms.de/assets/2017/01/Donaustra%C3%9Fe_LP_Lph3-LP_01.pdf
-#: last_checked: 2018-07-05 vvv
+#: last_checked: 2018-08-06 vvv
 #: next_check: 2018-08-31 vvv
 Donaustr.: schlechtes bis mäßiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895 12394,8729 12549,8616 12649,8535
 #: XXX hier wird vermutlich auch die Einbahnstraßenregelung für Radfahrer aufgehoben
@@ -154,12 +155,9 @@ Am Landwehrkanal: Asphalt	Q0 12897,9365 12889,9426 12905,9470
 Am Landwehrkanal: Parkweg, Schotterstellen, bei Regen große Pfützen	Q1- 12905,9470 13109,9743
 Am Landwehrkanal: Asphalt, einige Wurzelhebungen	Q0- 13109,9743 13225,9897
 Am Landwehrkanal: Parkweg	Q1 13225,9897 13271,9927 13333,9929
-#: XXX wird die Parkordnung so geändert, dass man problemlos auf Asphalt fahren kann?
-#: osm_watch: way id="182693863" version="2"
-#: last_checked: 2018-07-02
-Innstr.: Asphaltstreifen auf der linken Seite	Q1; 13102,8343 13166,8423 13217,8493
-Innstr.: Asphaltstreifen auf der rechten Seite	Q0; 13217,8493 13166,8423 13102,8343
-Innstr.: Kopfsteinpflaster, provisorischer Asphaltstreifen in mäßiger Qualität	Q2+ 13217,8493 13262,8554 13301,8606
+#: note: zwischen gepflastertem Parkstreifen (Diagonalparken) und Asphaltstreifen ist eine deutliche Lücke, so dass man bei Gegenverkehr auf die Pflasterung fahren muss
+Innstr.: Asphaltstreifen auf der linken Seite	Q1; 13102,8343 13166,8423 13217,8493 13262,8554 13301,8606
+Innstr.: Asphaltstreifen auf der rechten Seite	Q0; 13301,8606 13262,8554 13217,8493 13166,8423 13102,8343
 Innstr.: Kopfsteinpflaster (mäßig bis schlecht)	Q2- 13301,8606 13314,8624 13368,8689
 Elsenstr.: Asphalt	Q0 13405,8737 13458,8805 13510,8872 13664,9073 13766,9200
 #: note: gepflasterter Parkstreifen
@@ -266,7 +264,7 @@ Lohmühlenbrücke: Asphalt	Q0 12868,9359 12897,9365
 #: XXX wird die Kiefholzstr. asphaltiert?
 #: XXX Baumaßnahme: 9.9 (Realisierung nach 2011)
 #: osm_watch: way id="4686083" version="19"
-#: last_checked: 2018-07-04
+#: last_checked: 2018-07-30
 #: check_frequency: 90d
 Kiefholzstr.: Kopfsteinpflaster	Q2 13602,9581 13455,9711 13251,9829
 Hirschberger Str.: Kopfsteinpflaster	Q2+ 14988,11130 15021,11152 15102,11120
@@ -643,7 +641,7 @@ Brixener Str.: Kopfsteinpflaster	Q2 10507,17400 10502,17419 10466,17464
 #: XXX wird nach den Bauarbeiten die Qualität besser sein?
 #: source_id: 2147342929
 #: priority: #B
-#: last_checked: 2018-07-28
+#: last_checked: 2018-08-05
 #: next_check: 2018-08-31
 Helmerdingstr.: Kopfsteinpflaster	Q2 14442,11101 14468,11203
 # 
@@ -824,7 +822,7 @@ Bänschstr.: Asphalt	Q0 14996,12462 14801,12517
 Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: XXX Asphaltierung soll 2018 erfolgen
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf
-#: last_checked: 2018-07-09
+#: last_checked: 2018-08-03
 #: next_check: 2018-12-31
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1011,7 +1009,7 @@ Wuhlewanderweg: guter Asphalt	Q0 22030,6600 22097,6414 22146,6338 22214,6271 222
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4258
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103656581769/56581769/00081671/71-Anlagen/06/B0159ZB3.pdf (Planung 2016)
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.494722.php
-#: last_checked: 2018-07-28 vvv
+#: last_checked: 2018-08-02 vvv
 #: check_frequency: 60d vvv
 #: osm_watch: way id="317233618" version="4"
 Wuhlewanderweg: guter Verbundsteinbelag	Q0 22246,6133 22204,6016 22162,5919 22122,5884 22097,5879 22084,5877
@@ -1151,7 +1149,10 @@ Zur Revierförsterei: Waldweg	Q1 28523,258 28521,300
 Zur Revierförsterei: Beton	Q0- 28521,300 28516,415 28538,452
 Zur Revierförsterei: Verbundsteinpflaster	Q1+ 28538,452 28660,542
 (Revierförsterei - Hegemeisterweg): Waldweg	Q1- 28523,258 28566,-205
-An der Krampe: Waldweg, OK	Q1 28523,258 28450,242 28391,305 28303,309 28286,283 28282,203 28248,100 28241,17 28213,-45 28206,-258 28143,-335 28107,-336 28043,-380 27978,-473 27847,-665
+An der Krampe: Waldweg, OK	Q1- 28523,258 28450,242 28391,305
+#: note: an der Steigung
+An der Krampe: Waldweg, grober Schotter	Q2 28391,305 28303,309
+An der Krampe: Waldweg, OK	Q1- 28303,309 28286,283 28282,203 28248,100 28241,17 28213,-45 28206,-258 28143,-335 28107,-336 28043,-380 27978,-473 27847,-665
 An der Krampe: schlechter Waldweg, Wurzeln	Q3 27847,-665 27811,-708 27759,-995 27727,-1078 27779,-1212 27786,-1276 27746,-1350 27759,-1372 27765,-1654 27695,-2161 27718,-2301 27932,-2444 27985,-2389 28144,-2262 28116,-2127 28163,-2013
 #: note "Referenzfläche"
 Am Seddinsee: sich selbst überlassener Waldweg	Q3 28163,-2013 28338,-2265 28443,-2317 28527,-2347 28568,-2346 28742,-2264 28892,-1955 28862,-1816
@@ -1247,7 +1248,7 @@ Liepnitzstr.: Asphalt	Q0 17803,8079 17856,8162 17920,8256 17961,8312 17988,8350 
 # 
 #: next_check_id: HEGEMEISTERWEG-2018
 #: XXX Straße wird asphaltiert, laut Bauschild bis November 2018 fertig
-#: last_checked: 2018-07-28
+#: last_checked: 2018-08-02
 Hegemeisterweg: provisorische Baustraße, sandig	Q3 17202,8391 17522,8220
 # 
 Hegemeisterweg: Asphalt	Q0 17522,8220 17566,8199
@@ -1491,7 +1492,13 @@ Treptower Park: Asphalt	Q0 14635,9786 14807,9704 14889,9660 14909,9649 15052,958
 Treptower Park: Kleinsteinpflaster	Q1- 15453,9259 15513,9144 15527,9096
 Treptower Park: Asphalt	Q0 15527,9096 15623,9028
 Treptower Park: Kleinsteinpflaster	Q1- 15623,9028 15778,8990
+# 
+#: XXX Sanierungsarbeiten im Treptower Park geplant, wo genau?
+#: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
+#: next_check: 2018-08-31 (Beginn der Bauarbeiten)
 Treptower Park: Schotterweg, aber relativ glatt	Q2 14854,8964 14614,9052
+# 
 Treptower Park: wassergebundene Decke	Q1- 14854,8964 15057,8910 15110,8912 15159,8934
 Treptower Park: wassergebundene Decke	Q1 14588,9473 14556,9581
 Treptower Park: Schotterweg	Q2 14242,9448 14316,9542
@@ -1746,7 +1753,7 @@ Landsberger Allee: Asphaltradweg nur mit mäßiger Qualität	Q1 18365,14607 18410,1
 #: XXX werden auch die restlichen Radwege demnächst instandgesetzt oder zu Radspuren umgewandelt? vvv
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20120913.1335.375172.html vvv
 #: source_id: 2147342864
-#: last_checked: 2018-05-21 vvv
+#: last_checked: 2018-07-29 (mapillary) vvv
 #: check_frequency: 180d vvv
 #: XXX Asphalt oder Beton?
 Landsberger Allee: Radwege nur mit mäßiger Qualität (Bordsteinkanten!)	Q1; 20260,15434 20532,15564 20580,15586 20733,15657
@@ -2060,7 +2067,7 @@ Eiselenweg - Uferweg: etwas sandig	Q2 21447,5414 21481,5429
 #: XXX "Die Herstellung des Uferweges ist zum 31.12.2016 in Planung."
 #: XXX Maßnahme Kö.13
 #: XXX mittlerweile gibt's hier Bauarbeiten
-#: last_checked: 2018-07-27 (Umleitungsausschilderung existiert)
+#: last_checked: 2018-07-31 (Umleitungsausschilderung existiert)
 # REMOVED --- #: check_frequency: 90d
 (Uferweg, Mentzelpark): Schotterweg	Q1- 21481,5429 21512,5404 21600,5221 21696,5053
 (Uferweg, Mentzelpark): Asphalt	Q0 21696,5053 21740,5004 21761,4979
@@ -2877,7 +2884,7 @@ Am Schweizer Garten: Asphalt	Q0 11868,13646 12001,13863
 Kadiner Str.: Asphalt	Q0 13515,11969 13592,12254
 Südtorweg: wassergebundene Decke	Q1 -503,11782 -750,11740
 #: note: Luftbild
-Südtorweg: asphaltiert	Q0 -750,11740 -794,11732 -940,11708
+Carl-Schuhmann-Weg: asphaltiert	Q0 -750,11740 -794,11732 -940,11708
 Erkstr.: Asphalt	Q0 12598,8390 12771,8439 12902,8470 12920,8487
 Donaustr: Beton	Q0 12649,8535 12771,8439
 Straße 645: Asphalt	Q0 11424,8284 11434,8194 11419,8077 11450,7921 11472,7899
