@@ -1228,6 +1228,11 @@ Business Park BBI: dauerhaft gesperrt, Firmengelände	2 20038,-1474 20394,-1397
 #: by: mapillary
 Ferdinandstr.	1s:q4 5398,2422 5417,2383
 # 
+Heinrichplatz	1 11690,10543 11734,10563
+Heinrichplatz	1 11708,10497 11690,10543
+Heinrichplatz	1 11754,10516 11708,10497
+Heinrichplatz	1 11734,10563 11754,10516
+# 
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1327,6 +1332,9 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 Bahnhofstr.	1s:q4 -8417,-2862 -8410,-2884
 ###################################################################### 
 # elsewhere in Brandenburg
+Grüne Trift (Schulzendorf)	1s:q3 24714,-4087 24577,-3869 24509,-3763
+An der Koppel (Schulzendorf)	1s:q3 24577,-3869 24659,-3821 24795,-4043 24798,-4061
+Zeesener Str. (Bestensee)	1s:q4 26716,-17857 26766,-17782
 Rodelberg (Kleinmachnow)	1 -2387,-203 -2372,-291 -2451,-305
 (Käthe-Kollwitz-Str. - Zehlendorfer Damm)	1 -705,5 -658,-39
 #: by: osm
@@ -2921,7 +2929,7 @@ Volkspark Anton Saefkow: Bauarbeiten, Wege sind gesperrt	2::inwork 12620,14979 1
 #: next_check_id: KAUFHOF-2018
 #: XXX bis wann gehen die Bauarbeiten?
 #: XXX ggfs. handicap_s-orig-Eintrag wieder aktivieren
-#: last_checked: 2018-08-06
+#: last_checked: 2018-08-08
 #: check_frequency: 90d
 Hermann-Stöhr-Platz: Gehweg vor dem ehemaligen Kaufhaus gesperrt	2::inwork 12522,11837 12409,11902
 # 
@@ -3075,7 +3083,7 @@ Zufahrt Parkhaus: Abrissarbeiten, Straße komplett gesperrt	2::inwork 8367,10745 
 # 
 #: by: http://www.dafmap.de/d/berlin.html?center=52.434534+13.536709&zoom=18# (Projektabschluss: 2019-04-30)
 #: osm_watch: way id="448097237" version="1"
-#: last_checked: 2018-06-16
+#: last_checked: 2018-08-08
 #: check_frequency: 90d
 Merlitzstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19661,3421 19524,3286
 # 
@@ -3575,7 +3583,7 @@ Adolf-Scheidt-Platz	1 8731,8050 8765,8050 8783,8020 8769,7994 8731,7990
 Rumeyplan	1 8686,7726 8796,7751 8895,7797 8940,7835
 Rumeyplan	1 8959,7824 8907,7773 8812,7730 8690,7704
 Greifswalder Str.	3nocross 12422,14692 12473,14763 12528,14845
-Danziger Str.	3nocross 12616,14315 12407,14470 12317,14535
+Danziger Str.	3nocross 12616,14315 12522,14385 12407,14470 12317,14535
 #: XXX_prog die Cohnstr. ist u.U. unerreichbar, wenn man von Süden kommt. Evtl. sollte man die Straße hier teilen?
 #: note: Luftbild:
 Greifswalder Str.: Straßenbahntrasse	3nocross 13072,15590 13229,15692 13316,15758
