@@ -2071,7 +2071,7 @@ EOF
        text  => 'L 15; (Fürstenberg-Rheinsberg); OD Menz Kanal-,Straßen- u. Brückenbau Vollsperrung 17.05.2005-08.07.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -15062,76937 -14733,77409
+	q4 -15062,76937 -14840,77254 -14733,77409
 EOF
      },
      { from  => 1116194400, # 2005-05-16 00:00
@@ -19986,11 +19986,11 @@ EOF
 	2::inwork -13687,-4949 -13723,-6401
 EOF
      },
-     { from  => $isodate2epoch->("2017-09-08 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-09-10 23:59:59"),
+     { from  => $isodate2epoch->("2018-09-07 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-09-09 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 8, months => 9]],
-       text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., sowie Ossietzkystr. bis Pestalozzistr.: Veranstaltung (Fest an der Panke), Straßen gesperrt (08.09.2017-10.09.2017)',
+       recurrences => [['yearly', days => 7, months => 9]],
+       text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., sowie Ossietzkystr. bis Pestalozzistr.: Veranstaltung (Fest an der Panke), Straßen gesperrt (08.09.2018-09.09.2018)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.laubinger.de/termine/48-fest-an-der-panke/
@@ -23583,16 +23583,17 @@ EOF
 	q4::inwork; 5317,12242 5518,12159 5424,11944
 EOF
      },
-     { from  => $isodate2epoch->("2017-09-15 00:00:00"),
-       until => $isodate2epoch->("2017-09-16 23:59:59"),
+     { from  => $isodate2epoch->("2018-08-31 00:00:00"),
+       until => $isodate2epoch->("2018-09-01 23:59:59"),
        periodic => 1,
-       recurrences => [["yearly", days => 9, months => 9]],
-       text  => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 16. September 2017, 14 bis 18 Uhr ',
+       recurrences => [["yearly", days => 31, months => 8]],
+       text  => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 1. September 2018, 12 bis 21 Uhr ',
        type  => 'gesperrt',
-       source_id => 'https://misch-mit.net/moabiter-kiezfest2017/',
+       source_id => 'https://misch-mit.net/moabiter-kiezfest-1-september-2018/',
        data  => <<EOF,
 # REMOVED --- : tempex YYYY09 & sa2 & T14-T18
-#: tempex YYYY09 & sa3 & T14-T18
+# REMOVED --- : tempex YYYY09 & sa3 & T14-T18
+#: tempex YYYY09 & sa1 & T12-T21
 	2::temp 5857,13342 5868,13441 5882,13548
 EOF
      },
@@ -26909,7 +26910,7 @@ EOF
        text  => 'Vorbergstr.: Bauarbeiten zwischen Gleditschstr. und Akazienstr., Fahrbahn gesperrt, außerdem Sperrung in der Gleditschstr., Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-06-29 vvv
+#: last_checked: 2018-08-10 vvv
 # XXX_prog: eigentlich q3-
 	q4::inwork 7136,9223 7012,9222
 	q2::inwork 7136,9223 7130,9316
@@ -27286,7 +27287,7 @@ EOF
 EOF
      },
      { from  => 1528137944, # 2018-06-04 20:45
-       until => $isodate2epoch->("2018-08-15 18:00:00"), # 1531691999, # 2018-07-15 23:59
+       until => $isodate2epoch->("2018-08-10 18:00:00"), # 1531691999, # 2018-07-15 23:59
        text  => 'Forckenbeckstr.: Bauarbeiten zwischen Mecklenburgische Str. und Cunostr., Fahrbahn gesperrt, der schmale Bürgersteig muss benutzt werden, bis Mitte August 2018',
        type  => 'gesperrt',
        source_id => '2147342702',
@@ -27408,8 +27409,8 @@ EOF
 EOF
      },
      { from  => 1530482400, # 2018-07-02 00:00
-       until => $isodate2epoch->("2018-08-03 18:00:00"), # 1532383199, # 2018-07-23 23:59
-       text  => 'Müggelseedamm: zwischen Scharnweberstr. und Werlseestr. Bauarbeiten, offen Richtung Westen, 3. Juli 2018 bis Anfang August 2018',
+       until => $isodate2epoch->("2018-08-13 18:00:00"), # 1532383199, # 2018-07-23 23:59
+       text  => 'Müggelseedamm: zwischen Scharnweberstr. und Werlseestr. Bauarbeiten, offen Richtung Westen, 3. Juli 2018 bis 13. August 2018',
        type  => 'handicap',
        source_id => 'https://www.berliner-woche.de/friedrichshagen/c-verkehr/der-mueggelseedamm-ist-dicht_a170522',
        data  => <<EOF,
@@ -27572,7 +27573,7 @@ EOF
 EOF
      },
      { from  => 1533580222, # 2018-08-06 20:30
-       until => 1534543200, # 2018-08-18 00:00
+       until => 1533933334, # 1534543200, # 2018-08-18 00:00
        text  => 'Chemnitzer Str.: zwischen Norastr, und Eschelberger Weg Bauarbeiten, Fahrbahn gesperrt, bis voraussichtlich 17.08.2018',
        type  => 'handicap',
        data  => <<EOF,
