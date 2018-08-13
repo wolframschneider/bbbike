@@ -641,7 +641,7 @@ Brixener Str.: Kopfsteinpflaster	Q2 10507,17400 10502,17419 10466,17464
 #: XXX wird nach den Bauarbeiten die Qualität besser sein?
 #: source_id: 2147342929
 #: priority: #B
-#: last_checked: 2018-08-08
+#: last_checked: 2018-08-12
 #: next_check: 2018-08-31
 Helmerdingstr.: Kopfsteinpflaster	Q2 14442,11101 14468,11203
 # 
@@ -1248,7 +1248,7 @@ Liepnitzstr.: Asphalt	Q0 17803,8079 17856,8162 17920,8256 17961,8312 17988,8350 
 # 
 #: next_check_id: HEGEMEISTERWEG-2018
 #: XXX Straße wird asphaltiert, laut Bauschild bis November 2018 fertig
-#: last_checked: 2018-08-02
+#: last_checked: 2018-08-12
 Hegemeisterweg: provisorische Baustraße, sandig	Q3 17202,8391 17522,8220
 # 
 Hegemeisterweg: Asphalt	Q0 17522,8220 17566,8199
@@ -4745,10 +4745,7 @@ Braunellensteig: unbefestigte Straße	Q2 18830,1497 18876,1594 18916,1626
 Mehldornpfad: Betonpflaster	Q0- 18941,1934 19016,1895 19051,1878
 Teichrohrweg: Betonpflaster	Q0- 19016,1895 18925,1681 18888,1658
 Am Alten Friedhof: Asphalt	Q0+ 19181,1996 19122,1839 19037,1630 18974,1559
-#: XXX evtl. Verbesserung der Fahrbahnqualität?
-#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20180307
-#: last_checked: 2018-07-10 (mapillary)
-Pfarrwöhrde: Beton	Q1 19164,2001 19194,2157
+Pfarrwöhrde: Asphalt	Q0 19164,2001 19194,2157
 #: note: zumindest am Alten Schönefelder Weg
 Zum Alten Windmühlenberg: Asphalt	Q0 19653,1671 19279,1779
 Zum Alten Windmühlenberg: Verbundsteinpflaster	Q1 19279,1779 19206,1809
@@ -10191,7 +10188,7 @@ Uferstr. (Niederschöneweide): Asphalt	Q0 17681,6212 17847,6089
 (Sportpromenade - Bammelecke): Waldweg	Q2+ 25537,167 25564,340 25483,446
 Waldkiefernring: Asphalt	Q0 21855,2392 21754,2329 21782,2283 21885,2343
 Fähenweg: Asphalt	Q0 21869,2367 21791,2323
-Sportpromenade: Asphalt mit einigen Schäden und Wurzelhebungen	Q1+ 25646,-209 25574,-38 25537,167 25461,254 25172,345 24827,354 24743,370 24666,436
+Sportpromenade: Asphalt mit einigen Schäden und Wurzelhebungen	Q1- 25646,-209 25574,-38 25537,167 25461,254 25172,345 24827,354 24743,370 24666,436
 Mauerpark: Kleinsteinpflaster	Q1 10188,15474 10228,15488 10234,15490
 # REMOVED (nein, by mapillary) --- #: XXX hat sich mit der Neugestaltung etwas geändert? --- #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.635732.php
 Zeppelinplatz: Kleinsteinpflaster	Q1 6794,15553 6884,15456
@@ -10528,7 +10525,7 @@ Hauptstr. (Französisch Buchholz): Kleinsteinpflaster	Q1- 12229,22457 12199,22367
 Am Orangeriepark: Betonplatten	Q0 10271,19361 10281,19364 10330,19384 10321,19410 10389,19438
 (Nordgraben, südliches Ufer): unbefestigte Straße	Q2+ 7630,20698 7818,20749 7966,20787 8092,20817
 Zur Lübarser Bahn: schlechtes Kopfsteinpflaster	Q3+ 6406,22550 6569,22345
-(Zur Lübarser Bahn - Märkisches Viertel): unbefestiger Weg	Q2 6569,22345 6585,22324
+(Zur Lübarser Bahn - Märkisches Viertel): unbefestigter Weg	Q2 6569,22345 6585,22324
 (Zur Lübarser Bahn - Märkisches Viertel): Verbundsteinpflaster	Q1 6585,22324 6593,22302
 #: note: ... und möglicherweise nicht gereinigt
 (Am Eichendamm - Rote Chaussee): Asphalt, einige Schäden	Q1 872,24330 757,24342 644,24394
@@ -10737,6 +10734,10 @@ Pepitapromenade: Betonpflaster	Q0 -2856,17489 -2873,17369 -2878,17324
 (Gandenitzer Weg - Quickborner Str.): Asphalt	Q0 7549,21524 7713,21484 7782,21508 7802,21553 7853,21557 7939,21600
 Waldstr.: schlechtes Kopfsteinpflaster	Q3+ 22985,-1319 23042,-1297
 Waldstr.: Beton	Q0- 22003,-1625 22257,-1533 22362,-1509 22685,-1421 22985,-1319
+#: XXX wie wird die Straße nach Ende der Bauarbeiten aussehen?
+#: last_checked: 2018-08-12
+#: check_frequency: 90d
+Relingstr.: provisorischer Asphalt	Q1 22195,2390 22276,2426 22358,2460
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -23664,7 +23665,11 @@ Grünauer Weg: mäßiges Kopfsteinpflaster	Q2-; 25182,-2915 25174,-2901 25113,-2797
 Grünauer Weg: mäßiges Kopfsteinpflaster, Sandstreifen auf der rechten Straßenseite	Q2; 25007,-2620 25041,-2675 25090,-2757 25113,-2797 25174,-2901 25182,-2915
 #: confirmed_by: srt
 #: corrected_by: anonymous ("Unbefestigte Sandpiste, im Winter oder nach Regen nicht befahrbar (Pfützen, Eis, Schlamm), im Sommer O.K.")
-Alter Radelander Weg: fester Sandweg im Wald, lässt sich gut befahren, im Winter oder nach Regen nicht befahrbar (Pfützen, Eis, Schlamm)	Q1- 25007,-2620 24224,-1271 24158,-1153 23457,35
+# REMOVED --- Alter Radelander Weg: fester Sandweg im Wald, lässt sich gut befahren, im Winter oder nach Regen nicht befahrbar (Pfützen, Eis, Schlamm)	Q1- 25007,-2620 24224,-1271 24158,-1153 23457,35
+#: corrected_by: srt (wird evtl. neu gemacht?)
+#: add_fragezeichen: hat sich die Qualität des Waldwegs gebessert?
+#: last_checked: 2018-08-11
+Alter Radelander Weg: loser Schotter	Q2 25007,-2620 24224,-1271 24158,-1153 23457,35
 #: confirmed_by: srt
 Rabindranath-Tagore-Str.: Asphalt, teilweise brüchig, trotzdem gut befahrbar	Q0- 23252,792 23469,640 23540,591 23457,35
 #: note: "besonders an der Ecke Straße 133"
