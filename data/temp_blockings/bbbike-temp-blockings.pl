@@ -3512,8 +3512,8 @@ EOF
        text  => 'L 15 Fürstenberg-Menz OD Fürstenberg, Rheinsberger Str. grundhafter Straßenbau Vollsperrung; Umleitung 30.11.2005-22.12.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -8775,85947 -8893,85743
-	q4 -8893,85743 -9850,84800
+	q4 -8783,85924 -8800,85923 -8899,85749
+	q4 -8899,85749 -8990,85594 -9116,85503 -9214,85360 -9260,85313 -9355,85250 -9456,85136 -9594,84964 -9834,84789
 EOF
      },
      { from  => 1133650800, # 2005-12-04 00:00
@@ -9939,7 +9939,7 @@ EOF
        text  => 'L 214 OD Blumenow OD Blumenow Straßenbau+Kanalisationsbau Vollsperrung 10.09.2007-08.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -1406,77488 -1317,77071 -1236,76594
+	2::inwork -1478,77496 -1317,77071 -1236,76594
 EOF
      },
      { from  => 1188424800, # 2007-08-30 00:00
@@ -13109,7 +13109,7 @@ EOF
        text  => 'L 015 Fürstenberg - Menz zw. Fürstenberg und Abzw. Altglobsow Straßenbau Vollsperrung 10.11.2008-23.12.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -10085,84390 -10054,84256 -10109,84134 -10281,83899 -10516,83471 -11849,81547
+	2::inwork -10064,84410 -10082,84334 -10084,84267 -10105,84173 -10218,84003 -10391,83839 -10516,83471 -10564,83397 -11264,82483 -11364,82291 -11534,82105 -11636,81973 -11775,81738 -11862,81535
 EOF
      },
      { from  => 1225494000, # 2008-11-01 00:00
@@ -13568,7 +13568,7 @@ EOF
        text  => 'L 015 Fürstenberg - Menz OD Fürstenberg, Krz. B 96 Straßenbau Vollsperrung 01.05.2009-30.05.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -8775,85947 -8893,85743
+	q4::inwork -8783,85924 -8800,85923 -8899,85749
 EOF
      },
      { from  => 1236466800, # 2009-03-08 00:00
@@ -13576,7 +13576,7 @@ EOF
        text  => 'L 015 Fürstenberg - Menz zw. Fürstenberg und Abzw. Altglobsow Straßenbau Vollsperrung 09.03.2009-30.06.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -9850,84800 -10085,84390 -10054,84256 -10109,84134 -10281,83899 -10516,83471 -11849,81547
+	2::inwork -9834,84789 -9889,84728 -9955,84584 -10064,84410 -10082,84334 -10084,84267 -10105,84173 -10218,84003 -10391,83839 -10516,83471 -10564,83397 -11264,82483 -11364,82291 -11534,82105 -11636,81973 -11775,81738 -11862,81535
 EOF
      },
      { from  => 1237676400, # 2009-03-22 00:00
@@ -14826,7 +14826,7 @@ EOF
        text  => 'L 015 Fürstenberg - Menz OD Fürstenberg, zw. Bergstr. und OA Ri. Menz Straßenbau, Brückenabriss Vollsperrung 06.07.2009-30.09.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -8893,85743 -9850,84800
+	2::inwork -8899,85749 -8990,85594 -9116,85503 -9214,85360 -9260,85313 -9355,85250 -9456,85136 -9594,84964 -9834,84789
 EOF
      },
      { from  => 1261769245, # 2009-12-25 20:27
@@ -20027,13 +20027,13 @@ EOF
 	2::inwork 872,24330 865,24114 793,24070 736,24068 601,24192 237,24374 195,24389 160,24390 132,24390 78,24364 -406,23934
 EOF
      },
-     { from  => $isodate2epoch->("2017-09-14 00:00:00"), # PERIODISCH, ca. 2. Wochenende im September
-       until => $isodate2epoch->("2017-09-17 23:59:59"),
+     { from  => $isodate2epoch->("2018-09-13 00:00:00"), # PERIODISCH, ca. 2. Wochenende im September
+       until => $isodate2epoch->("2018-09-16 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 14, months => 9]],
-       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 15.09.2017 bis 17.09.2017',
+       recurrences => [['yearly', days => 13, months => 9]],
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 14.09.2018 bis 16.09.2018',
        type  => 'handicap',
-       source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2017',
+       source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2018',
        data  => <<EOF,
 	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
 EOF
@@ -24742,6 +24742,7 @@ EOF
 #: source_id: 2147342003
 #: source_id: 2147342198
 #: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72
+#: source_id: 2147342842
 #: osm_watch: way id="57401090" version="12"
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
@@ -26373,7 +26374,7 @@ EOF
      },
      { from  => undef,
        until => $isodate2epoch->("2019-02-28 12:00:00"),
-       text  => 'Rigaer Str.: Baustelle, während der Arbeitszeiten (Mo bis Fr, 6 bis 17 Uhr) kein Durchgang möglich',
+       text  => 'Rigaer Str.: Baustelle, während der Arbeitszeiten (Mo bis Sa, 6 bis 17 Uhr) kein Durchgang möglich',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: RIGAER-2018
@@ -26770,7 +26771,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-08-01 vvv
+#: last_checked: 2018-08-14 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27192,11 +27193,10 @@ EOF
 EOF
      },
      { from  => undef,
-       until => $isodate2epoch->("2018-08-11 18:00:00"),
-       text  => "Karlshorster Str.: Fahrbahn der Stubenrauchbrücke in Richtung Osten gesperrt, Radfahrer müssen auf den Gehweg ausweichen, bis Mitte August 2018",
+       until => $isodate2epoch->("2018-08-31 18:00:00"),
+       text  => "Karlshorster Str.: Fahrbahn der Stubenrauchbrücke in Richtung Osten gesperrt, Radfahrer müssen auf den Gehweg ausweichen, bis Ende August 2018",
        source_id => "2147342600",
        data  => <<EOF,
-#: note: genaues Endedatum by fritz
 # REMOVED (ja) --- #: add_fragezeichen: Ist die Stubenrauchbrücke tatsächlich für Radfahrer gesperrt?
 #: by: https://www.berliner-woche.de/oberschoeneweide/c-verkehr/spreequerung-bleibt-bis-august-voll-gesperrt_a164513
 #: osm_watch: way id="4540244" version="18"
@@ -27381,7 +27381,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-06-22
+#: last_checked: 2018-08-15
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27397,15 +27397,17 @@ EOF
 #: last_checked ^^^
 EOF
      },
-     { from  => 1531519200, # 2018-07-14 00:00
-       until => $isodate2epoch->("2018-08-14 00:00:00"), # $isodate2epoch->("2018-09-26 18:00:00"), # 1546297199, # 2018-12-31 23:59
-       text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, voraussichtlich bis Ende September 2018',
+     { from  => $isodate2epoch->("2018-09-27 00:00:00"), # 1531519200, # 2018-07-14 00:00
+       until => $isodate2epoch->("2018-12-31 18:00:00"), # $isodate2epoch->("2018-08-14 00:00:00"), # $isodate2epoch->("2018-09-26 18:00:00"), # 1546297199, # 2018-12-31 23:59
+       text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, voraussichtlich bis Ende 2018',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
        data  => <<EOF,
 #: next_check_id: FEUERBACH-2018
 #: XXX laut VMZ nur bis September 2018, laut BA Steglitz bis Dezember 2018
 #: source_id: 2147342919
+#: last_checked: 2018-08-15
+#: next_check: 2018-09-26
 	q4::inwork; 6168,6467 6083,6451 5823,6413
 EOF
      },
@@ -27493,7 +27495,7 @@ EOF
 EOF
      },
      { from  => 1532620085, # 2018-07-26 17:48
-       until => 1533317340, # bei fritz entfernt --- $isodate2epoch->("2018-08-30 18:00:00"), # 1534370399, # 2018-08-15 23:59
+       until => $isodate2epoch->("2018-08-30 18:00:00"), # 1534370399, # 2018-08-15 23:59
        text  => 'Gotlindestr.: Bauarbeiten zwischen Ruschestr. und Freesienweg, Fahrbahn gesperrt, bis Ende August 2018',
        type  => 'handicap',
        source_id => '2147342912',
@@ -27550,16 +27552,19 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2018-08-14 00:00:00"), # 1531519200, # 2018-07-14 00:00
-       until => $isodate2epoch->("2018-12-31 18:00:00"), # 1546297199, # 2018-12-31 23:59
-       text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis Ende 2018',
+       until => $isodate2epoch->("2018-09-27 00:00:00"), # 1546297199, # 2018-12-31 23:59
+       text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis zum Ende 2018',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
        data  => <<EOF,
 #: next_check_id: FEUERBACH-2018
-#: XXX laut VMZ nur bis September 2018, laut BA Steglitz bis Dezember 2018
+#: XXX laut VMZ nur bis Ende Oktober 2018, laut BA Steglitz bis Dezember 2018
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.725875.php
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/weitere-sperrungen-rund-um-die-feuerbachstrasse_a174881
 #: source_id: 2147342919
+#: source_id: 2147343007
+#: last_checked: 2018-08-15
+#: next_check: 2018-09-26
 	q4::inwork; 6168,6467 6083,6451 5823,6413
 	q4::inwork 6083,6451 6095,6358
 	q4::inwork; 6248,6388 6095,6358
@@ -27570,6 +27575,7 @@ EOF
        text => 'Grünberger Str.: Sperrung der Fahrbahn zwischen Kadiner Str. und Warschauer Str., Richtung Osten, voraussichtlich bis zum 19. August 2018',
        type => 'handicap',
        data => <<EOF,
+#: source_id: 2147342987
 	q4::inwork; 13515,11969 13696,11920
 EOF
      },
@@ -27588,6 +27594,24 @@ EOF
        source_id => 'https://www.zeuthen.de/Die-Deutsche-Bahn-informierte-Grunderneuerung-der-Personenunterfuehrung-am-S-Bahnhof-Zeuthen-642703.html',
        data  => <<EOF,
 	2::inwork 25929,-5994 25902,-6006
+EOF
+     },
+     { from  => 1532988000, # 2018-07-31 00:00
+       until => 1541026799, # 2018-10-31 23:59
+       text  => 'Spektegrünzug - Mauerweg: Bauarbeiten, Weg komplett gesperrt, zwischen August 2018 und Oktober 2018',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2018/pressemitteilung.729141.php',
+       data  => <<EOF,
+	2::inwork -7352,15954 -7347,15944 -7311,15931 -7280,15967 -7211,15920
+EOF
+     },
+     { from  => 1519686000, # 2018-02-27 00:00
+       until => 1544828400, # 2018-12-15 00:00
+       text  => 'Hoppegarten: Neubau der Eisenbahnbrücke, möglicherweise Vollsperrung, 27.02.2018 bis 14.12.2018',
+       type  => 'gesperrt',
+       source_id => '166401603',
+       data  => <<EOF,
+	2::inwork 28595,12846 28593,12671
 EOF
      },
     );
