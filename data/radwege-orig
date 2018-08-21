@@ -300,7 +300,7 @@ Gehweg für Radfahrer frei	RW9;RW1 571,11255 541,11464
 	RW2;RW2 4512,5199 4432,5160 4343,5112
 #: XXX Radwege sollen saniert werden oder es entstehen sogar Radstreifen (Umsetzung 2018) vvv
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf vvv
-#: last_checked: 2018-08-06 vvv
+#: last_checked: 2018-08-17 vvv
 #: next_check: 2018-12-31 vvv
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1;RW1 10020,11262 10256,11160
 mäßige bis schlechte Verbundsteinpflasterradwege, Bord zum Gehweg	RW1; 10256,11160 10501,11056 10637,10996 10684,10975
@@ -510,8 +510,8 @@ asphaltiert	RW2; 14020,12261 13885,12279 13785,12292
 #: priority: #B
 #: last_checked: 2018-08-14
 #: next_check: 2020-06-01
-	RW2;RW4 11976,12595 11683,12725
-	RW3;RW3 11683,12725 11635,12745
+	RW2;RW4 11976,12595 11678,12727
+	RW3;RW3 11678,12727 11635,12745
 	RW2;RW3 15117,12106 15361,12071
 	RW1;RW2 10933,14122 10938,14159 10910,14488 10893,14705
 	RW1;RW2 10893,14705 10885,14914 10884,14952
@@ -815,7 +815,7 @@ asphaltiert	RW1;RW1 6107,4718 6116,4707 6212,4622
 für Radfahrer freigegebene Busspur gilt Mo-Fr 14-18 Uhr	RW1; 6494,6128 6629,5946 6696,5854
 für Radfahrer freigegebene Busspur gilt Mo-Fr 7-9 Uhr	RW1; 6696,5854 6629,5946 6494,6128 6343,6297 6248,6388 6168,6467
 	RW0;RW2 8328,10831 8358,10782 8430,10710
-	RW1;RW9 8571,11846 8489,11782 8438,11753 8322,11715 8203,11686
+	RW1;RW9 8571,11846 8489,11782 8456,11763 8322,11715 8203,11686
 	RW1; 8203,11686 8172,11679
 hier steht ein Radwegschild, wird aber nicht wiederholt, aber die Fahrbahnmarkierungen für Radfahrer zeigen keine Verschwenkung an	RW8; 8172,11679 8203,11686
 	RW2; 18946,13472 19181,13485
@@ -1103,7 +1103,7 @@ Busspur ist immer gültig	RW5;RW5 9858,12410 9780,12401 9771,12400 9713,12392 966
 #: source_id: IM_025933
 #: osm_watch: way id="342968607" version="8"
 #: osm_watch: way id="461526152" version="2"
-#: last_checked: 2018-08-13
+#: last_checked: 2018-08-20
 Busspur ist immer gültig	RW5;RW0 9475,12365 9358,12351 9141,12320
 # 
 #: next_check_id: STABIUDL-2014
@@ -1524,7 +1524,7 @@ Busspur gilt Mo-Fr 7-18 Uhr	RW5; 10020,11262 9984,11270 9751,11243 9615,11225 94
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: XXX Bauarbeiten, Radspuren sind größtenteils aufgehoben
 #: XXX war: RW3;RW3
-#: last_checked: 2018-08-13
+#: last_checked: 2018-08-18
 #: check_frequency: 90d
 	RW0;RW0 8732,12804 8737,12757 8752,12647
 	RW3;RW3 8752,12647 8754,12622
@@ -1587,7 +1587,7 @@ Busspur gilt Mo-Fr 6-19 Uhr	RW5; 12242,8972 12152,9023 12078,9065 12011,9100 119
 benutzungspflichtige Radspur fängt einige Meter nach der Kreuzung an	RW0; 10738,12364 10804,12291
 zur Karl-Marx-Allee fehlen einige Meter Radspur	RW4;RW4 12878,12430 12891,12549
 	RW3;RW3 12891,12549 12866,12582 12851,12602 12773,12683 12690,12769 12616,12844 12594,12866 12520,12938 12416,13045
-	RW3;RW3 12163,13295 12131,13333 12085,13377 11984,13473 11924,13529 11893,13547
+	RW3;RW3 12163,13295 12131,13333 12085,13377 11992,13467 11924,13529 11893,13547
 	RW3;RW0 11893,13547 11842,13576
 	RW0;RW0 11842,13576 11785,13625
 	RW3;RW3 11764,12001 11920,12266 12006,12464 12028,12519
@@ -1719,8 +1719,8 @@ die letzten Meter werden als benutzungspflichtiger Radweg auf dem Gehweg geführt
 	RW4;RW3 8005,11627 7816,11571 7717,11540 7600,11513 7504,11512 7435,11514 7356,11517
 	RW4;RW4 7356,11517 7293,11519 7171,11510
 	RW4;RW3 7171,11510 6987,11487 6915,11492 6825,11486
-	RW6;RW6 8553,11638 8473,11638 8387,11637
-	RW6;RW6 8502,11564 8473,11638 8438,11753
+	RW6;RW6 8553,11638 8481,11638 8387,11637
+	RW6;RW6 8490,11562 8481,11638 8456,11763
 Busspur gilt Mo-Sa 7-20 Uhr	RW5;RW0 8119,12414 8354,12416 8400,12417 8540,12420
 	RW4;RW4 8030,12824 8124,12840 8168,12848 8204,12816 8206,12757 8207,12606 8122,12603
 	RW4;RW1 7930,12912 7946,12932
@@ -1754,7 +1754,7 @@ Berliner Gehwegplatten mit einigen leichten Unebenheiten, ca. 1,50m breit	RW2;RW
 #: XXX wegen Bauarbeiten ist die Busspur aufgehoben; evtl. wird es noch weitere Einschränkungen auf dem Gehweg geben; später ggfs. wieder herstellen: Busspur ist immer gültig	RW5;
 #: by: http://www.dafmap.de/d/berlin.html?id=3134&mt=0&zoom=16 (Projektabschluss: 2017-09-01)
 #: osm_watch: way id="187103792" version="10"
-#: last_checked: 2018-08-01
+#: last_checked: 2018-08-20
 #: check_frequency: 14d
 	RW4; 11451,13301 11369,13174
 Busspur gilt Mo-Fr 6-20 Uhr	RW5; 11451,13301 11486,13350
@@ -1846,7 +1846,7 @@ für Radfahrer freigegebene Busspur gilt Mo-Fr 6-19, Sa 8-19 und So 7-15 Uhr	RW1;
 schmaler asphaltierter Radweg	RW1; 5446,15489 5722,15795
 schmaler Verbundsteinpflasterradweg	RW1; 5722,15795 5907,16000
 schmaler asphaltierter Radweg	RW1; 5907,16000 5722,15795 5446,15489
-aufgemalte Radwege	RW1;RW1 5907,16000 5988,16099 6104,16223 6211,16343 6304,16447
+aufgemalte Radwege	RW1;RW1 5907,16000 5981,16091 6104,16223 6211,16343 6304,16447
 #: by: ^^^
 	RW2;RW2 5295,17344 5250,17318 5034,17322
 	RW2;RW 5109,17507 5068,17384 5034,17322
@@ -2722,11 +2722,15 @@ Wechsel zwischen alten Gehwegplatten und schadhaftem Verbundsteinpflaster	RW1; 1
 	RW; 13999,2727 13951,2697 13915,2673 13886,2653 13709,2551
 	RW1; 13709,2551 13501,2413
 	RW; 13501,2413 13418,2357 13367,2322 13104,2143
+# 
 #: XXX Markierung von Schutzstreifen und Fahrbahnverbreiterung, Rückbau des alten Radweges vvv
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2017) vvv
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.601178.php
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20180202
+#: osm_watch: way id="172243640" version="5"
+#: osm_watch: way id="30084195" version="17"
+#: osm_watch: way id="30084196" version="20"
 #: last_checked: 2018-04-29 vvv
 #: check_frequency: 60d vvv
 # REMOVED (ja, ist so) --- #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4688 (abgesperrt) (vorher: Radwege mit Schäden) --- #: XXX vor Ort anschauen!
@@ -2736,6 +2740,7 @@ Radwege mit Schäden	RW1; 14523,1847 14252,1945 14231,1952 14120,1991 13835,2099 
 #: last_checked ^^^
 #: by ^^^
 #: XXX ^^^
+# 
 # REMOVED ---	RW1;RW1 14523,1847 14621,1798 14676,1777
 	RW6;RW6 10612,1925 10593,1875 10578,1840
 #: note: Zweirichtungsradweg für Radfahrer in Richtung Mozartstr.
@@ -5174,7 +5179,7 @@ Tempo 10	RW6;RW6 -7275,-357 -7300,-292 -7444,-100 -7460,-33
 	RW6;RW6 17310,15186 17317,15059
 	RW6;RW6 17227,15054 17262,15056 17317,15059 17345,15061
 #: XXX wird hier noch ein Radwegschild aufgestellt?
-#: last_checked: 2018-08-07
+#: last_checked: 2018-08-17
 	RW3; 13330,13468 13228,13615 13225,13620 13166,13707 13100,13803 13037,13897 12975,13990
 	RW3; 12817,14159 12722,14232 12616,14315 12522,14385
 	RW3; 12522,14385 12616,14315 12722,14232

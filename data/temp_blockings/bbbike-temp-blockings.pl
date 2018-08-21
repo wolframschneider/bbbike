@@ -1271,7 +1271,7 @@ EOF
        text  => 'Lennéstr. zwischen Bellvuestr. und Eberstr. Baustelle, Straße gesperrt Richtung Ebertstr. (bis 15.11.2004) ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 8489,11782 8438,11753 8322,11715
+	2 8489,11782 8456,11763 8322,11715
 	2 8322,11715
 EOF
      },
@@ -7676,7 +7676,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_005069',
        data  => <<EOF,
-	q4::inwork; 5988,16099 6104,16223 6211,16343
+	q4::inwork; 5981,16091 6104,16223 6211,16343
 EOF
      },
      { from  => 1176674400, # 2007-04-16 00:00
@@ -16434,14 +16434,14 @@ EOF
 	2::temp 8424,12853 8309,12758 8306,12609
 EOF
      },
-     { from  => $isodate2epoch->("2017-09-15 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-09-17 20:00:00"),
+     { from  => $isodate2epoch->("2018-09-15 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-09-16 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 15, months => 9]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (16.09.2017 bis 17.09.2017) ',
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (15.09.2018 bis 16.09.2018) ',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.family-and-friends-ev.de/termine.html
+#: note: by: http://www.family-and-friends-ev.de/ (update.pl bekommt hier aber einen Fehler)
 	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
 EOF
      },
@@ -21044,11 +21044,11 @@ EOF
 	q4::inwork; 9275,4672 9405,4667 9494,4658 9695,4638 10010,4606
 EOF
      },
-     { from  => $isodate2epoch->("2017-09-18 06:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-09-20 06:00:00"), #
+     { from  => $isodate2epoch->("2018-09-10 06:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-09-12 06:00:00"), #
        periodic => 1,
-       recurrences => [['yearly', days => 19, months => 9]],
-       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, voraussichtlich ab 19.09.2017',
+       recurrences => [['yearly', days => 10, months => 9]],
+       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, voraussichtlich ab 10.09.2018',
        type  => 'gesperrt',
        data  => <<EOF,
 #: tempex: 20160920T0600-20160922T0600 vvv
@@ -21058,14 +21058,14 @@ EOF
 #: tempex ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2017-09-20 06:00:00"),
-       until => $isodate2epoch->("2017-09-25 06:00:00"),
+     { from  => $isodate2epoch->("2018-09-12 06:00:00"),
+       until => $isodate2epoch->("2018-09-17 06:00:00"),
        periodic => 1,
-       recurrences => [['yearly', days => 19, months => 9]],
-       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, voraussichtlich bis 25.09.2017',
+       recurrences => [['yearly', days => 12, months => 9]],
+       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, voraussichtlich bis 12.09.2018',
        type  => 'gesperrt',
        data  => <<EOF,
-#: tempex: 20160922T0600-T20160926T0600 vvv
+# REMOVED --- #: tempex: 20160922T0600-T20160926T0600 vvv
 	2::temp 8573,12325 8540,12420
 	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
 	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
@@ -21085,7 +21085,7 @@ EOF
 	3 8120,12756 8122,12603 7945,12592
 	3::temp 8391,12389 8344,12221 8327,12174
 	3::temp 8327,12174 8344,12221 8391,12389
-#: tempex ^^^
+# REMOVED --- #: tempex ^^^
 EOF
      },
      { from  => 1348981200, # 2012-09-30 07:00
@@ -22652,15 +22652,15 @@ EOF
 	2::inwork 2219,11324 2180,11318 2102,11307
 EOF
      },
-     { from  => $isodate2epoch->("2017-09-07 15:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-09-10 22:00:00"),
+     { from  => $isodate2epoch->("2018-09-06 15:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-09-09 22:00:00"),
        periodic => 1, # erster Termin im Jahr
        #recurrences => [["yearly", days => 9, months => 5]], # wechselnde Termine, kann auch erst Mitte September passieren
        recurrence_prewarn_days => 14,
        recurrences => [["yearly", days => 1, months => 9]],
-       text  => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 8.9.2017 15 Uhr bis 10.9.2017 22 Uhr',
+       text  => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 7.9.2018 15 Uhr bis 9.9.2018 22 Uhr',
        type  => 'gesperrt',
-       source_id => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/?date=20170409',
+       source_id => 'http://bigland.de/event/7-9-9-2018-fest-der-nationen/',
        data  => <<EOF,
 #: note: kein tempex-Ausdruck möglich
 	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
@@ -23981,13 +23981,12 @@ EOF
 	q4::inwork 20559,14847 20480,14874
 EOF
      },
-     { from  => 1416813420, # 2014-11-24 08:17
-       until => $isodate2epoch->("2015-02-03 16:00:00"), # 1418655600, # 2014-12-15 16:00
-       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 03.02.2015 16:00 Uhr',
+     { from  => 1534789491, # 1416813420, # 2014-11-24 08:17
+       until => undef, # $isodate2epoch->("2015-02-03 16:00:00"), # 1418655600, # 2014-12-15 16:00
+       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt',
        type  => 'handicap',
-       source_id => 'IM_023529',
        data  => <<EOF,
-	q4::inwork 9373,12197 9369,12253 9358,12351
+	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
      },
      { from  => 1417024800, # 2014-11-26 19:00
@@ -25230,7 +25229,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.formel-electric.de/stadtportrait/id/1/name/Berlin.html',
        data  => <<EOF,
-	2::temp 11226,12945 11289,12908 11589,12768 11635,12745 11683,12725 11976,12595 11988,12546 12028,12519
+	2::temp 11226,12945 11289,12908 11589,12768 11635,12745 11678,12727 11976,12595 11988,12546 12028,12519
 	2::temp 11920,12266 12006,12464 12028,12519 12083,12518 12114,12546 12134,12540
 	2::temp 11976,12595 12005,12619 12050,12616 12064,12673
 	2::temp 12114,12546 12099,12580 12050,12616
@@ -25257,7 +25256,7 @@ EOF
        data  => <<EOF,
 	2::temp 11601,12858 11589,12768
 	2::temp 11635,12745 11596,12668
-	2::temp 11683,12725 11721,12801
+	2::temp 11678,12727 11716,12803
 EOF
      },
      { from  => undef, # 
@@ -26735,10 +26734,10 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann ist die Durchfahrt gesperrt?
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="5"
-#: last_checked: 2018-07-28
+#: last_checked: 2018-08-16
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 EOF
@@ -26771,7 +26770,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-08-14 vvv
+#: last_checked: 2018-08-20 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27028,8 +27027,8 @@ EOF
 EOF
      },
      { from  => 1522789491, # 2018-04-03 23:04
-       until => $isodate2epoch->("2018-08-17 18:00:00"), # 1527718780, # 1527803999, # 2018-05-31 23:59
-       text  => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; bis Mitte Juli 2018',
+       until => $isodate2epoch->("2019-03-01 18:00:00"), # 1527718780, # 1527803999, # 2018-05-31 23:59
+       text  => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; voraussichtlich bis März 2019',
        type  => 'handicap',
        source_id => '2147341699',
        data  => <<EOF,
@@ -27220,7 +27219,7 @@ EOF
        source_id => '2147342639',
        data  => <<EOF,
 #: XXX vielleicht wird die Fahrbahn repariert?
-#: last_checked: 2018-08-12
+#: last_checked: 2018-08-20
 #: check_frequency: 14d
 #: priority: #A
 	q3::inwork; 13198,12311 13243,12222
@@ -27236,7 +27235,7 @@ EOF
 EOF
      },
      { from  => 1527186848, # 2018-05-24 20:34
-       until => 1534543200, # 2018-08-18 00:00
+       until => 1534536582, # 1534543200, # 2018-08-18 00:00
        text  => 'Am Spreebord: Bauarbeiten, Passieren für Radfahrer möglich, aber sehr eng, Bordsteine, bis 17.08.2018',
        type  => 'handicap',
        data  => <<EOF,
@@ -27275,15 +27274,16 @@ EOF
      },
      { from  => undef, # 
        until => 1538258400, # 2018-09-30 00:00
-       text  => 'Fasanenplatz: Bauarbeiten, Sperrung der Fahrbahn, Bordstein',
+       text  => 'Fasanenplatz: Bauarbeiten, Sperrung der Fahrbahn',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.703939.php',
        data  => <<EOF,
 #: XXX Sanierung des Kleinsteinpflasters ab 2018-05-28 bis voraussichtlich Herbst 2018 -> ändert sich an der Qualität etwas?
 #: by: https://www.berliner-woche.de/wilmersdorf/c-verkehr/pflasterarbeiten-am-fasanenplatz_a165320
-#: last_checked: 2018-06-22
+#: last_checked: 2018-08-18
 #: check_frequency: 14d
-	q4::inwork 5223,10243 5192,10241
+	q4::inwork 5192,10241 5191,10190
+	q2::inwork 5017,10150 5191,10190
 EOF
      },
      { from  => 1528137944, # 2018-06-04 20:45
@@ -27324,14 +27324,14 @@ EOF
      },
      { from  => undef,
        until => $isodate2epoch->("2018-09-14 18:00:00"),
-       text  => 'Liebigstr. und Weidenweg: Bauarbeiten, Einbahnstraßenregelung',
+       text  => 'Liebigstr. und Weidenweg: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX eventuell hängen die Bauarbeiten mit den Bauarbeiten in der Eldenaer Str. zusammen
 #: XXX wird danach komplett asphaltiert sein?
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=42743 (sogar bis 2018-09-17)
-#: last_checked: 2018-08-12
-	q4::inwork; 14096,12827 14058,12709 13911,12692
+#: last_checked: 2018-08-17
+	q4::inwork 14096,12827 14058,12709 13911,12692
 EOF
      },
      { from  => 1529208000, # 2018-06-17 06:00
@@ -27483,24 +27483,26 @@ EOF
 EOF
      },
      { from  => 1530741600, # 2018-07-05 00:00
-       until => 1543618799, # 2018-11-30 23:59
-       text  => 'Finckensteinallee: zwischen Carstennstr. und Schottmüllerstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende November 2018 ',
+       until => $isodate2epoch->("2018-10-05 18:00:00"), # 1543618799, # 2018-11-30 23:59
+       text  => 'Finckensteinallee: zwischen Carstennstr. und Kommandantenstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis Anfang Oktober 2018 ',
        type  => 'handicap',
        source_id => '2147342925',
        data  => <<EOF,
+#: source_id: 2147343043
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.722387.php (nur Kreuzungsbereich betroffen)
 #: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/finckensteinallee-gesperrt_a171782
-	q4::inwork 2625,2850 2570,2844
+	q4::inwork 2737,2866 2625,2850
+# REMOVED ---	q4::inwork 2625,2850 2570,2844
 # REMOVED ---	q4::inwork 2570,2844 2290,2864
 EOF
      },
      { from  => 1532620085, # 2018-07-26 17:48
        until => $isodate2epoch->("2018-08-30 18:00:00"), # 1534370399, # 2018-08-15 23:59
-       text  => 'Gotlindestr.: Bauarbeiten zwischen Ruschestr. und Freesienweg, Fahrbahn gesperrt, bis Ende August 2018',
+       text  => 'Gotlindestr.: Bauarbeiten zwischen Ruschestr. und Freesienweg, Fahrbahn Richtung Osten gesperrt, bis Ende August 2018',
        type  => 'handicap',
        source_id => '2147342912',
        data  => <<EOF,
-	q4::inwork 16000,12625 15947,12626
+	q4::inwork; 15947,12626 16000,12625
 EOF
      },
      { from  => $isodate2epoch->("2018-07-11 12:00:00"),
@@ -27513,13 +27515,13 @@ EOF
 EOF
      },
      { from  => 1531605600, # 2018-07-15 00:00
-       until => $isodate2epoch->("2018-08-24 18:00:00"), # 1535752799, # 2018-08-31 23:59
-       text  => 'Seelenbinderstr.: Richtung Salvador-Allende-Str. zwischen Bahnhofstr. und Bellevuestr. Gleisbauarbeiten, Fahrtrichtung gesperrt, Radfahrer müssen auf den freigegebenen Gehweg ausweichen, bis Ende August 2018 ',
+       until => $isodate2epoch->("2018-09-14 18:00:00"), # 1535752799, # 2018-08-31 23:59
+       text  => 'Seelenbinderstr.: Richtung Bahnhofstr. zwischen Bellevuestr. und Bahnhofstr. Gleisbauarbeiten, Fahrtrichtung gesperrt, Radfahrer müssen auf den freigegebenen Gehweg ausweichen, bis Mitte September 2018',
        type  => 'handicap',
        source_id => '2147342890',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/seelenbinderstrasse-bleibt-bis-ende-august-dicht_a172757
-	q3::inwork; 22292,5774 22513,5747 22608,5732 22696,5728 22798,5731 22900,5740 23106,5758 23333,5710
+	q3::inwork; 23333,5710 23106,5758 22900,5740 22798,5731 22696,5728 22608,5732 22513,5747 22292,5774
 EOF
      },
      { from  => $isodate2epoch->("2018-07-24 12:00:00"),
@@ -27612,6 +27614,56 @@ EOF
        source_id => '166401603',
        data  => <<EOF,
 	2::inwork 28595,12846 28593,12671
+EOF
+     },
+     { from  => 1534629600, # 2018-08-19 00:00
+       until => 1535040000, # 2018-08-23 18:00
+       text  => 'Charlottenstr.: Sperrung der Straße zwischen Dorotheenstr. und Unter den Linden wegen Kranarbeiten, eventuell sind auch Radfahrer betroffen, von 20.08.2018 bis 23.08.2018',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: source_id: 2147343046
+	2::inwork 9454,12558 9462,12481 9475,12365
+EOF
+     },
+     { from  => 1534654800, # 2018-08-19 07:00
+       until => 1536508800, # 2018-09-09 18:00
+       text  => 'Müllerstr.: Sperrung an der Kreuzung Seestr., nur Fußgänger können passieren, von 20. August 2018, ca. 07:00 Uhr bis voraussichtlich bis 09. September 2018',
+       type  => 'handicap',
+       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/mullerstra%C3%9Fe-wedding-vollsperrung-in-hohe-seestra%C3%9Fe-%C2%B7-gleisbauarbeiten',
+       data  => <<EOF,
+#: source_id: 2147343041
+	q4::inwork 6914,15908 6781,16026 6712,16087
+EOF
+     },
+     { from  => 1534629600, # 2018-08-19 00:00
+       until => $isodate2epoch->("2018-12-31 18:00:00"), # undef, # XXX
+       text  => 'Uhlandstr.: zwischen Kurfürstendamm und Lietzenburger Str. Richtung Süden wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, ab 20.08.2018 bis Ende 2019',
+       type  => 'handicap',
+       source_id => '2147342231',
+       data  => <<EOF,
+#: note: Gesamtbaumaßnahme bis 31.12.2023
+#: XXX sind tatsächlich Radfahrer betroffen?
+	q4::inwork; 5076,10658 5047,10381
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Privatstraße hinter der Leipziger Str.: Bauarbeiten, für Radfahrer explizit gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
+#: last_checked: 2018-08-20
+#: check_frequency: 14d
+	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
+EOF
+     },
+     { from  => 1534790216, # 2018-08-20 20:36
+       until => 1545433200, # 2018-12-22 00:00
+       text  => 'Liesenstr. Richtung Chausseestraße ab Neue Hochstr.: Bauarbeiten, Fahrtrichtung gesperrt, bis 21.12.2018',
+       type  => 'handicap',
+       source_id => '2147343039',
+       data  => <<EOF,
+	q2::inwork; 8423,14667 8336,14586
 EOF
      },
     );

@@ -2208,7 +2208,26 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: note: by: http://www.family-and-friends-ev.de/ (update.pl bekommt hier aber einen Fehler)
+	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
+',
+         'from' => 1537002000,
+         'id' => 1910,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              15,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (15.09.2018 bis 16.09.2018) ',
+         'type' => 'gesperrt',
+         'until' => 1537120800
+       },
        undef,
        undef,
        undef,
@@ -2878,8 +2897,68 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => '#: tempex: 20160920T0600-20160922T0600 vvv
+	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+#: tempex ^^^
+',
+         'from' => 1536552000,
+         'id' => 2387,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              10,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, voraussichtlich ab 10.09.2018',
+         'type' => 'gesperrt',
+         'until' => 1536724800
+       },
+       {
+         'data' => '# REMOVED --- #: tempex: 20160922T0600-T20160926T0600 vvv
+	2::temp 8573,12325 8540,12420
+	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+	2::temp 8119,12414 8055,12186
+	2::temp 8538,12245 8522,12239 8466,12197
+	2::temp 8538,12245 8522,12187
+	2::temp 8546,12279 8391,12389 8354,12416
+	2::temp 8119,12414 8354,12416 8400,12417 8540,12420
+	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
+	3 7429,12070 7383,12095 7031,12320
+	3 7031,12320 7383,12095 7429,12070
+	3 7823,12120 7816,12150 7822,12201 7875,12363
+	3 7875,12363 7822,12201 7816,12150 7823,12120
+	2::temp 8119,12414 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610 8485,12612
+	2::temp 8207,12606 8206,12757
+	3 7945,12592 8122,12603 8120,12756
+	3 8120,12756 8122,12603 7945,12592
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+# REMOVED --- #: tempex ^^^
+',
+         'from' => 1536724800,
+         'id' => 2388,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              12,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, voraussichtlich bis 12.09.2018',
+         'type' => 'gesperrt',
+         'until' => 1537156800
+       },
        undef,
        undef,
        undef,
@@ -3229,7 +3308,28 @@ Kleistpark	2::night 7430,9576 7501,9573 7512,9572
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: note: kein tempex-Ausdruck möglich
+	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
+',
+         'from' => 1536238800,
+         'id' => 2533,
+         'periodic' => 1,
+         'recurrence_prewarn_days' => 14,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              9
+                            ]
+                          ],
+         'source_id' => 'http://bigland.de/event/7-9-9-2018-fest-der-nationen/',
+         'text' => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 7.9.2018 15 Uhr bis 9.9.2018 22 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1536523200
+       },
        undef,
        undef,
        undef,
@@ -3327,29 +3427,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: (YYYY08 & fr-2) - +2d vvv
-	2::temp 22138,4642 22111,4562 22093,4499
-	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
-#: tempex ^^^
-',
-         'from' => 1534420800,
-         'id' => 2610,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              16,
-                              'months',
-                              8
-                            ]
-                          ],
-         'source_id' => 'http://www.winzerfest-köpenick.de/',
-         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 17.8.2018 bis 19.8.2018',
-         'type' => 'gesperrt',
-         'until' => 1534715999
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3455,7 +3533,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	q4::inwork; 9373,12197 9369,12253 9358,12351
+',
+         'from' => 1534789491,
+         'id' => 2666,
+         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        undef,
        undef,
@@ -3942,10 +4028,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX bis wann ist die Durchfahrt gesperrt?
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="5"
-#: last_checked: 2018-07-28
+#: last_checked: 2018-08-16
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 ',
@@ -3959,7 +4045,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-08-14 vvv
+#: last_checked: 2018-08-20 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4049,9 +4135,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1522789491,
          'id' => 2946,
          'source_id' => '2147341699',
-         'text' => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; bis Mitte Juli 2018',
+         'text' => 'Oranienburger Str.: Bauarbeiten zwischen Wittenauer Str. und Cyclopstr. Richtung Süden; außerdem Einbahnstraßenregelung in der Cyclopstr., offen Richtung Süden; voraussichtlich bis März 2019',
          'type' => 'handicap',
-         'until' => 1534521600
+         'until' => 1551459600
        },
        undef,
        undef,
@@ -4137,7 +4223,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX vielleicht wird die Fahrbahn repariert?
-#: last_checked: 2018-08-12
+#: last_checked: 2018-08-20
 #: check_frequency: 14d
 #: priority: #A
 	q3::inwork; 13198,12311 13243,12222
@@ -4150,16 +4236,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1534888800
        },
        undef,
-       {
-         'data' => '#: by: fritz
-	q4::inwork 4124,12721 4055,12713 3949,12710
-',
-         'from' => 1527186848,
-         'id' => 2961,
-         'text' => 'Am Spreebord: Bauarbeiten, Passieren für Radfahrer möglich, aber sehr eng, Bordsteine, bis 17.08.2018',
-         'type' => 'handicap',
-         'until' => 1534543200
-       },
+       undef,
        undef,
        {
          'data' => '	2::inwork 9690,28645 10701,28420
@@ -4175,14 +4252,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX Sanierung des Kleinsteinpflasters ab 2018-05-28 bis voraussichtlich Herbst 2018 -> ändert sich an der Qualität etwas?
 #: by: https://www.berliner-woche.de/wilmersdorf/c-verkehr/pflasterarbeiten-am-fasanenplatz_a165320
-#: last_checked: 2018-06-22
+#: last_checked: 2018-08-18
 #: check_frequency: 14d
-	q4::inwork 5223,10243 5192,10241
+	q4::inwork 5192,10241 5191,10190
+	q2::inwork 5017,10150 5191,10190
 ',
          'from' => undef,
          'id' => 2965,
          'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.703939.php',
-         'text' => 'Fasanenplatz: Bauarbeiten, Sperrung der Fahrbahn, Bordstein',
+         'text' => 'Fasanenplatz: Bauarbeiten, Sperrung der Fahrbahn',
          'type' => 'handicap',
          'until' => 1538258400
        },
@@ -4208,12 +4286,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: XXX eventuell hängen die Bauarbeiten mit den Bauarbeiten in der Eldenaer Str. zusammen
 #: XXX wird danach komplett asphaltiert sein?
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=42743 (sogar bis 2018-09-17)
-#: last_checked: 2018-08-12
-	q4::inwork; 14096,12827 14058,12709 13911,12692
+#: last_checked: 2018-08-17
+	q4::inwork 14096,12827 14058,12709 13911,12692
 ',
          'from' => undef,
          'id' => 2969,
-         'text' => 'Liebigstr. und Weidenweg: Bauarbeiten, Einbahnstraßenregelung',
+         'text' => 'Liebigstr. und Weidenweg: Bauarbeiten, Fahrbahn gesperrt',
          'type' => 'handicap',
          'until' => 1536940800
        },
@@ -4274,16 +4352,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1542236400
        },
-       {
-         'data' => '	q4::inwork; 4879,5017 4951,4920 4985,4884 5048,4798 5070,4770
-',
-         'from' => 1530655200,
-         'id' => 2979,
-         'source_id' => '2147342847',
-         'text' => 'Birkbuschstr.: Bauarbeiten zwischen Schützenstr. und Haydnstr., Richtung Siemensstr. gesperrt, bis Mitte August 2018',
-         'type' => 'handicap',
-         'until' => 1534521600
-       },
+       undef,
        {
          'data' => '#: XXX nach den Bauarbeiten bessere Qualität
 #: priority: #B
@@ -4299,37 +4368,30 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1622498400
        },
        undef,
-       {
-         'data' => '	2::inwork 21889,16817 21824,16506 21785,16273 21782,16253
-',
-         'from' => 1531000800,
-         'id' => 2982,
-         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.719553.php',
-         'text' => 'Blumberger Damm: Bauarbeiten zwischen Rudolf-Leonhard-Str. und Mehrower Allee, Fahrbahn gesperrt, vom 9. Juli 2018 bis voraussichtlich 20. August 2018',
-         'type' => 'gesperrt',
-         'until' => 1534780800
-       },
+       undef,
        undef,
        {
-         'data' => '#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.722387.php (nur Kreuzungsbereich betroffen)
+         'data' => '#: source_id: 2147343043
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.722387.php (nur Kreuzungsbereich betroffen)
 #: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/finckensteinallee-gesperrt_a171782
-	q4::inwork 2625,2850 2570,2844
+	q4::inwork 2737,2866 2625,2850
+# REMOVED ---	q4::inwork 2625,2850 2570,2844
 # REMOVED ---	q4::inwork 2570,2844 2290,2864
 ',
          'from' => 1530741600,
          'id' => 2984,
          'source_id' => '2147342925',
-         'text' => 'Finckensteinallee: zwischen Carstennstr. und Schottmüllerstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende November 2018 ',
+         'text' => 'Finckensteinallee: zwischen Carstennstr. und Kommandantenstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis Anfang Oktober 2018 ',
          'type' => 'handicap',
-         'until' => 1543618799
+         'until' => 1538755200
        },
        {
-         'data' => '	q4::inwork 16000,12625 15947,12626
+         'data' => '	q4::inwork; 15947,12626 16000,12625
 ',
          'from' => 1532620085,
          'id' => 2985,
          'source_id' => '2147342912',
-         'text' => 'Gotlindestr.: Bauarbeiten zwischen Ruschestr. und Freesienweg, Fahrbahn gesperrt, bis Ende August 2018',
+         'text' => 'Gotlindestr.: Bauarbeiten zwischen Ruschestr. und Freesienweg, Fahrbahn Richtung Osten gesperrt, bis Ende August 2018',
          'type' => 'handicap',
          'until' => 1535644800
        },
@@ -4345,25 +4407,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: by: https://www.berliner-woche.de/koepenick/c-verkehr/seelenbinderstrasse-bleibt-bis-ende-august-dicht_a172757
-	q3::inwork; 22292,5774 22513,5747 22608,5732 22696,5728 22798,5731 22900,5740 23106,5758 23333,5710
+	q3::inwork; 23333,5710 23106,5758 22900,5740 22798,5731 22696,5728 22608,5732 22513,5747 22292,5774
 ',
          'from' => 1531605600,
          'id' => 2987,
          'source_id' => '2147342890',
-         'text' => 'Seelenbinderstr.: Richtung Salvador-Allende-Str. zwischen Bahnhofstr. und Bellevuestr. Gleisbauarbeiten, Fahrtrichtung gesperrt, Radfahrer müssen auf den freigegebenen Gehweg ausweichen, bis Ende August 2018 ',
+         'text' => 'Seelenbinderstr.: Richtung Bahnhofstr. zwischen Bellevuestr. und Bahnhofstr. Gleisbauarbeiten, Fahrtrichtung gesperrt, Radfahrer müssen auf den freigegebenen Gehweg ausweichen, bis Mitte September 2018',
          'type' => 'handicap',
-         'until' => 1535126400
+         'until' => 1536940800
        },
-       {
-         'data' => '	q4::inwork 7979,70212 7906,70007 7983,69794 7945,69489 7871,69412
-',
-         'from' => 1532426400,
-         'id' => 2988,
-         'source_id' => 'LS/721-E/18/081',
-         'text' => 'Zehdenick: B109: Deckenerneuerung in der Ortsdurchfahrt B109, OL Vogelsang, Sperrung der Fahrbahn, 24.07.2018 bis 18.08.2018 ',
-         'type' => 'handicap',
-         'until' => 1534629600
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/altglienicke/c-bauen/rund-1000-kubikmeter-trinkwasser-liefen-in-untergrund-und-keller_a172811
 	2::inwork 19602,1989 19244,2141
@@ -4396,16 +4449,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1537999200
        },
-       {
-         'data' => '#: source_id: 2147342987
-	q4::inwork; 13515,11969 13696,11920
-',
-         'from' => 1533579833,
-         'id' => 2992,
-         'text' => 'Grünberger Str.: Sperrung der Fahrbahn zwischen Kadiner Str. und Warschauer Str., Richtung Osten, voraussichtlich bis zum 19. August 2018',
-         'type' => 'handicap',
-         'until' => 1534694400
-       },
+       undef,
        undef,
        {
          'data' => '	2::inwork 25929,-5994 25902,-6006
@@ -4436,6 +4480,61 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Hoppegarten: Neubau der Eisenbahnbrücke, möglicherweise Vollsperrung, 27.02.2018 bis 14.12.2018',
          'type' => 'gesperrt',
          'until' => 1544828400
+       },
+       {
+         'data' => '#: source_id: 2147343046
+	2::inwork 9454,12558 9462,12481 9475,12365
+',
+         'from' => 1534629600,
+         'id' => 2997,
+         'text' => 'Charlottenstr.: Sperrung der Straße zwischen Dorotheenstr. und Unter den Linden wegen Kranarbeiten, eventuell sind auch Radfahrer betroffen, von 20.08.2018 bis 23.08.2018',
+         'type' => 'gesperrt',
+         'until' => 1535040000
+       },
+       {
+         'data' => '#: source_id: 2147343041
+	q4::inwork 6914,15908 6781,16026 6712,16087
+',
+         'from' => 1534654800,
+         'id' => 2998,
+         'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/mullerstra%C3%9Fe-wedding-vollsperrung-in-hohe-seestra%C3%9Fe-%C2%B7-gleisbauarbeiten',
+         'text' => 'Müllerstr.: Sperrung an der Kreuzung Seestr., nur Fußgänger können passieren, von 20. August 2018, ca. 07:00 Uhr bis voraussichtlich bis 09. September 2018',
+         'type' => 'handicap',
+         'until' => 1536508800
+       },
+       {
+         'data' => '#: note: Gesamtbaumaßnahme bis 31.12.2023
+#: XXX sind tatsächlich Radfahrer betroffen?
+	q4::inwork; 5076,10658 5047,10381
+',
+         'from' => 1534629600,
+         'id' => 2999,
+         'source_id' => '2147342231',
+         'text' => 'Uhlandstr.: zwischen Kurfürstendamm und Lietzenburger Str. Richtung Süden wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, ab 20.08.2018 bis Ende 2019',
+         'type' => 'handicap',
+         'until' => 1546275600
+       },
+       {
+         'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
+#: last_checked: 2018-08-20
+#: check_frequency: 14d
+	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
+',
+         'from' => undef,
+         'id' => 3000,
+         'text' => 'Privatstraße hinter der Leipziger Str.: Bauarbeiten, für Radfahrer explizit gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '	q2::inwork; 8423,14667 8336,14586
+',
+         'from' => 1534790216,
+         'id' => 3001,
+         'source_id' => '2147343039',
+         'text' => 'Liesenstr. Richtung Chausseestraße ab Neue Hochstr.: Bauarbeiten, Fahrtrichtung gesperrt, bis 21.12.2018',
+         'type' => 'handicap',
+         'until' => 1545433200
        }
      
 );
