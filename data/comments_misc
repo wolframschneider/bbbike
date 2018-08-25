@@ -86,6 +86,7 @@ Kreisverkehr	Roundabout -19100,407
 Kreisverkehr	Roundabout 25192,-8936
 Kreisverkehr	Roundabout -84293,-73975
 Kreisverkehr	Roundabout -84341,-73188
+Kreisverkehr	Roundabout 26002,-3362 26013,-3367 26046,-3365 26048,-3334 26029,-3326 26011,-3331 26002,-3342 26002,-3362
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
 Privatstraße der DB	CS 5710,7820 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
@@ -639,3 +640,4 @@ Am Wuhlesee: nicht ausgeschildert	CS 21351,8402 21419,8367
 Pelzlake: ausgeschildert als Triglawstr. 16A-16B und zum Forst Müggelheim	CP2; 32245,1914 32155,1863
 ausgeschildert Märkisches Zentrum	CP2; 6431,20479 6423,20500
 ausgeschildert als "zu den Häusern Hauptstraße 85B, A"	CP2; 8107,20859 8248,20933
+ausgeschildert als Michelangelostr. 93-127	CP2; 13760,15187 13801,15256

@@ -3439,7 +3439,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	q4::temp 8426,13909 8572,13671
+',
+         'from' => 1534967761,
+         'id' => 2622,
+         'source_id' => 'IM_022700',
+         'text' => 'Schwarzer Weg: Veranstaltung, Straße gesperrt, 23. August 2018 16 Uhr bis 27. August 2018 12 Uhr ',
+         'type' => 'handicap',
+         'until' => 1535364000
+       },
        undef,
        undef,
        {
@@ -3534,11 +3543,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '	q4::inwork; 9373,12197 9369,12253 9358,12351
+         'data' => '#: XXX bis wann geht die Sperrung?
+#: priority: #A
+#: last_checked: 2018-08-23
+#: check_frequency: 3d
+	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
          'from' => 1534789491,
          'id' => 2666,
-         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt',
+         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -3897,18 +3910,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1541026800
        },
        undef,
-       {
-         'data' => '#: source_id: 176001130
-	2::inwork 20533,29069 20537,29285
-',
-         'from' => 1506549600,
-         'id' => 2883,
-         'recurring' => 1,
-         'source_id' => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
-         'text' => 'Zepernicker Chaussee: Sperrung an der Eisenbahnbrücke, 29. September 2017 bis 20. August 2018',
-         'type' => 'gesperrt',
-         'until' => 1534802399
-       },
+       undef,
        undef,
        undef,
        {
@@ -4028,10 +4030,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX bis wann ist die Durchfahrt gesperrt?
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="5"
-#: last_checked: 2018-08-16
+#: last_checked: 2018-08-24
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 ',
@@ -4045,7 +4047,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-08-20 vvv
+#: last_checked: 2018-08-23 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4092,7 +4094,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: last_checked: 2018-08-10 vvv
+         'data' => '#: last_checked: 2018-08-21 vvv
 # XXX_prog: eigentlich q3-
 	q4::inwork 7136,9223 7012,9222
 	q2::inwork 7136,9223 7130,9316
@@ -4139,7 +4141,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1551459600
        },
-       undef,
+       {
+         'data' => '#: source_id: 2147342390
+#: source_id: 2147342751
+#: source_id: 2147343056
+# REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
+#: last_checked: 2018-08-23
+# REMOVED --- #: check_frequency: 7d
+	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
+',
+         'from' => 1534878268,
+         'id' => 2947,
+         'text' => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Glinkastr., voraussichtlich bis Ende September 2018',
+         'type' => 'handicap',
+         'until' => 1538323200
+       },
        undef,
        undef,
        {
@@ -4208,18 +4224,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '# REMOVED (ja) --- #: add_fragezeichen: Ist die Stubenrauchbrücke tatsächlich für Radfahrer gesperrt?
-#: by: https://www.berliner-woche.de/oberschoeneweide/c-verkehr/spreequerung-bleibt-bis-august-voll-gesperrt_a164513
-#: osm_watch: way id="4540244" version="18"
-	q3::inwork; 17432,6352 17492,6462 17528,6502
-',
-         'from' => undef,
-         'id' => 2957,
-         'source_id' => '2147342600',
-         'text' => 'Karlshorster Str.: Fahrbahn der Stubenrauchbrücke in Richtung Osten gesperrt, Radfahrer müssen auf den Gehweg ausweichen, bis Ende August 2018',
-         'until' => 1535731200
-       },
+       undef,
        undef,
        {
          'data' => '#: XXX vielleicht wird die Fahrbahn repariert?
@@ -4231,12 +4236,23 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1527186729,
          'id' => 2959,
          'source_id' => '2147342639',
-         'text' => 'Gubener Str.: Bauarbeiten zwischen Graudenzer Str. und Hildegard-Jadamowitz-Str., Einbahnstraßenregelung, bis 21.08.2018',
+         'text' => 'Gubener Str.: Bauarbeiten zwischen Graudenzer Str. und Hildegard-Jadamowitz-Str., Einbahnstraßenregelung, bis Ende September 2018',
          'type' => 'handicap',
-         'until' => 1534888800
+         'until' => 1538323200
        },
        undef,
-       undef,
+       {
+         'data' => '#: by: fritz
+#: XXX bis wann geht die Sperrung?
+#: last_checked: 2018-08-21
+	q4::inwork 4124,12721 4055,12713 3949,12710
+',
+         'from' => 1527186848,
+         'id' => 2961,
+         'text' => 'Am Spreebord: Bauarbeiten, Passieren für Radfahrer möglich, aber sehr eng, Bordsteine, Ende unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        {
          'data' => '	2::inwork 9690,28645 10701,28420
@@ -4385,16 +4401,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1538755200
        },
-       {
-         'data' => '	q4::inwork; 15947,12626 16000,12625
-',
-         'from' => 1532620085,
-         'id' => 2985,
-         'source_id' => '2147342912',
-         'text' => 'Gotlindestr.: Bauarbeiten zwischen Ruschestr. und Freesienweg, Fahrbahn Richtung Osten gesperrt, bis Ende August 2018',
-         'type' => 'handicap',
-         'until' => 1535644800
-       },
+       undef,
        {
          'data' => '	q4::inwork 51862,100638 51910,100091 51920,99933 51940,99551 52207,99132
 ',
@@ -4449,10 +4456,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1537999200
        },
-       undef,
+       {
+         'data' => '#: source_id: 2147342987
+	q4::inwork; 13515,11969 13696,11920
+',
+         'from' => 1533579833,
+         'id' => 2992,
+         'text' => 'Grünberger Str.: Sperrung der Fahrbahn zwischen Kadiner Str. und Warschauer Str., Richtung Osten, voraussichtlich bis Mitte September 2018',
+         'type' => 'handicap',
+         'until' => 1537027200
+       },
        undef,
        {
-         'data' => '	2::inwork 25929,-5994 25902,-6006
+         'data' => '#: note: zuletzt am 2018-08-22 gesehen
+	2::inwork 25929,-5994 25902,-6006
 ',
          'from' => 1533756141,
          'id' => 2994,
@@ -4481,16 +4498,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1544828400
        },
-       {
-         'data' => '#: source_id: 2147343046
-	2::inwork 9454,12558 9462,12481 9475,12365
-',
-         'from' => 1534629600,
-         'id' => 2997,
-         'text' => 'Charlottenstr.: Sperrung der Straße zwischen Dorotheenstr. und Unter den Linden wegen Kranarbeiten, eventuell sind auch Radfahrer betroffen, von 20.08.2018 bis 23.08.2018',
-         'type' => 'gesperrt',
-         'until' => 1535040000
-       },
+       undef,
        {
          'data' => '#: source_id: 2147343041
 	q4::inwork 6914,15908 6781,16026 6712,16087
@@ -4504,7 +4512,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Gesamtbaumaßnahme bis 31.12.2023
-#: XXX sind tatsächlich Radfahrer betroffen?
+# REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
 	q4::inwork; 5076,10658 5047,10381
 ',
          'from' => 1534629600,
@@ -4535,6 +4543,38 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Liesenstr. Richtung Chausseestraße ab Neue Hochstr.: Bauarbeiten, Fahrtrichtung gesperrt, bis 21.12.2018',
          'type' => 'handicap',
          'until' => 1545433200
+       },
+       {
+         'data' => '#: XXX bis wann sind hier Bauarbeiten?
+#: last_checked: 2018-08-21
+#: check_frequency: 21d
+	q4::inwork; 4502,11740 4574,11587
+',
+         'from' => undef,
+         'id' => 3002,
+         'text' => 'Am Schillertheater: Bauarbeiten, Fahrbahn Richtung Süden gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '	2::inwork 25646,-209 25574,-38 25537,167 25461,254 25172,345 24827,354 24743,370 24666,436 24571,514 24197,585
+',
+         'from' => 1536530400,
+         'id' => 3003,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.732734.php',
+         'text' => 'Sportpromenade: zwischen Strandbad Grünau und Richtershorn Bauarbeiten, Straße wird neu asphaltiert, voraussichtlich vom 11.09.2018 bis 18.09.2018',
+         'type' => 'gesperrt',
+         'until' => 1537308000
+       },
+       {
+         'data' => '	q4::inwork; 7843,18705 7753,18542 7676,18492
+',
+         'from' => 1535234400,
+         'id' => 3004,
+         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.732621.php',
+         'text' => 'Emmentaler Str.: Bauarbeiten zwischen Reginhardstr. bis Klemkestr., Einbahnstraße offen Richtung Nordosten, vom 27. August 2018 bis zum 07. September 2018',
+         'type' => 'handicap',
+         'until' => 1536357599
        }
      
 );

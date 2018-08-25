@@ -6960,7 +6960,7 @@ EOF
        text  => 'K 6161 Friedensstr. Bahnübergang in der OD Eichwalde Gleisbauarbeiten Vollsperrung 15.12.2006-19.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 25173,-3957 25206,-4014 25212,-4025 25269,-4041 25322,-4042
+	2::inwork 25173,-3957 25206,-4014 25212,-4025 25238,-4031 25269,-4041 25322,-4042
 EOF
      },
      { from  => 1166050800, # 2006-12-14 00:00
@@ -13414,7 +13414,7 @@ EOF
        text  => 'K 6161 Friedenstr. Bahnübergang in Eichwalde Gleisbauarbeiten Vollsperrung 02.03.2009-16.03.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 25173,-3957 25206,-4014 25212,-4025 25269,-4041 25322,-4042
+	2::inwork 25173,-3957 25206,-4014 25212,-4025 25238,-4031 25269,-4041 25322,-4042
 EOF
      },
      { from  => 1234652400, # 2009-02-15 00:00
@@ -19022,7 +19022,7 @@ EOF
        type  => 'gesperrt',
        source_id => '116100155',
        data  => <<EOF,
-	2::inwork 25212,-4025 25269,-4041 25322,-4042
+	2::inwork 25212,-4025 25238,-4031 25269,-4041 25322,-4042
 EOF
      },
      { from  => 1335462672, # 
@@ -23555,9 +23555,9 @@ EOF
 	q4::temp 6686,13746 6493,13822
 EOF
      },
-     { from  => 1409202000, # 2014-08-28 07:00
-       until => $isodate2epoch->("2014-09-01 12:00:00"), #  1409569200, # 2014-09-01 13:00
-       text  => 'Schwarzer Weg: Veranstaltung, Straße gesperrt, 29. August 2014 bis 1. September 2014 12 Uhr ',
+     { from  => 1534967761, # 1409202000, # 2014-08-28 07:00
+       until => $isodate2epoch->("2018-08-27 12:00:00"), #  1409569200, # 2014-09-01 13:00
+       text  => 'Schwarzer Weg: Veranstaltung, Straße gesperrt, 23. August 2018 16 Uhr bis 27. August 2018 12 Uhr ',
        type  => 'handicap',
        source_id => 'IM_022700',
        data  => <<EOF,
@@ -23981,11 +23981,15 @@ EOF
 	q4::inwork 20559,14847 20480,14874
 EOF
      },
-     { from  => 1534789491, # 1416813420, # 2014-11-24 08:17
-       until => undef, # $isodate2epoch->("2015-02-03 16:00:00"), # 1418655600, # 2014-12-15 16:00
-       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt',
+     { from  => 1534789491,
+       until => undef,
+       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung unbekannt',
        type  => 'handicap',
        data  => <<EOF,
+#: XXX bis wann geht die Sperrung?
+#: priority: #A
+#: last_checked: 2018-08-23
+#: check_frequency: 3d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
      },
@@ -26734,10 +26738,10 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann ist die Durchfahrt gesperrt?
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="5"
-#: last_checked: 2018-08-16
+#: last_checked: 2018-08-24
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 EOF
@@ -26770,7 +26774,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-08-20 vvv
+#: last_checked: 2018-08-23 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -26910,7 +26914,7 @@ EOF
        text  => 'Vorbergstr.: Bauarbeiten zwischen Gleditschstr. und Akazienstr., Fahrbahn gesperrt, außerdem Sperrung in der Gleditschstr., Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-08-10 vvv
+#: last_checked: 2018-08-21 vvv
 # XXX_prog: eigentlich q3-
 	q4::inwork 7136,9223 7012,9222
 	q2::inwork 7136,9223 7130,9316
@@ -27037,15 +27041,16 @@ EOF
 	q4::inwork; 5297,21243 5099,21410 5053,21452 5000,21488 4810,21730
 EOF
      },
-     { from  => 1522864912, # 2018-04-04 20:01
-       until => 1530907952, # $isodate2epoch->("2018-07-15 20:00:00"), # 1525449600, # 2018-05-04 18:00
-       text  => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Glinkastr., voraussichtlich bis Mitte Juli 2018',
+     { from  => 1534878268, # 1522864912, # 2018-04-04 20:01
+       until => $isodate2epoch->("2018-09-30 18:00:00"), # 1530907952, # $isodate2epoch->("2018-07-15 20:00:00"), # 1525449600, # 2018-05-04 18:00
+       text  => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Glinkastr., voraussichtlich bis Ende September 2018',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147342390
 #: source_id: 2147342751
+#: source_id: 2147343056
 # REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
-#: last_checked: 2018-06-08
+#: last_checked: 2018-08-23
 # REMOVED --- #: check_frequency: 7d
 	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
 EOF
@@ -27192,13 +27197,13 @@ EOF
 EOF
      },
      { from  => undef,
-       until => $isodate2epoch->("2018-08-31 18:00:00"),
+       until => $isodate2epoch->("2018-08-16 18:00:00"), # laut osm Sperrung beendet
        text  => "Karlshorster Str.: Fahrbahn der Stubenrauchbrücke in Richtung Osten gesperrt, Radfahrer müssen auf den Gehweg ausweichen, bis Ende August 2018",
        source_id => "2147342600",
        data  => <<EOF,
 # REMOVED (ja) --- #: add_fragezeichen: Ist die Stubenrauchbrücke tatsächlich für Radfahrer gesperrt?
 #: by: https://www.berliner-woche.de/oberschoeneweide/c-verkehr/spreequerung-bleibt-bis-august-voll-gesperrt_a164513
-#: osm_watch: way id="4540244" version="18"
+#: osm_watch: way id="4540244" version="19"
 	q3::inwork; 17432,6352 17492,6462 17528,6502
 EOF
      },
@@ -27213,8 +27218,8 @@ EOF
 EOF
      },
      { from  => 1527186729, # 2018-05-24 20:32
-       until => 1534888800, # 2018-08-22 00:00
-       text  => 'Gubener Str.: Bauarbeiten zwischen Graudenzer Str. und Hildegard-Jadamowitz-Str., Einbahnstraßenregelung, bis 21.08.2018',
+       until => $isodate2epoch->("2018-09-30 18:00:00"), # 1534888800, # 2018-08-22 00:00
+       text  => 'Gubener Str.: Bauarbeiten zwischen Graudenzer Str. und Hildegard-Jadamowitz-Str., Einbahnstraßenregelung, bis Ende September 2018',
        type  => 'handicap',
        source_id => '2147342639',
        data  => <<EOF,
@@ -27235,11 +27240,13 @@ EOF
 EOF
      },
      { from  => 1527186848, # 2018-05-24 20:34
-       until => 1534536582, # 1534543200, # 2018-08-18 00:00
-       text  => 'Am Spreebord: Bauarbeiten, Passieren für Radfahrer möglich, aber sehr eng, Bordsteine, bis 17.08.2018',
+       until => undef, # 1534536582, # 1534543200, # 2018-08-18 00:00
+       text  => 'Am Spreebord: Bauarbeiten, Passieren für Radfahrer möglich, aber sehr eng, Bordsteine, Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: by: fritz
+#: XXX bis wann geht die Sperrung?
+#: last_checked: 2018-08-21
 	q4::inwork 4124,12721 4055,12713 3949,12710
 EOF
      },
@@ -27497,7 +27504,7 @@ EOF
 EOF
      },
      { from  => 1532620085, # 2018-07-26 17:48
-       until => $isodate2epoch->("2018-08-30 18:00:00"), # 1534370399, # 2018-08-15 23:59
+       until => 1535133548, # $isodate2epoch->("2018-08-30 18:00:00"), # 1534370399, # 2018-08-15 23:59
        text  => 'Gotlindestr.: Bauarbeiten zwischen Ruschestr. und Freesienweg, Fahrbahn Richtung Osten gesperrt, bis Ende August 2018',
        type  => 'handicap',
        source_id => '2147342912',
@@ -27573,8 +27580,8 @@ EOF
 EOF
      },
      { from => 1533579833,
-       until => $isodate2epoch->("2018-08-19 18:00:00"),
-       text => 'Grünberger Str.: Sperrung der Fahrbahn zwischen Kadiner Str. und Warschauer Str., Richtung Osten, voraussichtlich bis zum 19. August 2018',
+       until => $isodate2epoch->("2018-09-15 18:00:00"),
+       text => 'Grünberger Str.: Sperrung der Fahrbahn zwischen Kadiner Str. und Warschauer Str., Richtung Osten, voraussichtlich bis Mitte September 2018',
        type => 'handicap',
        data => <<EOF,
 #: source_id: 2147342987
@@ -27595,6 +27602,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.zeuthen.de/Die-Deutsche-Bahn-informierte-Grunderneuerung-der-Personenunterfuehrung-am-S-Bahnhof-Zeuthen-642703.html',
        data  => <<EOF,
+#: note: zuletzt am 2018-08-22 gesehen
 	2::inwork 25929,-5994 25902,-6006
 EOF
      },
@@ -27642,7 +27650,7 @@ EOF
        source_id => '2147342231',
        data  => <<EOF,
 #: note: Gesamtbaumaßnahme bis 31.12.2023
-#: XXX sind tatsächlich Radfahrer betroffen?
+# REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
 	q4::inwork; 5076,10658 5047,10381
 EOF
      },
@@ -27664,6 +27672,35 @@ EOF
        source_id => '2147343039',
        data  => <<EOF,
 	q2::inwork; 8423,14667 8336,14586
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Am Schillertheater: Bauarbeiten, Fahrbahn Richtung Süden gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX bis wann sind hier Bauarbeiten?
+#: last_checked: 2018-08-21
+#: check_frequency: 21d
+	q4::inwork; 4502,11740 4574,11587
+EOF
+     },
+     { from  => 1536530400, # 2018-09-10 00:00
+       until => 1537308000, # 2018-09-19 00:00
+       text  => 'Sportpromenade: zwischen Strandbad Grünau und Richtershorn Bauarbeiten, Straße wird neu asphaltiert, voraussichtlich vom 11.09.2018 bis 18.09.2018',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.732734.php',
+       data  => <<EOF,
+	2::inwork 25646,-209 25574,-38 25537,167 25461,254 25172,345 24827,354 24743,370 24666,436 24571,514 24197,585
+EOF
+     },
+     { from  => 1535234400, # 2018-08-26 00:00
+       until => 1536357599, # 2018-09-07 23:59
+       text  => 'Emmentaler Str.: Bauarbeiten zwischen Reginhardstr. bis Klemkestr., Einbahnstraße offen Richtung Nordosten, vom 27. August 2018 bis zum 07. September 2018',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.732621.php',
+       data  => <<EOF,
+	q4::inwork; 7843,18705 7753,18542 7676,18492
 EOF
      },
     );
