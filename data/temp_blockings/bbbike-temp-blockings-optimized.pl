@@ -3439,16 +3439,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '	q4::temp 8426,13909 8572,13671
-',
-         'from' => 1534967761,
-         'id' => 2622,
-         'source_id' => 'IM_022700',
-         'text' => 'Schwarzer Weg: Veranstaltung, Straße gesperrt, 23. August 2018 16 Uhr bis 27. August 2018 12 Uhr ',
-         'type' => 'handicap',
-         'until' => 1535364000
-       },
+       undef,
        undef,
        undef,
        {
@@ -3545,7 +3536,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX bis wann geht die Sperrung?
 #: priority: #A
-#: last_checked: 2018-08-23
+#: last_checked: 2018-08-27
 #: check_frequency: 3d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -3898,17 +3889,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: 2147342863
-	2::inwork 14338,22885 14276,22914
-',
-         'from' => 1499280235,
-         'id' => 2881,
-         'source_id' => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
-         'text' => 'Brückendurchfahrt Schräger Weg: Sperrung, Radfahrer und Fußgänger können die Brücken bis auf kurzzeitige Einschränkungen passieren, bis voraussichtlich Oktober 2018',
-         'type' => 'gesperrt',
-         'until' => 1541026800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4228,7 +4209,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX vielleicht wird die Fahrbahn repariert?
-#: last_checked: 2018-08-20
+#: last_checked: 2018-08-27
 #: check_frequency: 14d
 #: priority: #A
 	q3::inwork; 13198,12311 13243,12222
@@ -4288,7 +4269,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=42743 (sogar bis 2018-09-17)
 #: source_id: 2147342618
 #: priority: #A
-#: last_checked: 2018-07-26
+#: last_checked: 2018-08-26
 # REMOVED --- #: next_check: 2018-07-13
 	q4::inwork 13767,12626 13786,12636 13863,12677 13911,12692
 ',
@@ -4302,12 +4283,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: XXX eventuell hängen die Bauarbeiten mit den Bauarbeiten in der Eldenaer Str. zusammen
 #: XXX wird danach komplett asphaltiert sein?
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=42743 (sogar bis 2018-09-17)
-#: last_checked: 2018-08-17
-	q4::inwork 14096,12827 14058,12709 13911,12692
+#: last_checked: 2018-08-26
+	q4::inwork; 14096,12827 14058,12709 13911,12692
 ',
          'from' => undef,
          'id' => 2969,
-         'text' => 'Liebigstr. und Weidenweg: Bauarbeiten, Fahrbahn gesperrt',
+         'text' => 'Liebigstr. und Weidenweg: Bauarbeiten, Einbahnstraßenregelung',
          'type' => 'handicap',
          'until' => 1536940800
        },
@@ -4524,7 +4505,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-08-20
+#: last_checked: 2018-08-27
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -4567,7 +4548,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1537308000
        },
        {
-         'data' => '	q4::inwork; 7843,18705 7753,18542 7676,18492
+         'data' => '#: source_id: 2147343083
+	q4::inwork; 7843,18705 7753,18542 7676,18492
 ',
          'from' => 1535234400,
          'id' => 3004,
@@ -4575,6 +4557,27 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Emmentaler Str.: Bauarbeiten zwischen Reginhardstr. bis Klemkestr., Einbahnstraße offen Richtung Nordosten, vom 27. August 2018 bis zum 07. September 2018',
          'type' => 'handicap',
          'until' => 1536357599
+       },
+       {
+         'data' => '	2::inwork -7230,25622 -7243,25847 -7309,26146
+',
+         'from' => 1538344800,
+         'id' => 3005,
+         'source_id' => 'https://www.moz.de/landkreise/oberhavel/oranienburg/oranienburg-artikel/dg/0/1/1656828/',
+         'text' => 'Bötzow - Schönwalde: Brückenarbeiten, auch Radfahrer und Fußgänger können nicht passieren, voraussichtlich ab Oktober 2018 bis Ende 2019',
+         'type' => 'gesperrt',
+         'until' => 1577833199
+       },
+       {
+         'data' => '#: XXX_prog: eigentlich q4+::inwork;
+	q4::inwork; 8685,13728 8775,13606
+',
+         'from' => undef,
+         'id' => 3006,
+         'source_id' => '2147343061',
+         'text' => 'Hessische Str.: Richtung Torstr. gesperrt, bis 6. September 2018',
+         'type' => 'handicap',
+         'until' => 1536271199
        }
      
 );

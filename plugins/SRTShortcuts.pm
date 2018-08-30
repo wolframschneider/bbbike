@@ -1832,7 +1832,9 @@ sub current_route_in_bbbike_cgi {
     require BBBikeUtil;
     my $url = BBBikeUtil::uri_with_query
 	("http://localhost/bbbike/cgi/bbbike.cgi",
-	 [ gple => $gple, @params ]);
+	 # [ @params ], raw_query => [ gple => $gple ], # minimal, but may cause problems in start_browser call
+	 [ gple => $gple, @params ],
+	);
     main::status_message("Der WWW-Browser wird mit der URL $url gestartet.", "info");
     require WWWBrowser;
     WWWBrowser::start_browser($url);
@@ -1849,12 +1851,23 @@ sub current_route_in_bbbikeleaflet_cgi {
 
     my $cgiurl = $live ? "http://bbbike.de/cgi-bin/bbbikeleaflet.cgi" : "http://localhost/bbbike/cgi/bbbikeleaflet.cgi";
 
-    my $coords_string = join("!", map { join(",", @$_) } @main::realcoords);
+    my($coords_string, $gple);
+    if (0) {
+	$coords_string = join("!", map { join(",", @$_) } @main::realcoords);
+    } else {
+	require Route;
+	require Route::GPLE;
+	my $rte = Route->new_from_realcoords(\@main::realcoords);
+	$rte->set_coord_system($main::coord_system);
+	$gple = Route::GPLE::as_gple($rte);
+    }
 
     require BBBikeUtil;
     my $url = BBBikeUtil::uri_with_query
 	($cgiurl,
-	 [ %opts, coords => $coords_string ]);
+	 [ %opts,
+	   ($gple ? (gple => $gple) : (coords => $coords_string)),
+	 ]);
     main::status_message("Der WWW-Browser wird mit der URL $url gestartet.", "info");
     require WWWBrowser;
     WWWBrowser::start_browser($url);
