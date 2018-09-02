@@ -56,10 +56,11 @@ for my $def (
     my($baseurl, @member_checks) = @$def;
     checkpoint_apache_errorlogs if $is_local_server;
     my $resp = $ua->get("$cgidir/$baseurl", ':content_file' => $tempfile);
-    ok $resp->is_success, "Fetching $baseurl"
+    ok $resp->is_success && !$resp->header('X-Died'), "Fetching $baseurl"
 	or do {
 	    output_apache_errorslogs if $is_local_server;
 	    diag $resp->status_line;
+	    diag $resp->headers->as_string;
 	};
 	    
     zip_ok $tempfile, -memberchecks => \@member_checks;
