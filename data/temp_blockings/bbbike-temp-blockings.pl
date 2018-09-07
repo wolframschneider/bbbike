@@ -23984,13 +23984,13 @@ EOF
      },
      { from  => 1534789491,
        until => undef,
-       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung unbekannt',
+       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung möglicherweise Mitte November 2018',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX bis wann geht die Sperrung?
+#: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: priority: #A
-#: last_checked: 2018-09-01
-#: check_frequency: 3d
+#: last_checked: 2018-09-06
+#: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
      },
@@ -26739,7 +26739,7 @@ EOF
        text  => 'Wiesenweg: kann während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX bis wann ist die Durchfahrt gesperrt?
+#: XXX bis wann ist die Durchfahrt gesperrt? (laut googlemaps bis Ende November 2018)
 #: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="5"
@@ -26776,7 +26776,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-08-23 vvv
+#: last_checked: 2018-09-06 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -26916,10 +26916,13 @@ EOF
        text  => 'Vorbergstr.: Bauarbeiten zwischen Gleditschstr. und Akazienstr., Fahrbahn gesperrt, außerdem Sperrung in der Gleditschstr., Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
+#: XXX laut googlemaps bis 19. September 2018
 #: last_checked: 2018-08-21 vvv
-# XXX_prog: eigentlich q3-
+#: next_check: 2018-09-19 vvv
+# --- XXX_prog: eigentlich q3-
 	q4::inwork 7136,9223 7012,9222
 	q2::inwork 7136,9223 7130,9316
+#: next_check ^^^
 #: last_checked ^^^
 EOF
      },
@@ -27053,7 +27056,7 @@ EOF
 #: source_id: 2147342751
 #: source_id: 2147343056
 # REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
-#: last_checked: 2018-08-23
+#: last_checked: 2018-09-06
 # REMOVED --- #: check_frequency: 7d
 	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
 EOF
@@ -27175,7 +27178,7 @@ EOF
        type  => 'handicap',
        source_id => '2147342574',
        data  => <<EOF,
-#: note: laut fritz bis 14.09.2018
+#: note: laut fritz bis 14.09.2018, laut googlemaps sogar bis Anfang November 2018
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/warten-auf-die-strassenbahn_a177965 (2018-09-17, danach noch weitere Einschränkungen)
 #: XXX_prog: eigentlich q3+
 	q3::inwork; 15516,12838 15367,12815 15357,12813 15233,12829 15098,12849 15074,12850 15010,12855 14940,12843 14906,12837 14836,12826 14750,12812 14661,12798 14556,12781 14435,12761 14355,12752 14096,12827
@@ -27228,7 +27231,7 @@ EOF
        source_id => '2147342639',
        data  => <<EOF,
 #: XXX vielleicht wird die Fahrbahn repariert?
-#: last_checked: 2018-08-27
+#: last_checked: 2018-09-06
 #: check_frequency: 14d
 #: priority: #A
 	q3::inwork; 13198,12311 13243,12222
@@ -27459,6 +27462,7 @@ EOF
        source_id => 'https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php',
        data  => <<EOF,
 #: XXX nach den Bauarbeiten bessere Qualität
+#: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
 #: priority: #B
 #: last_checked: 2018-07-06
 #: check_frequency: 60d
@@ -27527,8 +27531,8 @@ EOF
 EOF
      },
      { from  => 1531605600, # 2018-07-15 00:00
-       until => $isodate2epoch->("2018-09-14 18:00:00"), # 1535752799, # 2018-08-31 23:59
-       text  => 'Seelenbinderstr.: Richtung Bahnhofstr. zwischen Bellevuestr. und Bahnhofstr. Gleisbauarbeiten, Fahrtrichtung gesperrt, Radfahrer müssen auf den freigegebenen Gehweg ausweichen, bis Mitte September 2018',
+       until => $isodate2epoch->("2018-10-02 18:00:00"), # 1535752799, # 2018-08-31 23:59
+       text  => 'Seelenbinderstr.: Richtung Bahnhofstr. zwischen Bellevuestr. und Bahnhofstr. Gleisbauarbeiten, Fahrtrichtung gesperrt, Radfahrer müssen auf den freigegebenen Gehweg ausweichen, bis Anfang Oktober 2018',
        type  => 'handicap',
        source_id => '2147342890',
        data  => <<EOF,
@@ -27576,6 +27580,7 @@ EOF
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.725875.php
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/weitere-sperrungen-rund-um-die-feuerbachstrasse_a174881
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729490.php
+#: by: https://www.berliner-woche.de/steglitz/c-bauen/bauarbeiten-gehen-weiter_a178952
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: last_checked: 2018-08-15
@@ -27666,7 +27671,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-08-27
+#: last_checked: 2018-09-04
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27685,7 +27690,7 @@ EOF
        text  => 'Am Schillertheater: Bauarbeiten, Fahrbahn Richtung Süden gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX bis wann sind hier Bauarbeiten?
+#: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
 #: last_checked: 2018-08-30
 #: check_frequency: 21d
 	q4::inwork; 4502,11740 4574,11587
@@ -27721,8 +27726,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1536271199, # 2018-09-06 23:59
-       text  => 'Hessische Str.: Richtung Torstr. gesperrt, bis 6. September 2018',
+       until => $isodate2epoch->("2018-09-10 18:00:00"), # 1536271199, # 2018-09-06 23:59
+       text  => 'Hessische Str.: Richtung Torstr. gesperrt, bis 10. September 2018',
        type  => 'handicap',
        source_id => '2147343061',
        data  => <<EOF,
@@ -27774,6 +27779,33 @@ EOF
 #: last_checked: 2018-09-01
 #: next_check: 2018-09-30
 	2::inwork -15853,-4327 -15664,-4450 -15652,-4441 -15537,-4535 -15540,-4550 -14801,-5162
+EOF
+     },
+     { from  => undef, # 
+       until => 1540918800, # 2018-10-30 18:00
+       text  => 'Mittelweg: Bauarbeiten zwischen Morusstr. und Leykestr., Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+	q4::inwork 12335,7770 12520,7694
+EOF
+     },
+     { from  => 1536172293, # 2018-09-05 20:31
+       until => 1543597200, # 2018-11-30 18:00
+       text  => 'Friedelstraße: zwischen Maybachufer und Pflügerstr. gesperrt, Asphaltierungsarbeiten, bis Ende November 2018',
+       type  => 'handicap',
+       source_id => '2147343178',
+       data  => <<EOF,
+	q4::inwork 12066,9558 12074,9689 12085,9778
+EOF
+     },
+     { from  => undef, # 
+       until => $isodate2epoch->("2018-09-12 18:00:00"), # Ende laut fritz
+       text  => 'Rohdestr.: Baustelle, gesperrt',
+       type  => 'gesperrt',
+       source_id => 'LMS-BR_r_LMS-BR_144848_LMS-BR_72',
+       data  => <<EOF,
+#: XXX und können Radfahrer vielleicht passieren?
+	2::inwork 10526,6008 10543,6250 10454,6281 10384,6358 10377,6417
 EOF
      },
     );

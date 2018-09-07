@@ -3520,15 +3520,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: XXX bis wann geht die Sperrung?
+         'data' => '#: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: priority: #A
-#: last_checked: 2018-09-01
-#: check_frequency: 3d
+#: last_checked: 2018-09-06
+#: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
          'from' => 1534789491,
          'id' => 2666,
-         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung unbekannt',
+         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung möglicherweise Mitte November 2018',
          'type' => 'handicap',
          'until' => undef
        },
@@ -3997,7 +3997,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: XXX bis wann ist die Durchfahrt gesperrt?
+         'data' => '#: XXX bis wann ist die Durchfahrt gesperrt? (laut googlemaps bis Ende November 2018)
 #: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="5"
@@ -4015,7 +4015,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-08-23 vvv
+#: last_checked: 2018-09-06 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4062,10 +4062,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: last_checked: 2018-08-21 vvv
-# XXX_prog: eigentlich q3-
+         'data' => '#: XXX laut googlemaps bis 19. September 2018
+#: last_checked: 2018-08-21 vvv
+#: next_check: 2018-09-19 vvv
+# --- XXX_prog: eigentlich q3-
 	q4::inwork 7136,9223 7012,9222
 	q2::inwork 7136,9223 7130,9316
+#: next_check ^^^
 #: last_checked ^^^
 ',
          'from' => undef,
@@ -4115,7 +4118,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147342751
 #: source_id: 2147343056
 # REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
-#: last_checked: 2018-08-23
+#: last_checked: 2018-09-06
 # REMOVED --- #: check_frequency: 7d
 	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
 ',
@@ -4180,7 +4183,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '#: note: laut fritz bis 14.09.2018
+         'data' => '#: note: laut fritz bis 14.09.2018, laut googlemaps sogar bis Anfang November 2018
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/warten-auf-die-strassenbahn_a177965 (2018-09-17, danach noch weitere Einschränkungen)
 #: XXX_prog: eigentlich q3+
 	q3::inwork; 15516,12838 15367,12815 15357,12813 15233,12829 15098,12849 15074,12850 15010,12855 14940,12843 14906,12837 14836,12826 14750,12812 14661,12798 14556,12781 14435,12761 14355,12752 14096,12827
@@ -4198,7 +4201,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX vielleicht wird die Fahrbahn repariert?
-#: last_checked: 2018-08-27
+#: last_checked: 2018-09-06
 #: check_frequency: 14d
 #: priority: #A
 	q3::inwork; 13198,12311 13243,12222
@@ -4341,6 +4344,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX nach den Bauarbeiten bessere Qualität
+#: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
 #: priority: #B
 #: last_checked: 2018-07-06
 #: check_frequency: 60d
@@ -4390,9 +4394,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1531605600,
          'id' => 2987,
          'source_id' => '2147342890',
-         'text' => 'Seelenbinderstr.: Richtung Bahnhofstr. zwischen Bellevuestr. und Bahnhofstr. Gleisbauarbeiten, Fahrtrichtung gesperrt, Radfahrer müssen auf den freigegebenen Gehweg ausweichen, bis Mitte September 2018',
+         'text' => 'Seelenbinderstr.: Richtung Bahnhofstr. zwischen Bellevuestr. und Bahnhofstr. Gleisbauarbeiten, Fahrtrichtung gesperrt, Radfahrer müssen auf den freigegebenen Gehweg ausweichen, bis Anfang Oktober 2018',
          'type' => 'handicap',
-         'until' => 1536940800
+         'until' => 1538496000
        },
        undef,
        {
@@ -4413,6 +4417,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.725875.php
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/weitere-sperrungen-rund-um-die-feuerbachstrasse_a174881
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729490.php
+#: by: https://www.berliner-woche.de/steglitz/c-bauen/bauarbeiten-gehen-weiter_a178952
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: last_checked: 2018-08-15
@@ -4496,7 +4501,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-08-27
+#: last_checked: 2018-09-04
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -4517,7 +4522,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1545433200
        },
        {
-         'data' => '#: XXX bis wann sind hier Bauarbeiten?
+         'data' => '#: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
 #: last_checked: 2018-08-30
 #: check_frequency: 21d
 	q4::inwork; 4502,11740 4574,11587
@@ -4567,9 +4572,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => undef,
          'id' => 3006,
          'source_id' => '2147343061',
-         'text' => 'Hessische Str.: Richtung Torstr. gesperrt, bis 6. September 2018',
+         'text' => 'Hessische Str.: Richtung Torstr. gesperrt, bis 10. September 2018',
          'type' => 'handicap',
-         'until' => 1536271199
+         'until' => 1536595200
        },
        {
          'data' => '#: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
@@ -4609,6 +4614,36 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Bahnbrücke Templiner See: gesperrt, vermutliche Öffnung im September 2018',
          'type' => 'gesperrt',
          'until' => 1538323200
+       },
+       {
+         'data' => '	q4::inwork 12335,7770 12520,7694
+',
+         'from' => undef,
+         'id' => 3011,
+         'text' => 'Mittelweg: Bauarbeiten zwischen Morusstr. und Leykestr., Fahrbahn gesperrt',
+         'type' => 'handicap',
+         'until' => 1540918800
+       },
+       {
+         'data' => '	q4::inwork 12066,9558 12074,9689 12085,9778
+',
+         'from' => 1536172293,
+         'id' => 3012,
+         'source_id' => '2147343178',
+         'text' => 'Friedelstraße: zwischen Maybachufer und Pflügerstr. gesperrt, Asphaltierungsarbeiten, bis Ende November 2018',
+         'type' => 'handicap',
+         'until' => 1543597200
+       },
+       {
+         'data' => '#: XXX und können Radfahrer vielleicht passieren?
+	2::inwork 10526,6008 10543,6250 10454,6281 10384,6358 10377,6417
+',
+         'from' => undef,
+         'id' => 3013,
+         'source_id' => 'LMS-BR_r_LMS-BR_144848_LMS-BR_72',
+         'text' => 'Rohdestr.: Baustelle, gesperrt',
+         'type' => 'gesperrt',
+         'until' => 1536768000
        }
      
 );
