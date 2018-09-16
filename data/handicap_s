@@ -5,7 +5,7 @@
 #:
 Niemannstr.: Bauarbeiten, einige Meter Fahrbahn sind gesperrt	q3::inwork 14254,11377 14211,11229
 Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261 14357,11148
-Lange Str.: Bauarbeiten, Einbahnstraßenregelung	q2::inwork; 12409,11902 12238,11931
+Lange Str.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 12409,11902 12238,11931
 Müncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
 Rigaer Str.: Baustelle, Fußgänger	q3::inwork 14538,12371 14748,12314
 Auerstr.: zwischen Richard-Sorge-Str. und Löwestr. Baustelle, Einbahnstraßenregelung	q2::inwork; 13273,12902 13202,12790
@@ -43,7 +43,6 @@ Herbert-von-Karajan-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 7970,11
 Ludwig-Beck-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 8301,11469 8309,11390
 Englische Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 5424,11944 5518,12159
 Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5919,12423 5894,12480 5944,12548
-Donaustr.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Erkstr.	q4::inwork; 12771,8439 12649,8535
 Nansenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12412,9610 12374,9542
 Weichselstr.: Bauarbeiten zwischen Weichselplatz und Ossastr., Fahrbahn gesperrt	q4::inwork 12755,9188 12681,9083
 Karl-Marx-Str.: Bauarbeiten zwischen Rollbergstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12714,8249 12753,8187 12794,8103
@@ -539,7 +538,7 @@ Pankeweg: enger Pfad	q2 13365,22743 13321,22586 13295,22545 13290,22377 13354,22
 Oberlandgarten: Fußgänger, Bordsteine	q2 11250,6555 11256,6502 11253,6473
 Germaniagarten: Fußgänger, Bordsteine	q2 11209,6166 11224,6244
 (Bambachstr. - Mariendorfer Weg): Fußgänger, enge Kurven	q2 12052,6660 12038,6633 12052,6605 12094,6585 12125,6510
-Mauerweg: Fußgänger	q1 12984,1011 12557,799 12246,706 11922,586 11794,550 11698,390 11686,169 11746,-62 11819,-286 12078,-1170 12283,-1881 12344,-2173 12314,-2270 12268,-2294
+Mauerweg: Fußgänger	q1 12984,1011 12557,799 12246,706 12014,620 11956,599 11922,586 11794,550 11698,390 11686,169 11746,-62 11819,-286 12078,-1170 12283,-1881 12344,-2173 12314,-2270 12268,-2294
 Mauerweg: Fußgänger	q1 4406,-910 4038,-362 4046,-299 4034,-255 3982,-181 3941,-127 3908,-117 3842,-6 3788,26 3767,66 3689,182 3607,283 3417,524
 Bayernring: enge Straße	q1 8380,8545 8454,8574 8616,8605
 Bulgarische Str.: kein Radweg, Gehweg benutzen	q2; 15591,8848 15558,8820 15378,8668 15166,8489
@@ -1422,7 +1421,7 @@ Schalloppstr.: Bordsteine, einige Fußgänger	q3 5132,4704 5190,4755
 (zum Teufelsberg): einige Fußgänger, eng	q1 -641,9882 -720,9861 -769,9856
 Alfred-Scholz-Platz: Fußgänger	q2 12779,8188 12753,8187
 Dahlemer Weg - entlang der S-Bahn: Rampe	q2 2266,3580 2221,3560 2250,3568 2228,3554
-Georg-Steger-Weg: einige Fußgänger	q1 1493,2247 1480,2199 1452,2095 1461,2073 1432,1964 1432,1904 1478,1721
+Georg-Steger-Weg: einige Fußgänger	q1 1493,2247 1480,2199 1452,2095 1461,2073 1432,1964 1432,1904 1476,1730
 (Ramsteinweg - Sachtlebenstr.): gemeinsamer Rad- und Gehweg	q1 581,670 509,684 497,710 403,764 332,819 247,822
 (Am Seegraben - Schützenstr.): einige Fußgänger	q1 19996,-740 19978,-712
 (an der BMW-Niederlassung): Parkverkehr, Schranke	q1 2102,11307 2180,11318 2219,11324
@@ -1759,6 +1758,8 @@ Pepitapromenade: einige Fußgänger	q1 -2856,17489 -2873,17369 -2878,17324
 (Gandenitzer Weg - Quickborner Str.): einige Fußgänger	q1 7549,21524 7713,21484 7782,21508 7802,21553 7853,21557 7939,21600
 Salvador-Allende-Str. [Zufahrt zum Krankenhaus]: einige Fußgänger	q2 23448,4145 23453,4181
 Fasanenplatz, östliche Fahrbahn: einige Fußgänger, Bordsteine	q2 5220,10192 5229,10210 5223,10243
+Admiralstr.: Fußgänger, Bodenschwellen	q2 11244,10111 11274,10184
+Innsbrucker Platz - Eisackstr.: Bordstein	q1 6418,7958 6429,7876
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schulhof, Radfahren verboten	q3 7242,8586 7288,8635
@@ -1823,7 +1824,7 @@ Hempstücken: kurvenreich	q2 -7506,126 -7542,201 -7632,204
 Joachimstr. (Köpenick): Bodenschwellen	q1; 21907,5517 22009,5593
 Jeanne-Mammen-Bogen: Fußgängerzone	q3 4954,10876 5090,10868
 Holwedestr.: schmale Straße	q1 1128,20525 1203,20553 1264,20575 1326,20600 1387,20621
-(Fußgängertunnel Bahnhof Lichterfelde Ost): Fußgänger	q4 5367,2528 5413,2436
+(Fußgängertunnel Bahnhof Lichterfelde Ost): Fußgänger, Radfahrer sollen schieben	q4 5367,2528 5479,2464
 Am Schloßpark: eng bei Autoverkehr	q1 10775,19054 10712,18975 10625,18831 10496,18704
 Poschingerstr.: enge Straße	q1 5697,6276 5754,6238 5824,6240 5875,6262 5918,6301 5971,6343 6095,6358 6248,6388
 Höltermannsteig: gemeinsamer Rad- und Gehweg	q1 13999,2727 13951,2801 13948,2910 13954,3035 13965,3222 14023,3276
@@ -2006,9 +2007,9 @@ Swinemünder Str.: Fußgänger	q1 10085,14863 10029,14974 9988,15057 9929,15174 985
 (Unterführung Schloßbrücke): Fußgänger, teilweise eng	q2 3396,12741 3332,12742
 (Unterführung Schloßbrücke): Fußgänger, sehr eng	q3 3332,12742 3231,12749
 Sesenheimer Str.: Fußgänger, Bordsteine	q2 3864,11484 3874,11380
-(südliches Spreeufer): Fußgänger	q2 5203,12850 5191,12917 5128,13012 4994,13092 4915,13114 4822,13109 4748,13092 4710,13069 4644,13003 4619,12975 4590,12800 4749,12689
-(südliches Spreeufer): Fußgänger	q2 5128,13012 5246,12899 5244,12864
-(Heisenbergstr. - südliches Spreeufer): Fußgänger	q2 5120,12963 5191,12917
+(südliches Spreeufer): Fußgänger	q2 5203,12850 5184,12937 5176,12968 5086,13052 4994,13092 4915,13114 4822,13109 4748,13092 4710,13069 4644,13003 4619,12975 4590,12800 4749,12689
+(südliches Spreeufer): Fußgänger	q2 5176,12968 5246,12899 5244,12864
+(Heisenbergstr. - südliches Spreeufer): Fußgänger	q2 5120,12963 5140,12967 5184,12937
 (Kucharskistr. - südliches Spreeufer): Fußgänger	q2 4829,13089 4822,13109
 (Clara-von-Simson-Str. - südliches Spreeufer): Fußgänger	q2 4732,13030 4710,13069
 (Carnotstr. - südliches Spreeufer): Fußgänger	q2 4655,12953 4619,12975
@@ -2383,8 +2384,9 @@ Lauxweg: enge Straße	q1 8979,3347 8921,3208
 Martinstr.: enge Straße	q1 4956,5121 5102,5031
 Straße 113: enge Straße	q1 9924,20951 9897,21035 9852,21151
 Schnepfenreuther Weg: enge Straße	q1 -3495,16393 -3466,16455 -3444,16576 -3426,16837 -3404,17147
-Hohenzollernstr. (Zehlendorf): enge Straße	q1 21,2728 53,2708 226,2752 322,2772 475,2811 492,2813 546,2850
+Hohenzollernstr. (Zehlendorf): enge Straße	q1 21,2728 58,2710 226,2752 322,2772 475,2811 492,2813 546,2850
 Hohenzollernstr. (Zehlendorf): enge Straße	q1 492,2813 522,2802 537,2772
+Hohenzollernstr. (Zehlendorf): enge Straße	q1 58,2710 39,2669
 Rosa-Reinglass-Steig	q1 -2878,15304 -2856,15383
 Am Lupinenfeld: enge Straße	q0 24159,13507 24347,13465 24539,13427 24746,13384 24817,13370 24875,13333 25031,13242 25138,13183 25181,13157
 Franzstr. (Lankwitz): enge Straße	q0 5559,3058 5776,3195
@@ -2470,7 +2472,7 @@ Walliser Str.: Fußweg	q1 6921,18560 6924,18599
 Nordische Str.: enge Straße	q1 15126,21799 15209,21985
 Grünrockweg: Fußgängerzone, Radfahrer frei	q1 7377,18498 7269,18460
 Kollostr.: enge Straße	q1 9668,4403 9677,4518 9695,4638
-(Mauerweg - Töpchiner Weg): einige Fußgänger	q1 11794,550 11691,554 11598,587
+(Mauerweg - Töpchiner Weg): einige Fußgänger	q1 11794,550 11672,554 11596,583
 (Marienfelder Allee - Hildburghauser Str., Grünzug): Fußgänger	q1 7501,83 7231,236 7032,533 7023,694 7058,844
 Prisdorfer Str.: enge Straße	q1 -5887,13894 -5906,14102 -5887,14147 -5882,14210 -5879,14242
 Janischweg: enge Straße	q1 537,14919 481,15088 473,15169 453,15173 431,15230 429,15284
@@ -2514,7 +2516,7 @@ Augusta-Ufer: offiziell nur von Süden nach Norden für Radfahrer befahrbar	q3; -3
 Theaterplatz: Fußgänger	q1 24968,15307 25086,15298
 Lil-Dagover-Gasse: Fußgängerzone	q4 23960,15021 23871,14914
 Erbsenpfad: enge Straße	q1 -7872,14409 -7850,14555
-Johannesstr.: enge Straße	q1 609,1915 712,1551
+Johannesstr.: enge Straße	q1 609,1915 710,1558
 Birkenstr. (Köpenick): enge Straße	q1 24166,4568 24068,4602 23980,4633 23934,4661 23947,4673 23869,4733
 S-Bahnunterführung: Kehre, einige Fußgänger	q1 4250,763 4225,753 4311,746
 Minorkaweg: enge Straße	q0 15835,489 15925,541 16008,628

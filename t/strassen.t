@@ -41,18 +41,19 @@ GetOptions(get_std_opts("xxx"),
 	   "doit!" => \$doit,
 	  ) or die "usage";
 
-my $basic_tests = 45;
+my $basic_tests = 46;
 my $doit_tests = 6;
 my $strassen_orig_tests = 5;
 my $zebrastreifen_tests = 4;
 my $zebrastreifen2_tests = 2;
+my $zebrastreifen3_tests = 2;
 my $encoding_tests = 10;
 my $multistrassen_tests = 11;
 my $initless_tests = 3;
 my $global_directive_tests = 7;
 my $strict_and_syntax_tests = 12;
 
-plan tests => $basic_tests + $doit_tests + $strassen_orig_tests + $zebrastreifen_tests + $zebrastreifen2_tests + $encoding_tests + $multistrassen_tests + $initless_tests + $global_directive_tests + $strict_and_syntax_tests;
+plan tests => $basic_tests + $doit_tests + $strassen_orig_tests + $zebrastreifen_tests + $zebrastreifen2_tests + $zebrastreifen3_tests + $encoding_tests + $multistrassen_tests + $initless_tests + $global_directive_tests + $strict_and_syntax_tests;
 
 goto XXX if $do_xxx;
 
@@ -357,6 +358,29 @@ SKIP: {
 }
 
 SKIP: {
+    my $f = "$datadir/zebrastreifen";
+    skip("$f not available", $zebrastreifen3_tests)
+	if !-r $f;
+    skip("no gzip available", $zebrastreifen3_tests)
+	if !is_in_path('gzip');
+
+    my(undef,$outfilename) = tempfile(UNLINK => 1, SUFFIX => ".gz");
+    my $gzip_cmd = "gzip -c $datadir/zebrastreifen > $outfilename";
+    system($gzip_cmd);
+    if ($? != 0 || !-s $outfilename) {
+	skip("Running '$gzip_cmd' apparently failed", $zebrastreifen3_tests);
+    }
+
+    my $s_uncompressed = Strassen->new($f);
+    my $s_compressed   = Strassen->new($outfilename);
+    is_deeply $s_compressed->data, $s_uncompressed->data, 'compressed and uncompressed data are the same';
+
+    (my $outfilename_without_gz_suffix = $outfilename) =~ s{\.gz$}{};
+    my $s_compressed_2 = Strassen->new($outfilename_without_gz_suffix);
+    is_deeply $s_compressed->data, $s_uncompressed->data, 'loading without .gz suffix works';
+}
+
+SKIP: {
     skip("Need utf-8 (very!) capable perl", $encoding_tests)
 	if $] < 5.008;
     skip("Need Encode module", $encoding_tests)
@@ -620,6 +644,14 @@ EOF
 
     ok !Strassen->syntax_check_on_file($badfile);
     ok !Strassen->syntax_check_on_data_string($baddata);
+}
+
+{
+    # push
+    my $s = Strassen->new;
+    $s->push(["name",  ["0,0", "1,1"],     "X"]);
+    $s->push(["name2", ["10,10", "21,21"], "X"]);
+    is_deeply $s->data, ["name\tX 0,0 1,1\n", "name2\tX 10,10 21,21\n"];
 }
 
 sub non_streaming_loop ($) {

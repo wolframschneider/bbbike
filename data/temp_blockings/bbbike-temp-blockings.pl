@@ -21066,7 +21066,7 @@ EOF
        until => $isodate2epoch->("2018-09-17 06:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 12, months => 9]],
-       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, voraussichtlich bis 12.09.2018',
+       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, und einige Wege im Tiergarten, voraussichtlich bis 17.09.2018',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: tempex: 20160922T0600-T20160926T0600 vvv
@@ -21074,8 +21074,8 @@ EOF
 	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
 	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 	2::temp 8119,12414 8055,12186
-	2::temp 8538,12245 8522,12239 8466,12197
-	2::temp 8538,12245 8522,12187
+	2::temp 8538,12245 8522,12239 8466,12197 8327,12174 8215,12156 8122,12147 8049,12140 8018,12135 7823,12120 7775,12114 7429,12070
+	2::temp 8538,12245 8522,12187 8453,12099 8262,11883 8244,11878 8221,11876 8167,11865 8140,11850 8026,11764
 	2::temp 8546,12279 8391,12389 8354,12416
 	2::temp 8119,12414 8354,12416 8400,12417 8540,12420
 	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
@@ -21089,6 +21089,13 @@ EOF
 	3 8120,12756 8122,12603 7945,12592
 	3::temp 8391,12389 8344,12221 8327,12174
 	3::temp 8327,12174 8344,12221 8391,12389
+#: note: die Wege im südöstlichen Teil des Tiergartens sind vermutlich nur am Sa & So gesperrt
+	2::temp 8214,12205 8215,12156 8221,11885 8221,11876 8210,11775 8203,11686
+	2::temp 8327,12174 8244,11878 8210,11775 8172,11679
+	2::temp 8501,11815 8244,11878 8221,11885 8132,11910 8095,11919 8020,11937
+	2::temp 8055,12186 8049,12140 8034,12093 8004,12074 7999,12040 8022,12016 8020,11937 8016,11770
+	2::temp 7823,12120 7832,12036 7822,11952 7801,11875
+	2::temp 7775,12114 7772,12040 7717,11918
 # REMOVED --- #: tempex ^^^
 EOF
      },
@@ -23993,7 +24000,7 @@ EOF
        data  => <<EOF,
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: priority: #A
-#: last_checked: 2018-09-06
+#: last_checked: 2018-09-13
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -26487,7 +26494,7 @@ EOF
 #: source_id: 2147342861
 #: source_id: 2147342860
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2018-07-01 vvv
+#: last_checked: 2018-09-12 vvv
 # REMOVED --- #: check_frequency: 30d
 #: next_check: 2018-12-31 vvv
 # REMOVED (hier fertig) ---	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
@@ -26695,7 +26702,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1536767462, # undef, # XXX
        text  => 'Anhaltinerstr.: mögliche Beeinträchtigungen durch Bauarbeiten',
        type  => 'handicap',
        data  => <<EOF,
@@ -26918,14 +26925,15 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Vorbergstr.: Bauarbeiten zwischen Gleditschstr. und Akazienstr., Fahrbahn gesperrt, außerdem Sperrung in der Gleditschstr., Ende unbekannt',
+       #text  => 'Vorbergstr.: Bauarbeiten zwischen Gleditschstr. und Akazienstr., Fahrbahn gesperrt, außerdem Sperrung in der Gleditschstr., Ende unbekannt',
+       text  => 'Gleditschstr.: Bauarbeten, Fahrbahn gesperrt, Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX laut googlemaps bis 19. September 2018
-#: last_checked: 2018-08-21 vvv
+#: last_checked: 2018-09-14 vvv
 #: next_check: 2018-09-19 vvv
 # --- XXX_prog: eigentlich q3-
-	q4::inwork 7136,9223 7012,9222
+# REMOVED (hier beendet) ---	q4::inwork 7136,9223 7012,9222
 	q2::inwork 7136,9223 7130,9316
 #: next_check ^^^
 #: last_checked ^^^
@@ -27389,7 +27397,7 @@ EOF
 #: next_check_id: VERLWERDERSTR-2018
 #: by: https://www.berliner-woche.de/altglienicke/c-bauen/werderstrasse-wird-ausgebaut_a169172
 #: XXX nach den Bauarbeiten vermutlich Verbundsteinpflaster oder Betonpflaster
-#: last_checked: 2018-08-11
+#: last_checked: 2018-09-12
 	2::inwork 20245,2152 20261,2114 20222,2037 20214,1988 20187,1930 20166,1864 20120,1791 20093,1776 20064,1777
 EOF
      },
@@ -27598,7 +27606,7 @@ EOF
 EOF
      },
      { from => 1533579833,
-       until => $isodate2epoch->("2018-09-15 18:00:00"),
+       until => $isodate2epoch->("2018-09-18 18:00:00"),
        text => 'Grünberger Str.: Sperrung der Fahrbahn zwischen Kadiner Str. und Warschauer Str., Richtung Osten, voraussichtlich bis Mitte September 2018',
        type => 'handicap',
        data => <<EOF,
@@ -27824,6 +27832,39 @@ EOF
 #: XXX ist das Tor tatsächlich geschlossen? und wenn ja, wann wird es wieder geöffnet?
 #: next_check: 2018-09-12
 	2::inwork -6198,5357 -6366,5215
+EOF
+     },
+     { from  => undef, # 
+       until => 1542301200, # 2018-11-15 18:00
+       text  => 'Wilhelm-Hauff-Str./Wielandstr.: Bauarbeiten, Fahrbahn gesperrt, auf Gehweg ausweichen, Bordstein',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2018-09-12
+	q3::inwork 5959,6976 6081,6977 6082,7066
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Thielallee, Corrensplatz: Bauarbeiten, Fahrbahn zwischen Boetticherstr. und Thieallee gesperrt sowie Thielallee Richtung Norden ab Corrensplatz gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2018-09-12 vvv
+#: check_frequency: 7d vvv
+	q4::inwork 2434,4299 2407,4280
+	q4::inwork; 2407,4280 2429,4385
+#: check_frequency ^^^
+#: last_checked ^^^
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Jungfernstieg: Asphaltierungsarbeiten, Fahrbahn kann gesperrt sein',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: JUNGFERNSTIEG-2018
+#: last_checked: 2018-09-12
+#: check_frequency: 7d
+	q4::inwork 5229,2395 5332,2568 5425,2735 5510,2883
 EOF
      },
     );
