@@ -144,7 +144,6 @@ use vars qw($VERSION $VERBOSE
 	    $enable_google_adsense_street
 	    $enable_google_adsense_linkblock
 	    $enable_google_adsense_street_linkblock
-	    $enable_panoramio_photos
 	    $enable_google_weather_layer
 	    $enable_elevation
 	    $dos_run_timeout
@@ -8597,7 +8596,6 @@ sub header {
 
 	    my $google_maps_url = "https://maps.googleapis.com/maps/api/js?v=3.9&amp;sensor=$sensor&amp;language=$my_lang";
 	    my @google_libs;
-	    push (@google_libs, "panoramio") if $enable_panoramio_photos; # && is_resultpage($q);
 	    push (@google_libs, "weather") if $enable_google_weather_layer;
 	    
 	    if (scalar(@google_libs) > 0) {
