@@ -568,7 +568,8 @@ Hankelweg (Zeuthen): unbefestigter Weg	Q2 25690,-6747 25362,-6886
 Rheinstr. (Zeuthen): schlechtes Kopfsteinpflaster	Q3 26092,-6614 26220,-6930
 Donaustr. (Zeuthen): Kleinsteinpflaster	Q2 25874,-6954 25855,-6912 25690,-6747
 Saarstr. (Zeuthen): Kleinsteinpflaster	Q2 25874,-6954 25903,-7025
-Weserstr. (Zeuthen): Kleinsteinpflaster	Q2 25820,-6973 25874,-6954 26041,-6785
+Weserstr. (Zeuthen): Kleinsteinpflaster	Q2 25820,-6973 25874,-6954
+Weserstr. (Zeuthen): Kleinsteinpflaster	Q2 25874,-6954 26041,-6785
 Große Zeuthener Allee (Zeuthen): Kleinsteinpflaster	Q2 25696,-7873 25772,-7416 25791,-7294 25798,-7212
 Große Zeuthener Allee (Zeuthen): Asphalt	Q0 25798,-7212 25810,-7135
 Große Zeuthener Allee (Zeuthen): unbefestigte Straße	Q2 25810,-7135 25820,-6973
@@ -3924,6 +3925,8 @@ Freiheitstr. (Wildau): Asphalt	Q0 25192,-8936 25251,-8868 25455,-8814 25578,-878
 Am Friedhof (Wildau): Asphalt	Q0 25118,-8791 25106,-8797 24916,-8686
 Schillerallee (Wildau): Asphalt	Q0 25478,-9638 25498,-9334 25518,-9218 25535,-9055 25578,-8781
 Röntgenstr. (Wildau): Asphalt	Q0 25700,-9097 25535,-9055 25423,-9022
+Röntgenstr. (Wildau): Asphalt	Q0 25423,-9022 25313,-8967
+Röntgenstr. (Wildau): Asphalt, möglicherweise mit Schäden	Q1 25313,-8967 25192,-8936
 Grabowskistr. (Wildau): Asphalt	Q0 25369,-9244 25389,-9180 25518,-9218 25669,-9258
 Jahnstr. (Wildau): schlechtes Kopfsteinpflaster	Q3 25910,-8697 25937,-8824 25879,-9145 25850,-9306 25805,-9553
 Stolze-Schrey-Str. (Wildau): Asphalt	Q0 25556,-9766 25677,-9654
@@ -4462,7 +4465,7 @@ Züsedom - Fahrenwalde: sehr schlechtes Kopfsteinpflaster, kaum Sandbanketten	Q3 
 Goethestr. (Neu-Buch): Asphalt	Q0 17228,24640 17317,24689
 Goethestr. (Neu-Buch): fester Sandweg	Q2 17317,24689 17345,24704 17581,24815 17699,24874 17776,24912 17864,24956 17913,25005
 Dreilindener Weg: Asphalt	Q0 -3589,-150 -3808,-329 -3910,-473 -3996,-711
-Bahnhofstr (Stahnsdorf): Asphalt	Q0 -2878,-3004 -2918,-3010 -3004,-3000 -3159,-2968 -3235,-2953 -3356,-2926 -3451,-2906 -3475,-2884 -3528,-2810 -3650,-2609
+Bahnhofstr. (Stahnsdorf): Asphalt	Q0 -2878,-3004 -2918,-3010 -3004,-3000 -3159,-2968 -3235,-2953 -3356,-2926 -3451,-2906 -3475,-2884 -3528,-2810 -3650,-2609
 Försterei Zedlitz - Straße nach Krampnitz: wassergebundene Decke	Q1 -10955,3723 -11011,3721 -11156,3523 -11247,3503 -11299,3471 -11334,3365 -11395,3270 -11509,3084
 Straße des Friedens: Betonstraße	Q1 -19186,8685 -19127,8680 -18848,8400 -18331,7751 -18216,7682 -17812,7349
 An den Gleisen: Betonstraße	Q1 -19190,7296 -19195,7358 -19235,7399 -19187,7496 -19186,8685

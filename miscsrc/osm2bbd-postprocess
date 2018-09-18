@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2009,2011,2013,2014,2015,2017 Slaven Rezic. All rights reserved.
+# Copyright (C) 2009,2011,2013,2014,2015,2017,2018 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -21,46 +21,46 @@ use lib (
 	);
 
 use vars qw($VERSION);
-$VERSION = 0.18;
+$VERSION = 0.19;
 
 use Cwd            qw(realpath);
 use File::Basename qw(dirname basename);
 use File::Temp     qw(tempfile);
 use Getopt::Long;
 
-my @targets = ('wasserstrassen_lowres',
-	       'largest_city_is_center',
-	       'title_for_dataset',
-	       'inaccessible_streets',
-	       'strassen_cooked', # dependency: inaccessible_streets
-	       'fragezeichen_cooked',
-	       #'make_long_streets',
-	       'mount',
-	       'coastline_hack',
-	       'check_crossings',
-	       'check_nearest',
-	       'icao_metar',
-	       'addr_sort',
-	       'zip_points', # dependency: addr_sort
-	       'cityparts',
-	       'addr_suburbs',
-	       'write_meta',
-	      );
-# Targets run by default (exclude obscure ones here)
-my @run_targets =
-    grep { !m{^(
-		  mount                 # lohnt sich nicht, zu wenige Höhenpunkte
-	      |   coastline_hack        # it's a hack
-	      |   check_crossings	# slow
-	      |   check_nearest		# slow
-	      |   icao_metar		# XXX needs unpublished scripts/modules/data, but this will change hopefully
-	      |   zip_points            # experimental
-	      |   cityparts             # to be decided
-	      |   addr_suburbs          # experimental and very slow
-	      |   write_meta            # only needed if just additional meta options need to be written
-	      )$}x
-	  }
-    @targets;
+use BBBikeUtil     qw(is_in_path);
+
+my @target_defs =
+    (
+     ['wasserstrassen_lowres'],
+     ['largest_city_is_center'],
+     ['title_for_dataset'],
+     ['inaccessible_streets'],
+     ['strassen_cooked', dependency => 'inaccessible_streets' ],
+     ['fragezeichen_cooked'],
+     #['make_long_streets']
+     ['mount',           default => 0], # lohnt sich nicht, zu wenige Höhenpunkte bei osm
+     ['coastline_hack',  default => 0], # it's a hack
+     ['check_crossings', default => 0], # slow
+     ['check_nearest',   default => 0], # slow
+     ['icao_metar',      default => 0], # XXX needs unpublished scripts/modules/data, but this will change hopefully
+     ['addr_sort'],
+     ['zip_points', dependency => 'addr_sort', default => 0], # experimental
+     ['cityparts',       default => 0], # to be decided whether it should be default
+     ['addr_suburbs',    default => 0], # experimental and very slow
+     ['write_meta',      default => 0], # only needed if just additional meta options need to be written
+    );
+my(@targets, @run_targets);
+for my $target_def (@target_defs) {
+    my($target_name, %opts) = @$target_def;
+    my $dependency = delete $opts{dependency}; # currently just "documentation"
+    my $default    = exists $opts{default} ? delete $opts{default} : 1;
+    die "Unhandled target options: " . join(" ", %opts) if %opts;
+    push @targets, $target_name;
+    if ($default) {
+	push @run_targets, $target_name;
+    }
+}
 
 my %skip_target; # skip default targets
 my %only_target; # run only the listed targets
@@ -78,6 +78,8 @@ sub usage (;$) {
 my $set_dataset_title_octets;
 # XXX should be generalized, or not be necessary
 my $coastline_hack_anchor;
+my $addr_suburbs_with_berlin_data;
+my @addr_suburbs_filter_city;
 
 my $debug = 1;
 my $force;
@@ -102,6 +104,8 @@ GetOptions(
 	   "dataset-title=s" => \$set_dataset_title_octets,
 	   # XXX
 	   "coastline-hack-anchor=s" => \$coastline_hack_anchor,
+	   "addr-suburbs-with-berlin-data" => \$addr_suburbs_with_berlin_data,
+	   'addr-suburbs-filter-city=s@' => \@addr_suburbs_filter_city,
 	   "h|help" => sub { usage },
 	   "v|version" => sub {
 	       print basename($0) . " $VERSION\n";
@@ -177,6 +181,28 @@ sub target_addr_suburbs {
 	return;
     }
 
+    my %street_zip_to_citypart;
+    if ($addr_suburbs_with_berlin_data) {
+	require PLZ;
+	my $plz = PLZ->new;
+	$plz->load;
+	for my $rec (@{ $plz->{Data} }) {
+	    my $str = $rec->[PLZ::FILE_NAME()];
+	    $str =~ s{(s)tr\.}{$1traße}i; # normalize for osm
+	    $street_zip_to_citypart{$str}->{$rec->[PLZ::FILE_ZIP()]}->{$rec->[PLZ::FILE_CITYPART()]} = 1;
+	}
+	# turn cityparts into comma-separated list
+	while(my($k1,$v1) = each %street_zip_to_citypart) {
+	    while(my($k2,$v2) = each %{ $street_zip_to_citypart{$k1} }) {
+		$street_zip_to_citypart{$k1}->{$k2} = join(", ", sort keys %{ $street_zip_to_citypart{$k1}->{$k2} });
+	    }
+	}
+    }
+
+    if (@addr_suburbs_filter_city) {
+	require List::Util;
+    }
+
     # XXX the following should go to a separate module XXX
     # XXX quite slow, takes currently ~20min for Berlin's _addr
 
@@ -204,18 +230,34 @@ sub target_addr_suburbs {
 	     my($r) = @_;
 	     my @f = split /\|/, $r->[Strassen::NAME()];
 	     my $p = [ split /,/, $r->[Strassen::COORDS()]->[0] ];
-	     my($zip,$city) = @f[2,3];
+	     my($strname,$zip,$city) = @f[0,2,3];
+	     if (@addr_suburbs_filter_city && !List::Util::first(sub { $_ eq $city }, @addr_suburbs_filter_city)) {
+		 warn "ignore @f because it's not in @addr_suburbs_filter_city...\n"
+		     if $debug >= 2;
+		 next;
+	     }
+
 	     my $found_citypart;
-	 CITYPARTS: for my $citypart (keys %citypart_to_polygons) {
-		 for my $polygon (@{ $citypart_to_polygons{$citypart} }) {
-		     if (VectorUtil::point_in_polygon($p, $polygon)) {
-			 $found_citypart = $citypart;
-			 last CITYPARTS;
+	 CITYPARTS: {
+		 if ($addr_suburbs_with_berlin_data && $city eq 'Berlin') {
+		     $found_citypart = $street_zip_to_citypart{$strname}->{$zip};
+		     last CITYPARTS if defined $found_citypart;
+		     warn "Nothing found for $r->[Strassen::NAME()], need to run slow cityparts fallback...\n"
+			 if $debug >= 2;
+		 }
+
+		 for my $citypart (keys %citypart_to_polygons) {
+		     for my $polygon (@{ $citypart_to_polygons{$citypart} }) {
+			 if (VectorUtil::point_in_polygon($p, $polygon)) {
+			     $found_citypart = $citypart;
+			     last CITYPARTS;
+			 }
 		     }
 		 }
 	     }
 	     if (!$found_citypart) {
-		 warn "No citypart found for $r->[Strassen::NAME()].\n";
+		 warn "No citypart found for $r->[Strassen::NAME()].\n"
+		     if $debug;
 		 $found_citypart = '';
 	     }
 	     $r->[Strassen::NAME()] .= "|$found_citypart";
@@ -223,11 +265,13 @@ sub target_addr_suburbs {
 	 });
     $new_addr_s->set_global_directives($addr_s->get_global_directives);
     $new_addr_s->set_global_directive(columns => 'street,housenunmber,postcode,city,suburb');
-    $new_addr_s->write("/tmp/_addr.new");#XXX should write to final destination
+    my $dest_file = "/tmp/_addr.new"; #XXX should write to final destination
+    $new_addr_s->write($dest_file);
+    warn "NOTE: currently the file _addr is not overwritten, but the change was written to $dest_file\n";
 }
 
 sub target_zip_points {
-    return if _is_up_to_date("_zip_points", ["addr"]);
+    return if _is_up_to_date("_zip_points", ["_addr"]);
     if (!-e "_addr") {
 	print STDERR "_addr does not exist, skipping";
 	return;
@@ -255,6 +299,29 @@ sub target_zip_points {
     };
 
     require Strassen::Core;
+
+    if (1 && is_in_path('cut') && is_in_path('sort')) {
+	# First pass: get all postal codes, sort them and allocate colors.
+	# This way the likelihood is increased that adjacent postal codes
+	# get different colors.
+	#
+	# Theoretically could also use Strassen::Core, but
+	# using unix tools like cut and sort is faster
+	# (1.5s vs. 8s on a slow machine).
+	open my $fh, 'cut -d"|" -f3 _addr | sort -u |'
+	    or die $!;
+	my %zip;
+	while(<$fh>) {
+	    chomp;
+	    next if /^#/;
+	    $zip{$_} = 1;
+	}
+	close $fh
+	    or die $!;
+	for my $zip (sort keys %zip) { # sorting nummerically or alphabetically shouldn't matter in most cases
+	    $get_zip_color->($zip); # only using the side-effect of allocating a color
+	}
+    }
 
     my $s = Strassen->new_stream('_addr');
     open my $ofh, ">", "_zip_points~"
@@ -791,24 +858,119 @@ osm2bbd-postprocess - do additional postprocessing of the osm2bbd result
 =head1 DESCRIPTION
 
 Do additional postprocessing of the result of a L<osm2bbd> run. If no
-further options are given, then some default postprocessing tasks will
-be run. Usually C<osm2bbd-postprocess> can determine that a
-postprocessing task was already run and won't do it again unless the
-C<-force> option is given.
+further options are given, then some default postprocessing tasks (or
+"targets") will be run. Usually C<osm2bbd-postprocess> can determine
+that a postprocessing task was already run and won't do it again
+unless the C<-force> option is given.
 
 Run C<osm2bbd-postprocess --help> to see a list of all options and all
 tasks.
 
-The C<coastline-hack> task needs the additional option
-C<-coastline-hack-anchor> with any cardinal direction (e.g. C<n>,
-C<nw> etc.) for the direction of the "open sea".
+=head2 TASKS (TARGETS)
 
-The C<title_for_dataset> task can be given an option C<--dataset-title
+All listed tasks are run by default except noted otherwise.
+
+=head3 wasserstrassen-lowres
+
+Create a lowres variant of waterway items, suitable to be shown in the
+overview window of the Perl/Tk application.
+
+=head3 largest-city-is-center
+
+Picks the largest city in the area and writes it as "center" and
+"center_name" to the meta file.
+
+=head3 title-for-dataset
+
+The C<title-for-dataset> task can be given an option C<--dataset-title
 I<title>>, which should be an utf8-encoded name for the dataset. If
 not given, then the task would choose the name of the largest city in
 the area as the dataset title.
 
-The C<write_meta> task has to be called (e.g with C<--add-write-meta>
+=head3 inaccessible-streets
+
+Find which streets are not accessible and create a new file
+F<inaccessible_strassen>. Will be used e.g. for geocoding purposes to
+exclude coordinates which cannot be reached anyway.
+
+=head3 strassen-cooked
+
+Create a new file F<strassen-cooked> which is a reduced set of
+F<strassen> not containing inaccessible streets (see
+L</inaccessible_streets>).
+
+=head3 fragezeichen-cooked
+
+Create a new file F<fragezeichen-cooked> which is a reduced set of
+F<fragezeichen> not containing points already found in F<strassen>.
+
+=head3 mount
+
+Create a new file F<mount>. Not run by default.
+
+=head3 coastline-hack
+
+The C<coastline-hack> task needs the additional option
+C<-coastline-hack-anchor> with any cardinal direction (e.g. C<n>,
+C<nw> etc.) for the direction of the "open sea". Not run by default.
+
+=head3 check-crossings
+
+Run the L<check_crossings> script. Not run by default.
+
+=head3 check-nearest
+
+Run the L<check_nearest> script. Not run by default.
+
+=head3 icao-metar
+
+Create the F<icao_metar> file. This file may be used to find locations
+in the data area which has weather data in the internet available. Not
+run by default, as it uses dependencies currently not bundled with
+bbbike.
+
+=head3 addr-sort
+
+The C<addr-sort> task sorts the F<_addr> file to be suitable for fast
+L<GeocoderAddr> lookups.
+
+=head3 zip-points
+
+Create a new file F<_zip_points> which is a colored representation of
+zip points. This is mainly used for debugging data problems. Not run
+by default.
+
+=head3 cityparts
+
+The C<cityparts> task creates a new file F<cityparts>. Not run by
+defauult.
+
+=head3 addr-suburbs
+
+The C<addr-suburbs> task adds a "suburb" (citypart) column to the
+F<_addr> by matching points with the F<cityparts> file. This task is
+currently quite slow (~20 minutes for data of size of Berlin). Not run
+by default. The following options may also be specified:
+
+=over
+
+=item -addr-suburbs-filter-city I<cityname>
+
+If specified, then filter out all records not matching any of the
+given city names. May be specified multiple times.
+
+=item -addr-suburbs-with-berlin-data
+
+Experimental. Use the file F<Berlin.coords.data> for faster matching.
+This cuts down the time to less than one minute. A notable change is
+that instead of a specific suburb name a list of suburbs may be
+generated per record.
+
+=back
+
+=head3 write-meta
+
+The C<write-meta> task has to be called (e.g with C<--add-write-meta>
 or C<--only-write-meta> switch) if any of the following options is
 set:
 
