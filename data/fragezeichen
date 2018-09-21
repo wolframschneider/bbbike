@@ -1023,7 +1023,7 @@ Menz - Großwoltersdorf: Qualität des Radwegs?	? -13455,75227 -13662,75159 -12578
 Steinförde - Fürstenwalde (nördliche Verbindung): Qualität? Gibt es für Radfahrer (teilweise) Radwege?	? -12573,86500 -12462,86602 -12459,86661 -12243,87189 -12163,87296 -12068,87338 -11268,87264 -10925,87110 -10681,87113 -9218,86904 -9099,86982 -8978,86969
 Spektegrünzug - An der Tränke: existiert hier eine Verbindung? Qualität? Nachts beleuchtet?	? -7211,15920 -7145,15910
 Richard-Wagner-Str. (Schulzendorf): Qualität im südöstlichen Abschnitt?	? 24424,-4656 24494,-4719 24526,-4753
-Wiesenstr. (Zeuthen): Qualität im nordwestlichen Abschnitt? Ist hier auch asphaltiert?	? 25371,-5577 25337,-5516 25025,-5155 24903,-5113
+Wiesenstr. (Zeuthen): Qualität im nordwestlichen Abschnitt? Ist hier auch unbefestigt?	? 25337,-5516 25025,-5155 24903,-5113
 Am Heideberg (Zeuthen): Qualität im westlichen Abschnitt? Liegt hier auch Kleinsteinpflaster?	? 25321,-5848 24730,-5712
 Weserstr. (Zeuthen): Qualität im nordöstlichen Abschnitt? Liegt hier auch Kleinsteinpflaster?	? 26041,-6785 25993,-6654
 Freiheitstr.: Gehwege für Radfahrer frei?	? 26133,-8639 25910,-8697 25725,-8743 25578,-8781
@@ -1038,11 +1038,10 @@ Braunschweiger Str.: Fahrbahnbeschaffenheit im westlichen Abschnitt?	? 23985,-57
 Münchener Str. (Schulzendorf): Fahrbahnbeschaffenheit im westlichen Abschnitt?	? 24079,-5824 23669,-6135 23417,-6330
 Chemnitzer Str. (Zeuthen): Fahrbahnbeschaffenheit im westlichen Abschnitt? Ist hier auch unbefestigte Straße?	? 24314,-6140 23704,-6589
 Straße am Höllengrund (Zeuthen): Fahrbahnbeschaffenheit im südlichen Abschnitt? Ist hier auch asphaltiert?	? 25267,-7150 25220,-7339 25117,-7592
-An der Korsopromenade (Zeuthen): Fahrbahnbeschaffenheit im östlichen Abschnitt? Ist hier auch asphaltiert?	? 25968,-7452 25853,-7448
-An der Korsopromenade (Zeuthen): Fahrbahnbeschaffenheit im westlichen Abschnitt? Ist hier auch asphaltiert?	? 25681,-7413 25376,-7343 25220,-7339 24980,-7353
-Am Pulverberg (Zeuthen): Fahrbahnbeschaffenheit?	? 25425,-7719 25117,-7592 25024,-7515 24980,-7405 24980,-7353 24956,-7095 25005,-7089 25051,-7101
+Am Pulverberg (Zeuthen): Fahrbahnbeschaffenheit?	? 25117,-7592 25024,-7515 24980,-7405 24980,-7353 24956,-7095 25005,-7089 25051,-7101
 Sanddornweg (Wildau): Fahrbahnbeschaffenheit im östlichen Abschnitt? Liegt hier auch Asphalt?	? 25643,-8304 25638,-8394
 Sanddornweg (Wildau): Fahrbahnbeschaffenheit im westlichen Abschnitt? Liegt hier auch Asphalt?	? 25394,-8340 25365,-8336 25326,-8325
+Wuhletalstr.: wurden hier die Radspuren bis zur Wolfener Str. fortgeführt?	? 20895,17594 20769,17650 20728,17670 20485,17784
 # added from ampeln-orig
 geschlossen bei Bedarf (?) (Zbr)	? 27649,-11766
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503

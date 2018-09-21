@@ -90,16 +90,21 @@ Sinsheimer Weg: Betonstraﬂe	Q0 13774,8849 13837,8932
 #: by: https://www.aktion-kms.de/assets/2017/01/Donaustra%C3%9Fe_LP_Lph3-LP_01.pdf
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.738948.php
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/donaustrasse-wird-umgebaut_a180854
+#: XXX dieser Abschnitt wird noch 2018 realisiert
 #: osm_watch: way id="155605274" version="3"
-#: last_checked: 2018-09-14 vvv
-# REMOVED --- #: check_frequency: 7d vvv
-#: next_check: 2018-09-17 vvv
-Donaustr.: schlechtes bis m‰ﬂiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895 12394,8729 12549,8616 12649,8535
+#: last_checked: 2018-09-19
+#: check_frequency: 7d
+Donaustr.: schlechtes bis m‰ﬂiges Kopfsteinpflaster	Q2- 12549,8616 12649,8535
+#: osm_watch: way id="155605274" version="3"
+#: last_checked: 2018-09-19 vvv
+#: check_frequency: 30d vvv
+# REMOVED --- #: next_check: 2018-09-17 vvv
+Donaustr.: schlechtes bis m‰ﬂiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895 12394,8729 12549,8616
 #: XXX hier wird vermutlich auch die Einbahnstraﬂenregelung f¸r Radfahrer aufgehoben
 #: osm_watch: way id="155605332" version="3"
 Pannierstr.: Kopfsteinpflaster	Q2 12242,8972 12202,8895
-#: next_check ^^^
-# REMOVED --- #: check_frequency ^^^
+# REMOVED --- #: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="155605273" version="4"
@@ -180,9 +185,10 @@ Feurigstr.: m‰ﬂiges Kopfsteinpflaster	Q2 7086,8579 7012,8511 6807,8309
 Herbertstr.: Kopfsteinpflaster	Q2 7360,8918 7389,8837 7402,8783
 Ebersstr.: Fahrbahn Kopfsteinpflaster, Radweg asphaltiert	Q0 7395,8761 7313,8661 7288,8635
 Ebersstr.: Kopfsteinpflaster	Q2 7242,8586 7166,8487
+#: XXX hat sich hier die Qualit‰t des Pflasters auch verschlechtert?
 Gleditschstr.: Kopfsteinpflaster, OK	Q1 7126,9825 7080,10098
-Gleditschstr.: m‰ﬂiges Kopfsteinpflaster, m‰ﬂige Radwege	Q1 7126,9825 7128,9512 7130,9316
-Winterfeldtplatz: Kopfsteinpflaster, OK	Q1 7038,10088 7049,9833
+Gleditschstr.: m‰ﬂiges Kopfsteinpflaster, m‰ﬂige Radwege	Q1 7126,9825 7128,9512 7118,9315
+Winterfeldtplatz: Kleinsteinpflaster mit deutlichen Unebenheiten	Q2- 7038,10088 7049,9833
 Corneliusstr.: m‰ﬂiges Kopfsteinpflaster	Q2 6880,11110 6841,11114 6630,11247 6476,11325
 Kopernikusstr.: m‰ﬂiges Kopfsteinpflaster	Q2 13467,11778 13651,11731
 Torellstr.: m‰ﬂiges Kopfsteinpflaster	Q2 13295,11792 13467,11778
@@ -843,10 +849,11 @@ B‰nschstr.: Kopfsteinpflaster	Q2 14599,12584 14672,12565 14686,12549 14801,12517
 B‰nschstr.: Asphalt	Q0 14798,12502 15005,12443
 B‰nschstr.: Asphalt	Q0 14996,12462 14801,12517
 Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
-#: XXX Asphaltierung soll 2018 erfolgen
-#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf
+#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
+#: XXX laut fixmyberlin "kann die Asphaltierung der G‰rtnerstr. ab 2020 erfolgen, wenn die Baumaﬂnahme der Berliner Wasserbetriebe (ab Fr¸hjahr 2019) abgeschlossen ist."
+#: XXX auﬂerdem: Einrichtung einer Fahrradstraﬂe zwischen Frankfurter Allee und Revaler Str.
 #: last_checked: 2018-09-08
-#: next_check: 2018-12-31
+#: next_check: 2020-01-01
 G‰rtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
 Seumestr.: Kopfsteinpflaster	Q2- 14395,11753 14358,11656 14305,11514 14254,11377
@@ -990,7 +997,8 @@ Alt-Lichtenrade: m‰ﬂiges Kleinsteinpflaster	Q2+ 11149,-1274 11147,-1346 11068,-1
 Pasinger Str.: glatt gepflastert	Q2+ 12052,-2250 12073,-2296 11996,-2476 11909,-2531 11760,-2575 11696,-2589
 Pasinger Str.: schlechtes Kopfsteinpflaster	Q3 11696,-2589 11523,-2617 11360,-2648
 Platz vor dem Tempodrom: Asphalt	Q0 8941,10663 8853,10708
-Weg am Tempodrom: Parkweg	Q1 8853,10708 8798,10678 8738,10704 8698,10756
+Weg am Tempodrom: Parkweg, einige sandige Stellen	Q2- 8853,10708 8798,10678
+Weg am Tempodrom: Parkweg	Q1- 8798,10678 8738,10704 8698,10756
 Zum Hundsteinweg: fester Sandweg	Q1 10661,2790 10721,2800 10775,2765
 Tauernallee - Wildspitzweg: fester Sandweg	Q1 10716,2597 10775,2765 10799,2839 10813,3017 10840,3048 10847,3154
 Sangerhauser Weg: Verbundsteine	Q1 10748,2412 10933,2606 10939,2642 11005,2726 11199,2932
@@ -2182,7 +2190,7 @@ Langhoffstr.: Asphalt	Q0 19818,14064 19817,14371 19817,14459
 (Am St‰dtischen Zentralfriedhof): asphaltiert	Q0 17785,12257 17749,12239 17533,12222
 #: XXX wird hier auch asphaltiert werden?
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/buergerbeteiligung/fahrrat-praesentation_29-10-2015.pdf
-#: osm_watch: way id="70668204" version="8"
+#: osm_watch: way id="70668204" version="9"
 #: last_checked: 2018-06-12
 #: check_frequency: 100d
 (Am St‰dtischen Zentralfriedhof, Platz vor dem Eingang): Kopfsteinpflaster	Q2 17533,12222 17480,12237 17466,12241
@@ -2956,9 +2964,10 @@ Mauerweg: wassergebundene Decke	Q1 12014,620 12246,706
 Mauerweg: Asphalt	Q0 12246,706 12557,799 12984,1011
 #: XXX Geh- und Radweg / Verbindungsst¸ck f¸r den Berliner Mauerweg (ist dieser Abschnitt gemeint?)
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2019-2022)
+#: XXX laut fixmyberlin Fertigstellung August 2019
 #: note: man kˆnnte auch auf der parallel verlaufenden Straﬂe in Brandenburg fahren, sehr guter Asphalt --- leider gibt es keine barrierefreie Verbindung zur Ringslebenstr.
 #: last_checked: 2018-09-12
-#: next_check: 2019-04-01
+#: next_check: 2019-08-15
 Ringslebenstr.: unbefestigter Weg	Q2 13811,1430 13851,1460
 Mauerweg: Asphalt	Q0 14430,1731 14641,1771 14682,1782 14716,1772 14755,1738 14858,1700 14876,1686 15200,737 15333,378 15423,150 15480,6 15538,-30 15571,-93
 #: by: rj
@@ -10228,12 +10237,11 @@ Uferstr. (Niederschˆneweide): Asphalt	Q0 17681,6212 17847,6089
 Waldkiefernring: Asphalt	Q0 21855,2392 21754,2329 21782,2283 21885,2343
 F‰henweg: Asphalt	Q0 21869,2367 21791,2323
 # 
-#: XXX Asphaltarbeiten sind geplant
 #: by: https://www.berliner-woche.de/gruenau/c-bauen/neuer-gehweg-durch-den-wald_a178025
-#: priority: #A
+#: XXX pr¸fen, ob die Qualit‰t tats‰chlich besser geworden ist
 #: last_checked: 2018-09-12
 #: next_check: 2018-09-18
-Sportpromenade: Asphalt mit einigen Sch‰den und Wurzelhebungen	Q1- 25646,-209 25574,-38 25537,167 25461,254 25172,345 24827,354 24743,370 24666,436
+Sportpromenade: Asphalt	Q0 25646,-209 25574,-38 25537,167 25461,254 25172,345 24827,354 24743,370 24666,436
 # 
 Mauerpark: Kleinsteinpflaster	Q1 10188,15474 10228,15488 10234,15490
 # REMOVED (nein, by mapillary) --- #: XXX hat sich mit der Neugestaltung etwas ge‰ndert? --- #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.635732.php
@@ -10793,7 +10801,7 @@ Sebastianstr.: Asphalt, einige Sch‰den	Q0- 10640,11564 10818,11269 10824,11256
 Waldowstr.: Asphalt, einige Sch‰den	Q0- 10309,20562 10383,20295 10435,20098 10486,19955 10508,19910
 Bahnhofstr. - S-Bhf. Lichterfelde Ost: Kopfsteinpflaster	Q2 5332,2568 5367,2528
 Steinmetzstr.: Mosaikpflaster	Q1 7698,10147 7657,9942 7625,9771
-(Johannisthaler Chaussee - Wildmeisterdamm): Asphalt	Q0- 13010,2085 13157,2116
+(Johannisthaler Chaussee - Wildmeisterdamm): Asphalt	Q0- 13045,2107 13064,2090 13157,2116
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv

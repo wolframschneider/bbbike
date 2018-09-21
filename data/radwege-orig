@@ -301,7 +301,8 @@ Gehweg für Radfahrer frei	RW9;RW1 571,11255 541,11464
 	RW2;RW2 4512,5199 4432,5160 4343,5112
 #: XXX Radwege sollen saniert werden oder es entstehen sogar Radstreifen (Umsetzung 2018) vvv
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf vvv
-#: last_checked: 2018-09-13 vvv
+#: XXX laut fixmyberlin erster Bauabschnitt Alte Jakobstr. - Axel-Springer-Str. (Nordseite) im Herbst 2018
+#: last_checked: 2018-09-21 vvv
 #: next_check: 2018-12-31 vvv
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1;RW1 10020,11262 10256,11160
 mäßige bis schlechte Verbundsteinpflasterradwege, Bord zum Gehweg	RW1; 10256,11160 10501,11056 10637,10996 10684,10975
@@ -490,6 +491,7 @@ für Radfahrer freigegebene Busspur gilt Mo-Fr 7-19 Uhr	RW1;RW1 7911,15008 7533,1
 	RW4;RW4 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
 	RW1;RW2 8595,12066 8600,12165
 	RW1;RW1 8542,11502 8548,11571 8553,11630 8553,11638 8567,11799 8571,11846 8577,11896 8595,12066
+	RW3; 10644,12469 10601,12521
 	RW4;RW4 10601,12521 10431,12709
 	RW3;RW4 11635,12745 11589,12768 11289,12908 11226,12945
 	RW2; 14926,12129 14994,12121 15117,12106
@@ -679,7 +681,7 @@ im Bereich der Bushaltestelle wird der Radweg auf dem Gehweg geführt	RW4; 14196,
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/zeitnahe-entscheidung-angekuendigt_a180857
 #: source_id: 2147343116
 #: XXX wann wird die Radspur wieder hergestellt? (-> RW4;)
-#: last_checked: 2018-09-14
+#: last_checked: 2018-09-19
 provisorischer gemeinsamer Rad- und Gehweg	RW2; 14558,10264 14501,10169 14405,10027 14350,9953
 	RW4; 14350,9953 14289,9870
 Gehwegplatten, Unebenheiten durch Wurzelhebungen	RW1; 16699,10611 16725,10662 16751,10674 16892,10731 17083,10814 17141,10838 17226,10865 17257,10875 17466,10941 17560,10973 17621,10994
@@ -1720,7 +1722,7 @@ Busspur ist immer gültig	RW5; 8414,6995 8319,7084
 	RW6;RW6 6256,7428 6252,7239
 	RW6; 6257,7646 6238,7645 6241,7428 6256,7428
 	RW3;RW3 6454,8653 6461,8463 6459,8281 6459,8272 6460,8186 6460,8093
-	RW1;RW1 7126,9825 7128,9512 7130,9316
+	RW1;RW1 7126,9825 7128,9512 7118,9315
 	RW6;RW6 7882,9490 7771,9479
 	RW1;RW1 6998,11003 7086,10979
 	RW3;RW2 7086,10979 7149,10961
@@ -2112,6 +2114,8 @@ Verbundsteinpflaster	RW1; 561,2395 604,2494 629,2545 709,2592 749,2616
 	RW1;RW1 803,2435 900,2469 960,2534 1008,2568 1121,2583 1238,2599 1324,2603 1406,2607 1426,2607 1524,2611 1603,2615 1711,2620 1750,2636 1885,2697 2000,2748 2123,2803 2290,2864
 	RW1;RW1 2308,3862 2287,3702
 #: XXX Radspur-Markierung noch lückenhaft, vielleicht wird hier auch noch ummarkiert; außerdem noch Gehweg für Radfahrer frei (vielleicht nur bis zur vollständigen Markierung?)
+#: by: https://www.berliner-woche.de/steglitz/c-verkehr/dahlemer-weg-behoerden-pruefen-den-bau-einer-geschuetzten-radverkehrsanlage_a180632
+#: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/arbeiten-am-radweg-dahlemer-weg-einstellen_a181682
 #: last_checked: 2018-09-12
 #: check_frequency: 7d
 	RW3; 2287,3702 2266,3580 2253,3505 2203,3213
@@ -2551,6 +2555,7 @@ Gehweg für Radfahrer frei	RW1; 18922,2238 18928,2319 18929,2454
 #: XXX eventuell wird hier eine Verbesserung passieren
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/praesentation-tief-9-ag-radverkehr.pdf ("Umsetzung frühestens 2018")
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/tief-10-ag_radverkehr-12-03-2018-kompatibilitaetsmodus.pdf (2021)
+#: XXX laut fixmyberlin werden hier Radstreifen entstehen, Umsetzung ab 2021
 #: last_checked: 2018-09-12
 # REMOVED --- #: check_frequency: 90d
 #: next_check: 2021-03-01
@@ -2743,8 +2748,8 @@ die ersten Meter noch als Bordsteinradweg geführt	RW3; 20575,11698 20435,11698
 #: by: Sigrid Kohn:
 	RW6;RW6 2345,1283 2233,1528
 	RW6;RW6 19564,1871 19602,1989
-alte Gehwegplatten	RW1; 13010,2085 13023,2093 13104,2143
-Busspur für Radfahrer freigegeben	RW1; 13104,2143 13023,2093 13010,2085
+alte Gehwegplatten	RW1; 13010,2085 13023,2093 13045,2107 13104,2143
+Busspur für Radfahrer freigegeben	RW1; 13104,2143 13045,2107 13023,2093 13010,2085
 Wechsel zwischen alten Gehwegplatten und schadhaftem Verbundsteinpflaster	RW1; 13104,2143 13367,2322 13418,2357
 Wechsel zwischen alten Gehwegplatten und schadhaftem Verbundsteinpflaster	RW2; 13418,2357 13501,2413
 Wechsel zwischen alten Gehwegplatten und schadhaftem Verbundsteinpflaster	RW1; 13501,2413 13709,2551 13886,2653 13915,2673 13951,2697 13999,2727 14203,2859 14212,2865 14392,2979

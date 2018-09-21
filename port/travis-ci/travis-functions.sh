@@ -26,6 +26,15 @@ init_env_vars() {
     # even cause problems if an IPv6 address is chosen...
     export PERL_CPANM_OPT="--mirror https://cpan.metacpan.org --mirror http://cpan.cpantesters.org"
     CODENAME=$(lsb_release -c -s)
+    if [ "$CODENAME" = "" ]
+    then
+	if grep -q "Ubuntu 12.04" /etc/issue
+	then
+	    CODENAME=precise
+	else
+	    echo "WARNING: don't know what linux distribution is running. Possible failures are possible"
+	fi
+    fi
     export CODENAME
 }
 
@@ -265,7 +274,7 @@ init_webserver_config() {
 	    sudo ln -s $TRAVIS_BUILD_DIR/cgi/httpd.conf /etc/apache2/sites-available/bbbike.conf
 	fi
 	sudo a2ensite bbbike.conf
-	if "$CODENAME" != "precise"
+	if [ "$CODENAME" != "precise" ]
 	then
 	    sudo a2enmod remoteip
 	fi
