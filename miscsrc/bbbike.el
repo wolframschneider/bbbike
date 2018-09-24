@@ -38,6 +38,9 @@
 
 (defvar bbbike-date-for-last-checked)
 
+;; XXX failed experiment
+;(setq bbbike-sourceid-viz-format "https://viz.berlin.de/2?p_p_id=vizmap_WAR_vizmapportlet_INSTANCE_Ds4N&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_vizmap_WAR_vizmapportlet_INSTANCE_Ds4N_cmd=traffic&_vizmap_WAR_vizmapportlet_INSTANCE_Ds4N_submenu=traffic_default&_vizmap_WAR_vizmapportlet_INSTANCE_Ds4N_poiId=News_id_%s")
+
 (defconst bbbike-font-lock-defaults
   '(bbbike-font-lock-keywords t nil nil nil (font-lock-multiline . nil)))
 
@@ -581,6 +584,16 @@
   'face 'bbbike-button
   'help-echo "Click button to browse (cached) URL")
 
+;; XXX failed experiment
+;(defun bbbike-sourceid-viz-button (button)
+;  (browse-url (format bbbike-sourceid-viz-format (button-get button :sourceid))))
+;
+;(define-button-type 'bbbike-sourceid-viz-button
+;  'action 'bbbike-sourceid-viz-button
+;  'follow-link t
+;  'face 'bbbike-button
+;  'help-echo "Click button to show source_id element (VMZ/VIZ)")
+
 (defun bbbike-osm-button (button)
   (browse-url (concat "http://www.openstreetmap.org/" (button-get button :osmid))))
 
@@ -600,6 +613,13 @@
   'help-echo "Click button to show OSM note")
 
 (defun bbbike-create-buttons ()
+  ;; XXX For some reason, overlays accumulate if a buffer
+  ;; is visited another time, making emacs slower and slower.
+  ;; Hack is to remove them all first.
+  ;; remove-overlays does not seem to exist for older emacsen (<23.x.x?)
+  (if (fboundp 'remove-overlays)
+      (remove-overlays))
+
   (save-excursion
     (goto-char (point-min))
     (while (search-forward-regexp bbbike-next-check-id-regexp nil t)
@@ -616,10 +636,29 @@
       (make-button (match-beginning 1) (match-end 1) :type 'bbbike-url-button)))
 
   (if (string-match "/bbbike-temp-blockings" buffer-file-name)
-      (save-excursion
-	(goto-char (point-min))
-	(while (search-forward-regexp "^[ ]*source_id[ ]*=>[ ]*'\\(http[^']+\\)" nil t)
-	  (make-button (match-beginning 1) (match-end 1) :type 'bbbike-url-button :url (buffer-substring (match-beginning 1) (match-end 1))))))
+      (progn
+	(save-excursion
+	  (goto-char (point-min))
+	  (while (search-forward-regexp "^[ ]*source_id[ ]*=>[ ]*'\\(http[^']+\\)" nil t)
+	    (make-button (match-beginning 1) (match-end 1) :type 'bbbike-url-button :url (buffer-substring (match-beginning 1) (match-end 1)))))
+;; XXX failed experiment
+;	(save-excursion
+;	  (goto-char (point-min))
+;	  (while (search-forward-regexp "^[ ]*source_id[ ]*=>[ ]*'\\([0-9]+\\)" nil t)
+;	    (make-button (match-beginning 1) (match-end 1)
+;			 :type 'bbbike-sourceid-viz-button
+;			 :sourceid (buffer-substring (match-beginning 1) (match-end 1))
+;			 )))
+	))
+
+;; XXX failed experiment
+;  (save-excursion
+;    (goto-char (point-min))
+;    (while (search-forward-regexp "^#:[ ]*source_id:?[ ]*\\([0-9]+\\)" nil t)
+;      (make-button (match-beginning 1) (match-end 1)
+;		   :type 'bbbike-sourceid-viz-button
+;		   :sourceid (buffer-substring (match-beginning 1) (match-end 1))
+;		   )))
 
   (save-excursion
     (goto-char (point-min))
