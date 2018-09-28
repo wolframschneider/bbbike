@@ -9456,7 +9456,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006085',
        data  => <<EOF,
-	1::inwork 23206,206 22916,402 22547,651 22351,862 22162,1067
+	1::inwork 23225,192 22916,402 22547,651 22351,862 22162,1067
 EOF
      },
      { from  => undef, # 
@@ -20915,7 +20915,7 @@ EOF
 #: tempex: volatile
 	2::night 14838,11410 14792,11391
 #: XXX wird hier dauerhaft gesperrt sein? (zurzeit kann man sich noch an den Bauzäunen vorbei mogeln)
-#: last_checked: 2018-09-17
+#: last_checked: 2018-09-24
 #: check_frequency: 7d
 	2::inwork 14838,11410 14949,11474
 EOF
@@ -22784,7 +22784,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: osm_watch: way id="43141418" version="9" brb
+#: osm_watch: way id="43141418" version="11" brb
 #: last_checked: 2018-06-19 (osm)
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
@@ -26755,7 +26755,7 @@ EOF
 #: note: unklar, ob man durchgekommen wäre: 2018-09-07 gegen 08:30
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="6"
-#: last_checked: 2018-09-17
+#: last_checked: 2018-09-24
 #: check_frequency: 14d
 	2::inwork 15162,11458 15055,11505
 EOF
@@ -26889,7 +26889,7 @@ EOF
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=34143
 #: XXX wie lange ist hier noch gesperrt?
 #: priority: #B
-#: next_check: 2018-09-24
+#: next_check: 2018-09-30
 	2::inwork 18023,833 17928,764 17734,675
 EOF
      },
@@ -27153,6 +27153,9 @@ EOF
        text  => 'Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
+#: osm_watch: way id="152046369" version="7"
+#: add_fragezeichen: Ist der Uferweg noch immer gesperrt? Falls nicht: hat sich die Qualität des Weges verbessert?
+#: priority: #A
 #: next_check_id: MENTZELPARK-2018
 #: last_checked: 2018-08-29 (Umleitungsausschilderung existiert)
 	2::inwork 21696,5053 21600,5221 21512,5404 21481,5429
@@ -27430,17 +27433,17 @@ EOF
 #: last_checked ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2018-09-27 00:00:00"), # 1531519200, # 2018-07-14 00:00
-       until => $isodate2epoch->("2018-12-31 18:00:00"), # $isodate2epoch->("2018-08-14 00:00:00"), # $isodate2epoch->("2018-09-26 18:00:00"), # 1546297199, # 2018-12-31 23:59
+     { from  => 1538074511, # XXX erst einmal komplett inaktiv! --- from  => $isodate2epoch->("2018-10-31 00:00:00"), # 1531519200, # 2018-07-14 00:00
+       until => 1538074518, # until => $isodate2epoch->("2018-12-31 18:00:00"), # $isodate2epoch->("2018-08-14 00:00:00"), # $isodate2epoch->("2018-09-26 18:00:00"), # 1546297199, # 2018-12-31 23:59
        text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, voraussichtlich bis Ende 2018',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
        data  => <<EOF,
 #: next_check_id: FEUERBACH-2018
-#: XXX laut VMZ nur bis September 2018, laut BA Steglitz bis Dezember 2018
+# REMOVED --- #: XXX laut VMZ nur bis September 2018, laut BA Steglitz bis Dezember 2018
 #: source_id: 2147342919
-#: last_checked: 2018-08-15
-#: next_check: 2018-09-26
+# REMOVED --- #: last_checked: 2018-08-15
+# REMOVED --- #: next_check: 2018-12-31
 	q4::inwork; 6168,6467 6083,6451 5823,6413
 EOF
      },
@@ -27591,21 +27594,24 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2018-08-14 00:00:00"), # 1531519200, # 2018-07-14 00:00
-       until => $isodate2epoch->("2018-09-27 00:00:00"), # 1546297199, # 2018-12-31 23:59
+       until => $isodate2epoch->("2018-12-31 23:59:59"), # 1546297199, # 2018-12-31 23:59
        text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis zum Ende 2018',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
        data  => <<EOF,
 #: next_check_id: FEUERBACH-2018
 #: XXX laut VMZ nur bis Ende Oktober 2018, laut BA Steglitz bis Dezember 2018
+#: XXX eventuell in der Feuerbachstr. selbst nur bis Ende Oktober 2018?
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.725875.php
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/weitere-sperrungen-rund-um-die-feuerbachstrasse_a174881
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729490.php
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/bauarbeiten-gehen-weiter_a178952
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47881
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47885
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: last_checked: 2018-08-15
-#: next_check: 2018-09-26
+#: next_check: 2018-10-26
 	q4::inwork; 6168,6467 6083,6451 5823,6413
 	q4::inwork 6083,6451 6095,6358
 	q4::inwork; 6248,6388 6095,6358
@@ -27742,11 +27748,14 @@ EOF
 EOF
      },
      { from  => 1538344800, # 2018-10-01 00:00
-       until => 1577833199, # 2019-12-31 23:59
+       until => $isodate2epoch->("2019-11-29 18:00:00"), # 1577833199, # 2019-12-31 23:59
        text  => 'Bötzow - Schönwalde: Brückenarbeiten, auch Radfahrer und Fußgänger können nicht passieren, voraussichtlich ab Oktober 2018 bis Ende 2019',
        type  => 'gesperrt',
        source_id => 'https://www.moz.de/landkreise/oberhavel/oranienburg/oranienburg-artikel/dg/0/1/1656828/',
        data  => <<EOF,
+#: source_id: LS/721-E/18/127
+#: XXX außerdem: Radwegbau
+#: next_check: 2019-11-29
 	2::inwork -7230,25622 -7243,25847 -7309,26146
 EOF
      },
@@ -27859,10 +27868,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2018-09-12 vvv
-#: check_frequency: 7d vvv
+#: next_check: 2018-10-01 vvv
 	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2429,4385
-#: check_frequency ^^^
+#: next_check ^^^
 #: last_checked ^^^
 EOF
      },
@@ -27900,7 +27909,7 @@ EOF
        text  => 'Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2018-09-21
+#: last_checked: 2018-09-24
 #: check_frequency: 7d
 	2::inwork 11021,11287 11000,11327
 EOF
@@ -27911,6 +27920,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.742008.php',
        data  => <<EOF,
+#: source_id: 2147343222
 	2::inwork 14321,25216 14434,25388 14481,25461 15230,26548
 EOF
      },
@@ -28042,6 +28052,35 @@ Bebelplatz	2::temp 9795,12293 9876,12298
 Mollergasse	2::temp 9892,12596 9894,12564
 Bebelplatz, diagonal über den Platz	2::temp 9737,12238 9702,12307 9664,12387
 Bebelplatz, diagonal über den Platz	2::temp 9680,12232 9702,12307 9713,12392
+EOF
+     },
+     { from  => 1538064000, # 2018-09-27 18:00
+       until => 1538361000, # 2018-10-01 04:30
+       text  => 'Salvador-Allende-Brücke: Sperrung wegen Bauarbeiten, auch für Fußgänger und Radfahrer, von Freitag, den 28.09.2018, ab 18:00 Uhr bis Montag, den 01.10.2018, 4:30 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.742824.php',
+       data  => <<EOF,
+	2::inwork 23444,4942 23433,5037 23420,5159 23404,5325
+EOF
+     },
+     { from  => 1537934400, # 2018-09-26 06:00
+       until => 1544914799, # 2018-12-15 23:59
+       text  => 'Wünsdorfer Str.: zwischen Abendrotweg und Prinzessinnenstr. Baustelle, Fahrbahn Richtung Süden gesperrt, bis Mitte Dezember 2018',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147343253
+	q4::inwork; 9860,-1475 9908,-1614 9970,-1787 9982,-1818 10021,-1918 10096,-2137
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Treptower Park, Weg zum/vom Karpfenteich: Bauarbeiten, Weg kann gesperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX wie wird die Qualität danach aussehen?
+#: last_checked: 2018-09-27
+#: check_frequency: 7d
+	2::inwork 14854,8964 14614,9052
 EOF
      },
     );

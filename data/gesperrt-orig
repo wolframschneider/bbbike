@@ -2354,6 +2354,7 @@ Drängelgitter	BNP:5::trailer=10 4626,20960
 #: note: Umfahrung auf Gehwegabschnitt
 Drängelgitter	BNP:5::trailer=10 7764,21271
 Schranke	BNP:3::trailer=10 11392,10520
+Schranke	BNP:2::trailer=7 11317,10485
 Drängelgitter (2x)	BNP:5::trailer=10 22187,13304
 #: by: radzeit 2/2015 vvv
 Drängelgitter	BNP:5::trailer=10 13940,23486
@@ -2966,7 +2967,7 @@ Volkspark Anton Saefkow: Bauarbeiten, Wege sind gesperrt	2::inwork 12620,14979 1
 #: next_check_id: KAUFHOF-2018
 #: XXX bis wann gehen die Bauarbeiten?
 #: XXX ggfs. handicap_s-orig-Eintrag wieder aktivieren
-#: last_checked: 2018-09-23
+#: last_checked: 2018-09-27
 #: check_frequency: 90d
 Hermann-Stöhr-Platz: Gehweg vor dem ehemaligen Kaufhaus gesperrt	2::inwork 12522,11837 12409,11902
 # 
@@ -2989,7 +2990,7 @@ am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_56_6505_6588_online.pdf (Straßenlandeinziehung)
 #: by: https://www.fanny-zobel-strasse.de/
 #: osm_watch: way id="86812767" version="5"
-#: last_checked: 2018-08-28
+#: last_checked: 2018-09-20 (mapillary)
 #: check_frequency: 90d
 Fanny-Zobel-Str.: wegen Bauarbeiten gesperrt, vielleicht sogar dauerhaft eingezogen	2::inwork 13975,10187 14049,10164
 # 
@@ -3061,21 +3062,12 @@ S-Bahn-Unterführung: zurzeit gesperrt, hier wird in Zukunft ein Steg verlaufen	2
 #: check_frequency: 60d
 Zum Großen Herzberg (Potsdam-Golm): Straße wird noch gebaut	2::inwork -18017,333 -18026,357 -18049,424
 # 
-#: by: https://www.berliner-zeitung.de/berlin/verkehr/express-zum-ber-fledermaeuse-stoppen-bauarbeiten-fuer-ringbahnbruecke-29488832 (Abriss im April 2018)
-#: XXX wird aufgehoben, sobald das einsturzgefährdete Haus abgerissen wird
-#: osm_watch: way id="488814363" version="3"
-#: last_checked: 2018-08-24
-#: check_frequency: 30d
-#: priority: #C
-Wartenbergstr.	1s:q2:inwork 15423,11667 15337,11639 15328,11636 15300,11584
-# REMOVED --- Wartenbergstr.: Fahrbahn gesperrt, auf Gehweg ausweichen	q3:inwork 15337,11639 15328,11636 15300,11584
-# 
 # REMOVED --- #: next_check_id: ABBA-2018 --- #: osm_watch: way id="497699542" version="7" --- #: XXX außerdem: wird es einen Sackgassenabschnitt geben? Hier oder am Björnweg? --- #: last_checked: 2018-03-18 --- #: check_frequency: 45d --- #: priority: #C --- Anni-Frid-Weg: Baustelle, gesperrt	2::inwork 17227,15054 17262,15056 17317,15059 17345,15061
 # 
 #: by: osm
 #: by: https://www.potsdam.de/sites/default/files/documents/17554_amtsblatt_de2017_nr13_dsjs_korr2.pdf (Einziehung von Straßenland)
 #: by: https://www.potsdam.de/sites/default/files/documents/18016_amtsblatt1_jan2018_dsjs_final_0.pdf
-#: osm_watch: way id="534669300" version="1" brb
+#: osm_watch: way id="534669300" version="4" brb
 #: next_check: 2018-06-01
 Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12677,-1536 -12685,-1449
 # 
@@ -3186,7 +3178,7 @@ An den Parkbäumen: Bauarbeiten, Fahrbahn gesperrt	2::inwork -6530,6699 -6556,666
 #: by: http://www.dafmap.de/d/berlin.html?id=5241&mt=0&zoom=17 vvv
 #: XXX (Geplanter) Projektabschluss laut dafmap: 2019-06-01
 #: osm_watch: way id="392904879" version="2" vvv
-#: osm_watch: way id="392904880" version="6" vvv
+#: osm_watch: way id="392904880" version="7" vvv
 #: next_check: 2018-12-31 vvv
 #: last_checked: 2018-08-21 vvv
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5579,12231 5535,12206 5518,12159
