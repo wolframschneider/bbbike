@@ -3272,7 +3272,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: priority: #A
-#: last_checked: 2018-09-22
+#: last_checked: 2018-09-30
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -3755,7 +3755,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-09-06 vvv
+#: last_checked: 2018-09-30 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -3853,7 +3853,22 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1551459600
        },
-       undef,
+       {
+         'data' => '#: source_id: 2147342390
+#: source_id: 2147342751
+#: source_id: 2147343056
+# REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
+#: last_checked: 2018-09-30
+# REMOVED --- #: next_check: 2018-09-30
+#: check_frequency: 7d
+	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
+',
+         'from' => 1534878268,
+         'id' => 2947,
+         'text' => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Glinkastr., Ende unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        undef,
        {
@@ -3956,22 +3971,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1546297200
        },
        undef,
-       {
-         'data' => '#: XXX Sanierung des Kleinsteinpflasters ab 2018-05-28 bis voraussichtlich Herbst 2018 -> ändert sich an der Qualität etwas?
-#: by: https://www.berliner-woche.de/wilmersdorf/c-verkehr/pflasterarbeiten-am-fasanenplatz_a165320
-#: last_checked: 2018-09-17
-#: check_frequency: 14d
-	q2::inwork 5191,10190 5194,9985
-# REMOVED (hier nicht mehr) ---	q4::inwork 5192,10241 5191,10190
-# REMOVED (hier nicht mehr) ---	q2::inwork 5017,10150 5191,10190
-',
-         'from' => undef,
-         'id' => 2965,
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.703939.php',
-         'text' => 'Fasanenplatz: Bauarbeiten, Sperrung der Fahrbahn',
-         'type' => 'handicap',
-         'until' => 1538258400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4348,90 +4348,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1538431199
        },
-       {
-         'data' => 'Reichstagufer	2::temp 8667,12555 8596,12576 8554,12593
-(Ludwig-Erhard-Ufer)	2::temp 7670,12576 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871
-(südliches Spreeufer)	2::temp 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576
-(Panoramaweg Spreebogenpark)	2::temp 8021,12832 8036,12855 8046,12870 8072,12902 8116,12938 8168,12945 8235,12945 8304,12938 8370,12902 8424,12853
-(Moltkebrücke - südliches Spreeufer)	2::temp 8036,12855 8025,12859 8006,12853
-(Kronprinzenbrücke - südliches Spreeufer)	2::temp 8427,12871 8428,12859 8424,12853
-(Spreeufer - Otto-von-Bismarck-Allee)	2::temp 8473,12753 8445,12755 8415,12749
-Schiffbauerdamm	2::temp 8514,12877 8503,12895
-Unterbaumstr.	2::temp 8488,12920 8502,12935
-Wilhelmstr. (Mitte, Kreuzberg)	2::temp 8861,12125 8804,12280
-Wilhelmstr. (Mitte, Kreuzberg)	2::temp 8804,12280 8775,12457
-Cora-Berliner-Str.	2::temp 8783,11959 8737,12098
-Straße des 17. Juni	2::temp 8214,12205 8303,12216 8344,12221 8538,12245
-Unter den Linden	2::temp 9141,12320 9028,12307 8804,12280
-Ebertstr.	2::temp 8577,11896 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
-Pariser Platz	2::temp 8804,12280 8722,12268
-Pariser Platz	2::temp 8722,12268 8637,12258 8592,12252
-Pariser Platz	2::temp 8637,12258 8643,12208 8728,12220 8722,12268 8714,12319 8630,12307 8637,12258
-Platz des 18. März	2::temp 8592,12252 8538,12245
-Simsonweg	2::temp 8354,12416 8391,12389 8546,12279
-Dorotheenstr. (Mitte)	2::temp 8540,12420 8775,12457
-Behrenstr.	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
-Kleine Querallee	2::temp 8344,12221 8391,12389 8400,12417
-Ahornsteig	2::temp 8522,12187 8538,12245
-(Bremer Weg)	2::temp 8522,12239 8538,12245
-Scheidemannstr.	2::temp 8119,12414 8354,12416 8400,12417 8540,12420
-(Vorfahrt Reichstagsgebäude)	2::temp 8400,12417 8399,12610
-(Wiese vor dem Reichstag)	2::temp 8354,12416 8348,12609
-Moltkebrücke	2::temp 7930,12912 8021,12832
-Willy-Brandt-Str.	2::temp 8021,12832 8030,12824
-Willy-Brandt-Str.	2::temp 8030,12824 8120,12756
-(am Bundeskanzleramt)	2::temp 8120,12756 8122,12603
-Heinrich-von-Gagern-Str.	2::temp 8122,12603 8119,12414
-Friedrich-Ebert-Platz	2::temp 8540,12420 8554,12593 8485,12612
-Paul-Löbe-Allee	2::temp 8485,12612 8399,12610 8348,12609 8306,12609 8207,12606
-Paul-Löbe-Allee	2::temp 8207,12606 8122,12603
-Paul-Löbe-Allee	2::temp 8122,12603 7945,12592 7851,12590
-(Paul-Löbe-Allee - südliches Spreeufer)	2::temp 7851,12590 7741,12586 7710,12585
-Kronprinzenbrücke	2::temp 8503,12895 8424,12853
-Konrad-Adenauer-Str.	2::temp 8424,12853 8309,12758 8306,12609
-Otto-von-Bismarck-Allee	2::temp 8415,12749 8309,12758 8206,12757 8120,12756
-(Umfahrung Kanzleramt)	2::temp 8207,12606 8206,12757
-(Umfahrung an der Schweizer Botschaft)	2::temp 8206,12757 8204,12816 8168,12848 8124,12840 8030,12824
-Rahel-Hirsch-Str.	2::temp 7930,12912 7946,12932
-Kapelle-Ufer	2::temp 8488,12920 8503,12895
-Hannah-Arendt-Str.	2::temp 8577,11896 8783,11959
-(Willy-Brandt-Str. - Rahel-Hirsch-Str.)	2::temp 8120,12756 8124,12840 8116,12938
-(Parkweg Spreebogenpark)	2::temp 8309,12758 8304,12938
-(südliches Spreeufer - Gustav-Heinemann-Brücke)	2::temp 8032,12889 8053,12871 8116,12938
-(südliches Spreeufer - Panoramaweg)	2::temp 8427,12871 8385,12881 8304,12938
-(Uferpromenade am Kapelle-Ufer)	2::temp 8257,13037 8277,13032 8317,13015 8408,12968 8464,12919 8498,12870
-Promenade Schiffbauerdamm	2::temp 8498,12870 8529,12757
-(Uferpromenade - Schiffbauerdamm)	2::temp 8529,12757 8536,12758
-(Uferpromenade - Schiffbauerdamm)	2::temp 8498,12870 8507,12873 8514,12877
-(Uferpromenade - Schiffbauerdamm)	2::temp 8464,12919 8480,12909 8503,12895
-(Kapelle-Ufer - Uferpromenade)	2::temp 8399,12983 8408,12968
-(Treppe zum Spreeuferweg)	2::temp 8159,13042 8159,13032
-(Spreeuferweg)	2::temp 7945,12878 7966,12913 8044,12989 8159,13032
-',
-         'from' => 1537934400,
-         'id' => 3022,
-         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_38_5203_5322_online.pdf',
-         'text' => 'Straßen rund um Reichstag, Brandenburger Tor und Bundeskanzleramt: wegen eines Staatsbesuchs Sperrungen möglich, vom 27. September 2018 6.00 Uhr bis 29. September 2018 15.00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1538226000
-       },
-       {
-         'data' => '	2::temp 6787,12099 6828,12031 6809,11979 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6831,12150 7001,12274 7031,12320 6694,12627
-	2::temp 7215,12295 7031,12320 7051,12426 7077,12575
-	3 5900,11913 6642,12010 6550,11954
-	3 7122,12384 7051,12426 6859,12567
-	3 6884,12006 6828,12031 7026,12054
-	3 6859,12567 7051,12426 7122,12384
-	3 7026,12054 6828,12031 6884,12006
-	3 6550,11954 6642,12010 5900,11913
-',
-         'from' => 1538024400,
-         'id' => 3023,
-         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_38_5203_5322_online.pdf',
-         'text' => 'Großer Stern und Bellevue: wegen eines Staatsbesuchs Sperrungen möglich, am 28. September 2018 von 7.00 Uhr bis 24.00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1538171999
-       },
+       undef,
+       undef,
        undef,
        {
          'data' => '#: source_id: 2147343251
@@ -4465,6 +4383,25 @@ Promenade Schiffbauerdamm	2::temp 8498,12870 8529,12757
          'text' => 'Treptower Park, Weg zum/vom Karpfenteich: Bauarbeiten, Weg kann gesperrt sein',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '	2::temp 8122,12603 8207,12606 8206,12757
+	2::temp 8775,12457 8540,12420 8400,12417 8354,12416 8119,12414 8122,12603 8120,12756
+	2::temp 8306,12609 8207,12606
+	2::temp 8354,12416 8348,12609
+	2::temp 8055,12186 8119,12414
+	2::temp 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
+	3 8573,12325 8540,12420 8554,12593
+	3 8554,12593 8540,12420 8573,12325
+	3 8391,12389 8400,12417 8399,12610
+	3 8399,12610 8400,12417 8391,12389
+	q4::temp 8595,12066 8737,12098
+',
+         'from' => 1538258400,
+         'id' => 3028,
+         'text' => 'Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen im Regierungsviertel gesperrt (bis zum Morgen des 05.10.2018)',
+         'type' => 'gesperrt',
+         'until' => 1538719200
        }
      
 );
