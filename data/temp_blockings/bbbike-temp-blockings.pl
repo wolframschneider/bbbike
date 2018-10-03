@@ -1042,6 +1042,7 @@ EOF
        text  => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt (22.09.2018 bis 08.10.2018)',
        type  => 'gesperrt',
        data  => <<EOF,
+#: source_id: LMS-BR_r_LMS-BR_147349_LMS-BR_72
 	2 8055,12186 8089,12190 8214,12205
 	2 8214,12205 8303,12216 8344,12221 8538,12245
 	2 8546,12279 8538,12245
@@ -16451,7 +16452,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_014250',
        data  => <<EOF,
-	2::temp 9388,10393 9353,10421 9249,10562
+	2::temp 9388,10393 9353,10421 9245,10565
 EOF
      },
      { from  => 1253965870, # 2009-09-26 13:51
@@ -27801,17 +27802,19 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2018-09-30 18:00:00"), # undef, # XXX
-       text  => 'Bahnbrücke Templiner See: gesperrt, vermutliche Öffnung im September 2018',
+       until => undef, # $isodate2epoch->("2018-09-30 18:00:00"), # undef, # XXX
+       text  => 'Bahnbrücke Templiner See: gesperrt, derzeit kein Eröffnungsdatum für den Steg',
        type  => 'gesperrt',
        source_id => 'https://www.pnn.de/potsdam-mittelmark/schwielowsee-templiner-bruecke-bleibt-laenger-gesperrt/21317518.html',
        data  => <<EOF,
 #: by: http://www.maz-online.de/Lokales/Potsdam/Potsdam-am-Montag-Das-ist-heute-wichtig113
 #: by: http://www.maz-online.de/Lokales/Potsdam/Bruecke-am-Templiner-See-oeffnet-im-September
+#: by: https://www.pnn.de/potsdam-mittelmark/schwielowsee-templiner-bruecke-bleibt-laenger-gesperrt/21317518.html (kein Eröffnungsdatum für den Steg)
 #: osm_watch: way id="43483713" version="10" brb
+#: osm_watch: way id="611197607" version="1" brb
 #: XXX wann wird die Brücke wieder eröffnet?
 #: last_checked: 2018-09-01
-#: next_check: 2018-09-30
+#: next_check: 2018-11-19
 	2::inwork -15853,-4327 -15664,-4450 -15652,-4441 -15537,-4535 -15540,-4550 -14801,-5162
 EOF
      },
@@ -27871,7 +27874,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2018-09-12 vvv
-#: next_check: 2018-10-01 vvv
+#: next_check: 2018-10-08 vvv
 	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2429,4385
 #: next_check ^^^
@@ -27912,13 +27915,13 @@ EOF
        text  => 'Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2018-09-24
+#: last_checked: 2018-10-01
 #: check_frequency: 7d
 	2::inwork 11021,11287 11000,11327
 EOF
      },
      { from  => 1537653600, # 2018-09-23 00:00
-       until => 1538431199, # 2018-10-01 23:59
+       until => 1538418327, # 1538431199, # 2018-10-01 23:59
        text  => 'Hobrechtsfelder Chaussee: Bauarbeiten, Fahrbahn gesperrt, von Montag, den 24.09.2018 bis Montag, den 01.10.2018',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.742008.php',
@@ -28092,6 +28095,9 @@ EOF
        text  => 'Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen im Regierungsviertel gesperrt (bis zum Morgen des 05.10.2018)',
        type  => 'gesperrt',
        data  => <<EOF,
+#: source_id: LMS-BR_r_LMS-BR_147350_LMS-BR_72
+#: source_id: LMS-BR_r_LMS-BR_147351_LMS-BR_72
+#: source_id: LMS-BR_r_LMS-BR_147348_LMS-BR_72
 	2::temp 8122,12603 8207,12606 8206,12757
 	2::temp 8775,12457 8540,12420 8400,12417 8354,12416 8119,12414 8122,12603 8120,12756
 	2::temp 8306,12609 8207,12606
@@ -28103,6 +28109,33 @@ EOF
 	3 8391,12389 8400,12417 8399,12610
 	3 8399,12610 8400,12417 8391,12389
 	q4::temp 8595,12066 8737,12098
+EOF
+     },
+     { from  => 1538510400, # 2018-10-02 22:00
+       until => 1538557981,
+       text  => 'Karl-Liebknechtstr. und Spandauer Str.: Straßensperrungen zum Tag der Deutschen Einheit, evtl. sind auch Radfahrer betroffen, 2. Oktober 2018 22 Uhr bis 3. Oktober 2018 11 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/tag-der-deutschen-einheit-viele-sperrungen-in-mitte-und-tiergarten?redirect=https%3A%2F%2Fviz.berlin.de%2Fhome%3Fp_p_id%3D101_INSTANCE_ZQE04eyJSiIC%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-1%26p_p_col_count%3D2',
+       data  => <<EOF,
+	2::temp 10243,12546 10300,12587 10352,12627 10431,12709 10601,12521 10644,12469 10673,12434 10738,12364
+	2::temp 10308,12859 10360,12793 10387,12760 10431,12709 10515,12780 10525,12789 10695,12933
+	2::temp 10176,12506 10243,12546
+	2::temp 10094,12635 10176,12506
+	3 10355,12551 10300,12587 10291,12600
+	3 10584,12507 10601,12521 10704,12595
+	3 10291,12600 10300,12587 10355,12551
+	3 10704,12595 10601,12521 10584,12507
+EOF
+     },
+     { from  => 1538431200, # 2018-10-02 00:00
+       until => 1538603999, # 2018-10-03 23:59
+       text  => 'Bebelplatz: zum Tag der Deutschen Einheit möglicherweise gesperrt, 3. Oktober 2018',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::temp 9680,12232 9664,12387
+	2::temp 9730,12238 9713,12392
+	2::temp 9631,12227 9680,12232 9730,12238 9737,12238 9798,12267
+	2::temp 9747,12205 9737,12238
 EOF
      },
     );
