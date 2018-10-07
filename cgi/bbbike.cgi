@@ -1092,7 +1092,7 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = '11.006';
+$VERSION = '11.007';
 
 use vars qw($delim $font);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
@@ -10060,11 +10060,13 @@ BBBike-Routen auf einer <a href="$href">Leaflet-Karte</a> suchen.<br/>
 Um Start- und Zielpunkt zu setzen, einfach Doppel-Klicks oder -Taps machen.
 EOF
     }
-    print <<EOF;
+    if ($can_google_maps) {
+	print <<EOF;
 <h4 id="googlemaps">BBBike auf Google Maps</h4>
 Noch in Entwicklung: 
 BBBike-Routen auf <a href="@{[ _bbbikegooglemap_url() ]}?mapmode=search;maptype=hybrid">Google Maps</a> suchen
 EOF
+    }
     if ($can_palmdoc) {
 	print <<EOF;
 <h4 id="palmexport">Palm-Export</h4>

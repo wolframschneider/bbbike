@@ -633,7 +633,7 @@ push @temp_blocking,
        undef,
        {
          'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20170325
-	2::temp 7001,9291 7012,9222 7035,9161 7101,9027
+	2::temp 7001,9291 7012,9222 7035,9161 7101,9027 7201,8870
 	2::temp 6945,9142 7035,9161
 	2::temp 6975,8944 7101,9027 7308,9163
 ',
@@ -2695,30 +2695,30 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        {
-         'data' => '#: note: geprüft am Fr, den 2012-11-02, gegen 22:30: geschlossen
-#: note: geprüft am Do, den 2012-11-15, gegen 21:00: offen
-#: note: geprüft am So, den 2012-06-02, vormittags: geschlossen
-#: note: geprüft am So, den 2015-03-08, vormittags: offen
-#: note: geprüft am So, den 2015-05-10, nachmittags: offen
-#: note: geprüft am So, den 2015-06-21, vormittags: offen
-#: note: geprüft am So, den 2015-07-19, nachmittags: offen
-#: note: geprüft am So, den 2015-08-09, nachmittags: offen
-#: note: geprüft am So, den 2015-08-30, vormittags: offen
-#: note: geprüft am So, den 2016-05-15, vormittags: offen
-#: note: geprüft am So, den 2016-07-17, vormittags und mittags: offen
-#: note: geprüft am So, den 2016-07-23, mittags: offen
-#: note: geprüft am Sa, den 2016-09-20, vormittags: offen
-#: tempex: volatile
-	2::night 14838,11410 14792,11391
+         'data' => '# REMOVED --- #: note: geprüft am Fr, den 2012-11-02, gegen 22:30: geschlossen
+# REMOVED --- #: note: geprüft am Do, den 2012-11-15, gegen 21:00: offen
+# REMOVED --- #: note: geprüft am So, den 2012-06-02, vormittags: geschlossen
+# REMOVED --- #: note: geprüft am So, den 2015-03-08, vormittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-05-10, nachmittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-06-21, vormittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-07-19, nachmittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-08-09, nachmittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-08-30, vormittags: offen
+# REMOVED --- #: note: geprüft am So, den 2016-05-15, vormittags: offen
+# REMOVED --- #: note: geprüft am So, den 2016-07-17, vormittags und mittags: offen
+# REMOVED --- #: note: geprüft am So, den 2016-07-23, mittags: offen
+# REMOVED --- #: note: geprüft am Sa, den 2016-09-20, vormittags: offen
+# REMOVED --- #: tempex: volatile
+# REMOVED --- 2::night 14838,11410 14792,11391
 #: XXX wird hier dauerhaft gesperrt sein? (zurzeit kann man sich noch an den Bauzäunen vorbei mogeln)
-#: last_checked: 2018-09-24
+#: last_checked: 2018-10-03
 #: check_frequency: 7d
 	2::inwork 14838,11410 14949,11474
 ',
          'from' => undef,
          'id' => 2372,
          'recurring' => 1,
-         'text' => 'Weserstr. - Boxhagener Str.: Tor in einer Hausdurchfahrt, nachts und selten auch sonntags gesperrt; außerdem kann der Durchgang wegen Bauarbeiten gesperrt sein',
+         'text' => 'Weserstr. - Boxhagener Str.: Schreibenfeder-Passage kann wegen Bauarbeiten gesperrt sein',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3218,36 +3218,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: am Di, den 2015-11-17 gegen 18:30: geschlossen
-#: note: am Mi, den 2016-02-03 gegen 19:30: geschlossen
-#: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
-#: note: am Mo, den 2016-04-11 gegen 18:20: geschlossen
-#: note: am So, den 2016-06-12 gegen 12:30: offen
-#: note: am Mo, den 2016-10-10 gegen 17:50: offen
-#: note: am Sa, den 2016-12-10 gegen 13:00: geschlossen
-#: note: am Fr, den 2017-02-10 gegen 18:30: offen
-#: note: am Fr, den 2017-04-07 gegen 09:30: offen
-#: note: am Mo, den 2017-07-31 gegen 09:00: offen
-#: note: am Fr, den 2017-09-22 gegen 18:20: offen
-#: note: am Mo, den 2017-12-04 gegen 18:45: geschlossen
-#: note: am Mi, den 2018-01-24 gegen 18:45: offen
-#: note: am Mo, den 2018-02-26 gegen 18:50: offen
-#: note: am Fr, den 2018-04-04 gegen 18:40: offen
-#: note: am Mo, den 2018-05-28 gegen 18:40: offen
-#: note: am So, den 2018-07-01 gegen 12:30: offen
-#: note: am Mo, den 2018-09-03 gegen 18:30: offen
-#: tempex: volatile vvv
-	3::night 14563,8243 14425,8116 14419,8112
-	3::night 14419,8112 14425,8116 14563,8243
-#: tempex ^^^
-',
-         'from' => undef,
-         'id' => 2643,
-         'recurring' => 1,
-         'text' => 'Mergenthalerring/Dieselstr.: Tor kann versperrt sein',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3737,20 +3708,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: XXX bis wann ist die Durchfahrt gesperrt? (laut googlemaps bis Ende November 2018)
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00, 2018-09-17 gegen 18:45
+         'data' => '#: next_check_id: WIESENWEG-2018
+#: XXX bis wann ist die Durchfahrt gesperrt? (laut googlemaps bis Ende November 2018, laut Bauschild Bauarbeiten bis Ende 2019)
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00, 2018-09-17 gegen 18:45, 2018-10-03 gegen 17:45
 #: note: unklar, ob man durchgekommen wäre: 2018-09-07 gegen 08:30
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="6"
-#: last_checked: 2018-09-24
-#: check_frequency: 14d
-	2::inwork 15162,11458 15055,11505
+#: last_checked: 2018-10-03
+#: check_frequency: 30d
+	2::inwork 15162,11458 15126,11474 15055,11505
 ',
          'from' => 1523311200,
          'id' => 2919,
-         'text' => 'Wiesenweg: kann während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
+         'text' => 'Wiesenweg: kann während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018 bis Ende Dezember 2019',
          'type' => 'gesperrt',
-         'until' => undef
+         'until' => 1577811600
        },
        undef,
        undef,
@@ -4031,6 +4003,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/finckensteinallee-gesperrt_a171782
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729460.php
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/an-kreuzung-finckensteinalleecarstennstrasse-wird-bis-ende-november-gebaut_a178961
+#: XXX laut fritz & viz nur bis 2018-10-16
+#: next_check: 2018-10-16
 	q4::inwork 2737,2866 2625,2850
 	q4::inwork 2625,2850 2570,2844
 # REMOVED ---	q4::inwork 2570,2844 2290,2864
@@ -4144,7 +4118,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-09-22
+#: last_checked: 2018-10-04
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -4316,7 +4290,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1543618799
        },
        {
-         'data' => '#: last_checked: 2018-10-01
+         'data' => '#: last_checked: 2018-10-04
 #: check_frequency: 7d
 	2::inwork 11021,11287 11000,11327
 ',
@@ -4342,8 +4316,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1544914799
        },
        {
-         'data' => '#: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-09-28
+         'data' => '#: next_check_id: TREPTOWERPARK-2018
+#: XXX wie wird die Qualität danach aussehen?
+#: last_checked: 2018-10-03
 #: check_frequency: 7d
 	2::inwork 14854,8964 14614,9052
 ',
@@ -4352,41 +4327,6 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Treptower Park, Weg zum/vom Karpfenteich: Bauarbeiten, Weg kann gesperrt sein',
          'type' => 'gesperrt',
          'until' => undef
-       },
-       {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_147350_LMS-BR_72
-#: source_id: LMS-BR_r_LMS-BR_147351_LMS-BR_72
-#: source_id: LMS-BR_r_LMS-BR_147348_LMS-BR_72
-	2::temp 8122,12603 8207,12606 8206,12757
-	2::temp 8775,12457 8540,12420 8400,12417 8354,12416 8119,12414 8122,12603 8120,12756
-	2::temp 8306,12609 8207,12606
-	2::temp 8354,12416 8348,12609
-	2::temp 8055,12186 8119,12414
-	2::temp 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
-	3 8573,12325 8540,12420 8554,12593
-	3 8554,12593 8540,12420 8573,12325
-	3 8391,12389 8400,12417 8399,12610
-	3 8399,12610 8400,12417 8391,12389
-	q4::temp 8595,12066 8737,12098
-',
-         'from' => 1538258400,
-         'id' => 3028,
-         'text' => 'Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen im Regierungsviertel gesperrt (bis zum Morgen des 05.10.2018)',
-         'type' => 'gesperrt',
-         'until' => 1538719200
-       },
-       undef,
-       {
-         'data' => '	2::temp 9680,12232 9664,12387
-	2::temp 9730,12238 9713,12392
-	2::temp 9631,12227 9680,12232 9730,12238 9737,12238 9798,12267
-	2::temp 9747,12205 9737,12238
-',
-         'from' => 1538431200,
-         'id' => 3030,
-         'text' => 'Bebelplatz: zum Tag der Deutschen Einheit möglicherweise gesperrt, 3. Oktober 2018',
-         'type' => 'gesperrt',
-         'until' => 1538603999
        }
      
 );

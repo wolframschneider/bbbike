@@ -392,7 +392,7 @@ Bus 256, Bus 294	busroute_N 16884,15833 16819,15912
 Bus 294	busroute_N 17940,15771 18173,15778 18576,15788 18623,15587 18422,15583 18177,15579 18173,15778
 Bus 156	busroute_N 15635,16833 15819,16857
 Bus 156	busroute_N 12421,15278 12327,15333 12252,15376 11941,15586
-Bus 250	busroute_N 10908,17142 11116,17140 11262,17139 11362,17139 11458,17138 11541,17153 11522,17248 11508,17315 11482,17459 11457,17585 11442,17664 11412,17823 11390,17962 11272,17930 11195,17911 11113,17895 11047,17883 11023,17878 10944,17863 10918,17892
+Bus 250	busroute_N 10908,17142 11116,17140 11262,17139 11362,17139 11458,17138 11536,17153 11522,17248 11508,17315 11482,17459 11457,17585 11442,17664 11412,17823 11390,17962 11272,17930 11195,17911 11113,17895 11047,17883 11023,17878 10944,17863 10918,17892
 Bus 250	busroute_N 10904,17288 10758,17288 10502,17286 10298,17299 10252,17357 10214,17401 10207,17448 10203,17478 10179,17772
 Bus 250	busroute_N 10377,19565 10457,19670 10527,19867
 Bus 250	busroute_N 10742,19632 10624,19912 10599,19957
@@ -666,7 +666,7 @@ ausgeschildert "zu den Häusern Gubitzstr. 18 - 20a"	CP2; 12463,15774 12642,15668
 ausgeschildert "zu den Häusern Hosemannstr. 50 - 39"	CP2; 12642,15668 12463,15774
 Philosophenweg: Privatstraße	CS 16073,12883 16074,12778
 Innovationspark Köpenick	CS 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
-entlang der Mauritiusschule	CS 15639,11653 15482,11729 15413,11690
+entlang der Mauritiusschule	CS 15639,11653 15489,11735 15413,11690
 Vereinsweg (Charlottenburg): Privatstraße	CS 2828,11731 2855,11752 2907,11755 2934,11747
 Am Lindenplatz: Privatstraße	CS 17839,10883 17856,10961
 (Marthastr. - Dietzgenstr.): durch den Brosepark	CS 10383,19911 10167,19797
@@ -1038,7 +1038,7 @@ Am Rosengarten: nicht ausgeschildert	CP2; 18654,12255 18707,12225
 Weg ist schwierig zu erkennen	CP2; 18445,9887 18436,9842
 #: url: http://www.wuhlheide.de/de/programm/
 #: note: Zeitverlust ca. 2 Minuten
-An einigen Tagen im Sommer ist das Eichgestell vor der Freilichtbühne wegen Veranstaltungen gesperrt, in diesem Fall die Freilichtbühne nördlich umfahren	CS 19995,6406 20106,6357 20200,6321
+An einigen Tagen im Sommer ist das Eichgestell vor der Freilichtbühne wegen Veranstaltungen gesperrt, in diesem Fall die Freilichtbühne nördlich umfahren	CS 19995,6406 20081,6368 20106,6357 20200,6321
 Am Bahnhof Wuhlheide: nicht ausgeschildert	CP2; 20640,7122 20654,7136
 Lindenschwärmerweg: Privatstraße	CS 21308,11075 21294,11097 21187,11132
 Fechinger Weg: Privatstraße	CS 21409,11941 21411,11863 21456,11825
@@ -1132,7 +1132,7 @@ Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3068,21150 3024,21286
 Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 # 
 #: osm_watch: way id="185792044" version="11"
-#: last_checked: 2018-07-31
+#: last_checked: 2018-10-03
 #: check_frequency: 60d
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
@@ -1240,8 +1240,9 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 # 
 #: by: http://www.berliner-zeitung.de/berlin/baumangel-der-boden-hat-nachgegeben,10809148,21701554.html (Fertigestellung Ende 2014)
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2015 (Grundstücksnummerierungen)
-#: XXX ist das tatsächlich die Falkoniergasse?
-#: last_checked: 2018-09-20
+#: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
+#: XXX wird hier noch ausgeschildert?
+#: last_checked: 2018-10-04
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
@@ -1249,10 +1250,7 @@ Alter Radelander Weg: nicht ausgeschildert	CP2; 23457,35 24158,-1153
 # 
 Barnimstr.: nicht ausgeschildert	CS 11762,13207 11785,13241
 # 
-#: next_check_id: KARLINEKENWEG-2018
-#: last_checked: 2018-05-27 (osm)
-#: check_frequency: 60d
-Karlinekenweg: noch nicht ausgeschildert	CS 11359,20297 11405,20196 11422,20202 11496,20068 11537,20087
+# REMOVED (mittlerweile gibt's ein provisorisches Schild, reicht) --- #: next_check_id: KARLINEKENWEG-2018 --- #: last_checked: 2018-05-27 (osm) --- #: check_frequency: 60d --- Karlinekenweg: noch nicht ausgeschildert	CS 11359,20297 11405,20196 11422,20202 11476,20058 11496,20068 11537,20087
 # 
 ausgeschildert als Heimkehlenstr. und Sonneberger Weg	CP2; 5570,1712 5592,1720
 ausgeschildert als Heimkehlenstr. und Sonneberger Weg	CP2; 5570,1712 5543,1706

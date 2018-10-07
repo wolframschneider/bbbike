@@ -23,7 +23,7 @@
 # REMOVED --- #: last_checked: 2018-01-31 --- Revaler Str.: Bauarbeiten, unter Umständen Ausweichen auf Gehweg notwendig	q3::inwork 14211,11229 14286,11186
 # REMOVED --- #: last_checked: 2017-12-09 --- #: check_frequency: 14d --- Haasestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 14328,11320 14286,11186
 # 
-#: last_checked: 2018-09-23
+#: last_checked: 2018-10-06
 #: check_frequency: 90d
 Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261 14357,11148
 # 
@@ -53,8 +53,8 @@ Rigaer Str.: Baustelle, Fußgänger	q3::inwork 14538,12371 14748,12314
 #: XXX laut fritz bis 2018-08-30 (ist aber immer noch aktiv!)
 #: source_id: LMS-BR_r_LMS-BR_125325_LMS-BR_72
 #: priority: #B
-#: last_checked: 2018-09-17
-#: check_frequency: 14d
+#: last_checked: 2018-10-05
+#: check_frequency: 21d
 Auerstr.: zwischen Richard-Sorge-Str. und Löwestr. Baustelle, Einbahnstraßenregelung	q2::inwork; 13273,12902 13202,12790
 # 
 # REMOVED (nicht mehr) --- #: last_checked: 2018-07-03 --- Auerstr.: zwischen Zebrastreifen und Weideweg Baustelle, Einbahnstraßenregelung	q2::inwork; 13202,12790 13067,12583 13025,12523
@@ -180,7 +180,7 @@ Littenstr.: Fahrbahn an der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q
 #: by: http://www.dafmap.de/d/berlin.html?id=3731&mt=0&zoom=18
 #: XXX man kann auf dem südlichen Gehweg (relativ breit, wenig Menschen) ausweichen
 # REMOVED (gibt's nicht mehr) --- : XXX mittlerweile gibt's auch auf dem Gehweg Bauarbeiten, so dass er enger geworden ist: q2- -> q3
-#: last_checked: 2018-10-01
+#: last_checked: 2018-10-04
 Voltairestr.: Fahrbahn unter Umständen wegen Baustelle gesperrt, Ausweichen auf Gehweg	q2- 11329,12497 11209,12430
 # 
 #: next_check_id: ZIEGELSTR-2016
@@ -188,7 +188,7 @@ Voltairestr.: Fahrbahn unter Umständen wegen Baustelle gesperrt, Ausweichen auf 
 #: way id="507023458" version="1"
 #: by: http://www.dafmap.de/d/berlin.html?id=3204&mt=0&zoom=16
 #: osm_watch: way id="507023458" version="3"
-#: last_checked: 2018-08-14
+#: last_checked: 2018-10-04
 #: check_frequency: 45d
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 # 
@@ -214,7 +214,7 @@ Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 # REMOVED --- : osm_watch: note 814191 1
 #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_26_3435_3558_online.pdf (Grundstücksnummerierungen)
 #: XXX evtl. muss man nach Ende der Einschränkungen den comments_misc-orig-Eintrag wieder aktivieren
-#: last_checked: 2018-09-21
+#: last_checked: 2018-10-04
 #: check_frequency: 30d
 Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q3::inwork 10781,11243 10678,11172
 # 
@@ -235,7 +235,7 @@ Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, 
 # REMOVED --- #: XXX Ende der Bauarbeiten? --- #: last_checked: 2014-02-22 --- Planckstr.: Bauarbeiten, auf Gehweg ausweichen	q4::inwork 9405,12794 9383,12915
 # REMOVED --- #: XXX nach den Bauarbeiten wahrscheinlich bessere Fahrbahnqualität -> qualitaet_s-orig-Eintrag revidieren --- #: last_checked: 2013-11-21 --- Zolastr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10898,13632 10872,13570
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2018-09-30 vvv
+#: last_checked: 2018-10-04 vvv
 #: check_frequency: 60d vvv
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9984,12426 9996,12401 10058,12290
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10008,12274 10058,12290
@@ -304,7 +304,7 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 # 
 #: next_check_id: ZEUGHAUS-2014
 #: XXX eigentlich nur UdL, kann aber so nicht dargestellt werden
-#: last_checked: 2018-09-22
+#: last_checked: 2018-10-04
 #: check_frequency: 60d
 Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364 9934,12420
 # 
@@ -354,8 +354,8 @@ Schillingstr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q3::inw
 # 
 #: next_check_id: TRESKOWALLEE-2017 vvv
 #: osm_watch: way id="580512810" version="2"
-#: osm_watch: way id="580508096" version="3"
-#: last_checked: 2018-09-29 vvv
+#: osm_watch: way id="580508096" version="4"
+#: last_checked: 2018-10-03 vvv
 #: check_frequency: 90d vvv
 #: valid: -20201231 vvv
 #: priority: #A vvv
@@ -506,7 +506,7 @@ Weichselstr.: Bauarbeiten zwischen Weichselplatz und Ossastr., Fahrbahn gesperrt
 #: check_frequency: 90d vvv
 #: osm_watch: way id="585753318" version="1"
 Karl-Marx-Str.: Bauarbeiten zwischen Rollbergstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12714,8249 12753,8187 12794,8103
-#: osm_watch: way id="563341822" version="1"
+#: osm_watch: way id="563341822" version="2"
 Rollbergstr.: Einbahnstraßenregelung	q4::inwork; 12528,8205 12714,8249
 #: last_checked ^^^
 #: check_frequency ^^^
@@ -530,7 +530,7 @@ Rollbergstr.: Einbahnstraßenregelung	q4::inwork; 12528,8205 12714,8249
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/express-zum-ber-fledermaeuse-stoppen-bauarbeiten-fuer-ringbahnbruecke-29488832 (Abriss im April 2018)
 #: XXX wird aufgehoben, sobald das einsturzgefährdete Haus abgerissen wird
 #: osm_watch: way id="488814363" version="3"
-#: last_checked: 2018-09-24
+#: last_checked: 2018-10-03
 #: check_frequency: 14d
 #: priority: #C
 # REMOVED Wartenbergstr.	1s:q2:inwork 15423,11667 15337,11639 15328,11636 15300,11584
@@ -596,11 +596,15 @@ Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt
 #: next_check_id: WILTBERGSTR-2017
 #: source_id: 2147339182
 #: source_id: LMS-BR_r_LMS-BR_93376
-#: last_checked: 2018-04-28 vvv
+#: source_id: 2147343252
+#: last_checked: 2018-10-05 vvv
 #: next_check: 2018-12-31 vvv
 #: valid: -20181231 vvv
-Wiltbergstr.: Bauarbeiten, Einbahnstraßenregelung, auf Gehweg ausweichen	q3-::inwork; 16669,25373 16583,25440 16475,25526 16414,25575 16294,25683 16220,25716
+Wiltbergstr.: Bauarbeiten, Einbahnstraßenregelung, auf Gehweg ausweichen	q3-::inwork; 16669,25373 16583,25440 16475,25526 16414,25575
+# REMOVED (beendet) --- Wiltbergstr.: Bauarbeiten, Einbahnstraßenregelung, auf Gehweg ausweichen	q3-::inwork; 16414,25575 16294,25683 16220,25716
 Alt-Buch: Bauarbeiten, Einbahnstraßenregelung, auf Gehweg ausweichen	q3-::inwork; 16414,25575 16593,25640
+#: XXX bleibt das so? falls nicht, muss der alte Eintrag (siehe unten) wieder aktiviert werden
+(Weg im Schloßpark Buch): für Radfahrer verboten	q4 16593,25640 16583,25667 16558,25688 16481,25671 16441,25664 16384,25692 16339,25690 16265,25718 16251,25733
 #: valid: ^^^
 #: next_check ^^^
 #: last_checked ^^^
@@ -869,7 +873,7 @@ Mauerstr. (Spandau): Fußgängerzone	q4 -3316,14169 -3409,14241
 #: by: Kleinke (honda):
 Havelstr.: Fußgängerzone	q4 -3150,14631 -3122,14557 -3107,14535 -3054,14498
 #: note: ^^^
-Eichgestell: bei schönem Wetter viele Fußgänger	q1 19052,6823 19407,6660 19590,6590 19751,6514 19988,6409 19995,6406 20106,6357 20200,6321 20293,6278
+Eichgestell: bei schönem Wetter viele Fußgänger	q1 19052,6823 19407,6660 19590,6590 19751,6514 19988,6409 19995,6406 20081,6368 20106,6357 20200,6321 20293,6278
 Wuhlheide: bei schönem Wetter viele Fußgänger und Kinder	q2 20200,6321 20262,6493 20225,6631 20313,6841
 Wuhlheide/R1: Fußgänger	q1 20453,6211 20293,6278
 Wuhlheide/FEZ: einige Fußgänger	q1 20225,6631 20169,6636 20118,6617 20060,6575 19995,6406
@@ -1143,7 +1147,7 @@ Langhoffstr.: enge Straße, Gegenverkehr	q1 19817,14371 19818,14064
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5651&date=20140610 (Umgestaltung der Alten Frankfurter Allee)
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6543
 #: osm_watch: way id="223184082" version="2"
-#: last_checked: 2018-06-29
+#: last_checked: 2018-10-03
 #: check_frequency: 90d
 (Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16535,11920 16512,11894
 Zum Schlachtensee: wegen der großen Steigung/Gefälles nur Schrittgeschwindigkeit möglich	q4 -1663,4218 -1592,4268
@@ -1498,7 +1502,7 @@ Cheruskerpark: Fußgänger	q1 7439,8716 7405,8698 7382,8658 7368,8595 7352,8391 73
 (Rudolfplatz, Park): Fußgänger, Bordsteine, Radfahren verboten, ggfs. schieben	q3 14026,10869 13896,10851
 (Hoeppnerstr. - Hessenring): eng, Fußgänger	q3 8376,7440 8446,7524 8549,7622
 (Kolonie Zähringer Korso): eng	q3 8553,7795 8554,7746 8573,7710 8549,7622
-(Schulze-Boysen-Str. - Wilhelm-Guddorf-Str.): enge Straße	q1 15639,11653 15482,11729 15413,11690
+(Schulze-Boysen-Str. - Wilhelm-Guddorf-Str.): enge Straße	q1 15639,11653 15489,11735 15413,11690
 (Unterführung S-Bhf. Rummelsburg): Fußgänger	q4 15372,10655 15409,10709 15433,10765
 (Unterführung Bhf. Karlshorst): Fußgänger	q3 18875,8365 18906,8394 18949,8437
 Vereinsweg (Charlottenburg): Radfahren verboten	q4 2828,11731 2855,11752 2907,11755 2934,11747
@@ -2467,7 +2471,7 @@ Engelwurzweg: eng	q2 24275,6156 24306,6210 24368,6268 24424,6296 24473,6304
 #: XXX wird das Radfahren hier erlaubt werden?
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5388
 #: osm_watch: way id="26995453" version="5"
-#: last_checked: 2018-05-20
+#: last_checked: 2018-10-03
 #: check_frequency: 120d
 (Uferweg an der Spree): Radfahren verboten	q4 18695,5453 18608,5501 18560,5539 18506,5596 18430,5719 18413,5799 18400,5841 18334,5900 18199,5935
 (Uferweg an der Spree - Kaisersteg): Radfahren verboten	q4 18413,5799 18339,5853 18326,5850
@@ -2720,7 +2724,7 @@ Schulstr. (Lankwitz): Fußgänger	q3 6692,3334 6653,3297 6647,3292
 (Biesheimring - Lutterbacher Str.): einige Fußgänger	q1 1987,3166 1999,3177
 ##: note: relativ kurz, deshalb q2
 #Prinzengasse: einige Fußgänger	q2 9955,12300 10002,12305
-(Weg im Schloßpark Buch): Fußgänger	q1 16593,25640 16583,25667 16558,25688 16481,25671 16441,25664 16384,25692 16339,25690 16265,25718 16251,25733
+# zurzeit für Radfahrer verboten: (Weg im Schloßpark Buch): Fußgänger	q1 16593,25640 16583,25667 16558,25688 16481,25671 16441,25664 16384,25692 16339,25690 16265,25718 16251,25733
 (Uferpromenade am Humboldthafen): einige Fußgänger	q1 8257,13037 8242,13067 8242,13183 8315,13181
 #: XXX_prog BS an der Hauptstr., ansonsten entfernen
 (Hauptstr. - Rummelsburger Ufer): flacher Bordstein	q2 15334,10528 15322,10513
@@ -2874,6 +2878,7 @@ Waldpromenade: schmaler Weg	q2 23473,8114 23376,8186 23261,8274 23149,8364 23047
 (Uhlandstr. - Waldpromenade): enger Pfad	q3 23293,8292 23261,8274
 (Lessingstr. - Waldpromenade): schmaler Weg	q2 23180,8379 23149,8364
 (Klopstockstr. - Waldpromenade): enger Pfad	q3 23086,8449 23047,8439
+(Frankfurter Allee - Albert-Hößler-Str./Harnackstr.): einige Fußgänger	q1 16190,11872 16115,11791 16099,11786
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch vvv
@@ -3243,8 +3248,8 @@ Bautzener Platz: Fufgänger, Bordsteine	q3 8102,9262 8183,9260
 (Verlängerte Diesterwegstr.): Fußgänger	q2 12061,15156 12082,15206 12103,15218
 (Anton-Saefkow-Str. - John-Schehr-Str.): Fußgänger, Schranken	q1 13084,14472 13009,14371 12949,14292
 Ernst-Fürstenberg-Str.: Fußgänger	q1 13049,14141 12992,14196
-An der Brauerei: Fußgänger	q1 13288,13300 13284,13311 13381,13354
-An der Brauerei: Fußgänger	q2 13284,13311 13246,13420
+An der Brauerei: Fußgänger	q1 13288,13300 13279,13323 13375,13367
+An der Brauerei: Fußgänger	q2 13279,13323 13246,13420
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12851,12602 13108,12859 13046,12956 12878,13229
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12773,12683 13046,12956
 # REMOVED (bleibt bei q2) --- #: next_check_id: RITTER-2014 --- #: XXX erstmal q2, vielleicht später wieder q1 --- #: last_checked: 2015-06-02 --- #: check_frequency: 14d
@@ -3761,7 +3766,7 @@ Drosselbartweg: enger Weg	q2 13899,18833 13909,18835 13953,18842 13967,18842 139
 (Heidenheimer Str. - Friedrichsthaler Weg): schmaler Radweg	q1 3048,23254 2870,23360
 (Helweg - Mauerweg): etwas schmaler Weg	q1 648,24589 575,24601
 Eigene Scholle: enge Straße	q1 8912,21308 8825,21246
-Wilckeweg: schmaler Fußweg, nur 1m breit	q3 8536,20702 8539,20744 8554,20800
+Wilckeweg: schmaler Fußweg, nur 1m breit	q3 8533,20709 8539,20744 8554,20800
 (Friedrich-Engels-Str. - Wiesenwinkel): enge Straße	q1 8692,20698 8669,20697 8628,20705 8593,20725
 (Nordgraben, südliches Ufer): eng, ggfs. Fußgänger und Autos	q1 8092,20817 8219,20870 8507,21023
 (Nordgraben - Wurstmacherweg): sehr enge Stelle	q3 8311,20840 8327,20836
@@ -4271,7 +4276,7 @@ Lenther Steig: enge Straße	q1 1022,14898 1037,14814 1042,14721 1037,14515
 (Klothildestr - Schloßallee): Fußgänger	q1 11068,19494 11081,19456
 #: by: Alexander Damaschun:
 #: corrected_by: srt/policy (q1 -> q0-)
-Eschenallee (Rosenthal): enge Straße	q0- 9460,20644 9479,20535 9498,20435
+Eschenallee (Rosenthal): enge Straße	q0- 9461,20635 9479,20535 9498,20435
 #: by: Uwe Borgenhagen:
 S-Bahnhofunterführung Friedenau: Radfahren nicht erlaubt, ggfs. schieben	q4 6160,7074 6243,7033
 #: by: Sebastian Bralant:

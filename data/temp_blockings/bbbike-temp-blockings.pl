@@ -916,7 +916,7 @@ EOF
        text  => 'Lückstr. Richtung stadteinwärts zwischen Schlichtallee und Wönnichstr. Baustelle, Straße gesperrt (bis Mitte 10.2004) ',
        type  => 'gesperrt',
        data  => <<EOF,
-	1 16699,10611 16647,10632 16601,10650 16597,10651 16497,10685 16468,10695 16313,10747 16300,10753 16153,10818 16085,10844 16049,10844
+	1 16699,10611 16647,10632 16601,10650 16597,10651 16576,10658 16497,10685 16468,10695 16313,10747 16300,10753 16153,10818 16085,10844 16049,10844
 EOF
      },
      { from  => 1094627730, # 2004-09-08 09:15
@@ -1255,7 +1255,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4 38265,50028 38185,49714 38022,49097
-	q4 38265,50028 38314,50204 38487,50536 38503,50622 38528,50809 38714,51048 38845,51258
+	q4 38265,50028 38314,50204 38487,50536 38503,50622 38528,50809 38714,51048 38830,51263
 EOF
      },
      undef, # früher:
@@ -1786,7 +1786,7 @@ EOF
        text  => 'L 291; (Oderberger Str.); OD Eberswalde, Einm. Breite Str. Straßenbauarbeiten Vollsperrung 24.03.2005-30.04.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 38022,49097 38018,49083 37914,48720 37906,48495 37898,48413 37900,48350 37909,48248
+	q4 38022,49097 38018,49083 37914,48720 37906,48495 37905,48481 37898,48413 37900,48350 37909,48248
 EOF
      },
      { from  => 1111960800, # 2005-03-28 00:00
@@ -3598,7 +3598,7 @@ EOF
        text  => 'B 167 Eisenbahn- u. Heegermühler Str. OD Eberswalde, Eisenbahnbrücke Ersatzneubau Brücke Vollsperrung; Umleitung 14.12.2005-16.12.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 36937,48074 36750,48064 36581,48125 36406,48181
+	2 36937,48074 36750,48064 36581,48125 36485,48156 36406,48181
 EOF
      },
      { from  => 1136242800, # 2006-01-03 00:00
@@ -5972,7 +5972,7 @@ EOF
        text  => 'B 002 Eberswalde-Angermünde zw. Abzw. Britz und BÜ Chorin Deckenerneuerung Vollsperrung 04.10.2006-08.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 38845,51258 39158,51571 39870,52228 40582,52874 40851,53119 40945,53204 41075,53327 41587,53787 41675,53967 41706,54055 41777,54435 41820,54563 42231,54671 42326,54707 42452,54804 42499,54911 42594,54942 42702,54912 42736,54948 42702,55100 42461,55526 42446,55566 42442,55599 42468,55687 42957,56998 43462,57600 43501,57650 43578,57713 43581,57725
+	2::inwork 38830,51263 39158,51571 39870,52228 40582,52874 40851,53119 40945,53204 41075,53327 41587,53787 41675,53967 41706,54055 41777,54435 41836,54570 42231,54671 42326,54707 42452,54804 42499,54911 42594,54942 42702,54912 42736,54948 42702,55100 42461,55526 42446,55566 42442,55599 42468,55687 42957,56998 43462,57600 43501,57650 43578,57713 43581,57725
 EOF
      },
      { from  => 1136674800, # 2006-01-08 00:00
@@ -6293,7 +6293,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.ms-event-agentur.com/seite22.html?date=20170325
-	2::temp 7001,9291 7012,9222 7035,9161 7101,9027
+	2::temp 7001,9291 7012,9222 7035,9161 7101,9027 7201,8870
 	2::temp 6945,9142 7035,9161
 	2::temp 6975,8944 7101,9027 7308,9163
 EOF
@@ -7274,7 +7274,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004803',
        data  => <<EOF,
-	1::inwork 8900,20601 9025,20611 9161,20622 9174,20623 9295,20632 9460,20644 9551,20662 9622,20677 9676,20700 9740,20719 9839,20749
+	1::inwork 8904,20596 9027,20603 9162,20613 9175,20613 9296,20622 9461,20635 9551,20662 9622,20677 9676,20700 9740,20719 9839,20749
 EOF
      },
      { from  => 1172642400, # 2007-02-28 07:00
@@ -8809,7 +8809,7 @@ EOF
        text  => 'L 023 B 2 - Britz Brücke über das kalte Wasser am OE Britz Brückenneubau Vollsperrung 18.06.2007-23.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 38357,51575 38170,51708 38089,51876
+	2::inwork 38357,51575 38170,51708 38123,51774 38095,51839 38081,51902
 EOF
      },
      { from  => 1186170676, # 
@@ -14670,7 +14670,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013223',
        data  => <<EOF,
-	q4::inwork; 7979,20528 8343,20556 8410,20561 8481,20566 8543,20571 8561,20572 8717,20584 8864,20598 8900,20601
+	q4::inwork; 7979,20528 8343,20556 8410,20561 8481,20566 8543,20571 8561,20572 8717,20584 8864,20593 8904,20596
 EOF
      },
      { from  => 1246208018, # 2009-06-28 18:53
@@ -20616,7 +20616,7 @@ EOF
        text  => 'Kastanienallee (Rosenthal): Bauarbeiten, zwischen Friedrich-Engels-Str. und Eschenallee in Richtung Osten gesperrt, bis Mitte Oktober 2012',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 8900,20601 9025,20611 9161,20622 9174,20623 9295,20632 9460,20644
+	q4::inwork; 8904,20596 9027,20603 9162,20613 9175,20613 9296,20622 9461,20635
 EOF
      },
      { from  => 1407706402,
@@ -20896,27 +20896,28 @@ EOF
      },
      { from  => undef, # 
        until => undef, #
-       text  => 'Weserstr. - Boxhagener Str.: Tor in einer Hausdurchfahrt, nachts und selten auch sonntags gesperrt; außerdem kann der Durchgang wegen Bauarbeiten gesperrt sein',
+       # kann vermutlich nicht mehr gesperrt werden: Tor in einer Hausdurchfahrt, nachts und selten auch sonntags gesperrt
+       text  => 'Weserstr. - Boxhagener Str.: Schreibenfeder-Passage kann wegen Bauarbeiten gesperrt sein',
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-#: note: geprüft am Fr, den 2012-11-02, gegen 22:30: geschlossen
-#: note: geprüft am Do, den 2012-11-15, gegen 21:00: offen
-#: note: geprüft am So, den 2012-06-02, vormittags: geschlossen
-#: note: geprüft am So, den 2015-03-08, vormittags: offen
-#: note: geprüft am So, den 2015-05-10, nachmittags: offen
-#: note: geprüft am So, den 2015-06-21, vormittags: offen
-#: note: geprüft am So, den 2015-07-19, nachmittags: offen
-#: note: geprüft am So, den 2015-08-09, nachmittags: offen
-#: note: geprüft am So, den 2015-08-30, vormittags: offen
-#: note: geprüft am So, den 2016-05-15, vormittags: offen
-#: note: geprüft am So, den 2016-07-17, vormittags und mittags: offen
-#: note: geprüft am So, den 2016-07-23, mittags: offen
-#: note: geprüft am Sa, den 2016-09-20, vormittags: offen
-#: tempex: volatile
-	2::night 14838,11410 14792,11391
+# REMOVED --- #: note: geprüft am Fr, den 2012-11-02, gegen 22:30: geschlossen
+# REMOVED --- #: note: geprüft am Do, den 2012-11-15, gegen 21:00: offen
+# REMOVED --- #: note: geprüft am So, den 2012-06-02, vormittags: geschlossen
+# REMOVED --- #: note: geprüft am So, den 2015-03-08, vormittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-05-10, nachmittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-06-21, vormittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-07-19, nachmittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-08-09, nachmittags: offen
+# REMOVED --- #: note: geprüft am So, den 2015-08-30, vormittags: offen
+# REMOVED --- #: note: geprüft am So, den 2016-05-15, vormittags: offen
+# REMOVED --- #: note: geprüft am So, den 2016-07-17, vormittags und mittags: offen
+# REMOVED --- #: note: geprüft am So, den 2016-07-23, mittags: offen
+# REMOVED --- #: note: geprüft am Sa, den 2016-09-20, vormittags: offen
+# REMOVED --- #: tempex: volatile
+# REMOVED --- 2::night 14838,11410 14792,11391
 #: XXX wird hier dauerhaft gesperrt sein? (zurzeit kann man sich noch an den Bauzäunen vorbei mogeln)
-#: last_checked: 2018-09-24
+#: last_checked: 2018-10-03
 #: check_frequency: 7d
 	2::inwork 14838,11410 14949,11474
 EOF
@@ -21660,10 +21661,10 @@ EOF
        data  => <<EOF,
 #: tempex: YYYY0530-YYYY0601 vvv
 	2::temp 20755,5750 20716,6029 20707,6098 20623,6136 20453,6211 20464,6237
-	2::temp 19976,6087 20015,6069 20293,6278 20200,6321 20106,6357
+	2::temp 19961,5989 20015,6069 20293,6278 20200,6321 20106,6357
 	2::temp 20200,6321 20262,6493 20225,6631
 	2::temp 20716,6029 20593,6082 20428,6157 20453,6211 20293,6278
-	2::temp 19976,6087 20064,6290 20106,6357
+	2::temp 19944,6006 20064,6290 20086,6307 20106,6357
 #: tempex ^^^
 EOF
      },
@@ -21999,7 +22000,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_020034',
        data  => <<EOF,
-	q4::inwork 11630,16623 11621,16749
+	q4::inwork 11630,16623 11613,16747
 EOF
      },
      { from  => 1374381000, # 2013-07-21 06:30
@@ -22051,7 +22052,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_020168',
        data  => <<EOF,
-	q4::inwork; 11630,16623 11621,16749
+	q4::inwork; 11630,16623 11613,16747
 EOF
      },
      { from  => 1376816220, # 2013-08-18 10:57
@@ -23544,7 +23545,7 @@ EOF
        type  => 'gesperrt',
        source_id => '145600136',
        data  => <<EOF,
-	2::inwork 38845,51258 38714,51048 38528,50809 38503,50622 38487,50536
+	2::inwork 38830,51263 38714,51048 38528,50809 38503,50622 38487,50536
 EOF
      },
      { from  => 1409436000, # 2014-08-31 00:00
@@ -23768,7 +23769,7 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef,
+       until => 1538582880, # kein Schloss mehr im Tor --- kann nicht mehr versperrt sein # undef,
        text  => 'Mergenthalerring/Dieselstr.: Tor kann versperrt sein',
        recurring => 1,
        data  => <<EOF,
@@ -26070,7 +26071,7 @@ EOF
        source_id => '2147341208',
        data  => <<EOF,
 	q4::inwork 15458,11306 15477,11338
-	q3::inwork; 15055,11505 15162,11458 15220,11440 15303,11412 15477,11338
+	q3::inwork; 15055,11505 15126,11474 15162,11458 15220,11440 15303,11412 15477,11338
 EOF
      },
      { from  => undef, # 
@@ -26747,18 +26748,19 @@ EOF
 EOF
      },
      { from  => 1523311200, # 2018-04-10 00:00
-       until => undef, # XXX
-       text  => 'Wiesenweg: kann während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018, 7 Uhr',
+       until => $isodate2epoch->("2019-12-31 18:00:00"),
+       text  => 'Wiesenweg: kann während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018 bis Ende Dezember 2019',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX bis wann ist die Durchfahrt gesperrt? (laut googlemaps bis Ende November 2018)
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00, 2018-09-17 gegen 18:45
+#: next_check_id: WIESENWEG-2018
+#: XXX bis wann ist die Durchfahrt gesperrt? (laut googlemaps bis Ende November 2018, laut Bauschild Bauarbeiten bis Ende 2019)
+#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00, 2018-09-17 gegen 18:45, 2018-10-03 gegen 17:45
 #: note: unklar, ob man durchgekommen wäre: 2018-09-07 gegen 08:30
 #: source_id: 2147342009
 #: osm_watch: way id="154381291" version="6"
-#: last_checked: 2018-09-24
-#: check_frequency: 14d
-	2::inwork 15162,11458 15055,11505
+#: last_checked: 2018-10-03
+#: check_frequency: 30d
+	2::inwork 15162,11458 15126,11474 15055,11505
 EOF
      },
      { from  => 1510939800, # 2017-11-17 18:30
@@ -27531,6 +27533,8 @@ EOF
 #: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/finckensteinallee-gesperrt_a171782
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729460.php
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/an-kreuzung-finckensteinalleecarstennstrasse-wird-bis-ende-november-gebaut_a178961
+#: XXX laut fritz & viz nur bis 2018-10-16
+#: next_check: 2018-10-16
 	q4::inwork 2737,2866 2625,2850
 	q4::inwork 2625,2850 2570,2844
 # REMOVED ---	q4::inwork 2570,2844 2290,2864
@@ -27703,7 +27707,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-09-22
+#: last_checked: 2018-10-04
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27915,7 +27919,7 @@ EOF
        text  => 'Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2018-10-01
+#: last_checked: 2018-10-04
 #: check_frequency: 7d
 	2::inwork 11021,11287 11000,11327
 EOF
@@ -28084,8 +28088,9 @@ EOF
        text  => 'Treptower Park, Weg zum/vom Karpfenteich: Bauarbeiten, Weg kann gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
+#: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-09-28
+#: last_checked: 2018-10-03
 #: check_frequency: 7d
 	2::inwork 14854,8964 14614,9052
 EOF

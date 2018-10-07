@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2007,2008,2010,2011,2013,2014,2015,2016,2017 Slaven Rezic. All rights reserved.
+# Copyright (C) 2007,2008,2010,2011,2013,2014,2015,2016,2017,2018 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -20,7 +20,7 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION $geocoder_toplevel);
-$VERSION = 3.08;
+$VERSION = 3.10;
 
 BEGIN {
     if (!eval '
@@ -123,14 +123,13 @@ sub geocoder_dialog {
 
     my $gcf = $geocoder_toplevel->LabFrame(-label => 'Geocoding modules', -labelside => 'acrosstop'
 					  )->pack(-fill => 'x', -expand => 1);
-    my $geocoder_api = 'My_Google_v3';
+    my $geocoder_api = 'OSM';
     my %apis = (
 		'My_Google_v3' =>
 		{
 		 'label' => 'Google v3',
 		 'short_label' => 'Google',
-		 'include_multi' => 1,
-		 'include_multi_master' => 1, # means this geocoder's address will be shown first in a "Multi" call
+		 'devel_only' => 1,
 
 		 'require' => sub { },
 		 'new' => sub { Geo::Coder::My_Google_v3->new },
@@ -208,6 +207,7 @@ sub geocoder_dialog {
 		{
 		 'label' => 'Bing',
 		 'include_multi' => 1,
+		 'devel_only' => 1,
 
 		 'require' => sub {
 		     require Geo::Coder::Bing;
@@ -221,23 +221,32 @@ sub geocoder_dialog {
 		     Geo::Coder::Bing->VERSION(0.06);
 		 },
 		 'new' => sub {
-		     Geo::Coder::Bing->new;
+		     my $apikey = do {
+			 my $file = "$ENV{HOME}/.bingapikey";
+			 open my $fh, $file
+			     or main::status_message("Cannot get key from $file: $!", "die");
+			 local $_ = <$fh>;
+			 chomp;
+			 $_;
+		     };
+		     Geo::Coder::Bing->new(key => $apikey);
 		 },
 		 'extract_loc' => sub {
 		     my $location = shift;
-		     ($location->{BestLocation}{Coordinates}{Longitude},
-		      $location->{BestLocation}{Coordinates}{Latitude},
+		     ($location->{point}{coordinates}[1],
+		      $location->{point}{coordinates}[0],
 		     );
 		 },
 		 'extract_addr' => sub {
 		     my $location = shift;
-		     $location->{Address}->{FormattedAddress};
+		     $location->{address}->{formattedAddress};
 		 },
 		},
 
 		'OSM' =>
 		{
 		 'include_multi' => 1,
+		 'include_multi_master' => 1, # means this geocoder's address will be shown first in a "Multi" call
 
 		 'require' => sub { require Geo::Coder::OSM },
 		 'new' => sub { Geo::Coder::OSM->new },
@@ -465,7 +474,7 @@ sub geocoder_dialog {
 	    if ($res->{status} eq 'OK') {
 		return $res->{results}->[0];
 	    } else {
-		main::status_message("Fetching $url did not return OK status", "error");
+		main::status_message("Fetching $url did not return OK status, but '$res->{status}'", "error");
 	    }
 	} else {
 	    main::status_message("Fetching $url failed: " . $resp->status_line, "error");
