@@ -57,7 +57,10 @@ if (!$ENV{BBBIKE_TEST_NO_MAPSERVER}) {
 	      bbbike2.cgi
 	      bbbike2.en.cgi
 	      bbbike-data.cgi
-		);
+	      bbbike-snapshot.cgi
+	      bbbikeleaflet.cgi
+	      bbbikegooglemap.cgi
+	     );
 }
 
 if ($cgi_dir !~ m{\Qbbbike.hosteurope.herceg.de}) {
