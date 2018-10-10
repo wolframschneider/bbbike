@@ -1346,7 +1346,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5447,3801
 #: note: Anforderungsampel für linksabbiegende Radfahrer aus der Osdorfer Str. in den Blanckertzweg
 	X 4542,1188
-	X 5681,5743
+	X 5672,5751
 	X 5183,5437
 	X 4879,5017
 	X 4515,4760
@@ -1455,7 +1455,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: Anforderungsampel
 	F 5689,5109
 	X 5583,5179
-	X 5687,5486
+	F 5675,5470
 #: note: Anforderungsampel
 	F 5482,4965
 	F 6115,5302
@@ -1862,6 +1862,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9569,11631
 	X 9568,12688
 	X 8775,12457
+#: off: Sunday (seen 2018-10-07 afternoon)
 	X 8695,11015
 #: note: im Zuge Nikolsburger/Fasanenstr. hat man an der Mittelstreifenampel noch einmal Rot (gesehen: Sa nachmittags)
 	X 5219,9808
@@ -2253,7 +2254,6 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 nur Museumsbetrieb der Heidekrautbahn	B0 7768,21253
 nur Museumsbetrieb der Heidekrautbahn	B0 7966,21563
 nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
-#: note: Luftbild
 	F 4592,3762
 	F -306,1700
 #: note: am So, 2018-04-29, gegen 12:30 ausgeschaltet
@@ -2665,13 +2665,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
-#: last_checked: 2018-10-04
+#: last_checked: 2018-10-08
 #: check_frequency: 60d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2018-09-30 vvv
+#: last_checked: 2018-10-08 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
