@@ -15,6 +15,7 @@ Görlitzer Park	NL 12690,10062 12686,10045 12671,10042
 # REMOVED (nicht mehr der Fall?) --- #: note: Beleuchtung existiert, aber ist zumindest mitten in der Nacht nicht eingeschaltet --- Görlitzer Park, Rondell	NL 12690,10062 12737,10051 12802,10097 12801,10146 12757,10197 12712,10192 12670,10160 12659,10119 12690,10062
 Görlitzer Park	NL 13035,10076 13013,10068 13013,10047 12987,10007 12960,9955 12932,9900
 Görlitzer Park	NL 12509,10189 12502,10244
+Görlitzer Park	NL 12592,10112 12564,10121 12556,10116 12507,10130
 Hasenheide	NL 10709,9192 11141,9107
 Hasenheide (nur der Abschnitt Columbiadamm - Freilichtbühne ist beleuchtet)	NL 11279,8489 11255,8591 11182,8983 11141,9107 11136,9183
 Hasenheide	NL 11255,8591 11193,8568 11133,8560 11020,8596 10957,8573 10929,8503 10913,8463 10911,8457
@@ -1033,7 +1034,7 @@ Jochen-Klepper-Weg	NL -3030,2266 -2784,2358 -2690,2385 -2372,2477
 # REMOVED (Beleuchtung funktioniert wieder) --- #: XXX Beleuchtung existiert, funktioniert aber nicht --- #: last_checked: 2013-12-09 --- #: next_check: 2014-09-23 --- entlang der Stadtbahn	NL 12132,11788 11966,11832
 Krautstr.	NL 11993,11978 11966,11832
 #: note: keine direkte Beleuchtung, aber eigentlich genug indirekte
-Hermann-Stöhr-Platz	NL 12453,11790 12409,11902
+Hermann-Stöhr-Platz	NL 12453,11790 12413,11901
 (Zobtener Str. - Fischerstr.)	NL 16353,10207 16404,10286
 (Fischerstr. - Lückstr.)	NL 16404,10286 16488,10381 16516,10448 16501,10460
 #: note: keine direkte Beleuchtung, aber etwas Licht vom benachbarten Lagerplatz, wahrscheinlich nur in den Abendstunden
@@ -1701,7 +1702,7 @@ Tegeler Forst	NL 605,20714 462,20694 65,20594 -105,20611 -329,20685 -750,20878 -
 (Wiesenweg - Waldweg)	NL 9940,26273 9898,26310 9848,26349 9812,26385
 #: XXX wird die existierende Beleuchtung wieder hergestellt?
 #: osm_watch: way id="260138646" version="3"
-#: last_checked: 2018-10-08
+#: last_checked: 2018-10-10
 Marx-Engels-Forum	NL 10416,12394 10411,12471 10355,12551 10300,12587
 Nordhafenpark West	NL 7368,14573 7396,14569 7426,14539 7551,14464 7572,14432 7566,14404
 Nordhafenpark West	NL 7551,14464 7612,14449 7636,14414 7661,14398

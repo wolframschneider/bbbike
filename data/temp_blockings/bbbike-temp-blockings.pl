@@ -15187,7 +15187,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013842',
        data  => <<EOF,
-	q4::temp 12310,11682 12208,11746
+	q4::temp 12310,11682 12204,11748
 EOF
      },
      { from  => $isodate2epoch->("2014-06-13 00:00:00"), # 1 Tag Vorlauf
@@ -16218,7 +16218,7 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: tempex: su T09-T16
-	q4::temp:clock 12596,11696 12453,11790 12366,11808
+	q4::temp:clock 12596,11696 12453,11790 12378,11806
 EOF
      },
      { from  => undef, #
@@ -23991,7 +23991,7 @@ EOF
 #: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: priority: #A
-#: last_checked: 2018-10-08
+#: last_checked: 2018-10-10
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -26920,14 +26920,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1539108933, # undef, # XXX
        #text  => 'Vorbergstr.: Bauarbeiten zwischen Gleditschstr. und Akazienstr., Fahrbahn gesperrt, außerdem Sperrung in der Gleditschstr., Ende unbekannt',
        text  => 'Gleditschstr.: Bauarbeiten, Fahrbahn an der Kreuzung Vorbergstr. gesperrt, Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX laut googlemaps bis 19. September 2018
-#: last_checked: 2018-10-07
-#: check_frequency: 2d
+# REMOVED --- #: XXX laut googlemaps bis 19. September 2018 --- #: last_checked: 2018-10-07 --- #: check_frequency: 2d
 	q2::inwork 7124,9226 7118,9315
 EOF
      },
@@ -27053,17 +27051,15 @@ EOF
 EOF
      },
      { from  => 1534878268, # 1522864912, # 2018-04-04 20:01
-       until => undef, # 1538159069, # $isodate2epoch->("2018-09-30 18:00:00"), # 1530907952, # $isodate2epoch->("2018-07-15 20:00:00"), # 1525449600, # 2018-05-04 18:00
-       text  => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Glinkastr., Ende unbekannt',
+       until => $isodate2epoch->("2018-10-10 17:00:00"), # undef, # 1538159069, # $isodate2epoch->("2018-09-30 18:00:00"), # 1530907952, # $isodate2epoch->("2018-07-15 20:00:00"), # 1525449600, # 2018-05-04 18:00
+       text  => 'Behrenstr.: Sperrung Richtung Osten zwischen Wilhelmstr. und Glinkastr., voraussichtlich bis 10. Oktober 2018 nachmittags',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147342390
 #: source_id: 2147342751
 #: source_id: 2147343056
 # REMOVED (hier nicht mehr) ---	q4::inwork; 8901,12008 8861,12125
-#: last_checked: 2018-10-08
-# REMOVED --- #: next_check: 2018-09-30
-#: check_frequency: 7d
+# REMOVED (wieder nicht mehr) --- #: last_checked: 2018-10-08 --- #: next_check: 2018-09-30 --- #: check_frequency: 7d
 	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
 EOF
      },
@@ -27410,7 +27406,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-09-20
+#: last_checked: 2018-10-09
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27868,7 +27864,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2018-09-12 vvv
-#: next_check: 2018-10-11 vvv
+#: next_check: 2018-10-15 vvv
 	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2429,4385
 #: next_check ^^^
@@ -27905,11 +27901,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1539193988, # -> gesperrt-orig --- undef, # XXX
        text  => 'Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2018-10-04
+#: last_checked: 2018-10-10
 #: check_frequency: 7d
 	2::inwork 11021,11287 11000,11327
 EOF
@@ -28144,7 +28140,7 @@ EOF
 EOF
      },
      { from  => undef,
-       until => $isodate2epoch->("2018-12-31 18:00:00"),
+       until => $isodate2epoch->("2019-09-01 18:00:00"),
        text  => 'Paul-Schwarz-Promenade: bevorstehende Sperrung in Höhe Benjamin Franklin',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -28154,13 +28150,23 @@ EOF
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729682.php (in Kürze, für voraussichtlich ein Jahr)
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/neubau-des-hubschrauberlandeplatzes-am-campus-benjamin-franklin-beginnt-im-september_a176375 (bis Ende 2019)
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6767
+#: by: https://www.facebook.com/ChariteUniversitaetsmedizinBerlin/photos/a.359588317914082/373973493142231/?type=3
 #: last_checked: 2018-09-14 (see osm note)
 #: osm_watch: note 1512257 1
 #: XXX wann fängt die Sperrung tatsächlich an (-> gesperrt_orig)
+#: add_fragezeichen: Haben die Bauarbeiten schon angefangen und ist die Sperrung aktiv?
 #: priority: #A
 #: last_checked: 2018-10-07
 #: next_check: 2018-10-09
 	2::inwork 4947,3672 5018,3810 5074,3900 5139,3997 5225,4095
+EOF
+     },
+     { from  => 1539122400, # 2018-10-10 00:00
+       until => 1539633600, # 2018-10-15 22:00
+       text  => 'Charlottenstr.: Einbahnstraße zwischen Jägerstr. und Taubenstr., offen Richtung Norden, bis 15. Oktober 2018',
+       type  => 'handicap',
+       data  => <<EOF,
+	q4::inwork; 9523,12019 9536,11922
 EOF
      },
     );

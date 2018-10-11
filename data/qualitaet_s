@@ -22,7 +22,7 @@ Schönwalder Allee: gutes Kopfsteinpflaster, freigegebener Gehweg mit mäßigen bis
 Kopenhagener Str.: Fahrbahn asphaltiert, aufgemalter Radweg auf Gehweg	Q0; 7209,18682 7248,18793 7329,18996
 Kopenhagener Str.: Fahrbahn asphaltiert, Radweg mit Verbundsteinpflaster	Q0; 7329,18996 7248,18793 7209,18682
 Kopenhagener Str.: Fahrbahn asphaltiert, Radweg mit neuem Verbundsteinpflaster	Q0 7329,18996 7466,19351 7481,19400
-Kopenhagener Str.: Fahrbahn asphaltiert, Radweg mit Verbundsteinpflaster	Q0 7481,19400 7504,19459 7512,19480 7603,19713 7617,19748 7634,19793
+Kopenhagener Str.: Fahrbahn asphaltiert, Radweg mit Verbundsteinpflaster	Q0 7481,19400 7504,19459 7512,19480 7516,19490 7540,19550 7603,19713 7617,19748 7634,19793
 Hauptstr. (Rosenthal, Wilhelmsruh): Asphalt	Q0 7634,19793 7672,19869 7711,19956 7748,20040 7790,20132 7832,20219 7900,20378 7979,20528 8055,20708 8081,20785 8092,20817 8107,20859 8158,21022
 Hauptstr. (Rosenthal, Wilhelmsruh): Kopfsteinpflaster auf der Straße, Radweg mit Verbundsteinpflaster	Q1 8277,21257 8158,21022
 Hauptstr. (Rosenthal, Wilhelmsruh)/Mönchmühler Str.: schlechtes Kopfsteinpflaster (12 km/h)	Q3 8277,21257 8389,21468 8460,21602 8473,21633 8568,21863 8556,21918 8401,22013 8430,22110 8439,22143 8464,22215 8543,22413 8554,22440 8900,23274 8903,23349 8909,23506
@@ -1456,7 +1456,7 @@ Kienitzer Str.: unebenes Kopfsteinpflaster	Q2 11498,7750 11609,7764 11738,7790 1
 Allerstr.: Kopfsteinpflaster	Q2 11516,7654 11628,7674 11755,7704 11879,7720 12055,7751
 Okerstr.: Kopfsteinpflaster	Q2 11540,7534 11654,7559 11779,7582 11903,7607 12090,7651
 Lasdehner Str.: Kopfsteinpflaster	Q2 13520,12264 13470,12190 13375,12062
-Erich-Steinfurth-Str.: Kopfsteinpflaster	Q2 12596,11696 12453,11790 12366,11808
+Erich-Steinfurth-Str.: Kopfsteinpflaster	Q2 12596,11696 12453,11790 12378,11806
 Rütlistr.: Kopfsteinpflaster	Q2 12480,9037 12490,9056 12548,9167 12565,9200 12621,9297
 (Am Flutgraben): Gehwegpflasterung	Q1 13333,9929 13371,9974 13535,10184
 Schleusenufer: Kopfsteinpflaster	Q2 13487,10227 13628,10396
@@ -5940,7 +5940,8 @@ Zum Seeblick: unbefestigter Weg	Q2 27161,-2474 27191,-2432
 Zum Seeblick: Asphalt	Q0 27161,-2474 27093,-2560 27017,-2660
 Nuscheweg: Beton	Q0 27037,-2492 27093,-2560
 Nuscheweg: Asphalt	Q1 27093,-2560 27149,-2620
-Imkerweg: schlechtes Kopfsteinpflaster, mit Asphaltflicken	Q3 27226,-2892 27422,-2753 27506,-2628
+Imkerweg: schlechtes Kopfsteinpflaster, mit Asphaltflicken	Q3 27226,-2892 27422,-2753
+Imkerweg: schlechtes Kopfsteinpflaster, mit Asphaltflicken	Q3 27422,-2753 27506,-2628
 Imkerweg: schlechtes Kopfsteinpflaster	Q3 27506,-2628 27539,-2584
 Imkerweg: Asphalt	Q0 27539,-2584 27545,-2535
 Am Seddinsee: schlechtes Kopfsteinpflaster	Q3 27518,-3054 27520,-3029 27456,-2843 27422,-2753
@@ -6867,7 +6868,7 @@ Idealpassage: Asphalt	Q0 12434,8776 12578,8654
 Hüttigpfad: Verbundsteinpflaster	Q1 4810,15000 4724,15055 4668,15066 4598,15057 4459,15066
 (entlang der Hedwigskathedrale): Pflasterung	Q2 9808,12182 9775,12178 9771,12190 9747,12205
 (Am Wriezener Bahnhof - Rüdersdorfer Str.): sehr glatte wassergebundene Decke	Q0 12944,11760 13052,11867
-Hermann-Stöhr-Platz: wassergebundene Decke, holprig	Q2 12453,11790 12409,11902
+Hermann-Stöhr-Platz: wassergebundene Decke, holprig	Q2 12453,11790 12413,11901
 (Zur Alten Flussbadeanstalt - Bolleufer): Asphalt	Q0 16347,9594 16268,9670
 (Zur Alten Flussbadeanstalt - Bolleufer): Beton, teilweise Verbundsteinpflaster	Q0 16268,9670 16182,9591 16120,9653 16125,9678 16119,9689
 (Normannenstr. - Jobcenter Lichtenberg): Verbundsteinpflaster, Asphalt	Q1 16056,12317 16068,12376 16080,12441 16089,12522
@@ -9772,6 +9773,10 @@ Händelplatz: Beton	Q0 4568,4789 4543,4820
 (provisorische Zufahrt zum Benjamin Franklin): Feinschotter	Q1 5110,4179 5130,4195 5131,4207
 Klingsorstr.: schadhafter Asphalt	Q1 4834,4102 4932,4152 5063,4266 5090,4291 5120,4318 5150,4345 5206,4432 5214,4445 5271,4547
 Klingsorstr.: schadhafter Asphalt	Q1 5316,4637 5336,4676 5407,4815 5411,4825 5478,4957 5482,4965 5497,4994 5535,5068 5583,5179
+(Görlitzer Park, zur Forster Str.): Asphalt	Q1 12670,10160 12592,10112
+(Görlitzer Park, zur Forster Str.): wassergebundene Decke	Q1 12592,10112 12564,10121 12556,10116 12507,10130
+(Neuer Mauerweg): Asphalt	Q0 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8014,19149 8347,18916 8476,18773
+(Neuer Mauerweg): Asphalt	Q0 7572,19490 7540,19550
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972

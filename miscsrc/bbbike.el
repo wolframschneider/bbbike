@@ -569,11 +569,10 @@
 	    (setq search-val (buffer-substring-no-properties (match-beginning 2) (match-end 2))))))
     (if (not search-val)
 	(error "Can't find anything to grep for"))
-    (if (string-match "/temp_blockings/" buffer-file-name)
-	(setq dirop "../")
-      (setq dirop ""))
     (if search-key
-	(grep (concat "2>/dev/null grep -ins " dirop "*-orig " dirop "*.coords.data " dirop "temp_blockings/bbbike-temp-blockings.pl " dirop "../t/cgi-mechanize.t " "-e '^#:[ ]*" search-key ".*" search-val "'")))))
+	(let* ((bbbike-rootdir (file-relative-name (bbbike-rootdir)))
+	       (bbbike-datadir (file-relative-name (concat bbbike-rootdir "/data"))))
+	  (grep (concat "2>/dev/null grep -ins " bbbike-datadir "/*-orig " bbbike-datadir "/*.coords.data " bbbike-datadir "/temp_blockings/bbbike-temp-blockings.pl " bbbike-rootdir "/t/cgi-mechanize.t " "-e '^#:[ ]*" search-key ".*" search-val "'"))))))
 
 (defun bbbike-grep-button (button)
   (bbbike-grep))
@@ -688,5 +687,17 @@
 		   )))
 
   )
-      
+
+;; convert bbbike "standard" coordinates to WGS84 coordinates using external commands
+;; usage:
+;;    (bbbike--convert-coord-to-wgs84 "8000,6000")
+;;    (bbbike--convert-coord-to-wgs84 "8000,6000" "lat=%lat,lon=%lon")
+(defun bbbike--convert-coord-to-wgs84 (in &optional fmt)
+  (if (not fmt) (setq fmt "%lon,%lat"))
+  (let (lon lat res)
+    (pcase-let ((`(,lon ,lat) (split-string (replace-regexp-in-string "\n$" "" (shell-command-to-string (concat "perl " (bbbike-rootdir) "/Karte.pm -from standard -to polar -- " in))) ",")))
+      (setq res (replace-regexp-in-string "%lon" lon fmt))
+      (setq res (replace-regexp-in-string "%lat" lat res))
+      res)))
+
 (provide 'bbbike-mode)
