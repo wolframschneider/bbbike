@@ -3221,11 +3221,11 @@ EOF
        text  => 'Heinrich-Mann-Allee, Potsdam: auf Grund einer Bombenentschärfung wird um die Fundstelle ein 800m großer Sperrkreis errichtet, am 10. Oktober 2018, von 08:30 Uhr bis nachmittags (voraussichtlich)',
        source_id => 'https://www.potsdam.de/weltkriegsbombe-entschaerft-sperrkreis-aufgehoben',
        type  => 'gesperrt',
-       data  => <<EOF,
 # erstellt mit dem folgenden Kommando:
 #    ./miscsrc/grepstrassen -ignoreglobaldirectives -inner /tmp/1.bbd -onlyenclosed data/landstrassen | perl -pe 's/\t\S+/\t2::temp/' >| /tmp/1s.bbd
 # 1.bbd beschreibt die Fläche:
 #	X -12322,-2267 -12306,-2300 -12306,-2563 -12207,-2726 -12198,-2922 -12231,-3061 -12204,-3469 -11636,-3843 -11431,-3686 -11135,-3439 -10857,-3194 -10483,-2699 -10655,-2569 -10930,-2457 -11033,-2346 -11147,-2041 -11196,-2042 -11820,-1979 -12115,-1964 -12116,-2122 -12228,-2104 -12281,-2198
+       data  => <<EOF,
 Friedrich-Engels-Str. (Potsdam)	2::temp -11369,-2085 -11513,-2122 -11597,-2203 -11694,-2245 -11778,-2225 -11834,-2213 -11939,-2190 -11992,-2178 -12093,-2156 -12213,-2131
 Zum Wasserturm (Potsdam)	2::temp -12100,-2039 -11995,-2047 -11947,-2048 -11842,-2054 -11842,-2183
 Friedhofsgasse (Potsdam)	2::temp -11778,-2225 -11799,-2283 -11995,-2500
@@ -4271,7 +4271,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002648',
        data  => <<EOF,
-	2 -4167,12554 -4239,12626
+	2 -4167,12554 -4203,12569 -4239,12626
 	2 -4167,12554 -4084,12557
 	2 -3635,12572 -3752,12566
 	2 -3752,12566 -3892,12560
@@ -15925,7 +15925,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013939',
        data  => <<EOF,
-	q4::inwork; -4922,13609 -4922,13641 -4932,13887 -4926,13971
+	q4::inwork; -4922,13609 -4937,13643 -4944,13673 -4934,13890 -4926,13971
 EOF
      },
      { from  => 1252010710, # 2009-09-03 22:45
@@ -17926,7 +17926,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015738',
        data  => <<EOF,
-	q4::inwork; 3827,10980 3546,10962
+	q4::inwork; 3820,10987 3546,10962
 EOF
      },
      { from  => 1273997280, # 2010-05-16 10:08
@@ -19683,8 +19683,8 @@ EOF
        data  => <<EOF,
 #: XXX Weiterbau zwischen Gorkistr. und Bernstorffstraße ab März 2012 vorgesehen
 #: next_check: 2012-03-01
-	q4::inwork 2358,20368 2295,20358 2241,20487
-	q4::inwork 2295,20358 2352,20224 2381,20157 2395,20126
+	q4::inwork 2359,20364 2297,20353 2241,20487
+	q4::inwork 2297,20353 2352,20224 2381,20157 2395,20126
 EOF
      },
      { from  => 1311832800, # 2011-07-28 08:00
@@ -20322,7 +20322,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120223.1505.366579.html',
        data  => <<EOF,
-	q4::inwork 2295,20358 2241,20487
+	q4::inwork 2297,20353 2241,20487
 EOF
      },
      { from  => 1330902000, # 2012-03-05 00:00
@@ -20905,7 +20905,7 @@ EOF
 # REMOVED --- #: tempex: volatile
 # REMOVED --- 2::night 14838,11410 14792,11391
 #: XXX wird hier dauerhaft gesperrt sein? (zurzeit kann man sich noch an den Bauzäunen vorbei mogeln)
-#: last_checked: 2018-10-03
+#: last_checked: 2018-10-14
 #: check_frequency: 7d
 	2::inwork 14838,11410 14949,11474
 EOF
@@ -22714,13 +22714,13 @@ EOF
 	q3::inwork; 11946,13993 11820,13804
 EOF
      },
-     { from  => 1392902100, # 2014-02-20 14:15
-       until => $isodate2epoch->("2014-06-13 16:00:00"), # 1402063200, # 2014-06-06 16:00
-       text  => 'Langhansstr. : Baustelle, Fahrbahn Richtung Prenzlauer Promenade zwischen Heinersdorfer Str. und Prenzlauer Promenade gesperrt, bis 13.06.2014 16:00 Uhr ',
+     { from  => 1539532357, # 1392902100, # 2014-02-20 14:15
+       until => $isodate2epoch->("2018-10-20 20:00:00"), # $isodate2epoch->("2014-06-13 16:00:00"), # 1402063200, # 2014-06-06 16:00
+       text  => 'Langhansstr. : Baustelle, Fahrbahn Richtung Prenzlauer Promenade zwischen Heinersdorfer Str. und Prenzlauer Promenade gesperrt, bis 20. Oktober 2018 abends',
        type  => 'handicap',
-       source_id => 'IM_021322',
+       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-15-10-18-',
        data  => <<EOF,
-	q3::inwork; 12189,16578 12045,16574
+	q4::inwork; 12189,16578 12045,16574
 EOF
      },
      { from  => $isodate2epoch->("2014-08-17 00:00:00"),
@@ -23744,7 +23744,7 @@ EOF
        data  => <<EOF,
 #: XXX siehe auch gesperrt-orig-Eintrag
 	2::inwork -3181,11496 -3177,11507 -3173,11520
-	2::inwork -3197,11554 -3075,11510
+	2::inwork -3186,11557 -3075,11510
 EOF
      },
      { from  => 1412913600, # 2014-10-10 06:00
@@ -24617,7 +24617,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_025809',
        data  => <<EOF,
-	2::inwork 2295,20358 2358,20368 2415,20380
+	2::inwork 2297,20353 2359,20364 2417,20376
 EOF
      },
      { from  => undef, # 
@@ -24753,7 +24753,7 @@ EOF
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
 #: XXX laut fritz Ende 2018, laut vmz Ende 2018
-#: last_checked: 2018-06-30
+#: last_checked: 2018-10-12
 #: next_check: 2018-12-31
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
@@ -25587,7 +25587,7 @@ EOF
        data  => <<EOF,
 #: source_id: 2147340417
 #: note: laut vmz und fritz offen Richtung Westen
-	q4::inwork; -4731,13135 -4634,13173 -4299,13304 -4011,13407
+	q4::inwork; -4737,13132 -4634,13173 -4299,13304 -4011,13407
 EOF
      },
      { from  => 1470520800, # 2016-08-07 00:00
@@ -26578,7 +26578,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-09-28
+#: last_checked: 2018-10-11
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -27145,8 +27145,8 @@ EOF
 #: add_fragezeichen: Ist der Uferweg noch immer gesperrt? Falls nicht: hat sich die Qualität des Weges verbessert?
 #: priority: #A
 #: next_check_id: MENTZELPARK-2018
-#: last_checked: 2018-08-29 (Umleitungsausschilderung existiert)
-	2::inwork 21696,5053 21600,5221 21512,5404 21481,5429
+#: last_checked: 2018-10-14
+	2::inwork 21696,5053 21600,5221 21512,5404 21481,5429 21447,5414
 EOF
      },
      { from  => undef, # 
@@ -27241,7 +27241,7 @@ EOF
        data  => <<EOF,
 #: XXX vielleicht wird die Fahrbahn repariert?
 #: XXX laut Schild der Wasserbetriebe bis Februar 2019
-#: last_checked: 2018-10-08
+#: last_checked: 2018-10-13
 #: check_frequency: 14d
 #: priority: #A
 	q3::inwork; 13198,12311 13243,12222
@@ -27406,7 +27406,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-10-09
+#: last_checked: 2018-10-12
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27415,11 +27415,9 @@ EOF
        text  => 'Bouchéstr. und Mengerzeile: Fahrbahn kann wegen Bauarbeiten gesperrt sein',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: BOUCHESTR-2018
-#: last_checked: 2018-07-04 vvv
+# REMOVED --- #: next_check_id: BOUCHESTR-2018 --- #: last_checked: 2018-07-04 vvv
 	q4::inwork 13176,9302 13098,9205
 	q4::inwork 13188,9134 13298,9252
-#: last_checked ^^^
 EOF
      },
      { from  => 1538074511, # XXX erst einmal komplett inaktiv! --- from  => $isodate2epoch->("2018-10-31 00:00:00"), # 1531519200, # 2018-07-14 00:00
@@ -27639,7 +27637,7 @@ EOF
 EOF
      },
      { from  => 1532988000, # 2018-07-31 00:00
-       until => 1541026799, # 2018-10-31 23:59
+       until => 1539357053, # schon offen --- 1541026799, # 2018-10-31 23:59
        text  => 'Spektegrünzug - Mauerweg: Bauarbeiten, Weg komplett gesperrt, zwischen August 2018 und Oktober 2018',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2018/pressemitteilung.729141.php',
@@ -27693,7 +27691,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-10-04
+#: last_checked: 2018-10-12
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27714,7 +27712,8 @@ EOF
        data  => <<EOF,
 #: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
 #: last_checked: 2018-09-22
-#: check_frequency: 21d
+# REMOVED --- #: check_frequency: 21d
+#: next_check: 2018-10-21
 	q2::inwork; 4502,11740 4574,11587
 EOF
      },
@@ -27768,7 +27767,8 @@ EOF
        data  => <<EOF,
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
-	q4::inwork; 18809,9133 18790,9018 18770,8898 18737,8686 18733,8650 18733,8633
+# REMOVED (hier keine Verbotsschilder mehr) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
+	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
 EOF
      },
      { from  => 1537740000, # 2018-09-24 00:00
@@ -27820,7 +27820,7 @@ EOF
 EOF
      },
      { from  => 1536172293, # 2018-09-05 20:31
-       until => 1543597200, # 2018-11-30 18:00
+       until => 1539279384, # (mittlerweile kommt man gut durch) --- 1543597200, # 2018-11-30 18:00
        text  => 'Friedelstraße: zwischen Maybachufer und Pflügerstr. gesperrt, Asphaltierungsarbeiten, bis Ende November 2018',
        type  => 'handicap',
        source_id => '2147343178',
@@ -27887,8 +27887,9 @@ EOF
        text  => 'Krumme Str.: Bauarbeiten, Einbahnstraßenregelung, Fahrbahn gesperrt in Richtung Wilmersdorfer Str.',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-09-17
-	q4::inwork; 3975,11087 3942,11010 3827,10980
+#: last_checked: 2018-10-12
+#: check_frequency: 7d
+	q4::inwork; 3975,11087 3942,11010 3820,10987
 EOF
      },
      { from  => 1537297950, # 2018-09-18 21:12
@@ -28076,8 +28077,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-10-03
-#: check_frequency: 7d
+#: last_checked: 2018-10-11
+#: check_frequency: 14d
 	2::inwork 14854,8964 14614,9052
 EOF
      },
@@ -28167,6 +28168,30 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4::inwork; 9523,12019 9536,11922
+EOF
+     },
+     { from  => 1539468000, # 2018-10-14 00:00
+       until => 1540753200, # 2018-10-28 20:00
+       text  => 'Eisenacher Str.: Bauarbeiten, Einbahnstraßenregelung, Einfahrt Richtung Grunewaldstr. verboten, 15.10.2018 bis 28.10.2018',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2018/pressemitteilung.747946.php',
+       data  => <<EOF,
+	q4::inwork; 6769,8996 6735,9103 6709,9234
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => "entlang der Erpe, Bahnbrücke: Bauarbeiten der DB, Weg kann gesperrt sein",
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX wird nach den Bauarbeiten hier noch ein Weg existieren? Wird die nördliche Anbindung mit Treppe oder Rampe realisiert?
+#: XXX man kann aber passieren (z.B. mittags am 2018-07-27)
+#: XXX laut osm-Notiz https://www.openstreetmap.org/note/1428158 "fast fertig"
+#: add_fragezeichen: Ist der Weg wieder hergestellt?
+#: last_checked: 2018-08-29
+# REMOVED --- #: check_frequency: 90d
+#: next_check: 2018-10-22
+	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
 EOF
      },
     );

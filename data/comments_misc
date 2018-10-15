@@ -163,7 +163,6 @@ Tordurchfahrt	CS 9341,6163 9367,6160
 Pfähle und hohe Bordsteine	CP2 2211,4280 2254,4376
 Uferweg am Plötzensee	CS 5618,14981 5455,15245 5391,15331 5306,15387 5134,15565 5073,15611 5040,15606 5015,15564 5051,15508 5084,15415 5075,15354 5005,15213
 (Im Schäferfeld - Wetzlarer Str.): am Baggersee entlang	CS -8563,-3805 -8562,-3849 -8661,-3971 -8982,-3860 -9002,-3896 -8970,-3923
-(Eichborndamm - General-Woyna-Str.): Weg parallel zur S-Bahn-Trasse	CS 4223,18982 4285,18983 4353,18986 4475,18998 4577,19009
 Paul-Francke-Str.: Privatstraße durch die Genossenschaftssiedlung des Beamtenwohnungsvereins	CS 9901,18522 10006,18502 10013,18545 9994,18595 9916,18610
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52468,174931 52439,174817 52407,174744 52263,174673
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52263,174673 52064,174635 52129,174507
@@ -381,7 +380,7 @@ Am Rudower Waldrand: Anlieger frei	CS 15467,349 15476,332 15600,116 15707,-6
 Gertrud-Dorka-Weg: Privatstraße	CS 17848,-173 17796,-97
 Landhausweg: Anlieger frei	CS 16308,1585 16464,1194 16489,1185
 Ausgeschildert zum Heckerdamm 181-213 und zur Siedlung Juliusruh	CP2; 3765,14746 3735,14419
-(Goerdelerdamm - Nonnendamm): Anlieger frei	CS 3103,14187 3007,14078
+(Goerdelerdamm - Nonnendamm): Anlieger frei	CS 3106,14195 3007,14078
 (Goerdelerdamm - Nonnendamm): Richtung Schleuse Charlottenburg	CP2; 2149,13775 2247,13805
 Ausgeschildert als Wohlrabedamm 24-30	CP2; 1216,13978 1252,14007
 Am Igelgrund: Privatstraße	CS 9068,20446 9126,20515

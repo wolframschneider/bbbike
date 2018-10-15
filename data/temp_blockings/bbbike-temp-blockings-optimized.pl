@@ -1166,7 +1166,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 # REMOVED --- #: tempex: volatile
 # REMOVED --- 2::night 14838,11410 14792,11391
 #: XXX wird hier dauerhaft gesperrt sein? (zurzeit kann man sich noch an den Bauzäunen vorbei mogeln)
-#: last_checked: 2018-10-03
+#: last_checked: 2018-10-14
 #: check_frequency: 7d
 	2::inwork 14838,11410 14949,11474
 ',
@@ -1547,7 +1547,16 @@ Kleistpark	2::night 7430,9576 7501,9573 7512,9572
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	q4::inwork; 12189,16578 12045,16574
+',
+         'from' => 1539532357,
+         'id' => 2538,
+         'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-15-10-18-',
+         'text' => 'Langhansstr. : Baustelle, Fahrbahn Richtung Prenzlauer Promenade zwischen Heinersdorfer Str. und Prenzlauer Promenade gesperrt, bis 20. Oktober 2018 abends',
+         'type' => 'handicap',
+         'until' => 1540058400
+       },
        undef,
        undef,
        undef,
@@ -1851,7 +1860,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
 #: XXX laut fritz Ende 2018, laut vmz Ende 2018
-#: last_checked: 2018-06-30
+#: last_checked: 2018-10-12
 #: next_check: 2018-12-31
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
@@ -2128,7 +2137,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-09-28
+#: last_checked: 2018-10-11
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -2277,8 +2286,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: add_fragezeichen: Ist der Uferweg noch immer gesperrt? Falls nicht: hat sich die Qualität des Weges verbessert?
 #: priority: #A
 #: next_check_id: MENTZELPARK-2018
-#: last_checked: 2018-08-29 (Umleitungsausschilderung existiert)
-	2::inwork 21696,5053 21600,5221 21512,5404 21481,5429
+#: last_checked: 2018-10-14
+	2::inwork 21696,5053 21600,5221 21512,5404 21481,5429 21447,5414
 ',
          'from' => undef,
          'id' => 2952,
@@ -2324,7 +2333,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX vielleicht wird die Fahrbahn repariert?
 #: XXX laut Schild der Wasserbetriebe bis Februar 2019
-#: last_checked: 2018-10-08
+#: last_checked: 2018-10-13
 #: check_frequency: 14d
 #: priority: #A
 	q3::inwork; 13198,12311 13243,12222
@@ -2386,7 +2395,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-10-09
+#: last_checked: 2018-10-12
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 ',
          'from' => undef,
@@ -2512,16 +2521,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1572562800
        },
-       {
-         'data' => '	2::inwork -7352,15954 -7347,15944 -7311,15931 -7280,15967 -7211,15920
-',
-         'from' => 1532988000,
-         'id' => 2995,
-         'source_id' => 'https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2018/pressemitteilung.729141.php',
-         'text' => 'Spektegrünzug - Mauerweg: Bauarbeiten, Weg komplett gesperrt, zwischen August 2018 und Oktober 2018',
-         'type' => 'gesperrt',
-         'until' => 1541026799
-       },
+       undef,
        {
          'data' => '	2::inwork 28595,12846 28593,12671
 ',
@@ -2549,7 +2549,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-10-04
+#: last_checked: 2018-10-12
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -2572,7 +2572,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
 #: last_checked: 2018-09-22
-#: check_frequency: 21d
+# REMOVED --- #: check_frequency: 21d
+#: next_check: 2018-10-21
 	q2::inwork; 4502,11740 4574,11587
 ',
          'from' => undef,
@@ -2600,7 +2601,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '# REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
-	q4::inwork; 18809,9133 18790,9018 18770,8898 18737,8686 18733,8650 18733,8633
+# REMOVED (hier keine Verbotsschilder mehr) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
+	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
 ',
          'from' => undef,
          'id' => 3007,
@@ -2641,16 +2643,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1540918800
        },
-       {
-         'data' => '	q4::inwork 12066,9558 12074,9689 12085,9778
-',
-         'from' => 1536172293,
-         'id' => 3012,
-         'source_id' => '2147343178',
-         'text' => 'Friedelstraße: zwischen Maybachufer und Pflügerstr. gesperrt, Asphaltierungsarbeiten, bis Ende November 2018',
-         'type' => 'handicap',
-         'until' => 1543597200
-       },
+       undef,
        undef,
        {
          'data' => '#: XXX ist das Tor tatsächlich geschlossen? und wenn ja, wann wird es wieder geöffnet?
@@ -2701,8 +2694,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2018-09-17
-	q4::inwork; 3975,11087 3942,11010 3827,10980
+         'data' => '#: last_checked: 2018-10-12
+#: check_frequency: 7d
+	q4::inwork; 3975,11087 3942,11010 3820,10987
 ',
          'from' => undef,
          'id' => 3018,
@@ -2739,8 +2733,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-10-03
-#: check_frequency: 7d
+#: last_checked: 2018-10-11
+#: check_frequency: 14d
 	2::inwork 14854,8964 14614,9052
 ',
          'from' => undef,
@@ -2794,6 +2788,32 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Charlottenstr.: Einbahnstraße zwischen Jägerstr. und Taubenstr., offen Richtung Norden, bis 15. Oktober 2018',
          'type' => 'handicap',
          'until' => 1539633600
+       },
+       {
+         'data' => '	q4::inwork; 6769,8996 6735,9103 6709,9234
+',
+         'from' => 1539468000,
+         'id' => 3034,
+         'source_id' => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2018/pressemitteilung.747946.php',
+         'text' => 'Eisenacher Str.: Bauarbeiten, Einbahnstraßenregelung, Einfahrt Richtung Grunewaldstr. verboten, 15.10.2018 bis 28.10.2018',
+         'type' => 'handicap',
+         'until' => 1540753200
+       },
+       {
+         'data' => '#: XXX wird nach den Bauarbeiten hier noch ein Weg existieren? Wird die nördliche Anbindung mit Treppe oder Rampe realisiert?
+#: XXX man kann aber passieren (z.B. mittags am 2018-07-27)
+#: XXX laut osm-Notiz https://www.openstreetmap.org/note/1428158 "fast fertig"
+#: add_fragezeichen: Ist der Weg wieder hergestellt?
+#: last_checked: 2018-08-29
+# REMOVED --- #: check_frequency: 90d
+#: next_check: 2018-10-22
+	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
+',
+         'from' => undef,
+         'id' => 3035,
+         'text' => 'entlang der Erpe, Bahnbrücke: Bauarbeiten der DB, Weg kann gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );

@@ -893,7 +893,6 @@ Konrad-Zuse-Ring (Potsdam): Ist die Straße schon fertig gestellt? Qualität?	? -1
 Jahnpromenade (Erkner): Qualität?	? 34325,3183 34352,3189 34493,3339
 Am Uferpark (Potsdam): genaue Lage der Straße, Qualität?	? -13381,-2943 -13494,-2850
 Luisenhof (Potsdam): genaue Lage der Straße, Qualität?	? -13481,-2956 -13629,-2860
-(Weg am Grimbartgraben): Qualität? Nachts beleuchtet?	? -1647,22153 -1482,22104 -1398,22050 -1148,21872 -1023,21788 -947,21737 -795,21685 -726,21683
 Straßen in Döberitz: genaue Straßennamen, Qualität?	? -11635,13818 -11709,13476 -12032,13708 -12089,13741 -12596,13763 -12956,13814 -13017,13815 -13375,13807 -13371,13691 -13400,13622
 Hohenstein - Strausberg: gibt es zwischen Hohenstein und Strausberg mittlerweile einen Radweg? Ist es ein Zweirichtungsradweg? Asphaltiert?	? 48635,18552 47672,18859 46386,18523 44085,19049 43857,19113 43686,19241
 Heinersdorf: Qualität? Liegt hier auch Verbundsteinpflaster?	? 63261,76791 63225,76949 63279,77202 63342,77286 63390,77441 63293,77739
@@ -951,12 +950,10 @@ Bergstr. (Stahnsdorf): Qualität des südlichen Abschnitts?	? -3168,-2498 -3097,-2
 Friedrich-Naumann-Str. (Stahnsdorf): Qualität des östlichen Abschnitts?	? -3410,-2654 -3317,-2742 -3209,-2797 -3008,-2767 -2835,-2726 -2766,-2683 -2706,-2640 -2632,-2591 -2590,-2557 -2416,-2394 -2394,-2378 -2275,-2314 -2113,-2215
 Am Wiesengrund (Kienwerder): Qualität des südlichen Abschnitts?	? -3835,-3613 -3867,-3713 -3915,-3906 -3911,-4055
 Uni Potsdam: Qualität des Wegs?	? -8194,-1908 -8174,-1783 -8157,-1670
-Philipp-Gerlach-Weg - Brunsbütteler Damm: existiert hier für Radfahrer eine Verbindung? Qualität? Nachts beleuchtet?	? -7801,13697 -7730,13857
 Blumenstr. - Am Krongut: existiert hier eine Verbindung für Radfahrer? Qualität? Nachts beleuchtet?	? -15050,268 -15043,148 -15085,144
 Buchhorster Str.: Qualität?	? 34310,1418 34190,1425 34018,1436 33644,1463 33491,1480 33350,1494
 Bruno-H.-Bürgel-Str. (Teltow): Qualität des westlichen Abschnitts?	? 2809,28 2951,123
 Wiesenhagen - Luckenwalde: Qualität? Teilweise für Autos gesperrt?	? -210,-26131 -302,-26152 -426,-26222 -714,-26272 -1138,-26308 -1214,-26368 -1239,-27020 -1267,-27849 -1297,-28690 -1310,-29138 -1342,-29767 -1362,-29950 -1431,-30288 -1534,-30614 -1425,-30685 -1488,-30911 -1395,-30961 -1396,-31007 -1448,-31007 -1544,-31210 -1516,-31322 -1565,-31404
-Straße 184 (Tegel): existiert hier ein Weg? Qualität?	? 3306,20773 3306,20773 3458,20671 3458,20671
 Am Hämphorn (Potsdam): Qualität?	? -9842,2798 -9705,2679
 Am Meedehorn (Potsdam): Qualität? Genaue Lage?	? -10086,1886 -9926,1829 -9704,1920 -9573,2102
 Am Weißen See (Potsdam): Qualität?	? -14418,3203 -14556,3285
@@ -1021,7 +1018,6 @@ Lutherstadt Wittenberg - Coswig: Elberadweg, Qualität der Wege?	? -50427,-59455 
 Zeesener Str. (Bestensee): Qualität?	? 26766,-17782 26811,-17743 26920,-17598 27031,-17378 27023,-17309 27038,-17271 27054,-17248 27081,-17125 27084,-17076
 Menz - Großwoltersdorf: Qualität des Radwegs?	? -13455,75227 -13662,75159 -12578,74452 -12341,73942 -12394,73760 -12288,73702 -12250,73762
 Steinförde - Fürstenwalde (nördliche Verbindung): Qualität? Gibt es für Radfahrer (teilweise) Radwege?	? -12573,86500 -12462,86602 -12459,86661 -12243,87189 -12163,87296 -12068,87338 -11268,87264 -10925,87110 -10681,87113 -9218,86904 -9099,86982 -8978,86969
-Spektegrünzug - An der Tränke: existiert hier eine Verbindung? Qualität? Nachts beleuchtet?	? -7211,15920 -7145,15910
 Richard-Wagner-Str. (Schulzendorf): Qualität im südöstlichen Abschnitt?	? 24424,-4656 24494,-4719 24526,-4753
 Wiesenstr. (Zeuthen): Qualität im nordwestlichen Abschnitt? Ist hier auch unbefestigt?	? 25337,-5516 25025,-5155 24903,-5113
 Am Heideberg (Zeuthen): Qualität im westlichen Abschnitt? Liegt hier auch Kleinsteinpflaster?	? 25321,-5848 24730,-5712
@@ -1042,13 +1038,13 @@ Sanddornweg (Wildau): Fahrbahnbeschaffenheit im östlichen Abschnitt? Liegt hier 
 Sanddornweg (Wildau): Fahrbahnbeschaffenheit im westlichen Abschnitt? Liegt hier auch Asphalt?	? 25394,-8340 25365,-8336 25326,-8325
 Horst-Kunze-Weg - Kablower Weg: Qualität der Straße? Nachts beleuchtet?	? 23497,705 23469,640 23418,566 23453,535 23425,471 23225,192
 Wielandstr. Waldpromenade: existiert ein Zugang?	? 22976,8526 22954,8506
-Neuer Mauerweg - Kreuzsteg: existiert hier eine Verbindung?	? 8014,19149 8062,19212
+Päwesiner Str.: sind die Kreuzungen Ebersdorfer Str. und Amalienhofstr. Rechts-vor-links-Kreuzungen?	? -4818,13347 -4771,13214
 # added from ampeln-orig
 geschlossen bei Bedarf (?) (Zbr)	? 27649,-11766
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
 # added from strassen
 Am Waldkiefernweg (heißt die Straße "Am Waldkiefernpfad" oder "Am Waldkiefernweg"?)	? -6340,6500 -6268,6610 -6302,6690
-(Neuer Mauerweg) (Ist der neue Mauerweg beleuchtet? Führt die offizielle Mauerweg-Beschilderung über den neuen Weg?)	? 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8014,19149 8347,18916 8476,18773
+(Neuer Mauerweg) (Führt die offizielle Mauerweg-Beschilderung über den neuen Weg?)	? 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8014,19149 8347,18916 8476,18773
 # added from landstrassen
 B5 (Umfahrung Nauen) (ist die Umfahrung Nauen auch für Radfahrer benutzbar?)	? -24421,19803 -24681,20018 -24904,20093 -25871,20229 -26745,20437 -27095,20987 -27689,21958 -28075,22250
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
@@ -1102,10 +1098,12 @@ Gehweg für Radfahrer frei (Sind die Gehwege zwischen Heinersdorfer Str. und Stei
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert (Ist die Tino-Schwierzina-Str. zwischen Aidastr. und Romain-Rolland-Str. mittlerweile komplett asphaltiert?)	? 12736,17998 12462,17814
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 Hildburghauser Str.: Asphalt (Hat die Fahrbahn nach den Bauarbeiten nun eine bessere Qualität?)	? 5223,1318 5414,1304 5585,1275
-(Adlergestelle - Sportpromenade/Bammelecke): Waldweg, loser Schotter (wird sich die Qualität hier bessern (insbesondere: was passiert mit dem losen Schotter)?)	? 24485,-667 24758,-268 25172,345
+(Adlergestell - Sportpromenade/Bammelecke): Waldweg, loser Schotter (wird sich die Qualität hier bessern (insbesondere: was passiert mit dem losen Schotter)?)	? 24485,-667 24758,-268 25172,345
 Patschkauer Weg: Kopfsteinpflaster (hat sich nach den Bauarbeiten die Qualität der Fahrbahn verbessert?)	? 3132,4803 3344,4488
 (Mauerweg am Eiskeller): asphaltiert (ist dieser Abschnitt tatsächlich asphaltiert?)	? -7990,19888 -8266,19811 -8469,19845 -8494,19713 -8448,19710 -8521,19390 -8372,19402 -8272,19086 -8206,19007 -8011,19059
+Am Fort: schlechtes Kopfsteinpflaster (ist die Straße "Am Fort" auch im südlichen Abschnitt gepflastert?)	? -7948,12634 -7959,12439 -7967,12333 -7976,12217
 Alter Radelander Weg: loser Schotter (hat sich die Qualität des Waldwegs gebessert?)	? 25007,-2620 24224,-1271 24158,-1153
+Schwabstr.: Kopfsteinpflaster (ist das Kopfsteinpflaster in der Schwabstr. mäßig oder schlecht?)	? 8182,17746 8409,17774
 # added from qualitaet_l
 Neuruppin - Wuthenow - Gnewikow - Wustrau-Altfriesack: teilweise gut, teilweise mäßiges Kopfsteinpflaster (wird sich die Qualität nach den Bauarbeiten verbessern?)	? -29902,57202 -29816,57117 -29490,56714 -29243,56187 -29198,55801 -29109,55374 -28677,55014 -28288,54212 -28911,54055 -29276,53427 -29210,52915 -28736,52387 -28368,51517 -28001,50966 -27421,50349 -27196,50015 -27035,49829 -25968,49631 -25719,49500 -25060,48842
 Jühnsdorf: Asphalt (existiert durch Jühnsdorf ein Radweg?)	? 9792,-12090 9345,-11425 9472,-11297 9578,-10891
@@ -1229,5 +1227,6 @@ F3.5 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from bbbike-temp-blockings-optimized
 Stillerzeile: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten (Wann sind die Bauarbeiten beendet?)	? 24629,5831 24443,5765 24387,5672 24362,5635 24320,5621
-Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt (Ist der Uferweg noch immer gesperrt? Falls nicht: hat sich die Qualität des Weges verbessert?)	? 21696,5053 21600,5221 21512,5404 21481,5429
+Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt (Ist der Uferweg noch immer gesperrt? Falls nicht: hat sich die Qualität des Weges verbessert?)	? 21696,5053 21600,5221 21512,5404 21481,5429 21447,5414
 Paul-Schwarz-Promenade: bevorstehende Sperrung in Höhe Benjamin Franklin (Haben die Bauarbeiten schon angefangen und ist die Sperrung aktiv?)	? 4947,3672 5018,3810 5074,3900 5139,3997 5225,4095
+entlang der Erpe, Bahnbrücke: Bauarbeiten der DB, Weg kann gesperrt sein (Ist der Weg wieder hergestellt?)	? 24650,6034 24647,5981 24637,5960 24584,5914
