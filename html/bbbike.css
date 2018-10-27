@@ -438,5 +438,6 @@ div#more_cities_inner {
 }
 
 /* hide google maps pay request */
+div#map > div:nth-child(2) { display: none; }
 div#map > div:nth-child(3) { display: none; }
 
