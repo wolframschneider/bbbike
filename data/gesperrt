@@ -847,7 +847,6 @@ Heinrichplatz	1 11754,10516 11708,10497
 Heinrichplatz	1 11734,10563 11754,10516
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
-Knoten Märkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
 Müggelheimer Damm	2::igndisp 23476,3829 23368,3894
 (Wollestr. - Mühlenstr.)	1 -10790,-1178 -10787,-1162 -10730,-1103 -10691,-1097 -10648,-1130
@@ -1869,6 +1868,8 @@ Märkische Allee -> Parkweg an der Neuen Wuhle: Linksabbiegen verboten	3::igndisp
 Parkweg an der Neuen Wuhle -> Märkische Allee: Linksabbiegen verboten	3::igndisp 20983,17846 20889,17838 20843,17745
 Märkische Allee -> Wuhletalstr.: Linksabbiegen verboten	3::igndisp 20889,17838 20912,17872 20855,17807
 Mittelstreifen	3nocross::ignrte 19896,11688 19918,11891 19928,11978 19940,12076 19944,12115 19947,12140 19953,12177 19960,12222 19967,12270 19982,12405 19994,12484
+Märkische Allee -> Alt-Friedrichsfelde: Mittelstreifen	3::igndisp 19896,11688 19918,11891 19890,11830
+Alt-Biesdorf -> Märkische Allee: Mittelstreifen	3::igndisp 19979,11774 19918,11891 19896,11688
 Alt-Biesdorf -> Alt-Friedrichsfelde: Mittelstreifen	3::igndisp 19979,11774 19918,11891 19890,11830
 Haydnstr. -> Märkische Allee: Mittelstreifen	3::igndisp 20006,12128 19947,12140 19944,12115
 Märkische Allee -> Haydnstr.: Mittelstreifen	3::igndisp 19953,12177 19947,12140 20006,12128
@@ -2546,6 +2547,7 @@ tragen (Treppe, 18 Stufen)	0:25:-66 25902,-6006
 tragen (Treppe, 19 Stufen)	0:25:-194 25928,-5990
 tragen (Treppe)	0:120:-184 -14199,-707
 tragen (Treppe, 22 Stufen)	0:30:87 26337,-11817
+tragen (Treppe, 47 Stufen, mit Führungsrampe für Fahrräder)	0:60:8 8376,8813
 Drängelgitter	BNP:3:-175:trailer=10 16433,12626
 Drängelgitter	BNP:3:2:trailer=10 16428,12741
 Drängelgitter	BNP:3:4:trailer=10 7916,17576
@@ -2994,6 +2996,7 @@ Drängelgitter	BNP:3:-192:trailer=10 25081,-9433
 Drängelgitter	BNP:3:28:trailer=10 1409,15177
 Drängelgitter	BNP:3:5:trailer=10 26682,-13082
 Drängelgitter	BNP:1:-249:trailer=5 8363,13402
+Voltairestr.: wegen Baustelle Richtung Westen gesperrt, Ausweichen auf Gehweg	1s:inwork 11329,12497 11209,12430
 Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5018,3810 5074,3900 5139,3997 5225,4095
 (Neuer Mauerweg): noch abgesperrt	2::inwork 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8014,19149 8347,18916 8476,18773
 (Neuer Mauerweg): noch abgesperrt	2::inwork 7572,19490 7540,19550

@@ -3,6 +3,7 @@
 #: note: XXX_* categorization done 2008-01-26
 #:
 	X::inwork 10130,15653
+Gegenverkehrsregelung	X::inwork 16313,10747
 	X 9229,8785
 	X 8982,8781
 	X 8594,8777
@@ -268,6 +269,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10512,12039
 	X 10738,12364
 	X 11347,12223
+	F 11388,12202
 	X 11250,11715
 	X 11094,11377
 	X 10431,12709
@@ -2636,7 +2638,6 @@ UBB, halbstündlich	B 51270,179246
 	B -26569,-45
 	B -32143,-211
 	B -35377,-238
-	B -41043,-435
 	B -43949,-847
 	B -48542,-2958
 	B -59187,-3567

@@ -298,13 +298,13 @@ EOF
      #   #file  => 'rixdorfer_weihnachtsmarkt.bbd', # XXX do not use anymore!!!
      #   data => '', # dummy
      # },
-     { from  => $isodate2epoch->("2017-11-26 00:00:00"), # 1353884400, # 2012-11-26 00:00, # 1290962654, # PERIODISCH! # früher: 1102672800, # 2004-12-10 11:00
-       until => $isodate2epoch->("2017-12-23 23:59:59"), # 1356303599, # 2012-12-23 23:59, # 1293145199, # PERIODISCH! # früher: 1102805999, # 2004-12-11 23:59
+     { from  => $isodate2epoch->("2018-11-25 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-12-23 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 22, months => 11]],
-       text  => 'Spandauer Weihnachtsmarkt, vom 27.11.2017 bis 23.12.2017',
+       text  => 'Spandauer Weihnachtsmarkt, vom 26.11.2018 bis 23.12.2018',
        type  => 'gesperrt',
-       source_id => 'http://www.partner-fuer-spandau.de/Weihnachtsmarkt-2014_683_0.html',
+       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971839-955635-spandauer-weihnachtsmarkt-in-der-altstad.html',
        data  => <<EOF,
 	2::xmas -3275,14407 -3231,14383 -3204,14368 -3155,14340
 	2::xmas -3275,14407 -3338,14333
@@ -3357,13 +3357,13 @@ EOF
 	1 -1664,-1720 -1715,-1767 -1921,-1931 -2040,-2177
 EOF
      },
-     { from  => $isodate2epoch->("2017-11-26 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-01-07 23:59:59"), # 1357513199, # 2013-01-06 23:59 # 1325458800, # 2012-01-02 00:00 # PERIODISCH!
+     { from  => $isodate2epoch->("2018-11-25 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-01-06 23:59:59"), # 1357513199, # 2013-01-06 23:59 # 1325458800, # 2012-01-02 00:00 # PERIODISCH!
        periodic => 1,
        recurrences => [['yearly', days => 20, months => 11]],
-       text  => 'Weihnachtsmarkt an der Gedächtniskirche, vom 27. November 2017 bis 07. Januar 2018',
+       text  => 'Weihnachtsmarkt an der Gedächtniskirche, vom 26. November 2018 bis 06. Januar 2019',
        type  => 'gesperrt',
-       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/charlottenburg-wilmersdorf/971524-1323017-weihnachtsmarktanderged%C3%A4chtniskirche.html',
+       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971524-955635-weihnachtsmarktanderged%C3%A4chtniskirche.html',
        data  => <<EOF,
 # sowieso schon mit q4 markiert, deshalb -> 2
 	2::xmas 5829,10964 5782,10884
@@ -6768,6 +6768,7 @@ EOF
        until => $isodate2epoch->("2017-12-30 23:59:59"), # 1356562740, # 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
        periodic => 1,
        recurrences => [['yearly', days => 18, months => 11]],
+       recurrence_prewarn_days => -360, # XXX findet 2018 und vermutlich auch 2019 nicht statt
        text  => 'Nostalgischer Weihnachtsmarkt Opernpalais: Wege rund um die Hedwigs-Kathedrale nicht passierbar, vom 29.11. bis 30.12.2017',
        type  => 'gesperrt',
        source_id => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/mitte/971793-1328132-weihnachtsmarktamopernpalais.html',
@@ -11886,7 +11887,7 @@ EOF
 	3 9489,12263 9475,12365 9462,12481
 	3 7534,10850 7820,10768 7963,10716
 	3 6681,10959 6824,10904 6918,10858 6929,10852
-	3 6869,11567 6809,11570 6512,11608
+	3 6869,11567 6809,11570 6679,11602 6512,11608
 	3 7209,10205 7238,10299 7275,10418
 	3 7963,10716 7820,10768 7534,10850
 	3 7828,11133 8000,11137 8102,11099
@@ -11900,7 +11901,7 @@ EOF
 	3 7478,10612 7689,10514 7849,10488
 	3 8442,11555 8542,11502 8573,11404
 	3 8442,11555 8542,11502 8596,11508
-	3 6512,11608 6809,11570 6869,11567
+	3 6512,11608 6679,11602 6809,11570 6869,11567
 	3 7429,10366 7413,10244 7384,10127
 	3 6719,10347 6753,10446 6743,10615 6725,10641
 	3 8172,11679 8226,11458 8232,11414
@@ -17096,12 +17097,12 @@ EOF
 	1::xmas 11209,12430 11273,12301
 EOF
      },
-     { from  => $isodate2epoch->("2017-11-26 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-01-01 23:59:59"), # 1 Tag (mindestens) für den Abbau
+     { from  => $isodate2epoch->("2018-11-25 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-01-01 23:59:59"), # 1 Tag (mindestens) für den Abbau
        periodic => 1,
        recurrences => [['yearly', days => 20, months => 11]],
        source_id => 'http://www.berlin.de/tickets/suche/detail.php?id=1090035',
-       text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 27.11.2017 bis 31.12.2017, Durchfahrt nicht möglich (Eintritt!)',
+       text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 26.11.2018 bis 31.12.2018, Durchfahrt nicht möglich (Eintritt!)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: note "WeihnachtsZauber auf dem Gendarmenmarkt"
@@ -17168,13 +17169,13 @@ EOF
 	q4::inwork -4614,-35852 -4603,-35730
 EOF
      },
-     { from  => $isodate2epoch->("2017-11-26 00:00:00"),
-       until => $isodate2epoch->("2017-12-26 23:59:59"),
+     { from  => $isodate2epoch->("2018-11-25 00:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2018-12-26 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 19, months => 11]],
-       text  => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, 27. November 2017 bis 26. Dezember 2017',
+       text  => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, 26. November 2018 bis 26. Dezember 2018',
        type  => 'gesperrt',
-       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/mitte/971680-1328132-winterweltampotsdamerplatz.html',
+       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971680-955635-winterweltampotsdamerplatz.html',
        data  => <<EOF,
 	2::xmas 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324
 #	2::temp 8318,11324 8280,11296 8278,11257
@@ -18043,7 +18044,7 @@ EOF
 	3 7131,10331 7033,10396 7245,10499
 	3 7131,10331 7033,10328 7060,10221
 	3 4485,10307 4503,10497 4513,10702
-	3 6869,11567 6809,11570 6512,11608
+	3 6869,11567 6809,11570 6679,11602 6512,11608
 	3 6725,10641 6743,10615 6753,10446 6719,10347
 	3 4847,10677 4847,10589 4828,10356
 	3 4381,10583 4371,10465 4360,10320
@@ -18062,7 +18063,7 @@ EOF
 	3 6841,11114 6880,11110 7115,11220
 	3 6884,12006 6828,12031 7026,12054
 	3 5829,10964 5782,10884 5669,10704
-	3 6512,11608 6809,11570 6869,11567
+	3 6512,11608 6679,11602 6809,11570 6869,11567
 	3 6540,11754 6778,11742 6980,11790
 	3 5669,10704 5782,10884 5829,10964
 	3 5047,10381 5076,10658 5079,10701
@@ -22587,6 +22588,7 @@ EOF
        until => $isodate2epoch->("2017-12-28 23:59:59"), #
        periodic => 1,
        recurrences => [['yearly', days => 20, months => 11]],
+       recurrence_prewarn_days => 21, # später nochmal prüfen
        text  => 'Weihnachtsmarkt am Luisenplatz: vermutlich geänderte Radverkehrsführung, 27.11.2017 - 28.12.2017',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -23992,7 +23994,7 @@ EOF
 #: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: priority: #A
-#: last_checked: 2018-10-10
+#: last_checked: 2018-10-25
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -24986,13 +24988,13 @@ EOF
 	q3::inwork; 14218,13834 14261,13932 14298,14015 14361,14145 14465,14210 14658,14328 14667,14336 14721,14379 14754,14406 14990,14537 15066,14579
 EOF
      },
-     { from  => $isodate2epoch->("2017-11-26 00:00:00"), # 1448146800, # 2015-11-22 00:00
-       until => $isodate2epoch->("2017-12-26 23:59:59"), # 1451257199, # 2015-12-27 23:59
+     { from  => $isodate2epoch->("2018-11-25 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-12-26 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 20, months => 11]],
-       text  => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 27. November 2017 bis 26. Dezember 2017',
+       text  => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 26. November 2018 bis 26. Dezember 2018',
        type  => 'handicap',
-       source_id => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/mitte/1304487-1328132-weihnachtsmarktaufdemalexanderplatz.html',
+       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarktaufdemalexanderplatz.html',
        data  => <<EOF,
 #: tempex: before(first_advent, monday)-YYYY1226 vvv
 	q3::xmas 11139,13008 11064,12910 10970,12822
@@ -26471,8 +26473,8 @@ EOF
 EOF
      },
      { from  => 1502386525, # 2017-08-10 19:35
-       until => $isodate2epoch->("2018-12-31 12:00:00"), # undef, # 1512082799, # 2017-11-30 23:59
-       text  => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), bis Ende Dezember 2018',
+       until => $isodate2epoch->("2019-04-01 12:00:00"), # undef, # 1512082799, # 2017-11-30 23:59
+       text  => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), voraussichtlich bis April 2019',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: CARSTENN-2017
@@ -26488,7 +26490,7 @@ EOF
 #: XXX wann sind die Bauarbeiten beendet?
 #: last_checked: 2018-09-12 vvv
 # REMOVED --- #: check_frequency: 30d
-#: next_check: 2018-12-31 vvv
+#: next_check: 2019-04-01 vvv
 # REMOVED (hier fertig) ---	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
 #: XXX hier laut fritz bis voraussichtlich 28.12.2018
@@ -27123,7 +27125,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_122462_LMS-BR_72',
        data  => <<EOF,
-#: note: zuletzt geprüft: 2018-09-22
+#: note: zuletzt geprüft: 2018-10-25
 	q4::inwork; 3623,10800 3835,10915
 EOF
      },
@@ -27142,7 +27144,7 @@ EOF
        text  => 'Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: osm_watch: way id="152046369" version="7"
+#: osm_watch: way id="152046369" version="8"
 #: add_fragezeichen: Ist der Uferweg noch immer gesperrt? Falls nicht: hat sich die Qualität des Weges verbessert?
 #: priority: #A
 #: next_check_id: MENTZELPARK-2018
@@ -27400,14 +27402,14 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1558022400, # 2019-05-16 18:00
+       until => $isodate2epoch->("2018-12-21 18:00:00"), # 1558022400, # 2019-05-16 18:00
        text  => 'Friesenstr.: Fahrbahn für Radfahrer verboten',
        type  => 'gesperrt',
        source_id => '2147342598',
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-10-15
+#: last_checked: 2018-10-25
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27564,8 +27566,8 @@ EOF
 EOF
      },
      { from  => 1531519200, # 2018-07-14 00:00
-       until => $isodate2epoch->("2018-11-02 18:00:00"), # 1537048799, # 2018-09-15 23:59
-       text  => 'Semmelweisstr.: zwischen Korkedamm und Lehmfeldsteig komplett gesperrt (geplatzte Wasserleitung), voraussichtlich bis Ende Oktober 2018',
+       until => $isodate2epoch->("2018-11-09 18:00:00"), # 1537048799, # 2018-09-15 23:59
+       text  => 'Semmelweisstr.: zwischen Korkedamm und Lehmfeldsteig komplett gesperrt (geplatzte Wasserleitung), voraussichtlich bis 9. November 2018',
        type  => 'gesperrt',
        source_id => 'LMS-BR_r_LMS-BR_139053_LMS-BR_72',
        data  => <<EOF,
@@ -27692,7 +27694,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-10-12
+#: last_checked: 2018-10-18
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27712,9 +27714,9 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
-#: last_checked: 2018-09-22
+#: last_checked: 2018-10-25
 # REMOVED --- #: check_frequency: 21d
-#: next_check: 2018-10-21
+#: next_check: 2018-11-15
 	q2::inwork; 4502,11740 4574,11587
 EOF
      },
@@ -27862,13 +27864,14 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Thielallee, Corrensplatz: Bauarbeiten, Fahrbahn zwischen Boetticherstr. und Thieallee gesperrt sowie Thielallee Richtung Norden ab Corrensplatz gesperrt',
+       text  => 'Thielallee: Bauarbeiten, Fahrbahn am Corrensplatz Richtung Norden gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-09-12 vvv
-#: next_check: 2018-10-18 vvv
-	q4::inwork 2434,4299 2407,4280
-	q4::inwork; 2407,4280 2429,4385
+#: last_checked: 2018-10-25 vvv
+#: next_check: 2018-11-01 vvv
+# REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
+	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
+	2::inwork 2417,4327 2434,4299
 #: next_check ^^^
 #: last_checked ^^^
 EOF
@@ -27879,18 +27882,18 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: JUNGFERNSTIEG-2018
+#: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: last_checked: 2018-09-12
 #: check_frequency: 7d
 	q4::inwork 5229,2395 5332,2568 5425,2735 5510,2883
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1540481476, # undef, # XXX
        text  => 'Krumme Str.: Bauarbeiten, Einbahnstraßenregelung, Fahrbahn gesperrt in Richtung Wilmersdorfer Str.',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-10-12
-#: check_frequency: 7d
+# REMOVED (beendet) --- #: add_fragezeichen: Ist die Krumme Straße wieder in beiden Richtungen befahrbar? --- #: last_checked: 2018-10-12 --- #: check_frequency: 7d
 	q4::inwork; 3975,11087 3942,11010 3820,10987
 EOF
      },
@@ -28187,8 +28190,50 @@ EOF
        text  => 'Hauptstr. (Französisch-Buchholz): stadteinwärts zwischen Triftstr. und Mühlenstr. Bauarbeiten, Fahrbahn gesperrt, Radfahrer können schiebend passieren, bis Mitte Dezember 2018 ',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX_prog vermutlich eigentlich q3-
-	q3::inwork; 12185,23021 12214,22918 12205,22696 12187,22486
+#: by: https://www.berliner-woche.de/franzoesisch-buchholz/c-bauen/die-kanaele-werden-erneuert_a185738
+#: source_id: 2147343329
+# REMOVED (vermutlich hier nicht) ---	q3::inwork; 12185,23021 12214,22918 12205,22696
+	q3::inwork; 12205,22696 12187,22486
+EOF
+     },
+     { from  => 1539803939, # 2018-10-17 21:18
+       until => $isodate2epoch->("2018-12-14 18:00:00"), # 1544914799, # 2018-12-15 23:59
+       text  => 'Soldiner Str.: Bauarbeiten zwischen Prinzenallee und Stockholmer Str., Fahrbahn Richtung Westen gesperrt, bis Mitte Dezember 2018',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147343335
+	q4::inwork; 9082,16982 8904,17059
+EOF
+     },
+     { from  => 1540072800, # 2018-10-21 00:00
+       until => $isodate2epoch->("2018-11-16 18:00:00"), # 1542322799, # 2018-11-15 23:59
+       text  => 'Friedrich-Engels-Str.: Bauarbeiten, Richtung Rosenthal zwischen Kastanienallee und Nesselweg gesperrt, eventuell ist der Radverkehr auch betroffen, bis Mitte November 2018 ',
+       type  => 'handicap',
+       source_id => '2147343342',
+       data  => <<EOF,
+#: XXX dubios: es existiert doch ein separater Zweirichtungsradweg?
+#: by: https://twitter.com/VIZ_Berlin/status/1054225852764958720 (Radverkehr vsl. nicht betroffen)
+	q4::inwork; 8904,20596 8789,20763 8764,20799 8698,20897 8610,21000 8513,21099
+EOF
+     },
+     { from  => 1540332000, # 2018-10-24 00:00
+       until => 1541631600, # 2018-11-08 00:00
+       text  => 'Fußgängerbrücke Waldbacher Weg: kurzzeitige Sperrungen wegen Bauarbeiten möglich, vom 25.10.2018 bis zum 07.11.2018',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.751474.php',
+       data  => <<EOF,
+	2::inwork 20338,11991 20387,12021
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Heilbronner Str./Kracauerplatz: Bauarbeiten, Fahrbahn gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: http://www.dafmap.de/d/berlin.html?id=4424&mt=0&zoom=17
+#: last_checked: 2018-10-25
+#: add_fragezeichen: Sind die Bauarbeiten beendet?
+	q4::inwork 3013,10553 3093,10594
 EOF
      },
     );

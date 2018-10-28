@@ -1258,8 +1258,7 @@ Heerstr.	1::igndisp -6675,12632 -7294,12833
 #: confirmed_by: srt
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 #: by: ^^^
-#: note: nicht explizit verboten, aber es existieren "Radfahrerführungsschilder" sowohl an der Straße Alt-Biesdorf Richtung Norden als auch Märkische Allee Richtung Osten
-Knoten Märkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
+# REMOVED (mittlerweile gibt es Radspuren) --- #: note: nicht explizit verboten, aber es existieren "Radfahrerführungsschilder" sowohl an der Straße Alt-Biesdorf Richtung Norden als auch Märkische Allee Richtung Osten --- Knoten Märkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
 #: note: von der Fahrbahnseite von Westen aus gibt es keinen Zugang (Bordsteine, Pflanzungen)
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
 #: note: Benutzungspflicht des Radwegs um die Wendeschleife herum
@@ -2315,6 +2314,7 @@ tragen (Treppe, 19 Stufen)	0:25 25928,-5990
 tragen (Treppe)	0:120 -14199,-707
 #: note: zum RE-Bahnsteig sind es noch fünf zusätzliche Stufen, Aufzüge existieren
 tragen (Treppe, 22 Stufen)	0:30 26337,-11817
+tragen (Treppe, 47 Stufen, mit Führungsrampe für Fahrräder)	0:60 8376,8813
 #
 ###################################################################
 # Drängelgitter (BLOCKED_NARROWPASSAGE)
@@ -2951,6 +2951,12 @@ Drängelgitter	BNP:1::trailer=5 8363,13402
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: by: http://www.dafmap.de/d/berlin.html?id=3731&mt=0&zoom=18
+#: XXX man kann auf dem südlichen Gehweg (relativ breit, wenig Menschen) ausweichen
+# REMOVED (gibt's nicht mehr) --- : XXX mittlerweile gibt's auch auf dem Gehweg Bauarbeiten, so dass er enger geworden ist: q2- -> q3
+#: last_checked: 2018-10-25
+Voltairestr.: wegen Baustelle Richtung Westen gesperrt, Ausweichen auf Gehweg	1s:q2:inwork 11329,12497 11209,12430
+# 
 #: by: http://www.berliner-woche.de/steglitz/bauen/charit-bereitet-bau-eines-neuen-landesplatzes-am-campus-benjamin-franklin-vor-d143323.html ("mindestens 18 Monate lang komplett gesperrt")
 #: by: http://www.berliner-woche.de/steglitz/bauen/rettungs-helis-landen-kuenftig-auf-ueberdachter-promenade-d122014.html
 #: by: http://copterweb.de/wordpress/adac-rettungshubschrauber-christoph-31-umgezogen/
@@ -2976,7 +2982,7 @@ Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5
 Donaustr.: Einbahnstraßenregelung wegen Bauarbeiten	1s:q4:inwork 12649,8535 12549,8616
 # 
 #: XXX wann ist hier wieder offen?
-#: last_checked: 2018-10-16
+#: last_checked: 2018-10-19
 #: check_frequency: 7d
 Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 # 
@@ -2989,8 +2995,8 @@ Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesp
 #: source_id: 2147343289 (bis Mitte 2021)
 #: source_id: 2147343291 (Einbahnstraße in der Glinkastr.)
 #: priority: #A vvv
-#: last_checked: 2018-10-11 vvv
-#: check_frequency: 7d vvv
+#: last_checked: 2018-10-25 vvv
+#: check_frequency: 14d vvv
 #: valid: -20210601 vvv
 Französische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch für Fußgänger	2:inwork 9076,12054 9183,12076
 #: source_id: 2147343292
@@ -2998,7 +3004,7 @@ Mauerstr..: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9108,11961 9076,12054
 #: source_id: 2147343293
 Jägerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9195,11972 9108,11961
 #: XXX laut googlemaps bis 30. Oktober 2018
-#: XXX laut VIZ hier Komplettsperrung, auch für Fußgänger --- aber ich bin am 2018-10-10 noch durchgekommen
+#: XXX laut VIZ hier Komplettsperrung, auch für Fußgänger --- aber am 2018-10-10, 2018-10-17, 2018-10-25 ist man noch durchgekommen
 #: source_id: 2147343290
 Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,12156
 #: valid ^^^
@@ -3008,7 +3014,7 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 #: next_check_id ^^^
 # 
 #: XXX nach den Bauarbeiten könnte man den Extra-Punkt in der Mitte wieder löschen
-#: last_checked: 2018-10-10
+#: last_checked: 2018-10-17
 #: check_frequency: 14d
 Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 10521,11228 10593,11120
 # 
@@ -3037,7 +3043,9 @@ Pepitapromenade: Bauarbeiten, teilweise noch gesperrt	2::inwork -2873,17369 -257
 # 
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/kranke-baeume-muessen-weichen-bezirksamt-laesst-anton-saefkow-park-aufwerten_a142536 (spätestens 2020 sind die Bauarbeiten beendet)
 #: by: https://www.stadtentwicklung.berlin.de/staedtebau/foerderprogramme/stadtumbau/Anton-Saefkow-Park.7788.0.html
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.750883.php
 #: last_checked: 2018-10-05
+#: next_check: 2018-10-23
 Volkspark Anton Saefkow: Bauarbeiten, Wege sind gesperrt	2::inwork 12620,14979 12639,14913 12592,14838 12640,14800
 # 
 #: next_check_id: KAUFHOF-2018
@@ -3235,11 +3243,11 @@ An den Parkbäumen: Bauarbeiten, Fahrbahn gesperrt	2::inwork -6530,6699 -6556,666
 #: osm_watch: way id="392904879" version="2" vvv
 #: osm_watch: way id="392904880" version="7" vvv
 #: next_check: 2018-12-31 vvv
-#: last_checked: 2018-08-21 vvv
+#: last_checked: 2018-10-18 vvv
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5579,12231 5535,12206 5518,12159
 Gutenbergstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 5317,12242 5518,12159
 #: last_checked ^^^
-#: last_checked: 2018-08-21
+#: last_checked: 2018-10-18
 Wegelystr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 5518,12159 5627,12105 5658,12082 5712,12033 5775,11975
 #: next_check ^^^
 #: osm_watch ^^^
@@ -3309,7 +3317,7 @@ Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtun
 # REMOVED (nur der östliche Abschnitt ist geblieben, aber relativ breit und relativ wenig Verkehr) --- #: XXX Bauarbeiten der Berliner Wasserbetriebe bis Dezember 2017 --- #: last_checked: 2017-07-23 --- #: next_check: 2017-12-01 --- #: valid: -20171231 --- Türrschmidtstr.: Bauarbeiten, Einbahnstraße	1s:q3 15541,10892 15649,10922 15756,10966
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3853&mt=0&zoom=16
-#: last_checked: 2018-10-12
+#: last_checked: 2018-10-18
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8969,11814
 # 
 #: next_check_id: NORDHAFENPARKWEST-2018
@@ -3326,6 +3334,7 @@ Nordhafenpark West: unter der Brücke gesperrt	2::inwork 7636,14414 7612,14449 75
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
+#: add_fragezeichen: Ist die Kieler Brücke noch immer gesperrt?
 #: last_checked: 2018-09-06
 #: check_frequency: 45d
 Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
@@ -3347,7 +3356,7 @@ Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7617,14420 7634,14406 7661,1439
 #: XXX Bauarbeiten (Erweiterung des Rütli-Campus?)
 #: XXX Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="137084083" version="9"
-#: last_checked: 2018-09-11
+#: last_checked: 2018-10-25
 #: check_frequency: 60d
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,9200 12548,9167
 # 
@@ -3455,7 +3464,7 @@ Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,689
 #: source_id: LMS-BR_r_LMS-BR_44
 #: XXX_prog: ":inwork" kann als Attribut nicht genutzt werden! vvv
 #: XXX laut fritz bis 31.12.2019
-#: last_checked: 2018-10-08 vvv
+#: last_checked: 2018-10-17 vvv
 #: check_frequency: 60d vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::inwork 9984,12426 9934,12420 9858,12410
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
@@ -3534,7 +3543,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: http://www.dafmap.de/d/berlin.html?id=3588&mt=0&zoom=16
 #: by: http://www.welt.de/kultur/buehne-konzert/article140641614/Ausschuss-prueft-Kostenexplosion-bei-Staatsoper.html (Eröffnung)
 #: XXX Spielbetrieb wird im Dezember 2017 aufgenommen
-#: last_checked: 2018-10-11 vvv
+#: last_checked: 2018-10-25 vvv
 #: check_frequency: 14d vvv
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9876,12298
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9798,12267 9795,12293 9780,12401
@@ -3548,13 +3557,13 @@ Oberwallstr.: Bauarbeiten, vollständig gesperrt	2::inwork 9883,12251 9876,12298
 # 
 #: XXX Eröffnung 2019 geplant
 #: by: http://www.dafmap.de/d/berlin.html?id=3598&mt=0&zoom=16
-#: last_checked: 2018-10-11
+#: last_checked: 2018-10-25
 #: check_frequency: 120d
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="2"
-#: last_checked: 2018-09-30
+#: last_checked: 2018-10-24
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 

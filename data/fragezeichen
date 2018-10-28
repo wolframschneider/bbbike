@@ -700,7 +700,7 @@ Pilzweg (Groß Glienicke): Qualität?	? -10174,5357 -10227,5101
 Am Waldfrieden (Groß Glienicke): Qualität?	? -10080,5069 -10227,5101 -10329,5131
 Nibelungenstr. (Groß Glienicke): Qualität?	? -10102,5131 -9986,5176 -9875,5231 -9778,5280
 Elbestr. (Teltow): Qualität?	? 288,-1040 213,-1180 145,-1262 109,-1291 4,-1363 -173,-1397 -248,-1400
-Werderscher Weg (Potsdam): Qualität? Beginnt die Straße schon an der Geschwister-Scholl-Str. oder etwas später? Wie ist die Qualität im westlichen Abschnitt?	? -15275,-1791 -15427,-1860 -15449,-1959 -15483,-1993 -15547,-1934 -15646,-1955 -15748,-1961 -15962,-2003 -16033,-2029
+Werderscher Weg (Potsdam): Wie ist die Qualität im westlichen Abschnitt?	? -15590,-1942 -15646,-1955 -15748,-1961 -15962,-2003 -16033,-2029
 Peter-Kühne-Siedlung: Qualität? Ausgeschildert? Nachts beleuchtet?	? -15962,-2003 -15961,-2168
 Feldweg (Potsdam): Qualität?	? -15449,-1959 -15307,-1982 -15144,-1979
 Feldweg (Potsdam-Grube): Qualität?	? -19316,4365 -19395,4322 -19486,4271 -19507,4261 -19538,4264 -19594,4268
@@ -880,7 +880,6 @@ Havelstr. (Teltow): Fahrbahnbeschaffenheit im südöstlichen Abschnitt?	? 288,-104
 Kleiststr. (Stahnsdorf): Fahrbahnbeschaffenheit im südlichen Abschnitt?	? -569,-1670 -497,-1802
 Schwarzer Weg (Kleinmachnow): Fahrbahnbeschaffenheit?	? -866,-1615 -872,-1602 -1036,-1315
 Bahnhofstr. (Stahnsdorf): Qualität des östlichen Endes?	? -2878,-3004 -2817,-2967 -2720,-2937 -2657,-2907
-Am Urnenfeld (Potsdam): Qualität?	? -18151,-1323 -18520,-1192 -18698,-1030 -18725,-827 -18682,-719
 Mies-van-der-Rohe-Str. (Potsdam): Qualität? Existiert die Straße schon? Existiert eine Verbindung zum Fußweg?	? -14216,372 -14086,337
 Peter-Behrens-Str. (Potsdam): Qualität? Existiert die Straße schon? Existiert eine Verbindung zum Fußweg?	? -14176,482 -14032,434
 Konrad-Wachsmann-Str. (Potsdam): Qualität? Existiert die Straße schon?	? -14114,580 -14254,659
@@ -1040,6 +1039,7 @@ Horst-Kunze-Weg - Kablower Weg: Qualität der Straße? Nachts beleuchtet?	? 23497,
 Wielandstr. Waldpromenade: existiert ein Zugang?	? 22976,8526 22954,8506
 Päwesiner Str.: sind die Kreuzungen Ebersdorfer Str. und Amalienhofstr. Rechts-vor-links-Kreuzungen?	? -4818,13347 -4771,13214
 # added from ampeln-orig
+#: note: eventuell im gleichen Zyklus wie die benachbarte Ampel?
 geschlossen bei Bedarf (?) (Zbr)	? 27649,-11766
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
 # added from strassen
@@ -1060,6 +1060,7 @@ Glasmeisterstr. (ist der westliche Abschnitt der Glasmeisterstr. für Autos gespe
 Zur Königlichen Hofbrauerei (Fahrbahnbeschaffenheit?)	? -12814,-2270 -12783,-2269 -12713,-2279
 Walter-Klausch-Str. (Ist der Mittelteil parallel zur Nuthestr. für Autos gesperrt?)	? -10133,-2903 -10046,-2974 -9963,-2980
 Zaunkönigweg (Qualität der Straße?)	? -18017,333 -18084,316 -18077,267 -18034,259
+Am Urnenfeld (Ist die Straße eine Fahrradstraße? Ist Autoverkehr zugelassen?)	? -18163,-1320 -18377,-1254 -18417,-1231 -18433,-1242 -18565,-1169 -18698,-1030 -18725,-827 -18682,-719
 Landstr. (Ist die Landstraße eine Einbahnstraße? Nur für Autos, oder auch für Radfahrer?)	? 948,-684 965,-585
 Karl-Marx-Str. (Qualität?)	? 950,29767 1078,29668 1141,29607 1272,29447 1366,29416
 Kantstr. (Qualität/Fahrbahnbeschaffenheit der Straße?)	? 32451,6132 32630,6179
@@ -1094,15 +1095,18 @@ Müncheberg, Turm (genaue Bezeichnung?)	? 60306,11906
 # added from radwege
 für Radfahrer freigegebene Busspur gilt Mo-Fr 6-19 Uhr (bleibt die Absperrung des Radwegs permanent?)	? 2532,9911 2590,9949 2694,10002 2702,10006
 Gehweg für Radfahrer frei (Sind die Gehwege zwischen Heinersdorfer Str. und Steinheilpfad für Radfahrer freigegeben?)	? 5585,1275 5414,1304 5223,1318
+(Wurde die Radspurmarkierung im Dahlemer Weg mittlerweile vervollständigt?)	? 2287,3702 2266,3580 2253,3505 2203,3213
 # added from qualitaet_s
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert (Ist die Tino-Schwierzina-Str. zwischen Aidastr. und Romain-Rolland-Str. mittlerweile komplett asphaltiert?)	? 12736,17998 12462,17814
+Hegemeisterweg: Asphalt ohne letzte Deckschicht (Hat die Fahrbahn die letzte Asphalt-Deckschicht bekommen?)	? 17202,8391 17522,8220
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 Hildburghauser Str.: Asphalt (Hat die Fahrbahn nach den Bauarbeiten nun eine bessere Qualität?)	? 5223,1318 5414,1304 5585,1275
 (Adlergestell - Sportpromenade/Bammelecke): Waldweg, loser Schotter (wird sich die Qualität hier bessern (insbesondere: was passiert mit dem losen Schotter)?)	? 24485,-667 24758,-268 25172,345
-Patschkauer Weg: Kopfsteinpflaster (hat sich nach den Bauarbeiten die Qualität der Fahrbahn verbessert?)	? 3132,4803 3344,4488
+Patschkauer Weg: Kopfsteinpflaster (Sind die Bauarbeiten im Patschkauer Weg beendet? Wenn ja, hat sich nach den Bauarbeiten die Qualität der Fahrbahn verbessert?)	? 3132,4803 3344,4488
 (Mauerweg am Eiskeller): asphaltiert (ist dieser Abschnitt tatsächlich asphaltiert?)	? -7990,19888 -8266,19811 -8469,19845 -8494,19713 -8448,19710 -8521,19390 -8372,19402 -8272,19086 -8206,19007 -8011,19059
 Am Fort: schlechtes Kopfsteinpflaster (ist die Straße "Am Fort" auch im südlichen Abschnitt gepflastert?)	? -7948,12634 -7959,12439 -7967,12333 -7976,12217
 Alter Radelander Weg: loser Schotter (hat sich die Qualität des Waldwegs gebessert?)	? 25007,-2620 24224,-1271 24158,-1153
+Genfenbergstr.: Asphalt mit Fugen (Wurde die Genfenbergstr. saniert? Hat der Asphalt jetzt eine bessere Qualität?)	? -3628,12176 -3416,12165
 Schwabstr.: Kopfsteinpflaster (ist das Kopfsteinpflaster in der Schwabstr. mäßig oder schlecht?)	? 8182,17746 8409,17774
 # added from qualitaet_l
 Neuruppin - Wuthenow - Gnewikow - Wustrau-Altfriesack: teilweise gut, teilweise mäßiges Kopfsteinpflaster (wird sich die Qualität nach den Bauarbeiten verbessern?)	? -29902,57202 -29816,57117 -29490,56714 -29243,56187 -29198,55801 -29109,55374 -28677,55014 -28288,54212 -28911,54055 -29276,53427 -29210,52915 -28736,52387 -28368,51517 -28001,50966 -27421,50349 -27196,50015 -27035,49829 -25968,49631 -25719,49500 -25060,48842
@@ -1205,6 +1209,7 @@ Dernburgstr. (Ist die Einbahnstraße mittlerweile für Radfahrer geöffnet oder wir
 Ahornallee (Ist die Einbahnstraße mittlerweile für Radfahrer offen?)	? 1589,11483 1574,11379
 Lindenallee (Ist die Einbahnstraße mittlerweile für Radfahrer offen?)	? 1429,11528 1403,11428
 Soorstr. (gibt es die Einbahnstraßenregelung in der Soorstr. noch?)	? 1861,11284 1884,11126
+Kieler Brücke und Zuwegungen: gesperrt (Ist die Kieler Brücke noch immer gesperrt?)	? 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 (ist hier auch ein asphaltierter Zweirichtungsradweg?)	? 34403,3857 34486,4276 34549,4551
@@ -1228,4 +1233,6 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from bbbike-temp-blockings-optimized
 Stillerzeile: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten (Wann sind die Bauarbeiten beendet?)	? 24629,5831 24443,5765 24387,5672 24362,5635 24320,5621
 Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt (Ist der Uferweg noch immer gesperrt? Falls nicht: hat sich die Qualität des Weges verbessert?)	? 21696,5053 21600,5221 21512,5404 21481,5429 21447,5414
+Jungfernstieg: Asphaltierungsarbeiten, Fahrbahn kann gesperrt sein (Sind die Bauarbeiten beendet?)	? 5229,2395 5332,2568 5425,2735 5510,2883
 entlang der Erpe, Bahnbrücke: Bauarbeiten der DB, Weg kann gesperrt sein (Ist der Weg wieder hergestellt?)	? 24650,6034 24647,5981 24637,5960 24584,5914
+Heilbronner Str./Kracauerplatz: Bauarbeiten, Fahrbahn gesperrt (Sind die Bauarbeiten beendet?)	? 3013,10553 3093,10594
