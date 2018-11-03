@@ -2562,7 +2562,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im November von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2918,34 +2918,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: note: geprüft am Fr, den 2012-11-02, gegen 22:30: geschlossen
-# REMOVED --- #: note: geprüft am Do, den 2012-11-15, gegen 21:00: offen
-# REMOVED --- #: note: geprüft am So, den 2012-06-02, vormittags: geschlossen
-# REMOVED --- #: note: geprüft am So, den 2015-03-08, vormittags: offen
-# REMOVED --- #: note: geprüft am So, den 2015-05-10, nachmittags: offen
-# REMOVED --- #: note: geprüft am So, den 2015-06-21, vormittags: offen
-# REMOVED --- #: note: geprüft am So, den 2015-07-19, nachmittags: offen
-# REMOVED --- #: note: geprüft am So, den 2015-08-09, nachmittags: offen
-# REMOVED --- #: note: geprüft am So, den 2015-08-30, vormittags: offen
-# REMOVED --- #: note: geprüft am So, den 2016-05-15, vormittags: offen
-# REMOVED --- #: note: geprüft am So, den 2016-07-17, vormittags und mittags: offen
-# REMOVED --- #: note: geprüft am So, den 2016-07-23, mittags: offen
-# REMOVED --- #: note: geprüft am Sa, den 2016-09-20, vormittags: offen
-# REMOVED --- #: tempex: volatile
-# REMOVED --- 2::night 14838,11410 14792,11391
-#: XXX wird hier dauerhaft gesperrt sein? (zurzeit kann man sich noch an den Bauzäunen vorbei mogeln)
-#: last_checked: 2018-10-14
-#: check_frequency: 7d
-	2::inwork 14838,11410 14949,11474
-',
-         'from' => undef,
-         'id' => 2372,
-         'recurring' => 1,
-         'text' => 'Weserstr. - Boxhagener Str.: Schreibenfeder-Passage kann wegen Bauarbeiten gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3630,7 +3603,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: priority: #A
-#: last_checked: 2018-10-25
+#: last_checked: 2018-10-29
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -4115,28 +4088,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: WIESENWEG-2018
-#: XXX bis wann ist die Durchfahrt gesperrt? (laut googlemaps bis Ende November 2018, laut Bauschild Bauarbeiten bis Ende 2019)
-#: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00, 2018-09-17 gegen 18:45, 2018-10-03 gegen 17:45
-#: note: unklar, ob man durchgekommen wäre: 2018-09-07 gegen 08:30
-#: source_id: 2147342009
-#: osm_watch: way id="154381291" version="6"
-#: last_checked: 2018-10-03
-#: check_frequency: 30d
-	2::inwork 15162,11458 15126,11474 15055,11505
-',
-         'from' => 1523311200,
-         'id' => 2919,
-         'text' => 'Wiesenweg: kann während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018 bis Ende Dezember 2019',
-         'type' => 'gesperrt',
-         'until' => 1577811600
-       },
+       undef,
        undef,
        undef,
        {
          'data' => '#: XXX Ende der Bauarbeiten?
-#: last_checked: 2018-09-30 vvv
+#: last_checked: 2018-10-29 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4324,7 +4281,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-10-25
+#: last_checked: 2018-10-30
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 ',
          'from' => undef,
@@ -4396,7 +4353,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: FEUERBACH-2018
-#: XXX laut VMZ nur bis Ende Oktober 2018, laut BA Steglitz bis Dezember 2018
+#: XXX laut VMZ nur bis Ende Oktober 2018, laut BA Steglitz bis Dezember 2018, laut fritz bis 12.11.2018
 #: XXX eventuell in der Feuerbachstr. selbst nur bis Ende Oktober 2018?
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.725875.php
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/weitere-sperrungen-rund-um-die-feuerbachstrasse_a174881
@@ -4407,7 +4364,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: last_checked: 2018-10-07
-#: next_check: 2018-11-01
+#: next_check: 2018-11-12
 	q4::inwork; 6168,6467 6083,6451 5823,6413
 	q4::inwork 6083,6451 6095,6358
 	q4::inwork; 6248,6388 6095,6358
@@ -4462,7 +4419,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-10-18
+#: last_checked: 2018-10-29
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -4545,16 +4502,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2018-09-28 vvv
+         'data' => '#: last_checked: 2018-10-30 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
+	q3::inwork; 12647,7672 12520,7694 12335,7770
 #: last_checked ^^^
 ',
          'from' => undef,
          'id' => 3011,
-         'text' => 'Mittelweg/Leykestr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt',
+         'text' => 'Mittelweg/Leykestr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, außerdem Einbahnstraße in der Leykestr., voraussichtlich bis Mai 2019',
          'type' => 'handicap',
-         'until' => 1540918800
+         'until' => 1556726400
        },
        {
          'data' => '# REMOVED (alter Abschnitt) ---	q4::inwork 12066,9558 12074,9689 12085,9778
@@ -4592,7 +4550,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: last_checked: 2018-10-25 vvv
-#: next_check: 2018-11-01 vvv
+#: next_check: 2018-11-05 vvv
 # REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
 	2::inwork 2417,4327 2434,4299
@@ -4760,13 +4718,24 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1541768400
        },
        {
-         'data' => '	q4::inwork; 16119,15302 16314,15223
+         'data' => '#: source_id: 2147343382
+	q4::inwork; 16119,15302 16314,15223
 ',
          'from' => 1540762588,
          'id' => 3042,
-         'text' => 'Werneuchener Str.: zwischen Konrad-Wolf-Str. und Küstriner Str. Richtung Osten gesperrt, Bauarbeiten, bis Februar 2019',
+         'text' => 'Werneuchener Str.: zwischen Konrad-Wolf-Str. und Küstriner Str. Richtung Osten gesperrt, Bauarbeiten, bis Anfang Februar 2019',
          'type' => 'handicap',
-         'until' => 1551394800
+         'until' => 1549040400
+       },
+       {
+         'data' => '	2::inwork 14338,22885 14276,22914
+',
+         'from' => 1540930270,
+         'id' => 3043,
+         'source_id' => '2147343394',
+         'text' => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., eventuell sind auch Radfahrer betroffen, voraussichtlich bis 23.11.2018 ',
+         'type' => 'gesperrt',
+         'until' => 1543014000
        }
      
 );

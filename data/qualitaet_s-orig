@@ -337,12 +337,8 @@ Weserstr. (Friedrichshain): Kopfsteinpflaster	Q2 14710,11626 14645,11670 14622,1
 Finowstr.: Kopfsteinpflaster	Q2 14622,11685 14708,11820 14783,11949 14836,12045 14854,12137
 Glatzer Str.: Kopfsteinpflaster	Q2 14577,11582 14645,11670
 Wiesenweg (Lichtenberg): Kopfsteinpflaster	Q2 15477,11338 15303,11412 15220,11440 15162,11458
-#: next_check_id: WIESENWEG-2018
-#: XXX temporär während der Baustelle, danach wieder Asphalt
-#: last_checked: 2018-10-03
-#: check_frequency: 30d
-Wiesenweg (Lichtenberg): sandig	Q3 15162,11458 15126,11474
-Wiesenweg (Lichtenberg): Asphalt	Q0 15126,11474 15055,11505
+# REMOVED (gezimmerter Fußgängerdurchgang) --- #: next_check_id: WIESENWEG-2018 --- #: XXX temporär während der Baustelle, danach wieder Asphalt --- #: last_checked: 2018-10-03 --- #: check_frequency: 30d --- Wiesenweg (Lichtenberg): sandig	Q3 15162,11458 15126,11474
+Wiesenweg (Lichtenberg): Asphalt	Q0 15162,11458 15126,11474 15055,11505
 Wartenbergstr. (Lichtenberg): schlechtes Kopfsteinpflaster	Q3+ 15220,11440 15300,11584
 Wartenbergstr. (Lichtenberg): Asphalt	Q0 15300,11584 15328,11636
 Wartenbergstr. (Lichtenberg): Beton	Q0 15328,11636 15337,11639 15423,11667
@@ -398,7 +394,7 @@ Adalbertstr.: Kopfsteinpflaster	Q2; 11808,11482 11726,11265 11656,11106
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2018-2022)
 #: by: http://www.tagesspiegel.de/downloads/19754816/1/liste-rad-infrastruktur.pdf (Radweg wird Gehweg)
 #: by: http://www.berliner-woche.de/neukoelln/verkehr/zu-eng-zu-gefaehrlich-gasse-fuer-radler-an-der-oderstrasse-geplant-d130109.html (Realisierung 2020)
-#: last_checked: 2018-07-13 (mapillary)
+#: last_checked: 2018-10-30
 #: check_frequency: 180d
 Oderstr.: Fahrbahn Kopfsteinpflaster, Radwege nur mäßiges Verbundsteinpflaster	Q2+ 11607,7145 11617,7083 11652,6879
 Friedelstr.: mäßiges, teilweise auch schlechtes Kopfsteinpflaster (max. 16 km/h)	Q2- 12066,9558 12047,9429 12074,9217 12078,9065
@@ -673,10 +669,10 @@ Brixener Str.: Kopfsteinpflaster	Q2 10507,17400 10502,17419 10466,17464
 #: XXX wird nach den Bauarbeiten die Qualität besser sein?
 #: source_id: 2147342929
 #: priority: #B
-#: last_checked: 2018-10-28
+#: last_checked: 2018-11-02
 # REMOVED --- #: check_frequency: 14d
-#: next_check: 2018-10-31
-Helmerdingstr.: Kopfsteinpflaster	Q2 14442,11101 14468,11203
+# REMOVED --- #: next_check: 2018-10-31
+Helmerdingstr.: Asphalt, letzte Deckschicht fehlt	Q1 14442,11101 14468,11203
 # 
 # REMOVED (Asphalt ist kaum von Vorteil hier) --- Helmerdingstr.: Asphalt/Kopfsteinpflaster	Q2+; 14468,11203 14442,11101
 Haasestr.: Kopfsteinpflaster	Q2 14328,11320 14286,11186
@@ -863,7 +859,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: XXX laut fixmyberlin "kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist."
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2018-09-25
+#: last_checked: 2018-10-30
 #: next_check: 2020-01-01
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -2149,6 +2145,7 @@ Soldiner Str.: mäßiges Kopfsteinpflaster	Q2 9082,16982 9299,16889 9435,16832 957
 Grüntaler Str. - Esplanade: Asphalt	Q0 9778,16915 9846,16981 9880,16994 9980,16973 10013,16972
 Kolonie: Gehwegplatten	Q1 10190,16930 10209,16674
 # 
+#: next_check_id: ERICHWEINERT-2018
 #: XXX Asphaltierung geplant, Baumaßnahme voraussichtlich bis Ende 2019 abgeschlossen
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.602784.php
 #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.702899.php (Bauarbeiten beginnen Ende Mai 2018 --- wird es Einschränkungen für Radfahrer geben?)
@@ -2157,9 +2154,11 @@ Kolonie: Gehwegplatten	Q1 10190,16930 10209,16674
 #: osm_watch: way id="145122219" version="5" vvv
 #: priority: #B vvv
 #: XXX Einbahnstraßenregelung während der Bauarbeiten; hier beträgt die Bauzeit 10 Wochen
-#: next_check: 2018-10-16
+#: last_checked: 2018-11-01
+#: next_check: 2018-12-31
 Erich-Weinert-Str.: Kopfsteinpflaster	Q2 10997,16280 11295,16199
-#: last_checked: 2018-10-05
+#: last_checked: 2018-11-01
+#: next_check: 2018-12-31
 Erich-Weinert-Str.: Kopfsteinpflaster	Q2 11295,16199 11404,16140 11542,16070
 #: priority ^^^
 #: osm_watch ^^^
@@ -2861,7 +2860,12 @@ Krottnaurerstr.: schlechtes Kopfsteinpflaster	Q3 -2920,3246 -2890,3135 -2867,304
 Krottnaurerstr.: asphaltiert	Q0 -2867,3045 -2847,2893
 Mövenstr. (Wannsee): asphaltiert	Q0 -10269,445 -10252,414
 Trabener Str.: Asphalt	Q0 1981,9865 2128,9999
+# 
+#: XXX wird nach den Bauarbeiten der Wasserbetriebe (laut Schild bis Februar 2019) hier die Fahrbahn verbessert?
+#: last_checked: 2018-10-30
+#: next_check: 2019-02-01
 Gubener Str.: Asphalt mit Schäden	Q1 13198,12311 13243,12222 13326,12056 13339,12029 13352,12003
+# 
 Slabystr.: sehr guter Asphalt	Q0 19273,5866 19180,6020 19033,6167
 Gaußstr.: sehr guter Asphalt	Q0 19180,6020 19290,6114
 Rathenaustr.: Asphalt	Q0 18861,6000 18970,6110 19033,6167 19118,6248 19161,6291 19245,6379
@@ -8606,7 +8610,8 @@ Wilhelmsruher Damm - Tornower Weg: Verbundsteinpflaster/Gehwegplatten	Q0- 6596,2
 (Tornower Weg - Wilhelmsruher Damm): Verbundsteinpflaster/Gehwegplatten	Q0- 6519,21002 6565,21004 6560,21055
 Lampesteig: Asphalt	Q0 7534,18588 7520,18701
 (John-Sieg-Str. - Wilhelm-Guddorf-Str.): wassergebundene Decke	Q1 15411,11823 15373,11783
-(Weserstr. - Boxhagener Str.): Verbundsteinpflaster/Beton	Q1+ 14949,11474 14838,11410 14792,11391 14752,11369
+(Weserstr. - Boxhagener Str.): Verbundsteinpflaster/Beton, einige Stellen schon aufgebrochen	Q2 14949,11474 14838,11410
+(Weserstr. - Boxhagener Str.): Verbundsteinpflaster	Q1+ 14838,11410 14792,11391 14752,11369
 Caroline-Herschel-Platz: gepflastert	Q1 14752,11369 14737,11347
 (Adlergestell - Bohnsdorfer Str.): Beton, kann verschmutzt sein	Q0- 21856,1573 22082,1327 22161,1193 22168,1163
 Böhmallee: Asphalt	Q0 27185,-6585 27292,-6641
@@ -10570,7 +10575,7 @@ Kieler Brücke: Holzbohlen	Q1 7780,14431 7740,14409
 (Mariendorfer-Hafen-Weg - Im Marienpark): unbefestigter Weg	Q2 8016,3651 8035,3657
 (Mariendorfer-Hafen-Weg - Im Marienpark): Kopfsteinpflaster	Q2 8035,3657 8046,3626 8070,3563
 Fregestr.: asphaltierter Radweg	Q0 5622,6400 5582,6360
-Am Hamburger Bahnhof: Kopfsteinpflaster	Q2 8189,13468 8183,13482 8141,13580 8120,13627
+Am Hamburger Bahnhof: Kopfsteinpflaster	Q2 8187,13472 8183,13482 8141,13580 8110,13650
 (am 50hertz-Gebäude): gepflastert	Q2+ 8059,13551 8141,13580
 (Vorfahrt Petruskirche): Kopfsteinpflaster	Q2 5393,2053 5452,2077
 An der Neumark: Verbundsteinpflaster	Q1+ 11283,3774 11300,3709 11357,3720 11378,3626
@@ -10779,9 +10784,13 @@ Bennyweg: Verbundsteinpflaster	Q1 17254,15183 17262,15056
 Björnweg: Verbundsteinpflaster	Q1 17310,15186 17317,15059 17319,15038
 (Suermondtstr. - Konrad-Wolf-Str.): Beton	Q0- 16753,16111 16719,16005 16799,15974 16842,15932
 (Gleimstr. - Mauerpark): Asphalt	Q0 10170,15659 10228,15488
-Lichtburgring: Asphalt	Q0 10004,15636 9933,15815
+Lichtburgring: Asphalt	Q0 10004,15636 9969,15724 9933,15815
+Lichtburgring: Betonpflaster	Q0- 9997,15884 10016,15823 10041,15746 10059,15673 10005,15656
+Lichtburgring: Betonpflaster	Q0- 9969,15724 10041,15746
+Lichtburgring: Betonpflaster	Q0- 9933,15815 10016,15823
 Bärbel-Bohley-Ring: Asphalt	Q0 9933,15815 9917,15813 9744,15793
-Bärbel-Bohley-Ring: Betonpflaster	Q0- 9744,15793 9747,15847 9910,15876 9917,15813
+Bärbel-Bohley-Ring: Betonpflaster	Q0- 9744,15793 9747,15847 9910,15876 9997,15884
+Bärbel-Bohley-Ring: Betonpflaster	Q0- 9910,15876 9917,15813
 Wadzeckstr. - Mollstr.: Betonpflaster	Q1+ 11315,13210 11399,13333
 Ahornallee: Asphalt mit einigen Schäden	Q1 1657,11737 1673,11814 1697,11911 1725,12009 1752,12114
 Kranoldplatz: Kopfsteinpflaster	Q2 5317,2345 5417,2383
@@ -10796,7 +10805,7 @@ Alte Köpenicker Allee: unbefestigte Straße, holprig	Q2 20316,7637 20348,7634 204
 #: note: Privatstraße
 #: next_check_id: KLARAFRANKESTR-2018
 #: XXX wie sieht die endgültige Fahrbahndecke aus?
-#: last_checked: 2018-08-20
+#: last_checked: 2018-10-29
 #: check_frequency: 60d
 Klara-Franke-Str.: provisorischer Asphalt und Pflasterung	Q1 7366,14067 7443,14107 7542,13956 7662,13784 7564,13735
 Schottstr.: Beton mit Schäden	Q1 16409,12612 16397,12397
@@ -10901,6 +10910,9 @@ Weinmeisterhornweg: unbefestigte Straße	Q2 -6854,12478 -7196,12754
 Oppelner Str.: stellenweise Kleinpflastersteine	Q1+ 12897,10439 12978,10581
 Boetticherstr.: Beton	Q0 2434,4299 2417,4327
 Bahndamm - Elsenstr.: unbefestigter Weg	Q2 13953,9372 13923,9405
+(Am Hamburger Bahnhof - Uferweg): Kopfsteinpflaster	Q2- 8110,13650 8171,13703
+(Uferweg am Berlin-Spandauer Schiffahrtskanal): Kleinsteinpflaster	Q1- 8295,13531 8290,13538 8224,13634
+(Uferweg am Berlin-Spandauer Schiffahrtskanal): Asphalt	Q0 8224,13634 8171,13703 8131,13770 8052,13933
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
