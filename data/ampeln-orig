@@ -1202,7 +1202,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 12846,7981
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel während der Bauarbeiten
-#: last_checked: 2018-08-24
+#: last_checked: 2018-11-08
 #: check_frequency: 90d
 	X::inwork 12794,8103
 	X 11154,14985
@@ -1853,7 +1853,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -8777,7386
 	X 25138,11215
 	X 23648,11265
-	X 23101,11261
+	X 23113,11262
 	X 22937,11265
 	X 23100,12269
 	X 23017,12177
@@ -2681,7 +2681,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2018-10-24 vvv
+#: last_checked: 2018-11-05 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2817,7 +2817,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X::inwork 14366,6337
 	X::inwork 14193,6556
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2018-07-01
+#: last_checked: 2018-11-09
 	X::inwork 13627,7047
 	X::inwork 13278,6967
 #: next_check ^^^

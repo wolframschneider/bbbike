@@ -47,6 +47,7 @@ my $center2c;
 my $plan_dir;
 my $with_searches_weight;
 my $with_nextcheckless_records = 1;
+my $expired_statistics_logfile;
 my $debug;
 GetOptions(
 	   "with-dist!" => \$with_dist,
@@ -57,6 +58,7 @@ GetOptions(
 	   "plan-dir=s" => \$plan_dir,
 	   "with-searches-weight!" => \$with_searches_weight,
 	   "with-nextcheckless-records!" => \$with_nextcheckless_records,
+	   'expired-statistics-logfile=s' => \$expired_statistics_logfile,
 	   "debug" => \$debug,
 	  )
     or die "usage: $0 [--nowith-dist] [--max-dist km] [--dist-dbfile dist.db] [--centerc X,Y [--center2c X,Y]] [--plan-dir directory] [--with-searches-weight] [--nowith-nextcheckless-records] bbdfile ...";
@@ -158,6 +160,8 @@ my @records;
 $SIG{INT} = sub { exit };
 
 my %files_add_street_name = map{($_,1)} ('radwege', 'ampeln');
+
+my $today = strftime "%Y-%m-%d", localtime;
 
 for my $file (@files) {
     debug("$file...\n");
@@ -332,6 +336,14 @@ for my $file (@files) {
 		     }
 		 }
 		 @planned_route_files = sort keys %planned_route_files;
+
+		 _add_to_planned_route_importance
+		     (
+		      \@planned_route_files,
+		      priority => $prio,
+		      searches => $searches,
+		      expired => $nextcheck_date && $nextcheck_date le $today,
+		     );
 	     }
 
 	     # the todo state depends if there are planned survey
@@ -398,8 +410,6 @@ my @all_records_by_date = sort {
 	0;
     }
 } grep { defined $_->{date} } @records;
-
-my $today = strftime "%Y-%m-%d", localtime;
 
 my @expired_sort_by_dist_records;
 my $cropped_because_of_max_dist;
@@ -516,6 +526,8 @@ if (@expired_sort_by_dist_records) {
     }
 }
 
+print _get_planned_route_importance_output();
+
 if (%monthly_stats) {
     print <<'EOF';
 * monthly stats
@@ -554,6 +566,28 @@ EOF
 
     for my $date (reverse sort keys %monthly_stats) {
 	printf "** %-10s %3d %4d\n", $date, $monthly_stats{$date}, $monthly_stats_past_or_future{$date};
+    }
+
+    if ($expired_statistics_logfile) {
+	require Tie::File;
+	tie my @lines, 'Tie::File', $expired_statistics_logfile
+	    or die "Error while opening $expired_statistics_logfile: $!";
+	my $today = strftime '%F', localtime;
+	my $earlist_date = (sort keys %monthly_stats_past_or_future)[0];
+	my $cumulated_count = $monthly_stats_past_or_future{$earlist_date};
+	my $new_log_line = "$today\t$cumulated_count";
+	if (!@lines) {
+	    push @lines, $new_log_line;
+	} else {
+	    my($last_line_date) = $lines[-1] =~ m{^(\S+)};
+	    if ($last_line_date eq $today) {
+		if ($lines[-1] ne $new_log_line) {
+		    $lines[-1] = $new_log_line;
+		}
+	    } else {
+		push @lines, $new_log_line;
+	    }
+	}
     }
 }
 
@@ -677,6 +711,66 @@ sub _make_dist_tag {
 	    }
 	}
 	$id_to_line->{$id};
+    }
+}
+
+{
+    my %planned_route_to_numbers;
+
+    sub _add_to_planned_route_importance {
+	my($planned_route_files_ref, %opts) = @_;
+	my $priority = delete $opts{priority};
+	my $searches = delete $opts{searches};
+	my $expired  = delete $opts{expired};
+	die "Unhandled options: " . join(" ", %opts) if %opts;
+
+	my $priority_points =
+	    {
+	     '#A' => 4,
+	     '#B' => 3,
+	     '#C' => 2,
+	     '#D' => 1,
+	     ''   => 2, # no priority -> same as #C
+	    }->{$priority||''};
+
+	for my $planned_route_file (@$planned_route_files_ref) {
+	    my $numbers = ($planned_route_to_numbers{$planned_route_file} ||= { expired_count => 0,
+										expired_priority_points => 0,
+									      });
+	    $numbers->{total_count}++;
+	    $numbers->{expired_count}++ if $expired;
+	    $numbers->{priority_points} += $priority_points;
+	    $numbers->{expired_priority_points} += $priority_points if $expired;
+	    $numbers->{searches} += $searches;
+	}
+    }
+
+    sub _get_planned_route_importance_output {
+	my $out = '';
+	if (%planned_route_to_numbers) {
+	    $out .= "* planned route importance\n";
+	    for my $sort_def (
+			      [qw(expired_priority_points expired_count searches)],
+			      [qw(expired_count expired_priority_points searches)],
+			      [qw(searches expired_priority_points expired_count)],
+			     ) {
+		my @sort_keys = @$sort_def;
+		my $custom_sort = sub {
+		    my($x, $y) = @_;
+		    for my $sort_key (@sort_keys) {
+			my $cmp = $y->{$sort_key} <=> $x->{$sort_key};
+			return $cmp if $cmp;
+		    }
+		    return 0;
+		};
+		$out .= "** sorted by $sort_keys[0]\n";
+		for my $planned_route_file (sort { $custom_sort->($planned_route_to_numbers{$a}, $planned_route_to_numbers{$b}) } keys %planned_route_to_numbers) {
+		    my $numbers = $planned_route_to_numbers{$planned_route_file};
+		    $out .= "*** $planned_route_file (expired_prio=$numbers->{expired_priority_points} expired_count=$numbers->{expired_count} total_count=$numbers->{total_count} searches=$numbers->{searches})\n";
+		}
+	    }
+	}
+	$out;
     }
 }
 

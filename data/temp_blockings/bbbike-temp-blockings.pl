@@ -17332,7 +17332,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014905',
        data  => <<EOF,
-	q4::inwork; 13278,6967 13500,7018 13627,7047
+	q4::inwork; 13278,6967 13337,6981 13500,7018 13627,7047
 EOF
      },
      { from  => 1243461600, # 2009-05-28 00:00
@@ -20485,7 +20485,7 @@ EOF
        text  => 'Peace Wall/Friedensmauer; auf Gehweg ausweichen (bis Juli 2012)',
        type  => 'handicap',
        data  => <<EOF,
-	q4::temp 9527,10927 9539,10820
+	q4::temp 9527,10927 9537,10837 9539,10820
 EOF
      },
      { from  => 1336943422, # 2012-05-13 23:10
@@ -23994,7 +23994,7 @@ EOF
 #: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: priority: #A
-#: last_checked: 2018-10-29
+#: last_checked: 2018-11-05
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -24907,7 +24907,7 @@ EOF
        text  => 'Wühlischstr.: Gleisarbeiten, Fahrbahn Richtung Warschauer Str. gesperrt, bis voraussichtlich 13. September 2017',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 14575,11407 14434,11465
+	q4::inwork; 14575,11407 14460,11455 14434,11465
 EOF
      },
      { from  => 1445320800, # 2015-10-20 08:00
@@ -25848,14 +25848,15 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2017-11-28 07:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-11-29 11:00:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 29. November 2017 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2018-11-13 07:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-11-14 11:00:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 7. November 2018 ab ca. 09:30 Uhr. Weitere Sperrungen: am 14., 21., und 28. November',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX weitere Sperrungen: 18. Oktober sowie 8., 15., 22. und 29. November
-# REMOVED --- #: next_check: 2017-11-23
-# REMOVED --- #: priority: #A
+#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
+#: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
+#: next_check: 2018-11-14
+#: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
@@ -27405,7 +27406,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-10-30
+#: last_checked: 2018-11-06
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27858,6 +27859,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2018-10-07
+#: next_check: 2018-11-14
 	q3::inwork 5959,6976 6081,6977 6082,7066
 EOF
      },
@@ -27867,7 +27869,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2018-10-25 vvv
-#: next_check: 2018-11-05 vvv
+#: next_check: 2018-11-12 vvv
 # REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
 	2::inwork 2417,4327 2434,4299
@@ -28221,7 +28223,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.751474.php',
        data  => <<EOF,
-	2::inwork 20338,11991 20387,12021
+	2::inwork 20338,11991 20388,12036
 EOF
      },
      { from  => undef,
@@ -28262,6 +28264,23 @@ EOF
        source_id => '2147343394',
        data  => <<EOF,
 	2::inwork 14338,22885 14276,22914
+EOF
+     },
+     { from  => 1541444153, # 2018-11-05 19:55
+       until => 1556661599, # 2019-04-30 23:59
+       text  => 'Schiffbauerdamm: Fahrtrichtung zwischen Albrechtstr. und Friedrichstr. in Richtung Osten gesperrt, bis Ende April 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+	q3::inwork; 9106,12795 9193,12875 9239,12923 9279,12953
+EOF
+     },
+     { from  => 1541595600, # 2018-11-07 14:00
+       until => 1541739600, # 2018-11-09 06:00
+       text  => 'Behrenstr.: wegen einer Veranstaltung zwischen Friedrichstr. und Glinkastr. gesperrt, von 08.11.2018 14 Uhr bis 09.11.2018 6 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-donnerstag-08-11-18-',
+       data  => <<EOF,
+	2::temp 9164,12172 9373,12197
 EOF
      },
     );

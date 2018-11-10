@@ -3603,7 +3603,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: priority: #A
-#: last_checked: 2018-10-29
+#: last_checked: 2018-11-05
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -3918,7 +3918,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
+#: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
+#: next_check: 2018-11-14
+#: priority: #A
+	2::temp -2218,5133 -927,6888
+	2::temp -2825,5588 -1925,6790 -2080,6897
+	2::temp -1925,6790 -1851,6887
+',
+         'from' => 1542088800,
+         'id' => 2840,
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 7. November 2018 ab ca. 09:30 Uhr. Weitere Sperrungen: am 14., 21., und 28. November',
+         'type' => 'gesperrt',
+         'until' => 1542189600
+       },
        undef,
        {
          'data' => '#: tempex: sunset-T07
@@ -4281,7 +4295,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-10-30
+#: last_checked: 2018-11-06
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 ',
          'from' => undef,
@@ -4337,19 +4351,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/altglienicke/c-bauen/rund-1000-kubikmeter-trinkwasser-liefen-in-untergrund-und-keller_a172811
-#: note: bei fritz seit 2018-10-26 nicht mehr gelistet
-#: add_fragezeichen: Ist die Sperrung der Semmelweisstr. mittlerweile aufgehoben worden?
-	2::inwork 19602,1989 19244,2141
-',
-         'from' => 1531519200,
-         'id' => 2989,
-         'source_id' => 'LMS-BR_r_LMS-BR_139053_LMS-BR_72',
-         'text' => 'Semmelweisstr.: zwischen Korkedamm und Lehmfeldsteig komplett gesperrt (geplatzte Wasserleitung), voraussichtlich bis 9. November 2018',
-         'type' => 'gesperrt',
-         'until' => 1541782800
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: FEUERBACH-2018
@@ -4540,6 +4542,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: last_checked: 2018-10-07
+#: next_check: 2018-11-14
 	q3::inwork 5959,6976 6081,6977 6082,7066
 ',
          'from' => undef,
@@ -4550,7 +4553,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: last_checked: 2018-10-25 vvv
-#: next_check: 2018-11-05 vvv
+#: next_check: 2018-11-12 vvv
 # REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
 	2::inwork 2417,4327 2434,4299
@@ -4683,16 +4686,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1542387600
        },
-       {
-         'data' => '	2::inwork 20338,11991 20387,12021
-',
-         'from' => 1540332000,
-         'id' => 3039,
-         'source_id' => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.751474.php',
-         'text' => 'Fußgängerbrücke Waldbacher Weg: kurzzeitige Sperrungen wegen Bauarbeiten möglich, vom 25.10.2018 bis zum 07.11.2018',
-         'type' => 'gesperrt',
-         'until' => 1541631600
-       },
+       undef,
        {
          'data' => '#: by: http://www.dafmap.de/d/berlin.html?id=4424&mt=0&zoom=17
 #: last_checked: 2018-10-25
@@ -4705,18 +4699,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '	2::temp 11380,14316 11358,14331 11331,14350 11316,14360
-	2::temp 11446,14508 11374,14363 11380,14316 11418,14290
-	2::temp 11374,14363 11331,14350
-',
-         'from' => 1541653200,
-         'id' => 3041,
-         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_43_5819_5962_online.pdf',
-         'text' => 'Knaackstr. und Rykestr. am Wasserturmplatz: mögliche Sperrungen am 9. November 2018 zwischen 06:00 Uhr und 14:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1541768400
-       },
+       undef,
        {
          'data' => '#: source_id: 2147343382
 	q4::inwork; 16119,15302 16314,15223
@@ -4736,6 +4719,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., eventuell sind auch Radfahrer betroffen, voraussichtlich bis 23.11.2018 ',
          'type' => 'gesperrt',
          'until' => 1543014000
+       },
+       {
+         'data' => '	q3::inwork; 9106,12795 9193,12875 9239,12923 9279,12953
+',
+         'from' => 1541444153,
+         'id' => 3044,
+         'text' => 'Schiffbauerdamm: Fahrtrichtung zwischen Albrechtstr. und Friedrichstr. in Richtung Osten gesperrt, bis Ende April 2019',
+         'type' => 'handicap',
+         'until' => 1556661599
        }
      
 );
