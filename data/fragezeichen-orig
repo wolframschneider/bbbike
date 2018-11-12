@@ -29,7 +29,7 @@ Mehringdamm: Radspuren oder Sanierung	?::projected; 9227,8890 9225,9038 9224,905
 Mehringdamm: Radspuren oder Sanierung	?::projected; 9224,9053 9225,9111 9248,9350 9280,9476 9334,9670 9387,9804 9444,9919 9448,10014
 # 
 #: XXX außerdem: Nordseite wird saniert
-#: last_checked: 2018-11-08
+#: last_checked: 2018-11-10
 #: check_frequency: 30d
 Stralauer Allee: Radspur geplant	?::projected; 13332,10832 13389,10808 13496,10763 13596,10722 13678,10685 13779,10642 13919,10583 13986,10549 14103,10489 14222,10430 14405,10340 14558,10264
 # 
@@ -43,7 +43,7 @@ NKZ: Verbesserungen geplant	?::projected 11291,10438 11317,10485 11344,10507 113
 #: check_frequency: 90d
 Yorckstr. - Hornstr.: Verbesserung der Zufahrt geplant	?::projected 9044,9753 9002,9731 8980,9751 8988,9783
 # 
-#: last_checked: 2018-09-28
+#: last_checked: 2018-11-10
 #: check_frequency: 150d
 Kynaststr. - Paul-und-Paula-Ufer: Verbesserung geplant	?::projected 14797,10476 14820,10473 14868,10467
 #: by: ^^^
@@ -251,7 +251,7 @@ Heerstr.: Erneuerung des Radwegs	?::projected -3069,11487 -2851,11417 -2476,1130
 #: osm_watch: way id="182782708" version="7"
 #: osm_watch: way id="168307255" version="6"
 #: osm_watch: way id="4687243" version="24"
-#: last_checked: 2018-10-05
+#: last_checked: 2018-11-11
 #: check_frequency: 60d
 Oderbruchstr./Hohenschönhausener Str.: werden hier Radspuren markiert?	?::projected 14990,14537 14754,14406 14721,14379 14667,14336 14658,14328 14465,14210 14361,14145 14298,14015 14261,13932 14218,13834
 # 
@@ -1371,7 +1371,7 @@ Rudower Str.: Bauarbeiten zwischen Lehmfeldsteig und Köpenicker Str., wird es au
 # 
 # REMOVED (-> handicap_s) --- #: XXX Parkverbote ab 22. Mai 2018 --- #: priority: #A --- #: last_checked: 2018-05-18 --- #: next_check: 2018-05-22 --- Singerstr.: wird es hier Bauarbeiten geben, mit Einschränkungen für Radfahrer?	? 11497,12463 11607,12412 11635,12398
 # REMOVED (kaum Einschränkungen für Radfahrer; offizielle Radwegführung) --- #: XXX NEW	Michaelkirchstraße (Mitte / Friedrichshain) in beiden Richtungen zwischen Holzmarktstraße und Köpenicker Straße (Berlin)  Gültig ab: 08.05.2018 09:00  Baustelle, Vollsperrung (bis Ende 05/18)	2147342594	--- #: XXX laut fritz bis 31.05.2018 --- Michaelkirchstr.: Beeinträchtigungen für den Radverkehr?	?::inwork 11764,12001 11716,11914 11676,11839 11569,11587
-# REMOVED (-> temp blockings) --- #: XXX NEW	Eldenaer Str. (Friedrichshain) Richtung Ebertystr. zwischen Scheffelstr. und Liebigstr. (Berlin)  Gültig ab: 08.05.2018 07:54  Gleisbauarbeiten, Fahrtrichtung gesperrt (bis Mitte 09/18)	2147342574	--- #: XXX laut fritz bis 14.09.2018 --- Eldenaer Str.: Beeinträchtigungen für den Radverkehr?	?::inwork; 15098,12849 15074,12850 15010,12855 14940,12843 14906,12837 14836,12826 14750,12812 14661,12798 14556,12781 14435,12761 14355,12752 14096,12827
+# REMOVED (-> temp blockings) --- #: XXX NEW	Eldenaer Str. (Friedrichshain) Richtung Ebertystr. zwischen Scheffelstr. und Liebigstr. (Berlin)  Gültig ab: 08.05.2018 07:54  Gleisbauarbeiten, Fahrtrichtung gesperrt (bis Mitte 09/18)	2147342574	--- #: XXX laut fritz bis 14.09.2018 --- Eldenaer Str.: Beeinträchtigungen für den Radverkehr?	?::inwork; 15098,12849 15074,12850 15010,12855 14940,12843 14906,12837 14836,12826 14750,12812 14661,12798 14556,12781 14435,12761 14355,12752 14162,12808 14096,12827
 # REMOVED (hier ist nichts) --- #: by: fritz --- #: XXX bis zum 02.05.2018 --- Bornitzstr.: Einschränkungen auch für Radfahrer?	?::inwork 15747,12880 15950,12886
 # REMOVED (für Radfahrer offen gehalten) --- #: XXX Kastanienallee (Prenzlauer Berg) Richtung Schönhauser Allee zwischen Oderberger Straße und Schönhauser Allee (Berlin)  Gültig ab: 21.11.2017 07:00  Baustelle, Fahrtrichtung gesperrt (die Kastanienallee ist bis zur Einmünung in die Schönhauser Allee eine Sackgasse) (bis Anfang 12/17) --- #: XXX laut fritz bis voraussichtlich 09.12.2017; laut vmz mittlerweile bis Ende 12/17 --- #: source_id: 2147342043 --- Kastanienallee: Sperrung auch für Radfahrer relevant?	?::inwork; 10723,14772 10838,14962 10884,14952
 # REMOVED (aufgenommen) --- #: XXX NEW	Oranienburger Str. (Mitte) Richtung Friedrichstraße zwischen Hackescher Markt und Monbijouplatz (Berlin)  Gültig ab: 11.12.2017 07:30  Baustelle, Fahrtrichtung gesperrt (bis vsl. 21.12.17) --- #: XXX laut fritz: Zwischen Rosenthaler Straße und Große Hamburger Straße --- #: source_id: 2147342123	 --- Oranienburger Str.: Sperrung auch für Radfahrer relevant?	?::inwork; 10264,13097 10220,13098 10077,13100 9932,13109
@@ -1428,7 +1428,7 @@ Landsberger Allee: Ausbau der Radwege, evtl. auch Richtung Osten?	?; 17848,14523
 #: source_id: 2147342661
 #: source_id: 2147342910
 #: last_checked: 2018-10-05
-#: next_check: 2019-09-15
+#: next_check: 2018-12-01
 Landsberger Allee: Ausbau der Radwege	? 16590,14386 16314,14361 16010,14326 15925,14316 15850,14308 15430,14262 15256,14237 14964,14123 14954,14119 14871,14087 14771,14048 14218,13834
 # 
 #: XXX evtl. im Zusammenhang des Bebauungsplans 11-123
@@ -1479,7 +1479,7 @@ Rosenthaler Weg: Neubau der Straße, danach existieren Radspuren	?::inwork 10312,
 #: next_check: 2019-01-01
 Oranienburger Str.: Anlage bzw. Sanierung von Radwegen/-streifen	?::projected 5476,19450 5495,19571 5533,19811 5545,19909 5517,20120
 #: XXX neue Termine: Baubeginn: voraussichtlich Frühjahr 2017, Bauende: voraussichtlich Mitte 2020; laut vmz bis Ende März 2019 (zwischen Roedernallee und Nordgraben), laut fritz bis 31.5.2018
-#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=31727
+# REMOVED --- #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=31727
 #: source_id: 2147341383
 #: source_id: LMS-BR_r_LMS-BR_98919
 #: next_check: 2018-05-31
@@ -1489,7 +1489,7 @@ Oranienburger Str.: Anlage bzw. Sanierung von Radwegen/-streifen	?::inwork 5517,
 Oranienburger Str.: Anlage bzw. Sanierung von Radwegen/-streifen	?::projected 5476,20372 5463,20461 5441,20613 5421,20748 5410,20822 5401,20882 5395,20915 5382,21001 5356,21146 5349,21198 5343,21250
 #: next_check_id: ORANIENBURGER-2018
 #: XXX Abschnitt Wittenauer Str. - Göschenplatz/Cyclopstr., laut fritz bis 31.05.2018, laut vmz bis Ende 2018
-#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=37169
+# REMOVED --- #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=37169
 #: source_id: 2147341699
 #: source_id: LMS-BR_r_LMS-BR_106210_LMS-BR_72
 #: last_checked: 2018-07-07
@@ -1530,7 +1530,7 @@ Pappelallee/Stahlheimer Str.: Radspuren entstehen	?::inwork 11542,16070 11548,16
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/schoenstrasse-wird-neu-gebaut_a169547
 #: XXX qualitaet: -> Q0 vermutlich
 # REMOVED (-> temp blockings) --- #: last_checked: 2018-06-19 (noch keine Sperrung) --- #: check_frequency: 2d --- Schönstr.: Neubau geplant, Vollsperrung während der Bauarbeiten	?::projected 13391,16436 13630,16629
-#: last_checked: 2018-07-06
+#: last_checked: 2018-11-11
 #: check_frequency: 120d
 Schönstr.: Neubau geplant	?::projected 13630,16629 13794,16773 13870,16837 13974,16924 13996,16959 14136,17170
 # 
@@ -1843,6 +1843,7 @@ Friedelstr.: Asphaltierung	?::inwork 12066,9558 12047,9429 12074,9217
 Bürknerstr.: wird hier eine Fahrradstraße eingerichtet?	?::projected 11673,9720 11754,9735 11897,9754 12085,9778
 # 
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.756300.php (für 2019 geplant)
+#: last_checked: 2018-11-11
 #: next_check: 2019-03-01
 Frankfurter Allee: werden hier geschützte Radspuren entstehen? wo genau?	?::projected 13785,12292 13885,12279 14020,12261 14208,12235 14291,12220 14381,12205 14427,12197 14488,12188 14523,12183 14621,12168 14709,12156 14854,12137 14926,12129 14994,12121 15117,12106 15361,12071
 # 
@@ -2085,7 +2086,7 @@ Segelfliegerdamm (Zernsdorf - Niederlehme): in Planung/Bau	?::inwork 29192,-1063
 #: osm_watch: way id="46039447" version="16"
 #: osm_watch: way id="456120288" version="3"
 #: source_id: 2147342174
-#: last_checked: 2018-11-04
+#: last_checked: 2018-11-10
 #: next_check: 2019-03-01
 Treskowallee: Bau von Radwegen	?::projected; 18704,8427 18731,8577 18733,8633
 # 
@@ -2425,8 +2426,6 @@ Bebauungsplan 3-67 VE: neue Planstraße	?::projected 13598,21360 13709,21334
 # - Fragen nach genauen Routenverläufen
 # - XXX_prog- und XXX_indoor-Einträge
 # 
-Volkspark Anton Saefkow: diesen Weg auch versuchen, gibt's hier vielleicht Stufen?	? 12592,14838 12545,14870 12528,14845
-# 
 #: XXX Pflasterung, aber OK, vermutlich Fußgänger, Beleuchtung existiert
 #: last_checked: 2018-11-07 (noch zu viele Bauarbeiten)
 #: check_frequency: 14d
@@ -2454,9 +2453,10 @@ Stralauer Südufer: wird es hier Sperrungen geben?	? 14776,9949 14599,10039 14569
 # 
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.750883.php (Ende 2018 bis 2020)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/erster-teil-des-anton-saefkow-parks-ist-fertiggestellt_a186599
-#: last_checked: 2018-11-08
+#: priority: #C
+#: last_checked: 2018-11-11
 #: next_check: 2018-12-01
-Anton-Saefkow-Park: geht es hier weiter mit den Bauarbeiten und Sperrungen?	? 12642,14798 12709,14745 12798,14682 12867,14648 12888,14625 12900,14637 12932,14640 12964,14634 12982,14629 13007,14615 13026,14602 13051,14629 13102,14630 13231,14583 13266,14541 13246,14515 13233,14509 13169,14532 13195,14487 13053,14578 13026,14602
+Anton-Saefkow-Park: geht es hier weiter mit den Bauarbeiten und Sperrungen?	? 12642,14798 12709,14745 12798,14682 12867,14648 12888,14625 12900,14637 12932,14640 12964,14634 12982,14629 13007,14615 13034,14594 13049,14623 13119,14622 13231,14583 13266,14541 13246,14515 13233,14509 13169,14532 13195,14487 13053,14578 13034,14594
 # 
 #: XXX NEW	Eldenaer Str. (Friedrichshain) in beiden Richtungen Höhe Paul-Junius-Str. (Berlin)  Gültig ab: 22.10.2018 06:00  Gleisbauarbeiten, Gegenverkehrsregelung mit Ampel, Paul-Junius-Str. gesperrt (bis Mitte 11/18, Gesamtbaumaßnahme bis 03/19)	2147343333
 #: XXX man kommt einigermaßen gut durch, aber vielleicht gibt es Änderungen an der Fahrbahnoberfläche?
@@ -2544,6 +2544,7 @@ Bergmannstr.: entsteht hier eine weitere Fußgängerampel?	? 9404,9345 9309,9347 9
 # 
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/einstimmen-auf-die-testphase-fuer-die-begegnungszone-bergmannstrasse_a182777
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/infos-zur-testphase_a187582
+#: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/auf-der-bergmannstrasse-stehen-erste-module-fuer-die-begegnungszone_a188443
 #: XXX zum Beispiel: Temporeduzierung auf 20km/h, vielleicht braucht man einen handicap_s-Eintrag?
 #: last_checked: 2018-11-06
 #: check_frequency: 14d
@@ -2617,8 +2618,10 @@ Voigtstr./Schreinerstr.: Diagonalsperre entsteht	?::projected 14747,12399 14776,
 #: XXX ^^^
 # 
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/versuch-einer-verkehrsberuhigung_a169295
+#: XXX Bauarbeiten bis Mitte Dezember 2018, eventuell für den Zebrastreifen, Fahrbahn ist vermutlich währenddessen gesperrt, Beeinträchtigungen für Radfahrer?
 #: last_checked: 2018-10-05
-#: next_check: 2019-02-01
+# REMOVED --- #: next_check: 2019-02-01
+#: next_check: 2018-11-12
 Schleidenplatz: Zebrastreifen geplant	?::projected 15122,12252 15104,12216 15064,12197
 # 
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714272.php
@@ -2924,7 +2927,7 @@ Moorbirkenweg: Qualität? Wo wird sich die Straße befinden? Existiert die Straße 
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2016/beschluss_929_16.pdf
 #: osm_watch: way id="295627704" version="4"
-#: last_checked: 2018-09-17
+#: last_checked: 2018-11-11
 #: check_frequency: 60d
 Liebigstr.: Einrichtung einer Spielstraße, wo genau?	? 14229,12311 14166,12323 14147,12344 14091,12355 14074,12343 13927,12370 13905,12374 13991,12522 14058,12709
 # 
@@ -3520,7 +3523,7 @@ Ortsdurchfahrt Potsdam: Ortsschild wird versetzt	? -13113,5653 -13143,5587 -1308
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/auf-parkplatz-am-velodrom-entsteht-ein-schulneubau_a187525 (vielleicht erst 2020?)
 #: XXX Bauarbeiten haben schon angefangen, aber die Straße ist noch nicht gesperrt (vielleicht später Teil eines Schulhofes?)
 #: XXX evtl. wird es einen neuen Weg weiter südöstlich geben
-#: last_checked: 2018-11-08
+#: last_checked: 2018-11-11
 #: check_frequency: 90d
 Cotheniusstr.: Parkplatzfläche wird eingezogen	?::projected 13430,13733 13519,13785
 # 
@@ -4290,8 +4293,8 @@ Im Lindenhof: Planstraße B, Qualität, genaue Lage?	?::inwork 17370,12649 17475,1
 #: XXX laut LOR 7/2019 zwei PLZ: 10245 und 10247 (kann das stimmen?)
 #: XXX zuführende Straßen/Wege müssen auch eingezeichnet werden
 #: osm_watch: way id="410953175" version="1"
-#: last_checked: 2018-11-04
-#: check_frequency: 14d
+#: last_checked: 2018-11-11
+#: check_frequency: 7d
 Siegfried-Hirschmann-Park: neue private Platzfläche, Qualität, genaue Lage?	?::inwork 14730,11529 14800,11441
 # 
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung-und-denkmalschutz/stadtplanung/bebauungsplanung/artikel.81905.php
@@ -4314,7 +4317,7 @@ Krampnitz: neue Planstraßen	?::projected -14183,5214 -13771,5077
 #: by: http://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2017/wasserpark-berlin-c-hager-partner-ag.pdf
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7152
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45-181-136248111083/248111083/00223364/64-Anlagen/07/137-2017-2Bplan-XVII-4_Bl1-2-170803-Abzeichnun.pdf
-#: last_checked: 2018-09-28
+#: last_checked: 2018-11-10
 #: next_check: 2022-01-01
 Ostkreuz-Rummelsburger Bucht: neues Wohnquartier mit Straßen und Wegen sowie Wasserpark	?::projected 14915,10785 14872,10634 14987,10601 15106,10655 15174,10641 15200,10741 14915,10785
 # 

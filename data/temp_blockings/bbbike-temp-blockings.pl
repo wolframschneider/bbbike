@@ -388,7 +388,7 @@ EOF
 	2::temp 11805,10899 11805,10858
 	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11690,10543 11721,10530
 	2::temp 11839,10736 11772,10764 11804,10846
-	2::temp 11463,10642 11275,10723 11234,10739 11159,10769
+	2::temp 11463,10642 11275,10723 11220,10744 11159,10769
 	2::temp 11708,10497 11690,10543 11734,10563 11754,10516 11708,10497
 	3 11258,10682 11275,10723 11253,10778
 	3 11253,10778 11275,10723 11258,10682
@@ -3306,7 +3306,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4 14355,12752
-	q4 13960,12866 13979,12861 14066,12836 14096,12827
+	q4 13960,12866 13979,12861 14096,12827
 	q4 13960,12866 13844,12900
 EOF
      },
@@ -7409,7 +7409,7 @@ EOF
        text  => 'Manteuffelstr. zwischen Skalitzer Str. und Naunynstr. sowie Skalitzer Str. und Paul-Lincke-Ufer: Einbahnstraßenregelung bis Ende 09.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	1::inwork 12000,10531 12052,10644
+	1::inwork 12000,10531 12056,10642
 	1::inwork 11949,10414 11829,10192 11735,10022
 EOF
      },
@@ -11637,7 +11637,7 @@ EOF
        text  => 'Papierlager brennt, Köpenicker Str. ist zwischen Manteuffelstr. und Engeldamm gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 12060,11323 12124,11280 12302,11160
+	2::inwork 12060,11323 12124,11280 12314,11152
 EOF
      },
      { from  => 1211828060, # 
@@ -23993,6 +23993,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
+#: also_indoor: traffic
 #: priority: #A
 #: last_checked: 2018-11-05
 #: check_frequency: 7d
@@ -24321,7 +24322,7 @@ EOF
        source_id => 'IM_024677',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2015/pressemitteilung.296774.php
-	2::temp 11189,10831 11159,10769 11234,10739
+	2::temp 11189,10831 11159,10769 11220,10744
 	2::temp 11049,10816 11159,10769 11133,10704
 EOF
      },
@@ -24689,7 +24690,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2015/pressemitteilung.360026.php',
        data  => <<EOF,
-	q3::inwork 11275,10723 11234,10739 11159,10769 11049,10816
+	q3::inwork 11275,10723 11220,10744 11159,10769 11049,10816
 	q3::inwork 11189,10831 11159,10769 11133,10704
 EOF
      },
@@ -25245,10 +25246,10 @@ EOF
 	2::temp 12114,12546 12099,12580 12050,12616
 	3 12118,12462 12006,12464 11709,12601
 	3 11709,12601 12006,12464 12118,12462
-	3 11845,12292 11920,12266 12084,12235
-	3 12084,12235 11920,12266 11845,12292
-	3 12084,12235 11920,12266 11764,12001
-	3 11764,12001 11920,12266 12084,12235
+	3 11845,12292 11920,12266 12081,12236
+	3 12081,12236 11920,12266 11845,12292
+	3 12081,12236 11920,12266 11764,12001
+	3 11764,12001 11920,12266 12081,12236
 	3 11845,12292 11920,12266 11764,12001
 	3 11764,12001 11920,12266 11845,12292
 	3 12039,12675 12064,12673 12146,12628
@@ -26479,9 +26480,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: CARSTENN-2017
-#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?bvgid=BVG131679 ("gültig bis: auf Weiteres")
-#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=30361
-#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
+# REMOVED --- #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?bvgid=BVG131679 ("gültig bis: auf Weiteres")
+# REMOVED --- #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=30361
+# REMOVED --- #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50127
 #: by: mapillary (Gehweg für Radfahrer frei)
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/kreuzungsumbau-bis-november_a172982
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729460.php
@@ -26784,6 +26786,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
+#: also_indoor: traffic
 #: last_checked: 2018-10-29 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
@@ -27194,7 +27197,7 @@ EOF
 #: XXX sind die Bauarbeiten schon beendet (bei VMZ ist der Eintrag verschwunden)?
 #: priority: #A
 #: next_check: 2018-09-16
-	q3::inwork; 15516,12838 15367,12815 15357,12813 15233,12829 15098,12849 15074,12850 15010,12855 14940,12843 14906,12837 14836,12826 14731,12809 14661,12798 14556,12781 14435,12761 14355,12752 14096,12827
+	q3::inwork; 15516,12838 15367,12815 15357,12813 15233,12829 15098,12849 15074,12850 15010,12855 14940,12843 14906,12837 14836,12826 14731,12809 14661,12798 14556,12781 14435,12761 14355,12752 14162,12808 14096,12827
 EOF
      },
      { from  => 1526407304, # 2018-05-15 20:01
@@ -27447,7 +27450,7 @@ EOF
 EOF
      },
      { from  => 1530812949, # 2018-07-05 19:49
-       until => 1542236400, # 2018-11-15 00:00
+       until => $isodate2epoch->("2018-11-30 18:00:00"), # 1542236400, # 2018-11-15 00:00
        text  => 'Hegemeisterweg: Bauarbeiten, Straße kann unpassierbar sein, bis November 2018',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -27466,16 +27469,17 @@ EOF
      },
      { from  => undef, # 
        until => 1622498400, # Ende der Bauarbeiten für die *gesamte* Schönstr. --- 2021-06-01 00:00
-       text  => 'Schönstr.: Bauarbeiten zwischen Mirbachplatz und Paul-Oestreich-Str., Fahrbahn kann gesperrt sein',
+       text  => 'Schönstr.: Bauarbeiten zwischen Mirbachplatz und Paul-Oestreich-Str., Einbahnstraßenregelung, offen Richtung Mirbachplatz',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php',
        data  => <<EOF,
 #: XXX nach den Bauarbeiten bessere Qualität
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
+#: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2018-07-06
-#: check_frequency: 60d
-	q4::inwork 13391,16436 13630,16629
+#: last_checked: 2018-11-11
+#: check_frequency: 30d
+	q4::inwork; 13391,16436 13630,16629
 EOF
      },
      { from  => 1530907854, # 2018-07-06 22:10
@@ -27601,6 +27605,7 @@ EOF
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47885
 #: source_id: 2147342919
 #: source_id: 2147343007
+#: also_indoor: traffic
 #: last_checked: 2018-10-07
 #: next_check: 2018-11-12
 	q4::inwork; 6168,6467 6083,6451 5823,6413
@@ -27713,6 +27718,8 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
+#: also_indoor: traffic
+#: priority: #B
 #: last_checked: 2018-10-25
 # REMOVED --- #: check_frequency: 21d
 #: next_check: 2018-11-15
@@ -27815,11 +27822,13 @@ EOF
        text  => 'Mittelweg/Leykestr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, außerdem Einbahnstraße in der Leykestr., voraussichtlich bis Mai 2019',
        type  => 'handicap',
        data  => <<EOF,
+#: also_indoor: traffic vvv
 #: last_checked: 2018-10-30 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
 	q3::inwork; 12647,7672 12520,7694 12335,7770
 #: last_checked ^^^
+#: also_indoor ^^^
 EOF
      },
      { from  => 1536172293, # 2018-09-05 20:31
@@ -27858,6 +27867,7 @@ EOF
        text  => 'Wilhelm-Hauff-Str./Wielandstr.: Bauarbeiten, Fahrbahn gesperrt, auf Gehweg ausweichen, Bordstein',
        type  => 'handicap',
        data  => <<EOF,
+#: also_indoor: traffic
 #: last_checked: 2018-10-07
 #: next_check: 2018-11-14
 	q3::inwork 5959,6976 6081,6977 6082,7066
@@ -27868,13 +27878,15 @@ EOF
        text  => 'Thielallee: Bauarbeiten, Fahrbahn am Corrensplatz Richtung Norden gesperrt',
        type  => 'handicap',
        data  => <<EOF,
+#: also_indoor: traffic vvv
 #: last_checked: 2018-10-25 vvv
-#: next_check: 2018-11-12 vvv
+#: next_check: 2018-11-22 vvv
 # REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
 	2::inwork 2417,4327 2434,4299
 #: next_check ^^^
 #: last_checked ^^^
+#: also_indoor ^^^
 EOF
      },
      { from  => undef,

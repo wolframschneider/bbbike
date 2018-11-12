@@ -16,7 +16,7 @@ use FindBin;
 use lib "$FindBin::RealBin/..";
 
 use vars qw($VERSION);
-$VERSION = '0.31';
+$VERSION = '0.32';
 
 use Cwd qw(getcwd realpath);
 use Data::Dumper;
@@ -473,6 +473,8 @@ my $do_shop = sub {
 
     if (defined $shop && $shop eq 'XXXXX') {
 	push @or, ["_shop", $F."S"];
+    } elsif ($tourism =~ m{^(hotel|hostel|motel|guest_house)$}) {
+	push @or, ["sehenswuerdigkeit", $F."SW|IMG:hotel"];
     } else {
 	push @or, ["_shop", $F."X"];
     }
