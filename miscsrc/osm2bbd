@@ -455,7 +455,7 @@ my $do_tourism = sub {
 	push @or, ["sehenswuerdigkeit", $F."SW"];
     } elsif ($tourism eq 'museum') {
 	push @or, ["sehenswuerdigkeit", $F."SW|IMG:museum"];
-    } elsif (grep { $tourism eq $_ } qw/hostel hotel camp_site guest_house caravan_site/) {
+    } elsif (grep { $tourism eq $_ } qw/hostel hotel camp_site motel guest_house caravan_site/) {
 	push @or, ["_tourism", $F."H"];
     } elsif (grep { $tourism eq $_ } qw/theme_park attraction zoo artwork/) {
 	push @or, ["_tourism", $F."A"];
@@ -473,8 +473,6 @@ my $do_shop = sub {
 
     if (defined $shop && $shop eq 'XXXXX') {
 	push @or, ["_shop", $F."S"];
-    } elsif ($tourism =~ m{^(hotel|hostel|motel|guest_house)$}) {
-	push @or, ["sehenswuerdigkeit", $F."SW|IMG:hotel"];
     } else {
 	push @or, ["_shop", $F."X"];
     }
