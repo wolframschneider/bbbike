@@ -411,6 +411,9 @@ push @temp_blocking,
          'data' => '# sowieso schon mit q4 markiert, deshalb -> 2
 	2::xmas 5829,10964 5782,10884
 	2::xmas 5656,10876 5652,11004
+#: by: https://twitter.com/VIZ_Berlin/status/1063061013334032384
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
+Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
 ',
          'from' => 1543100400,
          'id' => 394,
@@ -425,7 +428,7 @@ push @temp_blocking,
                             ]
                           ],
          'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971524-955635-weihnachtsmarktanderged%C3%A4chtniskirche.html',
-         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, vom 26. November 2018 bis 06. Januar 2019',
+         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 26. November 2018 bis 06. Januar 2019',
          'type' => 'gesperrt',
          'until' => 1546815599
        },
@@ -3604,7 +3607,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2018-11-05
+#: last_checked: 2018-11-14
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -3754,9 +3757,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="57401090" version="12"
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
-#: XXX laut fritz Ende 2018, laut vmz Ende 2018
+#: XXX laut fritz Ende 2018, laut vmz Frühjahr 2019
 #: last_checked: 2018-10-12
-#: next_check: 2018-12-31
+#: next_check: 2019-03-01
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
 # REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
@@ -3765,9 +3768,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1443650400,
          'id' => 2740,
          'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
-         'text' => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende 2018',
+         'text' => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Frühjahr 2019',
          'type' => 'handicap',
-         'until' => 1546254000
+         'until' => 1551459600
        },
        undef,
        undef,
@@ -3922,17 +3925,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
-#: next_check: 2018-11-14
+#: next_check: 2018-11-21
 #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
 ',
-         'from' => 1542088800,
+         'from' => 1542693600,
          'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 7. November 2018 ab ca. 09:30 Uhr. Weitere Sperrungen: am 14., 21., und 28. November',
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 21. November 2018 ab ca. 09:30 Uhr. Weitere Sperrung am 28. November',
          'type' => 'gesperrt',
-         'until' => 1542189600
+         'until' => 1542794400
        },
        undef,
        {
@@ -4069,7 +4072,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-11-03
+#: last_checked: 2018-11-14
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -4298,7 +4301,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-11-06
+#: last_checked: 2018-11-15
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 ',
          'from' => undef,
@@ -4325,10 +4328,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX nach den Bauarbeiten bessere Qualität
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.758375.php (Verzögerungen -> check_frequency erhöht)
 #: also_indoor: traffic
 #: priority: #B
 #: last_checked: 2018-11-11
-#: check_frequency: 30d
+#: check_frequency: 90d
 	q4::inwork; 13391,16436 13630,16629
 ',
          'from' => undef,
@@ -4426,7 +4430,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-10-29
+#: last_checked: 2018-11-14
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -4448,11 +4452,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
-#: also_indoor: traffic
+#: also_indoor: traffic (HG)
 #: priority: #B
 #: last_checked: 2018-10-25
 # REMOVED --- #: check_frequency: 21d
-#: next_check: 2018-11-15
+#: next_check: 2018-11-19
 	q2::inwork; 4502,11740 4574,11587
 ',
          'from' => undef,
@@ -4549,18 +4553,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: also_indoor: traffic
-#: last_checked: 2018-10-07
-#: next_check: 2018-11-14
-	q3::inwork 5959,6976 6081,6977 6082,7066
-',
-         'from' => undef,
-         'id' => 3015,
-         'text' => 'Wilhelm-Hauff-Str./Wielandstr.: Bauarbeiten, Fahrbahn gesperrt, auf Gehweg ausweichen, Bordstein',
-         'type' => 'handicap',
-         'until' => 1542301200
-       },
+       undef,
        {
          'data' => '#: also_indoor: traffic vvv
 #: last_checked: 2018-10-25 vvv
@@ -4740,6 +4733,77 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Schiffbauerdamm: Fahrtrichtung zwischen Albrechtstr. und Friedrichstr. in Richtung Osten gesperrt, bis Ende April 2019',
          'type' => 'handicap',
          'until' => 1556661599
+       },
+       undef,
+       {
+         'data' => '	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
+',
+         'from' => 1542148916,
+         'id' => 3046,
+         'source_id' => '2147343419',
+         'text' => 'Henningsdorfer Str.: zwischen Kurzebracker Weg und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende Juni 2019',
+         'type' => 'handicap',
+         'until' => 1561737600
+       },
+       {
+         'data' => '#: XXX Ist der Radwegabschnitt nicht betroffen? Gibt es eventuell in der Florastr. eine Einbahnstraßenregelung?
+#: source_id: 2147343460
+	q4::inwork; 10487,18270 10660,18345 10680,18380
+',
+         'from' => 1542085200,
+         'id' => 3047,
+         'text' => 'Breite Str.: zwischen Mühlenstr. und Berliner Str. Richtung Osten gesperrt, auch der Radverkehr ist betroffen, vom 14.11.2018 06:00 Uhr bis Anfang Dezember 2018',
+         'type' => 'handicap',
+         'until' => 1543705199
+       },
+       {
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
+#: XXX regelmäßig prüfen
+#: priority: #A
+#: last_checked: 2018-11-14
+	q4::inwork; 14724,10297 14766,10372 14797,10476
+',
+         'from' => 1542150096,
+         'id' => 3048,
+         'source_id' => '2147343461',
+         'text' => 'Kynaststr.: Fahrbahn hinter der Kreuzung Alt-Stralau Richtung Norden gesperrt, Radfahrer auf Gehweg/Fußgängerschutztunnel ausweichen und ggfs. absteigen, bis März 2019',
+         'type' => 'handicap',
+         'until' => 1554073200
+       },
+       {
+         'data' => '#: XXX vor Ort anschauen!
+#: XXX bei fritz: "Die Straße ist als Sackgasse ausgewiesen." (vermutlich keine Durchfahrt zur Kreuzung Bülowstr.) -> ja
+#: also_indoor: traffic (H)
+#: last_checked: 2018-11-15
+#: check_frequency: 120d
+	q3::inwork 7744,10372 7698,10147
+',
+         'from' => 1542222296,
+         'id' => 3049,
+         'source_id' => 'LMS-BR_r_LMS-BR_152000_LMS-BR_72',
+         'text' => 'Steinmetzstr: Bauarbeiten zwischen Kurfürstenstr. und Bülowstr., etwa 100 Meter der Fahrbahn sind gesperrt, bis Ende 2019',
+         'type' => 'handicap',
+         'until' => 1577833199
+       },
+       undef,
+       {
+         'data' => '#: next_check_id: NEUERMAUERWEG-2018
+#: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
+#: priority: #B vvv
+#: last_checked: 2018-11-02 (mapillary, wobei man die Bauzäune umfahren kann) vvv
+#: check_frequency: 7d vvv
+(Neuer Mauerweg): noch abgesperrt	2::inwork 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8014,19149 8347,18916 8476,18773
+(Neuer Mauerweg): noch abgesperrt	2::inwork 7572,19490 7540,19550
+#: check_frequency ^^^
+#: last_checked ^^^
+#: priority ^^^
+#: add_fragezeichen ^^^
+',
+         'from' => undef,
+         'id' => 3051,
+         'text' => 'Neuer Mauerweg: Weg kann noch durch Bauzäune versperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );

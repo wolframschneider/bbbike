@@ -232,6 +232,7 @@ persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
 really-slow-checks:	check-nearest \
 			check-crossings-important \
 			check-urls \
+			check-bvg \
 			plz-test
 
 plz-test:
@@ -1046,7 +1047,7 @@ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd:	\
 
 ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org:	*-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
 	-@$(WRITEABLE) $@
-	${PERL} ${MISCSRCDIR}/fragezeichen2org.pl --expired-statistics-logfile=${PERSISTENTTMPDIR}/expired-fragezeichen.log *-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd > $@~
+	${PERL} ${MISCSRCDIR}/fragezeichen2org.pl *-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd > $@~
 	mv $@~ $@
 	-@$(READONLY) $@
 
@@ -1862,6 +1863,11 @@ check-urls: ${PERSISTENTTMPDIR}/url_checks.log
 
 ${PERSISTENTTMPDIR}/url_checks.log:	comments_route-orig comments_ferry-orig
 	${PERL} ${MISCSRCDIR}/url_checker.pl -v -log ${PERSISTENTTMPDIR}/url_checks.log $>
+
+check-bvg: ${PERSISTENTTMPDIR}/bvg_checks.log
+
+${PERSISTENTTMPDIR}/bvg_checks.log: .check_daily
+	${PERL} ${MISCSRCDIR}/bvg_checker.pl 2>&1 | tee $@
 
 ######################################################################
 # Checks for unhandled streets

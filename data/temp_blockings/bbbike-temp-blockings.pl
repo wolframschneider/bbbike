@@ -3361,13 +3361,16 @@ EOF
        until => $isodate2epoch->("2019-01-06 23:59:59"), # 1357513199, # 2013-01-06 23:59 # 1325458800, # 2012-01-02 00:00 # PERIODISCH!
        periodic => 1,
        recurrences => [['yearly', days => 20, months => 11]],
-       text  => 'Weihnachtsmarkt an der Gedächtniskirche, vom 26. November 2018 bis 06. Januar 2019',
+       text  => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 26. November 2018 bis 06. Januar 2019',
        type  => 'gesperrt',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971524-955635-weihnachtsmarktanderged%C3%A4chtniskirche.html',
        data  => <<EOF,
 # sowieso schon mit q4 markiert, deshalb -> 2
 	2::xmas 5829,10964 5782,10884
 	2::xmas 5656,10876 5652,11004
+#: by: https://twitter.com/VIZ_Berlin/status/1063061013334032384
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
+Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
 EOF
      },
      { from  => 1132606608, # 2005-11-21 21:56
@@ -20942,8 +20945,8 @@ EOF
        text  => 'Gauklerfest, Straßen am Schinkelplatz gesperrt, vom 1. August bis 11. August 2013',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
-	2::temp 10008,12274 10058,12290 9996,12401
+	2::temp 9996,12372 10006,12306 10010,12275 10012,12259 10029,12208
+	2::temp 10010,12275 10058,12290 9990,12404
 	2::temp 10091,12232 10058,12290
 EOF
      },
@@ -23995,7 +23998,7 @@ EOF
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2018-11-05
+#: last_checked: 2018-11-14
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -24740,8 +24743,8 @@ EOF
 EOF
      },
      { from  => 1443650400, # 2015-10-01 00:00
-       until => $isodate2epoch->("2018-12-31 12:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
-       text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende 2018',
+       until => $isodate2epoch->("2019-03-01 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
+       text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Frühjahr 2019',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
        data  => <<EOF,
@@ -24756,9 +24759,9 @@ EOF
 #: osm_watch: way id="57401090" version="12"
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
-#: XXX laut fritz Ende 2018, laut vmz Ende 2018
+#: XXX laut fritz Ende 2018, laut vmz Frühjahr 2019
 #: last_checked: 2018-10-12
-#: next_check: 2018-12-31
+#: next_check: 2019-03-01
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
 # REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
@@ -25849,14 +25852,14 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2018-11-13 07:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-11-14 11:00:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 7. November 2018 ab ca. 09:30 Uhr. Weitere Sperrungen: am 14., 21., und 28. November',
+     { from  => $isodate2epoch->("2018-11-20 07:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-11-21 11:00:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 21. November 2018 ab ca. 09:30 Uhr. Weitere Sperrung am 28. November',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
-#: next_check: 2018-11-14
+#: next_check: 2018-11-21
 #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
@@ -26584,7 +26587,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-11-03
+#: last_checked: 2018-11-14
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -27409,7 +27412,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-11-06
+#: last_checked: 2018-11-15
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27475,10 +27478,11 @@ EOF
        data  => <<EOF,
 #: XXX nach den Bauarbeiten bessere Qualität
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.758375.php (Verzögerungen -> check_frequency erhöht)
 #: also_indoor: traffic
 #: priority: #B
 #: last_checked: 2018-11-11
-#: check_frequency: 30d
+#: check_frequency: 90d
 	q4::inwork; 13391,16436 13630,16629
 EOF
      },
@@ -27698,7 +27702,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-10-29
+#: last_checked: 2018-11-14
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27718,11 +27722,11 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
-#: also_indoor: traffic
+#: also_indoor: traffic (HG)
 #: priority: #B
 #: last_checked: 2018-10-25
 # REMOVED --- #: check_frequency: 21d
-#: next_check: 2018-11-15
+#: next_check: 2018-11-19
 	q2::inwork; 4502,11740 4574,11587
 EOF
      },
@@ -27869,7 +27873,7 @@ EOF
        data  => <<EOF,
 #: also_indoor: traffic
 #: last_checked: 2018-10-07
-#: next_check: 2018-11-14
+#: next_check: 2018-11-19
 	q3::inwork 5959,6976 6081,6977 6082,7066
 EOF
      },
@@ -28037,11 +28041,11 @@ EOF
        data  => <<EOF,
 Werderscher Markt	2::temp 9898,12161 9939,12174 9972,12184 10029,12208 10091,12232
 Am Zeughaus	2::temp 9919,12613 9956,12523 9984,12426
-Schinkelplatz	2::temp 9984,12426 9996,12401 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
-Schinkelplatz	2::temp 10058,12290 10008,12274
-Schinkelplatz	2::temp 9996,12401 10058,12290 10091,12232
-Prinzengasse	2::temp 9955,12300 10002,12305
-An der Kommandantur	2::temp 9994,12368 9943,12364
+Schinkelplatz	2::temp 9984,12426 9990,12404 9996,12372 10006,12306 10010,12275 10012,12259 10029,12208
+Schinkelplatz	2::temp 10058,12290 10010,12275
+Schinkelplatz	2::temp 9990,12404 10058,12290 10091,12232
+Prinzengasse	2::temp 9955,12300 10006,12306
+An der Kommandantur	2::temp 9996,12372 9943,12364
 Niederlagstr.	2::temp 9972,12184 9959,12281 9955,12300 9943,12364 9934,12420
 Falkoniergasse	2::temp 9939,12174 9909,12261
 Werdersche Rosenstr.	2::temp 9883,12251 9909,12261 9959,12281
@@ -28293,6 +28297,80 @@ EOF
        source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-donnerstag-08-11-18-',
        data  => <<EOF,
 	2::temp 9164,12172 9373,12197
+EOF
+     },
+     { from  => 1542148916, # 2018-11-13 23:41
+       until => $isodate2epoch->("2019-06-28 18:00:00"), # 1561931999, # 2019-06-30 23:59
+       text  => 'Henningsdorfer Str.: zwischen Kurzebracker Weg und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende Juni 2019',
+       type  => 'handicap',
+       source_id => '2147343419',
+       data  => <<EOF,
+	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
+EOF
+     },
+     { from  => 1542085200, # 2018-11-13 06:00
+       until => 1543705199, # 2018-12-01 23:59
+       text  => 'Breite Str.: zwischen Mühlenstr. und Berliner Str. Richtung Osten gesperrt, auch der Radverkehr ist betroffen, vom 14.11.2018 06:00 Uhr bis Anfang Dezember 2018',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX Ist der Radwegabschnitt nicht betroffen? Gibt es eventuell in der Florastr. eine Einbahnstraßenregelung?
+#: source_id: 2147343460
+	q4::inwork; 10487,18270 10660,18345 10680,18380
+EOF
+     },
+     { from  => 1542150096, # 2018-11-14 00:01
+       until => 1554073200, # 2019-04-01 01:00
+       text  => 'Kynaststr.: Fahrbahn hinter der Kreuzung Alt-Stralau Richtung Norden gesperrt, Radfahrer auf Gehweg/Fußgängerschutztunnel ausweichen und ggfs. absteigen, bis März 2019',
+       type  => 'handicap',
+       source_id => '2147343461',
+       data  => <<EOF,
+#: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
+#: XXX regelmäßig prüfen
+#: priority: #A
+#: last_checked: 2018-11-14
+	q4::inwork; 14724,10297 14766,10372 14797,10476
+EOF
+     },
+     { from  => 1542222296, # 2018-11-14 20:04
+       until => 1577833199, # 2019-12-31 23:59
+       text  => 'Steinmetzstr: Bauarbeiten zwischen Kurfürstenstr. und Bülowstr., etwa 100 Meter der Fahrbahn sind gesperrt, bis Ende 2019',
+       type  => 'handicap',
+       source_id => 'LMS-BR_r_LMS-BR_152000_LMS-BR_72',
+       data  => <<EOF,
+#: XXX vor Ort anschauen!
+#: XXX bei fritz: "Die Straße ist als Sackgasse ausgewiesen." (vermutlich keine Durchfahrt zur Kreuzung Bülowstr.) -> ja
+#: also_indoor: traffic (H)
+#: last_checked: 2018-11-15
+#: check_frequency: 120d
+	q3::inwork 7744,10372 7698,10147
+EOF
+     },
+     { from  => 1542063600, # 2018-11-13 00:00
+       until => 1542308365, # REMOVED: Radfahrer dürfen hier offiziell fahren --- 1554048000, # 2019-03-31 18:00
+       text  => 'Flottwellstr.: Bauarbeiten zwischen Lützowstr. und Pohlstr., Einbahnstraßenregelung, offen Richtung Norden, Vom 14. November 2018 bis 31. März 2019 ',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2018/pressemitteilung.758119.php',
+       data  => <<EOF,
+# REMOVED --- #: XXX vor Ort anschauen!
+	q4::inwork; 8199,10634 8159,10430
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => "Neuer Mauerweg: Weg kann noch durch Bauzäune versperrt sein",
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: NEUERMAUERWEG-2018
+#: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
+#: priority: #B vvv
+#: last_checked: 2018-11-02 (mapillary, wobei man die Bauzäune umfahren kann) vvv
+#: check_frequency: 7d vvv
+(Neuer Mauerweg): noch abgesperrt	2::inwork 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8014,19149 8347,18916 8476,18773
+(Neuer Mauerweg): noch abgesperrt	2::inwork 7572,19490 7540,19550
+#: check_frequency ^^^
+#: last_checked ^^^
+#: priority ^^^
+#: add_fragezeichen ^^^
 EOF
      },
     );
