@@ -27,7 +27,7 @@ use File::Basename qw(basename);
 use Getopt::Long;
 use POSIX qw(strftime);
 use Time::Local qw(timelocal);
-use URI::Escape qw(uri_escape);
+use URI::Escape qw(uri_escape_utf8);
 
 use BBBikeBuildUtil qw(get_pmake);
 use BBBikeUtil qw(int_round bbbike_root);
@@ -160,7 +160,7 @@ my @records;
 # gracefully exit, so DistDB may flush computed things
 $SIG{INT} = sub { exit };
 
-my %files_add_street_name = map{($_,1)} ('radwege', 'ampeln');
+my %files_add_street_name = map{($_,1)} ('radwege', 'ampeln', 'vorfahrt');
 
 my $today = strftime "%Y-%m-%d", localtime;
 
@@ -287,7 +287,7 @@ for my $file (@files) {
 		     } elsif ($also_indoor_dir =~ m{^search\b}) {
 			 (my $search_term = $also_indoor_dir) =~ s{^search\s+}{};
 			 if ($search_term) {
-			     push @extra_url_defs, ['Search', qq{https://start.duckduckgo.com/?q="@{[ uri_escape($search_term) ]}"&df=m}];
+			     push @extra_url_defs, ['Search', qq{https://start.duckduckgo.com/?q="@{[ uri_escape_utf8($search_term) ]}"&df=m}];
 			 } else {
 			     warn "WARN: 'also_indoor: search' without search term\n";
 			 }
@@ -392,6 +392,19 @@ for my $file (@files) {
 			 $subject;
 	     if ($dir->{osm_watch}) {
 		 $headline .= " (+osm_watch)";
+		 for my $osm_watch (@{ $dir->{osm_watch} }) {
+		     if ($osm_watch =~ m{^(\S+)\s+id="(\d+)"}) {
+			 my($type, $id) = ($1, $2);
+			 my $url = "https://www.openstreetmap.org/$type/$id";
+			 push @extra_url_defs, ["OSM-Watch", $url];
+		     } elsif ($osm_watch =~ m{^note\s+(\d+)}) {
+			 my($id) = ($1);
+			 my $url = "https://www.openstreetmap.org/note/$id";
+			 push @extra_url_defs, ["OSM-Note", $url];
+		     } else {
+			 warn "Cannot parse osm_watch directive '$osm_watch'\n";
+		     }
+		 }
 	     }
 	     if ($dir->{add_fragezeichen} || ($file =~ m{fragezeichen} && !$dir->{ignore})) {
 		 $headline .= " (+public)";
@@ -638,6 +651,10 @@ if ($expired_statistics_logfile) {
     print <<"EOF";
 * settings
 #+SEQ_TODO: TODO | PLAN | DONE
+#+OPTIONS: ^:nil
+#+OPTIONS: *:nil
+#+OPTIONS: toc:1
+#+OPTIONS: num:nil
 # Local variables:
 # compile-command: "(cd ../data && $pmake fragezeichen-nextcheck.org-exact-dist HOME=$ENV{HOME})"
 # End:
