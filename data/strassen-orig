@@ -1089,14 +1089,14 @@ Holzmarktstr. [Rückseite]	N 11524,12314 11488,12225 11736,12097
 #: oldname: Wallnerstr.
 Lichtenberger Str. [Rückseite]	N 11736,12097 11845,12292
 Stralauer Platz	HH 12180,11657 12497,11459
-Andreasstr.	NH 12180,11657 12204,11748 12207,11763 12238,11931 12279,12113 12295,12197 12345,12435 12352,12509
+Andreasstr.	NH 12180,11657 12204,11748 12207,11763 12238,11931 12279,12113 12295,12197 12339,12436 12352,12509
 Kleine Andreasstr.	N 12059,12172 12211,12128
 Kleine Andreasstr.	NN 12211,12128 12279,12113
 Schillingstr. (Mitte)	NN 11388,12202 11452,12318 11462,12384
 Schillingstr. (Mitte)	N 11340,12443 11353,12436 11462,12384 11497,12463 11562,12597 11596,12668 11635,12745
 (Schillingstr. - Neue Blumenstr.)	NN 11596,12668 11709,12601
 Neue Blumenstr.	N 11607,12412 11709,12601 12006,12464 12118,12462
-Blumenstr. (Friedrichshain)	N 12118,12462 12305,12440 12345,12435
+Blumenstr. (Friedrichshain)	N 12118,12462 12305,12440 12339,12436
 Blumenstr. (Friedrichshain)	N 12305,12440 12306,12459 12125,12490 12118,12462
 Jacobystr.	N 11596,12668 11287,12814 11207,12706
 Alexanderstr.	H 11325,12021 11343,12182 11347,12223
@@ -11738,7 +11738,7 @@ Scharnweberstr. (Friedrichshain)	NH 14887,11929 14965,11921 15080,11905 15121,11
 Weserstr. (Friedrichshain)	N 14416,11815 14475,11778 14550,11732 14622,11685 14645,11670 14710,11626 14764,11591 14849,11539 14949,11474 15016,11431
 #: note: "Schreibfederpassage" (by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=6033)
 #: XXX wird diese Passage dauerhaft gesperrt werden?
-#: last_checked: 2018-10-29
+#: last_checked: 2018-11-24
 (Weserstr. - Boxhagener Str.)	NN 14949,11474 14838,11410 14792,11391 14752,11369
 Caroline-Herschel-Platz	NN 14752,11369 14737,11347
 Gryphiusstr.	N 14369,11287 14395,11356 14434,11465 14496,11620 14513,11657 14550,11732
@@ -14559,18 +14559,20 @@ Togostr.	N 5531,16734 5315,16936
 #: by: https://www.tagesspiegel.de/berlin/bezirke/spandau/berlin-mitte-neue-strassennamen-fuers-afrikanische-viertel-gefunden/21163352.html
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8959 ("Manga-Bell-Platz")
 #: last_checked: 2018-10-27 (mapillary)
-#: next_check: 2018-12-01
+#: next_check: 2019-01-01
 Nachtigalplatz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,16803 5561,16767 5531,16734 5496,16696 5533,16662
-#: XXX wird vermutlich umbenannt, neuer Name: "Maji-Maji-Allee"
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/426_2018_zu_ds_-1118_v_neue_strassennamen_im_afrikanischen_viertel.pdf
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_47_6363_6522_online.pdf (Umbenennung, Widerspruchsfrist bis 2018-12-23)
+#: add_fragezeichen: Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: last_checked: 2018-10-13
-#: next_check: 2018-12-01
+#: next_check: 2018-12-07
 Petersallee	N 5426,16539 5533,16662
-#: XXX wird vermutlich umbenannt, neuer Name: "Anna-Mungunda-Allee"
 #: XXX_indoor: str_cont_ausnahme-Eintrag kann vermutlich entfernt werden
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/426_2018_zu_ds_-1118_v_neue_strassennamen_im_afrikanischen_viertel.pdf
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_47_6363_6522_online.pdf (Umbenennung, Widerspruchsfrist bis 2018-12-23)
+#: add_fragezeichen: Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: last_checked: 2018-10-13
-#: next_check: 2018-12-01
+#: next_check: 2018-12-07
 Petersallee	N 5581,16708 5639,16768 5684,16815 5772,16919
 Usambarastr.	N 5526,16916 5565,16923 5684,16815
 Ghanastr.	N 5423,17076 5358,17132 5257,17046 5255,17007 5315,16936
@@ -17557,6 +17559,7 @@ Jakobikirchstr.	N 10511,10800 10564,10925
 #: oldname: -19930915: Hollmannstr.
 (ehemalige Hollmannstr.)	NN 9995,10637 9869,10672 9777,10719
 Enckestr.	N 9653,10950 9666,10848
+(Friedrichstr. - Enckestr.)	NN 9537,10837 9666,10848
 Fromet-und-Moses-Mendelssohn-Platz	NN 9797,10771 9733,10827 9682,10836 9666,10848
 Fanny-Hensel-Weg	NN 8784,10824 8742,10868 8659,10910
 Hitzigallee	N 7690,11108 7745,11332

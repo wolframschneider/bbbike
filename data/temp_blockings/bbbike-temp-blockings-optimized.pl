@@ -415,20 +415,20 @@ push @temp_blocking,
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
 Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
 ',
-         'from' => 1543100400,
+         'from' => 1542495600,
          'id' => 394,
          'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              20,
+                              18,
                               'months',
                               11
                             ]
                           ],
          'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971524-955635-weihnachtsmarktanderged%C3%A4chtniskirche.html',
-         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 26. November 2018 bis 06. Januar 2019',
+         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 19. November 2018 bis 06. Januar 2019',
          'type' => 'gesperrt',
          'until' => 1546815599
        },
@@ -3605,10 +3605,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: FRIEDRICHSTR-2018
-#: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
+#: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2018-11-16
+#: last_checked: 2018-11-19
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -3926,17 +3926,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
-#: next_check: 2018-11-21
-#: priority: #A
+# REMOVED --- #: next_check: 2018-11-21 --- #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
 ',
-         'from' => 1542693600,
+         'from' => 1543298400,
          'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 21. November 2018 ab ca. 09:30 Uhr. Weitere Sperrung am 28. November',
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 28. November 2018 ab ca. 09:30 Uhr',
          'type' => 'gesperrt',
-         'until' => 1542794400
+         'until' => 1543399200
        },
        undef,
        {
@@ -4302,7 +4301,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-11-15
+#: last_checked: 2018-11-20
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 ',
          'from' => undef,
@@ -4321,9 +4320,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1530812949,
          'id' => 2978,
-         'text' => 'Hegemeisterweg: Bauarbeiten, Straße kann unpassierbar sein, bis November 2018',
+         'text' => 'Hegemeisterweg: Bauarbeiten, Straße kann unpassierbar sein, bis November 2018, eventuell auch länger',
          'type' => 'gesperrt',
-         'until' => 1543597200
+         'until' => undef
        },
        undef,
        {
@@ -4507,7 +4506,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: add_fragezeichen: wann wird die Brücke wieder eröffnet?
 #: also_indoor: search Templiner Brücke
 #: last_checked: 2018-09-01
-#: next_check: 2018-11-22
+#: next_check: 2018-11-26
 	2::inwork -15853,-4327 -15664,-4450 -15652,-4441 -15537,-4535 -15540,-4550 -14801,-5162
 ',
          'from' => undef,
@@ -4532,19 +4531,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1556726400
        },
-       {
-         'data' => '# REMOVED (alter Abschnitt) ---	q4::inwork 12066,9558 12074,9689 12085,9778
-#: last_checked: 2018-11-16
-#: check_frequency: 7d
-	q4::inwork 12066,9558 12047,9429 12074,9217
-',
-         'from' => 1536172293,
-         'id' => 3012,
-         'source_id' => '2147343178',
-         'text' => 'Friedelstraße: zwischen Pflügerstr. und Weserstr. gesperrt, Asphaltierungsarbeiten, bis Ende November 2018',
-         'type' => 'handicap',
-         'until' => 1543597200
-       },
+       undef,
        undef,
        {
          'data' => '#: XXX ist das Tor tatsächlich geschlossen? und wenn ja, wann wird es wieder geöffnet?
@@ -4563,9 +4550,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: source_id: 2147343479
 #: also_indoor: traffic vvv
 #: last_checked: 2018-10-25 vvv
+#: next_check: 2018-11-26 vvv
 # REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
 	2::inwork 2417,4327 2434,4299
+#: next_check ^^^
 #: last_checked ^^^
 #: also_indoor ^^^
 ',
@@ -4618,7 +4607,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-11-03
+#: last_checked: 2018-11-22
 #: check_frequency: 21d
 	2::inwork 14854,8964 14614,9052
 ',
@@ -4685,18 +4674,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.dafmap.de/d/berlin.html?id=4424&mt=0&zoom=17
-#: last_checked: 2018-10-25
-#: add_fragezeichen: Sind die Bauarbeiten beendet?
-	q4::inwork 3013,10553 3093,10594
-',
-         'from' => undef,
-         'id' => 3040,
-         'text' => 'Heilbronner Str./Kracauerplatz: Bauarbeiten, Fahrbahn gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        {
          'data' => '#: source_id: 2147343382
@@ -4708,16 +4686,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1549040400
        },
-       {
-         'data' => '	2::inwork 14338,22885 14276,22914
-',
-         'from' => 1540930270,
-         'id' => 3043,
-         'source_id' => '2147343394',
-         'text' => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., eventuell sind auch Radfahrer betroffen, voraussichtlich bis 23.11.2018 ',
-         'type' => 'gesperrt',
-         'until' => 1543014000
-       },
+       undef,
        {
          'data' => '	q3::inwork; 9106,12795 9193,12875 9239,12923 9279,12953
 ',
@@ -4749,23 +4718,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1543705199
        },
+       undef,
        {
-         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
-#: XXX regelmäßig prüfen
-#: priority: #A
-#: last_checked: 2018-11-16
-	q4::inwork; 14724,10297 14766,10372 14797,10476
-',
-         'from' => 1542150096,
-         'id' => 3048,
-         'source_id' => '2147343461',
-         'text' => 'Kynaststr.: Fahrbahn hinter der Kreuzung Alt-Stralau Richtung Norden gesperrt, Radfahrer auf Gehweg/Fußgängerschutztunnel ausweichen und ggfs. absteigen, bis März 2019',
-         'type' => 'handicap',
-         'until' => 1554073200
-       },
-       {
-         'data' => '#: XXX vor Ort anschauen!
-#: XXX bei fritz: "Die Straße ist als Sackgasse ausgewiesen." (vermutlich keine Durchfahrt zur Kreuzung Bülowstr.) -> ja
+         'data' => '#: XXX bei fritz: "Die Straße ist als Sackgasse ausgewiesen." (vermutlich keine Durchfahrt zur Kreuzung Bülowstr.) -> ja
+#: by: https://www.berliner-woche.de/schoeneberg/c-bauen/am-frueheren-commerzbank-standort-entsteht-ein-moderner-buerokomplex_a190072
 #: also_indoor: traffic (H)
 #: last_checked: 2018-11-15
 #: check_frequency: 120d
@@ -4799,12 +4755,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '	q4::inwork 5541,18435 5537,18309 5536,18234
+         'data' => '#: by: https://www.berliner-woche.de/reinickendorf/c-verkehr/waldowstrasse-wird-saniert_a189664
+#: source_id: LMS-BR_r_LMS-BR_152539_LMS-BR_72
+	q4::inwork; 5541,18435 5537,18309 5536,18234
 ',
          'from' => 1542495600,
          'id' => 3052,
          'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
-         'text' => 'Waldowstr.: Bauarbeiten zwischen Humboldtstr. und Pfahler Str., Fahrbahn gesperrt, 19. November 2018 bis zum 21. Dezember 2018',
+         'text' => 'Waldowstr.: Bauarbeiten zwischen Pfahler Str. und Humboldtstr., Fahrbahn Richtung Humboldtstr. gesperrt, 19. November 2018 bis zum 21. Dezember 2018',
          'type' => 'handicap',
          'until' => 1545433199
        },
@@ -4827,6 +4785,25 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Borggrevestr.: Bauarbeiten, Fahrbahn gesperrt, März 2019 bis Ende April 2019',
          'type' => 'handicap',
          'until' => 1556661599
+       },
+       {
+         'data' => '	q4::inwork 5723,9949 5728,10127 5754,10182
+',
+         'from' => 1542653796,
+         'id' => 3055,
+         'text' => 'Grainauer Str.: zwischen Regensburger Str. und Geisbergstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende November 2018 ',
+         'type' => 'handicap',
+         'until' => 1543618799
+       },
+       {
+         'data' => '	q4::inwork 10225,16436 10197,16528
+',
+         'from' => 1542668400,
+         'id' => 3056,
+         'source_id' => '2147343500',
+         'text' => 'Malmöer Str.: zwischen Bornholmer Str. und Czarnikauer Str. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis Mitte Dezember 2018',
+         'type' => 'handicap',
+         'until' => 1544914799
        }
      
 );

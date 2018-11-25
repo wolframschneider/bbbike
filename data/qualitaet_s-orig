@@ -11,7 +11,7 @@
 # 
 #: next_check_id: DIESEL-2015 vvv
 #: XXX und eventuell auch schauen, ob das Tor wieder ein Schloss hat
-#: last_checked: 2018-10-27 vvv
+#: last_checked: 2018-11-24 vvv
 Dieselstr., Umfahrung: Asphalt	Q0 14419,8112 14429,8074
 #: XXX_osm laut osm Asphalt, hier aber nicht!
 Dieselstr., Umfahrung: unbefestigt	Q2 14429,8074 14484,8044
@@ -278,7 +278,7 @@ Lohmühlenbrücke: Asphalt	Q0 12868,9359 12897,9365
 #: XXX wird die Kiefholzstr. asphaltiert?
 #: XXX Baumaßnahme: 9.9 (Realisierung nach 2011)
 #: osm_watch: way id="4686083" version="19"
-#: last_checked: 2018-11-06
+#: last_checked: 2018-11-21
 #: check_frequency: 90d
 Kiefholzstr.: Kopfsteinpflaster	Q2 13602,9581 13455,9711 13251,9829
 # 
@@ -444,8 +444,8 @@ Kollwitzstr.: Kopfsteinpflaster	Q2 11006,14087 10937,14006
 Kiehlufer: Kopfsteinpflaster	Q2 13745,8448 13575,8593 13405,8737 13311,8813
 Kiehlufer: Asphalt	Q0 13311,8813 13227,8877
 Kiehlufer: Kopfsteinpflaster	Q2- 13227,8877 13078,8992 12950,9132 12895,9323 12901,9340 12913,9353
-Spreewaldplatz: Kopfsteinpflaster, OK	Q1 12243,10274 12292,10374 12274,10436
-Spreewaldplatz: Kopfsteinpflaster, OK	Q1 12341,10218 12292,10374
+Spreewaldplatz: Kopfsteinpflaster, OK	Q1- 12243,10274 12292,10374 12274,10436
+Spreewaldplatz: Kopfsteinpflaster, OK	Q1- 12341,10218 12292,10374
 # REMOVED --- Am Nordhafen: Kopfsteinpflaster	Q2 7733,14570
 Schubertstr.: Asphalt	Q0 21807,6535 21825,6440 21856,6390 21984,6317
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20061128.1350.51122.html
@@ -689,6 +689,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 # 
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
+#: last_checked: 2018-11-23
 #: next_check: 2019-06-01
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12528,8205 12714,8249
 # 
@@ -1277,8 +1278,8 @@ Liepnitzstr.: Asphalt	Q0 17803,8079 17856,8162 17920,8256 17961,8312 17988,8350 
 #: next_check_id: HEGEMEISTERWEG-2018
 #: XXX Straße wird asphaltiert, laut Bauschild bis November 2018 fertig
 #: add_fragezeichen: Hat die Fahrbahn die letzte Asphalt-Deckschicht bekommen?
-#: last_checked: 2018-11-10
-#: check_frequency: 7d
+#: last_checked: 2018-11-24
+#: check_frequency: 14d
 Hegemeisterweg: Asphalt ohne letzte Deckschicht	Q0- 17202,8391 17522,8220
 # 
 Hegemeisterweg: Asphalt	Q0 17522,8220 17566,8199
@@ -1530,7 +1531,7 @@ Treptower Park: Kleinsteinpflaster	Q1- 15623,9028 15778,8990
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2018-11-03
+#: last_checked: 2018-11-22
 #: check_frequency: 30d
 Treptower Park: Schotterweg, aber relativ glatt	Q2 14854,8964 14614,9052
 # 
@@ -1771,7 +1772,7 @@ Derfflingerstr.: einige kurze Kopfsteinpflasterabschnitte, sonst Asphalt	Q1+ 711
 Weimarer Str.: gutes Kopfsteinpflaster	Q1 4101,11347 4101,11233
 Graudenzer Str.: Kopfsteinpflaster	Q2 13243,12222 13470,12190
 Neue Blumenstr.: gutes Kopfsteinpflaster	Q1- 12006,12464 12118,12462
-Blumenstr.: gutes Kopfsteinpflaster	Q1- 12118,12462 12125,12490 12306,12459 12305,12440 12345,12435
+Blumenstr.: gutes Kopfsteinpflaster	Q1- 12118,12462 12125,12490 12306,12459 12305,12440 12339,12436
 Blumenstr.: Asphalt	Q0 12118,12462 12305,12440
 Fritschestr.: mäßiges bis schlechtes Kopfsteinpflaster	Q3+ 3287,11846 3251,12025
 #: note: Charlottenburger Platten
@@ -7318,7 +7319,7 @@ Bebelplatz: gepflastert	Q1 9680,12232 9664,12387
 (Park am Gleisdreieck, Eingang Kurfürstenstr.): Beton	Q0 8058,10306 8180,10282 8256,10264
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): wassergebundene Decke	Q1 8264,10192 8276,10079
 #: next_check_id: HELLWEG-2014 vvv
-#: last_checked: 2018-08-23 vvv
+#: last_checked: 2018-11-20 vvv
 #: check_frequency: 100d vvv
 #: XXX wird hier noch eine wassergebundene Decke erstellt?
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): unbefestigt	Q2 8276,10079 8289,9988
@@ -9418,6 +9419,8 @@ Kleistpark: gepflastert	Q1- 7430,9576 7501,9573 7512,9572
 (Blockdammweg - Trautenauer Str.): Asphalt	Q0 17904,8924 17888,8899 17910,8881
 #: note: relativ glattes Pflaster
 Fromet-und-Moses-Mendelssohn-Platz: gepflastert	Q1 9797,10771 9733,10827 9682,10836 9666,10848
+#: note: relativ glattes Pflaster
+(Friedrichstr. - Enckestr.): gepflastert	Q1 9537,10837 9666,10848
 (Grillostr. - Wehnertstr.): Verbundsteinpflaster	Q1 8790,854 8672,919
 (Im Eck - Heinitzweg): Verbundsteinpflaster	Q1 10162,1054 10173,1049 10223,1029 10232,1025
 Kettinger Str. [Siedlungsstraße]: Asphalt	Q0 10116,949 10035,1000 9976,1042
@@ -22052,7 +22055,7 @@ Kreideweg: guter Asphalt	Q0 10748,2233 10840,2196 10886,2167
 #: confirmed_by: srt 
 #: XXX wird das hier verbessert, im Zuge von Berlin-Leipzig?
 #: XXX Baumaßnahme GL6.24 (Realisierung nach 2011)
-#: osm_watch: way id="26714602" version="2"
+#: osm_watch: way id="26714602" version="3"
 #: last_checked: 2018-08-22
 #: check_frequency: 300d
 (Jenbacher Weg - Mauerweg): unbefestigter Feldweg, recht festgetrampelt	Q2 6233,412 6256,363

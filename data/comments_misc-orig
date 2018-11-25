@@ -1159,8 +1159,8 @@ entlang des IGA-Busparkplatzes	CP2; 23084,14472 23081,14418
 #: XXX laut fritz bis 09.11.2018
 #: source_id: 2147342726
 #: source_id: 2147343037
-#: last_checked: 2018-11-15
-#: next_check: 2018-11-23
+#: last_checked: 2018-11-20
+#: next_check: 2018-12-21
 Yorckstr. - Katzbachstr.: beim Linksabbiegen Ausschilderung befolgen	CP; 8679,9544 8595,9495 8598,9269
 # 
 #: next_check_id: PARKVIERTELKLADOW-2017 vvv
@@ -1281,4 +1281,6 @@ Arturweg: Privatstraﬂe	CS 24949,10956 24948,10815
 Arturweg: Privatstraﬂe	CS 24919,10818 24948,10815 25002,10810 25058,10805 25057,10900 25055,10959
 # 
 Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,8364 23047,8439 22954,8506 22856,8577
+# 
+(Friedrichstr. - Enckestr.): entlang taz-Geb‰ude und Besselpark	CS 9537,10837 9666,10848
 # 

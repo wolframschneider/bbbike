@@ -3357,11 +3357,11 @@ EOF
 	1 -1664,-1720 -1715,-1767 -1921,-1931 -2040,-2177
 EOF
      },
-     { from  => $isodate2epoch->("2018-11-25 00:00:00"), # 1 Tag Vorlauf
+     { from  => $isodate2epoch->("2018-11-18 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-01-06 23:59:59"), # 1357513199, # 2013-01-06 23:59 # 1325458800, # 2012-01-02 00:00 # PERIODISCH!
        periodic => 1,
-       recurrences => [['yearly', days => 20, months => 11]],
-       text  => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 26. November 2018 bis 06. Januar 2019',
+       recurrences => [['yearly', days => 18, months => 11]],
+       text  => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 19. November 2018 bis 06. Januar 2019',
        type  => 'gesperrt',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971524-955635-weihnachtsmarktanderged%C3%A4chtniskirche.html',
        data  => <<EOF,
@@ -23996,10 +23996,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: FRIEDRICHSTR-2018
-#: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018)
+#: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2018-11-16
+#: last_checked: 2018-11-19
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -25853,15 +25853,14 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2018-11-20 07:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-11-21 11:00:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 21. November 2018 ab ca. 09:30 Uhr. Weitere Sperrung am 28. November',
+     { from  => $isodate2epoch->("2018-11-27 07:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-11-28 11:00:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 28. November 2018 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
-#: next_check: 2018-11-21
-#: priority: #A
+# REMOVED --- #: next_check: 2018-11-21 --- #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
@@ -27413,7 +27412,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-11-15
+#: last_checked: 2018-11-20
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27454,8 +27453,8 @@ EOF
 EOF
      },
      { from  => 1530812949, # 2018-07-05 19:49
-       until => $isodate2epoch->("2018-11-30 18:00:00"), # 1542236400, # 2018-11-15 00:00
-       text  => 'Hegemeisterweg: Bauarbeiten, Straße kann unpassierbar sein, bis November 2018',
+       until => undef, # $isodate2epoch->("2018-11-30 18:00:00"), # 1542236400, # 2018-11-15 00:00
+       text  => 'Hegemeisterweg: Bauarbeiten, Straße kann unpassierbar sein, bis November 2018, eventuell auch länger',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: HEGEMEISTERWEG-2018
@@ -27820,7 +27819,7 @@ EOF
 #: add_fragezeichen: wann wird die Brücke wieder eröffnet?
 #: also_indoor: search Templiner Brücke
 #: last_checked: 2018-09-01
-#: next_check: 2018-11-22
+#: next_check: 2018-11-26
 	2::inwork -15853,-4327 -15664,-4450 -15652,-4441 -15537,-4535 -15540,-4550 -14801,-5162
 EOF
      },
@@ -27839,14 +27838,13 @@ EOF
 EOF
      },
      { from  => 1536172293, # 2018-09-05 20:31
-       until => 1543597200, # 2018-11-30 18:00
+       until => 1542740647, # 1543597200, # 2018-11-30 18:00
        text  => 'Friedelstraße: zwischen Pflügerstr. und Weserstr. gesperrt, Asphaltierungsarbeiten, bis Ende November 2018',
        type  => 'handicap',
        source_id => '2147343178',
        data  => <<EOF,
 # REMOVED (alter Abschnitt) ---	q4::inwork 12066,9558 12074,9689 12085,9778
-#: last_checked: 2018-11-16
-#: check_frequency: 7d
+# REMOVED (fertig) --- #: last_checked: 2018-11-16 --- #: check_frequency: 7d
 	q4::inwork 12066,9558 12047,9429 12074,9217
 EOF
      },
@@ -27890,9 +27888,11 @@ EOF
 #: source_id: 2147343479
 #: also_indoor: traffic vvv
 #: last_checked: 2018-10-25 vvv
+#: next_check: 2018-11-26 vvv
 # REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
 	2::inwork 2417,4327 2434,4299
+#: next_check ^^^
 #: last_checked ^^^
 #: also_indoor ^^^
 EOF
@@ -28103,7 +28103,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-11-03
+#: last_checked: 2018-11-22
 #: check_frequency: 21d
 	2::inwork 14854,8964 14614,9052
 EOF
@@ -28247,13 +28247,12 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef,
+       until => 1543072992, # (vermutlich beendet?) --- undef,
        text  => 'Heilbronner Str./Kracauerplatz: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.dafmap.de/d/berlin.html?id=4424&mt=0&zoom=17
-#: last_checked: 2018-10-25
-#: add_fragezeichen: Sind die Bauarbeiten beendet?
+# REMOVED --- #: also_indoor: traffic --- #: last_checked: 2018-10-25 --- #: add_fragezeichen: Sind die Bauarbeiten beendet?
 	q4::inwork 3013,10553 3093,10594
 EOF
      },
@@ -28323,7 +28322,7 @@ EOF
 EOF
      },
      { from  => 1542150096, # 2018-11-14 00:01
-       until => 1554073200, # 2019-04-01 01:00
+       until => 1542826837, # -> handicap_s-orig, 1554073200, # 2019-04-01 01:00
        text  => 'Kynaststr.: Fahrbahn hinter der Kreuzung Alt-Stralau Richtung Norden gesperrt, Radfahrer auf Gehweg/Fußgängerschutztunnel ausweichen und ggfs. absteigen, bis März 2019',
        type  => 'handicap',
        source_id => '2147343461',
@@ -28341,8 +28340,8 @@ EOF
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_152000_LMS-BR_72',
        data  => <<EOF,
-#: XXX vor Ort anschauen!
 #: XXX bei fritz: "Die Straße ist als Sackgasse ausgewiesen." (vermutlich keine Durchfahrt zur Kreuzung Bülowstr.) -> ja
+#: by: https://www.berliner-woche.de/schoeneberg/c-bauen/am-frueheren-commerzbank-standort-entsteht-ein-moderner-buerokomplex_a190072
 #: also_indoor: traffic (H)
 #: last_checked: 2018-11-15
 #: check_frequency: 120d
@@ -28356,6 +28355,7 @@ EOF
        source_id => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2018/pressemitteilung.758119.php',
        data  => <<EOF,
 # REMOVED --- #: XXX vor Ort anschauen!
+#: by: https://www.berliner-woche.de/tiergarten/c-verkehr/bauarbeiten-in-der-flottwellstrasse_a190138
 	q4::inwork; 8199,10634 8159,10430
 EOF
      },
@@ -28379,11 +28379,13 @@ EOF
      },
      { from  => 1542495600, # 2018-11-18 00:00
        until => 1545433199, # 2018-12-21 23:59
-       text  => 'Waldowstr.: Bauarbeiten zwischen Humboldtstr. und Pfahler Str., Fahrbahn gesperrt, 19. November 2018 bis zum 21. Dezember 2018',
+       text  => 'Waldowstr.: Bauarbeiten zwischen Pfahler Str. und Humboldtstr., Fahrbahn Richtung Humboldtstr. gesperrt, 19. November 2018 bis zum 21. Dezember 2018',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
        data  => <<EOF,
-	q4::inwork 5541,18435 5537,18309 5536,18234
+#: by: https://www.berliner-woche.de/reinickendorf/c-verkehr/waldowstrasse-wird-saniert_a189664
+#: source_id: LMS-BR_r_LMS-BR_152539_LMS-BR_72
+	q4::inwork; 5541,18435 5537,18309 5536,18234
 EOF
      },
      { from  => 1546729200, # 2019-01-06 00:00
@@ -28402,6 +28404,23 @@ EOF
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
        data  => <<EOF,
 	q4::inwork 5856,18569 5795,18585 5715,18586 5634,18587 5545,18590
+EOF
+     },
+     { from  => 1542653796, # 2018-11-19 19:56
+       until => 1543618799, # 2018-11-30 23:59
+       text  => 'Grainauer Str.: zwischen Regensburger Str. und Geisbergstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende November 2018 ',
+       type  => 'handicap',
+       data  => <<EOF,
+	q4::inwork 5723,9949 5728,10127 5754,10182
+EOF
+     },
+     { from  => 1542668400, # 2018-11-20 00:00
+       until => 1544914799, # 2018-12-15 23:59
+       text  => 'Malmöer Str.: zwischen Bornholmer Str. und Czarnikauer Str. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis Mitte Dezember 2018',
+       type  => 'handicap',
+       source_id => '2147343500',
+       data  => <<EOF,
+	q4::inwork 10225,16436 10197,16528
 EOF
      },
     );

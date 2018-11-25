@@ -31,7 +31,7 @@ Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261
 # REMOVED (-> qualitaet_s-orig; für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342929 --- #: priority: #B --- #: next_check: 2018-08-31 --- #: valid: -20180831 --- Helmerdingstr.: Bauarbeiten, Richtung Revaler Str. gesperrt	q4::inwork; 14468,11203 14442,11101
 # REMOVED (-> für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342938 --- #: priority: #B --- #: next_check: 2018-08-10 --- #: valid: -20180810 --- Scharnweberstr.: Bauarbeiten zwischen Colbestr. und Kinzigstr., Fahrbahn Richtung Gürtelstr. gesperrt	q4::inwork; 14468,11992 14589,11975
 # 
-#: last_checked: 2018-11-13
+#: last_checked: 2018-11-21
 Lange Str.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 12413,11901 12238,11931
 # 
 #: next_check_id: KAUFHOF-2018
@@ -51,11 +51,21 @@ Hermann-Stöhr-Platz: Engstelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,1183
 #: valid: -20190228
 Rigaer Str.: Baustelle, Fußgänger	q3::inwork 14538,12371 14748,12314
 # 
+#: next_check_id: SCHLEIDENPLATZ-2018
+#: XXX laut fritz bis 14.12.2018
+#: also_indoor: traffic (H,G)
+#: source_id: 2147343444
+#: priority: #A
+#: last_checked: 2018-11-21
+#: next_check: 2018-12-14
+#: valid: -20181214
+Pettenkoferstr.: Baustelle vor der Kreuzung Rigaer Str., ein paar Meter der Fahrbahn sind gesperrt	q2::inwork 15104,12216 15058,12329
+# 
 #: XXX laut fritz bis 2018-08-30 (ist aber immer noch aktiv!)
 #: source_id: LMS-BR_r_LMS-BR_125325_LMS-BR_72
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2018-10-29
+#: last_checked: 2018-11-22
 #: check_frequency: 21d
 Auerstr.: zwischen Richard-Sorge-Str. und Löwestr. Baustelle, Einbahnstraßenregelung	q2::inwork; 13273,12902 13202,12790
 # 
@@ -114,16 +124,16 @@ Eisenacher Str.: Bauarbeiten, Fahrbahn in Richtung Osten gesperrt, Radfahrer dür
 #: osm_watch: way id="466318949" version="6"
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
 #: also_indoor: traffic
-#: last_checked: 2018-11-06
+#: last_checked: 2018-11-21
 Bouchéstr.: Baustelle, Fahrtrichtung gesperrt	q3::inwork; 13298,9252 13188,9134
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
 #: osm_watch: way id="4686247" version="9"
-#: last_checked: 2018-11-06
+#: last_checked: 2018-11-21
 Mengerzeile: Baustelle, Fahrtrichtung gesperrt	q4::inwork; 13176,9302 13098,9205
 #: next_check_id ^^^
 # 
 #: osm_watch: way id="641269921" version="1"
-#: last_checked: 2018-11-06
+#: last_checked: 2018-11-21
 #: check_frequency: 14d
 Schmollerplatz: Baustelle, Fahrtrichtung gesperrt	q4::inwork; 13206,9335 13178,9363 13231,9422
 # 
@@ -161,7 +171,7 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607
 # REMOVED --- #: next_check_id: ROSSSTRASSENBRUECKE-2018 --- 
 # 
 #: osm_watch: way id="626237089" version="1"
-#: last_checked: 2018-10-18
+#: last_checked: 2018-11-19
 #: check_frequency: 30d
 Märkisches Ufer: Engstelle vor der Roßstraßenbrücke	q2::inwork 10687,11853 10869,11949
 # 
@@ -237,7 +247,7 @@ Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, 
 # REMOVED --- #: XXX Ende der Bauarbeiten? --- #: last_checked: 2014-02-22 --- Planckstr.: Bauarbeiten, auf Gehweg ausweichen	q4::inwork 9405,12794 9383,12915
 # REMOVED --- #: XXX nach den Bauarbeiten wahrscheinlich bessere Fahrbahnqualität -> qualitaet_s-orig-Eintrag revidieren --- #: last_checked: 2013-11-21 --- Zolastr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10898,13632 10872,13570
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2018-11-14 vvv
+#: last_checked: 2018-11-19 vvv
 #: check_frequency: 60d vvv
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10010,12275 10058,12290
@@ -394,7 +404,7 @@ Wilhelminenhofstr.: Bauarbeiten zwischen Siemensstr. und Edisonstr., Fahrbahn un
 #: XXX Start 2018-05-16, Dauer vermutlich 12 Monate, aber bei VMZ erstmal nur bis Mitte November 2018, laut fritz bis 09.11.2018
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=44021
 #: also_indoor: traffic
-#: last_checked: 2018-11-15
+#: last_checked: 2018-11-20
 #: valid: -20190516
 #: priority: #A
 Friesenstr.: Fahrbahn Richtung Zossener Str. gesperrt	q4::inwork; 9801,8683 9801,8889 9799,8962 9797,9063 9795,9162 9793,9241
@@ -414,7 +424,7 @@ Friesenstr.: Fahrbahn Richtung Zossener Str. gesperrt	q4::inwork; 9801,8683 9801
 #: XXX laut vmz bis Anfang 2019, laut fritz bis 31.12.2018
 #: http://www.dafmap.de/d/berlin.html?id=3451&mt=0&zoom=16
 #: also_indoor: traffic
-#: last_checked: 2018-10-18
+#: last_checked: 2018-11-19
 #: next_check: 2018-12-31
 #: valid: -20181231
 Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q3+::inwork; 9022,10857 8941,10663 8926,10626
@@ -454,7 +464,7 @@ Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=44133
 #: osm_watch: way id="531952542" version="5"
 #: also_indoor: traffic (H)
-#: last_checked: 2018-10-18
+#: last_checked: 2018-11-19
 #: check_frequency: 45d
 Herbert-von-Karajan-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 7970,11441 7965,11467 8005,11627
 # 
@@ -491,13 +501,13 @@ Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5
 # REMOVED --- #: next_check_id: WEICHSELPLATZ-2016 --- #: last_checked: 2016-07-26 vvv --- #: check_frequency: 7d vvv --- Weichselplatz: Bauarbeiten, Gehweg benutzen	q3::inwork 12761,9190 12845,9304 12844,9351 --- Weichselplatz: Bauarbeiten, Gehweg benutzen	q3::inwork 12902,9066 12761,9190 --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=4952&mt=0&zoom=17
-#: last_checked: 2018-11-06
+#: last_checked: 2018-11-23
 #: check_frequency: 60d
 Nansenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12412,9610 12374,9542
 # 
 #: XXX Wann sind die Bauarbeiten beendet? (laut googlemaps: Ende November 2018, laut Schild der Wasserbetriebe: bis November 2018)
 #: also_indoor: traffic
-#: last_checked: 2018-11-13
+#: last_checked: 2018-11-23
 #: next_check: 2018-11-30
 Weichselstr.: Bauarbeiten zwischen Weichselplatz und Ossastr., Fahrbahn gesperrt	q4::inwork 12755,9188 12681,9083
 # 
@@ -514,12 +524,12 @@ Weichselstr.: Bauarbeiten zwischen Weichselplatz und Ossastr., Fahrbahn gesperrt
 #: source_id: 2147338550
 #: source_id: LMS-BR_r_LMS-BR_19252
 #: source_id: 2147342527
-#: last_checked: 2018-11-13 vvv
+#: last_checked: 2018-11-23 vvv
 #: check_frequency: 90d vvv
 #: osm_watch: way id="585753318" version="1"
 Karl-Marx-Str.: Bauarbeiten zwischen Rollbergstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12714,8249 12753,8187 12794,8103
 #: osm_watch: way id="563341822" version="2"
-Rollbergstr.: Einbahnstraßenregelung	q4::inwork; 12528,8205 12714,8249
+Rollbergstr.: Einbahnstraßenregelung	q3::inwork; 12528,8205 12714,8249
 #: last_checked ^^^
 #: check_frequency ^^^
 # 
@@ -538,6 +548,23 @@ Rollbergstr.: Einbahnstraßenregelung	q4::inwork; 12528,8205 12714,8249
 # REMOVED (fertig, noch immer KS) --- #: next_check_id: FRIEDEL-2014 --- #: XXX: eventuell wird mit den Bauarbeiten an den Wasserleitungen auch die Fahrbahn neu gemacht? --- #: last_checked: 2014-12-12 --- #: check_frequency: 60d --- Friedelstr.: Bauarbeiten, Einbahnstraße Richtung Süden	q3::inwork; 12066,9558 12074,9689 12088,9775
 # 
 ### Lichtenberg ###
+# 
+#: next_check_id: KYNASTSTRASSE-2018
+#: source_id: 2147343461
+#: priority: #A
+#: also_indoor: traffic (G,H)
+#: last_checked: 2018-11-21
+#: valid: -20190401
+Kynaststr.: Fahrbahn hinter der Kreuzung Alt-Stralau Richtung Norden gesperrt, Radfahrer auf Gehweg/Fußgängerschutztunnel ausweichen und ggfs. absteigen, bis März 2019	q3:inwork; 14724,10297 14766,10372 14797,10476 14805,10518
+# 
+#: next_check_id: GUERTELSTRASSE-2018
+#: XXX laut vmz bis Ende Dezember 2018, Gesamtmaßnahme bis März 2019 laut fritz bis 21.12.2018
+#: source_id: 2147343481
+#: priority: #A
+#: last_checked: 2018-11-21
+#: next_check: 2018-12-21
+#: valid: -20181221
+Wilhelm-Guddorf-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q4:inwork 15294,11964 15335,11943
 # 
 #: also_indoor: traffic
 #: next_check_id: WIESENWEG-2018
@@ -654,13 +681,16 @@ Säntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
 #: next_check_id ^^^
 # 
 #: next_check_id: HILDBURGHAUSER-2018
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.760187.php
+#: XXX "ab voraussichtlich 18.02.2019 erfolgt eine erneute Fahrbahnsperrung zwischen Steinheilpfad und Oberhofer Weg"
 #: source_id: 2147341614
 #: source_id: 2147343257
 #: last_checked: 2018-07-02
-#: next_check: 2019-07-01
-#: valid: -20190701
+#: next_check: 2018-12-14
+#: valid: -20181214
 #: priority: #A
-Hildburghauser Str.: Bauarbeiten, Gehweg und Fahrbahn nur provisorisch vorhanden	q3::inwork 5585,1275 5741,1234 5795,1219 5867,1199 5909,1187 6010,1157 6106,1133 6145,1119
+Hildburghauser Str.: Bauarbeiten, Gehweg und Fahrbahn nur provisorisch vorhanden	q3::inwork 5585,1275 5741,1234
+# REMOVED --- Hildburghauser Str.: Bauarbeiten, Gehweg und Fahrbahn nur provisorisch vorhanden	q3::inwork 5741,1234 5795,1219 5867,1199 5909,1187 6010,1157 6106,1133 6145,1119
 # 
 ### Französisch Buchholz ###
 # 
@@ -2946,6 +2976,8 @@ Volkspark Anton Saefkow: einige Fußgänger, Bordstein	q3 12547,14873 12592,14838
 #: XXX_prog BS an der Französischen Str., ansonsten entfernen
 Falkoniergasse: Bordstein	q1 9939,12174 9909,12261
 Epensteinplatz: einige Fußgänger	q2 8432,17798 8417,17790 8409,17774
+#: note: relativ nah an den Gebäuden
+(Friedrichstr. - Enckestr.): Fußgänger	q3 9537,10837 9666,10848
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch vvv

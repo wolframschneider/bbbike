@@ -7,6 +7,7 @@ Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261
 Lange Str.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 12413,11901 12238,11931
 Hermann-Stöhr-Platz: Engstelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 Rigaer Str.: Baustelle, Fußgänger	q3::inwork 14538,12371 14748,12314
+Pettenkoferstr.: Baustelle vor der Kreuzung Rigaer Str., ein paar Meter der Fahrbahn sind gesperrt	q2::inwork 15104,12216 15058,12329
 Auerstr.: zwischen Richard-Sorge-Str. und Löwestr. Baustelle, Einbahnstraßenregelung	q2::inwork; 13273,12902 13202,12790
 Eisenacher Str.: Bauarbeiten, Fahrbahn in Richtung Osten gesperrt, Radfahrer dürfen auf dem Gehweg fahren	q2::inwork; 9275,4672 9405,4667 9494,4658 9695,4638
 Bouchéstr.: Baustelle, Fahrtrichtung gesperrt	q3::inwork; 13298,9252 13188,9134
@@ -40,7 +41,9 @@ Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5
 Nansenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12412,9610 12374,9542
 Weichselstr.: Bauarbeiten zwischen Weichselplatz und Ossastr., Fahrbahn gesperrt	q4::inwork 12755,9188 12681,9083
 Karl-Marx-Str.: Bauarbeiten zwischen Rollbergstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12714,8249 12753,8187 12794,8103
-Rollbergstr.: Einbahnstraßenregelung	q4::inwork; 12528,8205 12714,8249
+Rollbergstr.: Einbahnstraßenregelung	q3::inwork; 12528,8205 12714,8249
+Kynaststr.: Fahrbahn hinter der Kreuzung Alt-Stralau Richtung Norden gesperrt, Radfahrer auf Gehweg/Fußgängerschutztunnel ausweichen und ggfs. absteigen, bis März 2019	q3:inwork; 14724,10297 14766,10372 14797,10476 14805,10518
+Wilhelm-Guddorf-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q4:inwork 15294,11964 15335,11943
 Wiesenweg: gezimmerte Unterführung unter der S-Bahnbrücke, eng	q3:inwork 15162,11458 15126,11474
 Wartenbergstr.: Fahrbahn gesperrt, auf Gehweg ausweichen, Bordsteine	q4:inwork 15337,11639 15328,11636 15300,11584
 Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3905,4482
@@ -50,7 +53,7 @@ Alt-Buch: Bauarbeiten, Einbahnstraßenregelung, auf Gehweg ausweichen	q3::inwork;
 (Weg im Schloßpark Buch): für Radfahrer verboten	q4 16593,25640 16583,25667 16558,25688 16481,25671 16441,25664 16384,25692 16339,25690 16265,25718 16251,25733
 (provisorische Fußgängerbrücke Säntisstr.): Fußgänger	q3 9014,898 9005,912 9002,919 9047,948 9058,932
 Säntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
-Hildburghauser Str.: Bauarbeiten, Gehweg und Fahrbahn nur provisorisch vorhanden	q3::inwork 5585,1275 5741,1234 5795,1219 5867,1199 5909,1187 6010,1157 6106,1133 6145,1119
+Hildburghauser Str.: Bauarbeiten, Gehweg und Fahrbahn nur provisorisch vorhanden	q3::inwork 5585,1275 5741,1234
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gefälle, Fußgänger	q4; 21970,12153 21998,12204
 (An der Wuhle, östliches Ufer): Fußgänger	q1 21316,8487 21333,8355 21371,8289 21594,8107 21627,8024 21629,7921
@@ -1805,6 +1808,7 @@ Volkspark Anton Saefkow: einige Fußgänger	q2 13266,14541 13246,14515 13233,14509
 Volkspark Anton Saefkow: einige Fußgänger, Bordstein	q3 12547,14873 12592,14838
 Falkoniergasse: Bordstein	q1 9939,12174 9909,12261
 Epensteinplatz: einige Fußgänger	q2 8432,17798 8417,17790 8409,17774
+(Friedrichstr. - Enckestr.): Fußgänger	q3 9537,10837 9666,10848
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schulhof, Radfahren verboten	q4 7242,8586 7288,8635
