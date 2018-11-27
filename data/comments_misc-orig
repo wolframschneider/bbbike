@@ -42,7 +42,7 @@ als Lützowplatz ausgeschildert	CS; 6873,11011 6824,10904
 als Eichkampstr. ausgeschildert	CS; 693,9129 731,9103
 Richtung Grunewaldturm	CP2; 676,9104 197,9069
 als "Ökoweg" ausgeschildert	CS; 676,9104 383,9305
-Richtung "Friedhof" ausgeschildert	CP2; -3140,9294 -2956,9307
+Richtung "Friedhof" ausgeschildert	CP2; -3140,9294 -2891,9289
 Richtung Schildhorn	CP2; -1484,9175 -1588,9194
 Richtung Grunewaldturm	CP2; -1484,9175 -1658,9103
 Richtung Havelchaussee	CP2; -2218,5133 -2825,5588
@@ -1242,7 +1242,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2015 (Grundstücksnummerierungen)
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
-#: last_checked: 2018-11-14
+#: last_checked: 2018-11-26
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
