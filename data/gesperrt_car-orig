@@ -733,7 +733,7 @@ Karower Str.	3 * 16669,25373 16632,25512
 Efeuweg	3 15590,2724 15613,2739 *
 Efeuweg	3 * 15613,2739 15590,2724
 Rollbergstr.: Poller	3 * 12327,8161 *
-Rollbergstr. - Karl-Marx-Str.: Linksabbiegen verboten	3 12528,8205 12714,8249 12689,8289
+Rollbergstr. - Karl-Marx-Str.: Linksabbiegen verboten	3 12545,8209 12714,8249 12689,8289
 Belowstr.	1 4992,17908 4946,17701
 Süderholmer Steig	1 -2239,21904 -2245,21544
 Billerbecker Weg	1 1230,18698 1229,18750
@@ -814,7 +814,7 @@ Straße 134: Poller	3 * 9276,20745 *
 Straßenbahntrasse	3nocross 10976,13229 11012,13278 11070,13357
 Hasselwerderstr	1 18260,5746 18164,5701 18013,5627
 Haagstr.	1 -2920,2472 -2882,2373 -3030,2349
-Borussenstr.: außer Linienverkehr; für den Radverkehr gibt es einen linksseitigen Radweg	1 -3736,2849 -3758,2678
+Borussenstr.: außer Linienverkehr; für den Radverkehr gibt es einen linksseitigen Radweg	1 -3746,2849 -3756,2790 -3776,2687
 Teutonenstr. (Nikolassee)	1 -3519,2180 -3610,2237 -3689,2267 -3742,2287
 #: by: Dennis Anton ("für Radfahrer freigegeben")
 #: confirmed_by: srt

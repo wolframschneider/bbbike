@@ -3,8 +3,6 @@
 #: note: XXX_* categorization done 2008-01-26
 #:
 	X::inwork 10130,15653
-Gegenverkehrsregelung	X::inwork 16313,10747
-Gegenverkehrsregelung zwischen Rosenweg und Vollkropfgraben	X::inwork 21964,3592
 	X 9229,8785
 	X 8982,8781
 	X 8594,8777
@@ -2312,6 +2310,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 28176,5167
 	X -6861,15129
 	F::inwork 8005,11627
+	F 12172,14328
 	X -17127,-554
 	F -12868,-502
 	X -12940,-1625
@@ -2374,12 +2373,12 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -10418,-2624
 	X -10495,-2787
 	X -10674,-3027
-	X -11152,-3498
+	X -11146,-3489
 	X -10752,-3979
-	X -11995,-2500
+	X -12001,-2495
 	X -11656,-2944
 	X -10676,-3954
-	X -10493,-4507
+	X -10500,-4514
 	X -10359,-4780
 	X -10249,-5048
 	X -9744,-5982

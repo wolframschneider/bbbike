@@ -526,7 +526,7 @@ Beetzweg: Qualität?	? -9372,-2915 -9419,-3068 -9438,-3133 -9464,-3239
 Ulmenstr. (Potsdam): Qualität?	? -9356,-3546 -9268,-3283 -9257,-3245
 Orenstein-&-Koppel-Str. (Potsdam): Qualität?	? -8846,-3474 -9020,-3395 -9039,-3379 -9074,-3354 -9221,-3307 -9239,-3291 -9268,-3283 -9327,-3265 -9377,-3267 -9464,-3239
 Beetzweg - Fritz-Zubeil-Str.: Qualität? Radfahren erlaubt?	? -9464,-3239 -9494,-3242 -9531,-3408
-Am Alten Friedhof (Potsdam): Qualität? Kann man die Heinrich-Mann-Allee wegen der Tramtrasse überqueren?	? -11770,-2743 -11637,-2617 -11595,-2635
+Am Alten Friedhof (Potsdam): Qualität?	? -11770,-2743 -11637,-2617 -11595,-2635
 Schlaatzweg: Qualität?	? -11597,-2203 -11487,-2373
 Kurze Str. (Potsdam): Qualität?	? -11635,-2414 -11475,-2454
 Kolonie Daheim (Potsdam): Qualität?	? -11487,-2373 -11472,-2406 -11475,-2454 -11481,-2525 -11487,-2618 -11466,-2698 -11437,-2748 -11203,-2868
@@ -1041,9 +1041,12 @@ Päwesiner Str.: sind die Kreuzungen Ebersdorfer Str. und Amalienhofstr. Rechts-v
 Versorgungsweg Forckenbeckstr. - Friedrichshaller Str.: ist dieser Weg für Radfahrer nutzbar? Fahrbahnqualität? Nachts beleuchtet?	? 3218,8233 3205,7972 3198,7787 3186,7556 3083,7587
 Parkallee: gibt es hier benutzungspflichtige Radwege?	? 3288,-9715 3244,-10072 3257,-10374 3188,-10682 3729,-10679 3928,-10868 4240,-10927 4449,-10859 4598,-10928 4834,-10909
 Parkallee: gibt es hier benutzungspflichtige Radwege?	? 2655,-9771 2903,-9743 3077,-9731 3288,-9715 3264,-9515 3193,-9431 3180,-9303 3246,-9211
+Herzfelde - Hennickendorf: existiert hier mittlerweile ein Radweg?	? 40737,9012 40654,9441 40580,9711 40301,10729 40318,11400 40412,11647 40467,11827
+Heinrich-Mann-Allee [Nebenfahrbahn] - Friedhofsgasse: gibt es hier eine Verbindung? Qualität?	? -12017,-2511 -12001,-2495
+Saarmunder Str. - Eduard-Claudius-Str.: gibt es hier eine Verbindung? Qualität?	? -10662,-4280 -10626,-4260
+Heinrich-Mann-Allee: gibt es ab "Zum Kahleberg" Richtung Süden Radwege? Benutzungspflicht?	? -10500,-4514 -10359,-4780 -10249,-5048 -10150,-5260 -10075,-5419 -10015,-5551 -9996,-5596
+Kunersdorfer Str. (Potsdam): Kann die Heinrich-Mann-Allee in Höhe Kunersdorfer Str. überquert werden?	? -11322,-3332 -11311,-3322
 # added from ampeln-orig
-#: XXX VIZ: "Auch Radfahrer sind betroffen" --- trotz für Radfahrer freigegebenen Gehwegs?
-#: note: eventuell im gleichen Zyklus wie die benachbarte Ampel?
 geschlossen bei Bedarf (?) (Zbr)	? 27649,-11766
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
 # added from strassen
@@ -1054,6 +1057,8 @@ Petersallee (Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? 
 # added from landstrassen
 B5 (Umfahrung Nauen) (ist die Umfahrung Nauen auch für Radfahrer benutzbar?)	? -24421,19803 -24681,20018 -24904,20093 -25871,20229 -26745,20437 -27095,20987 -27689,21958 -28075,22250
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
+ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
+B1/B5: Berlin - Müncheberg (Dürfen hier Radfahrer fahren?)	? 39667,9273 40580,9711 40763,9756 41346,9762 41650,9831 42010,9880 42218,9852 42435,9689 42945,9074 43293,8953
 Birkenhain (Borkheide) (Fahrradstraße?)	? -25293,-19426 -26249,-20121
 Bahnhofstr. (Bad Belzig) (hier auch asphaltiert oder Kopfsteinpflaster?)	? -44206,-30713 -44207,-30693
 Chorin - Brodowin (wie ist die Qualität des Weges?)	? 42736,54948 43091,55192 43459,55300 43637,55402 44062,55516 44252,55657 44983,55724 45198,55852 45948,56113 46481,56417 47262,56684
@@ -1062,7 +1067,7 @@ Choriner Dorfstr. (Qualität?)	? 41250,55694 41337,55907 41467,56125 41578,56248
 Münchehofe - Pritzhagen (Qualität des Weges?)	? 58747,18799 58736,19057 58754,19301 58819,19419 58815,19562 58506,19814 58471,20088 58199,20110 58153,20017 57856,20046
 Rauen - Markgrafpieske (Qualität?)	? 52566,-7994 52315,-8018 51964,-7898 49889,-7783 49609,-8108 49249,-8271 48486,-8368
 Glasmeisterstr. (ist der westliche Abschnitt der Glasmeisterstr. für Autos gesperrt? Wegbeschaffenheit?)	? -11055,-1937 -11104,-1913
-(Heinrich-Mann-Allee - Am Nuthetal) (heißt diese Straße "Drewitzer Str."?)	? -11081,-3570 -11027,-3591 -10889,-3671
+(Heinrich-Mann-Allee - Am Nuthetal) (heißt diese Straße "Drewitzer Str."?)	? -11068,-3574 -11027,-3591 -10889,-3671
 Zur Königlichen Hofbrauerei (Fahrbahnbeschaffenheit?)	? -12814,-2270 -12783,-2269 -12713,-2279
 Walter-Klausch-Str. (Ist der Mittelteil parallel zur Nuthestr. für Autos gesperrt?)	? -10133,-2903 -10046,-2974 -9963,-2980
 Zaunkönigweg (Qualität der Straße?)	? -18017,333 -18084,316 -18077,267 -18034,259
@@ -1103,9 +1108,12 @@ Gehweg für Radfahrer frei (Sind die Gehwege zwischen Heinersdorfer Str. und Stei
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert (Ist die Tino-Schwierzina-Str. zwischen Aidastr. und Romain-Rolland-Str. mittlerweile komplett asphaltiert?)	? 12736,17998 12462,17814
 Hegemeisterweg: Asphalt ohne letzte Deckschicht (Hat die Fahrbahn die letzte Asphalt-Deckschicht bekommen?)	? 17202,8391 17522,8220
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
+(Weg am Tegeler Fließ): Waldweg, OK (Wie ist die Qualität hier? Wurde vielleicht asphaltiert?)	? 4222,22854 4176,22764
+(Weg am Tegeler Fließ): Waldweg, OK (Wie ist die Qualität hier?)	? 4117,22722 4106,22731 4022,22691
 Borggrevestr.: Beton (Ist die Qualität der Fahrbahn nach den Bauarbeiten besser geworden? Ist hier noch immer betoniert?)	? 5545,18590 5634,18587 5715,18586 5795,18585 5856,18569
 Hildburghauser Str.: Asphalt (Hat die Fahrbahn nach den Bauarbeiten nun eine bessere Qualität?)	? 5223,1318 5414,1304 5585,1275
 (Adlergestell - Sportpromenade/Bammelecke): Waldweg, loser Schotter (wird sich die Qualität hier bessern (insbesondere: was passiert mit dem losen Schotter)?)	? 24485,-667 24758,-268 25172,345
+(Oraniendamm - Dianastr.): Waldweg, OK (wie ist die Qualität hier? Wurde vielleicht asphaltiert?)	? 4176,22764 4155,22707
 Patschkauer Weg: Kopfsteinpflaster (Sind die Bauarbeiten im Patschkauer Weg beendet? Wenn ja, hat sich nach den Bauarbeiten die Qualität der Fahrbahn verbessert?)	? 3132,4803 3344,4488
 (Mauerweg am Eiskeller): asphaltiert (ist dieser Abschnitt tatsächlich asphaltiert?)	? -7990,19888 -8266,19811 -8469,19845 -8494,19713 -8448,19710 -8521,19390 -8372,19402 -8272,19086 -8206,19007 -8011,19059
 Am Fort: schlechtes Kopfsteinpflaster (ist die Straße "Am Fort" auch im südlichen Abschnitt gepflastert?)	? -7948,12634 -7959,12439 -7967,12333 -7976,12217

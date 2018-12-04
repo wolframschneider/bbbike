@@ -408,14 +408,14 @@ Herrfurthstr. (Neukölln)	N 11472,7899 11573,7924 11647,7940
 Herrfurthstr. (Neukölln)	N 11754,7964 11833,7980 11979,8014
 Herrfurthplatz	N 11647,7940 11671,7904 11713,7899 11748,7922 11754,7964 11731,7998 11689,8006 11653,7982 11647,7940
 Leinestr.	N 12123,7549 11923,7516 11797,7492 11671,7464 11558,7438
-Werbellinstr. (Neukölln)	NH 11979,8014 12162,8055 12308,8088 12414,8112 12426,8115 12541,8140 12650,8164 12698,8175 12753,8187
+Werbellinstr. (Neukölln)	NH 11979,8014 12162,8055 12308,8088 12414,8112 12426,8115 12564,8145 12650,8164 12698,8175 12753,8187
 Wildenbruchstr. (Neukölln, Alt-Treptow)	H 12920,8487 12980,8566 13033,8628 13105,8720 13138,8762 13193,8832 13227,8877 13279,8947 13333,9017 13491,9201 13614,9333
 Wildenbruchstr. (Neukölln, Alt-Treptow)	N 13614,9333 13715,9455
 Karl-Kunger-Str.	N 13190,9750 13348,9595 13489,9456 13614,9333
 Karl-Kunger-Str.	H 13614,9333 13647,9304 13766,9200
 Plesser Str.	N 13647,9304 13667,9316 13821,9340
 Kiefholzstr.	N 13251,9829 13455,9711 13602,9581 13715,9455 13821,9340 13849,9310
-Kiefholzstr.	NH 13849,9310 14018,9118 14151,8967 14211,8909 14290,8907 14327,8856 14335,8771 14363,8738 14560,8528 14700,8368 14841,8207 15053,7966 15221,7778 15553,7408 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755 16273,6609 16280,6601 16333,6544 16425,6445 16485,6377 16868,5938
+Kiefholzstr.	NH 13849,9310 14018,9118 14151,8967 14211,8909 14335,8771 14363,8738 14560,8528 14700,8368 14841,8207 15053,7966 15221,7778 15553,7408 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755 16273,6609 16280,6601 16333,6544 16425,6445 16485,6377 16868,5938
 Puderstr.	N 14363,8738 14492,8853 14525,8894 14567,8966 14614,9052
 Herkomerstr.	N 14558,9111 14439,8987
 Moosdorfstr.	N 14305,9213 14382,9299
@@ -1147,7 +1147,7 @@ Edith-Kiss-Str.	N 12793,11132 12866,11256
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="3"
 #: priority: #C
-#: last_checked: 2018-11-09
+#: last_checked: 2018-11-30
 #: check_frequency: 60d
 (Planstraße C)	N 12926,11224 12848,11093
 # 
@@ -1837,7 +1837,7 @@ Am Sudhaus	N 12134,8172 12282,8204
 Falkstr.	N 12162,8055 12178,7985 12179,7979
 Falkstr.	NN 12179,7979 12220,7822
 (Falkstr. - Mittelweg)	NN 12220,7822 12224,7799
-Hans-Schiftan-Str.	N 12541,8140 12528,8205
+Hans-Schiftan-Str.	N 12564,8145 12545,8209
 Biebricher Str.	N 11884,8492 12057,8529
 Reuterstr. (Neukölln)	N 12216,8323 12195,8436 12170,8548 12156,8760
 Reuterstr. (Neukölln)	H 12156,8760 12150,8891 12152,9023
@@ -3808,7 +3808,7 @@ Buchholzweg	N 4535,15530 4466,15350 4389,15336
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/426_2018_zu_ds_-1118_v_neue_strassennamen_im_afrikanischen_viertel.pdf
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8954 (andere Schreibweise: Cornelius-Fredericks-Str.)
 #: last_checked: 2018-10-13
-#: next_check: 2018-12-01
+#: next_check: 2018-12-07
 Lüderitzstr.	N 6661,15921 6484,16085 6349,16213 6211,16343 6106,16433 6003,16521
 Sansibarstr.	N 6201,16538 6106,16433 6005,16313 5827,16118
 Otawistr.	N 6098,16630 6003,16521 5906,16403 5748,16235
@@ -4254,7 +4254,7 @@ Wodanstr. (Französisch Buchholz)	N 12216,21945 12162,21743
 #: also_indoor: search Königsteinbrücke
 #: last_checked: 2018-10-27 (mapillary)
 # REMOVED --- #: check_frequency: 52d
-#: next_check: 2018-12-03
+#: next_check: 2018-12-10
 #: priority: #A
 (Königsteinbrücke)	NN 13136,22397 13148,22396 13385,22383 13404,22384
 (Pankeweg)	NN 13365,22743 13321,22586 13295,22545 13290,22377 13354,22327
@@ -4755,7 +4755,7 @@ Am Waldhaus	N -2664,1255 -2758,1498 -2847,1705 -2912,1829
 Waldhauswinkel	N -2847,1705 -2784,1728
 Barnhelmstr.	N -3248,1330 -2959,1430 -2758,1498 -2700,1517
 Lückhoffstr.	N -2847,2893 -3018,2712 -3162,2564 -3190,2467 -3211,2405
-Spanische Allee	H -1646,2434 -1908,2677 -2026,2742 -2249,2818 -2269,2825 -2481,2900 -2656,2897 -2761,2895 -2847,2893 -3139,2900 -3225,2902 -3360,2917 -3378,2936 -3450,3006 -3648,2881 -3736,2849 -3861,2837 -3932,2828 -4001,2858
+Spanische Allee	H -1646,2434 -1908,2677 -2026,2742 -2249,2818 -2269,2825 -2481,2900 -2656,2897 -2761,2895 -2847,2893 -3139,2900 -3225,2902 -3360,2917 -3378,2936 -3450,3006 -3648,2881 -3746,2849 -3861,2837 -3932,2828 -4001,2858
 Niklasstr.	N -1908,2677 -1858,2695 -1724,2743 -1612,2785 -1533,2815 -1456,2844 -1339,2889 -1264,2903 -1181,2913 -1070,2924 -928,2900 -783,2837 -739,2793
 Gilgestr.	N -1181,2913 -1100,2697
 Gilgestr.	NN -1100,2697 -1085,2653
@@ -5353,16 +5353,8 @@ Sterndamm	H 17886,5587 17736,5441 17648,5338 17601,5090 17542,4772 17520,4649 17
 Sterndamm	H 17648,5338 17705,5223
 (Bushaltestelle und Straßenbahnwendestelle Schöneweide)	NN 17736,5441 17675,5521 17588,5573 17578,5566
 Cajamarcaplatz	NN 17728,5756 17713,5728 17730,5698 17782,5698
-#: XXX wird abgerissen
-#: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/anfang-dezember-beginnt-der-abriss-der-alten-halle_a188158
-#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.757485.php
-#: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/bahnhof-bleibt-waehrend-bauarbeiten-barrierefrei_a189259
-#: by: https://twitter.com/SBahnBerlin/status/1067817140139581440
-#: by: https://sbahn.berlin/aktuelles/artikel/schoenheitskur-fuer-schoeneweide/
-#: priority: #A
-#: next_check: 2018-12-03
 (Fußgängertunnel S-Bhf. Schöneweide)	NN 17730,5698 17639,5612
-#: next_check_id: STERNDAMM-2014
+#: next_check_id: SCHOENEWEIDE-2018
 #: XXX evtl. verschwindet dieser Zugang erst, wenn die Straßenbahn verlegt ist?
 #: osm_watch: way id="226163591" version="2"
 #: last_checked: 2018-11-03
@@ -5545,6 +5537,7 @@ Im Lichtenhain	N 16433,10576 16461,10560 16503,10532
 # 
 #: next_check_id: IMLICHTENHAIN-2018
 #: XXX wird wieder zurückgebaut
+#: osm_watch: way id="609943360" version="3"
 #: last_checked: 2018-11-03
 #: check_frequency: 30d
 (temporäre Zufahrt zur Straße Im Lichtenhain)	N 16576,10658 16533,10566 16474,10591
@@ -8443,7 +8436,7 @@ Waltharistr.	N -4031,1706 -4239,1512 -4401,1357
 Lohengrinstr. (Nikolassee)	N -3785,1451 -3791,1512 -3813,1545 -3883,1610 -3931,1637 -3995,1673 -4031,1706 -4071,1739
 Nikolassteig	NN -3931,1637 -3872,1716
 Seeuferstr.	N -4071,1739 -4048,1851
-Borussenstr.	N -3736,2849 -3758,2678 -3780,2523 -3820,2479 -3882,2441 -3881,2374 -3938,2287 -3965,2240
+Borussenstr.	N -3746,2849 -3756,2790 -3776,2687 -3802,2500 -3820,2479 -3882,2441 -3881,2374 -3938,2287 -3965,2240
 (Borussenstr. - Kronprinzessinnenweg)	NN -4134,1984 -4139,1976 -4166,1941 -4180,1941
 Borussenstr.	NN -3965,2240 -4134,1984
 Parallelstr. (Nikolassee)	N -3742,2287 -3804,2352 -3801,2410
@@ -12707,9 +12700,12 @@ Koloniestr. (Lichterfelde)	N 5051,959 5097,988 5193,1050 5204,1057 5218,1067 530
 Sandhofweg	N 5848,272 5795,371 5757,434 5688,402
 Sandhofweg	NN 5688,402 5644,381
 Leykestr.	N 12335,7770 12075,7696
-Kronprinzenbrücke	N 8503,12895 8424,12853
-Konrad-Adenauer-Str.	N 8424,12853 8309,12758 8306,12609
-Otto-von-Bismarck-Allee	N 8415,12749 8309,12758 8206,12757 8120,12756
+Kronprinzenbrücke	H 8503,12895 8424,12853
+Konrad-Adenauer-Str.	H 8424,12853 8309,12758
+Konrad-Adenauer-Str.	N 8309,12758 8306,12609
+Otto-von-Bismarck-Allee	N 8415,12749 8309,12758
+Otto-von-Bismarck-Allee	H 8309,12758 8206,12757
+Otto-von-Bismarck-Allee	N 8206,12757 8120,12756
 #: note: laut osm "Willy-Brandt-Str." --- aber vor Ort existieren keine Straßenschilder? vvv
 #: by: http://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/ii-200ib/index.shtml (dieser Abschnitt der Straße bleibt erhalten)
 #: note: "Umfahrung Kanzleramt"
@@ -13185,7 +13181,7 @@ Rollbergstr.	N 11963,8074 12147,8117
 #: note: Privatstraße
 #: note: blaues Straßenschild
 Rollbergstr.	N 12147,8117 12295,8154
-Rollbergstr.	N 12295,8154 12327,8161 12407,8177 12528,8205 12714,8249
+Rollbergstr.	N 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 #: note: Privatstraße
 (Werbellinstr. 50 - Rollbergstr./Am Sudhaus)	N 12308,8088 12295,8154 12282,8204
 Schillerpromenade (Neukölln)	N 11661,8131 11689,8006
@@ -14515,7 +14511,7 @@ Badeweg	N -4188,2674 -4292,2762
 Badeweg	NN -4292,2762 -4471,2917
 # REMOVED (ja) --- #: add_fragezeichen: Ist der Weg ausgeschildert?
 #: note: laut DPAG-Mitteilungsblatt 12/2013 "entfällt" der Straßenname
-Rosemeyerweg	NN -3758,2678 -3852,2730 -3956,2787 -4001,2858
+Rosemeyerweg	NN -3776,2687 -3852,2730 -3956,2787 -4001,2858
 Bornemannstr.	N 8187,15965 8014,16089
 Holsteinische Str. (Wilmersdorf)	N 5069,9735 5066,9645 5065,9418 5053,8979
 Herschelstr.	N 3200,13277 3239,13461 3262,13547 3280,13625

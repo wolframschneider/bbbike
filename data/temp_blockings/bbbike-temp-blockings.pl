@@ -3228,14 +3228,14 @@ EOF
        data  => <<EOF,
 Friedrich-Engels-Str. (Potsdam)	2::temp -11369,-2085 -11513,-2122 -11597,-2203 -11694,-2245 -11778,-2225 -11834,-2213 -11939,-2190 -11992,-2178 -12093,-2156 -12213,-2131
 Zum Wasserturm (Potsdam)	2::temp -12100,-2039 -11995,-2047 -11947,-2048 -11842,-2054 -11842,-2183
-Friedhofsgasse (Potsdam)	2::temp -11778,-2225 -11799,-2283 -11995,-2500
+Friedhofsgasse (Potsdam)	2::temp -11778,-2225 -11799,-2283 -12001,-2495
 Am Stellwerk (Potsdam)	2::temp -11992,-2178 -11995,-2047
-Heinrich-Mann-Allee (Potsdam)	2::temp -12262,-2244 -11995,-2500 -11912,-2587 -11770,-2743 -11656,-2944 -11438,-3179 -11311,-3322
+Heinrich-Mann-Allee (Potsdam)	2::temp -12262,-2244 -12001,-2495 -11912,-2587 -11770,-2743 -11656,-2944 -11438,-3179 -11311,-3322
 Schlaatzstr. (Potsdam)	2::temp -11694,-2245 -11579,-2333 -11487,-2373
 Bergholzer Str. (Potsdam)	2::temp -11579,-2333 -11635,-2414 -11679,-2408
 Schlaatzweg (Potsdam)	2::temp -11487,-2373 -11425,-2384 -11422,-2425 -11240,-2525 -10927,-2679 -10870,-2729
-Drevesstr. (Potsdam)	2::temp -11656,-2944 -11685,-2971 -11676,-3137 -11423,-3431
-Kunersdorfer Str. (Potsdam)	2::temp -11676,-3137 -11739,-3141 -11789,-3212 -11801,-3233 -11819,-3302 -11792,-3372 -11722,-3458 -11611,-3491 -11562,-3505 -11504,-3502 -11423,-3431 -11311,-3322
+Drevesstr. (Potsdam)	2::temp -11656,-2944 -11672,-2958 -11685,-2971 -11676,-3137 -11423,-3431
+Kunersdorfer Str. (Potsdam)	2::temp -11676,-3137 -11739,-3141 -11789,-3212 -11801,-3233 -11819,-3302 -11792,-3372 -11722,-3458 -11611,-3491 -11562,-3505 -11504,-3502 -11423,-3431 -11322,-3332 -11311,-3322
 Am Brunnen (Potsdam)	2::temp -11562,-3505 -11543,-3461 -11672,-3345 -11789,-3212
 Kottmeierstr. (Potsdam)	2::temp -11504,-3502 -11423,-3638
 (Kottmeierstr. - Am Wald) (Potsdam)	2::temp -11423,-3638 -11414,-3657
@@ -20506,7 +20506,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_018769',
        data  => <<EOF,
-	q4::inwork -3648,2881 -3736,2849
+	q4::inwork -3648,2881 -3746,2849
 EOF
      },
      { from  => 1336944008, # 2012-05-13 23:20
@@ -21004,7 +21004,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_022717',
        data  => <<EOF,
-	2::inwork -3736,2849 -3648,2881
+	2::inwork -3746,2849 -3648,2881
 EOF
      },
      { from  => undef, # 
@@ -23999,7 +23999,7 @@ EOF
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2018-11-27
+#: last_checked: 2018-12-03
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -25872,7 +25872,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1611/nachricht6250.html',
        data  => <<EOF,
-	2::inwork 14363,8738 14335,8771 14327,8856 14290,8907 14211,8909 14151,8967
+	2::inwork 14363,8738 14335,8771 14211,8909 14151,8967
 EOF
      },
      { from  => undef, # 
@@ -26587,7 +26587,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-11-14
+#: last_checked: 2018-12-03
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -27479,10 +27479,11 @@ EOF
 #: XXX nach den Bauarbeiten bessere Qualität
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.758375.php (Verzögerungen -> check_frequency erhöht)
+#: by: https://www.berliner-woche.de/weissensee/c-bauen/zum-zweiten-mal-wurden-die-bauarbeiten-auf-der-schoenstrasse-unterbrochen_a190561
 #: also_indoor: traffic
 #: priority: #B
 #: last_checked: 2018-11-11
-#: check_frequency: 90d
+#: next_check: 2019-03-01
 	q4::inwork; 13391,16436 13630,16629
 EOF
      },
@@ -27818,7 +27819,7 @@ EOF
 #: add_fragezeichen: wann wird die Brücke wieder eröffnet?
 #: also_indoor: search Templiner Brücke
 #: last_checked: 2018-09-01
-#: next_check: 2018-12-03
+#: next_check: 2018-12-10
 	2::inwork -15853,-4327 -15664,-4450 -15652,-4441 -15537,-4535 -15540,-4550 -14801,-5162
 EOF
      },
@@ -27829,9 +27830,11 @@ EOF
        data  => <<EOF,
 #: also_indoor: traffic vvv
 #: last_checked: 2018-10-30 vvv
+#: next_check: 2018-12-10 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
 	q3::inwork; 12647,7672 12520,7694 12335,7770
+#: next_check: ^^^
 #: last_checked ^^^
 #: also_indoor ^^^
 EOF
@@ -27887,7 +27890,7 @@ EOF
 #: source_id: 2147343479
 #: also_indoor: traffic vvv
 #: last_checked: 2018-10-25 vvv
-#: next_check: 2018-11-29 vvv
+#: next_check: 2018-12-06 vvv
 # REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
 	2::inwork 2417,4327 2434,4299
@@ -27918,8 +27921,8 @@ EOF
 EOF
      },
      { from  => 1537297950, # 2018-09-18 21:12
-       until => 1543618799, # 2018-11-30 23:59
-       text  => 'Berliner Str.: Baustelle zwischen Mannheimer Str. und Brandenburgische Str./Blissestr., Fahrbahn Richtung Osten gesperrt, bis Ende November 2018',
+       until => $isodate2epoch->("2019-01-25 18:00:00"), # 1543618799, # 2018-11-30 23:59
+       text  => 'Berliner Str.: Baustelle zwischen Mannheimer Str. und Brandenburgische Str./Blissestr., Fahrbahn Richtung Osten gesperrt, bis Ende Januar 2019',
        type  => 'handicap',
        source_id => '2147343219',
        data  => <<EOF,
@@ -28311,11 +28314,11 @@ EOF
 EOF
      },
      { from  => 1542085200, # 2018-11-13 06:00
-       until => 1543705199, # 2018-12-01 23:59
+       until => 1543605651, # 1543705199, # 2018-12-01 23:59
        text  => 'Breite Str.: zwischen Mühlenstr. und Berliner Str. Richtung Osten gesperrt, auch der Radverkehr ist betroffen, vom 14.11.2018 06:00 Uhr bis Anfang Dezember 2018',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX Ist der Radwegabschnitt nicht betroffen? Gibt es eventuell in der Florastr. eine Einbahnstraßenregelung?
+# REMOVED --- #: XXX Ist der Radwegabschnitt nicht betroffen? Gibt es eventuell in der Florastr. eine Einbahnstraßenregelung?
 #: source_id: 2147343460
 	q4::inwork; 10487,18270 10660,18345 10680,18380
 EOF
@@ -28438,6 +28441,19 @@ EOF
        data  => <<EOF,
 #: source_id: 2147343519
 	2::inwork 14539,23306 14573,23295 14597,23280
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Stralauer Südufer: Bauarbeiten, Uferweg teilweise gesperrt, möglicherweise bis April 2019',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
+#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
+#: priority: #C
+#: last_checked: 2018-12-03
+#: check_frequency: 21d
+	2::inwork 14776,9949 14599,10039
 EOF
      },
     );
