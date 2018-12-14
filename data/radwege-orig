@@ -61,7 +61,7 @@ Zeichen 237 gegenüber der Polizeiausfahrt nur senkrecht zur Fahrtrichtung einseh
 #: XXX Grünmarkierung vorgesehen
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.756319.php (2018/2019)
 #: priority: #D
-#: last_checked: 2018-11-27
+#: last_checked: 2018-12-12
 	RW3;RW3 8970,9323 9000,9509 9044,9753 9073,9915 9108,10101 9145,10290
 	RW1;RW1 8769,9295 8774,9534 8777,9601
 Radweg nur aufgemalt	RW1; 8777,9601 8778,9759 8779,9812
@@ -312,7 +312,7 @@ Gehweg für Radfahrer frei	RW9;RW1 571,11255 541,11464
 #: last_checked: 2018-12-03
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1;RW1 10020,11262 10256,11160
 #: check_frequency: 90d vvv
-#: last_checked: 2018-12-07 vvv
+#: last_checked: 2018-12-11 vvv
 mäßige bis schlechte Verbundsteinpflasterradwege, Bord zum Gehweg	RW1; 10256,11160 10501,11056 10637,10996 10684,10975
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1; 10684,10975 10637,10996 10501,11056 10256,11160
 für Radfahrer freigegebene Busspur existiert gilt Mo-Fr 7-18 Uhr	RW1; 10684,10975 10779,10934
@@ -506,7 +506,10 @@ für Radfahrer freigegebene Busspur gilt Mo-Fr 7-19 Uhr	RW1;RW1 7911,15008 7533,1
 	RW2; 14926,12129 14994,12121 15117,12106
 asphaltiert	RW2; 15117,12106 14994,12121 14926,12129 14854,12137 14709,12156
 	RW2; 14709,12156 14854,12137 14926,12129
-	RW2;RW2 14709,12156 14621,12168 14523,12183 14488,12188 14427,12197 14381,12205 14291,12220 14208,12235 14020,12261
+	RW2;RW2 14709,12156 14621,12168 14523,12183 14488,12188
+	RW2; 14488,12188 14427,12199 14381,12207 14291,12222 14208,12235
+	RW2; 14208,12235 14291,12220 14381,12205 14427,12197 14488,12188
+	RW2;RW2 14208,12235 14020,12261
 asphaltiert	RW2; 14020,12261 13885,12279 13785,12292
 	RW2; 13785,12292 13885,12279 14020,12261
 asphaltiert	RW2;RW2 13785,12292 13543,12326
@@ -536,16 +539,17 @@ neu asphaltiert	RW1; 10910,14488 10893,14705 10885,14914 10884,14952
 neu asphaltiert	RW2; 10884,14952 10881,15047
 	RW2; 10881,15047 10884,14952
 die ersten Meter mit benutzungspflichtiger Radspur	RW1; 10881,15047 10883,15129
-	RW1; 10883,15129 10886,15251
+größtenteils neu asphaltiert	RW1; 10883,15129 10886,15251 10902,15422 10917,15525 10941,15697
 	RW1; 10886,15251 10883,15129
 	RW2; 10883,15129 10881,15047
-	RW1;RW1 10886,15251 10902,15422 10917,15525 10941,15697
+	RW1; 10941,15697 10917,15525 10902,15422 10886,15251
 die letzten Meter sind benutzungspflichtig	RW1; 10941,15697 10953,15787
 	RW1; 10953,15787 10941,15697
-	RW1;RW1 10953,15787 10964,15896 10969,15944 10975,16010
-	RW2; 10975,16010 10982,16121
+größtenteils neu asphaltiert	RW1; 10953,15787 10964,15896 10969,15944 10975,16010
+	RW1; 10975,16010 10969,15944 10964,15896 10953,15787
+größtenteils neu asphaltiert	RW2; 10975,16010 10982,16121
 	RW1; 10982,16121 10975,16010
-asphaltiert	RW1; 10982,16121 10989,16197 10997,16280 11004,16360
+neu asphaltiert	RW1; 10982,16121 10989,16197 10997,16280 11004,16360
 	RW1; 11004,16360 10997,16280 10989,16197 10982,16121
 	RW2;RW1 11004,16360 11019,16465
 	RW1;RW2 11019,16465 11027,16553
@@ -695,7 +699,7 @@ im Bereich der Bushaltestelle wird der Radweg auf dem Gehweg geführt	RW4; 14196,
 #: by: https://www.berliner-woche.de/alt-treptow/c-verkehr/elsenbruecke-nicht-mehr-zu-retten_a190279
 #: source_id: 2147343116
 #: XXX wann wird die Radspur wieder hergestellt? (-> RW4;)
-#: last_checked: 2018-12-05
+#: last_checked: 2018-12-13
 #: next_check: 2020-01-01
 provisorischer gemeinsamer Rad- und Gehweg	RW2; 14558,10264 14501,10169 14405,10027 14350,9953
 	RW4; 14350,9953 14289,9870
@@ -749,7 +753,7 @@ Wurzelschäden, wellig	RW1;RW1 -739,6838 -138,6681 218,6571
 	RW2; 4349,8118 4280,8188
 	RW2;RW2 4793,8005 4711,8013
 #: XXX hier entsteht vermutlich auch ein geschützter Radstreifen
-#: last_checked: 2018-12-07
+#: last_checked: 2018-12-11
 grün markiert	RW4; 11347,12223 11388,12202 11513,12138 11619,12084 11764,12001
 geschützer Radstreifen, ca. 3,50m breit, grün markiert	RW4; 11764,12001 11619,12084 11513,12138 11388,12202
 	RW4; 11388,12202 11347,12223
@@ -1190,7 +1194,7 @@ neu asphaltiert	RW1; 17769,7465 17681,7589
 #: source_id: 2147342856
 #: by: https://www.berliner-woche.de/oberschoeneweide/c-verkehr/markierung-auf-der-rummelsburger-landstrasse-aufgebracht_a170936
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/erster-radfahrstreifen-im-bezirk-farblich-neu-markiert_a188983 ("kommendes Jahr", also 2019)
-#: last_checked: 2018-11-24 vvv
+#: last_checked: 2018-12-09 vvv
 # REMOVED --- #: check_frequency: 60d vvv
 #: next_check: 2019-02-01 vvv
 #: note: hier existiert auch ein neu asphaltierter Radweg, aber Radfahrer werden zum geschützten Radweg geführt
@@ -1217,12 +1221,14 @@ die letzten 50 Meter sind benutzungspflichtiger Radweg	RW4; 18225,7004 18010,713
 	RW3;RW3 13821,9340 13849,9310
 	RW4;RW4 13849,9310 14018,9118 14151,8967
 #: next_check_id: KIEFHOLZ-2015
-#: XXX wann wird die alte Radspur wieder hergestellt?
+#: XXX wann wird die alte Radspur wieder hergestellt? laut fritz und viz bis Ende Dezember 2018
 #: by: http://www.abendblatt-berlin.de/2018/11/23/kiefholzstrasse-die-luecke-wird-bald-geschlossen/ (Richtungsfahrbahn Nord voraussichtlich im Februar 2019 fertig)
 # REMOVED (nur für Autos) --- #: XXX mittlerweile (2018-07-31) laut fritz für Autos Richtung Südosten gesperrt, sind auch Radfahrer betroffen? (-> nein)
-#: last_checked: 2018-12-03
-#: check_frequency: 30d
-	RW2;RW4 14151,8967 14253,8861 14335,8771 14363,8738
+#: source_id: 2147342958
+#: last_checked: 2018-12-13
+# REMOVED --- #: check_frequency: 30d
+#: next_check: 2018-12-31
+	RW2;RW4 14151,8967 14261,8851 14318,8790 14363,8738
 	RW4;RW4 14363,8738 14560,8528 14700,8368 14841,8207 15053,7966
 	RW4;RW3 15053,7966 15221,7778
 	RW1;RW1 8049,15470 7975,15500 7966,15571
@@ -1324,6 +1330,8 @@ asphaltiert	RW1; 7497,8168 7582,8123 7639,8091 7710,8051
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4159
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/bezirksamt/beschluesse/2017/05-09/0363_xix-fahrradfuehrung-naumannstrasse-einrichten.pdf
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2018-05-17-protokoll-fahrrat-sitzung.pdf (oder meint diese Maßnahme eine Führung durch den Bahnhof?)
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2018-09-20-prot-fahrratsitzung4.pdf (dito)
+#: osm_watch: way id="142161214" version="7"
 #: last_checked: 2018-08-10
 #: check_frequency: 120d
 	RW0;RW4 7733,8023 7713,8001 7717,7879
@@ -1664,7 +1672,7 @@ relativ schmale Radspuren	RW3;RW3 14918,11249 15016,11431 15055,11505 15106,1159
 #: next_check_id: GUERTELSTRASSE-2018
 #: source_id: 2147343481
 #: priority: #A
-#: last_checked: 2018-11-27
+#: last_checked: 2018-12-13
 #: next_check: 2018-12-21
 #: valid: 20181221-
 	RW2; 15248,11880 15294,11964 15361,12071
@@ -2153,6 +2161,7 @@ Verbundsteinpflaster	RW1; 561,2395 604,2494 629,2545 709,2592 749,2616
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.750517.php ("Einrichtung eines Geschützten Radfahrstreifens", Ausführung im November 2018)
 #: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/umstrittener-radweg-auf-dem-dahlemer-weg-wird-zum-modellprojekt-in-berlin_a185708
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.756300.php (für 2019 geplant)
+#: source_id: 2147343478
 #: add_fragezeichen: Wurde die Radspurmarkierung im Dahlemer Weg mittlerweile vervollständigt? Gibt es hier geschützte Radspuren?
 #: last_checked: 2018-09-12
 #: next_check: 2019-03-01
@@ -5216,7 +5225,7 @@ Gehweg für Radfahrer frei	RW1; 20474,14442 20611,14445 20657,14446 20727,14467 2
 	RW4; 1928,10728 1960,10710 1982,10697 2010,10651 2033,10613 2090,10576 2117,10495
 	RW2; 2033,10613 2010,10651 1982,10697 1960,10710 1928,10728
 #: XXX prüfen, ob die Suggestivstreifen Richtung Osten unbeschildert bleiben
-#: last_checked: 2018-12-05
+#: last_checked: 2018-12-10
 #: check_frequency: 30d
 	RW4;RW3 11335,10375 11316,10372 11130,10326 11117,10326
 	RW4;RW4 11117,10326 10975,10334 10871,10322
@@ -5284,7 +5293,7 @@ Tempo 10	RW6;RW6 -7275,-357 -7300,-292 -7444,-100 -7460,-33
 # 
 #: XXX bleiben die Radspuren? vvv
 #: osm_watch: way id="4566067" version="20"
-#: last_checked: 2018-11-03 vvv
+#: last_checked: 2018-12-09 vvv
 provisorische Radspur	RW4; 17807,5730 17810,5736 17877,5860 17939,5968 17900,6072 17930,6175 17952,6246 17991,6431
 provisorische Radspur, benutzungspflichtiger Radweg auf den letzten Metern	RW4; 17919,6968 17962,6674
 #: osm_watch: way id="329510232" version="6"
@@ -5326,3 +5335,6 @@ Tempo 10	RW6;RW6 15800,4464 15835,4437 15851,4424 15887,4400 15947,4361 16001,43
 #: note Benutzungspflicht wegen Einbahnstraßenregelung auf der Fahrbahn
 #: XXX_prog wird suboptimal gerendert (Kombination RW8+RW0 ist problematisch -> kein echter Zweirichtungsradweg)
 Gehweg für Radfahrer frei	RW8;RW0 -3746,2849 -3756,2790
+	RW6;RW6 17370,12649 17397,12732 17413,12783
+	RW6;RW6 17397,12732 17496,12691
+	RW6;RW6 17370,12649 17475,12603 17494,12656

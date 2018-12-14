@@ -1131,7 +1131,7 @@ Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3068,21150 3024,21286
 Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 # 
 #: osm_watch: way id="185792044" version="11"
-#: last_checked: 2018-10-03
+#: last_checked: 2018-12-09
 #: check_frequency: 60d
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
@@ -1159,7 +1159,7 @@ entlang des IGA-Busparkplatzes	CP2; 23084,14472 23081,14418
 #: XXX laut fritz bis 09.11.2018
 #: source_id: 2147342726
 #: source_id: 2147343037
-#: last_checked: 2018-11-20
+#: last_checked: 2018-12-12
 #: next_check: 2018-12-21
 Yorckstr. - Katzbachstr.: beim Linksabbiegen Ausschilderung befolgen	CP; 8679,9544 8595,9495 8598,9269
 # 
@@ -1242,7 +1242,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2015 (Grundstücksnummerierungen)
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
-#: last_checked: 2018-11-26
+#: last_checked: 2018-12-10
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
@@ -1284,3 +1284,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 # 
 (Friedrichstr. - Enckestr.): entlang taz-Gebäude und Besselpark	CS 9537,10837 9666,10848
 # 
+#: next_check_id: MERGENTHALERRING-2018
+#: last_checked: 2018-12-10
+#: check_frequency: 90d
+Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829

@@ -1733,12 +1733,9 @@ Augustenburger Pl. -> Föhrer Str.: Mittelstreifen	3::igndisp 6537,15156 6561,150
 Mittelstreifen	3nocross::ignrte 6626,15104 6715,15152 6833,15215
 Triftstr. -> Luxemburger Str.: Mittelstreifen	3::igndisp 6743,15102 6715,15152 6626,15104
 Luxemburger Str. -> Triftstr.: Mittelstreifen	3::igndisp 6833,15215 6715,15152 6743,15102
-unbequem passierbarer Mittelstreifen	3nocross::ignrte 14208,12235 14291,12220 14381,12205
-Frankfurter Allee -> Kreutzigerstr.: unbequem passierbarer Mittelstreifen	3::igndisp 14381,12205 14291,12220 14285,12190
-Kreutzigerstr. -> Frankfurter Allee: unbequem passierbarer Mittelstreifen	3::igndisp 14285,12190 14291,12220 14208,12235
-unbequem passierbarer Mittelstreifen	3nocross::ignrte 14381,12205 14427,12197 14488,12188
-Mainzer Str. -> Frankfurter Allee: unbequem passierbarer Mittelstreifen	3::igndisp 14354,12012 14427,12197 14381,12205
-Frankfurter Allee -> Mainzer Str.: unbequem passierbarer Mittelstreifen	3::igndisp 14488,12188 14427,12197 14354,12012
+Frankfurter Allee	1::igndisp 14208,12235 14291,12222 14381,12207 14427,12199 14488,12188
+Frankfurter Allee	1::igndisp 14488,12188 14427,12197 14381,12205 14291,12220 14208,12235
+Frankfurter Allee	3nocross::ignrte 14208,12235 14291,12222 14381,12207 14427,12199 14488,12188
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 13785,12292 13885,12279 14020,12261
 Liebigstr. -> Frankfurter Allee: unbequem passierbarer Mittelstreifen	3::igndisp 13927,12370 13885,12279 14020,12261
 Frankfurter Allee -> Liebigstr.: unbequem passierbarer Mittelstreifen	3::igndisp 13785,12292 13885,12279 13927,12370
@@ -2998,6 +2995,8 @@ Drängelgitter	BNP:3:28:trailer=10 1409,15177
 Drängelgitter	BNP:3:5:trailer=10 26682,-13082
 Drängelgitter	BNP:1:-249:trailer=5 8363,13402
 Drängelgitter	BNP:3:-192:trailer=10 20365,11950
+Kynaststr. - Paul-und-Paula-Ufer: wegen Bauarbeiten gesperrt	2:inwork 14797,10476 14820,10473
+Mergenthalerring: Bauarbeiten, komplett gesperrt	2:inwork 14258,8520 14264,8572
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
 Schweizer Botschaft: Rückbau der Straße	2:inwork 8206,12757 8204,12816 8168,12848 8124,12840 8030,12824
 Schreibenfeder-Passage: wegen Bauarbeiten gesperrt, ggfs. dauerhaft	2:inwork 14838,11410 14949,11474
@@ -3044,7 +3043,7 @@ Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11489 20631,1162
 Schinkelplatz: Einbahnstraße	1s:inwork 9996,12372 9990,12404 9984,12426
 Niederlagstr.: Einbahnstraße	1s:inwork 9972,12184 9959,12281
 Karower Str.: temporäre Einbahnstraßenregelung	1s:inwork 16593,25640 16632,25512 16669,25373
-Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung gesperrt	1s:inwork 5192,10241 5196,10398
+Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung auch für Radfahrer gesperrt	1s:inwork 5192,10241 5196,10398
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:inwork 9042,11839 8969,11814
 Nordhafenpark West: unter der Brücke gesperrt	2::inwork 7636,14414 7612,14449 7551,14464
 Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431

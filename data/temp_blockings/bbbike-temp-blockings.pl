@@ -23999,7 +23999,7 @@ EOF
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2018-12-03
+#: last_checked: 2018-12-10
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -24528,14 +24528,14 @@ EOF
 	q4; 15205,11080 15102,11120 15021,11152 14988,11130
 EOF
      },
-     { from  => $isodate2epoch->("2018-07-02 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-07-07 23:59:59"),
+     { from  => $isodate2epoch->("2019-01-14 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-01-18 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6]],
-       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 03.07.2018-07.07.2018',
+       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 15.01.2019-18.01.2019',
        type  => 'handicap',
-       source_id => 'https://fashion-week-berlin.com/blog/single-news/das-sind-die-termine-fuer-2018.html',
+       source_id => 'https://orbanism.com/event/berlin-fashion-week-2019/',
        data  => <<EOF,
 #: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
 	q4::inwork 8644,10408 8397,10488 8384,10507 8527,10621
@@ -25872,7 +25872,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1611/nachricht6250.html',
        data  => <<EOF,
-	2::inwork 14363,8738 14335,8771 14253,8861 14151,8967
+	2::inwork 14363,8738 14318,8790 14261,8851 14151,8967
 EOF
      },
      { from  => undef, # 
@@ -26587,7 +26587,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-12-03
+#: last_checked: 2018-12-09
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -27412,7 +27412,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-11-20
+#: last_checked: 2018-12-12
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27703,7 +27703,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-11-26
+#: last_checked: 2018-12-10
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27806,20 +27806,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # $isodate2epoch->("2018-09-30 18:00:00"), # undef, # XXX
+       until => 1544646931, # undef, # $isodate2epoch->("2018-09-30 18:00:00"), # undef, # XXX
        text  => 'Bahnbrücke Templiner See: gesperrt, derzeit kein Eröffnungsdatum für den Steg',
        type  => 'gesperrt',
        source_id => 'https://www.pnn.de/potsdam-mittelmark/schwielowsee-templiner-bruecke-bleibt-laenger-gesperrt/21317518.html',
        data  => <<EOF,
-#: by: http://www.maz-online.de/Lokales/Potsdam/Potsdam-am-Montag-Das-ist-heute-wichtig113
-#: by: http://www.maz-online.de/Lokales/Potsdam/Bruecke-am-Templiner-See-oeffnet-im-September
-#: by: https://www.pnn.de/potsdam-mittelmark/schwielowsee-templiner-bruecke-bleibt-laenger-gesperrt/21317518.html (kein Eröffnungsdatum für den Steg)
-#: osm_watch: way id="43483713" version="10" brb
-#: osm_watch: way id="611197607" version="1" brb
-#: add_fragezeichen: wann wird die Brücke wieder eröffnet?
-#: also_indoor: search Templiner Brücke
-#: last_checked: 2018-09-01
-#: next_check: 2018-12-10
+# REMOVED --- #: by: http://www.maz-online.de/Lokales/Potsdam/Potsdam-am-Montag-Das-ist-heute-wichtig113 --- #: by: http://www.maz-online.de/Lokales/Potsdam/Bruecke-am-Templiner-See-oeffnet-im-September --- #: by: https://www.pnn.de/potsdam-mittelmark/schwielowsee-templiner-bruecke-bleibt-laenger-gesperrt/21317518.html (kein Eröffnungsdatum für den Steg) --- #: osm_watch: way id="43483713" version="11" brb --- #: osm_watch: way id="611197607" version="2" brb --- #: add_fragezeichen: wann wird die Brücke wieder eröffnet? --- #: also_indoor: search Templiner Brücke --- #: last_checked: 2018-09-01 --- #: next_check: 2018-12-17
 	2::inwork -15853,-4327 -15664,-4450 -15652,-4441 -15537,-4535 -15540,-4550 -14801,-5162
 EOF
      },
@@ -27829,12 +27821,11 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic vvv
-#: last_checked: 2018-10-30 vvv
-#: next_check: 2018-12-10 vvv
+#: last_checked: 2018-12-10 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
-	q3::inwork; 12647,7672 12520,7694 12335,7770
-#: next_check: ^^^
+	q3::inwork; 12647,7672 12520,7694
+# REMOVED (hier keine Einbahnstraßenregelung mehr)	q3::inwork; 12520,7694 12335,7770
 #: last_checked ^^^
 #: also_indoor ^^^
 EOF
@@ -27890,7 +27881,7 @@ EOF
 #: source_id: 2147343479
 #: also_indoor: traffic vvv
 #: last_checked: 2018-10-25 vvv
-#: next_check: 2018-12-10 vvv
+#: next_check: 2018-12-17 vvv
 # REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
 	2::inwork 2417,4327 2434,4299
@@ -28105,8 +28096,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-11-22
-#: check_frequency: 21d
+#: last_checked: 2018-12-13
+#: check_frequency: 30d
 	2::inwork 14854,8964 14614,9052
 EOF
      },
@@ -28337,16 +28328,11 @@ EOF
 EOF
      },
      { from  => 1542222296, # 2018-11-14 20:04
-       until => 1577833199, # 2019-12-31 23:59
+       until => 1544644052, # -> handicap_s --- 1577833199, # 2019-12-31 23:59
        text  => 'Steinmetzstr: Bauarbeiten zwischen Kurfürstenstr. und Bülowstr., etwa 100 Meter der Fahrbahn sind gesperrt, bis Ende 2019',
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_152000_LMS-BR_72',
        data  => <<EOF,
-#: XXX bei fritz: "Die Straße ist als Sackgasse ausgewiesen." (vermutlich keine Durchfahrt zur Kreuzung Bülowstr.) -> ja
-#: by: https://www.berliner-woche.de/schoeneberg/c-bauen/am-frueheren-commerzbank-standort-entsteht-ein-moderner-buerokomplex_a190072
-#: also_indoor: traffic (H)
-#: last_checked: 2018-11-15
-#: check_frequency: 120d
 	q3::inwork 7744,10372 7698,10147
 EOF
      },
@@ -28368,6 +28354,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: NEUERMAUERWEG-2018
 #: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
+#: osm_watch: way id="42031978" version="12"
 #: priority: #B vvv
 #: last_checked: 2018-11-02 (mapillary, wobei man die Bauzäune umfahren kann) vvv
 #: check_frequency: 7d vvv
@@ -28426,7 +28413,7 @@ EOF
 EOF
      },
      { from  => 1543122000, # 2018-11-25 06:00
-       until => 1544914799, # 2018-12-15 23:59
+       until => 1544727869, # 1544914799, # 2018-12-15 23:59
        text  => 'Rosenthaler Str.: Gleisarbeiten zwischen Gipsstr. und Sophienstr., Fahrbahn Richtung Hackescher Markt gesperrt, eventuell sind auch Radfahrer betroffen, bis Mitte Dezember 2018',
        type  => 'handicap',
        data  => <<EOF,
@@ -28451,9 +28438,29 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2018-12-03
+#: last_checked: 2018-12-13
 #: check_frequency: 21d
-	2::inwork 14776,9949 14599,10039
+	2::inwork 14690,9993 14599,10039
+EOF
+     },
+     { from  => 1544338800, # 2018-12-09 08:00
+       until => $isodate2epoch->("2019-08-17 18:00:00"), # 1561996800, # 2019-07-01 18:00
+       text  => 'Tegeler Str.: Fahrbahn zwischen Lynarstr. und Fennstr. Richtung Südosten gesperrt, eventuell sind auch Radfahrer betroffen, voraussichtlich bis Mitte August 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: add_fragezeichen sind Radfahrer tatsächlich von den Bauarbeiten betroffen?
+#: source_id: 2147343528
+#: priority: #A
+	q4::inwork; 7263,14873 7458,14643
+EOF
+     },
+     { from  => 1544425200, # 2018-12-10 08:00
+       until => $isodate2epoch->("2019-06-01 18:00:00"), # 1561932000, # 2019-07-01 00:00
+       text  => 'Berliner Str.: Bauarbeiten zwischen Konstanzer Str. und Barstr., Fahrbahn Richtung Osten gesperrt, eventuell sind auch Radfahrer betroffen, bis Juni 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147343527
+	q4::inwork; 3952,8980 4006,8967 4181,8933 4324,8899
 EOF
      },
     );

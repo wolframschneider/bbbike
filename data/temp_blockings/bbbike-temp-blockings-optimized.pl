@@ -2371,36 +2371,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'type' => 'gesperrt',
          'until' => 1545865199
        },
-       {
-         'data' => '#: tempex: before(2nd_advent,fr) T17:00 - 2nd_advent T20:00 vvv
-	2::xmas 13416,7712 13426,7674
-	2::xmas 13416,7712 13378,7695 13288,7653
-	2::xmas 13426,7674 13400,7642 13303,7622
-	2::xmas 12969,7610 13100,7626 13177,7644
-	2::xmas 13188,7590 13177,7644
-	2::xmas 13188,7590 13303,7622
-	2::xmas 13288,7653 13303,7622
-	2::xmas 13288,7653 13177,7644
-	2::xmas 13288,7653 13278,7673 13245,7742
-#: tempex ^^^
-',
-         'from' => 1544050800,
-         'id' => 1998,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
-         'text' => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (07.12.2018 - 09.12.2018)',
-         'type' => 'gesperrt',
-         'until' => 1544396399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3247,27 +3218,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7512,9572
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: before(2nd_advent,sa) - +1d
-	2::xmas 9986,13412 10317,13248
-',
-         'from' => 1544137200,
-         'id' => 2515,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              2,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (08.12.2018 - 09.12.2018)',
-         'type' => 'gesperrt',
-         'until' => 1544396399
-       },
+       undef,
        {
          'data' => '#: tempex: before(3rd_advent,sa) - +1d
 	2::xmas 9986,13412 10317,13248
@@ -3311,27 +3262,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7512,9572
          'until' => 1545605999
        },
        undef,
-       {
-         'data' => '#: tempex: 2nd_advent & T12-T19
-	2::xmas 11317,14564 11247,14578 11155,14554
-',
-         'from' => 1544266800,
-         'id' => 2519,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              3,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/pankow/971805-1328139-adventsmarktkollwitzplatz.html',
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 9. Dezember 2018, 12:00 bis 19:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1544378400
-       },
+       undef,
        {
          'data' => '#: tempex: 3rd_advent & T12-T19
 	2::xmas 11317,14564 11247,14578 11155,14554
@@ -3575,7 +3506,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2018-12-03
+#: last_checked: 2018-12-10
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -3680,7 +3611,36 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
+	q4::inwork 8644,10408 8397,10488 8384,10507 8527,10621
+	q4::inwork 8348,10636 8335,10518 8350,10499
+#: tempex ^^^
+',
+         'from' => 1547420400,
+         'id' => 2718,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              8,
+                              'months',
+                              1
+                            ],
+                            [
+                              'yearly',
+                              'days',
+                              27,
+                              'months',
+                              6
+                            ]
+                          ],
+         'source_id' => 'https://orbanism.com/event/berlin-fashion-week-2019/',
+         'text' => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 15.01.2019-18.01.2019',
+         'type' => 'handicap',
+         'until' => 1547852399
+       },
        undef,
        undef,
        undef,
@@ -4056,7 +4016,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-12-03
+#: last_checked: 2018-12-09
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -4285,7 +4245,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-11-20
+#: last_checked: 2018-12-12
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 ',
          'from' => undef,
@@ -4415,7 +4375,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-11-26
+#: last_checked: 2018-12-10
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -4481,33 +4441,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.maz-online.de/Lokales/Potsdam/Potsdam-am-Montag-Das-ist-heute-wichtig113
-#: by: http://www.maz-online.de/Lokales/Potsdam/Bruecke-am-Templiner-See-oeffnet-im-September
-#: by: https://www.pnn.de/potsdam-mittelmark/schwielowsee-templiner-bruecke-bleibt-laenger-gesperrt/21317518.html (kein Eröffnungsdatum für den Steg)
-#: osm_watch: way id="43483713" version="10" brb
-#: osm_watch: way id="611197607" version="1" brb
-#: add_fragezeichen: wann wird die Brücke wieder eröffnet?
-#: also_indoor: search Templiner Brücke
-#: last_checked: 2018-09-01
-#: next_check: 2018-12-10
-	2::inwork -15853,-4327 -15664,-4450 -15652,-4441 -15537,-4535 -15540,-4550 -14801,-5162
-',
-         'from' => undef,
-         'id' => 3010,
-         'source_id' => 'https://www.pnn.de/potsdam-mittelmark/schwielowsee-templiner-bruecke-bleibt-laenger-gesperrt/21317518.html',
-         'text' => 'Bahnbrücke Templiner See: gesperrt, derzeit kein Eröffnungsdatum für den Steg',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: also_indoor: traffic vvv
-#: last_checked: 2018-10-30 vvv
-#: next_check: 2018-12-10 vvv
+#: last_checked: 2018-12-10 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
-	q3::inwork; 12647,7672 12520,7694 12335,7770
-#: next_check: ^^^
+	q3::inwork; 12647,7672 12520,7694
+# REMOVED (hier keine Einbahnstraßenregelung mehr)	q3::inwork; 12520,7694 12335,7770
 #: last_checked ^^^
 #: also_indoor ^^^
 ',
@@ -4536,7 +4477,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: source_id: 2147343479
 #: also_indoor: traffic vvv
 #: last_checked: 2018-10-25 vvv
-#: next_check: 2018-12-10 vvv
+#: next_check: 2018-12-17 vvv
 # REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
 	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
 	2::inwork 2417,4327 2434,4299
@@ -4593,8 +4534,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-11-22
-#: check_frequency: 21d
+#: last_checked: 2018-12-13
+#: check_frequency: 30d
 	2::inwork 14854,8964 14614,9052
 ',
          'from' => undef,
@@ -4695,25 +4636,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: XXX bei fritz: "Die Straße ist als Sackgasse ausgewiesen." (vermutlich keine Durchfahrt zur Kreuzung Bülowstr.) -> ja
-#: by: https://www.berliner-woche.de/schoeneberg/c-bauen/am-frueheren-commerzbank-standort-entsteht-ein-moderner-buerokomplex_a190072
-#: also_indoor: traffic (H)
-#: last_checked: 2018-11-15
-#: check_frequency: 120d
-	q3::inwork 7744,10372 7698,10147
-',
-         'from' => 1542222296,
-         'id' => 3049,
-         'source_id' => 'LMS-BR_r_LMS-BR_152000_LMS-BR_72',
-         'text' => 'Steinmetzstr: Bauarbeiten zwischen Kurfürstenstr. und Bülowstr., etwa 100 Meter der Fahrbahn sind gesperrt, bis Ende 2019',
-         'type' => 'handicap',
-         'until' => 1577833199
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: NEUERMAUERWEG-2018
 #: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
+#: osm_watch: way id="42031978" version="12"
 #: priority: #B vvv
 #: last_checked: 2018-11-02 (mapillary, wobei man die Bauzäune umfahren kann) vvv
 #: check_frequency: 7d vvv
@@ -4773,16 +4701,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1544914799
        },
-       {
-         'data' => '#: source_id: 2147343509
-	q4::inwork; 10350,13376 10317,13248
-',
-         'from' => 1543122000,
-         'id' => 3057,
-         'text' => 'Rosenthaler Str.: Gleisarbeiten zwischen Gipsstr. und Sophienstr., Fahrbahn Richtung Hackescher Markt gesperrt, eventuell sind auch Radfahrer betroffen, bis Mitte Dezember 2018',
-         'type' => 'handicap',
-         'until' => 1544914799
-       },
+       undef,
        {
          'data' => '#: source_id: 2147343519
 	2::inwork 14539,23306 14573,23295 14597,23280
@@ -4797,15 +4716,37 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2018-12-03
+#: last_checked: 2018-12-13
 #: check_frequency: 21d
-	2::inwork 14776,9949 14599,10039
+	2::inwork 14690,9993 14599,10039
 ',
          'from' => undef,
          'id' => 3059,
          'text' => 'Stralauer Südufer: Bauarbeiten, Uferweg teilweise gesperrt, möglicherweise bis April 2019',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: add_fragezeichen sind Radfahrer tatsächlich von den Bauarbeiten betroffen?
+#: source_id: 2147343528
+#: priority: #A
+	q4::inwork; 7263,14873 7458,14643
+',
+         'from' => 1544338800,
+         'id' => 3060,
+         'text' => 'Tegeler Str.: Fahrbahn zwischen Lynarstr. und Fennstr. Richtung Südosten gesperrt, eventuell sind auch Radfahrer betroffen, voraussichtlich bis Mitte August 2019',
+         'type' => 'handicap',
+         'until' => 1566057600
+       },
+       {
+         'data' => '#: source_id: 2147343527
+	q4::inwork; 3952,8980 4006,8967 4181,8933 4324,8899
+',
+         'from' => 1544425200,
+         'id' => 3061,
+         'text' => 'Berliner Str.: Bauarbeiten zwischen Konstanzer Str. und Barstr., Fahrbahn Richtung Osten gesperrt, eventuell sind auch Radfahrer betroffen, bis Juni 2019',
+         'type' => 'handicap',
+         'until' => 1559404800
        }
      
 );
