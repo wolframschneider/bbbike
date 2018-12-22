@@ -994,8 +994,8 @@ Rüdesheimer Str. (Wilmersdorf)	N 4196,6862 4273,7002 4317,7069 4393,7266 4395,73
 Aßmannshauser Str.	N 4400,7508 4372,7628 4343,7732 4319,7824 4241,8007
 #: note: zur Aßmannshauser Str.:
 Heidelberger Platz	N 4241,8007 4180,8098
-Heidelberger Platz	N 4283,8016 4241,8007 4173,7993
-Heidelberger Platz	NN 4173,7993 4106,8031
+Heidelberger Platz	N 4283,8016 4241,8007 4173,7993 4123,8021
+Heidelberger Platz	NN 4123,8021 4106,8031
 Johannisberger Str.	N 4226,6840 4196,6862 4159,6890 4160,7043 4160,7278 4161,7388 4162,7510 4162,7721 4173,7993
 Triberger Str.	N 4430,7896 4319,7824
 Wiesbadener Str. (Friedenau, Wilmersdorf)	H 5352,7184 5333,7201 5314,7217 5294,7216 5139,7216 5059,7216 4979,7215 4880,7214 4787,7213 4743,7212 4571,7239 4393,7266 4160,7278 4063,7287 3965,7297 3703,7324 3612,7335 3389,7383
@@ -1513,7 +1513,7 @@ Lydia-Rabinowitsch-Str.	N 7820,13994 7930,14060 7973,13991 7865,13924
 #: XXX wobei es bereits eine Clara-von-Simson-Str. in Berlin gibt (Mail an die BVV Mitte geschickt)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_29_3931_4054_online.pdf (neuer Name)
 #: XXX fehlt in Berlin.coords.data
-#: last_checked: 2018-11-16
+#: last_checked: 2018-12-16 (mapillary)
 #: check_frequency: 60d
 (Hedwig-Porschütz-Str.)	N 7652,14257 7757,14318 7802,14250 7697,14187
 # 
@@ -4261,7 +4261,7 @@ Wodanstr. (Französisch Buchholz)	N 12216,21945 12162,21743
 #: also_indoor: search Königsteinbrücke
 #: last_checked: 2018-10-27 (mapillary)
 # REMOVED --- #: check_frequency: 52d
-#: next_check: 2018-12-17
+#: next_check: 2018-12-27
 #: priority: #A
 (Königsteinbrücke)	NN 13136,22397 13148,22396 13385,22383 13404,22384
 (Pankeweg)	NN 13365,22743 13321,22586 13295,22545 13290,22377 13354,22327
@@ -12717,7 +12717,7 @@ Otto-von-Bismarck-Allee	N 8206,12757 8120,12756
 #: by: http://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/ii-200ib/index.shtml (dieser Abschnitt der Straße bleibt erhalten)
 #: note: "Umfahrung Kanzleramt"
 (Forumsquerung)	H 8207,12606 8206,12757
-(Umfahrung an der Schweizer Botschaft)	N 8206,12757 8204,12816 8168,12848 8124,12840 8030,12824
+# REMOVED (laut osm "komplett abgetragen") --- (Umfahrung an der Schweizer Botschaft)	N 8206,12757 8204,12816 8168,12848 8124,12840 8030,12824
 #: note ^^^
 Monbijoubrücke	NN 9654,12882 9683,12913 9707,12974
 Monbijoustr.	N 9707,12974 9714,12995 9736,13061 9771,13182
@@ -16051,7 +16051,7 @@ Straße 9 (Wartenberg)	N 19397,20407 19384,20439 19430,20561 19501,20537 19526,20
 (In der Falkenberger Feldmark)	NN 20044,18774 20262,19367 20388,19721 20435,19869 20536,20006
 (Am Tierheim)	NN 19579,18933 19974,18799
 (Tierheim - Grüne Trift)	NN 19579,18933 19381,19003 19157,19122
-(Barnimer Dörferweg)	NN 20694,18857 20793,18901 20865,18933 20889,18943 20995,18988 21035,19005 21068,18934 21095,18874 21123,18813 21137,18782
+(Barnimer Dörferweg)	NN 20694,18857 20793,18901 20865,18933 20889,18943 20995,18988 21035,19005 21039,18997 21068,18934 21095,18874 21123,18813 21137,18782
 Blechenstr.	N 14014,16722 13936,16763 13870,16837
 Cäsarstr.	N 18685,9719 18660,9599 18626,9406
 Weißwasserweg	N 2194,2930 2199,2916 2390,2954 2525,2984 2594,3009 2655,3025

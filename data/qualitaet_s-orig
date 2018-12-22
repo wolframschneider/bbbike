@@ -583,8 +583,8 @@ Rˆnnestr.: Asphalt	Q0 2698,10645 2774,10663
 # 
 #: XXX wird hier die Fahrbahn verbessert (asphaltiert)?
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/mobilitaetsgesetz-berlin-bekommt-60-neue-radwege-bis-2020-29512972
-#: osm_watch: way id="4480580" version="9"
-#: osm_watch: way id="4436949" version="8"
+#: osm_watch: way id="4480580" version="10"
+#: osm_watch: way id="4436949" version="9"
 #: last_checked: 2018-10-12
 #: check_frequency: 90d
 Rˆnnestr.: Kopfsteinpflaster	Q2+ 2774,10663 3041,10732 3295,10831 3291,10853
@@ -1524,7 +1524,7 @@ Schweidnitzer Str.: Kopfsteinpflaster	Q2 3225,9844 3220,9598
 Mansfelder Str.: Kopfsteinpflaster	Q2 3619,9331 3437,9341
 Elgersburger Str.: Kopfsteinpflaster	Q2 2423,8427 2541,8425 2668,8372
 Elgersburger Str.: Kopfsteinpflaster, aber Radwege	Q1 2668,8372 2713,8357
-Heidelberger Platz: Kopfsteinpflaster	Q2 4106,8031 4173,7993 4241,8007 4283,8016
+Heidelberger Platz: Kopfsteinpflaster	Q2 4106,8031 4123,8021 4173,7993 4241,8007 4283,8016
 Johannisberger Str.: Kopfsteinpflaster	Q2 4173,7993 4162,7721
 Johannisberger Str.: Kopfsteinpflaster, OK	Q1 4160,7278 4160,7043
 Jagowstr.: Kopfsteinpflaster	Q2 5427,12495 5486,12581 5543,12664 5601,12756
@@ -1561,7 +1561,7 @@ Treptower Park: Kleinsteinpflaster	Q1- 15623,9028 15778,8990
 #: XXX Arbeiten sind voraussichtlich im Fr¸hjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2018-12-13
+#: last_checked: 2018-12-19
 #: check_frequency: 30d
 Treptower Park: Schotterweg, aber relativ glatt	Q2 14854,8964 14614,9052
 # 
@@ -2898,7 +2898,7 @@ Mˆvenstr. (Wannsee): asphaltiert	Q0 -10269,445 -10252,414
 Trabener Str.: Asphalt	Q0 1981,9865 2128,9999
 # 
 #: XXX wird nach den Bauarbeiten der Wasserbetriebe (laut Schild bis Februar 2019) hier die Fahrbahn verbessert?
-#: last_checked: 2018-12-07
+#: last_checked: 2018-12-17
 #: next_check: 2019-02-01
 Gubener Str.: Asphalt mit Sch‰den	Q1 13198,12311 13243,12222 13326,12056 13339,12029 13352,12003
 # 
@@ -3257,6 +3257,8 @@ Hertefeldstr.: Asphalt	Q0 -3039,14522 -2964,14478
 Kirchgasse (Spandau): Kopfsteinpflaster	Q2 -3089,14440 -3150,14478
 Breite Str.: kleinteiliges Kopfsteinpflaster	Q1 -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340 -3227,14260
 Mˆnchstr.: kleinteiliges Kopfsteinpflaster	Q1 -3110,14408 -3174,14438 -3228,14468
+#: by: https://www.berliner-woche.de/spandau/c-bauen/altstadt-wandelt-sich-merklich_a193921 (Kleinpflaster wird durch Mix aus Granitplatten, Groﬂ- und Mosaikpflaster ersetzt)
+#: next_check: 2019-10-01
 Markt: kleinteiliges Kopfsteinpflaster	Q1 -3155,14340 -3204,14368 -3231,14383 -3275,14407
 Marktstr. (Spandau): Gehwegplatten	Q0- -3293,14304 -3231,14383
 Charlottenstr.: Gehwegplatten	Q0- -3227,14260 -3293,14304 -3338,14333 -3397,14370
@@ -5660,7 +5662,7 @@ Marie-Elisabeth-von-Humboldt-Str.: gutes Verbundsteinpflaster	Q1+ 20586,18822 20
 Julius-Meyen-Str.: gutes Verbundsteinpflaster	Q1+ 20635,18707 20553,18734 20494,18755
 Marie-Elisabeth-von-Humboldt-Str.: Asphalt	Q0 20622,18491 20593,18571 20635,18707 20694,18857
 Marie-Elisabeth-von-Humboldt-Str.: m‰ﬂiger Asphalt	Q1 20694,18857 20855,19299 20971,19616
-Barnimer Dˆrferweg: Asphalt	Q0 20694,18857 20793,18901 20865,18933 20889,18943 20995,18988 21035,19005 21068,18934 21095,18874 21123,18813 21137,18782
+Barnimer Dˆrferweg: Asphalt	Q0 20694,18857 20793,18901 20865,18933 20889,18943 20995,18988 21035,19005 21039,18997 21068,18934 21095,18874 21123,18813 21137,18782
 Kundtanger: Verbundsteinpflaster	Q1+ 20868,18926 20865,18933 20858,18961 20855,19030 20833,19037 20807,18955 20858,18961
 Am Dˆrferweg: Asphalt	Q0 20790,18892 20868,18926
 Johann-Jacob-Engel-Str.: Asphalt	Q0 20743,18540 20701,18634
@@ -6421,7 +6423,7 @@ Schwarzer Weg (Tegel): Beton	Q0 436,20558 298,20480 221,20430 165,20308 97,20103
 Riemerstr.: Verbundsteinpflaster	Q1 1264,20575 1218,20724
 Wachstr.: Verbundsteinpflaster	Q1 1326,20600 1299,20722
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.764977.php (Sanierung)
-#: XXX nach der Sanierung besserer Asphalt?
+#: add_fragezeichen: Ist die Sanierung beendet? Ist die Fahrbahnqualit‰t nun besser geowrden?
 #: priority: #A
 #: next_check: 2018-12-21
 Dacheroedenstr.: schadhafter Asphalt	Q2 1407,20563 1387,20621 1377,20737
@@ -6826,21 +6828,15 @@ Zum Seeblick: unbefestigter Weg	Q2 27161,-2474 27191,-2432
 Zum Seeblick: Asphalt	Q0 27161,-2474 27093,-2560 27017,-2660
 Nuscheweg: Beton	Q0 27037,-2492 27093,-2560
 Nuscheweg: Asphalt	Q1 27093,-2560 27149,-2620
-#: XXX hier wird asphaltiert
+# REMOVED --- #: XXX hier wird asphaltiert --- #: osm_watch: way id="240539091" version="1" --- #: priority: #B --- #: next_check: 2018-10-28
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.747650.php ("bituminˆser Decken¸berzug")
-#: osm_watch: way id="240539091" version="1"
-#: priority: #B
-#: next_check: 2018-10-28
-Imkerweg: schlechtes Kopfsteinpflaster, mit Asphaltflicken	Q3 27226,-2892 27422,-2753
+Imkerweg: Asphalt	Q0 27226,-2892 27422,-2753
 Imkerweg: schlechtes Kopfsteinpflaster, mit Asphaltflicken	Q3 27422,-2753 27506,-2628
 Imkerweg: schlechtes Kopfsteinpflaster	Q3 27506,-2628 27539,-2584
 Imkerweg: Asphalt	Q0 27539,-2584 27545,-2535
-#: XXX hier wird asphaltiert
+# REMOVED --- #: XXX hier wird asphaltiert --- #: osm_watch: way id="176187591" version="2" --- #: priority: #B --- #: next_check: 2018-10-21
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.747650.php ("bituminˆser Decken¸berzug")
-#: osm_watch: way id="176187591" version="2"
-#: priority: #B
-#: next_check: 2018-10-21
-Am Seddinsee: schlechtes Kopfsteinpflaster	Q3 27518,-3054 27520,-3029 27456,-2843 27422,-2753
+Am Seddinsee: Asphalt	Q0 27518,-3054 27520,-3029 27456,-2843 27422,-2753
 Am Seddinsee: Kopfsteinpflaster	Q2- 27422,-2753 27388,-2645
 Weiselpfad: unbefestigte Straﬂe	Q2 27350,-2661 27367,-2653
 Weiselpfad: schlechtes Kopfsteinpflaster	Q3 27367,-2653 27388,-2645 27487,-2608 27506,-2628
@@ -12263,6 +12259,7 @@ Spessartstr.: Asphalt	Q0 4400,7508 4486,7597 4559,7672 4638,7733 4741,7801
 Offenbacher Str.: Asphalt	Q0 5045,7623 4785,7609 4559,7672 4506,7734
 Schlangenbader Str.: Asphalt	Q0 3981,6850 3958,7040 3965,7297 3969,7399 3971,7533 3969,7731 3968,7906
 Nauheimer Str.: Asphalt	Q0 3969,7731 4061,7727 4162,7721 4343,7732
+#: confirmed_by: srt
 Homburger Str.: Asphalt	Q0 3971,7533 4066,7514 4162,7510 4330,7507 4400,7508 4599,7474 4785,7438
 #: by ^^^
 # 
@@ -13340,7 +13337,7 @@ Franz-Cornelsen-Weg: wassergebundene Decke	Q1 3612,7335 3634,7601
 #: osm_watch: way id="191538263" version="4" vvv
 #: also_indoor: traffic (G) vvv
 #: last_checked: 2018-10-25 vvv
-#: next_check: 2018-12-17 vvv
+#: next_check: 2018-12-27 vvv
 Patschkauer Weg: Kopfsteinpflaster	Q2 2996,5005 3132,4803
 #: XXX nur hier sind gerade Bauarbeiten
 #: add_fragezeichen: Sind die Bauarbeiten im Patschkauer Weg beendet? Wenn ja, hat sich nach den Bauarbeiten die Qualit‰t der Fahrbahn verbessert?
@@ -13959,6 +13956,7 @@ Lemkestr.: Kopfsteinpflaster	Q2+; 25801,13101 25872,13191 25961,13304
 #: XXX Asphaltierung geplant
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8038
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036207419402/207419402/00103344/44-Anlagen/02/vzb0494_V_Massnahmen_Sanierg_Lemkestrasse.pdf
+#: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/zwei-beschluesse-zur-lemkestrasse_a194224
 #: next_check: 2020-04-01
 Lemkestr.: schlechtes Kopfsteinpflaster	Q3 25801,13101 25706,12982 25663,12927 25534,12763 25363,12553 25191,12343 25149,12266 25109,12196
 #: confirmed_by: srt (schlechtes Kopfsteinpflaster -> Asphalt)
@@ -15713,7 +15711,7 @@ Murellenweg: geteert	Q0 -1084,12644 -998,12689 -874,12755 -717,12823 -629,12862 
 #: confirmed_by: srt
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.764977.php (Sanierung)
 #: by: https://www.berliner-woche.de/tegel/c-verkehr/strassensanierung-in-tegel_a193279
-#: XXX nach der Sanierung besserer Asphalt?
+#: add_fragezeichen: Ist die Sanierung beendet? Ist die Fahrbahnqualit‰t nun besser geowrden?
 #: priority: #A
 #: next_check: 2018-12-21
 Holwedestr.: m‰ﬂiger Asphalt, starke Frostsch‰den	Q2 1128,20525 1203,20553 1264,20575 1326,20600 1387,20621
@@ -25675,7 +25673,7 @@ Fanny-Zobel-Str.: Asphalt	Q0 13975,10187 13899,10214
 Dossestr. (Friedrichshain): Kopfsteinpflaster	Q2 15043,11637 15140,11811 15202,11789
 # REMOVED --- Eldenaer Str.: Asphalt	Q1 14096,12827 14066,12836 13979,12861 13960,12866 13844,12900
 Neue Welt: Asphalt	Q0 14704,12950 14433,13027
-August-Lindemann-Str.: Gehwegplatten, Kopfsteinpflaster	Q1 14355,12752 14360,12792
+August-Lindemann-Str.: Gehwegplatten, Kopfsteinpflaster	Q2 14355,12752 14360,12792
 August-Lindemann-Str.: Asphalt	Q0 14360,12792 14376,12849 14411,12951 14419,12978 14433,13027 14448,13081 14465,13138 14476,13181
 #: confirmed_by: srt
 Zellestr.: Kopfsteinpflaster	Q2 14133,12482 14188,12664

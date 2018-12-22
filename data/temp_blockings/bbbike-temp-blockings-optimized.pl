@@ -2376,26 +2376,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '	2::xmas 22111,4562 22162,4546 22214,4548
-',
-         'from' => 1544655600,
-         'id' => 2003,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1305665-955635-weihnachtsmarktaufdemschlossplatzk%C3%B6peni.html',
-         'text' => 'Alt-Köpenicker Weihnachtsmarkt vom 14.12.2018 bis zum 16.12.2018',
-         'type' => 'gesperrt',
-         'until' => 1545001199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3219,27 +3200,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7512,9572
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: before(3rd_advent,sa) - +1d
-	2::xmas 9986,13412 10317,13248
-',
-         'from' => 1544742000,
-         'id' => 2516,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              9,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (15.12.2018 - 16.12.2018)',
-         'type' => 'gesperrt',
-         'until' => 1545001199
-       },
+       undef,
        {
          'data' => '#: tempex: before(4th_advent,sa) - +1d
 	2::xmas 9986,13412 10317,13248
@@ -3263,27 +3224,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7512,9572
        },
        undef,
        undef,
-       {
-         'data' => '#: tempex: 3rd_advent & T12-T19
-	2::xmas 11317,14564 11247,14578 11155,14554
-',
-         'from' => 1544871600,
-         'id' => 2520,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              10,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/pankow/971805-1328139-adventsmarktkollwitzplatz.html',
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 16. Dezember 2018, 12:00 bis 19:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1544983200
-       },
+       undef,
        {
          'data' => '#: tempex: 4th_advent & T12-T19
 	2::xmas 11317,14564 11247,14578 11155,14554
@@ -3506,7 +3447,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2018-12-10
+#: last_checked: 2018-12-17
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -3673,33 +3614,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: SEEGEFELDERWEG-2016
-#: source_id: IM_026411
-#: source_id: 2147339562
-#: source_id: LMS-BR_r_LMS-BR_51041
-#: source_id: 2147342003
-#: source_id: 2147342198
-#: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72
-#: source_id: 2147342842
-#: osm_watch: way id="57401090" version="12"
-#: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
-#: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
-#: XXX laut fritz Ende 2018, laut vmz Frühjahr 2019
-#: last_checked: 2018-10-12
-#: next_check: 2019-03-01
-# REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
-# REMOVED ---	q3::inwork; -6861,15129 -6507,15007
-# REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
-	q4::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
-',
-         'from' => 1443650400,
-         'id' => 2740,
-         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
-         'text' => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Frühjahr 2019',
-         'type' => 'handicap',
-         'until' => 1551459600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3749,20 +3664,34 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: tempex: YYYY1231T1200-YYYY0101T1200 vvv
-	2::temp 8540,12420 8775,12457
-	2::temp 8485,12612 8399,12610 8348,12609 8306,12609 8207,12606 8122,12603 8119,12414 8354,12416 8400,12417 8540,12420
-	2::temp 8348,12609 8354,12416
-	2::temp 8207,12606 8206,12757
-	3 7945,12592 8122,12603 8120,12756
-	3 8391,12389 8400,12417 8399,12610
-	3 8070,12409 8119,12414 8055,12186
-	3 8399,12610 8400,12417 8391,12389
-	3 8120,12756 8122,12603 7945,12592
-	3 8055,12186 8119,12414 8070,12409
-#: tempex ^^^
+         'data' => '#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stra%C3%9Fe-des-17-juni-tiergarten-sperrung-%C2%B7-silvesterfeier
+#: by: https://twitter.com/VIZ_Berlin/status/1074623988159127553
+	2::temp 7031,12320 7383,12095
+	2::temp 7875,12363 7822,12201 7816,12150
+	2::temp 8400,12417 8391,12389 8344,12221
+	2::temp 8354,12416 8391,12389 8546,12279
+	2::temp 8775,12457 8804,12280 8722,12268
+# umschließende Fläche: 6892,12023 6844,11993 6815,11952 7436,11532 7576,11534 7682,11549 7851,11602 8112,11685 8224,11710 8476,11797 8544,11861 8571,12154 8498,12198 8470,12216 8018,12162 7780,12127 7283,12068
+	2::temp 7775,12114 7772,12040 7717,11918 7706,11878 7701,11798 7649,11717 7623,11624 7612,11597
+	2::temp 7823,12120 7832,12036 7822,11952 7801,11875 7795,11823 7777,11787 7772,11749 7796,11681
+	2::temp 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629 7623,11624 7664,11597
+	2::temp 8210,11775 8221,11876 8221,11885 8215,12156
+	2::temp 8210,11775 8244,11878 8327,12174
+	2::temp 7658,11947 7634,11920 7559,11888 7449,11883 7240,11907 7200,11881 7182,11870 7173,11864 7058,11809
+	2::temp 7429,12070 7658,11947 7717,11918 7801,11875 8016,11770 8026,11764
+	2::temp 7059,11978 7007,11923 6984,11859
+	2::temp 7418,11566 7549,11608 7612,11597 7648,11592 7664,11597 7693,11627 7732,11660 7796,11681 7901,11684 8014,11753 8026,11764 8140,11850 8167,11865 8221,11876 8244,11878 8262,11883 8453,12099
+	2::temp 8014,11753 8016,11770 8020,11937 8022,12016
+	2::temp 8034,12093 8057,12065 8052,12033 8022,12016 7999,12040 8004,12074 8034,12093
+	2::temp 8034,12093 8049,12140
+	2::temp 8167,11865 8132,11910
+	2::temp 8095,11919 8104,11984 8091,11992 8091,12011 8091,12023 8099,12022 8102,12043 8099,12058 8107,12068 8122,12147
+	2::temp 8244,11878 8221,11885 8132,11910 8095,11919 8020,11937
+	2::temp 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8122,12147 8215,12156 8327,12174 8466,12197
+	2::temp 7031,12024 7059,11978 7108,11945 7177,11913 7200,11881
+	2::temp 6984,11859 7058,11809 7163,11738 7373,11594 7418,11566
 ',
-         'from' => 1546167600,
+         'from' => 1546178400,
          'id' => 2767,
          'periodic' => 1,
          'recurrences' => [
@@ -3774,10 +3703,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
                               12
                             ]
                           ],
-         'source_id' => '2147339665',
-         'text' => 'Regierungsviertel u.a. Dorotheenstr., Scheidemannstr., Heinrich-von-Gagern-Str. und Paul-Löbe-Allee: wegen Silvesterparty gesperrt, vermutlich vom 31.12.2018 12:00 Uhr bis 01.01.2019 12:00 Uhr',
+         'text' => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 31.12.2018 15:00 Uhr bis 01.01.2019 03:00 Uhr',
          'type' => 'gesperrt',
-         'until' => 1546340400
+         'until' => 1546308000
        },
        undef,
        undef,
@@ -3995,7 +3923,6 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: next_check: 2019-04-01 vvv
 # REMOVED (hier fertig) ---	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
-#: XXX hier laut fritz bis voraussichtlich 28.12.2018
 	q3::inwork; 2781,2493 2740,2588 2625,2850
 #: next_check ^^^
 #: last_checked ^^^
@@ -4253,7 +4180,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'source_id' => '2147342598',
          'text' => 'Friesenstr.: Fahrbahn für Radfahrer verboten',
          'type' => 'gesperrt',
-         'until' => 1545411600
+         'until' => 1564675200
        },
        undef,
        undef,
@@ -4320,7 +4247,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147343007
 #: also_indoor: traffic
 #: last_checked: 2018-10-07
-#: next_check: 2019-11-19
+#: next_check: 2019-06-30
 	q4::inwork; 6168,6467 6083,6451 5823,6413
 	q4::inwork 6083,6451 6095,6358
 	q4::inwork; 6248,6388 6095,6358
@@ -4328,9 +4255,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1534197600,
          'id' => 2991,
          'source_id' => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
-         'text' => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis März 2019',
+         'text' => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis Ende Juni 2019',
          'type' => 'handicap',
-         'until' => 1553554799
+         'until' => 1561910400
        },
        undef,
        undef,
@@ -4366,7 +4293,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-12-10
+#: last_checked: 2018-12-17
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -4376,20 +4303,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '	q2::inwork; 8423,14667 8336,14586
-',
-         'from' => 1534790216,
-         'id' => 3001,
-         'source_id' => '2147343039',
-         'text' => 'Liesenstr. Richtung Chausseestraße ab Neue Hochstr.: Bauarbeiten, Fahrtrichtung gesperrt, bis 21.12.2018',
-         'type' => 'handicap',
-         'until' => 1545433200
-       },
+       undef,
        {
          'data' => '#: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
 #: add_fragezeichen: Sind die Bauarbeiten in der Straße "Am Schillertheater" beendet?
-#: also_indoor: traffic (HG)
+#: also_indoor: traffic (G)
 #: priority: #B
 #: last_checked: 2018-11-25
 #: check_frequency: 21d
@@ -4499,7 +4417,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-12-13
+#: last_checked: 2018-12-19
 #: check_frequency: 30d
 	2::inwork 14854,8964 14614,9052
 ',
@@ -4569,7 +4487,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '	q3::inwork; 9106,12795 9193,12875 9239,12923 9279,12953
+         'data' => '#: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
+	q3::inwork; 9106,12795 9193,12875 9239,12923 9279,12953
 ',
          'from' => 1541444153,
          'id' => 3044,
@@ -4612,18 +4531,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: by: https://www.berliner-woche.de/reinickendorf/c-verkehr/waldowstrasse-wird-saniert_a189664
-#: source_id: LMS-BR_r_LMS-BR_152539_LMS-BR_72
-	q4::inwork; 5541,18435 5537,18309 5536,18234
-',
-         'from' => 1542495600,
-         'id' => 3052,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
-         'text' => 'Waldowstr.: Bauarbeiten zwischen Pfahler Str. und Humboldtstr., Fahrbahn Richtung Humboldtstr. gesperrt, 19. November 2018 bis zum 21. Dezember 2018',
-         'type' => 'handicap',
-         'until' => 1545433199
-       },
+       undef,
        {
          'data' => '	q4::inwork 5550,18775 5547,18665 5545,18590 5543,18555 5541,18451 5541,18435
 ',
@@ -4645,16 +4553,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1556661599
        },
        undef,
-       {
-         'data' => '	q4::inwork 10225,16436 10197,16528
-',
-         'from' => 1542668400,
-         'id' => 3056,
-         'source_id' => '2147343500',
-         'text' => 'Malmöer Str.: zwischen Bornholmer Str. und Czarnikauer Str. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis 21. Dezember 2018',
-         'type' => 'handicap',
-         'until' => 1545411600
-       },
+       undef,
        undef,
        {
          'data' => '#: source_id: 2147343519
@@ -4702,14 +4601,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1559404800
        },
+       undef,
        {
-         'data' => '	q4::temp 9405,11903 9418,11804 9432,11702 9444,11616
+         'data' => '#: XXX Zeitverlust messen!
+	q3::inwork 10965,10851 11145,10638
 ',
-         'from' => 1544787000,
-         'id' => 3062,
-         'text' => 'Friedrichstr.: temporäre Fußgängerzone zwischen Taubenstr. und Leipziger Str., eventuell sind auch Radfahrer betroffen, am 14. Dezmber 2018 zwischen 12:30 und 15:00 Uhr',
+         'from' => 1545335759,
+         'id' => 3063,
+         'text' => 'Prinzessinnenstr.: Abschnitte der Fahrbahn wegen Bauarbeiten gesperrt, bis 01.06.2020',
          'type' => 'handicap',
-         'until' => 1544882400
+         'until' => 1591027200
        }
      
 );

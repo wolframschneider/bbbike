@@ -4757,9 +4757,9 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002870',
        data  => <<EOF,
-	2::temp 8168,12848 8204,12816 8206,12757 8207,12606
+# REMOVED ---	2::temp 8168,12848 8204,12816 8206,12757 8207,12606
 	2::temp 8775,12457 8540,12420 8400,12417 8354,12416 8119,12414
-	2::temp 8030,12824 8124,12840
+# REMOVED ---	2::temp 8030,12824 8124,12840
 	2::temp 8306,12609 8309,12758
 	2::temp 8030,12824 8021,12832
 EOF
@@ -21796,7 +21796,8 @@ EOF
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/49re.pdf/file?y=2016
 	2::temp 7873,12927 7930,12912 8021,12832 8030,12824 8120,12756 8206,12757 8309,12758 8424,12853 8503,12895
 	2::temp 8119,12414 8122,12603 8120,12756 8124,12840 8116,12938 8110,13042
-	2::temp 8030,12824 8124,12840 8168,12848 8204,12816 8206,12757 8207,12606
+# REMOVED ---	2::temp 8030,12824 8124,12840 8168,12848 8204,12816 8206,12757
+	2::temp 8206,12757 8207,12606
 	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610 8485,12612 8554,12593 8596,12576
 	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
 	2::temp 8304,12938 8309,12758 8306,12609
@@ -23999,7 +24000,7 @@ EOF
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2018-12-10
+#: last_checked: 2018-12-17
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -24095,8 +24096,8 @@ EOF
 	2::temp 8206,12757 8120,12756 8030,12824
 	2::temp 7930,12912 8021,12832
 	3 8124,12840 8120,12756 8122,12603
-	3 8207,12606 8206,12757 8204,12816
-	3 8204,12816 8206,12757 8207,12606
+# REMOVED ---	3 8207,12606 8206,12757 8204,12816
+# REMOVED ---	3 8204,12816 8206,12757 8207,12606
 	3 8122,12603 8120,12756 8124,12840
 EOF
      },
@@ -24744,7 +24745,7 @@ EOF
 EOF
      },
      { from  => 1443650400, # 2015-10-01 00:00
-       until => $isodate2epoch->("2019-03-01 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
+       until => 1545335283, # $isodate2epoch->("2019-03-01 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
        text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Frühjahr 2019',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
@@ -25037,26 +25038,39 @@ EOF
 	2::inwork 20640,7122 20722,6971
 EOF
      },
-     { from  => $isodate2epoch->("2018-12-30 12:00:00"), # 1451473200, # 2015-12-30 12:00 # siehe auch anderen Eintrag mit früheren Sperrungen
-       until => $isodate2epoch->("2019-01-01 12:00:00"), # )1451646000, # 2016-01-01 12:00
+     { from  => $isodate2epoch->("2018-12-30 15:00:00"), # 1451473200, # 2015-12-30 12:00 # siehe auch anderen Eintrag mit früheren Sperrungen
+       until => $isodate2epoch->("2019-01-01 03:00:00"), # )1451646000, # 2016-01-01 12:00
        periodic => 1,
        recurrences => [['yearly', days => 31, months => 12]],
-       text  => 'Regierungsviertel u.a. Dorotheenstr., Scheidemannstr., Heinrich-von-Gagern-Str. und Paul-Löbe-Allee: wegen Silvesterparty gesperrt, vermutlich vom 31.12.2018 12:00 Uhr bis 01.01.2019 12:00 Uhr',
+       text  => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 31.12.2018 15:00 Uhr bis 01.01.2019 03:00 Uhr',
        type  => 'gesperrt',
-       source_id => '2147339665',
        data  => <<EOF,
-#: tempex: YYYY1231T1200-YYYY0101T1200 vvv
-	2::temp 8540,12420 8775,12457
-	2::temp 8485,12612 8399,12610 8348,12609 8306,12609 8207,12606 8122,12603 8119,12414 8354,12416 8400,12417 8540,12420
-	2::temp 8348,12609 8354,12416
-	2::temp 8207,12606 8206,12757
-	3 7945,12592 8122,12603 8120,12756
-	3 8391,12389 8400,12417 8399,12610
-	3 8070,12409 8119,12414 8055,12186
-	3 8399,12610 8400,12417 8391,12389
-	3 8120,12756 8122,12603 7945,12592
-	3 8055,12186 8119,12414 8070,12409
-#: tempex ^^^
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stra%C3%9Fe-des-17-juni-tiergarten-sperrung-%C2%B7-silvesterfeier
+#: by: https://twitter.com/VIZ_Berlin/status/1074623988159127553
+	2::temp 7031,12320 7383,12095
+	2::temp 7875,12363 7822,12201 7816,12150
+	2::temp 8400,12417 8391,12389 8344,12221
+	2::temp 8354,12416 8391,12389 8546,12279
+	2::temp 8775,12457 8804,12280 8722,12268
+# umschließende Fläche: 6892,12023 6844,11993 6815,11952 7436,11532 7576,11534 7682,11549 7851,11602 8112,11685 8224,11710 8476,11797 8544,11861 8571,12154 8498,12198 8470,12216 8018,12162 7780,12127 7283,12068
+	2::temp 7775,12114 7772,12040 7717,11918 7706,11878 7701,11798 7649,11717 7623,11624 7612,11597
+	2::temp 7823,12120 7832,12036 7822,11952 7801,11875 7795,11823 7777,11787 7772,11749 7796,11681
+	2::temp 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629 7623,11624 7664,11597
+	2::temp 8210,11775 8221,11876 8221,11885 8215,12156
+	2::temp 8210,11775 8244,11878 8327,12174
+	2::temp 7658,11947 7634,11920 7559,11888 7449,11883 7240,11907 7200,11881 7182,11870 7173,11864 7058,11809
+	2::temp 7429,12070 7658,11947 7717,11918 7801,11875 8016,11770 8026,11764
+	2::temp 7059,11978 7007,11923 6984,11859
+	2::temp 7418,11566 7549,11608 7612,11597 7648,11592 7664,11597 7693,11627 7732,11660 7796,11681 7901,11684 8014,11753 8026,11764 8140,11850 8167,11865 8221,11876 8244,11878 8262,11883 8453,12099
+	2::temp 8014,11753 8016,11770 8020,11937 8022,12016
+	2::temp 8034,12093 8057,12065 8052,12033 8022,12016 7999,12040 8004,12074 8034,12093
+	2::temp 8034,12093 8049,12140
+	2::temp 8167,11865 8132,11910
+	2::temp 8095,11919 8104,11984 8091,11992 8091,12011 8091,12023 8099,12022 8102,12043 8099,12058 8107,12068 8122,12147
+	2::temp 8244,11878 8221,11885 8132,11910 8095,11919 8020,11937
+	2::temp 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8122,12147 8215,12156 8327,12174 8466,12197
+	2::temp 7031,12024 7059,11978 7108,11945 7177,11913 7200,11881
+	2::temp 6984,11859 7058,11809 7163,11738 7373,11594 7418,11566
 EOF
      },
      { from  => 1454148000, # 2016-01-30 11:00
@@ -26210,14 +26224,17 @@ EOF
        source_id => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
        data  => <<EOF,
 	2::temp 8044,12989 8110,13042 8116,12938 8053,12871 8032,12889
-	2::temp 8277,13032 8317,13015 8408,12968 8464,12919 8480,12909 8503,12895 8424,12853 8309,12758 8206,12757 8120,12756 8030,12824 8124,12840
+	2::temp 8277,13032 8317,13015 8408,12968 8464,12919 8480,12909 8503,12895 8424,12853 8309,12758 8206,12757 8120,12756 8030,12824
+# REMOVED ---	2::temp 8030,12824 8124,12840
 	2::temp 8168,12945 8235,12945 8304,12938 8370,12902
 	2::temp 8116,12938 8124,12840 8120,12756 8122,12603 8119,12414
 	2::temp 8464,12919 8498,12870
 	2::temp 8306,12609 8348,12609 8399,12610 8485,12612 8554,12593
 	2::temp 8160,13053 8159,13042 8159,13032 8044,12989 7966,12913
 	2::temp 8072,12902 8046,12870
-	2::temp 8168,12848 8204,12816 8206,12757 8207,12606 8306,12609 8309,12758
+# REMOFED ---	2::temp 8168,12848 8204,12816 8206,12757
+	2::temp 8206,12757 8207,12606
+	2::temp 8207,12606 8306,12609 8309,12758
 	2::temp 8036,12855 8021,12832 7930,12912
 	2::temp 8207,12606 8122,12603 7945,12592 7875,12363
 	2::temp 8348,12609 8354,12416
@@ -26499,7 +26516,6 @@ EOF
 #: next_check: 2019-04-01 vvv
 # REMOVED (hier fertig) ---	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
-#: XXX hier laut fritz bis voraussichtlich 28.12.2018
 	q3::inwork; 2781,2493 2740,2588 2625,2850
 #: next_check ^^^
 #: last_checked ^^^
@@ -27405,7 +27421,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2018-12-21 18:00:00"), # 1558022400, # 2019-05-16 18:00
+       until => $isodate2epoch->("2019-08-01 18:00:00"), # 1558022400, # 2019-05-16 18:00
        text  => 'Friesenstr.: Fahrbahn für Radfahrer verboten',
        type  => 'gesperrt',
        source_id => '2147342598',
@@ -27432,7 +27448,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
        data  => <<EOF,
-#: next_check_id: FEUERBACH-2018
+# REMOVED --- #: next_check_id: FEUERBACH-2018
 # REMOVED --- #: XXX laut VMZ nur bis September 2018, laut BA Steglitz bis Dezember 2018
 #: source_id: 2147342919
 # REMOVED --- #: last_checked: 2018-08-15
@@ -27594,8 +27610,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2018-08-14 00:00:00"), # 1531519200, # 2018-07-14 00:00
-       until => $isodate2epoch->("2019-03-25 23:59:59"), # 1546297199, # 2018-12-31 23:59
-       text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis März 2019',
+       until => $isodate2epoch->("2019-06-30 18:00:00"), # 1546297199, # 2018-12-31 23:59
+       text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis Ende Juni 2019',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
        data  => <<EOF,
@@ -27612,7 +27628,7 @@ EOF
 #: source_id: 2147343007
 #: also_indoor: traffic
 #: last_checked: 2018-10-07
-#: next_check: 2019-11-19
+#: next_check: 2019-06-30
 	q4::inwork; 6168,6467 6083,6451 5823,6413
 	q4::inwork 6083,6451 6095,6358
 	q4::inwork; 6248,6388 6095,6358
@@ -27703,13 +27719,13 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-12-10
+#: last_checked: 2018-12-17
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
      },
      { from  => 1534790216, # 2018-08-20 20:36
-       until => 1545433200, # 2018-12-22 00:00
+       until => 1545418246, # 1545433200, # 2018-12-22 00:00
        text  => 'Liesenstr. Richtung Chausseestraße ab Neue Hochstr.: Bauarbeiten, Fahrtrichtung gesperrt, bis 21.12.2018',
        type  => 'handicap',
        source_id => '2147343039',
@@ -27724,7 +27740,7 @@ EOF
        data  => <<EOF,
 #: XXX bis wann sind hier Bauarbeiten? (laut googlemaps bis Mitte November 2018)
 #: add_fragezeichen: Sind die Bauarbeiten in der Straße "Am Schillertheater" beendet?
-#: also_indoor: traffic (HG)
+#: also_indoor: traffic (G)
 #: priority: #B
 #: last_checked: 2018-11-25
 #: check_frequency: 21d
@@ -27986,7 +28002,7 @@ Kronprinzenbrücke	2::temp 8503,12895 8424,12853
 Konrad-Adenauer-Str.	2::temp 8424,12853 8309,12758 8306,12609
 Otto-von-Bismarck-Allee	2::temp 8415,12749 8309,12758 8206,12757 8120,12756
 (Umfahrung Kanzleramt)	2::temp 8207,12606 8206,12757
-(Umfahrung an der Schweizer Botschaft)	2::temp 8206,12757 8204,12816 8168,12848 8124,12840 8030,12824
+# REMOVED --- (Umfahrung an der Schweizer Botschaft)	2::temp 8206,12757 8204,12816 8168,12848 8124,12840 8030,12824
 Rahel-Hirsch-Str.	2::temp 7930,12912 7946,12932
 Kapelle-Ufer	2::temp 8488,12920 8503,12895
 Hannah-Arendt-Str.	2::temp 8577,11896 8783,11959
@@ -28090,7 +28106,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-12-13
+#: last_checked: 2018-12-19
 #: check_frequency: 30d
 	2::inwork 14854,8964 14614,9052
 EOF
@@ -28277,6 +28293,7 @@ EOF
        text  => 'Schiffbauerdamm: Fahrtrichtung zwischen Albrechtstr. und Friedrichstr. in Richtung Osten gesperrt, bis Ende April 2019',
        type  => 'handicap',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
 	q3::inwork; 9106,12795 9193,12875 9239,12923 9279,12953
 EOF
      },
@@ -28361,7 +28378,7 @@ EOF
 EOF
      },
      { from  => 1542495600, # 2018-11-18 00:00
-       until => 1545433199, # 2018-12-21 23:59
+       until => 1545335324, # 1545433199, # 2018-12-21 23:59
        text  => 'Waldowstr.: Bauarbeiten zwischen Pfahler Str. und Humboldtstr., Fahrbahn Richtung Humboldtstr. gesperrt, 19. November 2018 bis zum 21. Dezember 2018',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
@@ -28398,7 +28415,7 @@ EOF
 EOF
      },
      { from  => 1542668400, # 2018-11-20 00:00
-       until => $isodate2epoch->("2018-12-21 18:00:00"), # 1544914799, # 2018-12-15 23:59
+       until => 1545335245, # $isodate2epoch->("2018-12-21 18:00:00"), # 1544914799, # 2018-12-15 23:59
        text  => 'Malmöer Str.: zwischen Bornholmer Str. und Czarnikauer Str. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis 21. Dezember 2018',
        type  => 'handicap',
        source_id => '2147343500',
@@ -28463,6 +28480,15 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4::temp 9405,11903 9418,11804 9432,11702 9444,11616
+EOF
+     },
+     { from  => 1545335759, # 2018-12-20 20:55
+       until => 1591027200, # 2020-06-01 18:00
+       text  => 'Prinzessinnenstr.: Abschnitte der Fahrbahn wegen Bauarbeiten gesperrt, bis 01.06.2020',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX Zeitverlust messen!
+	q3::inwork 10965,10851 11145,10638
 EOF
      },
     );
