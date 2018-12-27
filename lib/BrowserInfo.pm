@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1999-2005,2011,2012,2013,2014,2017 Slaven Rezic. All rights reserved.
+# Copyright (C) 1999-2005,2011,2012,2013,2014,2017,2018 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -17,7 +17,7 @@ use CGI;
 use strict;
 use vars qw($VERSION);
 
-$VERSION = 1.59;
+$VERSION = 1.65;
 
 my $vert_scrollbar_space = 6; # most browsers need space for a vertical scrollbar
 
@@ -80,11 +80,21 @@ sub set_info {
 	$self->{'user_agent_os'} = 'Android';
     } elsif ($user_agent =~ /\((.*)\)/) {
 	my(@infos) = split(/;\s*/, $1);
-	if ($#infos >= 2 && $infos[1] =~ m{^Trident/} && $infos[2] =~ m{^rv:(\d+\.\d+)}) { # special handling for MSIE11
-	    $self->{user_agent_name} = 'MSIE';
-	    $self->{user_agent_version} = $1;
-	    $self->{user_agent_os} = $infos[0];
-	} else {
+
+    FIND_UA_FROM_INFOS: {
+	    for my $info_i (1 .. $#infos-1) {
+		if ($infos[$info_i] =~ m{^Trident/}) {
+		    for my $info_j ($info_i+1..$#infos) {
+			if ($infos[$info_j] =~ m{^rv:(\d+\.\d+)}) {
+			    $self->{user_agent_name} = 'MSIE';
+			    $self->{user_agent_version} = $1;
+			    $self->{user_agent_os} = $infos[0];
+			    last FIND_UA_FROM_INFOS;
+			}
+		    }
+		}
+	    }
+
 	    my $ignore_next = 0;
 	    my $i;		# be compatible with 5.003
 	    for ($i=0; $i<=$#infos; $i++) {
@@ -165,7 +175,7 @@ sub set_info {
 				($self->{'wap_browser'} &&
 				 # Take out "big" browsers which may or may not
 				 # understand wml
-				 $self->{'user_agent_name'} !~ /^(?:Opera|Mozilla|MSIE|Konqueror)$/
+				 $self->{'user_agent_name'} !~ /^(?:Opera|Mozilla|Firefox|MSIE|Konqueror)$/
 				)
 			       );
 
@@ -339,8 +349,10 @@ sub set_info {
 			     $self->{'user_agent_version'} >= 2.0) ||
 			    ($self->{'user_agent_name'} eq 'Opera' &&
 			     $self->{'user_agent_version'} >= 7.0) ||
+			    ($self->{'user_agent_name'} eq 'Firefox') ||
 			    ($self->{'user_agent_name'} eq 'Safari') ||
 			    ($self->{'user_agent_name'} eq 'Chrome') ||
+			    ($self->{'user_agent_name'} eq 'Edge') ||
 			    ($self->{'user_agent_name'} eq 'AppleWebKit')
 			   );
 
@@ -633,12 +645,40 @@ sub _get_browser_version {
     my($s, $sep) = @_;
     $sep = "/" unless defined $sep;
     no warnings 'uninitialized'; # $s may be undef (i.e. undefined User-Agent)
-    if ($s =~ m|\b(Opera)\s+(\d+\.\d+)|) {
+    if ($s =~ m{\A(Opera).*\sVersion/(\d+\.\d+)\z}) {
+	($1, $2);
+    } elsif ($s =~ m{\b(Opera)\s+(\d+\.\d+)}) {
+	($1, $2);
+    } elsif ($s =~ m{Mozilla.* (Firefox)/(\d+\.\d+)}) {
+	($1, $2);
+    } elsif ($s =~ m{Mozilla.*Chrome.*Safari.* OPR/(\d+\.\d+)}) {
+	("Opera", $1);
+    } elsif ($s =~ m{Mozilla.*Chrome.*Safari.* (Edge)/(\d+\.\d+)}) {
 	($1, $2);
     } elsif ($s =~ m{(Chrome)/(\d+\.\d+).*Safari}) {
 	($1, $2);
-    } elsif ($s =~ m{KHTML.*like Gecko.*(Safari)/(\d+\.\d+)}) {
-	($1, $2);
+    } elsif ($s =~ m{\bCrMo/(\d+\.\d+).*Safari}) {
+	("Chrome", $1);
+    } elsif ($s =~ m{KHTML.*like Gecko.* Version/(\d+\.\d+).* (Safari)}) {
+	($2, $1);
+    } elsif ($s =~ m{KHTML.*like Gecko.*Safari/(\d+\.\d+)}) {
+	# rough build to public version mapping
+	# for a better one see https://metacpan.org/source/OALDERS/HTTP-BrowserDetect-3.20/lib/HTTP/BrowserDetect.pm#L448
+	my $public_version = '?';
+	if ($1 >= 412 && $1 < 420) {
+	    $public_version = '2.0';
+	} elsif ($1 >= 312) {
+	    $public_version = '1.3';
+	} elsif ($1 >= 125) {
+	    $public_version = '1.2';
+	} elsif ($1 >= 100) {
+	    $public_version = '1.1';
+	} elsif ($1 >= 74) {
+	    $public_version = '1.0';
+	} else {
+	    $public_version = '0.8';
+	}
+	('Safari', $public_version);
     } elsif ($s =~ m{(AppleWebKit)/(\d+\.\d+)}) { # check after Safari
 	($1, $2);
     } elsif ($s =~ m!^([^$sep]+)$sep(\d+\.\d+(\.\d+)?|beta-.*|PR\d+)!i) {

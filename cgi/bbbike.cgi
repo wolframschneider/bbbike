@@ -1812,7 +1812,9 @@ EOF
 
 sub _zoom_hack_init {
     return if defined $need_zoom_hack && !$need_zoom_hack;
-    if ($bi->is_browser_version("MSIE", 8.0, 9999999)) { # mit 8.0 und 10.0 getestet
+    if (   $bi->is_browser_version("MSIE", 8.0, 9999999)  # mit 8.0 und 10.0 getestet
+	|| $bi->is_browser_version("Edge",   0, 9999999)  # untested, assume same problems as with MSIE 8.0+++
+       ) {
 	$need_zoom_hack = 1;
     } else {
 	$need_zoom_hack = 0;
@@ -2110,6 +2112,7 @@ sub choose_form {
 	$bi->{'can_javascript'} && !$bi->{'text_browser'}) {
 	if (($bi->is_browser_version("Mozilla", 4.5, 4.9999) &&
 	     $bi->{'user_agent_os'} =~ /(freebsd|linux|windows|winnt)/i) ||
+	    $bi->is_browser_version('Firefox') ||
 	    (defined $bi->{'gecko_version'} &&
 	     ($bi->{'gecko_version'} >= 20020000 ||
 	      $bi->{'gecko_version'} == 0))
@@ -2122,15 +2125,18 @@ sub choose_form {
 	} elsif ($bi->is_browser_version("MSIE", 9.0, 9999999)) { # mit 9.0 und 10.0 getestet, $nice_... geht nicht (versetzte Kacheln), sollte gefixt werden XXX
 	    $nice_berlinmap = $nice_abcmap = 0;
 	    $prefer_png = 1;
+	} elsif ($bi->is_browser_version("Edge", 0, 9999999)) { # untested, assume same problems as MSIE 9.0...
+	    $nice_berlinmap = $nice_abcmap = 0;
+	    $prefer_png = 1;
 	} elsif ($bi->is_browser_version("Opera", 9.0, 9999999)) { # mit 9.80 getestet
-	    $nice_berlinmap = $nice_abcmap = 0; # the multiple street chooser would work, but cannot be set separately from $nice_berlinmap
+	    $nice_berlinmap = $nice_abcmap = 0; # the multiple street chooser would work, but cannot be set separately from $nice_berlinmap; XXX modern webkit-based (?) Opera versions not tested
 	    $prefer_png = 1;
 	} elsif ($bi->is_browser_version("Opera", 7.0, 7.9999)) { # Mit 8.x wird nur einmalig beim Enter gehighlighted
 	    $prefer_png = 1;
 	} elsif ($bi->is_browser_version("Konqueror", 3.0, 3.9999)) { # still broken with 3.5
 	    $nice_berlinmap = $nice_abcmap = 0;
 	    $prefer_png = 1;
-	} elsif ($bi->is_browser_version("Safari", 419, 9999999)) {
+	} elsif ($bi->is_browser_version("Safari", 2.0, 9999999)) {
 	    $nice_berlinmap = $nice_abcmap = 1;
 	    $prefer_png = 1;
 	} elsif ($bi->is_browser_version('Chrome', 0, 999999)) {
@@ -2578,7 +2584,7 @@ EOF
     # Hack for browsers which use the first button, regardless whether it's
     # image or button, for firing in a <Return> event
     # XXX Does not work for Opera; Safari, Chrome and MSIE are untested...
-    if ($enable_return_first_button && $bi->{user_agent_name} =~ /^(konqueror|safari|chrome|opera|msie)/i) {
+    if ($enable_return_first_button && $bi->{user_agent_name} =~ /^(konqueror|safari|chrome|opera|msie|edge)/i) {
 	print <<EOF;
 <input type="submit" value="@{[ M("Weiter") ]}" style="text-align:center;visibility:hidden"/>
 EOF
@@ -10015,7 +10021,8 @@ Es besteht die experimentelle Möglichkeit, sich <a href="@{[ $bbbike_url ]}?uplo
 <h4 id="diplom">Diplomarbeit</h4>
 Das Programm wird auch in <a href="@{[ $BBBike::DIPLOM_URL ]}">meiner Diplomarbeit</a> behandelt.<p>
 EOF
-    if ($bi->is_browser_version("Mozilla", 5)) {
+    if ($bi->is_browser_version("Mozilla", 5) ||
+	$bi->is_browser_version("Firefox")) {
 	print <<EOF;
 <script type="text/javascript"><!--
 function addSidebar(frm) {
