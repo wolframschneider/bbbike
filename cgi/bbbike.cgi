@@ -80,7 +80,7 @@ use BBBike::Elevation;
 use strict;
 use vars qw($VERSION $VERBOSE
 	    $debug $tmp_dir $mapdir_fs $mapdir_url $local_route_dir
-	    $bbbike_root $bbbike_images $bbbike_url $bbbike2_url $is_beta
+	    $bbbike_root $bbbike_images $bbbike_url $bbbike2_url $is_secure $is_beta
 	    $bbbike_html
 	    $modperl_lowmem $detailmap_module
 	    $q %persistent %c $got_cookie
@@ -1269,6 +1269,8 @@ $max_plz_streets = 25;
 
 # die originale URL (für den Kaltstart)
 $bbbike_url = BBBikeCGI::Util::my_url($q, -full=>0, -absolute=>1);
+$is_secure =~ $bbbike_url =~ m{^https://};
+
 # Root-Verzeichnis und Bilder-Verzeichnis von bbbike
 ($bbbike_root = $bbbike_url) =~ s|[^/]*/[^/]*$|| if !defined $bbbike_root;
 $bbbike_root =~ s|/$||; # letzten Slash abschneiden
@@ -1812,8 +1814,8 @@ EOF
 
 sub _zoom_hack_init {
     return if defined $need_zoom_hack && !$need_zoom_hack;
-    if (   $bi->is_browser_version("MSIE", 8.0, 9999999)  # mit 8.0 und 10.0 getestet
-	|| $bi->is_browser_version("Edge",   0, 9999999)  # untested, assume same problems as with MSIE 8.0+++
+    if (   $bi->is_browser_version("MSIE", 8.0)  # mit 8.0 und 10.0 getestet
+	|| $bi->is_browser_version("Edge")       # XXX untested, assume same problems as with MSIE 8.0+++
        ) {
 	$need_zoom_hack = 1;
     } else {
@@ -2122,13 +2124,13 @@ sub choose_form {
 	} elsif ($bi->is_browser_version("MSIE", 5.0, 8.999999)) { # mit IE 8 getestet
 	    $nice_berlinmap = $nice_abcmap = 1;
 	    # png was for long time unsupported by IE, so don't set $prefer_png
-	} elsif ($bi->is_browser_version("MSIE", 9.0, 9999999)) { # mit 9.0 und 10.0 getestet, $nice_... geht nicht (versetzte Kacheln), sollte gefixt werden XXX
+	} elsif ($bi->is_browser_version("MSIE", 9.0)) { # mit 9.0 und 10.0 getestet, $nice_... geht nicht (versetzte Kacheln), sollte gefixt werden XXX
 	    $nice_berlinmap = $nice_abcmap = 0;
 	    $prefer_png = 1;
-	} elsif ($bi->is_browser_version("Edge", 0, 9999999)) { # untested, assume same problems as MSIE 9.0...
+	} elsif ($bi->is_browser_version("Edge")) { # XXX untested, assume same problems as MSIE 9.0...
 	    $nice_berlinmap = $nice_abcmap = 0;
 	    $prefer_png = 1;
-	} elsif ($bi->is_browser_version("Opera", 9.0, 9999999)) { # mit 9.80 getestet
+	} elsif ($bi->is_browser_version("Opera", 9.0)) { # mit 9.80 getestet
 	    $nice_berlinmap = $nice_abcmap = 0; # the multiple street chooser would work, but cannot be set separately from $nice_berlinmap; XXX modern webkit-based (?) Opera versions not tested
 	    $prefer_png = 1;
 	} elsif ($bi->is_browser_version("Opera", 7.0, 7.9999)) { # Mit 8.x wird nur einmalig beim Enter gehighlighted
@@ -2136,13 +2138,13 @@ sub choose_form {
 	} elsif ($bi->is_browser_version("Konqueror", 3.0, 3.9999)) { # still broken with 3.5
 	    $nice_berlinmap = $nice_abcmap = 0;
 	    $prefer_png = 1;
-	} elsif ($bi->is_browser_version("Safari", 2.0, 9999999)) {
+	} elsif ($bi->is_browser_version("Safari", 2.0)) {
 	    $nice_berlinmap = $nice_abcmap = 1;
 	    $prefer_png = 1;
-	} elsif ($bi->is_browser_version('Chrome', 0, 999999)) {
+	} elsif ($bi->is_browser_version('Chrome')) {
 	    $nice_berlinmap = $nice_abcmap = 1;
 	    $prefer_png = 1;
-	} elsif ($bi->is_browser_version('AppleWebKit', 0, 999999)) {
+	} elsif ($bi->is_browser_version('AppleWebKit')) { # probably should not appear as this, but rather as Chrome, Safari etc.
 	    $nice_berlinmap = $nice_abcmap = 1;
 	    $prefer_png = 1;
 	}
@@ -2434,7 +2436,9 @@ sub choose_form {
 	    $onloadscript .= "init_hi(); window.onresize = init_hi; "
 	}
 	$onloadscript .= "focus_first(); ";
-	$onloadscript .= "check_locate_me(); ";
+	if (!$bi->{'geolocation.secure_context_required'} || $is_secure) {
+	    $onloadscript .= "check_locate_me(); ";
+	}
 	push @extra_headers, -onLoad => $onloadscript,
 	    -script => [{-src => $bbbike_html . "/bbbike_start.js?v=$bbbike_start_js_version"},
 			($nice_berlinmap
