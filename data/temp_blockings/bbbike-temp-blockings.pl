@@ -7932,7 +7932,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005213',
        data  => <<EOF,
-	2::inwork 12721,15807 12642,15668 12556,15518
+	2::inwork 12721,15807 12642,15668 12583,15566 12556,15518
 EOF
      },
      { from  => 1177103024, # 2007-04-20 23:03
@@ -8631,7 +8631,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005738',
        data  => <<EOF,
-	2::inwork 12721,15807 12642,15668 12556,15518 12466,15359 12421,15278
+	2::inwork 12721,15807 12642,15668 12583,15566 12556,15518 12466,15359 12421,15278
 EOF
      },
      { from  => $isodate2epoch->("2013-08-08 00:00:00"), # 1 Tag Vorlauf
@@ -17304,7 +17304,7 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2018-12-25 06:00:00"), # siehe auch anderen Eintrag mit weiteren Sperrungen am 31. und 1.
-       until => $isodate2epoch->("2019-01-02 23:59:59"),
+       until => 1546452308, # vorfristig beendet --- $isodate2epoch->("2019-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
        text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vermutlich ab 26.12.2018 bis 02.01.2019',
@@ -24001,6 +24001,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
+#: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic
 #: priority: #A
 #: last_checked: 2018-12-28
@@ -27144,7 +27145,11 @@ EOF
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_122462_LMS-BR_72',
        data  => <<EOF,
-#: note: zuletzt geprüft: 2018-10-25
+#: source_id: LMS-BR_r_LMS-BR_156207_LMS-BR_72
+#: XXX wird vielleicht schon früher die Einbahnstraßenregelung aufgehoben?
+#: also_indoor: traffic
+#: last_checked: 2018-10-25
+#: next_check: 2019-01-06
 	q4::inwork; 3623,10800 3835,10915
 EOF
      },
@@ -27160,15 +27165,16 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Uferweg: zwischen Mentzelpark und Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
+       text  => 'Uferweg: am Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="152046369" version="8"
-#: add_fragezeichen: Ist der Uferweg noch immer gesperrt? Falls nicht: hat sich die Qualität des Weges verbessert?
+#: add_fragezeichen: Ist der Abschnitt des Uferwegs am Eiselenweg noch immer gesperrt?
 #: priority: #A
 #: next_check_id: MENTZELPARK-2018
-#: last_checked: 2018-10-14
-	2::inwork 21696,5053 21600,5221 21512,5404 21481,5429 21447,5414
+#: last_checked: 2019-01-02
+# REMOVED (hier mittlerweile offen) ---	2::inwork 21696,5053 21645,5135 21600,5221 21583,5255 21521,5383 21512,5404 21481,5429
+	2::inwork 21481,5429 21447,5414
 EOF
      },
      { from  => undef, # 
@@ -27411,9 +27417,10 @@ EOF
        data  => <<EOF,
 #: next_check_id: VERLWERDERSTR-2018
 #: by: https://www.berliner-woche.de/altglienicke/c-bauen/werderstrasse-wird-ausgebaut_a169172
-#: XXX nach den Bauarbeiten vermutlich Verbundsteinpflaster oder Betonpflaster
-#: last_checked: 2018-09-12
-	2::inwork 20245,2152 20261,2114 20222,2037 20214,1988 20187,1930 20166,1864 20120,1791 20093,1776 20064,1777
+#: XXX nach den Bauarbeiten Betonpflaster
+#: last_checked: 2019-01-02
+	2::inwork 20245,2152 20261,2114 20222,2037 20214,1988
+# REMOVED (hier fertig) ---	2::inwork 20214,1988 20187,1930 20166,1864 20120,1791 20093,1776 20064,1777
 EOF
      },
      { from  => undef, # 
@@ -27698,14 +27705,14 @@ EOF
 EOF
      },
      { from  => 1534629600, # 2018-08-19 00:00
-       until => $isodate2epoch->("2018-12-31 18:00:00"), # undef, # XXX
+       until => $isodate2epoch->("2019-12-31 18:00:00"), # undef, # XXX
        text  => 'Uhlandstr.: zwischen Kurfürstendamm und Lietzenburger Str. Richtung Süden wegen Bauarbeiten gesperrt, Radfahrer sind auch betroffen, ab 20.08.2018 bis Ende 2019',
        type  => 'handicap',
        source_id => '2147342231',
        data  => <<EOF,
 #: note: Gesamtbaumaßnahme bis 31.12.2023
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: note: zuletzt geprüft: 2018-09-22
+#: note: zuletzt geprüft: 2018-10-12
 	q4::inwork; 5076,10658 5047,10381
 EOF
      },
@@ -28097,7 +28104,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2018-12-19
+#: last_checked: 2019-01-02
 #: check_frequency: 30d
 	2::inwork 14854,8964 14614,9052
 EOF
@@ -28262,7 +28269,7 @@ EOF
 EOF
      },
      { from  => 1540762588, # 2018-10-28 22:36
-       until => $isodate2epoch->("2019-02-01 18:00:00"), # 1551394800, # 2019-03-01 00:00
+       until => 1546180030, # $isodate2epoch->("2019-02-01 18:00:00"), # 1551394800, # 2019-03-01 00:00
        text  => 'Werneuchener Str.: zwischen Konrad-Wolf-Str. und Küstriner Str. Richtung Osten gesperrt, Bauarbeiten, bis Anfang Februar 2019',
        type  => 'handicap',
        data  => <<EOF,
@@ -28465,7 +28472,7 @@ EOF
      },
      { from  => 1544787000, # 2018-12-14 12:30
        until => 1544882400, # 2018-12-15 15:00
-       text  => 'Friedrichstr.: temporäre Fußgängerzone zwischen Taubenstr. und Leipziger Str., eventuell sind auch Radfahrer betroffen, am 14. Dezmber 2018 zwischen 12:30 und 15:00 Uhr',
+       text  => 'Friedrichstr.: temporäre Fußgängerzone zwischen Taubenstr. und Leipziger Str., eventuell sind auch Radfahrer betroffen, am 14. Dezember 2018 zwischen 12:30 und 15:00 Uhr',
        type  => 'handicap',
        data  => <<EOF,
 	q4::temp 9405,11903 9418,11804 9432,11702 9444,11616
@@ -28473,11 +28480,10 @@ EOF
      },
      { from  => 1545335759, # 2018-12-20 20:55
        until => 1591027200, # 2020-06-01 18:00
-       text  => 'Prinzessinnenstr.: Abschnitte der Fahrbahn wegen Bauarbeiten gesperrt, bis 01.06.2020',
+       text  => 'Prinzessinnenstr.: Einbahnstraßenregelung, offen Richtung Segitzdamm, bis 01.06.2020',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX Zeitverlust messen!
-	q3::inwork 10965,10851 11145,10638
+	q3::inwork; 11145,10638 10965,10851
 EOF
      },
      { from  => undef, # 
