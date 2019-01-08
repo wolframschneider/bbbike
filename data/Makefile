@@ -62,7 +62,7 @@ COMBINE_STREETS=	${PERL} ${MISCSRCDIR}/combine_streets.pl
 COMBINE_OSM=		${PERL} ${MISCSRCDIR}/combineosm
 TEMP_BLOCKINGS_TASKS=	${PERL} ${MISCSRCDIR}/temp_blockings_tasks
 CREATE_COOKED_BBD=	${PERL} ${MISCSRCDIR}/create_cooked_bbd
-BBD_TO_BBBGEOJSONP=	${PERL} ${MISCSRCDIR}/bbd2geojson -bbbgeojsonp -compact
+BBD_TO_BBBGEOJSONP=	${PERL} ${MISCSRCDIR}/bbd2geojson -bbbgeojsonp -multiline
 
 COMMENTS_PARTIAL=	comments_cyclepath comments_danger comments_ferry comments_misc \
 			comments_mount comments_path comments_route \
@@ -113,8 +113,10 @@ INTERMEDIATE_TARGETS=	.strassen.tmp \
 COOKED_TARGETS=		strassen-cooked landstrassen-cooked landstrassen2-cooked
 TARGETS+=	${SOURCE_TARGETS} ${COOKED_TARGETS} ${COMPUTED_TARGETS}
 BBD_TARGETS=	${TARGETS:S/^ampelschaltung$//:S/^temp_blockings\/bbbike-temp-blockings-optimized.pl//:S/^oldnames$//}
+BBBGEOJSONP_PERSISTENTTMP_SOURCES=	fragezeichen-nextcheck.bbd fragezeichen-outdoor-nextcheck.bbd
 BBBGEOJSONP_TARGETS=	${BBBGEOJSONPDIR}/bbbike-temp-blockings-optimized.bbbgeojsonp \
-			${BBD_TARGETS:S/$/.bbbgeojsonp/:S/^/${BBBGEOJSONPDIR}\//}
+			${BBD_TARGETS:S/$/.bbbgeojsonp/:S/^/${BBBGEOJSONPDIR}\//} \
+			${BBBGEOJSONP_PERSISTENTTMP_SOURCES:S/.bbd$/.bbbgeojsonp/:S/^/${BBBGEOJSONPDIR}\//}
 
 XXX_NON_OUTDOOR=	indoor prog checklater
 XXX_TARGETS=		outdoor ${XXX_NON_OUTDOOR}
@@ -927,10 +929,6 @@ fragezeichen-cooked:	fragezeichen strassen landstrassen landstrassen2
 	        ${GREPSTRASSEN} -special filternextcheck |\
 	    ${CONVERT_ORIG} > $@~
 	[ -s $@~ ]
-	@echo "# added from ampeln-orig" >> $@~
-	grep '?' ${DATADIR}/ampeln-orig | \
-	    $(SED) -e 's/	\([^ ]*\)/ (\1)	?/' | \
-	    ${CONVERT2HAFAS} -basefile ${DATADIR}/ampeln-orig -- - >> $@~
 .for frz_source_target in ${SOURCE_TARGETS:S|^|${PERSISTENTTMPDIR}/.fragezeichen-|}
 	if [ -s ${frz_source_target} ] ; then \
 	    echo "# added from ${frz_source_target:T:S|.fragezeichen-||}" >> $@~; \
@@ -1302,13 +1300,21 @@ ${i:S/$/.bbbgeojsonp/:S/^/${BBBGEOJSONPDIR}\//}: $i
 	mv $@~ $@
 .endfor
 
+.for i in ${BBBGEOJSONP_PERSISTENTTMP_SOURCES}
+${i:S/.bbd$/.bbbgeojsonp/:S/^/${BBBGEOJSONPDIR}\//}: ${PERSISTENTTMPDIR}/$i
+	@mkdir -p ${BBBGEOJSONPDIR}
+	${BBD_TO_BBBGEOJSONP} $> > $@~
+	mv $@~ $@
+.endfor
+
 # Works only for cgi-bin layout (like on bbbike.de)
+# Once synced, URL will be
+#   http://bbbike.de/BBBike/tmp/bbbgeojsonp/index.html
 ${BBBGEOJSONPDIR}/index.html:	${BBBGEOJSONP_TARGETS}
 	@mkdir -p ${BBBGEOJSONPDIR}
 	echo '<ul>' > $@~
-	echo ' <li><a href="/cgi-bin/bbbikeleaflet.cgi?local_geojsonp=bbbike-temp-blockings-optimized.bbbgeojsonp">bbbike-temp-blockings-optimized</a>' >> $@~
-.for i in ${BBD_TARGETS}
-	echo ' <li><a href="/cgi-bin/bbbikeleaflet.cgi?local_geojsonp=${i:S/$/.bbbgeojsonp/}">${i}</a>' >> $@~
+.for i in ${BBBGEOJSONP_TARGETS}
+	echo ' <li><a href="/cgi-bin/bbbikeleaflet.cgi?geojsonp_url=/BBBike/tmp/bbbgeojsonp/${i:T:S/.bbd$//}">${i:T:S/.bbbgeojsonp//:S/.bbd$//}</a>' >> $@~
 .endfor
 	echo '</ul>' >> $@~
 	echo 'Last update: ' $$(date '+%F %T') >> $@~

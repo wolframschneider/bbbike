@@ -82,8 +82,8 @@ Futranplatz	1 22388,4737 22451,4749
 Alt-Köpenick	1 22144,4660 22175,4730 22198,4800 22196,4847
 (Am S-Bahnhof Plänterwald): Asphalt	1 15357,8286 15284,8214 15256,8247 15242,8263 15303,8343
 Wuhletalstr.	1 20691,17463 20727,17558 20769,17650 20855,17807 20912,17872
-Knoten Märkische/Landsberger Allee	1 19013,14905 19175,14968 19364,15045 19502,15089 19565,15106 19694,15141 19852,15201
-Knoten Märkische/Landsberger Allee	1 19852,15201 19744,15128 19614,15061 19408,15007 19350,14997 19156,14953 19013,14905
+Knoten Märkische/Landsberger Allee	1 19013,14905 19175,14968 19205,14980 19364,15045 19502,15089 19565,15106 19694,15141 19852,15201
+Knoten Märkische/Landsberger Allee	1 19852,15201 19744,15128 19614,15061 19408,15007 19350,14997 19214,14966 19156,14953 19013,14905
 Knoten Märkische/Landsberger Allee	1 19452,14807 19464,14971 19408,15007
 Knoten Märkische/Landsberger Allee	1 19516,14993 19551,14961 19615,14960 19643,15025 19614,15061
 Knoten Märkische/Landsberger Allee	1 19694,15141 19707,15206 19654,15219 19577,15166
@@ -1687,9 +1687,9 @@ Allee der Kosmonauten: Straßenbahntrasse	3nocross 21242,15529 21228,15449 21187,
 Schönholzer Str.: Straßenbahn auf der Fahrbahn	3nocross 10089,18180 10054,18210 9909,18333
 #: by: stefan: (sw-...)
 Müggelheimer Str.: Straßenbahntrasse	3nocross 22674,4309 22812,4227 22888,4184 22949,4136 22965,4124
-Prenzlauer Promenade: Straßenbahntrasse	3nocross 12090,16199 12097,16263 12077,16380
+Prenzlauer Promenade: Straßenbahntrasse	3nocross 12090,16199 12097,16263 12087,16322 12077,16380
 #: note: Luftbild: vvv
-Prenzlauer Promenade: Straßenbahntrasse	3nocross 12051,16535 12077,16380 12097,16263
+Prenzlauer Promenade: Straßenbahntrasse	3nocross 12051,16535 12077,16380 12087,16322 12097,16263
 Petersburger Str.: Straßenbahntrasse	3nocross 13622,12806 13579,12904 13530,13014
 Petersburger Str.: Straßenbahntrasse	3nocross 13530,13014 13487,13115 13434,13234
 Petersburger Str.: Straßenbahntrasse	3nocross 13330,13468 13375,13367 13393,13326 13434,13234
@@ -3021,9 +3021,9 @@ Lichtburgring: noch Bauarbeiten, gesperrt	2:inwork 10041,15746 10059,15673 10005
 #: next_check_id: ERICHWEINERT-2018
 #: XXX Einbahnstraßenregelung während der Bauarbeiten; hier beträgt die Bauzeit 10 Wochen
 #: osm_watch: way id="145122219" version="7"
-#: last_checked: 2018-12-11
-#: next_check: 2018-12-31
-#: valid: -20181231
+#: last_checked: 2019-01-06
+#: check_frequency: 14d
+#: valid: -20190131
 Erich-Weinert-Str.: Bauarbeiten, Einbahnstraßenregelung	1s:q4:inwork 10997,16280 11295,16199
 # 
 #: by: http://www.berliner-woche.de/steglitz/bauen/charit-bereitet-bau-eines-neuen-landesplatzes-am-campus-benjamin-franklin-vor-d143323.html ("mindestens 18 Monate lang komplett gesperrt")
@@ -3045,7 +3045,7 @@ Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5
 # REMOVED (aufgehoben) --- #: next_check_id: DONAUSTR-2018 --- #: last_checked: 2018-11-28 --- Donaustr.: Einbahnstraßenregelung wegen Bauarbeiten	1s:q4:inwork 12649,8535 12549,8616
 # 
 #: XXX wann ist hier wieder offen?
-#: last_checked: 2019-01-03
+#: last_checked: 2019-01-04
 #: check_frequency: 14d
 Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 # 
@@ -3078,7 +3078,7 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 # 
 #: XXX nach den Bauarbeiten könnte man den Extra-Punkt in der Mitte wieder löschen
 #: also_indoor: traffic
-#: last_checked: 2018-12-17
+#: last_checked: 2019-01-07
 #: check_frequency: 14d
 Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 10521,11228 10593,11120
 # 
@@ -3133,12 +3133,7 @@ Fanny-Zobel-Str.: wegen Bauarbeiten gesperrt, vielleicht sogar dauerhaft eingezo
 # REMOVED --- #: source_id: 2147342570 --- #: last_checked: 2018-06-05 --- # REMOVED ---#: check_frequency: 3d --- #: next_check: 2018-06-15 --- #: valid: -20180615 --- #: priority: #A --- Koppenstr.: Bauarbeiten, Fahrbahn Richtung Rüdersdorfer Str. gesperrt	1s:q2:inwork 12573,12227 12596,12472 --- 
 # REMOVED (offen) --- #: XXX welche Fahrbahnbeschaffenheit wird die Straße haben? --- #: osm_watch: way id="618924838" version="1" --- #: last_checked: 2018-04-29 --- #: check_frequency: 120d --- Charlotte-von-Mahlsdorf-Ring: Baustraße	2::inwork 24649,10710 24702,10710 24702,10710 24719,10647 24739,10645
 # REMOVED (fertig) --- #: last_checked: 2018-07-27 --- #: check_frequency: 30d --- Hermineweg: Bauarbeiten, gesperrt	2::inwork 24831,10966 24906,10965
-# 
-#: next_check_id: KARLINEKENWEG-2018
-#: osm_watch: way id="499986562" version="5"
-#: last_checked: 2018-08-26
-#: check_frequency: 60d
-Karlinekenweg: Bauarbeiten, gesperrt	2::inwork 11359,20297 11405,20196
+# REMOVED (fertig) --- #: next_check_id: KARLINEKENWEG-2018 --- #: osm_watch: way id="499986562" version="5" --- #: last_checked: 2018-08-26 --- #: check_frequency: 60d --- Karlinekenweg: Bauarbeiten, gesperrt	2::inwork 11359,20297 11405,20196
 # 
 #: by: https://www.berliner-woche.de/tiergarten/c-bauen/zweite-bauphase-abgeschlossen_a181544 (Wiedereröffnung für 2020 geplant)
 #: last_checked: 2018-09-20
@@ -3248,9 +3243,9 @@ Merlitzstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19661,3421 19524,32
 # 
 #: osm_watch: way id="344108079" version="4"
 #: next_check_id: NIZZASTR-2014
-#: last_checked: 2018-07-07
+#: last_checked: 2019-01-06
 # REMOVED --- #: next_check: 2018-07-01
-#: check_frequency: 90d
+#: check_frequency: 120d
 (Marseillestr. - Straße 160): nur ein provisorischer Steg	2 12507,21391 12547,21372
 # 
 # REMOVED (bleibt dauerhaft abends offen?) --- #: next_check_id: RIGAER-2018
@@ -3458,10 +3453,10 @@ Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,
 #: last_checked: 2018-11-16 vvv
 #: osm_watch: way id="237704729" version="10"
 #: check_frequency: 45d
-Lydia-Rabinowitsch-Str.: noch teilweise gesperrt	2 7820,13994 7930,14060 7973,13991 7865,13924
+Lydia-Rabinowitsch-Str.: noch teilweise gesperrt	2::inwork 7820,13994 7930,14060 7973,13991 7865,13924
 #: osm_watch: way id="237716438" version="7"
 #: check_frequency: 45d
-Clara-von-Simson-Str.: noch gesperrt	2 7652,14257 7757,14318 7802,14250 7697,14187
+Clara-von-Simson-Str.: noch gesperrt	2::inwork 7652,14257 7757,14318 7802,14250 7697,14187
 #: last_checked ^^^
 #: next_check_id ^^^
 # 
