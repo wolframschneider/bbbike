@@ -1671,17 +1671,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: FRIEDRICHSTR-2018
-#: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
+#: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2018-12-28
+#: last_checked: 2019-01-11
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
          'from' => 1534789491,
          'id' => 2666,
-         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung möglicherweise Mitte November 2018',
+         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -2077,13 +2077,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: mapillary (Gehweg für Radfahrer frei)
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/kreuzungsumbau-bis-november_a172982
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729460.php
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte des Jahres 2019)
 #: source_id: 2147342671
 #: source_id: 2147342861
 #: source_id: 2147342860
 #: XXX wann sind die Bauarbeiten beendet?
 #: last_checked: 2018-09-12 vvv
 # REMOVED --- #: check_frequency: 30d
-#: next_check: 2019-04-01 vvv
+#: next_check: 2019-06-30 vvv
 # REMOVED (hier fertig) ---	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
 	q3::inwork; 2781,2493 2740,2588 2625,2850
@@ -2092,9 +2093,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1502386525,
          'id' => 2897,
-         'text' => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), voraussichtlich bis April 2019',
+         'text' => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), voraussichtlich bis Mitte 2019',
          'type' => 'handicap',
-         'until' => 1554112800
+         'until' => 1560592800
        },
        undef,
        undef,
@@ -2147,7 +2148,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2018-12-26 vvv
+#: last_checked: 2019-01-10 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2227,18 +2228,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: source_id: LMS-BR_r_LMS-BR_156207_LMS-BR_72
 #: source_id: LMS-BR_r_LMS-BR_156434_LMS-BR_72
 #: XXX bleibt danach die vorherige Einbahnstraßenregelung?
-#: osm_watch: way id="611814766" version="1"
+#: osm_watch: way id="611814766" version="2"
 #: also_indoor: traffic (H)
 #: last_checked: 2018-10-25
-#: next_check: 2019-01-09
-	q4::inwork 3623,10800 3835,10915
+#: next_check: 2019-01-15
+	q4::inwork; 3623,10800 3835,10915
 ',
          'from' => undef,
          'id' => 2950,
          'source_id' => 'LMS-BR_r_LMS-BR_122462_LMS-BR_72',
-         'text' => 'Gervinusstr.: Fahrbahn wegen Bauarbeiten gesperrt, voraussichtlich bis zum 9. Januar 2019',
+         'text' => 'Gervinusstr.: Einbahnstraße wegen Bauarbeiten, gesperrt Richtung Wilmersdorfer Str., voraussichtlich bis zum 15. Januar 2019',
          'type' => 'handicap',
-         'until' => 1547053200
+         'until' => 1547571600
        },
        undef,
        {
@@ -2363,6 +2364,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.758375.php (Verzögerungen -> check_frequency erhöht)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/zum-zweiten-mal-wurden-die-bauarbeiten-auf-der-schoenstrasse-unterbrochen_a190561
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
 #: also_indoor: traffic
 #: priority: #B
 #: last_checked: 2018-11-11
@@ -2405,6 +2407,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/bauarbeiten-gehen-weiter_a178952
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47881
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47885
+#  by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte 2019)
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: also_indoor: traffic
@@ -2455,7 +2458,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-12-17
+#: last_checked: 2019-01-08
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -2500,7 +2503,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: also_indoor: traffic vvv
+         'data' => '#: also_indoor: traffic (G) vvv
 #: last_checked: 2018-12-10 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
@@ -2758,6 +2761,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Spreebogenpark: wegen Abbrucharbeiten an der ehemaligen Umfahrung der Schweizer Botschaft ist der Weg zwischen Gustav-Heinemann-Brücke und Bundeskanzleramt gesperrt',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '	2::inwork; 13391,16436 13630,16629
+',
+         'from' => 1547334000,
+         'id' => 3065,
+         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php',
+         'text' => 'Schönstr.: Bauarbeiten, Vollsperrung zwischen Mirbachplatz und Paul-Oestreich-Str., 14.01.2019 bis 18.01.2019',
+         'type' => 'gesperrt',
+         'until' => 1547830800
        }
      
 );

@@ -1463,8 +1463,8 @@ EOF
        text  => 'Weihnachtsmarkt am Opernpalais, bis 25.12.2004',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::xmas 9898,12161 9883,12251 9876,12298 9858,12410
-	2::xmas 9798,12267 9795,12293 9780,12401
+	2::xmas 9898,12161 9883,12251 9877,12293 9858,12410
+	2::xmas 9798,12267 9796,12284 9780,12401
 EOF
      },
      { from  => undef, # # note: gibt es nicht mehr
@@ -9458,7 +9458,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006236',
        data  => <<EOF,
-	1::inwork 16049,10844 15983,10836 15932,10830 15681,10801 15433,10765 15388,10758 15272,10790
+	1::inwork 16049,10844 15960,10833 15932,10830 15681,10801 15433,10765 15388,10758 15272,10790
 EOF
      },
      { from  => 1186081587, # 2007-08-02 21:06
@@ -9521,8 +9521,8 @@ EOF
        text  => 'Berliner Gauklerfest vom 24. Juli 2009 bis 2. August 2009, einige Straßen am Opernpalais sind vollständig gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 9898,12161 9883,12251 9876,12298 9795,12293 9780,12401
-	2::temp 9876,12298 9858,12410
+	2::temp 9898,12161 9883,12251 9877,12293 9796,12284 9780,12401
+	2::temp 9877,12293 9858,12410
 	2::temp 9943,12364 9955,12300 9959,12281 9972,12184
 	2::temp 9934,12420 9943,12364
 EOF
@@ -11912,7 +11912,7 @@ EOF
 	3 9028,12307 9141,12320 9131,12438
 	3 7744,10372 7633,10394 7444,10479
 	3 7293,11519 7171,11510 6987,11487 6915,11492 6825,11486 6716,11439
-	3 9876,12298 9858,12410 9845,12506
+	3 9877,12293 9858,12410 9845,12506
 	3 7849,10488 7689,10514 7478,10612
 	3 7160,11225 7103,11247 6851,11346 6692,11365
 	3 8102,11099 8000,11137 7828,11133
@@ -11931,7 +11931,7 @@ EOF
 	3 7003,10513 7033,10396 7245,10499 7281,10510
 	3 8232,11414 8226,11458 8172,11679
 	3 9369,12253 9358,12351 9343,12464
-	3 9845,12506 9858,12410 9876,12298
+	3 9845,12506 9858,12410 9877,12293
 	3 8205,10979 8104,11037 7980,11070 7747,11075
 	3 6494,10440 6532,10529 6468,10550
 	3 9343,12464 9358,12351 9369,12253
@@ -12951,7 +12951,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010255',
        data  => <<EOF,
-	1::inwork 16049,10844 15983,10836 15932,10830 15681,10801 15433,10765 15388,10758 15272,10790
+	1::inwork 16049,10844 15960,10833 15932,10830 15681,10801 15433,10765 15388,10758 15272,10790
 EOF
      },
      { from  => 1223416800, # 2008-10-08 00:00
@@ -13250,7 +13250,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010255',
        data  => <<EOF,
-	1::inwork 16049,10844 15983,10836 15932,10830 15681,10801 15433,10765 15388,10758 15272,10790
+	1::inwork 16049,10844 15960,10833 15932,10830 15681,10801 15433,10765 15388,10758 15272,10790
 EOF
      },
      { from  => 1228431600, # 2008-12-05 00:00
@@ -17019,8 +17019,8 @@ EOF
        source_id => 'IM_014608',
        data  => <<EOF,
 	2::temp 9943,12364 9955,12300 9959,12281 9972,12184
-	2::temp 9780,12401 9795,12293 9798,12267 9808,12182 9812,12150
-	2::temp 9858,12410 9876,12298 9883,12251 9898,12161
+	2::temp 9780,12401 9796,12284 9798,12267 9808,12182 9812,12150
+	2::temp 9858,12410 9877,12293 9883,12251 9898,12161
 EOF
      },
      { from  => 1258239600, # 2009-11-15 00:00
@@ -23996,15 +23996,15 @@ EOF
      },
      { from  => 1534789491,
        until => undef,
-       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung möglicherweise Mitte November 2018',
+       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: FRIEDRICHSTR-2018
-#: XXX bis wann geht die Sperrung? (laut googlemaps bis Mitte November 2018, geht aber länger)
+#: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2018-12-28
+#: last_checked: 2019-01-11
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -25944,9 +25944,9 @@ EOF
 	2::temp 10063,12438 10155,12494 10176,12506 10243,12546 10300,12587
 	2::temp 10704,12595 10601,12521 10644,12469 10673,12434 10772,12515 10704,12595
 	2::temp 10094,12635 10176,12506
-	3 9876,12298 9858,12410 9780,12401
+	3 9877,12293 9858,12410 9780,12401
 	3 10431,12709 10601,12521 10584,12507
-	3 9780,12401 9858,12410 9876,12298
+	3 9780,12401 9858,12410 9877,12293
 	3 10584,12507 10601,12521 10431,12709
 EOF
      },
@@ -26499,8 +26499,8 @@ EOF
 EOF
      },
      { from  => 1502386525, # 2017-08-10 19:35
-       until => $isodate2epoch->("2019-04-01 12:00:00"), # undef, # 1512082799, # 2017-11-30 23:59
-       text  => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), voraussichtlich bis April 2019',
+       until => $isodate2epoch->("2019-06-15 12:00:00"), # undef, # 1512082799, # 2017-11-30 23:59
+       text  => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), voraussichtlich bis Mitte 2019',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: CARSTENN-2017
@@ -26511,13 +26511,14 @@ EOF
 #: by: mapillary (Gehweg für Radfahrer frei)
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/kreuzungsumbau-bis-november_a172982
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729460.php
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte des Jahres 2019)
 #: source_id: 2147342671
 #: source_id: 2147342861
 #: source_id: 2147342860
 #: XXX wann sind die Bauarbeiten beendet?
 #: last_checked: 2018-09-12 vvv
 # REMOVED --- #: check_frequency: 30d
-#: next_check: 2019-04-01 vvv
+#: next_check: 2019-06-30 vvv
 # REMOVED (hier fertig) ---	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
 	q3::inwork; 2781,2493 2740,2588 2625,2850
@@ -26803,7 +26804,7 @@ EOF
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2018-12-26 vvv
+#: last_checked: 2019-01-10 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27140,19 +27141,19 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2019-01-09 18:00:00"), # undef, # 1547074800, # 2019-01-10 00:00
-       text  => 'Gervinusstr.: Fahrbahn wegen Bauarbeiten gesperrt, voraussichtlich bis zum 9. Januar 2019',
+       until => $isodate2epoch->("2019-01-15 18:00:00"), # undef, # 1547074800, # 2019-01-10 00:00
+       text  => 'Gervinusstr.: Einbahnstraße wegen Bauarbeiten, gesperrt Richtung Wilmersdorfer Str., voraussichtlich bis zum 15. Januar 2019',
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_122462_LMS-BR_72',
        data  => <<EOF,
 #: source_id: LMS-BR_r_LMS-BR_156207_LMS-BR_72
 #: source_id: LMS-BR_r_LMS-BR_156434_LMS-BR_72
 #: XXX bleibt danach die vorherige Einbahnstraßenregelung?
-#: osm_watch: way id="611814766" version="1"
+#: osm_watch: way id="611814766" version="2"
 #: also_indoor: traffic (H)
 #: last_checked: 2018-10-25
-#: next_check: 2019-01-09
-	q4::inwork 3623,10800 3835,10915
+#: next_check: 2019-01-15
+	q4::inwork; 3623,10800 3835,10915
 EOF
      },
      { from  => undef, # 
@@ -27501,6 +27502,7 @@ EOF
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.758375.php (Verzögerungen -> check_frequency erhöht)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/zum-zweiten-mal-wurden-die-bauarbeiten-auf-der-schoenstrasse-unterbrochen_a190561
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
 #: also_indoor: traffic
 #: priority: #B
 #: last_checked: 2018-11-11
@@ -27629,6 +27631,7 @@ EOF
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/bauarbeiten-gehen-weiter_a178952
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47881
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47885
+#  by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte 2019)
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: also_indoor: traffic
@@ -27724,7 +27727,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2018-12-17
+#: last_checked: 2019-01-08
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27836,7 +27839,7 @@ EOF
        text  => 'Mittelweg/Leykestr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, außerdem Einbahnstraße im Mittelweg, voraussichtlich bis Mai 2019',
        type  => 'handicap',
        data  => <<EOF,
-#: also_indoor: traffic vvv
+#: also_indoor: traffic (G) vvv
 #: last_checked: 2018-12-10 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
@@ -28058,7 +28061,7 @@ Falkoniergasse	2::temp 9939,12174 9909,12261
 Werdersche Rosenstr.	2::temp 9883,12251 9909,12261 9959,12281
 Französische Str.	2::temp 9898,12161 9812,12150 9755,12144
 Unter den Linden	2::temp 10024,12431 9984,12426 9934,12420 9858,12410 9780,12401 9771,12400 9713,12392 9664,12387 9613,12381 9475,12365
-Hinter der Katholischen Kirche	2::temp 9812,12150 9808,12182 9798,12267 9795,12293 9780,12401
+Hinter der Katholischen Kirche	2::temp 9812,12150 9808,12182 9798,12267 9796,12284 9780,12401
 (entlang der Hedwigskathedrale)	2::temp 9808,12182 9775,12178 9771,12190 9747,12205
 Charlottenstr. (Kreuzberg, Mitte)	2::temp 9454,12558 9462,12481 9475,12365 9489,12263 9496,12215
 Dorotheenstr. (Mitte)	2::temp 9454,12558 9581,12588 9681,12601 9742,12609 9870,12657
@@ -28067,14 +28070,14 @@ Hinter dem Gießhaus	2::temp 9858,12410 9845,12506 9837,12560 9892,12596 9919,126
 Hinter dem Zeughaus	2::temp 9845,12506 9956,12523
 Behrenstr.	2::temp 9496,12215 9631,12227 9680,12232 9730,12238 9737,12238 9798,12267
 Universitätsstr.	2::temp 9581,12588 9613,12381
-Oberwallstr.	2::temp 9858,12410 9876,12298 9883,12251 9898,12161
+Oberwallstr.	2::temp 9858,12410 9877,12293 9883,12251 9898,12161
 Am Festungsgraben	2::temp 9742,12609 9747,12584
 Am Festungsgraben	2::temp 9747,12584 9764,12492 9771,12400
 Am Festungsgraben	2::temp 9845,12506 9764,12492
 Hedwigskirchgasse	2::temp 9737,12238 9747,12205 9755,12144
 Bebelplatz	2::temp 9713,12392 9730,12238
 Bebelplatz	2::temp 9680,12232 9664,12387
-Bebelplatz	2::temp 9795,12293 9876,12298
+Bebelplatz	2::temp 9796,12284 9877,12293
 Mollergasse	2::temp 9892,12596 9894,12564
 Bebelplatz, diagonal über den Platz	2::temp 9737,12238 9702,12307 9664,12387
 Bebelplatz, diagonal über den Platz	2::temp 9680,12232 9702,12307 9713,12392
@@ -28496,6 +28499,15 @@ EOF
 #: last_checked: 2018-12-28
 #: priority: #A
 	2::inwork 8124,12840 8120,12756
+EOF
+     },
+     { from  => $isodate2epoch->("2019-01-13 00:00:00"),
+       until => $isodate2epoch->("2019-01-18 18:00:00"),
+       text  => 'Schönstr.: Bauarbeiten, Vollsperrung zwischen Mirbachplatz und Paul-Oestreich-Str., 14.01.2019 bis 18.01.2019',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php',
+       data  => <<EOF,
+	2::inwork; 13391,16436 13630,16629
 EOF
      },
     );
