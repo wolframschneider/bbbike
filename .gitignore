@@ -47,6 +47,7 @@ cgi/livesearch-extract.cgi
 cgi/extract.cgi
 cgi/tile-size.cgi
 cgi/extract-email.cgi
+cgi/route.cgi
 data-osm.bbbike.tgz
 data-osm.bbbike/
 data-osm.old/
@@ -97,6 +98,7 @@ html/sicilia.png
 html/streets.css
 html/watch_ptr.gif
 html/area.js
+html/introjs
 images/SanFrancisco-with-hills-small.png
 images/SanFrancisco-with-hills.png
 images/SanFrancisco-without-hills-small.png
