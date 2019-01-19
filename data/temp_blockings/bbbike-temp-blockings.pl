@@ -1254,7 +1254,7 @@ EOF
        text  => 'L 200; (Breite Str.); OD Eberswalde, zw. BÜ und Neue Str. Straßenbauarbeiten, Vollsperrung 01.11.2004-21.11.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 38265,50028 38185,49714 38022,49097
+	q4 38265,50028 38185,49714 38039,49161 38022,49097
 	q4 38265,50028 38314,50204 38487,50536 38503,50622 38528,50809 38714,51048 38830,51263
 EOF
      },
@@ -1463,7 +1463,7 @@ EOF
        text  => 'Weihnachtsmarkt am Opernpalais, bis 25.12.2004',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::xmas 9898,12161 9883,12251 9877,12293 9858,12410
+	2::xmas 9898,12161 9883,12251 9877,12293 9873,12315 9858,12410
 	2::xmas 9798,12267 9796,12284 9780,12401
 EOF
      },
@@ -1967,7 +1967,7 @@ EOF
        text  => 'B 001 Potsdamer Str. OD Groß Kreutz Kanal- und Straßenbau; Vollsperrung 27.04.2005-30.03.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4	-28793,-1618 -31991,-1024
+	q4 -28793,-1618 -31991,-1024
 EOF
      },
      { from  => 1115503200, # 2005-05-08 00:00
@@ -9522,7 +9522,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2::temp 9898,12161 9883,12251 9877,12293 9796,12284 9780,12401
-	2::temp 9877,12293 9858,12410
+	2::temp 9877,12293 9873,12315 9858,12410
 	2::temp 9943,12364 9955,12300 9959,12281 9972,12184
 	2::temp 9934,12420 9943,12364
 EOF
@@ -11912,7 +11912,7 @@ EOF
 	3 9028,12307 9141,12320 9131,12438
 	3 7744,10372 7633,10394 7444,10479
 	3 7293,11519 7171,11510 6987,11487 6915,11492 6825,11486 6716,11439
-	3 9877,12293 9858,12410 9845,12506
+	3 9877,12293 9873,12315 9858,12410 9845,12506
 	3 7849,10488 7689,10514 7478,10612
 	3 7160,11225 7103,11247 6851,11346 6692,11365
 	3 8102,11099 8000,11137 7828,11133
@@ -11931,7 +11931,7 @@ EOF
 	3 7003,10513 7033,10396 7245,10499 7281,10510
 	3 8232,11414 8226,11458 8172,11679
 	3 9369,12253 9358,12351 9343,12464
-	3 9845,12506 9858,12410 9877,12293
+	3 9845,12506 9858,12410 9873,12315 9877,12293
 	3 8205,10979 8104,11037 7980,11070 7747,11075
 	3 6494,10440 6532,10529 6468,10550
 	3 9343,12464 9358,12351 9369,12253
@@ -17020,7 +17020,7 @@ EOF
        data  => <<EOF,
 	2::temp 9943,12364 9955,12300 9959,12281 9972,12184
 	2::temp 9780,12401 9796,12284 9798,12267 9808,12182 9812,12150
-	2::temp 9858,12410 9877,12293 9883,12251 9898,12161
+	2::temp 9858,12410 9873,12315 9877,12293 9883,12251 9898,12161
 EOF
      },
      { from  => 1258239600, # 2009-11-15 00:00
@@ -24004,7 +24004,7 @@ EOF
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2019-01-11
+#: last_checked: 2019-01-16
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -24533,15 +24533,16 @@ EOF
 	q4; 15205,11080 15102,11120 15021,11152 14988,11130
 EOF
      },
-     { from  => $isodate2epoch->("2019-01-14 00:00:00"), # 1 Tag Vorlauf
+     { from  => $isodate2epoch->("2019-01-13 08:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-01-18 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6]],
-       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 15.01.2019-18.01.2019',
+       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 14.01.2019-18.01.2019',
        type  => 'handicap',
        source_id => 'https://orbanism.com/event/berlin-fashion-week-2019/',
        data  => <<EOF,
+#: source_id: 2147343639
 #: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
 	q4::temp 8644,10408 8397,10488 8384,10507 8527,10621
 	q4::temp 8348,10636 8335,10518 8350,10499
@@ -25447,7 +25448,7 @@ EOF
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20160803
 #: last_checked: 2016-07-16
 #: check_frequency: 60d
-	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
+	2::inwork 24650,6034 24649,6016 24647,5981 24637,5960 24584,5914
 EOF
      },
      { from  => undef, # 
@@ -25944,9 +25945,9 @@ EOF
 	2::temp 10063,12438 10155,12494 10176,12506 10243,12546 10300,12587
 	2::temp 10704,12595 10601,12521 10644,12469 10673,12434 10772,12515 10704,12595
 	2::temp 10094,12635 10176,12506
-	3 9877,12293 9858,12410 9780,12401
+	3 9877,12293 9873,12315 9858,12410 9780,12401
 	3 10431,12709 10601,12521 10584,12507
-	3 9780,12401 9858,12410 9877,12293
+	3 9780,12401 9858,12410 9873,12315 9877,12293
 	3 10584,12507 10601,12521 10431,12709
 EOF
      },
@@ -26512,6 +26513,7 @@ EOF
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/kreuzungsumbau-bis-november_a172982
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729460.php
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte des Jahres 2019)
+#: by: https://www.berliner-woche.de/steglitz/c-bauen/baustellen-in-carstenn-und-feuerbachstrasse-nicht-fertig_a196939
 #: source_id: 2147342671
 #: source_id: 2147342861
 #: source_id: 2147342860
@@ -26608,7 +26610,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-12-09
+#: last_checked: 2019-01-18
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26804,7 +26806,7 @@ EOF
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-01-10 vvv
+#: last_checked: 2019-01-16 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27096,48 +27098,84 @@ EOF
 	2::inwork -19150,-11976 -19043,-11944 -18640,-11826
 EOF
      },
-     { from  => 1524002400, # 2018-04-18 00:00
-       until => $isodate2epoch->("2018-04-20 20:00:00"),
-       text  => 'Rund um den Hauptbahnhof: Sperrungen wegen Bombenentschärfung, ab 20.04.2018 ab 9 Uhr',
+     { from  => $isodate2epoch->("2019-01-16 08:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-01-17 16:00:00"),
+       text  => 'Rund um den Hauptbahnhof: umfangreiche Sperrungen wegen Bombenentschärfung, am 17.01.2019 voraussichtlich ab 8 Uhr bis 14 Uhr',
        type  => 'gesperrt',
-       source_id => 'https://www.morgenpost.de/bezirke/mitte/article214045521/Sperrungen-wegen-Fliegerbombe-in-Mitte-Verkehrschaos-droht.html',
+       source_id => 'https://twitter.com/FwPotsdam/status/1085191857531809794',
+# erstellt mit dem folgenden Kommando:
+#    ./miscsrc/grepstrassen -ignoreglobaldirectives -inner /tmp/1.bbd -onlyenclosed data/landstrassen | perl -pe 's/.*\t\S+/\t2::temp/' >| /tmp/1s.bbd
+# 1.bbd beschreibt die Fläche:
+#	X -13179,-1337 -13215,-1620 -13273,-1811 -13306,-1813 -13217,-2682 -12972,-2740 -13036,-2889 -12696,-2945 -12198,-2871 -12023,-2485 -11798,-2217 -11830,-2038 -11842,-1931 -11831,-1846 -11804,-1798 -12041,-1522 -12109,-1437 -12230,-1457 -12254,-1356 -12305,-1362 -12329,-1230 -12725,-1350 -12847,-1381 -13013,-1360 -13179,-1337
        data  => <<EOF,
-	2::temp 8478,13941 8571,13999
-	2::temp 7368,14573 7401,14526 7487,14472 7532,14446 7566,14404 7652,14257 7697,14187 7732,14131 7767,14077 7820,13994 7865,13924 7906,13855 7973,13743 7979,13733 8019,13650 8048,13578 8059,13551 8092,13467 8098,13419
-	2::temp 7180,14419 7331,14132 7366,14067 7452,13904 7630,13584 7655,13539 7660,13506 7653,13480 7647,13461 7651,13447 7759,13246
-	2::temp 7123,14367 7180,14419 7368,14573 7438,14627
-	2::temp 6917,13917 7331,14132
-	2::temp 7263,13331 7287,13342 7332,13367 7426,13420 7655,13539
-	2::temp 7426,13420 7500,13283 7573,13149
-	2::temp 7021,13560 7109,13418 7136,13387 7193,13354 7241,13361 7306,13418 7402,13475 7422,13487 7451,13504 7630,13584 7735,13626
-	2::temp 7422,13487 7338,13649 7343,13679 7431,13740 7445,13792 7417,13880 7452,13904
-	2::temp 7287,13342 7356,13213 7500,13283
-	2::temp 7563,13143 7573,13149 7714,13223 7759,13246 7816,13276 7842,13292 7880,13315 8003,13374 8098,13419 8293,13527 8332,13548 8358,13562 8453,13611 8572,13671
-	2::temp 8019,13650 7930,13578 7890,13515 7879,13438 7880,13315
-	2::temp 8098,13419 8102,13304
-	2::temp 7880,13315 7938,13302 8015,13303 8102,13304
-	2::temp 7937,13109 7937,13126 7938,13150 7938,13302 7968,13335 8003,13374
-	2::temp 7759,13246 7785,13226 7795,13168 7795,13093
-	2::temp 7795,13093 7867,13127 7938,13150
-	2::temp 7937,13126 8011,13128 8106,13130
-	2::temp 7861,13203 7795,13168
-	2::temp 8187,13472 8183,13482 8141,13580 8110,13650
-	2::temp 8332,13548 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096 7994,14102 7967,14161 7973,14195 7804,14445 7787,14473 7753,14528 7695,14545 7653,14570 7605,14600 7527,14644 7480,14660
-	2::temp 7566,14404 7609,14447 7711,14548 7733,14570 7960,14794
-	2::temp 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431 7804,14445 7877,14504 7927,14438 7938,14423
-	2::temp 7938,14423 8054,14257 8077,14227 8152,14130 8184,14052 8200,14016 8313,13839 8453,13611
-	2::temp 7938,14423 8250,14672
-	2::temp 8234,14686 8097,14573 8050,14556 7996,14487 7940,14447 7889,14519 7872,14510 7787,14473
-	2::temp 7753,14528 7733,14570 7696,14577 7635,14628 7560,14670 7533,14702
-	2::temp 7514,14686 7549,14664 7589,14627 7605,14600
-	2::temp 8077,14227 8251,14337 8442,14456
-	2::temp 8572,13671 8426,13909
-	2::temp 8478,13941 8447,13983 8380,14024 8344,14133 8307,14175 8323,14142 8282,14116 8207,14067 8184,14052
-	2::temp 8282,14116 8238,14181 8152,14130
-	2::temp 8054,14257 7973,14195
-	2::temp 8332,13548 8354,13523 8362,13466 8365,13431 8356,13404 8314,13323
-	2::temp 8503,13553 8377,13463 8371,13399 8434,13310
-	2::temp 7021,13560 7056,13584 7132,13503 7122,13452 7109,13418
+	2::temp -11834,-2213 -11939,-2190 -11992,-2178 -12093,-2156 -12213,-2131 -12255,-2123 -12431,-2096
+	2::temp -12100,-2039 -11995,-2047 -11947,-2048 -11842,-2054 -11842,-2183
+	2::temp -11992,-2178 -11995,-2047
+	2::temp -12657,-1338 -12542,-1305
+	2::temp -13180,-1627 -12946,-1659 -12920,-1663
+	2::temp -12927,-1576 -13092,-1538
+	2::temp -12946,-1659 -12940,-1625 -12927,-1576 -12923,-1558 -12882,-1565 -12815,-1575 -12790,-1560
+	2::temp -12920,-1663 -12931,-1761 -12948,-1863 -12953,-1889 -12708,-1928
+	2::temp -12931,-1761 -12678,-1812
+	2::temp -12669,-1768 -12678,-1812 -12708,-1928
+	2::temp -12708,-1928 -12894,-2111 -12946,-2119
+	2::temp -12596,-1701 -12669,-1768
+	2::temp -12669,-1768 -12676,-1742 -12653,-1723
+	2::temp -12596,-1701 -12606,-1694 -12643,-1694
+	2::temp -12940,-1625 -12794,-1652 -12758,-1689 -12733,-1703 -12653,-1723
+	2::temp -12794,-1652 -12758,-1654 -12749,-1668 -12729,-1686 -12646,-1702
+	2::temp -12493,-1896 -12567,-1817 -12653,-1723
+	2::temp -12646,-1702 -12616,-1715 -12544,-1799 -12478,-1879
+	2::temp -12790,-1560 -12776,-1605 -12794,-1652
+	2::temp -12758,-1654 -12776,-1575 -12790,-1560
+	2::temp -12790,-1560 -12808,-1488
+	2::temp -12431,-2096 -12478,-1879
+	2::temp -12493,-1896 -12431,-2096
+	2::temp -12318,-2192 -12262,-2244
+	2::temp -12431,-2096 -12318,-2192
+	2::temp -12318,-2192 -12267,-2261
+	2::temp -12267,-2261 -12138,-2383
+	2::temp -12318,-2192 -12355,-2263 -12358,-2278 -12423,-2459 -12476,-2605 -12643,-2673 -12840,-2799
+	2::temp -12358,-2278 -12330,-2297 -12335,-2571 -12300,-2630 -12236,-2748
+	2::temp -12431,-2096 -12534,-2125 -12620,-2174 -12697,-2235 -12708,-2257 -12713,-2279 -12743,-2387 -12756,-2437 -12779,-2467 -12796,-2488 -12879,-2573
+	2::temp -12110,-1862 -12247,-1858 -12457,-1857 -12478,-1879 -12493,-1896
+	2::temp -12493,-1896 -12528,-1950
+	2::temp -12557,-1900 -12625,-1956 -12721,-2082 -12754,-2154
+	2::temp -12363,-1742 -12377,-1743 -12557,-1900
+	2::temp -12457,-1857 -12363,-1742
+	2::temp -12363,-1742 -12102,-1582 -12059,-1617
+	2::temp -12281,-1378 -12265,-1434 -12256,-1456
+	2::temp -12500,-1437 -12422,-1416 -12281,-1378
+	2::temp -12526,-1356 -12446,-1334 -12403,-1323
+	2::temp -12422,-1416 -12446,-1334
+	2::temp -12542,-1305 -12526,-1356 -12500,-1437
+	2::temp -12500,-1437 -12537,-1447 -12562,-1367 -12606,-1379 -12582,-1460 -12537,-1447
+	2::temp -12657,-1338 -12628,-1423 -12614,-1471 -12583,-1552
+	2::temp -12653,-1723 -12646,-1702 -12643,-1694 -12627,-1618 -12624,-1598
+	2::temp -12624,-1598 -12583,-1552
+	2::temp -12624,-1598 -12619,-1549 -12614,-1471
+	2::temp -12583,-1552 -12619,-1549 -12677,-1536 -12719,-1542 -12790,-1560
+	2::temp -12749,-1668 -12719,-1542
+	2::temp -12583,-1552 -12485,-1482
+	2::temp -12727,-1416 -12694,-1408 -12685,-1449 -12677,-1536
+	2::temp -12808,-1488 -12870,-1493
+	2::temp -12882,-1565 -12870,-1493 -12865,-1462 -12913,-1451
+	2::temp -12256,-1456 -12260,-1503
+	2::temp -12260,-1503 -12253,-1589 -12396,-1681 -12544,-1799
+	2::temp -12596,-1701 -12474,-1559 -12485,-1482 -12265,-1434
+	2::temp -12485,-1482 -12489,-1465 -12500,-1437
+	2::temp -12614,-1471 -12582,-1460
+	2::temp -12796,-2488 -12831,-2439 -12815,-2419 -12779,-2467
+	2::temp -12815,-2419 -12781,-2376
+	2::temp -12781,-2376 -12743,-2387
+	2::temp -12814,-2270 -12783,-2269 -12713,-2279
+	2::temp -12840,-2799 -12877,-2734 -12867,-2680 -12797,-2632 -12756,-2577 -12688,-2595 -12643,-2673
+	2::temp -12355,-2263 -12588,-2214 -12634,-2239
+	2::temp -12335,-2571 -12447,-2573 -12492,-2555 -12442,-2389 -12623,-2367
+	2::temp -12697,-2235 -12731,-2218 -12768,-2207 -12821,-2187
+	2::temp -12712,-2172 -12731,-2218
+	2::temp -12783,-2269 -12768,-2207 -12754,-2154
+	2::temp -12528,-1950 -11822,-1959
 EOF
      },
      { from  => undef, # 
@@ -27434,7 +27472,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-12-26
+#: last_checked: 2019-01-18
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27631,7 +27669,8 @@ EOF
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/bauarbeiten-gehen-weiter_a178952
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47881
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47885
-#  by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte 2019)
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte 2019)
+#: by: https://www.berliner-woche.de/steglitz/c-bauen/baustellen-in-carstenn-und-feuerbachstrasse-nicht-fertig_a196939
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: also_indoor: traffic
@@ -27717,7 +27756,7 @@ EOF
        data  => <<EOF,
 #: note: Gesamtbaumaßnahme bis 31.12.2023
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: note: zuletzt geprüft: 2018-10-12
+#: note: zuletzt geprüft: 2019-01-12
 	q4::inwork; 5076,10658 5047,10381
 EOF
      },
@@ -27726,8 +27765,8 @@ EOF
        text  => 'Privatstraße hinter der Leipziger Str.: Bauarbeiten, für Radfahrer explizit gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2019-01-08
+#: note: zurzeit ist das "Radfahren verboten"-Schild auf der östlichen Seite umgedreht
+#: last_checked: 2019-01-17
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27836,14 +27875,14 @@ EOF
      },
      { from  => undef, # 
        until => $isodate2epoch->("2019-05-01 18:00:00"), # laut Schild bis Mai 2019 --- 1540918800, # 2018-10-30 18:00
-       text  => 'Mittelweg/Leykestr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, außerdem Einbahnstraße im Mittelweg, voraussichtlich bis Mai 2019',
+       text  => 'Mittelweg/Leykestr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, voraussichtlich bis Mai 2019',
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (G) vvv
-#: last_checked: 2018-12-10 vvv
+#: last_checked: 2019-01-14 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
-	q3::inwork; 12647,7672 12520,7694
+# REMOVED (fertig) ---	q3::inwork; 12647,7672 12520,7694
 # REMOVED (hier keine Einbahnstraßenregelung mehr)	q3::inwork; 12520,7694 12335,7770
 #: last_checked ^^^
 #: also_indoor ^^^
@@ -28070,7 +28109,7 @@ Hinter dem Gießhaus	2::temp 9858,12410 9845,12506 9837,12560 9892,12596 9919,126
 Hinter dem Zeughaus	2::temp 9845,12506 9956,12523
 Behrenstr.	2::temp 9496,12215 9631,12227 9680,12232 9730,12238 9737,12238 9798,12267
 Universitätsstr.	2::temp 9581,12588 9613,12381
-Oberwallstr.	2::temp 9858,12410 9877,12293 9883,12251 9898,12161
+Oberwallstr.	2::temp 9858,12410 9873,12315 9877,12293 9883,12251 9898,12161
 Am Festungsgraben	2::temp 9742,12609 9747,12584
 Am Festungsgraben	2::temp 9747,12584 9764,12492 9771,12400
 Am Festungsgraben	2::temp 9845,12506 9764,12492
@@ -28109,7 +28148,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2019-01-02
+#: last_checked: 2019-01-14
 #: check_frequency: 30d
 	2::inwork 14854,8964 14614,9052
 EOF
@@ -28198,18 +28237,13 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef,
+       until => 1547676575, # undef,
        text  => "entlang der Erpe, Bahnbrücke: Bauarbeiten der DB, Weg kann gesperrt sein",
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX wird nach den Bauarbeiten hier noch ein Weg existieren? Wird die nördliche Anbindung mit Treppe oder Rampe realisiert?
-#: XXX man kann aber passieren (z.B. mittags am 2018-07-27)
-#: XXX laut osm-Notiz https://www.openstreetmap.org/note/1428158 "fast fertig"
-#: add_fragezeichen: Ist der Weg wieder hergestellt?
-#: last_checked: 2018-08-29
-# REMOVED --- #: check_frequency: 90d
-#: next_check: 2018-10-22
-	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
+#: by: http://www.baustellen-doku.info/berlin_frankfurter_bahn/ausbau-fernbahn-koepenick-erkner/20181107/ (fertig)
+# REMOVED --- #: XXX wird nach den Bauarbeiten hier noch ein Weg existieren? Wird die nördliche Anbindung mit Treppe oder Rampe realisiert? --- #: XXX man kann aber passieren (z.B. mittags am 2018-07-27) --- #: XXX laut osm-Notiz https://www.openstreetmap.org/note/1428158 "fast fertig" --- #: add_fragezeichen: Ist der Weg wieder hergestellt? --- #: last_checked: 2018-08-29 --- #: next_check: 2018-10-22
+	2::inwork 24650,6034 24649,6016 24647,5981 24637,5960 24584,5914
 EOF
      },
      { from  => $isodate2epoch->("2018-10-15 00:00:00"), # ein Tag Vorlauf
@@ -28452,7 +28486,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2018-12-27
+#: last_checked: 2019-01-18
 #: check_frequency: 21d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28508,6 +28542,17 @@ EOF
        source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php',
        data  => <<EOF,
 	2::inwork; 13391,16436 13630,16629
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Am Hamburger Bahnhof - Uferweg: Zugang kann durch Bauzäune versperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX wann werden die Bauzäune entfernt?
+#: last_checked: 2019-01-16
+#: check_frequency: 30d
+	2::inwork 8103,13675 8169,13705
 EOF
      },
     );

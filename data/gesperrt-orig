@@ -734,9 +734,10 @@ Kaulsdorfer Str.	1 22075,6967 22049,7085
 #: by: Roland Mohrbacher and osm
 #: XXX wird die Einbahnstraßenregelung für Radfahrer aufgehoben?
 #: by: http://www.berliner-woche.de/buckow/verkehr/radfahren-in-beide-richtungen-d135488.html
+#: by: https://fahrradfreundliches-neukoelln.de/blog/kommentar-radfahrender-ausschuss ("zu gefährlich")
 #: osm_watch: way id="5111625" version="10"
 #: last_checked: 2018-09-18
-#: check_frequency: 90d
+#: check_frequency: 180d
 Steinträgerweg	1s:q4 12987,2220 13023,2093
 # 
 #: by: anonymous and osm
@@ -1149,9 +1150,15 @@ Fellbacher Platz	1 3627,23246 3610,23242 3588,23256 3581,23282 3593,23297
 (Zufahrt Debis-Parkhaus)	1 8384,10507 8350,10499 8335,10518 8348,10636 8350,10662 8367,10745 8424,10703 8430,10710
 Walterstr.	1 13121,6689 13099,6712
 Gretel-Bergmann-Weg	1s:q1 -1132,12268 -1288,12178
+# 
 # REMOVED (dauerhaft) --- #: XXX wo gibt es Informationen hierzu? --- #: by: Kai Wagner (permanente Sperrung) --- #: XXX laut osm seit 2014-04-12 ohne access=private - falsch! --- #: confirmed_by: srt --- #: osm_watch: way id="4402045" version="10" --- #: last_checked: 2014-07-23 --- #: check_frequency: 180d
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7345 (kann der Platz wieder zugänglich gemacht werden?)
+#: by: https://www.morgenpost.de/bezirke/mitte/article216132465/Der-Durchgang-am-Reichstag-ist-bald-wieder-offen.html
+#: XXX wird die permanente Sperrung hinter dem Reichstag aufgehoben?
+#: osm_watch: way id="273805079" version="2"
+#: next_check: 2019-04-01
 Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
+# 
 # REMOVED (dauerhaft) --- #: last_checked: 2014-07-23 --- #: check_frequency: 180d --- #: XXX evtl. permanent
 Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,12417 8399,12610
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5554
@@ -2953,7 +2960,8 @@ Drängelgitter	BNP:3::trailer=10 25081,-9433
 Drängelgitter	BNP:3::trailer=10 1409,15177
 Drängelgitter	BNP:3::trailer=10 26682,-13082
 #: note: hier muss man sowieso schieben
-Drängelgitter	BNP:1::trailer=5 8363,13402
+#: note: ungefähr 100cm lichte Breite, aber sehr ungünstiger Winkel für Anhänger
+Drängelgitter	BNP:3::trailer=20 8363,13402
 Drängelgitter	BNP:3::trailer=10 20365,11950
 #
 ############################################################################
@@ -3045,7 +3053,7 @@ Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5
 # REMOVED (aufgehoben) --- #: next_check_id: DONAUSTR-2018 --- #: last_checked: 2018-11-28 --- Donaustr.: Einbahnstraßenregelung wegen Bauarbeiten	1s:q4:inwork 12649,8535 12549,8616
 # 
 #: XXX wann ist hier wieder offen?
-#: last_checked: 2019-01-04
+#: last_checked: 2019-01-15
 #: check_frequency: 14d
 Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 # 
@@ -3078,7 +3086,7 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 # 
 #: XXX nach den Bauarbeiten könnte man den Extra-Punkt in der Mitte wieder löschen
 #: also_indoor: traffic
-#: last_checked: 2019-01-08
+#: last_checked: 2019-01-16
 #: check_frequency: 14d
 Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 10521,11228 10593,11120
 # 
@@ -3089,7 +3097,7 @@ Uferweg zum Speicher: noch keine Durchfahrt möglich	2::inwork -12721,-2082 -1275
 # 
 # REMOVED (-> temp blockings) --- #: XXX vielleicht sogar dauerhaft? --- #: last_checked: 2018-08-24 (zurzeit kann man sich noch an den Bauzäunen vorbei mogeln) --- #: check_frequency: 14d --- Boxhagener Str. - Weserstr.: Bauarbeiten, Durchfahrt nicht mehr möglich	2::inwork 14838,11410 14949,11474
 # 
-#: last_checked: 2019-01-10
+#: last_checked: 2019-01-17
 #: check_frequency: 30d
 Heidelberger Str.: Baustelle, Einbahnstraße	1s:q3:inwork 13491,9201 13421,9260 13357,9313
 # 
@@ -3100,9 +3108,10 @@ Heidelberger Str.: Baustelle, Einbahnstraße	1s:q3:inwork 13491,9201 13421,9260 1
 #: check_frequency: 120d
 Kaiserin-Augusta-Allee - Neues Ufer: Bauarbeiten, Weg ist komplett gesperrt	2::inwork 4561,13244 4547,13139 4576,13115
 # 
+#: by: http://www.deutsches-architektur-forum.de/forum/showthread.php?t=13477&page=3
 #: osm_watch: way id="618266806" version="2"
-#: last_checked: 2018-06-30
-#: check_frequency: 90d
+#: last_checked: 2019-01-10 (forum)
+#: check_frequency: 30d
 Pepitapromenade: Bauarbeiten, teilweise noch gesperrt	2::inwork -2873,17369 -2573,17314
 # 
 # REMOVED (zwar stehen teilweise noch Bauzäune, aber man kann drumherum fahren) --- #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/kranke-baeume-muessen-weichen-bezirksamt-laesst-anton-saefkow-park-aufwerten_a142536 (spätestens 2020 sind die Bauarbeiten beendet) --- #: by: https://www.stadtentwicklung.berlin.de/staedtebau/foerderprogramme/stadtumbau/Anton-Saefkow-Park.7788.0.html --- #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.750883.php --- #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/erster-teil-des-anton-saefkow-parks-ist-fertiggestellt_a186599 --- #: last_checked: 2018-11-01 --- #: next_check: 2018-11-06 --- Volkspark Anton Saefkow: Bauarbeiten, Wege sind gesperrt	2::inwork 12620,14979 12632,14956 12639,14913 12592,14838 12640,14800
@@ -3112,7 +3121,10 @@ Pepitapromenade: Bauarbeiten, teilweise noch gesperrt	2::inwork -2873,17369 -257
 #: check_frequency: 180d
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
 # 
-# REMOVED (mittlerweile geht's wieder) --- #: next_check_id: ALEXANDRINENSTR-2018 --- #: last_checked: 2018-05-31 --- #: check_frequency: 30d --- Alexandrinenstr.: für Anhänger zu eng	BNP:0::trailer=no 10781,11243
+#: next_check_id: ALEXANDRINENSTR-2018
+#: last_checked: 2019-01-17
+#: check_frequency: 21d
+Alexandrinenstr.: für Anhänger zu eng	BNP:0::trailer=no 10781,11243
 # 
 #: XXX hat die "Einziehung von Straßenland" hier irgendwelche Konsequenzen?
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/54re.pdf/file?y=2013
@@ -3196,6 +3208,7 @@ Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12677,-15
 #: by: http://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.715523.php (bis Ende 2019)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/schwedter-strasse-bleibt-fernradweg_a188545
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/nach-anwohnerbeschwerden-gleimtunnel-wird-ein-halbes-jahr-fuer-autos-voll-gesperrt--31848488 (Ende der oberirdischen Bauarbeiten)
+#: by: http://www.abendblatt-berlin.de/2019/01/17/ost-west-verbindung-dicht/
 #: source_id: 2147342369
 #: last_checked: 2018-12-28 (nördliche Seite) vvv
 #: next_check: 2019-06-28 vvv
@@ -3286,7 +3299,7 @@ An den Parkbäumen: Bauarbeiten, Fahrbahn gesperrt	2::inwork -6530,6699 -6556,666
 #: XXX (Geplanter) Projektabschluss laut dafmap: 2019-06-01
 #: osm_watch: way id="392904879" version="2" vvv
 #: osm_watch: way id="392904880" version="7" vvv
-#: last_checked: 2019-01-10 vvv
+#: last_checked: 2019-01-12 vvv
 #: check_frequency: 60d vvv
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5579,12231 5535,12206 5518,12159
 Gutenbergstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 5317,12242 5518,12159
@@ -3339,7 +3352,7 @@ Niederlagstr.: Einbahnstraße	1s:q3:inwork 9972,12184 9959,12281
 #: source_id: 2147339182
 #: osm_watch: way id="10948718" version="21"
 #: last_checked: 2018-04-28
-#: next_check: 2019-01-31
+#: next_check: 2019-02-15
 #: valid: -20190131
 Karower Str.: temporäre Einbahnstraßenregelung	1s:q3:inwork 16593,25640 16632,25512 16669,25373
 # 
@@ -3375,7 +3388,7 @@ Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6146.html
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_13_1401_1520_online.pdf (Widmung als Grünanlage)
 #: source_id: 2147341188
-#: last_checked: 2018-12-28 vvv
+#: last_checked: 2019-01-16 vvv
 #: check_frequency: 45d vvv
 # REMOVED (hier wieder offen) --- #: osm_watch: way id="594591925" version="1" --- #: osm_watch: way id="594591926" version="1" --- Nordhafenpark West: noch Bauarbeiten, gesperrt	2::inwork 7551,14464 7426,14539
 #: osm_watch: way id="593108603" version="2"
@@ -3387,9 +3400,9 @@ Nordhafenpark West: unter der Brücke gesperrt	2::inwork 7636,14414 7612,14449 75
 # 
 #: add_fragezeichen: Ist die Kieler Brücke noch immer gesperrt?
 #: osm_watch: way id="5133258" version="8"
-#: last_checked: 2018-11-16
+#: last_checked: 2019-01-16
 #: check_frequency: 45d
-Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
+Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
 # 
 # REMOVED --- #: last_checked: 2017-05-08 (nur noch ein paar Meter Richtung Weigandufer gesperrt) --- #: check_frequency: 7d --- Weichselplatz: Uferweg wegen Bauarbeiten gesperrt	2::inwork 12851,9309 12907,9073
 # REMOVED (Baugrube) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/18re.pdf/file?y=2016 --- #: osm_watch: note 848012 1 --- #: last_checked: 2016-12-15 --- #: check_frequency: 180d --- Sülzhayner Str.: komplett gesperrt wegen Bauarbeiten, vielleicht dauerhaft	2::inwork 13420,9259 13397,9234
@@ -3409,7 +3422,7 @@ Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7617,14420 7634,14406 7661,1439
 #: XXX Wann sind die Bauarbeiten beendet?
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6291
 #: osm_watch: way id="137084083" version="9"
-#: last_checked: 2019-01-03
+#: last_checked: 2019-01-17
 #: check_frequency: 60d
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,9200 12548,9167
 # 
@@ -3450,7 +3463,7 @@ Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,
 # REMOVED --- #: XXX Wie wird die Qualität danach sein? Wird man zum Hiltrud-Dudek-Weg durchfahren können? Wird die Straße verkehrsberuhigt sein? --- #: osm_watch: way id="151742436" version="5" --- #: XXX ad osm_watch: id referenziert die Jeanette-Wolff-Str., nur ein "proxy" für den neu zu bauenden Weg --- #: last_checked: 2015-04-10 --- #: check_frequency: 100d --- Mathilde-Vaerting-Weg: noch in Bau	2::inwork 17611,-330 17647,-386 17654,-397
 # 
 #: next_check_id: EUROPACITY-2015 vvv
-#: last_checked: 2018-11-16 vvv
+#: last_checked: 2019-01-16 vvv
 #: osm_watch: way id="237704729" version="10"
 #: check_frequency: 45d
 Lydia-Rabinowitsch-Str.: noch teilweise gesperrt	2::inwork 7820,13994 7930,14060 7973,13991 7865,13924
@@ -3607,7 +3620,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="2"
-#: last_checked: 2018-12-26
+#: last_checked: 2019-01-16
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 

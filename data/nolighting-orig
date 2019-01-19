@@ -3,9 +3,12 @@
 #:
 # laut http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/archiv/20111124.0930.363028.html die gesamte Nacht beleuchtet: Görlitzer Park	NL 12817,9964 12833,9998 12869,10071 12904,10141 12911,10156
 # REMOVED (auch nachts eingeschaltet) ---  #: XXX Beleuchtung existiert mittlerweile (2011-11-21), ist hier auch nach 22 Uhr eingeschaltet? --- Görlitzer Park	NL 12802,10097 12869,10071 12987,10007 13145,9920
-#: note: keine Beleuchtung mitten in der Nacht
-Görlitzer Park	NL 12507,10130 12504,10172 12509,10189 12543,10223 12580,10252 12608,10294
+#: note: Zufahrten sind immer unbeleuchtet vvv
+Görlitzer Park	NL 12507,10130 12504,10172
 Görlitzer Park	NL 12504,10172 12464,10153
+#: note ^^^
+#: note: keine Beleuchtung mitten in der Nacht
+Görlitzer Park	NL 12504,10172 12509,10189 12543,10223 12580,10252 12608,10294
 # REMOVED (Beleuchtung existiert, aber wird sie auch eingeschaltet?) --- Görlitzer Park	NL 12670,10160 12543,10223
 #: note: nur teilweise (indirekt) beleuchtet
 # REMOVED (Beleuchtung existiert, aber wird sie auch eingeschaltet?) --- Görlitzer Park	NL 12543,10223 12502,10244 12457,10309 12384,10368 12328,10442
@@ -281,6 +284,9 @@ Pelzlake	NL 32245,1914 32155,1863 32121,1850 32052,1866 31893,1768 31202,2022 31
 (Waldweg parallel zur Straßenbahn)	NL 30410,5450 30505,5474 32053,5870 32192,5915
 Wanderweg Erkner - Hessenwinkel	NL 33531,2772 33419,2765 33406,2738 33086,2790 33013,2821
 (Zu den Müggelheimer Wiesen)	NL 29902,2379 29549,2267 29414,2373
+#: XXX wird hier eine Beleuchtung entstehen?
+#: by: https://fahrradfreundliches-neukoelln.de/blog/ausschusssitzung-strassen-gruenflaechen-und-ordnung-am-9-januar-2019
+#: next_check: 2019-10-01
 (Weg am Friedhof)	NL 11608,7267 11687,7284 12180,7387
 # REMOVED (wahrscheinlich nicht mehr!) --- Niederwallstr. - Spittelmarkt	NL 10124,11806 10183,11770
 (Kynaststr. - Uferwanderweg)	NL 14843,10621 14911,10587
@@ -1754,3 +1760,9 @@ Park am Klötzebecken	NL 5815,22870 5926,22738 6003,22642
 #: note: im südlichen Abschnitt etwas indirekte Beleuchtung
 Mergenthalerring	NL 14121,8147 14210,8227 14219,8260 14258,8520 14262,8564
 (Crivitzer Str. - Woldegker Str./Rostocker Str.)	NL 17584,18551 17511,18636
+# 
+#: by: http://www.baustellen-doku.info/berlin_frankfurter_bahn/ausbau-fernbahn-koepenick-erkner/20181107/
+#: XXX Beleuchtung soll noch gemacht werden
+#: next_check: 2019-03-01
+entlang der Erpe	NL 24650,6034 24649,6016 24647,5981 24637,5960 24584,5914
+# 

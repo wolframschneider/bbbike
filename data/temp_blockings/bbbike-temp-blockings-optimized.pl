@@ -1675,7 +1675,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2019-01-11
+#: last_checked: 2019-01-16
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -1781,12 +1781,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
+         'data' => '#: source_id: 2147343639
+#: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
 	q4::temp 8644,10408 8397,10488 8384,10507 8527,10621
 	q4::temp 8348,10636 8335,10518 8350,10499
 #: tempex ^^^
 ',
-         'from' => 1547420400,
+         'from' => 1547362800,
          'id' => 2718,
          'periodic' => 1,
          'recurrences' => [
@@ -1806,7 +1807,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
                             ]
                           ],
          'source_id' => 'https://orbanism.com/event/berlin-fashion-week-2019/',
-         'text' => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 15.01.2019-18.01.2019',
+         'text' => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 14.01.2019-18.01.2019',
          'type' => 'handicap',
          'until' => 1547852399
        },
@@ -2078,6 +2079,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/kreuzungsumbau-bis-november_a172982
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729460.php
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte des Jahres 2019)
+#: by: https://www.berliner-woche.de/steglitz/c-bauen/baustellen-in-carstenn-und-feuerbachstrasse-nicht-fertig_a196939
 #: source_id: 2147342671
 #: source_id: 2147342861
 #: source_id: 2147342860
@@ -2107,7 +2109,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-12-09
+#: last_checked: 2019-01-18
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -2148,7 +2150,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-01-10 vvv
+#: last_checked: 2019-01-16 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2224,23 +2226,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_156207_LMS-BR_72
-#: source_id: LMS-BR_r_LMS-BR_156434_LMS-BR_72
-#: XXX bleibt danach die vorherige Einbahnstraßenregelung?
-#: osm_watch: way id="611814766" version="2"
-#: also_indoor: traffic (H)
-#: last_checked: 2018-10-25
-#: next_check: 2019-01-15
-	q4::inwork; 3623,10800 3835,10915
-',
-         'from' => undef,
-         'id' => 2950,
-         'source_id' => 'LMS-BR_r_LMS-BR_122462_LMS-BR_72',
-         'text' => 'Gervinusstr.: Einbahnstraße wegen Bauarbeiten, gesperrt Richtung Wilmersdorfer Str., voraussichtlich bis zum 15. Januar 2019',
-         'type' => 'handicap',
-         'until' => 1547571600
-       },
+       undef,
        undef,
        {
          'data' => '#: osm_watch: way id="152046369" version="8"
@@ -2335,7 +2321,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2018-12-26
+#: last_checked: 2019-01-18
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 ',
          'from' => undef,
@@ -2407,7 +2393,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/bauarbeiten-gehen-weiter_a178952
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47881
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47885
-#  by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte 2019)
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte 2019)
+#: by: https://www.berliner-woche.de/steglitz/c-bauen/baustellen-in-carstenn-und-feuerbachstrasse-nicht-fertig_a196939
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: also_indoor: traffic
@@ -2446,7 +2433,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: Gesamtbaumaßnahme bis 31.12.2023
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: note: zuletzt geprüft: 2018-10-12
+#: note: zuletzt geprüft: 2019-01-12
 	q4::inwork; 5076,10658 5047,10381
 ',
          'from' => 1534629600,
@@ -2457,8 +2444,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1577811600
        },
        {
-         'data' => '#: XXX wann sind die "Radfahren verboten"-Schilder wieder weg?
-#: last_checked: 2019-01-08
+         'data' => '#: note: zurzeit ist das "Radfahren verboten"-Schild auf der östlichen Seite umgedreht
+#: last_checked: 2019-01-17
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -2504,17 +2491,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: also_indoor: traffic (G) vvv
-#: last_checked: 2018-12-10 vvv
+#: last_checked: 2019-01-14 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
-	q3::inwork; 12647,7672 12520,7694
+# REMOVED (fertig) ---	q3::inwork; 12647,7672 12520,7694
 # REMOVED (hier keine Einbahnstraßenregelung mehr)	q3::inwork; 12520,7694 12335,7770
 #: last_checked ^^^
 #: also_indoor ^^^
 ',
          'from' => undef,
          'id' => 3011,
-         'text' => 'Mittelweg/Leykestr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, außerdem Einbahnstraße im Mittelweg, voraussichtlich bis Mai 2019',
+         'text' => 'Mittelweg/Leykestr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, voraussichtlich bis Mai 2019',
          'type' => 'handicap',
          'until' => 1556726400
        },
@@ -2568,7 +2555,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2019-01-02
+#: last_checked: 2019-01-14
 #: check_frequency: 30d
 	2::inwork 14854,8964 14614,9052
 ',
@@ -2595,22 +2582,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX wird nach den Bauarbeiten hier noch ein Weg existieren? Wird die nördliche Anbindung mit Treppe oder Rampe realisiert?
-#: XXX man kann aber passieren (z.B. mittags am 2018-07-27)
-#: XXX laut osm-Notiz https://www.openstreetmap.org/note/1428158 "fast fertig"
-#: add_fragezeichen: Ist der Weg wieder hergestellt?
-#: last_checked: 2018-08-29
-# REMOVED --- #: check_frequency: 90d
-#: next_check: 2018-10-22
-	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
-',
-         'from' => undef,
-         'id' => 3035,
-         'text' => 'entlang der Erpe, Bahnbrücke: Bauarbeiten der DB, Weg kann gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        {
          'data' => '#: source_id: 2147343335
@@ -2711,7 +2683,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2018-12-27
+#: last_checked: 2019-01-18
 #: check_frequency: 21d
 	2::inwork 14690,9993 14599,10039
 ',
@@ -2762,15 +2734,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
+       undef,
        {
-         'data' => '	2::inwork; 13391,16436 13630,16629
+         'data' => '#: XXX wann werden die Bauzäune entfernt?
+#: last_checked: 2019-01-16
+#: check_frequency: 30d
+	2::inwork 8103,13675 8169,13705
 ',
-         'from' => 1547334000,
-         'id' => 3065,
-         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php',
-         'text' => 'Schönstr.: Bauarbeiten, Vollsperrung zwischen Mirbachplatz und Paul-Oestreich-Str., 14.01.2019 bis 18.01.2019',
+         'from' => undef,
+         'id' => 3066,
+         'text' => 'Am Hamburger Bahnhof - Uferweg: Zugang kann durch Bauzäune versperrt sein',
          'type' => 'gesperrt',
-         'until' => 1547830800
+         'until' => undef
        }
      
 );

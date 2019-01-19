@@ -5,7 +5,7 @@
 # $Id: bbbike.cgi,v 9.30 2009/04/04 11:13:58 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2018 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2019 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -1092,7 +1092,7 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = '11.008';
+$VERSION = '11.009';
 
 use vars qw($delim $font);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
@@ -2652,14 +2652,13 @@ EOF
 	    (defined $coord and $coord ne '')) {
 	    print "<td valign=middle>" if $bi->{'can_table'};
 	    if (defined $coord) {
-		print "<input type=hidden name=" . $type . "c value=\""
-		  . $coord . "\">\n";
+		print qq{<input type=hidden name=${type}c value="@{[ CGI::escapeHTML($coord) ]}">\n};
 	    }
 	    if ($q->param($type . "isort")) {
-		print "<input type=hidden name=" . $type . "isort value=1>\n";
+		print qq{<input type=hidden name=${type}isort value=1>};
 	    }
 	    if (defined $coord and (!defined $$nameref or $$nameref eq '')) {
-		print crossing_text($coord);
+		print CGI::escapeHTML(crossing_text($coord));
 	    } else {
 		print "$$nameref";
 		if ($$oldname_match_ref) {
@@ -2668,7 +2667,7 @@ EOF
 		if ($$ortref &&
 		    index(reverse($$nameref), reverse("$$ortref)")) != 0 # this means: $$ortref is not at the end of $$nameref (but this seems always the case in bbbike.de/beta)
 		   ) {
-		    print " ($$ortref)";
+		    print " (" . CGI::escapeHTML($$ortref) . ") ";
 		}
 		print "\n";
 	    }
@@ -2679,12 +2678,10 @@ EOF
 		    . 'ort value="' . CGI::escapeHTML($$ortref) . qq{">\n};
 	    }
 	    if (defined $q->param($type . "plz")) {
-		print "<input type=hidden name=${type}plz value=\""
-		  . $q->param($type . "plz") . "\">\n";
+	        print qq{<input type=hidden name=${type}plz value="@{[ CGI::escapeHTML(scalar $q->param($type . "plz")) ]}">\n};
 	    }
 	    if (defined $q->param($type . "hnr")) {
-		print "<input type=hidden name=${type}hnr value=\""
-		    . $q->param($type."hnr") . "\">\n";
+		print qq{<input type=hidden name=${type}hnr value="@{[ CGI::escapeHTML(scalar $q->param($type . "hnr")) ]}">\n};
 	    }
 
 	    print "</td>\n" if $bi->{'can_table'};
@@ -2702,9 +2699,9 @@ EOF
 
 	} elsif ($$oneref ne '' && @$matchref == 0) {
 	    print "<td>" if $bi->{'can_table'};
-	    print "<i>$$oneref</i> ";
+	    print "<i>" . CGI::escapeHTML($$oneref) . "</i> ";
 	    if ($$ortref && $$ortref ne 'Berlin/Potsdam') {
-		print "in <i>$$ortref</i> ";
+		print "in <i>" . CGI::escapeHTML($$ortref) . "</i> ";
 	    }
 	    print M("ist nicht bekannt") . ".<br>\n";
 	    my $geo = get_geography_object();
@@ -2763,7 +2760,7 @@ EOF
 		if (0) {
 		    # Don't show anymore the newstreetform link in
 		    # this situation, too many false entries. The user
-		    # can you the contact link if he thinks otherwise.
+		    # can use the contact link if he thinks otherwise.
 
 		    my $qs = CGI->new({strname => $$oneref,
 				       ($$ortref ? (ort => $$ortref) : ()),
@@ -2810,10 +2807,8 @@ EOF
 		    print qq{<br>\n} . M("und wird für die Suche verwendet") . ".";
 		}
 		print qq{<br>\n};
-		print "<input type=hidden name=" . $type .
-		    "c value=\"$best\">";
-		print "<input type=hidden name=" . $type .
-		    "name value=\"$cr\">";
+		print qq{<input type=hidden name=${type}c value="@{[ CGI::escapeHTML($best) ]}">};
+		print qq{<input type=hidden name=${type}name value="@{[ CGI::escapeHTML($cr) ]}">};
 	    } else {
 		choose_street_html($strasse,
 				   $plz,
@@ -2914,8 +2909,7 @@ EOF
 	    }
 
 	    if (defined $q->param($type . "hnr")) {
-		print "<input type=hidden name=${type}hnr value=\""
-		    . $q->param($type."hnr") . "\">\n";
+		print qq{<input type=hidden name=${type}hnr value="@{[ CGI::escapeHTML(scalar $q->param($type . "hnr")) ]}">\n};
 	    }
 
 	    if ($bi->{'can_table'}) {
@@ -3176,8 +3170,7 @@ function " . $type . "char_init() {}
             print qq{<div style="display:none" id="streetmap2"></div>\n};
             #print qq{<div style="display:none" id="streetmap3"></div>\n}; 
 
-    print "<input type=hidden name=scope value='" .
-	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
+    print qq{<input type=hidden name=scope value="@{[ (defined $q->param("scope") ? CGI::escapeHTML(scalar $q->param("scope")) : "") ]}">};
 
     print "</form>\n";
     print "</td></tr></table>\n" if $bi->{'can_table'};
@@ -3433,14 +3426,12 @@ sub choose_ch_form {
     if (!$use_javascript) {
 	print qq{<input type=submit value="} . M("Weiter") . qq{ &gt;&gt;"><br>};
     }
-    foreach ($q->param) {
-	unless ($_ eq 'startchar' || $_ eq 'viachar' || $_ eq 'zielchar' ||
-		$_ eq $search_type) {
+    for my $key ($q->param) {
+	unless ($key eq 'startchar' || $key eq 'viachar' || $key eq 'zielchar' || $key eq $search_type) {
 	    # Lynx-Bug (oder Feature?): hidden-Variable werden nicht von
 	    # der nachfolgenden Radio-Liste überschrieben
-	    next if ($_ =~ /^$search_type/);
-	    print "<input type=hidden name=$_ value=\""
-	      . $q->param($_) . "\">\n";
+	    next if ($key =~ /^$search_type/);
+	    print qq{<input type=hidden name="@{[ CGI::escapeHTML($key) ]}" value="@{[ CGI::escapeHTML(scalar $q->param($key)) ]}">\n};
 	}
     }
 
@@ -3568,10 +3559,9 @@ sub choose_ch_form {
 	abc_link($search_type);
     }
     footer();
-    print "<input type=hidden name=scope value='" .
-	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
+    print qq{<input type=hidden name=scope value="@{[ (defined $q->param("scope") ? CGI::escapeHTML(scalar $q->param("scope")) : "") ]}">};
     if (defined $search_ort) {
-	print "<input type=hidden name=${search_type}ort value='$search_ort'>\n";
+	print qq{<input type=hidden name=${search_type}ort value="@{[ CGI::escapeHTML($search_ort) ]}">\n};
     }
     print "</form>\n";
     if ($use_javascript && $seen_anchor) {
@@ -3874,10 +3864,10 @@ EOF
 	    }
 	}
 	if (defined $c) {
-	    print "<input type=hidden name=" . $type . "c value=\"$c\">";
+	    print qq{<input type=hidden name=${type}c value="@{[ CGI::escapeHTML($c) ]}">};
 	}
 	if (defined $c and (not defined $strname or $strname eq '')) {
-	    print crossing_text($c);
+	    print CGI::escapeHTML(crossing_text($c)) . "<br>\n";
 	    if (my $val = $q->param("_$type")) {
 		# print the typed address if it is different from the crossing (e.g. for google addresses)
 		print qq{ <span class="grey">[$val]</span>\n} if $val ne crossing_text($c);
@@ -3898,16 +3888,13 @@ EOF
 	}
 	# Parameter durchschleifen...
 	if (defined $strname) {
-	    print "<input type=hidden name=" . $type .
-	      'name value="' . CGI::escapeHTML($strname) . '">';
+	    print qq{<input type=hidden name=${type}name value="@{[ CGI::escapeHTML($strname) ]}">};
 	}
 	if (defined $q->param($type . "plz")) {
-	    print "<input type=hidden name=" . $type . "plz value=\"" .
-	      $q->param($type . "plz") . "\">\n";
+            print qq{<input type=hidden name=${type}plz value="@{[ CGI::escapeHTML(scalar $q->param($type . "plz")) ]}">\n};
 	}
 	if (defined $q->param($type."hnr") && $q->param($type."hnr") ne "") {
-	    print "<input type=hidden name=" . $type . "hnr value=\"" .
-	      $q->param($type . "hnr") . "\">\n";
+	    print qq{<input type=hidden name=${type}hnr value="@{[ CGI::escapeHTML(scalar $q->param($type . "hnr")) ]}">\n};
 	}
 	if ($is_ort{$type}) {
 	    print "<input type=hidden name=" . $type . "isort value=1>\n";
@@ -3936,8 +3923,7 @@ EOF
 
     suche_button();
     footer();
-    print "<input type=hidden name=scope value='" .
-	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
+    print qq{<input type=hidden name=scope value="@{[ (defined $q->param("scope") ? CGI::escapeHTML(scalar $q->param("scope")) : "") ]}">};
     print "</form>";
     print $q->end_html;
     exit(0);
@@ -4371,8 +4357,7 @@ EOF
 sub hidden_smallform {
     # Hier die Query-Variable statt der Perl-Variablen benutzen...
     if ($q->param('smallform')) {
-	print "<input type=hidden name=smallform value=\"" .
-	  $q->param('smallform') . "\">\n";
+	print qq{<input type=hidden name=smallform value="@{[ CGI::escapeHTML(scalar $q->param('smallform')) ]}">\n};
     }
 }
 
@@ -5987,7 +5972,7 @@ EOF
 	    if (!$startname) {
 		print "<b>" . M("Route") . "</b>";
 	    } else {
-		print "<b>" . $startname . "</b>";
+		print "<b>" . CGI::escapeHTML($startname) . "</b>";
 	    }
 	} elsif ($osm_data) {
 		print M("Route von") . " <b>$startname</b> ";
@@ -6464,7 +6449,6 @@ for my $etappe (@out_route) {
 
 	if (!$bi->{'mobile_device'}) {
 	    my $string_rep = $r->as_cgi_string;
-	    my $kfm_bug = ($q->user_agent =~ m|^Konqueror/1.0|i);
             # XXX Mit GET statt POST gibt es zwar einen häßlichen GET-String
 	    # und vielleicht können lange Routen nicht gezeichnet werden,
 	    # dafür gibt es keine Cache-Probleme mehr.
@@ -6716,9 +6700,9 @@ EOF
 	    }
 
 	    print "<input type=hidden name=startname value=\"" .
-		($kfm_bug ? CGI::escape($startname) : $startname) . "\">";
+		CGI::escapeHTML($startname) . "\">";
 	    print "<input type=hidden name=zielname value=\"" .
-		($kfm_bug ? CGI::escape($zielname) : $zielname) . "\">";
+		CGI::escapeHTML($zielname)  . "\">";
 	    if (@weather_res) {
 		eval {
 		    local $SIG{'__DIE__'};
@@ -6820,8 +6804,7 @@ EOF
 	    print "</td></tr></table>\n" if $show_mini_map && !$show_mini_googlemap;
 	}
 
-	print "<input type=hidden name=scope value='" .
-	    ($scope ne 'city' ? $scope : "") . "'>";
+	print qq{<input type=hidden name=scope value="@{[ ($scope ne 'city' ? CGI::escapeHTML($scope) : "") ]}">};
 	print "</form>\n";
 	print qq{</div>};
 
@@ -6844,24 +6827,28 @@ EOF
 	}
 
 	if ($show_wayback) {
-	    #print "<hr>";
-	    print qq{<div class="box">};
-	    print "<form name='search' action=\"$bbbike_script\">\n";
-	    print "<input type=hidden name=startc value=\"$zielcoord\">";
-	    print "<input type=hidden name=zielc value=\"$startcoord\">";
-	    print "<input type=hidden name=startname value=\"$zielname\">";
-	    print "<input type=hidden name=zielname value=\"$startname\">";
+	    print <<"EOF";
+<div class="box">
+ <form name='search' action="@{[ CGI::escapeHTML($bbbike_script) ]}">
+  <input type=hidden name=startc value="@{[ CGI::escapeHTML($zielcoord) ]}">
+  <input type=hidden name=zielc  value="@{[ CGI::escapeHTML($startcoord) ]}">
+  <input type=hidden name=startname value="@{[ CGI::escapeHTML($zielname) ]}">
+  <input type=hidden name=zielname  value="@{[ CGI::escapeHTML($zielname) ]}">
+EOF
 	    if (defined $viacoord && $viacoord ne '') {
-		print "<input type=hidden name=viac value=\"$viacoord\">";
-		print "<input type=hidden name=vianame value=\"$vianame\">";
+		print <<"EOF";
+  <input type=hidden name=viac value="@{[ CGI::escapeHTML($viacoord) ]}">
+  <input type=hidden name=vianame value="@{[ CGI::escapeHTML($vianame) ]}">
+EOF
 	    }
 	    for my $param ($q->param) {
 		if ($param =~ /^pref_/) {
-		    print "<input type=hidden name='$param' value=\"".
-			$q->param($param) ."\">";
+		    print <<"EOF";
+  <input type=hidden name="$param" value="@{[ CGI::escapeHTML(scalar $q->param($param)) ]}">
+EOF
 		}
 	    }
-	    print qq{<input type=submit value="} . M("R&uuml;ckweg") . qq{"><br>};
+	    print qq{  <input type=submit value="} . M("R&uuml;ckweg") . qq{"><br>};
 	    hidden_smallform();
 
 	    my $button = sub {
@@ -7503,16 +7490,15 @@ sub draw_map {
     }
     print "<form action=\"$bbbike_script\">\n";
 
-    foreach ($q->param) {
-	unless ($_ eq 'type') {
-	    print "<input type=hidden name=$_ value=\""
-		. $q->param($_) . "\">\n";
+    for my $key ($q->param) {
+	unless ($key eq 'type') {
+	    print qq{<input type=hidden name="@{[ CGI::escapeHTML($key) ]}" value="@{[ CGI::escapeHTML(scalar $q->param($key)) ]}">\n};
 	}
     }
-    print "<input type=hidden name=detailmapx value=\"$x\">\n";
-    print "<input type=hidden name=detailmapy value=\"$y\">\n";
-    print "<input type=hidden name=type value=\"$type\">\n";
-    print "<center><table class=\"detailmap\">";
+    print qq{<input type=hidden name=detailmapx value="$x">\n};
+    print qq{<input type=hidden name=detailmapy value="$y">\n};
+    print qq{input type=hidden name=type value="@{[ CGI::escapeHTML($type) ]}">\n};
+    print qq{<center><table class="detailmap">};
 
     # obere Zeile
     if ($y > 0) {
