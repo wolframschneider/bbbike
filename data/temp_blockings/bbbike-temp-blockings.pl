@@ -27765,8 +27765,7 @@ EOF
        text  => 'Privatstraße hinter der Leipziger Str.: Bauarbeiten, für Radfahrer explizit gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: note: zurzeit ist das "Radfahren verboten"-Schild auf der östlichen Seite umgedreht
-#: last_checked: 2019-01-17
+#: last_checked: 2019-01-24
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -28402,7 +28401,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: NEUERMAUERWEG-2018
 #: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
-#: osm_watch: way id="42031978" version="12"
+#: osm_watch: way id="42031978" version="13"
 #: priority: #B vvv
 #: last_checked: 2018-11-02 (mapillary, wobei man die Bauzäune umfahren kann) vvv
 #: check_frequency: 7d vvv

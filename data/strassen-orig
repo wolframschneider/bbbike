@@ -1146,7 +1146,6 @@ Valeska-Gert-Str.	N 12807,11287 12866,11256 12926,11224 12984,11194
 #: oldname: -20140213: <namenslos>
 Edith-Kiss-Str.	N 12793,11132 12866,11256
 # 
-#: next_check_id: PLANSTRASSEC-2018
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/verwaltung/org/vermessung/b-plaene/b-plaene/B-V-3.jpg
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/42re.pdf/file?y=2012
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_14_1521_1636_online.pdf (Widmung)
@@ -1155,7 +1154,7 @@ Edith-Kiss-Str.	N 12793,11132 12866,11256
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="3"
 #: priority: #C
-#: last_checked: 2019-01-08
+#: last_checked: 2019-01-24
 #: check_frequency: 60d
 (Planstraße C)	N 12926,11224 12848,11093
 # 
@@ -1464,7 +1463,7 @@ Tucholskystr.	N 9538,12993 9559,13087 9588,13174 9611,13245 9651,13406 9609,1352
 Gormannstr.	NN 10350,13376 10353,13384
 Gormannstr.	N 10353,13384 10390,13493 10406,13543 10445,13675 10459,13760 10480,13871
 Weinbergsweg	NN 10177,13766 10193,13816
-Weinbergsweg	N 10193,13816 10263,13977 10370,14158
+Weinbergsweg	N 10193,13816 10209,13854 10263,13977 10370,14158
 Hahnebergweg	NN -6854,12478 -6891,12489 -7294,12560
 #: oldname: -20151112: Hahnebergweg
 #: ignore_oldname_file: yes
@@ -1480,7 +1479,7 @@ Zionskirchstr.	N 10426,14262 10561,14181 10670,14116 10755,14067
 Christinenstr.	N 10572,13731 10599,13775 10639,13864 10688,13963 10755,14067 10822,14179
 Angermünder Str. (Prenzlauer Berg)	N 10645,13711 10703,13832
 Fehrbelliner Str. (Mitte, Prenzlauer Berg)	N 10836,13883 10688,13963 10606,14005 10502,14070 10370,14158 10282,14212 10037,14379
-Schönhauser Allee	HH 10741,13685 10779,13793 10836,13883 10895,13961 10908,13978 10933,14122 10938,14159 10910,14488 10893,14705 10885,14914 10884,14952 10881,15047 10883,15129 10886,15251 10902,15422 10917,15525 10941,15697 10953,15787 10964,15896 10969,15944 10975,16010 10982,16121 10989,16197 10997,16280 11004,16360 11019,16465 11027,16553
+Schönhauser Allee	HH 10741,13685 10779,13793 10836,13883 10895,13961 10908,13978 10933,14122 10938,14159 10910,14488 10893,14705 10884,14952 10881,15047 10883,15129 10886,15251 10902,15422 10917,15525 10941,15697 10953,15787 10964,15896 10969,15944 10975,16010 10982,16121 10989,16197 10997,16280 11004,16360 11019,16465 11027,16553
 Choriner Str.	N 10480,13871 10487,13928 10502,14070 10561,14181 10629,14299 10864,14692 10893,14705
 Brunnenstr.	H 10177,13766 10002,14092 9938,14356 9864,14578 9855,14598 9838,14640 9800,14722 9718,14888 9642,15038 9566,15188 9540,15238 9443,15430 9309,15700 9291,15740 9267,15790 9255,15816 9242,15843 9183,15909 9123,15963
 Große Hamburger Str.	N 10077,13100 10016,13306 9986,13412 9961,13502
@@ -2152,10 +2151,23 @@ Hertastr. (Neukölln)	N 12649,6833 12689,6905
 Silbersteinstr.	H 11689,6634 12044,6707 12395,6785 12649,6833 12702,6846 12816,6870 12973,6902 13085,6925
 Britzer Damm	H 12576,6374 12588,6337 12595,6299 12597,6293 12618,6207 12628,6166 12644,6087 12699,5909 12718,5845 12789,5612 12794,5596 12798,5580 12812,5526 12841,5416 12883,5257 12885,5205 12731,4841 12547,4391 12564,4308
 Lahnstr.	H 13085,6925 13278,6967 13337,6981 13500,7018 13627,7047 13891,7107 13928,7106 13970,7105 14011,7103
-Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14344,7003
+Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
+# 
+#: next_check_id: NEUKOELLNISCHEALLEE-2019
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/neukolln-offnung-der-grenzallee-am-24-01-
+#: by: https://www.berlin.de/senuvk/bauen/strassenbau/a100_16_ba/de/bau_los1.shtml
+#: by: https://www.berlin.de/senuvk/bauen/strassenbau/a100_16_ba/pix/los1/NKA_Sperrung_Ueplan_Fussgaenger_gr.gif
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.777571.php
+#: by: https://www.berliner-woche.de/neukoelln/c-verkehr/a100-baustelle-grenzallee-wieder-offen_a198400
+#: source_id: 2147343691
+#: XXX bis Ende 2022
+#: last_checked: 2019-01-24
+(provisorische Umfahrung)	NN 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
+# 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: last_checked: 2018-10-27 vvv
-#: next_check: 2019-12-31 vvv
+# REMOVED --- #: next_check: 2019-12-31 vvv
+#: next_check: 2019-01-24 vvv
 #: valid: 20140224-20191231
 Neuköllnische Allee	H 14344,7003 14567,6810 14724,6668
 #: valid: !20140224-20191231
@@ -2294,7 +2306,8 @@ Am Oberhafen (Neukölln)	N 13712,6656 13688,6739
 Straße 12 (Neukölln)	N 13883,6682 13881,6634 13915,6592
 #: note: Eröffnung 2011-09-08
 (Grenzallee - Britzer Hafensteg)	NN 13881,6634 13831,6588 13857,6523 13864,6415 13984,6270 13993,6221
-#: next_check_id: GRENZALLEE-2014 vvv
+# 
+#: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: next_check: 2019-12-31 vvv
 #: valid: 20140224-20191231
 Naumburger Str.	H 13278,6967 13520,6583
@@ -2302,6 +2315,7 @@ Naumburger Str.	H 13278,6967 13520,6583
 Naumburger Str.	N 13278,6967 13520,6583
 #: next_check ^^^
 #: next_check_id ^^^
+# 
 Storkower Str.	H 12709,15112 12812,15053 13110,14879 13151,14855 13438,14675 13731,14200 13879,13967 13971,13818 14006,13761 14043,13667 14060,13622 14089,13509 14109,13449 14159,13384 14218,13358 14307,13318 14502,13264 14530,13256 14630,13230 14780,13160 14871,13135 15080,13117 15090,13116 15347,13124 15515,13134
 Storkower Str. [Gewerbegebiet]	N 13731,14200 13639,14133 13715,14018 13784,13908
 Paul-Junius-Str.	N 15098,12849 15096,12974 15090,13116 15084,13276 15082,13369 15220,13377 15225,13543 15040,13602
@@ -4282,7 +4296,7 @@ Wodanstr. (Französisch Buchholz)	N 12216,21945 12162,21743
 #: also_indoor: search Königsteinbrücke
 #: last_checked: 2018-10-27 (mapillary)
 # REMOVED --- #: check_frequency: 52d
-#: next_check: 2019-01-24
+#: next_check: 2019-01-31
 #: priority: #A
 (Königsteinbrücke)	NN 13136,22397 13148,22396 13385,22383 13404,22384
 (Pankeweg)	NN 13365,22743 13321,22586 13295,22545 13290,22377 13354,22327
@@ -12803,7 +12817,8 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED (nein, keine Schilder) --- #: XXX als Bergiusstr. ausgeschildert? --- #: next_check: 2013-09-04
 (Zufahrt zur A100 und Bergiusstr.)	H 14051,6731 14106,6663
 #: next_check_id: GRENZALLEE-2014 vvv
-#: next_check: 2019-12-31 vvv
+# REMOVED --- #: next_check: 2019-12-31 vvv
+#: next_check: 2019-01-24 vvv
 #: valid: 20140224-20191231
 Bergiusstr.	H 14106,6663 14193,6556 14366,6337
 #: valid: !20140224-20191231
@@ -12813,7 +12828,8 @@ Bergiusstr.	N 14106,6663 14193,6556 14366,6337
 Bergiusstr.	N 14366,6337 14396,6298 14398,6184
 Willstätterstr.	N 14193,6556 14306,6651
 #: next_check_id: GRENZALLEE-2014 vvv
-#: next_check: 2019-12-31 vvv
+# REMOVED --- #: next_check: 2019-12-31 vvv
+#: next_check: 2019-01-24 vvv
 #: valid: 20140224-20191231
 Haberstr.	H 14366,6337 14564,6496 14639,6577 14724,6668
 #: valid: !20140224-20191231
@@ -13116,7 +13132,7 @@ Lengeder Str.	N 7481,19400 7184,19663 7105,19677 7038,19689 6792,19733 6516,1977
 Interessentenweg	N 6433,19749 6501,19956 6565,20026 6627,20045 6669,20129
 (Unterführung S-Bahn)	NN 6669,20129 6690,20157
 #: next_check_id: NEUERMAUERWEG-2018
-#: osm_watch: way id="42031978" version="12"
+#: osm_watch: way id="42031978" version="13"
 #: add_fragezeichen: Führt die offizielle Mauerweg-Beschilderung über den neuen Weg?
 #: last_checked: 2018-11-11 (mapillary)
 (Neuer Mauerweg)	NN 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8014,19149 8347,18916 8476,18773
@@ -17164,8 +17180,17 @@ Ramlerstr.	N 9309,15700 9369,15705 9474,15714 9646,15737 9666,15739 9844,15755
 Ramlerstr. [entlang der Swinemünder Brücke]	N 9666,15739 9644,15780
 Graunstr.	N 9844,15755 9907,15618 9996,15400 10018,15211
 (Parkweg Swinemünder Str.)	NN 10189,14649 10228,14564
-(Lortzingstr. - Mauerpark)	NN 10038,15418 10122,15457 10185,15487
-(Mauerpark, über den Gleimtunnel)	NN 10081,15853 10046,15844 10061,15775 10045,15754 10079,15661 10091,15630 10070,15624 10122,15457 10162,15349
+(Lortzingstr. - Mauerpark)	NN 10038,15418 10046,15421
+# 
+#: next_check_id: MAUERPARKERWEITERUNG-2019
+#: XXX Wird der alte geradlinig verlaufende Weg wieder hergestellt?
+#: last_checked: 2019-01-23
+#: check_frequency: 60d
+(Lortzingstr. - Mauerpark)	NN 10046,15421 10044,15429 10046,15430 10059,15443 10070,15471 10090,15482 10120,15484 10150,15471
+# 
+(Lortzingstr. - Mauerpark)	NN 10150,15471 10155,15473 10185,15487
+(Mauerpark, über den Gleimtunnel)	NN 10081,15853 10046,15844 10061,15775 10045,15754 10079,15661 10091,15630 10155,15473
+# REMOVED (Bauarbeiten) --- (Mauerpark, über den Gleimtunnel)	NN 10091,15630 10070,15624 10150,15471 10162,15349
 Lortzingstr. (Gesundbrunnen)	N 10038,15418 9996,15400 9898,15354
 Lortzingstr. (Gesundbrunnen)	NN 9898,15354 9853,15333 9814,15312
 Lortzingstr. (Gesundbrunnen)	N 9814,15312 9702,15251 9566,15188

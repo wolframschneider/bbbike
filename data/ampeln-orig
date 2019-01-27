@@ -7,9 +7,17 @@
 # 
 #: temporary vvv
 # 
-# REMOVED --- #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/bis-sommer-muessen-sich-autofahrer-auf-staus-und-umwege-einstellen_a197767 --- #: source_id: 2147342588 --- #: source_id: 2147343616 --- #: source_id: 2147343616 --- #: note: eigentlich zwei Ampeln, Radfahrer in Richtung Osten müssen eine Anforderung bedienen
-# REMOVED --- #: XXX vermutlich gibt es ab 2019-01-08 hier keine Ampel mehr, weil der Gleimtunnel für Autos komplett gesperrt ist, voraussichtlich bis 28. Juni 2019 --- #: last_checked: 2018-12-28 --- #: next_check: 2019-01-08 --- #: priority: #B
-# REMOVED --- #: valid: -20190108 ---	X::inwork 10130,15653
+#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/bis-sommer-muessen-sich-autofahrer-auf-staus-und-umwege-einstellen_a197767
+#: source_id: 2147342588
+#: source_id: 2147343616
+#: source_id: 2147343616
+#: note: eigentlich zwei Ampeln, Radfahrer in Richtung Osten müssen eine Anforderung bedienen
+#: XXX am 28. Juni 2019 wird voraussichtlich die Sperrung des Gleimtunnels für Autos aufgehoben, dann vermutlich auch keine Ampel mehr
+#: last_checked: 2019-01-23
+#: next_check: 2019-06-28
+#: priority: #B
+#: valid: -20190628
+	X::inwork 10130,15653
 # 
 #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/bauarbeiten-in-pilgramer-strasse_a197302
 #: XXX wo ist die genaue Position der Bauampel?
@@ -2675,7 +2683,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
-#: last_checked: 2019-01-10
+#: last_checked: 2019-01-24
 #: check_frequency: 60d
 	F::inwork 9984,12426
 # 
@@ -2807,7 +2815,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20191231 vvv
-#: next_check: 2019-12-31 vvv
+# REMOVED --- #: next_check: 2019-12-31 vvv
+#: next_check: 2019-01-24 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
 #: last_checked: 2018-10-27
 	F::inwork 14567,6810
@@ -2816,11 +2825,19 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X::inwork 14724,6668
 	X::inwork 14366,6337
 	X::inwork 14193,6556
-#: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2018-11-09
-	X::inwork 13627,7047
-	X::inwork 13278,6967
 #: next_check ^^^
+#: valid ^^^
+#: next_check_id ^^^
+# 
+#: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
+#: valid: 20140224-20191231 vvv
+#: last_checked: 2019-01-24
+	X::inwork 13278,6967
+#: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
+#: last_checked: 2019-01-24
+	X::inwork 13627,7047
+#: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren
+	X0::inwork 14011,7103
 #: valid ^^^
 #: next_check_id ^^^
 # 
@@ -3110,7 +3127,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # REMOVED --- #: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust? --- #: XXX zurzeit auch nur in Richtung Südosten Zeitverlust --- #: source_id: IM_023940 --- #: last_checked: 2015-08-10 --- #: check_frequency: 14d ---	X::inwork 14018,9118
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
-#: last_checked: 2019-01-21 vvv
+#: last_checked: 2019-01-24 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 	X::inwork 14363,8738
