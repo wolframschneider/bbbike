@@ -1277,6 +1277,8 @@ Lauinger Str.: einige Fuﬂg‰nger, nicht ganz abgesenkter Bordstein	q1 21221,11398
 Landsberger Allee - Siegfriedstr.: einige Fuﬂg‰nger	q1 16590,14386 16596,14367 16641,14329 16762,14237 16873,14236
 (Kleistpark): einige Fuﬂg‰nger	q1 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
 (Kleistpark): einige Fuﬂg‰nger	q1 7430,9576 7501,9573
+(Kleistpark): einige Fuﬂg‰nger	q1 7310,9622 7307,9528
+(Kleistpark - Grunewaldstr.): einige Fuﬂg‰nger, Bordstein/parkende Autos an der Grunewaldstr.	q3 7307,9528 7299,9346
 (Kleistpark): einige Fuﬂg‰nger, Bordstein	q2 7501,9573 7512,9572
 (Blockdammweg - Trautenauer Str.): Rampe	q2 17904,8924 17888,8899 17910,8881
 (Weg 1 im KGA Hochspannung): Rampe, enge Radien	q3 18182,9623 18165,9627 18164,9623
@@ -1820,6 +1822,7 @@ F‰rberstr. [Wohngebiet]: enge Straﬂe, einige Fuﬂg‰nger auf der Fahrbahn	q1 21622
 F‰rberstr. [Wohngebiet]: enge Straﬂe, einige Fuﬂg‰nger auf der Fahrbahn, Bordstein	q3 21643,5020 21665,5035
 (Ottomar-Geschke-Str. - F‰rberstr.): enge Straﬂe, Kita	q1 21565,5046 21590,5010 21631,4991
 Pappelweg: eng	q4 17842,20065 18042,20612 18061,20715
+Siegfried-Hirschmann-Park: einige Fuﬂg‰nger	q3 14676,11572 14714,11549 14745,11487 14684,11456
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schulhof, Radfahren verboten	q4 7242,8586 7288,8635

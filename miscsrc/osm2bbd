@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018 Slaven Rezic. All rights reserved.
+# Copyright (C) 2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,7 +16,7 @@ use FindBin;
 use lib "$FindBin::RealBin/..";
 
 use vars qw($VERSION);
-$VERSION = '0.32';
+$VERSION = '0.35';
 
 use Cwd qw(getcwd realpath);
 use Data::Dumper;
@@ -80,6 +80,7 @@ my $use_height_db = 0;
 my $no_create;
 my $git_id = "";
 my $handle_relations = 1;
+my $do_fingerprint;
 
 my %experiments;
 my %known_experiments = map {($_,1)} qw(add_postal_code coastline_hack polar_coord_hack handle_relations);
@@ -122,6 +123,7 @@ osmfile ...       Files downloaded by downloadosm,
 --granularity=<100|10_000>	  granularity
 -no-handle-relations Skip parsing and handling relations
                      (e.g. for memory reasons)
+-fingerprint-only Print fingerprint from commandline and input files contents and exit
 -version          Show version and exit
 EOF
 }
@@ -163,15 +165,13 @@ EOF
 	       }
 	       $experiments{$exp}++;
 	   },
+	   'fingerprint-only' => \$do_fingerprint,
 	   'version' => sub {
 	       print basename($0) . " $VERSION\n";
 	       exit 0;
 	   },
 	  )
     or die usage;
-
-init_height_db($height_db_file)
-    if $height_db_file;
 
 my @osm_files = @ARGV;
 if (!@osm_files) {
@@ -190,6 +190,13 @@ EOF
 if (!($granularity == 100 || $granularity == 10_000)) {
     die "Invalid value for granularity '$granularity'\n"; 
 }
+
+if ($do_fingerprint) {
+    fingerprint_and_exit();
+}
+
+init_height_db($height_db_file)
+    if $height_db_file;
 
 my $newest_mtime = max map { (stat($_))[9] } @osm_files;
 
@@ -1134,13 +1141,14 @@ for my $osm_file (@osm_files) {
 
 	    my $name   = bbd_chomp($tag{'name'}) || '';
 	    my $height = exists $tag{'height'} ? $tag{'height'} : $tag{'ele'};
+	    my($ref, $ref_is_consumed);
+	    my @aliases_strassen;
 
 	    if (exists $tag{'ref'}) {
-		my $ref = $tag{'ref'};
+		$ref = $tag{'ref'};
 		if (!$name) {
 		    $name = $ref;
-		} elsif ($ref ne $name) {
-		    $name .= " ($ref)";
+		    $ref_is_consumed = 1;
 		}
 	    }
 
@@ -1301,7 +1309,22 @@ for my $osm_file (@osm_files) {
 		}
 	    };
 
+	    my $maybe_add_ref_to_name = sub {
+		if (!$ref_is_consumed && defined $ref && $name ne $ref) {
+		    $name .= " ($ref)";
+		    $ref_is_consumed = 1;
+		}
+	    };
+
+	    my $maybe_add_ref_to_aliases = sub {
+		if (!$ref_is_consumed && defined $ref && $name ne $ref) {
+		    push @aliases_strassen, $ref;
+		    $ref_is_consumed = 1;
+		}
+	    };
+
 	    my $adjust_bab_name = sub {
+		$maybe_add_ref_to_name->();
 		if ($country eq 'de') {
 		    $name =~ s{\bA\s*(\d+)}{BAB$1};
 		}
@@ -1407,14 +1430,18 @@ for my $osm_file (@osm_files) {
 		    if (defined $bicycle_tag) {
 			if ($bicycle_tag =~ m{^(yes|designated|official)$}) {
 			    $set_handicap->('q1', $label . ($lang eq 'en' ? ', cycling allowed' : ', Radfahren erlaubt'));
-			} elsif ($bicycle_tag eq 'permissive') {
+			} elsif ($bicycle_tag eq 'destination') {
+			    $set_handicap->('q1', $label . ($lang eq 'en' ? ', cycling to destination allowed' : ', Radfahren für Anlieger erlaubt'));
+			} elsif ($bicycle_tag =~ m{^(permissive|tolerated)$}) { # XXX however, "tolerated" is not documented in https://wiki.openstreetmap.org/wiki/Bicycle --- maybe should be fixed in data?
 			    $set_handicap->('q2', $label . ($lang eq 'en' ? ', cycling permissive' : ', Radfahren geduldet'));
 			} elsif ($bicycle_tag eq 'no') {
 			    $set_handicap->('q4', $label . ($lang eq 'en' ? ', cycling not allowed' : ', Radfahren nicht erlaubt, ggfs. schieben'));
 			} elsif ($bicycle_tag eq 'dismount') {
 			    # Already handled above
+			} elsif ($bicycle_tag eq 'private' && $gesperrt_seen) {
+			    # probably already handled if there was an access tag before
 			} else {
-			    warn "Found unhandled bicycle=$bicycle_tag together with $highway_cat...\n";
+			    warn "Found unhandled bicycle=$bicycle_tag together with $highway_cat in way '$id'\n";
 			}
 		    } else {
 			my $cat = $highway_cat eq 'footway' ? 'q3' : 'q4'; # unklare Situation für Radfahrer
@@ -1467,10 +1494,12 @@ for my $osm_file (@osm_files) {
 		    $unhandled{"highway=$highway_cat"}++;
 		}
 
+		$maybe_add_ref_to_aliases->();
+
 		my $access = $tag{'access'};
 		if ($access && $access =~ m{^(?:no|private)$}) {
 		    my $bicycle = $tag{'bicycle'};
-		    if ($bicycle && $bicycle =~ m{^(yes|designated|permissive)$}) {
+		    if ($bicycle && $bicycle =~ m{^(yes|designated|official|permissive|tolerated)$}) {
 			if (!$gesperrt_car_seen) {
 			    push @or, ["gesperrt_car", 2]; $gesperrt_car_seen = 1;
 			}
@@ -1638,7 +1667,7 @@ for my $osm_file (@osm_files) {
 			}
 		    } else {
 			if ($debug) {
-			    warn "Cannot handle incline value '$incline'\n";
+			    warn "Cannot handle incline value '$incline' in way '$id'\n";
 			}
 		    }
 		}
@@ -1888,6 +1917,12 @@ for my $osm_file (@osm_files) {
 		    push @{$out{$out_file}}, ["#: next_check: $tag{opening_date}"];
 		}
 
+		if ($out_file eq 'strassen') {
+		    for my $alias (@aliases_strassen) {
+			push @{$out{$out_file}}, ["#: alias: $alias"];
+		    }
+		}
+
 		if ((exists $tag{'width'} || exists $tag{'est_width'}) && $out_file eq 'strassen') {
 		    my $w = $tag{'width'} || $tag{'est_width'};
 		    if ($w =~ m{^([\d\.]+)(?:$|\s*m)}) {
@@ -2003,32 +2038,43 @@ if ($handle_relations) {
 		    for my $member (@members) {
 			push @or, ['_boundary', 'Z'.$admin_level, $member];
 		    }
-		} elsif ($tag{type} eq 'multipolygon' &&
-			 (
-			  ($tag{waterway} && $tag{waterway} eq 'riverbank') ||
-			  ($tag{natural} && $tag{natural} eq 'water')
-			 )
-			) {
-		    my $new_members = process_multipolygon(\@members, $id);
-		    my @islands_or;
-		    my @waters_or;
-		    for my $member (@$new_members) {
-			my $role = $member->{role} || '';
-			if ($role eq 'inner') {
-			    push @islands_or, ['wasserstrassen', 'F:I', $member, name => '']; # explicitely reset name (it's valid for the water only)
-			} elsif ($role eq 'outer') {
-			    push @waters_or, ['wasserstrassen', 'F:W', $member];
-			}
+		} else {
+		    my $type = $tag{type};
+		    if (!defined $type) {
+			# XXX https://wiki.openstreetmap.org/wiki/DE:Relationen
+			# suggests that every relation has a type. However this suggestion
+			# is missing in the English variant and on
+			# https://wiki.openstreetmap.org/wiki/Types_of_relation
+			warn "relation without type in relation $id\n";
+			$type = "";
 		    }
-		    # order is important here!
-		    push @or, @waters_or, @islands_or;
-		} elsif ($tag{type} eq 'multipolygon' && ($tag{landuse}||'') eq 'forest') {
-		    # XXX A very rough solution: ignore the "holes" (inner members), because
-		    #     BBBike cannot represent them (except for waterways & islands)
-		    my $new_members = process_multipolygon(\@members, $id);
-		    for my $member (@$new_members) {
-			if (($member->{role}||'') eq 'outer') {
-			    push @or, ["flaechen", "F:Forest", $member];
+		    if ($type eq 'multipolygon' &&
+			(
+			 ($tag{waterway} && $tag{waterway} eq 'riverbank') ||
+			 ($tag{natural} && $tag{natural} eq 'water')
+			)
+		       ) {
+			my $new_members = process_multipolygon(\@members, $id);
+			my @islands_or;
+			my @waters_or;
+			for my $member (@$new_members) {
+			    my $role = $member->{role} || '';
+			    if ($role eq 'inner') {
+				push @islands_or, ['wasserstrassen', 'F:I', $member, name => '']; # explicitely reset name (it's valid for the water only)
+			    } elsif ($role eq 'outer') {
+				push @waters_or, ['wasserstrassen', 'F:W', $member];
+			    }
+			}
+			# order is important here!
+			push @or, @waters_or, @islands_or;
+		    } elsif ($type eq 'multipolygon' && ($tag{landuse}||'') eq 'forest') {
+			# XXX A very rough solution: ignore the "holes" (inner members), because
+			#     BBBike cannot represent them (except for waterways & islands)
+			my $new_members = process_multipolygon(\@members, $id);
+			for my $member (@$new_members) {
+			    if (($member->{role}||'') eq 'outer') {
+				push @or, ["flaechen", "F:Forest", $member];
+			    }
 			}
 		    }
 		}
@@ -2659,6 +2705,20 @@ sub get_bounds_from_osm_file {
     @bbox;
 }
 
+sub fingerprint_and_exit {
+    require Digest::MD5;
+    my $dig = Digest::MD5->new;
+    for my $f (@osm_files, (defined $height_db_file ? $height_db_file : ())) {
+	open my $fh, $f
+	    or die "Can't open $f: $!";
+	binmode $fh;
+	$dig->addfile($fh);
+    }
+    $dig->add(join("\0", @commandline));
+    print $dig->hexdigest;
+    exit 0;
+}
+
 # REPO BEGIN
 # REPO NAME is_interactive /home/e/eserte/work/srezic-repository 
 # REPO MD5 87e9e2500fbe4a3ffe5f977de8513d47
@@ -2766,10 +2826,8 @@ sub currmem {
     sub pick_one {
 	my($self) = @_;
 	my $ends = $self->{ends};
-	keys %$ends; # reset iterator
-	my($node, $v) = each %$ends;
-	keys %$v; # reset iterator
-	my(undef, $member) = each %$v;
+	my($node, $v) = _pick_hash_elem($ends);
+	my(undef, $member) = _pick_hash_elem($v);
 	$member;
     }
 
@@ -2779,7 +2837,7 @@ sub currmem {
 	if (!$ends->{$node} || !keys %{ $ends->{$node} }) {
 	    return undef;
 	}
-	my($member_key, $member) = each %{ $ends->{$node} };
+	my($member_key, $member) = _pick_hash_elem($ends->{$node});
 	return $member;
     }
 
@@ -2789,6 +2847,13 @@ sub currmem {
   	if (!keys %{ $ends->{$node} }) {
 	    delete $ends->{$node};
 	}
+    }
+
+    sub _pick_hash_elem {
+	my($hashref) = @_;
+	my($k,$v) = each %$hashref;
+	keys %$hashref; # reset iterator
+	($k,$v);
     }
 }
 

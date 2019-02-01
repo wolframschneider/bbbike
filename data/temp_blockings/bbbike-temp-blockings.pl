@@ -16680,7 +16680,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014394',
        data  => <<EOF,
-	q4::temp 7201,8870 7101,9027 7035,9161 7012,9222 7001,9291 7118,9315 7202,9329 7418,9366 7471,9360
+	q4::temp 7201,8870 7101,9027 7035,9161 7012,9222 7001,9291 7118,9315 7202,9329 7299,9346 7418,9366 7471,9360
 EOF
      },
      { from  => 1255644000, # 2009-10-16 00:00
@@ -21873,9 +21873,11 @@ EOF
 		},
        recurring => 1,
        data  => <<EOF,
+#: note: aber der Zugang zur Grunewaldstr. ist immer offen
 #: tempex: YYYY0316-YYYY1014 T21-T06, YYYY1015-YYYY0315 T18-T06 vvv
 Kleistpark	2::night 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
 Kleistpark	2::night 7430,9576 7501,9573 7512,9572
+Kleistpark	2::night 7310,9622 7307,9528
 #: tempex ^^^
 EOF
      },
@@ -24004,7 +24006,7 @@ EOF
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2019-01-20
+#: last_checked: 2019-01-28
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -26514,6 +26516,7 @@ EOF
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729460.php
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte des Jahres 2019)
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/baustellen-in-carstenn-und-feuerbachstrasse-nicht-fertig_a196939
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.776977.php
 #: source_id: 2147342671
 #: source_id: 2147342861
 #: source_id: 2147342860
@@ -26806,7 +26809,7 @@ EOF
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-01-16 vvv
+#: last_checked: 2019-01-28 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27472,7 +27475,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-01-18
+#: last_checked: 2019-01-25
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
 EOF
      },
@@ -27671,6 +27674,7 @@ EOF
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47885
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte 2019)
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/baustellen-in-carstenn-und-feuerbachstrasse-nicht-fertig_a196939
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.776977.php
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: also_indoor: traffic
@@ -28504,6 +28508,7 @@ EOF
        text  => 'Berliner Str.: Bauarbeiten zwischen Konstanzer Str. und Barstr., Fahrbahn Richtung Osten gesperrt, eventuell sind auch Radfahrer betroffen, bis Juni 2019',
        type  => 'handicap',
        data  => <<EOF,
+#: note: bei fritz allerdings "nur eine freie Spur", keine Sperrungen
 #: source_id: 2147343527
 	q4::inwork; 3952,8980 4006,8967 4181,8933 4324,8899
 EOF
@@ -28529,7 +28534,7 @@ EOF
        text  => 'Spreebogenpark: wegen Abbrucharbeiten an der ehemaligen Umfahrung der Schweizer Botschaft ist der Weg zwischen Gustav-Heinemann-Brücke und Bundeskanzleramt gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2018-12-28
+#: last_checked: 2019-01-28
 #: priority: #A
 	2::inwork 8124,12840 8120,12756
 EOF
@@ -28552,6 +28557,15 @@ EOF
 #: last_checked: 2019-01-16
 #: check_frequency: 30d
 	2::inwork 8103,13675 8169,13705
+EOF
+     },
+     { from  => 1548630000, # 2019-01-28 00:00
+       until => 1550012399, # 2019-02-12 23:59
+       text  => 'Rapsweg: Sperrung an der Kreuzung Blumberger Damm, eventuell sind auch Radfahrer betroffen, vom 29. Januar 2019 bis voraussichtlich zum 12. Februar 2019',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.779447.php',
+       data  => <<EOF,
+	2::inwork 21168,12794 21251,12767
 EOF
      },
     );

@@ -569,7 +569,9 @@ Hildegard-Marcusson-Str.	N 16004,10204 15990,10185 15952,10134 15874,10025 15840
 (Hildegard-Marcusson-Str. - Uferweg)	NN 15840,9980 15811,9957 15786,9957
 Marktstr. (Rummelsburg)	H 15279,10862 15144,10905 15113,10916 15085,10956 15060,11006 14988,11130
 #: note: bei luise-berlin wird fälschlicherweise suggeriert, dass die Boxhagener an der Neuen Bahnhofstraße endet
-Boxhagener Str.	H 14988,11130 14918,11249 14799,11330 14771,11345 14752,11369 14639,11512 14577,11582 14561,11600 14513,11657 14461,11738 14416,11815 14306,11889 14161,11930 14045,11965 13745,12118
+Boxhagener Str.	H 14988,11130 14918,11249 14799,11330 14771,11345 14752,11369 14684,11456 14639,11512 14570,11589 14561,11600 14513,11657 14461,11738 14416,11815 14306,11889 14161,11930 14045,11965 13745,12118
+#: note: Benennung sollte zum 2017-07-01 wirksam werden
+Siegfried-Hirschmann-Park	NN 14676,11572 14714,11549 14745,11487 14684,11456
 Wühlischstr.	H 14771,11345 14759,11339 14737,11347 14674,11370 14575,11407 14460,11455 14434,11465 14369,11489 14305,11514 14211,11552 14065,11605 13996,11631 13954,11647
 Kopernikusstr. (Friedrichshain)	H 13954,11647 13895,11663 13651,11731
 Kopernikusstr. (Friedrichshain)	N 13651,11731 13467,11778
@@ -655,7 +657,7 @@ Hauptstr. (Schöneberg, Friedenau)	HH 7471,9360 7388,9199 7382,9187 7363,9152 735
 Hauptstr. (Schöneberg, Friedenau)	HH 6460,8093 6409,8026
 Hauptstr. (Schöneberg, Friedenau)	HH 6409,8026 6388,7999 6333,7927 6307,7893 6273,7849 6209,7765 6144,7677 6082,7594 5955,7420 5923,7374 5897,7337
 Akazienstr. (Schöneberg)	N 7201,8870 7101,9027 7035,9161 7012,9222 7001,9291
-Grunewaldstr. (Schöneberg)	H 7471,9360 7418,9366 7202,9329 7118,9315 7001,9291 6917,9274 6861,9263 6709,9234 6568,9211 6440,9192 6361,9175 6264,9156 6152,9136 6059,9118 5974,9100 5895,9083
+Grunewaldstr. (Schöneberg)	H 7471,9360 7418,9366 7299,9346 7202,9329 7118,9315 7001,9291 6917,9274 6861,9263 6709,9234 6568,9211 6440,9192 6361,9175 6264,9156 6152,9136 6059,9118 5974,9100 5895,9083
 Goltzstr. (Schöneberg)	N 7001,9291 7002,9526 7028,9678 7049,9833 7038,10088
 #: carriageway_width: 15m (Höhe Martin-Luther-Str., in Höhe Kalckreuthstr. 12m)
 Fuggerstr.	N 6719,10347 6628,10318 6487,10277 6256,10309 6128,10319
@@ -916,7 +918,7 @@ Sybelstr.	N 3712,10566 3614,10564 3505,10560 3388,10559 3108,10548
 Meyerinckplatz	N 3997,10607 3981,10590 4007,10559 4030,10575
 Lewishamstr.	H 3835,10352 3813,10435 3777,10513 3744,10577 3644,10759 3623,10800 3592,10869 3546,10962
 Konstanzer Str.	H 4219,10279 4183,10144 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648 4011,9474 3983,9343 3954,9249 3915,9120 3919,9085 3952,8980
-Brandenburgische Str. (Wilmersdorf)	H 4777,8870 4701,8941 4609,9027 4462,9166 4396,9237 4377,9258 4342,9301 4246,9406 4057,9648 3980,9761 3974,9774 3949,9842 3927,9935 3902,10043 3874,10153 3852,10236 3835,10352
+Brandenburgische Str. (Wilmersdorf)	H 4777,8870 4701,8941 4609,9027 4462,9166 4396,9237 4377,9258 4342,9301 4246,9406 4057,9648 3980,9761 3974,9774 3953,9831 3949,9842 3927,9935 3902,10043 3874,10153 3852,10236 3835,10352
 Paulsborner Str.	H 2384,8848 2449,8902 2568,9010 2674,9111 2708,9144 2829,9259 2947,9367 2998,9408 3127,9522 3220,9598 3340,9700 3427,9771 3469,9807 3587,9905 3605,9929 3701,10047 3741,10097 3852,10236
 Schweidnitzer Str.	N 3225,9844 3220,9598
 Warmbrunner Str.	NN 3158,8763 3110,8764
@@ -2161,18 +2163,18 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/a100-baustelle-grenzallee-wieder-offen_a198400
 #: source_id: 2147343691
 #: XXX bis Ende 2022
-#: last_checked: 2019-01-24
+#: last_checked: 2019-01-25
+#: next_check: 2019-12-31
 (provisorische Umfahrung)	NN 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2018-10-27 vvv
-# REMOVED --- #: next_check: 2019-12-31 vvv
-#: next_check: 2019-01-24 vvv
+#: last_checked: 2019-01-25 vvv
+#: check_frequency: 14d vvv
 #: valid: 20140224-20191231
 Neuköllnische Allee	H 14344,7003 14567,6810 14724,6668
 #: valid: !20140224-20191231
 Neuköllnische Allee	N 14344,7003 14567,6810 14724,6668
-#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
 Neuköllnische Allee	N 14724,6668 14853,6550 15026,6391 15135,6291 15190,6243 15300,6148 15332,6138 15396,6125
@@ -2308,12 +2310,14 @@ Straße 12 (Neukölln)	N 13883,6682 13881,6634 13915,6592
 (Grenzallee - Britzer Hafensteg)	NN 13881,6634 13831,6588 13857,6523 13864,6415 13984,6270 13993,6221
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
+#: last_checked: 2019-01-25 vvv
 #: next_check: 2019-12-31 vvv
 #: valid: 20140224-20191231
 Naumburger Str.	H 13278,6967 13520,6583
 #: valid: !20140224-20191231
 Naumburger Str.	N 13278,6967 13520,6583
 #: next_check ^^^
+#: last_checked ^^^
 #: next_check_id ^^^
 # 
 Storkower Str.	H 12709,15112 12812,15053 13110,14879 13151,14855 13438,14675 13731,14200 13879,13967 13971,13818 14006,13761 14043,13667 14060,13622 14089,13509 14109,13449 14159,13384 14218,13358 14307,13318 14502,13264 14530,13256 14630,13230 14780,13160 14871,13135 15080,13117 15090,13116 15347,13124 15515,13134
@@ -4291,12 +4295,13 @@ Wodanstr. (Französisch Buchholz)	N 12216,21945 12162,21743
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4781
 #: by: https://www.berliner-woche.de/blankenburg/c-verkehr/behelfsbruecke-bitte-bauen_a164843
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/gremien/beiraete/bestaetigtes-protokoll-fahrrat_05-12-2017.pdf (Baubeginn Mitte 2018, Dauer 1,5 Jahre)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/gremien/beiraete/bestaetigtes-protokoll-fahrrat-29-05-2018.pdf (Baumaßnahme beginnt 2019, Dauer 18 Monate)
 #: XXX erste Planung: Sperrung in der Zeit vom 24. November 2017 bis zum 30. Mai 2019
 #: osm_watch: way id="16307526" version="11"
 #: also_indoor: search Königsteinbrücke
 #: last_checked: 2018-10-27 (mapillary)
 # REMOVED --- #: check_frequency: 52d
-#: next_check: 2019-01-31
+#: next_check: 2019-02-07
 #: priority: #A
 (Königsteinbrücke)	NN 13136,22397 13148,22396 13385,22383 13404,22384
 (Pankeweg)	NN 13365,22743 13321,22586 13295,22545 13290,22377 13354,22327
@@ -5398,6 +5403,9 @@ Cajamarcaplatz	NN 17728,5756 17713,5728 17730,5698 17782,5698
 (Fußgängertunnel S-Bhf. Schöneweide)	NN 17730,5698 17639,5612
 #: next_check_id: SCHOENEWEIDE-2018
 #: XXX evtl. verschwindet dieser Zugang erst, wenn die Straßenbahn verlegt ist?
+#: XXX weitere Änderungen: durchgängige Radspuren in der Michael-Brückner-Str. stadtauswärts; durchgängige Radspuren im Sterndamm unter der Brücke; Linksabbiegemöglichkeit Michael-Brückner-Str. -> Sterndamm ...
+#: by: https://www.uvp-verbund.de/trefferanzeige?docuuid=8F65755E-26C7-45A4-878D-BE88BA12B4B3&plugid=/ingrid-group:ige-iplug-be&docid=8F65755E-26C7-45A4-878D-BE88BA12B4B3
+#: by: https://www.uvp-verbund.de/documents/ingrid-group_ige-iplug-be/3A22FF18-9B17-4F51-B470-2F50F0C68929/U05-1_Lageplan_29270.pdf
 #: osm_watch: way id="226163591" version="2"
 #: last_checked: 2018-11-03
 #: check_frequency: 120d
@@ -7397,8 +7405,10 @@ Edelhofdamm	H 3446,25628 3277,25575
 Enkircher Str.	N 3490,24887 3542,24953 3556,24994 3550,25046 3518,25086 3485,25112 3460,25132 3314,25243 3285,25274 3225,25374 3185,25437
 Enkircher Str.	H 3185,25437 3166,25496
 Oppenheimer Weg	N 3485,25112 3484,25139 3469,25206 3441,25280 3416,25311 3387,25331 3266,25374 3225,25374
-(Am Rosenanger - Am Sandkrug, Entenschnabel)	N 3472,24709 3481,24686
-(Am Rosenanger - Am Sandkrug, Entenschnabel)	NN 3481,24686 3514,24652 3535,24626
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_04_0705_0832_online.pdf
+#: oldname: -20190125: Straße 114A
+Silvestersteig	N 3472,24709 3481,24686
+(Am Rosenanger/Silvestersteig - Am Sandkrug, Entenschnabel)	NN 3481,24686 3514,24652 3535,24626
 Oranienburger Chaussee	HH 3827,24622 3820,24654 3809,24702 3801,24736 3791,24783 3767,24887 3754,24946 3711,25100 3606,25288 3551,25387 3459,25595 3456,25601 3446,25628 3415,25731 3348,25902 3271,26067 3145,26256 3124,26288 3013,26458 2842,26710 2666,27009 2345,27670 2178,28067 2150,28127
 Streitstr.	H -3040,16246 -3050,16429 -3046,16548 -3043,16601 -3042,16609 -3031,16807 -3029,16823 -3023,16925 -3018,16974 -3017,16984 -3009,17090 -3006,17128 -2959,17507 -2934,17594
 Rauchstr. (Hakenfelde)	H -3009,17090 -2908,17072 -2728,17038 -2667,17026 -2563,17004 -2414,16975 -2295,16951 -2234,16939 -2149,16921
@@ -11794,7 +11804,7 @@ Moritzstr. (Kreuzberg)	N 10633,10369 10433,10456
 Lebuser Str.	NH 12352,12509 12355,12541 12359,12592 12384,12718
 Scharnweberstr. (Friedrichshain)	N 14354,12012 14468,11992 14589,11975 14675,11964 14783,11949 14887,11929
 Scharnweberstr. (Friedrichshain)	NH 14887,11929 14965,11921 15080,11905 15121,11899 15248,11880
-Weserstr. (Friedrichshain)	N 14416,11815 14475,11778 14550,11732 14622,11685 14645,11670 14710,11626 14764,11591 14849,11539 14949,11474 15016,11431
+Weserstr. (Friedrichshain)	N 14416,11815 14475,11778 14550,11732 14622,11685 14651,11666 14710,11626 14764,11591 14849,11539 14949,11474 15016,11431
 # REMOVED (vermutlich ja) --- #: note: "Schreibfederpassage" (by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=6033) --- #: XXX wird diese Passage dauerhaft gesperrt werden? --- #: last_checked: 2018-12-22 --- (Weserstr. - Boxhagener Str.)	NN 14949,11474 14838,11410 14792,11391 14752,11369
 Caroline-Herschel-Platz	NN 14752,11369 14737,11347
 Gryphiusstr.	N 14369,11287 14395,11356 14434,11465 14496,11620 14513,11657 14550,11732
@@ -12817,24 +12827,26 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED (nein, keine Schilder) --- #: XXX als Bergiusstr. ausgeschildert? --- #: next_check: 2013-09-04
 (Zufahrt zur A100 und Bergiusstr.)	H 14051,6731 14106,6663
 #: next_check_id: GRENZALLEE-2014 vvv
-# REMOVED --- #: next_check: 2019-12-31 vvv
-#: next_check: 2019-01-24 vvv
+#: last_checked: 2019-01-25 vvv
+#: check_frequency: 14d vvv
 #: valid: 20140224-20191231
 Bergiusstr.	H 14106,6663 14193,6556 14366,6337
 #: valid: !20140224-20191231
 Bergiusstr.	N 14106,6663 14193,6556 14366,6337
-#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 #: next_check_id ^^^
 Bergiusstr.	N 14366,6337 14396,6298 14398,6184
 Willstätterstr.	N 14193,6556 14306,6651
 #: next_check_id: GRENZALLEE-2014 vvv
-# REMOVED --- #: next_check: 2019-12-31 vvv
-#: next_check: 2019-01-24 vvv
+#: last_checked: 2019-01-25 vvv
+#: check_frequency: 14d vvv
 #: valid: 20140224-20191231
 Haberstr.	H 14366,6337 14564,6496 14639,6577 14724,6668
 #: valid: !20140224-20191231
 Haberstr.	N 14366,6337 14564,6496 14639,6577 14724,6668
-#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 #: next_check_id ^^^
 Nobelstr.	N 14133,6187 14398,6184 14784,6169 14961,6162 15144,6160
 Boschweg	N 14784,6169 14788,6261 14760,6319 14564,6496
@@ -13209,7 +13221,7 @@ Salzburger Str.	N 6367,8804 6292,8899 6281,8914 6214,9003 6147,9100
 Meraner Str.	N 6076,9091 6042,8917 6032,8870 6020,8809 6017,8751 6014,8680 6012,8632 6006,8478
 Freiherr-vom-Stein-Str. (Schöneberg)	NN 6477,8654 6454,8653
 Freiherr-vom-Stein-Str. (Schöneberg)	N 6454,8653 6313,8638 6230,8602 6123,8546 6006,8478 5913,8415
-Holteistr.	NH 14710,11626 14639,11512 14575,11407
+Holteistr.	NH 14710,11626 14676,11572 14639,11512 14575,11407
 Holteistr.	N 14575,11407 14535,11327 14506,11275 14468,11203
 Weichselstr. (Friedrichshain)	NH 14710,11626 14794,11770 14802,11784 14835,11840 14887,11929
 Weichselstr. (Friedrichshain)	N 14887,11929 14926,12129
@@ -14102,7 +14114,7 @@ Brockenstr.	N 13575,8593 13687,8734
 Sinsheimer Weg	N 13687,8734 13774,8849 13837,8932
 Burgherrenstr.	N 9076,8783 8972,8643
 Finowstr. (Friedrichshain)	N 14622,11685 14708,11820 14783,11949 14836,12045 14854,12137
-Glatzer Str.	N 14577,11582 14645,11670
+Glatzer Str.	N 14570,11589 14651,11666
 Müggelstr.	N 14764,11591 14837,11706
 Müggelstr.	NN 14837,11706 14856,11740
 Müggelstr.	N 14897,11801 14965,11921 14994,12064
@@ -14624,6 +14636,7 @@ Togostr.	N 5531,16734 5315,16936
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/426_2018_zu_ds_-1118_v_neue_strassennamen_im_afrikanischen_viertel.pdf
 #: by: https://www.tagesspiegel.de/berlin/bezirke/spandau/berlin-mitte-neue-strassennamen-fuers-afrikanische-viertel-gefunden/21163352.html
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8959 ("Manga-Bell-Platz")
+#: osm_watch: way id="333607502" version="6"
 #: last_checked: 2018-12-28
 # REMOVED --- #: next_check: 2019-01-01
 Nachtigalplatz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,16803 5561,16767 5531,16734 5496,16696 5533,16662
@@ -14747,6 +14760,8 @@ Elßholzstr.	N 7202,9329 7209,9507 7216,9657 7223,9815
 (Gleditschstr. - Elßholzstr.)	NN 7122,9517 7158,9509 7209,9507
 (Kleistpark)	NN 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
 (Kleistpark)	NN 7430,9576 7501,9573 7512,9572
+(Kleistpark)	NN 7310,9622 7307,9528
+(Kleistpark - Grunewaldstr.)	NN 7307,9528 7299,9346
 Reuchlinstr.	N 4985,13470 4964,13319 4926,13207
 Berlichingenstr.	N 4985,13470 4972,13804 4963,13969
 Schwarzspechtweg	N -1787,19341 -1954,19348 -2053,19352 -2173,19357 -2231,19360
@@ -15078,6 +15093,7 @@ Am Hamburger Bahnhof	N 8025,13835 7997,13892
 (Am Hamburger Bahnhof - Uferweg)	NN 8103,13675 8169,13705
 (am 50hertz-Gebäude)	N 8059,13551 8141,13580
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_02_0441_0548_online.pdf (Widmung)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_04_0705_0832_online.pdf (Ergänzung der Widmung)
 (Uferweg am Berlin-Spandauer Schiffahrtskanal)	NN 8295,13531 8290,13538 8224,13634 8169,13705 8131,13770 8057,13923
 Promenade am Berlin-Spandauer Schiffahrtskanal	NN 8332,13548 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096 7994,14102 7967,14161 7973,14195 7804,14445 7787,14473 7753,14528 7733,14570
 (Am Invalidenfriedhof - Scharnhorststr.)	NN 8096,13951 8200,14016
@@ -17183,7 +17199,11 @@ Graunstr.	N 9844,15755 9907,15618 9996,15400 10018,15211
 (Lortzingstr. - Mauerpark)	NN 10038,15418 10046,15421
 # 
 #: next_check_id: MAUERPARKERWEITERUNG-2019
-#: XXX Wird der alte geradlinig verlaufende Weg wieder hergestellt?
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/aktuelles/artikel.601949.php
+#: by: https://www.bbs-landscape.com/projekte/mauerpark-berlin-mitte/
+#: by: https://gruen-berlin.de/projekt/mauerpark (Steinkreis)
+#: by: https://gruen-berlin.de/sites/default/files/gruenberlinmagazin_herbst-winter_2018.pdf (mit Plan, Umsetzung bis 2020)
+#: XXX Wie werden die Wege nach den Bauarbeiten aussehen? Wird es auch einen neuen (asphaltierten?) Radweg zwischen Bernauer und Gleimtunnel geben?
 #: last_checked: 2019-01-23
 #: check_frequency: 60d
 (Lortzingstr. - Mauerpark)	NN 10046,15421 10044,15429 10046,15430 10059,15443 10070,15471 10090,15482 10120,15484 10150,15471

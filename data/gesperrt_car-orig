@@ -34,10 +34,10 @@ Hagelberger Str.	3 8679,9544 8774,9534 8777,9601
 Hagelberger Str.	3 8679,9544 8774,9534 9000,9509
 Hagelberger Str.	3 8679,9544 8774,9534 8769,9295
 Warschauer - Marchlewskistr.	3 13476,11174 13493,11217 13541,11355 13496,11384
-Holtei von S - Boxhagener	3 14575,11407 14639,11512 14577,11582
-Boxhagener von W - Holtei	3 14577,11582 14639,11512 14710,11626
-Holtei von N - Boxhagener	3 14710,11626 14639,11512 14752,11369
-Boxhagener von E - Holtei	3 14752,11369 14639,11512 14575,11407
+Holtei von S - Boxhagener	3 14575,11407 14639,11512 14570,11589
+Boxhagener von W - Holtei	3 14570,11589 14639,11512 14676,11572 14710,11626
+Holtei von N - Boxhagener	3 14710,11626 14676,11572 14639,11512 14684,11456 14752,11369
+Boxhagener von E - Holtei	3 14752,11369 14684,11456 14639,11512 14575,11407
 Bachstr. - 17. Juni (?)	3 5790,12026 5775,11975 5758,11895 5810,11902 5900,11913
 Fasanen - Hertzallee (nur für BVG frei)	3 5456,11742 5356,11512 5352,11502 5587,11397
 Fasanenstr.	1 5192,10241 5196,10398
@@ -888,6 +888,7 @@ Seestr. (Bad Saarow): Poller	3 * 54681,-11900 *
 Halenseestr.	1 1928,10728 1961,10646 2086,10552 2104,10494 2076,10357 2069,10330 2082,10280 2218,10067
 Küstriner Str.: Barrieren	3 16123,15025 16211,15105 *
 Frankfurter Allee	3nocross 17151,11801 17251,11789 17440,11774
+#: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksamt/protokolle/2018/protokoll-vom-23-10-2018.pdf (keine versenkbaren Poller mehr)
 Ehrensfelsstr.: Durchfahrt verboten	3 * 18778,8663 *
 Buggenhagenstr.	1 14425,13780 14371,13619
 Tassostr.	1 13677,16281 13645,16192 13654,16152 13642,16118 13625,16054 13614,15984 13623,15954
@@ -1229,6 +1230,9 @@ Carmerstr.	1 5088,11322 4916,11083
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.778087.php
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.778095.php
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/allende-bruecke-wird-dicht-gemacht_a198472
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.778426.php
+#: by: https://www.berliner-woche.de/koepenick/c-verkehr/marode-salvador-allende-bruecke-komplett-gesperrt_a198562
+#: by: http://www.abendblatt-berlin.de/2019/01/24/salvador-allende-bruecke-in-koepenick-ist-gesperrt/
 #: XXX voraussichtlich bis Ende 2019
 #: next_check: 2019-12-31
 Salvador-Allende-Brücke: wegen Brückenschäden für den MIV gesperrt	2::inwork 23404,5325 23420,5159 23433,5037 23444,4942 23451,4877
