@@ -1677,7 +1677,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2019-01-28
+#: last_checked: 2019-02-05
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -2082,7 +2082,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-01-18
+#: last_checked: 2019-02-03
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -2294,8 +2294,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-01-25
-	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
+#: last_checked: 2019-02-05
+	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889
+# REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
 ',
          'from' => undef,
          'id' => 2974,
@@ -2418,7 +2419,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1577811600
        },
        {
-         'data' => '#: last_checked: 2019-01-24
+         'data' => '#: note: Verbotsschild an der Jerusalemer Str.; an der Niederwallstr. mittlerweile keines mehr
+#: last_checked: 2019-02-06
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -2519,8 +2521,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2019-01-14
-#: check_frequency: 30d
+#: last_checked: 2019-02-03
+#: check_frequency: 21d
 	2::inwork 14854,8964 14614,9052
 ',
          'from' => undef,
@@ -2647,8 +2649,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-01-18
-#: check_frequency: 21d
+#: last_checked: 2019-02-03
+#: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 ',
          'from' => undef,

@@ -135,15 +135,15 @@
 	X 11909,9155
 	X 11831,8989
 	X 11673,9720
-	X 12152,9023
-	X 12242,8972
+	X 12152,9015
+	X 12240,8964
 	X 12156,8760
 	X 11898,8362
 	X 12195,8436
 	X 12500,8504
 	X 12598,8390
 	F 12562,8432
-	X 12771,8439
+	X 12765,8435
 	X 12920,8487
 	X 12714,9792
 	X 11443,10394
@@ -805,8 +805,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F0 5141,11816
 	X 14211,11552
 	X 15863,11992
-	X 12549,8616
-	X 12483,8834
+	X 12551,8612
+	X 12478,8829
 	X 10377,6417
 	X 10446,6414
 	X 10505,6417
@@ -1279,10 +1279,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 13596,10722
 	X 9796,5790
 	X 12689,8289
-	X 12322,9124
-	X 12480,9394
+	X 12328,9117
+	X 12481,9390
 	X 12563,9536
-	X 12630,8722
+	X 12628,8711
 	X 5231,13843
 	X 5220,14043
 	X 5205,14253
@@ -2683,13 +2683,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
-#: last_checked: 2019-01-24
-#: check_frequency: 60d
+#: last_checked: 2019-02-05
+#: check_frequency: 30d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2019-01-28 vvv
+#: last_checked: 2019-02-05 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514

@@ -858,8 +858,8 @@ EOF
        text  => 'Erkstraße zwischen Kreuzung Karl-Marx-Straße und Kreuzung Sonnenallee Straße gesperrt (Spielfest), Dauer: 03.09.2004 06:00 Uhr bis 23:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 12598,8390 12771,8439
-	2 12771,8439 12902,8470 12920,8487
+	2 12598,8390 12765,8435
+	2 12765,8435 12902,8470 12920,8487
 EOF
      },
      { from  => undef, # 
@@ -4489,12 +4489,12 @@ EOF
        text  => ' Sonnenallee Zwischen Kreuzung Wildenbruchstraße und Pannierstraße in beiden Richtungen gesperrt, Veranstaltung, Dauer: 06.05.2006 06:00 Uhr bis 07.05.2006 23:59 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 12438,8859 12320,8927
-	2 12438,8859 12483,8834
-	2 12920,8487 12772,8612
-	2 12483,8834 12630,8722
-	2 12742,8635 12630,8722
-	2 12242,8972 12320,8927
+	2 12435,8853 12316,8921
+	2 12435,8853 12478,8829
+	2 12920,8487 12765,8605
+	2 12478,8829 12628,8711
+	2 12736,8629 12628,8711
+	2 12240,8964 12316,8921
 EOF
      },
      { from  => undef, # 
@@ -7598,7 +7598,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005045',
        data  => <<EOF,
-	2::temp 12920,8487 12772,8612 12742,8635 12630,8722 12483,8834 12438,8859 12320,8927 12242,8972
+	2::temp 12920,8487 12765,8605 12736,8629 12628,8711 12478,8829 12435,8853 12316,8921 12240,8964
 EOF
      },
      { from  => 1174640400, # 2007-03-23 10:00
@@ -9983,7 +9983,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006665',
        data  => <<EOF,
-	2::temp 12920,8487 12772,8612 12742,8635 12630,8722 12483,8834 12438,8859 12320,8927 12242,8972
+	2::temp 12920,8487 12765,8605 12736,8629 12628,8711 12478,8829 12435,8853 12316,8921 12240,8964
 EOF
      },
      { from  => 1190067574, # 2007-09-18 00:19
@@ -10327,7 +10327,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006886',
        data  => <<EOF,
-	2::inwork 12598,8390 12771,8439
+	2::inwork 12598,8390 12765,8435
 EOF
      },
      { from  => 1192489295, # 2007-10-16 01:01
@@ -16534,7 +16534,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014353',
        data  => <<EOF,
-	q4::inwork 12902,8470 12771,8439
+	q4::inwork 12902,8470 12765,8435
 EOF
      },
      { from  => 1255162874, # 
@@ -17527,7 +17527,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_090026',
        data  => <<EOF,
-	q4::inwork; 12598,8390 12771,8439
+	q4::inwork; 12598,8390 12765,8435
 EOF
      },
      { from  => 1272051674, # 2010-04-23 21:41
@@ -19360,7 +19360,7 @@ EOF
        text  => 'Fuldastr., von Donaustr. Richtung Karl-Marx-Str. ist die Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 12549,8616 12500,8504
+	q4::inwork; 12551,8612 12500,8504
 EOF
      },
      { from  => undef, # 
@@ -24006,7 +24006,7 @@ EOF
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2019-01-28
+#: last_checked: 2019-02-05
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -26613,7 +26613,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-01-18
+#: last_checked: 2019-02-03
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -27475,8 +27475,9 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-01-25
-	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889 9801,8683
+#: last_checked: 2019-02-05
+	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889
+# REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
 EOF
      },
      { from  => 1529612425, # 2018-06-21 22:20
@@ -27769,7 +27770,8 @@ EOF
        text  => 'Privatstraße hinter der Leipziger Str.: Bauarbeiten, für Radfahrer explizit gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2019-01-24
+#: note: Verbotsschild an der Jerusalemer Str.; an der Niederwallstr. mittlerweile keines mehr
+#: last_checked: 2019-02-06
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -28151,8 +28153,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wie wird die Qualität danach aussehen?
-#: last_checked: 2019-01-14
-#: check_frequency: 30d
+#: last_checked: 2019-02-03
+#: check_frequency: 21d
 	2::inwork 14854,8964 14614,9052
 EOF
      },
@@ -28489,8 +28491,8 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-01-18
-#: check_frequency: 21d
+#: last_checked: 2019-02-03
+#: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
      },

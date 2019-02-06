@@ -24,12 +24,12 @@
 # REMOVED --- #: last_checked: 2017-12-09 --- #: check_frequency: 14d --- Haasestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 14328,11320 14286,11186
 # 
 #: next_check_id: GUBENER-2019
-#: last_checked: 2019-01-28
+#: last_checked: 2019-02-05
 #: check_frequency: 14d
 #: priority: #A
 Gubener Str.: Fahrbahn für ein paar Meter gesperrt, Ausweichen auf Gehweg, Bordsteine	q3::inwork 13326,12056 13243,12222
 # 
-#: last_checked: 2019-01-20
+#: last_checked: 2019-02-03
 #: check_frequency: 60d
 Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261 14357,11148
 # 
@@ -37,7 +37,7 @@ Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261
 # REMOVED (-> qualitaet_s-orig; für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342929 --- #: priority: #B --- #: next_check: 2018-08-31 --- #: valid: -20180831 --- Helmerdingstr.: Bauarbeiten, Richtung Revaler Str. gesperrt	q4::inwork; 14468,11203 14442,11101
 # REMOVED (-> für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342938 --- #: priority: #B --- #: next_check: 2018-08-10 --- #: valid: -20180810 --- Scharnweberstr.: Bauarbeiten zwischen Colbestr. und Kinzigstr., Fahrbahn Richtung Gürtelstr. gesperrt	q4::inwork; 14468,11992 14589,11975
 # 
-#: last_checked: 2019-02-01
+#: last_checked: 2019-02-04
 Lange Str.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 12413,11901 12238,11931
 # 
 #: XXX bis wann gehen die Bauarbeiten?
@@ -191,7 +191,7 @@ Märkisches Ufer: Engstelle vor der Roßstraßenbrücke	q2::inwork 10687,11853 10869
 # REMOVED --- #: last_checked: 2017-03-24 --- Zietenplatz/Mohrenstr.: Bauarbeiten, Fahrbahn Richtung Osten gesperrt	q3::inwork; 9000,11727 9075,11756
 # 
 #: source_id: 2147342720
-#: last_checked: 2019-01-24 vvv
+#: last_checked: 2019-02-06 vvv
 #: next_check: 2019-04-30 vvv
 #: valid: -20190430 vvv
 Littenstr.: Fahrbahn an der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q3::inwork 11092,12375 11139,12243
@@ -238,9 +238,9 @@ Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_52_7191_7270_online.pdf (Grundstücksnummerierungen)
 #: XXX evtl. muss man nach Ende der Einschränkungen den comments_misc-orig-Eintrag wieder aktivieren
 #: osm_watch: way id="17370332" version="13"
-#: last_checked: 2019-01-29
+#: last_checked: 2019-02-05
 #: check_frequency: 21d
-Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q4::inwork 10781,11243 10818,11269
+Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q4::inwork 10791,11232 10826,11251
 # 
 # REMOVED --- #: last_checked: 2016-09-30 --- Schützenstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10116,11485 9949,11470 --- 
 # REMOVED (wieder offen) --- #: XXX gibt es hier noch Einschränkungen? --- #: last_checked: 2016-01-14 --- #: next_check: 2016-02-03 --- Krausenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9925,11565 9990,11571
@@ -259,7 +259,7 @@ Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, 
 # REMOVED --- #: XXX Ende der Bauarbeiten? --- #: last_checked: 2014-02-22 --- Planckstr.: Bauarbeiten, auf Gehweg ausweichen	q4::inwork 9405,12794 9383,12915
 # REMOVED --- #: XXX nach den Bauarbeiten wahrscheinlich bessere Fahrbahnqualität -> qualitaet_s-orig-Eintrag revidieren --- #: last_checked: 2013-11-21 --- Zolastr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10898,13632 10872,13570
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2019-01-11 vvv
+#: last_checked: 2019-02-06 vvv
 #: check_frequency: 60d vvv
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10010,12275 10058,12290
@@ -281,7 +281,7 @@ Prinzengasse: einige Fußgänger, parkende Autos	q3::inwork 9955,12300 10006,12306
 # REMOVED (Einbahnstraßenregelung existiert zwar noch, aber die Baustelle ist komplett weg) --- #: last_checked: 2015-12-02 --- Universitätsstr.: wegen Bauarbeiten Einbahnstraße zwischen Dorotheenstr. und Georgenstr.	q3::inwork; 9568,12688 9581,12588
 # 
 #: next_check_id: STABIUDL-2014 vvv
-#: last_checked: 2019-01-16 vvv
+#: last_checked: 2019-02-05 vvv
 #: check_frequency: 60d vvv
 #: by: http://www.berliner-zeitung.de/berlin/baustelle-staatsbibliothek-das-geruest-steht-und-steht-und-steht,10809148,22334074.html (Endedatum) vvv
 #: osm_watch: way id="153698394" version="5"
@@ -328,7 +328,7 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 # 
 #: next_check_id: ZEUGHAUS-2014
 #: XXX eigentlich nur UdL, kann aber so nicht dargestellt werden
-#: last_checked: 2019-01-24
+#: last_checked: 2019-02-05
 #: check_frequency: 60d
 Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364 9934,12420
 # 
@@ -347,7 +347,7 @@ Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364
 #: XXX wird nach den Bauarbeiten die Fahrbahn noch bestehen bleiben?
 #: source_id: LMS-BR_r_LMS-BR_197
 #: osm_watch: way id="194962375" version="10"
-#: last_checked: 2019-01-24
+#: last_checked: 2019-02-05
 #: check_frequency: 14d
 Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521 10704,12595
 # 
@@ -383,8 +383,8 @@ Schillingstr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q3-::in
 #: osm_watch: way id="580512810" version="3"
 #: osm_watch: way id="580508096" version="6"
 #: also_indoor traffic vvv
-#: last_checked: 2019-01-19 (osm) vvv
-#: next_check: 2019-02-01 vvv
+#: last_checked: 2019-02-03 vvv
+#: next_check: 2019-05-01 vvv
 #: valid: -20201231 vvv
 #: priority: #A vvv
 Dönhoffstr.: Fahrbahn an der Treskowallee gesperrt, Ausweichen über Gehweg	q2::inwork 18733,8633 18609,8717
@@ -407,7 +407,7 @@ Wandlitzstr.: Fahrbahn an der Treskowallee gesperrt, Ausweichen über Gehweg	q3::
 #: XXX Start 2018-05-16, Dauer vermutlich 12 Monate, bei VMZ bis August 2019, laut fritz bis 21.12.2018
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=44021
 #: also_indoor: traffic
-#: last_checked: 2019-01-25
+#: last_checked: 2019-02-05
 #: valid: -20190831
 #: priority: #A
 Friesenstr.: Fahrbahn Richtung Zossener Str. gesperrt	q4::inwork; 9801,8683 9801,8889 9799,8962 9797,9063 9795,9162 9793,9241
@@ -521,9 +521,9 @@ provisorische und enge Radwegführung, Fußgänger, Seitenwechsel notwendig	q3::inw
 #: next_check_id ^^^
 # 
 #: XXX Wann sind die Bauarbeiten beendet? (laut googlemaps: Ende November 2018, laut Schild der Wasserbetriebe: bis November 2018)
-#: also_indoor: traffic
-#: last_checked: 2019-01-28
-#: check_frequency: 7d
+#: also_indoor: traffic (G)
+#: last_checked: 2019-02-05
+#: check_frequency: 10d
 Weichselstr.: Bauarbeiten am Weichselplatz, Fahrbahn gesperrt	q3::inwork 12755,9188 12681,9083
 # 
 # REMOVED --- #: next_check_id: DIESEL-2015 --- #: last_checked: 2018-05-21 --- Dieselstr., Umfahrung: Fußgänger, Bordstein, schmal	q2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14484,8044
@@ -535,13 +535,14 @@ Weichselstr.: Bauarbeiten am Weichselplatz, Fahrbahn gesperrt	q3::inwork 12755,9
 #: by: http://www.berliner-woche.de/neukoelln/bauen/neues-von-der-baustelle-arbeiten-auf-der-karl-marx-strasse-ruhen-d143549.html (voraussichtlich bis Mitte April 2018) (für südlichen Abschnitt)
 #: by: http://www.berliner-woche.de/neukoelln/bauen/auf-der-karl-marx-strasse-beginnt-der-3-bauabschnitt-bis-ende-2021-wird-zwischen-briese-und-weichselstrasse-gebuddelt-und-gebaut-d161345.html
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=51191
+#: by: http://www.abendblatt-berlin.de/2019/02/03/neues-von-neukoellns-laengster-baustelle/
 #: XXX laut vmz Gesamtmaßnahme bis Ende 2021, laut fritz bis 31.12.2021
 #: source_id: IM_022515
 #: source_id: 2147338550
 #: source_id: LMS-BR_r_LMS-BR_19252
 #: source_id: 2147342527
 #: also_indoor: traffic
-#: last_checked: 2018-12-22 vvv
+#: last_checked: 2019-02-04 vvv
 #: check_frequency: 90d vvv
 #: osm_watch: way id="585753318" version="1"
 #: osm_watch: way id="71392596" version="9"
@@ -573,10 +574,11 @@ Rollbergstr.: Einbahnstraßenregelung	q3::inwork; 12545,8209 12714,8249
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50705
 #: XXX mittlerweile steht sogar schon an der Straße Alt-Stralau ein "Radfahren verboten"-Schild
 #: source_id: 2147343461
+#: note: laut fritz bis 12.03.2019
 #: priority: #A
 #: also_indoor: traffic (G,H)
-#: last_checked: 2019-01-10
-#: valid: -20190315
+#: last_checked: 2019-02-03
+#: valid: -20190312
 Kynaststr.: Fahrbahn hinter der Kreuzung Alt-Stralau Richtung Norden gesperrt, Radfahrer auf Gehweg/Fußgängerschutztunnel ausweichen und ggfs. absteigen, bis Mitte März 2019	q4:inwork; 14724,10297 14766,10372 14797,10476 14805,10518
 # 
 # REMOVED --- #: next_check_id: GUERTELSTRASSE-2018 --- #: XXX laut vmz bis Ende Dezember 2018, Gesamtmaßnahme bis März 2019 laut fritz bis 25.01.2019 --- #: source_id: 2147343481 --- #: priority: #A --- #: last_checked: 2018-12-16 --- #: next_check: 2019-01-25 --- #: valid: -20190125 --- Wilhelm-Guddorf-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q4:inwork 15294,11964 15335,11943
@@ -2008,7 +2010,7 @@ Elisabeth-Schwarzhaupt-Platz: einige Fußgänger	q1 9274,13963 9167,14127
 # REMOVED (nein, hier ist (mittlerweile?) auch abgesenkt) --- #: XXX_prog BS (südliches Ende) --- (Hildegard-Knef-Platz - Lotte-Laserstein-Str.): Bordstein	q2 7774,7724 7757,7682
 #: XXX_prog BS (östliches Ende nur, westliches Ende ist abgesenkt)
 (Blücherplatz - Johanniterstr.): Fußgänger, Bordstein	q2 9702,10129 9816,10119 9837,10117
-Idealpassage: Fußgänger, eng, Schrittgeschwindigkeit	q3 12434,8776 12578,8654
+Idealpassage: Fußgänger, eng, Schrittgeschwindigkeit	q3 12434,8776 12582,8651
 #: XXX_prog BS (die umfahrbare Stufe vielleicht in ein BS umwandeln? Oder auch nicht)
 (entlang der Hedwigskathedrale): Fußgänger, Radfahren verboten, eine (umfahrbare) Stufe	q4 9808,12182 9775,12178 9771,12190 9747,12205
 #: XXX_prog BS (beide Enden, am nördlichen kann man es durch einen weiten Bogen umfahren, am südlichen auch, wenn man in Richtung W weiterfährt)
@@ -2676,7 +2678,12 @@ Giselhersteig: enger Weg	q2 17355,12460 17386,12456 17438,12448 17491,12439 1753
 (Zufahrt zum Stadtbad Tiergarten): Parkplatzverkehr	q2 7332,13367 7306,13418
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): Fußgänger	q1 21992,13045 22141,13036 22171,12965
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): enge Brücke, Fußgänger	q3 22171,12965 22196,12961
-Stolzenfelsstr.: enger Gehweg für Radfahrer in Gegenrichtung offen	q2; 19447,8175 19400,8147 19333,8165 19171,8280 18949,8437 18787,8540
+Stolzenfelsstr.: enger Gehweg für Radfahrer in Gegenrichtung offen	q2; 19447,8175 19400,8147 19333,8165 19171,8280 18949,8437
+#: next_check_id: KARLSHORST-2019
+#: XXX nach den Bauarbeiten am Bhf. Karlshorst wieder den alten Eintrag (siehe oben) wiederherstellen
+#: last_checked: 2019-02-03
+#: check_frequency: 90d
+Stolzenfelsstr.: Bauarbeiten, für Radfahrer offener Gehweg nun gesperrt	q4; 18949,8437 18787,8540
 #: XXX_prog BS Bordstein am südlichen Ende, ansonsten q1
 Kunkelstr.: einige Fußgänger, Borstein	q2 8229,15128 8227,15075
 Erich-Lodemann-Str.: einige Fußgänger, Rampe	q2 15288,8134 15242,8182

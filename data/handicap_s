@@ -23,7 +23,7 @@ Waisenstr.: Fahrbahn vor der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 Jerusalemer Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 9936,11469
 Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
-Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q4::inwork 10781,11243 10818,11269
+Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q4::inwork 10791,11232 10826,11251
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10010,12275 10058,12290
 Prinzengasse: einige Fußgänger, parkende Autos	q3::inwork 9955,12300 10006,12306
@@ -1038,7 +1038,7 @@ Elisabeth-Schwarzhaupt-Platz: einige Fußgänger	q1 9274,13963 9167,14127
 (Bethanienpark): Fußgänger	q1 11804,10846 11776,10860 11752,10878 11668,10916
 (Bethanienpark): Fußgänger, Bordstein	q3 11668,10916 11589,10947
 (Blücherplatz - Johanniterstr.): Fußgänger, Bordstein	q2 9702,10129 9816,10119 9837,10117
-Idealpassage: Fußgänger, eng, Schrittgeschwindigkeit	q3 12434,8776 12578,8654
+Idealpassage: Fußgänger, eng, Schrittgeschwindigkeit	q3 12434,8776 12582,8651
 (entlang der Hedwigskathedrale): Fußgänger, Radfahren verboten, eine (umfahrbare) Stufe	q4 9808,12182 9775,12178 9771,12190 9747,12205
 (Am Wriezener Bahnhof - Rüdersdorfer Str.): enger Weg, Bordsteine	q2 12944,11760 13052,11867
 (Normannenstr. - Jobcenter Lichtenberg): Bordstein, Fußgänger	q2 16056,12317 16068,12376
@@ -1545,7 +1545,8 @@ Giselhersteig: enger Weg	q2 17355,12460 17386,12456 17438,12448 17491,12439 1753
 (Zufahrt zum Stadtbad Tiergarten): Parkplatzverkehr	q2 7332,13367 7306,13418
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): Fußgänger	q1 21992,13045 22141,13036 22171,12965
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): enge Brücke, Fußgänger	q3 22171,12965 22196,12961
-Stolzenfelsstr.: enger Gehweg für Radfahrer in Gegenrichtung offen	q2; 19447,8175 19400,8147 19333,8165 19171,8280 18949,8437 18787,8540
+Stolzenfelsstr.: enger Gehweg für Radfahrer in Gegenrichtung offen	q2; 19447,8175 19400,8147 19333,8165 19171,8280 18949,8437
+Stolzenfelsstr.: Bauarbeiten, für Radfahrer offener Gehweg nun gesperrt	q4; 18949,8437 18787,8540
 Kunkelstr.: einige Fußgänger, Borstein	q2 8229,15128 8227,15075
 Erich-Lodemann-Str.: einige Fußgänger, Rampe	q2 15288,8134 15242,8182
 (Vorplatz S-Bhf. Plänterwald): Fußgänger	q3 15256,8247 15212,8203 15242,8182
@@ -2752,6 +2753,7 @@ Kommandantenstr.: Einbahnstraße wegen Bauarbeiten: gegen die Einbahnstraßenricht
 Heidelberger Str.: Baustelle, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 13491,9201 13421,9260 13357,9313
 Gutenbergstr.: Einbahnstraße wegen Bauarbeiten: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 5317,12242 5518,12159
 Wegelystr.: Einbahnstraße wegen Bauarbeiten: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 5518,12159 5627,12105 5658,12082 5712,12033 5775,11975
+Schinkelplatz: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 10010,12275 10012,12259 10029,12208
 Niederlagstr.: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9972,12184 9959,12281
 Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung auch für Radfahrer gesperrt: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 5192,10241 5196,10398
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9042,11839 8969,11814
