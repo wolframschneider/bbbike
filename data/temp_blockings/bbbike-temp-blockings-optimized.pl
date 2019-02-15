@@ -1677,7 +1677,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2019-02-05
+#: last_checked: 2019-02-12
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -2121,9 +2121,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: XXX Ende der Bauarbeiten?
+         'data' => '#: next_check_id: DOROTHEEN-2018
+#: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-01-28 vvv
+#: last_checked: 2019-02-14 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2466,7 +2467,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: also_indoor: traffic (G) vvv
-#: last_checked: 2019-01-14 vvv
+#: last_checked: 2019-02-13 vvv
 	q3::inwork 12335,7770 12224,7799
 	q2::inwork 12335,7770 12075,7696
 # REMOVED (fertig) ---	q3::inwork; 12647,7672 12520,7694
@@ -2714,16 +2715,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '	2::inwork 21168,12794 21251,12767
-',
-         'from' => 1548630000,
-         'id' => 3067,
-         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.779447.php',
-         'text' => 'Rapsweg: Sperrung an der Kreuzung Blumberger Damm, eventuell sind auch Radfahrer betroffen, vom 29. Januar 2019 bis voraussichtlich zum 12. Februar 2019',
-         'type' => 'gesperrt',
-         'until' => 1550012399
-       },
+       undef,
        {
          'data' => '	2::inwork -5807,33509 -5667,34042
 ',
