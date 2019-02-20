@@ -1675,9 +1675,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="194069450" version="17"
-#: also_indoor: traffic (G)
+#: also_indoor: traffic (H, !G)
 #: priority: #A
-#: last_checked: 2019-02-12
+#: last_checked: 2019-02-18
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -2082,7 +2082,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-02-11
+#: last_checked: 2019-02-15
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -2167,21 +2167,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: last_checked: 2018-08-29 vvv
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
-	q4::inwork; 24629,5831 24443,5765 24387,5672 24362,5635 24320,5621
-# REMOVED (fertig) ---	q4::inwork; 24629,5831 24798,5891
-# REMOVED (vermutlich fertig) ---	q3::inwork 24798,5891 24977,5880
-#: add_fragezeichen ^^^
-#: last_checked ^^^
-',
-         'from' => undef,
-         'id' => 2942,
-         'text' => 'Stillerzeile: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2207,7 +2193,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: add_fragezeichen: Ist der Abschnitt des Uferwegs am Eiselenweg noch immer gesperrt?
 #: priority: #A
 #: next_check_id: MENTZELPARK-2018
-#: last_checked: 2019-01-02
+#: last_checked: 2019-02-16
 # REMOVED (hier mittlerweile offen) ---	2::inwork 21696,5053 21645,5135 21600,5221 21583,5255 21521,5383 21512,5404 21481,5429
 	2::inwork 21481,5429 21447,5414
 ',
@@ -2295,7 +2281,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-02-05
+#: last_checked: 2019-02-19
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889
 # REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
 ',
@@ -2421,7 +2407,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an der Jerusalemer Str.; an der Niederwallstr. mittlerweile keines mehr
-#: last_checked: 2019-02-06
+#: last_checked: 2019-02-18
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -2522,7 +2508,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2019-02-08
+#: last_checked: 2019-02-15
 #: check_frequency: 7d
 	2::inwork 14854,8964 14614,9052
 ',
@@ -2650,7 +2636,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-02-03
+#: last_checked: 2019-02-15
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 ',
@@ -2749,6 +2735,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 3070,
          'text' => 'Freiheit/Lüdersstr./Alter Markt: Einbahnstraßenregelung, offen Richtung Norden, vom 11.02.2019 bis voraussichtlich Ende 2019',
          'until' => 1577811600
+       },
+       {
+         'data' => '#: source_id: 2147343771
+	q4::inwork; 8904,20596 9027,20603 9162,20613 9175,20613
+',
+         'from' => 1550383200,
+         'id' => 3071,
+         'text' => 'Kastanienallee: Bauarbeiten, zwischen Friedrich-Engels-Str. und Weißdornallee in Richtung Osten gesperrt, auch Radfahrer sind betroffen, ab 18.02.2019 bis voraussichtlich 04.03.2019',
+         'type' => 'handicap',
+         'until' => 1551718800
        }
      
 );

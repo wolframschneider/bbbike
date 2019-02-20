@@ -24005,9 +24005,9 @@ EOF
 #: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="194069450" version="17"
-#: also_indoor: traffic (G)
+#: also_indoor: traffic (H, !G)
 #: priority: #A
-#: last_checked: 2019-02-12
+#: last_checked: 2019-02-18
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -26614,7 +26614,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-02-11
+#: last_checked: 2019-02-15
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26986,13 +26986,13 @@ EOF
        source_id => 'http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.685963.php',
        data  => <<EOF,
 	2::temp 12690,10062 12659,10119 12670,10160 12693,10183 12728,10196 12757,10197 12774,10178 12795,10147 12802,10097 12670,10160 12543,10223 12509,10189 12504,10172 12464,10153
-	2::temp 12686,10045 12690,10062 12737,10051 12802,10097 12869,10071 12901,10134 12905,10143
+	2::temp 12681,10047 12690,10062 12737,10051 12802,10097 12866,10064 12901,10134 12905,10143
 	2::temp 12767,10216 12763,10207 12757,10197
-	2::temp 12814,9966 12833,9998 12869,10071 12987,10007 13013,10047 13013,10068 13035,10076
+	2::temp 12814,9966 12833,9998 12866,10064 12983,10000 13013,10047 13013,10068 13035,10076
 	2::temp 12509,10189 12502,10244 12543,10223 12580,10252 12608,10294
 	2::temp 12328,10442 12331,10409 12384,10368 12457,10309 12502,10244
 	2::temp 12504,10172 12507,10130
-	2::temp 12932,9900 12960,9955 12987,10007 13145,9920
+	2::temp 12932,9900 12960,9955 12983,10000 13141,9911
 EOF
      },
      { from  => 1525125600, # 2018-05-01 00:00
@@ -27029,17 +27029,14 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1550343880, # weitgehend beendet --- undef, # XXX
        text  => 'Stillerzeile: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2018-08-29 vvv
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
+# REMOVED --- #: last_checked: 2018-08-29 vvv --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
 	q4::inwork; 24629,5831 24443,5765 24387,5672 24362,5635 24320,5621
 # REMOVED (fertig) ---	q4::inwork; 24629,5831 24798,5891
 # REMOVED (vermutlich fertig) ---	q3::inwork 24798,5891 24977,5880
-#: add_fragezeichen ^^^
-#: last_checked ^^^
 EOF
      },
      { from  => 1522098513, # 2018-03-26 23:08
@@ -27218,7 +27215,7 @@ EOF
 #: add_fragezeichen: Ist der Abschnitt des Uferwegs am Eiselenweg noch immer gesperrt?
 #: priority: #A
 #: next_check_id: MENTZELPARK-2018
-#: last_checked: 2019-01-02
+#: last_checked: 2019-02-16
 # REMOVED (hier mittlerweile offen) ---	2::inwork 21696,5053 21645,5135 21600,5221 21583,5255 21521,5383 21512,5404 21481,5429
 	2::inwork 21481,5429 21447,5414
 EOF
@@ -27477,7 +27474,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-02-05
+#: last_checked: 2019-02-19
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889
 # REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
 EOF
@@ -27773,7 +27770,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an der Jerusalemer Str.; an der Niederwallstr. mittlerweile keines mehr
-#: last_checked: 2019-02-06
+#: last_checked: 2019-02-18
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -28155,7 +28152,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2019-02-08
+#: last_checked: 2019-02-15
 #: check_frequency: 7d
 	2::inwork 14854,8964 14614,9052
 EOF
@@ -28493,7 +28490,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-02-03
+#: last_checked: 2019-02-15
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28601,6 +28598,15 @@ EOF
 #: by: http://www.abendblatt-berlin.de/2019/02/08/altstadt-koepenick-im-dauerstress/
 #: by: https://twitter.com/VIZ_Berlin/status/1093887988222906369
 	q4::temp; 22196,4847 22377,4836 22388,4737 22390,4702 22395,4678 22426,4609 22446,4581 22458,4565 22495,4523
+EOF
+     },
+     { from  => 1550383200, # 2019-02-17 07:00
+       until => $isodate2epoch->("2019-03-04 18:00:00"), # 1551481199, # 2019-03-01 23:59
+       text  => 'Kastanienallee: Bauarbeiten, zwischen Friedrich-Engels-Str. und Weißdornallee in Richtung Osten gesperrt, auch Radfahrer sind betroffen, ab 18.02.2019 bis voraussichtlich 04.03.2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147343771
+	q4::inwork; 8904,20596 9027,20603 9162,20613 9175,20613
 EOF
      },
     );

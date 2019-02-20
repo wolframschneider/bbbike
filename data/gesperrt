@@ -2478,7 +2478,7 @@ tragen (Spreetunnel, ca. 50 Stufen)	0:60:21 25658,4619
 tragen (Spreetunnel, 50 Stufen)	0:60:52 25571,4553
 tragen (Brücke Tegeler Hafen, Fahrradschienen existieren)	0:30:-256 1227,20281
 tragen (Brücke Tegeler Hafen, 4+10 Stufen, Fahrradschienen existieren)	0:30:-231 1166,20330
-tragen (23 Stufen)	0:25:16 13138,9897
+tragen (23 Stufen)	0:25:12 13138,9897
 unter der S-Bahn-Brücke tragen (6 Stufen)	0:10:-180 3726,18982
 unter der S-Bahn-Brücke tragen (5 Stufen)	0:10:-154 3733,18997
 tragen (31 Stufen) oder Aufzug (Storkower Str.)	0:30:-71 14530,13269
@@ -3029,7 +3029,6 @@ Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,
 Klara-Franke-Str.: Bauarbeiten, gesperrt	2::inwork 7542,13956 7662,13784 7564,13735
 Dolgenseestr.: wegen Bauarbeiten gesperrt	2::inwork 17273,9880 17407,9799 17493,9761
 Unterführung S-Bhf. Karlshorst: wegen Bauarbeiten gesperrt	2::inwork 18949,8437 18906,8394 18875,8365
-Zum Großen Herzberg (Potsdam-Golm): Straße wird noch gebaut	2::inwork -18017,333 -18026,357 -18049,424
 Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12677,-1536 -12685,-1449
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10319,15090 10354,14987
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
@@ -3046,6 +3045,7 @@ Möwenweg: wegen Bauarbeiten komplett gesperrt, wird danach wohl zum "Klompenweg"
 Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11489 20631,11621 20633,11651
 Schinkelplatz: Einbahnstraße	1s:inwork 10010,12275 10012,12259 10029,12208
 Niederlagstr.: Einbahnstraße	1s:inwork 9972,12184 9959,12281
+Karower Str.: temporäre Einbahnstraßenregelung	1s:inwork 16593,25640 16632,25512 16669,25373
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:inwork 9042,11839 8969,11814
 Nordhafenpark West: unter der Brücke gesperrt	2::inwork 7636,14414 7612,14449 7551,14464
 Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
