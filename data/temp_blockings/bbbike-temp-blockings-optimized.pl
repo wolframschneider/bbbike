@@ -1530,8 +1530,8 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        {
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: osm_watch: way id="43141418" version="11" brb
-#: last_checked: 2018-06-19 (osm)
+#: osm_watch: way id="43141418" version="12" brb
+#: last_checked: 2019-02-17 (osm)
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
 ',
@@ -1677,7 +1677,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (H, !G)
 #: priority: #A
-#: last_checked: 2019-02-18
+#: last_checked: 2019-02-22
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -1815,7 +1815,34 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: next_check_id: SEEGEFELDERWEG-2016
+#: source_id: IM_026411
+#: source_id: 2147339562
+#: source_id: LMS-BR_r_LMS-BR_51041
+#: source_id: 2147342003
+#: source_id: 2147342198
+#: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72
+#: source_id: 2147342842
+#: osm_watch: way id="57401090" version="12"
+#: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
+#: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
+#: by: https://www.berliner-woche.de/falkenhagener-feld/c-verkehr/strassenbau-geht-weiter_a202396 (bis März 2019 plus vier Wochen)
+#: XXX laut fritz Ende 2018, laut vmz Frühjahr 2019
+#: last_checked: 2018-10-12
+#: next_check: 2019-04-01
+# REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
+# REMOVED ---	q3::inwork; -6861,15129 -6507,15007
+# REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
+	q4::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
+',
+         'from' => 1443650400,
+         'id' => 2740,
+         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
+         'text' => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Frühjahr 2019',
+         'type' => 'handicap',
+         'until' => 1554134400
+       },
        undef,
        undef,
        undef,
@@ -2124,7 +2151,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-02-14 vvv
+#: last_checked: 2019-02-22 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2483,19 +2510,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: JUNGFERNSTIEG-2018
-#: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: last_checked: 2018-09-12
-#: check_frequency: 7d
-	q4::inwork 5229,2395 5332,2568 5425,2735 5510,2883
-',
-         'from' => undef,
-         'id' => 3017,
-         'text' => 'Jungfernstieg: Asphaltierungsarbeiten, Fahrbahn kann gesperrt sein (aber eventuell sind die Bauarbeiten schon beendet)',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2508,7 +2523,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2019-02-15
+#: last_checked: 2019-02-22
 #: check_frequency: 7d
 	2::inwork 14854,8964 14614,9052
 ',
@@ -2735,16 +2750,6 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 3070,
          'text' => 'Freiheit/Lüdersstr./Alter Markt: Einbahnstraßenregelung, offen Richtung Norden, vom 11.02.2019 bis voraussichtlich Ende 2019',
          'until' => 1577811600
-       },
-       {
-         'data' => '#: source_id: 2147343771
-	q4::inwork; 8904,20596 9027,20603 9162,20613 9175,20613
-',
-         'from' => 1550383200,
-         'id' => 3071,
-         'text' => 'Kastanienallee: Bauarbeiten, zwischen Friedrich-Engels-Str. und Weißdornallee in Richtung Osten gesperrt, auch Radfahrer sind betroffen, ab 18.02.2019 bis voraussichtlich 04.03.2019',
-         'type' => 'handicap',
-         'until' => 1551718800
        }
      
 );
