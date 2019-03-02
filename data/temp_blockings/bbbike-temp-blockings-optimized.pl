@@ -2213,7 +2213,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="194069450" version="17"
-#: also_indoor: traffic (H, !G)
+#: also_indoor: traffic (H, G)
 #: priority: #A
 #: last_checked: 2019-02-22
 #: check_frequency: 7d
@@ -2596,7 +2596,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 2888,
          'text' => 'Rigaer Str.: Baustelle, während der Arbeitszeiten (Mo bis Sa, 6 bis 17 Uhr) kein Durchgang möglich',
          'type' => 'gesperrt',
-         'until' => 1551351600
+         'until' => undef
        },
        undef,
        undef,
@@ -3061,7 +3061,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2019-02-22
+#: last_checked: 2019-02-28
 #: check_frequency: 7d
 	2::inwork 14854,8964 14614,9052
 ',
@@ -3136,7 +3136,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
 #: osm_watch: way id="42031978" version="13"
 #: priority: #B vvv
-#: last_checked: 2018-11-02 (mapillary, wobei man die Bauzäune umfahren kann) vvv
+#: last_checked: 2019-02-24 (mapillary) vvv
 #: check_frequency: 7d vvv
 (Neuer Mauerweg): noch abgesperrt	2::inwork 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8014,19149 8347,18916 8476,18773
 (Neuer Mauerweg): noch abgesperrt	2::inwork 7572,19490 7540,19550
@@ -3153,14 +3153,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '	q4::inwork 5550,18775 5547,18665 5545,18590 5543,18555 5541,18451 5541,18435
+         'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.787955.php
+	q4::inwork 5550,18775 5547,18665 5545,18590 5543,18555 5541,18451 5541,18435
 ',
-         'from' => 1546729200,
+         'from' => 1551589200,
          'id' => 3053,
          'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
-         'text' => 'Waldowstr.: Bauarbeiten zwischen Pfahler Str. und Lindauer Allee, Fahrbahn gesperrt, 7. Januar 2019 bis März 2019',
+         'text' => 'Waldowstr.: Bauarbeiten zwischen Pfahler Str. und Lindauer Allee, Fahrbahn gesperrt, 4. März 2019 bis 30. April 2019',
          'type' => 'handicap',
-         'until' => 1554069599
+         'until' => 1556640000
        },
        {
          'data' => '	q4::inwork 5856,18569 5795,18585 5715,18586 5634,18587 5545,18590
@@ -3168,7 +3169,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1551308400,
          'id' => 3054,
          'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
-         'text' => 'Borggrevestr.: Bauarbeiten, Fahrbahn gesperrt, März 2019 bis Ende April 2019',
+         'text' => 'Borggrevestr.: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich März 2019 bis Ende April 2019',
          'type' => 'handicap',
          'until' => 1556661599
        },
@@ -3189,7 +3190,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-02-15
+#: last_checked: 2019-02-28
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 ',
@@ -3231,7 +3232,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1591027200
        },
        {
-         'data' => '#: last_checked: 2019-01-28
+         'data' => '#: last_checked: 2019-02-24 (mapillary)
 #: priority: #A
 	2::inwork 8124,12840 8120,12756
 ',
@@ -3255,16 +3256,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
-       {
-         'data' => '	2::inwork -5807,33509 -5667,34042
-',
-         'from' => 1550782800,
-         'id' => 3068,
-         'source_id' => '191100011',
-         'text' => 'Velten: Abriss einer Brücke L172, zw. Velten und Oranienburg, 22.02.2019 22:00 bis 25.02.2019 05:00',
-         'type' => 'gesperrt',
-         'until' => 1551067200
-       },
+       undef,
        {
          'data' => '	q4::inwork 4119,22634 4232,22458 4280,22383
 ',
@@ -3288,6 +3280,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 3070,
          'text' => 'Freiheit/Lüdersstr./Alter Markt: Einbahnstraßenregelung, offen Richtung Norden, vom 11.02.2019 bis voraussichtlich Ende 2019',
          'until' => 1577811600
+       },
+       undef,
+       {
+         'data' => '	q3::inwork -3887,16686 -3808,16690 -3715,16710
+',
+         'from' => 1551379334,
+         'id' => 3072,
+         'text' => 'Kronprinzenstr.: in Höhe Kaiserstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis voraussichtlich 30.04.2019 ',
+         'type' => 'handicap',
+         'until' => 1556661600
        }
      
 );

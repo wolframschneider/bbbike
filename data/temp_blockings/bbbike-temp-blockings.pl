@@ -69,7 +69,7 @@ EOF
        text  => 'Karneval der Kulturen, 20.05.2016',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
+	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10951,9216 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
 # REMOVED ---	2::temp 9044,9753 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
 	2::temp 10713,9260 10670,9286 10639,9304 10564,9292
 # REMOVED ---	3 8774,9534 8777,9601 8778,9759 8778,9759 8779,9812
@@ -24005,7 +24005,7 @@ EOF
 #: next_check_id: FRIEDRICHSTR-2018
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="194069450" version="17"
-#: also_indoor: traffic (H, !G)
+#: also_indoor: traffic (H, G)
 #: priority: #A
 #: last_checked: 2019-02-22
 #: check_frequency: 7d
@@ -26413,7 +26413,7 @@ EOF
 EOF
      },
      { from  => undef,
-       until => $isodate2epoch->("2019-02-28 12:00:00"),
+       until => undef, # $isodate2epoch->("2019-02-28 12:00:00"),
        text  => 'Rigaer Str.: Baustelle, während der Arbeitszeiten (Mo bis Sa, 6 bis 17 Uhr) kein Durchgang möglich',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -28154,7 +28154,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2019-02-22
+#: last_checked: 2019-02-28
 #: check_frequency: 7d
 	2::inwork 14854,8964 14614,9052
 EOF
@@ -28410,7 +28410,7 @@ EOF
 #: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
 #: osm_watch: way id="42031978" version="13"
 #: priority: #B vvv
-#: last_checked: 2018-11-02 (mapillary, wobei man die Bauzäune umfahren kann) vvv
+#: last_checked: 2019-02-24 (mapillary) vvv
 #: check_frequency: 7d vvv
 (Neuer Mauerweg): noch abgesperrt	2::inwork 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8014,19149 8347,18916 8476,18773
 (Neuer Mauerweg): noch abgesperrt	2::inwork 7572,19490 7540,19550
@@ -28431,18 +28431,19 @@ EOF
 	q4::inwork; 5541,18435 5537,18309 5536,18234
 EOF
      },
-     { from  => 1546729200, # 2019-01-06 00:00
-       until => 1554069599, # 2019-03-31 23:59
-       text  => 'Waldowstr.: Bauarbeiten zwischen Pfahler Str. und Lindauer Allee, Fahrbahn gesperrt, 7. Januar 2019 bis März 2019',
+     { from  => $isodate2epoch->("2019-03-03 06:00:00"), # 1546729200, # 2019-01-06 00:00
+       until => $isodate2epoch->("2019-04-30 18:00:00"), # 1554069599, # 2019-03-31 23:59
+       text  => 'Waldowstr.: Bauarbeiten zwischen Pfahler Str. und Lindauer Allee, Fahrbahn gesperrt, 4. März 2019 bis 30. April 2019',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.787955.php
 	q4::inwork 5550,18775 5547,18665 5545,18590 5543,18555 5541,18451 5541,18435
 EOF
      },
      { from  => 1551308400, # 2019-02-28 00:00
        until => 1556661599, # 2019-04-30 23:59
-       text  => 'Borggrevestr.: Bauarbeiten, Fahrbahn gesperrt, März 2019 bis Ende April 2019',
+       text  => 'Borggrevestr.: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich März 2019 bis Ende April 2019',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
        data  => <<EOF,
@@ -28492,7 +28493,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-02-15
+#: last_checked: 2019-02-28
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28537,7 +28538,7 @@ EOF
        text  => 'Spreebogenpark: wegen Abbrucharbeiten an der ehemaligen Umfahrung der Schweizer Botschaft ist der Weg zwischen Gustav-Heinemann-Brücke und Bundeskanzleramt gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2019-01-28
+#: last_checked: 2019-02-24 (mapillary)
 #: priority: #A
 	2::inwork 8124,12840 8120,12756
 EOF
@@ -28609,6 +28610,14 @@ EOF
        data  => <<EOF,
 #: source_id: 2147343771
 	q4::inwork; 8904,20596 9027,20603 9162,20613 9175,20613
+EOF
+     },
+     { from  => 1551379334, # 2019-02-28 19:42
+       until => 1556661600, # 2019-05-01 00:00
+       text  => 'Kronprinzenstr.: in Höhe Kaiserstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis voraussichtlich 30.04.2019 ',
+       type  => 'handicap',
+       data  => <<EOF,
+	q3::inwork -3887,16686 -3808,16690 -3715,16710
 EOF
      },
     );

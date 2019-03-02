@@ -950,7 +950,7 @@ Kaulsdorfer Str. (Hönow): Poller	3 * 25749,14812 *
 #: note: Fußgänger/Radfahrer können an der Haltestelle überqueren
 Treskowallee: Straßenbahntrasse	3nocross 18740,9907 18769,9839 18807,9746
 #: note: für Radfahrer aus der Fichtestr. gibt es mittlerweile eine offizielle Wegführung Richtung Park
-Hasenheide: Mittelstreifen	3nocross 11136,9183 11108,9187 10713,9260
+Hasenheide: Mittelstreifen	3nocross 11136,9183 11108,9187 10951,9216 10713,9260
 Rüdesheimer Str.	1 4317,7069 4393,7266
 Deidesheimer Str.	1 4978,7530 4785,7518 4616,7563 4486,7597
 #: note: Überquerungsmöglichkeit für Fußgänger/Radfahrer
@@ -1213,7 +1213,11 @@ Zionskirchplatz	1 10304,14254 10277,14350 10311,14391 10365,14372 10391,14280
 Boppstr.	1 11785,9437 11560,9524
 Schmiedeweg (Bestensee)	1 26459,-17745 26354,-17641 26321,-17629 26297,-17628
 Bohnsdorf - Siedlung Waltersdorf	1 22985,-1319 23073,-1551 23088,-1588 23246,-2008 23253,-2022
+# 
+#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2019/pressemitteilung.787965.php (Sperrung bleibt permanent)
+#: by: https://www.berliner-woche.de/wilhelmstadt/c-bauen/weissenburger-bleibt-abgehaengt_a203200
 Weißenhöher Str.: Durchfahrt zur Pichelsdorfer Str. gesperrt	2 -3739,12756 -3650,12762
+# 
 Hegemeisterweg: Anlieger frei	2:Anlieger 17522,8220 17202,8391
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/durchfahrtsverbot-in-der-wulkower-strasse-veraergert-die-nachbarschaft_a186881
 Wulkower Str.	1 21021,10583 21025,10815
