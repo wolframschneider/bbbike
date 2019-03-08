@@ -24007,7 +24007,7 @@ EOF
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (H, G)
 #: priority: #A
-#: last_checked: 2019-02-22
+#: last_checked: 2019-03-07
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -25876,13 +25876,13 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2018-11-27 07:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-11-28 11:00:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 28. November 2018 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2019-03-05 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-03-06 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 5. März 2019 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
-#: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
+# REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
+# REMOVED --- #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
 # REMOVED --- #: next_check: 2018-11-21 --- #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
@@ -26615,7 +26615,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-03-02
+#: last_checked: 2019-03-07
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26812,7 +26812,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-02-22 vvv
+#: last_checked: 2019-03-05 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27212,7 +27212,8 @@ EOF
        text  => 'Uferweg: am Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: osm_watch: way id="152046369" version="8"
+#: osm_watch: way id="152046369" version="9"
+#: osm_watch: node id="5865966386" version="1"
 #: add_fragezeichen: Ist der Abschnitt des Uferwegs am Eiselenweg noch immer gesperrt?
 #: priority: #A
 #: next_check_id: MENTZELPARK-2018
@@ -27248,6 +27249,7 @@ EOF
 	q4 14719,9419 14774,9437 14809,9466
 	q4 14588,9473 14556,9581
 	q4 14531,9244 14485,9271 14398,9373
+	q4 14531,9244 14612,9190 14628,9158 14644,9130
 EOF
      },
      { from  => 1526323594, # 2018-05-14 20:46
@@ -27770,8 +27772,8 @@ EOF
        text  => 'Privatstraße hinter der Leipziger Str.: Bauarbeiten, für Radfahrer explizit gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: note: Verbotsschild an der Jerusalemer Str.; an der Niederwallstr. mittlerweile keines mehr
-#: last_checked: 2019-02-18
+#: note: Verbotsschild an beiden Seiten
+#: last_checked: 2019-03-04
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27820,6 +27822,8 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.moz.de/landkreise/oberhavel/oranienburg/oranienburg-artikel/dg/0/1/1656828/',
        data  => <<EOF,
+#: by: https://www.o-sp.de/lbvbrandenburg/plan/uebersicht.php?pid=23787
+#: by: https://www.o-sp.de/download/lbvbrandenburg/144687
 #: source_id: LS/721-E/18/127
 #: XXX außerdem: Radwegbau
 #: next_check: 2019-11-29
@@ -27970,8 +27974,8 @@ EOF
 EOF
      },
      { from  => 1537297950, # 2018-09-18 21:12
-       until => $isodate2epoch->("2019-01-25 18:00:00"), # 1543618799, # 2018-11-30 23:59
-       text  => 'Berliner Str.: Baustelle zwischen Mannheimer Str. und Brandenburgische Str./Blissestr., Fahrbahn Richtung Osten gesperrt, bis Ende Januar 2019',
+       until => $isodate2epoch->("2019-03-30 18:00:00"), # 1543618799, # 2018-11-30 23:59
+       text  => 'Berliner Str.: Baustelle zwischen Mannheimer Str. und Brandenburgische Str./Blissestr., Fahrbahn Richtung Osten gesperrt, bis Ende März 2019',
        type  => 'handicap',
        source_id => '2147343219',
        data  => <<EOF,
@@ -28154,9 +28158,14 @@ EOF
        data  => <<EOF,
 #: next_check_id: TREPTOWERPARK-2018
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2019-03-02
+#: XXX Sanierungsarbeiten im Treptower Park geplant: die meisten Wege um den Karpfenteich sind betroffen
+#: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
+#: osm_watch: way id="26608603" version="9"
+#: last_checked: 2019-03-07
 #: check_frequency: 7d
-	2::inwork 14854,8964 14614,9052
+	2::inwork 14854,8964 14705,9034
+# REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
 EOF
      },
      { from  => 1538258400, # 2018-09-30 00:00
@@ -28438,6 +28447,7 @@ EOF
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.787955.php
+#: by: https://www.berliner-woche.de/reinickendorf/c-verkehr/waldowstrasse-wieder-gesperrt_a202867
 	q4::inwork 5550,18775 5547,18665 5545,18590 5543,18555 5541,18451 5541,18435
 EOF
      },
@@ -28493,7 +28503,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-02-28
+#: last_checked: 2019-03-07
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28538,7 +28548,7 @@ EOF
        text  => 'Spreebogenpark: wegen Abbrucharbeiten an der ehemaligen Umfahrung der Schweizer Botschaft ist der Weg zwischen Gustav-Heinemann-Brücke und Bundeskanzleramt gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2019-02-24 (mapillary)
+#: last_checked: 2019-03-04
 #: priority: #A
 	2::inwork 8124,12840 8120,12756
 EOF
@@ -28554,13 +28564,15 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Am Hamburger Bahnhof - Uferweg: Zugang kann durch Bauzäune versperrt sein',
+       text  => 'Uferweg: Zugang kann durch Bauzäune versperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX wann werden die Bauzäune entfernt?
-#: last_checked: 2019-01-16
-#: check_frequency: 30d
-	2::inwork 8103,13675 8169,13705
+#: priority: #C
+#: last_checked: 2019-03-05
+#: check_frequency: 60d
+	2::inwork 8169,13705 8131,13770 8057,13923
+# REMOVED (hier nicht mehr) ---	2::inwork 8103,13675 8169,13705
 EOF
      },
      { from  => 1548630000, # 2019-01-28 00:00
@@ -28618,6 +28630,44 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q3::inwork -3887,16686 -3808,16690 -3715,16710
+EOF
+     },
+     { from  => undef, # 
+       until => $isodate2epoch->("2019-04-30 18:00:00"), # undef, # XXX
+       text  => 'Prinzregentenstr.: zwischen Prager Platz und Güntzelstr. Bauarbeiten, Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, bis Ende April 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX prüfen, ob und wie Radfahrer von den Bauarbeiten betroffen sind
+#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72
+#: next_check: 2019-03-01
+	q4::inwork 5618,9607 5627,9362
+EOF
+     },
+     { from  => 1551567600, # 2019-03-03 00:00
+       until => $isodate2epoch->("2021-05-31 18:00:00"), # 1625155200, # 2021-07-01 18:00
+       text  => 'Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, bis Ende Mai 2021 ',
+       type  => 'handicap',
+       source_id => '2147343824',
+       data  => <<EOF,
+# REMOVED (ja) --- #: XXX vor Ort anschauen, ggfs. nach handicap_s-orig verschieben
+	q4::inwork 8737,12098 8783,11959
+EOF
+     },
+     { from  => undef, # 
+       until => 1557180000, # 2019-05-07 00:00
+       text  => 'Akazienallee: zwischen Kastanienallee und Lindenallee Bauarbeiten, Fahrbahn gesperrt, ggfs. sind auch Radfahrer betroffen, bis 06.05.2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: fritz
+	q4::inwork 1435,12393 1644,12337
+EOF
+     },
+     { from  => 1551898069, # 2019-03-06 19:47
+       until => 1553274000, # 2019-03-22 18:00
+       text  => 'Schönleinstr.: Bauarbeiten an der Böckhstr., Fahrbahn gesperrt, bis 22.03.2019',
+       type  => 'handicap',
+       data  => <<EOF,
+	q3::inwork 11594,9604 11640,9710
 EOF
      },
     );

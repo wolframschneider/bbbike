@@ -130,7 +130,6 @@ Dorotheenstr.	1 9870,12657 9742,12609 9681,12601 9581,12588 9454,12558
 Dorotheenstr. (Straßenbahn)	1s 9454,12558 9330,12538
 Georgenstr.	1 9441,12670 9568,12688 9659,12704 9754,12775
 Paul-Junius-Str	1 15084,13276 15082,13369 15220,13377
-Marksburgstr.	1 18319,9218 18430,9199 18511,9185 18586,9172 18697,9153 18809,9133
 Griechische Allee	1 17962,6674 18002,6695 18076,6693 18125,6694 18254,6679 18339,6660 18494,6588
 Griechische Allee	1 18494,6588 18429,6582 18273,6606 18159,6642 18079,6678 18008,6672 17962,6674
 Hardenbergplatz	1 5542,11075 5565,11147 5666,11362 5698,11333 5600,11114 5542,11075
@@ -2867,6 +2866,8 @@ Schwingtor	BNP:5:-54:trailer=10 7289,8259
 Schwingtor	BNP:5:-190:trailer=10 7372,8222
 Schwingtor	BNP:5:-77:trailer=10 14824,9390
 Schwingtor	BNP:5:-73:trailer=10 14797,9396
+Schwingtor	BNP:5:-212:trailer=10 14644,9130
+Schwingtor	BNP:5:-209:trailer=10 14628,9158
 Schranke, sehr enge Durchfahrt, nicht anhängertauglich	BNP:5:-119:trailer=no 14659,7505
 Drängelgitter an der Straßenbahntrasse	BNP:6:-167 14989,13630
 Schranke	BNP:3:-90 -3646,15717
@@ -2946,7 +2947,6 @@ weites Drängelgitter	BNP:0:-242:trailer=3 12552,9165
 Barriere, Umfahrung über Gehweg mit Bordsteinen	BNP:5:-235:trailer=15 12615,9132
 Schranke, meistens offen	BNP:3:-260:trailer=6 7843,16524
 Barriere	BNP:10:-12 12178,7985
-Drängelgitter	BNP:0:52:trailer=3 10535,13006
 Drängelgitter	BNP:10:-77 7158,9509
 Drängelgitter	BNP:5:-51 -6162,16287
 Drängelgitter	BNP:5:-193 38562,100725
@@ -3000,9 +3000,9 @@ Drängelgitter	BNP:3:28:trailer=10 1409,15177
 Drängelgitter	BNP:3:5:trailer=10 26682,-13082
 Drängelgitter	BNP:3:-249:trailer=20 8363,13402
 Drängelgitter	BNP:3:-192:trailer=10 20365,11950
+Drängelgitter	BNP:5:-6:trailer=15 9702,11647
 Weidenkätzchenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21421,158 21447,47
 Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21379,33
-Alfred-Scholz-Platz: wegen Bauarbeiten kein Zugang zur Karl-Marx-Str.	2::inwork 12753,8187 12779,8188
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,8260
 Relingstr.: Bauarbeiten, gesperrt	2::inwork 22195,2390 22276,2426 22358,2460
 Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12640,14800 12709,14745 12798,14682 12867,14648 12888,14625
@@ -3062,7 +3062,7 @@ Unter den Linden -> Niederlagstr.: wegen Bauarbeiten ist das Überqueren nicht mö
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
 Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?) gesperrt	2:inwork -11407,-1086 -11460,-1098 -11538,-1138 -11615,-1094
 Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738
-Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, voraussichtlich bis Ende 2022	2:inwork 8106,13130 8102,13304
+Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, voraussichtlich bis Ende 2022	2:inwork 8106,13130 8102,13304 8098,13419
 B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich des alten Flughafens	2:inwork 18578,-1538 18680,-1506 18798,-1581 18853,-1656 18866,-1674
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
 Mühlensteg (Tegeler Hafen): Weg gesperrt	2 1691,20638 1697,20623 1721,20603
@@ -3647,4 +3647,4 @@ Rummelsburger Str., linker Geh/Radweg	1::igndisp 17769,7465 17833,7351
 Falkenberger Chaussee, linker Geh/Radweg	1::igndisp 18601,18342 18521,18347
 Mollstr., linker Gehweg bis zur Fußgängerampel	1::igndisp 11723,13139 11736,13126
 Hindenburgdamm, linker Gehweg	1::igndisp 4617,3706 4596,3738
-Grifswalder Str., linker Gehweg	1::igndisp 12563,14860 12584,14928
+Greifswalder Str., linker Gehweg	1::igndisp 12563,14860 12584,14928

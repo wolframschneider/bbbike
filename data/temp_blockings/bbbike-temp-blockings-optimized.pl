@@ -2215,7 +2215,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (H, G)
 #: priority: #A
-#: last_checked: 2019-02-22
+#: last_checked: 2019-03-07
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -2647,7 +2647,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-03-02
+#: last_checked: 2019-03-07
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -2689,7 +2689,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-02-22 vvv
+#: last_checked: 2019-03-05 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2743,7 +2743,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: osm_watch: way id="152046369" version="8"
+         'data' => '#: osm_watch: way id="152046369" version="9"
+#: osm_watch: node id="5865966386" version="1"
 #: add_fragezeichen: Ist der Abschnitt des Uferwegs am Eiselenweg noch immer gesperrt?
 #: priority: #A
 #: next_check_id: MENTZELPARK-2018
@@ -2779,6 +2780,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	q4 14719,9419 14774,9437 14809,9466
 	q4 14588,9473 14556,9581
 	q4 14531,9244 14485,9271 14398,9373
+	q4 14531,9244 14612,9190 14628,9158 14644,9130
 ',
          'from' => undef,
          'id' => 2953,
@@ -2960,8 +2962,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1577811600
        },
        {
-         'data' => '#: note: Verbotsschild an der Jerusalemer Str.; an der Niederwallstr. mittlerweile keines mehr
-#: last_checked: 2019-02-18
+         'data' => '#: note: Verbotsschild an beiden Seiten
+#: last_checked: 2019-03-04
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -2976,7 +2978,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: source_id: LS/721-E/18/127
+         'data' => '#: by: https://www.o-sp.de/lbvbrandenburg/plan/uebersicht.php?pid=23787
+#: by: https://www.o-sp.de/download/lbvbrandenburg/144687
+#: source_id: LS/721-E/18/127
 #: XXX außerdem: Radwegbau
 #: next_check: 2019-11-29
 	2::inwork -7230,25622 -7243,25847 -7309,26146
@@ -3039,7 +3043,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	q4::inwork; 4451,8874 4777,8870
+',
+         'from' => 1537297950,
+         'id' => 3019,
+         'source_id' => '2147343219',
+         'text' => 'Berliner Str.: Baustelle zwischen Mannheimer Str. und Brandenburgische Str./Blissestr., Fahrbahn Richtung Osten gesperrt, bis Ende März 2019',
+         'type' => 'handicap',
+         'until' => 1553965200
+       },
        undef,
        undef,
        undef,
@@ -3050,9 +3063,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TREPTOWERPARK-2018
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2019-03-02
+#: XXX Sanierungsarbeiten im Treptower Park geplant: die meisten Wege um den Karpfenteich sind betroffen
+#: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
+#: osm_watch: way id="26608603" version="9"
+#: last_checked: 2019-03-07
 #: check_frequency: 7d
-	2::inwork 14854,8964 14614,9052
+	2::inwork 14854,8964 14705,9034
+# REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
 ',
          'from' => undef,
          'id' => 3027,
@@ -3143,6 +3161,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.787955.php
+#: by: https://www.berliner-woche.de/reinickendorf/c-verkehr/waldowstrasse-wieder-gesperrt_a202867
 	q4::inwork 5550,18775 5547,18665 5545,18590 5543,18555 5541,18451 5541,18435
 ',
          'from' => 1551589200,
@@ -3179,7 +3198,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-02-28
+#: last_checked: 2019-03-07
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 ',
@@ -3221,7 +3240,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1591027200
        },
        {
-         'data' => '#: last_checked: 2019-02-24 (mapillary)
+         'data' => '#: last_checked: 2019-03-04
 #: priority: #A
 	2::inwork 8124,12840 8120,12756
 ',
@@ -3234,13 +3253,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX wann werden die Bauzäune entfernt?
-#: last_checked: 2019-01-16
-#: check_frequency: 30d
-	2::inwork 8103,13675 8169,13705
+#: priority: #C
+#: last_checked: 2019-03-05
+#: check_frequency: 60d
+	2::inwork 8169,13705 8131,13770 8057,13923
+# REMOVED (hier nicht mehr) ---	2::inwork 8103,13675 8169,13705
 ',
          'from' => undef,
          'id' => 3066,
-         'text' => 'Am Hamburger Bahnhof - Uferweg: Zugang kann durch Bauzäune versperrt sein',
+         'text' => 'Uferweg: Zugang kann durch Bauzäune versperrt sein',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3279,6 +3300,48 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Kronprinzenstr.: in Höhe Kaiserstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis voraussichtlich 30.04.2019 ',
          'type' => 'handicap',
          'until' => 1556661600
+       },
+       {
+         'data' => '#: XXX prüfen, ob und wie Radfahrer von den Bauarbeiten betroffen sind
+#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72
+#: next_check: 2019-03-01
+	q4::inwork 5618,9607 5627,9362
+',
+         'from' => undef,
+         'id' => 3073,
+         'text' => 'Prinzregentenstr.: zwischen Prager Platz und Güntzelstr. Bauarbeiten, Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, bis Ende April 2019',
+         'type' => 'handicap',
+         'until' => 1556640000
+       },
+       {
+         'data' => '# REMOVED (ja) --- #: XXX vor Ort anschauen, ggfs. nach handicap_s-orig verschieben
+	q4::inwork 8737,12098 8783,11959
+',
+         'from' => 1551567600,
+         'id' => 3074,
+         'source_id' => '2147343824',
+         'text' => 'Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, bis Ende Mai 2021 ',
+         'type' => 'handicap',
+         'until' => 1622476800
+       },
+       {
+         'data' => '#: by: fritz
+	q4::inwork 1435,12393 1644,12337
+',
+         'from' => undef,
+         'id' => 3075,
+         'text' => 'Akazienallee: zwischen Kastanienallee und Lindenallee Bauarbeiten, Fahrbahn gesperrt, ggfs. sind auch Radfahrer betroffen, bis 06.05.2019',
+         'type' => 'handicap',
+         'until' => 1557180000
+       },
+       {
+         'data' => '	q3::inwork 11594,9604 11640,9710
+',
+         'from' => 1551898069,
+         'id' => 3076,
+         'text' => 'Schönleinstr.: Bauarbeiten an der Böckhstr., Fahrbahn gesperrt, bis 22.03.2019',
+         'type' => 'handicap',
+         'until' => 1553274000
        }
      
 );

@@ -25,7 +25,7 @@
 # 
 #: next_check_id: GUBENER-2019
 #: priority: #A
-#: last_checked: 2019-02-26
+#: last_checked: 2019-03-07
 #: check_frequency: 14d
 Gubener Str.: Fahrbahn f¸r ein paar Meter gesperrt, Ausweichen auf Gehweg, Bordsteine	q3::inwork 13326,12056 13243,12222
 # 
@@ -37,12 +37,12 @@ Dˆringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261
 # REMOVED (-> qualitaet_s-orig; f¸r Radfahrer offen) --- #: XXX vor Ort pr¸fen! --- #: source_id: 2147342929 --- #: priority: #B --- #: next_check: 2018-08-31 --- #: valid: -20180831 --- Helmerdingstr.: Bauarbeiten, Richtung Revaler Str. gesperrt	q4::inwork; 14468,11203 14442,11101
 # REMOVED (-> f¸r Radfahrer offen) --- #: XXX vor Ort pr¸fen! --- #: source_id: 2147342938 --- #: priority: #B --- #: next_check: 2018-08-10 --- #: valid: -20180810 --- Scharnweberstr.: Bauarbeiten zwischen Colbestr. und Kinzigstr., Fahrbahn Richtung G¸rtelstr. gesperrt	q4::inwork; 14468,11992 14589,11975
 # 
-#: last_checked: 2019-03-01
+#: last_checked: 2019-03-05
 Lange Str.: Bauarbeiten, Einbahnstraﬂenregelung	q3::inwork; 12413,11901 12238,11931
 # 
 #: XXX bis wann gehen die Bauarbeiten?
 #: XXX ggfs. alten handicap_s-orig-Eintrag wieder aktivieren
-#: last_checked: 2019-02-27
+#: last_checked: 2019-03-05
 #: check_frequency: 90d
 Hermann-Stˆhr-Platz: Engstelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 # 
@@ -118,22 +118,23 @@ Eisenacher Str.: Bauarbeiten, Fahrbahn in Richtung Osten gesperrt, Radfahrer d¸r
 # 
 ### Treptow ###
 # 
-#: last_checked: 2019-03-02
+# REMOVED --- #: last_checked: 2019-03-06 (indirekt, Sackgassenschild an der Jordanstr.)
+#: last_checked: 2019-03-07
 #: check_frequency: 14d
 Lohm¸hlenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 13251,9829 13302,9894 13311,9905
 # 
 #: osm_watch: way id="466318949" version="7"
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
 #: also_indoor: traffic
-#: last_checked: 2019-02-28
+#: last_checked: 2019-03-06
 BouchÈstr.: Baustelle, Fahrtrichtung gesperrt	q3::inwork; 13298,9252 13188,9134
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
 #: osm_watch: way id="4686247" version="9"
-#: last_checked: 2019-02-28
+#: last_checked: 2019-03-06
 Mengerzeile: Baustelle, Fahrtrichtung gesperrt	q4::inwork; 13176,9302 13098,9205
 # 
 #: osm_watch: way id="641269921" version="1"
-#: last_checked: 2019-02-28
+#: last_checked: 2019-03-06
 #: check_frequency: 14d
 Schmollerplatz: Baustelle, Fahrtrichtung gesperrt	q4::inwork; 13206,9335 13178,9363 13231,9422
 # 
@@ -150,20 +151,12 @@ Schmollerplatz: Baustelle, Fahrtrichtung gesperrt	q4::inwork; 13206,9335 13178,9
 # 
 ### Wedding ###
 # 
-#: by: http://www.baustellen-doku.info/berlin_neubau_s-bahn_s21/20180406/
-#: by: http://www.berliner-woche.de/moabit/verkehr/strasse-bleibt-gesperrt-d162416.html
-#: source_id: LMS-BR_r_LMS-BR_127868_LMS-BR_72
-#: source_id: 2147342637
-#: also_indoor: traffic (G)
-#: last_checked: 2018-12-28
-#: next_check: 2019-02-28
-#: valid: -20190228
-Friedrich-Krause-Ufer: Engstelle wegen Bauarbeiten, voraussichtlich bis Ende Februar 2019	q2::inwork 7368,14573 7314,14599 7167,14666
+# REMOVED (best‰tigt) --- #: by: http://www.baustellen-doku.info/berlin_neubau_s-bahn_s21/20180406/ --- #: by: http://www.berliner-woche.de/moabit/verkehr/strasse-bleibt-gesperrt-d162416.html --- #: source_id: LMS-BR_r_LMS-BR_127868_LMS-BR_72 --- #: source_id: 2147342637 --- #: also_indoor: traffic (G) --- #: last_checked: 2018-12-28 --- #: next_check: 2019-02-28 --- #: valid: -20190228 --- Friedrich-Krause-Ufer: Engstelle wegen Bauarbeiten, voraussichtlich bis Ende Februar 2019	q2::inwork 7368,14573 7314,14599 7167,14666
 # 
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.641406.php
 #: osm_watch: way id="549316654" version="1"
 #: valid: 20171026-
-#: last_checked: 2018-12-28
+#: last_checked: 2019-03-05
 #: check_frequency: 60d
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607,15282
 # 
@@ -189,7 +182,7 @@ Hirtenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10925,13322 11012,13278
 #: XXX evtl. wird hier im Zusammenhang mit den Bauarbeiten auf der Roﬂstraﬂenbr¸cke die Zufahrt komplett gesperrt (bis 29. M‰rz 2019?)
 #: source_id: 2147343739
 #: source_id: 2147343772
-#: last_checked: 2019-02-27
+#: last_checked: 2019-03-06
 #: check_frequency: 7d
 M‰rkisches Ufer: Engstelle vor der Roﬂstraﬂenbr¸cke	q2::inwork 10687,11853 10869,11949
 # 
@@ -201,7 +194,7 @@ M‰rkisches Ufer: Engstelle vor der Roﬂstraﬂenbr¸cke	q2::inwork 10687,11853 10869
 # REMOVED --- #: last_checked: 2017-03-24 --- Zietenplatz/Mohrenstr.: Bauarbeiten, Fahrbahn Richtung Osten gesperrt	q3::inwork; 9000,11727 9075,11756
 # 
 #: source_id: 2147342720
-#: last_checked: 2019-03-01 vvv
+#: last_checked: 2019-03-07 vvv
 #: next_check: 2019-04-30 vvv
 #: valid: -20190430 vvv
 Littenstr.: Fahrbahn an der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q3::inwork 11092,12375 11139,12243
@@ -229,9 +222,9 @@ Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 96
 #: by: http://www.dafmap.de/d/berlin.html?center=52.508653+13.397214&zoom=17# (Geplanter Projektabschluss: 2019-03-31)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_52_7191_7270_online.pdf (Grundst¸cksnummerierungen)
 #: also_indoor: traffic (HG) vvv
-#: last_checked: 2019-02-14 vvv
+#: last_checked: 2019-03-04 vvv
 #: check_frequency: 30d vvv
-#: osm_watch: way id="327756248" version="3"
+#: osm_watch: way id="327756248" version="5"
 Jerusalemer Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 9936,11469
 #: osm_watch: way id="542983664" version="2"
 Sch¸tzenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
@@ -291,9 +284,9 @@ Prinzengasse: einige Fuﬂg‰nger, parkende Autos	q3::inwork 9955,12300 10006,12306
 # REMOVED (Einbahnstraﬂenregelung existiert zwar noch, aber die Baustelle ist komplett weg) --- #: last_checked: 2015-12-02 --- Universit‰tsstr.: wegen Bauarbeiten Einbahnstraﬂe zwischen Dorotheenstr. und Georgenstr.	q3::inwork; 9568,12688 9581,12588
 # 
 #: next_check_id: STABIUDL-2014 vvv
-#: last_checked: 2019-03-01 vvv
+#: last_checked: 2019-03-07 vvv
 #: check_frequency: 60d vvv
-#: by: http://www.berliner-zeitung.de/berlin/baustelle-staatsbibliothek-das-geruest-steht-und-steht-und-steht,10809148,22334074.html (Endedatum) vvv
+#: by: http://www.berliner-zeitung.de/berlin/baustelle-staatsbibliothek-das-geruest-steht-und-steht-und-steht,10809148,22334074.html (Endedatum 2016) vvv
 #: osm_watch: way id="153698394" version="5"
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraﬂe Richtung S¸den	q4::inwork; 9475,12365 9462,12481 9454,12558
 #: osm_watch: way id="114667396" version="6"
@@ -338,7 +331,7 @@ Universit‰tsstr.: Fahrbahn wegen Bauarbeiten in Richtung S¸den gesperrt	q4::inwo
 # 
 #: next_check_id: ZEUGHAUS-2014
 #: XXX eigentlich nur UdL, kann aber so nicht dargestellt werden
-#: last_checked: 2019-02-25 (webcam)
+#: last_checked: 2019-03-07
 #: check_frequency: 60d
 Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364 9934,12420
 # 
@@ -350,23 +343,13 @@ Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364
 # REMOVED --- #: last_checked: 2012-07-13 --- #: next_check: 2012-09-01 --- Kronenstr./Jerusalemer Str.: Bauarbeiten, Fahrbahn vor der Kreuzung gesperrt	q3::inwork 9692,11732 9892,11752
 # REMOVED (eigentlich gut zu befahren) --- Revaler Str.: Bauarbeiten, Kreuzung gesperrt, Gehweg kann benutzt werden	q4::inwork 14513,11075 14442,11101
 # REMOVED --- #: last_checked: 2013-06-17 --- #: next_check: 2013-06-20 --- #: priority: #A --- Bernhard-Weiﬂ-Str.: Gleisbauarbeiten, Fahrbahn gesperrt	q3::inwork 11191,13080 11235,13143 11291,13218
-# 
-#: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0175-spandauer-strae-rathausstrae.html
-#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6145.html
-#: by: http://www.projekt-u5.de/de/rotes-rathaus/ (webcam)
-#: XXX wird nach den Bauarbeiten die Fahrbahn noch bestehen bleiben?
-#: source_id: LMS-BR_r_LMS-BR_197
-#: osm_watch: way id="194962375" version="10"
-#: last_checked: 2019-02-25 (webcam)
-#: check_frequency: 14d
-Rathausstr.: Fuﬂg‰nger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521 10704,12595
-# 
+# REMOVED (keine Einschr‰nkungen mehr) --- #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0175-spandauer-strae-rathausstrae.html --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6145.html --- #: by: http://www.projekt-u5.de/de/rotes-rathaus/ (webcam) --- #: XXX wird nach den Bauarbeiten die Fahrbahn noch bestehen bleiben? --- #: source_id: LMS-BR_r_LMS-BR_197 --- #: osm_watch: way id="194962375" version="10" --- #: last_checked: 2019-02-25 (webcam) --- #: check_frequency: 14d --- Rathausstr.: Fuﬂg‰nger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521 10704,12595
 # REMOVED (fertig) --- #: by: http://www.berliner-woche.de/mitte/bauen/rathausstrasse-wird-gesperrt-d140537.html vvv --- #: last_checked: 2018-06-21 (webcam) vvv --- #: check_frequency: 2d vvv --- #: XXX_prog: hier eigentlich nicht, wird nur zur "k¸nstlichen Verl‰ngerung" der Wegstrecke benutzt --- kann aufgehoben werden, sobald handicap_directed ¸berall funktioniert --- Rathausstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 10476,12432 10584,12507 --- Rathausstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10584,12507 10601,12521 --- #: last_checked ^^^ --- #: check_frequency ^^^ --- #: by ^^^
 # 
 #: next_check_id: KARLMARXALLEE-2018
 #: source_id: 2147342756
 #: also_indoor: traffic
-#: last_checked: 2019-02-26
+#: last_checked: 2019-03-05
 #: check_frequency: 60d
 Schillingstr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q3-::inwork 11635,12745 11596,12668
 # 
@@ -437,7 +420,7 @@ Friesenstr.: Fahrbahn Richtung Zossener Str. gesperrt	q4::inwork; 9801,8683 9801
 #: XXX laut vmz bis Anfang 2019, laut fritz zun‰chst bis 31.12.2018, mittlerweile "bis auf weiteres"
 #: http://www.dafmap.de/d/berlin.html?id=3451&mt=0&zoom=16
 #: also_indoor: traffic
-#: last_checked: 2019-02-08
+#: last_checked: 2019-03-07
 #: next_check: 2019-06-30
 #: valid: -20190630
 Mˆckernstr.: Bauarbeiten, Einbahnstraﬂe, ehemaliger Radweg kann benutzt werden	q3+::inwork; 9022,10857 8941,10663 8926,10626
@@ -477,7 +460,7 @@ Mˆckernstr.: Bauarbeiten, Einbahnstraﬂe, ehemaliger Radweg kann benutzt werden	q
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=44133
 #: osm_watch: way id="531952542" version="5"
 #: also_indoor: traffic (H)
-#: last_checked: 2019-02-12
+#: last_checked: 2019-03-07
 #: check_frequency: 45d
 Herbert-von-Karajan-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 7970,11441 7965,11467 8005,11627
 # 
@@ -491,8 +474,8 @@ Herbert-von-Karajan-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 7970,11
 #: source_id: LMS-BR_r_LMS-BR_121156_LMS-BR_72
 #: XXX laut fritz bis 2019-04-30
 #: also_indoor: traffic (H)
-#: last_checked: 2019-01-10
-#: check_frequency: 120d
+#: last_checked: 2019-03-05 (daf)
+#: check_frequency: 60d
 Englische Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 5424,11944 5518,12159
 # 
 #: XXX nach Abschluss wieder die alten handicap-Eintr‰ge (siehe unten, 2x) aktivieren
@@ -500,7 +483,7 @@ Englische Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 5424,11944 5518,1
 #: XXX geplanter Projektabschluss laut dafmap: 2018-07-31
 #: by: http://www.berliner-woche.de/hansaviertel/bauen/richtfest-fuer-oasis-berlin-d157470.html
 #: osm_watch: way id="151857175" version="7"
-#: last_checked: 2019-01-12
+#: last_checked: 2019-03-07
 #: check_frequency: 45d
 Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5919,12423 5894,12480 5944,12548
 # 
@@ -533,7 +516,7 @@ provisorische und enge Radwegf¸hrung, Fuﬂg‰nger, Seitenwechsel notwendig	q3::inw
 # 
 #: XXX Wann sind die Bauarbeiten beendet? (laut googlemaps: Ende November 2018, laut Schild der Wasserbetriebe: bis November 2018)
 #: also_indoor: traffic (G)
-#: last_checked: 2019-02-28
+#: last_checked: 2019-03-06
 #: check_frequency: 10d
 Weichselstr.: Bauarbeiten am Weichselplatz, Fahrbahn gesperrt	q3::inwork 12755,9188 12681,9083
 # 
@@ -720,6 +703,7 @@ S‰ntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
 #: XXX "ab voraussichtlich 18.02.2019 erfolgt eine erneute Fahrbahnsperrung zwischen Steinheilpfad und Oberhofer Weg" (am 17.02. wird es allerdings noch nirgendwo erw‰hnt)
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/sanierung-der-hildburghauser-strasse-verzoegert-sich-erneut_a193048 (erneute Sperrung ab 18. Februar 2019)
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/der-ausbau-der-hildburghauser-strasse-verzoegert-sich-weiter_a201187
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.789448.php
 #: source_id: 2147341614
 #: source_id: 2147343257
 #: also_indoor: traffic (H,G)
@@ -797,8 +781,8 @@ Alexanderplatz: langsame Straﬂenbahnen, Fuﬂg‰ngerverkehr	q2- 10970,12822 10923,1
 Alexanderplatz [Richtung Alexa]: Fuﬂg‰ngerverkehr	q3 11134,12793 11064,12910
 #: XXX nach den Bauarbeiten den alten Eintrag wiederherstellen
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.582161.php (Sperrung Kfz-Verkehr - kaum Auswirkungen f¸r Radfahrer) (in der Realit‰t aber schon, viele Fuﬂg‰nger laufen auf dem Radweg)
-#: last_checked: 2019-03-01
-#: check_frequency: 60d
+#: last_checked: 2019-03-07
+#: check_frequency: 30d
 #Rathausstr.: Fuﬂg‰nger	q1- 10923,12779 10704,12595
 Rathausstr.: Fuﬂg‰nger, Bauarbeiten	q2 10923,12779 10704,12595
 Dircksenstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10970,12822 10849,12944
@@ -817,9 +801,15 @@ Treptower Park: einige Fuﬂg‰nger	q1+ 15558,8820 15439,8839 15297,8921 15245,8916
 Treptower Park: einige Fuﬂg‰nger	q1 14588,9473 14556,9581
 Treptower Park: einige Fuﬂg‰nger	q1 14719,9419 14774,9437 14809,9466
 Treptower Park: einige Fuﬂg‰nger, enger Weg	q2+ 14889,9381 14824,9390
+Treptower Park: einige Fuﬂg‰nger, enger Weg	q2+ 14705,9034 14644,9130
+Treptower Park: einige Fuﬂg‰nger, enger Weg	q2+ 14628,9158 14612,9190
+Treptower Park: einige Fuﬂg‰nger	q1 14612,9190 14531,9244
 #: XXX_prog 2x BS, ansonsten q2 oder q3
 Am Sowjetischen Ehrenmal: einige Fuﬂg‰nger, Bordsteine (2x)	q4 14824,9390 14797,9396
-Treptower Park: einige Fuﬂg‰nger, enger Weg	q2+ 14797,9396 14719,9419 14635,9441
+#: XXX_prog 2x BS, ansonsten q2 oder q3
+Am Sowjetischen Ehrenmal: einige Fuﬂg‰nger, Bordsteine (2x)	q4 14644,9130 14628,9158
+Treptower Park: einige Fuﬂg‰nger, enger Weg	q2+ 14797,9396 14719,9419
+Treptower Park: einige Fuﬂg‰nger	q1 14719,9419 14635,9441
 Treptower Park: einige Fuﬂg‰nger	q1 14316,9542 14384,9565 14478,9545 14507,9529 14588,9473 14635,9441 14669,9389 14673,9353 14655,9311 14531,9244 14475,9199
 Treptower Park: einige Fuﬂg‰nger	q1 14398,9373 14485,9271 14531,9244
 Gˆrlitzer Park: Fuﬂg‰nger	q2 12671,10042 12681,10047 12690,10062
@@ -968,7 +958,8 @@ Wuhlheide: einige Fuﬂg‰nger	q1 19594,6155 19606,6182 19751,6514 19810,6634 19931
 (am Schloﬂ Schˆnhausen): Fuﬂg‰nger	q1 10339,19179 10249,19148
 # REMOVED (done) --- #: XXX mittlerweile darf die Br¸cke offiziell befahren werden - evtl. das "ggfs. schieben" entfernen? --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=4830
 Blockdammweg (Br¸cke): eng, Fuﬂg‰nger, Radfahren erlaubt	q2 17972,8968 17990,8963 18070,9022
-Markgrafenstr.: Gehweg	q2 9737,11546 9732,11574 9707,11596 9701,11656
+#: note: Radfahrer sollen hier schieben
+Markgrafenstr.: Gehweg	q3 9737,11546 9732,11574 9707,11596 9702,11647 9701,11656
 Gendarmenmarkt: Fuﬂg‰ngerzone, ggfs. schieben	q3 9536,11922 9666,11935
 Gendarmenmarkt: Fuﬂg‰ngerzone, ggfs. schieben	q3 9523,12019 9656,12031
 Am Volkspark: Parkweg	q1 5730,8207 5925,8219
@@ -1026,7 +1017,7 @@ Herthastr.: Gehweg, Bordsteine	q4 1937,9253 1932,9263
 Fuggerstr.: einige Fuﬂg‰nger	q1 6128,10319 6020,10351
 Pfalzburger Str.: Gehweg	q2 4905,10069 4910,10135
 Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
-(Tilla-Durieux-Park): Fuﬂg‰nger	q2 8467,11125 8410,11143
+(Tilla-Durieux-Park): Fuﬂg‰nger, Radfahren nicht erlaubt	q3 8467,11125 8410,11143
 # REMOVED (noch einige enge Stellen vorhanden) --- #: next_check_id: SPREERADWEGEINSTEINUFER-2014 --- #: XXX Bauarbeiten, wird der Weg sp‰ter breiter sein? --- #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/fahr_rat_20_sitzung.pdf (Verbreiterungen) --- #: last_checked: 2017-08-16 --- #: check_frequency: 14d
 (Rad- und Wanderweg an Spree und Landwehrkanal): Fuﬂg‰nger, teilweise eng	q2 3370,12725 3396,12741 3416,12738 3507,12725 3586,12697 3643,12671 3748,12627 3836,12614
 (Rad- und Wanderweg an Spree und Landwehrkanal): Fuﬂg‰nger, teilweise eng	q2 3836,12614 3867,12616 3888,12618 4131,12641 4340,12578 4529,12570 4642,12491
