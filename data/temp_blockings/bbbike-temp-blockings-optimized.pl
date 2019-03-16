@@ -2215,7 +2215,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (H, G)
 #: priority: #A
-#: last_checked: 2019-03-07
+#: last_checked: 2019-03-14
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -2837,7 +2837,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-02-24
+#: last_checked: 2019-03-13
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889
 # REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
 ',
@@ -2870,8 +2870,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2018-11-11
-#: next_check: 2019-03-01
+#: last_checked: 2019-03-12
 	q4::inwork; 13391,16436 13630,16629
 ',
          'from' => undef,
@@ -2963,7 +2962,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-03-04
+#: last_checked: 2019-03-14
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -3011,9 +3010,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: also_indoor: traffic (G) vvv
-#: last_checked: 2019-02-13 vvv
+#: last_checked: 2019-03-13 vvv
 	q3::inwork 12335,7770 12224,7799
-	q2::inwork 12335,7770 12075,7696
+# REMOVED (fertig) ---	q2::inwork 12335,7770 12075,7696
 # REMOVED (fertig) ---	q3::inwork; 12647,7672 12520,7694
 # REMOVED (hier keine Einbahnstraßenregelung mehr)	q3::inwork; 12520,7694 12335,7770
 #: last_checked ^^^
@@ -3067,7 +3066,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-03-07
+#: last_checked: 2019-03-11
 #: check_frequency: 7d
 	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
@@ -3253,6 +3252,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX wann werden die Bauzäune entfernt?
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_11_1601_1736_online.pdf (Straßenlandwidmung)
 #: priority: #C
 #: last_checked: 2019-03-05
 #: check_frequency: 60d
@@ -3335,13 +3335,53 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1557180000
        },
        {
-         'data' => '	q3::inwork 11594,9604 11640,9710
+         'data' => '#: last_checked: 2019-03-14
+	q3::inwork 11594,9604 11640,9710
 ',
          'from' => 1551898069,
          'id' => 3076,
          'text' => 'Schönleinstr.: Bauarbeiten an der Böckhstr., Fahrbahn gesperrt, bis 22.03.2019',
          'type' => 'handicap',
          'until' => 1553274000
+       },
+       {
+         'accept_multi_feature_distance' => 1500,
+         'data' => '#: note: laut VIZ ist der Radverkehr auch betroffen, aber nicht der Fußverkehr (also schieben möglich?); Dauer 1 1/2 Jahre ab 2019-03-11
+#: source_id: 2147343858
+#: source_id: 2147343859
+	q4::inwork 8401,22013 8430,22110
+	q4::inwork 8903,23349 8909,23506
+',
+         'from' => 1552239604,
+         'id' => 3077,
+         'text' => 'Mönchmühler Str.: Sperrung der Fahrbahn an der Einmündung Hauptstr./Bahnhofstr. sowie zwischen Centweg und Wasserkräuterweg, voraussichtlich bis Mitte 2020',
+         'type' => 'handicap',
+         'until' => 1593532800
+       },
+       {
+         'data' => '#: source_id: 2147343861
+	q4::inwork; 669,3119 677,3157 649,3221 640,3240 578,3380
+',
+         'from' => 1552153452,
+         'id' => 3078,
+         'text' => 'Onkel-Tom-Str.: Bauarbeiten, Fahrbahn Richtung Norden zwischen Potsdamer Str. und Scharfestr. gesperrt, Radfahrer sind auch betroffen, bis Mitte Juli 2019',
+         'type' => 'handicap',
+         'until' => 1562947200
+       },
+       {
+         'data' => '#: next_check_id: STRALAUER-2019
+#: XXX Umleitungsstrecke und Stralauer Allee abfahren
+#: XXX ggfs. zu einer permanenten Sperrung machen
+#: last_checked: 2019-03-14
+#: next_check: 2019-03-19
+	q4::inwork; 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
+',
+         'from' => 1552863600,
+         'id' => 3079,
+         'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stralauer-allee-friedrichshain-bauarbeiten-%C2%B7-sperrung-ri-muhlenstra%C3%9Fe',
+         'text' => 'Rochowstr. und Persiusstr.: Einbahnstraßenregelung, offen Richtung Stralauer Allee, vom 19. März 2019 bis Ende 2019',
+         'type' => 'handicap',
+         'until' => 1577833199
        }
      
 );

@@ -52,7 +52,7 @@ Pomellen - polnische Grenze: Qualität?	? 75562,105308 75775,105512 76187,106212 
 zur B158: Qualität?	? 56450,48250 56587,48550 57328,48981
 Neue Trasse der B167: für Radfahrer benutzbar? Alte Trasse nicht mehr Bundesstraße, sondern K6436?	? 58206,37275 58206,37675 58225,37959 58087,38231 57734,38743 57612,39937 57403,40340 56862,40818 56659,41179 56381,41675 56087,41956 55506,42350 54895,43268 54515,43803 53987,44157 53425,44300 53187,44262 52341,43207
 Kiekebusch (früher Waltersdorf) - Karlshof: laut "Berliner Umland" witterungsabhängige Strecke; Schlenker um See notwendig?	? 20075,-5417 19866,-5382 19809,-5557 19945,-5661 19915,-6315 19907,-6772 19951,-6902 19817,-7484
-Kiekebusch - Karlshof: laut "Berliner Umland" geeignete Strecke auf Straßen	? 20892,-6636 20577,-6982 20255,-7591
+Kiekebusch - Karlshof: laut "Berliner Umland" geeignete Strecke auf Straßen	? 20883,-6592 20577,-6982 20255,-7591
 Karlshof - Brusendorf: laut "Berliner Umland" geeigneter Radweg (möglicherweise asphaltiert)	? 19092,-9677 18847,-9629 18205,-10432
 Günterberg - Biesenbrow: laut "Regio-Cart" gut geeignet	? 47091,77570 47269,77634 47713,78664 48006,79147 48305,79400 49117,79726 49521,79799 49932,79760 50324,80128
 Mürow - Henriettenhof: Qualität? südlich des Dorfes sah es wie ein Feldweg oder Kopfsteinpflaster aus (Q2 oder schlechter)	? 52361,72080 53566,69842 54031,69280
@@ -1044,6 +1044,8 @@ Kunersdorfer Str. (Potsdam): Kann die Heinrich-Mann-Allee in Höhe Kunersdorfer S
 Wiltbergstr.: existieren Radspuren in beiden Richtungen zwischen Karower Chaussee und Alt-Buch?	? 16669,25373 16583,25440 16475,25526 16414,25575
 Nordgrabenweg: wurde die beabsichtigte Straßenbenennung schon vollzogen?	?::projected 7630,20698 7818,20749 7966,20787 8092,20817 8219,20870 8507,21023
 Nordgrabenweg: wurde die beabsichtigte Straßenbenennung schon vollzogen?	?::projected 8219,20870 8311,20840
+Bölschestr.: existieren hier Schutzstreifen bzw. asphaltierte Straßenbahnkaps?	? 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398
+Bölschestr.: existieren hier Schutzstreifen bzw. asphaltierte Straßenbahnkaps?	? 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 # added from strassen
 Am Waldkiefernweg (heißt die Straße "Am Waldkiefernpfad" oder "Am Waldkiefernweg"?)	? -6340,6500 -6268,6610 -6302,6690
 Petersallee (Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5426,16539 5533,16662
@@ -1097,7 +1099,6 @@ Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 für Radfahrer freigegebene Busspur gilt Mo-Fr 6-19 Uhr (bleibt die Absperrung des Radwegs permanent?)	? 2532,9911 2590,9949 2694,10002 2702,10006
 Gehweg für Radfahrer frei (Sind die Gehwege zwischen Heinersdorfer Str. und Steinheilpfad für Radfahrer freigegeben?)	? 5585,1275 5414,1304 5223,1318
 # added from qualitaet_s
-Hegemeisterweg: Asphalt ohne letzte Deckschicht (Hat die Fahrbahn die letzte Asphalt-Deckschicht bekommen?)	? 17202,8391 17522,8220
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 (Weg am Tegeler Fließ): Waldweg, OK (Wie ist die Qualität hier? Wurde vielleicht asphaltiert?)	? 4222,22854 4176,22764
 (Weg am Tegeler Fließ): Waldweg, OK (Wie ist die Qualität hier?)	? 4117,22722 4106,22731 4022,22691
@@ -1111,7 +1112,6 @@ Holwedestr.: mäßiger Asphalt, starke Frostschäden (Ist die Sanierung beendet? Is
 (Mauerweg am Eiskeller): asphaltiert (ist dieser Abschnitt tatsächlich asphaltiert?)	? -7990,19888 -8266,19811 -8469,19845 -8494,19713 -8448,19710 -8521,19390 -8372,19402 -8272,19086 -8206,19007 -8011,19059
 Am Fort: schlechtes Kopfsteinpflaster (ist die Straße "Am Fort" auch im südlichen Abschnitt gepflastert?)	? -7948,12634 -7959,12439 -7967,12333 -7976,12217
 Alter Radelander Weg: loser Schotter (hat sich die Qualität des Waldwegs gebessert?)	? 25007,-2620 24224,-1271 24158,-1153
-Privatstr. 3: mäßiger Asphalt, unebene Fahrbahn, diverse kleine Schlaglöcher (wurde im westlichen Abschnitt der Privatstraße 3 der Asphalt neu gemacht?)	? 16920,17204 17027,17219 17153,17216
 Genfenbergstr.: Asphalt mit Fugen (Wurde die Genfenbergstr. saniert? Hat der Asphalt jetzt eine bessere Qualität?)	? -3628,12176 -3416,12165
 # added from qualitaet_l
 Neuruppin - Wuthenow - Gnewikow - Wustrau-Altfriesack: teilweise gut, teilweise mäßiges Kopfsteinpflaster (wird sich die Qualität nach den Bauarbeiten verbessern?)	? -29902,57202 -29816,57117 -29490,56714 -29243,56187 -29198,55801 -29109,55374 -28677,55014 -28288,54212 -28911,54055 -29276,53427 -29210,52915 -28736,52387 -28368,51517 -28001,50966 -27421,50349 -27196,50015 -27035,49829 -25968,49631 -25719,49500 -25060,48842
@@ -1204,6 +1204,8 @@ Halbe - Löpten: Kopfsteinpflaster (ist das Kopfsteinpflaster eher mäßig oder ehe
 Halbe - Löpten: unbefestigte Straße (wie ist die Qualität der Straße zwischen Halbe und Löpten?)	? 31421,-31751 31211,-31151 31092,-29859 31089,-29262 30980,-28665 30875,-28366
 Löpten - Kleinköris: Sand (wie ist die Qualität der Straße zwischen Löpten und Kleinköris?)	? 30875,-28366 30805,-28162 30787,-27822 30852,-27302
 Kleinköris - Neubrücke: unbefestigte Straße (wie ist die Qualität der Straße zwischen Kleinköris und Neubrück?)	? 31154,-25834 31240,-25274 31428,-24938 31548,-24479
+# added from nolighting
+Stresemannstr. - Wilhelmstr.: vorhandene Beleuchtung ist kaputt (funktioniert die Beleuchtung wieder?)	? 9245,10565 9375,10616
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
@@ -1212,7 +1214,6 @@ Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,
 (ist hier auch ein asphaltierter Zweirichtungsradweg?)	? 34403,3857 34486,4276 34549,4551
 (andere Straßenseite auch?)	? 37093,-151665 37375,-151190
 (andere Straßenseite auch?)	? 37628,-150734 37756,-150359
-(wie weit geht der Radweg in Dahlewitz?)	? 11875,-8728 11791,-8700 11555,-8625
 (Geht der Radweg bis zur B2?)	? 50314,68648 50364,68651 50557,68650 50831,68659 50863,68629
 asphaltiert (geht der Radweg in Richtung Südwesten weiter?)	? 10744,-25036 9478,-26014 9223,-26361 8647,-26861
 # added from comments_misc

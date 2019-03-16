@@ -1953,7 +1953,7 @@ Möthlower Str.: Sand	Q2 -7588,15656 -7483,15690 -7457,15704
 Straße 270: unbestigter Weg, Schotter	Q2 -5886,10837 -5312,10948
 Straße 270: wassergebundene Decke	Q1 -5312,10948 -5091,10994
 Straße 270: Kopfsteinpflaster	Q2 -5091,10994 -4855,11031
-Eschengraben: Asphalt	Q0 11778,17066 11783,17036 11831,16802 11776,16753 11720,16752 11613,16747
+Eschengraben: Asphalt	Q0 11778,17066 11781,17046 11817,16870 11831,16802 11776,16753 11720,16752 11613,16747
 Eschengraben: Beton	Q1 11755,17216 11778,17066
 (Mauerweg Rudow): schlechter Asphalt, extreme Wurzelhebungen	Q3 16997,-663 17076,-644 17236,-602
 (Bucher Teiche - Hobrechtsfelde): Feldweg, zweispurig	Q2 14497,26727 14494,26854 14567,27165 14660,27310 14699,27471
@@ -4808,15 +4808,17 @@ Rösnerstr.: Asphalt	Q0 4217,5217 4252,5259
 Carl-Ludwig-Schleich-Promenade: Waldweg	Q1 2315,8431 2316,8469 2317,8616
 Carl-Ludwig-Schleich-Promenade: Waldweg	Q1 2273,8640 2317,8616 2361,8608
 Lausitzer Platz: Kopfsteinpflaster	Q2 12212,10440 12197,10494
-Zu den Krugwiesen: Asphalt	Q0 18506,17236 18646,17345
-(Zu den Krugwiesen - Vincent-van-Gogh-Str.): wassergebundene Decke	Q1 18646,17345 18704,17565
-(Weg durch die Falkenberger Krugwiesen): wassergebundene Decke	Q1 18704,17565 18756,17498 18784,17525 18831,17663 18937,17738 18988,17781 19102,17879 19110,18015 19127,18091 19213,18195 19251,18248 19249,18351 19265,18400
+Zu den Krugwiesen: Asphalt	Q0 18506,17236 18644,17349
+(Zu den Krugwiesen - Vincent-van-Gogh-Str.): wassergebundene Decke	Q1 18650,17367 18704,17565
+(Weg durch die Falkenberger Krugwiesen): wassergebundene Decke	Q1 18704,17565 18756,17498
+(Weg durch die Falkenberger Krugwiesen): wassergebundene Decke	Q1 18644,17349 18650,17367 18708,17415 18737,17482 18756,17498 18784,17525 18831,17663 18937,17738 18991,17776 19045,17832 19097,17869 19110,18015 19127,18091 19213,18195 19251,18248 19249,18351 19265,18400
 (Weg durch die Falkenberger Krugwiesen): Verbundsteinpflaster	Q1 19265,18400 19291,18456
 Dorfstr. (Falkenberg): schlechtes Kopfsteinpflaster	Q3 19154,18498 19036,18521
 (Falkenberger Krugwiesen - Hohenschönhauser Str.): Verbundsteinpflaster	Q1 19772,18064 19679,18119 19410,18200 19293,18249 19251,18248
-(Falkenberger Krugwiesen - Passowstr.): wassergebundene Decke	Q1 18988,17781 18974,17796
+(Falkenberger Krugwiesen - Passowstr.): wassergebundene Decke	Q1 18991,17776 18974,17796
 (Falkenberger Krugwiesen - Falkenberger Chaussee): Verbundsteinpflaster	Q1 19213,18195 18969,18448
-(Falkenberger Chaussee - Dorfstr./Wartenberg): Asphalt	Q0 18922,18436 18761,18480 18507,18541 18215,18629
+Falkenberger Fußsteig: Asphalt, einige Wurzelhebungen	Q0 18922,18436 18761,18480 18507,18541 18215,18629
+(Falkenberger Fußsteig - Dorfstr./Wartenberg): Asphalt	Q0 18185,18641 18215,18629
 Hauptweg (Wartenberg, Neu-Hohenschönhausen): Asphalt	Q0 18737,18380 18761,18480 18864,18772
 Hauptweg (Wartenberg, Neu-Hohenschönhausen): etwas holpriger Asphalt	Q1 18864,18772 18923,18941
 Hauptweg (Wartenberg, Neu-Hohenschönhausen): Asphalt	Q0 18923,18941 18997,19157 19066,19380 19126,19560
@@ -9072,7 +9074,7 @@ Am Steinberg: Beton	Q1 12998,17480 13156,17579
 (Wiebelskircher Weg - Forstmeisterweg): unbefestigter Weg	Q2 32230,3770 32245,3772
 Volkspark Friedrichshain: wassergebundene Decke	Q1 12420,13370 12483,13418
 Volkspark Friedrichshain: wassergebundene Decke	Q1 12445,13320 12405,13300 12404,13266 12369,13209
-Volkspark Friedrichshain: kleinteiliges Kopfsteinpflaster	Q1 12445,13320 12420,13370
+Volkspark Friedrichshain: kleinteiliges Kopfsteinpflaster	Q1 12476,13273 12445,13320 12420,13370
 Volkspark Friedrichshain: Asphalt	Q0 12483,13418 12450,13542 12344,13627 12372,13755
 Viechtacher Str.: Asphalt	Q0 19657,9666 19727,9672 19801,9680 19871,9680 19923,9682
 Gensinger Str. [Wohngebiet]: Asphalt	Q0 18927,12135 18913,11909 18910,11826
@@ -9716,6 +9718,7 @@ Dorfstr. (Wartenberg) [Nebenstraße]: Beton mit kurzen Kopfsteinpflasterabschnitt
 (Am Städtischen Zentralfriedhof - Landschaftspark Herzberge): wassergebundene Decke	Q1 17580,12625 17548,12703 17507,12760 17507,12781
 (Oderstr. - Kirchhofweg): Verbundsteinpflaster	Q1 11565,7402 11602,7375
 (Oderstr. - Kirchhofweg): wassergebundene Decke	Q1 11602,7375 11656,7375 11677,7351 11687,7284
+(Weg im Anita-Berber-Park): wassergebundene Decke	Q1 11677,7351 12158,7449
 Am Westkreuz: Kleinsteinpflaster	Q1 2157,10497 2170,10497 2203,10455
 (zum Mauerpark, temporäre Umgehung): Asphalt	Q0 10302,14964 10279,15033 10301,15084 10319,15090
 Gotlindestr. [Wohngebietsstraße]: Verbundsteinpflaster	Q1 16470,12612 16471,12657 16473,12707 16515,12711 16517,12665 16471,12657
@@ -9862,6 +9865,9 @@ Greinerstr.: Asphalt	Q0 8327,2987 8340,3242 8347,3382
 (Landfliegerstr. - Am Betriebsbahnhof Schöneweide): Asphalt	Q1 18238,4803 18256,4814
 (Am Betriebsbahnhof Schöneweide): Asphalt, etwas wellig	Q1 18368,4697 18331,4744 18306,4753 18256,4814 18160,4940
 (Am Betriebsbahnhof Schöneweide): unbefestigte Straße, teilweise mit Feinschotter	Q2 18160,4940 18107,5011 17827,5403 17775,5392
+(Marx-Engels-Forum): Asphalt	Q0 10300,12587 10363,12535 10405,12462 10416,12394
+(Marx-Engels-Forum): Asphalt	Q0 10357,12514 10363,12535 10379,12580 10409,12597 10456,12590
+(Marx-Engels-Forum - Spandauer Str./Karl-Liebknecht-Str.): Asphalt	Q0 10409,12597 10438,12671 10431,12709
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -14306,7 +14312,7 @@ Roßlauer Str.: Asphalt	Q0 21163,12347 21123,12352 21031,12364 20943,12376 20859,
 Karl-Holtz-Str.: Beton	Q0 21361,16377 21381,16418 21429,16513 21460,16572 21491,16631
 Kyllburger Weg: sehr guter Asphalt	Q0 16645,17449 16549,17394 16418,17311
 Kyllburger Weg: guter Asphalt	Q0 16785,17524 16670,17454 16645,17449
-Privatstr. 10: Asphalt mit Schäden	Q1 17182,17375 17167,17331 17162,17294 17153,17216 17146,17147
+Privatstr. 10: Asphalt mit Schäden	Q1 17182,17375 17167,17331 17162,17294 17153,17221 17146,17147
 Privatstr. 10: Asphalt mit Schäden	Q1 17125,17147 17119,17071
 Privatstr. 10: Asphalt mit Schäden	Q1 17167,17145 17160,17068
 Privatstr. 10: Asphalt mit Schäden	Q1 17141,17070 17134,16988 17129,16922 17120,16849 17117,16785
@@ -14622,8 +14628,7 @@ Straße 134 (Alt-Hohenschönhausen): guter Asphalt	Q0 17533,15363 17718,14979
 Privatstr. 1: mäßiger Asphalt	Q2 16887,17349 17089,17369 17167,17331
 Privatstr. 2: Asphalt	Q0 16905,17281 17028,17298 17162,17294
 Privatstr. 2: Asphalt	Q0 17162,17294 17286,17277 17404,17238
-Privatstr. 3: mäßiger Asphalt, unebene Fahrbahn, diverse kleine Schlaglöcher	Q1 16920,17204 17027,17219 17153,17216
-Privatstr. 3: Asphalt	Q0 17153,17216 17375,17165
+Privatstr. 3: Asphalt	Q0 16920,17204 17027,17219 17153,17221 17258,17209 17377,17171
 Privatstr. 4: Asphalt	Q0 16934,17132 17125,17147 17146,17147 17167,17145 17346,17100
 Privatstr. 6: schlechter Asphalt, unebene Fahrbahn, diverse Schlaglöcher	Q2 16966,16978 17134,16988 17290,16957
 Privatstr. 8: Asphalt	Q0 16992,16840 17120,16849 17237,16825
@@ -15335,7 +15340,8 @@ Weinbergstr.: Asphalt	Q0 22830,5924 22766,5840
 (Volkspark Friedrichshain): Asphalt	Q0 12937,13803 12987,13727
 (Volkspark Friedrichshain): Asphalt	Q0 12825,13783 12813,13799 12805,13809
 (Volkspark Friedrichshain): Asphalt	Q0 12372,13755 12436,13719 12460,13716 12608,13760 12640,13814
-(Volkspark Friedrichshain): Asphalt	Q0 12766,13621 12723,13598 12656,13576 12582,13519 12483,13418
+(Volkspark Friedrichshain): Kopfsteinpflaster	Q2 12766,13621 12738,13608
+(Volkspark Friedrichshain): Asphalt	Q0 12738,13608 12656,13581 12572,13523 12483,13418
 (Volkspark Friedrichshain): Asphalt	Q0 12483,13418 12586,13368
 Ernst-Zinna-Weg: Kopfsteinpflaster	Q2 12586,13368 12604,13338 12597,13323 12556,13265 12564,13216 12585,13118
 (Volkspark Friedrichshain): kleinteiliges Kopfsteinpflaster	Q1 12325,13148 12344,13157 12369,13209 12369,13252 12341,13309 12307,13329 12206,13326 12166,13349 12141,13341
@@ -16048,7 +16054,7 @@ Seefelder Str.: Asphalt	Q0 16966,16127 16975,16164 17071,16174 17156,16180 17183
 Seefelder Str.: Asphalt	Q0 17183,16181 17238,16185 17325,16189
 Seefelder Str. (Fußweg): Verbundsteinpflaster	Q1 17325,16189 17362,16189 17383,16197
 Seefelder Str.: Beton	Q1 16961,16042 16966,16127 17000,16141 17184,16149 17290,16154 17293,16134 17341,16136 17344,16081 17419,16080
-Straße 142: Asphalt	Q0 17102,16464 17152,16605 17212,16760 17237,16825 17264,16892 17290,16957 17317,17027 17346,17100 17375,17165 17404,17238 17418,17277 17422,17288
+Straße 142: Asphalt	Q0 17102,16464 17152,16605 17212,16760 17237,16825 17264,16892 17290,16957 17317,17027 17346,17100 17377,17171 17404,17238 17418,17277 17422,17288
 Paul-Koenig-Str.: Asphalt	Q0 17152,16605 17268,16526 17312,16498 17304,16485
 Paul-Koenig-Str.: Asphalt mit einigen Schäden	Q1 17304,16485 17385,16432
 Paul-Koenig-Str.: schlechtes Kopfsteinpflaster	Q3 17385,16432 17424,16407 17446,16393

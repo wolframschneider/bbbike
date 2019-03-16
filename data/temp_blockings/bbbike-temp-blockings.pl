@@ -10243,7 +10243,7 @@ EOF
        text  => 'L 402 Schulzendorf-Dahlewitz zw. Abzw. Waltersdorf und Dahlewitz Fahrbahninstandsetzung Vollsperrung 13.10.2007-20.10.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 17910,-6981 17480,-7498 17278,-7925 16437,-8257
+	2::inwork 17910,-6981 17864,-6987 17841,-7017 17480,-7498 17278,-7925 16437,-8257
 EOF
      },
      { from  => 1199434005, # 2008-01-04 09:06
@@ -13657,7 +13657,7 @@ EOF
        text  => 'L 402 Zeuthen - Dahlewitz Kreuzung zw. Zeuthen und Kiekebusch Neubau Kreisverkehr Vollsperrung 09.03.2009-31.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 22467,-7066 21783,-6875 21527,-6853
+	2::inwork 22467,-7066 21802,-6904 21527,-6853
 EOF
      },
      { from  => 1237935600, # 2009-03-25 00:00
@@ -24007,7 +24007,7 @@ EOF
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (H, G)
 #: priority: #A
-#: last_checked: 2019-03-07
+#: last_checked: 2019-03-14
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -27477,7 +27477,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-02-24
+#: last_checked: 2019-03-13
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889
 # REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
 EOF
@@ -27549,8 +27549,7 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2018-11-11
-#: next_check: 2019-03-01
+#: last_checked: 2019-03-12
 	q4::inwork; 13391,16436 13630,16629
 EOF
      },
@@ -27773,7 +27772,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-03-04
+#: last_checked: 2019-03-14
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27888,9 +27887,9 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (G) vvv
-#: last_checked: 2019-02-13 vvv
+#: last_checked: 2019-03-13 vvv
 	q3::inwork 12335,7770 12224,7799
-	q2::inwork 12335,7770 12075,7696
+# REMOVED (fertig) ---	q2::inwork 12335,7770 12075,7696
 # REMOVED (fertig) ---	q3::inwork; 12647,7672 12520,7694
 # REMOVED (hier keine Einbahnstraßenregelung mehr)	q3::inwork; 12520,7694 12335,7770
 #: last_checked ^^^
@@ -28162,7 +28161,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-03-07
+#: last_checked: 2019-03-11
 #: check_frequency: 7d
 	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
@@ -28199,9 +28198,9 @@ EOF
 	2::temp 10308,12859 10360,12793 10387,12760 10431,12709 10515,12780 10525,12789 10695,12933
 	2::temp 10176,12506 10243,12546
 	2::temp 10094,12635 10176,12506
-	3 10355,12551 10300,12587 10291,12600
+	3 10363,12535 10300,12587 10291,12600
 	3 10584,12507 10601,12521 10704,12595
-	3 10291,12600 10300,12587 10355,12551
+	3 10291,12600 10300,12587 10363,12535
 	3 10704,12595 10601,12521 10584,12507
 EOF
      },
@@ -28568,6 +28567,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX wann werden die Bauzäune entfernt?
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_11_1601_1736_online.pdf (Straßenlandwidmung)
 #: priority: #C
 #: last_checked: 2019-03-05
 #: check_frequency: 60d
@@ -28667,7 +28667,44 @@ EOF
        text  => 'Schönleinstr.: Bauarbeiten an der Böckhstr., Fahrbahn gesperrt, bis 22.03.2019',
        type  => 'handicap',
        data  => <<EOF,
+#: last_checked: 2019-03-14
 	q3::inwork 11594,9604 11640,9710
+EOF
+     },
+     { from  => 1552239604, # 2019-03-10 18:40
+       until => $isodate2epoch->("2020-06-30 18:00:00"), # 1601503199, # 2020-09-30 23:59
+       text  => 'Mönchmühler Str.: Sperrung der Fahrbahn an der Einmündung Hauptstr./Bahnhofstr. sowie zwischen Centweg und Wasserkräuterweg, voraussichtlich bis Mitte 2020',
+       type  => 'handicap',
+       accept_multi_feature_distance => 1500,
+       data  => <<EOF,
+#: note: laut VIZ ist der Radverkehr auch betroffen, aber nicht der Fußverkehr (also schieben möglich?); Dauer 1 1/2 Jahre ab 2019-03-11
+#: source_id: 2147343858
+#: source_id: 2147343859
+	q4::inwork 8401,22013 8430,22110
+	q4::inwork 8903,23349 8909,23506
+EOF
+     },
+     { from  => 1552153452, # 2019-03-09 18:44
+       until => $isodate2epoch->("2019-07-12 18:00:00"), # 1569859200, # 2019-09-30 18:00
+       text  => 'Onkel-Tom-Str.: Bauarbeiten, Fahrbahn Richtung Norden zwischen Potsdamer Str. und Scharfestr. gesperrt, Radfahrer sind auch betroffen, bis Mitte Juli 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147343861
+	q4::inwork; 669,3119 677,3157 649,3221 640,3240 578,3380
+EOF
+     },
+     { from  => 1552863600, # 2019-03-18 00:00
+       until => 1577833199, # 2019-12-31 23:59
+       text  => 'Rochowstr. und Persiusstr.: Einbahnstraßenregelung, offen Richtung Stralauer Allee, vom 19. März 2019 bis Ende 2019',
+       type  => 'handicap',
+       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stralauer-allee-friedrichshain-bauarbeiten-%C2%B7-sperrung-ri-muhlenstra%C3%9Fe',
+       data  => <<EOF,
+#: next_check_id: STRALAUER-2019
+#: XXX Umleitungsstrecke und Stralauer Allee abfahren
+#: XXX ggfs. zu einer permanenten Sperrung machen
+#: last_checked: 2019-03-14
+#: next_check: 2019-03-19
+	q4::inwork; 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 EOF
      },
     );
