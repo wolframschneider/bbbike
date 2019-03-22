@@ -25,9 +25,13 @@ Leipziger Str. Richtun Osten	Jam; 9268,11590 9444,11616 9569,11631
 # REMOVED (Radspuren existieren) --- Leipziger Str. Richtung Osten	Jam; 8740,11524 8834,11536 9058,11564
 # 
 #: tempex: T06-T22 vvv
-Friedrichstr.	Jam; 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351 9369,12253 9373,12197 9384,12103 9393,12000 9405,11903 9418,11804 9432,11702 9444,11616
-Friedrichstr.	Jam; 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103 9373,12197 9369,12253 9358,12351 9343,12464 9330,12538 9314,12652 9313,12662
+Friedrichstr.	Jam; 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351
+Friedrichstr.	Jam; 9418,11804 9432,11702 9444,11616
+Friedrichstr.	Jam; 9444,11616 9432,11702 9418,11804
+Friedrichstr.	Jam; 9384,12103 9373,12197 9369,12253 9358,12351 9343,12464 9330,12538 9314,12652 9313,12662
 Friedrichstr.	Jam; 9254,13171 9246,13235 9225,13389
+# REMOVED (hier eher weniger Gefahr) --- Friedrichstr.	Jam; 9358,12351 9369,12253 9373,12197 9384,12103 9393,12000 9405,11903 9418,11804
+# REMOVED (hier eher weniger Gefahr) --- Friedrichstr.	Jam; 9418,11804 9405,11903 9393,12000 9384,12103
 #: tempex ^^^
 # 
 # REMOVED --- #: next_check_id: WARSCHAUER-2014 vvv --- Warschauer Str. Richtung Norden, Ausweichen auf Mittelstreifen möglich	Jam; 13745,12118 13785,12292 --- #: next_check_id ^^^
@@ -45,7 +49,7 @@ Dorotheenstr.	Jam; 8775,12457 8540,12420
 #: next_check_id: STABIUDL-2014
 Unter den Linden	Jam; 9613,12381 9475,12365
 # 
-#: note: kann manchmal bis fast zur Kynaststr. reichen
+#: note: kann manchmal schon an der Kreuzung Kynaststr. anfangen
 Marktstr./Karlshorster Str.	Jam; 15144,10905 15279,10862 15272,10790 15261,10738
 # 
 # REMOVED (fertig) --- #: next_check_id: HAUPTSTR-2015 vvv --- #: last_checked: 2017-12-03 vvv --- #: check_frequency: 21d vvv --- #: note: Stau eher abends --- #: tempex: rush_hour_evening --- Hauptstr.	Jam; 14674,10811 14717,10855 14810,10832 14904,10812 15000,10792 15261,10738 --- #: note: Stau eher morgens --- #: tempex: rush_hour_morning --- Hauptstr.	Jam; 15261,10738 14904,10812 14810,10832 14717,10855 14674,10811 --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: next_check_id ^^^

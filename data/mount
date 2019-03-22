@@ -476,7 +476,6 @@ Steigung 3.3% (Püttbergeweg)	St; 31365,4349 31440,4353
 Steigung 3.3% (Püttbergeweg)	St; 31296,4346 31365,4349
 Steigung 3.3% (Otto-Erich-Str.)	St; -6922,791 -7022,888
 Steigung 3.3% (Mönchsheimer Str.)	St; 30535,4051 30605,4028
-Steigung 3.3% (Lichtburgring)	St; 10004,15636 9969,15724
 Steigung 3.3% (Kynaststr.)	St; 14988,11130 14950,11049
 Steigung 3.3% (Kynaststr.)	St; 14950,11049 14928,10970
 Steigung 3.3% (Kynaststr.)	St; 14928,10970 14902,10859
@@ -547,6 +546,7 @@ Steigung 3.1% (Oberfeldstr.)	St; 20575,11698 20587,11824
 Steigung 3.1% (Neue Kantstr.)	St; 2340,11056 2254,11051
 Steigung 3.1% (Mühlsteinweg)	St; 6836,22824 6778,22950
 Steigung 3.1% (Lindenstr. (Bohnsdorf))	St; 21914,-1278 21794,-1260
+Steigung 3.1% (Lichtburgring)	St; 10004,15636 9965,15731
 Steigung 3.1% (Hubertusstr. (Lichtenberg))	St; 16512,11894 16541,12071
 Steigung 3.1% (Hermannstr. (Neukölln))	St; 11879,8672 11882,8527
 Steigung 3.1% (Hermannstr. (Neukölln))	St; 11845,8824 11879,8672
@@ -1807,7 +1807,6 @@ Steigung 1.5% ((Berliner Balkon - Gründerzeitmuseum))	St; 24422,10972 24455,1094
 Steigung 1.5% ((Berliner Balkon - Gründerzeitmuseum))	St; 24341,10982 24422,10972
 Steigung 1.5% ((Berliner Balkon - Gründerzeitmuseum))	St; 24283,10960 24341,10982
 Steigung 1.5% ((Berliner Balkon - Gründerzeitmuseum))	St; 24239,10975 24283,10960
-Steigung 1.4% (für Radfahrer freigegebene Busspur gilt Mo-Fr 6-19 Uhr (bleibt die Absperrung des Radwegs permanent?))	St; 2532,9911 2590,9949
 Steigung 1.4% (Zabel-Krüger-Damm)	St; 5815,22870 5951,22935
 Steigung 1.4% (Zabel-Krüger-Damm)	St; 5777,22852 5815,22870
 Steigung 1.4% (Zabel-Krüger-Damm)	St; 5661,22797 5777,22852
@@ -1873,6 +1872,7 @@ Steigung 1.4% (Königstr. (Wannsee))	St; -6065,1222 -6053,1224
 Steigung 1.4% (Königstr. (Wannsee))	St; -6053,1224 -6006,1234
 Steigung 1.4% (Königstr. (Wannsee))	St; -6006,1234 -5952,1245
 Steigung 1.4% (Kurpromenade)	St; -8804,6818 -8732,6840
+Steigung 1.4% (Kurfürstendamm)	St; 2532,9911 2590,9949
 Steigung 1.4% (Krummensee - Bestensee)	St; 24721,-15837 24571,-16024
 Steigung 1.4% (Krummensee - Bestensee)	St; 24571,-16024 24515,-16318
 Steigung 1.4% (Kolberger Str. (Gesundbrunnen))	St; 8315,15293 8518,15506
@@ -1995,7 +1995,7 @@ Steigung 1.3% (Ludwig-Pick-Str.)	St; 13543,12326 13552,12435
 Steigung 1.3% (Liselotte-Herrmann-Str.)	St; 12281,14164 12423,14066
 Steigung 1.3% (Lindenstr. (Hessenwinkel))	St; 32512,2621 32643,2695
 Steigung 1.3% (Lindenallee (Weißensee))	St; 14248,16202 14293,16073
-Steigung 1.3% (Lichtburgring)	St; 9969,15724 10041,15746
+Steigung 1.3% (Lichtburgring)	St; 9965,15731 10041,15742
 Steigung 1.3% (Lepsiusstr.)	St; 4404,5613 4338,5513
 Steigung 1.3% (Lentzeallee)	St; 3449,6863 3290,6903
 Steigung 1.3% (Köpenicker Str. (Biesdorf, Köpenick))	St; 21025,7349 21016,7325
@@ -2472,7 +2472,6 @@ Steigung 1.0% (Mozartstr. (Biesdorf))	St; 20169,11852 20173,11971
 Steigung 1.0% (Moselstr. (Friedenau))	St; 5684,6942 5824,6974
 Steigung 1.0% (Moselstr. (Friedenau))	St; 5644,6936 5684,6942
 Steigung 1.0% (Mittelbrunner Steig)	St; 27948,439 27893,490
-Steigung 1.0% (Mehringdamm)	St; 9280,9476 9248,9350
 Steigung 1.0% (Max-Urich-Str.)	St; 8953,14758 9034,14910
 Steigung 1.0% (Maulbronner Ufer)	St; 7389,4088 7484,4109
 Steigung 1.0% (Maulbronner Ufer)	St; 7307,4087 7389,4088

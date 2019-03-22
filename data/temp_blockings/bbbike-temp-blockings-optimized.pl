@@ -2215,7 +2215,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (H, G)
 #: priority: #A
-#: last_checked: 2019-03-14
+#: last_checked: 2019-03-21
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -2742,22 +2742,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: osm_watch: way id="152046369" version="9"
-#: osm_watch: node id="5865966386" version="1"
-#: add_fragezeichen: Ist der Abschnitt des Uferwegs am Eiselenweg noch immer gesperrt?
-#: priority: #A
-#: next_check_id: MENTZELPARK-2018
-#: last_checked: 2019-02-16
-# REMOVED (hier mittlerweile offen) ---	2::inwork 21696,5053 21645,5135 21600,5221 21583,5255 21521,5383 21512,5404 21481,5429
-	2::inwork 21481,5429 21447,5414
-',
-         'from' => undef,
-         'id' => 2952,
-         'text' => 'Uferweg: am Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: by: http://www.berliner-woche.de/alt-treptow/verkehr/radelverbot-im-park-bleibt-d122937.html
 #: by: http://www.berliner-woche.de/alt-treptow/bauen/der-vater-des-rosengartens-d156358.html
@@ -2799,12 +2784,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: fritz
 #: XXX bis wann geht die Sperrung?
-#: last_checked: 2018-12-26
-	q4::inwork 4124,12721 4217,12711 4234,12710
+#: last_checked: 2019-03-17
+	q4::inwork 4234,12710 4303,12692
 ',
          'from' => 1527186848,
          'id' => 2961,
-         'text' => 'Am Spreebord: Bauarbeiten, Passieren für Radfahrer möglich, Bordsteine, Ende der Bauarbeiten unbekannt',
+         'text' => 'Am Spreebord: Bauarbeiten zwischen Zufahrt zum Uferweg und Röntgenstr., Passieren für Radfahrer möglich, ggfs. Bordsteine, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -2837,7 +2822,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-03-13
+#: last_checked: 2019-03-17
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889
 # REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
 ',
@@ -3302,14 +3287,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1556661600
        },
        {
-         'data' => '#: XXX prüfen, ob und wie Radfahrer von den Bauarbeiten betroffen sind
-#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72
-#: next_check: 2019-03-01
-	q4::inwork 5618,9607 5627,9362
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72
+	q3::inwork 5633,9263 5627,9362 5618,9607
+	q3::inwork 5493,9367 5627,9362 5711,9357
 ',
          'from' => undef,
          'id' => 3073,
-         'text' => 'Prinzregentenstr.: zwischen Prager Platz und Güntzelstr. Bauarbeiten, Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, bis Ende April 2019',
+         'text' => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis Ende April 2019',
          'type' => 'handicap',
          'until' => 1556640000
        },
@@ -3368,20 +3352,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1562947200
        },
+       undef,
        {
-         'data' => '#: next_check_id: STRALAUER-2019
-#: XXX Umleitungsstrecke und Stralauer Allee abfahren
-#: XXX ggfs. zu einer permanenten Sperrung machen
-#: last_checked: 2019-03-16
-#: next_check: 2019-03-19
-	q4::inwork; 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
+         'data' => '	2::inwork 10772,12515 10673,12434
 ',
-         'from' => 1552863600,
-         'id' => 3079,
-         'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stralauer-allee-friedrichshain-bauarbeiten-%C2%B7-sperrung-ri-muhlenstra%C3%9Fe',
-         'text' => 'Rochowstr. und Persiusstr.: Einbahnstraßenregelung, offen Richtung Stralauer Allee, vom 19. März 2019 bis Ende 2019',
-         'type' => 'handicap',
-         'until' => 1577833199
+         'from' => 1553192269,
+         'id' => 3080,
+         'source_id' => '2147343360',
+         'text' => 'Gustav-Böß-Str.: Bauarbeiten, Durchfahrt zur Spandauer Str. nicht möglich, bis Ende April 2019',
+         'type' => 'gesperrt',
+         'until' => 1556661599
        }
      
 );
