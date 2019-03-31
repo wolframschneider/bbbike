@@ -521,13 +521,15 @@ Krummensee|b. Bestensee	OS 24425,-14811
 Mittenwalde|(Stadt)	OS 20009,-14413
 Brusendorf	OS 18240,-10841
 Brusendorf	OS 18138,-10159
-Selchow|b. Waßmannsdorf	OS 15477,-4765
+Selchow|b. Waßmannsdorf	OS 15489,-4706
 Selchow|b. Waßmannsdorf	OS 15867,-5823
 Selchow|b. Waßmannsdorf	OS 15911,-5470
 Selchow|b. Waßmannsdorf	OS 15078,-5983
 Waßmannsdorf	OS 14529,-3454
 Waßmannsdorf	OS 15759,-3594
 Waßmannsdorf	OS 15542,-3843
+Waßmannsdorf	OS 15195,-3063
+Waßmannsdorf	OS 15012,-4148
 Kleinziethen	OS 13709,-2931
 Kleinziethen	OS 13502,-2473
 Waltersdorf	OS 21180,-5188
@@ -802,7 +804,7 @@ Waldesruh	OS 25344,9364
 Waldesruh	OS 25476,9561
 Schöneiche	OS 19678,-817
 Schönefeld	OS 18122,-375
-Schönefeld	OS 18588,-438
+Schönefeld	OS 18595,-440
 Schönefeld	OS 19662,-511
 Schönefeld	OS 17236,-602
 Schönefeld	OS 19618,-1021
@@ -902,6 +904,7 @@ Berlin	OS 21868,18896
 Berlin	OS 21442,18880
 Berlin	OS -8825,3783
 Berlin	OS 17102,21349
+Berlin	OS 16273,-824
 Mehrow	OS 25327,19421
 Mehrow	OS 24484,18569
 Mehrow	OS 28471,19469
@@ -1196,3 +1199,4 @@ Rotberg	OS 17841,-7017
 Rotberg	OS 18617,-6753
 Kiekebusch	OS 20380,-6456
 Kiekebusch	OS 20934,-6632
+Rangsdorf	OHT 14254,-11563

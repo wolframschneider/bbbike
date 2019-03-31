@@ -2407,7 +2407,7 @@ EOF
        text  => 'B 96; OD Rangsdorf, Kno. Kienitzer Str. Straßenverbreiterung Vollsperrung 12.07.2005-03.08.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 14123,-11199 14327,-11767
+	q4 14123,-11199 14254,-11563 14327,-11767
 EOF
      },
      { from  => 1120341600, # 2005-07-03 00:00
@@ -8241,7 +8241,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.laubinger.de/termine/26-boelschefest-friedrichshagen/',
        data  => <<EOF,
-	2::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+	2::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 EOF
      },
      { from  => 1178874938, # 2007-05-11 11:15
@@ -11158,7 +11158,7 @@ EOF
        text  => 'L 075 Tollkrug - Selchow - Waßmannsdorf OD Selchow Straßenbauarbeiten Vollsperrung 25.03.2008-01.07.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 15355,-5280 15568,-5323 15771,-5575 15801,-5639 15837,-5745 15867,-5823 15887,-5875
+	q4::inwork 15365,-5279 15568,-5323 15771,-5575 15801,-5639 15837,-5745 15867,-5823 15887,-5875
 #XXX del wegen BBI:	q4::inwork 15887,-5875 15987,-6248 16190,-6406
 EOF
      },
@@ -16178,7 +16178,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014140',
        data  => <<EOF,
-	q4::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+	q4::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 EOF
      },
      { from  => 1252738143, # 2009-09-12 08:49
@@ -19254,20 +19254,20 @@ EOF
 	q4::temp 13206,10651 13305,10789 13332,10832
 EOF
      },
-     { from  => $isodate2epoch->("2018-04-26 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-05-22 23:59:59"), # 1 Tag Nachlauf
+     { from  => $isodate2epoch->("2019-04-25 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-19 23:59:59"), # 1 Tag Nachlauf
        periodic => 1,
-       recurrences => [['yearly', days => 26, months => 4]],
-       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 27.04.2018 bis 21.05.2018',
+       recurrences => [['yearly', days => 25, months => 4]],
+       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 26.04.2019 bis 19.05.2019',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2983315-2970764-neukoellner-maientage.html',
        data  => <<EOF,
-#: tempex: 20180427-T20180521 vvv
+# REMOVED --- #: tempex: 20180427-T20180521 vvv
 	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
 	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
 	q4::temp 11275,8387 11230,8402
 	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
-#: tempex ^^^
+# REMOVED --- #: tempex ^^^
 EOF
      },
      { from  => 1338760800, # 2012-06-04 00:00
@@ -21588,9 +21588,9 @@ EOF
 	q4::inwork; 7085,15226 7131,15109
 EOF
      },
-     { from  => $isodate2epoch->("2018-05-03 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-05-06 23:59:59"),
-       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (04.05.2018 bis 06.05.2018)',
+     { from  => $isodate2epoch->("2019-05-02 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-05 23:59:59"),
+       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (03.05.2019 bis 05.05.2019)',
        periodic => 1,
        recurrences => [['yearly', days => 29, months => 4]],
        type  => 'handicap',
@@ -24007,7 +24007,7 @@ EOF
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (H, G)
 #: priority: #A
-#: last_checked: 2019-03-21
+#: last_checked: 2019-03-29
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
@@ -25876,9 +25876,9 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2019-03-19 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-03-20 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 20. März 2019 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2019-03-26 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-03-27 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 27. März 2019 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
@@ -26177,8 +26177,8 @@ EOF
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.645164.php
 #: source_id: LMS-BR_r_LMS-BR_97860
 #: source_id: 2147341992
-# REMOVED ---	q4::inwork; 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
-	q4::inwork; 25539,5237 25524,5011 25519,4830
+# REMOVED ---	q4::inwork; 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+	q4::inwork; 25539,5237 25524,5011 25522,4935 25519,4830
 EOF
      },
      { from  => undef, # 
@@ -26812,7 +26812,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-03-05 vvv
+#: last_checked: 2019-03-29 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27465,9 +27465,10 @@ EOF
 #: next_check_id: VERLWERDERSTR-2018
 #: by: https://www.berliner-woche.de/altglienicke/c-bauen/werderstrasse-wird-ausgebaut_a169172
 #: XXX nach den Bauarbeiten Betonpflaster
-#: last_checked: 2019-01-02
-	2::inwork 20245,2152 20261,2114 20222,2037 20214,1988
-# REMOVED (hier fertig) ---	2::inwork 20214,1988 20187,1930 20166,1864 20120,1791 20093,1776 20064,1777
+#: last_checked: 2019-03-30
+	2::inwork 20245,2152 20261,2114
+# REMOVED (hier fertig) ---	2::inwork 20261,2114 20222,2037 20214,1988
+# REMOVED (hier fertig) ---	2::inwork 20214,1988 20187,1930 20166,1864 20125,1802 20093,1776 20064,1777
 EOF
      },
      { from  => undef, # 
@@ -27772,7 +27773,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-03-14
+#: last_checked: 2019-03-26
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 EOF
@@ -27973,7 +27974,7 @@ EOF
 EOF
      },
      { from  => 1537297950, # 2018-09-18 21:12
-       until => $isodate2epoch->("2019-03-30 18:00:00"), # 1543618799, # 2018-11-30 23:59
+       until => 1553800802, # $isodate2epoch->("2019-03-30 18:00:00"), # 1543618799, # 2018-11-30 23:59
        text  => 'Berliner Str.: Baustelle zwischen Mannheimer Str. und Brandenburgische Str./Blissestr., Fahrbahn Richtung Osten gesperrt, bis Ende März 2019',
        type  => 'handicap',
        source_id => '2147343219',
@@ -28161,7 +28162,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-03-16
+#: last_checked: 2019-03-28
 #: check_frequency: 7d
 	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
@@ -28416,7 +28417,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: NEUERMAUERWEG-2018
 #: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
-#: osm_watch: way id="42031978" version="13"
+#: osm_watch: way id="42031978" version="14"
 #: priority: #B vvv
 #: last_checked: 2019-03-23 vvv
 #: check_frequency: 14d vvv
@@ -28503,7 +28504,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-03-16
+#: last_checked: 2019-03-28
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28669,9 +28670,9 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: priority: #A
-#: last_checked: 2019-03-22
-# REMOVED --- #: check_frequency: 14d
-#: next_check: 2019-03-29
+#: last_checked: 2019-03-28
+#: check_frequency: 2d
+# REMOVED --- #: next_check: 2019-03-29
 	q3::inwork 11594,9604 11640,9710
 EOF
      },
@@ -28722,6 +28723,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.796103.php ("bald")
+#: by: https://www.berliner-woche.de/waidmannslust/c-bauen/steg-im-fliess-wird-saniert_a206581
 	2::inwork 4022,22691 3947,22622 3907,22606 3879,22574
 EOF
      },
@@ -28730,7 +28732,23 @@ EOF
        text  => 'Wilmersdorfer Str.: Bahnbrücke in den Nächten bis Freitagmorgen gesperrt, 25.3.2019 bis 29.3.2019, jeweils 20:30 Uhr bis 6:00 Uhr, eventuell sind auch Radfahrer betroffen',
        type  => 'gesperrt',
        data  => <<EOF,
+#: source_id: 2147343957
+#: source_id: LMS-BR_r_LMS-BR_163514_LMS-BR_72
 	2::inwork 3835,10915 3820,10987
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Imkerweg und Am Seddinsee: Einbahnstraßenregelung; außerdem enger gemeinsamer Rad- und Gehweg in der Wernsdorfer Str.',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: WERNSDORFERSTR-2019
+#: last_checked: 2019-03-30 vvv
+#: next_check: 2019-09-18 vvv
+	q4::inwork; 27226,-2892 27422,-2753 27456,-2843 27520,-3029 27518,-3054
+	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
+#: next_check ^^^
+#: last_checked ^^^
 EOF
      },
     );

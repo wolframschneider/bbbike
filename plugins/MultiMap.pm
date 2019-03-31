@@ -20,7 +20,7 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.41;
+$VERSION = 1.47;
 
 use vars qw(%images);
 
@@ -57,7 +57,8 @@ sub register {
 	    { name => 'Historic maps Berlin',
 	      callback => sub { showmap_historic_maps_berlin(@_) },
 	      callback_3_std => sub {showmap_url_historic_maps_berlin(@_) },
-	      ($images{Wmflabs} ? (icon => $images{Wmflabs}) : ()),
+	      #($images{Wmflabs} ? (icon => $images{Wmflabs}) : ()),
+	      ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
 	      order => 8950,
 	    };
     }
@@ -72,41 +73,41 @@ sub register {
 	{ name => "Map Compare (Google/OSM)",
 	  callback => sub { showmap_mapcompare(@_) },
 	  callback_3_std => sub { showmap_url_mapcompare(@_) },
-	  ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
+	  ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
 	};
     if ($map_compare_use_bbbike_org) {
 	$main::info_plugins{__PACKAGE__ . "_MapCompare_Distinct_Map_Data"} =
 	    { name => "Map Compare (distinct map data)",
 	      callback => sub { showmap_mapcompare(@_, profile => "__distinct_map_data") },
 	      callback_3_std => sub { showmap_url_mapcompare(@_, profile => "__distinct_map_data") },
-	      ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
+	      ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
 	    };
 	$main::info_plugins{__PACKAGE__ . "_MapCompare_BBBike"} =
 	    { name => "Map Compare (profile BBBike)",
 	      callback => sub { showmap_mapcompare(@_, profile => "bbbike") },
 	      callback_3_std => sub { showmap_url_mapcompare(@_, profile => "bbbike") },
-	      ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
+	      ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
 	    };
 	if ($is_berlin) {
 	    $main::info_plugins{__PACKAGE__ . "_MapCompare_Berlin_Satellite"} =
 		{ name => "Map Compare (profile Berlin satellite)",
 		  callback => sub { showmap_mapcompare(@_, profile => "berlin-satellite") },
 		  callback_3 => sub { show_mapcompare_menu(@_) },
-		  ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
+		  ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
 		};
 	} else {
 	    $main::info_plugins{__PACKAGE__ . "_MapCompare_Satellite"} =
 		{ name => "Map Compare (profile satellite)",
 		  callback => sub { showmap_mapcompare(@_, profile => "satellite") },
 		  callback_3 => sub { show_mapcompare_menu(@_) },
-		  ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
+		  ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
 		};
 	}
 	$main::info_plugins{__PACKAGE__ . "_MapCompare_Traffic"} =
 	    { name => "Map Compare (profile traffic)",
 	      callback => sub { showmap_mapcompare(@_, profile => "traffic") },
 	      callback_3_std => sub { showmap_url_mapcompare(@_, profile => "traffic") },
-	      ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
+	      ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
 	    };
     }
     if ($is_berlin) {
@@ -129,13 +130,6 @@ sub register {
 	  callback_3_std => sub { showmap_url_geocaching(@_) },
 	  ($images{Geocaching} ? (icon => $images{Geocaching}) : ()),
 	  order => 8800,
-	};
-    $main::info_plugins{__PACKAGE__ . "_YahooDe"} =
-	{ name => "yahoo.de",
-	  callback => sub { showmap_yahoo_de(@_) },
-	  callback_3_std => sub { showmap_url_yahoo_de(@_) },
-	  ($images{YahooDe} ? (icon => $images{YahooDe}) : ()),
-	  order => 8900,
 	};
     $main::info_plugins{__PACKAGE__ . "_Bing_Birdseye"} =
 	{ name => "bing (Bird's eye)",
@@ -182,6 +176,7 @@ sub register {
 	{ name => 'OpenStreetCam',
 	  callback => sub { showmap_openstreetcam(@_) },
 	  callback_3_std => sub { showmap_url_openstreetcam(@_) },
+	  ($images{OpenStreetCam} ? (icon => $images{OpenStreetCam}) : ()),
 	};
     $main::info_plugins{__PACKAGE__ . '_AllMaps'} =
 	{ name => 'All Maps',
@@ -192,35 +187,24 @@ sub register {
 
 sub _create_images {
     if (!defined $images{WikiMapia}) {
-	# Got from: http://wikimapia.org/favicon.ico
-	# and used only 32 colors
+	# Created with
+	#     lwp-request http://wikimapia.org/favicon.ico | convert ico:- png:- | base64
 	$images{WikiMapia} = $main::top->Photo
-	    (-format => 'gif',
+	    (-format => 'png',
 	     -data => <<EOF);
-R0lGODlhEAAQAPQbADV8MUqORHGxamChYHTNbEzWZz2aRUuRumWrqFio1Gu0zE2bznHRn3PL
-zom7eJDEeZXRi5DNuKnXlLXXr6Xpro/O16rZz7XqztHrtcbcrdbv1P////n89+/z797tyJC4
-pSH5BAAAAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAFsuAmbppEnASkceNoZto1
-zQLEjpCk7ddl/RABhyWRYHaaX2VpeThIBA+F0lsqFBGjoWSkaqwNRoEgCRIw014j0Si4C4JM
-4PwgUCzsiBguwADOBAx4CQthDAcDAxl/GA8WFQmRCwsHBwgCEwY5Jh8LkYSVCA8PAx59Ag4K
-nqAFAYsTHE4SDh8JCgmIA04BHRscqBkWChUKHxAZDrw3vwEfFs4TDgADHUMtGQMBAAABA7C+
-HCEAIfkEAAAAAAAsAAAAACAAIACEcqtsWZxZXdNuOddjWaKsVqfUbbPOS5vRcc6xbNWObrvJ
-iLd1icp2kbmPltGMj860q9SRr9WvsOOatemwkOalkczUqtnUt+jPzO6yxt+10+3R////9/v3
-6/Xr3ezRhLnLBf7gJo5bp02Sw6yMsDrSpHUcaY8myqQS5VCpn2Momd1IHE3kNcE0JxdLJCJt
-ARzGo0nCgGE8YI3mQrZEI5BFN+KxcZJDCAbTAV86ZYu+oo84Fg4RHSRbO3MddR54eowVjnoP
-DlcTgyIaPHMeYnd5Fo6fjhFcCw0ZNR1cDJkYF2JijHsGBp8RKAtXbRoUhh5OExSdjgqysw8U
-FBkYDAAAGR0TEKoYJ1BkUZ6OsgoICAk+EhhpuBIQck4XwNbCFQoF2wkJAvIwEg0LC37SE79Q
-Y57EBrrFkycvwQ5x0cBh6AGk1QV2CiK+EzCgIsEF5RYESDhHggBv6gy4+8AtwQCTFv4BYMyg
-sYEhLvKORakgkhsFgRUrBgighmUAlwpbePMUsYDRbSXhCQgwgCcDny7nKINHwZHRAgeOckNA
-oOvOAAAgRGi5YqGDBAiqfrjKVgGBAl0PdCVwRQJZVSluCmNrVO4Bv3LBhk3zc4cEcsceIBjG
-969juV6v2NuYAgK5IfAQ8MX6l4BjuvfSaLSsAhwEAQAaEDDw9urnAzvpNhD9M4OGP3LELUjQ
-ju1nrzsbTA4gyAMEAIYZ3EpAoLfIz195Dm+gCI6acg6EfzCwnRhcArdU2gMAVhCNDhkaIC+X
-/oN7gHLthb5X3sMbER0iMFuZwYL7/9t9YE9GGv1k330ieFAwFjPCZRCBew9CmBF5YFH3BoL4
-jbVTav81AGEEw9W3wYU1jMABeuoxoyJ5t4S3Ez5tjHjhDRwoKByF0W3YABsYynhECTYKJ6SQ
-VNCA4YUhAAA7
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAIVBMVEX////4qazxVVv84uPw
+Rk3uKjH1jJD71NX98PHtHCT///9s7lfjAAAACXRSTlMAYL8fz+6BMA912afJAAAAAWJLR0QAiAUd
+SAAAAAd0SU1FB+MDHgwmFHt8N80AAABiSURBVAjXY2BgEJrJAAYmMyEM5sgwAzCDZYpBGZghGdwE
+kdJM0IQwZppDFc9kQ2LMnJkwEyw1c2bxTLDimZPYJoG1z9QwnQg2MJ3Z0wFsBXPqVAOwpTNnOoMM
+EJo5U5GBAQAfoSGvI8kSrwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0wMy0zMFQxMzozODoyMCsw
+MTowMHS3C3cAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMDMtMzBUMTM6Mzg6MjArMDE6MDAF6rPL
+AAAAAElFTkSuQmCC
 EOF
     }
 
-    if (!defined $images{Wmflabs}) {
+    # not used anymore
+    if (0 && !defined $images{Wmflabs}) {
 	# Got from http://tools.wmflabs.org (inline data)
 	$images{Wmflabs} = $main::top->Photo
 	    (-format => 'png',
@@ -323,23 +307,18 @@ EOF
     }
 
     if (!defined $images{BikeMapNet}) {
-	# Fetched http://www.bikemap.de/static/images/header/logo.de.gif
-	# and converted using Gimp (cropped manually and scaled to 16px height)
-	# mmencode the result
+	# Created with
+	#     lwp-request 'https://static.bikemap.net/favicons/favicon-16x16.png?v=M4oBa62yYG' | base64
 	$images{BikeMapNet} = $main::top->Photo
-	    (-format => 'gif',
+	    (-format => 'png',
 	     -data => <<EOF);
-R0lGODlhEAAKAMZzAASbygWbyhOZxRGaxxSZxRKbxxOeyhGgzBagyhyfyR2fyR6lzx2n0Suj
-yy6kzDWz2Da02Dm02Uev0kiw0kC02EC12D632je630O22T653EW52z694EG830W73Uy83Uq9
-3la52VO83Fq72lO/3lu93E3D41q+3F2+3FjB31vA3l+/3VXF42LE4WbE4GnF4XDE32zG4W3H
-4nPF33nG33TL5X3I4HnK43fP6IrO44DS6ovO5ILS6IzT6I3U6ZXR5ZfS5pbX6pXZ7Zra7J7e
-8Kvb66zc66ff76ng77Tg7q3j8rXh77ji77jj8Lfl8rvm8r7p9Mfo88Tq9cro8szp88fs9tDr
-9Mvt98/t9s/u99Du9tfv9tjv9tfw+Njw99nw99rw9tvx997y+eP0+eT2++f1+uX2++f3++34
-++74/PL6/Pf8/fj8/vn9/vv9/vz+/vz+//3+/v3+//7/////////////////////////////
-/////////////////////////yH+FUNyZWF0ZWQgd2l0aCBUaGUgR0lNUAAh+QQBCgB/ACwA
-AAAAEAAKAAAHjoBzc29lVGOCTyVDgoyCWCsXSYJsVhtmjY05N3JzcVEcQZhrV0dNGVlcPR87
-HUZOanNhMSw0GhAWHkJpQA8jKBFdGDBuYikMLWhzTCE8FG0uFQFaYAsmKiSCJzZnB1BeAAhI
-altzIi+CMiBzSmRLBjoJRFU1A+RzXwUzVUUKOHA/DgRIkNJoygQCDXzACQQAOw==
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
+AK7OHOkAAAAnUExURVW9/1a9/0xpcVe+/1e+/1e+/0u6/2nF/4LP/7rk/6zf/5rY/83s/9rJtuQA
+AAAGdFJOU//UAFFVT7rGxFMAAABPelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzjyiwoSeZS
+AAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouACiVDuMqIm0fAAAACXBI
+WXMAAAsTAAALEwEAmpwYAAAAcUlEQVQI12NQFmAAAsYgBgcGMGBmEGBgAwsBcTlbGjtYtGZ7+aoC
+IJ2WuaNrWhoDA1v1qraKzu0JDOkzVi7YMauzjCGrYMfJqgr2ZUBG9/GsAiAjYwJXW8YEzjYGts4Z
+CSDMwJDABsECELsYEZbCnAEA14gfbn28kNUAAAAASUVORK5CYII=
 EOF
     }
 
@@ -368,34 +347,42 @@ Ow==
 EOF
     }
 
-    if (!defined $images{YahooDe}) {
-	# Fetched logo:
-	#   wget http://l.yimg.com/a/i/ww/beta/y3.gif
-	# Manually cropped the Y and resized to 16x16
-	# Created base64:
-	#   mmencode -b ...
-	$images{YahooDe} = $main::top->Photo
-	    (-format => 'gif',
-	     -data => <<EOF);
-R0lGODlhEAAQAKU2AM0DLcwELbgOMeYAL+MCMOkAL/IAMfgAMvkAMvAFMv0AM/8AM/gGNf8D
-NeESO+YSOoVEU546T/4NPNkfRuoZQeUbRP0QP/0RPv4VQfcYRf4fR/wgSbhBV/8fTLlEXPEq
-UP4lTv0nT7ZJX6JUZdI/XP4vWYlob4lqcadebsFZarVfbvw/ZPRFaY56f/pHav1KbJJ+g6OA
-iJ+Ditl5ia6qq7Kwsf///////////////////////////////////////yH+FUNyZWF0ZWQg
-d2l0aCBUaGUgR0lNUAAh+QQBCgA/ACwAAAAAEAAQAAAGXcCfcEgsGo/I5PDTaWIoE1VSRlos
-ODThquTqumbDyuIwTHkYCEEERrQsEkMWAVI7ShaP3wZgUjYUGQEtSj8hCwYnhD8aCwOKiwsF
-hC8gFwsIDgtJIiMonp4xj6JJQQA7
+    if ($map_compare_use_bbbike_org) {
+	if (!defined $images{BBBikeGeofabrik} && eval { require Tk::PNG; 1 }) {
+	    # Created from http://www.geofabrik.de/img/shortcut.png
+	    # and srtbike_logo.svg with Gimp
+	    $images{BBBikeGeofabrik} = $main::top->Photo
+		(-format => 'png',
+		 -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBI
+WXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4wMeDAAyaq8xFAAAAwtJREFUOMtVkt1LZAUYxn/nnPl0
+dDV3VltxR8i1KJasca1IpllIoVroIrUIYWmuwgK7EYuuov9AMBKCudkdSgNbWIW2SJbCbWU/mN1V
+1jVTcZ2jO+p86HzPmfN24U7uPFfPCw8P7/O+jyIiwlMolkx+DC+zk87y0cttNNdVs5eA73/fx2VV
++ey9auy2I71aJmWfhe09tlNpDNPkr3WdZMpk6GKU7+5v8sdymlSGCijlDTbiBzyIxliKxhEFHBaN
+QskkFnfwdyTHJ6dfpKPVhqrCac+RgaVMUoUi4a0dXmlq4NWmE1hUhcKTON1WF/3nLHz6wx7RVIEr
+wyePDNKFIrc2o9zY2Kal7hjnnmtiauFfHiVS1DrtFEsmYt/n0u0VVJuTXEmrjDB+474ksnmKJZPe
+M62YIlxbjfB22ykcVo2rSxvEszkURaFYgruPbORjbrqaa/nywypUT10NVk0FBXJGCYdVwxCThzsJ
+nq12YbdqCGAK7Gc09PjhrClPIrz7QgtnGuu5thrh5uZjAmdforO5kccHGVQFFBTE1Li1ZqM678aR
+N7jy1cnKN9aqgn5zjt2DNJfuLHG8ysHZU408jCZIZgtIroYHup39gywmJmNjYxSLxUMDXdfx+/24
+LCqvP+Ng5Z9lfr63wsXbS/yysEo+doK9SAYQqpw2BJVkMkl3dzf5fB5ta2vrm5GRET7u68WpCL9d
+vcexliY0FdRMPe+35bkcmqDX/w67OUjkDYJfnycWizE3N4e6uLhIT08PAMHQHS7zJpFdO6VcCV9D
+guvX/+StzuN88YELTYFy8QcGBpidnT28QbnGgQvn+bazlRH/86z++hP1NQ6cTifZbBaAC6/V8vkb
+DQBkMhlcLhcMDg5KKBSSp7G2tiZer1cMwxBd18Xr9UoqlarQDA0NSTAYFBKJhHR1dcnw8LBMT0/L
+6OiotLe3y/z8/P/iyclJ6ejokPHxcZmYmJD+/n4JBAJimqYoIiKGYTA1NUU4HMbj8dDX14fb7a6o
+7Pr6OjMzMySTSXw+Hz6fD4D/AElkl2avow92AAAAAElFTkSuQmCC
 EOF
-    }
-
-    if (!defined $images{Geofabrik} && eval { require Tk::PNG; 1 }) {
-	# Fetched logo:
-	#   wget http://tools.geofabrik.de/img/geofabrik-tools.png
-	# Manually cut "G" logo out and resized to 16x16
-	# Create base64:
-	#   mmencode -b ...
-	$images{Geofabrik} = $main::top->Photo
-	    (-format => 'png',
-	     -data => <<EOF);
+	    $images{_MapCompare} = $images{BBBikeGeofabrik};
+	}
+    } else {
+	if (!defined $images{Geofabrik} && eval { require Tk::PNG; 1 }) {
+	    # Fetched logo:
+	    #   wget http://tools.geofabrik.de/img/geofabrik-tools.png
+	    # Manually cut "G" logo out and resized to 16x16
+	    # Create base64:
+	    #   mmencode -b ...
+	    $images{Geofabrik} = $main::top->Photo
+		(-format => 'png',
+		 -data => <<EOF);
 iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dE
 AP8A/wD/oL2nkwAAAAlwSFlzAAAE8AAABPABGA1izwAAAAd0SU1FB9kHGBMgGqjuhNYAAAAd
 dEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAhhJREFUOMuNkz1MFGEQ
@@ -411,6 +398,8 @@ HlLViVbDGDl7NE9/5z6+bmwRqnIgk2b6xQJf1suvROSabZmzv4bouB62ZdZJpoAxQ4TOdFK7
 QuC4XqExrlgs/vOYbtYInjQ7pmKxKLFmSmzLnARcYCTacwP0B/bXAvRRlokcAAAAAElFTkSu
 QmCC
 EOF
+	    $images{_MapCompare} = $images{Geofabrik};
+	}
     }
 
     if (!defined $images{Bing}) {
@@ -485,6 +474,35 @@ OS80MTk0MjEwMWEwYjc5MzVjMDhhN2VjMTE3ODdjODI0Yy5pY28ucG5nLsj4ngAAAABJRU5ErkJg
 gg==
 EOF
     }
+
+    if (!defined $images{OpenStreetCam}) {
+	# Created with:
+	#    lwp-request https://openstreetcam.org/favicon-16x16.png | base64
+	$images{OpenStreetCam} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABsFBMVEUAAAAOAAAIAAAVAAAP
+AAEVAAAbHB8bHB8bHB8UFBoVExgZHSIbJi0cJi0YHSMUEhgZFhcbHB8bHB8ZGh4jJSQ4VFNMW0kd
+IygbGx0bHB8bHB8bHB8bGx0cJiwhVGsfU2wbHB8aFhcaFhcbISYnLi0oLiwaICYWAAAFAAYCAAcP
+AAA4e40vjK4nibNXhnwbHB8aGx4sLymAlGat0pOt2Z2Pz61XvMyo15+Vy6EqeJccKjIbGx4bHB4a
+IShRhoO125e93JG825C825G22ZSy2JZavMgqreUleJwcIicbGhwgTWEtqtx1xbm725G/3I+o1Zw5
+sNoqrOMrqd4gTGEbHiElep4prudKttGv15iq1Zt3xbdlv8Exrt4rrOIrr+UbHSEcJCoojrorruUs
+rOJhvsSa0KNVusopq+Mojrkoj7orruRZu8iNzKtrwb4vreAbHiImfKGKy6y625KHyq4hUGUrqt8q
+rOJ+x7O+3JCWz6Yxrt8qqt8hUGYcJCkmfaNLttCt1pmSzqkwsOIbGx0dLTYrquAqruZpwsG63JSk
+1qFLtc0lfaNyqJKVtH9GiJH///97pjWBAAAAK3RSTlMAAAAAAAIJDw4SQ4SlpYRDErLLy9Dy8tDL
+v9fW1tv39xYaT5Ozs5MBBgYBL/ZuuAAAAAFiS0dEj/UCg/kAAAAHdElNRQfhDAYNKBsutyRPAAAB
+AElEQVQY02NgAAFGJlZWJkYwk4GNnZ2Dk4ubh5ePX4CDnZ2NQVBISFhEVFtHV09MXEJISJBBX9/A
+0MjYxNTM3MLSylpfn0HfxtbO3sHRydnF1c3dwwYo4Onl7ePk6+TnHxAYFOwJFAgJDQuPcIyMio6J
+jQuN12ewTkhMSk5JTUtPj41NykiwBgpkZsXGZufk5qXHZmUCBfTzC5JiY5MLi4rDY5MK8kGGlpTG
+xpaVV/hVVlXXgAy1rq1Lig2sb/BrbKqrtQYK6De31LW2tXd0dnW3NAMdJiklLSMrV9fT2ycvKyMt
+JcnAoaCgoKikrKKqpqQIZHJAvMysrqGpxQJmAgCiFz5y6dOefAAAACV0RVh0ZGF0ZTpjcmVhdGUA
+MjAxNy0xMi0wNlQxMzo0MDoyNyswMTowMPLAlXAAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTctMTIt
+MDZUMTM6NDA6MjcrMDE6MDCDnS3MAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IM
+CHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoX
+EXTyQjWVAAAAAElFTkSuQmCC
+EOF
+    }
 }
 
 ######################################################################
@@ -495,17 +513,10 @@ sub showmap_url_wikimapia {
 
     my $px = $args{px};
     my $py = $args{py};
-
-    for ($px, $py) {
-	s{\.}{};
-	$_ = substr($_, 0, 8); # XXX what about <10° and >100°?
-	if (length($_) < 8) {
-	    $_ .= " "x(8-length($_));
-	}
-    }
+    my $mapscale_scale = $args{mapscale_scale};
 
     my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
-    sprintf "http://wikimapia.org/s/#y=%s&x=%s&z=%d&l=5&m=a",
+    sprintf "http://wikimapia.org/s/#lat=%s&lon=%s&z=%d&m=w",
 	$py, $px, $scale;
 }
 
@@ -516,7 +527,8 @@ sub showmap_wikimapia {
 }
 
 ######################################################################
-# wmflabs (historic maps berlin)
+# historic maps on mc.bbbike.org
+# previously wmflabs (historic maps berlin)
 
 sub showmap_url_historic_maps_berlin {
     my(%args) = @_;
@@ -526,7 +538,8 @@ sub showmap_url_historic_maps_berlin {
     my $mapscale_scale = $args{mapscale_scale};
 
     my $scale = 17 - log(($mapscale_scale)/3000)/log(2);
-    sprintf "http://tools.wmflabs.org/historicmaps/berlin/index.html#map=%d/%s/%s/0", $scale, $py, $px;
+    #sprintf "http://tools.wmflabs.org/historicmaps/berlin/index.html#map=%d/%s/%s/0", $scale, $py, $px;
+    sprintf "https://mc.bbbike.org/mc/?lon=%s&lat=%s&zoom=%d&num=2&mt0=e-historicmaps-1220&mt1=bbbike-bbbike&eo-match-id=e-historicmaps", $px, $py, $scale;
 }
 
 sub showmap_historic_maps_berlin {
@@ -861,27 +874,6 @@ sub showmap_url_geocaching {
 sub showmap_geocaching {
     my(%args) = @_;
     my $url = showmap_url_geocaching(%args);
-    start_browser($url);
-}
-
-######################################################################
-# Yahoo (de.routenplaner)
-
-sub showmap_url_yahoo_de {
-    my(%args) = @_;
-
-    my $px = $args{px};
-    my $py = $args{py};
-    my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
-    $scale = 20 if $scale > 20;
-
-    sprintf "http://de.maps.yahoo.com/#q1=++&lat=%s&lon=%s&zoom=%d&mvt=m&trf=0",
-	$py, $px, $scale;
-}
-
-sub showmap_yahoo_de {
-    my(%args) = @_;
-    my $url = showmap_url_yahoo_de(%args);
     start_browser($url);
 }
 

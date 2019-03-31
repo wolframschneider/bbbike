@@ -1908,7 +1908,31 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: tempex: 20180427-T20180521 vvv
+	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
+	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
+	q4::temp 11275,8387 11230,8402
+	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
+# REMOVED --- #: tempex ^^^
+',
+         'from' => 1556143200,
+         'id' => 2207,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              25,
+                              'months',
+                              4
+                            ]
+                          ],
+         'source_id' => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2983315-2970764-neukoellner-maientage.html',
+         'text' => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 26.04.2019 bis 19.05.2019',
+         'type' => 'handicap',
+         'until' => 1558303199
+       },
        undef,
        undef,
        undef,
@@ -2261,7 +2285,27 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2018
+# REMOVED (müsste korrigiert werden) --- #: tempex: YYYY0429-YYYY0501
+	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+',
+         'from' => 1556748000,
+         'id' => 2431,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
+                              'months',
+                              4
+                            ]
+                          ],
+         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (03.05.2019 bis 05.05.2019)',
+         'type' => 'handicap',
+         'until' => 1557093599
+       },
        undef,
        undef,
        undef,
@@ -2637,7 +2681,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194069450" version="17"
 #: also_indoor: traffic (H, G)
 #: priority: #A
-#: last_checked: 2019-03-21
+#: last_checked: 2019-03-29
 #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 ',
@@ -3111,7 +3155,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-03-05 vvv
+#: last_checked: 2019-03-29 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -3242,9 +3286,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: VERLWERDERSTR-2018
 #: by: https://www.berliner-woche.de/altglienicke/c-bauen/werderstrasse-wird-ausgebaut_a169172
 #: XXX nach den Bauarbeiten Betonpflaster
-#: last_checked: 2019-01-02
-	2::inwork 20245,2152 20261,2114 20222,2037 20214,1988
-# REMOVED (hier fertig) ---	2::inwork 20214,1988 20187,1930 20166,1864 20120,1791 20093,1776 20064,1777
+#: last_checked: 2019-03-30
+	2::inwork 20245,2152 20261,2114
+# REMOVED (hier fertig) ---	2::inwork 20261,2114 20222,2037 20214,1988
+# REMOVED (hier fertig) ---	2::inwork 20214,1988 20187,1930 20166,1864 20125,1802 20093,1776 20064,1777
 ',
          'from' => 1530396000,
          'id' => 2973,
@@ -3380,7 +3425,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-03-14
+#: last_checked: 2019-03-26
 #: check_frequency: 14d
 	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
 ',
@@ -3460,16 +3505,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '	q4::inwork; 4451,8874 4777,8870
-',
-         'from' => 1537297950,
-         'id' => 3019,
-         'source_id' => '2147343219',
-         'text' => 'Berliner Str.: Baustelle zwischen Mannheimer Str. und Brandenburgische Str./Blissestr., Fahrbahn Richtung Osten gesperrt, bis Ende März 2019',
-         'type' => 'handicap',
-         'until' => 1553965200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3484,7 +3520,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-03-16
+#: last_checked: 2019-03-28
 #: check_frequency: 7d
 	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
@@ -3558,7 +3594,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: NEUERMAUERWEG-2018
 #: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
-#: osm_watch: way id="42031978" version="13"
+#: osm_watch: way id="42031978" version="14"
 #: priority: #B vvv
 #: last_checked: 2019-03-23 vvv
 #: check_frequency: 14d vvv
@@ -3616,7 +3652,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-03-16
+#: last_checked: 2019-03-28
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 ',
@@ -3686,17 +3722,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: last_checked: 2019-03-23
-	q3::inwork 4119,22634 4232,22458 4280,22383
-',
-         'from' => 1549753200,
-         'id' => 3069,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.782948.php',
-         'text' => 'Artemisstr.: Neubau zwischen Halalistr. und Dianastr., Fahrbahn gesperrt, vom 11.02.2019 bis 29.03.2019',
-         'type' => 'handicap',
-         'until' => 1553900400
-       },
+       undef,
        {
          'data' => '#: next_check_id: SALVADORALLENDEBRUECKE-2017
 #: by: https://www.berliner-woche.de/treptow-koepenick/c-verkehr/entlastungsstrecke-durch-die-altstadt-eingerichtet_a200395
@@ -3753,19 +3779,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1557180000
        },
-       {
-         'data' => '#: priority: #A
-#: last_checked: 2019-03-22
-# REMOVED --- #: check_frequency: 14d
-#: next_check: 2019-03-29
-	q3::inwork 11594,9604 11640,9710
-',
-         'from' => 1551898069,
-         'id' => 3076,
-         'text' => 'Schönleinstr.: Bauarbeiten an der Böckhstr., Fahrbahn gesperrt, voraussichtlich bis 29. März 2019',
-         'type' => 'handicap',
-         'until' => 1553878800
-       },
+       undef,
        {
          'accept_multi_feature_distance' => 1500,
          'data' => '#: note: laut VIZ ist der Radverkehr auch betroffen, aber nicht der Fußverkehr (also schieben möglich?); Dauer 1 1/2 Jahre ab 2019-03-11
@@ -3803,6 +3817,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.796103.php ("bald")
+#: by: https://www.berliner-woche.de/waidmannslust/c-bauen/steg-im-fliess-wird-saniert_a206581
 	2::inwork 4022,22691 3947,22622 3907,22606 3879,22574
 ',
          'from' => undef,
@@ -3811,14 +3826,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1556726400
        },
+       undef,
        {
-         'data' => '	2::inwork 3835,10915 3820,10987
+         'data' => '#: next_check_id: WERNSDORFERSTR-2019
+#: last_checked: 2019-03-30 vvv
+#: next_check: 2019-09-18 vvv
+	q4::inwork; 27226,-2892 27422,-2753 27456,-2843 27520,-3029 27518,-3054
+	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
+#: next_check ^^^
+#: last_checked ^^^
 ',
-         'from' => 1553539638,
-         'id' => 3082,
-         'text' => 'Wilmersdorfer Str.: Bahnbrücke in den Nächten bis Freitagmorgen gesperrt, 25.3.2019 bis 29.3.2019, jeweils 20:30 Uhr bis 6:00 Uhr, eventuell sind auch Radfahrer betroffen',
-         'type' => 'gesperrt',
-         'until' => 1553835600
+         'from' => undef,
+         'id' => 3083,
+         'text' => 'Imkerweg und Am Seddinsee: Einbahnstraßenregelung; außerdem enger gemeinsamer Rad- und Gehweg in der Wernsdorfer Str.',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );
