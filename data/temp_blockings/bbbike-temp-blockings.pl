@@ -373,11 +373,11 @@ EOF
 	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5434,13398 5368,13406 5248,13434
 EOF
      },
-     { from  => $isodate2epoch->("2018-04-30 12:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-05-01 23:59:59"),
+     { from  => $isodate2epoch->("2019-04-30 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-01 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 1, months => 5]],
-       text  => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2018',
+       text  => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: tempex: YYYY0431T1200-YYYY05020000 vvv
@@ -808,7 +808,7 @@ EOF
        text  => 'Die Naumannstraße ist zwischen Torgauer Straße und Tempelhofer Weg von 27.08.04, 07.00 Uhr bis 28.08.04, 20.00 Uhr gesperrt. Grund Bauarbeiten.',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 7733,8023 7713,8001 7717,7879 7718,7820 7696,7771
+	2 7733,8023 7713,8001 7717,7879 7718,7838 7718,7820 7696,7771
 EOF
      },
      { from  => 1093730400, # 2004-08-29 00:00
@@ -1156,7 +1156,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002432',
        data  => <<EOF,
-	q4 7696,7771 7718,7820 7717,7879 7713,8001 7733,8023
+	q4 7696,7771 7718,7820 7718,7838 7717,7879 7713,8001 7733,8023
 EOF
      },
      { from  => 1097964000, # 2004-10-17 00:00
@@ -10001,7 +10001,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006673',
        data  => <<EOF,
-	1::inwork 19273,5866 19388,5883 19403,5885 19650,5920 19681,5924 19795,5935 19958,5950
+	1::inwork 19273,5866 19388,5883 19403,5885 19650,5920 19681,5924 19795,5935 19957,5941
 EOF
      },
      { from  => 1187992800, # 2007-08-25 00:00
@@ -14346,7 +14346,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2009-05-21
-	q4::inwork 9131,12438 9343,12464
+	q4::inwork 9131,12438 9179,12444 9343,12464
 EOF
      },
      { from  => 1243370925, # 2009-05-26 22:48
@@ -16543,7 +16543,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_157063303',
        data  => <<EOF,
-	q4::inwork 7709,8777 7713,8600 7716,8370 7716,8356 7715,8308 7710,8051 7733,8023 7713,8001 7717,7879 7718,7820 7696,7771
+	q4::inwork 7709,8777 7713,8600 7716,8370 7716,8356 7715,8308 7710,8051 7733,8023 7713,8001 7717,7879 7718,7838 7718,7820 7696,7771
 EOF
      },
      { from  => 1255816800, # 2009-10-18 00:00
@@ -16733,7 +16733,7 @@ EOF
        source_id => 'IM_014421',
        data  => <<EOF,
 	2::inwork; 9121,12514 9131,12438
-Kein Durchgang von Mittelstr. zur Neustädtischen Kirchstr., auch nicht für Fußgänger	2::inwork 9343,12464 9131,12438
+Kein Durchgang von Mittelstr. zur Neustädtischen Kirchstr., auch nicht für Fußgänger	2::inwork 9343,12464 9179,12444 9131,12438
 	q4::inwork; 9131,12438 9141,12320
 EOF
      },
@@ -21531,11 +21531,11 @@ EOF
 	q4::xmas 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 EOF
      },
-     { from  => $isodate2epoch->("2018-05-25 00:00:00"), # 1431715044, # 1367560678, # 2013-05-03 07:57
-       until => $isodate2epoch->("2018-05-26 23:59:59"), # 1367704799, # 2013-05-04 23:59
+     { from  => $isodate2epoch->("2019-05-17 00:00:00"), # 1431715044, # 1367560678, # 2013-05-03 07:57
+       until => $isodate2epoch->("2019-05-18 23:59:59"), # 1367704799, # 2013-05-04 23:59
        periodic => 1,
        recurrences => [['yearly', days => 4, months => 5]],
-       text  => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 26. Mai 2018',
+       text  => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 18. Mai 2019',
        type  => 'gesperrt',
        source_id => 'http://www.berliner-frauenlauf.de/?year=2018',
        data  => <<EOF,
@@ -21657,7 +21657,7 @@ EOF
        source_id => 'https://familienfez.fez-berlin.de/programm/kindertagsfest/',
        data  => <<EOF,
 #: tempex: YYYY0530-YYYY0601 vvv
-	2::temp 20755,5750 20716,6029 20707,6098 20623,6136 20453,6211 20464,6237
+	2::temp 20760,5743 20716,6029 20707,6098 20623,6136 20453,6211 20464,6237
 	2::temp 19961,5989 20015,6069 20293,6278 20200,6321 20106,6357
 	2::temp 20200,6321 20262,6493 20225,6631
 	2::temp 20716,6029 20593,6082 20428,6157 20453,6211 20293,6278
@@ -22212,7 +22212,7 @@ EOF
        data  => <<EOF,
 #: note: der zweite Bauabschnitt dürfte für Radfahrer nicht relevant sein, siehe
 #: by: http://www.htw-berlin.de/uploads/media/Bauabschnitt-2-Umleitung-Wilhelminenhof.pdf
-	q4::inwork; 19958,5950 19795,5935 19681,5924 19650,5920 19403,5885 19388,5883 19273,5866 19024,5830 18932,5926
+	q4::inwork; 19957,5941 19795,5935 19681,5924 19650,5920 19403,5885 19388,5883 19273,5866 19024,5830 18932,5926
 EOF
      },
      { from  => 1378332000, # 2013-09-05 00:00
@@ -22558,13 +22558,15 @@ EOF
 	2::xmas 11317,14564 11247,14578 11155,14554
 EOF
      },
-     { from  => 1384642800, # 2013-11-17 00:00
-       until => 1402509700, # 1404136800, # 2014-06-30 16:00
-       text  => 'Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, in Richtung Friedrichstr. ca. 60 Meter gesperrt, vom 18.11.2013 bis Ende Juni 2014 ',
-       type  => 'handicap',
+     { from  => undef, # 1384642800, # 2013-11-17 00:00
+       until => undef, # 1402509700, # 1404136800, # 2014-06-30 16:00
+       text  => 'Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt',
+       type  => 'gesperrt',
        source_id => 'IM_020714',
        data  => <<EOF,
-	q3::inwork; 9131,12438 9343,12464
+#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
+#: last_checked: 2019-04-04
+	2::inwork 9131,12438 9179,12444
 EOF
      },
      { from  => 1384642800, # 2013-11-17 00:00
@@ -22983,13 +22985,13 @@ EOF
 	2::inwork 48229,74776 48296,74641
 EOF
      },
-     { from  => $isodate2epoch->("2018-04-28 00:00:00"),
-       until => $isodate2epoch->("2018-05-02 02:00:00"),
+     { from  => $isodate2epoch->("2019-04-28 00:00:00"),
+       until => $isodate2epoch->("2019-05-02 02:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 30, months => 4]],
-       text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung des DGB), am 1. Mai 2018',
+       text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung des DGB), am 1. Mai 2019',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/tickets/suche/detail.php?id=1372887',
+       source_id => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html',
        data  => <<EOF,
 #: tempex: YYYY0428T0000 - YYYY0502T0200 vvv
 	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
@@ -23998,17 +24000,11 @@ EOF
 EOF
      },
      { from  => 1534789491,
-       until => undef,
-       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, Ende der Sperrung unbekannt',
+       until => 1554400012, # undef,
+       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn in Richtung Norden gesperrt, beendet',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: FRIEDRICHSTR-2018
-#: XXX bis wann geht die Sperrung?
-#: osm_watch: way id="194069450" version="17"
-#: also_indoor: traffic (H, G)
-#: priority: #A
-#: last_checked: 2019-03-29
-#: check_frequency: 7d
+# REMOVED --- #: next_check_id: FRIEDRICHSTR-2018 --- #: XXX bis wann geht die Sperrung? --- #: osm_watch: way id="194069450" version="17" --- #: also_indoor: traffic (H, G) --- #: priority: #A --- #: last_checked: 2019-03-29 --- #: check_frequency: 7d
 	q4::inwork; 9373,12197 9369,12253 9358,12351
 EOF
      },
@@ -24753,8 +24749,8 @@ EOF
 EOF
      },
      { from  => 1443650400, # 2015-10-01 00:00
-       until => $isodate2epoch->("2019-04-01 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
-       text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Frühjahr 2019',
+       until => $isodate2epoch->("2019-07-31 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
+       text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende Juli 2019',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
        data  => <<EOF,
@@ -24770,9 +24766,9 @@ EOF
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
 #: by: https://www.berliner-woche.de/falkenhagener-feld/c-verkehr/strassenbau-geht-weiter_a202396 (bis März 2019 plus vier Wochen)
-#: XXX laut fritz Ende 2018, laut vmz Frühjahr 2019
+#: XXX laut fritz bis 31.07.2019, laut vmz Gesamtmaßnahme bis Ende Juli 2019
 #: last_checked: 2018-10-12
-#: next_check: 2019-04-01
+#: next_check: 2019-07-31
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
 # REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
@@ -25876,9 +25872,9 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2019-03-26 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-03-27 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 27. März 2019 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2019-04-02 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-04-03 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 3. April 2019 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
@@ -26521,11 +26517,12 @@ EOF
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.776977.php
 #: source_id: 2147342671
 #: source_id: 2147342861
-#: source_id: 2147342860
-#: XXX wann sind die Bauarbeiten beendet?
+#: source_id: 2147342860 (Ende Anfang April 2019)
+#: XXX laut fritz "bis auf weiteres"
+#: add_fragezeichen: Wurden die Bauarbeiten in der Carstennstr. beendet?
 #: last_checked: 2018-09-12 vvv
 # REMOVED --- #: check_frequency: 30d
-#: next_check: 2019-06-30 vvv
+#: next_check: 2019-05-15 vvv
 # REMOVED (hier fertig) ---	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
 	q3::inwork; 2781,2493 2740,2588 2625,2850
@@ -26812,7 +26809,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-03-29 vvv
+#: last_checked: 2019-04-04 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27364,7 +27361,7 @@ EOF
        type  => 'handicap',
        source_id => '2147342666',
        data  => <<EOF,
-	q4::inwork 19958,5950 19795,5935 19681,5924
+	q4::inwork 19957,5941 19795,5935 19681,5924
 EOF
      },
      { from  => undef, # 
@@ -27479,7 +27476,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-03-25
+#: last_checked: 2019-04-02
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889
 # REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
 EOF
@@ -27773,9 +27770,9 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-03-26
+#: last_checked: 2019-04-04
 #: check_frequency: 14d
-	q4::inwork 9892,11752 9907,11752 10079,11765 10114,11789 10132,11810
+	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
      },
      { from  => 1534790216, # 2018-08-20 20:36
@@ -28549,7 +28546,7 @@ EOF
        text  => 'Spreebogenpark: wegen Abbrucharbeiten an der ehemaligen Umfahrung der Schweizer Botschaft ist der Weg zwischen Gustav-Heinemann-Brücke und Bundeskanzleramt gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2019-03-04
+#: last_checked: 2019-04-03
 #: priority: #A
 	2::inwork 8124,12840 8120,12756
 EOF
@@ -28564,15 +28561,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1554326457, # undef, # XXX
        text  => 'Uferweg: Zugang kann durch Bauzäune versperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX wann werden die Bauzäune entfernt?
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_11_1601_1736_online.pdf (Straßenlandwidmung)
-#: priority: #C
-#: last_checked: 2019-03-05
-#: check_frequency: 60d
+#: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=627690&postcount=126 (offen)
+# REMOVED --- #: priority: #C --- #: XXX wann werden die Bauzäune entfernt? --- #: last_checked: 2019-03-05 --- #: check_frequency: 60d
 	2::inwork 8169,13705 8131,13770 8057,13923
 # REMOVED (hier nicht mehr) ---	2::inwork 8103,13675 8169,13705
 EOF
@@ -28651,6 +28646,7 @@ EOF
        type  => 'handicap',
        source_id => '2147343824',
        data  => <<EOF,
+#: osm_watch: way id="4597320" version="15"
 # REMOVED (ja) --- #: XXX vor Ort anschauen, ggfs. nach handicap_s-orig verschieben
 	q4::inwork 8737,12098 8783,11959
 EOF
@@ -28749,6 +28745,55 @@ EOF
 	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
 #: next_check ^^^
 #: last_checked ^^^
+EOF
+     },
+     { from  => 1554064162, # 2019-03-31 22:29
+       until => $isodate2epoch->("2019-05-01 18:00:00"),
+       text  => 'Brunnenstr.: Bauarbeiten zwischen Brunnenstr. und Torstr., Richtung Rosenthaler Platz gesperrt, außerdem Einbahnstraßenregelung in der Ackerstr. und in der Invalidenstr. zwischen Elisabethkirchstr. und Brunnenstr., bis Anfang Mai 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147343964
+#: by: https://www.berliner-woche.de/mitte/c-bauen/brunnenstrasse-ist-bis-15-april-baustelle_a207937
+	q4::inwork; 10002,14092 10177,13766
+	q4::inwork; 9917,13741 9873,13872 9804,14071
+	q4::inwork; 9936,14085 10002,14092
+EOF
+     },
+     { from  => 1554400800, # 2019-04-04 20:00
+       until => $isodate2epoch->("2019-04-08 06:00:00"),
+       text  => 'Sperrungen wegen des Halbmarathons: Straße des 17. Juni, Ebertstr., Scheidemannstr. und weitere Straßen gesperrt, evtl. sind auch Radfahrer betroffen, von 5.4.2019 20 Uhr bis 8.4.2019 6 Uhr',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::temp 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420 8400,12417 8354,12416 8119,12414 8122,12603 8207,12606 8206,12757
+	2::temp 8540,12420 8775,12457
+	2::temp 8309,12758 8306,12609 8207,12606
+	2::temp 7031,12320 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
+	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186
+	2::temp 8306,12609 8348,12609
+	3 8554,12593 8540,12420 8775,12457
+	3 8399,12610 8400,12417 8391,12389
+	3 8348,12609 8354,12416 8391,12389
+	3 8775,12457 8540,12420 8554,12593
+	3 8327,12174 8344,12221 8391,12389
+	3 7429,12070 7383,12095 7031,12320
+	3 8391,12389 8354,12416 8348,12609
+	3 8391,12389 8344,12221 8327,12174
+	3 8391,12389 8400,12417 8399,12610
+	3 7654,12464 7627,12380 7603,12353
+	3 7603,12353 7627,12380 7654,12464
+	3 8592,12252 8538,12245 8522,12187
+	3 8592,12252 8538,12245 8522,12239
+	3 7822,12201 7816,12150 7823,12120
+	3 7822,12201 7875,12363 7945,12592
+	3 8522,12187 8538,12245 8522,12239
+	3 8522,12187 8538,12245 8592,12252
+	3 7945,12592 7875,12363 7822,12201
+	3 7945,12592 8122,12603 8120,12756
+	3 7031,12320 7383,12095 7429,12070
+	3 8522,12239 8538,12245 8522,12187
+	3 8522,12239 8538,12245 8592,12252
+	3 8120,12756 8122,12603 7945,12592
+	3 7823,12120 7816,12150 7822,12201
 EOF
      },
     );

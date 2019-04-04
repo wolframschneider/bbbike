@@ -1158,8 +1158,7 @@ Gretel-Bergmann-Weg	1s:q1 -1132,12268 -1288,12178
 #: by: https://www.morgenpost.de/bezirke/mitte/article216132465/Der-Durchgang-am-Reichstag-ist-bald-wieder-offen.html
 #: XXX wird die permanente Sperrung hinter dem Reichstag aufgehoben?
 #: osm_watch: way id="273805079" version="2"
-#: last_checked: 2019-01-28
-#: next_check: 2019-04-01
+#: last_checked: 2019-04-04
 Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
 # 
 # REMOVED (dauerhaft) --- #: last_checked: 2014-07-23 --- #: check_frequency: 180d --- #: XXX evtl. permanent
@@ -1265,6 +1264,12 @@ Heinrichplatz	1 11734,10563 11754,10516
 # 
 (Landsberger Allee - Frank-Schweitzer-Str.)	1 19205,14980 19244,14980
 (Frank-Schweitzer-Str. - Landsberger Allee)	1 19244,14980 19214,14966
+# 
+#: by: http://www.taz.de/!5516248/ (möglicherweise dauerhaft)
+#: last_checked: 2019-04-02
+#: check_frequency: 180d
+Bhf. Südkreuz: Eingang gesperrt	2 7838,7848 7804,7783
+# 
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1644,7 +1649,7 @@ Gülzower Str.: Mittelstreifen	3 22603,12359 22388,12190 22400,12171
 Oranienburger Str. (Wittenau): Mittelstreifen	3nocross 5343,21250 5349,21198 5356,21146 5382,21001
 Oranienburger Str.: Straßenbahnhaltestelle	3nocross 9225,13389 9293,13366 9415,13315
 Brauhausstr. -> Prenzlauer Promenade: Straßenbahntrasse	3 12211,16688 12017,16734 12045,16574
-Schnellerstr.: Mittelstreifen	3nocross 16720,6845 16677,6892 16646,6925 16563,7012
+Schnellerstr.: Mittelstreifen	3nocross 16720,6845 16677,6892 16563,7012
 Schnellerstr.: Mittelstreifen	3nocross 17293,6230 17216,6308 16909,6628 16838,6708
 Stendaler Str.: Straßenbahntrasse	3nocross 23895,15450 23913,15333 23933,15209 23952,15086
 #: note: einige Meter nördlich der Henny-Porten-Str. existiert eine Fußgängerfurt
@@ -1792,7 +1797,7 @@ Frankfurter Allee	3nocross::ignrte 14208,12235 14291,12222 14381,12207 14427,121
 Frankfurter Allee: unbequem passierbarer Mittelstreifen	3nocross 13785,12292 13885,12279 14020,12261
 Frankfurter Allee: Mittelstreifen mit Geländer	3nocross 16066,11960 16127,11950 16207,11937
 Frankfurter Allee: Mittelstreifen mit Geländer	3nocross 15670,12022 15717,12015 15863,11992
-Leipziger Str.: unbequem passierbarer Mittelstreifen	3nocross 9701,11656 9898,11679 9981,11689
+Leipziger Str.: unbequem passierbarer Mittelstreifen	3nocross 9701,11656 9905,11680 9991,11690
 #Landsberger Allee: Mittelstreifen	3nocross 13089,13323 13161,13360 13241,13405 13330,13468
 Greifswalder Str.: Mittelstreifen mit Straßenbahn	3nocross 12177,14335 12188,14350 12228,14404 12266,14460 12317,14535
 Greifswalder Str.: Mittelstreifen mit Straßenbahn	3nocross 12422,14692 12473,14763 12528,14845 12547,14873 12584,14928
@@ -2852,7 +2857,7 @@ Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14597,1012
 # REMOVED (entfernt) --- #: note: 90cm Öffnung, 90cm zum versetzten Gitter -> 63cm lichte Breite --- #: note: hmmm, heute (2012-10-16) habe ich einen Radfahrer mit Croozer da durchfahren gesehen -> trailer=no -> trailer=15 --- Drängelgitter --- mittlerweile gibt es eine Pollerreihe	BNP:3::trailer=15 12901,10134
 # REMOVED (wurde abmontiert --- dauerhaft? --- ja, jetzt gibt's hier auch eine Pollerreihe) --- #: note: relativ großzügige Öffnung --- Drängelgitter	BNP:1::trailer=3 12833,9998
 Schranke (Privatstr.)	BNP:5 25039,5304
-Schranke	BNP:2::trailer=4 9907,11752
+Schranke	BNP:2::trailer=4 9910,11755
 Schranke	BNP:3::trailer=10 10114,11789
 #: note: Vorbeifahrt auf dem Gehweg, Pfosten können möglicherweise Anhänger behindern 
 Schranke	BNP:3::trailer=6 9698,10348
@@ -3000,12 +3005,12 @@ Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997
 # 
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910
-#: last_checked: 2019-03-30
+#: last_checked: 2019-04-02
 #: next_check: 2019-12-20
 #: valid: 20190319-20191220
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:q4:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 # 
-#: last_checked: 2019-03-28
+#: last_checked: 2019-04-04
 #: check_frequency: 7d
 Luckauer Str.: Bauarbeiten, Einbahnstraßenregelung	1s:q3:inwork 11113,10943 11150,11030
 # 
@@ -3028,7 +3033,7 @@ Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21
 #: osm_watch: node id="791819743" version="3"
 #: by: osm (kartonage)
 #: confirmed_by: srt
-#: last_checked: 2019-03-02
+#: last_checked: 2019-04-01 (Sackgassenschild steht noch)
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,8260
 # 
 #: next_check_id: NORD52-2019
@@ -3063,6 +3068,7 @@ Kynaststr. - Paul-und-Paula-Ufer: wegen Bauarbeiten gesperrt	2:inwork 14797,1047
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/baustart-fuer-den-neuen-bahnhof_a192223
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/neue-trasse-fuer-die-strassenbahn_a198208
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/planunterlagen-fuer-strassenbahnbau-liegen-aus_a197470
+#: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/bauarbeiten-am-bahnhof-schoeneweide-gehen-weiter_a208213
 #: last_checked 2019-03-30
 #: check_frequency: 180d
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
@@ -3117,6 +3123,7 @@ Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesp
 #: XXX in der Glinkastr. Einbahnstraße offen für Radfahrer
 #: source_id: 2147343289 (bis Mitte 2021)
 #: source_id: 2147343291 (Einbahnstraße in der Glinkastr.)
+#: osm_watch: way id="43233756" version="15"
 #: priority: #A vvv
 #: last_checked: 2019-03-26 vvv
 #: check_frequency: 60d vvv
@@ -3138,8 +3145,8 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 # 
 #: XXX nach den Bauarbeiten könnte man den Extra-Punkt in der Mitte wieder löschen
 #: also_indoor: traffic
-#: last_checked: 2019-03-19
-#: check_frequency: 14d
+#: last_checked: 2019-04-04
+#: check_frequency: 3d
 Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 10521,11228 10593,11120
 # 
 #: osm_watch: way id="496270260" version="6" brb
@@ -3175,9 +3182,12 @@ Pepitapromenade: Bauarbeiten, teilweise noch gesperrt	2::inwork -2873,17369 -257
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
 # 
 #: next_check_id: ALEXANDRINENSTR-2018
-#: last_checked: 2019-03-19
-#: check_frequency: 14d
-Alexandrinenstr.: für Anhänger zu eng	BNP:0::trailer=no 10791,11232
+#: last_checked: 2019-04-04 vvv
+#: check_frequency: 14d vvv
+# REMOVED --- Alexandrinenstr.: für Anhänger zu eng	BNP:0::trailer=no 10791,11232
+Alexandrinenstr.: Bauarbeiten, gesperrt	2::inwork 10678,11172 10690,11180
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: XXX hat die "Einziehung von Straßenland" hier irgendwelche Konsequenzen?
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/54re.pdf/file?y=2013
@@ -3261,7 +3271,7 @@ Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12677,-15
 #: by: http://www.abendblatt-berlin.de/2019/01/17/ost-west-verbindung-dicht/
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/aktuelles/anwohnerinfo-mauerpark-7.pdf
 #: source_id: 2147342369
-#: last_checked: 2019-03-19 (nördliche Seite) vvv
+#: last_checked: 2019-04-01 (südliche Seite) vvv
 #: next_check: 2019-06-28 vvv
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10319,15090 10354,14987
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
@@ -3419,14 +3429,14 @@ Niederlagstr.: Einbahnstraße	1s:q3:inwork 9972,12184 9959,12281
 # REMOVED (nur der östliche Abschnitt ist geblieben, aber relativ breit und relativ wenig Verkehr) --- #: XXX Bauarbeiten der Berliner Wasserbetriebe bis Dezember 2017 --- #: last_checked: 2017-07-23 --- #: next_check: 2017-12-01 --- #: valid: -20171231 --- Türrschmidtstr.: Bauarbeiten, Einbahnstraße	1s:q3 15541,10892 15649,10922 15756,10966
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3853&mt=0&zoom=16
-#: last_checked: 2019-03-26
+#: last_checked: 2019-04-03
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8969,11814
 # 
 #: XXX danach könnte die Qualität der Wege besser sein
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6146.html
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_13_1401_1520_online.pdf (Widmung als Grünanlage)
 #: source_id: 2147341188
-#: last_checked: 2019-02-14 vvv
+#: last_checked: 2019-04-04 vvv
 #: check_frequency: 45d vvv
 # REMOVED (hier wieder offen) --- #: osm_watch: way id="594591925" version="1" --- #: osm_watch: way id="594591926" version="1" --- Nordhafenpark West: noch Bauarbeiten, gesperrt	2::inwork 7551,14464 7426,14539
 #: osm_watch: way id="593108603" version="2"
@@ -3438,7 +3448,7 @@ Nordhafenpark West: unter der Brücke gesperrt	2::inwork 7636,14414 7612,14449 75
 # 
 #: add_fragezeichen: Ist die Kieler Brücke noch immer gesperrt?
 #: osm_watch: way id="5133258" version="8"
-#: last_checked: 2019-02-14
+#: last_checked: 2019-04-04
 #: check_frequency: 45d
 Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
 # 
@@ -3460,7 +3470,7 @@ Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,1440
 #: XXX Wann sind die Bauarbeiten beendet?
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6291
 #: osm_watch: way id="137084083" version="9"
-#: last_checked: 2019-03-25
+#: last_checked: 2019-04-01
 #: check_frequency: 60d
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,9200 12548,9167
 # 
@@ -3517,12 +3527,12 @@ Clara-von-Simson-Str.: noch gesperrt	2::inwork 7652,14257 7757,14318 7802,14250 
 # REMOVED (nicht mehr) --- #: next_check_id: HEERSTR-2016 vvv --- #: XXX es gab mal einen temp_blockings-Eintrag, der mittlerweile inaktiv ist vvv --- #: by: Stefan Klinkusch: "gesperrt" vvv --- #: source_id: INKO_118000 vvv --- #: osm_watch: way id="25115001" version="8" vvv --- #: last_checked: 2017-11-04 vvv --- # REMOVED (doch benutzbar) --- (Baustraße an der Freybrücke)	2::inwork -3075,11510 -3186,11557 --- # REMOVED (vermutlich nun benutzbar?) --- (Treppe an der Freybrücke)	2::inwork -3181,11496 -3177,11507 -3173,11520 --- #: XXX Ersatzbrücke muss demontiert werden; vermutlich weiterhin keinen Zugang --- Weg nach Tiefwerder: kein Zugang wegen der Ersatzbrücke	2::inwork -3179,11763 -3217,11570 --- #: last_checked ^^^ --- #: osm_watch ^^^ --- #: source_id ^^^ --- #: by ^^^ --- #: XXX ^^^ --- #: next_check_id ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2019-03-11
+#: last_checked: 2019-04-03
 #: check_frequency: 120d
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2019-03-11
+#: last_checked: 2019-04-03
 #: check_frequency: 90d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
@@ -3586,9 +3596,10 @@ Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?
 #: XXX geplante Fertigstellung (als Autostraße) im Dezember 2013
 #: XXX wrote Mail about current status (2013-11-05), no response
 #: by: http://www.berliner-woche.de/wedding/verkehr/senat-lehnt-fussgaengerueberweg-ab-radweg-soll-unter-der-fennbruecke-gebaut-werden-d131062.html (ggfs. auch Unterführung unter der Fennbrücke)
+#: by: http://www.baustellen-doku.info/berlin_neubau_s-bahn_s21/20190313/
 # REMOVED --- osm_watch: way id="183406331" version="3"
 #: osm_watch: way id="220646748" version="5"
-#: last_checked: 2018-12-28
+#: last_checked: 2019-03-13 (baustellen-doku)
 #: check_frequency: 150d
 Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738
 # 
@@ -3640,7 +3651,7 @@ Mühlensteg (Tegeler Hafen): Weg gesperrt	2 1691,20638 1697,20623 1721,20603
 #: by: http://www.berliner-woche.de/mitte/bauen/erdlawine-rollt-ueber-die-oranienburger-ab-juli-wird-auf-dem-tacheles-areal-die-elf-meter-tiefe-baugrube-ausgehoben-d119088.html (bis 2020)
 #: by: http://www.berliner-woche.de/mitte/bauen/tacheles-areal-wird-ausgebaggert-d160052.html
 #: osm_watch: way id="33036326" version="6"
-#: last_checked: 2019-03-23
+#: last_checked: 2019-04-03
 #: check_frequency: 360d
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 # 

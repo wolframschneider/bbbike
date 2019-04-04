@@ -24,21 +24,21 @@
 # REMOVED --- #: last_checked: 2017-12-09 --- #: check_frequency: 14d --- Haasestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 14328,11320 14286,11186
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-03-24
+#: last_checked: 2019-04-02
 Bödikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 # 
 #: next_check_id: PLANSTRASSEC-2019
-#: last_checked: 2019-03-21
-#: check_frequency: 14d
+#: last_checked: 2019-04-03
+#: check_frequency: 30d
 (Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q4::inwork 12926,11224 12848,11093
 # 
 #: next_check_id: GUBENER-2019
 #: priority: #A
-#: last_checked: 2019-03-23
+#: last_checked: 2019-04-04
 #: check_frequency: 30d
 Gubener Str.: Fahrbahn für ein paar Meter gesperrt, Ausweichen auf Gehweg, Bordsteine	q3::inwork 13326,12056 13243,12222
 # 
-#: last_checked: 2019-03-24
+#: last_checked: 2019-03-31
 #: check_frequency: 60d
 Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261 14357,11148
 # 
@@ -46,12 +46,12 @@ Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261
 # REMOVED (-> qualitaet_s-orig; für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342929 --- #: priority: #B --- #: next_check: 2018-08-31 --- #: valid: -20180831 --- Helmerdingstr.: Bauarbeiten, Richtung Revaler Str. gesperrt	q4::inwork; 14468,11203 14442,11101
 # REMOVED (-> für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342938 --- #: priority: #B --- #: next_check: 2018-08-10 --- #: valid: -20180810 --- Scharnweberstr.: Bauarbeiten zwischen Colbestr. und Kinzigstr., Fahrbahn Richtung Gürtelstr. gesperrt	q4::inwork; 14468,11992 14589,11975
 # 
-#: last_checked: 2019-03-29
+#: last_checked: 2019-04-02
 Lange Str.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 12413,11901 12238,11931
 # 
 #: XXX bis wann gehen die Bauarbeiten?
 #: XXX ggfs. alten handicap_s-orig-Eintrag wieder aktivieren
-#: last_checked: 2019-03-29
+#: last_checked: 2019-04-02
 #: check_frequency: 90d
 Hermann-Stöhr-Platz: Engstelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 # 
@@ -71,7 +71,7 @@ Rigaer Str.: Baustelle, Fußgänger	q3::inwork 14538,12371 14748,12314
 #: source_id: LMS-BR_r_LMS-BR_125325_LMS-BR_72
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2019-03-19
+#: last_checked: 2019-04-01
 #: check_frequency: 21d
 Auerstr.: zwischen Richard-Sorge-Str. und Löwestr. Baustelle, Einbahnstraßenregelung	q2::inwork; 13273,12902 13202,12790
 # 
@@ -215,7 +215,7 @@ Littenstr.: Fahrbahn an der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q
 #: by: http://www.dafmap.de/d/berlin.html?id=3204&mt=0&zoom=16
 #: osm_watch: way id="507023458" version="5"
 #: also_indoor: traffic
-#: last_checked: 2019-02-21 (osm)
+#: last_checked: 2019-04-01
 #: check_frequency: 45d
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 # 
@@ -228,15 +228,13 @@ Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 96
 #: by: http://www.dafmap.de/d/berlin.html?center=52.508653+13.397214&zoom=17# (Geplanter Projektabschluss: 2019-03-31)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_52_7191_7270_online.pdf (Grundstücksnummerierungen)
 #: also_indoor: traffic (HG) vvv
-#: last_checked: 2019-03-04 vvv
-#: check_frequency: 30d vvv
 #: osm_watch: way id="327756248" version="5"
+#: last_checked: 2019-03-04
 Jerusalemer Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 9936,11469
 #: osm_watch: way id="542983664" version="2"
+#: last_checked: 2019-04-03
 Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 # REMOVED (wieder frei) --- Zimmerstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 10072,11384
-#: check_frequency ^^^
-#: last_checked ^^^
 #: also_indoor ^^^
 # 
 # REMOVED --- #: last_checked: 2017-03-14 vvv --- Krausenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9990,11571 9925,11565 --- Krausenstr.: Bauarbeiten, Fahrbahn gesperrt	q2-::inwork 9925,11565 9737,11546 --- #: last_checked ^^^
@@ -247,9 +245,10 @@ Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_52_7191_7270_online.pdf (Grundstücksnummerierungen)
 #: XXX evtl. muss man nach Ende der Einschränkungen den comments_misc-orig-Eintrag wieder aktivieren
 #: osm_watch: way id="17370332" version="14"
-#: last_checked: 2019-03-29
+#: last_checked: 2019-04-04
 #: check_frequency: 7d
-Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q4::inwork 10791,11232 10826,11251
+# REMOVED --- Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q4::inwork 10791,11232 10826,11251
+(provisorischer Zugang zur neuen Alexandrinenstr.): Trampelpfad, Bordsteine	q4::inwork 10696,11171 10690,11180
 # 
 # REMOVED (weitgehend offen) --- #: last_checked: 2019-03-19 --- #: check_frequency: 14d --- Stallschreiberstr.: Bauarbeiten an der Einmündung Alexandrinenstr., Fahrbahn gesperrt, Ausweichen über Gehweg	q3::inwork 10678,11172 10824,11010
 # REMOVED --- #: last_checked: 2016-09-30 --- Schützenstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10116,11485 9949,11470 --- 
@@ -338,7 +337,7 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 # 
 #: next_check_id: ZEUGHAUS-2014
 #: XXX eigentlich nur UdL, kann aber so nicht dargestellt werden
-#: last_checked: 2019-03-29
+#: last_checked: 2019-04-01
 #: check_frequency: 60d
 Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364 9934,12420
 # 
@@ -356,7 +355,7 @@ Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364
 #: next_check_id: KARLMARXALLEE-2018
 #: source_id: 2147342756
 #: also_indoor: traffic
-#: last_checked: 2019-03-23
+#: last_checked: 2019-04-03
 #: check_frequency: 60d
 Schillingstr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q3-::inwork 11635,12745 11596,12668
 # 
@@ -407,7 +406,7 @@ Wandlitzstr.: Fahrbahn an der Treskowallee gesperrt, Ausweichen über Gehweg	q3::
 #: XXX Start 2018-05-16, Dauer vermutlich 12 Monate, bei VMZ bis Juli 2019, laut fritz bis 31.08.2019
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=44021
 #: also_indoor: traffic
-#: last_checked: 2019-03-25
+#: last_checked: 2019-04-02
 #: valid: -20190831
 #: priority: #A
 Friesenstr.: Fahrbahn Richtung Zossener Str. gesperrt	q4::inwork; 9801,8683 9801,8889 9799,8962 9797,9063 9795,9162 9793,9241
@@ -427,7 +426,7 @@ Friesenstr.: Fahrbahn Richtung Zossener Str. gesperrt	q4::inwork; 9801,8683 9801
 #: XXX laut vmz bis Anfang 2019, laut fritz zunächst bis 31.12.2018, mittlerweile "bis auf weiteres"
 #: http://www.dafmap.de/d/berlin.html?id=3451&mt=0&zoom=16
 #: also_indoor: traffic
-#: last_checked: 2019-03-26
+#: last_checked: 2019-04-02
 #: next_check: 2019-06-30
 #: valid: -20190630
 Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q3+::inwork; 9022,10857 8941,10663 8926,10626
@@ -529,10 +528,10 @@ provisorische und enge Radwegführung, Fußgänger, Seitenwechsel notwendig	q3::inw
 #: last_checked ^^^
 #: next_check_id ^^^
 # 
-#: XXX Wann sind die Bauarbeiten beendet? (laut googlemaps: Ende November 2018, laut Schild der Wasserbetriebe: bis November 2018)
+#: XXX Wann sind die Bauarbeiten beendet? (laut googlemaps: Ende November 2018, laut Schild der Wasserbetriebe: bis Juni 2019)
 #: also_indoor: traffic (G)
-#: last_checked: 2019-03-25
-#: check_frequency: 14d
+#: last_checked: 2019-04-02
+#: check_frequency: 30d
 Weichselstr.: Bauarbeiten am Weichselplatz, Fahrbahn gesperrt	q4+::inwork 12755,9188 12681,9083
 # 
 # REMOVED --- #: next_check_id: DIESEL-2015 --- #: last_checked: 2018-05-21 --- Dieselstr., Umfahrung: Fußgänger, Bordstein, schmal	q2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14484,8044
@@ -904,7 +903,7 @@ Marheinekeplatz: Fußgänger, Brunnen	q3 9892,9286 9880,9233
 #: note: zumindest auf der westlichen Seite existiert kein explizites Verbotsschild für Radfahrer
 (Uferweg am Urbanhafen): Fußgänger	q1 11160,9932 11142,9939 10914,9925 10602,10006 10522,10056 10500,10081
 Bahnhofsgebäude	q4 7854,7572 7934,7621
-Bahnhofsgebäude	q4 7774,7724 7838,7848
+Bahnhofsgebäude	q4 7774,7724 7804,7783 7838,7848
 Fußgänger	q3 7934,7621 7919,7679
 Treppe oder Rampe	q4 7934,7621 7949,7607
 #: note: Radfahren erlaubt vvv
@@ -1090,9 +1089,9 @@ Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8842,8561 8759,8458 8720,8
 (Teltowkanal, Nordufer): Fußgänger (eigentlich für Radfahrer verboten)	q2 8750,5173 9118,5328 9145,5323 9188,5333
 #: XXX_prog BS an der Kynaststr., ansonsten q1
 (Kynaststr. - Uferwanderweg): Fußgänger, Bordstein	q2 14843,10621 14911,10587
-(Kynaststr. - Paul-und-Paula-Ufer): Fußgänger	q1 14797,10476 14820,10473 14868,10467
+(Kynaststr. - Paul-und-Paula-Ufer): Fußgänger	q1 14797,10476 14820,10473 14861,10467
 #: note: Fußweg für Radfahrer frei
-Am Rummelsburger See: Fußgänger, kurvenreich	q1 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411 14864,10451 14868,10467 14884,10508 14911,10587 14937,10598 14990,10581 15056,10625 15101,10640 15145,10636 15200,10600 15249,10564
+Am Rummelsburger See: Fußgänger, kurvenreich	q1 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411 14864,10451 14861,10467 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15145,10636 15200,10600 15249,10564
 Am Rummelsburger See: teilweise enge Kurven, Fußgänger an schönen Tagen	q2 15453,10419 15457,10342 15496,10277 15518,10234 15604,10204 15606,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15914,9858 15931,9846
 Am Rummelsburger See: Fußgänger an schönen Tagen	q1 15931,9846 16002,9787 16049,9749 16119,9689 16125,9678 16120,9653
 #: note: hier unübersichtlich und relativ eng, besonders vor der Kletterhalle
@@ -2292,9 +2291,18 @@ Koseler Weg: einige Fußgänger, Bordstein	q2 9850,6135 9679,6160
 # REMOVED (provisorische Absenkung existiert) --- #: XXX_prog BS (ansonsten entfernen) --- #: XXX wird der Bordstein noch abgesenkt? --- #: last_checked: 2014-12-12 --- #: next_check: 2015-03-01 --- Gleisdreieckpark, Einfahrt Pohlstr.: Bordstein	q2 8159,10430 8199,10424
 # 
 #: XXX_prog BS zu beiden Seiten (aber flach!) (ansonsten entfernen)
-Gleisdreieck: flache Bordsteine	q1 8296,10438 8237,10418
+Gleisdreieckpark: flache Bordsteine, Spielplatz	q1 8296,10438 8237,10418
 #: XXX_prog BS zu beiden Seiten (aber flach!) (ansonsten entfernen)
-Gleisdreieck: flache Bordsteine	q1 8145,10090 8211,10083
+Gleisdreieckpark: flache Bordsteine	q1 8145,10090 8211,10083
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8328,10831 8318,10738 8270,10613 8264,10460 8257,10440 8237,10418 8192,10354 8180,10282 8145,10090
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8358,10782 8350,10774 8341,10721 8332,10637 8328,10585 8296,10438 8278,10384 8265,10348 8261,10337 8252,10308 8256,10264 8264,10192 8211,10083
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8350,10774 8338,10765 8318,10738
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8328,10831 8338,10765 8341,10721
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8199,10634 8236,10623 8270,10613 8328,10585
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8384,10507 8377,10502 8361,10491 8328,10485 8322,10451 8296,10438
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8159,10430 8199,10424 8237,10418 8278,10384 8309,10368 8315,10347 8333,10167 8360,10133 8338,9971
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8058,10306 8180,10282 8256,10264
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8042,10084 8145,10090
 (Hansastr. - Gartenstr.): Fußgänger	q1 15194,16186 15102,16212 14810,16282 14665,16294
 (Hansastr. - Gartenstr.): Fußgänger	q1 14810,16282 14721,16360
 (Dohnagestell - Tangastr.): Fußgänger	q2 5802,15399 5889,15457 5961,15562
@@ -3055,6 +3063,7 @@ Henriettenplatz: Fußgänger	q2 2770,9945 2768,9980 2784,9992 2770,10024
 (Ottomar-Geschke-Str., Gehweg): Fußgänger	q3 21073,4165 21148,4220
 (Zinsgutstr. - Ottomar-Geschke-Str.): einige Fußgänger	q1 20940,3805 20917,3827 20958,3875 21016,3923 21087,3995 21073,4165
 (S-Bhf. Adlershof, Ernst-Augustin-Str. - Adlergestell): Fußgänger	q3 19949,3249 19938,3294 20002,3349
+Hildegard-Knef-Platz: Busverkehr	q1 7774,7724 7759,7812 7718,7838
 # 
 ######################### User Contributions #################################
 # 

@@ -844,6 +844,7 @@ Heinrichplatz	1 11754,10516 11708,10497
 Heinrichplatz	1 11734,10563 11754,10516
 (Landsberger Allee - Frank-Schweitzer-Str.)	1 19205,14980 19244,14980
 (Frank-Schweitzer-Str. - Landsberger Allee)	1 19244,14980 19214,14966
+Bhf. Südkreuz: Eingang gesperrt	2 7838,7848 7804,7783
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1236,9 +1237,9 @@ Straßenbahnhaltestelle	3nocross::ignrte 9225,13389 9293,13366 9415,13315
 Oranienburger Str. -> Linienstr.: Straßenbahnhaltestelle	3::igndisp 9225,13389 9293,13366 9312,13388
 Linienstr. -> Oranienburger Str.: Straßenbahnhaltestelle	3::igndisp 9312,13388 9293,13366 9415,13315
 Brauhausstr. -> Prenzlauer Promenade: Straßenbahntrasse	3 12211,16688 12017,16734 12045,16574
-Mittelstreifen	3nocross::ignrte 16720,6845 16677,6892 16646,6925 16563,7012
+Mittelstreifen	3nocross::ignrte 16720,6845 16677,6892 16563,7012
 Köpenicker Landstr. -> Güldenhofer Ufer: Mittelstreifen	3::igndisp 16720,6845 16677,6892 16630,6800
-Güldenhofer Ufer -> Köpenicker Landstr.: Mittelstreifen	3::igndisp 16630,6800 16677,6892 16646,6925
+Güldenhofer Ufer -> Köpenicker Landstr.: Mittelstreifen	3::igndisp 16630,6800 16677,6892 16563,7012
 Mittelstreifen	3nocross::ignrte 17293,6230 17216,6308 16909,6628 16838,6708
 Rixdorfer Str. -> Schnellerstr.: Mittelstreifen	3::igndisp 17160,6239 17216,6308 16909,6628
 Schnellerstr. -> Rixdorfer Str.: Mittelstreifen	3::igndisp 17293,6230 17216,6308 17160,6239
@@ -1749,9 +1750,9 @@ Frankfurter Allee -> Magdalenenstr.: Mittelstreifen mit Geländer	3::igndisp 1606
 Mittelstreifen mit Geländer	3nocross::ignrte 15670,12022 15717,12015 15863,11992
 Frankfurter Allee -> Frankfurter Allee [Wohngebiet]: Mittelstreifen mit Geländer	3::igndisp 15863,11992 15717,12015 15717,12010
 Frankfurter Allee [Wohngebiet] -> Frankfurter Allee: Mittelstreifen mit Geländer	3::igndisp 15717,12010 15717,12015 15670,12022
-unbequem passierbarer Mittelstreifen	3nocross::ignrte 9701,11656 9898,11679 9981,11689
-Leipziger Str. -> Jerusalemer Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9701,11656 9898,11679 9896,11703
-Jerusalemer Str. -> Leipziger Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9896,11703 9898,11679 9981,11689
+unbequem passierbarer Mittelstreifen	3nocross::ignrte 9701,11656 9905,11680 9991,11690
+Leipziger Str. -> Jerusalemer Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9701,11656 9905,11680 9902,11704
+Jerusalemer Str. -> Leipziger Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9902,11704 9905,11680 9991,11690
 Mittelstreifen mit Straßenbahn	3nocross::ignrte 12177,14335 12188,14350 12228,14404 12266,14460 12317,14535
 Greifswalder Str. -> Pasteurstr.: Mittelstreifen mit Straßenbahn	3::igndisp 12228,14404 12188,14350 12335,14246
 Pasteurstr. -> Greifswalder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12335,14246 12188,14350 12177,14335
@@ -2920,7 +2921,7 @@ Drängelgitter	BNP:5:34:trailer=10 14453,9929
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2:39:trailer=4 14558,10082
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2:41:trailer=4 14597,10129
 Schranke (Privatstr.)	BNP:5:-180 25039,5304
-Schranke	BNP:2:85:trailer=4 9907,11752
+Schranke	BNP:2:86:trailer=4 9910,11755
 Schranke	BNP:3:40:trailer=10 10114,11789
 Schranke	BNP:3:89:trailer=6 9698,10348
 Drängelgitter	BNP:3:-12:trailer=6 12682,7514
@@ -3027,7 +3028,7 @@ Heidelberger Str.: Baustelle, Einbahnstraße	1s:inwork 13491,9201 13421,9260 1335
 Kaiserin-Augusta-Allee - Neues Ufer: Bauarbeiten, Weg ist komplett gesperrt	2::inwork 4561,13244 4547,13139 4576,13115
 Pepitapromenade: Bauarbeiten, teilweise noch gesperrt	2::inwork -2873,17369 -2573,17314
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
-Alexandrinenstr.: für Anhänger zu eng	BNP:0:-122:trailer=no 10791,11232
+Alexandrinenstr.: Bauarbeiten, gesperrt	2::inwork 10678,11172 10690,11180
 Fanny-Zobel-Str.: wegen Bauarbeiten gesperrt, vielleicht sogar dauerhaft eingezogen	2::inwork 13975,10187 14049,10164
 Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,11133
 Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,898 9024,906 9058,932
@@ -3622,8 +3623,8 @@ Bundesallee, linker Gehweg zur Straße Am Volkspark	1::igndisp 5419,8415 5399,834
 Urbanstr.	1::igndisp 11861,9183 11888,9189
 Badstr., linker Gehweg	1::igndisp 8486,16425 8486,16412 8534,16355
 Tempelhofer Ufer, linker Gehweg	1::igndisp 8661,10377 8717,10322 8804,10303
-Leipziger Str., linker Gehweg	1::igndisp 9985,11711 9896,11703
-zur Ampel Jerusalemer Str.	1::igndisp 9982,11681 9987,11690 9985,11711
+Leipziger Str., linker Gehweg	1::igndisp 9997,11713 9902,11704
+zur Ampel Jerusalemer Str.	1::igndisp 9992,11682 10000,11691 9997,11713
 Columbiadamm, linker Gehweg	1::igndisp 10913,8463 10799,8504 10796,8498
 Hohenstaufenstr., linker Gehweg bis zur Fußgängerampel	1::igndisp 6237,9772 6209,9774
 zur Münchener Str. auf dem linken Gehweg	1::igndisp 6209,9771 6237,9772

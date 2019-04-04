@@ -10,7 +10,7 @@
 # REMOVED (Bauarbeiten beendet) --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5898 --- #: note: oder man fährt auf dem mit zahlreichen Engstellen zugestellten Radweg, muss dann aber ggfs. warten --- #: last_checked: 2014-03-21 --- #: valid: -20140523 --- Bergmannstr.: während der Bauarbeiten zwischen Heim- und Friesenstr. Umleitung über gepflasterte Fahrbahn	Q2 9973,9232 9880,9233 9793,9241
 # 
 #: XXX und eventuell auch schauen, ob das Tor zum Mergenthalerring wieder ein Schloss hat
-#: last_checked: 2019-03-02 vvv
+#: last_checked: 2019-04-01 vvv
 Dieselstr., Umfahrung: Asphalt	Q0 14419,8112 14429,8074
 #: XXX_osm laut osm Asphalt, hier aber nicht!
 Dieselstr., Umfahrung: unbefestigt	Q2 14429,8074 14484,8044
@@ -141,7 +141,7 @@ Priesterweg: mäßiges bis schlechtes Kopfsteinpflaster	Q2- 7227,6080 7223,5890
 Priesterweg: Asphalt	Q0 7223,5890 7171,5831
 Hans-Baluschek-Park, Zugang: Verbundsteinpflaster	Q0- 7370,6451 7222,6458
 Hans-Baluschek-Park: Beton	Q0- 7252,6080 7278,6101 7305,6183
-Hans-Baluschek-Park: Asphalt	Q0 7305,6183 7393,6452 7605,7109 7707,7415 7733,7483 7747,7521 7757,7563 7787,7692
+Hans-Baluschek-Park: Asphalt	Q0 7305,6183 7393,6452 7605,7109 7707,7415 7733,7483 7747,7521 7757,7563 7789,7692
 Großgörschenstr.: mäßiges Kopfsteinpflaster	Q2 8186,9380 8086,9418 8035,9437 7960,9466
 Großgörschenstr.: Kopfsteinpflaster, OK	Q1 7771,9479 7882,9490
 Waldemarstr.: Kopfsteinpflaster	Q2+ 11552,10863 11328,10957
@@ -492,7 +492,7 @@ Carstennstr.: verfugtes Kopfsteinpflaster	Q2+ 3044,1890 2992,2018 2951,2112 2896
 #: osm_watch: way id="148329608" version="15" vvv
 #: last_checked: 2018-07-01
 # REMOVED --- #: check_frequency: 30d
-#: next_check: 2019-06-30
+#: next_check: 2019-05-15
 Carstennstr.: Kopfsteinpflaster, teilweise mit Asphaltflicken	Q2 2781,2493 2740,2588 2625,2850
 #: osm_watch ^^^
 #: by ^^^
@@ -682,7 +682,7 @@ Helmerdingstr.: Asphalt	Q0 14442,11101 14468,11203
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.777623.php (Instandsetzung 2019)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_10_1501_1600_online.pdf (Straßenlandwidmung)
 #: XXX wird die Qualität hier verbessert?
-#: last_checked: 2019-03-24
+#: last_checked: 2019-03-31
 Haasestr.: Kopfsteinpflaster	Q2 14328,11320 14286,11186
 # 
 Döringstr.: Verbundsteinpflaster	Q1 14400,11261 14357,11148
@@ -871,7 +871,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist.")
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2019-03-26
+#: last_checked: 2019-04-03
 #: next_check: 2020-01-01
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1300,6 +1300,7 @@ Bahnhofvorplatz S-Bhf. Priesterweg: Kopfsteinpflaster	Q2 7227,6080 7252,6080
 Liepnitzstr.: Asphalt	Q0 17803,8079 17856,8162 17920,8256 17961,8312 17988,8350 18007,8377 18072,8470 18151,8589 18272,8764
 # 
 #: next_check_id: HEGEMEISTERWEG-2018
+#: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.799903.php (Erwähnung)
 #: XXX Straße wird asphaltiert, laut Bauschild bis November 2018 fertig
 #: osm_watch: way id="598516975" version="5"
 #: add_fragezeichen: Hat die Fahrbahn die letzte Asphalt-Deckschicht bekommen?
@@ -1838,15 +1839,15 @@ Kaiserin-Augusta-Str.: Kopfsteinpflaster	Q2 8990,5950 9192,5921
 #: confirmed_by: Stefan (sts):
 Selkestr.: Kopfsteinpflaster	Q2 12685,7497 12703,7370
 (Kynaststr. - Uferwanderweg): Parkweg	Q1 14843,10621 14911,10587
-(Kynaststr. - Paul-und-Paula-Ufer): Parkweg	Q1 14797,10476 14820,10473 14868,10467
+(Kynaststr. - Paul-und-Paula-Ufer): Parkweg	Q1 14797,10476 14820,10473 14861,10467
 #: next_check_id: KYNASTSTRASSE-2018
 #: last_checked: 2019-03-29
 (Kynaststr. - Paul-und-Paula-Ufer): teilweise unbefestigt	Q2 14815,10516 14820,10473
 Speicherkai: Kleinsteinpflaster	Q1 15311,10127 15306,10142 15253,10171
 Speicherkai: Betonpflaster	Q0- 15253,10171 15199,10211 15134,10243 15101,10263
 Flaschenkai: Parkweg	Q1 15101,10263 15044,10297 14977,10348 14892,10411
-Flaschenkai: Beton	Q0 14892,10411 14864,10451 14868,10467 14884,10508
-Paul-und-Paula-Ufer: Asphalt	Q0 14884,10508 14911,10587 14937,10598 14990,10581 15056,10625 15101,10640 15145,10636 15200,10600
+Flaschenkai: Beton	Q0 14892,10411 14864,10451 14861,10467 14884,10497
+Paul-und-Paula-Ufer: Asphalt	Q0 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15145,10636 15200,10600
 Uferweg: Parkweg	Q1 15311,10127 15289,10097 15289,10092 15283,10087 15260,10048 15295,10022 15296,10000 15347,9922
 Uferweg: Beton	Q0 15347,9922 15465,9860 15561,9809 15626,9710
 (Dora-Benjamin-Park - Spreeufer): Parkweg	Q1 14702,10020 14690,9993
@@ -2185,9 +2186,8 @@ Erich-Weinert-Str.: Asphaltstreifen in der Mitte	Q0 10997,16280 11295,16199
 #: priority: #B vvv
 # REMOVED --- #: XXX Einbahnstraßenregelung während der Bauarbeiten; hier beträgt die Bauzeit 10 Wochen --- #: XXX wegen der Parkregelung noch immer Q2, später auf Q0 ändern --- #: osm_watch: way id="145122219" version="7" --- #: last_checked: 2018-12-11 --- #: next_check: 2018-12-31
 #: osm_watch: way id="642829941" version="3"
-#: last_checked: 2019-03-12
-# REMOVED --- #: check_frequency: 90d
-#: next_check: 2019-04-01
+#: last_checked: 2019-04-01
+#: check_frequency: 7d
 Erich-Weinert-Str.: Kopfsteinpflaster	Q2 11295,16199 11404,16140 11542,16070
 #: priority ^^^
 # 
@@ -2245,9 +2245,10 @@ Langhoffstr.: Asphalt	Q0 19818,14064 19817,14371 19817,14459
 (Am Städtischen Zentralfriedhof): asphaltiert	Q0 17785,12257 17749,12239 17533,12222
 #: XXX wird hier auch asphaltiert werden?
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/buergerbeteiligung/fahrrat-praesentation_29-10-2015.pdf
+#: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.799903.php ("Vorplatz Zentralfriedhof, Asphaltierung Fahrradspur", "Planung")
 #: osm_watch: way id="70668204" version="9"
 #: last_checked: 2019-03-09
-#: check_frequency: 100d
+#: check_frequency: 120d
 (Am Städtischen Zentralfriedhof, Platz vor dem Eingang): Kopfsteinpflaster	Q2 17533,12222 17480,12237 17466,12241
 Gudrunstr.: Asphalt	Q0 17466,12241 17300,12173 17195,12125 17139,12100 17088,12069 16975,12000 16865,11931
 # REMOVED (neu asphaltiert) --- #: XXX eventuell wurde hier neu asphaltiert, prüfen! --- Marzahner Chaussee (bis zur Kurve): mäßiger Asphalt	Q1; 19173,13478 19194,13272
@@ -2906,9 +2907,9 @@ Trabener Str.: Asphalt	Q0 1981,9865 2128,9999
 #: next_check_id: GUBENER-2019
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.777623.php (Instandsetzung 2019)
 #: XXX wird nach den Bauarbeiten der Wasserbetriebe (laut Schild bis Mai 2019) hier die Fahrbahn verbessert? vvv
-#: last_checked: 2019-03-23 vvv
+#: last_checked: 2019-04-04 vvv
 #: check_frequency: 30d vvv
-Gubener Str.: Streifen neu asphaltiert	Q1+; 13198,12311 13243,12222
+Gubener Str.: Streifen teilweise neu asphaltiert	Q1; 13198,12311 13243,12222
 Gubener Str.: Asphalt mit Schäden, Schlaglöcher	Q1-; 13243,12222 13198,12311
 Gubener Str.: Asphalt mit Schäden, Schlaglöcher	Q1- 13243,12222 13326,12056
 #: check_frequency ^^^
@@ -3099,7 +3100,7 @@ Güldenhofer Ufer: Asphalt	Q0 16630,6800 16588,6724
 Deulstr.: Kopfsteinpflaster	Q2 17860,6644 17763,6960
 Waldowplatz: kleinteiliges Kopfsteinpflaster, teilweise betonierte Fahrbahn	Q2+ 19344,6119 19345,6150 19333,6165 19303,6170 19282,6152 19283,6123 19290,6114 19325,6105 19344,6119
 Parkstr. (Oberschöneweide): Asphalt	Q0 19681,5924 19759,6049
-Wuhlheide: Asphalt	Q0 19958,5950 19961,5989 19944,6006 20064,6290 20086,6307 20106,6357
+Wuhlheide: Asphalt	Q0 19957,5941 19961,5989 19944,6006 20064,6290 20086,6307 20106,6357
 (An der Wuhlheide - Freilichtbühne Wuhlheide): Asphalt	Q0 20064,6290 20057,6321 20081,6368
 An der Wuhle: Asphalt	Q0 21310,8669 21480,8578
 An der Wuhle: Asphalt mit leichten Schäden	Q0- 21310,8669 21341,8764
@@ -7408,7 +7409,7 @@ Bebelplatz: gepflastert	Q1 9680,12232 9664,12387
 (Park am Gleisdreieck, Eingang Kurfürstenstr.): Beton	Q0 8058,10306 8180,10282 8256,10264
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): wassergebundene Decke	Q1 8264,10192 8276,10079
 #: next_check_id: HELLWEG-2014 vvv
-#: last_checked: 2018-12-26 vvv
+#: last_checked: 2019-04-02 vvv
 #: check_frequency: 100d vvv
 #: XXX wird hier noch eine wassergebundene Decke erstellt?
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): unbefestigt	Q2 8276,10079 8289,9988
@@ -11068,7 +11069,7 @@ Zinsgutstr. [Wohngebiet]: Beton	Q1+ 20919,3781 20940,3805 21014,3886
 (Zinsgutstr. - Ottomar-Geschke-Str.): Beton	Q1+ 20917,3827 20958,3875
 (Zinsgutstr. - Ottomar-Geschke-Str.): Verbundsteinpflaster	Q1 20958,3875 21016,3923
 (Zinsgutstr. - Ottomar-Geschke-Str.): unbefestigter Weg	Q2 21016,3923 21087,3995 21073,4165
-(Kablower Weg - Rabindranath-Tagore-Str.): Asphalt, Wurzelschäden	Q1- 23225,192 23296,295 23425,471 23462,531 23516,583 23540,591
+(Kablower Weg - Rabindranath-Tagore-Str.): Asphalt, Wurzelschäden	Q1- 23225,192 23462,531 23516,583 23540,591
 (Horst-Kunze-Weg - Waldfriedhof Grünau): Asphalt	Q0 23469,640 23418,566
 Verlängerte Werderstr.: Betonpflaster	Q0- 20166,1864 20250,1853 20282,1865 20346,1888
 Verlängerte Werderstr.: Betonpflaster	Q0- 20282,1865 20333,1972
@@ -26962,7 +26963,7 @@ Kirchsteig (Bohnsdorf): rauer Asphalt	Q0- 21135,-274 21322,-176 21364,-168 21409
 #: confirmed_by: srt
 Rosenrotweg: sehr guter Asphalt	Q0 21515,67 21487,173
 #: confirmed_by: srt
-Johannes-Tobei-Str.: sehr guter Asphalt	Q0 21250,118 21354,142 21382,149 21421,158 21487,173 21537,176 21582,185 21618,193 21645,200 21712,215
+Johannes-Tobei-Str.: sehr guter Asphalt	Q0 21250,118 21354,142 21382,149 21421,158 21487,173 21520,170 21582,185 21618,193 21645,200 21712,215
 #: by: ^^^
 # 
 #: by: Agnes:

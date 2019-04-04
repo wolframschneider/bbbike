@@ -23,7 +23,7 @@ Littenstr.: Fahrbahn an der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 Jerusalemer Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 9936,11469
 Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
-Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q4::inwork 10791,11232 10826,11251
+(provisorischer Zugang zur neuen Alexandrinenstr.): Trampelpfad, Bordsteine	q4::inwork 10696,11171 10690,11180
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10010,12275 10058,12290
 Prinzengasse: einige Fußgänger, parkende Autos	q3::inwork 9955,12300 10006,12306
@@ -190,7 +190,7 @@ Schwedter Str. (Mauerpark): Park, Fußgänger	q2 10354,14987 10319,15090 10240,153
 Marheinekeplatz: Fußgänger, Brunnen	q3 9892,9286 9880,9233
 (Uferweg am Urbanhafen): Fußgänger	q1 11160,9932 11142,9939 10914,9925 10602,10006 10522,10056 10500,10081
 Bahnhofsgebäude	q4 7854,7572 7934,7621
-Bahnhofsgebäude	q4 7774,7724 7838,7848
+Bahnhofsgebäude	q4 7774,7724 7804,7783 7838,7848
 Fußgänger	q3 7934,7621 7919,7679
 Treppe oder Rampe	q4 7934,7621 7949,7607
 Marx-Engels-Forum: einige Fußgänger, Bordstein	q3 10300,12587 10363,12535
@@ -329,8 +329,8 @@ Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8842,8561 8759,8458 8720,8
 (Fritz-Bräuning-Promenade): Bordstein, Fußgänger	q3 8731,8020 8623,8018
 (Teltowkanal, Nordufer): Fußgänger (eigentlich für Radfahrer verboten)	q2 8750,5173 9118,5328 9145,5323 9188,5333
 (Kynaststr. - Uferwanderweg): Fußgänger, Bordstein	q2 14843,10621 14911,10587
-(Kynaststr. - Paul-und-Paula-Ufer): Fußgänger	q1 14797,10476 14820,10473 14868,10467
-Am Rummelsburger See: Fußgänger, kurvenreich	q1 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411 14864,10451 14868,10467 14884,10508 14911,10587 14937,10598 14990,10581 15056,10625 15101,10640 15145,10636 15200,10600 15249,10564
+(Kynaststr. - Paul-und-Paula-Ufer): Fußgänger	q1 14797,10476 14820,10473 14861,10467
+Am Rummelsburger See: Fußgänger, kurvenreich	q1 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411 14864,10451 14861,10467 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15145,10636 15200,10600 15249,10564
 Am Rummelsburger See: teilweise enge Kurven, Fußgänger an schönen Tagen	q2 15453,10419 15457,10342 15496,10277 15518,10234 15604,10204 15606,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15914,9858 15931,9846
 Am Rummelsburger See: Fußgänger an schönen Tagen	q1 15931,9846 16002,9787 16049,9749 16119,9689 16125,9678 16120,9653
 Am Rummelsburger See: Fußgänger an schönen Tagen	q2 16120,9653 16182,9591 16268,9670
@@ -1252,8 +1252,17 @@ Dievenowstr.: Bordstein, Gehweg	q2 3202,7121 3193,7059
 Koseler Weg: einige Fußgänger, Bordstein	q2 9850,6135 9679,6160
 (Landsberger Allee - Zechliner Str.): Fußgänger, Bordstein	q2 16590,14386 16544,14593
 (Krautstr./Blumenstr. - Strausberger Platz): Fußgänger, Hausdurchfahrt	q2 12125,12490 12134,12540
-Gleisdreieck: flache Bordsteine	q1 8296,10438 8237,10418
-Gleisdreieck: flache Bordsteine	q1 8145,10090 8211,10083
+Gleisdreieckpark: flache Bordsteine, Spielplatz	q1 8296,10438 8237,10418
+Gleisdreieckpark: flache Bordsteine	q1 8145,10090 8211,10083
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8328,10831 8318,10738 8270,10613 8264,10460 8257,10440 8237,10418 8192,10354 8180,10282 8145,10090
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8358,10782 8350,10774 8341,10721 8332,10637 8328,10585 8296,10438 8278,10384 8265,10348 8261,10337 8252,10308 8256,10264 8264,10192 8211,10083
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8350,10774 8338,10765 8318,10738
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8328,10831 8338,10765 8341,10721
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8199,10634 8236,10623 8270,10613 8328,10585
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8384,10507 8377,10502 8361,10491 8328,10485 8322,10451 8296,10438
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8159,10430 8199,10424 8237,10418 8278,10384 8309,10368 8315,10347 8333,10167 8360,10133 8338,9971
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8058,10306 8180,10282 8256,10264
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8042,10084 8145,10090
 (Hansastr. - Gartenstr.): Fußgänger	q1 15194,16186 15102,16212 14810,16282 14665,16294
 (Hansastr. - Gartenstr.): Fußgänger	q1 14810,16282 14721,16360
 (Dohnagestell - Tangastr.): Fußgänger	q2 5802,15399 5889,15457 5961,15562
@@ -1839,6 +1848,7 @@ Henriettenplatz: Fußgänger	q2 2770,9945 2768,9980 2784,9992 2770,10024
 (Ottomar-Geschke-Str., Gehweg): Fußgänger	q3 21073,4165 21148,4220
 (Zinsgutstr. - Ottomar-Geschke-Str.): einige Fußgänger	q1 20940,3805 20917,3827 20958,3875 21016,3923 21087,3995 21073,4165
 (S-Bhf. Adlershof, Ernst-Augustin-Str. - Adlergestell): Fußgänger	q3 19949,3249 19938,3294 20002,3349
+Hildegard-Knef-Platz: Busverkehr	q1 7774,7724 7759,7812 7718,7838
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schulhof, Radfahren verboten	q4 7242,8586 7288,8635
@@ -2799,8 +2809,8 @@ Badstr., linker Gehweg	q3::igndisp; 8534,16355 8486,16412 8486,16425
 Tempelhofer Ufer, linker Gehweg	q4::igndisp; 8804,10303 8717,10322 8661,10377
 Bebelplatz, diagonal über den Platz	q0 9737,12238 9702,12307 9664,12387
 Bebelplatz, diagonal über den Platz	q0 9680,12232 9702,12307 9713,12392
-Leipziger Str., linker Gehweg	q3::igndisp; 9896,11703 9985,11711
-zur Ampel Jerusalemer Str.	q3::igndisp; 9985,11711 9987,11690 9982,11681
+Leipziger Str., linker Gehweg	q3::igndisp; 9902,11704 9997,11713
+zur Ampel Jerusalemer Str.	q3::igndisp; 9997,11713 10000,11691 9992,11682
 Columbiadamm, linker Gehweg	q3::igndisp; 10796,8498 10799,8504 10913,8463
 Hohenstaufenstr., linker Gehweg bis zur Fußgängerampel	q3::igndisp; 6209,9774 6237,9772
 zur Münchener Str. auf dem linken Gehweg	q3::igndisp; 6237,9772 6209,9771
