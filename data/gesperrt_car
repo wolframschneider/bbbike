@@ -268,8 +268,8 @@ Fritz-Riedel-Str. -> Hausburgstr.: Straßenbahn	3::igndisp 13519,13785 13635,1360
 Hausburgstr. -> Landsberger Allee: Straßenbahn	3::igndisp 13706,13460 13635,13605 13543,13568
 Hausburgstr. -> Fritz-Riedel-Str.: Straßenbahn	3::igndisp 13706,13460 13635,13605 13519,13785
 Straßenbahn	3nocross::ignrte 21398,15671 21475,15705 21584,15753 21709,15808
-Landsberger Allee -> Pöhlbergstr: Straßenbahn	3::igndisp 21584,15753 21475,15705 21491,15671
-Pöhlbergstr -> Landsberger Allee: Straßenbahn	3::igndisp 21491,15671 21475,15705 21398,15671
+Landsberger Allee -> Pöhlbergstr. [zur/von Landsberger Allee]: Straßenbahn	3::igndisp 21584,15753 21475,15705 21491,15671
+Pöhlbergstr. [zur/von Landsberger Allee] -> Landsberger Allee: Straßenbahn	3::igndisp 21491,15671 21475,15705 21398,15671
 Landsberger Allee -> Schönagelstr.: Straßenbahn	3::igndisp 21475,15705 21584,15753 21602,15908
 Schönagelstr. -> Landsberger Allee: Straßenbahn	3::igndisp 21602,15908 21584,15753 21709,15808
 Topsstr.	1 10607,15142 10886,15251
@@ -1882,7 +1882,6 @@ In den Leonorengärten - Calandrellistr.	3 6363,4047 6295,4017 6141,3948
 Kleinmachnower Weg: Absperrung	3 283,-35 354,-13 665,85
 Kleinmachnower Weg: Absperrung	3 665,85 354,-13 283,-35
 Novalisstr. - Torstr.: Abbiegen verboten	3 9275,13720 9353,13521 9391,13535
-Borkumstr.: für Kfz gesperrt	2 11335,17807 11412,17823
 Zeiler Weg	1 11835,18301 11914,18303
 Neue Kärtner Str. (Schwanebeck-West)	1 18601,25062 18549,25106 18531,25161 18510,25252
 Mittelstreifen	3nocross::ignrte 1304,4334 1370,4547 1411,4654

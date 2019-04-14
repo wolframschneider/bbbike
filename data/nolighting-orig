@@ -129,7 +129,7 @@ Heiligenseestr.	NL -410,21496 -249,21420 -130,21396 415,21334 469,21303 598,2125
 Am Eichenhain (Verlängerung)	NL 875,23836 776,23745 711,23612 664,23416 656,23373 697,23257 695,23002 652,22855 667,22755 636,22658
 Verlängerte Schulzendorfer Str.	NL 2150,22464 2015,22435 1834,22421 1583,22376 1499,22378 1411,22365 1266,22401 1094,22504 670,22646 636,22658 587,22646 520,22624 439,22620 289,22618 194,22547
 Rote Chaussee (?)	NL -538,23884 -505,23851 -430,23912 -406,23934 78,24364 132,24390 160,24390 195,24389 237,24374 601,24192 736,24068 793,24070 865,24114 872,24330
-Bernauer Str. (?)	NL 847,18738 560,18494 255,17528 130,17187 -168,16269 -196,16187 -203,16168
+Bernauer Str. (?)	NL 847,18738 560,18494 511,18340 255,17528 160,17270 130,17187 -168,16269 -196,16187 -203,16168
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg)	NL 22347,13858 22389,13824 22426,13735 22445,13720 22457,13713
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg)	NL 21992,13045 22141,13036 22171,12965 22196,12961
 (oberer Wuhlewanderweg - unterer Wuhlewanderweg)	NL 22873,14498 22849,14449 22847,14488 22840,14494
@@ -145,7 +145,7 @@ Wuhletal-Wanderweg	NL 22124,13606 22082,13542 22060,13446 22058,13366 22067,1333
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4350&options=4
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4507 (Antrag auf Umwidmung als Straßenland, aber seit Mai 2013 keine Bewegung bei der Drucksache)
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5749 (neue Drucksache)
-#: last_checked: 2018-10-14
+#: last_checked: 2019-04-05
 #: check_frequency: 150d
 (Wuhlewanderweg, östliches Ufer)	NL 22204,6016 22162,5919 22122,5884 22097,5879 22084,5877
 (Wuhlewanderweg, östliches Ufer)	NL 22084,5877 22070,5876 21846,5856 21744,5804 21618,5699 21602,5685 21507,5620
@@ -285,12 +285,12 @@ Pelzlake	NL 32245,1914 32155,1863 32121,1850 32052,1866 31893,1768 31202,2022 31
 (Weg am Müggelsee)	NL 27375,5177 27470,5093 27852,5017 28286,4943 28376,5079
 (Waldweg)	NL 29089,4759 29103,4765 29705,4987
 (Waldweg parallel zur Straßenbahn)	NL 30410,5450 30505,5474 32053,5870 32192,5915
-Wanderweg Erkner - Hessenwinkel	NL 33531,2772 33419,2765 33406,2738 33086,2790 33013,2821
+Wanderweg Erkner - Hessenwinkel	NL 33531,2772 33419,2765 33406,2738 33086,2790 33002,2826
 (Zu den Müggelheimer Wiesen)	NL 29902,2379 29549,2267 29414,2373
 # 
 #: XXX wird hier eine Beleuchtung entstehen?
 #: by: https://fahrradfreundliches-neukoelln.de/blog/ausschusssitzung-strassen-gruenflaechen-und-ordnung-am-9-januar-2019
-#: last_checked: 2019-03-13
+#: last_checked: 2019-04-13
 #: next_check: 2019-10-01
 (Weg am Friedhof)	NL 11608,7267 11687,7284 12180,7387
 # 
@@ -1383,8 +1383,9 @@ Bohnsdorfer Str.	NL 22004,2149 21997,1869 21996,1683 22082,1327
 (westlicher Wuhlewanderweg)	NL 22110,13639 22140,13649 22263,13758 22347,13858 22404,13984 22407,14111 22416,14148 22462,14172 22639,14384 22679,14450 22670,14520 22620,14673 22528,14769 22455,14815 22462,14846 22439,14873 22378,14904 22323,15119
 Kaulsdorfer Busch	NL 22729,9932 22736,9944 22799,10040 22799,10102 22731,10142
 (Mittelheide - Waldesruher Str.)	NL 24185,6880 24593,7455
-(Mittelheide, Nord-Süd-Weg)	NL 24293,7698 24185,6880 24111,6348 24089,6144
+(Mittelheide, Nord-Süd-Weg)	NL 24293,7698 24275,7550 24185,6880 24111,6348 24089,6144
 (Mittelheide)	NL 23585,6523 23954,6721 24185,6880 24602,7169 24823,7341 24978,7527 25228,7462 25262,7433
+(Mirower Str. - Mittelheide)	NL 24388,7698 24363,7652 24275,7550
 (Am Niederfeld/Kressenweg - Berliner Balkon)	NL 23575,10972 23640,11025 23788,11042 23928,11038 24039,11018 24116,11051 24168,11054
 (Berliner Balkon)	NL 24175,11265 24158,11253 24150,11150 24168,11054 24239,10975 24207,10858 24203,10848
 (Berliner Balkon - Gründerzeitmuseum)	NL 24239,10975 24283,10960 24341,10982 24422,10972 24455,10942 24526,10943 24601,10992
@@ -1776,13 +1777,10 @@ Park am Klötzebecken	NL 5815,22870 5926,22738 6003,22642
 Mergenthalerring	NL 14121,8147 14210,8227 14219,8260 14258,8520 14262,8564
 (Crivitzer Str. - Woldegker Str./Rostocker Str.)	NL 17584,18551 17511,18636
 # 
-#: by: http://www.baustellen-doku.info/berlin_frankfurter_bahn/ausbau-fernbahn-koepenick-erkner/20181107/
-#: XXX Beleuchtung soll noch gemacht werden
-#: last_checked: 2019-02-16
-#: check_frequency: 45d
-entlang der Erpe	NL 24650,6034 24649,6016 24647,5981 24637,5960 24584,5914
+# REMOVED (Laternen stehen schon) --- #: by: http://www.baustellen-doku.info/berlin_frankfurter_bahn/ausbau-fernbahn-koepenick-erkner/20181107/ --- #: XXX Beleuchtung soll noch gemacht werden --- #: last_checked: 2019-02-16 --- #: check_frequency: 45d --- entlang der Erpe	NL 24650,6034 24649,6016 24647,5981 24637,5960 24584,5914
 # 
 Kleistpark	NL 7307,9528 7299,9346
 Weg im Anita-Berber-Park	NL 11677,7351 12158,7449
 (Zinsgutstr. - Ottomar-Geschke-Str.)	NL 21016,3923 21087,3995 21073,4165
 (Kablower Weg - Rabindranath-Tagore-Str.)	NL 23225,192 23462,531 23516,583 23540,591
+Heinrich-Stahl-Weg	NL 2281,6469 2311,6404

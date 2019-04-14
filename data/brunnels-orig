@@ -53,7 +53,7 @@ Baumschulenbrücke	Br 15584,5946 15628,6009
 #: XXX_indoor: kommt im RV-Plan und beim Städte-Verlag vor: http://www.staedte-verlag.de/utcms/de-karten-karte.html?linkid=4288445
 Heidekampbrücke	Br 15332,6138 15396,6125
 Brücke über den Nördlicher Heidekampgraben	Br 15070,8584 15079,8575
-#: note: Quellen sind uneinig, ob es die Brücke "Britzer Brücke" oder "Britzer-Allee-Brücke" heißt, und an der Brücke selbst gibt es kein Schild
+#: note: Quellen sind uneinig, ob die Brücke "Britzer Brücke" oder "Britzer-Allee-Brücke" heißt, und an der Brücke selbst gibt es kein Schild
 Britzer-Allee-Brücke	Br 15144,6054 15143,5936
 Späthstraßenbrücke	Br 14466,5087 14544,5123
 Hertabrücke	Br 12664,7013 12689,6905
@@ -267,7 +267,7 @@ Sieversbrücke	Br 7161,4110 7162,4058 7159,4023
 Teubertbrücke	Br 7911,4465 7994,4430
 Techowbrücke	Br 8212,4686 8234,4660
 Lankwitzer Brücke	Br 8076,3272 8199,3338
-Südende, S-Bahnbrücke	Br 7091,4760 7203,4737
+Südende, S-Bahnbrücke	Br 7092,4763 7205,4741
 Schmargendorfer Brücke	Br 4180,8098 4229,8142
 Ostpreußenbrücke	Br 2011,11046 2254,11051
 Kaiserdammbrücke	Br 2282,11463 2371,11475
@@ -546,7 +546,7 @@ Brücke über die Erpe	Br 24126,5874 24118,5895
 Brücke über einen Weiher	Br 25938,15359 25936,15335
 Brücke U-Bhf. Hellersdorf	Br 24191,14866 24190,14850 24213,14803
 Heidenauer Steg	Br 24218,14785 24224,14753
-Brücke über den Hellersdorfer Graben	Br 24249,14788 24257,14767
+Brücke über den Hellersdorfer Graben	Br 24245,14792 24257,14767
 U-Bahnunterführung Cottbusser Platz	Tu 23458,14439 23423,14543
 Stendaler Brücke	Br 24030,14717 23993,14797
 Brücke über die Neue Wuhle	Br 22022,17519 22002,17492

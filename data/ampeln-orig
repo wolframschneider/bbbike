@@ -8,7 +8,7 @@
 #: temporary vvv
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-03-24 vvv
+#: last_checked: 2019-04-13 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
 	X::inwork 14103,10489
@@ -31,9 +31,11 @@
 	X::inwork 10130,15653
 # 
 #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/bauarbeiten-in-pilgramer-strasse_a197302
-#: XXX wo ist die genaue Position der Bauampel?
+#: also_indoor: traffic
+#: last_checked: 2019-04-05
+#: next_check: 2020-06-30
 #: valid: -20200630
-	X::inwork 25148,10769
+	X::inwork 25145,10841
 # 
 #: next_check_id: HENNIGSDORFER-2019
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6331
@@ -49,6 +51,11 @@
 #: XXX später wird hier ein Kreisverkehr entstehen
 #: next_check: 2019-06-28
 	X::inwork -2504,22626
+# 
+#: next_check_id: TRESKOWALLEE-2019
+#: last_checked: 2019-04-06
+#: next_check: 2019-05-15
+	X::inwork 18406,7760
 # 
 # REMOVED (mittlerweile aus) --- #: next_check_id: ROSSSTRASSENBRUECKE-2019 --- #: XXX Gegenverkehrsregelung --- #: source_id: 2147343772 --- #: last_checked: 2019-03-17 --- #: next_check: 2019-03-29 --- #: valid: -20190329 --- # REMOVED (gewandert) ---	X::inwork 10687,11853 ---	X::inwork 10672,11870
 # 
@@ -524,6 +531,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4289,11060
 	X 4245,10435
 	F 4172,10406
+#: XXX_prog: beim Linksabbiegen aus der Lietzenburger in Richtung Konstanzer Str. muss man entweder frühzeitig auf die Fahrbahn mit den zwei Linksabbiegerspuren wechseln, oder man muss zwei Fußgängerampeln nehmen
 	X 4239,10358
 	X 4219,10279
 	X 3852,10236
@@ -891,7 +899,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2027,4792
 	X 1074,8470
 	X 2112,7754
-	X 2767,7592
+	X 2757,7604
 	X 6020,8809
 	X 161,3062
 	X -2280,2177
@@ -924,6 +932,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3425,4541
 	X 8070,1261
 	X 9128,3580
+#: XXX_prog Anforderung für geradeausfahrende (!) Radfahrer vom Blumberger Damm in die Köpenicker Str.
 	X 21108,11628
 	X 24654,11265
 	X 19994,12484
@@ -1240,7 +1249,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 12846,7981
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel während der Bauarbeiten
-#: last_checked: 2019-03-13
+#: last_checked: 2019-04-13
 #: check_frequency: 90d
 	X::inwork 12794,8103
 	X 11154,14985
@@ -1497,7 +1506,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8224,7148
 	F 12081,7679
 	X 9732,3883
-	X 7203,4737
+	X 7205,4741
 #: note: Anforderungsampel
 	F 6187,4930
 #: note: Anforderungsampel
@@ -1877,7 +1886,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 5799,6841
 	X -772,13199
 	X 3965,7297
-	X 3083,7587
+	X 3084,7599
 	F 4519,9393
 #: note: Anforderungsampel für Radfahrer im Zuge der Delbrückstr.; für Autos gibt es Kontaktschleifen
 	X 2190,8528
@@ -1916,7 +1925,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: im Zuge Nikolsburger/Fasanenstr. hat man an der Mittelstreifenampel noch einmal Rot (gesehen: Sa nachmittags)
 	X 5219,9808
 	X 3927,9935
-	F 3974,9774
+# REMOVED (aufgehoben) ---	F 3974,9774
 	X 4513,10702
 	X 3969,11675
 	X 3460,11441
@@ -2419,7 +2428,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	F 1398,10201
 #: note: Anforderungsampel
 	F 7110,10613
-provisorische Ampel, die es schon ewig gibt	F 12414,8112
+provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 13520,6583
 	F 6315,3974
 	F 6489,3578
@@ -2714,13 +2723,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
-#: last_checked: 2019-03-29
+#: last_checked: 2019-04-07
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2019-04-04 vvv
+#: last_checked: 2019-04-07 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2782,7 +2791,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog keine Haltelinie für Radfahrer Richtung Süden
 	X 8577,11896
 #: note: Anforderungsampel
-	F 6827,4806
+	F 6827,4810
 	X 20832,3170
 	X 20927,3292
 	X 4937,6205
@@ -2818,6 +2827,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -3891,13968
 #: note: Anforderungsampel für linksabbiegene Radfahrer (Tegeler Weg -> Max-Dohrn-Str.)
 	X 3005,13728
+#: note: Anforderungsampel für Radfahrer aus dem Jastrower Weg
 	X 23657,5467
 #: note: Anforderungsampel
 #: XXX_prog gilt (vermutlich) nicht für Radfahrer auf dem Radweg
@@ -2846,7 +2856,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20191231 vvv
-#: last_checked: 2019-03-16 vvv
+#: last_checked: 2019-04-10 vvv
 #: check_frequency: 30d vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
 	F::inwork 14567,6810
@@ -2861,10 +2871,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20191231 vvv
-#: last_checked: 2019-03-16
+#: last_checked: 2019-04-10
 	X::inwork 13278,6967
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2019-03-25
+#: last_checked: 2019-04-10
 	X::inwork 13627,7047
 #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren
 	X0::inwork 14011,7103
@@ -3009,14 +3019,14 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Anforderungsampel
 #: XXX provisorisch, bleibt eventuell nur während der Bauarbeiten an der Herbert-von-Karajan-Str.
 #: osm_watch: node id="1319349510" version="5"
-#: last_checked: 2019-03-17
+#: last_checked: 2019-04-13
 #: check_frequency: 45d
 	F::inwork 8005,11627
 # 
 #: note: Anforderungsampel
 	F 12172,14328
 # 
-	F 3953,9831
+	F 3951,9836
 # 
 ################################################################################
 #: note: Potsdam vvv
@@ -3161,10 +3171,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # REMOVED --- #: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust? --- #: XXX zurzeit auch nur in Richtung Südosten Zeitverlust --- #: source_id: IM_023940 --- #: last_checked: 2015-08-10 --- #: check_frequency: 14d ---	X::inwork 14018,9118
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
-#: last_checked: 2019-04-01 vvv
+#: last_checked: 2019-04-08 vvv
 #: check_frequency: 14d vvv
 	X::inwork 14151,8967
-	X::inwork 14363,8738
+# REMOVED (ausgeschaltet, vielleicht dauerhaft?) ---	X::inwork 14363,8738
 #: check_frequency ^^^
 #: last_checked ^^^
 #: next_check_id ^^^

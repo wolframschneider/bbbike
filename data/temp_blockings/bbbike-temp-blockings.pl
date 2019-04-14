@@ -8233,13 +8233,13 @@ EOF
 	q4::temp 6173,12396 6276,12506 6314,12518 6442,12545
 EOF
      },
-     { from  => $isodate2epoch->("2018-05-11 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-05-13 23:59:59"),
+     { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 7, months => 5]],
-       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (12. und 13. Mai 2018)',
+       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
-       source_id => 'http://www.laubinger.de/termine/26-boelschefest-friedrichshagen/',
+       source_id => 'http://www.laubinger.de/termine/29-boelschefest-friedrichshagen/',
        data  => <<EOF,
 	2::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 EOF
@@ -14047,11 +14047,11 @@ EOF
 	q4::inwork 9098,42254 9043,42165 9032,42153
 EOF
      },
-     { from  => $isodate2epoch->("2018-05-25 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-05-27 23:59:59"),
+     { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 9, months => 5]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (26. und 27. Mai 2018)',
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html
@@ -22565,6 +22565,7 @@ EOF
        source_id => 'IM_020714',
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
+#: also_indoor: traffic (G)
 #: last_checked: 2019-04-04
 	2::inwork 9131,12438 9179,12444
 EOF
@@ -23192,7 +23193,7 @@ EOF
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140626.1220.398183.html',
        data  => <<EOF,
 #: source_id: IM_022270
-	q3::inwork; 2717,7093 2731,7247 2744,7397 2750,7444 2767,7592
+	q3::inwork; 2717,7093 2731,7247 2744,7397 2750,7444 2757,7604
 EOF
      },
      { from  => 1404079200, # 2014-06-30 00:00
@@ -24749,26 +24750,14 @@ EOF
 EOF
      },
      { from  => 1443650400, # 2015-10-01 00:00
-       until => $isodate2epoch->("2019-07-31 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
+       until => 1554746070, # Radverkehr mittlerweile frei --- $isodate2epoch->("2019-07-31 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
        text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende Juli 2019',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
        data  => <<EOF,
-#: next_check_id: SEEGEFELDERWEG-2016
-#: source_id: IM_026411
-#: source_id: 2147339562
-#: source_id: LMS-BR_r_LMS-BR_51041
-#: source_id: 2147342003
-#: source_id: 2147342198
-#: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72
-#: source_id: 2147342842
-#: osm_watch: way id="57401090" version="13"
-#: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
-#: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
-#: by: https://www.berliner-woche.de/falkenhagener-feld/c-verkehr/strassenbau-geht-weiter_a202396 (bis März 2019 plus vier Wochen)
-#: XXX laut fritz bis 31.07.2019, laut vmz Gesamtmaßnahme bis Ende Juli 2019
-#: last_checked: 2018-10-12
-#: next_check: 2019-07-31
+# REMOVED --- #: next_check_id: SEEGEFELDERWEG-2016 --- #: source_id: IM_026411 --- #: source_id: 2147339562 --- #: source_id: LMS-BR_r_LMS-BR_51041 --- #: source_id: 2147342003 --- #: source_id: 2147342198 --- #: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72 --- #: source_id: 2147342842 --- #: osm_watch: way id="57401090" version="13" --- #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3 --- #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019) --- #: by: https://www.berliner-woche.de/falkenhagener-feld/c-verkehr/strassenbau-geht-weiter_a202396 (bis März 2019 plus vier Wochen) --- #: XXX laut fritz bis 31.07.2019, laut vmz Gesamtmaßnahme bis Ende Juli 2019 --- #: add_fragezeichen: Sind die Bauarbeiten bereits beendet? Wurde die Einbahnstraßenregelung aufgehoben? --- #: last_checked: 2018-10-12
+# REMOVED --- #: next_check: 2019-07-31
+# REMOVED --- #: next_check: 2019-04-05
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
 # REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
@@ -25872,9 +25861,9 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2019-04-02 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-04-03 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 3. April 2019 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2019-04-09 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-04-10 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 10. April 2019 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
@@ -26410,7 +26399,7 @@ EOF
      },
      { from  => undef,
        until => undef, # $isodate2epoch->("2019-02-28 12:00:00"),
-       text  => 'Rigaer Str.: Baustelle, während der Arbeitszeiten (Mo bis Sa, 6 bis 17 Uhr) kein Durchgang möglich',
+       text  => 'Rigaer Str.: Baustelle, während der Arbeitszeiten (Mo bis Sa, 6 bis 17 Uhr, oft auch länger) kein Durchgang möglich',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: RIGAER-2018
@@ -27210,9 +27199,7 @@ EOF
        text  => 'Uferweg: am Eiselenweg Bauarbeiten, Weg komplett gesperrt, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: MENTZELPARK-2018
-#: osm_watch: way id="152046369" version="9"
-#: osm_watch: node id="5865966386" version="1"
+# REMOVED --- #: next_check_id: MENTZELPARK-2018
 # REMOVED --- #: add_fragezeichen: Ist der Abschnitt des Uferwegs am Eiselenweg noch immer gesperrt?
 # REMOVED --- #: priority: #A
 # REMOVED --- #: last_checked: 2019-02-16
@@ -27548,7 +27535,7 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2019-03-12
+#: last_checked: 2019-04-12
 	q4::inwork; 13391,16436 13630,16629
 EOF
      },
@@ -27770,7 +27757,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-04-04
+#: last_checked: 2019-04-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27880,18 +27867,15 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2019-05-01 18:00:00"), # laut Schild bis Mai 2019 --- 1540918800, # 2018-10-30 18:00
+       until => 1555172344, # $isodate2epoch->("2019-05-01 18:00:00"), # laut Schild bis Mai 2019 --- 1540918800, # 2018-10-30 18:00
        text  => 'Mittelweg/Leykestr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, voraussichtlich bis Mai 2019',
        type  => 'handicap',
        data  => <<EOF,
-#: also_indoor: traffic (G) vvv
-#: last_checked: 2019-03-13 vvv
+# REMOVED --- #: also_indoor: traffic (G) vvv --- #: last_checked: 2019-03-13 vvv
 	q3::inwork 12335,7770 12224,7799
 # REMOVED (fertig) ---	q2::inwork 12335,7770 12075,7696
 # REMOVED (fertig) ---	q3::inwork; 12647,7672 12520,7694
 # REMOVED (hier keine Einbahnstraßenregelung mehr)	q3::inwork; 12520,7694 12335,7770
-#: last_checked ^^^
-#: also_indoor ^^^
 EOF
      },
      { from  => 1536172293, # 2018-09-05 20:31
@@ -28159,7 +28143,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-03-28
+#: last_checked: 2019-04-10
 #: check_frequency: 7d
 	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
@@ -28408,22 +28392,13 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef,
+       until => 1555009025, # (laut mapillary schon relativ offen) --- undef,
        text  => "Neuer Mauerweg: Weg kann noch durch Bauzäune versperrt sein",
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: NEUERMAUERWEG-2018
-#: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv
-#: osm_watch: way id="42031978" version="14"
-#: priority: #B vvv
-#: last_checked: 2019-03-23 vvv
-#: check_frequency: 14d vvv
+# REMOVED --- #: next_check_id: NEUERMAUERWEG-2018 --- #: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv --- #: osm_watch: way id="42031978" version="14" --- #: priority: #B vvv --- #: last_checked: 2019-03-23 vvv --- #: check_frequency: 14d vvv
 (Neuer Mauerweg): noch abgesperrt	2::inwork 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8016,19143 8313,18940 8347,18916 8476,18773
 (Neuer Mauerweg): noch abgesperrt	2::inwork 7572,19490 7540,19550
-#: check_frequency ^^^
-#: last_checked ^^^
-#: priority ^^^
-#: add_fragezeichen ^^^
 EOF
      },
      { from  => 1542495600, # 2018-11-18 00:00
@@ -28501,7 +28476,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-03-28
+#: last_checked: 2019-04-04 (daf)
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28610,6 +28585,9 @@ EOF
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.783009.php
 #: by: http://www.abendblatt-berlin.de/2019/02/08/altstadt-koepenick-im-dauerstress/
 #: by: https://twitter.com/VIZ_Berlin/status/1093887988222906369
+#: osm_watch: way id="25274116" version="19"
+#: osm_watch: way id="671101960" version="3"
+#: also_indoor: traffic (G,H)
 	q4::temp; 22196,4847 22377,4836 22388,4737 22390,4702 22395,4678 22426,4609 22446,4581 22458,4565 22495,4523
 EOF
      },
@@ -28794,6 +28772,19 @@ EOF
 	3 8522,12239 8538,12245 8592,12252
 	3 8120,12756 8122,12603 7945,12592
 	3 7823,12120 7816,12150 7822,12201
+EOF
+     },
+     { from  => undef, # 
+       until => 1680364800, # 2023-04-01 18:00
+       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke gesperrt, möglicherweise bis 2023',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
+#: add_fragezeichen: wann wird der Weg wieder offen sein?
+#: osm_watch: way id="8655276" version="17"
+#: last_checked: 2019-04-05
+#: check_frequency: 90d
+	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
 EOF
      },
     );

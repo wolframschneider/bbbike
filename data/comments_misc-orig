@@ -126,6 +126,7 @@ Kreisverkehr	Roundabout 11115,-8466
 Kreisverkehr	Roundabout 13560,-9733
 Kreisverkehr	Roundabout 21802,-6904
 Kreisverkehr	Roundabout 20711,-3869
+Kreisverkehr	Roundabout -2446,25386
 #: by: ^^^
 Kreisverkehr	Roundabout 3955,25343
 Kreisverkehr	Roundabout -18820,19
@@ -136,6 +137,7 @@ Kreisverkehr	Roundabout -84341,-73188
 Kreisverkehr	Roundabout 26002,-3362 26013,-3367 26046,-3365 26048,-3334 26029,-3326 26011,-3331 26002,-3342 26002,-3362
 Kreisverkehr	Roundabout -395,-920
 Kreisverkehr	Roundabout 1370,-1295
+Kreisverkehr	Roundabout 26071,5778
 # 
 #: by: Marita:
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
@@ -850,7 +852,7 @@ Gaslaternen-Freilichtmuseum Berlin	CS 5895,11692 5835,11768 5858,11863 5900,1191
 Suarezstr.: Wochenmarkt Do 9.00-15.00, aber anscheinend nur auf dem Bürgersteig	CS 2921,10928 2845,10840
 Mierendorffplatz: Wochenmarkt Mi+Sa, 8.00-13.00, zwar auf der Fahrbahn, aber der Radweg scheint weiterhin befahrbar zu sein	CS 3534,13098 3645,13206
 Fehrbelliner Platz: Wochenmarkt Di+Do, 11.00-16.00, sowie Kunst- und Trödelmarkt Sa+So 10.00-16.00, nur auf der Parkplatzfläche	CS 4339,9224
-Kolberger Platz: Wochenmarkt Mi+Sa, 08.00-14.00, Fahrbahn weiterhin befahrbar, nur Halteverbote	CS; 2786,7721 2751,7811 2880,7801
+Kolberger Platz: Wochenmarkt Mi+Sa, 08.00-14.00, Fahrbahn weiterhin befahrbar, nur Halteverbote	CS; 2786,7721 2751,7811 2862,7803
 Str. des 17. Juni: Kunst- und Trödelmarkt, Sa+So, 10.00-17.00, Radweg wird freigehalten	CS; 5758,11895 5565,11871 5478,11860
 Boxhagener Platz: Wochenmarkt Sa 09.00-15.30, Trödelmarkt So 10.00-18.00, Fahrbahn weiterhin befahrbar, nur Halteverbote	CS; 14127,11811 14272,11775 14247,11681 14102,11715 14127,11811
 Schönleinstr.: Wochenmarkt Di+Sa, 11.00-19.00, betroffen ist wohl nur der abgesperrte und in BBBike sowieso nicht eingezeichnete Abschnitt	CS 11560,9524
@@ -1134,7 +1136,7 @@ Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3068,21150 3024,21286
 Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 # 
 #: osm_watch: way id="185792044" version="11"
-#: last_checked: 2019-03-30
+#: last_checked: 2019-04-10
 #: check_frequency: 60d
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
@@ -1191,15 +1193,16 @@ ausgeschildert als Rüdigerstr. 65+65 A-E	CP2; 17441,12245 17444,12286
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4366
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/50re.pdf/file?y=2016 (Benennung)
 #: by: http://www.dafmap.de/d/berlin.html?id=5116&mt=0&zoom=16 (Projektabschluss: 2018-12-31)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_15_2237_2424_online.pdf (Grundstücksnummerierungen)
 #: last_checked: 2019-03-28
-#: check_frequency: 120d
+#: check_frequency: 60d
 Am Märchenbrunnen: nicht ausgeschildert	CS 11823,13635 11899,13750
 # 
 # REMOVED (nur ein Eintrag) --- : next_check_id: MINNATODENHAGENSTR-2016
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_50_5649_5788_online.pdf (Straßenbenennung)
 #: XXX dieser Weg wird auch in Minna-Todenhagen-Str. umbenannt --- evtl. auf einen Namen hier komplett verzichten. old_name-Eintrag?
 #: XXX wird hier noch irgendwie ausgeschildert?
-#: last_checked: 2019-03-30
+#: last_checked: 2019-04-06
 #: check_frequency: 90d
 Grenzweg (Oberschöneweide): nicht ausgeschildert	CS 17295,7328 17475,7451 17566,7485
 # REMOVED (hier: Heckenweg) --- Grenzweg (Oberschöneweide): nicht ausgeschildert	CS 17566,7485 17669,7515
@@ -1240,7 +1243,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="2"
-#: last_checked: 2019-03-21
+#: last_checked: 2019-04-05 (mapillary)
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
@@ -1284,7 +1287,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
 #: next_check_id: MERGENTHALERRING-2018
-#: last_checked: 2019-04-01
+#: last_checked: 2019-04-08
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1296,11 +1299,7 @@ Hödurstr.: Privatstraße	CS 12647,18289 12751,18401
 #: check_frequency: 90d
 An der Dahme: nicht ausgeschildert	CS 22270,2549 22358,2460
 # 
-#: next_check_id: SIEGFRIEDHIRSCHMANNPARK-2019
-#: XXX wobei: es existieren knapp über dem Boden angebrachte Tafeln mit dem Straßennamen; aber werden vielleicht auch offizielle Berliner Straßenschilder aufgestellt?
-#: last_checked: 2019-04-04
-#: check_frequency: 14d
-Siegfried-Hirschmann-Park: nicht ausgeschildert	CS 14676,11572 14714,11549 14745,11487 14684,11456
+# REMOVED --- #: next_check_id: SIEGFRIEDHIRSCHMANNPARK-2019 --- #: XXX wobei: es existieren knapp über dem Boden angebrachte Tafeln mit dem Straßennamen; aber werden vielleicht auch offizielle Berliner Straßenschilder aufgestellt? --- #: last_checked: 2019-04-05 --- #: check_frequency: 14d --- Siegfried-Hirschmann-Park: nicht ausgeschildert	CS 14676,11572 14714,11549 14745,11487 14684,11456
 # 
 #: next_check_id: BUSCHWINDROESCHENWEG-2019
 #: by: mapillary
@@ -1311,3 +1310,8 @@ Buschwindröschenweg: nicht ausgeschildert	CP2; 21409,-109 21382,-31
 Rheingoldstr.: durch den Rheinsteinpark	CS 19073,8828 19145,8659
 Straße 12: nicht ausgeschildert	CP2; 13883,6682 13881,6634
 Straße 12: nicht ausgeschildert	CP2; 13881,6634 13883,6682
+# 
+Falkenberger Fußweg: nicht ausgeschildert	CP2; 19251,18248 19293,18249
+Falkenberger Fußweg: nicht ausgeschildert	CP2; 19772,18064 19679,18119
+Zehnrutenweg: nicht ausgeschildert	CP2; 20454,18778 20461,18796
+# 
