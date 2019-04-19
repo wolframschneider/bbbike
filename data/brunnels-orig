@@ -279,10 +279,12 @@ Elsenbrücke	Br 14405,10027 14501,10169
 Parkwegbrücke	Br 14558,10082 14453,9929
 Kynastbrücke	Br 14928,10970 14902,10859 14880,10808
 # 
+#: by: https://www.berlin.de/senuvk/bauen/ueberbruecken/de/text_21.shtml (Name)
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/bruecke-ueber-den-stadtring-benannt_a207052
 #: XXX Name "Südkreuz-Steg" --- ist dieser Name schon offiziell und ist die Brücke ausgeschildert?
+#: osm_watch: way id="10360532" version="17"
 #: last_checked: 2019-04-02
-Brücke über Sachsendamm und Autobahn	Br 7757,7563 7747,7521 7733,7483
+Sachsendammsteg	Br 7757,7563 7747,7521 7733,7483
 # 
 Tiburtiusbrücke	Br 4937,6205 5335,5991 5377,5961 5574,5819 5672,5751
 Cordestunnel	Tu 1477,10073 1395,10122
@@ -338,7 +340,7 @@ Stendaler Brücken	Br 23993,14797
 Louis-Lewin-Str., U-Bahnbrücke	Br 25006,15132 25025,15062
 Allee der Kosmonauten	Br 19503,13509 19415,13503 19360,13499
 Allee der Kosmonauten	Br 18590,13480 18652,13476
-Märkische Allee	Br 19924,11890 19896,11688
+Märkische Allee	Br 19924,11890 19900,11697
 Gensinger Brücke	Br 19135,11713 19136,11739 19138,11815
 Skandinavische Brücke	Br 17037,11820 16962,11833
 Lichtenberger Brücke	Br 16962,11833 16803,11859 16737,11866
@@ -596,6 +598,7 @@ Zinnowwegbrücke	Br -376,4102 -388,4119
 #: XXX wird die Treppe mit dem Ersatzneubau entfallen?
 #: by: http://www.stadtentwicklung.berlin.de/download/bruecken/Brueckeninstandstandsetzungen2016.pdf
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621&date=20180130 ("voraussichtlich ab 2019 neu gebaut")
+#: osm_watch: way id="298416172" version="1"
 #: last_checked: 2017-10-14 (mapillary)
 #: next_check: 2019-05-01
 Hebammensteigbrücke	Br 13168,21706 13046,21734

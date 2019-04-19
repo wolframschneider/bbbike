@@ -1871,9 +1871,9 @@ Wuhletalstr. -> Märkische Allee: Linksabbiegen verboten	3::igndisp 20912,17678 2
 Märkische Allee -> Parkweg an der Neuen Wuhle: Linksabbiegen verboten	3::igndisp 20912,17872 20889,17838 20983,17846
 Parkweg an der Neuen Wuhle -> Märkische Allee: Linksabbiegen verboten	3::igndisp 20983,17846 20889,17838 20843,17745
 Märkische Allee -> Wuhletalstr.: Linksabbiegen verboten	3::igndisp 20889,17838 20912,17872 20855,17807
-Mittelstreifen	3nocross::ignrte 19896,11688 19924,11890 19934,11977 19946,12075 19951,12114 19954,12140 19958,12177 19962,12222 19967,12270 19982,12405 19994,12484
-Märkische Allee -> Alt-Friedrichsfelde: Mittelstreifen	3::igndisp 19896,11688 19924,11890 19890,11830
-Alt-Biesdorf -> Märkische Allee: Mittelstreifen	3::igndisp 19979,11774 19924,11890 19896,11688
+Mittelstreifen	3nocross::ignrte 19900,11697 19924,11890 19934,11977 19946,12075 19951,12114 19954,12140 19958,12177 19962,12222 19967,12270 19982,12405 19994,12484
+Märkische Allee -> Alt-Friedrichsfelde: Mittelstreifen	3::igndisp 19900,11697 19924,11890 19890,11830
+Alt-Biesdorf -> Märkische Allee: Mittelstreifen	3::igndisp 19979,11774 19924,11890 19900,11697
 Alt-Biesdorf -> Alt-Friedrichsfelde: Mittelstreifen	3::igndisp 19979,11774 19924,11890 19890,11830
 Haydnstr. -> Märkische Allee: Mittelstreifen	3::igndisp 20006,12128 19954,12140 19951,12114
 Märkische Allee -> Haydnstr.: Mittelstreifen	3::igndisp 19958,12177 19954,12140 20006,12128
@@ -3007,7 +3007,6 @@ Rubusweg: Bauarbeiten, gesperrt	2::inwork 19551,868 19316,951
 Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 Corinthstr.: Einbahnstraßenregelung	1s:inwork 14608,10409 14447,10491
-Luckauer Str.: Bauarbeiten, Einbahnstraßenregelung	1s:inwork 11113,10943 11150,11030
 Weidenkätzchenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21421,158 21447,47
 Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21379,33
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,8260
@@ -3031,7 +3030,7 @@ Heidelberger Str.: Baustelle, Einbahnstraße	1s:inwork 13491,9201 13421,9260 1335
 Kaiserin-Augusta-Allee - Neues Ufer: Bauarbeiten, Weg ist komplett gesperrt	2::inwork 4561,13244 4547,13139 4576,13115
 Pepitapromenade: Bauarbeiten, teilweise noch gesperrt	2::inwork -2873,17369 -2573,17314
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
-Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	1s:inwork 11155,11750 11197,11882
+Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	1s:inwork 11197,11882 11155,11750
 Alexandrinenstr.: Bauarbeiten, gesperrt	2::inwork 10678,11172 10690,11180
 Fanny-Zobel-Str.: wegen Bauarbeiten gesperrt, vielleicht sogar dauerhaft eingezogen	2::inwork 13975,10187 14049,10164
 Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,11133

@@ -553,13 +553,13 @@ asphaltiert	RW2;RW2 13448,12340 13163,12382 12878,12430 12603,12470 12592,12472 
 #: by: http://www.abendblatt-berlin.de/2018/06/21/karl-marx-allee-wird-fuer-zwei-jahre-zur-grossbaustelle/
 #: by: http://www.abendblatt-berlin.de/2018/07/15/hier-kann-bald-geradelt-werden/
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.802572.php
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.803251.php
 #: source_id: 2147342756
 #: XXX zurzeit provisorische Radspuren Richtung Osten, werden aber im Endzustand bleiben; ebenso wird es Richtung Westen wohl auch Radspuren geben
 #: priority: #A
-#: last_checked: 2019-04-08
-# REMOVED --- #: next_check: 2020-10-01
-#: next_check: 2019-04-15
-	RW2;RW4 11976,12595 11678,12727
+#: last_checked: 2019-04-17
+#: next_check: 2020-10-01
+	RW4?;RW4 11976,12595 11678,12727
 	RW3;RW3 11678,12727 11635,12745
 	RW2;RW3 15117,12106 15361,12071
 Gehwegplatten	RW1; 10933,14122 10938,14159
@@ -732,7 +732,7 @@ im Bereich der Bushaltestelle wird der Radweg auf dem Gehweg geführt	RW4; 14196,
 #: by: https://www.berliner-woche.de/alt-treptow/c-verkehr/schaeden-waren-2008-nicht-sichtbar_a195640
 #: source_id: 2147343116
 #: XXX wann wird die Radspur wieder hergestellt? (-> RW4;)
-#: last_checked: 2019-04-13
+#: last_checked: 2019-04-15
 #: next_check: 2020-01-01
 provisorischer gemeinsamer Rad- und Gehweg	RW2; 14558,10264 14501,10169 14405,10027 14350,9953
 	RW4; 14350,9953 14289,9870
@@ -1218,7 +1218,7 @@ Busspur gilt Mo-Fr 7-19 Uhr	RW5; 10240,11740 10299,11786 10314,11804 10349,11847
 #: by: http://www.abendblatt-berlin.de/2019/03/14/82734/
 #: source_id: 2147343632
 #: priority: #A vvv
-#: last_checked: 2019-04-08 vvv
+#: last_checked: 2019-04-17 vvv
 #: next_check: 2019-07-26 vvv
 #: XXX Wie lange bleibt der provisorische Radweg Richtung Grunertunnel erhalten?
 # REMOVED --- Busspur gilt Mo-Fr 7-19 Uhr	RW5; 10625,12206 10659,12259 10675,12280
@@ -1243,7 +1243,7 @@ Busspur gilt Mo-Fr 6-20 Uhr	RW5; 10625,12206 10574,12131 10512,12039
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/rechtsabbiegen-vom-alex-in-die-karl-marx-allee-sechs-wochen-lang-verboten_a202864
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.802572.php (bis auf Weiteres)
 #: source_id: 2147343815 (bis auf Weiteres)
-#: last_checked: 2019-04-12
+#: last_checked: 2019-04-17
 #: check_frequency: 14d
 # asphaltierter Radweg	RW1; 11134,12793 11226,12945
 provisorische Radspur	RW4; 11134,12793 11226,12945
@@ -1279,13 +1279,13 @@ neu asphaltiert	RW1; 17769,7465 17681,7589
 #: XXX laut VIZ Gesamtmbaumaßnahme bis Ende 2019
 #: source_id: 2147341340
 #: source_id: LMS-BR_r_LMS-BR_98104
-#: source_id: 2147342856
+#: source_id: 2147342856 (bis Ende 2019)
 #: by: https://www.berliner-woche.de/oberschoeneweide/c-verkehr/markierung-auf-der-rummelsburger-landstrasse-aufgebracht_a170936
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/erster-radfahrstreifen-im-bezirk-farblich-neu-markiert_a188983 ("kommendes Jahr", also 2019)
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/11-protokoll-ag-radverkehr.pdf ("gemeinsamer Geh- und Radweg in einer Breite von 2,50 m")
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/11-ag_radverkehr-bericht-einzelmassnahmen.pdf (2019, zwei Bauabschnitte)
 #: last_checked: 2019-04-06 vvv
-#: check_frequency: 60d vvv
+#: check_frequency: 90d vvv
 	RW8; 17681,7589 17619,7679 17527,7812 17299,8140 17202,8391 17143,8565
 	RW8; 17143,8565 17105,8666 17067,8725
 #: check_frequency ^^^
@@ -2228,11 +2228,7 @@ gemeinsamer Rad- und Gehweg	RW2;RW8 24653,10580 24666,10611 24660,10643 24649,10
 	RW; 24693,11141 24654,11265
 Gehweg für Radfahrer frei	RW1; 24654,11265 24693,11141
 	RW1; 24653,10580 24711,10543
-	RW3;RW3 21088,9178 21089,9223 21090,9288 21094,9408 21097,9538 21105,9686 21115,9842
-	RW3;RW4? 21115,9842 21164,9960
-	RW4?;RW4? 21164,9960 21175,9989
-	RW3;RW3 21175,9989 21223,10123 21264,10237
-	RW3;RW3 21264,10237 21276,10271 21299,10385 21281,10428 21263,10471 21223,10573 21180,10683 21140,10786 21131,10812 21131,10848
+	RW3;RW3 21088,9178 21089,9223 21090,9288 21094,9408 21097,9538 21105,9686 21115,9842 21164,9960 21175,9989 21223,10123 21264,10237 21276,10271 21299,10385 21281,10428 21263,10471 21223,10573 21180,10683 21140,10786 21131,10812 21131,10848
 Busspur gilt Mo-Fr 6-19 Uhr	RW5; 21131,10848 21132,10923 21133,10948
 	RW3; 21133,10948 21132,10923 21131,10848
 	RW0;RW3 21133,10948 21135,10995
@@ -2626,7 +2622,7 @@ vorhandener Radweg ist abgesperrt	RW0; 23100,12269 23033,12367
 	RW;RW 22929,13661 22970,13798 22975,13814
 	RW1;RW1 23038,12706 22967,12647 22817,12525 22603,12359
 	RW2;RW2 21108,11628 21124,11462 21134,11331 21137,11294 21138,11271
-	RW; 21138,11271 21138,11254 21136,11134
+	RW1; 21138,11271 21138,11254 21136,11134
 	RW1;RW1 20521,11494 20623,11489 20641,11488 20729,11483 20828,11480 20959,11472 21124,11462
 	RW1;RW1 21135,10995 21249,11042 21308,11075 21354,11101 21385,11119 21420,11150 21457,11188 21535,11267 21628,11384
 	RW1;RW1 20521,11494 20549,11659 20575,11698
@@ -3148,7 +3144,7 @@ gemeinsamer Rad- und Gehweg	RW2;RW2 19994,12484 19982,12405 19967,12270 19962,12
 	RW4;RW4 19934,11977 19924,11890
 	RW4; 19924,11890 19890,11830 19849,11779 19785,11760
 	RW2; 19785,11760 19726,11743
-	RW4;RW4 19924,11890 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
+	RW4;RW4 19924,11890 19900,11697 19908,11637 19936,11608 19999,11612 20026,11663
 	RW4; 19985,11727 20018,11698 20026,11663
 	RW4; 20026,11663 20064,11687 20114,11719
 	RW1;RW 20323,16706 20390,16663 20397,16621 20376,16568 20319,16542 20230,16560 20150,16572
@@ -3551,7 +3547,7 @@ Busspur ist immer gültig	RW5; 16958,11778 16815,11729
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.799903.php (Radwegmaßnahme wird erwähnt (tatsächlich an dieser Stelle?))
 #: XXX wird dieser Abschnitt vielleicht auch grün markiert?
 #: priority: #D
-#: last_checked: 2019-03-09
+#: last_checked: 2019-04-16
 #: check_frequency: 60d
 	RW4;RW4 16958,11778 17013,11849 17082,11909 17166,11944
 grün markiert	RW4;RW4 17166,11944 17210,11950 17338,11969

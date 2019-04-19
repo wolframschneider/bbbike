@@ -17981,12 +17981,12 @@ EOF
 	q4::inwork 18586,9172 18511,9185 18430,9199 18319,9218
 EOF
      },
-     { from  => $isodate2epoch->("2018-05-31 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-06-03 04:00:00"), # bis in die Nacht hinein
+     { from  => $isodate2epoch->("2019-05-16 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-20 04:00:00"), # bis in die Nacht hinein
        periodic => 1,
        recurrences => [['yearly', days => 15, months => 5]], # kann auch erst im September stattfinden
-       source_id => 'http://www.erkner.de/271.html?date=20170415',
-       text  => 'Erkner: Heimatfest, 1.6.2018 bis 3.6.2018',
+       source_id => 'http://www.erkner.de/271.html?date=20190415',
+       text  => 'Erkner: Heimatfest, 17.5.2019 bis 19.5.2019',
        type  => 'gesperrt',
        data  => <<EOF,
 	2::temp 34421,1950 34359,2165 34250,2546
@@ -27457,14 +27457,15 @@ EOF
      },
      { from  => undef, # 
        until => $isodate2epoch->("2019-08-01 18:00:00"), # 1558022400, # 2019-05-16 18:00
-       text  => 'Friesenstr.: Fahrbahn für Radfahrer verboten',
+       text  => 'Friesenstr.: Fahrbahn zwischen Bergmannstr. und Jüterboger Str./Fidicinstr. für Radfahrer verboten',
        type  => 'gesperrt',
        source_id => '2147342598',
        data  => <<EOF,
 #: next_check_id: FRIESEN-2018
 #: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-04-02
-	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962 9801,8889
+#: last_checked: 2019-04-15
+	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962
+# REMOVED (hier nur Gehweg frei, allerdings siehe handicap-Eintrag)	q4::inwork::igndisp; 9799,8962 9801,8889
 # REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
 EOF
      },
@@ -27745,6 +27746,7 @@ EOF
        type  => 'handicap',
        source_id => '2147342231',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
 #: note: Gesamtbaumaßnahme bis 31.12.2023
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
 #: note: zuletzt geprüft: 2019-01-12
@@ -28785,6 +28787,15 @@ EOF
 #: last_checked: 2019-04-05
 #: check_frequency: 90d
 	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
+EOF
+     },
+     { from  => undef, # 
+       until => 1557504000, # 2019-05-10 18:00
+       text  => 'Alt-Biesdorf: zwischen Grabensprung und Köpenicker Str. für Radfahrer gesperrt, bis 10. Mai 2019',
+       type  => 'gesperrt',
+       source_id => '2147344050',
+       data  => <<EOF,
+	2::inwork 20549,11659 20633,11651 20963,11618 21108,11628
 EOF
      },
     );
