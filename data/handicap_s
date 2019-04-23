@@ -3,6 +3,7 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
+Krautstr.: Bauarbeiten, Fahrbahn gesperrt, auf Gehweg Ausweichen	q3::inwork 12059,12172 12021,12066 12002,12008
 Bˆdikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 (Planstraﬂe C): Fahrbahn durch Bauz‰une abgesperrt, Ausweichen auf Gehweg mˆglich	q4::inwork 12926,11224 12848,11093
 Gubener Str.: Fahrbahn f¸r ein paar Meter gesperrt, Ausweichen auf Gehweg, Bordsteine	q3::inwork 13326,12056 13243,12222
@@ -23,7 +24,7 @@ Littenstr.: Fahrbahn an der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 Jerusalemer Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 9936,11469
 Sch¸tzenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
-(provisorischer Zugang zur neuen Alexandrinenstr.): Trampelpfad, Bordsteine	q4::inwork 10696,11171 10690,11180
+(provisorischer Zugang zur neuen Alexandrinenstr.): eng, Fuﬂg‰nger	q3::inwork 10678,11172 10690,11180
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10010,12275 10058,12290
 Prinzengasse: einige Fuﬂg‰nger, parkende Autos	q3::inwork 9955,12300 10006,12306
@@ -51,7 +52,6 @@ Rollbergstr.: Einbahnstraﬂenregelung	q3::inwork; 12545,8209 12714,8249
 Kynaststr.: Fahrbahn hinter der Kreuzung Alt-Stralau Richtung Norden gesperrt, Radfahrer auf Gehweg/Fuﬂg‰ngerschutztunnel ausweichen und ggfs. absteigen, bis Ende April 2019	q4:inwork; 14724,10297 14766,10372 14797,10476 14805,10518
 Steinmetzstr: Bauarbeiten zwischen Kurf¸rstenstr. und B¸lowstr., etwa 100 Meter der Fahrbahn sind gesperrt, bis Ende 2019	q3::inwork 7744,10372 7698,10147
 Moltkestraﬂenbr¸cke: Einbahnstraﬂe, Richtung S¸den muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3905,4482
-(Weg im Schloﬂpark Buch): f¸r Radfahrer verboten	q4 16593,25640 16583,25667 16558,25688 16481,25671 16441,25664 16384,25692 16339,25690 16265,25718 16251,25733
 (provisorische Fuﬂg‰ngerbr¸cke S‰ntisstr.): Fuﬂg‰nger	q3 9014,898 9005,912 9002,919 9047,948 9058,932
 S‰ntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
 Wuhlewanderweg: steiler Anstieg, Fuﬂg‰nger	q4; 21998,12204 21970,12153
@@ -365,7 +365,7 @@ Erich-Steinfurth-Str.: Fuﬂg‰nger	q2 12645,11673 12596,11696
 Elbingeroder Weg: hohe Bordsteine	q4 13178,9062 13146,9085
 (An der Apostelkirche - Kurf¸rstenstr.): Fuﬂg‰nger, Bordstein	q3 7312,10505 7315,10537
 Marie-Elisabeth-L¸ders-Steg: eng, Fuﬂg‰nger	q2 8415,12749 8593,12742 8596,12760
-Kleine Andreasstr.: Gehweg, Bordsteine	q3 12211,12128 12279,12113
+Kleine Andreasstr.: Gehweg	q3 12211,12128 12279,12113
 Fritz-Schiff-Weg: Fuﬂg‰nger	q1 13457,12505 13476,12461 13448,12340
 (Molkenmarkt - Parochialstr.): Bordstein	q2 10738,12364 10831,12371
 (Crellestr. - Julius-Leber-Br¸cke): Fuﬂg‰nger	q2 7524,9093 7555,8978 7509,8929 7497,8916
@@ -1664,6 +1664,7 @@ entlang der Straﬂenbahn: einige Fuﬂg‰nger	q1 17486,17266 17790,17126 17861,17099
 Schulstr. (Lankwitz): Fuﬂg‰nger	q3 6692,3334 6653,3297 6647,3292
 (Biesheimring - Lutterbacher Str.): einige Fuﬂg‰nger	q1 2048,3062 2066,3072
 (Biesheimring - Lutterbacher Str.): einige Fuﬂg‰nger	q1 1987,3166 1999,3177
+(Weg im Schloﬂpark Buch): Fuﬂg‰nger	q2 16593,25640 16583,25667 16558,25688 16481,25671 16441,25664 16384,25692 16339,25690 16265,25718 16251,25733
 (Uferpromenade am Humboldthafen): einige Fuﬂg‰nger	q1 8257,13037 8242,13067 8242,13183 8315,13181
 (Hauptstr. - Rummelsburger Ufer): flacher Bordstein	q2 15334,10528 15322,10513
 (Nixenkai - Am Speicher): Fuﬂg‰nger	q1 15289,10097 15273,10087 15244,10083 15216,10093
@@ -1788,11 +1789,12 @@ Innsbrucker Platz - Eisackstr.: Bordstein	q1 6418,7958 6429,7876
 (Johannisthaler Chaussee - Wildmeisterdamm): enge Straﬂe	q1 13045,2107 13064,2090 13157,2116
 (Schragenfeldstr. - Allee der Kosmonmauten): Fuﬂg‰nger	q2 21095,15003 21025,15005
 Schragenfeldstr.: Tor, Umweg ¸ber Bordstein	q2 21095,15003 21211,15009
-Waldpromenade: schmaler Weg	q2 23473,8114 23376,8186 23261,8274 23149,8364 23047,8439 22954,8506 22856,8577
+Waldpromenade: schmaler Weg	q2 23473,8114 23376,8186 23261,8274 23149,8364 23047,8439 22974,8491 22856,8577
 (Mechthildstr. - Waldpromenade): enger Pfad	q3 23392,8208 23376,8186
 (Uhlandstr. - Waldpromenade): enger Pfad	q3 23293,8292 23261,8274
 (Lessingstr. - Waldpromenade): schmaler Weg	q2 23180,8379 23149,8364
 (Klopstockstr. - Waldpromenade): enger Pfad	q3 23086,8449 23047,8439
+(Wielandstr. - Waldpromenade): schmaler Weg	q2 22976,8526 22974,8491
 (Frankfurter Allee - Albert-Hˆﬂler-Str./Harnackstr.): einige Fuﬂg‰nger	q1 16190,11872 16115,11791 16099,11786
 (CharitÈ-Campus Benjamin Franklin): Krankenhausgel‰nde	q1 4926,3749 4884,3822 4884,3840 4811,3959 4972,4055 5030,4095 5041,4141 5110,4179
 (Gˆrlitzer Park, zur Forster Str.): Fuﬂg‰nger	q2 12670,10160 12592,10112 12564,10121 12556,10116
@@ -1853,6 +1855,8 @@ Hildegard-Knef-Platz: Busverkehr	q1 7774,7724 7759,7812 7718,7838
 Alice-Salomon-Platz: Fuﬂg‰nger, Lieferverkehr	q1 23993,14797 24061,14801
 (KGA Erpetal - S-Bhf. Hirschgarten): Bordstein	q3 24329,6089 24297,6086
 (Versorgungsweg Forckenbeckstr. - Friedrichshaller Str.): einige Fuﬂg‰nger	q2 3218,8233 3206,7988 3198,7787 3183,7563
+Kreuzgraben: Fuﬂg‰nger	q4 10264,20209 10260,20222 10251,20252
+(entlang des Kreuzgrabens): Fuﬂg‰nger, Spielplatz	q4 10379,20309 10314,20262 10260,20222 10169,20144
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schulhof, Radfahren verboten	q4 7242,8586 7288,8635
@@ -2742,6 +2746,8 @@ Gravensteinstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1
 Hauptstr. (Franzˆsisch Buchholz): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 12199,22367 12229,22457
 (Vorfahrt S-Bhf. Tegel): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 2352,20224 2371,20225 2384,20196 2398,20166 2381,20157
 (Guerickestr. - Einsteinufer): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4658,12450 4618,12340 4593,12322
+Wadzeckstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 11315,13210 11354,13184 11369,13174
+Cantianstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 10871,15288 10887,15287
 (Suermondtstr. - Konrad-Wolf-Str.): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 16842,15932 16799,15974 16719,16005 16753,16111
 Ferdinandstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 5398,2422 5417,2383
 Am Krusenick: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 22751,4970 22652,4966 22667,4912 22705,4874

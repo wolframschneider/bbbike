@@ -94,6 +94,7 @@ Kreisverkehr	Roundabout 26002,-3362 26013,-3367 26046,-3365 26048,-3334 26029,-3
 Kreisverkehr	Roundabout -395,-920
 Kreisverkehr	Roundabout 1370,-1295
 Kreisverkehr	Roundabout 26071,5778
+Kreisverkehr	Roundabout 13124,216
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
 Privatstraße der DB	CS 5710,7820 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
@@ -406,7 +407,7 @@ Dr.-Dorsch-Allee: Privatstraße	CS 11285,23079 11253,23103 11088,23227 10855,2340
 Hermann-Günther-Str.: Privatstraße	CS 8235,20109 8237,20098 8258,19983 8272,19908
 Am Tempelgraben: Privatstraße	CS 8288,20128 8291,20112 8315,19993 8325,19934
 Kabelitzweg: Privatstraße	CS 8351,20492 8035,20451
-Centweg: Privatstraße	CS 8401,22013 8382,21991 8275,22045
+Centweg: Privatstraße	CS 8400,22010 8382,21991 8275,22045
 Distelweg: Privatstraße	CS 8587,21218 8484,21282
 Quantzstr. - Potsdamer Chaussee: beim Linksabbiegen kann man nicht auf dem Radweg hinter der Autobahnauffahrt gelangen; dies ist erst später möglich	CP; -3044,1578 -3113,1692 -3184,1643
 Golfweg: Privatstraße, nur für Mitglieder	CS -7975,785 -8136,700
@@ -644,7 +645,7 @@ entlang des Rewe-Supermarkts	CS 21163,15289 21263,15291 21350,15292
 Malevkeweg: Privatstraße	CS 24877,10863 24875,10919 24819,10924
 Arturweg: Privatstraße	CS 24949,10956 24948,10815
 Arturweg: Privatstraße	CS 24919,10818 24948,10815 25002,10810 25058,10805 25057,10900 25055,10959
-Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,8364 23047,8439 22954,8506 22856,8577
+Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,8364 23047,8439 22974,8491 22856,8577
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
