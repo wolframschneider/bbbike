@@ -15480,7 +15480,7 @@ EOF
 #: note: genauere Uhrzeit von Dieter Heimann
 #: confirmed_by: um 20:30 Uhr steht man vor einem geschlossenen Tor, zumindest an der Nordostseite (2012-08)
 #: tempex: sa,su,holiday,(mo-fr T20:00-sunrise) vvv
-Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
+Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21498,7153 21475,7500 21497,7597 21540,7630
 Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21025,7349
 #: tempex ^^^
 #: note: ^^^
@@ -15538,7 +15538,7 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: tempex: night
-	2::night 3332,12742 3231,12749 3127,12793 3065,12975 3016,13315 2987,13448 2953,13489 2950,13552
+	2::night 3332,12742 3231,12749 3120,12831 3065,12975 3016,13315 2987,13448 2953,13489 2955,13508
 EOF
      },
      { from  => undef, #
@@ -15680,8 +15680,8 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: tempex: T23:00-T06:00 vvv
-	2::night 21150,11925 21132,11943 21100,11960 20862,12027 20810,12031
-	2::night 20862,12027 20836,11768
+	2::night 21150,11925 21132,11943 21100,11960 20857,12027 20810,12031
+	2::night 20857,12027 20831,11771 20825,11732 20771,11672
 #: tempex ^^^
 EOF
      },
@@ -16228,7 +16228,7 @@ EOF
      },
      { from  => undef, #
        until => undef, #
-       text  => 'Am Kupfergraben und am Zeughaus: Antik-, Buch- und Kunstmarkt, Samstag und Sonntag ca. 10-17 Uhr, nur Schieben möglich',
+       text  => 'Am Kupfergraben und am Zeughaus: Antik-, Buch- und Kunstmarkt, Samstag, Sonntag und an Feiertagen ca. 10-17 Uhr, nur Schieben möglich',
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
@@ -21615,9 +21615,9 @@ EOF
 	2::temp 13886,10939 13856,10864
 EOF
      },
-     { from  => $isodate2epoch->("2018-06-01 20:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-06-03 02:00:00"), 
-       text  => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 02.06.2018 und 03.06.2018',
+     { from  => $isodate2epoch->("2019-06-13 20:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-06-16 02:00:00"), 
+       text  => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 14.06.2019 und 15.06.2019',
        periodic => 1,
        recurrences => [['yearly', days => 1, months => 6]], # kann Anfang Juni oder Anfang Juli oder Ende August passieren
        type  => 'gesperrt',
@@ -21649,15 +21649,15 @@ EOF
 	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 11162,19844 11309,19923 11423,19982 11555,20051
 EOF
      },
-     { from  => $isodate2epoch->("2018-05-31 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-06-03 23:59:59"),
-       text  => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. bis 3. Juni 2018',
+     { from  => $isodate2epoch->("2019-05-31 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-06-03 23:59:59"),
+       text  => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. bis 3. Juni 2019',
        periodic => 1,
        recurrences => [["yearly", "days" => 30, "months" => 5]],
        type  => 'gesperrt',
        source_id => 'https://familienfez.fez-berlin.de/programm/kindertagsfest/',
        data  => <<EOF,
-#: tempex: YYYY0530-YYYY0601 vvv
+#: tempex: YYYY0531-YYYY0603 vvv
 	2::temp 20760,5743 20716,6029 20707,6098 20623,6136 20453,6211 20464,6237
 	2::temp 19961,5989 20015,6069 20293,6278 20200,6321 20106,6357
 	2::temp 20200,6321 20262,6493 20225,6631
@@ -21683,11 +21683,11 @@ EOF
 	2::temp 3976,11869 3807,11859
 EOF
      },
-     { from  => $isodate2epoch->("2018-06-08 04:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2018-06-11 04:00:00"), #
+     { from  => $isodate2epoch->("2019-05-17 04:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2019-05-20 04:00:00"), #
        periodic => 1,
-       recurrences => [['yearly', days => 2, months => 6]],
-       text  => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 09.06.2018 bis 11.06.2018 früh',
+       recurrences => [['yearly', days => 17, months => 5]],
+       text  => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 18.05.2019 bis 20.05.2019 früh',
        type  => 'handicap',
        source_id => 'IM_025248',
        data  => <<EOF,
@@ -26602,7 +26602,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-03-16
+#: last_checked: 2019-05-02
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26799,7 +26799,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-04-29 vvv
+#: last_checked: 2019-05-01 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27319,7 +27319,7 @@ EOF
        data  => <<EOF,
 #: by: fritz
 #: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-03-17
+#: last_checked: 2019-05-01
 	q4::inwork 4234,12710 4303,12692
 EOF
      },
@@ -27512,6 +27512,8 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: HEGEMEISTERWEG-2018
+#: last_checked: 2019-05-03
+#: check_frequency: 7d
 	2::inwork 17522,8220 17202,8391
 EOF
      },
@@ -27833,6 +27835,7 @@ EOF
        type  => 'handicap',
        source_id => '2147342174',
        data  => <<EOF,
+#: next_check_id: TRESKOWALLEE-2017
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 # REMOVED (hier keine Verbotsschilder mehr) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
@@ -28146,7 +28149,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-04-10
+#: last_checked: 2019-05-02
 #: check_frequency: 7d
 	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
@@ -28479,7 +28482,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-04-04 (daf)
+#: last_checked: 2019-05-02
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28611,11 +28614,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2019-04-30 18:00:00"), # undef, # XXX
-       text  => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis Ende April 2019',
+       until => $isodate2epoch->("2019-06-28 18:00:00"), # undef, # XXX
+       text  => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis Ende Juni 2019',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72
+#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (kein Ende-Datum)
+#: note: laut fritz bis 28.06.2019
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 EOF
@@ -28685,8 +28689,8 @@ EOF
 EOF
      },
      { from  => 1553192269, # 2019-03-21 19:17
-       until => 1556661599, # 2019-04-30 23:59
-       text  => 'Gustav-Böß-Str.: Bauarbeiten, Durchfahrt zur Spandauer Str. nicht möglich, bis Ende April 2019',
+       until => $isodate2epoch->("2019-05-29 18:00:00"), # 1556661599, # 2019-04-30 23:59
+       text  => 'Gustav-Böß-Str.: Bauarbeiten, Durchfahrt zur Spandauer Str. nicht möglich, bis Ende Mai 2019',
        type  => 'gesperrt',
        source_id => '2147343360',
        data  => <<EOF,
@@ -28786,19 +28790,19 @@ EOF
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
 #: add_fragezeichen: wann wird der Weg wieder offen sein?
 #: osm_watch: way id="8655276" version="17"
-#: last_checked: 2019-04-05
+#: last_checked: 2019-05-04
 #: check_frequency: 90d
 	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
 EOF
      },
      { from  => undef, # 
        until => 1557504000, # 2019-05-10 18:00
-       text  => 'Alt-Biesdorf: zwischen Grabensprung und Köpenicker Str. für Radfahrer gesperrt, bis 10. Mai 2019',
+       text  => 'Alt-Biesdorf: zwischen Grabensprung und Köpenicker Str. für Radfahrer gesperrt, bis 10. Mai 2019 (könnte aber bereits wieder offen sein)',
        type  => 'gesperrt',
        source_id => '2147344050',
        data  => <<EOF,
 #: source_id: 2147344103 (bis Mitte Mai 2019)
-	2::inwork 20549,11659 20633,11651 20963,11618 21108,11628
+	2::inwork 20540,11660 20633,11651 20963,11618 21108,11628
 EOF
      },
      { from  => undef, # 
@@ -28816,6 +28820,22 @@ EOF
        source_id => '2147344106',
        data  => <<EOF,
 	q4::inwork; 6459,8281 6459,8272 6460,8186 6460,8093
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Böhmische Str. am Böhmischen Platz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: BOEHMISCHERPLATZ-2019
+#: XXX wann sind die Bauarbeiten beendet? vvv
+#: last_checked: 2019-05-02 vvv
+#: check_frequency: 14d vvv
+	q4::inwork 13553,7594 13566,7649
+	q4::inwork 13581,7586 13594,7641
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
 EOF
      },
     );

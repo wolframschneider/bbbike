@@ -1,719 +1,6 @@
-$#temp_blocking = 44;
+$#temp_blocking = 727;
 push @temp_blocking,
 (
-       {
-         'data' => '#: tempex: YYYY0431T1200-YYYY05020000 vvv
-#: by: https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2971249-2970764-myfest-berlin.html
-	2::temp 11763,10635 11734,10563 11721,10530 11754,10516 11949,10414
-	2::temp 11552,10863 11772,10764 11760,10732 11781,10696 11763,10635 11505,10744 11552,10863 11589,10947 11640,11067
-	2::temp 11961,11041 11899,10886 11839,10736 11824,10708 11781,10696
-	2::temp 11805,10899 11805,10858
-	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11690,10543 11721,10530
-	2::temp 11839,10736 11772,10764 11804,10846
-	2::temp 11463,10642 11275,10723 11220,10744 11159,10769
-	2::temp 11708,10497 11690,10543 11734,10563 11754,10516 11708,10497
-	3 11258,10682 11275,10723 11253,10778
-	3 11253,10778 11275,10723 11258,10682
-#: tempex ^^^
-',
-         'from' => 1556618400,
-         'id' => 45,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              5
-                            ]
-                          ],
-         'text' => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2019',
-         'type' => 'gesperrt',
-         'until' => 1556747999
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'data' => '	2::temp 7101,9027 7035,9161 7012,9222 7001,9291
 	2::temp 6945,9142 7035,9161
@@ -1906,7 +1193,7 @@ push @temp_blocking,
 #: note: genauere Uhrzeit von Dieter Heimann
 #: confirmed_by: um 20:30 Uhr steht man vor einem geschlossenen Tor, zumindest an der Nordostseite (2012-08)
 #: tempex: sa,su,holiday,(mo-fr T20:00-sunrise) vvv
-Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
+Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21498,7153 21475,7500 21497,7597 21540,7630
 Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21025,7349
 #: tempex ^^^
 #: note: ^^^
@@ -1967,7 +1254,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        },
        {
          'data' => '#: tempex: night
-	2::night 3332,12742 3231,12749 3127,12793 3065,12975 3016,13315 2987,13448 2953,13489 2950,13552
+	2::night 3332,12742 3231,12749 3120,12831 3065,12975 3016,13315 2987,13448 2953,13489 2955,13508
 ',
          'from' => undef,
          'id' => 1811,
@@ -2109,8 +1396,8 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        },
        {
          'data' => '#: tempex: T23:00-T06:00 vvv
-	2::night 21150,11925 21132,11943 21100,11960 20862,12027 20810,12031
-	2::night 20862,12027 20836,11768
+	2::night 21150,11925 21132,11943 21100,11960 20857,12027 20810,12031
+	2::night 20857,12027 20831,11771 20825,11732 20771,11672
 #: tempex ^^^
 ',
          'from' => undef,
@@ -2238,7 +1525,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 1887,
          'recurring' => 1,
-         'text' => 'Am Kupfergraben und am Zeughaus: Antik-, Buch- und Kunstmarkt, Samstag und Sonntag ca. 10-17 Uhr, nur Schieben möglich',
+         'text' => 'Am Kupfergraben und am Zeughaus: Antik-, Buch- und Kunstmarkt, Samstag, Sonntag und an Feiertagen ca. 10-17 Uhr, nur Schieben möglich',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -2501,7 +1788,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im April von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Mai von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3108,13 +2395,80 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
          'until' => 1557093599
        },
        undef,
+       {
+         'data' => '# REMOVED --- #: tempex: 20170630T2000-20170701T2359
+	2::temp 14161,11930 14285,12190
+',
+         'from' => 1560448800,
+         'id' => 2433,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              6
+                            ]
+                          ],
+         'source_id' => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
+         'text' => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 14.06.2019 und 15.06.2019',
+         'type' => 'gesperrt',
+         'until' => 1560643200
+       },
        undef,
        undef,
+       {
+         'data' => '#: tempex: YYYY0531-YYYY0603 vvv
+	2::temp 20760,5743 20716,6029 20707,6098 20623,6136 20453,6211 20464,6237
+	2::temp 19961,5989 20015,6069 20293,6278 20200,6321 20106,6357
+	2::temp 20200,6321 20262,6493 20225,6631
+	2::temp 20716,6029 20593,6082 20428,6157 20453,6211 20293,6278
+	2::temp 19944,6006 20064,6290 20086,6307 20106,6357
+#: tempex ^^^
+',
+         'from' => 1559253600,
+         'id' => 2436,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'https://familienfez.fez-berlin.de/programm/kindertagsfest/',
+         'text' => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. bis 3. Juni 2019',
+         'type' => 'gesperrt',
+         'until' => 1559599199
+       },
        undef,
        undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.die-classic-days-berlin.de/programm-2/
+#: note: kann im Juni oder Juli stattfinden
+# REMOVED --- #: tempex: 20170616T0400-20170619T0400
+	q4::temp 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435
+',
+         'from' => 1558058400,
+         'id' => 2439,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              17,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'IM_025248',
+         'text' => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 18.05.2019 bis 20.05.2019 früh',
+         'type' => 'handicap',
+         'until' => 1558317600
+       },
        undef,
        undef,
        undef,
@@ -3378,33 +2732,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: YYYY0428T0000 - YYYY0502T0200 vvv
-	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
-	2::inwork 8573,12325 8540,12420
-	2::inwork 8303,12216 8344,12221 8538,12245 8592,12252
-	2::inwork 8089,12190 8214,12205
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-#: tempex ^^^
-',
-         'from' => 1556402400,
-         'id' => 2565,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              30,
-                              'months',
-                              4
-                            ]
-                          ],
-         'source_id' => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html',
-         'text' => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung des DGB), am 1. Mai 2019',
-         'type' => 'gesperrt',
-         'until' => 1556755200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3911,7 +3239,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-03-16
+#: last_checked: 2019-05-02
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -3953,7 +3281,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-04-29 vvv
+#: last_checked: 2019-05-01 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4000,19 +3328,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: ORANIENBURGER-2018
-# REMOVED (Richtung Süden ist zur Hälfte ein Radweg fertig; das restliche Stück darf man auf dem Gehweg fahren) ---	q4::inwork; 5136,21738 5210,21636 5311,21495 5320,21432 5333,21332 5341,21266 5343,21250 5349,21198
-# REMOVED (bis hier in beide Richtungen befahrbar) ---	q4::inwork; 5297,21243 5099,21410 5053,21452 5000,21488
-	q4::inwork; 5000,21488 4810,21730
-',
-         'from' => 1522789491,
-         'id' => 2946,
-         'source_id' => '2147341699',
-         'text' => 'Cyclopstr.: Einbahnstraßenregelung, offen Richtung Süden; voraussichtlich bis April 2019',
-         'type' => 'handicap',
-         'until' => 1556640000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4060,7 +3376,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: fritz
 #: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-03-17
+#: last_checked: 2019-05-01
 	q4::inwork 4234,12710 4303,12692
 ',
          'from' => 1527186848,
@@ -4116,6 +3432,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: HEGEMEISTERWEG-2018
+#: last_checked: 2019-05-03
+#: check_frequency: 7d
 	2::inwork 17522,8220 17202,8391
 ',
          'from' => 1530812949,
@@ -4256,7 +3574,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '# REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
+         'data' => '#: next_check_id: TRESKOWALLEE-2017
+# REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 # REMOVED (hier keine Verbotsschilder mehr) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
@@ -4305,7 +3624,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-04-10
+#: last_checked: 2019-05-02
 #: check_frequency: 7d
 	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
@@ -4351,16 +3670,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
-	q3::inwork; 9106,12795 9193,12875 9239,12923 9279,12953
-',
-         'from' => 1541444153,
-         'id' => 3044,
-         'text' => 'Schiffbauerdamm: Fahrtrichtung zwischen Albrechtstr. und Friedrichstr. in Richtung Osten gesperrt, bis Ende April 2019',
-         'type' => 'handicap',
-         'until' => 1556661599
-       },
+       undef,
        undef,
        {
          'data' => '	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
@@ -4378,28 +3688,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.787955.php
-#: by: https://www.berliner-woche.de/reinickendorf/c-verkehr/waldowstrasse-wieder-gesperrt_a202867
-	q4::inwork 5550,18775 5547,18665 5545,18590 5543,18555 5541,18451 5541,18435
-',
-         'from' => 1551589200,
-         'id' => 3053,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
-         'text' => 'Waldowstr.: Bauarbeiten zwischen Pfahler Str. und Lindauer Allee, Fahrbahn gesperrt, 4. März 2019 bis 30. April 2019',
-         'type' => 'handicap',
-         'until' => 1556640000
-       },
-       {
-         'data' => '	q4::inwork 5856,18569 5795,18585 5715,18586 5634,18587 5545,18590
-',
-         'from' => 1551308400,
-         'id' => 3054,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.758870.php',
-         'text' => 'Borggrevestr.: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich März 2019 bis Ende April 2019',
-         'type' => 'handicap',
-         'until' => 1556661599
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -4418,7 +3708,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-04-04 (daf)
+#: last_checked: 2019-05-02
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 ',
@@ -4483,25 +3773,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1577811600
        },
        undef,
+       undef,
        {
-         'data' => '	q3::inwork -3887,16686 -3808,16690 -3715,16710
-',
-         'from' => 1551379334,
-         'id' => 3072,
-         'text' => 'Kronprinzenstr.: in Höhe Kaiserstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, bis voraussichtlich 30.04.2019 ',
-         'type' => 'handicap',
-         'until' => 1556661600
-       },
-       {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (kein Ende-Datum)
+#: note: laut fritz bis 28.06.2019
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 ',
          'from' => undef,
          'id' => 3073,
-         'text' => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis Ende April 2019',
+         'text' => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis Ende Juni 2019',
          'type' => 'handicap',
-         'until' => 1556640000
+         'until' => 1561737600
        },
        {
          'data' => '#: osm_watch: way id="4597320" version="15"
@@ -4557,21 +3840,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1553192269,
          'id' => 3080,
          'source_id' => '2147343360',
-         'text' => 'Gustav-Böß-Str.: Bauarbeiten, Durchfahrt zur Spandauer Str. nicht möglich, bis Ende April 2019',
+         'text' => 'Gustav-Böß-Str.: Bauarbeiten, Durchfahrt zur Spandauer Str. nicht möglich, bis Ende Mai 2019',
          'type' => 'gesperrt',
-         'until' => 1556661599
+         'until' => 1559145600
        },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.796103.php ("bald")
-#: by: https://www.berliner-woche.de/waidmannslust/c-bauen/steg-im-fliess-wird-saniert_a206581
-	2::inwork 4022,22691 3947,22622 3907,22606 3879,22574
-',
-         'from' => undef,
-         'id' => 3081,
-         'text' => 'Am Tegeler Fließ: Holzbohlensteg zwischen Brandtstr. und Fürt-Bismarck-Steg wegen Bauarbeiten gesperrt, bis Frühjahr 2019',
-         'type' => 'gesperrt',
-         'until' => 1556726400
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: WERNSDORFERSTR-2019
@@ -4588,27 +3861,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: 2147343964
-#: source_id: 2147344088 (bis Ende April 2019)
-#: by: https://www.berliner-woche.de/mitte/c-bauen/brunnenstrasse-ist-bis-15-april-baustelle_a207937
-#: note: mittlerweile nur einige Meter an der Kreuzung Invalidenstraße gesperrt
-	q3::inwork; 10002,14092 10177,13766
-	q4::inwork; 9917,13741 9873,13872 9804,14071
-	q4::inwork; 9936,14085 10002,14092
-',
-         'from' => 1554064162,
-         'id' => 3084,
-         'text' => 'Brunnenstr.: Bauarbeiten zwischen Brunnenstr. und Torstr., Richtung Rosenthaler Platz gesperrt, außerdem Einbahnstraßenregelung in der Ackerstr. und in der Invalidenstr. zwischen Elisabethkirchstr. und Brunnenstr., bis Anfang Mai 2019',
-         'type' => 'handicap',
-         'until' => 1556726400
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
 #: add_fragezeichen: wann wird der Weg wieder offen sein?
 #: osm_watch: way id="8655276" version="17"
-#: last_checked: 2019-04-05
+#: last_checked: 2019-05-04
 #: check_frequency: 90d
 	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
 ',
@@ -4620,12 +3879,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: source_id: 2147344103 (bis Mitte Mai 2019)
-	2::inwork 20549,11659 20633,11651 20963,11618 21108,11628
+	2::inwork 20540,11660 20633,11651 20963,11618 21108,11628
 ',
          'from' => undef,
          'id' => 3087,
          'source_id' => '2147344050',
-         'text' => 'Alt-Biesdorf: zwischen Grabensprung und Köpenicker Str. für Radfahrer gesperrt, bis 10. Mai 2019',
+         'text' => 'Alt-Biesdorf: zwischen Grabensprung und Köpenicker Str. für Radfahrer gesperrt, bis 10. Mai 2019 (könnte aber bereits wieder offen sein)',
          'type' => 'gesperrt',
          'until' => 1557504000
        },
@@ -4647,6 +3906,23 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Martin-Luther-Str.: zwischen Heylstr. und Hauptstr. Bauarbeiten, Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, bis 6. Mai 2019',
          'type' => 'handicap',
          'until' => 1557158400
+       },
+       {
+         'data' => '#: next_check_id: BOEHMISCHERPLATZ-2019
+#: XXX wann sind die Bauarbeiten beendet? vvv
+#: last_checked: 2019-05-02 vvv
+#: check_frequency: 14d vvv
+	q4::inwork 13553,7594 13566,7649
+	q4::inwork 13581,7586 13594,7641
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
+',
+         'from' => undef,
+         'id' => 3090,
+         'text' => 'Böhmische Str. am Böhmischen Platz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );

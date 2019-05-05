@@ -443,8 +443,8 @@ Ingridpfad	1 6359,2875 6304,2825 6182,2737
 Georgenstr. (Mitte)	1 9313,12662 9242,12652 9108,12635
 Georgenstr. (Mitte)	1 9117,12705 9242,12652
 Natalissteig	1 1200,14943 1223,14824 1226,14714
-Alt-Biesdorf	1 20375,11694 20435,11698 20575,11698 21108,11628
-Alt-Biesdorf	1 21108,11628 20963,11618 20633,11651 20549,11659 20375,11694
+Alt-Biesdorf	1 20375,11694 20435,11698 20571,11698 20771,11672 21108,11628
+Alt-Biesdorf	1 21108,11628 20963,11618 20633,11651 20540,11660 20375,11694
 Privatstr. 14	1s 13159,17196 13103,17280
 Bernkasteler Str.	1s 15208,16939 15015,16908 14923,16901 14923,16914
 Wiedenbrücker Weg	1 4207,1113 4220,1175 4141,1282
@@ -1466,7 +1466,8 @@ Pietschkerstr. -> Staudenweg: Straßenbahntrasse	3::igndisp 17652,5082 17601,5090
 Pietschkerstr. -> Sterndamm: Straßenbahntrasse	3::igndisp 17652,5082 17601,5090 17542,4772
 Sterndamm -> Pietschkerstr.: Straßenbahntrasse	3::igndisp 17648,5338 17601,5090 17652,5082
 Sterndamm -> Staudenweg: Straßenbahntrasse	3::igndisp 17542,4772 17601,5090 17493,5112
-unbequemes Passieren des Mittelstreifens	3nocross::ignrte 21954,11269 22242,11269 22326,11266
+unbequemes Passieren des Mittelstreifens	3nocross::ignrte 21863,11289 21954,11269 22242,11269 22326,11266
+Alt-Biesdorf -> Grüne Aue: unbequemes Passieren des Mittelstreifens	3::igndisp 22242,11269 21954,11269 21956,11246
 Alt-Biesdorf -> Wuhlewanderweg: unbequemes Passieren des Mittelstreifens	3::igndisp 21954,11269 22242,11269 22244,11311
 Alt-Biesdorf -> Möwenweg: unbequemes Passieren des Mittelstreifens	3::igndisp 22326,11266 22242,11269 22238,11223
 Wuhlewanderweg -> Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3::igndisp 22244,11311 22242,11269 22326,11266
@@ -2530,7 +2531,7 @@ tragen (Treppe S-Bhf. Raoul-Wallenberg-Str., 2 x 13 Stufen)	0:30:-244 20050,1629
 tragen (ca. 40 Stufen)	0:59:-124 1659,3226
 tragen (Treppe)	0:30:-114 1715,3257
 tragen (Treppe)	0:30:-97 6172,12878
-tragen (Treppe)	0:40:-184 2921,13606
+tragen (Treppe)	0:40:68 2915,13610
 tragen (Treppe)	0:40:-262 3016,13615
 tragen (Treppe, 32 Stufen)	0:40:-7 3054,13638
 tragen (Treppe, 19 Stufen)	0:25:41 20939,2389
@@ -3015,7 +3016,7 @@ Betulaweg: Bauarbeiten, gesperrt	2::inwork 19564,898 19316,951
 Rubusweg: Bauarbeiten, gesperrt	2::inwork 19551,868 19316,951
 Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
-Corinthstr.: Einbahnstraßenregelung	1s:inwork 14608,10409 14447,10491
+Corinthstr.: Einbahnstraßenregelung, Radfahrer dürfen den Gehweg benutzen	1s:inwork 14608,10409 14447,10491
 Weidenkätzchenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21421,158 21447,47
 Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21379,33
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,8260
