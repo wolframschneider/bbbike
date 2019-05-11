@@ -47,11 +47,12 @@ GetOptions
      'perl=s'             => \$perl_code,
      'shell=s'            => \$shell_code,
      'garmin-disk-type=s' => \$garmin_disk_type,
-     'cd'                 => \$cd,
+     'cd:s'               => \$cd,
      'debug'              => \$debug,
      'help|?'             => sub { usage(1) },
     )
     or usage(2);
+@ARGV and usage(2);
 
 if (defined $perl_code && defined $shell_code) {
     die "Cannot specify --perl and --shell together.\n";
@@ -65,9 +66,9 @@ if (!defined $perl_code && !defined $shell_code) {
 }
 
 if (defined $shell_code) {
-    $perl_code = 'sub { my $gps = shift; local $ENV{GPS} = $gps; local $ENV{MOUNTKEEPER_DIR} = $gps; if ($cd) { chdir $gps or die $! } system $shell_code; chdir "/"; 1 }';
+    $perl_code = 'sub { my $gps = shift; local $ENV{GPS} = $gps; local $ENV{MOUNTKEEPER_DIR} = $gps; if (defined $cd) { chdir "$gps/$cd" or die "Can\'t chdir to $gps/$cd: $!\n" } system $shell_code; chdir "/"; 1 }';
 } else {
-    $perl_code = 'sub { my $gps = shift; if ($cd) { chdir $gps or die $! } eval { ' . $perl_code . '}; my $err = $@; chdir "/"; die $err if $err; 1 }';
+    $perl_code = 'sub { my $gps = shift; if (defined $cd) { chdir "$gps/$cd" or die "Can\'t chdir to $gps/$cd: $!\n" } eval { ' . $perl_code . '}; my $err = $@; chdir "/"; die $err if $err; 1 }';
 }
 
 my $sub = eval $perl_code;
@@ -89,7 +90,7 @@ gps-mount.pl - mount GPS device
 
 =head1 SYNOPSIS
 
-    gps-mount.pl [--perl 'perl code' | --shell 'shell code'] [--garmin-disk-type flash|card] [--cd] [--debug]
+    gps-mount.pl [--perl 'perl code' | --shell 'shell code'] [--garmin-disk-type flash|card] [--cd | --cd reldir] [--debug]
 
 =head1 DESCRIPTION
 
@@ -133,6 +134,12 @@ Example:
 Change current directory to the GPS device directory before executing
 perl or shell code.
 
+=item C<--cd I<reldir>>
+
+Change current directory to the GPS device directory and then
+additionally to the specified I<reldir> before executing perl or shell
+code.
+
 =item C<--garmin-disk-type flash|card>
 
 Specify what to mount for Garmin devices: either the internal flash
@@ -144,11 +151,29 @@ Additional debugging.
 
 =back
 
-=head2 TODO
+=head2 ENVIRONMENT
 
-* Document MOUNTKEEPER_DIR environment variable, or find another
-  solution for this problem (show user that the current shell has
-  something mounted)?
+=over
+
+=item C<GPS>
+
+Path of the GPS device (set only when using the C<--shell> option or
+the default shell is started).
+
+=item C<MOUNTKEEPER_DIR>
+
+Just set when using the C<--shell> option or the default shell is
+started. Use case is to define a shell prompt that checks for presence
+of this environment variable, and displays a different prompt. An
+example for F<.zshrc>:
+
+    if [[ "$MOUNTKEEPER_DIR" != "" ]] ; then
+       PROMPT='%B%T %n@%m (MOUNTED)%(!.#.:)%f %b'
+    else
+       PROMPT='%B%T %n@%m%(!.#.:)%f %b'
+    fi
+
+=back
 
 =head1 SEE ALSO
 

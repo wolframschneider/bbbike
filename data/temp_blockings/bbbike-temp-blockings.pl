@@ -32,11 +32,11 @@ my $isodate2epoch = sub {
        text  => "Gesperrte Straßen am 28.5. zwischen 14 Und 24 Uhr während des Kirchentages (im Bereich Pariser Platz - Unter den Linden - Friedrichstr. - Gendarmenmarkt)",
        type  => "handicap",
      },
-     { from  => $isodate2epoch->("2018-05-17 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-05-21 23:59:59"),
+     { from  => $isodate2epoch->("2019-06-06 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-06-10 23:59:59"),
        periodic => 1,
        recurrences => [['easter', 47]], # zwei Tage vor Pfingsten
-       text  => 'Straßenfest rund um den Blücherplatz, 18.05.2018 bis 21.05.2018',
+       text  => 'Straßenfest rund um den Blücherplatz, 07.06.2019 bis 10.06.2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.berlin.de/tickets/suche/detail.php?id=810735
@@ -61,12 +61,12 @@ my $isodate2epoch = sub {
 	2::temp 9837,9856 9723,9842 9588,9827 9387,9804
 EOF
      },
-     { from  => $isodate2epoch->("2018-05-19 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-05-20 23:59:59"),
+     { from  => $isodate2epoch->("2019-06-08 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-06-09 23:59:59"),
        periodic => 1,
        recurrences => [['easter', 49]], # Pfingstsonntag
        source_id => 'http://www.karneval-berlin.de/de/',
-       text  => 'Karneval der Kulturen, 20.05.2016',
+       text  => 'Karneval der Kulturen, 09.06.2019',
        type  => 'gesperrt',
        data  => <<EOF,
 	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10951,9216 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
@@ -1950,7 +1950,7 @@ EOF
        text  => 'Berliner Allee Richtung stadtauwärts, zwischen Langhanstr. und Lindenallee Baustelle, Fahrtrichtung gesperrt (bis Ende 2005)',
        type  => 'handicap',
        data  => <<EOF,
-	q4; 13512,15909 13623,15954 13737,15994 13826,16026 14015,16103 14056,16120 14248,16202 14346,16241
+	q4; 13508,15912 13623,15954 13737,15994 13826,16026 14015,16103 14056,16120 14248,16202 14346,16241
 EOF
      },
      { from  => 1138319749, # 2006-01-27 00:55
@@ -11913,7 +11913,7 @@ EOF
 	3 9028,12307 9141,12320 9131,12438
 	3 7744,10372 7633,10394 7444,10479
 	3 7293,11519 7171,11510 6987,11487 6915,11492 6825,11486 6716,11439
-	3 9877,12293 9873,12315 9858,12410 9845,12506
+	3 9877,12293 9873,12315 9858,12410 9848,12506
 	3 7849,10488 7689,10514 7478,10612
 	3 7160,11225 7103,11247 6851,11346 6692,11365
 	3 8102,11099 8000,11137 7828,11133
@@ -11932,7 +11932,7 @@ EOF
 	3 7003,10513 7033,10396 7245,10499 7281,10510
 	3 8232,11414 8226,11458 8172,11679
 	3 9369,12253 9358,12351 9343,12464
-	3 9845,12506 9858,12410 9873,12315 9877,12293
+	3 9848,12506 9858,12410 9873,12315 9877,12293
 	3 8205,10979 8104,11037 7980,11070 7747,11075
 	3 6494,10440 6532,10529 6468,10550
 	3 9343,12464 9358,12351 9369,12253
@@ -12207,7 +12207,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009449',
        data  => <<EOF,
-	1::inwork 13072,15590 12966,15478 12870,15342
+	1::inwork 13078,15586 12962,15480 12870,15342
 EOF
      },
      { from  => 1216591200, # 2008-07-21 00:00
@@ -18173,17 +18173,18 @@ EOF
 	2::temp 7429,12070 7031,12024 6884,12006
 EOF
      },
-     { from  => $isodate2epoch->("2018-06-28 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-07-01 23:59:59"),
+     { from  => $isodate2epoch->("2019-06-27 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-06-30 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 6]],
-       text  => 'Bergmannstraße (Kreuzberg): Veranstaltung (Bergmannstraßenfest), Straße vollständig zwischen Mehringdamm und Zossener Str. gesperrt (29. Juni 2018 bis 01. Juli 2018)',
+       # früher Bergmannstraßenfest
+       text  => 'Kreuzbergstr.: Veranstaltung (Kreuzbergstraßenfest), Straße vollständig zwischen Methfesselstr. und Katzbachstr. gesperrt (28. Juni 2019 bis 30. Juni 2019)',
        type  => 'gesperrt',
-       source_id => 'https://www.berlin.de/events/1934675-2229501-bergmannstrassenfest.html',
+       source_id => 'https://www.gratis-in-berlin.de/festivals/item/2037452-bergmannstrassenfest-2019-jetzt-kreuzbergstrassenfest-kreuzberg-jazzt-kreuzberg-kocht-und-macht-theater-kreuzbergstrassenfest',
        data  => <<EOF,
-	2::temp 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252
-	3 9487,9209 9505,9306 9524,9426
-	3 9524,9426 9505,9306 9487,9209
+	2::temp 8598,9269 8769,9295 8970,9323 9154,9347 9211,9354
+	3 9000,9509 8970,9323 9007,9264
+	3 9007,9264 8970,9323 9000,9509
 EOF
      },
      { from  => 1277443049, # 2010-06-25 07:17
@@ -19936,7 +19937,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.weissenseer-blumenfest.de', # note: artificial query string not allowed (e.g. ?y=2017)
        data  => <<EOF,
-	q4::temp; 14499,16341 14346,16241 14248,16202 14056,16120 14015,16103 13826,16026 13737,15994 13623,15954 13512,15909
+	q4::temp; 14499,16341 14346,16241 14248,16202 14056,16120 14015,16103 13826,16026 13737,15994 13623,15954 13508,15912
 EOF
      },
      { from  => 1313913600, # 2011-08-21 10:00
@@ -22566,8 +22567,8 @@ EOF
        source_id => 'IM_020714',
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
-#: also_indoor: traffic (G)
-#: last_checked: 2019-04-04
+#: also_indoor: traffic
+#: last_checked: 2019-05-08
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -22844,13 +22845,13 @@ EOF
 	q3::inwork; 15098,12849 15233,12829 15357,12813
 EOF
      },
-     { from  => undef, # 1502056800, # 2017-08-07 00:00
-       until => 1513533594, # kaum noch Beeinträchtigungen --- $isodate2epoch->("2017-12-19 18:00:00"), # 1502894902, # $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
-       text  => 'Scharnweberstr.: zwischen Gürtelstr. und Jessnerstr. Richtung Weichselstr. Bauarbeiten, Fahrbahn gesperrt, bis 19. Dezember 2017',
+     { from  => 1557083719, # undef, # 1502056800, # 2017-08-07 00:00
+       until => $isodate2epoch->("2019-05-13 18:00:00"), # 1513533594, # kaum noch Beeinträchtigungen --- $isodate2epoch->("2017-12-19 18:00:00"), # 1502894902, # $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
+       text  => 'Scharnweberstr.: zwischen Jessnerstr. und Müggelstr. Richtung Weichselstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte Mai 2019',
        type  => 'handicap',
-       source_id => '2147342112',
+       source_id => '2147344149',
        data  => <<EOF,
-	q3::inwork; 15248,11880 15121,11899
+	q3::inwork; 15080,11905 14965,11921
 EOF
      },
      { from  => 1394953200, # 2014-03-16 08:00
@@ -25929,8 +25930,8 @@ EOF
        text  => 'Umfangreiche Sperrungen in Mitte: rund um das Berliner Rathaus und im Bereich des Berliner Doms und Zeughauses, am 24. Januar 2017 von 7 Uhr bis 16 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 9984,12426 9934,12420 9858,12410 9845,12506 9837,12560 9892,12596 9919,12613 9948,12631 10017,12675 10054,12699 10086,12725
-	2::temp 9919,12613 9956,12523 9845,12506
+	2::temp 9984,12426 9934,12420 9858,12410 9848,12506 9842,12565 9892,12596 9919,12613 9948,12631 10017,12675 10054,12699 10086,12725
+	2::temp 9919,12613 9956,12523 9848,12506
 	2::temp 9956,12523 9984,12426 10024,12431 10063,12438 9956,12617 9948,12631
 	2::temp 10063,12438 10155,12494 10176,12506 10243,12546 10300,12587
 	2::temp 10704,12595 10601,12521 10644,12469 10673,12434 10772,12515 10704,12595
@@ -26799,7 +26800,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-05-01 vvv
+#: last_checked: 2019-05-08 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27457,14 +27458,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2019-08-01 18:00:00"), # 1558022400, # 2019-05-16 18:00
+       until => 1557165667, # $isodate2epoch->("2019-08-01 18:00:00"), # 1558022400, # 2019-05-16 18:00
        text  => 'Friesenstr.: Fahrbahn zwischen Bergmannstr. und Jüterboger Str./Fidicinstr. für Radfahrer verboten',
        type  => 'gesperrt',
        source_id => '2147342598',
        data  => <<EOF,
-#: next_check_id: FRIESEN-2018
-#: XXX bleibt dieser Zustand tatsächlich so?
-#: last_checked: 2019-04-15
+# REMOVED (Fahrbahn mittlerweile für alle gesperrt) --- #: next_check_id: FRIESEN-2018 --- #: XXX bleibt dieser Zustand tatsächlich so? --- #: last_checked: 2019-04-15
 	q4::inwork::igndisp; 9793,9241 9795,9162 9797,9063 9799,8962
 # REMOVED (hier nur Gehweg frei, allerdings siehe handicap-Eintrag)	q4::inwork::igndisp; 9799,8962 9801,8889
 # REMOVED (hier keine Verbotsschilder mehr gesehen) ---	q4::inwork::igndisp; 9801,8889 9801,8683
@@ -27507,13 +27506,11 @@ EOF
 EOF
      },
      { from  => 1530812949, # 2018-07-05 19:49
-       until => undef, # $isodate2epoch->("2018-11-30 18:00:00"), # 1542236400, # 2018-11-15 00:00
+       until => 1557069491, # undef, # $isodate2epoch->("2018-11-30 18:00:00"), # 1542236400, # 2018-11-15 00:00
        text  => 'Hegemeisterweg: Bauarbeiten, Straße kann unpassierbar sein, bis November 2018, eventuell auch länger',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: HEGEMEISTERWEG-2018
-#: last_checked: 2019-05-03
-#: check_frequency: 7d
+# REMOVED (weitere Einschränkungen unwahrscheinlich) --- #: next_check_id: HEGEMEISTERWEG-2018 --- #: last_checked: 2019-05-03 --- #: check_frequency: 7d
 	2::inwork 17522,8220 17202,8391
 EOF
      },
@@ -27537,9 +27534,11 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.758375.php (Verzögerungen -> check_frequency erhöht)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/zum-zweiten-mal-wurden-die-bauarbeiten-auf-der-schoenstrasse-unterbrochen_a190561
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.808235.php (Vollsperrung für drei Monate ab 13.05.2019)
 #: also_indoor: traffic
-#: priority: #B
+#: priority: #A
 #: last_checked: 2019-04-12
+#: next_check: 2019-05-13 (beide Richtungen dann!)
 	q4::inwork; 13391,16436 13630,16629
 EOF
      },
@@ -27762,7 +27761,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-04-29
+#: last_checked: 2019-05-09
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28102,14 +28101,14 @@ Hinter der Katholischen Kirche	2::temp 9812,12150 9808,12182 9798,12267 9796,122
 Charlottenstr. (Kreuzberg, Mitte)	2::temp 9454,12558 9462,12481 9475,12365 9489,12263 9496,12215
 Dorotheenstr. (Mitte)	2::temp 9454,12558 9581,12588 9681,12601 9742,12609 9870,12657
 Am Kupfergraben	2::temp 9870,12657 9900,12643 9919,12613
-Hinter dem Gießhaus	2::temp 9858,12410 9845,12506 9837,12560 9892,12596 9919,12613
-Hinter dem Zeughaus	2::temp 9845,12506 9956,12523
+Hinter dem Gießhaus	2::temp 9858,12410 9848,12506 9842,12565 9892,12596 9919,12613
+Hinter dem Zeughaus	2::temp 9848,12506 9956,12523
 Behrenstr.	2::temp 9496,12215 9631,12227 9680,12232 9730,12238 9737,12238 9798,12267
 Universitätsstr.	2::temp 9581,12588 9613,12381
 Oberwallstr.	2::temp 9858,12410 9873,12315 9877,12293 9883,12251 9898,12161
 Am Festungsgraben	2::temp 9742,12609 9747,12584
 Am Festungsgraben	2::temp 9747,12584 9764,12492 9771,12400
-Am Festungsgraben	2::temp 9845,12506 9764,12492
+Am Festungsgraben	2::temp 9848,12506 9764,12492
 Hedwigskirchgasse	2::temp 9737,12238 9747,12205 9755,12144
 Bebelplatz	2::temp 9713,12392 9730,12238
 Bebelplatz	2::temp 9680,12232 9664,12387
@@ -28149,7 +28148,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-05-02
+#: last_checked: 2019-05-10
 #: check_frequency: 7d
 	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
@@ -28636,8 +28635,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1557180000, # 2019-05-07 00:00
-       text  => 'Akazienallee: zwischen Kastanienallee und Lindenallee Bauarbeiten, Fahrbahn gesperrt, ggfs. sind auch Radfahrer betroffen, bis 06.05.2019',
+       until => $isodate2epoch->("2019-05-24 18:00:00"),
+       text  => 'Akazienallee: zwischen Kastanienallee und Lindenallee Bauarbeiten, Fahrbahn gesperrt, ggfs. sind auch Radfahrer betroffen, bis 24.05.2019',
        type  => 'handicap',
        data  => <<EOF,
 #: by: fritz
@@ -28796,7 +28795,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1557504000, # 2019-05-10 18:00
+       until => 1557426749, # 1557504000, # 2019-05-10 18:00
        text  => 'Alt-Biesdorf: zwischen Grabensprung und Köpenicker Str. für Radfahrer gesperrt, bis 10. Mai 2019 (könnte aber bereits wieder offen sein)',
        type  => 'gesperrt',
        source_id => '2147344050',
@@ -28813,13 +28812,14 @@ EOF
 	2::night:weekend 18320,2195 18448,2182 18491,2128
 EOF
      },
-     { from  => 1556566625, # 2019-04-29 21:37
-       until => $isodate2epoch->("2019-05-06 18:00:00"), # 1557957599, # 2019-05-15 23:59
-       text  => 'Martin-Luther-Str.: zwischen Heylstr. und Hauptstr. Bauarbeiten, Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, bis 6. Mai 2019',
+     { from  => 1557083664, # 1556566625, # 2019-04-29 21:37
+       until => $isodate2epoch->("2019-05-13 18:00:00"), # 1557957599, # 2019-05-15 23:59
+       text  => 'Martin-Luther-Str.: zwischen Hauptstr. und Heylstr. Bauarbeiten Richtung Norden, Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, bis 13. Mai 2019',
        type  => 'handicap',
        source_id => '2147344106',
        data  => <<EOF,
-	q4::inwork; 6459,8281 6459,8272 6460,8186 6460,8093
+#: source_id: 2147344134
+	q4::inwork; 6460,8093 6460,8186 6459,8272 6459,8281
 EOF
      },
      { from  => undef, # 
@@ -28836,6 +28836,97 @@ EOF
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
+EOF
+     },
+     { from  => 1557083524, # 2019-05-05 21:12
+       until => $isodate2epoch->("2019-05-27 18:00:00"),
+       text  => 'Langhansstr.: zwischen Goethestr. und Roelckestr. sowie zwischen Börnestr. und Berliner Allee ist die Fahrbahn wegen Bauarbeiten gesperrt, bis 27. Mai 2019',
+       type  => 'handicap',
+       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-06-05-19-',
+       data  => <<EOF,
+#: source_id: 2147344146
+	q4::inwork; 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
+#: source_id: 2147344145
+	q4::inwork; 13312,16027 13508,15912
+EOF
+     },
+     { from  => 1557166526, # 2019-05-06 20:15
+       until => $isodate2epoch->("2019-06-06 18:00:00"),
+       text  => 'Chausseestr.: zwischen Torstr. und Invalidenstr. Gleisbauarbeiten, Richtung Norden gesperrt, der Radverkehr ist auch betroffen, bis 6. Juni 2019',
+       type  => 'handicap',
+       source_id => '2147344155',
+       data  => <<EOF,
+	q4::inwork; 9212,13471 9207,13493 9094,13641 9042,13707 8935,13844
+EOF
+     },
+     { from  => 1557007200, # 2019-05-05 00:00
+       until => $isodate2epoch->("2019-05-17 18:00:00"),
+       text  => 'Schottstr.: Richtung Gotlindestr. zwischen Roedeliusplatz und Rüdigerstr.: Fahrtrichtung gesperrt, evtl. sind auch Radfahrer betroffen, bis voraussichtlich 17. Mai 2019',
+       type  => 'handicap',
+       source_id => '2147344157',
+       data  => <<EOF,
+	q4::inwork; 16276,12273 16397,12397
+EOF
+     },
+     { from  => 1557093600, # 2019-05-06 00:00
+       until => 1559339999, # 2019-05-31 23:59
+       text  => 'Alte Kaulsdorfer Str.: Bauarbeiten zwischen Kaulsdorfer Str. und Am Bahndamm, Fahrbahn Richtung Süden gesperrt, evtl. sind auch Radfahrer betroffen, bis Ende Mai 2019 ',
+       type  => 'handicap',
+       source_id => '2147344160',
+       data  => <<EOF,
+	q4::inwork; 22325,6385 22365,6149
+EOF
+     },
+     { from  => 1557093600, # 2019-05-06 00:00
+       until => undef, # XXX
+       text  => 'Gersdorfstr.: zwischen Kaiserstr. und Kurfürstenstr. Fahrbahn Richtung Norden gesperrt, evtl. sind auch Radfahrer betroffen',
+       type  => 'handicap',
+       source_id => '2147344162',
+       data  => <<EOF,
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=55887
+#: XXX wann sind die Bauarbeiten beendet?
+#: next_check: 2019-06-06
+	q4::inwork; 8511,4336 8427,4435 8318,4566
+EOF
+     },
+     { from  => 1558216800, # 2019-05-19 00:00
+       until => 1569880800, # 2019-10-01 00:00
+       text  => 'Rohrwallallee: Bauarbeiten zwischen Schappachstr. und Fehrower Steig, Fahrbahn teilweise gesperrt, vom 20.05.2019 bis 30.09.2019',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.808367.php',
+       data  => <<EOF,
+#: next_check_id: ROHRWALLALLEE-2019
+	q4::inwork 26190,-853 26230,-858 26346,-863 26389,-932 26445,-1037
+EOF
+     },
+     { from  => 1558216800, # 2019-05-19 00:00
+       until => 1559339999, # 2019-05-31 23:59
+       text  => 'Umfahrung Hultschiner Damm: eventuell gibt es eine Einbahnstraßenregelung in den Straßen Bütower Str., Schrobsdorffstr., Pilsener Str., Bruchsaler Str., Wickenweg und Badener Str., 20. Mai 2019 bis 31. Mai 2019',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.808355.php',
+       data  => <<EOF,
+	q4::inwork; 24227,9574 24370,9542 24404,9527 24360,9411 24315,9302 24261,9168 24207,9035 24032,9111
+	q4::inwork; 24051,9156 23798,9263 23838,9351 23887,9463 23932,9564 24205,9520
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Bizetstr.: Bauarbeiten zwischen Smetanastr. und Lindenallee, Einbahnstraße, offen Richtung Westen, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.berliner-woche.de/weissensee/c-verkehr/viel-verkehr-wegen-der-bauarbeiten-im-komponistenviertel_a211594#gallery=default&pid=256000
+#: XXX wann werden die Bauarbeiten beendet?
+#: last_checked: 2019-05-09
+	q4::inwork; 14056,15985 14248,16058 14295,16076
+EOF
+     },
+     { from  => 1555192800, # 2019-04-14 00:00
+       until => 1567288800, # 2019-09-01 00:00
+       text  => 'Trebbin: Fahrbahnsanierung Brücke über den Neuen Graben bei Trebbin, Vollsperrung der K 7232, 15.04.2019 bis 31.08.2019',
+       type  => 'gesperrt',
+       source_id => '197200518-1',
+       data  => <<EOF,
+	2::inwork -2128,-17678 -2059,-17909
 EOF
      },
     );
