@@ -483,6 +483,7 @@ Dahlwitz-Hoppegarten, Gemeinde Hoppegarten	OS 26449,10953
 Dahlwitz-Hoppegarten, Gemeinde Hoppegarten	OS 26746,10461
 Dahlwitz-Hoppegarten, Gemeinde Hoppegarten	OS 27080,12573
 #: linked ^^^
+Hönow	OS 25497,17801
 Hönow	OS 26493,15515
 Hönow	OS 25528,15587
 Hönow	OS 27451,14108
@@ -1003,9 +1004,14 @@ Berlin	OS 16273,-824
 #: by: mapillary
 Berlin	OS -1982,24514
 Berlin	OS 17328,26912
+Mehrow	OS 25861,19127
+Mehrow	OS 25253,18365
 Mehrow	OS 25327,19421
 Mehrow	OS 24484,18569
 Mehrow	OS 28471,19469
+#: note: hier außerdem ein weißes Schild "Trappenfelde"
+Mehrow	OS 26501,19266
+Mehrow	OS 27278,19874
 Krummensee	OS 29275,21185
 Krummensee	OS 29536,21843
 Eiche	OS 22809,16240
@@ -1379,3 +1385,12 @@ Rangsdorf	OHT 14254,-11563
 #: linked: Waldfrieden|(Bernau)
 Waldfrieden	OS 20039,32555
 #: by: ^^^
+Brandenburg	OS -44325,-1177
+Gollwitz	OS -41359,-32
+Götzer Berge	OS -35227,3488
+Wildpark West	OS -19427,-2786
+Phöben	OS -25046,2283
+Phöben	OS -24091,994
+Kemnitz Kolonie Zern	OHT -23424,29
+Kemnitz Kolonie Zern	OHT -23159,-430
+Werder	OS -22735,-1470

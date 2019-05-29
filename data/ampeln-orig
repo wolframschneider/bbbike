@@ -8,10 +8,10 @@
 #: temporary vvv
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-05-13 vvv
+#: last_checked: 2019-05-25 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
-#: note: kann ausgeschaltet sein (gesehen 2019-04-16)
+#: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16)
 	X::inwork 14103,10489
 #: note: anstelle des Zebrastreifens
 	F::inwork 14490,10610
@@ -54,8 +54,7 @@
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
-#: last_checked: 2019-04-06
-#: next_check: 2019-05-20
+#: last_checked: 2019-05-21
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -65,11 +64,25 @@
 #: valid: -20210601
 	X::inwork 9195,11972
 # 
+#: next_check_id: WUHLETALBRUECKE-2019
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.813955.php
+#: XXX Wann werden die Ampeln eingerichtet? Wann werden sie wieder abgebaut? vvv
+#: next_check: 2019-06-03 vvv
+#: valid: 20190603- vvv
+#: note: die beiden folgenden Punkte gehören eigentlich zu einer Ampelanlage
+	X::inwork 20891,17572
+	X::inwork 20895,17594
+	X::inwork 20769,17650
+#: valid ^^^
+#: next_check ^^^
+#: XXX ^^^
+# 
 # REMOVED (mittlerweile aus) --- #: next_check_id: ROSSSTRASSENBRUECKE-2019 --- #: XXX Gegenverkehrsregelung --- #: source_id: 2147343772 --- #: last_checked: 2019-03-17 --- #: next_check: 2019-03-29 --- #: valid: -20190329 --- # REMOVED (gewandert) ---	X::inwork 10687,11853 ---	X::inwork 10672,11870
 # 
 # REMOVED --- #: source_id: 2147343331 --- #: last_checked: 2018-11-03 --- #: next_check: 2018-11-30 --- #: valid: -20181130 --- #: priority: #B --- Gegenverkehrsregelung	X::inwork 16313,10747
 # REMOVED --- #: XXX VIZ: "Auch Radfahrer sind betroffen" --- trotz für Radfahrer freigegebenen Gehwegs? --- #: source_id: 2147343425 --- #: next_check: 2018-12-02 --- #: valid: 20181114-20181202 --- Gegenverkehrsregelung zwischen Rosenweg und Vollkropfgraben	X::inwork 21964,3592
 # 
+	F 3944,6901
 #: temporary ^^^
 # 
 ################################################################################
@@ -1440,7 +1453,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5868,20198
 	X 5801,20339
 	X 5410,20822
-	X 5382,21001
+	X 5379,21016
 	X 5136,21738
 	X 4925,22022
 	X 4724,22376
@@ -1901,7 +1914,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 4519,9393
 #: note: Anforderungsampel für Radfahrer im Zuge der Delbrückstr.; für Autos gibt es Kontaktschleifen
 	X 2190,8528
-	X 2120,8335
+	X 2121,8351
 #: off: weekend/holiday (seen 2013-05-01)
 #: note: Anforderungsampel
 	F 1773,8859
@@ -2742,7 +2755,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2019-05-01
+#: last_checked: 2019-05-24
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
@@ -2904,7 +2917,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6407
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="4"
-#: last_checked: 2019-05-02
+#: last_checked: 2019-05-19
 #: check_frequency: 30d
 	X::inwork 14174,7505
 # 
@@ -2921,7 +2934,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3943
 #: note: Anforderungsampel
 	F 6153,18592
-	F 5525,21022
+	F 5524,21034
 #: note: Anforderungsampel
 	F -7025,16195
 	B0 -3469,18005
@@ -3040,7 +3053,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: Anforderungsampel
 #: XXX provisorisch, bleibt eventuell nur während der Bauarbeiten an der Herbert-von-Karajan-Str.
 #: osm_watch: node id="1319349510" version="5"
-#: last_checked: 2019-05-15
+#: last_checked: 2019-05-27
 #: check_frequency: 45d
 	F::inwork 8005,11627
 # 
@@ -3058,11 +3071,12 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -12549,-1277
 #: by: http://www.potsdam.de/cms/beitrag/10044614/620526/
 	X -13051,-3101
-	X -12839,-1342
-	X -12833,-1365
+	X -12841,-1347
+	X -12839,-1371
 #: note: Anforderungsampel
 	F -12674,-1313
 	X -12794,-1652
+#: note: Anforderungsampel für linksabbiegende Radfahrer (Breite Str. - Dortustr. Richtung Norden)
 	X -13238,-1569
 	X -13516,-1517
 	X -13879,-1445
@@ -3193,7 +3207,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2019-05-13 vvv
+#: last_checked: 2019-05-20 vvv
 #: check_frequency: 14d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
@@ -3214,6 +3228,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -13266,2571
 	X -13181,2285
 	X -13142,1989
+	F -14457,-1797
 # 
 ################################################################################
 #: note: Ampeln elsewhere vvv
@@ -3249,6 +3264,11 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F -46340,-168
 	F -46334,-1506
 	X -46132,-1377
+	X -45761,-1064
+#: note: Anforderung für Radfahrer
+	X -44635,-1450
+#: note: 2x Ampeln für Radfahrer, einmal mit Anforderung
+	X -42961,-412
 	X -46166,-963
 	X -46517,-691
 	X -80617,45668
@@ -3436,7 +3456,7 @@ UBB, halbstündlich	B 51270,179246
 #: by: Message-ID: <2re0fqF1987v6U1@uni-berlin.de>
 	B -18163,-1357
 	B -22146,-1832
-	B -26564,-36
+	B -26516,-44
 	B -32143,-211
 	B -35377,-238
 # REMOVED (eine Brücke existiert) ---	B -41043,-435

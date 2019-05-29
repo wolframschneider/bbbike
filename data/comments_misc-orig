@@ -139,6 +139,7 @@ Kreisverkehr	Roundabout -395,-920
 Kreisverkehr	Roundabout 1370,-1295
 Kreisverkehr	Roundabout 26071,5778
 Kreisverkehr	Roundabout 13124,216
+Kreisverkehr	Roundabout -22224,-1673
 # 
 #: by: Marita:
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
@@ -359,7 +360,7 @@ Bus 309	busroute_N 3546,10962 3820,10987 3942,11010 3975,11087
 Bus 139	busroute_N 2340,11056 2346,11147 2272,11074 2254,11051
 Bus 100, ...	busroute_N 5352,11502 5587,11397 5666,11362 5565,11147 5542,11075 5600,11114 5698,11333 5666,11362
 Bus 200	busroute_N 8005,11627 7965,11467 7970,11441 8027,11411 8083,11381
-Bus 282	busroute_N 3981,6850 3964,6928 3837,6926 3947,6814
+Bus 282	busroute_N 3981,6850 3944,6901 3910,6949 3784,6985 3947,6814
 Bus 170	busroute_N 5672,5751 5581,5741 5464,5731 5280,5714 5223,5704 5141,5744 5114,5705 5054,5620 4991,5531 4911,5428 4869,5386 4821,5345
 Bus 184	busroute_N 7938,7406 7914,7364 7894,7296 7921,7288 7950,7279 7973,7295
 Bus 184	busroute_N 8661,6169 8830,6145 8944,6127 8952,6109 8976,6094 8996,6106 9003,6121 9212,6096
@@ -1183,7 +1184,7 @@ ausgeschildert als Rüdigerstr. 65+65 A-E	CP2; 17441,12245 17444,12286
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/50re.pdf/file?y=2016 (Benennung)
 #: by: http://www.dafmap.de/d/berlin.html?id=5116&mt=0&zoom=16 (Projektabschluss: 2018-12-31)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_15_2237_2424_online.pdf (Grundstücksnummerierungen)
-#: last_checked: 2019-05-17
+#: last_checked: 2019-05-28
 #: check_frequency: 60d
 Am Märchenbrunnen: nicht ausgeschildert	CS 11823,13635 11899,13750
 # 
@@ -1232,7 +1233,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="2"
-#: last_checked: 2019-05-09
+#: last_checked: 2019-05-24
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
@@ -1276,7 +1277,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
 #: next_check_id: MERGENTHALERRING-2018
-#: last_checked: 2019-05-13
+#: last_checked: 2019-05-20
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1303,4 +1304,6 @@ Straße 12: nicht ausgeschildert	CP2; 13881,6634 13883,6682
 Falkenberger Fußweg: nicht ausgeschildert	CP2; 19251,18248 19293,18249
 Falkenberger Fußweg: nicht ausgeschildert	CP2; 19772,18064 19679,18119
 Zehnrutenweg: nicht ausgeschildert	CP2; 20454,18778 20461,18796
+# 
+Bernstorffstr. - Berliner Str.: zum Linksabbiegen ggfs. Fußgängerampel auf der linken Seite benutzen	CP; 2133,20413 2015,20336 2044,20289
 # 

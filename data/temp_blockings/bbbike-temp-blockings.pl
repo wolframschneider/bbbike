@@ -3814,7 +3814,7 @@ EOF
        text  => 'L 090 Phöbener Str. Bahnübergang in OL Werder Gleisbauarbeiten Vollsperrung; Umleitung 03.03.2006-06.03.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -22206,-1693 -22146,-1832 -22042,-2060
+	2 -22224,-1673 -22146,-1832 -22042,-2060
 EOF
      },
      { from  => 1142118000, # 2006-03-12 00:00
@@ -15613,7 +15613,7 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: tempex: (mo, th) T09-T14
-	q4::temp:clock 3073,9020 2972,9037
+	q4::temp:clock 3075,9033 2968,9050
 EOF
      },
      { from  => undef, #
@@ -17639,7 +17639,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LSO-SG33-E10030',
        data  => <<EOF,
-	2::inwork 25232,18413 25524,17739 25587,17593 25686,17365
+	2::inwork 25232,18413 25253,18365 25497,17801 25524,17739 25587,17593 25686,17365
 EOF
      },
      { from  => 1274300034, # 2010-05-19 22:13
@@ -18029,18 +18029,23 @@ EOF
 	2::inwork -50068,51237 -51018,51135
 EOF
      },
-     { from  => $isodate2epoch->("2018-07-27 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-07-28 23:59:59"),
+     { from  => $isodate2epoch->("2019-07-26 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-07-27 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 20, months => 6]],
        source_id => 'https://www.berlin.de/events/2096878-2229501-csd-christopher-street-day.html',
-       text  => 'CSD am 28.7.2018',
+       text  => 'CSD am 27.7.2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://csd-berlin.de/event-info-en/
 	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6982,10610 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
 	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
 	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
+	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252
+	3 7429,12070 7383,12095 7031,12320
+	3 7031,12320 7383,12095 7429,12070
+	3 7822,12201 7816,12150 7823,12120
+	3 7823,12120 7816,12150 7822,12201
 	3 6380,10704 6353,10583 6302,10462
 	3 6692,11365 6851,11346 7103,11247
 	3 5488,10978 5475,10808 5471,10719
@@ -22358,7 +22363,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20140411.1410.396295.html',
        data  => <<EOF,
-	q4::inwork; 6792,19733 6516,19775 6460,19734 6334,19507 6238,19450
+	q4::inwork; 6792,19733 6516,19775 6484,19769 6460,19734 6316,19492 6238,19450
 EOF
      },
      { from  => 1380101700, # 2013-09-25 11:35
@@ -24327,7 +24332,7 @@ EOF
        source_id => 'IM_024612',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.291488.php
-	q4::inwork 2092,7810 2099,7904 2112,8088 2120,8335 2126,8426
+	q4::inwork 2092,7810 2099,7904 2112,8088 2121,8351 2126,8426
 EOF
      },
      { from  => 1429160400, # 2015-04-16 07:00
@@ -24539,14 +24544,14 @@ EOF
 	q4; 15205,11080 15102,11120 15021,11152 14988,11130
 EOF
      },
-     { from  => $isodate2epoch->("2019-01-13 08:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-01-18 23:59:59"),
+     { from  => $isodate2epoch->("2019-07-01 08:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-07-04 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6]],
-       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 14.01.2019-18.01.2019',
+       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 02.07.2019-04.07.2019',
        type  => 'handicap',
-       source_id => 'https://orbanism.com/event/berlin-fashion-week-2019/',
+       source_id => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termine-fuer-2019-stehen-fest.html',
        data  => <<EOF,
 #: source_id: 2147343639
 #: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
@@ -25734,14 +25739,21 @@ EOF
 	q4::inwork; -2511,17430 -2573,17314 -2599,17269 -2659,17165 -2728,17038
 EOF
      },
-     { from  => 1504201168, # 1473285600, # 2016-09-08 00:00
-       until => $isodate2epoch->("2017-09-03 20:00:00"),
-       text  => 'Straße des 17. Juni und Ebertstr.: Sperrungen wegen der Sportveranstaltung "Berlin fliegt", bis 03.09.2017 20 Uhr',
+     { from  => $isodate2epoch->("2019-05-20 12:00:00"), # 1504201168, # 1473285600, # 2016-09-08 00:00
+       until => $isodate2epoch->("2019-05-23 07:00:00"),
+       text  => 'Straße des 17. Juni und Ebertstr.: Sperrungen wegen einer Sportveranstaltung (Berliner Firmenlauf), evtl. sind auch Radfahrer betroffen, ab 21.05.2019 12 Uhr bis 23.05.2019 07 Uhr',
        type  => 'gesperrt',
        source_id => '2147339672',
        data  => <<EOF,
+#: source_id: 2147339672
 	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
 	2::temp 8600,12165 8538,12245 8592,12252
+	2::temp 8119,12414 8055,12186
+	2::temp 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	3 7429,12070 7383,12095 7031,12320
+	3 7031,12320 7383,12095 7429,12070
+	3 7822,12201 7816,12150 7823,12120
+	3 7823,12120 7816,12150 7822,12201
 	3 8522,12239 8538,12245 8522,12187
 	3 8522,12187 8538,12245 8522,12239
 	3 8391,12389 8344,12221 8327,12174
@@ -26406,12 +26418,14 @@ EOF
      },
      { from  => undef,
        until => undef, # $isodate2epoch->("2019-02-28 12:00:00"),
-       text  => 'Rigaer Str.: Baustelle, während der Arbeitszeiten (Mo bis Sa, 6 bis 17 Uhr, oft auch länger) kein Durchgang möglich',
+       text  => 'Rigaer Str.: Baustelle, Einbahnstraße, offen Richtung Osten',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: RIGAER-2018
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
-	2::inwork 14538,12371 14748,12314
+#: XXX bis wann gibt es die Einbahnstraßenregelung?
+#: last_checked: 2019-05-28
+	q3::inwork; 14748,12314 14538,12371
 EOF
      },
      { from  => 1501272725, # 2017-07-28 22:12
@@ -26496,7 +26510,7 @@ EOF
 EOF
      },
      { from  => 1502386525, # 2017-08-10 19:35
-       until => $isodate2epoch->("2019-06-15 12:00:00"), # undef, # 1512082799, # 2017-11-30 23:59
+       until => $isodate2epoch->("2019-05-23 12:00:00"), # undef, # 1512082799, # 2017-11-30 23:59
        text  => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), voraussichtlich bis Mitte 2019',
        type  => 'handicap',
        data  => <<EOF,
@@ -26608,7 +26622,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-05-02
+#: last_checked: 2019-05-25
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -27125,7 +27139,7 @@ EOF
 	2::temp -12646,-1702 -12616,-1715 -12544,-1799 -12478,-1879
 	2::temp -12790,-1560 -12776,-1605 -12794,-1652
 	2::temp -12758,-1654 -12776,-1575 -12790,-1560
-	2::temp -12790,-1560 -12808,-1488
+	2::temp -12790,-1560 -12812,-1490
 	2::temp -12431,-2096 -12478,-1879
 	2::temp -12493,-1896 -12431,-2096
 	2::temp -12318,-2192 -12262,-2244
@@ -27155,7 +27169,7 @@ EOF
 	2::temp -12749,-1668 -12719,-1542
 	2::temp -12583,-1552 -12485,-1482
 	2::temp -12727,-1416 -12694,-1408 -12685,-1449 -12677,-1536
-	2::temp -12808,-1488 -12870,-1493
+	2::temp -12812,-1490 -12870,-1493
 	2::temp -12882,-1565 -12870,-1493 -12865,-1462 -12913,-1451
 	2::temp -12256,-1456 -12260,-1503
 	2::temp -12260,-1503 -12253,-1589 -12396,-1681 -12544,-1799
@@ -27540,6 +27554,7 @@ EOF
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/zum-zweiten-mal-wurden-die-bauarbeiten-auf-der-schoenstrasse-unterbrochen_a190561
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.808235.php (Vollsperrung für drei Monate ab 13.05.2019)
+#: by: https://www.berliner-woche.de/weissensee/c-bauen/nach-zweimaliger-unterbrechung-gehen-bauarbeiten-auf-der-schoenstrasse-weiter_a214852
 #: also_indoor: traffic
 #: priority: #A
 #: last_checked: 2019-05-15
@@ -27766,7 +27781,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-05-09
+#: last_checked: 2019-05-24
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27855,15 +27870,18 @@ EOF
 	2::inwork 15143,5936 15119,5978 14342,5990 14298,6009 14234,6010 14178,5980 14164,5936 14308,5627
 EOF
      },
-     { from  => 1535691600, # 2018-08-31 07:00
-       until => 1535886000, # 2018-09-02 13:00
-       text  => 'BerlinMan-Triathlon: Sperrung der Havelchaussee und Kronprinzessinenweg, am Samstag auch Wannseebadweg und am Sonntag auch Jafféstr., 1.9.2018 und 2.9.2018 zwischen 7:00 und 13:00 Uhr',
+     { from  => $isodate2epoch->("2019-05-27 07:00:00"), # 1535691600, # 2018-08-31 07:00
+       until => $isodate2epoch->("2019-05-28 12:30:00"), # 1535886000, # 2018-09-02 13:00
+       #text  => 'BerlinMan-Triathlon: Sperrung der Havelchaussee und Kronprinzessinenweg, am Samstag auch Wannseebadweg und am Sonntag auch Jafféstr., 1.9.2018 und 2.9.2018 zwischen 7:00 und 13:00 Uhr',
+       text  => 'Havelchaussee und Kronprinzessinenweg: wegen eines Triathlons Sperrungen am 28.05.2019 zwischen 07:00 und 12:30 Uhr',
        type  => 'gesperrt',
-       accept_multi_feature_distance => 4000,
+       #accept_multi_feature_distance => 4000,
        data  => <<EOF,
-	2::temp -4001,2858 -3768,3069 -3680,3160 -3296,3686 -3490,4212 -3605,4536 -3729,4687 -3807,4794 -3889,4967 -3962,5129 -4072,5227 -4003,5621 -3944,6034 -3880,6142 -3723,6254 -3606,6407 -3598,6572 -3589,6721 -3530,6781 -3483,6789 -3382,6821 -3355,6874 -3496,7677 -3531,7825 -3536,7856 -3561,7964 -3567,8031 -3615,8496 -3578,8578 -3389,8624 -3277,8728 -3073,9061 -3140,9294 -3213,9425 -3347,9541 -3426,9684 -3412,9755 -3178,9953 -3025,10116 -2774,10345
-	2::temp -4001,2858 -4551,3201 -4586,3753 -4650,3902 -4901,4083
-	2::temp 1457,10168 1398,10201 1247,10270 1127,10403 1049,10568 998,10723 928,10948 787,11121 711,11199 704,11273
+	2::temp -4001,2858 -3768,3069 -3680,3160 -3296,3686 -2218,5133 -927,6888
+	2::temp -3296,3686 -3490,4212 -3605,4536 -3729,4687 -3807,4794 -3889,4967 -3962,5129 -4072,5227 -4003,5621 -3944,6034 -3880,6142 -3723,6254 -3606,6407 -3598,6572 -3589,6721 -3530,6781 -3483,6789 -3382,6821 -3355,6874 -3496,7677 -3531,7825 -3536,7856 -3561,7964 -3567,8031 -3615,8496 -3578,8578 -3389,8624 -3277,8728 -3073,9061 -3140,9294 -3213,9425 -3347,9541 -3426,9684 -3412,9755 -3178,9953 -3025,10116 -2774,10345
+#	2::temp -4001,2858 -3768,3069 -3680,3160 -3296,3686 -3490,4212 -3605,4536 -3729,4687 -3807,4794 -3889,4967 -3962,5129 -4072,5227 -4003,5621 -3944,6034 -3880,6142 -3723,6254 -3606,6407 -3598,6572 -3589,6721 -3530,6781 -3483,6789 -3382,6821 -3355,6874 -3496,7677 -3531,7825 -3536,7856 -3561,7964 -3567,8031 -3615,8496 -3578,8578 -3389,8624 -3277,8728 -3073,9061 -3140,9294 -3213,9425 -3347,9541 -3426,9684 -3412,9755 -3178,9953 -3025,10116 -2774,10345
+#	2::temp -4001,2858 -4551,3201 -4586,3753 -4650,3902 -4901,4083
+#	2::temp 1457,10168 1398,10201 1247,10270 1127,10403 1049,10568 998,10723 928,10948 787,11121 711,11199 704,11273
 EOF
      },
      { from  => undef, # 
@@ -28152,9 +28170,10 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-05-10
+#: last_checked: 2019-05-20
 #: check_frequency: 7d
-	2::inwork 14854,8964 14705,9034
+	2::inwork 14854,8964 15057,8910
+# REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
 EOF
      },
@@ -28411,7 +28430,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: next_check_id: NEUERMAUERWEG-2018 --- #: add_fragezeichen: Ist der Weg mittlerweile komplett offen? vvv --- #: osm_watch: way id="42031978" version="14" --- #: priority: #B vvv --- #: last_checked: 2019-03-23 vvv --- #: check_frequency: 14d vvv
-(Neuer Mauerweg): noch abgesperrt	2::inwork 7516,19490 7572,19490 7679,19421 7704,19366 7778,19308 7873,19261 8016,19143 8313,18940 8347,18916 8476,18773
+(Neuer Mauerweg): noch abgesperrt	2::inwork 7512,19480 7572,19490 7679,19421 7704,19366 7824,19269 7873,19261 8016,19143 8313,18940 8347,18916 8476,18773
 (Neuer Mauerweg): noch abgesperrt	2::inwork 7572,19490 7540,19550
 EOF
      },
@@ -28490,7 +28509,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-05-02
+#: last_checked: 2019-05-25
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28702,16 +28721,21 @@ EOF
        type  => 'gesperrt',
        source_id => '2147343360',
        data  => <<EOF,
+#: XXX Wann können Radfahrer wieder durchkommen?
+#: source_id: 2147343931 (bis Ende Mai 2019)
+#: last_checked: 2019-05-28
 	2::inwork 10772,12515 10673,12434
 EOF
      },
      { from  => undef, # 
-       until => 1556726400, # 2019-05-01 18:00
+       until => $isodate2epoch->("2019-07-01 18:00:00"), # 1556726400, # 2019-05-01 18:00
        text  => 'Am Tegeler Fließ: Holzbohlensteg zwischen Brandtstr. und Fürt-Bismarck-Steg wegen Bauarbeiten gesperrt, bis Frühjahr 2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.796103.php ("bald")
 #: by: https://www.berliner-woche.de/waidmannslust/c-bauen/steg-im-fliess-wird-saniert_a206581
+#: XXX bis wann geht die Sperrung?
+#: last_checked: 2019-05-19
 	2::inwork 4022,22691 3947,22622 3907,22606 3879,22574
 EOF
      },
@@ -28732,7 +28756,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: WERNSDORFERSTR-2019
 #: last_checked: 2019-03-30 vvv
-#: next_check: 2019-09-18 vvv
+#: next_check: 2019-07-05 vvv
 	q4::inwork; 27226,-2892 27422,-2753 27456,-2843 27520,-3029 27518,-3054
 	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
 #: next_check ^^^
@@ -28838,10 +28862,10 @@ EOF
        data  => <<EOF,
 #: next_check_id: BOEHMISCHERPLATZ-2019
 #: XXX wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2019-05-13 vvv
+#: last_checked: 2019-05-22 (osm) vvv
 #: check_frequency: 7d vvv
-#: osm_watch: way id="686796478" version="2"
-#: osm_watch: way id="8038948" version="13"
+#: osm_watch: way id="686796478" version="3"
+#: osm_watch: way id="8038948" version="14"
 #: also_indoor: traffic
 	q4::inwork 13553,7594 13566,7649
 # REMOVED (hier weitgehend fertig) ---	q4::inwork 13581,7586 13594,7641
@@ -28851,15 +28875,14 @@ EOF
 EOF
      },
      { from  => 1557083524, # 2019-05-05 21:12
-       until => $isodate2epoch->("2019-05-27 18:00:00"),
-       text  => 'Langhansstr.: zwischen Goethestr. und Roelckestr. sowie zwischen Börnestr. und Berliner Allee ist die Fahrbahn wegen Bauarbeiten gesperrt, bis 27. Mai 2019',
+       until => $isodate2epoch->("2019-06-07 18:00:00"),
+       text  => 'Langhansstr.: zwischen Goethestr. und Roelckestr. ist die Fahrbahn wegen Bauarbeiten gesperrt, bis 07. Juni 2019', # --- hier nicht mehr? ---  sowie zwischen Börnestr. und Berliner Allee
        type  => 'handicap',
        source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-06-05-19-',
        data  => <<EOF,
-#: source_id: 2147344146
+#: source_id: 2147344146 (bis Mitte Juni 2019)
 	q4::inwork; 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
-#: source_id: 2147344145
-	q4::inwork; 13312,16027 13508,15912
+# REMOVED (hier nicht mehr?) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
 EOF
      },
      { from  => 1557166526, # 2019-05-06 20:15
@@ -28868,7 +28891,8 @@ EOF
        type  => 'handicap',
        source_id => '2147344155',
        data  => <<EOF,
-	q4::inwork; 9212,13471 9207,13493 9094,13641 9042,13707 8935,13844
+	q4::inwork; 9212,13471 9207,13493 9094,13641 9042,13707
+# REMOVED (hier nicht) ---	q4::inwork; 9042,13707 8935,13844
 EOF
      },
      { from  => 1557007200, # 2019-05-05 00:00
@@ -28890,13 +28914,14 @@ EOF
 EOF
      },
      { from  => 1557093600, # 2019-05-06 00:00
-       until => undef, # XXX
+       until => 1558985545, # nichts zu sehen --- undef, # XXX
        text  => 'Gersdorfstr.: zwischen Kaiserstr. und Kurfürstenstr. Fahrbahn Richtung Norden gesperrt, evtl. sind auch Radfahrer betroffen',
        type  => 'handicap',
        source_id => '2147344162',
        data  => <<EOF,
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=55887
 #: XXX wann sind die Bauarbeiten beendet?
+#: XXX ist bei fritz erwähnt, aber ohne Endedatum
 #: next_check: 2019-06-06
 	q4::inwork; 8511,4336 8427,4435 8318,4566
 EOF
@@ -28918,6 +28943,7 @@ EOF
        source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.808355.php',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/hultschiner-damm-gesperrt_a213112
+#: source_id: 2147344206
 	q4::inwork; 24227,9574 24370,9542 24404,9527 24360,9411 24315,9302 24261,9168 24207,9035 24032,9111
 	q4::inwork; 24051,9156 23798,9263 23838,9351 23887,9463 23932,9564 24205,9520
 EOF
@@ -28940,6 +28966,46 @@ EOF
        source_id => '197200518-1',
        data  => <<EOF,
 	2::inwork -2128,-17678 -2059,-17909
+EOF
+     },
+     { from  => 1560117600, # 2019-06-10 00:00
+       until => 1561499999, # 2019-06-25 23:59
+       text  => 'Köthener Str.: Bauarbeiten zwischen Wuhletalstr. und Geraer Ring, Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, voraussichtlich ab 11. Juni 2019 bis 25. Juni 2019',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.813948.php',
+       data  => <<EOF,
+	q4::inwork 20488,17793 20542,17911 20576,17994 20591,18037
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Uferweg am Hans-Otto-Theater: im Sommer wegen des Sommertheaters komplett gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: https://www.hansottotheater.de/spielplan/monatsplan/2019-06/?scrollTo=2019-06
+	2::temp -11686,-765 -11622,-709
+EOF
+     },
+     { from  => undef,
+       until => $isodate2epoch->("2019-06-30 18:00:00"),
+       text  => 'Wullenweberufer: komplett gesperrt (Baumarbeiten), bis Ende Juni 2019',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.814300.php (bis Ende Juni 2019)
+	2::inwork 5372,12538 5356,12494 5362,12469 5411,12380 5484,12320 5550,12305 5607,12307
+EOF
+     },
+     { from  => $isodate2epoch->("2019-05-27 12:00:00"),
+       until => $isodate2epoch->("2019-11-01 18:00:00"),
+       text  => 'Oberbaumbrücke: Radfahrer Richtung Kreuzberg müssen unter Umständen absteigen (unklare Verkehrsführung) (bis Anfang November 2019)',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: OBERBAUMBRUECKE-2019
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814989.php
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.815509.php (Radweg auf der Nordseite, Umsetzung bis 2019-06-07)
+#: last_checked: 2019-05-28
+#: next_check: 2019-06-07
+	q4::inwork; 13332,10832 13305,10789 13206,10651
 EOF
      },
     );

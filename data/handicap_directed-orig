@@ -36,7 +36,7 @@
 # 
 #: next_check_id: ZEUGHAUS-2014 vvv
 #: note: mittlerweile kann man aber auch direkt überqueren
-#: last_checked: 2019-05-01 vvv
+#: last_checked: 2019-05-24 vvv
 #: check_frequency: 30d vvv
 Schinkelplatz -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9990,12404 9984,12426 9956,12523
 UdL -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9934,12420 9984,12426 9956,12523
@@ -302,9 +302,12 @@ Bahndamm - Elsenstr.: linken Gehweg benutzen	DH:h=q3,120 13953,9372 13923,9405 1
 Elsenstr. - Bahndamm: Absperrgitter, bereits an der Ampel auf den Gehweg wechseln	DH:h=q3,120 13849,9310 13923,9405 13953,9372
 Bahndamm - Elsenstr.: Absperrgitter, zunächst auf dem Gehweg fahren	DH:h=q3,80 13953,9372 13923,9405 13973,9465
 # 
+Oranienburger Str. - Frommpromenade: Umweg zur Fußgängerfurt	DH:len=50 5476,20372 5463,20461 5350,20495
+Frommpromenade - Oranienburger Str.: Fußgängerfurt benutzen	DH:h=q3,25 5350,20495 5463,20461 5441,20613
+# 
 #: next_check_id: TRESKOWALLEE-2017 vvv
 #: last_checked: 2019-05-03 vvv
-#: next_check: 2019-07-01 vvv
+#: next_check: 2019-07-15 vvv
 Treskowallee (Nord) - Stolzenfelsstr.: linken Gehweg benutzen	DH:h=q3,60 18733,8633 18731,8577 18787,8540
 Stolzenfelsstr. - Treskowallee (Süd).: Umweg über Ampel an der Dönhoffstr.	DH:h=q3,200:len=210:tl 18787,8540 18731,8577 18704,8427
 Dönhoffstr. - Treskowallee (Süd): enger Gehweg	DH:h=q3,280:len=50 18609,8717 18733,8633 18731,8577 18704,8427
@@ -317,7 +320,7 @@ Urbanstr. - Kottbusser Damm: Radwegführung mit Umweg	DH:len=65 11861,9183 11909,
 #: next_check_id: RUMMELSBURGERLANDSTR-2018
 #: note: Zykluszeit von 70s angenommen
 #: priority: #B vvv
-#: last_checked: 2019-05-05 vvv
+#: last_checked: 2019-05-21 vvv
 #: check_frequency: 90d vvv
 Rummelsburger Landstraße: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 17769,7465 17681,7589 17619,7679
 Rummelsburger Landstraße: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 17105,8666 17067,8725 16831,9078
@@ -327,7 +330,7 @@ Rummelsburger Landstraße: Radfahrer müssen auf den gegenüberliegenden Radweg wec
 # 
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
 #: note: Zykluszeit von 70s angenommen
-#: last_checked: 2019-05-04 vvv
+#: last_checked: 2019-05-18 vvv
 #: check_frequency: 90d vvv
 Südliche Blumberger-Damm-Brücke: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 21206,12351 21199,12258 21190,12193
 Südliche Blumberger-Damm-Brücke: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 21152,11945 21150,11925 21135,11799
@@ -351,15 +354,13 @@ Eisenhutweg: Radfahrer müssen vom linken Zweirichtungsradweg wieder auf die ande
 # 
 #: next_check_id: TRESKOWALLEE-2019
 #: source_id: 2147343744
-#: last_checked: 2019-05-04 vvv
-#: next_check: 2019-05-20 vvv
+#: last_checked: 2019-05-21 vvv
 Treskowallee: Umleitungsstrecke für Radfahrer	DH:len=120:h=q1,120 18406,7760 18577,8033 18633,8126 18657,8163
 Treskowallee -> Ehrlichstr.: Umweg für Radfahrer	DH:len=40:h=q3,40 18657,8163 18672,8238 18615,8269
-#: next_check ^^^
 #: last_checked ^^^
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-05-13
+#: last_checked: 2019-05-25
 #: check_frequency: 14d
 Stralauer Allee: Umweg über Bödikerstr.	DH:len=50:h=q3,60 14558,10264 14405,10340 14222,10430
 # 

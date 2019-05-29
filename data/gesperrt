@@ -866,10 +866,10 @@ Henning-von-Tresckow-Str.	1 -13180,-1627 -12946,-1659
 Am Lustgartenwall: Ministerien	2 -13281,-1796 -12948,-1863
 Weinbergstr.	1 -13519,-625 -13733,-722 -13800,-743
 Weinbergstr.	1 -13519,-625 -13257,-512
-Am Kanal	1 -12839,-1342 -12718,-1327
-Am Kanal	1 -12718,-1327 -12747,-1336 -12833,-1365
-Yorckstr.	1 -12833,-1365 -12976,-1356 -13001,-1349 -13208,-1315
-Yorckstr.	1 -13206,-1294 -13089,-1313 -13001,-1329 -12839,-1342
+Am Kanal	1 -12841,-1347 -12718,-1327
+Am Kanal	1 -12718,-1327 -12747,-1336 -12839,-1371
+Yorckstr.	1 -12839,-1371 -12879,-1380 -12976,-1365 -13006,-1360 -13092,-1344 -13208,-1322
+Yorckstr.	1 -13206,-1294 -13089,-1313 -13001,-1329 -12869,-1354 -12841,-1347
 Joliot-Curie-Str.	1 -12549,-1277 -12542,-1305 -12526,-1356 -12500,-1437
 Am Kanal, Nebenstraße	1 -12542,-1305 -12657,-1338
 Mauerstr.	1 -13433,-831 -13519,-625
@@ -899,9 +899,9 @@ Zimmerstr.	1 -14129,-1258 -13876,-1226
 Lennéstr.	1 -13876,-1263 -14149,-1264
 Puschkinallee	1 -13042,807 -12912,783 -12868,738 -12827,629 -12815,554 -12811,533
 Geschwister-Scholl-Str.	1 -14213,-1695 -14143,-1662 -14115,-1678
-Straßenbahntrasse	3nocross::ignrte -12790,-1560 -12808,-1488 -12833,-1365
-Friedrich-Ebert-Str. -> Schwertfegerstr.: Straßenbahntrasse	3::igndisp -12790,-1560 -12808,-1488 -12870,-1493
-Schwertfegerstr. -> Friedrich-Ebert-Str.: Straßenbahntrasse	3::igndisp -12870,-1493 -12808,-1488 -12833,-1365
+Straßenbahntrasse	3nocross::ignrte -12790,-1560 -12812,-1490 -12839,-1371
+Friedrich-Ebert-Str. -> Schwertfegerstr.: Straßenbahntrasse	3::igndisp -12790,-1560 -12812,-1490 -12870,-1493
+Schwertfegerstr. -> Friedrich-Ebert-Str.: Straßenbahntrasse	3::igndisp -12870,-1493 -12812,-1490 -12839,-1371
 tragen (Treppe, 75 Stufen und etliche Rampenabschnitte)	0:180:-201 -13772,-623
 Brücke mittlerweile gesperrt	2 -19183,7299 -19150,7320
 (Kiezstr. - Wall am Kiez)	1 -13397,-1729 -13374,-1709
@@ -935,6 +935,8 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14173,-1013 -14186,-868
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14191,-818 -14199,-707 -14205,-644
 Bahnhofstr.	1s -8417,-2862 -8410,-2884
+Schulstr. (Blumberg)	1 24914,21971 24829,22061 24772,22125 24732,22192
+Trappenfelder Str.: Privatgrundstück, mit Zäunen abgesperrt	2 26525,19271 26721,19700 27087,19796 27256,19887
 Max-Lenk-Str. (Zepernick)	1 17834,27001 17659,27135
 Heinestr. (Zepernick)	1 17659,27135 17759,27229
 Lindenberger Weg	1 17193,24683 17226,24664 17228,24640
@@ -1241,7 +1243,7 @@ Caseler Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 14700,16790 14608,1
 Straßenbahntrasse	3nocross::ignrte 13398,15826 13425,15846 13484,15893
 Streustr. -> Berliner Allee: Straßenbahntrasse	3::igndisp 13263,15930 13425,15846 13484,15893
 Gülzower Str.: Mittelstreifen	3 22603,12359 22388,12190 22400,12171
-Mittelstreifen	3nocross::ignrte 5343,21250 5349,21198 5356,21146 5382,21001
+Mittelstreifen	3nocross::ignrte 5343,21250 5349,21198 5356,21146 5379,21016
 Cyclopstr. -> Oranienburger Str.: Mittelstreifen	3::igndisp 5297,21243 5349,21198 5343,21250
 Straßenbahnhaltestelle	3nocross::ignrte 9225,13389 9293,13366 9415,13315
 Oranienburger Str. -> Linienstr.: Straßenbahnhaltestelle	3::igndisp 9225,13389 9293,13366 9312,13388
@@ -1550,12 +1552,12 @@ Straßenbahntrasse	3nocross::ignrte 10525,12789 10695,12933 10733,12967
 Karl-Liebknecht-Str. -> Rosa-Luxemburg-Str.: Straßenbahntrasse	3::igndisp 10525,12789 10695,12933 10685,12966
 Rosa-Luxemburg-Str. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 10685,12966 10695,12933 10733,12967
 Mittelstreifen	3nocross::ignrte 6492,9782 6447,9661 6445,9538
-Martin-Luther-Str. -> Traunsteiner Str.: Mittelstreifen	3::igndisp 6492,9782 6447,9661 6553,9600
-Martin-Luther-Str. -> Speyerer Str.: Mittelstreifen	3::igndisp 6445,9538 6447,9661 6348,9535
-Speyerer Str. -> Martin-Luther-Str.: Mittelstreifen	3::igndisp 6348,9535 6447,9661 6492,9782
-Speyerer Str. -> Traunsteiner Str.: Mittelstreifen	3::igndisp 6348,9535 6447,9661 6553,9600
-Traunsteiner Str. -> Martin-Luther-Str.: Mittelstreifen	3::igndisp 6553,9600 6447,9661 6445,9538
-Traunsteiner Str. -> Speyerer Str.: Mittelstreifen	3::igndisp 6553,9600 6447,9661 6348,9535
+Martin-Luther-Str. -> Traunsteiner Str.: Mittelstreifen	3::igndisp 6492,9782 6447,9661 6542,9606
+Martin-Luther-Str. -> Speyerer Str.: Mittelstreifen	3::igndisp 6445,9538 6447,9661 6348,9541
+Speyerer Str. -> Martin-Luther-Str.: Mittelstreifen	3::igndisp 6348,9541 6447,9661 6492,9782
+Speyerer Str. -> Traunsteiner Str.: Mittelstreifen	3::igndisp 6348,9541 6447,9661 6542,9606
+Traunsteiner Str. -> Martin-Luther-Str.: Mittelstreifen	3::igndisp 6542,9606 6447,9661 6445,9538
+Traunsteiner Str. -> Speyerer Str.: Mittelstreifen	3::igndisp 6542,9606 6447,9661 6348,9541
 U-Bahnviadukt und Straßenbahn	3nocross::ignrte 10997,16280 10989,16197 10982,16121
 Rodenbergstr. -> Schönhauser Allee: U-Bahnviadukt und Straßenbahn	3::igndisp 11253,16118 10989,16197 10982,16121
 Schönhauser Allee -> Rodenbergstr.: U-Bahnviadukt und Straßenbahn	3::igndisp 10997,16280 10989,16197 11253,16118
@@ -1939,9 +1941,9 @@ Brüsseler Str. -> Müllerstr.: Zaun auf dem Mittelstreifen	3::igndisp 6802,15790 
 Brüsseler Str. -> Amsterdamer Str.: Zaun auf dem Mittelstreifen	3::igndisp 6802,15790 6914,15908 7077,16078
 Amsterdamer Str. -> Müllerstr.: Zaun auf dem Mittelstreifen	3::igndisp 7077,16078 6914,15908 6936,15888
 Amsterdamer Str. -> Brüsseler Str.: Zaun auf dem Mittelstreifen	3::igndisp 7077,16078 6914,15908 6802,15790
-Zaun auf dem Mittelstreifen	3nocross::ignrte 5525,21022 5598,21032 5819,21057
-Wilhelmsruher Damm -> Amboßweg: Zaun auf dem Mittelstreifen	3::igndisp 5819,21057 5598,21032 5599,21025
-Amboßweg -> Wilhelmsruher Damm: Zaun auf dem Mittelstreifen	3::igndisp 5599,21025 5598,21032 5525,21022
+Zaun auf dem Mittelstreifen	3nocross::ignrte 5524,21034 5596,21043 5819,21057
+Wilhelmsruher Damm -> Amboßweg: Zaun auf dem Mittelstreifen	3::igndisp 5819,21057 5596,21043 5599,21025
+Amboßweg -> Wilhelmsruher Damm: Zaun auf dem Mittelstreifen	3::igndisp 5599,21025 5596,21043 5524,21034
 Straßenbahntrasse	3nocross::ignrte 14597,15970 14609,15921 14653,15738
 Orankeweg -> Indira-Gandhi-Str.: Straßenbahntrasse	3::igndisp 14695,15911 14609,15921 14653,15738
 Straßenbahntrasse	3nocross::ignrte 14552,16171 14522,16260 14499,16341
@@ -2298,7 +2300,6 @@ Mittelstreifen	3nocross::ignrte 9528,23240 9747,22694 9973,22133
 Blankenfelder Chaussee -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9469,22606 9747,22694 9528,23240
 Blankenfelder Chaussee -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9973,22133 9747,22694 9469,22606
 Geländer am Gehweg	3nocross::ignrte 7628,4521 7667,4549 7690,4563
-Mariendorfer-Hafen-Weg -> Attilastr.: Geländer am Gehweg	3::igndisp 7692,4464 7667,4549 7628,4521
 unbequemes Überqueren	3nocross::ignrte 6613,3320 6647,3292 6712,3237
 Paul-Schneider-Str. -> Schulstr.: unbequemes Überqueren	3::igndisp 6613,3320 6647,3292 6653,3297
 Schulstr. -> Paul-Schneider-Str.: unbequemes Überqueren	3::igndisp 6653,3297 6647,3292 6712,3237
@@ -2485,8 +2486,8 @@ tragen (Eisenbahnbrücke Templiner See)	0:60:-168 -15537,-4535
 tragen (Eisenbahnbrücke Templiner See)	0:60:-230 -15652,-4441
 tragen (Eisenbahnbrücke Caputh)	0:60:-167 -18002,-7496
 tragen (Eisenbahnbrücke Caputh)	0:60:-168 -17978,-7375
-tragen (Eisenbahnbrücke Werder)	0:60:-56 -21125,-2008
-tragen (Eisenbahnbrücke Werder)	0:60:87 -21226,-2013
+tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60:-36 -21125,-2012
+tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60:87 -21227,-2017
 tragen (Elsensteg, 6 Stufen)	0:10:-141 13379,8703
 tragen (Elsensteg, 6 Stufen)	0:10:-143 13397,8727
 tragen (Gerickesteg, ungefähr 20 Stufen)	0:30:-128 6748,12669
@@ -3017,6 +3018,15 @@ Drängelgitter	BNP:3:-249:trailer=20 8363,13402
 Drängelgitter	BNP:3:-192:trailer=10 20365,11950
 Drängelgitter	BNP:5:-6:trailer=15 9702,11647
 enges Tor	BNP:3:-125:trailer=no -6359,5220
+Drängelgitter vor Schranke	BNP:3:-167:trailer=10 21558,12073
+Drängelgitter vor Schranke	BNP:3:-167:trailer=10 21564,12097
+Drängelgitter	BNP:3:-237:trailer=10 -31814,4922
+Drängelgitter	BNP:3:-141:trailer=10 -31800,4905
+Drängelgitter	BNP:3:-132:trailer=10 -32045,4597
+Drängelgitter	BNP:3:-139:trailer=10 -32059,4584
+Drängelgitter	BNP:3:-243:trailer=10 -31349,4288
+Drängelgitter	BNP:3:-251:trailer=10 -31333,4280
+Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdener Bahn vollständig gesperrt	2::inwork 7667,4549 7692,4464
 Seidenschwanzstr.: durch Bauzäune abgesperrt	2::inwork 26666,12935 26570,12860 26519,12808 26475,12761 26428,12708 26369,12756 26288,12801
 Seidenschwanzstr.: durch Bauzäune abgesperrt	2::inwork 26452,12683 26428,12708
 Wildkatzenweg: durch Bauzäune abgesperrt	2::inwork 26475,12761 26414,12811 26334,12854
@@ -3039,7 +3049,6 @@ Am Groen: Bauarbeiten, noch nicht geöffnet	2:inwork 22137,11033 22146,10995
 Möwenweg: Straße existiert nicht mehr; wird sie wieder aufgebaut, oder wird es hier nur einen Rad/Gehweg geben?	2::inwork 22166,10839 22199,10877 22194,10940 22195,10993 22207,11069 22220,11138
 Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5018,3810 5074,3900 5139,3997 5225,4095
 Donaustr.: Einbahnstraßenregelung wegen Bauarbeiten	1s:inwork 12202,8895 12394,8729
-Donaustr.: Einbahnstraßenregelung wegen Bauarbeiten	1s:inwork 12394,8729 12551,8612
 Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 Französische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch für Fußgänger	2:inwork 9076,12054 9183,12076
 Mauerstr..: Bauarbeiten, Einbahnstraße	1s:inwork 9108,11961 9076,12054
@@ -3095,6 +3104,7 @@ Löwenbrücke: gesperrt	2:inwork 6406,11784 6452,11778
 Dahlemer Feld: zur Zeit eine Ziegenweide, keine Durchfahrt möglich	2:temp -1643,7828 -1787,7932 -1846,8129
 (Güterbahnhof Greifswalder Str.): Brücke gesperrt	2 12602,15006 12649,14977
 (Güterbahnhof Greifswalder Str.): kann bei Veranstaltungen gesperrt sein	2:temp 12520,15057 12602,15006
+Neue Plantage: hier noch Baustelle	2:inwork -13100,-1411 -13017,-1426
 Tor	BNP:5:-106:trailer=10 10281,19364
 Schwingtor	BNP:5:-148:trailer=10 14491,26714
 Schwingtor	BNP:5:-160:trailer=10 13966,25777
@@ -3109,9 +3119,9 @@ Heimstättenweg (kein öffentlicher Verkehr)	2 4355,6207 4323,6131 4268,6154
 Markobrunner Str.	1 4374,7016 4462,7137 4593,7167
 Landauer Str.	1 4578,7358 4786,7327
 Eschenstr. (Friedenau)	1 5056,7505 5147,7505 5188,7536
-(Zur Dillenburger Str.)	1 3837,6926 3964,6928 3981,6850
-Dillenburger Str.	1 3947,6814 3837,6926
-Drängelgitter	BNP:5:-165 3597,7192
+(Zur Dillenburger Str.)	1 3784,6985 3910,6949 3944,6901 3981,6850
+Dillenburger Str.	1 3947,6814 3837,6926 3784,6985
+Drängelgitter	BNP:5:-165 3596,7199
 Am Wieselbau	1 310,5084 310,4924
 Am Fuchspaß	1 389,5111 388,4951
 Treibjagdweg	1 469,5138 472,4974
@@ -3658,7 +3668,7 @@ Reinickendorfer Str., linker Gehweg	1::igndisp 7966,15571 7962,15533 7975,15484
 Bismarckstr., linke Seite	1::igndisp 6055,4950 6027,4896 6000,4846
 Altentreptower Str., linker Gehweg	1::igndisp 21401,12155 21310,12150 21294,12167 21276,12241 21199,12258
 Altentreptower Str., linker Gehweg	1::igndisp 21573,12140 21401,12155
-Wilhelmsruher Damm, linker Geh/Radweg bis zur Fußgängerampel	1::igndisp 5525,21022 5599,21025
+Wilhelmsruher Damm, linker Geh/Radweg bis zur Fußgängerampel	1::igndisp 5524,21034 5599,21025
 Frankfurter Allee, linker Radweg bis zur Ampel	1::igndisp 15670,12022 15717,12010
 Invalidenstr., linker Gehweg	1::igndisp 8332,13548 8290,13538 8183,13482
 Lichtenberger Brücke, linker Gehweg	1::igndisp 16978,11852 16818,11878

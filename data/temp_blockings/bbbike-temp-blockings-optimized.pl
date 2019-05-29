@@ -2089,7 +2089,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        },
        {
          'data' => '#: tempex: (mo, th) T09-T14
-	q4::temp:clock 3073,9020 2972,9037
+	q4::temp:clock 3075,9033 2968,9050
 ',
          'from' => undef,
          'id' => 1818,
@@ -2553,31 +2553,103 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'data' => '	2::temp 34421,1950 34359,2165 34250,2546
+         'data' => '#: by: http://csd-berlin.de/event-info-en/
+	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6982,10610 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
+	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
+	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
+	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252
+	3 7429,12070 7383,12095 7031,12320
+	3 7031,12320 7383,12095 7429,12070
+	3 7822,12201 7816,12150 7823,12120
+	3 7823,12120 7816,12150 7822,12201
+	3 6380,10704 6353,10583 6302,10462
+	3 6692,11365 6851,11346 7103,11247
+	3 5488,10978 5475,10808 5471,10719
+	3 4685,10689 4676,10541 4659,10335
+	3 7115,11220 6880,11110 6841,11114
+	3 6716,11439 6825,11486 6915,11492
+	3 4239,10358 4245,10435 4256,10583
+	3 7131,10331 7033,10396 7245,10499
+	3 7131,10331 7033,10328 7060,10221
+	3 4485,10307 4503,10497 4513,10702
+	3 6869,11567 6809,11570 6679,11602 6512,11608
+	3 6725,10641 6743,10615 6753,10446 6719,10347
+	3 4847,10677 4847,10589 4828,10356
+	3 4381,10583 4371,10465 4360,10320
+	3 5196,10398 5215,10711 5230,10919
+	3 6681,10959 6824,10904 6740,10755
+	3 6740,10755 6824,10904 6681,10959
+	3 6818,10725 6972,10665 7110,10613
+	3 4360,10320 4371,10465 4381,10583
+	3 7060,10221 7033,10328 7131,10331
+	3 6915,11492 6825,11486 6716,11439
+	3 6742,11099 6873,11011 7002,11034
+	3 7245,10499 7033,10396 7131,10331
+	3 4828,10356 4847,10589 4847,10677
+	3 4513,10702 4503,10497 4485,10307
+	3 6719,10347 6753,10446 6743,10615 6725,10641
+	3 6841,11114 6880,11110 7115,11220
+	3 6884,12006 6828,12031 7026,12054
+	3 5829,10964 5782,10884 5669,10704
+	3 6512,11608 6679,11602 6809,11570 6869,11567
+	3 6540,11754 6778,11742 6980,11790
+	3 5669,10704 5782,10884 5829,10964
+	3 5047,10381 5076,10658 5079,10701
+	3 6980,11790 6778,11742 6540,11754
+	3 7002,11034 6873,11011 6742,11099
+	3 5866,10492 6025,10746 6122,10925
+	3 6192,10542 6216,10614 6228,10646
+	3 6685,10690 6532,10529 6494,10440
+	3 6122,10925 6025,10746 5866,10492
+	3 7026,12054 6828,12031 6884,12006
+	3 4256,10583 4245,10435 4239,10358
+	3 6216,10614 6228,10646 6250,10701
+	3 5900,11913 6642,12010 6550,11954
+	3 5079,10701 5076,10658 5047,10381
+	3 5471,10719 5475,10808 5488,10978
+	3 4659,10335 4676,10541 4685,10689
+	3 7110,10613 6972,10665 6818,10725
+	3 5230,10919 5215,10711 5196,10398
+	3 6302,10462 6353,10583 6380,10704
+	3 6550,11954 6642,12010 5900,11913
+	3 6494,10440 6532,10529 6685,10690
+	3 6250,10701 6228,10646 6216,10614
+	3 7103,11247 6851,11346 6692,11365
+	3 6228,10646 6216,10614 6192,10542
+	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252 8637,12258 8722,12268
+	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+	3 7031,12320 7383,12095 7429,12070
+	3 7429,12070 7383,12095 7031,12320
+	3 7875,12363 7822,12201 7816,12150 7823,12120
+	3 7823,12120 7816,12150 7822,12201 7875,12363
+	3 8119,12414 8055,12186 8049,12140
+	3 8049,12140 8055,12186 8119,12414
+	3 8391,12389 8344,12221 8327,12174
+	3 8327,12174 8344,12221 8391,12389
 ',
-         'from' => 1557957600,
-         'id' => 2078,
+         'from' => 1564092000,
+         'id' => 2083,
          'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              15,
+                              20,
                               'months',
-                              5
+                              6
                             ]
                           ],
-         'source_id' => 'http://www.erkner.de/271.html?date=20190415',
-         'text' => 'Erkner: Heimatfest, 17.5.2019 bis 19.5.2019',
+         'source_id' => 'https://www.berlin.de/events/2096878-2229501-csd-christopher-street-day.html',
+         'text' => 'CSD am 27.7.2019',
          'type' => 'gesperrt',
-         'until' => 1558317600
+         'until' => 1564264799
        },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        undef,
        undef,
        undef,
@@ -2759,31 +2831,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: tempex: 20180427-T20180521 vvv
-	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
-	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
-	q4::temp 11275,8387 11230,8402
-	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
-# REMOVED --- #: tempex ^^^
-',
-         'from' => 1556143200,
-         'id' => 2207,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              25,
-                              'months',
-                              4
-                            ]
-                          ],
-         'source_id' => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2983315-2970764-neukoellner-maientage.html',
-         'text' => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 26.04.2019 bis 19.05.2019',
-         'type' => 'handicap',
-         'until' => 1558303199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3109,45 +3157,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: tempex: 20170520 vvv
-	2::temp 8055,12186 8119,12414
-	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-	2::temp 6828,12031 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8034,12093 8057,12065 8052,12033 8022,12016 8020,11937 8095,11919 8132,11910 8221,11885 8244,11878 8262,11883 8453,12099 8522,12187 8538,12245
-	2::temp 6809,11979 6984,11859 7058,11809 7163,11738 7373,11594 7418,11566 7504,11512
-	2::temp 6778,11742 6980,11790 7058,11809 7173,11864 7182,11870 7200,11881 7240,11907 7449,11883
-	2::temp 6809,11570 6869,11567 7018,11615 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629 7623,11624 7649,11717 7701,11798 7706,11878 7717,11918 7772,12040 7775,12114
-	2::temp 8026,11764 8016,11770 7801,11875 7717,11918 7658,11947 7634,11920 7559,11888 7449,11883
-	2::temp 8522,12239 8466,12197
-	2::temp 7059,11978 7007,11923 6984,11859 6980,11790 6996,11661 7018,11615 7092,11593 7362,11561 7418,11566 7549,11608 7612,11597 7648,11592 7664,11597
-	2::temp 7600,11513 7664,11597 7693,11627 7732,11660 7796,11681 7901,11684 8014,11753 8026,11764 8140,11850 8167,11865
-	2::temp 8221,11885 8215,12156 8214,12205
-	2::temp 8244,11878 8327,12174 8344,12221
-	3 7429,12070 7383,12095 7031,12320
-	3 7875,12363 7822,12201 7816,12150 7823,12120
-	3 7031,12320 7383,12095 7429,12070
-	3 7823,12120 7816,12150 7822,12201 7875,12363
-	3 8391,12389 8344,12221 8327,12174
-	3 8327,12174 8344,12221 8391,12389
-# REMOVED --- #: tempex ^^^
-',
-         'from' => 1558044000,
-         'id' => 2427,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              4,
-                              'months',
-                              5
-                            ]
-                          ],
-         'source_id' => 'https://www.berliner-frauenlauf.de/der-tag/strecke.html',
-         'text' => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 18. Mai 2019',
-         'type' => 'gesperrt',
-         'until' => 1558216799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3204,29 +3214,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        },
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.die-classic-days-berlin.de/programm-2/
-#: note: kann im Juni oder Juli stattfinden
-# REMOVED --- #: tempex: 20170616T0400-20170619T0400
-	q4::temp 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435
-',
-         'from' => 1558058400,
-         'id' => 2439,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              17,
-                              'months',
-                              5
-                            ]
-                          ],
-         'source_id' => 'IM_025248',
-         'text' => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 18.05.2019 bis 20.05.2019 früh',
-         'type' => 'handicap',
-         'until' => 1558317600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3475,16 +3463,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       {
-         'data' => '	q3::inwork; 14965,11921 14887,11929 14835,11840
-',
-         'from' => 1557083719,
-         'id' => 2550,
-         'source_id' => '2147344149',
-         'text' => 'Scharnweberstr./Weichselstr.: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis 27. Mai 2019',
-         'type' => 'handicap',
-         'until' => 1558972800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3705,7 +3684,37 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: 2147343639
+#: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
+	q4::temp 8644,10408 8397,10488 8384,10507 8527,10621
+	q4::temp 8348,10636 8335,10518 8350,10499
+#: tempex ^^^
+',
+         'from' => 1561960800,
+         'id' => 2718,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              8,
+                              'months',
+                              1
+                            ],
+                            [
+                              'yearly',
+                              'days',
+                              27,
+                              'months',
+                              6
+                            ]
+                          ],
+         'source_id' => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termine-fuer-2019-stehen-fest.html',
+         'text' => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 02.07.2019-04.07.2019',
+         'type' => 'handicap',
+         'until' => 1562277599
+       },
        undef,
        undef,
        undef,
@@ -3959,11 +3968,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: RIGAER-2018
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
-	2::inwork 14538,12371 14748,12314
+#: XXX bis wann gibt es die Einbahnstraßenregelung?
+#: last_checked: 2019-05-28
+	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
          'id' => 2888,
-         'text' => 'Rigaer Str.: Baustelle, während der Arbeitszeiten (Mo bis Sa, 6 bis 17 Uhr, oft auch länger) kein Durchgang möglich',
+         'text' => 'Rigaer Str.: Baustelle, Einbahnstraße, offen Richtung Osten',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3975,38 +3986,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: CARSTENN-2017
-# REMOVED --- #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?bvgid=BVG131679 ("gültig bis: auf Weiteres")
-# REMOVED --- #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=30361
-# REMOVED --- #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
-#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50127
-#: by: mapillary (Gehweg für Radfahrer frei)
-#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/kreuzungsumbau-bis-november_a172982
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729460.php
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte des Jahres 2019)
-#: by: https://www.berliner-woche.de/steglitz/c-bauen/baustellen-in-carstenn-und-feuerbachstrasse-nicht-fertig_a196939
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.776977.php
-#: source_id: 2147342671
-#: source_id: 2147342861
-#: source_id: 2147342860 (Ende Anfang April 2019)
-#: XXX laut fritz "bis auf weiteres"
-#: add_fragezeichen: Wurden die Bauarbeiten in der Carstennstr. beendet?
-#: last_checked: 2018-09-12 vvv
-# REMOVED --- #: check_frequency: 30d
-#: next_check: 2019-05-15 vvv
-# REMOVED (hier fertig) ---	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
-	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
-	q3::inwork; 2781,2493 2740,2588 2625,2850
-#: next_check ^^^
-#: last_checked ^^^
-',
-         'from' => 1502386525,
-         'id' => 2897,
-         'text' => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), voraussichtlich bis Mitte 2019',
-         'type' => 'handicap',
-         'until' => 1560592800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4017,7 +3997,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-05-02
+#: last_checked: 2019-05-25
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -4203,6 +4183,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/zum-zweiten-mal-wurden-die-bauarbeiten-auf-der-schoenstrasse-unterbrochen_a190561
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.808235.php (Vollsperrung für drei Monate ab 13.05.2019)
+#: by: https://www.berliner-woche.de/weissensee/c-bauen/nach-zweimaliger-unterbrechung-gehen-bauarbeiten-auf-der-schoenstrasse-weiter_a214852
 #: also_indoor: traffic
 #: priority: #A
 #: last_checked: 2019-05-15
@@ -4298,7 +4279,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-05-09
+#: last_checked: 2019-05-24
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4368,9 +4349,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-05-10
+#: last_checked: 2019-05-20
 #: check_frequency: 7d
-	2::inwork 14854,8964 14705,9034
+	2::inwork 14854,8964 15057,8910
+# REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
 ',
          'from' => undef,
@@ -4475,7 +4457,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-05-02
+#: last_checked: 2019-05-25
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 ',
@@ -4593,7 +4575,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '	2::inwork 10772,12515 10673,12434
+         'data' => '#: XXX Wann können Radfahrer wieder durchkommen?
+#: source_id: 2147343931 (bis Ende Mai 2019)
+#: last_checked: 2019-05-28
+	2::inwork 10772,12515 10673,12434
 ',
          'from' => 1553192269,
          'id' => 3080,
@@ -4602,12 +4587,24 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1559145600
        },
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.796103.php ("bald")
+#: by: https://www.berliner-woche.de/waidmannslust/c-bauen/steg-im-fliess-wird-saniert_a206581
+#: XXX bis wann geht die Sperrung?
+#: last_checked: 2019-05-19
+	2::inwork 4022,22691 3947,22622 3907,22606 3879,22574
+',
+         'from' => undef,
+         'id' => 3081,
+         'text' => 'Am Tegeler Fließ: Holzbohlensteg zwischen Brandtstr. und Fürt-Bismarck-Steg wegen Bauarbeiten gesperrt, bis Frühjahr 2019',
+         'type' => 'gesperrt',
+         'until' => 1561996800
+       },
        undef,
        {
          'data' => '#: next_check_id: WERNSDORFERSTR-2019
 #: last_checked: 2019-03-30 vvv
-#: next_check: 2019-09-18 vvv
+#: next_check: 2019-07-05 vvv
 	q4::inwork; 27226,-2892 27422,-2753 27456,-2843 27520,-3029 27518,-3054
 	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
 #: next_check ^^^
@@ -4649,10 +4646,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: BOEHMISCHERPLATZ-2019
 #: XXX wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2019-05-13 vvv
+#: last_checked: 2019-05-22 (osm) vvv
 #: check_frequency: 7d vvv
-#: osm_watch: way id="686796478" version="2"
-#: osm_watch: way id="8038948" version="13"
+#: osm_watch: way id="686796478" version="3"
+#: osm_watch: way id="8038948" version="14"
 #: also_indoor: traffic
 	q4::inwork 13553,7594 13566,7649
 # REMOVED (hier weitgehend fertig) ---	q4::inwork 13581,7586 13594,7641
@@ -4667,20 +4664,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '#: source_id: 2147344146
+         'data' => '#: source_id: 2147344146 (bis Mitte Juni 2019)
 	q4::inwork; 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
-#: source_id: 2147344145
-	q4::inwork; 13312,16027 13508,15912
+# REMOVED (hier nicht mehr?) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
 ',
          'from' => 1557083524,
          'id' => 3091,
          'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-06-05-19-',
-         'text' => 'Langhansstr.: zwischen Goethestr. und Roelckestr. sowie zwischen Börnestr. und Berliner Allee ist die Fahrbahn wegen Bauarbeiten gesperrt, bis 27. Mai 2019',
+         'text' => 'Langhansstr.: zwischen Goethestr. und Roelckestr. ist die Fahrbahn wegen Bauarbeiten gesperrt, bis 07. Juni 2019',
          'type' => 'handicap',
-         'until' => 1558972800
+         'until' => 1559923200
        },
        {
-         'data' => '	q4::inwork; 9212,13471 9207,13493 9094,13641 9042,13707 8935,13844
+         'data' => '	q4::inwork; 9212,13471 9207,13493 9094,13641 9042,13707
+# REMOVED (hier nicht) ---	q4::inwork; 9042,13707 8935,13844
 ',
          'from' => 1557166526,
          'id' => 3092,
@@ -4700,19 +4697,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1559339999
        },
-       {
-         'data' => '#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=55887
-#: XXX wann sind die Bauarbeiten beendet?
-#: next_check: 2019-06-06
-	q4::inwork; 8511,4336 8427,4435 8318,4566
-',
-         'from' => 1557093600,
-         'id' => 3095,
-         'source_id' => '2147344162',
-         'text' => 'Gersdorfstr.: zwischen Kaiserstr. und Kurfürstenstr. Fahrbahn Richtung Norden gesperrt, evtl. sind auch Radfahrer betroffen',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: next_check_id: ROHRWALLALLEE-2019
 	q4::inwork 26190,-853 26230,-858 26346,-863 26389,-932 26445,-1037
@@ -4726,6 +4711,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/hultschiner-damm-gesperrt_a213112
+#: source_id: 2147344206
 	q4::inwork; 24227,9574 24370,9542 24404,9527 24360,9411 24315,9302 24261,9168 24207,9035 24032,9111
 	q4::inwork; 24051,9156 23798,9263 23838,9351 23887,9463 23932,9564 24205,9520
 ',
@@ -4757,6 +4743,50 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Trebbin: Fahrbahnsanierung Brücke über den Neuen Graben bei Trebbin, Vollsperrung der K 7232, 15.04.2019 bis 31.08.2019',
          'type' => 'gesperrt',
          'until' => 1567288800
+       },
+       {
+         'data' => '	q4::inwork 20488,17793 20542,17911 20576,17994 20591,18037
+',
+         'from' => 1560117600,
+         'id' => 3100,
+         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.813948.php',
+         'text' => 'Köthener Str.: Bauarbeiten zwischen Wuhletalstr. und Geraer Ring, Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, voraussichtlich ab 11. Juni 2019 bis 25. Juni 2019',
+         'type' => 'handicap',
+         'until' => 1561499999
+       },
+       {
+         'data' => '#: by: https://www.hansottotheater.de/spielplan/monatsplan/2019-06/?scrollTo=2019-06
+	2::temp -11686,-765 -11622,-709
+',
+         'from' => undef,
+         'id' => 3101,
+         'text' => 'Uferweg am Hans-Otto-Theater: im Sommer wegen des Sommertheaters komplett gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.814300.php (bis Ende Juni 2019)
+	2::inwork 5372,12538 5356,12494 5362,12469 5411,12380 5484,12320 5550,12305 5607,12307
+',
+         'from' => undef,
+         'id' => 3102,
+         'text' => 'Wullenweberufer: komplett gesperrt (Baumarbeiten), bis Ende Juni 2019',
+         'type' => 'gesperrt',
+         'until' => 1561910400
+       },
+       {
+         'data' => '#: next_check_id: OBERBAUMBRUECKE-2019
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814989.php
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.815509.php (Radweg auf der Nordseite, Umsetzung bis 2019-06-07)
+#: last_checked: 2019-05-28
+#: next_check: 2019-06-07
+	q4::inwork; 13332,10832 13305,10789 13206,10651
+',
+         'from' => 1558951200,
+         'id' => 3103,
+         'text' => 'Oberbaumbrücke: Radfahrer Richtung Kreuzberg müssen unter Umständen absteigen (unklare Verkehrsführung) (bis Anfang November 2019)',
+         'type' => 'handicap',
+         'until' => 1572627600
        }
      
 );
