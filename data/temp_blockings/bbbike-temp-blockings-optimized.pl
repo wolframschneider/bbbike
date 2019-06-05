@@ -1843,7 +1843,29 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	q4::temp 9679,11834 9666,11935 9656,12031 9645,12133
+	2::temp 9523,12019 9656,12031
+	2::temp 9536,11922 9666,11935
+',
+         'from' => 1561932000,
+         'id' => 1710,
+         'periodic' => 1,
+         'postwarn_days' => 2,
+         'prewarn_days' => 3,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Markgrafenstr. zwischen Taubenstr.. und Jägerstr.: Fahrbahn gesperrt sowie Sperrung des Gendarmenmarkts: Classic Open Air (4.7.2019 - 8.7.2019; Sperrungen fangen schon früher an und dauern länger)',
+         'type' => 'gesperrt',
+         'until' => 1562788800
+       },
        undef,
        undef,
        undef,
@@ -2541,7 +2563,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Mai von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3186,32 +3208,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        },
        undef,
        undef,
-       {
-         'data' => '#: tempex: YYYY0531-YYYY0603 vvv
-	2::temp 20760,5743 20716,6029 20707,6098 20623,6136 20453,6211 20464,6237
-	2::temp 19961,5989 20015,6069 20293,6278 20200,6321 20106,6357
-	2::temp 20200,6321 20262,6493 20225,6631
-	2::temp 20716,6029 20593,6082 20428,6157 20453,6211 20293,6278
-	2::temp 19944,6006 20064,6290 20086,6307 20106,6357
-#: tempex ^^^
-',
-         'from' => 1559253600,
-         'id' => 2436,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              30,
-                              'months',
-                              5
-                            ]
-                          ],
-         'source_id' => 'https://familienfez.fez-berlin.de/programm/kindertagsfest/',
-         'text' => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. bis 3. Juni 2019',
-         'type' => 'gesperrt',
-         'until' => 1559599199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4039,7 +4036,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-05-30 vvv
+#: last_checked: 2019-06-02 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4338,7 +4335,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-05-20
+#: last_checked: 2019-06-04
 #: check_frequency: 7d
 	2::inwork 14854,8964 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
@@ -4466,17 +4463,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1566057600
        },
-       {
-         'data' => '#: note: bei fritz allerdings "nur eine freie Spur", keine Sperrungen
-#: source_id: 2147343527
-	q4::inwork; 3952,8980 4006,8967 4181,8933 4324,8899
-',
-         'from' => 1544425200,
-         'id' => 3061,
-         'text' => 'Berliner Str.: Bauarbeiten zwischen Konstanzer Str. und Barstr., Fahrbahn Richtung Osten gesperrt, eventuell sind auch Radfahrer betroffen, bis Juni 2019',
-         'type' => 'handicap',
-         'until' => 1559404800
-       },
+       undef,
        undef,
        {
          'data' => '	q3::inwork 11145,10638 10965,10851
@@ -4620,26 +4607,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
-       {
-         'data' => '#: next_check_id: BOEHMISCHERPLATZ-2019
-#: XXX wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2019-05-22 (osm) vvv
-#: check_frequency: 7d vvv
-#: osm_watch: way id="686796478" version="3"
-#: osm_watch: way id="8038948" version="14"
-#: also_indoor: traffic
-	q4::inwork 13553,7594 13566,7649
-# REMOVED (hier weitgehend fertig) ---	q4::inwork 13581,7586 13594,7641
-#: check_frequency ^^^
-#: last_checked ^^^
-#: XXX ^^^
-',
-         'from' => undef,
-         'id' => 3090,
-         'text' => 'Böhmische Str. am Böhmischen Platz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: source_id: 2147344146 (bis Mitte Juni 2019)
 	q4::inwork; 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
@@ -4664,16 +4632,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1559836800
        },
        undef,
-       {
-         'data' => '	q4::inwork; 22325,6385 22365,6149
-',
-         'from' => 1557093600,
-         'id' => 3094,
-         'source_id' => '2147344160',
-         'text' => 'Alte Kaulsdorfer Str.: Bauarbeiten zwischen Kaulsdorfer Str. und Am Bahndamm, Fahrbahn Richtung Süden gesperrt, evtl. sind auch Radfahrer betroffen, bis Ende Mai 2019 ',
-         'type' => 'handicap',
-         'until' => 1559339999
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: ROHRWALLALLEE-2019
@@ -4686,19 +4645,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1569880800
        },
-       {
-         'data' => '#: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/hultschiner-damm-gesperrt_a213112
-#: source_id: 2147344206
-	q4::inwork; 24227,9574 24370,9542 24404,9527 24360,9411 24315,9302 24261,9168 24207,9035 24032,9111
-	q4::inwork; 24051,9156 23798,9263 23838,9351 23887,9463 23932,9564 24205,9520
-',
-         'from' => 1558216800,
-         'id' => 3097,
-         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.808355.php',
-         'text' => 'Umfahrung Hultschiner Damm: eventuell gibt es eine Einbahnstraßenregelung in den Straßen Bütower Str., Schrobsdorffstr., Pilsener Str., Bruchsaler Str., Wickenweg und Badener Str., 20. Mai 2019 bis 31. Mai 2019',
-         'type' => 'handicap',
-         'until' => 1559339999
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/weissensee/c-verkehr/viel-verkehr-wegen-der-bauarbeiten-im-komponistenviertel_a211594#gallery=default&pid=256000
 #: XXX wann werden die Bauarbeiten beendet?
@@ -4722,7 +4669,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1567288800
        },
        {
-         'data' => '	q4::inwork 20488,17793 20542,17911 20576,17994 20591,18037
+         'data' => '#: by: https://www.berliner-woche.de/marzahn/c-verkehr/bauarbeiten-in-der-koethener-strasse_a216181
+	q4::inwork 20488,17793 20542,17911 20576,17994 20591,18037
 ',
          'from' => 1560117600,
          'id' => 3100,
@@ -4755,7 +4703,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: OBERBAUMBRUECKE-2019
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814989.php
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.815509.php (Radweg auf der Nordseite, Umsetzung bis 2019-06-07)
-#: last_checked: 2019-05-28
+#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/aerger-auf-der-oberbaumbruecke_a216700
+#: last_checked: 2019-06-03
 #: next_check: 2019-06-07
 	q4::inwork; 13332,10832 13305,10789 13206,10651
 ',
@@ -4764,6 +4713,48 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Oberbaumbrücke: Radfahrer Richtung Kreuzberg müssen unter Umständen absteigen (unklare Verkehrsführung) (bis Anfang November 2019)',
          'type' => 'handicap',
          'until' => 1572627600
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.816002.php (hier aber nur bis 2019-06-17)
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=56359 (hier aber nur bis 2019-06-17)
+#: source_id: 2147344266 (bis Ende Juni 2019)
+	q4::inwork 17379,3932 17468,3979
+',
+         'from' => 1559593428,
+         'id' => 3104,
+         'text' => 'Haeckelstr.: zwischen Johannes-Werner-Str. und Winckelmannstr. Sperrung der Fahrbahn wegen Gleisbauarbeiten, evtl. sind auch Radfahrer betroffen, bis 24.06.2019',
+         'type' => 'handicap',
+         'until' => 1561392000
+       },
+       {
+         'data' => '	q4::inwork 8356,5195 8433,5108
+',
+         'from' => 1559593632,
+         'id' => 3105,
+         'text' => 'Chlodwigstr.: im Einmündungsbereich Attilastr. Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, bis 17.06.2019',
+         'type' => 'handicap',
+         'until' => 1560787200
+       },
+       {
+         'data' => '#: source_id: 2147344260
+	q4::inwork; 21708,7981 21688,8115 21663,8246 21659,8311 21680,8400
+',
+         'from' => 1559596818,
+         'id' => 3106,
+         'source_id' => 'https://twitter.com/VIZ_Berlin/status/1135410834396594176',
+         'text' => 'Kaulsdorfer Str.: zwischen Feuersteiner Str. und Deutschhofer Allee Fahrbahn Richtung Norden gesperrt, bis voraussichtlich 7. Juni 2019',
+         'type' => 'handicap',
+         'until' => 1559923200
+       },
+       {
+         'data' => '#: XXX ggfs prüfen
+	q4::inwork; 10282,14212 10002,14092
+',
+         'from' => 1559512800,
+         'id' => 3107,
+         'source_id' => '2147344297',
+         'text' => 'Veteranenstr.: Gleisbauarbeiten, Straße in Richtung Invalidenstr. gesperrt, eventuell sind auch Radfahrer betroffen, bis 7. Juni 2019',
+         'until' => 1559923200
        }
      
 );

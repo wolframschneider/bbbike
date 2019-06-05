@@ -28,7 +28,7 @@
 Krautstr.: Bauarbeiten, Fahrbahn gesperrt, auf Gehweg Ausweichen	q3::inwork 12059,12172 12021,12066 12002,12008
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-05-25
+#: last_checked: 2019-06-04
 Bödikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 # 
 #: next_check_id: PLANSTRASSEC-2019
@@ -39,7 +39,7 @@ Bödikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 1
 # 
 #: next_check_id: GUBENER-2019
 #: priority: #A
-#: last_checked: 2019-05-17
+#: last_checked: 2019-06-01
 #: check_frequency: 30d
 Gubener Str.: Fahrbahn für ein paar Meter gesperrt, Ausweichen auf Gehweg, Bordsteine	q3::inwork 13326,12056 13243,12222
 # 
@@ -70,7 +70,7 @@ Hermann-Stöhr-Platz: Engstelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,1183
 #: source_id: LMS-BR_r_LMS-BR_125325_LMS-BR_72
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2019-05-21
+#: last_checked: 2019-06-03
 #: check_frequency: 14d
 Auerstr.: zwischen Richard-Sorge-Str. und Weidenweg Baustelle, Einbahnstraßenregelung	q3::inwork; 13273,12902 13202,12790 13067,12583 13025,12523
 # 
@@ -167,7 +167,7 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607
 #: by: http://www.dafmap.de/d/berlin.html?id=3731&mt=0&zoom=18
 #: XXX man kann auf dem südlichen Gehweg (relativ breit, wenig Menschen) ausweichen
 # REMOVED (gibt's nicht mehr) --- : XXX mittlerweile gibt's auch auf dem Gehweg Bauarbeiten, so dass er enger geworden ist: q2- -> q3
-#: last_checked: 2019-05-30
+#: last_checked: 2019-06-02
 Voltairestr.: wegen Baustelle kann die Fahrbahn gesperrt sein, Ausweichen auf Gehweg	q2::inwork 11329,12497 11209,12430
 # 
 #: osm_watch: way id="639343525" version="1"
@@ -195,10 +195,10 @@ Märkisches Ufer: Engstelle vor der Roßstraßenbrücke	q2::inwork 10687,11853 10869
 # REMOVED --- #: by: wosch --- #: confirmed_by: srt --- #: source_id: 2147340953 --- #: XXX laut VMZ mittlerweile entfernt, bei rbbtext bis Ende Mai 2017 --- #: last_checked: 2017-04-28 --- #: next_check: 2017-05-19 --- Schloßplatz: Engstelle wegen Bauarbeiten	q3::inwork 10285,12306 10357,12356
 # REMOVED --- #: last_checked: 2017-03-24 --- Zietenplatz/Mohrenstr.: Bauarbeiten, Fahrbahn Richtung Osten gesperrt	q3::inwork; 9000,11727 9075,11756
 # 
-#: source_id: 2147342720 (bis Ende Mai 2019)
-#: last_checked: 2019-05-11 vvv
-#: next_check: 2019-05-31 vvv
-#: valid: -20190531 vvv
+#: source_id: 2147342720 (bis Ende Oktober 2019)
+#: last_checked: 2019-06-02 vvv
+#: next_check: 2019-10-31 vvv
+#: valid: -20191031 vvv
 Littenstr.: Fahrbahn an der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q3::inwork 11092,12375 11139,12243
 Littenstr.: Fahrbahn an der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q4::inwork 11139,12243 11155,12184
 # REMOVED (mittlerweile offen) --- Waisenstr.: Fahrbahn vor der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q4::inwork 11049,12386 11094,12243
@@ -287,7 +287,7 @@ Prinzengasse: einige Fußgänger, parkende Autos	q3::inwork 9955,12300 10006,12306
 # REMOVED (Einbahnstraßenregelung existiert zwar noch, aber die Baustelle ist komplett weg) --- #: last_checked: 2015-12-02 --- Universitätsstr.: wegen Bauarbeiten Einbahnstraße zwischen Dorotheenstr. und Georgenstr.	q3::inwork; 9568,12688 9581,12588
 # 
 #: next_check_id: STABIUDL-2014 vvv
-#: last_checked: 2019-05-30 vvv
+#: last_checked: 2019-06-02 vvv
 #: check_frequency: 60d vvv
 #: by: http://www.berliner-zeitung.de/berlin/baustelle-staatsbibliothek-das-geruest-steht-und-steht-und-steht,10809148,22334074.html (Endedatum 2016) vvv
 #: osm_watch: way id="153698394" version="5"
@@ -409,7 +409,7 @@ Wandlitzstr.: Fahrbahn an der Treskowallee gesperrt, Ausweichen über Gehweg	q3::
 #: XXX Start 2018-05-16, Dauer vermutlich 12 Monate, bei VMZ bis Juli 2019, laut fritz bis 31.08.2019
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=44021
 #: also_indoor: traffic vvv
-#: last_checked: 2019-05-14 vvv
+#: last_checked: 2019-06-02 vvv
 #: next_check: 2019-07-31 vvv
 #: valid: -20190731 vvv
 #: priority: #A vvv
@@ -531,7 +531,7 @@ Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a100_16_ba/pix/los1/NKA_Sperrung_Ueplan_Fussgaenger_gr.gif
-#: last_checked: 2019-05-10
+#: last_checked: 2019-06-04
 #: check_frequency: 90d
 Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 # 
@@ -539,7 +539,7 @@ Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 1425
 #: source_id: 2147343690
 #: source_id: LMS-BR_r_LMS-BR_6571
 #: XXX laut viz bis Ende 2022, laut fritz bis voraussichtlich 31.12.2021
-#: last_checked: 2019-05-10 vvv
+#: last_checked: 2019-06-04 vvv
 provisorische und enge Radwegführung, Fußgänger	q2::inwork; 14344,7003 14257,6895 14153,6795 14051,6731
 provisorische und enge Radwegführung, Fußgänger, Seitenwechsel notwendig	q3::inwork; 14051,6731 14153,6795 14257,6895 14344,7003
 #: last_checked ^^^
@@ -562,14 +562,15 @@ Weichselstr.: Bauarbeiten am Weichselplatz, Fahrbahn gesperrt	q4+::inwork 12755,
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=51191
 #: by: http://www.abendblatt-berlin.de/2019/02/03/neues-von-neukoellns-laengster-baustelle/
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/
+#: by: https://www.berliner-woche.de/neukoelln/c-verkehr/arbeiten-in-der-karl-marx-strasse-schreiten-voran-staugefahr-bleibt_a216409 (Fortschritte zwischen Anzengruberstr. und Erkstr. (Spekulation: vielleicht bis August 2019 fertig?))
 #: XXX laut vmz Gesamtmaßnahme bis Ende 2021, laut fritz bis 31.12.2021
 #: source_id: IM_022515
 #: source_id: 2147338550
 #: source_id: LMS-BR_r_LMS-BR_19252
 #: source_id: 2147342527
 #: also_indoor: traffic
-#: last_checked: 2019-05-13 vvv
-#: check_frequency: 90d vvv
+#: last_checked: 2019-06-04 vvv
+#: check_frequency: 60d vvv
 #: osm_watch: way id="585753318" version="1"
 #: osm_watch: way id="71392596" version="9"
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289
