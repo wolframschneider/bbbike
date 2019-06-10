@@ -9,7 +9,7 @@ bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824
 bereits bei der Ampel an der Corneliusstr. die Straßenseite wechseln	PI; 6880,11110 6882,11061 6873,11011 7002,11034
 auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6742,11099 6873,11011 6882,11061
 bereits an der Kreuzung An der Urania/Kurfürstenstr. die Straßenseite wechseln	PI; 6740,10755 6685,10690 6725,10641
-bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7001,8161 7158,8208 7250,8223
+bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7001,8161 7158,8208 7225,8219 7250,8223
 am Domäne-Markt Richtung Hochbahnhof Hallesches Tor abbiegen	CP; 9536,10064 9579,10122 9599,10175
 auf linken Gehweg fahren, Straßenseite an der Fußgängerampel Yorckstr./Katzbachstr. wechseln	CP; 8774,9534 8679,9544 8595,9495
 von der Brandenburgischen in die Paderborner: bereits an der Ampel Zähringerstr. auf den linken Gehweg wechseln	PI; 3927,9935 3902,10043 3719,10004
@@ -74,7 +74,7 @@ Bundesallee - Pariser Str.: bereits an der Kreuzung Bundesallee/Nachodstr. auf d
 Mehringbrücke - Ruhlsdorfer Str.: den linken Gehweg benutzen	CP2; 9416,10196 9368,10211
 Buchholzer Str. - Schönhauser Allee: zunächst auf der linken Geh/Radwegseite der Schönhauser Allee fahren, an der Kreuzung Gneiststr. die Straßenseite wechseln	CP; 11055,15504 10917,15525 10902,15422
 An der Stadtteilbibliothek einbiegen	CP2; 9460,6519 9453,6415
-Breite Str. - Auf dem Kiewitt: bereits an der Ampel Schopenhauerstr. die Straßenseite wechseln (wie ausgeschildert)	PI; -13516,-1517 -13764,-1460 -13865,-1618
+Breite Str. - Auf dem Kiewitt: bereits an der Ampel Schopenhauerstr. die Straßenseite wechseln (wie ausgeschildert)	PI; -13516,-1517 -13764,-1460 -13800,-1517 -13865,-1618
 Waldweg ist schwierig zu finden	CP2; 44290,165418 44268,165790
 Falkenwalde - Eickstedt: nicht den Eickstädter Weg nehmen, sondern erst den nächsten (nicht ausgeschilderten) Weg nach links	CP; 51170,97266 51610,97382 52346,97533 52507,97631 52471,98189
 Spreeufer: durch das Tor der Kleingartenkolonie	CP2; -309,13268 -285,13276
@@ -452,3 +452,5 @@ ausgeschildert als "Naugarder Str."	CP2; 12605,15491 12583,15566
 Ottomar-Geschke-Str.: linken Gehweg benutzen	CP2; 21148,4220 21073,4165
 Hohenschönhauser Str. - Klettwitzer Str.: Zweirichtungsradweg bis zur Überquerungshilfe benutzen	CP; 19108,17347 18738,16957 18875,16872 18782,16597
 Grüne Aue - Alt-Biesdorf: linken Gehweg benutzen	CP; 21956,11246 21954,11269 21863,11289
+Breite Str. - Auf dem Kiewitt: an der Schopenhauerstr. auf den linken Radweg (Zweirichtungsradweg) wechseln	PI; -13516,-1517 -13764,-1460 -13800,-1517
+ausgeschildert als "Grüne Trift 23d-17"	CP2; 23041,3919 23088,4001

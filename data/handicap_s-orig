@@ -23,23 +23,27 @@
 # REMOVED --- #: last_checked: 2018-01-31 --- Revaler Str.: Bauarbeiten, unter Umst‰nden Ausweichen auf Gehweg notwendig	q3::inwork 14211,11229 14286,11186
 # REMOVED --- #: last_checked: 2017-12-09 --- #: check_frequency: 14d --- Haasestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 14328,11320 14286,11186
 # 
+#: next_check_id: HAASE-2019
+#: last_checked: 2019-06-09
+Haasestr.: Bauarbeiten, Fahrbahn gesperrt, auf Gehweg ausweichen	q4::inwork 14328,11320 14286,11186
+# 
 #: last_checked: 2019-05-30
 #: next_check: 2019-07-09
-Krautstr.: Bauarbeiten, Fahrbahn gesperrt, auf Gehweg Ausweichen	q3::inwork 12059,12172 12021,12066 12002,12008
+Krautstr.: Bauarbeiten, Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 12059,12172 12021,12066 12002,12008
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-06-05
+#: last_checked: 2019-06-09
 Bˆdikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 # 
 #: next_check_id: PLANSTRASSEC-2019
 #: osm_watch: way id="491906864" version="3"
-#: last_checked: 2019-05-20
+#: last_checked: 2019-06-07
 #: check_frequency: 30d
 (Planstraﬂe C): Fahrbahn durch Bauz‰une abgesperrt, Ausweichen auf Gehweg mˆglich	q4::inwork 12926,11224 12848,11093
 # 
 #: next_check_id: GUBENER-2019
 #: priority: #A
-#: last_checked: 2019-06-01
+#: last_checked: 2019-06-08
 #: check_frequency: 30d
 Gubener Str.: Fahrbahn f¸r ein paar Meter gesperrt, Ausweichen auf Gehweg, Bordsteine	q3::inwork 13326,12056 13243,12222
 # 
@@ -48,14 +52,14 @@ Gubener Str.: Fahrbahn f¸r ein paar Meter gesperrt, Ausweichen auf Gehweg, Bords
 # REMOVED (-> qualitaet_s-orig; f¸r Radfahrer offen) --- #: XXX vor Ort pr¸fen! --- #: source_id: 2147342929 --- #: priority: #B --- #: next_check: 2018-08-31 --- #: valid: -20180831 --- Helmerdingstr.: Bauarbeiten, Richtung Revaler Str. gesperrt	q4::inwork; 14468,11203 14442,11101
 # REMOVED (-> f¸r Radfahrer offen) --- #: XXX vor Ort pr¸fen! --- #: source_id: 2147342938 --- #: priority: #B --- #: next_check: 2018-08-10 --- #: valid: -20180810 --- Scharnweberstr.: Bauarbeiten zwischen Colbestr. und Kinzigstr., Fahrbahn Richtung G¸rtelstr. gesperrt	q4::inwork; 14468,11992 14589,11975
 # 
-#: last_checked: 2019-05-23
+#: last_checked: 2019-06-06
 Lange Str.: Bauarbeiten, Einbahnstraﬂenregelung	q3::inwork; 12413,11901 12238,11931
 # 
 #: XXX bis wann gehen die Bauarbeiten?
 #: XXX ggfs. alten handicap_s-orig-Eintrag wieder aktivieren
-#: last_checked: 2019-05-11
+#: last_checked: 2019-06-06 (daf)
 #: check_frequency: 90d
-Hermann-Stˆhr-Platz: Engstelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
+Hermann-Stˆhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 # 
 # REMOVED (beendet) --- #: XXX_prog BS (ˆstliche Seite) --- #: last_checked: 2018-06-12 vvv --- #: check_frequency: 7d vvv --- Singerstr.: Bauarbeiten an der Kreuzung Ifflandstr., Fahrbahn gesperrt, Bordstein	q2::inwork 11845,12292 11635,12398 --- Singerstr.: Bauarbeiten an der Kreuzung Ifflandstr., Fahrbahn gesperrt, Bordstein	q4::inwork 11635,12398 11607,12412 --- #: check_frequency ^^^ --- #: last_checked ^^^
 # REMOVED (wieder befahrbar) --- #: next_check_id: KAUFHOF-2018 --- #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/umbau-zu-buerostandort_a173030 --- # REMOVED --- #: XXX_prog BS (auf der ˆstlichen Seite, ansonsten q3+) --- #: last_checked: 2019-02-21 --- #: check_frequency: 30d --- M¸ncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, evtl. Bordsteine	q3::inwork 12450,11980 12617,11888
@@ -167,12 +171,12 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607
 #: by: http://www.dafmap.de/d/berlin.html?id=3731&mt=0&zoom=18
 #: XXX man kann auf dem s¸dlichen Gehweg (relativ breit, wenig Menschen) ausweichen
 # REMOVED (gibt's nicht mehr) --- : XXX mittlerweile gibt's auch auf dem Gehweg Bauarbeiten, so dass er enger geworden ist: q2- -> q3
-#: last_checked: 2019-06-02
+#: last_checked: 2019-06-06
 Voltairestr.: wegen Baustelle kann die Fahrbahn gesperrt sein, Ausweichen auf Gehweg	q2::inwork 11329,12497 11209,12430
 # 
 #: osm_watch: way id="639343525" version="1"
 #: also_indoor: traffic (G)
-#: last_checked: 2019-03-29
+#: last_checked: 2019-06-06
 #: check_frequency: 60d
 Hirtenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10925,13322 11012,13278
 # 
@@ -196,7 +200,7 @@ M‰rkisches Ufer: Engstelle vor der Roﬂstraﬂenbr¸cke, Restaurantbetrieb	q2::inwor
 # REMOVED --- #: last_checked: 2017-03-24 --- Zietenplatz/Mohrenstr.: Bauarbeiten, Fahrbahn Richtung Osten gesperrt	q3::inwork; 9000,11727 9075,11756
 # 
 #: source_id: 2147342720 (bis Ende Oktober 2019)
-#: last_checked: 2019-06-02 vvv
+#: last_checked: 2019-06-07 vvv
 #: next_check: 2019-10-31 vvv
 #: valid: -20191031 vvv
 Littenstr.: Fahrbahn an der Kreuzung Stralauer Str. wegen Bauarbeiten gesperrt	q3::inwork 11092,12375 11139,12243
@@ -242,7 +246,7 @@ Sch¸tzenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_52_7191_7270_online.pdf (Grundst¸cksnummerierungen)
 #: XXX evtl. muss man nach Ende der Einschr‰nkungen den comments_misc-orig-Eintrag wieder aktivieren
 #: osm_watch: way id="17370332" version="16"
-#: last_checked: 2019-05-24
+#: last_checked: 2019-06-07
 #: check_frequency: 14d
 # REMOVED --- Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr mˆglich, stattdessen Trampelpfad benutzen, Bordsteine	q4::inwork 10791,11232 10826,11251
 (provisorischer Zugang zur neuen Alexandrinenstr.): eng, Fuﬂg‰nger	q3::inwork 10678,11172 10690,11180
@@ -265,7 +269,7 @@ Sch¸tzenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 # REMOVED --- #: XXX Ende der Bauarbeiten? --- #: last_checked: 2014-02-22 --- Planckstr.: Bauarbeiten, auf Gehweg ausweichen	q4::inwork 9405,12794 9383,12915
 # REMOVED --- #: XXX nach den Bauarbeiten wahrscheinlich bessere Fahrbahnqualit‰t -> qualitaet_s-orig-Eintrag revidieren --- #: last_checked: 2013-11-21 --- Zolastr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10898,13632 10872,13570
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2019-04-07 vvv
+#: last_checked: 2019-06-06 vvv
 #: check_frequency: 60d vvv
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10010,12275 10058,12290
@@ -287,7 +291,7 @@ Prinzengasse: einige Fuﬂg‰nger, parkende Autos	q3::inwork 9955,12300 10006,12306
 # REMOVED (Einbahnstraﬂenregelung existiert zwar noch, aber die Baustelle ist komplett weg) --- #: last_checked: 2015-12-02 --- Universit‰tsstr.: wegen Bauarbeiten Einbahnstraﬂe zwischen Dorotheenstr. und Georgenstr.	q3::inwork; 9568,12688 9581,12588
 # 
 #: next_check_id: STABIUDL-2014 vvv
-#: last_checked: 2019-06-02 vvv
+#: last_checked: 2019-06-08 vvv
 #: check_frequency: 60d vvv
 #: by: http://www.berliner-zeitung.de/berlin/baustelle-staatsbibliothek-das-geruest-steht-und-steht-und-steht,10809148,22334074.html (Endedatum 2016) vvv
 #: osm_watch: way id="153698394" version="5"
@@ -352,7 +356,7 @@ Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364
 #: next_check_id: KARLMARXALLEE-2018
 #: source_id: 2147342756
 #: also_indoor: traffic vvv
-#: last_checked: 2019-05-19 vvv
+#: last_checked: 2019-06-08 vvv
 #: check_frequency: 30d
 Schillingstr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q3::inwork 11635,12745 11596,12668
 #: check_frequency: 60d
@@ -547,7 +551,7 @@ provisorische und enge Radwegf¸hrung, Fuﬂg‰nger, Seitenwechsel notwendig	q3::inw
 # 
 #: XXX Wann sind die Bauarbeiten beendet? (laut googlemaps: Ende November 2018, laut Schild der Wasserbetriebe: bis Juni 2019)
 #: also_indoor: traffic (G)
-#: last_checked: 2019-05-28
+#: last_checked: 2019-06-07
 #: check_frequency: 14d
 Weichselstr.: Bauarbeiten am Weichselplatz, Fahrbahn gesperrt	q4+::inwork 12755,9188 12681,9083
 # 
@@ -563,11 +567,11 @@ Weichselstr.: Bauarbeiten am Weichselplatz, Fahrbahn gesperrt	q4+::inwork 12755,
 #: by: http://www.abendblatt-berlin.de/2019/02/03/neues-von-neukoellns-laengster-baustelle/
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/arbeiten-in-der-karl-marx-strasse-schreiten-voran-staugefahr-bleibt_a216409 (Fortschritte zwischen Anzengruberstr. und Erkstr. (Spekulation: vielleicht bis August 2019 fertig?))
-#: XXX laut vmz Gesamtmaﬂnahme bis Ende 2021, laut fritz bis 31.12.2021
+#: XXX laut fritz bis 31.12.2021
 #: source_id: IM_022515
 #: source_id: 2147338550
 #: source_id: LMS-BR_r_LMS-BR_19252
-#: source_id: 2147342527
+#: source_id: 2147342527 (bis Mitte September 2019, Gesamtmaﬂnahme bis Ende 2021)
 #: also_indoor: traffic
 #: last_checked: 2019-06-04 vvv
 #: check_frequency: 60d vvv
@@ -781,13 +785,12 @@ Pestalozzistr.: Fuﬂg‰ngerzone	q3 3721,11230 3770,11231 3822,11231
 (Zufahrt am NKZ): Fuﬂg‰nger, un¸bersichtlich	q3 11344,10507 11392,10520 11411,10515
 #: XXX_prog BS (1x oder 2x?)
 Dresdener Str. - NKZ: Bordsteine	q3 11344,10507 11334,10527
-Alexanderplatz: langsame Straﬂenbahnen, Fuﬂg‰ngerverkehr	q3 11139,13008 11064,12910 10970,12822
-Alexanderplatz: langsame Straﬂenbahnen, Fuﬂg‰ngerverkehr	q2- 10970,12822 10923,12779
+Alexanderplatz: langsame Straﬂenbahnen, Fuﬂg‰ngerverkehr	q3 11139,13008 11064,12910 10970,12822 10923,12779
 Alexanderplatz [Richtung Alexa]: Fuﬂg‰ngerverkehr	q3 11134,12793 11064,12910
 #: XXX nach den Bauarbeiten den alten Eintrag wiederherstellen
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.582161.php (Sperrung Kfz-Verkehr - kaum Auswirkungen f¸r Radfahrer) (in der Realit‰t aber schon, viele Fuﬂg‰nger laufen auf dem Radweg)
 #: osm_watch: relation id="8743849" version="1"
-#: last_checked: 2019-05-30
+#: last_checked: 2019-06-08
 #: check_frequency: 30d
 #Rathausstr.: Fuﬂg‰nger	q1- 10923,12779 10704,12595
 Rathausstr.: Fuﬂg‰nger, Bauarbeiten	q2 10923,12779 10704,12595
@@ -2177,7 +2180,7 @@ Alt-Tegel: Fuﬂg‰nger	q3 1529,20131 1462,20133 1397,20125
 Alt-Tegel: Fuﬂg‰nger	q3 1462,20133 1457,20159
 (Uferweg am Tegeler Hafen - Am Tegeler Hafen): 3x kurze und steile Rampe	q4 1858,20431 1871,20399
 (Am Rosensteg - An der Heide): eng	q3 3065,20646 3101,20649 3109,20650
-(Rosentreterpromenade - Ziekowstr.): schmal	q2+ 4156,21175 4060,21147 3649,21102 3456,21071 2911,20953 2571,20886
+(Rosentreterpromenade - Ziekowstr.): schmal	q2+ 4156,21175 4060,21147 3649,21102 3562,21089 3456,21071 2911,20953 2571,20886
 (Oskar-Ziethen-Krankenhaus): Krankenhausgel‰nde, Fuﬂg‰nger	q2 16541,12071 16556,12180
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6664 (BVV-Antrag f¸r Hinweisschilder)
 (U-Bahnunterf¸hrung Elsterwerdaer Platz): Fuﬂg‰nger, ggfs. schieben	q4 21137,11294 21095,11315
@@ -3094,6 +3097,12 @@ Arminiusstr.: Fuﬂg‰ngerzone	q3 5956,13433 5868,13441
 #: XXX_prog BS am Wendehammer (kann aber mit Umweg umfahren werden), ansonsten kann es q3 bleiben
 Lindauer Str.: einige Fuﬂg‰nger, Bordstein	q3 6632,9792 6638,9763
 (Galvanistr./Iburger Ufer - Uferweg): Fuﬂg‰nger	q1 4441,12559 4441,12578
+#: XXX_prog: Steigung sollte nur in comments_mount erw‰hnt werden (mittels St:q3;q3 oder so ‰hnlich) vvv
+Am Betriebsbahnhof Schˆneweide: Steigung	q3; 17775,5392 17822,5409
+Am Betriebsbahnhof Schˆneweide: Gef‰lle	q3; 17822,5409 17775,5392
+#: XXX_prog ^^^
+#: XXX_prog BS an der Gr¸nen Trift und ein paar Meter weiter
+(Gr¸ne Trift - Salvador-Allende-Str.): schmaler Trampelpfad, flache Bordsteine	q3 23257,3884 23368,3894
 # 
 ######################### User Contributions #################################
 # 
@@ -3425,7 +3434,7 @@ Bissingzeile: einspurig, eng bei Gegenverkehr	q0- 7959,10910 8119,10797
 (Weydemeyerstr.): einige Fuﬂg‰nger	q0- 11933,12701 11971,12785 11921,12810
 (Karl-Marx-Allee): Fuﬂg‰nger, Bordsteine	q1 11585,12865 11601,12858 11622,12850 11716,12803
 #: next_check_id: KARLMARXALLEE-2018
-#: last_checked: 2019-05-15
+#: last_checked: 2019-06-08
 #: check_frequency: 60d
 #(Karl-Marx-Allee - Berolinastr.): Fuﬂg‰nger, kurvig	q1 11601,12858 11589,12768
 (Karl-Marx-Allee - Berolinastr.): Bauarbeiten an der Karl-Marx-Allee	q4::inwork 11601,12858 11589,12768
@@ -3501,7 +3510,7 @@ Vereinsweg (Steglitz): Fuﬂg‰nger, Privatstraﬂe, Radfahren nicht erlaubt	q4 5334,
 (Volkspark Friedrichshain): Fuﬂg‰nger	q2 12369,13209 12369,13252 12341,13309 12307,13329 12206,13326 12166,13349 12141,13341
 (Volkspark Friedrichshain): Fuﬂg‰nger	q2 12141,13609 12012,13599 12038,13685
 (Zufahrt Landsberger Allee): Fuﬂg‰nger	q2 13433,13346 13397,13426 13574,13505
-(Verl‰ngerte Wallenbergstr.): Fuﬂg‰nger, schmal	q3 4139,8485 4029,8482
+(Verl‰ngerte Wallenbergstr.): Fuﬂg‰nger, schmal	q3 4139,8485 3992,8487
 (Zufahrt zur Kolonie Hohenzollerndamm): Fuﬂg‰nger, Poller	q2 3775,8771 3868,8759
 #: XXX_prog: Bordsteine an beiden Enden, ansonsten w‰re es q1
 Apeldorner Weg: Fuﬂg‰nger, Bordsteine	q2 3848,8689 3868,8759 3952,8980

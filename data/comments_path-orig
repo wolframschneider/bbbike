@@ -34,7 +34,7 @@ bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824
 bereits bei der Ampel an der Corneliusstr. die Straßenseite wechseln	PI; 6880,11110 6882,11061 6873,11011 7002,11034
 auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6742,11099 6873,11011 6882,11061
 bereits an der Kreuzung An der Urania/Kurfürstenstr. die Straßenseite wechseln	PI; 6740,10755 6685,10690 6725,10641
-bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7001,8161 7158,8208 7250,8223
+bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7001,8161 7158,8208 7225,8219 7250,8223
 #: XXX_prog: RL:ja, GPS:nein
 am Domäne-Markt Richtung Hochbahnhof Hallesches Tor abbiegen	CP; 9536,10064 9579,10122 9599,10175
 auf linken Gehweg fahren, Straßenseite an der Fußgängerampel Yorckstr./Katzbachstr. wechseln	CP; 8774,9534 8679,9544 8595,9495
@@ -170,7 +170,7 @@ Mehringbrücke - Ruhlsdorfer Str.: den linken Gehweg benutzen	CP2; 9416,10196 936
 Buchholzer Str. - Schönhauser Allee: zunächst auf der linken Geh/Radwegseite der Schönhauser Allee fahren, an der Kreuzung Gneiststr. die Straßenseite wechseln	CP; 11055,15504 10917,15525 10902,15422
 #: XXX_prog: RL:ja, GPS:nein
 An der Stadtteilbibliothek einbiegen	CP2; 9460,6519 9453,6415
-Breite Str. - Auf dem Kiewitt: bereits an der Ampel Schopenhauerstr. die Straßenseite wechseln (wie ausgeschildert)	PI; -13516,-1517 -13764,-1460 -13865,-1618
+Breite Str. - Auf dem Kiewitt: bereits an der Ampel Schopenhauerstr. die Straßenseite wechseln (wie ausgeschildert)	PI; -13516,-1517 -13764,-1460 -13800,-1517 -13865,-1618
 #: XXX_prog: RL:ja, GPS:nein
 Waldweg ist schwierig zu finden	CP2; 44290,165418 44268,165790
 #: XXX_prog: RL:ja, GPS:nein
@@ -525,7 +525,7 @@ Salvador-Allende-Str. - Abzweig: bereits an der Ampel Fürstenwalder Damm auf den
 Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichshagener Str. fahren	CP; 23428,5382 23403,5385 23404,5325
 #: XXX wird eventuell im Zuge der Maßnahme Nsw.3 verbessert
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5826 (Verkehrsführung verbessern) (wurde allerdings abgelehnt; die allgemeine Verbesserung der Situation wird aber irgendwann passieren ("Umgestaltung des Bahnhofsvorplatzes")
-#: last_checked: 2019-04-10
+#: last_checked: 2019-06-09
 #: check_frequency: 180d
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115
@@ -657,3 +657,8 @@ Ottomar-Geschke-Str.: linken Gehweg benutzen	CP2; 21148,4220 21073,4165
 Hohenschönhauser Str. - Klettwitzer Str.: Zweirichtungsradweg bis zur Überquerungshilfe benutzen	CP; 19108,17347 18738,16957 18875,16872 18782,16597
 # 
 Grüne Aue - Alt-Biesdorf: linken Gehweg benutzen	CP; 21956,11246 21954,11269 21863,11289
+# 
+Breite Str. - Auf dem Kiewitt: an der Schopenhauerstr. auf den linken Radweg (Zweirichtungsradweg) wechseln	PI; -13516,-1517 -13764,-1460 -13800,-1517
+# 
+ausgeschildert als "Grüne Trift 23d-17"	CP2; 23041,3919 23088,4001
+# 

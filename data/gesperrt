@@ -105,7 +105,7 @@ Platz am Wilden Eber	1 2723,7029 2701,7045 2688,7067 2695,7082 2717,7093 2737,70
 Wexstr.	2 6260,8011 5807,7978 5631,8011
 Wexstr.	1 6388,7999 6260,8011
 Wexstr.	1 5631,8011 5824,8035 5928,8052 6154,8070 6261,8058 6409,8026
-Detmolder Str. (Süd)	1 4711,8013 4572,7936 4371,8018 4342,8093 4280,8188
+Detmolder Str. (Süd)	1 4711,8013 4572,7936 4353,8035 4323,8119 4280,8188
 Detmolder Str. (Nord)	2 4349,8118 4469,8037 4600,8002 4711,8013
 Detmolder Str. (Nord)	1 4280,8188 4349,8118
 Steinplatz	1 5159,11353 5122,11300 5088,11322 5043,11354 5085,11413
@@ -801,7 +801,6 @@ Paul-Koenig-Str.	1 17268,16526 17312,16498 17304,16485 17293,16469 17251,16497 1
 Am Lehnshof	1s 4291,22986 4264,22992 4202,23034
 (Ebersstr./Autobahnauffahrt)	1 6443,7971 6388,7999
 (Ebersstr./Autobahnabfahrt)	1 6409,8026 6480,7992
-EUREF-Campus: Privatgelände	2 7158,8208 7149,8249 7316,8509
 Wiltinger Str.	1 2375,25607 2312,25673
 Wiltinger Str.	1 2384,25679 2375,25607
 Gartenstr.	1s 720,2718 835,2715
@@ -855,6 +854,8 @@ Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
 Müggelheimer Damm	2::igndisp 23476,3829 23368,3894
 B2	2::igndisp -13096,5584 -12865,5567 -12718,5571
+Türkstr.	1 -12226,-1069 -12187,-1092
+Türkstr.	1 -12187,-1092 -12248,-1107
 (Wollestr. - Mühlenstr.)	1 -10790,-1178 -10787,-1162 -10730,-1103 -10691,-1097 -10648,-1130
 Wollestr.	1s -10717,-1227 -10984,-1574
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12297,738
@@ -935,6 +936,7 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14173,-1013 -14186,-868
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14191,-818 -14199,-707 -14205,-644
 Bahnhofstr.	1s -8417,-2862 -8410,-2884
+Goethestr. (Glienicke)	1s 4952,25059 4968,24899
 Schulstr. (Blumberg)	1 24914,21971 24829,22061 24772,22125 24732,22192
 Trappenfelder Str.: Privatgrundstück, mit Zäunen abgesperrt	2 26525,19271 26721,19700 27087,19796 27256,19887
 Max-Lenk-Str. (Zepernick)	1 17834,27001 17659,27135
@@ -1461,13 +1463,13 @@ Mittelstreifen	3nocross::ignrte 16135,2135 16028,2261 15980,2318
 Neuköllner Str. -> Ampferweg: Mittelstreifen	3::igndisp 15980,2318 16028,2261 16042,2280
 Ampferweg -> Neuköllner Str.: Mittelstreifen	3::igndisp 16042,2280 16028,2261 16135,2135
 Rudower Chaussee: Straßenbahntrasse	3 19498,3054 19475,3074 19426,3024
-Straßenbahntrasse	3nocross::ignrte 17601,5090 17542,4772 17520,4649
+Straßenbahntrasse	3nocross::ignrte 17601,5090 17542,4772 17516,4657
 Ellernweg -> Sterndamm: Straßenbahntrasse	3::igndisp 17428,4792 17542,4772 17601,5090
 Ellernweg -> Waldstr.: Straßenbahntrasse	3::igndisp 17428,4792 17542,4772 17580,4761
 Sterndamm -> Waldstr.: Straßenbahntrasse	3::igndisp 17601,5090 17542,4772 17580,4761
-Sterndamm -> Ellernweg: Straßenbahntrasse	3::igndisp 17520,4649 17542,4772 17428,4792
+Sterndamm -> Ellernweg: Straßenbahntrasse	3::igndisp 17516,4657 17542,4772 17428,4792
 Waldstr. -> Ellernweg: Straßenbahntrasse	3::igndisp 17580,4761 17542,4772 17428,4792
-Waldstr. -> Sterndamm: Straßenbahntrasse	3::igndisp 17580,4761 17542,4772 17520,4649
+Waldstr. -> Sterndamm: Straßenbahntrasse	3::igndisp 17580,4761 17542,4772 17516,4657
 Straßenbahntrasse	3nocross::ignrte 17648,5338 17601,5090 17542,4772
 Staudenweg -> Pietschkerstr.: Straßenbahntrasse	3::igndisp 17493,5112 17601,5090 17652,5082
 Staudenweg -> Sterndamm: Straßenbahntrasse	3::igndisp 17493,5112 17601,5090 17648,5338
@@ -3029,6 +3031,8 @@ Drängelgitter	BNP:3:-243:trailer=10 -31349,4288
 Drängelgitter	BNP:3:-251:trailer=10 -31333,4280
 Drängelgitter	BNP:3:-105:trailer=10 -40570,103525
 Drängelgitter	BNP:3:-120:trailer=10 -40060,103909
+Drängelgitter	BNP:3:-161:trailer=10 -19195,-5739
+Alexandrinenstr.: Einbahnstraßenregelung am Stallschreiberstr.	1s:inwork 10678,11172 10593,11120
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdener Bahn vollständig gesperrt	2::inwork 7667,4549 7692,4464
 Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
 Seidenschwanzstr.: durch Bauzäune abgesperrt	2::inwork 26666,12935 26570,12860 26519,12808 26475,12761 26428,12708 26369,12756 26288,12801
@@ -3044,7 +3048,8 @@ Corinthstr.: Einbahnstraßenregelung, Radfahrer dürfen den Gehweg benutzen	1s:inw
 Weidenkätzchenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21421,158 21447,47
 Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21379,33
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,8260
-Relingstr.: Bauarbeiten, gesperrt	2::inwork 22195,2390 22276,2426 22358,2460
+Relingstr.: Bauarbeiten, gesperrt	2::inwork 22195,2390 22287,2431 22358,2460
+Gaffelsteig: Bauarbeiten, kann gesperrt sein	2::inwork 22287,2431 22221,2520
 Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12640,14800 12709,14745 12798,14682 12867,14648 12888,14625
 Kynaststr. - Paul-und-Paula-Ufer: wegen Bauarbeiten gesperrt	2:inwork 14797,10476 14820,10473
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612

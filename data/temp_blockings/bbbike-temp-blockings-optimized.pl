@@ -3300,6 +3300,7 @@ Kleistpark	2::night 7310,9622 7307,9528
 ',
          'from' => undef,
          'id' => 2463,
+         'permanent' => 1,
          'text' => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
          'type' => 'gesperrt',
          'until' => undef
@@ -3401,7 +3402,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        {
          'data' => '#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-05-08
+#: last_checked: 2019-06-06
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -3445,7 +3446,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        {
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
 #: osm_watch: way id="43141418" version="12" brb
-#: last_checked: 2019-02-17 (osm)
+#: last_checked: 2019-06-08
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
 ',
@@ -4036,7 +4037,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-06-02 vvv
+#: last_checked: 2019-06-08 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4140,22 +4141,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: VERLWERDERSTR-2018
-#: by: https://www.berliner-woche.de/altglienicke/c-bauen/werderstrasse-wird-ausgebaut_a169172
-#: XXX nach den Bauarbeiten Betonpflaster
-#: last_checked: 2019-03-30
-	2::inwork 20245,2152 20261,2114
-# REMOVED (hier fertig) ---	2::inwork 20261,2114 20222,2037 20214,1988
-# REMOVED (hier fertig) ---	2::inwork 20214,1988 20187,1930 20166,1864 20125,1802 20093,1776 20064,1777
-',
-         'from' => 1530396000,
-         'id' => 2973,
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.713900.php',
-         'text' => 'Verlängerte Werderstr.: Bauarbeiten, unter Umständen ist die Durchfahrt nicht möglich, bis Juni 2019',
-         'type' => 'gesperrt',
-         'until' => 1561910400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4265,7 +4251,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-05-24
+#: last_checked: 2019-06-06
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4416,7 +4402,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '	q4::inwork 5856,18569 5795,18585 5715,18586 5634,18587 5545,18590
+         'data' => '	q4::inwork 5839,18578 5795,18585 5715,18586 5634,18587 5545,18590
 ',
          'from' => 1558821600,
          'id' => 3054,
@@ -4502,6 +4488,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (kein Ende-Datum)
 #: note: laut fritz bis 28.06.2019
+#: last_checked: 2019-05-25 (mapillary)
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 ',
@@ -4555,7 +4542,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.796103.php ("bald")
 #: by: https://www.berliner-woche.de/waidmannslust/c-bauen/steg-im-fliess-wird-saniert_a206581
 #: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-05-19
+#: last_checked: 2019-05-25 (mapillary)
 	2::inwork 4022,22691 3947,22622 3907,22606 3879,22574
 ',
          'from' => undef,
@@ -4608,18 +4595,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147344146 (bis Mitte Juni 2019)
-	q4::inwork; 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
-# REMOVED (hier nicht mehr?) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
-',
-         'from' => 1557083524,
-         'id' => 3091,
-         'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-06-05-19-',
-         'text' => 'Langhansstr.: zwischen Goethestr. und Roelckestr. ist die Fahrbahn wegen Bauarbeiten gesperrt, bis 07. Juni 2019',
-         'type' => 'handicap',
-         'until' => 1559923200
-       },
+       undef,
        {
          'data' => '	q4::inwork; 9212,13471 9207,13493 9094,13641 9042,13707
 # REMOVED (hier nicht) ---	q4::inwork; 9042,13707 8935,13844
@@ -4627,9 +4603,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1557166526,
          'id' => 3092,
          'source_id' => '2147344155',
-         'text' => 'Chausseestr.: zwischen Torstr. und Invalidenstr. Gleisbauarbeiten, Richtung Norden gesperrt, der Radverkehr ist auch betroffen, bis 6. Juni 2019',
+         'text' => 'Chausseestr.: zwischen Torstr. und Invalidenstr. Gleisbauarbeiten, Richtung Norden gesperrt, der Radverkehr ist auch betroffen, bis Ende Juni 2019',
          'type' => 'handicap',
-         'until' => 1559836800
+         'until' => 1561564800
        },
        undef,
        undef,
@@ -4649,6 +4625,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.berliner-woche.de/weissensee/c-verkehr/viel-verkehr-wegen-der-bauarbeiten-im-komponistenviertel_a211594#gallery=default&pid=256000
 #: XXX wann werden die Bauarbeiten beendet?
+#: also_indoor: traffic
 #: last_checked: 2019-05-09
 	q4::inwork; 14056,15985 14248,16058 14295,16076
 ',
@@ -4704,8 +4681,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814989.php
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.815509.php (Radweg auf der Nordseite, Umsetzung bis 2019-06-07)
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/aerger-auf-der-oberbaumbruecke_a216700
-#: last_checked: 2019-06-05
-#: next_check: 2019-06-07
+#: by: http://www.abendblatt-berlin.de/2019/06/07/baustelle-oberbaumbruecke-ruecksicht-ist-gefragt/
+#: last_checked: 2019-06-07
+#: next_check: 2019-06-11
 	q4::inwork; 13332,10832 13305,10789 13206,10651
 ',
          'from' => 1558951200,
@@ -4722,9 +4700,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1559593428,
          'id' => 3104,
-         'text' => 'Haeckelstr.: zwischen Johannes-Werner-Str. und Winckelmannstr. Sperrung der Fahrbahn wegen Gleisbauarbeiten, evtl. sind auch Radfahrer betroffen, bis 24.06.2019',
+         'text' => 'Haeckelstr.: zwischen Johannes-Werner-Str. und Winckelmannstr. Sperrung der Fahrbahn wegen Gleisbauarbeiten, evtl. sind auch Radfahrer betroffen, bis Ende Juni 2019',
          'type' => 'handicap',
-         'until' => 1561392000
+         'until' => 1561910400
        },
        {
          'data' => '	q4::inwork 8356,5195 8433,5108
@@ -4735,27 +4713,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1560787200
        },
-       {
-         'data' => '#: source_id: 2147344260
-	q4::inwork; 21708,7981 21688,8115 21663,8246 21659,8311 21680,8400
-',
-         'from' => 1559596818,
-         'id' => 3106,
-         'source_id' => 'https://twitter.com/VIZ_Berlin/status/1135410834396594176',
-         'text' => 'Kaulsdorfer Str.: zwischen Feuersteiner Str. und Deutschhofer Allee Fahrbahn Richtung Norden gesperrt, bis voraussichtlich 7. Juni 2019',
-         'type' => 'handicap',
-         'until' => 1559923200
-       },
-       {
-         'data' => '	q2::inwork; 10282,14212 10002,14092
-',
-         'from' => 1559512800,
-         'id' => 3107,
-         'source_id' => '2147344297',
-         'text' => 'Veteranenstr.: Gleisbauarbeiten, Straße in Richtung Invalidenstr. kurzes Stück gesperrt, bis 7. Juni 2019',
-         'type' => 'handicap',
-         'until' => 1559923200
-       },
+       undef,
+       undef,
        {
          'data' => '#: note: laut fritz bis 31.01.2020
 #: last_checked: 2019-06-05
@@ -4768,6 +4727,56 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Grüntaler Str.: in Höhe Bellermannstr. Bauarbeiten, Ausweichen auf Gehweg mit Umwegen, bis zum 30.01.2020',
          'type' => 'handicap',
          'until' => 1580403600
+       },
+       {
+         'data' => '#: note: ggfs. beim Pförtner anmelden
+	2 7225,8219 7234,8277 7172,8295 7120,8336 7278,8544
+',
+         'from' => undef,
+         'id' => 3109,
+         'permanent' => 1,
+         'text' => 'EUREF-Campus: Privatgelände, Betreten für Unbefugte verboten',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: SOLDINER-2019
+#: by: https://www.soldiner-quartier.de/aktuell.html?tx_news_pi1%5Bnews%5D=445&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=1b5efc55c1b5b262514c4bb696a56d73 (bis Ende 2020 oder Frühjahr 2021)
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
+#: XXX bis wann gehen die Bauarbeiten?
+#: also_indoor: traffic
+#: last_checked: 2019-05-25 (mapillary)
+#: check_frequency: 60d
+#: XXX_prog: eigentlich q4+::inwork;
+	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
+',
+         'from' => undef,
+         'id' => 3110,
+         'text' => 'Soldiner Str.: Bauarbeiten zwischen Koloniestr. und Provinzstr., Richtung Westen gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: also_indoor: traffic (G)
+#: last_checked: 2019-06-07
+#: check_frequency: 14d
+	q4::inwork 14121,8147 14202,8083 14236,8077
+',
+         'from' => undef,
+         'id' => 3111,
+         'text' => 'Kiehlufer: zwischen Ziegrastr. und Mergenthalerring Bauarbeiten, Fahrbahn gesperrt, auf Gehweg ausweichen',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: last_checked: 2019-06-09
+	q4::inwork; 19266,1968 19564,1871
+',
+         'from' => undef,
+         'id' => 3112,
+         'text' => 'Rudower Str.: Bauarbeiten zwischen Dorothea-Viehmann-Str. und Lehmfeldsteig, Einbahnstraßenregelung, offen Richtung Westen',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );

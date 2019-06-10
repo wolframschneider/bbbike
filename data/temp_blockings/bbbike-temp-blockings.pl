@@ -699,7 +699,7 @@ EOF
        text  => 'L 88; (Beelitz-Lehnin); Bahnübergang zw. Beelitz u. AS Beelitz-Heilstätten Einbau Hilfsbrücke Vollsperrung 17.09.2004-20.09.2004 ',
        type  => 'gesperrt',
       data  => <<EOF,
-	2 -21587,-16648 -21342,-17087
+	2 -21587,-16648 -21537,-16735 -21342,-17087
 EOF
      },
      { from  => 1095717600, # 2004-09-21 00:00
@@ -707,7 +707,7 @@ EOF
        text  => 'L 88; (Beelitz-Lehnin); Bahnübergang zw. Beelitz u. AS Beelitz-Heilstätten Einbau Hilfsbrücke Vollsperrung 22.09.2004-25.09.2004 ',
        type  => 'gesperrt',
       data  => <<EOF,
-	2 -21587,-16648 -21342,-17087
+	2 -21587,-16648 -21537,-16735 -21342,-17087
 EOF
      },
      { from  => 1092866435, # 2004-08-19 00:00
@@ -1679,7 +1679,7 @@ EOF
        text  => 'Sterndamm (Treptow) in Richtung Rudow zwischen Königsheideweg und Winckelmannstr. Baustelle, Fahrtrichtung gesperrt, eine Umleitung ist eingerichtet (bis 24.03.2005)',
        type  => 'gesperrt',
        data  => <<EOF,
-	1 17520,4649 17471,4570 17428,4503
+	1 17516,4657 17471,4570 17428,4503
 EOF
      },
      { from  => 1110235074, # 2005-03-07 23:37
@@ -8222,7 +8222,7 @@ EOF
        text  => 'K 6908 Ferch-B 1 Geltow zw. B 1 und Fercher Str. in Petzow G 8 - Gipfel Vollsperrung 17.05.2007-19.05.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp -20281,-6915 -20051,-6631 -19760,-6450
+	2::temp -20281,-6915 -20145,-6748 -20030,-6607 -19760,-6450
 EOF
      },
      { from  => undef, # 
@@ -11549,7 +11549,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_008688',
        data  => <<EOF,
-	q4; 17115,4757 17266,4720 17520,4649
+	q4; 17115,4757 17266,4720 17516,4657
 EOF
      },
      { from  => 1211580000, # 2008-05-24 00:00
@@ -21975,6 +21975,7 @@ EOF
      { from  => undef,
        until => undef,
        text  => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
+       permanent => 1,
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes, 2016 wieder bicycle=no vvv
@@ -22263,7 +22264,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (beendet) --- #: XXX bis wann gehen die Bauarbeiten? --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4579 (eventuell Einschränkungen bis 2018?) --- #: last_checked: 2013-10-16 --- #: check_frequency: 30d --- #: priority: #A
-	q4::inwork 7001,8161 7158,8208 7250,8223
+	q4::inwork 7001,8161 7158,8208 7225,8219 7250,8223
 EOF
      },
      { from  => 1379328680, # 2013-09-16 12:51
@@ -22578,7 +22579,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-05-08
+#: last_checked: 2019-06-06
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -22804,7 +22805,7 @@ EOF
        data  => <<EOF,
 #: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
 #: osm_watch: way id="43141418" version="12" brb
-#: last_checked: 2019-02-17 (osm)
+#: last_checked: 2019-06-08
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
 EOF
@@ -23572,7 +23573,7 @@ EOF
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140827.1305.398908.html',
        data  => <<EOF,
 #: source_id: IM_022741
-	q4::inwork; 4280,8188 4220,8260 4139,8356 4029,8482 3964,8559 3928,8598 3848,8689 3775,8771 3701,8849
+	q4::inwork; 4280,8188 4220,8237 4135,8320 3992,8487 3964,8559 3928,8598 3848,8689 3775,8771 3701,8849
 EOF
      },
      { from  => 1409202000, # 2014-08-28 07:00
@@ -24938,7 +24939,7 @@ EOF
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.463657.php',
        data  => <<EOF,
 #: source_id: 2147339908
-	q3::inwork; 17648,5338 17601,5090 17542,4772 17520,4649
+	q3::inwork; 17648,5338 17601,5090 17542,4772 17516,4657
 EOF
      },
      { from  => 1446015600, # 2015-10-28 08:00
@@ -24947,7 +24948,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_026668',
        data  => <<EOF,
-	q2::inwork; 17244,4242 17261,4267 17290,4308 17387,4446 17428,4503 17471,4570 17520,4649
+	q2::inwork; 17244,4242 17261,4267 17290,4308 17387,4446 17428,4503 17471,4570 17516,4657
 EOF
      },
      { from  => 1445320800, # 2015-10-20 08:00
@@ -25449,7 +25450,7 @@ EOF
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20160803
 #: last_checked: 2016-07-16
 #: check_frequency: 60d
-	2::inwork 24650,6034 24649,6016 24647,5981 24637,5960 24584,5914
+	2::inwork 24650,6034 24647,5995 24647,5981 24637,5960 24584,5914
 EOF
      },
      { from  => undef, # 
@@ -26820,7 +26821,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-06-02 vvv
+#: last_checked: 2019-06-08 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27162,10 +27163,10 @@ EOF
 	2::temp -12422,-1416 -12446,-1334
 	2::temp -12542,-1305 -12526,-1356 -12500,-1437
 	2::temp -12500,-1437 -12537,-1447 -12562,-1367 -12606,-1379 -12582,-1460 -12537,-1447
-	2::temp -12657,-1338 -12628,-1423 -12614,-1471 -12583,-1552
+	2::temp -12657,-1338 -12628,-1423 -12614,-1487 -12583,-1552
 	2::temp -12653,-1723 -12646,-1702 -12643,-1694 -12627,-1618 -12624,-1598
 	2::temp -12624,-1598 -12583,-1552
-	2::temp -12624,-1598 -12619,-1549 -12614,-1471
+	2::temp -12624,-1598 -12619,-1549 -12614,-1487
 	2::temp -12583,-1552 -12619,-1549 -12677,-1536 -12719,-1542 -12790,-1560
 	2::temp -12749,-1668 -12719,-1542
 	2::temp -12583,-1552 -12485,-1482
@@ -27176,7 +27177,7 @@ EOF
 	2::temp -12260,-1503 -12253,-1589 -12396,-1681 -12544,-1799
 	2::temp -12596,-1701 -12474,-1559 -12485,-1482 -12265,-1434
 	2::temp -12485,-1482 -12489,-1465 -12500,-1437
-	2::temp -12614,-1471 -12582,-1460
+	2::temp -12614,-1487 -12582,-1460
 	2::temp -12796,-2488 -12831,-2439 -12815,-2419 -12779,-2467
 	2::temp -12815,-2419 -12781,-2376
 	2::temp -12781,-2376 -12743,-2387
@@ -27462,15 +27463,12 @@ EOF
 EOF
      },
      { from  => 1530396000, # 2018-07-01 00:00
-       until => $isodate2epoch->("2019-06-30 18:00:00"), # 1559339999, # 2019-05-31 23:59
+       until => 1560096748, # $isodate2epoch->("2019-06-30 18:00:00"), # 1559339999, # 2019-05-31 23:59
        text  => 'Verlängerte Werderstr.: Bauarbeiten, unter Umständen ist die Durchfahrt nicht möglich, bis Juni 2019',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.713900.php',
        data  => <<EOF,
-#: next_check_id: VERLWERDERSTR-2018
-#: by: https://www.berliner-woche.de/altglienicke/c-bauen/werderstrasse-wird-ausgebaut_a169172
-#: XXX nach den Bauarbeiten Betonpflaster
-#: last_checked: 2019-03-30
+# REMOVED (fertig) --- #: next_check_id: VERLWERDERSTR-2018 --- #: by: https://www.berliner-woche.de/altglienicke/c-bauen/werderstrasse-wird-ausgebaut_a169172 --- #: XXX nach den Bauarbeiten Betonpflaster --- #: last_checked: 2019-03-30
 	2::inwork 20245,2152 20261,2114
 # REMOVED (hier fertig) ---	2::inwork 20261,2114 20222,2037 20214,1988
 # REMOVED (hier fertig) ---	2::inwork 20214,1988 20187,1930 20166,1864 20125,1802 20093,1776 20064,1777
@@ -27781,7 +27779,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-05-24
+#: last_checked: 2019-06-06
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27878,8 +27876,8 @@ EOF
        #accept_multi_feature_distance => 4000,
        data  => <<EOF,
 	2::temp -4001,2858 -3768,3069 -3680,3160 -3296,3686 -2218,5133 -927,6888
-	2::temp -3296,3686 -3490,4212 -3605,4536 -3729,4687 -3807,4794 -3889,4967 -3962,5129 -4072,5227 -4003,5621 -3944,6034 -3880,6142 -3723,6254 -3606,6407 -3598,6572 -3589,6721 -3530,6781 -3483,6789 -3382,6821 -3355,6874 -3496,7677 -3531,7825 -3536,7856 -3561,7964 -3567,8031 -3615,8496 -3578,8578 -3389,8624 -3277,8728 -3073,9061 -3140,9294 -3213,9425 -3347,9541 -3426,9684 -3412,9755 -3178,9953 -3025,10116 -2774,10345
-#	2::temp -4001,2858 -3768,3069 -3680,3160 -3296,3686 -3490,4212 -3605,4536 -3729,4687 -3807,4794 -3889,4967 -3962,5129 -4072,5227 -4003,5621 -3944,6034 -3880,6142 -3723,6254 -3606,6407 -3598,6572 -3589,6721 -3530,6781 -3483,6789 -3382,6821 -3355,6874 -3496,7677 -3531,7825 -3536,7856 -3561,7964 -3567,8031 -3615,8496 -3578,8578 -3389,8624 -3277,8728 -3073,9061 -3140,9294 -3213,9425 -3347,9541 -3426,9684 -3412,9755 -3178,9953 -3025,10116 -2774,10345
+	2::temp -3296,3686 -3490,4212 -3605,4536 -3729,4687 -3807,4794 -3889,4967 -3962,5129 -4072,5227 -4046,5505 -4003,5621 -3944,6034 -3880,6142 -3723,6254 -3606,6407 -3598,6572 -3589,6721 -3530,6781 -3483,6789 -3382,6821 -3355,6874 -3496,7677 -3531,7825 -3536,7856 -3561,7964 -3567,8031 -3615,8496 -3578,8578 -3389,8624 -3283,8739 -3073,9061 -3140,9294 -3213,9425 -3347,9541 -3426,9684 -3412,9755 -3178,9953 -3025,10116 -2774,10345
+#	2::temp -4001,2858 -3768,3069 -3680,3160 -3296,3686 -3490,4212 -3605,4536 -3729,4687 -3807,4794 -3889,4967 -3962,5129 -4072,5227 -4046,5505 -4003,5621 -3944,6034 -3880,6142 -3723,6254 -3606,6407 -3598,6572 -3589,6721 -3530,6781 -3483,6789 -3382,6821 -3355,6874 -3496,7677 -3531,7825 -3536,7856 -3561,7964 -3567,8031 -3615,8496 -3578,8578 -3389,8624 -3283,8739 -3073,9061 -3140,9294 -3213,9425 -3347,9541 -3426,9684 -3412,9755 -3178,9953 -3025,10116 -2774,10345
 #	2::temp -4001,2858 -4551,3201 -4586,3753 -4650,3902 -4901,4083
 #	2::temp 1457,10168 1398,10201 1247,10270 1127,10403 1049,10568 998,10723 928,10948 787,11121 711,11199 704,11273
 EOF
@@ -28267,7 +28265,7 @@ EOF
        data  => <<EOF,
 #: by: http://www.baustellen-doku.info/berlin_frankfurter_bahn/ausbau-fernbahn-koepenick-erkner/20181107/ (fertig)
 # REMOVED --- #: XXX wird nach den Bauarbeiten hier noch ein Weg existieren? Wird die nördliche Anbindung mit Treppe oder Rampe realisiert? --- #: XXX man kann aber passieren (z.B. mittags am 2018-07-27) --- #: XXX laut osm-Notiz https://www.openstreetmap.org/note/1428158 "fast fertig" --- #: add_fragezeichen: Ist der Weg wieder hergestellt? --- #: last_checked: 2018-08-29 --- #: next_check: 2018-10-22
-	2::inwork 24650,6034 24649,6016 24647,5981 24637,5960 24584,5914
+	2::inwork 24650,6034 24647,5995 24647,5981 24637,5960 24584,5914
 EOF
      },
      { from  => $isodate2epoch->("2018-10-15 00:00:00"), # ein Tag Vorlauf
@@ -28462,7 +28460,7 @@ EOF
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.812145.php',
        data  => <<EOF,
-	q4::inwork 5856,18569 5795,18585 5715,18586 5634,18587 5545,18590
+	q4::inwork 5839,18578 5795,18585 5715,18586 5634,18587 5545,18590
 EOF
      },
      { from  => 1542653796, # 2018-11-19 19:56
@@ -28647,6 +28645,7 @@ EOF
        data  => <<EOF,
 #: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (kein Ende-Datum)
 #: note: laut fritz bis 28.06.2019
+#: last_checked: 2019-05-25 (mapillary)
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 EOF
@@ -28735,7 +28734,7 @@ EOF
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.796103.php ("bald")
 #: by: https://www.berliner-woche.de/waidmannslust/c-bauen/steg-im-fliess-wird-saniert_a206581
 #: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-05-19
+#: last_checked: 2019-05-25 (mapillary)
 	2::inwork 4022,22691 3947,22622 3907,22606 3879,22574
 EOF
      },
@@ -28878,10 +28877,10 @@ EOF
 EOF
      },
      { from  => 1557166526, # 2019-05-06 20:15
-       until => $isodate2epoch->("2019-06-06 18:00:00"),
-       text  => 'Chausseestr.: zwischen Torstr. und Invalidenstr. Gleisbauarbeiten, Richtung Norden gesperrt, der Radverkehr ist auch betroffen, bis 6. Juni 2019',
+       until => $isodate2epoch->("2019-06-26 18:00:00"),
+       text  => 'Chausseestr.: zwischen Torstr. und Invalidenstr. Gleisbauarbeiten, Richtung Norden gesperrt, der Radverkehr ist auch betroffen, bis Ende Juni 2019',
        type  => 'handicap',
-       source_id => '2147344155',
+       source_id => '2147344155', # bis Ende Juni 2019
        data  => <<EOF,
 	q4::inwork; 9212,13471 9207,13493 9094,13641 9042,13707
 # REMOVED (hier nicht) ---	q4::inwork; 9042,13707 8935,13844
@@ -28947,6 +28946,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/weissensee/c-verkehr/viel-verkehr-wegen-der-bauarbeiten-im-komponistenviertel_a211594#gallery=default&pid=256000
 #: XXX wann werden die Bauarbeiten beendet?
+#: also_indoor: traffic
 #: last_checked: 2019-05-09
 	q4::inwork; 14056,15985 14248,16058 14295,16076
 EOF
@@ -28997,14 +28997,15 @@ EOF
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814989.php
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.815509.php (Radweg auf der Nordseite, Umsetzung bis 2019-06-07)
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/aerger-auf-der-oberbaumbruecke_a216700
-#: last_checked: 2019-06-05
-#: next_check: 2019-06-07
+#: by: http://www.abendblatt-berlin.de/2019/06/07/baustelle-oberbaumbruecke-ruecksicht-ist-gefragt/
+#: last_checked: 2019-06-07
+#: next_check: 2019-06-11
 	q4::inwork; 13332,10832 13305,10789 13206,10651
 EOF
      },
      { from  => 1559593428, # 2019-06-03 22:23
-       until => 1561392000, # 2019-06-24 18:00
-       text  => 'Haeckelstr.: zwischen Johannes-Werner-Str. und Winckelmannstr. Sperrung der Fahrbahn wegen Gleisbauarbeiten, evtl. sind auch Radfahrer betroffen, bis 24.06.2019',
+       until => $isodate2epoch->("2019-06-30 18:00:00"), # 1561392000, # 2019-06-24 18:00
+       text  => 'Haeckelstr.: zwischen Johannes-Werner-Str. und Winckelmannstr. Sperrung der Fahrbahn wegen Gleisbauarbeiten, evtl. sind auch Radfahrer betroffen, bis Ende Juni 2019',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.816002.php (hier aber nur bis 2019-06-17)
@@ -29022,12 +29023,14 @@ EOF
 EOF
      },
      { from  => 1559596818, # 2019-06-03 23:20
-       until => $isodate2epoch->("2019-06-07 18:00:00"), # 1560182400, # 2019-06-10 18:00
-       text  => 'Kaulsdorfer Str.: zwischen Feuersteiner Str. und Deutschhofer Allee Fahrbahn Richtung Norden gesperrt, bis voraussichtlich 7. Juni 2019',
+       until => 1560020407, # undef, # $isodate2epoch->("2019-06-07 18:00:00"), # 1560182400, # 2019-06-10 18:00
+       text  => 'Kaulsdorfer Str.: zwischen Feuersteiner Str. und Deutschhofer Allee Fahrbahn Richtung Norden gesperrt, Ende unbekannt',
        type  => 'handicap',
        source_id => 'https://twitter.com/VIZ_Berlin/status/1135410834396594176',
        data  => <<EOF,
 #: source_id: 2147344260
+#: priority: #B
+# REMOVED --- #: next_check: 2019-06-11
 	q4::inwork; 21708,7981 21688,8115 21663,8246 21659,8311 21680,8400
 EOF
      },
@@ -29050,6 +29053,52 @@ EOF
 #: last_checked: 2019-06-05
 #: next_check: 2020-01-30
 	q3::inwork  8986,16092 9178,16317 9301,16439
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'EUREF-Campus: Privatgelände, Betreten für Unbefugte verboten',
+       type  => 'gesperrt',
+       permanent => 1,
+       data  => <<EOF,
+#: note: ggfs. beim Pförtner anmelden
+	2 7225,8219 7234,8277 7172,8295 7120,8336 7278,8544
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Soldiner Str.: Bauarbeiten zwischen Koloniestr. und Provinzstr., Richtung Westen gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: SOLDINER-2019
+#: by: https://www.soldiner-quartier.de/aktuell.html?tx_news_pi1%5Bnews%5D=445&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=1b5efc55c1b5b262514c4bb696a56d73 (bis Ende 2020 oder Frühjahr 2021)
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
+#: XXX bis wann gehen die Bauarbeiten?
+#: also_indoor: traffic
+#: last_checked: 2019-05-25 (mapillary)
+#: check_frequency: 60d
+#: XXX_prog: eigentlich q4+::inwork;
+	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Kiehlufer: zwischen Ziegrastr. und Mergenthalerring Bauarbeiten, Fahrbahn gesperrt, auf Gehweg ausweichen',
+       type  => 'handicap',
+       data  => <<EOF,
+#: also_indoor: traffic (G)
+#: last_checked: 2019-06-07
+#: check_frequency: 14d
+	q4::inwork 14121,8147 14202,8083 14236,8077
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Rudower Str.: Bauarbeiten zwischen Dorothea-Viehmann-Str. und Lehmfeldsteig, Einbahnstraßenregelung, offen Richtung Westen',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2019-06-09
+	q4::inwork; 19266,1968 19564,1871
 EOF
      },
     );
