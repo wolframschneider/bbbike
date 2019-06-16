@@ -1021,8 +1021,8 @@ Alte Hirschfelder Str. (Werneuchen): Qualität?	? 33070,26202 33324,26038
 Beiersdorfer Str. (Werneuchen): Qualität?	? 32874,25981 32967,26167 33070,26202 33121,26227 33106,26278 33038,26323
 Götz - Deetz: Qualität der Fahrbahn? Gibt es hier Radwege?	? -35606,300 -35712,428 -36125,787
 Gradnauer Str. (Kleinmachnow): Qualität des südöstlichen Abschnitts?	? -184,722 -87,637 11,549
+Straße 136: führt die Straße eigentlich weiter südlich? Wie ist die Fahrbahnqualität?	? -7903,5302 -7982,5358 -8057,5395
 # added from strassen
-Lüderitzstr. (Wurde die Umbenennung zu "Cornelius-Fredericks-Str." schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 6661,15921 6484,16085 6349,16213 6211,16343 6106,16433 6003,16521
 (Siedlung Roedernau) (Heißt diese Straße offiziell "Roedernau" (mit Straßenschildern)?)	? 6460,19734 6433,19749 6390,19770
 # added from landstrassen
 B5 (Umfahrung Nauen) (ist die Umfahrung Nauen auch für Radfahrer benutzbar?)	? -24421,19803 -24681,20018 -24904,20093 -25871,20229 -26745,20437 -27095,20987 -27689,21958 -28075,22250
@@ -1164,6 +1164,7 @@ Stresemannstr. - Wilhelmstr.: vorhandene Beleuchtung ist kaputt (funktioniert di
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
+Kieler Brücke und Zuwegungen: gesperrt (Ist die Kieler Brücke noch immer gesperrt?)	? 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 (ist hier auch ein asphaltierter Zweirichtungsradweg?)	? 34403,3857 34486,4276 34549,4551

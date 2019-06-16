@@ -1,155 +1,6 @@
-$#temp_blocking = 2;
+$#temp_blocking = 73;
 push @temp_blocking,
 (
-       {
-         'data' => '#: by: http://www.berlin.de/tickets/suche/detail.php?id=810735
-	2::temp 9521,10010 9827,10051
-	2::temp 9521,10010 9448,10014
-	2::temp 9599,10175 9687,10180 9825,10206
-	2::temp 9416,10196 9599,10175
-	2::temp 9579,10122 9536,10064
-	2::temp 9579,10122 9631,10142 9702,10129
-	2::temp 9837,10117 9827,10051
-	2::temp 9837,10117 9858,10199
-	2::temp 9599,10175 9579,10122
-	2::temp 9702,10129 9827,10051
-	2::temp 9702,10129 9816,10119
-	2::temp 9599,10175 9631,10142 9687,10180
-	2::temp 9825,10206 9865,10227 9948,10280
-	2::temp 9873,10285 9865,10227 9858,10199
-	2::temp 9825,10206 9858,10199
-	3 9922,10010 9827,10051 9837,9856
-	3 9837,9856 9827,10051 9922,10010
-	2::temp 9827,10051 9837,9856
-	2::temp 9837,9856 9723,9842 9588,9827 9387,9804
-',
-         'from' => 1559772000,
-         'id' => 3,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'easter',
-                              47
-                            ]
-                          ],
-         'text' => 'Straßenfest rund um den Blücherplatz, 07.06.2019 bis 10.06.2019, Sperrungen fangen schon einen Tag vorher an',
-         'type' => 'gesperrt',
-         'until' => 1560203999
-       },
-       {
-         'data' => '	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10951,9216 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
-# REMOVED ---	2::temp 9044,9753 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
-	2::temp 10713,9260 10670,9286 10639,9304 10564,9292
-# REMOVED ---	3 8774,9534 8777,9601 8778,9759 8778,9759 8779,9812
-# REMOVED ---	3 8779,9812 8778,9759 8778,9759 8777,9601 8774,9534
-# REMOVED ---	3 9000,9509 9044,9753 9073,9915
-# REMOVED ---	3 9073,9915 9044,9753 9000,9509
-	3 9283,9487 9334,9670 9387,9804
-	3 9387,9804 9334,9670 9283,9487
-	3 9524,9426 9552,9602 9588,9827
-	3 9588,9827 9552,9602 9524,9426
-	3 9650,9404 9676,9564 9705,9732
-	3 9705,9732 9676,9564 9650,9404
-	3 9767,9386 9790,9528 9820,9718
-	3 9820,9718 9790,9528 9767,9386
-	3 9892,9286 9927,9487 9957,9692
-	3 9957,9692 9927,9487 9892,9286
-	3 10004,9268 10032,9456 10067,9667
-	3 10067,9667 10032,9456 10004,9268
-	3 10123,9233 10198,9405 10306,9640
-	3 10306,9640 10198,9405 10123,9233
-	3 10547,9233 10564,9292 10580,9361
-	3 10580,9361 10564,9292 10547,9233
-	3 10705,9234 10713,9260 10749,9342
-	3 10749,9342 10713,9260 10705,9234
-	3 11141,9107 11136,9183 11208,9345 11274,9492
-	3 11274,9492 11208,9345 11136,9183 11141,9107
-	3 11998,8872 11880,8955 11831,8989 11830,8917 11845,8824 11879,8672 11882,8527
-	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 11998,8872
-',
-         'from' => 1559944800,
-         'id' => 4,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'easter',
-                              49
-                            ]
-                          ],
-         'source_id' => 'http://www.karneval-berlin.de/de/',
-         'text' => 'Karneval der Kulturen, 09.06.2019',
-         'type' => 'gesperrt',
-         'until' => 1560117599
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'data' => '#: by: http://www.stadtfest.berlin/de/index.html
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/strassen-wegen-fest-gesperrt_a170723
@@ -1814,10 +1665,16 @@ push @temp_blocking,
        undef,
        {
          'data' => '#: by: https://www.volksfeste-in-deutschland.de/koepenicker-sommer-in-berlin-koepenick.html
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.819220.php
 	2::temp 22111,4562 22093,4499 22076,4422
 	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562
 	2::temp 22138,4642 22074,4664
 	2::temp 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,4470
+	2::temp 22314,4604 22355,4660 22365,4676 22395,4678
+	2::temp 22144,4660 22212,4655 22284,4653
+	2::temp 22175,4730 22246,4711
+	2::temp 22284,4653 22355,4660
+	2::temp 22212,4655 22214,4548
 # REMOVED ---	2::temp 22111,4562 22162,4546 22214,4548 22324,4586 22314,4604 22355,4660 22365,4676 22395,4678
 ',
          'from' => 1560376800,
@@ -1832,7 +1689,7 @@ push @temp_blocking,
                               6
                             ]
                           ],
-         'text' => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain; außerdem Sperrung im Kietz (Kietzer Sommer) (14.06.2019 - 16.06.2019)',
+         'text' => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt sind gesperrt (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Lindenstr. (14.06.2019 - 16.06.2019)',
          'type' => 'gesperrt',
          'until' => 1560722399
        },
@@ -3172,9 +3029,41 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
+       {
+         'data' => '# REMOVED (was) : tempex: 20160714-20160717
+	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
+',
+         'from' => 1563314400,
+         'id' => 2420,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              13,
+                              'months',
+                              7
+                            ]
+                          ],
+         'source_id' => 'https://www.gratis-in-berlin.de/festivals/item/2037758-hafenfest-tegel-2019-mit-programm-und-feuerwerk',
+         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (18.07.2019 bis 21.07.2019)',
+         'type' => 'gesperrt',
+         'until' => 1563746399
+       },
        undef,
-       undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation) --- #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein --- #: source_id: 2147339529 --- #: last_checked: 2017-02-04 --- #: next_check: 2017-03-01
+#: source_id: LMS-BR_r_LMS-BR_172061_LMS-BR_72
+# REMOVED --- #: next_check: 2019-06-13
+	q2::inwork 5258,11285 5236,10994
+',
+         'from' => 1560420000,
+         'id' => 2422,
+         'source_id' => 'IM_019747',
+         'text' => 'Fasanenstr.: vor der Einmündung Hardenbergstr. Baustelle, Fahrbahn gesperrt (bis 12. Juli 2019) ',
+         'type' => 'handicap',
+         'until' => 1562947200
+       },
        undef,
        undef,
        undef,
@@ -3445,7 +3334,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        {
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: osm_watch: way id="43141418" version="12" brb
+#: osm_watch: way id="43141418" version="13" brb
 #: last_checked: 2019-06-08
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
@@ -3995,7 +3884,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-05-25
+#: last_checked: 2019-06-10
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -4037,7 +3926,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-06-08 vvv
+#: last_checked: 2019-06-11 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4251,7 +4140,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-06-06
+#: last_checked: 2019-06-14
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4321,7 +4210,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-06-04
+#: last_checked: 2019-06-10
 #: check_frequency: 7d
 	2::inwork 14854,8964 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
@@ -4370,8 +4259,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
-#: XXX wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2019-05-17 vvv
+#: XXX wann werden die Bauarbeiten beendet? vvv
+#: last_checked: 2019-06-15 vvv
 	q3::inwork 9106,12795 9193,12875 9239,12923
 	q3::inwork 9160,12932 9193,12875
 #: last_checked ^^^^
@@ -4429,7 +4318,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-05-25
+#: last_checked: 2019-06-10
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 ',
@@ -4571,6 +4460,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8389 (Frage)
 #: add_fragezeichen: wann wird der Weg wieder offen sein?
 #: osm_watch: way id="8655276" version="17"
 #: last_checked: 2019-05-04
@@ -4622,19 +4512,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1569880800
        },
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/weissensee/c-verkehr/viel-verkehr-wegen-der-bauarbeiten-im-komponistenviertel_a211594#gallery=default&pid=256000
-#: XXX wann werden die Bauarbeiten beendet?
-#: also_indoor: traffic
-#: last_checked: 2019-05-09
-	q4::inwork; 14056,15985 14248,16058 14295,16076
-',
-         'from' => undef,
-         'id' => 3098,
-         'text' => 'Bizetstr.: Bauarbeiten zwischen Smetanastr. und Lindenallee, Einbahnstraße, offen Richtung Westen, Ende der Bauarbeiten unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '	2::inwork -2128,-17678 -2059,-17909
 ',
@@ -4676,22 +4554,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1561910400
        },
-       {
-         'data' => '#: next_check_id: OBERBAUMBRUECKE-2019
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814989.php
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.815509.php (Radweg auf der Nordseite, Umsetzung bis 2019-06-07)
-#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/aerger-auf-der-oberbaumbruecke_a216700
-#: by: http://www.abendblatt-berlin.de/2019/06/07/baustelle-oberbaumbruecke-ruecksicht-ist-gefragt/
-#: last_checked: 2019-06-07
-#: next_check: 2019-06-11
-	q4::inwork; 13332,10832 13305,10789 13206,10651
-',
-         'from' => 1558951200,
-         'id' => 3103,
-         'text' => 'Oberbaumbrücke: Radfahrer Richtung Kreuzberg müssen unter Umständen absteigen (unklare Verkehrsführung) (bis Anfang November 2019)',
-         'type' => 'handicap',
-         'until' => 1572627600
-       },
+       undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.816002.php (hier aber nur bis 2019-06-17)
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=56359 (hier aber nur bis 2019-06-17)
@@ -4776,6 +4639,46 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 3112,
          'text' => 'Rudower Str.: Bauarbeiten zwischen Dorothea-Viehmann-Str. und Lehmfeldsteig, Einbahnstraßenregelung, offen Richtung Westen',
          'type' => 'handicap',
+         'until' => undef
+       },
+       undef,
+       {
+         'data' => '#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/arbeiten-an-den-tramgleisen_a219142
+#: source_id: 2147344343 (bis Anfang Juli 2019)
+#: XXX genauer anschauen
+#: next_check: 2019-06-14
+	q4::inwork; 13603,11538 13588,11490 13541,11355
+',
+         'from' => 1560450700,
+         'id' => 3114,
+         'text' => 'Warschauer Str.: Richtung Oberbaumbrücke in Höhe Revaler Str. Bauarbeiten, Einschränkungen auch für Radfahrer (Umleitung), ab 14. Juni 2019 bis Anfang Juli 2019',
+         'type' => 'handicap',
+         'until' => 1562601600
+       },
+       {
+         'data' => '#: source_id: 2147344346
+# REMOVED --- #: XXX genauer anschauen --- #: next_check: 2019-06-14
+	q4::inwork; 13996,11631 14065,11605 14211,11552 14305,11514
+	3::inwork 14181,11434 14211,11552 14247,11681
+	3::inwork 14247,11681 14211,11552 14181,11434
+	3::inwork 14049,11553 14065,11605 14102,11715
+	3::inwork 14102,11715 14065,11605 14049,11553
+',
+         'from' => 1560450908,
+         'id' => 3115,
+         'text' => 'Wühlischstr.: Straßenbahnbauarbeiten zwischen Simplonstr. und Seumestr., Fahrbahn Richtung Osten gesperrt, Überqueren der Fahrbahn nicht möglich, ab 14. Juni 2019 bis Anfang Juli 2019',
+         'type' => 'handicap',
+         'until' => 1562601600
+       },
+       {
+         'data' => '#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
+#: last_checked: 2019-06-17
+	2::inwork 14567,10814 14352,10874
+',
+         'from' => 1560636000,
+         'id' => 3116,
+         'text' => 'DB-Werkstraße: Bauarbeiten, eventuell ist die Straße komplett gesperrt, ab 17. Juni 2019',
+         'type' => 'gesperrt',
          'until' => undef
        }
      

@@ -14566,14 +14566,20 @@ EOF
        until => $isodate2epoch->("2019-06-16 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6]],
-       text  => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain; außerdem Sperrung im Kietz (Kietzer Sommer) (14.06.2019 - 16.06.2019)',
+       text  => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt sind gesperrt (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Lindenstr. (14.06.2019 - 16.06.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.volksfeste-in-deutschland.de/koepenicker-sommer-in-berlin-koepenick.html
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.819220.php
 	2::temp 22111,4562 22093,4499 22076,4422
 	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562
 	2::temp 22138,4642 22074,4664
 	2::temp 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,4470
+	2::temp 22314,4604 22355,4660 22365,4676 22395,4678
+	2::temp 22144,4660 22212,4655 22284,4653
+	2::temp 22175,4730 22246,4711
+	2::temp 22284,4653 22355,4660
+	2::temp 22212,4655 22214,4548
 # REMOVED ---	2::temp 22111,4562 22162,4546 22214,4548 22324,4586 22314,4604 22355,4660 22365,4676 22395,4678
 EOF
      },
@@ -21443,12 +21449,12 @@ EOF
 # REMOVED --- #: tempex ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2018-07-18 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-07-22 23:59:59"),
+     { from  => $isodate2epoch->("2019-07-17 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-07-21 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 13, months => 7]],
-       source_id => 'https://www.gratis-in-berlin.de/festivals/item/2035333-hafenfest-tegel-2018-mit-programm-und-feuerwerk',
-       text  => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (19.07.2018 bis 22.07.2018)',
+       source_id => 'https://www.gratis-in-berlin.de/festivals/item/2037758-hafenfest-tegel-2019-mit-programm-und-feuerwerk',
+       text  => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (18.07.2019 bis 21.07.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED (was) : tempex: 20160714-20160717
@@ -21464,17 +21470,15 @@ EOF
 	1::inwork -12653,-1723 -12733,-1703 -12758,-1689 -12794,-1652
 EOF
      },
-     { from  => 1366740818, # 2013-04-23 20:13
-       until => 1490460786, # $isodate2epoch->("2017-04-22 17:00:00"), # 1427727600, # 2015-03-30 17:00
-       text  => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende April 2017) ',
+     { from  => $isodate2epoch->("2019-06-13 12:00:00"), # 1366740818, # 2013-04-23 20:13
+       until => $isodate2epoch->("2019-07-12 18:00:00"), # 1490460786, # $isodate2epoch->("2017-04-22 17:00:00"), # 1427727600, # 2015-03-30 17:00
+       text  => 'Fasanenstr.: vor der Einmündung Hardenbergstr. Baustelle, Fahrbahn gesperrt (bis 12. Juli 2019) ',
        type  => 'handicap',
        source_id => 'IM_019747',
        data  => <<EOF,
-#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
-#: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
-#: source_id: 2147339529
-#: last_checked: 2017-02-04
-#: next_check: 2017-03-01
+# REMOVED --- #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation) --- #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein --- #: source_id: 2147339529 --- #: last_checked: 2017-02-04 --- #: next_check: 2017-03-01
+#: source_id: LMS-BR_r_LMS-BR_172061_LMS-BR_72
+# REMOVED --- #: next_check: 2019-06-13
 	q2::inwork 5258,11285 5236,10994
 EOF
      },
@@ -22804,7 +22808,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: osm_watch: way id="43141418" version="12" brb
+#: osm_watch: way id="43141418" version="13" brb
 #: last_checked: 2019-06-08
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
@@ -26624,7 +26628,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-05-25
+#: last_checked: 2019-06-10
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26821,7 +26825,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-06-08 vvv
+#: last_checked: 2019-06-11 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27779,7 +27783,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-06-06
+#: last_checked: 2019-06-14
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28168,7 +28172,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-06-04
+#: last_checked: 2019-06-10
 #: check_frequency: 7d
 	2::inwork 14854,8964 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
@@ -28353,8 +28357,8 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
-#: XXX wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2019-05-17 vvv
+#: XXX wann werden die Bauarbeiten beendet? vvv
+#: last_checked: 2019-06-15 vvv
 	q3::inwork 9106,12795 9193,12875 9239,12923
 	q3::inwork 9160,12932 9193,12875
 #: last_checked ^^^^
@@ -28396,9 +28400,7 @@ EOF
        source_id => '2147343461',
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
-#: XXX regelmäßig prüfen
-#: priority: #A
-#: last_checked: 2018-11-16
+# REMOVED --- #: XXX regelmäßig prüfen --- #: priority: #A --- #: last_checked: 2018-11-16
 	q4::inwork; 14724,10297 14766,10372 14797,10476
 EOF
      },
@@ -28507,7 +28509,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-05-25
+#: last_checked: 2019-06-10
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28819,6 +28821,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8389 (Frage)
 #: add_fragezeichen: wann wird der Weg wieder offen sein?
 #: osm_watch: way id="8655276" version="17"
 #: last_checked: 2019-05-04
@@ -28940,14 +28943,12 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef,
+       until => 1560598759, # undef,
        text  => 'Bizetstr.: Bauarbeiten zwischen Smetanastr. und Lindenallee, Einbahnstraße, offen Richtung Westen, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/weissensee/c-verkehr/viel-verkehr-wegen-der-bauarbeiten-im-komponistenviertel_a211594#gallery=default&pid=256000
-#: XXX wann werden die Bauarbeiten beendet?
-#: also_indoor: traffic
-#: last_checked: 2019-05-09
+# REMOVED (offen, aber vielleicht nur temporär?) --- #: XXX wann werden die Bauarbeiten beendet? --- #: also_indoor: traffic --- #: last_checked: 2019-05-09
 	q4::inwork; 14056,15985 14248,16058 14295,16076
 EOF
      },
@@ -28989,17 +28990,11 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2019-05-27 12:00:00"),
-       until => $isodate2epoch->("2019-11-01 18:00:00"),
+       until => 1560163133, # $isodate2epoch->("2019-11-01 18:00:00"),
        text  => 'Oberbaumbrücke: Radfahrer Richtung Kreuzberg müssen unter Umständen absteigen (unklare Verkehrsführung) (bis Anfang November 2019)',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: OBERBAUMBRUECKE-2019
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814989.php
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.815509.php (Radweg auf der Nordseite, Umsetzung bis 2019-06-07)
-#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/aerger-auf-der-oberbaumbruecke_a216700
-#: by: http://www.abendblatt-berlin.de/2019/06/07/baustelle-oberbaumbruecke-ruecksicht-ist-gefragt/
-#: last_checked: 2019-06-07
-#: next_check: 2019-06-11
+# REMOVED --- #: next_check_id: OBERBAUMBRUECKE-2019 --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814989.php --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.815509.php (Radweg auf der Nordseite, Umsetzung bis 2019-06-07) --- #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/aerger-auf-der-oberbaumbruecke_a216700 --- #: by: http://www.abendblatt-berlin.de/2019/06/07/baustelle-oberbaumbruecke-ruecksicht-ist-gefragt/ --- #: last_checked: 2019-06-07 --- #: next_check: 2019-11-01
 	q4::inwork; 13332,10832 13305,10789 13206,10651
 EOF
      },
@@ -29099,6 +29094,61 @@ EOF
        data  => <<EOF,
 #: last_checked: 2019-06-09
 	q4::inwork; 19266,1968 19564,1871
+EOF
+     },
+     { from  => $isodate2epoch->("2019-06-10 18:00:00"), # 1560204000, # 2019-06-10 00:00 # --- die Sperrungen sind schon am Tag vor der Staffel aktiv, in Zukunft immer berücksichtigen!
+       until => $isodate2epoch->("2019-06-15 09:00:00"), # 1560549599, # 2019-06-14 23:59
+       text  => 'Nördlicher Tiergarten und John-Foster-Dulles-Allee: 5 x 5 km TEAM-Staffel, Wege und Straßen können gesperrt sein, vom 11. Juni 2019 18 Uhr bis 15. Juni 2019 9 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://www.berliner-teamstaffel.de/der-tag/strecke.html',
+       data  => <<EOF,
+#: source_id: 2147344332
+	2::temp 8119,12414 8070,12409 8017,12359 7875,12363 7822,12201 7816,12150
+	2::temp 7383,12095 7031,12320 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 7945,12592
+	3 6694,12627 7031,12320 7051,12426
+	3 6694,12627 7031,12320 7001,12274
+	3 7654,12464 7627,12380 7603,12353
+	3 7001,12274 7031,12320 7051,12426
+	3 7001,12274 7031,12320 6694,12627
+	3 7051,12426 7031,12320 7001,12274
+	3 7051,12426 7031,12320 6694,12627
+	3 7603,12353 7627,12380 7654,12464
+EOF
+     },
+     { from  => 1560450700, # 2019-06-13 20:31
+       until => $isodate2epoch->("2019-07-08 18:00:00"), # 1562018399, # 2019-07-01 23:59
+       text  => 'Warschauer Str.: Richtung Oberbaumbrücke in Höhe Revaler Str. Bauarbeiten, Einschränkungen auch für Radfahrer (Umleitung), ab 14. Juni 2019 bis Anfang Juli 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/arbeiten-an-den-tramgleisen_a219142
+#: source_id: 2147344343 (bis Anfang Juli 2019)
+#: XXX genauer anschauen
+#: next_check: 2019-06-14
+	q4::inwork; 13603,11538 13588,11490 13541,11355
+EOF
+     },
+     { from  => 1560450908, # 2019-06-13 20:35
+       until => $isodate2epoch->("2019-07-08 18:00:00"), # 1562018399, # 2019-07-01 23:59
+       text  => 'Wühlischstr.: Straßenbahnbauarbeiten zwischen Simplonstr. und Seumestr., Fahrbahn Richtung Osten gesperrt, Überqueren der Fahrbahn nicht möglich, ab 14. Juni 2019 bis Anfang Juli 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147344346
+# REMOVED --- #: XXX genauer anschauen --- #: next_check: 2019-06-14
+	q4::inwork; 13996,11631 14065,11605 14211,11552 14305,11514
+	3::inwork 14181,11434 14211,11552 14247,11681
+	3::inwork 14247,11681 14211,11552 14181,11434
+	3::inwork 14049,11553 14065,11605 14102,11715
+	3::inwork 14102,11715 14065,11605 14049,11553
+EOF
+     },
+     { from  => 1560636000, # 2019-06-16 00:00
+       until => undef, # XXX
+       text  => 'DB-Werkstraße: Bauarbeiten, eventuell ist die Straße komplett gesperrt, ab 17. Juni 2019',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
+#: last_checked: 2019-06-17
+	2::inwork 14567,10814 14352,10874
 EOF
      },
     );

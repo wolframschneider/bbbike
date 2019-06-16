@@ -8,7 +8,7 @@
 #: temporary vvv
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-06-05 vvv
+#: last_checked: 2019-06-14 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
 #: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16)
@@ -76,6 +76,12 @@
 #: valid ^^^
 #: next_check ^^^
 #: XXX ^^^
+# 
+#: next_check_id: OBERBAUMBRUECKE-2019
+#: last_checked: 2019-06-12
+#: next_check: 2019-11-01
+#: valid: -20191101
+	F::inwork 13178,10623
 # 
 # REMOVED (mittlerweile aus) --- #: next_check_id: ROSSSTRASSENBRUECKE-2019 --- #: XXX Gegenverkehrsregelung --- #: source_id: 2147343772 --- #: last_checked: 2019-03-17 --- #: next_check: 2019-03-29 --- #: valid: -20190329 --- # REMOVED (gewandert) ---	X::inwork 10687,11853 ---	X::inwork 10672,11870
 # 
@@ -2761,7 +2767,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2019-06-08 vvv
+#: last_checked: 2019-06-15 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2906,7 +2912,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: last_checked: 2019-06-04
 	X::inwork 13278,6967
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2019-05-13
+#: last_checked: 2019-06-04
 	X::inwork 13627,7047
 #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren
 	X0::inwork 14011,7103
@@ -3053,7 +3059,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: Anforderungsampel
 #: XXX provisorisch, bleibt eventuell nur während der Bauarbeiten an der Herbert-von-Karajan-Str.
 #: osm_watch: node id="1319349510" version="5"
-#: last_checked: 2019-05-27
+#: last_checked: 2019-06-14
 #: check_frequency: 45d
 	F::inwork 8005,11627
 # 
