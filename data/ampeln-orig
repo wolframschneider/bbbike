@@ -54,7 +54,7 @@
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
-#: last_checked: 2019-05-21
+#: last_checked: 2019-06-19
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -78,10 +78,17 @@
 #: XXX ^^^
 # 
 #: next_check_id: OBERBAUMBRUECKE-2019
-#: last_checked: 2019-06-12
+#: last_checked: 2019-06-19
 #: next_check: 2019-11-01
 #: valid: -20191101
 	F::inwork 13178,10623
+# 
+#: next_check_id: HAUPTSTRFRZBUCHHOLZ-2019
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.821009.php
+#: valid: 20190620-20190802 vvv
+	X::inwork 12067,23241
+	X::inwork 12027,23057
+#: valid ^^^
 # 
 # REMOVED (mittlerweile aus) --- #: next_check_id: ROSSSTRASSENBRUECKE-2019 --- #: XXX Gegenverkehrsregelung --- #: source_id: 2147343772 --- #: last_checked: 2019-03-17 --- #: next_check: 2019-03-29 --- #: valid: -20190329 --- # REMOVED (gewandert) ---	X::inwork 10687,11853 ---	X::inwork 10672,11870
 # 
@@ -948,7 +955,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX eventuell wird diese Einschränkung aufgehoben:
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036190429651/190429651/00081409/09-Anlagen/04/B0138SB.pdf (nach Komplettumbau)
-#: last_checked: 2019-06-09
+#: last_checked: 2019-06-18
 #: check_frequency: 180d
 	X 18080,5376
 	X 19904,3464
@@ -2830,7 +2837,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 8577,11896
 #: note: Anforderungsampel
 	F 6827,4810
-	X 20832,3170
+	X 20839,3163
 	X 20927,3292
 	X 4937,6205
 	F 6115,13328
@@ -2923,7 +2930,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6407
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="5"
-#: last_checked: 2019-05-19
+#: last_checked: 2019-06-18
 #: check_frequency: 30d
 	X::inwork 14174,7505
 # 
@@ -3214,7 +3221,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2019-06-04 vvv
+#: last_checked: 2019-06-18 vvv
 #: check_frequency: 14d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738

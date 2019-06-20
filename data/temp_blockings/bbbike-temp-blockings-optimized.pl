@@ -1663,36 +1663,7 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.volksfeste-in-deutschland.de/koepenicker-sommer-in-berlin-koepenick.html
-#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.819220.php
-	2::temp 22111,4562 22093,4499 22076,4422
-	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562
-	2::temp 22138,4642 22074,4664
-	2::temp 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,4470
-	2::temp 22314,4604 22355,4660 22365,4676 22395,4678
-	2::temp 22144,4660 22212,4655 22284,4653
-	2::temp 22175,4730 22246,4711
-	2::temp 22284,4653 22355,4660
-	2::temp 22212,4655 22214,4548
-# REMOVED ---	2::temp 22111,4562 22162,4546 22214,4548 22324,4586 22314,4604 22355,4660 22365,4676 22395,4678
-',
-         'from' => 1560376800,
-         'id' => 1702,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              6
-                            ]
-                          ],
-         'text' => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt sind gesperrt (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Lindenstr. (14.06.2019 - 16.06.2019)',
-         'type' => 'gesperrt',
-         'until' => 1560722399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3074,27 +3045,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: tempex: 20170630T2000-20170701T2359
-	2::temp 14161,11930 14285,12190
-',
-         'from' => 1560448800,
-         'id' => 2433,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
-         'text' => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 14.06.2019 und 15.06.2019',
-         'type' => 'gesperrt',
-         'until' => 1560643200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3884,7 +3835,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-06-10
+#: last_checked: 2019-06-18
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -4092,7 +4043,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147342919
 #: source_id: 2147343007
 #: also_indoor: traffic
-#: last_checked: 2018-10-07
+#: last_checked: 2019-06-19
 #: next_check: 2019-06-30
 	q4::inwork; 6168,6467 6083,6451 5823,6413
 	q4::inwork 6083,6451 6095,6358
@@ -4210,15 +4161,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-06-10
+#: last_checked: 2019-06-18
 #: check_frequency: 7d
 	2::inwork 14854,8964 15057,8910
+	2::inwork 14854,8964 14918,8813
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
 ',
          'from' => undef,
          'id' => 3027,
-         'text' => 'Treptower Park, Weg zum/vom Karpfenteich: Bauarbeiten, Weg kann gesperrt sein',
+         'text' => 'Treptower Park, Wege am Karpfenteich: Bauarbeiten, Weg kann gesperrt sein',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4240,7 +4192,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: by: https://www.berliner-woche.de/franzoesisch-buchholz/c-bauen/die-kanaele-werden-erneuert_a185738 --- #: source_id: 2147343329
+# REMOVED (vermutlich hier nicht) ---	q3::inwork; 12185,23021 12214,22918 12205,22696
+# REMOVED ---	q3::inwork; 12205,22696 12187,22486
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.821009.php
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/franzosisch-buchholz-sommerbaustellen-%C2%B7-erhebliche-verkehrsstorungen
+	q4::inwork; 12185,23021 12214,22918 12205,22696 12187,22486
+',
+         'from' => 1560895200,
+         'id' => 3036,
+         'text' => 'Hauptstr. (Französisch-Buchholz): stadteinwärts zwischen Triftstr. und Mühlenstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, 20. Juni 2019 bis 2. August 2019',
+         'type' => 'handicap',
+         'until' => 1564761600
+       },
        {
          'data' => '#: source_id: 2147343335
 	q4::inwork; 9082,16982 8904,17059
@@ -4318,7 +4283,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: priority: #C
-#: last_checked: 2019-06-10
+#: last_checked: 2019-06-18
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 ',
@@ -4338,7 +4303,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1566057600
        },
-       undef,
+       {
+         'data' => '#: note: bei fritz allerdings "nur eine freie Spur", keine Sperrungen
+#: source_id: 2147343527 (bis 10/2019)
+	q4::inwork; 3952,8980 4006,8967 4181,8933 4324,8899
+',
+         'from' => 1544425200,
+         'id' => 3061,
+         'text' => 'Berliner Str.: Bauarbeiten zwischen Konstanzer Str. und Barstr., Fahrbahn Richtung Osten gesperrt, Radfahrer sind auch betroffen, bis Oktober 2019',
+         'type' => 'handicap',
+         'until' => 1572454800
+       },
        undef,
        {
          'data' => '	q3::inwork 11145,10638 10965,10851
@@ -4555,27 +4530,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1561910400
        },
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.816002.php (hier aber nur bis 2019-06-17)
-#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=56359 (hier aber nur bis 2019-06-17)
-#: source_id: 2147344266 (bis Ende Juni 2019)
-	q4::inwork 17379,3932 17468,3979
-',
-         'from' => 1559593428,
-         'id' => 3104,
-         'text' => 'Haeckelstr.: zwischen Johannes-Werner-Str. und Winckelmannstr. Sperrung der Fahrbahn wegen Gleisbauarbeiten, evtl. sind auch Radfahrer betroffen, bis Ende Juni 2019',
-         'type' => 'handicap',
-         'until' => 1561910400
-       },
-       {
-         'data' => '	q4::inwork 8356,5195 8433,5108
-',
-         'from' => 1559593632,
-         'id' => 3105,
-         'text' => 'Chlodwigstr.: im Einmündungsbereich Attilastr. Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, bis 17.06.2019',
-         'type' => 'handicap',
-         'until' => 1560787200
-       },
+       undef,
+       undef,
        undef,
        undef,
        {
@@ -4621,7 +4577,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: also_indoor: traffic (G)
-#: last_checked: 2019-06-07
+#: last_checked: 2019-06-18
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 ',
@@ -4645,9 +4601,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/arbeiten-an-den-tramgleisen_a219142
 #: source_id: 2147344343 (bis Anfang Juli 2019)
-#: XXX genauer anschauen
-#: next_check: 2019-06-14
+# REMOVED --- #: XXX genauer anschauen --- #: next_check: 2019-06-14
 	q4::inwork; 13603,11538 13588,11490 13541,11355
+	3::inwork 13711,11458 13588,11490 13565,11492
+	3::inwork 13565,11492 13588,11490 13711,11458
+## XXX does not work:
+#	DH:len=200:tl 13711,11458 13588,11490 13541,11355
+#	DH:len=100 13711,11458 13588,11490 13565,11492
+#	DH:len=100:h=q4 13565,11492 13588,11490 13711,11458
 ',
          'from' => 1560450700,
          'id' => 3114,
@@ -4663,6 +4624,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	3::inwork 14247,11681 14211,11552 14181,11434
 	3::inwork 14049,11553 14065,11605 14102,11715
 	3::inwork 14102,11715 14065,11605 14049,11553
+	3::inwork 14305,11514 14211,11552 14181,11434
+	3::inwork 14181,11434 14211,11552 14065,11605
+	3::inwork 14211,11552 14065,11605 14049,11553
+	3::inwork 14049,11553 14065,11605 13996,11631
 ',
          'from' => 1560450908,
          'id' => 3115,
@@ -4680,6 +4645,40 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'DB-Werkstraße: Bauarbeiten, eventuell ist die Straße komplett gesperrt, ab 17. Juni 2019',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
+#: osm_watch: way id="206889085" version="9"
+#: last_checked: 2019-06-18
+#: next_check: 2019-11-01
+	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
+',
+         'from' => undef,
+         'id' => 3117,
+         'text' => 'Wagner-Régeny-Allee: Straße ist noch nicht komplett fertiggestellt, wegen Bauarbeiten kann die Straße gesperrt sein, voraussichtlich bis November 2019',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: last_checked: 2019-06-18
+#: next_check: 2019-11-01
+	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
+',
+         'from' => undef,
+         'id' => 3118,
+         'text' => 'Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang kann durch Tor und Bauzaun gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '	q4::inwork 10220,13098 10264,13097 10286,13084 10339,13052
+	q4::inwork 10264,13097 10310,13227
+',
+         'from' => 1560895200,
+         'id' => 3119,
+         'text' => 'Hackescher Markt: Gleisarbeiten, Fahrbahn der zuführenden Straßen gesperrt, Radfahrer sollen schieben, ab 20. Juni 2019 bis Mitte August 2019',
+         'type' => 'handicap',
+         'until' => 1565906399
        }
      
 );

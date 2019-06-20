@@ -977,7 +977,6 @@ Heinrich-Grüber-Platz	1 22877,11940 22858,11937 22843,11999 22856,12003 22870,12
 Boraweg	1s:q4 6763,2879 6710,2909 6658,2907
 Viktoriaplatz	1 3500,4146 3523,4139 3528,4118 3518,4106 3489,4115 3485,4137 3500,4146
 Glaserweg	1 10187,872 10237,749
-Lintruper Str.	1 10324,925 10380,757
 Alt-Buckow	1s:q3 12574,1866 12561,1931
 Alt-Buckow	1 12561,1931 12817,2031
 Alt-Schmöckwitz	1 27396,-3101 27428,-3137 27427,-3171 27413,-3196 27388,-3199 27378,-3183 27382,-3151 27396,-3101
@@ -1294,6 +1293,7 @@ Görlitzer Park	1::igndisp 12464,10153 12504,10172
 #: note: Benutzungspflicht des Radwegs um die Wendeschleife herum
 Müggelheimer Damm	2::igndisp 23476,3829 23368,3894
 B2	2::igndisp -13096,5584 -12865,5567 -12718,5571
+Glienicker Str. (Köpenick): Radweg	1::igndisp 21363,3699 21308,3644
 ######################################################################
 #
 # Potsdam
@@ -1925,6 +1925,7 @@ Ostseestr.: Mittelstreifen	3nocross 12216,16120 12232,16110 12347,16039
 # REMOVED (Fahrbahnen getrennt) --- Schildhornstreifen: Mittelstreifen vor dem Autobahnanschluss	3nocross 4338,6528 4423,6477
 Adlergestell: Mittelstreifen	3nocross 19735,3643 19812,3561 19857,3514 19904,3464
 Adlergestell: Mittelstreifen	3nocross 19676,3705 19633,3751 19587,3801
+Adlergestell: Mittelstreifen	3nocross 19472,3922 18725,4715 18457,5000
 Silberberger -> Adlergestell: Abbiegen verboten	3 19804,3697 19735,3643 19812,3561
 Michael-Brückner-Str.: Mittelstreifen	3nocross 18457,5000 18425,5032 18080,5376
 Michael-Brückner-Str.: Mittelstreifen	3nocross 17728,5756 17782,5698 17829,5648
@@ -2024,6 +2025,10 @@ abgeschlossenes Tor	3 * 14688,8355 *
 #
 # Stellen, an denen getragen werden muß:
 # die Zahl hinter dem ":" entspricht ungefähr den verlorenen Sekunden
+# 
+#: note: Aufzug existiert
+tragen (3x13 Stufen)	0:45 18739,4728
+tragen (3x13 Stufen)	0:45 18636,4660
 # 
 #: next_check_id: SAENTISSTR-2018
 #: by: https://www.berliner-woche.de/marienfelde/c-verkehr/fuehrungsrinne-fuer-fahrraeder-geplant_a167051 (Führungsrinnen werden gebaut) vvv
@@ -3007,6 +3012,9 @@ Drängelgitter	BNP:3::trailer=10 -31333,4280
 Drängelgitter	BNP:3::trailer=10 -40570,103525
 Drängelgitter	BNP:3::trailer=10 -40060,103909
 Drängelgitter	BNP:3::trailer=10 -19195,-5739
+Drängelgitter	BNP:3::trailer=10 19141,3980
+Drängelgitter	BNP:3::trailer=10 12155,6526
+Drängelgitter	BNP:3::trailer=10 12092,6616
 #
 ############################################################################
 #: section temporäre Sperrungen (Baustellen etc.) vvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -3074,7 +3082,7 @@ Mauswieselweg: durch Bauzäune abgesperrt	2::inwork 26570,12860 26503,12912 26421
 #: check_frequency: 60d vvv
 Betulaweg: Bauarbeiten, gesperrt	2::inwork 19564,898 19316,951
 Rubusweg: Bauarbeiten, gesperrt	2::inwork 19551,868 19316,951
-#: osm_watch: way id="669795653" version="3"
+#: osm_watch: way id="669795653" version="4"
 #: XXX culdesac-Einträge ggfs. entfernen
 Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997
 #: check_frequency ^^^
@@ -3085,7 +3093,7 @@ Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997
 # 
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910 vvv
-#: last_checked: 2019-06-14 vvv
+#: last_checked: 2019-06-18 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:q4:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -3141,8 +3149,8 @@ Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12640,14800 12709,14745 
 # 
 #: osm_watch: way id="32591917" version="17"
 #: next_check_id: KYNASTSTRASSE-2018
-#: last_checked: 2019-06-12
-#: next_check: 2019-06-15
+#: last_checked: 2019-06-17
+# REMOVED --- #: next_check: 2019-06-15
 Kynaststr. - Paul-und-Paula-Ufer: wegen Bauarbeiten gesperrt	2:inwork 14797,10476 14820,10473
 # 
 # REMOVED (offen) --- #: next_check_id: MERGENTHALERRING-2018 --- #: osm_watch: way id="20595738" version="13" --- #: last_checked: 2018-12-10 --- #: check_frequency: 30d --- Mergenthalerring: Bauarbeiten, komplett gesperrt	2:inwork 14258,8520 14262,8564
@@ -3170,7 +3178,7 @@ Kynaststr. - Paul-und-Paula-Ufer: wegen Bauarbeiten gesperrt	2:inwork 14797,1047
 # 
 #: next_check_id: MOEWENWEG-2017
 #: last_checked: 2019-05-04 vvv
-#: check_frequency: 90d vvv
+#: check_frequency: 60d vvv
 An den Grachten: Bauarbeiten, noch nicht geöffnet	2:inwork 22169,10969 22172,10996 22181,11057
 Am Groen: Bauarbeiten, noch nicht geöffnet	2:inwork 22137,11033 22146,10995
 #: check_frequency ^^^
@@ -3180,7 +3188,7 @@ Am Groen: Bauarbeiten, noch nicht geöffnet	2:inwork 22137,11033 22146,10995
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8036
 #: next_check_id: MOEWENWEG-2017
 #: last_checked: 2019-05-04
-#: check_frequency: 90d
+#: check_frequency: 60d
 Möwenweg: Straße existiert nicht mehr; wird sie wieder aufgebaut, oder wird es hier nur einen Rad/Gehweg geben?	2::inwork 22166,10839 22199,10877 22194,10940 22195,10993 22207,11069 22220,11138
 # 
 # REMOVED --- #: next_check_id: BRUECKENSTRASSENBRUECKE-2018 --- #: priority: #C --- #: next_check: 2018-11-15 --- #: valid: -20181115 --- Brückenstraßenbrücke: wegen Bauarbeiten gesperrt	2:inwork 29521,4213 29516,4223
@@ -3257,7 +3265,7 @@ Uferweg zum Speicher: noch keine Durchfahrt möglich	2::inwork -12721,-2082 -1275
 # 
 # REMOVED (-> temp blockings) --- #: XXX vielleicht sogar dauerhaft? --- #: last_checked: 2018-08-24 (zurzeit kann man sich noch an den Bauzäunen vorbei mogeln) --- #: check_frequency: 14d --- Boxhagener Str. - Weserstr.: Bauarbeiten, Durchfahrt nicht mehr möglich	2::inwork 14838,11410 14949,11474
 # 
-#: last_checked: 2019-06-12
+#: last_checked: 2019-06-17
 #: check_frequency: 30d
 Heidelberger Str.: Baustelle, Einbahnstraße	1s:q3:inwork 13491,9201 13421,9260 13357,9313
 # 
@@ -3399,7 +3407,7 @@ Im Lichtenhain: neue Straße wird hier entstehen, zurzeit Bauarbeiten	2::inwork 1
 #: osm_watch: way id="523614484" version="2"
 # REMOVED (wurde gelöscht) --- #: osm_watch: way id="523614486" version="3"
 # REMOVED (wurde gelöscht) --- #: osm_watch: way id="5134092" version="20"
-#: last_checked: 2019-05-26
+#: last_checked: 2019-06-18 (daf)
 #: check_frequency: 60d
 Zufahrt zum ehemaligen Parkhaus: Bauarbeiten, Straße komplett gesperrt	2::inwork 8367,10745 8350,10662 8348,10636 8335,10518 8350,10499 8384,10507
 # 
@@ -3480,7 +3488,7 @@ Wegelystr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 5518,12159 5627,12105 5
 #: XXX Klompenweg: 11124; für Berlin.coords.data: Klompenweg|Biesdorf|12683
 #: XXX Am Groen: 11125; für Berlin.coords.data siehe fragezeichen-orig
 #: last_checked: 2019-05-04
-#: check_frequency: 90d
+#: check_frequency: 60d
 Möwenweg: wegen Bauarbeiten komplett gesperrt, wird danach wohl zum "Klompenweg", Qualität? Dürfen danach hier weiterhin Kfz fahren?	2::inwork 22101,10985 22146,10995 22172,10996 22195,10993
 # 
 #: next_check_id: BEBAUUNGSPLAN-XXI-34A
@@ -3562,7 +3570,7 @@ Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,1440
 #: XXX Wann sind die Bauarbeiten beendet?
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6291
 #: osm_watch: way id="137084083" version="10"
-#: last_checked: 2019-06-07
+#: last_checked: 2019-06-17
 #: check_frequency: 60d
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,9200 12548,9167
 # 

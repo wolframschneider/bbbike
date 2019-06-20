@@ -283,7 +283,7 @@ Kynastbrücke	Br 14928,10970 14902,10859 14880,10808
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/bruecke-ueber-den-stadtring-benannt_a207052
 #: XXX Name "Südkreuz-Steg" --- ist dieser Name schon offiziell und ist die Brücke ausgeschildert?
 #: osm_watch: way id="10360532" version="17"
-#: last_checked: 2019-05-17
+#: last_checked: 2019-06-19
 Sachsendammsteg	Br 7757,7563 7747,7521 7733,7483
 # 
 Tiburtiusbrücke	Br 4937,6205 5335,5991 5377,5961 5574,5819 5672,5751
@@ -644,6 +644,7 @@ Margarete-Kubicka-Brücke	Br 14384,8056 14425,8052
 Mathilde-Rathenau-Brücke	Br 14261,8851 14318,8790
 # 
 provisorische Fußgängerbrücke	Br 9002,919 9047,948
+Fußgängerbrücke Betriebsbahnhof Schöneweide	Br 18642,4654 18684,4690 18730,4735
 #: section ^^^
 #
 ## Brandenburg und weiter ####################################################

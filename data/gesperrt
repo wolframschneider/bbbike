@@ -640,7 +640,6 @@ Heinrich-Grüber-Platz	1 22877,11940 22858,11937 22843,11999 22856,12003 22870,12
 Boraweg	1s 6763,2879 6710,2909 6658,2907
 Viktoriaplatz	1 3500,4146 3523,4139 3528,4118 3518,4106 3489,4115 3485,4137 3500,4146
 Glaserweg	1 10187,872 10237,749
-Lintruper Str.	1 10324,925 10380,757
 Alt-Buckow	1s 12574,1866 12561,1931
 Alt-Buckow	1 12561,1931 12817,2031
 Alt-Schmöckwitz	1 27396,-3101 27428,-3137 27427,-3171 27413,-3196 27388,-3199 27378,-3183 27382,-3151 27396,-3101
@@ -854,6 +853,7 @@ Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
 Müggelheimer Damm	2::igndisp 23476,3829 23368,3894
 B2	2::igndisp -13096,5584 -12865,5567 -12718,5571
+Glienicker Str. (Köpenick): Radweg	1::igndisp 21363,3699 21308,3644
 Türkstr.	1 -12226,-1069 -12187,-1092
 Türkstr.	1 -12187,-1092 -12248,-1107
 (Wollestr. - Mühlenstr.)	1 -10790,-1178 -10787,-1162 -10730,-1103 -10691,-1097 -10648,-1130
@@ -2093,6 +2093,9 @@ Seidenbaustr. -> Adlergestell: Mittelstreifen	3::igndisp 19966,3596 19857,3514 1
 Mittelstreifen	3nocross::ignrte 19676,3705 19633,3751 19587,3801
 Adlergestell -> Husstr.: Mittelstreifen	3::igndisp 19587,3801 19633,3751 19736,3858
 Husstr. -> Adlergestell: Mittelstreifen	3::igndisp 19736,3858 19633,3751 19676,3705
+Mittelstreifen	3nocross::ignrte 19472,3922 18725,4715 18457,5000
+Fußgängerbrücke Betriebsbahnhof Schöneweide -> Adlergestell: Mittelstreifen	3::igndisp 18739,4728 18725,4715 19472,3922
+Adlergestell -> Fußgängerbrücke Betriebsbahnhof Schöneweide: Mittelstreifen	3::igndisp 18457,5000 18725,4715 18739,4728
 Silberberger -> Adlergestell: Abbiegen verboten	3 19804,3697 19735,3643 19812,3561
 Mittelstreifen	3nocross::ignrte 18457,5000 18425,5032 18080,5376
 Michael-Brückner-Str. -> Hartriegelstr.: Mittelstreifen	3::igndisp 18080,5376 18425,5032 18514,5028
@@ -2329,6 +2332,8 @@ abgeschlossenes Tor	3 10014,1123 10000,1131 9906,1166
 abgeschlossenes Tor	3 9906,1166 10000,1131 10014,1123
 abgeschlossenes Tor	3 14563,8243 14688,8355 14700,8368
 abgeschlossenes Tor	3 14700,8368 14688,8355 14563,8243
+tragen (3x13 Stufen)	0:45:-132 18739,4728
+tragen (3x13 Stufen)	0:45:-225 18636,4660
 tragen (3x12 Stufen)	0:35:-212 9005,912
 tragen (2x13 Stufen)	0:30:-122 9047,948
 tragen (28 Stufen)	0:30:-260 6138,12877
@@ -3032,6 +3037,9 @@ Drängelgitter	BNP:3:-251:trailer=10 -31333,4280
 Drängelgitter	BNP:3:-105:trailer=10 -40570,103525
 Drängelgitter	BNP:3:-120:trailer=10 -40060,103909
 Drängelgitter	BNP:3:-161:trailer=10 -19195,-5739
+Drängelgitter	BNP:3:-135:trailer=10 19141,3980
+Drängelgitter	BNP:3:-34:trailer=10 12155,6526
+Drängelgitter	BNP:3:-51:trailer=10 12092,6616
 Alexandrinenstr.: Einbahnstraßenregelung am Stallschreiberstr.	1s:inwork 10678,11172 10593,11120
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdener Bahn vollständig gesperrt	2::inwork 7667,4549 7692,4464
 Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
