@@ -6648,7 +6648,7 @@ EOF
        text  => 'B 109 Prenzlauer Allee OD Templin, ab A.-Bebel-Str. bis OA Einbau Deckschicht Vollsperrung 03.11.2006-05.11.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 16331,79764 16904,79746 17094,79875 17455,80199
+	q4::inwork 16331,79764 16904,79746 17094,79875 17426,80173 17455,80199
 EOF
      },
      { from  => 1159221600, # 2006-09-26 00:00
@@ -7717,7 +7717,7 @@ EOF
        text  => 'L 015 zw. Gollmitz u. Berkholz u. Boitzenburg Deckensanierung Vollsperrung 10.04.2007-22.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 29760,99768 27887,98987 27416,98865 26773,98564 26332,98221 26174,97897 25950,97572 24777,97198 24290,96842
+	2::inwork 29815,99727 29689,99718 27887,98987 27378,98854 26763,98550 26331,98209 26174,97897 25950,97572 25685,97481 24777,97198 24290,96842
 EOF
      },
      { from  => undef, # 
@@ -12788,7 +12788,7 @@ EOF
        text  => 'K 6411 Neulewin - Altwriezen zw. Heinrichsdorf und Kerstenbruch Straßenbauarbeiten Vollsperrung 22.09.2008-10.10.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 68327,37979 67364,38248 67053,38406 66413,38217
+	2::inwork 68285,37992 67364,38248 67053,38406 66477,38219
 EOF
      },
      { from  => 1223157600, # 2008-10-05 00:00
@@ -12919,7 +12919,7 @@ EOF
        text  => 'L 294 Ruhlsdorfer Str. OD Biesenthal, zw. Lanker Str. und Akazienallee Straßenneubau Vollsperrung 22.09.2008-14.12.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 24120,41684 24106,41050 24185,40670 24374,40395
+	q4::inwork 24120,41684 24102,41213 24106,41050 24185,40670 24374,40395
 EOF
      },
      { from  => 1224540000, # 2008-10-21 00:00
@@ -16386,7 +16386,7 @@ EOF
        text  => 'L 026 Brüssow - Prenzlau zw. Baumgarten und Prenzlau Grundhafter Straßenbau Vollsperrung 21.09.2009-30.12.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 45414,105210 44963,104618 44698,104375 44487,104325 42804,104235 42306,103942 42002,103540 41700,103365
+	2::inwork 45414,105210 45099,104840 44963,104618 44698,104375 44487,104325 42804,104235 42306,103942 41979,103529 41955,103509 41700,103365
 EOF
      },
      { from  => 1253397600, # 2009-09-20 00:00
@@ -19809,23 +19809,23 @@ EOF
 	2::inwork 3045,19032 2994,18979
 EOF
      },
-     { from  => $isodate2epoch->("2018-08-02 10:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-08-05 02:00:00"),
+     { from  => $isodate2epoch->("2019-08-01 10:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-08-04 02:00:00"),
        periodic => 1, # Internationales Berliner Bierfestival
        recurrences => [['yearly', days => 31, months => 7]],
        accept_multi_feature_distance => 1300,
-       text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (3.8.2018 bis 5.8.2018)',
+       text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (2.8.2019 bis 4.8.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.bierfestival-berlin.de/?y=2017
-#: tempex 20170804-20170806 vvv
+#: by: https://www.internationales-berliner-bierfestival.de/home.html
+# REMOVED --- #: tempex 20170804-20170806 vvv
 	2::temp 12352,12509 12355,12541 12359,12592
 	2::temp 12891,12549 12878,12430
 	2::temp 12632,12630 12592,12472
 	2::temp 13448,12340 13476,12461
 	2::temp 13552,12435 13543,12326
 #zukünftig, wenn dieser Weg eingetragen ist:	2::temp 13163,12382 13176,12500
-#: tempex ^^^
+# REMOVED --- #: tempex ^^^
 EOF
      },
      { from  => 1312520400, # 2011-08-05 07:00
@@ -21478,6 +21478,7 @@ EOF
        data  => <<EOF,
 # REMOVED --- #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation) --- #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein --- #: source_id: 2147339529 --- #: last_checked: 2017-02-04 --- #: next_check: 2017-03-01
 #: source_id: LMS-BR_r_LMS-BR_172061_LMS-BR_72
+#: also_indoor: traffic (H)
 # REMOVED --- #: next_check: 2019-06-13
 	q2::inwork 5258,11285 5236,10994
 EOF
@@ -22583,7 +22584,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-06-06
+#: last_checked: 2019-06-27
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -26385,7 +26386,8 @@ EOF
        text  => 'Kaiserin-Augusta-Allee - Neues Ufer: Bauarbeiten, Weg ist komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 4561,13244 4547,13139 4576,13115
+# REMOVED (existiert gar nicht mehr in den BBBike-Daten) ---	2::inwork 4561,13244 4547,13139
+	2::inwork 4547,13139 4576,13115
 EOF
      },
      { from  => 1500156000, # 2017-07-16 00:00
@@ -26430,7 +26432,7 @@ EOF
 #: next_check_id: RIGAER-2018
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-05-28
+#: last_checked: 2019-06-25
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -26825,7 +26827,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-06-11 vvv
+#: last_checked: 2019-07-02 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27671,8 +27673,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2018-08-14 00:00:00"), # 1531519200, # 2018-07-14 00:00
-       until => $isodate2epoch->("2019-06-30 18:00:00"), # 1546297199, # 2018-12-31 23:59
-       text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis Ende Juni 2019',
+       until => 1562096106, # $isodate2epoch->("2019-07-03 18:00:00"), # 1546297199, # 2018-12-31 23:59
+       text  => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis Anfang Juli 2019',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
        data  => <<EOF,
@@ -27687,11 +27689,12 @@ EOF
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte 2019)
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/baustellen-in-carstenn-und-feuerbachstrasse-nicht-fertig_a196939
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.776977.php
-#: source_id: 2147342919
-#: source_id: 2147343007
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.824332.php ("fahrradfeindliche Feuerbachstraße")
+#: source_id: 2147342919 (bis Anfang Juli 2019)
+#: source_id: 2147343007 (bis Anfang Juli 2019)
 #: also_indoor: traffic
 #: last_checked: 2019-06-19
-#: next_check: 2019-06-30
+#: next_check: 2019-07-03
 	q4::inwork; 6168,6467 6083,6451 5823,6413
 	q4::inwork 6083,6451 6095,6358
 	q4::inwork; 6248,6388 6095,6358
@@ -27783,7 +27786,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-06-14
+#: last_checked: 2019-06-20
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28172,10 +28175,11 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-06-18
+#: last_checked: 2019-07-02
 #: check_frequency: 7d
-	2::inwork 14854,8964 15057,8910
-	2::inwork 14854,8964 14918,8813
+	2::inwork 14854,8964 14980,8940
+	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
+# REMOVED (hier mittlerweile offen) ---		2::inwork 14980,8940 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
 EOF
@@ -28283,6 +28287,7 @@ EOF
 # REMOVED ---	q3::inwork; 12205,22696 12187,22486
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.821009.php
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/franzosisch-buchholz-sommerbaustellen-%C2%B7-erhebliche-verkehrsstorungen
+#: source_id: 2147344370
 	q4::inwork; 12185,23021 12214,22918 12205,22696 12187,22486
 EOF
      },
@@ -28361,7 +28366,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
 #: XXX wann werden die Bauarbeiten beendet? vvv
-#: last_checked: 2019-06-15 vvv
+#: last_checked: 2019-06-27 vvv
 	q3::inwork 9106,12795 9193,12875 9239,12923
 	q3::inwork 9160,12932 9193,12875
 #: last_checked ^^^^
@@ -28378,11 +28383,12 @@ EOF
 EOF
      },
      { from  => 1542148916, # 2018-11-13 23:41
-       until => $isodate2epoch->("2019-06-28 18:00:00"), # 1561931999, # 2019-06-30 23:59
-       text  => 'Henningsdorfer Str.: zwischen Kurzebracker Weg und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende Juni 2019',
+       until => $isodate2epoch->("2019-07-09 18:00:00"), # 1561931999, # 2019-06-30 23:59
+       text  => 'Henningsdorfer Str.: zwischen Kurzebracker Weg und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, bis 09. Juli 2019',
        type  => 'handicap',
        source_id => '2147343419',
        data  => <<EOF,
+#: next_check_id: HENNIGSDORFER-2019
 	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
 EOF
      },
@@ -28644,13 +28650,16 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2019-06-28 18:00:00"), # undef, # XXX
-       text  => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis Ende Juni 2019',
+       until => $isodate2epoch->("2019-08-16 18:00:00"), # undef, # XXX
+       text  => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, mindestens bis Mitte August 2019',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (kein Ende-Datum)
-#: note: laut fritz bis 28.06.2019
+#: note: laut fritz bis 16.08.2019
+#: also_indoor: traffic (H,G)
+#: priority: #A
 #: last_checked: 2019-05-25 (mapillary)
+#: next_check: 2019-07-28
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 EOF
@@ -28661,6 +28670,7 @@ EOF
        type  => 'handicap',
        source_id => '2147343824',
        data  => <<EOF,
+#: also_indoor: traffic (H,G)
 #: osm_watch: way id="4597320" version="15"
 # REMOVED (ja) --- #: XXX vor Ort anschauen, ggfs. nach handicap_s-orig verschieben
 	q4::inwork 8737,12098 8783,11959
@@ -28733,7 +28743,7 @@ EOF
      },
      { from  => undef, # 
        until => $isodate2epoch->("2019-07-01 18:00:00"), # 1556726400, # 2019-05-01 18:00
-       text  => 'Am Tegeler Fließ: Holzbohlensteg zwischen Brandtstr. und Fürt-Bismarck-Steg wegen Bauarbeiten gesperrt, bis Frühjahr 2019',
+       text  => 'Am Tegeler Fließ: Holzbohlensteg zwischen Brandtstr. und Fürst-Bismarck-Steg wegen Bauarbeiten gesperrt, bis Frühjahr 2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.796103.php ("bald")
@@ -28888,6 +28898,7 @@ EOF
        type  => 'handicap',
        source_id => '2147344155', # bis Ende Juni 2019
        data  => <<EOF,
+#: note: bei fritz schon entfernt (am 20.06.2019)
 	q4::inwork; 9212,13471 9207,13493 9094,13641 9042,13707
 # REMOVED (hier nicht) ---	q4::inwork; 9042,13707 8935,13844
 EOF
@@ -29002,7 +29013,7 @@ EOF
 EOF
      },
      { from  => 1559593428, # 2019-06-03 22:23
-       until => 1560967188, # $isodate2epoch->("2019-06-30 18:00:00"), # 1561392000, # 2019-06-24 18:00
+       until => 1561402880, # $isodate2epoch->("2019-06-30 18:00:00"), # 1561392000, # 2019-06-24 18:00
        text  => 'Haeckelstr.: zwischen Johannes-Werner-Str. und Winckelmannstr. Sperrung der Fahrbahn wegen Gleisbauarbeiten, evtl. sind auch Radfahrer betroffen, bis Ende Juni 2019',
        type  => 'handicap',
        data  => <<EOF,
@@ -29048,7 +29059,8 @@ EOF
        source_id => '2147344253', # bis Januar 2020
        data  => <<EOF,
 #: note: laut fritz bis 31.01.2020
-#: last_checked: 2019-06-05
+#: also_indoor: traffic (H)
+#: last_checked: 2019-06-27
 #: next_check: 2020-01-30
 	q3::inwork  8986,16092 9178,16317 9301,16439
 EOF
@@ -29085,7 +29097,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (G)
-#: last_checked: 2019-06-18
+#: last_checked: 2019-07-02
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 EOF
@@ -29155,11 +29167,11 @@ EOF
      },
      { from  => 1560636000, # 2019-06-16 00:00
        until => undef, # XXX
-       text  => 'DB-Werkstraße: Bauarbeiten, eventuell ist die Straße komplett gesperrt, ab 17. Juni 2019',
+       text  => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, ab 17. Juni 2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-06-17
+#: last_checked: 2019-06-22
 	2::inwork 14567,10814 14352,10874
 EOF
      },
@@ -29169,7 +29181,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
-#: osm_watch: way id="206889085" version="9"
+#: osm_watch: way id="206889085" version="10"
 #: last_checked: 2019-06-18
 #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
@@ -29186,12 +29198,79 @@ EOF
 EOF
      },
      { from  => 1560895200, # 2019-06-19 00:00
-       until => 1565906399, # 2019-08-15 23:59
-       text  => 'Hackescher Markt: Gleisarbeiten, Fahrbahn der zuführenden Straßen gesperrt, Radfahrer sollen schieben, ab 20. Juni 2019 bis Mitte August 2019',
+       until => $isodate2epoch->("2019-08-12 18:00:00"), # 1565906399, # 2019-08-15 23:59
+       text  => 'Hackescher Markt: Gleisarbeiten, Fahrbahnen der zuführenden Straßen gesperrt, Radfahrer sollen schieben, ab 20. Juni 2019 bis Mitte August 2019',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 10220,13098 10264,13097 10286,13084 10339,13052
-	q4::inwork 10264,13097 10310,13227
+#: source_id: 2147344372
+#: source_id: 2147344374
+#: source_id: 2147344373
+#: source_id: 2147344375
+#: XXX wird sich die Verkehrsführung noch ändern? vvv
+#: also_indoor: traffic (H) vvv
+#: last_checked: 2019-06-24 vvv
+#: check_frequency: 14d vvv
+	q4::inwork 10220,13098 10264,13097
+	q4::inwork; 10264,13097 10286,13084 10339,13052
+	q3::inwork; 10310,13227 10264,13097
+#: check_frequency ^^^
+#: last_checked ^^^
+#: also_indoor ^^^
+#: XXX ^^^
+EOF
+     },
+     { from  => 1529704800, # 2018-06-23 00:00
+       until => 1564610399, # 2019-07-31 23:59
+       text  => 'Große-Leege-Str./Werneuchener Str.: Bauarbeiten im Kreuzungsbereich, Einschränkungen, von 24. Juni 2018 bis Ende Juli 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147344379 (bis Mitte Juli 2019)
+	q3::inwork; 16514,15092 16430,15168
+	q3::inwork 16430,15168 16376,15209 16314,15223
+	q3::inwork 16290,15029 16430,15168
+	q3::inwork; 16430,15168 16522,15258
+EOF
+     },
+     { from  => 1561269600, # 2019-06-23 08:00
+       until => $isodate2epoch->("2019-07-02 23:45:00"),
+       text  => 'Platz des 18. März: Sperrung wegen Vorbereitung einer Großkundgebung, ab 24. Juni 2019 08 Uhr, ab 18 Uhr auch Sperrung der Ebertstr. Richtung Norden, bis 2. Juli 2019 23:45 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/innenstadt-großkundgebung-am-29-06-19-sperrungen-im-vorfeld',
+       data  => <<EOF,
+#: source_id: 2147344386
+	2::temp 8592,12252 8538,12245
+	1::temp 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
+EOF
+     },
+     { from  => $isodate2epoch->("2019-06-24 23:00:00"),
+       until => $isodate2epoch->("2019-07-01 12:00:00"),
+       text  => 'Straße des 17. Juni, Yitzhak-Rabin-Str., Ebertstr.: Sperrung wegen Vorbereitung einer Großkundgebung, ab 25. Juni 2019 23 Uhr bis 1. Juli 2019 12:00',
+       type  => 'gesperrt',
+       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/innenstadt-großkundgebung-am-29-06-19-sperrungen-im-vorfeld',
+       data  => <<EOF,
+	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
+	2::temp 8055,12186 8119,12414
+	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+EOF
+     },
+     { from  => 1561845600, # 2019-06-30 00:00
+       until => 1569945600, # 2019-10-01 18:00
+       text  => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019 für ungefähr drei Monate',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.823217.php',
+       data  => <<EOF,
+#: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/staugefahr-schlossbruecke-wird-saniert_a221398
+	2::inwork 3231,12749 3332,12742
+EOF
+     },
+     { from  => 1562012626, # 2019-07-01 22:23
+       until => 1569967200, # 2019-10-02 00:00
+       text  => 'Xantener Str.: Sperrung zwischen Konstanzer Str. und Brandenburgische Str., eventuell sind auch Radfahrer betroffen, bis 01.10.2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: fritz
+#: confirmed_by: srt (keine Ausnahme für Radfahrer)
+	q4::inwork; 4219,10279 3852,10236
 EOF
      },
     );

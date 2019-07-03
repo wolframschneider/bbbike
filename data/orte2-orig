@@ -15,7 +15,8 @@ Bad Doberan	4 -95364,186923
 Ostseebad Heiligendamm	0 -99712,191131
 Ostseebad Rerik	3 -114327,186494
 Kühlungsborn	3 -106940,191400
-Jakobshagen	1 19490,89068
+Jakobshagen	1 19483,89064
+Stabeshöhe	0 18887,90814
 Warthe|(bei Jakobshagen)	1 16377,90072
 Boitzenburg	2 22507,95722
 Krewitz	0 19582,99411
@@ -364,12 +365,13 @@ Klosterwalde	1 19617,85269
 Herzfelde|bei Klosterwalde	0 22537,87990
 Sternthal	0 23683,90984
 Lichtenhain	0 22276,91916
-Klaushagen	0 20852,91905
+Klaushagen	0 20834,91935
 Gollmitz	1 30482,99609
 Klein Sperrenwalde	0 30752,98302
 Groß Sperrenwalde	0 32592,96755
-Horst|bei Golmitz	0 32513,101100
-Güstow	1 34589,102405
+Horst|bei Golmitz	0 31936,101506
+Güstow	1 34607,102396
+Mühlhof	0 36095,101349
 Klinkow	1 36033,104038
 Basedow	0 34939,103999
 Rathsberge	0 37230,100007
@@ -425,7 +427,7 @@ Penkow	1 -54521,116188
 Meyenburg	3 -70257,99431
 Ringenwalde|(Uckermark)	1 30287,72823
 Ahlimbswalde	0 32613,71643
-Hohenwalde	0 32476,75001
+Hohenwalde	0 32472,75015
 Neppermin	1 50393,171375
 Katschow	0 51604,167865
 Plau|am See	3 -69253,115567
@@ -976,7 +978,7 @@ Malchow|(bei Göritz)	0 43561,113159
 Neuenfeld|(bei Schönfeld, Uckermark)	0 49802,113824
 Wittenhof	0 43242,105305
 Schenkenberg|(bei Prenzlau)	1 45454,107247
-Ludwigsburg	1 47587,106693
+Ludwigsburg	1 47857,106119
 Dauerthal	0 46905,107326
 Baumgarten|(Ludwigsburg)	0 45414,105210
 Milow|(bei Strasburg)	1 37006,119403
@@ -1209,7 +1211,7 @@ Neugaul	1 58536,40073
 Altwriezen-Beauregard	1 64841,37778
 Beauregard	0 65265,37407
 Altwriezen	0 64491,38359
-Heinrichsdorf|(Altwriezen-Beauregard)	0 66413,38217
+Heinrichsdorf|(Altwriezen-Beauregard)	0 66261,38237
 Altwriezener Losse	0 63577,39781
 Ferdinandshof|(Oderbruch)	0 66154,42219
 Neureetz	1 59730,42362
@@ -1226,7 +1228,7 @@ Neulietzegöricker Losse	0 67474,41939
 Güstebieser Losse	0 69823,40556
 Karlshof|(Oderbruch)	0 68096,39375
 Neukarlshof	0 69315,38994
-Kerstenbruch	0 68327,37979
+Kerstenbruch	0 68285,37992
 Karlsbiese	0 70458,38042
 Eichwerder	1 64084,35972
 Jäckelsbruch	0 63297,35947
@@ -1250,13 +1252,13 @@ Zelliner Loose	0 73860,37953
 Gieshof	0 72210,36785
 Groß Neuendorf	1 78164,34043
 Kienitz	1 80322,31085
-Kienitz Nord	0 77757,31389
-Forstacker	0 75637,28825
+Kienitz Nord	0 77787,31427
+Forstacker	0 75652,28832
 Sophienthal	1 81312,28139
 Zechin	1 81388,23988
 Zechiner Loose	0 80677,26514
-Posedin	0 72552,29676
-Groß Neuendorfer Loose	0 73073,30450
+Posedin	0 72378,29452
+Groß Neuendorfer Loose	0 73124,30611
 Genschmar	1 85616,24178
 Bleyen	1 91794,22187
 Altbleyen	0 91092,21961

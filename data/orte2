@@ -460,7 +460,7 @@ Widuchowa	2 75847,81483
 Stepnica	2 90980,140464
 Mieszkowice	2 83793,43762
 Slonsk	2 105548,19204
-Jakobshagen	1 19490,89068
+Jakobshagen	1 19483,89064
 Warthe|(bei Jakobshagen)	1 16377,90072
 Hardenbeck	1 18817,95103
 Hinrichshagen	1 15524,116146
@@ -575,7 +575,7 @@ Haßleben	1 28544,90574
 Petznick	1 23718,84405
 Klosterwalde	1 19617,85269
 Gollmitz	1 30482,99609
-Güstow	1 34589,102405
+Güstow	1 34607,102396
 Klinkow	1 36033,104038
 Blindow	1 41165,106483
 Schönwerder	1 38586,108244
@@ -776,7 +776,7 @@ Damerow|(Uckermark)	1 47087,115725
 Schönfeld|(Uckermark)	1 47905,112911
 Göritz	1 42829,112070
 Schenkenberg|(bei Prenzlau)	1 45454,107247
-Ludwigsburg	1 47587,106693
+Ludwigsburg	1 47857,106119
 Milow|(bei Strasburg)	1 37006,119403
 Groß Luckow	1 36980,126194
 Friedrichshagen	1 39582,137711
@@ -919,6 +919,7 @@ Kamieniec	1 78784,101702
 Pargowo	1 78436,98738
 Warnemünde	0 -83112,195145
 Ostseebad Heiligendamm	0 -99712,191131
+Stabeshöhe	0 18887,90814
 Krewitz	0 19582,99411
 Buchenhain	0 18152,100754
 Fürstenau	0 17020,103009
@@ -1075,10 +1076,11 @@ Kreuzkrug	0 22040,83653
 Herzfelde|bei Klosterwalde	0 22537,87990
 Sternthal	0 23683,90984
 Lichtenhain	0 22276,91916
-Klaushagen	0 20852,91905
+Klaushagen	0 20834,91935
 Klein Sperrenwalde	0 30752,98302
 Groß Sperrenwalde	0 32592,96755
-Horst|bei Golmitz	0 32513,101100
+Horst|bei Golmitz	0 31936,101506
+Mühlhof	0 36095,101349
 Basedow	0 34939,103999
 Rathsberge	0 37230,100007
 Ellingen	0 37521,105452
@@ -1089,7 +1091,7 @@ Bolter Schleuse	0 -34057,106550
 Boecker Mühle	0 -34010,107228
 Lobbe	0 27178,213178
 Ahlimbswalde	0 32613,71643
-Hohenwalde	0 32476,75001
+Hohenwalde	0 32472,75015
 Katschow	0 51604,167865
 Bergedorf	0 -209464,116390
 Büssow	0 67815,99673
@@ -1265,7 +1267,7 @@ Neukietz|(Mädewitz)	0 61800,37042
 Zäckericker Losse	0 64402,43907
 Beauregard	0 65265,37407
 Altwriezen	0 64491,38359
-Heinrichsdorf|(Altwriezen-Beauregard)	0 66413,38217
+Heinrichsdorf|(Altwriezen-Beauregard)	0 66261,38237
 Altwriezener Losse	0 63577,39781
 Ferdinandshof|(Oderbruch)	0 66154,42219
 Altreetzer Losse	0 62066,41901
@@ -1276,7 +1278,7 @@ Neulietzegöricker Losse	0 67474,41939
 Güstebieser Losse	0 69823,40556
 Karlshof|(Oderbruch)	0 68096,39375
 Neukarlshof	0 69315,38994
-Kerstenbruch	0 68327,37979
+Kerstenbruch	0 68285,37992
 Karlsbiese	0 70458,38042
 Jäckelsbruch	0 63297,35947
 Bochows Loos	0 63234,35008
@@ -1289,11 +1291,11 @@ Gottesgabe	0 63065,26709
 Bienenwerder	0 64609,44963
 Zelliner Loose	0 73860,37953
 Gieshof	0 72210,36785
-Kienitz Nord	0 77757,31389
-Forstacker	0 75637,28825
+Kienitz Nord	0 77787,31427
+Forstacker	0 75652,28832
 Zechiner Loose	0 80677,26514
-Posedin	0 72552,29676
-Groß Neuendorfer Loose	0 73073,30450
+Posedin	0 72378,29452
+Groß Neuendorfer Loose	0 73124,30611
 Altbleyen	0 91092,21961
 Neu Manschnow	0 90656,16269
 Werder|(Sachsendorf)	0 84740,11051

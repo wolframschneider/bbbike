@@ -8,10 +8,10 @@
 #: temporary vvv
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-06-14 vvv
+#: last_checked: 2019-07-02 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
-#: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16)
+#: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28)
 	X::inwork 14103,10489
 #: note: anstelle des Zebrastreifens
 	F::inwork 14490,10610
@@ -22,13 +22,13 @@
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/bis-sommer-muessen-sich-autofahrer-auf-staus-und-umwege-einstellen_a197767
 #: source_id: 2147342588
 #: source_id: 2147343616
-#: source_id: 2147343616
+#: source_id: 2147343616 (bis Ende Januar 2020)
 #: note: eigentlich zwei Ampeln, Radfahrer in Richtung Osten müssen eine Anforderung bedienen
-#: XXX am 28. Juni 2019 wird voraussichtlich die Sperrung des Gleimtunnels für Autos aufgehoben, dann vermutlich auch keine Ampel mehr
+#: XXX Ende Januar 2020 wird voraussichtlich die Sperrung des Gleimtunnels für Autos aufgehoben, dann vermutlich auch keine Ampel mehr
 #: last_checked: 2019-01-23
-#: next_check: 2019-06-28
+#: next_check: 2020-01-31
 #: priority: #B
-#: valid: -20190628
+#: valid: -20200131
 	X::inwork 10130,15653
 # 
 #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/bauarbeiten-in-pilgramer-strasse_a197302
@@ -46,11 +46,11 @@
 #: by: https://www.berliner-woche.de/heiligensee/c-verkehr/chaos-ist-geblieben_a205846
 #: XXX Ampel Am Dachsbau/Schulzendorfer Str. vermutlich nur eine temporäre Lösung wegen der Bauarbeiten in der Hennigsdorfer Str., später wird hier wohl ein Zebrastreifen entstehen
 #: osm_watch: node id="5469708920" version="1"
-#: next_check: 2019-06-28
+#: next_check: 2019-07-09
 	X::inwork -1538,22800
 #: by: https://www.berliner-woche.de/heiligensee/c-verkehr/anregungen-der-eltern-endlich-verwirklicht_a207979
 #: XXX später wird hier ein Kreisverkehr entstehen
-#: next_check: 2019-06-28
+#: next_check: 2019-07-09
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
@@ -59,7 +59,7 @@
 # 
 #: next_check_id: FRANZOESISCHE-2018
 #: osm_watch: node id="6380038401" version="1"
-#: last_checked: 2019-05-08
+#: last_checked: 2019-06-26
 #: check_frequency: 90d
 #: valid: -20210601
 	X::inwork 9195,11972
@@ -78,7 +78,7 @@
 #: XXX ^^^
 # 
 #: next_check_id: OBERBAUMBRUECKE-2019
-#: last_checked: 2019-06-19
+#: last_checked: 2019-06-26
 #: next_check: 2019-11-01
 #: valid: -20191101
 	F::inwork 13178,10623
@@ -1284,7 +1284,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 12846,7981
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel während der Bauarbeiten
-#: last_checked: 2019-06-04
+#: last_checked: 2019-06-28
 #: check_frequency: 90d
 	X::inwork 12794,8103
 	X 11154,14985
@@ -2547,7 +2547,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 14964,14123
 # 
 #: XXX Ampel wird auf die andere Seite der Paul-Junius-Str. verlegt
-#: last_checked: 2019-06-03
+#: last_checked: 2019-06-21
 #: check_frequency: 14d
 	F 15074,12850
 # 
@@ -2768,19 +2768,19 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2019-06-08
+#: last_checked: 2019-07-02
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2019-06-15 vvv
+#: last_checked: 2019-07-02 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
 #: osm_watch: node id="1769589042" version="4"
 	X::inwork 9286,12886
-#: osm_watch: node id="25664841" version="7"
+#: osm_watch: node id="25664841" version="8"
 #: osm_watch: node id="25664779" version="9"
 	X::inwork 9475,12365
 # REMOVED (nicht mehr gesehen) --- X::inwork 9343,12464
@@ -3221,7 +3221,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2019-06-18 vvv
+#: last_checked: 2019-07-02 vvv
 #: check_frequency: 14d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
@@ -3246,6 +3246,11 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 ################################################################################
 #: note: Ampeln elsewhere vvv
+#: note: Anforderungsampel; temporär
+	X 23759,49971
+	X 39036,101318
+	X 39536,101514
+	X 37577,100778
 	F 18293,26727
 	X -2058,-9925
 	F 25720,-8965
@@ -3521,7 +3526,7 @@ S-Bahn ca. alle 10 Minuten	B 10896,-4469
 	B 5361,66676
 	B 2129,61503
 	B 1300,60559
-	B -1098,58210
+	B -1156,58249
 	B -4990,55852
 	B -1530,45604
 #: note: Luftbild
@@ -3694,6 +3699,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 	X 18671,22604
 	X 19658,24589
 	X 21019,26756
+#: note: Anforderungsampel für querende Radfahrer
 	X 21326,27505
 	X 22182,29536
 	X 22216,30138

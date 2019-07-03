@@ -130,6 +130,7 @@ Dorotheenstr.	1 9870,12657 9742,12609 9681,12601 9581,12588 9454,12558
 Dorotheenstr. (Straßenbahn)	1s 9454,12558 9330,12538
 Georgenstr.	1 9441,12670 9568,12688 9659,12704 9754,12775
 Paul-Junius-Str	1 15084,13276 15082,13369 15220,13377
+Marksburgstr.	1 18319,9218 18430,9199 18511,9185 18586,9172 18697,9153 18809,9133
 Griechische Allee	1 17962,6674 18002,6695 18076,6693 18125,6694 18254,6679 18339,6660 18494,6588
 Griechische Allee	1 18494,6588 18429,6582 18273,6606 18159,6642 18079,6678 18008,6672 17962,6674
 Hardenbergplatz	1 5542,11075 5565,11147 5666,11362 5698,11333 5600,11114 5542,11075
@@ -245,7 +246,6 @@ Florapromenade	1 10207,17448 10284,17458 10320,17487 10311,17764
 Takustr.	1 3321,5212 3209,5214 3079,5411 2953,5606 2909,5674
 Schönerlinder Str.	1 21799,4319 21633,4355
 Mentzelstr.	1 21579,4579 21546,4457
-Amalienstr.	1 13794,16773 13722,16843 13653,16907 13581,16968
 Cosimaplatz	1 5490,7651 5458,7683 5493,7717 5528,7683 5490,7651
 Reiherbeize	1 444,4498 593,4262
 Mendelssohnstr.	1 11598,13598 11550,13642 11545,13690
@@ -639,7 +639,6 @@ Bauerwitzer Weg	1 22917,12239 22814,12353 22861,12390 22994,12496
 Heinrich-Grüber-Platz	1 22877,11940 22858,11937 22843,11999 22856,12003 22870,12000 22883,11956 22877,11940
 Boraweg	1s 6763,2879 6710,2909 6658,2907
 Viktoriaplatz	1 3500,4146 3523,4139 3528,4118 3518,4106 3489,4115 3485,4137 3500,4146
-Glaserweg	1 10187,872 10237,749
 Alt-Buckow	1s 12574,1866 12561,1931
 Alt-Buckow	1 12561,1931 12817,2031
 Alt-Schmöckwitz	1 27396,-3101 27428,-3137 27427,-3171 27413,-3196 27388,-3199 27378,-3183 27382,-3151 27396,-3101
@@ -702,7 +701,6 @@ Thürstr.	1 23,2185 93,2014
 Karlstadter Str.	1 11492,18347 11579,18184 11602,18133 11655,18018
 Karlstadter Str.	1 11621,18011 11586,18126
 Gemündener Str.	1 11586,18126 11514,18101 11495,18129 11395,18274
-(Alex-Wedding-Str. - Karl-Liebknecht-Str.)	1 11012,13278 11085,13239
 Döbrabergweg	1 9848,20926 9895,20766
 Reichsbahnstr.	2 -4648,1334 -4579,1397
 Dorstener Str.	1 3596,655 3691,566
@@ -783,7 +781,6 @@ Firlstr.	1 18640,6542 18645,6511
 Malchower Str.	1 12838,18155 12785,18128
 Carpinusweg	1 715,5209 715,5129 825,5130 827,5201
 Fellbacher Platz	1 3627,23246 3610,23242 3588,23256 3581,23282 3593,23297
-(Zufahrt Debis-Parkhaus)	1 8384,10507 8350,10499 8335,10518 8348,10636 8350,10662 8367,10745 8424,10703 8430,10710
 Walterstr.	1 13121,6689 13099,6712
 Gretel-Bergmann-Weg	1s -1132,12268 -1288,12178
 Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
@@ -899,7 +896,6 @@ Platz der Einheit	1 -12756,-1131 -12741,-1197 -12718,-1327
 Zimmerstr.	1 -14129,-1258 -13876,-1226
 Lennéstr.	1 -13876,-1263 -14149,-1264
 Puschkinallee	1 -13042,807 -12912,783 -12868,738 -12827,629 -12815,554 -12811,533
-Geschwister-Scholl-Str.	1 -14213,-1695 -14143,-1662 -14115,-1678
 Straßenbahntrasse	3nocross::ignrte -12790,-1560 -12812,-1490 -12839,-1371
 Friedrich-Ebert-Str. -> Schwertfegerstr.: Straßenbahntrasse	3::igndisp -12790,-1560 -12812,-1490 -12870,-1493
 Schwertfegerstr. -> Friedrich-Ebert-Str.: Straßenbahntrasse	3::igndisp -12870,-1493 -12812,-1490 -12839,-1371
@@ -991,7 +987,7 @@ Mittelstr. B179	1 18293,-1472 18279,-1438 18368,-1337
 Lützlow: Gehweg auf gleichem Niveau wie Fahrbahn	1s 52431,94119 52422,94028 52350,93856
 Lindenstr. (Frankfurt/Oder)	1 88960,-6639 88836,-6002
 Carthausplatz (Frankfurt/Oder)	1 88945,-6733 88890,-6691 88960,-6639
-Gubener Str. (Frankfurt/Oder)	1 88945,-6733 88890,-6691 88881,-6462 88775,-6151 88759,-5911
+Gubener Str. (Frankfurt/Oder)	1 88890,-6691 88881,-6462 88775,-6151 88759,-5911
 B5 (paralleler Radweg existiert)	2 -9005,13354 -9549,13365 -9617,13368 -10122,13391 -11253,13707
 Niemegk	1 -37263,-37723 -37263,-37584 -37216,-37587 -37188,-37728 -37263,-37723
 Bahnhofstr. (Fürstenberg)	1 -8839,86313 -8734,86281
@@ -1025,7 +1021,6 @@ Mehrow - Trappenfelde	1 24743,18606 24709,18578
 Mehrow - Trappenfelde	1 24696,18606 24743,18606
 Sankt Petri	1s -46334,-150 -46304,-19
 B1: für Radfahrer gesperrt	2 -56115,-457 -56519,-664 -56682,-676 -56922,-672 -57133,-779 -57283,-993 -57410,-1097
-August-Bebel-Str. (Eichwalde)	1s 25322,-4042 25269,-3906
 Waldstr. [Wohngebiet] (Eichwalde)	1 25461,-2744 25562,-2902 25606,-2880
 Humboldtstr. (Eichwalde)	1 25290,-3350 25186,-3196
 Paul-Merker-Str.	1 25464,-3027 25567,-3189
@@ -2564,6 +2559,7 @@ Rampe und flache Treppe (8 Stufen)	0:25:76 16065,6126
 tragen (Treppe, 12 Stufen)	0:15:-23 5475,7906
 tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
+tragen (Treppe, 3 Stufen)	0:10:-15 19173,14931
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
@@ -3040,7 +3036,10 @@ Drängelgitter	BNP:3:-161:trailer=10 -19195,-5739
 Drängelgitter	BNP:3:-135:trailer=10 19141,3980
 Drängelgitter	BNP:3:-34:trailer=10 12155,6526
 Drängelgitter	BNP:3:-51:trailer=10 12092,6616
+Yorckstraßenbrücke 10: wird saniert und dann wieder neu eingehängt	2::inwork 8339,9560 8338,9593
+An den Yorckstraßenbrücken: Weg wird als Baulogistikfläche benutzt, gesperrt	2::inwork 8458,9566 8426,9572
 Alexandrinenstr.: Einbahnstraßenregelung am Stallschreiberstr.	1s:inwork 10678,11172 10593,11120
+Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:inwork 10518,11232 10593,11120
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdener Bahn vollständig gesperrt	2::inwork 7667,4549 7692,4464
 Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
 Seidenschwanzstr.: durch Bauzäune abgesperrt	2::inwork 26666,12935 26570,12860 26519,12808 26475,12761 26428,12708 26369,12756 26288,12801
@@ -3065,15 +3064,14 @@ An den Grachten: Bauarbeiten, noch nicht geöffnet	2:inwork 22169,10969 22172,109
 Am Groen: Bauarbeiten, noch nicht geöffnet	2:inwork 22137,11033 22146,10995
 Möwenweg: Straße existiert nicht mehr; wird sie wieder aufgebaut, oder wird es hier nur einen Rad/Gehweg geben?	2::inwork 22166,10839 22199,10877 22194,10940 22195,10993 22207,11069 22220,11138
 Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5018,3810 5074,3900 5139,3997 5225,4095
-Donaustr.: Einbahnstraßenregelung wegen Bauarbeiten	1s:inwork 12202,8895 12394,8729
 Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 Französische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch für Fußgänger	2:inwork 9076,12054 9183,12076
 Mauerstr..: Bauarbeiten, Einbahnstraße	1s:inwork 9108,11961 9076,12054
 Jägerstr.: Bauarbeiten, Einbahnstraße	1s:inwork 9195,11972 9108,11961
 Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:inwork 9076,12054 9064,12156
+Taubenstr.: Bauarbeiten, Einbahnstraße	1s:inwork 9207,11880 9138,11872
 Uferweg zum Speicher: noch keine Durchfahrt möglich	2::inwork -12721,-2082 -12754,-2154
 Heidelberger Str.: Baustelle, Einbahnstraße	1s:inwork 13491,9201 13421,9260 13357,9313
-Kaiserin-Augusta-Allee - Neues Ufer: Bauarbeiten, Weg ist komplett gesperrt	2::inwork 4561,13244 4547,13139 4576,13115
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	1s:inwork 11197,11882 11155,11750
 Fanny-Zobel-Str.: wegen Bauarbeiten gesperrt, vielleicht sogar dauerhaft eingezogen	2::inwork 13975,10187 14049,10164
@@ -3086,7 +3084,6 @@ Mauerpark: Bau eines Stauraumkanals	2::inwork 10319,15090 10354,14987
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
 Im Lichtenhain: neue Straße wird hier entstehen, zurzeit Bauarbeiten	2::inwork 16497,10685 16484,10615
 Zufahrt zum ehemaligen Parkhaus: Bauarbeiten, Straße komplett gesperrt	2::inwork 8367,10745 8350,10662 8348,10636 8335,10518 8350,10499 8384,10507
-(Marseillestr. - Straße 160): nur ein provisorischer Steg	2 12507,21391 12547,21372
 Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -6556,6663
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5579,12231 5535,12206 5518,12159
 Gutenbergstr.: Einbahnstraße wegen Bauarbeiten	1s:inwork 5317,12242 5518,12159
@@ -3096,7 +3093,7 @@ Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11489 20631,1162
 Schinkelplatz: Einbahnstraße	1s:inwork 10010,12275 10012,12259 10029,12208
 Niederlagstr.: Einbahnstraße	1s:inwork 9972,12184 9959,12281
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:inwork 9042,11839 8969,11814
-Nordhafenpark West: unter der Brücke gesperrt	2::inwork 7636,14414 7612,14449 7551,14464
+Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7636,14414 7612,14449 7551,14464
 Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,9200 12548,9167
 Clara-von-Simson-Str.: noch gesperrt	2::inwork 7652,14257 7757,14318 7802,14250 7697,14187
@@ -3226,7 +3223,6 @@ Heinz-Bartsch-Str. -> Danziger Str.: Straßenbahnschienen	3::igndisp 13156,13978 
 Straßenbahnschienen	3nocross::ignrte 13100,13803 13166,13707 13225,13620
 Danziger Str. -> Rudi-Arndt-Str.: Straßenbahnschienen	3::igndisp 13100,13803 13166,13707 13359,13832
 Rudi-Arndt-Str. -> Danziger Str.: Straßenbahnschienen	3::igndisp 13359,13832 13166,13707 13225,13620
-Pintschstr.	1 13339,13196 13435,12973
 Landsberger Allee	3nocross::ignrte 12382,13097 12585,13118 12711,13150
 Landsberger Allee -> Ernst-Zinna-Weg: Landsberger Allee	3::igndisp 12382,13097 12585,13118 12564,13216
 Ernst-Zinna-Weg -> Landsberger Allee: Landsberger Allee	3::igndisp 12564,13216 12585,13118 12711,13150
@@ -3305,7 +3301,6 @@ Mittelstreifen	3nocross::ignrte 1139,3876 1159,3915 1221,4071
 Biesalskistr. -> Clayallee: Mittelstreifen	3::igndisp 1130,3930 1159,3915 1221,4071
 Mittelstreifen	3nocross::ignrte 623,4902 844,4916 922,4910
 Argentinische Allee -> Zum Holzungsweg: Mittelstreifen	3::igndisp 623,4902 844,4916 755,5017
-Adele-Schreiber-Krieger-Str.	1s 8737,12757 8596,12760
 tragen (ca. 20 Stufen)	0:45:-98 8536,12758
 tragen (35 Stufen)	0:45:-108 8507,12873
 tragen (35 Stufen)	0:45:-57 8480,12909

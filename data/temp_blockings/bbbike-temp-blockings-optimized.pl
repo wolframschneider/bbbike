@@ -2391,7 +2391,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2505,28 +2505,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '	2::temp 8598,9269 8769,9295 8970,9323 9154,9347 9211,9354
-	3 9000,9509 8970,9323 9007,9264
-	3 9007,9264 8970,9323 9000,9509
-',
-         'from' => 1561586400,
-         'id' => 2089,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'https://www.gratis-in-berlin.de/festivals/item/2037452-bergmannstrassenfest-2019-jetzt-kreuzbergstrassenfest-kreuzberg-jazzt-kreuzberg-kocht-und-macht-theater-kreuzbergstrassenfest',
-         'text' => 'Kreuzbergstr.: Veranstaltung (Kreuzbergstraßenfest), Straße vollständig zwischen Methfesselstr. und Katzbachstr. gesperrt (28. Juni 2019 bis 30. Juni 2019)',
-         'type' => 'gesperrt',
-         'until' => 1561931999
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2736,7 +2715,34 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       undef,
+       {
+         'accept_multi_feature_distance' => 1300,
+         'data' => '#: by: https://www.internationales-berliner-bierfestival.de/home.html
+# REMOVED --- #: tempex 20170804-20170806 vvv
+	2::temp 12352,12509 12355,12541 12359,12592
+	2::temp 12891,12549 12878,12430
+	2::temp 12632,12630 12592,12472
+	2::temp 13448,12340 13476,12461
+	2::temp 13552,12435 13543,12326
+#zukünftig, wenn dieser Weg eingetragen ist:	2::temp 13163,12382 13176,12500
+# REMOVED --- #: tempex ^^^
+',
+         'from' => 1564646400,
+         'id' => 2262,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              31,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (2.8.2019 bis 4.8.2019)',
+         'type' => 'gesperrt',
+         'until' => 1564876800
+       },
        undef,
        undef,
        undef,
@@ -3025,6 +3031,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        {
          'data' => '# REMOVED --- #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation) --- #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein --- #: source_id: 2147339529 --- #: last_checked: 2017-02-04 --- #: next_check: 2017-03-01
 #: source_id: LMS-BR_r_LMS-BR_172061_LMS-BR_72
+#: also_indoor: traffic (H)
 # REMOVED --- #: next_check: 2019-06-13
 	q2::inwork 5258,11285 5236,10994
 ',
@@ -3242,7 +3249,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        {
          'data' => '#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-06-06
+#: last_checked: 2019-06-27
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -3807,7 +3814,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: RIGAER-2018
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-05-28
+#: last_checked: 2019-06-25
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -3877,7 +3884,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-06-11 vvv
+#: last_checked: 2019-07-02 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4028,34 +4035,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: FEUERBACH-2018
-#: XXX laut VMZ nur bis Frühjahr 2019, laut BA Steglitz bis Dezember 2018, laut fritz bis 30.06.2019
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.725875.php
-#: by: https://www.berliner-woche.de/steglitz/c-verkehr/weitere-sperrungen-rund-um-die-feuerbachstrasse_a174881
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729490.php
-#: by: https://www.berliner-woche.de/steglitz/c-bauen/bauarbeiten-gehen-weiter_a178952
-#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47881
-#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47885
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.772676.php (bis Mitte 2019)
-#: by: https://www.berliner-woche.de/steglitz/c-bauen/baustellen-in-carstenn-und-feuerbachstrasse-nicht-fertig_a196939
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.776977.php
-#: source_id: 2147342919
-#: source_id: 2147343007
-#: also_indoor: traffic
-#: last_checked: 2019-06-19
-#: next_check: 2019-06-30
-	q4::inwork; 6168,6467 6083,6451 5823,6413
-	q4::inwork 6083,6451 6095,6358
-	q4::inwork; 6248,6388 6095,6358
-',
-         'from' => 1534197600,
-         'id' => 2991,
-         'source_id' => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.714070.php',
-         'text' => 'Feuerbachstr.: Sanierung der Straße zwischen Körnerstr. und Thorwaldsenstr., Einbahnstraße offen Richtung Osten, weitere Einschränkungen in der Bismarckstr. und Poschingerstr., voraussichtlich bis Ende Juni 2019',
-         'type' => 'handicap',
-         'until' => 1561910400
-       },
+       undef,
        undef,
        undef,
        {
@@ -4091,7 +4071,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-06-14
+#: last_checked: 2019-06-20
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4161,10 +4141,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-06-18
+#: last_checked: 2019-07-02
 #: check_frequency: 7d
-	2::inwork 14854,8964 15057,8910
-	2::inwork 14854,8964 14918,8813
+	2::inwork 14854,8964 14980,8940
+	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
+# REMOVED (hier mittlerweile offen) ---		2::inwork 14980,8940 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
 ',
@@ -4198,6 +4179,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED ---	q3::inwork; 12205,22696 12187,22486
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.821009.php
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/franzosisch-buchholz-sommerbaustellen-%C2%B7-erhebliche-verkehrsstorungen
+#: source_id: 2147344370
 	q4::inwork; 12185,23021 12214,22918 12205,22696 12187,22486
 ',
          'from' => 1560895200,
@@ -4225,7 +4207,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
 #: XXX wann werden die Bauarbeiten beendet? vvv
-#: last_checked: 2019-06-15 vvv
+#: last_checked: 2019-06-27 vvv
 	q3::inwork 9106,12795 9193,12875 9239,12923
 	q3::inwork 9160,12932 9193,12875
 #: last_checked ^^^^
@@ -4239,14 +4221,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
+         'data' => '#: next_check_id: HENNIGSDORFER-2019
+	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
 ',
          'from' => 1542148916,
          'id' => 3046,
          'source_id' => '2147343419',
-         'text' => 'Henningsdorfer Str.: zwischen Kurzebracker Weg und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende Juni 2019',
+         'text' => 'Henningsdorfer Str.: zwischen Kurzebracker Weg und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, bis 09. Juli 2019',
          'type' => 'handicap',
-         'until' => 1561737600
+         'until' => 1562688000
        },
        undef,
        undef,
@@ -4351,19 +4334,23 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (kein Ende-Datum)
-#: note: laut fritz bis 28.06.2019
+#: note: laut fritz bis 16.08.2019
+#: also_indoor: traffic (H,G)
+#: priority: #A
 #: last_checked: 2019-05-25 (mapillary)
+#: next_check: 2019-07-28
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 ',
          'from' => undef,
          'id' => 3073,
-         'text' => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis Ende Juni 2019',
+         'text' => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, mindestens bis Mitte August 2019',
          'type' => 'handicap',
-         'until' => 1561737600
+         'until' => 1565971200
        },
        {
-         'data' => '#: osm_watch: way id="4597320" version="15"
+         'data' => '#: also_indoor: traffic (H,G)
+#: osm_watch: way id="4597320" version="15"
 # REMOVED (ja) --- #: XXX vor Ort anschauen, ggfs. nach handicap_s-orig verschieben
 	q4::inwork 8737,12098 8783,11959
 ',
@@ -4402,19 +4389,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.796103.php ("bald")
-#: by: https://www.berliner-woche.de/waidmannslust/c-bauen/steg-im-fliess-wird-saniert_a206581
-#: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-05-25 (mapillary)
-	2::inwork 4022,22691 3947,22622 3907,22606 3879,22574
-',
-         'from' => undef,
-         'id' => 3081,
-         'text' => 'Am Tegeler Fließ: Holzbohlensteg zwischen Brandtstr. und Fürt-Bismarck-Steg wegen Bauarbeiten gesperrt, bis Frühjahr 2019',
-         'type' => 'gesperrt',
-         'until' => 1561996800
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: WERNSDORFERSTR-2019
@@ -4461,17 +4436,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '	q4::inwork; 9212,13471 9207,13493 9094,13641 9042,13707
-# REMOVED (hier nicht) ---	q4::inwork; 9042,13707 8935,13844
-',
-         'from' => 1557166526,
-         'id' => 3092,
-         'source_id' => '2147344155',
-         'text' => 'Chausseestr.: zwischen Torstr. und Invalidenstr. Gleisbauarbeiten, Richtung Norden gesperrt, der Radverkehr ist auch betroffen, bis Ende Juni 2019',
-         'type' => 'handicap',
-         'until' => 1561564800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4498,17 +4463,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1567288800
        },
-       {
-         'data' => '#: by: https://www.berliner-woche.de/marzahn/c-verkehr/bauarbeiten-in-der-koethener-strasse_a216181
-	q4::inwork 20488,17793 20542,17911 20576,17994 20591,18037
-',
-         'from' => 1560117600,
-         'id' => 3100,
-         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.813948.php',
-         'text' => 'Köthener Str.: Bauarbeiten zwischen Wuhletalstr. und Geraer Ring, Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, voraussichtlich ab 11. Juni 2019 bis 25. Juni 2019',
-         'type' => 'handicap',
-         'until' => 1561499999
-       },
+       undef,
        {
          'data' => '#: by: https://www.hansottotheater.de/spielplan/monatsplan/2019-06/?scrollTo=2019-06
 	2::temp -11686,-765 -11622,-709
@@ -4519,16 +4474,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.814300.php (bis Ende Juni 2019)
-	2::inwork 5372,12538 5356,12494 5362,12469 5411,12380 5484,12320 5550,12305 5607,12307
-',
-         'from' => undef,
-         'id' => 3102,
-         'text' => 'Wullenweberufer: komplett gesperrt (Baumarbeiten), bis Ende Juni 2019',
-         'type' => 'gesperrt',
-         'until' => 1561910400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4536,7 +4482,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: note: laut fritz bis 31.01.2020
-#: last_checked: 2019-06-05
+#: also_indoor: traffic (H)
+#: last_checked: 2019-06-27
 #: next_check: 2020-01-30
 	q3::inwork  8986,16092 9178,16317 9301,16439
 ',
@@ -4577,7 +4524,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: also_indoor: traffic (G)
-#: last_checked: 2019-06-18
+#: last_checked: 2019-07-02
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 ',
@@ -4637,18 +4584,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-06-17
+#: last_checked: 2019-06-22
 	2::inwork 14567,10814 14352,10874
 ',
          'from' => 1560636000,
          'id' => 3116,
-         'text' => 'DB-Werkstraße: Bauarbeiten, eventuell ist die Straße komplett gesperrt, ab 17. Juni 2019',
+         'text' => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, ab 17. Juni 2019',
          'type' => 'gesperrt',
          'until' => undef
        },
        {
          'data' => '#: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
-#: osm_watch: way id="206889085" version="9"
+#: osm_watch: way id="206889085" version="10"
 #: last_checked: 2019-06-18
 #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
@@ -4671,14 +4618,75 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '	q4::inwork 10220,13098 10264,13097 10286,13084 10339,13052
-	q4::inwork 10264,13097 10310,13227
+         'data' => '#: source_id: 2147344372
+#: source_id: 2147344374
+#: source_id: 2147344373
+#: source_id: 2147344375
+#: XXX wird sich die Verkehrsführung noch ändern? vvv
+#: also_indoor: traffic (H) vvv
+#: last_checked: 2019-06-24 vvv
+#: check_frequency: 14d vvv
+	q4::inwork 10220,13098 10264,13097
+	q4::inwork; 10264,13097 10286,13084 10339,13052
+	q3::inwork; 10310,13227 10264,13097
+#: check_frequency ^^^
+#: last_checked ^^^
+#: also_indoor ^^^
+#: XXX ^^^
 ',
          'from' => 1560895200,
          'id' => 3119,
-         'text' => 'Hackescher Markt: Gleisarbeiten, Fahrbahn der zuführenden Straßen gesperrt, Radfahrer sollen schieben, ab 20. Juni 2019 bis Mitte August 2019',
+         'text' => 'Hackescher Markt: Gleisarbeiten, Fahrbahnen der zuführenden Straßen gesperrt, Radfahrer sollen schieben, ab 20. Juni 2019 bis Mitte August 2019',
          'type' => 'handicap',
-         'until' => 1565906399
+         'until' => 1565625600
+       },
+       {
+         'data' => '#: source_id: 2147344379 (bis Mitte Juli 2019)
+	q3::inwork; 16514,15092 16430,15168
+	q3::inwork 16430,15168 16376,15209 16314,15223
+	q3::inwork 16290,15029 16430,15168
+	q3::inwork; 16430,15168 16522,15258
+',
+         'from' => 1529704800,
+         'id' => 3120,
+         'text' => 'Große-Leege-Str./Werneuchener Str.: Bauarbeiten im Kreuzungsbereich, Einschränkungen, von 24. Juni 2018 bis Ende Juli 2019',
+         'type' => 'handicap',
+         'until' => 1564610399
+       },
+       {
+         'data' => '#: source_id: 2147344386
+	2::temp 8592,12252 8538,12245
+	1::temp 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
+',
+         'from' => 1561269600,
+         'id' => 3121,
+         'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/innenstadt-großkundgebung-am-29-06-19-sperrungen-im-vorfeld',
+         'text' => 'Platz des 18. März: Sperrung wegen Vorbereitung einer Großkundgebung, ab 24. Juni 2019 08 Uhr, ab 18 Uhr auch Sperrung der Ebertstr. Richtung Norden, bis 2. Juli 2019 23:45 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1562103900
+       },
+       undef,
+       {
+         'data' => '#: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/staugefahr-schlossbruecke-wird-saniert_a221398
+	2::inwork 3231,12749 3332,12742
+',
+         'from' => 1561845600,
+         'id' => 3123,
+         'source_id' => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.823217.php',
+         'text' => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019 für ungefähr drei Monate',
+         'type' => 'gesperrt',
+         'until' => 1569945600
+       },
+       {
+         'data' => '#: by: fritz
+#: confirmed_by: srt (keine Ausnahme für Radfahrer)
+	q4::inwork; 4219,10279 3852,10236
+',
+         'from' => 1562012626,
+         'id' => 3124,
+         'text' => 'Xantener Str.: Sperrung zwischen Konstanzer Str. und Brandenburgische Str., eventuell sind auch Radfahrer betroffen, bis 01.10.2019',
+         'type' => 'handicap',
+         'until' => 1569967200
        }
      
 );

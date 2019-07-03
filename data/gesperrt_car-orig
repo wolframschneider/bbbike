@@ -849,7 +849,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="5"
-#: last_checked: 2019-05-08
+#: last_checked: 2019-06-20
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
 Scharnhorststr.: Poller	3 7877,14504 7804,14445 *
@@ -1234,3 +1234,6 @@ Ohmstr. (Schwanebeck-West)	1 18039,24940 18127,25162
 Werder, Adolf-Damaschke-Str.	1 -22042,-2060 -21915,-2045
 Badstr.: Mittelstreifen, für Fußgänger/Radfahrer Übergangsmöglichkeit südöstlich der Einmündung	3nocross 8919,16154 8986,16092 9053,16029
 Lintruper Str.	1 10324,925 10380,757
+#: by: osm (für Radfahrer frei)
+Glaserweg	1 10187,872 10237,749
+Friedrichstr. (Prenzlau)	1 39550,101671 39574,101863
