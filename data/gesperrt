@@ -2055,8 +2055,8 @@ Mittelstreifen	3nocross::ignrte 9334,9670 9387,9804 9444,9919
 Mehringdamm -> Baruther Str.: Mittelstreifen	3::igndisp 9444,9919 9387,9804 9588,9827
 Baruther Str. -> Mehringdamm: Mittelstreifen	3::igndisp 9588,9827 9387,9804 9334,9670
 Höhndorfstr. - Loewenhardtdamm: Mittelstreifen	3 8438,8676 8334,8655 8380,8545
-Mittelstreifen	3nocross::ignrte 9224,9053 9225,9111 9248,9350
-Wilhelmshöhe -> Mehringdamm: Mittelstreifen	3::igndisp 9186,9107 9225,9111 9248,9350
+Mittelstreifen	3nocross::ignrte 9224,9053 9225,9111 9232,9187 9248,9350
+Wilhelmshöhe -> Mehringdamm: Mittelstreifen	3::igndisp 9186,9107 9225,9111 9232,9187
 Mittelstreifen, Tunnelrampe	3nocross::ignrte 3344,4488 3264,4439 3048,4305
 Unter den Eichen -> Reichensteiner Weg: Mittelstreifen, Tunnelrampe	3::igndisp 3048,4305 3264,4439 3243,4469
 Reichensteiner Weg -> Unter den Eichen: Mittelstreifen, Tunnelrampe	3::igndisp 3243,4469 3264,4439 3344,4488
@@ -2186,7 +2186,12 @@ Zossener Str. -> Ludwigsfelder Str.: Straßenbahntrasse	3::igndisp 22811,15753 22
 Straßenbahntrasse	3nocross::ignrte 22771,16194 22974,16139 23162,16095
 Ludwigsfelder Str. -> Landsberger Chaussee: Straßenbahntrasse	3::igndisp 22961,16077 22974,16139 22771,16194
 Landsberger Chaussee -> Ludwigsfelder Str.: Straßenbahntrasse	3::igndisp 23162,16095 22974,16139 22961,16077
-Mittelstreifen	3nocross::ignrte 23404,5325 23403,5385 23402,5483
+Mittelstreifen	3nocross::ignrte 23404,5325 23403,5385 23403,5410 23402,5483
+Salvador-Allende-Str. -> Fürstenwalder Damm: Mittelstreifen	3::igndisp 23402,5483 23403,5410 23417,5439
+Fürstenwalder Damm -> Salvador-Allende-Str.: Mittelstreifen	3::igndisp 23417,5439 23403,5410 23403,5385
+Straßenbahntrasse	3nocross::ignrte 23402,5483 23492,5488 23519,5490
+Salvador-Allende-Str. -> Fürstenwalder Damm: Straßenbahntrasse	3::igndisp 23463,5475 23492,5488 23402,5483
+Fürstenwalder Damm -> Salvador-Allende-Str.: Straßenbahntrasse	3::igndisp 23519,5490 23492,5488 23463,5475
 Straßenbahntrasse	3nocross::ignrte 23657,5467 23724,5437 23818,5394 23849,5380
 Fürstenwalder Damm -> Ahornweg: Straßenbahntrasse	3::igndisp 23818,5394 23724,5437 23691,5368
 Ahornweg -> Fürstenwalder Damm: Straßenbahntrasse	3::igndisp 23691,5368 23724,5437 23657,5467

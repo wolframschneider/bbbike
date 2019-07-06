@@ -4403,7 +4403,7 @@ EOF
        text  => 'Seifenkisten auf dem Mehringdamm, 28.4.2006-29.4.2006',
        type  => 'gesperrt',
        data  => <<EOF,
-	1 9248,9350 9225,9111 9224,9053 9225,9038 9226,8967 9227,8890 9229,8785
+	1 9248,9350 9232,9187 9225,9111 9224,9053 9225,9038 9226,8967 9227,8890 9229,8785
 EOF
      },
      { from  => 1162325129, # 2006-10-31 21:05
@@ -7685,7 +7685,7 @@ EOF
        text  => 'L 030 Ethel-und-Julius-Rosenberg-Str. OD Woltersdorf Straßenbau, Entwässerung Vollsperrung 10.04.2007-29.06.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34521,5351 34510,4849 34549,4551
+	q4::inwork 34521,5351 34532,5208 34510,4849 34549,4551
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -8996,7 +8996,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.xhain.info/termine/seifenkistenrennen-mehringdamm.htm',
        data  => <<EOF,
-	1::temp 9248,9350 9225,9111 9224,9053 9225,9038 9226,8967 9227,8890 9229,8785
+	1::temp 9248,9350 9232,9187 9225,9111 9224,9053 9225,9038 9226,8967 9227,8890 9229,8785
 EOF
      },
      { from  => 1183280291, # 2007-07-01 10:58
@@ -9743,7 +9743,7 @@ EOF
        text  => 'L 030 Ethel-und-Julius-Rosenberg-Str. OD Woltersdorf, Kno. A.-Bebel-Str. Straßenbau, Entwässerung Vollsperrung 15.08.2007-24.08.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34510,4849 34521,5351
+	q4::inwork 34510,4849 34532,5208 34521,5351
 EOF
      },
      { from  => 1187647200, # 2007-08-21 00:00
@@ -10877,7 +10877,7 @@ EOF
        text  => 'L 030 Ethel-und-Julius-Rosenberg-Str. OD Woltersdorf, zw. A.-Bebel-Str. und R.-Breitscheid Straßenbau, Entwässerung Vollsperrung 21.05.2008-30.06.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34510,4849 34521,5351
+	q4::inwork 34510,4849 34532,5208 34521,5351
 EOF
      },
      { from  => 1197932400, # 2007-12-18 00:00
@@ -21471,8 +21471,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2019-06-13 12:00:00"), # 1366740818, # 2013-04-23 20:13
-       until => $isodate2epoch->("2019-07-12 18:00:00"), # 1490460786, # $isodate2epoch->("2017-04-22 17:00:00"), # 1427727600, # 2015-03-30 17:00
-       text  => 'Fasanenstr.: vor der Einmündung Hardenbergstr. Baustelle, Fahrbahn gesperrt (bis 12. Juli 2019) ',
+       until => $isodate2epoch->("2019-08-30 18:00:00"), # 1490460786, # $isodate2epoch->("2017-04-22 17:00:00"), # 1427727600, # 2015-03-30 17:00
+       text  => 'Fasanenstr.: vor der Einmündung Hardenbergstr. Baustelle, Fahrbahn gesperrt (bis 30. August 2019) ',
        type  => 'handicap',
        source_id => 'IM_019747',
        data  => <<EOF,
@@ -26289,15 +26289,18 @@ EOF
 	3 6122,10925 6145,10975 6266,10927
 EOF
      },
-     { from  => $isodate2epoch->("2017-07-19 12:00:00"),
-       until => 1500577200, # 2017-07-20 21:00
-       text  => 'Straßen rund um das Verteidigungsministerium: Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2017 von 12:00 bis 21:00 Uhr',
+     { from  => $isodate2epoch->("2019-07-19 12:00:00"),
+       until => $isodate2epoch->("2019-07-20 21:00:00"),
+       text  => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2019 von 12:00 bis 21:00 Uhr',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
+       source_id => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_28_4117_4264_online.pdf',
        data  => <<EOF,
-	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
+	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
+	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
 	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
 	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
+	2::temp 7665,11353 7745,11332
+	2::temp 7745,11332 7690,11108
 EOF
      },
      { from  => undef, # 
@@ -26788,13 +26791,13 @@ EOF
 	q3::inwork 5306,15387 5134,15565
 EOF
      },
-     { from  => 1523311200, # 2018-04-10 00:00
-       until => 1540845265, # mittlerweile gibt es offizielle Fußgängerdurchgänge --- $isodate2epoch->("2019-12-31 18:00:00"),
-       text  => 'Wiesenweg: kann während der Arbeitszeiten wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, auch für Fußgänger, ab 11.04.2018 bis Ende Dezember 2019',
+     { from  => $isodate2epoch->("2019-07-05 18:00:00"), # 1523311200, # 2018-04-10 00:00
+       until => $isodate2epoch->("2019-08-05 18:00:00"), # 1540845265, # mittlerweile gibt es offizielle Fußgängerdurchgänge --- $isodate2epoch->("2019-12-31 18:00:00"),
+       text  => 'Wiesenweg: Bauarbeiten an der S-Bahnbrücke, unter Umständen kann der Durchgang zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, ab 05.07.2019 bis 05.08.2019',
        type  => 'gesperrt',
        data  => <<EOF,
-# REMOVED --- #: next_check_id: WIESENWEG-2018 --- #: XXX bis wann ist die Durchfahrt gesperrt? (laut googlemaps bis Ende November 2018, laut Bauschild Bauarbeiten bis Ende 2019) --- #: note: provisorisch offen am: 2018-05-08 gegen 19:15, 2018-05-14 gegen 19:30, 2018-05-23 gegen 19:00, 2018-05-26 gegen 09:15, 2018-06-11 gegen 19:00, 2018-07-26 gegen 19:30, 2018-07-27 gegen 10:45, 2018-07-28 gegen 10:00, 2018-08-16 gegen 18:00, 2018-08-24 gegen 19:00, 2018-09-17 gegen 18:45, 2018-10-03 gegen 17:45 --- #: note: unklar, ob man durchgekommen wäre: 2018-09-07 gegen 08:30 --- #: source_id: 2147342009 --- #: osm_watch: way id="154381291" version="6" --- #: last_checked: 2018-11-27 --- #: check_frequency: 30d
-	2::inwork 15162,11458 15126,11474 15055,11505
+#: next_check_id: WIESENWEG-2019
+	2::inwork 15126,11474 15162,11458
 EOF
      },
      { from  => 1510939800, # 2017-11-17 18:30
@@ -27561,7 +27564,7 @@ EOF
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/nach-zweimaliger-unterbrechung-gehen-bauarbeiten-auf-der-schoenstrasse-weiter_a214852
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2019-05-15
+#: last_checked: 2019-06-30 (mapillary)
 #: next_check: 2019-08-13
 	q4::inwork 13391,16436 13630,16629
 EOF
@@ -27786,7 +27789,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-06-20
+#: last_checked: 2019-07-03
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28764,13 +28767,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => $isodate2epoch->("2019-09-30 18:00:00"), # undef, # XXX
        text  => 'Imkerweg und Am Seddinsee: Einbahnstraßenregelung; außerdem enger gemeinsamer Rad- und Gehweg in der Wernsdorfer Str.',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: WERNSDORFERSTR-2019
 #: last_checked: 2019-03-30 vvv
-#: next_check: 2019-07-05 vvv
+#: next_check: 2019-09-30 vvv
 	q4::inwork; 27226,-2892 27422,-2753 27456,-2843 27520,-3029 27518,-3054
 	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
 #: next_check ^^^
@@ -29132,13 +29135,13 @@ EOF
      },
      { from  => 1560450700, # 2019-06-13 20:31
        until => $isodate2epoch->("2019-07-08 18:00:00"), # 1562018399, # 2019-07-01 23:59
-       text  => 'Warschauer Str.: Richtung Oberbaumbrücke in Höhe Revaler Str. Bauarbeiten, Einschränkungen auch für Radfahrer (Umleitung), ab 14. Juni 2019 bis Anfang Juli 2019',
+       text  => 'Warschauer Str.: Richtung Oberbaumbrücke in Höhe Revaler Str. Bauarbeiten, Einschränkungen für Radfahrer möglich (Überqueren der Warschauer Str. nicht möglich), ab 14. Juni 2019 bis Anfang Juli 2019',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/arbeiten-an-den-tramgleisen_a219142
 #: source_id: 2147344343 (bis Anfang Juli 2019)
 # REMOVED --- #: XXX genauer anschauen --- #: next_check: 2019-06-14
-	q4::inwork; 13603,11538 13588,11490 13541,11355
+	q3::inwork; 13603,11538 13588,11490 13541,11355
 	3::inwork 13711,11458 13588,11490 13565,11492
 	3::inwork 13565,11492 13588,11490 13711,11458
 ## XXX does not work:
@@ -29208,11 +29211,12 @@ EOF
 #: source_id: 2147344375
 #: XXX wird sich die Verkehrsführung noch ändern? vvv
 #: also_indoor: traffic (H) vvv
-#: last_checked: 2019-06-24 vvv
+#: last_checked: 2019-07-03 vvv
 #: check_frequency: 14d vvv
 	q4::inwork 10220,13098 10264,13097
 	q4::inwork; 10264,13097 10286,13084 10339,13052
 	q3::inwork; 10310,13227 10264,13097
+	q4::inwork 10220,13098 10105,13004
 #: check_frequency ^^^
 #: last_checked ^^^
 #: also_indoor ^^^
@@ -29260,6 +29264,7 @@ EOF
        source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.823217.php',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/staugefahr-schlossbruecke-wird-saniert_a221398
+#: osm_watch: way id="72660098" version="4"
 	2::inwork 3231,12749 3332,12742
 EOF
      },
@@ -29271,6 +29276,54 @@ EOF
 #: by: fritz
 #: confirmed_by: srt (keine Ausnahme für Radfahrer)
 	q4::inwork; 4219,10279 3852,10236
+EOF
+     },
+     { from  => 1562177614, # 2019-07-03 20:13
+       until => 1564955999, # 2019-08-04 23:59
+       text  => 'Nöldnerstr.: Einbahnstraßenregelung zwischen Stadthausstr. und Nöldnerplatz, offen stadtauswärts, voraussichtlich bis 4. August 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+	q3::inwork; 15932,10830 15681,10801
+EOF
+     },
+     { from  => 1547074800, # 2019-01-10 00:00
+       until => 1567180800, # 2019-08-30 18:00
+       text  => 'Birkholz - Diedersdorf: Neubau Brücke über den Seegraben, eventuell sind auch Radfahrer von der Sperrung betroffen, 10.01.2019 bis 30.08.2019 ',
+       type  => 'gesperrt',
+       source_id => 'LS/722-W/18/155',
+       data  => <<EOF,
+	2::inwork 7924,-4240 7978,-4011
+EOF
+     },
+     { from  => 1562475600, # 2019-07-07 07:00
+       until => 1563166800, # 2019-07-15 07:00
+       text  => 'Gubener Str.: möglicherweise Asphaltierungsarbeiten zwischen Hildegard-Jadamowitz-Str. und Graudenzer Str., ab 8. Juli 2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: GUBENER-2019
+	q4::inwork 13198,12311 13243,12222
+EOF
+     },
+     { from  => 1563055200, # 2019-07-14 00:00
+       until => 1565387999, # 2019-08-09 23:59
+       text  => 'Röblingstr.: Bauarbeiten zwischen Attilastr. und Marienhöher Weg geplant, eventuell sind auch Radfahrer betroffen, vom 15. Juli 2019 bis 09. August 2019',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2019/pressemitteilung.826264.php',
+       data  => <<EOF,
+	q4::inwork 8014,4832 7875,4897 7807,4975
+EOF
+     },
+     { from  => 1563055200, # 2019-07-14 00:00
+       until => 1575738000, # 2019-12-07 18:00
+       text  => 'Boxhagener Str.: Bauarbeiten zwischen Warschauer Str. und Holteistr., Einbahnstraßenregelung, offen Richtung Westen, vom 15.7.2019 bis 7.12.2019',
+       type  => 'handicap',
+       source_id => 'https://www.berliner-woche.de/friedrichshain/c-verkehr/bvg-erneuert-tramgleise-an-der-boxhagener-strasse_a222487',
+       data  => <<EOF,
+#: XXX genauer anschauen!
+#: priority: #A
+#: next_check: 2019-07-15
+	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
+# REMOVED (hier auch? oder nicht?) ---	q4::inwork; 14461,11738 14513,11657 14561,11600 14570,11589 14639,11512
 EOF
      },
     );
