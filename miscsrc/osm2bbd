@@ -16,7 +16,7 @@ use FindBin;
 use lib "$FindBin::RealBin/..";
 
 use vars qw($VERSION);
-$VERSION = '0.35';
+$VERSION = '0.36';
 
 use Cwd qw(getcwd realpath);
 use Data::Dumper;
@@ -305,7 +305,8 @@ my %smoothness_to_de = ('excellent'     => 'ausgezeichnet',
 			'impassable'    => 'unpassierbar',
 		       );		       
 
-use constant HIGHWAY_BAB_RX => qr{^(?:motorway|motorway_link|trunk|trunk_link)$};
+use constant HIGHWAY_BAB_RX => qr{^(?:motorway|motorway_link)$};
+use constant HIGHWAY_TRUNK_RX => qr{^(?:trunk|trunk_link)$}; # may be rendered as motorroad or as primary
 use constant HIGHWAY_HH_RX  => qr{^(?:primary|primary_link)$};
 use constant HIGHWAY_H_RX   => qr{^(?:secondary|secondary_link)$};
 use constant HIGHWAY_NH_RX  => qr{^(?:tertiary|tertiary_link)$};
@@ -548,6 +549,39 @@ my $do_unhandled = sub {
     }
     @osm_files = @new_osm_files;
 }
+
+# Create a "url" directive, if applicable. Return true if such a
+# directive was actually created.
+my $set_url_directive = sub {
+    my($tags_ref, $out_ref) = @_;
+    die "Cannot autovivify out ref, please make sure it's an initialized array ref in the caller!" if !$out_ref;
+
+    # XXX evtl. die folgenden Direktiven nur im
+    # "Hauptfile" ausgeben, siehe "width" unten?
+    ## Also, it's not lear how to handle all the possible languages. Now
+    ## the compromise is to use the english entry and the language specified
+    ## while doing the conversion. Not ideal.
+    for my $key (qw(wikipedia website url contact:website)) {
+	my $url;
+	for my $_uselang ($lang, '', 'en', 'de') {
+	    my $suffix = $_uselang ne '' ? ":$_uselang" : '';
+	    my $uselang = $_uselang ne '' ? $_uselang : 'en';
+	    my $key_suffix = "$key$suffix";
+	    if (exists $tags_ref->{$key_suffix}) {
+		if ($key eq 'wikipedia' && $tags_ref->{$key_suffix} !~ m{^http:}) {
+		    $url = "http://$uselang.wikipedia.org/wiki/" . $tags_ref->{$key_suffix};
+		} else {
+		    $url = $tags_ref->{$key_suffix};
+		}
+	    }
+	    if ($url) {
+		push @$out_ref, ["#: url: $url"];
+		return 1;
+	    }
+	}
+    }
+    return 0;
+};
 
 # Conversion function
 my $conv;
@@ -1040,9 +1074,8 @@ for my $osm_file (@osm_files) {
 		    $name = $args{name};
 		}
 
-		if (exists $tag{'url'}) {
-		    push @{$out{$out_file}}, ["#: url: $tag{url}"];
-		}
+		$out{$out_file} ||= []; # XXX cannot autovivify in $set_url_directive
+		$set_url_directive->(\%tag, $out{$out_file});
 		push @{$out{$out_file}}, [$name, [$ll], $cat];
 	    }
 	}
@@ -1333,7 +1366,7 @@ for my $osm_file (@osm_files) {
 	    if (exists $tag{'highway'}) {
 		my $highway_cat = $tag{'highway'};
 		my $is_motorway = 0;
-		my $is_motorroad = exists $tag{'motorroad'} and $tag{'motorroad'} eq 'yes' ? 1 : 0; # Kraftfahrzeugstraße
+		my $is_motorroad = exists $tag{'motorroad'} && $tag{'motorroad'} eq 'yes' ? 1 : 0; # Kraftfahrzeugstraße
 		my $bicycle_tag = $tag{'bicycle'};
 		my $foot_tag = $tag{'foot'};
 		if (defined $bicycle_tag && $bicycle_tag eq 'no') {
@@ -1367,6 +1400,18 @@ for my $osm_file (@osm_files) {
 		    $adjust_bab_name->();
 		    push @or, ["strassen_bab", "BAB".$addcat];
 		    $is_motorway = 1;
+		} elsif ($highway_cat =~ HIGHWAY_TRUNK_RX) {
+		    # It's possible that trunk highways are allowed for cyclists
+		    # (e.g. Pfaffendorfer Brücke in Koblenz). So only mark them
+		    # as motorways if $is_motorroad is true (already handled above)
+		    # or if it's explicitly forbidden for bicycles.
+		    if (defined $bicycle_tag && $bicycle_tag eq 'no') {
+			$adjust_bab_name->();
+			push @or, ["strassen_bab", "BAB".$addcat];
+			$is_motorway = 1;
+		    } else {
+			push @or, ["strassen", "HH".$addcat];
+		    }
 		} elsif ($highway_cat =~ HIGHWAY_HH_RX) {
 		    push @or, ["strassen", "HH".$addcat];
 		} elsif ($highway_cat =~ HIGHWAY_H_RX) {
@@ -1877,29 +1922,8 @@ for my $osm_file (@osm_files) {
 		    $name = $args{name};
 		}
 
-		# XXX evtl. die folgenden Direktiven nur im
-		# "Hauptfile" ausgeben, siehe "width" unten?
-		## Also, it's not lear how to handle all the possible languages. Now
-		## the compromise is to use the english entry and the language specified
-		## while doing the conversion. Not ideal.
-		for my $key (qw(wikipedia website url)) {
-		    my $url;
-		    for my $_uselang ($lang, '', 'en', 'de') {
-			my $suffix = $_uselang ne '' ? ":$_uselang" : '';
-			my $uselang = $_uselang ne '' ? $_uselang : 'en';
-			if (exists $tag{"$key$suffix"}) {
-			    if ($key eq 'wikipedia' && $tag{"$key$suffix"} !~ m{^http:}) {
-				$url = "http://$uselang.wikipedia.org/wiki/" . $tag{"$key$suffix"};
-			    } else {
-				$url = $tag{"$key$suffix"};
-			    }
-			}
-			if ($url) {
-			    push @{$out{$out_file}}, ["#: url: $url"];
-			    last;
-			}
-		    }
- 		}
+		$out{$out_file} ||= []; # XXX cannot autovivify in $set_url_directive
+		$set_url_directive->(\%tag, $out{$out_file});
 
 		# local, official, historical, regional names etc:  
 		# http://wiki.openstreetmap.org/wiki/Key:name
