@@ -6878,7 +6878,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004266',
        data  => <<EOF,
-	2::inwork 21862,807 22007,711
+	2::inwork 21858,811 21870,803 22007,711
 EOF
      },
      { from  => 1165266208, # 2006-12-04 22:03
@@ -27791,7 +27791,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-07-03
+#: last_checked: 2019-07-09 (mapillary)
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27859,16 +27859,15 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
-       text  => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn für Radfahrer explizit verboten',
+       until => 1588348800, # 2020-05-01 18:00
+       text  => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Marksburgstr. für Radfahrer explizit verboten, vermutlich bis Mai 2020',
        type  => 'handicap',
        source_id => '2147342174',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
-# REMOVED (hier keine Verbotsschilder mehr) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
-	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
+	q4::inwork; 18809,9133 18790,9018 18770,8898 18737,8686 18733,8650 18733,8633
 EOF
      },
      { from  => 1537740000, # 2018-09-24 00:00
@@ -28523,13 +28522,14 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Stralauer Südufer: Bauarbeiten, Uferweg teilweise gesperrt, möglicherweise bis April 2019',
+       text  => 'Stralauer Südufer: Bauarbeiten, Uferweg teilweise gesperrt, Ende unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
+#: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=635121&postcount=170
 #: priority: #C
-#: last_checked: 2019-06-18
+#: last_checked: 2019-07-14 (daf)
 #: check_frequency: 30d
 	2::inwork 14690,9993 14599,10039
 EOF
@@ -28666,13 +28666,16 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (kein Ende-Datum)
+#: by: https://www.berliner-woche.de/wilmersdorf/c-bauen/wasserrohr-unter-der-guentzelstrasse-wird-endlich-geflickt_a223000 (bis Ende Juli oder August 2019)
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic (H,G)
 #: priority: #A
-#: last_checked: 2019-05-25 (mapillary)
-#: next_check: 2019-07-28
+#: last_checked: 2019-05-25 (mapillary) vvv
+#: next_check: 2019-07-28 vvv
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
+#: next_check ^^^
+#: last_checked ^^^
 EOF
      },
      { from  => 1551567600, # 2019-03-03 00:00
@@ -28867,6 +28870,7 @@ EOF
        until => undef, # XXX
        text  => 'Daimler-Parkplatz: Zufahrt Köpenicker Str. kann gesperrt sein (z.B. am Wochenende), ansonsten eigentlich nur für Besucher frei',
        type  => 'gesperrt',
+       recurring => 1,
        data  => <<EOF,
 	2::night:weekend 18320,2195 18448,2182 18491,2128
 EOF
@@ -29119,7 +29123,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic
-#: last_checked: 2019-06-09
+#: last_checked: 2019-07-20
 	q4::inwork; 19266,1968 19564,1871
 EOF
      },
@@ -29183,7 +29187,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-07-06
+#: last_checked: 2019-07-20
 	2::inwork 14567,10814 14352,10874
 EOF
      },
@@ -29193,7 +29197,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
-#: osm_watch: way id="206889085" version="10"
+#: osm_watch: way id="206889085" version="11"
 #: last_checked: 2019-06-18
 #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
@@ -29220,7 +29224,7 @@ EOF
 #: source_id: 2147344375
 #: XXX wird sich die Verkehrsführung noch ändern? vvv
 #: also_indoor: traffic (H) vvv
-#: last_checked: 2019-07-03 vvv
+#: last_checked: 2019-07-19 vvv
 #: check_frequency: 14d vvv
 	q4::inwork 10220,13098 10264,13097
 	q4::inwork; 10264,13097 10286,13084 10339,13052
@@ -29320,25 +29324,42 @@ EOF
        source_id => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2019/pressemitteilung.826264.php',
        data  => <<EOF,
 #: source_id: 2147344476
+#: by: https://www.berliner-woche.de/tempelhof/c-verkehr/fahrbahnsanierung-in-der-roeblingstrasse_a222676
 	q4::inwork 8014,4832 7875,4897 7807,4975
 EOF
      },
      { from  => 1563055200, # 2019-07-14 00:00
        until => 1575738000, # 2019-12-07 18:00
-       text  => 'Boxhagener Str.: Bauarbeiten zwischen Warschauer Str. und Holteistr., gesperrt Richtung Osten, auch Radfahrer sind betroffen, vom 15.7.2019 bis 7.12.2019',
+       text  => 'Boxhagener Str.: Bauarbeiten zwischen Warschauer Str. und Holteistr., gesperrt Richtung Osten, zusätzliche Einschränkungen am Wismarplatz in beiden Richtungen, auch Radfahrer sind betroffen, vom 15.7.2019 bis 7.12.2019',
        type  => 'handicap',
        source_id => 'https://www.berliner-woche.de/friedrichshain/c-verkehr/bvg-erneuert-tramgleise-an-der-boxhagener-strasse_a222487',
        data  => <<EOF,
 #: source_id: 2147344478
-#: XXX genauer anschauen! vvv
 #: also_indoor: traffic
-#: priority: #A vvv
-#: next_check: 2019-07-15 vvv
+# REMOVED --- #: XXX genauer anschauen! vvv --- #: priority: #A vvv --- #: next_check: 2019-07-15 vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
 	q4::inwork; 14461,11738 14513,11657 14561,11600 14570,11589 14639,11512
-#: next_check ^^^
-#: priority ^^^
-#: XXX ^^^
+	2::inwork 14461,11738 14416,11815
+	q4::inwork; 14395,11753 14461,11738
+	q4::inwork; 14416,11815 14395,11753
+	q4::inwork 14475,11778 14416,11815
+#: note: Sperrung zur Glatzer Str.
+	3::inwork 14651,11666 14570,11589 14561,11600
+	3::inwork 14651,11666 14570,11589 14639,11512
+	3::inwork 14561,11600 14570,11589 14651,11666
+	3::inwork 14639,11512 14570,11589 14651,11666
+#: note: Sperrung zur Gryphiusstr.
+	3::inwork 14550,11732 14513,11657 14461,11738
+	3::inwork 14550,11732 14513,11657 14561,11600
+	3::inwork 14550,11732 14513,11657 14496,11620
+	3::inwork 14461,11738 14513,11657 14550,11732
+	3::inwork 14561,11600 14513,11657 14550,11732
+	3::inwork 14496,11620 14513,11657 14550,11732
+#: note: Sperrung zur Mainzer Str.
+	q3::inwork 14354,12012 14306,11889
+#: note: Sperrung zur Niederbarnimstr.
+	q3::inwork 14208,12235 14045,11965
+# REMOVED --- #: next_check ^^^ --- #: priority ^^^ --- #: XXX ^^^
 EOF
      },
      { from  => undef, # 
@@ -29374,11 +29395,10 @@ EOF
      },
      { from  => undef, # 
        until => $isodate2epoch->("2019-07-23 18:00:00"), # undef, # XXX
-       text  => 'Regattastr.: zwischen Büxensteinallee und Libboldallee gesperrt, evtl. ist auch der Radverkehr betroffen',
+       text  => 'Regattastr.: Fahrbahn und Bürgersteige zwischen Büxensteinallee und Libboldallee gesperrt',
        type  => 'gesperrt',
        source_id => '2147344495',
        data  => <<EOF,
-#: add_fragezeichen: sind Radfahrer tatsächlich betroffen?
 #: also_indoor: traffic (H)
 	2::inwork 22821,1086 22766,1226
 EOF
@@ -29398,6 +29418,17 @@ EOF
        data  => <<EOF,
 #: XXX genauer anschauen!
 	q4::inwork 11113,10943 11150,11030
+EOF
+     },
+     { from  => undef, # 
+       until => 1588348800, # 2020-05-01 18:00
+       text  => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer können bis Rheinsteinstr. den engen Gehweg benutzen, vermutlich bis Mai 2020',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: TRESKOWALLEE-2017
+	q3::inwork; 18704,8427 18731,8577 18733,8633 18733,8650 18737,8686
+#: note: hier gibt's keine expliziten Verbotsschilder, aber Radfahrer sollen wohl nicht auf der Treskowallee weiterfahren
+	q4::inwork; 18737,8686 18770,8898 18790,9018 18809,9133
 EOF
      },
     );
