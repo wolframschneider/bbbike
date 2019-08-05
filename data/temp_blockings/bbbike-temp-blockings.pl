@@ -901,12 +901,13 @@ EOF
 	2 2624,1704 2824,1273
 EOF
      },
-     { from  => $isodate2epoch->("2018-08-31 12:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-09-02 23:59:59"),
+     { from  => $isodate2epoch->("2019-09-06 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-09-08 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 31, months => 8]],
-       text  => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (01.09.2018 bis 02.09.2018)',
+       text  => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (07.09.2019 bis 08.09.2019)',
        type  => 'gesperrt',
+       source_id => 'http://www.hier-in-rudow.de/meilenfeste.html',
        data  => <<EOF,
 	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
 EOF
@@ -2959,7 +2960,7 @@ EOF
        text  => 'L 75; (Karl-Marx-Str.); OD Großziethen Straßenbauarbeiten Vollsperrung 06.09.2005-30.11.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 12986,1001 12984,1011
+	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13046,662 12986,1001 12984,1011
 EOF
      },
      { from  => 1128290400, # 2005-10-03 00:00
@@ -3070,7 +3071,7 @@ EOF
        text  => 'Drakestraße zwischen Hans-Sachs-Straße und Knesebeckstraße in beiden Richtungen Brückenabriss, Straße gesperrt, Dauer: 12.10.2005 02:00 Uhr bis 14.10.2005 16:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 3259,4002 3228,4046 3214,4066 3151,4160 3142,4173
+	2 3259,4002 3228,4046 3214,4066 3185,4109 3151,4160 3142,4173
 EOF
      },
      { from  => 1128808800, # 2005-10-09 00:00
@@ -3213,7 +3214,7 @@ EOF
        data  => <<EOF,
 	q4 8119,12414 8354,12416
 	q4 8400,12417 8540,12420
-	q4 8400,12417 8354,12416
+	q4 8400,12417 8373,12416 8354,12416
 EOF
      },
      { from  => $isodate2epoch->("2018-10-09 08:30:00"), # 1129878000, # 2005-10-21 09:00
@@ -4108,7 +4109,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_003887',
        data  => <<EOF,
-	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 12986,1001 12984,1011
+	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13046,662 12986,1001 12984,1011
 EOF
      },
      { from  => 1143928800, # 2006-04-02 00:00
@@ -4758,7 +4759,7 @@ EOF
        source_id => 'IM_002870',
        data  => <<EOF,
 # REMOVED ---	2::temp 8168,12848 8204,12816 8206,12757 8207,12606
-	2::temp 8775,12457 8540,12420 8400,12417 8354,12416 8119,12414
+	2::temp 8775,12457 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414
 # REMOVED ---	2::temp 8030,12824 8114,12839
 	2::temp 8306,12609 8309,12758
 	2::temp 8030,12824 8021,12832
@@ -5755,7 +5756,7 @@ EOF
        text  => 'L 075 Karl-Marx-Str. OD Großziehten Straßenbauarbeiten Vollsperrung 24.11.2006-22.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 12986,1001 12984,1011
+	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13046,662 12986,1001 12984,1011
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -7282,7 +7283,7 @@ EOF
        text  => 'L 075 Karl-Marx-Str. OD Großziethen, nördl. Attilastr.- Landesgrenze Berlin, Buckower Damm Straßen- und Kanalbau Vollsperrung 05.03.2007-20.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 12984,1011 12986,1001 13124,216
+	2::inwork 12984,1011 12986,1001 13046,662 13124,216
 EOF
      },
      { from  => 1173308400, # 2007-03-08 00:00
@@ -8574,7 +8575,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_86792',
        data  => <<EOF,
-	2::inwork 3048,4305 3142,4173 3151,4160 3214,4066 3228,4046 3259,4002
+	2::inwork 3048,4305 3142,4173 3151,4160 3185,4109 3214,4066 3228,4046 3259,4002
 EOF
      },
      { from  => 1181253600, # 2007-06-08 00:00
@@ -8847,7 +8848,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005823',
        data  => <<EOF,
-	2::inwork 3048,4305 3142,4173 3151,4160 3214,4066 3228,4046 3259,4002
+	2::inwork 3048,4305 3142,4173 3151,4160 3185,4109 3214,4066 3228,4046 3259,4002
 EOF
      },
      { from  => undef, # 
@@ -9348,7 +9349,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005823',
        data  => <<EOF,
-	2::inwork 3048,4305 3142,4173 3151,4160 3214,4066 3228,4046 3259,4002
+	2::inwork 3048,4305 3142,4173 3151,4160 3185,4109 3214,4066 3228,4046 3259,4002
 EOF
      },
      { from  => 1185833871, # 2007-07-31 00:17
@@ -9635,7 +9636,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_006754', # IM_005516
        data  => <<EOF,
-	q4::inwork 3048,4305 3142,4173 3151,4160 3214,4066 3228,4046
+	q4::inwork 3048,4305 3142,4173 3151,4160 3185,4109 3214,4066 3228,4046
 EOF
      },
      { from  => 1187989232, # 2007-08-24 23:00
@@ -10096,7 +10097,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006771',
        data  => <<EOF,
-	2::temp 7875,12363 8017,12359 8070,12409 8119,12414 8354,12416 8400,12417 8540,12420
+	2::temp 7875,12363 8017,12359 8070,12409 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
 EOF
      },
      { from  => 1191269068, # 2007-10-01 22:04
@@ -10254,7 +10255,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006754',
        data  => <<EOF,
-	2::inwork 3228,4046 3214,4066 3151,4160 3142,4173
+	2::inwork 3228,4046 3214,4066 3185,4109 3151,4160 3142,4173
 EOF
      },
      { from  => 1192140000, # 2007-10-12 00:00
@@ -11930,7 +11931,7 @@ EOF
 	3 6841,11114 6880,11110 7115,11220
 	3 7698,10147 7579,10183 7526,9969
 	3 7384,10127 7413,10244 7429,10366
-	3 7003,10513 7033,10396 7245,10499 7281,10510
+	3 7003,10513 7033,10396 7227,10489 7281,10510
 	3 8232,11414 8226,11458 8172,11679
 	3 9369,12253 9358,12351 9343,12464
 	3 9848,12506 9858,12410 9873,12315 9877,12293
@@ -11941,7 +11942,7 @@ EOF
 	3 9131,12438 9141,12320 9028,12307
 	3 6716,11439 6825,11486 6915,11492 6987,11487 7171,11510 7293,11519
 	3 8804,12280 8861,12125 8901,12008
-	3 7281,10510 7245,10499 7033,10396 7003,10513
+	3 7281,10510 7227,10489 7033,10396 7003,10513
 EOF
      },
      { from  => 1217625647, # 2008-08-01 23:20
@@ -13332,7 +13333,7 @@ EOF
        source_id => 'IM_011040',
        data  => <<EOF,
 	2::temp 7875,12363 8017,12359 8070,12409 8119,12414 8354,12416 8391,12389 8546,12279 8570,12302 8573,12325 8540,12420
-	2::temp 8354,12416 8400,12417 8540,12420 8775,12457
+	2::temp 8354,12416 8373,12416 8400,12417 8540,12420 8775,12457
 EOF
      },
      { from  => 1231707292, # 2009-01-11 21:54
@@ -13908,8 +13909,8 @@ EOF
        text  => 'Anwohner haben den Uferweg am Griebnitzsee versperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp -8625,-1176 -8700,-997 -8813,-933 -8913,-813 -9103,-813 -9239,-739 -9337,-668 -9365,-610 -9454,-434 -9562,-325
-	2::temp -8087,-1453 -8151,-1470 -8306,-1454
+	2::temp -8625,-1176 -8700,-997 -8813,-933 -8913,-813 -9116,-737 -9254,-656 -9358,-537 -9375,-502 -9445,-377 -9585,-277 -9795,-230
+	2::temp -8084,-1460 -8133,-1474 -8260,-1461
 EOF
      },
      { from  => 1240517911, # 2009-04-23 22:18
@@ -14299,7 +14300,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_012708',
        data  => <<EOF,
-	2::temp 8540,12420 8400,12417 8354,12416 8119,12414
+	2::temp 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414
 EOF
      },
      { from  => 1243116000, # 2009-05-24 00:00
@@ -15687,7 +15688,7 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: tempex: T23:00-T06:00 vvv
-	2::night 21150,11925 21132,11943 21100,11960 20857,12027 20810,12031
+	2::night 21150,11925 21134,11926 21132,11943 21100,11960 20857,12027 20810,12031
 	2::night 20857,12027 20831,11771 20825,11732 20771,11672
 #: tempex ^^^
 EOF
@@ -16301,7 +16302,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014201',
        data  => <<EOF,
-	q4::temp 8540,12420 8400,12417 8354,12416 8119,12414 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610
+	q4::temp 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610
 EOF
      },
      { from  => $isodate2epoch->("2013-09-29 06:00:00"), # 1 Tag Vorlauf
@@ -16362,7 +16363,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014246',
        data  => <<EOF,
-	q4::temp 8540,12420 8400,12417 8354,12416 8119,12414
+	q4::temp 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414
 EOF
      },
      { from  => 1254952800, # 2009-10-08 00:00
@@ -17422,13 +17423,15 @@ EOF
 	q3::inwork 9444,11616 9432,11702
 EOF
      },
-     { ### INACTIVE ENTRY ###
-       from  => undef, # 
-       until => 1360787052, # XXX -> schon lange als permanenten Sperrung in gesperrt-orig
+     {
+       from  => $isodate2epoch->("2019-07-17 12:00:00"),
+       until => undef,
        text  => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt',
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.830806.php
+# REMOVED (ja) --- #: add_fragezeichen: Ist der Friedrich-Ebert-Platz tatsächlich (manchmal) offen?
 	2::temp 8554,12593 8540,12420
 EOF
      },
@@ -18045,39 +18048,75 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://csd-berlin.de/event-info-en/
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/gesamte-innenstadt-verkehrseinschrankungen-zum-christopher-street-day
 	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6982,10610 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
-	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
-	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
+	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529
+# REMOVED (2019 hier nicht) ---	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
+# REMOVED (2019 hier nicht) ---	2::temp 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746
+# REMOVED (2019 hier nicht) ---	3 6302,10462 6353,10583 6380,10704
+# REMOVED (2019 hier nicht) ---	3 6380,10704 6353,10583 6302,10462
+# REMOVED (2019 hier nicht) ---	3 6192,10542 6216,10614 6228,10646
+# REMOVED (2019 hier nicht) ---	3 6250,10701 6228,10646 6216,10614
+# REMOVED (2019 hier nicht) ---	3 6228,10646 6216,10614 6192,10542
+# REMOVED (2019 hier nicht) ---	3 6216,10614 6228,10646 6250,10701
+#: note 2019 andere Wegführung (wg. Bauarbeiten am Wittenbergplatz) vvv
+	2::temp 6025,10746 5866,10492 5808,10396 5764,10322 5898,10318 6020,10351 6147,10383 6276,10401 6403,10424 6494,10440 6532,10529
+	3 6128,10319 6147,10383 6192,10542
+	3 6128,10319 6020,10351 5997,10286
+	3 6128,10319 6020,10351 6033,10403
+	3 6033,10403 6020,10351 5997,10286
+	3 6033,10403 6020,10351 6128,10319
+	3 5520,10453 5764,10322 5700,10226
+	3 5520,10453 5764,10322 5808,10284
+	3 5700,10226 5764,10322 5520,10453
+	3 5700,10226 5764,10322 5808,10284
+	3 6265,10359 6276,10401 6302,10462
+	3 6302,10462 6276,10401 6265,10359
+	3 5780,10542 5866,10492 5921,10461
+	3 5921,10461 5866,10492 5780,10542
+	3 6192,10542 6147,10383 6128,10319
+	3 5997,10286 6020,10351 6128,10319
+	3 5997,10286 6020,10351 6033,10403
+	3 5894,10287 5898,10318 5907,10347
+	3 5907,10347 5898,10318 5894,10287
+	3 5808,10284 5764,10322 5700,10226
+	3 5808,10284 5764,10322 5520,10453
+#: note ^^^
+	2::temp 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658
+# REMOVED (Aufstellbereich erst ab Uhlandstr.) --- 2::temp 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
+# REMOVED ---	3 4239,10358 4245,10435 4256,10583
+# REMOVED ---	3 4685,10689 4676,10541 4659,10335
+# REMOVED ---	3 4485,10307 4503,10497 4513,10702
+# REMOVED ---	3 4847,10677 4847,10589 4828,10356
+# REMOVED ---	3 4381,10583 4371,10465 4360,10320
+# REMOVED ---	3 4360,10320 4371,10465 4381,10583
+# REMOVED ---	3 4828,10356 4847,10589 4847,10677
+# REMOVED ---	3 4513,10702 4503,10497 4485,10307
+# REMOVED ---	3 5047,10381 5076,10658 5079,10701
+# REMOVED ---	3 4256,10583 4245,10435 4239,10358
+# REMOVED ---	3 5079,10701 5076,10658 5047,10381
+# REMOVED ---	3 4659,10335 4676,10541 4685,10689
 	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252
 	3 7429,12070 7383,12095 7031,12320
 	3 7031,12320 7383,12095 7429,12070
 	3 7822,12201 7816,12150 7823,12120
 	3 7823,12120 7816,12150 7822,12201
-	3 6380,10704 6353,10583 6302,10462
 	3 6692,11365 6851,11346 7103,11247
 	3 5488,10978 5475,10808 5471,10719
-	3 4685,10689 4676,10541 4659,10335
 	3 7115,11220 6880,11110 6841,11114
 	3 6716,11439 6825,11486 6915,11492
-	3 4239,10358 4245,10435 4256,10583
-	3 7131,10331 7033,10396 7245,10499
+	3 7131,10331 7033,10396 7227,10489
 	3 7131,10331 7033,10328 7060,10221
-	3 4485,10307 4503,10497 4513,10702
 	3 6869,11567 6809,11570 6679,11602 6512,11608
 	3 6725,10641 6743,10615 6753,10446 6719,10347
-	3 4847,10677 4847,10589 4828,10356
-	3 4381,10583 4371,10465 4360,10320
 	3 5196,10398 5215,10711 5230,10919
 	3 6681,10959 6824,10904 6740,10755
 	3 6740,10755 6824,10904 6681,10959
 	3 6818,10725 6972,10665 7110,10613
-	3 4360,10320 4371,10465 4381,10583
 	3 7060,10221 7033,10328 7131,10331
 	3 6915,11492 6825,11486 6716,11439
 	3 6742,11099 6873,11011 7002,11034
-	3 7245,10499 7033,10396 7131,10331
-	3 4828,10356 4847,10589 4847,10677
-	3 4513,10702 4503,10497 4485,10307
+	3 7227,10489 7033,10396 7131,10331
 	3 6719,10347 6753,10446 6743,10615 6725,10641
 	3 6841,11114 6880,11110 7115,11220
 	3 6884,12006 6828,12031 7026,12054
@@ -18085,28 +18124,19 @@ EOF
 	3 6512,11608 6679,11602 6809,11570 6869,11567
 	3 6540,11754 6778,11742 6980,11790
 	3 5669,10704 5782,10884 5829,10964
-	3 5047,10381 5076,10658 5079,10701
 	3 6980,11790 6778,11742 6540,11754
 	3 7002,11034 6873,11011 6742,11099
 	3 5866,10492 6025,10746 6122,10925
-	3 6192,10542 6216,10614 6228,10646
 	3 6685,10690 6532,10529 6494,10440
 	3 6122,10925 6025,10746 5866,10492
 	3 7026,12054 6828,12031 6884,12006
-	3 4256,10583 4245,10435 4239,10358
-	3 6216,10614 6228,10646 6250,10701
 	3 5900,11913 6642,12010 6550,11954
-	3 5079,10701 5076,10658 5047,10381
 	3 5471,10719 5475,10808 5488,10978
-	3 4659,10335 4676,10541 4685,10689
 	3 7110,10613 6972,10665 6818,10725
 	3 5230,10919 5215,10711 5196,10398
-	3 6302,10462 6353,10583 6380,10704
 	3 6550,11954 6642,12010 5900,11913
 	3 6494,10440 6532,10529 6685,10690
-	3 6250,10701 6228,10646 6216,10614
 	3 7103,11247 6851,11346 6692,11365
-	3 6228,10646 6216,10614 6192,10542
 	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252 8637,12258 8722,12268
 	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 	3 7031,12320 7383,12095 7429,12070
@@ -19835,7 +19865,7 @@ EOF
        source_id => 'IM_017645',
        data  => <<EOF,
 	2::temp 8122,12603 8119,12414 8055,12186
-	2::temp 8540,12420 8400,12417 8354,12416 8119,12414
+	2::temp 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414
 EOF
      },
      { from  => 1310464800, # 2011-07-12 12:00
@@ -21090,13 +21120,13 @@ EOF
 	2::temp 8538,12245 8522,12239 8466,12197 8327,12174 8215,12156 8122,12147 8049,12140 8018,12135 7823,12120 7775,12114 7429,12070
 	2::temp 8538,12245 8522,12187 8453,12099 8262,11883 8244,11878 8221,11876 8167,11865 8140,11850 8026,11764
 	2::temp 8546,12279 8391,12389 8354,12416
-	2::temp 8119,12414 8354,12416 8400,12417 8540,12420
+	2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
 	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
 	3 7429,12070 7383,12095 7031,12320
 	3 7031,12320 7383,12095 7429,12070
 	3 7823,12120 7816,12150 7822,12201 7875,12363
 	3 7875,12363 7822,12201 7816,12150 7823,12120
-	2::temp 8119,12414 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610 8485,12612
+	2::temp 8119,12414 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612
 	2::temp 8207,12606 8206,12757
 	3 7945,12592 8122,12603 8120,12756
 	3 8120,12756 8122,12603 7945,12592
@@ -21593,7 +21623,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_114312',
        data  => <<EOF,
-	q4::inwork; 25552,4829 25720,4832 25802,4823 25948,4823 26085,4865 26236,4926 26340,4942 26500,4936
+	q4::inwork; 25552,4829 25720,4828 25796,4823 25948,4823 26085,4865 26236,4926 26340,4942 26500,4936
 EOF
      },
      { from  => undef, # 
@@ -21819,13 +21849,13 @@ EOF
 	2::temp 8119,12414 8122,12603 8120,12756 8114,12839 8116,12938 8110,13042
 # REMOVED ---	2::temp 8030,12824 8114,12839 8168,12848 8204,12816 8206,12757
 	2::temp 8206,12757 8207,12606
-	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610 8485,12612 8554,12593 8596,12576
+	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593 8596,12576
 	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
 	2::temp 8304,12938 8309,12758 8306,12609
 	2::temp 8309,12758 8415,12749 8593,12742 8596,12760
 	2::temp 8424,12853 8370,12902 8304,12938 8235,12945 8168,12945 8116,12938 8072,12902 8046,12870 8036,12855 8021,12832
 	2::temp 7946,12932 7930,12912 7924,12872 7926,12865 7931,12869 7945,12878
-	2::temp 8119,12414 8354,12416 8400,12417 8540,12420 8775,12457
+	2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420 8775,12457
 	2::temp 8775,12457 8804,12280 8861,12125
 	2::temp 9141,12320 9028,12307 8804,12280 8722,12268 8637,12258 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205
 	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066 8577,11896 8571,11846
@@ -21833,7 +21863,7 @@ EOF
 	2::temp 8354,12416 8391,12389 8546,12279
 	2::temp 8577,11896 8783,11959 8737,12098
 	2::temp 8503,12895 8488,12920
-	2::temp 8348,12609 8354,12416
+	2::temp 8369,12609 8373,12416
 EOF
      },
      { from  => 1371549600, # 2013-06-18 12:00
@@ -22190,7 +22220,7 @@ EOF
        source_id => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20130830.1005.388628.html',
        data  => <<EOF,
 #: confirmed_by: srt
-	q4::inwork 8119,12414 8354,12416 8400,12417 8540,12420
+	q4::inwork 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
 EOF
      },
      { from  => 1378332000, # 2013-09-05 00:00
@@ -22584,7 +22614,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-06-27
+#: last_checked: 2019-07-30
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -23619,17 +23649,17 @@ EOF
 	q4::inwork; 5317,12242 5518,12159 5424,11944
 EOF
      },
-     { from  => $isodate2epoch->("2018-08-31 00:00:00"),
-       until => $isodate2epoch->("2018-09-01 23:59:59"),
+     { from  => $isodate2epoch->("2019-09-13 00:00:00"),
+       until => $isodate2epoch->("2019-09-14 23:59:59"),
        periodic => 1,
        recurrences => [["yearly", days => 31, months => 8]],
-       text  => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 1. September 2018, 12 bis 21 Uhr ',
+       text  => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 14. September 2019, 12 bis 21 Uhr ',
        type  => 'gesperrt',
-       source_id => 'https://misch-mit.net/moabiter-kiezfest-1-september-2018/',
+       source_id => 'https://www.turmstrasse.de/aktuelles',
        data  => <<EOF,
 # REMOVED --- : tempex YYYY09 & sa2 & T14-T18
 # REMOVED --- : tempex YYYY09 & sa3 & T14-T18
-#: tempex YYYY09 & sa1 & T12-T21
+# REMOVED --- : tempex YYYY09 & sa1 & T12-T21
 	2::temp 5857,13342 5868,13441 5882,13548
 EOF
      },
@@ -24755,7 +24785,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_026222',
        data  => <<EOF,
-	q4::inwork; 25519,4830 25552,4829 25720,4832
+	q4::inwork; 25519,4830 25552,4829 25720,4828
 EOF
      },
      { from  => $isodate2epoch->("2015-09-27 00:00:00"),
@@ -25464,7 +25494,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED (laut osm mittlerweile offen) --- : last_checked: 2016-08-20
-	2::inwork 24897,11083 24899,11044 24906,10965 24907,10955 24913,10884 24915,10858 24919,10818 24922,10785 24923,10774
+	2::inwork 24897,11083 24899,11044 24906,10965 24907,10955 24913,10884 24915,10858 24919,10818 24920,10810 24922,10785 24923,10774
 EOF
      },
      { from  => 1466287200, # 2016-06-19 00:00
@@ -25991,10 +26021,10 @@ EOF
        text  => 'Scheidemannstr.: wegen der Bundespräsidentwahl zwischen Yitzhak-Rabin-Str. und Ebertstr. gesperrt (bis zum 13.02.2017)',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 8119,12414 8354,12416 8400,12417 8540,12420
-	3 8348,12609 8354,12416 8391,12389
+	2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
+# REMOVED ---	3 8369,12609 8373,12416 8391,12389
 	3 8391,12389 8400,12417 8399,12610
-	3 8391,12389 8354,12416 8348,12609
+# REMOVED ---	3 8391,12389 8373,12416 8369,12609
 	3 8399,12610 8400,12417 8391,12389
 EOF
      },
@@ -26248,7 +26278,7 @@ EOF
 	2::temp 8168,12945 8235,12945 8304,12938 8370,12902
 	2::temp 8116,12938 8114,12839 8120,12756 8122,12603 8119,12414
 	2::temp 8464,12919 8498,12870
-	2::temp 8306,12609 8348,12609 8399,12610 8485,12612 8554,12593
+	2::temp 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593
 	2::temp 8160,13053 8159,13042 8159,13032 8044,12989 7966,12913
 	2::temp 8072,12902 8046,12870
 # REMOFED ---	2::temp 8168,12848 8204,12816 8206,12757
@@ -26256,7 +26286,7 @@ EOF
 	2::temp 8207,12606 8306,12609 8309,12758
 	2::temp 8036,12855 8021,12832 7930,12912
 	2::temp 8207,12606 8122,12603 7945,12592 7875,12363
-	2::temp 8348,12609 8354,12416
+	2::temp 8369,12609 8373,12416
 	2::temp 7945,12592 7851,12590 7741,12586 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8445,12755 8415,12749 8309,12758 8304,12938
 EOF
      },
@@ -26389,8 +26419,8 @@ EOF
        text  => 'Kaiserin-Augusta-Allee - Neues Ufer: Bauarbeiten, Weg ist komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-# REMOVED (existiert gar nicht mehr in den BBBike-Daten) ---	2::inwork 4561,13244 4547,13139
-	2::inwork 4547,13139 4576,13115
+# REMOVED (existiert gar nicht mehr in den BBBike-Daten) ---	2::inwork 4561,13244 4625,13244
+	2::inwork 4625,13244 4613,13210 4596,13147 4544,13131 4526,13109
 EOF
      },
      { from  => 1500156000, # 2017-07-16 00:00
@@ -26435,7 +26465,7 @@ EOF
 #: next_check_id: RIGAER-2018
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-06-25
+#: last_checked: 2019-07-23
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -26633,7 +26663,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-07-06
+#: last_checked: 2019-07-26
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26796,7 +26826,7 @@ EOF
        text  => 'Wiesenweg: Bauarbeiten an der S-Bahnbrücke, unter Umständen kann der Durchgang zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, ab 05.07.2019 bis 05.08.2019',
        type  => 'gesperrt',
        data  => <<EOF,
-#: note: offen (2019-07-07, 2019-07-19)
+#: note: offen (2019-07-07, 2019-07-19, 2019-07-21)
 #: next_check_id: WIESENWEG-2019
 	2::inwork 15126,11474 15162,11458
 EOF
@@ -26831,7 +26861,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-07-02 vvv
+#: last_checked: 2019-07-31 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27135,10 +27165,11 @@ EOF
 	2::temp -12100,-2039 -11995,-2047 -11947,-2048 -11842,-2054 -11842,-2183
 	2::temp -11992,-2178 -11995,-2047
 	2::temp -12657,-1338 -12542,-1305
-	2::temp -13180,-1627 -12946,-1659 -12920,-1663
+	2::temp -13180,-1627 -12948,-1671 -12919,-1676
 	2::temp -12927,-1576 -13092,-1538
-	2::temp -12946,-1659 -12940,-1625 -12927,-1576 -12923,-1558 -12882,-1565 -12815,-1575 -12790,-1560
-	2::temp -12920,-1663 -12931,-1761 -12948,-1863 -12953,-1889 -12708,-1928
+	2::temp -12948,-1671 -12940,-1625 -12927,-1576 -12923,-1558 -12882,-1565 -12815,-1575 -12790,-1560
+	2::temp -12919,-1676 -12931,-1761 -12952,-1861 -12959,-1887
+	2::temp -12959,-1887 -12708,-1928
 	2::temp -12931,-1761 -12678,-1812
 	2::temp -12669,-1768 -12678,-1812 -12708,-1928
 	2::temp -12708,-1928 -12894,-2111 -12946,-2119
@@ -27166,7 +27197,7 @@ EOF
 	2::temp -12557,-1900 -12625,-1956 -12721,-2082 -12754,-2154
 	2::temp -12363,-1742 -12377,-1743 -12557,-1900
 	2::temp -12457,-1857 -12363,-1742
-	2::temp -12363,-1742 -12102,-1582 -12059,-1617
+	2::temp -12363,-1742 -12342,-1715 -12102,-1582 -12027,-1610
 	2::temp -12300,-1381 -12281,-1378 -12265,-1434 -12256,-1456
 	2::temp -12500,-1437 -12422,-1416 -12300,-1381
 	2::temp -12526,-1356 -12446,-1334 -12403,-1323
@@ -27282,7 +27313,7 @@ EOF
 #: XXX sind die Bauarbeiten schon beendet (bei VMZ ist der Eintrag verschwunden)?
 #: priority: #A
 #: next_check: 2018-09-16
-	q3::inwork; 15516,12838 15367,12815 15357,12813 15233,12829 15098,12849 15074,12850 15010,12855 14940,12843 14906,12837 14836,12826 14731,12809 14661,12798 14556,12781 14435,12761 14355,12752 14162,12808 14096,12827
+	q3::inwork; 15516,12838 15469,12831 15367,12815 15357,12813 15233,12829 15098,12849 15074,12850 15010,12855 14940,12843 14906,12837 14836,12826 14731,12809 14661,12798 14556,12781 14435,12761 14355,12752 14162,12808 14096,12827
 EOF
      },
      { from  => 1526407304, # 2018-05-15 20:01
@@ -27528,8 +27559,8 @@ EOF
        data  => <<EOF,
 #: note: laut fritz & vmz längere Sperrung
 #: source_id: 2147342845
-# REMOVED (hier nicht) --- q4::inwork; 25519,4830 25552,4829 25720,4832
-	q4::inwork; 25720,4832 25802,4823 25948,4823 26085,4865 26236,4926 26340,4942 26500,4936 26620,4936
+# REMOVED (hier nicht) --- q4::inwork; 25519,4830 25552,4829 25720,4828
+	q4::inwork; 25720,4828 25796,4823 25948,4823 26085,4865 26236,4926 26340,4942 26500,4936 26620,4936
 EOF
      },
      { from  => 1530812949, # 2018-07-05 19:49
@@ -27791,7 +27822,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-07-09 (mapillary)
+#: last_checked: 2019-08-02
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28054,16 +28085,16 @@ Behrenstr.	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
 Kleine Querallee	2::temp 8344,12221 8391,12389 8400,12417
 Ahornsteig	2::temp 8522,12187 8538,12245
 (Bremer Weg)	2::temp 8522,12239 8538,12245
-Scheidemannstr.	2::temp 8119,12414 8354,12416 8400,12417 8540,12420
+Scheidemannstr.	2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
 (Vorfahrt Reichstagsgebäude)	2::temp 8400,12417 8399,12610
-(Wiese vor dem Reichstag)	2::temp 8354,12416 8348,12609
+(Wiese vor dem Reichstag)	2::temp 8373,12416 8369,12609
 Moltkebrücke	2::temp 7930,12912 8021,12832
 Willy-Brandt-Str.	2::temp 8021,12832 8030,12824
 Willy-Brandt-Str.	2::temp 8030,12824 8120,12756
 (am Bundeskanzleramt)	2::temp 8120,12756 8122,12603
 Heinrich-von-Gagern-Str.	2::temp 8122,12603 8119,12414
 Friedrich-Ebert-Platz	2::temp 8540,12420 8554,12593 8485,12612
-Paul-Löbe-Allee	2::temp 8485,12612 8399,12610 8348,12609 8306,12609 8207,12606
+Paul-Löbe-Allee	2::temp 8485,12612 8399,12610 8369,12609 8306,12609 8207,12606
 Paul-Löbe-Allee	2::temp 8207,12606 8122,12603
 Paul-Löbe-Allee	2::temp 8122,12603 7945,12592 7851,12590
 (Paul-Löbe-Allee - südliches Spreeufer)	2::temp 7851,12590 7741,12586 7710,12585
@@ -28179,9 +28210,9 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-07-02
-#: check_frequency: 7d
-	2::inwork 14854,8964 14980,8940
+#: last_checked: 2019-07-22
+#: check_frequency: 14d
+# REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
 # REMOVED (hier mittlerweile offen) ---		2::inwork 14980,8940 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
@@ -28197,9 +28228,9 @@ EOF
 #: source_id: LMS-BR_r_LMS-BR_147351_LMS-BR_72
 #: source_id: LMS-BR_r_LMS-BR_147348_LMS-BR_72
 	2::temp 8122,12603 8207,12606 8206,12757
-	2::temp 8775,12457 8540,12420 8400,12417 8354,12416 8119,12414 8122,12603 8120,12756
+	2::temp 8775,12457 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414 8122,12603 8120,12756
 	2::temp 8306,12609 8207,12606
-	2::temp 8354,12416 8348,12609
+	2::temp 8373,12416 8369,12609
 	2::temp 8055,12186 8119,12414
 	2::temp 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
 	3 8573,12325 8540,12420 8554,12593
@@ -28282,8 +28313,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2019-06-19 00:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2019-08-02 18:00:00"), # 1544814465, # 1544893200, # 2018-12-15 18:00
-       text  => 'Hauptstr. (Französisch-Buchholz): stadteinwärts zwischen Triftstr. und Mühlenstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, 20. Juni 2019 bis 2. August 2019',
+       until => $isodate2epoch->("2019-08-13 18:00:00"), # 1544814465, # 1544893200, # 2018-12-15 18:00
+       text  => 'Hauptstr. (Französisch-Buchholz): stadteinwärts zwischen Triftstr. und Mühlenstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, 20. Juni 2019 bis Mitte August 2019',
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED --- #: by: https://www.berliner-woche.de/franzoesisch-buchholz/c-bauen/die-kanaele-werden-erneuert_a185738 --- #: source_id: 2147343329
@@ -28291,7 +28322,7 @@ EOF
 # REMOVED ---	q3::inwork; 12205,22696 12187,22486
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.821009.php
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/franzosisch-buchholz-sommerbaustellen-%C2%B7-erhebliche-verkehrsstorungen
-#: source_id: 2147344370
+#: source_id: 2147344370 (bis Mitte August 2019)
 	q4::inwork; 12185,23021 12214,22918 12205,22696 12187,22486
 EOF
      },
@@ -28364,8 +28395,8 @@ EOF
 EOF
      },
      { from  => 1541444153, # 2018-11-05 19:55
-       until => undef, # 1556661599, # 2019-04-30 23:59
-       text  => 'Schiffbauerdamm: Bauarbeiten in Höhe Bertolt-Brecht-Platz, Straße gesperrt',
+       until => $isodate2epoch->("2020-03-31 18:00:00"),
+       text  => 'Schiffbauerdamm: Bauarbeiten in Höhe Bertolt-Brecht-Platz, Fahrbahn gesperrt, bis Ende März 2020',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
@@ -28373,12 +28404,13 @@ EOF
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/schiffbauerdammbruecke/index.shtml
 #: XXX wann werden die Bauarbeiten beendet? vvv
 #: note: laut fritz bis 31.03.2020
-#: last_checked: 2019-06-27 vvv
+#: last_checked: 2019-07-26 vvv
+#: next_check: 2020-03-31 vvv
 #: source_id: 2147344480
-#: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
-#: next_check: 2019-07-19
-	2::inwork 9106,12795 9193,12875 9239,12923
+# REMOVED (ja, aber Gehweg ist noch frei) --- #: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
+	q4+::inwork 9106,12795 9193,12875 9239,12923
 	q3::inwork 9160,12932 9193,12875
+#: next_check ^^^
 #: last_checked ^^^^
 #: XXX ^^^
 EOF
@@ -28529,8 +28561,8 @@ EOF
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=635121&postcount=170
 #: priority: #C
-#: last_checked: 2019-07-14 (daf)
-#: check_frequency: 30d
+#: last_checked: 2019-07-26
+#: check_frequency: 14d
 	2::inwork 14690,9993 14599,10039
 EOF
      },
@@ -28670,11 +28702,11 @@ EOF
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic (H,G)
 #: priority: #A
-#: last_checked: 2019-05-25 (mapillary) vvv
-#: next_check: 2019-07-28 vvv
+#: last_checked: 2019-08-04 vvv
+#: check_frequency: 7d vvv
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
-#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 EOF
      },
@@ -28810,19 +28842,19 @@ EOF
        text  => 'Sperrungen wegen des Halbmarathons: Straße des 17. Juni, Ebertstr., Scheidemannstr. und weitere Straßen gesperrt, evtl. sind auch Radfahrer betroffen, von 5.4.2019 20 Uhr bis 8.4.2019 6 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420 8400,12417 8354,12416 8119,12414 8122,12603 8207,12606 8206,12757
+	2::temp 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414 8122,12603 8207,12606 8206,12757
 	2::temp 8540,12420 8775,12457
 	2::temp 8309,12758 8306,12609 8207,12606
 	2::temp 7031,12320 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
 	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186
-	2::temp 8306,12609 8348,12609
+	2::temp 8306,12609
 	3 8554,12593 8540,12420 8775,12457
 	3 8399,12610 8400,12417 8391,12389
-	3 8348,12609 8354,12416 8391,12389
+# REMOVED ---	3 8369,12609 8373,12416 8391,12389
 	3 8775,12457 8540,12420 8554,12593
 	3 8327,12174 8344,12221 8391,12389
 	3 7429,12070 7383,12095 7031,12320
-	3 8391,12389 8354,12416 8348,12609
+# REMOVED ---	3 8391,12389 8373,12416 8369,12609
 	3 8391,12389 8344,12221 8327,12174
 	3 8391,12389 8400,12417 8399,12610
 	3 7654,12464 7627,12380 7603,12353
@@ -29075,7 +29107,7 @@ EOF
        data  => <<EOF,
 #: note: laut fritz bis 31.01.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2019-06-27
+#: last_checked: 2019-07-27 (mapillary)
 #: next_check: 2020-01-30
 	q3::inwork  8986,16092 9178,16317 9301,16439
 EOF
@@ -29112,7 +29144,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (G)
-#: last_checked: 2019-07-02
+#: last_checked: 2019-07-31
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 EOF
@@ -29187,7 +29219,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-07-20
+#: last_checked: 2019-07-27
 	2::inwork 14567,10814 14352,10874
 EOF
      },
@@ -29218,14 +29250,14 @@ EOF
        text  => 'Hackescher Markt: Gleisarbeiten, Fahrbahnen der zuführenden Straßen gesperrt, Radfahrer sollen schieben, ab 20. Juni 2019 bis Mitte August 2019',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: 2147344372
+#: source_id: 2147344372 (bis Anfang August 2019)
 #: source_id: 2147344374
-#: source_id: 2147344373
-#: source_id: 2147344375
+#: source_id: 2147344373 (bis Anfang August 2019)
+#: source_id: 2147344375 (bis Anfang August 2019)
 #: XXX wird sich die Verkehrsführung noch ändern? vvv
 #: also_indoor: traffic (H) vvv
-#: last_checked: 2019-07-19 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2019-08-04 vvv
+#: check_frequency: 7d vvv
 	q4::inwork 10220,13098 10264,13097
 	q4::inwork; 10264,13097 10286,13084 10339,13052
 	q3::inwork; 10310,13227 10264,13097
@@ -29278,6 +29310,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/staugefahr-schlossbruecke-wird-saniert_a221398
 #: osm_watch: way id="72660098" version="4"
+#: last_checked: 2019-08-04
 	2::inwork 3231,12749 3332,12742
 EOF
      },
@@ -29292,10 +29325,12 @@ EOF
 EOF
      },
      { from  => 1562177614, # 2019-07-03 20:13
-       until => 1564955999, # 2019-08-04 23:59
-       text  => 'Nöldnerstr.: Einbahnstraßenregelung zwischen Stadthausstr. und Nöldnerplatz, offen stadtauswärts, voraussichtlich bis 4. August 2019',
+       until => undef, # 1564955999, # 2019-08-04 23:59
+       text  => 'Nöldnerstr.: Einbahnstraßenregelung zwischen Stadthausstr. und Nöldnerplatz, offen stadtauswärts, bis auf Weiteres',
        type  => 'handicap',
        data  => <<EOF,
+#: XXX gibt es noch immer eine Einbahnstraßenregelung, oder ist die Verkehrsführung an der Baustelle mittlerweile anders?
+#: last_checked: 2019-07-03
 	q3::inwork; 15932,10830 15681,10801
 EOF
      },
@@ -29334,7 +29369,7 @@ EOF
        type  => 'handicap',
        source_id => 'https://www.berliner-woche.de/friedrichshain/c-verkehr/bvg-erneuert-tramgleise-an-der-boxhagener-strasse_a222487',
        data  => <<EOF,
-#: source_id: 2147344478
+#: source_id: 2147344478 (nur bis Anfang September 2019)
 #: also_indoor: traffic
 # REMOVED --- #: XXX genauer anschauen! vvv --- #: priority: #A vvv --- #: next_check: 2019-07-15 vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -29342,7 +29377,6 @@ EOF
 	2::inwork 14461,11738 14416,11815
 	q4::inwork; 14395,11753 14461,11738
 	q4::inwork; 14416,11815 14395,11753
-	q4::inwork 14475,11778 14416,11815
 #: note: Sperrung zur Glatzer Str.
 	3::inwork 14651,11666 14570,11589 14561,11600
 	3::inwork 14651,11666 14570,11589 14639,11512
@@ -29359,6 +29393,10 @@ EOF
 	q3::inwork 14354,12012 14306,11889
 #: note: Sperrung zur Niederbarnimstr.
 	q3::inwork 14208,12235 14045,11965
+#: note: Umwege am Wismarplatz, Richtung Kinzigstr.
+	q3::inwork 14475,11778 14461,11738
+#: note: Umwege am Wismarplatz, Richtung Weserstr.
+	q3::inwork 14475,11778 14416,11815
 # REMOVED --- #: next_check ^^^ --- #: priority ^^^ --- #: XXX ^^^
 EOF
      },
@@ -29368,10 +29406,11 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: mapillary
-#: XXX vielleicht wird sich während der Bauarbeiten auch die Wegoberfläche ändern?
+#: confirmed_by: srt
+#: XXX vielleicht wird sich während der Bauarbeiten auch die Wegoberfläche ändern? ---> Weg wird neu gewalzt, bleibt aber wassergebundene Decke
 #: priority: #B
-#: last_checked: 2019-07-03 (mapillary)
-#: next_check: 2019-07-18
+#: last_checked: 2019-07-26
+#: check_frequency: 7d
 	2::inwork 15621,9704 15659,9647 15708,9607 15739,9583
 EOF
      },
@@ -29394,12 +29433,18 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2019-07-23 18:00:00"), # undef, # XXX
-       text  => 'Regattastr.: Fahrbahn und Bürgersteige zwischen Büxensteinallee und Libboldallee gesperrt',
+       until => undef, # until => $isodate2epoch->("2019-07-31 18:00:00"), # undef, # XXX
+       text  => 'Regattastr.: Fahrbahn und Bürgersteige zwischen Büxensteinallee und Libboldallee gesperrt, bis Ende Juli 2019, vielleicht auch länger',
        type  => 'gesperrt',
-       source_id => '2147344495',
+       source_id => '2147344495', # bis Ende Juli 2019, seit ca. 2019-07-26/27 aber gelöscht
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.831464.php
+#: by: https://www.berliner-woche.de/gruenau/c-bauen/denkmalschutzbehoerde-stimmt-teilweisem-abriss-vom-gesellschaftshaus-zu_a224734
+#: by: https://www.berliner-woche.de/gruenau/c-bauen/regattastrasse-bleibt-weiter-dicht_a225100
+#: source_id: 2147344541 (bis auf Weiteres)
 #: also_indoor: traffic (H)
+#: XXX bei fritz "bis auf Weiteres"
+#: next_check: 2019-07-31
 	2::inwork 22821,1086 22766,1226
 EOF
      },
@@ -29412,12 +29457,11 @@ EOF
 EOF
      },
      { from  => 1563560728, # 2019-07-19 20:25
-       until => 1564783199, # 2019-08-02 23:59
-       text  => 'Alfred-Döblin-Platz: Sperrung der Fahrbahn, bis 2. August 2019',
+       until => 1564768046, # 1564783199, # 2019-08-02 23:59
+       text  => 'Alfred-Döblin-Platz: Einbahnstraßenregelung, offen Richtung Oranienstr., bis 2. August 2019',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX genauer anschauen!
-	q4::inwork 11113,10943 11150,11030
+	q4::inwork; 11113,10943 11150,11030
 EOF
      },
      { from  => undef, # 
@@ -29429,6 +29473,74 @@ EOF
 	q3::inwork; 18704,8427 18731,8577 18733,8633 18733,8650 18737,8686
 #: note: hier gibt's keine expliziten Verbotsschilder, aber Radfahrer sollen wohl nicht auf der Treskowallee weiterfahren
 	q4::inwork; 18737,8686 18770,8898 18790,9018 18809,9133
+EOF
+     },
+     { from  => 1563746400, # 2019-07-22 00:00
+       until => $isodate2epoch->("2019-09-11 18:00:00"),
+       text  => 'Johannisthaler Chaussee: zwischen Buckower Damm und Heideläuferweg Bauarbeiten, Fahrbahn Richtung Osten gesperrt, evtl. sind auch Radfahrer betroffen, bis Mitte September 2019 ',
+       type  => 'handicap',
+       source_id => '2147344515',
+       data  => <<EOF,
+	q4::inwork; 12817,2031 13010,2085
+EOF
+     },
+     { from  => 1564422392, # 2019-07-29 19:46
+       until => 1565539200, # 2019-08-11 18:00
+       text  => 'Pfalzburger Str.: zwischen Güntzelstr. und Fechnerstr. wegen Arbeiten an Wasserleitungen bis zum 11.08.2019 gesperrt, evtl. sind auch Radfahrer betroffen',
+       type  => 'handicap',
+       data  => <<EOF,
+	q4::inwork 4842,9458 4827,9304 4815,9098
+EOF
+     },
+     { from  => 1564372800, # 2019-07-29 06:00
+       until => 1564596000, # 2019-07-31 20:00
+       text  => 'Behrenstr.: zwischen Charlottenstr. und Markgrafenstr. Sperrung (Abbau der Baucontainer), evtl. sind auch Radfahrer betroffen, 30.07.2019 06:00 Uhr bis 31.07.2019 20:00 Uhr',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::inwork 9496,12215 9631,12227
+EOF
+     },
+     { from  => 1564524000, # 2019-07-31 00:00
+       until => 1573858799, # 2019-11-15 23:59
+       text  => 'Bernauer Str. (Lindenberg): zwischen Karl-Marx-Str. und Dorfstr. gesperrt, evtl. sind auch Radfahrer betroffen, ab 01.08.2019 06:00 bis Mitte November 2019',
+       type  => 'handicap',
+       source_id => '2147344552',
+       data  => <<EOF,
+#: XXX wird es Änderungen durch die Bauarbeiten geben?
+#: by: https://www.ahrensfelde.de/portal/meldungen/update-umgestaltung-des-kreuzungs-und-knotenpunktes-bernauer-strasse-b2-900000021-30601.html?rubrik=900000024 (eher nicht?)
+#: next_check: 2019-11-15
+	q4::inwork 18368,22018 18349,22132 18350,22225
+EOF
+     },
+     { from  => 1564524000, # 2019-07-31 00:00
+       until => 1565704800, # 2019-08-13 16:00
+       text  => 'Lynarstr.: Richtung Koenigsallee zwischen Bismarckallee und Koenigsallee Bauarbeiten, Straße gesperrt, evtl. sind auch Radfahrer betroffen, ab 01.08.2019 06:00 bis 13.08.2019 ca. 16:00 Uhr',
+       type  => 'handicap',
+       source_id => 'LMS-BR_r_LMS-BR_177510_LMS-BR_72',
+       data  => <<EOF,
+	q4::inwork; 2074,9225 1937,9253
+EOF
+     },
+     { from  => 1564869600, # 2019-08-04 00:00
+       until => 1565387999, # 2019-08-09 23:59
+       text  => 'Rheinbabenallee: Bauarbeiten zwischen Luciusstr. und Platz am Wilden Eber, Fahrbahn Richtung Südosten gesperrt, der Radverkehr soll nicht betroffen sein, von Montag, den 05.08.2019, bis voraussichtlich Freitag, den 09.08.2019',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.833493.php',
+       data  => <<EOF,
+#: note: laut fritz ist der Radverkehr nicht betroffen
+	q4::inwork; 2213,7637 2375,7440
+	q4::inwork; 2535,7257 2695,7082
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Takustr.: wegen Bauarbeiten ist eine Durchfahrt nicht möglich (auch nicht für Fußgänger)',
+       type  => 'gesperrt',
+       source_id => 'https://www.tagesspiegel.de/themen/freie-universitaet-berlin/bauprojekte-an-der-fu-neuer-glanz-am-alten-standort/24035558.html', # bis 2025? oder bis Ende 2020?
+       data  => <<EOF,
+#: last_checked: 2019-08-04
+#: check_frequency: 180d
+	2::inwork 3079,5411 3209,5214
 EOF
      },
     );

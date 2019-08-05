@@ -14,8 +14,6 @@
 	X::inwork 20895,17594
 	X::inwork 20769,17650
 	F::inwork 13178,10623
-	X::inwork 12067,23241
-	X::inwork 12027,23057
 	X 9229,8785
 	X 8982,8781
 	X 8594,8777
@@ -1156,7 +1154,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2905,14754
 	X 3395,13605
 	X 3739,13563
-	X 4271,13735
+	X 4265,13742
 	X 6817,13862
 	X 6935,13645
 	X 7069,13381
@@ -2355,6 +2353,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -8500,-2856
 	X -14023,-564
 	X -14115,-1678
+	X -14066,-1629
 	X -14279,-1820
 	X -11877,-478
 	X -12571,-581

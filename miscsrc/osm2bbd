@@ -927,7 +927,10 @@ for my $osm_file (@osm_files) {
 	    } elsif (exists $tag{'barrier'} && $tag{'barrier'} eq 'cycle_barrier') {
 		$name = $lang eq 'en' ? 'Cycle barrier' : 'Drängelgitter' if !$name;
 		push @or, ['gesperrt', 'BNP:5', name => $name];
-	    } elsif (exists $tag{'barrier'} && $tag{'barrier'} eq 'gate') {
+	    } elsif (exists $tag{'barrier'} && $tag{'barrier'} =~ m{^(gate|swing_gate)$}) {
+		# XXX probably should check for tags like bicycle=yes, and if missing,
+		# XXX turn this in a non-passable blocking (maybe using something like
+		# XXX ... \t 3 * $coord * ?
 		$name = $lang eq 'en' ? 'Gate' : 'Tor' if !$name;
 		push @or, ['gesperrt', 'BNP:10', name => $name];
 	    } elsif (exists $tag{'place'}) {
@@ -1260,6 +1263,9 @@ for my $osm_file (@osm_files) {
 		    } elsif ($surface eq 'cobblestone') {
 			$quality_cat = 'Q2';
 			@quality_name = 'Kopfsteinpflaster';
+		    } elsif ($surface eq 'unhewn_cobblestone') {
+			$quality_cat = 'Q3';
+			@quality_name = 'schlechtes Kopfsteinpflaster';
 		    } elsif ($surface eq 'cobblestone:flattened') {
 			$quality_cat = 'Q2+';
 			@quality_name = 'glattes Kopfsteinpflaster';

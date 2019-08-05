@@ -989,8 +989,8 @@ Münchener Str. -> Grunewaldstr.: Mittelstreifen	3::igndisp 6276,9042 6264,9156 6
 Münchener Str. -> Münchener Str.: Mittelstreifen	3::igndisp 6276,9042 6264,9156 6255,9194
 Viktoria-Luise-Platz: Poller	3 6278,9925 6275,9962 6224,9980
 Viktoria-Luise-Platz: Poller	3 6224,9980 6275,9962 6278,9925
-Else-Lasker-Schüler-Str.: Poller	3 7033,10396 7245,10499 7281,10510
-Else-Lasker-Schüler-Str.: Poller	3 7281,10510 7245,10499 7033,10396
+Else-Lasker-Schüler-Str.: Poller	3 7033,10396 7227,10489 7281,10510
+Else-Lasker-Schüler-Str.: Poller	3 7281,10510 7227,10489 7033,10396
 (Westhafenstr. - Beusselstr.): Durchfahrt verboten, Anlieger frei	2:Anlieger 6083,14564 6025,14539 6015,14516 5997,14444 5920,14422 5205,14253
 Steinbachstr.	1 19759,4160 19703,3979 19673,3888 19587,3801
 Mittelstreifen	3nocross::ignrte 5091,7676 5073,7660 5051,7631
@@ -1015,8 +1015,8 @@ Seddiner -> Hohenschönhausener Weg: Poller	3 18555,12101 18411,12100 18420,11864
 Hohenschönhausener Weg -> Seddiner: Poller	3 18420,11864 18411,12100 18296,12115
 Hohenschönhausener Weg -> Seddiner: Poller	3 18420,11864 18411,12100 18555,12101
 Gluckweg	1 6039,3275 5853,3050
-Rosenfelder Ring	3 17978,12084 18093,12093 18165,12091
-Rosenfelder Ring	3 18165,12091 18093,12093 17978,12084
+Rosenfelder Ring	3 17978,12084 18093,12088 18165,12091
+Rosenfelder Ring	3 18165,12091 18093,12088 17978,12084
 Sophienstr.	1 9986,13412 10317,13248
 Gradestr./Moosrosenstr.	3nocross::ignrte 12773,5248 12727,5244 12582,5232
 Gradestr. -> Moosrosenstr.: Gradestr./Moosrosenstr.	3::igndisp 12773,5248 12727,5244 12726,5147
@@ -1163,8 +1163,8 @@ Gemeinschaftsstr.	1 20067,4054 20109,4087
 Malchiner Str.	1 13866,4481 13869,4626 13836,4759
 Dömitzer Str.	1 13771,4485 13775,4631 13757,4729
 Kirchstr.: nur Linienverkehr erlaubt	2 22314,4604 22284,4653
-Theodorstr.: Poller	3 24916,10539 24920,10697 24929,10719
-Theodorstr.: Poller	3 24929,10719 24920,10697 24916,10539
+Theodorstr.: Poller	3 24916,10539 24920,10697 24925,10710
+Theodorstr.: Poller	3 24925,10710 24920,10697 24916,10539
 Anzengruberstr.	1 13038,8394 12865,8346
 Holtzendorffstr.	1 3049,11015 3082,11090
 Hansa -> Buschallee	3 15297,16321 15437,16491 15142,16499
@@ -1966,3 +1966,4 @@ Grüntaler Str. -> Badstr.: Mittelstreifen, für Fußgänger/Radfahrer Übergangsmögl
 Lintruper Str.	1 10324,925 10380,757
 Glaserweg	1 10187,872 10237,749
 Friedrichstr. (Prenzlau)	1 39550,101671 39574,101863
+Heidefalterweg: unechte Einbahnstraße, Verbotsschild steht etwa 50m von der Köpenicker Str.	1 21140,10786 21322,10863

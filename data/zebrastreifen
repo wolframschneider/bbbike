@@ -379,6 +379,7 @@ Cecilienstr./Bodo-Uhse-Str.	Zs 23086,13267
 Ridbacher Str./Wernerstr.	Zs 24222,12755
 Müggelseedamm	Zs 24485,5048
 Reichenberger/Manteuffelstr.	Zs 11843,10186
+Reichenberger/Forster Str.	Zs 12391,9941
 Storkower/Alfred-Jung	Zs 15342,13122
 Achillesstr.	Zs 16354,23370
 Bahnhofstr./Spinolastr.	Zs 14875,23097
@@ -693,9 +694,15 @@ Bergmannstr.	Zs 9394,9329
 Torgauer Str./EUREF	Zs 7141,8203
 Torgauer Str.	Zs 7250,8223
 Beelitz-Heilstätten	Zs -21238,-17210
+#: XXX noch nicht freigegeben
+#: priority: #D
+#: last_checked: 2019-07-23
 Schleidenplatz	Zs 15096,12233
 Bismarckstr./Kniephofstr.	Zs 6123,5981
 #: note: noch provisorisch (as of 2019-06-24), aber könnte permanent werden
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/wasserbetriebe-bauen-doch-nicht_a209575
 John-Schehr-Str.	Zs 12714,14470
 Feurigstr.	Zs 7189,8673
+#: by: mapillary
+Blankenburger Chaussee/Straße 42	Zs 15300,22565
+Flottwellstr./Lützowstr.	Zs 8197,10624

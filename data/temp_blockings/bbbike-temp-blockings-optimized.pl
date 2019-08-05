@@ -1,31 +1,25 @@
-$#temp_blocking = 73;
+$#temp_blocking = 111;
 push @temp_blocking,
 (
        {
-         'data' => '#: by: http://www.stadtfest.berlin/de/index.html
-#: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/strassen-wegen-fest-gesperrt_a170723
-	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
-	2::temp 6729,10212 6971,10346
-	2::temp 6628,10318 6626,10155
-	2::temp 6487,10277 6628,10318 6719,10347
-	2::temp 6719,10347 6729,10212 6739,10120
-	2::temp 6609,10147 6630,9990
+         'data' => '	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
 ',
-         'from' => 1563487200,
-         'id' => 74,
+         'from' => 1567764000,
+         'id' => 112,
          'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              14,
+                              31,
                               'months',
-                              6
+                              8
                             ]
                           ],
-         'text' => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (20.7.2019 bis 21.7.2019)',
+         'source_id' => 'http://www.hier-in-rudow.de/meilenfeste.html',
+         'text' => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (07.09.2019 bis 08.09.2019)',
          'type' => 'gesperrt',
-         'until' => 1563746399
+         'until' => 1567979999
        },
        undef,
        undef,
@@ -1539,47 +1533,9 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
-         'data' => '	2::temp -8625,-1176 -8700,-997 -8813,-933 -8913,-813 -9103,-813 -9239,-739 -9337,-668 -9365,-610 -9454,-434 -9562,-325
-	2::temp -8087,-1453 -8151,-1470 -8306,-1454
+         'data' => '	2::temp -8625,-1176 -8700,-997 -8813,-933 -8913,-813 -9116,-737 -9254,-656 -9358,-537 -9375,-502 -9445,-377 -9585,-277 -9795,-230
+	2::temp -8084,-1460 -8133,-1474 -8260,-1461
 ',
          'from' => undef,
          'id' => 1625,
@@ -1977,7 +1933,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        },
        {
          'data' => '#: tempex: T23:00-T06:00 vvv
-	2::night 21150,11925 21132,11943 21100,11960 20857,12027 20810,12031
+	2::night 21150,11925 21134,11926 21132,11943 21100,11960 20857,12027 20810,12031
 	2::night 20857,12027 20831,11771 20825,11732 20771,11672
 #: tempex ^^^
 ',
@@ -2284,7 +2240,18 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.830806.php
+# REMOVED (ja) --- #: add_fragezeichen: Ist der Friedrich-Ebert-Platz tatsächlich (manchmal) offen?
+	2::temp 8554,12593 8540,12420
+',
+         'from' => 1563357600,
+         'id' => 2021,
+         'recurring' => 1,
+         'text' => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
        undef,
        undef,
        undef,
@@ -2369,7 +2336,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2386,98 +2353,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://csd-berlin.de/event-info-en/
-	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6982,10610 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
-	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
-	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
-	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252
-	3 7429,12070 7383,12095 7031,12320
-	3 7031,12320 7383,12095 7429,12070
-	3 7822,12201 7816,12150 7823,12120
-	3 7823,12120 7816,12150 7822,12201
-	3 6380,10704 6353,10583 6302,10462
-	3 6692,11365 6851,11346 7103,11247
-	3 5488,10978 5475,10808 5471,10719
-	3 4685,10689 4676,10541 4659,10335
-	3 7115,11220 6880,11110 6841,11114
-	3 6716,11439 6825,11486 6915,11492
-	3 4239,10358 4245,10435 4256,10583
-	3 7131,10331 7033,10396 7245,10499
-	3 7131,10331 7033,10328 7060,10221
-	3 4485,10307 4503,10497 4513,10702
-	3 6869,11567 6809,11570 6679,11602 6512,11608
-	3 6725,10641 6743,10615 6753,10446 6719,10347
-	3 4847,10677 4847,10589 4828,10356
-	3 4381,10583 4371,10465 4360,10320
-	3 5196,10398 5215,10711 5230,10919
-	3 6681,10959 6824,10904 6740,10755
-	3 6740,10755 6824,10904 6681,10959
-	3 6818,10725 6972,10665 7110,10613
-	3 4360,10320 4371,10465 4381,10583
-	3 7060,10221 7033,10328 7131,10331
-	3 6915,11492 6825,11486 6716,11439
-	3 6742,11099 6873,11011 7002,11034
-	3 7245,10499 7033,10396 7131,10331
-	3 4828,10356 4847,10589 4847,10677
-	3 4513,10702 4503,10497 4485,10307
-	3 6719,10347 6753,10446 6743,10615 6725,10641
-	3 6841,11114 6880,11110 7115,11220
-	3 6884,12006 6828,12031 7026,12054
-	3 5829,10964 5782,10884 5669,10704
-	3 6512,11608 6679,11602 6809,11570 6869,11567
-	3 6540,11754 6778,11742 6980,11790
-	3 5669,10704 5782,10884 5829,10964
-	3 5047,10381 5076,10658 5079,10701
-	3 6980,11790 6778,11742 6540,11754
-	3 7002,11034 6873,11011 6742,11099
-	3 5866,10492 6025,10746 6122,10925
-	3 6192,10542 6216,10614 6228,10646
-	3 6685,10690 6532,10529 6494,10440
-	3 6122,10925 6025,10746 5866,10492
-	3 7026,12054 6828,12031 6884,12006
-	3 4256,10583 4245,10435 4239,10358
-	3 6216,10614 6228,10646 6250,10701
-	3 5900,11913 6642,12010 6550,11954
-	3 5079,10701 5076,10658 5047,10381
-	3 5471,10719 5475,10808 5488,10978
-	3 4659,10335 4676,10541 4685,10689
-	3 7110,10613 6972,10665 6818,10725
-	3 5230,10919 5215,10711 5196,10398
-	3 6302,10462 6353,10583 6380,10704
-	3 6550,11954 6642,12010 5900,11913
-	3 6494,10440 6532,10529 6685,10690
-	3 6250,10701 6228,10646 6216,10614
-	3 7103,11247 6851,11346 6692,11365
-	3 6228,10646 6216,10614 6192,10542
-	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252 8637,12258 8722,12268
-	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-	3 7031,12320 7383,12095 7429,12070
-	3 7429,12070 7383,12095 7031,12320
-	3 7875,12363 7822,12201 7816,12150 7823,12120
-	3 7823,12120 7816,12150 7822,12201 7875,12363
-	3 8119,12414 8055,12186 8049,12140
-	3 8049,12140 8055,12186 8119,12414
-	3 8391,12389 8344,12221 8327,12174
-	3 8327,12174 8344,12221 8391,12389
-',
-         'from' => 1564092000,
-         'id' => 2083,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              20,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'https://www.berlin.de/events/2096878-2229501-csd-christopher-street-day.html',
-         'text' => 'CSD am 27.7.2019',
-         'type' => 'gesperrt',
-         'until' => 1564264799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2693,34 +2569,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'accept_multi_feature_distance' => 1300,
-         'data' => '#: by: https://www.internationales-berliner-bierfestival.de/home.html
-# REMOVED --- #: tempex 20170804-20170806 vvv
-	2::temp 12352,12509 12355,12541 12359,12592
-	2::temp 12891,12549 12878,12430
-	2::temp 12632,12630 12592,12472
-	2::temp 13448,12340 13476,12461
-	2::temp 13552,12435 13543,12326
-#zukünftig, wenn dieser Weg eingetragen ist:	2::temp 13163,12382 13176,12500
-# REMOVED --- #: tempex ^^^
-',
-         'from' => 1564646400,
-         'id' => 2262,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              31,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (2.8.2019 bis 4.8.2019)',
-         'type' => 'gesperrt',
-         'until' => 1564876800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2984,27 +2833,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED (was) : tempex: 20160714-20160717
-	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
-',
-         'from' => 1563314400,
-         'id' => 2420,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              13,
-                              'months',
-                              7
-                            ]
-                          ],
-         'source_id' => 'https://www.gratis-in-berlin.de/festivals/item/2037758-hafenfest-tegel-2019-mit-programm-und-feuerwerk',
-         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (18.07.2019 bis 21.07.2019)',
-         'type' => 'gesperrt',
-         'until' => 1563746399
-       },
+       undef,
        undef,
        {
          'data' => '# REMOVED --- #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation) --- #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein --- #: source_id: 2147339529 --- #: last_checked: 2017-02-04 --- #: next_check: 2017-03-01
@@ -3227,7 +3056,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        {
          'data' => '#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-06-27
+#: last_checked: 2019-07-30
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -3392,7 +3221,29 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- : tempex YYYY09 & sa2 & T14-T18
+# REMOVED --- : tempex YYYY09 & sa3 & T14-T18
+# REMOVED --- : tempex YYYY09 & sa1 & T12-T21
+	2::temp 5857,13342 5868,13441 5882,13548
+',
+         'from' => 1568325600,
+         'id' => 2625,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              31,
+                              'months',
+                              8
+                            ]
+                          ],
+         'source_id' => 'https://www.turmstrasse.de/aktuelles',
+         'text' => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 14. September 2019, 12 bis 21 Uhr ',
+         'type' => 'gesperrt',
+         'until' => 1568498399
+       },
        undef,
        undef,
        undef,
@@ -3784,7 +3635,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: RIGAER-2018
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-06-25
+#: last_checked: 2019-07-23
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -3812,7 +3663,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-07-06
+#: last_checked: 2019-07-26
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -3848,7 +3699,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: note: offen (2019-07-07, 2019-07-19)
+         'data' => '#: note: offen (2019-07-07, 2019-07-19, 2019-07-21)
 #: next_check_id: WIESENWEG-2019
 	2::inwork 15126,11474 15162,11458
 ',
@@ -3864,7 +3715,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-07-02 vvv
+#: last_checked: 2019-07-31 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4052,7 +3903,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-07-09 (mapillary)
+#: last_checked: 2019-08-02
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4121,9 +3972,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-07-02
-#: check_frequency: 7d
-	2::inwork 14854,8964 14980,8940
+#: last_checked: 2019-07-22
+#: check_frequency: 14d
+# REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
 # REMOVED (hier mittlerweile offen) ---		2::inwork 14980,8940 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
@@ -4159,14 +4010,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED ---	q3::inwork; 12205,22696 12187,22486
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.821009.php
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/franzosisch-buchholz-sommerbaustellen-%C2%B7-erhebliche-verkehrsstorungen
-#: source_id: 2147344370
+#: source_id: 2147344370 (bis Mitte August 2019)
 	q4::inwork; 12185,23021 12214,22918 12205,22696 12187,22486
 ',
          'from' => 1560895200,
          'id' => 3036,
-         'text' => 'Hauptstr. (Französisch-Buchholz): stadteinwärts zwischen Triftstr. und Mühlenstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, 20. Juni 2019 bis 2. August 2019',
+         'text' => 'Hauptstr. (Französisch-Buchholz): stadteinwärts zwischen Triftstr. und Mühlenstr. Bauarbeiten, Fahrbahn gesperrt, eventuell sind auch Radfahrer betroffen, 20. Juni 2019 bis Mitte August 2019',
          'type' => 'handicap',
-         'until' => 1564761600
+         'until' => 1565712000
        },
        {
          'data' => '#: source_id: 2147343335
@@ -4190,20 +4041,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/schiffbauerdammbruecke/index.shtml
 #: XXX wann werden die Bauarbeiten beendet? vvv
 #: note: laut fritz bis 31.03.2020
-#: last_checked: 2019-06-27 vvv
+#: last_checked: 2019-07-26 vvv
+#: next_check: 2020-03-31 vvv
 #: source_id: 2147344480
-#: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
-#: next_check: 2019-07-19
-	2::inwork 9106,12795 9193,12875 9239,12923
+# REMOVED (ja, aber Gehweg ist noch frei) --- #: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
+	q4+::inwork 9106,12795 9193,12875 9239,12923
 	q3::inwork 9160,12932 9193,12875
+#: next_check ^^^
 #: last_checked ^^^^
 #: XXX ^^^
 ',
          'from' => 1541444153,
          'id' => 3044,
-         'text' => 'Schiffbauerdamm: Bauarbeiten in Höhe Bertolt-Brecht-Platz, Straße gesperrt',
+         'text' => 'Schiffbauerdamm: Bauarbeiten in Höhe Bertolt-Brecht-Platz, Fahrbahn gesperrt, bis Ende März 2020',
          'type' => 'handicap',
-         'until' => undef
+         'until' => 1585670400
        },
        undef,
        {
@@ -4244,8 +4096,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=635121&postcount=170
 #: priority: #C
-#: last_checked: 2019-07-14 (daf)
-#: check_frequency: 30d
+#: last_checked: 2019-07-26
+#: check_frequency: 14d
 	2::inwork 14690,9993 14599,10039
 ',
          'from' => undef,
@@ -4316,11 +4168,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic (H,G)
 #: priority: #A
-#: last_checked: 2019-05-25 (mapillary) vvv
-#: next_check: 2019-07-28 vvv
+#: last_checked: 2019-08-04 vvv
+#: check_frequency: 7d vvv
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
-#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 ',
          'from' => undef,
@@ -4456,7 +4308,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 31.01.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2019-06-27
+#: last_checked: 2019-07-27 (mapillary)
 #: next_check: 2020-01-30
 	q3::inwork  8986,16092 9178,16317 9301,16439
 ',
@@ -4497,7 +4349,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: also_indoor: traffic (G)
-#: last_checked: 2019-07-02
+#: last_checked: 2019-07-31
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 ',
@@ -4523,7 +4375,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-07-20
+#: last_checked: 2019-07-27
 	2::inwork 14567,10814 14352,10874
 ',
          'from' => 1560636000,
@@ -4557,14 +4409,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '#: source_id: 2147344372
+         'data' => '#: source_id: 2147344372 (bis Anfang August 2019)
 #: source_id: 2147344374
-#: source_id: 2147344373
-#: source_id: 2147344375
+#: source_id: 2147344373 (bis Anfang August 2019)
+#: source_id: 2147344375 (bis Anfang August 2019)
 #: XXX wird sich die Verkehrsführung noch ändern? vvv
 #: also_indoor: traffic (H) vvv
-#: last_checked: 2019-07-19 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2019-08-04 vvv
+#: check_frequency: 7d vvv
 	q4::inwork 10220,13098 10264,13097
 	q4::inwork; 10264,13097 10286,13084 10339,13052
 	q3::inwork; 10310,13227 10264,13097
@@ -4586,6 +4438,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/staugefahr-schlossbruecke-wird-saniert_a221398
 #: osm_watch: way id="72660098" version="4"
+#: last_checked: 2019-08-04
 	2::inwork 3231,12749 3332,12742
 ',
          'from' => 1561845600,
@@ -4607,13 +4460,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1569967200
        },
        {
-         'data' => '	q3::inwork; 15932,10830 15681,10801
+         'data' => '#: XXX gibt es noch immer eine Einbahnstraßenregelung, oder ist die Verkehrsführung an der Baustelle mittlerweile anders?
+#: last_checked: 2019-07-03
+	q3::inwork; 15932,10830 15681,10801
 ',
          'from' => 1562177614,
          'id' => 3125,
-         'text' => 'Nöldnerstr.: Einbahnstraßenregelung zwischen Stadthausstr. und Nöldnerplatz, offen stadtauswärts, voraussichtlich bis 4. August 2019',
+         'text' => 'Nöldnerstr.: Einbahnstraßenregelung zwischen Stadthausstr. und Nöldnerplatz, offen stadtauswärts, bis auf Weiteres',
          'type' => 'handicap',
-         'until' => 1564955999
+         'until' => undef
        },
        {
          'data' => '	2::inwork 7924,-4240 7978,-4011
@@ -4639,7 +4494,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1565387999
        },
        {
-         'data' => '#: source_id: 2147344478
+         'data' => '#: source_id: 2147344478 (nur bis Anfang September 2019)
 #: also_indoor: traffic
 # REMOVED --- #: XXX genauer anschauen! vvv --- #: priority: #A vvv --- #: next_check: 2019-07-15 vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -4647,7 +4502,6 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	2::inwork 14461,11738 14416,11815
 	q4::inwork; 14395,11753 14461,11738
 	q4::inwork; 14416,11815 14395,11753
-	q4::inwork 14475,11778 14416,11815
 #: note: Sperrung zur Glatzer Str.
 	3::inwork 14651,11666 14570,11589 14561,11600
 	3::inwork 14651,11666 14570,11589 14639,11512
@@ -4664,6 +4518,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	q3::inwork 14354,12012 14306,11889
 #: note: Sperrung zur Niederbarnimstr.
 	q3::inwork 14208,12235 14045,11965
+#: note: Umwege am Wismarplatz, Richtung Kinzigstr.
+	q3::inwork 14475,11778 14461,11738
+#: note: Umwege am Wismarplatz, Richtung Weserstr.
+	q3::inwork 14475,11778 14416,11815
 # REMOVED --- #: next_check ^^^ --- #: priority ^^^ --- #: XXX ^^^
 ',
          'from' => 1563055200,
@@ -4675,10 +4533,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: by: mapillary
-#: XXX vielleicht wird sich während der Bauarbeiten auch die Wegoberfläche ändern?
+#: confirmed_by: srt
+#: XXX vielleicht wird sich während der Bauarbeiten auch die Wegoberfläche ändern? ---> Weg wird neu gewalzt, bleibt aber wassergebundene Decke
 #: priority: #B
-#: last_checked: 2019-07-03 (mapillary)
-#: next_check: 2019-07-18
+#: last_checked: 2019-07-26
+#: check_frequency: 7d
 	2::inwork 15621,9704 15659,9647 15708,9607 15739,9583
 ',
          'from' => undef,
@@ -4688,46 +4547,26 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
+       undef,
        {
-         'data' => '	2::inwork 21359,18834 21332,18819 21278,18786
-',
-         'from' => 1563055200,
-         'id' => 3132,
-         'source_id' => '2147344472',
-         'text' => 'Ahrensfelder Chaussee: Bahnübergang S-Bhf. Ahrensfelde gesperrt, auch für Radfahrer, bis Anfang August 2019 ',
-         'type' => 'gesperrt',
-         'until' => 1564675200
-       },
-       {
-         'data' => '#: also_indoor: traffic (H)
+         'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.831464.php
+#: by: https://www.berliner-woche.de/gruenau/c-bauen/denkmalschutzbehoerde-stimmt-teilweisem-abriss-vom-gesellschaftshaus-zu_a224734
+#: by: https://www.berliner-woche.de/gruenau/c-bauen/regattastrasse-bleibt-weiter-dicht_a225100
+#: source_id: 2147344541 (bis auf Weiteres)
+#: also_indoor: traffic (H)
+#: XXX bei fritz "bis auf Weiteres"
+#: next_check: 2019-07-31
 	2::inwork 22821,1086 22766,1226
 ',
          'from' => undef,
          'id' => 3133,
          'source_id' => '2147344495',
-         'text' => 'Regattastr.: Fahrbahn und Bürgersteige zwischen Büxensteinallee und Libboldallee gesperrt',
+         'text' => 'Regattastr.: Fahrbahn und Bürgersteige zwischen Büxensteinallee und Libboldallee gesperrt, bis Ende Juli 2019, vielleicht auch länger',
          'type' => 'gesperrt',
-         'until' => 1563897600
+         'until' => undef
        },
-       {
-         'data' => '	q4::inwork 3368,11237 3391,11097
-',
-         'from' => undef,
-         'id' => 3134,
-         'text' => 'Fritschestr.: Sperrung der Fahrbahn an der Kreuzung Pestalozzistr., bis 2. August 2019',
-         'type' => 'handicap',
-         'until' => 1564783199
-       },
-       {
-         'data' => '#: XXX genauer anschauen!
-	q4::inwork 11113,10943 11150,11030
-',
-         'from' => 1563560728,
-         'id' => 3135,
-         'text' => 'Alfred-Döblin-Platz: Sperrung der Fahrbahn, bis 2. August 2019',
-         'type' => 'handicap',
-         'until' => 1564783199
-       },
+       undef,
+       undef,
        {
          'data' => '#: next_check_id: TRESKOWALLEE-2017
 	q3::inwork; 18704,8427 18731,8577 18733,8633 18733,8650 18737,8686
@@ -4739,6 +4578,73 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer können bis Rheinsteinstr. den engen Gehweg benutzen, vermutlich bis Mai 2020',
          'type' => 'handicap',
          'until' => 1588348800
+       },
+       {
+         'data' => '	q4::inwork; 12817,2031 13010,2085
+',
+         'from' => 1563746400,
+         'id' => 3137,
+         'source_id' => '2147344515',
+         'text' => 'Johannisthaler Chaussee: zwischen Buckower Damm und Heideläuferweg Bauarbeiten, Fahrbahn Richtung Osten gesperrt, evtl. sind auch Radfahrer betroffen, bis Mitte September 2019 ',
+         'type' => 'handicap',
+         'until' => 1568217600
+       },
+       {
+         'data' => '	q4::inwork 4842,9458 4827,9304 4815,9098
+',
+         'from' => 1564422392,
+         'id' => 3138,
+         'text' => 'Pfalzburger Str.: zwischen Güntzelstr. und Fechnerstr. wegen Arbeiten an Wasserleitungen bis zum 11.08.2019 gesperrt, evtl. sind auch Radfahrer betroffen',
+         'type' => 'handicap',
+         'until' => 1565539200
+       },
+       undef,
+       {
+         'data' => '#: XXX wird es Änderungen durch die Bauarbeiten geben?
+#: by: https://www.ahrensfelde.de/portal/meldungen/update-umgestaltung-des-kreuzungs-und-knotenpunktes-bernauer-strasse-b2-900000021-30601.html?rubrik=900000024 (eher nicht?)
+#: next_check: 2019-11-15
+	q4::inwork 18368,22018 18349,22132 18350,22225
+',
+         'from' => 1564524000,
+         'id' => 3140,
+         'source_id' => '2147344552',
+         'text' => 'Bernauer Str. (Lindenberg): zwischen Karl-Marx-Str. und Dorfstr. gesperrt, evtl. sind auch Radfahrer betroffen, ab 01.08.2019 06:00 bis Mitte November 2019',
+         'type' => 'handicap',
+         'until' => 1573858799
+       },
+       {
+         'data' => '	q4::inwork; 2074,9225 1937,9253
+',
+         'from' => 1564524000,
+         'id' => 3141,
+         'source_id' => 'LMS-BR_r_LMS-BR_177510_LMS-BR_72',
+         'text' => 'Lynarstr.: Richtung Koenigsallee zwischen Bismarckallee und Koenigsallee Bauarbeiten, Straße gesperrt, evtl. sind auch Radfahrer betroffen, ab 01.08.2019 06:00 bis 13.08.2019 ca. 16:00 Uhr',
+         'type' => 'handicap',
+         'until' => 1565704800
+       },
+       {
+         'data' => '#: note: laut fritz ist der Radverkehr nicht betroffen
+	q4::inwork; 2213,7637 2375,7440
+	q4::inwork; 2535,7257 2695,7082
+',
+         'from' => 1564869600,
+         'id' => 3142,
+         'source_id' => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.833493.php',
+         'text' => 'Rheinbabenallee: Bauarbeiten zwischen Luciusstr. und Platz am Wilden Eber, Fahrbahn Richtung Südosten gesperrt, der Radverkehr soll nicht betroffen sein, von Montag, den 05.08.2019, bis voraussichtlich Freitag, den 09.08.2019',
+         'type' => 'handicap',
+         'until' => 1565387999
+       },
+       {
+         'data' => '#: last_checked: 2019-08-04
+#: check_frequency: 180d
+	2::inwork 3079,5411 3209,5214
+',
+         'from' => undef,
+         'id' => 3143,
+         'source_id' => 'https://www.tagesspiegel.de/themen/freie-universitaet-berlin/bauprojekte-an-der-fu-neuer-glanz-am-alten-standort/24035558.html',
+         'text' => 'Takustr.: wegen Bauarbeiten ist eine Durchfahrt nicht möglich (auch nicht für Fußgänger)',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );

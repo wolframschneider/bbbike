@@ -8,7 +8,7 @@
 #: temporary vvv
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-07-20 vvv
+#: last_checked: 2019-07-26 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
 #: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28)
@@ -54,7 +54,7 @@
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
-#: last_checked: 2019-07-20
+#: last_checked: 2019-07-27
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -78,7 +78,7 @@
 #: XXX ^^^
 # 
 #: next_check_id: OBERBAUMBRUECKE-2019
-#: last_checked: 2019-07-05
+#: last_checked: 2019-08-04
 #: next_check: 2019-11-01
 #: valid: -20191101
 	F::inwork 13178,10623
@@ -748,6 +748,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3033,12509
 	X 3761,12298
 	X 3337,12855
+#: note: Kontaktschleife/Anforderungsampel Richtung Osten
 	X 2860,14118
 #: note: Kontaktschleife/Anforderungsampel von Süden her, auf der Mittelinsel "gegenläufig" geschaltet
 	X 2896,14187
@@ -1284,7 +1285,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 12846,7981
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel während der Bauarbeiten
-#: last_checked: 2019-06-28
+#: last_checked: 2019-07-31
 #: check_frequency: 90d
 	X::inwork 12794,8103
 	X 11154,14985
@@ -1407,7 +1408,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2905,14754
 	X 3395,13605
 	X 3739,13563
-	X 4271,13735
+	X 4265,13742
 	X 6817,13862
 	X 6935,13645
 	X 7069,13381
@@ -2547,7 +2548,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 14964,14123
 # 
 #: XXX Ampel wird auf die andere Seite der Paul-Junius-Str. verlegt
-#: last_checked: 2019-06-21
+#: last_checked: 2019-07-27
 #: check_frequency: 14d
 	F 15074,12850
 # 
@@ -2762,19 +2763,19 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (existiert nicht mehr) --- F 5628,14063
 # 
 #: next_check_id: ZEUGHAUS-2014
-#: XXX temporäre Ampel (wegen Arbeiten an der Staatsoper und an der U-Bahn)
+#: XXX temporäre Ampel (wegen Arbeiten an der U-Bahn)
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2019-07-09 (mapillary)
+#: last_checked: 2019-07-30
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2019-07-09 (mapillary) vvv
+#: last_checked: 2019-07-30 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2804,7 +2805,6 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: Stefan Klinkusch:
 	F -7762,14067
 	F -4924,14535
-# REMOVED (keine Ampel während der Bauarbeiten) --- #: XXX Baustellenampel --- #: last_checked: 2014-09-13 --- #: check_frequency: 180d ---	X::inwork -6861,15129
 	F 20612,18487
 	X 5628,17631
 	X 7676,18492
@@ -2900,7 +2900,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20191231 vvv
-#: last_checked: 2019-07-03 vvv
+#: last_checked: 2019-07-31 vvv
 #: check_frequency: 30d vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
 	F::inwork 14567,6810
@@ -2915,10 +2915,10 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20191231 vvv
-#: last_checked: 2019-06-04
+#: last_checked: 2019-07-31
 	X::inwork 13278,6967
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2019-07-03
+#: last_checked: 2019-07-31
 	X::inwork 13627,7047
 #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren
 	X0::inwork 14011,7103
@@ -2929,7 +2929,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6407
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="5"
-#: last_checked: 2019-06-30 (mapillary)
+#: last_checked: 2019-07-31
 #: check_frequency: 30d
 	X::inwork 14174,7505
 # 
@@ -3065,7 +3065,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: Anforderungsampel
 #: XXX provisorisch, bleibt eventuell nur während der Bauarbeiten an der Herbert-von-Karajan-Str.
 #: osm_watch: node id="1319349510" version="5"
-#: last_checked: 2019-06-14
+#: last_checked: 2019-07-30
 #: check_frequency: 45d
 	F::inwork 8005,11627
 # 
@@ -3075,6 +3075,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 3951,9836
 	F 3944,6901
 #: by: mapillary
+#: confirmed_by: srt
 #: note: Anforderungsampel
 	F 5364,7330
 # 
@@ -3112,6 +3113,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -8500,-2856
 	X -14023,-564
 	X -14115,-1678
+	X -14066,-1629
 	X -14279,-1820
 #: XXX_prog: Ampelanlage umfasst auch die Kreuzung Schiffbauergasse
 	X -11877,-478
@@ -3223,7 +3225,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2019-07-20 vvv
+#: last_checked: 2019-07-31 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738

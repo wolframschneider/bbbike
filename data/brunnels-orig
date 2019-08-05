@@ -182,7 +182,7 @@ Wullenwebersteg	Br 5657,12339 5714,12266
 Beusselbrücke	Br 5205,14253 5220,14043
 Finsterwalder Brücke	Br 6320,21777 6373,21810
 Eichwerdersteg	Br 5534,24005 5621,23966
-Sickingenbrücke	Br 4187,13704 4271,13735
+Sickingenbrücke	Br 4186,13710 4265,13742
 Kaiserin-Augusta-Brücke	Br 4295,13234 4381,13239
 Spandauer-Damm-Brücke	Br 2279,12412 2192,12402 2151,12397
 Knobelsdorffbrücke	Br 2446,11776 2330,11762
@@ -281,9 +281,11 @@ Kynastbrücke	Br 14928,10970 14902,10859 14880,10808
 # 
 #: by: https://www.berlin.de/senuvk/bauen/ueberbruecken/de/text_21.shtml (Name)
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/bruecke-ueber-den-stadtring-benannt_a207052
-#: XXX Name "Südkreuz-Steg" --- ist dieser Name schon offiziell und ist die Brücke ausgeschildert?
+#: by: https://www.spd-fraktion-tempelhof-schoeneberg.de/meldungen/bruecke-ueber-den-stadtring-benannt/
+#: XXX Name "Südkreuz-Steg" --- wann wird dieser Name offiziell (Amtsblatt?) und die Brücke ausgeschildert?
 #: osm_watch: way id="10360532" version="19"
-#: last_checked: 2019-06-19
+#: last_checked: 2019-07-30
+#: check_frequency: 90d
 Sachsendammsteg	Br 7757,7563 7747,7521 7733,7483
 # 
 Tiburtiusbrücke	Br 4937,6205 5335,5991 5377,5961 5574,5819 5672,5751
@@ -324,8 +326,9 @@ Marzahner Brücke	Br 19565,15106 19502,15089 19364,15045
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/waldbacher-weg-bruecke/index.shtml
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/waldbacher-weg-bruecke/de/vorhaben.shtml
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.828308.php (Fertigstellung 1. Quartal 2020)
+#: by: https://www.berliner-woche.de/biesdorf/c-verkehr/neue-fussgaengerbruecke-montiert_a224536
 #: XXX ändert sich nach den geplanten Bauarbeiten hier etwas? -> während der Bauarbeiten kann weiterhin die alte Brücke genutzt werden; die neue Brücke wird eine andere Position haben
-#: last_checked: 2018-11-04
+#: last_checked: 2019-07-21
 #: next_check: 2020-03-31
 #: alias: Waldbacher-Weg-Brücke
 Fußgängerbrücke Waldbacher Weg	Br 20338,11991 20388,12036
@@ -505,7 +508,7 @@ Brücke über die Wuhle	Br 22171,12965 22196,12961
 Brücke über die Wuhle	Br 22263,6185 22238,6195
 Brücke über die Wuhle	Br 22056,6613 22030,6600
 Brücke über die Wuhle	Br 22295,13530 22246,13551
-Mosbacher Brücke	Br 22195,10993 22221,10985 22271,10971
+Mosbacher Brücke	Br 22195,10993 22221,10985 22240,10980
 Brücke über die Wuhle	Br 22326,11266 22242,11269
 Brücke über die Wuhle	Br 22364,17323 22349,17302
 Brücke über die Wuhle	Br 21629,7921 21599,7904
@@ -572,13 +575,7 @@ Rathaussteg	Br 5176,20121 5176,20138
 Bollesteg	Br 2919,20910 2915,20932
 Bellevueparkbrücke	Br 22796,5640 22796,5631
 Adolf-Kiepert-Steg	Br 8687,-766 8659,-712
-# REMOVED --- #: next_check_id: BRUECKENSTRASSENBRUECKE-2018
-#: by: http://www.stadtentwicklung.berlin.de/download/bruecken/Brueckeninstandstandsetzungen2016.pdf
-#: by: https://www.berliner-woche.de/rahnsdorf/c-verkehr/querung-fuer-das-muehlenfliess-entsteht_a187201
-#: XXX ändert sich nach den geplanten Bauarbeiten hier etwas?
-#: osm_watch: way id="277642174" version="3"
-#: last_checked: 2018-06-16
-#: next_check: 2018-11-15
+# REMOVED (neue Brücke, weniger Stufen) --- #: next_check_id: BRUECKENSTRASSENBRUECKE-2018 --- #: by: http://www.stadtentwicklung.berlin.de/download/bruecken/Brueckeninstandstandsetzungen2016.pdf --- #: by: https://www.berliner-woche.de/rahnsdorf/c-verkehr/querung-fuer-das-muehlenfliess-entsteht_a187201 --- #: XXX ändert sich nach den geplanten Bauarbeiten hier etwas? --- #: osm_watch: way id="277642174" version="3" --- #: last_checked: 2018-06-16 --- #: next_check: 2018-11-15
 Brückenstraßenbrücke	Br 29521,4213 29516,4223
 Hegemeisterbrücke	Br 30081,5231 30081,5220
 Halenseestraßenbrücke	Br 2030,10253 1988,10328
@@ -647,6 +644,7 @@ Mathilde-Rathenau-Brücke	Br 14261,8851 14318,8790
 # 
 provisorische Fußgängerbrücke	Br 9002,919 9047,948
 Fußgängerbrücke Betriebsbahnhof Schöneweide	Br 18642,4654 18684,4690 18730,4735
+Hohe Brücke	Br 31896,2512 31903,2497
 #: section ^^^
 #
 ## Brandenburg und weiter ####################################################
@@ -712,7 +710,7 @@ Dropebrücke	Br -445,37201 -284,37435
 Brücke über die Veltener Str.	Br -5803,37450 -5671,37490
 Brücke über den Nordgraben	Br 4088,20301 4076,20268
 Eisenbahnbrücke Untere Planitz	Br -13802,-1856 -13733,-1856
-Provisorische Holzbrücke	Br -13475,-1890 -13427,-1883
+Provisorische Holzbrücke	Br -13484,-1879 -13432,-1879
 Schafgrabenbrücke	Br -14400,-2221 -14416,-2231
 Eisenbahnbrücke über den Templiner See	Br -15652,-4441 -15537,-4535
 Eisenbahnbrücke über den Sacrow-Paretzer Kanal	Br -18701,4574 -18722,4681

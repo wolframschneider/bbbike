@@ -538,7 +538,7 @@ Grunewaldstr.: Mittelstreifen	3nocross 6152,9136 6264,9156 6361,9175
 #: note: Breite zwischen Pollern ca. 150cm
 Viktoria-Luise-Platz: Poller	3 6278,9925 6275,9962 6224,9980
 Viktoria-Luise-Platz: Poller	3 6224,9980 6275,9962 6278,9925
-Else-Lasker-Schüler-Str.: Poller	3 * 7245,10499 *
+Else-Lasker-Schüler-Str.: Poller	3 * 7227,10489 *
 #: by: Thomas (neverbox):
 #: note: Schild existiert nur auf der westlichen Seite
 (Westhafenstr. - Beusselstr.): Durchfahrt verboten, Anlieger frei	2:Anlieger 6083,14564 6025,14539 6015,14516 5997,14444 5920,14422 5205,14253
@@ -556,7 +556,7 @@ Hohenschönhausener Weg -> Seddiner: Poller	3 18420,11864 18411,12100 *
 #: by: Malte Wollitz:
 Gluckweg	1 6039,3275 5853,3050
 # REMOVED (Ampel existiert) --- Am Tierpark - Criegernweg	3 18408,10774 18417,10738 18509,10757
-Rosenfelder Ring	3 * 18093,12093 *
+Rosenfelder Ring	3 * 18093,12088 *
 Sophienstr.	1 9986,13412 10317,13248
 Gradestr./Moosrosenstr.	3nocross 12773,5248 12727,5244 12582,5232
 Hunsrückstr.	1 13914,17016 13990,17122 14060,17221
@@ -849,7 +849,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="5"
-#: last_checked: 2019-07-05
+#: last_checked: 2019-07-30
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
 Scharnhorststr.: Poller	3 7877,14504 7804,14445 *
@@ -1237,3 +1237,4 @@ Lintruper Str.	1 10324,925 10380,757
 #: by: osm (für Radfahrer frei)
 Glaserweg	1 10187,872 10237,749
 Friedrichstr. (Prenzlau)	1 39550,101671 39574,101863
+Heidefalterweg: unechte Einbahnstraße, Verbotsschild steht etwa 50m von der Köpenicker Str.	1 21140,10786 21322,10863
