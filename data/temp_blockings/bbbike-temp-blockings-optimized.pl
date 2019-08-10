@@ -1,6 +1,106 @@
-$#temp_blocking = 111;
+$#temp_blocking = 30;
 push @temp_blocking,
 (
+       {
+         'data' => '#: by: http://www.weinfeste-in-deutschland.de/wein-und-winzerfest-in-berlin-lichtenrade.html
+	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
+',
+         'from' => 1567674000,
+         'id' => 31,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              6,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'am Lichtenrader Dorfteich: Wein- und Winzerfest, vom 06.09.2019 16:00 Uhr bis 08.09.2019 20:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1567969200
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => '	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
 ',
@@ -2588,7 +2688,27 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.laubinger.de/termine/50-fest-an-der-panke/
+	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 10281,18241 10240,18193 10320,18197 10469,18262 10487,18270 10660,18345
+	2::temp 10602,18382 10562,18506 10532,18601
+',
+         'from' => 1567720800,
+         'id' => 2281,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              7,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., sowie Ossietzkystr. bis Pestalozzistr.: Veranstaltung (Fest an der Panke), Straßen gesperrt (07.09.2019-08.09.2019)',
+         'type' => 'gesperrt',
+         'until' => 1567979999
+       },
        undef,
        undef,
        undef,
@@ -3055,7 +3175,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        {
          'data' => '#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
-#: also_indoor: traffic
+#: also_indoor: traffic (G)
 #: last_checked: 2019-07-30
 	2::inwork 9131,12438 9179,12444
 ',
@@ -3634,6 +3754,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: RIGAER-2018
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
+#: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
 #: last_checked: 2019-07-23
 	q3::inwork; 14748,12314 14538,12371
@@ -3663,7 +3784,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-07-26
+#: last_checked: 2019-08-05
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -3698,24 +3819,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: offen (2019-07-07, 2019-07-19, 2019-07-21)
-#: next_check_id: WIESENWEG-2019
-	2::inwork 15126,11474 15162,11458
-',
-         'from' => 1562342400,
-         'id' => 2919,
-         'text' => 'Wiesenweg: Bauarbeiten an der S-Bahnbrücke, unter Umständen kann der Durchgang zwischen Gürtelstr. und Kietzer Weg komplett gesperrt sein, ab 05.07.2019 bis 05.08.2019',
-         'type' => 'gesperrt',
-         'until' => 1565020800
-       },
+       undef,
        undef,
        undef,
        {
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-07-31 vvv
+#: last_checked: 2019-08-09 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -3972,13 +4083,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-07-22
-#: check_frequency: 14d
+#: last_checked: 2019-08-09 vvv
+#: check_frequency: 14d vvv
 # REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
+	2::inwork 14918,8813 14883,8823 14852,8799
 # REMOVED (hier mittlerweile offen) ---		2::inwork 14980,8940 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
+#: check_frequency ^^^
+#: last_checked ^^^
 ',
          'from' => undef,
          'id' => 3027,
@@ -4019,16 +4133,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1565712000
        },
-       {
-         'data' => '#: source_id: 2147343335
-	q4::inwork; 9082,16982 8904,17059
-',
-         'from' => 1539803939,
-         'id' => 3037,
-         'text' => 'Soldiner Str.: Bauarbeiten zwischen Prinzenallee und Stockholmer Str., Fahrbahn Richtung Westen gesperrt, bis August 2019',
-         'type' => 'handicap',
-         'until' => 1567180800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4091,21 +4196,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1577811600
        },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.752628.php (ab 1. November 2018 bis April 2019)
-#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/bauarbeiten-am-anleger_a186746
-#: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=635121&postcount=170
-#: priority: #C
-#: last_checked: 2019-07-26
-#: check_frequency: 14d
-	2::inwork 14690,9993 14599,10039
-',
-         'from' => undef,
-         'id' => 3059,
-         'text' => 'Stralauer Südufer: Bauarbeiten, Uferweg teilweise gesperrt, Ende unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: source_id: 2147343528
 	q3::inwork; 7263,14873 7458,14643
@@ -4163,13 +4254,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (kein Ende-Datum)
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (bis Anfang September 2019)
 #: by: https://www.berliner-woche.de/wilmersdorf/c-bauen/wasserrohr-unter-der-guentzelstrasse-wird-endlich-geflickt_a223000 (bis Ende Juli oder August 2019)
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic (H,G)
 #: priority: #A
 #: last_checked: 2019-08-04 vvv
-#: check_frequency: 7d vvv
+#: check_frequency: 14d vvv
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 #: check_frequency ^^^
@@ -4177,9 +4268,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => undef,
          'id' => 3073,
-         'text' => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, mindestens bis Mitte August 2019',
+         'text' => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis voraussichtlich Anfang September 2019',
          'type' => 'handicap',
-         'until' => 1565971200
+         'until' => 1567785600
        },
        {
          'data' => '#: also_indoor: traffic (H,G)
@@ -4308,7 +4399,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 31.01.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2019-07-27 (mapillary)
+#: last_checked: 2019-08-09
 #: next_check: 2020-01-30
 	q3::inwork  8986,16092 9178,16317 9301,16439
 ',
@@ -4336,7 +4427,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-05-25 (mapillary)
+#: last_checked: 2019-08-09
 #: check_frequency: 60d
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
@@ -4408,30 +4499,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: 2147344372 (bis Anfang August 2019)
-#: source_id: 2147344374
-#: source_id: 2147344373 (bis Anfang August 2019)
-#: source_id: 2147344375 (bis Anfang August 2019)
-#: XXX wird sich die Verkehrsführung noch ändern? vvv
-#: also_indoor: traffic (H) vvv
-#: last_checked: 2019-08-04 vvv
-#: check_frequency: 7d vvv
-	q4::inwork 10220,13098 10264,13097
-	q4::inwork; 10264,13097 10286,13084 10339,13052
-	q3::inwork; 10310,13227 10264,13097
-	q4::inwork 10220,13098 10105,13004
-#: check_frequency ^^^
-#: last_checked ^^^
-#: also_indoor ^^^
-#: XXX ^^^
-',
-         'from' => 1560895200,
-         'id' => 3119,
-         'text' => 'Hackescher Markt: Gleisarbeiten, Fahrbahnen der zuführenden Straßen gesperrt, Radfahrer sollen schieben, ab 20. Juni 2019 bis Mitte August 2019',
-         'type' => 'handicap',
-         'until' => 1565625600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4459,17 +4527,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1569967200
        },
-       {
-         'data' => '#: XXX gibt es noch immer eine Einbahnstraßenregelung, oder ist die Verkehrsführung an der Baustelle mittlerweile anders?
-#: last_checked: 2019-07-03
-	q3::inwork; 15932,10830 15681,10801
-',
-         'from' => 1562177614,
-         'id' => 3125,
-         'text' => 'Nöldnerstr.: Einbahnstraßenregelung zwischen Stadthausstr. und Nöldnerplatz, offen stadtauswärts, bis auf Weiteres',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '	2::inwork 7924,-4240 7978,-4011
 ',
@@ -4481,18 +4539,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1567180800
        },
        undef,
-       {
-         'data' => '#: source_id: 2147344476
-#: by: https://www.berliner-woche.de/tempelhof/c-verkehr/fahrbahnsanierung-in-der-roeblingstrasse_a222676
-	q4::inwork 8014,4832 7875,4897 7807,4975
-',
-         'from' => 1563055200,
-         'id' => 3128,
-         'source_id' => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2019/pressemitteilung.826264.php',
-         'text' => 'Röblingstr.: Bauarbeiten zwischen Attilastr. und Marienhöher Weg geplant, eventuell sind auch Radfahrer betroffen, vom 15. Juli 2019 bis 09. August 2019',
-         'type' => 'handicap',
-         'until' => 1565387999
-       },
+       undef,
        {
          'data' => '#: source_id: 2147344478 (nur bis Anfang September 2019)
 #: also_indoor: traffic
@@ -4520,8 +4567,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	q3::inwork 14208,12235 14045,11965
 #: note: Umwege am Wismarplatz, Richtung Kinzigstr.
 	q3::inwork 14475,11778 14461,11738
-#: note: Umwege am Wismarplatz, Richtung Weserstr.
-	q3::inwork 14475,11778 14416,11815
+# REMOVED (hier nicht) --- #: note: Umwege am Wismarplatz, Richtung Weserstr. ---	q3::inwork 14475,11778 14416,11815
 # REMOVED --- #: next_check ^^^ --- #: priority ^^^ --- #: XXX ^^^
 ',
          'from' => 1563055200,
@@ -4531,31 +4577,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1575738000
        },
-       {
-         'data' => '#: by: mapillary
-#: confirmed_by: srt
-#: XXX vielleicht wird sich während der Bauarbeiten auch die Wegoberfläche ändern? ---> Weg wird neu gewalzt, bleibt aber wassergebundene Decke
-#: priority: #B
-#: last_checked: 2019-07-26
-#: check_frequency: 7d
-	2::inwork 15621,9704 15659,9647 15708,9607 15739,9583
-',
-         'from' => undef,
-         'id' => 3130,
-         'text' => 'Hansa-Ufer: Bauarbeiten, gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.831464.php
 #: by: https://www.berliner-woche.de/gruenau/c-bauen/denkmalschutzbehoerde-stimmt-teilweisem-abriss-vom-gesellschaftshaus-zu_a224734
 #: by: https://www.berliner-woche.de/gruenau/c-bauen/regattastrasse-bleibt-weiter-dicht_a225100
+#: by: https://www.berliner-woche.de/gruenau/c-bauen/das-gesellschaftshaus-ist-geschichte_a226300
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.834736.php (Aufhebung der Sperrung am 09.08.2019)
+#: by: https://www.berliner-woche.de/gruenau/c-bauen/bei-abbrucharbeiten-wurden-festlegungen-der-denkmalschutzbehoerde-ignoriert_a226579
+#: by: https://www.abendblatt-berlin.de/2019/08/08/gruenauer-gesellschaftshaus-schneller-teilabriss-wirft-fragen-auf/
 #: source_id: 2147344541 (bis auf Weiteres)
 #: also_indoor: traffic (H)
 #: XXX bei fritz "bis auf Weiteres"
-#: next_check: 2019-07-31
+#: next_check: 2019-08-09
 	2::inwork 22821,1086 22766,1226
 ',
          'from' => undef,
@@ -4585,7 +4621,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1563746400,
          'id' => 3137,
          'source_id' => '2147344515',
-         'text' => 'Johannisthaler Chaussee: zwischen Buckower Damm und Heideläuferweg Bauarbeiten, Fahrbahn Richtung Osten gesperrt, evtl. sind auch Radfahrer betroffen, bis Mitte September 2019 ',
+         'text' => 'Johannisthaler Chaussee: zwischen Buckower Damm und Heideläuferweg Bauarbeiten, Fahrbahn Richtung Osten gesperrt, bis Mitte September 2019 ',
          'type' => 'handicap',
          'until' => 1568217600
        },
@@ -4594,9 +4630,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1564422392,
          'id' => 3138,
-         'text' => 'Pfalzburger Str.: zwischen Güntzelstr. und Fechnerstr. wegen Arbeiten an Wasserleitungen bis zum 11.08.2019 gesperrt, evtl. sind auch Radfahrer betroffen',
+         'text' => 'Pfalzburger Str.: zwischen Güntzelstr. und Fechnerstr. wegen Arbeiten an Wasserleitungen bis zum 12.08.2019 gesperrt, evtl. sind auch Radfahrer betroffen',
          'type' => 'handicap',
-         'until' => 1565539200
+         'until' => 1565625600
        },
        undef,
        {
@@ -4622,20 +4658,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1565704800
        },
+       undef,
        {
-         'data' => '#: note: laut fritz ist der Radverkehr nicht betroffen
-	q4::inwork; 2213,7637 2375,7440
-	q4::inwork; 2535,7257 2695,7082
-',
-         'from' => 1564869600,
-         'id' => 3142,
-         'source_id' => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.833493.php',
-         'text' => 'Rheinbabenallee: Bauarbeiten zwischen Luciusstr. und Platz am Wilden Eber, Fahrbahn Richtung Südosten gesperrt, der Radverkehr soll nicht betroffen sein, von Montag, den 05.08.2019, bis voraussichtlich Freitag, den 09.08.2019',
-         'type' => 'handicap',
-         'until' => 1565387999
-       },
-       {
-         'data' => '#: last_checked: 2019-08-04
+         'data' => '#: also_indoor: traffic (G)
+#: last_checked: 2019-08-04
 #: check_frequency: 180d
 	2::inwork 3079,5411 3209,5214
 ',
@@ -4645,6 +4671,45 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Takustr.: wegen Bauarbeiten ist eine Durchfahrt nicht möglich (auch nicht für Fußgänger)',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: XXX_prog: eigentlich q3+
+#: by: srt, Thomas Gries
+#: also_indoor: traffic
+#: XXX Wann werden die Bauarbeiten beendet? vvv
+#: last_checked: 2019-08-04 vvv
+	q3::inwork 5636,7734 5630,7875 5631,8011
+	q3::inwork 5630,7875 5517,7869
+#: last_checked ^^^
+#: XXX ^^^
+',
+         'from' => undef,
+         'id' => 3144,
+         'text' => 'Prinzregentenstr./Varziner Str./Handjerystr.: im Kreuzungsbereich Bauarbeiten, auf Gehweg ausweichen, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.813076.php (ab August 2019)
+#: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/berlins-erste-spielstrasse_a216586 (ab 7. August 2019)
+	q4::temp 11175,9882 11197,9894 11411,9810
+',
+         'from' => 1553986800,
+         'id' => 3145,
+         'recurring' => 1,
+         'text' => 'Böckhstr.: zwischen Grimmstr. und Graefestr. mittwochs zwischen 14 Uhr und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.4. bis 30.9.',
+         'type' => 'handicap',
+         'until' => 1569859200
+       },
+       {
+         'data' => '	2::inwork -8575,-9351 -8622,-9215
+',
+         'from' => 1565374983,
+         'id' => 3146,
+         'source_id' => '196900418',
+         'text' => 'Saarmund: Sperrung an der Eisenbahnüberführung, eventuell sind auch Radfahrer betroffen, bis 13.09.2019',
+         'type' => 'gesperrt',
+         'until' => 1568412000
        }
      
 );

@@ -104,7 +104,7 @@ asphaltiert, aber mäßiger Zustand (Wurzelschäden)	RW1; 9233,8597 9229,8718
 #: by: https://www.berliner-woche.de/tempelhof-schoeneberg/c-verkehr/stadtraetin-heiss-informiert-ueber-radverkehrsprojekte-2019_a197902
 #: XXX Grünmarkierung vorgesehen vvv
 #: priority: #D vvv
-#: last_checked: 2019-07-31 (mapillary) vvv
+#: last_checked: 2019-08-08 vvv
 #: check_frequency: 90d vvv
 	RW3;RW3 8722,6656 8707,6537 8697,6455 8680,6322 8661,6169 8642,5998 8627,5866
 	RW3; 8627,5866 8613,5745
@@ -202,7 +202,7 @@ der kurze Abschnitt zwischen Manteuffelstr. und Wiener Str. ist benutzungspflich
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814445.php (bis Anfang November 2019) vvv
 #: source_id: 2147344255 (bis November 2019)
 #: XXX werden die Bauarbeiten tatsächlich im November 2019 fertig werden? vvv
-#: last_checked: 2019-08-04 vvv
+#: last_checked: 2019-08-08 vvv
 #: next_check: 2019-11-01 vvv
 #: valid: 20191101-
 	RW4;RW4 13206,10651 13305,10789 13332,10832
@@ -348,11 +348,11 @@ Gehweg für Radfahrer frei	RW9;RW1 571,11255 541,11464
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf vvv
 #: by: https://api.fixmyberlin.de/api/plannings/10 (erster Bauabschnitt Alte Jakobstr. - Axel-Springer-Str. (Nordseite) im Herbst 2018)
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (Sanierung 2019)
-#: last_checked: 2019-07-30 (Bauarbeiten am nördlichen Gehweg (Verlegung?))
-#: check_frequency: 30d
+#: last_checked: 2019-08-09 (Bauarbeiten am Rad/Gehweg Richtung Westen)
+#: check_frequency: 21d
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1;RW1 10020,11262 10256,11160
 #: XXX Bauarbeiten der Wasserbetriebe bis November 2019, südliche Seite zwischen Alexandrinenstr. und Lobeckstr.
-#: last_checked: 2019-08-02 vvv
+#: last_checked: 2019-08-09 vvv
 #: check_frequency: 90d vvv
 mäßige bis schlechte Verbundsteinpflasterradwege, Bord zum Gehweg	RW1; 10256,11160 10501,11056 10637,10996 10684,10975
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1; 10684,10975 10637,10996 10501,11056 10256,11160
@@ -770,7 +770,7 @@ im Bereich der Bushaltestelle wird der Radweg auf dem Gehweg geführt	RW4; 14196,
 #: by: https://www.berliner-woche.de/alt-treptow/c-verkehr/schaeden-waren-2008-nicht-sichtbar_a195640
 #: source_id: 2147343116
 #: XXX wann wird die Radspur wieder hergestellt? (-> RW4;)
-#: last_checked: 2019-07-31
+#: last_checked: 2019-08-09
 #: next_check: 2020-01-01
 provisorischer gemeinsamer Geh- und Radweg	RW2; 14558,10264 14501,10169 14405,10027 14350,9953
 	RW4; 14350,9953 14289,9870
@@ -1039,7 +1039,7 @@ Gehweg für Radfahrer frei	RW1; 21002,5755 20880,5736
 #: source_id: 2147343690
 #: source_id: LMS-BR_r_LMS-BR_6571
 #: XXX siehe auch handicap_s-Eintrag
-#: last_checked: 2019-07-31 vvv
+#: last_checked: 2019-08-05 vvv
 #	RW1;RW2 14051,6731 14153,6795
 #	RW1;RW1 14344,7003 14257,6895 14153,6795
 hier nicht offiziell als Zweirichtungsradweg freigegeben	RW9;RW2 14344,7003 14257,6895
@@ -1236,7 +1236,7 @@ Busspur ist immer gültig	RW5;RW0 9475,12365 9358,12351 9141,12320
 #XXX später wieder herstellen (nach Fertigstellung der Staatsbibliothek) --- Busspur ist immer gültig	RW5;RW5 9613,12381 9475,12365
 #: XXX später beide Richtungen wieder herstellen
 #: last_checked: 2019-07-30
-#: check_frequency: 60d
+#: check_frequency: 30d
 Busspur ist immer gültig	RW5; 9475,12365 9613,12381
 # 
 Busspur ist immer gültig	RW5;RW5 9141,12320 9028,12307 8804,12280
@@ -1357,7 +1357,7 @@ die letzten 50 Meter sind benutzungspflichtiger Radweg	RW4; 18225,7004 18010,713
 # REMOVED (nur für Autos) --- #: XXX mittlerweile (2018-07-31) laut fritz für Autos Richtung Südosten gesperrt, sind auch Radfahrer betroffen? (-> nein)
 #: source_id: 2147342958
 # REMOVED --- #: also_indoor: traffic (H,G)
-#: last_checked: 2019-07-31
+#: last_checked: 2019-08-09
 #: check_frequency: 30d
 ab der provisorischen Brücke als Gehwegradweg geführt	RW4; 14261,8851 14151,8967
 	RW4; 14151,8967 14261,8851
@@ -1368,7 +1368,7 @@ ab der provisorischen Brücke als Gehwegradweg geführt	RW4; 14261,8851 14151,8967
 #: XXX Grünmarkierung in der Reinickendorfer Str. vorgesehen vvv
 #: by: https://www.infravelo.de/projekt/reinickendorfer-strasse/
 #: priority: #D vvv
-#: last_checked: 2019-07-05 (mapillary) vvv
+#: last_checked: 2019-08-09 vvv
 #: check_frequency: 90d vvv
 	RW1;RW3 7966,15571 7962,15633
 	RW3;RW3 7962,15633 7948,15802 7885,16005 7856,16083
@@ -1409,8 +1409,8 @@ asphaltiert	RW1; 7852,16790 7763,16779
 	RW2; 8161,16752 8249,16741
 asphaltiert	RW2; 7763,16779 7681,16769 7606,16746 7447,16613 7417,16587 7403,16575 7295,16477 7231,16418 7051,16264 6965,16190 6781,16026
 asphaltiert	RW1; 7681,16769 7763,16779 7852,16790 8144,16754 8161,16752
-Gehwegplatten und Verbundsteinpflaster	RW2; 6781,16026 6965,16190 7051,16264
-neu asphaltiert	RW2; 7051,16264 7231,16418
+Gehwegplatten und Verbundsteinpflaster	RW2; 6781,16026 6965,16190
+neu asphaltiert, relativ breit	RW2; 6965,16190 7051,16264 7231,16418
 Gehwegplatten und Verbundsteinpflaster	RW2; 7231,16418 7295,16477 7403,16575 7417,16587 7447,16613 7606,16746 7681,16769
 	RW1; 10138,20840 10145,21017 10140,21107 10135,21171 10129,21251 10126,21314 10120,21464 10118,21510 10114,21586 10111,21661 10111,21673 10106,21784 10097,21809 10085,21840
 	RW3; 10085,21840 10097,21809 10106,21784 10111,21673 10111,21661 10114,21586 10118,21510 10120,21464 10126,21314 10129,21251 10135,21171 10140,21107 10145,21017 10138,20840
@@ -1551,22 +1551,10 @@ welliger Asphalt	RW1;RW1 1139,3876 1070,3741 971,3534 935,3430 932,3422 856,3188
 	RW3;RW3 10301,16186 10421,16175 10603,16158 10739,16146
 die letzten 50 Meter sind benutzungspflichtig	RW3; 10739,16146 10982,16121
 	RW3; 10982,16121 10739,16146
-# 
-#: by: https://www.infravelo.de/projekt/wichertstrasse/ (1. Halbjahr 2019)
-#: XXX Grünmarkierung geplant; nur 1300m laut Webseite, aber gesamte Strecke wäre 2200m vvv
-#: XXX Grünmarkierung schon teilweise erfolgt, zumindest Richtung Westen zwischen Prenzlauer Allee und Stahlheimer Str.
-#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/gruene-beschichtung-soll-das-radfahren-auf-der-kastanienallee-sicherer-machen_a211582
-#: source_id: 2147344440 (bis Anfang August 2019)
-#: priority: #D vvv
-#: last_checked: 2019-07-23 (Markierungsarbeiten an der Schönhauser Allee) vvv
-#: next_check: 2019-08-01 vvv
+# REMOVED (realisiert) --- #: by: https://www.infravelo.de/projekt/wichertstrasse/ (1. Halbjahr 2019) --- #: XXX Grünmarkierung geplant; nur 1300m laut Webseite, aber gesamte Strecke wäre 2200m vvv --- #: XXX Grünmarkierung schon teilweise erfolgt, zumindest Richtung Westen zwischen Prenzlauer Allee und Stahlheimer Str. --- #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/gruene-beschichtung-soll-das-radfahren-auf-der-kastanienallee-sicherer-machen_a211582 --- #: source_id: 2147344440 (bis Anfang August 2019) --- #: priority: #D vvv --- #: last_checked: 2019-07-23 (Markierungsarbeiten an der Schönhauser Allee) vvv --- #: next_check: 2019-08-01 vvv
 #: note: Wichertstr. Richtung Westen
-	RW4; 10982,16121 11214,16043
-	RW3; 11214,16043 11307,15995
-#: next_check ^^^
-#: last_checked ^^^
-#: priority ^^^
-#: XXX ^^^
+Grünmarkierung	RW4; 10982,16121 11214,16043
+Grünmarkierung	RW3; 11214,16043 11307,15995
 die letzten 60 Meter sind benutzungspflichtig	RW3; 11307,15995 11445,15920
 Grünmarkierung	RW4; 11445,15920 11567,15842
 Grünmarkierung	RW3; 11567,15842 11736,15727
@@ -1751,7 +1739,7 @@ Busspur gilt Mo-Fr 7-18 Uhr	RW5; 10020,11262 9984,11270 9751,11243 9615,11225 94
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: XXX Bauarbeiten, Radspuren sind größtenteils aufgehoben
 #: XXX war: RW3;RW3
-#: last_checked: 2019-07-31
+#: last_checked: 2019-08-09
 #: check_frequency: 30d
 	RW0;RW0 8732,12804 8737,12757 8752,12647 8752,12647 8754,12622 8756,12608
 	RW3; 10887,10922 10839,10907 10856,10856 10906,10874
@@ -1781,10 +1769,12 @@ die letzten 20 Meter werden als benutzungspflichtiger Radweg auf dem Gehweg gefü
 	RW3; 13332,10832 13144,10921
 	RW3;RW3 13144,10921 13214,11064 13244,11112
 # 
-#: note: typischerweise komplett zugeparkt vvv
+#: note: typischerweise zugeparkt
 in der Mitte sind 100 Meter nicht benutzungspflichtig	RW4; 13244,11112 13290,11144 13479,11147 13540,11148
-	RW4; 13540,11148 13479,11147 13290,11144 13244,11112
-#: note ^^^
+# REMOVED --- #: XXX hier gibt es "Leitboys" (noch nicht komplett) --- #: by: https://twitter.com/VIZ_Berlin/status/1158680067209400320 --- #: next_check: 2019-08-09
+#: note: mit "Leitboys"
+geschützter Radstreifen	RW4; 13479,11147 13290,11144
+	RW3; 13290,11144 13244,11112
 # 
 	RW6;RW6 12638,11433 12594,11467
 	RW3;RW3 12758,11915 12728,11850 12676,11739 12645,11673 12543,11521
@@ -2372,9 +2362,10 @@ unebener Asphalt	RW1;RW1 251,3325 137,3396 17,3471 -135,3567 -216,3623 -267,3657
 	RW1;RW1 -580,3912 -762,4054
 	RW1;RW -762,4054 -843,4116 -968,4184 -1096,4267
 	RW1;RW1 -1096,4267 -1204,4328 -1245,4351 -1297,4385
-Busspur gilt Mo-Fr 14-20 Uhr und Sa 9-14 Uhr	RW5; 4861,5581 4745,5344 4741,5309
+Busspur gilt Mo-Fr 14-20 Uhr und Sa 9-14 Uhr	RW5; 4861,5581 4832,5522 4745,5344 4741,5309
 # REMOVED (nicht mehr gesperrt, nicht mehr benutzungspflichtig) --- #: by: http://www.berlin.de/ba-steglitz-zehlendorf/bvv-online/vo020.asp?VOLFDNR=4636 (Sperrung des Radwegs) (Entscheidung der BVV am 16.10.2013) --- #: XXX wird der Radweg nach den Sanierungsarbeiten wieder eröffnet (früher: RW2) oder wird es eine andere Lösung (Busspur?) geben? --- #: last_checked: 2013-12-22 --- #: check_frequency: 100d
-	RW1; 4741,5309 4745,5344 4861,5581
+	RW1; 4741,5309 4745,5344 4832,5522
+	RW4; 4832,5522 4861,5581
 Verbundsteinpflaster mit Wurzelschäden	RW1;RW1 6392,19142 6267,19388 6238,19450 6190,19551 6141,19649 5983,19974 5914,20112
 	RW2;RW1 5914,20112 5868,20198
 	RW1;RW1 5868,20198 5847,20243 5833,20273 5801,20339 5761,20401 5566,20661 5453,20803 5410,20822
@@ -2705,7 +2696,7 @@ vorhandener Radweg ist abgesperrt	RW0; 23100,12269 23033,12367
 #	RW1;RW2 21150,11925 21152,11945
 #	RW0;RW2 21152,11945 21166,12023 21190,12193
 #	RW1;RW2 21190,12193 21199,12258
-#: last_checked: 2019-07-21
+#: last_checked: 2019-08-03 (mapillary)
 #: check_frequency: 90d
 	RW2;RW8 21150,11925 21152,11945 21166,12023 21190,12193 21199,12258
 # 
@@ -2950,25 +2941,26 @@ holprig und eng	RW1;RW1 5519,1831 5570,1712 5633,1566 5661,1499 5706,1393 5751,1
 #: confirmed by: anonymous (sort-of, he specified q4)
 	RW6;RW6 10170,2158 10108,2174 10043,2351 9973,2541 9993,2551 10015,2651
 # 
+#: note: Greifswalder Str. stadtauswärts
+Grünmarkierung	RW3; 11706,13635 11820,13804 11946,13993 11952,14002 11991,14060 12017,14098 12077,14186
 #: by: https://www.infravelo.de/projekt/greifswalderstrasse/ (1. Halbjahr 2019)
 #: XXX Grünmarkierung geplant vvv
 #: XXX Grünmarkierung Richtung Norden zumindest bis zur Hufelandstr. fertiggestellt, stadteinwärts existieren ca. 200m ab Danziger Str.
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/gruene-beschichtung-soll-das-radfahren-auf-der-kastanienallee-sicherer-machen_a211582
 #: source_id: 2147344450 (Fahrbahnmarkierungen, bis Anfang Oktober 2019)
-#: source_id: 2147344571 (Leitungsarbeiten, Gesamtmaßnahme bis Ende Oktober 2019)
+#: source_id: 2147344571 (Leitungsarbeiten, Gesamtmaßnahme bis Mitte November 2019)
 #: priority: #D vvv
-#: last_checked: 2019-07-23 vvv
+#: last_checked: 2019-08-07 vvv
 #: check_frequency: 14d vvv
-#: note: Greifswalder Str. stadtauswärts
-	RW3; 11706,13635 11820,13804 11946,13993 11952,14002 11991,14060 12017,14098 12077,14186 12172,14328 12177,14335 12188,14350 12228,14404 12266,14460
+	RW3; 12077,14186 12172,14328 12177,14335 12188,14350 12228,14404 12266,14460
 	RW4; 12266,14460 12317,14535
-#: note: Greifswalder Str. stadteinwärts
-	RW3; 12317,14535 12266,14460 12228,14404 12188,14350 12177,14335 12172,14328 12077,14186 12017,14098 11991,14060 11952,14002 11946,13993 11820,13804
-die letzten 20 Meter sind benutzungspflichtig	RW3; 11820,13804 11706,13635
 #: check_frequency ^^^
 #: last_checked ^^^
 #: priority ^^^
 #: XXX ^^^
+#: note: Greifswalder Str. stadteinwärts
+Grünmarkierung	RW3; 12317,14535 12266,14460 12228,14404 12188,14350 12177,14335 12172,14328 12077,14186 12017,14098 11991,14060 11952,14002 11946,13993 11820,13804
+die letzten 20 Meter sind benutzungspflichtig, Grünmarkierung	RW3; 11820,13804 11706,13635
 # 
 	RW6;RW6 6793,18763 6829,18887 6855,18978
 	RW6;RW6 6753,18909 6770,18980 6736,18991 6715,18918
@@ -4079,24 +4071,26 @@ Kopfsteinpflaster	RW10; -1339,14910 -1345,15060 -1389,15285
 	RW1;RW1 -1389,15285 -1485,15463
 	RW1;RW2 4741,5309 4745,5283 4766,5208
 	RW2;RW2 4766,5208 4807,5131
-	RW1;RW2 4807,5131 4772,5069
+	RW1; 4807,5131 4772,5069
+teilweise neu asphaltiert	RW2; 4772,5069 4807,5131
 	RW4;RW4 4772,5069 4692,4997 4675,4983 4517,4853
 Gehweg für Radfahrer frei	RW1; 1453,-306 1402,-52 1375,-27 1368,-1
 Gehweg für Radfahrer frei	RW1; 1345,184 1368,-1 1375,-27 1402,-52 1453,-306
 # 
+#: note: Wisbyer Str. Richtung Westen
+Grünmarkierung	RW3; 12090,16199 12012,16250 11936,16302
+Grünmarkierung	RW4; 11936,16302 11889,16328
+Grünmarkierung	RW3; 11889,16328 11829,16339 11808,16343 11750,16354 11727,16358 11673,16367
+Grünmarkierung	RW3; 11673,16367 11632,16373 11542,16384 11470,16394 11448,16398 11397,16405
 #: by: https://www.infravelo.de/projekt/wisbyer-strasse/ (1. Halbjahr 2019)
 #: XXX Grünmarkierung geplant; 2300m laut Webseite, aber gesamte Strecke wäre nur 1300m --- also vermutlich bis zur Prenzlauer Allee? vvv
 #: XXX ca. 200m ab der Prenzlauer Allee sind schon markiert, weitere Arbeiten in Gange
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/gruene-beschichtung-soll-das-radfahren-auf-der-kastanienallee-sicherer-machen_a211582
 #: source_id: 2147344409 (bis Mitte September 2019)
 #: priority: #D vvv
-#: last_checked: 2019-07-23 vvv
-#: check_frequency: 14d vvv
-#: note: Wisbyer Str. Richtung Westen
-	RW3; 12090,16199 12012,16250 11936,16302
-	RW4; 11936,16302 11889,16328
-	RW3; 11889,16328 11829,16339 11808,16343 11750,16354 11727,16358 11673,16367
-	RW3; 11673,16367 11632,16373 11542,16384 11470,16394 11448,16398 11397,16405 11289,16423
+#: last_checked: 2019-08-07 vvv
+#: check_frequency: 7d vvv
+	RW3; 11397,16405 11289,16423
 die letzten 100 Meter sind benutzungspflichtig	RW3; 11289,16423 11019,16465
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -4104,10 +4098,9 @@ die letzten 100 Meter sind benutzungspflichtig	RW3; 11289,16423 11019,16465
 #: XXX ^^^
 #: note: Wisbyer Str. Richtung Osten
 Grünmarkierung	RW3; 11019,16465 11289,16423 11397,16405 11448,16398 11470,16394 11542,16384 11632,16373
-Grünmarkierung	RW4; 11632,16373 11673,16367
-Grünmarkierung	RW4; 11673,16367 11727,16358 11750,16354 11808,16343 11829,16339 11889,16328
+Grünmarkierung	RW4; 11632,16373 11673,16367 11727,16358 11750,16354 11808,16343 11829,16339 11889,16328
 Grünmarkierung	RW3; 11889,16328 11936,16302 12012,16250
-Grünmarkierung	RW4; 12012,16250 12090,16199
+	RW4; 12012,16250 12090,16199
 # 
 #: by: Axel Stojenthin:
 #: confirmed_by: srt
@@ -4450,7 +4443,7 @@ Busspur ist immer gültig	RW5; 4861,5581 4900,5648
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.747915.php
 #: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/umstrittener-radweg-auf-dem-dahlemer-weg-wird-zum-modellprojekt-in-berlin_a185708 (Grünmarkierung Anfang 2019)
 #: priority: #D
-#: last_checked: 2019-08-04
+#: last_checked: 2019-08-08
 #: check_frequency: 90d
 	RW3;RW3 4963,5754 4982,5789 4998,5817 5018,5854 5048,5904 5083,5964 5091,5979 5099,5994 5137,6066 5165,6119 5219,6215 5244,6261 5269,6305 5312,6382
 asphaltiert	RW1; 5312,6382 5346,6443 5370,6486
@@ -4855,9 +4848,12 @@ Busspur gilt Mo-Fr 14-18 Uhr	RW5; 21187,15350 21228,15449 21242,15529
 	RW6;RW6 21927,15303 22043,15282
 	RW3;RW3 21918,13720 21853,13784 21831,13801 21737,13844 21677,13868
 	RW4;RW3 21677,13868 21615,13892
-	RW4?;RW3 21615,13892 21576,13898 21466,13903
-	RW4?;RW4? 21466,13903 21398,13906
-	RW;RW 21398,13906 21358,13909
+	RW3; 21466,13903 21576,13898 21615,13892
+#: note: ab hier nicht eindeutig, ob Suggestiv- oder Radstreifen
+	RW4; 21615,13892 21576,13898 21466,13903 21421,13905
+	RW1; 21421,13905 21398,13906
+	RW4?; 21398,13906 21421,13905 21466,13903
+	RW1;RW1 21398,13906 21358,13909
 	RW6;RW6 21573,12140 21581,12182 21570,12191 21575,12212 21589,12217 21608,12320 21655,12521 21642,12538 21651,12569 21666,12577 21710,12798 21729,12894 21765,13069
 	RW6;RW6 21710,12798 21866,12763 21893,12783 21900,12820 21880,12858 21729,12894
 	RW6;RW6 21666,12577 21674,12565 21671,12532 21655,12521
@@ -5267,7 +5263,7 @@ Grünmarkierung	RW3; 10838,14962 10884,14952
 #: by: https://www.infravelo.de/projekt/kastanienallee/ (1. Halbjahr 2019)
 #: XXX Grünmarkierung geplant vvv
 #: priority: #D vvv
-#: last_checked: 2019-07-23 vvv
+#: last_checked: 2019-08-06 vvv
 #: check_frequency: 60d vvv
 mit asphaltierten Straßenbahnkaps	RW3;RW3 11542,16070 11492,15993 11445,15920 11387,15827 11367,15793 11290,15669 11176,15489 11112,15387 10881,15047
 #: check_frequency ^^^
@@ -5569,7 +5565,7 @@ Gehweg für Radfahrer frei	RW1; 20474,14442 20611,14445 20657,14446 20727,14467 2
 	RW4; 1928,10728 1960,10710 1982,10697 2010,10651 2033,10613 2090,10576 2117,10495
 	RW2; 2033,10613 2010,10651 1982,10697 1960,10710 1928,10728
 #: XXX prüfen, ob die Suggestivstreifen Richtung Osten unbeschildert bleiben
-#: last_checked: 2019-07-07 (mapillary)
+#: last_checked: 2019-08-05
 #: check_frequency: 30d
 	RW4;RW3 11335,10375 11316,10372 11130,10326 11117,10326
 	RW4;RW4 11117,10326 10975,10334 10871,10322
@@ -5627,7 +5623,7 @@ Tempo 10	RW6;RW6 -7275,-357 -7300,-292 -7444,-100 -7460,-33
 #: note: nicht-offizielles Spielstraßenschild
 	RW6;RW6 17227,15054 17262,15056 17317,15059 17345,15061
 #: XXX wird hier noch ein Radwegschild aufgestellt?
-#: last_checked: 2019-07-23
+#: last_checked: 2019-08-06
 	RW3; 13330,13468 13228,13615 13225,13620 13166,13707 13100,13803 13037,13897 12975,13990
 	RW3; 12901,14093 12722,14232 12616,14315 12522,14385 12407,14470
 	RW3; 12522,14385 12616,14315 12722,14232 12901,14093 12975,13990 13037,13897 13100,13803 13166,13707 13225,13620 13228,13615
@@ -5711,7 +5707,7 @@ gemeinsamer Geh- und Radweg, Verbundsteinpflaster	RW2; 12336,5219 12507,5228
 	RW6;RW6 19316,951 19143,979
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-07-26
+#: last_checked: 2019-08-05
 #: next_check: 2019-12-20
 #: valid: 20190319-20191220
 	RW2; 14641,10552 14490,10610
@@ -5737,3 +5733,4 @@ gemeinsamer Geh- und Radweg	RW2; 20717,17516 20853,17528 20891,17572 20895,17594
 	RW6;RW6 22101,10985 22146,10995 22172,10996
 	RW6;RW6 22110,11107 22115,11082 22131,11084 22146,11086 22142,11116
 	RW6;RW6 22131,11084 22137,11033 22146,10995
+	RW3; 15724,6229 15765,6212

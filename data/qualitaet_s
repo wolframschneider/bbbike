@@ -447,7 +447,9 @@ Königsweg: Asphalt	Q0 -1082,2140 -1278,2034 -1296,2025
 Königsweg: Asphalt	Q0 -1296,2025 -1309,2017 -1591,1861 -1650,1826 -1724,1785 -1805,1740 -1889,1693 -1950,1659 -2043,1608 -2602,1291
 Sonntagstr.: Kopfsteinpflaster	Q2 14460,11455 14453,11439 14535,11327 14598,11245 14669,11152 14752,11041
 Ostkreuz: Asphalt	Q0 14808,10978 14851,10966
-Simplonstr.: Kopfsteinpflaster	Q2 13996,11631 13992,11605 14031,11569 14049,11553 14099,11505 14181,11434 14254,11377 14328,11320 14369,11287 14400,11261 14468,11203
+Simplonstr.: Kopfsteinpflaster	Q2 13996,11631 13992,11605 14031,11569 14049,11553 14099,11505 14181,11434 14254,11377 14328,11320
+Simplonstr.: Kopfsteinpflaster	Q2 14328,11320 14369,11287
+Simplonstr.: Kopfsteinpflaster	Q2 14369,11287 14400,11261 14468,11203
 Simplonstr.: Asphalt	Q0 14468,11203 14531,11142
 Simplonstr.: Kopfsteinpflaster	Q2 14531,11142 14605,11078 14639,11051 14682,11037 14712,11039 14752,11041
 Helenenhof: kleinteiliges Pflaster	Q1 14506,11275 14395,11356
@@ -571,7 +573,8 @@ Görlitzer Park: Asphalt	Q0 12983,10000 12960,9955
 Görlitzer Park: Kleinsteinpflaster	Q1 12960,9955 12932,9900
 Görlitzer Park: fester sandiger Weg	Q1 12509,10189 12502,10244
 Zur Eisenbahnbrücke: gutes Kopfsteinpflaster	Q1 13302,9894 13259,9870 13207,9868
-Bahndamm: fester Sandweg, teilweise mit Schotter	Q1 13141,9911 13146,9903 13207,9868 13282,9828 13476,9720 13934,9365 13966,9340
+Bahndamm: fester Sandweg, teilweise mit Schotter, Unebenheiten	Q2 13141,9911 13146,9903 13207,9868 13282,9828
+Bahndamm: fester Sandweg, teilweise mit Schotter	Q1 13282,9828 13476,9720 13934,9365 13966,9340
 Tiergartenufer: Parkweg	Q1 6186,11466 6079,11524 5919,11633 5895,11692 5835,11768 5736,11835 5543,11837 5478,11860
 (Lichtensteinallee - Tiergartenufer): Parkweg	Q2 6289,11440 6186,11466
 Rosa-Luxemburg-Steg: Holzbohlen	Q1 6289,11440 6247,11390
@@ -1412,10 +1415,11 @@ Selkestr.: Kopfsteinpflaster	Q2 12685,7497 12703,7370
 (Kynaststr. - Paul-und-Paula-Ufer): Parkweg	Q1 14797,10476 14820,10473 14861,10467
 Speicherkai: Kleinsteinpflaster	Q1 15311,10127 15306,10142 15253,10171
 Speicherkai: Betonpflaster	Q0 15253,10171 15199,10211 15134,10243 15101,10263
-Flaschenkai: Parkweg	Q1 15101,10263 15044,10297 14977,10348 14892,10411
+Flaschenkai: Parkweg bzw. Betonpflaster	Q0 15101,10263 15044,10297 14977,10348 14892,10411
 Flaschenkai: Beton	Q0 14892,10411 14864,10451 14861,10467 14884,10497
 Paul-und-Paula-Ufer: Asphalt	Q0 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15145,10636 15200,10600
-Uferweg: Parkweg	Q1 15311,10127 15289,10097 15289,10092 15283,10087 15260,10048 15295,10022 15296,10000 15347,9922
+Uferweg: Parkweg	Q1 15311,10127 15289,10097 15289,10092 15283,10087 15260,10048
+Uferweg: Parkweg	Q1 15260,10048 15295,10022 15296,10000 15347,9922
 Uferweg: Beton	Q0 15347,9922 15465,9860 15561,9809 15626,9710
 (Dora-Benjamin-Park - Spreeufer): Parkweg	Q1 14702,10020 14690,9993
 Untere Kynaststr.: asphaltiert	Q0 14805,10518 14815,10516 14832,10512 14828,10561 14843,10621 14882,10732 14904,10812
@@ -1701,7 +1705,8 @@ An der Malche: fester Waldweg	Q1 1106,20424 1032,20580 895,20523 834,20610 625,2
 Avenue Jean Mermoz: asphaltiert	Q0 3319,18043 3248,17921 3213,17858 3159,17780 3080,17634
 Am Friedhof: mäßiger Asphalt	Q1 6380,17836 6376,17687 6347,17381
 Soldiner Str.: Kopfsteinpflaster	Q2 8449,17196 8539,17197 8561,17198 8677,17154
-Soldiner Str.: Asphalt	Q0 8677,17154 8866,17075 8904,17059 9082,16982
+Soldiner Str.: Asphalt, leichte Schäden	Q0 8677,17154 8866,17075 8904,17059
+Soldiner Str.: neu gemachter Asphalt	Q0 8904,17059 9082,16982
 Soldiner Str.: mäßiges Kopfsteinpflaster	Q2 9082,16982 9299,16889 9435,16832 9579,16770 9611,16741
 Grüntaler Str. - Esplanade: Asphalt	Q0 9778,16915 9846,16981 9880,16994 9980,16973 10013,16972
 Kolonie: Gehwegplatten	Q1 10190,16930 10209,16674
@@ -7583,6 +7588,8 @@ Jülicher Str.: Asphalt	Q0 9514,16603 9498,16480 9487,16395 9475,16307 9474,16297
 (Treptower Park): Asphalt	Q0 14955,9294 14898,9364 14889,9381 14879,9433
 (Treptower Park): Asphalt	Q0 15159,8934 15223,8893 15235,8841 15298,8781 15335,8714 15378,8668
 (Treptower Park): unbefestigter Weg, teilweise grober Schotter	Q3 15335,8714 15254,8735 15036,8728 14949,8773 14918,8813 14854,8964
+(Treptower Park - Karpfenteichstr.): Asphalt	Q1 14918,8813 14883,8823
+(Treptower Park - Karpfenteichstr.): Kopfsteinpflaster	Q2 14883,8823 14852,8799
 (Treptower Park): Asphalt	Q0 15181,8967 15245,8916
 Florentinestr.: Asphalt	Q0 16633,20174 16728,20189
 (Florentinestr., Verlängerung): wassergebundene Decke	Q1 16728,20189 17050,20298
@@ -9012,9 +9019,9 @@ Krugpfuhlweg: Schotterstraße	Q2 11817,22519 11178,22999 11025,23111
 Edith-Stein-Str.: Verbundsteinpflaster	Q1 14089,13247 14035,13104
 (Park am Gleisdreieck - Flaschenhalspark): Beton	Q0 8338,9593 8339,9560
 Gärtnerstr.: Fahrbahn mit Kopfsteinpflaster, asphaltierter Nebenweg existiert	Q0 5332,3696 5364,3605 5370,3587 5468,3302
+Bäkepark: Schotterweg	Q2 5131,4207 5161,4206 5239,4175 5282,4145
 Bäkepark: wassergebundene Decke, etwas Schotter	Q1 5225,4095 5184,4161
 Bäkepark: Asphalt	Q0 5184,4161 5131,4207 5097,4221 5063,4266
-Bäkepark: Schotterweg	Q2 5131,4207 5161,4206 5239,4175 5282,4145
 (Ehrenbergstr. - ehem. Osthafen): Kopfsteinpflaster	Q2 13596,10722 13582,10702
 (Ehrenbergstr. - ehem. Osthafen): Kopfsteinpflaster	Q2 13582,10702 13542,10695
 (Ehrenbergstr. - ehem. Osthafen): Beton mit Schienen	Q2 13542,10695 13531,10673
@@ -9122,8 +9129,6 @@ Marzahner Chaussee [Wohngebiet]: Asphalt	Q0 18417,11854 18482,11849 18578,11881
 An der Hansekogge: Verbundsteinpflaster	Q1 18702,11921 18888,11910 18913,11909
 Treptower Park: Kleinsteinpflaster	Q1 15623,9028 15633,9007 15630,8979 15623,8949
 Treptower Park: wassergebundene Decke	Q1 15623,8949 15617,8924 15608,8882 15591,8848
-(Treptower Park - Karpfenteichstr.): Asphalt	Q1 14918,8813 14883,8823
-(Treptower Park - Karpfenteichstr.): Kopfsteinpflaster	Q2 14883,8823 14852,8799
 (Wasserweg - Treptower Park): wassergebundene Decke	Q1 15680,8914 15617,8924
 (S-Bahnhof - Treptower Hafen): Mosaikpflaster	Q1 14404,9847 14466,9861 14488,9848
 Abteibrücke: Kleinsteinpflaster	Q1 15630,8979 15658,9007
@@ -11951,7 +11956,7 @@ Donizettistr.: guter Asphalt	Q0 24727,12027 24936,12071 25072,12107 25161,12128 
 An der Schule: schlechtes Kopfsteinpflaster	Q3 24716,12081 24727,12027 24739,11968 24747,11929
 An der Schule: guter Beton	Q0 24747,11929 24769,11819
 An der Schule: unbefestigte Straße	Q2 24769,11819 24759,11666 24751,11631
-An der Schule: Asphalt	Q0 24751,11631 24749,11564 24747,11524 24788,11333 24803,11316 24801,11261
+An der Schule: Asphalt	Q0 24751,11631 24747,11524 24788,11333 24803,11316 24801,11261
 Fritz-Reuter-Str.: guter Asphalt	Q0 24739,11968 24575,11932
 Tiniusstr.: guter Asphalt	Q0 12555,18375 11984,18650
 Hannemannstr.: Asphalt	Q0 12789,5402 12841,5416 13011,5455 13075,5470 13158,5490 13265,5519
@@ -16575,7 +16580,7 @@ Hanns-Eisler-Str.: einige Löcher im Asphalt	Q0 13614,15095 13692,15231
 (Parkweg Bäkepark): Verbundsteinpflaster	Q1 4870,4609 4848,4668 4806,4772
 (Parkweg Bäkepark): wassergebundene Decke	Q1 4806,4772 4795,4801 4760,4843 4742,4885
 Oberlinstr.: Asphalt	Q1 4742,4885 4732,4939 4846,5069
-(Oberlinstr. - Wolfensteindamm): sandig	Q2 4732,4939 4692,4997
+(Oberlinstr. - Wolfensteindamm): unbefestigter Weg	Q2 4732,4939 4692,4997
 (Gehweg Gélieustr. - Wolfensteindamm): gepflastert	Q1 4725,4876 4675,4983
 (Parkweg Schloßpark Lichterfelde): wassergebundene Decke	Q1 4603,3704 4611,3705 4617,3706 4657,3711 4694,3702 4723,3681 4754,3651 4815,3615 4858,3613 4910,3599
 Krahmerstr.: Asphalt	Q0 4566,3461 4765,3401
