@@ -21091,25 +21091,25 @@ EOF
 	q4::inwork; 9275,4672 9405,4667 9494,4658 9695,4638 10010,4606
 EOF
      },
-     { from  => $isodate2epoch->("2018-09-10 06:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-09-12 06:00:00"), #
+     { from  => $isodate2epoch->("2019-09-23 06:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-09-25 06:00:00"), #
        periodic => 1,
        recurrences => [['yearly', days => 10, months => 9]],
-       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, voraussichtlich ab 10.09.2018',
+       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen des Marathons gesperrt, voraussichtlich ab 23.09.2019',
        type  => 'gesperrt',
        data  => <<EOF,
-#: tempex: 20160920T0600-20160922T0600 vvv
+# REMOVED --- #: tempex: 20160920T0600-20160922T0600 vvv
 	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
 	3::temp 8391,12389 8344,12221 8327,12174
 	3::temp 8327,12174 8344,12221 8391,12389
-#: tempex ^^^
+# REMOVED --- #: tempex ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2018-09-12 06:00:00"),
-       until => $isodate2epoch->("2018-09-17 06:00:00"),
+     { from  => $isodate2epoch->("2019-09-13 06:00:00"),
+       until => $isodate2epoch->("2019-09-30 06:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 12, months => 9]],
-       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, und einige Wege im Tiergarten, voraussichtlich bis 17.09.2018',
+       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, und einige Wege im Tiergarten, voraussichtlich bis 30.09.2019',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: tempex: 20160922T0600-T20160926T0600 vvv
@@ -24829,7 +24829,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.367062.php',
        data  => <<EOF,
-	2::inwork -4546,9381 -4506,9395 -4460,9456 -4442,9625 -4536,9800 -4585,9836 -4619,9867 -4631,10046 -4625,10139 -4650,10180 -4552,10185 -4514,10201 -4445,10379 -4413,10447 -4387,10496 -4302,10584 -4223,10671 -4223,10714 -4284,10834 -4292,10888 -4266,11008 -4264,11117
+	2::inwork -4546,9381 -4506,9395 -4460,9456 -4442,9625 -4536,9800 -4585,9836 -4619,9867 -4631,10046 -4625,10139 -4650,10180 -4630,10204 -4514,10201 -4445,10379 -4413,10447 -4387,10496 -4302,10584 -4223,10671 -4223,10714 -4284,10834 -4292,10888 -4266,11008 -4264,11117
 EOF
      },
      { from  => 1442786400, # 2015-09-21 00:00
@@ -26466,7 +26466,7 @@ EOF
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-07-23
+#: last_checked: 2019-08-13
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -27823,7 +27823,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-08-02
+#: last_checked: 2019-08-12
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28408,7 +28408,7 @@ EOF
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/schiffbauerdammbruecke/index.shtml
 #: XXX wann werden die Bauarbeiten beendet? vvv
 #: note: laut fritz bis 31.03.2020
-#: last_checked: 2019-07-26 vvv
+#: last_checked: 2019-08-10 vvv
 #: next_check: 2020-03-31 vvv
 #: source_id: 2147344480
 # REMOVED (ja, aber Gehweg ist noch frei) --- #: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
@@ -29428,7 +29428,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # until => $isodate2epoch->("2019-07-31 18:00:00"), # undef, # XXX
+       until => 1565723082, # undef, # until => $isodate2epoch->("2019-07-31 18:00:00"), # undef, # XXX
        text  => 'Regattastr.: Fahrbahn und Bürgersteige zwischen Büxensteinallee und Libboldallee gesperrt, bis Ende Juli 2019, vielleicht auch länger',
        type  => 'gesperrt',
        source_id => '2147344495', # bis Ende Juli 2019, seit ca. 2019-07-26/27 aber gelöscht
@@ -29440,10 +29440,9 @@ EOF
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.834736.php (Aufhebung der Sperrung am 09.08.2019)
 #: by: https://www.berliner-woche.de/gruenau/c-bauen/bei-abbrucharbeiten-wurden-festlegungen-der-denkmalschutzbehoerde-ignoriert_a226579
 #: by: https://www.abendblatt-berlin.de/2019/08/08/gruenauer-gesellschaftshaus-schneller-teilabriss-wirft-fragen-auf/
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.836695.php
 #: source_id: 2147344541 (bis auf Weiteres)
-#: also_indoor: traffic (H)
-#: XXX bei fritz "bis auf Weiteres"
-#: next_check: 2019-08-09
+# REMOVED (offen) --- #: also_indoor: traffic (H) --- #: XXX bei fritz "bis auf Weiteres" --- #: next_check: 2019-08-09
 	2::inwork 22821,1086 22766,1226
 EOF
      },
@@ -29512,8 +29511,8 @@ EOF
 EOF
      },
      { from  => 1564524000, # 2019-07-31 00:00
-       until => 1565704800, # 2019-08-13 16:00
-       text  => 'Lynarstr.: Richtung Koenigsallee zwischen Bismarckallee und Koenigsallee Bauarbeiten, Straße gesperrt, evtl. sind auch Radfahrer betroffen, ab 01.08.2019 06:00 bis 13.08.2019 ca. 16:00 Uhr',
+       until => $isodate2epoch->("2019-08-15 16:00:00"), # 1565704800, # 2019-08-13 16:00
+       text  => 'Lynarstr.: Richtung Koenigsallee zwischen Bismarckallee und Koenigsallee Bauarbeiten, Straße gesperrt, evtl. sind auch Radfahrer betroffen, ab 01.08.2019 06:00 bis 15.08.2019 ca. 16:00 Uhr',
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_177510_LMS-BR_72',
        data  => <<EOF,
@@ -29553,7 +29552,7 @@ EOF
 #: by: srt, Thomas Gries
 #: also_indoor: traffic
 #: XXX Wann werden die Bauarbeiten beendet? vvv
-#: last_checked: 2019-08-04 vvv
+#: last_checked: 2019-08-11 vvv
 	q3::inwork 5636,7734 5630,7875 5631,8011
 	q3::inwork 5630,7875 5517,7869
 #: last_checked ^^^
@@ -29578,6 +29577,33 @@ EOF
        source_id => '196900418',
        data  => <<EOF,
 	2::inwork -8575,-9351 -8622,-9215
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Schlosspark Sacrow: Wege sind nur zwischen 8 Uhr bis zum Einbruch der Dunkelheit geöffnet',
+       type  => 'gesperrt',
+       recurring => 1,
+       data  => <<EOF,
+#: tempex: sunset-T08 vvv
+	2::night -10087,1952 -10205,1923 -10285,1845 -10339,1714 -10426,1724 -10620,1731 -10783,1840
+	2::night -10426,1995 -10426,1724
+	2::night -10489,2151 -10485,2133 -10464,2108 -10450,2062 -10442,2038
+	2::night -10442,2038 -10448,2026 -10445,2003 -10426,1995 -10407,2005 -10405,2030 -10413,2039 -10442,2038
+#: tempex ^^^
+EOF
+     },
+     { from  => undef, # 
+       until => 1609455599, # 2020-12-31 23:59
+       text  => 'Altslandsberger Chaussee (Eggersdorf): Fahrbahn wegen Bauarbeiten gesperrt, voraussichtlich bis Ende 2019',
+       type  => 'handicap',
+       source_id => 'LS/721-F/18/135',
+       data  => <<EOF,
+#: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
+#: by: osm
+#: osm_watch: way id="59994277" version="11" brb
+#: source_id: LS/721-F/18/135
+	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
 EOF
      },
     );
