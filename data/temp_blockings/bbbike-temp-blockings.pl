@@ -2960,7 +2960,7 @@ EOF
        text  => 'L 75; (Karl-Marx-Str.); OD Großziethen Straßenbauarbeiten Vollsperrung 06.09.2005-30.11.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13046,662 12986,1001 12984,1011
+	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13046,662 13025,781 13016,833 13013,850 13004,898 12999,927 12996,946 12986,1001 12984,1011
 EOF
      },
      { from  => 1128290400, # 2005-10-03 00:00
@@ -4109,7 +4109,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_003887',
        data  => <<EOF,
-	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13046,662 12986,1001 12984,1011
+	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13046,662 13025,781 13016,833 13013,850 13004,898 12999,927 12996,946 12986,1001 12984,1011
 EOF
      },
      { from  => 1143928800, # 2006-04-02 00:00
@@ -5756,7 +5756,7 @@ EOF
        text  => 'L 075 Karl-Marx-Str. OD Großziehten Straßenbauarbeiten Vollsperrung 24.11.2006-22.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13046,662 12986,1001 12984,1011
+	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13046,662 13025,781 13016,833 13013,850 13004,898 12999,927 12996,946 12986,1001 12984,1011
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -7283,7 +7283,7 @@ EOF
        text  => 'L 075 Karl-Marx-Str. OD Großziethen, nördl. Attilastr.- Landesgrenze Berlin, Buckower Damm Straßen- und Kanalbau Vollsperrung 05.03.2007-20.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 12984,1011 12986,1001 13046,662 13124,216
+	2::inwork 12984,1011 12986,1001 12996,946 12999,927 13004,898 13013,850 13016,833 13025,781 13046,662 13124,216
 EOF
      },
      { from  => 1173308400, # 2007-03-08 00:00
@@ -12209,7 +12209,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009449',
        data  => <<EOF,
-	1::inwork 13078,15586 12962,15480 12870,15342
+	1::inwork 13078,15586 12962,15480 12908,15398 12870,15342
 EOF
      },
      { from  => 1216591200, # 2008-07-21 00:00
@@ -16436,11 +16436,11 @@ EOF
 	2::temp 8424,12853 8309,12758 8306,12609
 EOF
      },
-     { from  => $isodate2epoch->("2018-09-15 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-09-16 20:00:00"),
+     { from  => $isodate2epoch->("2019-09-14 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-09-15 20:00:00"),
        periodic => 1,
-       recurrences => [['yearly', days => 15, months => 9]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (15.09.2018 bis 16.09.2018) ',
+       recurrences => [['yearly', days => 14, months => 9]],
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (14.09.2019 bis 15.09.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: note: by: http://www.family-and-friends-ev.de/ (update.pl bekommt hier aber einen Fehler)
@@ -20068,13 +20068,13 @@ EOF
 	2::inwork 872,24330 865,24114 793,24070 736,24068 601,24192 237,24374 195,24389 160,24390 132,24390 78,24364 -406,23934
 EOF
      },
-     { from  => $isodate2epoch->("2018-09-13 00:00:00"), # PERIODISCH, ca. 2. Wochenende im September
-       until => $isodate2epoch->("2018-09-16 23:59:59"),
+     { from  => $isodate2epoch->("2019-09-12 00:00:00"), # PERIODISCH, ca. 2. Wochenende im September
+       until => $isodate2epoch->("2019-09-15 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 13, months => 9]],
-       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 14.09.2018 bis 16.09.2018',
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 13.09.2019 bis 15.09.2019',
        type  => 'handicap',
-       source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2018',
+       source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2019',
        data  => <<EOF,
 	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
 EOF
@@ -20784,7 +20784,7 @@ EOF
        # ebenfalls: ein telefonischer Hinweis
        source_id => 'http://www.s-bahn-berlin.de/aktuell/2012/144_s8.htm',
        data  => <<EOF,
-	2::inwork 13429,22943 13521,23057
+	2::inwork 13427,22935 13521,23057
 EOF
      },
      { from  => 1342130400, # 2012-07-13 00:00
@@ -22717,15 +22717,16 @@ EOF
 	2::inwork 2219,11324 2180,11318 2102,11307
 EOF
      },
-     { from  => $isodate2epoch->("2018-09-06 15:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-09-09 22:00:00"),
+     { from  => $isodate2epoch->("2019-09-12 15:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-09-15 22:00:00"),
        periodic => 1, # erster Termin im Jahr
        #recurrences => [["yearly", days => 9, months => 5]], # wechselnde Termine, kann auch erst Mitte September passieren
        recurrence_prewarn_days => 14,
        recurrences => [["yearly", days => 1, months => 9]],
-       text  => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 7.9.2018 15 Uhr bis 9.9.2018 22 Uhr',
+       # früher: Fest der Nationen
+       text  => 'Prager Platz: Veranstaltung "Fest der Vielfalt", Durchfahrt nicht möglich, vom 13.9.2019 15 Uhr bis 15.9.2019 22 Uhr',
        type  => 'gesperrt',
-       source_id => 'http://bigland.de/event/7-9-9-2018-fest-der-nationen/',
+       source_id => 'http://www.partnerschaftsverein-charlottenburg.de/05-Termine/05.html',
        data  => <<EOF,
 #: note: kein tempex-Ausdruck möglich
 	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
@@ -23505,18 +23506,23 @@ EOF
 	q4::inwork; 16514,15092 16430,15168
 EOF
      },
-     { from  => $isodate2epoch->("2019-08-15 14:00:00"), # 1 Tag Vorlauf
+     { from  => $isodate2epoch->("2019-08-14 14:00:00"), # 1 Tag Vorlauf (2019 ein paar Tage früher?)
        until => $isodate2epoch->("2019-08-18 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 15, months => 8]],
-       text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 16.8.2019 bis 18.8.2019',
+       text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Sperrungen ab 14.8.2919 bis 18.8.2019 möglich',
        type  => 'gesperrt',
        source_id => 'http://www.winzerfest-köpenick.de/',
        data  => <<EOF,
-#: tempex: (YYYY08 & fr-2) - +2d vvv
+# REMOVED --- #: tempex: (YYYY08 & fr-2) - +2d vvv
 	2::temp 22138,4642 22111,4562 22093,4499
 	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
-#: tempex ^^^
+	2::temp 22144,4660 22212,4655 22284,4653 22355,4660
+	2::temp 22212,4655 22214,4548
+	2::temp 22111,4562 22162,4546 22214,4548 22324,4586
+	2::temp 22314,4604 22355,4660 22365,4676 22395,4678
+	2::temp 22175,4730 22246,4711
+# REMOVED --- #: tempex ^^^
 EOF
      },
      { from  => 1409436000, # 2014-08-31 00:00
@@ -26466,7 +26472,7 @@ EOF
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-08-13
+#: last_checked: 2019-08-15
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -27598,8 +27604,8 @@ EOF
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2019-06-30 (mapillary)
-#: next_check: 2019-08-16
+#: last_checked: 2019-08-14
+#: next_check: 2019-08-19
 	q4::inwork 13391,16436 13630,16629
 EOF
      },
@@ -27813,7 +27819,7 @@ EOF
 #: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
 #: note: Gesamtbaumaßnahme bis 31.12.2023
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: note: zuletzt geprüft: 2019-01-12
+#: note: zuletzt geprüft: 2019-08-19
 	q4::inwork; 5076,10658 5047,10381
 EOF
      },
@@ -27823,7 +27829,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-08-12
+#: last_checked: 2019-08-16
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28211,7 +28217,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-08-09 vvv
+#: last_checked: 2019-08-15 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
@@ -28569,12 +28575,15 @@ EOF
 EOF
      },
      { from  => 1544338800, # 2018-12-09 08:00
-       until => $isodate2epoch->("2019-08-17 18:00:00"), # 1561996800, # 2019-07-01 18:00
-       text  => 'Tegeler Str.: Fahrbahn zwischen Lynarstr. und Fennstr. Richtung Südosten gesperrt, Radfahrer dürfen den Gehweg benutzen, voraussichtlich bis Mitte August 2019',
+       until => $isodate2epoch->("2019-09-07 18:00:00"), # 1561996800, # 2019-07-01 18:00
+# REMOVED ---       text  => 'Tegeler Str.: Fahrbahn zwischen Lynarstr. und Fennstr. Richtung Südosten gesperrt, Radfahrer dürfen den Gehweg benutzen, voraussichtlich bis Mitte September 2019',
+       text  => 'Lynarstr.: Fahrbahn an der Tegeler Str. gesperrt, auf Gehweg ausweichen, voraussichtlich bis Mitte September 2019',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: 2147343528
-	q3::inwork; 7263,14873 7458,14643
+#: source_id: 2147343528 (bis Mitte September 2019)
+#: note: bei fritz in beiden Richtungen gesperrt?
+# REMOVED (sogar Autos dürfen in beide Richtungen fahren) ---	q3::inwork; 7263,14873 7458,14643
+	q3::inwork 7263,14873 7432,14969
 EOF
      },
      { from  => 1544425200, # 2018-12-10 08:00
@@ -28704,8 +28713,8 @@ EOF
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic (H,G)
 #: priority: #A
-#: last_checked: 2019-08-04 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2019-08-19 (fast fertig) vvv
+#: check_frequency: 2d vvv
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 #: check_frequency ^^^
@@ -28883,6 +28892,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8389 (Frage)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: add_fragezeichen: wann wird der Weg wieder offen sein?
 #: osm_watch: way id="8655276" version="17"
 #: last_checked: 2019-05-04
@@ -29146,7 +29156,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (G)
-#: last_checked: 2019-07-31
+#: last_checked: 2019-08-18
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 EOF
@@ -29550,11 +29560,15 @@ EOF
        data  => <<EOF,
 #: XXX_prog: eigentlich q3+
 #: by: srt, Thomas Gries
+#: by: https://www.berliner-woche.de/friedenau/c-verkehr/regelung-des-fuss-und-radverkehrs-erst-nach-elf-tagen_a227446 (Änderungen)
 #: also_indoor: traffic
 #: XXX Wann werden die Bauarbeiten beendet? vvv
 #: last_checked: 2019-08-11 vvv
-	q3::inwork 5636,7734 5630,7875 5631,8011
-	q3::inwork 5630,7875 5517,7869
+#: note: hier gibt's mittlerweile auch Drängelgitter
+	q4::inwork 5636,7734 5630,7875
+# REMOVED ---	q3::inwork 5630,7875 5631,8011
+#: note: hier mittlerweile offizielle Wegführung auf dem Gehweg
+	q2::inwork 5630,7875 5517,7869
 #: last_checked ^^^
 #: XXX ^^^
 EOF
@@ -29604,6 +29618,46 @@ EOF
 #: osm_watch: way id="59994277" version="11" brb
 #: source_id: LS/721-F/18/135
 	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
+EOF
+     },
+     { from  => 1567288800, # 2019-09-01 00:00
+       until => 1575154800, # 2019-12-01 00:00
+       text  => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, voraussichtlich vom 02.09.2019 bis 30.11.2019 ',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.837476.php',
+       data  => <<EOF,
+#: next_check_id: PLAENTERWALDUFERWEG-2019
+	2::inwork 16627,8581 16657,8443 16696,8174 16624,7833 16655,7572 16673,7511
+EOF
+     },
+     { from  => 1565979427, # 2019-08-16 20:17
+       until => 1570226400, # 2019-10-05 00:00
+       text  => 'Römerweg: zwischen Treskowallee und Rudolf-Grosse-Str. gesperrt, evtl. sind auch Radfahrer betroffen, bis voraussichtlich 04.10.2019',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: fritz
+	q4::inwork 18823,9708 18994,9707 19042,9708 19141,9709
+EOF
+     },
+     { from  => undef, # 
+       until => 1596211200, # 2020-07-31 18:00
+       text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, bis Juli 2020',
+       type  => 'gesperrt',
+       source_id => '2147344558',
+       data  => <<EOF,
+	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Ortolfstr.: zwischen Wegedornstr. und Wolfmarsteig Fahrbahn gesperrt (geplatzte Wasserleitung), Radfahrer sollen absteigen',
+       type  => 'handicap',
+       source_id => 'LMS-BR_r_LMS-BR_179534_LMS-BR_72',
+       data  => <<EOF,
+#: by: https://twitter.com/VIZ_Berlin/status/1163439012134182912
+#: XXX bis wann ist die Straße gesperrt?
+#: next_check: 2019-09-19
+	q4::inwork 19625,884 19651,956
 EOF
      },
     );

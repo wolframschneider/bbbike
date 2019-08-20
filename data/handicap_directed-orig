@@ -188,7 +188,7 @@ Universitätsstr. - Unter den Linden: zunächst linken Gehweg bis zur Überquerungs
 #: next_check_id: KLEISTSTR-2018
 #: source_id: 2147342237
 #: source_id: LMS-BR_r_LMS-BR_123000_LMS-BR_72
-#: last_checked: 2019-08-04 vvv
+#: last_checked: 2019-08-19 vvv
 #: check_frequency: 90d vvv
 #: valid: -20200101 vvv
 # REMOVED --- Bayreuther Str.: Tunnelsanierung am Wittenbergplatz	DH:h=q4,30 6302,10462 6353,10583 6380,10704
@@ -342,7 +342,7 @@ Südliche Blumberger-Damm-Brücke: Radfahrer müssen auf den gegenüberliegenden Rad
 #: last_checked ^^^
 # 
 #: next_check_id: LOEFFELBRUECKE-2019
-#: last_checked: 2019-07-05 (mapillary) vvv
+#: last_checked: 2019-08-14 vvv
 #: next_check: 2019-11-01 vvv
 Pasewalker -> Prenzlauer Promenade	DH:len=85:tl 11911,19667 11915,19580 11942,19567
 Galenusstr. -> Prenzlauer Promenade	DH:len=85:tl 11698,19489 11915,19580 11942,19567
@@ -358,7 +358,7 @@ Eisenhutweg: Radfahrer müssen vom linken Zweirichtungsradweg wieder auf die ande
 # 
 #: next_check_id: TRESKOWALLEE-2019
 #: source_id: 2147343744
-#: last_checked: 2019-07-20 vvv
+#: last_checked: 2019-08-17 (mapillary) vvv
 # REMOVED (existiert nicht mehr) --- Treskowallee: Umleitungsstrecke für Radfahrer	DH:len=120:h=q1,120 18406,7760 18577,8033 18633,8126 18657,8163
 Treskowallee -> Ehrlichstr.: Umweg für Radfahrer	DH:len=40:h=q3,40 18657,8163 18672,8238 18615,8269
 #: last_checked ^^^
@@ -368,7 +368,7 @@ Treskowallee -> Ehrlichstr.: Umweg für Radfahrer	DH:len=40:h=q3,40 18657,8163 18
 Treskowallee: Umweg in Höhe Am Carlsgarten	DH:len=80:h=q3,80 18672,8238 18704,8427 18731,8577 
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-08-12
+#: last_checked: 2019-08-18
 #: check_frequency: 14d
 Stralauer Allee: Umweg über Bödikerstr.	DH:len=50:h=q3,60 14558,10264 14405,10340 14222,10430
 # 

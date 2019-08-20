@@ -2188,7 +2188,26 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: note: by: http://www.family-and-friends-ev.de/ (update.pl bekommt hier aber einen Fehler)
+	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
+',
+         'from' => 1568451600,
+         'id' => 1910,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (14.09.2019 bis 15.09.2019)',
+         'type' => 'gesperrt',
+         'until' => 1568570400
+       },
        undef,
        undef,
        undef,
@@ -2712,7 +2731,26 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
+',
+         'from' => 1568239200,
+         'id' => 2285,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              13,
+                              'months',
+                              9
+                            ]
+                          ],
+         'source_id' => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2019',
+         'text' => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 13.09.2019 bis 15.09.2019',
+         'type' => 'handicap',
+         'until' => 1568584799
+       },
        undef,
        undef,
        undef,
@@ -3273,7 +3311,28 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: note: kein tempex-Ausdruck möglich
+	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
+',
+         'from' => 1568293200,
+         'id' => 2533,
+         'periodic' => 1,
+         'recurrence_prewarn_days' => 14,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              9
+                            ]
+                          ],
+         'source_id' => 'http://www.partnerschaftsverein-charlottenburg.de/05-Termine/05.html',
+         'text' => 'Prager Platz: Veranstaltung "Fest der Vielfalt", Durchfahrt nicht möglich, vom 13.9.2019 15 Uhr bis 15.9.2019 22 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1568577600
+       },
        undef,
        undef,
        undef,
@@ -3371,29 +3430,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: (YYYY08 & fr-2) - +2d vvv
-	2::temp 22138,4642 22111,4562 22093,4499
-	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
-#: tempex ^^^
-',
-         'from' => 1565870400,
-         'id' => 2610,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              15,
-                              'months',
-                              8
-                            ]
-                          ],
-         'source_id' => 'http://www.winzerfest-köpenick.de/',
-         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 16.8.2019 bis 18.8.2019',
-         'type' => 'gesperrt',
-         'until' => 1566165599
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3823,7 +3860,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-08-13
+#: last_checked: 2019-08-15
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -4015,8 +4052,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2019-06-30 (mapillary)
-#: next_check: 2019-08-16
+#: last_checked: 2019-08-14
+#: next_check: 2019-08-19
 	q4::inwork 13391,16436 13630,16629
 ',
          'from' => undef,
@@ -4069,7 +4106,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
 #: note: Gesamtbaumaßnahme bis 31.12.2023
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: note: zuletzt geprüft: 2019-01-12
+#: note: zuletzt geprüft: 2019-08-19
 	q4::inwork; 5076,10658 5047,10381
 ',
          'from' => 1534629600,
@@ -4081,7 +4118,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-08-12
+#: last_checked: 2019-08-16
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4150,7 +4187,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-08-09 vvv
+#: last_checked: 2019-08-15 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
@@ -4251,14 +4288,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '#: source_id: 2147343528
-	q3::inwork; 7263,14873 7458,14643
+         'data' => '#: source_id: 2147343528 (bis Mitte September 2019)
+#: note: bei fritz in beiden Richtungen gesperrt?
+# REMOVED (sogar Autos dürfen in beide Richtungen fahren) ---	q3::inwork; 7263,14873 7458,14643
+	q3::inwork 7263,14873 7432,14969
 ',
          'from' => 1544338800,
          'id' => 3060,
-         'text' => 'Tegeler Str.: Fahrbahn zwischen Lynarstr. und Fennstr. Richtung Südosten gesperrt, Radfahrer dürfen den Gehweg benutzen, voraussichtlich bis Mitte August 2019',
+         'text' => 'Lynarstr.: Fahrbahn an der Tegeler Str. gesperrt, auf Gehweg ausweichen, voraussichtlich bis Mitte September 2019',
          'type' => 'handicap',
-         'until' => 1566057600
+         'until' => 1567872000
        },
        {
          'data' => '#: note: bei fritz allerdings "nur eine freie Spur", keine Sperrungen
@@ -4312,8 +4351,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic (H,G)
 #: priority: #A
-#: last_checked: 2019-08-04 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2019-08-19 (fast fertig) vvv
+#: check_frequency: 2d vvv
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 #: check_frequency ^^^
@@ -4379,6 +4418,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8389 (Frage)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: add_fragezeichen: wann wird der Weg wieder offen sein?
 #: osm_watch: way id="8655276" version="17"
 #: last_checked: 2019-05-04
@@ -4493,7 +4533,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: also_indoor: traffic (G)
-#: last_checked: 2019-07-31
+#: last_checked: 2019-08-18
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 ',
@@ -4673,16 +4713,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1573858799
        },
-       {
-         'data' => '	q4::inwork; 2074,9225 1937,9253
-',
-         'from' => 1564524000,
-         'id' => 3141,
-         'source_id' => 'LMS-BR_r_LMS-BR_177510_LMS-BR_72',
-         'text' => 'Lynarstr.: Richtung Koenigsallee zwischen Bismarckallee und Koenigsallee Bauarbeiten, Straße gesperrt, evtl. sind auch Radfahrer betroffen, ab 01.08.2019 06:00 bis 15.08.2019 ca. 16:00 Uhr',
-         'type' => 'handicap',
-         'until' => 1565877600
-       },
+       undef,
        undef,
        {
          'data' => '#: also_indoor: traffic (G)
@@ -4700,11 +4731,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX_prog: eigentlich q3+
 #: by: srt, Thomas Gries
+#: by: https://www.berliner-woche.de/friedenau/c-verkehr/regelung-des-fuss-und-radverkehrs-erst-nach-elf-tagen_a227446 (Änderungen)
 #: also_indoor: traffic
 #: XXX Wann werden die Bauarbeiten beendet? vvv
 #: last_checked: 2019-08-11 vvv
-	q3::inwork 5636,7734 5630,7875 5631,8011
-	q3::inwork 5630,7875 5517,7869
+#: note: hier gibt\'s mittlerweile auch Drängelgitter
+	q4::inwork 5636,7734 5630,7875
+# REMOVED ---	q3::inwork 5630,7875 5631,8011
+#: note: hier mittlerweile offizielle Wegführung auf dem Gehweg
+	q2::inwork 5630,7875 5517,7869
 #: last_checked ^^^
 #: XXX ^^^
 ',
@@ -4764,6 +4799,50 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Altslandsberger Chaussee (Eggersdorf): Fahrbahn wegen Bauarbeiten gesperrt, voraussichtlich bis Ende 2019',
          'type' => 'handicap',
          'until' => 1609455599
+       },
+       {
+         'data' => '#: next_check_id: PLAENTERWALDUFERWEG-2019
+	2::inwork 16627,8581 16657,8443 16696,8174 16624,7833 16655,7572 16673,7511
+',
+         'from' => 1567288800,
+         'id' => 3149,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.837476.php',
+         'text' => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, voraussichtlich vom 02.09.2019 bis 30.11.2019 ',
+         'type' => 'gesperrt',
+         'until' => 1575154800
+       },
+       {
+         'data' => '#: by: fritz
+	q4::inwork 18823,9708 18994,9707 19042,9708 19141,9709
+',
+         'from' => 1565979427,
+         'id' => 3150,
+         'text' => 'Römerweg: zwischen Treskowallee und Rudolf-Grosse-Str. gesperrt, evtl. sind auch Radfahrer betroffen, bis voraussichtlich 04.10.2019',
+         'type' => 'handicap',
+         'until' => 1570226400
+       },
+       {
+         'data' => '	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
+',
+         'from' => undef,
+         'id' => 3151,
+         'source_id' => '2147344558',
+         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, bis Juli 2020',
+         'type' => 'gesperrt',
+         'until' => 1596211200
+       },
+       {
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1163439012134182912
+#: XXX bis wann ist die Straße gesperrt?
+#: next_check: 2019-09-19
+	q4::inwork 19625,884 19651,956
+',
+         'from' => undef,
+         'id' => 3152,
+         'source_id' => 'LMS-BR_r_LMS-BR_179534_LMS-BR_72',
+         'text' => 'Ortolfstr.: zwischen Wegedornstr. und Wolfmarsteig Fahrbahn gesperrt (geplatzte Wasserleitung), Radfahrer sollen absteigen',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );

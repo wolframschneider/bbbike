@@ -1196,7 +1196,7 @@ Rosenfelder Str./Ring	1 17480,12003 17429,12030 17384,11976
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2017-03-16-prot-fahrratsitzung.pdf
 #: XXX evtl wird die Straße für Radfahrer geöffnet
 #: osm_watch: way id="31540773" version="12"
-#: last_checked: 2019-02-24
+#: last_checked: 2019-08-18
 #: check_frequency: 180d
 Fritz-Werner-Str.	1s:q3 9105,2779 9081,2594
 # 
@@ -1376,6 +1376,11 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 Bahnhofstr.	1s:q4 -8417,-2862 -8410,-2884
 ###################################################################### 
 # elsewhere in Brandenburg
+Ernst-Thälmann-Platz	1 13025,781 13062,768 13097,739 13119,687
+Friedrich-Ebert-Str.	1 13582,843 13513,1055 13453,1217 13450,1222
+Rudolf-Breitscheid-Str.	1 13708,1383 13710,1378 13712,1366 13763,1252 13811,1140 13857,1035 13918,891
+Grenzstr.	1 13453,1217 13337,1159 13242,1110
+Grenzstr.	1 13806,1431 13710,1378
 #: by: mapillary
 Spandau - Hennigsdorf	1 -3794,21804 -3686,21513 -3851,21487 -3794,21804
 #: by: mapillary
@@ -1643,7 +1648,7 @@ Urbanstr.: unbequem passierbarer Mittelstreifen (hohe Kanten)	3nocross 11274,949
 Aroser Allee: Mittelstreifen	3nocross 6689,17911 6711,17839 6739,17749
 #: by: ruth mantei:
 Buschkrugallee: Mittelstreifen mit hoher Kante	3nocross 13809,5257 13824,5204 13892,4955
-Buschkrugallee: Mittelstreifen mit hoher Kante	3nocross 14119,4153 14048,4363 14023,4475
+Buschkrugallee: Mittelstreifen mit hoher Kante	3nocross 14119,4153 14108,4175 14048,4363 14023,4475
 Buschkrugallee: Mittelstreifen mit hoher Kante	3nocross 13939,4778 13914,4877 13892,4955
 Landsberger Allee: Straßenbahntrasse	3nocross 12878,13229 12979,13280 13073,13329
 Hauptstr.: Straßenbahntrasse	3nocross 16004,10204 16114,10123 16138,10105 16187,10033 16261,9925 16302,9865
@@ -1823,7 +1828,6 @@ Leipziger Str.: unbequem passierbarer Mittelstreifen	3nocross 9701,11656 9905,11
 #Landsberger Allee: Mittelstreifen	3nocross 13089,13323 13161,13360 13241,13405 13330,13468
 Greifswalder Str.: Mittelstreifen mit Straßenbahn	3nocross 12177,14335 12188,14350 12228,14404 12266,14460 12317,14535
 Greifswalder Str.: Mittelstreifen mit Straßenbahn	3nocross 12422,14692 12473,14763 12528,14845 12547,14873 12584,14928
-Greifswalder Str.: Mittelstreifen mit Straßenbahn	3nocross 12584,14928 12620,14979 12709,15112
 Greifswalder Str.: Mittelstreifen mit Straßenbahn	3nocross 12709,15112 12737,15154 12870,15342
 #: note: Fußgängerfurt existiert zwischen Chodowieckistr. und Jablonskistr.:
 Prenzlauer Allee: Mittelstreifen mit Straßenbahn	3nocross 11633,14631 11655,14697 11682,14777
@@ -2076,7 +2080,7 @@ tragen bzw. steile Rampe benutzen	0:30 1523,13377
 tragen (7+9 Stufen)	0:25 -3513,13800
 tragen (7 Stufen)	0:14 -4744,14392
 # REMOVED (Weg gibt's nicht (mehr?)) --- tragen (2 Stufen)	0:5 12572,14836
-tragen (1 Stufe)	0:5 12632,14956
+# REMOVED (Stufe existiert nicht mehr) --- tragen (1 Stufe)	0:5 12632,14956
 tragen (3+5 Stufen)	0:15 9366,6150
 tragen (3+3+2+2 Stufen)	0:20 9244,3872
 # REMOVED (Rampe existiert) --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130116.0915.380245.html --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4276 --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130722.1530.387208.html --- #: XXX hier entsteht bis voraussichtlich Oktober 2013 eine Rampe (klappt wahrscheinlich nicht mit dem Termin) --- #: last_checked: 2013-12-14 --- #: check_frequency: 60d --- tragen (10 Stufen)	0:15 8035,10075
@@ -3020,6 +3024,8 @@ Drängelgitter	BNP:3::trailer=10 -19195,-5739
 Drängelgitter	BNP:3::trailer=10 19141,3980
 Drängelgitter	BNP:3::trailer=10 12155,6526
 Drängelgitter	BNP:3::trailer=10 12092,6616
+#: note: vier oder fünf Stück, aber teilweise recht weit
+mehrere Drängelgitter	BNP:12::trailer=30 7270,8616
 #
 ############################################################################
 #: section temporäre Sperrungen (Baustellen etc.) vvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -3040,7 +3046,7 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 # 
 #: next_check_id: YORCKSTRASSENBRUECKEN-2019
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.812400.php (Herrichtung im ersten Halbjahr 2020)
-#: osm_watch: way id="36395401" version="16"
+#: osm_watch: way id="36395401" version="18"
 #: last_checked: 2019-08-01
 #: next_check: 2020-04-01
 Yorckstraßenbrücke 10: wird saniert und dann wieder neu eingehängt	2::inwork 8339,9560 8338,9593
@@ -3051,14 +3057,14 @@ An den Yorckstraßenbrücken: Weg wird als Baulogistikfläche benutzt, gesperrt	2::
 # 
 #: XXX wann wird die Einbahnstraßenregelung aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-08-12
+#: last_checked: 2019-08-17
 #: check_frequency: 7d
 Alexandrinenstr.: Einbahnstraßenregelung an der Stallschreiberstr.	1s:q3:inwork 10678,11172 10593,11120
 # 
 # 
 #: XXX nach den Bauarbeiten könnte man den Extra-Punkt in der Mitte wieder löschen
 #: also_indoor: traffic
-#: last_checked: 2019-08-12
+#: last_checked: 2019-08-17
 #: check_frequency: 14d
 Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 10518,11232 10593,11120
 # 
@@ -3129,7 +3135,7 @@ Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910 vvv
 #: source_id: 2147344585 vvv
-#: last_checked: 2019-08-09 vvv
+#: last_checked: 2019-08-19 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:q4:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -3163,6 +3169,7 @@ Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21
 #: by: osm (kartonage)
 #: confirmed_by: srt
 #: last_checked: 2019-07-22
+#: check_frequency: 60d
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,8260
 # 
 #: next_check_id: NORD52-2019
@@ -3178,11 +3185,17 @@ Gaffelsteig: Bauarbeiten, kann gesperrt sein	2::inwork 22287,2431 22221,2520
 # 
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.750883.php (Ende 2018 bis 2020)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/erster-teil-des-anton-saefkow-parks-ist-fertiggestellt_a186599
-#: priority: #C
-#: last_checked: 2019-05-15
-#: check_frequency: 90d
-#: valid: -20200101
-Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12640,14800 12709,14745 12798,14682 12867,14648 12888,14625
+#: priority: #C vvv
+#: last_checked: 2019-08-14 vvv
+#: check_frequency: 60d vvv
+#: valid: -20200101 vvv
+# REMOVED (hier fertig) --- Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12640,14800 12709,14745 12798,14682
+Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12798,14682 12867,14648 12888,14625
+Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12901,14594 12888,14625 12900,14637
+#: valid ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+#: priority ^^^
 # 
 # REMOVED --- #: osm_watch: way id="32591917" version="17" --- #: next_check_id: KYNASTSTRASSE-2018 --- #: last_checked: 2019-07-06 --- #: next_check: 2019-06-15 --- Kynaststr. - Paul-und-Paula-Ufer: wegen Bauarbeiten gesperrt	2:inwork 14797,10476 14820,10473
 # REMOVED (offen) --- #: next_check_id: MERGENTHALERRING-2018 --- #: osm_watch: way id="20595738" version="13" --- #: last_checked: 2018-12-10 --- #: check_frequency: 30d --- Mergenthalerring: Bauarbeiten, komplett gesperrt	2:inwork 14258,8520 14262,8564
@@ -3239,7 +3252,7 @@ Möwenweg: Straße existiert nicht mehr; vermutlich wird es in Zukunft hier nur ei
 Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5018,3810 5074,3900 5139,3997 5225,4095
 # 
 #: XXX wann ist hier wieder offen?
-#: last_checked: 2019-08-13
+#: last_checked: 2019-08-15
 # REMOVED --- #: check_frequency: 14d
 Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 # 
@@ -3253,7 +3266,7 @@ Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesp
 #: source_id: 2147343291 (Einbahnstraße in der Glinkastr.)
 #: osm_watch: way id="43233756" version="16"
 #: osm_watch: way id="681299268" version="1"
-#: osm_watch: way id="47935842" version="12"
+#: osm_watch: way id="47935842" version="13"
 #: osm_watch: way id="681299267" version="1"
 #: priority: #A vvv
 #: last_checked: 2019-08-09 vvv
@@ -3338,7 +3351,7 @@ Fanny-Zobel-Str.: wegen Bauarbeiten gesperrt, vielleicht sogar dauerhaft eingezo
 # REMOVED (fertig) --- #: next_check_id: KARLINEKENWEG-2018 --- #: osm_watch: way id="499986562" version="5" --- #: last_checked: 2018-08-26 --- #: check_frequency: 60d --- Karlinekenweg: Bauarbeiten, gesperrt	2::inwork 11359,20297 11405,20196
 # 
 #: by: https://www.berliner-woche.de/tiergarten/c-bauen/zweite-bauphase-abgeschlossen_a181544 (Wiedereröffnung für 2020 geplant)
-#: last_checked: 2019-07-25
+#: last_checked: 2019-08-19
 #: next_check: 2020-01-01
 Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,11133
 # 
@@ -3398,7 +3411,7 @@ Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12677,-15
 #: by: http://www.abendblatt-berlin.de/2019/01/17/ost-west-verbindung-dicht/
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/aktuelles/anwohnerinfo-mauerpark-7.pdf
 #: source_id: 2147342369
-#: last_checked: 2019-08-06 (nördliche Seite) vvv
+#: last_checked: 2019-08-17 (nördliche Seite) vvv
 #: next_check: 2020-01-31 vvv
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10319,15090 10354,14987
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
@@ -3407,19 +3420,8 @@ Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
 # 
 # REMOVED --- #: next_check_id: OTTOBRAUN-2015 --- #: XXX noch Restbauarbeiten, danach vielleicht wieder eine offizielle Radwegverbindung? --- #: last_checked: 2018-02-21 --- #: check_frequency: 14d --- (Wadzeckstr. - Mollstr.)	2::inwork 11315,13210 11399,13333
 # REMOVED (keine Absperrungen mehr + kleines Schild, das man leicht übersehen kann) --- #: next_check_id: PLANSTRASSEC-2018 --- #: XXX bleibt die Straße für den öffentlichen Verkehr gesperrt? --- #: last_checked: 2018-01-12 --- Planstraße C: gesperrt, Privatstraße	2 12926,11224 12848,11093
-# 
-#: next_check_id: IMLICHTENHAIN-2018
-#: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6933
-#: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_16_1713_1768_online.pdf (Benennung)
-#: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_30_3365_3488_online.pdf (Grundstücksnummerierungen)
-#: by: http://www.berliner-woche.de/rummelsburg/bauen/neues-quartier-im-lichtenhain-erste-einblicke-fuer-anwohner-und-erwerber-d133845.html
-#: XXX wird hier auch verkehrsberuhigt sein?
-#: source_id: 2147344087
-#: osm_watch: way id="609943358" version="3"
-#: last_checked: 2019-08-05
-Im Lichtenhain: neue Straße wird hier entstehen, zurzeit Bauarbeiten	2::inwork 16497,10685 16484,10615
+# REMOVED (offen) --- #: next_check_id: IMLICHTENHAIN-2018 --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6933 --- #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_16_1713_1768_online.pdf (Benennung) --- #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_30_3365_3488_online.pdf (Grundstücksnummerierungen) --- #: by: http://www.berliner-woche.de/rummelsburg/bauen/neues-quartier-im-lichtenhain-erste-einblicke-fuer-anwohner-und-erwerber-d133845.html --- #: XXX wird hier auch verkehrsberuhigt sein? (laut osm ja) --- #: XXX laut osm mittlerweile fertig --- #: source_id: 2147344087 --- #: osm_watch: way id="609943358" version="4" --- #: last_checked: 2019-08-05 --- #: next_check: 2019-08-18 --- Im Lichtenhain: neue Straße wird hier entstehen, zurzeit Bauarbeiten	2::inwork 16497,10685 16491,10655 16484,10615
 # REMOVED (hier offen) --- Im Lichtenhain: neue Straße, zurzeit Bauarbeiten; Qualität, genaue Lage?	2::inwork 16484,10615 16474,10591 16461,10560
-# 
 # REMOVED --- #: next_check_id: LICHTBURGRING-2017 vvv --- #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_55_6321_6504_online.pdf (Grundstücksnummerierungen) --- #: XXX wie wird die endgültige Fahrbahnbeschaffenheit sein? Asphalt? vvv --- #: osm_watch: way id="437684188" version="4" --- #: last_checked: 2017-11-17 vvv --- #: next_check: 2018-01-13 vvv --- Lichtburgring: Baustelle, Betreten verboten	2::inwork 10004,15636 9933,15815 --- Bärbel-Bohley-Ring: Baustelle, Betreten verboten	2::inwork 9933,15815 9917,15813 9744,15793
 # REMOVED --- #: last_checked: 2017-09-22 --- Oberwallstr.: Bauarbeiten, Einbahnstraße	1s:q3:inwork 9898,12161 9913,12068
 # 
@@ -3438,7 +3440,7 @@ Zufahrt zum ehemaligen Parkhaus: Bauarbeiten, Straße komplett gesperrt	2::inwork
 # REMOVED (offen, by mapillary) --- #: by: http://www.dafmap.de/d/berlin.html?center=52.434534+13.536709&zoom=18# (Projektabschluss: 2019-04-30) --- #: by: http://www.fomrealestate.de/blog/project/allianz-berlin/ (Webcam) --- #: osm_watch: way id="448097237" version="2" --- #: osm_watch: way id="683972873" version="2" --- #: last_checked: 2019-02-23 (Webcam) --- #: check_frequency: 60d --- Merlitzstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19661,3421 19524,3286
 # REMOVED --- #: last_checked: 2017-08-12 --- Charlottenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9509,12117 9496,12215
 # REMOVED (-> temp_blockings) --- #: XXX wird nach den Bauarbeiten hier noch ein Weg existieren? Wird die nördliche Anbindung mit Treppe oder Rampe realisiert? --- #: XXX man kann aber passieren (z.B. mittags am 2018-07-27) --- #: XXX laut osm-Notiz https://www.openstreetmap.org/note/1428158 "fast fertig" --- #: last_checked: 2018-08-29 --- # REMOVED --- #: check_frequency: 90d --- #: next_check: 2018-10-22 --- (entlang der Erpe): Bauarbeiten der DB	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
-# REMOVED (laut osm fertiggestellt) --- #: osm_watch: way id="344108079" version="6" --- #: next_check_id: NIZZASTR-2014 --- #: add_fragezeichen: Wurde die Brücke bzw. der Durchlass fertig gestellt? --- #: last_checked: 2019-06-15 --- # REMOVED --- #: next_check: 2018-07-01 --- #: check_frequency: 30d --- (Marseillestr. - Straße 160): nur ein provisorischer Steg	2 12507,21391 12547,21372
+# REMOVED (laut osm fertiggestellt) --- #: osm_watch: way id="344108079" version="6" --- #: next_check_id: NIZZASTR-2014 --- #: add_fragezeichen: Wurde die Brücke bzw. der Durchlass fertig gestellt? --- #: last_checked: 2019-06-15 --- # REMOVED --- #: next_check: 2018-07-01 --- #: check_frequency: 30d --- (Marseillestr. - Straße 160): nur ein provisorischer Steg	2 12507,21391 12520,21386 12535,21380
 # REMOVED (bleibt dauerhaft abends offen?) --- #: next_check_id: RIGAER-2018
 # REMOVED --- #: XXX_indoor sobald aktiv: temp_blockings-Eintrag deaktivieren
 # REMOVED --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.616518.php
@@ -3550,17 +3552,17 @@ Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6146.html
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_13_1401_1520_online.pdf (Widmung als Grünanlage)
 #: source_id: 2147341188
-#: last_checked: 2019-06-27
-#: next_check: 2019-09-24
 #: osm_watch: way id="593108603" version="2"
 #: XXX laut osm nicht mehr construction, in der Realität kann man aber hier nicht durch
+#: last_checked: 2019-08-17
+#: check_frequency: 45d
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7636,14414 7612,14449 7551,14464
 # REMOVED (hier wieder offen) --- #: osm_watch: way id="594591925" version="1" --- #: osm_watch: way id="594591926" version="1" --- Nordhafenpark West: noch Bauarbeiten, gesperrt	2::inwork 7551,14464 7426,14539
 # REMOVED (fertig) --- Nordhafenpark West: während der Umgestaltung gesperrt	2::inwork 7426,14539 7396,14569 7368,14573
 # 
 #: add_fragezeichen: Ist die Kieler Brücke noch immer gesperrt?
 #: osm_watch: way id="5133258" version="8"
-#: last_checked: 2019-08-09
+#: last_checked: 2019-08-17
 #: check_frequency: 45d
 Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
 # 
@@ -3582,7 +3584,7 @@ Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,1440
 #: XXX Wann sind die Bauarbeiten beendet?
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6291
 #: osm_watch: way id="137084083" version="10"
-#: last_checked: 2019-08-01
+#: last_checked: 2019-08-15
 #: check_frequency: 60d
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,9200 12548,9167
 # 
@@ -3683,7 +3685,7 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 #: source_id: LMS-BR_r_LMS-BR_44
 #: XXX_prog: ":inwork" kann als Attribut nicht genutzt werden! vvv
 #: XXX laut fritz bis 31.12.2019
-#: last_checked: 2019-08-12 vvv
+#: last_checked: 2019-08-16 vvv
 #: check_frequency: 60d vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::inwork 9984,12426 9934,12420 9858,12410
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
@@ -3706,9 +3708,9 @@ Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht mögli
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=634400&postcount=2205
 # REMOVED --- osm_watch: way id="183406331" version="3"
 #: osm_watch: way id="220646748" version="5"
-#: last_checked: 2019-08-09
+#: last_checked: 2019-08-17
 #: check_frequency: 90d
-Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738
+Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738 7139,14785
 # 
 #: by: http://www.berliner-zeitung.de/verkehr/s-bahn-linie-21--baustelle-am-hauptbahnhof--ab-durch-die-mitte,10809298,20580624.html (ab 2012-10-15 für 30 Monate, also mindestens bis ca. 2015-04)
 #: source_id: 2147340791
@@ -3784,7 +3786,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: XXX wird nach den Bauarbeiten die Einbahnstraßenregelung wieder hergestellt? (see elsehwere)
 #: osm_watch: way id="158025179" version="3"
-#: last_checked: 2019-08-10
+#: last_checked: 2019-08-17
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 
@@ -4079,21 +4081,9 @@ Jagowstr. (Hermsdorf)	1 3046,22292 3043,22407 3050,22554 3055,22697
 Hagenstr. (Lichtenberg)	1 16957,12599 16933,12432 16918,12325
 Gehrenseestr.	1 18494,16750 18324,16625
 tragen	0:60 18475,16761
-#: note: bei den meisten Drängelgittern hier existiert mittlerweile ein umgehender Trampelpfad vvv
+# REMOVED (Drängelgitter existieren alle nur zur Hälfte und sind somit gut umfahrbar) --- #: note: bei den meisten Drängelgittern hier existiert mittlerweile ein umgehender Trampelpfad vvv --- Drängelgitter	BNP:5 6267,834 --- Drängelgitter	BNP:5 6250,834 --- Drängelgitter	BNP:5 6172,822 --- Drängelgitter	BNP:5 6155,821 --- Drängelgitter	BNP:5 6075,821 --- Drängelgitter	BNP:5 6057,821 --- Drängelgitter	BNP:5 5975,821 --- Drängelgitter	BNP:5 5954,819 --- Drängelgitter	BNP:5 5875,807 --- Drängelgitter	BNP:5 5860,805 --- Drängelgitter	BNP:5 5684,773
 # REMOVED (nur noch ein halbes Drängelgitter) --- Drängelgitter	BNP:5 6367,825
 # REMOVED (Drängelgitter entfernt) --- Drängelgitter	BNP:5 6352,825
-Drängelgitter	BNP:5 6267,834
-Drängelgitter	BNP:5 6250,834
-Drängelgitter	BNP:5 6172,822
-Drängelgitter	BNP:5 6155,821
-Drängelgitter	BNP:5 6075,821
-Drängelgitter	BNP:5 6057,821
-Drängelgitter	BNP:5 5975,821
-Drängelgitter	BNP:5 5954,819
-Drängelgitter	BNP:5 5875,807
-Drängelgitter	BNP:5 5860,805
-Drängelgitter	BNP:5 5684,773
-#: note ^^^
 Straßenbahn	3nocross 16837,17440 16947,17506 17159,17631
 Rudolf-Reusch-Str. [Wohngebiet]	1 15732,12562 15657,12562 15657,12648 15732,12650
 #: confirmed_by: srt
