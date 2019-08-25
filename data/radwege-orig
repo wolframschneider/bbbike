@@ -204,7 +204,7 @@ der kurze Abschnitt zwischen Manteuffelstr. und Wiener Str. ist benutzungspflich
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.814445.php (bis Anfang November 2019) vvv
 #: source_id: 2147344255 (bis November 2019)
 #: XXX werden die Bauarbeiten tatsächlich im November 2019 fertig werden? vvv
-#: last_checked: 2019-08-19 vvv
+#: last_checked: 2019-08-22 vvv
 #: next_check: 2019-11-01 vvv
 #: valid: 20191101-
 	RW4;RW4 13206,10651 13305,10789 13332,10832
@@ -350,11 +350,11 @@ Gehweg für Radfahrer frei	RW9;RW1 571,11255 541,11464
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf vvv
 #: by: https://api.fixmyberlin.de/api/plannings/10 (erster Bauabschnitt Alte Jakobstr. - Axel-Springer-Str. (Nordseite) im Herbst 2018)
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (Sanierung 2019)
-#: last_checked: 2019-08-19 (Bauarbeiten am Rad/Gehweg Richtung Westen)
+#: last_checked: 2019-08-21 (Bauarbeiten am Rad/Gehweg Richtung Westen)
 #: check_frequency: 21d
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1;RW1 10020,11262 10256,11160
 #: XXX Bauarbeiten der Wasserbetriebe bis November 2019, südliche Seite zwischen Alexandrinenstr. und Lobeckstr.
-#: last_checked: 2019-08-19 vvv
+#: last_checked: 2019-08-21 vvv
 #: check_frequency: 90d vvv
 mäßige bis schlechte Verbundsteinpflasterradwege, Bord zum Gehweg	RW1; 10256,11160 10501,11056 10637,10996 10684,10975
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1; 10684,10975 10637,10996 10501,11056 10256,11160
@@ -776,7 +776,7 @@ im Bereich der Bushaltestelle wird der Radweg auf dem Gehweg geführt	RW4; 14196,
 #: by: https://www.berliner-woche.de/alt-treptow/c-verkehr/schaeden-waren-2008-nicht-sichtbar_a195640
 #: source_id: 2147343116
 #: XXX wann wird die Radspur wieder hergestellt? (-> RW4;)
-#: last_checked: 2019-08-18
+#: last_checked: 2019-08-22
 #: next_check: 2020-01-01
 provisorischer gemeinsamer Geh- und Radweg	RW2; 14558,10264 14501,10169 14405,10027 14350,9953
 	RW4; 14350,9953 14289,9870
@@ -1235,14 +1235,14 @@ Busspur ist immer gültig	RW5;RW5 9858,12410 9780,12401 9771,12400 9713,12392 966
 #: source_id: 2147342831 (bis Ende 2020)
 #: osm_watch: way id="342968607" version="12"
 #: osm_watch: way id="461526152" version="3"
-#: last_checked: 2019-07-30
+#: last_checked: 2019-08-23
 Busspur ist immer gültig	RW5;RW0 9475,12365 9358,12351 9141,12320
 # 
 #: next_check_id: STABIUDL-2014
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=637200&postcount=120 (Bürgersteig wird fertig sein)
 #XXX später wieder herstellen (nach Fertigstellung der Staatsbibliothek) --- Busspur ist immer gültig	RW5;RW5 9613,12381 9475,12365
 #: XXX später beide Richtungen wieder herstellen
-#: last_checked: 2019-08-12
+#: last_checked: 2019-08-23
 #: next_check: 2019-09-30
 Busspur ist immer gültig	RW5; 9475,12365 9613,12381
 # 
@@ -1291,7 +1291,7 @@ Busspur gilt Mo-Fr 6-20 Uhr	RW5; 10625,12206 10574,12131 10512,12039
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/rechtsabbiegen-vom-alex-in-die-karl-marx-allee-sechs-wochen-lang-verboten_a202864
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.802572.php (bis auf Weiteres)
 #: source_id: 2147343815 (bis auf Weiteres)
-#: last_checked: 2019-08-14
+#: last_checked: 2019-08-23
 #: check_frequency: 14d
 # asphaltierter Radweg	RW1; 11134,12793 11226,12945
 provisorische Radspur	RW4; 11134,12793 11226,12945
@@ -1365,7 +1365,7 @@ die letzten 50 Meter sind benutzungspflichtiger Radweg	RW4; 18225,7004 18010,713
 # REMOVED (nur für Autos) --- #: XXX mittlerweile (2018-07-31) laut fritz für Autos Richtung Südosten gesperrt, sind auch Radfahrer betroffen? (-> nein)
 #: source_id: 2147342958
 # REMOVED --- #: also_indoor: traffic (H,G)
-#: last_checked: 2019-08-18
+#: last_checked: 2019-08-22
 #: check_frequency: 30d
 ab der provisorischen Brücke als Gehwegradweg geführt	RW4; 14261,8851 14151,8967
 	RW4; 14151,8967 14261,8851
@@ -1747,7 +1747,7 @@ Busspur gilt Mo-Fr 7-18 Uhr	RW5; 10020,11262 9984,11270 9751,11243 9615,11225 94
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: XXX Bauarbeiten, Radspuren sind größtenteils aufgehoben
 #: XXX war: RW3;RW3
-#: last_checked: 2019-08-17
+#: last_checked: 2019-08-21
 #: check_frequency: 30d
 	RW0;RW0 8732,12804 8737,12757 8752,12647 8752,12647 8754,12622 8756,12608
 	RW3; 10887,10922 10839,10907 10856,10856 10906,10874
@@ -1871,9 +1871,9 @@ gemeinsamer Geh- und Radweg, asphaltiert mit einigen Wellungen	RW2; 15468,13700 
 	RW4; 15515,13134 15516,12838
 	RW1; 15563,12870 15561,12950
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.799903.php
-#: XXX welche Verbesserung bzgl. der Radweginfrastruktur wird hier passieren?
+#: XXX welche Verbesserung bzgl. der Radweginfrastruktur wird hier passieren? -> Gehweg wird verlegt, Radweg wird gebaut
 #: source_id: 2147344529 (bis Ende August 2019)
-#: last_checked: 2019-07-07
+#: last_checked: 2019-08-23 (Bauarbeiten laufen)
 #: next_check: 2019-08-30
 Gehweg für Radfahrer frei	RW1; 15561,12950 15531,13022
 	RW1; 15531,13022 15526,13056 15515,13134
@@ -1920,7 +1920,7 @@ Busspur ist immer gültig	RW5; 16246,12177 16207,11937
 	RW6;RW6 12671,8077 12446,8032
 # REMOVED (nur das Stück bergauf) --- #: XXX Radspur wird grün markiert (evtl. auch das Teilstück bergauf) --- #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.747750.php --- #: next_check: 2018-10-17
 # REMOVED --- #: XXX wird hier auch die Radspur grün markiert? --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.756319.php --- #: by: https://twitter.com/ADFC_Berlin/status/1065526520599511045 --- #: priority: #D --- #: next_check: 2018-11-22
-Grünmarkierung	RW3;RW3 11979,8014 12162,8053 12311,8084 12415,8106 12427,8109
+Grünmarkierung	RW4;RW4 11979,8014 12162,8053 12311,8084 12415,8106 12427,8109
 	RW2; 12700,8170 12753,8187
 #: by: Uwe Sinha
 #: confirmed_by: srt
@@ -2467,6 +2467,7 @@ Gehweg für Radfahrer frei	RW1; 23942,5338 24070,5272 24681,4943 24798,4895 24936
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/brueckenbau-kommt-voran_a204319
 #: by: https://www.berliner-woche.de/koepenick/c-bauen/erste-brueckenteile-eingeschoben_a215557
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/eine-haelfte-der-salvador-allende-bruecke-ist-bereits-montiert_a224032
+#: by: https://www.abendblatt-berlin.de/2019/08/23/berlin-koepenick-allende-bruecke-bald-wieder-nutzbar/ (erster Teil Ende 2019 fertig, zweiter Teil bis 2024/25)
 #: XXX 1. Verkehrsführung Bauabschnitt 1: östlicher Gehweg gesperrt, bis ca. Mitte November 2017
 #: XXX 2. Verkehrsführung Bauabschnitt 1: westlicher Gehweg gesperrt, für ca. 20 Monate
 #: XXX    Verkehrsführung Bauabschnitt 2: östlicher Gehweg gesperrt, bis zum Ende der Bauarbeiten
@@ -2960,7 +2961,7 @@ Grünmarkierung	RW3; 11706,13635 11820,13804 11946,13993 11952,14002 11991,14060 
 #: source_id: 2147344450 (Fahrbahnmarkierungen, bis Anfang Oktober 2019)
 #: source_id: 2147344571 (Leitungsarbeiten, Gesamtmaßnahme bis Mitte November 2019)
 #: priority: #D vvv
-#: last_checked: 2019-08-16 vvv
+#: last_checked: 2019-08-23 vvv
 #: check_frequency: 14d vvv
 	RW3; 12077,14186 12172,14328 12177,14335 12188,14350 12228,14404 12266,14460
 	RW4; 12266,14460 12317,14535
@@ -4311,7 +4312,8 @@ die ersten und letzten Meter sind Schutzstreifen	RW1; 12962,15480 13078,15586
 	RW1;RW1 12709,15112 12620,14979
 	RW3;RW3 12620,14979 12584,14928
 	RW4;RW3 12584,14928 12547,14873 12528,14845 12473,14763 12422,14692 12403,14663
-	RW2;RW3 12403,14663 12371,14615 12317,14535
+Verbundsteinpflaster	RW2; 12403,14663 12371,14615 12317,14535
+	RW3; 12317,14535 12371,14615 12403,14663
 	RW3;RW3 11226,12945 11139,13008
 	RW6;RW6 17470,4998 17463,4964 17428,4792
 asphaltiert	RW1;RW1 17648,5338 17705,5223 17726,5166 17763,5104 17775,5083 17879,4910 17951,4785 18042,4667
@@ -5496,7 +5498,7 @@ Busspur gilt Mo-Sa 7-20 Uhr	RW5; 5238,13714 5231,13843 5220,14043
 Busspur gilt Mo-Sa 7-19 Uhr	RW5; 7433,13070 7563,13143 7573,13149 7714,13223
 	RW4; 7714,13223 7759,13246
 # REMOVED --- #: next_check_id: TRESKOWALLEE-2017 --- #: XXX Bauarbeiten der Wasserbetriebe; die Radspur ist nicht mehr befahrbar; laut fritz Bauarbeiten bis 2020-12-31 --- #: XXX asphaltierte Radwege existieren zumindest teilweise, vielleicht auch schon komplett? --- #: last_checked: 2019-06-10 --- #: next_check: 2019-06-10 --- # was: die letzten Meter nur Schutzstreifen	RW4; 18731,8577 18704,8427 ---	RW0; 18731,8577 18704,8427
-neu asphaltiert	RW3; 18737,8686 18733,8650 18733,8633 18731,8577 18704,8427
+neu asphaltiert	RW1; 18737,8686 18733,8650 18733,8633 18731,8577 18704,8427
 	RW6;RW6 7802,14250 7757,14318
 	RW6;RW6 7930,14060 7973,13991
 10km/h	RW6;RW6 13510,8138 13663,8011
@@ -5638,7 +5640,7 @@ Tempo 10	RW6;RW6 -7275,-357 -7300,-292 -7444,-100 -7460,-33
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/11-ag_radverkehr-bericht-einzelmassnahmen.pdf (endgültige Markierung nach Umbau der Edison+Siemensstr.)
 #: XXX wann werden permanente Radspuren entstehen? vvv
 #: osm_watch: way id="4566067" version="21"
-#: last_checked: 2019-07-27 vvv
+#: last_checked: 2019-08-20 vvv
 #: check_frequency: 90d vvv
 provisorische Radspur	RW4; 17807,5730 17810,5736 17877,5860 17939,5968 17900,6072 17930,6175 17952,6246 17991,6431
 provisorische Radspur, benutzungspflichtiger Radweg auf den letzten Metern	RW4; 17919,6968 17962,6674
@@ -5737,4 +5739,5 @@ gemeinsamer Geh- und Radweg	RW2; 20717,17516 20853,17528 20891,17572 20895,17594
 	RW6;RW6 22101,10985 22146,10995 22172,10996
 	RW6;RW6 22110,11107 22115,11082 22131,11084 22146,11086 22142,11116
 	RW6;RW6 22131,11084 22137,11033 22146,10995
+Busspur nicht für Radfahrer freigegeben	RW0; 15598,6294 15724,6229
 	RW3; 15724,6229 15765,6212

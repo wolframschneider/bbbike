@@ -1240,6 +1240,8 @@ Friedrichstr. (Prenzlau)	1 39550,101671 39574,101863
 Heidefalterweg: unechte Einbahnstraße, Verbotsschild steht etwa 50m von der Köpenicker Str.	1 21140,10786 21322,10863
 Eberswalder Str. (Bernau): Radweg vorhanden	1 23109,30968 23103,30923 23084,30893 22917,30635
 Linienstr.	1 9609,13522 9744,13584
+Linienstr.	1 9993,13682 9947,13674
+Linienstr.	1 10301,13701 10445,13675
 Greifswalder Str.: Mittelstreifen mit Straßenbahn	3nocross 12584,14928 12620,14979 12709,15112
 Voigtstr./Schreinerstr.: Diagonalsperre	3 14570,12478 14776,12418 14748,12314
 Voigtstr./Schreinerstr.: Diagonalsperre	3 14570,12478 14776,12418 15046,12355
@@ -1249,3 +1251,19 @@ Voigtstr./Schreinerstr.: Diagonalsperre	3 15046,12355 14776,12418 14798,12502
 Voigtstr./Schreinerstr.: Diagonalsperre	3 15046,12355 14776,12418 14570,12478
 Voigtstr./Schreinerstr.: Diagonalsperre	3 14798,12502 14776,12418 14748,12314
 Voigtstr./Schreinerstr.: Diagonalsperre	3 14798,12502 14776,12418 15046,12355
+Wrangelstr./Falckensteinstr.: Diagonalsperre	3 12905,10143 13032,10355 13151,10276
+Wrangelstr./Falckensteinstr.: Diagonalsperre	3 13151,10276 13032,10355 12905,10143
+Wrangelstr./Falckensteinstr.: Diagonalsperre	3 12905,10143 13032,10355 13136,10535
+Wrangelstr./Falckensteinstr.: Diagonalsperre	3 13136,10535 13032,10355 12905,10143
+Wrangelstr./Falckensteinstr.: Diagonalsperre	3 13136,10535 13032,10355 12897,10439
+Wrangelstr./Falckensteinstr.: Diagonalsperre	3 12897,10439 13032,10355 13136,10535
+Wrangelstr./Falckensteinstr.: Diagonalsperre	3 12897,10439 13032,10355 13151,10276
+Wrangelstr./Falckensteinstr.: Diagonalsperre	3 13151,10276 13032,10355 12897,10439
+Wrangelstr./Cuvrystr.: Diagonalsperre	3 13032,10355 13151,10276 13197,10355
+Wrangelstr./Cuvrystr.: Diagonalsperre	3 13197,10355 13151,10276 13032,10355
+Wrangelstr./Cuvrystr.: Diagonalsperre	3 13032,10355 13151,10276 13271,10193
+Wrangelstr./Cuvrystr.: Diagonalsperre	3 13271,10193 13151,10276 13032,10355
+Wrangelstr./Cuvrystr.: Diagonalsperre	3 13132,10239 13151,10276 13197,10355
+Wrangelstr./Cuvrystr.: Diagonalsperre	3 13197,10355 13151,10276 13132,10239
+Wrangelstr./Cuvrystr.: Diagonalsperre	3 13132,10239 13151,10276 13271,10193
+Wrangelstr./Cuvrystr.: Diagonalsperre	3 13271,10193 13151,10276 13132,10239

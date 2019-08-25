@@ -7,6 +7,12 @@
 # 
 #: temporary vvv
 # 
+# 
+#: note: Baustellenampel gilt auch für Radfahrer
+#: source_id: 2147344652 (bis Ende Oktober 2019)
+#: valid: 20190822-20191031
+	X::inwork 16425,6445
+# 
 #: next_check_id: STRALAUER-2019
 #: last_checked: 2019-08-19 vvv
 #: next_check: 2019-12-20 vvv
@@ -84,7 +90,7 @@
 #: XXX ^^^
 # 
 #: next_check_id: OBERBAUMBRUECKE-2019
-#: last_checked: 2019-08-19
+#: last_checked: 2019-08-22
 #: next_check: 2019-11-01
 #: valid: -20191101
 	F::inwork 13178,10623
@@ -2121,6 +2127,9 @@ S-Bahn und Regionalbahn	B 21562,12088
 	B0 19961,5989
 	B0 19988,6409
 	B0 20593,6082
+	B0 19691,6904
+	B0 19895,6872
+	B0 20244,6748
 #: note: ^^^
 #: section ^^^
 	B0 16670,3325
@@ -2782,7 +2791,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2019-08-10 vvv
+#: last_checked: 2019-08-23 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2936,7 +2945,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6407
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="5"
-#: last_checked: 2019-08-05
+#: last_checked: 2019-08-20
 #: check_frequency: 30d
 	X::inwork 14174,7505
 # 
@@ -3092,7 +3101,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2019-08-12
+#: last_checked: 2019-08-21
 #: check_frequency: 90d
 	F 8234,14686
 # 
@@ -3243,7 +3252,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2019-08-18 vvv
+#: last_checked: 2019-08-22 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
