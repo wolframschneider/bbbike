@@ -135,7 +135,34 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/events/2716319-2229501-tag-der-deutschen-einheit-am-brandenburg.html
+#: source_id: LMS-BR_r_LMS-BR_147349_LMS-BR_72
+	2 8055,12186 8089,12190 8214,12205
+	2 8214,12205 8303,12216 8344,12221 8538,12245
+	2 8546,12279 8538,12245
+	2 8600,12165 8538,12245
+	2 8538,12245 8592,12252
+	2 8546,12279 8570,12302 8573,12325 8540,12420 
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1569880800,
+         'id' => 127,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt, vor und nach dem 3. Oktober 2019',
+         'type' => 'gesperrt',
+         'until' => 1570248000
+       },
        undef,
        undef,
        undef,
@@ -2776,21 +2803,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'data' => '	2::temp 8538,12245 8592,12252
-	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-	2::temp 8538,12245 8522,12239
-	2::temp 8538,12245 8522,12187
-',
-         'from' => 1566540000,
-         'id' => 2310,
-         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor sowie Ebertstr.: Veranstaltung, Straßen vollständig gesperrt (bis 25. August 2019 vormittags)',
-         'type' => 'gesperrt',
-         'until' => 1566712800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3026,19 +3039,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
-#: tempex: 20170414-20170417 T12, 20170429-20170909 T11-T17, 20170910-20171003 T11-T14
-	2::temp 38674,160390 37644,160344 38049,160420 38325,160573
-#: XXX_prog ^^^
-',
-         'from' => undef,
-         'id' => 2409,
-         'recurring' => 1,
-         'text' => 'Karniner Fähre: fährt nur von Anfang Mai bis Ende September',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 #: tempex: volatile
@@ -3075,20 +3076,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation) --- #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein --- #: source_id: 2147339529 --- #: last_checked: 2017-02-04 --- #: next_check: 2017-03-01
-#: source_id: LMS-BR_r_LMS-BR_172061_LMS-BR_72
-#: also_indoor: traffic (H)
-# REMOVED --- #: next_check: 2019-06-13
-	q2::inwork 5258,11285 5236,10994
-',
-         'from' => 1560420000,
-         'id' => 2422,
-         'source_id' => 'IM_019747',
-         'text' => 'Fasanenstr.: vor der Einmündung Hardenbergstr. Baustelle, Fahrbahn gesperrt (bis 30. August 2019) ',
-         'type' => 'handicap',
-         'until' => 1567180800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3945,7 +3933,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-08-21 vvv
+#: last_checked: 2019-08-28 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4133,7 +4121,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-08-16
+#: last_checked: 2019-08-28
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4350,6 +4338,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.783009.php
 #: by: http://www.abendblatt-berlin.de/2019/02/08/altstadt-koepenick-im-dauerstress/
 #: by: https://twitter.com/VIZ_Berlin/status/1093887988222906369
+#: source_id: 2147344699
 #: osm_watch: way id="25274116" version="19"
 #: osm_watch: way id="671101960" version="3"
 #: also_indoor: traffic (G,H)
@@ -4368,8 +4357,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic (H,G)
 #: priority: #A
-#: last_checked: 2019-08-19 (fast fertig) vvv
-#: check_frequency: 2d vvv
+#: last_checked: 2019-08-30 (fast fertig) vvv
+#: check_frequency: 3d vvv
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 #: check_frequency ^^^
@@ -4438,7 +4427,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: add_fragezeichen: wann wird der Weg wieder offen sein?
 #: osm_watch: way id="8655276" version="17"
-#: last_checked: 2019-05-04
+#: last_checked: 2019-08-24
 #: check_frequency: 90d
 	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
 ',
@@ -4576,12 +4565,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-07-27
+#: last_checked: 2019-08-25
 	2::inwork 14567,10814 14352,10874
 ',
          'from' => 1560636000,
          'id' => 3116,
-         'text' => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, ab 17. Juni 2019',
+         'text' => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein Durchgang möglich, ab 17. Juni 2019',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4619,8 +4608,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/schlossbruecke/de/bau.shtml (bis zum IV. Quartal 2019)
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/brueckensanierung-dauert-laenger_a229102
 #: XXX die Bauarbeiten oben auf der Brücke wurden mittlerweile verlängert: bis zum 28.10.2019
-#: osm_watch: way id="72660098" version="4"
-#: last_checked: 2019-08-04
+#: osm_watch: way id="72660098" version="5"
+#: last_checked: 2019-08-22 (osm)
 	2::inwork 3231,12749 3332,12742
 ',
          'from' => 1561845600,
@@ -4642,16 +4631,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1569967200
        },
        undef,
-       {
-         'data' => '	2::inwork 7924,-4240 7978,-4011
-',
-         'from' => 1547074800,
-         'id' => 3126,
-         'source_id' => 'LS/722-W/18/155',
-         'text' => 'Birkholz - Diedersdorf: Neubau Brücke über den Seegraben, eventuell sind auch Radfahrer von der Sperrung betroffen, 10.01.2019 bis 30.08.2019 ',
-         'type' => 'gesperrt',
-         'until' => 1567180800
-       },
+       undef,
        undef,
        undef,
        {
@@ -4810,7 +4790,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="11" brb
+#: osm_watch: way id="59994277" version="12" brb
 #: source_id: LS/721-F/18/135
 	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
 ',
@@ -4853,18 +4833,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1596211200
        },
-       {
-         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1163439012134182912
-#: source_id: 2147344649
-	q4::inwork 19625,884 19651,956
-',
-         'from' => undef,
-         'id' => 3152,
-         'source_id' => 'LMS-BR_r_LMS-BR_179534_LMS-BR_72',
-         'text' => 'Ortolfstr.: zwischen Wegedornstr. und Wolfmarsteig Fahrbahn gesperrt (geplatzte Wasserleitung), Radfahrer sollen absteigen, voraussichtlich bis Ende August 2019',
-         'type' => 'handicap',
-         'until' => 1567267200
-       },
+       undef,
        {
          'data' => '	2::inwork 51187,92090 50732,91744
 ',
@@ -4874,6 +4843,44 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Gramzow - Lützlow: Bauarbeiten, Straßen gesperrt, eventuell sind auch Radfahrer betroffen, 26.08.2019 bis 31.12.2019',
          'type' => 'gesperrt',
          'until' => 1577833200
+       },
+       {
+         'data' => '#: source_id: LS/721-F/18/080
+#: XXX wird hier ein neuer Radweg gebaut?
+#: next_check: 2019-12-20
+	2::inwork 40363,12020 40362,12087 40565,12409
+',
+         'from' => undef,
+         'id' => 3154,
+         'source_id' => 'LS/721-F/17/002',
+         'text' => 'Torfhaus - Hennickendorf: Sperrung der Fahrbahn, auch für Radfahrer, möglicherweise bis zum 20.12.2019',
+         'type' => 'gesperrt',
+         'until' => 1576882800
+       },
+       undef,
+       {
+         'data' => '#: XXX wann sind die Reparaturarbeiten beendet --- laut fritz vier bis sechs Wochen
+#: by: https://twitter.com/Neddy40586844/status/1167016431600492545
+#: next_check: 2019-10-06
+	q4::inwork 22513,5747 22292,5774
+',
+         'from' => undef,
+         'id' => 3156,
+         'source_id' => 'LMS-BR_r_LMS-BR_180736_LMS-BR_72',
+         'text' => 'Seelenbinderstr.: zwischen Bahnhofstr. und Puchanstr., Sperrung der Fahrbahn, Wasserrohrbruch, möglicherweise bis Oktober 2019',
+         'type' => 'handicap',
+         'until' => 1570377600
+       },
+       {
+         'data' => '#: next_check_id: BLUECHER-2019
+	q4::inwork 9982,9847 10006,9942 10029,9989
+',
+         'from' => 1567112731,
+         'id' => 3157,
+         'source_id' => '2147344606',
+         'text' => 'Brachvogelstr. und Mittenwalder Str.: Bauarbeiten an der Kreuzung Blücherstr., ggfs. absteigen, bis 29. September 2019',
+         'type' => 'handicap',
+         'until' => 1569794399
        }
      
 );

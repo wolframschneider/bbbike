@@ -1175,7 +1175,7 @@ Edith-Kiss-Str.	N 12793,11132 12866,11256
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="4"
 #: priority: #C
-#: last_checked: 2019-08-08
+#: last_checked: 2019-08-26
 #: check_frequency: 60d
 (Planstraße C)	N 12926,11224 12848,11093
 # 
@@ -1896,7 +1896,7 @@ Lepsiusstr.	N 4520,5793 4404,5613 4338,5513 4259,5390
 Schorlemerallee	H 3925,6604 3836,6550 3664,6523 3643,6519 3452,6491 3350,6467 3306,6453 3216,6393
 Grunewaldstr. (Steglitz)	H 4861,5581 4671,5697 4520,5793 4406,5850 4312,5889 4172,5918 4010,5888 3931,5825
 Englerallee	H 3707,5758 3712,5806 3732,5920 3751,6092 3756,6127 3771,6291 3800,6418 3836,6550
-Mecklenburgische Str.	H 3389,7383 3468,7455 3587,7560 3634,7601 3839,7787 3968,7906 4061,7992 4106,8031 4180,8098 4229,8142 4280,8188 4325,8229 4423,8315 4473,8351 4623,8457 4783,8557
+Mecklenburgische Str.	H 3389,7383 3468,7455 3538,7515 3596,7566 3619,7587 3634,7601 3839,7787 3968,7906 4061,7992 4106,8031 4180,8098 4229,8142 4280,8188 4325,8229 4423,8315 4473,8351 4623,8457 4783,8557
 Aachener Str.	N 4623,8457 4687,8306 4672,8031 4581,8048 4461,8105
 (Detmolder Str. - Aachener Str.)	NN 4711,8013 4672,8031
 Brabanter Str.	N 4461,8105 4457,8270 4423,8315
@@ -4431,6 +4431,7 @@ Scheidemannstr.	H 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
 (Vorfahrt Reichstagsgebäude)	NN 8400,12417 8399,12610
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.833375.php ("Tiergartenzaun" wird eingerichtet, ab September 2019)
 #: XXX wird es durch den Tiergartenzaun zu Einschränkungen kommen?
+#: last_checked: 2019-08-28
 #: next_check: 2019-09-09
 (Wiese vor dem Reichstag)	NN 8373,12416 8369,12609
 Putlitzstr.	N 6204,14220 6212,13944
@@ -4441,6 +4442,9 @@ Rathenower Str. (Moabit)	N 6730,14021 6719,14047 6677,14219 6656,14311
 Kirchstr. (Moabit)	N 6608,12858 6661,13130
 (zum Poststadion)	N 7452,13904 7417,13880 7445,13792 7431,13740 7343,13679 7338,13649
 (entlang des Vabali Spa)	NN 7338,13649 7422,13487
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_35_5225_5404_online.pdf (Widmung)
+#: note: keine direkte Beleuchtung, aber vermutlich genug indirekte
+(Vabali Spa - Seydlitzstr.)	NN 7422,13487 7450,13432
 Klara-Franke-Str.	N 7366,14067 7443,14107 7542,13956 7662,13784 7564,13735
 Lehrter Str.	N 7759,13246 7651,13447 7647,13461 7653,13480 7660,13506 7655,13539 7630,13584 7452,13904 7366,14067 7331,14132 7180,14419
 Lehrter Str. [6-8]	N 7630,13584 7735,13626
@@ -4448,7 +4452,7 @@ Lehrter Str. [6-8]	N 7630,13584 7735,13626
 (Minna-Cauer-Str. - Lehrter Str.)	NN 7879,13438 7837,13499 7775,13540
 #: XXX_prog: als highway=service taggen
 (Minna-Cauer-Str. - Lehrter Str.)	N 7775,13540 7666,13479 7653,13480
-Seydlitzstr. (Moabit)	N 7131,13261 7263,13331 7287,13342 7332,13367 7426,13420 7655,13539
+Seydlitzstr. (Moabit)	N 7131,13261 7263,13331 7287,13342 7332,13367 7426,13420 7450,13432 7655,13539
 Clara-Jaschke-Str.	N 7759,13246 7785,13226 7795,13168 7795,13093 7799,13019
 Emma-Herwegh-Str.	N 7595,12980 7795,13168 7861,13203
 #: note: falsche Schreibweise ("Berta-Benz-Str.") wurde am 12. September 2013 berichtigt
@@ -5573,7 +5577,7 @@ Weiderichstr.	N 19744,5063 19814,5056 19838,5048 19901,5015
 Weiderichplatz	N 19814,5056 19805,5025 19816,5015 19830,5019 19838,5048
 Rudower Str. (Niederschöneweide)	N 18695,5076 18641,5260 18659,5330 18680,5413 18695,5453
 Grimaustr.	N 18641,5260 18500,5131 18304,5313
-Bruno-Bürgel-Weg	N 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20435,5460 20740,5273 20782,5257
+Bruno-Bürgel-Weg	N 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20435,5460 20473,5436 20740,5273 20782,5257
 #: oldname: 20100209: Ostendstr.
 Alice-Archenhold-Weg	N 19696,5456 19715,5403
 Ostritzer Str.	N 20782,5257 20782,5206 20774,5131 20689,4862
@@ -6245,7 +6249,7 @@ Uferstr. (Niederschöneweide)	N 17681,6212 17847,6089
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788?date=20180311 (Benennung nach Hans Otto Obrikat?)
 #: XXX ist das die vorgeschlagene "Else-Schierhorn-Str."? vvv
-#: last_checked: 2019-07-24 vvv
+#: last_checked: 2019-08-27 vvv
 #: check_frequency: 90d vvv
 (Schnellerstr. - Uferstr.)	NN 17628,5865 17678,5916
 (Schnellerstr. - Uferstr.)	N 17678,5916 17847,6089
@@ -6560,7 +6564,7 @@ Ekhofstr.	N 23382,1429 23464,1449 23552,1468 23562,1470
 (Müggelbergallee - Straße zum Müggelturm)	NN 23669,1759 24265,1891 24879,1728
 (Müggelbergallee - Müggelheimer Damm)	NN 24265,1891 24528,1949 24630,2034
 (Müggelturm - Müggelheim)	N 24973,1690 25626,1314
-(Müggelturm - Müggelheim)	NN 25626,1314 26287,1034 26425,942 26597,803 26681,765 26783,721 27021,721 27151,729 27202,770
+(Müggelturm - Müggelheim)	NN 25626,1314 26287,1034 26425,942 26597,803 26681,765 26723,741 26868,715 26939,716 26984,733 27022,734 27084,721 27171,728 27202,770
 Johann-Jacob-Baeyer-Str.	N 27977,1187 27810,987
 Johann-Jacob-Baeyer-Str.	N 27863,943 27810,987 27775,1016 27568,1188
 Grünstadter Weg	N 27074,863 27202,770 27410,590 27667,368
@@ -9759,7 +9763,7 @@ Hinter der Düne	N 29414,2373 29296,2467 29196,2548
 # REMOVED (es ist "Privatstraße") --- : add_fragezeichen: Ist die Ausschilderung tatsächlich "Privatstraße 659" oder "Straße 659"?
 Privatstr. 659	N 29196,2548 28898,2775
 Lettweilerstr.	N 28965,2151 29296,2467
-Tongrubenweg	N 28493,2315 28415,2233 28308,2120 28278,2068 28257,1991 28241,1857 28205,1630
+Tongrubenweg	N 28493,2315 28415,2233 28308,2120 28278,2068 28257,1991 28253,1960 28241,1857 28205,1630
 Tongrubenweg	N 28680,2543 28738,2602 28801,2666
 Rehborner Str.	N 28904,1781 28640,2015
 Duchrother Str.	N 29344,1577 29288,1618 29166,1715 28978,1864 28703,2104
@@ -9775,6 +9779,7 @@ Zur Bürgerheide	N 28640,2015 28525,2132 28415,2233 28368,2277
 (Zur Bürgerheide - Zum Kiesgrund)	NN 28525,2132 28509,2075
 #: oldname: Straße 652
 Zum Kiesgrund	N 28509,2075 28452,2007 28392,1943
+(Zum Kiesgrund - Tongrubenweg)	NN 28392,1943 28352,1922 28322,1944 28253,1960
 #: oldname: Straße 646
 Steinbrechgang	N 28642,1840 28592,1782
 #: oldname: Straße 647
@@ -10202,7 +10207,7 @@ Bossestr.	N 14222,10430 14270,10584 14312,10657
 # 
 #: next_check_id: STRALAUER-2019
 #: priority: #A vvv
-#: last_checked: 2019-08-19 vvv
+#: last_checked: 2019-08-27 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: !20190319-20191220 vvv
 Persiusstr.	N 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -10361,7 +10366,7 @@ Lindower Str.	N 7745,15160 7929,15355
 #: XXX dieser Straßenabschnitt wird für die S21 in der Mitte unterbrochen, nachdem das neue Nordufer fertiggestellt ist
 #: by: http://weddingweiser.wordpress.com/2012/10/16/die-s-21-wird-gebaut-weddinger-strasen-werden-neu-gefuhrt/ (Projektplan)
 #: osm_watch: way id="701301673" version="1"
-#: last_checked: 2019-08-21
+#: last_checked: 2019-08-28
 #: check_frequency: 120d
 Tegeler Str. (Wedding)	N 7458,14643 7263,14873
 Tegeler Str. (Wedding)	N 7263,14873 7223,14914 7192,14976 7182,14998 7131,15109 7085,15226 6996,15319
@@ -11379,7 +11384,7 @@ Viechtacher Str.	N 19657,9666 19727,9672 19801,9680 19871,9680 19923,9682
 Eisensteiner Str.	N 19727,9672 19722,9483
 #: note: Privatstraße
 #: XXX wird hier noch ein verkehrsberuhigter Bereich ausgewiesen?
-#: osm_watch: way id="338124008" version="7"
+#: osm_watch: way id="338124008" version="8"
 #: priority: #C
 #: last_checked: 2019-07-03
 #: check_frequency: 120d
@@ -12003,12 +12008,6 @@ Rolandufer	NN 10945,12150 10821,12153
 Rolandufer	NN 10821,12153 10660,12176 10591,12203 10583,12206
 Spreeufer	NN 10583,12206 10492,12289 10417,12378 10416,12394
 Klosterstr. (Mitte)	N 10945,12150 10946,12241 10952,12401 10878,12560
-#: by: https://www.berliner-woche.de/mitte/c-bauen/platanen-vor-altem-stadthaus-gefaellt-neupflanzungen-geplant_a199237
-#: by: http://www.abendblatt-berlin.de/2019/02/14/archaeologische-funde-am-molkenmarkt/ (Juli 2019)
-#: by: https://www.berliner-woche.de/mitte/c-bauen/landesdenkmalamt-bietet-grabungsfuehrungen-am-muehlendamm-an_a204544 (Start im Sommer 2019, Dauer mehrere Jahre)
-#: XXX Ausgrabungen beginnen hier bald; wird dann die Verbindung gesperrt sein?
-#: last_checked: 2019-08-21 (Bauzaun mit schmalem Durchlass steht schon)
-#: check_frequency: 7d
 (Molkenmarkt - Parochialstr.)	NN 10738,12364 10831,12371
 Parochialstr.	N 10831,12371 10952,12401 11040,12415
 Waisenstr.	N 11017,12487 11032,12439 11040,12415 11049,12386 11094,12243
@@ -13630,7 +13629,7 @@ Maiglöckchenstr.	N 14042,14249 14124,14227 14217,14206 14361,14145
 Otto-Marquardt-Str.	N 14954,14119 14888,14280 14825,14264 14754,14406
 (Zur Revierförsterei)	NN 28660,542 28538,452 28516,415 28521,300 28523,258
 (Revierförsterei - Hegemeisterweg)	NN 28523,258 28566,-205
-(An der Krampe)	NN 28523,258 28450,242 28391,305 28303,309 28286,283 28282,203 28248,100 28241,17 28213,-45 28206,-258 28143,-335 28107,-336 28043,-380 27978,-473 27847,-665 27811,-708 27759,-995 27727,-1078 27779,-1212 27786,-1276 27746,-1350 27759,-1372 27765,-1654 27695,-2161 27718,-2301 27932,-2444 27985,-2389 28144,-2262 28116,-2127 28163,-2013
+(An der Krampe)	NN 28523,258 28450,242 28391,305 28303,309 28286,283 28282,203 28248,100 28241,17 28217,-28 28206,-258 28156,-315 28096,-345 28043,-380 27978,-473 27847,-665 27811,-708 27773,-975 27725,-1064 27779,-1212 27786,-1276 27746,-1350 27759,-1372 27765,-1654 27695,-2161 27718,-2301 27932,-2444 27985,-2389 28144,-2262 28116,-2127 28163,-2013
 (Am Seddinsee)	NN 28163,-2013 28338,-2265 28443,-2317 28527,-2347 28568,-2346 28742,-2264 28892,-1955 28862,-1816 28887,-1795 28935,-1819 28957,-1810 28958,-1779 28999,-1784 29149,-1742 29162,-1704 29229,-1676 29204,-1545 29334,-1343 29475,-1275 29602,-1051 30028,-891 30125,-734 30218,-529 30421,-424 30570,-351 30778,-326
 (Zum Seddinsee)	NN 30869,-5 30857,-60 30803,-147 30778,-326
 Gründerstr. (Bohnsdorf, Grünau)	N 22536,225 22298,494 22251,574 22120,886
@@ -15858,6 +15857,8 @@ Ernst-Grube-Str.	N 21364,5430 21363,5336 21362,5289 21358,5259 21345,5157 21343,
 (Spreeuferweg)	NN 21090,5417 21085,5451 20827,5431
 (KGA Am Freibad Oberspree)	NN 20827,5431 20829,5418 20849,5266 20851,5255
 (KGA Am Freibad Oberspree - Bruno-Bürgel-Weg)	N 20851,5255 20782,5257
+(zum Spreeufer)	NN 20473,5436 20480,5445 20512,5492 20525,5513
+(am Spreeufer)	NN 20512,5492 20582,5466 20724,5439 20827,5431
 Gloriastr.	N 21306,4876 21272,4889 21194,4996 21155,5061
 Gloriastr.	NN 21155,5061 21147,5081
 Spinnpfad	N 21194,4996 21203,5054
@@ -15871,6 +15872,8 @@ Färberstr.	NN 21607,4850 21622,4884 21649,4946 21662,4974
 Färberstr. [Wohngebiet]	N 21622,4884 21591,4902 21631,4991 21643,5020 21665,5035
 (Färberstr. - Uferweg Richtung Westen)	NN 21662,4974 21670,4997 21665,5035 21696,5053
 (Färberstr. - Uferweg Richtung Osten)	NN 21662,4974 21740,5004
+#: note: Privatstraße (laut Amtsblatt)
+Carl-Spindler-Str.	N 21442,5414 21482,5388 21489,5372 21519,5305 21547,5245 21408,5178 21345,5157
 Eiselenweg	N 21206,5420 21364,5430 21442,5414
 (Eiselenweg - Uferweg)	NN 21442,5414 21476,5434
 Gutenbergstr. (Köpenick)	N 21848,4882 21903,4848 21789,4520
@@ -16654,8 +16657,8 @@ Miquelstr.	N 3077,6375 3020,6450 2875,6648 2854,6675 2714,6857 2576,7026 2441,71
 Bernadottestr.	N 3020,6450 2935,6448 2875,6485 2793,6593 2711,6698 2465,6984 2360,7107 2197,7279 2038,7484 1967,7561 1946,7580 1930,7594 1749,7800 1709,7848
 Pechüler Pfad	NN 2793,6593 2875,6648
 Pechüler Pfad	NN 2854,6675 2953,6743
-Sodener Str.	N 3688,7093 3703,7324 3710,7562
-Rudolf-Mosse-Str.	N 3634,7601 3710,7562 3744,7551
+Sodener Str.	N 3688,7093 3703,7324 3718,7576
+Rudolf-Mosse-Str.	N 3634,7601 3718,7576 3813,7560
 Norderneyer Str.	N 3582,6964 3585,7028 3591,7128 3594,7191
 Sylter Str. (Wilmersdorf)	N 3591,7128 3509,7145 3403,7172 3308,7193
 Harlinger Str.	N 3403,7172 3382,7074
@@ -16667,7 +16670,7 @@ Doberaner Str. (Schmargendorf)	N 2731,7247 2827,7246
 Doberaner Str. (Schmargendorf)	N 2881,7225 2911,7153
 Saßnitzer Str.	N 2831,7378 2827,7257 2827,7246 2827,7228
 Hohmannstr.	N 3208,7328 3168,7341
-Franz-Cornelsen-Weg	NN 3594,7191 3596,7199 3612,7335 3634,7601
+Franz-Cornelsen-Weg	NN 3594,7191 3596,7199 3612,7335 3619,7587
 (Zur Dillenburger Str.)	N 3981,6850 3944,6901 3910,6949 3784,6985
 Reichshofer Str.	N 1659,4297 1692,4358 1724,4461 1746,4600 1712,4648 1722,4701
 Hüninger Str.	N 1987,3888 2003,3967 2019,4027 2039,4128 2047,4162 2054,4190 2079,4299 2148,4405
@@ -16864,9 +16867,9 @@ Delmer Steig	N 12011,1361 11954,1407 11922,1445 11895,1489
 Delmer Steig	NN 11895,1489 11865,1564
 Geßlerstr.	N 8006,8887 7973,8886 7791,8882
 Brunhildstr.	N 7790,8913 7707,8915 7604,8927
-(Bad Kissingen)	NN 3634,7601 3652,7795
-(Kolonieweg a. d. Forkenbeckstr.)	NN 3218,8233 3230,8194 3635,8099 3709,8082 3753,8073 3779,8105
-Claire-Waldoff-Weg	NN 3635,8099 3587,7560
+(Bad Kissingen)	NN 3596,7566 3609,7842
+(Kolonieweg a. d. Forkenbeckstr.)	NN 3218,8233 3230,8221 3584,8136 3756,8101 3779,8105
+Claire-Waldoff-Weg	NN 3584,8136 3571,8085 3538,7515
 (Ihnestr. - Clayallee)	NN 1450,4766 1730,4743 1870,4738 1981,4746 2027,4792
 (Lützelsteiner Weg - Reichshofer Str.)	NN 1667,4664 1674,4661 1698,4653 1712,4648
 Colmarer Weg	NN 1847,3620 1918,3511 1977,3414
@@ -17446,7 +17449,7 @@ Graunstr.	N 9844,15755 9907,15618 9996,15400 10018,15211
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.812066.php
 #: XXX Wie werden die Wege nach den Bauarbeiten aussehen? Wird es auch einen neuen (asphaltierten?) Radweg zwischen Bernauer und Gleimtunnel geben?
 #: osm_watch: way id="233994265" version="5"
-#: osm_watch: way id="30539724" version="9"
+#: osm_watch: way id="30539724" version="10"
 #: last_checked: 2019-08-16
 #: check_frequency: 60d
 (Lortzingstr. - Mauerpark)	NN 10046,15421 10044,15429 10046,15430 10059,15443 10070,15471 10090,15482 10120,15484 10150,15471

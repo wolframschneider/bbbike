@@ -1036,13 +1036,14 @@ EOF
 	q4 49039,44131 49691,43812
 EOF
      },
-     { from  => $isodate2epoch->("2018-09-21 00:00:00"), # 1 Tag Vorlauf # 1096578452, # 2004-09-30 23:07
-       until => $isodate2epoch->("2018-10-08 06:00:00"), # 1096862400, # 2004-10-04 06:00
+     { from  => $isodate2epoch->("2019-10-01 00:00:00"),
+       until => $isodate2epoch->("2019-10-05 06:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 29, months => 9]],
-       text  => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt (22.09.2018 bis 08.10.2018)',
+       text  => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt, vor und nach dem 3. Oktober 2019',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: https://www.berlin.de/events/2716319-2229501-tag-der-deutschen-einheit-am-brandenburg.html
 #: source_id: LMS-BR_r_LMS-BR_147349_LMS-BR_72
 	2 8055,12186 8089,12190 8214,12205
 	2 8214,12205 8303,12216 8344,12221 8538,12245
@@ -2224,7 +2225,7 @@ EOF
        text  => 'L 30; (Woltersdorfer Landstr.); OD Erkner Grundhafter Straßenbau Vollsperrung 08.07.2005-09.07.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 34261,3092 34258,3138 34268,3204 34291,3314 34315,3429 34359,3631 34403,3857 34486,4276
+	q4 34261,3092 34258,3138 34268,3204 34291,3314 34315,3429 34359,3631 34379,3732 34392,3801 34403,3857 34486,4276
 EOF
      },
      { from  => 1118872800, # 2005-06-16 00:00
@@ -3463,7 +3464,7 @@ EOF
        text  => 'K 6419 zw. Rehfelde, R.-Luxemburg-Str. u. OE Strausberg Straßen-,Geh- u. Radwegbau Vollsperrung 26.09.2005-23.12.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 42578,15750 42300,15756
+	2 42578,15750 42521,15751 42300,15756
 EOF
      },
      { from  => 1131490800, # 2005-11-09 00:00
@@ -4091,7 +4092,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2::inwork 42996,14793 42578,15750
-	2::inwork 42578,15750 42300,15756
+	2::inwork 42578,15750 42521,15751 42300,15756
 	2::inwork 41681,15915 42300,15756
 EOF
      },
@@ -4133,8 +4134,8 @@ EOF
        text  => 'B 001 zw. Abzw. Hennickendorf und Tasdorf Deckeneinbau Vollsperrung 22.04.2006-24.04.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 36874,10046 37154,10022
-	2 37154,10022 37670,9871
+	2 36753,10009 36849,9996 36994,10003 37133,9978
+	2 37133,9978 37621,9843
 EOF
      },
      { from  => 1144274400, # 2006-04-06 00:00
@@ -5294,7 +5295,7 @@ EOF
        text  => 'L 362 Müncheberg-Wulkow OD Obersdorf Kanal- u. Straßenbau Vollsperrung 19.07.2006-30.07.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 62416,15883 62294,16249 62099,16389
+	q4::inwork 62396,15902 62294,16249 62099,16389
 EOF
      },
      { from  => 1156370400, # 2006-08-24 00:00
@@ -6172,7 +6173,7 @@ EOF
        text  => 'K 6417 Garzin - Garzau Abzwg. Agrargenossenschaft Deckenschluss Vollsperrung 06.10.2006-09.10.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 47968,14759 49278,15634
+	2::inwork 47968,14759 49201,15583 49278,15634
 EOF
      },
      { from  => 1159135200, # 2006-09-25 00:00
@@ -7686,7 +7687,7 @@ EOF
        text  => 'L 030 Ethel-und-Julius-Rosenberg-Str. OD Woltersdorf Straßenbau, Entwässerung Vollsperrung 10.04.2007-29.06.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34521,5351 34532,5208 34510,4849 34549,4551
+	q4::inwork 34521,5351 34532,5208 34510,4849 34545,4585 34549,4551
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -10723,7 +10724,7 @@ EOF
        text  => 'K 6419 Ernst-Thälmann-Str. OD Rehfelde, zw. Bahnhofstr. und Lindenstr. Straßenbauarbeiten Vollsperrung 04.12.2007-21.12.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 45856,14437 44121,14615
+	q4::inwork 45856,14437 45349,14512 45145,14492 44106,14616
 EOF
      },
      { from  => 1210543200, # 2008-05-12 00:00
@@ -11349,7 +11350,7 @@ EOF
        text  => 'L 233 Berliner Str. OD Hennickendorf Böschungssanierung Vollsperrung 20.05.2008-31.08.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 38574,10226 39548,11243 39824,11264
+	q4::inwork 38546,10223 38808,10458 39310,11034 39563,11244 39813,11268
 EOF
      },
      { from  => 1207421155, # 2008-04-05 20:45
@@ -11668,7 +11669,7 @@ EOF
        text  => 'L 023 Hennickendorfer Chaussee OL Strausberg, Bahnübergang Gleisarbeiten Vollsperrung 24.05.2008-25.05.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 39721,13668 40248,14503 40266,14531
+	2::inwork 39721,13668 39791,13780 40259,14530 40272,14553
 EOF
      },
      { from  => 1238277600, # 2009-03-28 23:00
@@ -11684,7 +11685,7 @@ EOF
        text  => 'L 030 Ethel-und-Julius-Rosenberg-Str. OD Woltersdorf, ab A.-Bebel-Str. in Ri. Erkner Straßenbau, Entwässerung Vollsperrung 21.05.2008-30.06.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34510,4849 34549,4551
+	q4::inwork 34510,4849 34545,4585 34549,4551
 EOF
      },
      { from  => 1213736980, # 2008-06-17 23:09
@@ -12378,7 +12379,7 @@ EOF
        text  => 'L 362 Müncheberg - Wulkow OL Wulkow Instandsetzung Durchlass Vollsperrung 11.08.2008-25.08.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 66171,19651 66523,19497
+	q4::inwork 66192,19534 66523,19497
 EOF
      },
      { from  => 1219788000, # 2008-08-27 00:00
@@ -18028,7 +18029,7 @@ EOF
        type  => 'handicap',
        source_id => '106401098',
        data  => <<EOF,
-	q4::inwork 45856,14437 44121,14615
+	q4::inwork 45856,14437 45349,14512 45145,14492 44106,14616
 EOF
      },
      { from  => 1276548087, # 2010-06-14 22:41
@@ -19103,7 +19104,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-F/11/022',
        data  => <<EOF,
-	2::inwork 74810,19707 74512,19946
+	2::inwork 74853,19668 74805,19750 74581,19862 74440,19984
 EOF
      },
      { from  => 1299925522, # 2011-03-12 11:25
@@ -19248,7 +19249,7 @@ EOF
        type  => 'handicap',
        source_id => '106401098',
        data  => <<EOF,
-	q4::inwork; 45856,14437 44121,14615
+	q4::inwork; 45856,14437 45349,14512 45145,14492 44106,14616
 EOF
      },
      { from  => 1304111111, # 2011-04-29 23:05
@@ -21353,14 +21354,14 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef,
+       until => 1566712261, # Fähre außer Betrieb --- undef,
        recurring => 1,
        text  => 'Karniner Fähre: fährt nur von Anfang Mai bis Ende September',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX_prog temporäre Lösung für saisonale Fähren vvv
 #: tempex: 20170414-20170417 T12, 20170429-20170909 T11-T17, 20170910-20171003 T11-T14
-	2::temp 38674,160390 37644,160344 38049,160420 38325,160573
+#	2::temp 38674,160390 37644,160344 38049,160420 38325,160573
 #: XXX_prog ^^^
 EOF
      },
@@ -23794,7 +23795,7 @@ EOF
        source_id => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
        data  => <<EOF,
 #: source_id: IM_022377
-	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20435,5460 20740,5273 20782,5257
+	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20435,5460 20473,5436 20740,5273 20782,5257
 EOF
      },
      { from  => 1412481600, # 2014-10-05 06:00
@@ -26868,7 +26869,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-08-21 vvv
+#: last_checked: 2019-08-28 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27829,7 +27830,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-08-16
+#: last_checked: 2019-08-28
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28682,6 +28683,7 @@ EOF
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.783009.php
 #: by: http://www.abendblatt-berlin.de/2019/02/08/altstadt-koepenick-im-dauerstress/
 #: by: https://twitter.com/VIZ_Berlin/status/1093887988222906369
+#: source_id: 2147344699
 #: osm_watch: way id="25274116" version="19"
 #: osm_watch: way id="671101960" version="3"
 #: also_indoor: traffic (G,H)
@@ -28715,8 +28717,8 @@ EOF
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic (H,G)
 #: priority: #A
-#: last_checked: 2019-08-19 (fast fertig) vvv
-#: check_frequency: 2d vvv
+#: last_checked: 2019-08-30 (fast fertig) vvv
+#: check_frequency: 3d vvv
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
 #: check_frequency ^^^
@@ -28897,7 +28899,7 @@ EOF
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: add_fragezeichen: wann wird der Weg wieder offen sein?
 #: osm_watch: way id="8655276" version="17"
-#: last_checked: 2019-05-04
+#: last_checked: 2019-08-24
 #: check_frequency: 90d
 	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
 EOF
@@ -29229,11 +29231,11 @@ EOF
      },
      { from  => 1560636000, # 2019-06-16 00:00
        until => undef, # XXX
-       text  => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, ab 17. Juni 2019',
+       text  => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein Durchgang möglich, ab 17. Juni 2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-07-27
+#: last_checked: 2019-08-25
 	2::inwork 14567,10814 14352,10874
 EOF
      },
@@ -29327,8 +29329,8 @@ EOF
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/schlossbruecke/de/bau.shtml (bis zum IV. Quartal 2019)
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/brueckensanierung-dauert-laenger_a229102
 #: XXX die Bauarbeiten oben auf der Brücke wurden mittlerweile verlängert: bis zum 28.10.2019
-#: osm_watch: way id="72660098" version="4"
-#: last_checked: 2019-08-04
+#: osm_watch: way id="72660098" version="5"
+#: last_checked: 2019-08-22 (osm)
 	2::inwork 3231,12749 3332,12742
 EOF
      },
@@ -29621,7 +29623,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="11" brb
+#: osm_watch: way id="59994277" version="12" brb
 #: source_id: LS/721-F/18/135
 	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
 EOF
@@ -29656,7 +29658,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2019-08-31 18:00:00"), # undef, # XXX
+       until => 1566930336, # $isodate2epoch->("2019-08-31 18:00:00"), # undef, # XXX
        text  => 'Ortolfstr.: zwischen Wegedornstr. und Wolfmarsteig Fahrbahn gesperrt (geplatzte Wasserleitung), Radfahrer sollen absteigen, voraussichtlich bis Ende August 2019',
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_179534_LMS-BR_72',
@@ -29673,6 +29675,49 @@ EOF
        source_id => '197302254',
        data  => <<EOF,
 	2::inwork 51187,92090 50732,91744
+EOF
+     },
+     { from  => undef, # 
+       until => 1576882800, # 2019-12-21 00:00
+       text  => 'Torfhaus - Hennickendorf: Sperrung der Fahrbahn, auch für Radfahrer, möglicherweise bis zum 20.12.2019',
+       type  => 'gesperrt',
+       source_id => 'LS/721-F/17/002',
+       data  => <<EOF,
+#: source_id: LS/721-F/18/080
+#: XXX wird hier ein neuer Radweg gebaut?
+#: next_check: 2019-12-20
+	2::inwork 40363,12020 40362,12087 40565,12409
+EOF
+     },
+     { from  => 1566684000, # 2019-08-25 00:00
+       until => 1567109099, # 1569880799, # 2019-09-30 23:59
+       text  => 'Brüderstr.: zwischen Jägerstr. und Wörther Str. gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende September 2019 ',
+       type  => 'handicap',
+       source_id => '2147344700',
+       data  => <<EOF,
+	q4::inwork -3658,12854 -3451,12911
+EOF
+     },
+     { from  => undef, # 
+       until => 1570377600, # 2019-10-06 18:00
+       text  => 'Seelenbinderstr.: zwischen Bahnhofstr. und Puchanstr., Sperrung der Fahrbahn, Wasserrohrbruch, möglicherweise bis Oktober 2019',
+       type  => 'handicap',
+       source_id => 'LMS-BR_r_LMS-BR_180736_LMS-BR_72',
+       data  => <<EOF,
+#: XXX wann sind die Reparaturarbeiten beendet --- laut fritz vier bis sechs Wochen
+#: by: https://twitter.com/Neddy40586844/status/1167016431600492545
+#: next_check: 2019-10-06
+	q4::inwork 22513,5747 22292,5774
+EOF
+     },
+     { from  => 1567112731, # 2019-08-29 23:05
+       until => 1569794399, # 2019-09-29 23:59
+       text  => 'Brachvogelstr. und Mittenwalder Str.: Bauarbeiten an der Kreuzung Blücherstr., ggfs. absteigen, bis 29. September 2019',
+       type  => 'handicap',
+       source_id => '2147344606',
+       data  => <<EOF,
+#: next_check_id: BLUECHER-2019
+	q4::inwork 9982,9847 10006,9942 10029,9989
 EOF
      },
     );

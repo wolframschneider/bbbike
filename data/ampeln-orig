@@ -10,11 +10,13 @@
 # 
 #: note: Baustellenampel gilt auch für Radfahrer
 #: source_id: 2147344652 (bis Ende Oktober 2019)
+#: last_checked: 2019-08-27
+#: next_check: 2019-10-31
 #: valid: 20190822-20191031
 	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-08-19 vvv
+#: last_checked: 2019-08-30 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
 #: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28)
@@ -60,7 +62,7 @@
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
-#: last_checked: 2019-07-27
+#: last_checked: 2019-08-27
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -90,7 +92,7 @@
 #: XXX ^^^
 # 
 #: next_check_id: OBERBAUMBRUECKE-2019
-#: last_checked: 2019-08-22
+#: last_checked: 2019-08-30
 #: next_check: 2019-11-01
 #: valid: -20191101
 	F::inwork 13178,10623
@@ -1297,7 +1299,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 12846,7981
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel während der Bauarbeiten
-#: last_checked: 2019-07-31
+#: last_checked: 2019-08-30
 #: check_frequency: 90d
 	X::inwork 12794,8103
 	X 11154,14985
@@ -2564,7 +2566,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 14964,14123
 # 
 #: XXX Ampel wird auf die andere Seite der Paul-Junius-Str. verlegt
-#: last_checked: 2019-08-15
+#: last_checked: 2019-08-25 (mapillary)
 #: check_frequency: 14d
 	F 15074,12850
 # 
@@ -2785,7 +2787,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2019-07-30
+#: last_checked: 2019-08-26 (mapillary)
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
@@ -3252,7 +3254,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2019-08-22 vvv
+#: last_checked: 2019-08-27 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
@@ -3440,7 +3442,7 @@ geschlossen bei Bedarf	Zbr 27649,-11766
 	B 13528,-21855
 	B 16379,-29446
 # REMOVED ---	B 16827,-30948
-S-Bahn alle 20 Minuten, Regionalbahn halbstündlich	B 40248,14503
+S-Bahn alle 20 Minuten, Regionalbahn halbstündlich	B 40259,14530
 Bahn kommt ca. halbstündlich	B 43081,77252
 Bahn kommt ca. halbstündlich	B 41388,91325
 Bahn kommt ca. halbstündlich oder öfter	B 27139,37340
@@ -3802,7 +3804,8 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	B -13075,-51085
 	B -12441,-53091
 	B -7578,-70067
-	B 65831,15738
+	B 65818,15731
+	B 63553,15587
 	X 34359,2165
 	X 36334,2466
 #: note: Anforderungsampel
