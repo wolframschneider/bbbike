@@ -6278,11 +6278,11 @@ EOF
 	2::inwork 17729,8850 17879,8773 17929,8742 17997,8695 18009,8687 18086,8634 18151,8589
 EOF
      },
-     { from  => $isodate2epoch->("2018-10-05 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-10-07 23:59:59"),
+     { from  => $isodate2epoch->("2019-10-04 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-10-06 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 30, months => 9]],
-       text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 06.10.2018 bis 07.10.2018',
+       text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 05.10.2019 bis 06.10.2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.ms-event-agentur.com/seite22.html?date=20170325
@@ -27830,7 +27830,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-08-28
+#: last_checked: 2019-09-06
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28218,7 +28218,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-08-22 vvv
+#: last_checked: 2019-09-05 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
@@ -28709,7 +28709,7 @@ EOF
      },
      { from  => undef, # 
        until => $isodate2epoch->("2019-09-06 18:00:00"), # undef, # XXX
-       text  => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis voraussichtlich Anfang September 2019',
+       text  => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, Ende der Bauarbeiten am 6. September 2019',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (bis Anfang September 2019)
@@ -28718,10 +28718,10 @@ EOF
 #: also_indoor: traffic (H,G)
 #: priority: #A
 #: last_checked: 2019-08-30 (fast fertig) vvv
-#: check_frequency: 3d vvv
+#: next_check: 2019-09-06 vvv
 	q3::inwork 5633,9263 5627,9362 5618,9607
 	q3::inwork 5493,9367 5627,9362 5711,9357
-#: check_frequency ^^^
+#: next_check ^^^
 #: last_checked ^^^
 EOF
      },
@@ -29160,7 +29160,8 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (G)
-#: last_checked: 2019-08-18
+#: osm_watch: way id="137851979" version="6"
+#: last_checked: 2019-09-05
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 EOF
@@ -29235,7 +29236,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-08-25
+#: last_checked: 2019-08-31
 	2::inwork 14567,10814 14352,10874
 EOF
      },
@@ -29699,14 +29700,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1570377600, # 2019-10-06 18:00
+       until => 1567537981, # Radfahrer nicht (mehr?) betroffen --- 1570377600, # 2019-10-06 18:00
        text  => 'Seelenbinderstr.: zwischen Bahnhofstr. und Puchanstr., Sperrung der Fahrbahn, Wasserrohrbruch, möglicherweise bis Oktober 2019',
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_180736_LMS-BR_72',
        data  => <<EOF,
-#: XXX wann sind die Reparaturarbeiten beendet --- laut fritz vier bis sechs Wochen
 #: by: https://twitter.com/Neddy40586844/status/1167016431600492545
-#: next_check: 2019-10-06
+# REMOVED --- #: XXX wann sind die Reparaturarbeiten beendet --- laut fritz vier bis sechs Wochen --- #: next_check: 2019-10-06
 	q4::inwork 22513,5747 22292,5774
 EOF
      },
@@ -29718,6 +29718,27 @@ EOF
        data  => <<EOF,
 #: next_check_id: BLUECHER-2019
 	q4::inwork 9982,9847 10006,9942 10029,9989
+EOF
+     },
+     { from  => 1567116000, # 2019-08-30 00:00
+       until => 1567619443, # undef, # XXX
+       text  => 'Lindauer Str.: zwischen Starnberger Str. und Eisenacher Str., geplatzte Wasserleitung, Straße gesperrt, eventuell sind auch Radfahrer betroffen ',
+       type  => 'handicap',
+       source_id => 'LMS-BR_r_LMS-BR_181018_LMS-BR_72',
+       data  => <<EOF,
+# REMOVED --- #: XXX bis wann geht die Sperrung? --- #: next_check: 2019-09-10
+	q4::inwork 6743,9678 6649,9703
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Wriezener Park: einige Wege wegen Bauarbeiten gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: WRIEZENERPARK-2019
+#: last_checked: 2019-09-03
+#: check_frequency: 14d
+	2::inwork 13175,11649 13239,11567
 EOF
      },
     );

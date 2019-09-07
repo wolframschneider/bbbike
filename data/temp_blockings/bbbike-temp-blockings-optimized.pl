@@ -766,7 +766,28 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20170325
+	2::temp 7001,9291 7012,9222 7035,9161 7101,9027 7201,8870
+	2::temp 6945,9142 7035,9161
+	2::temp 6975,8944 7101,9027 7308,9163
+',
+         'from' => 1570179600,
+         'id' => 731,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 05.10.2019 bis 06.10.2019',
+         'type' => 'gesperrt',
+         'until' => 1570399199
+       },
        undef,
        undef,
        undef,
@@ -2483,7 +2504,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -4121,7 +4142,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-08-28
+#: last_checked: 2019-09-06
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4190,7 +4211,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-08-22 vvv
+#: last_checked: 2019-09-05 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
@@ -4351,25 +4372,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_160856_LMS-BR_72 (bis Anfang September 2019)
-#: by: https://www.berliner-woche.de/wilmersdorf/c-bauen/wasserrohr-unter-der-guentzelstrasse-wird-endlich-geflickt_a223000 (bis Ende Juli oder August 2019)
-#: note: laut fritz bis 16.08.2019
-#: also_indoor: traffic (H,G)
-#: priority: #A
-#: last_checked: 2019-08-30 (fast fertig) vvv
-#: check_frequency: 3d vvv
-	q3::inwork 5633,9263 5627,9362 5618,9607
-	q3::inwork 5493,9367 5627,9362 5711,9357
-#: check_frequency ^^^
-#: last_checked ^^^
-',
-         'from' => undef,
-         'id' => 3073,
-         'text' => 'Prinzregentenstr./Güntzelstr.: Bauarbeiten im Kreuzungsbereich, Sperrung der Fahrbahn, bis voraussichtlich Anfang September 2019',
-         'type' => 'handicap',
-         'until' => 1567785600
-       },
+       undef,
        {
          'data' => '#: also_indoor: traffic (H,G)
 #: osm_watch: way id="4597320" version="15"
@@ -4468,16 +4471,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '	2::inwork -2128,-17678 -2059,-17909
-',
-         'from' => 1555192800,
-         'id' => 3099,
-         'source_id' => '197200518-1',
-         'text' => 'Trebbin: Fahrbahnsanierung Brücke über den Neuen Graben bei Trebbin, Vollsperrung der K 7232, 15.04.2019 bis 31.08.2019',
-         'type' => 'gesperrt',
-         'until' => 1567288800
-       },
+       undef,
        undef,
        {
          'data' => '#: by: https://www.hansottotheater.de/spielplan/monatsplan/2019-06/?scrollTo=2019-06
@@ -4539,7 +4533,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: also_indoor: traffic (G)
-#: last_checked: 2019-08-18
+#: osm_watch: way id="137851979" version="6"
+#: last_checked: 2019-09-05
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 ',
@@ -4565,7 +4560,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-08-25
+#: last_checked: 2019-08-31
 	2::inwork 14567,10814 14352,10874
 ',
          'from' => 1560636000,
@@ -4858,19 +4853,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1576882800
        },
        undef,
-       {
-         'data' => '#: XXX wann sind die Reparaturarbeiten beendet --- laut fritz vier bis sechs Wochen
-#: by: https://twitter.com/Neddy40586844/status/1167016431600492545
-#: next_check: 2019-10-06
-	q4::inwork 22513,5747 22292,5774
-',
-         'from' => undef,
-         'id' => 3156,
-         'source_id' => 'LMS-BR_r_LMS-BR_180736_LMS-BR_72',
-         'text' => 'Seelenbinderstr.: zwischen Bahnhofstr. und Puchanstr., Sperrung der Fahrbahn, Wasserrohrbruch, möglicherweise bis Oktober 2019',
-         'type' => 'handicap',
-         'until' => 1570377600
-       },
+       undef,
        {
          'data' => '#: next_check_id: BLUECHER-2019
 	q4::inwork 9982,9847 10006,9942 10029,9989
@@ -4881,6 +4864,19 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Brachvogelstr. und Mittenwalder Str.: Bauarbeiten an der Kreuzung Blücherstr., ggfs. absteigen, bis 29. September 2019',
          'type' => 'handicap',
          'until' => 1569794399
+       },
+       undef,
+       {
+         'data' => '#: next_check_id: WRIEZENERPARK-2019
+#: last_checked: 2019-09-03
+#: check_frequency: 14d
+	2::inwork 13175,11649 13239,11567
+',
+         'from' => undef,
+         'id' => 3159,
+         'text' => 'Wriezener Park: einige Wege wegen Bauarbeiten gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );

@@ -104,7 +104,7 @@ Pannierstr.: Kopfsteinpflaster	Q2 12240,8964 12202,8895
 #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="155605273" version="5"
-#: last_checked: 2019-08-30
+#: last_checked: 2019-09-05
 #: check_frequency: 90d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -680,7 +680,7 @@ Helmerdingstr.: Asphalt	Q0 14442,11101 14468,11203
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.777623.php (Instandsetzung 2019)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_10_1501_1600_online.pdf (Straßenlandwidmung)
 #: XXX wird die Qualität nach den Bauarbeiten besser sein (z.B. Asphalt oder Verbundsteinpflaster)?
-#: last_checked: 2019-08-29
+#: last_checked: 2019-08-31
 Haasestr.: Kopfsteinpflaster	Q2 14328,11320 14286,11186
 # 
 Döringstr.: Verbundsteinpflaster	Q1 14400,11261 14357,11148
@@ -709,7 +709,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2019-08-30
+#: last_checked: 2019-09-03
 #: check_frequency: 90d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -877,7 +877,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist.")
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2019-08-07
+#: last_checked: 2019-09-06
 #: next_check: 2020-01-01
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -2194,8 +2194,8 @@ Erich-Weinert-Str.: Asphaltstreifen in der Mitte	Q0 10997,16280 11295,16199 1140
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/naechste-phase-der-sanierung-der-erich-weinert-strasse_a208558 (Bauzeit drei Monate, Einbahnstraße)
 #: priority: #B vvv
 #: XXX hier vermutlich später Bauarbeiten
-#: last_checked: 2019-08-06
-#: check_frequency: 120d
+#: last_checked: 2019-09-06
+#: check_frequency: 90d
 Erich-Weinert-Str.: Kopfsteinpflaster	Q2 11404,16140 11542,16070
 #: priority ^^^
 # 
@@ -7895,7 +7895,7 @@ Kaskelstr.: Asphalt	Q0 15251,11175 15090,11237 15058,11250
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6721
 # REMOVED (note wurde bearbeitet) --- #: osm_watch: note 1177573 1
 #: osm_watch: way id="35873435" version="7"
-#: last_checked: 2019-07-03
+#: last_checked: 2019-09-04
 #: check_frequency: 120d
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Asphalt mit einigen Schäden	Q1- 17210,11950 17201,11975 17137,11969 17035,11909 17022,11890
 Rüdersdorfer Str. [Rückseite]: Beton	Q0- 12923,12043 13014,11955 13040,11921 13088,11945 13050,11979 13014,11955
@@ -8598,7 +8598,7 @@ Jülicher Str.: Asphalt	Q0 9514,16603 9498,16480 9487,16395 9475,16307 9474,16297
 (Treptower Park): Asphalt	Q0 14955,9294 14898,9364 14889,9381 14879,9433
 (Treptower Park): Asphalt	Q0 15159,8934 15223,8893 15235,8841 15298,8781 15335,8714 15378,8668
 #: next_check_id: TREPTOWERPARK-2018
-#: last_checked: 2019-08-22 vvv
+#: last_checked: 2019-09-05 vvv
 # REMOVED: früher Asphalt Q0-
 (Treptower Park): unbefestigter Weg, teilweise grober Schotter	Q3+ 15335,8714 15254,8735 15036,8728 14949,8773 14918,8813 14854,8964
 (Treptower Park - Karpfenteichstr.): Asphalt	Q1 14918,8813 14883,8823
@@ -13883,7 +13883,7 @@ Marienstr. (Französisch Buchholz): Asphalt	Q0 11686,21058 12095,20832
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=4928 ("in Aussicht gestellt ... 2014/2015", "... 4 m breiten asphaltierten Geh- und Radweges")
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/buergerbeteiligung/fahrrat-protokoll-29-10-2015.pdf
 #: osm_watch: way id="42689070" version="7"
-#: last_checked: 2019-07-07
+#: last_checked: 2019-09-06
 #: check_frequency: 60d
 Orankeweg: Sandweg im Grünzug, mäßig bis gut	Q2+ 14936,15857 14769,15867 14695,15911 14609,15921
 #: confirmed_by: srt
@@ -25999,7 +25999,9 @@ Lesser-Ury-Weg: Asphalt und Kopfsteinpflasterabschnitte	Q1+ 7573,13149 7500,1328
 Claire-Waldoff-Promenade: Asphalt und Kopfsteinpflasterabschnitte	Q1+ 7433,13070 7356,13213 7287,13342
 Bahrfeldtstr.: Kopfsteinpflaster	Q2 14844,10088 14921,10047 14956,10028 14974,10018 15071,9967 15142,9931
 #: confirmed_by: srt vvv
-Fanny-Zobel-Str.: Asphalt	Q0 13936,10062 13975,10187 14049,10164 14008,10040
+Fanny-Zobel-Str.: Asphalt	Q0 13936,10062 13975,10187
+# REMOVED (Straße existiert nicht mehr) --- Fanny-Zobel-Str.: Asphalt	Q0 13975,10187 14049,10164
+Fanny-Zobel-Str.: Asphalt	Q0 14049,10164 14008,10040
 Fanny-Zobel-Str.: Asphalt	Q0 13975,10187 13899,10214
 #: confirmed_by ^^^
 (Hoffmannstr. - Puschkinallee): Verbundsteine	Q1 14077,10016 13999,9842
@@ -26757,6 +26759,9 @@ Sprengelstr. (Wilhelmstadt): Asphalt	Q0 -3887,12673 -4026,12720
 #: confirmed_by: srt
 Sprengelstr. (Wilhelmstadt): Gehwegplatten	Q1+ -4026,12720 -4119,12763
 #: confirmed_by: srt (östlicher Abschnitt)
+#: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9973 (Baubeginn war für 2020 geplant)
+#: XXX geplanter Umbau der Straße --- ändert sich an der Qualität etwas?
+#: next_check: 2020-06-01
 Betckestr.: Kopfsteinpflaster	Q2 -3635,12572 -3444,12580 -3252,12580 -3170,12603 -3142,12615 -3113,12549
 #: corrected_by: srt (Kopfsteinpflaster -> Asphalt)
 Franzstr. (Wilhelmstadt): Asphalt	Q0 -3637,12668 -3446,12728 -3275,12769
@@ -28174,4 +28179,7 @@ Kreuzungsbereich asphaltiert	Q0 5390,6299
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 8236,16071
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 8270,16047
 #: by ^^^
+Kreuzungsbereich asphaltiert	Q0 17248,11317
+Kreuzungsbereich asphaltiert	Q0 17155,11348
+Kreuzungsbereich asphaltiert	Q0 11295,16199
 #: ignore ^^^

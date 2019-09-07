@@ -2179,12 +2179,12 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/a100-baustelle-grenzallee-wieder-offen_a198400
 #: source_id: 2147343691
 #: XXX bis Ende 2022
-#: last_checked: 2019-08-05
+#: last_checked: 2019-09-05
 #: next_check: 2019-12-31
 (provisorische Umfahrung)	NN 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2019-08-05 vvv
+#: last_checked: 2019-09-05 vvv
 #: check_frequency: 30d vvv
 #: valid: 20140224-20191231
 Neuköllnische Allee	H 14344,7003 14567,6810 14724,6668
@@ -2338,7 +2338,7 @@ Straße 12 (Neukölln)	N 13883,6682 13881,6634 13915,6592
 (Grenzallee - Britzer Hafensteg)	NN 13881,6634 13831,6588 13857,6523 13864,6415 13984,6270 13993,6221
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
-#: last_checked: 2019-07-31 vvv
+#: last_checked: 2019-09-05 vvv
 #: next_check: 2019-12-31 vvv
 #: valid: 20140224-20191231
 Naumburger Str.	H 13278,6967 13520,6583
@@ -3488,12 +3488,7 @@ Priesterweg (Schöneberg)	N 7226,7622 7227,7676 7310,7818
 (südliche Fahrbahn des Sachsendamms - Hans-Baluschek-Park)	NN 7696,7562 7739,7531 7708,7539 7747,7521
 (Hans-Baluschek-Park)	NN 7252,6080 7278,6101 7305,6183 7393,6452 7605,7109 7707,7415 7733,7483 7747,7521
 # 
-#: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/bruecke-ueber-den-stadtring-benannt_a207052
-#: by: https://www.spd-fraktion-tempelhof-schoeneberg.de/meldungen/bruecke-ueber-den-stadtring-benannt/
-#: XXX Name "Am Bahnhof Südkreuz" --- wann wird dieser Name offiziell (Amtsblatt?) und der Weg ausgeschildert?
-#: osm_watch: way id="27730726" version="16"
-#: last_checked: 2019-06-19
-#: check_frequency: 90d
+# REMOVED --- #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/bruecke-ueber-den-stadtring-benannt_a207052 --- #: by: https://www.spd-fraktion-tempelhof-schoeneberg.de/meldungen/bruecke-ueber-den-stadtring-benannt/ --- #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6904 (hier wird vermutlich keine Umbenennung passieren) --- #: XXX Name "Am Bahnhof Südkreuz" --- wann wird dieser Name offiziell (Amtsblatt?) und der Weg ausgeschildert? --- #: osm_watch: way id="27730726" version="16" --- #: last_checked: 2019-06-19 --- #: check_frequency: 90d
 (Hans-Baluschek-Park - Südkreuz)	NN 7747,7521 7757,7563 7789,7692 7792,7704 7789,7718 7774,7724
 # 
 (Hans-Baluschek-Park - Schöneberger Südgelände, Fußgängerbrücke)	NN 7605,7109 7621,7105 7655,7096 7666,7093
@@ -4349,6 +4344,7 @@ Wodanstr. (Französisch Buchholz)	N 12216,21945 12162,21743
 #: by: https://ausschreibungen-deutschland.de/511848_Ersatzneubau_der_Fussgaengerbruecke_KoenigsteinbrueckeReferenznummer_der_Bekanntmachung_2019_Berlin (Ausschreibung bis 2. April 2019, Bindefrist 16.7.2019)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/gremien/beiraete/bestaetigtes-protokoll-fahrrat-04-12-2018.pdf (Dauer 19 Monate)
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a114/de/ve05.shtml (Beginn der Bauarbeiten voraussichtlich im August 2019)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5312
 #: XXX erste Planung: Sperrung in der Zeit vom 24. November 2017 bis zum 30. Mai 2019 (wurde nicht eingehalten)
 #: osm_watch: way id="16307526" version="13"
 #: also_indoor: search Königsteinbrücke
@@ -4430,7 +4426,9 @@ Paulstr.	H 7031,12320 7051,12426 7077,12575 7085,12610 7111,12743 7172,13051
 Scheidemannstr.	H 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
 (Vorfahrt Reichstagsgebäude)	NN 8400,12417 8399,12610
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.833375.php ("Tiergartenzaun" wird eingerichtet, ab September 2019)
-#: XXX wird es durch den Tiergartenzaun zu Einschränkungen kommen?
+#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.844330.php ("Tiergartenband", ab KW 37/2019)
+#: XXX wird es durch den Tiergartenzaun zu Einschränkungen kommen? --- vermutlich ja, kein Radverkehr mehr möglich
+#: priority: #A
 #: last_checked: 2019-08-28
 #: next_check: 2019-09-09
 (Wiese vor dem Reichstag)	NN 8373,12416 8369,12609
@@ -5477,10 +5475,11 @@ Cajamarcaplatz	NN 17728,5756 17713,5728 17730,5698 17782,5698
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.838064.php
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.838345.php (Erst Ende August 2019)
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/aufzuege-bleiben-ausser-betrieb_a228484
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.843618.php (neue Aufzüge werden Mitte September 2019 in Betrieb genommen)
 #: osm_watch: way id="226163591" version="3"
 #: priority: #C
 #: last_checked: 2019-03-30
-#: next_check: 2019-08-31
+#: next_check: 2019-09-15
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle)	NN 17639,5612 17675,5521
 (Friedrich-List-Str. - KGA An der Südostallee)	NN 17459,5634 17480,5666
 #: note: Anlieger dürfen hier auch fahren, max. 10km/h
@@ -12103,6 +12102,10 @@ Lea-Grundig-Str.	N 20832,15981 20843,16007 20870,16024 20945,16136 21001,16159 2
 (Lea-Grundig-Str. - Radweg/Straßenbahnübergang)	NN 21349,16687 21321,16696
 Karl-Holtz-Str.	N 21361,16377 21381,16418 21429,16513 21460,16572 21491,16631
 Karl-Holtz-Str. [Stichstraße]	N 21381,16418 21433,16396 21496,16384
+#: next_check_id: KARLHOLTZ-2019
+#: XXX bleibt dieser Durchgang während der Bauarbeiten und danach erhalten?
+#: osm_watch: way id="191362760" version="4"
+#: next_check: 2019-10-01
 (Blumberger Damm - Karl-Holtz-Str.)	NN 21574,16547 21460,16572
 Havemannstr.	NH 21251,18508 21446,18405 21520,18367 21684,18283 21843,18198 21854,18192 22065,18087 22139,18050 22217,17989 22314,17916
 Havemannstr.	N 21662,18252 21644,18274 21507,18343
@@ -13018,7 +13021,7 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED (nein, keine Schilder) --- #: XXX als Bergiusstr. ausgeschildert? --- #: next_check: 2013-09-04
 (Zufahrt zur A100 und Bergiusstr.)	H 14051,6731 14106,6663
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2019-08-05 vvv
+#: last_checked: 2019-09-05 vvv
 #: check_frequency: 30d vvv
 #: valid: 20140224-20191231
 Bergiusstr.	H 14106,6663 14193,6556 14366,6337
@@ -13030,7 +13033,7 @@ Bergiusstr.	N 14106,6663 14193,6556 14366,6337
 Bergiusstr.	N 14366,6337 14396,6298 14398,6184
 Willstätterstr.	N 14193,6556 14306,6651
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2019-08-05 vvv
+#: last_checked: 2019-09-05 vvv
 #: check_frequency: 30d vvv
 #: valid: 20140224-20191231
 Haberstr.	H 14366,6337 14564,6496 14639,6577 14724,6668
@@ -17258,7 +17261,9 @@ Claire-Waldoff-Promenade	N 7433,13070 7356,13213 7287,13342
 Bahrfeldtstr.	N 14844,10088 14921,10047 14956,10028 14974,10018 15071,9967 15142,9931
 (Bahrfeldtstr. - Fischzug)	N 14921,10047 14969,10138 14993,10188
 Jollenseglerstr.	N 14921,10047 14879,9961
-Fanny-Zobel-Str.	N 13936,10062 13975,10187 14049,10164 14008,10040
+Fanny-Zobel-Str.	N 13936,10062 13975,10187
+# REMOVED (Straße existiert nicht mehr) --- Fanny-Zobel-Str.	N 13975,10187 14049,10164
+Fanny-Zobel-Str.	N 14049,10164 14008,10040
 (Fanny-Zobel-Str., zur Eichenstr.)	N 13975,10187 13899,10214
 (Fanny-Zobel-Str. - Uferweg)	NN 14049,10164 14116,10149
 (Hoffmannstr. - Puschkinallee)	NN 14077,10016 13999,9842
