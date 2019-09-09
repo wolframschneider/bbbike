@@ -2555,6 +2555,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        {
          'data' => '#: note: allerdings keine Hinweise auf eine verbotene Durchfahrt gesehen
+#: note: nördliches Tor verschlossen, gesehen am 2019-09-07 (Sa)
 #: tempex: volatile vvv
 (Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936
 (Gewerbegebiet)	2 21685,2964 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
@@ -2563,7 +2564,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2101,
          'recurring' => 1,
-         'text' => 'Gewerbegebiet: Privatstraßen, u.U. Durchfahrt nicht gestattet',
+         'text' => 'Gewerbegebiet: Privatstraßen, u.U. Durchfahrt nicht gestattet, am Wochenende können die Tore geschlossen sein',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3884,7 +3885,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-08-15
+#: last_checked: 2019-09-03 (mapillary)
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -3954,7 +3955,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-08-28 vvv
+#: last_checked: 2019-09-08 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4313,18 +4314,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1577811600
        },
        undef,
-       {
-         'data' => '#: source_id: 2147343528 (bis Mitte September 2019)
-#: note: bei fritz in beiden Richtungen gesperrt?
-# REMOVED (sogar Autos dürfen in beide Richtungen fahren) ---	q3::inwork; 7263,14873 7458,14643
-	q3::inwork 7263,14873 7432,14969
-',
-         'from' => 1544338800,
-         'id' => 3060,
-         'text' => 'Lynarstr.: Fahrbahn an der Tegeler Str. gesperrt, auf Gehweg ausweichen, voraussichtlich bis Mitte September 2019',
-         'type' => 'handicap',
-         'until' => 1567872000
-       },
+       undef,
        {
          'data' => '#: note: bei fritz allerdings "nur eine freie Spur", keine Sperrungen
 #: source_id: 2147343527 (bis 10/2019)
@@ -4546,7 +4536,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: also_indoor: traffic
-#: last_checked: 2019-07-20
+#: last_checked: 2019-09-07
 	q4::inwork; 19266,1968 19564,1871
 ',
          'from' => undef,
@@ -4604,7 +4594,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/brueckensanierung-dauert-laenger_a229102
 #: XXX die Bauarbeiten oben auf der Brücke wurden mittlerweile verlängert: bis zum 28.10.2019
 #: osm_watch: way id="72660098" version="5"
-#: last_checked: 2019-08-22 (osm)
+#: priority: #A
+#: last_checked: 2019-09-08
+#: next_check: 2019-10-01
 	2::inwork 3231,12749 3332,12742
 ',
          'from' => 1561845600,
@@ -4730,12 +4722,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/friedenau/c-verkehr/regelung-des-fuss-und-radverkehrs-erst-nach-elf-tagen_a227446 (Änderungen)
 #: also_indoor: traffic
 #: XXX Wann werden die Bauarbeiten beendet? vvv
-#: last_checked: 2019-08-11 vvv
+#: last_checked: 2019-09-08 vvv
 #: note: hier gibt\'s mittlerweile auch Drängelgitter
 	q4::inwork 5636,7734 5630,7875
 # REMOVED ---	q3::inwork 5630,7875 5631,8011
-#: note: hier mittlerweile offizielle Wegführung auf dem Gehweg
-	q2::inwork 5630,7875 5517,7869
+# REMOVED (keine großen Einschräkungen) --- #: note: hier mittlerweile offizielle Wegführung auf dem Gehweg ---	q2::inwork 5630,7875 5517,7869
 #: last_checked ^^^
 #: XXX ^^^
 ',
@@ -4785,7 +4776,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="12" brb
+#: osm_watch: way id="59994277" version="16" brb
 #: source_id: LS/721-F/18/135
 	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
 ',
@@ -4804,7 +4795,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1567288800,
          'id' => 3149,
          'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.837476.php',
-         'text' => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, voraussichtlich vom 02.09.2019 bis 30.11.2019 ',
+         'text' => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis voraussichtlich 30.11.2019 ',
          'type' => 'gesperrt',
          'until' => 1575154800
        },

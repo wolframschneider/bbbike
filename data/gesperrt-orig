@@ -66,7 +66,7 @@ Wilhelplatz	1 -7064,584 -7081,483 -7122,439 -7180,378
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/es-geht-weiter-im-stadtumbauprogramm-schoeneberg-suedkreuz_a209476 (Umbau beginnt Mitte 2020)
 #: by: https://www.berliner-woche.de/bohnsdorf/c-verkehr/bundesstrasse-b-96a-erhaelt-neuen-querschnitt-und-wird-stadtstrasse_a224020 (Fertigstellung voraussichtlich II/2021)
 #: XXX außerdem Anlage von Radwegen, allerdings nicht benutzungspflichtig
-#: last_checked: 2019-07-27 (mapillary)
+#: last_checked: 2019-09-08
 #: next_check: 2021-05-01
 Tempelhofer Weg	1 7499,7880 7268,8008 7193,7950
 Alt-Mariendorf (Nord)	1 9732,3883 9831,3876 9953,3806
@@ -172,7 +172,7 @@ Petersburger Platz	1 13470,12990 13559,12779
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll-2-sitzung.pdf
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/verwaltung/aemter/ordnungsamt/strassenverkehr-parken/5-protokoll-fahr-rat.pdf
 #: osm_watch: way id="4490214" version="10"
-#: last_checked: 2019-06-11 (mapillary)
+#: last_checked: 2019-09-08
 #: check_frequency: 90d
 Dernburgstr.	1 2493,10675 2378,10677 2333,10710 2254,11051
 # 
@@ -422,7 +422,7 @@ Stiftsweg	1s:q3 11001,18528 11239,18832 11263,18842
 Bleicheroder Str.	1 11263,18842 11439,18890 11526,18929 11622,18964 11727,19001 11762,19014 11818,19089
 #: by: ^^^
 Renée-Sintenis-Platz	1 5642,7255 5664,7244 5675,7224 5661,7202 5641,7189 5621,7204 5614,7223 5624,7244 5642,7255
-Spreepark	2 16023,8860 16161,8852
+Spreepark	2 16028,8867 16161,8852
 #: by: Felix Schröder
 #: confirmed_by: srt
 Staakener Str.	1 -4149,14266 -4165,14245 -4390,14257
@@ -1141,7 +1141,7 @@ DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615
 Katharina-Boll-Dornberger-Str.	1 19086,3370 19073,3357 19033,3397 18987,3442 18998,3454 19013,3466 19057,3422 19097,3380 19086,3370
 #: XXX laut Maßnahme Gr.8 soll die Einbahnstraße hier aufgehoben werden (nur Prio=mittel, allerdings relativ einfach (?) zu realisieren)
 #: osm_watch: way id="151237878" version="7"
-#: last_checked: 2019-06-09
+#: last_checked: 2019-09-07
 #: check_frequency: 90d
 Tauchersteig	1 21879,2592 22011,2658 22047,2662 22058,2649
 #: note implizit?
@@ -1244,7 +1244,7 @@ Halenseestr.	2::igndisp 2086,10552 1961,10646 1928,10728
 Alexanderufer - Charité: Tor dauerhaft gesperrt	2 8362,13466 8369,13465 8377,13463
 # 
 Falkoniergasse: durch Tore abgesperrt	2 9939,12174 9909,12261
-Business Park BBI: dauerhaft gesperrt, Firmengelände	2 20038,-1474 20394,-1397
+Business Park BBI: dauerhaft gesperrt, Firmengelände	2 19717,-1549 20038,-1474 20394,-1397
 # 
 #: by: mapillary vvv
 Ferdinandstr.	1s:q4 5398,2422 5417,2383
@@ -1260,7 +1260,8 @@ Heinrichplatz	1 11734,10563 11754,10516
 (Frank-Schweitzer-Str. - Landsberger Allee)	1 19244,14980 19214,14966
 # 
 #: by: http://www.taz.de/!5516248/ (möglicherweise dauerhaft)
-#: last_checked: 2019-07-30
+#: confirmed_by: srt
+#: last_checked: 2019-09-08
 #: check_frequency: 180d
 Bhf. Südkreuz: Eingang gesperrt	2 7838,7848 7804,7783
 # 
@@ -1561,11 +1562,11 @@ Eichhornstr.	1s:q3 8232,11414 8253,11306 8280,11296
 #: add_fragezeichen: Ist die Einbahnstraße mittlerweile für Radfahrer offen? vvv
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_16_sitzung.pdf vvv
 #: osm_watch: way id="183614191" version="5"
-#: last_checked: 2019-08-04 (mapillary)
+#: last_checked: 2019-09-08
 #: check_frequency: 100d
 Ahornallee	1s:q3 1589,11483 1574,11379
 #: osm_watch: way id="24852084" version="9"
-#: last_checked: 2019-06-08
+#: last_checked: 2019-09-08
 #: check_frequency: 100d
 Lindenallee	1s:q3 1429,11528 1403,11428
 #: by: ^^^
@@ -1596,7 +1597,7 @@ Neue Bahnhofstr.	1s:q3 14908,11231 14918,11249
 #: by: https://www.berliner-woche.de/westend/c-verkehr/auch-wenn-es-nicht-so-aussieht-der-zob-umbau-laeuft-wie-geplant_a223429 (ZOB-Umbau bis 2022)
 #: add_fragezeichen: gibt es die Einbahnstraßenregelung in der Soorstr. noch?
 #: osm_watch: way id="4708164" version="15"
-#: last_checked: 2019-06-08
+#: last_checked: 2019-09-08
 #: check_frequency: 90d
 Soorstr.	1s:q3 1861,11284 1884,11126
 #
@@ -2717,7 +2718,7 @@ Pfosten (lichte Breite ca. 120cm)	BNP:0::trailer=5 18727,1040
 Pfosten (lichte Breite ca. 100cm)	BNP:0::trailer=5 21356,8267
 Pfosten (lichte Breite ca. 100cm)	BNP:0::trailer=5 21368,8285
 Drängelgitter	BNP:3::trailer=10 20564,18
-Drängelgitter	BNP:3::trailer=10 20412,-21
+Drängelgitter	BNP:3::trailer=10 20425,-17
 Drängelgitter	BNP:3::trailer=no 20345,398
 Drängelgitter	BNP:3::trailer=10 18059,14838
 Drängelgitter	BNP:3::trailer=10 18170,14890
@@ -3032,9 +3033,10 @@ Drängelgitter	BNP:3::trailer=10 67807,20954
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
 #: XXX wann werden die Straßen in der Wasserstadt Spindlersfeld eröffnet?
-#: last_checked: 2019-08-27
+#: last_checked: 2019-08-31 (mapillary)
 #: check_frequency: 90d
-Carl-Spindler-Str.: durch Bauzäune abgesperrt	2::inwork 21442,5414 21482,5388 21489,5372 21519,5305 21547,5245 21408,5178 21345,5157
+Carl-Spindler-Str.: durch Bauzäune abgesperrt	2::inwork 21442,5414 21482,5388 21489,5372 21519,5305 21547,5245 21408,5178
+# REMOVED (hier mittlerweile offen, siehe mapillary) --- Carl-Spindler-Str.: durch Bauzäune abgesperrt	2::inwork 21408,5178 21345,5157
 # 
 #: by: https://www.berliner-woche.de/mitte/c-bauen/platanen-vor-altem-stadthaus-gefaellt-neupflanzungen-geplant_a199237
 #: by: http://www.abendblatt-berlin.de/2019/02/14/archaeologische-funde-am-molkenmarkt/ (Juli 2019)
@@ -3063,7 +3065,7 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 # 
 #: next_check_id: YORCKSTRASSENBRUECKEN-2019
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.812400.php (Herrichtung im ersten Halbjahr 2020)
-#: osm_watch: way id="36395401" version="18"
+#: osm_watch: way id="36395401" version="19"
 #: last_checked: 2019-08-30
 #: next_check: 2020-04-01
 Yorckstraßenbrücke 10: wird saniert und dann wieder neu eingehängt	2::inwork 8339,9560 8338,9593
@@ -3135,17 +3137,10 @@ Mauswieselweg: durch Bauzäune abgesperrt	2::inwork 26570,12860 26503,12912 26421
 #: by: http://www.berlin.de/ba-treptow-koepenick/_assets/ba-beschluesse/wp-viii/151-17-strassenbenennung-privatstr-ortolfstrasse-50.pdf
 #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_09_1157_1272_online.pdf (Straßenbenennung)
 #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_21_2611_2726_online.pdf (Grundstücksnummerierungen)
-#: source_id: 2147342903
-#: osm_watch: way id="669537211" version="7"
-#: last_checked: 2019-07-20 vvv
-#: next_check: 2019-08-29 vvv
-Betulaweg: Bauarbeiten, gesperrt	2::inwork 19564,898 19316,951
-Rubusweg: Bauarbeiten, gesperrt	2::inwork 19551,868 19316,951
-#: osm_watch: way id="669795653" version="6"
-#: XXX culdesac-Einträge ggfs. entfernen
-#: XXX hier mittlerweile schon offen?
-Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997
-#: next_check ^^^
+# REMOVED (keine Bauarbeiten mehr) --- #: source_id: 2147342903 --- #: osm_watch: way id="669537211" version="7" --- #: last_checked: 2019-07-20 vvv --- #: next_check: 2019-08-29 vvv --- Betulaweg: Bauarbeiten, gesperrt	2::inwork 19564,898 19316,951 --- Rubusweg: Bauarbeiten, gesperrt	2::inwork 19551,868 19316,951 --- #: osm_watch: way id="669795653" version="6" --- #: XXX culdesac-Einträge ggfs. entfernen --- #: XXX hier mittlerweile schon offen? --- Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997 --- #: next_check ^^^ --- #: last_checked ^^^
+#: last_checked: 2019-09-07 vvv
+Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19272,838 19290,894 19316,951
+Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19316,951 19290,894 19272,838
 #: last_checked ^^^
 #: by: ^^^
 #: by: ^^^
@@ -3154,7 +3149,7 @@ Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910 vvv
 #: source_id: 2147344585 vvv
-#: last_checked: 2019-08-27 vvv
+#: last_checked: 2019-09-07 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:q4:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -3170,14 +3165,14 @@ Corinthstr.: Einbahnstraßenregelung	1s:q3:inwork 14608,10409 14447,10491
 # 
 #: XXX Wann wird die Straße eröffnet? Wie wird die Qualität sein? Wird diese Straße verkehrsberuhigt sein?
 #: osm_watch: way id="174182914" version="3"
-#: last_checked: 2019-07-20
+#: last_checked: 2019-09-07
 #: check_frequency: 90d
 Weidenkätzchenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21421,158 21447,47
 # 
 #: next_check_id: BUSCHWINDROESCHENWEG-2019
 #: XXX Wann wird die Straße eröffnet? Wie wird die Qualität sein? Wird diese Straße verkehrsberuhigt sein?
 #: osm_watch: way id="174182906" version="3"
-#: last_checked: 2019-07-20
+#: last_checked: 2019-09-07
 #: check_frequency: 90d
 Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21379,33
 # 
@@ -3191,14 +3186,11 @@ Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21
 #: check_frequency: 60d
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,8260
 # 
-#: next_check_id: NORD52-2019
-#: last_checked: 2019-04-20
-#: check_frequency: 90d
-Relingstr.: Bauarbeiten, gesperrt	2::inwork 22195,2390 22287,2431 22358,2460
+# REMOVED (nicht mehr) --- #: next_check_id: NORD52-2019 --- #: last_checked: 2019-04-20 --- #: check_frequency: 90d --- Relingstr.: Bauarbeiten, gesperrt	2::inwork 22195,2390 22287,2431 22358,2460
 # 
 #: next_check_id: NORD52-2019
 #: osm_watch: way id="663013125" version="5"
-#: last_checked: 2019-06-09
+#: last_checked: 2019-09-07
 #: check_frequency: 90d
 Gaffelsteig: Bauarbeiten, kann gesperrt sein	2::inwork 22287,2431 22221,2520
 # 
@@ -3333,8 +3325,8 @@ Heidelberger Str.: Baustelle, Einbahnstraße	1s:q3:inwork 13491,9201 13421,9260 1
 # 
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.789161.php (Richtfest im Herbst 2019)
 #: priority: #C
-#: last_checked: 2019-09-01
-#: next_check: 2019-10-01
+#: last_checked: 2019-09-07
+#: next_check: 2019-11-30
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
 # 
 #: XXX Wann sind die Bauarbeiten beendet?
@@ -3482,7 +3474,7 @@ Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -
 #: XXX (Geplanter) Projektabschluss laut dafmap: 2019-06-01
 #: osm_watch: way id="392904879" version="2" vvv
 #: osm_watch: way id="392904880" version="7" vvv
-#: last_checked: 2019-08-10 vvv
+#: last_checked: 2019-09-08 vvv
 #: check_frequency: 30d vvv
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5579,12231 5535,12206 5518,12159
 Gutenbergstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 5317,12242 5518,12159
@@ -3657,13 +3649,8 @@ Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 # REMOVED --- #: XXX man kann aber über die provisorische Baustraße von Süden aus in die gesperrten Straßen gelangen --- #: osm_watch: way id="287119368" version="8" --- #: XXX_osm laut osm (teilweise) nicht mehr gesperrt (stimmt aber nicht) --- #: osm_watch: way id="290220612" version="3" --- Regener Str.: fertiggestellt, aber noch gesperrt	2::inwork 19790,9478 19859,9473 19894,9470 19889,9400 19874,9151
 # REMOVED --- #: XXX_osm laut osm nicht mehr gesperrt (stimmt aber nicht) --- #: osm_watch: way id="193373966" version="6" --- Patersdorfer Str.: fertiggestellt, aber noch gesperrt	2::inwork 19626,9171 19764,9160 19874,9151
 # REMOVED --- #: osm_watch: way id="193373957" version="5" --- Teisnacher Str.: fertiggestellt, aber noch gesperrt	2::inwork 19871,9680 19859,9473
-# 
 # REMOVED (existiert nicht mehr, kein Ersatz) --- #: osm_watch: way id="269294892" version="2"
-#: osm_watch: way id="269294894" version="2"
-#: last_checked: 2018-05-06
-#: check_frequency: 360d
-BBI-Park: wegen Bauarbeiten gesperrt	2::inwork 20038,-1474 19717,-1549
-# 
+# REMOVED (dauerhaft?) --- #: osm_watch: way id="269294894" version="2" --- #: last_checked: 2018-05-06 --- #: check_frequency: 360d --- BBI-Park: wegen Bauarbeiten gesperrt	2::inwork 20038,-1474 19717,-1549
 # REMOVED --- #: by: http://www.dafmap.de/d/berlin.html?center=52.497318+13.462016&zoom=17# --- #: last_checked: 2017-11-19 --- #: next_check: 2017-12-18 --- am Osthafen: Bauarbeiten, gesperrt	2::inwork 14348,10266 14462,10206 14480,10157
 # REMOVED --- #: next_check_id: BND-2014 --- #: osm_watch: way id="129104626" version="5" --- #: osm_watch: node id="1975210030" version="4" --- # REMOVED (schon gemacht) --- : XXX culdesac-orig entfernen, sobald die Verlängerung erfolgt ist --- #: by: http://www.rbb-online.de/politik/beitrag/2014/07/bnd-zentrale-berlin-verzoegerung-vollstaendiger-umzug-bis-2017.html --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7441 --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2016/1767-2016-bav-zu-ds-2814-iv-durchwegung_scharnhorst-chaussestrasse_sb.pdf --- #: last_checked: 2017-09-04 --- Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: Durchfahrt noch nicht zuverlässig offen	2::inwork 8251,14337 8442,14456
 # REMOVED --- #: next_check_id: SCHINKELPLATZ-2014 vvv --- #: osm_watch: way id="305153174" version="1" --- #: last_checked: 2016-11-30 vvv --- #: check_frequency: 14d vvv
@@ -3688,7 +3675,7 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 #: source_id: LMS-BR_r_LMS-BR_44
 #: XXX_prog: ":inwork" kann als Attribut nicht genutzt werden! vvv
 #: XXX laut fritz bis 31.12.2019
-#: last_checked: 2019-09-06 vvv
+#: last_checked: 2019-09-08 vvv
 #: check_frequency: 60d vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::inwork 9984,12426 9934,12420 9858,12410
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
@@ -3782,7 +3769,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://cam01.berlinerschloss-webcam.de/
 #: by: https://www.tagesspiegel.de/berlin/nicht-mehr-2019-eroeffnung-des-humboldt-forums-wird-verschoben/24448118.html
 #: by: https://www.humboldtforum.org/de/inhalte/stand-der-baumassnahme-humboldt-forum-im-berliner-schloss (Eröffnung 2020)
-#: last_checked: 2019-07-30
+#: last_checked: 2019-09-08
 #: next_check: 2020-01-01
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 

@@ -12608,7 +12608,7 @@ EOF
        text  => 'L 029 Berliner Straße OL Oderberg in/aus Richtg. Liepe, Höhe Hausnr. 51-55 Kanalarbeiten Vollsperrung 06.09.2008-06.09.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 52671,51846 53187,51918
+	q4::inwork 52671,51846 53177,51933
 EOF
      },
      { from  => 1219874400, # 2008-08-28 00:00
@@ -17302,7 +17302,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014849',
        data  => <<EOF,
-	q4::inwork; 17142,3393 17194,3343 17274,3267 17525,3029 17741,2824 17894,2783
+	q4::inwork; 17142,3393 17194,3343 17274,3267 17525,3029 17741,2824 17850,2795 17894,2783
 EOF
      },
      { from  => 1260745200, # 2009-12-14 00:00
@@ -18333,11 +18333,12 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Gewerbegebiet: Privatstraßen, u.U. Durchfahrt nicht gestattet',
+       text  => 'Gewerbegebiet: Privatstraßen, u.U. Durchfahrt nicht gestattet, am Wochenende können die Tore geschlossen sein',
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
 #: note: allerdings keine Hinweise auf eine verbotene Durchfahrt gesehen
+#: note: nördliches Tor verschlossen, gesehen am 2019-09-07 (Sa)
 #: tempex: volatile vvv
 (Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936
 (Gewerbegebiet)	2 21685,2964 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
@@ -24874,7 +24875,7 @@ EOF
        source_id => 'IM_026452',
        data  => <<EOF,
 # REMOVED (hier keine Sperrung) ---	q4::inwork; 5527,5217 5416,5289 5397,5302 5382,5312
-	q4::inwork; 5382,5312 5268,5386 5183,5437 5088,5495
+	q4::inwork; 5382,5312 5256,5392 5183,5437 5088,5495
 EOF
      },
      { from  => undef, # 
@@ -26473,7 +26474,7 @@ EOF
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-08-15
+#: last_checked: 2019-09-03 (mapillary)
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -26869,7 +26870,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-08-28 vvv
+#: last_checked: 2019-09-08 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -29172,7 +29173,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic
-#: last_checked: 2019-07-20
+#: last_checked: 2019-09-07
 	q4::inwork; 19266,1968 19564,1871
 EOF
      },
@@ -29331,7 +29332,9 @@ EOF
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/brueckensanierung-dauert-laenger_a229102
 #: XXX die Bauarbeiten oben auf der Brücke wurden mittlerweile verlängert: bis zum 28.10.2019
 #: osm_watch: way id="72660098" version="5"
-#: last_checked: 2019-08-22 (osm)
+#: priority: #A
+#: last_checked: 2019-09-08
+#: next_check: 2019-10-01
 	2::inwork 3231,12749 3332,12742
 EOF
      },
@@ -29572,12 +29575,11 @@ EOF
 #: by: https://www.berliner-woche.de/friedenau/c-verkehr/regelung-des-fuss-und-radverkehrs-erst-nach-elf-tagen_a227446 (Änderungen)
 #: also_indoor: traffic
 #: XXX Wann werden die Bauarbeiten beendet? vvv
-#: last_checked: 2019-08-11 vvv
+#: last_checked: 2019-09-08 vvv
 #: note: hier gibt's mittlerweile auch Drängelgitter
 	q4::inwork 5636,7734 5630,7875
 # REMOVED ---	q3::inwork 5630,7875 5631,8011
-#: note: hier mittlerweile offizielle Wegführung auf dem Gehweg
-	q2::inwork 5630,7875 5517,7869
+# REMOVED (keine großen Einschräkungen) --- #: note: hier mittlerweile offizielle Wegführung auf dem Gehweg ---	q2::inwork 5630,7875 5517,7869
 #: last_checked ^^^
 #: XXX ^^^
 EOF
@@ -29624,14 +29626,14 @@ EOF
        data  => <<EOF,
 #: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="12" brb
+#: osm_watch: way id="59994277" version="16" brb
 #: source_id: LS/721-F/18/135
 	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
 EOF
      },
      { from  => 1567288800, # 2019-09-01 00:00
        until => 1575154800, # 2019-12-01 00:00
-       text  => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, voraussichtlich vom 02.09.2019 bis 30.11.2019 ',
+       text  => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis voraussichtlich 30.11.2019 ',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.837476.php',
        data  => <<EOF,
