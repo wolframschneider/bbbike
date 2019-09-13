@@ -27,7 +27,7 @@ use IPC::Run qw(run);
     if ($locale_encoding) {
 	for my $fh (
 		    \*STDOUT,
-		    # \*STDERR, # disabled because of https://rt.perl.org/Ticket/Display.html?id=123489
+		    ($locale_encoding =~ /utf-8/i || $] >= 5.029009 ? \*STDERR : ()), # disabled on non-utf-8 systems because of https://rt.perl.org/Ticket/Display.html?id=123489
 		    # STDIN not needed here
 		   ) {
 	    binmode $fh, ":encoding($locale_encoding)";
@@ -229,17 +229,6 @@ if ($method eq 'osm-file') {
 	    warn "ERROR: Cannot parse string '$_'";
 	}
     }
-
-    while(my($k,$v) = each %id_to_record) {
-	if (!$consumed{$k}) {
-	    warn "DELETED: could not find $k in osm data. Removed? If so, then look at $osm_url/browse/$k . Or forgotten brb marker?\n";
-	    $deleted_count++;
-	    if ($show_diffs) {
-		my($type, $id, $old_version) = @{$v}{qw(type id version)};
-		show_diff($type, $id, $old_version, -1);
-	    }
-	}
-    }
 } elsif ($method eq 'api') {
     my $p = XML::LibXML->new;
     for my $type_id (sort keys %id_to_record) {
@@ -250,6 +239,8 @@ if ($method eq 'osm-file') {
 	    my $root = $p->parse_string($resp->decoded_content)->documentElement;
 	    my $new_version = $root->findvalue('/osm/'.$type.'/@version');
 	    $handle_record->($type, $id, $new_version);
+	} elsif ($resp->code == 410) {
+	    # 410 Gone handled later --- it's not consumed, so it's deleted
 	} else {
 	    warn "ERROR: while fetching $url: " . $resp->status_line;
 	}
@@ -286,6 +277,17 @@ EOF
 
 } else {
     die "FATAL ERROR: Unknown method '$method', should not happen";
+}
+
+while(my($k,$v) = each %id_to_record) {
+    if (!$consumed{$k}) {
+	warn "DELETED: could not find $k in osm data. Removed? If so, then look at $osm_url/browse/$k . Or forgotten brb marker?\n";
+	$deleted_count++;
+	if ($show_diffs) {
+	    my($type, $id, $old_version) = @{$v}{qw(type id version)};
+	    show_diff($type, $id, $old_version, -1);
+	}
+    }
 }
 
 if ($changed_count || $deleted_count) {

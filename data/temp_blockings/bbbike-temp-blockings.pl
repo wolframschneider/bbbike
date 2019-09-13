@@ -26870,7 +26870,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-09-08 vvv
+#: last_checked: 2019-09-10 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27831,7 +27831,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-09-06
+#: last_checked: 2019-09-10
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28031,12 +28031,13 @@ EOF
 EOF
      },
      { from  => 1537297950, # 2018-09-18 21:12
-       until => 1553800802, # $isodate2epoch->("2019-03-30 18:00:00"), # 1543618799, # 2018-11-30 23:59
-       text  => 'Berliner Str.: Baustelle zwischen Mannheimer Str. und Brandenburgische Str./Blissestr., Fahrbahn Richtung Osten gesperrt, bis Ende März 2019',
+       until => 1568317865, # Radfahrer sind nicht betroffen --- $isodate2epoch->("2020-09-08 18:00:00"),
+       text  => 'Berliner Str.: Baustelle zwischen Mannheimer Str. und Brandenburgische Str./Blissestr., Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, bis September 2020',
        type  => 'handicap',
        source_id => '2147343219',
        data  => <<EOF,
-	q4::inwork; 4451,8874 4777,8870
+#: source_id: 2147344783
+	q4::inwork 4451,8874 4777,8870
 EOF
      },
      { from  => undef, # 
@@ -28591,11 +28592,11 @@ EOF
 EOF
      },
      { from  => 1544425200, # 2018-12-10 08:00
-       until => $isodate2epoch->("2019-10-30 18:00:00"), # 1561932000, # 2019-07-01 00:00
-       text  => 'Berliner Str.: Bauarbeiten zwischen Konstanzer Str. und Barstr., Fahrbahn Richtung Osten gesperrt, Radfahrer sind auch betroffen, bis Oktober 2019',
+       until => $isodate2epoch->("2019-11-29 18:00:00"), # 1561932000, # 2019-07-01 00:00
+       text  => 'Berliner Str.: Bauarbeiten zwischen Konstanzer Str. und Barstr., Fahrbahn Richtung Osten gesperrt, Radfahrer sind auch betroffen, bis Ende November 2019',
        type  => 'handicap',
        data  => <<EOF,
-#: note: bei fritz allerdings "nur eine freie Spur", keine Sperrungen
+#: note: laut fritz bis 29.11.2019
 #: source_id: 2147343527 (bis 10/2019)
 	q4::inwork; 3952,8980 4006,8967 4181,8933 4324,8899
 EOF
@@ -29393,6 +29394,7 @@ EOF
        source_id => 'https://www.berliner-woche.de/friedrichshain/c-verkehr/bvg-erneuert-tramgleise-an-der-boxhagener-strasse_a222487',
        data  => <<EOF,
 #: source_id: 2147344478 (nur bis Anfang September 2019)
+#: note: laut fritz bis 4.10.2019
 #: also_indoor: traffic
 # REMOVED --- #: XXX genauer anschauen! vvv --- #: priority: #A vvv --- #: next_check: 2019-07-15 vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -29496,7 +29498,7 @@ EOF
 EOF
      },
      { from  => 1563746400, # 2019-07-22 00:00
-       until => $isodate2epoch->("2019-09-11 18:00:00"),
+       until => $isodate2epoch->("2019-09-25 18:00:00"),
        text  => 'Johannisthaler Chaussee: zwischen Buckower Damm und Heideläuferweg Bauarbeiten, Fahrbahn Richtung Osten gesperrt, bis Mitte September 2019 ',
        type  => 'handicap',
        source_id => '2147344515',
@@ -29741,6 +29743,34 @@ EOF
 #: last_checked: 2019-09-03
 #: check_frequency: 14d
 	2::inwork 13175,11649 13239,11567
+EOF
+     },
+     { from  => 1568056573, # 2019-09-09 21:16
+       until => $isodate2epoch->("2019-09-20 18:00:00"),
+       text  => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, evtl. sind auch Radfahrer betroffen, bis 20.09.2019',
+       type  => 'gesperrt',
+       source_id => 'LMS-BR_r_LMS-BR_182020_LMS-BR_72',
+       data  => <<EOF,
+	2::inwork 25191,12343 25149,12266 25109,12196
+EOF
+     },
+     { from  => 1568498400, # 2019-09-15 00:00
+       until => 1570140000, # 2019-10-04 00:00
+       text  => 'Wolziger Zeile: Bahnübergang gesperrt, voraussichtlich vom 16.09.2019 bis zum 03.10.2019',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: Tsp 2019-09-10
+	2::inwork 10259,-2660 10365,-2603 10382,-2598
+EOF
+     },
+     { from  => 1568498400, # 2019-09-15 00:00
+       until => 1569276000, # 2019-09-24 00:00
+       text  => 'Lorenzstr.: Fahrbahnsanierung zwischen Lankwitzer Str. und Lange Str., Straße gesperrt, vom 16.09.2019 bis 23.09.2019',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.845761.php',
+       data  => <<EOF,
+#: XXX weitere Abschnitte folgen!
+	q4::inwork 5781,1936 5720,2081 5660,2219 5542,2491
 EOF
      },
     );

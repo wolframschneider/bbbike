@@ -232,7 +232,7 @@ Bei Börnicke: Qualität?	? 26930,28875 27084,29356
 Krummensee - Seefeld: Qualität?	? 30444,22044 30237,23202 29904,23151 29635,23562 29481,24246 29505,24363
 Krummensee - Werneuchen: Qualität?	? 30237,23202 31816,23512 31869,23830
 Werneuchen - Altlandsberg: Qualität? Ist hier auch asphaltiert?	? 32722,25286 32695,25270 32435,24545
-Werneuchen - Wesendahl: Qualität?	? 32829,25198 34215,24621 35610,24040 37250,23080 37588,22679
+Werneuchen - Wesendahl: Qualität im Abschnitt außerhalb von Werneuchen?	? 34906,24333 35610,24040 37250,23080 37588,22679
 Gamengrund - Tiefensee: Qualität?	? 40135,28824 40165,28951 40130,29073 40186,29180 40028,29703 39750,29812
 Gamensee - Tiefensee (südl.): Qualität?	? 40206,30002 40160,30018 40043,30084 39988,30216 39662,30500
 Gamensee - Tiefensee (nördl.): Qualität?	? 40302,30617 40191,30703 39469,30977 39362,31019
@@ -1037,6 +1037,8 @@ Friedrich-Meinecke-Weg: Ausgeschildert? Qualität? Nachts beleuchtet?	? 1802,5418
 # added from strassen
 Lüderitzstr. (Wurde die Umbenennung zu "Cornelius-Fredericks-Str." schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 6661,15921 6484,16085 6349,16213 6211,16343 6106,16433 6003,16521
 (Siedlung Roedernau) (Heißt diese Straße offiziell "Roedernau" (mit Straßenschildern)?)	? 6460,19734 6433,19749 6390,19770
+Petersallee (Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5426,16539 5533,16662
+Petersallee (Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5581,16708 5639,16768 5684,16815 5772,16919
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -1079,6 +1081,7 @@ Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 # added from qualitaet_s
 Artemisstr.: Asphalt ohne letzte Deckschicht (Sind die Bauarbeiten in der Artemisstr. beendet? Ist die Straße nun vollständig asphaltiert?)	? 4371,22234 4280,22383 4232,22458 4119,22634
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
+Püttbergeweg: Gehwegplatten/Asphalt (liegt hier mittlerweile nur noch Asphalt?)	? 31670,4365 31967,4381
 Patschkauer Weg: Kopfsteinpflaster (Ist das Kopfsteinpflaster im südlichen Abschnitt des Patschkauer Wegs eher mäßig oder eher schlecht?)	? 3132,4803 3344,4488
 (Mauerweg am Eiskeller): asphaltiert (ist dieser Abschnitt tatsächlich asphaltiert?)	? -7990,19888 -8266,19811 -8469,19845 -8494,19713 -8448,19710 -8521,19390 -8372,19402 -8272,19086 -8206,19007 -8011,19059
 Am Fort: schlechtes Kopfsteinpflaster (ist die Straße "Am Fort" auch im südlichen Abschnitt gepflastert?)	? -7948,12634 -7959,12439 -7967,12333 -7976,12217
