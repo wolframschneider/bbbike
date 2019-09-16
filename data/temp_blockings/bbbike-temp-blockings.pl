@@ -21107,7 +21107,7 @@ EOF
 # REMOVED --- #: tempex ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2019-09-13 06:00:00"),
+     { from  => $isodate2epoch->("2019-09-25 06:00:00"),
        until => $isodate2epoch->("2019-09-30 06:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 12, months => 9]],
@@ -24806,18 +24806,21 @@ EOF
 EOF
      },
      { from  => 1443650400, # 2015-10-01 00:00
-       until => 1554746070, # Radverkehr mittlerweile frei --- $isodate2epoch->("2019-07-31 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
-       text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende Juli 2019',
+       until => $isodate2epoch->("2019-09-30 18:00:00"), # 1554746070, # Radverkehr mittlerweile frei -> stimmt nicht! --- $isodate2epoch->("2019-07-31 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
+       text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, Fahrbahn stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende September 2019',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
        data  => <<EOF,
-# REMOVED --- #: next_check_id: SEEGEFELDERWEG-2016 --- #: source_id: IM_026411 --- #: source_id: 2147339562 --- #: source_id: LMS-BR_r_LMS-BR_51041 --- #: source_id: 2147342003 --- #: source_id: 2147342198 --- #: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72 --- #: source_id: 2147342842 --- #: osm_watch: way id="57401090" version="13" --- #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3 --- #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019) --- #: by: https://www.berliner-woche.de/falkenhagener-feld/c-verkehr/strassenbau-geht-weiter_a202396 (bis März 2019 plus vier Wochen) --- #: XXX laut fritz bis 31.07.2019, laut vmz Gesamtmaßnahme bis Ende Juli 2019 --- #: add_fragezeichen: Sind die Bauarbeiten bereits beendet? Wurde die Einbahnstraßenregelung aufgehoben? --- #: last_checked: 2018-10-12
+# REMOVED --- #: source_id: IM_026411 --- #: source_id: 2147339562 --- #: source_id: LMS-BR_r_LMS-BR_51041 --- #: source_id: 2147342003 --- #: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72 --- #: source_id: 2147342842 --- #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3 --- #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019) --- #: by: https://www.berliner-woche.de/falkenhagener-feld/c-verkehr/strassenbau-geht-weiter_a202396 (bis März 2019 plus vier Wochen) --- #: XXX laut fritz bis 31.07.2019, laut vmz Gesamtmaßnahme bis Ende Juli 2019 --- #: add_fragezeichen: Sind die Bauarbeiten bereits beendet? Wurde die Einbahnstraßenregelung aufgehoben? --- #: last_checked: 2018-10-12
 # REMOVED --- #: next_check: 2019-07-31
 # REMOVED --- #: next_check: 2019-04-05
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
 # REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
-	q4::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
+#: osm_watch: way id="57401090" version="13"
+#: next_check_id: SEEGEFELDERWEG-2016
+#: source_id: 2147342198
+	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 EOF
      },
      { from  => 1442700000, # 2015-09-20 00:00
@@ -26672,7 +26675,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-08-05
+#: last_checked: 2019-09-13
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26870,7 +26873,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-09-10 vvv
+#: last_checked: 2019-09-14 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -28220,7 +28223,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-09-05 vvv
+#: last_checked: 2019-09-13 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
@@ -28946,14 +28949,14 @@ EOF
 # REMOVED #: check_frequency ^^^ --- #: last_checked ^^^ --- #: XXX ^^^
 EOF
      },
-     { from  => 1557083524, # 2019-05-05 21:12
-       until => $isodate2epoch->("2019-06-07 18:00:00"),
-       text  => 'Langhansstr.: zwischen Goethestr. und Roelckestr. ist die Fahrbahn wegen Bauarbeiten gesperrt, bis 07. Juni 2019', # --- hier nicht mehr? ---  sowie zwischen Börnestr. und Berliner Allee
+     { from  => 1568571027, # 1557083524, # 2019-05-05 21:12
+       until => $isodate2epoch->("2019-10-07 18:00:00"),
+       text  => 'Langhansstr.: zwischen Gustav-Adolf-Str. und Roelckestr. ist die Fahrbahn wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, voraussichtlich bis Anfang Oktober 2019',
        type  => 'handicap',
-       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-06-05-19-',
+       source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
        data  => <<EOF,
-#: source_id: 2147344146 (bis Mitte Juni 2019)
-	q4::inwork; 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
+# REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
+	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
 # REMOVED (hier nicht mehr?) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
 EOF
      },
@@ -29163,7 +29166,7 @@ EOF
        data  => <<EOF,
 #: also_indoor: traffic (G)
 #: osm_watch: way id="137851979" version="6"
-#: last_checked: 2019-09-05
+#: last_checked: 2019-09-13
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 EOF
@@ -29598,7 +29601,7 @@ EOF
 EOF
      },
      { from  => 1565374983, # 2019-08-09 20:23
-       until => 1568412000, # 2019-09-14 00:00
+       until => 1568399189, # 1568412000, # 2019-09-14 00:00
        text  => 'Saarmund: Sperrung an der Eisenbahnüberführung, eventuell sind auch Radfahrer betroffen, bis 13.09.2019',
        type  => 'gesperrt',
        source_id => '196900418',
@@ -29740,7 +29743,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-09-03
+#: last_checked: 2019-09-13
 #: check_frequency: 14d
 	2::inwork 13175,11649 13239,11567
 EOF
@@ -29765,12 +29768,12 @@ EOF
      },
      { from  => 1568498400, # 2019-09-15 00:00
        until => 1569276000, # 2019-09-24 00:00
-       text  => 'Lorenzstr.: Fahrbahnsanierung zwischen Lankwitzer Str. und Lange Str., Straße gesperrt, vom 16.09.2019 bis 23.09.2019',
+       text  => 'Lorenzstr.: Fahrbahnsanierung zwischen Lankwitzer Str. und Lange Str., Sperrung der Fahrbahn, Radfahrer können vermutlich trotzdem passieren, vom 16.09.2019 bis 23.09.2019',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.845761.php',
        data  => <<EOF,
 #: XXX weitere Abschnitte folgen!
-	q4::inwork 5781,1936 5720,2081 5660,2219 5542,2491
+	q3::inwork 5781,1936 5720,2081 5660,2219 5542,2491
 EOF
      },
     );

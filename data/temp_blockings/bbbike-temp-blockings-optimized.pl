@@ -2102,26 +2102,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: by: http://www.family-and-friends-ev.de/ (update.pl bekommt hier aber einen Fehler)
-	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
-',
-         'from' => 1568451600,
-         'id' => 1910,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (14.09.2019 bis 15.09.2019)',
-         'type' => 'gesperrt',
-         'until' => 1568570400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2814,7 +2795,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 	2::temp 7775,12114 7772,12040 7717,11918
 # REMOVED --- #: tempex ^^^
 ',
-         'from' => 1568347200,
+         'from' => 1569384000,
          'id' => 2388,
          'periodic' => 1,
          'recurrences' => [
@@ -3316,29 +3297,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- : tempex YYYY09 & sa2 & T14-T18
-# REMOVED --- : tempex YYYY09 & sa3 & T14-T18
-# REMOVED --- : tempex YYYY09 & sa1 & T12-T21
-	2::temp 5857,13342 5868,13441 5882,13548
-',
-         'from' => 1568325600,
-         'id' => 2625,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              31,
-                              'months',
-                              8
-                            ]
-                          ],
-         'source_id' => 'https://www.turmstrasse.de/aktuelles',
-         'text' => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 14. September 2019, 12 bis 21 Uhr ',
-         'type' => 'gesperrt',
-         'until' => 1568498399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3508,7 +3467,25 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: source_id: IM_026411 --- #: source_id: 2147339562 --- #: source_id: LMS-BR_r_LMS-BR_51041 --- #: source_id: 2147342003 --- #: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72 --- #: source_id: 2147342842 --- #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3 --- #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019) --- #: by: https://www.berliner-woche.de/falkenhagener-feld/c-verkehr/strassenbau-geht-weiter_a202396 (bis März 2019 plus vier Wochen) --- #: XXX laut fritz bis 31.07.2019, laut vmz Gesamtmaßnahme bis Ende Juli 2019 --- #: add_fragezeichen: Sind die Bauarbeiten bereits beendet? Wurde die Einbahnstraßenregelung aufgehoben? --- #: last_checked: 2018-10-12
+# REMOVED --- #: next_check: 2019-07-31
+# REMOVED --- #: next_check: 2019-04-05
+# REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
+# REMOVED ---	q3::inwork; -6861,15129 -6507,15007
+# REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
+#: osm_watch: way id="57401090" version="13"
+#: next_check_id: SEEGEFELDERWEG-2016
+#: source_id: 2147342198
+	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
+',
+         'from' => 1443650400,
+         'id' => 2740,
+         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
+         'text' => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, Fahrbahn stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende September 2019',
+         'type' => 'handicap',
+         'until' => 1569859200
+       },
        undef,
        undef,
        undef,
@@ -3759,7 +3736,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-08-05
+#: last_checked: 2019-09-13
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -3801,7 +3778,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-09-10 vvv
+#: last_checked: 2019-09-14 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4058,7 +4035,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-09-05 vvv
+#: last_checked: 2019-09-13 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
@@ -4289,7 +4266,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
+	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
+# REMOVED (hier nicht mehr?) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
+',
+         'from' => 1568571027,
+         'id' => 3091,
+         'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
+         'text' => 'Langhansstr.: zwischen Gustav-Adolf-Str. und Roelckestr. ist die Fahrbahn wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, voraussichtlich bis Anfang Oktober 2019',
+         'type' => 'handicap',
+         'until' => 1570464000
+       },
        undef,
        undef,
        undef,
@@ -4370,7 +4358,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: also_indoor: traffic (G)
 #: osm_watch: way id="137851979" version="6"
-#: last_checked: 2019-09-05
+#: last_checked: 2019-09-13
 #: check_frequency: 14d
 	q4::inwork 14121,8147 14202,8083 14236,8077
 ',
@@ -4595,16 +4583,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1569859200
        },
-       {
-         'data' => '	2::inwork -8575,-9351 -8622,-9215
-',
-         'from' => 1565374983,
-         'id' => 3146,
-         'source_id' => '196900418',
-         'text' => 'Saarmund: Sperrung an der Eisenbahnüberführung, eventuell sind auch Radfahrer betroffen, bis 13.09.2019',
-         'type' => 'gesperrt',
-         'until' => 1568412000
-       },
+       undef,
        {
          'data' => '#: tempex: sunset-T08 vvv
 	2::night -10087,1952 -10205,1923 -10285,1845 -10339,1714 -10426,1724 -10620,1731 -10783,1840
@@ -4706,7 +4685,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-09-03
+#: last_checked: 2019-09-13
 #: check_frequency: 14d
 	2::inwork 13175,11649 13239,11567
 ',
@@ -4738,12 +4717,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX weitere Abschnitte folgen!
-	q4::inwork 5781,1936 5720,2081 5660,2219 5542,2491
+	q3::inwork 5781,1936 5720,2081 5660,2219 5542,2491
 ',
          'from' => 1568498400,
          'id' => 3162,
          'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.845761.php',
-         'text' => 'Lorenzstr.: Fahrbahnsanierung zwischen Lankwitzer Str. und Lange Str., Straße gesperrt, vom 16.09.2019 bis 23.09.2019',
+         'text' => 'Lorenzstr.: Fahrbahnsanierung zwischen Lankwitzer Str. und Lange Str., Sperrung der Fahrbahn, Radfahrer können vermutlich trotzdem passieren, vom 16.09.2019 bis 23.09.2019',
          'type' => 'handicap',
          'until' => 1569276000
        }
