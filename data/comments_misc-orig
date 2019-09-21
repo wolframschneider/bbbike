@@ -821,7 +821,7 @@ Haduweg: nur frei für Anlieger	CS 16416,23705 16510,23642
 (Ludwigpark): Privatgelände	CS 17259,26148 17385,25954 17413,25969 17435,25983 17310,26181
 Am Rundling: nur frei für Anlieger	CS 17927,3737 17927,3771 17927,3788
 (Park am Gleisdreieck): "Sprintstrecke"	CP2; 8521,9911 8579,10030
-(Biesdorfer Friedhofsweg - Wuhlewanderweg): zwischen U-Bahn und Friedhof Biesdorf	CS 21514,11796 21645,11912 21775,11989 21907,12018
+(Biesdorfer Friedhofsweg - Wuhlewanderweg): zwischen U-Bahn und Friedhof Biesdorf	CS 21514,11796 21645,11912 21751,11973 21778,11955 21815,11953 21829,11975 21829,11994 21873,12016 21907,12018
 (Kloster-Zinna-Str. - Braunfelsstr.): Privatstraße	CS 11712,-289 11721,-351
 Simsonweg: nicht ausgeschildert	CP2; 8354,12416 8391,12389
 Simsonweg: nicht ausgeschildert	CP2; 8546,12279 8391,12389
@@ -1145,7 +1145,7 @@ Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3068,21150 3024,21286
 Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 # 
 #: osm_watch: way id="185792044" version="11"
-#: last_checked: 2019-09-01
+#: last_checked: 2019-09-16
 #: check_frequency: 60d
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
@@ -1239,7 +1239,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="2"
-#: last_checked: 2019-09-15
+#: last_checked: 2019-09-20
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
@@ -1344,8 +1344,8 @@ Hedwig-Porschütz-Str.: noch nicht ausgeschildert	CS 7652,14257 7757,14318 7802,1
 (Waldpark Steinberg und am Steinbergsee): linken Weg nehmen (rechts sind einige Stufen)	CS; 4116,21296 4190,21181
 # 
 #: next_check_id: IMLICHTENHAIN-2018
-#: last_checked: 2019-08-19
-Im Lichtenhain: noch nicht ausgeschildert	CP2; 16497,10685 16491,10655
+#: last_checked: 2019-09-19
+Im Lichtenhain: noch nicht ausgeschildert, Hausdurchfahrt	CP2; 16497,10685 16491,10655
 # 
 entlang des ehemaligen Spreeparks	CS 15981,8872 15973,8894 15845,9031
 # 

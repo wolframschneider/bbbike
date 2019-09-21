@@ -1526,7 +1526,7 @@ Zinnowitzer Str.	N 8870,13926 9011,14019
 Am Nordbahnhof	N 9011,14019 9085,13919
 Invalidenstr.	H 10002,14092 9936,14085 9821,14073 9804,14071 9676,14046 9659,14043 9383,13986 9285,13965 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8841,13800 8685,13728 8661,13715 8622,13696 8586,13678 8572,13671 8453,13611 8358,13562 8332,13548
 Invalidenstr.	H 8332,13548 8295,13531 8187,13472 8098,13419
-Invalidenstr.	H 8098,13419 8236,13495 8293,13527 8332,13548
+Invalidenstr.	H 8098,13419 8167,13457 8236,13495 8293,13527 8332,13548
 Invalidenstr.	H 8098,13419 8003,13374 7880,13315 7842,13292 7816,13276 7759,13246 7714,13223 7573,13149 7563,13143 7433,13070 7415,13060 7346,13022
 Minna-Cauer-Str.	HH 7880,13315 7879,13438 7890,13515 7930,13578 8019,13650
 Heidestr. (Moabit)	NN 8098,13419 8092,13467
@@ -4347,11 +4347,12 @@ Wodanstr. (Französisch Buchholz)	N 12216,21945 12162,21743
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/gremien/beiraete/bestaetigtes-protokoll-fahrrat-04-12-2018.pdf (Dauer 19 Monate)
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a114/de/ve05.shtml (Beginn der Bauarbeiten voraussichtlich im August 2019)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5312
+#: by: http://www.kbh-cdupankow.de/index.php?200;2index.php?200;2&e=2319 (Ablehnung der Sanierung der Umleitungsstrecke)
 #: XXX erste Planung: Sperrung in der Zeit vom 24. November 2017 bis zum 30. Mai 2019 (wurde nicht eingehalten)
 #: osm_watch: way id="16307526" version="13"
 #: also_indoor: search Königsteinbrücke
 #: last_checked: 2019-08-14 (keine Anzeichen für eine Sperrung oder Bauarbeiten)
-#: next_check: 2019-09-20
+#: next_check: 2019-09-27
 #: priority: #A
 (Königsteinbrücke)	NN 13136,22397 13148,22396 13385,22383 13404,22384
 (Krontaler Str. - Bucher Str.)	NN 13427,22935 13414,22945 13194,23100
@@ -4429,10 +4430,9 @@ Scheidemannstr.	H 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
 (Vorfahrt Reichstagsgebäude)	NN 8400,12417 8399,12610
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.833375.php ("Tiergartenzaun" wird eingerichtet, ab September 2019)
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.844330.php ("Tiergartenband", ab KW 37/2019)
-#: XXX wird es durch den Tiergartenzaun zu Einschränkungen kommen? --- vermutlich ja, kein Radverkehr mehr möglich --- oder vielleicht doch nicht?
-#: priority: #A
-#: last_checked: 2019-09-10
-#: check_frequency: 7d
+#: XXX wird es durch den Tiergartenzaun zu Einschränkungen kommen? --- vermutlich ja, kein Radverkehr mehr möglich --- oder vielleicht doch nicht? --- eher nicht, nur der Wiesenteil wird wohl abgesperrt
+#: last_checked: 2019-09-18
+#: check_frequency: 30d
 (Wiese vor dem Reichstag)	NN 8373,12416 8369,12609
 Putlitzstr.	N 6204,14220 6212,13944
 Putlitzstr.	N 6226,13951 6264,13995 6267,14184
@@ -5486,10 +5486,12 @@ Cajamarcaplatz	NN 17728,5756 17713,5728 17730,5698 17782,5698
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.838345.php (Erst Ende August 2019)
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/aufzuege-bleiben-ausser-betrieb_a228484
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.843618.php (neue Aufzüge werden Mitte September 2019 in Betrieb genommen)
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.846562.php (Sperrung des Johannisthaler Zugangs --- ist aber vielleicht nicht erfolgt)
+#: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/seit-13-september-ist-der-aufzug-am-bahnhof-schoeneweide-in-betrieb_a232699
 #: osm_watch: way id="226163591" version="3"
 #: priority: #C
-#: last_checked: 2019-03-30
-#: next_check: 2019-09-15
+#: last_checked: 2019-09-16
+# REMOVED --- #: next_check: 2019-09-15
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle)	NN 17639,5612 17675,5521
 (Friedrich-List-Str. - KGA An der Südostallee)	NN 17459,5634 17480,5666
 #: note: Anlieger dürfen hier auch fahren, max. 10km/h
@@ -5524,9 +5526,10 @@ Landfliegerstr.	N 18042,4667 18157,4742 18202,4779 18238,4803
 # 
 #: XXX bleibt diese Straße erhalten?
 #: osm_watch: way id="33712134" version="4"
-#: last_checked: 2019-06-09
-#: check_frequency: 90d
-(Am Betriebsbahnhof Schöneweide)	N 18368,4697 18331,4744 18306,4753 18256,4814 18160,4940 18107,5011 17822,5409 17775,5392
+#: last_checked: 2019-09-16
+#: next_check: 2019-11-01
+# REMOVED --- #: check_frequency: 90d
+(Am Betriebsbahnhof Schöneweide)	N 18368,4697 18331,4744 18306,4753 18256,4814 18226,4853 18160,4940 18107,5011 17822,5409 17775,5392
 # 
 Sportfliegerstr.	N 18157,4742 18341,4543 18370,4511 18423,4459
 Louis-Blériot-Str.	N 18341,4543 18239,4453
@@ -5988,7 +5991,7 @@ Alt-Biesdorf	HH 21108,11628 20771,11672 20571,11698 20435,11698 20375,11694
 Alt-Biesdorf	HH 20375,11694 20540,11660 20633,11651 20963,11618 21108,11628
 Alt-Biesdorf	HH 21108,11628 21251,11560 21311,11528 21392,11486 21628,11384 21745,11333 21863,11289 21954,11269 22242,11269 22326,11266
 Biesdorfer Friedhofsweg	N 21311,11528 21514,11796
-(Biesdorfer Friedhofsweg - Wuhlewanderweg)	NN 21514,11796 21645,11912 21775,11989 21907,12018
+(Biesdorfer Friedhofsweg - Wuhlewanderweg)	NN 21514,11796 21645,11912 21751,11973 21778,11955 21815,11953 21829,11975 21829,11994 21873,12016 21907,12018
 Walsheimer Str.	N 21251,11560 21352,11701 21397,11754
 Walsheimer Str.	NN 21397,11754 21430,11794
 Walsheimer Str.	N 21430,11794 21456,11825 21550,11939 21648,12000
@@ -6258,7 +6261,7 @@ Uferstr. (Niederschöneweide)	N 17681,6212 17847,6089
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788?date=20180311 (Benennung nach Hans Otto Obrikat?)
 #: XXX ist das die vorgeschlagene "Else-Schierhorn-Str."? vvv
-#: last_checked: 2019-08-27 vvv
+#: last_checked: 2019-09-16 vvv
 #: check_frequency: 90d vvv
 (Schnellerstr. - Uferstr.)	NN 17628,5865 17678,5916
 (Schnellerstr. - Uferstr.)	N 17678,5916 17847,6089
@@ -8984,15 +8987,16 @@ Frithjofstr.	N 12457,19248 12627,19317 12696,19334 12760,19344 12886,19341 13017
 (Frithjofstr. - Rotkardinalweg)	NN 12696,19334 12650,19462 12543,19760 12552,19765
 Fafnerstr.	N 13031,19576 12909,19609 12705,19703
 Perchtastr.	N 12886,19341 12889,19471 12890,19478 12894,19526 12909,19609
-Straße 1 (Heinersdorf)	N 12894,19526 12788,19555
+Straße 1 (Heinersdorf)	N 12894,19526 12788,19555 12768,19523
+Straße 1 (Heinersdorf)	N 12744,19562 12692,19552
 Straße 2 (Heinersdorf)	N 13021,19466 12890,19478
-Straße 3 (Heinersdorf)	N 12889,19471 12746,19474 12722,19452
+Straße 3 (Heinersdorf)	N 12889,19471 12746,19474 12725,19459
 Straße 4 (Heinersdorf)	N 13014,19218 12956,19218 12945,19239 12799,19242
 # REMOVED (jetzt gibt's aber ein Schild (2013-09)) --- #: note: keine Ausschilderung für einen "Platz A" vor Ort gefunden
 Straße 4 (Heinersdorf)	N 12814,19202 12937,19194 12956,19218
 Straße 5 (Heinersdorf)	N 12674,19188 12631,19169
 Ingeborgstr.	N 13011,19111 12861,19072 12809,19050
-Midgardstr.	N 12861,19072 12814,19202 12799,19242 12760,19344 12722,19452 12657,19625
+Midgardstr.	N 12861,19072 12814,19202 12799,19242 12760,19344 12725,19459 12692,19552 12664,19631
 Sigurdstr.	N 12627,19317 12674,19188 12706,19107
 Straße 31 (Heinersdorf)	N 13008,18984 13054,18977 13103,18957 13118,19018 13129,19104
 Blankenburger Str. (Heinersdorf)	H 12690,18079 12785,18128 12808,18155 12885,18329 12902,18373 12957,18518 12969,18548 12998,18639 13008,18984 13011,19111 13014,19218 13017,19329 13021,19466 13031,19576
@@ -10216,7 +10220,7 @@ Bossestr.	N 14222,10430 14270,10584 14312,10657
 # 
 #: next_check_id: STRALAUER-2019
 #: priority: #A vvv
-#: last_checked: 2019-09-13 vvv
+#: last_checked: 2019-09-16 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: !20190319-20191220 vvv
 Persiusstr.	N 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -14244,7 +14248,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="12"
-#: last_checked: 2019-08-20
+#: last_checked: 2019-09-19
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Am Kraatzgraben)	NN 16835,10052 16666,10219 16544,10337 16488,10381
@@ -14611,7 +14615,7 @@ Baikalstr.	N 17210,10350 17255,10510 17281,10598
 #: XXX Benennung zu "Am Kraatz-Tränke-Graben" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="51230057" version="14"
-#: last_checked: 2019-08-20
+#: last_checked: 2019-09-19
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -18072,7 +18076,7 @@ Dürerstr.	N 4573,3862 4476,3820 4303,3686 4265,3661 4135,3564 3959,3444 3753,330
 Pannwitzstr.	N 4280,19110 4384,19089 4471,19124 4546,19197 4608,19287 4690,19446 4734,19618 4753,19728 4750,19881 4728,20003
 Puchertweg	N 4608,19287 4520,19347
 Eisenhartsteig	N 4840,19587 4734,19618 4654,19644
-Im Hufenschlag	N 4546,19073 4500,19064 4471,19124 4423,19195 4357,19261
+Im Hufenschlag	N 4934,19075 4519,19040 4471,19124 4423,19195 4357,19261
 Plantagenstr. (Wedding)	N 7966,15571 7877,15581 7796,15590 7595,15596
 Pasewalker Str. (Wedding)	N 7891,15417 7877,15581
 Grußdorfstr.	N 2352,20224 2322,20220 2109,20188

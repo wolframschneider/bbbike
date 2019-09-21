@@ -196,7 +196,7 @@ Paul-Junius-Str	1 15084,13276 15082,13369 15220,13377
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7382
 # REMOVED (Meldung removed) --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=40535
 #: osm_watch: way id="30043322" version="15"
-#: last_checked: 2019-07-20
+#: last_checked: 2019-09-19
 #: next_check: 2020-05-01
 #: priority: #A
 #: valid: 20200501-
@@ -854,7 +854,7 @@ Königsberger Str. (Mittelstreifen)	3nocross::ignrte 4348,2627 4317,2638 4233,267
 #: note ^^^
 #: note: Straßenbahntrasse vvv
 Invalidenstr. (Richtungsfahrbahn)	1::igndisp 8098,13419 8187,13472 8295,13531 8332,13548
-Invalidenstr. (Richtungsfahrbahn)	1::igndisp 8332,13548 8293,13527 8236,13495 8098,13419
+Invalidenstr. (Richtungsfahrbahn)	1::igndisp 8332,13548 8293,13527 8236,13495 8167,13457 8098,13419
 Invalidenstr. (Straßenbahntrasse)	3nocross::ignrte 8332,13548 8295,13531 8187,13472 8098,13419
 #: note ^^^
 #: note: Mittelstreifen, U-Bahnhof vvv
@@ -1373,6 +1373,8 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 Bahnhofstr.	1s:q4 -8417,-2862 -8410,-2884
 ###################################################################### 
 # elsewhere in Brandenburg
+#: by: mapillary
+Bhf. Finkenkrug: Radfahren verboten	2 -13586,17691 -13534,17713 -13534,17758 -13568,17796 -13604,17836
 Ernst-Thälmann-Platz	1 13025,781 13062,768 13097,739 13119,687
 Friedrich-Ebert-Str.	1 13582,843 13513,1055 13453,1217 13450,1222
 Rudolf-Breitscheid-Str.	1 13708,1383 13710,1378 13712,1366 13763,1252 13811,1140 13857,1035 13918,891
@@ -3035,6 +3037,12 @@ Drängelgitter	BNP:3::trailer=10 67807,20954
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: next_check_id: METROPOLITANPARK-2019
+#: XXX wann sind die Bauarbeiten beendet?
+#: last_checked: 2019-09-14
+#: check_frequency: 120d
+Metropolitan Park: Bauarbeiten	2::inwork -8019,14036 -8150,14064
+# 
 #: osm_watch: way id="686305629" version="1"
 #: last_checked: 2019-09-14
 #: check_frequency: 90d
@@ -3051,7 +3059,7 @@ Carl-Spindler-Str.: durch Bauzäune abgesperrt	2::inwork 21442,5414 21482,5388 21
 #: by: http://www.abendblatt-berlin.de/2019/02/14/archaeologische-funde-am-molkenmarkt/ (Juli 2019)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/landesdenkmalamt-bietet-grabungsfuehrungen-am-muehlendamm-an_a204544 (Start im Sommer 2019, Dauer mehrere Jahre)
 #: XXX Ausgrabungen beginnen hier bald; wird dann die Verbindung gesperrt sein?
-#: last_checked: 2019-09-14
+#: last_checked: 2019-09-18
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
 #: next_check_id: SOWJETISCHESEHRENMAL-2019
@@ -3062,13 +3070,13 @@ Treptower Park, am Sowjetischen Ehrenmal: Weg wegen Bauarbeiten gesperrt	2::inwo
 # 
 #: XXX wann sind die Bauarbeiten beendet?
 #: priority: #C
-#: last_checked: 2019-08-26
+#: last_checked: 2019-09-17
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-09-06
+#: last_checked: 2019-09-20
 #: check_frequency: 14d
 Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 # 
@@ -3085,14 +3093,14 @@ An den Yorckstraßenbrücken: Weg wird als Baulogistikfläche benutzt, gesperrt	2::
 # 
 #: XXX wann wird die Einbahnstraßenregelung aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-09-10
+#: last_checked: 2019-09-20
 #: check_frequency: 7d
 Alexandrinenstr.: Einbahnstraßenregelung an der Stallschreiberstr.	1s:q3:inwork 10678,11172 10593,11120
 # 
 # 
 #: XXX nach den Bauarbeiten könnte man den Extra-Punkt in der Mitte wieder löschen
 #: also_indoor: traffic
-#: last_checked: 2019-09-10
+#: last_checked: 2019-09-18
 #: check_frequency: 14d
 Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 10518,11232 10593,11120
 # 
@@ -3158,7 +3166,7 @@ Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19316,951 19290,894 19272,838
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910 vvv
 #: source_id: 2147344585 vvv
-#: last_checked: 2019-09-13 vvv
+#: last_checked: 2019-09-16 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:q4:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -3234,7 +3242,7 @@ Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12901,14594 12888,14625 
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/neue-trasse-fuer-die-strassenbahn_a198208
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/planunterlagen-fuer-strassenbahnbau-liegen-aus_a197470
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/bauarbeiten-am-bahnhof-schoeneweide-gehen-weiter_a208213
-#: last_checked 2019-08-27
+#: last_checked 2019-09-16
 #: check_frequency: 180d
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
 # 

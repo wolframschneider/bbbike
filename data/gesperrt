@@ -548,7 +548,7 @@ Königsberger Str. (Richtungsfahrbahn)	1::igndisp 4348,2627 4313,2630 4224,2671 4
 Königsberger Str. (Richtungsfahrbahn)	1::igndisp 4170,2727 4233,2675 4317,2638 4348,2627
 Königsberger Str. (Mittelstreifen)	3nocross::ignrte 4348,2627 4317,2638 4233,2675 4170,2727
 Invalidenstr. (Richtungsfahrbahn)	1::igndisp 8098,13419 8187,13472 8295,13531 8332,13548
-Invalidenstr. (Richtungsfahrbahn)	1::igndisp 8332,13548 8293,13527 8236,13495 8098,13419
+Invalidenstr. (Richtungsfahrbahn)	1::igndisp 8332,13548 8293,13527 8236,13495 8167,13457 8098,13419
 Invalidenstr. (Straßenbahntrasse)	3nocross::ignrte 8332,13548 8295,13531 8187,13472 8098,13419
 Schönhauser Allee (Richtungsfahrbahn)	1::igndisp 10883,15129 10883,15251 10887,15287
 Schönhauser Allee (Richtungsfahrbahn)	1::igndisp 10887,15287 10886,15251 10883,15129
@@ -935,6 +935,7 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14173,-1013 -14186,-868
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14191,-818 -14199,-707 -14205,-644
 Bahnhofstr.	1s -8417,-2862 -8410,-2884
+Bhf. Finkenkrug: Radfahren verboten	2 -13586,17691 -13534,17713 -13534,17758 -13568,17796 -13604,17836
 Ernst-Thälmann-Platz	1 13025,781 13062,768 13097,739 13119,687
 Friedrich-Ebert-Str.	1 13582,843 13513,1055 13453,1217 13450,1222
 Rudolf-Breitscheid-Str.	1 13708,1383 13710,1378 13712,1366 13763,1252 13811,1140 13857,1035 13918,891
@@ -3055,6 +3056,7 @@ Drängelgitter	BNP:3:-34:trailer=10 12155,6526
 Drängelgitter	BNP:3:-51:trailer=10 12092,6616
 mehrere Drängelgitter	BNP:12:43:trailer=30 7270,8616
 Drängelgitter	BNP:3:-206:trailer=10 67807,20954
+Metropolitan Park: Bauarbeiten	2::inwork -8019,14036 -8150,14064
 Hohenloher Weg: Bauarbeiten, gesperrt	2::inwork -8295,15778 -8178,15741
 Carl-Spindler-Str.: durch Bauzäune abgesperrt	2::inwork 21442,5414 21482,5388 21489,5372 21519,5305 21547,5245 21408,5178
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371

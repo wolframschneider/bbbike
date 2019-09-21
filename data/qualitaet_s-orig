@@ -79,7 +79,7 @@ Drübecker Weg: Kopfsteinpflaster	Q2 13909,8471 13808,8533
 Brockenstr.: Kopfsteinpflaster	Q2 13575,8593 13687,8734
 Sinsheimer Weg: schlechtes Kopfsteinpflaster, aber Ausweichen auf Parkplatz möglich	Q2 13687,8734 13774,8849
 Sinsheimer Weg: Betonstraße	Q0 13774,8849 13837,8932
-Donaustr.: Asphalt	Q0 12394,8729 12551,8612 12649,8535
+Donaustr.: Asphalt	Q0 12202,8895 12394,8729 12551,8612 12649,8535
 # 
 #: next_check_id: DONAUSTR-2018
 #: XXX Asphaltierung geplant vvv
@@ -92,10 +92,10 @@ Donaustr.: Asphalt	Q0 12394,8729 12551,8612 12649,8535
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/donaustrasse-wird-umgebaut_a180854
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/noerdliche-donaustrasse-wird-asphaltiert-und-auch-fuer-fussgaenger-sicherer_a181334
 # REMOVED (realisiert) --- #: XXX dieser Abschnitt wird noch 2018 realisiert --- #: osm_watch: way id="155605274" version="4" -- #: last_checked: 2018-10-11
-#: last_checked: 2019-09-13 vvv
+#: last_checked: 2019-09-20 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2018-09-17 vvv
-Donaustr.: schlechtes bis mäßiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895 12394,8729
+Donaustr.: schlechtes bis mäßiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895
 #: XXX hier wird vermutlich auch die Einbahnstraßenregelung für Radfahrer aufgehoben
 #: osm_watch: way id="155605332" version="4"
 Pannierstr.: Kopfsteinpflaster	Q2 12240,8964 12202,8895
@@ -403,6 +403,7 @@ Adalbertstr.: Kopfsteinpflaster	Q2; 11808,11482 11726,11265 11656,11106
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2018-2022)
 #: by: http://www.tagesspiegel.de/downloads/19754816/1/liste-rad-infrastruktur.pdf (Radweg wird Gehweg)
 #: by: http://www.berliner-woche.de/neukoelln/verkehr/zu-eng-zu-gefaehrlich-gasse-fuer-radler-an-der-oderstrasse-geplant-d130109.html (Realisierung 2020)
+#: by: https://api.fixmyberlin.de/api/plannings/212 (Asphaltierung + Fahrradstraße, bis zum Eingang Tempelhofer Feld)
 #: last_checked: 2019-08-22
 #: check_frequency: 180d
 Oderstr.: Fahrbahn Kopfsteinpflaster, Radwege nur mäßiges Verbundsteinpflaster	Q2+ 11607,7145 11617,7083 11652,6879
@@ -452,7 +453,7 @@ Fürstenberger Str.: Asphalt	Q0 10320,14608 10472,14632
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/senatsverkehrsverwaltung-befuerwortet-umbau-auf-der-metzer-strasse_a190549
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/08-05-2018-fahrradinfrastruktur-in-der-metzer-strasse.pdf
 #: XXX Asphaltierung in Aussicht gestellt, später auch die Metzer Str.
-#: last_checked: 2019-08-09
+#: last_checked: 2019-09-20
 #: check_frequency: 60d
 Kollwitzstr.: Kopfsteinpflaster	Q2 11006,14087 10937,14006
 # 
@@ -550,6 +551,7 @@ Stargardtstr.: Gehwegplatten	Q0- 7033,17692 7161,17743 7212,17756
 Stargardtstr.: Asphalt	Q0 7212,17756 7477,17832
 # 
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (Asphaltierung 2019)
+#: by: https://api.fixmyberlin.de/api/plannings/219 (Asphaltierung)
 #: XXX: wird die Windscheidstr. asphaltiert?
 # REMOVED (für Radfahrer offen) --- #: XXX ist während der Bauarbeiten hier eine Einbahnstraße? Offen in welche Richtung?
 #: osm_watch: way id="4515622" version="15"
@@ -563,6 +565,7 @@ Rönnestr.: Asphalt	Q0 2698,10645 2774,10663
 #: XXX wird hier die Fahrbahn verbessert (asphaltiert)?
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/mobilitaetsgesetz-berlin-bekommt-60-neue-radwege-bis-2020-29512972
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (Asphaltierung 2019)
+#: by: https://api.fixmyberlin.de/api/plannings/218 (Asphaltierung)
 #: osm_watch: way id="4480580" version="10"
 #: osm_watch: way id="4436949" version="9"
 #: last_checked: 2019-09-08
@@ -874,7 +877,7 @@ Bänschstr.: Kopfsteinpflaster	Q2 14588,12542 14661,12523 14681,12534 14798,12502
 Bänschstr.: Kopfsteinpflaster	Q2 14325,12648 14596,12573
 Bänschstr.: Kopfsteinpflaster	Q2 14599,12584 14672,12565 14686,12549 14801,12517
 Bänschstr.: Asphalt	Q0 14798,12502 15005,12443
-Bänschstr.: Asphalt	Q0 14996,12462 14801,12517
+Bänschstr.: Asphalt mit einigen Schäden	Q0- 14996,12462 14801,12517
 Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist.")
@@ -1477,9 +1480,9 @@ Ihnestr.: mäßiges Kopfsteinpflaster	Q2 1866,4572 1817,4462 1761,4255 1740,4176 1
 Spilstr.: Kopfsteinpflaster, OK	Q1 3836,6550 3826,6656 3865,6758
 (zur Weißenhöher Str.): Asphalt	Q0 19726,11743 19735,11721 19830,11677 19881,11591
 Biesdorfer Friedhofsweg: Kopfsteinpflaster, Ausweichen auf Gehweg möglich	Q2 21311,11528 21514,11796
-(an der U-Bahn): Schotterweg, meist OK	Q2 21514,11796 21645,11912 21775,11989
+(an der U-Bahn): Schotterweg, meist OK	Q2 21514,11796 21645,11912 21751,11973
 #: corrected_by: MG (Schotterweg -> ...)
-(an der U-Bahn): wassergebundene Decke	Q1 21775,11989 21907,12018
+(an der U-Bahn): wassergebundene Decke	Q1 21751,11973 21778,11955 21815,11953 21829,11975 21829,11994 21873,12016 21907,12018
 Walsheimer Str.: Kopfsteinpflaster, teils mäßig, teils OK	Q2+ 21352,11701 21397,11754
 Walsheimer Str.: Asphalt	Q0 21397,11754 21430,11794
 Walsheimer Str.: Kopfsteinpflaster, teils mäßig, teils OK	Q2+ 21430,11794 21456,11825 21550,11939
@@ -1492,6 +1495,7 @@ Wuhlewanderweg: guter Beton	Q0 22259,13508 22191,13414 22187,13304 22211,13040 2
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/bvv-online/vo020.asp?VOLFDNR=5923 (Antrag auf Ausbau)
 #: by: https://www.berliner-woche.de/marzahn-hellersdorf/c-verkehr/marzahn-hellersdorf-baut-bis-2020-weitere-sieben-radwege_a196993 (Bau Ende 2018 begonnen)
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (2019)
+#: by: https://api.fixmyberlin.de/api/plannings/118 (unabhängiger Radweg)
 #: osm_watch: way id="26288668" version="14"
 #: last_checked: 2019-08-03 (mapillary)
 #: check_frequency: 90d
@@ -3352,6 +3356,7 @@ Leopoldstr.: schlechtes Kopfsteinpflaster	Q3 23032,11729 23072,11758 23269,11767
 Münsterberger Weg: Asphalt	Q0 23883,11416 23714,11477 23621,11511 23558,11531
 #: by: https://www.berliner-woche.de/marzahn-hellersdorf/c-verkehr/marzahn-hellersdorf-baut-bis-2020-weitere-sieben-radwege_a196993
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (östlich der Gielsdorfer Str., 2019)
+#: by: https://api.fixmyberlin.de/api/plannings/119 (Text: "unbekannt")
 #: XXX werden hier Abschnitte des Münsterberger Wegs verbessert, z.B. (neu) asphaltiert? vvv
 #: last_checked: 2019-07-28 vvv
 #: check_frequency: 90d vvv
@@ -6030,22 +6035,25 @@ Hödurstr.: Asphalt	Q1 12952,18598 12910,18584 12852,18514 12751,18401
 Hödurstr.: Kopfsteinpflaster	Q2+ 12592,18230 12647,18289
 Hödurstr.: unbefestigte Straße	Q2+ 12647,18289 12751,18401
 Fafnerstr. (Heinersdorf): Asphalt	Q0 13031,19576 12909,19609
-# REMOVED (nein) --- #: add_fragezeichen: ist die Straße noch immer unbefestigt?
 Fafnerstr. (Heinersdorf): Asphalt	Q0 12909,19609 12705,19703
 #: by: mapillary (neu gemacht)
 #: confirmed_by: srt
 Perchtastr.: Asphalt	Q0 12886,19341 12889,19471 12890,19478 12894,19526 12909,19609
-# REMOVED (ja) --- #: add_fragezeichen: ist die Straße noch immer unbefestigt?
-Straße 1 (Heinersdorf): unbefestigte Straße, Schotter	Q2 12894,19526 12788,19555
-# REMOVED (ja) --- #: add_fragezeichen: ist die Straße noch immer unbefestigt?
-Straße 2 (Heinersdorf): unbefestigte Straße, Schotter	Q2 13021,19466 12890,19478
-# REMOVED (ja) --- #: add_fragezeichen: ist die Straße noch immer unbefestigt?
-Straße 3 (Heinersdorf): unbefestigte Straße, Schotter	Q2 12889,19471 12746,19474 12722,19452
+#: corrected_by: mapillary (neu gemacht)
+Straße 1 (Heinersdorf): Asphalt	Q0 12894,19526 12788,19555
+Straße 1 (Heinersdorf): unbefestigte Straße, Schotter	Q2 12788,19555 12768,19523
+#: by: mapillary
+Straße 1 (Heinersdorf): Asphalt	Q0 12744,19562 12692,19552
+#: corrected_by: mapillary (neu gemacht)
+Straße 2 (Heinersdorf): Asphalt	Q0 13021,19466 12890,19478
+#: corrected_by: mapillary (neu gemacht)
+Straße 3 (Heinersdorf): Asphalt	Q0 12889,19471 12746,19474 12725,19459
 Straße 4 (Heinersdorf): unbefestigte Straße	Q2 13014,19218 12956,19218 12945,19239 12799,19242
 Straße 4 (Heinersdorf): unbefestigte Straße	Q2 12814,19202 12937,19194 12956,19218
 Straße 5 (Heinersdorf): unbefestigte Straße, Schotter	Q2 12674,19188 12631,19169
 Midgardstr.: Asphalt	Q0 12861,19072 12814,19202 12799,19242 12760,19344
-Midgardstr.: unbefestigte Straße, Schotter	Q2 12760,19344 12722,19452 12657,19625
+#: corrected_by: mapillary (neu gemacht)
+Midgardstr.: Asphalt	Q0 12760,19344 12725,19459 12692,19552 12664,19631
 Frithjofstr.: Beton mit einigen Schäden	Q1+ 12457,19248 12627,19317 12696,19334 12760,19344 12886,19341 13017,19329
 Sigurdstr.: unbefestigte Straße, Schotter	Q2 12627,19317 12674,19188 12706,19107
 Ingeborgstr.: Asphalt	Q0 13011,19111 12861,19072 12809,19050
@@ -6769,10 +6777,12 @@ Seydlitzstr.: Kopfsteinpflaster	Q2+ 6349,2510 6459,2364
 Seydlitzstr.: Kleinsteinpflaster	Q1- 6511,2284 6567,2194 6597,2157
 Seydlitzstr.: Gehwegplatten	Q0- 6511,2284 6459,2364
 # 
+#: next_check_id: LORENZ-2019
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6759 (Vorschlag einer provisorischen Sanierung, Erwähnung einer Sanierung 2019)
 #: by: http://www.abendblatt-berlin.de/2018/11/10/lkw-krach-nervt-anwohner-in-lichterfelde/
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7217
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.845761.php
+#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/lorenz-und-mariannenstrasse-gesperrt_a232804
 #: XXX wird die Straße saniert?
 #: XXX am 24.9.2019 wird der nächste Abschnitt der Straße gesperrt
 #: next_check: 2019-09-24
@@ -11119,8 +11129,10 @@ Heesestr.: Asphalt mit Kopfsteinpflasterabschnitten	Q1-; 5280,5714 5276,5622 527
 Kitzingstr.: Beton	Q1+ 8752,2931 8572,2960 8455,2977
 Kitzingstr.: Asphalt	Q0- 8455,2977 8327,2987
 Greinerstr.: Asphalt	Q0- 8327,2987 8340,3242 8347,3382
-(Landfliegerstr. - Am Betriebsbahnhof Schöneweide): Asphalt	Q1+ 18238,4803 18256,4814
-(Am Betriebsbahnhof Schöneweide): Asphalt, etwas wellig	Q1+ 18368,4697 18331,4744 18306,4753 18256,4814 18160,4940
+(Landfliegerstr. - Am Betriebsbahnhof Schöneweide): Schotter	Q2+ 18238,4803 18256,4814
+(Am Betriebsbahnhof Schöneweide): Asphalt, etwas wellig	Q1+ 18368,4697 18331,4744 18306,4753
+(Am Betriebsbahnhof Schöneweide): Schotter	Q2+ 18306,4753 18256,4814 18226,4853
+(Am Betriebsbahnhof Schöneweide): Asphalt, etwas wellig	Q1+ 18226,4853 18160,4940
 (Am Betriebsbahnhof Schöneweide): unbefestigte Straße, teilweise mit Feinschotter	Q2+ 18160,4940 18107,5011 17822,5409 17775,5392
 (Marx-Engels-Forum): Asphalt	Q0 10300,12587 10363,12535 10405,12462 10416,12394
 (Marx-Engels-Forum): Asphalt	Q0 10357,12514 10363,12535 10379,12580 10409,12597 10456,12590
@@ -14565,6 +14577,7 @@ Neukirchstr.: Asphalt	Q0 12751,18401 12683,18435 12609,18470 12548,18503
 Markelstr.: asphaltiert	Q0 4528,6700 4583,6682 4643,6642
 #: confirmed_by: srt
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/mobilitaetsgesetz-berlin-bekommt-60-neue-radwege-bis-2020-29512972
+#: by: https://api.fixmyberlin.de/api/plannings/198 (Asphaltstreifen)
 #: XXX wird hier die Fahrbahn verbessert (asphaltiert)?
 #: osm_watch: way id="101290096" version="5"
 #: last_checked: 2019-05-08 (mapillary)
@@ -19865,9 +19878,12 @@ Teupitzer Str. (Hellersdorf): Asphalt	Q0 23568,15603 23573,15627 23575,15639 235
 #: confirmed_by: mapillary
 Neue Bergstr.: guter Asphalt	Q0 -3519,15751 -3302,15787 -3044,15837 -2886,15867
 # 
-#: by: manfred kretschmer:
+#: by: manfred kretschmer: vvv
+#: corrected_by: mapillary (Beton -> ...)
+Im Hufenschlag: Verbundsteinpflaster	Q1+ 4934,19075 4519,19040
 #: corrected_by: srt (mäßiger Asphalt, Q1- -> ...)
-Im Hufenschlag: Beton	Q0- 4546,19073 4500,19064 4471,19124 4423,19195 4357,19261
+Im Hufenschlag: Beton	Q0- 4519,19040 4471,19124 4423,19195 4357,19261
+#: by ^^^
 # 
 #: by: Knappe:
 #: confirmed_by: srt (zumindest den Asphalt)
@@ -22045,20 +22061,20 @@ Küstriner Str.: Asphalt	Q0 15944,14836 15977,14871
 #: by: https://www.berliner-woche.de/alt-hohenschoenhausen/c-verkehr/lange-bauzeit-in-der-kuestriner-strasse_a216154
 #: XXX hier Umbau 2020
 #: osm_watch: way id="43899012" version="7"
-#: last_checked: 2019-09-03 (mapillary)
+#: last_checked: 2019-09-13 (mapillary)
 #: next_check: 2020-06-01
 #: confirmed_by: srt
 Küstriner Str.: mäßiges Kopfsteinpflaster	Q2 15799,14674 15853,14734 15878,14761 15944,14836
 #: XXX Baubeginn 27.05.2019, Abschluss voraussichtlich im Dezember 2019
 #: corrected_by: srt (mäßiges Kopfsteinpflaster -> ...)
 #: osm_watch: way id="43899012" version="7"
-#: last_checked: 2019-09-07 (mapillary)
+#: last_checked: 2019-09-13 (mapillary)
 #: next_check: 2019-12-01
 Küstriner Str.: sehr unebenes Kleinsteinpflaster	Q3+ 15977,14871 16123,15025
 #: XXX hier evtl. Umbau bis Sommer 2021?
 #: confirmed_by: srt
 #: osm_watch: way id="593504821" version="1"
-#: last_checked: 2019-08-23
+#: last_checked: 2019-09-16 (mapillary)
 #: next_check: 2021-06-01
 Küstriner Str.: mäßiges Kopfsteinpflaster	Q2 16314,15223 16354,15323 16406,15452
 #: XXX ^^^
