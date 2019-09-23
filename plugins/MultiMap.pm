@@ -20,7 +20,7 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.50;
+$VERSION = 1.52;
 
 use vars qw(%images);
 
@@ -623,6 +623,16 @@ sub show_openstreetmap_menu {
 	 -command => sub { showmap_openstreetmap(osmmarker => 1, %args) },
 	);
     $link_menu->command
+	(-label => 'Cyclosm',
+	 -command => sub {
+	     my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
+	     $scale = 17 if $scale > 17;
+	     my $px = $args{px};
+	     my $py = $args{py};
+	     my $url = sprintf "https://www.cyclosm.org/#map=%d/%s/%s/cyclosm", $scale, $py, $px;
+	     start_browser($url);
+	 });
+    $link_menu->command
 	(-label => 'Cyclemap ' . ($lang eq 'de' ? '(mit Marker)' : '(with marker)'),
 	 -command => sub { showmap_openstreetmap(osmmarker => 1, layers => 'C', %args) },
 	);
@@ -975,6 +985,10 @@ sub show_fis_broker_menu {
     $link_menu->command
 	(-label => 'Übergeordnetes Straßennetz',
 	 -command => sub { showmap_fis_broker(mapId => 'verkehr_strnetz@senstadt', %args) },
+	);
+    $link_menu->command
+	(-label => 'FNP',
+	 -command => sub { showmap_fis_broker(mapId => 'fnp_ak@senstadt', %args) },
 	);
     $link_menu->separator;
     $link_menu->command
