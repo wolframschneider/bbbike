@@ -92,7 +92,7 @@ Donaustr.: Asphalt	Q0 12202,8895 12394,8729 12551,8612 12649,8535
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/donaustrasse-wird-umgebaut_a180854
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/noerdliche-donaustrasse-wird-asphaltiert-und-auch-fuer-fussgaenger-sicherer_a181334
 # REMOVED (realisiert) --- #: XXX dieser Abschnitt wird noch 2018 realisiert --- #: osm_watch: way id="155605274" version="4" -- #: last_checked: 2018-10-11
-#: last_checked: 2019-09-20 vvv
+#: last_checked: 2019-09-23 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2018-09-17 vvv
 Donaustr.: schlechtes bis m‰ﬂiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895
@@ -104,7 +104,7 @@ Pannierstr.: Kopfsteinpflaster	Q2 12240,8964 12202,8895
 #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="155605273" version="5"
-#: last_checked: 2019-09-05
+#: last_checked: 2019-09-24
 #: check_frequency: 90d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -713,7 +713,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraﬂe soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2019-09-13
+#: last_checked: 2019-09-23
 #: check_frequency: 90d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -1782,7 +1782,9 @@ Sanderstr.: Asphalt	Q0 11710,9628 11917,9663
 Sanderstr.: Asphalt mit einigen Sch‰den	Q0- 11917,9663 12074,9689
 Biebricher Str.: m‰ﬂiges Kopfsteinpflaster	Q2 11884,8492 12057,8529
 Mainzer Str.: schlechtes bis m‰ﬂiges Kopfsteinpflaster (auch bergab nur 15 km/h)	Q3+ 12063,8826 12057,8529 12083,8411 12104,8299
-Mainzer Str.: m‰ﬂiges Kopfsteinpflaster	Q2 12104,8299 12116,8247 12134,8172 12147,8117
+#: note: vor der Kreuzung ein paar Meter asphaltiert
+Mainzer Str.: m‰ﬂiges Kopfsteinpflaster	Q2 12104,8299 12116,8247
+Mainzer Str.: m‰ﬂiges Kopfsteinpflaster	Q2- 12116,8247 12134,8172 12147,8117
 Mainzer Str.: Asphalt	Q0 12147,8117 12162,8053
 Wissmannstr.: schlechtes Kopfsteinpflaster	Q3 11767,9026 11768,8871 11768,8739 11768,8696 11769,8515
 Liebigstr.: Kopfsteinpflaster	Q2 13905,12374 13991,12522 14058,12709
@@ -1943,7 +1945,7 @@ Lexisstr.: Beton	Q1+ 12987,9481 13063,9422
 Lexisstr.: Asphalt	Q0- 13063,9422 13124,9375
 Briesestr.: Kopfsteinpflaster	Q2 12001,7937 12179,7979
 Briesestr.: Kopfsteinpflaster	Q2 12446,8032 12671,8077 12794,8103
-Geygerstr.: Asphalt	Q0 13063,8151 13194,8276
+Geygerstr.: Asphalt	Q0 13070,8138 13194,8276
 Bellevue-Ufer: Kleinsteinpflaster	Q1- 6694,12627 7031,12320
 Bettina-von-Arnim-Ufer: Asphalt	Q0 7437,12368 7561,12527 7670,12576
 Groﬂe Querallee: Asphalt mit einigen leichten Sch‰den	Q0- 7875,12363 7822,12201 7816,12150
@@ -3053,7 +3055,7 @@ Mauerweg: Asphalt	Q0 12246,706 12557,799 12984,1011
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_28_4117_4264_online.pdf (ist dieser Abschnitt bei der Widmung gemeint?)
 #: note: man kˆnnte auch auf der parallel verlaufenden Straﬂe in Brandenburg fahren, sehr guter Asphalt --- leider gibt es keine barrierefreie Verbindung zur Ringslebenstr.
 #: osm_watch: way id="631641753" version="4"
-#: last_checked: 2019-08-18
+#: last_checked: 2019-09-20 (mapillary)
 #: check_frequency: 90d
 Ringslebenstr.: unbefestigter Weg	Q2 13805,1435 13850,1461
 Mauerweg: Asphalt	Q0 14430,1731 14626,1768 14682,1782 14716,1772 14755,1738 14858,1700 14876,1686 15200,737 15333,378 15423,150 15480,6 15538,-30 15571,-93
@@ -5527,7 +5529,7 @@ Vogesenstr.: unbefestigte Straﬂe	Q2 13351,21237 13368,21142
 #: confirmed_by: srt
 #: note: Beleuchtung existiert
 Elsa-Rendschmidt-Weg: Asphalt	Q0 -1749,11403 -1711,11452 -1687,11458 -1663,11487 -1627,11465 -1593,11507 -1635,11535 -1750,11719
-Rollbergstr.: glatte Pflasterung	Q0- 12147,8117 12295,8154
+Rollbergstr.: glatte Pflasterung	Q0- 12147,8117 12226,8137 12295,8154
 (Werbellinstr. 50 - Rollbergstr.): glatte Pflasterung	Q0- 12311,8084 12295,8154 12282,8204
 Michiganseestr.: Asphalt	Q0+ 17081,10415 17042,10269
 Michiganseestr.: Beton	Q0- 17042,10269 17025,10193
@@ -6777,6 +6779,8 @@ Seydlitzstr.: Asphalt	Q0 6273,2609 6293,2583 6349,2510
 Seydlitzstr.: Kopfsteinpflaster	Q2+ 6349,2510 6459,2364
 Seydlitzstr.: Kleinsteinpflaster	Q1- 6511,2284 6567,2194 6597,2157
 Seydlitzstr.: Gehwegplatten	Q0- 6511,2284 6459,2364
+#: XXX hier vermutlich saniert, pr¸fen!
+Lorenzstr.: Asphalt	Q0 5542,2491 5660,2219 5720,2081 5781,1936
 # 
 #: next_check_id: LORENZ-2019
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6759 (Vorschlag einer provisorischen Sanierung, Erw‰hnung einer Sanierung 2019)
@@ -6784,10 +6788,9 @@ Seydlitzstr.: Gehwegplatten	Q0- 6511,2284 6459,2364
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7217
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.845761.php
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/lorenz-und-mariannenstrasse-gesperrt_a232804
-#: XXX wird die Straﬂe saniert?
-#: XXX am 24.9.2019 wird der n‰chste Abschnitt der Straﬂe gesperrt
-#: next_check: 2019-09-24
-Lorenzstr.: Asphalt mit Sch‰den	Q1 5542,2491 5660,2219 5720,2081 5781,1936 5802,1851
+#: XXX die Straﬂe wird saniert
+#: next_check: 2019-10-02
+Lorenzstr.: Asphalt mit Sch‰den	Q1 5781,1936 5802,1851
 # 
 Oberhofer Weg: Verbundsteinpflaster	Q1 5706,1393 5661,1375
 Pˆﬂnecker Str.: Verbundsteinpflaster	Q1 5934,1310 5863,1453
@@ -28259,4 +28262,5 @@ Kreuzungsbereich mit Kopfsteinpflaster	Q2 8270,16047
 Kreuzungsbereich asphaltiert	Q0 17248,11317
 Kreuzungsbereich asphaltiert	Q0 17155,11348
 Kreuzungsbereich asphaltiert	Q0 11295,16199
+Kreuzungsbereich mit Kreuzungsbereich	Q2 13724,8090
 #: ignore ^^^
