@@ -1190,7 +1190,7 @@ ausgeschildert als Rüdigerstr. 65+65 A-E	CP2; 17441,12245 17444,12286
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/50re.pdf/file?y=2016 (Benennung)
 #: by: http://www.dafmap.de/d/berlin.html?id=5116&mt=0&zoom=16 (Projektabschluss: 2018-12-31)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_15_2237_2424_online.pdf (Grundstücksnummerierungen)
-#: last_checked: 2019-08-13
+#: last_checked: 2019-09-27
 #: check_frequency: 60d
 Am Märchenbrunnen: nicht ausgeschildert	CS 11823,13635 11899,13750
 # 
@@ -1283,7 +1283,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
 #: next_check_id: MERGENTHALERRING-2018
-#: last_checked: 2019-09-05
+#: last_checked: 2019-09-30
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1361,4 +1361,6 @@ Metropolitan Park: nicht ausgeschildert	CS -8064,13534 -8088,13594 -7984,13649 -
 # 
 #: by: mapillary
 Straße 3 (Heinersdorf): nicht ausgeschildert	CP2; 12725,19459 12746,19474
+# 
+ausgeschildert als "Zufahrt zur Frankfurter Allee 286-266"	CP2; 17020,11748 17034,11797
 # 

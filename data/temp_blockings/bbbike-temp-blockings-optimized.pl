@@ -13,7 +13,7 @@ push @temp_blocking,
 	3::temp 8391,12389 8344,12221 8327,12174
 	3::temp 8327,12174 8344,12221 8391,12389
 ',
-         'from' => 1569880800,
+         'from' => 1569794400,
          'id' => 127,
          'periodic' => 1,
          'recurrences' => [
@@ -2351,7 +2351,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2724,52 +2724,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: tempex: 20160922T0600-T20160926T0600 vvv
-	2::temp 8573,12325 8540,12420
-	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-	2::temp 8119,12414 8055,12186
-	2::temp 8538,12245 8522,12239 8466,12197 8327,12174 8215,12156 8122,12147 8049,12140 8018,12135 7823,12120 7775,12114 7429,12070
-	2::temp 8538,12245 8522,12187 8453,12099 8262,11883 8244,11878 8221,11876 8167,11865 8140,11850 8026,11764
-	2::temp 8546,12279 8391,12389 8354,12416
-	2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
-	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
-	3 7429,12070 7383,12095 7031,12320
-	3 7031,12320 7383,12095 7429,12070
-	3 7823,12120 7816,12150 7822,12201 7875,12363
-	3 7875,12363 7822,12201 7816,12150 7823,12120
-	2::temp 8119,12414 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612
-	2::temp 8207,12606 8206,12757
-	3 7945,12592 8122,12603 8120,12756
-	3 8120,12756 8122,12603 7945,12592
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-#: note: die Wege im südöstlichen Teil des Tiergartens sind vermutlich nur am Sa & So gesperrt
-	2::temp 8214,12205 8215,12156 8221,11885 8221,11876 8210,11775 8203,11686
-	2::temp 8327,12174 8244,11878 8210,11775 8172,11679
-	2::temp 8501,11815 8244,11878 8221,11885 8132,11910 8095,11919 8020,11937
-	2::temp 8055,12186 8049,12140 8034,12093 8004,12074 7999,12040 8022,12016 8020,11937 8016,11770
-	2::temp 7823,12120 7832,12036 7822,11952 7801,11875
-	2::temp 7775,12114 7772,12040 7717,11918
-# REMOVED --- #: tempex ^^^
-',
-         'from' => 1569412800,
-         'id' => 2388,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              12,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, und einige Wege im Tiergarten, voraussichtlich bis 30.09.2019',
-         'type' => 'gesperrt',
-         'until' => 1569816000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3092,7 +3047,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        {
          'data' => '#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G)
-#: last_checked: 2019-08-23
+#: last_checked: 2019-10-01
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -3675,7 +3630,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-09-13
+#: last_checked: 2019-09-30
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -3717,7 +3672,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-09-21 vvv
+#: last_checked: 2019-10-01 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -3839,7 +3794,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2019-08-23
+#: last_checked: 2019-09-27
 # REMOVED --- #: next_check: 2019-08-19
 	q4::inwork 13391,16436 13630,16629
 ',
@@ -3855,16 +3810,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '	q4::inwork 51862,100638 51910,100091 51920,99933 51940,99551 52207,99132
-',
-         'from' => 1531303200,
-         'id' => 2986,
-         'source_id' => '187302254',
-         'text' => 'Eickstedt: Ausbau der Ortsdurchfahrt, 11.07.2018 bis 30.09.2019',
-         'type' => 'handicap',
-         'until' => 1569880800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3905,7 +3851,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-09-20
+#: last_checked: 2019-10-01
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -3974,7 +3920,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-09-13 vvv
+#: last_checked: 2019-09-30 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
@@ -4089,7 +4035,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1575046800
        },
-       undef,
+       {
+         'data' => '# REMOVED ---	q4::temp 9405,11903 9418,11804 9432,11702 9444,11616
+#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.850265.php
+	q4::temp 9418,11804 9405,11903 9393,12000 9384,12103
+',
+         'from' => 1570140000,
+         'id' => 3062,
+         'text' => 'Friedrichstr.: temporäre Fußgängerzone zwischen Mohrenstr. und Französische Str., eventuell sind auch Radfahrer betroffen, am 5. und 6. Oktober 2019',
+         'type' => 'handicap',
+         'until' => 1570399199
+       },
        {
          'data' => '	q3::inwork 11145,10638 10965,10851
 ',
@@ -4162,18 +4118,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: WERNSDORFERSTR-2019
+#: add_fragezeichen: Sind die Bauarbeiten in der Wernsdorfer Str. bereits beendet? vvv
 #: last_checked: 2019-03-30 vvv
 #: next_check: 2019-09-30 vvv
 	q4::inwork; 27226,-2892 27422,-2753 27456,-2843 27520,-3029 27518,-3054
 	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
 #: next_check ^^^
 #: last_checked ^^^
+#: add_fragezeichen ^^^
 ',
          'from' => undef,
          'id' => 3083,
-         'text' => 'Imkerweg und Am Seddinsee: Einbahnstraßenregelung; außerdem enger gemeinsamer Rad- und Gehweg in der Wernsdorfer Str.',
+         'text' => 'Imkerweg und Am Seddinsee: evtl. noch immer Einbahnstraßenregelung; außerdem enger gemeinsamer Rad- und Gehweg in der Wernsdorfer Str., bis Ende Oktober 2019',
          'type' => 'handicap',
-         'until' => 1569859200
+         'until' => 1572541200
        },
        undef,
        undef,
@@ -4182,15 +4140,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8389 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
-#: add_fragezeichen: wann wird der Weg wieder offen sein?
-#: osm_watch: way id="8655276" version="17"
+#: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
+#: osm_watch: way id="8655276" version="18"
+#: XXX laut osm wieder offen
 #: last_checked: 2019-08-24
-#: check_frequency: 90d
+#: next_check: 2019-09-28
 	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
 ',
          'from' => undef,
          'id' => 3086,
-         'text' => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke gesperrt, möglicherweise bis 2023',
+         'text' => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke evtl. gesperrt (könnte aber auch wieder offen sein)',
          'type' => 'gesperrt',
          'until' => 1680364800
        },
@@ -4207,34 +4166,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147344802
-# REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
-	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
-# REMOVED (hier nicht mehr?) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
-',
-         'from' => 1568571027,
-         'id' => 3091,
-         'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
-         'text' => 'Langhansstr.: zwischen Gustav-Adolf-Str. und Roelckestr. ist die Fahrbahn wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, voraussichtlich bis Anfang Oktober 2019',
-         'type' => 'handicap',
-         'until' => 1570464000
-       },
        undef,
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: ROHRWALLALLEE-2019
-	q4::inwork 26190,-853 26230,-858 26346,-863 26389,-932 26445,-1037
-',
-         'from' => 1558216800,
-         'id' => 3096,
-         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.808367.php',
-         'text' => 'Rohrwallallee: Bauarbeiten zwischen Schappachstr. und Fehrower Steig, Fahrbahn teilweise gesperrt, vom 20.05.2019 bis 30.09.2019',
-         'type' => 'handicap',
-         'until' => 1569880800
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -4314,7 +4251,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-08-31
+#: last_checked: 2019-09-30
 	2::inwork 14567,10814 14352,10874
 ',
          'from' => 1560636000,
@@ -4351,47 +4288,33 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/staugefahr-schlossbruecke-wird-saniert_a221398
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.840043.php
-#: by: https://www.berlin.de/senuvk/bauen/strassenbau/schlossbruecke/de/bau.shtml (bis zum IV. Quartal 2019)
-#: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/brueckensanierung-dauert-laenger_a229102
-#: XXX die Bauarbeiten oben auf der Brücke wurden mittlerweile verlängert: bis zum 28.10.2019
-#: osm_watch: way id="72660098" version="5"
-#: priority: #A
-#: last_checked: 2019-09-08
-#: next_check: 2019-10-01
-	2::inwork 3231,12749 3332,12742
-',
-         'from' => 1561845600,
-         'id' => 3123,
-         'source_id' => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.823217.php',
-         'text' => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019 für ungefähr drei Monate',
-         'type' => 'gesperrt',
-         'until' => 1569945600
-       },
+       undef,
        {
          'data' => '#: by: fritz
 #: confirmed_by: srt (keine Ausnahme für Radfahrer)
+#: XXX wann sind die Bauarbeiten beendet?
+#: next_check: 2019-11-01
 	q4::inwork; 4219,10279 3852,10236
 ',
          'from' => 1562012626,
          'id' => 3124,
-         'text' => 'Xantener Str.: Sperrung zwischen Konstanzer Str. und Brandenburgische Str., eventuell sind auch Radfahrer betroffen, bis 01.10.2019',
+         'text' => 'Xantener Str.: Sperrung zwischen Konstanzer Str. und Brandenburgische Str., eventuell sind auch Radfahrer betroffen, Ende unbekannt',
          'type' => 'handicap',
-         'until' => 1569967200
+         'until' => undef
        },
        undef,
        undef,
        undef,
        undef,
        {
-         'data' => '#: source_id: 2147344478 (nur bis Anfang September 2019)
+         'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.851578.php
+#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/tramlinien-gekappt_a234757
+#: source_id: 2147344478 (nur bis Anfang September 2019)
 #: note: laut fritz bis 4.10.2019
-#: also_indoor: traffic
+#: also_indoor: traffic (GH)
 #: XXX periodisch anschauen vvv
 #: priority: #A vvv
-#: last_checked: 2019-09-25 vvv
+#: last_checked: 2019-09-28 vvv
 #: next_check: 2019-10-04 vvv
 # REMOVED --- #: check_frequency: 21d vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -4504,28 +4427,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.813076.php (ab August 2019)
-#: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/berlins-erste-spielstrasse_a216586 (ab 7. August 2019)
-	q4::temp 11175,9882 11197,9894 11411,9810
-',
-         'from' => 1553986800,
-         'id' => 3145,
-         'recurring' => 1,
-         'text' => 'Böckhstr.: zwischen Grimmstr. und Graefestr. mittwochs zwischen 14 Uhr und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.4. bis 30.9.',
-         'type' => 'handicap',
-         'until' => 1569859200
-       },
-       {
-         'data' => '	2::inwork -8575,-9351 -8622,-9215
-',
-         'from' => 1565374983,
-         'id' => 3146,
-         'source_id' => '196900418',
-         'text' => 'Saarmund: Sperrung an der Eisenbahnüberführung, eventuell sind auch Radfahrer betroffen, bis 02.10.2019',
-         'type' => 'gesperrt',
-         'until' => 1570039200
-       },
+       undef,
+       undef,
        {
          'data' => '#: tempex: sunset-T08 vvv
 	2::night -10087,1952 -10205,1923 -10285,1845 -10339,1714 -10426,1724 -10620,1731 -10783,1840
@@ -4569,7 +4472,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
+         'data' => '#: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
+	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 ',
          'from' => undef,
          'id' => 3151,
@@ -4604,21 +4508,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: BLUECHER-2019
-	q4::inwork 9982,9847 10006,9942 10029,9989
-',
-         'from' => 1567112731,
-         'id' => 3157,
-         'source_id' => '2147344606',
-         'text' => 'Brachvogelstr. und Mittenwalder Str.: Bauarbeiten an der Kreuzung Blücherstr., ggfs. absteigen, bis 29. September 2019',
-         'type' => 'handicap',
-         'until' => 1569794399
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-09-25
+#: last_checked: 2019-10-01
 #: check_frequency: 14d
 	2::inwork 13092,11712 13175,11649 13239,11567
 	2::inwork 13175,11649 13208,11658
@@ -4631,25 +4525,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: LORENZ-2019
-#: source_id: 2147344798
-#: source_id: 2147344831
-#: XXX weitere Abschnitte folgen!
-#: next_check: 2019-10-02
-	q2::inwork 5781,1936 5802,1851 5908,1612
-# REMOVED (fertig) ---	q2::inwork 5781,1936 5720,2081 5660,2219 5542,2491
-',
-         'from' => 1569232800,
-         'id' => 3162,
-         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.845761.php',
-         'text' => 'Lorenzstr./Mariannenstr.: Fahrbahnsanierung zwischen Lange Str. und Geraer Str., Sperrung der Fahrbahn, Radfahrer dürfen auf dem Gehweg fahren, vom 23.09.2019 bis Anfang Oktober 2019',
-         'type' => 'handicap',
-         'until' => 1569924000
-       },
+       undef,
        {
          'data' => '#: XXX wann kann man hier wieder durch?
-#: last_checked: 2019-09-18
+#: last_checked: 2019-10-01
 #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 ',
@@ -4682,6 +4561,40 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Sakrower Landstraße: Komplettsperrung an der Ortsgrenze Berlin, auch für Radfahrer und Fußgänger, vom 04.10.2019 bis zum 19.10.2019',
          'type' => 'gesperrt',
          'until' => 1571522400
+       },
+       {
+         'data' => '#: next_check_id: HANSAGARTEN-2019
+	2::inwork 14665,16294 14810,16282 15102,16212 15194,16186
+	2::inwork 14721,16360 14810,16282
+',
+         'from' => 1569949777,
+         'id' => 3167,
+         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851369.php',
+         'text' => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, voraussichtlich bis Anfang 2020',
+         'type' => 'gesperrt',
+         'until' => 1580511600
+       },
+       {
+         'data' => '#: next_check_id: ALTONAERSCHLESWIGER-2019
+	2::inwork 5894,12480 5944,12548
+',
+         'from' => 1570312800,
+         'id' => 3168,
+         'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.851896.php',
+         'text' => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs, vom 7.10.2019 bis voraussichtlich Ende März 2020',
+         'type' => 'gesperrt',
+         'until' => 1585691999
+       },
+       {
+         'data' => '	q4::inwork; 13590,17368 13511,17311 13342,17180 13129,17024 13037,16957
+	q4::inwork; 12813,16791 12705,16708
+',
+         'from' => 1570312800,
+         'id' => 3169,
+         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851861.php',
+         'text' => 'Gustav-Adolf-Str.: Bauarbeiten zwischen Straße 245 und Hamburger Platz, evtl. auch für Radfahrer gesperrt, vom 7.10.2019 bis 18.10.2019',
+         'type' => 'handicap',
+         'until' => 1571436000
        }
      
 );

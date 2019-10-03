@@ -989,7 +989,7 @@ EOF
        text  => 'K 6422; (Petershagener Str.); OL Fredersdorf, Nr. 5 u. 6; SW-Hausanschluß; Vollsperrung; 29.09.2004-06.10.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 34139,13113 34896,13562
+	q4 34161,13153 34658,13407 34798,13550
 EOF
      },
      { from  => 1095717600, # 2004-09-21 00:00
@@ -1036,7 +1036,7 @@ EOF
 	q4 49039,44131 49691,43812
 EOF
      },
-     { from  => $isodate2epoch->("2019-10-01 00:00:00"),
+     { from  => $isodate2epoch->("2019-09-30 00:00:00"),
        until => $isodate2epoch->("2019-10-06 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 29, months => 9]],
@@ -2066,7 +2066,7 @@ EOF
        text  => 'K 6422; (Schöneicher Allee); Brücke A 10 zw. B 1 und Fredersdorf Brückenabbruch Vollsperrung 02.06.2005-16.06.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 33128,11823 32535,11591
+	2 33128,11823 32617,11557
 EOF
      },
      { from  => 1116194400, # 2005-05-16 00:00
@@ -2740,7 +2740,7 @@ EOF
        text  => 'K 6422; (Eggersdorfer Str.); OL Petershagen, unbeschrankter Bahnübergang Instandsetzungsarb. Vollsperrung 04.09.2005-06.09.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 35900,13643 36654,13977
+	2 35956,13707 36654,13977
 EOF
      },
      { from  => 1124920800, # 2005-08-25 00:00
@@ -4049,7 +4049,7 @@ EOF
        text  => 'K 6422 Ernst-Thälmann-Str. OL Fredersdorf, Kno.. Bollensdorfer Allee u. Kno. Fließstr. Errichtung Lichtsignalanlage Vollsperrung 28.11.2005-30.06.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34139,13113 33644,12458
+	q4::inwork 34161,13153 33657,12479
 EOF
      },
      { from  => 1143410400, # 2006-03-27 00:00
@@ -9904,7 +9904,7 @@ EOF
        text  => 'K 6422 Eggersdorfer Str. Petershagen, zw.Trift- u. Lessingstr.,Bahn Straßenbau Vollsperrung 12.09.2007-30.04.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 36666,14172 36677,14087 36654,13977 35900,13643
+	2::inwork 36666,14172 36677,14087 36654,13977 35956,13707
 EOF
      },
      { from  => 1189461600, # 2007-09-11 00:00
@@ -12873,7 +12873,7 @@ EOF
        text  => 'K 6423 Platanenstr., Lindenallee Bahnübergang in der OL Fredersdorf Ausbau BÜ mit Gehweg Vollsperrung 06.10.2008-15.11.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 34139,13113 34183,13746 34276,14308
+	2::inwork 34161,13153 34140,13341 34183,13746 34276,14308
 EOF
      },
      { from  => 1222552800, # 2008-09-28 00:00
@@ -14599,7 +14599,7 @@ EOF
        text  => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Gravenhainstr. u. Johannesstr. Straßenausbau Vollsperrung 15.06.2009-11.09.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 36654,13977 35900,13643
+	q4::inwork 36654,13977 35956,13707
 EOF
      },
      { from  => 1244757600, # 2009-06-12 00:00
@@ -16144,7 +16144,7 @@ EOF
        text  => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Ebereschenstr. u. Kreisverkehr Straßenausbau Vollsperrung 14.09.2009-30.04.2010 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 35900,13643 36654,13977
+	q4::inwork 35956,13707 36654,13977
 EOF
      },
      { from  => 1252533600, # 2009-09-10 00:00
@@ -16152,7 +16152,7 @@ EOF
        text  => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Elbestr. und Clara-Zetkin-Str. Straßenausbau Vollsperrung 11.09.2009-13.09.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 35900,13643 36654,13977
+	q4::inwork 35956,13707 36654,13977
 EOF
      },
      { from  => 1252651373, # 2009-09-11 08:42
@@ -16511,7 +16511,7 @@ EOF
        text  => 'K 6422 Petershagener Str. OL Fredersdorf, zw. Rosinstr. und Platanenstr. Straßen- und Durchlassbau Vollsperrung 23.09.2009-20.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34139,13113 34896,13562
+	q4::inwork 34161,13153 34658,13407 34798,13550
 EOF
      },
      { from  => 1254002400, # 2009-09-27 00:00
@@ -17513,7 +17513,7 @@ EOF
        type  => 'handicap',
        source_id => '96400995',
        data  => <<EOF,
-	q4::inwork 36666,14172 36677,14087 36654,13977 35900,13643 35427,13624
+	q4::inwork 36666,14172 36677,14087 36654,13977 35956,13707 35427,13624
 EOF
      },
      { from  => 1269727743, # 2010-03-27 23:09
@@ -18414,7 +18414,7 @@ EOF
        type  => 'handicap',
        source_id => '096401484',
        data  => <<EOF,
-	q4::inwork 35900,13643 35427,13624
+	q4::inwork 35956,13707 35427,13624
 EOF
      },
      { from  => 1292490120, # 2010-12-16 10:02
@@ -22616,7 +22616,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G)
-#: last_checked: 2019-08-23
+#: last_checked: 2019-10-01
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -26676,7 +26676,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-09-13
+#: last_checked: 2019-09-30
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26874,7 +26874,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-09-21 vvv
+#: last_checked: 2019-10-01 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27610,7 +27610,7 @@ EOF
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2019-08-23
+#: last_checked: 2019-09-27
 # REMOVED --- #: next_check: 2019-08-19
 	q4::inwork 13391,16436 13630,16629
 EOF
@@ -27835,7 +27835,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-09-20
+#: last_checked: 2019-10-01
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28224,7 +28224,7 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-09-13 vvv
+#: last_checked: 2019-09-30 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
 	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
@@ -28606,12 +28606,14 @@ EOF
 	q4::inwork; 3952,8980 4006,8967 4181,8933 4324,8899
 EOF
      },
-     { from  => 1544787000, # 2018-12-14 12:30
-       until => 1544882400, # 2018-12-15 15:00
-       text  => 'Friedrichstr.: temporäre Fußgängerzone zwischen Taubenstr. und Leipziger Str., eventuell sind auch Radfahrer betroffen, am 14. Dezember 2018 zwischen 12:30 und 15:00 Uhr',
+     { from  => $isodate2epoch->("2019-10-04 00:00:00"), # 1544787000, # 2018-12-14 12:30
+       until => $isodate2epoch->("2019-10-06 23:59:59"), # 1544882400, # 2018-12-15 15:00
+       text  => 'Friedrichstr.: temporäre Fußgängerzone zwischen Mohrenstr. und Französische Str., eventuell sind auch Radfahrer betroffen, am 5. und 6. Oktober 2019',
        type  => 'handicap',
        data  => <<EOF,
-	q4::temp 9405,11903 9418,11804 9432,11702 9444,11616
+# REMOVED ---	q4::temp 9405,11903 9418,11804 9432,11702 9444,11616
+#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.850265.php
+	q4::temp 9418,11804 9405,11903 9393,12000 9384,12103
 EOF
      },
      { from  => 1545335759, # 2018-12-20 20:55
@@ -28832,17 +28834,19 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2019-09-30 18:00:00"), # undef, # XXX
-       text  => 'Imkerweg und Am Seddinsee: Einbahnstraßenregelung; außerdem enger gemeinsamer Rad- und Gehweg in der Wernsdorfer Str.',
+       until => $isodate2epoch->("2019-10-31 18:00:00"), # undef, # XXX
+       text  => 'Imkerweg und Am Seddinsee: evtl. noch immer Einbahnstraßenregelung; außerdem enger gemeinsamer Rad- und Gehweg in der Wernsdorfer Str., bis Ende Oktober 2019',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: WERNSDORFERSTR-2019
+#: add_fragezeichen: Sind die Bauarbeiten in der Wernsdorfer Str. bereits beendet? vvv
 #: last_checked: 2019-03-30 vvv
 #: next_check: 2019-09-30 vvv
 	q4::inwork; 27226,-2892 27422,-2753 27456,-2843 27520,-3029 27518,-3054
 	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
 #: next_check ^^^
 #: last_checked ^^^
+#: add_fragezeichen ^^^
 EOF
      },
      { from  => 1554064162, # 2019-03-31 22:29
@@ -28898,17 +28902,18 @@ EOF
      },
      { from  => undef, # 
        until => 1680364800, # 2023-04-01 18:00
-       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke gesperrt, möglicherweise bis 2023',
+       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke evtl. gesperrt (könnte aber auch wieder offen sein)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8389 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
-#: add_fragezeichen: wann wird der Weg wieder offen sein?
-#: osm_watch: way id="8655276" version="17"
+#: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
+#: osm_watch: way id="8655276" version="18"
+#: XXX laut osm wieder offen
 #: last_checked: 2019-08-24
-#: check_frequency: 90d
+#: next_check: 2019-09-28
 	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
 EOF
      },
@@ -28953,7 +28958,7 @@ EOF
 EOF
      },
      { from  => 1568571027, # 1557083524, # 2019-05-05 21:12
-       until => $isodate2epoch->("2019-10-07 18:00:00"),
+       until => 1569607982, # $isodate2epoch->("2019-10-07 18:00:00"),
        text  => 'Langhansstr.: zwischen Gustav-Adolf-Str. und Roelckestr. ist die Fahrbahn wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, voraussichtlich bis Anfang Oktober 2019',
        type  => 'handicap',
        source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
@@ -29242,7 +29247,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-08-31
+#: last_checked: 2019-09-30
 	2::inwork 14567,10814 14352,10874
 EOF
      },
@@ -29344,12 +29349,14 @@ EOF
 EOF
      },
      { from  => 1562012626, # 2019-07-01 22:23
-       until => 1569967200, # 2019-10-02 00:00
-       text  => 'Xantener Str.: Sperrung zwischen Konstanzer Str. und Brandenburgische Str., eventuell sind auch Radfahrer betroffen, bis 01.10.2019',
+       until => undef, # 1569953721, # 1569967200, # 2019-10-02 00:00
+       text  => 'Xantener Str.: Sperrung zwischen Konstanzer Str. und Brandenburgische Str., eventuell sind auch Radfahrer betroffen, Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: by: fritz
 #: confirmed_by: srt (keine Ausnahme für Radfahrer)
+#: XXX wann sind die Bauarbeiten beendet?
+#: next_check: 2019-11-01
 	q4::inwork; 4219,10279 3852,10236
 EOF
      },
@@ -29397,12 +29404,14 @@ EOF
        type  => 'handicap',
        source_id => 'https://www.berliner-woche.de/friedrichshain/c-verkehr/bvg-erneuert-tramgleise-an-der-boxhagener-strasse_a222487',
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.851578.php
+#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/tramlinien-gekappt_a234757
 #: source_id: 2147344478 (nur bis Anfang September 2019)
 #: note: laut fritz bis 4.10.2019
-#: also_indoor: traffic
+#: also_indoor: traffic (GH)
 #: XXX periodisch anschauen vvv
 #: priority: #A vvv
-#: last_checked: 2019-09-25 vvv
+#: last_checked: 2019-09-28 vvv
 #: next_check: 2019-10-04 vvv
 # REMOVED --- #: check_frequency: 21d vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -29666,6 +29675,7 @@ EOF
        type  => 'gesperrt',
        source_id => '2147344558',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 EOF
      },
@@ -29747,7 +29757,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-09-25
+#: last_checked: 2019-10-01
 #: check_frequency: 14d
 	2::inwork 13092,11712 13175,11649 13239,11567
 	2::inwork 13175,11649 13208,11658
@@ -29793,7 +29803,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX wann kann man hier wieder durch?
-#: last_checked: 2019-09-18
+#: last_checked: 2019-10-01
 #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 EOF
@@ -29826,6 +29836,37 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/kladow/c-bauen/vollsperrung-auf-sakrower-landstrasse_a233968
 	2::inwork -8684,3752 -8781,3779 -8825,3783
+EOF
+     },
+     { from  => 1569949777, # 2019-10-01 19:09
+       until => $isodate2epoch->("2020-02-01 00:00:00"),
+       text  => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, voraussichtlich bis Anfang 2020',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851369.php',
+       data  => <<EOF,
+#: next_check_id: HANSAGARTEN-2019
+	2::inwork 14665,16294 14810,16282 15102,16212 15194,16186
+	2::inwork 14721,16360 14810,16282
+EOF
+     },
+     { from  => 1570312800, # 2019-10-06 00:00
+       until => 1585691999, # 2020-03-31 23:59
+       text  => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs, vom 7.10.2019 bis voraussichtlich Ende März 2020',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.851896.php',
+       data  => <<EOF,
+#: next_check_id: ALTONAERSCHLESWIGER-2019
+	2::inwork 5894,12480 5944,12548
+EOF
+     },
+     { from  => 1570312800, # 2019-10-06 00:00
+       until => 1571436000, # 2019-10-19 00:00
+       text  => 'Gustav-Adolf-Str.: Bauarbeiten zwischen Straße 245 und Hamburger Platz, evtl. auch für Radfahrer gesperrt, vom 7.10.2019 bis 18.10.2019',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851861.php',
+       data  => <<EOF,
+	q4::inwork; 13590,17368 13511,17311 13342,17180 13129,17024 13037,16957
+	q4::inwork; 12813,16791 12705,16708
 EOF
      },
     );
