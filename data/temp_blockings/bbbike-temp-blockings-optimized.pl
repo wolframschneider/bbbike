@@ -1117,7 +1117,20 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stra%C3%9Fe-des-17-juni-tiergarten-vollsperrung-%C2%B7-stra%C3%9Fenfest (2019)
+	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
+	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1571544000,
+         'id' => 2327,
+         'source_id' => 'IM_023302',
+         'text' => 'Str. des 17.Juni zwischen Yitzhak-Rabin-Str. und Platz des 18.März sowie Ebertstr. gesperrt, Veranstaltung "30 Jahre Mauerfall", vom 21.10.2019 bis 16.11.2019',
+         'type' => 'gesperrt',
+         'until' => 1573858800
+       },
        undef,
        undef,
        undef,
@@ -2559,23 +2572,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: WERNSDORFERSTR-2019
-#: add_fragezeichen: Sind die Bauarbeiten in der Wernsdorfer Str. bereits beendet? Existiert im Imkerweg und Am Seddinsee noch eine Einbahnstraßenregelung? vvv
-#: last_checked: 2019-03-30 vvv
-#: next_check: 2019-09-30 vvv
-	q4::inwork; 27226,-2892 27422,-2753 27456,-2843 27520,-3029 27518,-3054
-	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
-#: next_check ^^^
-#: last_checked ^^^
-#: add_fragezeichen ^^^
-',
-         'from' => undef,
-         'id' => 3083,
-         'text' => 'Imkerweg und Am Seddinsee: evtl. noch immer Einbahnstraßenregelung; außerdem enger gemeinsamer Rad- und Gehweg in der Wernsdorfer Str., bis Ende Oktober 2019',
-         'type' => 'handicap',
-         'until' => 1572541200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2736,6 +2733,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: by: fritz
+#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7332
 #: confirmed_by: srt (keine Ausnahme für Radfahrer)
 #: XXX wann sind die Bauarbeiten beendet?
 #: next_check: 2019-11-01
@@ -2985,22 +2983,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
-       {
-         'data' => '#: XXX genauere Art der Sperrung prüfen
-#: source_id: 2147344936 (bis Anfang November 2019)
-#: priority: #A
-#: also_indoor: traffic (H)
-#: last_checked: 2019-10-15
-#: check_frequency: 3d
-	q4::inwork; 13890,9894 13999,9842 14196,9749
-',
-         'from' => 1570917600,
-         'id' => 3165,
-         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.850110.php',
-         'text' => 'Puschkinallee: Sperrung des Rad/Gehwegs wegen Baumschnittarbeiten angekündigt, kann aber möglicherweise auf der Nebenstraße umfahren werden, vom 14.10. bis 07.11.2019',
-         'type' => 'handicap',
-         'until' => 1573167599
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: HANSAGARTEN-2019
@@ -3018,6 +3001,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
+#: last_checked: 2019-10-17
+#: next_check_id: 2020-03-31
 	2::inwork 5894,12480 5944,12548
 ',
          'from' => 1570312800,
@@ -3185,6 +3170,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Bayerische Str.: Bauarbeiten zwischen Olivaer Platz und Düsseldorfer Str., Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, bis 20.12.2019',
          'type' => 'handicap',
          'until' => 1576882800
+       },
+       {
+         'data' => '#: XXX bis wann geht die Sperrung?
+#: last_checked: 2019-10-17 (Einfahrt verboten-Schild, aber Barriere war weggeschoben)
+#: check_frequency: 14d
+	2::inwork 10673,12434 10772,12515
+',
+         'from' => undef,
+         'id' => 3179,
+         'text' => 'Gustav-Böß-Str.: Straße ist möglicherweise komplett gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );

@@ -41,7 +41,6 @@ Wrangelstr.: Einbahnstraﬂenregelung, ca. 75 Meter lang	q3::inwork; 12531,10676 1
 Mˆckernstr.: Bauarbeiten, Einbahnstraﬂe, ehemaliger Radweg kann benutzt werden	q3::inwork; 9022,10857 8941,10663 8926,10626
 Herbert-von-Karajan-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 7965,11467 7970,11441 8027,11411
 Matth‰ikirchplatz: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 7970,11441 7954,11399
-Englische Str.: Fahrbahn teilweise wegen Bauarbeiten gesperrt	q3::inwork 5424,11944 5518,12159
 Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5919,12423 5894,12480 5944,12548
 Neukˆllnische Allee: Fuﬂg‰ngerschutztunnel	q3::inwork 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 provisorische und enge Radwegf¸hrung, Fuﬂg‰nger, Seitenwechsel notwendig	q3::inwork; 14344,7003 14257,6895 14213,6840 14153,6795 14051,6731
@@ -633,7 +632,6 @@ Uferweg: Fuﬂg‰nger	q1 3862,12675 3938,12687 4147,12699 4206,12691 4242,12684
 B‰nschstr.: mehrere Bodenschwellen	q0 14996,12462 14801,12517
 B‰nschstr.: mehrere Bodenschwellen	q0 14798,12502 15005,12443
 BouchÈstr.: Bodenschwellen	q0 13642,9624 13865,9866
-BouchÈstr.: zwei Bodenschwellen	q0 13489,9456 13357,9313
 Radenzer Str.: zwei Bodenschwellen	q1 16220,6277 16304,6358
 Dornbrunner Str.: zwei Bodenschwellen	q1 16147,6545 16043,6414
 Meierottostr.: zwei Moabiter Kissen	q0 5463,9961 5246,10168
@@ -645,7 +643,7 @@ Elsensteg: Fuﬂg‰nger	q3 13397,8727 13405,8737
 Elsenstr. - Bahndamm: enger Weg	q2 13923,9405 13953,9372
 (Blockpark): Fuﬂg‰nger, Bordstein	q2 16300,10753 16265,10681
 (Blockpark): Fuﬂg‰nger	q1 16265,10681 16246,10641 16193,10593
-Upstallweg (Lichtenberg): gemeinsamer Rad- und Gehweg	q1 17946,10344 17954,10367 18039,10398 18200,10387 18245,10398 18332,10434
+Upstallweg (Lichtenberg): gemeinsamer Rad- und Gehweg	q1 17946,10344 17954,10367 18039,10398 18116,10403 18184,10387 18245,10398 18332,10434
 Mayschweg: Fuﬂg‰nger (Radfahrer frei), eng	q1 23064,3614 23012,3598 23007,3597
 Spreetunnel: Fuﬂg‰nger	q2 25571,4553 25658,4619
 M¸ggelpark: Fuﬂg‰nger	q2 25695,4714 25658,4619 25656,4578 25772,4543
@@ -2194,7 +2192,7 @@ Rossitter Weg: Fuﬂg‰nger (nur bei Veranstaltungen ein Problem)	q0 -107,12220 -12
 Eosanderstr.: Fuﬂg‰nger	q1 3344,12611 3271,12609
 Siemenssteg: Fuﬂg‰nger, schmal, Bordstein	q2 4129,12619 4128,12637 4124,12706 4124,12721
 (M¸llerstr. - Gerichtstr.): Fuﬂg‰nger	q2 7607,15282 7723,15417
-(s¸dliches Spreeufer): Fuﬂg‰nger	q2 5579,12231 5714,12290 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
+(s¸dliches Spreeufer): Fuﬂg‰nger	q2 5574,12237 5604,12244 5643,12253 5714,12290 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
 (nˆrdliches Spreeufer): Fuﬂg‰nger	q1 6106,12981 6064,12950 6019,12923 5962,12854 5921,12663 5890,12602 5871,12595
 (nˆrdliches Spreeufer): Fuﬂg‰nger	q2 6271,12985 6218,12975 6190,12978 6164,12980
 (nˆrdliches Spreeufer): Fuﬂg‰nger	q1 5871,12595 5868,12566 5806,12487 5746,12413 5683,12342 5661,12323 5607,12307
@@ -2856,10 +2854,7 @@ Corinthstr.: Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. sch
 Mauerstr..: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9108,11961 9076,12054
 J‰gerstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9195,11972 9108,11961
 Taubenstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9207,11880 9138,11872
-Heidelberger Str.: Baustelle, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 13491,9201 13421,9260 13357,9313
 Am Kˆllnischen Park: Bauarbeiten, Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 11197,11882 11155,11750
-Gutenbergstr.: Einbahnstraﬂe wegen Bauarbeiten: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 5317,12242 5518,12159
-Wegelystr.: Einbahnstraﬂe wegen Bauarbeiten: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 5518,12159 5627,12105 5658,12082 5712,12033 5775,11975
 Schinkelplatz: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 10010,12275 10012,12259 10029,12208
 Niederlagstr.: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9972,12184 9959,12281
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9042,11839 8969,11814

@@ -20497,14 +20497,17 @@ EOF
 	q4::inwork; 8442,14456 8406,14507 8336,14586
 EOF
      },
-     { from  => $isodate2epoch->("2014-10-31 06:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-11-12 20:30:00"),
-       text  => 'Str. des 17.Juni zwischen Yitzhak-Rabin-Str. und Platz des 18.März sowie Ebertstr. gesperrt, Veranstaltung "25 Jahre Mauerfall", vom 01.11.2014 bis 12.11.2014',
+     { from  => $isodate2epoch->("2019-10-20 06:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-11-16 00:00:00"),
+       text  => 'Str. des 17.Juni zwischen Yitzhak-Rabin-Str. und Platz des 18.März sowie Ebertstr. gesperrt, Veranstaltung "30 Jahre Mauerfall", vom 21.10.2019 bis 16.11.2019',
        type  => 'gesperrt',
        source_id => 'IM_023302',
        data  => <<EOF,
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stra%C3%9Fe-des-17-juni-tiergarten-vollsperrung-%C2%B7-stra%C3%9Fenfest (2019)
 	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
 	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
 EOF
      },
      { from  => 1336255200, # 2012-05-06 00:00
@@ -26349,7 +26352,7 @@ EOF
        text  => 'Spreeufer - Englische Straße: Uferweg eventuell wegen Bauarbeiten gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 5579,12231 5535,12206
+	2::inwork 5574,12237 5535,12206
 EOF
      },
      { from  => undef, # 
@@ -28833,19 +28836,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2019-10-31 18:00:00"), # undef, # XXX
+       until => 1571337773, # $isodate2epoch->("2019-10-31 18:00:00"), # undef, # XXX
        text  => 'Imkerweg und Am Seddinsee: evtl. noch immer Einbahnstraßenregelung; außerdem enger gemeinsamer Rad- und Gehweg in der Wernsdorfer Str., bis Ende Oktober 2019',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: WERNSDORFERSTR-2019
-#: add_fragezeichen: Sind die Bauarbeiten in der Wernsdorfer Str. bereits beendet? Existiert im Imkerweg und Am Seddinsee noch eine Einbahnstraßenregelung? vvv
-#: last_checked: 2019-03-30 vvv
-#: next_check: 2019-09-30 vvv
+# REMOVED (vermutlich beendet) --- #: next_check_id: WERNSDORFERSTR-2019 --- #: add_fragezeichen: Sind die Bauarbeiten in der Wernsdorfer Str. bereits beendet? Existiert im Imkerweg und Am Seddinsee noch eine Einbahnstraßenregelung? vvv --- #: last_checked: 2019-03-30 vvv --- #: next_check: 2019-09-30 vvv
 	q4::inwork; 27226,-2892 27422,-2753 27456,-2843 27520,-3029 27518,-3054
 	q3::inwork; 27518,-3054 27418,-3019 27351,-3032
-#: next_check ^^^
-#: last_checked ^^^
-#: add_fragezeichen ^^^
 EOF
      },
      { from  => 1554064162, # 2019-03-31 22:29
@@ -29351,6 +29348,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: by: fritz
+#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7332
 #: confirmed_by: srt (keine Ausnahme für Radfahrer)
 #: XXX wann sind die Bauarbeiten beendet?
 #: next_check: 2019-11-01
@@ -29816,7 +29814,7 @@ EOF
 EOF
      },
      { from  => 1570917600, # 2019-10-13 00:00
-       until => 1573167599, # 2019-11-07 23:59
+       until => 1571403420, # --- bislang ist hier nichts passiert --- 1573167599, # 2019-11-07 23:59
        text  => 'Puschkinallee: Sperrung des Rad/Gehwegs wegen Baumschnittarbeiten angekündigt, kann aber möglicherweise auf der Nebenstraße umfahren werden, vom 14.10. bis 07.11.2019',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.850110.php',
@@ -29862,6 +29860,8 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
+#: last_checked: 2019-10-17
+#: next_check_id: 2020-03-31
 	2::inwork 5894,12480 5944,12548
 EOF
      },
@@ -30012,6 +30012,17 @@ EOF
        data  => <<EOF,
 #: XXX gibt es hier tatsächlich Einschränkungen für Radfahrer?
 	q3::inwork 4297,10008 4352,10260
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Gustav-Böß-Str.: Straße ist möglicherweise komplett gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX bis wann geht die Sperrung?
+#: last_checked: 2019-10-17 (Einfahrt verboten-Schild, aber Barriere war weggeschoben)
+#: check_frequency: 14d
+	2::inwork 10673,12434 10772,12515
 EOF
      },
     );
