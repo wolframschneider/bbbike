@@ -298,11 +298,11 @@ EOF
      #   #file  => 'rixdorfer_weihnachtsmarkt.bbd', # XXX do not use anymore!!!
      #   data => '', # dummy
      # },
-     { from  => $isodate2epoch->("2018-11-25 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-12-23 23:59:59"),
+     { from  => $isodate2epoch->("2019-11-24 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-12-22 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 22, months => 11]],
-       text  => 'Spandauer Weihnachtsmarkt, vom 26.11.2018 bis 23.12.2018',
+       text  => 'Spandauer Weihnachtsmarkt, vom 25.11.2019 bis 22.12.2019',
        type  => 'gesperrt',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971839-955635-spandauer-weihnachtsmarkt-in-der-altstad.html',
        data  => <<EOF,
@@ -1375,9 +1375,9 @@ EOF
 	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13165,-34 13176,-161 13215,-570 13225,-681 13230,-712 13300,-1252
 EOF
      },
-     { from  => $isodate2epoch->("2018-11-30 00:00:00"), # weitere Termine unten
-       until => $isodate2epoch->("2018-12-02 23:59:59"),
-       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (01.12.2018 - 02.12.2018)',
+     { from  => $isodate2epoch->("2019-11-29 00:00:00"), # weitere Termine unten
+       until => $isodate2epoch->("2019-12-01 23:59:59"),
+       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (30.11.2019 - 01.12.2019)',
        periodic => 1,
        recurrences => [['yearly', days => 25, months => 11]],
        type  => 'gesperrt',
@@ -1920,7 +1920,7 @@ EOF
        text  => 'Kastanienallee (Prenzlauer Berg) Richtung stadtauswärts zwischen Schwedter Str. und Oderberger Str. Baustelle, Fahrtrichtung gesperrt (bis 29.04.2005)',
        type  => 'handicap',
        data  => <<EOF,
-	q4; 10530,14452 10723,14772
+	q4; 10530,14452 10578,14531 10600,14568 10618,14598 10643,14639 10723,14772
 EOF
      },
      { from  => 1113714000, # 2005-04-17 07:00
@@ -2351,7 +2351,7 @@ EOF
        text  => 'Einfahrt in die Kastanienallee wegen Bauarbeiten gesperrt, 16.07.2005-17.07.2005',
        type  => 'handicap',
        data  => <<EOF,
-	q4; 10881,15047 10838,14962 10723,14772
+	q4; 10881,15047 10838,14962 10816,14925 10723,14772
 EOF
      },
      { from  => 1121732314, # 2005-07-19 02:18
@@ -2359,7 +2359,7 @@ EOF
        text  => 'Pappelallee (Prenzlauer Berg) in beiden Richtungen zwischen Raumerstr. und Schönhauser Allee Baustelle, Straße vollständig gesperrt (bis 07.08.2005)',
        type  => 'handicap',
        data  => <<EOF,
-	q4 11112,15387 10881,15047
+	q4 11112,15387 11090,15355 11065,15318 10941,15135 10930,15119 10916,15098 10900,15075 10881,15047
 EOF
      },
      { from  => 1120341600, # 2005-07-03 00:00
@@ -8840,7 +8840,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005800',
        data  => <<EOF,
-	1::inwork 10530,14452 10723,14772 10838,14962 10881,15047
+	1::inwork 10530,14452 10578,14531 10600,14568 10618,14598 10643,14639 10723,14772 10816,14925 10838,14962 10881,15047
 EOF
      },
      { from  => undef, # 
@@ -12190,18 +12190,28 @@ EOF
 	2::inwork 23402,5483 23333,5710
 EOF
      },
-     { from  => 1216461600, # 2008-07-19 12:00
-       until => 1216584000, # 2008-07-20 22:00
-       text  => 'Straße des 17. Juni, John-Foster-Dulles-Allee und andere Straßen im Regierungsviertel am Sonntag von 12 bis 22 Uhr gesperrt (Feierliches Gelöbnis der Bundeswehr)',
+     { from  => $isodate2epoch->("2019-11-11 08:00:00"), # 1216461600, # 2008-07-19 12:00
+       until => $isodate2epoch->("2019-11-12 14:00:00"), # 1216584000, # 2008-07-20 22:00
+       text  => 'Straße des 17. Juni und Straßen im Regierungsviertel am 12. November 2019 von 8 bis 14 Uhr gesperrt (Feierliches Gelöbnis der Bundeswehr)',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_44_6553_6696_online.pdf
 	2::temp 8424,12853 8503,12895
 	2::temp 7930,12912 8021,12832
-	2::temp 8737,12757 8596,12760 8545,12760
-	2::temp 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
-	2::temp 8514,12877 8545,12760
-	2::temp 8775,12457 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+# REMOVED (Adele-Schreiber-Krieger-Str.) ---	2::temp 8737,12757 8596,12760 8545,12760
+# REMOVED (westl. John-Foster-Dulles-Allee) ---	2::temp 7514,12387 7627,12380 7821,12367 7875,12363
+östl. John-Foster-Dulles-Allee	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
+# REMOVED (Schiffbauerdamm) ---	2::temp 8514,12877 8545,12760
+östl. Straße des 17. Juni	2::temp 8775,12457 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150
+# REMOVED (westl. Straße des 17. Juni) ---	2::temp 7816,12150 7383,12095 7026,12054 6828,12031
 	2::temp 8595,12066 8600,12165 8538,12245
+Große Querallee	2::temp 7816,12150 7822,12201 7875,12363 7945,12592
+südl. Spreeuferweg	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
+Paul-Löbe-Allee und Verlängerungen	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593 8596,12576
+Yitzhak-Rabin-Str. bis Gustav-Heinemann-Brücke	2::temp 8120,12756 8122,12603 8119,12414 8055,12186 8119,12414 8122,12603 8120,12756 8114,12839 8116,12938 8110,13042
+nördl. Wilhelmstr.	2::temp 8775,12457 8766,12541
+Willy-Brandt-Str. - Konrad-Adenauer-Str.	2::temp 8021,12832 8030,12824 8120,12756 8206,12757 8309,12758 8424,12853
+Platz des 18. März	2::temp 8538,12245 8592,12252
 EOF
      },
      { from  => 1217625690, # 2008-08-01 23:21
@@ -13484,7 +13494,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012654',
        data  => <<EOF,
-	q4::inwork; 11290,15669 11367,15793 11387,15827 11445,15920
+	q4::inwork; 11290,15669 11316,15711 11328,15730 11344,15755 11353,15770 11367,15793 11387,15827 11445,15920
 EOF
      },
      { from  => 1238347688, # 2009-03-29 19:28
@@ -14172,7 +14182,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012659',
        data  => <<EOF,
-	q4::inwork; 11112,15387 10881,15047
+	q4::inwork; 11112,15387 11090,15355 11065,15318 10941,15135 10930,15119 10916,15098 10900,15075 10881,15047
 EOF
      },
      { from  => 1242982031, # 
@@ -17110,13 +17120,13 @@ EOF
 	1::xmas 11209,12430 11273,12301
 EOF
      },
-     { from  => $isodate2epoch->("2018-11-16 00:00:00"), # bereits 10 Tage (mindestens!) vorher schon gesperrt (!)
-       until => $isodate2epoch->("2019-01-01 23:59:59"), # 1 Tag (mindestens) für den Abbau
+     { from  => $isodate2epoch->("2019-11-15 00:00:00"), # bereits 10 Tage (mindestens!) vorher schon gesperrt (!)
+       until => $isodate2epoch->("2020-01-01 23:59:59"), # 1 Tag (mindestens) für den Abbau
        periodic => 1,
        prewarn_days => 10,
        recurrences => [['yearly', days => 20, months => 11]],
-       source_id => 'http://www.berlin.de/tickets/suche/detail.php?id=1090035',
-       text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 26.11.2018 bis 31.12.2018, davor mehrere Tage Aufbauarbeiten, Durchfahrt nicht möglich (Eintritt!)',
+       source_id => 'https://www.weihnachtsmarkt-berlin.de/',
+       text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 25.11.2019 bis 31.12.2019, davor mehrere Tage Aufbauarbeiten, Durchfahrt nicht möglich (Eintritt!)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: note "WeihnachtsZauber auf dem Gendarmenmarkt"
@@ -17183,13 +17193,13 @@ EOF
 	q4::inwork -4614,-35852 -4603,-35730
 EOF
      },
-     { from  => $isodate2epoch->("2018-11-25 00:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2018-12-26 23:59:59"),
+     { from  => $isodate2epoch->("2019-11-24 00:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2019-12-26 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 19, months => 11]],
-       text  => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, 26. November 2018 bis 26. Dezember 2018',
+       text  => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, 25. November 2019 bis 26. Dezember 2019',
        type  => 'gesperrt',
-       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971680-955635-winterweltampotsdamerplatz.html',
+       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971680-955635-winterweltweihnachtsmarkt-am-potsdamer-p.html',
        data  => <<EOF,
 	2::xmas 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324
 #	2::temp 8318,11324 8280,11296 8278,11257
@@ -17442,7 +17452,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015288',
        data  => <<EOF,
-	q4::inwork; 11727,16358 11698,16311 11618,16183 11548,16079 11542,16070 11492,15993 11445,15920 11387,15827 11367,15793 11290,15669 11176,15489 11112,15387 10881,15047
+	q4::inwork; 11727,16358 11698,16311 11618,16183 11548,16079 11542,16070 11531,16053 11506,16015 11492,15993 11477,15969 11445,15920 11387,15827 11367,15793 11353,15770 11344,15755 11328,15730 11316,15711 11290,15669 11176,15489 11156,15457 11131,15417 11112,15387 11090,15355 11065,15318 10941,15135 10930,15119 10916,15098 10900,15075 10881,15047
 EOF
      },
      { from  => 1269113469, # 2010-03-20 20:31
@@ -19223,7 +19233,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_017117',
        data  => <<EOF,
-	q4::inwork; 10881,15047 10838,14962 10723,14772
+	q4::inwork; 10881,15047 10838,14962 10816,14925 10723,14772
 EOF
      },
      { from  => 1318630793, # 2011-10-15 00:19
@@ -19970,7 +19980,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110826.1055.356350.html', # und: source_id => 'IM_017746'
        data  => <<EOF,
-	q4::inwork 10881,15047 10838,14962 10723,14772
+	q4::inwork 10881,15047 10838,14962 10816,14925 10723,14772
 EOF
      },
      { from  => $isodate2epoch->("2017-07-13 00:00:00"), # 1 Tag Vorlauf
@@ -20298,7 +20308,7 @@ EOF
 #: note: am 2013-09-06 geprüft: Schranke, nur Straßenbahnen und Lieferverkehr werden durchgelassen
 #: note: am 2013-10-24 geprüft: Radfahrer konnten heute wohl durchfahren, aber offiziell noch immer gesperrt
 #: note: am 2013-11-05 geprüft: offiziell gesperrt, aber Durchfahrt mit Umrunden der Sperren möglich
-	q3::inwork 10530,14452 10723,14772
+	q3::inwork 10530,14452 10578,14531 10600,14568 10618,14598 10643,14639 10723,14772
 EOF
      },
      { from  => 1295269680, # 2011-01-17 14:08
@@ -22122,8 +22132,8 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_020178',
        data  => <<EOF,
-	2::temp 10881,15047 10838,14962 10723,14772 10864,14692
-	2::temp 10401,14963 10723,14772 10530,14452
+	2::temp 10881,15047 10838,14962 10816,14925 10723,14772 10864,14692
+	2::temp 10401,14963 10723,14772 10643,14639 10618,14598 10600,14568 10578,14531 10530,14452
 EOF
      },
      { from  => 1377324534, # 2013-08-24 08:08
@@ -22526,9 +22536,9 @@ EOF
 	2::inwork 12624,25570 12697,25704
 EOF
      },
-     { from  => $isodate2epoch->("2018-12-07 00:00:00"), # erster Termin oben
-       until => $isodate2epoch->("2018-12-09 23:59:59"),
-       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (08.12.2018 - 09.12.2018)',
+     { from  => $isodate2epoch->("2019-12-06 00:00:00"), # erster Termin oben
+       until => $isodate2epoch->("2019-12-08 23:59:59"),
+       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (07.12.2019 - 08.12.2019)',
        periodic => 1,
        recurrences => [['yearly', days => 2, months => 12]],
        type  => 'gesperrt',
@@ -22538,9 +22548,9 @@ EOF
 	2::xmas 9986,13412 10317,13248
 EOF
      },
-     { from  => $isodate2epoch->("2018-12-14 00:00:00"),
-       until => $isodate2epoch->("2018-12-16 23:59:59"),
-       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (15.12.2018 - 16.12.2018)',
+     { from  => $isodate2epoch->("2019-12-13 00:00:00"),
+       until => $isodate2epoch->("2019-12-15 23:59:59"),
+       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (14.12.2019 - 15.12.2019)',
        periodic => 1,
        recurrences => [['yearly', days => 9, months => 12]],
        type  => 'gesperrt',
@@ -22550,9 +22560,9 @@ EOF
 	2::xmas 9986,13412 10317,13248
 EOF
      },
-     { from  => $isodate2epoch->("2018-12-21 00:00:00"),
-       until => $isodate2epoch->("2018-12-23 23:59:59"),
-       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (22.12.2018 - 23.12.2018)',
+     { from  => $isodate2epoch->("2019-12-20 00:00:00"),
+       until => $isodate2epoch->("2019-12-22 23:59:59"),
+       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (21.12.2019 - 22.12.2019)',
        periodic => 1,
        recurrences => [['yearly', days => 16, months => 12]],
        type  => 'gesperrt',
@@ -22618,7 +22628,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G)
-#: last_checked: 2019-10-05 (mapillary)
+#: last_checked: 2019-10-22
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -25050,13 +25060,13 @@ EOF
 	q3::inwork; 14218,13834 14261,13932 14298,14015 14361,14145 14465,14210 14658,14328 14667,14336 14721,14379 14754,14406 14990,14537 15066,14579
 EOF
      },
-     { from  => $isodate2epoch->("2018-11-25 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2018-12-26 23:59:59"),
+     { from  => $isodate2epoch->("2019-11-24 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-12-26 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 20, months => 11]],
-       text  => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 26. November 2018 bis 26. Dezember 2018',
+       text  => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 25. November 2019 bis 26. Dezember 2019',
        type  => 'handicap',
-       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarktaufdemalexanderplatz.html',
+       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html',
        data  => <<EOF,
 #: tempex: before(first_advent, monday)-YYYY1226 vvv
 	q3::xmas 11139,13008 11064,12910 10970,12822
@@ -25930,9 +25940,9 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2019-04-09 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-04-10 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 10. April 2019 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2019-10-22 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-10-23 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 23. Oktober 2019 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
@@ -26480,7 +26490,7 @@ EOF
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-09-20
+#: last_checked: 2019-10-22
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -26876,7 +26886,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-10-01 vvv
+#: last_checked: 2019-10-26 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27827,7 +27837,7 @@ EOF
 #: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
 #: note: Gesamtbaumaßnahme bis 31.12.2023
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: note: zuletzt geprüft: 2019-08-19
+#: note: zuletzt geprüft: 2019-10-21
 	q4::inwork; 5076,10658 5047,10381
 EOF
      },
@@ -29130,9 +29140,10 @@ EOF
        data  => <<EOF,
 #: note: laut fritz bis 31.01.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2019-08-09
+#: last_checked: 2019-10-19 (mapillary)
 #: next_check: 2020-01-30
-	q3::inwork  8986,16092 9178,16317 9301,16439
+	q3::inwork  8986,16092 9178,16317
+# REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
 EOF
      },
      { from  => undef,
@@ -29345,15 +29356,11 @@ EOF
 EOF
      },
      { from  => 1562012626, # 2019-07-01 22:23
-       until => undef, # 1569953721, # 1569967200, # 2019-10-02 00:00
+       until => 1571684006, # undef, # 1569953721, # 1569967200, # 2019-10-02 00:00
        text  => 'Xantener Str.: Sperrung zwischen Konstanzer Str. und Brandenburgische Str., eventuell sind auch Radfahrer betroffen, Ende unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: by: fritz
-#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7332
-#: confirmed_by: srt (keine Ausnahme für Radfahrer)
-#: XXX wann sind die Bauarbeiten beendet?
-#: next_check: 2019-11-01
+# REMOVED (mittlerweile gibt es "Radfahrer frei"-Zusatzschilder) --- #: by: fritz --- #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7332 --- #: confirmed_by: srt (keine Ausnahme für Radfahrer) --- #: XXX wann sind die Bauarbeiten beendet? --- #: next_check: 2019-11-01
 	q4::inwork; 4219,10279 3852,10236
 EOF
      },
@@ -29408,7 +29415,7 @@ EOF
 #: also_indoor: traffic (GH)
 #: XXX periodisch anschauen vvv
 #: priority: #B vvv
-#: last_checked: 2019-10-19 vvv
+#: last_checked: 2019-10-24 vvv
 # REMOVED --- #: next_check: 2019-10-04 vvv
 #: check_frequency: 21d vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -29730,12 +29737,13 @@ EOF
 EOF
      },
      { from  => 1567112731, # 2019-08-29 23:05
-       until => 1569794399, # 2019-09-29 23:59
-       text  => 'Brachvogelstr. und Mittenwalder Str.: Bauarbeiten an der Kreuzung Blücherstr., ggfs. absteigen, bis 29. September 2019',
+       until => $isodate2epoch->("2019-11-29 18:00:00"), # 1569794399, # 2019-09-29 23:59
+       text  => 'Brachvogelstr. und Mittenwalder Str.: Bauarbeiten an der Kreuzung Blücherstr., ggfs. absteigen, bis Ende November 2019',
        type  => 'handicap',
        source_id => '2147344606',
        data  => <<EOF,
 #: next_check_id: BLUECHER-2019
+#: source_id: 2147344702
 	q4::inwork 9982,9847 10006,9942 10029,9989
 EOF
      },
@@ -29755,7 +29763,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-10-16
+#: last_checked: 2019-10-25
 #: check_frequency: 14d
 	2::inwork 13092,11712 13175,11649 13239,11567
 	2::inwork 13175,11649 13208,11658
@@ -29880,12 +29888,12 @@ EOF
 EOF
      },
      { from  => 1569794400, # 2019-09-30 00:00
-       until => 1617228000, # 2021-04-01 00:00
-       text  => 'Königsteinbrücke: bevorstehende Sperrung, Abriss der Brücke voraussichtlich ab 25. Oktober 2019',
+       until => $isodate2epoch->("2020-12-31 23:59:59"), # 1617228000, # 2021-04-01 00:00
+       text  => 'Königsteinbrücke: Sperrung der Brücke ab dem 23. Oktober 2019, Brücke wird danach abgerissen',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: KOENIGSTEINBRUECKE-2019
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621
+#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621 (Sperrung in der Zeit vom 24. November 2017 bis zum 30. Mai 2019)
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621&date=20180130
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2017/16-05-2017_beleuchtungssituation-an-der-und-um-die-koenigsteinbruecke-verbessern.pdf
 #: by: http://www.berliner-woche.de/blankenburg/verkehr/senat-laesst-neue-laternen-auf-der-koenigsteinbruecke-errichten-d127411.html (Beleuchtung wird errichtet)
@@ -29903,12 +29911,12 @@ EOF
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a114/de/ve05.shtml?date=20190927 (zuerst Ertüchtigungsmaßnahmen ab 1.10.2019 für die Umleitungsstrecke)
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/a114-pankow-zubringer-weitere-einschrankungen (Abriss ab 25.10.2019)
 #: by: https://www.berliner-woche.de/buch/c-verkehr/informationen-zur-a114-erneuerung_a234835 (Informationsveranstaltung am 23.10.2019)
-#: XXX erste Planung: Sperrung in der Zeit vom 24. November 2017 bis zum 30. Mai 2019 (wurde nicht eingehalten)
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.856694.php ("... bis Ende 2020 fertiggestellt werden")
 #: osm_watch: way id="16307526" version="13"
 #: also_indoor: search Königsteinbrücke
-#: last_checked: 2019-10-13 (Bauarbeiten im Umfeld)
-#: check_frequency: 7d
-#: add_fragezeichen: Ist die Königsteinbrücke bereits gesperrt?
+#: last_checked: 2019-10-23 (wosch) (gesperrt)
+#: next_check: 2019-10-25
+# REMOVED --- #: add_fragezeichen: Ist die Königsteinbrücke bereits gesperrt?
 #: priority: #A
 	2::inwork 13148,22396 13385,22383
 EOF
@@ -29949,7 +29957,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: KOENIGSTEINBRUECKE-2019
-#: last_checked: 2019-10-13
+#: last_checked: 2019-10-19 (mapillary)
 #: next_check: 2021-04-01
 	2::inwork 13221,22667 13223,22558 13207,22498 13217,22413 13220,22387
 EOF
@@ -29993,36 +30001,39 @@ EOF
 EOF
      },
      { from  => 1569794400, # 2019-09-30 00:00
-       until => 1596232800, # 2020-08-01 00:00
-       text  => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Einbahnstraßenregelung wegen Bauarbeiten, offen Richtung Osten, voraussichtlich bis Sommer 2020',
+       until => $isodate2epoch->("2019-10-30 17:00:00"), # 1596232800, # 2020-08-01 00:00
+#       text  => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Einbahnstraßenregelung wegen Bauarbeiten, offen Richtung Osten, voraussichtlich bis Sommer 2020',
+       text  => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Fahrbahn wegen Bauarbeiten gesperrt, voraussichtlich bis Ende Oktober 2019, danach eventuell wieder Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: NOBEL-2019
 # REMOVED (ja) --- #: add_fragezeichen: Haben die Bauarbeiten tatsächlich schon begonnen? Wurde eine Einbahnstraßenregelung eingeführt?
 #: XXX bis wann gehen die Bauarbeiten?
+#: source_id: 2147344997 (hier: Vollsperrung bis Ende Oktober 2019)
 #: also_indoor: traffic (G)
 #: osm_watch: way id="19881557" version="23"
 #: last_checked: 2019-10-15
 #: next_check: 2020-07-01
-	q4::inwork; 14784,6169 14398,6184
+# REMOVED ---	q4::inwork; 14784,6169 14398,6184
+	q4::inwork 14784,6169 14398,6184
 EOF
      },
      { from  => 1571078727, # 2019-10-14 20:45
        until => 1576882800, # 2019-12-21 00:00
-       text  => 'Bayerische Str.: Bauarbeiten zwischen Olivaer Platz und Düsseldorfer Str., Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, bis 20.12.2019',
+       text  => 'Bayerische Str.: Bauarbeiten zwischen Olivaer Platz und Düsseldorfer Str., Abschnitt der Fahrbahn ist gesperrt, bis 20.12.2019',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX gibt es hier tatsächlich Einschränkungen für Radfahrer?
+# REMOVED (ja) --- #: XXX gibt es hier tatsächlich Einschränkungen für Radfahrer?
 	q3::inwork 4297,10008 4352,10260
 EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Gustav-Böß-Str.: Straße ist möglicherweise komplett gesperrt',
+       text  => 'Gustav-Böß-Str.: Straße ist komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-10-17 (Einfahrt verboten-Schild, aber Barriere war weggeschoben)
+#: last_checked: 2019-10-21 (Barriere über die gesamte Straßenbreite)
 #: check_frequency: 14d
 	2::inwork 10673,12434 10772,12515
 EOF

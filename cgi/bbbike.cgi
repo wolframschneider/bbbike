@@ -3793,7 +3793,7 @@ sub get_kreuzung {
 
     http_header(@weak_cache);
     my %header_args;
-    $header_args{-script} = {-src => bbbike_result_js() };
+    $header_args{-script} = bbbike_result_js();
     $header_args{-result} = M("Kreuzung");
     header(%header_args);
 
@@ -6383,8 +6383,7 @@ for my $etappe (@out_route) {
                 print qq{<a class="mobile_link" title="}, M("GPX Route mit Waypoints fuer GPS Navigation, bis zu 256 Punkte"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Route)</a>};
             
                 if ($can_qrcode) {
-                    my $qrcode_href = add_qrcode_cgi($href);
-                    print qq{<a href="$qrcode_href" title="QR Code - GPX Route"><img style="vertical-align:bottom; padding-left:2px;" src="$bbbike_images/QR_icon_16x16.png" width="16" height="16" border="0" alt="QR Code - GPX Route"></a>};
+		    print add_qrcode_html($href, 'GPX Route');
                 }
 		    }
             
@@ -6393,26 +6392,20 @@ for my $etappe (@out_route) {
                 $qq2->param('output_as', "gpx-track");
                 my $href = $bbbike_script;
                 print qq{<a class="mobile_link" title="}, M("GPX mit bis zu 1024 Punkten, keine Navigation"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Track)</a>};
-                
-                if ($can_qrcode) {
-                    my $qrcode_href = add_qrcode_cgi($href);
-                    print qq{<a href="$qrcode_href" title="QR Code - GPX Track"><img style="vertical-align:bottom; padding-left:2px;" src="$bbbike_images/QR_icon_16x16.png" width="16" height="16" border="0" alt="QR Code - GPX Track"></a>};
-               }
 		    }
 		}
         
 		if ($can_kml) {
 		    my $qq2 = cgi_utf8($use_utf8);
-		    $qq2->param('output_as', "kml-track");
-
-		    my $href = $bbbike_script;
-		    print qq{<a class="mobile_link" title="}, M("Route auf Google Earth anschauen"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">Google Earth (KML)</a>};
-           
-            if ($can_qrcode) {
-                my $qrcode_href = add_qrcode_cgi($href);
-                print qq{<a href="$qrcode_href" title="QR Code - KML"><img style="vertical-align:bottom; padding-left:2px;" src="$bbbike_images/QR_icon_16x16.png" width="16" height="16" border="0" alt="QR Code - KML"></a>};
-            } 
+	            my $href = $bbbike_script . '?' . $qq2->query_string;
+		    print add_qrcode_html($href, 'KML');
 		}
+           
+                if ($can_qrcode) {
+		    my $qq2 = cgi_utf8($use_utf8);
+	            my $href = $bbbike_script . '?' . $qq2->query_string;
+		    print add_qrcode_html($href, 'GPX Track');
+                } 
         
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
@@ -8234,7 +8227,12 @@ sub etag {
     (-ETag => $etag);
 }
 
-sub bbbike_result_js { $bbbike_html . "/bbbike_result.js" }
+sub bbbike_result_js {
+    [
+     { -src => $bbbike_html . "/bbbike_result.js?v=1.16" },
+     { -code => qq{set_bbbike_images_dir_in_bbbike_result('$bbbike_images')} },
+    ];
+}
 
 # Write a HTTP header (always with Vary) and maybe enabled compression
 sub http_header {
@@ -10273,6 +10271,15 @@ sub add_qrcode_cgi {
     $url =~ s{(/cgi(-bin)?/)}{$1qrcode.cgi/};
     $url;
 }
+
+sub add_qrcode_html {
+    my($href, $title) = @_;
+    my $qrcode_href = add_qrcode_cgi($href);
+    $title = CGI::escapeHTML($title);
+    qq{<a href="$qrcode_href" onclick='return show_single_image(this.href);' title="QR Code - $title"><img style="vertical-align:bottom; padding-left:2px;" src="$bbbike_images/QR_icon_16x16.png" width="16" height="16" border="0" alt="QR Code - $title"></a>};
+}
+
+
 
 
 =head1 AUTHOR

@@ -1274,6 +1274,7 @@ Am Groen	1s:q2 22146,10995 22137,11033 22131,11084
 #: by: mapillary
 Klompenweg	1s:q2 22101,10985 22146,10995 22172,10996
 Fabeckstr.	1s:q4 2717,5578 2678,5621 2669,5677
+(Pappelallee - Schönhauser Allee)	1 10883,15129 10916,15098
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -3048,6 +3049,24 @@ Drängelgitter, geringe lichte Breite	BNP:6::trailer=no 13010,14540
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: next_check_id: HOSEMANN-2019
+#: last_checked: 2019-10-24 vvv
+#: next_check: 2020-02-01 vvv
+#: valid: -20200201 vvv
+Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr.	1::inwork; 12605,15491 12556,15518
+#: valid ^^^
+#: next_check ^^^
+#: last_checked ^^^
+# 
+#: next_check_id: HILDAGEIRINGERWEG-2019
+#: last_checked: 2019-10-22
+#: check_frequency: 60d
+Hilda-Geiringer-Weg: gesperrt, wird noch gebaut	2::inwork 8281,13394 8317,13459 8293,13527
+# 
+#: next_check_id: OLIVAERPLATZ-2019
+#: last_checked: 2019-10-21
+(Olivaer Platz, Wielandstr. - Bayerische Str.): wegen Bauarbeiten gesperrt	2::inwork 4360,10320 4352,10260
+# 
 #: XXX auch Maßnahme Jt.7
 #: XXX laut Planfestellungsverfahren kommt an der Kreuzung Groß-Berliner Damm eine Ampel hin
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
@@ -3102,7 +3121,7 @@ Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21476,5048 21611,5119 
 #: by: https://www.berliner-woche.de/mitte/c-bauen/landesdenkmalamt-bietet-grabungsfuehrungen-am-muehlendamm-an_a204544 (Start im Sommer 2019, Dauer mehrere Jahre)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/groesste-innerstaedtische-grossgrabung-hinter-rotem-rathaus-gestartet_a233461
 #: XXX evtl. wird hier nie wieder eine Verbindung sein
-#: last_checked: 2019-10-17
+#: last_checked: 2019-10-21
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
 #: next_check_id: SOWJETISCHESEHRENMAL-2019
@@ -3113,7 +3132,7 @@ Treptower Park, am Sowjetischen Ehrenmal: Weg wegen Bauarbeiten gesperrt	2::inwo
 # 
 #: XXX wann sind die Bauarbeiten beendet?
 #: priority: #C
-#: last_checked: 2019-09-27
+#: last_checked: 2019-10-21
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3126,7 +3145,7 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 #: next_check_id: YORCKSTRASSENBRUECKEN-2019
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.812400.php (Herrichtung im ersten Halbjahr 2020)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.855679.php (Einhängung bis zum 21.10.2019, aber Freigabe erst im Frühjahr 2020)
-#: osm_watch: way id="36395401" version="21"
+#: osm_watch: way id="36395401" version="23"
 #: last_checked: 2019-10-16
 #: next_check: 2020-04-01
 Yorckstraßenbrücke 10: wird saniert und dann wieder neu eingehängt	2::inwork 8339,9560 8338,9593
@@ -3138,14 +3157,14 @@ An den Yorckstraßenbrücken: Weg wird als Baulogistikfläche benutzt, gesperrt	2::
 # 
 #: XXX wann wird die Einbahnstraßenregelung aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2019-10-14
+#: last_checked: 2019-10-22
 #: check_frequency: 7d
 Alexandrinenstr.: Einbahnstraßenregelung an der Stallschreiberstr.	1s:q3:inwork 10678,11172 10593,11120
 # 
 # 
 #: XXX nach den Bauarbeiten könnte man den Extra-Punkt in der Mitte wieder löschen
 #: also_indoor: traffic
-#: last_checked: 2019-10-14
+#: last_checked: 2019-10-22
 #: check_frequency: 14d
 Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 10518,11232 10593,11120
 # 
@@ -3213,7 +3232,7 @@ Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19316,951 19290,894 19272,838
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910 vvv
 #: source_id: 2147344585 vvv
-#: last_checked: 2019-10-19 vvv
+#: last_checked: 2019-10-20 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:q4:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -3253,7 +3272,7 @@ Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,826
 # REMOVED (nicht mehr) --- #: next_check_id: NORD52-2019 --- #: last_checked: 2019-04-20 --- #: check_frequency: 90d --- Relingstr.: Bauarbeiten, gesperrt	2::inwork 22195,2390 22287,2431 22358,2460
 # 
 #: next_check_id: NORD52-2019
-#: osm_watch: way id="663013125" version="5"
+#: osm_watch: way id="663013125" version="7"
 #: last_checked: 2019-09-07
 #: check_frequency: 90d
 Gaffelsteig: Bauarbeiten, kann gesperrt sein	2::inwork 22287,2431 22221,2520
@@ -3319,13 +3338,13 @@ Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12982,14629 13007,14615 
 #: also_indoor: search Benjamin-Franklin Hubschrauber
 #: osm_watch: way id="633600854" version="1"
 #: priority: #A
-#: last_checked: 2019-08-08
-#: next_check: 2019-11-01
+#: last_checked: 2019-10-21
+#: next_check: 2019-12-31
 #: valid: -20191231
 Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5018,3810 5074,3900 5139,3997 5225,4095
 # 
 #: XXX wann ist hier wieder offen?
-#: last_checked: 2019-10-15
+#: last_checked: 2019-10-25
 # REMOVED --- #: check_frequency: 14d
 Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 # 
@@ -3370,6 +3389,9 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 #: check_frequency: 60d
 Taubenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9207,11880 9138,11872
 # 
+#: last_checked: 2019-10-22
+Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
+# 
 #: osm_watch: way id="496270260" version="6" brb
 #: last_checked: 2018-09-01
 #: check_frequency: 90d
@@ -3383,7 +3405,7 @@ Uferweg zum Speicher: noch keine Durchfahrt möglich	2::inwork -12721,-2082 -1275
 # 
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.789161.php (Richtfest im Herbst 2019)
 #: priority: #C
-#: last_checked: 2019-09-07
+#: last_checked: 2019-10-20
 #: next_check: 2019-11-30
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
 # 
@@ -3405,8 +3427,8 @@ Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	1s:q3:inwork 11197,1188
 # REMOVED (fertig) --- #: next_check_id: KARLINEKENWEG-2018 --- #: osm_watch: way id="499986562" version="5" --- #: last_checked: 2018-08-26 --- #: check_frequency: 60d --- Karlinekenweg: Bauarbeiten, gesperrt	2::inwork 11359,20297 11405,20196
 # 
 #: by: https://www.berliner-woche.de/tiergarten/c-bauen/zweite-bauphase-abgeschlossen_a181544 (Wiedereröffnung für 2020 geplant)
-#: last_checked: 2019-08-19
-#: next_check: 2020-01-01
+#: last_checked: 2019-10-25
+#: check_frequency: 90d
 Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,11133
 # 
 #: next_check_id: SAENTISSTR-2018
@@ -3424,13 +3446,7 @@ Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,
 #: next_check: 2021-01-01
 Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,898 9024,906 9058,932
 # 
-#: next_check_id: KLARAFRANKESTR-2018
-#: XXX außerdem: genaue Lage der Straße
-#: osm_watch: way id="423494183" version="7"
-#: last_checked: 2019-08-28
-#: check_frequency: 60d
-Klara-Franke-Str.: Bauarbeiten, gesperrt	2::inwork 7542,13956 7662,13784 7564,13735
-# 
+# REMOVED (mittlerweile kommt man durch) --- #: next_check_id: KLARAFRANKESTR-2018 --- #: XXX außerdem: genaue Lage der Straße --- #: osm_watch: way id="423494183" version="7" --- #: last_checked: 2019-08-28 --- #: check_frequency: 60d --- Klara-Franke-Str.: Bauarbeiten, gesperrt	2::inwork 7542,13956 7662,13784 7564,13735
 # REMOVED (offen) --- #: by: https://www.berlin.de/ba-lichtenberg/auf-einen-blick/buergerservice/bauen/bplan11120ve.pdf --- #: by: http://www.berliner-woche.de/friedrichsfelde/bauen/projekt-ohne-alternativen-bebauungsplaene-am-ex-dolgensee-center-liegen-aus-d136187.html --- #: by: https://www.berliner-woche.de/friedrichsfelde/c-bauen/gewobag-und-gaeste-feiern-grundsteinlegung-fuer-das-neue-dolgensee-center_a181328 (erste Wohnungen werden schon Ende 2019 fertig sein) --- #: last_checked: 2018-06-06 --- #: next_check: 2019-12-31 --- Dolgenseestr.: wegen Bauarbeiten gesperrt	2::inwork 17273,9880 17407,9799 17493,9761
 # 
 #: next_check_id: KARLSHORST-2019
@@ -3439,7 +3455,7 @@ Klara-Franke-Str.: Bauarbeiten, gesperrt	2::inwork 7542,13956 7662,13784 7564,13
 #: by: http://karlshorst-buergerverein.de/wp-content/uploads/2019/02/DB-Karlshorst_B%C3%BCrgerveranstaltung_versendet.pdf (voraussichtlich bis Dezember 2019)
 #: by: https://www.berliner-woche.de/karlshorst/c-verkehr/offener-brief-die-regionalbahn-wurde-allen-genommen-bitte-jetzt-wenigstens-den-s-bahnhof-karlshorst-wieder-allen-fahrgaesten-zurueckgeben_a222655 (Ende 2019)
 #: osm_watch: way id="47975259" version="8"
-#: last_checked: 2019-07-11 (mapillary)
+#: last_checked: 2019-10-20
 #: next_check: 2019-12-15
 Unterführung S-Bhf. Karlshorst: wegen Bauarbeiten gesperrt	2::inwork 18949,8437 18906,8394 18875,8365
 # 
@@ -3563,7 +3579,7 @@ Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11489 20631,1162
 # REMOVED (bei osm nicht mehr construction) --- #: XXX wie sieht es mit einer Anbindung an die Kasperstr. aus? --- ja, wird es geben --- #: osm_watch: way id="461214846" version="3" --- #: last_checked: 2017-08-10 --- #: check_frequency: 90d --- Traudelstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19169,1249 19140,1137
 # 
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2019-10-14 vvv
+#: last_checked: 2019-10-26 vvv
 #: check_frequency: 90d vvv
 #: osm_watch: way id="54781811" version="8"
 Schinkelplatz: Einbahnstraße	1s:q3:inwork 10010,12275 10012,12259 10029,12208
@@ -3589,10 +3605,10 @@ Niederlagstr.: Einbahnstraße	1s:q3:inwork 9972,12184 9959,12281
 # REMOVED --- #: by: http://www.s-bahn-berlin.de/bauinformationen/details/rummelsburg/4530 vvv --- #: last_checked: 2017-07-28 vvv
 # REMOVED (offen) --- (Unterführung S-Bhf. Rummelsburg): Bauarbeiten, komplett gesperrt	2::inwork 15433,10765 15409,10709 15372,10655
 # REMOVED (offen) --- Nöldnerstr.: Bauarbeiten, Einbahnstraße	1s:q4 15272,10790 15388,10758 15433,10765
-# REMOVED (nur der östliche Abschnitt ist geblieben, aber relativ breit und relativ wenig Verkehr) --- #: XXX Bauarbeiten der Berliner Wasserbetriebe bis Dezember 2017 --- #: last_checked: 2017-07-23 --- #: next_check: 2017-12-01 --- #: valid: -20171231 --- Türrschmidtstr.: Bauarbeiten, Einbahnstraße	1s:q3 15541,10892 15649,10922 15756,10966
+# REMOVED (nur der östliche Abschnitt ist geblieben, aber relativ breit und relativ wenig Verkehr) --- #: XXX Bauarbeiten der Berliner Wasserbetriebe bis Dezember 2017 --- #: last_checked: 2017-07-23 --- #: next_check: 2017-12-01 --- #: valid: -20171231 --- Türrschmidtstr.: Bauarbeiten, Einbahnstraße	1s:q3 15541,10892 15626,10915 15649,10922 15756,10966
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3853&mt=0&zoom=16
-#: last_checked: 2019-09-21
+#: last_checked: 2019-10-22
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8969,11814
 # 
 #: XXX danach könnte die Qualität der Wege besser sein
@@ -3601,7 +3617,7 @@ Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8
 #: source_id: 2147341188
 #: osm_watch: way id="593108603" version="2"
 #: XXX laut osm nicht mehr construction, in der Realität kann man aber hier nicht durch
-#: last_checked: 2019-10-17
+#: last_checked: 2019-10-26
 #: check_frequency: 45d
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7636,14414 7612,14449 7551,14464
 # REMOVED (hier wieder offen) --- #: osm_watch: way id="594591925" version="1" --- #: osm_watch: way id="594591926" version="1" --- Nordhafenpark West: noch Bauarbeiten, gesperrt	2::inwork 7551,14464 7426,14539
@@ -3609,7 +3625,7 @@ Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork
 # 
 #: add_fragezeichen: Ist die Kieler Brücke noch immer gesperrt?
 #: osm_watch: way id="5133258" version="8"
-#: last_checked: 2019-10-17
+#: last_checked: 2019-10-26
 #: check_frequency: 45d
 Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
 # 
@@ -3630,8 +3646,8 @@ Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,1440
 #: XXX Bauarbeiten (Erweiterung des Rütli-Campus?)
 #: XXX Wann sind die Bauarbeiten beendet?
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6291
-#: osm_watch: way id="137084083" version="10"
-#: last_checked: 2019-09-30
+#: osm_watch: way id="137084083" version="11"
+#: last_checked: 2019-10-20 (osm)
 #: check_frequency: 60d
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,9200 12548,9167
 # 
@@ -3684,12 +3700,12 @@ Hedwig-Porschütz-Str.: noch gesperrt	2::inwork 7652,14257 7757,14318 7802,14250 
 # REMOVED (nicht mehr) --- #: next_check_id: HEERSTR-2016 vvv --- #: XXX es gab mal einen temp_blockings-Eintrag, der mittlerweile inaktiv ist vvv --- #: by: Stefan Klinkusch: "gesperrt" vvv --- #: source_id: INKO_118000 vvv --- #: osm_watch: way id="25115001" version="8" vvv --- #: last_checked: 2017-11-04 vvv --- # REMOVED (doch benutzbar) --- (Baustraße an der Freybrücke)	2::inwork -3075,11510 -3186,11557 --- # REMOVED (vermutlich nun benutzbar?) --- (Treppe an der Freybrücke)	2::inwork -3181,11496 -3177,11507 -3173,11520 --- #: XXX Ersatzbrücke muss demontiert werden; vermutlich weiterhin keinen Zugang --- Weg nach Tiefwerder: kein Zugang wegen der Ersatzbrücke	2::inwork -3179,11763 -3217,11570 --- #: last_checked ^^^ --- #: osm_watch ^^^ --- #: source_id ^^^ --- #: by ^^^ --- #: XXX ^^^ --- #: next_check_id ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2019-09-24
+#: last_checked: 2019-10-24
 #: check_frequency: 120d
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2019-09-24
+#: last_checked: 2019-10-24
 #: check_frequency: 90d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
@@ -3727,7 +3743,7 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 #: source_id: LMS-BR_r_LMS-BR_44
 #: XXX_prog: ":inwork" kann als Attribut nicht genutzt werden! vvv
 #: XXX laut fritz bis 31.12.2019
-#: last_checked: 2019-10-01 vvv
+#: last_checked: 2019-10-22 vvv
 #: check_frequency: 60d vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::inwork 9984,12426 9934,12420 9858,12410
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
@@ -3751,8 +3767,8 @@ Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht mögli
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9615
 # REMOVED --- osm_watch: way id="183406331" version="3"
 #: osm_watch: way id="220646748" version="5"
-#: last_checked: 2019-10-17
-#: check_frequency: 30d
+#: last_checked: 2019-10-26
+#: check_frequency: 21d
 Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738 7139,14785
 # 
 #: by: http://www.berliner-zeitung.de/verkehr/s-bahn-linie-21--baustelle-am-hauptbahnhof--ab-durch-die-mitte,10809298,20580624.html (ab 2012-10-15 für 30 Monate, also mindestens bis ca. 2015-04)
@@ -3810,7 +3826,7 @@ Mühlensteg (Tegeler Hafen): Weg gesperrt	2 1691,20638 1697,20623 1721,20603
 #: by: http://areal-am-tacheles.de/webcam/webseite/Webcam4.jpg (Webcam)
 #: XXX vermutlich wird es keinen Zugang zur Oranienburger Str. mehr geben --- bleibt wenigstens der südliche Stummel?
 #: osm_watch: way id="33036326" version="6"
-#: last_checked: 2019-10-17
+#: last_checked: 2019-10-26
 #: check_frequency: 360d
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 # 
@@ -3823,7 +3839,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://cam01.berlinerschloss-webcam.de/
 #: by: https://www.tagesspiegel.de/berlin/nicht-mehr-2019-eroeffnung-des-humboldt-forums-wird-verschoben/24448118.html
 #: by: https://www.humboldtforum.org/de/inhalte/stand-der-baumassnahme-humboldt-forum-im-berliner-schloss (Eröffnung 2020)
-#: last_checked: 2019-10-14
+#: last_checked: 2019-10-22
 #: next_check: 2020-01-01
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
@@ -3831,7 +3847,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 #: by: https://www.berliner-woche.de/mitte/c-bauen/nach-vier-jahren-wurden-die-keller-trockengelegt_a235237 (Bezug der Büros im dritten Quartal 2021)
 #: XXX wird nach den Bauarbeiten die Einbahnstraßenregelung wieder hergestellt? (see elsehwere)
 #: osm_watch: way id="158025179" version="3"
-#: last_checked: 2019-10-12
+#: last_checked: 2019-10-26
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 

@@ -145,6 +145,7 @@ Schönerlinder Str., Autobahnbrücke	Br 11980,24276 11959,24220
 Lindenhofbrücke	Br 12108,24547 12136,24607
 #: XXX wird neu gebaut --- während der Bauzeit wird es eine Ersatzbrücke (vermutlich mit Verschwenkung) geben
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.854393.php (ab 15. Oktober 2019)
+#: by: https://www.berliner-woche.de/pankow/c-verkehr/waehrend-der-bauzeit-fliesst-der-verkehr-auf-der-bucher-strasse-ueber-eine-behelfsbruecke_a236797
 #: next_check: 2019-11-15 (eigentlich erst mit Errichtung der Ersatzbrücke interessant)
 Bucher Str., Autobahnbrücke	Br 12880,23314 12913,23339
 Bucher Str., S-Bahnbrücke	Br 13012,23424 13199,23657
@@ -288,7 +289,7 @@ Kynastbrücke	Br 14928,10970 14902,10859 14880,10808
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6904 (Vorschlag an Senatsverwaltung weitergeleitet)
 #: XXX Name "Südkreuz-Steg" --- wann wird dieser Name offiziell (Amtsblatt?) und die Brücke ausgeschildert?
 #: osm_watch: way id="10360532" version="19"
-#: last_checked: 2019-07-30
+#: last_checked: 2019-10-21
 #: check_frequency: 120d
 Sachsendammsteg	Br 7757,7563 7747,7521 7733,7483
 # 

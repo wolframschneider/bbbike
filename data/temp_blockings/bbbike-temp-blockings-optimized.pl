@@ -1,6 +1,412 @@
-$#temp_blocking = 393;
+$#temp_blocking = 35;
 push @temp_blocking,
 (
+       {
+         'data' => '	2::xmas -3275,14407 -3231,14383 -3204,14368 -3155,14340
+	2::xmas -3275,14407 -3338,14333
+	2::xmas -3150,14631 -3185,14556 -3205,14512 -3228,14468 -3275,14407
+	2::xmas -3275,14407 -3350,14446 -3393,14470 -3410,14479 -3440,14498 -3481,14523
+	2::xmas -3227,14260 -3155,14340
+	2::xmas -3227,14260 -3293,14304 -3338,14333
+	2::xmas -3552,14082 -3457,14189 -3409,14241 -3338,14333
+	2::xmas -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340
+	2::xmas -3110,14408 -3174,14438 -3228,14468
+	2::xmas -3231,14383 -3293,14304
+',
+         'from' => 1574550000,
+         'id' => 36,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              22,
+                              'months',
+                              11
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971839-955635-spandauer-weihnachtsmarkt-in-der-altstad.html',
+         'text' => 'Spandauer Weihnachtsmarkt, vom 25.11.2019 bis 22.12.2019',
+         'type' => 'gesperrt',
+         'until' => 1577055599
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => '#: tempex: before(1st_advent,1d) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1574982000,
+         'id' => 166,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              25,
+                              'months',
+                              11
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (30.11.2019 - 01.12.2019)',
+         'type' => 'gesperrt',
+         'until' => 1575241199
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => '# sowieso schon mit q4 markiert, deshalb -> 2
 	2::xmas 5829,10964 5782,10884
@@ -1053,7 +1459,31 @@ Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_44_6553_6696_online.pdf
+	2::temp 8424,12853 8503,12895
+	2::temp 7930,12912 8021,12832
+# REMOVED (Adele-Schreiber-Krieger-Str.) ---	2::temp 8737,12757 8596,12760 8545,12760
+# REMOVED (westl. John-Foster-Dulles-Allee) ---	2::temp 7514,12387 7627,12380 7821,12367 7875,12363
+östl. John-Foster-Dulles-Allee	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
+# REMOVED (Schiffbauerdamm) ---	2::temp 8514,12877 8545,12760
+östl. Straße des 17. Juni	2::temp 8775,12457 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150
+# REMOVED (westl. Straße des 17. Juni) ---	2::temp 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 8595,12066 8600,12165 8538,12245
+Große Querallee	2::temp 7816,12150 7822,12201 7875,12363 7945,12592
+südl. Spreeuferweg	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
+Paul-Löbe-Allee und Verlängerungen	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593 8596,12576
+Yitzhak-Rabin-Str. bis Gustav-Heinemann-Brücke	2::temp 8120,12756 8122,12603 8119,12414 8055,12186 8119,12414 8122,12603 8120,12756 8114,12839 8116,12938 8110,13042
+nördl. Wilhelmstr.	2::temp 8775,12457 8766,12541
+Willy-Brandt-Str. - Konrad-Adenauer-Str.	2::temp 8021,12832 8030,12824 8120,12756 8206,12757 8309,12758 8424,12853
+Platz des 18. März	2::temp 8538,12245 8592,12252
+',
+         'from' => 1573455600,
+         'id' => 1422,
+         'text' => 'Straße des 17. Juni und Straßen im Regierungsviertel am 12. November 2019 von 8 bis 14 Uhr gesperrt (Feierliches Gelöbnis der Bundeswehr)',
+         'type' => 'gesperrt',
+         'until' => 1573563600
+       },
        undef,
        undef,
        undef,
@@ -1931,6 +2361,29 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
+       {
+         'data' => '#: note "WeihnachtsZauber auf dem Gendarmenmarkt"
+	2::xmas 9536,11922 9666,11935
+	2::xmas 9523,12019 9656,12031
+',
+         'from' => 1573772400,
+         'id' => 1989,
+         'periodic' => 1,
+         'prewarn_days' => 10,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              11
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachtsmarkt-berlin.de/',
+         'text' => 'Gendarmenmarkt: Weihnachtsmarkt vom 25.11.2019 bis 31.12.2019, davor mehrere Tage Aufbauarbeiten, Durchfahrt nicht möglich (Eintritt!)',
+         'type' => 'gesperrt',
+         'until' => 1577919599
+       },
        undef,
        undef,
        undef,
@@ -1938,8 +2391,30 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => '	2::xmas 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324
+#	2::temp 8318,11324 8280,11296 8278,11257
+#: XXX_prog "3::temp" oder "3::xmas" geht nicht?
+	3 8427,11365 8389,11378 8374,11479
+	3 8374,11479 8389,11378 8427,11365
+',
+         'from' => 1574550000,
+         'id' => 1997,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              19,
+                              'months',
+                              11
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971680-955635-winterweltweihnachtsmarkt-am-potsdamer-p.html',
+         'text' => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, 25. November 2019 bis 26. Dezember 2019',
+         'type' => 'gesperrt',
+         'until' => 1577401199
+       },
        undef,
        undef,
        undef,
@@ -2758,9 +3233,69 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: tempex: before(2nd_advent,sa) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1575586800,
+         'id' => 2515,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              2,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (07.12.2019 - 08.12.2019)',
+         'type' => 'gesperrt',
+         'until' => 1575845999
+       },
+       {
+         'data' => '#: tempex: before(3rd_advent,sa) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1576191600,
+         'id' => 2516,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (14.12.2019 - 15.12.2019)',
+         'type' => 'gesperrt',
+         'until' => 1576450799
+       },
+       {
+         'data' => '#: tempex: before(4th_advent,sa) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1576796400,
+         'id' => 2517,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              16,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (21.12.2019 - 22.12.2019)',
+         'type' => 'gesperrt',
+         'until' => 1577055599
+       },
        undef,
        undef,
        undef,
@@ -2768,7 +3303,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        {
          'data' => '#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G)
-#: last_checked: 2019-10-05 (mapillary)
+#: last_checked: 2019-10-22
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -3123,7 +3658,29 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: tempex: before(first_advent, monday)-YYYY1226 vvv
+	q3::xmas 11139,13008 11064,12910 10970,12822
+	q4::xmas 11064,12910 11134,12793
+#: tempex ^^^
+',
+         'from' => 1574550000,
+         'id' => 2763,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              11
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html',
+         'text' => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 25. November 2019 bis 26. Dezember 2019',
+         'type' => 'handicap',
+         'until' => 1577401199
+       },
        undef,
        undef,
        undef,
@@ -3323,7 +3880,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-09-20
+#: last_checked: 2019-10-22
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -3393,7 +3950,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-10-01 vvv
+#: last_checked: 2019-10-26 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -3560,7 +4117,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
 #: note: Gesamtbaumaßnahme bis 31.12.2023
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: note: zuletzt geprüft: 2019-08-19
+#: note: zuletzt geprüft: 2019-10-21
 	q4::inwork; 5076,10658 5047,10381
 ',
          'from' => 1534629600,
@@ -3873,9 +4430,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 31.01.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2019-08-09
+#: last_checked: 2019-10-19 (mapillary)
 #: next_check: 2020-01-30
-	q3::inwork  8986,16092 9178,16317 9301,16439
+	q3::inwork  8986,16092 9178,16317
+# REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
 ',
          'from' => 1558648800,
          'id' => 3108,
@@ -3988,20 +4546,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: by: fritz
-#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7332
-#: confirmed_by: srt (keine Ausnahme für Radfahrer)
-#: XXX wann sind die Bauarbeiten beendet?
-#: next_check: 2019-11-01
-	q4::inwork; 4219,10279 3852,10236
-',
-         'from' => 1562012626,
-         'id' => 3124,
-         'text' => 'Xantener Str.: Sperrung zwischen Konstanzer Str. und Brandenburgische Str., eventuell sind auch Radfahrer betroffen, Ende unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4014,7 +4559,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: also_indoor: traffic (GH)
 #: XXX periodisch anschauen vvv
 #: priority: #B vvv
-#: last_checked: 2019-10-19 vvv
+#: last_checked: 2019-10-24 vvv
 # REMOVED --- #: next_check: 2019-10-04 vvv
 #: check_frequency: 21d vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -4209,11 +4754,22 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: next_check_id: BLUECHER-2019
+#: source_id: 2147344702
+	q4::inwork 9982,9847 10006,9942 10029,9989
+',
+         'from' => 1567112731,
+         'id' => 3157,
+         'source_id' => '2147344606',
+         'text' => 'Brachvogelstr. und Mittenwalder Str.: Bauarbeiten an der Kreuzung Blücherstr., ggfs. absteigen, bis Ende November 2019',
+         'type' => 'handicap',
+         'until' => 1575046800
+       },
        undef,
        {
          'data' => '#: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-10-16
+#: last_checked: 2019-10-25
 #: check_frequency: 14d
 	2::inwork 13092,11712 13175,11649 13239,11567
 	2::inwork 13175,11649 13208,11658
@@ -4272,7 +4828,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: KOENIGSTEINBRUECKE-2019
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621
+#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621 (Sperrung in der Zeit vom 24. November 2017 bis zum 30. Mai 2019)
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621&date=20180130
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2017/16-05-2017_beleuchtungssituation-an-der-und-um-die-koenigsteinbruecke-verbessern.pdf
 #: by: http://www.berliner-woche.de/blankenburg/verkehr/senat-laesst-neue-laternen-auf-der-koenigsteinbruecke-errichten-d127411.html (Beleuchtung wird errichtet)
@@ -4290,20 +4846,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a114/de/ve05.shtml?date=20190927 (zuerst Ertüchtigungsmaßnahmen ab 1.10.2019 für die Umleitungsstrecke)
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/a114-pankow-zubringer-weitere-einschrankungen (Abriss ab 25.10.2019)
 #: by: https://www.berliner-woche.de/buch/c-verkehr/informationen-zur-a114-erneuerung_a234835 (Informationsveranstaltung am 23.10.2019)
-#: XXX erste Planung: Sperrung in der Zeit vom 24. November 2017 bis zum 30. Mai 2019 (wurde nicht eingehalten)
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.856694.php ("... bis Ende 2020 fertiggestellt werden")
 #: osm_watch: way id="16307526" version="13"
 #: also_indoor: search Königsteinbrücke
-#: last_checked: 2019-10-13 (Bauarbeiten im Umfeld)
-#: check_frequency: 7d
-#: add_fragezeichen: Ist die Königsteinbrücke bereits gesperrt?
+#: last_checked: 2019-10-23 (wosch) (gesperrt)
+#: next_check: 2019-10-25
+# REMOVED --- #: add_fragezeichen: Ist die Königsteinbrücke bereits gesperrt?
 #: priority: #A
 	2::inwork 13148,22396 13385,22383
 ',
          'from' => 1569794400,
          'id' => 3170,
-         'text' => 'Königsteinbrücke: bevorstehende Sperrung, Abriss der Brücke voraussichtlich ab 25. Oktober 2019',
+         'text' => 'Königsteinbrücke: Sperrung der Brücke ab dem 23. Oktober 2019, Brücke wird danach abgerissen',
          'type' => 'gesperrt',
-         'until' => 1617228000
+         'until' => 1609455599
        },
        {
          'data' => '#: by: fritz
@@ -4316,30 +4872,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1574118000
        },
-       {
-         'data' => '#: also_indoor: traffic (G,H)
-	2::temp 9730,12238 9713,12392 9771,12400 9780,12401 9858,12410 9934,12420 9984,12426 10024,12431 10063,12438 10155,12494 10176,12506 10243,12546 10300,12587 10352,12627 10431,12709
-	2::temp 9475,12365 9613,12381 9664,12387 9713,12392
-	2::temp 9664,12387 9680,12232
-	3 10291,12600 10300,12587 10363,12535
-	3 10174,12284 10063,12438 9956,12617
-	3 9873,12315 9858,12410 9848,12506
-	3 9956,12523 9984,12426 9990,12404
-	3 10363,12535 10300,12587 10291,12600
-	3 9956,12617 10063,12438 10174,12284
-	3 9990,12404 9984,12426 9956,12523
-	3 9848,12506 9858,12410 9873,12315
-',
-         'from' => 1571266200,
-         'id' => 3172,
-         'source_id' => 'https://twitter.com/VIZ_Berlin/status/1183048455884816386',
-         'text' => 'Unter den Linden: zwischen Charlottenstr. und Spandauer Str. voraussichtlich gesperrt, Festival of Lights, 18. Oktober 2019 bis 20. Oktober 2019 jeweils zwischen 19:00 und 24:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1571608799
-       },
+       undef,
        {
          'data' => '#: next_check_id: KOENIGSTEINBRUECKE-2019
-#: last_checked: 2019-10-13
+#: last_checked: 2019-10-19 (mapillary)
 #: next_check: 2021-04-01
 	2::inwork 13221,22667 13223,22558 13207,22498 13217,22413 13220,22387
 ',
@@ -4394,37 +4930,39 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: NOBEL-2019
 # REMOVED (ja) --- #: add_fragezeichen: Haben die Bauarbeiten tatsächlich schon begonnen? Wurde eine Einbahnstraßenregelung eingeführt?
 #: XXX bis wann gehen die Bauarbeiten?
+#: source_id: 2147344997 (hier: Vollsperrung bis Ende Oktober 2019)
 #: also_indoor: traffic (G)
 #: osm_watch: way id="19881557" version="23"
 #: last_checked: 2019-10-15
 #: next_check: 2020-07-01
-	q4::inwork; 14784,6169 14398,6184
+# REMOVED ---	q4::inwork; 14784,6169 14398,6184
+	q4::inwork 14784,6169 14398,6184
 ',
          'from' => 1569794400,
          'id' => 3177,
-         'text' => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Einbahnstraßenregelung wegen Bauarbeiten, offen Richtung Osten, voraussichtlich bis Sommer 2020',
+         'text' => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Fahrbahn wegen Bauarbeiten gesperrt, voraussichtlich bis Ende Oktober 2019, danach eventuell wieder Einbahnstraßenregelung',
          'type' => 'handicap',
-         'until' => 1596232800
+         'until' => 1572451200
        },
        {
-         'data' => '#: XXX gibt es hier tatsächlich Einschränkungen für Radfahrer?
+         'data' => '# REMOVED (ja) --- #: XXX gibt es hier tatsächlich Einschränkungen für Radfahrer?
 	q3::inwork 4297,10008 4352,10260
 ',
          'from' => 1571078727,
          'id' => 3178,
-         'text' => 'Bayerische Str.: Bauarbeiten zwischen Olivaer Platz und Düsseldorfer Str., Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, bis 20.12.2019',
+         'text' => 'Bayerische Str.: Bauarbeiten zwischen Olivaer Platz und Düsseldorfer Str., Abschnitt der Fahrbahn ist gesperrt, bis 20.12.2019',
          'type' => 'handicap',
          'until' => 1576882800
        },
        {
          'data' => '#: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-10-17 (Einfahrt verboten-Schild, aber Barriere war weggeschoben)
+#: last_checked: 2019-10-21 (Barriere über die gesamte Straßenbreite)
 #: check_frequency: 14d
 	2::inwork 10673,12434 10772,12515
 ',
          'from' => undef,
          'id' => 3179,
-         'text' => 'Gustav-Böß-Str.: Straße ist möglicherweise komplett gesperrt',
+         'text' => 'Gustav-Böß-Str.: Straße ist komplett gesperrt',
          'type' => 'gesperrt',
          'until' => undef
        }

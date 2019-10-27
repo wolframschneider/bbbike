@@ -684,6 +684,7 @@ Zum Weizenring (Potsdam-Bornim): Qualität? Genaue Lage der Straße?	? -16534,1625
 Gröbenstr. (Potsdam-Bornim): Qualität?	? -17646,1636 -18095,1928
 Am Großen Herzberg (Potsdam-Eiche): Qualität?	? -17419,551 -17083,624 -16939,671
 Hangelsberg - Kienbaum: Qualität?	? 45968,619 47190,2995 47806,4379 48009,5898 48070,6124
+Briesen - Fürstenwalde: Qualität?	? 69963,-5374 69483,-4393 68638,-3455 68429,-3205 68205,-2720
 Striewitzweg (Teltow): Qualität im südlichen Abschnitt der Straße: wo genau sind die Kopfsteinpflaster- und Betonabschnitte? Ist ein Abschnitt südlich der Potsdamer Str. eine Einbahnstraße?	? 281,-1433 313,-1363 385,-1205 403,-1166 457,-1051 528,-917 598,-757 590,-618
 Striewitzweg (Teltow): Qualität im nördlichen Abschnitt? Ist die Straße hier verkehrsberuhigt?	? 577,-543 550,-396 525,-347
 Altdöbern - Calau: Qualität?	? 55259,-83091 55388,-83077 55768,-82862 54521,-79452 54572,-78865 54600,-77483 53827,-76082
@@ -1030,6 +1031,7 @@ Goethestr. (Großziethen): Qualität?	? 13385,706 13421,586 13430,509
 Brandenburgische Str. (Schöneiche): wie ist die Qualität ab Berliner Str. Richtung Süden?	? 30512,7909 30454,7670 30495,7350
 Rüdersdorfer Str. (Schöneiche): wie ist die Qualität ab Berliner Str. Richtung Süden: genauso schlecht wie im nördlichen Abschnitt?	? 31446,7915 30891,7130
 Friedrich-Meinecke-Weg: Ausgeschildert? Qualität? Nachts beleuchtet?	? 1802,5418 1868,5391 2218,5369 2267,5450
+Ertüchtigungsstrecke Königssteinbrücke: in welcher Form wurde die Umleitungsstrecke temporär ertüchtigt?	? 13404,22384 13354,22327 13316,22273 13267,22090 13249,22003 13315,21969 13270,21870 13220,21761 13193,21700
 # added from strassen
 (Siedlung Roedernau) (Heißt diese Straße offiziell "Roedernau" (mit Straßenschildern)?)	? 6460,19734 6433,19749 6390,19770
 Petersallee (Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5426,16539 5533,16662
@@ -1073,8 +1075,6 @@ Schloßstr. (Einbahnstraße?)	? -14821,106013 -15004,105813 -15070,105705
 Tiergartenstr. (Einbahnstraße?)	? -15004,105813 -14862,105712 -14570,105702 -14288,105530 -14242,105542
 Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105763 -13977,105850 -13932,106157
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
-# added from radwege
-für Radfahrer freigegebene Busspur gilt Mo-Fr 6-19 Uhr (bleibt die Absperrung des Radwegs permanent?)	? 2532,9911 2590,9949 2694,10002 2702,10006
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 Püttbergeweg: Gehwegplatten/Asphalt (liegt hier mittlerweile nur noch Asphalt?)	? 31670,4365 31967,4381
@@ -1201,5 +1201,4 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from bbbike-temp-blockings-optimized
 Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt (Wann wird die Sperrung aufgehoben?)	? 9131,12438 9179,12444
 Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019, Ende unbekannt (Ist die Unterführung noch immer gesperrt?)	? 3231,12749 3332,12742
-Königsteinbrücke: bevorstehende Sperrung, Abriss der Brücke voraussichtlich ab 25. Oktober 2019 (Ist die Königsteinbrücke bereits gesperrt?)	? 13148,22396 13385,22383
 Bundesallee - Pariser Str.: Durchgang möglicherweise wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Wann ist eine Durchfahrt wieder möglich?)	? 5416,9928 5464,9914
