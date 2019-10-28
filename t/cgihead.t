@@ -106,7 +106,10 @@ if (defined $mapserver_prog_url) {
 }
 
 my $per_check_url_test_cases = 2;
-my $extra_tests = 3;
+my $extra_bbbike_snapshot_tests = 2;
+my $extra_tests = 5 + $extra_bbbike_snapshot_tests;
+$extra_tests -= 4; # bbbike.org
+
 plan tests => (scalar(@prog) + scalar(@static)) * $per_check_url_test_cases + $extra_tests;
 
 # Note: in keep_alive connections it's not possible to change the
@@ -119,6 +122,9 @@ $ua->env_proxy;
 delete $ENV{PERL5LIB}; # override Test::Harness setting
 for my $prog (@prog) {
  SKIP: {
+	if ($ENV{BBBIKE_TEST_NO_NETWORK} && $prog eq 'bbbike-snapshot.cgi') {
+	    skip "Local URL ($prog) calls external site", $per_check_url_test_cases + $extra_bbbike_snapshot_tests;
+	}
 	my $qs = "";
 	if ($prog =~ /mapserver_comment/) {
 	    maybe_skip_mail_sending_tests $per_check_url_test_cases;

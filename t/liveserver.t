@@ -39,6 +39,9 @@ use Sys::Hostname;
 use Http;
 use Strassen::Core;
 
+plan skip_all => "skip due to no network"   if $ENV{BBBIKE_TEST_NO_NETWORK};
+plan skip_all => "skip due to slow network" if $ENV{BBBIKE_TEST_SLOW_NETWORK};
+
 my $bbbike_url               = "http://bbbike.de";
 my $bbbike_data_url          = "http://bbbike.de/BBBike/data";
 my $bbbike_pps_url           = "http://bbbike-pps-jessie";
