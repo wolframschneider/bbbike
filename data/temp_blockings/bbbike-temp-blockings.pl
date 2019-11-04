@@ -17208,12 +17208,12 @@ EOF
 	3 8374,11479 8389,11378 8427,11365
 EOF
      },
-     { from  => $isodate2epoch->("2018-12-06 00:00:00"),
-       until => $isodate2epoch->("2018-12-09 23:59:59"),
+     { from  => $isodate2epoch->("2019-12-05 00:00:00"),
+       until => $isodate2epoch->("2019-12-08 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 1, months => 12]],
-       source_id => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
-       text  => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (07.12.2018 - 09.12.2018)',
+       source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1001438-955635-alt-rixdorfer-weihnachtsmarkt.html',
+       text  => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (06.12.2019 - 08.12.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: tempex: before(2nd_advent,fr) T17:00 - 2nd_advent T20:00 vvv
@@ -28238,10 +28238,10 @@ EOF
 #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
 #: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-10-19 vvv
-#: check_frequency: 14d vvv
-# REMOVED (hier mittlerweile offen)	2::inwork 14854,8964 14980,8940
-	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
+#: last_checked: 2019-11-02 vvv
+#: check_frequency: 7d vvv
+# REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14980,8940
+# REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
 	2::inwork 14918,8813 14883,8823 14852,8799
 # REMOVED (hier mittlerweile offen) ---		2::inwork 14980,8940 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
@@ -29266,7 +29266,7 @@ EOF
        data  => <<EOF,
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="11"
-#: last_checked: 2019-10-19
+#: last_checked: 2019-11-02
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 EOF
@@ -29277,7 +29277,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: last_checked: 2019-06-18
-#: next_check: 2019-11-01
+#: next_check: 2019-11-19
 	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 EOF
      },
@@ -29353,11 +29353,12 @@ EOF
 # REMOVED --- #: XXX die Bauarbeiten oben auf der Brücke wurden mittlerweile verlängert: bis zum 30.10.2019
 #: osm_watch: way id="72660098" version="7"
 #: XXX laut osm offen
-#: XXX außerdem "der östliche Gehweg ist gesperrt" --- was bedeutet das für den Radverkehr?
+# REMOVED (provisorischer Radstreifen) --- #: XXX außerdem "der östliche Gehweg ist gesperrt" --- was bedeutet das für den Radverkehr?
 #: priority: #A
 #: add_fragezeichen: Ist die Unterführung noch immer gesperrt?
-#: last_checked: 2019-10-29
-#: next_check: 2019-10-30
+#: last_checked: 2019-11-03
+# REMOVED --- #: next_check: 2019-10-30
+#: check_frequency: 14d
 	2::inwork 3231,12749 3332,12742
 EOF
      },
@@ -29421,7 +29422,7 @@ EOF
 #: also_indoor: traffic (GH)
 #: XXX periodisch anschauen vvv
 #: priority: #B vvv
-#: last_checked: 2019-10-24 vvv
+#: last_checked: 2019-11-03 vvv
 # REMOVED --- #: next_check: 2019-10-04 vvv
 #: check_frequency: 21d vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -29604,7 +29605,7 @@ EOF
 #: by: https://www.berliner-woche.de/friedenau/c-verkehr/regelung-des-fuss-und-radverkehrs-erst-nach-elf-tagen_a227446 (Änderungen)
 #: also_indoor: traffic
 #: XXX Wann werden die Bauarbeiten beendet? vvv
-#: last_checked: 2019-10-13 vvv
+#: last_checked: 2019-11-03 vvv
 # REMOVED (nicht mehr) --- #: note: hier gibt's mittlerweile auch Drängelgitter
 	q3::inwork 5636,7734 5630,7875
 # REMOVED ---	q3::inwork 5630,7875 5631,8011
@@ -29815,7 +29816,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX wann kann man hier wieder durch?
-#: last_checked: 2019-10-28
+#: last_checked: 2019-11-01
 #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 EOF
@@ -29958,15 +29959,16 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Bundesallee - Pariser Str.: Durchgang möglicherweise wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
+       text  => 'Bundesallee - Pariser Str.: direkter Durchgang wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: BUNDESALLEE-2019
 #: priority: #A
-#: osm_watch: note 1960975 2
+#: osm_watch: note 1960975 3
 #: osm_watch: way id="483261580" version="1"
+#: XXX es gibt einen engen Umweg über Meierottostr., Bordstein
 #: add_fragezeichen: Wann ist eine Durchfahrt wieder möglich?
-#: last_checked: 2019-10-13
+#: last_checked: 2019-11-03
 #: check_frequency: 30d
 	2::inwork 5416,9928 5464,9914
 EOF
@@ -30031,7 +30033,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-10-31
+#: last_checked: 2019-11-03
+#: next_check: 2019-11-25
 	q3::inwork 13711,11458 13895,11663
 EOF
      },
@@ -30043,6 +30046,28 @@ EOF
        data  => <<EOF,
 	q4::inwork 12442,20805 12337,20954 12298,21015 12257,21079 12202,21158 12166,21208
 	q4::inwork 12158,21166 12202,21158
+EOF
+     },
+     { from  => 1574053200, # 2019-11-18 06:00
+       until => 1574175600, # 2019-11-19 16:00
+       text  => 'Mühlendamm, Breite Str.: Sperrungen (auch für Fußgänger) am 19. November 2019 zwischen 06 und 16 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_45_6697_6904_online.pdf',
+       data  => <<EOF,
+	2::temp 10660,12176 10591,12203 10583,12206 10492,12289 10417,12378
+	2::temp 10583,12206 10625,12206 10574,12131 10512,12039 10460,11979 10418,12016
+	2::temp 10285,12306 10383,12191 10284,12113
+	2::temp 10383,12191 10480,12077 10512,12039
+	2::temp 10480,12077 10418,12016 10385,11985
+EOF
+     },
+     { from  => 1572735600, # 2019-11-03 00:00
+       until => 1580511599, # 2020-01-31 23:59
+       text  => 'Edelhofdamm: Bauarbeiten an der nördlichen Fahrbahn ab Remstaler Str., evtl. ist die Fahrbahn für Radfahrer nicht befahrbar, ab 4. November 2019 bis 31. Januar 2020',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.860721.php',
+       data  => <<EOF,
+	q4::inwork 3166,25496 3076,25456 2882,25375 2744,25314 2713,25300 2683,25238
 EOF
      },
     );
