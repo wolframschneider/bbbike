@@ -25941,9 +25941,9 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2019-10-22 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-10-23 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 23. Oktober 2019 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2019-11-05 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-11-06 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 06. November 2019 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
@@ -29815,8 +29815,8 @@ EOF
        text  => 'Oranienstr. - Kommandantenstr.: Zufahrt kann wegen Renovierungsarbeiten gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX wann kann man hier wieder durch?
-#: last_checked: 2019-11-01
+#: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05)
+#: last_checked: 2019-11-05
 #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 EOF
@@ -29965,7 +29965,7 @@ EOF
 #: next_check_id: BUNDESALLEE-2019
 #: priority: #A
 #: osm_watch: note 1960975 3
-#: osm_watch: way id="483261580" version="1"
+#: osm_watch: way id="483261580" version="2"
 #: XXX es gibt einen engen Umweg über Meierottostr., Bordstein
 #: add_fragezeichen: Wann ist eine Durchfahrt wieder möglich?
 #: last_checked: 2019-11-03
@@ -30033,17 +30033,18 @@ EOF
        data  => <<EOF,
 #: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-11-03
+#: last_checked: 2019-11-04
 #: next_check: 2019-11-25
 	q3::inwork 13711,11458 13895,11663
 EOF
      },
      { from  => 1572735600, # 2019-11-03 00:00
        until => 1575068400, # 2019-11-30 00:00
-       text  => 'Bahnhofstr.: zwischen Pasewalker Str. und Blankenburger Str. Bauarbeiten, Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 4.11.2019 bis 29.11.2019',
+       text  => 'Bahnhofstr.: zwischen Pasewalker Str. und Blankenburger Str. Bauarbeiten, Fahrbahn gesperrt, evtl. können Radfahrer passieren, vom 4.11.2019 bis 29.11.2019',
        type  => 'handicap',
        source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/bahnhofstraße-blankenburg-vollsperrung-·-fahrbahnsanierung',
        data  => <<EOF,
+#: source_id: 2147345034
 	q4::inwork 12442,20805 12337,20954 12298,21015 12257,21079 12202,21158 12166,21208
 	q4::inwork 12158,21166 12202,21158
 EOF
@@ -30068,6 +30069,20 @@ EOF
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.860721.php',
        data  => <<EOF,
 	q4::inwork 3166,25496 3076,25456 2882,25375 2744,25314 2713,25300 2683,25238
+EOF
+     },
+     { from  => 1572930000, # 2019-11-05 06:00
+       until => 1573534800, # 2019-11-12 06:00
+       text  => 'Str. des 17.Juni zwischen Großer Stern und Yitzhak-Rabin-Str. sowie Yitzhak-Rabin-Str. gesperrt, Veranstaltung "30 Jahre Mauerfall", vom 06.11.2019, 06:00 Uhr bis 12.11.2019, 06:00 Uhr',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::inwork 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8119,12414
+	3 7429,12070 7383,12095 7031,12320
+	3 7031,12320 7383,12095 7429,12070
+	3 7823,12120 7816,12150 7822,12201
+	3 8049,12140 8055,12186 8089,12190
+	3 8089,12190 8055,12186 8049,12140
+	3 7822,12201 7816,12150 7823,12120
 EOF
      },
     );
