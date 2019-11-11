@@ -3372,6 +3372,7 @@ EOF
 	2::xmas 5656,10876 5652,11004
 #: by: https://twitter.com/VIZ_Berlin/status/1063061013334032384
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
+#: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020?
 Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
 EOF
      },
@@ -11952,7 +11953,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009262',
        data  => <<EOF,
-	1::inwork 10286,13084 10339,13052 10371,13006 10418,12922 10395,12908 10347,12881 10308,12859
+	1::inwork 10286,13084 10301,13075 10339,13052 10371,13006 10418,12922 10395,12908 10347,12881 10308,12859
 EOF
      },
      { from  => 1215112739, # 
@@ -17261,11 +17262,11 @@ EOF
 	2::inwork -2513,3631 -2464,3631 -2396,3666 -2174,3718 -2042,3838 -2015,3873 -2012,3949 -2030,4089 -1944,4140 -1760,4001 -1701,3980 -1621,3972 -1516,3993 -1488,4009
 EOF
      },
-     { from  => $isodate2epoch->("2018-12-13 00:00:00"),
-       until => $isodate2epoch->("2018-12-16 23:59:59"),
+     { from  => $isodate2epoch->("2019-12-12 00:00:00"),
+       until => $isodate2epoch->("2019-12-15 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 12]],
-       text  => 'Alt-Köpenicker Weihnachtsmarkt vom 14.12.2018 bis zum 16.12.2018',
+       text  => 'Alt-Köpenicker Weihnachtsmarkt vom 13.12.2019 bis zum 15.12.2019',
        type  => 'gesperrt',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1305665-955635-weihnachtsmarktaufdemschlossplatzk%C3%B6peni.html',
        data  => <<EOF,
@@ -26409,7 +26410,7 @@ EOF
 EOF
      },
      { from  => 1499280235, # 2017-07-05 20:43
-       until => $isodate2epoch->("2019-12-31 18:00:00"), # 1535296255, # (sieht mittlerweile ziemlich fertig aus) --- 1541026800, # 2018-11-01 00:00
+       until => 1573066338, # $isodate2epoch->("2019-12-31 18:00:00"), # 1535296255, # (sieht mittlerweile ziemlich fertig aus) --- 1541026800, # 2018-11-01 00:00
        text  => 'Brückendurchfahrt Schräger Weg: Vollsperrung, auch für Radfahrer und Fußgänger, bis Ende Dezember 2019',
        type  => 'gesperrt',
        source_id => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
@@ -26491,7 +26492,7 @@ EOF
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-10-29
+#: last_checked: 2019-11-08
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -26689,7 +26690,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-09-30
+#: last_checked: 2019-11-07
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -29295,7 +29296,7 @@ EOF
 #: last_checked: 2019-08-04 vvv
 #: check_frequency: 7d vvv
 # REMOVED ---	q4::inwork 10220,13098 10264,13097
-# REMOVED ---	q4::inwork; 10264,13097 10286,13084 10339,13052
+# REMOVED ---	q4::inwork; 10264,13097 10286,13084 10301,13075 10339,13052
 	q3::inwork; 10310,13227 10264,13097
 # REMOVED ---	q4::inwork 10220,13098 10105,13004
 #: check_frequency ^^^
@@ -29415,6 +29416,7 @@ EOF
        type  => 'handicap',
        source_id => 'https://www.berliner-woche.de/friedrichshain/c-verkehr/bvg-erneuert-tramgleise-an-der-boxhagener-strasse_a222487',
        data  => <<EOF,
+#: next_check_id: BOXHAGENER-2019
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.851578.php
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/tramlinien-gekappt_a234757
 #: source_id: 2147344478 (nur bis Anfang September 2019)
@@ -29422,7 +29424,7 @@ EOF
 #: also_indoor: traffic (GH)
 #: XXX periodisch anschauen vvv
 #: priority: #B vvv
-#: last_checked: 2019-11-03 vvv
+#: last_checked: 2019-11-08 vvv
 # REMOVED --- #: next_check: 2019-10-04 vvv
 #: check_frequency: 21d vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -29551,7 +29553,7 @@ EOF
 EOF
      },
      { from  => 1564524000, # 2019-07-31 00:00
-       until => 1573858799, # 2019-11-15 23:59
+       until => 1573239852, # 1573858799, # 2019-11-15 23:59
        text  => 'Bernauer Str. (Lindenberg): zwischen Karl-Marx-Str. und Dorfstr. gesperrt, evtl. sind auch Radfahrer betroffen, ab 01.08.2019 06:00 bis Mitte November 2019',
        type  => 'handicap',
        source_id => '2147344552',
@@ -29816,7 +29818,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05)
-#: last_checked: 2019-11-05
+#: last_checked: 2019-11-06
 #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 EOF
@@ -29964,7 +29966,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: BUNDESALLEE-2019
 #: priority: #A
-#: osm_watch: note 1960975 3
+# REMOVED (closed) --- #: osm_watch: note 1960975 3
 #: osm_watch: way id="483261580" version="2"
 #: XXX es gibt einen engen Umweg über Meierottostr., Bordstein
 #: add_fragezeichen: Wann ist eine Durchfahrt wieder möglich?
@@ -30021,8 +30023,8 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-10-30 (Barriere über die gesamte Straßenbreite)
-#: check_frequency: 14d
+#: last_checked: 2019-11-08 (Barriere über die gesamte Straßenbreite, Fahrbahn ist aufgerissen)
+#: check_frequency: 30d
 	2::inwork 10673,12434 10772,12515
 EOF
      },
@@ -30033,7 +30035,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-11-04
+#: last_checked: 2019-11-06
 #: next_check: 2019-11-25
 	q3::inwork 13711,11458 13895,11663
 EOF
@@ -30076,13 +30078,58 @@ EOF
        text  => 'Str. des 17.Juni zwischen Großer Stern und Yitzhak-Rabin-Str. sowie Yitzhak-Rabin-Str. gesperrt, Veranstaltung "30 Jahre Mauerfall", vom 06.11.2019, 06:00 Uhr bis 12.11.2019, 06:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8119,12414
+	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8119,12414
 	3 7429,12070 7383,12095 7031,12320
 	3 7031,12320 7383,12095 7429,12070
 	3 7823,12120 7816,12150 7822,12201
 	3 8049,12140 8055,12186 8089,12190
 	3 8089,12190 8055,12186 8049,12140
 	3 7822,12201 7816,12150 7823,12120
+EOF
+     },
+     { from  => 1573153200, # 2019-11-07 20:00
+       until => 1573354800, # 2019-11-10 04:00
+       text  => 'John-Foster-Dulles-Allee, Scheidemannstr., Heinrich-von-Gagern-Str.: gesperrt, Veranstaltung "30 Jahre Mauerfall", vom 08.11.2019, 20:00 Uhr bis 10.11.2019, 04:00 Uhr',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::temp 8122,12603 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420 8775,12457
+	2::temp 8119,12414 8070,12409 8017,12359 7875,12363 7821,12367 7627,12380 7514,12387 7437,12368
+	3 7945,12592 7875,12363 7822,12201
+	3 8554,12593 8540,12420 8573,12325
+	3 8573,12325 8540,12420 8554,12593
+	3 8391,12389 8400,12417 8399,12610
+	3 7822,12201 7875,12363 7945,12592
+	3 8399,12610 8400,12417 8391,12389
+	3 7654,12464 7627,12380 7603,12353
+	3 7603,12353 7627,12380 7654,12464
+EOF
+     },
+     { from  => 1573340400, # 2019-11-10 00:00
+       until => 1575673199, # 2019-12-06 23:59
+       text  => 'Wiesendamm - Spreeradweg: Zufahrtsrampe wird saniert, evtl. ist der Weg nicht passierbar, vom 11. November bis 06. Dezember 2019',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.863422.php',
+       data  => <<EOF,
+	2::inwork -309,13268 -285,13276 -287,13308 -280,13318
+EOF
+     },
+     { from  => 1573374600, # 2019-11-10 09:30
+       until => 1573477200, # 2019-11-11 14:00
+       text  => 'Rund um das Stadtgut Hellersdorf: Bombenentschärfung, Straßen zwischen Zossener Str., Stendaler Str., Cottbusser Str. und Alte Hellersdorfer Str. gesperrt, am 11. November 2019, voraussichtlich zwischen 9:30 und 14:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.863611.php',
+       data  => <<EOF,
+	2::temp 23778,14995 23708,14989 23735,14814 23531,14781 23517,14873
+	2::temp 23787,14919 23798,14826 23735,14814
+	2::temp 23265,15351 23082,15329 23113,15110 23117,15081 23104,14827
+	2::temp 23297,14772 23318,14847
+	2::temp 23933,15209 23952,15086 23833,15066 23841,15004 23778,14995 23772,15058
+	2::temp 23952,15086 23960,15021 23841,15004
+	2::temp 23617,15594 23568,15603 23411,15632 23218,15671 23080,15700 23060,15588 23067,15429 23082,15329
+	2::temp 23067,15429 23245,15442
+	2::temp 23269,15062 23117,15081
+	2::temp 23775,15428 23895,15450 23868,15633 23617,15594 23629,15498
+	2::temp 23297,14772 23354,14756 23405,14758 23531,14781
 EOF
      },
     );

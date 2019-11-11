@@ -21,6 +21,9 @@ BEGIN {
     }
 }
 
+my @warnings;
+local $SIG{__WARN__} = sub { push @warnings, @_ };
+
 my @split_street_citypart =
     (["Heerstr. (Spandau, Charlottenburg)" =>
       ["Heerstr.", "Spandau", "Charlottenburg"]],
@@ -40,6 +43,13 @@ my @split_street_citypart =
       ["Sewanstr. [Wohngebiet, zur Balatonstr.]"]],
      ["Treseburger Str. (Blankenburg) [22N-S,24-24D]" =>
       ["Treseburger Str. [22N-S,24-24D]", "Blankenburg"]],
+    );
+
+my @split_street_citypart_no_splitoncomma =
+    (["Heerstr. (Spandau, Charlottenburg)" =>
+      ["Heerstr.", "Spandau", "Charlottenburg"]],
+     ['Sackgassenende, AGB' =>
+      ['Sackgassenende, AGB']],
     );
 
 my @beautify_landstrasse =
@@ -157,17 +167,38 @@ my @de_artikel_dativ_tests =
      ['Mehringdamm', 'auf dem'],
      ['Rue Diderot', 'auf der'],
      ['Via Tilia', 'auf der'],
+     ['Westphalweg', 'auf dem'],
+     ['Königsteinbrücke', 'auf der'],
+     ['Berliner Chaussee', 'auf der'],
+     ['Maulbeerallee', 'auf der'],
+    );
+
+my @nice_crossing_name_tests =
+    (
+     [['Dudenstr.', 'Mehringdamm'], 'Dudenstr./Mehringdamm'],
+     [['Bahnhofstr. (Köpenick)', 'Lindenstr. (Köpenick)'], 'Bahnhofstr./Lindenstr. (Köpenick)'],
+     [['Bahnhofstr. (Köpenick)', 'Lindenstr. (Kreuzberg)'], 'Bahnhofstr. (Köpenick)/Lindenstr. (Kreuzberg)'],
+     [['Neue Promenade', 'Hackescher Markt [An der Spandauer Brücke]', 'Hackescher Markt [Oranienburger Str.]', 'Hackescher Markt'], 'Neue Promenade/Hackescher Markt'],
+     [['Neue Promenade', 'Hackescher Markt', 'Hackescher Markt [An der Spandauer Brücke]', 'Hackescher Markt [Oranienburger Str.]'], 'Neue Promenade/Hackescher Markt'],
+     [['Neue Promenade', 'Hackescher Markt [An der Spandauer Brücke]'], 'Neue Promenade/Hackescher Markt [An der Spandauer Brücke]'],
+     [['Cimbernstr. (Nikolassee)', 'Cimbernstr. [Stichstraße] (Nikolassee)'], 'Cimbernstr./Cimbernstr. [Stichstraße] (Nikolassee)'],
+     [['Schwarzmeerstr. [Wohngebiet]', 'Schwarzmeerstr. [zur Rummelsburger Str.]'], 'Schwarzmeerstr. [Wohngebiet]/Schwarzmeerstr. [zur Rummelsburger Str.]'],
+     [['Schwarzmeerstr.', 'Schwarzmeerstr. [Wohngebiet]'], 'Schwarzmeerstr./Schwarzmeerstr. [Wohngebiet]'],
     );
 
 my $strip_bezirk_tests = 7;
-plan tests => (scalar(@split_street_citypart) +
+plan tests => (
+	       scalar(@split_street_citypart) +
+	       scalar(@split_street_citypart_no_splitoncomma) +
 	       scalar(@beautify_landstrasse)*2 +
 	       scalar(@street_type_nr)*2 +
 	       $strip_bezirk_tests +
 	       scalar(@crossing_tests) +
 	       3*scalar(@parse_street_type_nr_tests) +
 	       scalar(@de_artikel_tests) +
-	       scalar(@de_artikel_dativ_tests)
+	       scalar(@de_artikel_dativ_tests) +
+	       scalar(@nice_crossing_name_tests) +
+	       1 # no warnings
 	      );
 
 for my $s (@split_street_citypart) {
@@ -175,6 +206,12 @@ for my $s (@split_street_citypart) {
     my(@res) = Strasse::split_street_citypart($str);
     local $TODO = $todo;
     is(join("#", @res), join("#", @$expected), "Split $str -> $expected->[0] ...");
+}
+
+for my $s (@split_street_citypart_no_splitoncomma) {
+    my($str, $expected) = @$s;
+    my(@res) = Strasse::split_street_citypart($str, splitoncomma => 0);
+    is(join("#", @res), join("#", @$expected), "Split $str -> $expected->[0] ... (splitoncomma unset)");
 }
 
 for my $s (@beautify_landstrasse) {
@@ -250,5 +287,12 @@ for my $def (@de_artikel_dativ_tests) {
     my($street, $artikel) = @$def;
     is Strasse::de_artikel_dativ($street), $artikel, "de_artikel for $street";
 }
+
+for my $def (@nice_crossing_name_tests) {
+    my($crossings_ref, $nice_name) = @$def;
+    is Strasse::nice_crossing_name(@$crossings_ref), $nice_name, 'nice_crossing_name';
+}
+
+is_deeply \@warnings, [], 'no warnings';
 
 __END__

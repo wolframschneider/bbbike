@@ -1,16 +1,16 @@
 # -*- perl -*-
 
 #
-# Copyright (c) 1995-2012,2017 Slaven Rezic. All rights reserved.
+# Copyright (c) 1995-2012,2017,2019 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
-# Author: Slaven Rezic (eserte@cs.tu-berlin.de)
+# Author: Slaven Rezic (srezic@cpan.org)
 #
 
 package Strassen::Strasse;
 
-$VERSION = 1.38;
+$VERSION = 1.39;
 
 package Strasse;
 use strict;
@@ -309,8 +309,21 @@ sub strip_bezirk_perfect {
     $str;
 }
 
+# For the given street, return a list with the basic streetname and a
+# list of extracted cityparts.
+# 
+# Supported formats are:
+#   "street (citypart, citypart...)"
+#   "citypart, street"
+#
+# The 2nd format is not recognized if splitoncomma=>0 is specified.
+# This should be used if input is already normalized (i.e. already
+# matching an entry in strassen, and not user input).
 sub split_street_citypart {
-    my $str = shift;
+    my($str, %opts) = @_;
+    my $split_on_comma = exists $opts{splitoncomma} ? delete $opts{splitoncomma} : 1;
+    die "Unhandled options: " . join(" ", %opts) if %opts;
+
     my @cityparts;
     if ($str =~ m{^\(}) {
 	# convention: streets beginning with "(" have no cityparts
@@ -320,7 +333,7 @@ sub split_street_citypart {
 	@cityparts = split /\s*,\s*/, $2;
     } elsif ($str =~ /^.*\[.+\]$/) {
 	# commas may appear between the [...], and the next regexp would do a split here, which is wrong, so intercept such strings here
-    } elsif ($str =~ /^([^(),]+\S),\s+(.{3,})/) { # with some sanity check: street needs at least three characters
+    } elsif ($split_on_comma && $str =~ /^([^(),]+\S),\s+(.{3,})/) { # with some sanity check: street needs at least three characters
 	$str = $2;
 	@cityparts = $1;
     }
@@ -364,6 +377,73 @@ sub split_crossing {
     }
 
     $street;
+}
+
+sub nice_crossing_name {
+    my(@c) = @_;
+
+    # 1st pass: determine if [...] should be removed and made unique
+    {
+	my $street_with_square_qr = qr{^(.*?)\s+\[.*?\](.*)};
+	my %unique_str;
+	my $need_to_act;
+	for my $c (@c) {
+	    my $unique_str;
+	    if ($c =~ $street_with_square_qr) {
+		$unique_str = "$1$2";
+	    } else {
+		$unique_str = $c;
+	    }
+	    if (++$unique_str{$unique_str} > 1) {
+		$need_to_act = 1;
+	    }
+	}
+
+	# Undo $need_to_act for cases like "Cimbernstr./Cimbernstr. [Stichstraße]"
+	if ($need_to_act && keys %unique_str == 1) {
+	    $need_to_act = 0;
+	}
+
+	if ($need_to_act) {
+	    my %seen;
+	    @c = map {
+		my $c = $_;
+		my($street, $add) = $c =~ $street_with_square_qr;
+		my $unique_str;
+		if (defined $street) {
+		    $unique_str = "$street$add";
+		} else {
+		    $unique_str = $c;
+		}
+		if ($seen{$unique_str}) {
+		    ();
+		} else {
+		    $seen{$unique_str}++;
+		    if ($unique_str{$unique_str} > 1) {
+			$unique_str;
+		    } else {
+			$c;
+		    }
+		}
+	    } @c;
+	}
+    }
+
+    # 2nd pass: compress multiple unique cityparts into one
+    my @c_street;
+    my $unique_cityparts;
+    for my $c (@c) {
+	my($street, @cityparts) = Strasse::split_street_citypart($c, splitoncomma => 0);
+	my $cityparts = join(", ", @cityparts);
+	if (!defined $unique_cityparts) {
+	    $unique_cityparts = $cityparts;
+	} elsif ($cityparts ne $unique_cityparts) {
+	    return join("/", @c);
+	}
+	push @c_street, $street;
+    }
+
+    return join("/", @c_street) . ($unique_cityparts ne "" ? " ($unique_cityparts)" : "");
 }
 
 1;

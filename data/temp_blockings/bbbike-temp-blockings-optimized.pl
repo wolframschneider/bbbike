@@ -413,6 +413,7 @@ push @temp_blocking,
 	2::xmas 5656,10876 5652,11004
 #: by: https://twitter.com/VIZ_Berlin/status/1063061013334032384
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
+#: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020?
 Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
 ',
          'from' => 1574550000,
@@ -2468,7 +2469,26 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	2::xmas 22111,4562 22162,4546 22214,4548
+',
+         'from' => 1576105200,
+         'id' => 2003,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              8,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1305665-955635-weihnachtsmarktaufdemschlossplatzk%C3%B6peni.html',
+         'text' => 'Alt-Köpenicker Weihnachtsmarkt vom 13.12.2019 bis zum 15.12.2019',
+         'type' => 'gesperrt',
+         'until' => 1576450799
+       },
        undef,
        undef,
        undef,
@@ -3936,20 +3956,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
-# REMOVED --- #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
-# REMOVED --- #: next_check: 2018-11-21 --- #: priority: #A
-	2::temp -2218,5133 -927,6888
-	2::temp -2825,5588 -1925,6790 -2080,6897
-	2::temp -1925,6790 -1851,6887
-',
-         'from' => 1572908400,
-         'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 06. November 2019 ab ca. 09:30 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1573031700
-       },
+       undef,
        undef,
        {
          'data' => '#: tempex: sunset-T07
@@ -4009,18 +4016,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1575046800
        },
-       {
-         'data' => '#: source_id: 2147342863
-#: source_id: 2147344217 (Ende 12/2019)
-	2::inwork 14338,22885 14276,22914
-',
-         'from' => 1499280235,
-         'id' => 2881,
-         'source_id' => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
-         'text' => 'Brückendurchfahrt Schräger Weg: Vollsperrung, auch für Radfahrer und Fußgänger, bis Ende Dezember 2019',
-         'type' => 'gesperrt',
-         'until' => 1577811600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4043,7 +4039,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-10-29
+#: last_checked: 2019-11-08
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -4071,7 +4067,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-09-30
+#: last_checked: 2019-11-07
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -4709,14 +4705,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.851578.php
+         'data' => '#: next_check_id: BOXHAGENER-2019
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.851578.php
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/tramlinien-gekappt_a234757
 #: source_id: 2147344478 (nur bis Anfang September 2019)
 #: note: laut fritz bis 16.12.2019
 #: also_indoor: traffic (GH)
 #: XXX periodisch anschauen vvv
 #: priority: #B vvv
-#: last_checked: 2019-11-03 vvv
+#: last_checked: 2019-11-08 vvv
 # REMOVED --- #: next_check: 2019-10-04 vvv
 #: check_frequency: 21d vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
@@ -4772,19 +4769,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX wird es Änderungen durch die Bauarbeiten geben?
-#: by: https://www.ahrensfelde.de/portal/meldungen/update-umgestaltung-des-kreuzungs-und-knotenpunktes-bernauer-strasse-b2-900000021-30601.html?rubrik=900000024 (eher nicht?)
-#: next_check: 2019-11-15
-	q4::inwork 18368,22018 18349,22132 18350,22225
-',
-         'from' => 1564524000,
-         'id' => 3140,
-         'source_id' => '2147344552',
-         'text' => 'Bernauer Str. (Lindenberg): zwischen Karl-Marx-Str. und Dorfstr. gesperrt, evtl. sind auch Radfahrer betroffen, ab 01.08.2019 06:00 bis Mitte November 2019',
-         'type' => 'handicap',
-         'until' => 1573858799
-       },
+       undef,
        undef,
        undef,
        {
@@ -4932,7 +4917,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05)
-#: last_checked: 2019-11-05
+#: last_checked: 2019-11-06
 #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 ',
@@ -5024,7 +5009,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: BUNDESALLEE-2019
 #: priority: #A
-#: osm_watch: note 1960975 3
+# REMOVED (closed) --- #: osm_watch: note 1960975 3
 #: osm_watch: way id="483261580" version="2"
 #: XXX es gibt einen engen Umweg über Meierottostr., Bordstein
 #: add_fragezeichen: Wann ist eine Durchfahrt wieder möglich?
@@ -5064,8 +5049,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-10-30 (Barriere über die gesamte Straßenbreite)
-#: check_frequency: 14d
+#: last_checked: 2019-11-08 (Barriere über die gesamte Straßenbreite, Fahrbahn ist aufgerissen)
+#: check_frequency: 30d
 	2::inwork 10673,12434 10772,12515
 ',
          'from' => undef,
@@ -5077,7 +5062,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-11-04
+#: last_checked: 2019-11-06
 #: next_check: 2019-11-25
 	q3::inwork 13711,11458 13895,11663
 ',
@@ -5124,7 +5109,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1580511599
        },
        {
-         'data' => '	2::inwork 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8119,12414
+         'data' => '	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8119,12414
 	3 7429,12070 7383,12095 7031,12320
 	3 7031,12320 7383,12095 7429,12070
 	3 7823,12120 7816,12150 7822,12201
@@ -5137,6 +5122,37 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Str. des 17.Juni zwischen Großer Stern und Yitzhak-Rabin-Str. sowie Yitzhak-Rabin-Str. gesperrt, Veranstaltung "30 Jahre Mauerfall", vom 06.11.2019, 06:00 Uhr bis 12.11.2019, 06:00 Uhr',
          'type' => 'gesperrt',
          'until' => 1573534800
+       },
+       undef,
+       {
+         'data' => '	2::inwork -309,13268 -285,13276 -287,13308 -280,13318
+',
+         'from' => 1573340400,
+         'id' => 3186,
+         'source_id' => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.863422.php',
+         'text' => 'Wiesendamm - Spreeradweg: Zufahrtsrampe wird saniert, evtl. ist der Weg nicht passierbar, vom 11. November bis 06. Dezember 2019',
+         'type' => 'gesperrt',
+         'until' => 1575673199
+       },
+       {
+         'data' => '	2::temp 23778,14995 23708,14989 23735,14814 23531,14781 23517,14873
+	2::temp 23787,14919 23798,14826 23735,14814
+	2::temp 23265,15351 23082,15329 23113,15110 23117,15081 23104,14827
+	2::temp 23297,14772 23318,14847
+	2::temp 23933,15209 23952,15086 23833,15066 23841,15004 23778,14995 23772,15058
+	2::temp 23952,15086 23960,15021 23841,15004
+	2::temp 23617,15594 23568,15603 23411,15632 23218,15671 23080,15700 23060,15588 23067,15429 23082,15329
+	2::temp 23067,15429 23245,15442
+	2::temp 23269,15062 23117,15081
+	2::temp 23775,15428 23895,15450 23868,15633 23617,15594 23629,15498
+	2::temp 23297,14772 23354,14756 23405,14758 23531,14781
+',
+         'from' => 1573374600,
+         'id' => 3187,
+         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.863611.php',
+         'text' => 'Rund um das Stadtgut Hellersdorf: Bombenentschärfung, Straßen zwischen Zossener Str., Stendaler Str., Cottbusser Str. und Alte Hellersdorfer Str. gesperrt, am 11. November 2019, voraussichtlich zwischen 9:30 und 14:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1573477200
        }
      
 );

@@ -2340,7 +2340,7 @@ sub choose_form {
 				# is this the right crossing?
 				foreach my $test_crossing_street (@{$crossings->{$c}}) {
 				    if ($test_crossing_street =~ /^\Q$crossing_street\E/i) {
-					$$nameref = nice_crossing_name(@{$crossings->{$c}});
+					$$nameref = Strasse::nice_crossing_name(@{$crossings->{$c}});
 					$q->param($type . 'c', $c);
 					next MATCH_STREET;
 				    }
@@ -4049,7 +4049,7 @@ sub make_crossing_choose_html {
 		}
 		$html .= "> ";
 	    }
-	    $html .= join("/", map { Strasse::strip_bezirk($_) } @kreuzung);
+	    $html .= join("/", Strasse::nice_crossing_name(@kreuzung));
 	    $html .= "</label><br>" unless $use_select;
 	    $html .= "\n";
 	}
@@ -7905,7 +7905,7 @@ sub crossing_text {
 	    }
 	}
     }
-    nice_crossing_name(@{ $crossings->{$c} });
+    Strasse::nice_crossing_name(@{ $crossings->{$c} });
 }
 
 # Gibt den Straßennamen für type=start/via/ziel zurück --- entweder
@@ -9638,38 +9638,6 @@ sub get_geography_object {
     } else {
 	undef;
     }
-}
-
-sub nice_crossing_name {
-    my(@c) = @_;
-
-   
-    # first part of cross is empty, switch streetsnames of corner: /foo -> foo/
-    if ($osm_data) {
-	my @cr = @c;
-    	if ($cr[0] eq '') {
-           @cr = ( $cr[1], "" );
-    	}
-
-        #my $no_name = "NN";
-        @cr = map { $_ eq "" ? $no_name : $_ } @cr;
-    	my $cr = join("/", @cr);
-    	return $cr;
-    }
-
-    my @c_street;
-    my $unique_cityparts;
-    for my $c (@c) {
-	my($street, @cityparts) = Strasse::split_street_citypart($c);
-	my $cityparts = join(", ", @cityparts);
-	if (!defined $unique_cityparts) {
-	    $unique_cityparts = $cityparts;
-	} elsif ($cityparts ne $unique_cityparts) {
-	    return join("/", @c);
-	}
-	push @c_street, $street;
-    }
-    return join("/", @c_street) . ($unique_cityparts ne "" ? " ($unique_cityparts)" : "");
 }
 
 # XXX This could be refactored and partially go to Route::Heavy
