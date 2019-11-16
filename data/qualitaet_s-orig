@@ -12,7 +12,7 @@
 #: next_check_id: DIESEL-2019
 #: XXX und eventuell auch schauen, ob das Tor zum Mergenthalerring wieder ein Schloss hat
 #: osm_watch: way id="524560334" version="4"
-#: last_checked: 2019-10-15 vvv
+#: last_checked: 2019-11-14 vvv
 (Mergenthalerring - Dieselstr.): Asphalt	Q0 14419,8112 14429,8074
 #: osm_watch: way id="680579631" version="2"
 (Mergenthalerring - Dieselstr.): unbefestigt	Q2 14429,8074 14484,8044
@@ -93,7 +93,7 @@ Donaustr.: Asphalt	Q0 12202,8895 12394,8729 12551,8612 12649,8535
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/noerdliche-donaustrasse-wird-asphaltiert-und-auch-fuer-fussgaenger-sicherer_a181334
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/baurbeiten-an-der-pannierstrasse_a238483 (Abschluss erst 2020?)
 # REMOVED (realisiert) --- #: XXX dieser Abschnitt wird noch 2018 realisiert --- #: osm_watch: way id="155605274" version="4" -- #: last_checked: 2018-10-11
-#: last_checked: 2019-11-01 vvv
+#: last_checked: 2019-11-11 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2019-10-31 vvv
 Donaustr.: schlechtes bis mäßiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895
@@ -105,7 +105,7 @@ Pannierstr.: Kopfsteinpflaster	Q2 12240,8964 12202,8895
 #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="155605273" version="5"
-#: last_checked: 2019-11-01
+#: last_checked: 2019-11-11
 #: check_frequency: 90d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -10541,7 +10541,10 @@ Ottomar-Geschke-Str. [Nebenfahrbahn]: alter Asphalt	Q0- 21206,4387 21171,4335
 #: note: einige kürzere Verbundsteinpflasterabschnitte
 In den Leonorengärten: Asphalt	Q0 6295,4017 6363,4047 6428,4076 6493,4105
 In den Leonorengärten: Verbundsteinpflaster	Q1+ 6428,4076 6452,4024 6517,4051 6493,4105
-Westphalweg: Asphalt, einige Schlaglöcher	Q0- 9310,4407 9428,4419 9562,4412 9668,4403 9877,4386 9995,4375
+Westphalweg: Asphalt, einige Schlaglöcher	Q0- 9310,4407 9428,4419 9562,4412 9668,4403 9877,4386
+#: XXX verschwinden die Schlaglöcher nach den Bauarbeiten?
+#: next_check: 2020-02-01
+Westphalweg: Asphalt, einige Schlaglöcher	Q0- 9877,4386 9995,4375
 (Uranusweg - U-Bhf. Scharnweberstr.): Verbundsteinpflaster	Q1- 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
 (U-Bhf. Scharnweberstr. - Scharnweberstr.): Gehwegplatten	Q1 3987,17808 3997,17840 4016,17918
 Brienzer Str.: schlechtes Kopfsteinpflaster	Q3 7289,17277 7309,17159
@@ -13340,6 +13343,7 @@ Martin-Buber-Str.: Asphalt	Q0 682,2660 610,2678
 #: by: ^^^
 # 
 #: by: Kathleen (kati): vvv
+#: confirmed_by: srt
 Rudolf-Schwarz-Str.: mäßiges Kopfsteinpflaster	Q2 13079,14320 13009,14371 12947,14428
 #: corrected_by: srt (was also mäßiges Kopfsteinpflaster):
 Rudolf-Schwarz-Str.: Beton	Q1 12947,14428 12798,14536
@@ -21512,7 +21516,8 @@ Gartenstr. (Blankenburg): mittelmäßig gut asphaltiert, geflickte Löcher	Q1 13524
 #: corrected_by: srt (Q2 -> Q3)
 Gartenstr. (Blankenburg): schlechtes Kopfsteinpflaster	Q3 13951,21086 13875,21077
 #: note: "Löcher ausweichen, q3" zu einem Minus bei der Q2 gemacht, sehr schmal, kaum befahren
-Straße 18 (Blankenburg): mäßiger fester Sandweg, Löcher	Q2- 13524,21053 13435,21050 13285,21021 13218,21008
+#: corrected_by: wosch (mäßiger fester Sandweg, Löcher -> neu gemacht)
+Straße 18 (Blankenburg): Asphalt	Q0 13524,21053 13435,21050 13285,21021 13218,21008
 #: confirmed_by: srt
 (Weg durch die Spiel- und Parkanlage am Bahnhof Blankenburg): asphaltiert	Q0 13285,21021 13289,21001 13261,20919
 (Weg durch die Spiel- und Parkanlage am Bahnhof Blankenburg): asphaltiert	Q0 13075,20817 12909,20592
@@ -23642,6 +23647,7 @@ Flatower Str.: Asphalt	Q0 -4628,16899 -4319,16879 -4151,16857
 #: note: mit Gaslaternen nachts beleuchtet
 #: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/gremien/fahrrat/uebersicht-siemenspark-14-03-19.pdf
 #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2019/pressemitteilung.863236.php (ab 25.11.2019 für eine Dauer von 1,5 Jahren; Asphaltierung, Gehweg, Radfahren erlaubt)
+#: by: https://www.berliner-woche.de/siemensstadt/c-bauen/bauarbeiten-im-wilhelm-von-siemens-park_a239818
 #: XXX wird hier die Fahrbahndecke verbessert?
 #: osm_watch: way id="28259369" version="18"
 #: last_checked: 2019-10-26
@@ -26261,6 +26267,7 @@ Lilli-Henoch-Str.: Beton	Q0 12584,14928 12477,14987 12393,15030 12357,15020 1231
 Olga-Benario-Prestes-Str.: Asphalt und Kopfsteinpflaster	Q2 12628,14650 12473,14763
 #: corrected_by: srt (Asphalt -> Asphalt mit Schäden)
 Margarete-Walter-Str.: Asphalt mit Schäden	Q1 12789,14670 12745,14613 12814,14556
+#: confirmed_by: srt
 (Anton-Saefkow-Str. - John-Schehr-Str.): Verbundsteine	Q1 13084,14472 13009,14371 12949,14292
 #: confirmed_by: srt
 Hans-Otto-Str.: Kopfsteinpflaster	Q2 12832,14378 12783,14312 12722,14232 12601,14060 12542,13984 12478,13903 12398,13792

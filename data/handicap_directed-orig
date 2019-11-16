@@ -342,7 +342,7 @@ Treskowallee -> Ehrlichstr.: Umweg f¸r Radfahrer	DH:len=40:h=q3,40 18657,8163 18
 Treskowallee: kleiner Umweg in Hˆhe S-Bhf. Karlshorst	DH:len=20:h=q3,150 18672,8238 18704,8427 18731,8577
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-11-05
+#: last_checked: 2019-11-11
 #: check_frequency: 14d
 Stralauer Allee: Umweg ¸ber Bˆdikerstr.	DH:len=50:h=q3,60 14558,10264 14405,10340 14222,10430
 # 
@@ -352,3 +352,11 @@ Schulweg -> Friedenstr.: Umweg wegen Mittelstreifen	DH:len=60 12483,12682 12594,
 Friedenstr. -> Schulweg: linken Gehweg benutzen	DH:h=q3,30 12616,12844 12594,12866 12483,12682
 # 
 Sulzfelder Str. -> Buschallee: Umweg zur Fuﬂg‰ngerampel	DH:len=20:tl 15120,16349 15134,16499 14809,16525
+# 
+#: XXX_prog BS vvv
+Mittelstreifen Rudolf-Schwarz-Str.: zwei Bordsteine	DH:t=10 13084,14472 13009,14371 12949,14292
+Mittelstreifen Rudolf-Schwarz-Str.: zwei Bordsteine	DH:t=10 13084,14472 13009,14371 13079,14320
+Mittelstreifen Rudolf-Schwarz-Str.: zwei Bordsteine	DH:t=10 12949,14292 13009,14371 13084,14472
+Mittelstreifen Rudolf-Schwarz-Str.: zwei Bordsteine	DH:t=10 12949,14292 13009,14371 12947,14428
+#: XXX_prog ^^^
+# 

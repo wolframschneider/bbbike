@@ -413,7 +413,8 @@ push @temp_blocking,
 	2::xmas 5656,10876 5652,11004
 #: by: https://twitter.com/VIZ_Berlin/status/1063061013334032384
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
-#: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020?
+#: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020? Laut vmz ist der Radverkehr in der Kantstr. nicht betroffen
+#: source_id: 2147345089
 Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
 ',
          'from' => 1574550000,
@@ -1479,31 +1480,7 @@ Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_44_6553_6696_online.pdf
-	2::temp 8424,12853 8503,12895
-	2::temp 7930,12912 8021,12832
-# REMOVED (Adele-Schreiber-Krieger-Str.) ---	2::temp 8737,12757 8596,12760 8545,12760
-# REMOVED (westl. John-Foster-Dulles-Allee) ---	2::temp 7514,12387 7627,12380 7821,12367 7875,12363
-östl. John-Foster-Dulles-Allee	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
-# REMOVED (Schiffbauerdamm) ---	2::temp 8514,12877 8545,12760
-östl. Straße des 17. Juni	2::temp 8775,12457 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150
-# REMOVED (westl. Straße des 17. Juni) ---	2::temp 7816,12150 7383,12095 7026,12054 6828,12031
-	2::temp 8595,12066 8600,12165 8538,12245
-Große Querallee	2::temp 7816,12150 7822,12201 7875,12363 7945,12592
-südl. Spreeuferweg	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
-Paul-Löbe-Allee und Verlängerungen	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593 8596,12576
-Yitzhak-Rabin-Str. bis Gustav-Heinemann-Brücke	2::temp 8120,12756 8122,12603 8119,12414 8055,12186 8119,12414 8122,12603 8120,12756 8114,12839 8116,12938 8110,13042
-nördl. Wilhelmstr.	2::temp 8775,12457 8766,12541
-Willy-Brandt-Str. - Konrad-Adenauer-Str.	2::temp 8021,12832 8030,12824 8120,12756 8206,12757 8309,12758 8424,12853
-Platz des 18. März	2::temp 8538,12245 8592,12252
-',
-         'from' => 1573455600,
-         'id' => 1422,
-         'text' => 'Straße des 17. Juni und Straßen im Regierungsviertel am 12. November 2019 von 8 bis 14 Uhr gesperrt (Feierliches Gelöbnis der Bundeswehr)',
-         'type' => 'gesperrt',
-         'until' => 1573563600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3451,7 +3428,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        {
          'data' => '#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G)
-#: last_checked: 2019-10-22
+#: last_checked: 2019-11-14
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -4277,7 +4254,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-10-28
+#: last_checked: 2019-11-14
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4339,30 +4316,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: TREPTOWERPARK-2018
-#: XXX wann sind die Bauarbeiten fertig?
-#: XXX Sanierungsarbeiten im Treptower Park geplant: die meisten Wege um den Karpfenteich sind betroffen
-#: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
-#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
-#: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-11-02 vvv
-#: check_frequency: 7d vvv
-# REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14980,8940
-# REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
-	2::inwork 14918,8813 14883,8823 14852,8799
-# REMOVED (hier mittlerweile offen) ---		2::inwork 14980,8940 15057,8910
-# REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
-# REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
-#: check_frequency ^^^
-#: last_checked ^^^
-',
-         'from' => undef,
-         'id' => 3027,
-         'text' => 'Treptower Park, Wege am Karpfenteich: Bauarbeiten, Weg kann gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4438,7 +4392,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: source_id: 2147343519
+         'data' => '#: source_id: 2147343519 (mittlerweile "bis auf weiteres")
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 	2::inwork 14539,23306 14573,23295 14597,23280
 ',
@@ -4637,12 +4591,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-10-13
+#: last_checked: 2019-11-11
 	2::inwork 14567,10814 14352,10874
 ',
          'from' => 1560636000,
          'id' => 3116,
-         'text' => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein Durchgang möglich, ab 17. Juni 2019',
+         'text' => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein direkter Durchgang möglich, ab 17. Juni 2019',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4889,6 +4843,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: BLUECHER-2019
 #: source_id: 2147344702
+#: note: mittlerweile (2019-11-14) gibt es Beeinträchtigungen nur beim Überqueren der Blücherstr.
 	q4::inwork 9982,9847 10006,9942 10029,9989
 ',
          'from' => 1567112731,
@@ -4901,7 +4856,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-10-25
+#: last_checked: 2019-11-11
 #: check_frequency: 14d
 	2::inwork 13092,11712 13175,11649 13239,11567
 	2::inwork 13175,11649 13208,11658
@@ -4916,8 +4871,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05)
-#: last_checked: 2019-11-06
+         'data' => '#: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05, 2019-11-14)
+#: last_checked: 2019-11-14
 #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 ',
@@ -5049,7 +5004,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-11-08 (Barriere über die gesamte Straßenbreite, Fahrbahn ist aufgerissen)
+#: last_checked: 2019-11-11 (Barriere über die gesamte Straßenbreite, Fahrbahn ist aufgerissen)
 #: check_frequency: 30d
 	2::inwork 10673,12434 10772,12515
 ',
@@ -5062,7 +5017,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-11-06
+#: last_checked: 2019-11-15
 #: next_check: 2019-11-25
 	q3::inwork 13711,11458 13895,11663
 ',
@@ -5108,24 +5063,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1580511599
        },
-       {
-         'data' => '	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8119,12414
-	3 7429,12070 7383,12095 7031,12320
-	3 7031,12320 7383,12095 7429,12070
-	3 7823,12120 7816,12150 7822,12201
-	3 8049,12140 8055,12186 8089,12190
-	3 8089,12190 8055,12186 8049,12140
-	3 7822,12201 7816,12150 7823,12120
-',
-         'from' => 1572930000,
-         'id' => 3184,
-         'text' => 'Str. des 17.Juni zwischen Großer Stern und Yitzhak-Rabin-Str. sowie Yitzhak-Rabin-Str. gesperrt, Veranstaltung "30 Jahre Mauerfall", vom 06.11.2019, 06:00 Uhr bis 12.11.2019, 06:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1573534800
-       },
+       undef,
        undef,
        {
-         'data' => '	2::inwork -309,13268 -285,13276 -287,13308 -280,13318
+         'data' => '#: by: https://www.berliner-woche.de/westend/c-verkehr/spreeweg-rampe-wird-saniert_a240439
+	2::inwork -309,13268 -285,13276 -287,13308 -280,13318
 ',
          'from' => 1573340400,
          'id' => 3186,
@@ -5133,26 +5075,6 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Wiesendamm - Spreeradweg: Zufahrtsrampe wird saniert, evtl. ist der Weg nicht passierbar, vom 11. November bis 06. Dezember 2019',
          'type' => 'gesperrt',
          'until' => 1575673199
-       },
-       {
-         'data' => '	2::temp 23778,14995 23708,14989 23735,14814 23531,14781 23517,14873
-	2::temp 23787,14919 23798,14826 23735,14814
-	2::temp 23265,15351 23082,15329 23113,15110 23117,15081 23104,14827
-	2::temp 23297,14772 23318,14847
-	2::temp 23933,15209 23952,15086 23833,15066 23841,15004 23778,14995 23772,15058
-	2::temp 23952,15086 23960,15021 23841,15004
-	2::temp 23617,15594 23568,15603 23411,15632 23218,15671 23080,15700 23060,15588 23067,15429 23082,15329
-	2::temp 23067,15429 23245,15442
-	2::temp 23269,15062 23117,15081
-	2::temp 23775,15428 23895,15450 23868,15633 23617,15594 23629,15498
-	2::temp 23297,14772 23354,14756 23405,14758 23531,14781
-',
-         'from' => 1573374600,
-         'id' => 3187,
-         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.863611.php',
-         'text' => 'Rund um das Stadtgut Hellersdorf: Bombenentschärfung, Straßen zwischen Zossener Str., Stendaler Str., Cottbusser Str. und Alte Hellersdorfer Str. gesperrt, am 11. November 2019, voraussichtlich zwischen 9:30 und 14:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1573477200
        }
      
 );

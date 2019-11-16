@@ -3372,7 +3372,8 @@ EOF
 	2::xmas 5656,10876 5652,11004
 #: by: https://twitter.com/VIZ_Berlin/status/1063061013334032384
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
-#: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020?
+#: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020? Laut vmz ist der Radverkehr in der Kantstr. nicht betroffen
+#: source_id: 2147345089
 Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
 EOF
      },
@@ -6774,7 +6775,7 @@ EOF
        until => $isodate2epoch->("2017-12-30 23:59:59"), # 1356562740, # 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
        periodic => 1,
        recurrences => [['yearly', days => 18, months => 11]],
-       recurrence_prewarn_days => -360, # XXX findet 2018 und vermutlich auch 2019 nicht statt
+       recurrence_prewarn_days => -720, # XXX findet wegen Bauarbeiten 2018 und 2019 nicht statt
        text  => 'Nostalgischer Weihnachtsmarkt Opernpalais: Wege rund um die Hedwigs-Kathedrale nicht passierbar, vom 29.11. bis 30.12.2017',
        type  => 'gesperrt',
        source_id => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/mitte/971793-1328132-weihnachtsmarktamopernpalais.html',
@@ -22629,7 +22630,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G)
-#: last_checked: 2019-10-22
+#: last_checked: 2019-11-14
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -25942,9 +25943,9 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2019-11-05 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-11-06 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 06. November 2019 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2019-11-12 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-11-13 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 13. November 2019 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
@@ -27850,7 +27851,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-10-28
+#: last_checked: 2019-11-14
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28229,26 +28230,18 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1573754401, # undef, # XXX
        text  => 'Treptower Park, Wege am Karpfenteich: Bauarbeiten, Weg kann gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: TREPTOWERPARK-2018
-#: XXX wann sind die Bauarbeiten fertig?
-#: XXX Sanierungsarbeiten im Treptower Park geplant: die meisten Wege um den Karpfenteich sind betroffen
-#: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.726375.php
-#: osm_watch: way id="26608603" version="9"
-#: last_checked: 2019-11-02 vvv
-#: check_frequency: 7d vvv
+# REMOVED (fertig) --- #: next_check_id: TREPTOWERPARK-2018 --- #: XXX wann sind die Bauarbeiten fertig? --- #: XXX Sanierungsarbeiten im Treptower Park geplant: die meisten Wege um den Karpfenteich sind betroffen --- #: XXX Arbeiten sind voraussichtlich im Frühjahr 2020 beendet --- #: osm_watch: way id="26608603" version="9" --- #: last_checked: 2019-11-02 vvv --- #: check_frequency: 7d vvv
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14980,8940
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14918,8813 14949,8773 15036,8728 15254,8735 15335,8714
 	2::inwork 14918,8813 14883,8823 14852,8799
 # REMOVED (hier mittlerweile offen) ---		2::inwork 14980,8940 15057,8910
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14854,8964 14705,9034
 # REMOVED (hier mittlerweile offen) ---	2::inwork 14705,9034 14614,9052
-#: check_frequency ^^^
-#: last_checked ^^^
 EOF
      },
      { from  => 1538258400, # 2018-09-30 00:00
@@ -28582,7 +28575,7 @@ EOF
        text  => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende 2019',
        type  => 'gesperrt',
        data  => <<EOF,
-#: source_id: 2147343519
+#: source_id: 2147343519 (mittlerweile "bis auf weiteres")
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 	2::inwork 14539,23306 14573,23295 14597,23280
 EOF
@@ -29252,11 +29245,11 @@ EOF
      },
      { from  => 1560636000, # 2019-06-16 00:00
        until => undef, # XXX
-       text  => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein Durchgang möglich, ab 17. Juni 2019',
+       text  => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein direkter Durchgang möglich, ab 17. Juni 2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2019-10-13
+#: last_checked: 2019-11-11
 	2::inwork 14567,10814 14352,10874
 EOF
      },
@@ -29753,6 +29746,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: BLUECHER-2019
 #: source_id: 2147344702
+#: note: mittlerweile (2019-11-14) gibt es Beeinträchtigungen nur beim Überqueren der Blücherstr.
 	q4::inwork 9982,9847 10006,9942 10029,9989
 EOF
      },
@@ -29772,7 +29766,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-10-25
+#: last_checked: 2019-11-11
 #: check_frequency: 14d
 	2::inwork 13092,11712 13175,11649 13239,11567
 	2::inwork 13175,11649 13208,11658
@@ -29817,8 +29811,8 @@ EOF
        text  => 'Oranienstr. - Kommandantenstr.: Zufahrt kann wegen Renovierungsarbeiten gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05)
-#: last_checked: 2019-11-06
+#: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05, 2019-11-14)
+#: last_checked: 2019-11-14
 #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 EOF
@@ -30023,7 +30017,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-11-08 (Barriere über die gesamte Straßenbreite, Fahrbahn ist aufgerissen)
+#: last_checked: 2019-11-11 (Barriere über die gesamte Straßenbreite, Fahrbahn ist aufgerissen)
 #: check_frequency: 30d
 	2::inwork 10673,12434 10772,12515
 EOF
@@ -30035,7 +30029,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-11-06
+#: last_checked: 2019-11-15
 #: next_check: 2019-11-25
 	q3::inwork 13711,11458 13895,11663
 EOF
@@ -30110,6 +30104,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.863422.php',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/westend/c-verkehr/spreeweg-rampe-wird-saniert_a240439
 	2::inwork -309,13268 -285,13276 -287,13308 -280,13318
 EOF
      },

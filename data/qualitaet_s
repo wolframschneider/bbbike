@@ -9388,7 +9388,8 @@ Ottomar-Geschke-Str. [Nebenfahrbahn]: alter Asphalt	Q0 21206,4387 21171,4335
 (Weg an der Trabrennbahn): wassergebundene Decke	Q1 18776,8142 18839,8165 18881,8184
 In den Leonorengärten: Asphalt	Q0 6295,4017 6363,4047 6428,4076 6493,4105
 In den Leonorengärten: Verbundsteinpflaster	Q1 6428,4076 6452,4024 6517,4051 6493,4105
-Westphalweg: Asphalt, einige Schlaglöcher	Q0 9310,4407 9428,4419 9562,4412 9668,4403 9877,4386 9995,4375
+Westphalweg: Asphalt, einige Schlaglöcher	Q0 9310,4407 9428,4419 9562,4412 9668,4403 9877,4386
+Westphalweg: Asphalt, einige Schlaglöcher	Q0 9877,4386 9995,4375
 (Uranusweg - U-Bhf. Scharnweberstr.): Verbundsteinpflaster	Q1 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
 (U-Bhf. Scharnweberstr. - Scharnweberstr.): Gehwegplatten	Q1 3987,17808 3997,17840 4016,17918
 Brienzer Str.: schlechtes Kopfsteinpflaster	Q3 7289,17277 7309,17159
@@ -13902,7 +13903,7 @@ Glasgower Str.: Asphalt	Q0 6360,16511 6256,16601 6154,16693 6067,16771 5995,1683
 Ofener Str.: asphaltiert	Q0 6201,16538 6256,16601 6286,16636 6362,16722 6386,16749
 Gartenstr. (Blankenburg): mittelmäßig gut asphaltiert, geflickte Löcher	Q1 13524,21053 13624,21057 13744,21067 13875,21077
 Gartenstr. (Blankenburg): schlechtes Kopfsteinpflaster	Q3 13951,21086 13875,21077
-Straße 18 (Blankenburg): mäßiger fester Sandweg, Löcher	Q2 13524,21053 13435,21050 13285,21021 13218,21008
+Straße 18 (Blankenburg): Asphalt	Q0 13524,21053 13435,21050 13285,21021 13218,21008
 (Weg durch die Spiel- und Parkanlage am Bahnhof Blankenburg): asphaltiert	Q0 13285,21021 13289,21001 13261,20919
 (Weg durch die Spiel- und Parkanlage am Bahnhof Blankenburg): asphaltiert	Q0 13075,20817 12909,20592
 Veilchenstr.: Kopfsteinpflaster	Q2 3501,4435 3597,4494
