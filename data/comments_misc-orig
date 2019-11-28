@@ -399,8 +399,8 @@ Bus 296	busroute_N 17725,11228 17734,11408 17609,11467 17341,11595 17275,11626 1
 Bus 296, Bus 396	busroute_N 18731,8577 18787,8540 18846,8616 18778,8663 18737,8686
 Bus 240, Bus 296	busroute_N 17169,11677 17020,11748 16977,11769 16958,11778
 Bus 194, ...	busroute_N 17848,11204 17807,11219 17725,11228 17719,11092
-# REMOVED (Linie wurde eingestellt) --- Bus 193	busroute_N 16859,12613 16957,12599 17088,12617 17234,12607 17301,12585 17357,12566 17346,12490 17314,12265 17375,12255 17466,12241 17300,12173 17195,12125 17139,12100 17092,12107 16994,12122 16890,12135
-Bus 256	busroute_N 16820,12339 16794,12144 16764,11919 16837,11920 16865,11931 16975,12000 17088,12069 17092,12107 17139,12100 17195,12125 17300,12173 17466,12241 17480,12237 17533,12222
+# REMOVED (Linie wurde eingestellt) --- Bus 193	busroute_N 16859,12613 16957,12599 17088,12617 17234,12607 17301,12585 17357,12566 17346,12490 17314,12265 17375,12255 17471,12243 17300,12173 17195,12125 17139,12100 17092,12107 16994,12122 16890,12135
+Bus 256	busroute_N 16820,12339 16794,12144 16764,11919 16837,11920 16865,11931 16975,12000 17088,12069 17092,12107 17139,12100 17195,12125 17300,12173 17471,12243 17485,12240 17540,12222
 # REMOVED (veränderte Linienführung) --- Bus 256	busroute_N 16865,11931 16890,12135 16794,12144
 Bus 240	busroute_N 16863,13138 16426,13145 15912,13153 15715,13157 15515,13134
 Bus 256	busroute_N 16430,15168 16522,15258 16618,15356 16686,15448 16767,15549 16811,15611 16884,15833
@@ -1182,7 +1182,7 @@ ausgeschildert als Marie-Elisabeth-von-Humboldt-Str.	CP2; 20855,19299 20904,1928
 (Gundelfinger Str. - Römerweg): Treskow-Höfe	CS 18735,9421 18738,9467 18754,9584 18772,9694
 (Aristotelessteig - Treskowallee): Treskow-Höfe	CS 18715,9589 18754,9584 18835,9572 18865,9608
 entlang an Gewächshäusern	CS 17659,12823 17638,12813 17637,12785 17507,12781
-ausgeschildert als Rüdigerstr. 65+65 A-E	CP2; 17441,12245 17444,12286
+ausgeschildert als Rüdigerstr. 65+65 A-E	CP2; 17441,12247 17444,12286
 # 
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4331 (Benennungsabsicht)
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45-181-136620026079/620026079/00130202/02-Anlagen/02/BenennungsabsichtfuereinenprivatenErschliessun.pdf
@@ -1190,7 +1190,7 @@ ausgeschildert als Rüdigerstr. 65+65 A-E	CP2; 17441,12245 17444,12286
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/50re.pdf/file?y=2016 (Benennung)
 #: by: http://www.dafmap.de/d/berlin.html?id=5116&mt=0&zoom=16 (Projektabschluss: 2018-12-31)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_15_2237_2424_online.pdf (Grundstücksnummerierungen)
-#: last_checked: 2019-11-15
+#: last_checked: 2019-11-21
 #: check_frequency: 60d
 Am Märchenbrunnen: nicht ausgeschildert	CS 11823,13635 11899,13750
 # 
@@ -1239,7 +1239,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="2"
-#: last_checked: 2019-11-14
+#: last_checked: 2019-11-26
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
@@ -1283,7 +1283,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
 #: next_check_id: MERGENTHALERRING-2018
-#: last_checked: 2019-11-01
+#: last_checked: 2019-11-22
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1327,6 +1327,7 @@ entlang des Lichtenrader Grabens	CS 10067,-2952 10107,-3063
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8533 (neuer Vorschlag: Benennung nach Hedwig Porschütz)
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8532
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_13_1921_2084_online.pdf (Grundstücksnummerierungen)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_48_7273_7428_online.pdf (Eingruppierung in die Straßenreinigungsverzeichnisse)
 #: XXX Planstraßen 1.1, 1.2, 1.3
 #: XXX wobei es bereits eine Clara-von-Simson-Str. in Berlin gibt (Mail an die BVV Mitte geschickt)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_29_3931_4054_online.pdf (neuer Name)
@@ -1342,9 +1343,8 @@ Hedwig-Porschütz-Str.: noch nicht ausgeschildert	CS 7652,14257 7757,14318 7802,1
 (Waldpark Steinberg und am Steinbergsee): rechten Weg nehmen (links sind einige Stufen)	CS; 4190,21181 4116,21296
 (Waldpark Steinberg und am Steinbergsee): linken Weg nehmen (rechts sind einige Stufen)	CS; 4116,21296 4190,21181
 # 
-#: next_check_id: IMLICHTENHAIN-2018
-#: last_checked: 2019-10-18
-Im Lichtenhain: noch nicht ausgeschildert, Hausdurchfahrt	CP2; 16497,10685 16491,10655
+# REMOVE (an der Hauswand steht mittlerweile ein Hinweis) --- #: next_check_id: IMLICHTENHAIN-2018 --- #: last_checked: 2019-10-18 --- noch nicht ausgeschildert
+Im Lichtenhain: Hausdurchfahrt	CP2; 16497,10685 16491,10655
 # 
 entlang des ehemaligen Spreeparks	CS 15981,8872 15973,8894 15845,9031
 # 
@@ -1373,7 +1373,7 @@ Klara-Franke-Str.: südliche Einfahrt nicht ausgeschildert	CP2; 7535,13754 7630,1
 # 
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2019-11-06
+#: last_checked: 2019-11-27
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13390
 # 

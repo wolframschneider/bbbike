@@ -11,14 +11,14 @@
 #: note: Baustellenampel in der Neuen Roßstr.
 #: source_id: 2147345021 (bis Juli 2020)
 #: XXX bis Mitte 2020
-#: last_checked: 2019-11-08
+#: last_checked: 2019-11-26
 #: valid: -20200715
 	X::inwork 10780,11721
 # 
 #: next_check_id: HOSEMANN-2019
 #: note: Baustellenampel in der Hosemannstr. (eigentlich 2x)
 #: source_id: 2147344946
-#: last_checked: 2019-10-24
+#: last_checked: 2019-11-18
 #: next_check: 2020-02-01
 #: valid: -20200201
 	X::inwork 12556,15518
@@ -31,10 +31,10 @@
 	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-11-05 vvv
+#: last_checked: 2019-11-27 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: 20190319-20191220 vvv
-#: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28)
+#: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20)
 	X::inwork 14103,10489
 #: note: anstelle des Zebrastreifens
 	F::inwork 14490,10610
@@ -79,7 +79,7 @@
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
-#: last_checked: 2019-11-17
+#: last_checked: 2019-11-23
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -2584,7 +2584,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: XXX Ampel wird auf die andere Seite der Paul-Junius-Str. verlegt
 #: osm_watch: node id="6382841426" version="1"
-#: last_checked: 2019-10-29
+#: last_checked: 2019-11-18
 #: check_frequency: 14d
 	F 15074,12850
 # 
@@ -2812,7 +2812,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2019-11-14 vvv
+#: last_checked: 2019-11-20 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3107,7 +3107,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: Anforderungsampel
 #: XXX provisorisch, bleibt eventuell nur während der Bauarbeiten an der Herbert-von-Karajan-Str.
 #: osm_watch: node id="1319349510" version="6"
-#: last_checked: 2019-10-17
+#: last_checked: 2019-11-19
 #: check_frequency: 30d
 	F::inwork 8005,11627
 # 
@@ -3278,7 +3278,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2019-11-14 vvv
+#: last_checked: 2019-11-22 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738

@@ -3372,7 +3372,7 @@ EOF
 	2::xmas 5656,10876 5652,11004
 #: by: https://twitter.com/VIZ_Berlin/status/1063061013334032384
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
-#: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020? Laut vmz ist der Radverkehr in der Kantstr. nicht betroffen
+# REMOVED --- #: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020? Laut vmz ist der Radverkehr in der Kantstr. nicht betroffen --- #: last_checked: 2019-11-27 (hier mittlerweile Weihnachtsmarkt, man könnte aber durchschieben) --- #: next_check: 2019-11-25
 #: source_id: 2147345089
 Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
 EOF
@@ -11918,7 +11918,7 @@ EOF
 	3 9028,12307 9141,12320 9131,12438
 	3 7744,10372 7633,10394 7444,10479
 	3 7293,11519 7171,11510 6987,11487 6915,11492 6825,11486 6716,11439
-	3 9877,12293 9873,12315 9858,12410 9848,12506
+	3 9877,12293 9873,12315 9858,12410 9846,12516
 	3 7849,10488 7689,10514 7478,10612
 	3 7160,11225 7103,11247 6851,11346 6692,11365
 	3 8102,11099 8000,11137 7828,11133
@@ -11937,7 +11937,7 @@ EOF
 	3 7003,10513 7033,10396 7227,10489 7281,10510
 	3 8232,11414 8226,11458 8172,11679
 	3 9369,12253 9358,12351 9343,12464
-	3 9848,12506 9858,12410 9873,12315 9877,12293
+	3 9846,12516 9858,12410 9873,12315 9877,12293
 	3 8205,10979 8104,11037 7980,11070 7747,11075
 	3 6494,10440 6532,10529 6468,10550
 	3 9343,12464 9358,12351 9369,12253
@@ -12522,7 +12522,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_009763',
        data  => <<EOF,
-	q4::inwork 22740,4415 22759,4430 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23059,4635 23363,4846 23451,4877
+	q4::inwork 22740,4415 22759,4430 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23059,4635 23388,4864 23451,4877
 EOF
      },
      { from  => 1219528800, # 2008-08-24 00:00
@@ -15992,7 +15992,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014045',
        data  => <<EOF,
-	q4::inwork; 23451,4877 23363,4846 23059,4635 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22759,4430 22740,4415
+	q4::inwork; 23451,4877 23388,4864 23059,4635 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22759,4430 22740,4415
 EOF
      },
      { from  => 1250978400, # 2009-08-23 00:00
@@ -16255,7 +16255,7 @@ EOF
        data  => <<EOF,
 #: tempex: (sa,su) T10-T17 vvv
 	q4::temp:clock 9754,12775 9654,12882 9618,12907 9533,12925
-	q4::temp:clock 9919,12613 9956,12523 9984,12426
+	q4::temp:clock 9919,12613 9953,12533 9984,12426
 #: tempex ^^^
 EOF
      },
@@ -17325,11 +17325,11 @@ EOF
 	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998
 EOF
      },
-     { from  => $isodate2epoch->("2018-12-25 06:00:00"), # siehe auch anderen Eintrag mit weiteren Sperrungen am 31. und 1.
-       until => 1546452308, # vorfristig beendet --- $isodate2epoch->("2019-01-02 23:59:59"),
+     { from  => $isodate2epoch->("2019-12-25 06:00:00"), # siehe auch anderen Eintrag mit weiteren Sperrungen am 31. und 1.
+       until => $isodate2epoch->("2020-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
-       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vermutlich ab 26.12.2018 bis 02.01.2019',
+       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vermutlich ab 26.12.2019 bis 02.01.2020',
        type  => 'gesperrt',
        data  => <<EOF,
 #: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1512/nachricht5886.html
@@ -17454,7 +17454,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015288',
        data  => <<EOF,
-	q4::inwork; 11727,16358 11698,16311 11618,16183 11548,16079 11542,16070 11531,16053 11506,16015 11492,15993 11477,15969 11445,15920 11387,15827 11367,15793 11353,15770 11344,15755 11328,15730 11316,15711 11290,15669 11176,15489 11156,15457 11131,15417 11112,15387 11090,15355 11065,15318 10941,15135 10930,15119 10916,15098 10900,15075 10881,15047
+	q4::inwork; 11727,16358 11698,16311 11666,16260 11618,16183 11548,16079 11542,16070 11531,16053 11506,16015 11492,15993 11477,15969 11445,15920 11387,15827 11367,15793 11353,15770 11344,15755 11328,15730 11316,15711 11290,15669 11176,15489 11156,15457 11131,15417 11112,15387 11090,15355 11065,15318 10941,15135 10930,15119 10916,15098 10900,15075 10881,15047
 EOF
      },
      { from  => 1269113469, # 2010-03-20 20:31
@@ -19281,7 +19281,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110421.1205.341677.html',
        data  => <<EOF,
-	q4::inwork 22740,4415 22759,4430 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23059,4635 23363,4846 23451,4877
+	q4::inwork 22740,4415 22759,4430 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23059,4635 23388,4864 23451,4877
 EOF
      },
      { from  => 1304676000, # 2011-05-06 12:00
@@ -19430,7 +19430,7 @@ EOF
        data  => <<EOF,
 	2::temp 13332,10832 13305,10789 13206,10651 13178,10623 13082,10634
 	2::temp 13249,10445 13142,10530
-	2::temp 13409,11004 13332,10832 13389,10808
+	2::temp 13409,11004 13391,10963 13332,10832 13394,10805
 	2::temp 13332,10832 13144,10921
 	2::temp 13077,10747 13206,10651
 	2::temp 12985,10665 12879,10750 12951,10839 13077,10747 13015,10659 13082,10634 13028,10629 13136,10535 13178,10623
@@ -22628,9 +22628,10 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_020714',
        data  => <<EOF,
+#: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G)
-#: last_checked: 2019-11-14
+#: last_checked: 2019-11-20
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -25107,11 +25108,11 @@ EOF
 	2::inwork 20640,7122 20722,6971
 EOF
      },
-     { from  => $isodate2epoch->("2018-12-30 15:00:00"), # 1451473200, # 2015-12-30 12:00 # siehe auch anderen Eintrag mit früheren Sperrungen
-       until => $isodate2epoch->("2019-01-01 03:00:00"), # )1451646000, # 2016-01-01 12:00
+     { from  => $isodate2epoch->("2019-12-30 15:00:00"), # 1451473200, # 2015-12-30 12:00 # siehe auch anderen Eintrag mit früheren Sperrungen
+       until => $isodate2epoch->("2020-01-01 03:00:00"), # )1451646000, # 2016-01-01 12:00
        periodic => 1,
        recurrences => [['yearly', days => 31, months => 12]],
-       text  => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 31.12.2018 15:00 Uhr bis 01.01.2019 03:00 Uhr',
+       text  => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 31.12.2019 15:00 Uhr bis 01.01.2020 03:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stra%C3%9Fe-des-17-juni-tiergarten-sperrung-%C2%B7-silvesterfeier
@@ -25943,9 +25944,9 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2019-11-12 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-11-13 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 13. November 2019 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2019-11-26 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-11-27 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 27. November 2019 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
@@ -26010,9 +26011,9 @@ EOF
        text  => 'Umfangreiche Sperrungen in Mitte: rund um das Berliner Rathaus und im Bereich des Berliner Doms und Zeughauses, am 24. Januar 2017 von 7 Uhr bis 16 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 9984,12426 9934,12420 9858,12410 9848,12506 9842,12565 9892,12596 9919,12613 9948,12631 10017,12675 10054,12699 10086,12725
-	2::temp 9919,12613 9956,12523 9848,12506
-	2::temp 9956,12523 9984,12426 10024,12431 10063,12438 9956,12617 9948,12631
+	2::temp 9984,12426 9934,12420 9858,12410 9846,12516 9842,12565 9892,12596 9919,12613 9948,12631 10017,12675 10054,12699 10086,12725
+	2::temp 9919,12613 9953,12533 9846,12516
+	2::temp 9953,12533 9984,12426 10024,12431 10063,12438 9956,12617 9948,12631
 	2::temp 10063,12438 10155,12494 10176,12506 10243,12546 10300,12587
 	2::temp 10704,12595 10601,12521 10644,12469 10673,12434 10772,12515 10704,12595
 	2::temp 10094,12635 10176,12506
@@ -26691,7 +26692,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-11-07
+#: last_checked: 2019-11-24
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -26889,7 +26890,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-10-26 vvv
+#: last_checked: 2019-11-21 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27622,12 +27623,14 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.808235.php (Vollsperrung für drei Monate ab 13.05.2019)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/nach-zweimaliger-unterbrechung-gehen-bauarbeiten-auf-der-schoenstrasse-weiter_a214852
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Sperrung des 2. Teilbereiches: drei Monate ab dem 19.09.2019)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/verkehrsbehoerdliche-anordnung_04-09-2019.pdf
 #: XXX mittlerweile vom Mirbachplatz aus etwa 100m gut befahrbar (Fahrbahn bis auf die Deckschicht hergestellt), danach geht's nur auf dem Gehweg weiter
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
 #: last_checked: 2019-10-29
-# REMOVED --- #: next_check: 2019-08-19
+#: next_check: 2019-12-19
 	q4::inwork 13391,16436 13630,16629
 EOF
      },
@@ -27851,7 +27854,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-11-14
+#: last_checked: 2019-11-26
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28177,7 +28180,7 @@ EOF
 #	X 9421,12589 9472,12189 9716,12212 9735,12120 9944,12144 10107,12219 10021,12458 9920,12648 9875,12683 9704,12631
        data  => <<EOF,
 Werderscher Markt	2::temp 9898,12161 9939,12174 9972,12184 10029,12208 10091,12232
-Am Zeughaus	2::temp 9919,12613 9956,12523 9984,12426
+Am Zeughaus	2::temp 9919,12613 9953,12533 9984,12426
 Schinkelplatz	2::temp 9984,12426 9990,12404 9996,12372 10006,12306 10010,12275 10012,12259 10029,12208
 Schinkelplatz	2::temp 10058,12290 10010,12275
 Schinkelplatz	2::temp 9990,12404 10058,12290 10091,12232
@@ -28193,14 +28196,14 @@ Hinter der Katholischen Kirche	2::temp 9812,12150 9808,12182 9798,12267 9796,122
 Charlottenstr. (Kreuzberg, Mitte)	2::temp 9454,12558 9462,12481 9475,12365 9489,12263 9496,12215
 Dorotheenstr. (Mitte)	2::temp 9454,12558 9581,12588 9681,12601 9742,12609 9870,12657
 Am Kupfergraben	2::temp 9870,12657 9900,12643 9919,12613
-Hinter dem Gießhaus	2::temp 9858,12410 9848,12506 9842,12565 9892,12596 9919,12613
-Hinter dem Zeughaus	2::temp 9848,12506 9956,12523
+Hinter dem Gießhaus	2::temp 9858,12410 9846,12516 9842,12565 9892,12596 9919,12613
+Hinter dem Zeughaus	2::temp 9846,12516 9953,12533
 Behrenstr.	2::temp 9496,12215 9631,12227 9680,12232 9730,12238 9737,12238 9798,12267
 Universitätsstr.	2::temp 9581,12588 9613,12381
 Oberwallstr.	2::temp 9858,12410 9873,12315 9877,12293 9883,12251 9898,12161
 Am Festungsgraben	2::temp 9742,12609 9747,12584
-Am Festungsgraben	2::temp 9747,12584 9764,12492 9771,12400
-Am Festungsgraben	2::temp 9848,12506 9764,12492
+Am Festungsgraben	2::temp 9747,12584 9761,12509 9771,12400
+Am Festungsgraben	2::temp 9846,12516 9761,12509
 Hedwigskirchgasse	2::temp 9737,12238 9747,12205 9755,12144
 Bebelplatz	2::temp 9713,12392 9730,12238
 Bebelplatz	2::temp 9680,12232 9664,12387
@@ -28431,7 +28434,7 @@ EOF
 #: note: laut fritz bis 31.03.2020
 #: osm_watch: way id="705182550" version="1"
 #: osm_watch: way id="705182551" version="1"
-#: last_checked: 2019-10-12 vvv
+#: last_checked: 2019-11-20 vvv
 #: next_check: 2020-03-31 vvv
 #: source_id: 2147344480
 # REMOVED (ja, aber Gehweg ist noch frei) --- #: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
@@ -28700,10 +28703,13 @@ EOF
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.783009.php
 #: by: http://www.abendblatt-berlin.de/2019/02/08/altstadt-koepenick-im-dauerstress/
 #: by: https://twitter.com/VIZ_Berlin/status/1093887988222906369
+#: add_fragezeichen: Wann wird die Einbahnstraßenregelung wieder aufgehoben?
 #: source_id: 2147344699
 #: osm_watch: way id="25274116" version="19"
 #: osm_watch: way id="671101960" version="3"
 #: also_indoor: traffic (G,H)
+#: last_checked: 2019-11-23
+#: check_frequency: 7d
 	q4::temp; 22196,4847 22377,4836 22388,4737 22390,4702 22395,4678 22426,4609 22446,4581 22458,4565 22495,4523
 EOF
      },
@@ -29416,9 +29422,9 @@ EOF
 #: also_indoor: traffic (GH)
 #: XXX periodisch anschauen vvv
 #: priority: #B vvv
-#: last_checked: 2019-11-17 vvv
-# REMOVED --- #: next_check: 2019-10-04 vvv
-#: check_frequency: 21d vvv
+#: last_checked: 2019-11-26 vvv
+#: check_frequency: 14d vvv
+#: next_check: 2019-12-16 vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
 	q4::inwork; 14461,11738 14513,11657 14561,11600 14570,11589 14639,11512
 # REMOVED ---	2::inwork 14461,11738 14416,11815
@@ -29438,8 +29444,8 @@ EOF
 	q3::inwork 14045,11965 14006,11843
 # REMOVED --- #: note: Umwege am Wismarplatz, Richtung Kinzigstr. ---	q3::inwork 14475,11778 14461,11738
 # REMOVED (hier nicht) --- #: note: Umwege am Wismarplatz, Richtung Weserstr. ---	q3::inwork 14475,11778 14416,11815
+#: next_check ^^^
 #: check_frequency: ^^^
-# REMOVED --- #: next_check ^^^
 #: last_checked ^^^
 #: priority ^^^
 #: XXX ^^^
@@ -29583,9 +29589,11 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.tagesspiegel.de/themen/freie-universitaet-berlin/bauprojekte-an-der-fu-neuer-glanz-am-alten-standort/24035558.html', # bis 2025? oder bis Ende 2020?
        data  => <<EOF,
+#: XXX Parkverbot bis 30.4.2020 ausgeschildert
 #: also_indoor: traffic (G)
+#: osm_watch: way id="749226300" version="1"
 #: last_checked: 2019-08-04
-#: check_frequency: 180d
+#: next_check: 2020-04-30
 	2::inwork 3079,5411 3209,5214
 EOF
      },
@@ -29650,7 +29658,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="16" brb
+#: osm_watch: way id="59994277" version="17" brb
 #: source_id: LS/721-F/18/135
 	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
 EOF
@@ -29765,7 +29773,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-11-11
+#: last_checked: 2019-11-21
 #: check_frequency: 14d
 	2::inwork 13092,11712 13175,11649 13239,11567
 	2::inwork 13175,11649 13208,11658
@@ -29811,7 +29819,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05, 2019-11-14)
-#: last_checked: 2019-11-14
+#: last_checked: 2019-11-21
 #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 EOF
@@ -29873,7 +29881,7 @@ EOF
 #: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
 #: last_checked: 2019-10-17
-#: next_check_id: 2020-03-31
+#: next_check: 2020-03-31
 	2::inwork 5894,12480 5944,12548
 EOF
      },
@@ -29901,8 +29909,8 @@ EOF
 EOF
      },
      { from  => 1570223758, # 2019-10-04 23:15
-       until => 1574118000, # 2019-11-19 00:00
-       text  => 'Brebacher Weg: Gleisbauarbeiten, Bahnübergang gesperrt, voraussichtlich bis 18.11.2019',
+       until => $isodate2epoch->("2019-12-23 18:00:00"), # 1574118000, # 2019-11-19 00:00
+       text  => 'Brebacher Weg: Gleisbauarbeiten, Bahnübergang gesperrt, voraussichtlich bis zum 23.12.2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: fritz
@@ -29923,12 +29931,12 @@ EOF
 	2::temp 9664,12387 9680,12232
 	3 10291,12600 10300,12587 10363,12535
 	3 10174,12284 10063,12438 9956,12617
-	3 9873,12315 9858,12410 9848,12506
-	3 9956,12523 9984,12426 9990,12404
+	3 9873,12315 9858,12410 9846,12516
+	3 9953,12533 9984,12426 9990,12404
 	3 10363,12535 10300,12587 10291,12600
 	3 9956,12617 10063,12438 10174,12284
-	3 9990,12404 9984,12426 9956,12523
-	3 9848,12506 9858,12410 9873,12315
+	3 9990,12404 9984,12426 9953,12533
+	3 9846,12516 9858,12410 9873,12315
 EOF
      },
      { from  => undef, # 
@@ -29984,7 +29992,7 @@ EOF
 EOF
      },
      { from  => 1569794400, # 2019-09-30 00:00
-       until => $isodate2epoch->("2019-10-30 17:00:00"), # 1596232800, # 2020-08-01 00:00
+       until => $isodate2epoch->("2020-07-05 18:00:00"), # 1596232800, # 2020-08-01 00:00
        text  => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Einbahnstraßenregelung wegen Bauarbeiten, offen Richtung Osten, voraussichtlich bis Sommer 2020',
 #       text  => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Fahrbahn wegen Bauarbeiten gesperrt, voraussichtlich bis Ende Oktober 2019, danach eventuell wieder Einbahnstraßenregelung',
        type  => 'handicap',
@@ -29992,14 +30000,13 @@ EOF
 #: next_check_id: NOBEL-2019
 # REMOVED (ja) --- #: add_fragezeichen: Haben die Bauarbeiten tatsächlich schon begonnen? Wurde eine Einbahnstraßenregelung eingeführt?
 #: XXX bis wann gehen die Bauarbeiten?
-#: XXX laut fritz nur bis 18.11.2019
+#: XXX laut fritz bis 05.07.2020
 #: source_id: 2147344997 (hier: Vollsperrung bis Ende Oktober 2019)
 #: source_id: 2147345024 (bis Mitte November 2019)
 #: also_indoor: traffic (G)
 #: osm_watch: way id="19881557" version="23"
 #: last_checked: 2019-10-15
-# REMOVED --- #: next_check: 2020-07-01
-#: next_check: 2019-11-18
+#: next_check: 2020-07-05
 	q4::inwork; 14784,6169 14398,6184
 # REMOVED ---	q4::inwork 14784,6169 14398,6184
 EOF
@@ -30014,25 +30021,24 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1574451396, # -> gesperrt-orig --- undef, # XXX
        text  => 'Gustav-Böß-Str.: Straße ist komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX bis wann geht die Sperrung?
-#: last_checked: 2019-11-11 (Barriere über die gesamte Straßenbreite, Fahrbahn ist aufgerissen)
-#: check_frequency: 30d
+# REMOVED --- #: XXX bis wann geht die Sperrung? --- #: osm_watch: way id="729492933" version="2" --- #: last_checked: 2019-11-20 (Barriere über die gesamte Straßenbreite, Fahrbahn ist aufgerissen --- mittlerweile steht ein solider Bauzaun) --- #: check_frequency: 30d
 	2::inwork 10673,12434 10772,12515
 EOF
      },
      { from  => undef,
-       until => $isodate2epoch->("2019-11-25 18:00:00"),
-       text  => 'Libauer Str.: Bauarbeiten, Fahrbahn abschnittsweise gesperrt, bis 25. November 2019',
+       until => undef, # $isodate2epoch->("2019-11-25 18:00:00"),
+       text  => 'Libauer Str.: Bauarbeiten, ein Abschnitt der Fahrbahn ist gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-11-16
-#: next_check: 2019-11-25
+#: last_checked: 2019-11-28
+# REMOVED --- #: next_check: 2019-11-25
+#: check_frequency: 14d
 	q3::inwork 13711,11458 13895,11663
 EOF
      },
@@ -30042,7 +30048,7 @@ EOF
        type  => 'handicap',
        source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/bahnhofstraße-blankenburg-vollsperrung-·-fahrbahnsanierung',
        data  => <<EOF,
-#: source_id: 2147345034
+#: source_id: 2147345034 (bis Anfang Dezember 2019)
 	q4::inwork 12442,20805 12337,20954 12298,21015 12257,21079 12202,21158 12166,21208
 	q4::inwork 12158,21166 12202,21158
 EOF
@@ -30138,6 +30144,49 @@ EOF
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
 #: last_checked: 2019-11-16
 	2::inwork 24029,11363 24172,11320
+EOF
+     },
+     { from  => undef, # 
+       until => 1574449032, # Gehweg mittlerweile wieder offen ---- undef, # XXX
+       text  => 'Voltairestr.: Fahrbahn und Gehwege können wegen Bauarbeiten komplett gesperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+# REMOVED --- #: next_check_id: VOLTAIRE-2019 --- #: XXX ist das nur temporär wegen der Kranaufstellung oder dauerhaft? --- #: last_checked: 2019-11-20 --- #: check_frequency: 7d
+	2::inwork 11329,12497 11209,12430
+EOF
+     },
+     { from  => 1574189084, # 2019-11-19 19:44
+       until => $isodate2epoch->("2019-12-07 18:00:00"), # 1576429200, # 2019-12-15 18:00
+       text  => 'Fredersdorfer Str.: Einbahnstraße in einem Teilabschnitt, offen Richtung Marchlewskistr., bis Mitte Dezember 2019',
+       type  => 'handicap',
+       source_id => '2147345145',
+       data  => <<EOF,
+	q3::inwork; 13075,12207 12923,12043 12891,12008
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Rathauspark: Bauarbeiten, Weg ist gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
+#: last_checked: 2019-11-23
+	2::inwork 15420,12178 15520,12160 15628,12246
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Grünfläche Auerdreieck: Bauarbeiten, Weg kann gesperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.725993.php
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.726077.php ("erste Hälfte 2019")
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
+#: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
+#: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
+#: last_checked: 2019-11-27 (Flatterband, Sandhaufen)
+#: check_frequency: 30d
+	2::inwork 13232,12628 13091,12563
 EOF
      },
     );

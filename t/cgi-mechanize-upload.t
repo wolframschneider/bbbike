@@ -67,7 +67,7 @@ my $bbbike_org = $ENV{BBBIKE_TEST_ORG} ? 12 : 0;
 plan tests => 3 + $gpsman_tests * @gps_types - 29 - $bbbike_org;
 
 {
-    my $agent = WWW::Mechanize->new();
+    my $agent = WWW::Mechanize->new(keep_alive => 1);
     set_user_agent($agent);
 
     $agent->get($cgiurl);
