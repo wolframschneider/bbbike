@@ -97,7 +97,7 @@ Donaustr.: Asphalt	Q0 12202,8895 12394,8729 12551,8612 12649,8535
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/noerdliche-donaustrasse-wird-asphaltiert-und-auch-fuer-fussgaenger-sicherer_a181334
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/baurbeiten-an-der-pannierstrasse_a238483 (Abschluss erst 2020?)
 # REMOVED (realisiert) --- #: XXX dieser Abschnitt wird noch 2018 realisiert --- #: osm_watch: way id="155605274" version="4" -- #: last_checked: 2018-10-11
-#: last_checked: 2019-11-25 vvv
+#: last_checked: 2019-12-02 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2019-10-31 vvv
 Donaustr.: schlechtes bis mäßiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895
@@ -109,7 +109,7 @@ Pannierstr.: Kopfsteinpflaster	Q2 12240,8964 12202,8895
 #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="155605273" version="5"
-#: last_checked: 2019-11-25
+#: last_checked: 2019-12-02
 #: check_frequency: 30d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -142,7 +142,7 @@ Priesterweg: mäßiges Kopfsteinpflaster	Q2 7227,7352 7229,7188 7222,6458 7222,643
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2018-12-13-prot-fahrratsitzung.pdf
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2019-03-21-prot-fahrratsitzung2.pdf
 #: osm_watch: way id="102486250" version="10"
-#: last_checked: 2019-10-21
+#: last_checked: 2019-12-01
 #: check_frequency: 120d
 Priesterweg: mäßiges bis schlechtes Kopfsteinpflaster	Q2- 7227,6080 7223,5890
 Priesterweg: Asphalt	Q0 7223,5890 7171,5831
@@ -720,7 +720,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2019-11-01
+#: last_checked: 2019-12-02
 #: check_frequency: 90d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -772,8 +772,8 @@ Königsheideweg: Asphalt	Q0 16279,5170 16062,5242 15870,5251 15807,5286 15731,536
 Uferweg: fester Sandweg	Q1 16627,8581 16546,8852 16459,9017 16347,9147 16266,9203 16118,9201 15959,9117 15845,9031 15778,8990
 #: next_check_id: PLAENTERWALDUFERWEG-2019
 #: XXX nach den Bauarbeiten wassergebundene Decke
-#: last_checked: 2019-10-20
-#: next_check: 2019-11-30
+#: last_checked: 2019-11-30
+#: next_check: 2019-12-31
 Uferweg: asphaltiert, Wurzelschäden	Q1 16673,7511 16655,7572 16624,7833 16696,8174 16657,8443 16627,8581
 Böcklinstr.: Kopfsteinpflaster	Q2 14674,11370 14598,11245
 # 
@@ -1958,7 +1958,7 @@ Werrastr.: Asphalt mit einigen Schäden	Q1+ 13697,8279 13648,8321
 # 
 #: XXX Neugestaltung geplant, vielleicht verschwindet dabei das Pflaster? vvv
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.794639.php (ab 2021) vvv
-#: last_checked: 2019-11-22 vvv
+#: last_checked: 2019-12-02 vvv
 #: next_check: 2021-03-01 vvv
 Rungestr.: Kopfsteinpflaster	Q2- 11197,11882 11291,11876
 Rungestr.: Kopfsteinpflaster	Q2 11291,11876 11378,11856 11506,11851
@@ -2297,8 +2297,8 @@ Fenchelweg: Beton	Q0- 15872,3888 15860,3838 15838,3754 15791,3686 15732,3602 156
 (Autobahnzubringer): sehr guter Asphalt	Q0 18034,2526 18247,2490 18496,2471
 #: by: Erik Thon
 #: corrected_by: srt
-Neltestr.: schlechtes Kopfsteinpflaster	Q3 19472,3922 19596,4035 19715,4178
-Neltestr.: Beton	Q1 19715,4178 19753,4241
+Neltestr.: schlechtes Kopfsteinpflaster	Q3 19472,3922 19596,4035 19723,4175
+Neltestr.: Beton	Q1 19723,4175 19756,4245
 #: note: Schilder "Achtung, Straßenschäden" existieren, aber die Schäden sind nur punktuell
 Ostritzer Str.: Asphalt	Q0 20774,5131 20689,4862
 Ostritzer Str.: Beton	Q0 20774,5131 20782,5206 20782,5257
@@ -3223,16 +3223,13 @@ Britzer Str.: Asphalt	Q0 18470,5600 18370,5511 18307,5440 18214,5354 18080,5376
 Farnstr.: Asphalt	Q0 19402,4900 19384,5010 19328,5188
 Erikastr.: Asphalt	Q0 19500,4919 19477,5048 19424,5217
 Eisblumensteig: Asphalt	Q0 19579,4931 19576,4986 19553,5079 19541,5100 19520,5176 19524,5201 19534,5242
-# 
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20191124
-#: XXX "Erneuerung der gerissenen Asphaltdeckschicht" vvv
-#: next_check: 2019-11-08 vvv
-Silbergrasweg: mäßiger Asphalt	Q1 19686,4894 19760,4907 19858,4960 19901,5015 19926,5055 19940,5090
-Weiderichstr.: mäßiger Asphalt	Q1 19744,5063 19814,5056 19838,5048 19901,5015
-Weiderichplatz: mäßiger Asphalt	Q1 19814,5056 19805,5025 19816,5015 19830,5019 19838,5048
-#: next_check ^^^
-#: XXX ^^^
-# 
+#: XXX "Erneuerung der gerissenen Asphaltdeckschicht", auch im Sackgassenabschnitt?
+#: next_check: 2019-11-08
+Silbergrasweg: mäßiger Asphalt	Q1 19686,4894 19760,4907
+Silbergrasweg: Asphalt	Q1 19760,4907 19805,4914 19858,4960 19901,5015 19926,5055 19940,5090
+Weiderichstr.: Asphalt	Q0 19744,5063 19820,5054 19842,5046 19901,5015
+Weiderichplatz: Asphalt	Q0 19820,5054 19809,5023 19816,5015 19830,5019 19842,5046
 Rudower Str. (Köpenick): Asphalt	Q0 21370,4442 21329,4383
 #: note: zumindest am Nordende gesehen, Luftbilder scheinen das für die gesamte Straße zu bestätigen
 Rudower Str. (Köpenick): Beton	Q0 21329,4383 21452,4061 21402,4036 21454,3883 21489,3841
@@ -11262,9 +11259,10 @@ Pfaueninselchaussee: Asphalt	Q0 -6999,1933 -6903,1906 -6784,1815 -6648,1613 -657
 # 
 #: next_check_id: KOENIGSTEINBRUECKE-2019
 #: by: https://www.berliner-woche.de/blankenburg/c-verkehr/verbindungsweg-scheint-moeglich_a219370 (ist dieser oder ein anderer Weg gemeint?) vvv
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4742 (Untersuchung)
 #: XXX wird dieser Weg als Umfahrungsstrecke tauglich gemacht? vvv
 #: last_checked: 2019-08-14 vvv
-#: check_frequency: 90d vvv
+#: check_frequency: 180d vvv
 #: osm_watch: way id="42425652" version="4"
 (Krontaler Str. - Bucher Str.): Beton	Q1- 13427,22935 13414,22945
 #: osm_watch: way id="41624981" version="6"
@@ -11562,7 +11560,10 @@ Hamburger Str. (Mahlsdorf): Asphalt	Q0 26190,13426 26371,13630 26540,13826 26662
 #: confirmed_by: srt
 Hamburger Str. (Mahlsdorf): mäßiger Asphalt	Q1 26662,13876 26785,13925 26847,14002 26874,14070
 #: confirmed_by: vito
-Steinbachstr.: guter Asphalt	Q0 19587,3801 19673,3888 19703,3979 19759,4160
+#: corrected_by: srt (guter -> mäßiger)
+Steinbachstr.: mäßiger Asphalt	Q1 19587,3801 19673,3888 19703,3979
+#: confirmed_by: srt
+Steinbachstr.: guter Asphalt	Q0 19703,3979 19759,4160
 Am Kiebitzpfuhl: mäßiger Asphalt	Q1- 14334,22694 14402,22790 14434,22835 14436,22869
 #: corrected_by: srt (guter Beton -> ...) vvv
 Marwitzer Str.: Asphalt	Q0 -4763,16809 -4628,16803 -4322,16776
@@ -13390,7 +13391,7 @@ Undinestr.: Kopfsteinpflaster	Q2 4787,4133 4681,4537 4651,4638 4568,4789
 # 
 #: by: Erik Thon: vvv
 #: corrected_by: srt (mäßig -> schlecht)
-Vogelbeerstr.: schlechtes Kopfsteinpflaster	Q3+ 19715,4178 19759,4160 19815,4148 19869,4151 19917,4168 19963,4198
+Vogelbeerstr.: schlechtes Kopfsteinpflaster	Q3+ 19723,4175 19759,4160 19815,4148 19869,4151 19917,4168 19963,4198
 #: corrected_by: srt (mäßiger Asphalt -> ...)
 Florian-Geyer-Str.: guter Asphalt mit einigen Kopfsteinpflasterabschnitten	Q1 19869,4151 19884,4018 19888,3990 19924,3939
 #: corrected_by: Hartmut Schröder (mäßiges Q2 -> schlechtes Q3+)
@@ -14377,6 +14378,7 @@ Lemkestr.: Kopfsteinpflaster	Q2+; 25801,13101 25872,13191 25961,13304
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/lemkestrasse-bezirk-verschiebt-vorhaben-auf-2020-bvv-beschluss-bisher-nicht-umgesetzt_a204757
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.842179.php (Sanierung beginnt 2020)
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/verschiebt-sich-der-ausbau-der-lemkestrasse_a231565
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8673
 #: last_checked: 2019-05-05
 #: next_check: 2020-04-01
 Lemkestr.: schlechtes Kopfsteinpflaster	Q3 25801,13101 25706,12982 25663,12927 25534,12763 25363,12553 25191,12343 25149,12266 25109,12196
@@ -15967,8 +15969,10 @@ Hartriegelstr.: Kopfsteinpflaster	Q2 18695,5076 18724,5022
 Hartriegelstr.: Beton, einige leichte Hebungen	Q0- 18724,5022 18918,4971 19184,4888 19251,4879 19402,4900 19500,4919 19579,4931 19755,4962
 Allendeweg: Asphalt	Q0 23001,4382 22963,4435 22893,4532
 #: note: laut ADFC-Karte ebenfalls schlecht geeignet
-#: corrected_by: srt (Q3 -> Q2+)
-Kattunsteig: Waldweg	Q2+ 19765,4876 19710,4760 19710,4682 19715,4410 19731,4329 19761,4288 19745,4273 19759,4265 19753,4241
+#: corrected_by: srt (Q3 -> Q2+) vvv
+Kattunsteig: Waldweg	Q2+ 19765,4876 19710,4760 19710,4682 19715,4410 19723,4348 19766,4288 19807,4248
+Kattunsteig: Waldweg	Q2+ 19766,4288 19754,4266 19760,4256 19756,4245
+#: corrected_by ^^^
 #: note: "Note 3":
 #: note: laut ADFC-Karte gut geeignet
 #: corrected_by: srt (einige Schlaglöcher, Q1 -> Asphalt, Q0-)
@@ -23527,7 +23531,10 @@ Heimkehlenstr.: Beton	Q0 5543,1706 5433,1763 5421,1786
 #: by: https://www.berliner-woche.de/karow/c-verkehr/bezirksamt-liess-auf-der-kernerstrasse-eine-asphaltschicht-auftragen_a199564#gallery=null
 #: corrected_by: bw (mäßiger Asphalt -> neu gemacht)
 Kernerstr.: Asphalt	Q0 14185,22803 14043,22903 13950,22969
-Boenkestr.: Asphalt	Q0 14756,23622 14630,23438 14539,23306
+Boenkestr.: Asphalt	Q0 14756,23622 14630,23438 14611,23410
+#: corrected_by: mapillary
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5309 (Erwähnung von Kopfsteinpflaster)
+Boenkestr.: schlechtes Kopfsteinpflaster	Q3 14611,23410 14539,23306
 Boenkestr.: guter Asphalt	Q0 14539,23306 14314,22944 14276,22914 14246,22900 14185,22803 14109,22714 14057,22617 13983,22513
 #: by: ^^^
 # 

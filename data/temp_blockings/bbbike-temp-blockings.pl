@@ -26692,7 +26692,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-11-24
+#: last_checked: 2019-11-30
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 EOF
@@ -28413,12 +28413,14 @@ EOF
 	q4::inwork; 16119,15302 16314,15223
 EOF
      },
-     { from  => 1540930270, # 2018-10-30 21:11
-       until => 1543014000, # 2018-11-24 00:00
-       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., eventuell sind auch Radfahrer betroffen, voraussichtlich bis 23.11.2018 ',
+     { from  => $isodate2epoch->("2019-12-03 06:00:00"), # 1540930270, # 2018-10-30 21:11
+       until => undef, # 1543014000, # 2018-11-24 00:00
+       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019',
        type  => 'gesperrt',
        source_id => '2147343394',
        data  => <<EOF,
+#: add_fragezeichen: Wann ist die Sperrung beendet?
+#: next_check: 2020-02-29
 	2::inwork 14338,22885 14276,22914
 EOF
      },
@@ -28574,11 +28576,12 @@ EOF
 EOF
      },
      { from  => 1543258848, # 2018-11-26 20:00
-       until => $isodate2epoch->("2019-12-31 18:00:00"), # 1551394799, # 2019-02-28 23:59
-       text  => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende 2019',
+       until => $isodate2epoch->("2020-02-29 18:00:00"), # 1551394799, # 2019-02-28 23:59
+       text  => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende Februar 2020',
        type  => 'gesperrt',
        data  => <<EOF,
 #: source_id: 2147343519 (mittlerweile "bis auf weiteres")
+#: note: laut fritz bis Ende Februar 2020
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 	2::inwork 14539,23306 14573,23295 14597,23280
 EOF
@@ -28694,22 +28697,10 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2019-02-10 06:00:00"),
-       until => $isodate2epoch->("2019-12-31 18:00:00"),
+       until => 1575318719, # $isodate2epoch->("2019-12-31 18:00:00"),
        text  => 'Freiheit/Lüdersstr./Alter Markt: Einbahnstraßenregelung, offen Richtung Norden, vom 11.02.2019 bis voraussichtlich Ende 2019',
        data  => <<EOF,
-#: next_check_id: SALVADORALLENDEBRUECKE-2017
-#: by: https://www.berliner-woche.de/treptow-koepenick/c-verkehr/entlastungsstrecke-durch-die-altstadt-eingerichtet_a200395
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.782833.php
-#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.783009.php
-#: by: http://www.abendblatt-berlin.de/2019/02/08/altstadt-koepenick-im-dauerstress/
-#: by: https://twitter.com/VIZ_Berlin/status/1093887988222906369
-#: add_fragezeichen: Wann wird die Einbahnstraßenregelung wieder aufgehoben?
-#: source_id: 2147344699
-#: osm_watch: way id="25274116" version="19"
-#: osm_watch: way id="671101960" version="3"
-#: also_indoor: traffic (G,H)
-#: last_checked: 2019-11-23
-#: check_frequency: 7d
+# REMOVED (in osm aufgehoben) --- #: next_check_id: SALVADORALLENDEBRUECKE-2017 --- #: by: https://www.berliner-woche.de/treptow-koepenick/c-verkehr/entlastungsstrecke-durch-die-altstadt-eingerichtet_a200395 --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.782833.php --- #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.783009.php --- #: by: http://www.abendblatt-berlin.de/2019/02/08/altstadt-koepenick-im-dauerstress/ --- #: by: https://twitter.com/VIZ_Berlin/status/1093887988222906369 --- #: add_fragezeichen: Wann wird die Einbahnstraßenregelung wieder aufgehoben? --- #: source_id: 2147344699 --- #: osm_watch: way id="25274116" version="20" --- #: osm_watch: way id="671101960" version="4" --- #: also_indoor: traffic (G,H) --- #: last_checked: 2019-11-23 --- #: check_frequency: 7d
 	q4::temp; 22196,4847 22377,4836 22388,4737 22390,4702 22395,4678 22426,4609 22446,4581 22458,4565 22495,4523
 EOF
      },
@@ -28755,7 +28746,7 @@ EOF
        source_id => '2147343824',
        data  => <<EOF,
 #: also_indoor: traffic (H,G)
-#: osm_watch: way id="4597320" version="16"
+#: osm_watch: way id="4597320" version="17"
 # REMOVED (ja) --- #: XXX vor Ort anschauen, ggfs. nach handicap_s-orig verschieben
 	q4::inwork 8737,12098 8783,11959
 EOF
@@ -29272,11 +29263,12 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang kann durch Tor und Bauzaun gesperrt sein',
+       text  => 'Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Tor und Bauzaun gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2019-06-18
-#: next_check: 2019-12-02
+#: last_checked: 2019-11-30
+# REMOVED --- #: next_check: 2019-12-02
+#: check_frequency: 90d
 	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 EOF
      },
@@ -29664,8 +29656,8 @@ EOF
 EOF
      },
      { from  => 1567288800, # 2019-09-01 00:00
-       until => 1575154800, # 2019-12-01 00:00
-       text  => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis voraussichtlich 30.11.2019 ',
+       until => $isodate2epoch->("2019-12-31 23:59:59"), # 1575154800, # 2019-12-01 00:00
+       text  => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis Dezember 2019',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.837476.php',
        data  => <<EOF,
@@ -29751,9 +29743,7 @@ EOF
        type  => 'handicap',
        source_id => '2147344606',
        data  => <<EOF,
-#: next_check_id: BLUECHER-2019
-#: source_id: 2147344702
-#: note: mittlerweile (2019-11-14) gibt es Beeinträchtigungen nur beim Überqueren der Blücherstr.
+# REMOVED (fertig) --- #: next_check_id: BLUECHER-2019 --- #: source_id: 2147344702 --- #: note: mittlerweile (2019-11-14) gibt es Beeinträchtigungen nur beim Überqueren der Blücherstr.
 	q4::inwork 9982,9847 10006,9942 10029,9989
 EOF
      },
@@ -30036,7 +30026,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-11-29
+#: last_checked: 2019-12-02
 # REMOVED --- #: next_check: 2019-11-25
 #: check_frequency: 14d
 	q3::inwork 13711,11458 13895,11663
@@ -30184,7 +30174,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2019-11-27 (Flatterband, Sandhaufen)
+#: last_checked: 2019-12-01 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 EOF

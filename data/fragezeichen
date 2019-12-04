@@ -1,5 +1,6 @@
 #: #: -*- coding: iso-8859-1 -*-
 #:
+Schönefelder Chaussee: gibt es hier einen Zebrastreifen?	? 18799,144 18799,91 18841,129
 Am Schlänitzsee (Potsdam-Marquardt): Qualität? Wie ist die genaue Lage der Straße?	? -19356,5480 -19454,5465 -19461,5517 -19370,5535
 An der Obstplantage (Potsdam-Marquardt): Qualität?	? -19427,5736 -19517,5712 -19543,5849 -19463,5860
 Biegen - Müllrose: existiert hier ein Radweg (wahrscheinlich ab 2006-10-31)	? 79768,-15263 78364,-14355
@@ -1176,6 +1177,7 @@ Altlandsberg - Wegendorf: Kopfsteinpflaster (ist das Kopfsteinpflaster eher mäßi
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
+Kieler Brücke und Zuwegungen: gesperrt (Ist die Kieler Brücke noch immer gesperrt?)	? 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 (andere Straßenseite auch?)	? 37093,-151665 37375,-151190
@@ -1197,7 +1199,7 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from bbbike-temp-blockings-optimized
 Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt (Wann wird die Sperrung aufgehoben?)	? 9131,12438 9179,12444
 Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, Fahrbahn stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende November 2019 (Sind die Bauarbeiten bereits beendet? Wurde die Einbahnstraßenregelung aufgehoben?)	? -7365,15306 -7155,15233 -6888,15139 -6861,15129
-Freiheit/Lüdersstr./Alter Markt: Einbahnstraßenregelung, offen Richtung Norden, vom 11.02.2019 bis voraussichtlich Ende 2019 (Wann wird die Einbahnstraßenregelung wieder aufgehoben?)	? 22196,4847 22377,4836 22388,4737 22390,4702 22395,4678 22426,4609 22446,4581 22458,4565 22495,4523
+Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019 (Wann ist die Sperrung beendet?)	? 14338,22885 14276,22914
 Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019, möglicherweise bis Ende 2019 (Ist die Unterführung noch immer gesperrt?)	? 3231,12749 3332,12742
 Bundesallee - Pariser Str.: direkter Durchgang wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Wann ist eine Durchfahrt wieder möglich?)	? 5416,9928 5464,9914
 Wuhlewanderweg nördlich des Bahnhofs Wuhletal: demnächst Baumaßnahme, Weg kann gesperrt sein (Haben die Bauarbeiten schon begonnen? Gibt es Einschränkungen für Radfahrer?)	? 22196,12961 22036,12367 21998,12204 21970,12153

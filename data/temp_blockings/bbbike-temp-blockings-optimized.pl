@@ -159,27 +159,7 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: before(1st_advent,1d) - +1d
-	2::xmas 9986,13412 10317,13248
-',
-         'from' => 1574982000,
-         'id' => 166,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              25,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (30.11.2019 - 01.12.2019)',
-         'type' => 'gesperrt',
-         'until' => 1575241199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -456,26 +436,7 @@ Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/ueber-den-bezirk/veranstaltungen/lichtenrader-lichtermarkt/
-	q4::xmas 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
-',
-         'from' => 1575068400,
-         'id' => 417,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              26,
-                              'months',
-                              11
-                            ]
-                          ],
-         'text' => 'Lichtenrader Lichtermarkt: Alt-Lichtenrade, Straße vermutlich gesperrt (am 1. Dezember 2019 von 13 bis 19 Uhr)',
-         'type' => 'gesperrt',
-         'until' => 1575226800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2608,7 +2569,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im November von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Dezember von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3356,27 +3317,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'type' => 'gesperrt',
          'until' => 1577055599
        },
-       {
-         'data' => '#: tempex: 1st_advent & T12-T19
-	2::xmas 11317,14564 11247,14578 11155,14554
-',
-         'from' => 1575111600,
-         'id' => 2518,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              26,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarkt-am-kollwitzplatz.html',
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 1. Dezember 2019, 12:00 bis 19:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1575223200
-       },
+       undef,
        {
          'data' => '#: tempex: 2nd_advent & T12-T19
 	2::xmas 11317,14564 11247,14578 11155,14554
@@ -4095,7 +4036,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2019-11-24
+#: last_checked: 2019-11-30
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -4381,7 +4322,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: add_fragezeichen: Wann ist die Sperrung beendet?
+#: next_check: 2020-02-29
+	2::inwork 14338,22885 14276,22914
+',
+         'from' => 1575349200,
+         'id' => 3043,
+         'source_id' => '2147343394',
+         'text' => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
        {
          'data' => '#: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.828319.php
@@ -4432,14 +4384,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: source_id: 2147343519 (mittlerweile "bis auf weiteres")
+#: note: laut fritz bis Ende Februar 2020
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 	2::inwork 14539,23306 14573,23295 14597,23280
 ',
          'from' => 1543258848,
          'id' => 3058,
-         'text' => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende 2019',
+         'text' => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende Februar 2020',
          'type' => 'gesperrt',
-         'until' => 1577811600
+         'until' => 1582995600
        },
        undef,
        undef,
@@ -4470,33 +4423,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: SALVADORALLENDEBRUECKE-2017
-#: by: https://www.berliner-woche.de/treptow-koepenick/c-verkehr/entlastungsstrecke-durch-die-altstadt-eingerichtet_a200395
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.782833.php
-#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.783009.php
-#: by: http://www.abendblatt-berlin.de/2019/02/08/altstadt-koepenick-im-dauerstress/
-#: by: https://twitter.com/VIZ_Berlin/status/1093887988222906369
-#: add_fragezeichen: Wann wird die Einbahnstraßenregelung wieder aufgehoben?
-#: source_id: 2147344699
-#: osm_watch: way id="25274116" version="19"
-#: osm_watch: way id="671101960" version="3"
-#: also_indoor: traffic (G,H)
-#: last_checked: 2019-11-23
-#: check_frequency: 7d
-	q4::temp; 22196,4847 22377,4836 22388,4737 22390,4702 22395,4678 22426,4609 22446,4581 22458,4565 22495,4523
-',
-         'from' => 1549774800,
-         'id' => 3070,
-         'text' => 'Freiheit/Lüdersstr./Alter Markt: Einbahnstraßenregelung, offen Richtung Norden, vom 11.02.2019 bis voraussichtlich Ende 2019',
-         'until' => 1577811600
-       },
+       undef,
        undef,
        undef,
        undef,
        {
          'data' => '#: also_indoor: traffic (H,G)
-#: osm_watch: way id="4597320" version="16"
+#: osm_watch: way id="4597320" version="17"
 # REMOVED (ja) --- #: XXX vor Ort anschauen, ggfs. nach handicap_s-orig verschieben
 	q4::inwork 8737,12098 8783,11959
 ',
@@ -4646,13 +4579,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2019-06-18
-#: next_check: 2019-12-02
+         'data' => '#: last_checked: 2019-11-30
+# REMOVED --- #: next_check: 2019-12-02
+#: check_frequency: 90d
 	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 ',
          'from' => undef,
          'id' => 3118,
-         'text' => 'Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang kann durch Tor und Bauzaun gesperrt sein',
+         'text' => 'Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Tor und Bauzaun gesperrt',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4832,9 +4766,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1567288800,
          'id' => 3149,
          'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.837476.php',
-         'text' => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis voraussichtlich 30.11.2019 ',
+         'text' => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis Dezember 2019',
          'type' => 'gesperrt',
-         'until' => 1575154800
+         'until' => 1577833199
        },
        undef,
        {
@@ -5050,7 +4984,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-11-29
+#: last_checked: 2019-12-02
 # REMOVED --- #: next_check: 2019-11-25
 #: check_frequency: 14d
 	q3::inwork 13711,11458 13895,11663
@@ -5061,18 +4995,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: 2147345034 (bis Anfang Dezember 2019)
-	q4::inwork 12442,20805 12337,20954 12298,21015 12257,21079 12202,21158 12166,21208
-	q4::inwork 12158,21166 12202,21158
-',
-         'from' => 1572735600,
-         'id' => 3181,
-         'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/bahnhofstraße-blankenburg-vollsperrung-·-fahrbahnsanierung',
-         'text' => 'Bahnhofstr.: zwischen Pasewalker Str. und Blankenburger Str. Bauarbeiten, Fahrbahn gesperrt, evtl. können Radfahrer passieren, vom 4.11.2019 bis 2.12.2019',
-         'type' => 'handicap',
-         'until' => 1575255600
-       },
+       undef,
        undef,
        {
          'data' => '	q4::inwork 3166,25496 3076,25456 2882,25375 2744,25314 2713,25300 2683,25238
@@ -5138,7 +5061,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2019-11-27 (Flatterband, Sandhaufen)
+#: last_checked: 2019-12-01 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 ',
