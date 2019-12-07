@@ -24821,7 +24821,7 @@ EOF
 EOF
      },
      { from  => 1443650400, # 2015-10-01 00:00
-       until => $isodate2epoch->("2019-12-06 18:00:00"), # 1554746070, # Radverkehr mittlerweile frei -> stimmt nicht! --- $isodate2epoch->("2019-07-31 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
+       until => undef, # "bis auf weiteres" --- $isodate2epoch->("2019-12-06 18:00:00"), # 1554746070, # Radverkehr mittlerweile frei -> stimmt nicht! --- $isodate2epoch->("2019-07-31 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
        text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, Fahrbahn stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende November 2019',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
@@ -24833,10 +24833,12 @@ EOF
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
 # REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
-#: osm_watch: way id="57401090" version="15"
 #: next_check_id: SEEGEFELDERWEG-2016
+#: osm_watch: way id="57401090" version="15"
 #: source_id: 2147342198 (bis Anfang Dezember 2019)
 #: source_id: 2147344827
+#: last_checked: 2019-10-06 (mapillary)
+#: check_frequency: 90d
 	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 EOF
      },
@@ -26890,7 +26892,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-11-21 vvv
+#: last_checked: 2019-12-06 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -28414,13 +28416,12 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2019-12-03 06:00:00"), # 1540930270, # 2018-10-30 21:11
-       until => undef, # 1543014000, # 2018-11-24 00:00
-       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019',
+       until => $isodate2epoch->("2020-12-20 23:59:59"), # undef, # 1543014000, # 2018-11-24 00:00
+       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019 bis 20. Dezember 2019',
        type  => 'gesperrt',
-       source_id => '2147343394',
+       source_id => '2147343394', # hier bis Ende Dezember 2019; laut fritz bis 2019-12-20
        data  => <<EOF,
-#: add_fragezeichen: Wann ist die Sperrung beendet?
-#: next_check: 2020-02-29
+# REMOVED --- #: add_fragezeichen: Wann ist die Sperrung beendet? --- #: next_check: 2020-02-29
 	2::inwork 14338,22885 14276,22914
 EOF
      },
@@ -28606,8 +28607,8 @@ EOF
        data  => <<EOF,
 #: source_id: 2147343528 (bis Mitte September 2019)
 #: note: bei fritz in beiden Richtungen gesperrt?
-# REMOVED (sogar Autos dürfen in beide Richtungen fahren) ---	q3::inwork; 7263,14873 7458,14643
-	q3::inwork 7263,14873 7432,14969
+# REMOVED (sogar Autos dürfen in beide Richtungen fahren) ---	q3::inwork; 7259,14870 7308,14814 7353,14767 7429,14667 7458,14643
+	q3::inwork 7259,14870 7432,14969
 EOF
      },
      { from  => 1544425200, # 2018-12-10 08:00
@@ -29159,7 +29160,7 @@ EOF
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-10-26 (mapillary)
+#: last_checked: 2019-12-01 (mapillary)
 #: check_frequency: 60d
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
@@ -29591,21 +29592,23 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Prinzregentenstr./Varziner Str./Handjerystr.: im Kreuzungsbereich Bauarbeiten, auf Gehweg ausweichen, Ende der Bauarbeiten unbekannt',
+       text  => 'Handjerystr.: südlich der Einmündung Varziner Str. Bauarbeiten, auf Gehweg ausweichen, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX_prog: eigentlich q3+
 #: by: srt, Thomas Gries
 #: by: https://www.berliner-woche.de/friedenau/c-verkehr/regelung-des-fuss-und-radverkehrs-erst-nach-elf-tagen_a227446 (Änderungen)
 #: also_indoor: traffic
-#: XXX Wann werden die Bauarbeiten beendet? vvv
+#: add_fragezeichen: Sind die Bauarbeiten in der Handjerystraße bereits beendet? vvv
+#: priority: #A vvv
 #: last_checked: 2019-11-03 vvv
 # REMOVED (nicht mehr) --- #: note: hier gibt's mittlerweile auch Drängelgitter
 	q3::inwork 5636,7734 5630,7875
 # REMOVED ---	q3::inwork 5630,7875 5631,8011
 # REMOVED (keine großen Einschräkungen) --- #: note: hier mittlerweile offizielle Wegführung auf dem Gehweg ---	q2::inwork 5630,7875 5517,7869
+#: priority ^^^
 #: last_checked ^^^
-#: XXX ^^^
+#: add_fragezeichen ^^^
 EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-03-31 00:00:00") }, # 1 Tag Vorlauf
@@ -29763,7 +29766,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-11-21
+#: last_checked: 2019-12-04
 #: check_frequency: 14d
 	2::inwork 13092,11712 13175,11649 13239,11567
 	2::inwork 13175,11649 13208,11658
@@ -30026,7 +30029,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-12-02
+#: last_checked: 2019-12-06
 # REMOVED --- #: next_check: 2019-11-25
 #: check_frequency: 14d
 	q3::inwork 13711,11458 13895,11663

@@ -1849,8 +1849,8 @@ Mittelstreifen	3nocross::ignrte 7820,13994 7865,13924 7910,13848 7973,13743
 Heidestr. -> Lydia-Rabinowitsch-Str.: Mittelstreifen	3::igndisp 7820,13994 7865,13924 7973,13991
 Lydia-Rabinowitsch-Str. -> Heidestr.: Mittelstreifen	3::igndisp 7973,13991 7865,13924 7910,13848
 Mittelstreifen	3nocross::ignrte 7652,14257 7697,14187 7732,14131
-Heidestr. -> Hedwig-Porschütz-Str.: Mittelstreifen	3::igndisp 7652,14257 7697,14187 7802,14250
-Hedwig-Porschütz-Str. -> Heidestr.: Mittelstreifen	3::igndisp 7802,14250 7697,14187 7732,14131
+Heidestr. -> Hedwig-Porschütz-Str.: Mittelstreifen	3::igndisp 7652,14257 7697,14187 7781,14238
+Hedwig-Porschütz-Str. -> Heidestr.: Mittelstreifen	3::igndisp 7781,14238 7697,14187 7732,14131
 Mittelstreifen	3nocross::ignrte -3789,13519 -3764,13613 -3716,13724
 Klosterstr. -> Diedenhofener Str.: Mittelstreifen	3::igndisp -3716,13724 -3764,13613 -3672,13597
 Diedenhofener Str. -> Klosterstr.: Mittelstreifen	3::igndisp -3672,13597 -3764,13613 -3789,13519
@@ -1916,7 +1916,8 @@ Im Waldwinkel	1 184,22257 231,22418
 Beyschlagstr.	1 21,22545 5,22384 184,22257
 Beyschlagstr.	1 408,22184 184,22257
 Petriplatz -> Gertraudenstr.: Abbiegen verboten	3 10418,12016 10460,11979 10512,12039
-Schmohlstr.	1 13239,17269 13196,17223 13159,17196 13057,17120
+Schmohlstr.	1 13196,17223 13159,17196
+Schmohlstr.	1 13159,17196 13057,17120
 Kiehlufer	1 12913,9353 12901,9340 12895,9323
 Naumannstr.	1 7709,8777 7707,8915
 Schulenburgring	1 9030,8431 9028,8584 9011,8605

@@ -3727,10 +3727,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
 # REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
-#: osm_watch: way id="57401090" version="15"
 #: next_check_id: SEEGEFELDERWEG-2016
+#: osm_watch: way id="57401090" version="15"
 #: source_id: 2147342198 (bis Anfang Dezember 2019)
 #: source_id: 2147344827
+#: last_checked: 2019-10-06 (mapillary)
+#: check_frequency: 90d
 	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 ',
          'from' => 1443650400,
@@ -3738,7 +3740,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
          'text' => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, Fahrbahn stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende November 2019',
          'type' => 'handicap',
-         'until' => 1575651600
+         'until' => undef
        },
        undef,
        undef,
@@ -4078,7 +4080,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-11-21 vvv
+#: last_checked: 2019-12-06 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4323,16 +4325,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: add_fragezeichen: Wann ist die Sperrung beendet?
-#: next_check: 2020-02-29
+         'data' => '# REMOVED --- #: add_fragezeichen: Wann ist die Sperrung beendet? --- #: next_check: 2020-02-29
 	2::inwork 14338,22885 14276,22914
 ',
          'from' => 1575349200,
          'id' => 3043,
          'source_id' => '2147343394',
-         'text' => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019',
+         'text' => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019 bis 20. Dezember 2019',
          'type' => 'gesperrt',
-         'until' => undef
+         'until' => 1608505199
        },
        {
          'data' => '#: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
@@ -4536,7 +4537,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-10-26 (mapillary)
+#: last_checked: 2019-12-01 (mapillary)
 #: check_frequency: 60d
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
@@ -4712,18 +4713,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: srt, Thomas Gries
 #: by: https://www.berliner-woche.de/friedenau/c-verkehr/regelung-des-fuss-und-radverkehrs-erst-nach-elf-tagen_a227446 (Änderungen)
 #: also_indoor: traffic
-#: XXX Wann werden die Bauarbeiten beendet? vvv
+#: add_fragezeichen: Sind die Bauarbeiten in der Handjerystraße bereits beendet? vvv
+#: priority: #A vvv
 #: last_checked: 2019-11-03 vvv
 # REMOVED (nicht mehr) --- #: note: hier gibt\'s mittlerweile auch Drängelgitter
 	q3::inwork 5636,7734 5630,7875
 # REMOVED ---	q3::inwork 5630,7875 5631,8011
 # REMOVED (keine großen Einschräkungen) --- #: note: hier mittlerweile offizielle Wegführung auf dem Gehweg ---	q2::inwork 5630,7875 5517,7869
+#: priority ^^^
 #: last_checked ^^^
-#: XXX ^^^
+#: add_fragezeichen ^^^
 ',
          'from' => undef,
          'id' => 3144,
-         'text' => 'Prinzregentenstr./Varziner Str./Handjerystr.: im Kreuzungsbereich Bauarbeiten, auf Gehweg ausweichen, Ende der Bauarbeiten unbekannt',
+         'text' => 'Handjerystr.: südlich der Einmündung Varziner Str. Bauarbeiten, auf Gehweg ausweichen, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -4812,7 +4815,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-11-21
+#: last_checked: 2019-12-04
 #: check_frequency: 14d
 	2::inwork 13092,11712 13175,11649 13239,11567
 	2::inwork 13175,11649 13208,11658
@@ -4984,7 +4987,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-12-02
+#: last_checked: 2019-12-06
 # REMOVED --- #: next_check: 2019-11-25
 #: check_frequency: 14d
 	q3::inwork 13711,11458 13895,11663

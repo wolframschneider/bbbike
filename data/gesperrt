@@ -857,6 +857,7 @@ Görlitzer Park	1::igndisp 12464,10153 12504,10172
 Müggelheimer Damm	2::igndisp 23476,3829 23368,3894
 B2	2::igndisp -13096,5584 -12865,5567 -12718,5571
 Glienicker Str. (Köpenick): Radweg	1::igndisp 21363,3699 21308,3644
+Nordufer: Radweg	1::igndisp 7156,14763 7129,14787
 Türkstr.	1 -12226,-1069 -12187,-1092
 Türkstr.	1 -12187,-1092 -12248,-1107
 (Wollestr. - Mühlenstr.)	1 -10790,-1178 -10787,-1162 -10730,-1103 -10691,-1097 -10648,-1130
@@ -3139,7 +3140,6 @@ Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:inwork 9042,11839 8969
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7636,14414 7612,14449 7551,14464
 Kieler Brücke und Zuwegungen: gesperrt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409 7780,14431
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12565,9200 12548,9167
-Hedwig-Porschütz-Str.: noch gesperrt	2::inwork 7652,14257 7757,14318 7802,14250 7697,14187
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
@@ -3147,7 +3147,6 @@ wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::ignrte::inwork 9984
 Niederlagstr. -> Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3::igndisp::inwork 9943,12364 9934,12420 9858,12410
 Unter den Linden -> Niederlagstr.: wegen Bauarbeiten ist das Überqueren nicht möglich	3::igndisp::inwork 9984,12426 9934,12420 9943,12364
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
-Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738 7139,14785
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, voraussichtlich bis Ende 2022	2:inwork 8106,13130 8102,13304 8098,13419
 B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich des alten Flughafens	2:inwork 18578,-1538 18688,-1498 18781,-1533 18853,-1656 18866,-1674
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
