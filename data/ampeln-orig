@@ -11,7 +11,7 @@
 #: note: Baustellenampel in der Neuen Roßstr.
 #: source_id: 2147345021 (bis Juli 2020)
 #: XXX bis Mitte 2020
-#: last_checked: 2019-11-26
+#: last_checked: 2019-12-11
 #: valid: -20200715
 	X::inwork 10780,11721
 # 
@@ -23,12 +23,7 @@
 #: valid: -20200201
 	X::inwork 12556,15518
 # 
-#: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer
-#: source_id: 2147344652 (bis Mitte Dezember 2019)
-#: last_checked: 2019-11-30
-#: next_check: 2019-12-13
-#: valid: 20190822-20191213
-	X::inwork 16425,6445
+# REMOVED --- #: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer --- #: source_id: 2147344652 (bis Mitte Dezember 2019) --- #: last_checked: 2019-11-30 --- #: next_check: 2019-12-13 --- #: valid: 20190822-20191213 ---	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
 #: last_checked: 2019-11-27 vvv
@@ -46,13 +41,13 @@
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/bis-sommer-muessen-sich-autofahrer-auf-staus-und-umwege-einstellen_a197767
 #: source_id: 2147342588
 #: source_id: 2147343616
-#: source_id: 2147343616 (bis Ende Januar 2020)
+#: source_id: 2147343616 (bis Ende April 2020)
 #: note: eigentlich zwei Ampeln, Radfahrer in Richtung Osten müssen eine Anforderung bedienen
 #: XXX Ende Januar 2020 wird voraussichtlich die Sperrung des Gleimtunnels für Autos aufgehoben, dann vermutlich auch keine Ampel mehr
 #: last_checked: 2019-10-06 (mapillary)
-#: next_check: 2020-01-31
+#: next_check: 2020-04-30
 #: priority: #B
-#: valid: -20200131
+#: valid: -20200430
 	X::inwork 10130,15653
 # 
 #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/bauarbeiten-in-pilgramer-strasse_a197302
@@ -572,7 +567,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2361,9664
 #: note: Anforderung für Radfahrer Richtung Süden
 	X 1928,10728
-#: note: Anforderung für Radfahrer
+#: note: Anforderung für Radfahrer Richtung Westen
+#: XXX_prog: für Radfahrer zwei Ampeln Richtung Osten und Süden, Richtung Osten gegeneinander geschaltet, Richtung Süden evtl. zusammen geschaltet
 	X 2011,11046
 	F 2037,11122
 	X 1532,11280
@@ -852,6 +848,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14639,11512
 	X 14575,11407
 	X 7086,8579
+#: note: Kontaktschleifen in der Nebenstraßenrelation
 	X 6144,7677
 	X 5370,6486
 	X 5312,6382
@@ -1103,6 +1100,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5248,13434
 	X 5368,13406
 	X 5907,16000
+	F 5651,16507
 	X 3644,10759
 	X 1229,18750
 	X 2268,19919
@@ -2584,7 +2582,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: XXX Ampel wird auf die andere Seite der Paul-Junius-Str. verlegt
 #: osm_watch: node id="6382841426" version="1"
-#: last_checked: 2019-11-18
+#: last_checked: 2019-12-11
 #: check_frequency: 14d
 	F 15074,12850
 # 
@@ -2806,13 +2804,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2019-12-06
+#: last_checked: 2019-12-11
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2019-11-20 vvv
+#: last_checked: 2019-12-13 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2939,7 +2937,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20191231 vvv
-#: last_checked: 2019-11-12 (teilweise mit webcam) vvv
+#: last_checked: 2019-12-12 vvv
 #: check_frequency: 30d vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
 	F::inwork 14567,6810
@@ -2958,10 +2956,10 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20191231 vvv
-#: last_checked: 2019-11-14
+#: last_checked: 2019-12-12
 	X::inwork 13278,6967
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2019-11-14
+#: last_checked: 2019-12-12
 	X::inwork 13627,7047
 #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren
 	X0::inwork 14011,7103
@@ -3128,7 +3126,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2019-11-03
+#: last_checked: 2019-12-13
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -3279,7 +3277,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2019-12-01 vvv
+#: last_checked: 2019-12-12 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
@@ -3890,6 +3888,7 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	B 26430,-7173
 	B 26652,-8493
 	X 27454,-12435
+	B -59520,59145
 # 
 #: note: ^^^
 ################################################################################

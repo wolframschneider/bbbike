@@ -20030,7 +20030,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_017752',
        data  => <<EOF,
-	q4::temp 3123,10504 3111,10116
+	q4::temp 3123,10504 3119,10386 3111,10116
 EOF
      },
      { from  => 1315465200, # 2011-09-08 09:00
@@ -22858,7 +22858,7 @@ EOF
        data  => <<EOF,
 #: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
 #: osm_watch: way id="43141418" version="13" brb
-#: last_checked: 2019-06-08
+#: last_checked: 2019-12-07
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
 EOF
@@ -24604,14 +24604,14 @@ EOF
 	q4; 15205,11080 15102,11120 15021,11152 14988,11130
 EOF
      },
-     { from  => $isodate2epoch->("2019-07-01 08:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-07-04 23:59:59"),
+     { from  => $isodate2epoch->("2020-01-12 08:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2020-01-17 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6]],
-       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 02.07.2019-04.07.2019',
+       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 13.01.2020-17.01.2020',
        type  => 'handicap',
-       source_id => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termine-fuer-2019-stehen-fest.html',
+       source_id => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termin-fuer-januar-2020.html',
        data  => <<EOF,
 #: source_id: 2147343639
 #: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
@@ -24821,24 +24821,19 @@ EOF
 EOF
      },
      { from  => 1443650400, # 2015-10-01 00:00
-       until => undef, # "bis auf weiteres" --- $isodate2epoch->("2019-12-06 18:00:00"), # 1554746070, # Radverkehr mittlerweile frei -> stimmt nicht! --- $isodate2epoch->("2019-07-31 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
+       until => 1575913747, # undef, # "bis auf weiteres" --- $isodate2epoch->("2019-12-06 18:00:00"), # 1554746070, # Radverkehr mittlerweile frei -> stimmt nicht! --- $isodate2epoch->("2019-07-31 18:00:00"), # undef, # 1483225199, # 2016-12-31 23:59
        text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Straße 603 und Finkenkruger Weg, Fahrbahn stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich Ende November 2019',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
        data  => <<EOF,
 # REMOVED --- #: source_id: IM_026411 --- #: source_id: 2147339562 --- #: source_id: LMS-BR_r_LMS-BR_51041 --- #: source_id: 2147342003 --- #: source_id: LMS-BR_r_LMS-BR_121392_LMS-BR_72 --- #: source_id: 2147342842 --- #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3 --- #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019) --- #: by: https://www.berliner-woche.de/falkenhagener-feld/c-verkehr/strassenbau-geht-weiter_a202396 (bis März 2019 plus vier Wochen) --- #: XXX laut fritz bis 31.07.2019, laut vmz Gesamtmaßnahme bis Ende Juli 2019 --- #: last_checked: 2018-10-12
-#: add_fragezeichen: Sind die Bauarbeiten bereits beendet? Wurde die Einbahnstraßenregelung aufgehoben?
+# REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten bereits beendet? Wurde die Einbahnstraßenregelung aufgehoben?
 # REMOVED --- #: next_check: 2019-07-31
 # REMOVED --- #: next_check: 2019-04-05
 # REMOVED ---	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 # REMOVED ---	q3::inwork; -6861,15129 -6507,15007
 # REMOVED ---	q3::inwork; -7155,15233 -6888,15139 -6861,15129
-#: next_check_id: SEEGEFELDERWEG-2016
-#: osm_watch: way id="57401090" version="15"
-#: source_id: 2147342198 (bis Anfang Dezember 2019)
-#: source_id: 2147344827
-#: last_checked: 2019-10-06 (mapillary)
-#: check_frequency: 90d
+# REMOVED --- #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2019/pressemitteilung.873535.php (Bauarbeiten wurden beendet) --- #: next_check_id: SEEGEFELDERWEG-2016 --- #: osm_watch: way id="57401090" version="15" --- #: source_id: 2147342198 (bis Anfang Dezember 2019) --- #: source_id: 2147344827 --- #: last_checked: 2019-10-06 (mapillary) --- #: check_frequency: 90d
 	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
 EOF
      },
@@ -25854,7 +25849,7 @@ EOF
 # REMOVED (Sperrung beendet) --- #: add_fragezeichen: Sind die Bauarbeiten beendet und der Weg freigegeben? vvv --- #: osm_watch: way id="136814135" version="15" vvv --- #: last_checked: 2017-08-16 vvv --- #: check_frequency: 14d vvv
 # REMOVED (hier nicht) ---	2::inwork 3332,12742 3396,12741
 # REMOVED (hier nicht) ---	2::inwork 3396,12741 3370,12725
-	2::inwork 3396,12741 3416,12738 3507,12725 3586,12697 3643,12671 3748,12627 3836,12614
+	2::inwork 3396,12741 3416,12738 3445,12733 3507,12725 3586,12697 3643,12671 3748,12627 3836,12614
 	2::inwork 3741,12607 3643,12671
 EOF
      },
@@ -26496,7 +26491,7 @@ EOF
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-11-08
+#: last_checked: 2019-12-11
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -26892,7 +26887,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-12-06 vvv
+#: last_checked: 2019-12-13 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27856,7 +27851,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-11-29
+#: last_checked: 2019-12-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28437,7 +28432,7 @@ EOF
 #: note: laut fritz bis 31.03.2020
 #: osm_watch: way id="705182550" version="1"
 #: osm_watch: way id="705182551" version="1"
-#: last_checked: 2019-11-20 vvv
+#: last_checked: 2019-12-07 vvv
 #: next_check: 2020-03-31 vvv
 #: source_id: 2147344480
 # REMOVED (ja, aber Gehweg ist noch frei) --- #: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
@@ -29348,9 +29343,9 @@ EOF
 # REMOVED (provisorischer Radstreifen) --- #: XXX außerdem "der östliche Gehweg ist gesperrt" --- was bedeutet das für den Radverkehr?
 #: priority: #A
 #: add_fragezeichen: Ist die Unterführung noch immer gesperrt?
-#: last_checked: 2019-11-03
+#: last_checked: 2019-12-08
 # REMOVED --- #: next_check: 2019-10-30
-#: check_frequency: 14d
+#: check_frequency: 21d
 	2::inwork 3231,12749 3332,12742
 EOF
      },
@@ -29415,9 +29410,9 @@ EOF
 #: also_indoor: traffic (GH)
 #: XXX periodisch anschauen vvv
 #: priority: #B vvv
-#: last_checked: 2019-11-26 vvv
+#: last_checked: 2019-12-11 vvv
 #: check_frequency: 14d vvv
-#: next_check: 2019-12-16 vvv
+#: next_check: 2019-12-13 vvv
 	q4::inwork; 13745,12118 14045,11965 14161,11930 14306,11889 14416,11815 14461,11738
 	q4::inwork; 14461,11738 14513,11657 14561,11600 14570,11589 14639,11512
 # REMOVED ---	2::inwork 14461,11738 14416,11815
@@ -29601,13 +29596,15 @@ EOF
 #: also_indoor: traffic
 #: add_fragezeichen: Sind die Bauarbeiten in der Handjerystraße bereits beendet? vvv
 #: priority: #A vvv
-#: last_checked: 2019-11-03 vvv
+#: last_checked: 2019-12-08 vvv
+#: check_frequency: 14d vvv
 # REMOVED (nicht mehr) --- #: note: hier gibt's mittlerweile auch Drängelgitter
 	q3::inwork 5636,7734 5630,7875
 # REMOVED ---	q3::inwork 5630,7875 5631,8011
 # REMOVED (keine großen Einschräkungen) --- #: note: hier mittlerweile offizielle Wegführung auf dem Gehweg ---	q2::inwork 5630,7875 5517,7869
-#: priority ^^^
 #: last_checked ^^^
+#: check_frequency ^^^
+#: priority ^^^
 #: add_fragezeichen ^^^
 EOF
      },
@@ -29710,13 +29707,13 @@ EOF
      },
      { from  => undef, # 
        until => 1576882800, # 2019-12-21 00:00
-       text  => 'Torfhaus - Hennickendorf: Sperrung der Fahrbahn, auch für Radfahrer, möglicherweise bis zum 20.12.2019',
+       text  => 'Torfhaus - Hennickendorf: Sperrung der Fahrbahn, auch für Radfahrer, möglicherweise bis zum September 2020',
        type  => 'gesperrt',
        source_id => 'LS/721-F/17/002',
        data  => <<EOF,
 #: source_id: LS/721-F/18/080
 #: XXX wird hier ein neuer Radweg gebaut?
-#: next_check: 2019-12-20
+#: next_check: 2020-09-09
 	2::inwork 40363,12020 40362,12087 40565,12409
 EOF
      },
@@ -29807,13 +29804,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1576262444, # undef, # XXX
        text  => 'Oranienstr. - Kommandantenstr.: Zufahrt kann wegen Renovierungsarbeiten gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05, 2019-11-14)
-#: last_checked: 2019-11-29
-#: check_frequency: 14d
+# REMOVED (Renovierungsarbeiten beendet) --- #: XXX wann kann man hier wieder (dauerhaft) durch? (passierbar: 2019-11-05, 2019-11-14) --- #: last_checked: 2019-11-29 --- #: check_frequency: 14d
 	2::inwork 10593,11120 10633,11051
 EOF
      },
@@ -29963,9 +29958,9 @@ EOF
 #: priority: #A
 # REMOVED (closed) --- #: osm_watch: note 1960975 3
 #: osm_watch: way id="483261580" version="2"
-#: XXX es gibt einen engen Umweg über Meierottostr., Bordstein
+#: XXX es gibt einen engen Umweg über Meierottostr., theoretisch mit Anrampung, kann aber zugeparkt sein
 #: add_fragezeichen: Wann ist eine Durchfahrt wieder möglich?
-#: last_checked: 2019-11-03
+#: last_checked: 2019-12-08
 #: check_frequency: 30d
 	2::inwork 5416,9928 5464,9914
 EOF
@@ -30029,7 +30024,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LIBAUER-2019
 #: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-12-06
+#: last_checked: 2019-12-13
 # REMOVED --- #: next_check: 2019-11-25
 #: check_frequency: 14d
 	q3::inwork 13711,11458 13895,11663
@@ -30149,11 +30144,14 @@ EOF
 EOF
      },
      { from  => 1574189084, # 2019-11-19 19:44
-       until => $isodate2epoch->("2019-12-07 18:00:00"), # 1576429200, # 2019-12-15 18:00
+       until => undef, # $isodate2epoch->("2019-12-07 18:00:00"), # 1576429200, # 2019-12-15 18:00
        text  => 'Fredersdorfer Str.: Einbahnstraße in einem Teilabschnitt, offen Richtung Marchlewskistr., bis Mitte Dezember 2019',
        type  => 'handicap',
        source_id => '2147345145',
        data  => <<EOF,
+#: add_fragezeichen: Wann wird die Einbahnstraßenregelung aufgehoben?
+#: last_checked: 2019-12-12
+#: check_frequency: 7d
 	q3::inwork; 13075,12207 12923,12043 12891,12008
 EOF
      },
@@ -30180,6 +30178,17 @@ EOF
 #: last_checked: 2019-12-01 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Perelsplatz: Parkweg gesperrt, Ende der Sperrung unbekannt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: PERELSPLATZ-2019
+#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
+#: last_checked: 2019-12-08
+	2::inwork 5809,7712 5636,7709
 EOF
      },
     );

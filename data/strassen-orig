@@ -895,7 +895,7 @@ Straße des 17. Juni	HH 4905,11785 5141,11816 5381,11847 5478,11860 5565,11871 57
 Straße des 17. Juni	HH 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
 Ernst-Reuter-Platz	HH 4838,11697 4885,11735 4905,11785 4854,11843 4763,11834 4737,11768 4781,11708 4838,11697
 (Charlottenburger Ufer - Uferweg)	NN 3370,12725 3396,12741
-(Rad- und Wanderweg an Spree und Landwehrkanal)	NN 3332,12742 3396,12741 3416,12738 3507,12725 3586,12697 3643,12671 3748,12627 3836,12614 3867,12616 3888,12618 4131,12641 4340,12578 4441,12578 4529,12570 4642,12491 4817,12366 5045,12243 5144,12146 5259,11995 5337,11949 5361,11910
+(Rad- und Wanderweg an Spree und Landwehrkanal)	NN 3332,12742 3396,12741 3416,12738 3445,12733 3507,12725 3586,12697 3643,12671 3748,12627 3836,12614 3867,12616 3888,12618 4131,12641 4340,12578 4441,12578 4529,12570 4642,12491 4817,12366 5045,12243 5144,12146 5259,11995 5337,11949 5361,11910
 (Uferweg)	NN 4242,12684 4206,12691 4147,12699 3938,12687 3862,12675 3747,12679 3641,12753 3559,12793 3572,12866 3547,12864 3510,12809 3444,12804
 (Uferweg - Sömmeringstr.)	NN 3572,12866 3574,12916 3716,12925
 (Am Spreebord - Uferweg)	NN 4234,12710 4206,12691
@@ -1182,7 +1182,7 @@ Edith-Kiss-Str.	N 12793,11132 12866,11256
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="4"
 #: priority: #C
-#: last_checked: 2019-11-20
+#: last_checked: 2019-12-13
 #: next_check: 2023-01-01
 (Planstraße C)	N 12926,11224 12848,11093
 # 
@@ -2190,12 +2190,12 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/a100-baustelle-grenzallee-wieder-offen_a198400
 #: source_id: 2147343691
 #: XXX bis Ende 2022
-#: last_checked: 2019-10-15
+#: last_checked: 2019-12-12
 #: next_check: 2019-12-31
 (provisorische Umfahrung)	NN 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2019-11-12 vvv
+#: last_checked: 2019-12-12 vvv
 #: check_frequency: 30d vvv
 #: valid: 20140224-20191231
 Neuköllnische Allee	H 14344,7003 14567,6810 14724,6668
@@ -2350,7 +2350,7 @@ Straße 12 (Neukölln)	N 13883,6682 13881,6634 13915,6592
 (Grenzallee - Britzer Hafensteg)	NN 13881,6634 13831,6588 13857,6523 13864,6415 13984,6270 13993,6221
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
-#: last_checked: 2019-11-14 vvv
+#: last_checked: 2019-12-12 vvv
 #: next_check: 2019-12-31 vvv
 #: valid: 20140224-20191231
 Naumburger Str.	H 13278,6967 13520,6583
@@ -3698,7 +3698,7 @@ Damaschkestr.	NN 3492,10307 3562,10264
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20100608.1320.298503.html
 #: by: http://farm5.static.flickr.com/4154/4975933461_245ec94013_m.jpg
 Kracauerplatz	H 3093,10594 3108,10548 3123,10504
-Joachim-Friedrich-Str.	H 3123,10504 3111,10116 3108,10069 3092,9886 3083,9796 3069,9622 3067,9592
+Joachim-Friedrich-Str.	H 3123,10504 3119,10386 3111,10116 3108,10069 3092,9886 3083,9796 3069,9622 3067,9592
 Johann-Georg-Str.	N 3108,10069 3170,10041 3348,9806
 Westfälische Str.	H 2770,10024 2825,9971 2938,9935 3092,9886 3225,9844 3348,9806 3427,9771 3471,9754 3583,9690 3698,9624 3813,9566 3905,9523 4011,9474 4193,9404 4246,9406
 Bornstedter Str.	N 2590,9949 2551,9995 2488,10053 2390,10092 2245,10092
@@ -3754,7 +3754,7 @@ Sophie-Charlotten-Str.	H 2609,11503 2583,11613 2566,11708 2547,11788 2489,12014 
 Sophie-Charlotten-Str.	N 2411,12428 2397,12513 2350,12784 2295,13031 2293,13112 2343,13324 2439,13389
 Wundtstr.	N 2254,11051 2272,11074 2346,11147 2365,11179 2417,11254 2623,11385
 Wundtstr.	NN 2623,11385 2764,11500
-Wundtstr.	N 2764,11519 2793,11547 2905,11653 2934,11747 2953,11830
+Wundtstr.	N 2764,11519 2793,11547 2888,11670 2934,11747 2956,11790 2953,11830
 Wundtstr.	N 2272,11074 2243,11107
 Nehringstr.	N 2953,11830 2924,12047 2899,12200 2895,12217 2888,12292
 Kuno-Fischer-Str.	N 2621,11065 2679,10931 2766,10750
@@ -3766,7 +3766,7 @@ Spandauer Damm	HH 3279,12533 3177,12522 3033,12509 2795,12480 2744,12474 2715,12
 Knobelsdorffstr.	N 3117,11852 2953,11830 2728,11805 2547,11788
 Knobelsdorffstr.	H 2547,11788 2446,11776 2330,11762 2279,11757 2236,11753 2197,11757 2154,11762 2058,11756 1747,11719
 Danckelmannstr.	N 2658,12312 2672,12190 2689,12042 2728,11805 2739,11730 2764,11519
-Horstweg	N 3144,11659 2905,11653 2828,11731 2739,11730 2566,11708
+Horstweg	N 3144,11659 2905,11653 2888,11670 2828,11731 2739,11730 2566,11708
 Vereinsweg (Charlottenburg)	NN 2828,11731 2855,11752 2907,11755 2934,11747
 Christstr.	N 2460,12163 2672,12190 2895,12217
 Neue Christstr.	N 2899,12200 3072,12222
@@ -3776,6 +3776,7 @@ Gierkeplatz	N 3478,12306 3456,12296 3447,12269 3463,12237 3493,12228 3521,12243 
 Gierkezeile	N 3472,12447 3478,12306
 Gierkezeile	N 3493,12228 3495,12185 3507,12076 3514,11988 3528,11852 3539,11784
 Lohmeyerstr.	N 3348,12314 3416,12473 3454,12607 3450,12722
+(Lohmeyerstr. - Uferweg)	NN 3450,12722 3445,12733
 Eosanderstr.	N 3612,12377 3606,12484 3600,12552 3454,12607 3344,12611
 Eosanderstr.	NN 3344,12611 3271,12609
 Charlottenburger Ufer	N 3741,12607 3597,12681 3450,12722 3370,12725 3291,12721
@@ -3916,7 +3917,7 @@ Buchholzweg	N 4535,15530 4466,15350 4389,15336
 #: add_fragezeichen: Wurde die Umbenennung zu "Cornelius-Fredericks-Str." schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: also_indoor: search Cornelius-Fredericks-Straße
 #: osm_watch: way id="247340732" version="15"
-#: last_checked: 2019-11-21
+#: last_checked: 2019-12-13
 Lüderitzstr.	N 6661,15921 6484,16085 6349,16213 6211,16343 6106,16433 6003,16521
 Sansibarstr.	N 6201,16538 6106,16433 6005,16313 5827,16118
 Otawistr.	N 6098,16630 6003,16521 5906,16403 5748,16235
@@ -3927,7 +3928,7 @@ Sambesistr.	N 5968,15914 5787,15741
 Ugandastr.	N 6071,15768 5906,15623
 Tangastr.	N 6121,15697 5961,15562
 (Dohnagestell - Tangastr.)	NN 5553,15271 5722,15332 5802,15399 5889,15457 5961,15562
-Afrikanische Str.	H 6239,15553 6127,15688 6121,15697 6071,15768 6019,15841 5968,15914 5907,16000 5827,16118 5748,16235 5596,16662 5581,16708 5561,16767 5526,16916 5479,17108 5473,17148 5490,17173
+Afrikanische Str.	H 6239,15553 6127,15688 6121,15697 6071,15768 6019,15841 5968,15914 5907,16000 5827,16118 5748,16235 5651,16507 5596,16662 5581,16708 5561,16767 5526,16916 5479,17108 5473,17148 5490,17173
 Kapweg	H 5295,17344 5250,17318 5034,17322
 Teichstr.	N 6377,17854 6383,18033 6403,18289 6418,18491 6432,18682
 (Am Friedhof)	NN 6377,17854 6375,17755 6370,17696 6347,17381
@@ -6426,6 +6427,10 @@ Hedwigstr. (Alt-Hohenschönhausen)	N 16616,16046 16505,16096 16520,16200
 Gembitzer Str.	N 16815,16214 16889,16378 16948,16482 17056,16558
 Amtsstr.	N 22419,4457 22495,4523
 #: note Gebiet um den Alten Markt, Lüdersstr., Katzengraben, Freiheit ist Tempo-10-Zone
+#: XXX wird die Tempo-10-Zone aufgehoben?
+#: by: https://www.berliner-woche.de/koepenick/c-verkehr/entsprechende-anordnung-fuer-die-altstadt-muss-zurueckgenommen-werden_a244816
+#: priority: #D
+#: next_check: 2020-04-01
 Alter Markt	N 22395,4678 22470,4691
 Alter Markt	N 22458,4565 22446,4581 22426,4609 22395,4678 22390,4702
 Lüdersstr.	N 22390,4702 22388,4737 22377,4836
@@ -10227,7 +10232,7 @@ Bossestr.	N 14222,10430 14270,10584 14312,10657
 # 
 #: next_check_id: STRALAUER-2019
 #: priority: #A vvv
-#: last_checked: 2019-11-30 vvv
+#: last_checked: 2019-12-12 vvv
 #: next_check: 2019-12-20 vvv
 #: valid: !20190319-20191220 vvv
 Persiusstr.	N 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -10592,6 +10597,7 @@ Straße am Wald	N 21475,7500 21341,7487 21025,7349
 #: by: https://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/12-50a/download/181023-BP-12-50a-Reinplan.pdf
 #: by: https://stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/12-50ba/download/181023-BP-12-50ba-Planzeichnung.pdf
 #: by: https://stadtentwicklung.berlin.de/planen/b-planverfahren/de/fruehbb/12-62/download/180918-BP12-62-Planzeichnung-Var1.pdf
+#: by: https://www.abendblatt-berlin.de/2019/12/12/eroeffnung-des-berliner-flughafens-ber-so-nah-wie-nie/
 #: XXX bei Eröffnung von BER und Schließung von Tegel evtl. umbenennen, "ehemaligen", evtl. auch degradieren (NH oder N, prüfen) vvv
 #: XXX auch andere Straßen/Flächen/... umbenennen vvv
 #: next_check: 2020-10-31 vvv
@@ -13061,7 +13067,7 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED (nein, keine Schilder) --- #: XXX als Bergiusstr. ausgeschildert? --- #: next_check: 2013-09-04
 (Zufahrt zur A100 und Bergiusstr.)	H 14051,6731 14106,6663
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2019-11-12 vvv
+#: last_checked: 2019-12-12 vvv
 #: check_frequency: 30d vvv
 #: valid: 20140224-20191231
 Bergiusstr.	H 14106,6663 14193,6556 14366,6337
@@ -13073,7 +13079,7 @@ Bergiusstr.	N 14106,6663 14193,6556 14366,6337
 Bergiusstr.	N 14366,6337 14396,6298 14398,6184
 Willstätterstr.	N 14193,6556 14306,6651
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2019-11-12 vvv
+#: last_checked: 2019-12-12 vvv
 #: check_frequency: 30d vvv
 #: valid: 20140224-20191231
 Haberstr.	H 14366,6337 14564,6496 14639,6577 14724,6668
@@ -14889,7 +14895,7 @@ Togostr.	N 5531,16734 5315,16936
 #: by: https://www.deutschlandfunkkultur.de/widerstand-gegen-manga-bell-platz-wie-in-berlin-um-einen.976.de.html?dram:article_id=455728
 #: osm_watch: way id="333607502" version="6"
 #: also_indoor: search Manga-Bell-Platz
-#: last_checked: 2019-11-03
+#: last_checked: 2019-12-13
 Nachtigalplatz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,16803 5561,16767 5531,16734 5496,16696 5533,16662
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/426_2018_zu_ds_-1118_v_neue_strassennamen_im_afrikanischen_viertel.pdf
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_47_6363_6522_online.pdf (Umbenennung, Widerspruchsfrist bis 2018-12-23)
@@ -14898,7 +14904,7 @@ Nachtigalplatz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,168
 #: add_fragezeichen: Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: osm_watch: way id="5199719" version="13"
 #: also_indoor: search Maji-Maji-Allee
-#: last_checked: 2019-11-03
+#: last_checked: 2019-12-13
 Petersallee	N 5426,16539 5533,16662
 #: XXX_indoor: str_cont_ausnahme-Eintrag kann vermutlich entfernt werden
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/426_2018_zu_ds_-1118_v_neue_strassennamen_im_afrikanischen_viertel.pdf
@@ -14908,7 +14914,7 @@ Petersallee	N 5426,16539 5533,16662
 #: add_fragezeichen: Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: osm_watch: way id="47347069" version="11"
 #: also_indoor: search Anna-Mungunda-Allee
-#: last_checked: 2019-11-03
+#: last_checked: 2019-12-13
 # REMOVED --- #: next_check: 2018-12-07
 Petersallee	N 5581,16708 5639,16768 5684,16815 5772,16919
 Usambarastr.	N 5526,16916 5565,16923 5684,16815
@@ -17510,7 +17516,7 @@ Graunstr.	N 9844,15755 9907,15618 9996,15400 10018,15211
 #: XXX Wie werden die Wege nach den Bauarbeiten aussehen? Wird es auch einen neuen (asphaltierten?) Radweg zwischen Bernauer und Gleimtunnel geben?
 #: osm_watch: way id="233994265" version="6"
 #: osm_watch: way id="30539724" version="10"
-#: last_checked: 2019-11-08
+#: last_checked: 2019-12-11
 #: check_frequency: 30d
 (Lortzingstr. - Mauerpark)	NN 10046,15421 10044,15429 10046,15430 10059,15443 10070,15471 10090,15482 10120,15484 10150,15471
 # 
@@ -17662,7 +17668,7 @@ Hanseatenweg	N 6442,12545 6445,12495 6428,12439 6368,12455 6324,12455 6314,12518
 #: XXX wie sieht die Zukunft dieser Straße aus? (Widmung als Grünanlage)
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8819
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036923752617/923752617/00406668/68-Anlagen/02/MA_1265_V.pdf
-#: last_checked: 2019-10-06 (mapillary)
+#: last_checked: 2019-12-07
 #: check_frequency: 90d
 #: priority: #B
 (Zufahrt Parkplätze Klopstockstr.)	N 5909,12073 5870,12106 5982,12291
