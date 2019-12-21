@@ -2350,7 +2350,8 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        {
-         'data' => '	2::xmas 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324
+         'data' => '# REMOVED (hier eigentlich nicht) ---	q4::xmas 8479,11493 8481,11447
+	q4::xmas 8481,11447 8389,11378 8375,11368 8318,11324
 #	2::temp 8318,11324 8280,11296 8278,11257
 #: XXX_prog "3::temp" oder "3::xmas" geht nicht?
 	3 8427,11365 8389,11378 8374,11479
@@ -2369,7 +2370,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
                             ]
                           ],
          'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971680-955635-winterweltweihnachtsmarkt-am-potsdamer-p.html',
-         'text' => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, 25. November 2019 bis 26. Dezember 2019',
+         'text' => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str., Behinderungen möglich, 25. November 2019 bis 26. Dezember 2019',
          'type' => 'gesperrt',
          'until' => 1577401199
        },
@@ -2378,26 +2379,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '	2::xmas 22111,4562 22162,4546 22214,4548
-',
-         'from' => 1576105200,
-         'id' => 2003,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1305665-955635-weihnachtsmarktaufdemschlossplatzk%C3%B6peni.html',
-         'text' => 'Alt-Köpenicker Weihnachtsmarkt vom 13.12.2019 bis zum 15.12.2019',
-         'type' => 'gesperrt',
-         'until' => 1576450799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3226,27 +3208,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: before(3rd_advent,sa) - +1d
-	2::xmas 9986,13412 10317,13248
-',
-         'from' => 1576191600,
-         'id' => 2516,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              9,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (14.12.2019 - 15.12.2019)',
-         'type' => 'gesperrt',
-         'until' => 1576450799
-       },
+       undef,
        {
          'data' => '#: tempex: before(4th_advent,sa) - +1d
 	2::xmas 9986,13412 10317,13248
@@ -3295,8 +3257,8 @@ Kleistpark	2::night 7310,9622 7307,9528
        {
          'data' => '#: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
-#: also_indoor: traffic (G)
-#: last_checked: 2019-11-20
+#: also_indoor: traffic (G,H)
+#: last_checked: 2019-12-20
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -3343,7 +3305,28 @@ Kleistpark	2::night 7310,9622 7307,9528
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.weihnachtsmarkt-deutschland.de/berlin-rudow-weihnachtsmarkt.html
+#: source_id: 2147345257
+	2::xmas 16849,1437 16805,1488 16610,1715
+',
+         'from' => 1576839600,
+         'id' => 2529,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'IM_020883',
+         'text' => 'Alt-Rudow zwischen Köpenicker Str. und Krokusstr.: Rudower Adventsmeile, Straße gesperrt, ab: 21.12.2019 12 Uhr bis 22.12.2019 21 Uhr ',
+         'type' => 'gesperrt',
+         'until' => 1577044800
+       },
        undef,
        undef,
        undef,
@@ -3999,7 +3982,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-12-13 vvv
+#: last_checked: 2019-12-20 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -4155,17 +4138,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
-#: note: Gesamtbaumaßnahme bis 31.12.2023
+#: also_indoor: traffic
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: note: zuletzt geprüft: 2019-10-21
+#: last_checked: 2019-10-21
+#: next_check: 2019-12-31
 	q4::inwork; 5076,10658 5047,10381
 ',
          'from' => 1534629600,
          'id' => 2999,
          'source_id' => '2147342231',
-         'text' => 'Uhlandstr.: zwischen Kurfürstendamm und Lietzenburger Str. Richtung Süden wegen Bauarbeiten gesperrt, Radfahrer sind auch betroffen, ab 20.08.2018 bis Ende 2019',
+         'text' => 'Uhlandstr.: zwischen Kurfürstendamm und Lietzenburger Str. Richtung Süden wegen Bauarbeiten gesperrt, Radfahrer sind auch betroffen, ab 20.08.2018 bis Ende 2023',
          'type' => 'handicap',
-         'until' => 1577811600
+         'until' => 1704042000
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten
@@ -4243,17 +4227,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: add_fragezeichen: Wann ist die Sperrung beendet? --- #: next_check: 2020-02-29
-	2::inwork 14338,22885 14276,22914
-',
-         'from' => 1575349200,
-         'id' => 3043,
-         'source_id' => '2147343394',
-         'text' => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019 bis 20. Dezember 2019',
-         'type' => 'gesperrt',
-         'until' => 1608505199
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.828319.php
@@ -4316,17 +4290,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: note: laut fritz bis 20.12.2019
-#: source_id: 2147343527 (bis Ende Dezember 2019)
-	q4::inwork; 3952,8980 4006,8967 4181,8933 4324,8899
-',
-         'from' => 1544425200,
-         'id' => 3061,
-         'text' => 'Berliner Str.: Bauarbeiten zwischen Konstanzer Str. und Barstr., Fahrbahn Richtung Osten gesperrt, Radfahrer sind möglicherweise auch betroffen, bis Ende Dezember 2019',
-         'type' => 'handicap',
-         'until' => 1576861200
-       },
+       undef,
        undef,
        {
          'data' => '	q3::inwork 11145,10638 10965,10851
@@ -4347,19 +4311,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: also_indoor: traffic (H,G)
-#: osm_watch: way id="4597320" version="17"
-# REMOVED (ja) --- #: XXX vor Ort anschauen, ggfs. nach handicap_s-orig verschieben
-	q4::inwork 8737,12098 8783,11959
-',
-         'from' => 1551567600,
-         'id' => 3074,
-         'source_id' => '2147343824',
-         'text' => 'Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, bis Ende Mai 2021 ',
-         'type' => 'handicap',
-         'until' => 1622476800
-       },
+       undef,
        undef,
        undef,
        {
@@ -4559,7 +4511,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED ---	q4::inwork; 14461,11738 14513,11657 14561,11600 14570,11589 14639,11512
 # REMOVED ---	2::inwork 14461,11738 14416,11815
 # REMOVED ---	q4::inwork; 14395,11753 14461,11738
-	q4::inwork; 14416,11815 14395,11753
+	q4::inwork 14416,11815 14395,11753
 # REMOVED (hier nicht mehr) ---	q3::inwork; 14395,11753 14461,11738
 # REMOVED (Seite ist jetzt offen) --- #: note: Sperrung zur Glatzer Str. ---	3::inwork 14651,11666 14570,11589 14561,11600 ---	3::inwork 14651,11666 14570,11589 14639,11512 ---	3::inwork 14561,11600 14570,11589 14651,11666 ---	3::inwork 14639,11512 14570,11589 14651,11666
 # REMOVED (nördl. Seite offen) --- #: note: Sperrung zur Gryphiusstr. ---	3::inwork 14550,11732 14513,11657 14461,11738 ---	3::inwork 14550,11732 14513,11657 14561,11600 ---	3::inwork 14550,11732 14513,11657 14496,11620 ---	3::inwork 14461,11738 14513,11657 14550,11732 ---	3::inwork 14561,11600 14513,11657 14550,11732 ---	3::inwork 14496,11620 14513,11657 14550,11732
@@ -4680,14 +4632,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: PLAENTERWALDUFERWEG-2019
 #: by: https://www.berliner-woche.de/baumschulenweg/c-bauen/spreeuferweg-wird-gesperrt_a227875
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.877359.php
 	2::inwork 16627,8581 16657,8443 16696,8174 16624,7833 16655,7572 16673,7511
 ',
          'from' => 1567288800,
          'id' => 3149,
          'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.837476.php',
-         'text' => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis Dezember 2019',
+         'text' => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis Dezember 2019 oder Januar 2020',
          'type' => 'gesperrt',
-         'until' => 1577833199
+         'until' => 1580511599
        },
        undef,
        {
@@ -4729,19 +4682,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-12-04
-#: check_frequency: 14d
-	2::inwork 13092,11712 13175,11649 13239,11567
-	2::inwork 13175,11649 13208,11658
-',
-         'from' => undef,
-         'id' => 3159,
-         'text' => 'Wriezener Park: einige Wege wegen Bauarbeiten gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4878,31 +4819,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1593964800
        },
-       {
-         'data' => '# REMOVED (ja) --- #: XXX gibt es hier tatsächlich Einschränkungen für Radfahrer?
-	q3::inwork 4297,10008 4352,10260
-',
-         'from' => 1571078727,
-         'id' => 3178,
-         'text' => 'Bayerische Str.: Bauarbeiten zwischen Olivaer Platz und Düsseldorfer Str., Abschnitt der Fahrbahn ist gesperrt, bis 20.12.2019',
-         'type' => 'handicap',
-         'until' => 1576882800
-       },
        undef,
-       {
-         'data' => '#: next_check_id: LIBAUER-2019
-#: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-12-13
-# REMOVED --- #: next_check: 2019-11-25
-#: check_frequency: 14d
-	q3::inwork 13711,11458 13895,11663
-',
-         'from' => undef,
-         'id' => 3180,
-         'text' => 'Libauer Str.: Bauarbeiten, ein Abschnitt der Fahrbahn ist gesperrt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
+       undef,
        undef,
        undef,
        {
@@ -4934,8 +4853,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: add_fragezeichen: Wann wird die Einbahnstraßenregelung aufgehoben?
-#: last_checked: 2019-12-12
-#: check_frequency: 7d
+#: last_checked: 2019-12-20
+#: check_frequency: 1d
 	q3::inwork; 13075,12207 12923,12043 12891,12008
 ',
          'from' => 1574189084,

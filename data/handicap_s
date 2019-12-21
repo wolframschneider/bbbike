@@ -18,13 +18,15 @@ Friedrichsgracht: direkter Zugang zum Werderschen Markt wegen Bauarbeiten verspe
 Scharrenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 10332,11929 10385,11985
 Voltairestr.: wegen Baustelle kann die Fahrbahn gesperrt sein, Ausweichen auf Gehweg	q2::inwork 11329,12497 11209,12430
 Hirtenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10925,13322 11012,13278
+Neue Roßstraßenbrücke: Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 10687,11853 10672,11870
 Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Restaurantbetrieb	q2::inwork 10687,11853 10869,11949
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
+Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, Gehweg explizit für Radfahrer verboten	q4::inwork 8737,12098 8783,11959
 Jerusalemer Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 9936,11469
 Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 Zimmerstr.: Fahrbahn wird neu gebaut	q3::inwork 9945,11371 10072,11384
 (provisorischer Zugang zur neuen Alexandrinenstr.): eng, Fußgänger	q3::inwork 10678,11172 10690,11180
-Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290
+Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290 10091,12232
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10010,12275 10058,12290
 Prinzengasse: einige Fußgänger, parkende Autos, kann wegen Bauarbeiten auch komplett gesperrt sein	q3::inwork 9955,12300 10006,12306
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
@@ -38,8 +40,6 @@ Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q
 Seelenbinderstr.: Fahrbahn wegen Bauarbeiten gesperrt, enger gemeinsamer Geh- und Radweg	q3::inwork 22292,5774 22513,5747
 Salvador-Allende-Brücke: Engstelle, Zweirichtungsradweg mit Gehweg	q2::inwork 23404,5325 23420,5159
 Salvador-Allende-Brücke: Engstelle, Zweirichtungsradweg mit Gehweg	q2::inwork 23433,5037 23444,4942 23451,4877
-Herbert-von-Karajan-Str.: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 7965,11467 7970,11441 8027,11411
-Matthäikirchplatz: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 7970,11441 7954,11399
 Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5919,12423 5894,12480 5944,12548
 Donaustr.: Fahrbahn an der Kreuzung Pannierstr. kann wegen Bauarbeiten noch nicht befahrbar sein	q2::inwork 12202,8895 12394,8729
 Donaustr.: Einbahnstraßenregelung zwischen Pannierstr. und Reuterstr.	q4::inwork; 12150,8891 12202,8895
@@ -55,7 +55,6 @@ Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork; 12556,15518 12605,15491 12621,15482
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork; 12621,15482 12605,15491
-Erich-Weinert-Str.: Bauarbeiten an der Dunckerstr., einige Meter der Fahrbahn sind gesperrt	q4::inwork 11833,15912 11905,15878
 Erich-Weinert-Str.: Bauarbeiten zwischen Scherenbergstr. und Stahlheimer Str., Einbahnstraßenregelung, offen Richtung Osten	q4:inwork; 11542,16070 11404,16140
 Hermann-Hesse-Str.: Bauarbeiten, Radweg wird auf dem Gehweg geführt	q2::inwork 9811,19302 9681,19179 9501,18902
 (provisorische Fußgängerbrücke Säntisstr.): Fußgänger	q3 9014,898 9005,912 9002,919 9047,948 9058,932
@@ -589,7 +588,7 @@ Kiautschoustr.: Fußgänger, Bordsteine	q3 6837,14848 6853,14854
 (Blenheimstr. - Bärensteinstr.): Fußgänger bzw. Parkplatzverkehr	q2 21163,15289 21263,15291 21350,15292
 (Blenheimstr. - Bärensteinstr.): Fußgänger	q2 21350,15292 21369,15252
 Baruther Str.: gemeinsamer Rad- und Gehweg	q1 9588,9827 9723,9842
-(Aldi/Getränke-Hoffmann-Parkplatz): Parkplatz	q1 13208,11658 13186,11692 13173,11788
+(Aldi/Getränke-Hoffmann-Parkplatz): Parkplatz	q1 13202,11666 13186,11692 13173,11788
 (Schmidstr. - Heinrich-Heine-Str.): Bordsteine, Fußgänger	q3 11236,11508 11174,11554
 (Entlang des Stadtbahnviadukts): Bordsteine, Fußgänger	q2 11966,11832 12132,11788
 (Maybachufer - Weigandufer): Fußgänger, Bäume	q3 12845,9304 12862,9273 12909,9085 12902,9066
@@ -638,6 +637,7 @@ Uferweg: Fußgänger	q1 3862,12675 3938,12687 4147,12699 4206,12691 4242,12684
 Bänschstr.: mehrere Bodenschwellen	q0 14996,12462 14801,12517
 Bänschstr.: mehrere Bodenschwellen	q0 14798,12502 15005,12443
 Bouchéstr.: Bodenschwellen	q0 13642,9624 13865,9866
+Bouchéstr.: eine Bodenschwelle	q0 13489,9456 13357,9313
 Radenzer Str.: zwei Bodenschwellen	q1 16220,6277 16304,6358
 Dornbrunner Str.: zwei Bodenschwellen	q1 16147,6545 16043,6414
 Meierottostr.: zwei Moabiter Kissen	q0 5463,9961 5246,10168
@@ -1078,11 +1078,11 @@ Zur Kreutzigerstr.: enger Hausdurchgang	q3 14291,12220 14285,12190
 Märkischer Platz: Fußgänger	q2 11034,12038 11084,12070 11111,12027
 (Fischerinsel - Grünstraßenbrücke): Fußgänger, niedriger Bordstein	q2 10474,11843 10515,11785
 (Rampe Wriezener Park): Fußgänger, enge Rampe	q3 13416,11425 13442,11400
-(Wriezener Park): Fußgänger	q2 13513,11351 13442,11400 13417,11416 13407,11416 13323,11497 13308,11515 13261,11572 13239,11567 13175,11649
+(Wriezener Park): Fußgänger	q2 13513,11351 13442,11400 13417,11416 13407,11416 13323,11497 13308,11515 13261,11572 13239,11567 13172,11651
 (Wriezener Park): Fußgänger	q2 13324,11529 13308,11515
 Wriezener Park: Fußgänger, Bordstein	q3 13261,11572 13274,11585
-(Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park): einige Fußgänger	q1 12986,11699 13002,11705 13042,11749 13092,11712 13175,11649 13208,11658
-(Rüdersdorfer Str. - Am Wriezener Bahnhof): einige Fußgänger	q1 13173,11788 13092,11712
+(Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park): einige Fußgänger	q1 12986,11699 13002,11705 13042,11749 13089,11708 13172,11651 13202,11666
+(Rüdersdorfer Str. - Am Wriezener Bahnhof): einige Fußgänger	q1 13173,11788 13089,11708
 Oranienplatz: einige Fußgänger	q1 11264,10804 11227,10821
 Oranienplatz: einige Fußgänger	q1 11275,10723 11253,10778 11227,10821
 Grüner Weg: einige Fußgänger	q1 13728,3332 13775,3500
@@ -1466,7 +1466,7 @@ Georg-Steger-Weg: einige Fußgänger	q1 1493,2247 1480,2199 1452,2095 1461,2073 14
 (Grolmanstr./Goethestr. - Am Schillertheater): gemeinsamer Rad- und Gehweg, Fußgänger haben Vorrang	q1 4651,11368 4648,11445 4616,11507 4574,11587
 (Verlängerung Hiddenseestr.): Fußgänger	q2 10960,17674 10969,17587
 (entlang der Wendeschleife): eng, kurvig	q2 23467,3891 23486,3862 23476,3829
-(Schillingstr. - Neue Blumenstr.): Bordstein, einige Fußgänger	q2 11596,12668 11709,12601
+(Schillingstr. - Neue Blumenstr.): Bordstein, einige Fußgänger	q2 11596,12668 11712,12614
 (Wutzkyallee - Zwickauer Damm): einige Fußgänger	q1 15349,1614 15437,1613 15505,1591 15606,1537 15670,1474
 (Zwickauer Damm - Rudower Fließ): einige Fußgänger, Bordstein	q2 15688,1506 15776,1456
 (Zwickauer Damm - Rudower Fließ): einige Fußgänger	q1 15719,1557 15727,1525 15776,1456 15795,1428 15886,1382 15928,1395 16005,1350 16040,1315 16051,1293 16076,1272 16329,1128 16419,1048

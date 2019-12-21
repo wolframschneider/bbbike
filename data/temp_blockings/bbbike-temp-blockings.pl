@@ -17199,11 +17199,12 @@ EOF
        until => $isodate2epoch->("2019-12-26 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 19, months => 11]],
-       text  => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, 25. November 2019 bis 26. Dezember 2019',
+       text  => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str., Behinderungen möglich, 25. November 2019 bis 26. Dezember 2019',
        type  => 'gesperrt',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971680-955635-winterweltweihnachtsmarkt-am-potsdamer-p.html',
        data  => <<EOF,
-	2::xmas 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324
+# REMOVED (hier eigentlich nicht) ---	q4::xmas 8479,11493 8481,11447
+	q4::xmas 8481,11447 8389,11378 8375,11368 8318,11324
 #	2::temp 8318,11324 8280,11296 8278,11257
 #: XXX_prog "3::temp" oder "3::xmas" geht nicht?
 	3 8427,11365 8389,11378 8374,11479
@@ -22630,8 +22631,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
-#: also_indoor: traffic (G)
-#: last_checked: 2019-11-20
+#: also_indoor: traffic (G,H)
+#: last_checked: 2019-12-20
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -22697,13 +22698,17 @@ EOF
 	2::inwork 20653,7289 20603,7189 20640,7122 20722,6971 21239,6063 21303,5826
 EOF
      },
-     { from  => 1386198000, # 2013-12-05 00:00
-       until => 1386525600, # 2013-12-08 19:00
-       text  => 'Alt-Rudow zwischen Köpenicker Str. und Krokusstr.: Rudower Adventsmeile, Straße gesperrt, ab: 07.12.2013 10 Uhr bis 08.12.2013 19 Uhr ',
+     { from  => $isodate2epoch->("2019-12-20 12:00:00"), # 1 Tag Vorlauf # 1386198000, # 2013-12-05 00:00
+       until => $isodate2epoch->("2019-12-22 21:00:00"), # 1386525600, # 2013-12-08 19:00
+       periodic => 1,
+       recurrences => [['yearly', days => 1, months => 12]],
+       text  => 'Alt-Rudow zwischen Köpenicker Str. und Krokusstr.: Rudower Adventsmeile, Straße gesperrt, ab: 21.12.2019 12 Uhr bis 22.12.2019 21 Uhr ',
        type  => 'gesperrt',
        source_id => 'IM_020883',
        data  => <<EOF,
-	2::temp 16849,1437 16805,1488 16610,1715
+#: by: http://www.weihnachtsmarkt-deutschland.de/berlin-rudow-weihnachtsmarkt.html
+#: source_id: 2147345257
+	2::xmas 16849,1437 16805,1488 16610,1715
 EOF
      },
      { from  => 1386482400, # 2013-12-08 07:00
@@ -23205,7 +23210,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_022145',
        data  => <<EOF,
-	2::temp 8005,11627 7965,11467 7970,11441 8027,11411 8083,11381
+	2::temp 8005,11627 7943,11431 8083,11381
 EOF
      },
      { from  => 1402264800, # 2014-06-09 00:00
@@ -25329,8 +25334,8 @@ EOF
 	2::temp 11920,12266 12006,12464 12028,12519 12083,12518 12114,12546 12134,12540
 	2::temp 11976,12595 12005,12619 12050,12616 12064,12673
 	2::temp 12114,12546 12099,12580 12050,12616
-	3 12118,12462 12006,12464 11709,12601
-	3 11709,12601 12006,12464 12118,12462
+	3 12118,12462 12006,12464 11712,12614
+	3 11712,12614 12006,12464 12118,12462
 	3 11845,12292 11920,12266 12081,12236
 	3 12081,12236 11920,12266 11845,12292
 	3 12081,12236 11920,12266 11764,12001
@@ -26284,10 +26289,10 @@ EOF
 #: next_check_id: DBWERKSTRASSE-2017
 #: last_checked: 2018-04-05
 #: check_frequency: 2d
-	2::inwork 14231,10907 14141,10931 14076,10949
+	2::inwork 14287,10892 14141,10931 14076,10949
 	2::inwork 14141,10931 14107,10911
-# REMOVED ---	2::inwork 14107,10911 14224,10878 14231,10907
-	2::inwork 14231,10907 14352,10874
+# REMOVED ---	2::inwork 14107,10911 14224,10878 14287,10892
+	2::inwork 14287,10892 14352,10874
 # REMOVED ---	2::inwork 14352,10874 14469,10841 14567,10814
 EOF
      },
@@ -26887,7 +26892,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-12-13 vvv
+#: last_checked: 2019-12-20 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27419,7 +27424,7 @@ EOF
        data  => <<EOF,
 #: by: osm contributor
 #: osm_watch: way id="531952542" version="4"
-	2::inwork 7970,11441 7965,11467 8005,11627
+	2::inwork 7943,11431 8005,11627
 EOF
      },
      { from  => $isodate2epoch->("2018-05-25 00:00:00"),
@@ -27833,15 +27838,16 @@ EOF
 EOF
      },
      { from  => 1534629600, # 2018-08-19 00:00
-       until => $isodate2epoch->("2019-12-31 18:00:00"), # undef, # XXX
-       text  => 'Uhlandstr.: zwischen Kurfürstendamm und Lietzenburger Str. Richtung Süden wegen Bauarbeiten gesperrt, Radfahrer sind auch betroffen, ab 20.08.2018 bis Ende 2019',
+       until => $isodate2epoch->("2023-12-31 18:00:00"),
+       text  => 'Uhlandstr.: zwischen Kurfürstendamm und Lietzenburger Str. Richtung Süden wegen Bauarbeiten gesperrt, Radfahrer sind auch betroffen, ab 20.08.2018 bis Ende 2023',
        type  => 'handicap',
-       source_id => '2147342231',
+       source_id => '2147342231', # Gesamtbaumaßnahme bis 31.12.2023
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
-#: note: Gesamtbaumaßnahme bis 31.12.2023
+#: also_indoor: traffic
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: note: zuletzt geprüft: 2019-10-21
+#: last_checked: 2019-10-21
+#: next_check: 2019-12-31
 	q4::inwork; 5076,10658 5047,10381
 EOF
      },
@@ -28411,8 +28417,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2019-12-03 06:00:00"), # 1540930270, # 2018-10-30 21:11
-       until => $isodate2epoch->("2020-12-20 23:59:59"), # undef, # 1543014000, # 2018-11-24 00:00
-       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019 bis 20. Dezember 2019',
+       until => $isodate2epoch->("2019-12-19 15:00:00"), # undef, # 1543014000, # 2018-11-24 00:00
+       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019 bis 19. Dezember 2019 15 Uhr',
        type  => 'gesperrt',
        source_id => '2147343394', # hier bis Ende Dezember 2019; laut fritz bis 2019-12-20
        data  => <<EOF,
@@ -28736,13 +28742,12 @@ EOF
 EOF
      },
      { from  => 1551567600, # 2019-03-03 00:00
-       until => $isodate2epoch->("2021-05-31 18:00:00"), # 1625155200, # 2021-07-01 18:00
+       until => 1576692230, # -> handicap_s-orig --- $isodate2epoch->("2021-05-31 18:00:00"), # 1625155200, # 2021-07-01 18:00
        text  => 'Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, bis Ende Mai 2021 ',
        type  => 'handicap',
        source_id => '2147343824',
        data  => <<EOF,
-#: also_indoor: traffic (H,G)
-#: osm_watch: way id="4597320" version="17"
+# REMOVED --- #: also_indoor: traffic (H,G) --- #: osm_watch: way id="4597320" version="17"
 # REMOVED (ja) --- #: XXX vor Ort anschauen, ggfs. nach handicap_s-orig verschieben
 	q4::inwork 8737,12098 8783,11959
 EOF
@@ -29417,7 +29422,7 @@ EOF
 # REMOVED ---	q4::inwork; 14461,11738 14513,11657 14561,11600 14570,11589 14639,11512
 # REMOVED ---	2::inwork 14461,11738 14416,11815
 # REMOVED ---	q4::inwork; 14395,11753 14461,11738
-	q4::inwork; 14416,11815 14395,11753
+	q4::inwork 14416,11815 14395,11753
 # REMOVED (hier nicht mehr) ---	q3::inwork; 14395,11753 14461,11738
 # REMOVED (Seite ist jetzt offen) --- #: note: Sperrung zur Glatzer Str. ---	3::inwork 14651,11666 14570,11589 14561,11600 ---	3::inwork 14651,11666 14570,11589 14639,11512 ---	3::inwork 14561,11600 14570,11589 14651,11666 ---	3::inwork 14639,11512 14570,11589 14651,11666
 # REMOVED (nördl. Seite offen) --- #: note: Sperrung zur Gryphiusstr. ---	3::inwork 14550,11732 14513,11657 14461,11738 ---	3::inwork 14550,11732 14513,11657 14561,11600 ---	3::inwork 14550,11732 14513,11657 14496,11620 ---	3::inwork 14461,11738 14513,11657 14550,11732 ---	3::inwork 14561,11600 14513,11657 14550,11732 ---	3::inwork 14496,11620 14513,11657 14550,11732
@@ -29652,13 +29657,14 @@ EOF
 EOF
      },
      { from  => 1567288800, # 2019-09-01 00:00
-       until => $isodate2epoch->("2019-12-31 23:59:59"), # 1575154800, # 2019-12-01 00:00
-       text  => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis Dezember 2019',
+       until => $isodate2epoch->("2020-01-31 23:59:59"), # 1575154800, # 2019-12-01 00:00
+       text  => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis Dezember 2019 oder Januar 2020',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.837476.php',
        data  => <<EOF,
 #: next_check_id: PLAENTERWALDUFERWEG-2019
 #: by: https://www.berliner-woche.de/baumschulenweg/c-bauen/spreeuferweg-wird-gesperrt_a227875
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.877359.php
 	2::inwork 16627,8581 16657,8443 16696,8174 16624,7833 16655,7572 16673,7511
 EOF
      },
@@ -29754,15 +29760,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1576694560, # undef, # XXX
        text  => 'Wriezener Park: einige Wege wegen Bauarbeiten gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2019-12-04
-#: check_frequency: 14d
-	2::inwork 13092,11712 13175,11649 13239,11567
-	2::inwork 13175,11649 13208,11658
+# REMOVED --- #: next_check_id: WRIEZENERPARK-2019 --- #: last_checked: 2019-12-16 --- #: check_frequency: 14d
+	2::inwork 13089,11708 13172,11651 13239,11567
+	2::inwork 13172,11651 13202,11666
 EOF
      },
      { from  => 1568056573, # 2019-09-09 21:16
@@ -29996,7 +30000,7 @@ EOF
 EOF
      },
      { from  => 1571078727, # 2019-10-14 20:45
-       until => 1576882800, # 2019-12-21 00:00
+       until => 1576869673, # 1576882800, # 2019-12-21 00:00
        text  => 'Bayerische Str.: Bauarbeiten zwischen Olivaer Platz und Düsseldorfer Str., Abschnitt der Fahrbahn ist gesperrt, bis 20.12.2019',
        type  => 'handicap',
        data  => <<EOF,
@@ -30014,15 +30018,12 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef, # $isodate2epoch->("2019-11-25 18:00:00"),
+       until => 1576607900, # undef, # $isodate2epoch->("2019-11-25 18:00:00"),
        text  => 'Libauer Str.: Bauarbeiten, ein Abschnitt der Fahrbahn ist gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: LIBAUER-2019
-#: by: fritz (bis 25.11.2019)
-#: last_checked: 2019-12-13
+# REMOVED --- #: next_check_id: LIBAUER-2019 --- #: by: fritz (bis 25.11.2019) --- #: last_checked: 2019-12-16 --- #: check_frequency: 14d
 # REMOVED --- #: next_check: 2019-11-25
-#: check_frequency: 14d
 	q3::inwork 13711,11458 13895,11663
 EOF
      },
@@ -30146,8 +30147,8 @@ EOF
        source_id => '2147345145',
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Einbahnstraßenregelung aufgehoben?
-#: last_checked: 2019-12-12
-#: check_frequency: 7d
+#: last_checked: 2019-12-20
+#: check_frequency: 1d
 	q3::inwork; 13075,12207 12923,12043 12891,12008
 EOF
      },
@@ -30185,6 +30186,16 @@ EOF
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: last_checked: 2019-12-08
 	2::inwork 5809,7712 5636,7709
+EOF
+     },
+     { from  => 1576623600, # 2019-12-18 00:00
+       until => 1576787365, # 1598911199, # 2020-08-31 23:59
+       text  => 'Unterführung Am Danewend/Loebschützer Str. gesperrt, evtl. auch für Fußgänger und Radfahrer, vom 19. Dezember 2019 bis voraussichtlich Ende August 2020',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: source_id: 2147345063
+# REMOVED (mittlerweile auch bei fritz "nicht betroffen") --- #: add_fragezeichen: Ist die Unterführung tatsächlich für Radfahrer und Fußgänger gesperrt? --- #: XXX Widersprüchliche Angaben bei fritz (auch betroffen) und vmz (nicht betroffen) --- #: XXX auch widersprücliche Angaben zum Ende: fritz Ende August 2020, vmz Ende Januar 2020
+	2::inwork 14756,23622 14776,23612
 EOF
      },
     );
