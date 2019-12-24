@@ -49,6 +49,8 @@ provisorische und enge Radwegführung, Fußgänger, Seitenwechsel notwendig	q3::inw
 Anzengruberstr.	q3::inwork 12689,8289 12865,8346
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249 12753,8187 12794,8103
 Rollbergstr.: Einbahnstraßenregelung, ca. 70m	q3::inwork; 12545,8209 12714,8249
+Flottwellstr./Dennewitzstr.: Bauarbeiten, Ausweichen auf Gehweg und Umfahrung über Pohlstr.	q3::inwork; 8199,10634 8159,10430 8058,10306
+Pohlstr.: Bauarbeiten, Umfahrung über Gehweg	q3::inwork 8159,10430 7932,10475
 Steinmetzstr: Bauarbeiten zwischen Kurfürstenstr. und Bülowstr., etwa 100 Meter der Fahrbahn sind gesperrt, bis Ende 2019	q3::inwork 7744,10372 7698,10147
 Lauterstr.: Fahrbahn am Perelsplatz gesperrt	q4::inwork 5810,7662 5810,7684 5809,7712
 Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3905,4482
@@ -56,7 +58,6 @@ Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordstein
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork; 12556,15518 12605,15491 12621,15482
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork; 12621,15482 12605,15491
 Erich-Weinert-Str.: Bauarbeiten zwischen Scherenbergstr. und Stahlheimer Str., Einbahnstraßenregelung, offen Richtung Osten	q4:inwork; 11542,16070 11404,16140
-Hermann-Hesse-Str.: Bauarbeiten, Radweg wird auf dem Gehweg geführt	q2::inwork 9811,19302 9681,19179 9501,18902
 (provisorische Fußgängerbrücke Säntisstr.): Fußgänger	q3 9014,898 9005,912 9002,919 9047,948 9058,932
 Säntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
@@ -238,8 +239,8 @@ Charlottenstr.: Fußgängerzone	q4 -3227,14260 -3293,14304 -3338,14333 -3397,14370
 Moritzstr.: Fußgängerzone	q4 -3275,14407 -3350,14446
 Mauerstr. (Spandau): Fußgängerzone	q4 -3316,14169 -3409,14241
 Havelstr.: Fußgängerzone	q4 -3150,14631 -3122,14557 -3107,14535 -3054,14498
-Eichgestell: bei schönem Wetter viele Fußgänger	q1 19052,6823 19407,6660 19590,6590 19751,6514 19988,6409 19995,6406 20081,6368 20106,6357 20200,6321 20293,6278
-Wuhlheide: bei schönem Wetter viele Fußgänger und Kinder	q2 20200,6321 20262,6493 20225,6631 20269,6735 20313,6841
+Eichgestell: bei schönem Wetter viele Fußgänger	q1 19052,6823 19407,6660 19587,6584 19751,6514 19988,6409 19995,6406 20081,6368 20106,6357 20199,6318 20293,6278
+Wuhlheide: bei schönem Wetter viele Fußgänger und Kinder	q2 20199,6318 20262,6493 20225,6631 20269,6735 20313,6841
 Wuhlheide/R1: Fußgänger	q1 20453,6211 20293,6278
 Wuhlheide/FEZ: einige Fußgänger	q1 20225,6631 20169,6636 20118,6617 20060,6575 19995,6406
 Wuhlheide: einige Fußgänger	q1 19594,6155 19606,6182 19751,6514 19810,6634 19914,6865 19931,6903 19997,6935
@@ -402,7 +403,8 @@ Schloßplatz Köpenick: Fußgänger, Straßenbahn, Lieferverkehr	q2 22111,4562 22093,
 (Karlsgartenstr. - Hasenheide): Parkweg, Fußgänger	q1 11627,8485 11560,8480 11508,8491 11333,8582 11255,8591
 (Am Rixdorfer Teich): Parkweg, Fußgänger	q1 11255,8591 11193,8568 11133,8560 11020,8596 10957,8573 10929,8503 10913,8463 10911,8457
 Gustav-Heinemann-Brücke: Fußgänger, enge Brücke	q3 8116,12938 8110,13042
-Spreebogenpark: Fußgänger	q2 8116,12938 8114,12839 8120,12756
+Spreebogenpark: Fußgänger	q2 8116,12938 8115,12912 8114,12839 8120,12756
+Spreebogenpark: Fußgänger	q2 8115,12912 8252,12757
 Beruner Str.: Rampen, Fußgänger, U-Bahn-Ausgang	q3 20143,10731 20215,10554
 (Parkweg Spreebogenpark): besonders an Wochenenden tagsüber sehr viele Fußgänger	q2 8021,12832 8036,12855 8046,12870 8072,12902 8116,12938 8168,12945 8235,12945 8304,12938 8370,12902 8424,12853
 Spreeuferweg: besonders an Wochenenden tagsüber viele Fußgänger	q1 7908,12804 7945,12878 7966,12913 8044,12989 8159,13032
@@ -1935,6 +1937,8 @@ Frieda-Arnheim-Promenade: einige Fußgänger	q1 -2707,15456 -2699,15478 -2722,1548
 Waldweg - Köpenicker Str.: Bordstein	q2 20872,7268 20892,7236
 (Kattunsteig - Neltestr.): Bordstein	q2 19760,4256 19756,4245
 (Lohmeyerstr. - Uferweg): Fußgänger	q2 3450,12722 3445,12733
+(Kattunsteig - Hartriegelstr.): Spielplatz, Radfahren verboten	q4 19301,4814 19250,4830 19251,4879
+(Hartriegelstr. - Michael-Brückner-Str.): einige Fußgänger	q1 18695,5076 18622,5049 18514,5028 18425,5032
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2867,7 +2871,6 @@ Sewanstr. - Balatonstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::ig
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich): gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
 Soorstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 1861,11284 1884,11126
-Tschaikowskistr.: Einbahnstraße wegen Bauarbeiten in der Hermann-Hesse-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 9868,19023 9501,18902
 Johannisstr.: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 Corinthstr.: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 14608,10409 14447,10491
@@ -2936,3 +2939,4 @@ Hindenburgdamm, linker Gehweg	q3::igndisp; 4596,3738 4617,3706
 Greifswalder Str., linker Gehweg	q3::igndisp; 12584,14928 12563,14860
 Buschkrugallee, linker Radweg	q1::igndisp; 14111,4181 14119,4153
 Michelangelostr., linker Gehweg	q3::igndisp; 13854,15129 13758,15009 13647,14912
+Adlergestell, linker Gehweg	q2::igndisp; 19345,4077 19472,3922

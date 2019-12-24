@@ -27,7 +27,7 @@
 # 
 #: next_check_id: STRALAUER-2019
 #: source_id: LMS-BR_r_LMS-BR_178065_LMS-BR_72 (bei VMZ entfernt, bei fritz noch aktiv)
-#: last_checked: 2019-12-19
+#: last_checked: 2019-12-22
 Bödikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 # 
 #: next_check_id: PLANSTRASSEC-2019
@@ -241,7 +241,7 @@ Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Restaurantbetrieb	q2::inwor
 #: by: http://www.dafmap.de/d/berlin.html?id=3204&mt=0&zoom=16
 #: osm_watch: way id="507023458" version="6"
 #: also_indoor: traffic
-#: last_checked: 2019-12-06
+#: last_checked: 2019-12-22
 #: check_frequency: 45d
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 # 
@@ -395,7 +395,7 @@ Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364
 #: next_check_id: KARLMARXALLEE-2018
 #: source_id: 2147342756
 #: also_indoor: traffic vvv
-#: last_checked: 2019-12-18 vvv
+#: last_checked: 2019-12-22 vvv
 #: check_frequency: 30d
 Schillingstr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q3::inwork 11635,12745 11596,12668
 #: check_frequency: 60d
@@ -428,7 +428,7 @@ Berolinastr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q4::inwo
 ### Oberschöneweide ###
 # 
 #: XXX laut Schild der Berliner Wasserbetriebe bis Juli 2020
-#: last_checked: 2019-11-30
+#: last_checked: 2019-12-23
 #: next_check: 2020-07-31
 #: valid: -20200731
 Poggendorffweg: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 17079,8456 17202,8391
@@ -489,13 +489,13 @@ Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/reparaturarbeiten-dauern-bis-maerz-2020_a245005 (bis Mitte März 2020)
 #: source_id: 2147344732 (voraussichtlich bis Ende Januar 2020)
 #: priority: #B
-#: last_checked: 2019-11-23
+#: last_checked: 2019-12-23
 #: next_check: 2020-03-15
 #: valid: -20200315
 Seelenbinderstr.: Fahrbahn wegen Bauarbeiten gesperrt, enger gemeinsamer Geh- und Radweg	q3::inwork 22292,5774 22513,5747
 # 
 #: next_check_id: SALVADORALLENDEBRUECKE-2017
-#: last_checked: 2019-11-23 vvv
+#: last_checked: 2019-12-23 vvv
 #: check_frequency: 30d vvv
 Salvador-Allende-Brücke: Engstelle, Zweirichtungsradweg mit Gehweg	q2::inwork 23404,5325 23420,5159
 Salvador-Allende-Brücke: Engstelle, Zweirichtungsradweg mit Gehweg	q2::inwork 23433,5037 23444,4942 23451,4877
@@ -675,11 +675,18 @@ Rollbergstr.: Einbahnstraßenregelung, ca. 70m	q3::inwork; 12545,8209 12714,8249
 # 
 ### Schöneberg ###
 # 
+#: next_check_id: DENNEWITZFLOTTWELL-2019
+#: last_checked: 2019-12-22 vvv
+Flottwellstr./Dennewitzstr.: Bauarbeiten, Ausweichen auf Gehweg und Umfahrung über Pohlstr.	q3::inwork; 8199,10634 8159,10430 8058,10306
+Pohlstr.: Bauarbeiten, Umfahrung über Gehweg	q3::inwork 8159,10430 7932,10475
+#: last_checked ^^^
+# 
 #: XXX bei fritz: "Die Straße ist als Sackgasse ausgewiesen." (vermutlich keine Durchfahrt zur Kreuzung Bülowstr.) -> ja
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/am-frueheren-commerzbank-standort-entsteht-ein-moderner-buerokomplex_a190072
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/steinmetzstrasse-voll-gesperrt_a192997 (bis Ende 2019)
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/grundsteinlegung-fuer-zentrale_a197083
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/sperrung-der-steinmetzstrasse_a234304 (ab 14. November 2019 Sperrung (?)) (vielleicht Komplettsperrung?)
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7338 (Vorschlag der dauerhaften Sperrung für den Durchgangsverkehr)
 #: source_id: LMS-BR_r_LMS-BR_152000_LMS-BR_72
 #: also_indoor: traffic (ex-H,G)
 #: osm_watch: way id="654756356" version="2"
@@ -701,7 +708,8 @@ Steinmetzstr: Bauarbeiten zwischen Kurfürstenstr. und Bülowstr., etwa 100 Meter 
 # 
 #: next_check_id: PERELSPLATZ-2019
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig?
-#: last_checked: 2019-12-08
+#: last_checked: 2019-12-22
+#: next_check: 2020-01-31
 Lauterstr.: Fahrbahn am Perelsplatz gesperrt	q4::inwork 5810,7662 5810,7684 5809,7712
 # 
 ### Steglitz ###
@@ -753,13 +761,7 @@ Erich-Weinert-Str.: Bauarbeiten zwischen Scherenbergstr. und Stahlheimer Str., E
 # 
 ### Pankow ###
 # 
-#: next_check_id: HERMANNHESSESTR-2019
-#: last_checked: 2019-10-13 vvv
-#: next_check: 2019-12-31 vvv
-Hermann-Hesse-Str.: Bauarbeiten, Radweg wird auf dem Gehweg geführt	q2::inwork 9811,19302 9681,19179 9501,18902
-#: next_check ^^^
-#: last_checked ^^^
-# 
+# REMOVED --- #: next_check_id: HERMANNHESSESTR-2019 --- #: last_checked: 2019-10-13 vvv --- #: next_check: 2019-12-31 vvv --- Hermann-Hesse-Str.: Bauarbeiten, Radweg wird auf dem Gehweg geführt	q2::inwork 9811,19302 9681,19179 9501,18902 --- #: next_check ^^^ --- #: last_checked ^^^
 # REMOVED --- #: last_checked: 2017-04-09 --- #: next_check: 2017-10-01 --- #: valid: -20171001 --- Schloßallee: Bauarbeiten, Fahrbahn teilweise gesperrt	q2::inwork 11730,19684 11883,19739
 # REMOVED --- #: source_id: 2147340983 vvv --- #: source_id: LMS-BR_r_LMS-BR_91192 --- #: source_id: LMS-BR_r_LMS-BR_91193 --- #: last_checked: 2017-04-09 vvv --- #: next_check: 2017-07-07 vvv --- #: valid: -20170707 vvv --- Blankenburger Weg: Bauarbeiten, Einbahnstraßenregelung, Radweg Richtung Nordosten ist auch gesperrt	q2::inwork; 12222,20637 12442,20805 --- Pankstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 12524,20863 12442,20805
 # REMOVED (kein Verbotsschild mehr gesehen) --- #: next_check_id: WILTBERGSTR-2017 --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=47875 --- #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.785388.php (Aufhebung der Einbahnstraßenregelung in der Wiltbergstr.) --- #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/wiltbergstra%C3%9Fe-buch-neuer-bauabschnitt-%C2%B7-verkehrsfreigabe --- #: XXX laut fritz bis Ende 2020, laut viz bis Ende 01/2019 --- #: source_id: 2147339182 --- #: source_id: LMS-BR_r_LMS-BR_93376 --- #: source_id: 2147343252 --- #: priority: #A vvv --- #: last_checked: 2018-10-05 vvv --- #: next_check: 2019-02-25 vvv --- # REMOVED --- #: valid: -20190225 vvv --- #: osm_watch: way id="308319523" version="5" --- Wiltbergstr.: Bauarbeiten, Einbahnstraßenregelung, auf Gehweg ausweichen	q3-::inwork; 16669,25373 16583,25440 16485,25516 16414,25575 --- #: valid: ^^^ --- # REMOVED (beendet) --- Wiltbergstr.: Bauarbeiten, Einbahnstraßenregelung, auf Gehweg ausweichen	q3-::inwork; 16414,25575 16294,25683 16220,25716 --- #: XXX bleibt das so? falls nicht, muss der alte Eintrag (siehe unten) wieder aktiviert werden --- (Weg im Schloßpark Buch): für Radfahrer verboten	q4 16593,25640 16583,25667 16558,25688 16481,25671 16441,25664 16384,25692 16339,25690 16265,25718 16251,25733
@@ -1028,8 +1030,8 @@ Mauerstr. (Spandau): Fußgängerzone	q4 -3316,14169 -3409,14241
 #: by: Kleinke (honda):
 Havelstr.: Fußgängerzone	q4 -3150,14631 -3122,14557 -3107,14535 -3054,14498
 #: note: ^^^
-Eichgestell: bei schönem Wetter viele Fußgänger	q1 19052,6823 19407,6660 19590,6590 19751,6514 19988,6409 19995,6406 20081,6368 20106,6357 20200,6321 20293,6278
-Wuhlheide: bei schönem Wetter viele Fußgänger und Kinder	q2 20200,6321 20262,6493 20225,6631 20269,6735 20313,6841
+Eichgestell: bei schönem Wetter viele Fußgänger	q1 19052,6823 19407,6660 19587,6584 19751,6514 19988,6409 19995,6406 20081,6368 20106,6357 20199,6318 20293,6278
+Wuhlheide: bei schönem Wetter viele Fußgänger und Kinder	q2 20199,6318 20262,6493 20225,6631 20269,6735 20313,6841
 Wuhlheide/R1: Fußgänger	q1 20453,6211 20293,6278
 Wuhlheide/FEZ: einige Fußgänger	q1 20225,6631 20169,6636 20118,6617 20060,6575 19995,6406
 Wuhlheide: einige Fußgänger	q1 19594,6155 19606,6182 19751,6514 19810,6634 19914,6865 19931,6903 19997,6935
@@ -1265,7 +1267,8 @@ Schloßplatz Köpenick: Fußgänger, Straßenbahn, Lieferverkehr	q2 22111,4562 22093,
 # REMOVED (ja, abgesenkt) --- #: XXX die Bordsteine sind hier wahrscheinlich mittlerweile abgesenkt --- Torstr. - Weydingerstr.: Bordsteine	q2 11079,13492 11111,13518
 #: note: möglicherweise ist im Herbst/Winter weniger los, dann vielleicht q2?
 Gustav-Heinemann-Brücke: Fußgänger, enge Brücke	q3 8116,12938 8110,13042
-Spreebogenpark: Fußgänger	q2+ 8116,12938 8114,12839 8120,12756
+Spreebogenpark: Fußgänger	q2+ 8116,12938 8115,12912 8114,12839 8120,12756
+Spreebogenpark: Fußgänger	q2+ 8115,12912 8252,12757
 Beruner Str.: Rampen, Fußgänger, U-Bahn-Ausgang	q3 20143,10731 20215,10554
 #: note: "Radfahren auf befestigten Wegen erlaubt, Fußgänger haben Vorrang"
 (Parkweg Spreebogenpark): besonders an Wochenenden tagsüber sehr viele Fußgänger	q2 8021,12832 8036,12855 8046,12870 8072,12902 8116,12938 8168,12945 8235,12945 8304,12938 8370,12902 8424,12853
@@ -3249,6 +3252,8 @@ Waldweg - Köpenicker Str.: Bordstein	q2 20872,7268 20892,7236
 #: XXX_prog BS (am Wendehammer), ansonsten entfernen
 (Kattunsteig - Neltestr.): Bordstein	q2 19760,4256 19756,4245
 (Lohmeyerstr. - Uferweg): Fußgänger	q2 3450,12722 3445,12733
+(Kattunsteig - Hartriegelstr.): Spielplatz, Radfahren verboten	q4 19301,4814 19250,4830 19251,4879
+(Hartriegelstr. - Michael-Brückner-Str.): einige Fußgänger	q1 18695,5076 18622,5049 18514,5028 18425,5032
 # 
 ######################### User Contributions #################################
 # 
@@ -3580,7 +3585,7 @@ Bissingzeile: einspurig, eng bei Gegenverkehr	q0- 7959,10910 8119,10797
 (Weydemeyerstr.): einige Fußgänger	q0- 11933,12701 11971,12785 11925,12807
 (Karl-Marx-Allee): Fußgänger, Bordsteine	q1 11585,12865 11601,12858 11622,12850 11716,12803
 #: next_check_id: KARLMARXALLEE-2018
-#: last_checked: 2019-12-18
+#: last_checked: 2019-12-22
 #: check_frequency: 60d
 #(Karl-Marx-Allee - Berolinastr.): Fußgänger, kurvig	q1 11601,12858 11589,12768
 (Karl-Marx-Allee - Berolinastr.): Bauarbeiten an der Karl-Marx-Allee	q4::inwork 11601,12858 11589,12768
