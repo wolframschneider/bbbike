@@ -2872,7 +2872,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        {
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: osm_watch: way id="43141418" version="13" brb
+#: osm_watch: way id="43141418" version="14" brb
 #: last_checked: 2019-12-07
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
@@ -3195,29 +3195,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: before(first_advent, monday)-YYYY1226 vvv
-	q3::xmas 11139,13008 11064,12910 10970,12822
-	q4::xmas 11064,12910 11134,12793
-#: tempex ^^^
-',
-         'from' => 1574550000,
-         'id' => 2763,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              20,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html',
-         'text' => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 25. November 2019 bis 26. Dezember 2019',
-         'type' => 'handicap',
-         'until' => 1577401199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3937,7 +3915,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-12-01 (mapillary)
+#: last_checked: 2019-12-27 (mapillary)
 #: check_frequency: 60d
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
@@ -4186,18 +4164,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1609455599
        },
-       {
-         'data' => '#: by: fritz
-#: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526
-#: confirmed_by: srt (2019-11-16)
-	2::inwork 21558,12073 21562,12088 21564,12097
-',
-         'from' => 1570223758,
-         'id' => 3171,
-         'text' => 'Brebacher Weg: Gleisbauarbeiten, Bahnübergang gesperrt, voraussichtlich bis zum 23.12.2019',
-         'type' => 'gesperrt',
-         'until' => 1577120400
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: KOENIGSTEINBRUECKE-2019
@@ -4310,7 +4277,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2019-11-23
+#: last_checked: 2019-12-26
 	2::inwork 15420,12178 15520,12160 15628,12246
 ',
          'from' => undef,
