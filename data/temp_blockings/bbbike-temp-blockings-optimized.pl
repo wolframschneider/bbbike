@@ -2808,7 +2808,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'data' => '#: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2019-12-20
+#: last_checked: 2019-12-29
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -2831,28 +2831,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: by: https://www.potsdam.de/content/blauer-lichterglanz-der-potsdamer-innenstadt
-#: tempex: before(first_advent,mo) - YYYY1230
-	1::xmas -13556,-1182 -13618,-1202 -13626,-1205
-',
-         'from' => 1574550000,
-         'id' => 2526,
-         'periodic' => 1,
-         'recurrence_prewarn_days' => 21,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              20,
-                              'months',
-                              11
-                            ]
-                          ],
-         'text' => 'Weihnachtsmarkt am Luisenplatz: vermutlich geänderte Radverkehrsführung, 25.11.2019 - 29.12.2019',
-         'type' => 'gesperrt',
-         'until' => 1577660399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2872,7 +2851,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        {
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: osm_watch: way id="43141418" version="14" brb
+#: osm_watch: way id="43141418" version="15" brb
 #: last_checked: 2019-12-07
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
@@ -3201,6 +3180,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stra%C3%9Fe-des-17-juni-tiergarten-sperrung-%C2%B7-silvesterfeier
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/stra%C3%9Fe-des-17-juni-tiergarten-silvesterfeier-%C2%B7-sperrungen
 #: by: https://twitter.com/VIZ_Berlin/status/1074623988159127553
 	2::temp 7031,12320 7383,12095
 	2::temp 7875,12363 7822,12201 7816,12150
@@ -3226,22 +3206,23 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	2::temp 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8122,12147 8215,12156 8327,12174 8466,12197
 	2::temp 7031,12024 7059,11978 7108,11945 7177,11913 7200,11881
 	2::temp 6984,11859 7058,11809 7163,11738 7373,11594 7418,11566
+	2::temp 7514,12387 7529,12361 7544,12346 7564,12337 7587,12340 7603,12353 7627,12380
 ',
-         'from' => 1577714400,
+         'from' => 1577541600,
          'id' => 2767,
          'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              31,
+                              28,
                               'months',
                               12
                             ]
                           ],
-         'text' => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 31.12.2019 15:00 Uhr bis 01.01.2020 03:00 Uhr',
+         'text' => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 29.12.2019 bis 02.01.2020',
          'type' => 'gesperrt',
-         'until' => 1577844000
+         'until' => 1578005999
        },
        undef,
        undef,
@@ -3614,8 +3595,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2019-10-29
-#: next_check: 2019-12-19
+#: last_checked: 2019-12-28
+#: check_frequency: 60d
 	q4::inwork 13391,16436 13630,16629
 ',
          'from' => undef,
@@ -3768,9 +3749,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1542148916,
          'id' => 3046,
          'source_id' => '2147343419',
-         'text' => 'Henningsdorfer Str.: zwischen Alt-Heiligensee und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, vermutlich bis Ende Dezember 2019',
+         'text' => 'Henningsdorfer Str.: zwischen Alt-Heiligensee und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, möglicherweise bis Ende 2021',
          'type' => 'handicap',
-         'until' => 1577833199
+         'until' => 1640991599
        },
        undef,
        undef,
@@ -3981,20 +3962,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.859708.php ("Restarbeiten ... unterhalb der Brücke ... bis Ende 2019")
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/schlossbruecke-wieder-befahrbar_a238318
 # REMOVED --- #: XXX die Bauarbeiten oben auf der Brücke wurden mittlerweile verlängert: bis zum 30.10.2019
-#: osm_watch: way id="72660098" version="7"
+#: osm_watch: way id="72660098" version="8"
 #: XXX laut osm offen
 # REMOVED (provisorischer Radstreifen) --- #: XXX außerdem "der östliche Gehweg ist gesperrt" --- was bedeutet das für den Radverkehr?
 #: priority: #A
 #: add_fragezeichen: Ist die Unterführung noch immer gesperrt?
-#: last_checked: 2019-12-08
+#: last_checked: 2019-12-29
 # REMOVED --- #: next_check: 2019-10-30
-#: check_frequency: 21d
+#: check_frequency: 14d
 	2::inwork 3231,12749 3332,12742
 ',
          'from' => 1561845600,
          'id' => 3123,
          'source_id' => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.823217.php',
-         'text' => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019, möglicherweise bis Ende 2019',
+         'text' => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019, bis Ende 2019 und möglicherweise noch länger',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4190,23 +4171,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1588283999
        },
-       {
-         'data' => '#: next_check_id: BUNDESALLEE-2019
-#: priority: #A
-# REMOVED (closed) --- #: osm_watch: note 1960975 3
-#: osm_watch: way id="483261580" version="2"
-#: XXX es gibt einen engen Umweg über Meierottostr., theoretisch mit Anrampung, kann aber zugeparkt sein
-#: add_fragezeichen: Wann ist eine Durchfahrt wieder möglich?
-#: last_checked: 2019-12-08
-#: check_frequency: 30d
-	2::inwork 5416,9928 5464,9914
-',
-         'from' => undef,
-         'id' => 3175,
-         'text' => 'Bundesallee - Pariser Str.: direkter Durchgang wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: next_check_id: WUHLEWANDERWEG-2014
 #: XXX wann beginnen die Bauarbeiten, wann sind sie beendet?
@@ -4292,7 +4257,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2019-12-01 (abgesperrt)
+#: last_checked: 2019-12-28 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 ',
