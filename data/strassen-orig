@@ -2487,12 +2487,14 @@ An der Industriebahn	N 14153,17670 14168,17522 14170,17249 14174,17226
 Hosemannstr. (Prenzlauer Berg)	NH 12421,15278 12466,15359 12556,15518 12583,15566 12642,15668 12721,15807 12762,15882 12783,15921 12817,15985
 Hosemannstr. (Prenzlauer Berg) [Anliegerstraße zur Mandelstr.]	N 12948,15771 12762,15882
 Naugarder Str.	N 12737,15154 12712,15176 12693,15225 12610,15455 12621,15482
-#: XXX Benennung des Dreiecksplatzes nach "Gertrud Classen" in Aussicht gestellt; ggfs. auf Amtsblatt-Eintrag warten
+#: XXX Benennung: "Gertrud-Classen-Platz", wird es Straßenschilder geben?
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/03-07-2018-dreiecksplaetze-nach-verdienstvollen-frauen-bennen.pdf
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5238 (Vorlage zur Kenntnisnahme)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5356
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_01_0001_0152_online.pdf (Benennung: Gertrud-Classen-Platz, Wirksamkeit am 6. März 2020)
 #: last_checked: 2019-10-23
-#: check_frequency: 90d
+# REMOVED --- #: check_frequency: 90d
+#: next_check: 2020-03-06
 (Hosemannstr. - Naugarder Str.)	N 12583,15566 12605,15491
 Malchower Chaussee	HH 14832,17867 15152,18115 15181,18137 15569,18492 15600,18551 15610,18596
 Rennbahnstr.	H 14558,16907 14528,16910 14341,17030 14235,17103 14136,17170 14099,17195 14060,17221 13904,17325 13708,17453 13551,17566 13349,17712
@@ -6269,6 +6271,7 @@ Wildensteiner Str.	N 18627,8475 18528,8331 18416,8163 18365,8094 18333,8059
 Eginhardstr.	N 18615,8269 18490,8104 18412,7985
 Lehndorffstr.	N 18401,8636 18397,8611 18407,8592 18428,8588 18448,8602
 Lehndorffstr.	N 18407,8592 18322,8470 18221,8328 18215,8316 18269,8161 18333,8059 18412,7985
+#: note: die Kreuzung Edisonstr./Wilhelminenhofstr. (17991,6431) hieß bis 1936 "Königsplatz" und wird auch heute selten so genannt. Siehe auch https://mein.berlin.de/mapideas/2018-00904/ und https://de.wikipedia.org/wiki/Liste_der_Stra%C3%9Fen_und_Pl%C3%A4tze_in_Berlin-Obersch%C3%B6neweide
 Edisonstr.	H 18010,7133 17934,7029 17919,6978 17919,6968 17962,6674 17991,6431 17952,6246 17930,6175
 Wasserstr. (Niederschöneweide)	N 17483,6024 17681,6212
 Uferstr. (Niederschöneweide)	N 17681,6212 17847,6089
@@ -7891,7 +7894,7 @@ Johannes-Guthmann-Weg	N -6462,5733 -6614,5834
 #: note: Parkviertel Kladow vvv
 #: note: Privatstraßen vvv
 Parkviertelallee	N -6343,5853 -6376,5878 -6521,5982 -6441,6106 -6385,6185 -6251,6370 -6221,6411
-Elsbeerenweg	N -6376,5878 -6192,6063
+Elsbeerenweg	N -6431,5815 -6376,5878 -6192,6063
 Wildapfelpfad	N -6441,6106 -6356,6050 -6314,6104
 (Wildapfelpfad - Parkviertelallee)	NN -6314,6104 -6301,6126 -6385,6185
 Goldlärchenweg	N -6385,6185 -6437,6221 -6495,6131
@@ -10590,6 +10593,7 @@ Straße am Wald	N 21475,7500 21341,7487 21025,7349
 #: by: https://stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/12-50ba/download/181023-BP-12-50ba-Planzeichnung.pdf
 #: by: https://stadtentwicklung.berlin.de/planen/b-planverfahren/de/fruehbb/12-62/download/180918-BP12-62-Planzeichnung-Var1.pdf
 #: by: https://www.abendblatt-berlin.de/2019/12/12/eroeffnung-des-berliner-flughafens-ber-so-nah-wie-nie/
+#: by: https://www.berliner-woche.de/tegel/c-verkehr/eigentuemer-erhalten-entschaedigung_a245995 (Abriss des Flughafens im Mai 2021)
 #: XXX bei Eröffnung von BER und Schließung von Tegel evtl. umbenennen, "ehemaligen", evtl. auch degradieren (NH oder N, prüfen) vvv
 #: XXX auch andere Straßen/Flächen/... umbenennen vvv
 #: next_check: 2020-10-31 vvv
@@ -16074,7 +16078,7 @@ Travemünder Str.	N 8544,16365 8592,16436
 Travemünder Str.	NN 8592,16436 8688,16533 8759,16684
 Travemünder Str.	N 8759,16684 8759,16665 8695,16525
 (an der Panke)	NN 9089,17693 9079,17636
-(Pankeweg, teilweise als Walter-Nicklitz-Promenade gekennzeichnet)	NN 8759,16684 8776,16718 8839,16873 8904,17059 8927,17119 9009,17255 9017,17290 9034,17357 9073,17361 9128,17455 9136,17509 9120,17553 9110,17581 9131,17664 9089,17693 9147,17941
+(Pankeweg, teilweise als Walter-Nicklitz-Promenade gekennzeichnet)	NN 8759,16684 8776,16718 8839,16873 8904,17059 8927,17119 9009,17255 9017,17290 9034,17357 9073,17361 9128,17455 9136,17509 9120,17553 9110,17581 9131,17664 9089,17693 9109,17779 9147,17941
 (Pankeweg)	NN 9034,17357 9036,17387 9076,17532 9120,17553
 (Pankeweg)	NN 8721,16689 8804,16881 8866,17075
 (Heubudenbrücke)	NN 9017,17290 8973,17301
