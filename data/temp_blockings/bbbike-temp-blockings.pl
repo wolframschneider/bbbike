@@ -22632,7 +22632,7 @@ EOF
 #: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2019-12-29
+#: last_checked: 2020-01-06
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -26044,8 +26044,8 @@ EOF
 #: source_id: 2147342176
 #: source_id: 2147341532
 # REMOVED --- 2::inwork 12254,24857 12136,24607
-# REMOVED --- 2::inwork 12108,24547 11980,24276
-	2::inwork 11980,24276 12108,24547 12136,24607 12254,24857 12395,25143 12461,25270 12543,25423 12624,25570
+# REMOVED --- 2::inwork 12108,24547 12015,24351 11980,24276
+	2::inwork 11980,24276 12015,24351 12108,24547 12136,24607 12254,24857 12395,25143 12461,25270 12543,25423 12624,25570
 EOF
      },
      { from  => 1486676031, # 2017-02-09 22:33
@@ -26498,7 +26498,7 @@ EOF
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2019-12-11
+#: last_checked: 2020-01-06
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -26894,7 +26894,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-12-20 vvv
+#: last_checked: 2020-01-06 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27859,7 +27859,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten
-#: last_checked: 2019-12-13
+#: last_checked: 2020-01-06
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
