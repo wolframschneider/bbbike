@@ -13641,7 +13641,7 @@ EOF
        text  => 'L 077 Saarmund - Güterfelde Bereich KVK Philippsthal Radwegbau Vollsperrung 23.03.2009-14.04.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -5575,-6838 -6021,-7385 -6319,-7795
+	2::inwork -5550,-6808 -6021,-7385 -6319,-7795
 EOF
      },
      { from  => 1237676400, # 2009-03-22 00:00
@@ -13906,7 +13906,7 @@ EOF
        text  => 'L 077 Saarmund - Güterfelde Bereich KVK Philippsthal Radwegbau Vollsperrung 14.04.2009-30.04.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -6021,-7385 -5575,-6838
+	2::inwork -6021,-7385 -5550,-6808
 EOF
      },
      { from  => 1240005600, # 2009-04-18 00:00
@@ -29259,7 +29259,7 @@ EOF
        data  => <<EOF,
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="11"
-#: last_checked: 2019-12-21
+#: last_checked: 2020-01-11
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 EOF
@@ -29270,7 +29270,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
-#: last_checked: 2019-12-21
+#: last_checked: 2020-01-11
 # REMOVED --- #: next_check: 2019-12-02
 #: check_frequency: 90d
 	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
@@ -29654,7 +29654,7 @@ EOF
 EOF
      },
      { from  => 1567288800, # 2019-09-01 00:00
-       until => $isodate2epoch->("2020-01-31 23:59:59"), # 1575154800, # 2019-12-01 00:00
+       until => 1578750899, # mittlerweile weitgehend befahrbar --- $isodate2epoch->("2020-01-31 23:59:59"), # 1575154800, # 2019-12-01 00:00
        text  => 'Spreeuferweg im Plänterwald: Komplettsperrung wegen Bauarbeiten, vom 02.09.2019 bis Dezember 2019 oder Januar 2020',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.837476.php',
