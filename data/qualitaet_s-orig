@@ -12,7 +12,7 @@
 #: next_check_id: DIESEL-2019
 #: XXX und eventuell auch schauen, ob das Tor zum Mergenthalerring wieder ein Schloss hat
 #: osm_watch: way id="524560334" version="4"
-#: last_checked: 2019-12-12 vvv
+#: last_checked: 2020-01-15 vvv
 (Mergenthalerring - Dieselstr.): Asphalt	Q0 14419,8112 14429,8074
 #: osm_watch: way id="680579631" version="2"
 (Mergenthalerring - Dieselstr.): unbefestigt	Q2 14429,8074 14484,8044
@@ -97,8 +97,8 @@ Donaustr.: Asphalt	Q0 12202,8895 12394,8729 12551,8612 12649,8535
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/noerdliche-donaustrasse-wird-asphaltiert-und-auch-fuer-fussgaenger-sicherer_a181334
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/baurbeiten-an-der-pannierstrasse_a238483 (Abschluss erst 2020?)
 # REMOVED (realisiert) --- #: XXX dieser Abschnitt wird noch 2018 realisiert --- #: osm_watch: way id="155605274" version="4" -- #: last_checked: 2018-10-11
-#: last_checked: 2020-01-05 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2020-01-15 vvv
+#: check_frequency: 7d vvv
 # REMOVED --- #: next_check: 2019-10-31 vvv
 Donaustr.: schlechtes bis mäßiges Kopfsteinpflaster	Q2- 12150,8891 12202,8895
 #: XXX hier wird vermutlich auch die Einbahnstraßenregelung für Radfahrer aufgehoben
@@ -109,7 +109,7 @@ Pannierstr.: Kopfsteinpflaster	Q2 12240,8964 12202,8895
 #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="155605273" version="6"
-#: last_checked: 2020-01-05
+#: last_checked: 2020-01-15
 #: check_frequency: 30d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -441,7 +441,7 @@ Pflügerstr.: mäßiges, teilweise auch schlechtes Kopfsteinpflaster	Q2- 12481,9390
 Pflügerstr.: Kopfsteinpflaster	Q2 11934,9538 11757,9509
 Liberdastr.: Kopfsteinpflaster	Q2 12150,9545 12207,9632 12250,9691
 Fuldastr.: Kopfsteinpflaster	Q2 12902,9066 12836,8980 12740,8862
-Reuterstr.: Kopfsteinpflaster	Q2 12195,8436 12216,8323
+Reuterstr.: Kopfsteinpflaster	Q2- 12195,8436 12216,8323
 Torfstr.: Kopfsteinpflaster	Q2; 6626,15104 6652,15073
 Torfstr.: Kopfsteinpflaster, aber Asphaltstreifen für Radfahrer	Q0; 6652,15073 6626,15104
 Torfstr.: Kopfsteinpflaster	Q2 6652,15073 6739,14969 6837,14848 6849,14831
@@ -724,7 +724,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2020-01-05
+#: last_checked: 2020-01-15
 #: check_frequency: 90d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -892,7 +892,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist.")
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2020-01-06
+#: last_checked: 2020-01-15
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1557,7 +1557,7 @@ Schwerinstr.: Kleinsteinpflaster, in der Mitte Asphalt	Q1 7384,10127 7201,10180 
 Damaschkestr.: Kopfsteinpflaster	Q2 3123,10504 3013,10553
 Mierendorffstr.: Asphalt	Q0 3337,12855 3361,12865 3435,12954 3517,13067 3523,13076 3534,13098 3556,13200
 Albrecht-Achilles-Str.: wechselnd Asphalt und gutes Kopfsteinpflaster	Q1 3618,10283 3604,9961 3605,9929
-(Stresemannstr. - Wilhelmstr.): Parkweg, etwas holprig	Q2+ 9215,10607 9368,10641
+(Stresemannstr. - Wilhelmstr.): Parkweg	Q1- 9215,10607 9368,10641
 (Stresemannstr. - Wilhelmstr.): Asphalt	Q0 9245,10565 9375,10616
 #: by Olaf Schulz vvv
 Fröbelstr.: guter Asphalt	Q0 11776,15060 11873,15010 11964,14962 12089,14891
@@ -3372,11 +3372,13 @@ Münsterberger Weg: Asphalt	Q0 23883,11416 23714,11477 23621,11511 23558,11531
 #: by: https://www.berliner-woche.de/marzahn-hellersdorf/c-verkehr/marzahn-hellersdorf-baut-bis-2020-weitere-sieben-radwege_a196993
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (östlich der Gielsdorfer Str., 2019)
 #: by: https://api.fixmyberlin.de/api/plannings/119 (Text: "unbekannt")
+#: by: https://api.fixmyberlin.de/api/projects/273 (Fahrbahnsanierung)
 #: XXX werden hier Abschnitte des Münsterberger Wegs verbessert, z.B. (neu) asphaltiert? vvv
 #: last_checked: 2019-11-16 vvv
 #: check_frequency: 90d vvv
 Münsterberger Weg: Kopfsteinpflaster	Q2- 23558,11531 23526,11541 23430,11576 23225,11649
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_42_6245_6400_online.pdf ("wird zeitnah ein Geh- und Radweg entstehen")
+#: by: https://api.fixmyberlin.de/api/projects/274
 #: osm_watch: way id="24205376" version="9"
 Münsterberger Weg: unbefestigt	Q2 24172,11320 24029,11363
 #: check_frequency ^^^
@@ -5170,7 +5172,7 @@ Werderstr. (Altglienicke): schlechtes Kopfsteinpflaster	Q3 20064,1777 20028,1673
 (Südstern - Blücherstr.): Asphalt	Q0 10670,9286 10647,9337
 Liebigstr.: gepflastert	Q1 14229,12311 14166,12323
 Travemünder Str.: Kopfsteinpflaster	Q2 8695,16525 8759,16665 8759,16684
-Spitzmühler Str.: Asphalt	Q0 21675,15636 21706,15626 21796,15610 21886,15594 21976,15578 22088,15557
+Spitzmühler Str.: Asphalt	Q0 21675,15636 21706,15626 21796,15610 21886,15594 21976,15578 22088,15559
 Akazienhof: Asphalt	Q0 21801,844 21748,746
 (Am Gartenstadtweg - S-Bhf. Altglienicke/Paradiesstr.): sehr guter Asphalt	Q0+ 21527,547 21368,478 21275,389 21262,375
 (Verlängerung Johannes-Tobei-Str.): Asphalt	Q0 21250,118 21135,83 20984,-81
@@ -7230,7 +7232,7 @@ Pritzhagener Weg: Asphalt	Q0 21770,15473 21796,15610
 Altlandsberger Platz: Verbundsteinpflaster	Q0- 21757,15420 21849,15404 21942,15388
 Zinndorfer Str.: Asphalt	Q0 21647,15496 21680,15489 21770,15473 21860,15458 21951,15442
 Amselhainer Weg: Asphalt	Q0 21886,15594 21860,15458
-(Spitzmühler Str. - Trappenfelder Pfad): provisorischer Asphalt	Q1 22088,15557 22105,15556
+(Spitzmühler Str. - Trappenfelder Pfad): provisorischer Asphalt	Q1 22088,15559 22105,15556
 Hirschfelder Weg: Verbundsteinpflaster	Q1+ 21682,15673 21719,15666 21892,15637 22101,15601
 Hirschfelder Weg: Asphalt	Q0 21906,15723 21892,15637
 Prötzeler Ring: Asphalt	Q0 21980,15857 21930,15830 21906,15723 22055,15698
@@ -14423,6 +14425,7 @@ Lemkestr.: Kopfsteinpflaster	Q2+; 25801,13101 25872,13191 25961,13304
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.842179.php (Sanierung beginnt 2020)
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/verschiebt-sich-der-ausbau-der-lemkestrasse_a231565
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8673
+#: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/unterausschuss-des-abgeordnetenhauses-legt-die-sanierung-der-lemkestrasse-auf-eis_a248470
 #: last_checked: 2019-05-05
 #: next_check: 2020-04-01
 Lemkestr.: schlechtes Kopfsteinpflaster	Q3 25801,13101 25706,12982 25663,12927 25534,12763 25363,12553 25191,12343 25149,12266 25109,12196
@@ -23721,6 +23724,7 @@ Flatower Str.: Asphalt	Q0 -4628,16899 -4319,16879 -4151,16857
 #: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/gremien/fahrrat/uebersicht-siemenspark-14-03-19.pdf
 #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2019/pressemitteilung.863236.php (ab 25.11.2019 für eine Dauer von 1,5 Jahren; Asphaltierung, Gehweg, Radfahren erlaubt)
 #: by: https://www.berliner-woche.de/siemensstadt/c-bauen/bauarbeiten-im-wilhelm-von-siemens-park_a239818
+#: by: https://api.fixmyberlin.de/api/projects/134
 #: XXX wird hier die Fahrbahndecke verbessert?
 #: osm_watch: way id="28259369" version="18"
 #: last_checked: 2019-10-26
