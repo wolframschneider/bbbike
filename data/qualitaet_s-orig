@@ -109,7 +109,7 @@ Pannierstr.: Kopfsteinpflaster	Q2 12240,8964 12202,8895
 #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="155605273" version="6"
-#: last_checked: 2020-01-15
+#: last_checked: 2020-01-28
 #: check_frequency: 30d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -468,7 +468,7 @@ Fürstenberger Str.: Asphalt	Q0 10320,14608 10472,14632
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/senatsverkehrsverwaltung-befuerwortet-umbau-auf-der-metzer-strasse_a190549
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/08-05-2018-fahrradinfrastruktur-in-der-metzer-strasse.pdf
 #: XXX Asphaltierung in Aussicht gestellt, später auch die Metzer Str.
-#: last_checked: 2020-01-05 (mapillary)
+#: last_checked: 2020-01-25 (mapillary)
 #: check_frequency: 60d
 Kollwitzstr.: Kopfsteinpflaster	Q2 11006,14087 10937,14006
 # 
@@ -787,7 +787,7 @@ Böcklinstr.: Kopfsteinpflaster	Q2 14674,11370 14598,11245
 #: note: bei regem Kfz-Verkehr ist es nicht möglich, den asphaltierten Fahrbahnabschnitt zu benutzen
 #: corrected_by: Fil (vorher Q1-)
 #: osm_watch: way id="266580485" version="10"
-#: last_checked: 2020-01-17 (mapillary)
+#: last_checked: 2020-01-25 (mapillary)
 #: check_frequency: 90d
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert	Q2 12736,17998 12462,17814
 # 
@@ -894,7 +894,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist.")
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2020-01-15
+#: last_checked: 2020-01-28
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -11124,8 +11124,8 @@ Händelplatz: Beton	Q0- 4568,4789 4543,4820
 (Charité-Campus Benjamin Franklin): gepflastert	Q2+ 4926,3749 4884,3822
 (Charité-Campus Benjamin Franklin): Beton	Q0- 4884,3822 4884,3840 4811,3959
 (Charité-Campus Benjamin Franklin): Asphalt	Q0 4811,3959 4972,4055 5030,4095 5041,4141 5110,4179
-(provisorische Zufahrt zum Benjamin Franklin): Feinschotter	Q1 4947,3672 4944,3695 4926,3749
-(provisorische Zufahrt zum Benjamin Franklin): Feinschotter	Q1 5110,4179 5130,4195 5131,4207
+# REMOVED --- (provisorische Zufahrt zum Benjamin Franklin): Feinschotter	Q1 4947,3672 4944,3695 4926,3749
+# REMOVED --- (provisorische Zufahrt zum Benjamin Franklin): Feinschotter	Q1 5110,4179 5130,4195 5131,4207
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/die-klingsorstrasse-muss-dringend-saniert-werden_a189238
 Klingsorstr.: schadhafter Asphalt	Q1+ 4834,4102 4932,4152 5063,4266 5090,4291 5120,4318 5150,4345 5206,4432 5214,4445 5271,4547
 Klingsorstr.: schadhafter Asphalt	Q1+ 5316,4637 5336,4676 5407,4815 5411,4825 5478,4957 5482,4965 5497,4994 5535,5068 5583,5179
@@ -25018,9 +25018,12 @@ Anschützweg: Beton	Q0 -5953,12263 -5988,12221 -6071,12120
 #: by: Anja (...anstand...):
 Waltersdorfer Chaussee: Asphalt	Q0 16975,1262 17011,1206 17001,1157
 # 
-#: by: Dirk Henschke:
+#: by: Dirk Henschke: vvv
+#: corrected_by: mapillary (mäßige unbefestigte Straße -> neu gemacht)
+Heimfriedstr.: Asphalt	Q0 14902,23655 15072,23535
 #: corrected_by: srt (changed wording: wassergebundene Decke -> unbefestigte Straße)
-Heimfriedstr.: mäßige unbefestigte Straße	Q2 14902,23655 15072,23535 15167,23470 15387,23310
+Heimfriedstr.: mäßige unbefestigte Straße	Q2 15072,23535 15167,23470 15387,23310
+#: by ^^^
 # 
 #: by: Theda (...bader...):
 #: confirmed_by: http://farm5.static.flickr.com/4122/4998979916_367325226d_b.jpg (Kopfsteinpflaster)

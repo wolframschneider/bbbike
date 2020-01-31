@@ -10226,13 +10226,13 @@ Bossestr.	N 14222,10430 14270,10584 14312,10657
 # 
 #: next_check_id: STRALAUER-2019
 #: priority: #A vvv
-#: last_checked: 2020-01-24 vvv
-#: next_check: 2020-03-31 vvv
-#: valid: !20190319-20200331 vvv
+#: last_checked: 2020-01-28 vvv
+#: next_check: 2020-05-15 vvv
+#: valid: !20190319-20200515 vvv
 Persiusstr.	N 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 Rochowstr.	N 14170,10675 14103,10489
 #: valid ^^^
-#: valid: 20190319-20200331 vvv
+#: valid: 20190319-20200515 vvv
 Persiusstr.	HH 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 Rochowstr.	HH 14170,10675 14103,10489
 #: valid ^^^
@@ -18321,16 +18321,7 @@ Brahmsstr. (Lichterfelde)	N 4785,4557 4932,4152 4972,4055
 #: XXX_prog: als highway=service taggen
 (Charité-Campus Benjamin Franklin)	N 4926,3749 4884,3822 4884,3840 4811,3959 4972,4055 5030,4095 5041,4141 5110,4179
 # 
-#: next_check_id: BENJAMINFRANKLIN-2018 vvv
-#: XXX wird nach den Bauarbeiten vermutlich wieder zurückgebaut vvv
-#: last_checked: 2019-08-08 vvv
-#: next_check: 2020-01-31 vvv
-(provisorische Zufahrt zum Benjamin Franklin)	NN 4947,3672 4944,3695 4926,3749
-(provisorische Zufahrt zum Benjamin Franklin)	NN 5110,4179 5130,4195 5131,4207
-#: next_check ^^^
-#: last_checked ^^^
-#: XXX ^^^
-#: next_check_id ^^^
+# REMOVED --- #: next_check_id: BENJAMINFRANKLIN-2018 vvv --- #: XXX wird nach den Bauarbeiten vermutlich wieder zurückgebaut vvv --- #: last_checked: 2019-08-08 vvv --- #: next_check: 2020-01-31 vvv --- (provisorische Zufahrt zum Benjamin Franklin)	NN 4947,3672 4944,3695 4926,3749 --- (provisorische Zufahrt zum Benjamin Franklin)	NN 5110,4179 5130,4195 5131,4207 --- #: next_check ^^^ --- #: last_checked ^^^ --- #: XXX ^^^ --- #: next_check_id ^^^
 #   
 Gertraudstr.	N 198,1689 181,1703 80,1998
 #: note: beleuchtet

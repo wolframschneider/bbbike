@@ -9900,8 +9900,6 @@ Händelplatz: Beton	Q0 4568,4789 4543,4820
 (Charité-Campus Benjamin Franklin): gepflastert	Q2 4926,3749 4884,3822
 (Charité-Campus Benjamin Franklin): Beton	Q0 4884,3822 4884,3840 4811,3959
 (Charité-Campus Benjamin Franklin): Asphalt	Q0 4811,3959 4972,4055 5030,4095 5041,4141 5110,4179
-(provisorische Zufahrt zum Benjamin Franklin): Feinschotter	Q1 4947,3672 4944,3695 4926,3749
-(provisorische Zufahrt zum Benjamin Franklin): Feinschotter	Q1 5110,4179 5130,4195 5131,4207
 Klingsorstr.: schadhafter Asphalt	Q1 4834,4102 4932,4152 5063,4266 5090,4291 5120,4318 5150,4345 5206,4432 5214,4445 5271,4547
 Klingsorstr.: schadhafter Asphalt	Q1 5316,4637 5336,4676 5407,4815 5411,4825 5478,4957 5482,4965 5497,4994 5535,5068 5583,5179
 (Görlitzer Park, zur Forster Str.): Asphalt	Q1 12670,10160 12592,10112
@@ -15033,7 +15031,8 @@ Barlachweg: Beton	Q0 8393,828 8322,862
 Basdorfer Zeile: kaputter Asphalt	Q2 3216,20531 3196,20627
 Anschützweg: Beton	Q0 -5953,12263 -5988,12221 -6071,12120
 Waltersdorfer Chaussee: Asphalt	Q0 16975,1262 17011,1206 17001,1157
-Heimfriedstr.: mäßige unbefestigte Straße	Q2 14902,23655 15072,23535 15167,23470 15387,23310
+Heimfriedstr.: Asphalt	Q0 14902,23655 15072,23535
+Heimfriedstr.: mäßige unbefestigte Straße	Q2 15072,23535 15167,23470 15387,23310
 Hochjagdstr.: Kopfsteinpflaster	Q3 3947,22000 4034,21900 4098,21809
 Jan-Petersen-Str.: Asphalt	Q0 21086,15910 21108,15955 21200,16128 21130,16162 21028,16211
 Sprintsteig: Verbundsteinpflaster	Q1 6429,23291 6376,23358 6325,23422
