@@ -805,7 +805,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Januar von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2214,7 +2214,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2019-12-28
+#: last_checked: 2020-02-04
 #: check_frequency: 60d
 	q4::inwork 13391,16436 13630,16629
 ',
@@ -2727,7 +2727,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851369.php',
          'text' => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, voraussichtlich bis Anfang 2020',
          'type' => 'gesperrt',
-         'until' => 1580511600
+         'until' => 1583017200
        },
        {
          'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
@@ -2757,15 +2757,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1609455599
        },
        {
-         'data' => '# REMOVED (alt) --- #: by: fritz --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php (hier: bis 9.2.2020, aber "Montag" (?!))
+         'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php
+#: by: fritz
 	2::inwork 21558,12073 21562,12088 21564,12097
 ',
          'from' => 1580598000,
          'id' => 3171,
-         'text' => 'Brebacher Weg: Gleisbauarbeiten, Bahnübergang gesperrt, vom 3. Februar 2020 bis voraussichtlich 10. Februar 2020',
+         'text' => 'Brebacher Weg: Gleisbauarbeiten, Bahnübergang gesperrt, vom 3. Februar 2020 bis voraussichtlich 9. März 2020',
          'type' => 'gesperrt',
-         'until' => 1581354000
+         'until' => 1583773200
        },
        undef,
        {
@@ -2833,16 +2834,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '	q4::inwork 3166,25496 3076,25456 2882,25375 2744,25314 2713,25300 2683,25238
-',
-         'from' => 1572735600,
-         'id' => 3183,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.860721.php',
-         'text' => 'Edelhofdamm: Bauarbeiten an der nördlichen Fahrbahn ab Remstaler Str., evtl. ist die Fahrbahn für Radfahrer nicht befahrbar, ab 4. November 2019 bis 31. Januar 2020',
-         'type' => 'handicap',
-         'until' => 1580511599
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2863,7 +2855,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-01-02
+#: last_checked: 2020-02-04
 	2::inwork 15420,12178 15520,12160 15628,12246
 ',
          'from' => undef,
@@ -2878,7 +2870,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-01-02 (abgesperrt)
+#: last_checked: 2020-02-02 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 ',
@@ -2898,21 +2890,6 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => undef,
          'id' => 3193,
          'text' => 'Perelsplatz: Parkweg gesperrt, Ende der Sperrung unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
-       undef,
-       {
-         'data' => '#: next_check_id: ROSSSTRASSENBRUECKE-2019
-#: XXX Wann kommt die dauerhafte Komplettsperrung?
-#: last_checked: 2020-01-27 (mapillary)
-#: check_frequency: 7d
-	2::inwork 10672,11870 10687,11853
-',
-         'from' => undef,
-         'id' => 3195,
-         'source_id' => '2147345254',
-         'text' => 'Neue Roßstraßenbrücke: wegen Bauarbeiten ist die Fahrbahn gesperrt, ebenso kann auch der Gehweg komplett gesperrt sein',
          'type' => 'gesperrt',
          'until' => undef
        }

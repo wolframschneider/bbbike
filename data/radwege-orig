@@ -82,7 +82,8 @@ Radweg vorhanden, aber Benutzung verboten (Gehwegschäden)	RW0; 9022,10857 8941,1
 schlechter Zustand des Radwegs, Wurzelschäden	RW1; 9827,10051 9521,10010
 Verbundsteinpflaster, Wurzelschäden	RW1; 9521,10010 9827,10051
 	RW4;RW4 9416,10196 9409,10226 9404,10250
-	RW3;RW1 9229,8785 9229,8718
+	RW3; 9229,8785 9229,8718
+neu asphaltiert	RW1; 9229,8718 9229,8785
 Verbundsteinpflaster	RW1; 9229,8718 9233,8597 9238,8410
 #: note: neu gebaut, trotzdem schon nach wenigen Monaten leichte Unebenheiten
 asphaltiert, leicht uneben	RW1; 9238,8410 9238,8253
@@ -350,7 +351,7 @@ neu asphaltiert, relativ breit	RW1; 10256,11160 10020,11262
 #: by: https://api.fixmyberlin.de/api/plannings/10 (erster Bauabschnitt Alte Jakobstr. - Axel-Springer-Str. (Nordseite) im Herbst 2018)
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (Sanierung 2019)
 #: XXX Bauarbeiten der Wasserbetriebe bis November 2019, südliche Seite zwischen Alexandrinenstr. und Lobeckstr.
-#: last_checked: 2020-01-30 vvv
+#: last_checked: 2020-02-03 vvv
 #: check_frequency: 90d vvv
 # REMOVED (hier realisiert) --- #: last_checked: 2019-12-06 (Bauarbeiten am Rad/Gehweg Richtung Westen) --- #: check_frequency: 3d
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1; 10020,11262 10256,11160
@@ -560,8 +561,7 @@ für Radfahrer freigegebene Busspur gilt Mo-Fr 7-19 Uhr	RW1;RW1 7911,15008 7533,1
 	RW0;RW1 7481,19400 7504,19459 7512,19480
 	RW1;RW1 7512,19480 7540,19550
 	RW1; 7540,19550 7603,19713 7617,19748 7634,19793 7672,19869
-#: XXX laut RoterEmil existiert (wieder?) ein Radweg, genauer anschauen
-teilweise wurde der ehemalige Radweg entfernt	RW0; 7672,19869 7634,19793 7617,19748 7603,19713 7540,19550
+teilweise nur aufgemalt, teilweise Verbundsteinpflaster	RW1; 7672,19869 7634,19793 7617,19748 7603,19713 7540,19550
 	RW1;RW1 7198,18575 7233,18562 7269,18460 7291,18392 7335,18257 7405,18047 7426,17981 7432,17964 7453,17899 7477,17832 7491,17793 7533,17673 7572,17558 7579,17532 7602,17399
 	RW1;RW4 8600,12165 8538,12245
 	RW4;RW4 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
@@ -1320,7 +1320,7 @@ Busspur gilt Mo-Fr 6-20 Uhr	RW5; 10625,12206 10574,12131 10512,12039
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/rechtsabbiegen-vom-alex-in-die-karl-marx-allee-sechs-wochen-lang-verboten_a202864
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.802572.php (bis auf Weiteres)
 #: source_id: 2147343815 (bis auf Weiteres)
-#: last_checked: 2020-01-27
+#: last_checked: 2020-02-04
 #: check_frequency: 30d
 # asphaltierter Radweg	RW1; 11134,12793 11226,12945
 provisorische Radspur	RW4; 11134,12793 11226,12945
@@ -2875,15 +2875,19 @@ Verbundsteinpflaster	RW2; 25015,5751 25028,5756 25121,5795 25179,5815 25579,5958
 	RW2;RW1 22674,4309 22641,4095 22640,4081 22643,4058 22666,3888
 # 
 #: XXX wird hier eine Grünmarkierung entstehen?
-#: XXX etwa 100m vor der Dregerhoffstr. sind bereits markiert
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/erster-radfahrstreifen-im-bezirk-farblich-neu-markiert_a188983
 #: by: https://www.berliner-woche.de/koepenick/c-bauen/an-der-wendenschlossstrasse-wird-bis-april-gebaut_a246232
 #: priority: #D
-#: last_checked: 2019-12-23
-#: next_check: 2020-04-15
-	RW3; 22666,3888 22714,3558 22742,3382 22811,3037 22831,2915 22849,2856 22904,2675 22982,2418 23064,2147 23099,2031
+#: last_checked: 2019-12-23 vvv
+#: next_check: 2020-04-15 vvv
+	RW3; 22666,3888 22714,3558 22742,3382 22811,3037 22831,2915 22849,2856 22878,2758
+	RW3; 22904,2675 22982,2418 23064,2147 23099,2031
+#: next_check ^^^
+#: last_checked ^^^
 # 
-	RW1; 23099,2031 23064,2147 22982,2418 22904,2675 22849,2856 22831,2915 22811,3037 22742,3382 22714,3558 22666,3888
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.890022.php (Leitboys)
+Grünmarkierung, Leitboys	RW3; 22878,2758 22904,2675
+	RW1; 23099,2031 23064,2147 22982,2418 22904,2675 22878,2758 22849,2856 22831,2915 22811,3037 22742,3382 22714,3558 22666,3888
 Gehweg für Radfahrer frei	RW1; 23099,2031 23185,1649 23214,1522
 Gehweg für Radfahrer frei	RW1; 23243,1398 23214,1522 23185,1649 23099,2031
 	RW1;RW1 12510,6508 12553,6423
@@ -3063,7 +3067,7 @@ Grünmarkierung	RW3; 11706,13635 11820,13804 11946,13993 11952,14002 11991,14060 
 #: source_id: 2147344571 (Leitungsarbeiten, Gesamtmaßnahme bis Mitte November 2019)
 #: source_id: 2147345104 (Straßenbauarbeiten, bis Ende November 2019)
 #: priority: #D vvv
-#: last_checked: 2020-01-14 vvv
+#: last_checked: 2020-02-04 vvv
 #: next_check: 2020-07-01 vvv
 	RW3; 12077,14186 12172,14328 12177,14335 12188,14350 12228,14404 12266,14460
 	RW4; 12266,14460 12317,14535
@@ -4708,7 +4712,7 @@ Tempo 10	RW6;RW6 18023,833 17937,958 17839,905
 	RW4;RW3 11676,11839 11569,11587
 #: by: wosch
 #: confirmed_by: srt
-	RW3;RW3 10512,12039 10604,11941 10672,11870 10687,11853 10722,11816
+	RW3;RW3 10512,12039 10604,11941 10642,11901 10672,11870 10687,11853 10722,11816
 Gehweg für Radfahrer frei	RW1; 18166,14277 18058,14269 17979,14247
 	RW1; 13186,15518 13560,15318 13692,15231 13760,15187 13808,15154 13816,15137 13823,15111 13744,15018 13647,14912 13636,14900
 	RW4; 13636,14900 13438,14675
@@ -5757,7 +5761,7 @@ Gehweg für Radfahrer frei	RW1; 20474,14442 20611,14445 20657,14446 20727,14467 2
 	RW4; 1928,10728 1960,10710 1982,10697 2010,10651 2033,10613 2090,10576 2117,10495
 	RW2; 2033,10613 2010,10651 1982,10697 1960,10710 1928,10728
 #: XXX prüfen, ob die Suggestivstreifen Richtung Osten unbeschildert bleiben
-#: last_checked: 2020-01-29
+#: last_checked: 2020-02-03
 #: check_frequency: 30d
 	RW4;RW3 11335,10375 11316,10372 11130,10326 11117,10326
 	RW4;RW4 11117,10326 10975,10334 10871,10322
@@ -5909,7 +5913,7 @@ gemeinsamer Geh- und Radweg, Verbundsteinpflaster	RW2; 12336,5219 12507,5228
 	RW6;RW6 19316,951 19143,979
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2019-12-19
+#: last_checked: 2020-01-31 (mapillary)
 #: next_check: 2020-05-15
 #: valid: 20190319-20200515
 	RW2; 14641,10552 14490,10610
