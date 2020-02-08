@@ -3166,8 +3166,8 @@ Königsteinbrücke: Brücke wurde abgerissen und wird neu gebaut	2::inwork 13148,22
 # 
 #: next_check_id: HOSEMANN-2019
 #: last_checked: 2020-02-04 vvv
-#: next_check: 2020-03-01 vvv
-#: valid: -20200301 vvv
+#: next_check: 2020-03-02 vvv
+#: valid: -20200302 vvv
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr.	1::inwork; 12605,15491 12556,15518
 #: valid ^^^
 #: next_check ^^^
@@ -3179,10 +3179,7 @@ Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr.	1::inwork; 12605,15491 1255
 #: check_frequency: 30d
 Hilda-Geiringer-Weg: gesperrt, wird noch gebaut	2::inwork 8281,13394 8317,13459 8293,13527
 # 
-#: next_check_id: OLIVAERPLATZ-2019
-#: last_checked: 2019-12-08
-#: check_frequency: 60d
-(Olivaer Platz, Wielandstr. - Bayerische Str.): wegen Bauarbeiten gesperrt	2::inwork 4360,10320 4352,10260
+# REMOVED (offen) --- #: next_check_id: OLIVAERPLATZ-2019 --- #: last_checked: 2019-12-08 --- #: check_frequency: 60d --- (Olivaer Platz, Wielandstr. - Bayerische Str.): wegen Bauarbeiten gesperrt	2::inwork 4360,10320 4352,10260
 # 
 #: XXX auch Maßnahme Jt.7
 #: XXX laut Planfestellungsverfahren kommt an der Kreuzung Groß-Berliner Damm eine Ampel hin
@@ -3204,7 +3201,7 @@ Tschaikowskistr.: Einbahnstraße wegen Bauarbeiten in der Hermann-Hesse-Str.	1s:q
 #: check_frequency: 90d
 David-Friedländer-Weg: noch Bauarbeiten, gesperrt	2::inwork 20901,18793 21038,18851
 #: osm_watch: way id="702306263" version="3"
-#: last_checked: 2020-01-15
+#: last_checked: 2020-02-05
 #: check_frequency: 60d
 Rollbergstr.: wegen Bauarbeiten komplett gesperrt	2::inwork 12226,8137 12295,8154
 # 
@@ -3257,7 +3254,7 @@ Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,1
 # 
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben?
 #: also_indoor: traffic
-#: last_checked: 2020-01-12 (mapillary)
+#: last_checked: 2020-02-05
 #: check_frequency: 30d
 Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 # 
@@ -3335,7 +3332,7 @@ Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19316,951 19290,894 19272,838
 # 
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910 vvv
-#: source_id: 2147344585 (mittlerweile entfernt, zweifelhaft) vvv
+#: source_id: 2147344585 (bis Ende Mai 2020) vvv
 #: last_checked: 2020-01-31 vvv
 #: next_check: 2020-05-15 vvv
 #: valid: 20190319-20200515 vvv
@@ -3369,7 +3366,7 @@ Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21
 #: osm_watch: node id="791819743" version="4"
 #: by: osm (kartonage)
 #: confirmed_by: srt
-#: last_checked: 2019-11-22
+#: last_checked: 2020-02-07
 #: check_frequency: 60d
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,8260
 # 
@@ -3384,9 +3381,9 @@ Gaffelsteig: Bauarbeiten, kann gesperrt sein	2::inwork 22287,2431 22221,2520
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.750883.php (Ende 2018 bis 2020)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/erster-teil-des-anton-saefkow-parks-ist-fertiggestellt_a186599
 #: priority: #C vvv
-#: last_checked: 2019-12-28 vvv
+#: last_checked: 2020-02-06 vvv
 #: check_frequency: 30d vvv
-#: valid: -20200301 vvv
+#: valid: -20200401 vvv
 # REMOVED (hier fertig) --- Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12640,14800 12709,14745 12794,14678
 # REMOVED (hier fertig) --- Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12794,14678 12862,14632 12888,14625
 # REMOVED (hier fertig) --- Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12901,14594 12888,14625 12900,14637
@@ -3429,7 +3426,7 @@ Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12982,14629 13007,14615 
 # REMOVED (notice by Ulfert) --- #: next_check_id: BENJAMINFRANKLIN-2018 --- #: by: http://www.berliner-woche.de/steglitz/bauen/charit-bereitet-bau-eines-neuen-landesplatzes-am-campus-benjamin-franklin-vor-d143323.html ("mindestens 18 Monate lang komplett gesperrt") --- #: by: http://www.berliner-woche.de/steglitz/bauen/rettungs-helis-landen-kuenftig-auf-ueberdachter-promenade-d122014.html --- #: by: http://copterweb.de/wordpress/adac-rettungshubschrauber-christoph-31-umgezogen/ --- #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729682.php (in Kürze, für voraussichtlich ein Jahr) --- #: by: https://www.berliner-woche.de/steglitz/c-bauen/neubau-des-hubschrauberlandeplatzes-am-campus-benjamin-franklin-beginnt-im-september_a176375 (bis Ende 2019) --- #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6767 --- #: by: https://www.facebook.com/ChariteUniversitaetsmedizinBerlin/photos/a.359588317914082/373973493142231/?type=3 --- #: by: http://www.lbv.brandenburg.de/3372.htm --- #: by: http://www.lbv.brandenburg.de/dateien/luftfahrt/hslp_berlin_charite_PDK_mit_Siegel.pdf --- #: by: https://copterweb.de/wordpress/adac-rettungshubschrauber-christoph-31-muss-laenger-an-seiner-voruebergehenden-unterkunft-am-flughafen-schoenefeld-bleiben/ (1. Quartal 2020) --- #: by: https://leute.tagesspiegel.de/steglitz-zehlendorf/macher/2019/10/03/98168/klinikum-benjamin-franklin-der-neue-hubschrauberlandeplatz-wird-erst-anfang-2020-in-betrieb-gehen/ (1. Quartal 2020) --- #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/verkehrspolitisch-wichtige-themen-in-der-ersten-bvv-sitzung-im-neuen-jahr_a247462 (Freigabe voraussichtlich Ende Januar 2020) --- #: also_indoor: search Paul-Schwarz-Promenade --- #: also_indoor: search Benjamin-Franklin Hubschrauber --- #: osm_watch: way id="633600854" version="1" --- #: priority: #A --- #: last_checked: 2019-10-21 --- #: next_check: 2020-01-31 --- #: valid: -20200331 --- Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5018,3810 5074,3900 5139,3997 5225,4095
 # 
 #: XXX wann ist hier wieder offen?
-#: last_checked: 2020-02-04
+#: last_checked: 2020-02-06
 # REMOVED --- #: check_frequency: 14d
 Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 # 
@@ -3516,7 +3513,7 @@ Am Köllnischen Park: Bauarbeiten, Fahrbahn gesperrt	2s:q3:inwork 11197,11882 111
 # REMOVED (fertig) --- #: next_check_id: KARLINEKENWEG-2018 --- #: osm_watch: way id="499986562" version="5" --- #: last_checked: 2018-08-26 --- #: check_frequency: 60d --- Karlinekenweg: Bauarbeiten, gesperrt	2::inwork 11359,20297 11405,20196
 # 
 #: by: https://www.berliner-woche.de/tiergarten/c-bauen/zweite-bauphase-abgeschlossen_a181544 (Wiedereröffnung für 2020 geplant)
-#: last_checked: 2019-10-29
+#: last_checked: 2020-02-07
 #: check_frequency: 90d
 Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,11133
 # 
@@ -3561,9 +3558,10 @@ Unterführung S-Bhf. Karlshorst: wegen Bauarbeiten gesperrt	2::inwork 18949,8437 
 #: by: https://www.potsdam.de/sites/default/files/documents/amtsblatt_potsdam_04_2019_ansicht.pdf (irgendwo hier wird die Kaiserstraße wiederentstehen)
 #: XXX Kaiserstr. (PLZ=14467) wird im DPAG-Mitteilungsblatt 06/2019 erwähnt (fehlt in Potsdam.coords.data); evtl. wird sich die Straße hier befinden
 #: by: https://www.deutsches-architekturforum.de/thread/10252-potsdam-wiederherstellung-historische-mitte-projekte-news/?postID=643126#post643126
+#: by: https://www.potsdam.de/sites/default/files/documents/amtsblatt_potsdam_15_2019_final.pdf (Straßenneubenennungen)
 #: XXX Kaiserstr. -> Anna-Flügge-Straße
-#: XXX Schlossstraße wird nach Anna Zielenziger benannt
-#: XXX Schwertfegerstraße wird nach Erika Wolf benannt
+#: XXX Schlossstraße (östlicher Verlauf) -> Anna-Zielenziger-Straße
+#: XXX Schwertfegerstraße (östlicher Verlauf) -> Erika-Wolf-Straße
 #: osm_watch: way id="534669300" version="6" brb
 #: last_checked: 2019-12-07
 #: next_check: 2020-09-01
@@ -3582,7 +3580,7 @@ Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-14
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/im-mauerpark-erinnert-kuenftig-ein-gedenkort-an-die-teilung-der-stadt_a233200 (Ende des Jahres (2019) verschwinden die Baustellen)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/schichtenwasser-erschwerte-bauarbeiten-der-berliner-wasserbetriebe-am-stauraumkanal_a250078 (bis Ende März 2020)
 #: source_id: 2147342369
-#: last_checked: 2020-01-06 (im Norden geprüft) vvv
+#: last_checked: 2020-02-02 (im Süden geprüft, mapillary) vvv
 #: check_frequency: 30d vvv
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10319,15090 10354,14987
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
@@ -3601,7 +3599,7 @@ Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
 #: osm_watch: way id="523614484" version="3"
 # REMOVED (wurde gelöscht) --- #: osm_watch: way id="523614486" version="3"
 # REMOVED (wurde gelöscht) --- #: osm_watch: way id="5134092" version="20"
-#: last_checked: 2020-01-02 (architektur-urbanistik)
+#: last_checked: 2020-02-07
 #: check_frequency: 21d
 Zufahrt zum ehemaligen Parkhaus: Bauarbeiten, Straße komplett gesperrt	2::inwork 8367,10745 8350,10662 8348,10636 8335,10518 8350,10499 8384,10507
 # 
@@ -3680,10 +3678,9 @@ Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11489 20631,1162
 # REMOVED (bei osm nicht mehr construction) --- #: XXX wie sieht es mit einer Anbindung an die Kasperstr. aus? --- ja, wird es geben --- #: osm_watch: way id="461214846" version="3" --- #: last_checked: 2017-08-10 --- #: check_frequency: 90d --- Traudelstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19169,1249 19140,1137
 # 
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2020-01-30 vvv
+#: last_checked: 2020-02-05 vvv
 #: check_frequency: 90d vvv
-#: osm_watch: way id="54781811" version="8"
-Schinkelplatz: Einbahnstraße	1s:q3:inwork 10010,12275 10012,12259 10029,12208
+# REMOVED (keine gesperrt-Schilder mehr gesehen) --- #: osm_watch: way id="54781811" version="8" --- Schinkelplatz: Einbahnstraße	1s:q3:inwork 10010,12275 10012,12259 10029,12208
 #: osm_watch: way id="4611693" version="17"
 Niederlagstr.: Einbahnstraße	1s:q3:inwork 9972,12184 9959,12281
 Schinkelplatz: wegen Bauarbeiten gesperrt	2::inwork 10010,12275 10058,12290
@@ -3838,7 +3835,7 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 #: source_id: LMS-BR_r_LMS-BR_44
 #: XXX_prog: ":inwork" kann als Attribut nicht genutzt werden! vvv
 #: XXX laut fritz bis 31.12.2019
-#: last_checked: 2020-01-18 vvv
+#: last_checked: 2020-02-05 vvv
 #: check_frequency: 60d vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::inwork 9984,12426 9934,12420 9858,12410
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364

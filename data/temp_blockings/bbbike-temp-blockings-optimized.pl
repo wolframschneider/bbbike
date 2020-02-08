@@ -1501,7 +1501,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'data' => '#: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-01-06
+#: last_checked: 2020-02-05
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -2018,7 +2018,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2020-01-06
+#: last_checked: 2020-02-06
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -2046,7 +2046,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2020-01-15
+#: last_checked: 2020-02-05
 #: check_frequency: 45d
 	2::inwork 14652,10201 14569,10055
 ',
@@ -2088,7 +2088,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-01-06 vvv
+#: last_checked: 2020-02-05 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2210,6 +2210,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Sperrung des 2. Teilbereiches: drei Monate ab dem 19.09.2019)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/verkehrsbehoerdliche-anordnung_04-09-2019.pdf
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.885612.php
+#: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: XXX mittlerweile vom Mirbachplatz aus etwa 100m gut befahrbar (Fahrbahn bis auf die Deckschicht hergestellt), danach geht\'s nur auf dem Gehweg weiter
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
@@ -2247,7 +2248,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
 #: also_indoor: traffic
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: last_checked: 2020-01-16
+#: last_checked: 2020-02-07
 #: next_check: 2020-12-31
 	q4::inwork; 5076,10658 5047,10381
 ',
@@ -2343,7 +2344,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 31.03.2020
 #: osm_watch: way id="705182550" version="1"
 #: osm_watch: way id="705182551" version="1"
-#: last_checked: 2019-12-07 vvv
+#: last_checked: 2020-02-05 vvv
 #: next_check: 2020-03-31 vvv
 #: source_id: 2147344480
 # REMOVED (ja, aber Gehweg ist noch frei) --- #: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
@@ -2760,6 +2761,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php
 #: by: fritz
+#: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
 	2::inwork 21558,12073 21562,12088 21564,12097
 ',
          'from' => 1580598000,
