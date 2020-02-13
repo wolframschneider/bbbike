@@ -19,8 +19,8 @@
 #: last_checked ^^^
 # 
 #: next_check_id: DBWERKSTRASSE-2019
-#: last_checked: 2020-01-11
-(Umfahrung Baustelle): Verbundsteinpflaster, Asphalt, wassergebundene Decke	Q1- 14469,10841 14491,10937 14397,10966 14390,10984 14314,10998 14287,10892
+#: last_checked: 2020-02-12
+(Umfahrung Baustelle): Verbundsteinpflaster, Asphalt, wassergebundene Decke	Q1- 14717,10855 14692,10867 14667,10904 14485,10959 14477,10941 14397,10966 14390,10984 14314,10998 14287,10892
 # 
 # REMOVED (mittlerweile weitgehend hergestellt) --- #: source_id: IM_023718 --- #: source_id: 2147339540 --- #: next_check_id: SONNENALLEE-2014 --- #: last_checked: 2018-09-11 --- Sonnenallee: teilweise unfertige Radwege	Q1 14174,7505 14334,7395 14369,7376 14530,7301
 # REMOVED (mittlerweile wieder der alte Zustand weitgehend wieder hergestellt) --- #: next_check_id: STRALAUERALLEE-2018 --- #: XXX_prog: auf der Fahrbahn (kein benutzungspflichtiger Radweg!) keine Einschränkungen --- #: priority: #B --- #: last_checked: 2018-11-30 --- #: check_frequency: 7d --- Stralauer Allee: asphaltierter Geh/Radweg mit unbefestigten Abschnitten	Q2 13678,10685 13779,10642 13919,10583
@@ -98,7 +98,7 @@ Donaustr.: Asphalt	Q0 12150,8891 12202,8895
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/noerdliche-donaustrasse-wird-asphaltiert-und-auch-fuer-fussgaenger-sicherer_a181334
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/baurbeiten-an-der-pannierstrasse_a238483 (Abschluss erst 2020?)
 # REMOVED (realisiert) --- #: XXX dieser Abschnitt wird noch 2018 realisiert --- #: osm_watch: way id="155605274" version="4" -- #: last_checked: 2018-10-11
-#: last_checked: 2020-02-07 vvv
+#: last_checked: 2020-02-09 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2019-10-31 vvv
 #: XXX hier wird vermutlich auch die Einbahnstraßenregelung für Radfahrer aufgehoben
@@ -416,7 +416,7 @@ Adalbertstr.: Kopfsteinpflaster	Q2; 11808,11482 11726,11265 11656,11106
 #: by: http://www.tagesspiegel.de/downloads/19754816/1/liste-rad-infrastruktur.pdf (Radweg wird Gehweg)
 #: by: http://www.berliner-woche.de/neukoelln/verkehr/zu-eng-zu-gefaehrlich-gasse-fuer-radler-an-der-oderstrasse-geplant-d130109.html (Realisierung 2020)
 #: by: https://api.fixmyberlin.de/api/plannings/212 (Asphaltierung + Fahrradstraße, bis zum Eingang Tempelhofer Feld)
-#: last_checked: 2019-12-12
+#: last_checked: 2020-02-09
 #: check_frequency: 180d
 Oderstr.: Fahrbahn Kopfsteinpflaster, Radwege nur mäßiges Verbundsteinpflaster	Q2+ 11607,7145 11617,7083 11652,6879
 #: note: Parkstreifen gepflastert
@@ -1521,8 +1521,8 @@ Wuhlewanderweg: guter Beton	Q0 22259,13508 22191,13414 22187,13304 22211,13040 2
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.854332.php (Rodungsarbeiten in der KW 44/2019)
 #: by: https://www.berliner-woche.de/hellersdorf/c-bauen/senat-baut-wuhlewanderweg-aus_a237268 (eigentliche Bauarbeiten ab Anfang 2020)
 #: osm_watch: way id="26288668" version="14"
-#: last_checked: 2019-11-16
-#: next_check: 2020-01-15
+#: last_checked: 2020-02-08
+#: check_frequency: 60d
 Wuhlewanderweg: unbefestigter Weg/Schotterweg	Q2 22196,12961 22036,12367 21998,12204 21970,12153
 #: by: Peter
 #: corrected_by: srt (Q1 -> )
@@ -1834,7 +1834,7 @@ Landsberger Allee: Asphaltradweg nur mit mäßiger Qualität	Q1 18365,14607 18410,1
 #: XXX werden auch die restlichen Radwege demnächst instandgesetzt oder zu Radspuren umgewandelt? vvv
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20120913.1335.375172.html vvv
 #: source_id: 2147342864
-#: last_checked: 2019-07-17 (mapillary) vvv
+#: last_checked: 2020-02-08 vvv
 #: check_frequency: 180d vvv
 #: XXX Asphalt oder Beton?
 Landsberger Allee: Radwege nur mit mäßiger Qualität (Bordsteinkanten!)	Q1; 20260,15434 20532,15564 20580,15586 20733,15657
@@ -7682,7 +7682,9 @@ Joseph-Haydn-Str.: Kopfsteinpflaster	Q2 5825,12023 5790,12026
 Schaffhausener Str.: Verbundsteinpflaster	Q0- 11456,6103 11429,6122 11404,6141
 (Schaffhausener Str. - Teilestr.): Verbundsteinpflaster	Q1+ 11429,6122 11395,6096 11280,6096 11244,6080 11221,6031 11164,6007 11077,6028 11068,6006
 Grüntenstr.: Beton	Q0 10048,3806 10051,3744 10193,3570 10336,3545 10432,3528
-Allgäuer Weg: Beton	Q0 10336,3545 10319,3379 10285,3231
+Allgäuer Weg: Beton	Q0 10336,3545 10319,3379
+Floningweg: Beton	Q0 10319,3379 10285,3231 10265,3124
+Floningweg: Asphalt	Q0 10265,3124 10246,3017
 Sulzbergweg: Beton	Q0 10319,3379 10362,3368 10409,3310 10504,3198
 Wildspitzweg: Beton	Q0 10504,3198 10524,3187 10560,3182 10608,3179
 Wildspitzweg: Asphalt	Q0 10608,3179 10847,3154 10914,3147 10965,3137 11000,3115
@@ -11405,6 +11407,7 @@ Sophie-Charlotten-Str.: Asphalt mit Schäden	Q1+ 2332,12793 2397,12513 2411,12428
 (Uferweg am Berlin-Spandauer Schiffahrtskanal): Kleinsteinpflaster	Q1 7746,14401 7705,14383
 #: by: mapillary
 Pfannschmidtstr. [Wohngebietsstraße]: Asphalt	Q0 15755,24039 15829,24138 15878,24207
+Heidekampweg: Kleinsteinpflaster	Q2+ 15715,6394 15665,6388
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -14589,7 +14592,7 @@ Kalksteinweg: Asphalt	Q0 10631,1975 11181,1884 11205,1776 11207,1737 11200,1677
 Burgsdorfstr.: mäßiges Kopfsteinpflaster	Q2 7607,15282 7525,15186 7397,15036
 # 
 #: by: A.Ihlefeld:
-Schraderstr.: mäßiges Kopfsteinpflaster	Q2 15853,6339 15766,6398 15715,6394 15665,6388
+Schraderstr.: mäßiges Kopfsteinpflaster	Q2 15853,6339 15766,6398 15715,6394
 # 
 #: by: Jochen LIedtke:
 Grafenwalder Weg: Asphalt	Q0 -3312,16425 -3319,16572
@@ -15082,7 +15085,9 @@ Campestr.: Asphalt	Q1 1127,20434 1128,20525 1080,20617
 Willdenowstr. (Wedding): Kopfsteinpflaster	Q2 7356,15350 7525,15186 7624,15083
 # 
 #: by: Michael Meixner: vvv
+#: confirmed_by: srt
 Schwarzkogelweg: guter Beton	Q0 10121,3040 10167,3257
+#: confirmed_by: srt
 Röthspitzenweg: guter Beton	Q0 9867,3092 9891,3203 9911,3310
 Lothar-Bucher-Str.: Asphalt	Q0 5598,6136 5664,6082 5748,6051 5845,6049 6008,6067
 Hoeftweg: große Betonplatten im guten Zustand	Q0 9675,3150 9683,3185 9655,3270 9701,3357
@@ -20489,6 +20494,7 @@ Balzerstr.: schlechtes Kopfsteinpflaster	Q3 21090,9288 21241,9287 21354,9259
 #: by: ^^^
 # 
 #: by: Stefanie (stefhart):
+#: confirmed_by: srt
 Blumenbachweg: guter Asphalt	Q0 20565,15271 20465,15125 20337,14933
 # 
 #: by: Nicole Iwanow: vvv
@@ -27443,8 +27449,8 @@ Titiseestr.: Asphalt	Q0 5098,22326 5140,22342 5237,22345 5376,22350 5429,22359 5
 # 
 #: by: Billidiket... [AM]
 #: by: https://www.berliner-woche.de/mariendorf/c-verkehr/baufirma-benoetigt-lagerflaeche_a245026 (mit Foto)
-#: XXX Qualität des Asphalts Q1 oder Q0?
-Hausstockweg: Asphalt	Q1 10246,3017 10121,3040 9995,3065 9867,3092 9747,3118 9712,3113
+#: corrected_by: srt (Q1 -> Q0)
+Hausstockweg: Asphalt	Q0 10246,3017 10121,3040 9995,3065 9867,3092 9747,3118 9712,3113
 # 
 #: by: anne [AM] vvv
 #: corrected_by: Wolfhard Schleese (was Asphalt) vvv

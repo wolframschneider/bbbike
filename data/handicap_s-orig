@@ -25,9 +25,13 @@
 # REMOVED (weitgehend fertig) --- #: next_check_id: HAASE-2019 --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.777623.php (Instandsetzung 2019) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_10_1501_1600_online.pdf (Straﬂenlandwidmung) --- #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/gesperrt-wegen-umbau_a222619 (bis Jahresende (2019)) --- #: also_indoor: traffic (G) --- #: last_checked: 2019-11-02 --- Haasestr.: Bauarbeiten, mˆgliche Behinderungen	q3::inwork 14328,11320 14286,11186
 # REMOVED (fertig) --- #: last_checked: 2019-09-10 --- #: next_check: 2019-09-13 --- #: valid: -20190913 --- Krautstr.: Bauarbeiten, Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 12059,12172 12021,12066 12002,12008
 # 
+#: next_check_id: DBWERKSTRASSE-2019
+#: last_checked: 2020-02-12
+(Umfahrung Baustelle): einige Fuﬂg‰nger, kurvig	q2 14717,10855 14692,10867 14667,10904 14485,10959 14477,10941 14397,10966 14390,10984 14314,10998
+# 
 #: next_check_id: STRALAUER-2019
 #: source_id: LMS-BR_r_LMS-BR_178065_LMS-BR_72 (bei VMZ entfernt, bei fritz noch aktiv)
-#: last_checked: 2020-02-07
+#: last_checked: 2020-02-09
 #: valid: 20190319-20200515
 Bˆdikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 # 
@@ -45,7 +49,7 @@ Bˆdikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 1
 # REMOVED (-> qualitaet_s-orig; f¸r Radfahrer offen) --- #: XXX vor Ort pr¸fen! --- #: source_id: 2147342929 --- #: priority: #B --- #: next_check: 2018-08-31 --- #: valid: -20180831 --- Helmerdingstr.: Bauarbeiten, Richtung Revaler Str. gesperrt	q4::inwork; 14468,11203 14442,11101
 # REMOVED (-> f¸r Radfahrer offen) --- #: XXX vor Ort pr¸fen! --- #: source_id: 2147342938 --- #: priority: #B --- #: next_check: 2018-08-10 --- #: valid: -20180810 --- Scharnweberstr.: Bauarbeiten zwischen Colbestr. und Kinzigstr., Fahrbahn Richtung G¸rtelstr. gesperrt	q4::inwork; 14468,11992 14589,11975
 # 
-#: last_checked: 2020-02-06
+#: last_checked: 2020-02-11
 Lange Str.: Bauarbeiten, kurze Einbahnstraﬂenregelung	q2::inwork; 12413,11901 12238,11931
 # 
 #: next_check_id: KAUFHOF-2018
@@ -62,7 +66,7 @@ Hermann-Stˆhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,1183
 #: note: laut fritz bis Ende 2020
 #: XXX_prog BS (auf der ˆstlichen Seite, ansonsten q3+)
 #: also_indoor: traffic (G)
-#: last_checked: 2020-02-06
+#: last_checked: 2020-02-11
 #: check_frequency: 30d
 M¸ncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
 # 
@@ -164,7 +168,7 @@ Mengerzeile: Baustelle, Fahrtrichtung gesperrt	q4::inwork; 13176,9302 13098,9205
 #: osm_watch: way id="549316654" version="3"
 #: also_indoor: traffic (G)
 #: valid: 20171026-
-#: last_checked: 2020-01-30 (mapillary)
+#: last_checked: 2020-02-08 (architektur-urbanistik)
 #: check_frequency: 60d
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607,15282
 # 
@@ -249,7 +253,7 @@ Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 96
 # 
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="4597320" version="17"
-#: last_checked: 2019-12-18
+#: last_checked: 2020-02-07 (architektur-urbanistik)
 #: next_check: 2021-05-31
 #: valid: 20191218-20210531
 Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, Gehweg explizit f¸r Radfahrer verboten	q4::inwork 8737,12098 8783,11959
@@ -556,7 +560,7 @@ Meierottostr.: Fahrbahn an der Bundesallee gesperrt, auf Gehweg ausweichen, Bord
 #: next_check_id: DONAUSTR-2018
 #: also_indoor: traffic (H)
 #: osm_watch: way id="155605273" version="6"
-#: last_checked: 2020-02-07 vvv
+#: last_checked: 2020-02-09 vvv
 #: check_frequency: 14d vvv
 # REMOVED (laut osm nur noch construction=minor) --- Donaustr.: Fahrbahn an der Kreuzung Pannierstr. kann wegen Bauarbeiten noch nicht befahrbar sein	q2::inwork 12202,8895 12394,8729
 Donaustr.: Einbahnstraﬂenregelung zwischen Pannierstr. und Reuterstr.	q4::inwork; 12150,8891 12202,8895
@@ -573,7 +577,7 @@ Neukˆllnische Allee: Fuﬂg‰ngerschutztunnel	q3::inwork 14310,7022 14323,7080 1425
 #: source_id: 2147343690
 #: source_id: LMS-BR_r_LMS-BR_6571
 #: XXX laut viz bis Ende 2022, laut fritz bis voraussichtlich 31.12.2021 (aber Meldung schon lange nicht mehr vorhanden)
-#: last_checked: 2020-01-11 (webcam) vvv
+#: last_checked: 2020-02-11 (webcam) vvv
 #: check_frequency: 30d vvv
 provisorische Radwegf¸hrung, Fuﬂg‰nger, Seitenwechsel notwendig	q3::inwork; 14344,7003 14257,6895 14213,6840 14153,6795 14051,6731
 provisorische und enge Radwegf¸hrung, Fuﬂg‰nger, Seitenwechsel notwendig	q3::inwork; 14051,6731 14153,6795 14213,6840 14257,6895 14344,7003
@@ -802,11 +806,11 @@ S‰ntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
 #: next_check_id: WUHLEWANDERWEG-2014 vvv
 #: by: https://api.fixmyberlin.de/api/projects/270
 #: XXX es ist zu erwarten, dass hier der Wuhlewanderweg verbessert wird, siehe auch Eintrag in qualitaet_s-orig: vvv
-#: last_checked: 2020-01-05 (mapillary) vvv
-#: next_check: 2020-02-05 vvv
+#: last_checked: 2020-02-08 vvv
+#: check_frequency: 60d vvv
 Wuhlewanderweg: steiler Anstieg, Fuﬂg‰nger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gef‰lle, Fuﬂg‰nger	q4; 21970,12153 21998,12204
-#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
 #: next_check_id ^^^
@@ -1311,7 +1315,7 @@ Langhoffstr.: enge Straﬂe, Gegenverkehr	q1 19817,14371 19818,14064
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5651&date=20140610 (Umgestaltung der Alten Frankfurter Allee)
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6543
 #: osm_watch: way id="223184082" version="5"
-#: last_checked: 2019-11-16
+#: last_checked: 2020-02-08
 #: check_frequency: 90d
 (Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16535,11920 16512,11894
 Zum Schlachtensee: wegen der groﬂen Steigung/Gef‰lles nur Schrittgeschwindigkeit mˆglich	q4 -1663,4218 -1592,4268
@@ -1359,7 +1363,7 @@ Im Gestell: Fuﬂg‰nger	q1 371,4453 267,4375
 Heinitzweg: Fuﬂg‰nger	q2 10325,1083 10379,1097
 #: XXX_prog Bordstein ist am s¸dlichen Wendehammer, ansonsten trotzdem q1
 Haewererweg: enge Durchfahrt, niedriger Bordstein	q1 12125,1282 12097,1243
-(Weichselstr. - Sasarsteig): Spielplatz	q3 12330,8636 12303,8605 12170,8548
+(Weichselstr. - Sasarsteig): Spielplatz, Radfahren verboten	q4+ 12287,8602 12170,8548
 #: note: mittlerweile werden Radfahrer offiziell ¸ber den Platz gef¸hrt
 Kaiser-Wilhelm-Platz: einige Fuﬂg‰nger	q2 7201,8870 7307,8945
 Kernhofer Str.: Fuﬂg‰nger, Supermarkt	q2 15380,10946 15355,10875
@@ -3260,6 +3264,7 @@ Waldweg - Kˆpenicker Str.: Bordstein	q2 20872,7268 20892,7236
 Binger Str.: einige Fuﬂg‰nger	q2 4067,6809 4061,6753
 (Kieler Br¸cke - Heidestr.): einige Fuﬂg‰nger	q1 7740,14409 7705,14383 7612,14325
 (Hedwig-Porsch¸tz-Str. - Uferweg/Kieler Br¸cke): einige Fuﬂg‰nger, Kurven	q2 7757,14318 7763,14332 7754,14354 7773,14368
+Am Heidekampgraben: an der S-Bahnunterf¸hrung un¸bersichtlich und kurvig	q2 15200,7233 15168,7256
 # 
 ######################### User Contributions #################################
 # 
@@ -3367,8 +3372,10 @@ Hugo-Heimann-Str.: enge, leicht kurvige Straﬂe	q0- 14120,1991 14165,2106 14229,2
 # REMOVED --- #: by: Christian Marwitz: --- Am Gemeindepark: enge Straﬂe	q1 7172,2343 7215,2442 7208,2534 7199,2559 7165,2571 7034,2586 6751,2708 6679,2701
 # 
 #: by: Michael Meixner: vvv
-Schwarzkogelweg: enge Straﬂe	q1 10121,3040 10167,3257
-Rˆthspitzenweg: enge Straﬂe	q1 9867,3092 9891,3203 9911,3310
+#: corrected_by: srt/policy (q1 -> q0-)
+Schwarzkogelweg: enge Straﬂe	q0- 10121,3040 10167,3257
+#: corrected_by: srt/policy (q1 -> q0-)
+Rˆthspitzenweg: enge Straﬂe	q0- 9867,3092 9891,3203 9911,3310
 #: corrected_by: srt/policy (q1 -> q0-)
 Maurerweg: enge Straﬂe	q0- 12864,2191 12844,2382 12835,2470 12825,2573 12810,2751 12807,2958
 Hoeftweg: relativ eng mit Kurve	q1 9675,3150 9683,3185 9655,3270 9701,3357

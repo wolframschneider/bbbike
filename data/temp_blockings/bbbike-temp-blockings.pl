@@ -29971,7 +29971,7 @@ EOF
 #: next_check_id: WUHLEWANDERWEG-2014
 #: XXX wann beginnen die Bauarbeiten, wann sind sie beendet?
 #: add_fragezeichen: Haben die Bauarbeiten schon begonnen? Gibt es Einschränkungen für Radfahrer?
-#: last_checked: 2019-11-16
+#: last_checked: 2020-02-08
 #: check_frequency: 21d
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
 EOF
@@ -30211,6 +30211,16 @@ EOF
        source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-dienstag-04-02-2020-',
        data  => <<EOF,
 	2::inwork 14626,10162 14597,10129 14558,10082 14453,9929
+EOF
+     },
+     { from  => undef, # 
+       until => 1581361042, # 1581893999, # 2020-02-16 23:59
+       text  => 'Sophienstr.: wegen Sturmschäden keine Durchfahrt möglich',
+       type  => 'gesperrt',
+       source_id => 'https://twitter.com/Berliner_Fw/status/1226538394567704581',
+       data  => <<EOF,
+# REMOVED (nicht mehr erwähnt) --- #: XXX wann ist die Durchfahrt wieder möglich? --- #: priority: #A --- #: next_check: 2020-02-10
+	2::inwork 9986,13412 10317,13248
 EOF
      },
     );

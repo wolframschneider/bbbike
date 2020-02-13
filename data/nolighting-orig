@@ -290,9 +290,10 @@ Pelzlake	NL 32245,1914 32155,1863 32121,1850 32052,1866 31893,1768 31202,2022 31
 Wanderweg Erkner - Hessenwinkel	NL 33531,2772 33419,2765 33406,2738 33086,2790 33002,2826
 (Zu den Müggelheimer Wiesen)	NL 29902,2379 29549,2267 29414,2373
 # 
-#: XXX wird hier eine Beleuchtung entstehen?
+#: XXX wird hier eine Beleuchtung entstehen? Wird hier asphaltiert werden?
 #: by: https://fahrradfreundliches-neukoelln.de/blog/ausschusssitzung-strassen-gruenflaechen-und-ordnung-am-9-januar-2019
-#: last_checked: 2020-01-08 (mapillary)
+#: by: https://api.fixmyberlin.de/api/projects/75 (Asphaltierung)
+#: last_checked: 2020-02-09
 #: check_frequency: 60d
 (Weg am Friedhof)	NL 11608,7267 11687,7284 12180,7387
 # 
@@ -586,7 +587,7 @@ Kolonie Rehberge	NL 5223,16783 5141,16799 5091,16810 5035,16819 5012,16824 5005,
 # 
 #: XXX wird hier eine Beleuchtung entstehen? vvv
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6372
-#: last_checked: 2020-01-23 (osm) vvv
+#: last_checked: 2020-02-09 vvv
 #: check_frequency: 90d vvv
 #: osm_watch: way id="33055828" version="14"
 Kolonie Albrechtshöhe	NL 10260,5953 10215,5959 9955,5993
