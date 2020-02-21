@@ -1182,7 +1182,7 @@ Edith-Kiss-Str.	N 12793,11132 12866,11256
 #: note: "Privatgel‰nde"
 #: osm_watch: way id="491906864" version="4"
 #: priority: #C
-#: last_checked: 2020-01-31 (mapillary)
+#: last_checked: 2020-02-18
 #: next_check: 2023-01-01
 (Planstraﬂe C)	N 12926,11224 12848,11093
 # 
@@ -2538,9 +2538,10 @@ Straﬂe 56 (Heinersdorf)	N 12429,17685 12587,17603
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3835 (Vorlange zur Kenntnisnahme)
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/36re.pdf/file?y=2014 (Widerspruch)
 #: osm_watch: way id="45904921" version="8"
-#: last_checked: 2019-12-28
+#: last_checked: 2020-02-15 (mapillary)
 #: check_frequency: 120d
 Straﬂe 16 (Heinersdorf)	N 13031,17775 13034,17895
+(Straﬂe 16 - Eigerstr.)	NN 13034,17895 12995,17873 12945,17958
 # 
 (Parkplatz Kaufland)	N 13031,17775 12981,17557
 (Parkplatz Kaufland - Am Steinberg)	NN 12981,17557 12998,17480
@@ -2566,6 +2567,7 @@ Malchower Str.	N 12808,18155 12838,18155 12942,18154 12987,18154 13042,18152 131
 Malchower Str.	N 12785,18128 12838,18155
 #: note: Privatstraﬂe
 Eigerstr.	N 12825,17870 12882,17895 12902,17933 12945,17958 12994,17986 13036,18010 13043,18126 13042,18152
+Eigerstr. [81-91]	N 13043,18126 12910,18003 12945,17958
 Ortnitstr.	N 14048,18279 14156,18349 14228,18361 14382,18387 14517,18410 14533,18413 14682,18430 14881,18428 15051,18435 15413,18626 15610,18596
 #: note: gr¸nes Straﬂenschild
 # REMOVED --- #: add_fragezeichen: "Am alten Malchower Graben" oder "Am Alten Malchower Graben" (groﬂes oder kleines "Alten")?
@@ -3270,7 +3272,7 @@ Mondsteinpfad	NN 11181,1884 11182,1976
 S‰ntisstr.	H 10067,1939 9984,1860 9964,1839 9821,1692 9771,1641 9695,1563
 #: next_check_id: SAENTISSTR-2018
 #: XXX nach den Bauarbeiten wieder zu H machen
-#: last_checked: 2018-04-21
+#: last_checked: 2020-02-16 (mapillary)
 #: next_check: 2021-01-01
 S‰ntisstr.	N 9695,1563 9391,1235 9241,1073 9165,1014 9129,986 9058,932 9024,906 9014,898 8971,864
 S‰ntisstr.	H 8971,864 8892,802
@@ -9358,7 +9360,7 @@ Landsberger Allee - M‰rkische Allee	HH 19694,15141 19707,15206 19654,15219 19577
 M‰rkische Allee - Wuhletalstr.	H 20717,17516 20853,17528 20891,17572
 #: next_check_id: WUHLETALBRUECKE-2019
 #: XXX Wann wird die provisorische ‹berfahrt wieder entfernt?
-#: last_checked: 2020-01-05 (mapillary)
+#: last_checked: 2020-02-15
 #: next_check: 2020-12-31
 #: valid: 20190603-20201231
 M‰rkische Allee - Wuhletalstr.	H 20891,17572 20895,17594
@@ -10239,7 +10241,7 @@ Bossestr.	N 14222,10430 14270,10584 14312,10657
 # 
 #: next_check_id: STRALAUER-2019
 #: priority: #A vvv
-#: last_checked: 2020-02-09 vvv
+#: last_checked: 2020-02-19 vvv
 #: next_check: 2020-05-15 vvv
 #: valid: !20190319-20200515 vvv
 Persiusstr.	N 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552

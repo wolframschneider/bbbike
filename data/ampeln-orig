@@ -11,7 +11,7 @@
 #: note: Baustellenampel in der Neuen Roßstr.
 #: source_id: 2147345021 (bis Juli 2020)
 #: XXX bis Mitte 2020
-#: last_checked: 2020-01-23
+#: last_checked: 2020-02-18 (mapillary)
 #: valid: -20200715
 	X::inwork 10780,11721
 # 
@@ -25,7 +25,7 @@
 # REMOVED --- #: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer --- #: source_id: 2147344652 (bis Mitte Dezember 2019) --- #: last_checked: 2019-11-30 --- #: next_check: 2019-12-13 --- #: valid: 20190822-20191213 ---	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-01-28 vvv
+#: last_checked: 2020-02-19 vvv
 #: next_check: 2020-05-15 vvv
 #: valid: 20190319-20200515 vvv
 #: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20)
@@ -85,14 +85,14 @@
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2020-01-16
+#: last_checked: 2020-02-13
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
 #: next_check_id: WUHLETALBRUECKE-2019
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.813955.php
 #: XXX Wann werden die Ampeln wieder abgebaut? vvv
-#: last_checked: 2020-01-05 (mapillary) vvv
+#: last_checked: 2020-02-15 vvv
 #: next_check: 2020-12-31 vvv
 #: valid: 20190603-20201231 vvv
 #: note: die beiden folgenden Punkte gehören eigentlich zu einer Ampelanlage
@@ -1303,9 +1303,14 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 12846,7981
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel während der Bauarbeiten
-#: last_checked: 2020-01-15
+#: last_checked: 2020-02-19
 #: check_frequency: 90d
 	X::inwork 12794,8103
+#: next_check_id: KARLMARXSTR-2018
+#: XXX provisorische Ampel während der Bauarbeiten
+#: last_checked: 2020-02-19
+#: check_frequency: 90d
+	F::inwork 12330,8636
 	X 11154,14985
 	X 12025,14695
 	X 12616,14315
@@ -3309,6 +3314,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 ################################################################################
 #: note: Ampeln elsewhere vvv
+	X 32460,25364
+	X 32706,25302
+	X 33059,25690
+	F 28869,24426
+	X 27715,23859
+	X 26764,23083
+	F 25435,22733
 #: by: mapillary
 	X 11330,-4277
 #: by: mapillary:

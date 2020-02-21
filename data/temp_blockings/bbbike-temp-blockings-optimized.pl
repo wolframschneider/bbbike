@@ -2088,7 +2088,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-02-05 vvv
+#: last_checked: 2020-02-13 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2260,8 +2260,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1704042000
        },
        {
-         'data' => '#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2020-01-30
+         'data' => '#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
+#: last_checked: 2020-02-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2340,6 +2340,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.828319.php
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/schiffbauerdammbruecke/index.shtml
+#: by: https://www.berliner-woche.de/mitte/c-bauen/biergaerten-am-schiffbauerdamm-werden-planmaessig-eroeffnet_a253363 (bis Ende Juni 2020)
 #: XXX wann werden die Bauarbeiten beendet? vvv
 #: note: laut fritz bis 31.03.2020
 #: osm_watch: way id="705182550" version="1"
@@ -2356,9 +2357,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1541444153,
          'id' => 3044,
-         'text' => 'Schiffbauerdamm: Bauarbeiten in Höhe Bertolt-Brecht-Platz, Fahrbahn gesperrt, bis Ende März 2020',
+         'text' => 'Schiffbauerdamm: Bauarbeiten in Höhe Bertolt-Brecht-Platz, Fahrbahn gesperrt, bis voraussichtlich Ende Juni 2020',
          'type' => 'handicap',
-         'until' => 1585670400
+         'until' => 1593532800
        },
        undef,
        {
@@ -2514,7 +2515,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: SOLDINER-2019
 #: by: https://www.soldiner-quartier.de/aktuell.html?tx_news_pi1%5Bnews%5D=445&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=1b5efc55c1b5b262514c4bb696a56d73 (bis Ende 2020 oder Frühjahr 2021)
-#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
+#: REMOVED (fast alle Verkehrsmeldungen weg?) --- by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
 #: last_checked: 2019-12-27 (mapillary)
@@ -2857,7 +2858,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-02-04
+#: last_checked: 2020-02-18 (mapillary)
 	2::inwork 15420,12178 15520,12160 15628,12246
 ',
          'from' => undef,
@@ -2879,19 +2880,6 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => undef,
          'id' => 3192,
          'text' => 'Grünfläche Auerdreieck: Bauarbeiten, Weg kann gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
-       {
-         'data' => '#: next_check_id: PERELSPLATZ-2019
-#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
-#: last_checked: 2019-12-22
-#: next_check: 2020-01-31
-	2::inwork 5809,7712 5636,7709
-',
-         'from' => undef,
-         'id' => 3193,
-         'text' => 'Perelsplatz: Parkweg gesperrt, Ende der Sperrung unbekannt',
          'type' => 'gesperrt',
          'until' => undef
        }

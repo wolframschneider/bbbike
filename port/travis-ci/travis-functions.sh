@@ -49,12 +49,11 @@ init_perl() {
 }
 
 init_apt() {
-    if [ "$CODENAME" = "precise" ]
-    then
-	# broken on (since?) 2019-08-21:
-	# E: Failed to fetch http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/InRelease  Clearsigned file isn't valid, got 'NOSPLIT' (does the network require authentication?)
-	sudo rm -f /etc/apt/sources.list.d/mongodb.list
-    fi
+    # broken on (since?) 2019-08-21 on preice:
+    # E: Failed to fetch http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/InRelease  Clearsigned file isn't valid, got 'NOSPLIT' (does the network require authentication?)
+    # Since 2020-02-16 more repositories (chrome, cassandra, git-lfs, couchdb) are broken on trusty:
+    (cd /etc/apt/sources.list.d && sudo rm -f mongodb.list google-chrome.list cassandra.list github_git-lfs.list couchdb.list)
+
     if [ "$USE_SYSTEM_PERL" = "1" ]
     then
 	if [ ! -e /etc/apt/sources.list.d/mydebs.bbbike.list ]
@@ -258,6 +257,10 @@ install_perl_dependencies() {
 	# distances (this is causing strassen-util.t to fail).
 	# https://github.com/bluefeet/Geo-Distance/issues/15
 	cpanm --quiet --notest 'Geo::Distance~!=0.21,!=0.22'
+
+	# HTML::Form 6.06 breaks WWW::Mechanize usage (t/mapserver.t fails)
+	# https://github.com/libwww-perl/HTML-Form/issues/22
+	cpanm --quiet --notest 'HTML::Form~!=6.06'
 
 	if [ "$CPAN_INSTALLER" = "cpanm" ]
 	then

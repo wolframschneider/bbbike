@@ -48,8 +48,9 @@ Verbundsteinpflaster	RW2; 10209,8661 9801,8683
 wobei das Radwegschild parallel zur Fahrtrichung steht	RW4; 8970,9323 9154,9347 9211,9354
 	RW3; 9211,9354 9154,9347 8970,9323
 	RW4;RW4 9211,9354 9248,9350
-	RW1;RW1 8777,9601 9002,9731 9044,9753 9243,9696
-	RW2;RW1 9243,9696 9334,9670
+	RW1; 8777,9601 9002,9731 9044,9753
+für Radfahrer freigegebene Busspur ist immer gültig	RW1; 9044,9753 9243,9696 9334,9670
+	RW1; 9334,9670 9243,9696 9044,9753 9002,9731 8777,9601
 Busspur gilt Mo-Fr 6-19 Uhr	RW1; 8777,9601 8679,9544 8595,9495
 	RW1; 8595,9495 8679,9544 8777,9601
 alte Gehwegplatten	RW1; 7938,9694 8097,9650 8192,9619 8358,9567 8595,9495
@@ -351,7 +352,7 @@ neu asphaltiert, relativ breit	RW1; 10256,11160 10020,11262
 #: by: https://api.fixmyberlin.de/api/plannings/10 (erster Bauabschnitt Alte Jakobstr. - Axel-Springer-Str. (Nordseite) im Herbst 2018)
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (Sanierung 2019)
 #: XXX Bauarbeiten der Wasserbetriebe bis November 2019, südliche Seite zwischen Alexandrinenstr. und Lobeckstr.
-#: last_checked: 2020-02-06 vvv
+#: last_checked: 2020-02-20 vvv
 #: check_frequency: 90d vvv
 # REMOVED (hier realisiert) --- #: last_checked: 2019-12-06 (Bauarbeiten am Rad/Gehweg Richtung Westen) --- #: check_frequency: 3d
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1; 10020,11262 10256,11160
@@ -601,7 +602,7 @@ asphaltiert	RW2;RW2 13448,12340 13163,12382 12878,12430 12603,12470 12592,12472 
 #: source_id: 2147342756
 #: XXX zurzeit provisorische Radspuren
 #: priority: #A
-#: last_checked: 2020-02-05
+#: last_checked: 2020-02-13
 #: next_check: 2020-10-01
 	RW4?;RW4 11976,12595 11678,12727
 	RW3;RW2 11678,12727 11635,12745
@@ -782,7 +783,7 @@ im Bereich der Bushaltestelle wird der Radweg auf dem Gehweg geführt	RW4; 14196,
 #: by: https://www.berliner-woche.de/alt-treptow/c-verkehr/verkehrskonzept-erforderlich_a248812
 #: source_id: 2147343116
 #: XXX wann wird die Radspur wieder hergestellt? (-> RW4;)
-#: last_checked: 2020-02-09
+#: last_checked: 2020-02-19
 #: check_frequency: 60d
 provisorischer gemeinsamer Geh- und Radweg	RW2; 14558,10264 14501,10169 14405,10027 14350,9953
 	RW4; 14350,9953 14289,9870
@@ -1315,7 +1316,7 @@ Busspur gilt Mo-Fr 6-20 Uhr	RW5; 10625,12206 10574,12131 10512,12039
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/rechtsabbiegen-vom-alex-in-die-karl-marx-allee-sechs-wochen-lang-verboten_a202864
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.802572.php (bis auf Weiteres)
 #: source_id: 2147343815 (bis auf Weiteres)
-#: last_checked: 2020-02-06
+#: last_checked: 2020-02-13
 #: check_frequency: 30d
 # asphaltierter Radweg	RW1; 11134,12793 11226,12945
 provisorische Radspur	RW4; 11134,12793 11226,12945
@@ -1679,7 +1680,8 @@ Verbundsteinpflaster	RW1;RW1 8736,337 8769,266 8853,172 9159,-171 9198,-264 9177
 neues Verbundsteinpflaster	RW1; 12207,1704 11865,1564 11765,1522 11476,1398 11216,1293 11157,1269 11012,1210 10829,1135 10769,1111
 für Radfahrer freigegebene Busspur gilt Mo-Fr 14-18 Uhr	RW1; 10769,1111 10829,1135 11012,1210 11157,1269 11216,1293 11476,1398 11765,1522 11865,1564 12207,1704
 neues Verbundsteinpflaster	RW2; 10769,1111 10664,1068 10427,968
-für Radfahrer freigegebene Busspur gilt Mo-Fr 14-18 Uhr	RW1; 10427,968 10664,1068 10769,1111
+#: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22172.pdf (neue Geltungszeiten für die Busspur)
+für Radfahrer freigegebene Busspur gilt Mo-Fr 7-20 Uhr	RW1; 10427,968 10664,1068 10769,1111
 neues Verbundsteinpflaster	RW1; 10427,968 10324,925 10276,906
 	RW2; 10324,925 10427,968
 	RW1; 10276,906 10187,872 10047,813 9858,744
@@ -1779,7 +1781,7 @@ Busspur gilt Mo-Fr 7-18 Uhr	RW5; 10020,11262 9984,11270 9751,11243 9615,11225 94
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: XXX Bauarbeiten, Radspuren sind größtenteils aufgehoben
 #: XXX war: RW3;RW3
-#: last_checked: 2020-01-04
+#: last_checked: 2020-02-13
 #: check_frequency: 90d
 	RW0;RW0 8732,12804 8737,12757 8752,12647 8752,12647 8754,12622 8756,12608
 	RW3; 10887,10922 10839,10907 10856,10856 10906,10874
@@ -5913,7 +5915,7 @@ gemeinsamer Geh- und Radweg, Verbundsteinpflaster	RW2; 12336,5219 12507,5228
 	RW6;RW6 19316,951 19143,979
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-01-31 (mapillary)
+#: last_checked: 2020-02-17
 #: next_check: 2020-05-15
 #: valid: 20190319-20200515
 	RW2; 14641,10552 14490,10610

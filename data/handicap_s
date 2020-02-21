@@ -43,13 +43,12 @@ Donaustr.: Einbahnstraßenregelung zwischen Pannierstr. und Reuterstr.	q4::inwork
 Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 provisorische Radwegführung, Fußgänger, Seitenwechsel notwendig	q3::inwork; 14344,7003 14257,6895 14213,6840 14153,6795 14051,6731
 provisorische und enge Radwegführung, Fußgänger, Seitenwechsel notwendig	q3::inwork; 14051,6731 14153,6795 14213,6840 14257,6895 14344,7003
-Anzengruberstr.	q3::inwork 12689,8289 12865,8346
+Anzengruberstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12689,8289 12865,8346
+Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12394,8729 12330,8636
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249 12753,8187 12794,8103
-Rollbergstr.: Einbahnstraßenregelung, ca. 70m	q3::inwork; 12545,8209 12714,8249
 Flottwellstr./Dennewitzstr.: Bauarbeiten, Ausweichen auf Gehweg und Umfahrung über Pohlstr.	q3::inwork; 8199,10634 8159,10430 8058,10306
 Pohlstr.: Bauarbeiten, Umfahrung über Gehweg	q3::inwork 8159,10430 7932,10475
 Steinmetzstr: Bauarbeiten zwischen Kurfürstenstr. und Bülowstr., etwa 100 Meter der Fahrbahn sind gesperrt, Ende unbekannt	q3::inwork 7744,10372 7698,10147
-Lauterstr.: Fahrbahn am Perelsplatz gesperrt	q4::inwork 5810,7662 5810,7684 5809,7712
 Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3905,4482
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork; 12556,15518 12605,15491 12621,15482
@@ -1941,6 +1940,8 @@ Binger Str.: einige Fußgänger	q2 4067,6809 4061,6753
 (Kieler Brücke - Heidestr.): einige Fußgänger	q1 7740,14409 7705,14383 7612,14325
 (Hedwig-Porschütz-Str. - Uferweg/Kieler Brücke): einige Fußgänger, Kurven	q2 7757,14318 7763,14332 7754,14354 7773,14368
 Am Heidekampgraben: an der S-Bahnunterführung unübersichtlich und kurvig	q2 15200,7233 15168,7256
+Eigerstr. [81-91]: Bodenschwellen	q2 13043,18126 12910,18003 12945,17958
+(Straße 16 - Eigerstr.): einige Fußgänger	q2 13034,17895 12995,17873 12945,17958
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635

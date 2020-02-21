@@ -4468,7 +4468,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2 26915,23116 26968,23160 27254,23502
-	2 28246,24272 27608,23776
+	2 28246,24272 27715,23859 27608,23776
 	2 27254,23502 27608,23776
 EOF
      },
@@ -11472,7 +11472,7 @@ EOF
        text  => 'B 168 Prötzel - Tiefensee zw. Prötzel, Stadtstelle und KG, Höhe Gamensee Deckenerneuerung Vollsperrung 13.05.2008-31.07.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 41299,28974 40339,28934 40135,28824 39921,28733 39155,29093
+	2::inwork 41299,28974 40339,28934 40135,28824 39921,28733 39140,29074
 EOF
      },
      { from  => 1209852000, # 2008-05-04 00:00
@@ -13807,7 +13807,7 @@ EOF
        text  => 'B 158 Blumberg - Werneuchen zw. Blumberg u. Seefeld Deckenerneuerung Vollsperrung 14.04.2009-13.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 28531,24375 28308,24301 28246,24272 27608,23776 27254,23502 26968,23160 26915,23116 26764,23083 25878,22894 25712,22856 25283,22666 24951,22681 24709,22522
+	2::inwork 28531,24375 28308,24301 28246,24272 27715,23859 27608,23776 27254,23502 26968,23160 26915,23116 26764,23083 25878,22894 25838,22885 25712,22856 25435,22733 25283,22666 24951,22681 24709,22522
 EOF
      },
      { from  => 1239919200, # 2009-04-17 00:00
@@ -15204,7 +15204,7 @@ EOF
        text  => 'L 337 zw. B168 vor Tiefensee und B158 Werftpfuhl Deckenerneuerung Vollsperrung 18.07.2009-31.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 39155,29093 38087,29075 36975,29112
+	2::inwork 39140,29074 38087,29075 36975,29112
 EOF
      },
      { from  => 1249106357, # 2009-08-01 07:59
@@ -19307,6 +19307,7 @@ EOF
        periodic => 1, # zweiter Termin im Sommer
 #XXX für 2020 wiederherstellen?       recurrences => [['yearly', days => 1, months => 7]], # kann aber auch erst im August oder September stattfinden
 # zweiter Termin wird 2019 ausfallen
+# wird 2020 wieder nicht stattfinden: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/u-bahn-wird-unterbrochen_a253327
        text  => 'Open Air Gallery am 1. Juli 2018 auf der Oberbaumbrücke (10:00 - 20:00)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -26895,7 +26896,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-02-05 vvv
+#: last_checked: 2020-02-13 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27861,8 +27862,8 @@ EOF
        text  => 'Privatstraße hinter der Leipziger Str.: Bauarbeiten, für Radfahrer explizit gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: note: Verbotsschild an beiden Seiten
-#: last_checked: 2020-01-30
+#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
+#: last_checked: 2020-02-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28432,13 +28433,14 @@ EOF
 EOF
      },
      { from  => 1541444153, # 2018-11-05 19:55
-       until => $isodate2epoch->("2020-03-31 18:00:00"),
-       text  => 'Schiffbauerdamm: Bauarbeiten in Höhe Bertolt-Brecht-Platz, Fahrbahn gesperrt, bis Ende März 2020',
+       until => $isodate2epoch->("2020-06-30 18:00:00"),
+       text  => 'Schiffbauerdamm: Bauarbeiten in Höhe Bertolt-Brecht-Platz, Fahrbahn gesperrt, bis voraussichtlich Ende Juni 2020',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/das-wasserstrassen-neubauamt-saniert-im-winter-uferwaende-am-schiffbauerdamm_a194485 (noch weitere Sperrungen im Winter bis April 2020)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.828319.php
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/schiffbauerdammbruecke/index.shtml
+#: by: https://www.berliner-woche.de/mitte/c-bauen/biergaerten-am-schiffbauerdamm-werden-planmaessig-eroeffnet_a253363 (bis Ende Juni 2020)
 #: XXX wann werden die Bauarbeiten beendet? vvv
 #: note: laut fritz bis 31.03.2020
 #: osm_watch: way id="705182550" version="1"
@@ -29163,7 +29165,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: SOLDINER-2019
 #: by: https://www.soldiner-quartier.de/aktuell.html?tx_news_pi1%5Bnews%5D=445&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=1b5efc55c1b5b262514c4bb696a56d73 (bis Ende 2020 oder Frühjahr 2021)
-#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
+#: REMOVED (fast alle Verkehrsmeldungen weg?) --- by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
 #: last_checked: 2019-12-27 (mapillary)
@@ -30153,7 +30155,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-02-04
+#: last_checked: 2020-02-18 (mapillary)
 	2::inwork 15420,12178 15520,12160 15628,12246
 EOF
      },
@@ -30173,14 +30175,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1581782552, # undef, # XXX
        text  => 'Perelsplatz: Parkweg gesperrt, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: PERELSPLATZ-2019
-#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
-#: last_checked: 2019-12-22
-#: next_check: 2020-01-31
+# REMOVED --- #: next_check_id: PERELSPLATZ-2019 --- #: add_fragezeichen: Wann wird die Sperrung aufgehoben? --- #: last_checked: 2019-12-22 --- #: next_check: 2020-01-31
 	2::inwork 5809,7712 5636,7709
 EOF
      },

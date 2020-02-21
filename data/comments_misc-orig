@@ -146,6 +146,7 @@ Kreisverkehr	Roundabout 13124,216
 Kreisverkehr	Roundabout -22224,-1673
 Kreisverkehr	Roundabout -19438,-5986
 Kreisverkehr	Roundabout 44106,14616
+Kreisverkehr	Roundabout 33324,26038
 # 
 #: by: Marita:
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
@@ -760,6 +761,7 @@ ausgeschildert als "Heinz-Graffunder-Park"	CP2; 20068,13036 19873,13129
 Bordsteine beim Überqueren der Wuhletalstr.	CS 20801,17821 20728,17670 20657,17543
 # REMOVED (Konflikt XXX_prog <-> XXX) --- #: XXX_prog -> BS
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7138 (Realisierung einer Querung Anfang 2021, vielleicht)
+#: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/baumassnahme-an-der-grunewaldstrasse-haengt-von-senatsplaenen-ab_a252769
 #: XXX Realsierung einer Querung geplant
 #: next_check: 2021-03-01
 Bordsteine beim Überqueren der Grunewaldstr.	CP; 6851,9365 6917,9274 7001,9291
@@ -1363,7 +1365,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 # 
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2020-01-11 (mapillary)
+#: last_checked: 2020-02-13
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13390
 # 
