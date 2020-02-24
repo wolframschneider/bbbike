@@ -174,17 +174,6 @@ install_perl_58_dependencies() {
     fi
 }
 
-install_cpan_hacks() {
-    if [ ! "$USE_SYSTEM_PERL" = "1" ]
-    then
-	# -> Currently empty, no hacks required. Was:
-	## Tk + EUMM 7.00 problems, use the current development version (https://rt.cpan.org/Ticket/Display.html?id=100044)
-	#cpanm --quiet --notest SREZIC/Tk-804.032_501.tar.gz
-	## And this is for linux sh/bash braindeadness (empty then not allowed, it seems):
-	:
-    fi
-}
-
 install_webserver_dependencies() {
     if [ "$USE_MODPERL" = "1" ]
     then
@@ -257,10 +246,6 @@ install_perl_dependencies() {
 	# distances (this is causing strassen-util.t to fail).
 	# https://github.com/bluefeet/Geo-Distance/issues/15
 	cpanm --quiet --notest 'Geo::Distance~!=0.21,!=0.22'
-
-	# HTML::Form 6.06 breaks WWW::Mechanize usage (t/mapserver.t fails)
-	# https://github.com/libwww-perl/HTML-Form/issues/22
-	cpanm --quiet --notest 'HTML::Form~!=6.06'
 
 	if [ "$CPAN_INSTALLER" = "cpanm" ]
 	then

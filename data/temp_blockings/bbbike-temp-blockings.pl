@@ -27863,7 +27863,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-02-13
+#: last_checked: 2020-02-21
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28445,7 +28445,7 @@ EOF
 #: note: laut fritz bis 31.03.2020
 #: osm_watch: way id="705182550" version="1"
 #: osm_watch: way id="705182551" version="1"
-#: last_checked: 2020-02-05 vvv
+#: last_checked: 2020-02-21 vvv
 #: next_check: 2020-03-31 vvv
 #: source_id: 2147344480
 # REMOVED (ja, aber Gehweg ist noch frei) --- #: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
@@ -30220,6 +30220,14 @@ EOF
        data  => <<EOF,
 # REMOVED (nicht mehr erwähnt) --- #: XXX wann ist die Durchfahrt wieder möglich? --- #: priority: #A --- #: next_check: 2020-02-10
 	2::inwork 9986,13412 10317,13248
+EOF
+     },
+     { from  => 1582487459, # 2020-02-23 20:50
+       until => 1600207199, # 2020-09-15 23:59
+       text  => 'Hindenburgdamm: zwischen Schloßstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte September 2020',
+       type  => 'handicap',
+       data  => <<EOF,
+	q4::inwork 4515,4966 4514,5082 4513,5139 4512,5199
 EOF
      },
     );
