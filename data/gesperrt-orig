@@ -137,10 +137,10 @@ Dorfplatz	1 21074,-475 20986,-529 20920,-556 20827,-537 20999,-489 21074,-475
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2018/pressemitteilung.715210.php
 #: by: https://www.berliner-woche.de/altglienicke/c-verkehr/bis-zum-fruehjahr-2021-wird-an-der-b-96a-gebaut_a196270
 #: source_id: 2147342746
-#: source_id: 2147342800
+#: source_id: 2147342800 (bis Ende Juli 2020)
 #: source_id: 2147343246
 #: last_checked: 2020-01-03 (mapillary)
-#: next_check: 2020-04-01
+#: next_check: 2020-07-31
 B96a (Kfz-Straße)	2 20272,-501 20585,-272 20781,-82 21115,271 21286,449 21613,923 21656,989 21829,1351 21862,1532 21819,1595 21541,1739
 # 
 Zufahrt zur B96a	2 20288,-511 20272,-501
@@ -3075,6 +3075,19 @@ Drängelgitter, geringe lichte Breite	BNP:6::trailer=no 13010,14540
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: next_check_id: UFERPROMENADE-2019
+#: XXX siehe auch strassen-orig-Eintrag
+#: last_checked: 2020-01-20 (daf) vvv
+#: check_frequency: 60d vvv
+#: next_check: 2021-03-01 vvv
+#: valid: -20210301 vvv
+Bauarbeiten Golda-Meir-Steg	2::inwork 7965,14207 7973,14195 7972,14185
+Bauarbeiten Golda-Meir-Steg	2::inwork 7973,14195 8033,14241
+#: valid ^^^
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+# 
 #: XXX hier ist ein Zirkus (?), bleibt das dauerhaft
 #: last_checked: 2020-02-22
 Weg an der Trabrennbahn: gesperrt	2 18671,8092 18744,8121
@@ -3096,9 +3109,9 @@ Tor	BNP:5 14692,10867
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.876928.php (bis Herbst 2021)
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/ro%C3%9Fstra%C3%9Fenbrucke-mitte-vollsperrung-%C2%B7-bruckensanierung
 #: also_indoor: traffic (G,H) vvv
-#: source_id: 2147345254 (bis Februar 2021) vvv
-#: last_checked: 2020-02-17 vvv
-#: next_check: 2021-02-01 vvv
+#: source_id: 2147345254 (bis 28.02.2021) vvv
+#: last_checked: 2020-02-24 vvv
+#: next_check: 2021-02-28 vvv
 #: priority: #A vvv
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10687,11853 10672,11870 10642,11901
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10680,11875 10672,11870 10662,11863
@@ -3120,20 +3133,20 @@ Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwor
 # REMOVED (beendet, etwas besser) --- #: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität des Wegs danach besser sein? --- #: last_checked: 2019-12-29 --- #: check_frequency: 21d --- (Stresemannstr. - Wilhelmstr.): Bauarbeiten, komplett gesperrt	2::inwork 9215,10607 9368,10641
 # 
 #: XXX außerdem prüfen, ob der Straßenzug Kronprinzenbrücke - Heinrich-von-Gagern-Str. dauerhaft strcat=N bleibt
-#: source_id: 2147344959 (bis August 2020)
+#: source_id: 2147344959 (bis 31.07.2020)
 #: osm_watch: way id="649959246" version="4"
 #: osm_watch: way id="743628048" version="3"
 #: priority: #A
 #: last_checked: 2020-01-06
 #: check_frequency: 60d
-#: next_check: 2020-08-31
-#: valid: -20200831
+#: next_check: 2020-07-31
+#: valid: -20200731
 Forumsquerung: Bauarbeiten, komplett gesperrt	2::inwork 8206,12757 8207,12606
 # 
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_49_7429_7632_online.pdf (Einziehung von Straßenland --- vielleicht der alte Sackgassenhammer?)
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="1"
-#: last_checked: 2020-02-18
+#: last_checked: 2020-02-27
 #: check_frequency: 14d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3141,7 +3154,7 @@ Forumsquerung: Bauarbeiten, komplett gesperrt	2::inwork 8206,12757 8207,12606
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036530021347/530021347/00453938/38-Anlagen/02/MA_2194_V.pdf (Verlegung der Grunerstr. wird erwähnt)
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="729492933" version="2"
-#: last_checked: 2020-02-21 (Fahrbahn ist aufgerissen, es steht ein solider Bauzaun über die gesamte Straßenbreite)
+#: last_checked: 2020-02-25 (Fahrbahn ist aufgerissen, es steht ein solider Bauzaun über die gesamte Straßenbreite)
 #: check_frequency: 30d
 Gustav-Böß-Str.: Straße ist komplett gesperrt	2::inwork 10673,12434 10772,12515
 # 
@@ -3176,7 +3189,7 @@ DB-Werkstraße: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork
 #: osm_watch: way id="16307526" version="17"
 #: priority: #A
 #: also_indoor: search Königsteinbrücke
-#: last_checked: 2019-10-26 (wosch)
+#: last_checked: 2020-02-22 (mapillary)
 #: next_check: 2021-01-01
 #: valid: -20210101
 Königsteinbrücke: Brücke wurde abgerissen und wird neu gebaut	2::inwork 13148,22396 13385,22383
@@ -3211,6 +3224,9 @@ Hilda-Geiringer-Weg: gesperrt, wird noch gebaut	2::inwork 8281,13394 8317,13459 
 Benno-König-Str.: noch nicht freigegeben, Straße gesperrt	2::inwork 18374,4307 18596,4517
 # 
 #: next_check_id: HERMANNHESSESTR-2019
+#: source_id: 2147345502
+#: XXX im Verkehrsmeldungstext ist die Sperrung Richtung Westen, aber vermutlich ist es genau anders herum?
+#: also_indoor: traffic (H)
 #: last_checked: 2019-10-13
 #: next_check: 2020-04-30
 Tschaikowskistr.: Einbahnstraße wegen Bauarbeiten in der Hermann-Hesse-Str.	1s:q4:inwork 9868,19023 9501,18902
@@ -3219,7 +3235,7 @@ Tschaikowskistr.: Einbahnstraße wegen Bauarbeiten in der Hermann-Hesse-Str.	1s:q
 #: check_frequency: 90d
 David-Friedländer-Weg: noch Bauarbeiten, gesperrt	2::inwork 20901,18793 21038,18851
 #: osm_watch: way id="702306263" version="3"
-#: last_checked: 2020-02-05
+#: last_checked: 2020-02-27
 #: check_frequency: 60d
 Rollbergstr.: wegen Bauarbeiten komplett gesperrt	2::inwork 12226,8137 12295,8154
 # 
@@ -3255,7 +3271,7 @@ Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21476,5048 21611,5119 
 #: by: https://www.berliner-woche.de/mitte/c-bauen/groesste-innerstaedtische-grossgrabung-hinter-rotem-rathaus-gestartet_a233461
 #: by: https://www.parlament-berlin.de/ados/17/IIIPlen/vorgang/d17-2854.pdf (Bebauungsplan, Plan befindet sich auf der tatsächlichen Seite 366 sowie 373)
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2020-02-21
+#: last_checked: 2020-02-25
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
 #: next_check_id: SOWJETISCHESEHRENMAL-2019
@@ -3266,7 +3282,7 @@ Treptower Park, am Sowjetischen Ehrenmal: Weg wegen Bauarbeiten gesperrt	2::inwo
 # 
 #: XXX wann sind die Bauarbeiten beendet?
 #: priority: #C
-#: last_checked: 2020-02-18
+#: last_checked: 2020-02-27
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3352,7 +3368,7 @@ Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19316,951 19290,894 19272,838
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910 vvv
 #: source_id: 2147344585 (bis Ende Mai 2020) vvv
-#: last_checked: 2020-02-19 vvv
+#: last_checked: 2020-02-27 vvv
 #: next_check: 2020-05-15 vvv
 #: valid: 20190319-20200515 vvv
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:q4:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -3458,7 +3474,7 @@ Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesp
 #: priority: #A vvv
 #: last_checked: 2020-02-13 vvv
 #: check_frequency: 60d vvv
-#: valid: -20210601 vvv
+#: valid: -20210630 vvv
 Französische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch für Fußgänger	2:inwork 9076,12054 9183,12076
 #: source_id: 2147343292
 Mauerstr..: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9108,11961 9076,12054
@@ -3539,6 +3555,7 @@ Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,
 #: by: http://www.berliner-woche.de/marienfelde/bauen/deutsche-bahn-reagiert-auf-kritik-zum-bahnuebergang-saentisstrasse-d159926.html
 #: by: https://www.berliner-woche.de/lichtenrade/c-verkehr/der-offizielle-baustart-fuer-die-dresdner-bahn-ist-erfolgt_a200203
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872
+#: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22485.pdf (Fertigstellung Ende 2021)
 #: source_id: 2147342379
 #: source_id: LMS-BR_r_LMS-BR_127414_LMS-BR_72
 #: last_checked: 2020-02-16 (mapillary)
@@ -3599,9 +3616,9 @@ Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-14
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/im-mauerpark-erinnert-kuenftig-ein-gedenkort-an-die-teilung-der-stadt_a233200 (Ende des Jahres (2019) verschwinden die Baustellen)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/schichtenwasser-erschwerte-bauarbeiten-der-berliner-wasserbetriebe-am-stauraumkanal_a250078 (bis Ende März 2020)
 #: source_id: 2147342369
-#: last_checked: 2020-02-02 (im Süden geprüft, mapillary) vvv
+#: last_checked: 2020-02-24 vvv
 #: check_frequency: 30d vvv
-Mauerpark: Bau eines Stauraumkanals	2::inwork 10319,15090 10354,14987
+# REMOVED (hier kommt man mittlerweile durch) --- Mauerpark: Bau eines Stauraumkanals	2::inwork 10319,15090 10354,14987
 Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -3941,7 +3958,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://cam01.berlinerschloss-webcam.de/
 #: by: https://www.tagesspiegel.de/berlin/nicht-mehr-2019-eroeffnung-des-humboldt-forums-wird-verschoben/24448118.html
 #: by: https://www.humboldtforum.org/de/inhalte/stand-der-baumassnahme-humboldt-forum-im-berliner-schloss (Eröffnung 2020)
-#: last_checked: 2020-01-30
+#: last_checked: 2020-02-26
 #: check_frequency: 60d
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 

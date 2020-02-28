@@ -28445,6 +28445,7 @@ EOF
 #: note: laut fritz bis 31.03.2020
 #: osm_watch: way id="705182550" version="1"
 #: osm_watch: way id="705182551" version="1"
+#: also_indoor: traffic (G,H) vvv
 #: last_checked: 2020-02-21 vvv
 #: next_check: 2020-03-31 vvv
 #: source_id: 2147344480
@@ -28453,6 +28454,7 @@ EOF
 	q3::inwork 9160,12932 9193,12875
 #: next_check ^^^
 #: last_checked ^^^^
+#: also_indoor ^^^
 #: XXX ^^^
 EOF
      },
@@ -28585,11 +28587,11 @@ EOF
 EOF
      },
      { from  => 1543258848, # 2018-11-26 20:00
-       until => $isodate2epoch->("2020-02-29 18:00:00"), # 1551394799, # 2019-02-28 23:59
-       text  => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende Februar 2020',
+       until => $isodate2epoch->("2020-08-31 18:00:00"), # 1551394799, # 2019-02-28 23:59
+       text  => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende August 2020',
        type  => 'gesperrt',
        data  => <<EOF,
-#: source_id: 2147343519 (mittlerweile "bis auf weiteres")
+#: source_id: 2147343519 (bis 31.08.2020")
 #: note: laut fritz bis Ende Februar 2020
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 	2::inwork 14539,23306 14573,23295 14597,23280
@@ -28781,8 +28783,8 @@ EOF
 EOF
      },
      { from  => 1552239604, # 2019-03-10 18:40
-       until => $isodate2epoch->("2020-06-30 18:00:00"), # 1601503199, # 2020-09-30 23:59
-       text  => 'Mönchmühler Str.: teilweise Sperrung der Fahrbahn, voraussichtlich bis Mitte 2020',
+       until => $isodate2epoch->("2020-07-03 18:00:00"), # 1601503199, # 2020-09-30 23:59
+       text  => 'Mönchmühler Str.: teilweise Sperrung der Fahrbahn, voraussichtlich bis 03. Juli 2020',
        type  => 'handicap',
        accept_multi_feature_distance => 1500,
        data  => <<EOF,
@@ -30169,7 +30171,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-02-02 (abgesperrt)
+#: last_checked: 2020-02-26 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 EOF
@@ -30223,11 +30225,31 @@ EOF
 EOF
      },
      { from  => 1582487459, # 2020-02-23 20:50
-       until => 1600207199, # 2020-09-15 23:59
+       until => $isodate2epoch->("2020-09-11 18:00:00"), # 1600207199, # 2020-09-15 23:59
        text  => 'Hindenburgdamm: zwischen Schloßstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte September 2020',
        type  => 'handicap',
        data  => <<EOF,
+#: source_id: 2147345498
 	q4::inwork 4515,4966 4514,5082 4513,5139 4512,5199
+EOF
+     },
+     { from  => 1583017200, # 2020-03-01 00:00
+       until => 1591113600, # 2020-06-02 18:00
+       text  => 'Puchanstr.: Einbahnstraßenregelung, offen Richtung Nordosten, außerdem Sperrung in der Kinzerallee, voraussichtlich vom 2.3.2020 bis 2.6.2020',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.berliner-woche.de/koepenick/c-verkehr/bauarbeiten-der-bvg-an-gleisen-und-haltestellen_a254851
+#: by: https://media04.berliner-woche.de/article/2020/02/27/3/306823_XXL.jpg?1582796050
+	q4::inwork; 22513,5747 22383,5611 22204,5447
+	q4::inwork 22154,5659 22236,5633
+EOF
+     },
+     { from  => 1582837200, # 2020-02-27 22:00
+       until => 1583121600, # 2020-03-02 05:00
+       text  => 'Anschlussstelle Mühlenbeck: Sperrung der Autobahnunterführung (Abriss), von 28.02.2020 22 Uhr bis 02.03.2020 5 Uhr',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::inwork 7971,30713 8071,30398
 EOF
      },
     );

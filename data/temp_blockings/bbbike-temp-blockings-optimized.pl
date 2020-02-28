@@ -2345,6 +2345,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 31.03.2020
 #: osm_watch: way id="705182550" version="1"
 #: osm_watch: way id="705182551" version="1"
+#: also_indoor: traffic (G,H) vvv
 #: last_checked: 2020-02-21 vvv
 #: next_check: 2020-03-31 vvv
 #: source_id: 2147344480
@@ -2353,6 +2354,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	q3::inwork 9160,12932 9193,12875
 #: next_check ^^^
 #: last_checked ^^^^
+#: also_indoor ^^^
 #: XXX ^^^
 ',
          'from' => 1541444153,
@@ -2386,16 +2388,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: source_id: 2147343519 (mittlerweile "bis auf weiteres")
+         'data' => '#: source_id: 2147343519 (bis 31.08.2020")
 #: note: laut fritz bis Ende Februar 2020
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 	2::inwork 14539,23306 14573,23295 14597,23280
 ',
          'from' => 1543258848,
          'id' => 3058,
-         'text' => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende Februar 2020',
+         'text' => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, eventuell sind auch Radfahrer betroffen, bis Ende August 2020',
          'type' => 'gesperrt',
-         'until' => 1582995600
+         'until' => 1598889600
        },
        undef,
        undef,
@@ -2434,9 +2436,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1552239604,
          'id' => 3077,
-         'text' => 'Mönchmühler Str.: teilweise Sperrung der Fahrbahn, voraussichtlich bis Mitte 2020',
+         'text' => 'Mönchmühler Str.: teilweise Sperrung der Fahrbahn, voraussichtlich bis 03. Juli 2020',
          'type' => 'handicap',
-         'until' => 1593532800
+         'until' => 1593792000
        },
        undef,
        undef,
@@ -2873,7 +2875,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-02-02 (abgesperrt)
+#: last_checked: 2020-02-26 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 ',
@@ -2889,13 +2891,35 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '	q4::inwork 4515,4966 4514,5082 4513,5139 4512,5199
+         'data' => '#: source_id: 2147345498
+	q4::inwork 4515,4966 4514,5082 4513,5139 4512,5199
 ',
          'from' => 1582487459,
          'id' => 3198,
          'text' => 'Hindenburgdamm: zwischen Schloßstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte September 2020',
          'type' => 'handicap',
-         'until' => 1600207199
+         'until' => 1599840000
+       },
+       {
+         'data' => '#: by: https://www.berliner-woche.de/koepenick/c-verkehr/bauarbeiten-der-bvg-an-gleisen-und-haltestellen_a254851
+#: by: https://media04.berliner-woche.de/article/2020/02/27/3/306823_XXL.jpg?1582796050
+	q4::inwork; 22513,5747 22383,5611 22204,5447
+	q4::inwork 22154,5659 22236,5633
+',
+         'from' => 1583017200,
+         'id' => 3199,
+         'text' => 'Puchanstr.: Einbahnstraßenregelung, offen Richtung Nordosten, außerdem Sperrung in der Kinzerallee, voraussichtlich vom 2.3.2020 bis 2.6.2020',
+         'type' => 'handicap',
+         'until' => 1591113600
+       },
+       {
+         'data' => '	2::inwork 7971,30713 8071,30398
+',
+         'from' => 1582837200,
+         'id' => 3200,
+         'text' => 'Anschlussstelle Mühlenbeck: Sperrung der Autobahnunterführung (Abriss), von 28.02.2020 22 Uhr bis 02.03.2020 5 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1583121600
        }
      
 );
