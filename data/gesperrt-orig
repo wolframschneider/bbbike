@@ -2396,6 +2396,7 @@ tragen, langgezogene Stufen (13 Stufen)	0:25 20704,1383
 #: note: bei den Ertüchtigungsmaßnahmen wurde eine Seite der Kinderwagenrampe etwas verbreitert
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a114/de/ve05.shtml ("bauliche Anpassungen")
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a114/de/ve_hebammensteigbruecke.shtml (Ertüchtigungsmaßnahmen)
+#: by: https://www.berliner-woche.de/franzoesisch-buchholz/c-verkehr/richtung-blankenburg-das-fahrrad-schieben_a255205
 #: osm_watch: way id="43205335" version="2"
 # REMOVED --- #: last_checked: 2019-10-26 (wosch) (keine Anzeichen für Bauarbeiten) --- #: check_frequency: 14d
 #: next_check: 2021-01-01
@@ -2813,6 +2814,13 @@ Drängelgitter	BNP:2::trailer=5 18390,2972
 Drängelgitter	BNP:2::trailer=5 18361,2972
 Drängelgitter	BNP:2::trailer=5 18220,2973
 Drängelgitter	BNP:2::trailer=5 18167,2724
+Drängelgitter	BNP:2::trailer=5 18031,3257
+Drängelgitter	BNP:2::trailer=5 18025,3291
+Drängelgitter	BNP:2::trailer=5 18015,3380
+Drängelgitter	BNP:2::trailer=5 18000,3513
+Drängelgitter	BNP:2::trailer=5 17996,3540
+Drängelgitter	BNP:2::trailer=5 17978,3713
+Drängelgitter	BNP:2::trailer=5 17975,3744
 Drängelgitter	BNP:2::trailer=5 17621,4063
 Drängelgitter	BNP:2::trailer=5 18833,3781
 Drängelgitter	BNP:2::trailer=5 18018,3276
@@ -3075,6 +3083,12 @@ Drängelgitter, geringe lichte Breite	BNP:6::trailer=no 13010,14540
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: XXX wann wird sie wiederhergestellt, wenn überhaupt?
+#: osm_watch: way id="541556560" version="1"
+#: last_checked: 2020-02-05
+#: check_frequency: 60d
+Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 14569,10055
+# 
 #: next_check_id: UFERPROMENADE-2019
 #: XXX siehe auch strassen-orig-Eintrag
 #: last_checked: 2020-01-20 (daf) vvv
@@ -3097,11 +3111,11 @@ Weg an der Trabrennbahn: gesperrt	2 18671,8092 18744,8121
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728 9402,12792 9386,12833
 # 
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-02-21
+#: last_checked: 2020-03-02
 Littenstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 11059,12450 10954,12635
 # 
 #: next_check_id: DBWERKSTRASSE-2019
-#: last_checked: 2020-02-12
+#: last_checked: 2020-02-28 (mapillary)
 Tor	BNP:5 14692,10867
 # 
 #: next_check_id: ROSSSTRASSENBRUECKE-2019
@@ -3146,7 +3160,7 @@ Forumsquerung: Bauarbeiten, komplett gesperrt	2::inwork 8206,12757 8207,12606
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_49_7429_7632_online.pdf (Einziehung von Straßenland --- vielleicht der alte Sackgassenhammer?)
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="1"
-#: last_checked: 2020-02-27
+#: last_checked: 2020-03-04
 #: check_frequency: 14d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3154,13 +3168,13 @@ Forumsquerung: Bauarbeiten, komplett gesperrt	2::inwork 8206,12757 8207,12606
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036530021347/530021347/00453938/38-Anlagen/02/MA_2194_V.pdf (Verlegung der Grunerstr. wird erwähnt)
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="729492933" version="2"
-#: last_checked: 2020-02-25 (Fahrbahn ist aufgerissen, es steht ein solider Bauzaun über die gesamte Straßenbreite)
+#: last_checked: 2020-03-05 (Fahrbahn ist aufgerissen, es steht ein solider Bauzaun über die gesamte Straßenbreite)
 #: check_frequency: 30d
 Gustav-Böß-Str.: Straße ist komplett gesperrt	2::inwork 10673,12434 10772,12515
 # 
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX wobei man (zumindest abends und am Wochenende) auf der provisorischen Baustraße doch passieren kann
-#: last_checked: 2020-02-12
+#: last_checked: 2020-02-28 (mapillary)
 DB-Werkstraße: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 14469,10841 14352,10874
 # 
 # REMOVED (fertig) --- #: by: https://www.berliner-woche.de/rummelsburg/c-bauen/gruenanlage-am-betriebsbahnhof-rummelsburg-wird-neu-gestaltet_a233623 --- #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php --- #: XXX evtl. wird sich auch die Fahrbahnoberfläche ändern --- #: XXX laut osm fertiggestellt --- auch prüfen, ob das hier tatsächlich der übriggebliebene Weg ist --- #: last_checked: 2019-11-17 --- #: next_check: 2019-12-13 --- (Salzmannstr. - Zobtener Str.): Bauarbeiten, gesperrt	2::inwork 16841,9997 16811,9937
@@ -3196,8 +3210,8 @@ Königsteinbrücke: Brücke wurde abgerissen und wird neu gebaut	2::inwork 13148,22
 # 
 #: next_check_id: HOSEMANN-2019
 #: last_checked: 2020-02-04 vvv
-#: next_check: 2020-03-02 vvv
-#: valid: -20200302 vvv
+#: next_check: 2020-03-30 vvv
+#: valid: -20200330 vvv
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr.	1::inwork; 12605,15491 12556,15518
 #: valid ^^^
 #: next_check ^^^
@@ -3218,7 +3232,7 @@ Hilda-Geiringer-Weg: gesperrt, wird noch gebaut	2::inwork 8281,13394 8317,13459 
 #: by: http://www.berlin.de/senuvk/verkehr/politik_planung/planfeststellungen/download/oepnv/tram_adlershof_2/Unterlage%2005/Unterlage_U05-1.pdf (es gibt mehrere neue Ampeln an der Tramlinie)
 #: by: https://www.berlin.de/senuvk/verkehr/politik_planung/planfeststellungen/download/oepnv/tram_adlershof2/UL09_LBP/UL09_LBP-Massnahmenplan-5_gesiegelt.pdf (Ampel)
 #: osm_watch: way id="72852443" version="10"
-#: last_checked: 2020-01-11
+#: last_checked: 2020-02-29
 # REMOVED --- #: next_check: 2019-11-01
 #: check_frequency: 30d
 Benno-König-Str.: noch nicht freigegeben, Straße gesperrt	2::inwork 18374,4307 18596,4517
@@ -3271,7 +3285,7 @@ Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21476,5048 21611,5119 
 #: by: https://www.berliner-woche.de/mitte/c-bauen/groesste-innerstaedtische-grossgrabung-hinter-rotem-rathaus-gestartet_a233461
 #: by: https://www.parlament-berlin.de/ados/17/IIIPlen/vorgang/d17-2854.pdf (Bebauungsplan, Plan befindet sich auf der tatsächlichen Seite 366 sowie 373)
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2020-02-25
+#: last_checked: 2020-03-05
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
 #: next_check_id: SOWJETISCHESEHRENMAL-2019
@@ -3282,7 +3296,7 @@ Treptower Park, am Sowjetischen Ehrenmal: Weg wegen Bauarbeiten gesperrt	2::inwo
 # 
 #: XXX wann sind die Bauarbeiten beendet?
 #: priority: #C
-#: last_checked: 2020-02-27
+#: last_checked: 2020-03-04
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3308,7 +3322,15 @@ An den Yorckstraßenbrücken: Weg wird als Baulogistikfläche benutzt, gesperrt	2::
 # 
 # REMOVED (aufgehoben) --- #: XXX wann wird die Einbahnstraßenregelung aufgehoben? --- #: also_indoor: traffic --- #: last_checked: 2019-11-05 --- #: check_frequency: 7d --- Alexandrinenstr.: Einbahnstraßenregelung an der Stallschreiberstr.	1s:q3:inwork 10678,11172 10593,11120
 # REMOVED (fertig) --- #: XXX nach den Bauarbeiten könnte man den Extra-Punkt in der Mitte wieder löschen --- #: also_indoor: traffic --- #: last_checked: 2019-10-22 --- #: check_frequency: 14d --- Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 10518,11232 10593,11120
-# REMOVED (laut mapillary offen) --- #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 --- #: next_check_id: DRESDENERBAHN-ATTILA-2019 --- #: osm_watch: way id="696227207" version="1" --- #: last_checked: 2019-09-20 (mapillary) --- #: check_frequency: 60d --- Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdener Bahn vollständig gesperrt	2::inwork 7667,4549 7692,4464
+# 
+# REMOVED (laut mapillary offen) --- #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 --- #: next_check_id: DRESDENERBAHN-ATTILA-2019 --- 
+#: by: https://twitter.com/VIZ_Berlin/status/1234348978512318465
+#: by: https://pbs.twimg.com/media/ESFJ2q0WAAAIcnN?format=jpg&name=large
+#: osm_watch: way id="696227207" version="1"
+#: source_id: 2147345522
+#: next_check: 2020-05-30
+#: valid: -20200530
+Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Attilastr. vollständig gesperrt, voraussichtlich bis Ende Mai 2020	2::inwork 7667,4549 7692,4464
 # 
 #: next_check_id: WUHLETALBRUECKE-2019
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.813955.php
@@ -3344,31 +3366,14 @@ Mauswieselweg: durch Bauzäune abgesperrt	2::inwork 26570,12860 26503,12912 26421
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
-#: XXX neue Straßen/Wege im Zuge des Bebauungsplans XV-29b, Ortsteil Altglienicke vvv
-#: by: http://www.berlin.de/ba-treptow-koepenick/organisationseinheiten/stadtplverm/beteiligungxv-29bve.html vvv
-#: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/stadtplanungsamt/ag2/downloads-b-plaene/st__dtebauliche_untersuchung.pdf?start&ts=1381739816&file=st__dtebauliche_untersuchung.pdf vvv
-#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.509968.php
-#: by: www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/33re.pdf/file?y=2016
-#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/buergerbeteiligung/xv-29-b-ve-504844.php
-#: by: http://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/1_entwurf-vorhabenbezogener-b-plan-xv-29-b-ve.pdf
-#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5601 (anscheinend gibt es Bauarbeiten)
-#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5849 (Straßennamen)
-#: by: http://www.berlin.de/ba-treptow-koepenick/_assets/ba-beschluesse/wp-viii/151-17-strassenbenennung-privatstr-ortolfstrasse-50.pdf
-#: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_09_1157_1272_online.pdf (Straßenbenennung)
-#: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_21_2611_2726_online.pdf (Grundstücksnummerierungen)
+# REMOVED --- #: XXX neue Straßen/Wege im Zuge des Bebauungsplans XV-29b, Ortsteil Altglienicke vvv --- #: by: http://www.berlin.de/ba-treptow-koepenick/organisationseinheiten/stadtplverm/beteiligungxv-29bve.html vvv --- #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/stadtplanungsamt/ag2/downloads-b-plaene/st__dtebauliche_untersuchung.pdf?start&ts=1381739816&file=st__dtebauliche_untersuchung.pdf vvv --- #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.509968.php --- #: by: www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/33re.pdf/file?y=2016 --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/buergerbeteiligung/xv-29-b-ve-504844.php --- #: by: http://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/1_entwurf-vorhabenbezogener-b-plan-xv-29-b-ve.pdf --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5601 (anscheinend gibt es Bauarbeiten) --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5849 (Straßennamen) --- #: by: http://www.berlin.de/ba-treptow-koepenick/_assets/ba-beschluesse/wp-viii/151-17-strassenbenennung-privatstr-ortolfstrasse-50.pdf --- #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_09_1157_1272_online.pdf (Straßenbenennung) --- #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_21_2611_2726_online.pdf (Grundstücksnummerierungen)
 # REMOVED (keine Bauarbeiten mehr) --- #: source_id: 2147342903 --- #: osm_watch: way id="669537211" version="7" --- #: last_checked: 2019-07-20 vvv --- #: next_check: 2019-08-29 vvv --- Betulaweg: Bauarbeiten, gesperrt	2::inwork 19564,898 19316,951 --- Rubusweg: Bauarbeiten, gesperrt	2::inwork 19551,868 19316,951 --- #: osm_watch: way id="669795653" version="6" --- #: XXX culdesac-Einträge ggfs. entfernen --- #: XXX hier mittlerweile schon offen? --- Brunolfweg: Bauarbeiten, gesperrt	2::inwork 19290,894 19316,951 19334,997 --- #: next_check ^^^ --- #: last_checked ^^^
-#: last_checked: 2019-10-19 vvv
-Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19272,838 19290,894 19316,951
-Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19316,951 19290,894 19272,838
-#: last_checked ^^^
-#: by: ^^^
-#: by: ^^^
-#: XXX ^^^
+# REMOVED (keine Einschränkung mehr) --- #: last_checked: 2019-10-19 vvv --- Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19272,838 19290,894 19316,951 --- Brunolfweg: Bauzaun, Durchfahrt nicht möglich	3 19316,951 19290,894 19272,838 --- #: last_checked ^^^
 # 
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910 vvv
 #: source_id: 2147344585 (bis Ende Mai 2020) vvv
-#: last_checked: 2020-02-27 vvv
+#: last_checked: 2020-02-29 vvv
 #: next_check: 2020-05-15 vvv
 #: valid: 20190319-20200515 vvv
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:q4:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -3395,7 +3400,7 @@ Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21
 #: osm_watch: node id="791819743" version="4"
 #: by: osm (kartonage)
 #: confirmed_by: srt
-#: last_checked: 2020-02-07
+#: last_checked: 2020-03-01
 #: check_frequency: 60d
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,8260
 # 
@@ -3440,7 +3445,7 @@ Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12982,14629 13007,14615 
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/planunterlagen-fuer-strassenbahnbau-liegen-aus_a197470
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/bauarbeiten-am-bahnhof-schoeneweide-gehen-weiter_a208213
 #: by: http://thomas.krickstadt.de/s-bahn/2019-10-06-schoeneweide/25-2019-10-06-180.html (Gesamtfertigstellung: 2022)
-#: last_checked 2020-01-11
+#: last_checked 2020-02-29
 #: check_frequency: 180d
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
 # 
@@ -3455,8 +3460,8 @@ Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 12982,14629 13007,14615 
 # REMOVED (notice by Ulfert) --- #: next_check_id: BENJAMINFRANKLIN-2018 --- #: by: http://www.berliner-woche.de/steglitz/bauen/charit-bereitet-bau-eines-neuen-landesplatzes-am-campus-benjamin-franklin-vor-d143323.html ("mindestens 18 Monate lang komplett gesperrt") --- #: by: http://www.berliner-woche.de/steglitz/bauen/rettungs-helis-landen-kuenftig-auf-ueberdachter-promenade-d122014.html --- #: by: http://copterweb.de/wordpress/adac-rettungshubschrauber-christoph-31-umgezogen/ --- #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.729682.php (in Kürze, für voraussichtlich ein Jahr) --- #: by: https://www.berliner-woche.de/steglitz/c-bauen/neubau-des-hubschrauberlandeplatzes-am-campus-benjamin-franklin-beginnt-im-september_a176375 (bis Ende 2019) --- #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6767 --- #: by: https://www.facebook.com/ChariteUniversitaetsmedizinBerlin/photos/a.359588317914082/373973493142231/?type=3 --- #: by: http://www.lbv.brandenburg.de/3372.htm --- #: by: http://www.lbv.brandenburg.de/dateien/luftfahrt/hslp_berlin_charite_PDK_mit_Siegel.pdf --- #: by: https://copterweb.de/wordpress/adac-rettungshubschrauber-christoph-31-muss-laenger-an-seiner-voruebergehenden-unterkunft-am-flughafen-schoenefeld-bleiben/ (1. Quartal 2020) --- #: by: https://leute.tagesspiegel.de/steglitz-zehlendorf/macher/2019/10/03/98168/klinikum-benjamin-franklin-der-neue-hubschrauberlandeplatz-wird-erst-anfang-2020-in-betrieb-gehen/ (1. Quartal 2020) --- #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/verkehrspolitisch-wichtige-themen-in-der-ersten-bvv-sitzung-im-neuen-jahr_a247462 (Freigabe voraussichtlich Ende Januar 2020) --- #: also_indoor: search Paul-Schwarz-Promenade --- #: also_indoor: search Benjamin-Franklin Hubschrauber --- #: osm_watch: way id="633600854" version="1" --- #: priority: #A --- #: last_checked: 2019-10-21 --- #: next_check: 2020-01-31 --- #: valid: -20200331 --- Paul-Schwarz-Promenade: Sperrung in Höhe Benjamin Franklin	2::inwork 4947,3672 5018,3810 5074,3900 5139,3997 5225,4095
 # 
 #: XXX wann ist hier wieder offen?
-#: last_checked: 2020-02-18
-# REMOVED --- #: check_frequency: 14d
+#: last_checked: 2020-03-03
+#: check_frequency: 14d
 Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 # 
 #: next_check_id: FRANZOESISCHE-2018 vvv
@@ -3505,7 +3510,7 @@ Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
 # 
 #: osm_watch: way id="496270260" version="6" brb
 #: osm_watch: node id="3453536641" version="4" brb
-#: last_checked: 2019-12-07
+#: last_checked: 2020-02-29
 #: check_frequency: 90d
 Uferweg zum Speicher: noch keine Durchfahrt möglich	2::inwork -12721,-2082 -12754,-2154
 # 
@@ -3683,7 +3688,7 @@ Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -
 #: by: https://www.deutsches-architektur-forum.de/forum/showthread.php?t=4013&page=12
 #: XXX (Geplanter) Projektabschluss laut dafmap: 2019-06-01
 #: osm_watch: way id="392904879" version="2" vvv
-#: last_checked: 2020-01-12 (mapillary) vvv
+#: last_checked: 2020-02-27 (daf) vvv
 #: check_frequency: 60d vvv
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5643,12253
 # REMOVED (hier aufgehoben) --- Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5643,12253 5604,12244 5574,12237
@@ -3714,7 +3719,7 @@ Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11489 20631,1162
 # REMOVED (bei osm nicht mehr construction) --- #: XXX wie sieht es mit einer Anbindung an die Kasperstr. aus? --- ja, wird es geben --- #: osm_watch: way id="461214846" version="3" --- #: last_checked: 2017-08-10 --- #: check_frequency: 90d --- Traudelstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19169,1249 19140,1137
 # 
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2020-02-21 vvv
+#: last_checked: 2020-03-02 vvv
 #: check_frequency: 90d vvv
 #: osm_watch: way id="54781811" version="8"
 Schinkelplatz: Einbahnstraße	1s:q3:inwork 9990,12404 9996,12372
@@ -3900,7 +3905,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, voraus
 #: next_check_id: BER-20XX
 #: last_checked: 2019-03-30
 #: next_check: 2020-10-31
-#: osm_watch: way id="127091100" version="11" brb
+#: osm_watch: way id="127091100" version="12" brb
 #: osm_watch: way id="733975361" version="1" brb
 B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich des alten Flughafens	2:inwork 18578,-1538 18688,-1498 18781,-1533 18853,-1656 18866,-1674
 # 
@@ -3958,7 +3963,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://cam01.berlinerschloss-webcam.de/
 #: by: https://www.tagesspiegel.de/berlin/nicht-mehr-2019-eroeffnung-des-humboldt-forums-wird-verschoben/24448118.html
 #: by: https://www.humboldtforum.org/de/inhalte/stand-der-baumassnahme-humboldt-forum-im-berliner-schloss (Eröffnung 2020)
-#: last_checked: 2020-02-26
+#: last_checked: 2020-03-02
 #: check_frequency: 60d
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 

@@ -26693,7 +26693,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1582987107, # -> gesperrt-orig --- undef, # XXX
        text  => 'Alt-Stralau - Spreeufer: Verbindung wegen Baustelle gesperrt, Ende unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -27863,7 +27863,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-02-21
+#: last_checked: 2020-03-02
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29144,8 +29144,9 @@ EOF
        data  => <<EOF,
 #: note: laut fritz bis 31.06.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2019-10-19 (mapillary)
-#: next_check: 2020-01-30
+#: last_checked: 2020-02-28 (mapillary) (Sackgassenschild existiert)
+#: check_frequency: 60d
+#: next_check: 2020-06-30
 	q3::inwork  8986,16092 9178,16317
 # REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
 EOF
@@ -29190,10 +29191,11 @@ EOF
        text  => 'Rudower Str.: Bauarbeiten zwischen Dorothea-Viehmann-Str. und Lehmfeldsteig, Einbahnstraßenregelung, offen Richtung Westen',
        type  => 'handicap',
        data  => <<EOF,
+#: XXX bis wann gehen die Bauarbeiten? Bis Anfang Juli 2020?
 #: also_indoor: traffic
 #: osm_watch: way id="156066225" version="15"
-#: last_checked: 2019-10-19
-#: next_check: 2020-02-01
+#: last_checked: 2020-02-29
+#: next_check: 2020-07-08
 	q4::inwork; 19266,1968 19564,1871
 EOF
      },
@@ -29265,9 +29267,10 @@ EOF
        text  => 'Wagner-Régeny-Allee: Straße ist noch nicht komplett fertiggestellt, wegen Bauarbeiten kann die Straße gesperrt sein, voraussichtlich bis November 2019',
        type  => 'gesperrt',
        data  => <<EOF,
+#: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="11"
-#: last_checked: 2020-01-11
+#: last_checked: 2020-02-29
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 EOF
@@ -29656,7 +29659,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="17" brb
+#: osm_watch: way id="59994277" version="18" brb
 #: source_id: LS/721-F/18/135
 	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
 EOF
@@ -29774,12 +29777,13 @@ EOF
 	2::inwork 13172,11651 13202,11666
 EOF
      },
-     { from  => 1568056573, # 2019-09-09 21:16
-       until => $isodate2epoch->("2019-09-20 18:00:00"),
-       text  => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, evtl. sind auch Radfahrer betroffen, bis 20.09.2019',
+     { from  => $isodate2epoch->("2020-03-19 12:00:00"), # 1 Tag Vorlauf --- 1568056573, # 2019-09-09 21:16
+       until => $isodate2epoch->("2020-04-20 18:00:00"), # $isodate2epoch->("2019-09-20 18:00:00"),
+       text  => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, Radfahrer und Fußgänger sind auch betroffen, 20.03.2020 bis 20.04.2020',
        type  => 'gesperrt',
        source_id => 'LMS-BR_r_LMS-BR_182020_LMS-BR_72',
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.901034.php
 	2::inwork 25191,12343 25149,12266 25109,12196
 EOF
      },
@@ -30157,7 +30161,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-02-18 (mapillary)
+#: last_checked: 2020-03-04
 	2::inwork 15420,12178 15520,12160 15628,12246
 EOF
      },
@@ -30233,13 +30237,14 @@ EOF
 	q4::inwork 4515,4966 4514,5082 4513,5139 4512,5199
 EOF
      },
-     { from  => 1583017200, # 2020-03-01 00:00
-       until => 1591113600, # 2020-06-02 18:00
-       text  => 'Puchanstr.: Einbahnstraßenregelung, offen Richtung Nordosten, außerdem Sperrung in der Kinzerallee, voraussichtlich vom 2.3.2020 bis 2.6.2020',
+     { from  => $isodate2epoch->("2020-03-08 07:00:00"), # 1 Tag Vorlauf, 1583017200, # 2020-03-01 00:00
+       until => $isodate2epoch->("2020-04-20 12:00:00"), # 1591113600, # 2020-06-02 18:00
+       text  => 'Puchanstr.: Einbahnstraßenregelung, offen Richtung Nordosten, außerdem Sperrung in der Kinzerallee, voraussichtlich vom 9.3.2020 bis 20.4.2020',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/bauarbeiten-der-bvg-an-gleisen-und-haltestellen_a254851
 #: by: https://media04.berliner-woche.de/article/2020/02/27/3/306823_XXL.jpg?1582796050
+#: by: https://viz.berlin.de/2020/02/bahnhofstrasse-koepenick-gleisbauarbeiten-%C2%B7-schienenersatzverkehr/
 	q4::inwork; 22513,5747 22383,5611 22204,5447
 	q4::inwork 22154,5659 22236,5633
 EOF
@@ -30250,6 +30255,43 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2::inwork 7971,30713 8071,30398
+EOF
+     },
+     { from  => 1587290400, # 2020-04-19 12:00
+       until => 1591200000, # 2020-06-03 18:00
+       text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee Richtung Süden für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee, vom 20.04.2020 bis 03.06.2020 ',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.bahninfo-forum.de/file.php?9,file=13443
+	q4::inwork; 22292,5774 22258,5687 22236,5633 22184,5545
+	q4::inwork 22154,5659 22236,5633
+EOF
+     },
+     { from  => 1583128800, # 2020-03-02 07:00
+       until => 1586790000, # 2020-04-13 17:00
+       text  => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 13.04.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147345534',
+       data  => <<EOF,
+	q4::inwork 4660,2116 4839,2195
+EOF
+     },
+     { from  => 1583350439, # 2020-03-04 20:33
+       until => 1584572399, # 2020-03-18 23:59
+       text  => 'Krausnickstr.: Sperrung der Fahrbahn, voraussichtlich bis Mitte März 2020',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: wosch
+	q4::inwork 9837,13250 10016,13306
+EOF
+     },
+     { from  => 1583650800, # 2020-03-08 08:00
+       until => 1591023600, # 2020-06-01 17:00
+       text  => 'Bahnhofstr.: Richtung Norden zwischen Friedrichshagener Str. und Seelenbinderstr. Bauarbeiten, vermutlich ist auch der Radverkehr betroffen, vom 09.03.2020 08:00 Uhr bis 01.06.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147345558',
+       data  => <<EOF,
+	q4::inwork; 22116,5442 22184,5545 22236,5633 22258,5687 22292,5774
 EOF
      },
     );

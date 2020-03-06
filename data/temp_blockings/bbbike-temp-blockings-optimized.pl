@@ -805,7 +805,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2044,18 +2044,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2020-02-05
-#: check_frequency: 45d
-	2::inwork 14652,10201 14569,10055
-',
-         'from' => undef,
-         'id' => 2906,
-         'text' => 'Alt-Stralau - Spreeufer: Verbindung wegen Baustelle gesperrt, Ende unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2261,7 +2250,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-02-21
+#: last_checked: 2020-03-02
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2491,8 +2480,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 31.06.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2019-10-19 (mapillary)
-#: next_check: 2020-01-30
+#: last_checked: 2020-02-28 (mapillary) (Sackgassenschild existiert)
+#: check_frequency: 60d
+#: next_check: 2020-06-30
 	q3::inwork  8986,16092 9178,16317
 # REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
 ',
@@ -2533,10 +2523,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '#: also_indoor: traffic
+         'data' => '#: XXX bis wann gehen die Bauarbeiten? Bis Anfang Juli 2020?
+#: also_indoor: traffic
 #: osm_watch: way id="156066225" version="15"
-#: last_checked: 2019-10-19
-#: next_check: 2020-02-01
+#: last_checked: 2020-02-29
+#: next_check: 2020-07-08
 	q4::inwork; 19266,1968 19564,1871
 ',
          'from' => undef,
@@ -2550,9 +2541,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
+         'data' => '#: next_check_id: WAGNERREGENYALLEE-2019
+#: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="11"
-#: last_checked: 2020-01-11
+#: last_checked: 2020-02-29
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 ',
@@ -2681,7 +2673,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="17" brb
+#: osm_watch: way id="59994277" version="18" brb
 #: source_id: LS/721-F/18/135
 	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
 ',
@@ -2713,26 +2705,24 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
-         'data' => '#: next_check_id: HANSAGARTEN-2019
-	2::inwork 14665,16294 14810,16282 15102,16212
-# REMOVED (hier existiert ein provisorischer Weg) ---	2::inwork 15102,16212 15194,16186
-	2::inwork 14721,16360 14810,16282
+         'data' => '#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.901034.php
+	2::inwork 25191,12343 25149,12266 25109,12196
 ',
-         'from' => 1569949777,
-         'id' => 3167,
-         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851369.php',
-         'text' => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, voraussichtlich bis Anfang 2020',
+         'from' => 1584615600,
+         'id' => 3160,
+         'source_id' => 'LMS-BR_r_LMS-BR_182020_LMS-BR_72',
+         'text' => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, Radfahrer und Fußgänger sind auch betroffen, 20.03.2020 bis 20.04.2020',
          'type' => 'gesperrt',
-         'until' => 1583017200
+         'until' => 1587398400
        },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
@@ -2860,7 +2850,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-02-18 (mapillary)
+#: last_checked: 2020-03-04
 	2::inwork 15420,12178 15520,12160 15628,12246
 ',
          'from' => undef,
@@ -2903,23 +2893,57 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.berliner-woche.de/koepenick/c-verkehr/bauarbeiten-der-bvg-an-gleisen-und-haltestellen_a254851
 #: by: https://media04.berliner-woche.de/article/2020/02/27/3/306823_XXL.jpg?1582796050
+#: by: https://viz.berlin.de/2020/02/bahnhofstrasse-koepenick-gleisbauarbeiten-%C2%B7-schienenersatzverkehr/
 	q4::inwork; 22513,5747 22383,5611 22204,5447
 	q4::inwork 22154,5659 22236,5633
 ',
-         'from' => 1583017200,
+         'from' => 1583647200,
          'id' => 3199,
-         'text' => 'Puchanstr.: Einbahnstraßenregelung, offen Richtung Nordosten, außerdem Sperrung in der Kinzerallee, voraussichtlich vom 2.3.2020 bis 2.6.2020',
+         'text' => 'Puchanstr.: Einbahnstraßenregelung, offen Richtung Nordosten, außerdem Sperrung in der Kinzerallee, voraussichtlich vom 9.3.2020 bis 20.4.2020',
          'type' => 'handicap',
-         'until' => 1591113600
+         'until' => 1587376800
+       },
+       undef,
+       {
+         'data' => '#: by: https://www.bahninfo-forum.de/file.php?9,file=13443
+	q4::inwork; 22292,5774 22258,5687 22236,5633 22184,5545
+	q4::inwork 22154,5659 22236,5633
+',
+         'from' => 1587290400,
+         'id' => 3201,
+         'text' => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee Richtung Süden für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee, vom 20.04.2020 bis 03.06.2020 ',
+         'type' => 'handicap',
+         'until' => 1591200000
        },
        {
-         'data' => '	2::inwork 7971,30713 8071,30398
+         'data' => '	q4::inwork 4660,2116 4839,2195
 ',
-         'from' => 1582837200,
-         'id' => 3200,
-         'text' => 'Anschlussstelle Mühlenbeck: Sperrung der Autobahnunterführung (Abriss), von 28.02.2020 22 Uhr bis 02.03.2020 5 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1583121600
+         'from' => 1583128800,
+         'id' => 3202,
+         'source_id' => '2147345534',
+         'text' => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 13.04.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1586790000
+       },
+       {
+         'data' => '#: by: wosch
+	q4::inwork 9837,13250 10016,13306
+',
+         'from' => 1583350439,
+         'id' => 3203,
+         'text' => 'Krausnickstr.: Sperrung der Fahrbahn, voraussichtlich bis Mitte März 2020',
+         'type' => 'handicap',
+         'until' => 1584572399
+       },
+       {
+         'data' => '	q4::inwork; 22116,5442 22184,5545 22236,5633 22258,5687 22292,5774
+',
+         'from' => 1583650800,
+         'id' => 3204,
+         'source_id' => '2147345558',
+         'text' => 'Bahnhofstr.: Richtung Norden zwischen Friedrichshagener Str. und Seelenbinderstr. Bauarbeiten, vermutlich ist auch der Radverkehr betroffen, vom 09.03.2020 08:00 Uhr bis 01.06.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1591023600
        }
      
 );
