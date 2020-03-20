@@ -206,7 +206,12 @@ Rohrdammbrücke	Br 1170,13521 1159,13541 1124,13599
 Olympische Brücke	Br 137,12056 193,12070
 Saatwinkler Steg	Br -1073,16610 -995,16701
 Gartenfelder Brücke	Br -302,15602 -302,15546
+# 
+#: by: https://binnenschifffahrt-online.de/2020/02/featured/12772/vorbereitungen-fuer-ersatzneubau-der-tegeler-bruecke-in-berlin-starten/ (ab August 2020 bis Dezember 2023)
+#: XXX erstmal wird eine Behelfsbrücke erstellt (westlich); die neue Brücke wird Platz für eine Radwegunterführung haben
+#: next_check: 2020-08-15
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
+# 
 Spandauer-See-Brücke	Br -2209,16501 -1928,16423
 Wasserstadtbrücke	Br -2149,16921 -1832,16858
 Tiefwerderbrücke	Br -2780,12858 -2788,12880
@@ -295,7 +300,7 @@ Kynastbrücke	Br 14928,10970 14902,10859 14880,10808
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6904 (Vorschlag an Senatsverwaltung weitergeleitet)
 #: XXX Name "Südkreuz-Steg" --- wann wird dieser Name offiziell (Amtsblatt?) und die Brücke ausgeschildert?
 #: osm_watch: way id="10360532" version="20"
-#: last_checked: 2019-12-01
+#: last_checked: 2020-03-14
 #: check_frequency: 120d
 Sachsendammsteg	Br 7757,7563 7747,7521 7733,7483
 # 
@@ -614,7 +619,7 @@ Zinnowwegbrücke	Br -376,4102 -388,4119
 #: by: http://www.stadtentwicklung.berlin.de/download/bruecken/Brueckeninstandstandsetzungen2016.pdf
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621&date=20180130 ("voraussichtlich ab 2019 neu gebaut")
 #: XXX wird vermutlich nach der Fertigstellung der Königsteinbrücke abgerissen und neu gebaut
-#: last_checked: 2020-01-25 (mapillary)
+#: last_checked: 2020-03-15
 #: next_check: 2021-01-01
 Hebammensteigbrücke	Br 13168,21706 13046,21734
 # 

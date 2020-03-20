@@ -34,7 +34,7 @@ Hauptstr. (Blankenfelde): Asphalt	Q0 9228,23643 9415,23699
 Hauptstr. (Blankenfelde): Asphalt	Q0 9415,23699 9625,23781 9774,23936
 Hauptstr. (Blankenfelde): Asphalt	Q0 9774,23936 9794,23980
 Berliner Str. (Blankenfelde): Asphalt	Q0 9415,23699 9437,23680 9490,23531 9528,23240
-B96a: Asphalt	Q0 9228,23643 9146,23843 8984,24078 8944,24186 8885,24344 8826,24501 8798,24575 8682,24883 8665,24941 8661,24952 8636,25016 8571,25180 8567,25189 8548,25239 8501,25358 8488,25390
+B96a: Asphalt	Q0 9228,23643 9146,23843 9040,23997 8984,24078 8944,24186 8885,24344 8826,24501 8798,24575 8682,24883 8665,24941 8661,24952 8636,25016 8571,25180 8567,25189 8548,25239 8501,25358 8488,25390
 Hobrechtsfelder Chaussee (bis Kurve): asphaltiert	Q0 15589,27116 15230,26548 14481,25461 14434,25388 14321,25216 14308,25196 14217,24999
 Hobrechtsfelder Chaussee (ab Kurve): Kopfsteinpflaster	Q2 15589,27116 15711,27928 15777,28037
 Wisbyer Str.: Asphalt	Q0 11019,16465 11289,16423 11397,16405 11448,16398 11470,16394 11542,16384 11632,16373 11673,16367 11727,16358 11750,16354 11808,16343 11829,16339 11889,16328 11936,16302 12012,16250 12090,16199
@@ -49,7 +49,7 @@ Sinsheimer Weg: schlechtes Kopfsteinpflaster, aber Ausweichen auf Parkplatz mögl
 Sinsheimer Weg: Betonstraße	Q0 13774,8849 13837,8932
 Donaustr.: Asphalt	Q0 12202,8895 12394,8729 12551,8612 12649,8535
 Donaustr.: Asphalt	Q0 12150,8891 12202,8895
-Pannierstr.: Kopfsteinpflaster	Q2 12240,8964 12202,8895
+Pannierstr.: Asphalt	Q0 12240,8964 12202,8895
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 Friesenstr.: Asphalt	Q0 9801,8683 9801,8889 9799,8962 9797,9063 9795,9162 9793,9241
 Heimstr.: mäßiges Kopfsteinpflaster	Q2 9951,8965 9958,9050 9966,9151 9973,9232
@@ -413,7 +413,7 @@ Simon-Dach-Str.: Kopfsteinpflaster	Q2 14006,11843 13981,11746 13954,11647 13888,
 Krossener Str.: Kopfsteinpflaster	Q2 14561,11600 14496,11620 14424,11639 14358,11656 14247,11681 14102,11715 13981,11746
 Gabriel-Max-Str.: mäßiges bis schlechtes Kopfsteinpflaster	Q2 14161,11930 14127,11811
 Gabriel-Max-Str.: mäßiges bis schlechtes Kopfsteinpflaster	Q2 14102,11715 14065,11605 14049,11553
-Kurfürstenstr.: Kopfsteinpflaster	Q2 7633,10394 7744,10372 7850,10351 8058,10306
+Kurfürstenstr.: mäßiges bis schlechtes Kopfsteinpflaster	Q3 7633,10394 7744,10372 7850,10351 8058,10306
 (Im Jagen, Verlängerung): Waldweg	Q1 1375,6138 1057,6461 909,6584 902,6642
 Jahnstr: Kopfsteinpflaster	Q2 11509,9392 11500,9116
 Mauerweg: Asphalt	Q0 7736,21247 7306,20635 7289,20618
@@ -1128,7 +1128,7 @@ Fasanenplatz, zur Schaperstr.: Kleinsteinpflaster	Q1 5223,10243 5192,10241
 Fasanenplatz: Kleinsteinpflaster	Q1 5192,10241 5191,10190
 Fasanenplatz, zur Meierottostr.: Kleinsteinpflaster	Q1 5191,10190 5220,10192 5246,10168
 Fasanenplatz, östliche Fahrbahn: Kleinsteinpflaster	Q1 5220,10192 5229,10210 5223,10243
-Meierottostr.: Asphalt mit einigen Schäden	Q0 5246,10168 5463,9961
+Meierottostr.: Asphalt mit einigen Schäden	Q1 5246,10168 5463,9961
 Virchowstr.: Kopfsteinpflaster	Q2 12925,13373 12876,13440
 Dunckerstr.: Kopfsteinpflaster	Q2 11325,14949 11450,15173 11480,15229 11595,15460
 Raumerstr.: Kopfsteinpflaster	Q2 11450,15173 11334,15248 11236,15312 11112,15387
@@ -1903,7 +1903,9 @@ Götzestr.: gutes Kopfsteinpflaster	Q1 3896,22718 3738,22652
 (Tegeler Fließ - Lübars): Feldweg, teilweise nur einspurig, matschige Stellen	Q3 6259,23947 6395,23785
 (Tegeler Fließ - Lübars): sehr sandig	Q3 6395,23785 6567,23905
 (Tegeler Fließ - Lübars): schlechtes Kopfsteinpflaster	Q3 6567,23905 6609,23892 6744,23695
-Schildower Str. (Blankenfelde): Asphalt	Q0 9175,23620 9119,23746
+Schildower Str. (Blankenfelde): Asphalt	Q0 9175,23620 9082,23840
+Schildower Str. (Blankenfelde): Kopfsteinpflaster	Q2 9082,23840 9018,23985
+(Schildower Str. - Blankenfelder Chaussee): unbefestigter Weg	Q2 9018,23985 9040,23997
 Möllersfelder Weg: Beton	Q0 9794,23980 10067,24067 10169,24109
 Möllersfelder Weg: unbefestigter Weg	Q1 10169,24109 10291,24177 10337,24209 10521,24382
 (Möllersfelder Weg): glatter Feldweg	Q1 10067,24067 10071,24087 10466,24468 10521,24382
@@ -4692,8 +4694,8 @@ Smetanastr.: unbefestigte Straße	Q2 14300,15424 14195,15604
 Malchower Weg: schlechtes Kopfsteinpflaster	Q3 13171,19837 13008,19919 12952,19947 12864,19991 12719,20065 12586,20131 12547,20154
 Karestr.: Asphalt	Q0 15453,24474 15414,24418 15344,24315
 Rheinfelsstr.: schlechtes Kopfsteinpflaster	Q3 13687,21993 13505,22081
-Eifelstr.: schlechtes Kopfsteinpflaster	Q3 13580,21286 13351,21237 13287,21224
-Vogesenstr.: unbefestigte Straße	Q2 13351,21237 13368,21142
+Eifelstr.: schlechtes Kopfsteinpflaster	Q3 13580,21286 13351,21239 13280,21225
+Vogesenstr.: unbefestigte Straße	Q2 13351,21239 13368,21142
 Elsa-Rendschmidt-Weg: Asphalt	Q0 -1749,11403 -1711,11452 -1687,11458 -1663,11487 -1627,11465 -1593,11507 -1635,11535 -1750,11719
 Rollbergstr.: glatte Pflasterung	Q0 12147,8117 12226,8137 12295,8154
 (Werbellinstr. 50 - Rollbergstr.): glatte Pflasterung	Q0 12311,8084 12295,8154 12282,8204
@@ -7131,11 +7133,11 @@ Zwergammerweg: unbefestigter Weg	Q2 13460,20371 13396,20409 13272,20489 13191,20
 Fuchsammerweg: unbefestigter Weg	Q2 13491,20266 13475,20276 13360,20350 13237,20428 13118,20506 13110,20514
 Morgenammerweg: unbefestigter Weg	Q2 13566,20540 13440,20485 13396,20409 13360,20350 13334,20308 13329,20299 13301,20254 13293,20241 13264,20196
 Meisengimpelweg: unbefestigter Weg	Q2 13586,20649 13519,20640 13416,20595 13299,20542
-(Weg durch die Spiel- und Parkanlage am Bahnhof Blankenburg): Asphalt	Q0 13298,20917 13289,21001
+(Weg durch die Spiel- und Parkanlage am Bahnhof Blankenburg): Asphalt	Q0 13312,20910 13289,21001
 Ilsenburgstr.: Asphalt	Q0 13727,21780 13659,21804 13642,21793 13489,21548
 Ilsenburgstr.: Kopfsteinpflaster	Q2 13489,21548 13478,21532 13469,21519
 Ilsenburgstr.: Asphalt	Q0 13469,21519 13415,21442
-Ilsenburgstr.: Asphalt	Q0 13415,21442 13287,21224 13215,21077 13218,21008
+Ilsenburgstr.: Asphalt	Q0 13415,21442 13280,21225 13247,21173 13215,21077 13218,21008
 Sulzer Str.: Asphalt	Q0 13720,21761 13825,21730 13887,21714 13938,21700 14017,21673
 Sulzer Str.: Kopfsteinpflaster	Q2 14017,21673 14120,21645
 Urbacher Str.: Kopfsteinpflaster	Q2 14262,21607 14227,21657 14156,21753 14064,21838 13950,21935 13853,22006
@@ -10133,6 +10135,11 @@ Eigerstr. [81-91]: Verbundsteinpflaster	Q1 13043,18126 12910,18003 12945,17958
 (Mauerweg - Neudecker Weg): wassergebundene Decke	Q1 18612,1700 18470,1920 18396,1990
 Senftenberger Ring [Wohngebiet]: Verbundsteinpflaster	Q1 6719,22085 6729,21950 6790,21950
 Senftenberger Ring [Wohngebiet]: Asphalt	Q0 6790,21950 6989,21975
+Helene-Jacobs-Str.: Asphalt	Q0 3230,8230 3219,7987 3210,7786 3309,7782 3320,7982 3332,8207
+Werner-Richard-Heymann-Platz: provisorischer Asphalt	Q0 3320,7982 3219,7987
+Reichenhaller Str.: Gehwegpflasterung	Q0 3210,7786 3198,7787
+Kissinger Str. (Schmargendorf): Gehwegpflasterung	Q0 3219,7987 3206,7988
+(Alt-Blankenburg, über den Dorfanger): Asphalt	Q0 13677,20873 13662,20917
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -11222,7 +11229,7 @@ Finkenstr. (Dahlem): Asphalt	Q0 2513,6581 2430,6564 2281,6469 2173,6424 2039,639
 Franz-Cornelsen-Weg: Asphalt	Q1 3594,7191 3596,7199 3612,7335
 Franz-Cornelsen-Weg: wassergebundene Decke	Q1 3612,7335 3619,7587
 Patschkauer Weg: Kopfsteinpflaster	Q2 2996,5005 3132,4803
-Patschkauer Weg: Kopfsteinpflaster	Q3 3132,4803 3344,4488
+Patschkauer Weg: schlechtes Kopfsteinpflaster	Q3 3132,4803 3344,4488
 Reichensteiner Weg: Kopfsteinpflaster	Q3 3095,4680 3243,4469
 Reichensteiner Weg: Kopfsteinpflaster	Q2 3057,4731 3095,4680
 Wichernstr. (Dahlem): Kopfsteinpflaster	Q2 2937,4645 3037,4500 3097,4409
@@ -15107,11 +15114,11 @@ Rauhfußgasse: guter Beton	Q0 -1276,19759 -1157,19711 -1071,19689
 Plettenberger Pfad: Beton	Q0 1869,18608 1903,18429 1924,18311 1936,18209
 Dahnstr.: mäßiges Kopfsteinpflaster	Q2 5303,17914 5287,17815
 Ilbeshäuser Weg: guter Beton	Q0 5568,21185 5400,21353
-Schäferstege - Parkanlage: guter Asphalt	Q0 13366,20897 13332,20898 13298,20917 13261,20919
+Schäferstege - Parkanlage: guter Asphalt	Q0 13355,20893 13332,20898 13312,20910 13261,20919
 Alt-Blankenburg: schlechtes Kopfsteinpflaster	Q3 13562,20913 13487,20887 13491,20869 13493,20847 13576,20849
 Alt-Blankenburg: schlechtes Kopfsteinpflaster	Q3 13491,20869 13412,20856
-Alt-Blankenburg: Asphalt	Q0 13412,20856 13380,20811
-Schäferstege: guter Asphalt	Q0 13403,20686 13380,20811 13366,20897
+Alt-Blankenburg: Asphalt	Q0 13412,20856 13376,20812
+Schäferstege: guter Asphalt	Q0 13403,20686 13376,20812 13355,20893
 Schäferstege: verdichtete Sandpiste mit Schlaglöchern	Q2 13403,20686 13409,20645 13416,20595
 Schäferstege: verdichtete Sandpiste mit Schlaglöchern, teils mit Kopfsteinpflaster	Q2 13416,20595 13420,20574 13440,20485
 Schäferstege: verdichtete Sandpiste mit Schlaglöchern	Q2 13440,20485 13460,20371 13491,20266
@@ -15462,7 +15469,7 @@ Richard-Ermisch-Str.: Asphalt	Q0 14252,13263 14231,13204 14211,13150 14180,13064
 Zum Langen Jammer: Kopfsteinpflaster, Gehweg besser	Q2 14682,12874 14588,12901 14536,12916 14480,12932 14411,12951
 (Parkweg): Asphalt	Q0 14690,12900 14419,12978
 (Bad Kissingen): wassergebundene Decke	Q1 3596,7566 3609,7842
-(Kolonieweg a. d. Forkenbeckstr.): wassergebundene Decke	Q1 3218,8233 3230,8221 3584,8136 3756,8101 3779,8105
+(Kolonieweg a. d. Forkenbeckstr.): wassergebundene Decke	Q1 3358,8190 3584,8136 3756,8101 3779,8105
 Claire-Waldoff-Weg: wassergebundene Decke	Q1 3584,8136 3571,8085 3538,7515
 (Eppinger Str. - Garystr.): Kleinpflaster	Q1 2211,4280 2254,4376
 Breisacher Str.: Kopfsteinpflaster	Q2 2054,4190 2147,4173 2169,4169 2233,4156 2280,4148 2372,4127

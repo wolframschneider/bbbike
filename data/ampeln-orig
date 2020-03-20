@@ -10,13 +10,13 @@
 # 
 #: note: Baustellenampel in der Neuen Roßstr.
 #: source_id: 2147345021 (bis 06.07.2020)
-#: last_checked: 2020-02-18 (mapillary)
+#: last_checked: 2020-03-09 (mapillary)
 #: valid: -20200706
 	X::inwork 10780,11721
 # 
 #: next_check_id: HOSEMANN-2019
 #: note: Baustellenampel in der Hosemannstr. (eigentlich 2x)
-#: last_checked: 2020-02-04
+#: last_checked: 2020-03-13
 #: next_check: 2020-03-30
 #: valid: -20200330
 	X::inwork 12556,15518
@@ -24,7 +24,7 @@
 # REMOVED --- #: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer --- #: source_id: 2147344652 (bis Mitte Dezember 2019) --- #: last_checked: 2019-11-30 --- #: next_check: 2019-12-13 --- #: valid: 20190822-20191213 ---	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-03-07 vvv
+#: last_checked: 2020-03-18 vvv
 #: next_check: 2020-05-15 vvv
 #: valid: 20190319-20200515 vvv
 #: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20)
@@ -73,7 +73,7 @@
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
-#: last_checked: 2020-02-22
+#: last_checked: 2020-03-18
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -1301,11 +1301,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 12892,7850
 #: note: Anforderungsampel
 	F 12846,7981
-#: next_check_id: KARLMARXSTR-2018
-#: XXX provisorische Ampel an der Briesestr. während der Bauarbeiten
-#: last_checked: 2020-02-27
-#: check_frequency: 90d
-	X::inwork 12794,8103
+# REMOVED --- #: next_check_id: KARLMARXSTR-2018 --- #: XXX provisorische Ampel an der Briesestr. während der Bauarbeiten --- #: last_checked: 2020-02-27 --- #: check_frequency: 90d ---	X::inwork 12794,8103
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel an der Weichselstr. während der Bauarbeiten
 #: last_checked: 2020-02-19
@@ -1651,6 +1647,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10257,19542
 	X 10014,19421
 	X 9859,19283
+#: off: Sunday (seen 2020-03-15 12:00)
 	X 11555,20051
 	F 12821,20646
 	X 15620,19809
@@ -2071,7 +2068,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: note: Anforderungsampel (aber wahrscheinlich oft genutzt)
 	F 5829,10964
 	X 12060,11323
-	X 3872,10749
+	X 3869,10760
 	F 2694,10002
 	X 12042,21886
 #: note: Anforderungsampel
@@ -2088,7 +2085,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	X 8571,11846
 	X 21829,4212
 	X 16868,5938
-#: off: weekend/night (seen Su 2015-07-19 16:40, 2019-09-22 ca. 10:00)
+#: off: weekend/night (seen Su 2015-07-19 16:40, 2019-09-22 ca. 10:00, Su 2020-03-15 13:00)
 	X 12520,12938
 	X 9454,12558
 	F 7702,10146
@@ -2526,7 +2523,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 4074,6681
 	X 4103,6716
 #: note: Anforderungsampel
-#: off: Sunday (seen 2019-10-13 13:00)
+#: off: Sunday (seen 2019-10-13 13:00, 2020-03-15 12:00)
 	F 11148,19838
 	F 14633,2145
 	X 9267,15790
@@ -2815,7 +2812,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2020-02-05 vvv
+#: last_checked: 2020-03-08 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2942,7 +2939,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20221231 vvv
-#: last_checked: 2019-12-12 vvv
+#: last_checked: 2020-03-11 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
@@ -2963,11 +2960,11 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20211231 vvv
-#: last_checked: 2019-12-12
+#: last_checked: 2020-03-11
 #: check_frequency: 90d
 	X::inwork 13278,6967
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2019-12-12
+#: last_checked: 2020-03-11
 #: check_frequency: 90d
 	X::inwork 13627,7047
 #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren
@@ -2979,7 +2976,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6407
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="5"
-#: last_checked: 2020-03-01
+#: last_checked: 2020-03-14 (mapillary)
 #: check_frequency: 30d
 	X::inwork 14174,7505
 # 
@@ -3129,7 +3126,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2020-01-30 (mapillary)
+#: last_checked: 2020-03-16 (mapillary)
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -3289,7 +3286,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2020-03-07 vvv
+#: last_checked: 2020-03-11 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738

@@ -1336,7 +1336,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'from' => undef,
          'id' => 2454,
          'recurring' => 1,
-         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Winter: 18.00 bis 6.00 Uhr',
+         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
          'until' => undef
        },
        {
@@ -1545,13 +1545,13 @@ Kleistpark	2::night 7310,9622 7307,9528
        {
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
 #: osm_watch: way id="43141418" version="15" brb
-#: last_checked: 2019-12-07
+#: last_checked: 2020-03-08 (Situation nicht ganz klar)
 	2::inwork -12583,-1552 -12485,-1482
 # REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
 ',
          'from' => undef,
          'id' => 2544,
-         'text' => 'Brauerstr.: wegen Bauarbeiten gesperrt',
+         'text' => 'Brauerstr.: wegen Bauarbeiten möglicherweise gesperrt',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -2018,7 +2018,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
-#: last_checked: 2020-02-06
+# REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
+#: last_checked: 2020-03-15
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -2077,7 +2078,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-02-13 vvv
+#: last_checked: 2020-03-11 (daf) vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2204,7 +2205,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2020-02-04
+#: last_checked: 2020-03-15
 #: check_frequency: 60d
 	q4::inwork 13391,16436 13630,16629
 ',
@@ -2335,13 +2336,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="705182550" version="1"
 #: osm_watch: way id="705182551" version="1"
 #: also_indoor: traffic (G,H) vvv
-#: last_checked: 2020-02-21 vvv
-#: next_check: 2020-03-31 vvv
+#: last_checked: 2020-03-08 vvv
+#: check_frequency: 30d vvv
+#: next_check: 2020-06-30 vvv
 #: source_id: 2147344480
 # REMOVED (ja, aber Gehweg ist noch frei) --- #: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
 	q4+::inwork 9106,12795 9193,12875 9239,12923
 	q3::inwork 9160,12932 9193,12875
 #: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^^
 #: also_indoor ^^^
 #: XXX ^^^
@@ -2544,7 +2547,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="11"
-#: last_checked: 2020-02-29
+#: last_checked: 2020-03-08 (krickstadt)
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 ',
@@ -2556,14 +2559,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
-#: last_checked: 2020-01-11
+#: by: https://www.bahninfo-forum.de/read.php?9,413132,659869#msg-659869 (Sperrung am Wochenende)
+#: by: https://www.bahninfo-forum.de/read.php?9,413132,659884#msg-659884 ("in Kürze ... saniert")
+#: last_checked: 2020-03-08 (krickstadt)
 # REMOVED --- #: next_check: 2019-12-02
-#: check_frequency: 90d
+#: check_frequency: 60d
 	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 ',
          'from' => undef,
          'id' => 3118,
-         'text' => 'Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Tor und Bauzaun gesperrt',
+         'text' => 'Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Tor gesperrt (eventuell nur am Wochenende)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -2612,7 +2617,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: TRESKOWALLEE-2017
 	q3::inwork; 18704,8427 18731,8577 18733,8633 18733,8650 18737,8686
 #: note: hier gibt\'s keine expliziten Verbotsschilder, aber Radfahrer sollen wohl nicht auf der Treskowallee weiterfahren
-	q4::inwork; 18737,8686 18770,8898 18790,9018 18809,9133
+	q4::inwork; 18737,8686 18770,8898 18790,9018
+# REMOVED (hier ist die Fahrbahn frei) ---	q4::inwork; 18790,9018 18809,9133
 ',
          'from' => undef,
          'id' => 3136,
@@ -2751,19 +2757,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1609455599
        },
-       {
-         'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php
-#: by: fritz
-#: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
-	2::inwork 21558,12073 21562,12088 21564,12097
-',
-         'from' => 1580598000,
-         'id' => 3171,
-         'text' => 'Brebacher Weg: Gleisbauarbeiten, Bahnübergang gesperrt, vom 3. Februar 2020 bis voraussichtlich 9. März 2020',
-         'type' => 'gesperrt',
-         'until' => 1583773200
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: KOENIGSTEINBRUECKE-2019
@@ -2851,7 +2845,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-03-04
+#: last_checked: 2020-03-17
 	2::inwork 15420,12178 15520,12160 15628,12246
 ',
          'from' => undef,
@@ -2883,11 +2877,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: source_id: 2147345498
-	q4::inwork 4515,4966 4514,5082 4513,5139 4512,5199
+	q4::inwork 4515,4966 4514,5082
+# REMOVED (hier nicht) ---	q4::inwork 4514,5082 4513,5139 4512,5199
 ',
          'from' => 1582487459,
          'id' => 3198,
-         'text' => 'Hindenburgdamm: zwischen Schloßstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte September 2020',
+         'text' => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte September 2020',
          'type' => 'handicap',
          'until' => 1599840000
        },
@@ -2899,6 +2894,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.bahninfo-forum.de/file.php?9,file=13443
 #: by: https://viz.berlin.de/2020/03/bahnhofstrasse-koepenick/
 #: by: https://viz.berlin.de/wp-content/uploads/Bahnhofstra%C3%9Fe-Umleitungsplan.png
+#: by: https://www.berliner-woche.de/koepenick/c-verkehr/bvg-erneuert-in-der-bahnhofstrasse-rund-1000-meter-gleis-und-haltestellen_a257692
 #: source_id: 2147345568 (schon ab 9.3.2020?)
 #: source_id: 2147345558
 	q4::inwork; 22513,5747 22383,5611 22204,5447
@@ -2924,16 +2920,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1586790000
        },
-       {
-         'data' => '#: by: wosch
-	q4::inwork 9837,13250 10016,13306
-',
-         'from' => 1583350439,
-         'id' => 3203,
-         'text' => 'Krausnickstr.: Sperrung der Fahrbahn, voraussichtlich bis Mitte März 2020',
-         'type' => 'handicap',
-         'until' => 1584572399
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
@@ -2944,6 +2931,72 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Tor am Markgrafendamm: kann verschlossen sein',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '	2::inwork 1557,10306 1471,10368 1517,10424 1580,10429 1692,10348
+',
+         'from' => 1583954374,
+         'id' => 3206,
+         'text' => 'Zufahrt zum Rasthaus Avus gesperrt, bis 27.03.2020',
+         'type' => 'gesperrt',
+         'until' => 1585328400
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.907067.php
+	q4::inwork 6124,5894 6007,5882
+',
+         'from' => 1584255600,
+         'id' => 3207,
+         'source_id' => '2147345599',
+         'text' => 'Friedrichsruher Str.: Bauarbeiten zwischen Bismarckstr. und Lauenburger Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 03.08.2020 17:00 Uhr',
+         'type' => 'handicap',
+         'until' => 1596466800
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.907067.php
+#: by: https://twitter.com/VIZ_Berlin/status/1239445055410143232 (hier nur der nördliche Abschnitt)
+	q4::inwork 6007,5785 6007,5882
+',
+         'from' => 1584255600,
+         'id' => 3208,
+         'source_id' => '2147345598',
+         'text' => 'Lauenburger Str.: Bauarbeiten zwischen Bergstr. und Friedrichsruher Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 03.08.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1596466800
+       },
+       {
+         'data' => '#: next_check_id: MANDEL-2020
+#: last_checked: 2020-03-13
+	2::inwork 12871,15882 12911,15865 12979,15822 12948,15771
+',
+         'from' => undef,
+         'id' => 3209,
+         'text' => 'Mandelstr.: wegen Bauarbeiten gesperrt, auch für Fußgänger',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: XXX wann sind die Bauarbeiten beendet?
+#: last_checked: 2020-03-13
+	q4::inwork 13292,13931 13385,13992
+',
+         'from' => undef,
+         'id' => 3210,
+         'text' => 'Paul-Heyse-Str.: Bauarbeiten, Fahrbahn gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.907067.php
+#: by: https://twitter.com/VIZ_Berlin/status/1239445055410143232 (hier nur der nördliche Abschnitt)
+	q4::inwork 5993,5422 6009,5691 6007,5785
+',
+         'from' => 1584255600,
+         'id' => 3211,
+         'source_id' => '2147345598',
+         'text' => 'Lauenburger Str.: Bauarbeiten zwischen Südendstr. und Bergstr., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 03.08.2020 17:00 Uhr, eventuell fangen die Bauarbeiten hier später an!',
+         'type' => 'handicap',
+         'until' => 1596466800
        }
      
 );
