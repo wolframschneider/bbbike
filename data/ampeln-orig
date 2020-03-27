@@ -10,24 +10,24 @@
 # 
 #: note: Baustellenampel in der Neuen Roßstr.
 #: source_id: 2147345021 (bis 06.07.2020)
-#: last_checked: 2020-03-09 (mapillary)
+#: last_checked: 2020-03-24
 #: valid: -20200706
 	X::inwork 10780,11721
 # 
 #: next_check_id: HOSEMANN-2019
 #: note: Baustellenampel in der Hosemannstr. (eigentlich 2x)
-#: last_checked: 2020-03-13
-#: next_check: 2020-03-30
-#: valid: -20200330
+#: last_checked: 2020-03-25
+# REMOVED --- #: next_check: 2020-03-30
+#: valid: -20200430
 	X::inwork 12556,15518
 # 
 # REMOVED --- #: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer --- #: source_id: 2147344652 (bis Mitte Dezember 2019) --- #: last_checked: 2019-11-30 --- #: next_check: 2019-12-13 --- #: valid: 20190822-20191213 ---	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-03-18 vvv
+#: last_checked: 2020-03-23 vvv
 #: next_check: 2020-05-15 vvv
 #: valid: 20190319-20200515 vvv
-#: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20)
+#: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20, 2020-03-23)
 	X::inwork 14103,10489
 #: note: anstelle des Zebrastreifens
 	F::inwork 14490,10610
@@ -1683,6 +1683,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6965,16190
 	X 6661,15921
 #: XXX_prog: doppelte Bettelampel im Zuge der Antwerpener Str./Togostr.
+#: XXX_prog: nicht relevant für rechtsabbiegende Radfahrer in der Fahrtrichtung Nordwest - Südwest
 	X 6555,15827
 	X 6422,15708
 	X 7436,15746
@@ -2960,11 +2961,11 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20211231 vvv
-#: last_checked: 2020-03-11
+#: last_checked: 2020-03-21 (mapillary)
 #: check_frequency: 90d
 	X::inwork 13278,6967
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2020-03-11
+#: last_checked: 2020-03-21 (mapillary)
 #: check_frequency: 90d
 	X::inwork 13627,7047
 #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren
@@ -3126,7 +3127,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2020-03-16 (mapillary)
+#: last_checked: 2020-03-25 (mapillary)
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -3286,7 +3287,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2020-03-11 vvv
+#: last_checked: 2020-03-23 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738

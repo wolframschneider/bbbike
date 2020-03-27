@@ -6251,14 +6251,16 @@ EOF
 	1::inwork 4356,12009 4337,11721
 EOF
      },
-     { from  => $isodate2epoch->("2019-05-03 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-05-05 23:59:59"),
+     { from  => $isodate2epoch->("2020-05-08 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2020-05-10 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 24, months => 4]],
-       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (4.5.2019 und 5.5.2019)',
+       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (9.5.2020 und 10.5.2020)',
        type  => 'gesperrt',
        source_id => 'http://www.volksfeste-in-deutschland.de/primavera-fruehling-auf-der-akazienstrasse-in-berlin-schoeneberg.html',
        data  => <<EOF,
+#: XXX wird die Veranstaltung noch abgesagt?
+#: next_check: 2020-05-01
 	2::temp 7101,9027 7035,9161 7012,9222 7001,9291
 	2::temp 6945,9142 7035,9161
 EOF
@@ -19315,14 +19317,16 @@ EOF
 	q4::temp 13206,10651 13305,10789 13332,10832
 EOF
      },
-     { from  => $isodate2epoch->("2019-04-25 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-05-19 23:59:59"), # 1 Tag Nachlauf
+     { from  => $isodate2epoch->("2020-04-30 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2020-06-02 23:59:59"), # 1 Tag Nachlauf
        periodic => 1,
        recurrences => [['yearly', days => 25, months => 4]],
-       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 26.04.2019 bis 19.05.2019',
+       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 01.05.2020 bis 01.06.2020',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2983315-2970764-neukoellner-maientage.html',
        data  => <<EOF,
+#: XXX wird die Veranstaltung noch abgesagt?
+#: next_check: 2020-04-23
 # REMOVED --- #: tempex: 20180427-T20180521 vvv
 	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
 	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
@@ -22917,13 +22921,16 @@ EOF
 	q3::inwork; 15098,12849 15117,12846 15169,12839 15233,12829 15357,12813
 EOF
      },
-     { from  => 1557083719, # undef, # 1502056800, # 2017-08-07 00:00
-       until => $isodate2epoch->("2019-05-27 18:00:00"), # 1513533594, # kaum noch Beeinträchtigungen --- $isodate2epoch->("2017-12-19 18:00:00"), # 1502894902, # $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
-       text  => 'Scharnweberstr./Weichselstr.: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis 27. Mai 2019',
+     { from  => $isodate2epoch->("2020-03-23 09:25:00"), # 1557083719, # undef, # 1502056800, # 2017-08-07 00:00
+       until => $isodate2epoch->("2020-04-06 17:00:00"), # 1513533594, # kaum noch Beeinträchtigungen --- $isodate2epoch->("2017-12-19 18:00:00"), # 1502894902, # $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
+       text  => 'Scharnweberstr.: Bauarbeiten, Fahrbahn Richtung Osten zwischen Weichselstr. und Jessnerstr. gesperrt, außerdem Sackgasse in der Müggelstr., voraussichtlich bis 6. April 2020',
        type  => 'handicap',
-       source_id => '2147344149',
+       source_id => '2147345628',
        data  => <<EOF,
-	q3::inwork; 14965,11921 14887,11929 14835,11840
+	q4::inwork; 14887,11929 14965,11921 15080,11905
+	3 14887,11929 14965,11921 14897,11801
+	3 14994,12064 14965,11921 14897,11801
+	3 15080,11905 14965,11921 14897,11801
 EOF
      },
      { from  => 1394953200, # 2014-03-16 08:00
@@ -26502,7 +26509,7 @@ EOF
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
 # REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-03-15
+#: last_checked: 2020-03-25
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -27866,7 +27873,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-03-02
+#: last_checked: 2020-03-24
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29149,7 +29156,7 @@ EOF
        data  => <<EOF,
 #: note: laut fritz bis 31.06.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2020-02-28 (mapillary) (Sackgassenschild existiert)
+#: last_checked: 2020-03-22
 #: check_frequency: 60d
 #: next_check: 2020-06-30
 	q3::inwork  8986,16092 9178,16317
@@ -29168,7 +29175,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Soldiner Str.: Bauarbeiten zwischen Koloniestr. und Provinzstr., Richtung Westen gesperrt',
+       text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Provinzstr., Richtung Westen gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: SOLDINER-2019
@@ -29176,10 +29183,10 @@ EOF
 #: REMOVED (fast alle Verkehrsmeldungen weg?) --- by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2019-12-27 (mapillary)
+#: last_checked: 2020-03-25 (mapillary)
 #: check_frequency: 60d
 #: XXX_prog: eigentlich q4+::inwork;
-	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
+	q4::inwork; 8866,17075 8677,17154 8561,17198 8539,17197 8449,17196
 EOF
      },
      { from  => undef, # 
@@ -29369,9 +29376,9 @@ EOF
 # REMOVED (provisorischer Radstreifen) --- #: XXX außerdem "der östliche Gehweg ist gesperrt" --- was bedeutet das für den Radverkehr?
 #: priority: #A
 #: add_fragezeichen: Ist die Unterführung noch immer gesperrt?
-#: last_checked: 2019-12-29
+#: last_checked: 2020-03-22
 # REMOVED --- #: next_check: 2019-10-30
-#: check_frequency: 14d
+#: check_frequency: 30d
 	2::inwork 3231,12749 3332,12742
 EOF
      },
@@ -29867,7 +29874,7 @@ EOF
 EOF
      },
      { from  => 1569949777, # 2019-10-01 19:09
-       until => $isodate2epoch->("2020-03-01 00:00:00"),
+       until => $isodate2epoch->("2020-04-15 00:00:00"),
        text  => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, voraussichtlich bis Anfang 2020',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851369.php',
@@ -29879,15 +29886,15 @@ EOF
 EOF
      },
      { from  => 1570312800, # 2019-10-06 00:00
-       until => 1585691999, # 2020-03-31 23:59
-       text  => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs, vom 7.10.2019 bis voraussichtlich Ende März 2020',
+       until => $isodate2epoch->("2020-05-31 00:00:00"), # 1585691999, # 2020-03-31 23:59
+       text  => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs, vom 7.10.2019 bis voraussichtlich Ende März 2020, vielleicht auch länger',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.851896.php',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2019-10-17
-#: next_check: 2020-03-31
+#: last_checked: 2020-03-22
+# REMOVED --- #: next_check: 2020-03-31
 	2::inwork 5894,12480 5944,12548
 EOF
      },
@@ -30170,7 +30177,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-03-17
+#: last_checked: 2020-03-21
 	2::inwork 15420,12178 15520,12160 15628,12246
 EOF
      },
@@ -30184,7 +30191,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-02-26 (abgesperrt)
+#: last_checked: 2020-03-25 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 EOF
@@ -30337,6 +30344,7 @@ EOF
        source_id => '2147345599',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.907067.php
+#: by: https://www.berliner-woche.de/steglitz/c-bauen/vattenfall-baut-in-der-lauenburger-und-friedrichsruher-strasse_a258712
 	q4::inwork 6124,5894 6007,5882
 EOF
      },
@@ -30348,6 +30356,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.907067.php
 #: by: https://twitter.com/VIZ_Berlin/status/1239445055410143232 (hier nur der nördliche Abschnitt)
+#: by: https://www.berliner-woche.de/steglitz/c-bauen/vattenfall-baut-in-der-lauenburger-und-friedrichsruher-strasse_a258712
 	q4::inwork 6007,5785 6007,5882
 EOF
      },
@@ -30367,19 +30376,21 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-03-13
+#: last_checked: 2020-03-25
 	q4::inwork 13292,13931 13385,13992
 EOF
      },
-     { from  => 1584255600, # 2020-03-15 08:00
+     { from  => $isodate2epoch->("2020-04-25 00:00:00"), # 1584255600, # 2020-03-15 08:00
        until => 1596466800, # 2020-08-03 17:00
-       text  => 'Lauenburger Str.: Bauarbeiten zwischen Südendstr. und Bergstr., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 03.08.2020 17:00 Uhr, eventuell fangen die Bauarbeiten hier später an!',
+       text  => 'Lauenburger Str.: Bauarbeiten zwischen Südendstr. und Bergstr., Fahrbahn könnte gesperrt sein, bis 03.08.2020 17:00 Uhr',
        type  => 'handicap',
        source_id => '2147345598',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.907067.php
 #: by: https://twitter.com/VIZ_Berlin/status/1239445055410143232 (hier nur der nördliche Abschnitt)
-	q4::inwork 5993,5422 6009,5691 6007,5785
+#: last_checked: 2020-03-24 (mapillary, Radfahrer dürfen hier noch fahren)
+	q4::inwork 6009,5691 6007,5785
+# REMOVED (hier wohl nicht) ---	q4::inwork 5993,5422 6009,5691
 EOF
      },
     );

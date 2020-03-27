@@ -10,7 +10,6 @@ Stralauer Allee: Straﬂenseite wechseln, Ampel	q3::inwork; 14405,10340 14558,1026
 Lange Str.: Bauarbeiten, kurze Einbahnstraﬂenregelung	q2::inwork; 12413,11901 12238,11931
 Hermann-Stˆhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 M¸ncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
-Untere Kynaststr.: Fahrbahn gesperrt, Gehweg f¸r Radfahrer frei	q2::inwork 14805,10518 14815,10516 14832,10512 14828,10561 14843,10621 14882,10732
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 BouchÈstr.: Baustelle, Fahrtrichtung gesperrt	q3::inwork; 13298,9252 13188,9134
 Mengerzeile: Baustelle, Fahrtrichtung gesperrt	q4::inwork; 13176,9302 13098,9205
@@ -1843,7 +1842,8 @@ Wangenheimsteg: Bordstein, einige Fuﬂg‰nger	q2 2585,9653 2628,9702
 Melli-Besse-Anlage: einige Fuﬂg‰nger	q1 2628,9702 2664,9744
 (Uferweg am Berlin-Spandauer Schiffahrtskanal): einige Fuﬂg‰nger, Restaurantbetrieb	q1 8295,13531 8290,13538 8224,13634
 (Aldi/Rewe-Parkplatz): Parkplatzverkehr	q1 23163,11113 23131,11124 23113,11262
-Volkspark Anton Saefkow: einige Fuﬂg‰nger	q2 12620,14979 12632,14956 12639,14913 12592,14838 12575,14812
+Volkspark Anton Saefkow: einige Fuﬂg‰nger	q2 12620,14979 12632,14956 12639,14913 12592,14838
+Volkspark Anton Saefkow: einige Fuﬂg‰nger, Bordstein	q3 12592,14838 12575,14812
 Volkspark Anton Saefkow: einige Fuﬂg‰nger	q2 12592,14838 12640,14800 12709,14745 12794,14678 12862,14632
 Volkspark Anton Saefkow: einige Fuﬂg‰nger, Rampe	q3 12862,14632 12888,14625
 Volkspark Anton Saefkow: einige Fuﬂg‰nger, Steigung/Gef‰lle	q3 12901,14594 12888,14625 12900,14637 12932,14640 12970,14632 12982,14629
@@ -1951,6 +1951,8 @@ Eigerstr. [81-91]: Bodenschwellen	q2 13043,18126 12910,18003 12945,17958
 (Straﬂe 16 - Eigerstr.): einige Fuﬂg‰nger	q2 13034,17895 12995,17873 12945,17958
 Reichenhaller Str.: einige Fuﬂg‰nger	q2 3210,7786 3198,7787
 Kissinger Str. (Schmargendorf): einige Fuﬂg‰nger	q2 3219,7987 3206,7988
+(Otawistr. - Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 6003,16521 5965,16555 5802,16703
+(Usambarastr. - Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 5684,16815 5710,16792 5807,16709
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2641,7 +2643,7 @@ Jugenheimer Weg: schmaler Weg, Fuﬂg‰nger, Bordsteine	q3 -517,4463 -472,4476 -424
 Grumbacher Weg: schmaler Weg, Fuﬂg‰nger, Bordsteine	q3 -531,4599 -591,4558
 Straﬂe 206: enge Straﬂe	q1; 13406,17382 13321,17318 13247,17262
 Straﬂe 245 (Weiﬂensee): enge Straﬂe	q1 13590,17368 13271,17589 13243,17615
-(Querweg durch die Dauerkolonie Togo): einige Fuﬂg‰nger	q1 5894,16810 5700,16584
+(Querweg durch die Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 5894,16810 5807,16709 5802,16703 5700,16584
 Forster Str. (Hellersdorf): enge Straﬂe	q0 25237,14627 25365,14667 25397,14563 25418,14538
 Deisterpfad: Fuﬂg‰nger	q1 -17,5066 -18,5083 -21,5104
 Tessiner Weg: enge Straﬂe	q1 7077,17186 7184,17208
@@ -2759,6 +2761,7 @@ Verl‰ngerte Schulzendorfer Str.: Fuﬂg‰nger	q1 2150,22464 2015,22435 1834,22421 1
 Eichborndamm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4228,19024 4223,18982
 Archibaldweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 15674,10851 15870,10938
 Nˆldnerplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 15870,10938 15903,10906
+Pannierstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 12202,8895 12240,8964
 Dorotheenstr. (Straﬂenbahn): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 9454,12558 9330,12538
 Quickborner Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 8016,21499 8162,21302
 Kirchstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q0::igndisp; 22314,4604 22284,4653
@@ -2892,7 +2895,6 @@ Mauerstr..: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. 
 J‰gerstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9195,11972 9108,11961
 Taubenstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9207,11880 9138,11872
 Mauerstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9138,11872 9171,11777
-Gutenbergstr.: zwischen Englische Str. und Hannah-Karminski-Str. Einbahnstraﬂenregelung, offen Richtung Osten: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2:inwork::igndisp; 5518,12159 5317,12242
 Schinkelplatz: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9990,12404 9996,12372
 Niederlagstr.: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9972,12184 9959,12281
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9042,11839 8969,11814
