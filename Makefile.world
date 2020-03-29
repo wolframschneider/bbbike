@@ -1,14 +1,16 @@
 ###############################################################
-# Copyright (c) 2015 Wolfram Schneider, http://bbbike.org
+# Copyright (c) 2015-2020 Wolfram Schneider, http://bbbike.org
 #
 # bootstrapping for bbbike-world for jenkins
 
 jenkins-checkout-world:
 	if ! test -d world; then \
   	  git clone https://github.com/wosch/bbbike-world.git world; \
-	else \
-  	  ( cd world; git checkout .; git pull ); \
 	fi
+	( cd world; git reset --hard; git clean -fdx; git pull )
+	git reset --hard
+	git clean -fdx
+	make -f world/Makefile.osm distclean-real
 
 help:
 	@echo ""
