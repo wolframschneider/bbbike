@@ -40,6 +40,7 @@ Salvador-Allende-Br¸cke: Engstelle, Zweirichtungsradweg mit Gehweg	q2::inwork 23
 Salvador-Allende-Br¸cke: Engstelle, Zweirichtungsradweg mit Gehweg	q2::inwork 23433,5037 23444,4942 23451,4877
 Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5919,12423 5894,12480 5944,12548
 Meierottostr.: Einbahnstraﬂenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
+Pariser Str./Bundesallee: Bauarbeiten, ggfs. schieben	q4::inwork 5416,9928 5464,9914
 Braunschweiger Str.: Fahrbahn wird neu gemacht, Ausweichen auf Gehweg	q4::inwork 13781,7524 13854,7620 13919,7707
 Donaustr.: Einbahnstraﬂenregelung zwischen Pannierstr. und Reuterstr.	q3::inwork; 12150,8891 12202,8895
 Neukˆllnische Allee: Fuﬂg‰ngerschutztunnel	q3::inwork 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
@@ -1289,7 +1290,7 @@ Gleisdreieckpark: besonders an schˆnen Tagen Fuﬂg‰nger	q0 8042,10084 8145,10090
 Arnimplatz: Fuﬂg‰nger	q2 10606,16319 10739,16146
 (Weg im Salvador-Allende-Viertel): mehrere Dr‰ngelgitter im Parkplatzbereich, kann auf geeigneten Parkplatzzufahrten umfahren werden	q3 22888,4184 22957,4264
 (Weg im Salvador-Allende-Viertel): Fuﬂg‰nger	q2 22957,4264 23016,4326 23025,4358 23036,4420 23051,4461 23077,4512 23109,4554 23166,4585 23279,4599
-(Weg im Salvador-Allende-Viertel): eine Bodenschwelle, kann umfahren werden	q0 23279,4599 23445,4596
+Salvador-Allende-Viertel [Wohngebiet]: eine Bodenschwelle, kann umfahren werden	q0 23279,4599 23445,4596
 (Weg im Salvador-Allende-Viertel - Am Berg): Fuﬂg‰nger	q2 23051,4461 23010,4506
 (Mˆllendorffstr. - Karl-Lade-Str.): Fuﬂg‰nger	q2 15513,13539 15374,13542
 Lilienweg: Fuﬂg‰nger	q2 15143,5705 15154,5706 15209,5713 15252,5719 15296,5725 15337,5730
@@ -1384,7 +1385,7 @@ Unterbaumstr.: Bordsteine	q2 8488,12920 8502,12935
 (Charles-Corcelle-Ring - Dohnagestell): Bordstein, enger Pfad	q4 4724,15925 4723,15907
 (Drontheimer Str. - Koloniestr.): Fuﬂg‰nger	q2 8457,16975 8592,16938
 (M‰rkische Zeile): Einkaufszentrum, Fuﬂg‰nger	q4 6847,21509 6856,21396
-(Mittelheide): teilweise recht eng	q1 23585,6523 23954,6721 24185,6880
+(Mittelheide): teilweise recht eng	q1 23577,6504 23954,6721 24185,6880
 Hohenseeweg: nur f¸r Fuﬂg‰nger erlaubt, Bordstein	q4 23152,11065 22972,11066
 Totilastr.: Bordsteine, Fuﬂg‰nger	q4 8574,5580 8600,5580
 Gersdorfstr. - Wulfila-Ufer: Bordstein, einige Fuﬂg‰nger	q2 8255,4791 8192,4710
@@ -1953,6 +1954,7 @@ Reichenhaller Str.: einige Fuﬂg‰nger	q2 3210,7786 3198,7787
 Kissinger Str. (Schmargendorf): einige Fuﬂg‰nger	q2 3219,7987 3206,7988
 (Otawistr. - Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 6003,16521 5965,16555 5802,16703
 (Usambarastr. - Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 5684,16815 5710,16792 5807,16709
+(S¸lzhayner Str. - Heidelberger Str.): einige Fuﬂg‰nger	q2 13392,9225 13421,9260
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635

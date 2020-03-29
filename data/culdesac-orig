@@ -1236,7 +1236,6 @@ nördliches Sackgassenende, BSR-Recyclinghof	culdesac_pseudo 3969,13341
 	culdesac -2396,14245
 #: note: ein Weg mit Stufen zum Ufer scheint zu existieren
 	culdesac_pseudo 6965,4219
-	culdesac 13397,9234
 	culdesac -2623,14396
 	culdesac -1997,14800
 	culdesac 17709,16614
@@ -1547,6 +1546,7 @@ Sackgassenende nördlich der S-Bahn-Querung	culdesac 7308,14814
 ######################################################################
 # culdesac entries which should remain invisible
 #: ignore vvv
+	culdesac_pseudo 13392,9225
 	culdesac_pseudo 15574,22640
 	culdesac_pseudo 18838,996
 	culdesac_pseudo 18796,1227
@@ -1851,7 +1851,7 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac_pseudo 25157,13790
 	culdesac_pseudo 14877,3475
 	culdesac_pseudo 22876,6598
-	culdesac_pseudo 23585,6523
+	culdesac_pseudo 23577,6504
 	culdesac_pseudo 16326,11966
 	culdesac_pseudo 16567,226
 	culdesac_pseudo 118,4332

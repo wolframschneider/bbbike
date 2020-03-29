@@ -29266,11 +29266,12 @@ EOF
 EOF
      },
      { from  => 1560636000, # 2019-06-16 00:00
-       until => 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
+       until => $isodate2epoch->("2020-05-01 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
        text  => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein direkter Durchgang möglich, ab 17. Juni 2019',
        type  => 'gesperrt',
        data  => <<EOF,
-# REMOVED --- #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein? --- #: last_checked: 2019-11-11
+#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
+#: last_checked: 2020-03-28
 	2::inwork 14567,10814 14469,10841 14352,10874
 EOF
      },
@@ -30391,6 +30392,17 @@ EOF
 #: last_checked: 2020-03-24 (mapillary, Radfahrer dürfen hier noch fahren)
 	q4::inwork 6009,5691 6007,5785
 # REMOVED (hier wohl nicht) ---	q4::inwork 5993,5422 6009,5691
+EOF
+     },
+     { from  => 1585548000, # 2020-03-30 08:00
+       until => 1588950000, # 2020-05-08 17:00
+       text  => 'Blohmstr. zwischen Cecilienstr. und Gätzschmannpfad sowie Egestorffstr. zwischen Blohmstr. und Dinnendahlstr.: Bauarbeiten, Fahrbahn gesperrt, vom 31.03.2020 08:00 Uhr bis 08.05.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147345644',
+       data  => <<EOF,
+#: source_id: 2147345645
+	q4::inwork 9648,-1928 9531,-1931 9428,-1892 9393,-1873 9312,-1832 9206,-1771
+	q4::inwork 9093,-1670 9139,-1350
 EOF
      },
     );
