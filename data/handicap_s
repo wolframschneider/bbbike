@@ -845,7 +845,8 @@ Yva-Bogen: Fuﬂg‰nger	q2 5373,10981 5426,11039 5459,11135
 Kelchstr.: enge Straﬂe	q1 7387,4696 7424,4821 7437,4855 7456,4934
 Doldenweg: Bordsteine, Fuﬂg‰nger	q2 7424,4821 7487,4802
 Kottesteig: Bordsteine, Fuﬂg‰nger	q2 6868,5262 6820,5237 6806,5230
-(Zu den Krugwiesen - Vincent-van-Gogh-Str.): Fuﬂg‰nger	q1 18650,17367 18704,17565
+(Zu den Krugwiesen - Vincent-van-Gogh-Str.): Fuﬂg‰nger	q1 18650,17367 18656,17389 18704,17565
+(Zu den Krugwiesen - Vincent-van-Gogh-Str.): Fuﬂg‰nger, Ballspielplatz	q1 18656,17389 18613,17427 18694,17577
 (Weg durch die Falkenberger Krugwiesen): Fuﬂg‰nger	q1 18704,17565 18756,17498
 (Weg durch die Falkenberger Krugwiesen): Fuﬂg‰nger	q1 18644,17349 18650,17367 18708,17415 18737,17482 18756,17498 18784,17525 18831,17663 18937,17738 18991,17776 19045,17832 19097,17869 19110,18015 19127,18091 19213,18195 19251,18248 19249,18351 19265,18400 19291,18456
 (Falkenberger Krugwiesen - Falkenberger Chaussee): Fuﬂg‰nger	q1 19213,18195 18969,18448
@@ -1760,7 +1761,6 @@ Nordhafenpark West: einige Fuﬂg‰nger	q1 7368,14573 7396,14569 7426,14539 7551,14
 Hansa-Ufer: einige Fuﬂg‰nger	q1 5657,12339 5740,12419
 Ackerstr.: Fuﬂg‰nger, Bordsteine	q3 8701,14932 8741,14928
 (zum Mauerpark, tempor‰re Umgehung): Fuﬂg‰nger	q2 10302,14964 10279,15033 10295,15078 10319,15090
-Mauerpark: einige Fuﬂg‰nger	q1 10295,15078 10193,15384 10210,15407
 Steinr¸ckweg: mˆglicher Bordstein	q1 4257,6856 4293,6719
 (Mehringbr¸cke - Mehringplatz): einige Fuﬂg‰nger	q1 9404,10250 9535,10299
 (Gleimstr. - Mauerpark): Fuﬂg‰nger	q2 10170,15659 10228,15488
