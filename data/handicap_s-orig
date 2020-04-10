@@ -32,14 +32,14 @@
 #: next_check_id: STRALAUER-2019
 #: source_id: LMS-BR_r_LMS-BR_178065_LMS-BR_72 (bei VMZ entfernt, bei fritz noch bis 15.5.2020 aktiv)
 #: also_indoor: traffic (G)
-#: last_checked: 2020-04-04
+#: last_checked: 2020-04-06
 #: check_frequency: 14d
 #: valid: 20190319-20200515
 Bödikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 # 
 #: next_check_id: STRALAUER-2019
 #: XXX_prog eigentlich besser mit handicap_directed darstellbar
-#: last_checked: 2020-04-04
+#: last_checked: 2020-04-06
 #: check_frequency: 7d
 #: valid: -20200515
 Stralauer Allee: Straßenseite wechseln, Ampel	q3::inwork; 14405,10340 14558,10264
@@ -57,14 +57,12 @@ Stralauer Allee: Straßenseite wechseln, Ampel	q3::inwork; 14405,10340 14558,1026
 # REMOVED (wieder offen) --- #: last_checked: 2018-08-23 --- #: check_frequency: 3d --- Simplonstr.: Fahrbahn zwischen Matkowskystr. und Helmerdingstr. gesperrt, Ausweichen auf Gehweg, Bordstein	q3::inwork 14531,11142 14468,11203
 # REMOVED (-> qualitaet_s-orig; für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342929 --- #: priority: #B --- #: next_check: 2018-08-31 --- #: valid: -20180831 --- Helmerdingstr.: Bauarbeiten, Richtung Revaler Str. gesperrt	q4::inwork; 14468,11203 14442,11101
 # REMOVED (-> für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342938 --- #: priority: #B --- #: next_check: 2018-08-10 --- #: valid: -20180810 --- Scharnweberstr.: Bauarbeiten zwischen Colbestr. und Kinzigstr., Fahrbahn Richtung Gürtelstr. gesperrt	q4::inwork; 14468,11992 14589,11975
-# 
-#: last_checked: 2020-03-30
-Lange Str.: Bauarbeiten, kurze Einbahnstraßenregelung	q2::inwork; 12413,11901 12238,11931
+# REMOVED (wieder offen) --- #: last_checked: 2020-03-30 --- Lange Str.: Bauarbeiten, kurze Einbahnstraßenregelung	q2::inwork; 12413,11901 12238,11931
 # 
 #: next_check_id: KAUFHOF-2018
 #: XXX bis wann gehen die Bauarbeiten?
 #: XXX ggfs. alten handicap_s-orig-Eintrag wieder aktivieren
-#: last_checked: 2020-03-30
+#: last_checked: 2020-04-09
 #: check_frequency: 90d
 Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 # 
@@ -75,7 +73,7 @@ Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,1183
 #: note: laut fritz bis Ende 2020
 #: XXX_prog BS (auf der östlichen Seite, ansonsten q3+)
 #: also_indoor: traffic (G)
-#: last_checked: 2020-03-30
+#: last_checked: 2020-04-09
 #: check_frequency: 30d
 Müncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
 # 
@@ -136,7 +134,7 @@ Müncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 1245
 # 
 #: XXX_prog: BS (ansonsten entfernen)
 #: next_check_id: DIESEL-2019
-#: last_checked: 2020-03-11
+#: last_checked: 2020-04-06
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 # 
 #: osm_watch: way id="466318949" version="8"
@@ -214,7 +212,7 @@ Friedrichsgracht: direkter Zugang zum Werderschen Markt wegen Bauarbeiten verspe
 # 
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=632731&postcount=1072
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-03-05
+#: last_checked: 2020-04-07
 #: check_frequency: 30d
 Scharrenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 10332,11929 10385,11985
 # 
@@ -280,10 +278,10 @@ Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahr
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_52_7191_7270_online.pdf (Grundstücksnummerierungen)
 #: also_indoor: traffic (HG) vvv
 #: osm_watch: way id="327756248" version="5"
-#: last_checked: 2020-03-20
+#: last_checked: 2020-04-08
 Jerusalemer Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 9936,11469
 #: osm_watch: way id="542983664" version="2"
-#: last_checked: 2020-03-20
+#: last_checked: 2020-04-08
 Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 # REMOVED (wieder frei) --- #: osm_watch: way id="66071387" version="10" --- #: last_checked: 2019-12-20 --- Zimmerstr.: Fahrbahn wird neu gebaut	q3::inwork 9945,11371 10072,11384
 # REMOVED (wieder frei) --- Zimmerstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 10072,11384
@@ -297,7 +295,7 @@ Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_52_7191_7270_online.pdf (Grundstücksnummerierungen)
 #: XXX evtl. muss man nach Ende der Einschränkungen den comments_misc-orig-Eintrag wieder aktivieren
 #: osm_watch: way id="17370332" version="16"
-#: last_checked: 2020-03-20
+#: last_checked: 2020-04-07
 #: check_frequency: 14d
 # REMOVED --- Alexandrinenstr.: direkter Zugang zur/von der Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q4::inwork 10791,11232 10826,11251
 (provisorischer Zugang zur neuen Alexandrinenstr.): eng, Fußgänger	q3::inwork 10678,11172 10690,11180
@@ -560,7 +558,7 @@ Pariser Str./Bundesallee: Bauarbeiten, ggfs. schieben	q4::inwork 5416,9928 5464,
 ### Neukölln ###
 # 
 #: next_check_id: BRAUNSCHWEIGER-2020
-#: last_checked: 2020-03-06 (mapillary)
+#: last_checked: 2020-04-06
 Braunschweiger Str.: Fahrbahn wird neu gemacht, Ausweichen auf Gehweg	q4::inwork 13781,7524 13854,7620 13919,7707
 # 
 #REMOVED --- #: XXX nach den Bauarbeiten vermutlich asphaltiert --- #: last_checked: 2018-08-24 --- #: check_frequency: 3d --- # REMOVED (hier nicht mehr, vermutlich) --- Innstraße: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 13217,8493 13262,8554 13301,8606 --- Innstraße: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 13301,8606 13314,8624 13368,8689
@@ -577,7 +575,7 @@ Braunschweiger Str.: Fahrbahn wird neu gemacht, Ausweichen auf Gehweg	q4::inwork
 #: next_check_id: DONAUSTR-2018
 #: also_indoor: traffic (H)
 #: osm_watch: way id="155605273" version="7"
-#: last_checked: 2020-03-26 vvv
+#: last_checked: 2020-04-06 vvv
 #: check_frequency: 14d vvv
 # REMOVED (laut osm nur noch construction=minor) --- Donaustr.: Fahrbahn an der Kreuzung Pannierstr. kann wegen Bauarbeiten noch nicht befahrbar sein	q2::inwork 12202,8895 12394,8729
 Donaustr.: Einbahnstraßenregelung zwischen Pannierstr. und Reuterstr.	q3::inwork; 12150,8891 12202,8895
@@ -613,7 +611,7 @@ provisorische Radwegführung, Fußgänger, Seitenwechsel notwendig	q3::inwork; 1405
 #: by: http://cm.kms-sonne.de/mailing/99/2206225/0/8dc0731155/index.html (8. Baustellennewsletter der Aktion KMS) (voraussichtlich Vollsperrung vom 5. September 2019 bis Frühjahr 2020)
 #: by: https://www.abendblatt-berlin.de/2019/10/05/berlin-neukoelln-bauarbeiten-am-rathaus-gehen-voran/
 #: osm_watch: way id="155605267" version="9"
-#: last_checked: 2020-03-27
+#: last_checked: 2020-04-06
 Anzengruberstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12689,8289 12865,8346
 # 
 #: next_check_id: KARLMARXSTR-2018
@@ -627,7 +625,7 @@ Rollbergstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 
 #: source_id: 2147345357
 #: source_id: 2147345472 (bis März 2021)
 #: also_indoor: traffic
-#: last_checked: 2020-03-27
+#: last_checked: 2020-04-06
 #: check_frequency: 90d
 #: next_check: 2021-03-31
 Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12394,8729 12330,8636
@@ -655,7 +653,7 @@ Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 
 #: osm_watch: way id="585753318" version="3"
 #: osm_watch: way id="71392596" version="11"
 #: also_indoor: traffic
-#: last_checked: 2020-03-11
+#: last_checked: 2020-04-06
 #: check_frequency: 60d
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249 12753,8187
 # 
@@ -1990,6 +1988,7 @@ Appelbacher Weg: Rampe	q2 27780,893 27804,878
 Hallgarter Steig: eng und kurvig	q1 27890,373 27961,321 28042,304 28046,268 28058,155 28068,148 28071,112 28086,101 28070,22 28083,-34 28065,-114 28042,-152
 Grottewitzwanderweg: eng, kurvig	q2 28042,-152 27852,-279 27825,-371 27703,-406 27624,-480 27605,-661 27573,-757 27603,-906 27562,-1043 27578,-1153 27539,-1337
 Papendickstr.: enge Straße	q0- 17071,16174 17073,16222 17135,16334 17171,16372
+#: next_check_id: AMWIESENWEG-2020
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/tief-10-ag_radverkehr-12-03-2018-kompatibilitaetsmodus.pdf (Zweirichtungsverkehr, 2018)
 #: XXX Bauarbeiten geplant, danach vielleicht ein breiterer Weg (evtl. kann man auch den Q0--Eintrag in qualitaet_s-orig ändern)
 #: by: https://api.fixmyberlin.de/api/plannings/100 (die Umsetzung erfolgt 2018)
@@ -1997,7 +1996,7 @@ Papendickstr.: enge Straße	q0- 17071,16174 17073,16222 17135,16334 17171,16372
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/12-ag_radverkehr-bericht-einzelmassnahmen.pdf
 #: osm_watch: way id="152177648" version="6"
 #: last_checked: 2019-10-19
-#: check_frequency: 90d
+#: next_check: 2020-07-31
 Am Wiesenweg: Fußgänger	q1 21977,988 21856,996 21724,954 21685,916
 Grasmückenweg: Fußgänger, eng	q2 14877,3475 14822,3409
 (Scharnweberstr. - Berenhorststr.): Fußgänger	q1 4801,17623 4816,17712
@@ -3323,6 +3322,8 @@ Kissinger Str. (Schmargendorf): einige Fußgänger	q2 3219,7987 3206,7988
 (Otawistr. - Dauerkolonie Togo): einige Fußgänger, Radfahren nicht erlaubt	q3 6003,16521 5965,16555 5802,16703
 (Usambarastr. - Dauerkolonie Togo): einige Fußgänger, Radfahren nicht erlaubt	q3 5684,16815 5710,16792 5807,16709
 (Sülzhayner Str. - Heidelberger Str.): einige Fußgänger	q2 13392,9225 13421,9260
+#: by: mapillary
+(Rhönstr. - Harzburger Str.): enger Trampelpfad	q3+ 13598,21360 13709,21334
 # 
 ######################### User Contributions #################################
 # 
@@ -3537,9 +3538,8 @@ Wentowsteig: enge Straße mit parkenden Autos	q0- 6904,20692 6930,20808 6943,2086
 (Breisgauer Str. - Parkplatz Einkaufszentrum): schmaler Fußweg	q3 -2273,3460 -2211,3484 -2173,3513
 #: by: ^^^
 # 
-#: by: André Käding
-#: confirmed_by: srt
-Neustrelitzer Str.: kurvenreich	q1 16752,14745 16668,14765 16524,14749 16443,14825 16346,14750 16256,14828
+# REMOVED (naja) --- #: by: André Käding --- #: confirmed_by: srt --- Neustrelitzer Str.: kurvenreich	q1 16752,14745 16668,14765 16524,14749 16443,14825 16356,14725 16282,14640
+# REMOVED (naja) --- #: by: André Käding --- #: confirmed_by: srt --- Neustrelitzer Str.: kurvenreich	q1 16346,14750 16256,14828
 #: by: Sven Krüger-G.:
 (Esplanade - Grüntaler Str.): Zickzack-Kurs	q2 9980,16973 9880,16994 9846,16981
 # 

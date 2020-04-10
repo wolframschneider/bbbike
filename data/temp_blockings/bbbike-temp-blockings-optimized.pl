@@ -259,7 +259,28 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: XXX wird die Veranstaltung noch abgesagt?
+#: next_check: 2020-05-01
+	2::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+',
+         'from' => 1588802400,
+         'id' => 964,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              7,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'https://www.werbegemeinschaft-friedrichshagen.de/projekte/boelschefest/',
+         'text' => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (8. bis 10. Mai 2020)',
+         'type' => 'gesperrt',
+         'until' => 1589147999
+       },
        undef,
        undef,
        undef,
@@ -946,7 +967,28 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html
+#: XXX wird die Veranstaltung noch abgesagt?
+#: next_check: 2020-05-08
+	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
+',
+         'from' => 1589493600,
+         'id' => 1642,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (16. und 17. Mai 2020)',
+         'type' => 'gesperrt',
+         'until' => 1589752799
+       },
        undef,
        undef,
        undef,
@@ -3263,7 +3305,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-03-30
+#: last_checked: 2020-04-07
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -3334,7 +3376,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: by: http://www.dafmap.de/d/berlin.html?id=4424&mt=0&zoom=17
+# REMOVED --- #: also_indoor: traffic --- #: last_checked: 2018-10-25 --- #: add_fragezeichen: Sind die Bauarbeiten beendet?
+#: source_id: LMS-BR_r_LMS-BR_201642_LMS-BR_72
+	q4::inwork 3013,10553 3093,10594
+',
+         'from' => 1586197495,
+         'id' => 3040,
+         'text' => 'Heilbronner Str./Kracauerplatz: Bauarbeiten, Fahrbahn gesperrt, bis zum 18.4.2020 19 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1587229200
+       },
        undef,
        undef,
        undef,
@@ -3897,7 +3950,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-04-01 (abgesperrt)
+#: last_checked: 2020-04-09 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 ',
@@ -3953,9 +4006,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1583128800,
          'id' => 3202,
          'source_id' => '2147345534',
-         'text' => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 13.04.2020 17:00 Uhr ',
+         'text' => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 20.04.2020 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1586790000
+         'until' => 1587394800
        },
        undef,
        undef,
@@ -4046,19 +4099,19 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: HILDBURGHAUSER-2018
 #: by: https://twitter.com/VIZ_Berlin/status/1246007633632546816/photo/1
-	q4::inwork 6631,968 6515,1010 6446,1033 6386,1051 6294,1078 6276,1083 6199,1104 6145,1119 6106,1133 6010,1157 5909,1187 5867,1199 5795,1219 5741,1234 5585,1275
-	q4::inwork; 5414,1304 5435,1390 5467,1409
-	q4::inwork; 5661,1499 5706,1393 5751,1289 5741,1234
+#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/fahrbahn-in-der-hildburghauser-strasse-erhaelt-eine-neue-deckschicht_a259753
+	q4::inwork 6631,968 6515,1010 6446,1033 6386,1051 6294,1078 6276,1083 6199,1104 6145,1119 6106,1133
 ',
          'from' => 1585821600,
          'id' => 3213,
          'source_id' => '2147345669',
-         'text' => 'Hildburghauser Str.: Bauarbeiten, Fahrbahn vermutlich zwischen Steinheilpfad und Weskammstraße gesperrt, außerdem Einbahnstraßenregelungen in der Geraer Str. und Oberhofer Weg, vom 03.04.2020 12:00 Uhr bis 07.05.2020 17:00 Uhr ',
+         'text' => 'Hildburghauser Str.: Bauarbeiten, Fahrbahn vermutlich zwischen Altenburger Str. und Stanzer Zeile gesperrt, vom 03.04.2020 12:00 Uhr bis 17.04.2020',
          'type' => 'handicap',
-         'until' => 1588863600
+         'until' => 1587135600
        },
        {
-         'data' => '	q4::inwork 17782,5698 17807,5730 17810,5736 17877,5860 17939,5968 17900,6072
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1247042611732414465 (hier: bis Mitte Mai)
+	q4::inwork 17782,5698 17807,5730 17810,5736 17877,5860 17939,5968 17900,6072
 ',
          'from' => 1586066400,
          'id' => 3214,
@@ -4075,6 +4128,56 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Rigaer Str.: zwischen Proskauer Str. und Zellestr. Einbahnstraßenregelung, offen Richtung Bersarinplatz., bis 29.05.2020',
          'type' => 'handicap',
          'until' => 1590768000
+       },
+       {
+         'data' => '#: by: wosch
+#: XXX evtl. nur saisonal, vielleicht wandern die Weideflächen an andere Stellen (dann auch ggfs. die Tore aus gesperrt-orig austragen)
+#: last_checked: 2020-04-04
+#: check_frequency: 180d
+	2 14494,24824 14848,24411
+',
+         'from' => undef,
+         'id' => 3216,
+         'permanent' => 1,
+         'text' => 'Barnimer Dörferweg: freilaufende Büffel (Durchfahrt erlaubt)',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: HILDBURGHAUSER-2018
+#: by: https://twitter.com/VIZ_Berlin/status/1246007633632546816/photo/1
+#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/fahrbahn-in-der-hildburghauser-strasse-erhaelt-eine-neue-deckschicht_a259753
+	q4::inwork 6106,1133 6010,1157 5909,1187 5867,1199 5795,1219 5741,1234 5585,1275
+	q4::inwork; 5414,1304 5435,1390 5467,1409
+	q4::inwork; 5661,1499 5706,1393 5751,1289 5741,1234
+',
+         'from' => 1587031200,
+         'id' => 3217,
+         'source_id' => '2147345669',
+         'text' => 'Hildburghauser Str.: Bauarbeiten, Fahrbahn vermutlich zwischen Stanzer Zeile und Steinheilpfad gesperrt, außerdem Einbahnstraßenregelungen in der Geraer Str. und Oberhofer Weg, vom 17.04.2020 bis 07.05.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1588863600
+       },
+       {
+         'data' => '#: next_check_id: AMWIESENWEG-2020
+	2::inwork 21977,988 21856,996 21724,954 21685,916
+',
+         'from' => 1586728800,
+         'id' => 3218,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.918148.php',
+         'text' => 'Am Wiesenweg: Bauarbeiten, Weg ist komplett gesperrt, ab dem 14. April 2020 bis voraussichtlich Ende Juli 2020',
+         'type' => 'gesperrt',
+         'until' => 1596232799
+       },
+       {
+         'data' => '	q4::inwork 10365,-2603 10259,-2660
+',
+         'from' => 1586080800,
+         'id' => 3219,
+         'source_id' => '2147345675',
+         'text' => 'Wolziger Zeile: Fahrbahn zwischen Bahnübergang und Mozartstr. wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg, vom 06.04.2020 12:00 Uhr bis 30.04.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1588258800
        }
      
 );

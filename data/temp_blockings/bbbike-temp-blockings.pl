@@ -883,7 +883,7 @@ EOF
        text  => 'Hermannstraßenfest zwischen Flughafenstraße und Thomasstraße, Straße gesperrt, Dauer: 04.09.2004 04:00 Uhr bis 05.09.2004 23:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 12180,7387 12158,7449 12123,7549
+	2 12185,7381 12181,7390 12158,7449 12123,7549
 	2 11920,8252 11931,8206 11933,8198
 	2 11920,8252 11915,8279 11898,8362
 	2 12041,7788 12055,7751 12075,7696
@@ -3098,7 +3098,7 @@ EOF
        data  => <<EOF,
 	2 12090,7651 12081,7679 12075,7696
 	2 12090,7651 12121,7555 12123,7549
-	2 12180,7387 12158,7449 12123,7549
+	2 12185,7381 12181,7390 12158,7449 12123,7549
 	2 11920,8252 11931,8206 11933,8198
 	2 11920,8252 11915,8279 11898,8362
 	2 12041,7788 12055,7751
@@ -4606,7 +4606,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005438',
        data  => <<EOF,
-	2 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12180,7387
+	2 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12181,7390 12185,7381
 EOF
      },
      { from  => 1148565600, # 2006-05-25 16:00
@@ -6271,7 +6271,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003771',
        data  => <<EOF,
-	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12180,7387
+	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12181,7390 12185,7381
 EOF
      },
      { from  => 1160107200, # 2006-10-06 06:00
@@ -8240,14 +8240,16 @@ EOF
 	q4::temp 6173,12396 6276,12506 6314,12518 6442,12545
 EOF
      },
-     { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-05-12 23:59:59"),
+     { from  => $isodate2epoch->("2020-05-07 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2020-05-10 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 7, months => 5]],
-       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (11. und 12. Mai 2019)',
+       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (8. bis 10. Mai 2020)',
        type  => 'gesperrt',
-       source_id => 'http://www.laubinger.de/termine/29-boelschefest-friedrichshagen/',
+       source_id => 'https://www.werbegemeinschaft-friedrichshagen.de/projekte/boelschefest/',
        data  => <<EOF,
+#: XXX wird die Veranstaltung noch abgesagt?
+#: next_check: 2020-05-01
 	2::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 EOF
      },
@@ -14066,14 +14068,16 @@ EOF
 	q4::inwork 9098,42254 9043,42165 9032,42153
 EOF
      },
-     { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-05-12 23:59:59"),
+     { from  => $isodate2epoch->("2020-05-15 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2020-05-17 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 9, months => 5]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (11. und 12. Mai 2019)',
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (16. und 17. Mai 2020)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html
+#: XXX wird die Veranstaltung noch abgesagt?
+#: next_check: 2020-05-08
 	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
 EOF
      },
@@ -17223,13 +17227,13 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: tempex: before(2nd_advent,fr) T17:00 - 2nd_advent T20:00 vvv
-	2::xmas 13416,7712 13426,7674
+	2::xmas 13416,7712 13424,7680
 	2::xmas 13416,7712 13378,7695 13288,7653
-	2::xmas 13426,7674 13400,7642 13303,7622
+	2::xmas 13424,7680 13417,7654 13392,7648 13295,7627
 	2::xmas 12969,7610 13100,7626 13177,7644
 	2::xmas 13188,7590 13177,7644
-	2::xmas 13188,7590 13303,7622
-	2::xmas 13288,7653 13303,7622
+	2::xmas 13188,7590 13295,7627
+	2::xmas 13288,7653 13295,7627
 	2::xmas 13288,7653 13177,7644
 	2::xmas 13288,7653 13278,7673 13245,7742
 #: tempex ^^^
@@ -21265,7 +21269,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED --- #: XXX bis wann ist die Baustelle fertig? --- #: last_checked: 2013-05-29 --- #: check_frequency: 15d
-	q2::inwork 13339,7452 13303,7622
+	q2::inwork 13335,7450 13295,7627
 EOF
      },
      { from  => undef, # 
@@ -21409,7 +21413,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED --- #: XXX ist die Baustelle tatsächlich Ende Mai fertig? --- #: note: in der Gegenrichtung (Richardplatz -> Sonnenallee) offiziell nur für Anwohner offen --- #: last_checked: 2013-06-04 --- #: next_check: 2013-06-07 --- #: priority: #A
-	q3::inwork; 13474,8060 13444,7879
+	q3::inwork; 13474,8060 13441,7874
 EOF
      },
      { from  => $isodate2epoch->("2016-01-05 06:00:00"), # 1 Tag Vorlauf --- 1357040979, # 2013-01-01 12:49
@@ -23369,7 +23373,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-neukoelln/presse/archiv/20140707.1250.398363.html',
        data  => <<EOF,
-	q4::inwork; 12914,7785 12969,7610 12991,7549 13015,7471
+	q4::inwork; 12914,7785 12969,7610 12987,7560 13015,7471
 EOF
      },
      { from  => $isodate2epoch->("2014-07-20 06:30:00"),
@@ -24923,7 +24927,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (weitgehend fertig, ein paar umfahrbare Absperrungen zu den Nebenstraßen existieren noch) --- #: XXX wann sind die Bauarbeiten beendet? --- #: last_checked: 2015-10-12 --- #: check_frequency: 7d
-	q4::inwork 13369,7307 13326,7294 13150,7254 13043,7234
+	q4::inwork 13368,7300 13326,7291 13150,7254 13043,7234
 EOF
      },
      { from  => 1444543200, # 2015-10-11 08:00
@@ -27881,7 +27885,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-03-30
+#: last_checked: 2020-04-07
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28410,13 +28414,14 @@ EOF
 	2::inwork 20317,12058 20350,12057
 EOF
      },
-     { from  => undef,
-       until => 1543072992, # (vermutlich beendet?) --- undef,
-       text  => 'Heilbronner Str./Kracauerplatz: Bauarbeiten, Fahrbahn gesperrt',
+     { from  => 1586197495,
+       until => $isodate2epoch->("2020-04-18 19:00:00"),
+       text  => 'Heilbronner Str./Kracauerplatz: Bauarbeiten, Fahrbahn gesperrt, bis zum 18.4.2020 19 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.dafmap.de/d/berlin.html?id=4424&mt=0&zoom=17
+# REMOVED --- #: by: http://www.dafmap.de/d/berlin.html?id=4424&mt=0&zoom=17
 # REMOVED --- #: also_indoor: traffic --- #: last_checked: 2018-10-25 --- #: add_fragezeichen: Sind die Bauarbeiten beendet?
+#: source_id: LMS-BR_r_LMS-BR_201642_LMS-BR_72
 	q4::inwork 3013,10553 3093,10594
 EOF
      },
@@ -30203,7 +30208,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-04-01 (abgesperrt)
+#: last_checked: 2020-04-09 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 EOF
@@ -30305,8 +30310,8 @@ EOF
 EOF
      },
      { from  => 1583128800, # 2020-03-02 07:00
-       until => 1586790000, # 2020-04-13 17:00
-       text  => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 13.04.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-04-20 17:00:00"), # 1586790000, # 2020-04-13 17:00
+       text  => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 20.04.2020 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147345534',
        data  => <<EOF,
@@ -30417,16 +30422,15 @@ EOF
 EOF
      },
      { from  => 1585821600, # 2020-04-02 12:00
-       until => 1588863600, # 2020-05-07 17:00
-       text  => 'Hildburghauser Str.: Bauarbeiten, Fahrbahn vermutlich zwischen Steinheilpfad und Weskammstraße gesperrt, außerdem Einbahnstraßenregelungen in der Geraer Str. und Oberhofer Weg, vom 03.04.2020 12:00 Uhr bis 07.05.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-04-17 17:00:00"), # 1588863600, # 2020-05-07 17:00
+       text  => 'Hildburghauser Str.: Bauarbeiten, Fahrbahn vermutlich zwischen Altenburger Str. und Stanzer Zeile gesperrt, vom 03.04.2020 12:00 Uhr bis 17.04.2020',
        type  => 'handicap',
        source_id => '2147345669',
        data  => <<EOF,
 #: next_check_id: HILDBURGHAUSER-2018
 #: by: https://twitter.com/VIZ_Berlin/status/1246007633632546816/photo/1
-	q4::inwork 6631,968 6515,1010 6446,1033 6386,1051 6294,1078 6276,1083 6199,1104 6145,1119 6106,1133 6010,1157 5909,1187 5867,1199 5795,1219 5741,1234 5585,1275
-	q4::inwork; 5414,1304 5435,1390 5467,1409
-	q4::inwork; 5661,1499 5706,1393 5751,1289 5741,1234
+#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/fahrbahn-in-der-hildburghauser-strasse-erhaelt-eine-neue-deckschicht_a259753
+	q4::inwork 6631,968 6515,1010 6446,1033 6386,1051 6294,1078 6276,1083 6199,1104 6145,1119 6106,1133
 EOF
      },
      { from  => 1586066400, # 2020-04-05 08:00
@@ -30435,6 +30439,7 @@ EOF
        type  => 'handicap',
        source_id => '2147345680',
        data  => <<EOF,
+#: by: https://twitter.com/VIZ_Berlin/status/1247042611732414465 (hier: bis Mitte Mai)
 	q4::inwork 17782,5698 17807,5730 17810,5736 17877,5860 17939,5968 17900,6072
 EOF
      },
@@ -30444,6 +30449,52 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4::inwork; 14133,12482 14266,12446
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       permanent => 1,
+       text  => 'Barnimer Dörferweg: freilaufende Büffel (Durchfahrt erlaubt)',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: wosch
+#: XXX evtl. nur saisonal, vielleicht wandern die Weideflächen an andere Stellen (dann auch ggfs. die Tore aus gesperrt-orig austragen)
+#: last_checked: 2020-04-04
+#: check_frequency: 180d
+	2 14494,24824 14848,24411
+EOF
+     },
+     { from  => $isodate2epoch->("2020-04-16 12:00:00"),
+       until => 1588863600, # 2020-05-07 17:00
+       text  => 'Hildburghauser Str.: Bauarbeiten, Fahrbahn vermutlich zwischen Stanzer Zeile und Steinheilpfad gesperrt, außerdem Einbahnstraßenregelungen in der Geraer Str. und Oberhofer Weg, vom 17.04.2020 bis 07.05.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147345669',
+       data  => <<EOF,
+#: next_check_id: HILDBURGHAUSER-2018
+#: by: https://twitter.com/VIZ_Berlin/status/1246007633632546816/photo/1
+#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/fahrbahn-in-der-hildburghauser-strasse-erhaelt-eine-neue-deckschicht_a259753
+	q4::inwork 6106,1133 6010,1157 5909,1187 5867,1199 5795,1219 5741,1234 5585,1275
+	q4::inwork; 5414,1304 5435,1390 5467,1409
+	q4::inwork; 5661,1499 5706,1393 5751,1289 5741,1234
+EOF
+     },
+     { from  => 1586728800, # 2020-04-13 00:00
+       until => 1596232799, # 2020-07-31 23:59
+       text  => 'Am Wiesenweg: Bauarbeiten, Weg ist komplett gesperrt, ab dem 14. April 2020 bis voraussichtlich Ende Juli 2020',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.918148.php',
+       data  => <<EOF,
+#: next_check_id: AMWIESENWEG-2020
+	2::inwork 21977,988 21856,996 21724,954 21685,916
+EOF
+     },
+     { from  => 1586080800, # 2020-04-05 12:00
+       until => 1588258800, # 2020-04-30 17:00
+       text  => 'Wolziger Zeile: Fahrbahn zwischen Bahnübergang und Mozartstr. wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg, vom 06.04.2020 12:00 Uhr bis 30.04.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147345675',
+       data  => <<EOF,
+	q4::inwork 10365,-2603 10259,-2660
 EOF
      },
     );
