@@ -16,18 +16,18 @@
 # 
 #: next_check_id: HOSEMANN-2019
 #: note: Baustellenampel in der Hosemannstr. (eigentlich 2x)
-#: last_checked: 2020-03-25
-# REMOVED --- #: next_check: 2020-03-30
-#: valid: -20200430
+#: last_checked: 2020-04-15
+#: next_check: 2020-04-29
+#: valid: -20200429
 	X::inwork 12556,15518
 # 
 # REMOVED --- #: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer --- #: source_id: 2147344652 (bis Mitte Dezember 2019) --- #: last_checked: 2019-11-30 --- #: next_check: 2019-12-13 --- #: valid: 20190822-20191213 ---	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-04-06 vvv
+#: last_checked: 2020-04-21 vvv
 #: next_check: 2020-05-15 vvv
 #: valid: 20190319-20200515 vvv
-#: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20, 2020-03-23, 2020-04-06)
+#: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20, 2020-03-23, 2020-04-06, 2020-04-12)
 	X::inwork 14103,10489
 #: note: anstelle des Zebrastreifens
 	F::inwork 14490,10610
@@ -78,14 +78,14 @@
 # 
 #: next_check_id: FRANZOESISCHE-2018
 #: osm_watch: node id="6380038401" version="1"
-#: last_checked: 2020-04-10
+#: last_checked: 2020-04-19
 #: check_frequency: 90d
 #: valid: -20210630
 	X::inwork 9195,11972
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2020-04-10
+#: last_checked: 2020-04-19
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -700,7 +700,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8049,15470
 	X 8271,15734
 	X 8788,16264
-	X 7824,16170
+	X 7818,16166
 	X 8952,16666
 	X 7198,18575
 	X 7209,18682
@@ -1411,7 +1411,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # REMOVED (existiert nicht (mehr?)) ---	X 6314,18705
 	X 6432,18682
 	X 6720,18616
-	X 6689,17911
+	X 6685,17922
 	X 6878,17315
 	X 8503,16716
 	X 9494,15998
@@ -1679,7 +1679,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6126,17448
 	X 6377,17854
 	F 6572,16212
-	F 7403,16575
+	F 7393,16566
 	X 7231,16418
 	X 6965,16190
 	X 6661,15921
@@ -2559,7 +2559,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: osm
 	X 11001,18528
 # REMOVED (ex nicht?) --- #: by: osm ---	X 11168,18542
-#: by: http://www.panoramio.com/photo/19638043
+#: note: Anforderungsampel
 	F 3741,3322
 #: by: http://www.panoramio.com/photo/19637927
 	F 4943,2557
@@ -2668,12 +2668,15 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 13068,7043
 #: XXX_prog: Ampel gilt nur in Richtung Nordwest, in der anderen Richtung nur für Linksabbieger
 	X 20451,2869
+#: XXX_prog: Ampel gilt nur in Richtung Nordwest, in der anderen Richtung nur für Linksabbieger
 	X 20289,3033
 #: note: provisorische Ampel
 #: note: Anforderungsampel
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.922880.php (Neubau einer Querungshilfe bis zur KW 22/2020 --- mit oder ohne Ampel?)
 #: osm_watch: node id="987195315" version="7"
-#: last_checked: 2020-02-07 (mapillary)
+#: last_checked: 2020-04-13
 #: check_frequency: 180d
+#: next_check: 2020-05-29
 	F::inwork 20002,3349
 	F 4000,12183
 	F 22031,9142
@@ -2814,7 +2817,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2020-04-10 vvv
+#: last_checked: 2020-04-18 (mapillary) vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2941,7 +2944,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20221231 vvv
-#: last_checked: 2020-03-11 vvv
+#: last_checked: 2020-04-12 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
@@ -2954,7 +2957,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: last_checked ^^^
 #: note: Anforderungsampel
 #: note: Radfahrer müssen diese Ampel zum Überqueren benutzen
-#: last_checked: 2020-04-10 (webcam)
+#: last_checked: 2020-04-12
 	F::inwork 14213,6840
 #: next_check ^^^
 #: valid ^^^
@@ -2962,7 +2965,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20211231 vvv
-#: last_checked: 2020-03-21 (mapillary)
+#: last_checked: 2020-04-18
 #: check_frequency: 90d
 	X::inwork 13278,6967
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
@@ -2978,7 +2981,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6407
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="5"
-#: last_checked: 2020-04-06
+#: last_checked: 2020-04-20
 #: check_frequency: 30d
 	X::inwork 14174,7505
 # 
@@ -3302,7 +3305,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2020-03-23 vvv
+#: last_checked: 2020-04-20 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
@@ -3350,6 +3353,10 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 18293,26727
 	X -2058,-9925
 	F 25720,-8965
+#: by: mapillary
+	X -2169,-13841
+#: by: mapillary
+	X -7267,-6170
 	F 25883,-11875
 	B -17834,-6837
 	F 25779,-9534

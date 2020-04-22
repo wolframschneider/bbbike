@@ -477,14 +477,19 @@ Lindenberg	OS 17752,21797
 Lindenberg	OS 18349,22132
 Lindenberg	OS 17837,21917
 Lindenberg	OS 19720,20697
-#: by: mapillary
-Lindenberg	OS 21122,22476
 #: note ^^^
 #: note nördlicher Teil von Lindenberg vvv
 Lindenberg	OS 18339,22271
 Lindenberg	OS 18154,22874
 # REMOVED (hier nicht mehr) --- Lindenberg	OS 18061,23456
 Lindenberg	OS 17802,21950
+#: note ^^^
+#: note: Neu Lindenberg vvv
+#: by: mapillary vvv
+Lindenberg	OS 21122,22476
+Lindenberg	OS 20318,21451
+Lindenberg	OS 19795,22102
+#: by ^^^
 #: note ^^^
 #: linked ^^^
 Zepernick	OS 20315,26853
@@ -557,7 +562,9 @@ Wildau	OS 24802,-8072
 Zeuthen	OS 24802,-8072
 Wildau	OS 26220,-6930
 Zeuthen	OS 26220,-6930
-Miersdorf	OS 24284,-7118
+#: by: mapillary
+Zeuthen	OS 24243,-7135
+# REMOVED --- Miersdorf	OS 24284,-7118
 Gosen	OS 30728,-2326
 Gosen	OS 31651,-530
 Gosen	OS 32266,-1004
@@ -630,6 +637,10 @@ Schulzendorf	OS 23831,-2603
 Schulzendorf	OS 24601,-3700
 Schulzendorf	OS 24934,-4258
 Schulzendorf	OS 24813,-4434
+#: by: mapillary vvv
+Schulzendorf	OS 23706,-7227
+Schulzendorf	OS 24243,-7135
+#: by ^^^
 #: linked ^^^
 # 
 # REMOVED (existiert nicht mehr) --- Kienberg|(bei Waltersdorf)	OS 20236,-3167
@@ -1202,6 +1213,10 @@ Waldblick	OS 10210,-4010
 Mahlow	OS 9559,-4445
 Mahlow	OS 8742,-4582
 Mahlow	OS 12513,-4600
+#: by: mapillary vvv
+Mahlow	OS 10869,-6174
+Mahlow	OS 12696,-6852
+#: by: ^^^
 #: linked: Kummerow|(Uckermark) vvv
 #: by: http://fotos.benno-koch.de/v/Radfernwege_Deutschland/Radfernwege_und_Radwege_Brandenburg_im_Test/Oder-Neisse-Radweg/Pinnow-Stettin/P1440854.JPG.html
 Kummerow	OS 62597,84046
@@ -1413,6 +1428,8 @@ Groß Köris	OS 28163,-25382
 Groß Köris	OS 28722,-26800
 #: by: mapillary vvv
 Blankenfelde	OS 9994,-8220
+Blankenfelde	OS 10500,-7202
+Blankenfelde	OS 12334,-7042
 Diedersdorf	OS 8373,-7328
 Diedersdorf	OS 7509,-7060
 Großbeeren	OS 4848,-6020
@@ -1451,11 +1468,18 @@ Britz	OS 38123,51774
 #: by: mapillary: vvv
 Rotberg	OS 17841,-7017
 Rotberg	OS 18617,-6753
+Rotberg	OS 19148,-7283
 Kiekebusch	OS 20380,-6456
 Kiekebusch	OS 20934,-6632
+Kiekebusch	OS 20797,-6729
+Karlshof	OS 20385,-7297
+Karlshof	OS 20190,-7734
+Karlshof	OS 19750,-7463
 Rangsdorf	OHT 14254,-11563
-#: linked: Waldfrieden|(Bernau)
+#: linked: Waldfrieden|(Bernau) vvv
 Waldfrieden	OS 20039,32555
+Waldfrieden	OS 19799,32385
+#: linked ^^^
 #: by: ^^^
 Brandenburg	OS -44325,-1177
 Gollwitz	OS -41359,-32
@@ -1549,5 +1573,25 @@ Hennickendorf	OS 38013,10009
 Rüdersdorf	OS 37133,9978
 Rüdersdorf	OS 35482,7099
 #: linked ^^^
-#: by: mapillary
+#: by: mapillary vvv
 Birkholz	OS 1737,30851
+Tollkrug	OHT 17337,-7799
+Tollkrug	OHT 17091,-8012
+Groß Kienitz	OS 15082,-8942
+Groß Kienitz	OS 14655,-8717
+Dahlewitz	OS 13622,-9424
+Dahlewitz	OS 13113,-9040
+Glasow	OS 12930,-7517
+Glasow	OS 13313,-6638
+Glasow	OS 12754,-6879
+Schenkenhorst	OS -3110,-7314
+Schenkenhorst	OS -3783,-7738
+Siethen	OS -2317,-12703
+Siethen	OS -2185,-14016
+Gröben	OS -4392,-13732
+Gröben	OS -4966,-13357
+Fahlhorst	OS -5434,-11570
+Fahlhorst	OS -5661,-11016
+Nudow	OS -5939,-9145
+Nudow	OS -5078,-8745
+#: by: ^^^

@@ -1060,7 +1060,7 @@ EOF
        text  => 'K 6904; (Gröben-Nudow); OD Fahlhorst, Dorfstr. Straßenbauarbeiten Vollsperrung 04.10.2004-31.03.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -5452,-11456 -5709,-10987
+	q4 -5452,-11456 -5661,-11016
 EOF
      },
      { from  => 1096754400, # 2004-10-03 00:00
@@ -8241,16 +8241,15 @@ EOF
 	q4::temp 6173,12396 6276,12506 6314,12518 6442,12545
 EOF
      },
-     { from  => $isodate2epoch->("2020-05-07 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2020-05-10 23:59:59"),
+     { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 7, months => 5]],
-       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (8. bis 10. Mai 2020)',
+       recurrences => [['yearly', days => 7, months => 5, start => "2020-05-13T00:00:00"]],
+       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
        source_id => 'https://www.werbegemeinschaft-friedrichshagen.de/projekte/boelschefest/',
        data  => <<EOF,
-#: XXX wird die Veranstaltung noch abgesagt?
-#: next_check: 2020-05-01
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.921158.php (Absage 2020)
 	2::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 EOF
      },
@@ -9323,7 +9322,7 @@ EOF
        text  => 'L 079 Ludwigsfelde-Potsdam zw. Kreisverkehr Nudow und Kreisverkehr Philippsthal Straßenbau Vollsperrung 23.07.2007-15.09.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -5673,-8130 -5271,-8290 -4971,-8420 -4878,-8656
+	2::inwork -5673,-8130 -5271,-8290 -4987,-8435 -4878,-8656
 EOF
      },
      { from  => 1185660000, # 2007-07-29 00:00
@@ -10255,7 +10254,7 @@ EOF
        text  => 'L 402 Schulzendorf-Dahlewitz zw. Abzw. Waltersdorf und Dahlewitz Fahrbahninstandsetzung Vollsperrung 13.10.2007-20.10.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 17910,-6981 17864,-6987 17841,-7017 17480,-7498 17278,-7925 16437,-8257
+	2::inwork 17910,-6981 17864,-6987 17841,-7017 17480,-7498 17337,-7799 17278,-7925 17209,-7976 17091,-8012 16437,-8257
 EOF
      },
      { from  => 1199434005, # 2008-01-04 09:06
@@ -12676,7 +12675,7 @@ EOF
        source_id => 'IM_009890',
        data  => <<EOF,
 	2::inwork 20673,-31 20590,-120 20519,-198
-	2::inwork 20688,-10 20686,57 20684,105 20719,140
+	2::inwork 20688,-10 20685,52 20684,105 20719,140
 	2::inwork 20161,-487 20300,-416 20348,-380 20476,-279 20505,-217
 EOF
      },
@@ -17716,7 +17715,7 @@ EOF
        type  => 'gesperrt',
        source_id => '106900153',
        data  => <<EOF,
-	2::inwork -4503,-8506 -4020,-7973 -3596,-7607
+	2::inwork -4503,-8506 -4020,-7973 -3783,-7738 -3769,-7724 -3596,-7607
 EOF
      },
      { from  => 1271281324, # 2010-04-14 23:42
@@ -18018,11 +18017,12 @@ EOF
      { from  => $isodate2epoch->("2019-05-16 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-05-20 04:00:00"), # bis in die Nacht hinein
        periodic => 1,
-       recurrences => [['yearly', days => 15, months => 5]], # kann auch erst im September stattfinden
+       recurrences => [['yearly', days => 15, months => 5, start => "2020-06-08T00:00:00"]], # kann auch erst im September stattfinden
        source_id => 'http://www.erkner.de/271.html?date=20190415',
        text  => 'Erkner: Heimatfest, 17.5.2019 bis 19.5.2019',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: https://www.laubinger.de/event/28-heimatfest-erkner/ (Absage 2020)
 	2::temp 34421,1950 34359,2165 34250,2546
 EOF
      },
@@ -18065,7 +18065,7 @@ EOF
      { from  => $isodate2epoch->("2019-07-26 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-07-27 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 20, months => 6]],
+       recurrences => [['yearly', days => 20, months => 6, start => "2020-07-30T00:00:00"]], # Absage 2020
        source_id => 'https://www.berlin.de/events/2096878-2229501-csd-christopher-street-day.html',
        text  => 'CSD am 27.7.2019',
        type  => 'gesperrt',
@@ -21669,15 +21669,14 @@ EOF
 	q4::inwork; 7085,15226 7131,15109
 EOF
      },
-     { from  => $isodate2epoch->("2020-04-30 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2020-05-03 23:59:59"),
-       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (01.05.2020 bis 03.05.2020)',
+     { from  => $isodate2epoch->("2019-05-02 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-05 23:59:59"),
+       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (03.05.2019 bis 05.05.2019)',
        periodic => 1,
-       recurrences => [['yearly', days => 29, months => 4]],
+       recurrences => [['yearly', days => 29, months => 4, start => "2020-05-06T00:00:00"]],
        type  => 'handicap',
        data  => <<EOF,
-#: XXX wird die Veranstaltung noch abgesagt?
-#: next_check: 2020-04-23
+# REMOVED (ja) --- #: XXX wird die Veranstaltung noch abgesagt? --- #: next_check: 2020-04-23
 #: by: https://www.volksfeste-in-deutschland.de/kunst-wein-in-lichtenrade.html
 # REMOVED (müsste korrigiert werden) --- #: tempex: YYYY0429-YYYY0501
 	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
@@ -21768,7 +21767,7 @@ EOF
      { from  => $isodate2epoch->("2019-05-17 04:00:00"), # ein Tag Vorlauf
        until => $isodate2epoch->("2019-05-20 04:00:00"), #
        periodic => 1,
-       recurrences => [['yearly', days => 17, months => 5]],
+       recurrences => [['yearly', days => 17, months => 5, start => "2020-06-01T00:00:00"]], # auf 2021 verlegt
        text  => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 18.05.2019 bis 20.05.2019 früh',
        type  => 'handicap',
        source_id => 'IM_025248',
@@ -23970,7 +23969,7 @@ EOF
        type  => 'gesperrt',
        source_id => '146901438',
        data  => <<EOF,
-	2::inwork -3068,-7423 -3462,-6437 -3616,-6170 -3851,-5870 -3848,-5359
+	2::inwork -3068,-7423 -3110,-7314 -3462,-6437 -3616,-6170 -3851,-5870 -3848,-5359
 EOF
      },
      { from  => 1413669600, # 2014-10-19 00:00
@@ -24463,11 +24462,12 @@ EOF
      },
      { from  => undef,
        until => undef,
-       text  => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 1. Mai bis zum 3. Oktober',
+       text  => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 1. Mai bis zum 3. Oktober; Achtung: Saisonstart 2020 wird verschoben',
        recurring => 1,
        type  => 'gesperrt',
        source_id => 'http://www.bvg.de/de/Aktuell/Newsmeldung?newsid=612',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/rahnsdorf/c-verkehr/ruderfaehre-f-24-geht-erst-spaeter-in-betrieb_a261679
 #: XXX_prog temporäre Lösung für saisonale Fähren vvv
 #: tempex: (20170430|YYYY0501)-YYYY1003 & (sa|su|holiday) & T11-T19
 	2::temp 29959,3031 29968,2986
@@ -27656,11 +27656,12 @@ EOF
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.909888.php (nächster Bauabschnitt ab 27. April 2020)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/der-gehweg-ist-jetzt-fertig_a258259
+#: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-auf-der-schoenstrasse-gehen-weiter_a261160
 #: XXX mittlerweile vom Mirbachplatz aus etwa 100m gut befahrbar (Fahrbahn bis auf die Deckschicht hergestellt), danach geht's nur auf dem Gehweg weiter
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2020-03-15
+#: last_checked: 2020-04-15
 #: check_frequency: 60d
 	q4::inwork 13391,16436 13630,16629
 EOF
@@ -27886,7 +27887,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-04-07
+#: last_checked: 2020-04-19
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29170,7 +29171,7 @@ EOF
        data  => <<EOF,
 #: note: laut fritz bis 31.06.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2020-03-22
+#: last_checked: 2020-04-17
 #: check_frequency: 60d
 #: next_check: 2020-06-30
 	q3::inwork  8986,16092 9178,16317
@@ -29188,7 +29189,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-04-14 18:00:00"), # undef, # XXX
+       until => $isodate2epoch->("2020-04-24 18:00:00"), # undef, # XXX
        text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Provinzstr., Richtung Westen gesperrt',
        type  => 'handicap',
        data  => <<EOF,
@@ -29198,9 +29199,9 @@ EOF
 #: source_id: 2147343335
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-03-25 (mapillary)
+#: last_checked: 2020-04-17
 #: check_frequency: 60d
-#: next_check: 2020-04-14
+#: next_check: 2020-04-24
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8866,17075 8677,17154 8561,17198 8539,17197 8449,17196
 EOF
@@ -29300,7 +29301,7 @@ EOF
 #: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="11"
-#: last_checked: 2020-03-08 (krickstadt)
+#: last_checked: 2020-04-13
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 EOF
@@ -29313,7 +29314,7 @@ EOF
 #: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
 #: by: https://www.bahninfo-forum.de/read.php?9,413132,659869#msg-659869 (Sperrung am Wochenende)
 #: by: https://www.bahninfo-forum.de/read.php?9,413132,659884#msg-659884 ("in Kürze ... saniert")
-#: last_checked: 2020-03-08 (krickstadt)
+#: last_checked: 2020-04-13
 # REMOVED --- #: next_check: 2019-12-02
 #: check_frequency: 60d
 	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
@@ -29646,7 +29647,7 @@ EOF
 # REMOVED (nicht mehr) --- #: note: hier gibt's mittlerweile auch Drängelgitter
 	q3::inwork 5636,7734 5630,7875
 # REMOVED ---	q3::inwork 5630,7875 5631,8011
-# REMOVED (keine großen Einschräkungen) --- #: note: hier mittlerweile offizielle Wegführung auf dem Gehweg ---	q2::inwork 5630,7875 5517,7869
+# REMOVED (keine großen Einschränkungen) --- #: note: hier mittlerweile offizielle Wegführung auf dem Gehweg ---	q2::inwork 5630,7875 5517,7869
 # REMOVED --- #: last_checked ^^^ --- #: check_frequency ^^^ --- #: priority ^^^ --- #: add_fragezeichen ^^^
 EOF
      },
@@ -29892,12 +29893,14 @@ EOF
 EOF
      },
      { from  => 1569949777, # 2019-10-01 19:09
-       until => $isodate2epoch->("2020-04-15 00:00:00"),
-       text  => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, voraussichtlich bis Anfang 2020',
+       until => $isodate2epoch->("2020-05-15 00:00:00"),
+       text  => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851369.php',
        data  => <<EOF,
 #: next_check_id: HANSAGARTEN-2019
+#: XXX wann sind die Bauarbeiten beendet (ursprünglich "voraussichtlich bis Anfang 2020")
+#: last_checked: 2020-04-15
 	2::inwork 14665,16294 14810,16282 15102,16212
 # REMOVED (hier existiert ein provisorischer Weg) ---	2::inwork 15102,16212 15194,16186
 	2::inwork 14721,16360 14810,16282
@@ -30012,9 +30015,10 @@ EOF
        data  => <<EOF,
 #: next_check_id: WUHLEWANDERWEG-2014
 #: XXX wann beginnen die Bauarbeiten, wann sind sie beendet?
+#: XXX mittlerweile (2020-04-11) gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str., noch ohne weitere Einschränkungen
 #: add_fragezeichen: Haben die Bauarbeiten schon begonnen? Gibt es Einschränkungen für Radfahrer?
-#: last_checked: 2020-02-08
-#: check_frequency: 21d
+#: last_checked: 2020-04-11
+#: check_frequency: 30d
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
 EOF
      },
@@ -30166,7 +30170,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: MUENSTERBERGERWEG-2019
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
-#: last_checked: 2019-11-16
+#: last_checked: 2020-04-11
 	2::inwork 24029,11363 24172,11320
 EOF
      },
@@ -30195,7 +30199,8 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-04-04
+#: last_checked: 2020-04-21
+#: check_frequency: 21d
 	2::inwork 15420,12178 15520,12160 15628,12246
 EOF
      },
@@ -30311,12 +30316,12 @@ EOF
 EOF
      },
      { from  => 1583128800, # 2020-03-02 07:00
-       until => $isodate2epoch->("2020-04-20 17:00:00"), # 1586790000, # 2020-04-13 17:00
-       text  => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 20.04.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-05-20 17:00:00"), # 1586790000, # 2020-04-13 17:00
+       text  => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 20.05.2020 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147345534',
        data  => <<EOF,
-	q4::inwork 4660,2116 4839,2195
+	q3::inwork 4660,2116 4839,2195
 EOF
      },
      { from  => 1583350439, # 2020-03-04 20:33
@@ -30384,7 +30389,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: MANDEL-2020
-#: last_checked: 2020-03-13
+#: last_checked: 2020-04-15
 	2::inwork 12871,15882 12911,15865 12979,15822 12948,15771
 EOF
      },
@@ -30435,8 +30440,8 @@ EOF
 EOF
      },
      { from  => 1586066400, # 2020-04-05 08:00
-       until => 1587567600, # 2020-04-22 17:00
-       text  => 'Spreestr.: Bauarbeiten, Fahrbahn gesperrt, vom 06.04.2020 08:00 Uhr bis 22.04.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-04-30 17:00:00"), # 1587567600, # 2020-04-22 17:00
+       text  => 'Spreestr.: Bauarbeiten, Fahrbahn gesperrt, vom 06.04.2020 08:00 Uhr bis 30.04.2020 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147345680',
        data  => <<EOF,
@@ -30486,16 +30491,76 @@ EOF
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.918148.php',
        data  => <<EOF,
 #: next_check_id: AMWIESENWEG-2020
+#: by: https://www.berliner-woche.de/bohnsdorf/c-bauen/gehweg-wird-jetzt-ausgebaut_a261721
 	2::inwork 21977,988 21856,996 21724,954 21685,916
 EOF
      },
      { from  => 1586080800, # 2020-04-05 12:00
-       until => 1588258800, # 2020-04-30 17:00
-       text  => 'Wolziger Zeile: Fahrbahn zwischen Bahnübergang und Mozartstr. wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg, vom 06.04.2020 12:00 Uhr bis 30.04.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-05-06 17:00:00"), # 1588258800, # 2020-04-30 17:00
+       text  => 'Wolziger Zeile: Fahrbahn zwischen Bahnübergang und Mozartstr. wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg, vom 06.04.2020 bis 06.05.2020',
        type  => 'handicap',
        source_id => '2147345675',
        data  => <<EOF,
-	q4::inwork 10365,-2603 10259,-2660
+	q3::inwork 10365,-2603 10259,-2660
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Rotherstr.: zwischen Naglerstr. und Warschauer Platz Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2020-04-14
+	q4::inwork 13478,10998 13575,10963
+EOF
+     },
+     { from  => 1587142113, # 2020-04-17 18:48
+       until => 1587312000, # 2020-04-19 18:00
+       text  => 'Kaiser-Friedrich-Str.: zwischen Zillestr. und Bismarckstr. Sperrung der Fahrbahn Richtung Süden, bis 19.04.2020 18 Uhr',
+       type  => 'handicap',
+       source_id => 'https://twitter.com/VIZ_Berlin/status/1251169820932034563',
+       data  => <<EOF,
+	q4::inwork; 3406,11849 3416,11768 3441,11601
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Zobtener Str.: Bauarbeiten, Straße kann gesperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: note: offizielle Umleitung über Fischerstr.
+#: priority: #A
+#: last_checked: 2020-04-21
+#: check_frequency: 14d
+	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
+EOF
+     },
+     { from  => 1587614400, # 2020-04-23 06:00
+       until => 1588449600, # 2020-05-02 22:00
+       text  => 'Gleditschstr. am Winterfeldplatz: samstags Sperrung wegen des Wochenmarkts',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.923431.php',
+       data  => <<EOF,
+	q4::temp 7126,9825 7080,10098
+EOF
+     },
+     { from  => 1587621600, # 2020-04-23 08:00
+       until => undef, # XXX
+       text  => 'Boxhagener Platz: samstags Sperrung der umliegenden Straßen wegen des Wochenmarkts',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
+#: XXX bis wann wird hier gesperrt sein?
+#: next_check: 2020-04-25
+	q4::inwork 14272,11775 14247,11681 14102,11715 14127,11811
+EOF
+     },
+     { from  => 1587852000, # 2020-04-26 00:00
+       until => 1596232799, # 2020-07-31 23:59
+       text  => 'Lilienthalweg: Komplettsperrung wegen Bauarbeiten, ab Ende April 2020 bis Ende Juli 2020',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.923140.php',
+       data  => <<EOF,
+	2::inwork 11141,9107 10709,9192
 EOF
      },
     );

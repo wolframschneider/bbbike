@@ -259,28 +259,7 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX wird die Veranstaltung noch abgesagt?
-#: next_check: 2020-05-01
-	2::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
-',
-         'from' => 1588802400,
-         'id' => 964,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              7,
-                              'months',
-                              5
-                            ]
-                          ],
-         'source_id' => 'https://www.werbegemeinschaft-friedrichshagen.de/projekte/boelschefest/',
-         'text' => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (8. bis 10. Mai 2020)',
-         'type' => 'gesperrt',
-         'until' => 1589147999
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2332,29 +2311,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX wird die Veranstaltung noch abgesagt?
-#: next_check: 2020-04-23
-#: by: https://www.volksfeste-in-deutschland.de/kunst-wein-in-lichtenrade.html
-# REMOVED (müsste korrigiert werden) --- #: tempex: YYYY0429-YYYY0501
-	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
-',
-         'from' => 1588197600,
-         'id' => 2431,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              29,
-                              'months',
-                              4
-                            ]
-                          ],
-         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (01.05.2020 bis 03.05.2020)',
-         'type' => 'handicap',
-         'until' => 1588543199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2806,7 +2763,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+         'data' => '#: by: https://www.berliner-woche.de/rahnsdorf/c-verkehr/ruderfaehre-f-24-geht-erst-spaeter-in-betrieb_a261679
+#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 #: tempex: (20170430|YYYY0501)-YYYY1003 & (sa|su|holiday) & T11-T19
 	2::temp 29959,3031 29968,2986
 #: XXX_prog ^^^
@@ -2815,7 +2773,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 2703,
          'recurring' => 1,
          'source_id' => 'http://www.bvg.de/de/Aktuell/Newsmeldung?newsid=612',
-         'text' => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 1. Mai bis zum 3. Oktober',
+         'text' => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 1. Mai bis zum 3. Oktober; Achtung: Saisonstart 2020 wird verschoben',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3255,11 +3213,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.909888.php (nächster Bauabschnitt ab 27. April 2020)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/der-gehweg-ist-jetzt-fertig_a258259
+#: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-auf-der-schoenstrasse-gehen-weiter_a261160
 #: XXX mittlerweile vom Mirbachplatz aus etwa 100m gut befahrbar (Fahrbahn bis auf die Deckschicht hergestellt), danach geht\'s nur auf dem Gehweg weiter
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2020-03-15
+#: last_checked: 2020-04-15
 #: check_frequency: 60d
 	q4::inwork 13391,16436 13630,16629
 ',
@@ -3305,7 +3264,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-04-07
+#: last_checked: 2020-04-19
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -3376,18 +3335,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: by: http://www.dafmap.de/d/berlin.html?id=4424&mt=0&zoom=17
-# REMOVED --- #: also_indoor: traffic --- #: last_checked: 2018-10-25 --- #: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: source_id: LMS-BR_r_LMS-BR_201642_LMS-BR_72
-	q4::inwork 3013,10553 3093,10594
-',
-         'from' => 1586197495,
-         'id' => 3040,
-         'text' => 'Heilbronner Str./Kracauerplatz: Bauarbeiten, Fahrbahn gesperrt, bis zum 18.4.2020 19 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1587229200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3548,7 +3496,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 31.06.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2020-03-22
+#: last_checked: 2020-04-17
 #: check_frequency: 60d
 #: next_check: 2020-06-30
 	q3::inwork  8986,16092 9178,16317
@@ -3579,9 +3527,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147343335
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-03-25 (mapillary)
+#: last_checked: 2020-04-17
 #: check_frequency: 60d
-#: next_check: 2020-04-14
+#: next_check: 2020-04-24
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8866,17075 8677,17154 8561,17198 8539,17197 8449,17196
 ',
@@ -3589,7 +3537,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 3110,
          'text' => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Provinzstr., Richtung Westen gesperrt',
          'type' => 'handicap',
-         'until' => 1586880000
+         'until' => 1587744000
        },
        undef,
        {
@@ -3625,7 +3573,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="11"
-#: last_checked: 2020-03-08 (krickstadt)
+#: last_checked: 2020-04-13
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 ',
@@ -3639,7 +3587,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
 #: by: https://www.bahninfo-forum.de/read.php?9,413132,659869#msg-659869 (Sperrung am Wochenende)
 #: by: https://www.bahninfo-forum.de/read.php?9,413132,659884#msg-659884 ("in Kürze ... saniert")
-#: last_checked: 2020-03-08 (krickstadt)
+#: last_checked: 2020-04-13
 # REMOVED --- #: next_check: 2019-12-02
 #: check_frequency: 60d
 	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
@@ -3789,18 +3737,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.901034.php
-#: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/bahnuebergang-gesperrt_a255484
-	2::inwork 25191,12343 25149,12266 25109,12196
-',
-         'from' => 1584615600,
-         'id' => 3160,
-         'source_id' => 'LMS-BR_r_LMS-BR_182020_LMS-BR_72',
-         'text' => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, Radfahrer und Fußgänger sind auch betroffen, 20.03.2020 bis 20.04.2020',
-         'type' => 'gesperrt',
-         'until' => 1587398400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3809,6 +3746,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: HANSAGARTEN-2019
+#: XXX wann sind die Bauarbeiten beendet (ursprünglich "voraussichtlich bis Anfang 2020")
+#: last_checked: 2020-04-15
 	2::inwork 14665,16294 14810,16282 15102,16212
 # REMOVED (hier existiert ein provisorischer Weg) ---	2::inwork 15102,16212 15194,16186
 	2::inwork 14721,16360 14810,16282
@@ -3816,9 +3755,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1569949777,
          'id' => 3167,
          'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851369.php',
-         'text' => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, voraussichtlich bis Anfang 2020',
+         'text' => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
          'type' => 'gesperrt',
-         'until' => 1586901600
+         'until' => 1589493600
        },
        {
          'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
@@ -3877,9 +3816,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: WUHLEWANDERWEG-2014
 #: XXX wann beginnen die Bauarbeiten, wann sind sie beendet?
+#: XXX mittlerweile (2020-04-11) gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str., noch ohne weitere Einschränkungen
 #: add_fragezeichen: Haben die Bauarbeiten schon begonnen? Gibt es Einschränkungen für Radfahrer?
-#: last_checked: 2020-02-08
-#: check_frequency: 21d
+#: last_checked: 2020-04-11
+#: check_frequency: 30d
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
 ',
          'from' => 1572130800,
@@ -3922,7 +3862,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: MUENSTERBERGERWEG-2019
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
-#: last_checked: 2019-11-16
+#: last_checked: 2020-04-11
 	2::inwork 24029,11363 24172,11320
 ',
          'from' => undef,
@@ -3935,7 +3875,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-04-04
+#: last_checked: 2020-04-21
+#: check_frequency: 21d
 	2::inwork 15420,12178 15520,12160 15628,12246
 ',
          'from' => undef,
@@ -4001,14 +3942,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '	q4::inwork 4660,2116 4839,2195
+         'data' => '	q3::inwork 4660,2116 4839,2195
 ',
          'from' => 1583128800,
          'id' => 3202,
          'source_id' => '2147345534',
-         'text' => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 20.04.2020 17:00 Uhr ',
+         'text' => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 20.05.2020 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1587394800
+         'until' => 1589986800
        },
        undef,
        undef,
@@ -4050,7 +3991,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: next_check_id: MANDEL-2020
-#: last_checked: 2020-03-13
+#: last_checked: 2020-04-15
 	2::inwork 12871,15882 12911,15865 12979,15822 12948,15771
 ',
          'from' => undef,
@@ -4096,19 +4037,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => 1588950000
        },
-       {
-         'data' => '#: next_check_id: HILDBURGHAUSER-2018
-#: by: https://twitter.com/VIZ_Berlin/status/1246007633632546816/photo/1
-#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/fahrbahn-in-der-hildburghauser-strasse-erhaelt-eine-neue-deckschicht_a259753
-	q4::inwork 6631,968 6515,1010 6446,1033 6386,1051 6294,1078 6276,1083 6199,1104 6145,1119 6106,1133
-',
-         'from' => 1585821600,
-         'id' => 3213,
-         'source_id' => '2147345669',
-         'text' => 'Hildburghauser Str.: Bauarbeiten, Fahrbahn vermutlich zwischen Altenburger Str. und Stanzer Zeile gesperrt, vom 03.04.2020 12:00 Uhr bis 17.04.2020',
-         'type' => 'handicap',
-         'until' => 1587135600
-       },
+       undef,
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1247042611732414465 (hier: bis Mitte Mai)
 	q4::inwork 17782,5698 17807,5730 17810,5736 17877,5860 17939,5968 17900,6072
@@ -4116,9 +4045,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1586066400,
          'id' => 3214,
          'source_id' => '2147345680',
-         'text' => 'Spreestr.: Bauarbeiten, Fahrbahn gesperrt, vom 06.04.2020 08:00 Uhr bis 22.04.2020 17:00 Uhr ',
+         'text' => 'Spreestr.: Bauarbeiten, Fahrbahn gesperrt, vom 06.04.2020 08:00 Uhr bis 30.04.2020 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1587567600
+         'until' => 1588258800
        },
        {
          'data' => '	q4::inwork; 14133,12482 14266,12446
@@ -4160,6 +4089,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: next_check_id: AMWIESENWEG-2020
+#: by: https://www.berliner-woche.de/bohnsdorf/c-bauen/gehweg-wird-jetzt-ausgebaut_a261721
 	2::inwork 21977,988 21856,996 21724,954 21685,916
 ',
          'from' => 1586728800,
@@ -4170,14 +4100,70 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1596232799
        },
        {
-         'data' => '	q4::inwork 10365,-2603 10259,-2660
+         'data' => '	q3::inwork 10365,-2603 10259,-2660
 ',
          'from' => 1586080800,
          'id' => 3219,
          'source_id' => '2147345675',
-         'text' => 'Wolziger Zeile: Fahrbahn zwischen Bahnübergang und Mozartstr. wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg, vom 06.04.2020 12:00 Uhr bis 30.04.2020 17:00 Uhr ',
+         'text' => 'Wolziger Zeile: Fahrbahn zwischen Bahnübergang und Mozartstr. wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg, vom 06.04.2020 bis 06.05.2020',
          'type' => 'handicap',
-         'until' => 1588258800
+         'until' => 1588777200
+       },
+       {
+         'data' => '#: last_checked: 2020-04-14
+	q4::inwork 13478,10998 13575,10963
+',
+         'from' => undef,
+         'id' => 3220,
+         'text' => 'Rotherstr.: zwischen Naglerstr. und Warschauer Platz Fahrbahn gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       undef,
+       {
+         'data' => '#: note: offizielle Umleitung über Fischerstr.
+#: priority: #A
+#: last_checked: 2020-04-21
+#: check_frequency: 14d
+	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
+',
+         'from' => undef,
+         'id' => 3222,
+         'text' => 'Zobtener Str.: Bauarbeiten, Straße kann gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '	q4::temp 7126,9825 7080,10098
+',
+         'from' => 1587614400,
+         'id' => 3223,
+         'source_id' => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.923431.php',
+         'text' => 'Gleditschstr. am Winterfeldplatz: samstags Sperrung wegen des Wochenmarkts',
+         'type' => 'handicap',
+         'until' => 1588449600
+       },
+       {
+         'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
+#: XXX bis wann wird hier gesperrt sein?
+#: next_check: 2020-04-25
+	q4::inwork 14272,11775 14247,11681 14102,11715 14127,11811
+',
+         'from' => 1587621600,
+         'id' => 3224,
+         'text' => 'Boxhagener Platz: samstags Sperrung der umliegenden Straßen wegen des Wochenmarkts',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '	2::inwork 11141,9107 10709,9192
+',
+         'from' => 1587852000,
+         'id' => 3225,
+         'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.923140.php',
+         'text' => 'Lilienthalweg: Komplettsperrung wegen Bauarbeiten, ab Ende April 2020 bis Ende Juli 2020',
+         'type' => 'gesperrt',
+         'until' => 1596232799
        }
      
 );

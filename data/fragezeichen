@@ -1,6 +1,5 @@
 #: #: -*- coding: iso-8859-1 -*-
 #:
-Weidenkätzchenweg: Qualität? verkehrsberuhigt?	? 21421,158 21447,47
 Am Schlänitzsee (Potsdam-Marquardt): Qualität? Wie ist die genaue Lage der Straße?	? -19356,5480 -19454,5465 -19461,5517 -19370,5535
 An der Obstplantage (Potsdam-Marquardt): Qualität?	? -19427,5736 -19517,5712 -19543,5849 -19463,5860
 Biegen - Müllrose: existiert hier ein Radweg (wahrscheinlich ab 2006-10-31)	? 79768,-15263 78364,-14355
@@ -40,7 +39,7 @@ Gaußstr.: Einbahnstraße? Qualität?	? -6953,-3680 -6959,-3804 -6965,-3891 -7085,-
 Galileistr.: Qualität? Name westl. der Neuendorfer Str. noch immer Galileistr?	? -8032,-3710 -8098,-3680
 Im Schäferfeld: Qualität?	? -8098,-3680 -8198,-3696 -8317,-3775 -8404,-3824 -8475,-3861
 Fichtenallee (Potsdam): Qualität?	? -8563,-3805 -8451,-3728 -8226,-3592
-Stern - Nudow: Durchfahrt möglich? Qualität (laut "Berliner Umland" witterungsabhängige Strecke)?	? -7077,-4186 -6902,-4397 -6775,-4326 -6767,-4463 -6671,-6390 -6516,-6520 -6508,-6969 -6191,-7587 -6319,-7795 -5766,-8911 -5387,-8896
+Stern - Nudow: Durchfahrt möglich? Qualität (laut "Berliner Umland" witterungsabhängige Strecke)?	? -7077,-4186 -6902,-4397 -6775,-4326 -6767,-4463 -6671,-6390 -6537,-6488 -6508,-6969 -6191,-7587 -6319,-7795 -5766,-8911 -5387,-8896
 Königsdamm in Schlänitzsee: Qualität? Führt hier die F3 entlang?	? -19316,4365 -19392,4605
 F3 nach Marquardt: genaue Wegführung? Qualität?	? -19392,4605 -18701,4578
 Joachimsthal - Altkünkendorf: Qualität?	? 35512,66695 38125,66800 39287,67537 39575,67262 39875,66425
@@ -51,7 +50,6 @@ Pomellen - polnische Grenze: Qualität?	? 75562,105308 75775,105512 76187,106212 
 zur B158: Qualität?	? 56450,48250 56587,48550 57328,48981
 Neue Trasse der B167: für Radfahrer benutzbar? Alte Trasse nicht mehr Bundesstraße, sondern K6436?	? 58206,37275 58206,37675 58225,37959 58087,38231 57734,38743 57612,39937 57403,40340 56862,40818 56659,41179 56381,41675 56087,41956 55506,42350 54895,43268 54515,43803 53987,44157 53425,44300 53187,44262 52341,43207
 Kiekebusch (früher Waltersdorf) - Karlshof: laut "Berliner Umland" witterungsabhängige Strecke; Schlenker um See notwendig?	? 20075,-5417 19866,-5382 19809,-5557 19945,-5661 19915,-6315 19907,-6772 19951,-6902 19817,-7484
-Kiekebusch - Karlshof: laut "Berliner Umland" geeignete Strecke auf Straßen	? 20883,-6592 20577,-6982 20255,-7591
 Karlshof - Brusendorf: laut "Berliner Umland" geeigneter Radweg (möglicherweise asphaltiert)	? 19092,-9677 18847,-9629 18205,-10432
 Günterberg - Biesenbrow: laut "Regio-Cart" gut geeignet	? 47091,77570 47269,77634 47713,78664 48006,79147 48305,79400 49117,79726 49521,79799 49932,79760 50324,80128
 Mürow - Henriettenhof: Qualität? südlich des Dorfes sah es wie ein Feldweg oder Kopfsteinpflaster aus (Q2 oder schlechter)	? 52361,72080 53566,69842 54031,69280
@@ -575,7 +573,6 @@ Stützkow - Alt-Gatow: Qualität?	? 61584,66212 61540,66359 61445,66368 61289,6661
 Im Wustrocken: Qualität?	? 27081,-18824 27020,-18866 26961,-18891 26906,-18961 26825,-19031
 Ortsumgehung Küstrin-Kietz: für Radfahrer befahrbar? Qualität?	? 90278,18738 90572,19032 91116,19713 91940,20028 92606,20056 93050,20293 93286,20636 93405,20640
 Basdorfer Hauptstr. (Basdorf): Qualität? Ist ein Radweg vorhanden?	? 13568,34935 14455,35459
-Bernauer Heide: ist der Weg asphaltiert oder nur ein Waldweg?	? 14709,35225 14961,34974 15288,34647 16296,34284 17024,33771 17453,33490 18523,33201 19401,32660 20313,32145
 Qualität?	? 14709,35225 14839,34940 14961,34974 16934,35474 17208,35436 17492,35450
 Basdorf: Qualität des Radwegs entlang der Bahnstrecke?	? 12025,35002 12083,35157 12681,35785 12761,35942
 Buckow - Lichterfelde: wo genau ist der Radweg?	? 31634,53303 32692,53191 32718,53044 32856,52150 33002,51944
@@ -991,7 +988,6 @@ Straße am Höllengrund (Zeuthen): Fahrbahnbeschaffenheit im südlichen Abschnitt? 
 Am Pulverberg (Zeuthen): Fahrbahnbeschaffenheit?	? 25117,-7592 25024,-7515 24980,-7405 24980,-7353 24956,-7095 25005,-7089 25051,-7101
 Sanddornweg (Wildau): Fahrbahnbeschaffenheit im östlichen Abschnitt? Liegt hier auch Asphalt?	? 25643,-8304 25638,-8394
 Sanddornweg (Wildau): Fahrbahnbeschaffenheit im westlichen Abschnitt? Liegt hier auch Asphalt?	? 25394,-8340 25365,-8336 25326,-8325
-Herzfelde - Hennickendorf: existiert hier mittlerweile ein Radweg?	? 40737,9012 40654,9441 40580,9711 40301,10729 40318,11400 40412,11647 40467,11827
 Heinrich-Mann-Allee [Nebenfahrbahn] - Friedhofsgasse: gibt es hier eine Verbindung? Qualität?	? -12017,-2511 -12001,-2495
 Saarmunder Str. - Eduard-Claudius-Str.: gibt es hier eine Verbindung? Qualität?	? -10662,-4280 -10626,-4260
 Heinrich-Mann-Allee: gibt es ab "Zum Kahleberg" Richtung Süden Radwege? Benutzungspflicht?	? -10500,-4514 -10359,-4780 -10249,-5048 -10150,-5260 -10075,-5419 -10015,-5551 -9996,-5596
@@ -1021,21 +1017,12 @@ Zum Hakenberg (Elstal): Qualität?	? -16152,14690 -16421,14758 -16673,14743 -1680
 Bahnhofstr. (Elstal): Qualität? Teilweise mit Radweg?	? -16803,14549 -16815,14689 -16806,14734 -16767,14874 -16814,14936 -17212,15042 -17845,15155
 Grasmückenring: ist der nördliche Teil der Straße schon fertiggestellt? Qualität?	? -17993,490 -17993,490 -17992,525 -18146,544 -18232,557 -18250,543 -18250,543
 Elsternstr.: ist der nördliche Teil der Straße schon fertiggestellt? Qualität?	? -18145,499 -18145,499 -18146,544 -18146,544 -18140,573
-Lavendelring (Großziethen): Qualität?	? 13930,1503 13939,1483 13958,1433 13969,1405
-Lavendelring (Großziethen): Qualität?	? 13939,1483 14036,1538 14056,1484 13958,1433
-Finkenweg (Großziethen): Qualität?	? 13857,1035 13775,1002
-Drosselweg (Großziethen): Qualität?	? 13811,1140 13731,1107
-Amselweg (Großziethen): Qualität?	? 13686,1223 13763,1252
-Helga-Hahnemann-Str. (Großziethen): ist im südlichen Abschnitt auch asphaltiert?	? 13687,699 13692,624 13650,509 13579,447
-Kleistring (Großziethen): Qualität? verkehrsberuhigt?	? 13640,626 13692,624 13761,642 13808,491 13678,444 13650,509 13622,540
-Lessingring (Großziethen): Qualität im südlichen Abschnitt? Liegt hier auch Verbundsteinpflaster?	? 13571,660 13560,589 13511,528 13430,509 13315,508 13193,494
-Fontanestr. (Großziethen): Qualität?	? 13298,585 13421,586
-Goethestr. (Großziethen): Qualität?	? 13385,706 13421,586 13430,509
 Brandenburgische Str. (Schöneiche): wie ist die Qualität ab Berliner Str. Richtung Süden?	? 30512,7909 30454,7670 30495,7350
 Rüdersdorfer Str. (Schöneiche): wie ist die Qualität ab Berliner Str. Richtung Süden: genauso schlecht wie im nördlichen Abschnitt?	? 31446,7915 30891,7130
 Friedrich-Meinecke-Weg: Ausgeschildert? Qualität? Nachts beleuchtet?	? 1802,5418 1868,5391 2218,5369 2267,5450
 # added from strassen
-(Siedlung Roedernau) (Heißt diese Straße offiziell "Roedernau" (mit Straßenschildern)?)	? 6460,19734 6433,19749 6390,19770
+Petersallee (Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5426,16539 5533,16662
+Petersallee (Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5581,16708 5639,16768 5684,16815 5772,16919
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -1089,7 +1076,6 @@ Magazinstr.: Asphalt (ist hier tatsächlich asphaltiert?)	? 26953,10903 27047,111
 Dahlwitz - Neuenhagen: Asphalt (ist hier tatsächlich asphaltiert?)	? 27047,11144 27165,11294 27490,11678
 Dahlwitz - Neuenhagen: teilweise nur mäßiger Asphalt (nach den Bauarbeiten (2006-10-31) vielleicht besserer Asphalt?)	? 29093,13456 29743,14143
 Heinersdorf: schlechtes Kopfsteinpflaster, sandiger Rand evtl. OK (ist hier mittlerweile asphaltiert?)	? 5633,-2011 5292,-2221 5132,-2299
-Fahlhorst: schlechtes Kopfsteinpflaster (Stimmt das noch immer?)	? -5709,-10987 -5452,-11456
 Werder - Golm: relativ glatter Feldweg mit einigen Schlaglöchern (welche Nummer des F-Wegs?)	? -21131,-2004 -20954,-1991 -20933,-1960 -20719,-1956 -20528,-1962
 Marienwerder: Kopfsteinplaster, Gehwege OK (liegt hier noch immer Kopfsteinplaster?)	? 22907,48770 22394,48689
 Prenzlau - Schenkenberg: Kopfsteinplaster (liegt hier noch immer Kopfsteinplaster oder ist mittlerweile asphaltiert?)	? 40889,103590 42421,104961 42832,105063 43242,105305 44498,106156
@@ -1130,7 +1116,6 @@ Mühlental - Lebus: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 
 Mützlitz: gutes Kopfsteinpflaster (nach Ende der Bauarbeiten (2006-10-06) vielleicht asphaltiert?)	? -50578,15920 -50505,15845 -50271,15917
 Melzow - Warnitz: querliegende Betonplatten (Betonplatten zumindest auf der nördlichen Seite)	? 41910,85359 41901,85524 42245,86063
 Mönchmühlenstr.: Kopfsteinpflaster (Liegt hier noch immer Kopfsteinpflaster, oder ist mittlerweile asphaltiert?)	? 8787,26394 8893,26585 8985,26750 9031,26833 9080,26921
-(Qualität des Wegs (wahrscheinlich ein unbefestigter Feldweg)?)	? 18962,-5709 19915,-6315
 (ist der komplette Weg ein Schotterweg? Oder teilweise nur ein unbefestigter Feldweg?)	? 17162,-6465 17910,-6981
 (ist der mittlere Abschnitt der Fritz-Reuter-Str. ebenfalls gepflastert?)	? 2607,-105 2667,-199
 Hannah-Arendt-Str. (Schwanebeck): unbefestigte Straße (Wurde die Hannah-Arendt-Str. mittlerweile befestigt?)	? 17565,24441 17345,24704
@@ -1178,6 +1163,8 @@ Stresemannstr. - Wilhelmstr.: vorhandene Beleuchtung ist kaputt (funktioniert di
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
+Ahornallee (Ist die Einbahnstraße mittlerweile für Radfahrer offen?)	? 1589,11483 1574,11379
+Lindenallee (Ist die Einbahnstraße mittlerweile für Radfahrer offen?)	? 1429,11528 1403,11428
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 (andere Straßenseite auch?)	? 37093,-151665 37375,-151190
