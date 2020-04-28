@@ -35,7 +35,7 @@ my $isodate2epoch = sub {
      { from  => $isodate2epoch->("2019-06-06 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-06-10 23:59:59"),
        periodic => 1,
-       recurrences => [['easter', 47]], # zwei Tage vor Pfingsten
+       recurrences => [['easter', 47, start => "2020-10-25T00:00:00"]], # zwei Tage vor Pfingsten
        text  => 'Straßenfest rund um den Blücherplatz, 07.06.2019 bis 10.06.2019, Sperrungen fangen schon einen Tag vorher an',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -64,7 +64,7 @@ EOF
      { from  => $isodate2epoch->("2019-06-08 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-06-09 23:59:59"),
        periodic => 1,
-       recurrences => [['easter', 49]], # Pfingstsonntag
+       recurrences => [['easter', 49, start => "2020-10-25T00:00:00"]], # Pfingstsonntag
        source_id => 'http://www.karneval-berlin.de/de/',
        text  => 'Karneval der Kulturen, 09.06.2019',
        type  => 'gesperrt',
@@ -260,7 +260,7 @@ Florastraße zwischen Grunowstraße und Berliner Straße, Baustelle, Straße in beid
      { from  => $isodate2epoch->("2019-09-05 11:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-09-08 21:00:00"),
        periodic => 1,
-       recurrences => [['yearly', days => 6, months => 9]],
+       recurrences => [['yearly', days => 6, months => 9, start => "2020-10-25T00:00:00"]],
        text  => 'am Lichtenrader Dorfteich: Wein- und Winzerfest, vom 06.09.2019 16:00 Uhr bis 08.09.2019 20:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -584,7 +584,7 @@ EOF
      { from  => $isodate2epoch->("2019-07-19 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-07-21 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 14, months => 6]],
+       recurrences => [['yearly', days => 14, months => 6, start => "2020-10-25T00:00:00"]],
        text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (20.7.2019 bis 21.7.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -904,7 +904,7 @@ EOF
      { from  => $isodate2epoch->("2019-09-06 12:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-09-08 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 31, months => 8]],
+       recurrences => [['yearly', days => 31, months => 8, start => "2020-10-25T00:00:00"]],
        text  => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (07.09.2019 bis 08.09.2019)',
        type  => 'gesperrt',
        source_id => 'http://www.hier-in-rudow.de/meilenfeste.html',
@@ -1039,7 +1039,7 @@ EOF
      { from  => $isodate2epoch->("2019-09-30 00:00:00"),
        until => $isodate2epoch->("2019-10-06 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 29, months => 9]],
+       recurrences => [['yearly', days => 29, months => 9, start => "2020-10-25T00:00:00"]],
        text  => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt, vor und nach dem 3. Oktober 2019',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -6251,11 +6251,11 @@ EOF
 	1::inwork 4356,12009 4337,11721
 EOF
      },
-     { from  => $isodate2epoch->("2020-05-08 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2020-05-10 23:59:59"),
+     { from  => $isodate2epoch->("2019-05-03 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-05 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 24, months => 4]],
-       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (9.5.2020 und 10.5.2020)',
+       recurrences => [['yearly', days => 24, months => 4, start => "2020-10-25T00:00:00"]],
+       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (4.5.2019 und 5.5.2019)',
        type  => 'gesperrt',
        source_id => 'http://www.volksfeste-in-deutschland.de/primavera-fruehling-auf-der-akazienstrasse-in-berlin-schoeneberg.html',
        data  => <<EOF,
@@ -6285,7 +6285,7 @@ EOF
      { from  => $isodate2epoch->("2019-10-04 11:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-10-06 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 30, months => 9]],
+       recurrences => [['yearly', days => 30, months => 9, start => "2020-10-25T00:00:00"]],
        text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 05.10.2019 bis 06.10.2019',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -8141,8 +8141,8 @@ EOF
      { from  => $isodate2epoch->("2019-05-10 00:00:00"), # ein Tag Vorlauf
        until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 10, months => 5]],
-       recurrence_prewarn_days => 14, # Termin für 2020 steht noch nicht fest
+       recurrences => [['yearly', days => 10, months => 5, start => "2020-10-25T00:00:00"]],
+       #recurrence_prewarn_days => 14, # Termin für 2020 steht noch nicht fest
        source_id => 'https://www.berlin.de/events/4829161-2229501-rudower-fruehlingsmeile.html',
        text  => 'Alt-Rudow: Rudower Frühlingsmeile, Straße zwischen Köpenicker Str. und Bildhauerweg, sowie Krokusstr. bis Prieroser Str. gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
@@ -14068,16 +14068,14 @@ EOF
 	q4::inwork 9098,42254 9043,42165 9032,42153
 EOF
      },
-     { from  => $isodate2epoch->("2020-05-15 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2020-05-17 23:59:59"),
+     { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 9, months => 5]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (16. und 17. Mai 2020)',
+       recurrences => [['yearly', days => 9, months => 5, start => "2020-10-25T00:00:00"]],
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html
-#: XXX wird die Veranstaltung noch abgesagt?
-#: next_check: 2020-05-08
 	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
 EOF
      },
@@ -14586,7 +14584,7 @@ EOF
      { from  => $isodate2epoch->("2019-06-13 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-06-16 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 14, months => 6]],
+       recurrences => [['yearly', days => 14, months => 6, start => "2020-10-25T00:00:00"]],
        text  => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt sind gesperrt (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Lindenstr. (14.06.2019 - 16.06.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -14667,7 +14665,7 @@ EOF
        postwarn_days => 2,
        text  => 'Markgrafenstr. zwischen Taubenstr.. und Jägerstr.: Fahrbahn gesperrt sowie Sperrung des Gendarmenmarkts: Classic Open Air (4.7.2019 - 8.7.2019; Sperrungen fangen schon früher an und dauern länger)',
        periodic => 1,
-       recurrences => [['yearly', days => 1, months => 7]],
+       recurrences => [['yearly', days => 1, months => 7, start => "2020-10-25T00:00:00"]],
        # zZt status=500: source_id => 'http://www.classicopenair.de/de',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -16459,7 +16457,7 @@ EOF
      { from  => $isodate2epoch->("2019-09-14 11:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-09-15 20:00:00"),
        periodic => 1,
-       recurrences => [['yearly', days => 14, months => 9]],
+       recurrences => [['yearly', days => 14, months => 9, start => "2020-10-25T00:00:00"]],
        text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (14.09.2019 bis 15.09.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -18241,7 +18239,7 @@ EOF
      { from  => $isodate2epoch->("2019-06-27 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-06-30 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 8, months => 6]],
+       recurrences => [['yearly', days => 8, months => 6, start => "2020-10-25T00:00:00"]],
        # früher Bergmannstraßenfest
        text  => 'Kreuzbergstr.: Veranstaltung (Kreuzbergstraßenfest), Straße vollständig zwischen Methfesselstr. und Katzbachstr. gesperrt (28. Juni 2019 bis 30. Juni 2019)',
        type  => 'gesperrt',
@@ -20059,7 +20057,7 @@ EOF
      { from  => $isodate2epoch->("2019-09-06 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-09-08 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 7, months => 9]],
+       recurrences => [['yearly', days => 7, months => 9, start => "2020-10-25T00:00:00"]],
        text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., sowie Ossietzkystr. bis Pestalozzistr.: Veranstaltung (Fest an der Panke), Straßen gesperrt (07.09.2019-08.09.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -20100,7 +20098,7 @@ EOF
      { from  => $isodate2epoch->("2019-09-12 00:00:00"), # PERIODISCH, ca. 2. Wochenende im September
        until => $isodate2epoch->("2019-09-15 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 13, months => 9]],
+       recurrences => [['yearly', days => 13, months => 9, start => "2020-10-25T00:00:00"]],
        text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 13.09.2019 bis 15.09.2019',
        type  => 'handicap',
        source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2019',
@@ -20897,7 +20895,7 @@ EOF
 #: last_checked: 2013-05-28 (andk, insbesondere am Kanal dauerhafte Sperrung) vvv
 #: next_check: 2013-06-01 vvv
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130529.1525.385421.html (Eröffnung am 1. Juni)
-	2::inwork 8309,10368 8278,10384 8296,10438 8328,10585 8332,10637 8341,10721
+	2::inwork 8309,10368 8278,10384 8296,10438 8328,10585 8341,10721
 	2::inwork 8328,10585 8270,10613
 	2::inwork 8328,10831 8318,10738 8270,10613 8264,10460 8257,10440 8237,10418 8192,10354 8180,10282 8145,10090
 	2::inwork 8278,10384 8265,10348 8261,10337 8252,10308 8256,10264 8264,10192 8276,10079 8211,10083 8145,10090 8042,10084 8027,10074 8013,10055 8011,10085 8013,10055 8011,10085
@@ -21125,7 +21123,7 @@ EOF
      { from  => $isodate2epoch->("2019-09-23 06:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-09-25 06:00:00"), #
        periodic => 1,
-       recurrences => [['yearly', days => 10, months => 9]],
+       recurrences => [['yearly', days => 10, months => 9, start => "2020-10-25T00:00:00"]],
        text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen des Marathons gesperrt, voraussichtlich ab 23.09.2019',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -21139,7 +21137,7 @@ EOF
      { from  => $isodate2epoch->("2019-09-25 14:00:00"),
        until => $isodate2epoch->("2019-09-30 06:00:00"),
        periodic => 1,
-       recurrences => [['yearly', days => 12, months => 9]],
+       recurrences => [['yearly', days => 12, months => 9, start => "2020-10-25T00:00:00"]],
        text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, und einige Wege im Tiergarten, voraussichtlich bis 30.09.2019',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -21514,7 +21512,7 @@ EOF
      { from  => $isodate2epoch->("2019-07-17 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-07-21 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 13, months => 7]],
+       recurrences => [['yearly', days => 13, months => 7, start => "2020-10-25T00:00:00"]],
        source_id => 'https://www.gratis-in-berlin.de/festivals/item/2037758-hafenfest-tegel-2019-mit-programm-und-feuerwerk',
        text  => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (18.07.2019 bis 21.07.2019)',
        type  => 'gesperrt',
@@ -21606,16 +21604,14 @@ EOF
 	q4::xmas 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 EOF
      },
-     { from  => $isodate2epoch->("2020-05-15 00:00:00"), # 1431715044, # 1367560678, # 2013-05-03 07:57
-       until => $isodate2epoch->("2020-05-16 23:59:59"), # 1367704799, # 2013-05-04 23:59
+     { from  => $isodate2epoch->("2019-05-17 00:00:00"), # 1431715044, # 1367560678, # 2013-05-03 07:57
+       until => $isodate2epoch->("2019-05-18 23:59:59"), # 1367704799, # 2013-05-04 23:59
        periodic => 1,
-       recurrences => [['yearly', days => 4, months => 5]],
-       text  => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 16. Mai 2019',
+       recurrences => [['yearly', days => 4, months => 5, start => "2020-10-25T00:00:00"]],
+       text  => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 18. Mai 2019',
        type  => 'gesperrt',
        source_id => 'https://www.berliner-frauenlauf.de/der-tag/strecke.html',
        data  => <<EOF,
-#: XXX wird die Veranstaltung noch abgesagt?
-#: next_check: 2020-05-10
 # REMOVED --- #: tempex: 20170520 vvv
 	2::temp 8055,12186 8119,12414
 	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
@@ -21700,7 +21696,7 @@ EOF
        until => $isodate2epoch->("2019-06-16 02:00:00"), 
        text  => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 14.06.2019 und 15.06.2019',
        periodic => 1,
-       recurrences => [['yearly', days => 1, months => 6]], # kann Anfang Juni oder Anfang Juli oder Ende August passieren
+       recurrences => [['yearly', days => 1, months => 6, start => "2020-10-25T00:00:00"]], # kann Anfang Juni oder Anfang Juli oder Ende August passieren
        type  => 'gesperrt',
        source_id => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
        data  => <<EOF,
@@ -21734,7 +21730,7 @@ EOF
        until => $isodate2epoch->("2019-06-03 23:59:59"),
        text  => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. bis 3. Juni 2019',
        periodic => 1,
-       recurrences => [["yearly", "days" => 30, "months" => 5]],
+       recurrences => [["yearly", "days" => 30, "months" => 5, start => "2020-10-25T00:00:00"]],
        type  => 'gesperrt',
        source_id => 'https://familienfez.fez-berlin.de/programm/kindertagsfest/',
        data  => <<EOF,
@@ -22761,7 +22757,7 @@ EOF
        periodic => 1, # erster Termin im Jahr
        #recurrences => [["yearly", days => 9, months => 5]], # wechselnde Termine, kann auch erst Mitte September passieren
        recurrence_prewarn_days => 14,
-       recurrences => [["yearly", days => 1, months => 9]],
+       recurrences => [["yearly", days => 1, months => 9, start => "2020-10-25T00:00:00"]],
        # früher: Fest der Nationen
        text  => 'Prager Platz: Veranstaltung "Fest der Vielfalt", Durchfahrt nicht möglich, vom 13.9.2019 15 Uhr bis 15.9.2019 22 Uhr',
        type  => 'gesperrt',
@@ -23552,7 +23548,7 @@ EOF
      { from  => $isodate2epoch->("2019-08-14 14:00:00"), # 1 Tag Vorlauf (2019 ein paar Tage früher?)
        until => $isodate2epoch->("2019-08-18 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 15, months => 8]],
+       recurrences => [['yearly', days => 15, months => 8, start => "2020-10-25T00:00:00"]],
        text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Sperrungen ab 14.8.2919 bis 18.8.2019 möglich',
        type  => 'gesperrt',
        source_id => 'http://www.winzerfest-köpenick.de/',
@@ -23701,7 +23697,7 @@ EOF
      { from  => $isodate2epoch->("2019-09-13 00:00:00"),
        until => $isodate2epoch->("2019-09-14 23:59:59"),
        periodic => 1,
-       recurrences => [["yearly", days => 31, months => 8]],
+       recurrences => [["yearly", days => 31, months => 8, start => "2020-10-25T00:00:00"]],
        text  => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 14. September 2019, 12 bis 21 Uhr ',
        type  => 'gesperrt',
        source_id => 'https://www.turmstrasse.de/aktuelles',
@@ -24635,7 +24631,7 @@ EOF
        until => $isodate2epoch->("2020-01-17 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
-                       ['yearly', days => 27, months => 6]],
+                       ['yearly', days => 27, months => 6, start => "2020-10-25T00:00:00"]],
        text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 13.01.2020-17.01.2020',
        type  => 'handicap',
        source_id => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termin-fuer-januar-2020.html',
@@ -24643,7 +24639,7 @@ EOF
 #: source_id: 2147343639
 #: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
 	q4::temp 8644,10408 8397,10488 8384,10507 8527,10621
-	q4::temp 8348,10636 8335,10518 8350,10499
+	q4::temp 8335,10518 8350,10499
 #: tempex ^^^
 EOF
      },
@@ -26429,9 +26425,9 @@ EOF
 	2::inwork 13415,21442 13371,21462
 EOF
      },
-     { from  => undef, # 
-       until => $isodate2epoch->("2019-11-29 18:00:00"), # undef, # XXX
-       text  => 'Fußgängertunnel Freischützenstraße: Sperrung bis zum 29. November 2019',
+     { from  => $isodate2epoch->("2020-04-27 00:00:00"),
+       until => $isodate2epoch->("2020-05-22 18:00:00"),
+       text  => 'Fußgängertunnel Freischützenstraße: Sperrung wegen Bauarbeiten vom 28.04.2020 bis voraussichtlich 22.05.2020',
        type  => 'gesperrt',
        data  => <<EOF,
 	2::inwork 13617,21819 13644,21808
@@ -26521,7 +26517,7 @@ EOF
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
 # REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-03-25
+#: last_checked: 2020-04-23
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -29189,21 +29185,22 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-04-24 18:00:00"), # undef, # XXX
-       text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Provinzstr., Richtung Westen gesperrt',
+       until => $isodate2epoch->("2020-07-31 18:00:00"), # undef, # XXX
+       text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis Ende Juli 2020',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: SOLDINER-2019
 #: by: https://www.soldiner-quartier.de/aktuell.html?tx_news_pi1%5Bnews%5D=445&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=1b5efc55c1b5b262514c4bb696a56d73 (bis Ende 2020 oder Frühjahr 2021)
-#: REMOVED (fast alle Verkehrsmeldungen weg?) --- by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
-#: source_id: 2147343335
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
+#: source_id: 2147343335 (bis 31.7.2020)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
 #: last_checked: 2020-04-17
 #: check_frequency: 60d
-#: next_check: 2020-04-24
+#: next_check: 2020-07-31
 #: XXX_prog: eigentlich q4+::inwork;
-	q4::inwork; 8866,17075 8677,17154 8561,17198 8539,17197 8449,17196
+	q4::inwork; 8866,17075 8677,17154
+# REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
 EOF
      },
      { from  => undef, # 
@@ -29395,7 +29392,7 @@ EOF
 # REMOVED (provisorischer Radstreifen) --- #: XXX außerdem "der östliche Gehweg ist gesperrt" --- was bedeutet das für den Radverkehr?
 #: priority: #A
 #: add_fragezeichen: Ist die Unterführung noch immer gesperrt?
-#: last_checked: 2020-03-22
+#: last_checked: 2020-04-25
 # REMOVED --- #: next_check: 2019-10-30
 #: check_frequency: 30d
 	2::inwork 3231,12749 3332,12742
@@ -29693,7 +29690,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="18" brb
+#: osm_watch: way id="59994277" version="19" brb
 #: source_id: LS/721-F/18/135
 	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
 EOF
@@ -29893,14 +29890,14 @@ EOF
 EOF
      },
      { from  => 1569949777, # 2019-10-01 19:09
-       until => $isodate2epoch->("2020-05-15 00:00:00"),
+       until => $isodate2epoch->("2020-05-25 00:00:00"),
        text  => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851369.php',
        data  => <<EOF,
 #: next_check_id: HANSAGARTEN-2019
 #: XXX wann sind die Bauarbeiten beendet (ursprünglich "voraussichtlich bis Anfang 2020")
-#: last_checked: 2020-04-15
+#: last_checked: 2020-04-23
 	2::inwork 14665,16294 14810,16282 15102,16212
 # REMOVED (hier existiert ein provisorischer Weg) ---	2::inwork 15102,16212 15194,16186
 	2::inwork 14721,16360 14810,16282
@@ -29914,7 +29911,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2020-03-22
+#: last_checked: 2020-04-25
 # REMOVED --- #: next_check: 2020-03-31
 	2::inwork 5894,12480 5944,12548
 EOF
@@ -30015,9 +30012,9 @@ EOF
        data  => <<EOF,
 #: next_check_id: WUHLEWANDERWEG-2014
 #: XXX wann beginnen die Bauarbeiten, wann sind sie beendet?
-#: XXX mittlerweile (2020-04-11) gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str., noch ohne weitere Einschränkungen
+#: XXX mittlerweile (2020-04-26) gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str., noch ohne weitere Einschränkungen
 #: add_fragezeichen: Haben die Bauarbeiten schon begonnen? Gibt es Einschränkungen für Radfahrer?
-#: last_checked: 2020-04-11
+#: last_checked: 2020-04-26
 #: check_frequency: 30d
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
 EOF
@@ -30170,7 +30167,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: MUENSTERBERGERWEG-2019
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
-#: last_checked: 2020-04-11
+#: last_checked: 2020-04-26
 	2::inwork 24029,11363 24172,11320
 EOF
      },
@@ -30290,6 +30287,7 @@ EOF
 #: by: https://viz.berlin.de/2020/03/bahnhofstrasse-koepenick/
 #: by: https://viz.berlin.de/wp-content/uploads/Bahnhofstra%C3%9Fe-Umleitungsplan.png
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/bvg-erneuert-in-der-bahnhofstrasse-rund-1000-meter-gleis-und-haltestellen_a257692
+#: by: https://www.berliner-woche.de/koepenick/c-verkehr/am-20-april-hat-der-zweite-bauabschnitt-in-der-bahnhofstrasse-begonnen_a262654
 #: source_id: 2147345568 (schon ab 9.3.2020?)
 #: source_id: 2147345558
 	q4::inwork; 22513,5747 22383,5611 22204,5447
@@ -30399,7 +30397,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-03-25
+#: last_checked: 2020-04-27
 	q4::inwork 13292,13931 13385,13992
 EOF
      },
@@ -30509,7 +30507,8 @@ EOF
        text  => 'Rotherstr.: zwischen Naglerstr. und Warschauer Platz Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2020-04-14
+#: next_check_id: ROTHER-2020
+#: last_checked: 2020-04-24
 	q4::inwork 13478,10998 13575,10963
 EOF
      },
@@ -30529,7 +30528,7 @@ EOF
        data  => <<EOF,
 #: note: offizielle Umleitung über Fischerstr.
 #: priority: #A
-#: last_checked: 2020-04-21
+#: last_checked: 2020-04-26
 #: check_frequency: 14d
 	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
 EOF
@@ -30540,6 +30539,7 @@ EOF
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.923431.php',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/gleditschstrasse-am-2-mai-gesperrt_a262750
 	q4::temp 7126,9825 7080,10098
 EOF
      },
@@ -30550,7 +30550,8 @@ EOF
        data  => <<EOF,
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: XXX bis wann wird hier gesperrt sein?
-#: next_check: 2020-04-25
+#: last_checked: 2020-04-25
+#: check_frequency: 7d
 	q4::inwork 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
      },
@@ -30561,6 +30562,22 @@ EOF
        source_id => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.923140.php',
        data  => <<EOF,
 	2::inwork 11141,9107 10709,9192
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Zufahrt "Gleis Park": Tore, kann möglicherweise abgesperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::temp 8367,10745 8350,10662 8335,10518
+EOF
+     },
+     { from  => 1587852000, # 2020-04-26 00:00
+       until => 1588283999, # 2020-04-30 23:59
+       text  => 'Anhalter Steg: gesperrt vom 27. April 2020 bis 30. April 2020',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::inwork 8760,10408 8726,10351 8711,10322
 EOF
      },
     );

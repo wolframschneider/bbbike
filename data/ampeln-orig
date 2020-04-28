@@ -10,7 +10,7 @@
 # 
 #: note: Baustellenampel in der Neuen Roßstr.
 #: source_id: 2147345021 (bis 06.07.2020)
-#: last_checked: 2020-04-08
+#: last_checked: 2020-04-22
 #: valid: -20200706
 	X::inwork 10780,11721
 # 
@@ -49,9 +49,10 @@
 # REMOVED #: valid: -20200430
 	F::inwork 10170,15659
 # 
+#: next_check_id: PILGRAMER-2019
 #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/bauarbeiten-in-pilgramer-strasse_a197302
 #: also_indoor: traffic
-#: last_checked: 2019-08-12 (mapillary)
+#: last_checked: 2020-04-26
 #: next_check: 2020-06-30
 #: valid: -20200630
 	X::inwork 25145,10841
@@ -93,8 +94,8 @@
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.813955.php
 #: XXX Wann werden die Ampeln wieder abgebaut? vvv
 #: last_checked: 2020-02-15 vvv
-#: next_check: 2020-12-31 vvv
-#: valid: 20190603-20201231 vvv
+#: next_check: 2022-12-31 vvv
+#: valid: 20190603-20221231 vvv
 #: note: die beiden folgenden Punkte gehören eigentlich zu einer Ampelanlage
 	X::inwork 20891,17572
 	X::inwork 20895,17594
@@ -1225,6 +1226,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -1369,14644
 	X -1357,14533
 	X 5043,14671
+#: XXX_prog: gilt nicht für rechtsabbiegende Radfahrer (Beusselstr. -> Seestr.)
 	X 5051,14606
 	X 5700,15043
 	X 13078,15586
@@ -2673,7 +2675,9 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: provisorische Ampel
 #: note: Anforderungsampel
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.922880.php (Neubau einer Querungshilfe bis zur KW 22/2020 --- mit oder ohne Ampel?)
+#: by: https://www.berliner-woche.de/adlershof/c-bauen/querungshilfe-auf-dem-adlergestell_a262618 (mit Ampel)
 #: osm_watch: node id="987195315" version="7"
+#: source_id: 2147345739 (bis 29.5.2020)
 #: last_checked: 2020-04-13
 #: check_frequency: 180d
 #: next_check: 2020-05-29
@@ -2957,7 +2961,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: last_checked ^^^
 #: note: Anforderungsampel
 #: note: Radfahrer müssen diese Ampel zum Überqueren benutzen
-#: last_checked: 2020-04-12
+#: last_checked: 2020-04-20 (mapillary)
 	F::inwork 14213,6840
 #: next_check ^^^
 #: valid ^^^
@@ -3054,10 +3058,6 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: off: Sunday (gesehen 2016-10-03 gegen 15:45)
 #: on: Samstag (gesehen 2016-10-08 gegen 15:00)
 	F 3273,14738
-# REMOVED --- #: next_check_id: CHAUSSEESTR-2016 vvv
-# REMOVED (see https://www.openstreetmap.org/note/765740#map=18/52.53800/13.37363&layers=N ) --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8232 (bleibt die Ampel permanent?) ---#: by: Tsp vom 2018-01-22 (neue Ampeln --- 2019) --- #: source_id: 2147340715 vvv --- #: last_checked: 2018-05-17 vvv --- #: check_frequency: 60d vvv ---	X::inwork 8250,14672 --- # REMOVED --- F::inwork 8732,14098 --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: source_id ^^^
-# REMOVED --- #: next_check_id ^^^
-# 
 	F 14810,10832
 # 
 #: note: Anforderungsampel für Radfahrer aus/in Richtung Priesterweg
@@ -3131,9 +3131,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2020-04-01 (mapillary)
+#: last_checked: 2020-04-25
 #: check_frequency: 90d
 	X::inwork 8250,14672
+# 
+# REMOVED --- #: next_check_id: CHAUSSEESTR-2016 vvv
+# REMOVED (see https://www.openstreetmap.org/note/765740#map=18/52.53800/13.37363&layers=N ) --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8232 (bleibt die Ampel permanent?) ---#: by: Tsp vom 2018-01-22 (neue Ampeln --- 2019) --- #: source_id: 2147340715 vvv --- #: last_checked: 2018-05-17 vvv --- #: check_frequency: 60d vvv ---	X::inwork 8250,14672 --- # REMOVED --- F::inwork 8732,14098 --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: source_id ^^^
+# REMOVED --- #: next_check_id ^^^
 # 
 #: by: osm
 #: by: https://www.rbb-online.de/abendschau/videos/20191221_1930/ampel-grundschule-schueler.html
