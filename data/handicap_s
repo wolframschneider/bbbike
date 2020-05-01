@@ -3,6 +3,7 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
+Gubener Str.: zwischen Marchlewskistr. und Hildegard-Jadamowitz-Str. Sperrung der Fahrbahn	q4::inwork 13168,12219 13151,12266 13198,12311
 (Umfahrung Baustelle): einige Fuﬂg‰nger, kurvig	q2 14717,10855 14692,10867 14667,10904 14485,10959 14477,10941 14397,10966 14390,10984 14314,10998
 Bˆdikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 Stralauer Allee: Straﬂenseite wechseln, Ampel	q3::inwork; 14405,10340 14558,10264
@@ -40,7 +41,7 @@ Salvador-Allende-Br¸cke: Engstelle, Zweirichtungsradweg mit Gehweg	q2::inwork 23
 Salvador-Allende-Br¸cke: Engstelle, Zweirichtungsradweg mit Gehweg	q2::inwork 23433,5037 23444,4942 23451,4877
 Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5919,12423 5894,12480 5944,12548
 Meierottostr.: Einbahnstraﬂenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
-Braunschweiger Str.: Fahrbahn wird neu gemacht, Ausweichen auf Gehweg	q4::inwork 13781,7524 13854,7620 13919,7707
+Braunschweiger Str.: Fahrbahn wird neu gemacht, Ausweichen auf Gehweg	q4::inwork 13702,7418 13781,7524 13854,7620 13919,7707
 Donaustr.: Einbahnstraﬂenregelung zwischen Pannierstr. und Reuterstr.	q3::inwork; 12150,8891 12202,8895
 Neukˆllnische Allee: Fuﬂg‰ngerschutztunnel	q3::inwork 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 provisorische Radwegf¸hrung, Fuﬂg‰nger, Seitenwechsel notwendig	q3::inwork; 14344,7003 14257,6895 14213,6840 14153,6795 14051,6731
@@ -1856,7 +1857,7 @@ Volkspark Anton Saefkow: einige Fuﬂg‰nger	q2 12970,14632 12962,14613 12968,14585
 Volkspark Anton Saefkow: einige Fuﬂg‰nger, Steigung/Gef‰lle	q3 13013,14523 13010,14540 12996,14562 12989,14572
 Falkoniergasse: Bordstein	q1 9939,12174 9909,12261
 Epensteinplatz: einige Fuﬂg‰nger	q2 8432,17798 8417,17790 8409,17774
-(Friedrichstr. - Enckestr.): Fuﬂg‰nger	q3 9537,10837 9666,10848
+(Friedrichstr. - Enckestr.): Fuﬂg‰nger	q3; 9537,10837 9666,10848
 Jenaer Str.: einige Fuﬂg‰nger, flacher Bordstein	q2 5790,9460 5795,9483
 Barbarossastr.: einige Fuﬂg‰nger	q1 5795,9483 5821,9502
 (Crivitzer Str. - Woldegker Str./Rostocker Str.): einige Fuﬂg‰nger	q2 17584,18551 17511,18636
@@ -2854,6 +2855,7 @@ Am Groen: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 22142,11
 Am Groen: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 22146,10995 22137,11033 22131,11084
 Klompenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 22101,10985 22146,10995 22172,10996
 Fabeckstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 2717,5578 2678,5621 2669,5677
+Enckestr. - Friedrichstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9666,10848 9537,10837
 Am Krusenick: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 22751,4970 22652,4966 22667,4912 22705,4874
 Josef-Nawrocki-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25796,4683 25796,4823
 Josef-Nawrocki-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25695,4714 25554,4758 25552,4829

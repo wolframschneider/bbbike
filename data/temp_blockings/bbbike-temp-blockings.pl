@@ -26913,7 +26913,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-04-10 vvv
+#: last_checked: 2020-04-22 (mapillary) vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -29977,7 +29977,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: KOENIGSTEINBRUECKE-2019
-#: last_checked: 2019-10-19 (mapillary)
+#: last_checked: 2020-04-26 (mapillary)
 #: next_check: 2021-04-01
 	2::inwork 13221,22667 13223,22558 13207,22498 13217,22413 13220,22387
 EOF
@@ -30005,7 +30005,7 @@ EOF
 EOF
      },
      { from  => 1572130800, # 2019-10-27 01:00
-       until => undef, # XXX
+       until => $isodate2epoch->("2020-09-30 18:00:00"), # undef, # XXX
        text  => 'Wuhlewanderweg nördlich des Bahnhofs Wuhletal: demnächst Baumaßnahme, Weg kann gesperrt sein',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.854332.php',
@@ -30016,6 +30016,7 @@ EOF
 #: add_fragezeichen: Haben die Bauarbeiten schon begonnen? Gibt es Einschränkungen für Radfahrer?
 #: last_checked: 2020-04-26
 #: check_frequency: 30d
+#: next_check: 2020-09-30
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
 EOF
      },
@@ -30275,8 +30276,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2020-03-08 07:00:00"), # 1 Tag Vorlauf, 1583017200, # 2020-03-01 00:00
-       until => $isodate2epoch->("2020-06-03 12:00:00"), # 1591113600, # 2020-06-02 18:00
-       text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee bzw. Friedrichshagener Str. für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee und Einbahnstraßenregelung in der Puchanstr., voraussichtlich vom 09.03.2020 bis 03.06.2020',
+       until => $isodate2epoch->("2020-06-08 17:00:00"), # 1591113600, # 2020-06-02 18:00
+       text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee bzw. Friedrichshagener Str. für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee und Einbahnstraßenregelung in der Puchanstr., voraussichtlich vom 09.03.2020 bis 08.06.2020',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/bauarbeiten-der-bvg-an-gleisen-und-haltestellen_a254851
@@ -30289,7 +30290,7 @@ EOF
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/bvg-erneuert-in-der-bahnhofstrasse-rund-1000-meter-gleis-und-haltestellen_a257692
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/am-20-april-hat-der-zweite-bauabschnitt-in-der-bahnhofstrasse-begonnen_a262654
 #: source_id: 2147345568 (schon ab 9.3.2020?)
-#: source_id: 2147345558
+#: source_id: 2147345558 (bis 8.6.2020)
 	q4::inwork; 22513,5747 22383,5611 22204,5447
 	q4::inwork; 22292,5774 22258,5687 22236,5633 22184,5545
 	q4::inwork 22154,5659 22236,5633
@@ -30305,8 +30306,8 @@ EOF
 EOF
      },
      { from  => 1583523384, # -> in eine Meldung konsolidiert --- $isodate2epoch->("2020-03-08 07:00:00"), # 1 Tag Vorlauf --- 1587290400, # 2020-04-19 12:00
-       until => 1583523389, # 1591200000, # 2020-06-03 18:00
-       text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee Richtung Süden für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee, voraussichtlich vom 09.03.2020 bis 03.06.2020 ',
+       until => $isodate2epoch->("2020-06-08 17:00:00"), # 1583523389, # 1591200000, # 2020-06-03 18:00
+       text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee Richtung Süden für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee, voraussichtlich bis 08.06.2020 ',
        type  => 'handicap',
        data  => <<EOF,
 	q4::inwork; 22292,5774 22258,5687 22236,5633 22184,5545
@@ -30438,8 +30439,8 @@ EOF
 EOF
      },
      { from  => 1586066400, # 2020-04-05 08:00
-       until => $isodate2epoch->("2020-04-30 17:00:00"), # 1587567600, # 2020-04-22 17:00
-       text  => 'Spreestr.: Bauarbeiten, Fahrbahn gesperrt, vom 06.04.2020 08:00 Uhr bis 30.04.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-05-12 17:00:00"), # 1587567600, # 2020-04-22 17:00
+       text  => 'Spreestr.: Bauarbeiten, Fahrbahn gesperrt, vom 06.04.2020 08:00 Uhr bis 12.05.2020 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147345680',
        data  => <<EOF,
@@ -30528,7 +30529,7 @@ EOF
        data  => <<EOF,
 #: note: offizielle Umleitung über Fischerstr.
 #: priority: #A
-#: last_checked: 2020-04-26
+#: last_checked: 2020-04-28
 #: check_frequency: 14d
 	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
 EOF
@@ -30545,13 +30546,14 @@ EOF
      },
      { from  => 1587621600, # 2020-04-23 08:00
        until => undef, # XXX
-       text  => 'Boxhagener Platz: samstags Sperrung der umliegenden Straßen wegen des Wochenmarkts',
+       text  => 'Boxhagener Platz: samstags 6 bis 20 Uhr Sperrung der umliegenden Straßen wegen des Wochenmarkts',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
+#: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
 #: last_checked: 2020-04-25
-#: check_frequency: 7d
+#: check_frequency: 14d
 	q4::inwork 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
      },

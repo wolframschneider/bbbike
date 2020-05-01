@@ -9459,7 +9459,7 @@ Ilsenburgstr.	N 13727,21780 13659,21804 13642,21793 13489,21548 13478,21532 1346
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4724
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4724&date=20180404
 #: osm_watch: way id="76233325" version="4"
-#: last_checked: 2020-04-04 (mapillary)
+#: last_checked: 2020-04-26 (mapillary)
 #: check_frequency: 360d
 #: alias: Freischütztunnel
 (Unterführung)	NN 13659,21804 13644,21808 13617,21819 13604,21825 13601,21826
@@ -10233,13 +10233,13 @@ Bossestr.	N 14222,10430 14270,10584 14312,10657
 # 
 #: next_check_id: STRALAUER-2019
 #: priority: #A vvv
-#: last_checked: 2020-04-21 vvv
-#: next_check: 2020-05-15 vvv
-#: valid: !20190319-20200515 vvv
+#: last_checked: 2020-04-30 vvv
+#: next_check: 2020-07-10 vvv
+#: valid: !20190319-20200710 vvv
 Persiusstr.	N 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 Rochowstr.	N 14170,10675 14103,10489
 #: valid ^^^
-#: valid: 20190319-20200515 vvv
+#: valid: 20190319-20200710 vvv
 Persiusstr.	HH 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 Rochowstr.	HH 14170,10675 14103,10489
 #: valid ^^^
@@ -10601,6 +10601,8 @@ Straße am Wald	N 21475,7500 21341,7487 21025,7349
 #: by: https://www.abendblatt-berlin.de/2019/12/12/eroeffnung-des-berliner-flughafens-ber-so-nah-wie-nie/
 #: by: https://www.berliner-woche.de/tegel/c-verkehr/eigentuemer-erhalten-entschaedigung_a245995 (Abriss des Flughafens im Mai 2021)
 #: by: https://abendblatt-berlin.de/2020/03/10/berlin-reinickendorf-viel-holz-und-gruen-im-airport-kiez/ (Nachnutzung)
+#: by: https://abendblatt-berlin.de/2020/04/29/berliner-flughafen-aufsichtsrat-will-tegel-vorzeitig-schliessen/
+#: by: https://www.tagesspiegel.de/berlin/einbruch-der-fluggastzahlen-wegen-corona-krise-flughafengesellschaft-beantragt-tegel-schliessung-ab-1-juni/25787300.html
 #: XXX bei Eröffnung von BER und Schließung von Tegel evtl. umbenennen, "ehemaligen", evtl. auch degradieren (NH oder N, prüfen) vvv
 #: XXX auch andere Straßen/Flächen/... umbenennen vvv
 #: next_check: 2020-11-08 vvv
@@ -14295,7 +14297,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="12"
-#: last_checked: 2020-04-26
+#: last_checked: 2020-04-28
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Am Kraatzgraben)	NN 16835,10052 16666,10219 16544,10337 16488,10381
@@ -14663,7 +14665,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="14"
-#: last_checked: 2020-04-26
+#: last_checked: 2020-04-28
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
