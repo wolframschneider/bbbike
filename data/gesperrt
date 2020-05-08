@@ -3146,7 +3146,6 @@ Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 13291,14518 13266,14541 
 Anton-Saefkow-Park: wegen Bauarbeiten gesperrt	2:inwork 13266,14541 13246,14515 13233,14509 13169,14532 13195,14487
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle): kein Durchgang möglich	2:inwork 17639,5612 17675,5521
-Dresdener Str. (Abkürzung von/zur Annenstr.): Bauarbeiten, Weg ist komplett gesperrt	2::inwork 11021,11287 11000,11327
 Französische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch für Fußgänger	2:inwork 9076,12054 9183,12076
 Mauerstr..: Bauarbeiten, Einbahnstraße	1s:inwork 9108,11961 9076,12054
 Jägerstr.: Bauarbeiten, Einbahnstraße	1s:inwork 9195,11972 9108,11961
@@ -3169,7 +3168,6 @@ Treskowallee -> Rheinsteinstr.: Überqueren wegen Bauarbeiten nicht möglich	3::ig
 Ehrenfelsstr. -> Treskowallee: Überqueren wegen Bauarbeiten nicht möglich	3::igndisp::inwork 18778,8663 18737,8686 18733,8650
 Rheinsteinstr. -> Treskowallee: Überqueren wegen Bauarbeiten nicht möglich	3::igndisp::inwork 18865,8740 18737,8686 18733,8650
 Rheinsteinstr. -> Ehrenfelsstr.: Überqueren wegen Bauarbeiten nicht möglich	3::igndisp::inwork 18865,8740 18737,8686 18778,8663
-Mauerpark: Bau eines Stauraumkanals	2::inwork 10130,15653 10185,15487
 Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -6556,6663
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5643,12253
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5574,12237 5535,12206
