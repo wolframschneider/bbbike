@@ -65,7 +65,7 @@
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
-#: last_checked: 2020-04-07 (mapillary)
+#: last_checked: 2020-05-09
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -1466,7 +1466,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2123,2803
 	X 2000,2748
 	X 1238,2599
-	X 803,2435
+	X 790,2434
 	X 749,2616
 	X 561,2395
 	X 11717,-1204
@@ -1886,6 +1886,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -3861,2837
 	F -6950,752
 	X 30410,5450
+#: note: Anforderungsampel
 	F 25028,5756
 	X 22513,5747
 	X 22292,5774
@@ -2554,7 +2555,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ex nicht?) --- #: by: osm ---	X 11168,18542
 #: note: Anforderungsampel
 	F 3741,3322
-#: by: http://www.panoramio.com/photo/19637927
+#: note: Anforderungsampel
 	F 4943,2557
 #: by: http://www.panoramio.com/photo/19637886
 	F 5479,2464
@@ -2784,6 +2785,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 198,4580
 #: note: Anforderungsampel
 	F 3585,1541
+#: note: Anforderungsampel
 	F 5795,1219
 	F 10929,17902
 	F 10449,18315
@@ -3313,6 +3315,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: off: Pfingstmontag 2016-05-16 gegen 13 Uhr
 	F -7554,13514
+#: note: Anforderungsampel
 	F 980,1893
 #: note: Anforderungsampel
 	F 3025,2858
