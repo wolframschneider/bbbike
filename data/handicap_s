@@ -12,8 +12,6 @@ Stralauer Allee: enge Stelle	q2::inwork; 14558,10264 14405,10340
 Hermann-Stˆhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 M¸ncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
-BouchÈstr.: Baustelle, Fahrtrichtung gesperrt	q3::inwork; 13298,9252 13188,9134
-Mengerzeile: Baustelle, Fahrtrichtung gesperrt	q4::inwork; 13176,9302 13098,9205
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607,15282
 Gormannstr.: Bauarbeiten an der Einm¸ndung Torstr., Fahrbahn gesperrt	q3::inwork 10459,13760 10445,13675
 (Umfahrung Kieler Str.): Fuﬂg‰nger, Kurven	q2::inwork 7965,14207 8025,14251 8033,14241 8039,14232 7972,14185
@@ -58,6 +56,8 @@ Erich-Weinert-Str.: Bauarbeiten in Hˆhe Hosemannstr., Gehweg benutzen, Bordstein
 Erich-Weinert-Str.: Bauarbeiten in Hˆhe Hosemannstr., Gehweg benutzen	q4::inwork; 12556,15518 12605,15491 12621,15482
 Erich-Weinert-Str.: Bauarbeiten in Hˆhe Hosemannstr., Gehweg benutzen	q4::inwork; 12621,15482 12605,15491
 Erich-Weinert-Str.: Bauarbeiten zwischen Scherenbergstr. und Stahlheimer Str., Einbahnstraﬂenregelung, offen Richtung Osten	q4:inwork; 11542,16070 11404,16140
+Erich-Weinert-Str./Scherenbergstr.: Kreuzungsumbau	q3:inwork 11467,16238 11404,16140 11358,16067
+Erich-Weinert-Str./Scherenbergstr.: Kreuzungsumbau	q3:inwork; 11295,16199 11404,16140 11542,16070
 Charlottenburger Str.: Einbahnstraﬂenregelung zwischen Tassostr. und Pistoriusplatz, ggfs. auf Gehweg ausweichen	q3:inwork; 13642,16118 13479,16182
 (provisorische Fuﬂg‰ngerbr¸cke S‰ntisstr.): Fuﬂg‰nger	q3 9014,898 9005,912 9002,919 9047,948 9058,932
 S‰ntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
@@ -2552,7 +2552,7 @@ Leuenberger Zeile: eng	q1 2821,19559 2789,19600 2684,19765
 Waldstr.: mehrere Bodenschwellen vor der Schule	q2 20540,4285 20623,4227
 Janitzkystr.: Siedlung, eng	q1 22763,6398 22889,6428 23002,6428 23027,6425 23131,6398 23192,6362 23242,6308
 Kaiser-Wilhelm-Str. - Langkofelweg: Fuﬂg‰nger	q2 6954,3703 6998,3596
-(Uferweg im Wrˆhm‰nnerpark): Fuﬂg‰nger	q2 -3066,14718 -3030,14844 -2998,14879 -3008,14910 -3008,14992 -2965,15053 -2929,15082 -2955,15129
+(Uferweg im Wrˆhm‰nnerpark): Fuﬂg‰nger	q3 -3066,14718 -3030,14844 -2998,14879 -3008,14910 -3008,14992 -2965,15053 -2929,15082 -2955,15129
 Fliegerhorstsiedlung: enge Straﬂe	q1 -7330,7878 -7305,7838 -7266,7775 -7168,7825 -7099,7851 -7096,7881 -7114,7900 -7146,7905 -7305,7838
 Schoelerpark: Fuﬂg‰nger, f¸r Radfahrer nicht freigegeben, ggfs. schieben	q3 5228,8729 5228,8703 5241,8692 5240,8637 5219,8635 5185,8647 5188,8694 5204,8702 5206,8731
 Schoelerpark: Fuﬂg‰nger, f¸r Radfahrer nicht freigegeben, ggfs. schieben	q3 5219,8635 5212,8602
@@ -2777,6 +2777,8 @@ Verl‰ngerte Schulzendorfer Str.: Fuﬂg‰nger	q1 2150,22464 2015,22435 1834,22421 1
 (Verl‰ngerung Senheimer Str.): teils enger Weg	q2 2560,26475 2493,26665 2434,26783 2384,26851 2303,26913
 (Ludwig-Lesser-Park, mittlerer Weg): viele Fuﬂg‰nger	q2 2312,25673 2293,26111
 (Senheimer Str. - Oranienburger Chaussee/Schwarzkittelweg): enger Weg	q2 2540,26280 3013,26458
+(Rosenthaler Weg - Aubertstr.): einige Fuﬂg‰nger	q1 11747,22496 11278,22848 11220,22886
+(Blankenfelder Str. - Goetheweg): einige Fuﬂg‰nger	q1 10968,22546 11220,22886 11228,22914 11219,22932 11162,22939
 Eichborndamm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4228,19024 4223,18982
 Archibaldweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 15674,10851 15870,10938
 Nˆldnerplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 15870,10938 15903,10906
@@ -2870,6 +2872,7 @@ Am Groen: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 22146,10
 Klompenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 22101,10985 22146,10995 22172,10996
 Fabeckstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 2717,5578 2678,5621 2669,5677
 Enckestr. - Friedrichstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9666,10848 9537,10837
+(Straﬂe vor dem Berliner Ensemble): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9160,12932 9212,12969
 Am Krusenick: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 22751,4970 22652,4966 22667,4912 22705,4874
 Josef-Nawrocki-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25796,4683 25796,4823
 Josef-Nawrocki-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25695,4714 25554,4758 25552,4829
@@ -2907,6 +2910,8 @@ Soorstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1861,112
 Planckstr.: Einbahnstraﬂenregelung, offen Richtung S¸den: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9429,12728 9402,12792 9386,12833
 Littenstr.: Einbahnstraﬂenregelung, offen Richtung S¸den: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 11059,12450 10954,12635
 Tschaikowskistr.: Einbahnstraﬂe wegen Bauarbeiten in der Hermann-Hesse-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9868,19023 9501,18902
+Hermann-Hesse-Str.: Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9501,18902 9681,19179 9811,19302
+Homeyerstr.: Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9529,18815 9465,18855
 Johannisstr.: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174
 Rochowstr. und Persiusstr.: Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 Corinthstr.: Einbahnstraﬂenregelung, Radweg wird auf dem Gehweg gef¸hrt: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 14608,10409 14447,10491
@@ -2916,7 +2921,6 @@ Taubenstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. 
 Mauerstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9138,11872 9171,11777
 Schinkelplatz: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9990,12404 9996,12372
 Niederlagstr.: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9972,12184 9959,12281
-Wilhelmstr. - Mohrenstr.: kurze Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9042,11839 8969,11814
 (Los-Angeles-Platz): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 5669,10704 5822,10609
 Seekorso: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; -8376,6579 -8354,6590
 Seekorso: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; -8339,6578 -8364,6562
