@@ -490,6 +490,7 @@ Straßenbahnwendestelle Virchowstr.	1 13081,13457 12925,13373
 Am Friedrichshain	1 12065,13851 12104,13913 12147,13887 12106,13828
 Potsdamer Chaussee: explizit für Radfahrer verboten	1 -8797,7638 -8405,7751
 Altstädter Ring: Radweg muss benutzt werden	1::igndisp -3501,14365 -3498,14413 -3481,14523 -3432,14607 -3352,14676
+Elly-Beinhorn-Ring: Radweg muss benutzt werden	2::igndisp 19158,-4083 19153,-4033 19105,-3940
 Bösensteinweg	1 9943,1543 9847,1571 9771,1641
 Wesenberger Ring	1 13030,3664 13129,3809 13165,3850 13206,3854 13229,3836 13238,3794 13206,3674 13163,3582
 Anna-Mackenroth-Weg	1 3633,2210 3641,2464
@@ -855,6 +856,11 @@ Warschauer Platz	1 13478,10998 13471,10983 13436,10903 13408,10837
 Enckestr. - Friedrichstr.	1s 9666,10848 9537,10837
 (Mittelallee, Virchow-Klinikum)	1 6007,15053 6395,15109 6429,15115 6431,15098 6433,15085 6400,15080 6012,15024
 (Straße vor dem Berliner Ensemble)	1s 9160,12932 9212,12969
+Jürgen-Schumann-Allee	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
+Jürgen-Schumann-Allee	2 19282,-3928 19464,-3780 19479,-3690
+Jürgen-Schumann-Allee: explizites Radfahren-verboten-Schild auf der nördlichen Seite	2 19479,-3690 19443,-3540 19558,-3155 19626,-3031 19808,-2953 19909,-2863 19927,-2756 19904,-2683 19663,-2419 19542,-2356 19330,-2340 19236,-2298 19131,-2145 18866,-1674 18936,-1581
+Business Park Berlin - Jürgen-Schumann-Allee: explizites Radfahren-verboten-Schild auf der östlichen Seite	2 19131,-2145 19158,-2135 19192,-2124
+Siedlung Hubertus - Jürgen-Schumann-Allee: explizites Radfahren-verboten-Schild auf der östlichen Seite	2 19909,-2863 19996,-2880 20039,-2863
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1032,9 +1038,7 @@ Dorfstr. (Pieskow)	1s 56031,-14776 55983,-14721
 Mittelstreifen	3nocross::ignrte 18419,-1418 18666,-1325 18777,-1298 18892,-1273
 Am Seegraben -> temporäre Umleitungsstrecke: Mittelstreifen	3::igndisp 18777,-1298 18666,-1325 18672,-1340
 temporäre Umleitungsstrecke -> Am Seegraben: Mittelstreifen	3::igndisp 18672,-1340 18666,-1325 18419,-1418
-Jürgen-Schumann-Allee	1 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
-Jürgen-Schumann-Allee	1 19479,-3690 19528,-3767 19524,-3843 19454,-3956 19189,-4062 19158,-4083
-Berliner Chaussee	1 19282,-3928 19460,-3818 19539,-3810 19601,-3714
+Berliner Chaussee	1 19282,-3928 19460,-3818 19563,-3801 19586,-3716
 Mehrow - Trappenfelde	1 24743,18606 24709,18578
 Mehrow - Trappenfelde	1 24696,18606 24743,18606
 Sankt Petri	1s -46334,-150 -46304,-19
@@ -1248,9 +1252,11 @@ Altstädter Ring -> Münsinger Park: Mittelstreifen mit Zaun	3::igndisp -3552,1408
 Münsinger Park -> Altstädter Ring: Mittelstreifen mit Zaun	3::igndisp -3607,14249 -3517,14218 -3511,14260
 Mittelstreifen	3nocross::ignrte 6993,3765 6954,3703 6930,3666
 Langkofelweg -> Kaiser-Wilhelm-Str.: Mittelstreifen	3::igndisp 6998,3596 6954,3703 6930,3666
-umbequemes Überqueren wegen Bordsteinen	3nocross::ignrte 11329,12497 11340,12443 11355,12331
-Schillingstr. -> Alexanderstr.: umbequemes Überqueren wegen Bordsteinen	3::igndisp 11353,12436 11340,12443 11355,12331
+umbequemes Überqueren wegen Bordsteinen	3nocross::ignrte 11329,12497 11340,12443 11344,12410 11355,12331
+Schillingstr. -> Alexanderstr.: umbequemes Überqueren wegen Bordsteinen	3::igndisp 11353,12436 11340,12443 11344,12410
 Alexanderstr. -> Schillingstr.: umbequemes Überqueren wegen Bordsteinen	3::igndisp 11329,12497 11340,12443 11353,12436
+Alexanderstr. -> zwischen VoltAir und The Student Hotel: umbequemes Überqueren wegen Bordsteinen	3::igndisp 11355,12331 11344,12410 11240,12368
+zwischen VoltAir und The Student Hotel -> Alexanderstr.: umbequemes Überqueren wegen Bordsteinen	3::igndisp 11240,12368 11344,12410 11340,12443
 Mittelstreifen	3nocross::ignrte 8777,9601 8679,9544 8595,9495
 Yorckstr. -> Hagelberger Str.: Mittelstreifen	3::igndisp 8777,9601 8679,9544 8774,9534
 Mittelstreifen	3nocross::ignrte 7434,18695 7492,18699 7520,18701
@@ -3113,8 +3119,9 @@ Gustav-Böß-Str.: Straße ist komplett gesperrt	2::inwork 10673,12434 10772,12515
 Tor, von außen verschlossen	1::igndisp 14717,10855 14692,10867
 Königsteinbrücke: Brücke wurde abgerissen und wird neu gebaut	2::inwork 13148,22396 13385,22383
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr.	1::inwork 12605,15491 12556,15518
-Hilda-Geiringer-Weg: gesperrt, wird noch gebaut	2::inwork 8281,13394 8317,13459 8293,13527
 Benno-König-Str.: noch nicht freigegeben, Straße gesperrt	2::inwork 18374,4307 18596,4517
+Gustav-Hertz-Platz: noch nicht freigegeben, Straße gesperrt	2::inwork 18596,4517 18722,4628
+Landfliegerstr.: noch nicht freigegeben, Straße gesperrt	2::inwork 18296,4850 18254,4817
 Tschaikowskistr.: Einbahnstraße wegen Bauarbeiten in der Hermann-Hesse-Str.	1s:inwork 9868,19023 9501,18902
 Hermann-Hesse-Str.: Einbahnstraßenregelung	1s:inwork 9501,18902 9681,19179 9811,19302
 Homeyerstr.: Einbahnstraßenregelung	1s:inwork 9529,18815 9465,18855
@@ -3122,7 +3129,6 @@ David-Friedländer-Weg: noch Bauarbeiten, gesperrt	2::inwork 20901,18793 21038,18
 Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
 Rollbergstr.: wegen Bauarbeiten komplett gesperrt	2::inwork 12226,8137 12295,8154
 Metropolitan Park: Bauarbeiten	2::inwork -8019,14036 -8150,14064
-Hohenloher Weg: Bauarbeiten, gesperrt	2::inwork -8295,15778 -8178,15741
 Carl-Spindler-Str.: durch Bauzäune abgesperrt, manchmal (am Wochenende?) kann man aber durchfahren	2::inwork 21442,5414 21474,5388
 Henriette-Lustig-Str.: teilweise gesperrt	2::inwork 21375,4974 21380,5003
 Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21476,5048 21611,5119 21645,5135

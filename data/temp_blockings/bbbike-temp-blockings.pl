@@ -1283,7 +1283,7 @@ EOF
        text  => 'L 21; (Mühlenbecker Str.); OL Schildow grundh. Straßenbau Vollsperrung 16.08.2004-01.01.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 8230,26610 8243,26462 8187,25897
+	q4 8222,26657 8243,26462 8187,25897
 EOF
      },
      { from  => 1099177200, # 2004-10-31 01:00
@@ -10130,7 +10130,7 @@ EOF
        text  => 'L 031 zw. Bernau, hinter Zuf. Toom Baumarkt und BÜ Blumberg Deckensanierung Vollsperrung 01.10.2007-07.10.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 24186,26271 24204,25870 24244,25405 24242,25066 24281,24622 24235,24035 24697,23369 24761,23151 24718,22731
+	2::inwork 24186,26271 24204,25870 24244,25405 24242,25130 24244,25111 24281,24622 24235,24035 24697,23369 24761,23151 24718,22731
 EOF
      },
      { from  => 1191103200, # 2007-09-30 00:00
@@ -10196,7 +10196,7 @@ EOF
        text  => 'L 315 Prenden-Klosterfelde OD Klosterfelde grundhafter Straßenbau Vollsperrung 04.10.2007-30.06.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 14934,42934 15632,43100 15783,43227 16258,43457
+	q4::inwork 14934,42934 15052,42933 15485,43058 15578,43081 15869,43304 16248,43488
 EOF
      },
      { from  => 1194082880, # 2007-10-07 00:00 1191708000
@@ -13020,7 +13020,7 @@ EOF
        text  => 'L 315 Prenden-Klosterfelde OD Klosterfelde grundhafter Straßenbau Vollsperrung 04.10.2007-31.12.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 14934,42934 15632,43100
+	q4::inwork 14934,42934 15052,42933 15485,43058 15578,43081
 EOF
      },
      { from  => 1224540000, # 2008-10-21 00:00
@@ -15413,7 +15413,7 @@ EOF
        text  => 'L 029 Wandlitz - Zehlendorf zw. Stolzenhagen u. BÜ Zehlendorf Straßenausbesserungsarbeiten Vollsperrung 08.08.2009-10.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 9356,42175 9475,42182 9540,42187 9767,42206 10034,42225 10418,42259 11393,41903 11975,41509 12132,41423
+	2::inwork 9356,42175 9475,42182 9540,42187 9658,42197 9767,42206 10034,42225 10418,42259 11393,41903 11975,41509 12132,41423
 EOF
      },
      { from  => 1253052000, # 2009-09-16 00:00
@@ -16848,8 +16848,8 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: XXX wann wird die Corona-Einschränkung aufgehoben? ("Ab 15. Mai wieder Gemeinschaftssport bis zu 8 Personen erlaubt")
-#: last_checked: 2020-05-07 vvv
-#: next_check: 2020-05-15 vvv
+#: last_checked: 2020-05-17 vvv
+#: check_frequency: 30d vvv
 #: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
 #: tempex: volatile, T22-T06
 	2::night 10456,15561 10512,15406
@@ -16857,7 +16857,7 @@ EOF
 	2::temp 10512,15406 10530,15356 10583,15208
 	2::temp 10530,15356 10781,15438
 #: XXX ^^^
-#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 EOF
      },
@@ -17133,7 +17133,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2::xmas 11329,12497 11209,12430
-	1::xmas 11209,12430 11273,12301
+	1::xmas 11209,12430 11240,12368 11273,12301
 EOF
      },
      { from  => $isodate2epoch->("2019-11-15 00:00:00"), # bereits 10 Tage (mindestens!) vorher schon gesperrt (!)
@@ -18291,7 +18291,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/10/041',
        data  => <<EOF,
-	2::inwork 19611,43150 19578,43131 19107,43180 18720,43107 17840,43420 17394,43597 17006,43801 16258,43457 15783,43227 15632,43100 14934,42934
+	2::inwork 19611,43150 19578,43131 19406,43149 19345,43155 19107,43180 18720,43107 17727,43419 17394,43597 16888,43745 16299,43509 16248,43488 15869,43304 15578,43081 15485,43058 15052,42933 14934,42934
 EOF
      },
      { from  => 1279836000, # 2010-07-23 00:00
@@ -22047,26 +22047,26 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef,
+       until => 1589632289, # undef, -> gesperrt-orig
        text  => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
        permanent => 1,
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes, 2016 wieder bicycle=no vvv
-#: note: Verbot bestätigt von roald dot lange at gmx (2015-06-23)
-#: osm_watch: way id="80221295" version="21" brb
+# REMOVED --- #: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes, 2016 wieder bicycle=no vvv
+# REMOVED --- #: note: Verbot bestätigt von roald dot lange at gmx (2015-06-23)
+# REMOVED --- #: osm_watch: way id="80221295" version="21" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
-#: osm_watch: way id="83106248" version="19" brb
-	2 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
-#: osm_watch: way id="192153925" version="9" brb
-#: osm_watch: way id="136089841" version="22" brb
-#: osm_watch: way id="71293729" version="20" brb
-	2 19479,-3690 19443,-3540 19558,-3155 19626,-3031 19808,-2953 19909,-2863 19941,-2759 19909,-2677 19575,-2358 19346,-2337 19236,-2298 19131,-2145 18866,-1674 18936,-1581
-	2 19131,-2145 19192,-2124
-	2 19909,-2863 19996,-2880
-#: note: hier auch, sehr wahrscheinlich
-	2 19601,-3714 19539,-3810 19460,-3818 19282,-3928
-#: XXX_osm ^^^
+# REMOVED --- #: osm_watch: way id="83106248" version="19" brb
+# REMOVED (hier nicht) ---	2 19105,-3940 19164,-3980 19282,-3928
+	2 19282,-3928 19464,-3780 19479,-3690
+# REMOVED --- #: osm_watch: way id="192153925" version="9" brb
+# REMOVED --- #: osm_watch: way id="136089841" version="22" brb
+# REMOVED --- #: osm_watch: way id="71293729" version="20" brb
+	2 19479,-3690 19443,-3540 19558,-3155 19626,-3031 19808,-2953 19909,-2863 19927,-2756 19904,-2683 19663,-2419 19542,-2356 19330,-2340 19236,-2298 19131,-2145 18866,-1674 18936,-1581
+	2 19131,-2145 19158,-2135 19192,-2124
+	2 19909,-2863 19996,-2880 20039,-2863
+# REMOVED (nein) --- #: note: hier auch, sehr wahrscheinlich ---	2 19586,-3716 19563,-3801 19460,-3818 19282,-3928
+# REMOVED --- #: XXX_osm ^^^
 EOF
      },
      { from  => undef,
@@ -22653,7 +22653,7 @@ EOF
 #: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-04-10
+#: last_checked: 2020-05-15
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -26926,7 +26926,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-05-01 (mapillary) vvv
+#: last_checked: 2020-05-15 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27897,7 +27897,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-05-06
+#: last_checked: 2020-05-15
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29309,13 +29309,13 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Wagner-Régeny-Allee: Straße ist noch nicht komplett fertiggestellt, wegen Bauarbeiten kann die Straße gesperrt sein, voraussichtlich bis November 2019',
+       text  => 'Wagner-Régeny-Allee: Straße ist noch nicht komplett fertiggestellt, wegen Bauarbeiten kann die Straße gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="11"
-#: last_checked: 2020-04-13
+#: last_checked: 2020-05-16
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 EOF
@@ -29673,7 +29673,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.813076.php (ab August 2019)
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/berlins-erste-spielstrasse_a216586 (ab 7. August 2019)
-	q4::temp 11175,9882 11197,9894 11411,9810
+	q4::temp::play 11175,9882 11197,9894 11411,9810
 EOF
      },
      { from  => 1565374983, # 2019-08-09 20:23
@@ -30235,7 +30235,7 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-04-09 (abgesperrt)
+#: last_checked: 2020-05-15 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 EOF
@@ -30312,6 +30312,7 @@ EOF
 #: by: https://viz.berlin.de/wp-content/uploads/Bahnhofstra%C3%9Fe-Umleitungsplan.png
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/bvg-erneuert-in-der-bahnhofstrasse-rund-1000-meter-gleis-und-haltestellen_a257692
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/am-20-april-hat-der-zweite-bauabschnitt-in-der-bahnhofstrasse-begonnen_a262654
+#: by: https://twitter.com/VIZ_Berlin/status/1261298316593246209 (bis Anfang Juni 2020)
 #: source_id: 2147345568 (schon ab 9.3.2020?)
 #: source_id: 2147345558 (bis 8.6.2020)
 	q4::inwork; 22513,5747 22383,5611 22204,5447
@@ -30325,7 +30326,7 @@ EOF
        text  => 'Anschlussstelle Mühlenbeck: Sperrung der Autobahnunterführung (Abriss), von 28.02.2020 22 Uhr bis 02.03.2020 5 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 7971,30713 8071,30398
+	2::inwork 7971,30713 7985,30669 8071,30398
 EOF
      },
      { from  => 1583523384, # -> in eine Meldung konsolidiert --- $isodate2epoch->("2020-03-08 07:00:00"), # 1 Tag Vorlauf --- 1587290400, # 2020-04-19 12:00
@@ -30577,7 +30578,7 @@ EOF
 #: XXX bis wann wird hier gesperrt sein?
 #: last_checked: 2020-05-10
 #: check_frequency: 14d
-	q4::inwork 14272,11775 14247,11681 14102,11715 14127,11811
+	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
      },
      { from  => 1587852000, # 2020-04-26 00:00
@@ -30605,35 +30606,52 @@ EOF
 	2::inwork 8760,10408 8726,10351 8711,10322
 EOF
      },
-     { from  => $isodate2epoch->("2020-05-09 06:00:00"), # 1588413600, # 2020-05-02 12:00
-       until => $isodate2epoch->("2020-05-10 18:00:00"), # 1588521600, # 2020-05-03 18:00
+     { do {
+        # crude automatic weekly recurrence
+        my $end = $isodate2epoch->("2020-06-28 19:00:00");
+        my($from, $until);
+        if (time <= $end) {
+            my @l = localtime;
+            my $wd = $l[6];
+            @l[0,1,2] = (0,0,0);
+            $l[5]+=1900;
+            my $t = Time::Local::timelocal(@l) - 86400 * ($wd == 0 ? 6 : $wd-1); # last Monday 0:00 XXX wrong on DST switches!
+            $from = $t + 86400*5 + 6*3600; # Saturday 6h
+            $until = $t + 86400*6 + 19*3600; # Sunday 19h
+        } else {
+            $until = $end;
+        }
+        (from => $from, until => $until);
+       },
        accept_multi_feature_distance => 3200,
-       text  => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen sind für den Radverkehr gesperrt, am 10. Mai 2020 zwischen 12 und 18 Uhr',
+       # eigentlich angesagt war 12-18h, um den Boxhagener Platz ist es 13-19h
+       text  => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen sind für den Radverkehr gesperrt, jeden Sonntag bis Ende Juni 2020 zwischen 12 und 19 Uhr',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
        data  => <<EOF,
-S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
-S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp 13457,12505 13371,12694 13273,12902
-S3 - Gärtnerstr. zwischen Wühlischstr. und Grünberger Str.	q4::temp 14211,11552 14247,11681 14272,11775
-S4 - Krossener Str. zwischen Gabriel-Max-Str. und Seumestr.	q4::temp 14102,11715 14247,11681 14358,11656
-S5 - Lausitzer Platz um den gesamten Platz bis auf die Skalitzer Str.	q4::temp 12328,10442 12274,10612 12172,10585 12197,10494 12212,10440
-S5 - Waldemarstr. zwischen Lausitzer Platz und Manteuffelstr.	q4::temp 12172,10585 12142,10600 12056,10642
-S6o/S6w - Waldemarstr. zwischen Dresdener Str. und Legiendamm	q4::temp 11290,10972 11150,11030
-S7 - Wassertorstr. zwischen Prinzenstr. und Lobeckstr.	q4::temp 10685,10483 10484,10567
-S8 - Friedrichstr. zwischen Hedemannstr. und Franz-Klühs-Str.	q4::temp 9570,10566 9556,10666 9554,10695 9539,10820
-S9 - Arndtstr. zwischen Nostitzstr. und Schenkendorfstr.	q4::temp 9487,9209 9546,9198 9617,9185 9674,9179
-S9 - Chamissoplatz	q4::temp 9546,9198 9526,9104
-S9 - Chamissoplatz	q4::temp 9596,9092 9617,9185
-S10 - Böckhstr. zwischen Grimmstr. und Graefestr.	q4::temp 11175,9882 11197,9894 11411,9810
-S11 - Lachmannstr. zwischen Kottbusser Damm und Schönleinstr.; Boppstr. zw. Kottbusser Damm und Schönleinstr.; Schönleinstr. 7a-13	q4::temp 11745,9541 11594,9604 11541,9576 11560,9524 11785,9437
-S12 - Lübbener Str. zwischen Skalitzer Str. und Görlitzer Str.	q4::temp 12608,10294 12729,10515
-S13 - Cuvrystr. zwischen Görlitzer Str. und Schlesische Str.	q4::temp 13035,10076 13132,10239 13151,10276 13197,10355 13249,10445
-S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp 14442,11101 14468,11203
-S15 - Paul-Lincke-Ufer zwischen Glogauer Str. bis Ohlauer Str.	q4::temp 12591,9584 12439,9660 12286,9739 12116,9825
-S16 - Lilienthalstr. zwischen Bergmannstr. und Züllichauer Str.	q4::temp 10705,9234 10709,9192 10748,9054 10675,8940
-S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp 11334,10527 11258,10682
-S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp 14026,10869 13886,10939
-S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp 14058,12709 13991,12522
+S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
+S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp::play 13457,12505 13371,12694 13273,12902
+S3 - Gärtnerstr. zwischen Wühlischstr. und Grünberger Str.	q4::temp::play 14211,11552 14247,11681 14272,11775
+S4 - Krossener Str. zwischen Gabriel-Max-Str. und Seumestr.	q4::temp::play 14102,11715 14247,11681 14358,11656
+Gabriel-Max-Str.	q4::temp::play 14127,11811 14102,11715
+S5 - Lausitzer Platz um den gesamten Platz bis auf die Skalitzer Str.	q4::temp::play 12328,10442 12274,10612 12172,10585 12197,10494 12212,10440
+S5 - Waldemarstr. zwischen Lausitzer Platz und Manteuffelstr.	q4::temp::play 12172,10585 12142,10600 12056,10642
+S6o/S6w - Waldemarstr. zwischen Dresdener Str. und Legiendamm	q4::temp::play 11290,10972 11150,11030
+S7 - Wassertorstr. zwischen Prinzenstr. und Lobeckstr.	q4::temp::play 10685,10483 10484,10567
+S8 - Friedrichstr. zwischen Hedemannstr. und Franz-Klühs-Str.	q4::temp::play 9570,10566 9556,10666 9554,10695 9539,10820
+S9 - Arndtstr. zwischen Nostitzstr. und Schenkendorfstr.	q4::temp::play 9487,9209 9546,9198 9617,9185 9674,9179
+S9 - Chamissoplatz	q4::temp::play 9546,9198 9526,9104
+S9 - Chamissoplatz	q4::temp::play 9596,9092 9617,9185
+S10 - Böckhstr. zwischen Grimmstr. und Graefestr.	q4::temp::play 11175,9882 11197,9894 11411,9810
+S11 - Lachmannstr. zwischen Kottbusser Damm und Schönleinstr.; Boppstr. zw. Kottbusser Damm und Schönleinstr.; Schönleinstr. 7a-13	q4::temp::play 11745,9541 11594,9604 11541,9576 11560,9524 11785,9437
+S12 - Lübbener Str. zwischen Skalitzer Str. und Görlitzer Str.	q4::temp::play 12608,10294 12729,10515
+S13 - Cuvrystr. zwischen Görlitzer Str. und Schlesische Str.	q4::temp::play 13035,10076 13132,10239 13151,10276 13197,10355 13249,10445
+S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp::play 14442,11101 14468,11203
+S15 - Paul-Lincke-Ufer zwischen Glogauer Str. bis Ohlauer Str.	q4::temp::play 12591,9584 12439,9660 12286,9739 12116,9825
+S16 - Lilienthalstr. zwischen Bergmannstr. und Züllichauer Str.	q4::temp::play 10705,9234 10709,9192 10748,9054 10675,8940
+S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334,10527 11258,10682
+S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
+S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 EOF
      },
      { from  => undef, # 
@@ -30652,6 +30670,44 @@ EOF
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
+EOF
+     },
+     { from  => 1590271200, # 2020-05-24 00:00
+       until => 1591394399, # 2020-06-05 23:59
+       text  => 'Oberfeldstr.: Einbahnstraßenregelung zwischen Elisabethstr. und Charlottenstr., offen Richtung Süden, evtl. sind auch Radfahrer betroffen, vom 25. Mai 2020 bis 5. Juni 2020',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.932681.php',
+       data  => <<EOF,
+	q4::inwork; 20895,14319 20921,14461
+EOF
+     },
+     { from  => 1586884020, # 2020-04-14 19:07
+       until => 1593529200, # 2020-06-30 17:00
+       text  => 'Richterstr.: Bauarbeiten, Einbahnstraße zwischen Adlergestell und Bruno-Taut-Str., offen Richtung Südwesten, vom 15.04.2020 19:07 Uhr bis 30.06.2020 17:00 Uhr',
+       type  => 'handicap',
+       source_id => '2147345799',
+       data  => <<EOF,
+	q4::inwork; 22092,999 22162,1067
+EOF
+     },
+     { from  => undef, # 
+       until => 1609455600, # 2021-01-01 00:00
+       text  => 'Richterstr.: Bauarbeiten, Fahrbahn gesperrt, bis 31.12.2020 17:00 Uhr',
+       type  => 'handicap',
+       source_id => '2147343596',
+       data  => <<EOF,
+	q3::inwork 22120,886 22062,773
+EOF
+     },
+     { from  => undef, # 
+       until => undef, #
+       text  => 'August-Heinrich-Euler-Str. (BER): Bauarbeiten am Terminal, Straße kann möglicherweise gesperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX wann wird hier wieder offen sein? Wird es dann auch einen Radweg geben?
+#: last_checked: 2020-05-16
+#: check_frequency: 90d
+	2::inwork 17844,-4231 18143,-4094
 EOF
      },
     );
