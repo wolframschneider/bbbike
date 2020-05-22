@@ -4926,7 +4926,7 @@ EOF
        text  => 'K 6503 B273-Zühlsdorf-L211 (Summt-Lehnitz) Kreuzung. Summter Chaussee bei Zühlslake Neubau Kreisverkehr Vollsperrung 06.07.2006-19.08.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 7346,32257 7431,34989 8115,35387
+	q4::inwork 7346,32257 7431,34989 7454,34994 8115,35387
 	q4::inwork 7073,34715 7431,34989 7456,36042 7454,36156
 EOF
      },
@@ -5391,7 +5391,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003157',
        data  => <<EOF,
-	1::inwork 10923,13156 10776,13005
+	1::inwork 10923,13156 10863,13095 10776,13005
 	1::inwork 10776,13005 10706,13043
 	3::inwork 10755,13152 10923,13156 11033,13086 11139,13008
 EOF
@@ -9347,7 +9347,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006194',
        data  => <<EOF,
-	1::inwork 10138,20840 10118,20731 10115,20714 10088,20570 10066,20494
+	1::inwork 10138,20840 10117,20748 10114,20732 10088,20570 10066,20494
 EOF
      },
      { from  => 1185833817, # 2007-07-31 00:16
@@ -20821,7 +20821,7 @@ EOF
        # ebenfalls: ein telefonischer Hinweis
        source_id => 'http://www.s-bahn-berlin.de/aktuell/2012/144_s8.htm',
        data  => <<EOF,
-	2::inwork 13427,22935 13521,23057
+	2::inwork 13425,22932 13521,23057
 EOF
      },
      { from  => 1342130400, # 2012-07-13 00:00
@@ -21211,7 +21211,7 @@ EOF
 # REMOVED (bei VMZ abgelaufen) --- : next_check: 2013-09-01 --- #: XXX von 22.6.2013 für 10 Wochen in _beiden_ Richtungen gesperrt --- danach wieder die alte Situation herstellen --- #: XXX vmz-Eintrag dafür: Friedrich-Engels-Str. (Niederschönhausen) in beiden Richtungen zwischen Nordendstr. und Platanenstr. Geplant ab: 22.06.2013 07 Uhr, Baustelle, Straße vollständig gesperrt eine Umleitung ist eingerichtet (bis auf weiteres)	INKO_119074 --- #: priority: #A
 # REMOVED (ja) --- #: next_check: 2013-12-15 --- #: XXX danach bessere Straßenqualität? Radstreifen? --- #: osm_watch: way id="24930947" version="20"
 #: source_id: IM_020259 (zusätzlich)
-	q4::inwork; 9149,20336 9226,20124 9255,20038 9289,19947 9325,19851 9349,19782
+	q4::inwork; 9149,20336 9165,20292 9226,20124 9255,20038 9289,19947 9312,19887 9325,19851 9349,19782
 EOF
      },
      { from  => 1350252000, # 2012-10-15 00:00
@@ -26404,13 +26404,15 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # $isodate2epoch->("2017-12-01 12:00:00"), # vermutetes Ende im Herbst
+       until => undef, # $isodate2epoch->("2017-12-01 12:00:00"),
        text  => 'Teltowkanal von der Ringstraße bis Gersdorfstraße: Sanierung Fuß- und Radweg, Wege können gesperrt sein, Zeitraum unbekannt',
        type  => 'gesperrt',
 #       source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2017/pressemitteilung.608925.php',
        data  => <<EOF,
+# REMOVED --- #: XXX hier sind gerade Bauarbeiten --- Verbundsteinpflaster bleibt wohl, der wassergebundene Teil sind besser aus
 #: XXX wird sich die Qualität vielleicht bessern?
-#: XXX hier sind gerade Bauarbeiten --- Verbundsteinpflaster bleibt wohl, der wassergebundene Teil sind besser aus
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet? Hat sich die Qualität des Weges verbessert?
+#: priority: #B
 #: last_checked: 2020-05-01 vvv
 	2::inwork 7994,4430 8234,4660
 #: last_checked ^^^
@@ -26530,7 +26532,7 @@ EOF
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
 # REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-04-23
+#: last_checked: 2020-05-21
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -27671,7 +27673,7 @@ EOF
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2020-04-15
+#: last_checked: 2020-05-21
 #: check_frequency: 60d
 	q4::inwork 13391,16436 13630,16629
 EOF
@@ -30339,8 +30341,8 @@ EOF
 EOF
      },
      { from  => 1583128800, # 2020-03-02 07:00
-       until => $isodate2epoch->("2020-05-20 17:00:00"), # 1586790000, # 2020-04-13 17:00
-       text  => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 20.05.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-06-10 17:00:00"), # 1586790000, # 2020-04-13 17:00
+       text  => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 10.06.2020 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147345534',
        data  => <<EOF,
@@ -30576,7 +30578,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-05-10
+#: last_checked: 2020-05-20
 #: check_frequency: 14d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30624,8 +30626,8 @@ EOF
         (from => $from, until => $until);
        },
        accept_multi_feature_distance => 3200,
-       # eigentlich angesagt war 12-18h, um den Boxhagener Platz ist es 13-19h
-       text  => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen sind für den Radverkehr gesperrt, jeden Sonntag bis Ende Juni 2020 zwischen 12 und 19 Uhr',
+       # eigentlich angesagt war 12-18h, mittlerweile scheint es überall 13-19h zu sein
+       text  => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen sind für den Radverkehr gesperrt, jeden Sonntag bis Ende Juni 2020 zwischen 13 und 19 Uhr',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
        data  => <<EOF,
@@ -30708,6 +30710,52 @@ EOF
 #: last_checked: 2020-05-16
 #: check_frequency: 90d
 	2::inwork 17844,-4231 18143,-4094
+EOF
+     },
+     { from  => 1588490580, # 2020-05-03 09:23
+       until => 1598886000, # 2020-08-31 17:00
+       text  => 'Kameruner Str.: zwischen Müllerstr. und Togoer Str.: Bauarbeiten, Fahrbahn gesperrt, vom 04.05.2020 09:23 Uhr bis 31.08.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147345842',
+       data  => <<EOF,
+#: next_check_id: KAMERUNER-2020
+	q4::inwork 6383,15972 6484,16085 6587,16199
+EOF
+     },
+     { from  => 1589774400, # 2020-05-18 06:00
+       until => $isodate2epoch->("2020-05-19 15:00:00"), # 1589911200, # 2020-05-19 20:00
+       text  => 'Revaler Str.: Fahrbahn zwischen Modersohnstr. und Dirschauer Str. gesperrt, am 19.05.2020 von 6:00 Uhr bis 15:00 Uhr',
+       type  => 'handicap',
+       source_id => '2147345844',
+       data  => <<EOF,
+	q3::inwork 14134,11272 13970,11366
+EOF
+     },
+     { from  => 1590276600, # 2020-05-24 01:30
+       until => 1734710400, # 2024-12-20 17:00
+       text  => 'Bahnhofstr: Bahnübergang gesperrt, auch für Fuß- und Radverkehr, vom 25.05.2020 01:30 Uhr bis 20.12.2024 17:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => '2147345858',
+       data  => <<EOF,
+	2::inwork 10096,-2137 10188,-2139 10228,-2136
+EOF
+     },
+     { from  => 1590301800, # 2020-05-24 08:30
+       until => 1590850800, # 2020-05-30 17:00
+       text  => 'Kaiser-Friedrich-Str.: Bauarbeiten zwischen Lohmeyerstr. und Otto-Suhr-Allee, Fahrbahn in Richtung Norden gesperrt, evtl. sind auch Radfahrer betroffen, bis 30.05.2020',
+       type  => 'handicap',
+       source_id => '2147345862',
+       data  => <<EOF,
+	q4::inwork; 3348,12314 3279,12533
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Brücke über den Oder-Havel-Kanal: gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: osm_watch: way id="104156160" version="5"
+	2::inwork 48230,50933 48210,51009
 EOF
      },
     );

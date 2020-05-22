@@ -1982,8 +1982,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: XXX wird sich die Qualität vielleicht bessern?
-#: XXX hier sind gerade Bauarbeiten --- Verbundsteinpflaster bleibt wohl, der wassergebundene Teil sind besser aus
+         'data' => '# REMOVED --- #: XXX hier sind gerade Bauarbeiten --- Verbundsteinpflaster bleibt wohl, der wassergebundene Teil sind besser aus
+#: XXX wird sich die Qualität vielleicht bessern?
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet? Hat sich die Qualität des Weges verbessert?
+#: priority: #B
 #: last_checked: 2020-05-01 vvv
 	2::inwork 7994,4430 8234,4660
 #: last_checked ^^^
@@ -2031,7 +2033,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
 # REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-04-23
+#: last_checked: 2020-05-21
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -2221,7 +2223,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut fritz bis 16.08.2019
 #: also_indoor: traffic
 #: priority: #B
-#: last_checked: 2020-04-15
+#: last_checked: 2020-05-21
 #: check_frequency: 60d
 	q4::inwork 13391,16436 13630,16629
 ',
@@ -2957,9 +2959,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1583128800,
          'id' => 3202,
          'source_id' => '2147345534',
-         'text' => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 20.05.2020 17:00 Uhr ',
+         'text' => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 10.06.2020 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1589986800
+         'until' => 1591801200
        },
        undef,
        undef,
@@ -3093,7 +3095,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-05-10
+#: last_checked: 2020-05-20
 #: check_frequency: 14d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -3149,12 +3151,12 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1589601600,
+         'from' => 1590206400,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
-         'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen sind für den Radverkehr gesperrt, jeden Sonntag bis Ende Juni 2020 zwischen 12 und 19 Uhr',
+         'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen sind für den Radverkehr gesperrt, jeden Sonntag bis Ende Juni 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1589734800
+         'until' => 1590339600
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -3214,6 +3216,48 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'from' => undef,
          'id' => 3233,
          'text' => 'August-Heinrich-Euler-Str. (BER): Bauarbeiten am Terminal, Straße kann möglicherweise gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: KAMERUNER-2020
+	q4::inwork 6383,15972 6484,16085 6587,16199
+',
+         'from' => 1588490580,
+         'id' => 3234,
+         'source_id' => '2147345842',
+         'text' => 'Kameruner Str.: zwischen Müllerstr. und Togoer Str.: Bauarbeiten, Fahrbahn gesperrt, vom 04.05.2020 09:23 Uhr bis 31.08.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1598886000
+       },
+       undef,
+       {
+         'data' => '	2::inwork 10096,-2137 10188,-2139 10228,-2136
+',
+         'from' => 1590276600,
+         'id' => 3236,
+         'source_id' => '2147345858',
+         'text' => 'Bahnhofstr: Bahnübergang gesperrt, auch für Fuß- und Radverkehr, vom 25.05.2020 01:30 Uhr bis 20.12.2024 17:00 Uhr ',
+         'type' => 'gesperrt',
+         'until' => 1734710400
+       },
+       {
+         'data' => '	q4::inwork; 3348,12314 3279,12533
+',
+         'from' => 1590301800,
+         'id' => 3237,
+         'source_id' => '2147345862',
+         'text' => 'Kaiser-Friedrich-Str.: Bauarbeiten zwischen Lohmeyerstr. und Otto-Suhr-Allee, Fahrbahn in Richtung Norden gesperrt, evtl. sind auch Radfahrer betroffen, bis 30.05.2020',
+         'type' => 'handicap',
+         'until' => 1590850800
+       },
+       {
+         'data' => '#: osm_watch: way id="104156160" version="5"
+	2::inwork 48230,50933 48210,51009
+',
+         'from' => undef,
+         'id' => 3238,
+         'text' => 'Brücke über den Oder-Havel-Kanal: gesperrt',
          'type' => 'gesperrt',
          'until' => undef
        }

@@ -9,8 +9,8 @@
 # 
 # 
 #: next_check_id: HERMANNHESSESTR-2019
-#: last_checked: 2020-05-10
-#: next_check: 2020-05-30
+#: last_checked: 2020-05-21
+#: next_check: 2020-07-06
 	X::inwork 9868,19023
 # 
 # REMOVED --- #: note: Baustellenampel in der Neuen Roßstr. --- #: source_id: 2147345021 (bis 06.07.2020) --- #: source_id: 2147345825 --- #: XXX ist die Ampel mittlerweile abgebaut (wegen der Einbahnstraßenregelung)? --- #: XXX laut fritz Sperrung bis 2020-06-30 --- #: last_checked: 2020-05-12 --- #: next_check: 2020-05-13 --- #: valid: -20200706 ---	X::inwork 10780,11721
@@ -25,7 +25,7 @@
 # REMOVED --- #: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer --- #: source_id: 2147344652 (bis Mitte Dezember 2019) --- #: last_checked: 2019-11-30 --- #: next_check: 2019-12-13 --- #: valid: 20190822-20191213 ---	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-05-14 vvv
+#: last_checked: 2020-05-18 vvv
 #: next_check: 2020-07-10 vvv
 #: valid: 20190319-20200710 vvv
 #: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20, 2020-03-23, 2020-04-06, 2020-04-12)
@@ -2635,10 +2635,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: Anforderungsampel
 	F 30037,4176
 	F 23059,4635
-#: XXX Baustellenampel; bleibt sie permanent?
-#: osm_watch: node id="76598376" version="11"
-#: last_checked: 2020-01-01 (mapillary)
-#: check_frequency: 180d
+# REMOVED (permanent) --- #: XXX Baustellenampel; bleibt sie permanent? --- #: osm_watch: node id="76598376" version="11" --- #: last_checked: 2020-01-01 (mapillary) --- #: check_frequency: 180d
 	X 13256,26863
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20100805.1445.305319.html
 #: confirmed_by: srt
@@ -2808,7 +2805,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2020-05-15
+#: last_checked: 2020-05-21
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
@@ -3143,6 +3140,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 20944,14840
 # 
 #: by: mapillary (noch provisorisch, wird aber permanent bleiben)
+#: confirmed_by: srt
 	X 12015,24351
 # 
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=14708&options=8 (beschlossen durch BVV)
@@ -3153,12 +3151,14 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: osm_watch: node id="661594841" version="3"
 #: note: provisorische Ampel
 #: note: Anforderungsampel
-#: XXX bleibt diese Ampel permanent?
-#: last_checked: 2020-04-06
+#: XXX bleibt die Ampel Hermannstr./Thomasstr. permanent?
+#: last_checked: 2020-05-18
 	F::inwork 12181,7390
 # 
 #: note: Anforderungsampel für Radfahrer in der Relation Brachvogelstr. - Mittenwalder Str.
 	X 10006,9942
+#: by: bahninfo-forum, mapillary
+	F -6203,13221
 # 
 ################################################################################
 #: note: Potsdam vvv
@@ -3306,7 +3306,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2020-05-16 vvv
+#: last_checked: 2020-05-18 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738

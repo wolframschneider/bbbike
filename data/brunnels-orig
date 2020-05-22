@@ -215,6 +215,7 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: by: https://binnenschifffahrt-online.de/2020/02/featured/12772/vorbereitungen-fuer-ersatzneubau-der-tegeler-bruecke-in-berlin-starten/ (ab August 2020 bis Dezember 2023)
 #: XXX erstmal wird eine Behelfsbrücke erstellt (westlich); die neue Brücke wird Platz für eine Radwegunterführung haben
 #: source_id: 2147345790
+#: last_checked: 2020-05-17 (mapillary)
 #: next_check: 2020-08-15
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
 # 
@@ -389,6 +390,7 @@ Kronprinzenbrücke	Br 8424,12853 8503,12895
 Steg am Paul-Löbe-Haus	Br 8415,12749 8593,12742
 Stelling-Janitzky-Brücke	Br 20928,2378 20868,2443
 Modersohnbrücke	Br 14076,11057 14096,11134
+#: note: offiziell ausgeschildert
 Warschauer Brücke	Br 13454,11119 13476,11174 13493,11217 13541,11355
 Fußgängerbrücke zwischen U-Bhf. und S-Bhf. Warschauer Str.	Br 13498,11136 13524,11204
 Fußgängerbrücke zur Mercedes-Benz Arena	Br 13503,11179 13514,11208
@@ -468,7 +470,7 @@ Hugo-Heimann-Brücke	Br 9147,17941 9171,17937 9190,17932
 Gotenburgsteg	Br 8839,16873 8823,16877 8804,16881
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4742 (Name)
 #: by: http://schälerbau.de/projekte/Flaischlenbruecke.html (Name)
-Flaischlenbrücke	Br 13414,22945 13427,22935
+Flaischlenbrücke	Br 13415,22940 13425,22932
 (Brücke über die Panke)	Br 8573,16443 8592,16436
 (Brücke über die Panke)	Br 10513,18854 10497,18883
 #: by: vmz detailnetz (Name)
@@ -616,7 +618,7 @@ Zinnowwegbrücke	Br -376,4102 -388,4119
 #: by: http://www.stadtentwicklung.berlin.de/download/bruecken/Brueckeninstandstandsetzungen2016.pdf
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621&date=20180130 ("voraussichtlich ab 2019 neu gebaut")
 #: XXX wird vermutlich nach der Fertigstellung der Königsteinbrücke abgerissen und neu gebaut
-#: last_checked: 2020-04-01 (mapillary)
+#: last_checked: 2020-05-21
 #: next_check: 2021-01-01
 Hebammensteigbrücke	Br 13168,21706 13046,21734
 # 
@@ -679,6 +681,7 @@ Lindensteg	Br -3306,14035 -3291,14043
 #: section ^^^
 #
 ## Brandenburg und weiter ####################################################
+Brücke über den Oder-Havel-Kanal	Br 48210,51009 48230,50933
 Brücke beim Havelpark	Br -11273,13718 -11233,13707
 Eisenbahnbrücke	Br 36485,48156 36406,48181
 Autobahnbrücke	Br 18008,23667 18032,23590
