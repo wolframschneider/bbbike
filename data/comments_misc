@@ -138,7 +138,6 @@ als Puschkinallee 6c, 6d ausgeschildert	CP2; 13999,9842 14077,10016
 Durch Toreinfahrt (immer offen)	CP2; 14043,10928 14107,10911
 als Sackgasse ausgeschildert	CP2; 14671,10751 14562,10782
 Radfahren durch den Park erlaubt	CS 6534,1702 6673,1748 6844,1813
-Kein MIV-Durchgangsverkehr, nur Anlieger und Linienverkehr	CS -13036,342 -12992,244
 Teltower Weg: nicht ausgeschildert	CP2; -107,5880 -174,5941
 Kreisverkehr	Roundabout 19907,12501
 Röntgentaler Weg: durch den Schloßpark	CS 16166,25767 16222,25829 16532,26174
@@ -226,7 +225,7 @@ ausgeschildert nach Charlottenhof	CP2; -14500,-2012 -14536,-1943
 ausgeschildert mit Tafel "Windfeld Randowhöhe" und "Wolliner Weg"	CP2; 52527,98581 52471,98189
 ausgeschildert zum Sportplatz	CP2; 13535,10184 13371,9974
 Route nach Prenzlau ausgeschildert	CP2; 50420,96012 50188,95514
-als Julius-Leber-Brücke ausgeschildert	CP; 7604,8927 7563,8871 7548,8879
+als Julius-Leber-Brücke ausgeschildert	CP; 7467,8863 7497,8916 7548,8879
 Ausgeschildert als Matheshöher Weg	CP2; 49488,96427 49056,96700
 Ausgeschildert als Britzer Str.	CP2; 33044,51831 33415,51839
 Ausgeschildert als Blütenberger Weg	CP2; 36914,54197 34819,54697
@@ -693,3 +692,5 @@ Friedrich-Meinecke-Weg: nicht ausgeschildert	CS 1803,5397 1873,5385 1946,5385 20
 (Allmersweg - Groß-Berliner Damm): Hausdurchfahrt	CS 17789,5189 17726,5166
 BER - B96a: keine Möglichkeit, zum gegenüberliegenden Radweg zu gelangen	CP; 18672,-1340 18666,-1325 18777,-1298
 ausgeschildert als Pinienweg	CS 5223,16783 5141,16799 5091,16810 5035,16819 5012,16824 5005,16824
+zum Grundstück Str. 52A Nr. 39B	CP; 11252,21022 11371,21121 11382,21083
+ausgeschildert Schönhauser Str. 29, 29A	CP2; 11599,20973 11499,21030

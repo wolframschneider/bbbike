@@ -38,8 +38,8 @@ Eiswerder (Brücken, Straßen): Asphalt	Q0 -2675,15513 -2453,15476 -2447,15476 -24
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-spandau/presse/archiv/20051011.1220.31015.html
 Eiswerderstr.: Asphalt	Q0 -2883,15571 -2783,15538 -2712,15520 -2702,15517 -2675,15513
 # REMOVED --- #: XXX ist hier mittlerweile asphaltiert oder existieren hier Radwege/-spuren? --- #: XXX Baumaßnahme 6.9 (Realisierung bis 2010) --- #: osm_watch: way id="23044831" version="12"
-Neue Kreisstr.: Kopfsteinpflaster	Q2; -7619,-1406 -7482,-1319 -7383,-1211 -7310,-1131 -7196,-1029
-Neue Kreisstr.: Asphaltstreifen	Q0-; -7196,-1029 -7310,-1131 -7383,-1211 -7482,-1319 -7619,-1406
+Neue Kreisstr.: Kopfsteinpflaster	Q2; -7575,-1383 -7482,-1319 -7383,-1211 -7310,-1131 -7196,-1029
+Neue Kreisstr.: Asphaltstreifen	Q0-; -7196,-1029 -7310,-1131 -7383,-1211 -7482,-1319 -7575,-1383
 Markgrafendamm: Asphalt	Q0 14558,10264 14608,10409 14641,10552 14675,10693 14671,10751 14674,10811
 Markgrafendamm/Hauptstr.: asphaltiert	Q0 14674,10811 14717,10855 14810,10832 14904,10812
 # REMOVED --- #: next_check_id: HAUPTSTR-2015 vvv --- #: XXX nach den Bauarbeiten vermutlich asphaltiert mit Radwegen oder -spuren vvv --- #: source_id: 2147339565 vvv --- #: last_checked: 2016-08-25 vvv --- #: next_check: 2016-08-29 vvv
@@ -788,7 +788,7 @@ Böcklinstr.: Kopfsteinpflaster	Q2 14674,11370 14598,11245
 #: by: http://www.berliner-woche.de/heinersdorf/verkehr/radstreifen-und-neue-querungen-d155368.html
 #: note: bei regem Kfz-Verkehr ist es nicht möglich, den asphaltierten Fahrbahnabschnitt zu benutzen
 #: corrected_by: Fil (vorher Q1-)
-#: osm_watch: way id="266580485" version="10"
+#: osm_watch: way id="266580485" version="11"
 #: last_checked: 2020-05-21
 #: check_frequency: 90d
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert	Q2 12736,17998 12462,17814
@@ -9224,7 +9224,7 @@ Höhenweg: unbefestigte Straße	Q2 9940,26273 9812,26186
 Arkenberger Damm: Asphalt	Q0 12400,25484 12324,25514 12305,25513
 Arkenberger Damm: Schotterstraße	Q2+ 12305,25513 11964,25488 11882,25570 11878,25627
 Am Vorwerk: Beton	Q0 12697,25704 12591,25762
-Am Vorwerk: Asphalt	Q0- 12591,25762 12488,25757 12131,26020
+Am Vorwerk: Asphalt	Q0- 12591,25762 12488,25757 12118,26153
 (Pankeweg - Wolfgang-Heinz-Str.): Verbundsteinpflaster	Q1 16131,24988 16168,24908
 Mühlenweg (Karow): Verbundsteinpflaster	Q1 15347,22275 15411,22369 15445,22352
 (Hechtgraben - Wartenberger Weg): Verbundsteinpflaster	Q1 16325,18796 16216,19183
@@ -11549,7 +11549,7 @@ Fritzi-Massary-Str. [am Highdeck]: Asphalt	Q0 15361,6317 15360,6424
 (Zinnowitzer Weg - Schönhauser Str.): unbefestigter Weg	Q2 11371,21121 11377,21127 11499,21030
 (Zinnowitzer Weg - Schönhauser Str.): unbefestigte Straße	Q2 11499,21030 11599,20973
 (Greifswalder Bucht): unbefestigte Straße	Q2 11252,21022 11294,21005 11360,20982
-(Zoppoter Weg): unbefestigte Straße	Q2 11242,21348 11296,21266 11371,21121 11379,21053 11360,20982 11318,20894
+(Zoppoter Weg): unbefestigte Straße	Q2 11242,21348 11296,21266 11371,21121 11382,21083 11360,20982 11318,20894
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -18175,7 +18175,7 @@ Drachenfelsstr.: welliger Asphalt	Q1 18951,8574 18956,8618 18945,8660 18927,8702
 #: by: Andrea Kliche: vvv
 #: note: ein anonymer Eintrag hat einen (diesen?) Mittelweg mit "loser Sandweg" attributiert:
 #: corrected_by: srt (Q2 -> Q0) "kein radweg, viele parkende autos, daher mäßig befahrbar"
-Mittelweg (Altglienicke): Beton	Q0 20252,901 20171,698 20136,608 20082,463 20035,348
+Chaukenstr./Mittelweg (Altglienicke): Beton	Q0 20252,901 20171,698 20136,608 20082,463 20035,348
 Mittelweg (Altglienicke): Beton	Q0 20098,359 20082,463
 #: corrected_by: srt (Kopfsteinpflaster -> Asphalt (nur dieses Teilstück))
 Ecksteinweg: Asphalt	Q1 17830,5324 17791,5371
@@ -21086,7 +21086,7 @@ Küselstr.: mäßiger Beton	Q1- 12299,15463 12221,15514 12158,15556 12094,15598 120
 #: corrected_by: srt (guter Asphalt -> Beton)
 Korkedamm: Beton	Q0- 19244,2141 19296,2257 19327,2288 19375,2341 19549,2331
 #: confirmed_by: srt
-Korkedamm: guter Asphalt	Q0 19549,2331 19654,2325 19962,2277 20100,2247
+Korkedamm: guter Asphalt	Q0 19549,2331 19654,2325 19810,2313 19962,2277 20100,2247
 #: by: ^^^
 # 
 #: by: Klaus Jürchott: vvv
@@ -25765,7 +25765,7 @@ Wittfeldstr.: Kopfsteinpflaster	Q2 -6276,14820 -6299,14828
 Wittfeldstr.: unbefestigte Straße, holprig	Q2- -6299,14828 -6429,14879
 Beim Pfarrhof: guter Asphalt	Q0 -7304,14567 -7292,14811
 #: confirmed_by: mapillary
-Hamburger Str.: Asphalt	Q0 -8198,15648 -8178,15741 -8151,15863 -8080,16150
+Hamburger Str.: Asphalt	Q0 -8198,15648 -8178,15741 -8151,15863 -8085,16144
 #: confirmed_by: srt
 Hochhausweg: Beton	Q0- -6755,15682 -6890,15692
 #: confirmed_by: srt

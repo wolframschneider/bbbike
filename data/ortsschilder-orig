@@ -1092,6 +1092,26 @@ Berlin	OS 16273,-824
 #: by: mapillary
 Berlin	OS -1982,24514
 Berlin	OS 17328,26912
+#: by: mapillary
+Berlin	OS 5425,-133
+#: by: mapillary
+Berlin	OS 30738,5801
+#: by: mapillary
+Berlin	OS 19579,20554
+#: by: mapillary
+Berlin	OS -8085,16144
+#: by: mapillary
+Berlin	OS -9005,13354
+#: by: mapillary
+Berlin	OS -5942,10826
+#: by: mapillary
+Berlin	OS -8966,7597
+#: by: mapillary
+Berlin	OS -7575,-1383
+#: by: mapillary
+Berlin	OS -1542,1443
+#: by: mapillary
+Berlin	OS 22001,-1632
 Mehrow	OS 25861,19127
 Mehrow	OS 25253,18365
 Mehrow	OS 25327,19421
@@ -1142,6 +1162,8 @@ Stahnsdorf	OS -2777,-3540
 #: by: mapillary
 Stahnsdorf	OS 354,-3850
 Stahnsdorf	OS 0,-2845
+#: by: mapillary
+Stahnsdorf	OS -347,-1747
 Teltow	OS 166,-2946
 Teltow	OS -624,-1468
 Teltow	OS 3721,195
@@ -1209,6 +1231,8 @@ Potsdam	OS -7418,-1200
 Potsdam	OS -7993,-2287
 Potsdam	OS -13891,-3173
 Potsdam	OS -13384,2979
+#: by: mapillary
+Potsdam	OS -7575,-1383
 Sacrow	OS -9834,2806
 Sacrow	OS -10900,2189
 Caputh	OS -15732,-6454
@@ -1309,6 +1333,8 @@ Falkensee	OS -7168,16258
 Falkensee	OS -8464,15708
 #: by: mapillary
 Falkensee	OS -10031,18697
+#: by: mapillary
+Falkensee	OS -8085,16144
 # 
 #: linked: Siedlung Schönwalde vvv
 Schönwalde-Siedlung	OS -6788,20819
@@ -1489,6 +1515,10 @@ Grubo	OS -48249,-37961
 Raben	OS -44763,-41820
 Ludwigsfelde	OS 1899,-8471
 Ludwigsfelde	OS 3077,-9731
+#: by: mapillary vvv
+Ludwigsfelde	OS 2353,-11431
+Ludwigsfelde	OS 1942,-12684
+#: by: ^^^
 Genshagen	OS 3077,-9731
 #: by: mapillary vvv
 Genshagen	OS 4488,-9955
@@ -1664,4 +1694,5 @@ Birkholzaue	OS 24244,25111
 Zühlsdorf Zühlslake	OHT 7454,34994
 #: linked: Lehnitz|/Nordbahn
 Lehnitz	OS 976,37089
+Neubeeren	OHT 1860,-6140
 #: by: ^^^
