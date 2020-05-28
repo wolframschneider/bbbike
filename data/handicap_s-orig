@@ -44,7 +44,7 @@ Gubener Str.: zwischen Marchlewskistr. und Hildegard-Jadamowitz-Str. Sperrung de
 Bödikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-05-18 vvv
+#: last_checked: 2020-05-25 vvv
 #: check_frequency: 14d vvv
 #: valid: -20200710 vvv
 #: XXX_prog eigentlich besser mit handicap_directed darstellbar
@@ -137,6 +137,13 @@ Müncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 1245
 ### Mariendorf ###
 # 
 # REMOVED --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=45739 --- #: by: https://www.berliner-woche.de/mariendorf/c-verkehr/kosleckweg-mit-kopfsteinpflaster-ist-zur-vielbefahrenen-strasse-mutiert_a202642 (Ende der Bauarbeiten nicht vor August 2019) --- #: source_id: 2147342785 (Gesamtbaumaßnahme bis Mitte September 2019) --- #: XXX laut fritz bis 2.9.2019, mittlerweile "bis auf Weiteres" --- #: also_indoor: traffic (H,ex-G) --- #: priority: #A --- #: last_checked: 2019-08-03 (mapillary) --- #: next_check: 2019-09-17 --- #: valid: -20190917 --- Eisenacher Str.: Bauarbeiten, Fahrbahn in Richtung Osten gesperrt, Radfahrer dürfen auf dem Gehweg fahren	q2::inwork; 9275,4672 9405,4667 9494,4658 9695,4638
+# 
+### Lichtenrade ###
+# 
+#: next_check_id: BAHNHOFSTR-2020
+#: source_id: 2147345858
+#: next_check: 2023-07-31
+(Notweg Bahnübergang Bahnhofstr.): Fußgänger, für Radfahrer frei	q3 10228,-2136 10228,-2159 10201,-2171 10166,-2183 10155,-2144 10096,-2137
 # 
 ### Treptow ###
 # 
@@ -613,7 +620,7 @@ Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 1425
 #: source_id: 2147343690
 #: source_id: LMS-BR_r_LMS-BR_6571
 #: XXX laut viz bis Ende 2022, laut fritz bis voraussichtlich 31.12.2021 (aber Meldung schon lange nicht mehr vorhanden)
-#: last_checked: 2020-05-22 (webcam) vvv
+#: last_checked: 2020-05-24 (webcam) vvv
 #: check_frequency: 7d vvv
 provisorische Radwegführung, Fußgänger, Seitenwechsel notwendig	q3::inwork; 14344,7003 14257,6895 14213,6840 14153,6795 14051,6731
 provisorische Radwegführung, Fußgänger, Seitenwechsel notwendig	q3::inwork; 14051,6731 14153,6795 14213,6840 14257,6895 14344,7003
@@ -666,6 +673,7 @@ Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 
 #: by: 7. Baustellennewsletter der Aktion Karl-Marx-Str. (Abschluss des Abschnitts bis zur Erkstr.: Frühsommer 2020) 
 #: by: https://www.kms-sonne.de/baustellennews/?date=20200115 (ab Februar 2020 wird die Einbahnstraßenregelung südlich der Werbellinstr. aufgehoben; außerdem wird die Rollbergstr. für fünf Monate zur Sackgasse)
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/jetzt-wird-von-zwei-seiten-aus-gebuddelt_a249214 (hier: ab Mitte Februar 2020)
+#: by: https://www.kms-sonne.de/baustellennews/?date=20200526 (Abschluss bis Rollberstr. voraussichtlich Mitte Juli 2020)
 #: XXX laut fritz bis 31.12.2021
 #: source_id: IM_022515
 #: source_id: 2147338550
@@ -676,6 +684,7 @@ Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 
 #: also_indoor: traffic
 #: last_checked: 2020-05-18
 #: check_frequency: 60d
+#: next_check: 2020-07-15
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249 12753,8187
 # 
 # REMOVED (hier offen) --- Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12753,8187 12794,8103

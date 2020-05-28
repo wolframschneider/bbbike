@@ -2557,8 +2557,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2020-05-02
-#: next_check: 2020-05-31
+#: last_checked: 2020-05-27
+#: check_frequency: 7d
 	2::inwork 14567,10814 14469,10841 14352,10874
 ',
          'from' => 1560636000,
@@ -2867,8 +2867,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-04-21
+         'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet?
+#: last_checked: 2020-05-25
 #: check_frequency: 21d
 	2::inwork 15420,12178 15520,12160 15628,12246
 ',
@@ -3006,18 +3006,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147345645
-	q4::inwork 9648,-1928 9531,-1931 9428,-1892 9393,-1873 9312,-1832 9206,-1771
-#	q4::inwork 9093,-1670 9139,-1350
-',
-         'from' => 1585548000,
-         'id' => 3212,
-         'source_id' => '2147345644',
-         'text' => 'Blohmstr. zwischen Cecilienstr. und Gätzschmannpfad: Bauarbeiten, Fahrbahn gesperrt, vom 31.03.2020 08:00 Uhr bis 26.05.2020 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1590505200
-       },
+       undef,
        undef,
        undef,
        {
@@ -3071,8 +3060,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: note: offizielle Umleitung über Fischerstr.
+#: add_fragezeichen: Sind die Bauarbeiten in der Zobtener Str. mittlerweile beendet?
 #: priority: #A
-#: last_checked: 2020-05-09
+#: last_checked: 2020-05-25
 #: check_frequency: 14d
 	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
 ',
@@ -3119,7 +3109,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'accept_multi_feature_distance' => 3200,
-         'data' => 'S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
+         'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/angebot-auf-der-baenschstrasse-wurde-verkuerzert_a268825
+# REMOVED --- S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
+S1 - Bänschstr. zwischen Voigtstr. und Pettenkoferstr. Südseite	q4::temp::play 14798,12502 15005,12443
 S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp::play 13457,12505 13371,12694 13273,12902
 S3 - Gärtnerstr. zwischen Wühlischstr. und Grünberger Str.	q4::temp::play 14211,11552 14247,11681 14272,11775
 S4 - Krossener Str. zwischen Gabriel-Max-Str. und Seumestr.	q4::temp::play 14102,11715 14247,11681 14358,11656
@@ -3143,12 +3135,12 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1590206400,
+         'from' => 1590811200,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen sind für den Radverkehr gesperrt, jeden Sonntag bis Ende Juni 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1590339600
+         'until' => 1590944400
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -3169,16 +3161,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '	q4::inwork; 20895,14319 20921,14461
-',
-         'from' => 1590271200,
-         'id' => 3230,
-         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.932681.php',
-         'text' => 'Oberfeldstr.: Einbahnstraßenregelung zwischen Elisabethstr. und Charlottenstr., offen Richtung Süden, evtl. sind auch Radfahrer betroffen, vom 25. Mai 2020 bis 5. Juni 2020',
-         'type' => 'handicap',
-         'until' => 1591394399
-       },
+       undef,
        {
          'data' => '	q4::inwork; 22092,999 22162,1067
 ',
@@ -3223,16 +3206,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'until' => 1598886000
        },
        undef,
-       {
-         'data' => '	q4::inwork 10096,-2137 10188,-2139 10228,-2136
-',
-         'from' => 1590276600,
-         'id' => 3236,
-         'source_id' => '2147345858',
-         'text' => 'Bahnhofstr: Bahnübergang gesperrt, "Notweg" für den Fuß- und Radverkehr, vom 25.05.2020 01:30 Uhr bis Ende Juli 2023',
-         'type' => 'handicap',
-         'until' => 1690815600
-       },
+       undef,
        undef,
        {
          'data' => '#: osm_watch: way id="104156160" version="5" brb
@@ -3243,6 +3217,17 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'text' => 'Brücke über den Oder-Havel-Kanal: offiziell gesperrt',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       undef,
+       {
+         'data' => '#: source_id: 2147345874
+	q4::inwork 14211,11552 14181,11434
+',
+         'from' => 1590562800,
+         'id' => 3240,
+         'text' => 'Gärtnerstr.: Bauarbeiten, Fahrbahn zwischen Simplonstr. und Wühlischstr. gesperrt, bis zum 14.08.2020 17 Uhr',
+         'type' => 'handicap',
+         'until' => 1597417200
        }
      
 );

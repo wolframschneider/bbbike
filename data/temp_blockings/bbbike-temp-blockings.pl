@@ -6943,7 +6943,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004322',
        data  => <<EOF,
-	2::inwork -7640,26928 -7565,26755 -7509,26621 -7309,26146 -7243,25847 -7230,25622 -7260,25515 -7421,24956 -7603,24696
+	2::inwork -7640,26928 -7565,26755 -7527,26670 -7479,26553 -7309,26146 -7243,25847 -7230,25622 -7260,25515 -7421,24956 -7603,24696
 EOF
      },
      { from  => 1165705200, # 2006-12-10 00:00
@@ -29304,8 +29304,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2020-05-02
-#: next_check: 2020-05-31
+#: last_checked: 2020-05-27
+#: check_frequency: 7d
 	2::inwork 14567,10814 14469,10841 14352,10874
 EOF
      },
@@ -30221,8 +30221,8 @@ EOF
        text  => 'Rathauspark: Bauarbeiten, Weg ist gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: add_fragezeichen: Wann wird der Weg wieder eröffnet? Ändert sich nach den Bauarbeiten die Wegbeschaffenheit?
-#: last_checked: 2020-04-21
+#: add_fragezeichen: Wann wird der Weg wieder eröffnet?
+#: last_checked: 2020-05-25
 #: check_frequency: 21d
 	2::inwork 15420,12178 15520,12160 15628,12246
 EOF
@@ -30554,8 +30554,9 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: note: offizielle Umleitung über Fischerstr.
+#: add_fragezeichen: Sind die Bauarbeiten in der Zobtener Str. mittlerweile beendet?
 #: priority: #A
-#: last_checked: 2020-05-09
+#: last_checked: 2020-05-25
 #: check_frequency: 14d
 	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
 EOF
@@ -30631,7 +30632,9 @@ EOF
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
        data  => <<EOF,
-S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
+#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/angebot-auf-der-baenschstrasse-wurde-verkuerzert_a268825
+# REMOVED --- S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
+S1 - Bänschstr. zwischen Voigtstr. und Pettenkoferstr. Südseite	q4::temp::play 14798,12502 15005,12443
 S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp::play 13457,12505 13371,12694 13273,12902
 S3 - Gärtnerstr. zwischen Wühlischstr. und Grünberger Str.	q4::temp::play 14211,11552 14247,11681 14272,11775
 S4 - Krossener Str. zwischen Gabriel-Max-Str. und Seumestr.	q4::temp::play 14102,11715 14247,11681 14358,11656
@@ -30674,8 +30677,8 @@ EOF
 #: XXX ^^^
 EOF
      },
-     { from  => 1590271200, # 2020-05-24 00:00
-       until => 1591394399, # 2020-06-05 23:59
+     { from  => 1590346682, # REMOVED -> Radfahrer nicht betroffen --- 1590271200, # 2020-05-24 00:00
+       until => 1590346683, # 1591394399, # 2020-06-05 23:59
        text  => 'Oberfeldstr.: Einbahnstraßenregelung zwischen Elisabethstr. und Charlottenstr., offen Richtung Süden, evtl. sind auch Radfahrer betroffen, vom 25. Mai 2020 bis 5. Juni 2020',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.932681.php',
@@ -30732,7 +30735,7 @@ EOF
 EOF
      },
      { from  => 1590276600, # 2020-05-24 01:30
-       until => $isodate2epoch->("2023-07-31 17:00:00"), # 1734710400, # 2024-12-20 17:00
+       until => 1590347417, # -> gesperrt-orig etc. --- $isodate2epoch->("2023-07-31 17:00:00"), # 1734710400, # 2024-12-20 17:00
        text  => 'Bahnhofstr: Bahnübergang gesperrt, "Notweg" für den Fuß- und Radverkehr, vom 25.05.2020 01:30 Uhr bis Ende Juli 2023',
        type  => 'handicap',
        source_id => '2147345858',
@@ -30756,6 +30759,24 @@ EOF
        data  => <<EOF,
 #: osm_watch: way id="104156160" version="5" brb
 	2::inwork 48230,50933 48210,51009
+EOF
+     },
+     { from  => 1590271200, # 2020-05-24 00:00
+       until => 1590515329, # 1590703200, # 2020-05-29 00:00
+       text  => 'Alt-Lietzow: zwischen Arcostr. und Warburgzeile gesperrt, evtl. sind auch Radfahrer betroffen, vom 25.05.2020 bis 28.05.2020 ',
+       type  => 'handicap',
+       source_id => 'LMS-BR_r_LMS-BR_205218_LMS-BR_72',
+       data  => <<EOF,
+	q4::inwork 3868,12401 4061,12381
+EOF
+     },
+     { from  => $isodate2epoch->("2020-05-27 09:00:00"),
+       until => $isodate2epoch->("2020-08-14 17:00:00"),
+       text  => 'Gärtnerstr.: Bauarbeiten, Fahrbahn zwischen Simplonstr. und Wühlischstr. gesperrt, bis zum 14.08.2020 17 Uhr',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147345874
+	q4::inwork 14211,11552 14181,11434
 EOF
      },
     );
