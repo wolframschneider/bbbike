@@ -156,7 +156,7 @@ Lindenhofbrücke	Br 12108,24547 12136,24607
 #: by: https://www.berliner-woche.de/pankow/c-verkehr/bruecke-ueber-die-a114-wird-neu-gebaut_a264184
 #: osm_watch: way id="9712546" version="13"
 #: also_indoor: search Bucher_Straße
-#: last_checked: 2020-04-18 (mapillary)
+#: last_checked: 2020-06-04 (mapillary)
 #: next_check: 2021-05-01
 Bucher Str., Autobahnbrücke	Br 12892,23298 12925,23322
 Bucher Str., S-Bahnbrücke	Br 13045,23465 13080,23508
@@ -328,7 +328,7 @@ Charlottenburger Brücke	Br 5381,11847 5478,11860
 Untere Freiarchenbrücke	Br 5790,11643 5802,11677
 Untere Schleusenbrücke	Br 5818,11722 5835,11768
 Marchbrücke	Br 5013,12323 4993,12291 4973,12256
-Dovebrücke	Br 4648,12559 4616,12532 4591,12511
+Dovebrücke	Br 4648,12559 4591,12511
 Röntgenbrücke	Br 4303,12692 4290,12569
 Caprivibrücke	Br 3741,12607 3738,12639 3734,12715
 Prenzlauer Promenade	Br 11953,19363 12003,18896
@@ -616,6 +616,7 @@ Zinnowwegbrücke	Br -376,4102 -388,4119
 #: by: http://www.berlin.de/imperia/md/content/bapankow/pressestelle/ba-beschluesse/11.12.2012_benennung_eine_oeffentlichen_weges_im_ortsteil_franzoesich_buchholz__lageplan.pdf?start&ts=1355910105&file=11.12.2012_benennung_eine_oeffentlichen_weges_im_ortsteil_franzoesich_buchholz__lageplan.pdf
 #: by: http://www.stadtentwicklung.berlin.de/download/bruecken/Brueckeninstandstandsetzungen2016.pdf
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4621&date=20180130 ("voraussichtlich ab 2019 neu gebaut")
+#: by: https://www.berliner-woche.de/tempelhof-schoeneberg/c-verkehr/bezirksamt-listet-alle-2020-kommenden-radverkehrsanlagen-auf_a274738 (Neubau, bis Ende 2021)
 #: XXX wird vermutlich nach der Fertigstellung der Königsteinbrücke abgerissen und neu gebaut
 #: last_checked: 2020-05-21
 #: next_check: 2021-01-01

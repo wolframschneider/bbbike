@@ -4,7 +4,6 @@
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
 Gubener Str.: zwischen Marchlewskistr. und Hildegard-Jadamowitz-Str. Sperrung der Fahrbahn	q4::inwork 13168,12219 13151,12266 13198,12311
-(Umfahrung Baustelle): einige Fuﬂg‰nger, kurvig	q2 14717,10855 14692,10867 14667,10904 14485,10959 14477,10941 14397,10966 14390,10984 14314,10998
 Bˆdikerstr.: Abschnitt der Fahrbahn gesperrt, auf Gehweg ausweichen	q3::inwork 14405,10340 14447,10491
 Stralauer Allee: Straﬂenseite wechseln, Ampel	q3::inwork; 14405,10340 14558,10264
 Stralauer Allee: enge Stelle	q2::inwork; 14558,10264 14405,10340
@@ -29,13 +28,14 @@ Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahr
 Jerusalemer Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 9936,11469
 Sch¸tzenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 (provisorischer Zugang zur neuen Alexandrinenstr.): eng, Fuﬂg‰nger	q3::inwork 10678,11172 10690,11180
-Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290 10091,12232
+Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9990,12404 10058,12290
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraﬂe Richtung S¸den	q4::inwork; 9475,12365 9462,12481 9454,12558
 Universit‰tsstr.: Fahrbahn wegen Bauarbeiten in Richtung S¸den gesperrt	q4::inwork; 9581,12588 9613,12381
 Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364 9934,12420
 Schillingstr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q3::inwork 11635,12745 11596,12668
 Berolinastr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q4::inwork 11678,12727 11716,12803
 Poggendorffweg: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 17079,8456 17202,8391
+Prinzessinnenstr.: Sperrung der Fahrbahn an der Einm¸ndung Oranienstr.	q3::inwork 10965,10851 11145,10638
 Fraenkelufer: Bauarbeiten, Fahrbahn und Uferweg gesperrt	q4::inwork 11082,9992 10979,10017
 Schwiebusser Str.: Fahrbahn wegen Hochbauarbeiten gesperrt, auf Gehweg ausweichen, mehrere Bordsteine	q4::inwork 9227,8890 9417,8890
 Mˆckernstr.: Bauarbeiten, Einbahnstraﬂe, ehemaliger Radweg kann benutzt werden	q3::inwork; 9022,10857 8941,10663 8926,10626
@@ -488,7 +488,7 @@ Cecilieng‰rten: schmale Rampe oder Treppe	q3 6356,7479 6289,7472
 (Weg am Humboldthain): Radfahren erlaubt, Fuﬂg‰nger haben Vorrang	q1 9255,15816 9092,15789 8934,15740
 Tasdorfer Str. - Wilhelm-Guddorf-Str.: Fuﬂg‰nger	q1 15393,11590 15423,11667
 (Gr¸nes Band): Radfahren erlaubt, Fuﬂg‰nger haben Vorrang	q1 15349,11911 15301,11876 15327,11724 15337,11639 15365,11564 15377,11555 15412,11510 15414,11487 15445,11455 15515,11416
-Am Bahndamm: teilweise enge Stellen, Fuﬂg‰nger	q2 7667,4549 7692,4464 7727,4418 7769,4315
+Am Bahndamm: teilweise enge Stellen, Fuﬂg‰nger, Bordstein	q2 7667,4549 7692,4464 7727,4418 7769,4315
 Am Bahndamm: einige Fuﬂg‰nger	q1 7769,4315 7795,4242 8016,3651 8106,3410
 Edenkobener Steg: Fuﬂg‰nger	q1 6618,4191 6633,4272
 Teltowkanalpromenade: enge und kurvige Unterf¸hrung, steile Abschnitte	q4 4274,2717 4272,2704 4247,2652 4209,2641
@@ -1186,7 +1186,7 @@ Alt-Tegel: Fuﬂg‰nger	q3 1462,20133 1457,20159
 (Am Rosensteg - An der Heide): eng	q3 3065,20646 3101,20649 3109,20650
 (Rosentreterpromenade - Ziekowstr.): schmal	q2 4156,21175 4060,21147 3649,21102 3562,21089 3456,21071 2911,20953 2571,20886
 (Oskar-Ziethen-Krankenhaus): Krankenhausgel‰nde, Fuﬂg‰nger	q2 16541,12071 16556,12180
-(U-Bahnunterf¸hrung Elsterwerdaer Platz): Fuﬂg‰nger, ggfs. schieben	q4 21137,11294 21095,11315
+(U-Bahnunterf¸hrung Elsterwerdaer Platz): Fuﬂg‰nger, ggfs. schieben	q4 21137,11294 21084,11319
 Frankfurter Allee/Harnackstr.: hoher abgeschr‰gter Bordstein	q2 15941,11855 15989,11834
 Alter Bernauer Heerweg: eng, Bordstein zur Wittenauer Str.	q3 6641,22756 6770,22801
 Kolonie Dreieck - Klemkepark: Hunde, Stufe zur Klemkestr.	q3 8260,18765 8188,18819
@@ -1625,7 +1625,8 @@ Veilchenbl¸tenweg: schmale Straﬂe	q1 11664,21246 11656,21309
 Im Brachfeldwinkel: einige Fuﬂg‰nger	q1 3024,21286 3068,21150
 Stelzenweg, Straﬂe 26a: zahlreiche Bodenschwellen, mit Normalrad gut umfahrbar	q0 15464,3936 15362,4023 15183,4157 15028,4272 14967,4317 14805,4440 14651,4554 14616,4581
 (Unterf¸hrung Seehofstr.): Fuﬂg‰nger	q1 1145,2898 1126,2879 1093,2866
-(Ossastr. - R¸tlistr.): einige Fuﬂg‰nger	q1 12615,9132 12552,9165 12548,9167
+R¸tli-Campus: einige Fuﬂg‰nger, Schulgel‰nde	q3 12526,9125 12554,9178 12592,9249
+(Ossastr. - R¸tlistr.): einige Fuﬂg‰nger, Schulgel‰nde	q2 12623,9134 12554,9178
 (Kleiner Tiergarten): Fuﬂg‰nger	q2 6390,13187 6377,13321
 (Einsteinufer - TU-Mathegeb‰ude): Fuﬂg‰nger	q2 5128,12149 5106,12129 5141,11816
 (Mauerpark, ¸ber den Gleimtunnel): Fuﬂg‰nger, einige enge Kurven	q2 10081,15853 10046,15844 10061,15775 10045,15754 10079,15661 10091,15630
@@ -1878,7 +1879,8 @@ Frank-Schweitzer-Str. - Landsberger Allee: Bordstein	q4 19244,14980 19205,14980
 (Weg im Anita-Berber-Park): einige Fuﬂg‰nger	q1 11677,7351 12158,7449
 Henriettenplatz: Fuﬂg‰nger	q2 2770,9945 2768,9980 2784,9992 2770,10024
 (Ottomar-Geschke-Str., Gehweg): Fuﬂg‰nger	q3 21073,4165 21148,4220
-(Zinsgutstr. - Ottomar-Geschke-Str.): einige Fuﬂg‰nger	q1 20940,3805 20917,3827 20958,3875 21016,3923 21087,3995 21073,4165
+(Zinsgutstr. - Ottomar-Geschke-Str.): einige Fuﬂg‰nger, teilweise schmal	q2 20940,3805 20917,3827 20958,3875 21016,3923 21087,3995 21073,4165
+(Zinsgutstr. - Ottomar-Geschke-Str.): einige Fuﬂg‰nger, Kurven	q3 21012,3887 21026,3903 21016,3923
 (S-Bhf. Adlershof, Ernst-Augustin-Str. - Adlergestell): Fuﬂg‰nger	q3 19949,3249 19938,3294 20002,3349
 Hildegard-Knef-Platz: Busverkehr	q1 7774,7724 7759,7812 7718,7838
 Alice-Salomon-Platz: Fuﬂg‰nger, Lieferverkehr	q1 23993,14797 24061,14801
@@ -1979,6 +1981,9 @@ Siebenendenweg: enger Radweg	q1 -62,4564 -22,4512 -6,4491 27,4447
 Am Hegewinkel: eng, Fuﬂg‰nger	q3 197,5036 245,5066
 Friedrich-Meinecke-Weg: Fuﬂg‰nger, Bordsteine	q3 1803,5397 1873,5385 1946,5385 2052,5379 2181,5385 2208,5385 2280,5431
 (Zinnowitzer Weg - Schˆnhauser Str.): enger Weg	q2 11371,21121 11377,21127 11499,21030
+nˆrdliche Wuhlheide: schmaler Weg	q3 20728,7363 20815,7313 20841,7271
+nˆrdliche Wuhlheide: einige schmale Stellen	q2 20879,8173 20895,8079 20854,7982 20763,7868
+nˆrdliche Wuhlheide: einige schmale Stellen	q2 20719,8139 20679,8362
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2319,11 +2324,11 @@ Wittenberger Str. (Einkaufzentrum): Fuﬂg‰nger	q3 21590,17918 21647,17889
 (Parkweg an der neuen Wuhle): wenig Fuﬂg‰nger	q1 21555,17546 21751,17511 21875,17533 21925,17542 22022,17519 22071,17509 22093,17505 22121,17495 22364,17323
 Wuhlewanderweg: Spazierg‰nger	q1 22313,18595 22332,18496 22391,18349 22395,18313 22363,18219 22355,18190 22341,18091 22324,18030 22327,17997 22343,17960 22353,17940 22353,17920 22365,17864 22381,17811 22384,17764 22333,17664 22329,17644 22364,17323
 Wuhlewanderweg: Spazierg‰nger	q1 22314,17916 22365,17864
-Widderstr.: enge Straﬂe	q1 14853,7451 14942,7347 14997,7240
-Krebsgang: enge Straﬂe	q1 15085,7258 14997,7240 14878,7211 14792,7192 14693,7168
-Einhornstr.: enge Straﬂe	q1 14708,7325 14792,7192
-Steinbockstr.: enge Straﬂe	q1 14775,7385 14840,7307 14848,7288 14878,7211
-Steinbockstr.: enge Straﬂe	q1 14840,7307 14861,7316 14868,7297 14848,7288
+Widderstr.: enge Straﬂe	q0 14853,7451 14942,7347 14997,7240
+Krebsgang: enge Straﬂe	q0 15085,7258 14997,7240 14946,7228 14878,7211 14792,7192 14693,7168
+Einhornstr.: enge Straﬂe	q0 14708,7325 14762,7261 14792,7192
+Steinbockstr.: enge Straﬂe	q0 14775,7385 14840,7307 14848,7288 14878,7211
+Steinbockstr.: enge Straﬂe, Kurven	q2 14840,7307 14861,7316 14868,7297 14848,7288
 Seefelder Str. (Fuﬂweg): Fuﬂg‰nger	q1 17325,16189 17362,16189
 Seefelder Str. (Fuﬂweg): Fuﬂg‰nger, Bordstein	q3 17362,16189 17383,16197
 (Malteserstr. - Hanielweg): Fuﬂg‰nger	q1 7451,1818 7534,1818 7562,1796

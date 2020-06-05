@@ -7989,7 +7989,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005266',
        data  => <<EOF,
-	2::inwork 9668,5733 9456,5644 9447,5641 9368,5608 9161,5535
+	2::inwork 9668,5733 9456,5644 9447,5641 9355,5602 9161,5535
 EOF
      },
      { from  => undef, # 
@@ -9417,7 +9417,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006204',
        data  => <<EOF,
-	2::inwork 9368,5608 9161,5535
+	2::inwork 9355,5602 9161,5535
 EOF
      },
      { from  => 1186869600, # 2007-08-12 00:00
@@ -12128,7 +12128,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009406',
        data  => <<EOF,
-	2::inwork 9368,5608 9161,5535 8968,5554 8887,5564 8767,5571
+	2::inwork 9355,5602 9161,5535 8968,5554 8887,5564 8767,5571
 EOF
      },
      { from  => 1216504800, # 2008-07-20 00:00
@@ -12857,7 +12857,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010086',
        data  => <<EOF,
-	1::inwork 9796,5790 9668,5733 9456,5644 9447,5641 9368,5608
+	1::inwork 9796,5790 9668,5733 9456,5644 9447,5641 9355,5602
 EOF
      },
      { from  => 1223320675, # 2008-10-06 21:17
@@ -13063,7 +13063,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010086',
        data  => <<EOF,
-	1::inwork 9368,5608 9161,5535
+	1::inwork 9355,5602 9161,5535
 EOF
      },
      { from  => 1226267441, # 2008-11-09 22:50
@@ -13722,7 +13722,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012064',
        data  => <<EOF,
-	q4::inwork; 9456,5644 9447,5641 9368,5608 9161,5535
+	q4::inwork; 9456,5644 9447,5641 9355,5602 9161,5535
 EOF
      },
      { from  => 1238954845, # 2009-04-05 20:07
@@ -13869,7 +13869,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012244',
        data  => <<EOF,
-	q4::inwork 9456,5644 9447,5641 9368,5608 9161,5535
+	q4::inwork 9456,5644 9447,5641 9355,5602 9161,5535
 EOF
      },
      { from  => 1243371742, # 2009-05-26 23:02
@@ -25117,7 +25117,7 @@ EOF
        data  => <<EOF,
 # REMOVED --- : XXX Wann sind die Bauarbeiten beendet? Wie weit geht die Sperrung Richtung Süden?
 # REMOVED --- : last_checked: 2016-02-23
-	2::inwork 12621,9297 12565,9200 12548,9167
+	2::inwork 12621,9297 12592,9249 12554,9178
 EOF
      },
      { from  => 1448168400, # 2015-11-22 06:00
@@ -26413,7 +26413,7 @@ EOF
 #: XXX wird sich die Qualität vielleicht bessern?
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? Hat sich die Qualität des Weges verbessert?
 #: priority: #B
-#: last_checked: 2020-05-01 vvv
+#: last_checked: 2020-05-31 vvv
 	2::inwork 7994,4430 8234,4660
 #: last_checked ^^^
 # REMOVED (fertig) ---	2::inwork 8234,4660 8575,4980 8598,4985
@@ -27899,7 +27899,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-05-15
+#: last_checked: 2020-06-02
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28683,7 +28683,7 @@ EOF
 EOF
      },
      { from  => 1545335759, # 2018-12-20 20:55
-       until => 1591027200, # 2020-06-01 18:00
+       until => 1591027200, # 2020-06-01 18:00 --- ist aber noch immer -> handicap_s-orig
        text  => 'Prinzessinnenstr.: Fahrbahn kann wegen Bauarbeiten gesperrt sein, bis 01.06.2020',
        type  => 'handicap',
        data  => <<EOF,
@@ -29298,13 +29298,13 @@ EOF
 EOF
      },
      { from  => 1560636000, # 2019-06-16 00:00
-       until => $isodate2epoch->("2020-06-01 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
+       until => $isodate2epoch->("2020-07-01 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
        text  => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein direkter Durchgang möglich, ab 17. Juni 2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2020-05-27
+#: last_checked: 2020-06-05
 #: check_frequency: 7d
 	2::inwork 14567,10814 14469,10841 14352,10874
 EOF
@@ -29316,7 +29316,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
-#: osm_watch: way id="206889085" version="11"
+#: osm_watch: way id="206889085" version="12"
 #: last_checked: 2020-05-16
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
@@ -29395,7 +29395,7 @@ EOF
      },
      { from  => 1561845600, # 2019-06-30 00:00
        until => undef, # 1569945600, # 2019-10-01 18:00
-       text  => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019, bis Ende 2019 und möglicherweise noch länger',
+       text  => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019, Ende unbekannt',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.823217.php',
        data  => <<EOF,
@@ -29411,7 +29411,7 @@ EOF
 # REMOVED (provisorischer Radstreifen) --- #: XXX außerdem "der östliche Gehweg ist gesperrt" --- was bedeutet das für den Radverkehr?
 #: priority: #A
 #: add_fragezeichen: Ist die Unterführung noch immer gesperrt?
-#: last_checked: 2020-04-25
+#: last_checked: 2020-05-31
 # REMOVED --- #: next_check: 2019-10-30
 #: check_frequency: 30d
 	2::inwork 3231,12749 3332,12742
@@ -29923,14 +29923,14 @@ EOF
 EOF
      },
      { from  => 1570312800, # 2019-10-06 00:00
-       until => $isodate2epoch->("2020-05-31 00:00:00"), # 1585691999, # 2020-03-31 23:59
-       text  => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs, vom 7.10.2019 bis voraussichtlich Ende März 2020, vielleicht auch länger',
+       until => $isodate2epoch->("2020-06-30 00:00:00"), # 1585691999, # 2020-03-31 23:59
+       text  => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs ab dem 7.10.2019, Ende unbekannt',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.851896.php',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2020-04-25
+#: last_checked: 2020-05-31
 # REMOVED --- #: next_check: 2020-03-31
 	2::inwork 5894,12480 5944,12548
 EOF
@@ -30046,23 +30046,14 @@ EOF
 EOF
      },
      { from  => 1569794400, # 2019-09-30 00:00
-       until => $isodate2epoch->("2020-07-05 18:00:00"), # 1596232800, # 2020-08-01 00:00
+       until => 1591376790, # $isodate2epoch->("2020-07-05 18:00:00"), # 1596232800, # 2020-08-01 00:00
        text  => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Einbahnstraßenregelung wegen Bauarbeiten, offen Richtung Osten, voraussichtlich bis Sommer 2020',
 #       text  => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Fahrbahn wegen Bauarbeiten gesperrt, voraussichtlich bis Ende Oktober 2019, danach eventuell wieder Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: NOBEL-2019
-# REMOVED (ja) --- #: add_fragezeichen: Haben die Bauarbeiten tatsächlich schon begonnen? Wurde eine Einbahnstraßenregelung eingeführt?
-#: XXX bis wann gehen die Bauarbeiten?
-#: XXX laut fritz bis 05.07.2020
-#: source_id: 2147344997 (hier: Vollsperrung bis Ende Oktober 2019)
-#: source_id: 2147345024 (bis Mitte November 2019)
-#: also_indoor: traffic (G)
-#: osm_watch: way id="19881557" version="23"
-#: last_checked: 2019-10-15
-#: next_check: 2020-07-05
-	q4::inwork; 14784,6169 14398,6184
-# REMOVED ---	q4::inwork 14784,6169 14398,6184
+# REMOVED (fertig) --- #: next_check_id: NOBEL-2019 --- # REMOVED (ja) --- #: add_fragezeichen: Haben die Bauarbeiten tatsächlich schon begonnen? Wurde eine Einbahnstraßenregelung eingeführt? --- #: XXX bis wann gehen die Bauarbeiten? --- #: XXX laut fritz bis 05.07.2020 --- #: source_id: 2147344997 (hier: Vollsperrung bis Ende Oktober 2019) --- #: source_id: 2147345024 (bis Mitte November 2019) --- #: also_indoor: traffic (G) --- #: osm_watch: way id="19881557" version="24" --- #: last_checked: 2019-10-15 --- #: next_check: 2020-06-03
+	q4::inwork; 14784,6169 14691,6173 14398,6184
+# REMOVED ---	q4::inwork 14784,6169 14691,6173 14398,6184
 EOF
      },
      { from  => 1571078727, # 2019-10-14 20:45
@@ -30222,7 +30213,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: add_fragezeichen: Wann wird der Weg wieder eröffnet?
-#: last_checked: 2020-05-25
+#: last_checked: 2020-05-30
 #: check_frequency: 21d
 	2::inwork 15420,12178 15520,12160 15628,12246
 EOF
@@ -30305,6 +30296,7 @@ EOF
        text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee bzw. Friedrichshagener Str. für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee und Einbahnstraßenregelung in der Puchanstr., voraussichtlich vom 09.03.2020 bis 08.06.2020',
        type  => 'handicap',
        data  => <<EOF,
+#: next_check_id: BAHNHOFSTRKOEP-2020
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/bauarbeiten-der-bvg-an-gleisen-und-haltestellen_a254851
 #: by: https://media04.berliner-woche.de/article/2020/02/27/3/306823_XXL.jpg?1582796050
 #: by: https://viz.berlin.de/2020/02/bahnhofstrasse-koepenick-gleisbauarbeiten-%C2%B7-schienenersatzverkehr/
@@ -30320,7 +30312,8 @@ EOF
 	q4::inwork; 22513,5747 22383,5611 22204,5447
 	q4::inwork; 22292,5774 22258,5687 22236,5633 22184,5545
 	q4::inwork 22154,5659 22236,5633
-	q4::inwork; 22116,5442 22184,5545 22236,5633 22258,5687 22292,5774
+#: note: mittlerweile (?) dürfen Radfahrer hier langfahren, allerdings eng und Umwege an Einmündungen
+	q3::inwork; 22116,5442 22184,5545 22236,5633 22258,5687 22292,5774
 EOF
      },
      { from  => 1582837200, # 2020-02-27 22:00
@@ -30369,12 +30362,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1590844047, # undef, # XXX
        text  => 'Tor am Markgrafendamm: kann verschlossen sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: DBWERKSTRASSE-2019
-	2::temp 14692,10867 14717,10855
+# REMOVED (Umfahrung nicht mehr nutzbar) --- #: next_check_id: DBWERKSTRASSE-2019
+#	2::temp 14692,10867 14717,10855
 EOF
      },
      { from  => 1583954374, # 2020-03-11 20:19
@@ -30556,7 +30549,7 @@ EOF
 #: note: offizielle Umleitung über Fischerstr.
 #: add_fragezeichen: Sind die Bauarbeiten in der Zobtener Str. mittlerweile beendet?
 #: priority: #A
-#: last_checked: 2020-05-25
+#: last_checked: 2020-06-05
 #: check_frequency: 14d
 	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
 EOF
@@ -30579,7 +30572,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-05-20
+#: last_checked: 2020-05-30
 #: check_frequency: 14d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30692,7 +30685,8 @@ EOF
        type  => 'handicap',
        source_id => '2147345799',
        data  => <<EOF,
-	q4::inwork; 22092,999 22162,1067
+#: note: eher wenig Fußgänger, die meisten nehmen wohl der Durchgang am Bahnhof
+	q3::inwork; 22092,999 22162,1067
 EOF
      },
      { from  => undef, # 
@@ -30777,6 +30771,55 @@ EOF
        data  => <<EOF,
 #: source_id: 2147345874
 	q4::inwork 14211,11552 14181,11434
+EOF
+     },
+     { do {
+        # crude automatic weekly recurrence
+        my $end = $isodate2epoch->("2020-08-09 19:00:00");
+        my($from, $until);
+        if (time <= $end) {
+            my @l = localtime;
+            my $wd = $l[6];
+            @l[0,1,2] = (0,0,0);
+            $l[5]+=1900;
+            my $t = Time::Local::timelocal(@l) - 86400 * ($wd == 0 ? 6 : $wd-1); # last Monday 0:00 XXX wrong on DST switches!
+            $from = $t + 86400*5 + 6*3600; # Saturday 6h
+            $until = $t + 86400*6 + 19*3600; # Sunday 19h XXX Pfingstmontag kann nicht dargestellt werden
+        } else {
+            $until = $end;
+        }
+        (from => $from, until => $until);
+       },
+       accept_multi_feature_distance => 2500,
+       text  => 'Temporäre Spielstraßen in Neukölln: einige Straßen sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Mitte August 2020 zwischen 13 und 19 Uhr',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
+       data  => <<EOF,
+#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.931493.php
+#: by: https://mein.berlin.de/projects/temporare-spielstrassen-in-neukolln/
+Selkestr. zwischen Schierker Str. und Nogatstr. sowie der Schierker Platz im Körnerkiez	q4::temp::play 12751,7166 12741,7224 12722,7261
+Hobrechtstr. zwischen Sanderstr. und Pflügerstr. im Reuterkiez	q4::temp::play 11917,9663 11934,9538
+die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 13295,7627 13288,7653
+EOF
+     },
+     { from  => 1591497000, # 2020-06-07 04:30
+       until => $isodate2epoch->("2020-07-24 17:00:00"), # 1595692800, # 2020-07-25 18:00
+       text  => 'Alt-Köpenick: Gleisbauarbeiten, ggfs. ist die Fahrbahn gesperrt, vom 8. Juni 2020 4:30 Uhr bis 24. Juli 2020',
+       type  => 'handicap',
+       source_id => 'https://www.bahninfo-forum.de/read.php?9,658568,668792#msg-668792',
+       data  => <<EOF,
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.940522.php
+#: source_id: 2147345909
+	q4::inwork 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562 22093,4499
+EOF
+     },
+     { from  => 1591588800, # 2020-06-08 06:00
+       until => 1591984800, # 2020-06-12 20:00
+       text  => 'Ganghoferstr.: Kranaufbau, Fahrbahn gesperrt, 09.06.2020 bis 12.06.2020',
+       type  => 'handicap',
+       source_id => 'https://www.kms-sonne.de/baustellennews/?date=20200605',
+       data  => <<EOF,
+	q4::inwork 12873,8218 12805,8194 12779,8188
 EOF
      },
     );

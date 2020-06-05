@@ -83,7 +83,7 @@ Ende des Bahndamms	culdesac 13966,9340
 	culdesac 14327,9117
 nordöstliches Sackgassenende	culdesac 13103,9478
 südwestliches Sackgassenende	culdesac 13007,9347
-westliches Sackgassenende	culdesac_pseudo 12615,9132
+westliches Sackgassenende	culdesac_pseudo 12623,9134
 östliches Sackgassenende	culdesac 12910,8929
 	culdesac 10111,9942
 #: XXX_osm fehlt komplett
@@ -310,7 +310,7 @@ nordwestliches Sackgassenende	culdesac 21788,8133
 	culdesac 22279,7672
 Sackgassenende am Wald	culdesac 22375,7643
 	culdesac 21319,8078
-	culdesac 20977,8191
+	culdesac_pseudo 20977,8191
 Sackgassenende der Stichstraße	culdesac 21996,8716
 	culdesac 22073,8645
 	culdesac 22101,8489
@@ -1562,6 +1562,7 @@ südwestliches Sackgassenende	culdesac_pseudo 16282,14640
 	culdesac_pseudo 21253,-1493
 	culdesac 21642,-1497
 	culdesac_pseudo 21586,-1167
+	culdesac 23418,566
 # 
 ######################################################################
 # culdesac entries which should remain invisible

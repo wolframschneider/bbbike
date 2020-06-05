@@ -1199,7 +1199,6 @@ Hüttendorfer Weg	1 21409,-109 21463,-280
 Brückenstr.: Anlieger frei	1:Anlieger 17728,5756 17900,6072
 Passauer -> Lietzenburger	3 6033,10403 6020,10351 6147,10383
 Am Hanffgraben	1 16805,1488 16698,1392
-Rütlistr.: Durchfahrt verboten	2 12565,9200 12548,9167 12490,9056
 Wustermarker Str.:	1 -4385,14305 -4559,14341
 Mittelstreifen und Straßennbahntrasse	3nocross::ignrte 10849,17848 10858,17721 10883,17491
 Berliner Str. -> Borkumstr.: Mittelstreifen und Straßennbahntrasse	3::igndisp 10849,17848 10858,17721 10956,17735
@@ -1613,12 +1612,12 @@ Paetowstr.: Poller	3 -13137,-3022 -13110,-3015 -13055,-3008
 Am Raubfang (Potsdam)	1 -15308,1220 -15366,1249 -15436,1253 -15533,813
 Goetheplatz (Potsdam)	1 -9922,-1395 -9809,-1435
 Mittelstreifen	3nocross::ignrte 9161,5535 9158,5673 9176,5803
-Tempelhofer Damm -> Burgemeisterstr.: Mittelstreifen	3::igndisp 9176,5803 9158,5673 9364,5652
+Tempelhofer Damm -> Burgemeisterstr.: Mittelstreifen	3::igndisp 9176,5803 9158,5673 9361,5647
 Tempelhofer Damm -> Burgemeisterstr.: Mittelstreifen	3::igndisp 9161,5535 9158,5673 8981,5692
-Burgemeisterstr. -> Tempelhofer Damm: Mittelstreifen	3::igndisp 9364,5652 9158,5673 9161,5535
-Burgemeisterstr. -> Burgemeisterstr.: Mittelstreifen	3::igndisp 9364,5652 9158,5673 8981,5692
+Burgemeisterstr. -> Tempelhofer Damm: Mittelstreifen	3::igndisp 9361,5647 9158,5673 9161,5535
+Burgemeisterstr. -> Burgemeisterstr.: Mittelstreifen	3::igndisp 9361,5647 9158,5673 8981,5692
 Burgemeisterstr. -> Tempelhofer Damm: Mittelstreifen	3::igndisp 8981,5692 9158,5673 9176,5803
-Burgemeisterstr. -> Burgemeisterstr.: Mittelstreifen	3::igndisp 8981,5692 9158,5673 9364,5652
+Burgemeisterstr. -> Burgemeisterstr.: Mittelstreifen	3::igndisp 8981,5692 9158,5673 9361,5647
 Triftstr.	1 6715,15152 6743,15102
 Straßenbahntrasse	3nocross::ignrte 23818,5394 23849,5380 23942,5338
 Fürstenwalder Damm -> Jastrower Weg: Straßenbahntrasse	3::igndisp 23818,5394 23849,5380 23877,5503

@@ -388,7 +388,7 @@ Bus M44	busroute_N 12342,6936 12122,6886 12105,6962 12317,7007
 Bus 277	busroute_N 12317,7007 12463,7037 12645,7087 12664,7013 12689,6905 12702,6846
 Bus 277	busroute_N 12689,6905 12649,6833
 Bus 277	busroute_N 13278,6967 13520,6583
-Bus 246	busroute_N 14803,7056 14751,7007 14620,6876 14567,6810 14724,6668 14639,6577 14564,6496 14366,6337 14396,6298 14398,6184 14784,6169 14961,6162 15144,6160 15159,6205 15190,6243 15300,6148 15332,6138
+Bus 246	busroute_N 14803,7056 14751,7007 14620,6876 14567,6810 14724,6668 14639,6577 14564,6496 14366,6337 14396,6298 14398,6184 14691,6173 14784,6169 14961,6162 15144,6160 15159,6205 15190,6243 15300,6148 15332,6138
 Bus 246	busroute_N 6042,6686 6089,6709 6155,6722 6303,6736 6434,6749
 Bus 246	busroute_N 6668,6810 6529,6798 6430,6787
 Bus 246	busroute_N 6439,6716 6517,6722 6546,6724 6675,6740
@@ -1206,8 +1206,8 @@ ausgeschildert als Rüdigerstr. 65+65 A-E	CP2; 17441,12247 17444,12286
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_50_5649_5788_online.pdf (Straßenbenennung)
 #: XXX dieser Weg wird auch in Minna-Todenhagen-Str. umbenannt --- evtl. auf einen Namen hier komplett verzichten. old_name-Eintrag?
 #: XXX wird hier noch irgendwie ausgeschildert?
-#: last_checked: 2020-05-16
-#: check_frequency: 90d
+#: last_checked: 2020-06-03
+#: check_frequency: 120d
 Grenzweg (Oberschöneweide): nicht ausgeschildert	CS 17295,7328 17475,7451 17566,7485
 # REMOVED (hier: Heckenweg) --- Grenzweg (Oberschöneweide): nicht ausgeschildert	CS 17566,7485 17669,7515
 # 
@@ -1247,7 +1247,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="4"
-#: last_checked: 2020-04-19
+#: last_checked: 2020-05-31
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal

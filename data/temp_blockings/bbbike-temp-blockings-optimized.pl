@@ -814,7 +814,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Mai von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -1986,7 +1986,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX wird sich die Qualität vielleicht bessern?
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? Hat sich die Qualität des Weges verbessert?
 #: priority: #B
-#: last_checked: 2020-05-01 vvv
+#: last_checked: 2020-05-31 vvv
 	2::inwork 7994,4430 8234,4660
 #: last_checked ^^^
 # REMOVED (fertig) ---	2::inwork 8234,4660 8575,4980 8598,4985
@@ -2261,7 +2261,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-05-15
+#: last_checked: 2020-06-02
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2404,15 +2404,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '	q3::inwork 11145,10638 10965,10851
-',
-         'from' => 1545335759,
-         'id' => 3063,
-         'text' => 'Prinzessinnenstr.: Fahrbahn kann wegen Bauarbeiten gesperrt sein, bis 01.06.2020',
-         'type' => 'handicap',
-         'until' => 1591027200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2557,7 +2549,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2020-05-27
+#: last_checked: 2020-06-05
 #: check_frequency: 7d
 	2::inwork 14567,10814 14469,10841 14352,10874
 ',
@@ -2565,12 +2557,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 3116,
          'text' => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein direkter Durchgang möglich, ab 17. Juni 2019',
          'type' => 'gesperrt',
-         'until' => 1590962400
+         'until' => 1593554400
        },
        {
          'data' => '#: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
-#: osm_watch: way id="206889085" version="11"
+#: osm_watch: way id="206889085" version="12"
 #: last_checked: 2020-05-16
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
@@ -2613,7 +2605,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (provisorischer Radstreifen) --- #: XXX außerdem "der östliche Gehweg ist gesperrt" --- was bedeutet das für den Radverkehr?
 #: priority: #A
 #: add_fragezeichen: Ist die Unterführung noch immer gesperrt?
-#: last_checked: 2020-04-25
+#: last_checked: 2020-05-31
 # REMOVED --- #: next_check: 2019-10-30
 #: check_frequency: 30d
 	2::inwork 3231,12749 3332,12742
@@ -2621,7 +2613,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1561845600,
          'id' => 3123,
          'source_id' => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.823217.php',
-         'text' => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019, bis Ende 2019 und möglicherweise noch länger',
+         'text' => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019, Ende unbekannt',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -2730,34 +2722,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: HANSAGARTEN-2019
-#: XXX wann sind die Bauarbeiten beendet (ursprünglich "voraussichtlich bis Anfang 2020")
-#: last_checked: 2020-04-23
-	2::inwork 14665,16294 14810,16282 15102,16212
-# REMOVED (hier existiert ein provisorischer Weg) ---	2::inwork 15102,16212 15194,16186
-	2::inwork 14721,16360 14810,16282
-',
-         'from' => 1569949777,
-         'id' => 3167,
-         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.851369.php',
-         'text' => 'Hansastr. - Gartenstr.: Wege werden wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
-         'type' => 'gesperrt',
-         'until' => 1590876000
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2020-04-25
+#: last_checked: 2020-05-31
 # REMOVED --- #: next_check: 2020-03-31
 	2::inwork 5894,12480 5944,12548
 ',
          'from' => 1570312800,
          'id' => 3168,
          'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.851896.php',
-         'text' => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs, vom 7.10.2019 bis voraussichtlich Ende März 2020, vielleicht auch länger',
+         'text' => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs ab dem 7.10.2019, Ende unbekannt',
          'type' => 'gesperrt',
-         'until' => 1590876000
+         'until' => 1593468000
        },
        undef,
        {
@@ -2822,26 +2800,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1601481600
        },
-       {
-         'data' => '#: next_check_id: NOBEL-2019
-# REMOVED (ja) --- #: add_fragezeichen: Haben die Bauarbeiten tatsächlich schon begonnen? Wurde eine Einbahnstraßenregelung eingeführt?
-#: XXX bis wann gehen die Bauarbeiten?
-#: XXX laut fritz bis 05.07.2020
-#: source_id: 2147344997 (hier: Vollsperrung bis Ende Oktober 2019)
-#: source_id: 2147345024 (bis Mitte November 2019)
-#: also_indoor: traffic (G)
-#: osm_watch: way id="19881557" version="23"
-#: last_checked: 2019-10-15
-#: next_check: 2020-07-05
-	q4::inwork; 14784,6169 14398,6184
-# REMOVED ---	q4::inwork 14784,6169 14398,6184
-',
-         'from' => 1569794400,
-         'id' => 3177,
-         'text' => 'Nobelstr.: zwischen Bergiusstr. und Boschweg Einbahnstraßenregelung wegen Bauarbeiten, offen Richtung Osten, voraussichtlich bis Sommer 2020',
-         'type' => 'handicap',
-         'until' => 1593964800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2868,7 +2827,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet?
-#: last_checked: 2020-05-25
+#: last_checked: 2020-05-30
 #: check_frequency: 21d
 	2::inwork 15420,12178 15520,12160 15628,12246
 ',
@@ -2911,7 +2870,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1599840000
        },
        {
-         'data' => '#: by: https://www.berliner-woche.de/koepenick/c-verkehr/bauarbeiten-der-bvg-an-gleisen-und-haltestellen_a254851
+         'data' => '#: next_check_id: BAHNHOFSTRKOEP-2020
+#: by: https://www.berliner-woche.de/koepenick/c-verkehr/bauarbeiten-der-bvg-an-gleisen-und-haltestellen_a254851
 #: by: https://media04.berliner-woche.de/article/2020/02/27/3/306823_XXL.jpg?1582796050
 #: by: https://viz.berlin.de/2020/02/bahnhofstrasse-koepenick-gleisbauarbeiten-%C2%B7-schienenersatzverkehr/
 #: by: https://abendblatt-berlin.de/2020/03/06/nadeloehr-vorm-s-bahnhof/
@@ -2926,7 +2886,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	q4::inwork; 22513,5747 22383,5611 22204,5447
 	q4::inwork; 22292,5774 22258,5687 22236,5633 22184,5545
 	q4::inwork 22154,5659 22236,5633
-	q4::inwork; 22116,5442 22184,5545 22236,5633 22258,5687 22292,5774
+#: note: mittlerweile (?) dürfen Radfahrer hier langfahren, allerdings eng und Umwege an Einmündungen
+	q3::inwork; 22116,5442 22184,5545 22236,5633 22258,5687 22292,5774
 ',
          'from' => 1583647200,
          'id' => 3199,
@@ -2957,16 +2918,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: DBWERKSTRASSE-2019
-	2::temp 14692,10867 14717,10855
-',
-         'from' => undef,
-         'id' => 3205,
-         'text' => 'Tor am Markgrafendamm: kann verschlossen sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.907067.php
@@ -3009,15 +2961,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '	q4::inwork; 14133,12482 14266,12446
-',
-         'from' => 1586020992,
-         'id' => 3215,
-         'text' => 'Rigaer Str.: zwischen Proskauer Str. und Zellestr. Einbahnstraßenregelung, offen Richtung Bersarinplatz., bis 29.05.2020',
-         'type' => 'handicap',
-         'until' => 1590768000
-       },
+       undef,
        {
          'data' => '#: by: wosch
 #: XXX evtl. nur saisonal, vielleicht wandern die Weideflächen an andere Stellen (dann auch ggfs. die Tore aus gesperrt-orig austragen)
@@ -3062,7 +3006,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: note: offizielle Umleitung über Fischerstr.
 #: add_fragezeichen: Sind die Bauarbeiten in der Zobtener Str. mittlerweile beendet?
 #: priority: #A
-#: last_checked: 2020-05-25
+#: last_checked: 2020-06-05
 #: check_frequency: 14d
 	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
 ',
@@ -3077,7 +3021,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-05-20
+#: last_checked: 2020-05-30
 #: check_frequency: 14d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -3135,12 +3079,12 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1590811200,
+         'from' => 1591416000,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen sind für den Radverkehr gesperrt, jeden Sonntag bis Ende Juni 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1590944400
+         'until' => 1591549200
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -3163,7 +3107,8 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
        },
        undef,
        {
-         'data' => '	q4::inwork; 22092,999 22162,1067
+         'data' => '#: note: eher wenig Fußgänger, die meisten nehmen wohl der Durchgang am Bahnhof
+	q3::inwork; 22092,999 22162,1067
 ',
          'from' => 1586884020,
          'id' => 3231,
@@ -3228,6 +3173,43 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'text' => 'Gärtnerstr.: Bauarbeiten, Fahrbahn zwischen Simplonstr. und Wühlischstr. gesperrt, bis zum 14.08.2020 17 Uhr',
          'type' => 'handicap',
          'until' => 1597417200
+       },
+       {
+         'accept_multi_feature_distance' => 2500,
+         'data' => '#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.931493.php
+#: by: https://mein.berlin.de/projects/temporare-spielstrassen-in-neukolln/
+Selkestr. zwischen Schierker Str. und Nogatstr. sowie der Schierker Platz im Körnerkiez	q4::temp::play 12751,7166 12741,7224 12722,7261
+Hobrechtstr. zwischen Sanderstr. und Pflügerstr. im Reuterkiez	q4::temp::play 11917,9663 11934,9538
+die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 13295,7627 13288,7653
+',
+         'from' => 1591416000,
+         'id' => 3241,
+         'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
+         'text' => 'Temporäre Spielstraßen in Neukölln: einige Straßen sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Mitte August 2020 zwischen 13 und 19 Uhr',
+         'type' => 'handicap',
+         'until' => 1591549200
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.940522.php
+#: source_id: 2147345909
+	q4::inwork 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562 22093,4499
+',
+         'from' => 1591497000,
+         'id' => 3242,
+         'source_id' => 'https://www.bahninfo-forum.de/read.php?9,658568,668792#msg-668792',
+         'text' => 'Alt-Köpenick: Gleisbauarbeiten, ggfs. ist die Fahrbahn gesperrt, vom 8. Juni 2020 4:30 Uhr bis 24. Juli 2020',
+         'type' => 'handicap',
+         'until' => 1595602800
+       },
+       {
+         'data' => '	q4::inwork 12873,8218 12805,8194 12779,8188
+',
+         'from' => 1591588800,
+         'id' => 3243,
+         'source_id' => 'https://www.kms-sonne.de/baustellennews/?date=20200605',
+         'text' => 'Ganghoferstr.: Kranaufbau, Fahrbahn gesperrt, 09.06.2020 bis 12.06.2020',
+         'type' => 'handicap',
+         'until' => 1591984800
        }
      
 );
