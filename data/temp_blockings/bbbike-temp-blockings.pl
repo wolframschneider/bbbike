@@ -7028,7 +7028,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004454',
        data  => <<EOF,
-	2::temp 9106,12795 9056,12743 9025,12727 8870,12647
+	2::temp 9102,12790 9056,12743 9025,12727 8870,12647
 EOF
      },
      { from  => 1168898272, # 2007-01-15 22:57
@@ -16848,7 +16848,7 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: XXX wann wird die Corona-Einschränkung aufgehoben? ("Ab 15. Mai wieder Gemeinschaftssport bis zu 8 Personen erlaubt")
-#: last_checked: 2020-05-17 vvv
+#: last_checked: 2020-06-06 vvv
 #: check_frequency: 30d vvv
 #: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
 #: tempex: volatile, T22-T06
@@ -22653,7 +22653,7 @@ EOF
 #: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-05-15
+#: last_checked: 2020-06-09
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -24636,7 +24636,7 @@ EOF
 #: by: fritz
 	2::inwork 15261,10738 15272,10790 15279,10862
 #	q4; 15279,10862 15272,10790 15388,10758 15433,10765
-	q4; 15205,11080 15102,11120 15021,11152 14988,11130
+	q4; 15205,11080 15102,11120 15056,11138 15021,11152 14988,11130
 EOF
      },
      { from  => $isodate2epoch->("2020-01-12 08:00:00"), # 1 Tag Vorlauf
@@ -26928,7 +26928,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-05-15 vvv
+#: last_checked: 2020-06-09 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27899,7 +27899,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-06-02
+#: last_checked: 2020-06-09
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28484,12 +28484,11 @@ EOF
 #: osm_watch: way id="705182550" version="1"
 #: osm_watch: way id="705182551" version="1"
 #: also_indoor: traffic (G,H) vvv
-#: last_checked: 2020-05-10 vvv
+#: last_checked: 2020-06-09 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-06-30 vvv
 #: source_id: 2147344480
-# REMOVED (ja, aber Gehweg ist noch frei) --- #: XXX ist an dieser Stelle tatsächlich komplett für Radfahrer gesperrt?
-# REMOVED (hier vermutlich nicht mehr?) ---	q4+::inwork 9106,12795 9193,12875
+	q3::inwork 9102,12790 9193,12875
 	q4+::inwork 9193,12875 9239,12923
 # REMOVED (hier vermutlich nicht mehr?) ---	q3::inwork 9160,12932 9193,12875
 #: next_check ^^^
@@ -29213,7 +29212,7 @@ EOF
 #: source_id: 2147343335 (bis 31.7.2020)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-04-17
+#: last_checked: 2020-06-07 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-07-31
 #: XXX_prog: eigentlich q4+::inwork;
@@ -29299,12 +29298,12 @@ EOF
      },
      { from  => 1560636000, # 2019-06-16 00:00
        until => $isodate2epoch->("2020-07-01 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
-       text  => 'DB-Werkstraße: Bauarbeiten, abschnittsweise ist die Fahrbahn gesperrt, unter Umständen auch für Fußgänger kein direkter Durchgang möglich, ab 17. Juni 2019',
+       text  => 'DB-Werkstraße: Bauarbeiten, ein Abschnitt der Fahrbahn kann gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
-#: XXX Bis wann gehen die Bauarbeiten? Wird die Straße nach den Bauarbeiten asphaltiert sein?
-#: last_checked: 2020-06-05
+#: XXX Bis wann gehen die Bauarbeiten?
+#: last_checked: 2020-06-11
 #: check_frequency: 7d
 	2::inwork 14567,10814 14469,10841 14352,10874
 EOF
@@ -29917,9 +29916,9 @@ EOF
 #: next_check_id: HANSAGARTEN-2019
 #: XXX wann sind die Bauarbeiten beendet (ursprünglich "voraussichtlich bis Anfang 2020")
 #: last_checked: 2020-04-23
-	2::inwork 14665,16294 14810,16282 15102,16212
-# REMOVED (hier existiert ein provisorischer Weg) ---	2::inwork 15102,16212 15194,16186
-	2::inwork 14721,16360 14810,16282
+	2::inwork 14665,16294 14806,16279 15104,16218
+# REMOVED (hier existiert ein provisorischer Weg) ---	2::inwork 15104,16218 15143,16210 15194,16186
+	2::inwork 14717,16355 14806,16279
 EOF
      },
      { from  => 1570312800, # 2019-10-06 00:00
@@ -30204,7 +30203,7 @@ EOF
        source_id => '2147345145',
        data  => <<EOF,
 # REMOVED --- #: add_fragezeichen: Wann wird die Einbahnstraßenregelung aufgehoben? --- #: last_checked: 2019-12-20 --- #: check_frequency: 1d
-	q3::inwork; 13075,12207 12923,12043 12891,12008
+	q3::inwork; 13081,12196 12990,12108 12923,12043 12891,12008
 EOF
      },
      { from  => undef, # 
@@ -30213,7 +30212,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: add_fragezeichen: Wann wird der Weg wieder eröffnet?
-#: last_checked: 2020-05-30
+#: last_checked: 2020-06-06
 #: check_frequency: 21d
 	2::inwork 15420,12178 15520,12160 15628,12246
 EOF
@@ -30334,8 +30333,8 @@ EOF
 EOF
      },
      { from  => 1583128800, # 2020-03-02 07:00
-       until => $isodate2epoch->("2020-06-10 17:00:00"), # 1586790000, # 2020-04-13 17:00
-       text  => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 10.06.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-06-29 17:00:00"), # 1586790000, # 2020-04-13 17:00
+       text  => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 29.06.2020 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147345534',
        data  => <<EOF,
@@ -30407,7 +30406,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: MANDEL-2020
-#: last_checked: 2020-05-10
+#: last_checked: 2020-06-06
 	2::inwork 12871,15882 12911,15865 12979,15822 12948,15771
 EOF
      },
@@ -30528,7 +30527,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ROTHER-2020
-#: last_checked: 2020-05-08
+#: last_checked: 2020-06-07
 	q4::inwork 13478,10998 13575,10963
 EOF
      },
@@ -30549,7 +30548,7 @@ EOF
 #: note: offizielle Umleitung über Fischerstr.
 #: add_fragezeichen: Sind die Bauarbeiten in der Zobtener Str. mittlerweile beendet?
 #: priority: #A
-#: last_checked: 2020-06-05
+#: last_checked: 2020-06-08
 #: check_frequency: 14d
 	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
 EOF
@@ -30572,7 +30571,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-05-30
+#: last_checked: 2020-06-09
 #: check_frequency: 14d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30809,6 +30808,7 @@ EOF
        source_id => 'https://www.bahninfo-forum.de/read.php?9,658568,668792#msg-668792',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.940522.php
+#: by: https://www.berliner-woche.de/koepenick/c-verkehr/gleisbau-gleich-an-mehreren-stellen_a275551
 #: source_id: 2147345909
 	q4::inwork 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562 22093,4499
 EOF
@@ -30820,6 +30820,29 @@ EOF
        source_id => 'https://www.kms-sonne.de/baustellennews/?date=20200605',
        data  => <<EOF,
 	q4::inwork 12873,8218 12805,8194 12779,8188
+EOF
+     },
+     { from  => $isodate2epoch->("2020-06-07 09:00:00"),
+       until => $isodate2epoch->("2020-07-03 17:00:00"),
+       text  => 'Kiefholzstr. Richtung Alt-Treptow zwischen Eichbuschallee und Dammweg: Fahrbahn gesperrt, Gehweg für Radfahrer frei, vom 08.06.2020 09:00 Uhr bis 03.07.2020 17:00 Uhr',
+       type  => 'handicap',
+       source_id => '2147345893',
+       data  => <<EOF,
+# REMOVED --- #: XXX ist die Straße tatsächlich für Radfahrer gesperrt? Wie sieht die Umleitung aus? --- #: priority: #B --- #: next_check: 2020-06-08
+	q3::inwork; 15560,7400 15553,7408 15221,7778 
+EOF
+     },
+     { from  => 1591653600, # 2020-06-09 00:00
+       until => 1592949599, # 2020-06-23 23:59
+       text  => 'NSG Fauler See: wegen Eichenprozessionsspinners gesperrt, ab 9.6.2020 für voraussichtlich zwei Wochen',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.942470.php',
+       data  => <<EOF,
+	2::temp 16556,16673 16488,16668 16477,16612 16424,16539 16359,16387 15990,16479
+	2::temp 15915,16526 15965,16482 15918,16383
+	2::temp 15965,16482 15990,16479 16091,16523 16107,16586 16138,16605 16172,16686 16239,16737 16303,16816 16362,16843 16483,16722 16488,16668
+	2::temp 16362,16843 16353,16900 16381,16969
+	2::temp 16416,16236 16413,16273 16369,16308 16340,16338 16359,16387
 EOF
      },
     );

@@ -14,18 +14,11 @@
 	X::inwork 9868,19023
 # 
 # REMOVED --- #: note: Baustellenampel in der Neuen Roßstr. --- #: source_id: 2147345021 (bis 06.07.2020) --- #: source_id: 2147345825 --- #: XXX ist die Ampel mittlerweile abgebaut (wegen der Einbahnstraßenregelung)? --- #: XXX laut fritz Sperrung bis 2020-06-30 --- #: last_checked: 2020-05-12 --- #: next_check: 2020-05-13 --- #: valid: -20200706 ---	X::inwork 10780,11721
-# 
-#: next_check_id: HOSEMANN-2019
-#: note: Baustellenampel in der Hosemannstr. (eigentlich 2x)
-#: last_checked: 2020-05-10
-#: next_check: 2020-07-31
-#: valid: -20200731
-	X::inwork 12556,15518
-# 
+# REMOVED (mittlerweile nur noch provisorische Zebrastreifen) --- #: next_check_id: HOSEMANN-2019 --- #: note: Baustellenampel in der Hosemannstr. (eigentlich 2x) --- #: last_checked: 2020-05-10 --- #: next_check: 2020-07-31 --- #: valid: -20200731 ---	X::inwork 12556,15518
 # REMOVED --- #: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer --- #: source_id: 2147344652 (bis Mitte Dezember 2019) --- #: last_checked: 2019-11-30 --- #: next_check: 2019-12-13 --- #: valid: 20190822-20191213 ---	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-06-05 vvv
+#: last_checked: 2020-06-08 vvv
 #: next_check: 2020-07-10 vvv
 #: valid: 20190319-20200710 vvv
 #: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20, 2020-03-23, 2020-04-06, 2020-04-12)
@@ -65,7 +58,7 @@
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
-#: last_checked: 2020-06-01
+#: last_checked: 2020-06-08
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -967,7 +960,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036190429651/190429651/00081409/09-Anlagen/04/B0138SB.pdf (nach Komplettumbau)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5240 (Prüfung für einen Umbau)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036154063735/154063735/00111219/19-Anlagen/05/B1138ZB2.pdf
-#: last_checked: 2020-04-24 (mapillary)
+#: last_checked: 2020-06-08
 #: check_frequency: 180d
 	X 18080,5376
 	X 19904,3464
@@ -2821,7 +2814,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2020-05-15 vvv
+#: last_checked: 2020-06-09 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2885,6 +2878,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 6827,4810
 	X 20839,3163
 	X 20927,3292
+#: note: Anforderung für Radfahrer/Fußgänger quer zur Schildhornstr.
 	X 4937,6205
 	F 6115,13328
 	F 6674,13332
@@ -2949,7 +2943,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20221231 vvv
-#: last_checked: 2020-06-05 vvv
+#: last_checked: 2020-06-11 (webcam) vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
@@ -3132,7 +3126,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2020-05-21 (architektur-urbanistik)
+#: last_checked: 2020-06-07 (mapillary)
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 

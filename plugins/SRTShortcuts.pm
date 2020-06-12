@@ -25,7 +25,7 @@ BEGIN {
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.99;
+$VERSION = 2.01;
 
 use your qw(%MultiMap::images $BBBikeLazy::mode
 	    %main::line_width %main::p_width %main::str_draw %main::p_draw
@@ -771,11 +771,11 @@ EOF
 	      ],
 	      [Cascade => $do_compound->("Development"), -menuitems =>
 	       [
-		[Button => "Render Mapnik map (streets only)",
-		 -command => sub { render_mapnik_map() },
-		],
 		[Button => "Render Mapnik map (all current layers)",
 		 -command => sub { render_mapnik_map(-special => "current-layers") },
+		],
+		[Button => "Render Mapnik map (streets only)",
+		 -command => sub { render_mapnik_map() },
 		],
 		[Button => "Update Mapnik map data",
 		 -command => sub { update_mapnik_map_data() },
@@ -3448,7 +3448,27 @@ sub show_mapillary_tracks {
 	}
     }
     my $sg = Strassen::GeoJSON->new;
-    $sg->geojsonstring2bbd($geojson, namecb => sub { my $f = shift; join(" ", @{$f->{properties}}{qw(captured_at username)}) });
+    $sg->geojsonstring2bbd($geojson,
+			   namecb => sub {
+			       my $f = shift;
+			       join(" ", @{$f->{properties}}{qw(captured_at username)});
+			   },
+			   dircb  => sub {
+			       my $f = shift;
+			       my $pKey = $f->{properties}{coordinateProperties}{image_keys}[0];
+			       if ($pKey) {
+				   my $date = $f->{properties}{captured_at};
+				   my($dateFrom, $dateUntil);
+				   if ($date) {
+				       ($dateFrom = $date) =~ s{T.*}{};
+				       $dateUntil = $dateFrom;
+				   }
+				   { url => ["https://www.mapillary.com/app/?focus=photo&pKey=$pKey" . ($dateFrom ? "&dateFrom=$dateFrom&dateUntil=$dateUntil" : "")] };
+			       } else {
+				   undef;
+			       }
+			   },
+			  );
 
     my(undef, $tmpfile) = File::Temp::tempfile(UNLINK => 1, SUFFIX => ($since ? "_$since" : "") . "_mapillary.bbd");
     $sg->write($tmpfile);

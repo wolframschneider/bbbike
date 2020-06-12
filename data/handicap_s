@@ -22,6 +22,7 @@ Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontaine
 Scharrenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 10332,11929 10385,11985
 Hirtenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10925,13322 11012,13278
 (Umfahrung Baustelle Neue Roßstraßenbrücke): einige Fußgänger	q3::inwork 10680,11875 10650,11909 10642,11901 10634,11894 10662,11863
+Neue Roßstr.: Fahrbahn gesperrt	q4::inwork 10687,11853 10722,11816
 Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Restaurantbetrieb	q2::inwork 10687,11853 10869,11949
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, Gehweg explizit für Radfahrer verboten	q4::inwork 8737,12098 8783,11959
@@ -52,17 +53,15 @@ Anzengruberstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwo
 Rollbergstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12545,8209 12714,8249
 Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12394,8729 12330,8636
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249 12753,8187
-Flottwellstr./Dennewitzstr.: Bauarbeiten, Ausweichen auf Gehweg und Umfahrung über Pohlstr.	q3::inwork; 8199,10634 8159,10430 8058,10306
-Pohlstr.: Bauarbeiten, Umfahrung über Gehweg	q3::inwork 8159,10430 7932,10475
+Dennewitzstr.: Bauarbeiten, Fahrbahn Richtung Süden gesperrt	q3::inwork; 8159,10430 8058,10306
 Steinmetzstr: Bauarbeiten zwischen Kurfürstenstr. und Bülowstr., etwa 100 Meter der Fahrbahn sind gesperrt, Ende unbekannt	q3::inwork 7744,10372 7698,10147
 Birkbuschstr.: Einbahnstraßenregelung, Gehweg für Radfahrer frei, bis Ende 2020	q2::inwork; 5271,4547 5329,4485 5416,4411 5483,4359 5541,4305
 Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3905,4482
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork; 12556,15518 12605,15491 12621,15482
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork; 12621,15482 12605,15491
-Erich-Weinert-Str.: Bauarbeiten zwischen Scherenbergstr. und Stahlheimer Str., Einbahnstraßenregelung, offen Richtung Osten	q4:inwork; 11542,16070 11404,16140
 Erich-Weinert-Str./Scherenbergstr.: Kreuzungsumbau	q3:inwork 11467,16238 11404,16140 11358,16067
-Erich-Weinert-Str./Scherenbergstr.: Kreuzungsumbau	q3:inwork; 11295,16199 11404,16140 11542,16070
+Erich-Weinert-Str./Scherenbergstr.: Kreuzungsumbau	q3:inwork 11295,16199 11404,16140 11542,16070
 Charlottenburger Str.: Einbahnstraßenregelung zwischen Tassostr. und Pistoriusplatz, ggfs. auf Gehweg ausweichen	q3:inwork; 13642,16118 13479,16182
 (provisorische Fußgängerbrücke Säntisstr.): Fußgänger	q3 9014,898 9005,912 9002,919 9047,948 9058,932
 Säntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
@@ -197,7 +196,7 @@ vor dem Kanzleramt: Fußgänger, manchmal gesperrt	q1 8120,12756 8122,12603
 Am Stadtpark: Parkweg mit Fußgängern	q1 15395,12762 15424,12732 15433,12686 15454,12519
 Am Stichkanal: Fußgänger	q1 22832,4491 22814,4505 22797,4518 22702,4592 22585,4634
 Am Stichkanal: Fußgänger	q1 22759,4430 22797,4518
-Schwedter Str. (Mauerpark): Park, Fußgänger	q2 10354,14987 10319,15090 10240,15318 10210,15407 10188,15474 10185,15487 10130,15653
+Schwedter Str. (Mauerpark): Park, Fußgänger	q2 10354,14987 10319,15090 10240,15318 10210,15407 10188,15474 10186,15481 10130,15653
 (Fußweg am Griesinger-Krankenhaus): Fußgänger	q1 21935,12153 21930,12185 21608,12320 21435,12390 21346,12427 21265,12468 21221,12484
 (Ringbahnsteig Ostkreuz): Fußgänger	q4 14810,10832 14816,10862 14839,10856 14847,10892 14864,10962 14851,10966
 Marheinekeplatz: Fußgänger, Brunnen	q3 9892,9286 9880,9233
@@ -1287,8 +1286,8 @@ Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8384,10507 8377,10502 
 Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8159,10430 8199,10424 8237,10418 8278,10384 8309,10368 8315,10347 8333,10167 8360,10133 8338,9971
 Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8058,10306 8180,10282 8256,10264
 Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8042,10084 8145,10090
-(Hansastr. - Gartenstr.): Fußgänger	q1 15194,16186 15102,16212 14810,16282 14665,16294
-(Hansastr. - Gartenstr.): Fußgänger	q1 14810,16282 14721,16360
+(Hansastr. - Gartenstr.): Fußgänger	q1 15194,16186 15143,16210 15104,16218 14806,16279 14665,16294
+(Hansastr. - Gartenstr.): Fußgänger	q1 14806,16279 14717,16355
 (Dohnagestell - Tangastr.): Fußgänger	q2 5802,15399 5889,15457 5961,15562
 Arnimplatz: Fußgänger	q2 10606,16319 10739,16146
 (Weg im Salvador-Allende-Viertel): mehrere Drängelgitter im Parkplatzbereich, kann auf geeigneten Parkplatzzufahrten umfahren werden	q3 22888,4184 22957,4264
@@ -1359,7 +1358,7 @@ Springpfuhlpark: Fußgänger	q2 19524,14474 19534,14459 19535,14448 19545,14290 19
 (Am Rosengarten - Lütztalweg): sehr eng	q4 18834,12228 18867,12265 18917,12271
 Dürerplatz: einige Fußgänger, Bordstein	q2 6234,7020 6276,6995
 Straße 17: kurze Rampe	q3 7307,7425 7307,7457
-(Lortzingstr. - Mauerpark): einige Fußgänger	q1 10038,15418 10046,15421 10044,15429 10046,15430 10059,15443 10070,15471 10090,15482 10120,15484 10150,15471 10155,15473 10185,15487
+(Lortzingstr. - Mauerpark): einige Fußgänger	q1 10037,15421 10070,15438 10076,15455 10093,15463 10107,15457 10150,15471 10155,15473 10186,15481
 (Lauinger Str. - Biesdorfer Friedhofsweg/Alt-Biesdorf): einige Fußgänger	q1 21221,11398 21311,11528
 Eigerstr.: einige Bodenschwellen, können aber umfahren werden	q0 12825,17870 12882,17895 12902,17933 12945,17958 12994,17986 13036,18010 13043,18126 13042,18152
 Wischbergweg: sehr enger Pfad	q4 13733,18161 13751,18180
@@ -1852,8 +1851,8 @@ Volkspark Anton Saefkow: einige Fußgänger, Rampe	q3 12862,14632 12888,14625
 Volkspark Anton Saefkow: einige Fußgänger, Steigung/Gefälle	q3 12901,14594 12888,14625 12900,14637 12932,14640 12970,14632 12982,14629
 Volkspark Anton Saefkow: einige Fußgänger	q2 12709,14745 12700,14726
 Volkspark Anton Saefkow: einige Fußgänger	q2 12794,14678 12789,14670
-Volkspark Anton Saefkow: einige Fußgänger	q2 12982,14629 13007,14615 13034,14594 13053,14578 13195,14487 13239,14461
-Volkspark Anton Saefkow: einige Fußgänger	q2 13034,14594 13049,14623 13119,14622 13231,14583 13266,14541
+Volkspark Anton Saefkow: einige Fußgänger	q2 12982,14629 13009,14616 13036,14596 13053,14578 13195,14487 13239,14461
+Volkspark Anton Saefkow: einige Fußgänger	q2 13036,14596 13049,14623 13119,14622 13231,14583 13266,14541
 Volkspark Anton Saefkow: einige Fußgänger, Bordstein	q4 13266,14541 13291,14518
 Volkspark Anton Saefkow: einige Fußgänger	q2 13266,14541 13246,14515 13233,14509 13169,14532 13195,14487
 Volkspark Anton Saefkow: einige Fußgänger, Bordstein	q3 12547,14873 12557,14865 12563,14860 12592,14838
@@ -1926,7 +1925,7 @@ Zeppelinplatz: einige Fußgänger	q1 6794,15553 6884,15456
 (Straße 50 - Straße 50): einige Fußgänger, schmal	q2 15305,22017 15325,22070 15353,22105
 (S-Bhf. Karow, Bahnhofsunterführung): Fußgänger	q3 14718,23387 14630,23438
 Oberdorfer Steig: schmaler Weg	q2 -8213,14837 -8270,14782
-(Sulzfelder Str. - Hansastr.): einige Fußgänger	q1 15120,16349 15120,16305 15102,16212
+(Sulzfelder Str. - Hansastr.): einige Fußgänger	q1 15120,16349 15120,16305 15104,16218
 (Weg am Westhafenkanal): einige Fußgänger	q1 3656,14150 3666,14162 3651,14172 3203,14054 2899,13934
 (Weg am Westhafenkanal - Tegeler Weg): einige Fußgänger	q1 2899,13934 2895,13869 2957,13796 2984,13789
 (Weg am Westhafenkanal - Tegeler Weg): einige Fußgänger	q1 2895,13869 2913,13919 2935,13927
@@ -1984,6 +1983,8 @@ Friedrich-Meinecke-Weg: Fußgänger, Bordsteine	q3 1803,5397 1873,5385 1946,5385 2
 nördliche Wuhlheide: schmaler Weg	q3 20728,7363 20815,7313 20841,7271
 nördliche Wuhlheide: einige schmale Stellen	q2 20879,8173 20895,8079 20854,7982 20763,7868
 nördliche Wuhlheide: einige schmale Stellen	q2 20719,8139 20679,8362
+Einstein-Park: Fußgänger, Radfahren offiziell verboten, flacher Bordstein am Storkower Platz	q3 13163,14924 13207,14998 13204,15062
+(Alt-Friedrichsfelde/Am Tierpark [Wohngebiet] - Am Tierpark): Gehweg, flache breite Rampe	q2 18158,11631 18216,11656
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2108,13 +2109,13 @@ Hüttenweg: keine abgesenkten Bordsteine an der Kreuzung "Auf dem Grat"	q1 1964,5
 (Glühwürmchenweg - Pionierstr.): Wohngebiet	q1 -5960,16441 -6018,16250
 Schloßpark Charlottenburg: Fußgänger	q1 3231,12749 3120,12831 3065,12975 3016,13315 2987,13448 2953,13489 2955,13508
 Spreeweg: eng und unübersichtlich	q2 2955,13508 2920,13595 2920,13612 2908,13656 2902,13665 2859,13686 2777,13712 2568,13662 2402,13602 2321,13572
-Lefèvrestr.: enge Straße	q1 4987,6909 4993,6812 5014,6752 5040,6706 5137,6651 5215,6643
+Lefèvrestr.: enge Straße	q1 4987,6909 4985,6818 5010,6755 5040,6706 5137,6651 5215,6643
 (Paul-Löbe-Allee - südl. Spreeufer): Biergarten am HDKDW	q4 7741,12586 7710,12585
 (südliches Spreeufer): Biergarten am HDKDW	q4 7745,12603 7710,12585 7670,12576
 Hackerstr.: schmale Straße, schlecht einzusehen	q1 4994,6387 4999,6397 5020,6434 5065,6515 5101,6579 5137,6651 5184,6723
 Grafenwalder Weg: schmale Fahrbahn	q1 -3312,16425 -3319,16572
 (Wuhlewanderweg - Teterower Ring): Fußgänger	q1 22196,12961 22279,12938 22308,12940 22357,12956 22419,12975 22443,12998
-Retzdorffpromenade: Fußgänger	q2 4893,6812 4993,6812
+Retzdorffpromenade: Fußgänger	q2 4886,6819 4985,6818
 Albestr.: enge Straße	q0 5419,7464 5448,7436 5640,7435 5811,7433
 Leuthener Str.: enge Straße	q1 7412,8351 7494,8354 7578,8358 7640,8359 7716,8356
 südliches Spreeufer: besonders an Wochenenden tagsüber sehr viele Fußgänger	q2 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576
