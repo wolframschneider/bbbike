@@ -18,7 +18,7 @@
 # REMOVED --- #: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer --- #: source_id: 2147344652 (bis Mitte Dezember 2019) --- #: last_checked: 2019-11-30 --- #: next_check: 2019-12-13 --- #: valid: 20190822-20191213 ---	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-06-08 vvv
+#: last_checked: 2020-06-17 vvv
 #: next_check: 2020-07-10 vvv
 #: valid: 20190319-20200710 vvv
 #: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20, 2020-03-23, 2020-04-06, 2020-04-12)
@@ -53,12 +53,12 @@
 	X::inwork -1538,22800
 #: by: https://www.berliner-woche.de/heiligensee/c-verkehr/anregungen-der-eltern-endlich-verwirklicht_a207979
 #: XXX später wird hier ein Kreisverkehr entstehen
-#: last_checked: 2019-09-21 (mapillary)
-#: next_check: 2019-12-31
+#: last_checked: 2020-06-13
+#: check_frequency: 180d
 	X::inwork -2504,22626
 # 
 #: next_check_id: TRESKOWALLEE-2019
-#: last_checked: 2020-06-08
+#: last_checked: 2020-06-14
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -70,7 +70,7 @@
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2020-05-15
+#: last_checked: 2020-06-12
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -1601,7 +1601,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 15845,23717
 	X -1654,18711
 	X -130,21396
-#: note: Anforderungsampel beim Überqueren des Waidmannsluster Damms
+#: note: Anforderungsampel (2x) beim Überqueren des Waidmannsluster Damms --- lange Wartezeiten von über 3 Minuten möglich
 	X 2188,20910
 	X 2146,20887
 	X 2573,21008
@@ -2670,9 +2670,9 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berliner-woche.de/adlershof/c-bauen/querungshilfe-auf-dem-adlergestell_a262618 (mit Ampel)
 #: osm_watch: node id="987195315" version="7"
 #: source_id: 2147345739 (bis 15.6.2020)
-#: last_checked: 2020-06-01
+#: last_checked: 2020-06-17
 #: check_frequency: 30d
-#: next_check: 2020-06-15
+# REMOVED --- #: next_check: 2020-06-15
 	F::inwork 20002,3349
 	F 4000,12183
 	F 22031,9142
@@ -2943,7 +2943,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20221231 vvv
-#: last_checked: 2020-06-11 (webcam) vvv
+#: last_checked: 2020-06-17 (webcam) vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
@@ -2964,11 +2964,11 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20211231 vvv
-#: last_checked: 2020-04-18
+#: last_checked: 2020-06-15
 #: check_frequency: 90d
 	X::inwork 13278,6967
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2020-03-21 (mapillary)
+#: last_checked: 2020-06-15
 #: check_frequency: 90d
 	X::inwork 13627,7047
 #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren
@@ -3126,7 +3126,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2020-06-07 (mapillary)
+#: last_checked: 2020-06-13
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -3157,7 +3157,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: provisorische Ampel
 #: note: Anforderungsampel
 #: XXX bleibt die Ampel Hermannstr./Thomasstr. permanent?
-#: last_checked: 2020-05-18
+#: last_checked: 2020-06-15
 	F::inwork 12181,7390
 # 
 #: note: Anforderungsampel für Radfahrer in der Relation Brachvogelstr. - Mittenwalder Str.
@@ -3316,7 +3316,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2020-06-05 vvv
+#: last_checked: 2020-06-15 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738

@@ -282,7 +282,6 @@ Schöppinger Str.	1 3691,566 3648,531 3569,469
 Arberstr.	1 19424,9502 19406,9236
 Hanne Nüte	1 13675,4855 13695,4859 13758,4926 13761,4992 13717,5175
 Parchimer Str.	1s 22212,12403 22212,12422 22257,12481 22258,12573 22272,12610
-Ringbahnstr.	1 12934,6967 13072,7013
 Stiftsweg	1s 11001,18528 11239,18832 11263,18842
 Bleicheroder Str.	1 11263,18842 11439,18890 11526,18929 11622,18964 11727,19001 11762,19014 11818,19089
 Renée-Sintenis-Platz	1 5642,7255 5664,7244 5675,7224 5661,7202 5641,7189 5621,7204 5614,7223 5624,7244 5642,7255
@@ -964,7 +963,6 @@ Max-Lenk-Str. (Zepernick)	1 17834,27001 17659,27135
 Heinestr. (Zepernick)	1 17659,27135 17759,27229
 Lindenberger Weg	1 17193,24683 17226,24664 17228,24640
 Lindenberger Weg	1 17228,24640 17193,24683
-zur Mülldeponie	2 14849,1672 14588,1053 14768,510
 Wiesenweg (Schulzendorf)	1 23456,-3746 23466,-3768 23618,-3854 23717,-3975
 Str. der Einheit (Caputh)	1 -16868,-6959 -16823,-6996
 Am Stern	1 26002,-3362 26002,-3342 26011,-3331 26029,-3326 26048,-3334 26046,-3365 26013,-3367 26002,-3362
@@ -2093,9 +2091,9 @@ Nymphenburger Str. -> Heylstr.: breiter Mittelstreifen, enge Querungsmöglichkeit
 Mittelstreifen mit Bordsteinen und parkenden Autos	3nocross::ignrte 15899,14598 15968,14684 16033,14756
 Große-Leege-Str. -> Verdener Gasse: Mittelstreifen mit Bordsteinen und parkenden Autos	3::igndisp 15899,14598 15968,14684 15946,14702
 Verdener Gasse -> Große-Leege-Str.: Mittelstreifen mit Bordsteinen und parkenden Autos	3::igndisp 15946,14702 15968,14684 16033,14756
-Mittelstreifen mit Bordsteienen	3nocross::ignrte 16353,7226 16195,7398 15920,7697
+Mittelstreifen mit Bordsteienen	3nocross::ignrte 16259,7328 16195,7398 15920,7697
 Köpenicker Landstr. -> Lakegrund: Mittelstreifen mit Bordsteienen	3::igndisp 15920,7697 16195,7398 16368,7425
-Lakegrund -> Köpenicker Landstr.: Mittelstreifen mit Bordsteienen	3::igndisp 16368,7425 16195,7398 16353,7226
+Lakegrund -> Köpenicker Landstr.: Mittelstreifen mit Bordsteienen	3::igndisp 16368,7425 16195,7398 16259,7328
 Straßenbahntrasse	3nocross::ignrte 19053,2890 19021,2946 18946,3077
 Zum Trudelturm -> Max-Born-Str.: Straßenbahntrasse	3::igndisp 19101,3028 19021,2946 19053,2890
 Max-Born-Str. -> Zum Trudelturm: Straßenbahntrasse	3::igndisp 18946,3077 19021,2946 19101,3028
@@ -2574,7 +2572,7 @@ tragen (Treppe oder sehr steile, sandige Rampe)	0:60:-255 41715,18446
 tragen (Treppe am Körnerpark, 16 Stufen)	0:30:-114 12734,7384
 tragen (mehrere Treppen mit insgesamt ca. 25 Stufen und Kinderwagenrampe)	0:30:-261 12115,8556
 tragen (Treppe, 5 x 3 Stufen mit Kinderwagenrampe)	0:25:-110 13953,9372
-tragen (Treppe, 34 Stufen)	0:35:-250 8025,12859
+tragen (Treppe, 34 Stufen)	0:35:-248 8025,12859
 tragen (Treppe)	0:30:-4 8428,12859
 tragen (Treppe)	0:30:-265 8445,12755
 tragen (Treppe)	0:35:5 17026,11799
@@ -3095,6 +3093,7 @@ Tor (freilaufende Büffel)	BNP:5:-40 14494,24824
 Tor (freilaufende Büffel)	BNP:5:-40 14848,24411
 Schranke, vorbeifahren mit Bordsteinen	BNP:10:43 5005,2100
 Barriere	BNP:5:-72 4708,21235
+Abendseglersteig: noch in Bau	2::inwork 33176,2938 33147,2832 33267,2810 33383,2792 33406,2852
 Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10188,-2139 10228,-2136
 Kieler Str. - Marderweg - Feldrain: gesperrt, vielleicht dauerhaft	2 25766,13289 25789,13263 25814,13240 25723,13137
 (Sebnitzer Str. - Hoyerswerdaer Str.): Bauarbeiten, Wege sind noch gesperrt	2::inwork 24894,15000 24915,15008 25031,15027 25089,15037 25206,15044 25221,15028
@@ -3108,7 +3107,6 @@ Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 1
 Bauarbeiten Golda-Meir-Steg	2::inwork 7965,14207 7973,14195 7972,14185
 Bauarbeiten Golda-Meir-Steg	2::inwork 7973,14195 8033,14241
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:inwork 9429,12728 9402,12792 9386,12833
-Littenstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:inwork 11059,12450 10954,12635
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10687,11853 10672,11870 10642,11901
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10680,11875 10672,11870 10662,11863
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
@@ -3132,6 +3130,7 @@ Carl-Spindler-Str.: durch Bauzäune abgesperrt, manchmal (am Wochenende?) kann ma
 Henriette-Lustig-Str.: teilweise gesperrt	2::inwork 21375,4974 21380,5003
 Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21476,5048 21611,5119 21645,5135
 Wäscherinnenweg: teilweise gesperrt	2::inwork 21444,5112 21358,5072
+Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht möglich	2::inwork 21355,5254 21386,5251
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 Johannisstr.: Einbahnstraße	1s:inwork 9588,13174 9385,13174

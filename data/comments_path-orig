@@ -122,7 +122,7 @@ Nordufer: bereits an der Ampel Föhrer Str. auf den linken Zweirichtungsradweg we
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/tief-10-ag_radverkehr-12-03-2018-kompatibilitaetsmodus.pdf
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/11-ag_radverkehr-bericht-einzelmassnahmen.pdf (mit Ampel, Brückenneubau 2021)
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/12-ag_radverkehr-bericht-einzelmassnahmen.pdf (nach 2021)
-#: last_checked: 2020-05-09
+#: last_checked: 2020-06-14
 #: next_check: 2021-06-01
 An der Wuhlheide - Wuhlewanderweg: ggfs. bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (insbesondere mit Anhänger oder mit Lastenrad wenig Platz auf dem Mittelstreifen)	PI; 21303,5826 21365,5832 21470,5809 21522,5771 21569,5730 21596,5693 21602,5685 21618,5699 21744,5804
 # 
@@ -239,8 +239,8 @@ Den rechten Weg direkt an den Grundstücken entlang wählen	CP2; 761,7922 614,8006
 (Hufelandweg - Luisenstr.): durch die Gebäudedurchfahrt	CP2; 8582,13355 8665,13353
 Helga-Hahnemann-Str.: Zugang rechts vom grossen Parkplatz, nicht ausgeschildert	CP2; 9415,13315 9408,13282
 Theodor-Heuss-Weg: beginnt links vom Spielplatz der Kita	CP2; 9250,14658 9223,14608
-zur Gustav-Heinemann-Brücke durch schmalen Durchbruch in der Böschung	CP2; 8032,12889 8053,12871
-zum Spreeufer: den Garten hinunter, am Ende ist ein Durchbruch nach rechts	CP2; 8116,12938 8053,12871
+zur Gustav-Heinemann-Brücke durch schmalen Durchbruch in der Böschung	CP2; 8025,12879 8041,12866
+zum Spreeufer: den Garten hinunter, am Ende ist ein Durchbruch nach rechts	CP2; 8116,12938 8041,12866
 zum Fußgängertunnel S-Bhf Jungfernheide: Über den Parkplatz zum S-Bahn-Zugang	CP2; 3320,13796 3365,13695
 Zufahrt zu den Grundstücken direkt am Bahndamm nehmen	CP2; 3713,13787 3508,13727
 Zufahrt zur Kolonie ist schwierig zu finden (enges Tor)	CP2; 10190,16930 10209,16674
@@ -527,7 +527,7 @@ Salvador-Allende-Str. - Abzweig: bereits an der Ampel Fürstenwalder Damm auf den
 Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichshagener Str. fahren	CP; 23428,5382 23403,5385 23404,5325
 #: XXX wird eventuell im Zuge der Maßnahme Nsw.3 verbessert
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5826 (Verkehrsführung verbessern) (wurde allerdings abgelehnt; die allgemeine Verbesserung der Situation wird aber irgendwann passieren ("Umgestaltung des Bahnhofsvorplatzes")
-#: last_checked: 2020-06-08
+#: last_checked: 2020-06-17
 #: check_frequency: 180d
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115
@@ -580,7 +580,7 @@ zur Schützenstr.: an der Kreuzung Am Seegrabn/Alexander-Meißner-Str. auf die lin
 Wutzkyallee - Grünanlage: hinter dem Bahnübergang links abbiegen	CP; 15350,1636 15349,1614 15437,1613
 Wutzkyallee - Grünanlage: vor dem Bahnübergang rechts abbiegen	CP; 15344,1546 15349,1614 15437,1613
 Zwickauer Damm - Grünanlage: bereits an der Fleischerstr. die Straßenseite wechseln	PI; 15729,1573 15719,1557 15727,1525
-Südostallee - Königsheideweg: ausgeschildert "Zur Linde"	CP2; 16169,6064 16159,6051
+Südostallee - Königsheideweg: ausgeschildert "Biergarten Zur Linde"	CP2; 16169,6064 16159,6051
 Kaiser-Friedrich-Str. - Goethepark: bereits an der Ampel Schillerstr. auf die linke Seite wechseln	PI; 3460,11441 3467,11373 3594,11372
 Goethepark - Kaiser-Friedrich-Str: linken Gehweg bis zur nächsten Kreuzung benutzen	CP; 3594,11372 3467,11373 3479,11238
 Roedernallee - S-Bhf. Alt-Reinickendorf: ggfs. schon an der Ampel Flottenstr. auf die linke Seite wechseln	PI; 6392,19142 6415,19083 6513,19053
@@ -625,7 +625,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2020-06-08 vvv
+#: last_checked: 2020-06-17 vvv
 ausgeschildert "zur Salzmannstraße Huronseestraße"	CP2; 16900,9861 16895,9922
 ausgeschildert "zur Sewanstraße"	CP2; 16900,9861 17005,9953
 #: last_checked ^^^

@@ -12213,7 +12213,7 @@ EOF
 # REMOVED (westl. Straße des 17. Juni) ---	2::temp 7816,12150 7383,12095 7026,12054 6828,12031
 	2::temp 8595,12066 8600,12165 8538,12245
 Große Querallee	2::temp 7816,12150 7822,12201 7875,12363 7945,12592
-südl. Spreeuferweg	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
+südl. Spreeuferweg	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8025,12879 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
 Paul-Löbe-Allee und Verlängerungen	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593 8596,12576
 Yitzhak-Rabin-Str. bis Gustav-Heinemann-Brücke	2::temp 8120,12756 8122,12603 8119,12414 8055,12186 8119,12414 8122,12603 8120,12756 8114,12839 8115,12912 8116,12938 8110,13042
 nördl. Wilhelmstr.	2::temp 8775,12457 8766,12541
@@ -15506,8 +15506,9 @@ EOF
 #: note: genauere Uhrzeit von Dieter Heimann
 #: confirmed_by: um 20:30 Uhr steht man vor einem geschlossenen Tor, zumindest an der Nordostseite (2012-08)
 #: tempex: sa,su,holiday,(mo-fr T20:00-sunrise) vvv
-Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21498,7153 21475,7500 21497,7597 21540,7630
-Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21025,7349
+Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21574,7049 21508,7126 21491,7182 21475,7500 21497,7597 21540,7630
+Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21050,7341 21019,7340
+(Innovationspark Wuhlheide - Wuhlewanderweg): Tor nachts ab 20 Uhr und am Wochenende gesperrt	2::night::weekend 21491,7182 21547,7208
 #: tempex ^^^
 #: note: ^^^
 EOF
@@ -18649,7 +18650,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016343',
        data  => <<EOF,
-	q3::inwork 21027,7432 21029,7485 21032,7590 21037,7751
+	q3::inwork 21020,7433 21024,7484 21029,7591 21037,7751
 EOF
      },
      { from  => 1288905888, # 2010-11-04 22:24
@@ -21889,10 +21890,10 @@ EOF
 # REMOVED ---	2::temp 8030,12824 8114,12839 8168,12848 8204,12816 8206,12757
 	2::temp 8206,12757 8207,12606
 	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593 8596,12576
-	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
+	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8025,12879 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
 	2::temp 8304,12938 8309,12758 8306,12609
 	2::temp 8309,12758 8415,12749 8593,12742 8596,12760
-	2::temp 8424,12853 8370,12902 8304,12938 8235,12945 8168,12945 8116,12938 8072,12902 8046,12870 8036,12855 8021,12832
+	2::temp 8424,12853 8370,12902 8304,12938 8235,12945 8168,12945 8116,12938 8050,12893 8030,12857 8021,12832
 	2::temp 7946,12932 7930,12912 7924,12872 7926,12865 7931,12869 7945,12878
 	2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420 8775,12457
 	2::temp 8775,12457 8804,12280 8861,12125
@@ -26334,7 +26335,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
        data  => <<EOF,
-	2::temp 8044,12989 8110,13042 8116,12938 8053,12871 8032,12889
+	2::temp 8044,12989 8110,13042 8116,12938 8041,12866 8025,12879
 	2::temp 8277,13032 8317,13015 8408,12968 8464,12919 8480,12909 8503,12895 8424,12853 8309,12758 8252,12757 8206,12757 8120,12756 8030,12824
 # REMOVED ---	2::temp 8030,12824 8114,12839
 	2::temp 8168,12945 8235,12945 8304,12938 8370,12902
@@ -26342,14 +26343,14 @@ EOF
 	2::temp 8464,12919 8498,12870
 	2::temp 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593
 	2::temp 8160,13053 8159,13042 8159,13032 8044,12989 7966,12913
-	2::temp 8072,12902 8046,12870
+	2::temp 8050,12893
 # REMOFED ---	2::temp 8168,12848 8204,12816 8206,12757
 	2::temp 8206,12757 8207,12606
 	2::temp 8207,12606 8306,12609 8309,12758
-	2::temp 8036,12855 8021,12832 7930,12912
+	2::temp 8030,12857 8021,12832 7930,12912
 	2::temp 8207,12606 8122,12603 7945,12592 7875,12363
 	2::temp 8369,12609 8373,12416
-	2::temp 7945,12592 7851,12590 7741,12586 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8445,12755 8415,12749 8309,12758 8304,12938
+	2::temp 7945,12592 7851,12590 7741,12586 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8025,12879 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8445,12755 8415,12749 8309,12758 8304,12938
 EOF
      },
      { from  => 1499148000, # 2017-07-04 08:00
@@ -26928,7 +26929,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-06-09 vvv
+#: last_checked: 2020-06-12 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27346,7 +27347,6 @@ EOF
        data  => <<EOF,
 #: by: http://www.berliner-woche.de/alt-treptow/verkehr/radelverbot-im-park-bleibt-d122937.html
 #: by: http://www.berliner-woche.de/alt-treptow/bauen/der-vater-des-rosengartens-d156358.html
-#: note: mittlerweile gibt's auch im südöstlichen Teil einige Verbotsschilder, aber nicht durchgängig
 	q4 15778,8990 15623,9028 15527,9096 15513,9144 15453,9259 15432,9322 15304,9464 15186,9550 15052,9584 14909,9649 14889,9660 14807,9704 14635,9786
 	q4 14635,9786 14500,9863 14467,9887
 	q4 14467,9887 14455,9892 14448,9922
@@ -27367,6 +27367,10 @@ EOF
 	q4 14588,9473 14556,9581
 	q4 14531,9244 14485,9271 14398,9373
 	q4 14531,9244 14612,9190 14628,9158 14644,9130
+#: note: mittlerweile gibt's auch im südöstlichen Teil einige Verbotsschilder, aber nicht durchgängig; deshalb als "q4;" gekennzeichnet
+	q4; 15378,8668 15335,8714
+	q4; 14852,8799 14883,8823 14918,8813
+	q4; 14614,9052 14705,9034
 EOF
      },
      { from  => 1526323594, # 2018-05-14 20:46
@@ -27967,14 +27971,16 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1588348800, # 2020-05-01 18:00
-       text  => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Marksburgstr. für Radfahrer explizit verboten, vermutlich bis Mai 2020',
+       until => $isodate2epoch->("2020-12-31 23:59:59"), # 1588348800, # 2020-05-01 18:00
+       text  => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Marksburgstr. für Radfahrer explizit verboten',
        type  => 'handicap',
        source_id => '2147342174',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
+#: XXX bis wann gilt das Verbot?
+#: last_checked: 2020-06-14 (mapillary)
 	q4::inwork; 18809,9133 18790,9018 18770,8898 18737,8686 18733,8650 18733,8633
 EOF
      },
@@ -28139,10 +28145,10 @@ EOF
 #	X 7955,12830 7881,12732 7686,12631 7611,12583 7649,12533 8077,12566 8079,12384 8361,12385 8433,12311 8415,12275 8181,12252 8181,12169 8452,12210 8551,12153 8535,11863 8613,11860 8808,11925 8764,12073 8906,12094 8855,12233 9182,12278 9170,12363 8835,12334 8806,12488 8734,12479 8725,12569 8587,12615 8519,12684 8506,12725 8548,12728 8521,12826 8510,12859 8538,12871 8491,12960 8476,12921 8401,12990 8296,13036 8216,13047 8142,13043 8052,13006 8004,12972 7967,12942 7956,12974 7921,12951 7887,12893 7935,12887 7966,12852
        data  => <<EOF,
 Reichstagufer	2::temp 8667,12555 8596,12576 8554,12593
-(Ludwig-Erhard-Ufer)	2::temp 7670,12576 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871
+(Ludwig-Erhard-Ufer)	2::temp 7670,12576 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8025,12879 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871
 (südliches Spreeufer)	2::temp 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576
-(Panoramaweg Spreebogenpark)	2::temp 8021,12832 8036,12855 8046,12870 8072,12902 8116,12938 8168,12945 8235,12945 8304,12938 8370,12902 8424,12853
-(Moltkebrücke - südliches Spreeufer)	2::temp 8036,12855 8025,12859 8006,12853
+(Panoramaweg Spreebogenpark)	2::temp 8021,12832 8030,12857 8050,12893 8116,12938 8168,12945 8235,12945 8304,12938 8370,12902 8424,12853
+(Moltkebrücke - südliches Spreeufer)	2::temp 8030,12857 8025,12859 8006,12853
 (Kronprinzenbrücke - südliches Spreeufer)	2::temp 8427,12871 8428,12859 8424,12853
 (Spreeufer - Otto-von-Bismarck-Allee)	2::temp 8473,12753 8445,12755 8415,12749
 Schiffbauerdamm	2::temp 8514,12877 8503,12895
@@ -28186,7 +28192,7 @@ Kapelle-Ufer	2::temp 8488,12920 8503,12895
 Hannah-Arendt-Str.	2::temp 8577,11896 8783,11959
 (Willy-Brandt-Str. - Rahel-Hirsch-Str.)	2::temp 8120,12756 8114,12839 8115,12912 8116,12938
 (Parkweg Spreebogenpark)	2::temp 8309,12758 8304,12938
-(südliches Spreeufer - Gustav-Heinemann-Brücke)	2::temp 8032,12889 8053,12871 8116,12938
+(südliches Spreeufer - Gustav-Heinemann-Brücke)	2::temp 8025,12879 8041,12866 8116,12938
 (südliches Spreeufer - Panoramaweg)	2::temp 8427,12871 8385,12881 8304,12938
 (Uferpromenade am Kapelle-Ufer)	2::temp 8257,13037 8277,13032 8317,13015 8408,12968 8464,12919 8498,12870
 Promenade Schiffbauerdamm	2::temp 8498,12870 8529,12757
@@ -28515,7 +28521,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: HENNIGSDORFER-2019
 	q4::inwork; -2504,22626 -2540,22694 -2424,22991 -2306,23259 -2248,23409 -2185,23567
-	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
+	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850
+# REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
 EOF
      },
      { from  => 1542085200, # 2018-11-13 06:00
@@ -29177,16 +29184,16 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2019-05-24 00:00:00"),
-       until => $isodate2epoch->("2020-06-30 18:00:00"),
-       text  => 'Grüntaler Str.: in Höhe Bellermannstr. Bauarbeiten, Ausweichen auf Gehweg mit Umwegen, voraussichtlich bis Ende Juni 2020',
+       until => $isodate2epoch->("2021-06-30 18:00:00"),
+       text  => 'Grüntaler Str.: in Höhe Bellermannstr. Bauarbeiten, Ausweichen auf Gehweg mit Umwegen, voraussichtlich bis Ende Juni 2021',
        type  => 'handicap',
        source_id => '2147344253', # bis Juni 2021 (!)
        data  => <<EOF,
 #: note: laut fritz bis 31.06.2020
 #: also_indoor: traffic (H)
-#: last_checked: 2020-04-17
+#: last_checked: 2020-06-13
 #: check_frequency: 60d
-#: next_check: 2020-06-30
+#: next_check: 2021-06-30
 	q3::inwork  8986,16092 9178,16317
 # REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
 EOF
@@ -29297,15 +29304,16 @@ EOF
 EOF
      },
      { from  => 1560636000, # 2019-06-16 00:00
-       until => $isodate2epoch->("2020-07-01 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
+       until => $isodate2epoch->("2020-07-14 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
        text  => 'DB-Werkstraße: Bauarbeiten, ein Abschnitt der Fahrbahn kann gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-06-11
+#: last_checked: 2020-06-14
 #: check_frequency: 7d
-	2::inwork 14567,10814 14469,10841 14352,10874
+# REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
+	2::inwork 14567,10814 14562,10782 14671,10751
 EOF
      },
      { from  => undef, # 
@@ -29316,7 +29324,7 @@ EOF
 #: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="12"
-#: last_checked: 2020-05-16
+#: last_checked: 2020-06-17
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 EOF
@@ -29393,7 +29401,7 @@ EOF
 EOF
      },
      { from  => 1561845600, # 2019-06-30 00:00
-       until => undef, # 1569945600, # 2019-10-01 18:00
+       until => 1591940076, # undef, # 1569945600, # 2019-10-01 18:00
        text  => 'Unterführung Schlossbrücke: Sperrung wegen Bauarbeiten, vom 1.7.2019, Ende unbekannt',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.823217.php',
@@ -29405,14 +29413,10 @@ EOF
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.859708.php ("Restarbeiten ... unterhalb der Brücke ... bis Ende 2019")
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/schlossbruecke-wieder-befahrbar_a238318
 # REMOVED --- #: XXX die Bauarbeiten oben auf der Brücke wurden mittlerweile verlängert: bis zum 30.10.2019
-#: osm_watch: way id="72660098" version="8"
-#: XXX laut osm offen
+# REMOVED --- #: osm_watch: way id="72660098" version="8" --- #: XXX laut osm offen
 # REMOVED (provisorischer Radstreifen) --- #: XXX außerdem "der östliche Gehweg ist gesperrt" --- was bedeutet das für den Radverkehr?
-#: priority: #A
-#: add_fragezeichen: Ist die Unterführung noch immer gesperrt?
-#: last_checked: 2020-05-31
+# REMOVED (laut osm-Notiz wieder offen) --- #: priority: #A --- #: add_fragezeichen: Ist die Unterführung noch immer gesperrt? --- #: last_checked: 2020-05-31 --- #: check_frequency: 30d
 # REMOVED --- #: next_check: 2019-10-30
-#: check_frequency: 30d
 	2::inwork 3231,12749 3332,12742
 EOF
      },
@@ -30290,9 +30294,10 @@ EOF
 # REMOVED (hier nicht) ---	q4::inwork 4514,5082 4513,5139 4512,5199
 EOF
      },
-     { from  => $isodate2epoch->("2020-03-08 07:00:00"), # 1 Tag Vorlauf, 1583017200, # 2020-03-01 00:00
-       until => $isodate2epoch->("2020-06-08 17:00:00"), # 1591113600, # 2020-06-02 18:00
-       text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee bzw. Friedrichshagener Str. für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee und Einbahnstraßenregelung in der Puchanstr., voraussichtlich vom 09.03.2020 bis 08.06.2020',
+     { from  => undef, # $isodate2epoch->("2020-03-08 07:00:00"), # 1 Tag Vorlauf, 1583017200, # 2020-03-01 00:00
+       until => undef, # $isodate2epoch->("2020-06-08 17:00:00"), # 1591113600, # 2020-06-02 18:00
+       #text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee bzw. Friedrichshagener Str. für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee und Einbahnstraßenregelung in der Puchanstr., voraussichtlich vom 09.03.2020 bis 08.06.2020',
+       text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Kinzerallee für Radfahrer gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: BAHNHOFSTRKOEP-2020
@@ -30308,11 +30313,14 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1261298316593246209 (bis Anfang Juni 2020)
 #: source_id: 2147345568 (schon ab 9.3.2020?)
 #: source_id: 2147345558 (bis 8.6.2020)
-	q4::inwork; 22513,5747 22383,5611 22204,5447
-	q4::inwork; 22292,5774 22258,5687 22236,5633 22184,5545
+#: add_fragezeichen: wann kann der Radweg in der Bahnhofstraße Richtung Süden benutzt werden?
+#: last_checked: 2020-06-17
+#: check_frequency: 14d
+# REMOVED ---	q4::inwork; 22513,5747 22383,5611 22204,5447
+	q4::inwork; 22292,5774 22236,5633
+# REMOVED ---	q4::inwork; 22236,5633 22184,5545
 	q4::inwork 22154,5659 22236,5633
-#: note: mittlerweile (?) dürfen Radfahrer hier langfahren, allerdings eng und Umwege an Einmündungen
-	q3::inwork; 22116,5442 22184,5545 22236,5633 22258,5687 22292,5774
+# REMOVED ---#: note: mittlerweile (?) dürfen Radfahrer hier langfahren, allerdings eng und Umwege an Einmündungen ---	q3::inwork; 22116,5442 22184,5545 22236,5633 22292,5774
 EOF
      },
      { from  => 1582837200, # 2020-02-27 22:00
@@ -30328,7 +30336,7 @@ EOF
        text  => 'Bahnhofstr.: zwischen Seelenbinderstr. und Annenallee Richtung Süden für Radfahrer gesperrt, außerdem Sperrung in der Kinzerallee, voraussichtlich bis 08.06.2020 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 22292,5774 22258,5687 22236,5633 22184,5545
+	q4::inwork; 22292,5774 22236,5633 22184,5545
 	q4::inwork 22154,5659 22236,5633
 EOF
      },
@@ -30357,7 +30365,7 @@ EOF
        type  => 'handicap',
        source_id => '2147345558',
        data  => <<EOF,
-	q4::inwork; 22116,5442 22184,5545 22236,5633 22258,5687 22292,5774
+	q4::inwork; 22116,5442 22184,5545 22236,5633 22292,5774
 EOF
      },
      { from  => undef, # 
@@ -30541,15 +30549,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1592053810, # undef, # XXX
        text  => 'Zobtener Str.: Bauarbeiten, Straße kann gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: note: offizielle Umleitung über Fischerstr.
-#: add_fragezeichen: Sind die Bauarbeiten in der Zobtener Str. mittlerweile beendet?
-#: priority: #A
-#: last_checked: 2020-06-08
-#: check_frequency: 14d
+# REMOVED (laut osm wieder offen) --- #: note: offizielle Umleitung über Fischerstr. --- #: add_fragezeichen: Sind die Bauarbeiten in der Zobtener Str. mittlerweile beendet? --- #: priority: #A --- #: last_checked: 2020-06-08 --- #: check_frequency: 14d
 	2::inwork 15758,10578 16148,10329 16353,10207 16539,10097
 EOF
      },
@@ -30803,14 +30807,15 @@ EOF
      },
      { from  => 1591497000, # 2020-06-07 04:30
        until => $isodate2epoch->("2020-07-24 17:00:00"), # 1595692800, # 2020-07-25 18:00
-       text  => 'Alt-Köpenick: Gleisbauarbeiten, ggfs. ist die Fahrbahn gesperrt, vom 8. Juni 2020 4:30 Uhr bis 24. Juli 2020',
+       text  => 'Alt-Köpenick: Gleisbauarbeiten, ggfs. ist die Fahrbahn gesperrt, gemeinsamer Rad- und Gehweg, vom 8. Juni 2020 4:30 Uhr bis 24. Juli 2020',
        type  => 'handicap',
        source_id => 'https://www.bahninfo-forum.de/read.php?9,658568,668792#msg-668792',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.940522.php
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/gleisbau-gleich-an-mehreren-stellen_a275551
 #: source_id: 2147345909
-	q4::inwork 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562 22093,4499
+# REMOVED (hier nicht) ---	q4::inwork 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562 22093,4499
+	q3::inwork 22154,4923 22196,4847 22198,4800 22175,4730
 EOF
      },
      { from  => 1591588800, # 2020-06-08 06:00
@@ -30843,6 +30848,39 @@ EOF
 	2::temp 15965,16482 15990,16479 16091,16523 16107,16586 16138,16605 16172,16686 16239,16737 16303,16816 16362,16843 16483,16722 16488,16668
 	2::temp 16362,16843 16353,16900 16381,16969
 	2::temp 16416,16236 16413,16273 16369,16308 16340,16338 16359,16387
+EOF
+     },
+     { from  => 1592110800, # 2020-06-14 07:00
+       until => 1592406000, # 2020-06-17 17:00
+       text  => 'Wuhlesteg: aufgrund von Wartungs- und Instandhaltungsarbeiten gesperrt, vom 15. Juni 2020 7:00 Uhr, bis voraussichtlich dem 17. Juni 2020 17:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.944146.php',
+       data  => <<EOF,
+	2::inwork 22503,14104 22783,14034
+EOF
+     },
+     { from  => 1592690400, # 2020-06-21 00:00
+       until => 1597442399, # 2020-08-14 23:59
+       text  => 'Goltzstr.: Bauarbeiten zwischen Briesingstr. und Kirchbachstr., Fahrbahn gesperrt, vom 22. Juni 2020 bis 14. August 2020',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.944673.php',
+       data  => <<EOF,
+#: next_check_id: GOLTZ-2020
+#: XXX ab 1. Juli 2020 Ausweitung bis Rehagener Str.
+#: XXX ab 13. Juli 2020 Ausweitung bis Bahnhofstr.
+#: priority: #A
+#: next_check: 2020-07-01
+	q4::inwork 10454,-2520 10563,-2432
+EOF
+     },
+     { from  => 1593295200, # 2020-06-28 00:00
+       until => 1598047199, # 2020-08-21 23:59
+       text  => 'Am Goldmannpark: Bauarbeiten zwischen Bölschestr. und Scharnweberstr., Fahrbahn gesperrt, voraussichtlich vom 29. Juni 2020 bis 21. August 2020',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.945971.php',
+       data  => <<EOF,
+#: next_check_id: AMGOLDMANNPARK-2020
+	q4::inwork 25772,5860 25571,5829
 EOF
      },
     );

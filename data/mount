@@ -2060,8 +2060,8 @@ Steigung 1.3% (Lindenstr. (Hessenwinkel))	St; 32512,2621 32643,2695
 Steigung 1.3% (Lichtburgring)	St; 9965,15731 10041,15742
 Steigung 1.3% (Lepsiusstr.)	St; 4404,5613 4338,5513
 Steigung 1.3% (Lentzeallee)	St; 3449,6863 3290,6903
-Steigung 1.3% (Köpenicker Str. (Biesdorf, Köpenick))	St; 21025,7349 21016,7325
-Steigung 1.3% (Köpenicker Str. (Biesdorf, Köpenick))	St; 21016,7325 20958,7289
+Steigung 1.3% (Köpenicker Str. (Biesdorf, Köpenick))	St; 21019,7340 21012,7328
+Steigung 1.3% (Köpenicker Str. (Biesdorf, Köpenick))	St; 21012,7328 20958,7289
 Steigung 1.3% (Köpenicker Str. (Biesdorf, Köpenick))	St; 20958,7289 20872,7268
 Steigung 1.3% (Köpenicker Str. (Biesdorf, Köpenick))	St; 20872,7268 20841,7271
 Steigung 1.3% (Köpenicker Str. (Biesdorf, Köpenick))	St; 20841,7271 20653,7289
@@ -2080,6 +2080,10 @@ Steigung 1.3% (Joachim-Friedrich-Str.)	St; 3092,9886 3083,9796
 Steigung 1.3% (Hüttendorfer Weg)	St; 21463,-280 21409,-109
 Steigung 1.3% (Hübnerstr.)	St; 13911,12692 13960,12866
 Steigung 1.3% (Hufelandstr.)	St; 12077,14186 12228,14083
+Steigung 1.3% (Herzfelder Steig: Gehwegverbindung existiert --- Qualität? Beleuchtung?)	St; 31319,4218 31355,4264
+Steigung 1.3% (Herzfelder Steig: Gehwegverbindung existiert --- Qualität? Beleuchtung?)	St; 31275,4224 31319,4218
+Steigung 1.3% (Herzfelder Steig)	St; 31355,4264 31440,4353
+Steigung 1.3% (Herzfelder Steig)	St; 31200,4218 31275,4224
 Steigung 1.3% (Haydnstr. (Biesdorf))	St; 20005,11872 19995,11795
 Steigung 1.3% (Haydnstr. (Biesdorf))	St; 19995,11795 19979,11774
 Steigung 1.3% (Havelchaussee)	St; -3296,3686 -3490,4212
