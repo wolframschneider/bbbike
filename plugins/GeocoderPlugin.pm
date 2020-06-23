@@ -20,7 +20,7 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION $geocoder_toplevel);
-$VERSION = 3.12;
+$VERSION = 3.13;
 
 BEGIN {
     if (!eval '
@@ -252,6 +252,28 @@ sub geocoder_dialog {
 		     my $location = shift;
 		     my $g = $location->{results}->[0]->{geometry};
 		     ($g->{lng}, $g->{lat});
+		 },
+		},
+
+		'GeocodeFarm' =>
+		{
+		 'include_multi' => 1,
+		 'devel_only' => 1,
+
+		 'require' => sub {
+		     require Geo::Coder::GeocodeFarm;
+		 },
+		 'new' => sub {
+		     Geo::Coder::GeocodeFarm->new;
+		 },
+		 'extract_addr' => sub {
+		     my $location = shift;
+		     $location->{RESULTS}->[0]->{formatted_address};
+		 },
+		 'extract_loc' => sub {
+		     my $location = shift;
+		     my $g = $location->{RESULTS}->[0]->{COORDINATES};
+		     ($g->{longitude}, $g->{latitude});
 		 },
 		},
 
@@ -508,7 +530,8 @@ through L<Geo::Coder::OSM>
 =back
 
 More supported geocoding services, but only available in
-C<$devel_host> mode:
+C<$devel_host> mode, and may need additional CPAN modules are other
+prerequisites:
 
 =over
 
@@ -520,14 +543,18 @@ C<osm2bbd> and C<osm2bbd-postprocess> conversion.
 
 =item Bing
 
-through L<Geo::Coder::Bing>, at least version 0.10 is recommended,
-though 0.06 works, too, with some limitations/problems. Requires an
-API key which should be stored in F<~/.bingapikey>.
+through L<Geo::Coder::Bing>. Requires an API key which should be
+stored in F<~/.bingapikey>.
 
 =item OpenCage
 
 through L<Geo::Coder::OpenCage>. Requires an API key which should be
 stored in F<~/.opencageapikey>.
+
+=item GeocodeFarm
+
+through L<Geo::Coder::GeocodeFarm>. Does not need an API key, but
+number of requests are limited (currently 250 per day and IP).
 
 =back
 

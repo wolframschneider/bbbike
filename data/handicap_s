@@ -10,7 +10,7 @@ Stralauer Allee: enge Stelle	q2::inwork; 14558,10264 14405,10340
 (Planstraﬂe C): Fahrbahn durch Bauz‰une abgesperrt, Ausweichen auf Gehweg mˆglich	q4::inwork 12926,11224 12848,11093
 Hermann-Stˆhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 M¸ncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
-(Notweg Bahn¸bergang Bahnhofstr.): Fuﬂg‰nger, f¸r Radfahrer frei	q3 10228,-2136 10228,-2159 10201,-2171 10166,-2183 10155,-2144 10096,-2137
+(Notweg Bahn¸bergang Bahnhofstr.): Fuﬂg‰nger, f¸r Radfahrer frei	q3 10231,-2159 10215,-2170 10209,-2171 10198,-2143 10096,-2137
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607,15282
 Gormannstr.: Bauarbeiten an der Einm¸ndung Torstr., Fahrbahn gesperrt	q3::inwork 10459,13760 10445,13675
@@ -365,7 +365,7 @@ Barsekowstr.: Fuﬂg‰nger	q1 5336,4676 5406,4631 5465,4606 5521,4605 5588,4629
 (Stadtpark Steglitz): Fuﬂg‰nger	q2 6026,4744 6030,4743 6092,4717 6107,4718
 (Stadtpark Steglitz): Fuﬂg‰nger	q1 5589,4617 5588,4629 5582,4675 5555,4743
 (Stadtpark Steglitz): Fuﬂg‰nger	q1 5509,4773 5453,4665 5406,4631
-(Stadtpark Steglitz): Fuﬂg‰nger	q1 5797,4846 5806,4840 5909,4798 5947,4791 6022,4746 6026,4744
+(Stadtpark Steglitz): Fuﬂg‰nger	q1 5797,4846 5806,4840 5852,4814 5885,4813 5947,4791 6022,4746 6026,4744
 Dieffenbachstr.: Bodenschwellen	q1 11141,9732 11346,9655
 Dieffenbachstr.: Bodenschwellen	q0 11346,9655 11541,9576
 Oppelner Str.: Bodenschwellen	q0 12897,10439 12978,10581
@@ -563,7 +563,7 @@ Germaniagarten: Fuﬂg‰nger, Bordsteine	q2 11209,6166 11224,6244
 (Mariendorfer Weg - Bambachstr): einige Fuﬂg‰nger	q1 12052,6660 12059,6642 12092,6616 12155,6526
 (Mariendorfer Weg - Bambachstr.): Bordstein	q4 12155,6512 12155,6526
 Mauerweg: einige Fuﬂg‰nger	q1 12984,1011 12557,799 12246,706 12014,620 11956,599 11922,586 11794,550 11698,390 11686,169 11746,-62 11819,-286 12064,-1120 12058,-1170 12061,-1186 12094,-1228 12276,-1885 12331,-2108 12344,-2173 12314,-2270 12268,-2294
-Mauerweg: Fuﬂg‰nger	q1 4406,-910 4038,-362 4046,-299 4034,-255 3982,-181 3941,-127 3908,-117 3842,-6 3788,26 3767,66 3689,182 3607,283 3417,524
+Mauerweg: Fuﬂg‰nger	q1 4406,-910 4081,-425 4038,-362 4046,-299 4034,-255 3982,-181 3941,-127 3908,-117 3842,-6 3788,26 3767,66 3689,182 3607,283 3417,524
 Bayernring: enge Straﬂe	q1 8380,8545 8454,8574 8616,8605
 Bulgarische Str.: kein Radweg, Gehweg benutzen	q2; 15591,8848 15558,8820 15378,8668 15166,8489
 Hedwigskirchgasse: Fuﬂg‰nger	q1 9737,12238 9747,12205
@@ -2929,7 +2929,6 @@ Neue Bahnhofstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 
 Soorstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1861,11284 1884,11126
 Planckstr.: Einbahnstraﬂenregelung, offen Richtung S¸den: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9429,12728 9402,12792 9386,12833
 Tschaikowskistr.: Einbahnstraﬂe wegen Bauarbeiten in der Hermann-Hesse-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9868,19023 9501,18902
-Hermann-Hesse-Str.: Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9501,18902 9681,19179 9811,19302
 Homeyerstr.: Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9529,18815 9465,18855
 Johannisstr.: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174
 Rochowstr. und Persiusstr.: Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552

@@ -1529,21 +1529,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: by: https://www.potsdam.de/sites/default/files/documents/amtsblatt_potsdam_06_2020.pdf (wird der östliche Abschnitt ein Geh/Radweg werden?)
-#: osm_watch: way id="293231696" version="10" brb
-#: last_checked: 2020-03-08 (Situation nicht ganz klar)
-#: check_frequency: 90d
-	2::inwork -12583,-1552 -12485,-1482
-# REMOVED ---	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
-',
-         'from' => undef,
-         'id' => 2544,
-         'text' => 'Brauerstr.: wegen Bauarbeiten möglicherweise gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2252,7 +2238,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
 #: also_indoor: traffic
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: last_checked: 2020-02-07
+#: last_checked: 2020-06-21
 #: next_check: 2020-12-31
 	q4::inwork; 5076,10658 5047,10381
 ',
@@ -2557,7 +2543,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-06-14
+#: last_checked: 2020-06-22
 #: check_frequency: 7d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -2670,12 +2656,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: osm
 #: osm_watch: way id="59994277" version="19" brb
 #: source_id: LS/721-F/18/135
-	q4::inwork 40166,16723 39984,16734 39287,17231 39235,17255
+# REMOVED (hier fertig) ---	q4::inwork 40166,16723 39984,16734
+	q4::inwork 39984,16734 39287,17231 39235,17255
 ',
          'from' => undef,
          'id' => 3148,
          'source_id' => 'LS/721-F/18/135',
-         'text' => 'Altslandsberger Chaussee (Eggersdorf): Fahrbahn wegen Bauarbeiten gesperrt, voraussichtlich bis Ende 2019',
+         'text' => 'Altslandsberger Chaussee (Eggersdorf): Fahrbahn wegen Bauarbeiten gesperrt',
          'type' => 'handicap',
          'until' => 1609455599
        },
@@ -2769,7 +2756,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX mittlerweile gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str.
 #: osm_watch: way id="26288668" version="15"
 #: osm_watch: way id="798056092" version="1"
-#: last_checked: 2020-05-03 vvv
+#: last_checked: 2020-06-22 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-09-30 vvv
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
@@ -2827,8 +2814,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.726077.php ("erste Hälfte 2019")
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
+#: XXX laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-05-15 (abgesperrt)
+#: last_checked: 2020-06-19 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 ',
@@ -2885,16 +2873,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '	q3::inwork 4660,2116 4839,2195
-',
-         'from' => 1583128800,
-         'id' => 3202,
-         'source_id' => '2147345534',
-         'text' => 'Morgensternstr.: zwischen Ostpreußendamm und Hochbergerweg Bauabeiten, Fahrbahn gesperrt, vom 03.03.2020 07:00 Uhr bis 29.06.2020 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1593442800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2971,7 +2950,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: ROTHER-2020
-#: last_checked: 2020-06-07
+#: last_checked: 2020-06-21
 	q4::inwork 13478,10998 13575,10963
 ',
          'from' => undef,
@@ -2987,7 +2966,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-06-09
+#: last_checked: 2020-06-19
 #: check_frequency: 14d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -3045,12 +3024,12 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1592625600,
+         'from' => 1593230400,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen sind für den Radverkehr gesperrt, jeden Sonntag bis Ende Juni 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1592758800
+         'until' => 1593363600
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -3146,14 +3125,14 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
 #: by: https://mein.berlin.de/projects/temporare-spielstrassen-in-neukolln/
 Selkestr. zwischen Schierker Str. und Nogatstr. sowie der Schierker Platz im Körnerkiez	q4::temp::play 12751,7166 12741,7224 12722,7261
 Hobrechtstr. zwischen Sanderstr. und Pflügerstr. im Reuterkiez	q4::temp::play 11917,9663 11934,9538
-die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 13295,7627 13288,7653
+die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 13100,7626 13177,7644
 ',
-         'from' => 1592625600,
+         'from' => 1593230400,
          'id' => 3241,
          'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
          'text' => 'Temporäre Spielstraßen in Neukölln: einige Straßen sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Mitte August 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1592758800
+         'until' => 1593363600
        },
        {
          'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.940522.php
@@ -3200,7 +3179,9 @@ die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 
          'data' => '#: next_check_id: GOLTZ-2020
 #: XXX ab 1. Juli 2020 Ausweitung bis Rehagener Str.
 #: XXX ab 13. Juli 2020 Ausweitung bis Bahnhofstr.
+#: source_id: 2147345963
 #: priority: #A
+#: last_checked: 2020-06-21
 #: next_check: 2020-07-01
 	q4::inwork 10454,-2520 10563,-2432
 ',
@@ -3221,6 +3202,38 @@ die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 
          'text' => 'Am Goldmannpark: Bauarbeiten zwischen Bölschestr. und Scharnweberstr., Fahrbahn gesperrt, voraussichtlich vom 29. Juni 2020 bis 21. August 2020',
          'type' => 'handicap',
          'until' => 1598047199
+       },
+       {
+         'data' => '	q3::inwork 4295,13234 4186,13710
+',
+         'from' => 1592719200,
+         'id' => 3249,
+         'source_id' => '2147345956',
+         'text' => 'Goslarer Ufer: Sperrung an der Kreuzung Gaußstr. vom 22.06.2020 08:00 Uhr bis 27.07.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1595862000
+       },
+       {
+         'data' => '#: source_id: 2147345969
+	q4::inwork 4847,10677 4847,10589
+',
+         'from' => 1590420000,
+         'id' => 3250,
+         'source_id' => 'LMS-BR_r_LMS-BR_205382_LMS-BR_72',
+         'text' => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 31.07.2020 17:00 Uhr',
+         'type' => 'handicap',
+         'until' => 1596207600
+       },
+       {
+         'data' => '#: XXX_prog: eigentlich q3-::inwork
+	q3::inwork 3348,9806 3340,9700
+',
+         'from' => 1587963600,
+         'id' => 3251,
+         'source_id' => '2147345679',
+         'text' => 'Nestorstr.: Bauarbeiten zwischen Westfälische Str. und Paulsborner Str., Ausweichen auf Gehweg, vom 28.04.2020 07:00 Uhr bis 30.09.2022 17:00 Uhr',
+         'type' => 'handicap',
+         'until' => 1664550000
        }
      
 );

@@ -417,7 +417,7 @@ Prießnitzstr.	1 11549,19258 11407,19186 11351,19169
 Klaustaler Str.	1 11384,19067 11439,18890
 Paracelsusstr.	1 11599,19171 11549,19258 11543,19279 11575,19296 11613,19312 11671,19204
 Wormbacher Weg	1 3791,338 3782,397 3648,531
-Schwelmer Str.	1 3676,311 3569,469 3497,583
+# REMOVED (keine Einbahnstraße (mehr?)) --- Schwelmer Str.	1 3676,311 3569,469 3497,583
 Schöppinger Str.	1 3691,566 3648,531 3569,469
 #: by: anonymous:
 Arberstr.	1 19424,9502 19406,9236
@@ -697,9 +697,7 @@ Bernhard-Bästlein-Str.	1 15595,14041 15593,13768
 #: XXX_prog: eigentlich 1s:q3, aber Konflikt mit handicap_s-Eintrag für Washingtonplatz
 Washingtonplatz	1s 8106,13130 8011,13128 7937,13126
 (Vorfahrt HdKdW)	1 7627,12380 7654,12464 7687,12477 7778,12470 7813,12427 7821,12367
-#: by: Bernhard Husch:
-#: note: Einfahrt verboten
-Pfarrer-Lütkehaus-Platz	1 10228,-2136 10231,-2159
+# REMOVED (während der Bauarbeiten muss man zum Notweg kommen) --- #: by: Bernhard Husch: --- #: note: Einfahrt verboten --- Pfarrer-Lütkehaus-Platz	1 10228,-2136 10231,-2159
 Radebeuler Str.	1 19067,13818 19025,14037
 Beilsteiner Str.	1 18748,12399 18800,12838 18832,13099 18852,13269
 #: by: osm
@@ -853,11 +851,11 @@ Sachsendamm/Schöneberger Str. (Richtungsfahrbahn)	1::igndisp 8319,7084 8224,7148
 Sachsendamm/Schöneberger Str. (Mittelstreifen)	3nocross::ignrte 8319,7084 8229,7154 8176,7194
 #: note: ^^^
 #: note: Mittelstreifen/Tunneleinfahrt vvv
-Bundesallee: Straßentunnelrampe	3nocross::ignrte 5505,8832 5515,8709 5508,8598
-Bundesallee: Absperrung auf dem Mittelstreifen	3nocross::ignrte 5515,8709 5508,8598 5472,8507 5433,8407 5399,8344
-# it would be nice if it was possible to have this in the middle of the road, but check_points does not allow this yet --- Bundesallee: Straßentunnelrampe, Absperrung auf dem Mittelstreifen	3nocross::ignrte 5399,8344 5430,8409 5468,8509 5504,8598 5512,8709 5505,8832
-Bundesallee (Richtungsfahrbahn)	1::igndisp 5399,8344 5427,8412 5465,8511 5502,8599 5510,8709 5505,8832
-Bundesallee (Richtungsfahrbahn)	1::igndisp 5505,8832 5515,8709 5508,8598 5472,8507 5433,8407 5399,8344
+Bundesallee: Straßentunnelrampe	3nocross::ignrte 5494,8843 5503,8709 5498,8598
+Bundesallee: Absperrung auf dem Mittelstreifen	3nocross::ignrte 5503,8709 5498,8598 5472,8507 5433,8407 5399,8344
+# it would be nice if it was possible to have this in the middle of the road, but check_points does not allow this yet --- Bundesallee: Straßentunnelrampe, Absperrung auf dem Mittelstreifen	3nocross::ignrte 5399,8344 5430,8409 5468,8509 5504,8598 5512,8709 5494,8843
+Bundesallee (Richtungsfahrbahn)	1::igndisp 5399,8344 5427,8412 5465,8511 5493,8599 5498,8709 5494,8843
+Bundesallee (Richtungsfahrbahn)	1::igndisp 5494,8843 5503,8709 5498,8598 5472,8507 5433,8407 5399,8344
 #: note: ^^^
 # 
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -278,14532 -457,14536 -914,14602
@@ -1307,6 +1305,7 @@ Jürgen-Schumann-Allee: explizites Radfahren-verboten-Schild auf der nördlichen S
 Business Park Berlin - Jürgen-Schumann-Allee: explizites Radfahren-verboten-Schild auf der östlichen Seite	2 19131,-2145 19158,-2135 19192,-2124
 Siedlung Hubertus - Jürgen-Schumann-Allee: explizites Radfahren-verboten-Schild auf der östlichen Seite	2 19909,-2863 19996,-2880 20039,-2863
 (Ferdinand-Buisson-Str. - Ludwig-Quidde-Str.)	1 12611,21138 12619,21079
+(Lauinger Str. - Köpenicker Str.)	1::igndisp 21133,11348 21171,11336
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1838,7 +1837,7 @@ Wisbyer Str.: Straßenbahn	3nocross 11542,16384 11632,16373 11673,16367
 Wisbyer Str.: Straßenbahn	3nocross 11397,16405 11448,16398 11470,16394 11542,16384
 Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3nocross 17251,11789 17440,11774 17497,11769 17746,11748 17963,11723 18098,11706 18215,11690
 Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3nocross 18626,11742 18696,11754 18853,11780 19004,11780 19092,11776 19389,11761 19661,11746 19726,11743 19907,11734 19985,11727 20114,11719 20161,11715 20375,11694
-Alt-Friedrichsfelde: Straßentunnelrampe	3nocross 18215,11690 18520,11707 18626,11742
+Alt-Friedrichsfelde: Straßentunnelrampe	3nocross 18215,11690 18364,11698 18520,11707 18626,11742
 Lewishamstr.: abgesperrter Mittelstreifen	3nocross 3592,10869 3623,10800 3644,10759
 Lewishamstr: Straßentunnelrampe	3nocross 3644,10759 3744,10577 3777,10513 3813,10435
 Klingelhöferstr: unbequem passierbarer Mittelstreifen	3nocross 6825,11486 6851,11346 6880,11110
@@ -2018,7 +2017,7 @@ Invalidenstr.: Mittelstreifen	3nocross 7816,13276 7842,13292 7880,13315
 Invalidenstr.: Mittelstreifen	3::igndisp 7822,13323 7842,13292
 Invalidenstr.: Mittelstreifen	3nocross 7880,13315 8003,13374 8098,13419
 Alt-Moabit: Mittelstreifen, hohe Bordsteine und parkende Autos	3nocross 7822,12937 7776,12945 7595,12980
-Köpenicker Str.: Mittelstreifen	3nocross 21137,11294 21134,11331 21124,11462
+Köpenicker Str.: Mittelstreifen	3nocross 21137,11294 21134,11331 21133,11348 21124,11462
 Märkische Allee/Alt-Friedrichsfelde	3 20018,11698 20026,11663 20064,11687
 Hansastr.: Straßenbahntrasse	3nocross 15662,16649 15735,16698 15776,16721
 Am Juliusturm: Mittelstreifen	3nocross -3255,14685 -3209,14662 -3150,14631
@@ -2329,7 +2328,8 @@ tragen (Bahnübergang ehem. Bhf. Satzkorn)	0:60 -19183,7299
 schieben (Rampe Schmöckwitzwerdersteg)	0:30 30534,-3105
 schieben (Rampe Schmöckwitzwerdersteg)	0:30 30546,-3072
 #: by: Fridtjof Gramsch (Anzahl der Stufen)
-tragen (rund 12 Stufen)	0:20 3619,9331
+#: corrected_by: srt (12 -> 14)
+tragen (14 Stufen)	0:25 3619,9331
 tragen (21 Stufen)	0:30 9557,12992
 tragen (Treppe)	0:30 9508,12991
 #: by: rjoop
@@ -3117,7 +3117,7 @@ Abendseglersteig: noch in Bau	2::inwork 33176,2938 33147,2832 33267,2810 33383,2
 #: next_check_id: BAHNHOFSTR-2020
 #: XXX hier wird eine neue Unterführung gebaut
 #: next_check: 2023-07-31
-Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10188,-2139 10228,-2136
+Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10203,-2137 10228,-2136
 # 
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8585 (Forderung der öffentlichen Nutzung)
 #: XXX existiert dieser Weg noch? bleibt er noch bestehen?
@@ -3173,8 +3173,8 @@ Wriezener Park: Bauarbeiten, Weg gesperrt	2::inwork 13173,11788 13089,11708
 # 
 #: next_check_id: WALDBACHERWEGBRUECKE-2020
 #: XXX der Weg wird hier neu gemacht
-#: last_checked: 2020-04-26
-#: check_frequency: 60d
+#: last_checked: 2020-06-22
+#: check_frequency: 30d
 zur Waldbacher-Weg-Brücke: Bauarbeiten, gesperrt	2::inwork 20368,11937 20365,11950 20338,11973 20338,11991
 # 
 #: next_check_id: MAXIMILIANSQUARTIER-2020
@@ -3257,7 +3257,7 @@ Forumsquerung: Bauarbeiten, komplett gesperrt	2::inwork 8206,12757 8207,12606
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_49_7429_7632_online.pdf (Einziehung von Straßenland --- vielleicht der alte Sackgassenhammer?)
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="1"
-#: last_checked: 2020-06-07
+#: last_checked: 2020-06-19
 #: check_frequency: 14d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3336,10 +3336,10 @@ Landfliegerstr.: noch nicht freigegeben, Straße gesperrt	2::inwork 18296,4850 18
 #: source_id: 2147345502
 #: XXX im Verkehrsmeldungstext ist die Sperrung Richtung Westen, aber vermutlich ist es genau anders herum? vvv
 #: also_indoor: traffic (H) vvv
-#: last_checked: 2020-05-21 vvv
+#: last_checked: 2020-06-21 (mapillary) vvv
 #: next_check: 2020-07-06 vvv
 Tschaikowskistr.: Einbahnstraße wegen Bauarbeiten in der Hermann-Hesse-Str.	1s:q4:inwork 9868,19023 9501,18902
-Hermann-Hesse-Str.: Einbahnstraßenregelung	1s:q3:inwork 9501,18902 9681,19179 9811,19302
+# REMOVE (hier kommt man mittlerweile gut durch) --- Hermann-Hesse-Str.: Einbahnstraßenregelung	1s:q3:inwork 9501,18902 9681,19179 9811,19302
 Homeyerstr.: Einbahnstraßenregelung	1s:q3:inwork 9529,18815 9465,18855
 #: next_check ^^^
 #: last_checked ^^^
@@ -3396,7 +3396,7 @@ Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht möglich	2::inwork 2
 # 
 #: XXX wann sind die Bauarbeiten beendet?
 #: priority: #C
-#: last_checked: 2020-05-29
+#: last_checked: 2020-06-19
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3467,7 +3467,7 @@ Mauswieselweg: durch Bauzäune abgesperrt	2::inwork 26570,12860 26503,12912 26421
 #: next_check_id: STRALAUER-2019
 #: source_id: 2147343910 (bis 10.7.2020) vvv
 #: source_id: 2147344585 (bis Ende Mai 2020) vvv
-#: last_checked: 2020-06-17 vvv
+#: last_checked: 2020-06-21 vvv
 #: next_check: 2020-07-10 vvv
 #: valid: 20190319-20200710 vvv
 Rochowstr. und Persiusstr.: Einbahnstraßenregelung	1s:q4:inwork 14103,10489 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
@@ -3692,9 +3692,11 @@ Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,
 #: by: https://www.berliner-woche.de/karlshorst/c-verkehr/grossbaustelle-treskowallee-und-bahnhof-karlshorst-die-naechste-baustelle-kommen-nicht-einmal-mehr-fahrraeder-durch_a240868 ("Januar 2020")
 #: by: https://www.berliner-woche.de/karlshorst/c-verkehr/die-4-bauverzoegerung-beim-pleiten-pech-und-pannen-bahnhof-karlshorst_a243271 (Ende des ersten Quartals 2020)
 #: by: https://www.berliner-woche.de/karlshorst/c-bauen/baustelle-bahnhof-karlshorst-bahn-ist-nicht-mal-mehr-dazu-in-der-lage-einen-fertigstellungstermin-fuer-den-fussgaengertunnel-zu-nennen_a259912
+#: by: https://andreas-geisel.de/bauarbeiten-am-bahnhof-karlshorst-in-den-sommerferien-2020/ (Eröffnung am 23.07.2020)
 #: osm_watch: way id="47975259" version="8"
-#: last_checked: 2020-05-30
-#: check_frequency: 30d
+#: last_checked: 2020-06-17 (bahninfo-forum)
+# REMOVED --- #: check_frequency: 30d
+#: next_check: 2020-07-23
 Unterführung S-Bhf. Karlshorst: wegen Bauarbeiten gesperrt	2::inwork 18949,8437 18906,8394 18875,8365
 # 
 #: next_check_id: TRESKOWALLEE-2017
@@ -4153,7 +4155,7 @@ Ahornstr. (Steglitz)	1 4926,6053 4903,6048 4872,6068 4863,6088
 tragen (3 x 10 Stufen)	0:40 4127,5427
 tragen (5 Stufen)	0:10 4061,5418
 Iltisstr.	1 2797,5624 2858,5535
-Bundesallee: Mittelstreifen unbequem zu überqueren	3nocross 5493,9367 5495,9263 5503,8986
+Bundesallee: Mittelstreifen unbequem zu überqueren	3nocross 5479,9367 5483,9262 5492,8982
 # REMOVED (Richtungsfahrbahnen eingezeichnet) --- Bundesallee: Mittelstreifen, parkende Autos	3nocross 5346,7860 5350,7915 5357,8013
 Lietzenburger Str.: Mittelstreifen schlecht zu überqueren	3nocross 6494,10440 6403,10424 6276,10401
 # REMOVED (existiert nicht mehr) --- (Kolonieweg a. d. Forkenbeckstr.): tragen (5 Stufen)	0:15 3230,8221
