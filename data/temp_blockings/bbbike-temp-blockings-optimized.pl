@@ -2251,7 +2251,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-06-09
+#: last_checked: 2020-06-23
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2511,16 +2511,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: also_indoor: traffic
 #: last_checked: 2020-06-07 (mapillary)
 #: check_frequency: 60d
-#: next_check: 2020-07-31
+#: next_check: 2020-08-21
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8866,17075 8677,17154
 # REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
 ',
          'from' => undef,
          'id' => 3110,
-         'text' => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis Ende Juli 2020',
+         'text' => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 21. August 2020',
          'type' => 'handicap',
-         'until' => 1596211200
+         'until' => 1598025600
        },
        undef,
        {
@@ -2543,8 +2543,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-06-22
-#: check_frequency: 7d
+#: last_checked: 2020-06-25
+#: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
 ',
@@ -3160,20 +3160,7 @@ die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 
          'type' => 'handicap',
          'until' => 1593788400
        },
-       {
-         'data' => '	2::temp 16556,16673 16488,16668 16477,16612 16424,16539 16359,16387 15990,16479
-	2::temp 15915,16526 15965,16482 15918,16383
-	2::temp 15965,16482 15990,16479 16091,16523 16107,16586 16138,16605 16172,16686 16239,16737 16303,16816 16362,16843 16483,16722 16488,16668
-	2::temp 16362,16843 16353,16900 16381,16969
-	2::temp 16416,16236 16413,16273 16369,16308 16340,16338 16359,16387
-',
-         'from' => 1591653600,
-         'id' => 3245,
-         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.942470.php',
-         'text' => 'NSG Fauler See: wegen Eichenprozessionsspinners gesperrt, ab 9.6.2020 für voraussichtlich zwei Wochen',
-         'type' => 'gesperrt',
-         'until' => 1592949599
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: GOLTZ-2020
@@ -3234,6 +3221,23 @@ die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 
          'text' => 'Nestorstr.: Bauarbeiten zwischen Westfälische Str. und Paulsborner Str., Ausweichen auf Gehweg, vom 28.04.2020 07:00 Uhr bis 30.09.2022 17:00 Uhr',
          'type' => 'handicap',
          'until' => 1664550000
+       },
+       {
+         'data' => '#: next_check_id: BUCKOWERCHAUSEE-EISNER-2020
+#: XXX prüfen, ob die Sperrung tatsächlich erfolgt vvv
+# REMOVED --- #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
+#: next_check: 2020-07-01 vvv
+	2::inwork 9507,-85 9468,-85 9271,323 9253,370 9218,458 9178,556
+	2::inwork 9271,323 9296,335 9249,434 9218,458
+#: next_check ^^^
+#: XXX ^^^
+',
+         'from' => 1593468000,
+         'id' => 3252,
+         'source_id' => 'https://www.berliner-woche.de/marienfelde/c-verkehr/p+r-parkplatz-wird-geschlossen_a277741',
+         'text' => 'Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten, voraussichtlich ab 1. Juli 2020',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );
