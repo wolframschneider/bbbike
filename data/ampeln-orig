@@ -18,7 +18,7 @@
 # REMOVED --- #: note: Baustellenampel in der Kiefholzstr. gilt auch für Radfahrer --- #: source_id: 2147344652 (bis Mitte Dezember 2019) --- #: last_checked: 2019-11-30 --- #: next_check: 2019-12-13 --- #: valid: 20190822-20191213 ---	X::inwork 16425,6445
 # 
 #: next_check_id: STRALAUER-2019
-#: last_checked: 2020-06-25 vvv
+#: last_checked: 2020-07-03 vvv
 #: next_check: 2020-07-10 vvv
 #: valid: 20190319-20200710 vvv
 #: note: kann ausgeschaltet sein (selten, gesehen 2019-04-16, 2019-06-28, 2019-11-20, 2020-03-23, 2020-04-06, 2020-04-12)
@@ -33,11 +33,12 @@
 # 
 #: next_check_id: PILGRAMER-2019
 #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/bauarbeiten-in-pilgramer-strasse_a197302
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/_assets/pressestelle/04-1_vzp_pilgramer-strasse_ba-3_a-2.pdf
 #: also_indoor: traffic
 #: last_checked: 2020-04-26
-#: next_check: 2020-06-30
-#: valid: -20200630
-	X::inwork 25145,10841
+#: next_check: 2021-01-05
+#: valid: -20210105
+	X::inwork 25143,10961
 # 
 #: next_check_id: HENNIGSDORFER-2019
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6331
@@ -206,6 +207,7 @@
 	X 11136,9183
 	X 11500,9116
 	X 11509,9392
+#: XXX_prog außerdem Teil des Ampelkomplexes: Fuß/Radübergang Weserstr./Kottbusser Damm
 	X 11909,9155
 	X 11831,8989
 	X 11673,9720
@@ -1304,10 +1306,17 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # REMOVED --- #: next_check_id: KARLMARXSTR-2018 --- #: XXX provisorische Ampel an der Briesestr. während der Bauarbeiten --- #: last_checked: 2020-02-27 --- #: check_frequency: 90d ---	X::inwork 12794,8103
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel an der Weichselstr. während der Bauarbeiten
-#: last_checked: 2020-03-26
+#: osm_watch: node id="7241153386" version="1"
+#: last_checked: 2020-06-25
 #: check_frequency: 90d
 #: next_check: 2021-03-31
 	F::inwork 12330,8636
+#: next_check_id: KARLMARXSTR-2018
+#: XXX provisorische Ampel an der Rollbergstr. während der Bauarbeiten
+#: osm_watch: node id="27554998" version="8"
+#: last_checked: 2020-06-25
+#: next_check: 2020-09-13
+	X::inwork 12714,8249
 	X 11154,14985
 	X 12025,14695
 	X 12616,14315
@@ -2158,7 +2167,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	B0 16831,3049
 	B0 8615,10108
 	B0 8571,9896
-	B0 8497,9654
+	B0 8489,9656
 	B0 8477,9562
 	B0 8344,9085
 	B0 13928,7106
@@ -2247,8 +2256,8 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 #: off: Sunday (seen Sun 2017-11-05 11:00)
 	F 17861,11210
 	X 22724,6608
-	X 20277,2463
-	X 20201,2392
+	X 20283,2461
+	X 20196,2392
 	F 6710,6342
 	B 25109,12196
 	B 14308,25196
@@ -2670,16 +2679,9 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 20451,2869
 #: XXX_prog: Ampel gilt nur in Richtung Nordwest, in der anderen Richtung nur für Linksabbieger
 	X 20289,3033
-#: note: provisorische Ampel
+# REMOVED #: note: provisorische Ampel --- #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.922880.php (Neubau einer Querungshilfe bis zur KW 22/2020 --- mit oder ohne Ampel?) --- #: by: https://www.berliner-woche.de/adlershof/c-bauen/querungshilfe-auf-dem-adlergestell_a262618 (mit Ampel) --- #: osm_watch: node id="987195315" version="7" --- #: source_id: 2147345739 (bis 15.6.2020) --- #: last_checked: 2020-06-17 --- #: check_frequency: 30d --- #: next_check: 2020-06-15
 #: note: Anforderungsampel
-#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.922880.php (Neubau einer Querungshilfe bis zur KW 22/2020 --- mit oder ohne Ampel?)
-#: by: https://www.berliner-woche.de/adlershof/c-bauen/querungshilfe-auf-dem-adlergestell_a262618 (mit Ampel)
-#: osm_watch: node id="987195315" version="7"
-#: source_id: 2147345739 (bis 15.6.2020)
-#: last_checked: 2020-06-17
-#: check_frequency: 30d
-# REMOVED --- #: next_check: 2020-06-15
-	F::inwork 20002,3349
+	F 20002,3349
 	F 4000,12183
 	F 22031,9142
 #: note: Anforderungsampel
@@ -2820,7 +2822,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2020-06-09 vvv
+#: last_checked: 2020-07-05 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -2988,7 +2990,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6407
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="5"
-#: last_checked: 2020-06-05
+#: last_checked: 2020-07-03
 #: check_frequency: 30d
 	X::inwork 14174,7505
 # 
@@ -3135,7 +3137,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2020-06-13
+#: last_checked: 2020-06-26 (mapillary)
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -3325,7 +3327,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2020-06-25 vvv
+#: last_checked: 2020-07-03 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
@@ -3767,7 +3769,7 @@ S-Bahn ca. alle 10 Minuten	B 10896,-4469
 	B0 26090,86927
 	B -83391,-71794
 	B -79440,-70055
-	B -73412,-67370
+	B -73417,-67369
 	B -70271,-65993
 	B -30149,-22937
 	B -26258,-20094
@@ -3965,6 +3967,7 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	B 26652,-8493
 	X 27454,-12435
 	B -59520,59145
+	B -67724,-66871
 # 
 #: note: ^^^
 ################################################################################

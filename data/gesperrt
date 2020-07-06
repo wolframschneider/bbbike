@@ -152,6 +152,7 @@ Baerwaldstr.	1 10424,9958 10467,10051 10500,10081
 Baerwaldstr.	1 10500,10081 10513,10038 10480,9949
 Baerwaldstr.	1 10480,9949 10405,9795 10361,9755
 Dittersbacher Weg	1 7855,3355 7852,3183
+Anzengruberstr.	1 12865,8346 12689,8289
 Nalepastr. am Rundfunkgebäude	2 17065,8396 17057,8235 17056,8159 17059,8097
 Kirchstr.	1 22196,4847 22240,4768 22246,4711 22284,4653
 Kirchstr.	1s 22314,4604 22284,4653
@@ -823,7 +824,7 @@ Wilhelmstr. (Wilhelmstadt)	1::igndisp -4406,12468 -4300,12571
 (Messedamm - S-Bhf. Westkreuz)	1 2117,10495 2090,10576 2033,10613
 Waldstr.	1 9982,19413 9942,19505
 Waldstr.	1 9961,19513 10002,19418
-(Schlesisches Tor - Oppelner Str.)	1 12978,10581 12930,10621
+(Schlesisches Tor - Oppelner Str.)	2::inwork 12978,10581 12930,10621
 Wadzeckstr.	1s 11315,13210 11354,13184 11369,13174
 Cantianstr.	1s 10871,15288 10887,15287
 Halenseestr.	2::igndisp 2086,10552 1961,10646 1928,10728
@@ -1073,6 +1074,8 @@ Köthen	1 -85125,-74513 -85231,-74271
 Köthen	1 -85091,-74261 -85089,-74420 -85057,-74512
 Gützkow	1 7607,170278 7539,170282 7521,170447 7592,170432 7607,170278
 Speck - Kargow: Fahrbahn explizit für Radfahrer verboten	2 -32984,116919 -33080,116976 -33161,117029 -34673,118509 -34997,118577 -35175,118542 -35363,118559 -35452,118630 -35485,118695
+Dessau - Aken	1::igndisp -68807,-64778 -68658,-64803
+Bauhausplatz (Dessau)	1 -68072,-64470 -68162,-64513 -68180,-64466 -68093,-64424
 Am Krusenick	1s 22751,4970 22652,4966 22667,4912 22705,4874
 Josef-Nawrocki-Str.	1s 25724,4706 25796,4683 25796,4823
 Josef-Nawrocki-Str.	1s 25724,4706 25695,4714 25554,4758 25552,4829
@@ -1086,7 +1089,6 @@ Hünensteig	1s 6419,5048 6387,5057
 Hünensteig	1s 6387,5057 6395,5154
 Paul-Lincke-Ufer: Uferweg ist als Alternative vorhanden. Allerdings kann man aus der Lausitzer Str. nicht in den Uferweg einbiegen	1s 12116,9825 11946,9913 11735,10022 11512,10105
 Stallschreiberstr.	1s 10489,11405 10620,11244 10678,11172
-Jahnstr.	1s 11500,9116 11509,9392
 Waldweg	1s 25496,2429 24981,2580
 Neue Schönhauser Str.	1s 10527,13257 10423,13215 10310,13227
 Kirchhofstr.	1s 13188,7590 13117,7471 13029,7353
@@ -3093,6 +3095,9 @@ Tor (freilaufende Büffel)	BNP:5:-40 14494,24824
 Tor (freilaufende Büffel)	BNP:5:-40 14848,24411
 Schranke, vorbeifahren mit Bordsteinen	BNP:10:43 5005,2100
 Barriere	BNP:5:-72 4708,21235
+offenes Tor	BNP:3:-151 12592,9249
+Alexander-von-Humboldt-Weg: Durchgang gesperrt, auch für Fußgänger	2::inwork 18892,3256 18689,3465
+Cotheniusstr.: Fahrbahn durch Bauzäune abgesperrt	2::inwork 13430,13733 13519,13785
 Abendseglersteig: noch in Bau	2::inwork 33176,2938 33147,2832 33267,2810 33383,2792 33406,2852
 Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10203,-2137 10228,-2136
 Kieler Str. - Marderweg - Feldrain: gesperrt, vielleicht dauerhaft	2 25766,13289 25789,13263 25814,13240 25723,13137
@@ -3123,6 +3128,7 @@ Tschaikowskistr.: Einbahnstraße wegen Bauarbeiten in der Hermann-Hesse-Str.	1s:i
 Homeyerstr.: Einbahnstraßenregelung	1s:inwork 9529,18815 9465,18855
 David-Friedländer-Weg: noch Bauarbeiten, gesperrt	2::inwork 20901,18793 21038,18851
 Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
+Rollbergstr.: Einbahnstraße, offen Richtung Karl-Marx-Str.	1s:inwork 12714,8249 12545,8209
 Rollbergstr.: wegen Bauarbeiten komplett gesperrt	2::inwork 12226,8137 12295,8154
 Metropolitan Park: Bauarbeiten	2::inwork -8019,14036 -8150,14064
 Carl-Spindler-Str.: durch Bauzäune abgesperrt, manchmal (am Wochenende?) kann man aber durchfahren	2::inwork 21442,5414 21474,5388
@@ -3133,9 +3139,6 @@ Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht möglich	2::inwork 2
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 Johannisstr.: Einbahnstraße	1s:inwork 9588,13174 9385,13174
-Yorckstraßenbrücke 17: vorübergehend gesperrt	2::inwork 8458,9566 8454,9528 8453,9519 8422,9522 8423,9532
-An den Yorckstraßenbrücken: Weg wird als Baulogistikfläche benutzt, gesperrt	2::inwork 8458,9566 8426,9572
-An den Yorckstraßenbrücken: vorübergehend gesperrt	2::inwork 8446,9670 8426,9572
 Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
 Seidenschwanzstr.: durch Bauzäune abgesperrt	2::inwork 26666,12935 26570,12860 26519,12808 26475,12761 26428,12708 26369,12756 26288,12801
 Seidenschwanzstr.: durch Bauzäune abgesperrt	2::inwork 26452,12683 26428,12708
@@ -3180,7 +3183,6 @@ Schinkelplatz: Fahrbahn komplett gesperrt	2::inwork 9990,12404 9996,12372
 Niederlagstr.: Einbahnstraße	1s:inwork 9972,12184 9959,12281
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
 Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409
-Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12621,9297 12592,9249
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
@@ -3402,7 +3404,9 @@ Theodor-Heuss-Weg	1s 9197,14562 9128,14461 9081,14363
 tragen / schieben (Treppe 10 Stufen oder wilder Weg)	0:20:-150 9223,14608
 Tor	BNP:0:-247 3332,12742
 tragen (Treppe, 14 Stufen)	0:30:57 7931,12869
-Ingeborg-Drewitz-Allee	1 7365,12775 7386,12749 7541,12754 7542,12736 7377,12729 7362,12731 7343,12758
+Ingeborg-Drewitz-Allee	1 7365,12775 7386,12749
+Ingeborg-Drewitz-Allee	2::inwork 7386,12749 7541,12754
+Ingeborg-Drewitz-Allee	1 7362,12731 7343,12758
 tragen (Treppe)	0:30:-180 5714,12279
 Mittelstreifen schlecht zu queren	3nocross::ignrte 6025,12494 6090,12451 6173,12396
 Altonaer Str. -> Cuxhavener Str.: Mittelstreifen schlecht zu queren	3::igndisp 6173,12396 6090,12451 5982,12291
