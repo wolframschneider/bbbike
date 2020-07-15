@@ -4695,7 +4695,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002804',
        data  => <<EOF,
-	2 4517,4853 4515,4966
+	2 4517,4853 4512,4870 4515,4966
 EOF
      },
      { from  => 1149458400, # 2006-06-05 00:00
@@ -10238,7 +10238,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006820',
        data  => <<EOF,
-	1::inwork 16868,5938 16911,5905 16993,5841 17337,5574 17366,5552 17473,5471 17601,5374
+	1::inwork 16868,5938 16911,5905 16993,5841 17030,5812 17337,5574 17366,5552 17473,5471 17601,5374
 EOF
      },
      { from  => 1191708000, # 2007-10-07 00:00
@@ -14669,6 +14669,7 @@ EOF
        # zZt status=500: source_id => 'http://www.classicopenair.de/de',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/mitte/c-bauen/weihnachtszauber-gendarmenmarkt-zieht-zum-bebelplatz-um_a279790 (Sanierung des Gendarmenmarkts ab 2022 bis 2024, dann gibt's hier keine Veranstaltungen)
 	q4::temp 9679,11834 9666,11935 9656,12031 9645,12133
 	2::temp 9523,12019 9656,12031
 	2::temp 9536,11922 9666,11935
@@ -17139,6 +17140,7 @@ EOF
        text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 25.11.2019 bis 31.12.2019, davor mehrere Tage Aufbauarbeiten, Durchfahrt nicht möglich (Eintritt!)',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/mitte/c-bauen/weihnachtszauber-gendarmenmarkt-zieht-zum-bebelplatz-um_a279790 (2022 und 2023 vorübergehend am Bebelplatz, evtl. auch schon 2021)
 #: note "WeihnachtsZauber auf dem Gendarmenmarkt"
 	2::xmas 9536,11922 9666,11935
 	2::xmas 9523,12019 9656,12031
@@ -22647,7 +22649,7 @@ EOF
 #: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-06-09
+#: last_checked: 2020-07-09
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -26371,18 +26373,22 @@ EOF
 	3 6122,10925 6145,10975 6266,10927
 EOF
      },
-     { from  => $isodate2epoch->("2019-07-19 06:00:00"),
-       until => $isodate2epoch->("2019-07-20 14:30:00"),
-       text  => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2019 von 06:00 bis 14:30 Uhr',
+     { from  => $isodate2epoch->("2020-07-19 06:00:00"),
+       until => $isodate2epoch->("2020-07-20 13:00:00"),
+       text  => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2020 von 10:00 bis 13:00 Uhr',
        type  => 'gesperrt',
-       source_id => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_28_4117_4264_online.pdf',
+       source_id => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
        data  => <<EOF,
-	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
-	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
-	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
-	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
-	2::temp 7665,11353 7745,11332
-	2::temp 7745,11332 7690,11108
+	2::temp 7435,11514 7322,11177
+	2::temp 7579,11032 7595,11086 7665,11353
+	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
+	2::temp 7595,11086 7575,11076 7252,11188
+# REMOVED ---	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
+# REMOVED ---	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
+# REMOVED ---	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
+# REMOVED ---	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
+# REMOVED ---	2::temp 7665,11353 7745,11332
+# REMOVED ---	2::temp 7745,11332 7690,11108
 EOF
      },
      { from  => undef, # 
@@ -26394,18 +26400,14 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # $isodate2epoch->("2017-12-01 12:00:00"),
+       until => 1594479413, # undef, # $isodate2epoch->("2017-12-01 12:00:00"),
        text  => 'Teltowkanal von der Ringstraße bis Gersdorfstraße: Sanierung Fuß- und Radweg, Wege können gesperrt sein, Zeitraum unbekannt',
        type  => 'gesperrt',
 #       source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2017/pressemitteilung.608925.php',
        data  => <<EOF,
 # REMOVED --- #: XXX hier sind gerade Bauarbeiten --- Verbundsteinpflaster bleibt wohl, der wassergebundene Teil sind besser aus
-#: XXX wird sich die Qualität vielleicht bessern?
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet? Hat sich die Qualität des Weges verbessert?
-#: priority: #B
-#: last_checked: 2020-05-31 vvv
+# REMOVED (fertig) --- #: XXX wird sich die Qualität vielleicht bessern? --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet? Hat sich die Qualität des Weges verbessert? --- #: priority: #B --- #: last_checked: 2020-05-31 vvv
 	2::inwork 7994,4430 8234,4660
-#: last_checked ^^^
 # REMOVED (fertig) ---	2::inwork 8234,4660 8575,4980 8598,4985
 # REMOVED (fertig) ---	2::inwork 8598,4985 8618,5019 8784,5095
 EOF
@@ -26918,7 +26920,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-06-12 vvv
+#: last_checked: 2020-07-09 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -26982,7 +26984,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.663347.php',
        data  => <<EOF,
-	q4::inwork; 3867,4537 3905,4482
+	q4::inwork; 3867,4537 3898,4490
 EOF
      },
      { from  => undef, # 
@@ -27879,7 +27881,7 @@ EOF
        source_id => '2147342231', # Gesamtbaumaßnahme bis 31.12.2023
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
-#: also_indoor: traffic
+#: also_indoor: traffic (G,H)
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
 #: last_checked: 2020-06-21
 #: next_check: 2020-12-31
@@ -27891,8 +27893,9 @@ EOF
        text  => 'Privatstraße hinter der Leipziger Str.: Bauarbeiten, für Radfahrer explizit gesperrt',
        type  => 'handicap',
        data  => <<EOF,
+#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-07-02
+#: last_checked: 2020-07-09
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27961,7 +27964,7 @@ EOF
      },
      { from  => undef, # 
        until => $isodate2epoch->("2020-12-31 23:59:59"), # 1588348800, # 2020-05-01 18:00
-       text  => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Marksburgstr. für Radfahrer explizit verboten',
+       text  => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Dorotheastr. für Radfahrer explizit verboten',
        type  => 'handicap',
        source_id => '2147342174',
        data  => <<EOF,
@@ -27969,8 +27972,9 @@ EOF
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-06-14 (mapillary)
-	q4::inwork; 18809,9133 18790,9018 18770,8898 18737,8686 18733,8650 18733,8633
+#: last_checked: 2020-07-08
+# REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
+	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
 EOF
      },
      { from  => 1537740000, # 2018-09-24 00:00
@@ -29207,7 +29211,7 @@ EOF
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
 #: source_id: 2147343335 (bis 31.7.2020)
 #: XXX bis wann gehen die Bauarbeiten?
-#: also_indoor: traffic
+#: also_indoor: traffic (H)
 #: last_checked: 2020-06-07 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-08-21
@@ -29294,13 +29298,13 @@ EOF
 EOF
      },
      { from  => 1560636000, # 2019-06-16 00:00
-       until => $isodate2epoch->("2020-07-14 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
+       until => $isodate2epoch->("2020-07-31 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
        text  => 'DB-Werkstraße: Bauarbeiten, ein Abschnitt der Fahrbahn kann gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-06-25
+#: last_checked: 2020-07-08
 #: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -29559,14 +29563,18 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1588348800, # 2020-05-01 18:00
-       text  => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer können bis Rheinsteinstr. den engen Gehweg benutzen, vermutlich bis Mai 2020',
+       until => $isodate2epoch->("2020-12-31 23:59:59"), # 1588348800, # 2020-05-01 18:00
+       text  => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer müssen bis Godesberger Str. den teilweise engen Gehweg benutzen, vermutlich bis Ende 2020',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
-	q3::inwork; 18704,8427 18731,8577 18733,8633 18733,8650 18737,8686
-#: note: hier gibt's keine expliziten Verbotsschilder, aber Radfahrer sollen wohl nicht auf der Treskowallee weiterfahren
-	q4::inwork; 18737,8686 18770,8898 18790,9018
+#: last_checked: 2020-07-08
+#: next_check: 2020-12-31
+# REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
+#: note: hier eng und viel Fußgängerverkehr
+	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
+#: note: hier etwas weniger Fußgängerverkehr
+	q2::inwork; 18737,8686 18770,8898 18790,9018
 # REMOVED (hier ist die Fahrbahn frei) ---	q4::inwork; 18790,9018 18809,9133
 EOF
      },
@@ -29730,8 +29738,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1596211200, # 2020-07-31 18:00
-       text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, bis Juli 2020',
+       until => $isodate2epoch->("2020-09-30 18:00:00"), # 1596211200, # 2020-07-31 18:00
+       text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, mindestens bis Juli 2020, evtl. bis September 2020',
        type  => 'gesperrt',
        source_id => '2147344558',
        data  => <<EOF,
@@ -30455,10 +30463,11 @@ EOF
      },
      { from  => 1586020992, # 2020-04-04 19:23
        until => undef, # 1590768000, # 2020-05-29 18:00
-       text  => 'Rigaer Str.: zwischen Proskauer Str. und Zellestr. Einbahnstraßenregelung, offen Richtung Bersarinplatz.',
+       text  => 'Rigaer Str.: zwischen Proskauer Str. und Zellestr. Einbahnstraßenregelung, offen Richtung Bersarinplatz',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann gilt die Einbahnstraßenregelung?
+#: also_indoor: traffic (G,H)
 #: last_checked: 2020-07-06
 	q3::inwork; 14133,12482 14266,12446
 EOF
@@ -30701,6 +30710,7 @@ EOF
        source_id => '2147345842',
        data  => <<EOF,
 #: next_check_id: KAMERUNER-2020
+#: also_indoor: traffic (G,H)
 	q4::inwork 6383,15972 6484,16085 6587,16199
 EOF
      },
@@ -30845,7 +30855,7 @@ EOF
      },
      { from  => 1592690400, # 2020-06-21 00:00
        until => 1597442399, # 2020-08-14 23:59
-       text  => 'Goltzstr.: Bauarbeiten zwischen Briesingstr. und Rehagener Str., Fahrbahn gesperrt, bis 14. August 2020',
+       text  => 'Goltzstr.: Bauarbeiten zwischen Briesingstr. und Bahnhofstr., Fahrbahn gesperrt, bis 14. August 2020',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.944673.php',
        data  => <<EOF,
@@ -30855,8 +30865,8 @@ EOF
 #: source_id: 2147345963
 #: priority: #A
 #: last_checked: 2020-06-21
-#: next_check: 2020-07-13
-	q4::inwork 10454,-2520 10563,-2432 10642,-2371
+#: next_check: 2020-08-14
+	q4::inwork 10454,-2520 10563,-2432 10642,-2371 10763,-2276 10983,-2116
 EOF
      },
      { from  => 1593295200, # 2020-06-28 00:00
@@ -30875,6 +30885,7 @@ EOF
        type  => 'handicap',
        source_id => '2147345956',
        data  => <<EOF,
+#: also_indoor: traffic (H)
 	q3::inwork 4295,13234 4186,13710
 EOF
      },
@@ -30885,6 +30896,7 @@ EOF
        source_id => 'LMS-BR_r_LMS-BR_205382_LMS-BR_72',
        data  => <<EOF,
 #: source_id: 2147345969
+#: also_indoor: traffic (G,H)
 	q4::inwork 4847,10677 4847,10589
 EOF
      },
@@ -30895,23 +30907,22 @@ EOF
        source_id => '2147345679',
        data  => <<EOF,
 #: XXX_prog: eigentlich q3-::inwork
+#: also_indoor: traffic (G,H)
 	q3::inwork 3348,9806 3340,9700
 EOF
      },
      { from  => 1593468000, # 2020-06-30 00:00
-       until => undef, # XXX
+       until => 1594478895, # -> gesperrt-orig --- undef, # XXX
        text  => 'Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten, voraussichtlich ab 1. Juli 2020',
        type  => 'gesperrt',
        source_id => 'https://www.berliner-woche.de/marienfelde/c-verkehr/p+r-parkplatz-wird-geschlossen_a277741',
        data  => <<EOF,
 #: next_check_id: BUCKOWERCHAUSEE-EISNER-2020
-#: XXX prüfen, ob die Sperrung tatsächlich erfolgt vvv
+# REMOVED --- #: XXX prüfen, ob die Sperrung tatsächlich erfolgt vvv
 # REMOVED --- #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
-#: next_check: 2020-07-01 vvv
+# REMOVED --- #: next_check: 2020-07-01 vvv
 	2::inwork 9507,-85 9468,-85 9271,323 9253,370 9218,458 9178,556
 	2::inwork 9271,323 9296,335 9249,434 9218,458
-#: next_check ^^^
-#: XXX ^^^
 EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-06-29 00:00:00") }, # 1 Tag Vorlauf
@@ -30947,6 +30958,26 @@ EOF
        source_id => '2147346016',
        data  => <<EOF,
 	q4::inwork 5464,5731 5280,5714
+EOF
+     },
+     { from  => 1594232559, # 2020-07-08 20:22
+       until => $isodate2epoch->("2020-07-13 01:30:00"),
+       text  => 'Bödikerstr. und Laskerstr.: wegen SEV Einbahnstraßenregelung, offen Richtung Markgrafendamm, bis 13.7.2020',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://sbahn.berlin/fahren/fahrplanaenderungen/detail/12403-montage-bahnsteigdach-in-karlshorst-aufbau-einer-laermschutzwand-gleisarbeiten-in-rummelsburg/#con-14153
+	q4::temp; 14675,10693 14541,10735 14490,10610
+EOF
+     },
+     { from  => 1594474932, # 2020-07-11 15:42
+       until => 1596823200, # 2020-08-07 20:00
+       text  => 'Curtiusstr./Baseler Str.: Arbeiten im Kreuzungsbereich, Umwege, Fußgänger, bis 7. August 2020',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.958167.php',
+       data  => <<EOF,
+#: next_check_id: CURTIUS-2020
+	q4::inwork 3197,3934 3185,3958 3141,4023
+	q4::inwork 3259,4002 3185,3958 3026,3860
 EOF
      },
     );

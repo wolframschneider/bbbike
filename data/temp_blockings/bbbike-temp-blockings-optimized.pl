@@ -1481,7 +1481,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'data' => '#: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-06-09
+#: last_checked: 2020-07-09
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -1959,25 +1959,27 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
-       undef,
        {
-         'data' => '# REMOVED --- #: XXX hier sind gerade Bauarbeiten --- Verbundsteinpflaster bleibt wohl, der wassergebundene Teil sind besser aus
-#: XXX wird sich die Qualität vielleicht bessern?
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet? Hat sich die Qualität des Weges verbessert?
-#: priority: #B
-#: last_checked: 2020-05-31 vvv
-	2::inwork 7994,4430 8234,4660
-#: last_checked ^^^
-# REMOVED (fertig) ---	2::inwork 8234,4660 8575,4980 8598,4985
-# REMOVED (fertig) ---	2::inwork 8598,4985 8618,5019 8784,5095
+         'data' => '	2::temp 7435,11514 7322,11177
+	2::temp 7579,11032 7595,11086 7665,11353
+	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
+	2::temp 7595,11086 7575,11076 7252,11188
+# REMOVED ---	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
+# REMOVED ---	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
+# REMOVED ---	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
+# REMOVED ---	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
+# REMOVED ---	2::temp 7665,11353 7745,11332
+# REMOVED ---	2::temp 7745,11332 7690,11108
 ',
-         'from' => undef,
-         'id' => 2877,
-         'text' => 'Teltowkanal von der Ringstraße bis Gersdorfstraße: Sanierung Fuß- und Radweg, Wege können gesperrt sein, Zeitraum unbekannt',
+         'from' => 1595131200,
+         'id' => 2875,
+         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
+         'text' => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2020 von 10:00 bis 13:00 Uhr',
          'type' => 'gesperrt',
-         'until' => undef
+         'until' => 1595242800
        },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -2064,7 +2066,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-06-12 vvv
+#: last_checked: 2020-07-09 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2229,7 +2231,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
-#: also_indoor: traffic
+#: also_indoor: traffic (G,H)
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
 #: last_checked: 2020-06-21
 #: next_check: 2020-12-31
@@ -2243,8 +2245,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1704042000
        },
        {
-         'data' => '#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-07-02
+         'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
+#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
+#: last_checked: 2020-07-09
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2265,13 +2268,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-06-14 (mapillary)
-	q4::inwork; 18809,9133 18790,9018 18770,8898 18737,8686 18733,8650 18733,8633
+#: last_checked: 2020-07-08
+# REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
+	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
 ',
          'from' => undef,
          'id' => 3007,
          'source_id' => '2147342174',
-         'text' => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Marksburgstr. für Radfahrer explizit verboten',
+         'text' => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Dorotheastr. für Radfahrer explizit verboten',
          'type' => 'handicap',
          'until' => 1609455599
        },
@@ -2473,7 +2477,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
 #: source_id: 2147343335 (bis 31.7.2020)
 #: XXX bis wann gehen die Bauarbeiten?
-#: also_indoor: traffic
+#: also_indoor: traffic (H)
 #: last_checked: 2020-06-07 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-08-21
@@ -2509,7 +2513,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-06-25
+#: last_checked: 2020-07-08
 #: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -2518,7 +2522,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 3116,
          'text' => 'DB-Werkstraße: Bauarbeiten, ein Abschnitt der Fahrbahn kann gesperrt sein',
          'type' => 'gesperrt',
-         'until' => 1594677600
+         'until' => 1596146400
        },
        {
          'data' => '#: next_check_id: WAGNERREGENYALLEE-2019
@@ -2566,7 +2570,23 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: next_check_id: TRESKOWALLEE-2017
+#: last_checked: 2020-07-08
+#: next_check: 2020-12-31
+# REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
+#: note: hier eng und viel Fußgängerverkehr
+	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
+#: note: hier etwas weniger Fußgängerverkehr
+	q2::inwork; 18737,8686 18770,8898 18790,9018
+# REMOVED (hier ist die Fahrbahn frei) ---	q4::inwork; 18790,9018 18809,9133
+',
+         'from' => undef,
+         'id' => 3136,
+         'text' => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer müssen bis Godesberger Str. den teilweise engen Gehweg benutzen, vermutlich bis Ende 2020',
+         'type' => 'handicap',
+         'until' => 1609455599
+       },
        undef,
        undef,
        undef,
@@ -2641,9 +2661,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => undef,
          'id' => 3151,
          'source_id' => '2147344558',
-         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, bis Juli 2020',
+         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, mindestens bis Juli 2020, evtl. bis September 2020',
          'type' => 'gesperrt',
-         'until' => 1596211200
+         'until' => 1601481600
        },
        undef,
        undef,
@@ -2861,12 +2881,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX bis wann gilt die Einbahnstraßenregelung?
+#: also_indoor: traffic (G,H)
 #: last_checked: 2020-07-06
 	q3::inwork; 14133,12482 14266,12446
 ',
          'from' => 1586020992,
          'id' => 3215,
-         'text' => 'Rigaer Str.: zwischen Proskauer Str. und Zellestr. Einbahnstraßenregelung, offen Richtung Bersarinplatz.',
+         'text' => 'Rigaer Str.: zwischen Proskauer Str. und Zellestr. Einbahnstraßenregelung, offen Richtung Bersarinplatz',
          'type' => 'handicap',
          'until' => undef
        },
@@ -3036,6 +3057,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
        },
        {
          'data' => '#: next_check_id: KAMERUNER-2020
+#: also_indoor: traffic (G,H)
 	q4::inwork 6383,15972 6484,16085 6587,16199
 ',
          'from' => 1588490580,
@@ -3092,17 +3114,7 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'until' => 1595602800
        },
        undef,
-       {
-         'data' => '# REMOVED --- #: XXX ist die Straße tatsächlich für Radfahrer gesperrt? Wie sieht die Umleitung aus? --- #: priority: #B --- #: next_check: 2020-06-08
-	q3::inwork; 15560,7400 15553,7408 15221,7778 
-',
-         'from' => 1591513200,
-         'id' => 3244,
-         'source_id' => '2147345893',
-         'text' => 'Kiefholzstr. Richtung Alt-Treptow zwischen Eichbuschallee und Dammweg: Fahrbahn gesperrt, Gehweg für Radfahrer frei, vom 08.06.2020 09:00 Uhr bis 10.07.2020 17:00 Uhr',
-         'type' => 'handicap',
-         'until' => 1594393200
-       },
+       undef,
        undef,
        undef,
        {
@@ -3112,13 +3124,13 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
 #: source_id: 2147345963
 #: priority: #A
 #: last_checked: 2020-06-21
-#: next_check: 2020-07-13
-	q4::inwork 10454,-2520 10563,-2432 10642,-2371
+#: next_check: 2020-08-14
+	q4::inwork 10454,-2520 10563,-2432 10642,-2371 10763,-2276 10983,-2116
 ',
          'from' => 1592690400,
          'id' => 3247,
          'source_id' => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.944673.php',
-         'text' => 'Goltzstr.: Bauarbeiten zwischen Briesingstr. und Rehagener Str., Fahrbahn gesperrt, bis 14. August 2020',
+         'text' => 'Goltzstr.: Bauarbeiten zwischen Briesingstr. und Bahnhofstr., Fahrbahn gesperrt, bis 14. August 2020',
          'type' => 'handicap',
          'until' => 1597442399
        },
@@ -3134,7 +3146,8 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'until' => 1598047199
        },
        {
-         'data' => '	q3::inwork 4295,13234 4186,13710
+         'data' => '#: also_indoor: traffic (H)
+	q3::inwork 4295,13234 4186,13710
 ',
          'from' => 1592719200,
          'id' => 3249,
@@ -3145,6 +3158,7 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
        },
        {
          'data' => '#: source_id: 2147345969
+#: also_indoor: traffic (G,H)
 	q4::inwork 4847,10677 4847,10589
 ',
          'from' => 1590420000,
@@ -3156,6 +3170,7 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
        },
        {
          'data' => '#: XXX_prog: eigentlich q3-::inwork
+#: also_indoor: traffic (G,H)
 	q3::inwork 3348,9806 3340,9700
 ',
          'from' => 1587963600,
@@ -3165,23 +3180,7 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'type' => 'handicap',
          'until' => 1664550000
        },
-       {
-         'data' => '#: next_check_id: BUCKOWERCHAUSEE-EISNER-2020
-#: XXX prüfen, ob die Sperrung tatsächlich erfolgt vvv
-# REMOVED --- #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
-#: next_check: 2020-07-01 vvv
-	2::inwork 9507,-85 9468,-85 9271,323 9253,370 9218,458 9178,556
-	2::inwork 9271,323 9296,335 9249,434 9218,458
-#: next_check ^^^
-#: XXX ^^^
-',
-         'from' => 1593468000,
-         'id' => 3252,
-         'source_id' => 'https://www.berliner-woche.de/marienfelde/c-verkehr/p+r-parkplatz-wird-geschlossen_a277741',
-         'text' => 'Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten, voraussichtlich ab 1. Juli 2020',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/an-einem-nachmittag-im-monat-wird-die-gudvanger-strasse-nun-offiziell-gesperrt_a274891 (hier: ab Juli 2020)
 #: by: http://www.spielstrassen.de/initiativen.php?init=Templiner_Str (hier: ab 30.6.2020, Hausnummern 15 bis 19)
@@ -3219,6 +3218,28 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'text' => 'Bergstr.: zwischen Körnerstr. und Heesestr. Sperrung wegen Bauarbeiten, evtl. sind auch Radfahrer betroffen, vom 29.06.2020 16:14 Uhr bis 14.08.2020 17:00 Uhr ',
          'type' => 'handicap',
          'until' => 1597417200
+       },
+       {
+         'data' => '#: by: https://sbahn.berlin/fahren/fahrplanaenderungen/detail/12403-montage-bahnsteigdach-in-karlshorst-aufbau-einer-laermschutzwand-gleisarbeiten-in-rummelsburg/#con-14153
+	q4::temp; 14675,10693 14541,10735 14490,10610
+',
+         'from' => 1594232559,
+         'id' => 3256,
+         'text' => 'Bödikerstr. und Laskerstr.: wegen SEV Einbahnstraßenregelung, offen Richtung Markgrafendamm, bis 13.7.2020',
+         'type' => 'handicap',
+         'until' => 1594596600
+       },
+       {
+         'data' => '#: next_check_id: CURTIUS-2020
+	q4::inwork 3197,3934 3185,3958 3141,4023
+	q4::inwork 3259,4002 3185,3958 3026,3860
+',
+         'from' => 1594474932,
+         'id' => 3257,
+         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.958167.php',
+         'text' => 'Curtiusstr./Baseler Str.: Arbeiten im Kreuzungsbereich, Umwege, Fußgänger, bis 7. August 2020',
+         'type' => 'handicap',
+         'until' => 1596823200
        }
      
 );
