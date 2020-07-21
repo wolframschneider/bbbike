@@ -122,7 +122,7 @@ Nordufer: bereits an der Ampel Föhrer Str. auf den linken Zweirichtungsradweg we
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/tief-10-ag_radverkehr-12-03-2018-kompatibilitaetsmodus.pdf
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/11-ag_radverkehr-bericht-einzelmassnahmen.pdf (mit Ampel, Brückenneubau 2021)
 #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/12-ag_radverkehr-bericht-einzelmassnahmen.pdf (nach 2021)
-#: last_checked: 2020-06-14
+#: last_checked: 2020-07-18
 #: next_check: 2021-06-01
 An der Wuhlheide - Wuhlewanderweg: ggfs. bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (insbesondere mit Anhänger oder mit Lastenrad wenig Platz auf dem Mittelstreifen)	PI; 21303,5826 21365,5832 21470,5809 21522,5771 21569,5730 21596,5693 21602,5685 21618,5699 21744,5804
 # 
@@ -166,8 +166,8 @@ Stralauer Allee - Warschauer Platz: bereits an der Kreuzung Am Oberbaum/Stralaue
 #: XXX_indoor: hmmm, why not use Steinmetzstr. at all for such routes? Maybe use routing_helper with some penalty instead? Ah, it would minimize Kopfsteinpflaster...
 #: note: alternativ kann man auch direkt an der Kreuzung abbiegen, ist aber etwas umständlich mit mindestens einem Bordstein
 bereits an der Ampel Steinmetzstr. die Straßenseite wechseln	PI; 7702,10146 7813,10112 7850,10351
-Regensburger Str. - Bundesallee: zunächst auf der linken Gehwegseite bis zur Kreuzung Nachodstr. fahren und dort die Straßenseite wechseln	CP; 5537,9938 5464,9914 5467,9866
-Bundesallee - Pariser Str.: bereits an der Kreuzung Bundesallee/Nachodstr. auf die linken Gehwegseite der Bundesallee wechseln	PI; 5467,9866 5464,9914 5416,9928
+# REMOVED --- Regensburger Str. - Bundesallee: zunächst auf der linken Gehwegseite bis zur Kreuzung Nachodstr. fahren und dort die Straßenseite wechseln	CP; 5537,9938 5491,9935 5464,9934 5467,9866
+# REMOVED --- Bundesallee - Pariser Str.: bereits an der Kreuzung Bundesallee/Nachodstr. auf die linken Gehwegseite der Bundesallee wechseln	PI; 5467,9866 5461,9923 5423,9932 5382,9942
 Mehringbrücke - Ruhlsdorfer Str.: den linken Gehweg benutzen	CP2; 9416,10196 9368,10211
 Buchholzer Str. - Schönhauser Allee: zunächst auf der linken Geh/Radwegseite der Schönhauser Allee fahren, an der Kreuzung Gneiststr. die Straßenseite wechseln	CP; 11055,15504 10917,15525 10902,15422
 #: XXX_prog: RL:ja, GPS:nein
@@ -275,7 +275,7 @@ Helmholtzstr. - Zeppelinstr.: zum Überqueren der Edisonstr. Fußgängerampel benut
 Zeppelinstr. - Helmholtzstr.: zum Überqueren der Edisonstr. Fußgängerampel benutzen	CP; 18041,6924 17919,6968 17845,6986
 Mariendorfer Damm - Heinitzweg: bereits an der Buckower Chaussee die Straßenseite wechseln	PI; 10427,968 10379,1097 10325,1083
 Heinitzweg - Mariendorfer Damm: zunächst auf dem linken Gehweg/Radweg vorfahren	CP; 10325,1083 10379,1097 10329,1231
-Zum Naturpark Schöneberg: Weg zwischen den Parkhäusern nehmen	CP2; 7774,7724 7789,7718
+Zum Hans-Baluschek-Park/Naturpark Schöneberg: Weg zwischen den Parkhäusern nehmen	CP2; 7774,7724 7789,7718
 Hochspannungsweg - Buckower Damm: zunächst zur Fußgängerampel links vorfahren	CP; 12593,2472 12694,2517 12694,2544
 Hochspannungsweg: zur Überquerung des Buckower Damms Fußgängerampel links nehmen	CP; 12593,2472 12694,2517 12825,2573
 Hochspannungsweg: zur Überquerung des Buckower Damms Fußgängerampel rechts nehmen	CP; 12825,2573 12694,2517 12593,2472
@@ -527,7 +527,7 @@ Salvador-Allende-Str. - Abzweig: bereits an der Ampel Fürstenwalder Damm auf den
 Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichshagener Str. fahren	CP; 23428,5382 23403,5385 23404,5325
 #: XXX wird eventuell im Zuge der Maßnahme Nsw.3 verbessert
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5826 (Verkehrsführung verbessern) (wurde allerdings abgelehnt; die allgemeine Verbesserung der Situation wird aber irgendwann passieren ("Umgestaltung des Bahnhofsvorplatzes")
-#: last_checked: 2020-07-08
+#: last_checked: 2020-07-18
 #: check_frequency: 180d
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115
@@ -625,7 +625,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2020-07-08 vvv
+#: last_checked: 2020-07-18 vvv
 ausgeschildert "zur Salzmannstraße Huronseestraße"	CP2; 16900,9861 16895,9922
 ausgeschildert "zur Sewanstraße"	CP2; 16900,9861 17005,9953
 #: last_checked ^^^

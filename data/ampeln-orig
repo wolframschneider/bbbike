@@ -10,7 +10,7 @@
 # 
 #: next_check_id: HERMANNHESSESTR-2019
 #: last_checked: 2020-07-08 (mapillary)
-#: next_check: 2020-08-05
+#: next_check: 2020-07-16
 	X::inwork 9868,19023
 # 
 # REMOVED --- #: note: Baustellenampel in der Neuen Roßstr. --- #: source_id: 2147345021 (bis 06.07.2020) --- #: source_id: 2147345825 --- #: XXX ist die Ampel mittlerweile abgebaut (wegen der Einbahnstraßenregelung)? --- #: XXX laut fritz Sperrung bis 2020-06-30 --- #: last_checked: 2020-05-12 --- #: next_check: 2020-05-13 --- #: valid: -20200706 ---	X::inwork 10780,11721
@@ -954,7 +954,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036190429651/190429651/00081409/09-Anlagen/04/B0138SB.pdf (nach Komplettumbau)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5240 (Prüfung für einen Umbau)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036154063735/154063735/00111219/19-Anlagen/05/B1138ZB2.pdf
-#: last_checked: 2020-06-08
+#: last_checked: 2020-07-18
 #: check_frequency: 180d
 	X 18080,5376
 	X 19904,3464
@@ -3123,7 +3123,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2020-06-26 (mapillary)
+#: last_checked: 2020-07-17
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -3752,7 +3752,7 @@ S-Bahn ca. alle 10 Minuten	B 10896,-4469
 	B 32741,155086
 	B 21792,169304
 #: note: Strecke ist außer Betrieb
-	B0 26090,86927
+	B0 26089,86922
 	B -83391,-71794
 	B -79440,-70055
 	B -73417,-67369
@@ -3914,7 +3914,14 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	B 77424,-25690
 	B 80790,-18089
 	B0 50162,99926
+	B0 50741,99460
 	B0 51920,99933
+	B0 49954,96926
+	B0 49936,96811
+	B0 50320,95771
+	B0 50888,93160
+	B0 50581,90731
+	B0 55578,102962
 #: XXX_prog auf dem Radweg nicht relevant
 	F 40306,101009
 #: note: Ampel nicht relevant für den Radweg

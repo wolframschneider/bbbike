@@ -171,7 +171,6 @@ Straße 77: die Straße ist nicht ausgeschildert	CS 15408,12394 15320,12375
 (Seeburger Str./Seecktstr. - Bullengraben): Zufahrt über Supermarktparkplatz (Lidl)	CS; -4299,13304 -4372,13384
 Straße R: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -203,16168 -267,16246 -315,16286 -386,16347 -460,16408 -542,16475 -629,16546 -719,16608 -784,16658 -792,16659
 Straße Y: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -629,16546 -671,16488
-Zur Pariser Str.: Hausdurchfahrt benutzen	CS; 5464,9914 5416,9928
 Kreisverkehr	Roundabout 11393,10390
 (Spießweg - Hermsdorfer Str.): Rad- und Fußweg	CS 4827,20862 4644,20952
 (Erbendorfer Weg - Lichterfelder Ring): markierter Radweg	CS 7131,694 7117,725 7023,694 6941,690
@@ -221,12 +220,12 @@ ausgeschildert zum Golfplatz	CP2; 50181,171331 50016,171383
 Ausschilderung nach Luisenthal (?) folgen	CS; 41134,76881 41143,76365
 ausgeschildert Richtung Campingplatz Warnitz	CP; 40652,83924 40702,84070 40703,84157 40753,84220 40736,84265 40768,84393
 ausgeschildert Richtung Werneuchen, Wegendorf	CP2; 32325,18434 32338,18762
-ausgeschildert Richtung Drense	CP2; 47333,101140 47381,101165
+ausgeschildert Richtung Drense	CP2; 47330,101147 47340,101150
 ausgeschildert Richtung Grünow	CP2; 45050,101273 45080,101325
 ausgeschildert nach Charlottenhof	CP2; -14500,-2012 -14536,-1943
 ausgeschildert mit Tafel "Windfeld Randowhöhe" und "Wolliner Weg"	CP2; 52527,98581 52471,98189
 ausgeschildert zum Sportplatz	CP2; 13535,10184 13371,9974
-Route nach Prenzlau ausgeschildert	CP2; 50420,96012 50188,95514
+Route nach Prenzlau ausgeschildert	CP2; 50420,96012 50320,95771
 als Julius-Leber-Brücke ausgeschildert	CP; 7467,8863 7497,8916 7548,8879
 Ausgeschildert als Matheshöher Weg	CP2; 49488,96427 49056,96700
 Ausgeschildert als Britzer Str.	CP2; 33044,51831 33415,51839
@@ -359,8 +358,8 @@ Am Rundling: nur frei für Anlieger	CS 17927,3737 17927,3771 17927,3788
 Simsonweg: nicht ausgeschildert	CP2; 8354,12416 8391,12389
 Simsonweg: nicht ausgeschildert	CP2; 8546,12279 8391,12389
 Jänickestr. - Dahlemer Weg: Privatstraße	CS 1702,1278 1707,1256 1742,1118
-Ausgeschildert als Jasminpfad	CS 8259,8628 8215,8631
-Ausgeschildert als Rosenpromenade	CS 8265,8305 8259,8628
+Ausgeschildert als Jasminpfad	CP2; 8259,8628 8215,8631
+Ausgeschildert als Rosenpromenade	CS 8265,8305 8260,8567
 Jasminpfad: Tor 1 der Kleingartenanlage	CP2; 8215,8631 8259,8628
 Teilestr. - Schaffhausener Str.: vor der Autobahnbrücke links abbiegen	CP2; 11068,6006 11077,6028
 Königstuhlweg: nicht ausgeschildert	CS 10334,2321 10214,2348
@@ -703,3 +702,14 @@ Mausohrweg: nicht ausgeschildert	CS 33176,2938 33296,2894 33406,2852 33503,2818
 ausgeschildert als Heidekampweg	CP2; 15727,6716 15697,6688
 ausgeschildert "Zur Florastr."	CP2; 5165,6119 5234,6086
 ausgeschildert Marienfelder Anger	CP2; 3647,299 3607,283
+ausgeschildert nach Grenz	CP2; 51391,106540 51178,106442
+nicht ausgeschildert, hinter dem Netto links abbiegen	CP; 5429,19165 5476,19450 5398,19463
+nicht ausgeschildert, vor dem Netto links abbiegen	CP; 5495,19571 5476,19450 5398,19463
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5198,17433 5109,17507 5138,17630
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5198,17433 5109,17507 5068,17384
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5138,17630 5109,17507 4801,17623
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5138,17630 5109,17507 5198,17433
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 4801,17623 5109,17507 5068,17384
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 4801,17623 5109,17507 5138,17630
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5068,17384 5109,17507 5198,17433
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5068,17384 5109,17507 4801,17623

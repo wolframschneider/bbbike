@@ -71,7 +71,7 @@ EOF
        data  => <<EOF,
 	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10951,9216 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
 # REMOVED ---	2::temp 9044,9753 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
-	2::temp 10713,9260 10670,9286 10639,9304 10564,9292
+	2::temp 10713,9260 10670,9286 10639,9304 10615,9300 10564,9292
 # REMOVED ---	3 8774,9534 8777,9601 8778,9759 8778,9759 8779,9812
 # REMOVED ---	3 8779,9812 8778,9759 8778,9759 8777,9601 8774,9534
 # REMOVED ---	3 9000,9509 9044,9753 9073,9915
@@ -6654,7 +6654,7 @@ EOF
        text  => 'B 109 Prenzlauer Allee OD Templin, ab A.-Bebel-Str. bis OA Einbau Deckschicht Vollsperrung 03.11.2006-05.11.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 16331,79764 16904,79746 17094,79875 17426,80173 17455,80199
+	q4::inwork 16331,79764 16904,79746 17094,79875 17240,80006 17426,80173 17455,80199
 EOF
      },
      { from  => 1159221600, # 2006-09-26 00:00
@@ -10238,7 +10238,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006820',
        data  => <<EOF,
-	1::inwork 16868,5938 16911,5905 16993,5841 17030,5812 17337,5574 17366,5552 17473,5471 17601,5374
+	1::inwork 16868,5938 16911,5905 16993,5841 17024,5816 17337,5574 17366,5552 17473,5471 17601,5374
 EOF
      },
      { from  => 1191708000, # 2007-10-07 00:00
@@ -11485,7 +11485,7 @@ EOF
        text  => 'K 7318 Blankenburg - Potzlow zw. Potzlow und Seehausen Straßenbauarbeiten Vollsperrung 05.05.2008-12.07.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 39375,90456 39609,90247 40122,90048 40230,90006 40583,90157 40865,90202 40938,90213 40938,90342 41087,90547
+	2::inwork 39375,90456 39609,90247 39959,90092 40122,90048 40230,90006 40583,90157 40865,90202 40938,90213 40938,90342 41087,90547
 EOF
      },
      { from  => 1210716000, # 2008-05-14 00:00
@@ -12617,7 +12617,7 @@ EOF
        text  => 'L 023 Ringenwalde - Milmersdorf OD Götschendorf Grundh.Straßenausbau Vollsperrung 25.08.2008-31.12.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 28003,76731 27309,76652 26735,76914
+	q4::inwork 27942,76675 27749,76622 27308,76579 27037,76670 26582,76993
 EOF
      },
      { from  => 1220565600, # 2008-09-05 00:00
@@ -14040,7 +14040,7 @@ EOF
        text  => 'L 023 Ringenwalde - Milmersdorf OD Götschendorf Deckeneinbau Vollsperrung 08.05.2009-09.05.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 28003,76731 27309,76652 26735,76914
+	q4::inwork 27942,76675 27749,76622 27308,76579 27037,76670 26582,76993
 EOF
      },
      { from  => 1241158758, # 2009-05-01 08:19
@@ -18719,7 +18719,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4072.html',
        data  => <<EOF,
-	2:inwork 15347,24614 15469,24813 15490,24848
+	2::inwork 15347,24614 15469,24813 15490,24848
 EOF
      },
      { from  => 1286661600, # 2010-10-10 00:00
@@ -19478,7 +19478,7 @@ EOF
        type  => 'handicap',
        source_id => 'LS/O-SG33-E/11/027',
        data  => <<EOF,
-	q4::inwork 19595,27953 20114,28315 20362,28420
+	q4::inwork 19595,27953 19855,28134 20114,28315 20362,28420
 EOF
      },
      { from  => 1307174400, # 2011-06-04 10:00
@@ -25928,7 +25928,7 @@ EOF
 # REMOVED --- : last_checked: 2016-11-28
 # REMOVED --- : check_frequency: 14d
 # REMOVED ---	q3::inwork 13295,11792 13173,11788
-	q3::inwork 13173,11788 13066,11854
+	q3::inwork 13173,11788 13161,11795 13066,11854
 EOF
      },
      { from  => 1476655200, # 2016-10-17 00:00
@@ -26379,6 +26379,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
        data  => <<EOF,
+#: source_id: 2147341611
 	2::temp 7435,11514 7322,11177
 	2::temp 7579,11032 7595,11086 7665,11353
 	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
@@ -27826,14 +27827,16 @@ EOF
 EOF
      },
      { from  => 1533756141, # 2018-08-08 21:22
-       until => 1572562800, # 2019-11-01 00:00
-       text  => 'Unterführung Bahnhof Zeuthen: wegen Bauarbeiten gesperrt, voraussichtlich bis Oktober 2019',
+       until => undef, # 1572562800, # 2019-11-01 00:00
+       text  => 'Unterführung Bahnhof Zeuthen: wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        source_id => 'https://www.zeuthen.de/Die-Deutsche-Bahn-informierte-Grunderneuerung-der-Personenunterfuehrung-am-S-Bahnhof-Zeuthen-642703.html',
        data  => <<EOF,
-#: osm_watch: way id="36936021" version="4" brb
+#: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
+#: by: https://www.maz-online.de/Lokales/Dahme-Spreewald/Zeuthen/S-Bahnhof-Zeuthen-Fortschritte-auf-der-Baustelle-fuer-den-Personentunnel (noch immer gesperrt)
+#: osm_watch: way id="36936021" version="5" brb
 #: last_checked: 2018-09-18
-#: next_check: 2019-11-01
+#: next_check: 2020-11-01
 	2::inwork 25929,-5994 25902,-6006
 EOF
      },
@@ -28528,15 +28531,22 @@ EOF
 	q4::inwork; 10487,18270 10660,18345 10680,18380
 EOF
      },
-     { from  => 1542150096, # 2018-11-14 00:01
-       until => 1542826837, # -> handicap_s-orig, 1554073200, # 2019-04-01 01:00
-       text  => 'Kynaststr.: Fahrbahn hinter der Kreuzung Alt-Stralau Richtung Norden gesperrt, Radfahrer auf Gehweg/Fußgängerschutztunnel ausweichen und ggfs. absteigen, bis März 2019',
-       type  => 'handicap',
+     { from  => $isodate2epoch->("2020-07-12 07:00:00"), # 1542150096, # 2018-11-14 00:01
+       until => $isodate2epoch->("2020-12-04 17:00:00"), # 1542826837, # -> handicap_s-orig, 1554073200, # 2019-04-01 01:00
+       text  => 'Kynaststr.: Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden gesperrt, bis 4.12.2020',
+       type  => 'gesperrt',
        source_id => '2147343461',
        data  => <<EOF,
-#: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
+# REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
 # REMOVED --- #: XXX regelmäßig prüfen --- #: priority: #A --- #: last_checked: 2018-11-16
-	q4::inwork; 14724,10297 14766,10372 14797,10476
+#: by: https://viz.berlin.de/2020/07/schau-11_12-07_2020/ ("für den Kraftfahrzeugverkehr gesperrt")
+#: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
+#: source_id: 2147346071
+#: priority: #A
+#: last_checked: 2020-07-16 (mapillary)
+#: check_frequency: 30d
+#: next_check: 2020-12-04
+	q4::inwork; 14652,10201 14724,10297 14766,10372
 EOF
      },
      { from  => 1542222296, # 2018-11-14 20:04
@@ -29304,7 +29314,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-07-08
+#: last_checked: 2020-07-18
 #: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -29568,7 +29578,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-07-08
+#: last_checked: 2020-07-18
 #: next_check: 2020-12-31
 # REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
 #: note: hier eng und viel Fußgängerverkehr
@@ -29825,7 +29835,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: next_check_id: WRIEZENERPARK-2019 --- #: last_checked: 2019-12-16 --- #: check_frequency: 14d
-	2::inwork 13089,11708 13172,11651 13239,11567
+	2::inwork 13095,11703 13123,11675 13172,11651 13239,11567
 	2::inwork 13172,11651 13202,11666
 EOF
      },
@@ -29932,7 +29942,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2020-05-31
+#: last_checked: 2020-07-17
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2020-03-31
 	2::inwork 5894,12480 5944,12548
@@ -30023,7 +30033,7 @@ EOF
 #: next_check_id: BUNDESALLEE-2019
 # REMOVED (closed) --- #: osm_watch: note 1960975 3
 # REMOVED (laut osm wieder offen, confirmed) --- #: osm_watch: way id="483261580" version="3" --- #: XXX es gibt einen engen Umweg über Meierottostr., theoretisch mit Anrampung, kann aber zugeparkt sein --- #: add_fragezeichen: Wann ist eine Durchfahrt wieder möglich? --- #: priority: #A --- #: last_checked: 2019-12-08 --- #: check_frequency: 30d
-	2::inwork 5416,9928 5464,9914
+	2::inwork 5382,9942 5423,9932 5461,9923
 EOF
      },
      { from  => 1572130800, # 2019-10-27 01:00
@@ -30653,7 +30663,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: VIRCHOW-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2020-05-10 vvv
+#: last_checked: 2020-07-17 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -30978,6 +30988,28 @@ EOF
 #: next_check_id: CURTIUS-2020
 	q4::inwork 3197,3934 3185,3958 3141,4023
 	q4::inwork 3259,4002 3185,3958 3026,3860
+EOF
+     },
+     { from  => 1594635120, # 2020-07-13 12:12
+       until => 1615996800, # 2021-03-17 17:00
+       text  => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Richtung Osten gesperrt, eventuell sind auch Radfahrer betroffen, vom 14.07.2020 12:12 Uhr bis 17.03.2021 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346108',
+       data  => <<EOF,
+#: also_indoor: traffic (H)
+	q4::inwork; 5244,6261 5390,6299 5560,6344
+EOF
+     },
+     { from  => $isodate2epoch->("2020-07-06 00:00:00"),
+       until => $isodate2epoch->("2023-07-06 00:00:00"),
+       text  => 'Durchgangsweg am Blueberry Inn: wegen Bauarbeiten voraussichtlich komplett gesperrt, bis 2023',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954987.php
+#: by: https://www.kms-sonne.de/projekte/blueberry-inn/
+#: XXX voraussichtlich ab 6.7.2020 gesperrt, Bauarbeiten werden bis 2023 gehen
+#: next_check: 2020-07-06
+	2::inwork 12170,8548 12287,8602
 EOF
      },
     );
