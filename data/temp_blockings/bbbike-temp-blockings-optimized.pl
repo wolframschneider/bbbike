@@ -514,11 +514,15 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        {
          'data' => '#: tempex: su T09-T16
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
+#: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
+#: last_checked: 2020-07-26
+#: check_frequency: 30d
+	q4::temp:clock 12378,11806 12413,11901
 ',
          'from' => undef,
          'id' => 1886,
          'recurring' => 1,
-         'text' => 'Erich-Steinfurth-Str.: Antikmarkt am Ostbahnhof, Sonntag 9-16 Uhr, nur Schieben möglich',
+         'text' => 'Erich-Steinfurth-Str. und Koppenstr.: Antikmarkt am Ostbahnhof, Sonntag 9-16 Uhr, nur Schieben möglich',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -2370,7 +2374,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-07-24 (mapillary)
+#: last_checked: 2020-07-26
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -2553,7 +2557,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-07-18
+#: last_checked: 2020-07-26
 #: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -2824,18 +2828,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: add_fragezeichen: Wann wird der Weg wieder eröffnet?
-#: last_checked: 2020-06-29
-#: check_frequency: 21d
-	2::inwork 15420,12178 15520,12160 15628,12246
-',
-         'from' => undef,
-         'id' => 3191,
-         'text' => 'Rathauspark: Bauarbeiten, Weg ist gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.725993.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.726077.php ("erste Hälfte 2019")
@@ -2843,7 +2836,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: XXX laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-06-19 (abgesperrt)
+#: last_checked: 2020-07-26 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 ',
@@ -3018,29 +3011,34 @@ S4 - Krossener Str. zwischen Gabriel-Max-Str. und Seumestr.	q4::temp::play 14102
 Gabriel-Max-Str.	q4::temp::play 14127,11811 14102,11715
 S5 - Lausitzer Platz um den gesamten Platz bis auf die Skalitzer Str.	q4::temp::play 12328,10442 12274,10612 12172,10585 12197,10494 12212,10440
 S5 - Waldemarstr. zwischen Lausitzer Platz und Manteuffelstr.	q4::temp::play 12172,10585 12142,10600 12056,10642
-S6o/S6w - Waldemarstr. zwischen Dresdener Str. und Legiendamm	q4::temp::play 11290,10972 11150,11030
+S6w - Waldemarstr. zwischen Dresdener Str. und Legiendamm	q4::temp::play 11290,10972 11150,11030
+#: note: gesehen am 2020-07-26; in der Quelle falsch
+S6o - Waldemarstr. zwischen Leuschnerdamm und Adalbertstr.	q4::temp::play 11328,10957 11552,10863
 S7 - Wassertorstr. zwischen Prinzenstr. und Lobeckstr.	q4::temp::play 10685,10483 10484,10567
 S8 - Friedrichstr. zwischen Hedemannstr. und Franz-Klühs-Str.	q4::temp::play 9570,10566 9556,10666 9554,10695 9539,10820
 S9 - Arndtstr. zwischen Nostitzstr. und Schenkendorfstr.	q4::temp::play 9487,9209 9546,9198 9617,9185 9674,9179
 S9 - Chamissoplatz	q4::temp::play 9546,9198 9526,9104
 S9 - Chamissoplatz	q4::temp::play 9596,9092 9617,9185
 S10 - Böckhstr. zwischen Grimmstr. und Graefestr.	q4::temp::play 11175,9882 11197,9894 11411,9810
+#: note: sowohl Lachmannstr. und Boppstr. waren am 2020-07-26 offen
 S11 - Lachmannstr. zwischen Kottbusser Damm und Schönleinstr.; Boppstr. zw. Kottbusser Damm und Schönleinstr.; Schönleinstr. 7a-13	q4::temp::play 11745,9541 11594,9604 11541,9576 11560,9524 11785,9437
 S12 - Lübbener Str. zwischen Skalitzer Str. und Görlitzer Str.	q4::temp::play 12608,10294 12729,10515
 S13 - Cuvrystr. zwischen Görlitzer Str. und Schlesische Str.	q4::temp::play 13035,10076 13132,10239 13151,10276 13197,10355 13249,10445
 S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp::play 14442,11101 14468,11203
+#: note: gesehen am 2020-07-26: statt der Helmerdingstr. wurde die angrenzende Simplonstr. gesperrt
+Simplonstr. zwischen Helmerdingstr. und Matkowskystr	q4::temp::play 14468,11203 14531,11142
 S15 - Paul-Lincke-Ufer zwischen Glogauer Str. bis Ohlauer Str.	q4::temp::play 12591,9584 12439,9660 12286,9739 12116,9825
 S16 - Lilienthalstr. zwischen Bergmannstr. und Züllichauer Str.	q4::temp::play 10705,9234 10709,9192 10748,9054 10675,8940
 S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334,10527 11258,10682
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1595649600,
+         'from' => 1596254400,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1595782800
+         'until' => 1596387600
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -3136,12 +3134,12 @@ die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954979.php
 Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 13038,8394
 ',
-         'from' => 1595649600,
+         'from' => 1596254400,
          'id' => 3241,
          'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
          'text' => 'Temporäre Spielstraßen in Neukölln: einige Straßen (Selkestr., Hobrechtstr., Karl-Marx-Platz, Anzengruberstr.) sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Ende September 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1595782800
+         'until' => 1596387600
        },
        undef,
        undef,
@@ -3183,9 +3181,9 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'from' => 1592719200,
          'id' => 3249,
          'source_id' => '2147345956',
-         'text' => 'Goslarer Ufer: Sperrung an der Kreuzung Gaußstr. vom 22.06.2020 08:00 Uhr bis 27.07.2020 17:00 Uhr ',
+         'text' => 'Goslarer Ufer: Sperrung an der Kreuzung Gaußstr. vom 22.06.2020 08:00 Uhr bis 24.08.2020 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1595862000
+         'until' => 1598281200
        },
        {
          'data' => '#: source_id: 2147345969
@@ -3195,9 +3193,9 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'from' => 1590420000,
          'id' => 3250,
          'source_id' => 'LMS-BR_r_LMS-BR_205382_LMS-BR_72',
-         'text' => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 31.07.2020 17:00 Uhr',
+         'text' => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 25.08.2020 17:00 Uhr',
          'type' => 'handicap',
-         'until' => 1596207600
+         'until' => 1598367600
        },
        {
          'data' => '#: XXX_prog: eigentlich q3-::inwork
@@ -3274,22 +3272,11 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'type' => 'handicap',
          'until' => 1615996800
        },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954987.php
-#: by: https://www.kms-sonne.de/projekte/blueberry-inn/
-#: XXX voraussichtlich ab 6.7.2020 gesperrt, Bauarbeiten werden bis 2023 gehen
-#: next_check: 2020-07-06
-	2::inwork 12170,8548 12287,8602
-',
-         'from' => 1593986400,
-         'id' => 3259,
-         'text' => 'Durchgangsweg am Blueberry Inn: wegen Bauarbeiten voraussichtlich komplett gesperrt, bis 2023',
-         'type' => 'gesperrt',
-         'until' => 1688594400
-       },
+       undef,
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1286614278611652615
 #: by: https://twitter.com/VIZ_Berlin/status/1286614278611652615/photo/1
+#: by: https://twitter.com/VIZ_Berlin/status/1287747912240373762
 #: source_id: 2147346154
 #: source_id: 2147346155
 	q4::inwork; 17001,1157 16908,1217 16815,1278
