@@ -691,7 +691,7 @@ EOF
        text  => 'L 222; (Gransee-Großwoltersdorf); zw. Gransee und Abzw. Neulögow Deckenerneuerung; Vollsperrung; 16.08.2004-27.08.2004 ',
        type  => 'gesperrt',
       data  => <<EOF,
-	2 -8697,68965 -8826,68471
+	2 -8708,68925 -8809,68412
 EOF
      },
      { from  => 1095285600, # 2004-09-16 00:00
@@ -1068,7 +1068,7 @@ EOF
        text  => 'L 743; (Motzener Str.); OL Bestensee, zw. Eichhornstr. u. Fasanenstr. SW-Leitung Vollsperrung 04.10.2004-19.11.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 26650,-18150 26376,-18707 26356,-18748
+	q4 26646,-18116 26504,-18371 26447,-18539 26367,-18703 26346,-18749
 EOF
      },
      { from  => 1096754400, # 2004-10-03 00:00
@@ -1739,7 +1739,7 @@ EOF
        text  => 'B 246; (Gerichtsstr.); OL Zossen, zw. Friedhofsweg u. Luchweg Straßenbauarbeiten Vollsperrung 04.04.2005-15.04.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 15178,-20983 15072,-21175
+	q4 15121,-21036 14965,-21158
 EOF
      },
      { from  => 1110841200, # 2005-03-15 00:00
@@ -2074,7 +2074,7 @@ EOF
        text  => 'L 15; (Fürstenberg-Rheinsberg); OD Menz Kanal-,Straßen- u. Brückenbau Vollsperrung 17.05.2005-08.07.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -15062,76937 -14840,77254 -14733,77409
+	q4 -15095,76928 -14840,77254 -14733,77409
 EOF
      },
      { from  => 1116194400, # 2005-05-16 00:00
@@ -2082,7 +2082,7 @@ EOF
        text  => 'L 222; (Gransee-Menz); OD Menz Kanal-,Straßen- u. Brückenbau Vollsperrung 17.05.2005-08.07.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -15062,76937 -14862,76637
+	q4 -15095,76928 -14995,76853 -14948,76727 -14862,76637
 EOF
      },
      { from  => 1116885600, # 2005-05-24 00:00
@@ -2551,7 +2551,7 @@ EOF
        text  => 'L 15; (Rosa-Luxemburg-Str.); OD Wittstock Straßenbauarbeiten Vollsperrung 25.07.2005-28.07.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -53868,82504 -53648,82294
+	q4 -53875,82485 -53648,82294
 EOF
      },
      { from  => 1122242400, # 2005-07-25 00:00
@@ -2559,8 +2559,8 @@ EOF
        text  => 'K 6509; (Liebenberg-B 96 Teschendorf); zw. Grüneberg und B 96 grundh. Straßenbau Vollsperrung 26.07.2005-29.07.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -6201,51305 -5813,51200
-	2 -5813,51200 -3453,51255
+	2 -6457,51333 -5765,51087
+	2 -5765,51087 -5002,51097 -3453,51255
 EOF
      },
      { from  => 1123106400, # 2005-08-04 00:00
@@ -3264,7 +3264,7 @@ EOF
        text  => 'B 246; (Bauptstr.); Bahnübergang in OL Bestensee Gleisbauarbeiten Vollsperrung 30.10.2005-02.11.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26639,-17861 26703,-17858
+	2 26623,-17859 26703,-17858
 	2 27304,-17961 26989,-17904 26716,-17857 26703,-17858
 EOF
      },
@@ -3441,7 +3441,7 @@ EOF
        text  => 'B 167 (Herzberg-Neuruppin) OL Alt Ruppin, Rhinbrücke Brückenneubau Vollsperrung 02.03.2004-31.12.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -28866,59954 -28641,59609 -28477,59467
+	2 -28866,59954 -28641,59609 -28365,59382 -28307,59353
 EOF
      },
      { from  => 1067986800, # 2003-11-05 00:00
@@ -3617,7 +3617,7 @@ EOF
        text  => 'B 122 Schloßstr. OD Rheinsberg, zw. Königstr. und Lange Str. Kanalarbeiten halbseitige Sperrung; 02.11.2005-30.06.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -25801,76494 -25728,76368 -25728,76256
+	q4 -25801,76494 -25800,76461 -25737,76374 -25725,76327 -25734,76256
 EOF
      },
      { from  => 1134702000, # 2005-12-16 04:00
@@ -3760,8 +3760,8 @@ EOF
        text  => 'B 122 Alt Ruppin-Dierberg Bahnübergang bei Dierberg Gleisbauarbeiten Vollsperrrung 28.02.2006-03.03.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -22477,67059 -21066,67757
-	2 -21066,67757 -20469,68007
+	2 -22477,67056 -21523,67550 -21068,67751
+	2 -21068,67751 -20615,67938 -20598,67945 -20469,68007
 EOF
      },
      { from  => 1139871600, # 2006-02-14 00:00
@@ -3869,10 +3869,10 @@ EOF
        text  => 'L 745 Motzen-B246 Gallun zw. OA Motzen und OE Gallun Straßenbauarbeiten Vollsperrung 13.03.2006-31.08.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 22476,-19219 22338,-19081
-	2 22476,-19219 22599,-19785
-	2 22324,-18950 22338,-19081
-	2 23356,-20982 22928,-20347 22599,-19785
+	2 22476,-19238 22376,-19126
+	2 22476,-19238 22633,-19857
+	2 22324,-18950 22376,-19126
+	2 23356,-20982 22928,-20347 22633,-19857
 EOF
      },
      { from  => 1161627812, # 2006-10-23 20:23
@@ -3928,7 +3928,7 @@ EOF
        text  => 'B 122 Alt Ruppin-Dierberg Bahnübergang bei Dierberg Gleisbauarbeiten Vollsperrrung 28.03.2006-31.03.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -28116,60092 -27347,60616
+	2 -28116,60092
 EOF
      },
      { from  => 1146434400, # 2006-05-01 00:00
@@ -4067,8 +4067,8 @@ EOF
        text  => 'L 745 Motzen- Gallun zw. OA Motzen und OE Gallun Straßenbau Vollsperrung 13.04.2006-10.05.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 22476,-19219 22338,-19081
-	2::inwork 22476,-19219 22599,-19785
+	2::inwork 22476,-19238 22376,-19126
+	2::inwork 22476,-19238 22633,-19857
 EOF
      },
      { from  => 1144015200, # 2006-04-03 00:00
@@ -4869,7 +4869,7 @@ EOF
        text  => 'B 246 OL Bestensee, Hauptstraße OL Bestensee, Hauptstraße, Bahnübergang Bauarbeiten am Gleiskörper Vollsperrung 30.06.2006-04.07.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 26639,-17861 26703,-17858 26716,-17857 26989,-17904 27304,-17961
+	2::inwork 26623,-17859 26703,-17858 26716,-17857 26989,-17904 27304,-17961
 EOF
      },
      { from  => 1150840800, # 2006-06-21 00:00
@@ -5162,7 +5162,7 @@ EOF
        text  => 'L 743 Motzener Str. OD Bestensee, Durchlass Ersatzneubau Durchlass Vollsperrung 10.07.2006-18.08.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 26639,-17861 26650,-18150 26376,-18707 26356,-18748 26312,-18789 25453,-19255
+	q4::inwork 26623,-17859 26646,-18116 26504,-18371 26447,-18539 26367,-18703 26346,-18749 26308,-18781 25453,-19255
 EOF
      },
      { from  => 1161366511, # 2006-10-20 19:48
@@ -5470,7 +5470,7 @@ EOF
        text  => 'B 109 B167-Zehdenick OD Falkenthal grundhafter Straßenbau Vollsperrung 07.08.2006-30.11.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 2775,56089 2034,55227
+	2::inwork 2814,56056 2056,55204
 EOF
      },
      { from  => 1155420000, # 2006-08-13 00:00
@@ -6581,7 +6581,7 @@ EOF
        text  => 'B 246 Bahnübergang in der OD Bestensee Umbauarbeiten Vollsperrung 06.11.2006-17.11.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 26639,-17861 26703,-17858 26716,-17857 26989,-17904 27304,-17961
+	2::inwork 26623,-17859 26703,-17858 26716,-17857 26989,-17904 27304,-17961
 EOF
      },
      { from  => 1160604000, # 2006-10-12 00:00
@@ -7715,7 +7715,7 @@ EOF
        text  => 'L 015 Mühlenstr. OD Rheinsberg, zw. Schloßstr. u. Rhinstr. Kanalarbeiten Vollsperrung 02.04.2007-31.05.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -25801,76494 -25728,76368 -25728,76256
+	q4::inwork -25801,76494 -25800,76461 -25737,76374 -25725,76327 -25734,76256
 EOF
      },
      { from  => 1176069600, # 2007-04-09 00:00
@@ -8197,7 +8197,7 @@ EOF
        text  => 'B 273 Wensickendorf-Oranienburg Schleusenbrücke Lehnitz am OA Oranienburg Instandsetzungsarbeiten Vollsperrung 02.06.2007-04.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 1284,39885 1406,39868
+	2::inwork 1292,39884 1406,39868
 EOF
      },
      { from  => 1178834400, # 2007-05-11 00:00
@@ -8205,7 +8205,7 @@ EOF
        text  => 'B 273 Wensickendorf-Oranienburg Schleusenbrücke Lehnitz am OA Oranienburg Instandsetzungsarbeiten Vollsperrung 12.05.2007-14.05.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 1284,39885 1406,39868
+	2::inwork 1292,39884 1406,39868
 EOF
      },
      { from  => 1179439200, # 2007-05-18 00:00
@@ -8213,7 +8213,7 @@ EOF
        text  => 'B 273 Wensickendorf-Oranienburg Schleusenbrücke Lehnitz am OA Oranienburg Instandsetzungsarbeiten Vollsperrung 19.05.2007-21.05.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 1284,39885 1406,39868
+	2::inwork 1292,39884 1406,39868
 EOF
      },
      { from  => 1179439200, # 2007-05-18 00:00
@@ -9712,7 +9712,7 @@ EOF
        text  => 'B 122 zw. Abzw. Klausheide und Zippelsförde Deckenerneuerung Vollsperrung 27.08.2007-30.09.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -25490,64009 -26733,61993
+	2::inwork -25211,64133 -25755,63476 -26017,62926 -26746,61739
 EOF
      },
      { from  => 1189288800, # 2007-09-09 00:00
@@ -9792,7 +9792,7 @@ EOF
        text  => 'L 213 B167 Liebenwalde-Nassenheide zw. B167 über Neuholland nach Freienhagen Deckenerneuerung Vollsperrung 15.08.2007-30.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 4412,49281 4701,49782 4701,49975 4646,50318 4690,50532 4693,50925
+	2::inwork 4412,49281 4564,49544 4630,49658 4701,49782 4701,49975 4646,50318 4690,50532 4693,50925
 EOF
      },
      { from  => 1187906400, # 2007-08-24 00:00
@@ -10096,7 +10096,7 @@ EOF
        text  => 'B 122 zw. Dierberg und Zippelsförde Deckenerneuerung Vollsperrung 01.10.2007-30.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -22589,66989 -24436,65301
+	2::inwork -22719,66901 -24436,65301
 EOF
      },
      { from  => 1190966681, # 2007-09-28 10:04
@@ -10496,7 +10496,7 @@ EOF
        text  => 'L 022 Schönermark-Lindow zw. Schönermark und Keller Deckenerneuerung Vollsperrung 29.10.2007-09.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -15344,63638 -14811,64192 -13924,65015 -13695,65213 -13104,65432 -12824,65746 -12440,66011 -12209,66099 -10423,66477
+	2::inwork -15344,63638 -15334,63648 -14811,64192 -13924,65015 -13695,65213 -13104,65432 -12824,65746 -12440,66011 -12209,66099 -10423,66477
 EOF
      },
      { from  => undef, # 
@@ -10691,7 +10691,7 @@ EOF
        text  => 'B 167 Liebenberg - Löwenberg Bahnübergang in Neulöwenberg Gleisbauarbeiten Vollsperrung 21.11.2007-27.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -6342,54585 -5617,54573 -5122,54564 -4424,54552 -4170,54557
+	2::inwork -6424,54584 -5771,54572 -5722,54573 -5233,54564 -5115,54564 -5032,54562 -4424,54552 -4290,54555 -4170,54557
 EOF
      },
      { from  => 1195772400, # 2007-11-23 00:00
@@ -11055,7 +11055,7 @@ EOF
        text  => 'B 122 Berliner Str. OD Rheinsberg, zw. Schloßstr. und Paulshorster Str. Kanalarbeiten Vollsperrung 03.03.2008-30.06.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -25508,76444 -25411,76258
+	q4::inwork -25517,76442 -25411,76258
 EOF
      },
      { from  => 1204328798, # 2008-03-01 00:46
@@ -11235,7 +11235,7 @@ EOF
        text  => 'L 222 Gransee - Menz zw. OA Großwoltersdorf und Kreuz. Zernickow Straßeninstandsetzung Vollsperrung 18.03.2008-30.03.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -12250,73762 -12381,74147 -12575,74512 -13455,75227
+	2::inwork -12250,73762 -12384,74085 -12573,74483 -13455,75227
 EOF
      },
      { from  => 1205966138, # 2008-03-19 23:35
@@ -12144,7 +12144,7 @@ EOF
        text  => 'K 6518 Liebenberg - Bergsdorf OD Liebenberg, zw. B167 und OA Kanal- und Straßenbau Vollsperrung 17.07.2008-30.08.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -386,54165 -588,54317 -667,54494
+	q4::inwork -468,54213 -588,54317 -667,54494
 EOF
      },
      { from  => 1216159200, # 2008-07-16 00:00
@@ -12815,7 +12815,7 @@ EOF
        text  => 'L 015 Rosa-Luxemburg-Str. OL Wittstock, zw. Polthierstr. und Bohnekampweg Kanal- und Straßenbau Vollsperrung 06.10.2008-31.05.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -53868,82504 -53648,82294 -53491,81954
+	q4::inwork -53875,82485 -53648,82294 -53491,81954
 EOF
      },
      { from  => 1221948000, # 2008-09-21 00:00
@@ -13526,7 +13526,7 @@ EOF
        text  => 'B 109 B167 - Zehdenick OD Falkenthal Straßenbauarbeiten Vollsperrung 25.03.2009-31.08.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 2947,56408 2775,56089 2034,55227
+	q4::inwork 3077,56490 2814,56056 2056,55204
 EOF
      },
      { from  => 1237071600, # 2009-03-15 00:00
@@ -14132,7 +14132,7 @@ EOF
        text  => 'L 743 Motzen - Bestensee OL Motzen, Töpchiner Str. Straßenbau Vollsperrung 16.05.2009-17.05.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 23485,-22730 23239,-23484
+	q4::inwork 23482,-22742 23285,-23420 23250,-23459
 EOF
      },
      { from  => 1244066400, # 2009-06-04 00:00
@@ -14342,7 +14342,7 @@ EOF
        text  => 'L 015 Menz - Rheinsberg OD Menz Straßenbau Vollsperrung 25.05.2009-19.06.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -15379,77129 -16057,77339 -17592,77812
+	q4::inwork -15413,77120 -15721,77225 -16057,77339
 EOF
      },
      { from  => 1244412000, # 2009-06-08 00:00
@@ -14350,7 +14350,7 @@ EOF
        text  => 'L 015 Menz - Rheinsberg zw. Menz u. Rheinsberg Straßenbau Vollsperrung 09.06.2009-20.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -24767,76517 -23245,76952 -22950,76882 -22392,76828 -22046,76942 -21713,77018 -21558,77171 -20227,77714 -19875,77881 -19560,77995 -19306,78208 -18903,78024 -18615,77979 -17592,77812
+	2::inwork -24767,76517 -24592,76567 -23245,76952 -22950,76882 -22392,76828 -22046,76942 -21713,77018 -21657,77056 -21558,77171 -21532,77183 -20849,77456 -20561,77543 -19887,77845 -19560,77995 -19306,78208 -18903,78024 -18621,77981 -18216,77851 -17887,77872
 EOF
      },
      { from  => 1248559200, # 2009-07-26 00:00
@@ -14488,7 +14488,7 @@ EOF
        text  => 'B 096 Löwenberg - Gransee OD Löwenberg Deckeneinbau Vollsperrung 16.06.2009-18.06.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -7387,54453 -7352,54661
+	q4::inwork -7404,54429 -7352,54661
 EOF
      },
      { from  => 1244584800, # 2009-06-10 00:00
@@ -14496,7 +14496,7 @@ EOF
        text  => 'B 096 Nassenheide - Löwenberg OD Löwenberg Deckeneinbau Vollsperrung 11.06.2009-15.06.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -7665,54237 -6983,52753
+	q4::inwork -7671,54227 -6983,52753
 EOF
      },
      { from  => 1244584800, # 2009-06-10 00:00
@@ -14504,7 +14504,7 @@ EOF
        text  => 'B 096 Nassenheide - Löwenberg OD Löwenberg, Friedrich-Ebert-Str. Deckeneinbau Vollsperrung 11.06.2009-15.06.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -7665,54237 -7387,54453
+	q4::inwork -7671,54227 -7515,54339 -7404,54429
 EOF
      },
      { from  => 1244325600, # 2009-06-07 00:00
@@ -14512,7 +14512,7 @@ EOF
        text  => 'B 167 Liebenberg - Löwenberg OD Löwenberg Deckeneinbau Vollsperrung 08.06.2009-10.06.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -7114,54591 -7387,54453
+	q4::inwork -7114,54591 -7210,54550 -7358,54452 -7404,54429
 EOF
      },
      { from  => 1244152800, # 2009-06-05 00:00
@@ -14520,7 +14520,7 @@ EOF
        text  => 'B 167 Löwenberg - Grieben OD Löwenberg Deckeneinbau Vollsperrung 06.06.2009-06.06.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -7665,54237 -7918,54138 -8018,54024 -8370,53873
+	q4::inwork -7671,54227 -7906,54151 -8018,54024 -8370,53873
 EOF
      },
      { from  => 1244584599, # 2009-06-09 23:56
@@ -14940,7 +14940,7 @@ EOF
        text  => 'K 6813 B122 - K6812 Zühlen zw. Zechow und Schwanow Straßenbauarbeiten Vollsperrung 20.07.2009-22.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -24687,71412 -26350,70262 -26671,70334 -27168,70209 -27902,70373
+	2::inwork -24617,71459 -24687,71412 -26350,70262 -26743,70272 -27059,70159 -27177,70149 -27816,70298
 EOF
      },
      { from  => 1248213600, # 2009-07-22 00:00
@@ -14948,7 +14948,7 @@ EOF
        text  => 'K 6813 B122 - K6812 Zühlen zw. Zechow und Schwanow Straßenbauarbeiten Vollsperrung 23.07.2009-25.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -27902,70373 -29027,70878
+	2::inwork -27816,70298 -27931,70326 -29020,70817
 EOF
      },
      { from  => 1248559200, # 2009-07-26 00:00
@@ -15306,7 +15306,7 @@ EOF
        text  => 'L 015 Schloßstr., Menzer Str. OD Rheinsberg, zw. Berliner Str. u. Kiefernweg Straßenbauarbeiten Vollsperrung 27.07.2009-18.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -25211,76393 -25376,76422 -25508,76444
+	q4::inwork -25211,76393 -25376,76417 -25442,76429 -25517,76442
 EOF
      },
      { from  => 1249164000, # 2009-08-02 00:00
@@ -17713,7 +17713,7 @@ EOF
        type  => 'handicap',
        source_id => 'LSW-SG33-K10037',
        data  => <<EOF,
-	q4::inwork -33491,80874 -33489,80472
+	q4::inwork -33462,80777 -33508,80551 -33491,80485 -33438,80437
 EOF
      },
      { from  => 1271281239, # 2010-04-14 23:40
@@ -27902,7 +27902,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-07-09
+#: last_checked: 2020-07-28
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28843,9 +28843,8 @@ EOF
 #: note: laut VIZ ist der Radverkehr auch betroffen, aber nicht der Fußverkehr (also schieben möglich?); Dauer 1 1/2 Jahre ab 2019-03-11
 #: source_id: 2147343858
 #: source_id: 2147343859
-# REMOVED (laut mapillary hier nicht) ---	q4::inwork 8400,22010 8430,22110
-# REMOVED (laut mapillary hier nicht) ---	q4::inwork 8904,23365 8909,23506
 	q4::inwork 8904,23365 8900,23274
+	q4::inwork 8400,22010 8430,22110 8439,22143 8464,22215
 EOF
      },
      { from  => 1552153452, # 2019-03-09 18:44
@@ -29214,8 +29213,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-08-21 18:00:00"), # undef, # XXX
-       text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 21. August 2020',
+       until => $isodate2epoch->("2020-08-27 18:00:00"), # undef, # XXX
+       text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 27. August 2020',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: SOLDINER-2019
@@ -29226,7 +29225,7 @@ EOF
 #: also_indoor: traffic (H)
 #: last_checked: 2020-06-07 (mapillary)
 #: check_frequency: 60d
-#: next_check: 2020-08-21
+#: next_check: 2020-08-27
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8866,17075 8677,17154
 # REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
@@ -29248,8 +29247,8 @@ EOF
        data  => <<EOF,
 #: XXX bis wann gehen die Bauarbeiten? Bis Anfang Juli 2020?
 #: also_indoor: traffic
-#: osm_watch: way id="156066225" version="15"
-#: last_checked: 2020-07-04
+#: osm_watch: way id="156066225" version="16"
+#: last_checked: 2020-07-31
 # REMOVED --- #: next_check: 2020-07-08
 	q4::inwork; 19266,1968 19564,1871
 	q4::inwork 19055,2037 19164,2001 19181,1996 19266,1968
@@ -29324,13 +29323,13 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Wagner-Régeny-Allee: Straße ist noch nicht komplett fertiggestellt, wegen Bauarbeiten kann die Straße gesperrt sein',
+       text  => 'Wagner-Régeny-Allee: Straße kann wegen Bauarbeiten noch gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
 #: osm_watch: way id="206889085" version="12"
-#: last_checked: 2020-06-17
+#: last_checked: 2020-07-31
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 EOF
@@ -29343,7 +29342,7 @@ EOF
 #: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
 #: by: https://www.bahninfo-forum.de/read.php?9,413132,659869#msg-659869 (Sperrung am Wochenende)
 #: by: https://www.bahninfo-forum.de/read.php?9,413132,659884#msg-659884 ("in Kürze ... saniert")
-#: last_checked: 2020-07-04 (offen an einem Samstag)
+#: last_checked: 2020-07-31
 # REMOVED --- #: next_check: 2019-12-02
 #: check_frequency: 60d
 	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
@@ -30242,7 +30241,7 @@ EOF
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
 #: XXX laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-07-26 (abgesperrt)
+#: last_checked: 2020-08-02 (abgesperrt)
 #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 EOF
@@ -30382,8 +30381,8 @@ EOF
 EOF
      },
      { from  => 1584255600, # 2020-03-15 08:00
-       until => 1596466800, # 2020-08-03 17:00
-       text  => 'Friedrichsruher Str.: Bauarbeiten zwischen Bismarckstr. und Lauenburger Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 03.08.2020 17:00 Uhr',
+       until => $isodate2epoch->("2020-08-31 17:00:00"), # 1596466800, # 2020-08-03 17:00
+       text  => 'Friedrichsruher Str.: Bauarbeiten zwischen Bismarckstr. und Lauenburger Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 31.08.2020 17:00 Uhr',
        type  => 'handicap',
        source_id => '2147345599',
        data  => <<EOF,
@@ -30393,8 +30392,8 @@ EOF
 EOF
      },
      { from  => 1584255600, # 2020-03-15 08:00
-       until => 1596466800, # 2020-08-03 17:00
-       text  => 'Lauenburger Str.: Bauarbeiten zwischen Bergstr. und Friedrichsruher Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 03.08.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-08-31 17:00:00"), # 1596466800, # 2020-08-03 17:00
+       text  => 'Lauenburger Str.: Bauarbeiten zwischen Bergstr. und Friedrichsruher Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 31.08.2020 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147345598',
        data  => <<EOF,
@@ -30510,12 +30509,12 @@ EOF
 EOF
      },
      { from  => 1586728800, # 2020-04-13 00:00
-       until => 1596232799, # 2020-07-31 23:59
+       until => 1596220797, # 1596232799, # 2020-07-31 23:59
        text  => 'Am Wiesenweg: Bauarbeiten, Weg ist komplett gesperrt, ab dem 14. April 2020 bis voraussichtlich Ende Juli 2020',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.918148.php',
        data  => <<EOF,
-#: next_check_id: AMWIESENWEG-2020
+# REMOVED --- #: next_check_id: AMWIESENWEG-2020
 #: by: https://www.berliner-woche.de/bohnsdorf/c-bauen/gehweg-wird-jetzt-ausgebaut_a261721
 	2::inwork 21977,988 21856,996 21724,954 21685,916
 EOF
@@ -30535,7 +30534,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ROTHER-2020
-#: last_checked: 2020-07-03
+#: last_checked: 2020-07-30
 	q4::inwork 13478,10998 13575,10963
 EOF
      },
@@ -30575,17 +30574,20 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-07-06
+#: last_checked: 2020-08-03
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
      },
      { from  => 1587852000, # 2020-04-26 00:00
-       until => 1596232799, # 2020-07-31 23:59
-       text  => 'Lilienthalweg: Komplettsperrung wegen Bauarbeiten, ab Ende April 2020 bis Ende Juli 2020',
+       until => undef, # 1596232799, # 2020-07-31 23:59
+       text  => 'Lilienthalweg: Komplettsperrung wegen Bauarbeiten, ab Ende April 2020 bis mindestens Ende Juli 2020',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.923140.php',
        data  => <<EOF,
+#: next_check_id: LILIENTHALWEG-2020
+#: last_checked: 2020-08-04
+#: check_frequency: 7d
 	2::inwork 11141,9107 10709,9192
 EOF
      },
@@ -30775,8 +30777,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2020-05-27 09:00:00"),
-       until => $isodate2epoch->("2020-08-14 17:00:00"),
-       text  => 'Gärtnerstr.: Bauarbeiten, Fahrbahn zwischen Simplonstr. und Wühlischstr. gesperrt, bis zum 14.08.2020 17 Uhr',
+       until => $isodate2epoch->("2021-12-31 17:00:00"), # der ursprüngliche Termin (14.08.2020) kann wohl nicht gehalten; laut Schild bis Ende 2021
+       text  => 'Gärtnerstr.: Bauarbeiten, Fahrbahn zwischen Simplonstr. und Wühlischstr. gesperrt, evtl. bis Dezember 2021',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147345874
@@ -30808,8 +30810,10 @@ EOF
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.931493.php
 #: by: https://mein.berlin.de/projects/temporare-spielstrassen-in-neukolln/
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.963342.php (Verlängerung von drei der vier Spielstraßen bis zum 27. September 2020)
+#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.969860.php (Freiwillige gesucht)
 #: XXX die Spielstraße in der Selkestr. wird _nicht_ verlängert
 #: priority: #A
+#: last_checked: 2020-07-30
 #: next_check: 2020-08-10
 Selkestr. zwischen Schierker Str. und Nogatstr. sowie der Schierker Platz im Körnerkiez	q4::temp::play 12751,7166 12741,7224 12722,7261
 Hobrechtstr. zwischen Sanderstr. und Pflügerstr. im Reuterkiez	q4::temp::play 11917,9663 11934,9538
@@ -30966,7 +30970,7 @@ EOF
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2020-07-23 (mapillary)
+#: last_checked: 2020-07-31 (mapillary)
 	q4::inwork 14136,17170 13996,16959
 EOF
      },
@@ -31043,6 +31047,15 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
 	q4::inwork; 4515,4760 4214,4595 4039,4500
+EOF
+     },
+     { from  => undef, # 
+       until => 1601650800, # 2020-10-02 17:00
+       text  => 'Müggelseedamm Richtung Rahnsdorf zwischen Scharnweberstraße und Bruno-Wille-Straße: Bauarbeiten, Fahrbahn gesperrt, bis 02.10.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346178',
+       data  => <<EOF,
+	q4::inwork; 25720,4828 25796,4823 25948,4823 26085,4865
 EOF
      },
     );

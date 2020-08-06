@@ -112,6 +112,7 @@ Kreisverkehr	Roundabout 33324,26038
 Kreisverkehr	Roundabout 2824,24212
 Kreisverkehr	Roundabout 19676,-4036
 Kreisverkehr	Roundabout 20037,-3899
+Kreisverkehr	Roundabout -13451,58572
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
 Privatstraße der DB	CS 5710,7820 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
@@ -662,7 +663,6 @@ Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 Hödurstr.: Privatstraße	CS 12647,18289 12751,18401
 An der Dahme: nicht ausgeschildert	CS 22270,2549 22358,2460
 Relingstr: nicht ausgeschildert	CP2; 22358,2460 22287,2431
-Buschwindröschenweg: nicht ausgeschildert	CP2; 21409,-109 21382,-31
 Rheingoldstr.: durch den Rheinsteinpark	CS 19073,8828 19145,8659
 Straße 12: nicht ausgeschildert	CP2; 13883,6682 13881,6634
 Straße 12: nicht ausgeschildert	CP2; 13881,6634 13883,6682
@@ -713,3 +713,4 @@ nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 
 nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 4801,17623 5109,17507 5138,17630
 nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5068,17384 5109,17507 5198,17433
 nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5068,17384 5109,17507 4801,17623
+auf der Verbundsteinpflasterstraße bleiben, nicht der Ausschilderung nach Glambeck folgen	CS; -16343,58851 -16043,58884
