@@ -67,6 +67,7 @@ Wilhelplatz	1 -7064,584 -7081,483 -7122,439 -7180,378
 #: by: https://www.berliner-woche.de/bohnsdorf/c-verkehr/bundesstrasse-b-96a-erhaelt-neuen-querschnitt-und-wird-stadtstrasse_a224020 (Fertigstellung voraussichtlich II/2021)
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7223 (Bebauungsplan XI-231 aba)
 #: by: https://api.fixmyberlin.de/api/projects/384 (execution; construction_completed: 2021)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_33_4281_4444_online.pdf (Straﬂenlandwidmung vor den Hausnummern 65-70 A)
 #: XXX auﬂerdem Anlage von Radwegen, allerdings nicht benutzungspflichtig
 #: last_checked: 2020-07-17
 #: next_check: 2021-05-01
@@ -202,7 +203,7 @@ Paul-Junius-Str	1 15084,13276 15082,13369 15220,13377
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7382
 # REMOVED (Meldung removed) --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=40535
 #: osm_watch: way id="30043322" version="16"
-#: last_checked: 2020-07-08
+#: last_checked: 2020-08-04 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-12-31
 #: priority: #A
@@ -1211,7 +1212,7 @@ Rosenfelder Str./Ring	1 17480,12003 17429,12030 17384,11976
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpartner/fahrrat/2016-07-28-prot-fahrratsitzung3.pdf
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2017-03-16-prot-fahrratsitzung.pdf
 #: XXX evtl wird die Straﬂe f¸r Radfahrer geˆffnet
-#: osm_watch: way id="31540773" version="13"
+#: osm_watch: way id="31540773" version="14"
 #: last_checked: 2020-02-16 (mapillary)
 #: check_frequency: 180d
 Fritz-Werner-Str.	1s:q3 9105,2779 9081,2594
@@ -1241,7 +1242,7 @@ Waldstr.	1 9982,19413 9942,19505
 Waldstr.	1 9961,19513 10002,19418
 #: next_check_id: UBAHN1-2020
 #: XXX mittlerweile wegen Hochbahnarbeiten komplett gesperrt
-#: last_checked: 2020-07-30
+#: last_checked: 2020-08-12
 #: check_frequency: 60d
 #: next_check: 2021-04-01
 #(Schlesisches Tor - Oppelner Str.)	1 12978,10581 12930,10621
@@ -1290,8 +1291,9 @@ Heinrichplatz	1 11734,10563 11754,10516
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2019-10-16-prot-fahrratsitzung4.pdf
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7448
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/bahnhofseingang-wieder-oeffnen_a269101
+#: by: https://leute.tagesspiegel.de/tempelhof-schoeneberg/macher/2020/08/11/134285/am-bayerischen-platz-soll-der-fahrstuhl-nun-kommen/ ("‹berlegungen")
 #: confirmed_by: srt
-#: last_checked: 2020-07-11
+#: last_checked: 2020-08-11 (Tsp)
 #: check_frequency: 180d
 Bhf. S¸dkreuz: Eingang gesperrt	2 7838,7848 7804,7783
 # 
@@ -3144,7 +3146,7 @@ offenes Tor	BNP:3 12592,9249
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954987.php
 #: by: https://www.kms-sonne.de/projekte/blueberry-inn/
 #: XXX ab 6.7.2020 gesperrt, Bauarbeiten werden bis 2023 gehen
-#: last_checked: 2020-07-26
+#: last_checked: 2020-08-12
 #: check_frequency: 360d
 #: next_check: 2023-01-01
 #: valid: -20231231
@@ -3168,6 +3170,7 @@ Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dˆrfelweg: gesperrt wegen Bauarbeiten	
 #: last_checked ^^^
 #: XXX ^^^
 # 
+#: next_check_id: STERNDAMM-2020
 #: XXX evtl. wegen der neuen Straﬂenbahntrasse gesperrt? Oder den Baufeldern (wie man bei osm sieht)? Bis wann gehen die Bauarbeiten?
 #: osm_watch: way id="52080902" version="13"
 #: osm_watch: way id="92914095" version="4"
@@ -3234,12 +3237,12 @@ Unterf¸hrung unter der Elsenbr¸cke: gesperrt, teilweise existiert der Steg nicht
 #: XXX Gehweg der nˆrdlichen Seite ist schon weitgehend offen, s¸dliche Seite nur als Baustraﬂe erkennbar
 #: XXX ggfs. auch andere Seite des Platzes einzeichnen, ggfs. auch einen plaetze-orig-Eintrag machen
 #: osm_watch: way id="642581102" version="3"
-#: last_checked: 2020-06-12
+#: last_checked: 2020-08-07
 #: check_frequency: 60d
 Otto-Weidt-Platz: Bauarbeiten	2::inwork 7923,14142 7778,14059
 #  
 #: next_check_id: EUROPACITY-2015
-#: last_checked: 2020-07-17
+#: last_checked: 2020-08-07
 #: check_frequency: 60d
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 8057,13923 8086,13862
 # 
@@ -3247,13 +3250,13 @@ Uferweg: wegen Bauarbeiten gesperrt	2::inwork 8057,13923 8086,13862
 # REMOVED (hier realisiert) --- Wriezener Park: Baumaﬂnahmen 2019 geplant, danach vielleicht bessere Wege?	?::projected 13172,11651 13123,11675 13095,11703
 # 
 #: next_check_id: WRIEZENERPARK-2019
-#: last_checked: 2020-08-04
+#: last_checked: 2020-08-13
 Wriezener Park, Diagonalverbindung	2::inwork 13120,11725 13123,11675
 # 
 #: next_check_id: WALDBACHERWEGBRUECKE-2020
 #: XXX der Weg wird hier neu gemacht
 #: last_checked: 2020-06-22
-#: check_frequency: 30d
+#: next_check: 2020-08-13
 zur Waldbacher-Weg-Br¸cke: Bauarbeiten, gesperrt	2::inwork 20368,11937 20365,11950 20338,11973 20338,11991
 # 
 #: next_check_id: MAXIMILIANSQUARTIER-2020
@@ -3298,7 +3301,7 @@ Planckstr.: Einbahnstraﬂenregelung, offen Richtung S¸den	1s:q3:inwork 9429,12728
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/ro%C3%9Fstra%C3%9Fenbrucke-mitte-vollsperrung-%C2%B7-bruckensanierung
 #: also_indoor: traffic (G,H) vvv
 #: source_id: 2147345254 (bis 28.02.2021) vvv
-#: last_checked: 2020-08-05 vvv
+#: last_checked: 2020-08-13 vvv
 #: next_check: 2021-02-28 vvv
 #: priority: #A vvv
 Neue Roﬂstraﬂenbr¸cke: wegen Bauarbeiten komplett gesperrt	2::inwork 10687,11853 10672,11870 10642,11901
@@ -3337,7 +3340,7 @@ Forumsquerung: Bauarbeiten, komplett gesperrt	2::inwork 8206,12757 8207,12606
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_49_7429_7632_online.pdf (Einziehung von Straﬂenland --- vielleicht der alte Sackgassenhammer?)
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="1"
-#: last_checked: 2020-07-25
+#: last_checked: 2020-08-11
 #: check_frequency: 14d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3384,12 +3387,12 @@ Gustav-Bˆﬂ-Str.: Bauarbeiten, Straﬂe ist komplett gesperrt	2::inwork 10673,12434
 Kˆnigsteinbr¸cke: Br¸cke wurde abgerissen und wird neu gebaut	2::inwork 13148,22396 13385,22383
 # 
 #: next_check_id: HOSEMANN-2019
-#: last_checked: 2020-07-15 (mapillary) vvv
-#: next_check: 2020-07-31 vvv
-#: valid: -20200731 vvv
+#: last_checked: 2020-08-14 vvv
+# REMOVED --- #: next_check: 2020-07-31 vvv
+# REMOVED --- #: valid: -20200731 vvv
 Erich-Weinert-Str.: Bauarbeiten in Hˆhe Hosemannstr.	1::inwork 12605,15491 12556,15518
-#: valid ^^^
-#: next_check ^^^
+# REMOVED --- #: valid ^^^
+# REMOVED --- #: next_check ^^^
 #: last_checked ^^^
 # 
 # REMOVED (offen) --- #: next_check_id: OLIVAERPLATZ-2019 --- #: last_checked: 2019-12-08 --- #: check_frequency: 60d --- (Olivaer Platz, Wielandstr. - Bayerische Str.): wegen Bauarbeiten gesperrt	2::inwork 4360,10320 4352,10260
@@ -3402,7 +3405,7 @@ Erich-Weinert-Str.: Bauarbeiten in Hˆhe Hosemannstr.	1::inwork 12605,15491 12556
 #: by: https://www.berlin.de/senuvk/verkehr/politik_planung/planfeststellungen/download/oepnv/tram_adlershof2/UL09_LBP/UL09_LBP-Massnahmenplan-5_gesiegelt.pdf (Ampel)
 #: last_checked: 2020-07-31 vvv
 #: check_frequency: 30d vvv
-#: osm_watch: way id="72852443" version="11"
+#: osm_watch: way id="72852443" version="12"
 Benno-Kˆnig-Str.: noch nicht freigegeben, Straﬂe gesperrt	2::inwork 18374,4307 18596,4517
 Gustav-Hertz-Platz: noch nicht freigegeben, Straﬂe gesperrt	2::inwork 18596,4517 18722,4628
 #: check_frequency ^^^
@@ -3423,7 +3426,7 @@ Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (ab 1. Juli 2020 wieder offen, bis voraussichtlich 13. September 2020)
 #: osm_watch: way id="822674838" version="1"
-#: last_checked: 2020-07-03
+#: last_checked: 2020-08-12
 #: next_check: 2020-09-13
 Rollbergstr.: Einbahnstraﬂe, offen Richtung Karl-Marx-Str.	1s:q3:inwork 12714,8249 12545,8209
 # 
@@ -3474,10 +3477,11 @@ Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht mˆglich	2::inwork 2
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraﬂe wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
-#: XXX Wann wird die Einbahnstraﬂenregelung wieder aufgehoben?
+#: next_check_id: TACHELES-2020
+#: XXX Wann wird die Einbahnstraﬂenregelung wieder aufgehoben? (vermutlich zusammenh‰ngend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2020-07-17
-#: check_frequency: 30d
+#: last_checked: 2020-08-13
+#: check_frequency: 60d
 Johannisstr.: Einbahnstraﬂe	1s:q3:inwork 9588,13174 9385,13174
 # 
 # REMOVED --- #: next_check_id: YORCKSTRASSENBRUECKEN-2019 --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.812400.php (Herrichtung im ersten Halbjahr 2020) --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.855679.php (Einh‰ngung bis zum 21.10.2019, aber Freigabe erst im Fr¸hjahr 2020) --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2020/pressemitteilung.895895.php (Wiederinbetriebnahme am 20.02.2020, zum gleichen Zeitpunkt wird die Yorckstraﬂenbr¸cke 17 gesperrt, Wiederfreigabe im Fr¸hling 2020) --- #: osm_watch: way id="36395401" version="24" --- #: priority: #A --- #: last_checked: 2019-10-16 --- #: next_check: 2020-02-20 --- Yorckstraﬂenbr¸cke 10: wird saniert und dann wieder neu eingeh‰ngt	2::inwork 8339,9560 8338,9593
@@ -3640,7 +3644,7 @@ Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14219,826
 #: osm_watch: way id="47935842" version="14"
 #: osm_watch: way id="681299267" version="1"
 #: priority: #A vvv
-#: last_checked: 2020-07-09 vvv
+#: last_checked: 2020-08-13 vvv
 #: check_frequency: 60d vvv
 #: valid: -20210630 vvv
 Franzˆsische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch f¸r Fuﬂg‰nger	2:inwork 9076,12054 9183,12076
@@ -3665,11 +3669,11 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 #: by: https://www.glint-berlin.de/ (kein Fertigstellungsdatum)
 #: confirmed_by: srt
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2020-07-09
+#: last_checked: 2020-08-13
 #: check_frequency: 60d
 Taubenstr.: Bauarbeiten, Einbahnstraﬂe	1s:q4:inwork 9207,11880 9138,11872
 # 
-#: last_checked: 2020-07-09
+#: last_checked: 2020-08-13
 Mauerstr.: Bauarbeiten, Einbahnstraﬂe	1s:q4:inwork 9138,11872 9171,11777
 # 
 #: osm_watch: way id="496270260" version="6" brb
@@ -3688,7 +3692,7 @@ Uferweg zum Speicher: noch keine Durchfahrt mˆglich	2::inwork -12721,-2082 -1275
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.789161.php (Richtfest im Herbst 2019)
 #: by: https://www.berliner-woche.de/plaenterwald/c-bauen/hoelzerner-dachstuhl-denkmalgerecht-nachgebaut_a238627 (Erˆffnung 2021)
 #: priority: #C
-#: last_checked: 2020-07-31 (mapillary)
+#: last_checked: 2020-08-14 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2021-01-01
 am Eierh‰uschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
@@ -3802,9 +3806,10 @@ Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -
 #: next_check_id: ENGLISCHESTR-2017
 #: by: http://www.dafmap.de/d/berlin.html?id=5241&mt=0&zoom=17 vvv
 #: by: https://www.deutsches-architektur-forum.de/forum/showthread.php?t=4013&page=12
+#: by: https://leute.tagesspiegel.de/charlottenburg-wilmersdorf/talk-of-the-kiez/2020/08/07/133769/
 #: XXX (Geplanter) Projektabschluss laut dafmap: 2019-06-01
 #: osm_watch: way id="392904879" version="2" vvv
-#: last_checked: 2020-07-17 vvv
+#: last_checked: 2020-08-07 (Tsp) vvv
 #: check_frequency: 60d vvv
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5643,12253
 # REMOVED (hier aufgehoben) --- Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5643,12253 5604,12244 5574,12237
@@ -3875,7 +3880,7 @@ Niederlagstr.: Einbahnstraﬂe	1s:q3:inwork 9972,12184 9959,12281
 #: check_frequency: 60d
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Br¸cke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
 # 
-#: last_checked: 2020-06-12
+#: last_checked: 2020-08-07
 #: check_frequency: 60d
 Zuwegung Kieler Br¸cke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409
 # 
@@ -3974,7 +3979,7 @@ Rummelsburger Platz: zur H‰lfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019
 #: XXX laut viz bis Ende 2022, laut fritz bis 30.12.2022
-#: last_checked: 2020-06-25
+#: last_checked: 2020-08-14 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2022-12-31
 wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
@@ -4051,14 +4056,19 @@ Wikingerufer: wegen Besch‰digungen an der Ufermauer gesperrt	2:inwork 5354,12552
 # REMOVED (hier mittlerweile offen) --- Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645
 M¸hlensteg (Tegeler Hafen): Weg gesperrt	2 1691,20638 1697,20623 1721,20603
 # 
+#: next_check_id: TACHELES-2020
 #: note: Baugel‰nde
 #: by: http://www.berliner-woche.de/mitte/bauen/erdlawine-rollt-ueber-die-oranienburger-ab-juli-wird-auf-dem-tacheles-areal-die-elf-meter-tiefe-baugrube-ausgehoben-d119088.html (bis 2020)
 #: by: http://www.berliner-woche.de/mitte/bauen/tacheles-areal-wird-ausgebaggert-d160052.html
 #: by: http://areal-am-tacheles.de/webcam/webseite/Webcam1.jpg (Webcam)
 #: by: http://areal-am-tacheles.de/webcam/webseite/Webcam4.jpg (Webcam)
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10161 (Benennung von Privatpl‰tzen)
 #: XXX vermutlich wird es keinen Zugang zur Oranienburger Str. mehr geben --- bleibt wenigstens der s¸dliche Stummel?
+#: XXX auﬂerdem: im Quartier Am Tacheles werden zwei Privatpl‰tze entstehen und bekommen die Namen (fehlen in Berlin.coords.data; wo genau?):
+#: XXX Johannisplatz
+#: XXX Aaron-Bernstein-Platz
 #: osm_watch: way id="33036326" version="6"
-#: last_checked: 2020-07-17
+#: last_checked: 2020-08-13
 #: check_frequency: 360d
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 # 
@@ -4083,7 +4093,7 @@ Schloﬂplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 #: by: https://www.berliner-woche.de/mitte/c-bauen/nach-vier-jahren-wurden-die-keller-trockengelegt_a235237 (Bezug der B¸ros im dritten Quartal 2021)
 #: XXX wird nach den Bauarbeiten die Einbahnstraﬂenregelung wieder hergestellt? (see elsehwere)
 #: osm_watch: way id="158025179" version="3"
-#: last_checked: 2020-07-25
+#: last_checked: 2020-08-07
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 
@@ -4132,7 +4142,7 @@ Neue Plantage: hier noch Baustelle	2:inwork -13100,-1411 -13017,-1426
 #: XXX Kaiserstr. -> Anna-Fl¸gge-Straﬂe (PLZ: 14467)
 #: XXX Schlossstraﬂe (ˆstlicher Verlauf) -> Anna-Zielenziger-Straﬂe (PLZ: 14467)
 #: XXX Schwertfegerstraﬂe (ˆstlicher Verlauf) -> Erika-Wolf-Straﬂe (bereits eingetragen)
-#: osm_watch: way id="534669300" version="6" brb
+#: osm_watch: way id="534669300" version="7" brb
 #: last_checked: 2019-12-07
 #: next_check: 2020-09-01
 Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-1449 -12694,-1408 -12727,-1416

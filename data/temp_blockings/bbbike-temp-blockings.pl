@@ -1323,7 +1323,7 @@ EOF
        text  => 'L 201; (Nauener Chaussee); OD Falkensee, Bahnübergang am Finkenkrug Gleisbauarbeiten Vollsperrung 23.11.2004-27.11.2004 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -13756,20176 -13875,20548 -13897,20621
+	2 -13732,20201 -13823,20330 -13875,20548 -13897,20621
 EOF
      },
      { from  => 1100559600, # 2004-11-16 00:00
@@ -2920,7 +2920,7 @@ EOF
        text  => 'L 201; (Nauener Chaussee); OD Falkensee, zw. F.-Ludwig-Jahn-Str. u. Innstr. Straßenbauarbeiten halbseitig gesperrt; Einbahnstraße 14.09.2005-30.09.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -12601,19517 -12161,19075
+	q4 -12456,19410 -12161,19075
 EOF
      },
      { from  => 1126994400, # 2005-09-18 00:00
@@ -3048,7 +3048,7 @@ EOF
        text  => 'L 201; (Nauener Chaussee); OD Falkensee, zw. F.-Ludwig-Jahn-Str. u. Innstr. Straßenbauarbeiten halbseitig gesperrt; Einbahnstraße 14.09.2005-30.10.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -12601,19517 -12161,19075
+	q4 -12456,19410 -12161,19075
 EOF
      },
      { from  => 1128549600, # 2005-10-06 00:00
@@ -3550,7 +3550,7 @@ EOF
        text  => 'L 201 Nauener Chaussee Bahnübegang bei Falkensee Gleisbauarbeiten Vollsperrung 11.12.2005-14.12.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -13897,20621 -13875,20548 -13756,20176
+	2 -13897,20621 -13875,20548 -13823,20330 -13732,20201
 EOF
      },
      { from  => 1133996400, # 2005-12-08 00:00
@@ -3558,7 +3558,7 @@ EOF
        text  => 'L 201 Nauener Chaussee Bahnübergang bei Falkensee Gleisbauarbeiten Vollsperrung 09.12.2005-10.12.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -13897,20621 -13875,20548 -13756,20176
+	2::inwork -13897,20621 -13875,20548 -13823,20330 -13732,20201
 EOF
      },
      { from  => 1131231600, # 2005-11-06 00:00
@@ -22653,7 +22653,7 @@ EOF
 #: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-07-09
+#: last_checked: 2020-08-13
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -26529,7 +26529,7 @@ EOF
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
 # REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-07-06
+#: last_checked: 2020-08-14
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -26925,7 +26925,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-07-09 vvv
+#: last_checked: 2020-08-13 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -27850,7 +27850,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2018/pressemitteilung.729141.php',
        data  => <<EOF,
-	2::inwork -7352,15954 -7347,15944 -7311,15931 -7280,15967 -7211,15920
+	2::inwork -7352,15954 -7347,15944 -7311,15931 -7277,15966 -7211,15920
 EOF
      },
      { from  => 1519686000, # 2018-02-27 00:00
@@ -27902,7 +27902,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-07-28
+#: last_checked: 2020-08-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27979,7 +27979,7 @@ EOF
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-07-08
+#: last_checked: 2020-08-04 (mapillary)
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
 EOF
@@ -28490,7 +28490,7 @@ EOF
 #: osm_watch: way id="705182550" version="1"
 #: osm_watch: way id="705182551" version="1"
 #: also_indoor: traffic (G,H) vvv
-#: last_checked: 2020-07-25 vvv
+#: last_checked: 2020-08-13 vvv
 #: check_frequency: 21d vvv
 #: source_id: 2147344480 (mittlerweile ausgelaufen)
 	q3::inwork 9102,12790 9193,12875
@@ -28639,11 +28639,11 @@ EOF
 EOF
      },
      { from  => 1543258848, # 2018-11-26 20:00
-       until => $isodate2epoch->("2020-08-31 18:00:00"), # 1551394799, # 2019-02-28 23:59
-       text  => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, Radfahrer sind auch betroffen, bis Ende August 2020',
+       until => $isodate2epoch->("2020-08-14 18:00:00"), # 1551394799, # 2019-02-28 23:59
+       text  => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, Radfahrer sind auch betroffen, bis 14. August 2020',
        type  => 'gesperrt',
        data  => <<EOF,
-#: source_id: 2147343519 (bis 31.08.2020")
+#: source_id: 2147343519 (bis 14.08.2020")
 #: note: laut fritz bis Ende Februar 2020
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 	2::inwork 14539,23306 14573,23295 14597,23280
@@ -29331,7 +29331,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: WAGNERREGENYALLEE-2019
 #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
-#: osm_watch: way id="206889085" version="12"
+#: osm_watch: way id="206889085" version="13"
 #: last_checked: 2020-07-31
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
@@ -29752,11 +29752,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-09-10 18:00:00"), # 1596211200, # 2020-07-31 18:00
-       text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, bis 10. September 2020',
+       until => $isodate2epoch->("2020-10-12 17:00:00"), # 1596211200, # 2020-07-31 18:00
+       text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, bis 12.10.2020',
        type  => 'gesperrt',
        source_id => '2147344558', # bis 2020-09-10
        data  => <<EOF,
+#: source_id: 2147346164 (bis 12.10.2020)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 EOF
@@ -30023,9 +30024,9 @@ EOF
        text  => 'zum Uferweg am Westhafenkanal: wegen Bauarbeiten gesperrt (es existiert aber ein Trampelpfad daran vorbei), Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX Wann wird der Weg wieder eröffnet?
-#: last_checked: 2019-10-13
-#: next_check: 2020-05-31
+#: XXX Wann wird der Weg wieder eröffnet? Eigentlich sollten die Bauarbeiten nur bis April 2020 gehen, Termin wurde aber "gerissen"
+#: last_checked: 2020-08-09 (mapillary)
+#: check_frequency: 60d
 	2::inwork 2957,13796 2895,13869
 EOF
      },
@@ -30412,7 +30413,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: MANDEL-2020
-#: last_checked: 2020-07-06
+#: last_checked: 2020-08-14 (zusätzliche Sperrung an der Hosemannstr.)
 	2::inwork 12871,15882 12911,15865
 # REMOVED (hier mittlerweile befahrbar)	2::inwork 12911,15865 12979,15822 12948,15771
 EOF
@@ -30480,7 +30481,7 @@ EOF
        data  => <<EOF,
 #: XXX bis wann gilt die Einbahnstraßenregelung?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-07-06
+#: last_checked: 2020-08-05 (mapillary)
 	q3::inwork; 14133,12482 14266,12446
 EOF
      },
@@ -30785,7 +30786,7 @@ EOF
        text  => 'Gärtnerstr.: Bauarbeiten, Fahrbahn zwischen Simplonstr. und Wühlischstr. gesperrt, evtl. bis Dezember 2021',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: 2147345874
+#: source_id: 2147345874 (hier: bis 31.1.2021) (bei rbb nur bis 13.1.2021)
 	q4::inwork 14211,11552 14181,11434
 EOF
      },
@@ -30815,13 +30816,11 @@ EOF
 #: by: https://mein.berlin.de/projects/temporare-spielstrassen-in-neukolln/
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.963342.php (Verlängerung von drei der vier Spielstraßen bis zum 27. September 2020)
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.969860.php (Freiwillige gesucht)
-#: XXX die Spielstraße in der Selkestr. wird _nicht_ verlängert
-#: priority: #A
-#: last_checked: 2020-07-30
-#: next_check: 2020-08-10
-Selkestr. zwischen Schierker Str. und Nogatstr. sowie der Schierker Platz im Körnerkiez	q4::temp::play 12751,7166 12741,7224 12722,7261
-Hobrechtstr. zwischen Sanderstr. und Pflügerstr. im Reuterkiez	q4::temp::play 11917,9663 11934,9538
-die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 13100,7626 13177,7644
+#: by: https://mein.berlin.de/projekte/temporare-spielstrassen/ (Ergebnis der Verlängerungen)
+# REMOVED --- #: priority: #A --- #: last_checked: 2020-07-30 --- #: next_check: 2020-08-10
+# REMOVED (wird nicht verlängert) --- Selkestr. zwischen Schierker Str. und Nogatstr. sowie der Schierker Platz im Körnerkiez	q4::temp::play 12751,7166 12741,7224 12722,7261
+# REMOVED (nur wenige Termine bis zum 27.9.2020 können übernommen werden -> lohnt wohl nicht) --- Hobrechtstr. zwischen Sanderstr. und Pflügerstr. im Reuterkiez	q4::temp::play 11917,9663 11934,9538
+# REMOVED (wird nicht verlängert) --- die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 13100,7626 13177,7644
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954979.php
 Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 13038,8394
 EOF
@@ -30881,18 +30880,16 @@ EOF
 EOF
      },
      { from  => 1592690400, # 2020-06-21 00:00
-       until => 1597442399, # 2020-08-14 23:59
-       text  => 'Goltzstr.: Bauarbeiten zwischen Briesingstr. und Bahnhofstr., Fahrbahn gesperrt, bis 14. August 2020',
+       until => $isodate2epoch->("2020-08-31 17:00:00"), # 1597442399, # 2020-08-14 23:59
+       text  => 'Goltzstr.: Bauarbeiten zwischen Briesingstr. und Bahnhofstr., Fahrbahn gesperrt, bis 31. August 2020',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.944673.php',
        data  => <<EOF,
 #: next_check_id: GOLTZ-2020
-#: XXX ab 1. Juli 2020 Ausweitung bis Rehagener Str.
-#: XXX ab 13. Juli 2020 Ausweitung bis Bahnhofstr.
+# REMOVED --- #: XXX ab 1. Juli 2020 Ausweitung bis Rehagener Str.
+# REMOVED --- #: XXX ab 13. Juli 2020 Ausweitung bis Bahnhofstr.
 #: source_id: 2147345963
-#: priority: #A
-#: last_checked: 2020-06-21
-#: next_check: 2020-08-14
+# REMOVED --- #: priority: #A --- #: last_checked: 2020-06-21 --- #: next_check: 2020-08-14
 	q4::inwork 10454,-2520 10563,-2432 10642,-2371 10763,-2276 10983,-2116
 EOF
      },
@@ -30974,13 +30971,13 @@ EOF
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2020-07-31 (mapillary)
+#: last_checked: 2020-08-05 (mapillary)
 	q4::inwork 14136,17170 13996,16959
 EOF
      },
      { from  => 1593353640, # 2020-06-28 16:14
-       until => 1597417200, # 2020-08-14 17:00
-       text  => 'Bergstr.: zwischen Körnerstr. und Heesestr. Sperrung wegen Bauarbeiten, evtl. sind auch Radfahrer betroffen, vom 29.06.2020 16:14 Uhr bis 14.08.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-10-02 17:00:00"), # 1597417200, # 2020-08-14 17:00
+       text  => 'Bergstr.: zwischen Körnerstr. und Heesestr. Sperrung wegen Bauarbeiten, evtl. sind auch Radfahrer betroffen, vom 29.06.2020 16:14 Uhr bis 02.10.2020 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147346016',
        data  => <<EOF,
@@ -31035,8 +31032,9 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1286614278611652615
 #: by: https://twitter.com/VIZ_Berlin/status/1286614278611652615/photo/1
 #: by: https://twitter.com/VIZ_Berlin/status/1287747912240373762
-#: source_id: 2147346154
-#: source_id: 2147346155
+#: source_id: 2147346154 (nur noch bis 18.8.2020 statt 6.9.2020)
+#: source_id: 2147346155 (nur noch bis 18.8.2020 statt 6.9.2020)
+#: source_id: 2147346227 (aber hier doch wieder bis 6.9.2020)
 	q4::inwork; 17001,1157 16908,1217 16815,1278
 	q4::inwork; 16908,1217 16975,1262
 	q3::inwork; 16975,1262 16908,1217
@@ -31080,6 +31078,25 @@ EOF
        data  => <<EOF,
 #: next_check_id: BRAUER-2020
 	q4::inwork 5159,2176 4979,1964
+EOF
+     },
+     { from  => 1597528800, # 2020-08-16 00:00
+       until => 1609455599, # 2020-12-31 23:59
+       text  => 'Gilgenburger Str.: Bauarbeiten, Fahrbahn kann gesperrt sein, von 17.8.2020 bis Ende Dezember 2020',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.973162.php',
+       data  => <<EOF,
+#: next_check_id: GILGENBURGER-2020
+	q4::inwork 24387,5672 24434,5645 24549,5685 24666,5726
+EOF
+     },
+     { from  => 1595736000, # 2020-07-26 06:00
+       until => $isodate2epoch->("2020-08-18 12:00:00"), # 1599404400, # 2020-09-06 17:00
+       text  => 'Alt-Rudow: zwischen Neuköllner Str. und Neudecker Weg Bauarbeiten, Fahrbahn Richtung Süden gesperrt, möglicherweise sind auch Radfahrer betroffen, vom 27.07.2020 06:00 Uhr bis 18.08.2020 12:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346213',
+       data  => <<EOF,
+	q4::inwork; 16445,1824 16549,1758 16610,1715 16805,1488 16849,1437 16975,1262
 EOF
      },
     );

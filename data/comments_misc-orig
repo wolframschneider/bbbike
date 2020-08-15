@@ -315,6 +315,7 @@ Kreisverkehr	Roundabout -1043,-2679
 Kreisverkehr	Roundabout -819,-3101
 Kreisverkehr	Roundabout 2629,-10301
 Kreisverkehr	Roundabout 1695,-12417
+Kreisverkehr	Roundabout -8625,16889
 #: XXX_prog ^^^
 #: ignore ^^^
 #
@@ -1251,7 +1252,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="4"
-#: last_checked: 2020-07-28
+#: last_checked: 2020-08-13
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
@@ -1361,7 +1362,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 # 
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2020-07-25
+#: last_checked: 2020-08-07
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13390
 # 
@@ -1426,4 +1427,8 @@ nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5
 auf der Verbundsteinpflasterstraße bleiben, nicht der Ausschilderung nach Glambeck folgen	CS; -16343,58851 -16043,58884
 # 
 ausgeschildert mit einem blauen Schild "Krumme Straße"	CP2; 22168,-484 22167,-471
+# 
+ausgeschildert nach Königs Wusterhausen	CP; 20187,-20230 20738,-20432 20707,-20261
+# 
+ausgeschildert Köriser Str.	CP2; 23482,-22742 23775,-22788
 # 
