@@ -2510,7 +2510,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147343335 (bis 31.7.2020)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-06-07 (mapillary)
+#: last_checked: 2020-08-15 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-08-27
 #: XXX_prog: eigentlich q4+::inwork;
@@ -2548,7 +2548,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-08-06
+#: last_checked: 2020-08-15
 #: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -2765,7 +2765,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX mittlerweile gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str.
 #: osm_watch: way id="26288668" version="15"
 #: osm_watch: way id="798056092" version="1"
-#: last_checked: 2020-06-22 vvv
+#: last_checked: 2020-08-15 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-09-30 vvv
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
@@ -2921,7 +2921,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: ROTHER-2020
-#: last_checked: 2020-07-30
+#: last_checked: 2020-08-14 (daf)
 	q4::inwork 13478,10998 13575,10963
 ',
          'from' => undef,
@@ -2949,7 +2949,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: next_check_id: LILIENTHALWEG-2020
-#: last_checked: 2020-08-04
+#: last_checked: 2020-08-12
 #: check_frequency: 7d
 	2::inwork 11141,9107 10709,9192
 ',
@@ -2973,6 +2973,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'accept_multi_feature_distance' => 3200,
          'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/angebot-auf-der-baenschstrasse-wurde-verkuerzert_a268825
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/fuenf-antraege-auf-temporaere-spielstrassen_a283528 ("bis Ende des Sommers" (2020))
 # REMOVED --- S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
 S1 - Bänschstr. zwischen Voigtstr. und Pettenkoferstr. Südseite	q4::temp::play 14798,12502 15005,12443
 S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp::play 13457,12505 13371,12694 13273,12902
@@ -3003,12 +3004,12 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1597464000,
+         'from' => 1598068800,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1597597200
+         'until' => 1598202000
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -3095,12 +3096,12 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954979.php
 Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 13038,8394
 ',
-         'from' => 1597464000,
+         'from' => 1598068800,
          'id' => 3241,
          'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
          'text' => 'Temporäre Spielstraßen in Neukölln: einige Straßen (Selkestr., Hobrechtstr., Karl-Marx-Platz, Anzengruberstr.) sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Ende September 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1597597200
+         'until' => 1598202000
        },
        undef,
        undef,
@@ -3221,24 +3222,7 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'until' => 1615996800
        },
        undef,
-       {
-         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1286614278611652615
-#: by: https://twitter.com/VIZ_Berlin/status/1286614278611652615/photo/1
-#: by: https://twitter.com/VIZ_Berlin/status/1287747912240373762
-#: source_id: 2147346154 (nur noch bis 18.8.2020 statt 6.9.2020)
-#: source_id: 2147346155 (nur noch bis 18.8.2020 statt 6.9.2020)
-#: source_id: 2147346227 (aber hier doch wieder bis 6.9.2020)
-	q4::inwork; 17001,1157 16908,1217 16815,1278
-	q4::inwork; 16908,1217 16975,1262
-	q3::inwork; 16975,1262 16908,1217
-',
-         'from' => 1595714400,
-         'id' => 3260,
-         'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.965136.php',
-         'text' => 'Neuköllner Str./Groß-Ziethener Chaussee: Sanierung des Kreuzungsbereichs, Umwege für Radfahrer, 27. Juli 2020 bis 6. September 2020',
-         'type' => 'handicap',
-         'until' => 1599404400
-       },
+       undef,
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
@@ -3293,16 +3277,6 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'text' => 'Gilgenburger Str.: Bauarbeiten, Fahrbahn kann gesperrt sein, von 17.8.2020 bis Ende Dezember 2020',
          'type' => 'handicap',
          'until' => 1609455599
-       },
-       {
-         'data' => '	q4::inwork; 16445,1824 16549,1758 16610,1715 16805,1488 16849,1437 16975,1262
-',
-         'from' => 1595736000,
-         'id' => 3266,
-         'source_id' => '2147346213',
-         'text' => 'Alt-Rudow: zwischen Neuköllner Str. und Neudecker Weg Bauarbeiten, Fahrbahn Richtung Süden gesperrt, möglicherweise sind auch Radfahrer betroffen, vom 27.07.2020 06:00 Uhr bis 18.08.2020 12:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1597744800
        }
      
 );

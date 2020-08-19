@@ -1215,7 +1215,7 @@ EOF
        text  => 'L 302 Schöneicher Str. OL Schöneiche, Dorfaue und Rüdersdorfer Str. Kanal- und Straßenbau Vollsperrung 12.04.2005-30.05.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 31221,8312 30700,8462
+	q4 31176,8354 30700,8462
 EOF
      },
      { from  => 1098655200, # 2004-10-25 00:00
@@ -3401,7 +3401,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4 52044,69176 52738,69563
-	q4 52044,69176 51517,68884 50863,68629
+	q4 52044,69176 51725,68999 51517,68884 50863,68629
 EOF
      },
      { from  => 1136502000, # 2006-01-06 00:00
@@ -6791,7 +6791,7 @@ EOF
        text  => 'L 338 Rosa-Luxemburg-Damm/ Hauptstr. Bahnübergang in der OL Neuenhagen Erneu. Gleisanlagen Vollsperrung 18.11.2006-21.11.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 30179,13667 30795,13191 30815,13170 30910,13101 30982,12947
+	2::inwork 30092,13751 30795,13191 30815,13170 30910,13101 30982,12947
 EOF
      },
      { from  => undef, # 
@@ -8250,7 +8250,7 @@ EOF
        source_id => 'https://www.werbegemeinschaft-friedrichshagen.de/projekte/boelschefest/',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.921158.php (Absage 2020)
-	2::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+	2::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25561,5622 25563,5666 25567,5749 25571,5829 25579,5958
 EOF
      },
      { from  => 1178874938, # 2007-05-11 11:15
@@ -11818,7 +11818,7 @@ EOF
        text  => 'L 338 Schöneiche - Hönow OD Neuenhagen, zw. BÜ und Eisenbahnstr. Straßenbau Vollsperrung 30.06.2008-24.07.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 30795,13191 30179,13667
+	q4::inwork 30795,13191 30092,13751
 EOF
      },
      { from  => 1213826400, # 2008-06-19 00:00
@@ -12277,7 +12277,7 @@ EOF
        text  => 'L 338 Schöneiche - Hönow OD Neuenhagen, zw. BÜ und Jahnstr. Deckeneinbau, Restarb. Vollsperrung 24.07.2008-30.07.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 30815,13170 30795,13191 30179,13667
+	q4::inwork 30815,13170 30795,13191 30092,13751
 EOF
      },
      { from  => 1216936800, # 2008-07-25 00:00
@@ -12708,7 +12708,7 @@ EOF
        text  => 'B 198 Angermünde - Greiffenberg zw. OA Kerkow und Abzw. Bruchhagen Deckschichterneuerung Vollsperrung 08.09.2008-01.10.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 46704,75833 46875,75023 47223,73677 47297,73550 47908,73136 48164,72815 48951,71593
+	2::inwork 46704,75833 46875,75023 47223,73677 47292,73547 47908,73136 48164,72815 48951,71593
 EOF
      },
      { from  => 1221948000, # 2008-09-21 00:00
@@ -12930,7 +12930,7 @@ EOF
        text  => 'L 239 Angermünde - Joachimsthal zw. Kerkow und Görlsdorf Erneuerung Deckenbelag Vollsperrung 29.09.2008-08.11.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 45864,72724 46253,72339 46555,72293 46770,72248 47266,71628 48093,70968 48162,70928 48237,70892 48672,70933
+	2::inwork 45751,72662 46186,72249 46555,72293 46765,72194 47233,71473 48093,70968 48162,70928 48237,70892 48672,70933
 EOF
      },
      { from  => 1221948000, # 2008-09-21 00:00
@@ -13980,7 +13980,7 @@ EOF
        text  => 'L 338 Hauptstraße OL Neuenhagen, vor Grundst. Nr. 32 Kranaufstellung Vollsperrung 27.04.2009-27.04.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 30179,13667 30795,13191
+	q4::inwork 30092,13751 30795,13191
 EOF
      },
      { from  => 1240696800, # 2009-04-26 00:00
@@ -14716,7 +14716,7 @@ EOF
        text  => 'B 198 zw. Kerkow u. Greiffenberg Deckenerneuerung Vollsperrung 22.06.2009-11.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 48951,71593 48164,72815 47908,73136 47297,73550 47223,73677 46875,75023 46704,75833
+	2::inwork 48951,71593 48164,72815 47908,73136 47292,73547 47223,73677 46875,75023 46704,75833
 EOF
      },
      { from  => 1245535200, # 2009-06-21 00:00
@@ -16207,7 +16207,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014140',
        data  => <<EOF,
-	q4::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+	q4::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25561,5622 25563,5666 25567,5749 25571,5829 25579,5958
 EOF
      },
      { from  => 1252738143, # 2009-09-12 08:49
@@ -16648,7 +16648,7 @@ EOF
        text  => 'B 198 zw. Prenzlau und Dedelow grundh. Straßebau, Radwegbau Vollsperrung 05.10.2009-02.11.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 36927,105345 36726,106236 36665,106354 36137,106832 35674,106889 35287,106742
+	2::inwork 36927,105345 36726,106236 36665,106354 36137,106832 36039,106857 35674,106889 35342,106734 35315,106738 35287,106742
 EOF
      },
      { from  => 1255212000, # 2009-10-11 00:00
@@ -17111,7 +17111,7 @@ EOF
        text  => 'B 198 zw. Prenzlau und Dedelow grundh. Straßebau, Radwegbau Vollsperrung 05.10.2009-15.11.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 36927,105345 36726,106236 36665,106354 36137,106832 35674,106889
+	2::inwork 36927,105345 36726,106236 36665,106354 36137,106832 36039,106857 35674,106889
 EOF
      },
      { from  => 1272607127, # 2010-04-30 07:58
@@ -19555,7 +19555,7 @@ EOF
        type  => 'gesperrt',
        source_id => '116400693',
        data  => <<EOF,
-	2::inwork 30971,11749 31021,12174
+	2::inwork 30971,11749 30989,11903 31021,12174
 EOF
      },
      { from  => 1320439456, # 2011-11-04 21:44
@@ -26275,7 +26275,7 @@ EOF
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.645164.php
 #: source_id: LMS-BR_r_LMS-BR_97860
 #: source_id: 2147341992
-# REMOVED ---	q4::inwork; 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+# REMOVED ---	q4::inwork; 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25561,5622 25563,5666 25567,5749 25571,5829 25579,5958
 	q4::inwork; 25539,5237 25524,5011 25522,4935 25519,4830
 EOF
      },
@@ -28431,7 +28431,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.751474.php',
        data  => <<EOF,
-	2::inwork 20317,12058 20350,12057
+	2::inwork 20315,12061 20363,12057
 EOF
      },
      { from  => 1586197495,
@@ -29223,7 +29223,7 @@ EOF
 #: source_id: 2147343335 (bis 31.7.2020)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-06-07 (mapillary)
+#: last_checked: 2020-08-15 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-08-27
 #: XXX_prog: eigentlich q4+::inwork;
@@ -29318,7 +29318,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-08-06
+#: last_checked: 2020-08-15
 #: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -30053,7 +30053,7 @@ EOF
 #: XXX mittlerweile gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str.
 #: osm_watch: way id="26288668" version="15"
 #: osm_watch: way id="798056092" version="1"
-#: last_checked: 2020-06-22 vvv
+#: last_checked: 2020-08-15 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-09-30 vvv
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
@@ -30538,7 +30538,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ROTHER-2020
-#: last_checked: 2020-07-30
+#: last_checked: 2020-08-14 (daf)
 	q4::inwork 13478,10998 13575,10963
 EOF
      },
@@ -30590,7 +30590,7 @@ EOF
        source_id => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.923140.php',
        data  => <<EOF,
 #: next_check_id: LILIENTHALWEG-2020
-#: last_checked: 2020-08-04
+#: last_checked: 2020-08-12
 #: check_frequency: 7d
 	2::inwork 11141,9107 10709,9192
 EOF
@@ -30636,6 +30636,7 @@ EOF
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/angebot-auf-der-baenschstrasse-wurde-verkuerzert_a268825
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/fuenf-antraege-auf-temporaere-spielstrassen_a283528 ("bis Ende des Sommers" (2020))
 # REMOVED --- S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
 S1 - Bänschstr. zwischen Voigtstr. und Pettenkoferstr. Südseite	q4::temp::play 14798,12502 15005,12443
 S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp::play 13457,12505 13371,12694 13273,12902
@@ -31024,17 +31025,20 @@ EOF
 EOF
      },
      { from  => 1595714400, # 2020-07-26 00:00
-       until => $isodate2epoch->("2020-09-06 17:00:00"), # 1599515999, # 2020-09-07 23:59
-       text  => 'Neuköllner Str./Groß-Ziethener Chaussee: Sanierung des Kreuzungsbereichs, Umwege für Radfahrer, 27. Juli 2020 bis 6. September 2020',
+       until => $isodate2epoch->("2020-08-18 17:00:00"), # 1599515999, # 2020-09-07 23:59
+       text  => 'Neuköllner Str./Groß-Ziethener Chaussee: Sanierung des Kreuzungsbereichs, Umwege für Radfahrer, 27. Juli 2020 bis 18. August 2020',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.965136.php',
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1286614278611652615
 #: by: https://twitter.com/VIZ_Berlin/status/1286614278611652615/photo/1
 #: by: https://twitter.com/VIZ_Berlin/status/1287747912240373762
+#: by: https://twitter.com/VIZ_Berlin/status/1295377979481174018
+#: by: https://pbs.twimg.com/media/EfobI0JXkAADoqC?format=jpg&name=large
 #: source_id: 2147346154 (nur noch bis 18.8.2020 statt 6.9.2020)
 #: source_id: 2147346155 (nur noch bis 18.8.2020 statt 6.9.2020)
 #: source_id: 2147346227 (aber hier doch wieder bis 6.9.2020)
+#: note: nach dem Umstellung nur einige Umwege übrig (z.B. Groß-Ziethener Chaussee -- geradeaus); Richtund SO wird der Radverkehr wohl auf der Fahrbahn geführt
 	q4::inwork; 17001,1157 16908,1217 16815,1278
 	q4::inwork; 16908,1217 16975,1262
 	q3::inwork; 16975,1262 16908,1217
