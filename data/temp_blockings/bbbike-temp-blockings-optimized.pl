@@ -2937,7 +2937,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-08-03
+#: last_checked: 2020-08-24
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2992,12 +2992,12 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1598068800,
+         'from' => 1598673600,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1598202000
+         'until' => 1598806800
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -3084,12 +3084,12 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954979.php
 Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 13038,8394
 ',
-         'from' => 1598068800,
+         'from' => 1598673600,
          'id' => 3241,
          'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
          'text' => 'Temporäre Spielstraßen in Neukölln: einige Straßen (Selkestr., Hobrechtstr., Karl-Marx-Platz, Anzengruberstr.) sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Ende September 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1598202000
+         'until' => 1598806800
        },
        undef,
        undef,
@@ -3112,17 +3112,7 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'until' => 1598886000
        },
        undef,
-       {
-         'data' => '#: also_indoor: traffic (H)
-	q3::inwork 4295,13234 4186,13710
-',
-         'from' => 1592719200,
-         'id' => 3249,
-         'source_id' => '2147345956',
-         'text' => 'Goslarer Ufer: Sperrung an der Kreuzung Gaußstr. vom 22.06.2020 08:00 Uhr bis 24.08.2020 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1598281200
-       },
+       undef,
        {
          'data' => '#: source_id: 2147345969
 #: also_indoor: traffic (G,H)
@@ -3255,6 +3245,58 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'text' => 'Gilgenburger Str.: Bauarbeiten, Fahrbahn kann gesperrt sein, von 17.8.2020 bis Ende Dezember 2020',
          'type' => 'handicap',
          'until' => 1609455599
+       },
+       undef,
+       {
+         'data' => '#: add_fragezeichen: Wann sind die Fahrbahn wieder offen?
+#: last_checked: 2020-08-23
+	q4::inwork -3252,12580 -3444,12580
+',
+         'from' => undef,
+         'id' => 3267,
+         'text' => 'Betckestraße: zwischen Wörther Str. und Götelstr. Fahrbahn gesperrt, Ausweichen auf nördlichen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       undef,
+       {
+         'data' => '#: by: https://www.berliner-woche.de/spandau/c-verkehr/radler-muessen-runter-vom-sattel_a177230
+#: by: http://www.berlin.de/ba-spandau/presse/archiv/20090917.1110.139163.html
+#: tempex: mo-sa T09-T19 vvv
+Breite Str.: Fußgängerzone	q4::temp:clock -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340 -3227,14260
+Markt: Fußgängerzone	q4::temp:clock -3155,14340 -3204,14368 -3231,14383 -3275,14407
+Kirchgasse (Spandau): Fußgängerzone	q4::temp:clock -3089,14440 -3150,14478
+Kammerstr.: Fußgängerzone	q4::temp:clock -3110,14408 -3060,14380
+Wasserstr.: Fußgängerzone	q4::temp:clock -3142,14358 -3092,14331
+Mönchstr.: Fußgängerzone	q4::temp:clock -3110,14408 -3174,14438 -3228,14468
+Marktstr. (Spandau): Fußgängerzone	q4::temp:clock -3293,14304 -3231,14383
+Carl-Schurz-Str.: Fußgängerzone	q4::temp:clock -3552,14082 -3457,14189 -3409,14241 -3338,14333 -3275,14407 -3228,14468 -3205,14512 -3185,14556 -3150,14631
+#: note: (by Sara Köhler) Fußgängerzone ist für Radfahrer nicht freigegeben, Lieferverkehr ist von 19-11 Uhr frei
+Am Wall: Fußgängerzone	q4::temp:clock -3404,14147 -3457,14189
+Charlottenstr.: Fußgängerzone	q4::temp:clock -3227,14260 -3293,14304 -3338,14333 -3397,14370
+Moritzstr.: Fußgängerzone	q4::temp:clock -3275,14407 -3350,14446
+Mauerstr. (Spandau): Fußgängerzone	q4::temp:clock -3316,14169 -3409,14241
+#: by: Kleinke (honda):
+Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -3054,14498
+#: tempex ^^^
+',
+         'from' => undef,
+         'id' => 3269,
+         'recurring' => 1,
+         'text' => 'Altstadt Spandau: Fußgängerzone, Radfahren nur Montag bis Samstag nachts (19:00 bis 09:00 Uhr) sowie Sonntag ganztägig zugelassen',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1297930749249814532
+	q4::inwork 7597,4499 7628,4521 7667,4549
+',
+         'from' => 1598206114,
+         'id' => 3270,
+         'source_id' => '2147346269',
+         'text' => 'Attilastr.: Fahrbahn und Gehwege zwischen Ringstr. und Steglitzer Damm gesperrt, Umweg durch S-Bahnhof, voraussichtlich bis Oktober 2020',
+         'type' => 'handicap',
+         'until' => 1604163600
        }
      
 );
