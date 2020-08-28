@@ -8361,7 +8361,7 @@ EOF
        text  => 'B 158 von OD Neuendorf bis OE Oderberg Deckenerneuerung Vollsperrung 29.05.2007-23.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 53948,53269 53937,54875
+	2::inwork 53887,53272 53926,53431 53906,53850 53951,54281 53937,54875
 EOF
      },
      { from  => 1181340000, # 2007-06-09 00:00
@@ -27902,7 +27902,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-08-13
+#: last_checked: 2020-08-27
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28545,7 +28545,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-07-26
+#: last_checked: 2020-08-27 (mapillary)
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -29213,8 +29213,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-08-27 18:00:00"), # undef, # XXX
-       text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 27. August 2020',
+       until => $isodate2epoch->("2020-09-04 18:00:00"), # undef, # XXX
+       text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 4. September 2020',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: SOLDINER-2019
@@ -29318,7 +29318,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-08-15
+#: last_checked: 2020-08-25 (mapillary)
 #: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -30915,8 +30915,8 @@ EOF
 EOF
      },
      { from  => 1590420000, # 2020-05-25 17:20
-       until => $isodate2epoch->("2020-08-25 17:00:00"), # 1592949540, # 2020-06-23 23:59
-       text  => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 25.08.2020 17:00 Uhr',
+       until => $isodate2epoch->("2020-11-13 17:00:00"), # 1592949540, # 2020-06-23 23:59
+       text  => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 13.11.2020 17:00 Uhr',
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_205382_LMS-BR_72',
        data  => <<EOF,
@@ -31163,7 +31163,18 @@ EOF
        source_id => '2147346269',
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1297930749249814532
+#: by: https://www.berliner-woche.de/tempelhof/c-verkehr/sanierungsbeginn-nach-wasserrohrbruch-am-24-august-noch-ungewiss_a285061
 	q4::inwork 7597,4499 7628,4521 7667,4549
+EOF
+     },
+     { from  => 1598454000, # 2020-08-26 17:00
+       until => 1598558400, # 2020-08-27 22:00
+       text  => 'Budapester Str.: Sperrungen, evtl. sind auch Radfahrer betroffen, am 27. August 2020 von 17:00 bis 22:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://www.berliner-woche.de/charlottenburg/c-blaulicht/eu-aussenminister-treffen-budapester-strasse-gesperrt_a284857',
+       data  => <<EOF,
+	2::temp 5652,11004 5542,11075
+	2::temp 6145,10975 6058,10988 5986,10976 5829,10964 5716,10978 5652,11004 5613,10963 5488,10978
 EOF
      },
     );
