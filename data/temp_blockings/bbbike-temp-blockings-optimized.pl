@@ -515,7 +515,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'data' => '#: tempex: su T09-T16
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-08-20
+#: last_checked: 2020-08-29
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -787,7 +787,9 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 (Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9362,7616 9281,7651
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9619,7930 9482,7827 9372,7798
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9562,7796 9372,7798 9281,7795
-(Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 10537,7257 11332,7305 11518,7314 11555,7314 11593,7314
+(Rundkurs/nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9522,7624 9471,7703 9372,7798
+(Rundkurs auf dem Flughafen Tempelhof - südliche Landebahn)	2::night 9545,7426 9592,7330 9712,7215
+(Südliche Landebahn)	2::night 9461,7190 9509,7195 9712,7215 10537,7257 11332,7305 11518,7314 11555,7314 11593,7314
 (Südliche Landebahn - Rundkurs)	2::night 11332,7305 11438,7371 11460,7447
 (Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 10204,7680 11279,7768 11388,7777 11430,7781 11460,7802
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
@@ -1993,7 +1995,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
 # REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-08-20
+#: last_checked: 2020-08-28
 	q3::inwork; 14748,12314 14538,12371
 ',
          'from' => undef,
@@ -2167,36 +2169,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX nach den Bauarbeiten bessere Qualität
-#: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
-#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.758375.php (Verzögerungen -> check_frequency erhöht)
-#: by: https://www.berliner-woche.de/weissensee/c-bauen/zum-zweiten-mal-wurden-die-bauarbeiten-auf-der-schoenstrasse-unterbrochen_a190561
-#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.773733.php
-#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.808235.php (Vollsperrung für drei Monate ab 13.05.2019)
-#: by: https://www.berliner-woche.de/weissensee/c-bauen/nach-zweimaliger-unterbrechung-gehen-bauarbeiten-auf-der-schoenstrasse-weiter_a214852
-#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Sperrung des 2. Teilbereiches: drei Monate ab dem 19.09.2019)
-#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/verkehrsbehoerdliche-anordnung_04-09-2019.pdf
-#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.885612.php
-#: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
-#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.909888.php (nächster Bauabschnitt ab 27. April 2020)
-#: by: https://www.berliner-woche.de/weissensee/c-bauen/der-gehweg-ist-jetzt-fertig_a258259
-#: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-auf-der-schoenstrasse-gehen-weiter_a261160
-#: XXX mittlerweile vom Mirbachplatz aus etwa 100m gut befahrbar (Fahrbahn bis auf die Deckschicht hergestellt), danach geht\'s nur auf dem Gehweg weiter
-#: note: laut fritz bis 16.08.2019
-#: also_indoor: traffic
-#: priority: #B
-#: last_checked: 2020-06-29
-#: check_frequency: 60d
-	q4::inwork 13391,16436 13630,16629
-',
-         'from' => undef,
-         'id' => 2980,
-         'source_id' => 'https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php',
-         'text' => 'Schönstr.: Bauarbeiten zwischen Mirbachplatz und Paul-Oestreich-Str., Fahrbahn gesperrt',
-         'type' => 'handicap',
-         'until' => 1622498400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2512,7 +2485,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: also_indoor: traffic (H)
 #: last_checked: 2020-08-15 (mapillary)
 #: check_frequency: 60d
-#: next_check: 2020-08-27
+#: next_check: 2020-09-04
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8866,17075 8677,17154
 # REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
@@ -2548,7 +2521,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-08-25 (mapillary)
+#: last_checked: 2020-08-30
 #: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -2765,7 +2738,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX mittlerweile gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str.
 #: osm_watch: way id="26288668" version="15"
 #: osm_watch: way id="798056092" version="1"
-#: last_checked: 2020-08-15 vvv
+#: last_checked: 2020-08-30 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-09-30 vvv
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
@@ -2958,47 +2931,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
-       {
-         'accept_multi_feature_distance' => 3200,
-         'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/angebot-auf-der-baenschstrasse-wurde-verkuerzert_a268825
-#: by: https://www.berliner-woche.de/mitte/c-verkehr/fuenf-antraege-auf-temporaere-spielstrassen_a283528 ("bis Ende des Sommers" (2020))
-# REMOVED --- S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
-S1 - Bänschstr. zwischen Voigtstr. und Pettenkoferstr. Südseite	q4::temp::play 14798,12502 15005,12443
-S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp::play 13457,12505 13371,12694 13273,12902
-S3 - Gärtnerstr. zwischen Wühlischstr. und Grünberger Str.	q4::temp::play 14211,11552 14247,11681 14272,11775
-S4 - Krossener Str. zwischen Gabriel-Max-Str. und Seumestr.	q4::temp::play 14102,11715 14247,11681 14358,11656
-Gabriel-Max-Str.	q4::temp::play 14127,11811 14102,11715
-S5 - Lausitzer Platz um den gesamten Platz bis auf die Skalitzer Str.	q4::temp::play 12328,10442 12274,10612 12172,10585 12197,10494 12212,10440
-S5 - Waldemarstr. zwischen Lausitzer Platz und Manteuffelstr.	q4::temp::play 12172,10585 12142,10600 12056,10642
-S6w - Waldemarstr. zwischen Dresdener Str. und Legiendamm	q4::temp::play 11290,10972 11150,11030
-#: note: gesehen am 2020-07-26; in der Quelle falsch
-S6o - Waldemarstr. zwischen Leuschnerdamm und Adalbertstr.	q4::temp::play 11328,10957 11552,10863
-S7 - Wassertorstr. zwischen Prinzenstr. und Lobeckstr.	q4::temp::play 10685,10483 10484,10567
-S8 - Friedrichstr. zwischen Hedemannstr. und Franz-Klühs-Str.	q4::temp::play 9570,10566 9556,10666 9554,10695 9539,10820
-S9 - Arndtstr. zwischen Nostitzstr. und Schenkendorfstr.	q4::temp::play 9487,9209 9546,9198 9617,9185 9674,9179
-S9 - Chamissoplatz	q4::temp::play 9546,9198 9526,9104
-S9 - Chamissoplatz	q4::temp::play 9596,9092 9617,9185
-S10 - Böckhstr. zwischen Grimmstr. und Graefestr.	q4::temp::play 11175,9882 11197,9894 11411,9810
-#: note: sowohl Lachmannstr. und Boppstr. waren am 2020-07-26 offen
-S11 - Lachmannstr. zwischen Kottbusser Damm und Schönleinstr.; Boppstr. zw. Kottbusser Damm und Schönleinstr.; Schönleinstr. 7a-13	q4::temp::play 11745,9541 11594,9604 11541,9576 11560,9524 11785,9437
-S12 - Lübbener Str. zwischen Skalitzer Str. und Görlitzer Str.	q4::temp::play 12608,10294 12729,10515
-S13 - Cuvrystr. zwischen Görlitzer Str. und Schlesische Str.	q4::temp::play 13035,10076 13132,10239 13151,10276 13197,10355 13249,10445
-S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp::play 14442,11101 14468,11203
-#: note: gesehen am 2020-07-26: statt der Helmerdingstr. wurde die angrenzende Simplonstr. gesperrt
-Simplonstr. zwischen Helmerdingstr. und Matkowskystr	q4::temp::play 14468,11203 14531,11142
-S15 - Paul-Lincke-Ufer zwischen Glogauer Str. bis Ohlauer Str.	q4::temp::play 12591,9584 12439,9660 12286,9739 12116,9825
-S16 - Lilienthalstr. zwischen Bergmannstr. und Züllichauer Str.	q4::temp::play 10705,9234 10709,9192 10748,9054 10675,8940
-S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334,10527 11258,10682
-S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
-S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
-',
-         'from' => 1598673600,
-         'id' => 3228,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
-         'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
-         'type' => 'handicap',
-         'until' => 1598806800
-       },
+       undef,
        {
          'data' => '#: next_check_id: VIRCHOW-2020
 #: XXX während der Corona-Krise vvv
@@ -3070,27 +3003,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'type' => 'handicap',
          'until' => 1640966400
        },
-       {
-         'accept_multi_feature_distance' => 2500,
-         'data' => '#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.931493.php
-#: by: https://mein.berlin.de/projects/temporare-spielstrassen-in-neukolln/
-#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.963342.php (Verlängerung von drei der vier Spielstraßen bis zum 27. September 2020)
-#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.969860.php (Freiwillige gesucht)
-#: by: https://mein.berlin.de/projekte/temporare-spielstrassen/ (Ergebnis der Verlängerungen)
-# REMOVED --- #: priority: #A --- #: last_checked: 2020-07-30 --- #: next_check: 2020-08-10
-# REMOVED (wird nicht verlängert) --- Selkestr. zwischen Schierker Str. und Nogatstr. sowie der Schierker Platz im Körnerkiez	q4::temp::play 12751,7166 12741,7224 12722,7261
-# REMOVED (nur wenige Termine bis zum 27.9.2020 können übernommen werden -> lohnt wohl nicht) --- Hobrechtstr. zwischen Sanderstr. und Pflügerstr. im Reuterkiez	q4::temp::play 11917,9663 11934,9538
-# REMOVED (wird nicht verlängert) --- die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 13100,7626 13177,7644
-#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954979.php
-Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 13038,8394
-',
-         'from' => 1598673600,
-         'id' => 3241,
-         'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
-         'text' => 'Temporäre Spielstraßen in Neukölln: einige Straßen (Selkestr., Hobrechtstr., Karl-Marx-Platz, Anzengruberstr.) sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Ende September 2020 zwischen 13 und 19 Uhr',
-         'type' => 'handicap',
-         'until' => 1598806800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3299,16 +3212,21 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1604163600
        },
+       undef,
        {
-         'data' => '	2::temp 5652,11004 5542,11075
-	2::temp 6145,10975 6058,10988 5986,10976 5829,10964 5716,10978 5652,11004 5613,10963 5488,10978
+         'data' => '#: by: rbbtext (Endedatum)
+#: confirmed_by: srt
+#: XXX bleibt es beim Ende der Bauarbeiten am 5.10.2020?
+#: priority: #B
+#: last_checked: 2020-08-28
+#: next_check: 2020-10-05
+	q3::inwork 11652,13372 11589,13305 11578,13310 11526,13252
 ',
-         'from' => 1598454000,
-         'id' => 3271,
-         'source_id' => 'https://www.berliner-woche.de/charlottenburg/c-blaulicht/eu-aussenminister-treffen-budapester-strasse-gesperrt_a284857',
-         'text' => 'Budapester Str.: Sperrungen, evtl. sind auch Radfahrer betroffen, am 27. August 2020 von 17:00 bis 22:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1598558400
+         'from' => undef,
+         'id' => 3272,
+         'text' => 'Pauline-Staegemann-Str.: Bauarbeiten, Fahrbahn gesperrt, Bordsteine, voraussichtlich bis zum 05.10.2020',
+         'type' => 'handicap',
+         'until' => 1601913600
        }
      
 );

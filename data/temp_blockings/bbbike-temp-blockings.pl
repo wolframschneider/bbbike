@@ -1870,7 +1870,7 @@ EOF
        text  => 'Zimmermannstr. (Marzahn) Richtung Osten zwischen Köpenicker Str. und Lindenstr. Baustelle, Fahrtrichtung gesperrt (bis 30.05.2005)',
        type  => 'handicap',
        data  => <<EOF,
-	q4; 21088,9178 21205,9124 21312,9077 21349,9062
+	q4; 21088,9178 21205,9124 21312,9077 21354,9059
 EOF
      },
      { from  => 1123452000, # 2005-08-08 00:00
@@ -16253,7 +16253,7 @@ EOF
 #: tempex: su T09-T16
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-08-20
+#: last_checked: 2020-08-29
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -17917,7 +17917,9 @@ EOF
 (Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9362,7616 9281,7651
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9619,7930 9482,7827 9372,7798
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9562,7796 9372,7798 9281,7795
-(Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 10537,7257 11332,7305 11518,7314 11555,7314 11593,7314
+(Rundkurs/nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9522,7624 9471,7703 9372,7798
+(Rundkurs auf dem Flughafen Tempelhof - südliche Landebahn)	2::night 9545,7426 9592,7330 9712,7215
+(Südliche Landebahn)	2::night 9461,7190 9509,7195 9712,7215 10537,7257 11332,7305 11518,7314 11555,7314 11593,7314
 (Südliche Landebahn - Rundkurs)	2::night 11332,7305 11438,7371 11460,7447
 (Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 10204,7680 11279,7768 11388,7777 11430,7781 11460,7802
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
@@ -22705,7 +22707,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: ZIMMERMANNSTRBR-2015
 # REMOVED (keine Bauarbeiten mehr) --- #: next_check_id: ZIMMERMANNSTRBR-2014 --- #: last_checked: 2014-02-08 --- #: next_check: 2014-06-30 (bei VMZ entfernt!) --- #: add_fragezeichen: Sind die Bauarbeiten auf der Zimmermannstraßenbrücke und am Wuhlewanderweg mittlerweile beendet?
-# REMOVED	2::inwork 21383,9045 21363,9055 21349,9062
+# REMOVED	2::inwork 21383,9045 21363,9055 21354,9059
 	2::inwork 21467,9236 21383,9045
 EOF
      },
@@ -26529,7 +26531,7 @@ EOF
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
 # REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-08-20
+#: last_checked: 2020-08-28
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -27650,12 +27652,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1622498400, # Ende der Bauarbeiten für die *gesamte* Schönstr. --- 2021-06-01 00:00
+       until => 1598634704, # Ende der Bauarbeiten für die *gesamte* Schönstr. --- 2021-06-01 00:00
        text  => 'Schönstr.: Bauarbeiten zwischen Mirbachplatz und Paul-Oestreich-Str., Fahrbahn gesperrt',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php',
        data  => <<EOF,
-#: XXX nach den Bauarbeiten bessere Qualität
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/neues-verkehrskonzept-soll-belastungen-fuer-anwohner-der-schoenstrasse-verringern_a178715 (hier wird eine Einbahnstraße eingerichtet)
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.758375.php (Verzögerungen -> check_frequency erhöht)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/zum-zweiten-mal-wurden-die-bauarbeiten-auf-der-schoenstrasse-unterbrochen_a190561
@@ -27669,12 +27670,7 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.909888.php (nächster Bauabschnitt ab 27. April 2020)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/der-gehweg-ist-jetzt-fertig_a258259
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-auf-der-schoenstrasse-gehen-weiter_a261160
-#: XXX mittlerweile vom Mirbachplatz aus etwa 100m gut befahrbar (Fahrbahn bis auf die Deckschicht hergestellt), danach geht's nur auf dem Gehweg weiter
-#: note: laut fritz bis 16.08.2019
-#: also_indoor: traffic
-#: priority: #B
-#: last_checked: 2020-06-29
-#: check_frequency: 60d
+# REMOVED (zwar nicht komplett fertig, aber die Fahrbahn ist asphaltiert (bis auf oberste Deckschicht, aber keine Qualitätseinbußen deswegen) und kann passiert werden) --- #: XXX nach den Bauarbeiten bessere Qualität --- #: XXX mittlerweile vom Mirbachplatz aus etwa 100m gut befahrbar (Fahrbahn bis auf die Deckschicht hergestellt), danach geht's nur auf dem Gehweg weiter --- #: note: laut fritz bis 16.08.2019 --- #: also_indoor: traffic --- #: priority: #B --- #: last_checked: 2020-06-29 --- #: check_frequency: 60d
 	q4::inwork 13391,16436 13630,16629
 EOF
      },
@@ -29225,7 +29221,7 @@ EOF
 #: also_indoor: traffic (H)
 #: last_checked: 2020-08-15 (mapillary)
 #: check_frequency: 60d
-#: next_check: 2020-08-27
+#: next_check: 2020-09-04
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8866,17075 8677,17154
 # REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
@@ -29318,7 +29314,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-08-25 (mapillary)
+#: last_checked: 2020-08-30
 #: check_frequency: 14d
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -30053,7 +30049,7 @@ EOF
 #: XXX mittlerweile gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str.
 #: osm_watch: way id="26288668" version="15"
 #: osm_watch: way id="798056092" version="1"
-#: last_checked: 2020-08-15 vvv
+#: last_checked: 2020-08-30 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-09-30 vvv
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
@@ -31175,6 +31171,20 @@ EOF
        data  => <<EOF,
 	2::temp 5652,11004 5542,11075
 	2::temp 6145,10975 6058,10988 5986,10976 5829,10964 5716,10978 5652,11004 5613,10963 5488,10978
+EOF
+     },
+     { from  => undef,
+       until => $isodate2epoch->("2020-10-05 18:00:00"),
+       text  => 'Pauline-Staegemann-Str.: Bauarbeiten, Fahrbahn gesperrt, Bordsteine, voraussichtlich bis zum 05.10.2020',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: rbbtext (Endedatum)
+#: confirmed_by: srt
+#: XXX bleibt es beim Ende der Bauarbeiten am 5.10.2020?
+#: priority: #B
+#: last_checked: 2020-08-28
+#: next_check: 2020-10-05
+	q3::inwork 11652,13372 11589,13305 11578,13310 11526,13252
 EOF
      },
     );

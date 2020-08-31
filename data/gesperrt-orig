@@ -359,7 +359,7 @@ Mariabrunner Weg	1 6841,17781 6909,17796 6985,17812
 #: XXX evtl wird die Einbahnstraße für Radfahrer geöffnet
 #: osm_watch: way id="5110895" version="6"
 #: priority: #B
-#: last_checked: 2020-08-20 (mapillary)
+#: last_checked: 2020-08-29
 #: check_frequency: 60d
 Gustav-Müller-Str.	1 7643,8634 7642,8815
 Gustav-Müller-Platz	1 7644,8560 7606,8598 7643,8634 7682,8598 7644,8560
@@ -1213,7 +1213,7 @@ Rosenfelder Str./Ring	1 17480,12003 17429,12030 17384,11976
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2017-03-16-prot-fahrratsitzung.pdf
 #: XXX evtl wird die Straße für Radfahrer geöffnet
 #: osm_watch: way id="31540773" version="14"
-#: last_checked: 2020-02-16 (mapillary)
+#: last_checked: 2020-08-29
 #: check_frequency: 180d
 Fritz-Werner-Str.	1s:q3 9105,2779 9081,2594
 # 
@@ -1242,7 +1242,7 @@ Waldstr.	1 9982,19413 9942,19505
 Waldstr.	1 9961,19513 10002,19418
 #: next_check_id: UBAHN1-2020
 #: XXX mittlerweile wegen Hochbahnarbeiten komplett gesperrt
-#: last_checked: 2020-08-25
+#: last_checked: 2020-08-29
 #: check_frequency: 60d
 #: next_check: 2021-04-01
 #(Schlesisches Tor - Oppelner Str.)	1 12978,10581 12930,10621
@@ -1956,10 +1956,10 @@ Karl-Marx-Allee: Mittelstreifen	3nocross 11226,12945 11289,12908 11589,12768 116
 #: note: wobei die Bordsteine auf der Hasenheide-Seite abgeflacht sind, aber auf der Freibad-Seite ist es weiterhin unbequem
 Columbiadamm: unbequem zu überqueren (Bordsteine)	3nocross 10796,8498 10911,8457 11225,8350 11266,8336
 #: by: Axel Schumacher:
-Wolfensteindamm: Mittelstreifen	3nocross 4807,5131 4766,5208 4745,5283
-# REMOVED (neue Ampel) --- #: by: Wolfgang Schmidt: vvv --- Birkbuschstr.: unbequem zu passieren	3 4829,5173 4807,5131 4772,5069 --- Birkbuschstr.: unbequem zu passieren	3 4772,5069 4807,5131 4827,5140 4829,5173 --- Birkbuschstr.: unbequem zu passieren, aber Ausweichen auf linken Gehweg möglich	3 4829,5173 4807,5131 4846,5069 --- #: by: ^^^
+Wolfensteindamm: Mittelstreifen	3nocross 4796,5129 4794,5161 4766,5208 4745,5283
+# REMOVED (neue Ampel) --- #: by: Wolfgang Schmidt: vvv --- Birkbuschstr.: unbequem zu passieren	3 4829,5173 4796,5129 4772,5069 --- Birkbuschstr.: unbequem zu passieren	3 4772,5069 4792,5097 4796,5129 4827,5140 4829,5173 --- Birkbuschstr.: unbequem zu passieren, aber Ausweichen auf linken Gehweg möglich	3 4829,5173 4796,5129 4822,5114 4846,5069 --- #: by: ^^^
 #: by: Kai Brueggemann [AM] vvv
-Birkbuschstr.: Metallgitter auf dem Mittelstreifen	3nocross 4807,5131 4846,5069 4879,5017
+Birkbuschstr.: Metallgitter auf dem Mittelstreifen	3nocross 4796,5129 4822,5114 4846,5069 4879,5017
 Linksabbiegen in den Wolfensteindamm gefährlich/unbequem	3nocross 4772,5069 4692,4997 4675,4983 4517,4853
 #: by ^^^
 Hauptstr.: Mittelstreifen	3nocross 6687,8385 6765,8480 6912,8617 6989,8687
@@ -2827,7 +2827,7 @@ Drängelgitter	BNP:3::trailer=10 20425,-17
 Drängelgitter	BNP:3::trailer=no 20345,398
 Drängelgitter	BNP:3::trailer=10 18059,14838
 Drängelgitter	BNP:3::trailer=10 18170,14890
-Schranke	BNP:1::trailer=3 15568,14901
+# REMOVED (keine Schranke (mehr?), nur eine Pollerreihe) --- Schranke	BNP:1::trailer=3 15568,14901
 Drängelgitter	BNP:3::trailer=10 19974,-341
 Drängelgitter	BNP:3::trailer=10 19975,-320
 Schranke (lichte Breite ca. 100cm)	BNP:2::trailer=7 19140,1439
@@ -3150,7 +3150,7 @@ Drängelgitter	BNP:3::trailer=10 1035,14996
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.971390.php (Abschluss der Bauarbeiten: erste Jahreshälfte 2022)
-#: last_checked: 2020-08-22
+#: last_checked: 2020-08-30
 (Rudolfplatz, Park): Bauarbeiten, komplett gesperrt	2::inwork 14026,10869 13896,10851
 # 
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954987.php
@@ -3329,12 +3329,13 @@ Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwor
 # 
 # REMOVED (beendet, etwas besser) --- #: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität des Wegs danach besser sein? --- #: last_checked: 2019-12-29 --- #: check_frequency: 21d --- (Stresemannstr. - Wilhelmstr.): Bauarbeiten, komplett gesperrt	2::inwork 9215,10607 9368,10641
 # 
-#: XXX außerdem prüfen, ob der Straßenzug Kronprinzenbrücke - Heinrich-von-Gagern-Str. dauerhaft strcat=N bleibt; bleibt die Ampelanlage oder wird's nur eine abgespeckte Fußgängerampel geben?
+#: XXX außerdem prüfen, ob der Straßenzug Kronprinzenbrücke - Heinrich-von-Gagern-Str. dauerhaft strcat=N bleibt; bleibt die Ampelanlage oder wird's nur eine abgespeckte Fußgängerampel geben? neuer Name: Annemarie-Renger-Str. (fehlt in Berlin.coords.data)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10028 (Vorschlag: Benennung nach Dr. Annemarie Renger)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103683434673/83434673/00470125/25-Anlagen/01/FlurkartezumAusschussantragBenennungnachDrAnne.pdf
 #: by: https://www.deutsches-architekturforum.de/thread/3691-regierungsviertel/?postID=664055#post664055 (noch nicht ganz fertig)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_36_4569_4620_online.pdf (Straßenbenennung)
 #: source_id: 2147344959 (bis 30.09.2020)
-#: osm_watch: way id="649959246" version="4"
+#: osm_watch: way id="649959246" version="5"
 #: osm_watch: way id="743628048" version="3"
 #: priority: #A
 #: last_checked: 2020-08-02 (daf)
@@ -3346,7 +3347,7 @@ Forumsquerung: Bauarbeiten, komplett gesperrt	2::inwork 8206,12757 8207,12606
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_49_7429_7632_online.pdf (Einziehung von Straßenland --- vielleicht der alte Sackgassenhammer?)
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="1"
-#: last_checked: 2020-08-25
+#: last_checked: 2020-08-29
 #: check_frequency: 14d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3479,7 +3480,7 @@ Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht möglich	2::inwork 2
 # 
 #: XXX wann sind die Bauarbeiten beendet?
 #: priority: #C
-#: last_checked: 2020-08-25
+#: last_checked: 2020-08-29
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3506,7 +3507,7 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 #: XXX Wann wird sie wieder eröffnet?
 #: source_id: 2147344261 (bis Ende 2020)
 #: source_id: 2147344262
-#: last_checked: 2020-02-15
+#: last_checked: 2020-08-30
 #: next_check: 2022-12-31
 #: valid: 20190603-20221231
 Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
@@ -4048,7 +4049,7 @@ Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552
 # REMOVED (Alexandersteg, nicht gesperrt) --- #: osm_watch: way id="27178371" version="11"
 #: osm_watch: way id="23099023" version="11"
 #: osm_watch: way id="23099024" version="8"
-#: osm_watch: way id="103531998" version="6"
+#: osm_watch: way id="103531998" version="7"
 #: last_checked: 2020-06-26 (mapillary)
 #: next_check: 2020-12-15
 # REMOVED (hier mittlerweile offen) --- Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645
@@ -4082,9 +4083,10 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://www.rbb24.de/kultur/thema/2020/coronavirus/beitraege_neu/2020/05/humboldt-forum-eroeffnung-verschoben-berlin.html (Teileröffnung Ende 2020?)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/humboldt-forum-wird-nicht-wie-geplant-im-september-eroeffnet_a266869
 #: by: https://www.berliner-woche.de/mitte/c-bauen/humboldt-forum-will-im-dezember-oeffnen_a278947 (Dezember 2020)
-#: last_checked: 2020-07-21 (mapillary)
+#: by: https://abendblatt-berlin.de/2020/08/30/humboldt-forum-soll-mitte-dezember-eroeffnen/ (Mitte Dezmber 2020)
+#: last_checked: 2020-08-30 (webcam)
 #: check_frequency: 60d
-#: next_check: 2020-12-01
+#: next_check: 2020-12-15
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
