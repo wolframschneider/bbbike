@@ -906,7 +906,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist.")
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2020-08-24
+#: last_checked: 2020-08-31
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -2535,7 +2535,7 @@ Taunusstr. (Lichtenrade): Asphalt	Q0 11578,-1220 11551,-1114 11506,-965 11503,-9
 #: add_fragezeichen: Ist die gesamte Goltzstraße mittlerweile asphaltiert?
 #: priority: #B
 #: last_checked: 2020-06-21
-#: next_check: 2020-08-31
+#: next_check: 2020-09-01
 Goltzstr.: schlechtes Kopfsteinpflaster	Q3 10642,-2371 10563,-2432 10454,-2520
 #: corrected_by: osm, baustellen-doku.info (schlechtes Kopfsteinpflaster, Q3 -> ..., neu gemacht)
 Goltzstr.: Asphalt	Q0 10454,-2520 10394,-2567 10382,-2598
@@ -3113,18 +3113,9 @@ Mauerweg: wassergebundene Decke	Q1 11922,586 11956,599
 Mauerweg: Verbundsteinpflaster	Q1 11956,599 12014,620
 Mauerweg: wassergebundene Decke	Q1 12014,620 12246,706
 Mauerweg: Asphalt	Q0 12246,706 12557,799 12984,1011
-#: XXX Geh- und Radweg / Verbindungsstück für den Berliner Mauerweg (ist dieser Abschnitt gemeint?) --- laut osm ist die Asphaltierung bereits passiert
-#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2019-2022)
-#: by: https://api.fixmyberlin.de/api/plannings/83 (Fertigstellung August 2019, + modaler Filter)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_28_4117_4264_online.pdf (ist dieser Abschnitt bei der Widmung gemeint?)
-#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.953546.php (wird asphaltiert und auf 3,5 bis 4m ausgebaut; Nutzung ab Frühling 2021 möglich)
-#: by: https://www.berliner-woche.de/buckow/c-verkehr/lueckenschluss-auf-dem-mauerweg_a279562
-# REMOVED --- #: note: man könnte auch auf der parallel verlaufenden Straße in Brandenburg fahren, sehr guter Asphalt --- leider gibt es keine barrierefreie Verbindung zur Ringslebenstr.
-#: osm_watch: way id="631641753" version="6"
-#: last_checked: 2020-04-18
-# REMOVED --- #: check_frequency: 90d
-#: next_check: 2020-08-28
-#: corrected_by: osm (unbefestigter Weg, Q2 -> ...)
+# REMOVED --- #: XXX Geh- und Radweg / Verbindungsstück für den Berliner Mauerweg (ist dieser Abschnitt gemeint?) --- laut osm ist die Asphaltierung bereits passiert --- #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2019-2022) --- #: by: https://api.fixmyberlin.de/api/plannings/83 (Fertigstellung August 2019, + modaler Filter) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_28_4117_4264_online.pdf (ist dieser Abschnitt bei der Widmung gemeint?) --- #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.953546.php (wird asphaltiert und auf 3,5 bis 4m ausgebaut; Nutzung ab Frühling 2021 möglich) --- #: by: https://www.berliner-woche.de/buckow/c-verkehr/lueckenschluss-auf-dem-mauerweg_a279562 --- #: note: man könnte auch auf der parallel verlaufenden Straße in Brandenburg fahren, sehr guter Asphalt --- leider gibt es keine barrierefreie Verbindung zur Ringslebenstr. --- #: osm_watch: way id="631641753" version="6" --- #: last_checked: 2020-04-18 --- #: check_frequency: 90d --- #: next_check: 2020-08-28
+#: corrected_by: osm (unbefestigter Weg, Q2 -> ..., neu gemacht)
+#: confirmed_by: mapillary
 Ringslebenstr.: Asphalt	Q0 13805,1435 13850,1461
 Mauerweg: Asphalt	Q0 14430,1731 14626,1768 14682,1782 14716,1772 14755,1738 14858,1700 14876,1686 15200,737 15333,378 15423,150 15480,6 15538,-30 15571,-93
 #: by: rj
@@ -6423,7 +6414,7 @@ Bohrauer Pfad: Beton	Q0- 20981,4628 20827,4655 20716,4691
 (Gartenweg [Kolonie Wendenheide]): unbefestigte Straße, zweispurig	Q2 20850,4225 20716,4549 20684,4596
 Alice-Archenhold-Weg: Beton	Q1 19696,5456 19715,5403
 Verbindungsweg Carlsgarten - Wasserwerk Wuhlheide: wassergebundene Decke	Q1 19456,7956 19468,7918 19495,7874 19540,7842 19602,7753
-#: osm_watch: way id="156650954" version="13"
+#: osm_watch: way id="156650954" version="14"
 #: XXX wird hier auch eine wassergebundene Decke entstehen?
 #: last_checked: 2020-08-21 (mapillary)
 #: check_frequency: 180d
@@ -10723,9 +10714,9 @@ In den Leonorengärten: Asphalt	Q0 6295,4017 6363,4047 6428,4076 6493,4105
 In den Leonorengärten: Verbundsteinpflaster	Q1+ 6428,4076 6452,4024 6517,4051 6493,4105
 Westphalweg: Asphalt, einige Schlaglöcher	Q0- 9310,4407 9428,4419 9562,4412 9668,4403
 #: XXX verschwinden die Schlaglöcher nach den Bauarbeiten?
-#: source_id: 2147345133 (bis 31.8.2020)
+#: source_id: 2147345133 (bis 21.1.2021)
 #: last_checked: 2020-08-29
-# REMOVED --- #: next_check: 2020-08-31
+#: next_check: 2021-01-21
 Westphalweg: Asphalt, einige Schlaglöcher	Q0- 9668,4403 9877,4386
 Westphalweg: Asphalt	Q0 9877,4386 9995,4375
 (Uranusweg - U-Bhf. Scharnweberstr.): Verbundsteinpflaster	Q1- 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
@@ -11704,6 +11695,7 @@ Heerstr.: holprige, enge Radwege	Q1- -2317,11254 -2413,11283 -2476,11301 -2851,1
 (Parkweg im Zuge der Furkastr.): wassergebundene Decke	Q1- 10322,2815 10318,2839 10329,2882
 Andlauer Weg: Beton	Q0- 9869,4271 9877,4386
 (Otto-Rosenberg-Str./Bitterfelder Str. - ...): Beton (zweispurig)	Q0- 19565,16176 19525,16234
+(Alexandrinenstr. - Alte Jakobstr.): Asphalt	Q0 10736,11212 10555,11475
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv

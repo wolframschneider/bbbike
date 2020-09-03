@@ -7062,7 +7062,7 @@ EOF
        text  => 'B 183 Dresdener Str. Bahnübergang in der OL Bad Liebenwerda Gleis- u. Tiefbauarbeiten Vollsperrung 19.01.2007-22.01.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 13828,-98986 13053,-99051 12749,-99054
+	2::inwork 13795,-99012 13578,-98977 13053,-99051 12749,-99054
 EOF
      },
      { from  => 1169506800, # 2007-01-23 00:00
@@ -12348,7 +12348,7 @@ EOF
        text  => 'B 101 OD Elsterwerda, zw. Bahnunterführ.u. Berliner Str. Deckeneinbau Vollsperrung 09.08.2008-10.08.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 18928,-103699 18887,-104083
+	q4::inwork 19033,-103700 18887,-104083
 EOF
      },
      { from  => 1218232800, # 2008-08-09 00:00
@@ -12429,7 +12429,7 @@ EOF
        text  => 'B 273 A 11 - Wandlitz zw. Abzw. Bernau und Wandlitz Rückau u. Erneuerung B273 Vollsperrung 18.08.2008-30.06.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 16953,35907 16653,35993 16132,36512 15491,37176 15387,37252 15201,37349 14948,37315 14703,37197 14470,37191 13546,37474
+	2::inwork 16953,35907 16653,35993 16424,36152 16132,36512 15491,37176 15387,37252 15201,37349 14948,37315 14703,37197 14470,37191 13546,37474
 EOF
      },
      { from  => 1218924000, # 2008-08-17 00:00
@@ -12576,7 +12576,7 @@ EOF
        text  => 'B 101 OD Elsterwerda, zw. Bahnunterführ.u. Heidaer Str.. Deckenerneuerung Vollsperrung 29.08.2008-31.08.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 19074,-103082 18928,-103699 18887,-104083
+	q4::inwork 19167,-103228 19033,-103700 18887,-104083
 EOF
      },
      { from  => 1219788000, # 2008-08-27 00:00
@@ -15274,7 +15274,7 @@ EOF
        text  => 'B 246 zw. Glienicke und Wendisch Rietz Deckenerneuerung Vollsperrung 10.08.2009-28.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 53843,-21346 54296,-20909 56184,-21060 57404,-20885
+	2::inwork 53843,-21346 54296,-20909 56184,-21060 56578,-20958 56776,-20975 57404,-20885
 EOF
      },
      { from  => 1249768800, # 2009-08-09 00:00
@@ -22655,7 +22655,7 @@ EOF
 #: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-08-13
+#: last_checked: 2020-09-01
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -26927,7 +26927,7 @@ EOF
 #: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-08-13 vvv
+#: last_checked: 2020-09-01 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -28473,7 +28473,7 @@ EOF
 EOF
      },
      { from  => 1541444153, # 2018-11-05 19:55
-       until => undef, # $isodate2epoch->("2020-06-30 18:00:00"),
+       until => 1598980194, # undef, # $isodate2epoch->("2020-06-30 18:00:00"),
        text  => 'Schiffbauerdamm: Bauarbeiten in Höhe Bertolt-Brecht-Platz, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
@@ -28481,21 +28481,11 @@ EOF
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.828319.php
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/schiffbauerdammbruecke/index.shtml
 #: by: https://www.berliner-woche.de/mitte/c-bauen/biergaerten-am-schiffbauerdamm-werden-planmaessig-eroeffnet_a253363 (bis Ende Juni 2020)
-#: XXX wann werden die Bauarbeiten beendet? vvv
-#: note: laut fritz bis 31.03.2020
-#: osm_watch: way id="705182550" version="1"
-#: osm_watch: way id="705182551" version="1"
-#: also_indoor: traffic (G,H) vvv
-#: last_checked: 2020-08-13 vvv
-#: check_frequency: 21d vvv
-#: source_id: 2147344480 (mittlerweile ausgelaufen)
+# REMOVED (beendet) --- #: XXX wann werden die Bauarbeiten beendet? vvv --- #: note: laut fritz bis 31.03.2020 --- #: osm_watch: way id="705182550" version="1" --- #: osm_watch: way id="705182551" version="1"--- #: also_indoor: traffic (G,H) vvv --- #: last_checked: 2020-08-13 vvv --- #: check_frequency: 21d vvv --- #: source_id: 2147344480 (mittlerweile ausgelaufen)
 	q3::inwork 9102,12790 9193,12875
 	q4+::inwork 9193,12875 9239,12923
 # REMOVED (hier vermutlich nicht mehr?) ---	q3::inwork 9160,12932 9193,12875
-#: check_frequency ^^^
-#: last_checked ^^^^
-#: also_indoor ^^^
-#: XXX ^^^
+# REMOVED --- #: check_frequency ^^^ --- #: last_checked ^^^^ --- #: also_indoor ^^^ --- #: XXX ^^^
 EOF
      },
      { from  => 1541595600, # 2018-11-07 14:00
@@ -29984,13 +29974,15 @@ EOF
 	2::inwork 21558,12073 21562,12088 21564,12097
 EOF
      },
-     { from  => 1571266200, # 2019-10-17 00:50
-       until => $isodate2epoch->("2019-10-20 23:59:59"), # 1571522399, # 2019-10-19 23:59
-       text  => 'Unter den Linden: zwischen Charlottenstr. und Spandauer Str. voraussichtlich gesperrt, Festival of Lights, 18. Oktober 2019 bis 20. Oktober 2019 jeweils zwischen 19:00 und 24:00 Uhr',
+     { from  => $isodate2epoch->("2020-09-04 08:00:00"), # 1571266200, # 2019-10-17 00:50
+       until => $isodate2epoch->("2020-09-06 23:00:00"), # 1571522399, # 2019-10-19 23:59
+       text  => 'Unter den Linden: zwischen Charlottenstr. und Spandauer Str. wegen einer Veranstaltung (Staatsoper für alle) voraussichtlich gesperrt, 5.9.2020 bis 6.9.2020 jeweils zwischen 17:00 und 23:00 Uhr',
        type  => 'gesperrt',
-       source_id => 'https://twitter.com/VIZ_Berlin/status/1183048455884816386',
+       #source_id => 'https://twitter.com/VIZ_Berlin/status/1183048455884816386',
        data  => <<EOF,
 #: also_indoor: traffic (G,H)
+#: source_id: 2147344351
+#: source_id: 2147344352
 	2::temp 9730,12238 9713,12392 9771,12400 9780,12401 9858,12410 9934,12420 9984,12426 10024,12431 10063,12438 10155,12494 10176,12506 10243,12546 10300,12587 10352,12627 10431,12709
 	2::temp 9475,12365 9613,12381 9664,12387 9713,12392
 	2::temp 9664,12387 9680,12232
@@ -30381,8 +30373,8 @@ EOF
 EOF
      },
      { from  => 1584255600, # 2020-03-15 08:00
-       until => $isodate2epoch->("2020-08-31 17:00:00"), # 1596466800, # 2020-08-03 17:00
-       text  => 'Friedrichsruher Str.: Bauarbeiten zwischen Bismarckstr. und Lauenburger Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 31.08.2020 17:00 Uhr',
+       until => $isodate2epoch->("2020-09-01 17:00:00"), # 1596466800, # 2020-08-03 17:00
+       text  => 'Friedrichsruher Str.: Bauarbeiten zwischen Bismarckstr. und Lauenburger Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 01.09.2020 17:00 Uhr',
        type  => 'handicap',
        source_id => '2147345599',
        data  => <<EOF,
@@ -30392,8 +30384,8 @@ EOF
 EOF
      },
      { from  => 1584255600, # 2020-03-15 08:00
-       until => $isodate2epoch->("2020-08-31 17:00:00"), # 1596466800, # 2020-08-03 17:00
-       text  => 'Lauenburger Str.: Bauarbeiten zwischen Bergstr. und Friedrichsruher Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 31.08.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-09-01 17:00:00"), # 1596466800, # 2020-08-03 17:00
+       text  => 'Lauenburger Str.: Bauarbeiten zwischen Bergstr. und Friedrichsruher Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 01.09.2020 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147345598',
        data  => <<EOF,
@@ -30574,7 +30566,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-08-24
+#: last_checked: 2020-08-31
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30723,8 +30715,8 @@ EOF
 EOF
      },
      { from  => 1588490580, # 2020-05-03 09:23
-       until => 1598886000, # 2020-08-31 17:00
-       text  => 'Kameruner Str.: zwischen Müllerstr. und Togoer Str.: Bauarbeiten, Fahrbahn gesperrt, vom 04.05.2020 09:23 Uhr bis 31.08.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-10-12 17:00:00"), # 1598886000, # 2020-08-31 17:00
+       text  => 'Kameruner Str.: zwischen Müllerstr. und Togoer Str.: Bauarbeiten, Fahrbahn gesperrt, vom 04.05.2020 09:23 Uhr bis 12.10.2020 17:00 Uhr',
        type  => 'handicap',
        source_id => '2147345842',
        data  => <<EOF,
@@ -30877,8 +30869,8 @@ EOF
 EOF
      },
      { from  => 1592690400, # 2020-06-21 00:00
-       until => $isodate2epoch->("2020-08-31 17:00:00"), # 1597442399, # 2020-08-14 23:59
-       text  => 'Goltzstr.: Bauarbeiten zwischen Briesingstr. und Bahnhofstr., Fahrbahn gesperrt, bis 31. August 2020',
+       until => $isodate2epoch->("2020-09-01 17:00:00"), # 1597442399, # 2020-08-14 23:59
+       text  => 'Goltzstr.: Bauarbeiten zwischen Briesingstr. und Bahnhofstr., Fahrbahn gesperrt, bis 01. September 2020',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.944673.php',
        data  => <<EOF,
