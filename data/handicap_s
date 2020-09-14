@@ -24,7 +24,6 @@ Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 96
 Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, Gehweg explizit f¸r Radfahrer verboten	q4::inwork 8737,12098 8783,11959
 Jerusalemer Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9945,11371 9936,11469
 Sch¸tzenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
-Zimmerstr.: Fahrbahn gesperrt	q3::inwork 9945,11371 10072,11384
 (provisorischer Zugang zur neuen Alexandrinenstr.): eng, Fuﬂg‰nger	q3::inwork 10678,11172 10690,11180
 Stallschreiberstr./Alexandrinenstr.: Umbau der Kreuzung	q3::inwork 10824,11010 10678,11172
 Stallschreiberstr./Alexandrinenstr.: Umbau der Kreuzung	q3::inwork 10678,11172 10593,11120
@@ -184,12 +183,13 @@ Uferweg an den Treptowers: enger und kurviger Weg	q3 14467,9887 14459,9897 14464
 Denewitzstr.: kombinierter Fuﬂ- und Radweg	q1 8058,10306 7947,10155
 Linienstr.: einige Fuﬂg‰nger	q1 10709,13629 10740,13621
 Linienstr.: Gehweg	q2 11104,13456 11131,13455
-Bˆcklerpark: gemeinsamer Fuﬂ- und Radweg	q2 10885,10045 10803,10067 10723,10088 10521,10126
-Bˆcklerpark: enge Kurven, manchmal Fuﬂg‰nger auf dem Radweg	q3 10967,10092 10917,10068 10885,10045
+Bˆcklerpark: gemeinsamer Fuﬂ- und Radweg	q2 10879,10048 10803,10067 10723,10088 10521,10126
+Bˆcklerpark: enge Kurven, manchmal Fuﬂg‰nger auf dem Radweg	q3 10967,10092 10917,10068 10879,10048
 Bˆcklerpark: enge Kurven, Fuﬂg‰nger	q3 10923,10113 10917,10068
 Bˆcklerpark: Fuﬂg‰nger	q2 10917,10068 10863,10082 10802,10111 10794,10201 10690,10247 10580,10256
 (Bˆcklerpark, Uferweg - nˆrdlicher Weg): Fuﬂg‰nger	q2 10803,10067 10802,10111
 Bˆcklerpark: Fuﬂg‰nger	q2 10690,10247 10769,10249
+(Bˆcklerpark, Uferweg): Fuﬂg‰nger	q2 10979,10017 10969,10015 10948,10016 10879,10037 10879,10048
 Am Landwehrkanal: Fuﬂg‰nger	q1 10521,10126 10362,10120 10226,10145 10083,10192
 vor dem Kanzleramt: Fuﬂg‰nger, manchmal gesperrt	q1 8120,12756 8122,12603
 Am Stadtpark: Parkweg mit Fuﬂg‰ngern	q1 15395,12762 15424,12732 15433,12686 15454,12519
@@ -472,8 +472,9 @@ Egidysteg: eng, Fuﬂg‰nger	q3 3094,22216 3134,22153
 (Weg am Tegeler Flieﬂ): Fuﬂg‰nger	q1 5621,23966 5409,23816 5350,23717 5312,23653 5214,23420 5242,23156 5232,23139 5206,23103 5100,23045 5037,23036 4993,23020 4944,22978 4876,22955 4824,22907 4750,22915 4697,22901 4613,22928
 (Weg am Tegeler Flieﬂ): Fuﬂg‰nger	q1 4596,22955 4543,22964 4459,22931 4407,22897 4332,22916 4309,22922 4158,22896
 (Weg am Tegeler Flieﬂ): Fuﬂg‰nger, eng, Radfahren nicht erlaubt	q3 5867,24056 5818,24058 5690,24031 5647,24006 5628,23977 5621,23966
-Naturlehrpfad: Fuﬂg‰nger, eng	q3 5621,23966 5534,24005 5408,24068 5363,24109
-Naturlehrpfad: Fuﬂg‰nger, eng	q3 5363,24109 5264,24186 5182,24183
+Naturlehrpfad: Fuﬂg‰nger	q1 5676,23971 5621,23966 5545,23993
+Naturlehrpfad: Fuﬂg‰nger, eng	q3 5545,23993 5408,24068 5363,24109
+Naturlehrpfad: Fuﬂg‰nger	q1 5363,24109 5253,24190 5182,24183
 (Schildower Weg): Fuﬂg‰nger	q1 7877,24037 7675,23968 7615,23884 7571,23885 7339,23782 7312,23775 7185,23749
 (Mehrower Allee, Unterf¸hrung zum S-Bahnhof): Rampe, Fuﬂg‰nger	q4 20543,17075 20533,17051 20439,17103
 Altvaterstr.: Fuﬂg‰nger, Bordsteine	q2 -3117,3107 -3170,3070 -3223,3034
@@ -1269,7 +1270,7 @@ Dievenowstr.: Bordstein, Gehweg	q2 3202,7121 3193,7059
 (Armenische Str. - Schwyzer Str., Schillerpark): Fuﬂg‰nger	q1 7144,16781 7131,16790 7115,16827 7097,16915 7094,16938
 (Armenische Str. - Schwyzer Str., Schillerpark): Fuﬂg‰nger	q1 7097,16915 7064,16943
 (Armenische Str. - Schwyzer Str., Schillerpark): Fuﬂg‰nger, schmal, Bordstein	q2 7064,16943 7002,17027
-(Schwyzer Str. - Aroser Allee): Fuﬂg‰nger, Bordstein	q2 7002,17027 6956,17087
+(Schwyzer Str. - Aroser Allee): Fuﬂg‰nger, Bordsteine	q3 7002,17027 6956,17087
 Koseler Weg: einige Fuﬂg‰nger, Bordstein	q2 9850,6135 9679,6160
 (Landsberger Allee - Zechliner Str.): Fuﬂg‰nger, Bordstein	q2 16590,14386 16544,14593
 (Krautstr./Blumenstr. - Strausberger Platz): Fuﬂg‰nger, Hausdurchfahrt	q2 12125,12490 12134,12540
@@ -1525,7 +1526,7 @@ Wilhelmine-Gemberg-Weg: einige Fuﬂg‰nger	q1 11767,11662 11821,11733
 (Zufahrt Debis-Parkhaus): Parkhausverkehr, einige Kurven	q1 8430,10710 8424,10703 8367,10745 8350,10662 8335,10518 8350,10499 8384,10507
 Iranische Str.: einige Fuﬂg‰nger	q1 7843,16524 7713,16557 7447,16613
 (Nennhauser Damm - Am alten Gaswerk): einige Fuﬂg‰nger	q1 -8043,13464 -8136,13542
-(Mauerweg Forst Spandau): sehr eng	q4 -7032,19431 -7069,19436 -7397,19289
+(Mauerweg Forst Spandau): eng	q3 -7032,19431 -7069,19436 -7397,19289
 (Glindowseestr. - Plauer-See-Str.): einige Fuﬂg‰nger	q1 -1652,16721 -1666,16652 -1685,16583 -1699,16513 -1716,16447 -1734,16375
 (Rˆddelinseeweg - Kindelseeweg): einige Fuﬂg‰nger	q1 -1705,16515 -1699,16513 -1661,16506
 (Wolzenseeweg - Wittweseeweg): einige Fuﬂg‰nger	q1 -1721,16448 -1716,16447 -1680,16441
@@ -1900,7 +1901,7 @@ Am Betriebsbahnhof Schˆneweide: Steigung	q3; 17775,5392 17822,5409
 Am Betriebsbahnhof Schˆneweide: Gef‰lle	q3; 17822,5409 17775,5392
 (Gr¸ne Trift - Salvador-Allende-Str.): schmaler Trampelpfad, flache Bordsteine	q3 23257,3884 23368,3894
 Malchower Teichweg: enger Pfad	q3 16074,19436 16081,19656 16082,19754
-(Fuﬂg‰ngerbr¸cke Betriebsbahnhof Schˆneweide): einige Fuﬂg‰nger	q2 18725,4715 18739,4728 18730,4735 18684,4690 18642,4654 18636,4660 18621,4675 18662,4681
+(Fuﬂg‰ngerbr¸cke Betriebsbahnhof Schˆneweide): einige Fuﬂg‰nger	q2 18725,4715 18739,4728 18730,4735 18684,4690 18642,4654 18636,4660 18621,4675 18649,4678
 (Lˆwenbrucher Weg - Lortzingplatz): eng, einige Fuﬂg‰nger	q3 10107,-3063 10067,-2952
 (Lˆwenbrucher Weg - Lortzingplatz): einige Fuﬂg‰nger	q1 10067,-2952 10058,-2924 10085,-2810
 (Wittelsbacherstr. - Mauerweg): enger Pfad	q3 12268,-2139 12331,-2108
@@ -2008,6 +2009,13 @@ Waldbacher-Weg-Br¸cke: Fuﬂg‰nger, Rampen	q3 20363,12057 20385,12022 20377,12057 
 (Parkweg im Zuge der Furkastr.): Fuﬂg‰nger, Bordstein	q3 10318,2839 10329,2882
 (Weg am Marzahn-Hohenschˆnhauser Grenzgraben): Bordsteine	q3 19313,16130 19361,16145 19427,16179
 (Alexandrinenstr. - Alte Jakobstr.): einige Fuﬂg‰nger	q1 10736,11212 10555,11475
+Wilhelm-Zermin-Weg: einige Fuﬂg‰nger	q1 9279,14495 9338,14587
+(Naumburger Ring - Weiﬂenfelser Str.): Fuﬂg‰nger, schmaler Weg	q3 24509,14984 24522,14975 24720,15047
+(Naumburger Ring - Weiﬂenfelser Str.): Fuﬂg‰nger, Bordstein	q4 24720,15047 24734,15062
+(Stendaler Str. - Tangerm¸nder Str.): einige Fuﬂg‰nger	q1 23895,15450 23914,15453 23941,15458 24038,15475 24076,15481 24169,15497
+(Kastanienallee - Stendaler Str.): einige Fuﬂg‰nger	q1 23750,15487 23775,15428 23895,15450
+(Mauerweg am Eiskeller): enger Pfad, teilweise zugewachsen	q3 -8469,19845 -8494,19713 -8438,19699 -8521,19390 -8419,19408 -8361,19374 -8272,19086 -8206,19007
+(Eiskellerweg - ehemaliger Mauerweg): schmaler Pfad	q2 -8074,19644 -8200,19641 -8257,19682 -8438,19699
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2906,6 +2914,7 @@ Klompenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 22101,
 Fabeckstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 2717,5578 2678,5621 2669,5677
 Enckestr. - Friedrichstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9666,10848 9537,10837
 (Straﬂe vor dem Berliner Ensemble): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9160,12932 9212,12969
+Gr¸ne Aue: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 21954,11269 21956,11246 21994,11209 22018,11165
 Am Krusenick: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 22751,4970 22652,4966 22667,4912 22705,4874
 Josef-Nawrocki-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25796,4683 25796,4823
 Josef-Nawrocki-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25695,4714 25554,4758 25552,4829
@@ -2948,6 +2957,7 @@ Taubenstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. 
 Mauerstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9138,11872 9171,11777
 Niederlagstr.: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9972,12184 9959,12281
 (Los-Angeles-Platz): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 5669,10704 5822,10609
+Neuenhagener Str. (Mahlsdorf): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 24362,11954 24317,11754
 Seekorso: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; -8376,6579 -8354,6590
 Seekorso: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; -8339,6578 -8364,6562
 Danneckerstr.: tempor‰re "Klimastraﬂe", f¸r Radfahrer gesperrt: gesperrt, ggfs. schieben	q4::igndisp 13886,10939 13856,10864

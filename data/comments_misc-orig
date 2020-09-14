@@ -1166,7 +1166,7 @@ Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788&d=20191216 (Benennung nach Hans Otto Obrikat vorgeschlagen)
 #: XXX oder wird statt Wasserstr. und Uferstr. die Straße nach Hans Otto Obrikat benannt? (erster Vorschlag: "Else-Schierhorn-Str.")
-#: last_checked: 2020-07-31
+#: last_checked: 2020-09-04
 #: check_frequency: 60d
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
@@ -1252,7 +1252,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="4"
-#: last_checked: 2020-08-13
+#: last_checked: 2020-09-07
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
@@ -1292,7 +1292,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2020-09-01 (mapillary)
+#: last_checked: 2020-09-04
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1341,9 +1341,7 @@ Im Lichtenhain: Hausdurchfahrt	CP2; 16497,10685 16491,10655
 # 
 entlang des ehemaligen Spreeparks	CS 15981,8872 15973,8894 15845,9031
 # 
-#: last_checked: 2019-09-14
-#: check_frequency: 180d
-Hawaiiweg: nicht ausgeschildert	CS -2416,18769 -2459,18769 -2558,18771 -2659,18778 -2731,18776 -2757,18800 -2769,18853
+# REMOVED --- #: last_checked: 2019-09-14 --- #: check_frequency: 180d --- Hawaiiweg: nicht ausgeschildert	CS -2416,18769 -2459,18769 -2558,18771 -2659,18778 -2731,18776 -2757,18800 -2769,18853
 # 
 #: next_check_id: METROPOLITANPARK-2019
 #: XXX wann wird die Straße ausgeschildert?
@@ -1362,7 +1360,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 # 
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2020-08-20 (mapillary)
+#: last_checked: 2020-09-11
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13390
 # 
@@ -1372,7 +1370,7 @@ zwischen Studentenwohnheim und Krankenhausgelände	CP2; 2539,12835 2561,12686
 # 
 (Lydia-Rabinowitsch-Str. - Am Hamburger Bahnhof): Hausdurchfahrt	CS; 7959,13982 7997,13892
 # 
-#: last_checked: 2020-05-03 vvv
+#: last_checked: 2020-09-06 vvv
 #: check_frequency: 90d vvv
 Christian-Dohm-Weg: nicht ausgeschildert	CS 20760,18812 20894,18861 21024,18915
 Henriette-Herz-Allee: nur provisorisch ausgeschildert	CS 20907,18740 20901,18793 20894,18861 20889,18935
@@ -1431,4 +1429,6 @@ ausgeschildert mit einem blauen Schild "Krumme Straße"	CP2; 22168,-484 22167,-47
 ausgeschildert nach Königs Wusterhausen	CP; 20187,-20230 20738,-20432 20707,-20261
 # 
 ausgeschildert Köriser Str.	CP2; 23482,-22742 23775,-22788
+# 
+(Tangermünder Str. - Stendaler Str.): Rampe benutzen um Treppen zu vermeiden	CP2; 24169,15497 24076,15481
 # 

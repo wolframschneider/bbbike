@@ -671,7 +671,8 @@ Schönefelder Chaussee/Siriusstr.	Zs 18673,-241
 Dahlemer Weg/Curtiusstr.	Zs 2195,3155
 Neues Palais	Zs -15848,-1268
 #: by: mapillary
-Holländerstr./Septimerstr.	Zs 5869,17528
+#: confirmed_by: srt
+Holländerstr./Septimerstr.	Zs 5849,17532
 #: by: https://westnordost.de/p/98.jpg
 Roelckestr./An der Industriebahn	Zs 14143,17660
 Schützenstr./Mittelstr.	Zs 5120,5348
@@ -727,6 +728,7 @@ Sewanstr./Mellenseestr.	Zs 17950,10023
 #: by: https://www.berliner-woche.de/reinickendorf/c-verkehr/bezirksamt-setzt-endlich-beschluss-zum-zebrastreifen-auf-der-auguste-viktoria-allee-um_a232744 (noch 2019)
 #: by: https://www.berliner-woche.de/reinickendorf/c-verkehr/anwohner-kritisieren-zebrastreifen_a235435
 #: by: mapillary
+#: confirmed_by: srt
 General-Barby-Str./Auguste-Viktoria-Str.	Zs 4418,18227
 Innovationspark Köpenick	Zs 21491,7182
 # 
@@ -744,3 +746,7 @@ Habersaathstr./Schwarzer Weg	Zs 8432,13913
 Richard-Tauber-Damm/Culemeyerstr.	Zs 9860,1255
 # 
 Berliner Str./Dr.-Markus-Str.	Zs 12167,21558
+# 
+#: note: am 2020-09-06 weitgehend fertig, aber noch nicht freigegeben
+Kastanienallee/Havelländer Ring	Zs 23645,15384
+# 

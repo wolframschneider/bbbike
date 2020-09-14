@@ -55,7 +55,6 @@ Schönermark - Biesenbrow: Qualität (höchstwahrscheinlich asphaltiert)?	? 54542,7
 Biesenbrow - Grünow: laut "Regio-Cart" gut geeignet	? 52611,79156 52632,79235 52720,79323 52830,79396 53973,80374 54000,80457 54061,80499 54119,80499
 Passow, Mittelstr.: Qualität im westlichen Abschnitt? Hier auch Beton?	? 56975,82627 57185,82724
 Dargen - Katschow: Fahrradroute laut Kompass-Karte	? 51034,165181 50994,165390 50715,166093 50464,166650 50472,166804 50661,166901 50993,167239 51565,167859
-Oberjägerweg außerhalb Spandaus: Qualität?	? -4053,20594 -3947,21008 -3851,21487
 Mauerweg am Griebnitzsee: Qualität (vermutlich Asphalt?)?	? -9795,-230 -9585,-277 -9445,-377 -9375,-502
 Wilhelm-Busch-Str. (Rehbrücke): Qualität?	? -9500,-6933 -9541,-6955 -9753,-7192 -9812,-7544
 Schlüterstr. (Rehbrücke): Qualität?	? -9812,-7544 -9953,-7604 -10080,-8117 -10263,-8447
@@ -327,7 +326,7 @@ Sonnenburg - Baasee: Qualität?	? 53397,38297 52995,38583 52879,38436 52531,38339
 Turmstr. (Potsdam): Qualität?	? -8081,-4396 -8111,-4396 -8259,-4119
 Turmstr. (Potsdam): Qualität?	? -8294,-4022 -8404,-3824 -8451,-3728 -8510,-3616
 Fähre Ketzin - Paretz: Qualität des Radwegs? Nur für Radfahrer oder auch für Autofahrer befahrbar? Führt hier die Route F3 entlang?	? -26785,5851 -26526,5882 -26360,5950 -26214,5988 -26121,6011 -26141,6106 -26010,6122 -25973,6078 -25933,6081 -25921,6058 -25629,5996 -25569,6220 -25516,6282 -25444,6326
-Herzfelde - Wichmannsdorf: Qualität?	? 23296,89289 23237,89944 23320,90230 23670,90984 24655,92476 24850,93056 24855,93347
+Herzfelde - Wichmannsdorf: Qualität?	? 23296,89289 23237,89944 23320,90230 23670,90984 24655,92476 24850,93056
 Sternthal - Lichtenhain: Qualität?	? 23670,90984 22318,91825 22276,91916
 Lichtenhain - Klaushagen: Qualität?	? 22276,91916 21983,91770 21653,91743
 Boitzenburg - Rummelpforter Mühle: Qualität (wahrscheinlich Feld/Waldwege)? Sind die Wege abschnittsweise für den Kfz-Verkehr gesperrt?	? 23153,95941 23161,96055 23363,96119 23586,96076 24033,96021 24346,96159 24661,95980 24874,95734 24865,95577 25012,95414
@@ -457,7 +456,6 @@ Clara-Schumann-Str. - Dorothea-Schneider-Str.: Qualität? Hat diese Verbindung ei
 Maimi-von-Mirbach-Str. (Potsdam): Qualität?	? -7395,-5032 -7381,-5036 -7364,-5052 -7322,-5087 -7272,-5050 -7211,-5047
 Büringstr. (Potsdam): Qualität?	? -7364,-5052 -7321,-5005 -7272,-5050
 Bellavitestr. (Potsdam): Qualität?	? -7502,-4930 -7399,-4814
-Lessingstr. (Glienicke): Qualität?	? 4668,24442 4733,24854
 Heinrich-Kleist-Str. (Potsdam): existiert eine Verbindung zur Walter-Klausch-Str.?	? -10142,-2540 -10158,-2591 -10080,-2632
 Kleewall (Potsdam): Qualität?	? -9806,-2861 -9693,-2899
 Prager Str. (Potsdam): Qualität?	? -9464,-2868 -9503,-3005
@@ -664,11 +662,11 @@ Altes Bahnwerk (Potsdam): Qualität? Spielstraße? Genaue Lage? Können Radfahrer d
 Zum Wasserturm: Spielstraße? Können Radfahrer direkt zur Friedrich-Engels-Str. fahren?	? -11842,-2183 -11842,-2054
 Am Golmer Weinberg (Potsdam-Golm): Qualität?	? -19197,-348 -19180,-292 -19175,-237
 Ritterstr. (Potsdam-Golm): Qualität? Genaue Lage	? -19180,-292 -19101,-318
-Alter Weinberg (Groß Glienicke): Qualität?	? -9276,7226 -9198,7051
+Alter Weinberg (Groß Glienicke): Qualität?	? -9273,7221 -9198,7051
 Am Gutstor (Groß Glienicke): Qualität?	? -9429,7137 -9445,7199 -9506,7421
 Helmut-Just-Str. (Groß Glienicke): Qualität?	? -9316,7393 -9506,7421
 Freiheitsstr. (Groß Glienicke): Qualität im östlichen Abschnitt?	? -9445,7199 -9670,7190 -9848,7181 -9869,7199
-Grüner Weg (Groß Glienicke): Qualität?	? -9616,6980 -9848,7181
+Grüner Weg (Groß Glienicke): Qualität?	? -9616,6980 -9707,7077 -9848,7181
 Interessentenweg (Groß Glienicke): Qualität?	? -9670,7190 -9726,7239 -9798,7341
 Am Anger (Groß Glienicke): Qualität?	? -9668,6423 -9803,6453 -9839,6497 -9843,6554
 Waldweg (Groß Glienicke): Qualität?	? -10261,6466 -10127,6469
@@ -706,12 +704,12 @@ Alter Fischerweg (Gosen): Qualität?	? 32778,-1044 33013,-790 33117,-767 33140,-7
 Gutschmidtstr.: werden die Radwege asphaltiert oder saniert?	? 13775,3500 13710,3522 13623,3523 13526,3519
 Ahornstr. (Potsdam): Qualität?	? -8829,-2741 -8870,-2876 -8970,-3143 -9039,-3379
 Alter Torfweg (Potsdam): Qualität? Existieren Straßenschilder?	? -10836,-5477 -10829,-5608 -10917,-5739 -11089,-5909
-Niederstr. (Glienicke): Qualität östlich der Ottostr.?	? 3949,24718 4052,24731 4233,24772 4276,24781 4354,24803 4389,24783
+Niederstr. (Glienicke): Qualität östlich der Ottostr.?	? 3949,24718 4058,24733 4233,24772 4276,24781 4354,24803 4389,24783
 Ahlimbswalde: ist die gesamte Straße asphaltiert?	? 30962,71971 31251,71954 31669,72016 31857,72102 32370,71986 32613,71643
 Vogelsangsruh: ist die gesamte Straße asphaltiert?	? 66431,84540 66638,84513
 Niederfelde: ist die gesamte Straße gepflastert?	? 66126,84243 66092,84252 66062,84129
 Auguststr. (Schwedt): Qualität des westlichen Abschnitts?	? 68135,73168 68517,73160 68591,73201 68777,73351
-Theodor-Fontane-Str.: Sackgasse oder Einbahnstraßenregelung?	? -9835,6841 -9854,6890
+Theodor-Fontane-Str.: Sackgasse oder Einbahnstraßenregelung?	? -9835,6841 -9847,6891
 Rita-Maiburg-Str.: Wann wird die Straße fertiggestellt? Qualität? Wo wird sich die Straße befinden (möglichst mit GPS-Track)?	?::projected 20342,-777 20782,-1199 20822,-1242 20833,-1298 20872,-1748
 Ludwig-Prandtl-Str.: ist die Straße bis zur Rita-Maiburg-Str. verlängert worden?	?::projected 20274,-845 20342,-777
 ehem. Bahndamm zwischen L15 undf K7332 bei Hardenbeck: wurde hier ein Radweg realisiert? Ist der Radweg durchgängig asphaltiert? Wo genau befindet sich der Radweg (GPS-Track)?	? 16377,90072 15782,90862 15728,90935 15398,92093 15661,93732 15688,93829 15748,93928 15841,94009 16435,94298 17677,94900 17796,95008 17912,95192
@@ -721,21 +719,21 @@ Ahlimbsmühle - Templin: Qualität (Asphalt oder etwas anderes)? Ist die gesamte S
 Carl-Dähne-Str.: Planstraße A, schon fertiggestellt, Qualität?	? -16317,-541 -16309,-435 -16168,-312
 Zum Düsteren Teich: Planstraße B, schon fertiggestellt, Qualität?	? -16108,-415 -16168,-312 -16268,-218
 Amundsenstr.: Rad- und Gehweg, bereits befahrbar, Qualität?	? -15825,-166 -16108,-415 -16224,-528
-Heinz-Sielmann-Ring (Potsdam-Groß-Glienicke): Qualität? Bereits ausgeschildert?	? -8632,8641 -8467,8612 -8458,8648 -8220,8575 -8240,8450 -8251,8392 -8269,8288 -8291,8148 -8320,8098 -8354,8043
+Heinz-Sielmann-Ring (Potsdam-Groß-Glienicke): Qualität? Bereits ausgeschildert?	? -8632,8641 -8467,8612 -8458,8648 -8366,8637 -8346,8609 -8220,8575 -8240,8450 -8251,8392 -8269,8288 -8291,8148 -8314,8107 -8365,8026 -8414,8034 -8539,8052 -8623,8068 -8710,8074
 Hans-Georg-Straße: Qualität? Bereits ausgeschildert?	? -8233,8283 -8269,8288 -8326,8300 -8389,8313 -8455,8326 -8498,8335
 Christoph-Friedrich-Weg: Qualität? Bereits ausgeschildert?	? -8466,8246 -8455,8326 -8442,8398
 Eva-Katharina-Weg: Qualität? Bereits ausgeschildert?	? -8399,8238 -8389,8313 -8376,8390
 Margarethe-Gottliebe-Weg: Qualität? Bereits ausgeschildert?	? -8337,8229 -8326,8300 -8311,8381
-Edith-Schollwer-Weg: Qualität? Genaue Lage? Existiert die Straße schon?	? -8320,8098 -8486,8126
-Maly-Delschaft-Weg: Qualität? Genaue Lage? Existiert die Straße schon?	? -8476,8181 -8486,8126 -8492,8078
-Ida-Wüst-Weg: Qualität? Genaue Lage? Existiert die Straße schon?	? -8408,8172 -8416,8114 -8423,8067
-Käthe-Haack-Weg: Qualität? Genaue Lage? Existiert die Straße schon?	? -8346,8160 -8356,8104 -8362,8061
-Rudi-Ball-Str.: Qualität? Genaue Lage? Existiert die Straße schon?	? -8362,8061 -8423,8067 -8492,8078 -8538,8085
+Edith-Schollwer-Weg: Qualität? Genaue Lage? Existiert die Straße schon?	? -8314,8107 -8354,8128 -8419,8138 -8482,8147
+Maly-Delschaft-Weg: Qualität? Genaue Lage? Existiert die Straße schon?	? -8476,8187 -8482,8147 -8491,8088
+Ida-Wüst-Weg: Qualität? Genaue Lage? Existiert die Straße schon?	? -8414,8183 -8419,8138 -8428,8079
+Käthe-Haack-Weg: Qualität? Genaue Lage? Existiert die Straße schon?	? -8350,8174 -8354,8128 -8362,8061
+Rudi-Ball-Str.: Qualität? Genaue Lage? Existiert die Straße schon?	? -8414,8034 -8408,8074 -8428,8079 -8491,8088 -8532,8096
 Groß Glienicker Heide: Qualität? Genaue Lage? Existiert die Straße schon?	? -8467,8612 -8499,8431
-Groß Glienicker Heide: Qualität? Genaue Lage? Existiert die Straße schon?	? -8499,8431 -8487,8423 -8498,8335 -8538,8085 -8546,8057
-Leo-Bauer-Str.: Qualität? Genaue Lage? Existiert die Straße schon?	? -8560,8438 -8622,8074
+Groß Glienicker Heide: Qualität? Genaue Lage? Existiert die Straße schon?	? -8499,8431 -8487,8423 -8498,8335 -8532,8096 -8539,8052
+Leo-Bauer-Str.: Qualität? Genaue Lage? Existiert die Straße schon?	? -8560,8438 -8623,8068
 (Zugangsstraße zur Waldsiedlung): Straßenschilder? Qualität?	? -8666,8449 -8560,8438 -8499,8431
-Von-Oppen-Weg: Qualität? Wo befindet sich die Straße?	? -8445,8504 -8240,8450
+Von-Oppen-Weg: Qualität? Wo befindet sich die Straße?	? -8445,8504 -8395,8498 -8380,8475 -8240,8450
 Uferweg von der Neuen Fahrt zum Hermannswerder: neuer Weg wird hier entstehen, Qualität?	?::inwork -12783,-2269 -12803,-2371 -12906,-2537 -13156,-2702
 Uferweg am Groß-Glienicker See: wird ein Uferweg östlich der Seepromenade angelegt? Genaue Lage? Qualität?	? -9762,5436 -9706,5417 -9478,5549 -9372,5532
 Am alten Dorf (Potsdam-Bornim): Qualität? Genaue Lage?	? -16800,1991 -16931,1783
@@ -953,6 +951,7 @@ Mozartstr.: Qualität des südlichen Abschnitts?	? 8334,26287 8348,26449
 Tegeler Str. (Falkensee): Qualität?	? -10088,17984 -10150,17988 -10292,17929 -10374,17869 -10417,17770
 Trampe - Kruge: Qualität?	? 39683,40892 40258,40191 41298,39991 41731,39846
 Beiersdorf - Beerbaum: Qualität?	? 35980,34322 35977,34619 36085,34994 36096,35327 36200,35854 36214,36208 36215,36497
+Dollgow - Zernikow: Qualität?	? -17141,74157 -16859,74184 -16629,74151 -15730,74428 -14966,74667 -13662,75159
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -993,8 +992,6 @@ Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 Goltzstr.: schlechtes Kopfsteinpflaster (Ist die gesamte Goltzstraße mittlerweile asphaltiert?)	? 10642,-2371 10563,-2432 10454,-2520
-(Mauerweg am Eiskeller): asphaltiert (ist dieser Abschnitt tatsächlich asphaltiert?)	? -7990,19888 -8266,19811 -8469,19845 -8494,19713 -8448,19710 -8521,19390 -8372,19402 -8272,19086 -8206,19007 -8011,19059
-Stolzingstr.: Kleinpflastersteine (Wurde die Straße zwischen Hainbuchenstr. und Münchener Str. mittlerweile asphaltiert?)	? 1339,25251 1429,25335 1468,25384
 # added from qualitaet_l
 Neuruppin - Wuthenow - Gnewikow - Wustrau-Altfriesack: teilweise gut, teilweise mäßiges Kopfsteinpflaster (wird sich die Qualität nach den Bauarbeiten verbessern?)	? -29918,57158 -29816,57117 -29490,56714 -29243,56187 -29198,55801 -29109,55374 -28677,55014 -28367,54202 -28911,54055 -29276,53427 -29210,52915 -28736,52387 -28368,51517 -28001,50966 -27421,50349 -27196,50015 -27035,49829 -25968,49631 -25719,49500 -25060,48842
 Magazinstr.: Asphalt (ist hier tatsächlich asphaltiert?)	? 26953,10903 27047,11144
@@ -1006,10 +1003,11 @@ Prenzlau - Schenkenberg: Kopfsteinplaster (liegt hier noch immer Kopfsteinplaste
 Karlshof - Schönfeld: Kopfsteinplaster (ist hier auch asphaltiert?)	? 47493,111289 47517,111811 47671,112390 47616,112671 47725,112737 47695,112819 47905,112911
 Schönwerder - B198: zweispuriger Plattenweg (ist der Abschnitt nach Schönwerder mittlerweile asphaltiert?)	? 39192,107687 38970,107400 38860,107132 38580,106837 38516,106706 38525,106532 38034,105319
 Schönwerder - B198: zweispuriger Plattenweg (ist der Abschnitt nach Schönwerder mittlerweile asphaltiert?)	? 37760,104661 37559,103631 37410,103257
-Steinhöfel - Stegelitz: Feld-/Waldweg (ist hier mittlerweile betoniert?)	? 40490,78193 40456,78396 40303,78665 40121,78765
-Steinhöfel - Stegelitz: Feld-/Waldweg, mit kurzen Kopfsteinpflasterabschnitten (ist hier mittlerweile asphaltiert?)	? 40012,79300 39918,79462 39896,79593 39806,79753 39790,79968 39612,80137 39581,80256
 Am Havelblick (Potsdam): Kopfsteinpflaster (ist das Kopfsteinpflaster mäßig oder eher schlecht?)	? -12492,-2555 -12442,-2389 -12623,-2367
 Große Zeuthener Allee (Zeuthen): unbefestigte Straße (Ist die Straße noch immer unbefestigt, oder wurde sie mittlerweile neu gemacht?)	? 25810,-7135 25820,-6973
+Wollin - Schmölln: schlechtes Kopfsteinpflaster (ist hier mittlerweile auch asphaltiert?)	? 53767,97971 54343,98281 54506,98712 54856,98939
+Wollin - Schmölln: Betonplatten (ist hier mittlerweile auch asphaltiert?)	? 54856,98939 55359,99276
+Wollin - Schmölln: schlechtes Kopfsteinpflaster (ist hier mittlerweile auch asphaltiert?)	? 55359,99276 55894,99914
 Randow - Lützlow: Feldweg, Schotter (nur das nördliche Ende gesehen, weiter südlich wahrscheinlich Plattenweg)	? 53971,92780 53361,93046 53126,92961 52699,93129
 Hammer: teilweise schlechtes Kopfsteinpflaster, Sandbanketten (ist hier mittlerweile asphaltiert?)	? 12243,52862 12212,52762 11994,52768 11747,52381
 Trebbin: Kopfsteinpflaster, OK (Hier sind Bauarbeiten in Gange, danach kein Kopfsteinpflaster mehr?)	? -1614,-21103 -1902,-21499 -1969,-21492
@@ -1067,13 +1065,17 @@ Löpten - Kleinköris: Sand (wie ist die Qualität der Straße zwischen Löpten und K
 Kleinköris - Neubrücke: unbefestigte Straße (wie ist die Qualität der Straße zwischen Kleinköris und Neubrück?)	? 31154,-25834 31240,-25274 31428,-24938 31548,-24479
 Götschendorf - Böckenberg: schlechte Qualität, teilweise Sand (wie ist die Qualität des Weges hier?)	? 27942,76675 28327,76940 28682,77328 29152,77402 29458,77597 30088,78374 30501,79073 31116,79729 31720,79959 32326,80401 32706,80922
 (bei Götschendorf): mäßige Qualität (wie ist die Qualität des Weges hier?)	? 30027,76566 29951,76969 29769,77099 29507,77428 29458,77597
-Groß Friedenwalde - Flieth: Kopfsteinpflaster (wie schlecht ist das Kopfsteinpflaster hier?)	? 35728,80990 35815,81168 35815,81518 35894,81782
+Groß Friedenwalde - Flieth: Kopfsteinpflaster (wie schlecht ist das Kopfsteinpflaster hier?)	? 35740,80983 35815,81168 35815,81518 35894,81782
 Groß Friedenwalde - Flieth: Asphalt (ist hier tatsächlich asphaltiert?)	? 35894,81782 35998,82265 36009,82890 36430,83497 36578,83835 36590,84086 36693,84235 36676,84495 36696,84495 36715,84579
 Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	? 37515,64395 37608,64317 38095,64055 38327,63933
+# added from nolighting
+Stresemannstr. - Wilhelmstr.: vorhandene Beleuchtung ist kaputt (funktioniert die Beleuchtung wieder?)	? 9245,10565 9375,10616
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
 Dernburgstr. (Ist die Einbahnstraße mittlerweile für Radfahrer geöffnet oder wird das in Zukunft passieren?)	? 2493,10675 2378,10677 2333,10710 2254,11051
+Ahornallee (Ist die Einbahnstraße mittlerweile für Radfahrer offen?)	? 1589,11483 1574,11379
+Lindenallee (Ist die Einbahnstraße mittlerweile für Radfahrer offen?)	? 1429,11528 1403,11428
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 (andere Straßenseite auch?)	? 37093,-151665 37375,-151190
@@ -1095,6 +1097,5 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from bbbike-temp-blockings-optimized
 Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt (Wann wird die Sperrung aufgehoben?)	? 9131,12438 9179,12444
 Münsterberger Weg: Bauarbeiten, Weg ist komplett gesperrt, Ende der Bauarbeiten ist unbekannt (Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?)	? 24029,11363 24172,11320
-Grünfläche Auerdreieck: Bauarbeiten, Weg kann gesperrt sein (Sind die Bauarbeiten mittlerweile beendet?)	? 13232,12628 13091,12563
 Schönstr.: Bauarbeiten zwischen Große Seestr. und Rennbahnstr., Fahrbahn gesperrt (Bis wann gehen die Bauarbeiten?)	? 14136,17170 13996,16959
 Betckestraße: zwischen Wörther Str. und Götelstr. Fahrbahn gesperrt, Ausweichen auf nördlichen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt (Wann sind die Fahrbahn wieder offen?)	? -3252,12580 -3444,12580

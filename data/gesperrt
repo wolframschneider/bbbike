@@ -863,6 +863,9 @@ Siedlung Hubertus - Jürgen-Schumann-Allee: explizites Radfahren-verboten-Schild 
 (Lauinger Str. - Köpenicker Str.)	1::igndisp 21133,11348 21171,11336
 Hendrichplatz	1 15859,12753 15733,12753 15734,12793 15859,12793 15859,12753
 Oderbruchstr.	1 14243,13890 14291,13862
+Grüne Aue	1s 21954,11269 21956,11246 21994,11209 22018,11165
+(Maximilianstr. - Stolzingstr./Hainbuchenstr.)	1 1360,25269 1364,25256
+(Stolzingstr./Hainbuchenstr. - Maximilianstr.)	1 1339,25251 1338,25262
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1280,7 +1283,7 @@ Caseler Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 14700,16790 14608,1
 Straßenbahntrasse	3nocross::ignrte 13398,15826 13425,15846 13484,15893
 Streustr. -> Berliner Allee: Straßenbahntrasse	3::igndisp 13263,15930 13425,15846 13484,15893
 Gülzower Str.: Mittelstreifen	3 22603,12359 22388,12190 22400,12171
-Mittelstreifen	3nocross::ignrte 5343,21250 5349,21198 5356,21146 5379,21016
+Mittelstreifen	3nocross::ignrte 5343,21250 5349,21198 5356,21146 5370,21066 5379,21016
 Cyclopstr. -> Oranienburger Str.: Mittelstreifen	3::igndisp 5297,21243 5349,21198 5343,21250
 Straßenbahnhaltestelle	3nocross::ignrte 9225,13389 9293,13366 9415,13315
 Oranienburger Str. -> Linienstr.: Straßenbahnhaltestelle	3::igndisp 9225,13389 9293,13366 9312,13388
@@ -1534,9 +1537,9 @@ Straßenbahntrasse	3nocross::ignrte 10892,17396 10885,17469 10883,17491
 Straßenbahntrasse	3nocross::ignrte 13737,15994 13826,16026 14015,16103
 Berliner Allee -> Herbert-Baum-Str.: Straßenbahntrasse	3::igndisp 14015,16103 13826,16026 13867,15915
 Herbert-Baum-Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 13867,15915 13826,16026 13737,15994
-Straßenbahntrasse	3nocross::ignrte 12166,21208 12188,21330 12209,21448
+Straßenbahntrasse	3nocross::ignrte 12166,21208 12176,21266 12188,21330 12209,21448
 Berliner Str. -> Lyonstr.: Straßenbahntrasse	3::igndisp 12209,21448 12188,21330 12204,21327
-Lyonstr. -> Berliner Str.: Straßenbahntrasse	3::igndisp 12204,21327 12188,21330 12166,21208
+Lyonstr. -> Berliner Str.: Straßenbahntrasse	3::igndisp 12204,21327 12188,21330 12176,21266
 Straßenbahntrasse	3nocross::ignrte 10923,13156 10976,13229 11012,13278
 Karl-Liebknecht-Str. -> Keibelstr.: Straßenbahntrasse	3::igndisp 11012,13278 10976,13229 11045,13183
 Keibelstr. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 11045,13183 10976,13229 10923,13156
@@ -2187,6 +2190,13 @@ Groß-Berliner Damm -> Gerhard-Sedlmayr-Str.: Mittelstreifen	3::igndisp 18826,381
 Mittelstreifen	3nocross::ignrte 18930,3703 19029,3595 19125,3491
 Groß-Berliner Damm -> Konrad-Zuse-Str.: Mittelstreifen	3::igndisp 19125,3491 19029,3595 18943,3508
 Konrad-Zuse-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18943,3508 19029,3595 18930,3703
+Straßenbahntrasse	3nocross::ignrte 17879,4910 17951,4785 18042,4667
+Pilotenstr. -> Pilotenstr.: Straßenbahntrasse	3::igndisp 18031,4831 17951,4785 17868,4742
+Pilotenstr. -> Groß-Berliner Damm: Straßenbahntrasse	3::igndisp 18031,4831 17951,4785 18042,4667
+Pilotenstr. -> Pilotenstr.: Straßenbahntrasse	3::igndisp 17868,4742 17951,4785 18031,4831
+Pilotenstr. -> Groß-Berliner Damm: Straßenbahntrasse	3::igndisp 17868,4742 17951,4785 17879,4910
+Groß-Berliner Damm -> Pilotenstr.: Straßenbahntrasse	3::igndisp 17879,4910 17951,4785 18031,4831
+Groß-Berliner Damm -> Pilotenstr.: Straßenbahntrasse	3::igndisp 18042,4667 17951,4785 17868,4742
 Mittelstreifen	3nocross::ignrte 6228,13324 6229,13517 6230,13596
 Stromstr. -> Bugenhagenstr.: Mittelstreifen	3::igndisp 6228,13324 6229,13517 6104,13522
 unbequem zu überqueren, zusätzlich Geländer am Gehweg	3nocross::ignrte 13476,11174 13493,11217 13541,11355
@@ -2629,6 +2639,8 @@ tragen (Treppe)	0:120:-184 -14199,-707
 tragen (Treppe, 22 Stufen)	0:30:87 26337,-11817
 tragen (Treppe, 47 Stufen, mit Führungsrampe für Fahrräder)	0:60:8 8376,8813
 tragen (Treppe, 16 Stufen)	0:25:36 22104,11925
+Drängelgitter	BNP:3:78:trailer=10 10969,10015
+Drängelgitter	BNP:3:-253:trailer=10 10879,10037
 langes Drängelgitter	BNP:10:-86:trailer=20 20284,12064
 Drängelgitter	BNP:3:81:trailer=10 21911,6938
 Tor, verwinkelt	BNP:3:-40:trailer=10 17571,12557
@@ -3111,18 +3123,19 @@ Schranke, vorbeifahren mit Bordsteinen	BNP:10:43 5005,2100
 Barriere	BNP:5:-72 4708,21235
 offenes Tor	BNP:3:-151 12592,9249
 Drängelgitter	BNP:3:-193:trailer=10 1035,14996
+Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 (Rudolfplatz, Park): Bauarbeiten, komplett gesperrt	2::inwork 14026,10869 13896,10851
-Durchgangsweg am Blueberry Inn: wegen Bauarbeiten komplett gesperrt	2::inwork 12170,8548 12287,8602
 Danneckerstr.: temporäre "Klimastraße", für Radfahrer gesperrt	2s 13886,10939 13856,10864
+Durchgangsweg am Blueberry Inn: wegen Bauarbeiten komplett gesperrt	2::inwork 12170,8548 12287,8602
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9507,-85 9468,-85 9271,323 9253,370 9218,458 9178,556
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9271,323 9296,335 9249,434 9218,458
 Alexander-von-Humboldt-Weg: Durchgang gesperrt, auch für Fußgänger	2::inwork 18892,3256 18689,3465
 Cotheniusstr.: Fahrbahn durch Bauzäune abgesperrt	2::inwork 13430,13733 13519,13785
 Abendseglersteig: noch in Bau	2::inwork 33176,2938 33147,2832 33267,2810 33383,2792 33406,2852
 Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10203,-2137 10228,-2136
-Kieler Str. - Marderweg - Feldrain: gesperrt, vielleicht dauerhaft	2 25766,13289 25789,13263 25814,13240 25723,13137
-(Sebnitzer Str. - Hoyerswerdaer Str.): Bauarbeiten, Wege sind noch gesperrt	2::inwork 24894,15000 24915,15008 25031,15027 25089,15037 25206,15044 25221,15028
+Kieler Str. - Marderweg - Feldrain: gesperrt, vielleicht dauerhaft	2 25766,13289 25789,13263 25814,13240
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
+Uferweg: wegen Bauarbeiten gesperrt	2::inwork 14126,10176 14202,10152
 Otto-Weidt-Platz: Bauarbeiten	2::inwork 7923,14142 7778,14059
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 8057,13923 8086,13862
 Wriezener Park, Diagonalverbindung	2::inwork 13120,11725 13123,11675
@@ -3140,8 +3153,6 @@ Forumsquerung: Bauarbeiten, komplett gesperrt	2::inwork 8206,12757 8207,12606
 Gustav-Böß-Str.: Bauarbeiten, Straße ist komplett gesperrt	2::inwork 10673,12434 10772,12515
 Königsteinbrücke: Brücke wurde abgerissen und wird neu gebaut	2::inwork 13148,22396 13385,22383
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr.	1::inwork 12605,15491 12556,15518
-Benno-König-Str.: noch nicht freigegeben, Straße gesperrt	2::inwork 18374,4307 18596,4517
-Gustav-Hertz-Platz: noch nicht freigegeben, Straße gesperrt	2::inwork 18596,4517 18722,4628
 David-Friedländer-Weg: noch Bauarbeiten, gesperrt	2::inwork 20901,18793 21038,18851
 Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
 Rollbergstr.: Einbahnstraße, offen Richtung Karl-Marx-Str.	1s:inwork 12714,8249 12545,8209
@@ -3181,7 +3192,7 @@ Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,
 Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -6556,6663
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5643,12253
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5574,12237 5535,12206
-Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11489 20631,11621 20633,11651
+Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20627,11552 20631,11621 20633,11651
 Schinkelplatz: Fahrbahn komplett gesperrt	2::inwork 9990,12404 9996,12372
 Niederlagstr.: Einbahnstraße	1s:inwork 9972,12184 9959,12281
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
@@ -3259,8 +3270,6 @@ Schwingtor zum Spielplatz	BNP:10:-236 11865,13027
 Schwingtor zum Spielplatz	BNP:10:-156 11874,13048
 Schwingtor zum Spielplatz	BNP:10:-250 11815,13045
 tragen (Treppe, 14 Stufen)	0:20:-140 8190,10960
-Matthäikirchplatz	1 7897,11287 7931,11391
-Matthäikirchplatz	1 7931,11391 7965,11380 7934,11275
 Herkulesufer: wg. Stufen schieben, ggf. auf Wiesenstreifen ausweichen	0:30:69 6920,11064
 schwierig zu überqueren - besser Ampel benutzen	3nocross::ignrte 7912,10945 7968,11048 7980,11070
 queren schlecht möglich	3nocross::ignrte 6709,9234 6861,9263 6917,9274

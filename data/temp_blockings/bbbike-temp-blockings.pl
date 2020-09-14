@@ -1904,7 +1904,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4 -16640,1304 -16026,1044 -15938,1003 -15533,813 -15501,795
-	q4 -16640,1304 -16719,1369 -16742,1387 -16763,1402 -16905,1503
+	q4 -16640,1304 -16719,1369 -16742,1387 -16763,1402 -16866,1476 -16905,1503
 EOF
      },
      { from  => 1113775200, # 2005-04-18 00:00
@@ -3572,11 +3572,12 @@ EOF
      { from  => $isodate2epoch->("2019-11-30 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-12-01 20:00:00"), #
        periodic => 1,
-       recurrences => [['yearly', days => 26, months => 11]],
+       recurrences => [['yearly', days => 26, months => 11, start => "2021-01-01T00:00:00"]],
        text  => 'Lichtenrader Lichtermarkt: Alt-Lichtenrade, Straße vermutlich gesperrt (am 1. Dezember 2019 von 13 bis 19 Uhr)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/ueber-den-bezirk/veranstaltungen/lichtenrader-lichtermarkt/
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.989619.php (fällt 2020 wegen Corona aus)
 	q4::xmas 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 EOF
      },
@@ -18777,7 +18778,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101025.1235.315920.html',
        data  => <<EOF,
-	2::inwork 5534,24005 5621,23966
+	2::inwork 5545,23993 5621,23966
 EOF
      },
      { from  => 1288479600, # 2010-10-31 01:00
@@ -22319,7 +22320,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20130910.1105.389039.html',
        data  => <<EOF,
-	q4::inwork 999,24933 1071,24974 1125,25028 1173,25114 1207,25156 1339,25251 1513,25253 1576,25249 1738,25243
+	q4::inwork 999,24933 1071,24974 1125,25028 1173,25114 1207,25156 1339,25251 1364,25256 1513,25251 1576,25249 1738,25243
 # REMOVED --- #: XXX Einbahnstraßenrichtung ist geraten
 	q4::inwork; 1211,24871 1112,24821 1041,24812 968,24815 949,24882 946,24934
 EOF
@@ -27898,7 +27899,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-08-27
+#: last_checked: 2020-09-07
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27975,7 +27976,7 @@ EOF
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-08-04 (mapillary)
+#: last_checked: 2020-09-04
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
 EOF
@@ -28531,7 +28532,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-08-27 (mapillary)
+#: last_checked: 2020-09-04
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -29179,11 +29180,11 @@ EOF
        type  => 'handicap',
        source_id => '2147344253', # bis Juni 2021 (!)
        data  => <<EOF,
-#: note: laut fritz bis 31.06.2020
+#: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2020-06-13
+#: last_checked: 2020-09-11
 #: check_frequency: 60d
-#: next_check: 2021-06-30
+#: next_check: 2021-04-30
 	q3::inwork  8986,16092 9178,16317
 # REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
 EOF
@@ -29311,29 +29312,21 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1599240613, # undef, # XXX
        text  => 'Wagner-Régeny-Allee: Straße kann wegen Bauarbeiten noch gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: WAGNERREGENYALLEE-2019
-#: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
-#: osm_watch: way id="206889085" version="13"
-#: last_checked: 2020-07-31
+# REMOVED (von Westen her offiziell befahrbar, von Osten her ist der Radweg nicht mehr abgesperrt) --- #: next_check_id: WAGNERREGENYALLEE-2019 --- #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019 --- #: osm_watch: way id="206889085" version="13" --- #: last_checked: 2020-07-31
 # REMOVED --- #: next_check: 2019-11-01
 	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1599240955, #
        text  => 'Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Tor gesperrt (eventuell nur am Wochenende)',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
-#: by: https://www.bahninfo-forum.de/read.php?9,413132,659869#msg-659869 (Sperrung am Wochenende)
-#: by: https://www.bahninfo-forum.de/read.php?9,413132,659884#msg-659884 ("in Kürze ... saniert")
-#: last_checked: 2020-07-31
-# REMOVED --- #: next_check: 2019-12-02
-#: check_frequency: 60d
+# REMOVED (-> gesperrt-orig) --- #: last_checked: 2020-07-31 --- #: next_check: 2019-12-02 --- #: check_frequency: 60d
 	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 EOF
      },
@@ -29568,7 +29561,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-07-18
+#: last_checked: 2020-09-04
 #: next_check: 2020-12-31
 # REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
 #: note: hier eng und viel Fußgängerverkehr
@@ -29738,12 +29731,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-10-12 17:00:00"), # 1596211200, # 2020-07-31 18:00
+       until => $isodate2epoch->("2020-09-30 17:00:00"), # 1596211200, # 2020-07-31 18:00
        text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, bis 12.10.2020',
        type  => 'gesperrt',
        source_id => '2147344558', # bis 2020-09-10
        data  => <<EOF,
 #: source_id: 2147346164 (bis 12.10.2020)
+#: source_id: 2147344558 (bis 30.09.2029)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 EOF
@@ -29933,8 +29927,8 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2020-07-17
-#: check_frequency: 60d
+#: last_checked: 2020-09-12
+#: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-03-31
 	2::inwork 5894,12480 5944,12548
 EOF
@@ -30008,13 +30002,11 @@ EOF
 EOF
      },
      { from  => 1559253600, # 2019-05-31 00:00
-       until => undef, # 1588283999, # 2020-04-30 23:59
+       until => 1599923479, # undef, # 1588283999, # 2020-04-30 23:59
        text  => 'zum Uferweg am Westhafenkanal: wegen Bauarbeiten gesperrt (es existiert aber ein Trampelpfad daran vorbei), Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX Wann wird der Weg wieder eröffnet? Eigentlich sollten die Bauarbeiten nur bis April 2020 gehen, Termin wurde aber "gerissen"
-#: last_checked: 2020-08-09 (mapillary)
-#: check_frequency: 60d
+# REMOVED (Bauarbeiten noch nicht ganz fertig, aber keine Einschränkungen mehr) --- #: XXX Wann wird der Weg wieder eröffnet? Eigentlich sollten die Bauarbeiten nur bis April 2020 gehen, Termin wurde aber "gerissen" --- #: last_checked: 2020-08-09 (mapillary) --- #: check_frequency: 60d
 	2::inwork 2957,13796 2895,13869
 EOF
      },
@@ -30190,7 +30182,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: MUENSTERBERGERWEG-2019
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
-#: last_checked: 2020-04-26
+#: last_checked: 2020-09-06
+#: check_frequency: 60d
 	2::inwork 24029,11363 24172,11320
 EOF
      },
@@ -30223,18 +30216,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1599838189, # --- nicht mehr gesperrt --- undef, # XXX
        text  => 'Grünfläche Auerdreieck: Bauarbeiten, Weg kann gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.725993.php
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.726077.php ("erste Hälfte 2019")
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
-#: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
-#: XXX laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022
-#: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-08-02 (abgesperrt)
-#: check_frequency: 30d
+# REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet? --- #: last_checked: 2020-08-02 (abgesperrt) --- #: check_frequency: 30d
 	2::inwork 13232,12628 13091,12563
 EOF
      },
@@ -30287,8 +30273,8 @@ EOF
 EOF
      },
      { from  => 1582487459, # 2020-02-23 20:50
-       until => $isodate2epoch->("2020-09-11 18:00:00"), # 1600207199, # 2020-09-15 23:59
-       text  => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte September 2020',
+       until => $isodate2epoch->("2020-10-30 18:00:00"), # 1600207199, # 2020-09-15 23:59
+       text  => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Ende Oktober 2020',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147345498
@@ -30566,7 +30552,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-08-31
+#: last_checked: 2020-09-10
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30722,6 +30708,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: KAMERUNER-2020
 #: also_indoor: traffic (G,H)
+#: last_checked: 2020-09-05
+#: check_frequency: 30d
 	q4::inwork 6383,15972 6484,16085 6587,16199
 EOF
      },
@@ -31033,13 +31021,15 @@ EOF
 EOF
      },
      { from  => 1589275980, # 2020-05-12 11:33
-       until => 1599231600, # 2020-09-04 17:00
-       text  => 'Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Chlumer Str. wegen Bauarbeiten gesperrt, bis 04.09.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2021-06-30 17:00:00"), # 1599231600, # 2020-09-04 17:00
+       text  => 'Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Chlumer Str. wegen Bauarbeiten gesperrt, bis 30.06.2021',
        type  => 'handicap',
        source_id => '2147345834',
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
+#: XXX nicht ganz klar, ob die Sperrung schon am 30.9.2020 aufgehoben wird, Gesamtmaßnahme geht länger; laut rbbtext bis 2021-06-30
+#: next_check: 2020-09-30
 	q4::inwork; 4515,4760 4214,4595 4039,4500
 EOF
      },
@@ -31174,9 +31164,81 @@ EOF
 #: confirmed_by: srt
 #: XXX bleibt es beim Ende der Bauarbeiten am 5.10.2020?
 #: priority: #B
-#: last_checked: 2020-08-28
+#: last_checked: 2020-09-05
 #: next_check: 2020-10-05
 	q3::inwork 11652,13372 11589,13305 11578,13310 11526,13252
+EOF
+     },
+     { from  => 1599948000, # 2020-09-13 00:00
+       until => 1606777200, # 2020-12-01 00:00
+       text  => 'Akeleiweg: Bauarbeiten, Fahrbahn gesperrt, vom 14.09.2020 bis voraussichtlich 30.11.2020',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.986324.php',
+       data  => <<EOF,
+	q4::inwork 17631,3200 17894,2783
+EOF
+     },
+     { from  => 1599213600, # 2020-09-04 12:00
+       until => 1599408000, # 2020-09-06 18:00
+       text  => 'Köpenicker Landstraße, Neue Krugallee, Bulgarische Straße, Uferweg Plänterwald: wegen des Berlin-Triathlons Sperrungen, evtl. auch für Radfahrer gültig, am 5.9.2020 von 12:00 bis 21:00 Uhr und am 6.9.2020 von 6:30 bis 18:00 Uhr',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://viz.berlin.de/2020/09/vorschau-05_06-09-2020/
+	q4::temp 16507,7254 16428,7144
+	q4::temp; 16428,7144 16353,7226 16259,7328 16195,7398 15920,7697 15557,8077 15357,8286 15303,8343 15166,8489
+	q4::temp 15166,8489 15378,8668 15558,8820 15591,8848 15714,8633 15869,8355 16003,8119 16136,7886 16406,7430 16507,7254 16633,7434 16673,7511
+	2::temp 16673,7511 16655,7572 16636,7704 16624,7833 16696,8174 16657,8443 16627,8581 16546,8852 16459,9017 16347,9147 16266,9203 16118,9201 15959,9117 15845,9031 15778,8990
+	q4::temp 15778,8990 15680,8914 15591,8848
+EOF
+     },
+     { from  => 1599591506, # 2020-09-08 20:58
+       until => 1606838400, # 2020-12-01 17:00
+       text  => 'Kreuzung Maybachufer/Friedelstr./Hobrechtbrücke: wegen Bauarbeiten ist die Kreuzung gesperrt, Umwege auf dem Bürgersteig notwendig, bis 1. Dezember 2020',
+       type  => 'handicap',
+       source_id => '2147346338',
+       data  => <<EOF,
+#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.988534.php (Umbau der Kreuzung an der Hobrechtbrücke; Bürknerstr. wird verschwenkt; außerdem entsteht ein Überweg (Zebrastreifen?); Bauarbeiten bis Dezember 2020; Sperrung)
+#: by: https://twitter.com/BerlinNkl/status/1303296712799330304
+#: by: https://pbs.twimg.com/media/EhY9dDlWkA4cFqP?format=png
+#: by: https://www.berliner-woche.de/neukoelln/c-verkehr/kreuzung-friedelstrassemaybachufer-wird-entschaerft_a286609
+#: priority: #A vvv
+#: last_checked: 2020-09-12 vvv
+#: check_frequency: 30d vvv
+#: next_check: 2020-12-01 vvv
+	q3::inwork 11897,9754 12085,9778
+	q4::inwork 12085,9778 12116,9825
+	q3::inwork 12074,9689 12085,9778 11880,9874
+	q3::inwork 12250,9691 12085,9778
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+#: priority ^^^
+EOF
+     },
+     { from  => undef, # 
+       until => 1601503200, # 2020-10-01 00:00
+       text  => 'Autobahnbrücke Glambeck gesperrt (auch nicht per Fuss passierbar), bis 30.9.2020',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin-usedom-radweginfo.de/neuer_weg.php',
+       data  => <<EOF,
+#: by: wosch
+	2::inwork 38096,68983 38048,68993
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Sigismundstr. und Matthäikirchplatz: Bauarbeiten, Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: SIGISMUND-2020
+#: XXX wann sind die Bauarbeiten fertig? vvv
+#: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
+#: last_checked: 2020-09-12 vvv
+	q3::inwork 8031,11249 7934,11275 7897,11287
+	q4::inwork 7934,11275 7965,11380
+#: last_checked ^^^
+#: XXX ^^^
+#: XXX ^^^
 EOF
      },
     );

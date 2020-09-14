@@ -2220,7 +2220,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-08-27
+#: last_checked: 2020-09-07
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2241,7 +2241,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-08-04 (mapillary)
+#: last_checked: 2020-09-04
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
 ',
@@ -2321,7 +2321,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-08-27 (mapillary)
+#: last_checked: 2020-09-04
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -2424,11 +2424,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: note: laut fritz bis 31.06.2020
+         'data' => '#: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2020-06-13
+#: last_checked: 2020-09-11
 #: check_frequency: 60d
-#: next_check: 2021-06-30
+#: next_check: 2021-04-30
 	q3::inwork  8986,16092 9178,16317
 # REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
 ',
@@ -2506,35 +2506,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: WAGNERREGENYALLEE-2019
-#: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019
-#: osm_watch: way id="206889085" version="13"
-#: last_checked: 2020-07-31
-# REMOVED --- #: next_check: 2019-11-01
-	2::inwork 18296,4850 18596,4517 19130,3969 19162,3935
-',
-         'from' => undef,
-         'id' => 3117,
-         'text' => 'Wagner-Régeny-Allee: Straße kann wegen Bauarbeiten noch gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
-       {
-         'data' => '#: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
-#: by: https://www.bahninfo-forum.de/read.php?9,413132,659869#msg-659869 (Sperrung am Wochenende)
-#: by: https://www.bahninfo-forum.de/read.php?9,413132,659884#msg-659884 ("in Kürze ... saniert")
-#: last_checked: 2020-07-31
-# REMOVED --- #: next_check: 2019-12-02
-#: check_frequency: 60d
-	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
-',
-         'from' => undef,
-         'id' => 3118,
-         'text' => 'Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Tor gesperrt (eventuell nur am Wochenende)',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -2554,7 +2527,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-07-18
+#: last_checked: 2020-09-04
 #: next_check: 2020-12-31
 # REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
 #: note: hier eng und viel Fußgängerverkehr
@@ -2638,6 +2611,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: source_id: 2147346164 (bis 12.10.2020)
+#: source_id: 2147344558 (bis 30.09.2029)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 ',
@@ -2646,7 +2620,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'source_id' => '2147344558',
          'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, bis 12.10.2020',
          'type' => 'gesperrt',
-         'until' => 1602514800
+         'until' => 1601478000
        },
        undef,
        undef,
@@ -2679,28 +2653,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1609455599
        },
        undef,
-       {
-         'data' => '#: also_indoor: traffic (G,H)
-#: source_id: 2147344351
-#: source_id: 2147344352
-	2::temp 9730,12238 9713,12392 9771,12400 9780,12401 9858,12410 9934,12420 9984,12426 10024,12431 10063,12438 10155,12494 10176,12506 10243,12546 10300,12587 10352,12627 10431,12709
-	2::temp 9475,12365 9613,12381 9664,12387 9713,12392
-	2::temp 9664,12387 9680,12232
-	3 10291,12600 10300,12587 10363,12535
-	3 10174,12284 10063,12438 9956,12617
-	3 9873,12315 9858,12410 9846,12516
-	3 9953,12533 9984,12426 9990,12404
-	3 10363,12535 10300,12587 10291,12600
-	3 9956,12617 10063,12438 10174,12284
-	3 9990,12404 9984,12426 9953,12533
-	3 9846,12516 9858,12410 9873,12315
-',
-         'from' => 1599199200,
-         'id' => 3172,
-         'text' => 'Unter den Linden: zwischen Charlottenstr. und Spandauer Str. wegen einer Veranstaltung (Staatsoper für alle) voraussichtlich gesperrt, 5.9.2020 bis 6.9.2020 jeweils zwischen 17:00 und 23:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1599426000
-       },
+       undef,
        {
          'data' => '#: next_check_id: KOENIGSTEINBRUECKE-2019
 #: last_checked: 2020-05-01 (mapillary)
@@ -2713,18 +2666,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: XXX Wann wird der Weg wieder eröffnet? Eigentlich sollten die Bauarbeiten nur bis April 2020 gehen, Termin wurde aber "gerissen"
-#: last_checked: 2020-08-09 (mapillary)
-#: check_frequency: 60d
-	2::inwork 2957,13796 2895,13869
-',
-         'from' => 1559253600,
-         'id' => 3174,
-         'text' => 'zum Uferweg am Westhafenkanal: wegen Bauarbeiten gesperrt (es existiert aber ein Trampelpfad daran vorbei), Ende der Bauarbeiten unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: WUHLEWANDERWEG-2014
@@ -2763,7 +2705,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: MUENSTERBERGERWEG-2019
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
-#: last_checked: 2020-04-26
+#: last_checked: 2020-09-06
+#: check_frequency: 60d
 	2::inwork 24029,11363 24172,11320
 ',
          'from' => undef,
@@ -2775,23 +2718,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.725993.php
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.726077.php ("erste Hälfte 2019")
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
-#: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit
-#: XXX laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022
-#: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2020-08-02 (abgesperrt)
-#: check_frequency: 30d
-	2::inwork 13232,12628 13091,12563
-',
-         'from' => undef,
-         'id' => 3192,
-         'text' => 'Grünfläche Auerdreieck: Bauarbeiten, Weg kann gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2804,9 +2731,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1582487459,
          'id' => 3198,
-         'text' => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte September 2020',
+         'text' => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Ende Oktober 2020',
          'type' => 'handicap',
-         'until' => 1599840000
+         'until' => 1604077200
        },
        undef,
        undef,
@@ -2882,7 +2809,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-08-31
+#: last_checked: 2020-09-10
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2937,12 +2864,12 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1599278400,
+         'from' => 1599883200,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1599411600
+         'until' => 1600016400
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -2991,6 +2918,8 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
        {
          'data' => '#: next_check_id: KAMERUNER-2020
 #: also_indoor: traffic (G,H)
+#: last_checked: 2020-09-05
+#: check_frequency: 30d
 	q4::inwork 6383,15972 6484,16085 6587,16199
 ',
          'from' => 1588490580,
@@ -3029,12 +2958,12 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954979.php
 Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 13038,8394
 ',
-         'from' => 1599278400,
+         'from' => 1599883200,
          'id' => 3241,
          'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
          'text' => 'Temporäre Spielstraßen in Neukölln: einige Straßen (Selkestr., Hobrechtstr., Karl-Marx-Platz, Anzengruberstr.) sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Ende September 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1599411600
+         'until' => 1600016400
        },
        undef,
        undef,
@@ -3125,14 +3054,16 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
+#: XXX nicht ganz klar, ob die Sperrung schon am 30.9.2020 aufgehoben wird, Gesamtmaßnahme geht länger; laut rbbtext bis 2021-06-30
+#: next_check: 2020-09-30
 	q4::inwork; 4515,4760 4214,4595 4039,4500
 ',
          'from' => 1589275980,
          'id' => 3261,
          'source_id' => '2147345834',
-         'text' => 'Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Chlumer Str. wegen Bauarbeiten gesperrt, bis 04.09.2020 17:00 Uhr ',
+         'text' => 'Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Chlumer Str. wegen Bauarbeiten gesperrt, bis 30.06.2021',
          'type' => 'handicap',
-         'until' => 1599231600
+         'until' => 1625065200
        },
        {
          'data' => '	q4::inwork; 25720,4828 25796,4823 25948,4823 26085,4865
@@ -3236,7 +3167,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: confirmed_by: srt
 #: XXX bleibt es beim Ende der Bauarbeiten am 5.10.2020?
 #: priority: #B
-#: last_checked: 2020-08-28
+#: last_checked: 2020-09-05
 #: next_check: 2020-10-05
 	q3::inwork 11652,13372 11589,13305 11578,13310 11526,13252
 ',
@@ -3245,6 +3176,70 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Pauline-Staegemann-Str.: Bauarbeiten, Fahrbahn gesperrt, Bordsteine, voraussichtlich bis zum 05.10.2020',
          'type' => 'handicap',
          'until' => 1601913600
+       },
+       {
+         'data' => '	q4::inwork 17631,3200 17894,2783
+',
+         'from' => 1599948000,
+         'id' => 3273,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.986324.php',
+         'text' => 'Akeleiweg: Bauarbeiten, Fahrbahn gesperrt, vom 14.09.2020 bis voraussichtlich 30.11.2020',
+         'type' => 'handicap',
+         'until' => 1606777200
+       },
+       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.988534.php (Umbau der Kreuzung an der Hobrechtbrücke; Bürknerstr. wird verschwenkt; außerdem entsteht ein Überweg (Zebrastreifen?); Bauarbeiten bis Dezember 2020; Sperrung)
+#: by: https://twitter.com/BerlinNkl/status/1303296712799330304
+#: by: https://pbs.twimg.com/media/EhY9dDlWkA4cFqP?format=png
+#: by: https://www.berliner-woche.de/neukoelln/c-verkehr/kreuzung-friedelstrassemaybachufer-wird-entschaerft_a286609
+#: priority: #A vvv
+#: last_checked: 2020-09-12 vvv
+#: check_frequency: 30d vvv
+#: next_check: 2020-12-01 vvv
+	q3::inwork 11897,9754 12085,9778
+	q4::inwork 12085,9778 12116,9825
+	q3::inwork 12074,9689 12085,9778 11880,9874
+	q3::inwork 12250,9691 12085,9778
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+#: priority ^^^
+',
+         'from' => 1599591506,
+         'id' => 3275,
+         'source_id' => '2147346338',
+         'text' => 'Kreuzung Maybachufer/Friedelstr./Hobrechtbrücke: wegen Bauarbeiten ist die Kreuzung gesperrt, Umwege auf dem Bürgersteig notwendig, bis 1. Dezember 2020',
+         'type' => 'handicap',
+         'until' => 1606838400
+       },
+       {
+         'data' => '#: by: wosch
+	2::inwork 38096,68983 38048,68993
+',
+         'from' => undef,
+         'id' => 3276,
+         'source_id' => 'http://www.berlin-usedom-radweginfo.de/neuer_weg.php',
+         'text' => 'Autobahnbrücke Glambeck gesperrt (auch nicht per Fuss passierbar), bis 30.9.2020',
+         'type' => 'gesperrt',
+         'until' => 1601503200
+       },
+       {
+         'data' => '#: next_check_id: SIGISMUND-2020
+#: XXX wann sind die Bauarbeiten fertig? vvv
+#: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
+#: last_checked: 2020-09-12 vvv
+	q3::inwork 8031,11249 7934,11275 7897,11287
+	q4::inwork 7934,11275 7965,11380
+#: last_checked ^^^
+#: XXX ^^^
+#: XXX ^^^
+',
+         'from' => undef,
+         'id' => 3277,
+         'text' => 'Sigismundstr. und Matthäikirchplatz: Bauarbeiten, Fahrbahn gesperrt',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );

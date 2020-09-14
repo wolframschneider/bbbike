@@ -625,7 +625,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2020-08-30 vvv
+#: last_checked: 2020-09-04 vvv
 ausgeschildert "zur Salzmannstraße Huronseestraße"	CP2; 16900,9861 16895,9922
 ausgeschildert "zur Sewanstraße"	CP2; 16900,9861 17005,9953
 #: last_checked ^^^
@@ -684,4 +684,6 @@ Bernauer Str. - Mauerpark: ggfs. schon an der Ampel Bernauer Str./Wolliner Str. 
 Otto-von-Simson-Str - Thielallee: Überquerungsmöglichkeit ca. 30m zur rechten Seite	CP; 2627,5095 2560,5044 2577,4959
 # 
 Stahlheimer Str. - Rodenbergstr.: nicht auf das Straßenbahnkap fahren, links abbiegen dort nicht möglich	PI; 11477,15969 11492,15993 11358,16067
+# 
+Weißenhöher Str. - Stawesdamm: auf der Fahrbahn bleiben, links abbiegen wegen Bushaltestelle nicht möglich	PI; 20521,11494 20623,11489 20627,11552
 # 
