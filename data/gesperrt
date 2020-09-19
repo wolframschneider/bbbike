@@ -863,9 +863,10 @@ Siedlung Hubertus - Jürgen-Schumann-Allee: explizites Radfahren-verboten-Schild 
 (Lauinger Str. - Köpenicker Str.)	1::igndisp 21133,11348 21171,11336
 Hendrichplatz	1 15859,12753 15733,12753 15734,12793 15859,12793 15859,12753
 Oderbruchstr.	1 14243,13890 14291,13862
-Grüne Aue	1s 21954,11269 21956,11246 21994,11209 22018,11165
+Grüne Aue	1s 21954,11269 21956,11246 21994,11209 22018,11165 22054,11091
 (Maximilianstr. - Stolzingstr./Hainbuchenstr.)	1 1360,25269 1364,25256
 (Stolzingstr./Hainbuchenstr. - Maximilianstr.)	1 1339,25251 1338,25262
+(Wochenendsiedlung Kaniswall): abgesperrt	2 32902,196 32918,231 33019,292
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1068,7 +1069,10 @@ Dorfstr. (Miersdorf)	1 24998,-6983 24996,-7088
 Dorfstr. (Miersdorf)	1 25020,-7091 25030,-6989
 Uhlandring (Schulzendorf)	1 23368,-4696 23473,-4833 23405,-4882 23309,-4755
 Leipziger Platz (Schulzendorf)	1 23798,-5864 23695,-5952
-Leipziger Platz (Schulzendorf)	1 23642,-5895 23753,-5811
+Leipziger Platz (Schulzendorf)	1 23645,-5892 23753,-5811
+Waltersdorf	2::igndisp 21462,-3900 21516,-3839
+Würzburger Str.	1 26031,-4072 26082,-4137 26119,-4215 26125,-4280
+Würzburger Str.	1 26109,-4284 26096,-4218 26060,-4148 26014,-4087
 Mittelstreifen nicht überquerbar	3nocross::ignrte -974,128015 -724,127995 6,127935 298,127911
 B104: Neubrandenburg -> Feldstr.: Mittelstreifen nicht überquerbar	3::igndisp -974,128015 -724,127995 -719,128043
 Feldstr. -> Pasewalk: Mittelstreifen nicht überquerbar	3::igndisp -719,128043 -724,127995 6,127935
@@ -3652,7 +3656,7 @@ Pollerreihe	BNP:0:71 -4037,36545
 Poller	BNP:5:-103 -1604,39299
 zwischen den liegenden Baumstämmen durch	BNP:5:-251 -765,36314
 Pollerreihe	BNP:5:-36 -1082,38034
-Pollerreihe	BNP:0:-46 -1442,38509
+Pollerreihe	BNP:0:-41 -1442,38509
 Pollerreihe	BNP:5:-194 -1721,38272
 Pollerreihe	BNP:5:-177 -1729,38425
 Pollerreihe	BNP:0:-104 -1782,38140
@@ -3711,7 +3715,7 @@ Engstelle	BNP:20:-243 -2014,39128
 Pollerreihe	BNP:0:-21 -5923,37934
 Drängelgitter	BNP:10:-114 517,38890
 Drängelgitter	BNP:5:-192 1292,39866
-Treppe (mehrere, weit auseinander liegende Stufen)	0:30:-175 -1498,38589
+Treppe (mehrere, weit auseinander liegende Stufen)	0:30:-188 -1498,38589
 Durchgang neben Schranke	BNP:5:66 -840,40618
 über den Huckel	BNP:15:-188 1409,41218
 Durchgang neben Schranke	BNP:5:-24 -1335,34371

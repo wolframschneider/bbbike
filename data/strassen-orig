@@ -289,7 +289,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 # 
 #: next_check_id: FRIEDRICH-2020
 #: source_id: 2147346249
-#: last_checked: 2020-09-01 vvv
+#: last_checked: 2020-09-17 vvv
 #: next_check: 2021-01-31 vvv
 #: valid: !20200821-20210131
 Friedrichstr. (Mitte, Kreuzberg)	H 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
@@ -2542,7 +2542,7 @@ Naugarder Str.	N 12737,15154 12712,15176 12693,15225 12610,15455 12621,15482
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5238 (Vorlage zur Kenntnisnahme)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5356
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_01_0001_0152_online.pdf (Benennung: Gertrud-Classen-Platz, Wirksamkeit am 6. März 2020)
-#: last_checked: 2020-08-14 (keine Schilder zu sehen)
+#: last_checked: 2020-09-18 (keine Schilder zu sehen)
 #: check_frequency: 30d
 (Hosemannstr. - Naugarder Str.)	N 12583,15566 12605,15491
 Malchower Chaussee	HH 14832,17867 15152,18115 15181,18137 15569,18492 15600,18551 15610,18596
@@ -3992,7 +3992,7 @@ Buchholzweg	N 4535,15530 4466,15350 4389,15336
 #: add_fragezeichen: Wurde die Umbenennung zu "Cornelius-Fredericks-Str." schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: also_indoor: search Cornelius-Fredericks-Straße
 #: osm_watch: way id="247340732" version="16"
-#: last_checked: 2020-09-06 (mapillary)
+#: last_checked: 2020-09-14 (mapillary)
 #: check_frequency: 90d
 Lüderitzstr.	N 6661,15921 6484,16085 6349,16213 6211,16343 6106,16433 6003,16521
 Sansibarstr.	N 6201,16538 6106,16433 6005,16313 5827,16118
@@ -6436,10 +6436,11 @@ Verlängerte Waldowallee	H 19468,8168 19558,8064 19666,7988 19843,7866 19927,7813
 Rudolf-Rühl-Allee	H 21303,5826 21239,6063 20722,6971 20640,7122 20603,7189 20653,7289 20616,7292 20510,7325 20393,7404 20340,7468 20323,7529 20316,7637 20307,7689 20280,7749
 Köpenicker Allee	NN 20280,7749 20226,7846
 Köpenicker Allee	N 20226,7846 20096,8077 19990,8253 19898,8410 19813,8564 19697,8776 19610,8933 19575,8978 19500,9043 19392,9116 19267,9201 19206,9243 19195,9249 19109,9306 19020,9364 18939,9417
-# REMOVED --- #: XXX neuer Straßenname: "Am alten Flugplatz", evtl. nur im Bereich der neuen Gartenstadt --- #: XXX fehlt in Berlin.coords.data --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6985 --- #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_31_3489_3616_online.pdf (Benennung) --- #: osm_watch: way id="24845022" version="16" --- #: last_checked: 2017-11-05 --- #: check_frequency: 45d
+# REMOVED --- #: XXX neuer Straßenname: "Am alten Flugplatz", evtl. nur im Bereich der neuen Gartenstadt --- #: XXX fehlt in Berlin.coords.data --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6985 --- #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_31_3489_3616_online.pdf (Benennung) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_39_4845_4932_online.pdf (späte Straßenlandwidmung) --- #: osm_watch: way id="24845022" version="16" --- #: last_checked: 2017-11-05 --- #: check_frequency: 45d
+#: note: am Anfang waren die Straßenschilder mit kleinem "alten" geschrieben, mittlerweile (spätestens 2020) wurde das korrigiert
 #: oldname: -201801: Straße am Heizhaus
 #: ignore_oldname_file: yes
-Am alten Flugplatz	N 19697,8776 19754,8809 19778,8823 19815,8844 19891,8887 19949,8920 19972,8935
+Am Alten Flugplatz	N 19697,8776 19754,8809 19778,8823 19815,8844 19891,8887 19949,8920 19972,8935
 Straße am Heizhaus	N 19972,8935 19984,8944 20059,8951 20150,8962 20220,8976
 #: note: Tempo-10-Zone vvv
 Wiesengrundstr. (Karlshorst)	N 19468,8168 19550,8230 19599,8256 19639,8278 19698,8310 19713,8319 19740,8332 19782,8354 19832,8378 19898,8410 19964,8447 20046,8448 20129,8444 20174,8443 20187,8442 20224,8441 20293,8440
@@ -7555,7 +7556,8 @@ Im Amseltal	N 1982,25108 1960,25229 1939,25294 1828,25478 1725,25727 1678,25972
 Ortwinstr.	N 2038,25531 1931,25511 1828,25478 1730,25441 1627,25386
 Nibelungenstr. (Frohnau)	N 1573,25948 1587,25800 1629,25661 1644,25620 1730,25441 1839,25290 1857,25238
 Gralsburgsteig	N 2164,25190 2206,25260 2038,25531 1950,25763 1921,26019
-Alemannenstr. (Frohnau)	H 1453,25923 1501,25675 1558,25505 1568,25477 1627,25386 1714,25289 1738,25243 1767,25098 1775,25019 1750,24942 1730,24860 1732,24798 1735,24738 1736,24722
+Alemannenstr. (Frohnau)	NH 1453,25923 1501,25675 1558,25505 1568,25477 1627,25386 1714,25289 1738,25243
+Alemannenstr. (Frohnau)	H 1738,25243 1767,25098 1775,25019 1750,24942 1730,24860 1732,24798 1735,24738 1736,24722
 Alemannenstr. (Frohnau)	N 1736,24722 1747,24606 1745,24546 1742,24526 1750,24433 1732,24402
 Alemannenstr. (Frohnau)	N 1750,24433 1776,24416
 Gawanstr.	N 1747,24606 1542,24676 1400,24693 1300,24687 1225,24723 1112,24821
@@ -10952,6 +10954,9 @@ Waldburgweg	N 23252,6262 23397,6275 23397,6253 23485,6237
 Elseneck	N 23397,6275 23426,6346
 Heidekrugstr.	N 23482,6649 23489,6463 23498,6342 23492,6287 23485,6237
 (Kurpark Friedrichshagen)	NN 25584,6029 25497,6058 25382,6056 25183,6046 24964,6046
+#: alias: Dr.-Jacoby-Weg
+#: note: Name steht in einigen Kartenwerken, aber vor Ort ist keine Ausschilderung; beleuchtet
+(zur Freilichtbühne Freilichtbühne)	NN 25601,6158 25590,6160 25542,6208 25469,6200 25437,6209 25405,6278
 Hirschgartenstr.	N 23600,5932 23617,5902 23634,5873 23660,5819
 Am Wiesenrain	N 23617,5902 23729,5940 23837,5978 23931,5992 24122,6007 24342,6001 24455,5975 24540,5948 24584,5914 24629,5831
 Hirschsprung	N 23837,5978 23865,5895
@@ -11004,7 +11009,7 @@ Petersilienweg	NN 24388,6098 24444,6165 24515,6201 24562,6221
 (S-Bhf. Hirschgarten - Elsengrund)	NN 23948,6054 23951,6063 23943,6131 23960,6153
 Waldweg (Friedrichshagen)	N 24255,6131 24240,6162 24260,6218 24306,6267 24406,6354 24499,6405 24540,6421 25116,6640 25178,6664
 Ravensteiner Promenade	N 25178,6664 25149,6822 25252,7079 25260,7224 25262,7433
-Hinter dem Kurpark	N 25627,6347 25592,6371 25513,6371 25372,6262 25315,6232 24964,6046
+Hinter dem Kurpark	N 25627,6347 25592,6371 25513,6371 25405,6278 25372,6262 25315,6232 24964,6046
 #: note: Beleuchtung existiert
 (entlang der Erpe)	NN 24650,6034 24647,5995 24647,5981 24637,5960 24584,5914
 Stillerzeile	N 23877,5503 24003,5501 24126,5521 24125,5547 24236,5594 24320,5621 24362,5635 24387,5672 24443,5765 24629,5831 24798,5891 24977,5880 25015,5751
@@ -11306,7 +11311,7 @@ Feldstr. (Bohnsdorf)	N 20829,-773 21055,-723 21209,-734
 Hufenweg	N 20790,-537 20799,-667 20829,-773 20814,-935
 #: XXX wird diese Straße einen anderen Namen bekommen? Evtl. Diepenseer Str., siehe osm? Wird sie noch weiter verlängert?
 #: osm_watch: way id="27564863" version="18"
-#: last_checked: 2019-09-07
+#: last_checked: 2020-09-15
 #: check_frequency: 360d
 (Hufenweg Verlängerung)	N 20814,-935 20782,-1199 20799,-1272 20807,-1305
 Kleine Lindenstr.	N 20814,-935 21306,-975 21387,-1033 21459,-1086 21528,-1134
@@ -11590,10 +11595,11 @@ Oranienplatz	NN 11275,10723 11253,10778 11227,10821
 Bolivarallee	N 795,12652 765,12564 743,12498 714,12403 676,12298 668,12190
 Steubenplatz	N 653,12109 689,12152 668,12190 620,12144
 #: oldname: -20050801: Straße 790
-Am Oder-Spree-Kanal	N 30588,-3000 30710,-3037 30727,-2911 30703,-2841 30640,-2803 30599,-2827 30588,-3000
+Am Oder-Spree-Kanal	N 30588,-3000 30710,-3037 30727,-2911 30703,-2841 30629,-2817 30599,-2827 30588,-3000
 #: oldname: -20050801: Straße 791
 Am Oder-Spree-Kanal	N 30588,-3000 30546,-3072
-Zu den Gosener Bergen	N 30728,-2326 30640,-2803
+Am Oder-Spree-Kanal	N 30646,-2732 30629,-2817
+Zu den Gosener Bergen	N 30728,-2326 30646,-2732
 Schmöckwitzwerdersteg	NN 30546,-3072 30534,-3105
 (Wiesenweg)	N -1409,16106 -1334,16260 -1321,16543 -1333,16577 -1351,16587
 # REMOVED (existiert nicht) --- (Wiesenweg)	N -1351,16587 -1370,16648 -1343,16732
@@ -12352,8 +12358,10 @@ Robert-Uhrig-Str.	N 17746,11748 17744,11703 17742,11636 17741,11607 17734,11408 
 (Fußgängerbrücke)	NN 17744,11703 17758,11701 17760,11665 17769,11770
 (Fußgängerbrücke - Rosenfelder Ring)	NN 17769,11770 17772,11862
 (Fußgängerbrücke - Alt-Friedrichsfelde)	NN 17769,11770 17759,11768 17746,11767 17746,11748
-#: note: beleuchtet (by Stefan Klinkusch)
-(Winterweg, KGA Gartenfreunde)	NN 3420,18470 3427,18467 3531,18418 3538,18379 3539,18357 3512,18324
+#: note: beleuchtet (by Stefan Klinkusch) (bestätigt in mapillary)
+(Winterweg, KGA Gartenfreunde)	NN 3420,18470 3427,18467 3531,18418
+#: note: beleuchtet (by Stefan Klinkusch) (bestätigt in mapillary)
+(Schwarzer Weg, KGA Gartenfreunde)	NN 3531,18418 3538,18379 3539,18357 3512,18324
 #: note: beleuchtet (by Stefan Klinkusch)
 (KGA Gartenfreunde - Zobeltitzstr.)	NN 3538,18379 3674,18372
 Otisstr.	N 3213,18115 3420,18470 3526,18653 3562,18712 3680,18913 3700,18965
@@ -12809,7 +12817,7 @@ Am Alten Lokschuppen	NN 15730,11279 15708,11193 15752,11115 15805,10949
 (zum Bahnhof Nöldnerplatz)	NN 15805,10949 15859,10970
 (Unterführung S-Bhf. Nöldnerplatz)	NN 15886,10947 15879,10954 15865,10965 15859,10970
 #: next_check_id: SALVADORALLENDEBRUECKE-2017
-#: last_checked: 2020-08-15
+#: last_checked: 2020-09-15
 #: check_frequency: 120d
 #: next_check: 2022-02-28
 # REMOVED (eventuell nach den Bauarbeiten wieder aktivieren) --- (Salvador-Allende-Str. - An der Müggelspree)	N 23444,4942 23461,4948
@@ -13576,8 +13584,8 @@ Georg-Wilhelm-Str.	N 2718,10359 2710,10245 2698,10067 2687,10053 2702,10006
 Warburgzeile	N 4101,12356 4032,12167
 Schubertstr. (Lichterfelde)	N 2328,3482 2289,3500
 (Schubertstr. - Dahlemer Weg)	NN 2289,3500 2278,3514 2270,3496 2270,3519 2262,3501 2253,3505
-(Klein-Glienicke - Hahn-Meitner-Institut)	NN -9313,54 -8629,175 -8387,190
-(Umfahrung Hahn-Meitner-Institut)	NN -7737,316 -7742,330 -7844,392 -8021,393 -8301,326 -8398,242 -8387,190
+(Klein-Glienicke - Helmholtz-Zentrum)	NN -9313,54 -8629,175 -8387,190
+(Umfahrung Helmholtz-Zentrum)	NN -7737,316 -7742,330 -7844,392 -8021,393 -8301,326 -8398,242 -8387,190
 Roedenbecksteig	NN -9393,445 -8629,175
 (Verlängerung des Roedenbecksteigs)	NN -8629,175 -8539,-264
 Martin-Heydert-Str.	N -7710,313 -7712,407 -7714,529 -7716,599
@@ -14436,7 +14444,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="13"
-#: last_checked: 2020-09-04
+#: last_checked: 2020-09-16
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Am Kraatzgraben)	NN 16835,10052 16666,10219 16544,10337 16488,10381
@@ -14599,8 +14607,10 @@ Schirpitzer Weg	NN 17786,1377 17763,1412
 Schirpitzer Weg	N 17763,1412 17730,1464
 Schirpitzer Weg [42-54]	NN 17937,958 17930,972 17931,987 17948,1011 17967,1036 17946,1054 17972,1089 17984,1100
 Benatzkyweg	N 17605,1429 17730,1464 17902,1517
-(Benatzkyweg - Glashütter Weg)	NN 17902,1517 17969,1521 18021,1552 18121,1614
+(Benatzkyweg - Glashütter Weg)	NN 17902,1517 17970,1526 18067,1568 18121,1614
+(Benatzkyweg - Rudower Höhe)	NN 18067,1568 18099,1568 18147,1559 18212,1572 18290,1574
 Glashütter Weg	N 18121,1614 18223,1683 18266,1715 18425,1831
+(Glashütter Weg - Künnekeweg)	NN 18223,1683 18290,1574 18432,1352
 An der Rudower Höhe	N 18425,1831 18361,1926
 Niederschlemaer Weg	N 18447,1727 18444,1782 18425,1831
 Bartschiner Str.	N 16889,853 16902,771 16904,732 16928,618 16948,501 17042,340
@@ -14806,7 +14816,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="14"
-#: last_checked: 2020-09-04
+#: last_checked: 2020-09-16
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -16588,7 +16598,7 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.870634.php
 #: osm_watch: way id="59573616" version="1"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
-#: last_checked: 2020-08-12 (mapillary)
+#: last_checked: 2020-09-12 (mapillary)
 #: check_frequency: 180d
 (Rhönstr. - Harzburger Str.)	NN 13598,21360 13709,21334
 Eifelstr.	N 13580,21286 13351,21239 13280,21225
@@ -19132,3 +19142,14 @@ Am Bülowbogen	NN 7906,10098 7928,10094 8011,10085
 #: note ^^^
 #: osm.highway: service
 (Einfahrt Bauhaus)	N 4988,17172 5020,17157 5158,17138
+# 
+#: note: faktisch eine Exklave, nur über Gosen zu erreichen vvv
+#: note: Privatstraße
+Am Kaniswall	N 32823,-149 32817,4 32872,128
+(Am Kaniswall - Wochenendsiedlung Kaniswall)	NN 32872,128 32902,196
+(Wochenendsiedlung Kaniswall)	N 32902,196 32918,231 33019,292
+(zur Wochenendsiedlung Kaniswall)	N 32902,196 32873,248 32865,263
+(Kaniswall - Streitwall/Spree)	N 32823,-149 32814,-50 32798,37 32820,74 32865,263 32891,314 33002,391 33052,384
+(Kaniswall - Streitwall/Spree)	NN 33052,384 33281,498 33373,558
+(Kaniswall - Gosen)	NN 32823,-149 32420,-260 32329,-380
+#: note ^^^

@@ -893,7 +893,7 @@ Fähranleger	culdesac_pseudo -1989,18378
 # 
 #: next_check_id: SUEDPANKE-2014
 #: XXX wird bei der Verlängerung des Südpankewegs aufgehoben
-#: last_checked: 2020-08-18 (mapillary)
+#: last_checked: 2020-09-11
 #: check_frequency: 30d
 	culdesac 8294,14194
 # 
@@ -1569,6 +1569,8 @@ Sackgassenende an der Hausnummer 46A	culdesac 15402,4956
 westliches Sackgassenende	culdesac_pseudo 20861,12192
 östliches Sackgassenende	culdesac 21152,12185
 	culdesac -7990,19888
+Sackgassenende an der Autobahn	culdesac 21563,-1725
+Sackgassenende an der Autobahn	culdesac 21596,-1727
 # 
 ######################################################################
 # culdesac entries which should remain invisible

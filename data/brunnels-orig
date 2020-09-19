@@ -311,7 +311,7 @@ Kynastbrücke	Br 14928,10970 14902,10859 14880,10808
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6904 (Vorschlag an Senatsverwaltung weitergeleitet)
 #: XXX Name "Südkreuz-Steg" --- wann wird dieser Name offiziell (Amtsblatt?) und die Brücke ausgeschildert?
 #: osm_watch: way id="10360532" version="20"
-#: last_checked: 2020-07-17
+#: last_checked: 2020-09-10 (mapillary)
 #: check_frequency: 120d
 Sachsendammsteg	Br 7757,7563 7747,7521 7733,7483
 # 
@@ -767,6 +767,7 @@ Brücke über die Nuthe	Br -9306,-4259 -9267,-4231
 Bahnbrücke	Br 40460,105211 40597,105341
 Bahntunnel	Tu 26587,162845 26616,162886
 Brücke über die Havel	Br -1487,38509 -1426,38575
+Luise-Henriette-Steg	Br -1319,38340 -1293,38361
 Brücke über die Dahme	Br 27162,-10308 27304,-10296
 Brücke über die Dahme	Br 27165,-10332 27243,-10346 27263,-10343
 Straßenbrücke	Br 27447,-10282 27500,-10275

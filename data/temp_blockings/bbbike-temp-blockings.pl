@@ -7446,7 +7446,7 @@ EOF
        text  => 'B 273 Breite Str. OD Oranienburg, zw. Berliner Str. u. Havelstr. Straßenbauarbeiten Vollsperrung 19.03.2007-22.07.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -1571,38406 -1553,38501 -1515,38500 -1487,38509
+	q4::inwork -1571,38406 -1553,38501 -1524,38498 -1487,38509
 EOF
      },
      { from  => 1195945200, # 2007-11-25 00:00
@@ -10708,7 +10708,7 @@ EOF
        text  => 'B 273 Breite Str. OD Oranienburg, zw. Berliner Str. und Havelstr. Deckschichteinbau Vollsperrung 28.11.2007-04.12.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -1595,38315 -1571,38406 -1553,38501 -1515,38500
+	q4::inwork -1595,38315 -1571,38406 -1553,38501 -1524,38498
 EOF
      },
      { from  => 1195513200, # 2007-11-20 00:00
@@ -12365,7 +12365,7 @@ EOF
        text  => 'B 273 Bernauer Str., Schloßplatz OD Oranienburg Deckeneinbau Vollsperrung 11.08.2008-01.09.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -1553,38501 -1515,38500 -1487,38509
+	q4::inwork -1553,38501 -1524,38498 -1487,38509
 EOF
      },
      { from  => 1218924000, # 2008-08-17 00:00
@@ -27899,7 +27899,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-09-07
+#: last_checked: 2020-09-17
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27976,7 +27976,7 @@ EOF
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-09-04
+#: last_checked: 2020-09-16
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
 EOF
@@ -28532,7 +28532,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-09-04
+#: last_checked: 2020-09-16
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -29210,11 +29210,11 @@ EOF
 #: source_id: 2147343335 (Zeitraum siehe oben)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-08-15 (mapillary)
+#: last_checked: 2020-09-12 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-12-18
 #: XXX_prog: eigentlich q4+::inwork;
-	q4::inwork; 8866,17075 8677,17154
+	q4::inwork; 8904,17059 8866,17075 8677,17154
 # REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
 EOF
      },
@@ -29235,13 +29235,14 @@ EOF
 #: XXX bis wann gehen die Bauarbeiten? Bis Anfang Juli 2020?
 #: also_indoor: traffic
 #: osm_watch: way id="156066225" version="16"
-#: last_checked: 2020-08-06
+#: last_checked: 2020-09-15
+#: check_frequency: 90d
 # REMOVED --- #: next_check: 2020-07-08
-	q4::inwork; 19266,1968 19564,1871
+	q3::inwork; 19266,1968 19564,1871
 #: XXX hier laufen gerade Asphaltierungsarbeiten
-#: last_checked: 2020-08-06
-#: check_frequency: 7d
-	q4::inwork 19055,2037 19164,2001 19181,1996 19266,1968
+#: last_checked: 2020-09-15
+#: check_frequency: 21d
+	q3::inwork 19055,2037 19164,2001 19181,1996 19266,1968
 EOF
      },
      { from  => $isodate2epoch->("2019-06-10 18:00:00"), # 1560204000, # 2019-06-10 00:00 # --- die Sperrungen sind schon am Tag vor der Staffel aktiv, in Zukunft immer berücksichtigen!
@@ -29305,8 +29306,10 @@ EOF
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-08-30
-#: check_frequency: 14d
+#: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?)
+#: last_checked: 2020-09-15
+#: check_frequency: 30d
+#: next_check: 2020-10-17
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
 EOF
@@ -30225,11 +30228,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1581782552, # undef, # XXX
-       text  => 'Perelsplatz: Parkweg gesperrt, Ende der Sperrung unbekannt',
+       until => $isodate2epoch->("2021-07-01 17:00:00"), # 1581782552, # undef, # XXX
+       text  => 'Perelsplatz: Parkweg kann wegen Bauarbeiten gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: next_check_id: PERELSPLATZ-2019 --- #: add_fragezeichen: Wann wird die Sperrung aufgehoben? --- #: last_checked: 2019-12-22 --- #: next_check: 2020-01-31
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.992535.php
 	2::inwork 5809,7712 5636,7709
 EOF
      },
@@ -30382,12 +30386,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1600447154, # undef, # XXX
        text  => 'Mandelstr.: wegen Bauarbeiten gesperrt, auch für Fußgänger',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: MANDEL-2020
-#: last_checked: 2020-08-14 (zusätzliche Sperrung an der Hosemannstr.)
+# REMOVED (fertig) --- #: last_checked: 2020-08-14 (zusätzliche Sperrung an der Hosemannstr.)
 	2::inwork 12871,15882 12911,15865
 # REMOVED (hier mittlerweile befahrbar)	2::inwork 12911,15865 12979,15822 12948,15771
 EOF
@@ -30449,13 +30453,11 @@ EOF
 EOF
      },
      { from  => 1586020992, # 2020-04-04 19:23
-       until => undef, # 1590768000, # 2020-05-29 18:00
+       until => 1600447368, # undef, # 1590768000, # 2020-05-29 18:00
        text  => 'Rigaer Str.: zwischen Proskauer Str. und Zellestr. Einbahnstraßenregelung, offen Richtung Bersarinplatz',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX bis wann gilt die Einbahnstraßenregelung?
-#: also_indoor: traffic (G,H)
-#: last_checked: 2020-08-20
+# REMOVED (Einbahnstraßenschilder sind weg) --- #: XXX bis wann gilt die Einbahnstraßenregelung? --- #: also_indoor: traffic (G,H) --- #: last_checked: 2020-08-20
 	q3::inwork; 14133,12482 14266,12446
 EOF
      },
@@ -30512,7 +30514,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ROTHER-2020
-#: last_checked: 2020-08-22
+#: last_checked: 2020-09-16
 	q4::inwork 13478,10998 13575,10963
 EOF
      },
@@ -30611,6 +30613,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/angebot-auf-der-baenschstrasse-wurde-verkuerzert_a268825
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/fuenf-antraege-auf-temporaere-spielstrassen_a283528 ("bis Ende des Sommers" (2020))
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2020/pressemitteilung.993677.php (22.9.2020 - Tag der Spielstraßen --- nicht eingetragen)
 # REMOVED --- S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
 S1 - Bänschstr. zwischen Voigtstr. und Pettenkoferstr. Südseite	q4::temp::play 14798,12502 15005,12443
 S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp::play 13457,12505 13371,12694 13273,12902
@@ -30632,9 +30635,9 @@ S10 - Böckhstr. zwischen Grimmstr. und Graefestr.	q4::temp::play 11175,9882 1119
 S11 - Lachmannstr. zwischen Kottbusser Damm und Schönleinstr.; Boppstr. zw. Kottbusser Damm und Schönleinstr.; Schönleinstr. 7a-13	q4::temp::play 11745,9541 11594,9604 11541,9576 11560,9524 11785,9437
 S12 - Lübbener Str. zwischen Skalitzer Str. und Görlitzer Str.	q4::temp::play 12608,10294 12729,10515
 S13 - Cuvrystr. zwischen Görlitzer Str. und Schlesische Str.	q4::temp::play 13035,10076 13132,10239 13151,10276 13197,10355 13249,10445
-S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp::play 14442,11101 14468,11203
-#: note: gesehen am 2020-07-26: statt der Helmerdingstr. wurde die angrenzende Simplonstr. gesperrt
+#: note: gesehen am 2020-07-26: statt der Helmerdingstr. wurde die angrenzende Simplonstr. gesperrt; mittlerweile (August/September 2020) wird immer nur die Simplonstr. gesperrt
 Simplonstr. zwischen Helmerdingstr. und Matkowskystr	q4::temp::play 14468,11203 14531,11142
+# REMOVED --- S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp::play 14442,11101 14468,11203
 S15 - Paul-Lincke-Ufer zwischen Glogauer Str. bis Ohlauer Str.	q4::temp::play 12591,9584 12439,9660 12286,9739 12116,9825
 S16 - Lilienthalstr. zwischen Bergmannstr. und Züllichauer Str.	q4::temp::play 10705,9234 10709,9192 10748,9054 10675,8940
 S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334,10527 11258,10682
@@ -30948,7 +30951,7 @@ EOF
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2020-08-19 (mapillary)
+#: last_checked: 2020-09-18
 	q4::inwork 14136,17170 13996,16959
 EOF
      },
@@ -31092,7 +31095,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1598197723, # 2020-08-23 17:48
+       until => $isodate2epoch->("2020-10-23 17:00:00"), # 1598197723, # 2020-08-23 17:48
        text  => 'B2/B198: Richtung Süden Radfahren verboten',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -31239,6 +31242,19 @@ EOF
 #: last_checked ^^^
 #: XXX ^^^
 #: XXX ^^^
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Richardplatz: Bauarbeiten zwischen Richardstr. und Hertzbergstr., Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: RICHARDPLATZ-2020
+#: osm_watch: way id="840456624" version="1"
+#: priority: #A
+#: last_checked: 2020-09-15
+#: check_frequency: 14d
+	q4::inwork 13288,7653 13378,7695 13416,7712
 EOF
      },
     );

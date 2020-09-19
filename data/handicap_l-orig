@@ -99,7 +99,7 @@ Kastaniensteig:Z235	q4 -5398,37625 -5392,37654
 Kiefernstr.:Z235	q4 -5346,37543 -5354,37617 -5357,37656
 Lindensteig:Z235	q4 -5410,37554 -5425,37628
 Lippestr.: Z235	q4 -368,36164 -440,36160 -521,36162
-Luise-Henriette-Steg: Z239 "Radfahrer frei"	q4 -1078,38529 -1193,38478 -1251,38409 -1314,38342 -1353,38301
+Luise-Henriette-Steg: Z239 "Radfahrer frei"	q4 -1078,38529 -1210,38472 -1259,38408 -1293,38361 -1319,38340 -1353,38301
 Muldestr.: Z235	q4 -367,36040 -528,36040 -621,36035 -642,36035 -693,36017 -771,35989
 Netzestr.: Z235	q4 -592,35923 -621,36035 -625,36081 -645,36082
 Oderstr.: Z235	q4 -528,36040 -525,35932 -521,35726
@@ -265,3 +265,6 @@ Schleuse Kupferhammer: eng	q3 36131,48611 36131,48592
 Strandpromenade (Woltersdorf): Fuﬂg‰nger	q2 35156,4059 35207,4305 35147,4452 35155,4511
 Wanderweg entlang des Grenzstreifens: einige Fuﬂg‰nger	q1 5253,24190 5297,24238 5303,24262 5327,24311
 Wanderweg - Jungbornstr.: einige Fuﬂg‰nger	q1 5303,24262 5279,24275
+#: XXX_prog BS (am Bergweg, ansonsten q2)
+(Mohnblumenweg - Bergweg): schmal, Bordstein	q3 23045,-6226 23064,-6290
+(Miersdorfer Str. - Zum M¸hlenschlag): gemeinsamer Geh- und Radweg	q1 23035,-5990 22992,-6018

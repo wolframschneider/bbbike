@@ -2220,7 +2220,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-09-07
+#: last_checked: 2020-09-17
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2241,7 +2241,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-09-04
+#: last_checked: 2020-09-16
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
 ',
@@ -2321,7 +2321,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-09-04
+#: last_checked: 2020-09-16
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -2457,11 +2457,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147343335 (Zeitraum siehe oben)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-08-15 (mapillary)
+#: last_checked: 2020-09-12 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-12-18
 #: XXX_prog: eigentlich q4+::inwork;
-	q4::inwork; 8866,17075 8677,17154
+	q4::inwork; 8904,17059 8866,17075 8677,17154
 # REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
 ',
          'from' => undef,
@@ -2475,13 +2475,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: XXX bis wann gehen die Bauarbeiten? Bis Anfang Juli 2020?
 #: also_indoor: traffic
 #: osm_watch: way id="156066225" version="16"
-#: last_checked: 2020-08-06
+#: last_checked: 2020-09-15
+#: check_frequency: 90d
 # REMOVED --- #: next_check: 2020-07-08
-	q4::inwork; 19266,1968 19564,1871
+	q3::inwork; 19266,1968 19564,1871
 #: XXX hier laufen gerade Asphaltierungsarbeiten
-#: last_checked: 2020-08-06
-#: check_frequency: 7d
-	q4::inwork 19055,2037 19164,2001 19181,1996 19266,1968
+#: last_checked: 2020-09-15
+#: check_frequency: 21d
+	q3::inwork 19055,2037 19164,2001 19181,1996 19266,1968
 ',
          'from' => undef,
          'id' => 3112,
@@ -2495,8 +2496,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: last_checked: 2020-08-30
-#: check_frequency: 14d
+#: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?)
+#: last_checked: 2020-09-15
+#: check_frequency: 30d
+#: next_check: 2020-10-17
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
 ',
@@ -2719,7 +2722,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: next_check_id: PERELSPLATZ-2019 --- #: add_fragezeichen: Wann wird die Sperrung aufgehoben? --- #: last_checked: 2019-12-22 --- #: next_check: 2020-01-31
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.992535.php
+	2::inwork 5809,7712 5636,7709
+',
+         'from' => undef,
+         'id' => 3193,
+         'text' => 'Perelsplatz: Parkweg kann wegen Bauarbeiten gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => 1625151600
+       },
        undef,
        undef,
        undef,
@@ -2745,35 +2758,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: MANDEL-2020
-#: last_checked: 2020-08-14 (zusätzliche Sperrung an der Hosemannstr.)
-	2::inwork 12871,15882 12911,15865
-# REMOVED (hier mittlerweile befahrbar)	2::inwork 12911,15865 12979,15822 12948,15771
-',
-         'from' => undef,
-         'id' => 3209,
-         'text' => 'Mandelstr.: wegen Bauarbeiten gesperrt, auch für Fußgänger',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
        undef,
        undef,
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX bis wann gilt die Einbahnstraßenregelung?
-#: also_indoor: traffic (G,H)
-#: last_checked: 2020-08-20
-	q3::inwork; 14133,12482 14266,12446
-',
-         'from' => 1586020992,
-         'id' => 3215,
-         'text' => 'Rigaer Str.: zwischen Proskauer Str. und Zellestr. Einbahnstraßenregelung, offen Richtung Bersarinplatz',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
+       undef,
        {
          'data' => '#: by: wosch
 #: XXX evtl. nur saisonal, vielleicht wandern die Weideflächen an andere Stellen (dann auch ggfs. die Tore aus gesperrt-orig austragen)
@@ -2793,7 +2784,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: ROTHER-2020
-#: last_checked: 2020-08-22
+#: last_checked: 2020-09-16
 	q4::inwork 13478,10998 13575,10963
 ',
          'from' => undef,
@@ -2834,6 +2825,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'accept_multi_feature_distance' => 3200,
          'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/angebot-auf-der-baenschstrasse-wurde-verkuerzert_a268825
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/fuenf-antraege-auf-temporaere-spielstrassen_a283528 ("bis Ende des Sommers" (2020))
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2020/pressemitteilung.993677.php (22.9.2020 - Tag der Spielstraßen --- nicht eingetragen)
 # REMOVED --- S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
 S1 - Bänschstr. zwischen Voigtstr. und Pettenkoferstr. Südseite	q4::temp::play 14798,12502 15005,12443
 S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp::play 13457,12505 13371,12694 13273,12902
@@ -2855,21 +2847,21 @@ S10 - Böckhstr. zwischen Grimmstr. und Graefestr.	q4::temp::play 11175,9882 1119
 S11 - Lachmannstr. zwischen Kottbusser Damm und Schönleinstr.; Boppstr. zw. Kottbusser Damm und Schönleinstr.; Schönleinstr. 7a-13	q4::temp::play 11745,9541 11594,9604 11541,9576 11560,9524 11785,9437
 S12 - Lübbener Str. zwischen Skalitzer Str. und Görlitzer Str.	q4::temp::play 12608,10294 12729,10515
 S13 - Cuvrystr. zwischen Görlitzer Str. und Schlesische Str.	q4::temp::play 13035,10076 13132,10239 13151,10276 13197,10355 13249,10445
-S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp::play 14442,11101 14468,11203
-#: note: gesehen am 2020-07-26: statt der Helmerdingstr. wurde die angrenzende Simplonstr. gesperrt
+#: note: gesehen am 2020-07-26: statt der Helmerdingstr. wurde die angrenzende Simplonstr. gesperrt; mittlerweile (August/September 2020) wird immer nur die Simplonstr. gesperrt
 Simplonstr. zwischen Helmerdingstr. und Matkowskystr	q4::temp::play 14468,11203 14531,11142
+# REMOVED --- S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp::play 14442,11101 14468,11203
 S15 - Paul-Lincke-Ufer zwischen Glogauer Str. bis Ohlauer Str.	q4::temp::play 12591,9584 12439,9660 12286,9739 12116,9825
 S16 - Lilienthalstr. zwischen Bergmannstr. und Züllichauer Str.	q4::temp::play 10705,9234 10709,9192 10748,9054 10675,8940
 S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334,10527 11258,10682
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1599883200,
+         'from' => 1600488000,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1600016400
+         'until' => 1600621200
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -2958,12 +2950,12 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954979.php
 Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 13038,8394
 ',
-         'from' => 1599883200,
+         'from' => 1600488000,
          'id' => 3241,
          'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
          'text' => 'Temporäre Spielstraßen in Neukölln: einige Straßen (Selkestr., Hobrechtstr., Karl-Marx-Platz, Anzengruberstr.) sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Ende September 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1600016400
+         'until' => 1600621200
        },
        undef,
        undef,
@@ -3017,7 +3009,7 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2020-08-19 (mapillary)
+#: last_checked: 2020-09-18
 	q4::inwork 14136,17170 13996,16959
 ',
          'from' => undef,
@@ -3120,7 +3112,23 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
          'type' => 'handicap',
          'until' => undef
        },
-       undef,
+       {
+         'data' => '#: by: mapillary
+#: by: https://www.gruene-fraktion-brandenburg.de/im-parlament/kleine-anfragen/2019/fehlender-lueckenschluss-bei-radweg-an-der-b-198/
+#: by: https://www.moz.de/landkreise/barnim/eberswalde/artikel4/dg/0/1/1735352/ (Realisierung eines Radwegs frühestens 2022)
+#: by: https://www.moz.de/landkreise/uckermark/schwedt-und-angermuende/artikel90/dg/0/1/1817154/ (Bauarbeiten am Ziethener Kreuz bis Ende des Jahres (2020))
+#: source_id: LS/721-E/20/050
+#: XXX wie lange gilt das Verbot?
+#: last_checked: 2020-08-22
+#: next_check: 2020-12-31
+	2 48469,65641 47875,64281 47564,63557
+',
+         'from' => undef,
+         'id' => 3268,
+         'text' => 'B2/B198: Richtung Süden Radfahren verboten',
+         'type' => 'gesperrt',
+         'until' => 1603465200
+       },
        {
          'data' => '#: by: https://www.berliner-woche.de/spandau/c-verkehr/radler-muessen-runter-vom-sattel_a177230
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20090917.1110.139163.html
@@ -3238,6 +3246,20 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => undef,
          'id' => 3277,
          'text' => 'Sigismundstr. und Matthäikirchplatz: Bauarbeiten, Fahrbahn gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: RICHARDPLATZ-2020
+#: osm_watch: way id="840456624" version="1"
+#: priority: #A
+#: last_checked: 2020-09-15
+#: check_frequency: 14d
+	q4::inwork 13288,7653 13378,7695 13416,7712
+',
+         'from' => undef,
+         'id' => 3278,
+         'text' => 'Richardplatz: Bauarbeiten zwischen Richardstr. und Hertzbergstr., Fahrbahn gesperrt',
          'type' => 'handicap',
          'until' => undef
        }

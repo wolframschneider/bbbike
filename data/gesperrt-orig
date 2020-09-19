@@ -203,11 +203,11 @@ Paul-Junius-Str	1 15084,13276 15082,13369 15220,13377
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7382
 # REMOVED (Meldung removed) --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=40535
 #: osm_watch: way id="30043322" version="16"
-#: last_checked: 2020-09-04
+#: last_checked: 2020-09-16
 #: check_frequency: 60d
-#: next_check: 2020-12-31
+#: next_check: 2020-12-20
 #: priority: #A
-#: valid: 20201231-
+#: valid: 20201220-
 Marksburgstr.	1 18319,9218 18430,9199 18511,9185 18586,9172 18697,9153 18809,9133
 Griechische Allee	1 17962,6674 18002,6695 18076,6693 18125,6694 18254,6679 18339,6660 18494,6588
 Griechische Allee	1 18494,6588 18429,6582 18273,6606 18159,6642 18079,6678 18008,6672 17962,6674
@@ -752,8 +752,8 @@ Kaulsdorfer Str.	1 22075,6967 22049,7085
 #: by: https://fahrradfreundliches-neukoelln.de/blog/kommentar-radfahrender-ausschuss ("zu gefährlich")
 #: by: https://www.berliner-woche.de/buckow/c-verkehr/keine-freie-fahrt-fuer-radler_a228928 (passiert wohl nicht...) (selten prüfen!)
 #: osm_watch: way id="5111625" version="11"
-#: last_checked: 2020-05-17 (mapillary)
-#: next_check: 2020-08-30
+#: last_checked: 2020-09-15
+#: check_frequency: 270d
 Steinträgerweg	1s:q4 12987,2220 13023,2093
 # 
 #: by: anonymous and osm
@@ -1320,9 +1320,10 @@ Siedlung Hubertus - Jürgen-Schumann-Allee: explizites Radfahren-verboten-Schild 
 (Lauinger Str. - Köpenicker Str.)	1::igndisp 21133,11348 21171,11336
 Hendrichplatz	1 15859,12753 15733,12753 15734,12793 15859,12793 15859,12753
 Oderbruchstr.	1 14243,13890 14291,13862
-Grüne Aue	1s:q3 21954,11269 21956,11246 21994,11209 22018,11165
+Grüne Aue	1s:q3 21954,11269 21956,11246 21994,11209 22018,11165 22054,11091
 (Maximilianstr. - Stolzingstr./Hainbuchenstr.)	1 1360,25269 1364,25256
 (Stolzingstr./Hainbuchenstr. - Maximilianstr.)	1 1339,25251 1338,25262
+(Wochenendsiedlung Kaniswall): abgesperrt	2 32902,196 32918,231 33019,292
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1564,7 +1565,11 @@ Dorfstr. (Miersdorf)	1 24998,-6983 24996,-7088
 Dorfstr. (Miersdorf)	1 25020,-7091 25030,-6989
 Uhlandring (Schulzendorf)	1 23368,-4696 23473,-4833 23405,-4882 23309,-4755
 Leipziger Platz (Schulzendorf)	1 23798,-5864 23695,-5952
-Leipziger Platz (Schulzendorf)	1 23642,-5895 23753,-5811
+Leipziger Platz (Schulzendorf)	1 23645,-5892 23753,-5811
+#: note: paralleler benutzungspflichtiger Radweg
+Waltersdorf	2::igndisp 21462,-3900 21516,-3839
+Würzburger Str.	1 26031,-4072 26082,-4137 26119,-4215 26125,-4280
+Würzburger Str.	1 26109,-4284 26096,-4218 26060,-4148 26014,-4087
 ######################################################################
 # elsewhere not in Brandenburg
 B104: Mittelstreifen nicht überquerbar	3nocross -974,128015 -724,127995 6,127935 298,127911
@@ -1665,7 +1670,7 @@ Neue Bahnhofstr.	1s:q3 14908,11231 14918,11249
 #: XXX evtl. ist die Einbahnstraßenregelung temporär
 #: by: https://www.berliner-woche.de/westend/c-verkehr/auch-wenn-es-nicht-so-aussieht-der-zob-umbau-laeuft-wie-geplant_a223429 (ZOB-Umbau bis 2022)
 #: add_fragezeichen: gibt es die Einbahnstraßenregelung in der Soorstr. noch?
-#: osm_watch: way id="4708164" version="15"
+#: osm_watch: way id="4708164" version="16"
 #: last_checked: 2020-08-23
 #: check_frequency: 90d
 Soorstr.	1s:q3 1861,11284 1884,11126
@@ -3170,12 +3175,13 @@ Drängelgitter	BNP:3::trailer=10 1035,14996
 Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.971390.php (Abschluss der Bauarbeiten: erste Jahreshälfte 2022)
-#: last_checked: 2020-09-05
+#: last_checked: 2020-09-16
 (Rudolfplatz, Park): Bauarbeiten, komplett gesperrt	2::inwork 14026,10869 13896,10851
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.964891.php
+#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/bezirksamt-will-bergmannkiez-entmotorisieren_a287422 ("Fußgängerzone beschlossen" --- bleibt es permanent?)
 #: XXX bis wann bleibt diese Straße eine "Klimastraße"?
-#: last_checked: 2020-09-05
+#: last_checked: 2020-09-16
 #: next_check: 2020-12-31
 Danneckerstr.: temporäre "Klimastraße", für Radfahrer gesperrt	2s:q4 13886,10939 13856,10864
 # 
@@ -3327,7 +3333,7 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/ro%C3%9Fstra%C3%9Fenbrucke-mitte-vollsperrung-%C2%B7-bruckensanierung
 #: also_indoor: traffic (G,H) vvv
 #: source_id: 2147345254 (bis 28.02.2021) vvv
-#: last_checked: 2020-09-08 vvv
+#: last_checked: 2020-09-17 vvv
 #: next_check: 2021-02-28 vvv
 #: priority: #A vvv
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10687,11853 10672,11870 10642,11901
@@ -3415,7 +3421,7 @@ Gustav-Böß-Str.: Bauarbeiten, Straße ist komplett gesperrt	2::inwork 10673,12434
 Königsteinbrücke: Brücke wurde abgerissen und wird neu gebaut	2::inwork 13148,22396 13385,22383
 # 
 #: next_check_id: HOSEMANN-2019
-#: last_checked: 2020-08-14 vvv
+#: last_checked: 2020-09-18 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2021-12-31 vvv
 # REMOVED --- #: valid: -20200731 vvv
@@ -3444,7 +3450,7 @@ Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (ab 1. Juli 2020 wieder offen, bis voraussichtlich 13. September 2020)
 #: osm_watch: way id="822674838" version="1"
 #: last_checked: 2020-08-12
-#: next_check: 2020-09-13
+#: next_check: 2020-09-21
 Rollbergstr.: Einbahnstraße, offen Richtung Karl-Marx-Str.	1s:q3:inwork 12714,8249 12545,8209
 # 
 #: osm_watch: way id="702306263" version="4"
@@ -3690,7 +3696,7 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 #: check_frequency: 60d
 Taubenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9207,11880 9138,11872
 # 
-#: last_checked: 2020-08-13
+#: last_checked: 2020-09-17
 Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
 # 
 #: osm_watch: way id="496270260" version="6" brb
@@ -4127,7 +4133,7 @@ Dahlemer Feld: zur Zeit eine Ziegenweide, keine Durchfahrt möglich	2:temp -1643,
 # 
 #: XXX temporär oder dauerhaft gesperrt? vvv
 #: osm_watch: way id="4615233" version="7"
-#: last_checked: 2020-03-25 vvv
+#: last_checked: 2020-09-18 vvv
 #: check_frequency: 180d vvv
 (Güterbahnhof Greifswalder Str.): Brücke gesperrt	2 12602,15006 12649,14977
 (Güterbahnhof Greifswalder Str.): kann bei Veranstaltungen gesperrt sein	2:temp 12520,15057 12602,15006
