@@ -774,7 +774,7 @@ nördliches Sackgassenende	culdesac 24370,10198
 	culdesac 18445,4035
 	culdesac 26212,12449
 # REMOVED ---	culdesac 26201,12499
-	culdesac_pseudo 21273,12495
+	culdesac 21318,12510
 	culdesac 11028,-408
 	culdesac 2680,14287
 	culdesac_pseudo 2769,14482
@@ -1147,7 +1147,7 @@ Sackgassenende, am Bahndamm	culdesac 14219,8260
 	culdesac 12495,21397
 	culdesac_pseudo 12402,21537
 	culdesac 12473,22801
-	culdesac 12598,22605
+	culdesac 12628,22604
 	culdesac 14210,21200
 	culdesac 14166,21072
 	culdesac_pseudo 14138,21233
@@ -1571,6 +1571,7 @@ westliches Sackgassenende	culdesac_pseudo 20861,12192
 	culdesac -7990,19888
 Sackgassenende an der Autobahn	culdesac 21563,-1725
 Sackgassenende an der Autobahn	culdesac 21596,-1727
+	culdesac 8568,21431
 # 
 ######################################################################
 # culdesac entries which should remain invisible
@@ -1856,7 +1857,7 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac_pseudo 5322,7180
 # REMOVED (man kann einmal herumfahren, keine Sackgasse) --- culdesac 8814,8881
 # REMOVED (kein N, kein culdesac) --- Zugang zum Bad	culdesac_pseudo 7306,13418
-	culdesac_pseudo 25789,13263
+	culdesac_pseudo 25795,13257
 	culdesac_pseudo 25766,13289
 	culdesac_pseudo 11712,-289
 	culdesac_pseudo 24277,14747

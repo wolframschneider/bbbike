@@ -322,7 +322,7 @@ RE6	R -31703,57619 -31493,57844 -31278,57825 -30869,57510 -30459,57290 -29816,57
 # früher zeitweise RB54
 	R0 -29816,57164 -29637,57123 -29361,57213 -29174,57430 -28879,58117 -28786,58256 -28235,58793 -27952,58899 -27809,58912 -27559,58939 -27221,58964 -26913,58900 -26345,58678 -26011,58686 -25377,58566 -24623,57951 -23857,57572 -23318,57312 -22504,56904 -21916,56614 -21551,56212 -21148,55765 -20907,55639 -19660,55170
 # Poelchaustr. - Ahrensfelde
-RB25	RB 19215,14227 19253,14497 19335,14840 19476,15130 19623,15444 20069,16334 20199,16562 20458,17110 20632,17447 21218,18601
+RB25	RB 19215,14227 19253,14497 19335,14840 19476,15130 19650,15474 20069,16334 20199,16562 20458,17110 20632,17447 21218,18601
 # Ahrensfelde - Werneuchen
 RB25	RC 21218,18601 21332,18819 21665,19490 21778,19726 22324,20807 22394,20948 22551,21140 23005,21482 24078,22265 24307,22436 24718,22731 25117,23034 25321,23144 25623,23204 26968,23160 27112,23165 27254,23215 28633,23963 28720,24012 29414,24387 30688,25089 31801,25787 32026,25919 32471,26060 32838,26172
 # Werneuchen - Tiefensee, früher OE25, 2006-12-10 stillgelegt
@@ -666,11 +666,13 @@ Neubrandenburg - Pasewalk	R -569,128223 -216,128147 3,128126 368,128211 978,1282
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8397 (Bahnübergänge?)
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8492 (Bahnübergänge?)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5567 (Bahnübergänge?)
+#: by: https://www.tagesspiegel.de/berlin/finanzierung-der-heidekrautbahn-unklar-warum-sich-der-wiederaufbau-der-berliner-pendlerstrecke-verzoegert/26183756.html# (mittlerweile Baubeginn Mai 2020, Fertigstellung Ende 2023)
+#: by: https://abendblatt-berlin.de/2020/09/21/heidekrautbahn-im-berliner-norden-betreiber-haelt-am-zeitplan-fest/ (bis Dezember 2023)
 #: XXX Reaktivierung geplant --- Strecke im Bereich Wilhelmsruh korrigieren!
 #: XXX neue Halte: Berlin-Wilhelmsruh, PankowPark, Wilhelmsruher Damm, Blankenfelde, Schildow, Schildow Nord, Mühlenbeck und Schönwalde West
 #: XXX bei der Reaktivierung Schranken umtaggen (B0 -> B)
 #: XXX bei der Reaktivierung "wilden" Übergang am Nordgraben prüfen
-#: next_check: 2023-06-01
+#: next_check: 2023-12-31
 Heidekrautbahn	RG 6450,20388 6578,20365 7009,20408 7163,20482 7286,20577 7768,21253 7925,21482 7966,21563 8118,21943 8372,22603 8613,23200 8639,23337 8632,23442 8400,24267 8382,24365 8359,24702 8302,24870 8033,25281 7985,25405 7970,25533 7975,25642 7995,25764 8075,26125 8209,26804 8276,27064 8587,27748 8738,28086 9055,28814 9085,28866 9140,28942 9227,29018 9328,29081 10705,29888 11616,30519 11793,30668 11860,30751 11925,30880 11960,31040
 # 
 Rangierbahnhof Grunewald	RG 962,9136 1583,9713 2045,10114

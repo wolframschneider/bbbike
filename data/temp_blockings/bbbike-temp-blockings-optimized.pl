@@ -515,7 +515,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'data' => '#: tempex: su T09-T16
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-08-29
+#: last_checked: 2020-09-19
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -1487,7 +1487,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'data' => '#: next_check_id: MITTEL-2019
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-09-01
+#: last_checked: 2020-09-19
 	2::inwork 9131,12438 9179,12444
 ',
          'from' => undef,
@@ -2054,7 +2054,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DOROTHEEN-2018
 #: XXX Ende der Bauarbeiten?
 #: also_indoor: traffic
-#: last_checked: 2020-09-01 vvv
+#: last_checked: 2020-09-23 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
@@ -2497,7 +2497,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
 #: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?)
-#: last_checked: 2020-09-15
+#: last_checked: 2020-09-23
 #: check_frequency: 30d
 #: next_check: 2020-10-17
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
@@ -2598,7 +2598,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="19" brb
+#: osm_watch: way id="59994277" version="20" brb
 #: source_id: LS/721-F/18/135
 # REMOVED (hier fertig) ---	q4::inwork 40166,16723 39984,16734
 	q4::inwork 39984,16734 39287,17231 39235,17255
@@ -2676,9 +2676,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.926192.php
 #: by: https://www.berliner-woche.de/hellersdorf/c-verkehr/geh-und-radweg-wird-gebaut_a263821
 #: XXX mittlerweile gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str.
+#: add_fragezeichen: Sind die Bauarbeiten beendet? Ist die Anbindung des Wuhlewanderwegs an die Altentreptower Str. fertig?
 #: osm_watch: way id="26288668" version="15"
 #: osm_watch: way id="798056092" version="1"
-#: last_checked: 2020-08-30 vvv
+#: last_checked: 2020-09-23 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-09-30 vvv
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
@@ -2690,9 +2691,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1572130800,
          'id' => 3176,
          'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.854332.php',
-         'text' => 'Wuhlewanderweg nördlich des Bahnhofs Wuhletal: Baumaßnahme, Weg ist gesperrt; außerdem ist der Weg Altentreptower Str. - Parchimer Weg gesperrt',
+         'text' => 'Wuhlewanderweg nördlich des Bahnhofs Wuhletal: Baumaßnahme, Weg ist gesperrt; außerdem ist der Weg Altentreptower Str. - Parchimer Weg gesperrt (mindestens bis Ende September 2020, vielleicht auch länger)',
          'type' => 'gesperrt',
-         'until' => 1601481600
+         'until' => undef
        },
        undef,
        undef,
@@ -2856,17 +2857,17 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1600488000,
+         'from' => 1601092800,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1600621200
+         'until' => 1601226000
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2020-07-17 vvv
+#: last_checked: 2020-09-19 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -2950,12 +2951,12 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954979.php
 Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 13038,8394
 ',
-         'from' => 1600488000,
+         'from' => 1601092800,
          'id' => 3241,
          'source_id' => 'https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.938643.php',
          'text' => 'Temporäre Spielstraßen in Neukölln: einige Straßen (Selkestr., Hobrechtstr., Karl-Marx-Platz, Anzengruberstr.) sind für den Radverkehr gesperrt, jeden Sonn- und Feiertag bis Ende September 2020 zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1600621200
+         'until' => 1601226000
        },
        undef,
        undef,
@@ -3102,7 +3103,8 @@ Anzengruberstr. zwischen Donaustr. und Sonnenallee	q4::temp::play 12865,8346 130
        },
        undef,
        {
-         'data' => '#: add_fragezeichen: Wann sind die Fahrbahn wieder offen?
+         'data' => '#: add_fragezeichen: Wann ist die Fahrbahn wieder offen?
+#: also_indoor: traffic
 #: last_checked: 2020-08-23
 	q4::inwork -3252,12580 -3444,12580
 ',
@@ -3251,7 +3253,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: RICHARDPLATZ-2020
-#: osm_watch: way id="840456624" version="1"
+#: osm_watch: way id="840456624" version="2"
 #: priority: #A
 #: last_checked: 2020-09-15
 #: check_frequency: 14d
