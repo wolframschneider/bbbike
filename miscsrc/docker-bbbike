@@ -91,6 +91,25 @@ RUN echo @{[ POSIX::strftime("%F", localtime) ]}
 EOF
 }
 
+sub _docker_build_with_retry ($$$) {
+    my($doit, $docker_image_tag, $cmdline) = @_;
+    my @docker_build_cmd = (qw(docker build), @$cmdline);
+    for my $try (1..2) {
+	if (!eval {
+	    $doit->system(@docker_build_cmd);
+	    1;
+	}) {
+	    if ($try == 1) {
+		$doit->system(qw(docker pull), $docker_image_tag);
+	    } else {
+		error "Error running '@docker_build_cmd': $@";
+	    }
+	} else {
+	    last;
+	}
+    }
+}
+
 sub gui {
     my($doit, %opt) = @_;
     lock_keys %opt;
@@ -102,6 +121,10 @@ sub gui {
     if ($opt{'install-suggests'}) {
 	$add_apt_args .= " --install-suggests";
     }
+
+    $doit->make_path("$ENV{HOME}/.docker-bbbike");
+
+    my $docker_cmd;
 
     my $dockerfile = <<EOF;
 FROM $opt{dist}:$opt{distver}
@@ -125,13 +148,9 @@ EOF
 RUN apt-get install -qqy @packages
 EOF
 	if ($opt{src} eq 'github') {
-	    $dockerfile .= <<"EOF";
-CMD git clone --depth=1 git://github.com/eserte/bbbike.git && bbbike/bbbike $opt{'bbbike-args'}
-EOF
+	    $docker_cmd = "git clone --depth=1 git://github.com/eserte/bbbike.git && bbbike/bbbike $opt{'bbbike-args'}";
 	} elsif ($opt{src} eq 'local') {
-	    $dockerfile .= <<"EOF";
-CMD /bbbike/bbbike $opt{'bbbike-args'}
-EOF
+	    $docker_cmd = "/bbbike/bbbike $opt{'bbbike-args'}";
 	}
     } elsif ($opt{src} =~ m{\.deb$}) {
 	require File::Basename;
@@ -141,11 +160,23 @@ COPY $base_src /tmp
 COPY install-deb /tmp
 WORKDIR /tmp
 RUN sh install-deb $add_apt_args ./$base_src
-CMD bbbike $opt{'bbbike-args'}
 EOF
+	$docker_cmd = "bbbike $opt{'bbbike-args'}";
     } else {
 	usage "Invalid --src value '$opt{src}', only 'github', 'local' or a path to a .deb are possible";
     }
+
+    my $username;
+    if ($^O ne 'MSWin32') {
+	my $uid = $<;
+	$username = (getpwuid($uid))[0];
+	$dockerfile .= <<"EOF";
+RUN adduser --disabled-password -u $uid --gecos '' $username
+USER $username
+EOF
+    }
+
+    $dockerfile .= "CMD $docker_cmd\n";
 
     # Need to start docker-machine early on MacOSX, and do also some pre-checking.
     local %ENV = %ENV; # actually needed only for darwin
@@ -200,7 +231,7 @@ EOF
 
     my $tag = 'bbbike-gui-'.$opt{dist}.'-'.$opt{distver};
     in_directory {
-	$doit->system(qw(docker build --tag), $tag, '.');
+	_docker_build_with_retry($doit, "$opt{dist}:$opt{distver}", ['--tag', $tag, '.']);
     } $docker_context_dir;
 
     my $XSOCK = '/tmp/.X11-unix';
@@ -252,6 +283,7 @@ EOF
 		    @docker_run_args,
 		    '-v', "$XSOCK:$XSOCK", '-v', "$XAUTH:$XAUTH",
 		    ($opt{src} eq 'local' ? ('-v', "$FindBin::RealBin/..:/bbbike:ro") : ()),
+		    (defined $username ? ('-v', "$ENV{HOME}/.docker-bbbike:/home/$username/.bbbike") : ()),
 		    '-e', "XAUTHORITY=$XAUTH", '-e', "DISPLAY=$ENV{DISPLAY}", $tag,
 		   ]);
     }
@@ -452,7 +484,7 @@ EOF
 	my $tag = 'bbbike-travis-ci-' . $opt{dist} . '-' . $opt{distver};
 
 	eval { $doit->system(qw(docker rmi), $tag) };
-	$doit->system(qw(docker build --tag), $tag, ($opt{'no-cache'} ? '--no-cache' : ()), qw(.));
+	_docker_build_with_retry($doit, "$opt{dist}:$opt{distver}", ['--tag', $tag, ($opt{'no-cache'} ? '--no-cache' : ()), '.']);
 
 	eval { $doit->system(qw(docker rm), $tag) };
 
