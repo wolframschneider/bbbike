@@ -26532,7 +26532,7 @@ EOF
 #: also_indoor: traffic (G,H)
 #: XXX bis wann gibt es die Einbahnstraßenregelung?
 # REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-08-28
+#: last_checked: 2020-09-27
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -27879,16 +27879,13 @@ EOF
 EOF
      },
      { from  => 1534629600, # 2018-08-19 00:00
-       until => $isodate2epoch->("2023-12-31 18:00:00"),
+       until => 1601213822, # $isodate2epoch->("2023-12-31 18:00:00"),
        text  => 'Uhlandstr.: zwischen Kurfürstendamm und Lietzenburger Str. Richtung Süden wegen Bauarbeiten gesperrt, Radfahrer sind auch betroffen, ab 20.08.2018 bis Ende 2023',
        type  => 'handicap',
        source_id => '2147342231', # Gesamtbaumaßnahme bis 31.12.2023
        data  => <<EOF,
-#: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080
-#: also_indoor: traffic (G,H)
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
-#: last_checked: 2020-06-21
-#: next_check: 2020-12-31
+# REMOVED (keine Einbahnstraße mehr) --- #: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080 --- #: also_indoor: traffic (G,H) --- #: last_checked: 2020-06-21 --- #: next_check: 2020-12-31
 	q4::inwork; 5076,10658 5047,10381
 EOF
      },
@@ -28532,7 +28529,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-09-16
+#: last_checked: 2020-09-29
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -29182,7 +29179,7 @@ EOF
        data  => <<EOF,
 #: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2020-09-11
+#: last_checked: 2020-09-27 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2021-04-30
 	q3::inwork  8986,16092 9178,16317
@@ -29306,11 +29303,11 @@ EOF
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2019
 #: XXX Bis wann gehen die Bauarbeiten?
-#: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?)
+#: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?) (eigentlich bis 17.10.2020, vorfristig beendet)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-09-23
-#: check_frequency: 30d
-#: next_check: 2020-10-17
+#: last_checked: 2020-09-30
+#: check_frequency: 14d
+# REMOVED --- #: next_check: 2020-10-17
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
 EOF
@@ -30516,7 +30513,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ROTHER-2020
-#: last_checked: 2020-09-16
+#: last_checked: 2020-09-30
 	q4::inwork 13478,10998 13575,10963
 EOF
      },
@@ -30952,9 +30949,11 @@ EOF
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.885612.php (hier (5. Bauabschnitt) ab Februar 2020)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
 #: last_checked: 2020-09-18
+#: next_check: 2020-11-07
 	q4::inwork 14136,17170 13996,16959
 EOF
      },
@@ -31034,8 +31033,8 @@ EOF
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
-#: XXX nicht ganz klar, ob die Sperrung schon am 30.9.2020 aufgehoben wird, Gesamtmaßnahme geht länger; laut rbbtext bis 2021-06-30
-#: next_check: 2020-09-30
+#: XXX nicht ganz klar, ob die Sperrung schon am 30.9.2020 aufgehoben wird, Gesamtmaßnahme geht länger; laut rbbtext bis 2021-06-30; nun bei viz bis mindestens 9.11.2020
+#: next_check: 2020-11-09
 	q4::inwork; 4515,4760 4214,4595 4039,4500
 EOF
      },
@@ -31255,6 +31254,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: RICHARDPLATZ-2020
 #: osm_watch: way id="840456624" version="2"
+#: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
 #: also_indoor: traffic (G)
 #: priority: #A
 #: last_checked: 2020-09-25
@@ -31292,6 +31292,17 @@ EOF
 	3 7823,12120 7816,12150 7822,12201
 	3 6869,11567 6809,11570 6679,11602
 	3 6540,11754 6778,11742 6980,11790
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung auch für Radfahrer gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
+#: add_fragezeichen: Bis wann gilt die Sperrung auch für Radfahrer?
+#: last_checked: 2020-09-27
+	q3::inwork; 5192,10241 5196,10398
 EOF
      },
     );

@@ -68,6 +68,8 @@ Wilhelplatz	1 -7064,584 -7081,483 -7122,439 -7180,378
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7223 (Bebauungsplan XI-231 aba)
 #: by: https://api.fixmyberlin.de/api/projects/384 (execution; construction_completed: 2021)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_33_4281_4444_online.pdf (Straßenlandwidmung vor den Hausnummern 65-70 A)
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplan-fuer-meinberlin/bebauungsplan.994201.php
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanung/bebauungsplaene-im-verfahren/b-plan-xi-231aba/xi-231aba-planzeichnung.pdf
 #: XXX außerdem Anlage von Radwegen, allerdings nicht benutzungspflichtig
 #: last_checked: 2020-08-22
 #: next_check: 2021-05-01
@@ -179,7 +181,7 @@ Petersburger Platz	1 13470,12990 13559,12779
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll-2-sitzung.pdf
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/verwaltung/aemter/ordnungsamt/strassenverkehr-parken/5-protokoll-fahr-rat.pdf
 #: osm_watch: way id="4490214" version="12"
-#: last_checked: 2020-05-31
+#: last_checked: 2020-09-27
 #: check_frequency: 90d
 Dernburgstr.	1 2493,10675 2378,10677 2333,10710 2254,11051
 # 
@@ -339,7 +341,7 @@ Gritznerstr.	1 4511,6318 4555,6403
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_14032017.pdf
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll-2-sitzung.pdf (Ablehnung durch Polizei)
 #: osm_watch: way id="4437134" version="8"
-#: last_checked: 2020-04-28 (mapillary)
+#: last_checked: 2020-09-27
 #: check_frequency: 120d
 Duisburger Str.	1 4183,10144 3874,10153
 # 
@@ -1246,7 +1248,7 @@ Waldstr.	1 9982,19413 9942,19505
 Waldstr.	1 9961,19513 10002,19418
 #: next_check_id: UBAHN1-2020
 #: XXX mittlerweile wegen Hochbahnarbeiten komplett gesperrt
-#: last_checked: 2020-08-29
+#: last_checked: 2020-09-27
 #: check_frequency: 60d
 #: next_check: 2021-04-01
 #(Schlesisches Tor - Oppelner Str.)	1 12978,10581 12930,10621
@@ -1296,6 +1298,7 @@ Heinrichplatz	1 11734,10563 11754,10516
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7448
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/bahnhofseingang-wieder-oeffnen_a269101
 #: by: https://leute.tagesspiegel.de/tempelhof-schoeneberg/macher/2020/08/11/134285/am-bayerischen-platz-soll-der-fahrstuhl-nun-kommen/ ("Überlegungen")
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/200507_protokoll-1-fahrrat-2020.pdf (Bahn ist nicht bereit, den Eingang für den Radverkehr zu öffnen)
 #: confirmed_by: srt
 #: last_checked: 2020-08-22
 #: check_frequency: 180d
@@ -1642,11 +1645,11 @@ Eichhornstr.	1s:q3 8232,11414 8253,11306 8280,11296
 #: add_fragezeichen: Ist die Einbahnstraße mittlerweile für Radfahrer offen? vvv
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_16_sitzung.pdf vvv
 #: osm_watch: way id="850742955" version="1"
-#: last_checked: 2020-05-31
+#: last_checked: 2020-09-27
 #: check_frequency: 100d
 Ahornallee	1s:q3 1589,11483 1574,11379
 #: osm_watch: way id="24852084" version="10"
-#: last_checked: 2020-05-31
+#: last_checked: 2020-09-27
 #: check_frequency: 100d
 Lindenallee	1s:q3 1429,11528 1403,11428
 #: by: ^^^
@@ -1677,7 +1680,7 @@ Neue Bahnhofstr.	1s:q3 14908,11231 14918,11249
 #: by: https://www.berliner-woche.de/westend/c-verkehr/auch-wenn-es-nicht-so-aussieht-der-zob-umbau-laeuft-wie-geplant_a223429 (ZOB-Umbau bis 2022)
 #: add_fragezeichen: gibt es die Einbahnstraßenregelung in der Soorstr. noch?
 #: osm_watch: way id="4708164" version="16"
-#: last_checked: 2020-08-23
+#: last_checked: 2020-09-27
 #: check_frequency: 90d
 Soorstr.	1s:q3 1861,11284 1884,11126
 #
@@ -2863,7 +2866,7 @@ Schranke	BNP:3::trailer=10 16966,4847
 #: confirmed_by: srt (added width)
 Drängelgitter (lichte Breite ca. 65cm)	BNP:3::trailer=no -4661,9842
 enge Umfahrung	BNP:3::trailer=no 14529,5851
-Schranke	BNP:3::trailer=no 17826,9630
+# REMOVED (existiert nicht mehr?) --- Schranke	BNP:3::trailer=no 17826,9630
 #: by: hannes Peters:
 #: note: "mit Anhänger eng, aber langsam passierbar"
 #: confirmed_by: srt
@@ -3177,20 +3180,21 @@ Drängelgitter	BNP:3::trailer=10 1035,14996
 #: by: https://www.bahninfo-forum.de/read.php?9,413132,659884#msg-659884 ("in Kürze ... saniert")
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-24531.pdf ("Verbesserung ... nach 2024 diskutiert")
 #: by: https://www.facebook.com/larsduesterhoeft1981/posts/2656989284551902 (Bauarbeiten Dezember 2020 bis Ende 2021)
+#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6697 (Antrag)
 #: last_checked: 2020-09-04
 #: check_frequency: 90d
 #: next_check: 2020-12-15
 Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.971390.php (Abschluss der Bauarbeiten: erste Jahreshälfte 2022)
-#: last_checked: 2020-09-25
+#: last_checked: 2020-09-30
 (Rudolfplatz, Park): Bauarbeiten, komplett gesperrt	2::inwork 14026,10869 13896,10851
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.964891.php
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/bezirksamt-will-bergmannkiez-entmotorisieren_a287422 ("Fußgängerzone beschlossen" --- bleibt es permanent?)
 #: XXX bis wann bleibt diese Straße eine "Klimastraße"?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-09-16
+#: last_checked: 2020-09-29
 #: next_check: 2020-12-31
 Danneckerstr.: temporäre "Klimastraße", für Radfahrer gesperrt	2s:q4 13886,10939 13856,10864
 # 
@@ -3205,6 +3209,7 @@ Durchgangsweg am Blueberry Inn: wegen Bauarbeiten komplett gesperrt	2::inwork 12
 # 
 #: next_check_id: BUCKOWERCHAUSSEE-EISNER-2020
 #: by: https://www.berliner-woche.de/marienfelde/c-verkehr/p+r-parkplatz-wird-geschlossen_a277741
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7724 (Antrag)
 #: confirmed_by: srt (am S-Bhf.)
 #: XXX bis wann sind die Wege gesperrt? vvv
 #: last_checked: 2020-07-11 vvv
@@ -3261,7 +3266,7 @@ Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht
 # 
 #: by: wosch
 #: by: https://portal1548.webcam-profi.de/ (webcam)
-#: last_checked: 2020-09-25
+#: last_checked: 2020-09-29
 #: check_frequency: 60d
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 14126,10176 14202,10152
 # 
@@ -3335,6 +3340,7 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/rossstrassenbruecke-wird-abgerissen_a244615 (Beginn der Bauarbeiten ab 16. Dezember 2019, ab Januar 2020 für alle gesperrt)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.876928.php (bis Herbst 2021)
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/ro%C3%9Fstra%C3%9Fenbrucke-mitte-vollsperrung-%C2%B7-bruckensanierung
+#: by: https://www.bvg.de/de/index.php?section=downloads&cmd=extra:78:2:1&download=3941 (hier: bis Mai 2021)
 #: also_indoor: traffic (G,H) vvv
 #: source_id: 2147345254 (bis 28.02.2021) vvv
 #: last_checked: 2020-09-22 vvv
@@ -3362,7 +3368,7 @@ Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwor
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_49_7429_7632_online.pdf (Einziehung von Straßenland --- vielleicht der alte Sackgassenhammer?)
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="1"
-#: last_checked: 2020-09-19
+#: last_checked: 2020-09-27
 #: check_frequency: 14d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3437,7 +3443,7 @@ Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (ab 1. Juli 2020 wieder offen, bis voraussichtlich 13. September 2020)
 #: osm_watch: way id="822674838" version="1"
-#: last_checked: 2020-09-25
+#: last_checked: 2020-09-29
 # REMOVED --- #: next_check: 2020-09-21
 Rollbergstr.: Einbahnstraße, offen Richtung Karl-Marx-Str.	1s:q3:inwork 12714,8249 12545,8209
 # 
@@ -3484,14 +3490,14 @@ Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht möglich	2::inwork 2
 # 
 #: XXX wann sind die Bauarbeiten beendet?
 #: priority: #C
-#: last_checked: 2020-09-19
+#: last_checked: 2020-09-27
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
 #: next_check_id: TACHELES-2020
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2020-09-23
+#: last_checked: 2020-09-27
 #: check_frequency: 60d
 Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 # 
@@ -3689,7 +3695,7 @@ Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
 # 
 #: osm_watch: way id="496270260" version="6" brb
 # REMOVED (wurde gelöscht) --- #: osm_watch: node id="3453536641" version="5" brb
-#: osm_watch: way id="733725947" version="3" brb
+#: osm_watch: way id="733725947" version="4" brb
 #: last_checked: 2020-02-29
 #: check_frequency: 90d
 Uferweg zum Speicher: noch keine Durchfahrt möglich	2::inwork -12721,-2082 -12754,-2154
@@ -4038,7 +4044,7 @@ B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich de
 #: by: https://www.deutsches-architekturforum.de/thread/11563-kleinere-projekte-moabit/?postID=642359#post642359
 #: by: https://www.deutsches-architekturforum.de/thread/11563-kleinere-projekte-moabit/?postID=645524#post645524
 #: osm_watch: way id="501191631" version="3"
-#: last_checked: 2020-09-12
+#: last_checked: 2020-09-27
 #: next_check: 2021-12-31
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
 # 
@@ -4073,7 +4079,7 @@ Mühlensteg (Tegeler Hafen): Weg gesperrt	2 1691,20638 1697,20623 1721,20603
 #: XXX Johannisplatz
 #: XXX Aaron-Bernstein-Platz
 #: osm_watch: way id="33036326" version="6"
-#: last_checked: 2020-09-12
+#: last_checked: 2020-09-27
 #: check_frequency: 360d
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 # 

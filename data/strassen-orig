@@ -283,6 +283,9 @@ Hallesches Tor	NN 9599,10175 9593,10238
 Mehringplatz	NN 9593,10238 9592,10263 9606,10263 9646,10279 9668,10306 9675,10351 9646,10404 9587,10421 9527,10389 9517,10332 9535,10299 9547,10278 9592,10263
 (Zossener Brücke - Mehringplatz)	NN 9873,10285 9668,10306
 (Mehringbrücke - Mehringplatz)	NN 9404,10250 9535,10299
+# 
+#: by: https://de.wikipedia.org/wiki/Friedrichstra%C3%9Fe (Straßenbreite 15-17m)
+#: street_width: 17m vvv
 Friedrichstr. (Mitte, Kreuzberg)	NN 9587,10421 9570,10566
 Friedrichstr. (Mitte, Kreuzberg)	N 9570,10566 9556,10666 9554,10695 9539,10820 9537,10837 9527,10927 9523,10964 9492,11209
 Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9456,11513 9444,11616
@@ -299,6 +302,8 @@ Friedrichstr. (Mitte, Kreuzberg)	NN 9444,11616 9432,11702 9418,11804 9405,11903 
 #: last_checked ^^^
 # 
 Friedrichstr. (Mitte, Kreuzberg)	H 9384,12103 9373,12197 9369,12253 9358,12351 9343,12464 9330,12538 9314,12652 9313,12662 9303,12718 9298,12765 9286,12886 9279,12953 9269,13060 9262,13111 9254,13171 9246,13235 9225,13389 9212,13471
+#: street_width ^^^
+# 
 Dennewitzstr.	N 7906,10098 7947,10155
 Dennewitzstr.	NN 7947,10155 8058,10306
 Dennewitzstr.	N 8058,10306 8159,10430
@@ -1411,6 +1416,10 @@ Pohlstr.	N 8159,10430 7932,10475 7883,10483 7849,10488 7689,10514 7478,10612
 Kluckstr.	N 7579,11032 7534,10850 7517,10775 7487,10643
 Sigismundstr.	N 8031,11249 7934,11275 7897,11287 7874,11293 7745,11332 7665,11353
 Herbert-von-Karajan-Str.	N 8005,11627 7943,11431
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10250 (offizielle Umbenennung in "Scharounplatz")
+#: XXX wann wird der Platz offiziell umbenannt?
+#: osm_watch: way id="694745014" version="10"
+#: next_check: 2020-11-01
 #: alias: Scharounplatz
 Scharounstr.	N 7943,11431 8083,11381
 Hofjägerallee (Tiergarten)	HH 6825,11486 6809,11570 6778,11742 6744,11936
@@ -10800,7 +10809,7 @@ Moltkebrücke	N 7930,12912 8021,12832
 Willy-Brandt-Str.	N 8021,12832 8030,12824
 Willy-Brandt-Str.	N 8030,12824 8120,12756
 (am Bundeskanzleramt)	NN 8120,12756 8122,12603
-Heinrich-von-Gagern-Str.	N 8122,12603 8119,12414
+Heinrich-von-Gagern-Str.	NH 8122,12603 8119,12414
 Hildebrandstr.	N 7322,11177 7435,11514
 #: alias: Thusneldaallee
 #: note: auf den Straßenschildern steht es mit Bindestrich
@@ -11549,7 +11558,7 @@ Rolandseck	N 18834,9256 18903,9244 18977,9322 19020,9364
 Andernacher Str.	N 19245,8669 19155,8631 19075,8590 19054,8571 19000,8509 18949,8437
 (Unterführung Bhf. Karlshorst)	NN 18875,8365 18906,8394 18949,8437
 Ingelheimer Str.	N 19075,8590 19022,8571 18951,8574 18891,8586
-Zwieseler Str.	N 19621,9097 19626,9171 19628,9194 19634,9292 19641,9411 19646,9490 19657,9666 19663,9757 19669,9876 19683,10031 19688,10094 19695,10196 19711,10426
+Zwieseler Str.	N 19621,9097 19626,9171 19628,9194 19634,9292 19641,9411 19646,9490 19657,9666 19663,9757 19669,9876 19683,10031 19688,10094 19697,10210 19711,10426
 #: oldname: -201512: Römerweg
 #: ignore_oldname_file: yes
 Zwieseler Str. [Stichstraße]	N 19599,9747 19663,9757
@@ -12529,7 +12538,7 @@ Wilmsstr.	N 10251,9979 10424,9958 10480,9949 10627,9912
 Friedrich-Ebert-Platz	NN 8540,12420 8554,12593 8485,12612
 #: oldname: -19980116: Paul-Löbe-Str. vvv
 Paul-Löbe-Allee	N 8485,12612 8399,12610 8369,12609 8306,12609 8207,12606
-Paul-Löbe-Allee	N 8207,12606 8122,12603
+Paul-Löbe-Allee	NH 8207,12606 8122,12603
 Paul-Löbe-Allee	NN 8122,12603 7945,12592 7851,12590
 #: oldname ^^^
 (Paul-Löbe-Allee - südliches Spreeufer)	NN 7851,12590 7741,12586 7710,12585
@@ -13178,16 +13187,16 @@ Koloniestr. (Lichterfelde)	N 5051,959 5097,988 5193,1050 5204,1057 5218,1067 530
 Sandhofweg	N 5848,272 5795,371 5757,434 5688,402
 Sandhofweg	NN 5688,402 5644,381
 Leykestr.	N 12335,7770 12075,7696
-Kronprinzenbrücke	N 8503,12895 8424,12853
-Konrad-Adenauer-Str.	N 8424,12853 8309,12758
+Kronprinzenbrücke	NH 8503,12895 8424,12853
+Konrad-Adenauer-Str.	NH 8424,12853 8309,12758
 Konrad-Adenauer-Str.	N 8309,12758 8306,12609
 Otto-von-Bismarck-Allee	N 8415,12749 8309,12758
-Otto-von-Bismarck-Allee	N 8309,12758 8252,12757 8206,12757
+Otto-von-Bismarck-Allee	NH 8309,12758 8252,12757 8206,12757
 Otto-von-Bismarck-Allee	N 8206,12757 8120,12756
 #: note: laut osm "Willy-Brandt-Str." --- aber vor Ort existieren keine Straßenschilder? vvv
 #: by: http://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/ii-200ib/index.shtml (dieser Abschnitt der Straße bleibt erhalten)
 #: note: "Umfahrung Kanzleramt"
-(Forumsquerung)	N 8207,12606 8206,12734 8206,12757
+(Forumsquerung)	NH 8207,12606 8206,12734 8206,12757
 # REMOVED (laut osm "komplett abgetragen") --- (Umfahrung an der Schweizer Botschaft)	N 8206,12757 8204,12816 8168,12848 8114,12839 8030,12824
 #: note ^^^
 Monbijoubrücke	NN 9654,12882 9683,12913 9707,12974
@@ -14459,7 +14468,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="13"
-#: last_checked: 2020-09-23
+#: last_checked: 2020-09-30
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Am Kraatzgraben)	NN 16835,10052 16666,10219 16544,10337 16488,10381
@@ -14800,9 +14809,9 @@ Gladiolenstr.	N 23536,4543 23541,4439 23537,4238
 Erlenstr. (Köpenick)	N 23879,4233 23880,4280 23881,4299 23883,4328 23868,4411 23850,4497 23826,4539
 Cedernstr.	N 23868,4411 23978,4484 24068,4602
 Schmale Gasse	N 23883,4328 24055,4348 24075,4417
-Brehmstr.	N 19398,9833 19413,10056 19479,10050 19540,10044 19683,10031
+Brehmstr.	N 19398,9833 19413,10056 19479,10050 19549,10043 19683,10031
 Roßmäßlerstr.	N 19479,10050 19487,10205
-Kötztinger Str.	N 19536,9853 19540,10044 19553,10208 19695,10196
+Kötztinger Str.	N 19536,9853 19549,10043 19560,10218 19697,10210
 Zinzendorfstr.	N 5442,12852 5468,13067
 Reichnerweg	N 11081,804 10903,799 10718,760
 Reichnerweg	N 10726,739 10539,662
@@ -14832,7 +14841,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="14"
-#: last_checked: 2020-09-23
+#: last_checked: 2020-09-30
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
