@@ -844,7 +844,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: off: except_schooltime (seen 2013-08-25 23:20 (off), 2013-09-27 11:30 (on), 2018-10-03 16:00 (holiday) (off))
 	X 14758,7373
 	X 15221,7778
-#: off: Sunday (seen 2015-11-01 16:00, 2018-07-29 12:30)
+#: off: Sunday (seen 2015-11-01 16:00, 2018-07-29 12:30, 2020-10-04 13:00)
 	F 15553,7408
 	X 15724,6229
 	X 15058,6784
@@ -960,11 +960,12 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036190429651/190429651/00081409/09-Anlagen/04/B0138SB.pdf (nach Komplettumbau)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5240 (Prüfung für einen Umbau)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036154063735/154063735/00111219/19-Anlagen/05/B1138ZB2.pdf
-#: last_checked: 2020-07-18
+#: last_checked: 2020-10-04
 #: check_frequency: 180d
 	X 18080,5376
 	X 19904,3464
 	X 20565,2754
+#: XXX_prog: Anforderung für rechtsabbiegende (?) Radfahrer aus Richtung Nordwesten
 	X 22162,1067
 	X 18010,7133
 #: XXX_prog für Radfahrer Richtung Süden zwei getrennt voneinander geschaltete Ampeln; Passierdauer für das "ordentliche" Linksabbiegen in die Griechische Allee bis zu 150 Sekunden
@@ -2007,7 +2008,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2764,11519
 	X 3612,12377
 	X 4572,7936
-	X 15080,11905
+	X 15077,11910
 	X 6454,8653
 #: off: night (seen 2013-08-25 23:30)
 	X 14652,10201
@@ -2572,7 +2573,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX_prog für Radfahrer auf der Invalidenstr. in Richtung Osten keine Haltelinie, also nur bzgl. StVO §1 relevant
 	F 8332,13548
 #: note: Anforderungsampel für die Überquerung der Gürtelstr. als Fußgänger (oder als Radfahrer aus Richtung Wilhelm-Guddorf-Str.)
-	X 15248,11880
+	X 15256,11884
 #: by: osm
 	X 11001,18528
 # REMOVED (ex nicht?) --- #: by: osm ---	X 11168,18542
@@ -2821,7 +2822,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2020-09-04 (mapillary)
+#: last_checked: 2020-09-24 (mapillary)
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
@@ -3336,7 +3337,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2020-09-29 vvv
+#: last_checked: 2020-10-04 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
@@ -3362,6 +3363,12 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 ################################################################################
 #: note: Ampeln elsewhere vvv
+	X 41698,17577
+	B 29648,12973
+	X 34608,17655
+	X 35225,17557
+	X 42652,19528
+	X 42354,19026
 	X 21333,-4046
 	X 21607,-3739
 	X 14542,-21237
@@ -3710,7 +3717,7 @@ unbeschrankter Bahnübergang	B0 -4990,55852
 	B 12141,178951
 #: note: Luftbild
 	B 29147,180773
-	B 27094,12535
+	B 27094,12530
 	B 32079,193165
 	B 35705,190879
 	B 38289,186921

@@ -814,7 +814,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2328,7 +2328,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: 2147343519 (bis 31.12.2021")
+#: note: laut rbbtext bis 4.1.2021
+#: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
+	2::inwork 14539,23306 14573,23295 14597,23280
+',
+         'from' => 1543258848,
+         'id' => 3058,
+         'text' => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, Radfahrer sind möglicherweise auch betroffen, bis Anfang Januar 2021',
+         'type' => 'gesperrt',
+         'until' => 1609779600
+       },
        undef,
        undef,
        undef,
@@ -2459,20 +2470,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX bis wann gehen die Bauarbeiten? Bis Anfang Juli 2020?
+#: XXX hier fehlt noch die letzte Asphaltdeckschicht
 #: also_indoor: traffic
 #: osm_watch: way id="156066225" version="16"
-#: last_checked: 2020-09-15
-#: check_frequency: 90d
-# REMOVED --- #: next_check: 2020-07-08
-	q3::inwork; 19266,1968 19564,1871
-#: XXX hier laufen gerade Asphaltierungsarbeiten
-#: last_checked: 2020-09-15
-#: check_frequency: 21d
-	q3::inwork 19055,2037 19164,2001 19181,1996 19266,1968
+#: last_checked: 2020-10-04
+#: check_frequency: 45d
+#: next_check: 2021-07-01
+	q3::inwork 19055,2037 19164,2001 19181,1996 19266,1968 19564,1871
 ',
          'from' => undef,
          'id' => 3112,
-         'text' => 'Rudower Str.: Bauarbeiten zwischen Dorothea-Viehmann-Str. und Lehmfeldsteig, Einbahnstraßenregelung, offen Richtung Westen, außerdem Bauarbeiten im Bereich Pfarrwöhrde/Am Alten Friedhof',
+         'text' => 'Rudower Str.: Bauarbeiten zwischen Lehmfeldsteig und Pfarrwöhrde, Fahrbahn kann gesperrt sein',
          'type' => 'handicap',
          'until' => undef
        },
@@ -2484,7 +2492,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Bis wann gehen die Bauarbeiten?
 #: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?) (eigentlich bis 17.10.2020, vorfristig beendet)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-09-30
+#: last_checked: 2020-10-03
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2020-10-17
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
@@ -2574,8 +2582,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: ALTLANDSBERGERCHAUSSEE-2019
 #: by: osm
-#: osm_watch: way id="59994277" version="20" brb
-#: source_id: LS/721-F/18/135
+# REMOVED (eins reicht, siehe fragezeichen-orig) --- #: osm_watch: way id="59994277" version="20" brb
+#: source_id: LS/721-F/18/135 (bis 31.12.2020)
+#: last_checked: 2020-10-03
+#: check_frequency: 90d
+#: next_check: 2020-12-31
 # REMOVED (hier fertig) ---	q4::inwork 40166,16723 39984,16734
 	q4::inwork 39984,16734 39287,17231 39235,17255
 ',
@@ -2619,7 +2630,22 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => 1609455599
        },
-       undef,
+       {
+         'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
+# REMOVED (alt) --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php --- #: by: fritz --- #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
+#: XXX bis wann ist der Bahnübergang gesperrt?
+#: priority: #A
+#: last_checked: 2020-10-03
+#: check_frequency: 90d
+#: next_check: 2021-03-01
+	2::inwork 21558,12073 21562,12088 21564,12097
+',
+         'from' => undef,
+         'id' => 3171,
+         'text' => 'Brebacher Weg: Bahnübergang gesperrt, möglicherweise bis März 2021',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
        undef,
        {
          'data' => '#: next_check_id: KOENIGSTEINBRUECKE-2019
@@ -2643,12 +2669,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: add_fragezeichen: Sind die Bauarbeiten beendet? Ist die Anbindung des Wuhlewanderwegs an die Altentreptower Str. fertig?
 #: osm_watch: way id="26288668" version="15"
 #: osm_watch: way id="798056092" version="1"
-#: last_checked: 2020-09-23 vvv
-#: check_frequency: 30d vvv
-#: next_check: 2020-09-30 vvv
+#: last_checked: 2020-10-03 vvv
+#: check_frequency: 14d vvv
+# REMOVED --- #: next_check: 2020-09-30 vvv
 	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
 	2::inwork 22129,12155 22220,12243 22225,12281
-#: next_check ^^^
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 ',
@@ -2765,7 +2791,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-09-24
+#: last_checked: 2020-10-03
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2821,12 +2847,12 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1601697600,
+         'from' => 1602302400,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1601830800
+         'until' => 1602435600
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -2956,16 +2982,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '	q4::inwork 5464,5731 5280,5714
-',
-         'from' => 1593353640,
-         'id' => 3255,
-         'source_id' => '2147346016',
-         'text' => 'Bergstr.: zwischen Körnerstr. und Heesestr. Sperrung wegen Bauarbeiten, evtl. sind auch Radfahrer betroffen, vom 29.06.2020 16:14 Uhr bis 02.10.2020 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1601650800
-       },
+       undef,
        undef,
        undef,
        {
@@ -3001,9 +3018,9 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'from' => undef,
          'id' => 3262,
          'source_id' => '2147346178',
-         'text' => 'Müggelseedamm Richtung Rahnsdorf zwischen Scharnweberstraße und Bruno-Wille-Straße: Bauarbeiten, Fahrbahn gesperrt, bis 02.10.2020 17:00 Uhr ',
+         'text' => 'Müggelseedamm Richtung Rahnsdorf zwischen Scharnweberstraße und Bruno-Wille-Straße: Bauarbeiten, Fahrbahn gesperrt, bis 16.10.2020 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1601650800
+         'until' => 1602860400
        },
        {
          'data' => '#: next_check_id: BRAUER-2020
@@ -3059,7 +3076,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
 #: source_id: LS/721-E/20/050
 #: XXX wie lange gilt das Verbot?
 #: last_checked: 2020-08-22
-#: next_check: 2020-12-31
+#: next_check: 2020-10-23
 	2 48469,65641 47875,64281 47564,63557
 ',
          'from' => undef,
@@ -3099,31 +3116,21 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1297930749249814532
 #: by: https://www.berliner-woche.de/tempelhof/c-verkehr/sanierungsbeginn-nach-wasserrohrbruch-am-24-august-noch-ungewiss_a285061
+#: XXX laut rbbtext bis voraussichtlich 16.11.2020
+#: also_indoor: traffic (G,H)
+#: last_checked: 2020-08-29
+#: next_check: 2020-11-16
 	q4::inwork 7597,4499 7628,4521 7667,4549
 ',
          'from' => 1598206114,
          'id' => 3270,
          'source_id' => '2147346269',
-         'text' => 'Attilastr.: Fahrbahn und Gehwege zwischen Ringstr. und Steglitzer Damm gesperrt, Umweg durch S-Bahnhof, voraussichtlich bis Oktober 2020',
+         'text' => 'Attilastr.: Fahrbahn und Gehwege zwischen Ringstr. und Steglitzer Damm gesperrt, Umweg durch S-Bahnhof, voraussichtlich bis Mitte November 2020',
          'type' => 'handicap',
-         'until' => 1604163600
+         'until' => 1605553200
        },
        undef,
-       {
-         'data' => '#: by: rbbtext (Endedatum)
-#: confirmed_by: srt
-#: XXX bleibt es beim Ende der Bauarbeiten am 5.10.2020?
-#: priority: #B
-#: last_checked: 2020-09-05
-#: next_check: 2020-10-05
-	q3::inwork 11652,13372 11589,13305 11578,13310 11526,13252
-',
-         'from' => undef,
-         'id' => 3272,
-         'text' => 'Pauline-Staegemann-Str.: Bauarbeiten, Fahrbahn gesperrt, Bordsteine, voraussichtlich bis zum 05.10.2020',
-         'type' => 'handicap',
-         'until' => 1601913600
-       },
+       undef,
        {
          'data' => '	q4::inwork 17631,3200 17894,2783
 ',
@@ -3160,17 +3167,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1606838400
        },
-       {
-         'data' => '#: by: wosch
-	2::inwork 38096,68983 38048,68993
-',
-         'from' => undef,
-         'id' => 3276,
-         'source_id' => 'http://www.berlin-usedom-radweginfo.de/neuer_weg.php',
-         'text' => 'Autobahnbrücke Glambeck gesperrt (auch nicht per Fuss passierbar), bis 30.9.2020',
-         'type' => 'gesperrt',
-         'until' => 1601503200
-       },
+       undef,
        {
          'data' => '#: next_check_id: SIGISMUND-2020
 #: XXX wann sind die Bauarbeiten fertig? vvv
@@ -3190,7 +3187,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: RICHARDPLATZ-2020
-#: osm_watch: way id="840456624" version="2"
+#: osm_watch: way id="840456624" version="3"
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
 #: also_indoor: traffic (G)
 #: priority: #A
@@ -3227,6 +3224,42 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung auch für Radfahrer gesperrt',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9022 (Frage)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
+#: XXX bis wann ist der Bahnübergang gesperrt?
+#: priority: #A
+#: last_checked: 2020-10-03
+#: check_frequency: 90d
+#: next_check: 2021-03-01
+	2::inwork 20627,12162 20624,12133 20620,12108
+',
+         'from' => undef,
+         'id' => 3282,
+         'text' => 'Oberfeldstr.: Bahnübergang am S-Bhf. Biesdorf gesperrt, möglicherweise bis März 2021',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '	q4::temp 3689,11637 3717,11462
+',
+         'from' => 1602147600,
+         'id' => 3283,
+         'source_id' => 'https://www.berliner-woche.de/charlottenburg/c-verkehr/fussgaengerzone-wilmersdorfer-strasse-wird-fuer-zwei-tage-verlaengert_a289375',
+         'text' => 'Wilmersdorfer Str.: zwischen Bismarckstr. und Schillerstr. Verlängerung der Fußgängerzone, am 9.10.2020 und 10.10.2020, jeweils zwischen 11 und 19 Uhr',
+         'type' => 'handicap',
+         'until' => 1602349200
+       },
+       {
+         'data' => '	q4::inwork; 10177,13766 10319,13788 10459,13760
+',
+         'from' => 1601923909,
+         'id' => 3284,
+         'source_id' => '2147346452',
+         'text' => 'Torstr.: Engstelle von Rosenthaler Platz Richtung Mollstr., bis 30.4.2021',
+         'type' => 'handicap',
+         'until' => 1619794800
        }
      
 );

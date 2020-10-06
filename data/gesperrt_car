@@ -427,11 +427,11 @@ Finowstr.+Weichselstr./Frankfurter Allee	3nocross::ignrte 14709,12156 14854,1213
 Frankfurter Allee -> Finowstr.: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 14926,12129 14854,12137 14836,12045
 Finowstr. -> Frankfurter Allee: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 14836,12045 14854,12137 14709,12156
 Frankfurter Allee -> Waldeyerstr.: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 14854,12137 14926,12129 15003,12241
-Frankfurter Allee -> Weichselstr.: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 14994,12121 14926,12129 14887,11929
-Weichselstr. -> Frankfurter Allee: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 14887,11929 14926,12129 14854,12137
-Weichselstr. -> Waldeyerstr.: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 14887,11929 14926,12129 15003,12241
+Frankfurter Allee -> Weichselstr.: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 14994,12121 14926,12129 14888,11934
+Weichselstr. -> Frankfurter Allee: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 14888,11934 14926,12129 14854,12137
+Weichselstr. -> Waldeyerstr.: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 14888,11934 14926,12129 15003,12241
 Waldeyerstr. -> Frankfurter Allee: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 15003,12241 14926,12129 14994,12121
-Waldeyerstr. -> Weichselstr.: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 15003,12241 14926,12129 14887,11929
+Waldeyerstr. -> Weichselstr.: Finowstr.+Weichselstr./Frankfurter Allee	3::igndisp 15003,12241 14926,12129 14888,11934
 Friedrichstr. (Straﬂenbahn)	3nocross::ignrte 9225,13389 9246,13235 9254,13171 9262,13111
 Friedrichstr. -> Claire-Waldoff-Str.: Friedrichstr. (Straﬂenbahn)	3::igndisp 9254,13171 9246,13235 9132,13187
 Claire-Waldoff-Str. -> Friedrichstr.: Friedrichstr. (Straﬂenbahn)	3::igndisp 9132,13187 9246,13235 9225,13389
@@ -2060,3 +2060,8 @@ Herrnhuter Weg -> Karl-Marx-Str.: Mittelstreifen	3::igndisp 13103,7889 12898,783
 Mittelstreifen	3nocross::ignrte 11589,12768 11635,12745 11678,12727
 Karl-Marx-Allee -> Schillingstr.: Mittelstreifen	3::igndisp 11678,12727 11635,12745 11596,12668
 Schillingstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 11596,12668 11635,12745 11589,12768
+Am Erlengrund: Poller	3 44050,21331 44106,21385 44309,21572
+Am Erlengrund: Poller	3 44309,21572 44106,21385 44050,21331
+Am Flieﬂ	1 27666,12850 27654,12984
+Adlergestell (Richtungsfahrbahn)	1 21862,1532 21874,1511 21937,1343 21998,1239 22096,1136
+Adlergestell (Richtungsfahrbahn)	1 22096,1136 21837,1340 21812,1366 21506,1768

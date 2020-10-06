@@ -169,9 +169,9 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: priority: #A
 #: source_id: 2147345515
-#: last_checked: 2020-09-05
+#: last_checked: 2020-10-02 (mapillary)
 #: check_frequency: 30d
-#: next_check: 2020-10-06
+#: next_check: 2020-10-13
 # REMOVED --- #: valid: -20200918
 Gormannstr.: Bauarbeiten an der Einmündung Torstr., Fahrbahn gesperrt	q3::inwork 10459,13760 10445,13675
 # 
@@ -203,7 +203,7 @@ Voltairestr.: wegen Baustelle kann die Fahrbahn gesperrt sein, Ausweichen auf Ge
 # 
 #: osm_watch: way id="751595931" version="2"
 #: also_indoor: traffic (H)
-#: last_checked: 2020-09-23
+#: last_checked: 2020-10-04 (daf)
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10952,12401
 # 
 #: last_checked: 2020-08-25
@@ -293,7 +293,7 @@ Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_26_3435_3558_online.pdf (Grundstücksnummerierungen)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_52_7191_7270_online.pdf (Grundstücksnummerierungen)
 #: XXX evtl. muss man nach Ende der Einschränkungen den comments_misc-orig-Eintrag wieder aktivieren
-#: osm_watch: way id="17370332" version="18"
+#: osm_watch: way id="17370332" version="19"
 #: also_indoor: traffic (G) vvv
 #: last_checked: 2020-09-19 vvv
 #: check_frequency: 7d vvv
@@ -394,7 +394,7 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 # 
 #: next_check_id: ZEUGHAUS-2014
 #: XXX eigentlich nur UdL, kann aber so nicht dargestellt werden
-#: last_checked: 2020-08-19 (mapillary)
+#: last_checked: 2020-09-24 (mapillary)
 #: check_frequency: 60d
 Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364 9934,12420
 # 
@@ -445,7 +445,7 @@ Schillingstr.: Bauarbeiten an der Karl-Marx-Allee, Ausweichen auf Gehweg	q3::inw
 ### Friedrichsfelde ###
 # 
 #: next_check_id: WALLENSTEIN-2020
-#: last_checked: 2020-09-30
+#: last_checked: 2020-10-03
 #: check_frequency: 30d
 #: next_check: 2020-10-31
 Neuer Feldweg/Wallensteinstr.: Bauarbeiten, Ausweichen auf engen Gehweg	q2::inwork 17383,9719 17365,9654 17360,9629 17425,9605 17456,9594 17549,9529
@@ -456,15 +456,15 @@ Neuer Feldweg/Wallensteinstr.: Bauarbeiten, Ausweichen auf engen Gehweg	q2::inwo
 #: XXX die Ausschilderung wird nach den Bauarbeiten vermutlich aufgehoben
 #: by: http://thomas.krickstadt.de/2020-07-11-bauzustand-adlershof-2
 #: confirmed_by: srt
-#: last_checked: 2020-09-04
+#: last_checked: 2020-10-04
 #: check_frequency: 90d
 #: next_check: 2021-10-01
 Sterndamm [Nebenfahrbahn]: Gehweg für Radfahrer frei	q3 17648,5338 17697,5347
 # 
 ### Oberschöneweide ###
 # 
-#: XXX laut Schild der Berliner Wasserbetriebe bis Juli 2020
-#: last_checked: 2020-09-23
+#: XXX laut Schild der Berliner Wasserbetriebe bis Juli 2020 (Termin wurde nicht gehalten)
+#: last_checked: 2020-10-04
 # REMOVED --- #: next_check: 2020-07-31
 # REMOVED --- #: valid: -20200731
 Poggendorffweg: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 17079,8456 17202,8391
@@ -491,7 +491,7 @@ Poggendorffweg: Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 17079,8456 17202,
 #: check_frequency: 45d
 Jahnstr.: Bauarbeiten, etwa 50m der Fahrbahn sind gesperrt	q3::inwork 11500,9116 11509,9392
 # 
-#: last_checked: 2020-09-01
+#: last_checked: 2020-09-10 (mapillary)
 #: also_indoor: traffic (H)
 Prinzessinnenstr.: Sperrung der Fahrbahn an der Einmündung Oranienstr.	q3::inwork 10965,10851 11145,10638
 # 
@@ -894,12 +894,12 @@ Säntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
 #: next_check_id: WUHLEWANDERWEG-2014 vvv
 #: by: https://api.fixmyberlin.de/api/projects/270
 #: XXX es ist zu erwarten, dass hier der Wuhlewanderweg verbessert wird, siehe auch Eintrag in qualitaet_s-orig: vvv
-#: last_checked: 2020-09-23 vvv
-#: check_frequency: 30d vvv
-#: next_check: 2020-09-30 vvv
+#: last_checked: 2020-10-03 vvv
+#: check_frequency: 14d vvv
+# REMOVED --- #: next_check: 2020-09-30 vvv
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gefälle, Fußgänger	q4; 21970,12153 21998,12204
-#: next_check ^^^
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -959,7 +959,7 @@ Alexanderplatz [Richtung Alexa]: Fußgängerverkehr	q3 11134,12793 11064,12910
 #: by: https://camera.deckchair.com/park-inn-berlin-alexanderplatz (Webcam)
 #: by: https://www.deutsches-architekturforum.de/thread/2271-u-5/?postID=666937#post666937 (Pflasterungsarbeiten)
 #: osm_watch: relation id="8743849" version="1"
-#: last_checked: 2020-09-23
+#: last_checked: 2020-10-04 (daf)
 #: check_frequency: 21d
 #Rathausstr.: Fußgänger	q1- 10923,12779 10704,12595
 Rathausstr.: Fußgänger, Bauarbeiten	q2 10923,12779 10704,12595
@@ -1478,7 +1478,7 @@ Ceciliengärten: schmale Rampe oder Treppe	q3 6356,7479 6289,7472
 # REMOVED (mittlerweile sind die Absperrungen großzügiger versetzt) --- #: XXX_prog: für Anhänger q2 --- Sebastianstr.: Absperrung für Autos, mit Anhänger unbequem passierbar	q1 10911,11080 10934,11038
 (Weg am Humboldthain): Radfahren erlaubt, Fußgänger haben Vorrang	q1 9255,15816 9092,15789 8934,15740
 Tasdorfer Str. - Wilhelm-Guddorf-Str.: Fußgänger	q1 15393,11590 15423,11667
-(Grünes Band): Radfahren erlaubt, Fußgänger haben Vorrang	q1 15349,11911 15301,11876 15327,11724 15337,11639 15365,11564 15377,11555 15412,11510 15414,11487 15445,11455 15515,11416
+(Grünes Band): Radfahren erlaubt, Fußgänger haben Vorrang	q1 15353,11902 15307,11876 15327,11724 15337,11639 15365,11564 15377,11555 15412,11510 15414,11487 15445,11455 15515,11416
 # REMOVED (existiert nicht mehr?) --- #: note: explizites Schild mit einem durchgestrichenen Fahrrad nur von Süden her --- Am Bahndamm: teilweise enge Stellen, Fußgänger, Radfahren offiziell nicht erlaubt	q2; 7769,4315 7727,4418 7692,4464 7667,4549
 #: XXX_prog BS an der Attilastr., ansonsten bleibt es bei q2
 Am Bahndamm: teilweise enge Stellen, Fußgänger, Bordstein	q2 7667,4549 7692,4464 7727,4418 7769,4315
@@ -1848,7 +1848,8 @@ Büxensteinallee: Marktstände, Fußgänger	q3 22228,1071 22162,1067
 (Sportallee): Fußgänger	q1 22583,1004 22368,1081
 #: XXX_prog: Bordstein am Don-Ugoletti-Platz und an der Regattastr., falls man links abbiegt
 Don-Ugoletti-Platz - Regattastr.: Fußgänger, Bordsteine	q1 22449,1569 22478,1602 22549,1644
-Ede-und-Unku-Weg: Fußgänger, Radfahren erlaubt	q1 15140,11811 15122,11834 15121,11899
+#: note: Fußgänger haben Vorrang
+Ede-und-Unku-Weg: Fußgänger, Radfahren erlaubt	q2 15140,11811 15122,11834 15133,11902
 Chiemseestr.: enge Straße	q1 22204,1496 22334,1553
 (Königsheideweg - Am Alten Fenn): eng	q3 17037,4794 17060,4848
 (Am Alten Fenn - Südostallee): teilweise recht eng, Anhänger sollten parallelen Weg benutzen	q2 17295,5387 17300,5423 17326,5463 17366,5552
@@ -2050,20 +2051,8 @@ Appelbacher Weg: Rampe	q2 27780,893 27804,878
 Hallgarter Steig: eng und kurvig	q1 27890,373 27961,321 28042,304 28046,268 28058,155 28068,148 28071,112 28086,101 28070,22 28083,-34 28065,-114 28042,-152
 Grottewitzwanderweg: eng, kurvig	q2 28042,-152 27852,-279 27825,-371 27703,-406 27624,-480 27605,-661 27573,-757 27603,-906 27562,-1043 27578,-1153 27539,-1337
 Papendickstr.: enge Straße	q0- 17071,16174 17073,16222 17135,16334 17171,16372
-#: next_check_id: AMWIESENWEG-2020
-#: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/tief-10-ag_radverkehr-12-03-2018-kompatibilitaetsmodus.pdf (Zweirichtungsverkehr, 2018)
-#: XXX Bauarbeiten geplant, danach vielleicht ein breiterer Weg (evtl. kann man auch den Q0--Eintrag in qualitaet_s-orig ändern)
-#: by: https://api.fixmyberlin.de/api/plannings/100 (die Umsetzung erfolgt 2018)
-#: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/11-ag_radverkehr-bericht-einzelmassnahmen.pdf (2019)
-#: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/12-ag_radverkehr-bericht-einzelmassnahmen.pdf
-#: by: https://www.berliner-woche.de/bohnsdorf/c-bauen/gehweg-wird-jetzt-ausgebaut_a261721 (außerdem: "mit versickerungsfähigem Pflaster befestigt")
-#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/stadtentwicklungsamt/bebauungsplaene/bebauungsplan.942399.php
-#: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/1-entwurf-vorhabenbezogener-b-plan-9-55-ve.pdf
-#: osm_watch: way id="152177648" version="8"
-#: XXX noch immer offiziell nur für Fußgänger, wird sich das ändern? --- laut osm mittlerweile bicycle=designated
-#: last_checked: 2020-07-31
-# REMOVED --- #: next_check: 2020-07-31
-Am Wiesenweg: Fußgänger	q1 21977,988 21856,996 21724,954 21685,916
+# REMOVED --- #: next_check_id: AMWIESENWEG-2020 --- #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/tief-10-ag_radverkehr-12-03-2018-kompatibilitaetsmodus.pdf (Zweirichtungsverkehr, 2018) --- #: XXX Bauarbeiten geplant, danach vielleicht ein breiterer Weg (evtl. kann man auch den Q0--Eintrag in qualitaet_s-orig ändern) --- #: by: https://api.fixmyberlin.de/api/plannings/100 (die Umsetzung erfolgt 2018) --- #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/11-ag_radverkehr-bericht-einzelmassnahmen.pdf (2019) --- #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/12-ag_radverkehr-bericht-einzelmassnahmen.pdf --- #: by: https://www.berliner-woche.de/bohnsdorf/c-bauen/gehweg-wird-jetzt-ausgebaut_a261721 (außerdem: "mit versickerungsfähigem Pflaster befestigt") --- #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/stadtentwicklungsamt/bebauungsplaene/bebauungsplan.942399.php --- #: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/1-entwurf-vorhabenbezogener-b-plan-9-55-ve.pdf --- #: osm_watch: way id="152177648" version="8" --- #: XXX noch immer offiziell nur für Fußgänger, wird sich das ändern? --- laut osm mittlerweile bicycle=designated --- #: last_checked: 2020-07-31 --- #: next_check: 2020-07-31
+Am Wiesenweg: gemeinsamer Geh- und Radweg	q1+ 21977,988 21856,996 21724,954 21685,916
 Grasmückenweg: Fußgänger, eng	q2 14877,3475 14822,3409
 (Scharnweberstr. - Berenhorststr.): Fußgänger	q1 4801,17623 4816,17712
 Ernststr.: wendelförmige Rampen	q4 2821,19559 2780,19548 2714,19529 2689,19544
@@ -2241,7 +2230,7 @@ Idealpassage: Fußgänger, eng, Schrittgeschwindigkeit	q3 12434,8776 12582,8651
 (Normannenstr. - Jobcenter Lichtenberg): Fußgänger	q1 16068,12376 16080,12441 16089,12522
 (Normannenstr. - Jobcenter Lichtenberg): teilweise auf Geweg ausweichen	q2 16089,12522 16122,12524 16132,12621
 (Parkweg): Fußgänger, Radfahren offiziell nicht erlaubt	q2 14690,12900 14419,12978
-Zur Kreutzigerstr.: enger Hausdurchgang	q3 14291,12220 14285,12190
+Zur Kreutzigerstr.: enger Hausdurchgang	q4+ 14291,12220 14285,12190
 #: XXX_prog BS Bordstein an der Fischerstr.
 (Zobtener Str. - Fischerstr.): Fußgänger, Rampe, Bordstein	q2 16353,10207 16404,10286
 (Fischerstr. - Lückstr.): Fußgänger, teilweise recht eng	q2 16404,10286 16488,10381 16516,10448 16501,10460 16572,10613 16587,10613
@@ -3481,12 +3470,15 @@ Wilhelm-Zermin-Weg: einige Fußgänger	q1 9279,14495 9338,14587
 (Benatzkyweg - Glashütter Weg): einige Fußgänger	q1 17902,1517 17970,1526 18067,1568
 (Am Kaniswall - Wochenendsiedlung Kaniswall): schmal	q2 32872,128 32902,196
 (Kaniswall - Streitwall/Spree): schmal, bewachsen	q2 33281,498 33373,558
-(zur Freilichtbühne Freilichtbühne): einige Fußgänger	q1 25601,6158 25590,6160 25542,6208 25469,6200 25437,6209 25405,6278
+(zur Freilichtbühne Friedrichshagen): einige Fußgänger	q1 25601,6158 25590,6160 25542,6208 25469,6200 25437,6209 25405,6278
 (Friedensweg): einige schlecht sichtbare Betonschwellen	q2 10761,21535 10126,21314
 Herzfelder Steig: starke Steigung	q4; 31342,4254 31331,4248 31321,4226
 Herzfelder Steig: starkes Gefälle	q4; 31321,4226 31275,4224
 Herzfelder Steig: starke Steigung	q4; 31275,4224 31321,4226
 Herzfelder Steig: starkes Gefälle	q4; 31321,4226 31331,4248 31342,4254
+(Bahnüberführung S-Bhf. Biesdorf): Fußgänger	q3 20627,12162 20643,12141 20661,12140
+(Bahnüberführung S-Bhf. Biesdorf): Fußgänger	q4 20661,12140 20657,12101
+(Bahnüberführung S-Bhf. Biesdorf): Fußgänger	q3 20657,12101 20620,12108
 # 
 ######################### User Contributions #################################
 # 
