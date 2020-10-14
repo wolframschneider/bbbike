@@ -51,14 +51,14 @@
 # 
 #: next_check_id: FRANZOESISCHE-2018
 #: osm_watch: node id="6380038401" version="1"
-#: last_checked: 2020-09-17
+#: last_checked: 2020-10-06 (mapillary)
 #: check_frequency: 90d
 #: valid: -20210630
 	X::inwork 9195,11972
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2020-09-17
+#: last_checked: 2020-10-06 (mapillary)
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -617,6 +617,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11976,12595
 #: related ^^^
 	X 11635,12745
+#: XXX_prog nur für linksabbiegende Radfahrer (Karl-Marx-Allee -> Berolinastraße), mit Anforderung
+	X 11678,12727
 	X 11764,12001
 	X 8490,2084
 	X 8579,2265
@@ -1068,7 +1070,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -3635,12572
 	X -3626,12252
 	X -3692,11681
-	X -4503,11930
+	X -4515,11935
 	X -4903,12055
 	X -2851,11417
 	X -2222,11225
@@ -1301,7 +1303,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel an der Weichselstr. während der Bauarbeiten
 #: osm_watch: node id="7241153386" version="1"
-#: last_checked: 2020-08-25 (mapillary)
+#: last_checked: 2020-10-11
 #: check_frequency: 90d
 #: next_check: 2021-03-31
 	F::inwork 12330,8636
@@ -1460,6 +1462,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6668,6810
 	X 6675,6740
 	X 6360,4504
+#: XXX_prog: geradeausfahrende Radfahrer in der Leonorenstr. Richtung Nordwesten haben zwei Ampeln zu beachten, und sind noch zusätzlich dadurch benachteiligt, dass die rechtsabbiegenden Autofahrer eine eigene lange Grünphase haben
 	X 6120,4214
 	X 4702,2676
 	X 5447,3801
@@ -2192,7 +2195,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 1205,10114
 #: XXX_prog Ampel westlich versetzt, beim Rechtsabbiegen aus der südlichen Rognitzstr. und östlichen Kaiserdamm nicht relevant
 	F 2282,11463
-	F -4648,11560
+	F -4663,11574
 	X 10815,11662
 	F 8867,4506
 	X 14185,9509
@@ -2822,7 +2825,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2020-09-24 (mapillary)
+#: last_checked: 2020-10-06
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
@@ -2957,7 +2960,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20221231 vvv
-#: last_checked: 2020-07-19 vvv
+#: last_checked: 2020-10-09 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
@@ -3175,7 +3178,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: provisorische Ampel
 #: note: Anforderungsampel
 #: XXX bleibt die Ampel Hermannstr./Thomasstr. permanent?
-#: last_checked: 2020-09-29
+#: last_checked: 2020-10-11
 #: check_frequency: 90d
 	F::inwork 12181,7390
 # 
@@ -3337,7 +3340,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2020-10-04 vvv
+#: last_checked: 2020-10-09 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
@@ -3363,6 +3366,8 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 ################################################################################
 #: note: Ampeln elsewhere vvv
+	B 83086,5122
+	X -17194,13681
 	X 41698,17577
 	B 29648,12973
 	X 34608,17655

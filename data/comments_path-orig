@@ -81,7 +81,7 @@ Neue Bahnhofstr./Boxhagener Str.: Fußgängerampel auf der linken Seite benutzen	C
 #: XXX eventuell wird es hier in Zukunft Verbesserungen geben, siehe BVV-Beschluss
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3277&options=4
 #: source_id: IM_022413
-#: last_checked: 2020-09-27 (mapillary)
+#: last_checked: 2020-10-05 (mapillary)
 #: check_frequency: 90d
 Rennbahnstr./Bernkasteler Str.: Fußgängerampel auf der linken Seite zum Überqueren der Berliner Allee benutzen	CP; 14528,16910 14558,16907 14673,16895
 # 
@@ -296,7 +296,7 @@ Flotowstr./Roonstr.: Hindenburgdamm kann über Fußgängerfurt gequert werden	CP; 4
 Hausdurchfahrt benutzen	CP2; 6492,9782 6529,9738
 #: XXX_prog: Ist das hier CS; oder CP; ?
 Nach dem Steg kann man zunächst nur in der Mitte direkt am Ufer fahren, da Leitplanken das Übequeren verhindern, erst auf Höhe der Genthiner Str. kann man die Straße überquert werden	CS; 7252,11188 7248,11143 7461,11051
-Lützowufer - Hiroshimasteg: frühzeitig auf den linken Gehweg wechseln, Leitplanken verhindern das Überqueren	PI; 7002,11034 7248,11143 7252,11188
+Lützowufer - Hiroshimasteg: frühzeitig auf den linken Gehweg wechseln, Leitplanken verhindern das Überqueren	PI; 7002,11034 7089,11073 7248,11143 7252,11188
 Alexanderstr. - Schillingstr.: an der Ampel Voltairestr. die Straßenseite wechseln	CP2; 11329,12497 11353,12436
 Brunnenstr. - Humboldthain: unbequem passierbarer Mittelstreifen, ggfs. schon an der Ramlerstr. die Straßenseite wechseln	PI; 9309,15700 9291,15740 9267,15790 9255,15816 9092,15789
 Humboldthain - Brunnenstr.: unbequem passierbarer Mittelstreifen, ggfs. erst an der Böttgerstr. die Straßenseite wechseln	CP; 9092,15789 9255,15816 9242,15843
@@ -506,7 +506,7 @@ Friedenstr. - Schulweg: bereits am Zebrastreifen Pufendorfstr. auf den linken Ge
 #: by: Stefan Klinkusch vvv
 Brunsbütteler Damm - Weg zur Staakener Feldstr.: bereits an der Fußgängerampel auf den linken Gehweg wechseln	PI; -7762,14067 -7716,14031 -7647,13985
 #: note: zwei Metallsäulen hier
-Winzerstr. - Heerstr.: auf den rechten Weg einbiegen	CP2; -4687,11885 -4639,11973
+Winzerstr. - Heerstr.: auf den rechten Weg einbiegen	CP2; -4700,11878 -4658,11891
 #: by: ^^^
 Residenzstr. - Am Schäfersee: bereits an der Ampel Pankower Allee auf den linken Gehweg wechseln	PI; 7579,17532 7572,17558 7477,17544
 Residenzstr. - Lettestr.: bereits an der Ampel Markstr./Residenzstr. auf den linken Gehweg wechseln	PI; 7602,17399 7675,17430 7707,17445

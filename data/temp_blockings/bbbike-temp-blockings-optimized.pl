@@ -515,7 +515,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'data' => '#: tempex: su T09-T16
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-09-19
+#: last_checked: 2020-10-09
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -1919,7 +1919,24 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
+#: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
+#: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
+#: source_id: 2147341022
+#: XXX nächste Termine: 4. November 2020, 11. November 2020, 18. November 2020, 25. November 2020
+#: next_check: 2020-10-29
+#: priority: #A
+	2::temp -2218,5133 -927,6888
+	2::temp -2825,5588 -1925,6790 -2080,6897
+	2::temp -1925,6790 -1851,6887
+',
+         'from' => 1603753200,
+         'id' => 2840,
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 28. Oktober 2020 ab ca. 09:30 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1603876500
+       },
        undef,
        {
          'data' => '#: tempex: sunset-T07
@@ -1989,21 +2006,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
-       {
-         'data' => '#: next_check_id: RIGAER-2018
-#: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
-#: also_indoor: traffic (G,H)
-#: XXX bis wann gibt es die Einbahnstraßenregelung?
-# REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-09-27
-	q3::inwork; 14748,12314 14538,12371
-',
-         'from' => undef,
-         'id' => 2888,
-         'text' => 'Rigaer Str.: Baustelle, Einbahnstraße, offen Richtung Osten',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2206,7 +2209,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-09-17
+#: last_checked: 2020-10-06
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2454,7 +2457,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147343335 (Zeitraum siehe oben)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-09-12 (mapillary)
+#: last_checked: 2020-10-07 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-12-18
 #: XXX_prog: eigentlich q4+::inwork;
@@ -2599,7 +2602,19 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: 2147346164 (bis März 2021, Gesamtbaumaßnahme bis 2024)
+#: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
+#: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
+	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
+',
+         'from' => undef,
+         'id' => 3151,
+         'source_id' => '2147344558',
+         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, vermutlich bis März 2021',
+         'type' => 'gesperrt',
+         'until' => 1615219200
+       },
        undef,
        undef,
        undef,
@@ -2759,7 +2774,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: wosch
 #: XXX evtl. nur saisonal, vielleicht wandern die Weideflächen an andere Stellen (dann auch ggfs. die Tore aus gesperrt-orig austragen)
-#: last_checked: 2020-04-04
+#: last_checked: 2020-04-23 (mapillary)
 #: check_frequency: 180d
 	2 14494,24824 14848,24411
 ',
@@ -2775,7 +2790,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: ROTHER-2020
-#: last_checked: 2020-09-30
+#: last_checked: 2020-10-11
 	q4::inwork 13478,10998 13575,10963
 ',
          'from' => undef,
@@ -2847,17 +2862,17 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1602302400,
+         'from' => 1602907200,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1602435600
+         'until' => 1603040400
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2020-09-19 vvv
+#: last_checked: 2020-10-10 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -2888,20 +2903,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: KAMERUNER-2020
-#: also_indoor: traffic (G,H)
-#: last_checked: 2020-09-05
-#: check_frequency: 30d
-	q4::inwork 6383,15972 6484,16085 6587,16199
-',
-         'from' => 1588490580,
-         'id' => 3234,
-         'source_id' => '2147345842',
-         'text' => 'Kameruner Str.: zwischen Müllerstr. und Togoer Str.: Bauarbeiten, Fahrbahn gesperrt, vom 04.05.2020 09:23 Uhr bis 12.10.2020 17:00 Uhr',
-         'type' => 'handicap',
-         'until' => 1602514800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3022,17 +3024,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'type' => 'handicap',
          'until' => 1602860400
        },
-       {
-         'data' => '#: next_check_id: BRAUER-2020
-	q4::inwork 5317,2345 5159,2176
-',
-         'from' => 1598738400,
-         'id' => 3263,
-         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.971354.php',
-         'text' => 'Brauerstr.: Fahrbahn wegen Bauarbeiten zwischen Oberhofer Weg und Kastanienstr. gesperrt, vom 31.08.2020 bis zum 12.10.2020',
-         'type' => 'handicap',
-         'until' => 1602540000
-       },
+       undef,
        {
          'data' => '#: next_check_id: BRAUER-2020
 	q4::inwork 5159,2176 4979,1964
@@ -3059,7 +3051,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
        {
          'data' => '#: add_fragezeichen: Wann ist die Fahrbahn wieder offen?
 #: also_indoor: traffic
-#: last_checked: 2020-08-23
+#: last_checked: 2020-10-12
 	q4::inwork -3252,12580 -3444,12580
 ',
          'from' => undef,
@@ -3125,9 +3117,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1598206114,
          'id' => 3270,
          'source_id' => '2147346269',
-         'text' => 'Attilastr.: Fahrbahn und Gehwege zwischen Ringstr. und Steglitzer Damm gesperrt, Umweg durch S-Bahnhof, voraussichtlich bis Mitte November 2020',
+         'text' => 'Attilastr.: Fahrbahn und Gehwege zwischen Ringstr. und Steglitzer Damm gesperrt, Umweg durch S-Bahnhof, voraussichtlich bis Ende November 2020',
          'type' => 'handicap',
-         'until' => 1605553200
+         'until' => 1606752000
        },
        undef,
        undef,
@@ -3148,7 +3140,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://pbs.twimg.com/media/EhY9dDlWkA4cFqP?format=png
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/kreuzung-friedelstrassemaybachufer-wird-entschaerft_a286609
 #: priority: #A vvv
-#: last_checked: 2020-09-12 vvv
+#: last_checked: 2020-10-12 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-12-01 vvv
 	q3::inwork 11897,9754 12085,9778
@@ -3172,7 +3164,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: SIGISMUND-2020
 #: XXX wann sind die Bauarbeiten fertig? vvv
 #: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
-#: last_checked: 2020-09-12 vvv
+#: last_checked: 2020-10-10 vvv
 	q3::inwork 8031,11249 7934,11275 7897,11287
 	q4::inwork 7934,11275 7965,11380
 #: last_checked ^^^
@@ -3191,7 +3183,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2020-09-25
+#: last_checked: 2020-10-09
 #: check_frequency: 14d
 	q4::inwork 13288,7653 13378,7695 13416,7712
 ',
@@ -3208,7 +3200,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1601056113,
          'id' => 3279,
          'source_id' => 'https://www.berliner-woche.de/niederschoenhausen/c-bauen/schlossallee-gesperrt_a287821',
-         'text' => 'Schloßallee (Park Schönhausen): Bauarbeiten, komplett gesperrt, voraussichtlich bis zum 13. November 2020',
+         'text' => 'Schloßallee (Park Schönhausen): Bauarbeiten, komplett gesperrt, Beginn unbekannt, voraussichtlich bis zum 13. November 2020',
          'type' => 'gesperrt',
          'until' => 1605308399
        },
@@ -3241,18 +3233,10 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => undef
        },
+       undef,
        {
-         'data' => '	q4::temp 3689,11637 3717,11462
-',
-         'from' => 1602147600,
-         'id' => 3283,
-         'source_id' => 'https://www.berliner-woche.de/charlottenburg/c-verkehr/fussgaengerzone-wilmersdorfer-strasse-wird-fuer-zwei-tage-verlaengert_a289375',
-         'text' => 'Wilmersdorfer Str.: zwischen Bismarckstr. und Schillerstr. Verlängerung der Fußgängerzone, am 9.10.2020 und 10.10.2020, jeweils zwischen 11 und 19 Uhr',
-         'type' => 'handicap',
-         'until' => 1602349200
-       },
-       {
-         'data' => '	q4::inwork; 10177,13766 10319,13788 10459,13760
+         'data' => '#: by: https://pbs.twimg.com/media/EjnrSB_XgAEKrYS?format=jpg&name=medium
+	q4::inwork; 10177,13766 10319,13788 10459,13760
 ',
          'from' => 1601923909,
          'id' => 3284,
@@ -3260,6 +3244,27 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Torstr.: Engstelle von Rosenthaler Platz Richtung Mollstr., bis 30.4.2021',
          'type' => 'handicap',
          'until' => 1619794800
+       },
+       {
+         'data' => '	q3::inwork; 19728,3351 19840,3423 19904,3464
+',
+         'from' => 1602655200,
+         'id' => 3285,
+         'source_id' => '2147346457',
+         'text' => 'Rudower Chaussee: zwischen Franz-Ehrlich-Str. und Adlergestell Richtung Dörpfeldstr. Bauarbeiten, nur für Fußgänger frei, vom 15.10.2020 08:00 Uhr bis 12.11.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1605196800
+       },
+       undef,
+       {
+         'data' => '	q4::inwork; 16122,6084 16169,6064 16510,5917 16868,5938
+',
+         'from' => 1602972000,
+         'id' => 3287,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.1003726.php',
+         'text' => 'Südostallee: Sperrung der Fahrbahn Richtung Niederschöneweide, voraussichtlich vom 19.10.2020 bis 23.10.2020',
+         'type' => 'handicap',
+         'until' => 1603476000
        }
      
 );

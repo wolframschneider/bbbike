@@ -4279,8 +4279,8 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002648',
        data  => <<EOF,
-	2 -4167,12554 -4203,12569 -4239,12626
-	2 -4167,12554 -4084,12557
+	2 -4180,12553 -4189,12560 -4210,12575 -4239,12626
+	2 -4180,12553 -4084,12557
 	2 -3635,12572 -3752,12566
 	2 -3752,12566 -3892,12560
 	2 -3892,12560 -3942,12559 -4084,12557
@@ -4486,7 +4486,7 @@ EOF
        text  => 'Wilhelmstraße Richtung Pichelsdorf zwischen Einmündung Pichelsdorfer Straße und Einmündung Gatower Straße Baustelle, gesperrt bis 08.05.2006 13:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-	1 -3824,13350 -3896,13124 -3923,13060 -3967,12976 -4008,12916 -4063,12842 -4119,12763 -4180,12690 -4239,12626 -4300,12571 -4351,12460
+	1 -3824,13350 -3896,13124 -3923,13060 -3967,12976 -4008,12916 -4063,12842 -4119,12763 -4180,12690 -4239,12626 -4304,12562 -4351,12460
 EOF
      },
      { from  => 1146801600, # 2006-05-05 06:00
@@ -16257,7 +16257,7 @@ EOF
 #: tempex: su T09-T16
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-09-19
+#: last_checked: 2020-10-09
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -17744,7 +17744,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LSO-SG33-F10040',
        data  => <<EOF,
-	2::inwork 81301,3881 82314,4413 82765,4636
+	2::inwork 81301,3830 81838,4207 82712,4607
 EOF
      },
      { from  => 1271624843, # 2010-04-18 23:07
@@ -17779,7 +17779,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LSO-SG33-F10040',
        data  => <<EOF,
-	2::inwork 83070,5097 82765,4636 82314,4413 81301,3881
+	2::inwork 83058,5135 82712,4607 81838,4207 81301,3830
 EOF
      },
      { from  => 1271654040, # 2010-04-19 07:14
@@ -25980,14 +25980,18 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2019-11-26 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-11-27 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 27. November 2019 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2020-10-27 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2020-10-28 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 28. Oktober 2020 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-# REMOVED --- #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
-# REMOVED --- #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
-# REMOVED --- #: next_check: 2018-11-21 --- #: priority: #A
+#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
+#: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
+#: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
+#: source_id: 2147341022
+#: XXX nächste Termine: 4. November 2020, 11. November 2020, 18. November 2020, 25. November 2020
+#: next_check: 2020-10-29
+#: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
@@ -26373,12 +26377,12 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
        data  => <<EOF,
-	2::temp 6476,11325 6630,11247 6606,11222 6582,11202 6447,11144
+	2::temp 6457,11332 6630,11247 6606,11222 6582,11202 6447,11144
 	2::temp 6841,11114 6630,11247 6679,11319 6692,11365 6716,11439 6825,11486
 	2::temp 5986,10976 6058,10988 6145,10975 6168,11042 6447,11144 6452,11118 6472,11049
 	2::temp 6626,11178 6582,11202 6495,11251 6350,11301 6346,11326 6337,11365 6200,11417
-	3 6851,11346 6692,11365 6481,11400
-	3 6481,11400 6692,11365 6851,11346
+	3 6851,11346 6692,11365 6468,11396
+	3 6468,11396 6692,11365 6851,11346
 	3 6266,10927 6145,10975 6122,10925
 	3 6122,10925 6145,10975 6266,10927
 EOF
@@ -26526,16 +26530,11 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef, # $isodate2epoch->("2019-02-28 12:00:00"),
+       until => 1602006470, # undef, # $isodate2epoch->("2019-02-28 12:00:00"),
        text  => 'Rigaer Str.: Baustelle, Einbahnstraße, offen Richtung Osten',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: RIGAER-2018
-#: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html
-#: also_indoor: traffic (G,H)
-#: XXX bis wann gibt es die Einbahnstraßenregelung?
-# REMOVED --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt?
-#: last_checked: 2020-09-27
+# REMOVED (Einbahnstraßenausschilderung teilweise entfernt) --- #: next_check_id: RIGAER-2018 --- #: by: http://www.berliner-woche.de/friedrichshain/bauen/teilweise-durchgang-an-der-rigaer-strasse-d143288.html --- #: also_indoor: traffic (G,H) --- #: XXX bis wann gibt es die Einbahnstraßenregelung? --- #: add_fragezeichen: Wurde die Baustelle mittlerweile beseitigt? --- #: last_checked: 2020-09-27
 	q3::inwork; 14748,12314 14538,12371
 EOF
      },
@@ -27899,7 +27898,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-09-17
+#: last_checked: 2020-10-06
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29210,7 +29209,7 @@ EOF
 #: source_id: 2147343335 (Zeitraum siehe oben)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-09-12 (mapillary)
+#: last_checked: 2020-10-07 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2020-12-18
 #: XXX_prog: eigentlich q4+::inwork;
@@ -29735,13 +29734,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-09-30 17:00:00"), # 1596211200, # 2020-07-31 18:00
-       text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, bis 12.10.2020',
+       until => $isodate2epoch->("2021-03-08 17:00:00"), # 1596211200, # 2020-07-31 18:00
+       text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, vermutlich bis März 2021',
        type  => 'gesperrt',
        source_id => '2147344558', # bis 2020-09-10
        data  => <<EOF,
-#: source_id: 2147346164 (bis 12.10.2020)
-#: source_id: 2147344558 (bis 30.09.2029)
+#: source_id: 2147346164 (bis März 2021, Gesamtbaumaßnahme bis 2024)
+#: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 EOF
@@ -29931,7 +29930,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2020-09-12
+#: last_checked: 2020-10-10
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-03-31
 	2::inwork 5894,12480 5944,12548
@@ -30474,7 +30473,7 @@ EOF
        data  => <<EOF,
 #: by: wosch
 #: XXX evtl. nur saisonal, vielleicht wandern die Weideflächen an andere Stellen (dann auch ggfs. die Tore aus gesperrt-orig austragen)
-#: last_checked: 2020-04-04
+#: last_checked: 2020-04-23 (mapillary)
 #: check_frequency: 180d
 	2 14494,24824 14848,24411
 EOF
@@ -30519,7 +30518,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ROTHER-2020
-#: last_checked: 2020-09-30
+#: last_checked: 2020-10-11
 	q4::inwork 13478,10998 13575,10963
 EOF
      },
@@ -30657,7 +30656,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: VIRCHOW-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2020-09-19 vvv
+#: last_checked: 2020-10-10 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -30710,15 +30709,16 @@ EOF
      },
      { from  => 1588490580, # 2020-05-03 09:23
        until => $isodate2epoch->("2020-10-12 17:00:00"), # 1598886000, # 2020-08-31 17:00
-       text  => 'Kameruner Str.: zwischen Müllerstr. und Togoer Str.: Bauarbeiten, Fahrbahn gesperrt, vom 04.05.2020 09:23 Uhr bis 12.10.2020 17:00 Uhr',
+       text  => 'Kameruner Str.: zwischen Lüderitzstr. und Togostr.: Bauarbeiten, Fahrbahn kann möglicherweise gesperrt sein, vom 04.05.2020 09:23 Uhr bis 12.10.2020 17:00 Uhr',
        type  => 'handicap',
        source_id => '2147345842',
        data  => <<EOF,
 #: next_check_id: KAMERUNER-2020
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-09-05
+#: last_checked: 2020-10-10
 #: check_frequency: 30d
-	q4::inwork 6383,15972 6484,16085 6587,16199
+	q4::inwork 6383,15972 6484,16085
+# REMOVED (hier fertig) ---	q4::inwork 6484,16085 6587,16199
 EOF
      },
      { from  => 1589774400, # 2020-05-18 06:00
@@ -31099,7 +31099,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann ist die Fahrbahn wieder offen?
 #: also_indoor: traffic
-#: last_checked: 2020-08-23
+#: last_checked: 2020-10-12
 	q4::inwork -3252,12580 -3444,12580
 EOF
      },
@@ -31147,10 +31147,10 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 EOF
      },
      { from  => 1598206114, # 2020-08-23 20:08
-       until => $isodate2epoch->("2020-11-16 20:00:00"), # 1604163600, # 2020-10-31 18:00
-       text  => 'Attilastr.: Fahrbahn und Gehwege zwischen Ringstr. und Steglitzer Damm gesperrt, Umweg durch S-Bahnhof, voraussichtlich bis Mitte November 2020',
+       until => $isodate2epoch->("2020-11-30 17:00:00"), # 1604163600, # 2020-10-31 18:00
+       text  => 'Attilastr.: Fahrbahn und Gehwege zwischen Ringstr. und Steglitzer Damm gesperrt, Umweg durch S-Bahnhof, voraussichtlich bis Ende November 2020',
        type  => 'handicap',
-       source_id => '2147346269', # noch kein Endedatum
+       source_id => '2147346269', # bis 30.11.2020
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1297930749249814532
 #: by: https://www.berliner-woche.de/tempelhof/c-verkehr/sanierungsbeginn-nach-wasserrohrbruch-am-24-august-noch-ungewiss_a285061
@@ -31218,7 +31218,7 @@ EOF
 #: by: https://pbs.twimg.com/media/EhY9dDlWkA4cFqP?format=png
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/kreuzung-friedelstrassemaybachufer-wird-entschaerft_a286609
 #: priority: #A vvv
-#: last_checked: 2020-09-12 vvv
+#: last_checked: 2020-10-12 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-12-01 vvv
 	q3::inwork 11897,9754 12085,9778
@@ -31249,7 +31249,7 @@ EOF
 #: next_check_id: SIGISMUND-2020
 #: XXX wann sind die Bauarbeiten fertig? vvv
 #: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
-#: last_checked: 2020-09-12 vvv
+#: last_checked: 2020-10-10 vvv
 	q3::inwork 8031,11249 7934,11275 7897,11287
 	q4::inwork 7934,11275 7965,11380
 #: last_checked ^^^
@@ -31267,14 +31267,14 @@ EOF
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2020-09-25
+#: last_checked: 2020-10-09
 #: check_frequency: 14d
 	q4::inwork 13288,7653 13378,7695 13416,7712
 EOF
      },
      { from  => 1601056113, # 2020-09-25 19:48
        until => 1605308399, # 2020-11-13 23:59
-       text  => 'Schloßallee (Park Schönhausen): Bauarbeiten, komplett gesperrt, voraussichtlich bis zum 13. November 2020',
+       text  => 'Schloßallee (Park Schönhausen): Bauarbeiten, komplett gesperrt, Beginn unbekannt, voraussichtlich bis zum 13. November 2020',
        type  => 'gesperrt',
        source_id => 'https://www.berliner-woche.de/niederschoenhausen/c-bauen/schlossallee-gesperrt_a287821',
        data  => <<EOF,
@@ -31336,7 +31336,9 @@ EOF
        type  => 'handicap',
        source_id => 'https://www.berliner-woche.de/charlottenburg/c-verkehr/fussgaengerzone-wilmersdorfer-strasse-wird-fuer-zwei-tage-verlaengert_a289375',
        data  => <<EOF,
-	q4::temp 3689,11637 3717,11462
+#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1000811.php
+#: source_id: 2147346464
+1	q4::temp 3689,11637 3717,11462
 EOF
      },
      { from  => 1601923909, # 2020-10-05 20:51
@@ -31345,7 +31347,35 @@ EOF
        type  => 'handicap',
        source_id => '2147346452',
        data  => <<EOF,
+#: by: https://pbs.twimg.com/media/EjnrSB_XgAEKrYS?format=jpg&name=medium
 	q4::inwork; 10177,13766 10319,13788 10459,13760
+EOF
+     },
+     { from  => 1602655200, # 2020-10-14 08:00
+       until => 1605196800, # 2020-11-12 17:00
+       text  => 'Rudower Chaussee: zwischen Franz-Ehrlich-Str. und Adlergestell Richtung Dörpfeldstr. Bauarbeiten, nur für Fußgänger frei, vom 15.10.2020 08:00 Uhr bis 12.11.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346457',
+       data  => <<EOF,
+	q3::inwork; 19728,3351 19840,3423 19904,3464
+EOF
+     },
+     { from  => $isodate2epoch->("2020-10-07 00:00:00"),
+       until => $isodate2epoch->("2020-10-09 23:59:59"),
+       text  => 'Rigaer Str./Liebigstr.: mögliche Sperrungen wegen eines Polizeieinsatzes, 8.10.2020 bis 9.10.2020',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::temp 14266,12446 14133,12482 14091,12494 13991,12522 13905,12374
+	2::temp 13761,12578 13991,12522 14058,12709
+EOF
+     },
+     { from  => 1602972000, # 2020-10-18 00:00
+       until => 1603476000, # 2020-10-23 20:00
+       text  => 'Südostallee: Sperrung der Fahrbahn Richtung Niederschöneweide, voraussichtlich vom 19.10.2020 bis 23.10.2020',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.1003726.php',
+       data  => <<EOF,
+	q4::inwork; 16122,6084 16169,6064 16510,5917 16868,5938
 EOF
      },
     );
