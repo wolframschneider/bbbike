@@ -1345,7 +1345,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'from' => undef,
          'id' => 2454,
          'recurring' => 1,
-         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
+         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Winter: 18.00 bis 6.00 Uhr',
          'until' => undef
        },
        {
@@ -1483,20 +1483,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: MITTEL-2019
-#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
-#: also_indoor: traffic (G,H)
-#: last_checked: 2020-09-19
-	2::inwork 9131,12438 9179,12444
-',
-         'from' => undef,
-         'id' => 2522,
-         'source_id' => 'IM_020714',
-         'text' => 'Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        {
@@ -1993,18 +1980,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.tagesspiegel.de/berlin/bezirke/spandau/berlin-spandau-ein-wochenmarkt-schliesst-ein-anderer-oeffnet/19717792.html#
-	q4::temp:clock 1184,14515 1262,14510
-',
-         'from' => undef,
-         'id' => 2886,
-         'recurring' => 1,
-         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.612866.php',
-         'text' => 'Jugendweg: Wochenmarkt Dienstag 12-18 Uhr',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2053,22 +2029,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: DOROTHEEN-2018
-#: XXX Ende der Bauarbeiten?
-#: also_indoor: traffic
-#: last_checked: 2020-09-23 vvv
-	q2::inwork; 8775,12457 8904,12489
-	q4::inwork; 8904,12489 8999,12498 9011,12423
-	q3::inwork 9011,12423 9131,12438
-#: last_checked ^^^
-',
-         'from' => undef,
-         'id' => 2922,
-         'text' => 'Dorotheenstr./Schadowstr./Mittelstr.: Bauarbeiten, Einbahnstraßenregelung bzw. Fahrbahn teilweise gesperrt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2209,7 +2170,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-10-06
+#: last_checked: 2020-10-16
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2232,7 +2193,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX bis wann gilt das Verbot?
 #: last_checked: 2020-09-16
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
-	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
+	q4::inwork; 18770,8898 18737,8686
+# REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
 ',
          'from' => undef,
          'id' => 3007,
@@ -2310,7 +2272,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-09-29
+#: last_checked: 2020-10-16 (mapillary)
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -2495,8 +2457,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Bis wann gehen die Bauarbeiten?
 #: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?) (eigentlich bis 17.10.2020, vorfristig beendet)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-10-03
-#: check_frequency: 14d
+#: last_checked: 2020-10-15
+#: check_frequency: 4d
 # REMOVED --- #: next_check: 2020-10-17
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -2528,7 +2490,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-09-04
+#: last_checked: 2020-10-15
 #: next_check: 2020-12-31
 # REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
 #: note: hier eng und viel Fußgängerverkehr
@@ -2862,12 +2824,12 @@ S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
 S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
 ',
-         'from' => 1602907200,
+         'from' => 1603512000,
          'id' => 3228,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
          'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
          'type' => 'handicap',
-         'until' => 1603040400
+         'until' => 1603645200
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2020
@@ -3014,16 +2976,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'type' => 'handicap',
          'until' => 1625065200
        },
-       {
-         'data' => '	q4::inwork; 25720,4828 25796,4823 25948,4823 26085,4865
-',
-         'from' => undef,
-         'id' => 3262,
-         'source_id' => '2147346178',
-         'text' => 'Müggelseedamm Richtung Rahnsdorf zwischen Scharnweberstraße und Bruno-Wille-Straße: Bauarbeiten, Fahrbahn gesperrt, bis 16.10.2020 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1602860400
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: BRAUER-2020
@@ -3179,11 +3132,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: RICHARDPLATZ-2020
-#: osm_watch: way id="840456624" version="3"
+#: osm_watch: way id="840456624" version="4"
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2020-10-09
+#: last_checked: 2020-10-17
 #: check_frequency: 14d
 	q4::inwork 13288,7653 13378,7695 13416,7712
 ',
@@ -3194,8 +3147,10 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        {
-         'data' => '	2::inwork 10857,19379 11081,19456 11068,19494
+         'data' => '#: last_checked: 2020-10-12 (mapillary) vvv
+	2::inwork 10857,19379 11081,19456 11068,19494
 	2::inwork 11081,19456 11236,19509
+#: last_checked ^^^
 ',
          'from' => 1601056113,
          'id' => 3279,
@@ -3236,7 +3191,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: by: https://pbs.twimg.com/media/EjnrSB_XgAEKrYS?format=jpg&name=medium
-	q4::inwork; 10177,13766 10319,13788 10459,13760
+	q4::inwork; 10177,13766 10319,13788
+# REMOVED (hier nicht mehr) ---	q4::inwork; 10319,13788 10459,13760
 ',
          'from' => 1601923909,
          'id' => 3284,
@@ -3245,26 +3201,99 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1619794800
        },
-       {
-         'data' => '	q3::inwork; 19728,3351 19840,3423 19904,3464
-',
-         'from' => 1602655200,
-         'id' => 3285,
-         'source_id' => '2147346457',
-         'text' => 'Rudower Chaussee: zwischen Franz-Ehrlich-Str. und Adlergestell Richtung Dörpfeldstr. Bauarbeiten, nur für Fußgänger frei, vom 15.10.2020 08:00 Uhr bis 12.11.2020 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1605196800
-       },
+       undef,
        undef,
        {
-         'data' => '	q4::inwork; 16122,6084 16169,6064 16510,5917 16868,5938
+         'data' => '#: source_id: 2147346494
+	q4::inwork; 16122,6084 16169,6064 16510,5917 16868,5938
 ',
          'from' => 1602972000,
          'id' => 3287,
          'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.1003726.php',
          'text' => 'Südostallee: Sperrung der Fahrbahn Richtung Niederschöneweide, voraussichtlich vom 19.10.2020 bis 23.10.2020',
          'type' => 'handicap',
-         'until' => 1603476000
+         'until' => 1603458000
+       },
+       {
+         'data' => '#: source_id: 2147343744
+#: last_checked: 2020-10-15 vvv
+#: check_frequency: 14d vvv
+#: next_check: 2020-12-31 vvv
+	1::inwork 18672,8238 18657,8163
+frei bis Hausnr. 128, danach Umweg über schmalen Gehweg	q3::inwork; 18704,8427 18672,8238
+Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+',
+         'from' => undef,
+         'id' => 3288,
+         'text' => 'Treskowallee: ab Ehrlichstr. Richtung Süden gesperrt, Umleitung ab Wandlitzstr.',
+         'type' => 'gesperrt',
+         'until' => 1609430400
+       },
+       undef,
+       undef,
+       {
+         'data' => '# XXX im Anschluss daran wird zwischen Elvirasteig und Lindenthaler Allee saniert, vom 04.11.2020 bis 17.11.2020
+#: priority: #A
+#: next_check: 2020-11-03
+	q4::inwork -2096,3402 -1981,3353 -1888,3315 -1782,3311 -1706,3311 -1628,3311 -1536,3314
+',
+         'dont_check_date' => 1,
+         'from' => 1602540000,
+         'id' => 3291,
+         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1004859.php',
+         'text' => 'Matterhornstr.: Bauarbeiten zwischen Eiderstedter Weg und Elvirasteig, Fahrbahn gesperrt, vom 14.10.2020 bis 03.11.2020',
+         'type' => 'handicap',
+         'until' => 1605654000
+       },
+       {
+         'data' => '#: by: https://www.lichtenrade-berlin.de/news/aktuelle-news-internetzeitung/30-blog/blog2019/1485-baubeginn-des-spielplatzes-auf-dem-rehagener-platz
+#: by: https://www.berliner-woche.de/lichtenrade/c-kultur/spielen-auf-dem-rehagener-platz_a278641
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.949210.php (Fertigstellung IV. Quartal 2020)
+#: add_fragezeichen: Bis wann gehen die Bauarbeiten? Wird das Kopfsteinpflaster nach den Bauarbeiten etwas besser sein?
+#: last_checked: 2020-10-17
+#: next_check: 2020-12-15
+	q4::inwork 10642,-2371 10638,-2452 10563,-2432
+',
+         'from' => undef,
+         'id' => 3292,
+         'text' => 'Rehagener Platz: Bauarbeiten, Fahrbahn gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: tempex: (we,sa) T08-T13
+	q4::temp:clock 16801,1791 16988,1571
+',
+         'from' => undef,
+         'id' => 3293,
+         'recurring' => 1,
+         'text' => 'Prierosser Str.: Mo und Sa 08.00-13.00 wegen Wochenmarkt Rudow gesperrt, Radfahrer müssen schieben',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: XXX wird die Qualität nach den Bauarbeiten besser sein?
+#: next_check: 2021-01-29
+	q4::inwork 9511,6797 9512,6652
+',
+         'from' => 1603135110,
+         'id' => 3294,
+         'text' => 'Fuhrmannstr.: Bauarbeiten, Fahrbahn gesperrt, bis 29.01.2021',
+         'type' => 'handicap',
+         'until' => 1611939600
+       },
+       {
+         'data' => '	q4::inwork 8053,15598 7962,15633
+',
+         'from' => 1603170000,
+         'id' => 3295,
+         'source_id' => '2147346516',
+         'text' => 'Weddingstr.: Zufahrt von der Reinickendorfer Str. gesperrt, 21.10.2020 7:00 Uhr bis 23.12.2020 17:00 Uhr',
+         'type' => 'handicap',
+         'until' => 1608739200
        }
      
 );

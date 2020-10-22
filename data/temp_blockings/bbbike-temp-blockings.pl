@@ -3363,6 +3363,7 @@ EOF
        until => $isodate2epoch->("2020-01-05 23:59:59"), # 1357513199, # 2013-01-06 23:59 # 1325458800, # 2012-01-02 00:00 # PERIODISCH!
        periodic => 1,
        recurrences => [['yearly', days => 18, months => 11]],
+       recurrence_prewarn_days => 21, # finden 2020 überhaupt Weihnachtsmärkte statt?
        text  => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 25. November 2019 bis 05. Januar 2020',
        type  => 'gesperrt',
        source_id => 'https://www.schaustellerverband-berlin.de/weihnachtsmarkt-berlin.html',
@@ -22651,15 +22652,12 @@ EOF
 EOF
      },
      { from  => undef, # 1384642800, # 2013-11-17 00:00
-       until => undef, # 1402509700, # 1404136800, # 2014-06-30 16:00
+       until => 1603219679, # -> gesperrt-orig --- undef, # 1402509700, # 1404136800, # 2014-06-30 16:00
        text  => 'Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt',
        type  => 'gesperrt',
        source_id => 'IM_020714',
        data  => <<EOF,
-#: next_check_id: MITTEL-2019
-#: add_fragezeichen: Wann wird die Sperrung aufgehoben?
-#: also_indoor: traffic (G,H)
-#: last_checked: 2020-09-19
+# REMOVED --- #: next_check_id: MITTEL-2019 --- #: add_fragezeichen: Wann wird die Sperrung aufgehoben? --- #: also_indoor: traffic (G,H) --- #: last_checked: 2020-09-19
 	2::inwork 9131,12438 9179,12444
 EOF
      },
@@ -26509,13 +26507,15 @@ EOF
 EOF
      },
      { from  => undef,
-       until => undef,
+       until => $isodate2epoch->("2019-07-01 00:00:00"), # genaues Ende unbekannt, laut mapillary-Bildern zwischen Juni und August 2019
        text  => 'Jugendweg: Wochenmarkt Dienstag 12-18 Uhr',
        type  => 'gesperrt',
-       recurring => 1,
+       #recurring => 1,
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.612866.php',
        data  => <<EOF,
 #: by: http://www.tagesspiegel.de/berlin/bezirke/spandau/berlin-spandau-ein-wochenmarkt-schliesst-ein-anderer-oeffnet/19717792.html#
+#: by: Michael B. (Schließung 2019)
+#: by: https://leute.tagesspiegel.de/spandau/macher/2019/12/10/105386/linke-ueber-wochenmaerkte-wuensche-mir-mehr-engagement-des-bezirks/
 	q4::temp:clock 1184,14515 1262,14510
 EOF
      },
@@ -26923,18 +26923,15 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1603219850, # -> handicap_s-orig --- undef, # XXX
        text  => 'Dorotheenstr./Schadowstr./Mittelstr.: Bauarbeiten, Einbahnstraßenregelung bzw. Fahrbahn teilweise gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: DOROTHEEN-2018
-#: XXX Ende der Bauarbeiten?
-#: also_indoor: traffic
-#: last_checked: 2020-09-23 vvv
+# REMOVED --- #: next_check_id: DOROTHEEN-2018 --- #: XXX Ende der Bauarbeiten? --- #: also_indoor: traffic --- #: last_checked: 2020-09-23 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
 	q3::inwork 9011,12423 9131,12438
-#: last_checked ^^^
+# REMOVED --- #: last_checked ^^^
 EOF
      },
      { from  => 1513622933, # 2017-12-18 19:48
@@ -27898,7 +27895,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-10-06
+#: last_checked: 2020-10-16
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27977,7 +27974,8 @@ EOF
 #: XXX bis wann gilt das Verbot?
 #: last_checked: 2020-09-16
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
-	q4::inwork; 18770,8898 18737,8686 18733,8650 18733,8633
+	q4::inwork; 18770,8898 18737,8686
+# REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
 EOF
      },
      { from  => 1537740000, # 2018-09-24 00:00
@@ -28531,7 +28529,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-09-29
+#: last_checked: 2020-10-16 (mapillary)
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -29304,8 +29302,8 @@ EOF
 #: XXX Bis wann gehen die Bauarbeiten?
 #: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?) (eigentlich bis 17.10.2020, vorfristig beendet)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-10-03
-#: check_frequency: 14d
+#: last_checked: 2020-10-15
+#: check_frequency: 4d
 # REMOVED --- #: next_check: 2020-10-17
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -29561,7 +29559,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-09-04
+#: last_checked: 2020-10-15
 #: next_check: 2020-12-31
 # REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
 #: note: hier eng und viel Fußgängerverkehr
@@ -31263,11 +31261,11 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: RICHARDPLATZ-2020
-#: osm_watch: way id="840456624" version="3"
+#: osm_watch: way id="840456624" version="4"
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2020-10-09
+#: last_checked: 2020-10-17
 #: check_frequency: 14d
 	q4::inwork 13288,7653 13378,7695 13416,7712
 EOF
@@ -31278,8 +31276,10 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.berliner-woche.de/niederschoenhausen/c-bauen/schlossallee-gesperrt_a287821',
        data  => <<EOF,
+#: last_checked: 2020-10-12 (mapillary) vvv
 	2::inwork 10857,19379 11081,19456 11068,19494
 	2::inwork 11081,19456 11236,19509
+#: last_checked ^^^
 EOF
      },
      { from  => 1601060730, # 2020-09-25 21:05
@@ -31348,16 +31348,19 @@ EOF
        source_id => '2147346452',
        data  => <<EOF,
 #: by: https://pbs.twimg.com/media/EjnrSB_XgAEKrYS?format=jpg&name=medium
-	q4::inwork; 10177,13766 10319,13788 10459,13760
+	q4::inwork; 10177,13766 10319,13788
+# REMOVED (hier nicht mehr) ---	q4::inwork; 10319,13788 10459,13760
 EOF
      },
      { from  => 1602655200, # 2020-10-14 08:00
-       until => 1605196800, # 2020-11-12 17:00
-       text  => 'Rudower Chaussee: zwischen Franz-Ehrlich-Str. und Adlergestell Richtung Dörpfeldstr. Bauarbeiten, nur für Fußgänger frei, vom 15.10.2020 08:00 Uhr bis 12.11.2020 17:00 Uhr ',
-       type  => 'handicap',
+       until => 1602785821, # 1605196800, # 2020-11-12 17:00
+       text  => 'Rudower Chaussee: zwischen Franz-Ehrlich-Str. und Adlergestell Richtung Dörpfeldstr. Bauarbeiten, Umleitung für Fuß- und Radvekehr, vom 15.10.2020 08:00 Uhr bis 12.11.2020 17:00 Uhr ',
+       type  => 'gesperrt',
        source_id => '2147346457',
        data  => <<EOF,
-	q3::inwork; 19728,3351 19840,3423 19904,3464
+#: by: https://twitter.com/VIZ_Berlin/status/1316618107931197441 (Anpassung der Führung für Radfahrer; keine Umleitung mehr)
+#: by: https://pbs.twimg.com/media/EkWRKOJX0AAke90?format=jpg&name=large
+	1::inwork; 19728,3351 19840,3423 19904,3464
 EOF
      },
      { from  => $isodate2epoch->("2020-10-07 00:00:00"),
@@ -31370,12 +31373,105 @@ EOF
 EOF
      },
      { from  => 1602972000, # 2020-10-18 00:00
-       until => 1603476000, # 2020-10-23 20:00
+       until => $isodate2epoch->("2020-10-23 15:00:00"),
        text  => 'Südostallee: Sperrung der Fahrbahn Richtung Niederschöneweide, voraussichtlich vom 19.10.2020 bis 23.10.2020',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.1003726.php',
        data  => <<EOF,
+#: source_id: 2147346494
 	q4::inwork; 16122,6084 16169,6064 16510,5917 16868,5938
+EOF
+     },
+     { from  => undef, # 
+       until => $isodate2epoch->("2020-12-31 17:00:00"), # XXX
+       text  => 'Treskowallee: ab Ehrlichstr. Richtung Süden gesperrt, Umleitung ab Wandlitzstr.',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: source_id: 2147343744
+#: last_checked: 2020-10-15 vvv
+#: check_frequency: 14d vvv
+#: next_check: 2020-12-31 vvv
+	1::inwork 18672,8238 18657,8163
+frei bis Hausnr. 128, danach Umweg über schmalen Gehweg	q3::inwork; 18704,8427 18672,8238
+Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+EOF
+     },
+     { from  => 1602367200, # 2020-10-11 00:00
+       until => 1602871200, # 2020-10-16 20:00
+       text  => 'Blockdammwegbrücke: gesperrt, auch für Fußgänger, vom 12.10.2020 bis 16.10.2020',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::inwork 17990,8963 18070,9022
+EOF
+     },
+     { from  => 1602824400, # 2020-10-16 07:00
+       until => 1603166400, # 2020-10-20 06:00
+       text  => 'Ellen-Epstein-Str.: zwischen Perleberger Str. und Putlitzbrücke wegen Bauarbeiten gesperrt, vom 17.10.2020 07:00 Uhr bis 20.10.2020 06:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => '2147346493',
+       data  => <<EOF,
+#: by: https://twitter.com/VIZ_Berlin/status/1317318177509048320
+#: by: https://pbs.twimg.com/media/EkgN5nbXYAUuQqy?format=jpg&name=medium
+	2::inwork 6747,14436 6803,14459
+EOF
+     },
+     { from  => 1602540000, # 2020-10-13 00:00
+       until => $isodate2epoch->("2020-11-18 00:00:00"),
+       dont_check_date => 1,
+       text  => 'Matterhornstr.: Bauarbeiten zwischen Eiderstedter Weg und Elvirasteig, Fahrbahn gesperrt, vom 14.10.2020 bis 03.11.2020',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1004859.php',
+       data  => <<EOF,
+# XXX im Anschluss daran wird zwischen Elvirasteig und Lindenthaler Allee saniert, vom 04.11.2020 bis 17.11.2020
+#: priority: #A
+#: next_check: 2020-11-03
+	q4::inwork -2096,3402 -1981,3353 -1888,3315 -1782,3311 -1706,3311 -1628,3311 -1536,3314
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Rehagener Platz: Bauarbeiten, Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.lichtenrade-berlin.de/news/aktuelle-news-internetzeitung/30-blog/blog2019/1485-baubeginn-des-spielplatzes-auf-dem-rehagener-platz
+#: by: https://www.berliner-woche.de/lichtenrade/c-kultur/spielen-auf-dem-rehagener-platz_a278641
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.949210.php (Fertigstellung IV. Quartal 2020)
+#: add_fragezeichen: Bis wann gehen die Bauarbeiten? Wird das Kopfsteinpflaster nach den Bauarbeiten etwas besser sein?
+#: last_checked: 2020-10-17
+#: next_check: 2020-12-15
+	q4::inwork 10642,-2371 10638,-2452 10563,-2432
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Prierosser Str.: Mo und Sa 08.00-13.00 wegen Wochenmarkt Rudow gesperrt, Radfahrer müssen schieben',
+       type  => 'handicap',
+       recurring => 1,
+       data  => <<EOF,
+#: tempex: (we,sa) T08-T13
+	q4::temp:clock 16801,1791 16988,1571
+EOF
+     },
+     { from  => 1603135110, # 2020-10-19 21:18
+       until => 1611939600, # 2021-01-29 18:00
+       text  => 'Fuhrmannstr.: Bauarbeiten, Fahrbahn gesperrt, bis 29.01.2021',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX wird die Qualität nach den Bauarbeiten besser sein?
+#: next_check: 2021-01-29
+	q4::inwork 9511,6797 9512,6652
+EOF
+     },
+     { from  => 1603170000, # 2020-10-20 07:00
+       until => 1608739200, # 2020-12-23 17:00
+       text  => 'Weddingstr.: Zufahrt von der Reinickendorfer Str. gesperrt, 21.10.2020 7:00 Uhr bis 23.12.2020 17:00 Uhr',
+       type  => 'handicap',
+       source_id => '2147346516',
+       data  => <<EOF,
+	q4::inwork 8053,15598 7962,15633
 EOF
      },
     );
