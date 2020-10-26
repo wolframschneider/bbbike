@@ -218,7 +218,7 @@ das Portal des Anhalter Bahnhofs links liegen lassen	CP2; 8938,10872 8912,10846
 (Geßlerstr. - Monumentenstr.): Zufahrt über den Parkplatz an der Sportanlage	CP2; 7973,8886 7970,9061
 #: note: 13a-c auf der einen Straßenseite, 13d auf der anderen
 (Geßlerstr. - Monumentenstr.): ausgeschildert als Monumentenstr. 13 a-c bzw. 13 d	CP2; 8014,9126 8009,9063
-(Wintgensstr. - General-Pape-Str.): Zufahrt durch Tor im Wohnhaus, seitlich am Torgitter vorbei	CP2; 8260,7911 8207,7909
+(Wintgensstr. - General-Pape-Str.): Zufahrt durch Tor im Wohnhaus, seitlich am Torgitter vorbei	CP2; 8260,7911 8203,7909
 rechts an der Tiefgarageneinfart vorbei, Vorsicht Kette!	CP; 13385,13992 13485,14054 13585,14117
 Vorsicht Kette! (auf Höhe der Tiefgarageneinfahrt)	CP; 13585,14117 13485,14054 13385,13992
 bereits an der Kirche auf den Gehweg wechseln	CP; 12632,12630 12483,12682 12594,12866
@@ -480,7 +480,7 @@ Walsheimer Str. - Alt-Biesdorf: zunächst linken Gehweg bis zum Biesdorfer Friedh
 # REMOVED (nicht mehr notwendig, Brücke existiert) --- Yorckstr. - Park am Gleisdreieck: schon an der Ampel Bautzener Str. auf den linken Gehweg wechseln (wegen Geländer keine Überquerung der Yorckstr. mehr möglich)	PI; 8192,9619 8358,9568 8357,9598
 #: note: Lastwagen parken an der Einmündung Grenzallee/Straße 12, unübersichtlich!
 Grenzallee - Straße 12: ggfs. schon an der Ampel Autobahnausfahrt/Bergiusstr. auf den linken Gehweg wechseln	PI; 14051,6731 13930,6686 13883,6682 13881,6634
-Buschkrugallee - Bürgerstr.: bereits an der Fußgängerampel die Straßenseite wechseln	PI; 13323,6322 13307,6359 13239,6344
+# REMOVED (-> routing_helper-orig) --- Buschkrugallee - Bürgerstr.: bereits an der Fußgängerampel die Straßenseite wechseln	PI; 13316,6320 13307,6359 13289,6355 13283,6354 13239,6344
 Prenzlauer Allee - Wohngebiet: bereits an der Krügerstr. oder Wisbyer Str. auf den linken Gehweg wechseln	PI; 12075,16144 12061,16091 12030,15968 12154,15902
 Mariendorfer Damm - Göllweg: Mittelstreifen kann nicht überquert werden, bis zum Ankogelweg vorfahren und dort den Mariendorfer Damm überqueren	CP; 10276,1383 10239,1481 10119,1435
 Göllweg - Mariendorfer Damm: zunächst den linken Gehweg benutzen und am Ankogelweg die Straßenseite wechseln	CP; 10119,1435 10239,1481 10226,1515
@@ -527,7 +527,7 @@ Salvador-Allende-Str. - Abzweig: bereits an der Ampel Fürstenwalder Damm auf den
 Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichshagener Str. fahren	CP; 23428,5382 23403,5385 23404,5325
 #: XXX wird eventuell im Zuge der Maßnahme Nsw.3 verbessert
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5826 (Verkehrsführung verbessern) (wurde allerdings abgelehnt; die allgemeine Verbesserung der Situation wird aber irgendwann passieren ("Umgestaltung des Bahnhofsvorplatzes")
-#: last_checked: 2020-10-04
+#: last_checked: 2020-10-24
 #: check_frequency: 180d
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115
@@ -625,7 +625,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2020-10-15 vvv
+#: last_checked: 2020-10-24 vvv
 ausgeschildert "zur Salzmannstraße Huronseestraße"	CP2; 16900,9861 16895,9922
 ausgeschildert "zur Sewanstraße"	CP2; 16900,9861 17005,9953
 #: last_checked ^^^

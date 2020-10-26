@@ -302,6 +302,7 @@ EOF
        until => $isodate2epoch->("2019-12-22 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 22, months => 11]],
+       recurrence_prewarn_days => 21, # später nochmal prüfen
        text  => 'Spandauer Weihnachtsmarkt, vom 25.11.2019 bis 22.12.2019',
        type  => 'gesperrt',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971839-955635-spandauer-weihnachtsmarkt-in-der-altstad.html',
@@ -17144,7 +17145,7 @@ EOF
        until => $isodate2epoch->("2020-01-01 23:59:59"), # 1 Tag (mindestens) für den Abbau
        periodic => 1,
        prewarn_days => 10,
-       recurrences => [['yearly', days => 20, months => 11]],
+       recurrences => [['yearly', days => 20, months => 11, start => "2021-01-01T00:00:00"]], # Weihnachtsmarkt 2020 auf dem Gendarmenmarkt fällt aus - wegen Corona
        source_id => 'https://www.weihnachtsmarkt-berlin.de/',
        text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 25.11.2019 bis 31.12.2019, davor mehrere Tage Aufbauarbeiten, Durchfahrt nicht möglich (Eintritt!)',
        type  => 'gesperrt',
@@ -18374,6 +18375,7 @@ EOF
        data  => <<EOF,
 #: note: allerdings keine Hinweise auf eine verbotene Durchfahrt gesehen
 #: note: nördliches Tor verschlossen, gesehen am 2019-09-07 (Sa)
+#: note: südliches Tor verschlossen, gesehen am 2020-10-24 (Sa)
 #: tempex: volatile vvv
 (Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936
 (Gewerbegebiet)	2 21685,2964 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
@@ -19249,7 +19251,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016132',
        data  => <<EOF,
-	q4::inwork; 7949,7607 7943,7708 7951,7801 7955,7840 8088,8254 8100,8288 8215,8631 8237,8685 8306,8722
+	q4::inwork; 7949,7607 7943,7708 7951,7801 7952,7808 7955,7840 8088,8254 8100,8288 8215,8631 8237,8685 8306,8722
 EOF
      },
      { from  => 1302411000, # 2011-04-10 06:50
@@ -23844,7 +23846,7 @@ EOF
        source_id => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
        data  => <<EOF,
 #: source_id: IM_022377
-	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20435,5460 20473,5436 20740,5273 20782,5257
+	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20435,5460 20473,5436 20740,5273 20793,5256
 EOF
      },
      { from  => 1412481600, # 2014-10-05 06:00
@@ -25100,6 +25102,7 @@ EOF
        until => $isodate2epoch->("2019-12-26 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 20, months => 11]],
+       recurrence_prewarn_days => 21, # später nochmal prüfen
        text  => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 25. November 2019 bis 26. Dezember 2019',
        type  => 'handicap',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html',
@@ -27972,7 +27975,7 @@ EOF
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-09-16
+#: last_checked: 2020-10-24 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686
 # REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
@@ -29294,16 +29297,11 @@ EOF
 EOF
      },
      { from  => 1560636000, # 2019-06-16 00:00
-       until => undef, # $isodate2epoch->("2020-07-31 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
+       until => 1603397150, # undef, # $isodate2epoch->("2020-07-31 00:00:00"), # 1573913953, # -> gesperrt-orig + Umfahrung --- undef, # XXX
        text  => 'DB-Werkstraße: Bauarbeiten, ein Abschnitt der Fahrbahn kann gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: DBWERKSTRASSE-2019
-#: XXX Bis wann gehen die Bauarbeiten?
-#: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?) (eigentlich bis 17.10.2020, vorfristig beendet)
-#: also_indoor: traffic (G,H)
-#: last_checked: 2020-10-15
-#: check_frequency: 4d
+# REMOVED (weitgehend offen) --- #: next_check_id: DBWERKSTRASSE-2019 --- #: XXX Bis wann gehen die Bauarbeiten? --- #: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?) (eigentlich bis 17.10.2020, vorfristig beendet) --- #: also_indoor: traffic (G,H) --- #: last_checked: 2020-10-15 --- #: check_frequency: 4d
 # REMOVED --- #: next_check: 2020-10-17
 # REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
 	2::inwork 14567,10814 14562,10782 14671,10751
@@ -29559,7 +29557,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-10-15
+#: last_checked: 2020-10-24
 #: next_check: 2020-12-31
 # REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
 #: note: hier eng und viel Fußgängerverkehr
@@ -29740,6 +29738,7 @@ EOF
 #: source_id: 2147346164 (bis März 2021, Gesamtbaumaßnahme bis 2024)
 #: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
+#: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 EOF
      },
@@ -30556,7 +30555,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-10-03
+#: last_checked: 2020-10-22
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30766,12 +30765,13 @@ EOF
      },
      { from  => $isodate2epoch->("2020-05-27 09:00:00"),
        until => $isodate2epoch->("2021-12-31 17:00:00"), # der ursprüngliche Termin (14.08.2020) kann wohl nicht gehalten; laut Schild bis Ende 2021
-       text  => 'Gärtnerstr.: Bauarbeiten, zwischen Wühlischstr. und Simplonstr. Einbahnstraße Richtung Süden, zwischen Wühlischstr. und Krossener Str. Fahrbahn gesperrt, evtl. bis Dezember 2021',
+       text  => 'Gärtnerstr.: Bauarbeiten, zwischen Wühlischstr. und Simplonstr. Einbahnstraße Richtung Süden, zwischen Wühlischstr. und Krossener Str. sowie an der Grünberger Str. Fahrbahn gesperrt, evtl. bis Dezember 2021',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147345874 (hier: bis 31.1.2021) (bei rbb nur bis 13.1.2021)
 	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
+	q3::inwork 14247,11681 14272,11775
 EOF
      },
      { do {
@@ -30992,7 +30992,7 @@ EOF
      },
      { from  => 1594635120, # 2020-07-13 12:12
        until => 1615996800, # 2021-03-17 17:00
-       text  => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Richtung Osten gesperrt, eventuell sind auch Radfahrer betroffen, vom 14.07.2020 12:12 Uhr bis 17.03.2021 17:00 Uhr ',
+       text  => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Richtung Osten gesperrt, vom 14.07.2020 12:12 Uhr bis 17.03.2021 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147346108',
        data  => <<EOF,
@@ -31038,8 +31038,11 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
 #: XXX nicht ganz klar, ob die Sperrung schon am 30.9.2020 aufgehoben wird, Gesamtmaßnahme geht länger; laut rbbtext bis 2021-06-30; nun bei viz bis mindestens 9.11.2020
-#: next_check: 2020-11-09
-	q4::inwork; 4515,4760 4214,4595 4039,4500
+#: next_check: 2020-11-09 vvv
+	q4::inwork; 4515,4760 4214,4595
+#: note: hier nur ein kurzes Stück
+	q2::inwork; 4214,4595 4039,4500
+#: next_check ^^^
 EOF
      },
      { from  => undef, # 
@@ -31102,7 +31105,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-10-23 17:00:00"), # 1598197723, # 2020-08-23 17:48
+       until => $isodate2epoch->("2020-10-25 17:00:00"), # 1598197723, # 2020-08-23 17:48
        text  => 'B2/B198: Richtung Süden Radfahren verboten',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -31113,7 +31116,7 @@ EOF
 #: source_id: LS/721-E/20/050
 #: XXX wie lange gilt das Verbot?
 #: last_checked: 2020-08-22
-#: next_check: 2020-10-23
+#: next_check: 2020-10-25
 	2 48469,65641 47875,64281 47564,63557
 EOF
      },
@@ -31216,7 +31219,7 @@ EOF
 #: by: https://pbs.twimg.com/media/EhY9dDlWkA4cFqP?format=png
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/kreuzung-friedelstrassemaybachufer-wird-entschaerft_a286609
 #: priority: #A vvv
-#: last_checked: 2020-10-12 vvv
+#: last_checked: 2020-10-22 (mapillary) vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-12-01 vvv
 	q3::inwork 11897,9754 12085,9778
@@ -31261,11 +31264,11 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: RICHARDPLATZ-2020
-#: osm_watch: way id="840456624" version="4"
+#: osm_watch: way id="840456624" version="5"
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2020-10-17
+#: last_checked: 2020-10-25
 #: check_frequency: 14d
 	q4::inwork 13288,7653 13378,7695 13416,7712
 EOF
@@ -31425,6 +31428,7 @@ EOF
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1004859.php',
        data  => <<EOF,
+#: by: https://www.berliner-woche.de/zehlendorf/c-bauen/fahrbahnsanierung-auf-der-matterhornstrasse_a290755
 # XXX im Anschluss daran wird zwischen Elvirasteig und Lindenthaler Allee saniert, vom 04.11.2020 bis 17.11.2020
 #: priority: #A
 #: next_check: 2020-11-03
@@ -31472,6 +31476,87 @@ EOF
        source_id => '2147346516',
        data  => <<EOF,
 	q4::inwork 8053,15598 7962,15633
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'General-Pape-Str. - Wintgensstr.: Bauarbeiten, Fahrbahn und Gehweg komplett gesperrt, Ende der Bauarbeiten unbekannt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: last_checked: 2020-10-22
+	2::inwork 8066,7843 7955,7840
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Mainzer Str.: Bauarbeiten zwischen Rollbergstr. und Werbellinstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: last_checked: 2020-10-22
+	q4::inwork 12162,8053 12147,8117
+EOF
+     },
+     { from  => 1603400725, # 2020-10-22 23:05
+       until => 1603490400, # 2020-10-24 00:00
+       text  => 'Promenade am Berlin-Spandauer Schiffahrtskanal: wegen eines Brückeneinhubes ist der Radweg gesperrt, am 22.10.2020 und 23.10.2020',
+       type  => 'gesperrt',
+       source_id => 'https://twitter.com/VIZ_Berlin/status/1319236144530337794',
+       data  => <<EOF,
+	2::inwork 8332,13548 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096 8001,14096 7966,14148 7972,14185
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Rungiusstr.: Bauarbeiten zwischen Bürgerstr. und Jahnstr., Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.verkehrslage.de/Berlin/Baustellen/3
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: last_checked: 2020-10-25
+	q4::inwork 12997,6290 13027,6168
+EOF
+     },
+     { from  => $isodate2epoch->("2020-10-24 00:00:00"),
+       until => undef,
+       text  => 'mögliche Maskenpflicht für Radfahrer',
+       type  => 'handicap',
+       accept_multi_feature_distance => 50_000, # accept all of Berlin
+       is_pseudo_handicap => 1,
+       data  => <<EOF,
+#: next_check_id: COVID19-MASK-2020 vvv
+#: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)
+#: by: https://www.rbb24.de/panorama/thema/2020/coronavirus/av7/video-bergmannstr-polizei-kontrolle-maskenpflicht-radfahrer.html
+#: next_check: 2020-11-30 vvv
+#: note: in der Verordnung fälschlicherweise im Ortsteil PB verortet
+Alte Schönhauser Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 10527,13257 10596,13398 10633,13474 10644,13497 10709,13629 10741,13685
+#: note Altstadt Spandau vvv
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340 -3227,14260
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3155,14340 -3204,14368 -3231,14383 -3275,14407
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3089,14440 -3150,14478
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3110,14408 -3060,14380
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3142,14358 -3092,14331
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3110,14408 -3174,14438 -3228,14468
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3293,14304 -3231,14383
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3552,14082 -3457,14189 -3409,14241 -3338,14333 -3275,14407 -3228,14468 -3205,14512 -3185,14556 -3150,14631
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3404,14147 -3457,14189
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3227,14260 -3293,14304 -3338,14333 -3397,14370
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3275,14407 -3350,14446
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3316,14169 -3409,14241
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3150,14631 -3122,14557 -3107,14535 -3054,14498
+#: note ^^^
+Bergmannstr. (Kreuzberg): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252 9793,9241 9880,9233 9973,9232 10001,9234 10123,9233 10547,9233
+Bölschestr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 25579,5958 25571,5829 25567,5749 25563,5666 25561,5622 25553,5486 25548,5398 25546,5359 25544,5326 25539,5237 25524,5011 25522,4935 25519,4830
+Friedrichstr. (Mitte): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9212,13471 9225,13389 9246,13235 9254,13171 9262,13111 9269,13060 9279,12953 9286,12886 9298,12765 9303,12718 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351 9369,12253 9373,12197 9384,12103 9393,12000 9405,11903 9418,11804 9432,11702 9444,11616 9456,11513 9468,11412 9474,11360 9478,11317
+Karl-Marx-Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 13236,6489 13200,6550 13141,6651 13121,6689 13117,6716 13085,6925 13072,7013 13068,7043 13058,7112 13051,7157 13043,7234 13034,7319 13030,7346 13029,7353 13018,7441 13015,7471 12987,7560 12969,7610 12914,7785 12898,7832 12892,7850 12865,7923 12846,7981 12830,8031 12794,8103 12753,8187 12714,8249 12689,8289 12639,8344 12598,8390 12582,8408 12562,8432 12540,8458 12500,8504 12330,8636 12156,8760 12063,8826 11998,8872 11880,8955 11831,8989
+Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2415,9765 2445,9838 2482,9870 2532,9911 2590,9949 2694,10002 2702,10006 2770,10024 2828,10040 2974,10081 3111,10116 3189,10141 3289,10174 3374,10201 3489,10240 3562,10264 3618,10283 3737,10322 3835,10352 3971,10381 4157,10418 4245,10435 4371,10465 4503,10497 4676,10541 4847,10589 5076,10658 5215,10711 5341,10756 5475,10808 5656,10876 5725,10892 5782,10884
+Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2445,9838 2369,9779
+Schloßstr. (Steglitz): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 5370,6486 5346,6443 5312,6382 5269,6305 5244,6261 5219,6215 5165,6119 5137,6066 5099,5994 5091,5979 5083,5964 5048,5904 5018,5854 4998,5817 4982,5789 4963,5754 4946,5725 4900,5648 4861,5581 4832,5522 4767,5389 4745,5344 4741,5309 4677,5274 4593,5235 4512,5199 4432,5160 4343,5112
+Tauentzienstr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 5782,10884 5907,10821 5942,10803 6025,10746 6133,10679 6171,10657
+Wilmersdorfer Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 3813,10435 3870,10510 3883,10585 3881,10699 3869,10760 3847,10865 3835,10915 3820,10987 3795,11098 3770,11231 3749,11344 3717,11462 3689,11637 3671,11799 3666,11855 3651,12001 3643,12092 3630,12201 3623,12284 3612,12377
+#: next_check ^^^
+#: next_check_id ^^^
 EOF
      },
     );

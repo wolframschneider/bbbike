@@ -107,7 +107,7 @@ Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5907,1
 das Portal des Anhalter Bahnhofs links liegen lassen	CP2; 8938,10872 8912,10846
 (Geßlerstr. - Monumentenstr.): Zufahrt über den Parkplatz an der Sportanlage	CP2; 7973,8886 7970,9061
 (Geßlerstr. - Monumentenstr.): ausgeschildert als Monumentenstr. 13 a-c bzw. 13 d	CP2; 8014,9126 8009,9063
-(Wintgensstr. - General-Pape-Str.): Zufahrt durch Tor im Wohnhaus, seitlich am Torgitter vorbei	CP2; 8260,7911 8207,7909
+(Wintgensstr. - General-Pape-Str.): Zufahrt durch Tor im Wohnhaus, seitlich am Torgitter vorbei	CP2; 8260,7911 8203,7909
 rechts an der Tiefgarageneinfart vorbei, Vorsicht Kette!	CP; 13385,13992 13485,14054 13585,14117
 Vorsicht Kette! (auf Höhe der Tiefgarageneinfahrt)	CP; 13585,14117 13485,14054 13385,13992
 bereits an der Kirche auf den Gehweg wechseln	CP; 12632,12630 12483,12682 12594,12866
@@ -308,7 +308,6 @@ Weg am Marzahn-Hohenschönhauser Grenzgraben: zum Überqueren der Boxberger Str. r
 Weg am Marzahn-Hohenschönhauser Grenzgraben: zum Überqueren der Boxberger Str. links halten, um Bordsteine zu vermeiden	CP; 19427,16179 19361,16145 19313,16130
 Walsheimer Str. - Alt-Biesdorf: zunächst linken Gehweg bis zum Biesdorfer Friedhofsweg benutzen	CP; 21352,11701 21251,11560 21311,11528
 Grenzallee - Straße 12: ggfs. schon an der Ampel Autobahnausfahrt/Bergiusstr. auf den linken Gehweg wechseln	PI; 14051,6731 13930,6686 13883,6682 13881,6634
-Buschkrugallee - Bürgerstr.: bereits an der Fußgängerampel die Straßenseite wechseln	PI; 13323,6322 13307,6359 13239,6344
 Prenzlauer Allee - Wohngebiet: bereits an der Krügerstr. oder Wisbyer Str. auf den linken Gehweg wechseln	PI; 12075,16144 12061,16091 12030,15968 12154,15902
 Mariendorfer Damm - Göllweg: Mittelstreifen kann nicht überquert werden, bis zum Ankogelweg vorfahren und dort den Mariendorfer Damm überqueren	CP; 10276,1383 10239,1481 10119,1435
 Göllweg - Mariendorfer Damm: zunächst den linken Gehweg benutzen und am Ankogelweg die Straßenseite wechseln	CP; 10119,1435 10239,1481 10226,1515

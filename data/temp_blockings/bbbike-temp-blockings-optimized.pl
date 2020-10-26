@@ -866,6 +866,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        {
          'data' => '#: note: allerdings keine Hinweise auf eine verbotene Durchfahrt gesehen
 #: note: nördliches Tor verschlossen, gesehen am 2019-09-07 (Sa)
+#: note: südliches Tor verschlossen, gesehen am 2020-10-24 (Sa)
 #: tempex: volatile vvv
 (Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936
 (Gewerbegebiet)	2 21685,2964 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
@@ -2191,7 +2192,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-09-16
+#: last_checked: 2020-10-24 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686
 # REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
@@ -2452,23 +2453,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: DBWERKSTRASSE-2019
-#: XXX Bis wann gehen die Bauarbeiten?
-#: source_id: 2147346364 (vielleicht haben die Leitungsarbeiten hier etwas damit zu tun?) (eigentlich bis 17.10.2020, vorfristig beendet)
-#: also_indoor: traffic (G,H)
-#: last_checked: 2020-10-15
-#: check_frequency: 4d
-# REMOVED --- #: next_check: 2020-10-17
-# REMOVED (hier weitgehend fertig) ---	2::inwork 14567,10814 14469,10841 14352,10874
-	2::inwork 14567,10814 14562,10782 14671,10751
-',
-         'from' => 1560636000,
-         'id' => 3116,
-         'text' => 'DB-Werkstraße: Bauarbeiten, ein Abschnitt der Fahrbahn kann gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2490,7 +2475,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-10-15
+#: last_checked: 2020-10-24
 #: next_check: 2020-12-31
 # REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
 #: note: hier eng und viel Fußgängerverkehr
@@ -2568,6 +2553,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: source_id: 2147346164 (bis März 2021, Gesamtbaumaßnahme bis 2024)
 #: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
+#: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 ',
          'from' => undef,
@@ -2768,7 +2754,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-10-03
+#: last_checked: 2020-10-22
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2789,48 +2775,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
-       {
-         'accept_multi_feature_distance' => 3200,
-         'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/angebot-auf-der-baenschstrasse-wurde-verkuerzert_a268825
-#: by: https://www.berliner-woche.de/mitte/c-verkehr/fuenf-antraege-auf-temporaere-spielstrassen_a283528 ("bis Ende des Sommers" (2020))
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2020/pressemitteilung.993677.php (22.9.2020 - Tag der Spielstraßen --- nicht eingetragen)
-# REMOVED --- S1 - Bänschstr. zwischen Samariterstr. und Pettenkoferstr. Südseite	q4::temp::play 14588,12542 14661,12523 14681,12534 14798,12502 15005,12443
-S1 - Bänschstr. zwischen Voigtstr. und Pettenkoferstr. Südseite	q4::temp::play 14798,12502 15005,12443
-S2 - R.-Sorge-Str. zwischen Weidenweg und Straßmannstr.	q4::temp::play 13457,12505 13371,12694 13273,12902
-S3 - Gärtnerstr. zwischen Wühlischstr. und Grünberger Str.	q4::temp::play 14211,11552 14247,11681 14272,11775
-S4 - Krossener Str. zwischen Gabriel-Max-Str. und Seumestr.	q4::temp::play 14102,11715 14247,11681 14358,11656
-Gabriel-Max-Str.	q4::temp::play 14127,11811 14102,11715
-S5 - Lausitzer Platz um den gesamten Platz bis auf die Skalitzer Str.	q4::temp::play 12328,10442 12274,10612 12172,10585 12197,10494 12212,10440
-S5 - Waldemarstr. zwischen Lausitzer Platz und Manteuffelstr.	q4::temp::play 12172,10585 12142,10600 12056,10642
-S6w - Waldemarstr. zwischen Dresdener Str. und Legiendamm	q4::temp::play 11290,10972 11150,11030
-#: note: gesehen am 2020-07-26; in der Quelle falsch
-S6o - Waldemarstr. zwischen Leuschnerdamm und Adalbertstr.	q4::temp::play 11328,10957 11552,10863
-S7 - Wassertorstr. zwischen Prinzenstr. und Lobeckstr.	q4::temp::play 10685,10483 10484,10567
-S8 - Friedrichstr. zwischen Hedemannstr. und Franz-Klühs-Str.	q4::temp::play 9570,10566 9556,10666 9554,10695 9539,10820
-S9 - Arndtstr. zwischen Nostitzstr. und Schenkendorfstr.	q4::temp::play 9487,9209 9546,9198 9617,9185 9674,9179
-S9 - Chamissoplatz	q4::temp::play 9546,9198 9526,9104
-S9 - Chamissoplatz	q4::temp::play 9596,9092 9617,9185
-S10 - Böckhstr. zwischen Grimmstr. und Graefestr.	q4::temp::play 11175,9882 11197,9894 11411,9810
-#: note: sowohl Lachmannstr. und Boppstr. waren am 2020-07-26 offen
-S11 - Lachmannstr. zwischen Kottbusser Damm und Schönleinstr.; Boppstr. zw. Kottbusser Damm und Schönleinstr.; Schönleinstr. 7a-13	q4::temp::play 11745,9541 11594,9604 11541,9576 11560,9524 11785,9437
-S12 - Lübbener Str. zwischen Skalitzer Str. und Görlitzer Str.	q4::temp::play 12608,10294 12729,10515
-S13 - Cuvrystr. zwischen Görlitzer Str. und Schlesische Str.	q4::temp::play 13035,10076 13132,10239 13151,10276 13197,10355 13249,10445
-#: note: gesehen am 2020-07-26: statt der Helmerdingstr. wurde die angrenzende Simplonstr. gesperrt; mittlerweile (August/September 2020) wird immer nur die Simplonstr. gesperrt
-Simplonstr. zwischen Helmerdingstr. und Matkowskystr	q4::temp::play 14468,11203 14531,11142
-# REMOVED --- S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp::play 14442,11101 14468,11203
-S15 - Paul-Lincke-Ufer zwischen Glogauer Str. bis Ohlauer Str.	q4::temp::play 12591,9584 12439,9660 12286,9739 12116,9825
-S16 - Lilienthalstr. zwischen Bergmannstr. und Züllichauer Str.	q4::temp::play 10705,9234 10709,9192 10748,9054 10675,8940
-S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334,10527 11258,10682
-S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
-S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 13991,12522
-',
-         'from' => 1603512000,
-         'id' => 3228,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.926016.php',
-         'text' => 'Temporäre Spielstraßen in Friedrichshain-Kreuzberg: einige Straßen können für den Radverkehr gesperrt sein, jeden Sonntag zwischen 13 und 19 Uhr',
-         'type' => 'handicap',
-         'until' => 1603645200
-       },
+       undef,
        {
          'data' => '#: next_check_id: VIRCHOW-2020
 #: XXX während der Corona-Krise vvv
@@ -2875,10 +2820,11 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'data' => '#: source_id: 2147345874 (hier: bis 31.1.2021) (bei rbb nur bis 13.1.2021)
 	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
+	q3::inwork 14247,11681 14272,11775
 ',
          'from' => 1590562800,
          'id' => 3240,
-         'text' => 'Gärtnerstr.: Bauarbeiten, zwischen Wühlischstr. und Simplonstr. Einbahnstraße Richtung Süden, zwischen Wühlischstr. und Krossener Str. Fahrbahn gesperrt, evtl. bis Dezember 2021',
+         'text' => 'Gärtnerstr.: Bauarbeiten, zwischen Wühlischstr. und Simplonstr. Einbahnstraße Richtung Süden, zwischen Wühlischstr. und Krossener Str. sowie an der Grünberger Str. Fahrbahn gesperrt, evtl. bis Dezember 2021',
          'type' => 'handicap',
          'until' => 1640966400
        },
@@ -2956,7 +2902,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'from' => 1594635120,
          'id' => 3258,
          'source_id' => '2147346108',
-         'text' => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Richtung Osten gesperrt, eventuell sind auch Radfahrer betroffen, vom 14.07.2020 12:12 Uhr bis 17.03.2021 17:00 Uhr ',
+         'text' => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Richtung Osten gesperrt, vom 14.07.2020 12:12 Uhr bis 17.03.2021 17:00 Uhr ',
          'type' => 'handicap',
          'until' => 1615996800
        },
@@ -2966,8 +2912,11 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
 #: XXX nicht ganz klar, ob die Sperrung schon am 30.9.2020 aufgehoben wird, Gesamtmaßnahme geht länger; laut rbbtext bis 2021-06-30; nun bei viz bis mindestens 9.11.2020
-#: next_check: 2020-11-09
-	q4::inwork; 4515,4760 4214,4595 4039,4500
+#: next_check: 2020-11-09 vvv
+	q4::inwork; 4515,4760 4214,4595
+#: note: hier nur ein kurzes Stück
+	q2::inwork; 4214,4595 4039,4500
+#: next_check ^^^
 ',
          'from' => 1589275980,
          'id' => 3261,
@@ -3013,23 +2962,7 @@ S19 - Liebigstr. zwischen Bänschstr. und Rigaer Str.	q4::temp::play 14058,12709 
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: by: mapillary
-#: by: https://www.gruene-fraktion-brandenburg.de/im-parlament/kleine-anfragen/2019/fehlender-lueckenschluss-bei-radweg-an-der-b-198/
-#: by: https://www.moz.de/landkreise/barnim/eberswalde/artikel4/dg/0/1/1735352/ (Realisierung eines Radwegs frühestens 2022)
-#: by: https://www.moz.de/landkreise/uckermark/schwedt-und-angermuende/artikel90/dg/0/1/1817154/ (Bauarbeiten am Ziethener Kreuz bis Ende des Jahres (2020))
-#: source_id: LS/721-E/20/050
-#: XXX wie lange gilt das Verbot?
-#: last_checked: 2020-08-22
-#: next_check: 2020-10-23
-	2 48469,65641 47875,64281 47564,63557
-',
-         'from' => undef,
-         'id' => 3268,
-         'text' => 'B2/B198: Richtung Süden Radfahren verboten',
-         'type' => 'gesperrt',
-         'until' => 1603465200
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/spandau/c-verkehr/radler-muessen-runter-vom-sattel_a177230
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20090917.1110.139163.html
@@ -3093,7 +3026,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://pbs.twimg.com/media/EhY9dDlWkA4cFqP?format=png
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/kreuzung-friedelstrassemaybachufer-wird-entschaerft_a286609
 #: priority: #A vvv
-#: last_checked: 2020-10-12 vvv
+#: last_checked: 2020-10-22 (mapillary) vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-12-01 vvv
 	q3::inwork 11897,9754 12085,9778
@@ -3132,11 +3065,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: RICHARDPLATZ-2020
-#: osm_watch: way id="840456624" version="4"
+#: osm_watch: way id="840456624" version="5"
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2020-10-17
+#: last_checked: 2020-10-25
 #: check_frequency: 14d
 	q4::inwork 13288,7653 13378,7695 13416,7712
 ',
@@ -3203,17 +3136,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147346494
-	q4::inwork; 16122,6084 16169,6064 16510,5917 16868,5938
-',
-         'from' => 1602972000,
-         'id' => 3287,
-         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.1003726.php',
-         'text' => 'Südostallee: Sperrung der Fahrbahn Richtung Niederschöneweide, voraussichtlich vom 19.10.2020 bis 23.10.2020',
-         'type' => 'handicap',
-         'until' => 1603458000
-       },
+       undef,
        {
          'data' => '#: source_id: 2147343744
 #: last_checked: 2020-10-15 vvv
@@ -3235,7 +3158,8 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
        undef,
        undef,
        {
-         'data' => '# XXX im Anschluss daran wird zwischen Elvirasteig und Lindenthaler Allee saniert, vom 04.11.2020 bis 17.11.2020
+         'data' => '#: by: https://www.berliner-woche.de/zehlendorf/c-bauen/fahrbahnsanierung-auf-der-matterhornstrasse_a290755
+# XXX im Anschluss daran wird zwischen Elvirasteig und Lindenthaler Allee saniert, vom 04.11.2020 bis 17.11.2020
 #: priority: #A
 #: next_check: 2020-11-03
 	q4::inwork -2096,3402 -1981,3353 -1888,3315 -1782,3311 -1706,3311 -1628,3311 -1536,3314
@@ -3294,6 +3218,83 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
          'text' => 'Weddingstr.: Zufahrt von der Reinickendorfer Str. gesperrt, 21.10.2020 7:00 Uhr bis 23.12.2020 17:00 Uhr',
          'type' => 'handicap',
          'until' => 1608739200
+       },
+       {
+         'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: last_checked: 2020-10-22
+	2::inwork 8066,7843 7955,7840
+',
+         'from' => undef,
+         'id' => 3296,
+         'text' => 'General-Pape-Str. - Wintgensstr.: Bauarbeiten, Fahrbahn und Gehweg komplett gesperrt, Ende der Bauarbeiten unbekannt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: last_checked: 2020-10-22
+	q4::inwork 12162,8053 12147,8117
+',
+         'from' => undef,
+         'id' => 3297,
+         'text' => 'Mainzer Str.: Bauarbeiten zwischen Rollbergstr. und Werbellinstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       undef,
+       {
+         'data' => '#: by: https://www.verkehrslage.de/Berlin/Baustellen/3
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: last_checked: 2020-10-25
+	q4::inwork 12997,6290 13027,6168
+',
+         'from' => undef,
+         'id' => 3299,
+         'text' => 'Rungiusstr.: Bauarbeiten zwischen Bürgerstr. und Jahnstr., Fahrbahn gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'accept_multi_feature_distance' => 50000,
+         'data' => '#: next_check_id: COVID19-MASK-2020 vvv
+#: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)
+#: by: https://www.rbb24.de/panorama/thema/2020/coronavirus/av7/video-bergmannstr-polizei-kontrolle-maskenpflicht-radfahrer.html
+#: next_check: 2020-11-30 vvv
+#: note: in der Verordnung fälschlicherweise im Ortsteil PB verortet
+Alte Schönhauser Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 10527,13257 10596,13398 10633,13474 10644,13497 10709,13629 10741,13685
+#: note Altstadt Spandau vvv
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340 -3227,14260
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3155,14340 -3204,14368 -3231,14383 -3275,14407
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3089,14440 -3150,14478
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3110,14408 -3060,14380
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3142,14358 -3092,14331
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3110,14408 -3174,14438 -3228,14468
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3293,14304 -3231,14383
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3552,14082 -3457,14189 -3409,14241 -3338,14333 -3275,14407 -3228,14468 -3205,14512 -3185,14556 -3150,14631
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3404,14147 -3457,14189
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3227,14260 -3293,14304 -3338,14333 -3397,14370
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3275,14407 -3350,14446
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3316,14169 -3409,14241
+Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3150,14631 -3122,14557 -3107,14535 -3054,14498
+#: note ^^^
+Bergmannstr. (Kreuzberg): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252 9793,9241 9880,9233 9973,9232 10001,9234 10123,9233 10547,9233
+Bölschestr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 25579,5958 25571,5829 25567,5749 25563,5666 25561,5622 25553,5486 25548,5398 25546,5359 25544,5326 25539,5237 25524,5011 25522,4935 25519,4830
+Friedrichstr. (Mitte): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9212,13471 9225,13389 9246,13235 9254,13171 9262,13111 9269,13060 9279,12953 9286,12886 9298,12765 9303,12718 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351 9369,12253 9373,12197 9384,12103 9393,12000 9405,11903 9418,11804 9432,11702 9444,11616 9456,11513 9468,11412 9474,11360 9478,11317
+Karl-Marx-Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 13236,6489 13200,6550 13141,6651 13121,6689 13117,6716 13085,6925 13072,7013 13068,7043 13058,7112 13051,7157 13043,7234 13034,7319 13030,7346 13029,7353 13018,7441 13015,7471 12987,7560 12969,7610 12914,7785 12898,7832 12892,7850 12865,7923 12846,7981 12830,8031 12794,8103 12753,8187 12714,8249 12689,8289 12639,8344 12598,8390 12582,8408 12562,8432 12540,8458 12500,8504 12330,8636 12156,8760 12063,8826 11998,8872 11880,8955 11831,8989
+Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2415,9765 2445,9838 2482,9870 2532,9911 2590,9949 2694,10002 2702,10006 2770,10024 2828,10040 2974,10081 3111,10116 3189,10141 3289,10174 3374,10201 3489,10240 3562,10264 3618,10283 3737,10322 3835,10352 3971,10381 4157,10418 4245,10435 4371,10465 4503,10497 4676,10541 4847,10589 5076,10658 5215,10711 5341,10756 5475,10808 5656,10876 5725,10892 5782,10884
+Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2445,9838 2369,9779
+Schloßstr. (Steglitz): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 5370,6486 5346,6443 5312,6382 5269,6305 5244,6261 5219,6215 5165,6119 5137,6066 5099,5994 5091,5979 5083,5964 5048,5904 5018,5854 4998,5817 4982,5789 4963,5754 4946,5725 4900,5648 4861,5581 4832,5522 4767,5389 4745,5344 4741,5309 4677,5274 4593,5235 4512,5199 4432,5160 4343,5112
+Tauentzienstr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 5782,10884 5907,10821 5942,10803 6025,10746 6133,10679 6171,10657
+Wilmersdorfer Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 3813,10435 3870,10510 3883,10585 3881,10699 3869,10760 3847,10865 3835,10915 3820,10987 3795,11098 3770,11231 3749,11344 3717,11462 3689,11637 3671,11799 3666,11855 3651,12001 3643,12092 3630,12201 3623,12284 3612,12377
+#: next_check ^^^
+#: next_check_id ^^^
+',
+         'from' => 1603490400,
+         'id' => 3300,
+         'is_pseudo_handicap' => 1,
+         'text' => 'mögliche Maskenpflicht für Radfahrer',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );

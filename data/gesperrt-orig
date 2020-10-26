@@ -74,8 +74,9 @@ Wilhelplatz	1 -7064,584 -7081,483 -7122,439 -7180,378
 #: last_checked: 2020-10-11
 #: next_check: 2021-05-01
 Tempelhofer Weg	1 7499,7880 7268,8008 7193,7950
-Alt-Mariendorf (Nord)	1 9732,3883 9831,3876 9953,3806
-Alt-Mariendorf (Süd)	1 9953,3806 9751,3769 9584,3713 9455,3671 9391,3651 9222,3602 9128,3580 8964,3539
+Alt-Mariendorf	1 9732,3883 9831,3876 9953,3806
+Friedenstr./Reißeckstr.	1 9953,3806 9751,3769 9584,3713 9455,3671 9391,3651 9222,3602 9128,3580 8964,3539
+Friedenstr.	1 9462,3642 9391,3651
 Knoten Märkische Allee	1 19726,11743 19785,11760 19849,11779 19890,11830 19924,11890
 Knoten Märkische Allee	1 19924,11890 19979,11774
 Knoten Märkische Allee	1 20114,11719 20064,11687 20026,11663
@@ -209,7 +210,7 @@ Paul-Junius-Str	1 15084,13276 15082,13369 15220,13377
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7382
 # REMOVED (Meldung removed) --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=40535
 #: osm_watch: way id="30043322" version="16"
-#: last_checked: 2020-09-16
+#: last_checked: 2020-10-24
 #: check_frequency: 60d
 #: next_check: 2020-12-20
 #: priority: #A
@@ -361,13 +362,6 @@ In den neuen Gärten	1 7111,3432 7318,3306 7359,3349 7409,3331 7472,3308
 Braillestr.	1 4430,5324 4477,5250 4512,5199
 Mudrackzeile	1 6985,17812 7020,17690
 Mariabrunner Weg	1 6841,17781 6909,17796 6985,17812
-#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpartner/fahrrat/2016-07-28-prot-fahrratsitzung3.pdf
-#: XXX evtl wird die Einbahnstraße für Radfahrer geöffnet
-#: osm_watch: way id="5110895" version="6"
-#: priority: #B
-#: last_checked: 2020-08-29
-#: check_frequency: 60d
-Gustav-Müller-Str.	1 7643,8634 7642,8815
 Gustav-Müller-Platz	1 7644,8560 7606,8598 7643,8634 7682,8598 7644,8560
 # REMOVED (Einbahnstraßenregelung ist hier zweifelhaft) --- #: XXX Wird die Einbahnstraßenregelung hier aufgehoben? --- #: last_checked: 2012-03-06 --- #: next_check: 2012-04-20 --- Niederlagstr.	1:q3 9972,12184 9961,12273
 # REMOVED (wie sieht's nach den Bauarbeiten aus?) --- Niederlagstr.	1 9943,12364 9934,12420
@@ -1173,7 +1167,7 @@ DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615
 Katharina-Boll-Dornberger-Str.	1 19086,3370 19073,3357 19033,3397 18987,3442 18998,3454 19013,3466 19057,3422 19097,3380 19086,3370
 #: XXX laut Maßnahme Gr.8 soll die Einbahnstraße hier aufgehoben werden (nur Prio=mittel, allerdings relativ einfach (?) zu realisieren)
 #: osm_watch: way id="151237878" version="8"
-#: last_checked: 2020-07-31
+#: last_checked: 2020-10-24
 #: check_frequency: 90d
 Tauchersteig	1 21879,2592 22011,2658 22047,2662 22058,2649
 #: note implizit?
@@ -1254,7 +1248,7 @@ Waldstr.	1 9982,19413 9942,19505
 Waldstr.	1 9961,19513 10002,19418
 #: next_check_id: UBAHN1-2020
 #: XXX mittlerweile wegen Hochbahnarbeiten komplett gesperrt
-#: last_checked: 2020-10-16
+#: last_checked: 2020-10-25
 #: check_frequency: 60d
 #: next_check: 2021-04-01
 #(Schlesisches Tor - Oppelner Str.)	1 12978,10581 12930,10621
@@ -1342,6 +1336,9 @@ Herzbergstr. [Wohngebiet]	1 15896,13594 15833,13596 15700,13597
 Am Gartenstadtweg	1 21592,547 21613,667
 Hermann-Dorner-Allee: Bordstein, Grünstreifen	3nocross 18374,2971 18347,3129 18395,3176
 (Kuhligkshofstr. - Schloßstr.)	1 4767,5389 4779,5358 4821,5345
+Berlepschstr., Wendeschleife	1 -1486,1481 -1436,1499
+Berlepschstr., Wendeschleife	1 -1436,1499 -1467,1466 -1486,1481
+Bürgerstr.: Mittelstreifen	2 13289,6355 13307,6359
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1911,6 +1908,10 @@ Seestr.: Straßenbahntrasse	3nocross 7231,16418 7051,16264 6965,16190
 Seestr.: Straßenbahntrasse	3nocross 7231,16418 7295,16477 7393,16566
 Föhrer Str.: Mittelstreifen	3nocross 6528,15000 6561,15041 6626,15104
 Luxemburger Str.: Mittelstreifen	3nocross 6626,15104 6715,15152 6833,15215
+#: note: Autobahnanschluss, keine Überquerungsmöglichkeiten vvv
+Buschkrugallee	1::igndisp 13236,6489 13261,6456 13294,6386 13307,6359 13316,6320
+Buschkrugallee	1::igndisp 13316,6320 13289,6355 13275,6382 13248,6452 13236,6489
+#: note ^^^
 #: note: Mittelstreifen, schlechte Überquerungsmöglichkeiten vvv
 Frankfurter Allee	1::igndisp 14208,12235 14291,12222 14381,12207 14427,12199 14488,12188
 Frankfurter Allee	1::igndisp 14488,12188 14427,12197 14381,12205 14291,12220 14208,12235
@@ -2395,8 +2396,8 @@ tragen (41 Stufen) oder Aufzug (Storkower Str.)	0:40 14481,13143
 tragen (zum Uferweg an den Treptowers, 24 Stufen)	0:35 14383,10036
 #: note: die beiden Stufengruppen sind so weit entfernt, dass ein Aufsitzen nich lohnt
 tragen (1+3 Stufen)	0:30 13232,12628
-# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- tragen (34 Stufen)	0:40 14787,10972
-# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- tragen (33 Stufen)	0:40 14764,10877
+tragen (34 Stufen)	0:40 14787,10972
+tragen (33 Stufen)	0:40 14764,10877
 tragen oder Aufzug benutzen	0:40 14839,10856
 tragen oder Aufzug benutzen	0:40 14851,10966
 tragen (Durchgang unter der U-Bahn zur Warschauer Str., 15 Stufen)	0:20 13438,10994
@@ -2697,7 +2698,7 @@ Drängelgitter (lichte Breite 80cm)	BNP:5::trailer=no -9809,-608
 enges Drängelgitter	BNP:5::trailer=no -14725,525
 Drängelgitter	BNP:3::trailer=10 2157,10020
 Drängelgitter an der Straßenbahntrasse	BNP:6::trailer=10 16665,14420
-Schranke (lichte Breite 100cm)	BNP:3::trailer=10 17459,5634
+# REMOVED (existiert nicht mehr) --- Schranke (lichte Breite 100cm)	BNP:3::trailer=10 17459,5634
 #: note: immer offen?
 Schranke (offen)	BNP:0 17070,6115
 #: by: Stefan Klinkusch vvv
@@ -3212,14 +3213,14 @@ Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60
 Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.971390.php (Abschluss der Bauarbeiten: erste Jahreshälfte 2022)
-#: last_checked: 2020-10-20
+#: last_checked: 2020-10-25
 (Rudolfplatz, Park): Bauarbeiten, komplett gesperrt	2::inwork 14026,10869 13896,10851
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.964891.php
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/bezirksamt-will-bergmannkiez-entmotorisieren_a287422 ("Fußgängerzone beschlossen" --- bleibt es permanent?)
 #: XXX bis wann bleibt diese Straße eine "Klimastraße"?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-10-20
+#: last_checked: 2020-10-25
 #: next_check: 2020-12-31
 Danneckerstr.: temporäre "Klimastraße", für Radfahrer gesperrt	2s:q4 13886,10939 13856,10864
 # 
@@ -3235,9 +3236,10 @@ Durchgangsweg am Blueberry Inn: wegen Bauarbeiten komplett gesperrt	2::inwork 12
 #: next_check_id: BUCKOWERCHAUSSEE-EISNER-2020
 #: by: https://www.berliner-woche.de/marienfelde/c-verkehr/p+r-parkplatz-wird-geschlossen_a277741
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7724 (Antrag)
+#: by: https://www.bahninfo-forum.de/read.php?9,413132,681913#msg-681913 (gesperrter Bahnhofsausgang)
 #: confirmed_by: srt (am S-Bhf.)
 #: XXX bis wann sind die Wege gesperrt? vvv
-#: last_checked: 2020-07-11 vvv
+#: last_checked: 2020-10-22 (bahninfo-forum) vvv
 #: check_frequency: 180d vvv
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9507,-85 9468,-85 9271,323 9253,370 9218,458 9178,556
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9271,323 9296,335 9249,434 9218,458
@@ -3291,15 +3293,15 @@ Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht
 # 
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/stralauer-allee-15-16.657/page-2#post-13509
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbrücke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2020-10-02
+#: last_checked: 2020-10-24
 #: check_frequency: 360d
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14348,10266 14462,10206 14480,10157
 # 
 #: by: wosch
 #: by: https://portal1548.webcam-profi.de/ (webcam)
-#: last_checked: 2020-09-29
+#: last_checked: 2020-10-24
 #: check_frequency: 60d
-Uferweg: wegen Bauarbeiten gesperrt	2::inwork 14126,10176 14202,10152
+Uferweg: wegen Bauarbeiten gesperrt	2::inwork 14126,10176 14202,10152 14373,10046
 # 
 #: next_check_id: EUROPACITY-2015
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/28re.pdf/file?y=2016
@@ -3399,7 +3401,7 @@ Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwor
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_49_7429_7632_online.pdf (Einziehung von Straßenland --- vielleicht der alte Sackgassenhammer?)
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="1"
-#: last_checked: 2020-10-16
+#: last_checked: 2020-10-25
 #: check_frequency: 14d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3475,11 +3477,9 @@ Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (ab 1. Juli 2020 wieder offen, bis voraussichtlich 13. September 2020)
 #: osm_watch: way id="822674838" version="2"
-#: XXX laut osm hier gesperrt
-#: last_checked: 2020-09-29
-#: next_check: 2020-10-20
+#: last_checked: 2020-10-22
 #Rollbergstr.: Einbahnstraße, offen Richtung Karl-Marx-Str.	1s:q3:inwork 12714,8249 12545,8209
-Rollbergstr.: Bauarbeiten, gesperrt	2s:q4:inwork 12714,8249 12545,8209
+Rollbergstr.: Bauarbeiten, Zufahrt von der Karl-Marx-Str. gesperrt	2s:q4:inwork 12714,8249 12545,8209
 # 
 #: osm_watch: way id="702306263" version="4"
 #: last_checked: 2020-09-25
@@ -3496,15 +3496,14 @@ Metropolitan Park: Bauarbeiten	2::inwork -8019,14036 -8150,14064
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
 #: XXX wann werden die Straßen in der Wasserstadt Spindlersfeld eröffnet? vvv
-#: last_checked: 2020-08-15 vvv
+#: last_checked: 2020-10-24 vvv
 #: check_frequency: 60d vvv
 Carl-Spindler-Str.: durch Bauzäune abgesperrt, manchmal (am Wochenende?) kann man aber durchfahren	2::inwork 21442,5414 21474,5388
 # REMOVED (hier kann man schon fahren) --- Carl-Spindler-Str.: durch Bauzäune abgesperrt	2::inwork 21474,5388 21485,5377 21514,5314 21547,5245 21413,5180
 Henriette-Lustig-Str.: teilweise gesperrt	2::inwork 21375,4974 21380,5003
-#: last_checked: 2020-10-12 (daf)
-Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21476,5048 21611,5119 21645,5135
+Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21611,5119 21645,5135
 Wäscherinnenweg: teilweise gesperrt	2::inwork 21444,5112 21358,5072
-Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht möglich	2::inwork 21355,5254 21386,5251
+# REMOVED (offen) --- Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht möglich	2::inwork 21355,5254 21386,5251
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -3525,7 +3524,7 @@ Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht möglich	2::inwork 2
 # 
 #: XXX wann sind die Bauarbeiten beendet?
 #: priority: #C
-#: last_checked: 2020-10-16
+#: last_checked: 2020-10-22
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
