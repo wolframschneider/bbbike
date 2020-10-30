@@ -2522,6 +2522,7 @@ tragen (Treppe, 16 Stufen)	0:25 22104,11925
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+Schranke	BNP:0::trailer=5 10713,12014
 Drängelgitter	BNP:3::trailer=10 10969,10015
 Drängelgitter	BNP:3::trailer=10 10879,10037
 langes Drängelgitter	BNP:10::trailer=20 20284,12064
@@ -3213,7 +3214,7 @@ Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60
 Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.971390.php (Abschluss der Bauarbeiten: erste Jahreshälfte 2022)
-#: last_checked: 2020-10-25
+#: last_checked: 2020-10-27
 (Rudolfplatz, Park): Bauarbeiten, komplett gesperrt	2::inwork 14026,10869 13896,10851
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.964891.php
@@ -4066,7 +4067,7 @@ B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich de
 #: by: https://www.deutsches-architekturforum.de/thread/11563-kleinere-projekte-moabit/?postID=642359#post642359
 #: by: https://www.deutsches-architekturforum.de/thread/11563-kleinere-projekte-moabit/?postID=645524#post645524
 #: osm_watch: way id="501191631" version="3"
-#: last_checked: 2020-09-27
+#: last_checked: 2020-10-29 (daf)
 #: next_check: 2021-12-31
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
 # 

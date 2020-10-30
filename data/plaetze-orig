@@ -203,6 +203,7 @@ Hermione-von-Preuschen-Platz	Pl 9864,-2411
 Platz an der Eiche	Pl 19898,8410
 Guernicaplatz	Pl -2026,2742
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20090604.1355.129318.html
+#: confirmed_by: srt
 Sderotplatz	Pl 669,3119
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20090604.1155.129295.html
 Alfred-Grenander-Platz	Pl -580,3912
@@ -375,6 +376,8 @@ Schlesisches Tor	Pl 12985,10665
 Flughafen Tegel	Pl 2720,16353
 #: oldname: -20201025: Flughafen Schönefeld
 Flughafen BER - Terminal 5	Pl 18401,-1767
+#: valid: 20201031-
+Flughafen BER - Terminal 1	Pl 17929,-4435
 Steglitzer Kreisel	Pl 4741,5309
 #: note: einen echten Thielplatz gibt es nicht, nur den U-Bhf.
 Thielplatz	Pl 2313,4901
