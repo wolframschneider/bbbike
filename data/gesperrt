@@ -292,7 +292,7 @@ Staakener Str.	1 -4147,14274 -4155,14261 -4316,14240 -4390,14257
 Langensteiner Weg	1 7285,4724 7335,4879 7437,4855
 Lowise-Reuter-Ring	1 13680,4715 13589,4681 13560,4681 13511,4695 13482,4718 13468,4766 13476,4812 13503,4846 13540,4861 13574,4862 13639,4850 13675,4855
 Pfahlerstr.	1 5301,18447 5423,18438 5541,18435
-Harnackstr.	1 15848,11528 15881,11621 15871,11690 15911,11790 15984,11827 16020,11814 16099,11786 16134,11774
+Harnackstr.	1 15837,11529 15881,11621 15875,11692 15917,11782 15984,11827 16020,11814 16099,11786 16134,11774
 Mirbachplatz	1 13331,16424 13347,16447 13391,16436 13399,16398 13377,16378 13348,16387 13331,16424
 Treskowstr. (Mahlsdorf)	1 24563,11980 24491,11972
 Knoten am Flughafen Tegel	1 2996,15930 2960,15847
@@ -878,6 +878,7 @@ Weg im Landschaftspark Johannisthal -> Hermann-Dorner-Allee: Bordstein, Grünstre
 Berlepschstr., Wendeschleife	1 -1486,1481 -1436,1499
 Berlepschstr., Wendeschleife	1 -1436,1499 -1467,1466 -1486,1481
 Bürgerstr.: Mittelstreifen	2 13289,6355 13307,6359
+Boltonstr.	1 -390,14476 -457,14536
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1540,13 +1541,13 @@ Wuhlewanderweg -> Möwenweg: unbequemes Passieren des Mittelstreifens	3::igndisp 
 Möwenweg -> Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3::igndisp 22238,11223 22242,11269 21954,11269
 Möwenweg -> Wuhlewanderweg: unbequemes Passieren des Mittelstreifens	3::igndisp 22238,11223 22242,11269 22244,11311
 Mittelstreifen nicht passierbar	3nocross::ignrte 2975,15813 2960,15847 2944,15880
-Zum Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2944,15880 2960,15847 2996,15930
-Knoten am Flughafen Tegel -> Zum Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2944,15880
-Knoten am Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2996,15930
+Zum Flughafen Tegel -> Knoten am ehemaligen Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2944,15880 2960,15847 2996,15930
+Knoten am ehemaligen Flughafen Tegel -> Zum Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2944,15880
+Knoten am ehemaligen Flughafen Tegel -> Knoten am ehemaligen Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2996,15930
 Mittelstreifen nicht passierbar	3nocross::ignrte 2944,15880 2913,15944 2809,16143
-Zum Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2944,15880 2913,15944 2880,15908
-Knoten am Flughafen Tegel -> Zum Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2949,15922 2913,15944 2944,15880
-Knoten am Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2949,15922 2913,15944 2880,15908
+Zum Flughafen Tegel -> Knoten am ehemaligen Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2944,15880 2913,15944 2880,15908
+Knoten am ehemaligen Flughafen Tegel -> Zum Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2949,15922 2913,15944 2944,15880
+Knoten am ehemaligen Flughafen Tegel -> Knoten am ehemaligen Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2949,15922 2913,15944 2880,15908
 Straßenbahntrasse	3nocross::ignrte 10904,17288 10899,17331 10892,17396
 Berliner Str. -> Max-Lingner-Str.: Straßenbahntrasse	3::igndisp 10892,17396 10899,17331 11094,17339
 Max-Lingner-Str. -> Berliner Str.: Straßenbahntrasse	3::igndisp 11094,17339 10899,17331 10904,17288
@@ -2159,7 +2160,7 @@ Michael-Brückner-Str. -> Spreestr.: Mittelstreifen	3::igndisp 17728,5756 17782,5
 Michael-Brückner-Str. -> Cajamarcapl.: Mittelstreifen	3::igndisp 17829,5648 17782,5698 17730,5698
 Cajamarcapl. -> Michael-Brückner-Str.: Mittelstreifen	3::igndisp 17730,5698 17782,5698 17728,5756
 Cajamarcapl. -> Spreestr.: Mittelstreifen	3::igndisp 17730,5698 17782,5698 17807,5730
-Straßenbahngleise	3nocross::ignrte 17488,15766 17532,15645 17569,15561 17626,15433 17706,15269 17829,15015
+Straßenbahngleise	3nocross::ignrte 17488,15766 17532,15645 17569,15561 17626,15433 17706,15269 17789,15098 17829,15015
 Rhinstr. -> Str. 156: Straßenbahngleise	3::igndisp 17488,15766 17532,15645 17570,15658
 Str. 156 -> Rhinstr.: Straßenbahngleise	3::igndisp 17570,15658 17532,15645 17569,15561
 Rhinstr. -> Str. 150: Straßenbahngleise	3::igndisp 17532,15645 17569,15561 17640,15583
@@ -3146,6 +3147,7 @@ Schranke, vorbeifahren mit Bordsteinen	BNP:10:43 5005,2100
 Barriere	BNP:5:-72 4708,21235
 offenes Tor	BNP:3:-151 12592,9249
 Drängelgitter	BNP:3:-193:trailer=10 1035,14996
+Schulstr. (Biesdorf): Bauarbeiten, komplett gesperrt	2::inwork 20599,11938 20708,11918
 Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt	2::inwork 9131,12438 9179,12444
 Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 (Rudolfplatz, Park): Bauarbeiten, komplett gesperrt	2::inwork 14026,10869 13896,10851
@@ -3440,9 +3442,9 @@ Ingeborg-Drewitz-Allee	1 7365,12775 7386,12749
 Ingeborg-Drewitz-Allee	2::inwork 7386,12749 7541,12754
 Ingeborg-Drewitz-Allee	1 7362,12731 7343,12758
 tragen (Treppe, 7+8+9 Stufen)	0:30:-180 5714,12279
-Mittelstreifen schlecht zu queren	3nocross::ignrte 6025,12494 6090,12451 6173,12396
-Altonaer Str. -> Cuxhavener Str.: Mittelstreifen schlecht zu queren	3::igndisp 6173,12396 6090,12451 5982,12291
-Cuxhavener Str. -> Altonaer Str.: Mittelstreifen schlecht zu queren	3::igndisp 5982,12291 6090,12451 6025,12494
+Mittelstreifen schlecht zu queren	3nocross::ignrte 6025,12494 6098,12446 6173,12396
+Altonaer Str. -> Cuxhavener Str.: Mittelstreifen schlecht zu queren	3::igndisp 6173,12396 6098,12446 6067,12381
+Cuxhavener Str. -> Altonaer Str.: Mittelstreifen schlecht zu queren	3::igndisp 6067,12381 6098,12446 6025,12494
 tragen (Treppe)	0:30:5 8159,13042
 tragen (Treppe)	0:30:-186 8276,13041
 Hanseatenweg	1 6442,12545 6445,12495 6428,12439 6368,12455 6324,12455 6314,12518

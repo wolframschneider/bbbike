@@ -625,7 +625,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2020-10-24 vvv
+#: last_checked: 2020-11-02 vvv
 ausgeschildert "zur Salzmannstraße Huronseestraße"	CP2; 16900,9861 16895,9922
 ausgeschildert "zur Sewanstraße"	CP2; 16900,9861 17005,9953
 #: last_checked ^^^
@@ -691,3 +691,4 @@ Miersdorfer Str. - Zum Mühlenschlag: auf der Fahrbahn bleiben, links abbiegen vo
 # 
 Frankfurter Allee - Kreutzigerstr.: auf dem alten Bürgersteigradweg bleiben, rechts abbiegen von der Radspur in die Kreutzigerstr. nur über Bordstein möglich	PI; 14208,12235 14291,12220 14285,12190
 # 
+Altentreptower Str./Bhf. Wuhletal: bereits beim Zebrastreifen auf die linke Seite wechseln	PI; 21970,12153 21995,12153 22031,12208

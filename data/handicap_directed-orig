@@ -201,7 +201,7 @@ An der Urania - Courbièrestr.: linker Gehweg	DH:h=q3,85 6740,10755 6685,10690 67
 Schlichtallee - Fischerstr.: Pollerreihe	DH:t=3 15880,10680 15970,10755 16080,10743
 # 
 #: next_check_id: RHINSTRASSENBRUECKE-2018
-#: last_checked: 2020-09-08 (mapillary) vvv
+#: last_checked: 2020-10-31 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2021-02-19 vvv
 Rhinstr.: östliche Brücke gesperrt, Radweg auf der linken Seite benutzen	DH:len=50:h=q2,570:tl 18215,12123 18216,12239 18216,12262 18220,12450 18225,12697 18235,13236
@@ -311,7 +311,7 @@ Urbanstr. - Kottbusser Damm: Radwegführung mit Umweg	DH:len=65 11861,9183 11909,
 # 
 #: next_check_id: LOEFFELBRUECKE-2019
 #: XXX die letzten Meter der Rampe werden neu asphaltiert
-#: last_checked: 2020-10-29 (mapillary) vvv
+#: last_checked: 2020-11-08 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-12-31 vvv
 Pasewalker -> Prenzlauer Promenade	DH:len=85:tl:h=q4,30 11911,19667 11915,19580 11942,19567
@@ -330,7 +330,7 @@ Eisenhutweg: Radfahrer müssen vom linken Zweirichtungsradweg wieder auf die ande
 #: next_check_id: TRESKOWALLEE-2019
 #: by: https://www.bahninfo-forum.de/read.php?9,581614,675331#msg-675331 (Sperrung der Kreuzung Ehrlichstr. ab 12.10.2020)
 #: source_id: 2147343744
-#: last_checked: 2020-10-15 vvv
+#: last_checked: 2020-11-02 vvv
 # REMOVED (hier nicht mehr) --- #: XXX nach den Bauarbeiten wird hier ein asphaltierter Radweg sein --- Treskowallee: Umleitungsstrecke für Radfahrer	DH:len=120:h=q1,120 18406,7760 18577,8033 18633,8126 18657,8163 18672,8238
 Treskowallee -> Ehrlichstr.: Umweg für Radfahrer	DH:len=60:h=q3,60 18657,8163 18672,8238 18615,8269
 #: last_checked ^^^

@@ -2025,7 +2025,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'data' => '#: tempex: su T09-T16
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-10-09
+#: last_checked: 2020-11-07
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -2357,7 +2357,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im November von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3620,18 +3620,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
 #: source_id: 2147341022
-#: XXX nächste Termine: 11. November 2020, 18. November 2020, 25. November 2020
-#: next_check: 2020-11-04
+#: XXX nächste Termine: 11., 18. November 2020, 25. November 2020
+#: next_check: 2020-11-11
 #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
 ',
-         'from' => 1604358000,
+         'from' => 1604962800,
          'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 4. November 2020 ab ca. 09:30 Uhr',
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 11. November 2020 ab ca. 09:30 Uhr',
          'type' => 'gesperrt',
-         'until' => 1604481300
+         'until' => 1605086100
        },
        undef,
        {
@@ -3879,7 +3879,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-10-16
+#: last_checked: 2020-11-05
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -3920,7 +3920,19 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: source_id: 2147343479 --- #: also_indoor: traffic vvv --- #: last_checked: 2018-10-25 vvv --- #: next_check: 2018-12-17 vvv
+# REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
+#: source_id: 2147346565
+	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
+	2::inwork 2417,4327 2434,4299
+',
+         'from' => undef,
+         'id' => 3016,
+         'text' => 'Thielallee: Bauarbeiten, Fahrbahn am Corrensplatz Richtung Norden gesperrt, möglicherweise sind auch Radfahrer betroffen, voraussichtlich bis Ende November 2020',
+         'type' => 'handicap',
+         'until' => 1606492800
+       },
        undef,
        undef,
        undef,
@@ -3981,7 +3993,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-10-16 (mapillary)
+#: last_checked: 2020-11-04
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372
@@ -4184,7 +4196,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: TRESKOWALLEE-2017
 #: last_checked: 2020-10-24
-#: next_check: 2020-12-31
+#: next_check: 2020-12-13
 # REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
 #: note: hier eng und viel Fußgängerverkehr
 	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
@@ -4194,9 +4206,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => undef,
          'id' => 3136,
-         'text' => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer müssen bis Godesberger Str. den teilweise engen Gehweg benutzen, vermutlich bis Ende 2020',
+         'text' => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer müssen bis Godesberger Str. den teilweise engen Gehweg benutzen, vermutlich bis Mitte Dezember 2020',
          'type' => 'handicap',
-         'until' => 1609455599
+         'until' => 1607900399
        },
        undef,
        undef,
@@ -4287,7 +4299,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
+#: next_check_id: ALTONAERSCHLESWIGER-2019
+#: last_checked: 2020-11-07
+#: check_frequency: 30d
+# REMOVED --- #: next_check: 2020-03-31
+	2::inwork 5894,12480 5944,12548
+',
+         'from' => 1570312800,
+         'id' => 3168,
+         'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.851896.php',
+         'text' => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs ab dem 7.10.2019, Ende unbekannt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
        undef,
        {
          'data' => '#: next_check_id: KOENIGSTEINBRUECKE-2019
@@ -4332,30 +4358,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: WUHLEWANDERWEG-2014
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.926192.php
-#: by: https://www.berliner-woche.de/hellersdorf/c-verkehr/geh-und-radweg-wird-gebaut_a263821
-#: XXX mittlerweile gibt es Bauarbeiten zum Erstellen einer Rampe zur Altentreptower Str.
-#: add_fragezeichen: Sind die Bauarbeiten beendet? Ist die Anbindung des Wuhlewanderwegs an die Altentreptower Str. fertig?
-#: osm_watch: way id="26288668" version="15"
-#: osm_watch: way id="798056092" version="1"
-#: last_checked: 2020-10-03 vvv
-#: check_frequency: 14d vvv
-# REMOVED --- #: next_check: 2020-09-30 vvv
-	2::inwork 22196,12961 22036,12367 21998,12204 21970,12153
-	2::inwork 22129,12155 22220,12243 22225,12281
-# REMOVED --- #: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
-',
-         'from' => 1572130800,
-         'id' => 3176,
-         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.854332.php',
-         'text' => 'Wuhlewanderweg nördlich des Bahnhofs Wuhletal: Baumaßnahme, Weg ist gesperrt; außerdem ist der Weg Altentreptower Str. - Parchimer Weg gesperrt (mindestens bis Ende September 2020, vielleicht auch länger)',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4370,7 +4373,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: MUENSTERBERGERWEG-2019
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
-#: last_checked: 2020-09-06
+#: last_checked: 2020-10-31
 #: check_frequency: 60d
 	2::inwork 24029,11363 24172,11320
 ',
@@ -4406,9 +4409,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1582487459,
          'id' => 3198,
-         'text' => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis Ende Oktober 2020',
+         'text' => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis 13.11.2020',
          'type' => 'handicap',
-         'until' => 1604077200
+         'until' => 1605283200
        },
        undef,
        undef,
@@ -4446,7 +4449,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: ROTHER-2020
-#: last_checked: 2020-10-11
+#: last_checked: 2020-11-05
 	q4::inwork 13478,10998 13575,10963
 ',
          'from' => undef,
@@ -4462,7 +4465,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-10-26
+#: last_checked: 2020-10-29
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4506,18 +4509,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX wann wird hier wieder offen sein? Wird es dann auch einen Radweg geben?
-#: last_checked: 2020-05-16
-#: check_frequency: 90d
-	2::inwork 17844,-4231 18143,-4094
-',
-         'from' => undef,
-         'id' => 3233,
-         'text' => 'August-Heinrich-Euler-Str. (BER): Bauarbeiten am Terminal, Straße kann möglicherweise gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4570,28 +4562,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1664550000
        },
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/an-einem-nachmittag-im-monat-wird-die-gudvanger-strasse-nun-offiziell-gesperrt_a274891 (hier: ab Juli 2020)
-#: by: http://www.spielstrassen.de/initiativen.php?init=Templiner_Str (hier: ab 30.6.2020, Hausnummern 15 bis 19)
-#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/fuer-die-spielstrasse-unterschreiben_a277858
-#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/templiner-strasse-wird-spielstrasse_a276796 (Hausnummern hier vermutlich falsch)
-	q4::temp::play 10670,14116 10716,14195 10739,14228
-',
-         'from' => 1593381600,
-         'id' => 3253,
-         'recurring' => 1,
-         'text' => 'Templiner Str.: zwischen Zionskirchstr. und Schwedter Str. dienstags zwischen 15 Uhr und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 30.6. bis 30.10.',
-         'type' => 'handicap',
-         'until' => 1604077200
-       },
+       undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.885612.php (hier (5. Bauabschnitt) ab Februar 2020)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2020-09-18
-#: next_check: 2020-11-07
+#: last_checked: 2020-11-08
+#: check_frequency: 45d
+# REMOVED --- #: next_check: 2020-11-07
 	q4::inwork 14136,17170 13996,16959
 ',
          'from' => undef,
@@ -4620,11 +4600,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
 #: XXX nicht ganz klar, ob die Sperrung schon am 30.9.2020 aufgehoben wird, Gesamtmaßnahme geht länger; laut rbbtext bis 2021-06-30; nun bei viz bis mindestens 9.11.2020
+#: last_checked: 2020-10-25 vvv
 #: next_check: 2020-11-09 vvv
 	q4::inwork; 4515,4760 4214,4595
 #: note: hier nur ein kurzes Stück
 	q2::inwork; 4214,4595 4039,4500
 #: next_check ^^^
+#: last_checked ^^^
 ',
          'from' => 1589275980,
          'id' => 3261,
@@ -4718,18 +4700,18 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1297930749249814532
 #: by: https://www.berliner-woche.de/tempelhof/c-verkehr/sanierungsbeginn-nach-wasserrohrbruch-am-24-august-noch-ungewiss_a285061
-#: XXX laut rbbtext nur noch bis 03.11.2020
+#: source_id: 2147346566 (bis 15.12.2020)
 #: also_indoor: traffic (G,H)
 #: last_checked: 2020-08-29
-#: next_check: 2020-12-07
-	q4::inwork 7597,4499 7628,4521 7667,4549
+#: next_check: 2020-12-15
+	q4::inwork; 7667,4549 7628,4521 7597,4499
 ',
          'from' => 1598206114,
          'id' => 3270,
          'source_id' => '2147346269',
-         'text' => 'Attilastr.: Fahrbahn und Gehwege zwischen Ringstr. und Steglitzer Damm gesperrt, Umweg durch S-Bahnhof, voraussichtlich bis Anfang Dezember 2020',
+         'text' => 'Attilastr.: Fahrbahn Richtung Kaiser-Wilhelm-Str. zwischen Ringstr. und Steglitzer Damm gesperrt, voraussichtlich bis 15.12.2020',
          'type' => 'handicap',
-         'until' => 1607356800
+         'until' => 1608048000
        },
        undef,
        undef,
@@ -4789,11 +4771,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: RICHARDPLATZ-2020
-#: osm_watch: way id="840456624" version="5"
+#: osm_watch: way id="840456624" version="6"
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2020-10-25
+#: last_checked: 2020-11-06
 #: check_frequency: 14d
 	q4::inwork 13288,7653 13378,7695 13416,7712
 ',
@@ -4803,19 +4785,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: last_checked: 2020-10-12 (mapillary) vvv
-	2::inwork 10857,19379 11081,19456 11068,19494
-	2::inwork 11081,19456 11236,19509
-#: last_checked ^^^
-',
-         'from' => 1601056113,
-         'id' => 3279,
-         'source_id' => 'https://www.berliner-woche.de/niederschoenhausen/c-bauen/schlossallee-gesperrt_a287821',
-         'text' => 'Schloßallee (Park Schönhausen): Bauarbeiten, komplett gesperrt, Beginn unbekannt, voraussichtlich bis zum 13. November 2020',
-         'type' => 'gesperrt',
-         'until' => 1605308399
-       },
+       undef,
        undef,
        {
          'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
@@ -4834,7 +4804,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
 #: XXX bis wann ist der Bahnübergang gesperrt?
 #: priority: #A
-#: last_checked: 2020-10-03
+#: last_checked: 2020-10-31
 #: check_frequency: 90d
 #: next_check: 2021-03-01
 	2::inwork 20627,12162 20624,12133 20620,12108
@@ -4862,10 +4832,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        {
-         'data' => '#: source_id: 2147343744
-#: last_checked: 2020-10-15 vvv
+         'data' => '#: by: https://www.berliner-woche.de/karlshorst/c-verkehr/letzte-arbeiten-an-den-gleisen_a291893 (hier: bis 13.12.2020)
+#: source_id: 2147343744
+#: last_checked: 2020-11-02 vvv
 #: check_frequency: 14d vvv
-#: next_check: 2020-12-31 vvv
+#: next_check: 2020-12-13 vvv
 	1::inwork 18672,8238 18657,8163
 frei bis Hausnr. 128, danach Umweg über schmalen Gehweg	q3::inwork; 18704,8427 18672,8238
 Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
@@ -4877,24 +4848,23 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
          'id' => 3288,
          'text' => 'Treskowallee: ab Ehrlichstr. Richtung Süden gesperrt, Umleitung ab Wandlitzstr.',
          'type' => 'gesperrt',
-         'until' => 1609430400
+         'until' => 1607875200
        },
        undef,
        undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/zehlendorf/c-bauen/fahrbahnsanierung-auf-der-matterhornstrasse_a290755
-# XXX im Anschluss daran wird zwischen Elvirasteig und Lindenthaler Allee saniert, vom 04.11.2020 bis 17.11.2020
-#: priority: #A
-#: next_check: 2020-11-03
-	q4::inwork -2096,3402 -1981,3353 -1888,3315 -1782,3311 -1706,3311 -1628,3311 -1536,3314
+# REMOVED --- # XXX im Anschluss daran wird zwischen Elvirasteig und Lindenthaler Allee saniert, vom 04.11.2020 bis 17.11.2020 --- #: priority: #A --- #: next_check: 2020-11-03
+# REMOVED --- q4::inwork -2096,3402 -1981,3353 -1892,3316 -1855,3308 -1782,3311 -1706,3311 -1628,3311 -1536,3314
+	q4::inwork -1536,3314 -1360,3314 -1187,3264 -1161,3252
 ',
          'dont_check_date' => 1,
-         'from' => 1602540000,
+         'from' => 1604358000,
          'id' => 3291,
          'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1004859.php',
-         'text' => 'Matterhornstr.: Bauarbeiten zwischen Eiderstedter Weg und Elvirasteig, Fahrbahn gesperrt, vom 14.10.2020 bis 03.11.2020',
+         'text' => 'Matterhornstr.: Bauarbeiten zwischen Elvirasteig und Lindenthaler Allee, Fahrbahn gesperrt, vom 04.11.2020 bis 17.11.2020',
          'type' => 'handicap',
-         'until' => 1605654000
+         'until' => 1605632400
        },
        {
          'data' => '#: by: https://www.lichtenrade-berlin.de/news/aktuelle-news-internetzeitung/30-blog/blog2019/1485-baubeginn-des-spielplatzes-auf-dem-rehagener-platz
@@ -4981,43 +4951,16 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
          'type' => 'handicap',
          'until' => undef
        },
+       undef,
        {
-         'accept_multi_feature_distance' => 50000,
-         'data' => '# REMOVED (mit der neuen Verordnung explizit ausgenommen) --- #: next_check_id: COVID19-MASK-2020 vvv --- #: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen) --- #: by: https://www.rbb24.de/panorama/thema/2020/coronavirus/av7/video-bergmannstr-polizei-kontrolle-maskenpflicht-radfahrer.html --- #: next_check: 2020-11-30 vvv
-#: note: in der Verordnung fälschlicherweise im Ortsteil PB verortet
-Alte Schönhauser Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 10527,13257 10596,13398 10633,13474 10644,13497 10709,13629 10741,13685
-#: note Altstadt Spandau vvv
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340 -3227,14260
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3155,14340 -3204,14368 -3231,14383 -3275,14407
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3089,14440 -3150,14478
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3110,14408 -3060,14380
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3142,14358 -3092,14331
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3110,14408 -3174,14438 -3228,14468
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3293,14304 -3231,14383
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3552,14082 -3457,14189 -3409,14241 -3338,14333 -3275,14407 -3228,14468 -3205,14512 -3185,14556 -3150,14631
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3404,14147 -3457,14189
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3227,14260 -3293,14304 -3338,14333 -3397,14370
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3275,14407 -3350,14446
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3316,14169 -3409,14241
-Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3150,14631 -3122,14557 -3107,14535 -3054,14498
-#: note ^^^
-Bergmannstr. (Kreuzberg): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252 9793,9241 9880,9233 9973,9232 10001,9234 10123,9233 10547,9233
-Bölschestr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 25579,5958 25571,5829 25567,5749 25563,5666 25561,5622 25553,5486 25548,5398 25546,5359 25544,5326 25539,5237 25524,5011 25522,4935 25519,4830
-Friedrichstr. (Mitte): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9212,13471 9225,13389 9246,13235 9254,13171 9262,13111 9269,13060 9279,12953 9286,12886 9298,12765 9303,12718 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351 9369,12253 9373,12197 9384,12103 9393,12000 9405,11903 9418,11804 9432,11702 9444,11616 9456,11513 9468,11412 9474,11360 9478,11317
-Karl-Marx-Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 13236,6489 13200,6550 13141,6651 13121,6689 13117,6716 13085,6925 13072,7013 13068,7043 13058,7112 13051,7157 13043,7234 13034,7319 13030,7346 13029,7353 13018,7441 13015,7471 12987,7560 12969,7610 12914,7785 12898,7832 12892,7850 12865,7923 12846,7981 12830,8031 12794,8103 12753,8187 12714,8249 12689,8289 12639,8344 12598,8390 12582,8408 12562,8432 12540,8458 12500,8504 12330,8636 12156,8760 12063,8826 11998,8872 11880,8955 11831,8989
-Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2415,9765 2445,9838 2482,9870 2532,9911 2590,9949 2694,10002 2702,10006 2770,10024 2828,10040 2974,10081 3111,10116 3189,10141 3289,10174 3374,10201 3489,10240 3562,10264 3618,10283 3737,10322 3835,10352 3971,10381 4157,10418 4245,10435 4371,10465 4503,10497 4676,10541 4847,10589 5076,10658 5215,10711 5341,10756 5475,10808 5656,10876 5725,10892 5782,10884
-Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2445,9838 2369,9779
-Schloßstr. (Steglitz): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 5370,6486 5346,6443 5312,6382 5269,6305 5244,6261 5219,6215 5165,6119 5137,6066 5099,5994 5091,5979 5083,5964 5048,5904 5018,5854 4998,5817 4982,5789 4963,5754 4946,5725 4900,5648 4861,5581 4832,5522 4767,5389 4745,5344 4741,5309 4677,5274 4593,5235 4512,5199 4432,5160 4343,5112
-Tauentzienstr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 5782,10884 5907,10821 5942,10803 6025,10746 6133,10679 6171,10657
-Wilmersdorfer Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 3813,10435 3870,10510 3883,10585 3881,10699 3869,10760 3847,10865 3835,10915 3820,10987 3795,11098 3770,11231 3749,11344 3717,11462 3689,11637 3671,11799 3666,11855 3651,12001 3643,12092 3630,12201 3623,12284 3612,12377
-# REMOVED --- #: next_check ^^^ --- #: next_check_id ^^^
+         'data' => '	2::inwork 4659,3065 4587,3097
 ',
-         'from' => 1603490400,
-         'id' => 3300,
-         'is_pseudo_handicap' => 1,
-         'text' => 'mögliche Maskenpflicht für Radfahrer',
-         'type' => 'handicap',
-         'until' => 1604098800
+         'from' => 1604216700,
+         'id' => 3301,
+         'source_id' => '2147346571',
+         'text' => 'Bäkestr.: Brückenarbeiten, Sperrung, eventuell sind auch Radfahrer betroffen, vom 02.11.2020 08:45 Uhr bis 27.11.2020 15:00 Uhr ',
+         'type' => 'gesperrt',
+         'until' => 1606485600
        }
      
 );
