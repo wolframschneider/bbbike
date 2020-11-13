@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2012,2013,2016,2017,2018,2019 Slaven Rezic. All rights reserved.
+# Copyright (C) 2012,2013,2016,2017,2018,2019,2020 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -217,6 +217,7 @@ for my $file (@files) {
 
 	     my $nextcheck_date;
 	     my $nextcheck_wd;
+	     my $expiration_by_nextcheck;
 	     if ($has_nextcheck) {
 		 if (my($y,$m,$d) = $dir->{_nextcheck_date}[0] =~ m{^(\d{4})-(\d{2})-(\d{2})$}) {
 		     my $epoch = eval { timelocal 0,0,0,$d,$m-1,$y };
@@ -226,6 +227,9 @@ for my $file (@files) {
 		     } else {
 			 $nextcheck_wd = [qw(Su Mo Tu We Th Fr Sa)]->[(localtime($epoch))[6]];
 			 $nextcheck_date = "$y-$m-$d";
+			 if ($dir->{_nextcheck_label}[0] =~ /^next check/) { # condition is a little bit hacky, because of the string match
+			     $expiration_by_nextcheck = 1;
+			 }
 		     }
 		 } else {
 		     warn "ERROR: Cannot parse date '$dir->{_nextcheck_date}[0]' (file $file), skipping...\n";
@@ -296,8 +300,14 @@ for my $file (@files) {
 	     {
 		 my $date_from;
 		 if ($dir->{last_checked} && $dir->{last_checked}->[0] =~ m{^(\d{4})-(\d{2})-(\d{2})}) {
-		     my $epoch = timelocal(0,0,0,$3,$2-1,$1); $epoch += 86400; # roughly next day, may be wrong in DST switches
+		     my $last_checked_day = "$1-$2-$3";
+		     my $epoch = timelocal(0,0,0,$3,$2-1,$1);
+		     $epoch += 86400;
 		     $date_from = strftime '%Y-%m-%d', localtime($epoch);
+		     if ($last_checked_day eq $date_from) { # hacky: deal with DST switches in autumn
+			 $epoch += 3600;
+			 $date_from = strftime '%Y-%m-%d', localtime($epoch);
+		     }
 		 } else {
 		     $date_from = $one_month_before;
 		 }
@@ -422,10 +432,13 @@ for my $file (@files) {
 	     # build first the org-mode headline, and then the
 	     # complete org-mode item ($body)
 	     my $todo_state = @planned_route_files ? 'PLAN' : 'TODO'; # make sure all states have four characters
-	     my $headline = "** $todo_state " .
-		 (defined $nextcheck_date ? "<$nextcheck_date $nextcheck_wd> " : "                ") .
-		     ($prio ? "[$prio] " : "") .
-			 $subject;
+	     my $headline =
+		 "** $todo_state "
+		 . (defined $nextcheck_date  ? "<$nextcheck_date $nextcheck_wd> " : "                ")
+		 . ($prio                    ? "[$prio] "                         : "") # "     ")
+		 . ($expiration_by_nextcheck ? "[!] "                             : "") # "    ")
+		 . $subject
+		 ;
 	     if ($dir->{osm_watch}) {
 		 $headline .= " (+osm_watch)";
 		 for my $osm_watch (@{ $dir->{osm_watch} }) {

@@ -2202,40 +2202,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/weihnachtsmarkt/3240343-3496862-alt-rixdorfer-weihnachtsmarkt.html
-#: XXX Veranstaltung 2020 unter Vorbehalt!
-#: priority: #A
-#: next_check: 2020-12-01
-#: tempex: before(2nd_advent,fr) T17:00 - 2nd_advent T20:00 vvv
-	2::xmas 13416,7712 13424,7680
-	2::xmas 13416,7712 13378,7695 13288,7653
-	2::xmas 13424,7680 13417,7654 13392,7648 13295,7627
-	2::xmas 12969,7610 13100,7626 13177,7644
-	2::xmas 13188,7590 13177,7644
-	2::xmas 13188,7590 13295,7627
-	2::xmas 13288,7653 13295,7627
-	2::xmas 13288,7653 13177,7644
-	2::xmas 13288,7653 13278,7673 13245,7742
-#: tempex ^^^
-',
-         'from' => 1606950000,
-         'id' => 1998,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1001438-955635-alt-rixdorfer-weihnachtsmarkt.html',
-         'text' => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (04.12.2020 - 06.12.2020)',
-         'type' => 'gesperrt',
-         'until' => 1607295599
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2321,7 +2288,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10354,8493 10298,8245
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11472,7732 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10037,8269 10298,8245 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294 9242,7286
@@ -2340,9 +2307,9 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
 (Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10644,8363 10360,8521
-(Weg parallel zur Oderstr.)	2::night 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
-(Eingang Kienitzer Str.)	2::night 11498,7750 11489,7748 11479,7746 11470,7744
-(Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11516,7654
+(Weg parallel zur Oderstr.)	2::night 11458,7897 11490,7737 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
+(Eingang Kienitzer Str.)	2::night 11504,7738 11490,7737 11482,7735 11472,7732
+(Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11521,7638
 (Flughafen Tempelhof - Eingang Okerstr.)	2::night 11528,7528 11540,7534
 (Flughafen Tempelhof - Eingang Leinestr.)	2::night 11547,7432 11558,7438
 (Flughafen Tempelhof - Eingang Oderstr.)	2::night 11598,7264 11608,7267
@@ -3620,18 +3587,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
 #: source_id: 2147341022
-#: XXX nächste Termine: 11., 18. November 2020, 25. November 2020
-#: next_check: 2020-11-11
+#: XXX nächste Termine: 18. November 2020, 25. November 2020
+#: next_check: 2020-11-18
 #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
 ',
-         'from' => 1604962800,
+         'from' => 1605567600,
          'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 11. November 2020 ab ca. 09:30 Uhr',
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 18. November 2020 ab ca. 09:30 Uhr',
          'type' => 'gesperrt',
-         'until' => 1605086100
+         'until' => 1605690900
        },
        undef,
        {
@@ -3993,10 +3960,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-11-04
+#: last_checked: 2020-11-09
 #: check_frequency: 30d
 #: next_check: 2020-12-04
-	q4::inwork; 14652,10201 14724,10297 14766,10372
+	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
 ',
          'from' => 1594530000,
          'id' => 3048,
@@ -4449,7 +4416,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: ROTHER-2020
-#: last_checked: 2020-11-05
+#: last_checked: 2020-11-10
+#: check_frequency: 21d
 	q4::inwork 13478,10998 13575,10963
 ',
          'from' => undef,
@@ -4465,7 +4433,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-10-29
+#: last_checked: 2020-11-11
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4599,7 +4567,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
-#: XXX nicht ganz klar, ob die Sperrung schon am 30.9.2020 aufgehoben wird, Gesamtmaßnahme geht länger; laut rbbtext bis 2021-06-30; nun bei viz bis mindestens 9.11.2020
+#: also_indoor: traffic (H,G) vvv
+#: XXX wurde bei viz bereits aufgehoben, allerdings geht die Gesamtmaßnahme dort auch länger; laut rbbtext bis 2021-06-30; nun bei viz bis mindestens 9.11.2020 vvv
+#: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
 #: last_checked: 2020-10-25 vvv
 #: next_check: 2020-11-09 vvv
 	q4::inwork; 4515,4760 4214,4595
@@ -4607,6 +4577,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	q2::inwork; 4214,4595 4039,4500
 #: next_check ^^^
 #: last_checked ^^^
+#: add_fragezeichen ^^^
+#: XXX ^^^
+#: also_indoor ^^^
 ',
          'from' => 1589275980,
          'id' => 3261,
@@ -4928,7 +4901,7 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
        },
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-10-27
+#: last_checked: 2020-11-12
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
 ',
@@ -4961,6 +4934,26 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
          'text' => 'Bäkestr.: Brückenarbeiten, Sperrung, eventuell sind auch Radfahrer betroffen, vom 02.11.2020 08:45 Uhr bis 27.11.2020 15:00 Uhr ',
          'type' => 'gesperrt',
          'until' => 1606485600
+       },
+       {
+         'data' => '	q4::inwork 8614,15156 8570,15107
+',
+         'from' => 1604984400,
+         'id' => 3302,
+         'source_id' => '2147346587',
+         'text' => 'Grenzstr.: Baustelle, Fahrbahn nördlich der Kreuzung Gartenstr./Gerichtsstr. gesperrt, vom 11.11.2020 06:00 Uhr bis 16.12.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1608134400
+       },
+       {
+         'data' => '	2::inwork 29078,49329 29086,49261
+',
+         'from' => 1605394800,
+         'id' => 3303,
+         'source_id' => 'LS/721-E/20/145',
+         'text' => 'B167: Sperrung der Brücke über den Finowkanal B167, evtl. sind auch Radfahrer betroffen, 16.11.2020 bis 20.11.2020 ',
+         'type' => 'gesperrt',
+         'until' => 1605913200
        }
      
 );

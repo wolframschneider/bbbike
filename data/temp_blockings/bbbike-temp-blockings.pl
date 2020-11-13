@@ -888,7 +888,7 @@ EOF
 	2 12185,7381 12181,7390 12158,7449 12123,7549
 	2 11920,8252 11931,8206 11933,8198
 	2 11920,8252 11915,8279 11898,8362
-	2 12041,7788 12055,7751 12075,7696
+	2 12041,7788 12057,7744 12075,7696
 	2 11979,8014 11963,8074
 	2 11979,8014 12001,7937 12025,7852
 	2 11933,8198 11963,8074
@@ -3104,13 +3104,13 @@ EOF
 	2 12185,7381 12181,7390 12158,7449 12123,7549
 	2 11920,8252 11931,8206 11933,8198
 	2 11920,8252 11915,8279 11898,8362
-	2 12041,7788 12055,7751
+	2 12041,7788 12057,7744
 	2 12041,7788 12025,7852
 	2 12001,7937 12025,7852
 	2 12001,7937 11979,8014
 	2 11979,8014 11963,8074
 	2 11933,8198 11963,8074
-	2 12055,7751 12075,7696
+	2 12057,7744 12075,7696
 EOF
      },
      { from  => 1128985496, # 2005-10-11 01:04
@@ -4615,7 +4615,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005438',
        data  => <<EOF,
-	2 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12181,7390 12185,7381
+	2 11979,8014 12001,7937 12025,7852 12041,7788 12057,7744 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12181,7390 12185,7381
 EOF
      },
      { from  => 1148565600, # 2006-05-25 16:00
@@ -6280,7 +6280,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003771',
        data  => <<EOF,
-	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12181,7390 12185,7381
+	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12057,7744 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12181,7390 12185,7381
 EOF
      },
      { from  => 1160107200, # 2006-10-06 06:00
@@ -17239,18 +17239,17 @@ EOF
 	3 8374,11479 8389,11378 8427,11365
 EOF
      },
-     { from  => $isodate2epoch->("2020-12-03 00:00:00"),
-       until => $isodate2epoch->("2020-12-06 23:59:59"),
+     { from  => $isodate2epoch->("2019-12-05 00:00:00"),
+       until => $isodate2epoch->("2019-12-08 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 1, months => 12]],
+       recurrences => [['yearly', days => 1, months => 12, start => "2021-01-01T00:00:00"]], # findet 2020 wegen Corona nicht statt
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1001438-955635-alt-rixdorfer-weihnachtsmarkt.html',
-       text  => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (04.12.2020 - 06.12.2020)',
+       text  => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (06.12.2019 - 08.12.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/weihnachtsmarkt/3240343-3496862-alt-rixdorfer-weihnachtsmarkt.html
-#: XXX Veranstaltung 2020 unter Vorbehalt!
-#: priority: #A
-#: next_check: 2020-12-01
+#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.1016256.php (finder 2020 nicht statt)
+# REMOVED --- #: XXX Veranstaltung 2020 unter Vorbehalt! --- #: priority: #A --- #: next_check: 2020-12-01
 #: tempex: before(2nd_advent,fr) T17:00 - 2nd_advent T20:00 vvv
 	2::xmas 13416,7712 13424,7680
 	2::xmas 13416,7712 13378,7695 13288,7653
@@ -17927,7 +17926,7 @@ EOF
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10354,8493 10298,8245
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11472,7732 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10037,8269 10298,8245 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294 9242,7286
@@ -17946,9 +17945,9 @@ EOF
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
 (Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10644,8363 10360,8521
-(Weg parallel zur Oderstr.)	2::night 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
-(Eingang Kienitzer Str.)	2::night 11498,7750 11489,7748 11479,7746 11470,7744
-(Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11516,7654
+(Weg parallel zur Oderstr.)	2::night 11458,7897 11490,7737 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
+(Eingang Kienitzer Str.)	2::night 11504,7738 11490,7737 11482,7735 11472,7732
+(Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11521,7638
 (Flughafen Tempelhof - Eingang Okerstr.)	2::night 11528,7528 11540,7534
 (Flughafen Tempelhof - Eingang Leinestr.)	2::night 11547,7432 11558,7438
 (Flughafen Tempelhof - Eingang Oderstr.)	2::night 11598,7264 11608,7267
@@ -22744,7 +22743,7 @@ EOF
        until => $isodate2epoch->("2019-12-22 21:00:00"), # 1386525600, # 2013-12-08 19:00
        periodic => 1,
        recurrences => [['yearly', days => 1, months => 12]],
-       recurrence_prewarn_days => 21,
+       recurrence_prewarn_days => 14,
        text  => 'Alt-Rudow zwischen Köpenicker Str. und Krokusstr.: Rudower Adventsmeile, Straße gesperrt, ab: 21.12.2019 12 Uhr bis 22.12.2019 21 Uhr ',
        type  => 'gesperrt',
        source_id => 'IM_020883',
@@ -25997,17 +25996,17 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2020-11-10 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2020-11-11 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 11. November 2020 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2020-11-17 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2020-11-18 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 18. November 2020 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
 #: source_id: 2147341022
-#: XXX nächste Termine: 11., 18. November 2020, 25. November 2020
-#: next_check: 2020-11-11
+#: XXX nächste Termine: 18. November 2020, 25. November 2020
+#: next_check: 2020-11-18
 #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
@@ -28549,10 +28548,10 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-11-04
+#: last_checked: 2020-11-09
 #: check_frequency: 30d
 #: next_check: 2020-12-04
-	q4::inwork; 14652,10201 14724,10297 14766,10372
+	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
 EOF
      },
      { from  => 1542222296, # 2018-11-14 20:04
@@ -30522,7 +30521,8 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ROTHER-2020
-#: last_checked: 2020-11-05
+#: last_checked: 2020-11-10
+#: check_frequency: 21d
 	q4::inwork 13478,10998 13575,10963
 EOF
      },
@@ -30562,7 +30562,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-10-29
+#: last_checked: 2020-11-11
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31043,7 +31043,9 @@ EOF
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
-#: XXX nicht ganz klar, ob die Sperrung schon am 30.9.2020 aufgehoben wird, Gesamtmaßnahme geht länger; laut rbbtext bis 2021-06-30; nun bei viz bis mindestens 9.11.2020
+#: also_indoor: traffic (H,G) vvv
+#: XXX wurde bei viz bereits aufgehoben, allerdings geht die Gesamtmaßnahme dort auch länger; laut rbbtext bis 2021-06-30; nun bei viz bis mindestens 9.11.2020 vvv
+#: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
 #: last_checked: 2020-10-25 vvv
 #: next_check: 2020-11-09 vvv
 	q4::inwork; 4515,4760 4214,4595
@@ -31051,6 +31053,9 @@ EOF
 	q2::inwork; 4214,4595 4039,4500
 #: next_check ^^^
 #: last_checked ^^^
+#: add_fragezeichen ^^^
+#: XXX ^^^
+#: also_indoor ^^^
 EOF
      },
      { from  => undef, # 
@@ -31505,7 +31510,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-10-27
+#: last_checked: 2020-11-12
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
 EOF
@@ -31574,6 +31579,24 @@ EOF
        source_id => '2147346571',
        data  => <<EOF,
 	2::inwork 4659,3065 4587,3097
+EOF
+     },
+     { from  => 1604984400, # 2020-11-10 06:00
+       until => 1608134400, # 2020-12-16 17:00
+       text  => 'Grenzstr.: Baustelle, Fahrbahn nördlich der Kreuzung Gartenstr./Gerichtsstr. gesperrt, vom 11.11.2020 06:00 Uhr bis 16.12.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346587',
+       data  => <<EOF,
+	q4::inwork 8614,15156 8570,15107
+EOF
+     },
+     { from  => 1605394800, # 2020-11-15 00:00
+       until => 1605913200, # 2020-11-21 00:00
+       text  => 'B167: Sperrung der Brücke über den Finowkanal B167, evtl. sind auch Radfahrer betroffen, 16.11.2020 bis 20.11.2020 ',
+       type  => 'gesperrt',
+       source_id => 'LS/721-E/20/145',
+       data  => <<EOF,
+	2::inwork 29078,49329 29086,49261
 EOF
      },
     );
