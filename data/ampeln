@@ -1930,6 +1930,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
 	F 8443,15901
 	F 5373,10981
 	F 18733,8650
+	X::inwork 18731,8577
 	X 18704,8427
 	F 4920,9029
 	X 21647,15496
@@ -2343,6 +2344,8 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	B0 14691,6173
 	F 8206,12734
 	F 5188,20884
+	F 5869,4065
+Hultschiner Damm/Rahnsdorfer Str.: hier wird eine Ampel gebaut	X::inwork 24653,10580
 	X -17127,-554
 	F -12868,-502
 	X -12940,-1625

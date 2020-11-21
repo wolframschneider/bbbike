@@ -299,6 +299,8 @@ Knoten am Flughafen Tegel	1 2996,15930 2960,15847
 Knoten am Flughafen Tegel	1 2913,15944 2949,15922 2977,15923 2996,15930
 Knoten am Flughafen Tegel	1 2960,15847 2880,15884 2828,15903
 Knoten am Flughafen Tegel	1 2828,15903 2880,15908 2913,15944
+(Zur Luftfracht)	1 2880,15884 2787,15870
+Zum Flughafen Tegel	1 2757,16194 2709,16291 2692,16326 2621,16344 2552,16330 2517,16380 2538,16435 2601,16447 2638,16406 2675,16361 2733,16343 2812,16348 2853,16293
 Eschengraben	1 11755,17216 11778,17066 11781,17046 11817,16870 11831,16802 11776,16753
 Czarnikauer Str.	1 10613,16403 10449,16415 10225,16436
 Talstr.	1 11776,16753 11825,16666
@@ -1257,9 +1259,11 @@ Dürtenstr. -> Buschkrugallee: Mittelstreifen mit hoher Kante	3::igndisp 13874,48
 Straßenbahntrasse	3nocross::ignrte 12878,13229 12979,13280 13073,13329
 Virchowstr. -> Landsberger Allee: Straßenbahntrasse	3::igndisp 12974,13289 12979,13280 13073,13329
 Landsberger Allee -> Virchowstr.: Straßenbahntrasse	3::igndisp 12878,13229 12979,13280 12974,13289
-Straßenbahntrasse	3nocross::ignrte 16004,10204 16114,10123 16138,10105 16187,10033 16261,9925 16302,9865
-Hauptstr. -> Friedrich-Jacobs-Promenade: Straßenbahntrasse	3::igndisp 16138,10105 16114,10123 16066,10054
-Friedrich-Jacobs-Promenade -> Hauptstr.: Straßenbahntrasse	3::igndisp 16066,10054 16114,10123 16004,10204
+Straßenbahntrasse	3nocross::ignrte 16004,10204 16090,10141 16117,10120 16138,10105 16187,10033 16261,9925 16302,9865
+Hauptstr. -> Friedrich-Jacobs-Promenade: Straßenbahntrasse	3::igndisp 16117,10120 16090,10141 16041,10072
+Friedrich-Jacobs-Promenade -> Hauptstr.: Straßenbahntrasse	3::igndisp 16041,10072 16090,10141 16004,10204
+Hauptstr. -> Friedrich-Jacobs-Promenade: Straßenbahntrasse	3::igndisp 16138,10105 16117,10120 16068,10051
+Friedrich-Jacobs-Promenade -> Hauptstr.: Straßenbahntrasse	3::igndisp 16068,10051 16117,10120 16090,10141
 Hauptstr. -> Saganer Str.: Straßenbahntrasse	3::igndisp 16138,10105 16187,10033 16206,10047
 Hauptstr. -> Georg-Löwenstein-Str.: Straßenbahntrasse	3::igndisp 16261,9925 16187,10033 16155,9992
 Saganer Str. -> Hauptstr.: Straßenbahntrasse	3::igndisp 16206,10047 16187,10033 16261,9925
@@ -1540,10 +1544,6 @@ Wuhlewanderweg -> Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3::ignd
 Wuhlewanderweg -> Möwenweg: unbequemes Passieren des Mittelstreifens	3::igndisp 22244,11311 22242,11269 22238,11223
 Möwenweg -> Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3::igndisp 22238,11223 22242,11269 21954,11269
 Möwenweg -> Wuhlewanderweg: unbequemes Passieren des Mittelstreifens	3::igndisp 22238,11223 22242,11269 22244,11311
-Mittelstreifen nicht passierbar	3nocross::ignrte 2975,15813 2960,15847 2944,15880
-Zum Flughafen Tegel -> Knoten am ehemaligen Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2944,15880 2960,15847 2996,15930
-Knoten am ehemaligen Flughafen Tegel -> Zum Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2944,15880
-Knoten am ehemaligen Flughafen Tegel -> Knoten am ehemaligen Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2996,15930
 Mittelstreifen nicht passierbar	3nocross::ignrte 2944,15880 2913,15944 2809,16143
 Zum Flughafen Tegel -> Knoten am ehemaligen Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2944,15880 2913,15944 2880,15908
 Knoten am ehemaligen Flughafen Tegel -> Zum Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2949,15922 2913,15944 2944,15880
@@ -2671,7 +2671,7 @@ Drängelgitter	BNP:3:78:trailer=10 10969,10015
 Drängelgitter	BNP:3:-253:trailer=10 10879,10037
 langes Drängelgitter	BNP:10:-86:trailer=20 20284,12064
 Drängelgitter	BNP:3:81:trailer=10 21911,6938
-Tor, verwinkelt	BNP:3:-40:trailer=10 17571,12557
+Tor, verwinkelt	BNP:3:-45:trailer=10 17571,12557
 Schranke	BNP:5:-72:trailer=15 22221,10985
 Drängelgitter	BNP:3:-243:trailer=10 11892,12760
 Drängelgitter	BNP:3:-244:trailer=10 11831,12789
@@ -3156,6 +3156,7 @@ Durchgangsweg am Blueberry Inn: wegen Bauarbeiten komplett gesperrt	2::inwork 12
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9507,-85 9468,-85 9271,323 9253,370 9218,458 9178,556
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9271,323 9296,335 9249,434 9218,458
 Alexander-von-Humboldt-Weg: Durchgang gesperrt, auch für Fußgänger	2::inwork 18892,3256 18689,3465
+Katharina-Boll-Dornberger-Str.: Durchgang gesperrt	2::inwork 18836,3611 18943,3508
 Cotheniusstr.: Fahrbahn durch Bauzäune abgesperrt	2::inwork 13430,13733 13519,13785
 Abendseglersteig: noch in Bau	2::inwork 33176,2938 33147,2832 33267,2810 33383,2792 33406,2852
 Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10203,-2137 10228,-2136
@@ -3173,8 +3174,8 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:inwork 9429,12728 94
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10687,11853 10672,11870 10642,11901
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10680,11875 10672,11870 10662,11863
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
-Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwork 10805,12468 10803,12470
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
+Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwork 10805,12468 10803,12470
 Gustav-Böß-Str.: Bauarbeiten, Straße ist komplett gesperrt	2::inwork 10673,12434 10772,12515
 Königsteinbrücke: Brücke wurde abgerissen und wird neu gebaut	2::inwork 13148,22396 13385,22383
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr.	1::inwork 12605,15491 12556,15518
@@ -3216,6 +3217,7 @@ Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5643,12253
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5574,12237 5535,12206
 Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20627,11552 20631,11621 20633,11651
+Heino-Schmieden-Weg: größtenteils noch wegen Bauarbeiten gesperrt	2::inwork 20720,11484 20726,11539 20735,11613 20831,11604 20818,11480
 Niederlagstr.: Einbahnstraße	1s:inwork 9972,12184 9959,12281
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
 Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409

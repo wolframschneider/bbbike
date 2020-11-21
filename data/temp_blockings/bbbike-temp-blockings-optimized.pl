@@ -1,270 +1,22 @@
-$#temp_blocking = 165;
+$#temp_blocking = 393;
 push @temp_blocking,
 (
        {
-         'data' => '#: by: https://www.berlin.de/weihnachtsmarkt/3659027-3496862-umwelt-und-weihnachtsmarkt-in-der-sophie.html
-#: tempex: before(1st_advent,1d) - +1d
-	2::xmas 9986,13412 10317,13248
-',
-         'from' => 1606431600,
-         'id' => 166,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              25,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (28.11.2020 - 29.11.2020)',
-         'type' => 'gesperrt',
-         'until' => 1606690799
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       {
          'data' => '#: XXX weiterhin unklar, ob Weihnachtsmärkte noch im November, erst im Dezember oder gar nicht öffnen werden
 #: priority: #A
-#: next_check: 2020-11-19
+#: next_check: 2020-11-30
 # sowieso schon mit q4 markiert, deshalb -> 2
 	2::xmas 5829,10964 5782,10884
 	2::xmas 5656,10876 5652,11004
 #: by: https://twitter.com/VIZ_Berlin/status/1063061013334032384
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
 #: by: https://www.berlin.de/weihnachtsmarkt/3240274-3496862-weihnachtsmarkt-an-der-gedaechtniskirche.html (2020)
+#: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/971524-955635-weihnachtsmarkt-an-der-gedaechtniskirche.html
 # REMOVED --- #: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020? Laut vmz ist der Radverkehr in der Kantstr. nicht betroffen --- #: last_checked: 2019-11-27 (hier mittlerweile Weihnachtsmarkt, man könnte aber durchschieben) --- #: next_check: 2019-11-25
 #: source_id: 2147345089
 Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
 ',
-         'from' => 1605999600,
+         'from' => 1606777200,
          'id' => 394,
          'periodic' => 1,
          'recurrences' => [
@@ -277,7 +29,7 @@ Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
                             ]
                           ],
          'source_id' => 'https://www.schaustellerverband-berlin.de/weihnachtsmarkt-berlin.html',
-         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 23. November 2020 bis 03. Januar 2021',
+         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 2. Dezember 2020 bis 3. Januar 2021',
          'type' => 'gesperrt',
          'until' => 1609714799
        },
@@ -3050,29 +2802,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'type' => 'gesperrt',
          'until' => 1608505199
        },
-       {
-         'data' => '#: by: https://www.berlin.de/weihnachtsmarkt/3250022-3496862-adventsmarkt-am-kollwitzplatz.html
-#: tempex: 1st_advent & T12-T19
-	2::xmas 11317,14564 11247,14578 11155,14554
-',
-         'from' => 1606561200,
-         'id' => 2518,
-         'periodic' => 1,
-         'recurrence_prewarn_days' => 21,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              26,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarkt-am-kollwitzplatz.html',
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 29. November 2020, 12:00 bis 19:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1606672800
-       },
+       undef,
        {
          'data' => '#: tempex: 2nd_advent & T12-T19
 	2::xmas 11317,14564 11247,14578 11155,14554
@@ -3460,7 +3190,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 	q4::xmas 11064,12910 11134,12793
 #: tempex ^^^
 ',
-         'from' => 1605999600,
+         'from' => 1606690800,
          'id' => 2763,
          'periodic' => 1,
          'recurrences' => [
@@ -3473,7 +3203,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
                             ]
                           ],
          'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html',
-         'text' => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 23. November 2020 bis 27. Dezember 2020',
+         'text' => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, voraussichtlich Anfang Dezember 2020 bis 27. Dezember 2020',
          'type' => 'handicap',
          'until' => 1609109999
        },
@@ -3587,18 +3317,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
 #: source_id: 2147341022
-#: XXX nächste Termine: 18. November 2020, 25. November 2020
-#: next_check: 2020-11-18
-#: priority: #A
+# REMOVED --- #: XXX nächste Termine: 25. November 2020 --- #: next_check: 2020-11-25 --- #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
 ',
-         'from' => 1605567600,
+         'from' => 1606172400,
          'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 18. November 2020 ab ca. 09:30 Uhr',
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 25. November 2020 ab ca. 09:30 Uhr',
          'type' => 'gesperrt',
-         'until' => 1605690900
+         'until' => 1606295700
        },
        undef,
        {
@@ -3846,7 +3574,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-11-05
+#: last_checked: 2020-11-19
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4126,10 +3854,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX hier fehlt noch die letzte Asphaltdeckschicht
 #: also_indoor: traffic
 #: osm_watch: way id="156066225" version="16"
-#: last_checked: 2020-10-04
-#: check_frequency: 45d
-#: next_check: 2021-07-01
-	q3::inwork 19055,2037 19164,2001 19181,1996 19266,1968 19564,1871
+#: last_checked: 2020-11-15 vvv
+#: check_frequency: 45d vvv
+#: next_check: 2021-07-01 vvv
+	q3::inwork 19164,2001 19181,1996 19266,1968 19564,1871
+	q2::inwork 19055,2037 19164,2001
+	q2::inwork 19164,2001 19194,2157
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 ',
          'from' => undef,
          'id' => 3112,
@@ -4162,11 +3895,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-10-24
+#: last_checked: 2020-11-15
 #: next_check: 2020-12-13
-# REMOVED (hier normaler Radweg) ---	q3::inwork; 18704,8427 18731,8577
-#: note: hier eng und viel Fußgängerverkehr
-	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
+# REMOVED (hier normaler Radweg) --- q3::inwork; 18704,8427 18731,8577
+# REMOVED (hier keine Radwegschilder mehr) --- #: note: hier eng und viel Fußgängerverkehr ---	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
 #: note: hier etwas weniger Fußgängerverkehr
 	q2::inwork; 18737,8686 18770,8898 18790,9018
 # REMOVED (hier ist die Fahrbahn frei) ---	q4::inwork; 18790,9018 18809,9133
@@ -4298,6 +4030,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
 # REMOVED (alt) --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php --- #: by: fritz --- #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
 #: XXX bis wann ist der Bahnübergang gesperrt?
+#: osm_watch: way id="9829824" version="18"
 #: priority: #A
 #: last_checked: 2020-10-03
 #: check_frequency: 90d
@@ -4371,14 +4104,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: source_id: 2147345498
+#: source_id: LMS-BR_r_LMS-BR_198404_LMS-BR_72
 	q4::inwork 4515,4966 4514,5082
 # REMOVED (hier nicht) ---	q4::inwork 4514,5082 4513,5139 4512,5199
 ',
          'from' => 1582487459,
          'id' => 3198,
-         'text' => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis 13.11.2020',
+         'text' => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis 24.11.2020',
          'type' => 'handicap',
-         'until' => 1605283200
+         'until' => 1606233600
        },
        undef,
        undef,
@@ -4433,7 +4167,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-11-11
+#: last_checked: 2020-11-17
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4458,7 +4192,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: VIRCHOW-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2020-10-10 vvv
+#: last_checked: 2020-11-14 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -4513,9 +4247,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1590420000,
          'id' => 3250,
          'source_id' => 'LMS-BR_r_LMS-BR_205382_LMS-BR_72',
-         'text' => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 13.11.2020 17:00 Uhr',
+         'text' => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 11.12.2020 17:00 Uhr',
          'type' => 'handicap',
-         'until' => 1605283200
+         'until' => 1607702400
        },
        {
          'data' => '#: XXX_prog: eigentlich q3-::inwork
@@ -4552,7 +4286,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: also_indoor: traffic (H)
+         'data' => '#: note: laut Baustellenschild der Wasserbetriebe bis Mai 2022
+#: also_indoor: traffic (H)
 	q4::inwork; 5244,6261 5390,6299 5560,6344
 ',
          'from' => 1594635120,
@@ -4590,17 +4325,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: BRAUER-2020
-	q4::inwork 5159,2176 4979,1964
-',
-         'from' => 1602367200,
-         'id' => 3264,
-         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.971354.php',
-         'text' => 'Brauerstr.: Fahrbahn wegen Bauarbeiten zwischen Kastanienstr. und Brauerplatz gesperrt, vom 12.10.2020 bis zum 13.11.2020',
-         'type' => 'handicap',
-         'until' => 1605308400
-       },
+       undef,
        {
          'data' => '#: next_check_id: GILGENBURGER-2020
 	q4::inwork 24387,5672 24434,5645 24549,5685 24666,5726
@@ -4625,23 +4350,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: by: mapillary
-#: by: https://www.gruene-fraktion-brandenburg.de/im-parlament/kleine-anfragen/2019/fehlender-lueckenschluss-bei-radweg-an-der-b-198/
-#: by: https://www.moz.de/landkreise/barnim/eberswalde/artikel4/dg/0/1/1735352/ (Realisierung eines Radwegs frühestens 2022)
-#: by: https://www.moz.de/landkreise/uckermark/schwedt-und-angermuende/artikel90/dg/0/1/1817154/ (Bauarbeiten am Ziethener Kreuz bis Ende des Jahres (2020))
-#: source_id: LS/721-E/20/050
-#: XXX wie lange gilt das Verbot?
-#: last_checked: 2020-08-22
-#: next_check: 2020-11-13
-	2 48469,65641 47875,64281 47564,63557
-',
-         'from' => undef,
-         'id' => 3268,
-         'text' => 'B2/B198: Richtung Süden Radfahren verboten',
-         'type' => 'gesperrt',
-         'until' => 1605283200
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/spandau/c-verkehr/radler-muessen-runter-vom-sattel_a177230
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20090917.1110.139163.html
@@ -4708,9 +4417,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: last_checked: 2020-10-22 (mapillary) vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-12-01 vvv
+#: osm_watch: way id="4068029" version="19"
 	q3::inwork 11897,9754 12085,9778
+#: osm_watch: way id="4714346" version="12"
 	q4::inwork 12085,9778 12116,9825
+#: osm_watch: way id="46833651" version="13"
 	q3::inwork 12074,9689 12085,9778 11880,9874
+#: osm_watch: way id="845476767" version="3"
 	q3::inwork 12250,9691 12085,9778
 #: next_check ^^^
 #: check_frequency ^^^
@@ -4742,28 +4455,15 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: RICHARDPLATZ-2020
-#: osm_watch: way id="840456624" version="6"
-#: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7300 (Antrag)
-#: also_indoor: traffic (G)
-#: priority: #A
-#: last_checked: 2020-11-06
-#: check_frequency: 14d
-	q4::inwork 13288,7653 13378,7695 13416,7712
-',
-         'from' => undef,
-         'id' => 3278,
-         'text' => 'Richardplatz: Bauarbeiten zwischen Richardstr. und Hertzbergstr., Fahrbahn gesperrt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        {
          'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
-#: add_fragezeichen: Bis wann gilt die Sperrung auch für Radfahrer?
-#: last_checked: 2020-09-27
+#: also_indoor: traffic
+#: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
+#: last_checked: 2020-11-14
+#: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 ',
          'from' => undef,
@@ -4776,6 +4476,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9022 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
 #: XXX bis wann ist der Bahnübergang gesperrt?
+#: osm_watch: way id="868347101" version="1"
 #: priority: #A
 #: last_checked: 2020-10-31
 #: check_frequency: 90d
@@ -4807,7 +4508,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://www.berliner-woche.de/karlshorst/c-verkehr/letzte-arbeiten-an-den-gleisen_a291893 (hier: bis 13.12.2020)
 #: source_id: 2147343744
-#: last_checked: 2020-11-02 vvv
+#: last_checked: 2020-11-18 (bahninfo-forum) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2020-12-13 vvv
 	1::inwork 18672,8238 18657,8163
@@ -4825,20 +4526,7 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
        },
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/zehlendorf/c-bauen/fahrbahnsanierung-auf-der-matterhornstrasse_a290755
-# REMOVED --- # XXX im Anschluss daran wird zwischen Elvirasteig und Lindenthaler Allee saniert, vom 04.11.2020 bis 17.11.2020 --- #: priority: #A --- #: next_check: 2020-11-03
-# REMOVED --- q4::inwork -2096,3402 -1981,3353 -1892,3316 -1855,3308 -1782,3311 -1706,3311 -1628,3311 -1536,3314
-	q4::inwork -1536,3314 -1360,3314 -1187,3264 -1161,3252
-',
-         'dont_check_date' => 1,
-         'from' => 1604358000,
-         'id' => 3291,
-         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1004859.php',
-         'text' => 'Matterhornstr.: Bauarbeiten zwischen Elvirasteig und Lindenthaler Allee, Fahrbahn gesperrt, vom 04.11.2020 bis 17.11.2020',
-         'type' => 'handicap',
-         'until' => 1605632400
-       },
+       undef,
        {
          'data' => '#: by: https://www.lichtenrade-berlin.de/news/aktuelle-news-internetzeitung/30-blog/blog2019/1485-baubeginn-des-spielplatzes-auf-dem-rehagener-platz
 #: by: https://www.berliner-woche.de/lichtenrade/c-kultur/spielen-auf-dem-rehagener-platz_a278641
@@ -4951,9 +4639,30 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
          'from' => 1605394800,
          'id' => 3303,
          'source_id' => 'LS/721-E/20/145',
-         'text' => 'B167: Sperrung der Brücke über den Finowkanal B167, evtl. sind auch Radfahrer betroffen, 16.11.2020 bis 20.11.2020 ',
+         'text' => 'B167: Sperrung der Brücke über den Finowkanal B167, evtl. sind auch Radfahrer betroffen, 16.11.2020 bis 15.12.2020 ',
          'type' => 'gesperrt',
-         'until' => 1605913200
+         'until' => 1608051600
+       },
+       undef,
+       {
+         'data' => '	2::inwork 9707,12974 9557,12992
+',
+         'from' => 1605481200,
+         'id' => 3305,
+         'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2020/pressemitteilung.1018328.php',
+         'text' => 'Spreeuferweg: zwischen Monbijoustr. und Tucholskystr. Bauarbeiten, komplett gesperrt, vom 17.11.2020 bis voraussichtlich 23.12.2020',
+         'type' => 'gesperrt',
+         'until' => 1608764400
+       },
+       {
+         'data' => '	q4::inwork 10310,13227 10264,13097
+',
+         'from' => 1606024800,
+         'id' => 3306,
+         'source_id' => '2147346633',
+         'text' => 'Rosenthaler Str.: zwischen Hackescher Markt und Neue Schönhauser Straße Bauarbeiten, Fahrbahn gesperrt, vom 23.11.2020 07:00 Uhr bis 16.12.2020 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1608134400
        }
      
 );

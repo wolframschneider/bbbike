@@ -1261,7 +1261,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="5"
-#: last_checked: 2020-10-18
+#: last_checked: 2020-11-19
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
 #: by: Detlef Westphal
@@ -1354,6 +1354,7 @@ entlang des ehemaligen Spreeparks	CS 15981,8872 15973,8894 15845,9031
 # 
 #: next_check_id: METROPOLITANPARK-2019
 #: XXX wann wird die Straße ausgeschildert?
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_48_5583_5626_online.pdf (Grundstücksnummerierungen)
 #: last_checked: 2020-08-23
 #: check_frequency: 60d
 Metropolitan Park: nicht ausgeschildert	CS -8064,13534 -8088,13594 -7984,13649 -7926,13709 -7890,13787 -7896,13899 -7928,13967 -8019,14036 -8150,14064
@@ -1369,7 +1370,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 # 
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2020-10-10
+#: last_checked: 2020-11-14
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13390
 # 
@@ -1476,6 +1477,8 @@ ausgeschildert "Quartiersweg 1-4"	CP2; 7498,8062 7516,8063
 #: XXX ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
+# 
+zum Terminal A	CP2; 2853,16293 2812,16348
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)

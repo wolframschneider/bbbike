@@ -531,7 +531,7 @@ Heidelberger Str.	N 13491,9201 13421,9260 13357,9313 13234,9426 13202,9455 13058
 Laskerstr.	N 14675,10693 14541,10735
 Bödikerstr.	N 14541,10735 14490,10610 14447,10491 14405,10340
 Markgrafendamm	H 14558,10264 14608,10409 14641,10552 14675,10693 14671,10751 14680,10837 14717,10855
-Hauptstr. (Rummelsburg)	H 14717,10855 14810,10832 14904,10812 15004,10791 15261,10738 15307,10701 15372,10655 15404,10633 15639,10469 15831,10329 16004,10204 16114,10123 16138,10105 16187,10033 16261,9925 16302,9865 16374,9760
+Hauptstr. (Rummelsburg)	H 14717,10855 14810,10832 14904,10812 15004,10791 15261,10738 15307,10701 15372,10655 15404,10633 15639,10469 15831,10329 16004,10204 16090,10141 16117,10120 16138,10105 16187,10033 16261,9925 16302,9865 16374,9760
 Hauptstr. (Rummelsburg) [Wohngebiet]	N 15404,10633 15358,10562 15334,10528
 (Hauptstr. - Rummelsburger Ufer)	NN 15334,10528 15322,10513
 (Unterführung S-Bhf. Rummelsburg)	NN 15372,10655 15409,10709 15433,10765
@@ -579,7 +579,7 @@ Nixenkai	NN 15311,10127 15289,10097 15289,10092 15283,10087 15260,10048 15295,10
 Bartholomäusufer	NN 15347,9922 15465,9860 15561,9809 15626,9710
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/33re.pdf/file?y=2011
 Zillepromenade	NN 15200,10600 15249,10564 15322,10513 15453,10419 15457,10342 15496,10277
-Bolleufer	NN 15496,10277 15518,10234 15604,10204 15606,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15914,9858 15931,9846 16002,9787 16049,9749 16119,9689
+Bolleufer	NN 15496,10277 15518,10234 15604,10204 15606,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15910,9860 15931,9846 16002,9787 16049,9749 16119,9689
 (Rummelsburger Ufer - Emma-Ihrer-Str.)	NN 15453,10419 15550,10361
 (Rummelsburger Ufer - Hauptstr.)	NN 16049,9749 16261,9925
 Hansa-Ufer (Friedrichshain)	NN 15626,9710 15621,9704 15659,9647 15708,9607 15739,9583 15749,9558 15819,9430 15813,9378 15793,9334
@@ -589,21 +589,22 @@ Schlichtallee	H 15639,10469 15758,10578 15880,10680 15970,10755 16038,10818 1604
 Emma-Ihrer-Str.	NN 15496,10277 15513,10298
 Emma-Ihrer-Str.	N 15513,10298 15550,10361 15583,10399 15623,10449 15639,10469
 An der Bucht	N 15358,10562 15430,10508 15493,10460 15583,10399 15652,10348 15716,10303 15788,10252 15858,10202 15952,10134
-An den Knabenhäusern	NN 15513,10298 15578,10250 15621,10214 15641,10198 15709,10145
+An den Knabenhäusern	NN 15513,10298 15578,10250 15621,10214 15641,10198 15711,10149
 (Rummelsburger Ufer - An den Knabenhäusern)	NN 15604,10204 15621,10214
-Alice-und-Hella-Hirsch-Ring	N 15823,10300 15788,10252 15709,10145 15749,10112 15775,10092 15858,10202 15894,10251
+Alice-und-Hella-Hirsch-Ring	N 15823,10300 15788,10252 15711,10149 15753,10117 15779,10097 15858,10202 15894,10251
 Lina-Morgenstern-Str.	N 15641,10198 15716,10303 15753,10353
 Vicki-Baum-Str.	N 15990,10185 15894,10251 15823,10300 15753,10353 15688,10400 15633,10442
 Vicki-Baum-Str.	NN 15633,10442 15623,10449
-Charlotte-Salomon-Hain	N 15749,10112 15716,10065
-Paula-Fürst-Str.	N 15775,10092 15874,10025
+Charlotte-Salomon-Hain	N 15753,10117 15716,10065
+Paula-Fürst-Str.	N 15779,10097 15874,10025
 Clara-Grunwald-Str.	N 15688,10400 15652,10348 15578,10250 15567,10235
 Georg-Löwenstein-Str.	N 16038,9837 16155,9992 16187,10033
 (Rummelsburger Bucht - Georg-Löwenstein-Str.)	NN 16002,9787 16038,9837
-Karl-Wilker-Str.	N 15952,10134 16066,10054 16155,9992
-Friedrich-Jacobs-Promenade	NN 16114,10123 16066,10054 15948,9902 15914,9858
-Erich-Müller-Str.	N 16038,9837 15948,9902 15885,9947 15840,9980
-Gisèle-Freund-Hain	N 15885,9947 15842,9891
+Karl-Wilker-Str.	N 15952,10134 16041,10072 16068,10051 16155,9992
+Friedrich-Jacobs-Promenade	NN 16117,10120 16068,10051 16007,9968 15995,9966 15948,9902 15920,9866 15916,9868 15910,9860
+Friedrich-Jacobs-Promenade	NN 16090,10141 16041,10072 15980,9986 15981,9975 15936,9911 15910,9873 15916,9868
+Erich-Müller-Str.	N 16038,9837 15948,9902 15936,9911 15892,9941 15840,9980
+Gisèle-Freund-Hain	N 15892,9941 15847,9881
 Hildegard-Marcusson-Str.	N 16004,10204 15990,10185 15952,10134 15874,10025 15840,9980
 (Hildegard-Marcusson-Str. - Uferweg)	NN 15840,9980 15811,9957 15786,9957
 Marktstr. (Rummelsburg)	H 15279,10862 15144,10905 15113,10916 15085,10956 15060,11006 14988,11130
@@ -684,8 +685,16 @@ Ebersstr.	NN 6559,8033 6480,7992
 (Hauptstr. - Ebersstr.)	NN 6307,7893 6418,7958 6437,7968 6443,7971 6480,7992
 Hohenfriedbergstr.	N 7795,8765 7791,8882 7790,8913 7790,9126
 Werdauer Weg	N 7073,8081 6947,8025 6774,7755 6691,7633 6693,7556 6654,7465 6580,7401 6505,7381
+#: XXX Umbenennung der Straße: "Ella-Barowsky-Str." zum 1.3.2021; Berlin.coords.data muss auch geändert werden, oldname-Eintrag, der andere "Tempelhofer Weg" braucht dann vielleicht keinen Zusatz mehr vvv
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_48_5583_5626_online.pdf vvv
+#: priority: #A vvv
+#: next_check: 2021-03-01 vvv
 Tempelhofer Weg (Schöneberg)	N 7073,8081 7139,8079 7268,8008
 Tempelhofer Weg (Schöneberg)	H 7268,8008 7499,7880 7537,7859 7621,7813 7632,7807 7696,7771
+#: next_check ^^^
+#: priority ^^^
+#: by ^^^
+#: XXX ^^^
 (zum Tempelhofer Weg)	H 7193,7950 7268,8008
 Hattenheimer Str. (Tempelhof)	N 11590,6026 11650,6157 11651,6192 11628,6240
 Haberechtstr.	N 11651,6192 11768,6159
@@ -1221,7 +1230,7 @@ Edith-Kiss-Str.	N 12793,11132 12866,11256
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="4"
 #: priority: #C
-#: last_checked: 2020-10-16
+#: last_checked: 2020-11-19
 #: next_check: 2023-01-01
 (Planstraße C)	N 12926,11224 12848,11093
 # 
@@ -2271,7 +2280,7 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 (provisorische Umfahrung)	NN 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2020-11-06 vvv
+#: last_checked: 2020-11-15 vvv
 #: check_frequency: 90d vvv
 #: valid: 20140224-20221231
 Neuköllnische Allee	H 14344,7003 14567,6810 14724,6668
@@ -2365,7 +2374,7 @@ Delfter Ufer	NN 13532,5987 13646,6019 13766,6019 14002,5936 14138,5818 14223,565
 Gerhard-Sedlmayr-Str.	N 18779,3866 18702,3790 18584,3794 18228,4168 18374,4307
 (Gerhard-Sedlmayr-Str. - Landschaftspark)	NN 18228,4168 18178,4125 18176,4105
 Hermann-Dorner-Allee	N 18930,3703 18860,3634 18836,3611 18755,3531 18689,3465 18624,3402 18511,3290 18395,3176 18347,3129 18374,2971 18445,2642 18496,2471
-Benno-König-Str.	N 18374,4307 18596,4517 18674,4585
+Benno-König-Str.	N 18374,4307 18434,4363 18596,4517 18674,4585
 Wagner-Régeny-Str.	N 19728,3351 19661,3421 19585,3499 19491,3597 19363,3730 19162,3935
 # REMOVED --- #: next_check_id: WAGNERREGENYALLEE-2019 --- #: XXX Name ist noch nicht im Amtsblatt bestätigt worden; fehlt bei Berlin.coords.data; eine Ausschilderung fehlt noch --- #: last_checked: 2020-07-31
 #: note: Privatstraße
@@ -2426,7 +2435,7 @@ Straße 12 (Neukölln)	N 13883,6682 13881,6634 13915,6592
 (Grenzallee - Britzer Hafensteg)	NN 13881,6634 13831,6588 13857,6523 13864,6415 13984,6270 13993,6221
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
-#: last_checked: 2020-09-25 vvv
+#: last_checked: 2020-11-15 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: valid: 20140224-20211231
@@ -2569,7 +2578,7 @@ Naugarder Str.	N 12737,15154 12712,15176 12693,15225 12610,15455 12621,15482
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5238 (Vorlage zur Kenntnisnahme)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5356
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_01_0001_0152_online.pdf (Benennung: Gertrud-Classen-Platz, Wirksamkeit am 6. März 2020)
-#: last_checked: 2020-10-19 (keine Schilder zu sehen)
+#: last_checked: 2020-11-17 (keine Schilder zu sehen)
 #: check_frequency: 30d
 (Hosemannstr. - Naugarder Str.)	N 12583,15566 12605,15491
 Malchower Chaussee	HH 14832,17867 15152,18115 15181,18137 15569,18492 15600,18551 15610,18596
@@ -2983,7 +2992,7 @@ Gaudigweg	N 14322,2571 14322,2449
 (Löwensteinring - Wildmeisterdamm)	NN 14471,2509 14423,2463 14415,2445 14364,2396 14360,2360
 (Löwensteinring - U Johannisthaler Chaussee)	NN 14364,2396 14335,2381
 Eugen-Bolz-Kehre	N 14812,2661 14935,2795
-Johannisthaler Chaussee	H 12817,2031 13010,2085 13023,2093 13045,2107 13104,2143 13367,2322 13418,2357 13501,2413 13709,2551 13886,2653 13915,2673 13951,2697 13999,2727 14203,2859 14212,2865 14392,2979 14541,3060 14675,3117 14816,3162 14930,3194 14994,3245 15030,3286 15162,3462 15213,3541 15263,3617 15307,3683 15350,3749 15356,3759 15363,3770 15464,3936 15585,4139 15594,4152 15618,4189 15640,4222 15669,4266 15720,4341 15800,4464 15843,4524 15863,4554 16004,4764 16146,4974 16209,5067 16279,5170
+Johannisthaler Chaussee	H 12817,2031 13010,2085 13023,2093 13045,2107 13104,2143 13367,2322 13418,2357 13501,2413 13709,2551 13886,2653 13915,2673 13951,2697 13999,2727 14203,2859 14212,2865 14392,2979 14541,3060 14605,3087 14675,3117 14816,3162 14930,3194 14994,3245 15030,3286 15162,3462 15213,3541 15263,3617 15307,3683 15350,3749 15356,3759 15363,3770 15464,3936 15585,4139 15594,4152 15618,4189 15640,4222 15669,4266 15720,4341 15800,4464 15843,4524 15863,4554 16004,4764 16146,4974 16209,5067 16279,5170
 Kanalstr. (Rudow)	NH 16786,2989 17284,2636 17541,2454 17772,2331 17928,2248 18101,2164 18111,2135
 Arabisweg	N 17772,2331 17721,2232 17709,2208 17668,2187
 Wischmattenweg	N 17721,2232 17880,2152 17928,2248
@@ -3997,7 +4006,7 @@ Rue Charles Calmette	N 3753,16638 3738,16648 3711,16670 3681,16778
 Rue René Laennec	N 3681,16778 3609,16759
 Rue du Dr Roux	N 3606,16453 3612,16526 3624,16564 3615,16633 3636,16663 3711,16670
 Rue Dominique Larrey	N 3738,16648 3659,16507 3624,16445
-Saatwinkler Damm	H 5043,14671 5048,14710 5095,14792 5098,14892 5032,14956 4922,15053 4891,15092 4794,15209 4535,15530 4398,15626 4248,15647 3992,15664 3854,15670 3579,15682 3425,15684 3335,15686 3188,15688 3028,15696 2834,15703 1406,15719 1232,15717 954,15724 449,15654 51,15599 -302,15546
+Saatwinkler Damm	H 5043,14671 5048,14710 5095,14792 5098,14892 5032,14956 4922,15053 4891,15092 4794,15209 4535,15530 4498,15556 4398,15626 4248,15647 3992,15664 3854,15670 3579,15682 3425,15684 3335,15686 3188,15688 3028,15696 2834,15703 1406,15719 1232,15717 954,15724 449,15654 51,15599 -302,15546
 Saatwinkler Damm	NN -302,15546 -573,15516 -622,15502
 Saatwinkler Damm	N -622,15502 -692,15491 -763,15487 -923,15464 -1013,15433
 Emmy-Zehden-Weg	N 4891,15092 4810,15000
@@ -4061,7 +4070,7 @@ Kurt-Schumacher-Damm	HH 5109,17507 5068,17384 5034,17322 4997,17241 4931,17174 4
 Kurt-Schumacher-Damm	HH 3585,16252 3711,16481 3788,16621 3940,16861
 Kurt-Schumacher-Damm	HH 2857,14222 2846,14373 2956,14752
 Kurt-Schumacher-Damm	HH 2831,14219 2803,14288 2788,14364 2905,14754
-Kurt-Schumacher-Damm	NN 2956,14752 3045,15044 3162,15314 3221,15498 3242,15523 3280,15543 3301,15631 3316,15641 3335,15617 3328,15595 3290,15604 3282,15632 3299,15668 3358,15794 3490,16083
+Kurt-Schumacher-Damm	NN 2956,14752 3091,15182 3162,15314 3169,15396 3221,15498 3242,15523 3280,15543 3301,15631 3316,15641 3335,15617 3328,15595 3290,15604 3282,15632 3299,15668 3358,15794 3490,16083
 #: note: in manchen Kartenwerken als "Am Festplatz" bezeichnet, in der Realität keine Straßenschilder; im DPAG-Mitteilungsblatt 9/2018 ist der Name "Am Festplatz" (PLZ=13589) entfallen
 Kurt-Schumacher-Damm	NN 3490,16083 3518,16102 3546,16143 3587,16219 3585,16252
 (Kurt-Schumacher-Damm - Saatwinkler Damm)	NN 3280,15543 3322,15556 3360,15577 3425,15684
@@ -4268,10 +4277,11 @@ Fontanestr. (Wilhelmsruh)	N 7321,20426 7231,20266 7201,20161 7205,20047 7209,199
 #: by: https://www.berliner-zeitung.de/mensch-metropole/berlin-bekommt-eine-neue-verbindung-nach-brandenburg-li.87110 (Spatenstich Ende November 2020)
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-verkehr/heidekrautbahn-wird-reaktiviert_a279508
 #: by: https://www.tagesspiegel.de/berlin/finanzierung-der-heidekrautbahn-unklar-warum-sich-der-wiederaufbau-der-berliner-pendlerstrecke-verzoegert/26183756.html#
+#: by: https://www.berliner-zeitung.de/mensch-metropole/endlich-baubeginn-bei-der-heidekrautbahn-li.119226?lid=true (Spatenstich am 2.12.2020)
 #: XXX: bleibt dieser Weg erhalten oder muss er der Heidekrautbahn weichen?
 #: last_checked: 2020-09-11
 # REMOVED --- #: check_frequency: 180d
-#: next_check: 2020-11-30
+#: next_check: 2020-12-03
 (Hertzstr./PankowPark - Bhf. Wilhelmsruh)	NN 7090,19943 7123,19855 7138,19839 7184,19783 7369,19630 7415,19535
 Hertzstr.	N 7090,19943 7209,19928 7333,19911 7556,19882 7672,19869 7807,19811
 Garibaldistr.	N 7324,19795 7333,19911 7341,19974 7405,20019 7468,20009 7604,19988 7711,19956 7838,19884
@@ -4456,6 +4466,7 @@ Gravensteinstr. [Wohngebiet]	N 12694,22570 12738,22546 12781,22593 12738,22630
 #: XXX Teilfläche soll eingezogen werden ---laut Amtsblatt 50/2019 ist das so gut wie die gesamte Straße
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_50_7633_7832_online.pdf
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_05_0549_0672_online.pdf
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_47_5497_5582_online.pdf (als "ehemalig" bezeichnet, keine Grundstücksnummern mehr)
 #: last_checked: 2020-09-20
 #: check_frequency: 120d
 Straße 171	N 12694,22570 12657,22596 12628,22604
@@ -5939,6 +5950,12 @@ Hanoier Str.	N 20729,11483 20725,11375
 Arno-Philippsthal-Str.	N 20641,11488 20630,11342
 Stawesdamm	N 20623,11489 20627,11552 20631,11621
 Stawesdamm	NN 20631,11621 20633,11651
+#: note: Privatstraßen vvv
+Heino-Schmieden-Weg	N 20720,11484 20726,11539 20735,11613 20831,11604 20818,11480
+Elsa-Ledetsch-Weg	N 20650,11488 20659,11548 20726,11539
+Gisela-Reissenberger-Platz	N 20659,11548 20665,11620 20735,11613
+#: note ^^^
+(Verbindungsweg)	NN 20659,11548 20627,11552 20590,11557
 Minsker Str.	N 20828,11480 20820,11333 20818,11293 20817,11257 20834,11150
 #: note: beleuchtet
 #: note: vorletzer Punkt ist ein "Pseudo-Punkt" für die 3nocross-Problematik
@@ -10778,8 +10795,11 @@ Straße am Wald	N 21475,7500 21341,7487 21050,7341 21019,7340
 #: by: https://www.berliner-woche.de/tegel/c-bauen/was-jetzt-am-flughafen-passiert_a292334
 # REMOVED --- #: XXX bei Eröffnung von BER und Schließung von Tegel evtl. umbenennen, "ehemaligen", evtl. auch degradieren (NH oder N, prüfen) vvv --- #: XXX auch andere Straßen/Flächen/... umbenennen vvv --- #: next_check: 2020-11-08 vvv
 Zum Flughafen Tegel	H 3028,15696 2975,15813 2960,15847 2944,15880 2913,15944 2809,16143 2853,16293 2839,16337 2800,16368 2720,16353 2696,16271 2757,16194 2809,16143
-(Zur Luftfracht)	N 2226,16096 2290,16022 2566,15942 2590,15916 2600,15872 2638,15842 2701,15853 2787,15870 2828,15903
-(Knoten am ehemaligen Flughafen Tegel)	N 2960,15847 2996,15930 2998,15973 2982,15992 2953,15999 2848,15979 2818,15966 2810,15931 2828,15903 2880,15884 2960,15847
+#: note: zum ehemaligen Terminal A
+Zum Flughafen Tegel	H 2853,16293 2812,16348 2733,16343 2675,16361 2638,16406 2601,16447 2538,16435 2517,16380 2552,16330 2621,16344 2692,16326 2709,16291 2757,16194
+(Zur Luftfracht)	N 2226,16096 2290,16022 2580,15939 2595,15922 2604,15875 2638,15842 2701,15853 2787,15870 2828,15903
+(Zur Luftfracht)	N 2787,15870 2880,15884
+(Knoten am ehemaligen Flughafen Tegel)	N 2960,15847 2996,15930 3009,15965 2988,15999 2954,16006 2846,15986 2818,15966 2810,15931 2828,15903 2880,15884 2960,15847
 (Knoten am ehemaligen Flughafen Tegel)	N 2996,15930 2977,15923 2949,15922 2913,15944
 (Knoten am ehemaligen Flughafen Tegel)	N 2913,15944 2880,15908 2828,15903
 # REMOVED --- #: XXX ^^^ --- #: XXX ^^^ --- #: next_check ^^^ --- #: next_check_id ^^^
@@ -10787,7 +10807,7 @@ Zum Flughafen Tegel	H 3028,15696 2975,15813 2960,15847 2944,15880 2913,15944 280
 Reichweindamm	N 3106,14195 3126,14216 3169,14256 3184,14265 3269,14316 3421,14318 3472,14366 3464,14407 3455,14460 3443,14535 3431,14586 3418,14661 3408,14741 3385,14871
 Goerdelerdamm	NN 5043,14671 4897,14609 4653,14528 3705,14290 3595,14267 3229,14224 3191,14215 3133,14186 3106,14195
 Goerdelerdamm	NH 3106,14195 3030,14224 2960,14218 2896,14187
-Straße 70 (Charlottenburg-Nord)	NN 3385,14871 3346,14871 3299,14948 3294,15206 3349,15269 3415,15450 3462,15467 3579,15682
+Straße 70 (Charlottenburg-Nord)	NN 3385,14871 3346,14871 3299,14948 3294,15206 3349,15269 3415,15450 3462,15467 3541,15612 3579,15682
 Heesestr. (Biesdorf)	NH 21164,9960 21371,9923 21534,9901 21594,9895 21611,9893 21650,9884 21691,9874
 Heerstr. (Kaulsdorf)	NH 21691,9874 21749,9856 21842,9829 21859,9822 21988,9766 22129,9702
 Heerstr. (Kaulsdorf)	N 22129,9702 22274,9622 22366,9571 22402,9551
@@ -14502,7 +14522,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="13"
-#: last_checked: 2020-11-02
+#: last_checked: 2020-11-15
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Am Kraatzgraben)	NN 16835,10052 16666,10219 16544,10337 16488,10381
@@ -14877,7 +14897,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="14"
-#: last_checked: 2020-11-02
+#: last_checked: 2020-11-15
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -16053,19 +16073,12 @@ Borgmannstr.	N 22513,5747 22531,5871 22535,5971 22538,6046
 Springbornstr.	N 17142,3393 17034,3517 16942,3579 16842,3624 16615,3734 16727,4012 16742,4098
 (Springbornstr. - Hederichweg)	N 16615,3734 16589,3715
 Hederichweg	N 16801,3413 16784,3441 16727,3520 16657,3619 16589,3715 16536,3797
-#: alias: Straße 207 (Grüne Aue)
-#: XXX wird vermutlich in "Bohnenweg" umbenannt werden (auch in DPAG-MTB 09/2020 erwähnt)
-#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=2653
-#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036544636457/544636457/00054129/29-Anlagen/06/B0485ZB4.pdf
-#: by: https://de.wikipedia.org/wiki/Liste_der_Stra%C3%9Fen_und_Pl%C3%A4tze_in_Berlin-Johannisthal (Umbenennung schon 2007 in der BVV beschlossen)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_49_7429_7632_online.pdf (Widmung von Straßenland, allerdings unter dem alten Namen)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_31_4009_4132_online.pdf (Benennung)
-#: osm_watch: way id="25747548" version="9"
-#: priority: #C
-#: last_checked: 2020-09-04
-#: check_frequency: 60d
+# REMOVED --- #: XXX wird vermutlich in "Bohnenweg" umbenannt werden (auch in DPAG-MTB 09/2020 erwähnt) --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=2653 --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036544636457/544636457/00054129/29-Anlagen/06/B0485ZB4.pdf --- #: by: https://de.wikipedia.org/wiki/Liste_der_Stra%C3%9Fen_und_Pl%C3%A4tze_in_Berlin-Johannisthal (Umbenennung schon 2007 in der BVV beschlossen) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_49_7429_7632_online.pdf (Widmung von Straßenland, allerdings unter dem alten Namen) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_31_4009_4132_online.pdf (Benennung) --- #: osm_watch: way id="25747548" version="9" --- #: priority: #C --- #: last_checked: 2020-09-04 --- #: check_frequency: 60d
 # REMOVED --- #: next_check: 2020-08-15
-Straße 207	N 16842,3624 16727,3520
+#: note: früherer Alias: Straße 207 (Grüne Aue)
+#: note: Schilder wurden zwischen September und November 2020 aufgehängt
+#: oldname: -20201101: Straße 207
+Bohnenweg	N 16842,3624 16727,3520
 Ginkgoweg	N 16942,3579 16784,3441
 Kolberger Str. (Gesundbrunnen)	N 8315,15293 8518,15506
 Matthiasstr.	N 12786,13185 12842,13070 12885,12980
@@ -17720,7 +17733,7 @@ Bertolt-Brecht-Platz	N 9193,12875 9160,12932
 #: XXX für den Autoverkehr mittlerweile gesperrt?
 #: XXX oder eventuell wird das eine Einbahnstraße, wenn die Bauarbeiten an der Pankebrücke beendet sind (Schilder hängen schon, obwohl es eine Sackgasse ist?!)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_19_2765_2928_online.pdf
-#: last_checked: 2020-09-01
+#: last_checked: 2020-11-19
 #: check_frequency: 90d
 (Straße vor dem Berliner Ensemble)	N 9212,12969 9160,12932
 Karlplatz	N 8711,12986 8676,12976
@@ -18889,7 +18902,7 @@ Klara-Weyl-Str.	N 17357,12566 17370,12649 17397,12732 17413,12783
 Klara-Weyl-Str.	N 17397,12732 17496,12691
 Im Lindenhof	N 17370,12649 17475,12603
 Im Lindenhof	N 17462,12525 17472,12552 17475,12603 17492,12650
-Im Lindenhof	N 17443,12668 17492,12650 17571,12557
+Im Lindenhof	N 17571,12557 17530,12620 17519,12638 17492,12650 17467,12659 17455,12687 17426,12699 17412,12660 17436,12652 17467,12659
 (Im Lindenhof - Am Städtischen Zentralfriedhof)	NN 17571,12557 17585,12539
 Hagenstr. (Lichtenberg)	N 16957,12599 16933,12432 16918,12325 16890,12135 16865,11931
 Gernotstr. (Lichtenberg)	N 17122,12295 17092,12107 17088,12069

@@ -15,9 +15,18 @@ jobs:
      matrix:
 ## XXX windows not yet working, macos not tested --- TODO
 #       os: [ubuntu-latest, windows-latest, macos-latest]
-       os: [ubuntu-latest]
+       os: [ubuntu-20.04, ubuntu-18.04]
+#       os: [ubuntu-18.04]
 
     steps:
+    - name: apt hacks
+      # the already installed libgd3 conflicts with libgd-dev to be installed
+      # also, /etc/apt/sources.list should be sufficient; all the other repositories are possibly problematic
+      run: |
+        sudo apt-get remove -y libgd3
+        sudo rm -f /etc/apt/sources.list.d/*.list
+        sudo apt-get update -qq
+      if: "startsWith(matrix.os, 'ubuntu-')"
     - uses: actions/checkout@v2
     - name: Build and test
       run: |

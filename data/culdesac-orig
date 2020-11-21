@@ -77,7 +77,7 @@ S-Bhf. Frankfurter Allee	culdesac_pseudo 15175,12180
 	culdesac 15756,12212
 	culdesac 15567,10235
 	culdesac 15716,10065
-	culdesac 15842,9891
+	culdesac 15847,9881
 Ende des Bahndamms	culdesac 13966,9340
 	culdesac 14305,9213
 	culdesac 14327,9117
@@ -1424,7 +1424,7 @@ südwestliches Sackgassenende	culdesac 11476,20058
 	culdesac_pseudo 648,24589
 Sackgassenende am nördlichen Abzweig	culdesac 17413,12783
 Sackgassenende am östlichen Abzweig	culdesac 17496,12691
-	culdesac 17443,12668
+	culdesac 17412,12660
 südöstliches Sackgassenende	culdesac_pseudo 17462,12525
 #: note: eine Treppe existiert hier
 Sackgassenende am östlichen Abzweig	culdesac_pseudo 10022,15659
@@ -1577,6 +1577,8 @@ Sackgassenende an der Autobahn	culdesac 21596,-1727
 	culdesac_pseudo -4849,11934
 	culdesac_pseudo -4700,11878
 Sackgassenende am Waldowpark	culdesac 24401,11509
+ehemalige Luftfracht	culdesac 2226,16096
+	culdesac 13792,4089
 # 
 ######################################################################
 # culdesac entries which should remain invisible
