@@ -3183,30 +3183,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/weihnachtsmarkt/3240090-3496862-weihnachtsmarkt-am-alexanderplatz.html
-#: tempex: before(first_advent, monday)-YYYY1226 vvv
-	q3::xmas 11139,13008 11064,12910 10970,12822
-	q4::xmas 11064,12910 11134,12793
-#: tempex ^^^
-',
-         'from' => 1606690800,
-         'id' => 2763,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              20,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html',
-         'text' => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, voraussichtlich Anfang Dezember 2020 bis 27. Dezember 2020',
-         'type' => 'handicap',
-         'until' => 1609109999
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3688,7 +3665,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-11-09
+#: last_checked: 2020-11-22
 #: check_frequency: 30d
 #: next_check: 2020-12-04
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -4220,7 +4197,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: source_id: 2147345874 (hier: bis 31.1.2021) (bei rbb nur bis 13.1.2021)
-	q3::inwork; 14181,11434 14211,11552
+# REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
 	q3::inwork 14247,11681 14272,11775
 ',
@@ -4589,6 +4566,7 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
        },
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: also_indoor: traffic (G)
 #: last_checked: 2020-11-12
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
@@ -4603,7 +4581,7 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
        {
          'data' => '#: by: https://www.verkehrslage.de/Berlin/Baustellen/3
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-10-25
+#: last_checked: 2020-11-21
 	q4::inwork 12997,6290 13027,6168
 ',
          'from' => undef,
@@ -4645,7 +4623,8 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
        },
        undef,
        {
-         'data' => '	2::inwork 9707,12974 9557,12992
+         'data' => '#: by: https://www.berliner-woche.de/mitte/c-bauen/an-der-spree-wird-ein-abschnitt-saniert_a293881
+	2::inwork 9707,12974 9557,12992
 ',
          'from' => 1605481200,
          'id' => 3305,
@@ -4655,7 +4634,9 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
          'until' => 1608764400
        },
        {
-         'data' => '	q4::inwork 10310,13227 10264,13097
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1330751695429771266
+#: by: https://pbs.twimg.com/media/EnfHnSoXYAUoYDw?format=png&name=900x900
+	q4::inwork 10310,13227 10264,13097
 ',
          'from' => 1606024800,
          'id' => 3306,

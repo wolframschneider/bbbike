@@ -136,6 +136,7 @@ Priesterweg: m‰ﬂiges Kopfsteinpflaster	Q2 7227,7352 7229,7188 7222,6458 7222,643
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2018-12-13-prot-fahrratsitzung.pdf
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2019-03-21-prot-fahrratsitzung2.pdf
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/200507_protokoll-1-fahrrat-2020.pdf
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7802 (Antrag)
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/cdu-fordert-radwegsanierung-am-s-bahnhof-pristerweg_a278227
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/naturschutzbund-kritisiert-routenfuehrung-der-geplanten-radschnellverbindungen-durch-gruenanlagen_a288190 (naher Hans-Baluschek-Park erw‰hnt)
 #: osm_watch: way id="102486250" version="10"
@@ -300,7 +301,7 @@ Lohm¸hlenbr¸cke: Asphalt	Q0 12868,9359 12897,9365
 #: XXX wird die Kiefholzstr. asphaltiert?
 #: XXX Baumaﬂnahme: 9.9 (Realisierung nach 2011)
 #: osm_watch: way id="4686083" version="23"
-#: last_checked: 2020-10-28 (mapillary)
+#: last_checked: 2020-11-17 (mapillary)
 #: check_frequency: 90d
 Kiefholzstr.: Kopfsteinpflaster	Q2 13602,9581 13455,9711 13251,9829
 # 
@@ -551,7 +552,7 @@ Karl-Marx-Str.: Asphalt mit Sch‰den	Q0- 12330,8636 12500,8504
 Karl-Marx-Platz: Kopfsteinpflaster	Q2- 12969,7610 13100,7626
 Karl-Marx-Platz: Kopfsteinpflaster	Q2 13100,7626 13177,7644
 Richardplatz: Kopfsteinpflaster	Q2 13177,7644 13288,7653
-Richardplatz: Kopfsteinpflaster, OK	Q1- 13288,7653 13378,7695
+Richardplatz: Kopfsteinpflaster, Fugen mit Asphalt vergossen	Q2+ 13288,7653 13378,7695
 Karl-Marx-Platz: Kopfsteinpflaster	Q2- 12987,7560 13100,7626
 Richardplatz: Kopfsteinpflaster	Q2 13188,7590 13295,7627
 Richardplatz: Kopfsteinpflaster, OK	Q2+ 13295,7627 13392,7648
@@ -560,7 +561,9 @@ Richardstr.: Kopfsteinpflaster, OK	Q1 12779,8188 12797,8168
 Richardstr.: Asphalt	Q0 12797,8168 12870,8087 13045,7938
 Richardstr.: Kopfsteinpflaster	Q2 13045,7938 13085,7904 13103,7889 13150,7845 13226,7775 13245,7742
 Richardstr.: Asphalt	Q0 13245,7742 13278,7673
-Richardstr.: Kopfsteinpflaster	Q2 13278,7673 13288,7653 13295,7627
+Richardstr.: Kopfsteinpflaster	Q2 13278,7673 13288,7653
+#: note: hier auﬂerdem ein breites "Moabiter Kissen"
+Richardstr.: Kopfsteinpflaster	Q2 13288,7653 13295,7627
 Richardstr.: Asphalt	Q0 13295,7627 13335,7450 13341,7423 13368,7300
 Hertzbergstr.: Kopfsteinpflaster	Q2- 13423,7757 13416,7712
 Alt-Rudow: Asphalt	Q0 16975,1262 16849,1437
@@ -918,7 +921,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der G‰rtnerstr. ab 2020 erfolgen, wenn die Baumaﬂnahme der Berliner Wasserbetriebe (ab Fr¸hjahr 2019) abgeschlossen ist.")
 #: XXX auﬂerdem: Einrichtung einer Fahrradstraﬂe zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2020-11-11
+#: last_checked: 2020-11-21
 #: check_frequency: 90d
 G‰rtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1124,6 +1127,7 @@ Wuhlewanderweg: Asphalt, einige Wurzelsch‰den	Q0- 22030,6600 22097,6414 22146,63
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4258
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103656581769/56581769/00081671/71-Anlagen/06/B0159ZB3.pdf (Planung 2016)
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.494722.php
+#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4258 (fehlerhafter Schlussbericht)
 #: last_checked: 2020-08-30 vvv
 #: check_frequency: 90d vvv
 #: osm_watch: way id="317233618" version="4"
@@ -1414,6 +1418,9 @@ Pr¸hﬂstr.: Kopfsteinpflaster	Q2 8962,4096 9106,4114 9346,4144
 Pr¸hﬂstr.: schlechtes Kopfsteinpflaster	Q3 9346,4144 9465,4173
 Pr¸hﬂstr.: m‰ﬂiges bis schlechtes Kopfsteinpflaster	Q2- 9465,4173 9580,4201 9869,4271
 Marienburger Str.: Kopfsteinpflaster	Q2 11572,14452 11821,14317 12077,14186
+#: XXX evtl. wird hier asphaltiert und eine Fahrradstraﬂe ausgewiesen
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4680 (Planung ab 2021)
+#: next_check: 2021-09-01
 Hufelandstr.: Kopfsteinpflaster	Q2 12077,14186 12228,14083 12361,13985 12478,13903 12579,13840 12578,13800
 Limonenstr.: Kopfsteinpflaster	Q2 3716,4764 3597,4941 3418,5088 3357,5178 3321,5212
 Willdenowstr.: Kopfsteinpflaster	Q2 3826,4800 3684,4998 3426,5292
@@ -4825,8 +4832,11 @@ Moosstr. [Wohngebiet]: Kopfsteinpflaster	Q2 19306,4969 19241,4958
 Husstr.: Asphalt mit einigen Sch‰den	Q1 19633,3751 19736,3858 19763,3959 19815,4148
 #: note: und auch keine B¸rgersteige, auf die man ausweichen kˆnnte
 Hollstr.: schlechtes Kopfsteinpflaster	Q3 20035,4099 19974,4050 19947,4087 19917,4168
-Genossenschaftsstr.: Beton	Q0 19922,4251 19963,4198
-Genossenschaftsstr.: schlechtes Kopfsteinpflaster	Q3 19963,4198 20035,4099 20067,4054 20145,3954 20290,3756 20285,3739 20304,3714
+Genossenschaftsstr.: Beton	Q0 19924,4252 19963,4198
+Genossenschaftsstr.: m‰ﬂiges bis schlechtes Kopfsteinpflaster	Q3+ 19963,4198 20035,4099 20067,4054
+Genossenschaftsstr.: schlechtes Kopfsteinpflaster	Q3 20067,4054 20145,3954 20290,3756
+Genossenschaftsstr.: Kopfsteinpflaster	Q2 20290,3756 20285,3739 20304,3714
+Marktplatz Adlershof: Kopfsteinpflaster	Q2 20290,3756 20336,3783
 Pfingstberggasse: Beton	Q0 19954,3887 20075,3979 20112,3932 20145,3954
 Eigenheimgasse: schlechtes Kopfsteinpflaster	Q3 19736,3858 19791,3849
 Vimystr.: Asphalt	Q0 19795,3945 19763,3959 19703,3979 19627,4004 19596,4035
@@ -4847,7 +4857,7 @@ Am Berg: Asphalt	Q0 23010,4506 22959,4576
 #: note: laut ADFC-Karte m‰ﬂig geeignet
 #: note: auf der ˆstlichen Seite Rasengittersteine (by L.Koch), allerdings zum Parken verwendet (srt)
 Freystadter Weg: Asphalt	Q0 20994,4761 20981,4696 20981,4628 21008,4275
-Freystadter Weg: Verbundsteinpflaster	Q0- 21008,4275 21017,4220 21053,4162
+Freystadter Weg: Verbundsteinpflaster	Q0- 21008,4275 21017,4220 21046,4173
 Kaulsdorfer G‰rten: Verbundsteinpflaster	Q1+ 21859,9822 21893,9902
 Fichtenstr.: Asphalt	Q0 22219,9545 22200,9430 22154,9237
 Buchenstr.: Asphalt	Q0 22514,8848 22586,8961 22637,9048 22694,9139
@@ -5509,7 +5519,7 @@ Rotkehlchenweg (Buckow): Beton	Q0 13909,3845 14099,3772
 (Rotkehlchenweg - Kormoranweg): Verbundsteinpflaster	Q1 14099,3772 14185,3734
 Rotschwanzweg: Beton mit einigen Sch‰den	Q1+ 13852,3721 14141,3614
 Zaunkˆnigweg: Beton	Q0 13818,3623 13995,3541
-Korlinweg: Beton	Q0- 13964,4333 14048,4363
+Korlinweg: Beton	Q0- 13968,4340 14048,4363
 Dˆmitzer Str.: Asphalt	Q0 13757,4729 13775,4631 13771,4485
 Havermannstr.: Asphalt	Q0 13803,4932 13892,4955
 Rambowstr.: Asphalt	Q0 13803,4932 13825,4850 13853,4759
@@ -8565,8 +8575,8 @@ Theanolte-B‰hnisch-Str.: Asphalt	Q0 11320,13095 11235,13143
 (Keibelstr. - Karl-Liebknecht-Str.): Gehwegplatten	Q0- 11045,13183 10976,13229
 (Weg am Stadion): Schotterstraﬂe	Q2+ 20074,4379 20017,4441 19864,4607 19759,4711 19710,4760 19642,4838
 (Waldweg): Waldweg	Q2 19765,4876 19774,4810 19759,4711
-(Genossenschaftsstr. - Weg am Stadion): Waldweg	Q2 19908,4317 19901,4334 19894,4395 19864,4607
-(Genossenschaftsstr. - Weg am Stadion): Waldweg	Q2 19922,4251 19876,4304 19901,4334
+(Genossenschaftsstr. - Weg am Stadion): Waldweg	Q2 19924,4252 19901,4334 19894,4395 19864,4607
+(Genossenschaftsstr. - Weg am Stadion): Waldweg	Q2 19924,4252 19876,4304 19901,4334
 (Braunlager Str. - Tempelhofer Weg): Mosaikpflaster	Q1 12062,5779 12017,5747
 Am Vierling: Kleinsteinpflaster	Q1 -472,4185 -444,4126
 (Salzachstr. - Parkplatz Einkaufszentrum): Verbundsteinpflaster	Q1+ -2103,3536 -2173,3513
@@ -10919,8 +10929,8 @@ Lynarstr.: Asphalt	Q0 2074,9225 1937,9253
 Johannaplatz: Asphalt	Q0 2132,9267 2074,9225 2098,9173 2165,9155 2193,9195 2177,9251 2132,9267
 Kietzgrabensteg: Asphalt/Beton	Q0 22514,4632 22531,4605
 Weg ¸ber Autobahntunnel: Gehwegplatten & wassergebundene Decke	Q0- 11818,6201 12040,6239 12235,6276
-Mergenthalerring: schlechtes Kopfsteinpflaster	Q3+ 14121,8147 14210,8227 14219,8260
-Mergenthalerring: Kopfsteinpflaster	Q2 14219,8260 14258,8520 14262,8564
+Mergenthalerring: schlechtes Kopfsteinpflaster	Q3+ 14121,8147 14210,8227 14229,8278
+Mergenthalerring: Kopfsteinpflaster	Q2 14229,8278 14258,8520 14262,8564
 Mergenthalerring: Asphalt	Q0 14262,8564 14276,8729 14252,8829 14261,8851
 # REMOVED --- #: next_check_id: NIZZASTR-2014 --- #: XXX wie wird die Qualit‰t nach der Fertigstellung sein? Beleuchtung? --- #: add_fragezeichen: wurde die Straﬂe mittlerweile befestigt? --- #: osm_watch: way id="344108079" version="6" --- #: last_checked: 2019-06-15 --- #: next_check: 2019-06-24
 (Marseillestr. - Straﬂe 160): Verbundsteinpflaster	Q1 12495,21397 12507,21391 12520,21386
@@ -11824,6 +11834,7 @@ Gisela-Reissenberger-Platz: Asphalt, letzte Deckschicht fehlt	Q1 20659,11548 206
 (Verbindungsweg): Asphalt, letzte Deckschicht oder Pflasterung fehlt	Q1 20659,11548 20627,11552
 (Verbindungsweg): Verbundsteinpflaster	Q1+ 20627,11552 20590,11557
 Franz-Jacob-Str.: Beton	Q0- 14754,13819 14810,13930 14803,13966
+Dˆrpfeldstr. [Nebenstraﬂe]: unbefestigte Straﬂe	Q2 20829,4044 20925,4101 21046,4173 21071,4189
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -18141,7 +18152,7 @@ Hoppendorfer Str.: guter Beton	Q0 21810,7749 21914,7862 21994,7949
 #: by: ^^^
 # 
 #: by: Ilona Lange:
-Helbigstr.: schlechtes Kopfsteinpflaster	Q3 20362,3750 20339,3779 20109,4087
+Helbigstr.: schlechtes Kopfsteinpflaster	Q3 20362,3750 20336,3783 20109,4087
 # 
 #: by: Marco Lukowicz: vvv
 #: corrected_by: srt (just wording, "sehr guter Schotterweg" -> ...)
@@ -21641,7 +21652,7 @@ Stubnitzstr.: Asphalt, ab und zu Schlaglˆcher	Q1 11113,17895 11102,17942
 # 
 #: by: haﬂe birgit: vvv
 #: confirmed_by: srt
-Malchiner Str.: Asphalt	Q0 13836,4759 13869,4626 13866,4481 13853,4356 13825,4240
+Malchiner Str.: Asphalt	Q0 13836,4759 13869,4626 13866,4481 13855,4363 13825,4240
 #: corrected_by: srt (Asphalt, Q0 -> ...)
 Malchiner Str.: Beton	Q1 13825,4240 13792,4089
 #: by ^^^
@@ -22774,7 +22785,7 @@ Caseler Str.: guter Asphalt	Q0 14608,16772 14700,16790 14732,16770
 Goldbeckweg: sehr guter Asphalt	Q0 -1480,14922 -1489,15027 -1511,15127 -1532,15225 -1556,15319 -1547,15377
 # 
 #: by: Hartmut Schrˆder vvv
-Waldstr. (Adlershof): guter Beton	Q0 20834,4035 20790,4114 20694,4177 20623,4227 20540,4285
+Waldstr. (Adlershof): guter Beton	Q0 20834,4035 20829,4044 20790,4114 20694,4177 20623,4227 20540,4285
 (Dˆrpfeldstr.): guter Asphalt	Q0 20772,3999 20958,3875
 #: by: ^^^
 # 
@@ -23238,9 +23249,8 @@ Jenbacher Weg: Verbundsteinpflaster	Q1 6398,590 6411,533 6233,412 6180,376 5987,
 # 
 #: by: tipiak:
 #: note: "enge Straﬂe", aber q0
-#: corrected_by: srt (guter Asphalt -> m‰ﬂiger Beton)
-#: add_fragezeichen: Wurde hier neu asphaltiert?
-Krischanweg: m‰ﬂiger Beton	Q1- 13853,4356 13964,4333 14012,4184
+#: corrected_by: srt (guter Asphalt -> m‰ﬂiger Beton, sp‰ter -> ..., neu gemacht)
+Krischanweg: Asphalt	Q0 13855,4363 13968,4340 14012,4184
 # 
 #: by: Aydin (murat): vvv
 #: note: "enge Straﬂe" ohne Kategorisierung
@@ -24440,7 +24450,7 @@ Kroppenstedtweg: Asphalt	Q0 1035,14996 996,15091 982,15127
 #: XXX wird hier auch die Fahrbahndecke verbessert?
 # REMOVED (anderer Abschnitt) --- #: osm_watch: way id="28259369" version="19"
 #: osm_watch: way id="844089355" version="1"
-#: last_checked: 2020-08-27 (mapillary)
+#: last_checked: 2020-09-06 (mapillary)
 #: check_frequency: 90d
 Kroppenstedtweg: wassergebundene Decke	Q1 982,15127 957,15189
 #: by ^^^
@@ -24486,7 +24496,7 @@ Trappenpfad: guter Asphalt	Q0 14387,3875 14737,4175
 #: corrected_by: srt (m‰ﬂiger Asphalt -> Asphalt)
 Laubs‰ngerweg: Asphalt	Q0 14761,3580 14725,3617 14645,3691 14594,3712 14568,3731
 #: corrected_by: srt (m‰ﬂiger Asphalt -> m‰ﬂiger Beton)
-Laubs‰ngerweg: m‰ﬂiger Beton	Q1- 14568,3731 14484,3796 14453,3823 14387,3875 14324,3938
+Laubs‰ngerweg: m‰ﬂiger Beton	Q1 14568,3731 14484,3796 14453,3823 14387,3875 14324,3938
 Tr‰nkeweg: guter Asphalt	Q0 14453,3823 14806,4125
 #: by: ^^^
 # 

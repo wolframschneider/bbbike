@@ -1301,7 +1301,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Geb‰ude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Geb‰ude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2020-11-06
+#: last_checked: 2020-11-23
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1479,6 +1479,8 @@ ausgeschildert "Quartiersweg 1-4"	CP2; 7498,8062 7516,8063
 #: next_check_id ^^^
 # 
 zum Terminal A	CP2; 2853,16293 2812,16348
+# 
+am Anfang als Hauptweg 15 (blau-weiﬂe Markierung) ausgeschildert	CP2; 19924,4252 19901,4334
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straﬂen)
