@@ -3289,22 +3289,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
-#: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
-#: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
-#: source_id: 2147341022
-# REMOVED --- #: XXX nächste Termine: 25. November 2020 --- #: next_check: 2020-11-25 --- #: priority: #A
-	2::temp -2218,5133 -927,6888
-	2::temp -2825,5588 -1925,6790 -2080,6897
-	2::temp -1925,6790 -1851,6887
-',
-         'from' => 1606172400,
-         'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 25. November 2020 ab ca. 09:30 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1606295700
-       },
+       undef,
        undef,
        {
          'data' => '#: tempex: sunset-T07
@@ -3592,19 +3577,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: source_id: 2147343479 --- #: also_indoor: traffic vvv --- #: last_checked: 2018-10-25 vvv --- #: next_check: 2018-12-17 vvv
-# REMOVED (hier wohl nicht mehr?) ---	q4::inwork 2434,4299 2407,4280
-#: source_id: 2147346565
-	q4::inwork; 2407,4280 2417,4327 2429,4385 2445,4471
-	2::inwork 2417,4327 2434,4299
-',
-         'from' => undef,
-         'id' => 3016,
-         'text' => 'Thielallee: Bauarbeiten, Fahrbahn am Corrensplatz Richtung Norden gesperrt, möglicherweise sind auch Radfahrer betroffen, voraussichtlich bis Ende November 2020',
-         'type' => 'handicap',
-         'until' => 1606492800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4079,18 +4052,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147345498
-#: source_id: LMS-BR_r_LMS-BR_198404_LMS-BR_72
-	q4::inwork 4515,4966 4514,5082
-# REMOVED (hier nicht) ---	q4::inwork 4514,5082 4513,5139 4512,5199
-',
-         'from' => 1582487459,
-         'id' => 3198,
-         'text' => 'Hindenburgdamm: zwischen Geranienstr. und Resedenstr. Bauarbeiten, Fahrbahn gesperrt, bis 24.11.2020',
-         'type' => 'handicap',
-         'until' => 1606233600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4419,7 +4381,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: SIGISMUND-2020
 #: XXX wann sind die Bauarbeiten fertig? vvv
 #: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
-#: last_checked: 2020-10-10 vvv
+#: last_checked: 2020-11-24 vvv
 	q3::inwork 8031,11249 7934,11275 7897,11287
 	q4::inwork 7934,11275 7965,11380
 #: last_checked ^^^
@@ -4485,7 +4447,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://www.berliner-woche.de/karlshorst/c-verkehr/letzte-arbeiten-an-den-gleisen_a291893 (hier: bis 13.12.2020)
 #: source_id: 2147343744
-#: last_checked: 2020-11-18 (bahninfo-forum) vvv
+#: last_checked: 2020-11-27 (bahninfo-forum) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2020-12-13 vvv
 	1::inwork 18672,8238 18657,8163
@@ -4591,16 +4553,7 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
          'until' => undef
        },
        undef,
-       {
-         'data' => '	2::inwork 4659,3065 4587,3097
-',
-         'from' => 1604216700,
-         'id' => 3301,
-         'source_id' => '2147346571',
-         'text' => 'Bäkestr.: Brückenarbeiten, Sperrung, eventuell sind auch Radfahrer betroffen, vom 02.11.2020 08:45 Uhr bis 27.11.2020 15:00 Uhr ',
-         'type' => 'gesperrt',
-         'until' => 1606485600
-       },
+       undef,
        {
          'data' => '	q4::inwork 8614,15156 8570,15107
 ',
