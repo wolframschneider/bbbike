@@ -135,10 +135,9 @@ Fischerstr.: Kopfsteinpflaster	Q2; 16181,10609 16193,10593 16220,10555
 Fischerstr.: Asphalt mit Schäden	Q1; 16220,10555 16193,10593 16181,10609
 Fischerstr.: Asphalt	Q0 16038,10818 16080,10743
 Fischerstr.: Kopfsteinpflaster	Q2 15970,10755 16080,10743
-Wallensteinstr./Neuer Feldweg: mäßiges bis schlechtes Kopfsteinpflaster	Q2 17365,9654 17360,9629
-Wallensteinstr./Neuer Feldweg: Fahrbahn mäßiges bis schlechtes Kopfsteinpflaster, Geh/Radweg Verbundsteinpflaster	Q2; 17360,9629 17425,9605 17456,9594 17549,9529
-Wallensteinstr./Neuer Feldweg: Asphaltstreifen	Q0; 17549,9529 18037,9195
-Wallensteinstr./Neuer Feldweg: Fahrbahn mäßiges bis schlechtes Kopfsteinpflaster, Geh/Radweg Verbundsteinpflaster/Mosaikpflaster	Q2; 18037,9195 17549,9529 17456,9594 17425,9605 17360,9629
+Neuer Feldweg: Asphalt	Q0 17365,9654 17360,9629
+Wallensteinstr.: Asphaltstreifen	Q0; 17360,9629 17425,9605 17456,9594 17549,9529 18037,9195
+Wallensteinstr.: Fahrbahn mäßiges bis schlechtes Kopfsteinpflaster, Geh/Radweg Verbundsteinpflaster/Mosaikpflaster	Q2; 18037,9195 17549,9529 17456,9594 17425,9605 17360,9629
 Wallensteinstr.: Asphalt mit einigen Schäden	Q1 18037,9195 18092,9141 18134,9080
 Dönhoffstr.: Asphalt	Q0 18134,9080 18161,9029 18221,8978 18299,8925 18375,8874 18451,8823 18518,8778 18609,8717 18733,8633
 Halker Zeile: schlechtes Kopfsteinpflaster	Q3 9940,559 10063,251 10156,13 10214,-142 10266,-284
@@ -530,8 +529,8 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 Uwe-Lieschied-Str.: schlechtes Kopfsteinpflaster	Q3 12407,8177 12427,8109
 Falkstr.: Asphalt	Q0 12162,8053 12178,7985 12179,7979
-Falkstr.: Kopfsteinpflaster	Q2 12179,7979 12220,7822
-(Falkstr. - Mittelweg): Verbundsteinpflaster	Q1 12220,7822 12224,7799
+Falkstr.: Kopfsteinpflaster	Q2 12179,7979 12216,7838 12220,7822
+(Falkstr. - Mittelweg): Verbundsteinpflaster, einige Schäden	Q1 12220,7822 12224,7799
 Schillerpromenade: Kopfsteinpflaster	Q2 11661,8131 11689,8006
 Schillerpromenade: Kopfsteinpflaster	Q2 11713,7899 11738,7790 11763,7687 11785,7583 11803,7487
 Säntisstr.: Asphalt	Q0 8892,802 8743,681 8660,614
@@ -1486,7 +1485,7 @@ Gustav-Holzmann-Str.: asphaltiert	Q0 16119,9689 16302,9865
 (Rummelsburger Ufer - An den Knabenhäusern): Parkweg	Q1 15604,10204 15621,10214
 Tauchersteig: guter Asphalt	Q0 22058,2649 22047,2662 22011,2658 21879,2592 21770,2535
 Am Kanal: guter Asphalt	Q0 21750,2593 21490,2535 21223,2475 21111,2451
-Am Kanal: Feldweg	Q2 21111,2451 20939,2413
+Am Kanal: Asphalt	Q0 21111,2451 20939,2413
 Am Teltowkanal: Feldweg	Q2 20810,2398 20496,2321 20499,2285 20282,2259
 Am Teltowkanal: Kopfsteinpflaster	Q2 20282,2259 20128,2271
 Am Teltowkanal: feiner Schotter	Q1 3375,1026 3366,1007 3370,955 3355,893 3304,832 3261,835 3232,803
@@ -8431,7 +8430,7 @@ Mendelssohnstr.: Verbundsteinpflaster	Q1 11598,13598 11652,13564
 (Wiese vor dem Reichstag): unebene Gehwegplatten	Q2 8373,12416 8369,12609
 (Krankenhaus Herzberge - Landschaftspark Herzberge): Asphalt	Q0 17479,13434 17482,13316 17484,13257 17487,13198 17490,13133 17491,13125
 (Landschaftspark Herzberge - Allee der Kosmonauten/Rhinstr.): Asphalt	Q0 17698,13124 17739,13146 17871,13145 17906,13141 17978,13328 18054,13477 18104,13510
-Allee der Kosmonauten: Beton mit einigen Hebungen	Q0 17698,13134 17689,13405 17688,13430
+Allee der Kosmonauten: Beton mit einigen Hebungen	Q0 17698,13134 17690,13365 17689,13405 17688,13430
 (zum Friedhof): Asphalt	Q0 17906,13141 17923,13134
 (Königsheideweg - Weststr.): wassergebundene Decke	Q1 17115,4757 17129,4837 17173,4902
 Fennstr.: Asphalt	Q0 18080,5376 18245,5551
@@ -8550,7 +8549,7 @@ Franckepark: Verbundsteinpflaster	Q1 9373,6179 9374,6189 9381,6277
 (zum Fähranleger Krughorn): Asphalt/Kopfsteinpflaster/unbefestigt	Q2 -10046,1589 -10053,1640
 Roedenbecksteig: Asphalt	Q0 -9393,445 -8629,175
 (Verlängerung des Roedenbecksteigs): Asphalt	Q0 -8629,175 -8539,-264
-(Umfahrung Helmholtz-Zentrum): Beton mit einigen Schäden	Q1 -7737,316 -7742,330 -7844,392 -8021,393 -8301,326 -8398,242 -8387,190
+(Umfahrung Helmholtz-Zentrum): Asphalt	Q0 -7737,316 -7742,330 -7844,392 -8021,393 -8301,326 -8398,242 -8387,190
 Conradstr.: Asphalt	Q0 -5869,1261 -5843,1207 -5799,1170 -5787,1123
 Conradstr.: unbefestigte Straße	Q2 -5787,1123 -5753,998
 (Ordensmeisterstr./Komturstr. - Kolonie Albrechtshöhe): Asphalt	Q0 10254,5921 10215,5959
@@ -9225,7 +9224,7 @@ Advokatensteig: Asphalt mit einigen Wurzelschäden	Q1 22162,452 22221,465 22251,5
 (Wilhelm-Hoff-Str. - James-Franck-Str.): Asphalt	Q0 18828,3196 18822,3188 18724,3091 18716,3082 18707,3074 18613,2983 18601,2971
 Adlergestell: Radweg wechselnd mäßiger Beton und Verbundsteinpflaster	Q1 21242,2048 21388,1895
 Adlergestell: Beton	Q0 21388,1895 21515,1785 21800,1644 21856,1573
-Adlergestell: Verbundsteinpflaster	Q1 21856,1573 21998,1239
+Adlergestell: Verbundsteinpflaster	Q1 21856,1573 21881,1513 21998,1239
 Liliensteinweg: schlechtes Kopfsteinpflaster	Q3 10120,21464 10099,21461 10071,21453
 Liliensteinweg: unbefestigte Straße	Q2 10071,21453 10054,21448 10012,21436 9971,21424 9960,21421 9932,21413 9907,21406 9870,21395 9830,21384 9752,21362 9684,21337 9645,21323 9629,21317 9590,21303 9574,21297 9532,21282 9519,21277 9497,21259 9481,21241 9472,21230 9455,21211 9445,21199 9429,21181 9420,21170 9394,21140 9344,21084
 Liliensteinweg [Nebenstrang]: unbefestigte Straße	Q2 9464,21307 9475,21281 9497,21259
@@ -10233,7 +10232,7 @@ Christian-Dohm-Weg: Betonpflaster	Q0 20760,18812 20894,18861
 Christian-Dohm-Weg: Baustraße	Q2 20894,18861 21024,18915
 Henriette-Herz-Allee: Asphalt	Q0 20907,18740 20901,18793 20894,18861 20889,18935
 Allee der Kosmonauten [Wohngebiet]: Asphalt mit einigen Schäden	Q1 19736,13523 19737,13485
-Allee der Kosmonauten [Wohngebiet]: Asphalt mit einigen Schäden	Q1 19649,13481 19737,13485 19811,13487 19815,13317 19817,13259
+Allee der Kosmonauten [Wohngebiet]: Asphalt mit einigen Schäden	Q1 19649,13481 19737,13485 19811,13487 19812,13442 19815,13317 19817,13259
 (Allee der Kosmonauten, Verbindungsweg): Asphalt	Q0 19815,13317 19835,13317
 (Schwabenplatz, Trampelpfad): unbefestigter Weg	Q2 21307,9591 21291,9507
 (Sulzfelder Str. - Hansastr.): Beton	Q0 15120,16349 15120,16305
@@ -10450,6 +10449,8 @@ Gisela-Reissenberger-Platz: Asphalt, letzte Deckschicht fehlt	Q1 20659,11548 206
 (Verbindungsweg): Verbundsteinpflaster	Q1 20627,11552 20590,11557
 Franz-Jacob-Str.: Beton	Q0 14754,13819 14810,13930 14803,13966
 Dörpfeldstr. [Nebenstraße]: unbefestigte Straße	Q2 20829,4044 20925,4101 21046,4173 21071,4189
+(Marchwitzastr. - Allee der Kosmonauten): Asphalt	Q0 19934,13318 19835,13317
+Allee der Kosmonauten [Wohngebiet]: Plattenstraße	Q2 17690,13365 17648,13359 17592,13296 17592,13153
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -10998,7 +10999,9 @@ Grevesmühlener Str.: Beton mit Schäden	Q1 17881,18344 17800,18277
 Grevesmühlener Str.: Beton	Q0 17800,18277 17709,18201 17702,18168
 Husumer Str.: Asphalt	Q0 20713,10293 20945,10286 21015,10284 21276,10271
 Gottschedstr.: Kopfsteinpflaster	Q2 7885,16005 8014,16089 8077,16178 8307,16434
-Maisweg: Asphalt	Q0 20680,12632 20773,12621 20816,12618 20851,12669 20961,12858 21003,13152
+Maisweg: Asphalt	Q0 20680,12632 20773,12621 20816,12618
+Maisweg: Asphalt/Verbundsteinpflaster	Q1 20816,12618 20851,12669
+Maisweg: Asphalt	Q0 20851,12669 20961,12858 21003,13152
 Ingwäonenweg: Asphalt	Q0 16442,22505 16499,22789 16517,22868 16543,22942 16566,23007 16587,23067 16627,23187
 Ingwäonenweg: Verbundsteinpflaster	Q0 16627,23187 16683,23354
 Ingwäonenweg: Asphalt	Q0 16683,23354 16699,23402 16730,23492 16745,23548 16770,23593 16783,23615
@@ -17093,8 +17096,8 @@ Dietlindestr.: Asphalt mit leichten Schäden	Q1 17087,12501 17088,12617
 Ortliebstr.: Asphalt	Q0 17087,12501 17210,12486 17215,12485 17249,12478
 Kriemhildstr.: Asphalt	Q0 17300,12173 17314,12265
 Kriemhildstr.: Asphalt	Q0 17314,12265 17320,12308 17337,12428 17346,12490 17357,12566
-Hagenstr. (Lichtenberg): Asphalt mit Schäden	Q1 16957,12599 16933,12432
-Hagenstr. (Lichtenberg): Kopfsteinpflaster	Q2 16933,12432 16918,12325
+Hagenstr. (Lichtenberg): Asphalt	Q0 16957,12599 16933,12432
+Hagenstr. (Lichtenberg): Asphalt	Q0 16933,12432 16918,12325
 Hagenstr. (Lichtenberg): Asphalt	Q0 16918,12325 16890,12135 16865,11931
 Gernotstr. (Lichtenberg): Kopfsteinpflaster	Q3 17122,12295 17092,12107
 Gernotstr. (Lichtenberg): Kopfsteinpflaster, zwischen den Schieden Beton	Q2; 17092,12107 17088,12069

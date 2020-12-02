@@ -7,6 +7,7 @@
 Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 Müncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
 Singerstr.: Bauarbeiten an der Lichtenberger Str., Ausweichen auf Gehweg (nördliche Seite geht besser), Bordstein	q2::inwork 12081,12236 11920,12266
+Singerstr.: Bauarbeiten an der Lichtenberger Str., Ausweichen auf Gehweg (nördliche Seite geht besser), Bordstein	q3::inwork 11920,12266 11845,12292
 (Notweg Bahnübergang Bahnhofstr.): Fußgänger, für Radfahrer frei	q3 10231,-2159 10215,-2170 10209,-2171 10198,-2143 10096,-2137
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q3::inwork; 14382,9299 14242,9448
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork; 14242,9448 14185,9509 14089,9610
@@ -37,7 +38,7 @@ Stallschreiberstr.: Umbau der Kreuzung, eng	q3::inwork 10683,11175 10623,11246
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwork; 9581,12588 9613,12381
 Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364 9934,12420
-Neuer Feldweg/Wallensteinstr.: Bauarbeiten, Ausweichen auf engen Gehweg	q2::inwork 17383,9719 17365,9654 17360,9629 17425,9605 17456,9594 17549,9529
+Neuer Feldweg/Wallensteinstr.: Bauarbeiten, Ausweichen auf engen Gehweg	q2::inwork 17365,9654 17360,9629 17425,9605 17456,9594 17549,9529
 Sterndamm [Nebenfahrbahn]: Gehweg für Radfahrer frei	q3 17648,5338 17697,5347
 Jahnstr.: Bauarbeiten, etwa 50m der Fahrbahn sind gesperrt	q3::inwork 11500,9116 11509,9392
 Prinzessinnenstr.: Sperrung der Fahrbahn an der Einmündung Oranienstr.	q3::inwork 10965,10851 11145,10638
@@ -45,6 +46,7 @@ Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q
 Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5919,12423 5894,12480 5944,12548
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
 Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
+Neuköllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
 Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12394,8729 12330,8636
 Fuldastr.: Sperrung der Einmündung Karl-Marx-Str.	q3::inwork 12551,8612 12500,8504
 Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 12639,8344
@@ -370,7 +372,7 @@ Dieffenbachstr.: Bodenschwellen	q0 11346,9655 11541,9576
 Oppelner Str.: Bodenschwellen	q0 12897,10439 12978,10581
 Hoffmannstr.: Bodenschwellen (2x)	q1 14077,10016 14289,9870
 Lausitzer Platz: einige Bodenschwellen	q2 12197,10494 12172,10585
-Lausitzer Platz: einige Bodenschwellen	q2 12274,10612 12172,10585
+Lausitzer Platz: Fußgängerzone, Radfahrer frei, Bodenschwelle	q2 12274,10612 12172,10585
 Lausitzer Platz: einige Bodenschwellen	q2 12328,10442 12274,10612
 (Grünanlage Egon-Erwin-Kisch-Str. - Falkenberger Chaussee): Fußgänger, Bordstein	q3 17686,18172 17721,18001
 Erich-Steinfurth-Str.: Fußgänger	q2 12645,11673 12596,11696
@@ -603,7 +605,7 @@ Baruther Str.: gemeinsamer Rad- und Gehweg	q1 9588,9827 9723,9842
 (Lasdehner Str. - Gubener Str.): Fußgänger, Bordsteine	q3 13375,12062 13339,12029
 Perleberger - Kieler: unterhalb der Brücke sehr eng	q3 7636,14414 7612,14449
 Ida-Wolff-Platz: Fußgänger	q2 9215,10607 9192,10528
-Falkstr.: Fußgänger	q1 12179,7979 12220,7822
+Falkstr.: Fußgänger	q1 12179,7979 12216,7838 12220,7822
 (Falkstr. - Mittelweg): gemeinsamer Fuß- und Radweg	q1 12220,7822 12224,7799
 (Platanenweg - Willi-Sänger-Str.): Fußgänger	q1 15787,8073 15808,8099 15843,8125
 Carl-Herz-Ufer: gemeinsamer Fuß- und Radweg	q0 10066,10071 10168,10085
@@ -2048,6 +2050,8 @@ Eingang Kienitzer Str.: Bordstein	q3 11490,7737 11504,7738
 Friedrich-Jacobs-Promenade: einige Fußgänger, einige kurvige und schmale Abschnitte	q2 16117,10120 16068,10051 16007,9968 15995,9966 15948,9902 15920,9866 15916,9868 15910,9860
 Friedrich-Jacobs-Promenade: einige Fußgänger, einige kurvige und schmale Abschnitte	q2 16090,10141 16041,10072 15980,9986 15981,9975 15936,9911 15910,9873 15916,9868
 (Verbindungsweg): Fußgänger, schmal	q2 20659,11548 20627,11552 20590,11557
+(Marchwitzastr. - Allee der Kosmonauten): einige Fußgänger	q2 19934,13318 19835,13317
+(Allee der Kosmonauten [Wohngebiet] - Unterführung): einige Fußgänger, Kurven	q2 19812,13442 19826,13444
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635

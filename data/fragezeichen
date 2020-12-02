@@ -962,7 +962,6 @@ Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
-(Umfahrung Helmholtz-Zentrum): Beton mit einigen Schäden (Sind die Sanierungsarbeiten fertig? Ist der Weg nun asphaltiert?)	? -7737,316 -7742,330 -7844,392 -8021,393 -8301,326 -8398,242 -8387,190
 (Adlergestell - Sportpromenade/Bammelecke): Waldweg, teilweise loser Schotter (wird sich die Qualität hier bessern (insbesondere: was passiert mit dem losen Schotter)?)	? 24485,-667 24758,-268 25172,345
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33327,2979 33296,2894
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33176,2938 33296,2894 33406,2852 33503,2818
@@ -1017,7 +1016,6 @@ Waldpromenade (Erkner): Beton (ist der nordöstliche Abschnitt auch betoniert?)	?
 Fuchssteig (Erkner): Asphalt (ist der nördliche Abschnitt auch asphaltiert?)	? 34459,3734 34483,3839
 Erich-Mühsam-Str.: Kopfsteinpflaster (liegt hier tatsächlich Kopfsteinpflaster? Wenn ja, wie gut/schlecht ist die Pflasterung?)	? 1787,31375 1851,31451 1878,31471 1916,31483 2027,31518 2082,31535
 Gartenallee: Kopfsteinpflaster (liegt hier tatsächlich Kopfsteinpflaster? Wenn ja, wie gut/schlecht ist die Pflasterung?)	? 1887,31658 2027,31518
-Melanchthonstr. (Falkensee): unbefestigte Baustraße (wird die Straße asphaltiert?)	? -7194,17464 -7276,17526 -7355,17552 -7443,17544
 Am Wasser (Gartz): Kopfsteinpflaster (Stimmt das? Liegt hier tatsächlich Kopfsteinpflaster?)	? 76116,90239 76020,90231 75977,90236
 Herweghstr. (Schulzendorf): Kopfsteinpflaster (Ist das Kopfsteinpflaster eher mäßig oder eher schlecht?)	? 24397,-6252 24314,-6140 24240,-6037 24157,-5931 24079,-5824 23985,-5719
 Reichenberg: grobes Kopfsteinpflaster (genauer Abschnitt fehlt)	? 58453,24209 58390,23910 58422,23806 58340,23653
@@ -1042,6 +1040,8 @@ Götschendorf - Böckenberg: schlechte Qualität, teilweise Sand (wie ist die Quali
 Groß Friedenwalde - Flieth: Kopfsteinpflaster (wie schlecht ist das Kopfsteinpflaster hier?)	? 35740,80983 35815,81168 35815,81518 35894,81782
 Groß Friedenwalde - Flieth: Asphalt (ist hier tatsächlich asphaltiert?)	? 35894,81782 35998,82265 36009,82890 36430,83497 36578,83835 36590,84086 36693,84235 36676,84495 36696,84495 36715,84579
 Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	? 37515,64395 37608,64317 38095,64055 38327,63933
+# added from nolighting
+(Ist der Freischütztunnel mittlerweile beleuchtet?)	? 13659,21804 13644,21808 13617,21819 13604,21825
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
@@ -1068,11 +1068,13 @@ Brauerstr.: evtl. wird hier die Einbahnstraßenregelung für Radfahrer aufgehoben 
 # added from bbbike-temp-blockings-optimized
 Münsterberger Weg: Bauarbeiten, Weg ist komplett gesperrt, Ende der Bauarbeiten ist unbekannt (Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?)	? 24029,11363 24172,11320
 Schönstr.: Bauarbeiten zwischen Große Seestr. und Rennbahnstr., Fahrbahn gesperrt (Bis wann gehen die Bauarbeiten?)	? 14136,17170 13996,16959
-Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Chlumer Str. wegen Bauarbeiten gesperrt, bis 30.06.2021 (Sind die Bauarbeiten im Gardeschützenweg bereits beendet?)	? 4515,4760 4214,4595
-Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Chlumer Str. wegen Bauarbeiten gesperrt, bis 30.06.2021 (Sind die Bauarbeiten im Gardeschützenweg bereits beendet?)	? 4214,4595 4039,4500
+Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Lipaer Str. wegen Bauarbeiten gesperrt, außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt, bis 30.06.2021 (Sind die Bauarbeiten im Gardeschützenweg bereits beendet?)	? 4515,4760 4214,4595
+Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Lipaer Str. wegen Bauarbeiten gesperrt, außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt, bis 30.06.2021 (Sind die Bauarbeiten im Gardeschützenweg bereits beendet?)	? 4214,4595 4039,4500
+Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Lipaer Str. wegen Bauarbeiten gesperrt, außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt, bis 30.06.2021 (Sind die Bauarbeiten im Gardeschützenweg bereits beendet?)	? 4179,4662 4214,4595
 Betckestraße: zwischen Wörther Str. und Götelstr. Fahrbahn gesperrt, Ausweichen auf nördlichen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt (Wann ist die Fahrbahn wieder offen?)	? -3252,12580 -3444,12580
 Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung auch für Radfahrer gesperrt (Bis wann gilt die Sperrung für Radfahrer?)	? 5192,10241 5196,10398
 Rehagener Platz: Bauarbeiten, Fahrbahn gesperrt (Bis wann gehen die Bauarbeiten? Wird das Kopfsteinpflaster nach den Bauarbeiten etwas besser sein?)	? 10642,-2371 10638,-2452 10563,-2432
 General-Pape-Str. - Wintgensstr.: Bauarbeiten, Fahrbahn und Gehweg komplett gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 8066,7843 7955,7840
 Mainzer Str.: Bauarbeiten zwischen Rollbergstr. und Werbellinstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 12162,8053 12147,8117
 Rungiusstr.: Bauarbeiten zwischen Bürgerstr. und Jahnstr., Fahrbahn gesperrt (Wann sind die Bauarbeiten beendet?)	? 12997,6290 13027,6168
+B96a: Radweg noch nicht offiziell eröffnet (Wann ist der Radweg offiziell befahrbar?)	? 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271

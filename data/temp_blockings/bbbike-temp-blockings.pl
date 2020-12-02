@@ -3362,18 +3362,15 @@ EOF
 	1 -1664,-1720 -1715,-1767 -1921,-1931 -2023,-2143
 EOF
      },
-     { from  => $isodate2epoch->("2020-12-01 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2021-01-03 23:59:59"), # 1357513199, # 2013-01-06 23:59 # 1325458800, # 2012-01-02 00:00 # PERIODISCH!
+     { from  => $isodate2epoch->("2019-11-24 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2020-01-05 23:59:59"), # 1357513199, # 2013-0
        periodic => 1,
-       recurrences => [['yearly', days => 18, months => 11]],
-       #recurrence_prewarn_days => 21, # finden 2020 überhaupt Weihnachtsmärkte statt?
-       text  => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 2. Dezember 2020 bis 3. Januar 2021',
+       recurrences => [['yearly', days => 18, months => 11, start => "2021-01-01T00:00:00"]],
+       text  => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 25. November 2019 bis 05. Januar 2020',
        type  => 'gesperrt',
        source_id => 'https://www.schaustellerverband-berlin.de/weihnachtsmarkt-berlin.html',
        data  => <<EOF,
-#: XXX weiterhin unklar, ob Weihnachtsmärkte noch im November, erst im Dezember oder gar nicht öffnen werden
-#: priority: #A
-#: next_check: 2020-11-30
+# REMOVED --- #: XXX weiterhin unklar, ob Weihnachtsmärkte noch im November, erst im Dezember oder gar nicht öffnen werden --- #: priority: #A --- #: next_check: 2020-11-30
 # sowieso schon mit q4 markiert, deshalb -> 2
 	2::xmas 5829,10964 5782,10884
 	2::xmas 5656,10876 5652,11004
@@ -17299,7 +17296,7 @@ EOF
      { from  => $isodate2epoch->("2019-12-12 00:00:00"),
        until => $isodate2epoch->("2019-12-15 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 8, months => 12]],
+       recurrences => [['yearly', days => 8, months => 12, start => "2021-01-01T00:00:00"]], # findet 2020 vermutlich nicht statt
        recurrence_prewarn_days => 10,
        text  => 'Alt-Köpenicker Weihnachtsmarkt vom 13.12.2019 bis zum 15.12.2019',
        type  => 'gesperrt',
@@ -26000,16 +25997,15 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2020-11-24 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2020-11-25 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 25. November 2020 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2020-12-01 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2020-12-02 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 02. Dezember 2020 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
 #: source_id: 2147341022
-# REMOVED --- #: XXX nächste Termine: 25. November 2020 --- #: next_check: 2020-11-25 --- #: priority: #A
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
@@ -27992,7 +27988,7 @@ EOF
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-10-24 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
+#: last_checked: 2020-11-29 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686
 # REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
@@ -29580,7 +29576,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-11-15
+#: last_checked: 2020-11-29
 #: next_check: 2020-12-13
 # REMOVED (hier normaler Radweg) --- q3::inwork; 18704,8427 18731,8577
 # REMOVED (hier keine Radwegschilder mehr) --- #: note: hier eng und viel Fußgängerverkehr ---	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
@@ -30529,7 +30525,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ROTHER-2020
-#: last_checked: 2020-11-10
+#: last_checked: 2020-12-01
 #: check_frequency: 21d
 	q4::inwork 13478,10998 13575,10963
 EOF
@@ -31046,24 +31042,26 @@ EOF
      },
      { from  => 1589275980, # 2020-05-12 11:33
        until => $isodate2epoch->("2021-06-30 17:00:00"), # 1599231600, # 2020-09-04 17:00
-       text  => 'Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Chlumer Str. wegen Bauarbeiten gesperrt, bis 30.06.2021',
+       text  => 'Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Lipaer Str. wegen Bauarbeiten gesperrt, außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt, bis 30.06.2021',
        type  => 'handicap',
        source_id => '2147345834',
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
+#: source_id: 2147346671 (bis 26.3.2021)
 #: also_indoor: traffic (H,G) vvv
-#: XXX wurde bei viz bereits aufgehoben, allerdings geht die Gesamtmaßnahme dort auch länger; laut rbbtext bis 2021-06-30; nun bei viz bis mindestens 9.11.2020 vvv
+#: note: laut rbbtext bis 2021-06-30 vvv
 #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
 #: last_checked: 2020-10-25 vvv
-#: next_check: 2020-11-09 vvv
+#: next_check: 2021-03-26 vvv
 	q4::inwork; 4515,4760 4214,4595
 #: note: hier nur ein kurzes Stück
 	q2::inwork; 4214,4595 4039,4500
+	q4::inwork 4179,4662 4214,4595
 #: next_check ^^^
 #: last_checked ^^^
 #: add_fragezeichen ^^^
-#: XXX ^^^
+#: note ^^^
 #: also_indoor ^^^
 EOF
      },
@@ -31231,19 +31229,19 @@ EOF
 EOF
      },
      { from  => 1599591506, # 2020-09-08 20:58
-       until => 1606838400, # 2020-12-01 17:00
-       text  => 'Kreuzung Maybachufer/Friedelstr./Hobrechtbrücke: wegen Bauarbeiten ist die Kreuzung gesperrt, Umwege auf dem Bürgersteig notwendig, bis 1. Dezember 2020',
+       until => $isodate2epoch->("2020-12-31 23:59:59"), # 1606838400, # 2020-12-01 17:00
+       text  => 'Kreuzung Maybachufer/Friedelstr./Hobrechtbrücke: wegen Bauarbeiten ist die Kreuzung gesperrt, Umwege auf dem Bürgersteig notwendig, bis Dezember 2020',
        type  => 'handicap',
-       source_id => '2147346338',
+       source_id => '2147346338', # wurde am 1.12.2020 deaktiviert
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.988534.php (Umbau der Kreuzung an der Hobrechtbrücke; Bürknerstr. wird verschwenkt; außerdem entsteht ein Überweg (Zebrastreifen?); Bauarbeiten bis Dezember 2020; Sperrung)
 #: by: https://twitter.com/BerlinNkl/status/1303296712799330304
 #: by: https://pbs.twimg.com/media/EhY9dDlWkA4cFqP?format=png
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/kreuzung-friedelstrassemaybachufer-wird-entschaerft_a286609
 #: priority: #A vvv
-#: last_checked: 2020-10-22 (mapillary) vvv
+#: last_checked: 2020-11-28 vvv
 #: check_frequency: 30d vvv
-#: next_check: 2020-12-01 vvv
+# REMOVED --- #: next_check: 2020-12-01 vvv
 #: osm_watch: way id="4068029" version="19"
 	q3::inwork 11897,9754 12085,9778
 #: osm_watch: way id="4714346" version="12"
@@ -31252,7 +31250,7 @@ EOF
 	q3::inwork 12074,9689 12085,9778 11880,9874
 #: osm_watch: way id="845476767" version="3"
 	q3::inwork 12250,9691 12085,9778
-#: next_check ^^^
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: priority ^^^
@@ -31414,8 +31412,10 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/karlshorst/c-verkehr/letzte-arbeiten-an-den-gleisen_a291893 (hier: bis 13.12.2020)
+#: by: https://twitter.com/VIZ_Berlin/status/1333700349597782018 (bis Mitte Februar 2021?)
+#: by: https://viz.berlin.de/2020/12/vorschau-02122020/ (bis Mitte Februar 2021?)
 #: source_id: 2147343744
-#: last_checked: 2020-11-27 (bahninfo-forum) vvv
+#: last_checked: 2020-11-28 vvv
 #: check_frequency: 14d vvv
 #: next_check: 2020-12-13 vvv
 	1::inwork 18672,8238 18657,8163
@@ -31507,7 +31507,7 @@ EOF
        text  => 'General-Pape-Str. - Wintgensstr.: Bauarbeiten, Fahrbahn und Gehweg komplett gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: source_id: 2147346557 (Leitungsarbeiten in der General-Pape-Str.)
+#: source_id: 2147346557 (Leitungsarbeiten in der General-Pape-Str.) (mittlerweile inaktiv)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: last_checked: 2020-10-22
 #: next_check: 2020-11-30
@@ -31521,7 +31521,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-11-12
+#: last_checked: 2020-11-28
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
 EOF
@@ -31654,6 +31654,27 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1330751695429771266
 #: by: https://pbs.twimg.com/media/EnfHnSoXYAUoYDw?format=png&name=900x900
 	q4::inwork 10310,13227 10264,13097
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'B96a: Radweg noch nicht offiziell eröffnet',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: B96A-2020
+#: osm_watch: way id="877995097" version="1"
+#: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
+#: last_checked: 2020-11-28
+	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
+EOF
+     },
+     { from  => 1601186400, # 2020-09-27 08:00
+       until => 1608652800, # 2020-12-22 17:00
+       text  => 'Schönower Str.: Bauarbeiten, Fahrbahn gesperrt, Radfahrer müssen schieben, vom 28.09.2020 08:00 Uhr bis 22.12.2020 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346411',
+       data  => <<EOF,
+	q4::inwork 790,2434 561,2395
 EOF
      },
     );
