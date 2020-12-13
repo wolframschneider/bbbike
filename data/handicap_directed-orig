@@ -311,7 +311,7 @@ Urbanstr. - Kottbusser Damm: Radwegführung mit Umweg	DH:len=65 11861,9183 11909,
 # 
 #: next_check_id: LOEFFELBRUECKE-2019
 #: XXX die letzten Meter der Rampe werden neu asphaltiert
-#: last_checked: 2020-11-08 vvv
+#: last_checked: 2020-11-22 (mapillary) vvv
 #: check_frequency: 30d vvv
 #: next_check: 2020-12-31 vvv
 Pasewalker -> Prenzlauer Promenade	DH:len=85:tl:h=q4,30 11911,19667 11915,19580 11942,19567
@@ -322,17 +322,8 @@ Prenzlauer Promenade -> Galenusstr.	DH:len=85:tl:h=q4,30 11942,19567 11915,19580
 #: last_checked ^^^
 # 
 # REMOVED --- #: next_check_id: EISENHUTWEG-2019 --- #: last_checked: 2020-10-04 --- #: check_frequency: 45d --- #: note: Zykluszeit von 70s angenommen --- Eisenhutweg: Radfahrer müssen vom linken Zweirichtungsradweg wieder auf die andere Seite wechseln	DH:t=20 18164,2712 18338,2669 18445,2642
-# 
-#: next_check_id: TRESKOWALLEE-2019
-#: by: https://www.bahninfo-forum.de/read.php?9,581614,675331#msg-675331 (Sperrung der Kreuzung Ehrlichstr. ab 12.10.2020)
-#: source_id: 2147343744
-#: last_checked: 2020-11-28 vvv
-# REMOVED (hier nicht mehr) --- #: XXX nach den Bauarbeiten wird hier ein asphaltierter Radweg sein --- Treskowallee: Umleitungsstrecke für Radfahrer	DH:len=120:h=q1,120 18406,7760 18577,8033 18633,8126 18657,8163 18672,8238
-Treskowallee -> Ehrlichstr.: Umweg für Radfahrer	DH:len=100:h=q3,100 18657,8163 18672,8238 18615,8269
-#: last_checked ^^^
-# 
+# REMOVED --- #: next_check_id: TRESKOWALLEE-2019 --- #: by: https://www.bahninfo-forum.de/read.php?9,581614,675331#msg-675331 (Sperrung der Kreuzung Ehrlichstr. ab 12.10.2020) --- #: source_id: 2147343744 --- #: last_checked: 2020-12-06 (krickstadt) vvv --- #: XXX nach den Bauarbeiten wird hier ein asphaltierter Radweg sein --- Treskowallee: Umleitungsstrecke für Radfahrer	DH:len=120:h=q1,120 18406,7760 18577,8033 18633,8126 18657,8163 18672,8238 --- Treskowallee -> Ehrlichstr.: Umweg für Radfahrer	DH:len=100:h=q3,100 18657,8163 18672,8238 18615,8269 --- #: last_checked ^^^
 # REMOVED (nicht mehr) --- #: next_check_id: TRESKOWALLEE-2017 --- #: last_checked: 2020-07-04 --- #: check_frequency: 60d --- #: next_check: 2020-12-31 --- Treskowallee: Umweg in Höhe S-Bhf. Karlshorst	DH:len=20:h=q3,150 18672,8238 18704,8427 18731,8577
-# 
 # REMOVED (nicht mehr) --- #: next_check_id: STRALAUER-2019 --- #: last_checked: 2020-01-05 --- #: check_frequency: 7d --- Stralauer Allee: Umweg über Bödikerstr.	DH:len=50:h=q3,60 14558,10264 14405,10340 14222,10430
 # 
 Tegeler Weg - Uferweg: Umweg über Jakob-Kaiser-Platz	DH:len=110:tl 2935,13927 2881,14061 2817,14003
@@ -359,31 +350,18 @@ Am Steinberg: Straßenbahnüberquerung, dann einige Meter auf dem linken Gehweg	DH
 #: note: insgesamte Passierzeit ~90s, davon 10s-15s durch die durchschnittliche Ampelwartezeit abgezogen
 Behrenstr. - Ebertstr.: zum Linksabbiegen die linke Fußgängerampel benutzen	DH:t=75 8737,12098 8595,12066 8577,11896
 # 
-#: source_id: 2147345879 (bis 30. November 2020) (mittlerweile inaktiv)
-#: priority: #A vvv
-#: last_checked: 2020-11-21 vvv
-#: next_check: 2020-11-30 vvv
-#: valid: -20201130 vvv
-# REMOVED --- Weigandufer/Wildenbruchstr.: Umweg zum Kiehlufer	DH:len=120:h=q3,120 13368,8689 13193,8832 13045,8951
-# REMOVED --- Weigandufer/Wildenbruchstr.: Umweg zum Kiehlufer oder Wildenbruchplatz	DH:len=120:h=q3,120 13045,8951 13193,8832 13368,8689
-Wildenbruchstr./Weigandufer: Baustellenampel, Radfahrer dürfen den Gehweg benutzen	DH:tl 13138,8762 13193,8832 13227,8877
-Wildenbruchstr./Weigandufer: Baustellenampel, Radfahrer dürfen den Gehweg benutzen	DH:tl 13227,8877 13193,8832 13138,8762
-#: valid ^^^
-#: next_check ^^^
-#: last_checked ^^^
-#: priority ^^^
-# 
+# REMOVED --- #: source_id: 2147345879 (bis 30. November 2020) (mittlerweile inaktiv)  --- #: priority: #A vvv --- #: last_checked: 2020-11-21 vvv --- #: next_check: 2020-11-30 vvv --- #: valid: -20201130 vvv --- # Weigandufer/Wildenbruchstr.: Umweg zum Kiehlufer	DH:len=120:h=q3,120 13368,8689 13193,8832 13045,8951 --- # Weigandufer/Wildenbruchstr.: Umweg zum Kiehlufer oder Wildenbruchplatz	DH:len=120:h=q3,120 13045,8951 13193,8832 13368,8689 --- Wildenbruchstr./Weigandufer: Baustellenampel, Radfahrer dürfen den Gehweg benutzen	DH:tl 13138,8762 13193,8832 13227,8877 --- Wildenbruchstr./Weigandufer: Baustellenampel, Radfahrer dürfen den Gehweg benutzen	DH:tl 13227,8877 13193,8832 13138,8762 --- #: valid ^^^ --- #: next_check ^^^ --- #: last_checked ^^^ --- #: priority ^^^
 # REMOVED ---#: source_id: 2147346524 (bis 16.11.2020, mittlerweile inaktiv) vvv --- #: by: https://twitter.com/VIZ_Berlin/status/1320602935559073793 --- #: by: https://pbs.twimg.com/media/ElO46I5XEAEe4Kk?format=jpg&name=medium --- #: next_check: 2020-11-16 vvv --- #: valid: -20201116 vvv --- Prinzenallee über die Osloer Str.: Umweg über linken Gehweg	DH:len=60:h=q3,90:tl 8921,16578 8952,16666 9008,16799 --- Prinzenallee links in die Osloer Str.: Umweg über linken Gehweg	DH:len=10:h=q3,40:tl 8921,16578 8952,16666 8759,16684 --- Prinzenallee über die Osloer Str.: rechten Gehweg benutzen	DH:len=10:h=q3,40 9008,16799 8952,16666 8921,16578 --- Prinzenallee links in die Osloer Str.: zunächst rechten Gehweg benutzen	DH:len=10:h=q3,40 9008,16799 8952,16666 9210,16638 --- Osloer Str. links in die Prinzenallee: Mittelstreifen auf dem rechten Gehweg überqueren	DH:len=10:h=q3,40 9210,16638 8952,16666 8921,16578 --- Osloer Str. links in die Prinzenallee: Mittelstreifen auf dem rechten Gehweg überqueren	DH:len=40:h=q3,60 8759,16684 8952,16666 9008,16799 --- #: valid ^^^ --- #: next_check ^^^ --- #: source_id ^^^
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.1019139.php (für zwei Wochen)
 #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/kreuzung-bleibt-teilgesperrt_a293815
 #: by: https://twitter.com/VIZ_Berlin/status/1329290817048023040
 #: by: https://pbs.twimg.com/media/EnKW9CZWMAAOqU1?format=jpg&name=large
-#: source_id: 2147346612 (bis 4.12.2020, nur Einengung) vvv
-#: last_checked: 2020-11-28 vvv
+#: source_id: 2147346612 (bis 22.12.2020, nur Einengung) vvv
+#: last_checked: 2020-12-12 vvv
 #: check_frequency: 7d vvv
-#: next_check: 2020-12-04 vvv
-#: valid: -20201204 vvv
+#: next_check: 2020-12-22 vvv
+#: valid: -20201222 vvv
 Fahrbahninstandsetzung der Kreuzung Stralauer Allee/Modersohnstr.: Umweg über Ampel Rochowstr.	DH:len=300 13779,10642 13919,10583 14011,10812
 Fahrbahninstandsetzung der Kreuzung Stralauer Allee/Modersohnstr.: zunächst den linken Gehweg auf der Stralauer Allee benutzen	DH:h=q3,150 13779,10642 13919,10583 14011,10812
 #: valid ^^^

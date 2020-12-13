@@ -352,7 +352,7 @@ Bus 140	busroute_N 11552,10863 11772,10764 11839,10736 12056,10642 12120,10772 1
 Bus M29	busroute_N 12341,10218 12229,10014 12398,9938 12556,9862 12714,9792
 # REMOVED (mittlerweile über Stralauer Allee) --- Bus 347	busroute_N 13596,10722 13676,10926 13755,10896 13856,10864 13896,10851 14011,10812
 Bus 347	busroute_N 14011,10812 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
-Bus 347	busroute_N 15662,9501 15505,9688 15472,9720 15400,9742 15201,9794 15088,9842 15020,9875 14908,9939 14879,9961 14817,10031 14747,10108 14705,10149 14688,10167
+Bus 347	busroute_N 15662,9501 15505,9688 15472,9720 15436,9731 15400,9742 15201,9794 15088,9842 15020,9875 14908,9939 14879,9961 14817,10031 14747,10108 14705,10149 14688,10167
 Bus 347	busroute_N 15020,9875 15071,9967 15148,10111 15090,10140 15050,10160 14993,10188 14920,10225 14844,10088 14817,10031
 Bus 140, ...	busroute_N 12543,11521 12310,11682 12204,11748
 Bus 347	busroute_N 13541,11355 13496,11384 13473,11456 13366,11651 13295,11792 13275,11830 13217,11936 13097,12166 13081,12196 13019,12316
@@ -783,8 +783,8 @@ Bordsteine beim Überqueren der Wuhletalstr.	CS 20801,17821 20728,17670 20657,175
 # REMOVED (Konflikt XXX_prog <-> XXX) --- #: XXX_prog -> BS
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7138 (Realisierung einer Querung Anfang 2021, vielleicht)
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/baumassnahme-an-der-grunewaldstrasse-haengt-von-senatsplaenen-ab_a252769
-#: XXX Realsierung einer Querung geplant
-#: last_checked: 2020-09-27
+#: XXX Realisierung einer Querung geplant
+#: last_checked: 2020-12-06
 #: next_check: 2021-03-01
 Bordsteine beim Überqueren der Grunewaldstr.	CP; 6851,9365 6917,9274 7001,9291
 Quastenhornweg: Privatstraße	CS -7595,4374 -7557,4340 -7473,4306 -7413,4304
@@ -1020,6 +1020,8 @@ entlang des Marzahn-Hohenschönhauser Grenzgrabens	CS 18104,13510 18054,13477 179
 (Wuhlewanderweg - Bahnhofstr.): am Forum Köpenick, kurzer Abschnitt mit Parkhausverkehr	CS 22204,6016 22332,5949 22358,5918
 (Bahrfeldtstr. - Fischzug): als Bahrfeldtstr. ausgeschildert, Privatstraße	CP2; 14921,10047 14969,10138
 (Bahrfeldtstr. - Fischzug): Privatstraße	CP2; 14993,10188 14969,10138
+#: note: Schild "Durchfahrt verboten", Zusatzschild "Privatstraße"
+Bootsbauerstr.: Privatstraße	CS 15079,10116 15023,9992
 (an den Gebäuden der Deutschen Rentenversicherung): Privatstraße	CS 15322,11335 15273,11350 15168,11327 15058,11250 15010,11170
 Kaskelstraße: Privatstraße	CS 15090,11237 15058,11250
 Weg am Blankensteinpark: entlang der Stadler-Halle	CS 14289,12876 14355,13109
@@ -1220,7 +1222,7 @@ ausgeschildert als Rüdigerstr. 65+65 A-E	CP2; 17441,12247 17444,12286
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_50_5649_5788_online.pdf (Straßenbenennung)
 #: XXX dieser Weg wird auch in Minna-Todenhagen-Str. umbenannt --- evtl. auf einen Namen hier komplett verzichten. old_name-Eintrag?
 #: XXX wird hier noch irgendwie ausgeschildert?
-#: last_checked: 2020-10-04
+#: last_checked: 2020-12-12
 #: check_frequency: 120d
 Grenzweg (Oberschöneweide): nicht ausgeschildert	CS 17295,7328 17475,7451 17566,7485
 # REMOVED (hier: Heckenweg) --- Grenzweg (Oberschöneweide): nicht ausgeschildert	CS 17566,7485 17669,7515
@@ -1301,7 +1303,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2020-11-23
+#: last_checked: 2020-12-12
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1369,6 +1371,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 # REMOVED --- #: next_check_id: KLARAFRANKESTR-2018 --- #: XXX wann wird die Straße ausgeschildert? --- #: last_checked: 2020-01-04 --- #: check_frequency: 60d --- Klara-Franke-Str.: südliche Einfahrt nicht ausgeschildert	CP2; 7535,13754 7630,13810
 # 
 #: next_check_id: HILDAGEIRINGERWEG-2019
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: XXX wann wird die Straße ausgeschildert?
 #: last_checked: 2020-11-14
 #: check_frequency: 60d
@@ -1380,12 +1383,7 @@ zwischen Studentenwohnheim und Krankenhausgelände	CP2; 2539,12835 2561,12686
 # 
 (Lydia-Rabinowitsch-Str. - Am Hamburger Bahnhof): Hausdurchfahrt	CS; 7959,13982 7997,13892
 # 
-#: last_checked: 2020-09-06 vvv
-#: check_frequency: 90d vvv
-Christian-Dohm-Weg: nicht ausgeschildert	CS 20760,18812 20894,18861 21024,18915
-Henriette-Herz-Allee: nur provisorisch ausgeschildert	CS 20907,18740 20901,18793 20894,18861 20889,18935
-#: check_frequency ^^^
-#: last_checked ^^^
+# REMOVED ((einige) Schilder hängen) --- #: last_checked: 2020-09-06 vvv --- #: check_frequency: 90d vvv --- Christian-Dohm-Weg: nicht ausgeschildert	CS 20760,18812 20894,18861 21024,18915 --- Henriette-Herz-Allee: nur provisorisch ausgeschildert	CS 20907,18740 20901,18793 20894,18861 20889,18935 --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
 Friedrich-Meinecke-Weg: nicht ausgeschildert	CS 1803,5397 1873,5385 1946,5385 2052,5379 2181,5385 2208,5385 2280,5431
 # 

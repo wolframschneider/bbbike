@@ -1768,9 +1768,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6288,14661
 	X 7138,15437
 	X 6996,15319
+#: by: https://www.deutsches-architekturforum.de/thread/9772-kleinere-projekte-wedding-gesundbrunnen/?postID=675214#post675214
 #: XXX Ampel ausgeschaltet, vielleicht dauerhaft (Lynar/Tegeler)
 #: osm_watch: node id="3777205512" version="3"
-#: last_checked: 2020-11-07
+#: last_checked: 2020-12-03 (architektur-urbanistik)
 	X0 7259,14870
 #: note: Anforderungsampel für Radfahrer aus Richtung Osten Richtung Luisenstr. und für Radfahrer aus der Luisenstr.
 	X 8622,13696
@@ -2427,14 +2428,12 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
 	F 9033,16862
 	F 8443,15901
 	F 5373,10981
-#: note: war früher (ca. 2006?) ein Zebrastreifen
-	F 18733,8650
-# 
-#: next_check_id: TRESKOWALLEE-2017
-#: XXX hier wird eine richtige Ampel entstehen
-#: last_checked: 2020-11-28
-#: next_check: 2020-12-13
-	X::inwork 18731,8577
+# REMOVED --- #: note: war früher (ca. 2006?) ein Zebrastreifen ---	F 18733,8650
+# REMOVED --- #: next_check_id: TRESKOWALLEE-2017 --- #: XXX hier wird eine richtige Ampel entstehen --- #: last_checked: 2020-11-28 --- #: next_check: 2020-12-13
+	X 18731,8577
+	X 18733,8633
+	X 18737,8686
+	X 18770,8898
 # 
 	X 18704,8427
 	F 4920,9029
@@ -2992,7 +2991,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: last_checked ^^^
 #: note: Anforderungsampel
 #: note: Radfahrer Richtung Nordosten müssen diese Ampel zum Überqueren benutzen
-#: last_checked: 2020-11-28
+#: last_checked: 2020-12-02 (mapillary)
 	F::inwork 14213,6840
 #: next_check ^^^
 #: valid ^^^
@@ -3018,7 +3017,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://twitter.com/VIZ_Berlin/status/1301038406156398593 (vermutlich keine Änderung bis Ende Oktober 2020)
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="5"
-#: last_checked: 2020-11-15
+#: last_checked: 2020-12-12
 #: check_frequency: 60d
 	X::inwork 14174,7505
 # 
@@ -3165,7 +3164,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2020-09-11
+#: last_checked: 2020-09-29 (mapillary)
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -3240,7 +3239,7 @@ Hultschiner Damm/Rahnsdorfer Str.: hier wird eine Ampel gebaut	X::inwork 24653,1
 # 
 #: next_check_id: BERLINERBAHNHOF-2020
 #: XXX wird die provisorische Ampelanlage in eine permanente umgebaut? vvv
-#: last_checked: 2020-11-22 (mapillary) vvv
+#: last_checked: 2020-12-11 (mapillary) vvv
 #: check_frequency: 60d vvv
 	X::inwork 12166,21208
 	X::inwork 12158,21166
@@ -3397,7 +3396,7 @@ Hultschiner Damm/Rahnsdorfer Str.: hier wird eine Ampel gebaut	X::inwork 24653,1
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2020-11-23 vvv
+#: last_checked: 2020-12-12 vvv
 #: check_frequency: 60d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738

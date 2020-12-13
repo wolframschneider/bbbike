@@ -34,7 +34,7 @@
 # 
 #: next_check_id: PLANSTRASSEC-2019
 #: osm_watch: way id="491906864" version="4"
-#: last_checked: 2020-11-19
+#: last_checked: 2020-12-08
 #: check_frequency: 30d
 (Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q4::inwork 12926,11224 12848,11093
 # 
@@ -61,7 +61,7 @@ Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,1183
 #: note: laut fritz bis Ende 2020
 #: XXX_prog BS (auf der östlichen Seite, ansonsten q3+)
 #: also_indoor: traffic (G)
-#: last_checked: 2020-11-07
+#: last_checked: 2020-12-06
 #: check_frequency: 30d
 #: next_check: 2021-03-01
 Müncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
@@ -70,12 +70,15 @@ Müncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 1245
 #: source_id: 2147346517 (bis 6.11.2020)
 #: source_id: LMS-BR_r_LMS-BR_221528_LMS-BR_72 (bis 18.12.2020)
 #: priority: #B
-#: last_checked: 2020-12-01
-#: check_frequency: 14d
-#: next_check: 2020-12-18
+#: last_checked: 2020-12-01 vvv
+#: check_frequency: 14d vvv
+#: next_check: 2020-12-18 vvv
 # REMOVED (Termin kann nicht gehalten werden) --- #: next_check: 2020-11-06 --- #: valid: -20201106
 Singerstr.: Bauarbeiten an der Lichtenberger Str., Ausweichen auf Gehweg (nördliche Seite geht besser), Bordstein	q2::inwork 12081,12236 11920,12266
 Singerstr.: Bauarbeiten an der Lichtenberger Str., Ausweichen auf Gehweg (nördliche Seite geht besser), Bordstein	q3::inwork 11920,12266 11845,12292
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 # REMOVED (wieder (in eine Richtung) befahrbar) --- #: next_check_id: RIGAER-2018 --- #: osm_watch: way id="516827454" version="5" --- #: priority: #A --- #: last_checked: 2019-05-02
 # REMOVED --- #: next_check: 2019-04-30 (Ende der Regelung, ggfs. wird verlängert)
@@ -141,7 +144,7 @@ Singerstr.: Bauarbeiten an der Lichtenberger Str., Ausweichen auf Gehweg (nördli
 #: next_check_id: AMTREPTOWERPARK-2020
 #: by: https://www.berliner-woche.de/alt-treptow/c-verkehr/baumassnahmen-fuer-die-a100-gestartet_a289900 (hier: erste Bauphase bis Ende 2021, Bauende bis Juni 2023)
 #: source_id: 2147346409 (bis Ende 2020, Gesamtbaumaßnahme bis Ende 2023)
-#: last_checked: 2020-11-23 vvv
+#: last_checked: 2020-12-02 vvv
 #: next_check: 2020-12-31 vvv
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q3::inwork; 14382,9299 14242,9448
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork; 14242,9448 14185,9509 14089,9610
@@ -152,13 +155,15 @@ Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork;
 # 
 #: XXX_prog: BS (ansonsten entfernen)
 #: next_check_id: DIESEL-2019
-#: last_checked: 2020-11-06
+#: last_checked: 2020-12-02
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
-#: osm_watch: way id="719023968" version="4"
+#: XXX laut osm nicht mehr highway=construction
+#: osm_watch: way id="719023968" version="5"
 #: last_checked: 2020-10-24
 #: check_frequency: 60d
+#: next_check: 2020-12-06
 Henriette-Lustig-Str.: nur der sehr enge Gehweg ist freigegeben	q4::inwork 21476,5048 21611,5119
 # 
 # REMOVED (fertig) --- #: osm_watch: way id="466318949" version="8" --- #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31) --- #: also_indoor: traffic --- #: last_checked: 2020-04-18 --- #: check_frequency: 21d --- Bouchéstr.: Baustelle, Fahrtrichtung gesperrt	q3::inwork; 13298,9252 13188,9134 --- #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31) --- #: osm_watch: way id="4686247" version="9" --- #: last_checked: 2020-04-18 --- #: check_frequency: 21d --- Mengerzeile: Baustelle, Fahrtrichtung gesperrt	q4::inwork; 13176,9302 13098,9205
@@ -180,6 +185,7 @@ Henriette-Lustig-Str.: nur der sehr enge Gehweg ist freigegeben	q4::inwork 21476
 # 
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.641406.php
 #: osm_watch: way id="549316654" version="4"
+#: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,H)
 #: valid: 20171026-
 #: last_checked: 2020-10-10
@@ -236,7 +242,7 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: osm_watch: way id="751595931" version="2"
 #: also_indoor: traffic (H)
-#: last_checked: 2020-12-01
+#: last_checked: 2020-12-06
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10952,12401
 # 
 #: last_checked: 2020-11-14
@@ -376,12 +382,13 @@ Stallschreiberstr.: Umbau der Kreuzung, eng	q3::inwork 10683,11175 10623,11246
 #: next_check_id: STABIUDL-2014 vvv
 #: last_checked: 2020-12-01 vvv
 #: check_frequency: 30d vvv
-# REMOVED --- #: next_check: 2020-11-16 vvv
+#: next_check: 2021-02-01 vvv
 #: by: http://www.berliner-zeitung.de/berlin/baustelle-staatsbibliothek-das-geruest-steht-und-steht-und-steht,10809148,22334074.html (Endedatum 2016) vvv
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=636592&postcount=119 (bald fertig?)
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=637200&postcount=120 (Container verschwinden bis Mai 2020)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/generalsanierung-und-erweiterung-der-staatsbibliothek-abgeschlossen_a238021 (weitere sechs Monate Arbeiten ab dem 1. November 2019)
 #: by: https://www.tagesspiegel.de/wissen/staatsbibliothek-zu-berlin-corona-stoppte-umzug-in-die-linden-stabi/26269492.html (Eröffnung noch 2020 (Mitte November?))
+#: by: https://blog.sbb.berlin/ab-1-februar-2021-haus-unter-den-linden-fuer-benutzungsbetrieb-geoeffnet/
 #: also_indoor: traffic
 #: osm_watch: way id="153698394" version="8"
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
@@ -389,7 +396,7 @@ Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 
 #: osm_watch: way id="114667396" version="7"
 Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwork; 9581,12588 9613,12381
 #: by: ^^^
-# REMOVED --- #: next_check ^^^
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
@@ -470,12 +477,7 @@ Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364
 # 
 ### Friedrichsfelde ###
 # 
-#: next_check_id: WALLENSTEIN-2020
-#: last_checked: 2020-11-29
-#: check_frequency: 10d
-# REMOVED --- #: next_check: 2020-11-16
-# REMOVED (hier nicht mehr) --- Neuer Feldweg/Wallensteinstr.: Bauarbeiten, Ausweichen auf engen Gehweg	q2::inwork 17383,9719 17365,9654
-Neuer Feldweg/Wallensteinstr.: Bauarbeiten, Ausweichen auf engen Gehweg	q2::inwork 17365,9654 17360,9629 17425,9605 17456,9594 17549,9529
+# REMOVED (laut mapillary weitgehend beendet) --- #: next_check_id: WALLENSTEIN-2020 --- #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet? --- #: last_checked: 2020-11-29 --- #: check_frequency: 10d --- # REMOVED --- #: next_check: 2020-11-16 --- # REMOVED (hier nicht mehr) --- Neuer Feldweg/Wallensteinstr.: Bauarbeiten, Ausweichen auf engen Gehweg	q2::inwork 17383,9719 17365,9654 --- Neuer Feldweg/Wallensteinstr.: Bauarbeiten, Ausweichen auf engen Gehweg	q2::inwork 17365,9654 17360,9629 17425,9605 17456,9594 17549,9529
 # 
 ### Niederschöneweide ###
 # 
@@ -509,7 +511,7 @@ Sterndamm [Nebenfahrbahn]: Gehweg für Radfahrer frei	q3 17648,5338 17697,5347
 # 
 #: XXX außerdem nach den Bauarbeiten die Einbahnstraße in gesperrt-orig wieder aktivieren
 #: osm_watch: way id="764599229" version="3"
-#: last_checked: 2020-10-09
+#: last_checked: 2020-12-02
 #: check_frequency: 45d
 Jahnstr.: Bauarbeiten, etwa 50m der Fahrbahn sind gesperrt	q3::inwork 11500,9116 11509,9392
 # 
@@ -674,7 +676,7 @@ Fuldastr.: Sperrung der Einmündung Karl-Marx-Str.	q3::inwork 12551,8612 12500,85
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (ab 1. Juli 2020)
 #: XXX laut rbbtext bis 13.10.2020
-#: osm_watch: way id="822805265" version="3"
+#: osm_watch: way id="822805265" version="4"
 #: also_indoor: traffic (G)
 #: last_checked: 2020-11-29 (mapillary)
 #: next_check: 2021-03-31
@@ -703,7 +705,7 @@ Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 
 #: source_id: LMS-BR_r_LMS-BR_19252
 #: source_id: 2147342527 (Gesamtmaßnahme bis 2024)
 #: osm_watch: way id="585753318" version="6"
-#: osm_watch: way id="71392596" version="12"
+#: osm_watch: way id="71392596" version="13"
 #: also_indoor: traffic
 #: last_checked: 2020-11-29 (mapillary) vvv
 #: check_frequency: 30d
@@ -786,6 +788,7 @@ Kurfürstenstr.: Bauarbeiten im Kreuzungsbereich	q3::inwork 8058,10306 7850,10351
 # 
 #: next_check_id: BIRKBUSCHSTR-2020
 #: also_indoor: traffic (H,G)
+#: source_id: 2147343937
 #: last_checked: 2020-08-29
 #: next_check: 2020-12-31
 #: valid: -20201231
@@ -946,9 +949,9 @@ Alexanderplatz [Richtung Alexa]: Fußgängerverkehr	q3 11134,12793 11064,12910
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=637003&postcount=522 (Abbau des Zauns=?)
 #: by: https://camera.deckchair.com/park-inn-berlin-alexanderplatz (Webcam)
 #: by: https://www.deutsches-architekturforum.de/thread/2271-u-5/?postID=666937#post666937 (Pflasterungsarbeiten)
-#: osm_watch: relation id="8743849" version="1"
-#: last_checked: 2020-12-01
-#: check_frequency: 21d
+# REMOVED (gelöscht) --- #: osm_watch: relation id="8743849" version="2"
+#: last_checked: 2020-12-07 (webcam)
+#: check_frequency: 14d
 #Rathausstr.: Fußgänger	q1- 10923,12779 10704,12595
 Rathausstr.: Fußgänger, Bauarbeiten	q2 10923,12779 10704,12595
 Dircksenstr.: langsame Straßenbahnen, Fußgänger	q2 10970,12822 10849,12944
@@ -1343,7 +1346,10 @@ Fritz-Schiff-Weg: Fußgänger	q1 13457,12505 13476,12461 13448,12340
 Verl. Pücklerstr.: Fußgänger, Hundeauslaufgebiet	q1 1553,6741 1338,6708 1154,6672 956,6631 902,6642 878,6651 818,6616 775,6615 698,6592 663,6575 546,6583 369,6594 340,6598 218,6571
 Weimarer Str.: Fußgänger	q1 4101,11347 4101,11233
 Norwegerstr. - Behmstr.: Rampe	q2 10022,16237 10026,16165 10055,16104 10065,16110 10045,16157
-Marzahner Promenade - Mühlenbecker Weg: Fußgänger	q1 20226,15512 20202,15587 20202,15630 20181,15658 20150,15678
+Marzahner Promenade - Mühlenbecker Weg: Fußgänger	q1 20226,15512 20202,15587 20202,15630 20181,15658
+Marzahner Promenade - Mühlenbecker Weg: enge Straße, parkende Autos	q1 20181,15658 20150,15678
+(Franz-Stenzer-Str. - Mühlenbecker Weg): enge Straße, parkende Autos	q1 20135,15626 20137,15654 20150,15678
+(Marzahner Promenade - Basdorfer Str.): Fußgänger	q1 20150,15678 20099,15702 20102,15709
 Rosemeyerweg: Fußgänger	q1 -3776,2687 -3852,2730 -3956,2787 -4001,2858
 Moorlake - Krughorn: Fußgänger, aber breite Straße	q0 -9629,1408 -9707,1414 -9728,1431 -9757,1499 -9828,1570 -10046,1589 -10078,1551
 Krughorn - Volkspark Klein-Glienicke: Fußgänger, besonders an schönen Tagen	q1 -10078,1551 -10163,1288 -10190,1185 -10198,1173 -10273,1088 -10430,848 -10512,683 -10573,564 -10593,476
@@ -1396,7 +1402,8 @@ Wanzlikpfad: eng und kurvig, Fußgänger	q3 13268,7801 13309,7911
 (Spreeufer): Fußgänger, Radfahren erlaubt	q1 14569,10055 14599,10039 14690,9993 14776,9949 15000,9820
 Caroline-Tübbecke-Ufer: Fußgänger, Radfahren erlaubt	q1 15000,9820 15043,9790 15367,9691
 # REMOVED (Einschränkung existiert nicht mehr) --- Caroline-Tübbecke-Ufer: Fußgänger, sehr eng, Radfahren erlaubt	q3
-(Wendenwiese): Fußgänger, Radfahren erlaubt	q1 15367,9691 15399,9679 15466,9633 15497,9644 15498,9681 15505,9688
+(Wendenwiese): Fußgänger, Radfahren erlaubt	q1 15367,9691 15405,9675 15466,9633 15497,9644 15498,9681 15505,9688
+(Wendenwiese): Fußgänger, Radfahren erlaubt	q1 15436,9731 15405,9675
 (Alt-Stralau - Spreeufer): Fußgänger, Radfahren erlaubt, kurze Rampe	q2 15020,9875 15000,9820
 (Strela-Platz): Fußgänger	q1 15400,9742 15465,9860
 Hildburghauser Str.: Bahnunterführung für Fußgänger	q1 4595,1387 4514,1402
@@ -1410,7 +1417,7 @@ Langhoffstr.: enge Straße, Gegenverkehr	q1 19817,14371 19818,14064
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20140603.1435.397678.html (Vorlage 096/2014)
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5651&date=20140610 (Umgestaltung der Alten Frankfurter Allee)
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6543
-#: osm_watch: way id="223184082" version="5"
+#: osm_watch: way id="223184082" version="6"
 #: last_checked: 2020-11-20
 #: check_frequency: 90d
 (Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16535,11920 16512,11894
@@ -1660,7 +1667,7 @@ Uferweg: Fußgänger, enge Kurven	q2 3510,12809 3547,12864 3572,12866 3559,12793
 Uferweg: Fußgänger	q1 3559,12793 3641,12753 3747,12679
 Uferweg: Fußgänger, Biergarten	q3 3747,12679 3819,12676 3862,12675
 Uferweg: Fußgänger	q1 3862,12675 3938,12687 4147,12699 4206,12691 4242,12684
-(Neues Ufer - Kaiserin-Augusta-Allee): Fußgänger	q2 4456,12918 4514,12936 4581,13066 4526,13109 4544,13131 4596,13147 4613,13210 4625,13244
+(Neues Ufer - Kaiserin-Augusta-Allee): Fußgänger	q2 4456,12918 4514,12936 4581,13066 4582,13086 4576,13121 4592,13127 4613,13210 4617,13243
 # REMOVED (keine Fahrbahn mehr, nur der obere Uferweg) --- Bundesratufer: Fußgänger	q4 5938,12848 5922,12765
 # REMOVED --- (provisorischer Zugang zum Bahnhof Ostkreuz): Richtung S-Bahnhof viele Fußgänger	q3 14712,11039 14727,11005 14808,10978
 (Neue Bahnhofstr. - Bahnhof Ostkreuz): Richtung S-Bahnhof viele Fußgänger	q3- 14811,11067 14808,10978
@@ -1927,7 +1934,7 @@ Kottesteig: Bordsteine, Fußgänger	q2 6868,5262 6820,5237 6806,5230
 (Zu den Krugwiesen - Vincent-van-Gogh-Str.): Fußgänger	q1 18650,17367 18656,17389 18704,17565
 (Zu den Krugwiesen - Vincent-van-Gogh-Str.): Fußgänger, Ballspielplatz	q1- 18656,17389 18613,17427 18694,17577
 (Weg durch die Falkenberger Krugwiesen): Fußgänger	q1 18704,17565 18756,17498
-(Weg durch die Falkenberger Krugwiesen): Fußgänger	q1 18644,17349 18650,17367 18708,17415 18737,17482 18756,17498 18784,17525 18831,17663 18937,17738 18991,17776 19045,17832 19097,17869 19110,18015 19127,18091 19213,18195 19251,18248 19249,18351 19265,18400 19291,18456
+(Weg durch die Falkenberger Krugwiesen): Fußgänger	q1 18644,17349 18650,17367 18708,17415 18737,17482 18756,17498 18784,17525 18831,17663 18937,17738 18991,17776 19045,17832 19097,17869 19110,18015 19127,18091 19213,18195 19236,18223 19251,18248 19249,18351 19265,18400 19291,18456
 (Falkenberger Krugwiesen - Falkenberger Chaussee): Fußgänger	q1 19213,18195 18969,18448
 Stritteweg: vereinzelte Stufen und schmale Rampen	q3 -5236,11204 -5256,11142
 Künstlerweg: enge Straße	q1 -7418,7842 -7334,7703 -7258,7735 -7340,7873
@@ -3490,6 +3497,13 @@ Friedrich-Jacobs-Promenade: einige Fußgänger, einige kurvige und schmale Abschni
 (Verbindungsweg): Fußgänger, schmal	q2 20659,11548 20627,11552 20590,11557
 (Marchwitzastr. - Allee der Kosmonauten): einige Fußgänger	q2 19934,13318 19835,13317
 (Allee der Kosmonauten [Wohngebiet] - Unterführung): einige Fußgänger, Kurven	q2 19812,13442 19826,13444
+Stolzenhagener Str. [Gehweg]: Fußgänger, Radfahren nicht erlaubt	q3 20321,16043 20358,16121
+Rabensteiner Str. - Havemannstr.: wilde Rampe, ansonsten drei weite Stufen	q4 22058,18066 22065,18087
+#: XXX_prog BS am Radweg, ansonsten entfernen
+Borkheider Str.: Bordstein	q3 21726,17974 21748,17963
+(Rund um den Gehrensee): einige Fußgänger	q1 20906,19284 20867,19159 20877,19112 20882,19055 20916,19053 21015,19070 21100,19107 21089,19215
+(Gehrensee - Grenzweg): einige Fußgänger	q1 21100,19107 21169,19146
+(Barnimer Dörferweg - Gehrensee): einige Fußgänger	q1 21035,19005 21040,19007 21015,19070
 # 
 ######################### User Contributions #################################
 # 
@@ -3735,7 +3749,7 @@ Hünensteig: Fußgänger	q2 6395,5154 6405,5238 6108,5253
 (Ringstr. - Gersdorfstr. (Kolonie Marienhöhe)): Kleingartenanlage, Fußgänger (schieben!), tiefe Steinregenabläufe quer zum Weg, Bordstein	q4 7911,4465 7925,4477 8027,4571 8192,4710
 #: by: ^^^
 #: by: Philipp Kaufmann
-Mühlenbecker Weg: Fußgänger	q1 20150,15678 20334,16043
+Mühlenbecker Weg: Fußgänger	q1 20150,15678 20321,16043 20330,16040
 #: by: Marijke Maij
 (Nordmannzeile - Vorarlberger Damm): Fußgänger, Kleingartenweg	q1 6841,7283 6846,7306 7062,7376 7108,7416 7220,7442
 #: by: Michael C.:

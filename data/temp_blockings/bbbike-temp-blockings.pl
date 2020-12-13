@@ -16263,8 +16263,9 @@ EOF
        data  => <<EOF,
 #: tempex: su T09-T16
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
+#: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-11-07
+#: last_checked: 2020-12-06
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -22742,7 +22743,7 @@ EOF
        until => $isodate2epoch->("2019-12-22 21:00:00"), # 1386525600, # 2013-12-08 19:00
        periodic => 1,
        recurrences => [['yearly', days => 1, months => 12]],
-       recurrence_prewarn_days => -3,
+       recurrence_prewarn_days => -19,
        text  => 'Alt-Rudow zwischen Köpenicker Str. und Krokusstr.: Rudower Adventsmeile, Straße gesperrt, ab: 21.12.2019 12 Uhr bis 22.12.2019 21 Uhr ',
        type  => 'gesperrt',
        source_id => 'IM_020883',
@@ -23021,7 +23022,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_021515',
        data  => <<EOF,
-	q4::inwork 9383,13986 9659,14043 9676,14046
+	q4::inwork 9383,13986 9469,14004 9659,14043 9676,14046
 EOF
      },
      { from  => undef, # 
@@ -24660,6 +24661,7 @@ EOF
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6, start => "2020-10-25T00:00:00"]],
+       recurrence_prewarn_days => 7, # XXX wird die Fashion Week 2021 überhaupt stattfinden? Bis jetzt steht als Termin 18.-24.01.2021 fest
        text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 13.01.2020-17.01.2020',
        type  => 'handicap',
        source_id => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termin-fuer-januar-2020.html',
@@ -26505,8 +26507,8 @@ EOF
        text  => 'Kaiserin-Augusta-Allee - Neues Ufer: Bauarbeiten, Weg ist komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-# REMOVED (existiert gar nicht mehr in den BBBike-Daten) ---	2::inwork 4561,13244 4625,13244
-	2::inwork 4625,13244 4613,13210 4596,13147 4544,13131 4526,13109
+# REMOVED (existiert gar nicht mehr in den BBBike-Daten) ---	2::inwork 4561,13244 4617,13243
+	2::inwork 4617,13243 4613,13210 4592,13127 4576,13121 4582,13086
 EOF
      },
      { from  => 1500156000, # 2017-07-16 00:00
@@ -27988,7 +27990,7 @@ EOF
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-11-29 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
+#: last_checked: 2020-12-12 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686
 # REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
@@ -28535,8 +28537,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2020-07-12 07:00:00"), # 1542150096, # 2018-11-14 00:01
-       until => $isodate2epoch->("2020-12-04 17:00:00"), # 1542826837, # -> handicap_s-orig, 1554073200, # 2019-04-01 01:00
-       text  => 'Kynaststr.: Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden gesperrt, bis 4.12.2020',
+       until => $isodate2epoch->("2020-12-05 17:00:00"), # 1542826837, # -> handicap_s-orig, 1554073200, # 2019-04-01 01:00
+       text  => 'Kynaststr.: Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden gesperrt, bis 5.12.2020',
        type  => 'gesperrt',
        source_id => '2147343461',
        data  => <<EOF,
@@ -28546,9 +28548,9 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: source_id: 2147346071
 #: priority: #A
-#: last_checked: 2020-11-22
+#: last_checked: 2020-12-04
 #: check_frequency: 30d
-#: next_check: 2020-12-04
+#: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
 EOF
      },
@@ -29196,7 +29198,7 @@ EOF
        data  => <<EOF,
 #: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2020-09-27 (mapillary)
+#: last_checked: 2020-12-11 (mapillary) (Sackgassenschild steht noch)
 #: check_frequency: 60d
 #: next_check: 2021-04-30
 	q3::inwork  8986,16092 9178,16317
@@ -29214,8 +29216,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-12-18 18:00:00"), # undef, # XXX
-       text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 18. Dezember 2020',
+       until => $isodate2epoch->("2021-02-28 17:00:00"), # undef, # XXX
+       text  => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 28. Februar 2021',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: SOLDINER-2019
@@ -29224,9 +29226,9 @@ EOF
 #: source_id: 2147343335 (Zeitraum siehe oben)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-10-07 (mapillary)
+#: last_checked: 2020-11-14 (mapillary)
 #: check_frequency: 60d
-#: next_check: 2020-12-18
+#: next_check: 2021-02-28
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8904,17059 8866,17075 8677,17154
 # REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
@@ -29572,16 +29574,17 @@ EOF
      },
      { from  => undef, # 
        until => $isodate2epoch->("2020-12-13 23:59:59"), # 1588348800, # 2020-05-01 18:00
-       text  => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer müssen bis Godesberger Str. den teilweise engen Gehweg benutzen, vermutlich bis Mitte Dezember 2020',
+       text  => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer müssen zwischen Godesberger Str. und Bopparder Str. den teilweise engen Gehweg benutzen, vermutlich bis Mitte Dezember 2020',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-11-29
+#: last_checked: 2020-12-12
 #: next_check: 2020-12-13
 # REMOVED (hier normaler Radweg) --- q3::inwork; 18704,8427 18731,8577
 # REMOVED (hier keine Radwegschilder mehr) --- #: note: hier eng und viel Fußgängerverkehr ---	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
 #: note: hier etwas weniger Fußgängerverkehr
-	q2::inwork; 18737,8686 18770,8898 18790,9018
+# REMOVED (hier keine Benutzungspflicht mehr) ---	q2::inwork; 18737,8686 18770,8898
+	q2::inwork; 18770,8898 18790,9018
 # REMOVED (hier ist die Fahrbahn frei) ---	q4::inwork; 18790,9018 18809,9133
 EOF
      },
@@ -29982,7 +29985,7 @@ EOF
 # REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
 # REMOVED (alt) --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php --- #: by: fritz --- #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
 #: XXX bis wann ist der Bahnübergang gesperrt?
-#: osm_watch: way id="9829824" version="18"
+#: osm_watch: way id="9829824" version="19"
 #: priority: #A
 #: last_checked: 2020-10-03
 #: check_frequency: 90d
@@ -30566,7 +30569,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-11-17
+#: last_checked: 2020-12-10
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30587,6 +30590,7 @@ EOF
        until => undef, # XXX
        text  => 'Zufahrt "Gleis Park": Tore, kann möglicherweise abgesperrt sein',
        type  => 'gesperrt',
+       recurring => 1,
        data  => <<EOF,
 	2::temp 8367,10745 8350,10662 8335,10518
 EOF
@@ -30659,10 +30663,11 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Virchow-Klinikum: mögliche Zugangsbeschränkungen',
+       text  => 'Virchow-Klinikum: Durchfahrt wegen Corona-Beschränkungen nicht möglich',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: VIRCHOW-2020
+#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
 #: last_checked: 2020-11-14 vvv
 #: check_frequency: 120d vvv
@@ -30777,7 +30782,9 @@ EOF
        text  => 'Gärtnerstr.: Bauarbeiten, zwischen Wühlischstr. und Simplonstr. Einbahnstraße Richtung Süden, zwischen Wühlischstr. und Krossener Str. sowie an der Grünberger Str. Fahrbahn gesperrt, evtl. bis Dezember 2021',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: 2147345874 (hier: bis 31.1.2021) (bei rbb nur bis 13.1.2021)
+#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
+#: last_checked: 2020-12-10
+#: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
 	q3::inwork 14247,11681 14272,11775
@@ -30907,12 +30914,12 @@ EOF
 EOF
      },
      { from  => 1590420000, # 2020-05-25 17:20
-       until => $isodate2epoch->("2020-12-11 17:00:00"), # 1592949540, # 2020-06-23 23:59
-       text  => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 11.12.2020 17:00 Uhr',
+       until => $isodate2epoch->("2020-12-10 17:00:00"), # 1592949540, # 2020-06-23 23:59
+       text  => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 10.12.2020 17:00 Uhr',
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_205382_LMS-BR_72',
        data  => <<EOF,
-#: source_id: 2147345969
+#: source_id: 2147345969 (inaktiv)
 #: also_indoor: traffic (G,H)
 	q4::inwork 4847,10677 4847,10589
 EOF
@@ -31168,14 +31175,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 EOF
      },
      { from  => 1598206114, # 2020-08-23 20:08
-       until => $isodate2epoch->("2020-12-15 17:00:00"), # 1604163600, # 2020-10-31 18:00
-       text  => 'Attilastr.: Fahrbahn Richtung Kaiser-Wilhelm-Str. zwischen Ringstr. und Steglitzer Damm gesperrt, voraussichtlich bis 15.12.2020',
+       until => $isodate2epoch->("2020-12-22 17:00:00"), # 1604163600, # 2020-10-31 18:00
+       text  => 'Attilastr.: Fahrbahn Richtung Kaiser-Wilhelm-Str. zwischen Ringstr. und Steglitzer Damm gesperrt, voraussichtlich bis 22.12.2020',
        type  => 'handicap',
-       source_id => '2147346269', # bis 4.11.2020
+       source_id => '2147346269', # mittlerweile inaktiv
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1297930749249814532
 #: by: https://www.berliner-woche.de/tempelhof/c-verkehr/sanierungsbeginn-nach-wasserrohrbruch-am-24-august-noch-ungewiss_a285061
-#: source_id: 2147346566 (bis 15.12.2020)
+#: source_id: 2147346566 (bis 22.12.2020)
 #: also_indoor: traffic (G,H)
 #: last_checked: 2020-08-29
 #: next_check: 2020-12-15
@@ -31238,9 +31245,11 @@ EOF
 #: by: https://twitter.com/BerlinNkl/status/1303296712799330304
 #: by: https://pbs.twimg.com/media/EhY9dDlWkA4cFqP?format=png
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/kreuzung-friedelstrassemaybachufer-wird-entschaerft_a286609
+#: XXX zwischen Bürknerstr. und Friedelstr. wird vermutlich ein Zebrastreifen entstehen (siehe osm_watch unten)
+#: osm_watch: node id="7897291855" version="1"
 #: priority: #A vvv
-#: last_checked: 2020-11-28 vvv
-#: check_frequency: 30d vvv
+#: last_checked: 2020-12-02 vvv
+#: check_frequency: 21d vvv
 # REMOVED --- #: next_check: 2020-12-01 vvv
 #: osm_watch: way id="4068029" version="19"
 	q3::inwork 11897,9754 12085,9778
@@ -31346,7 +31355,7 @@ EOF
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9022 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
 #: XXX bis wann ist der Bahnübergang gesperrt?
-#: osm_watch: way id="868347101" version="1"
+#: osm_watch: way id="868347101" version="2"
 #: priority: #A
 #: last_checked: 2020-10-31
 #: check_frequency: 90d
@@ -31407,20 +31416,22 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-12-13 17:00:00"), # XXX
-       text  => 'Treskowallee: ab Ehrlichstr. Richtung Süden gesperrt, Umleitung ab Wandlitzstr.',
+       until => $isodate2epoch->("2020-12-14 17:00:00"), # XXX
+       text  => 'Ehrlichstr.: Fahrbahn wegen Gleisarbeiten gesperrt, voraussichtlich bis zum 14.12.2020', # was: Treskowallee: ab Ehrlichstr. Richtung Süden gesperrt, Umleitung ab Wandlitzstr.
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/karlshorst/c-verkehr/letzte-arbeiten-an-den-gleisen_a291893 (hier: bis 13.12.2020)
 #: by: https://twitter.com/VIZ_Berlin/status/1333700349597782018 (bis Mitte Februar 2021?)
 #: by: https://viz.berlin.de/2020/12/vorschau-02122020/ (bis Mitte Februar 2021?)
+#: by: http://thomas.krickstadt.de/strassenbahnen/2020-12-06-ehrlichstrasse-treskowallee/index.html (Radweg auf der Treskowallee wieder befahrbar?)
 #: source_id: 2147343744
-#: last_checked: 2020-11-28 vvv
-#: check_frequency: 14d vvv
-#: next_check: 2020-12-13 vvv
-	1::inwork 18672,8238 18657,8163
-frei bis Hausnr. 128, danach Umweg über schmalen Gehweg	q3::inwork; 18704,8427 18672,8238
-Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
+#: last_checked: 2020-12-12 vvv
+#: check_frequency: 7d vvv
+#: next_check: 2020-12-14 vvv
+# REMOVED ---	1::inwork 18672,8238 18657,8163
+# REMOVED --- frei bis Hausnr. 128, danach Umweg über schmalen Gehweg	q3::inwork; 18704,8427 18672,8238
+# REMOVED --- Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
+	q4::inwork 18672,8238 18615,8269 18528,8331
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -31509,8 +31520,8 @@ EOF
        data  => <<EOF,
 #: source_id: 2147346557 (Leitungsarbeiten in der General-Pape-Str.) (mittlerweile inaktiv)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-10-22
-#: next_check: 2020-11-30
+#: last_checked: 2020-12-06
+# REMOVED --- #: next_check: 2020-11-30
 	2::inwork 8066,7843 7955,7840
 EOF
      },
@@ -31521,7 +31532,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-11-28
+#: last_checked: 2020-12-06
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
 EOF
@@ -31646,8 +31657,8 @@ EOF
 EOF
      },
      { from  => 1606024800, # 2020-11-22 07:00
-       until => 1608134400, # 2020-12-16 17:00
-       text  => 'Rosenthaler Str.: zwischen Hackescher Markt und Neue Schönhauser Straße Bauarbeiten, Fahrbahn gesperrt, vom 23.11.2020 07:00 Uhr bis 16.12.2020 17:00 Uhr ',
+       until => $isodate2epoch->("2020-12-09 12:00:00"), # 1608134400, # 2020-12-16 17:00
+       text  => 'Rosenthaler Str.: zwischen Hackescher Markt und Neue Schönhauser Straße Bauarbeiten, Fahrbahn gesperrt, vom 23.11.2020 07:00 Uhr bis 09.12.2020 12:00 Uhr ',
        type  => 'handicap',
        source_id => '2147346633',
        data  => <<EOF,
@@ -31675,6 +31686,58 @@ EOF
        source_id => '2147346411',
        data  => <<EOF,
 	q4::inwork 790,2434 561,2395
+EOF
+     },
+     { from  => undef, # 
+       until => 1609455599, # 2020-12-31 23:59
+       text  => 'Görlitzer Park - Forster Str./Wiener Str.: Durchfahrt wegen Bauarbeiten gesperrt, bis Dezember 2020',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: add_fragezeichen: Ist die Durchfahrt wieder möglich?
+#: XXX hat sich etwas an der Wegführung oder an der Wegbeschaffenheit geändert?
+#: last_checked: 2020-12-02
+#: check_frequency: 10d
+#: next_check: 2020-12-31
+	2::inwork 12507,10130 12504,10172 12509,10189
+	2::inwork 12464,10153 12504,10172
+EOF
+     },
+     { from  => 1606936220, # 2020-12-02 20:10
+       until => 1615050000, # 2021-03-06 18:00
+       text  => 'Reulestr.: Bauarbeiten, Sperrung der Fahrbahn, bis 06.03.2021',
+       type  => 'handicap',
+       data  => <<EOF,
+	q4::inwork 8569,4459 8868,4498
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Charité-Gelände: Durchfahrt wegen Corona-Beschränkungen nicht möglich',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: CORONA-2020
+#: XXX während der Corona-Krise vvv
+#: last_checked: 2020-11-14 vvv
+#: check_frequency: 120d vvv
+	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
+	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
+	2::temp 8665,13353 8582,13355 8618,13306 8630,13172 8487,13351 8434,13310
+	2::temp 8630,13172 8632,13133 8603,13076 8623,13049
+	2::temp 8603,13076 8550,13150 8434,13310 8371,13399
+	2::temp 8538,13388 8582,13355 8595,13375 8587,13436
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
+EOF
+     },
+     { from  => 1607814000, # 2020-12-13 00:00
+       until => 1627682399, # 2021-07-30 23:59
+       text  => 'Lemkestr.: zwischen Linderhofstr. und Sudermannstr., Sperrung der Fahrbahn, vom 14. Dezember 2020 bis voraussichtlich 30. Juli 2021 (außer über die Weihnachtsfeiertage)',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1027826.php',
+       data  => <<EOF,
+#: next_check_id: LEMKE-2020
+	q4::inwork 25191,12343 25363,12553
 EOF
      },
     );

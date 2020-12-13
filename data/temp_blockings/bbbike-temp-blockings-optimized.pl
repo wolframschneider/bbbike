@@ -514,8 +514,9 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        {
          'data' => '#: tempex: su T09-T16
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
+#: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-11-07
+#: last_checked: 2020-12-06
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -1477,27 +1478,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: before(2nd_advent,sa) - +1d
-	2::xmas 9986,13412 10317,13248
-',
-         'from' => 1607036400,
-         'id' => 2515,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              2,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (05.12.2020 - 06.12.2020)',
-         'type' => 'gesperrt',
-         'until' => 1607295599
-       },
+       undef,
        {
          'data' => '#: tempex: before(3rd_advent,sa) - +1d
 	2::xmas 9986,13412 10317,13248
@@ -1541,27 +1522,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'until' => 1608505199
        },
        undef,
-       {
-         'data' => '#: tempex: 2nd_advent & T12-T19
-	2::xmas 11317,14564 11247,14578 11155,14554
-',
-         'from' => 1607166000,
-         'id' => 2519,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              3,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarkt-am-kollwitzplatz.html',
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 6. Dezember 2020, 12:00 bis 19:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1607277600
-       },
+       undef,
        {
          'data' => '#: tempex: 3rd_advent & T12-T19
 	2::xmas 11317,14564 11247,14578 11155,14554
@@ -2027,21 +1988,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
-#: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
-#: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
-#: source_id: 2147341022
-	2::temp -2218,5133 -927,6888
-	2::temp -2825,5588 -1925,6790 -2080,6897
-	2::temp -1925,6790 -1851,6887
-',
-         'from' => 1606777200,
-         'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 02. Dezember 2020 ab ca. 09:30 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1606900500
-       },
+       undef,
        undef,
        {
          'data' => '#: tempex: sunset-T07
@@ -2309,7 +2256,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-11-29 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
+#: last_checked: 2020-12-12 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686
 # REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
@@ -2383,25 +2330,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1640991599
        },
        undef,
-       {
-         'data' => '# REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
-# REMOVED --- #: XXX regelmäßig prüfen --- #: priority: #A --- #: last_checked: 2018-11-16
-#: by: https://viz.berlin.de/2020/07/schau-11_12-07_2020/ ("für den Kraftfahrzeugverkehr gesperrt")
-#: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
-#: source_id: 2147346071
-#: priority: #A
-#: last_checked: 2020-11-22
-#: check_frequency: 30d
-#: next_check: 2020-12-04
-	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
-',
-         'from' => 1594530000,
-         'id' => 3048,
-         'source_id' => '2147343461',
-         'text' => 'Kynaststr.: Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden gesperrt, bis 4.12.2020',
-         'type' => 'gesperrt',
-         'until' => 1607097600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2506,7 +2435,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2020-09-27 (mapillary)
+#: last_checked: 2020-12-11 (mapillary) (Sackgassenschild steht noch)
 #: check_frequency: 60d
 #: next_check: 2021-04-30
 	q3::inwork  8986,16092 9178,16317
@@ -2537,18 +2466,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147343335 (Zeitraum siehe oben)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-10-07 (mapillary)
+#: last_checked: 2020-11-14 (mapillary)
 #: check_frequency: 60d
-#: next_check: 2020-12-18
+#: next_check: 2021-02-28
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8904,17059 8866,17075 8677,17154
 # REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
 ',
          'from' => undef,
          'id' => 3110,
-         'text' => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 18. Dezember 2020',
+         'text' => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 28. Februar 2021',
          'type' => 'handicap',
-         'until' => 1608310800
+         'until' => 1614528000
        },
        undef,
        {
@@ -2597,17 +2526,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: TRESKOWALLEE-2017
-#: last_checked: 2020-11-29
+#: last_checked: 2020-12-12
 #: next_check: 2020-12-13
 # REMOVED (hier normaler Radweg) --- q3::inwork; 18704,8427 18731,8577
 # REMOVED (hier keine Radwegschilder mehr) --- #: note: hier eng und viel Fußgängerverkehr ---	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
 #: note: hier etwas weniger Fußgängerverkehr
-	q2::inwork; 18737,8686 18770,8898 18790,9018
+# REMOVED (hier keine Benutzungspflicht mehr) ---	q2::inwork; 18737,8686 18770,8898
+	q2::inwork; 18770,8898 18790,9018
 # REMOVED (hier ist die Fahrbahn frei) ---	q4::inwork; 18790,9018 18809,9133
 ',
          'from' => undef,
          'id' => 3136,
-         'text' => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer müssen bis Godesberger Str. den teilweise engen Gehweg benutzen, vermutlich bis Mitte Dezember 2020',
+         'text' => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer müssen zwischen Godesberger Str. und Bopparder Str. den teilweise engen Gehweg benutzen, vermutlich bis Mitte Dezember 2020',
          'type' => 'handicap',
          'until' => 1607900399
        },
@@ -2732,7 +2662,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
 # REMOVED (alt) --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php --- #: by: fritz --- #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
 #: XXX bis wann ist der Bahnübergang gesperrt?
-#: osm_watch: way id="9829824" version="18"
+#: osm_watch: way id="9829824" version="19"
 #: priority: #A
 #: last_checked: 2020-10-03
 #: check_frequency: 90d
@@ -2858,7 +2788,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-11-17
+#: last_checked: 2020-12-10
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2874,6 +2804,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => undef,
          'id' => 3226,
+         'recurring' => 1,
          'text' => 'Zufahrt "Gleis Park": Tore, kann möglicherweise abgesperrt sein',
          'type' => 'gesperrt',
          'until' => undef
@@ -2882,6 +2813,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: VIRCHOW-2020
+#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
 #: last_checked: 2020-11-14 vvv
 #: check_frequency: 120d vvv
@@ -2895,7 +2827,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => undef,
          'id' => 3229,
-         'text' => 'Virchow-Klinikum: mögliche Zugangsbeschränkungen',
+         'text' => 'Virchow-Klinikum: Durchfahrt wegen Corona-Beschränkungen nicht möglich',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -2910,7 +2842,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: source_id: 2147345874 (hier: bis 31.1.2021) (bei rbb nur bis 13.1.2021)
+         'data' => '#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
+#: last_checked: 2020-12-10
+#: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
 	q3::inwork 14247,11681 14272,11775
@@ -2930,18 +2864,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147345969
-#: also_indoor: traffic (G,H)
-	q4::inwork 4847,10677 4847,10589
-',
-         'from' => 1590420000,
-         'id' => 3250,
-         'source_id' => 'LMS-BR_r_LMS-BR_205382_LMS-BR_72',
-         'text' => 'Knesebeckstr.: Fahrbahn zwischen Kurfürstendamm und Mommsenstr. wegen Baustelle gesperrt, vom 26.05.2020 17:20 Uhr bis 11.12.2020 17:00 Uhr',
-         'type' => 'handicap',
-         'until' => 1607702400
-       },
+       undef,
        {
          'data' => '#: XXX_prog: eigentlich q3-::inwork
 #: also_indoor: traffic (G,H)
@@ -3075,7 +2998,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1297930749249814532
 #: by: https://www.berliner-woche.de/tempelhof/c-verkehr/sanierungsbeginn-nach-wasserrohrbruch-am-24-august-noch-ungewiss_a285061
-#: source_id: 2147346566 (bis 15.12.2020)
+#: source_id: 2147346566 (bis 22.12.2020)
 #: also_indoor: traffic (G,H)
 #: last_checked: 2020-08-29
 #: next_check: 2020-12-15
@@ -3084,9 +3007,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1598206114,
          'id' => 3270,
          'source_id' => '2147346269',
-         'text' => 'Attilastr.: Fahrbahn Richtung Kaiser-Wilhelm-Str. zwischen Ringstr. und Steglitzer Damm gesperrt, voraussichtlich bis 15.12.2020',
+         'text' => 'Attilastr.: Fahrbahn Richtung Kaiser-Wilhelm-Str. zwischen Ringstr. und Steglitzer Damm gesperrt, voraussichtlich bis 22.12.2020',
          'type' => 'handicap',
-         'until' => 1608048000
+         'until' => 1608652800
        },
        undef,
        undef,
@@ -3097,9 +3020,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://twitter.com/BerlinNkl/status/1303296712799330304
 #: by: https://pbs.twimg.com/media/EhY9dDlWkA4cFqP?format=png
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/kreuzung-friedelstrassemaybachufer-wird-entschaerft_a286609
+#: XXX zwischen Bürknerstr. und Friedelstr. wird vermutlich ein Zebrastreifen entstehen (siehe osm_watch unten)
+#: osm_watch: node id="7897291855" version="1"
 #: priority: #A vvv
-#: last_checked: 2020-11-28 vvv
-#: check_frequency: 30d vvv
+#: last_checked: 2020-12-02 vvv
+#: check_frequency: 21d vvv
 # REMOVED --- #: next_check: 2020-12-01 vvv
 #: osm_watch: way id="4068029" version="19"
 	q3::inwork 11897,9754 12085,9778
@@ -3160,7 +3085,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9022 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
 #: XXX bis wann ist der Bahnübergang gesperrt?
-#: osm_watch: way id="868347101" version="1"
+#: osm_watch: way id="868347101" version="2"
 #: priority: #A
 #: last_checked: 2020-10-31
 #: check_frequency: 90d
@@ -3193,22 +3118,24 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.berliner-woche.de/karlshorst/c-verkehr/letzte-arbeiten-an-den-gleisen_a291893 (hier: bis 13.12.2020)
 #: by: https://twitter.com/VIZ_Berlin/status/1333700349597782018 (bis Mitte Februar 2021?)
 #: by: https://viz.berlin.de/2020/12/vorschau-02122020/ (bis Mitte Februar 2021?)
+#: by: http://thomas.krickstadt.de/strassenbahnen/2020-12-06-ehrlichstrasse-treskowallee/index.html (Radweg auf der Treskowallee wieder befahrbar?)
 #: source_id: 2147343744
-#: last_checked: 2020-11-28 vvv
-#: check_frequency: 14d vvv
-#: next_check: 2020-12-13 vvv
-	1::inwork 18672,8238 18657,8163
-frei bis Hausnr. 128, danach Umweg über schmalen Gehweg	q3::inwork; 18704,8427 18672,8238
-Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
+#: last_checked: 2020-12-12 vvv
+#: check_frequency: 7d vvv
+#: next_check: 2020-12-14 vvv
+# REMOVED ---	1::inwork 18672,8238 18657,8163
+# REMOVED --- frei bis Hausnr. 128, danach Umweg über schmalen Gehweg	q3::inwork; 18704,8427 18672,8238
+# REMOVED --- Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
+	q4::inwork 18672,8238 18615,8269 18528,8331
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 ',
          'from' => undef,
          'id' => 3288,
-         'text' => 'Treskowallee: ab Ehrlichstr. Richtung Süden gesperrt, Umleitung ab Wandlitzstr.',
+         'text' => 'Ehrlichstr.: Fahrbahn wegen Gleisarbeiten gesperrt, voraussichtlich bis zum 14.12.2020',
          'type' => 'gesperrt',
-         'until' => 1607875200
+         'until' => 1607961600
        },
        undef,
        undef,
@@ -3263,8 +3190,8 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
        {
          'data' => '#: source_id: 2147346557 (Leitungsarbeiten in der General-Pape-Str.) (mittlerweile inaktiv)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-10-22
-#: next_check: 2020-11-30
+#: last_checked: 2020-12-06
+# REMOVED --- #: next_check: 2020-11-30
 	2::inwork 8066,7843 7955,7840
 ',
          'from' => undef,
@@ -3276,7 +3203,7 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-11-28
+#: last_checked: 2020-12-06
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
 ',
@@ -3333,18 +3260,7 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
          'type' => 'gesperrt',
          'until' => 1608764400
        },
-       {
-         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1330751695429771266
-#: by: https://pbs.twimg.com/media/EnfHnSoXYAUoYDw?format=png&name=900x900
-	q4::inwork 10310,13227 10264,13097
-',
-         'from' => 1606024800,
-         'id' => 3306,
-         'source_id' => '2147346633',
-         'text' => 'Rosenthaler Str.: zwischen Hackescher Markt und Neue Schönhauser Straße Bauarbeiten, Fahrbahn gesperrt, vom 23.11.2020 07:00 Uhr bis 16.12.2020 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1608134400
-       },
+       undef,
        {
          'data' => '#: next_check_id: B96A-2020
 #: osm_watch: way id="877995097" version="1"
@@ -3367,6 +3283,62 @@ Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
          'text' => 'Schönower Str.: Bauarbeiten, Fahrbahn gesperrt, Radfahrer müssen schieben, vom 28.09.2020 08:00 Uhr bis 22.12.2020 17:00 Uhr ',
          'type' => 'handicap',
          'until' => 1608652800
+       },
+       {
+         'data' => '#: add_fragezeichen: Ist die Durchfahrt wieder möglich?
+#: XXX hat sich etwas an der Wegführung oder an der Wegbeschaffenheit geändert?
+#: last_checked: 2020-12-02
+#: check_frequency: 10d
+#: next_check: 2020-12-31
+	2::inwork 12507,10130 12504,10172 12509,10189
+	2::inwork 12464,10153 12504,10172
+',
+         'from' => undef,
+         'id' => 3309,
+         'text' => 'Görlitzer Park - Forster Str./Wiener Str.: Durchfahrt wegen Bauarbeiten gesperrt, bis Dezember 2020',
+         'type' => 'gesperrt',
+         'until' => 1609455599
+       },
+       {
+         'data' => '	q4::inwork 8569,4459 8868,4498
+',
+         'from' => 1606936220,
+         'id' => 3310,
+         'text' => 'Reulestr.: Bauarbeiten, Sperrung der Fahrbahn, bis 06.03.2021',
+         'type' => 'handicap',
+         'until' => 1615050000
+       },
+       {
+         'data' => '#: next_check_id: CORONA-2020
+#: XXX während der Corona-Krise vvv
+#: last_checked: 2020-11-14 vvv
+#: check_frequency: 120d vvv
+	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
+	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
+	2::temp 8665,13353 8582,13355 8618,13306 8630,13172 8487,13351 8434,13310
+	2::temp 8630,13172 8632,13133 8603,13076 8623,13049
+	2::temp 8603,13076 8550,13150 8434,13310 8371,13399
+	2::temp 8538,13388 8582,13355 8595,13375 8587,13436
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
+',
+         'from' => undef,
+         'id' => 3311,
+         'text' => 'Charité-Gelände: Durchfahrt wegen Corona-Beschränkungen nicht möglich',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: LEMKE-2020
+	q4::inwork 25191,12343 25363,12553
+',
+         'from' => 1607814000,
+         'id' => 3312,
+         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1027826.php',
+         'text' => 'Lemkestr.: zwischen Linderhofstr. und Sudermannstr., Sperrung der Fahrbahn, vom 14. Dezember 2020 bis voraussichtlich 30. Juli 2021 (außer über die Weihnachtsfeiertage)',
+         'type' => 'handicap',
+         'until' => 1627682399
        }
      
 );
