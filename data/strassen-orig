@@ -293,6 +293,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: next_check_id: FRIEDRICH-2020
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2020/pressemitteilung.1002095.php
 #: by: https://abendblatt-berlin.de/2020/12/10/berlin-mitte-friedrichstrasse-koennte-deutlich-laenger-autofrei-bleiben-als-bislang-geplant/ (bis 31. Oktober 2021?)
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/verkehrssenatorin-bringt-teilsperrung-der-friedrichstrasse-bis-oktober-2021-ins-spiel_a296135
 #: source_id: 2147346249
 #: last_checked: 2020-10-20 vvv
 #: next_check: 2021-01-31 vvv
@@ -1160,7 +1161,7 @@ Naunynstr.	N 11329,10785 11301,10783
 Michaelkirchstr.	N 11487,11390 11569,11587 11676,11839
 An der Michaelbrücke	N 11676,11839 11716,11914 11764,12001
 Melchiorstr.	N 11917,11186 11726,11265 11542,11342 11415,11392
-Lichtenberger Str.	H 11764,12001 11920,12266 12006,12464 12028,12519
+Lichtenberger Str.	H 11764,12001 11872,12185 11920,12266 12006,12464 12028,12519
 Lichtenberger Str.	H 12050,12616 12064,12673 12112,12861 12122,13029 12126,13088 12139,13162 12163,13295
 Brückenstr. (Mitte)	H 11250,11715 11291,11876 11325,12021
 Holzmarktstr.	HH 11347,12223 11388,12202 11513,12138 11619,12084 11764,12001 11916,11846 11963,11813 12180,11657
@@ -1362,7 +1363,7 @@ Hedemannstr.	N 9131,10716 9323,10791 9539,10820
 # 
 #: next_check_id: ROSSSTRASSENBRUECKE-2019
 #: last_checked: 2020-05-21
-#: next_check: 2021-09-01
+#: next_check: 2021-06-06
 (Umfahrung Baustelle Neue Roßstraßenbrücke)	NN 10680,11875 10650,11909 10642,11901 10590,11840 10599,11819
 # 
 Fischerinsel	NH 10512,12039 10578,11969 10604,11941 10642,11901 10672,11870
@@ -2468,7 +2469,7 @@ Deutschmeisterstr.	N 15443,12222 15370,12264 15353,12280 15320,12375
 Straße 77 (Lichtenberg)	NN 15408,12394 15320,12375
 Am Containerbahnhof	N 15420,12178 15295,12234
 Berliner Allee	HH 13307,15758 13398,15826 13425,15846 13484,15893 13508,15912 13623,15954 13737,15994 13826,16026 14015,16103 14056,16120 14248,16202 14346,16241 14499,16341 14556,16391 14610,16522 14619,16551 14619,16672 14619,16682 14608,16772 14558,16907 14535,17003 14533,17084 14552,17137 14584,17224 14673,17454 14754,17673 14766,17702 14832,17867
-Ostseestr.	H 12090,16199 12216,16120 12254,16097 12347,16039 12378,16020 12532,15924 12721,15807 12903,15695 13078,15586
+Ostseestr.	H 12090,16199 12123,16178 12216,16120 12254,16097 12347,16039 12378,16020 12532,15924 12721,15807 12903,15695 13078,15586
 Michelangelostr.	H 13078,15586 13186,15518 13560,15318 13692,15231 13760,15187 13808,15154 13816,15137 13823,15111
 Goethestr. (Weißensee, Prenzlauer Berg)	N 12378,16020 12423,16109 12466,16198 12512,16291 12564,16399 12646,16563
 Langhansstr.	H 13508,15912 13312,16027 13189,16089 12943,16214 12859,16255 12797,16285 12725,16321 12564,16399 12399,16479 12189,16578 12045,16574
@@ -2581,7 +2582,7 @@ Naugarder Str.	N 12737,15154 12712,15176 12693,15225 12610,15455 12621,15482
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5238 (Vorlage zur Kenntnisnahme)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5356
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_01_0001_0152_online.pdf (Benennung: Gertrud-Classen-Platz, Wirksamkeit am 6. März 2020)
-#: last_checked: 2020-11-17 (keine Schilder zu sehen)
+#: last_checked: 2020-12-18 (keine Schilder zu sehen)
 #: check_frequency: 30d
 (Hosemannstr. - Naugarder Str.)	N 12583,15566 12605,15491
 Malchower Chaussee	HH 14832,17867 15152,18115 15181,18137 15569,18492 15600,18551 15610,18596
@@ -12112,7 +12113,7 @@ Zum Biesenwerder	N 14064,1590 14008,1835
 Am Buschfeld	N 14171,1634 14124,1857
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/42re.pdf/file?y=2016
 #: XXX ändert sich durch die (teilweise?) Straßenlandwidmung etwas?
-#: osm_watch: way id="156346093" version="4"
+#: osm_watch: way id="156346093" version="5"
 #: osm_watch: way id="23106203" version="12"
 #: last_checked: 2020-09-01 (mapillary)
 #: check_frequency: 150d
@@ -13318,12 +13319,12 @@ Klutstr.	N 26057,5553 25757,5536
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/grenzallee-wird-angebunden_a294931
 #: XXX im Zuge des A100-Ausbaus wird die Bergiusstr. verschwenkt
 #: osm_watch: way id="194653032" version="20"
-#: osm_watch: way id="846595294" version="1"
+#: osm_watch: way id="846595294" version="2"
 #: osm_watch: way id="38725490" version="15"
-#: last_checked: 2020-11-28
+#: last_checked: 2020-12-12 (mapillary)
 #: check_frequency: 90d
 (Zufahrt zur Bergiusstr.)	NN 14051,6731 14106,6663
-#: last_checked: 2020-11-28 vvv
+#: last_checked: 2020-12-12 (mapillary) vvv
 #: check_frequency: 90d vvv
 #: valid: 20140224-20221231
 Bergiusstr.	H 14106,6663 14193,6556 14366,6337

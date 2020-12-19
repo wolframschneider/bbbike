@@ -1566,7 +1566,7 @@ Werrastr.: sehr gutes Kopfsteinpflaster	Q1 13648,8321 13566,8386 13469,8462
 Werrastr.: Asphalt mit einigen Schäden	Q1 13697,8279 13648,8321
 Rungestr.: Kopfsteinpflaster	Q2 11197,11882 11291,11876
 Rungestr.: Kopfsteinpflaster	Q2 11291,11876 11378,11856 11506,11851
-Am Köllnischen Park: Kopfsteinpflaster	Q2 11197,11882 11155,11750
+Am Köllnischen Park: Asphalt	Q0 11197,11882 11155,11750
 Wassergasse: Kopfsteinpflaster	Q2 11024,11789 11034,11895
 Netzestr.: mäßiges bis schlechtes Kopfsteinpflaster	Q3 11718,7103 11700,7197
 (Netzestr. - Kirchhofweg): wassergebundene Decke	Q1 11700,7197 11687,7284
@@ -2408,7 +2408,7 @@ Feldtmannstr.: asphaltiert	Q0 15239,17599 14754,17673
 Am Schweizer Garten: Asphalt	Q0 11868,13646 12001,13863
 (Volkspark Friedrichshain): Parkweg	Q1 12161,13711 12145,13628
 (Volkspark Friedrichshain): kleinteiliges Kopfsteinpflaster	Q1 12145,13628 12141,13609
-(Volkspark Friedrichshain): Parkweg	Q1 12141,13609 12130,13554 12111,13480 12060,13422
+(Volkspark Friedrichshain): Asphalt	Q0 12141,13609 12130,13554 12111,13480 12060,13422
 Kadiner Str.: Asphalt	Q0 13515,11969 13590,12260
 Südtorweg: wassergebundene Decke	Q1 -503,11782 -750,11740
 Carl-Schuhmann-Weg: asphaltiert	Q0 -750,11740 -794,11732 -940,11708
@@ -7386,8 +7386,8 @@ Hadlichstr.: teilweise Asphalt, teilweise Beton	Q0 10815,18074 10900,18113 10970
 Hadlichstr.: Asphalt	Q0 11123,18343 11001,18528
 Straße 44 (Französisch Buchholz): Asphalt	Q0 12211,20486 12112,20562
 Ferdinand-Buisson-Str.: Asphalt	Q0 12337,20954 12459,21010 12562,21055 12619,21079 12629,21083
-Ferdinand-Buisson-Str.: schlechtes Kopfsteinpflaster, teilweise mit Sandbanketten	Q3 12629,21083 12762,21140 12837,21229 12885,21282
-Ferdinand-Buisson-Str.: unbefestigte Straße	Q2 12885,21282 12939,21345 12948,21421 12953,21502 12994,21719
+Ferdinand-Buisson-Str.: schlechtes Kopfsteinpflaster, teilweise mit Sandbanketten	Q3 12629,21083 12762,21140 12837,21229
+Ferdinand-Buisson-Str.: unbefestigte Straße	Q2 12837,21229 12885,21282 12939,21345 12948,21421 12953,21502 12994,21719
 (Ferdinand-Buisson-Str. - Ludwig-Quidde-Str.): asphaltiert	Q0 12619,21079 12611,21138
 Bananenapfelweg: unbefestigte Straße	Q2 12994,21719 13008,21783 13050,21994
 Straße 55: schlechtes Kopfsteinpflaster	Q3 12837,21229 12696,21342

@@ -25391,10 +25391,10 @@ EOF
 	3 11712,12614 12006,12464 12118,12462
 	3 11845,12292 11920,12266 12081,12236
 	3 12081,12236 11920,12266 11845,12292
-	3 12081,12236 11920,12266 11764,12001
-	3 11764,12001 11920,12266 12081,12236
-	3 11845,12292 11920,12266 11764,12001
-	3 11764,12001 11920,12266 11845,12292
+	3 12081,12236 11920,12266 11872,12185 11764,12001
+	3 11764,12001 11872,12185 11920,12266 12081,12236
+	3 11845,12292 11920,12266 11872,12185 11764,12001
+	3 11764,12001 11872,12185 11920,12266 11845,12292
 	3 12039,12675 12064,12673 12146,12628
 	3 12146,12628 12064,12673 12039,12675
 	3 12146,12628 12064,12673 12112,12861
@@ -27913,7 +27913,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-11-19
+#: last_checked: 2020-12-15
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -27989,8 +27989,9 @@ EOF
 #: next_check_id: TRESKOWALLEE-2017
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
+#: by: https://viz.berlin.de/2020/12/vorschau-14122020/ (Restarbeiten)
 #: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-12-12 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
+#: last_checked: 2020-12-18 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686
 # REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
@@ -28642,12 +28643,12 @@ EOF
 EOF
      },
      { from  => 1543258848, # 2018-11-26 20:00
-       until => $isodate2epoch->("2021-01-04 18:00:00"), # 1551394799, # 2019-02-28 23:59
-       text  => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, Radfahrer sind möglicherweise auch betroffen, bis Anfang Januar 2021',
+       until => $isodate2epoch->("2021-12-31 18:00:00"), # 1551394799, # 2019-02-28 23:59
+       text  => 'Pankgrafenstr.: wegen Brückenarbeiten am Bahnhof Karow gesperrt, Radfahrer sind möglicherweise auch betroffen, voraussichtlich bis Ende 2021',
        type  => 'gesperrt',
        data  => <<EOF,
-#: source_id: 2147343519 (bis 31.12.2021")
-#: note: laut rbbtext bis 4.1.2021
+#: source_id: 2147343519 (bis 31.12.2021)
+#: note: laut rbbtext bis 4.1.2021 (mittlerweile existiert die Meldung hier nicht mehr)
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 	2::inwork 14539,23306 14573,23295 14597,23280
 EOF
@@ -29251,7 +29252,7 @@ EOF
 #: XXX bis wann gehen die Bauarbeiten? Bis Anfang Juli 2020?
 #: XXX hier fehlt noch die letzte Asphaltdeckschicht
 #: also_indoor: traffic
-#: osm_watch: way id="156066225" version="16"
+#: osm_watch: way id="156066225" version="17"
 #: last_checked: 2020-11-15 vvv
 #: check_frequency: 45d vvv
 #: next_check: 2021-07-01 vvv
@@ -29573,13 +29574,15 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-12-13 23:59:59"), # 1588348800, # 2020-05-01 18:00
+       until => $isodate2epoch->("2020-12-18 23:59:59"), # 1588348800, # 2020-05-01 18:00
        text  => 'Treskowallee: verengte Fahrbahn wegen Bauarbeiten, Radfahrer müssen zwischen Godesberger Str. und Bopparder Str. den teilweise engen Gehweg benutzen, vermutlich bis Mitte Dezember 2020',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2017
+#: by: https://viz.berlin.de/2020/12/vorschau-14122020/ (Restarbeiten)
+#: source_id: 2147346734 (bis 18.12.2020)
 #: last_checked: 2020-12-12
-#: next_check: 2020-12-13
+#: next_check: 2020-12-18
 # REMOVED (hier normaler Radweg) --- q3::inwork; 18704,8427 18731,8577
 # REMOVED (hier keine Radwegschilder mehr) --- #: note: hier eng und viel Fußgängerverkehr ---	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
 #: note: hier etwas weniger Fußgängerverkehr
@@ -30783,7 +30786,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2020-12-10
+#: last_checked: 2020-12-18
 #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -30972,7 +30975,7 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2020-11-08
+#: last_checked: 2020-12-14 (mapillary)
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2020-11-07
 	q4::inwork 14136,17170 13996,16959
@@ -31183,9 +31186,10 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1297930749249814532
 #: by: https://www.berliner-woche.de/tempelhof/c-verkehr/sanierungsbeginn-nach-wasserrohrbruch-am-24-august-noch-ungewiss_a285061
 #: source_id: 2147346566 (bis 22.12.2020)
+#: XXX bei rbbtext bereits entfernt
 #: also_indoor: traffic (G,H)
 #: last_checked: 2020-08-29
-#: next_check: 2020-12-15
+#: next_check: 2020-12-22
 	q4::inwork; 7667,4549 7628,4521 7597,4499
 EOF
      },
@@ -31213,13 +31217,16 @@ EOF
 	q3::inwork 11652,13372 11589,13305 11578,13310 11526,13252
 EOF
      },
-     { from  => 1599948000, # 2020-09-13 00:00
-       until => 1606777200, # 2020-12-01 00:00
-       text  => 'Akeleiweg: Bauarbeiten, Fahrbahn gesperrt, vom 14.09.2020 bis voraussichtlich 30.11.2020',
+     { from  => $isodate2epoch->("2021-01-11 00:00:00"), # 1599948000, # 2020-09-13 00:00
+       until => $isodate2epoch->("2021-07-31 18:00:00"), # 1606777200, # 2020-12-01 00:00
+       text  => 'Akeleiweg: Bauarbeiten, Fahrbahn gesperrt, vom 12..01.2021 bis voraussichtlich 31.07.2021',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.986324.php',
        data  => <<EOF,
-	q4::inwork 17631,3200 17894,2783
+#: next_check_id: AKELEIWEG-2021
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.1032696.php (2. Bauabschnitt)
+	q4::inwork 17603,3240 17631,3200
+	q3::inwork 17631,3200 17894,2783
 EOF
      },
      { from  => 1599213600, # 2020-09-04 12:00
@@ -31424,17 +31431,14 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1333700349597782018 (bis Mitte Februar 2021?)
 #: by: https://viz.berlin.de/2020/12/vorschau-02122020/ (bis Mitte Februar 2021?)
 #: by: http://thomas.krickstadt.de/strassenbahnen/2020-12-06-ehrlichstrasse-treskowallee/index.html (Radweg auf der Treskowallee wieder befahrbar?)
+#: by: https://www.bahninfo-forum.de/read.php?9,581614,687265#msg-687265 (offen)
 #: source_id: 2147343744
-#: last_checked: 2020-12-12 vvv
-#: check_frequency: 7d vvv
-#: next_check: 2020-12-14 vvv
+# REMOVED --- #: last_checked: 2020-12-12 vvv --- #: check_frequency: 7d vvv --- #: next_check: 2020-12-14 vvv
 # REMOVED ---	1::inwork 18672,8238 18657,8163
 # REMOVED --- frei bis Hausnr. 128, danach Umweg über schmalen Gehweg	q3::inwork; 18704,8427 18672,8238
 # REMOVED --- Umweg über schmalen Gehweg	q3::inwork 18672,8238 18615,8269
 	q4::inwork 18672,8238 18615,8269 18528,8331
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
+# REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 EOF
      },
      { from  => 1602367200, # 2020-10-11 00:00
@@ -31505,8 +31509,8 @@ EOF
 EOF
      },
      { from  => 1603170000, # 2020-10-20 07:00
-       until => 1608739200, # 2020-12-23 17:00
-       text  => 'Weddingstr.: Zufahrt von der Reinickendorfer Str. gesperrt, 21.10.2020 7:00 Uhr bis 23.12.2020 17:00 Uhr',
+       until => $isodate2epoch->("2021-01-29 17:00:00"), # 1608739200, # 2020-12-23 17:00
+       text  => 'Weddingstr.: Zufahrt von der Reinickendorfer Str. gesperrt, 21.10.2020 7:00 Uhr bis 29.01.2021 17:00 Uhr',
        type  => 'handicap',
        source_id => '2147346516',
        data  => <<EOF,
@@ -31673,9 +31677,9 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: B96A-2020
-#: osm_watch: way id="877995097" version="1"
+#: osm_watch: way id="877995097" version="2"
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2020-11-28
+#: last_checked: 2020-12-12 (osm)
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 EOF
      },
