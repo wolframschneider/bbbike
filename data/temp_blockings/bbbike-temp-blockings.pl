@@ -17361,7 +17361,7 @@ EOF
        until => $isodate2epoch->("2020-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
-       recurrence_prewarn_days => 7, # XXX Ausmaß der Sperrung 2020/2021 unklar
+       recurrence_prewarn_days => 2, # XXX Ausmaß der Sperrung 2020/2021 unklar
        text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vermutlich ab 26.12.2019 bis 02.01.2020',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -22742,8 +22742,8 @@ EOF
      { from  => $isodate2epoch->("2019-12-20 12:00:00"), # 1 Tag Vorlauf # 1386198000, # 2013-12-05 00:00
        until => $isodate2epoch->("2019-12-22 21:00:00"), # 1386525600, # 2013-12-08 19:00
        periodic => 1,
-       recurrences => [['yearly', days => 1, months => 12]],
-       recurrence_prewarn_days => -19,
+       recurrences => [['yearly', days => 1, months => 12, start => "2021-01-01T00:00:00"]],
+       #recurrence_prewarn_days => -19,
        text  => 'Alt-Rudow zwischen Köpenicker Str. und Krokusstr.: Rudower Adventsmeile, Straße gesperrt, ab: 21.12.2019 12 Uhr bis 22.12.2019 21 Uhr ',
        type  => 'gesperrt',
        source_id => 'IM_020883',
@@ -25163,7 +25163,7 @@ EOF
        until => $isodate2epoch->("2020-01-02 23:59:59"), # 1451646000, # 2016-01-01 12:00
        periodic => 1,
        recurrences => [['yearly', days => 28, months => 12]],
-       recurrence_prewarn_days => 7, # XXX Ausmaß der Sperrung 2020/2021 unklar
+       recurrence_prewarn_days => 2, # XXX Ausmaß der Sperrung 2020/2021 unklar
        text  => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 29.12.2019 bis 02.01.2020',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -27981,17 +27981,15 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-12-31 23:59:59"), # 1588348800, # 2020-05-01 18:00
+       until => $isodate2epoch->("2020-12-18 23:59:59"), # 1588348800, # 2020-05-01 18:00
        text  => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Dorotheastr. für Radfahrer explizit verboten',
        type  => 'handicap',
        source_id => '2147342174',
        data  => <<EOF,
-#: next_check_id: TRESKOWALLEE-2017
+# REMOVED --- #: next_check_id: TRESKOWALLEE-2017
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
-#: by: https://viz.berlin.de/2020/12/vorschau-14122020/ (Restarbeiten)
-#: XXX bis wann gilt das Verbot?
-#: last_checked: 2020-12-18 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
+# REMOVED --- #: by: https://viz.berlin.de/2020/12/vorschau-14122020/ (Restarbeiten) --- #: XXX bis wann gilt das Verbot? --- #: last_checked: 2020-12-18 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686
 # REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
@@ -29881,7 +29879,7 @@ EOF
 #: XXX weitere Abschnitte folgen!
 #: next_check: 2019-10-02
 	q2::inwork 5781,1936 5802,1851 5908,1612
-# REMOVED (fertig) ---	q2::inwork 5781,1936 5720,2081 5660,2219 5542,2491
+# REMOVED (fertig) ---	q2::inwork 5781,1936 5720,2081 5660,2219 5539,2497
 EOF
      },
      { from  => undef, # 
@@ -30391,14 +30389,17 @@ EOF
 EOF
      },
      { from  => 1584255600, # 2020-03-15 08:00
-       until => $isodate2epoch->("2020-09-01 17:00:00"), # 1596466800, # 2020-08-03 17:00
-       text  => 'Lauenburger Str.: Bauarbeiten zwischen Bergstr. und Friedrichsruher Str., Fahrbahn gesperrt, vom 16.03.2020 08:00 Uhr bis 01.09.2020 17:00 Uhr ',
+       until => undef, # $isodate2epoch->("2020-09-01 17:00:00"), # 1596466800, # 2020-08-03 17:00
+       text  => 'Lauenburger Str.: Bauarbeiten zwischen Bergstr. und Friedrichsruher Str., Fahrbahn gesperrt, ab 16.03.2020, Ende unbekannt',
        type  => 'handicap',
        source_id => '2147345598',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.907067.php
 #: by: https://twitter.com/VIZ_Berlin/status/1239445055410143232 (hier nur der nördliche Abschnitt)
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/vattenfall-baut-in-der-lauenburger-und-friedrichsruher-strasse_a258712
+#: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
+#: also_indoor: traffic
+#: last_checked: 2020-12-19
 	q4::inwork 6007,5785 6007,5882
 EOF
      },
@@ -30786,7 +30787,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2020-12-18
+#: last_checked: 2020-12-19
 #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31062,7 +31063,7 @@ EOF
 #: also_indoor: traffic (H,G) vvv
 #: note: laut rbbtext bis 2021-06-30 vvv
 #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
-#: last_checked: 2020-10-25 vvv
+#: last_checked: 2020-12-19 vvv
 #: next_check: 2021-03-26 vvv
 	q4::inwork; 4515,4760 4214,4595
 #: note: hier nur ein kurzes Stück
@@ -31179,7 +31180,7 @@ EOF
      },
      { from  => 1598206114, # 2020-08-23 20:08
        until => $isodate2epoch->("2020-12-22 17:00:00"), # 1604163600, # 2020-10-31 18:00
-       text  => 'Attilastr.: Fahrbahn Richtung Kaiser-Wilhelm-Str. zwischen Ringstr. und Steglitzer Damm gesperrt, voraussichtlich bis 22.12.2020',
+       text  => 'Attilastr.: Fahrbahn Richtung Kaiser-Wilhelm-Str. zwischen Ringstr. und Steglitzer Damm gesperrt, Gehweg für Radfahrer frei, voraussichtlich bis 22.12.2020',
        type  => 'handicap',
        source_id => '2147346269', # mittlerweile inaktiv
        data  => <<EOF,
@@ -31188,9 +31189,9 @@ EOF
 #: source_id: 2147346566 (bis 22.12.2020)
 #: XXX bei rbbtext bereits entfernt
 #: also_indoor: traffic (G,H)
-#: last_checked: 2020-08-29
+#: last_checked: 2020-12-19
 #: next_check: 2020-12-22
-	q4::inwork; 7667,4549 7628,4521 7597,4499
+	q2::inwork; 7667,4549 7628,4521 7597,4499
 EOF
      },
      { from  => 1598454000, # 2020-08-26 17:00
@@ -31699,11 +31700,14 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Ist die Durchfahrt wieder möglich?
 #: XXX hat sich etwas an der Wegführung oder an der Wegbeschaffenheit geändert?
-#: last_checked: 2020-12-02
-#: check_frequency: 10d
-#: next_check: 2020-12-31
+#: last_checked: 2020-12-19 vvv
+#: check_frequency: 14d vvv
+#: next_check: 2020-12-31 vvv
 	2::inwork 12507,10130 12504,10172 12509,10189
 	2::inwork 12464,10153 12504,10172
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 EOF
      },
      { from  => 1606936220, # 2020-12-02 20:10

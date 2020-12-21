@@ -492,6 +492,7 @@ Am Bahndamm: teilweise enge Stellen, Fuﬂg‰nger, Bordstein	q2 7667,4549 7692,4464
 Am Bahndamm: einige Fuﬂg‰nger	q1 7769,4315 7795,4242 8016,3651 8106,3410
 Edenkobener Steg: Fuﬂg‰nger	q1 6618,4191 6633,4272
 Teltowkanalpromenade: enge und kurvige Unterf¸hrung, steile Abschnitte	q4 4274,2717 4272,2704 4247,2652 4209,2641
+Teltowkanalpromenade: schmale und kurvige Unterf¸hrung	q2 4778,3352 4815,3382 4822,3431
 Heinrich-Laehr-Park: Fuﬂg‰nger	q1 1525,581 1372,1208 1328,1387 1249,1672
 (Unterf¸hrung): Rampen	q2 -8334,14461 -8251,14440 -8256,14418 -8227,14408 -8287,14411
 Viktoriapark: starke Steigung, Fuﬂg‰nger	q4; 8598,9074 8695,9079 8827,9086 8883,9089
@@ -2056,6 +2057,7 @@ Borkheider Str.: Bordstein	q3 21726,17974 21748,17963
 (Rund um den Gehrensee): einige Fuﬂg‰nger	q1 20906,19284 20867,19159 20877,19112 20882,19055 20916,19053 21015,19070 21100,19107 21089,19215
 (Gehrensee - Grenzweg): einige Fuﬂg‰nger	q1 21100,19107 21169,19146
 (Barnimer Dˆrferweg - Gehrensee): einige Fuﬂg‰nger	q1 21035,19005 21040,19007 21015,19070
+Landschaftspark Johannisthal: einige Fuﬂg‰nger	q1 18164,2712 18167,2724 18229,2973 18228,2989 18046,3192 18031,3257 18027,3276 18025,3291 18015,3380 18000,3513 17997,3535 17996,3540 17978,3713 17976,3735 17975,3744 17953,3955
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2119,7 +2121,7 @@ Hempst¸cken: kurvenreich	q2 -7506,126 -7542,201 -7632,204
 Joachimstr. (Kˆpenick): Bodenschwellen	q1; 21907,5517 22009,5593
 Jeanne-Mammen-Bogen: Fuﬂg‰ngerzone	q3 4948,10872 5090,10868
 Holwedestr.: schmale Straﬂe	q1 1128,20525 1203,20553 1264,20575 1326,20600 1387,20621
-(Fuﬂg‰ngertunnel Bahnhof Lichterfelde Ost): Fuﬂg‰nger, Radfahrer sollen schieben	q4 5367,2528 5479,2464
+(Fuﬂg‰ngertunnel Bahnhof Lichterfelde Ost): Fuﬂg‰nger, Radfahrer sollen schieben	q4 5367,2528 5471,2470
 Am Schloﬂpark: eng bei Autoverkehr	q1 10775,19054 10712,18975 10625,18831 10496,18704
 Poschingerstr.: enge Straﬂe	q1 5697,6276 5754,6238 5824,6240 5875,6262 5918,6301 5971,6343 6095,6358 6248,6388
 Hˆltermannsteig: gemeinsamer Rad- und Gehweg	q1 13999,2727 13951,2801 13948,2910 13954,3035 13965,3222 14023,3276
@@ -2542,7 +2544,7 @@ Schenkestr.: enge Straﬂe	q1 17961,8312 17794,8429
 Knˆterichpfad: enge Straﬂe, Gartensiedlung	q1 -7842,14683 -7808,14939 -7784,15065
 Hartmannsweilerweg: enge Straﬂe	q1; 17,3471 41,3510 16,3744
 Hartmannsweilerweg: enge Straﬂe	q1 16,3744 -1,3857 -36,3924 -219,4149
-Zietenstr. (Lankwitz): enge Straﬂe	q1 6196,2204 6108,2326 6065,2443 5971,2691
+Zietenstr. (Lankwitz): enge Straﬂe	q1 6196,2204 6158,2256 6108,2326 6065,2443 5971,2691
 (Hˆhensteig - Buntzelstr.): Fuﬂg‰nger	q1 21844,238 21963,261 21979,274 21991,273 22008,262 22166,312
 Jenny-Lind-Str.: enge Straﬂe	q1 11522,17248 11645,17271 11768,17296
 Sandhofweg: enge Straﬂe	q1 5848,272 5795,371 5757,434 5688,402
