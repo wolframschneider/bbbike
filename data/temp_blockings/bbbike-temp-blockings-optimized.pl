@@ -403,7 +403,8 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        {
          'data' => '#: tempex: T23:00-T06:00 vvv
 	2::night 21150,11925 21134,11926 21132,11943 21100,11960 20857,12027 20810,12031
-	2::night 20857,12027 20831,11771 20825,11732 20771,11672
+	2::night 20857,12027 20835,11810 20831,11771 20825,11732 20764,11675
+	2::night 20779,11801 20804,11797 20818,11812 20835,11810
 #: tempex ^^^
 ',
          'from' => undef,
@@ -705,7 +706,40 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1512/nachricht5886.html
+#: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1612/nachricht6280.html
+#: source_id: LMS-BR_r_LMS-BR_227405_LMS-BR_72
+#: source_id: LMS-BR_r_LMS-BR_227402_LMS-BR_72
+#: by: https://viz.berlin.de/2020/12/welcome21/
+Str. des 17 Juni ab Yitzhak-Rabin-Str. und Pariser Platz	2::temp 8722,12268 8637,12258 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
+Bremer Weg am Brandenburger Tor	2::temp 8522,12239 8466,12197
+Ahornsteig am Brandenburger Tor	2::temp 8538,12245 8522,12187
+Ebertstr.	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+Str. des 17 Juni/Kleine Querallee	3::temp 8391,12389 8344,12221 8327,12174
+Str. des 17 Juni/Kleine Querallee	3::temp 8327,12174 8344,12221 8391,12389
+Simsonweg	2::temp 8546,12279 8391,12389 8354,12416
+Kleine Querallee	2::temp 8400,12417 8391,12389 8344,12221
+# 2020 hier nicht --- Behrenstr.	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
+# 2020 hier nicht --- Yitzhak-Rabin-Str.	2::temp 8055,12186 8119,12414
+# 2020 hier nicht --- Str. des 17 Juni zwischen Großer Stern und Yitzhak-Rabin-Str.	2::temp 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+',
+         'from' => 1608958800,
+         'id' => 2010,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              26,
+                              'months',
+                              12
+                            ]
+                          ],
+         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Ebertstr. zwischen Behrenstr. und Scheidemannstr., ab 26.12.2020 bis 02.01.2021',
+         'type' => 'gesperrt',
+         'until' => 1609628399
+       },
        undef,
        undef,
        undef,
@@ -2370,7 +2404,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147343335 (Zeitraum siehe oben)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-11-14 (mapillary)
+#: last_checked: 2020-12-28 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2021-02-28
 #: XXX_prog: eigentlich q4+::inwork;
@@ -2544,7 +2578,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 3170,
          'text' => 'Königsteinbrücke: Sperrung der Brücke ab dem 23. Oktober 2019, Brücke wird danach abgerissen und neu gebaut',
          'type' => 'gesperrt',
-         'until' => 1609455599
+         'until' => 1640991599
        },
        {
          'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
@@ -2735,7 +2769,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2020-12-19
+#: last_checked: 2020-12-30
 #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2777,7 +2811,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2020-12-14 (mapillary)
+#: last_checked: 2020-12-30
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2020-11-07
 	q4::inwork 14136,17170 13996,16959
@@ -2812,7 +2846,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: also_indoor: traffic (H,G) vvv
 #: note: laut rbbtext bis 2021-06-30 vvv
 #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
-#: last_checked: 2020-12-19 vvv
+#: last_checked: 2020-12-27 (mapillary) vvv
 #: next_check: 2021-03-26 vvv
 	q4::inwork; 4515,4760 4214,4595
 #: note: hier nur ein kurzes Stück
@@ -2943,10 +2977,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9022 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9184 (fehlende Umleitung)
 #: XXX bis wann ist der Bahnübergang gesperrt?
 #: osm_watch: way id="868347101" version="2"
 #: priority: #A
-#: last_checked: 2020-10-31
+#: last_checked: 2020-12-28
 #: check_frequency: 90d
 #: next_check: 2021-03-01
 	2::inwork 20627,12162 20624,12133 20620,12108
@@ -3040,7 +3075,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-12-06
+#: last_checked: 2020-12-27
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
 ',
@@ -3054,7 +3089,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://www.verkehrslage.de/Berlin/Baustellen/3
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-11-21
+#: also_indoor: traffic (G)
+#: last_checked: 2020-12-27
+#: check_frequency: 21d
 	q4::inwork 12997,6290 13027,6168
 ',
          'from' => undef,
@@ -3068,17 +3105,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/mitte/c-bauen/an-der-spree-wird-ein-abschnitt-saniert_a293881
-	2::inwork 9707,12974 9557,12992
-',
-         'from' => 1605481200,
-         'id' => 3305,
-         'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2020/pressemitteilung.1018328.php',
-         'text' => 'Spreeuferweg: zwischen Monbijoustr. und Tucholskystr. Bauarbeiten, komplett gesperrt, vom 17.11.2020 bis voraussichtlich 23.12.2020',
-         'type' => 'gesperrt',
-         'until' => 1608764400
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: B96A-2020
@@ -3099,10 +3126,10 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: XXX hat sich etwas an der Wegführung oder an der Wegbeschaffenheit geändert?
 #: last_checked: 2020-12-23 vvv
 #: check_frequency: 14d vvv
-#: next_check: 2020-12-31 vvv
-# REMOVE (hier nicht mehr) ---	2::inwork 12507,10130 12504,10172 12509,10189
+# REMOVED --- #: next_check: 2020-12-31 vvv
+# REMOVED (hier nicht mehr) ---	2::inwork 12507,10130 12504,10172 12509,10189
 	2::inwork 12464,10153 12504,10172
-#: next_check ^^^
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 ',
@@ -3168,6 +3195,38 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: XXX genaue Lage der Baustelle?
+#: next_check: 2021-01-04
+	q4::inwork; 9298,12765 9303,12718 9313,12662
+',
+         'from' => 1609650000,
+         'id' => 3314,
+         'source_id' => '2147346756',
+         'text' => 'Friedrichstr.: in Höhe Bahnhof Friedrichstr. Gleisbauarbeiten, Fahrbahn Richtung Süden gesperrt, vom 04.01.2021 06:00 Uhr bis 25.01.2021 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1611590400
+       },
+       {
+         'data' => '	q4::inwork; 4894,6509 4875,6552 4786,6717
+',
+         'from' => 1609668000,
+         'id' => 3315,
+         'source_id' => '2147346755',
+         'text' => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 04.01.2021 11:00 Uhr bis 14.10.2021 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1634223600
+       },
+       {
+         'data' => '	q4::inwork 11487,11390 11569,11587
+',
+         'from' => 1609650000,
+         'id' => 3316,
+         'source_id' => '2147346754',
+         'text' => 'Michaelkirchstr.: zwischen Köpenicker Str. und Michaelkirchplatz: Kraneinsatz, Fahrbahn gesperrt, vom 04.01.2021 06:00 Uhr bis 06.01.2021 20:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1609959600
        }
      
 );

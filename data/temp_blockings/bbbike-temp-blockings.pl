@@ -15720,7 +15720,8 @@ EOF
        data  => <<EOF,
 #: tempex: T23:00-T06:00 vvv
 	2::night 21150,11925 21134,11926 21132,11943 21100,11960 20857,12027 20810,12031
-	2::night 20857,12027 20831,11771 20825,11732 20771,11672
+	2::night 20857,12027 20835,11810 20831,11771 20825,11732 20764,11675
+	2::night 20779,11801 20804,11797 20818,11812 20835,11810
 #: tempex ^^^
 EOF
      },
@@ -17357,25 +17358,30 @@ EOF
 	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998
 EOF
      },
-     { from  => $isodate2epoch->("2019-12-25 06:00:00"), # siehe auch anderen Eintrag mit weiteren Sperrungen am 31. und 1.
-       until => $isodate2epoch->("2020-01-02 23:59:59"),
+     { from  => $isodate2epoch->("2020-12-26 06:00:00"), # siehe auch anderen Eintrag mit weiteren Sperrungen am 31. und 1.
+       until => $isodate2epoch->("2021-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
-       recurrence_prewarn_days => 2, # XXX Ausmaß der Sperrung 2020/2021 unklar
-       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vermutlich ab 26.12.2019 bis 02.01.2020',
+       #recurrence_prewarn_days => -1, # XXX Ausmaß der Sperrung 2020/2021 unklar
+       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Ebertstr. zwischen Behrenstr. und Scheidemannstr., ab 26.12.2020 bis 02.01.2021',
        type  => 'gesperrt',
        data  => <<EOF,
 #: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1512/nachricht5886.html
 #: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1612/nachricht6280.html
-	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
-	2::temp 8722,12268 8637,12258 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-	2::temp 8055,12186 8119,12414
-	2::temp 8522,12239 8466,12197
-	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-	2::temp 8546,12279 8391,12389 8354,12416
-	2::temp 8400,12417 8391,12389 8344,12221
+#: source_id: LMS-BR_r_LMS-BR_227405_LMS-BR_72
+#: source_id: LMS-BR_r_LMS-BR_227402_LMS-BR_72
+#: by: https://viz.berlin.de/2020/12/welcome21/
+Str. des 17 Juni ab Yitzhak-Rabin-Str. und Pariser Platz	2::temp 8722,12268 8637,12258 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
+Bremer Weg am Brandenburger Tor	2::temp 8522,12239 8466,12197
+Ahornsteig am Brandenburger Tor	2::temp 8538,12245 8522,12187
+Ebertstr.	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+Str. des 17 Juni/Kleine Querallee	3::temp 8391,12389 8344,12221 8327,12174
+Str. des 17 Juni/Kleine Querallee	3::temp 8327,12174 8344,12221 8391,12389
+Simsonweg	2::temp 8546,12279 8391,12389 8354,12416
+Kleine Querallee	2::temp 8400,12417 8391,12389 8344,12221
+# 2020 hier nicht --- Behrenstr.	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
+# 2020 hier nicht --- Yitzhak-Rabin-Str.	2::temp 8055,12186 8119,12414
+# 2020 hier nicht --- Str. des 17 Juni zwischen Großer Stern und Yitzhak-Rabin-Str.	2::temp 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
 EOF
      },
      { from  => 1262821467, # 2010-01-07 00:44
@@ -25162,8 +25168,8 @@ EOF
      { from  => $isodate2epoch->("2019-12-28 15:00:00"), # 1451473200, # 2015-12-30 12:00 # siehe auch anderen Eintrag mit früheren Sperrungen
        until => $isodate2epoch->("2020-01-02 23:59:59"), # 1451646000, # 2016-01-01 12:00
        periodic => 1,
-       recurrences => [['yearly', days => 28, months => 12]],
-       recurrence_prewarn_days => 2, # XXX Ausmaß der Sperrung 2020/2021 unklar
+       recurrences => [['yearly', days => 28, months => 12, start => "2021-01-01T00:00:00"]], # 2020/2021 keine große Silvesterparty
+       #recurrence_prewarn_days => 2, # XXX Ausmaß der Sperrung 2020/2021 unklar
        text  => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 29.12.2019 bis 02.01.2020',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -29225,7 +29231,7 @@ EOF
 #: source_id: 2147343335 (Zeitraum siehe oben)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-11-14 (mapillary)
+#: last_checked: 2020-12-28 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2021-02-28
 #: XXX_prog: eigentlich q4+::inwork;
@@ -29968,7 +29974,7 @@ EOF
 EOF
      },
      { from  => 1569794400, # 2019-09-30 00:00
-       until => $isodate2epoch->("2020-12-31 23:59:59"), # 1617228000, # 2021-04-01 00:00
+       until => $isodate2epoch->("2021-12-31 23:59:59"), # 1617228000, # 2021-04-01 00:00
        text  => 'Königsteinbrücke: Sperrung der Brücke ab dem 23. Oktober 2019, Brücke wird danach abgerissen und neu gebaut',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -30787,7 +30793,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2020-12-19
+#: last_checked: 2020-12-30
 #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -30976,7 +30982,7 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2020-12-14 (mapillary)
+#: last_checked: 2020-12-30
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2020-11-07
 	q4::inwork 14136,17170 13996,16959
@@ -31063,7 +31069,7 @@ EOF
 #: also_indoor: traffic (H,G) vvv
 #: note: laut rbbtext bis 2021-06-30 vvv
 #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
-#: last_checked: 2020-12-19 vvv
+#: last_checked: 2020-12-27 (mapillary) vvv
 #: next_check: 2021-03-26 vvv
 	q4::inwork; 4515,4760 4214,4595
 #: note: hier nur ein kurzes Stück
@@ -31363,10 +31369,11 @@ EOF
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9022 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9184 (fehlende Umleitung)
 #: XXX bis wann ist der Bahnübergang gesperrt?
 #: osm_watch: way id="868347101" version="2"
 #: priority: #A
-#: last_checked: 2020-10-31
+#: last_checked: 2020-12-28
 #: check_frequency: 90d
 #: next_check: 2021-03-01
 	2::inwork 20627,12162 20624,12133 20620,12108
@@ -31538,7 +31545,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-12-06
+#: last_checked: 2020-12-27
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
 EOF
@@ -31559,7 +31566,9 @@ EOF
        data  => <<EOF,
 #: by: https://www.verkehrslage.de/Berlin/Baustellen/3
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-11-21
+#: also_indoor: traffic (G)
+#: last_checked: 2020-12-27
+#: check_frequency: 21d
 	q4::inwork 12997,6290 13027,6168
 EOF
      },
@@ -31703,10 +31712,10 @@ EOF
 #: XXX hat sich etwas an der Wegführung oder an der Wegbeschaffenheit geändert?
 #: last_checked: 2020-12-23 vvv
 #: check_frequency: 14d vvv
-#: next_check: 2020-12-31 vvv
-# REMOVE (hier nicht mehr) ---	2::inwork 12507,10130 12504,10172 12509,10189
+# REMOVED --- #: next_check: 2020-12-31 vvv
+# REMOVED (hier nicht mehr) ---	2::inwork 12507,10130 12504,10172 12509,10189
 	2::inwork 12464,10153 12504,10172
-#: next_check ^^^
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 EOF
@@ -31762,6 +31771,35 @@ EOF
 #: last_checked: 2020-12-19
 #: check_frequency: 90d
 	2::inwork 18836,3611 18943,3508
+EOF
+     },
+     { from  => 1609650000, # 2021-01-03 06:00
+       until => 1611590400, # 2021-01-25 17:00
+       text  => 'Friedrichstr.: in Höhe Bahnhof Friedrichstr. Gleisbauarbeiten, Fahrbahn Richtung Süden gesperrt, vom 04.01.2021 06:00 Uhr bis 25.01.2021 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346756',
+       data  => <<EOF,
+#: XXX genaue Lage der Baustelle?
+#: next_check: 2021-01-04
+	q4::inwork; 9298,12765 9303,12718 9313,12662
+EOF
+     },
+     { from  => 1609668000, # 2021-01-03 11:00
+       until => 1634223600, # 2021-10-14 17:00
+       text  => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 04.01.2021 11:00 Uhr bis 14.10.2021 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346755',
+       data  => <<EOF,
+	q4::inwork; 4894,6509 4875,6552 4786,6717
+EOF
+     },
+     { from  => 1609650000, # 2021-01-03 06:00
+       until => 1609959600, # 2021-01-06 20:00
+       text  => 'Michaelkirchstr.: zwischen Köpenicker Str. und Michaelkirchplatz: Kraneinsatz, Fahrbahn gesperrt, vom 04.01.2021 06:00 Uhr bis 06.01.2021 20:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346754',
+       data  => <<EOF,
+	q4::inwork 11487,11390 11569,11587
 EOF
      },
     );
