@@ -21722,7 +21722,8 @@ EOF
        source_id => 'http://www.suppeundmucke.de/',
        data  => <<EOF,
 	2::temp 14096,11134 14076,11057 14043,10928 14026,10869
-	2::temp 13886,10939 14026,10869 13896,10851 13856,10864
+	2::temp 13886,10939 14026,10869
+	2::temp 13896,10851 13856,10864
 	2::temp 14011,10812 13896,10851
 	2::temp 13886,10939 13856,10864
 EOF
@@ -24667,7 +24668,7 @@ EOF
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 7, # XXX wird die Fashion Week 2021 überhaupt stattfinden? Bis jetzt steht als Termin 18.-24.01.2021 fest
+       recurrence_prewarn_days => -7, # XXX wird die Fashion Week 2021 überhaupt stattfinden? Bis jetzt steht als Termin 18.-24.01.2021 fest
        text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 13.01.2020-17.01.2020',
        type  => 'handicap',
        source_id => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termin-fuer-januar-2020.html',
@@ -30028,7 +30029,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: KOENIGSTEINBRUECKE-2019
-#: last_checked: 2020-05-01 (mapillary)
+#: last_checked: 2020-12-31 (mapillary)
 #: next_check: 2021-04-01
 	2::inwork 13221,22667 13223,22558 13207,22498 13217,22413 13220,22387
 EOF
@@ -30579,7 +30580,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-12-10
+#: last_checked: 2020-12-31
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30788,12 +30789,12 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2020-05-27 09:00:00"),
-       until => $isodate2epoch->("2021-12-31 17:00:00"), # der ursprüngliche Termin (14.08.2020) kann wohl nicht gehalten; laut Schild bis Ende 2021
+       until => $isodate2epoch->("2021-12-31 17:00:00"), # der ursprüngliche Termin (14.08.2020) kann wohl nicht gehalten werden; laut Schild bis Ende 2021
        text  => 'Gärtnerstr.: Bauarbeiten, zwischen Wühlischstr. und Simplonstr. Einbahnstraße Richtung Süden, zwischen Wühlischstr. und Krossener Str. sowie an der Grünberger Str. Fahrbahn gesperrt, evtl. bis Dezember 2021',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2020-12-30
+#: last_checked: 2020-12-31
 #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -30997,13 +30998,15 @@ EOF
 	q4::inwork 5464,5731 5280,5714
 EOF
      },
-     { from  => 1594232559, # 2020-07-08 20:22
-       until => $isodate2epoch->("2020-07-13 01:30:00"),
-       text  => 'Bödikerstr. und Laskerstr.: wegen SEV Einbahnstraßenregelung, offen Richtung Markgrafendamm, bis 13.7.2020',
+     { from  => undef, # 1594232559, # 2020-07-08 20:22
+       until => undef, # $isodate2epoch->("2020-07-13 01:30:00"),
+       # früher öfters Einbahnstraßenregelung wegen SEV
+       text  => 'Bödikerstr. und Laskerstr.: Einbahnstraßenregelung, offen Richtung Markgrafendamm',
        type  => 'handicap',
        data  => <<EOF,
-#: by: https://sbahn.berlin/fahren/fahrplanaenderungen/detail/12403-montage-bahnsteigdach-in-karlshorst-aufbau-einer-laermschutzwand-gleisarbeiten-in-rummelsburg/#con-14153
-	q4::temp; 14675,10693 14541,10735 14490,10610
+# REMOVED --- #: by: https://sbahn.berlin/fahren/fahrplanaenderungen/detail/12403-montage-bahnsteigdach-in-karlshorst-aufbau-einer-laermschutzwand-gleisarbeiten-in-rummelsburg/#con-14153
+#: last_checked: 2021-01-02
+	q4::inwork; 14490,10610 14541,10735 14675,10693
 EOF
      },
      { from  => 1594474932, # 2020-07-11 15:42
