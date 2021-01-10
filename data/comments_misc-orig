@@ -885,6 +885,9 @@ Nikolaus-Ehlen-Weg: Privatstraﬂe	CS 17308,-36 17215,94 17176,90
 Gaslaternen-Freilichtmuseum Berlin	CS 5895,11692 5835,11768 5858,11863 5900,11913
 #: ignore ^^^
 #: ignore vvv
+#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1037477.php
+#: XXX Wochenmarkt wird endg¸ltig eingestellt
+#: next_check: 2021-01-28
 Suarezstr.: Wochenmarkt Do 9.00-15.00, aber anscheinend nur auf dem B¸rgersteig	CS 2921,10928 2845,10840
 Mierendorffplatz: Wochenmarkt Mi+Sa, 8.00-13.00, zwar auf der Fahrbahn, aber der Radweg scheint weiterhin befahrbar zu sein	CS 3534,13098 3645,13206
 Fehrbelliner Platz: Wochenmarkt Di+Do, 11.00-16.00, sowie Kunst- und Trˆdelmarkt Sa+So 10.00-16.00, nur auf der Parkplatzfl‰che	CS 4339,9224
@@ -1373,7 +1376,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraﬂe Invalidenstraﬂe)
 #: XXX wann wird die Straﬂe ausgeschildert?
-#: last_checked: 2020-11-14
+#: last_checked: 2020-12-04 (mapillary)
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13390
 # 
@@ -1479,6 +1482,11 @@ ausgeschildert "Quartiersweg 1-4"	CP2; 7498,8062 7516,8063
 zum Terminal A	CP2; 2853,16293 2812,16348
 # 
 am Anfang als Hauptweg 15 (blau-weiﬂe Markierung) ausgeschildert	CP2; 19924,4252 19901,4334
+# 
+#: XXX bleibt diese Ausschilderung? Immerhin heiﬂt der Platz nun offiziell "Scharounplatz"
+#: last_checked: 2021-01-09
+#: check_frequency: 60d
+ausgeschildert als "Scharounstr."	CP2; 7943,11431 8083,11381
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straﬂen)

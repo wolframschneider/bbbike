@@ -105,7 +105,7 @@ Pannierstr.: Asphalt	Q0 12240,8964 12202,8895
 # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="65707583" version="12"
-#: last_checked: 2020-12-19
+#: last_checked: 2021-01-09
 #: check_frequency: 60d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -141,7 +141,7 @@ Priesterweg: mäßiges Kopfsteinpflaster	Q2 7227,7352 7229,7188 7222,6458 7222,643
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7802 (Antrag)
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/cdu-fordert-radwegsanierung-am-s-bahnhof-pristerweg_a278227
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/naturschutzbund-kritisiert-routenfuehrung-der-geplanten-radschnellverbindungen-durch-gruenanlagen_a288190 (naher Hans-Baluschek-Park erwähnt)
-#: osm_watch: way id="102486250" version="11"
+#: osm_watch: way id="102486250" version="12"
 #: last_checked: 2020-12-19
 #: check_frequency: 120d
 Priesterweg: mäßiges bis schlechtes Kopfsteinpflaster	Q2- 7227,6080 7227,6058 7223,5890
@@ -608,7 +608,7 @@ Rönnestr.: Asphalt	Q0 2698,10645 2774,10663
 #: by: https://api.fixmyberlin.de/api/plannings/218 (Asphaltierung)
 #: by: http://www.infravelo.de/projekt/roennestrasse/ (1. Quartal 2022 - 1. Quartal 2024)
 #: osm_watch: way id="4480580" version="12"
-#: osm_watch: way id="4436949" version="10"
+#: osm_watch: way id="4436949" version="11"
 #: last_checked: 2020-09-27
 #: check_frequency: 360d
 #: next_check: 2024-03-31
@@ -754,7 +754,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2020-11-29 (mapillary)
+#: last_checked: 2021-01-09
 #: check_frequency: 90d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -872,7 +872,8 @@ Ahornsteig: kleinteiliges Pflaster und wassergebundene Decke	Q1 8014,11753 8026,
 Tiergarten: wassergebundene Decke	Q1 8167,11865 8132,11910
 Tiergarten: wassergebundene Decke	Q1 8095,11919 8104,11984 8091,11992 8091,12011 8091,12023 8099,12022 8102,12043 8099,12058 8107,12068 8122,12147
 Tiergarten: Parkweg	Q1 8005,11627 8014,11753 8016,11770 8020,11937 8022,12016
-Tiergarten: Parkweg	Q1 8034,12093 8057,12065 8052,12033 8022,12016 7999,12040 8004,12074 8034,12093 8049,12140 8055,12186
+Tiergarten: Parkweg	Q1 8034,12093 8057,12065 8052,12033 8022,12016 7999,12040 8004,12074 8034,12093 8049,12140
+Tiergarten: Mosaikpflaster	Q1 8049,12140 8055,12186
 Tiergarten: Asphalt	Q0 8214,12205 8215,12156
 Tiergarten: Parkweg	Q1 8215,12156 8221,11885 8221,11876 8210,11775 8203,11686
 Tiergarten: Parkweg	Q1 7658,11947 7634,11920 7559,11888 7449,11883 7240,11907 7200,11881 7182,11870 7173,11864 7058,11809 6980,11790 6778,11742 6540,11754
@@ -929,7 +930,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist.")
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2020-12-27
+#: last_checked: 2021-01-06
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -3495,8 +3496,9 @@ Münsterberger Weg: Kopfsteinpflaster	Q2- 23558,11531 23526,11541 23430,11576 232
 #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/wasserbetriebe-stoppen-bau-eines-radweges-im-muensterberger-weg_a280501 (Bezirksamt möchte eine Asphaltierung noch 2020)
 #: by: https://adfc-berlin.de/images/STG_Wuhletal/P0820.pdf (Erwähnung (Stand August 2020))
 #: by: http://www.infravelo.de/projekt/muensterberger-weg/ (4. Quartal 2020 - 2. Quartal 2022)
+#: by: https://www.berliner-woche.de/marzahn-hellersdorf/c-verkehr/in-marzahn-hellersdorf-werden-2021-acht-groessere-radwegprojekte-umgesetzt_a297401 (Realisierung 2021)
 #: osm_watch: way id="24205376" version="9"
-#: next_check: 2022-06-30
+#: next_check: 2021-12-31
 Münsterberger Weg: unbefestigt	Q2 24172,11320 24029,11363
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -3569,7 +3571,8 @@ Bopparder Str.: mäßiger Beton	Q1- 18790,9018 18881,9002
 Sinziger Str.: Beton	Q1 18886,9031 18978,9014
 Lahnsteiner Str.: Beton	Q1 18877,8973 18968,8959
 #: XXX wird die Straße hier ausgebaut und asphaltiert?
-#: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7124
+#: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7124 (Anfrage von Juli 2017)
+#: by: https://politik-bei-uns.de/file/597985b41ae6a07d5fb74916 (Antwort: soll teilweise mit einem Asphaltstreifen befestigt werden, erster von drei Bauabschnitten 2018)
 #: osm_watch: way id="47159365" version="14"
 #: last_checked: 2020-10-24
 #: check_frequency: 180d
@@ -15054,6 +15057,7 @@ Lemkestr.: Kopfsteinpflaster	Q2+; 25801,13101 25872,13191 25961,13304
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1027826.php
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9191 (Frage)
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/die-umstrittene-sanierung-der-lemkestrasse-hat-begonnen_a296981
+#: by: https://www.lemkestrasse-feldsteinpflaster.de/
 #: also_indoor: search Lemkestraße
 #: last_checked: 2020-10-03
 #: check_frequency: 150d
@@ -26896,7 +26900,7 @@ Greifenhagener Str.: Asphalt	Q0 11123,15851 11150,15908
 Gethsemanestr.: Asphalt	Q0 11158,15739 11191,15810 11123,15851
 Zehdenicker Str.: Kopfsteinpflaster	Q2 10599,13775 10480,13871
 #: confirmed_by: srt
-Bissingzeile: Kopfsteinpflaster	Q2 8119,10797 8070,10680
+Bissingzeile: Kopfsteinpflaster	Q2- 8119,10797 8070,10680
 Reichpietschufer: Kleinpflaster	Q2 7595,11086 7575,11076
 Herkulesufer: Kleinpflaster	Q2 7575,11076 7252,11188 7218,11181 7140,11156 7142,11145 6920,11064 6882,11061
 #: corrected_by: srt (Q0 -> Q1+)
@@ -28187,6 +28191,7 @@ Gehrenseestr.: guter Asphalt	Q0 18494,16750 18324,16625
 #: by: https://www.berlin.de/bebauungsplan-lichtenberg/beteiligung/bebauungsplaene/bebauungsplan.864972.php
 #: by: https://www.berlin.de/bebauungsplan-lichtenberg/beteiligung/bebauungsplaene/planzeichnung-11-157.pdf
 #: by: https://www.berliner-woche.de/alt-hohenschoenhausen/c-bauen/anwohner-sehen-noch-einige-ungeklaerte-probleme_a290515
+#: by: https://www.berliner-woche.de/alt-hohenschoenhausen/c-verkehr/die-erschliessung-sicherstellen_a297347
 #: next_check: 2021-06-01
 Detlevstr.: teilweise holpriger Asphalt	Q2 18482,16774 18494,16750 18439,16483 18412,16334 18406,16295
 Lukasstr.: Asphalt	Q0 18316,16636 18324,16625 18384,16550 18439,16483
@@ -29520,4 +29525,5 @@ Kreuzungsbereich asphaltiert	Q0 6108,2326
 #: by: mapillary
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 4248,18066
 Einmündungsbereich mit Kopfsteinpflaster	Q2 15162,11458
+Kreuzungsbereich mit Kleinsteinpflaster	Q1 8027,11000
 #: ignore ^^^

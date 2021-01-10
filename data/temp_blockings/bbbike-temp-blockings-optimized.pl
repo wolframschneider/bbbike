@@ -517,7 +517,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-12-06
+#: last_checked: 2021-01-04
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -706,40 +706,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1512/nachricht5886.html
-#: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1612/nachricht6280.html
-#: source_id: LMS-BR_r_LMS-BR_227405_LMS-BR_72
-#: source_id: LMS-BR_r_LMS-BR_227402_LMS-BR_72
-#: by: https://viz.berlin.de/2020/12/welcome21/
-Str. des 17 Juni ab Yitzhak-Rabin-Str. und Pariser Platz	2::temp 8722,12268 8637,12258 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
-Bremer Weg am Brandenburger Tor	2::temp 8522,12239 8466,12197
-Ahornsteig am Brandenburger Tor	2::temp 8538,12245 8522,12187
-Ebertstr.	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-Str. des 17 Juni/Kleine Querallee	3::temp 8391,12389 8344,12221 8327,12174
-Str. des 17 Juni/Kleine Querallee	3::temp 8327,12174 8344,12221 8391,12389
-Simsonweg	2::temp 8546,12279 8391,12389 8354,12416
-Kleine Querallee	2::temp 8400,12417 8391,12389 8344,12221
-# 2020 hier nicht --- Behrenstr.	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
-# 2020 hier nicht --- Yitzhak-Rabin-Str.	2::temp 8055,12186 8119,12414
-# 2020 hier nicht --- Str. des 17 Juni zwischen Großer Stern und Yitzhak-Rabin-Str.	2::temp 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-',
-         'from' => 1608958800,
-         'id' => 2010,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              26,
-                              'months',
-                              12
-                            ]
-                          ],
-         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Ebertstr. zwischen Behrenstr. und Scheidemannstr., ab 26.12.2020 bis 02.01.2021',
-         'type' => 'gesperrt',
-         'until' => 1609628399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2251,7 +2218,19 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: XXX laut rbbtext "Gesamtbaumaßnahme ... bis August 2023"
+#: source_id: 2147346762
+# REMOVED --- #: add_fragezeichen: Wann ist die Sperrung beendet? --- #: next_check: 2020-02-29
+	2::inwork 14338,22885 14276,22914
+',
+         'from' => 1609855200,
+         'id' => 3043,
+         'source_id' => '2147343394',
+         'text' => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 6. Januar 2021 bis 31. Dezember 2021',
+         'type' => 'gesperrt',
+         'until' => 1640966400
+       },
        undef,
        undef,
        {
@@ -2538,7 +2517,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.901034.php
+# REMOVED --- #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/bahnuebergang-gesperrt_a255484
+#: source_id: 2147346766
+# REMOVED (hier nicht) ---	2::inwork 25191,12343 25149,12266
+	2::inwork 25149,12266 25109,12196 25072,12107
+',
+         'from' => 1610035200,
+         'id' => 3160,
+         'source_id' => 'LMS-BR_r_LMS-BR_182020_LMS-BR_72',
+         'text' => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, Radfahrer und Fußgänger sind auch betroffen, 8.1.2021 bis 2.2.2021',
+         'type' => 'gesperrt',
+         'until' => 1612281600
+       },
        undef,
        undef,
        undef,
@@ -2577,7 +2569,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
 # REMOVED (alt) --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php --- #: by: fritz --- #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
+#: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
 #: XXX bis wann ist der Bahnübergang gesperrt?
+#: also_indoor: search Brebacher_Weg Bahnübergang
 #: osm_watch: way id="9829824" version="19"
 #: priority: #A
 #: last_checked: 2020-10-03
@@ -2622,7 +2616,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: MUENSTERBERGERWEG-2019
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
 #: last_checked: 2020-10-31
-#: check_frequency: 60d
+#: check_frequency: 120d
+#: next_check: 2021-12-31
 	2::inwork 24029,11363 24172,11320
 ',
          'from' => undef,
@@ -2708,7 +2703,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-12-31
+#: last_checked: 2021-01-06
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2763,7 +2758,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2020-12-31
+#: last_checked: 2021-01-03
 #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2934,6 +2929,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: AKELEIWEG-2021
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.1032696.php (2. Bauabschnitt)
+#: by: https://www.berliner-woche.de/johannisthal/c-bauen/weitere-arbeiten-im-akeleiweg_a297056
 	q4::inwork 17603,3240 17631,3200
 	q3::inwork 17631,3200 17894,2783
 ',
@@ -2951,8 +2947,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: SIGISMUND-2020
 #: XXX wann sind die Bauarbeiten fertig? vvv
 #: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
-#: last_checked: 2020-11-24 vvv
-	q3::inwork 8031,11249 7934,11275 7897,11287
+#: last_checked: 2021-01-09 vvv
+#: note: hier von Osten aus legaler gemeinsamer Rad- und Gehweg auf dem Bürgersteig, mit kurzer asphaltierter Rampe, von Westen aus verboten für Fahrzeuge aller Art
+	q2::inwork 8031,11249 7934,11275 7897,11287
 	q4::inwork 7934,11275 7965,11380
 #: last_checked ^^^
 #: XXX ^^^
@@ -2971,7 +2968,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: last_checked: 2020-11-14
+#: last_checked: 2021-01-01 (architektur-urbanistik) (vermutlich)
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 ',
@@ -2985,7 +2982,10 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9022 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9184 (fehlende Umleitung)
+#: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
+#: by: https://twitter.com/SBahnBerlin/status/1347543580529758210 (S-Bahn fährt nicht bis 25.1.2021)
 #: XXX bis wann ist der Bahnübergang gesperrt?
+#: also_indoor: search Oberfeldstraße Bahnübergang
 #: osm_watch: way id="868347101" version="2"
 #: priority: #A
 #: last_checked: 2020-12-28
@@ -3066,23 +3066,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1611936000
        },
-       {
-         'data' => '#: source_id: 2147346557 (Leitungsarbeiten in der General-Pape-Str.) (mittlerweile inaktiv)
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-12-06
-# REMOVED --- #: next_check: 2020-11-30
-	2::inwork 8066,7843 7955,7840
-',
-         'from' => undef,
-         'id' => 3296,
-         'text' => 'General-Pape-Str. - Wintgensstr.: Bauarbeiten, Fahrbahn und Gehweg komplett gesperrt, Ende der Bauarbeiten unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-12-27
+#: last_checked: 2021-01-09
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
 ',
@@ -3187,9 +3175,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        {
-         'data' => '#: XXX genaue Lage der Baustelle?
-#: next_check: 2021-01-04
-	q4::inwork; 9298,12765 9303,12718 9313,12662
+         'data' => '# REMOVED (genau so) --- #: XXX genaue Lage der Baustelle? --- #: last_checked: 2021-01-09 --- #: next_check: 2021-01-04
+	q4::inwork; 9298,12765 9303,12718 9313,12662 9314,12652
 ',
          'from' => 1609650000,
          'id' => 3314,
@@ -3208,15 +3195,26 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1634223600
        },
+       undef,
        {
-         'data' => '	q4::inwork 11487,11390 11569,11587
+         'data' => '	q4::inwork; 18680,5413 18955,5320 19037,5316
 ',
-         'from' => 1609650000,
-         'id' => 3316,
-         'source_id' => '2147346754',
-         'text' => 'Michaelkirchstr.: zwischen Köpenicker Str. und Michaelkirchplatz: Kraneinsatz, Fahrbahn gesperrt, vom 04.01.2021 06:00 Uhr bis 06.01.2021 20:00 Uhr ',
+         'from' => 1610265600,
+         'id' => 3317,
+         'source_id' => '2147346773',
+         'text' => 'Schnellerstr.: Bauarbeiten zwischen Rudower Str. und Köllnische Str., Fahrbahn Richtung Köpenick gesperrt, vom 11.01.2021 09:00 Uhr bis 22.01.2021 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1609959600
+         'until' => 1611331200
+       },
+       {
+         'data' => '	2::inwork 9640,29628 9996,29712
+',
+         'from' => 1610233200,
+         'id' => 3318,
+         'source_id' => 'LS/721-E/21/005',
+         'text' => 'L30: Sperrung der Unterführung unter der A10, evtl. sind auch Radfahrer und Fußgänger betroffen, vom 11.01.2021 bis 05.02.2021',
+         'type' => 'gesperrt',
+         'until' => 1612566000
        }
      
 );

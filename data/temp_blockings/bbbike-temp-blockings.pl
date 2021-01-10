@@ -16266,7 +16266,7 @@ EOF
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2020-12-06
+#: last_checked: 2021-01-04
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -28485,12 +28485,14 @@ EOF
 	q4::inwork; 16314,15223 16119,15302
 EOF
      },
-     { from  => $isodate2epoch->("2019-12-03 06:00:00"), # 1540930270, # 2018-10-30 21:11
-       until => $isodate2epoch->("2019-12-19 15:00:00"), # undef, # 1543014000, # 2018-11-24 00:00
-       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 4. Dezember 2019 bis 19. Dezember 2019 15 Uhr',
+     { from  => $isodate2epoch->("2021-01-05 15:00:00"), # 1540930270, # 2018-10-30 21:11
+       until => $isodate2epoch->("2021-12-31 17:00:00"), # undef, # 1543014000, # 2018-11-24 00:00
+       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 6. Januar 2021 bis 31. Dezember 2021',
        type  => 'gesperrt',
-       source_id => '2147343394', # hier bis Ende Dezember 2019; laut fritz bis 2019-12-20
+       source_id => '2147343394', # hier bis Ende Dezember 2019; laut fritz bis 2019-12-20; mittlerweile inaktiv
        data  => <<EOF,
+#: XXX laut rbbtext "Gesamtbaumaßnahme ... bis August 2023"
+#: source_id: 2147346762
 # REMOVED --- #: add_fragezeichen: Wann ist die Sperrung beendet? --- #: next_check: 2020-02-29
 	2::inwork 14338,22885 14276,22914
 EOF
@@ -29853,15 +29855,17 @@ EOF
 	2::inwork 13172,11651 13202,11666
 EOF
      },
-     { from  => $isodate2epoch->("2020-03-19 12:00:00"), # 1 Tag Vorlauf --- 1568056573, # 2019-09-09 21:16
-       until => $isodate2epoch->("2020-04-20 18:00:00"), # $isodate2epoch->("2019-09-20 18:00:00"),
-       text  => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, Radfahrer und Fußgänger sind auch betroffen, 20.03.2020 bis 20.04.2020',
+     { from  => $isodate2epoch->("2021-01-07 17:00:00"), # 1 Tag Vorlauf --- 1568056573, # 2019-09-09 21:16
+       until => $isodate2epoch->("2021-02-02 17:00:00"), # $isodate2epoch->("2019-09-20 18:00:00"),
+       text  => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, Radfahrer und Fußgänger sind auch betroffen, 8.1.2021 bis 2.2.2021',
        type  => 'gesperrt',
        source_id => 'LMS-BR_r_LMS-BR_182020_LMS-BR_72', # alt
        data  => <<EOF,
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.901034.php
-#: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/bahnuebergang-gesperrt_a255484
-	2::inwork 25191,12343 25149,12266 25109,12196
+# REMOVED --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.901034.php
+# REMOVED --- #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/bahnuebergang-gesperrt_a255484
+#: source_id: 2147346766
+# REMOVED (hier nicht) ---	2::inwork 25191,12343 25149,12266
+	2::inwork 25149,12266 25109,12196 25072,12107
 EOF
      },
      { from  => 1568664922, # ist nicht passiert --- 1568498400, # 2019-09-15 00:00
@@ -29992,7 +29996,9 @@ EOF
        data  => <<EOF,
 # REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
 # REMOVED (alt) --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php --- #: by: fritz --- #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
+#: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
 #: XXX bis wann ist der Bahnübergang gesperrt?
+#: also_indoor: search Brebacher_Weg Bahnübergang
 #: osm_watch: way id="9829824" version="19"
 #: priority: #A
 #: last_checked: 2020-10-03
@@ -30207,7 +30213,8 @@ EOF
 #: next_check_id: MUENSTERBERGERWEG-2019
 #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
 #: last_checked: 2020-10-31
-#: check_frequency: 60d
+#: check_frequency: 120d
+#: next_check: 2021-12-31
 	2::inwork 24029,11363 24172,11320
 EOF
      },
@@ -30580,7 +30587,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2020-12-31
+#: last_checked: 2021-01-06
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30794,7 +30801,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2020-12-31
+#: last_checked: 2021-01-03
 #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31236,6 +31243,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: AKELEIWEG-2021
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.1032696.php (2. Bauabschnitt)
+#: by: https://www.berliner-woche.de/johannisthal/c-bauen/weitere-arbeiten-im-akeleiweg_a297056
 	q4::inwork 17603,3240 17631,3200
 	q3::inwork 17631,3200 17894,2783
 EOF
@@ -31301,8 +31309,9 @@ EOF
 #: next_check_id: SIGISMUND-2020
 #: XXX wann sind die Bauarbeiten fertig? vvv
 #: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
-#: last_checked: 2020-11-24 vvv
-	q3::inwork 8031,11249 7934,11275 7897,11287
+#: last_checked: 2021-01-09 vvv
+#: note: hier von Osten aus legaler gemeinsamer Rad- und Gehweg auf dem Bürgersteig, mit kurzer asphaltierter Rampe, von Westen aus verboten für Fahrzeuge aller Art
+	q2::inwork 8031,11249 7934,11275 7897,11287
 	q4::inwork 7934,11275 7965,11380
 #: last_checked ^^^
 #: XXX ^^^
@@ -31360,7 +31369,7 @@ EOF
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: last_checked: 2020-11-14
+#: last_checked: 2021-01-01 (architektur-urbanistik) (vermutlich)
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 EOF
@@ -31373,7 +31382,10 @@ EOF
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9022 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9184 (fehlende Umleitung)
+#: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
+#: by: https://twitter.com/SBahnBerlin/status/1347543580529758210 (S-Bahn fährt nicht bis 25.1.2021)
 #: XXX bis wann ist der Bahnübergang gesperrt?
+#: also_indoor: search Oberfeldstraße Bahnübergang
 #: osm_watch: way id="868347101" version="2"
 #: priority: #A
 #: last_checked: 2020-12-28
@@ -31530,13 +31542,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1610195611, # undef, # XXX
        text  => 'General-Pape-Str. - Wintgensstr.: Bauarbeiten, Fahrbahn und Gehweg komplett gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: source_id: 2147346557 (Leitungsarbeiten in der General-Pape-Str.) (mittlerweile inaktiv)
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-12-06
+# REMOVED --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+# REMOVED --- #: last_checked: 2021-01-09
 # REMOVED --- #: next_check: 2020-11-30
 	2::inwork 8066,7843 7955,7840
 EOF
@@ -31548,7 +31560,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-12-27
+#: last_checked: 2021-01-09
 #: check_frequency: 14d
 	q4::inwork 12162,8053 12147,8117
 EOF
@@ -31782,9 +31794,8 @@ EOF
        type  => 'handicap',
        source_id => '2147346756',
        data  => <<EOF,
-#: XXX genaue Lage der Baustelle?
-#: next_check: 2021-01-04
-	q4::inwork; 9298,12765 9303,12718 9313,12662
+# REMOVED (genau so) --- #: XXX genaue Lage der Baustelle? --- #: last_checked: 2021-01-09 --- #: next_check: 2021-01-04
+	q4::inwork; 9298,12765 9303,12718 9313,12662 9314,12652
 EOF
      },
      { from  => 1609668000, # 2021-01-03 11:00
@@ -31803,6 +31814,24 @@ EOF
        source_id => '2147346754',
        data  => <<EOF,
 	q4::inwork 11487,11390 11569,11587
+EOF
+     },
+     { from  => 1610265600, # 2021-01-10 09:00
+       until => 1611331200, # 2021-01-22 17:00
+       text  => 'Schnellerstr.: Bauarbeiten zwischen Rudower Str. und Köllnische Str., Fahrbahn Richtung Köpenick gesperrt, vom 11.01.2021 09:00 Uhr bis 22.01.2021 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346773',
+       data  => <<EOF,
+	q4::inwork; 18680,5413 18955,5320 19037,5316
+EOF
+     },
+     { from  => 1610233200, # 2021-01-10 00:00
+       until => 1612566000, # 2021-02-06 00:00
+       text  => 'L30: Sperrung der Unterführung unter der A10, evtl. sind auch Radfahrer und Fußgänger betroffen, vom 11.01.2021 bis 05.02.2021',
+       type  => 'gesperrt',
+       source_id => 'LS/721-E/21/005',
+       data  => <<EOF,
+	2::inwork 9640,29628 9996,29712
 EOF
      },
     );
