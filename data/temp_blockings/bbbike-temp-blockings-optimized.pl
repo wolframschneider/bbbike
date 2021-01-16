@@ -2156,7 +2156,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-12-15
+#: last_checked: 2021-01-14
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2401,10 +2401,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: XXX bis wann gehen die Bauarbeiten? Bis Anfang Juli 2020?
 #: XXX hier fehlt noch die letzte Asphaltdeckschicht
 #: also_indoor: traffic
-#: osm_watch: way id="156066225" version="17"
+#: osm_watch: way id="156066225" version="19"
 #: last_checked: 2020-11-15 vvv
 #: check_frequency: 45d vvv
-#: next_check: 2021-07-01 vvv
+#: next_check: 2021-01-13 vvv
 	q3::inwork 19164,2001 19181,1996 19266,1968 19564,1871
 	q2::inwork 19055,2037 19164,2001
 	q2::inwork 19164,2001 19194,2157
@@ -2757,8 +2757,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2021-01-03
+         'data' => '#: next_check_id: GAERTNER-2021
+#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
+#: last_checked: 2021-01-14
 #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2968,7 +2969,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: last_checked: 2021-01-01 (architektur-urbanistik) (vermutlich)
+#: last_checked: 2021-01-09 (daf)
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 ',
@@ -2984,6 +2985,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9184 (fehlende Umleitung)
 #: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
 #: by: https://twitter.com/SBahnBerlin/status/1347543580529758210 (S-Bahn fährt nicht bis 25.1.2021)
+#: by: https://abendblatt-berlin.de/2021/01/13/mit-dem-bus-statt-mit-der-bahn-durch-den-berliner-osten/
 #: XXX bis wann ist der Bahnübergang gesperrt?
 #: also_indoor: search Oberfeldstraße Bahnübergang
 #: osm_watch: way id="868347101" version="2"
@@ -3215,6 +3217,65 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'L30: Sperrung der Unterführung unter der A10, evtl. sind auch Radfahrer und Fußgänger betroffen, vom 11.01.2021 bis 05.02.2021',
          'type' => 'gesperrt',
          'until' => 1612566000
+       },
+       {
+         'data' => '#: next_check_id: PARKSTADTKARLSHORST-2021
+#: last_checked: 2021-01-11
+	q4::inwork 17794,8429 17774,8342
+',
+         'from' => undef,
+         'id' => 3319,
+         'text' => 'Trautenauer Str.: Fahrbahn wegen Bauarbeiten am Projekt "Parkstadt Karlshorst" gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: XXX wann sind die Bauarbeiten beendet?
+#: also_indoor: traffic (G)
+#: last_checked: 2021-01-10 (daf)
+#: check_frequency: 90d
+	q4::inwork; 6033,10403 6133,10679
+',
+         'from' => undef,
+         'id' => 3320,
+         'source_id' => 'https://www.deutsches-architekturforum.de/thread/12678-umbau-des-kadewe/?postID=678680#post678680',
+         'text' => 'Passauer Str.: Einbahnstraßenregelung, gesperrt Richtung Tauentzienstr., Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: BOHNSDORFERKREISEL-2017
+#: source_id: 2147346807 (bis 12.4.2021)
+	q3::inwork 22162,1067 22092,999 22034,1006 21977,988
+	q3::inwork 22092,999 22120,886
+',
+         'from' => 1610838000,
+         'id' => 3321,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1039050.php',
+         'text' => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, vom 18.1.2021 bis 12.4.2021',
+         'type' => 'handicap',
+         'until' => 1618264800
+       },
+       {
+         'data' => '#: osm_watch: way id="683770241" version="6"
+	q4::inwork 19564,1871 19743,1804
+',
+         'from' => 1610431200,
+         'id' => 3322,
+         'source_id' => '2147346788',
+         'text' => 'Rudower Str.: zwischen Köpenicker Str. und Lehmfeldsteig wegen Bauarbeiten gesperrt, vom 13.01.2021 07:00 Uhr bis 12.05.2021 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1620831600
+       },
+       {
+         'data' => '	q4::inwork; 11991,14060 12017,14098 12077,14186
+',
+         'from' => 1610650800,
+         'id' => 3323,
+         'source_id' => '2147346791',
+         'text' => 'Greifswalder Str.: Fahrbahn stadtauswärts zwischen Käthe-Niederkirchner-Str. und Hufelandstr. wegen Kraneinsatz gesperrt, vom 15.01.2021 20:00 Uhr bis 18.01.2021 04:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1610938800
        }
      
 );

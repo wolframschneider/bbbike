@@ -3,7 +3,7 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
-(Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q4::inwork 12926,11224 12848,11093
+(Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q3::inwork 12926,11224 12848,11093
 Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 Müncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
 (Notweg Bahnübergang Bahnhofstr.): Fußgänger, für Radfahrer frei	q3 10231,-2159 10215,-2170 10209,-2171 10198,-2143 10096,-2137
@@ -235,7 +235,10 @@ Charlottenstr.: Fußgängerzone	q1 -3227,14260 -3293,14304 -3338,14333 -3397,14370
 Moritzstr.: Fußgängerzone	q1 -3275,14407 -3350,14446
 Mauerstr. (Spandau): Fußgängerzone	q1 -3316,14169 -3409,14241
 Havelstr.: Fußgängerzone	q1 -3150,14631 -3122,14557 -3107,14535 -3054,14498
-Eichgestell: bei schönem Wetter viele Fußgänger	q1 19052,6823 19407,6660 19587,6584 19751,6514 19988,6409 19995,6406 20081,6368 20106,6357 20199,6318 20293,6278
+Eichgestell: bei schönem Wetter viele Fußgänger	q1 18186,7200 18944,6870 19052,6823 19407,6660 19587,6584 19751,6514 19988,6409 19995,6406 20081,6368 20106,6357 20199,6318 20293,6278
+(Parallelweg am Eichgestell): bei schönem Wetter viele Fußgänger	q1 18134,7173 18908,6834
+(Parallelweg am Eichgestell - Eichgestell): bei schönem Wetter viele Fußgänger	q1 18908,6834 18944,6870
+(Parallelweg am Eichgestell - Wasserwerk Wuhlheide): bei schönem Wetter viele Fußgänger	q1 18944,6870 19045,6959 19080,6986
 Wuhlheide: bei schönem Wetter viele Fußgänger und Kinder	q2 20199,6318 20262,6493 20225,6631 20269,6735 20313,6841
 Wuhlheide/R1: Fußgänger	q1 20453,6211 20293,6278
 Wuhlheide/FEZ: einige Fußgänger	q1 20225,6631 20169,6636 20118,6617 20060,6575 19995,6406
@@ -624,7 +627,7 @@ Engelwiese: für Radfahrer nicht freigegeben, ggfs. schieben	q3 14974,10018 15050
 Dora-Benjamin-Park: Bordstein bei der Einfahrt	q1 14705,10149 14621,10062
 Dora-Benjamin-Park: Bordstein bei der Einfahrt	q1 14747,10108 14702,10020
 (Dora-Benjamin-Park - Spreeufer): Fußgänger	q1 14702,10020 14690,9993
-(Hoher Wallgraben - Hegemeisterweg): eng, Fußgänger	q2 18099,8048 18119,7996 18287,7815
+(Hoher Wallgraben - Hegemeisterweg): eng, Fußgänger	q2 18101,8044 18119,7996 18287,7815
 Kleine Hege: sehr eng	q3 22334,4383 22382,4361
 Schmaler Weg: eng, Fußgängerweg nicht für Radfahrer freigegeben, ggfs. schieben	q3 25571,5829 25442,5813 25294,5761
 (Bölschestr. - Scharnweberstr.): eng, Fußgängerweg nicht für Radfahrer freigegeben, ggfs. schieben	q3 25524,5011 25729,5002
@@ -2060,6 +2063,9 @@ Schloßplatz: Fußgänger	q3 10175,12435 10271,12503
 Am Kraatzgraben: einige Fußgänger	q1 16899,10020 16835,10052
 Betriebsbahnhof Rummelsburg - Am Kraatzgraben: einige Fußgänger	q1 16894,10003 16899,10020 16912,10054
 (Nördliche Landebahn - Eingang Peter-Strasser-Weg): schmal	q2 9362,7616 9281,7651
+(Hoher Wallgraben - Lehndorffstr.): einige Fußgänger, an der Lehndorffstr. eine kurze Rampe, Bordstein an der Lehndorffstr.	q2 18101,8044 18186,8081 18276,8136
+Mercedes-Platz: Fußgängerzone	q4 13150,11101 13063,11147 12984,11194
+Mercedes-Platz: Fußgängerzone	q4 12990,11006 13063,11147
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2971,7 +2977,6 @@ Walsroder Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 63
 Hünensteig: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 6419,5048 6387,5057
 Hünensteig: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 6387,5057 6395,5154
 Paul-Lincke-Ufer: Uferweg ist als Alternative vorhanden. Allerdings kann man aus der Lausitzer Str. nicht in den Uferweg einbiegen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 12116,9825 11946,9913 11735,10022 11512,10105
-Stallschreiberstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 10482,11398 10615,11240 10674,11170
 Neue Schönhauser Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 10527,13257 10423,13215 10310,13227
 Kirchhofstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 13188,7590 13117,7471 13029,7353
 Niemannstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 14254,11377 14211,11229
@@ -3007,7 +3012,6 @@ Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8339,65
 Danneckerstr.: temporäre "Klimastraße", für Radfahrer gesperrt: gesperrt, ggfs. schieben	q4::igndisp 13886,10939 13856,10864
 Rollbergstr.: Bauarbeiten, Zufahrt von der Karl-Marx-Str. gesperrt: gesperrt, ggfs. schieben	q4:inwork::igndisp 12714,8249 12545,8209
 Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt: gesperrt, ggfs. schieben	q4:inwork::igndisp 9076,12054 9064,12156
-Am Köllnischen Park: Bauarbeiten, Fahrbahn gesperrt: gesperrt, ggfs. schieben	q3:inwork::igndisp 11197,11882 11155,11750
 Kreuzung Sewanstr./Am Tierpark	q1::igndisp; 18631,10167 18647,10172
 Am Tierpark, linker Gehweg	q1::igndisp; 18647,10172 18715,10003
 Treskowallee, linker Gehweg	q1::igndisp; 18715,10003 18748,9922

@@ -24668,7 +24668,7 @@ EOF
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => -7, # XXX wird die Fashion Week 2021 überhaupt stattfinden? Bis jetzt steht als Termin 18.-24.01.2021 fest
+       recurrence_prewarn_days => -9, # XXX wird die Fashion Week 2021 überhaupt stattfinden? Bis jetzt steht als Termin 18.-24.01.2021 fest
        text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 13.01.2020-17.01.2020',
        type  => 'handicap',
        source_id => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termin-fuer-januar-2020.html',
@@ -27920,7 +27920,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2020-12-15
+#: last_checked: 2021-01-14
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29259,10 +29259,10 @@ EOF
 #: XXX bis wann gehen die Bauarbeiten? Bis Anfang Juli 2020?
 #: XXX hier fehlt noch die letzte Asphaltdeckschicht
 #: also_indoor: traffic
-#: osm_watch: way id="156066225" version="17"
+#: osm_watch: way id="156066225" version="19"
 #: last_checked: 2020-11-15 vvv
 #: check_frequency: 45d vvv
-#: next_check: 2021-07-01 vvv
+#: next_check: 2021-01-13 vvv
 	q3::inwork 19164,2001 19181,1996 19266,1968 19564,1871
 	q2::inwork 19055,2037 19164,2001
 	q2::inwork 19164,2001 19194,2157
@@ -30800,8 +30800,9 @@ EOF
        text  => 'Gärtnerstr.: Bauarbeiten, zwischen Wühlischstr. und Simplonstr. Einbahnstraße Richtung Süden, zwischen Wühlischstr. und Krossener Str. sowie an der Grünberger Str. Fahrbahn gesperrt, evtl. bis Dezember 2021',
        type  => 'handicap',
        data  => <<EOF,
+#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2021-01-03
+#: last_checked: 2021-01-14
 #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31369,7 +31370,7 @@ EOF
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: last_checked: 2021-01-01 (architektur-urbanistik) (vermutlich)
+#: last_checked: 2021-01-09 (daf)
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 EOF
@@ -31384,6 +31385,7 @@ EOF
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9184 (fehlende Umleitung)
 #: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
 #: by: https://twitter.com/SBahnBerlin/status/1347543580529758210 (S-Bahn fährt nicht bis 25.1.2021)
+#: by: https://abendblatt-berlin.de/2021/01/13/mit-dem-bus-statt-mit-der-bahn-durch-den-berliner-osten/
 #: XXX bis wann ist der Bahnübergang gesperrt?
 #: also_indoor: search Oberfeldstraße Bahnübergang
 #: osm_watch: way id="868347101" version="2"
@@ -31832,6 +31834,60 @@ EOF
        source_id => 'LS/721-E/21/005',
        data  => <<EOF,
 	2::inwork 9640,29628 9996,29712
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Trautenauer Str.: Fahrbahn wegen Bauarbeiten am Projekt "Parkstadt Karlshorst" gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: PARKSTADTKARLSHORST-2021
+#: last_checked: 2021-01-11
+	q4::inwork 17794,8429 17774,8342
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Passauer Str.: Einbahnstraßenregelung, gesperrt Richtung Tauentzienstr., Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       source_id => 'https://www.deutsches-architekturforum.de/thread/12678-umbau-des-kadewe/?postID=678680#post678680',
+       data  => <<EOF,
+#: XXX wann sind die Bauarbeiten beendet?
+#: also_indoor: traffic (G)
+#: last_checked: 2021-01-10 (daf)
+#: check_frequency: 90d
+	q4::inwork; 6033,10403 6133,10679
+EOF
+     },
+     { from  => 1610838000, # 2021-01-17 00:00
+       until => 1618264800, # 2021-04-13 00:00
+       text  => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, vom 18.1.2021 bis 12.4.2021',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1039050.php',
+       data  => <<EOF,
+#: next_check_id: BOHNSDORFERKREISEL-2017
+#: source_id: 2147346807 (bis 12.4.2021)
+	q3::inwork 22162,1067 22092,999 22034,1006 21977,988
+	q3::inwork 22092,999 22120,886
+EOF
+     },
+     { from  => 1610431200, # 2021-01-12 07:00
+       until => 1620831600, # 2021-05-12 17:00
+       text  => 'Rudower Str.: zwischen Köpenicker Str. und Lehmfeldsteig wegen Bauarbeiten gesperrt, vom 13.01.2021 07:00 Uhr bis 12.05.2021 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346788',
+       data  => <<EOF,
+#: osm_watch: way id="683770241" version="6"
+	q4::inwork 19564,1871 19743,1804
+EOF
+     },
+     { from  => 1610650800, # 2021-01-14 20:00
+       until => 1610938800, # 2021-01-18 04:00
+       text  => 'Greifswalder Str.: Fahrbahn stadtauswärts zwischen Käthe-Niederkirchner-Str. und Hufelandstr. wegen Kraneinsatz gesperrt, vom 15.01.2021 20:00 Uhr bis 18.01.2021 04:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147346791',
+       data  => <<EOF,
+	q4::inwork; 11991,14060 12017,14098 12077,14186
 EOF
      },
     );
