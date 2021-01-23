@@ -191,6 +191,12 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607
 # 
 ### Mitte ###
 # 
+#: osm_watch: way id="822127127" version="1"
+#: osm_watch: way id="736448990" version="7"
+#: last_checked: 2021-01-21
+#: check_frequency: 120d
+Holzmarktstr. - Ifflandstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg, Bordsteine	q4::inwork 11524,12314 11589,12296
+# 
 #: next_check_id: CHAUSSEE-2020
 #: note: laut rbbtext Ende der Bauarbeiten 16.7.2021
 #: last_checked: 2020-11-07
@@ -350,6 +356,7 @@ Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahr
 #: by: https://www.tagesspiegel.de/wissen/staatsbibliothek-zu-berlin-corona-stoppte-umzug-in-die-linden-stabi/26269492.html (Erˆffnung noch 2020 (Mitte November?))
 #: by: https://blog.sbb.berlin/ab-1-februar-2021-haus-unter-den-linden-fuer-benutzungsbetrieb-geoeffnet/
 #: by: https://blog.sbb.berlin/ab-1-februar-2021-haus-unter-den-linden-fuer-benutzungsbetrieb-geoeffnet/?date=20201226 (Baustelleneinrichtung in der Charlottenstr. wird im Fr¸hjahr 2021 abgebaut, bis Sommer 2021 wird die Straﬂenseite wiederhergestellt; Sperrung in der Universit‰tsstraﬂe womˆglich bis Mitte 2022)
+#: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
 #: last_checked: 2021-01-09 vvv
 #: check_frequency: 90d vvv
@@ -484,7 +491,7 @@ Jahnstr.: Bauarbeiten, etwa 50m der Fahrbahn sind gesperrt	q3::inwork 11500,9116
 #: XXX laut vmz bis Anfang 2019, laut fritz/rbb bis 30.06.2021
 #: by: http://www.dafmap.de/d/berlin.html?id=3451&mt=0&zoom=16
 #: also_indoor: traffic (H)
-#: last_checked: 2020-10-27
+#: last_checked: 2021-01-09
 #: check_frequency: 90d
 #: next_check: 2021-06-30
 #: valid: -20210630
@@ -543,7 +550,7 @@ Mˆckernstr.: Bauarbeiten, Einbahnstraﬂe, ehemaliger Radweg kann benutzt werden	q
 #: XXX geplanter Projektabschluss laut dafmap: 2018-07-31
 #: by: http://www.berliner-woche.de/hansaviertel/bauen/richtfest-fuer-oasis-berlin-d157470.html
 #: osm_watch: way id="151857175" version="8"
-#: last_checked: 2020-11-07
+#: last_checked: 2021-01-22
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-03-31
 Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5919,12423 5894,12480 5944,12548
@@ -720,7 +727,7 @@ Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung S¸den a
 # 
 #: next_check_id: DENNEWITZFLOTTWELL-2019
 #: also_indoor: traffic (G,H) vvv
-#: last_checked: 2021-01-09 vvv
+#: last_checked: 2021-01-22 vvv
 # REMOVED (hier kaum noch Einschr‰nkungen) --- Kurf¸rstenstr.: Bauarbeiten im Kreuzungsbereich	q3::inwork 8058,10306 7850,10351
 Bauarbeiten im Kreuzungsbereich	q3::inwork 8159,10430 8058,10306
 # REMOVED (verlagert) --- Flottwellstr./Dennewitzstr.: Bauarbeiten, Ausweichen auf Gehweg und Umfahrung ¸ber Pohlstr.	q3::inwork; 8199,10634 8159,10430 8058,10306
@@ -883,8 +890,8 @@ Am M¸ggelsee: Fuﬂg‰nger	q2 25474,2848 25667,2787 25857,2654 26006,2615 26158,264
 Pestalozzistr.: Fuﬂg‰ngerzone	q3 3721,11230 3770,11231 3822,11231
 # 
 #: next_check_id: NKZ-2020
-#: XXX zurzeit Bauarbeiten, nur der Gehweg ist offen (alten Eintrag danach wieder aktivieren); auﬂerdem gibt's einen groﬂz¸gigen Restaurantbereich
-#: last_checked: 2020-12-23
+#: XXX zurzeit Bauarbeiten, nur der Gehweg ist offen (alten Eintrag danach wieder aktivieren); vor Corona-Zeiten gab's auﬂerdem einen groﬂz¸gigen Restaurantbereich
+#: last_checked: 2021-01-21
 (Zufahrt am NKZ): Fuﬂg‰nger/Lieferverkehr	q2 11291,10438 11317,10485
 # REMOVED --- (Zufahrt am NKZ): Fuﬂg‰nger/Lieferverkehr, Restaurantbereich	q4::inwork 11291,10438 11317,10485
 # REMOVED (Bauarbeiten) --- (Zufahrt am NKZ): Fuﬂg‰nger/Lieferverkehr	q2 11317,10485 11344,10507
@@ -901,7 +908,7 @@ Alexanderplatz [Richtung Alexa]: Fuﬂg‰ngerverkehr	q3 11134,12793 11064,12910
 #: by: https://camera.deckchair.com/park-inn-berlin-alexanderplatz (Webcam)
 #: by: https://www.deutsches-architekturforum.de/thread/2271-u-5/?postID=666937#post666937 (Pflasterungsarbeiten)
 # REMOVED (gelˆscht) --- #: osm_watch: relation id="8743849" version="2"
-#: last_checked: 2021-01-10 (daf)
+#: last_checked: 2021-01-20 (webcam)
 #: check_frequency: 10d
 #Rathausstr.: Fuﬂg‰nger	q1- 10923,12779 10704,12595
 Rathausstr.: Fuﬂg‰nger, Bauarbeiten	q2 10923,12779 10704,12595
@@ -1657,7 +1664,7 @@ Upstallweg (Lichtenberg): gemeinsamer Rad- und Gehweg	q1 17946,10344 17954,10367
 Mayschweg: Fuﬂg‰nger (Radfahrer frei), eng	q1 23064,3614 23012,3598 23007,3597
 Spreetunnel: Fuﬂg‰nger	q2 25571,4553 25658,4619
 M¸ggelpark: Fuﬂg‰nger	q2 25695,4714 25658,4619 25656,4578 25772,4543
-(entlang der Autobahn, zum hohen Bogen): gemeinsamer Fuﬂ- und Radweg	q1+ 3379,8969 3489,8839 3510,8814 3713,8578 3696,8572 3644,8456 3644,8425
+(entlang der Autobahn, zum hohen Bogen): gemeinsamer Fuﬂ- und Radweg	q1+ 3379,8969 3489,8839 3510,8814 3713,8578 3696,8572 3644,8456 3644,8441 3644,8425
 Gˆrresstr.: enge Straﬂe	q1 5073,7660 5188,7536 5272,7458 5318,7424
 Stendaler Platz: Fuﬂg‰nger, Spielplatz	q2 6394,14085 6489,14071
 Washingtonplatz: querende Fuﬂg‰nger, Taxis	q2; 7937,13126 8011,13128 8106,13130
@@ -3333,7 +3340,7 @@ Eigerstr. [81-91]: Bodenschwellen	q2 13043,18126 12910,18003 12945,17958
 #: by ^^^
 Reichenhaller Str.: einige Fuﬂg‰nger	q2 3210,7786 3198,7787
 Kissinger Str. (Schmargendorf): einige Fuﬂg‰nger	q2 3219,7987 3206,7988
-(Otawistr. - Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 6003,16521 5965,16555 5802,16703
+(Otawistr. - Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 6003,16521 5965,16555 5801,16700
 (Usambarastr. - Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 5684,16815 5710,16792 5807,16709
 (S¸lzhayner Str. - Heidelberger Str.): einige Fuﬂg‰nger	q2 13392,9225 13421,9260
 #: by: mapillary
@@ -3475,6 +3482,7 @@ Betriebsbahnhof Rummelsburg - Am Kraatzgraben: einige Fuﬂg‰nger	q1 16894,10003 1
 (Hoher Wallgraben - Lehndorffstr.): einige Fuﬂg‰nger, an der Lehndorffstr. eine kurze Rampe, Bordstein an der Lehndorffstr.	q2+ 18101,8044 18186,8081 18276,8136
 Mercedes-Platz: Fuﬂg‰ngerzone	q4 13150,11101 13063,11147 12984,11194
 Mercedes-Platz: Fuﬂg‰ngerzone	q4 12990,11006 13063,11147
+(Abbestr. - Otto-Suhr-Allee): einige Fuﬂg‰nger	q1 4674,12076 4608,11935 4596,11912
 # 
 ######################### User Contributions #################################
 # 
@@ -3886,9 +3894,9 @@ Vereinsweg (Steglitz): Fuﬂg‰nger, Privatstraﬂe, Radfahren nicht erlaubt	q4 5334,
 (Volkspark Friedrichshain): Fuﬂg‰nger	q2 12141,13609 12012,13599 12038,13685
 (Zufahrt Landsberger Allee): Fuﬂg‰nger	q2 13433,13346 13397,13426 13574,13505
 (Verl‰ngerte Wallenbergstr.): Fuﬂg‰nger, schmal	q3 4139,8485 3992,8487
-(Zufahrt zur Kolonie Hohenzollerndamm): Fuﬂg‰nger, Poller	q2 3775,8771 3868,8759
-#: XXX_prog: Bordsteine an beiden Enden, ansonsten w‰re es q1
-Apeldorner Weg: Fuﬂg‰nger, Bordsteine	q2 3848,8689 3868,8759 3952,8980
+(Zufahrt zur Kolonie Hohenzollerndamm): Fuﬂg‰nger, Poller	q2 3751,8796 3858,8786
+#: XXX_prog: Bordstein am nˆrdlichen Ende, ansonsten w‰re es q1
+Apeldorner Weg: Fuﬂg‰nger, Bordstein	q2+ 3822,8718 3858,8786 3952,8980
 M¸nstersche Str.: Fuﬂg‰nger	q2 3840,9683 3698,9624
 (Hoffmannstr. - Puschkinallee): Fuﬂg‰nger	q1 14077,10016 13999,9842
 (Hoffmannstr. - Uferweg an den Treptowers): Fuﬂg‰nger	q1 14077,10016 14116,10149 14126,10176
@@ -4997,7 +5005,7 @@ Straﬂe 245 (Weiﬂensee): enge Straﬂe	q1 13590,17368 13271,17589 13243,17615
 #: by: Joachim Faust:
 #: XXX_prog: BS (an der S¸dwestseite, noch nicht in die Kategorie eingeflossen)
 #: corrected_by: srt (added "Radfahren nicht erlaubt")
-(Querweg durch die Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 5894,16810 5807,16709 5802,16703 5700,16584
+(Querweg durch die Dauerkolonie Togo): einige Fuﬂg‰nger, Radfahren nicht erlaubt	q3 5894,16810 5807,16709 5801,16700 5700,16584
 #: by: Thomas Dˆring:
 #: corrected_by: srt/policy (q1 -> q0-)
 Forster Str. (Hellersdorf): enge Straﬂe	q0- 25237,14627 25365,14667 25397,14563 25418,14538
