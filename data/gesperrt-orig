@@ -338,7 +338,7 @@ Große Präsidentenstr.	1 10105,13004 10220,13098
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/radfahren-gegen-die-einbahnstrasse_a238207
 #: XXX: Wird die Einbahnstraße für Radfahrer geöffnet?
 #: osm_watch: way id="4475205" version="10"
-#: last_checked: 2021-01-16 (mapillary)
+#: last_checked: 2021-01-25 (mapillary)
 #: check_frequency: 90d
 Gritznerstr.	1 4511,6318 4555,6403
 # 
@@ -389,7 +389,7 @@ Saltykowstr.	1 12726,7887 12865,7923
 (Drorystr. - Braunschweiger Str., Schulhof)	2 13518,7477 13601,7366
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/bvv-online/vo020.asp?VOLFDNR=4360&options=4 ("alltägliche Praxis")
 #: XXX evtl. wird die Einbahnstraßenregelung aufgehoben oder geändert
-#: last_checked: 2020-03-24 (mapillary)
+#: last_checked: 2021-01-23 (mapillary)
 #: check_frequency: 300d
 Barbarastr.	1s:q3 6456,3038 6372,2959 6329,2916 6359,2875 6372,2856
 Leipziger Platz	1 8596,11508 8599,11474 8639,11441 8713,11448 8743,11489 8740,11524
@@ -1696,7 +1696,7 @@ Behrenstr./Bebelplatz	1s:q3 9798,12267 9737,12238 9730,12238 9680,12232 9631,122
 Halenseestr.	1s:q2 2163,10024 2110,10101 2030,10253 1988,10328 1939,10446
 Zeltinger Platz	1s:q4 2404,25187 2355,25252 2395,25273 2446,25265 2490,25211 2486,25156 2451,25123 2404,25187
 Ludolfinger Platz	1s:q4 2277,25033 2245,25016 2205,25042 2192,25083 2216,25117 2277,25094 2285,25059 2277,25033
-Sewanstr. - Balatonstr.	1s:q3 17705,10232 17741,10386
+Sewanstr. - Balatonstr.	1s:q3 17729,10331 17741,10386
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich)	1s:q2 18377,9366 18490,9387
 Bundesring	1 8942,7865 8921,8028 8924,8154 8941,8186 8952,8030 8942,7865
 Ritterstr.	1 -3369,14532 -3316,14504
@@ -2546,6 +2546,8 @@ tragen (Treppe, 16 Stufen)	0:25 22104,11925
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+Schranke	BNP:3::trailer=10 17793,10382
+Schranke	BNP:3::trailer=10 17822,10490
 Schranke	BNP:0::trailer=5 10713,12014
 Drängelgitter	BNP:3::trailer=10 10969,10015
 Drängelgitter	BNP:3::trailer=10 10879,10037
@@ -3230,6 +3232,15 @@ Schranke	BNP:2::trailer=5 19617,6208
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/06re.pdf/file?y=2016
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/14re.pdf/file?y=2016
+#: by: https://www.berndalbers.com/krautstrasse-30-berlin (vielleicht verschwindet die Straße im Zuge dieses Neubaus?)
+#: XXX ggfs. culdesac- und str_cont_ausnahme-Einträge erstellen, sollte ein Teilabschnitt der Straße endgültig verschwinden
+#: osm_watch: way id="25008069" version="9"
+#: last_checked: 2021-01-25
+#: check_frequency: 60d
+Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11916,11846 11923,11881 11940,11982
+# 
 #: XXX Bis wann gehen die Bauarbeiten? Eigentlich eine "unechte" Einbahnstraße.
 #: osm_watch: way id="308312347" version="3"
 #: last_checked: 2021-01-22
@@ -3239,19 +3250,23 @@ Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s:q3 10472,14632 10320,14608
 #: XXX bleibt die Absperrung dauerhaft?
 #: osm_watch: way id="830757933" version="1"
 #: osm_watch: way id="610818155" version="4"
-#: last_checked: 2020-12-29
+#: last_checked: 2021-01-28
 #: check_frequency: 60d
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 # 
 #: by: https://www.deutsches-architekturforum.de/thread/6013-entwicklungsgebiet-alter-schlachthof-prenzlauer-berg/?postID=677220#post677220
 #: priority: #C
-#: last_checked: 2020-12-21 (daf)
+#: last_checked: 2021-01-25 (mapillary)
 #: check_frequency: 60d
 Otto-Ostrowski-Str.: Hochbauarbeiten, gesperrt	2::inwork 13702,13634 13711,13615 13769,13487
 # 
-#: last_checked: 2020-12-28
-#: check_frequency: 30d
-Wege am S-Bhf. Betriebsbahnhof Rummelsburg: wegen Bauarbeiten gesperrt	2::inwork 16895,9922 16841,9997 16830,10030 16835,10052
+#: last_checked: 2021-01-28 vvv
+#: check_frequency: 30d vvv
+Wege am S-Bhf. Betriebsbahnhof Rummelsburg: wegen Bauarbeiten gesperrt	2::inwork 16895,9922 16841,9997
+Wege am S-Bhf. Betriebsbahnhof Rummelsburg: wegen Bauarbeiten gesperrt	2::inwork 16900,9861 16895,9922
+# REMOVED (hier jetzt offen, aber noch nicht fertig) --- Wege am S-Bhf. Betriebsbahnhof Rummelsburg: wegen Bauarbeiten gesperrt	2::inwork 16841,9997 16830,10030 16835,10052
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise
@@ -3269,7 +3284,7 @@ Schulstr. (Biesdorf): Bauarbeiten, komplett gesperrt	2::inwork 20599,11938 20708
 #: source_id: IM_020714
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-01-10 (daf)
+#: last_checked: 2021-01-25
 Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt	2::inwork 9131,12438 9179,12444
 # 
 #: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
@@ -3282,7 +3297,7 @@ Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60
 #: by: https://twitter.com/Technologiepark/status/1337402031569580032 (Sanierung der Brücke bis 10.12.2021)
 #: by: https://www.deutsches-architekturforum.de/thread/14514-square-1-johannisthal/ (Erwähnung)
 #: by: https://www.berliner-woche.de/johannisthal/c-verkehr/betriebsbahnhof-schoeneweide-ist-geschichte_a296360 (bis Ende 2021)
-#: last_checked: 2020-11-28
+#: last_checked: 2021-01-25 (daf)
 #: check_frequency: 90d
 #: next_check: 2021-12-10
 Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
@@ -3293,14 +3308,14 @@ Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun 
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/bezirksamt-will-bergmannkiez-entmotorisieren_a287422 ("Fußgängerzone beschlossen" --- bleibt es permanent?)
 #: XXX bis wann bleibt diese Straße eine "Klimastraße"?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-01-15
+#: last_checked: 2021-01-23
 # REMOVED (bleibt vermutlich länger?) --- #: next_check: 2020-12-31
 Danneckerstr.: temporäre "Klimastraße", für Radfahrer gesperrt	2s:q4 13886,10939 13856,10864
 # 
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954987.php
 #: by: https://www.kms-sonne.de/projekte/blueberry-inn/
 #: XXX ab 6.7.2020 gesperrt, Bauarbeiten werden bis 2023 gehen
-#: last_checked: 2020-12-27
+#: last_checked: 2021-01-29
 #: check_frequency: 360d
 #: next_check: 2023-01-01
 #: valid: -20231231
@@ -3366,19 +3381,20 @@ Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10203,
 # 
 #: by: mapillary
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22806.pdf (Sperrung des Spreeuferwegs zwischen 2020 und 2028)
-#: last_checked: 2021-01-10
+#: last_checked: 2021-01-29
 #: next_check: 2028-01-01
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 # 
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/stralauer-allee-15-16.657/page-2#post-13509
+#: by: https://rfr-development.de/projekte/stralauer-allee (hier entsteht ein Bürogebäude)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbrücke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2021-01-16
+#: last_checked: 2021-01-29
 #: check_frequency: 360d
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14348,10266 14462,10206 14480,10157
 # 
 #: by: wosch
 #: by: https://portal1548.webcam-profi.de/ (webcam)
-#: last_checked: 2021-01-16
+#: last_checked: 2021-01-29
 #: check_frequency: 60d
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 14126,10176 14202,10152 14373,10046
 # 
@@ -3421,7 +3437,7 @@ Helene-Jacobs-Str.	1::inwork 3332,8207 3326,8100 3320,7982 3309,7782 3210,7786 3
 #: XXX wann wird der Weg wiederhergestellt, wenn überhaupt?
 #: by: https://www.deutsches-architekturforum.de/thread/9401-wasserstadt-stralau-kleine-und-gr%C3%B6%C3%9Fere-projekte/?postID=653296#post653296 (Bauarbeiten bis Ende September 2021)
 #: osm_watch: way id="541556560" version="2"
-#: last_checked: 2021-01-21
+#: last_checked: 2021-01-23
 #: next_check: 2021-09-30
 Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 14569,10055
 # 
@@ -3430,7 +3446,7 @@ Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 1
 # 
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/neubau-planckstra%C3%9Fe.866/#post-10417
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-12-21
+#: last_checked: 2021-01-25
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728 9402,12792 9386,12833
 # 
 # REMOVED (beendet) --- #: XXX wann sind die Bauarbeiten beendet? --- #: last_checked: 2020-05-15 --- Littenstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 11059,12450 10954,12635
@@ -3443,7 +3459,7 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728
 #: by: https://www.bvg.de/de/index.php?section=downloads&cmd=extra:78:2:1&download=3941 (hier: bis Mai 2021)
 #: also_indoor: traffic (G,H) vvv
 #: source_id: 2147345254 (bis 06.06.2021) vvv
-#: last_checked: 2021-01-07 vvv
+#: last_checked: 2021-01-26 vvv
 #: next_check: 2021-05-01 vvv
 #: priority: #A vvv
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10687,11853 10672,11870 10642,11901
@@ -3469,7 +3485,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: check_frequency: 30d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
-#: last_checked: 2021-01-14
+#: last_checked: 2021-01-25
 #: check_frequency: 60d
 Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwork 10805,12468 10803,12470
 # 
@@ -3478,7 +3494,7 @@ Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwor
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="729492933" version="2"
 #: osm_watch: way id="882672445" version="1"
-#: last_checked: 2021-01-14
+#: last_checked: 2021-01-25
 #: check_frequency: 60d
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
 # 
@@ -3540,7 +3556,7 @@ Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (ab 1. Juli 2020 wieder offen, bis voraussichtlich 13. September 2020)
 #: by: https://www.kms-sonne.de/baustellennews?date=20201221 (weiterhin gesperrt)
 #: osm_watch: way id="822674838" version="3"
-#: last_checked: 2021-01-13 (osm)
+#: last_checked: 2021-01-29
 #Rollbergstr.: Einbahnstraße, offen Richtung Karl-Marx-Str.	1s:q3:inwork 12714,8249 12545,8209
 Rollbergstr.: Bauarbeiten, Zufahrt von der Karl-Marx-Str. gesperrt	2s:q4:inwork 12714,8249 12545,8209
 # 
@@ -3581,7 +3597,7 @@ Wäscherinnenweg: teilweise gesperrt	2::inwork 21444,5112 21358,5072
 #: by: https://www.parlament-berlin.de/ados/17/IIIPlen/vorgang/d17-2854.pdf (Bebauungsplan, Plan befindet sich auf der tatsächlichen Seite 366 sowie 373)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/virtuelle-stadtwerkstatt-informiert-ueber-bauprojekte-in-berlins-historischer-mitte_a292967
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2021-01-14
+#: last_checked: 2021-01-25
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
 # REMOVED --- #: next_check_id: SOWJETISCHESEHRENMAL-2019 --- #: XXX wann sind die Bauarbeiten beendet? -> laut Schild bis Mai 2020 --- #: last_checked: 2019-11-01 --- #: next_check: 2020-05-15 --- Treptower Park, am Sowjetischen Ehrenmal: Weg wegen Bauarbeiten gesperrt	2::inwork 14824,9390 14797,9396
@@ -3939,7 +3955,7 @@ Heino-Schmieden-Weg: größtenteils noch wegen Bauarbeiten gesperrt	2::inwork 2072
 # REMOVED (bei osm nicht mehr construction) --- #: XXX wie sieht es mit einer Anbindung an die Kasperstr. aus? --- ja, wird es geben --- #: osm_watch: way id="461214846" version="3" --- #: last_checked: 2017-08-10 --- #: check_frequency: 90d --- Traudelstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19169,1249 19140,1137
 # 
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2020-12-21 vvv
+#: last_checked: 2021-01-25 vvv
 # REMOVED --- #: check_frequency: 90d vvv
 #: check_frequency: 30d vvv
 # REMOVED (offen) --- #: osm_watch: way id="54781811" version="9" --- Schinkelplatz: Fahrbahn komplett gesperrt	2::inwork 9990,12404 9996,12372
@@ -3974,7 +3990,7 @@ Niederlagstr.: Einbahnstraße	1s:q3:inwork 9972,12184 9959,12281
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6146.html
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_13_1401_1520_online.pdf (Widmung als Grünanlage)
 #: source_id: 2147341188
-#: osm_watch: way id="593108603" version="2"
+#: osm_watch: way id="593108603" version="3"
 #: XXX laut osm nicht mehr construction, in der Realität kann man aber hier nicht durch
 #: last_checked: 2020-12-06
 #: check_frequency: 60d
@@ -4197,7 +4213,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://www.humboldtforum.org/wp-content/uploads/2020/10/20201007_PM_Ero%CC%88ffnung-1.pdf (Eröffnung am 17.12.2020)
 #: by: https://www.berliner-zeitung.de/kultur-vergnuegen/humboldt-forum-berliner-schloss-teileroeffnung-li.122095 (Eröffnung wird verschoben)
 #: by: https://berliner-schloss.de/blog/schloss-information-dezember-2020/ (Bauzäune werden im Dezember 2020 teilweise abgebaut)
-#: last_checked: 2021-01-08 (webcam)
+#: last_checked: 2021-01-25
 #: check_frequency: 90d
 #: next_check: 2021-07-01
 # REMOVED (hier offen) --- Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10102,12384

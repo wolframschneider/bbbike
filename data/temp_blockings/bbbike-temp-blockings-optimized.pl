@@ -517,7 +517,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-01-04
+#: last_checked: 2021-01-25
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -2253,11 +2253,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://viz.berlin.de/2020/07/schau-11_12-07_2020/ ("für den Kraftfahrzeugverkehr gesperrt")
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1043669.php ("Notweg für Radfahrer" (?))
+#: by: https://www.berliner-woche.de/kreuzberg/c-bauen/kynaststrasse-gesperrt_a299447
 #: source_id: 2147346071 (inaktiv)
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-01-21
+#: last_checked: 2021-01-23
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2346,11 +2347,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: source_id: 2147344802 (inaktiv)
+         'data' => '#: next_check_id: LANGHANS-2021
+#: source_id: 2147344802 (inaktiv)
 #: source_id: 2147346832 (Gesamtbaumaßnahme bis Mitte August 2021)
+#: by: https://viz.berlin.de/2021/01/verkehrsvorschau25012021/ ("Mitte Februar (2021) wird die Sperrung um den Abschnitt Heinersdorfer Straße - Roelckestraße erweitert")
+#: by: https://viz.berlin.de/2021/01/langhansstr-sperrung/
+#: also_indoor: traffic
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
 # REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
 # REMOVED (hier nicht mehr?) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
+#: next_check: 2021-02-15
 	q4::inwork 13508,15912 13312,16027 13189,16089 12943,16214
 ',
          'from' => 1611468000,
@@ -2544,9 +2550,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1610035200,
          'id' => 3160,
          'source_id' => 'LMS-BR_r_LMS-BR_182020_LMS-BR_72',
-         'text' => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, Radfahrer und Fußgänger sind auch betroffen, 8.1.2021 bis 2.2.2021',
+         'text' => 'Lemkestr.: zwischen Menzelstr. und Donizettistr. (Bahnübergang) Bauarbeiten, Straße gesperrt, Radfahrer und Fußgänger sind auch betroffen, 8.1.2021 bis 1.2.2021',
          'type' => 'gesperrt',
-         'until' => 1612281600
+         'until' => 1612148400
        },
        undef,
        undef,
@@ -2724,7 +2730,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-01-17
+#: last_checked: 2021-01-24
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2779,8 +2785,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: GAERTNER-2021
-#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb nur bis 13.1.2021)
-#: last_checked: 2021-01-22
+#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
+#: last_checked: 2021-01-29
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2878,7 +2884,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
-#: source_id: 2147346671 (bis 26.3.2021)
+#: source_id: 2147346671 (bis 3.5.2021)
 #: also_indoor: traffic (H,G) vvv
 #: note: laut rbbtext bis 2021-06-30 vvv
 #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
@@ -3009,6 +3015,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
 #: by: https://twitter.com/SBahnBerlin/status/1347543580529758210 (S-Bahn fährt nicht bis 25.1.2021)
 #: by: https://abendblatt-berlin.de/2021/01/13/mit-dem-bus-statt-mit-der-bahn-durch-den-berliner-osten/
+#: by: https://viz.berlin.de/2021/01/s5/ (SEV bis 25.1.2021)
 #: XXX bis wann ist der Bahnübergang gesperrt?
 #: also_indoor: search Oberfeldstraße Bahnübergang
 #: osm_watch: way id="868347101" version="2"
@@ -3070,26 +3077,16 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: XXX wird die Qualität nach den Bauarbeiten besser sein?
-#: next_check: 2021-01-29
-	q4::inwork 9511,6797 9512,6652
-',
-         'from' => 1603135110,
-         'id' => 3294,
-         'text' => 'Fuhrmannstr.: Bauarbeiten, Fahrbahn gesperrt, bis 29.01.2021',
-         'type' => 'handicap',
-         'until' => 1611939600
-       },
+       undef,
        {
          'data' => '	q4::inwork 8053,15598 7962,15633
 ',
          'from' => 1603170000,
          'id' => 3295,
          'source_id' => '2147346516',
-         'text' => 'Weddingstr.: Zufahrt von der Reinickendorfer Str. gesperrt, 21.10.2020 7:00 Uhr bis 29.01.2021 17:00 Uhr',
+         'text' => 'Weddingstr.: Zufahrt von der Reinickendorfer Str. gesperrt, 21.10.2020 7:00 Uhr bis 26.02.2021 17:00 Uhr',
          'type' => 'handicap',
-         'until' => 1611936000
+         'until' => 1614355200
        },
        undef,
        {
@@ -3111,7 +3108,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.verkehrslage.de/Berlin/Baustellen/3
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2020-12-27
+#: last_checked: 2021-01-29
 #: check_frequency: 21d
 	q4::inwork 12997,6290 13027,6168
 ',
@@ -3131,6 +3128,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: B96A-2020
 #: osm_watch: way id="877995097" version="2"
+#: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
 #: last_checked: 2020-12-12 (osm)
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
@@ -3253,20 +3251,22 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: 2147346807 (bis 12.4.2021)
 #: note: laut rbbtext kann der Radverkehr passieren
 #: by: https://viz.berlin.de/2021/01/bohnsdorfer-kreisel/ (keine Einschränkungen für Fußgänger)
-#: XXX wie sehen die Einschränkungen (wenn überhaupt) für den Radverkehr aus? vvv
+#: by: https://twitter.com/VIZ_Berlin/status/1353990207574581249 (Situation mit Bildern)
+# REMOVED --- #: XXX wie sehen die Einschränkungen (wenn überhaupt) für den Radverkehr aus? vvv
 	q3::inwork 22162,1067 22092,999 22034,1006 21977,988
 	q3::inwork 22092,999 22120,886
-#: XXX ^^^
+# REMOVED --- #: XXX ^^^
 ',
          'from' => 1610838000,
          'id' => 3321,
          'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1039050.php',
-         'text' => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, möglicherweise ist der Radverkehr betroffen, vom 18.1.2021 bis 12.4.2021',
+         'text' => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, Radfahrer können auf den engen Gehwegen vorbeifahren, vom 18.1.2021 bis 12.4.2021',
          'type' => 'handicap',
          'until' => 1618264800
        },
        {
-         'data' => '#: osm_watch: way id="683770241" version="6"
+         'data' => '#: note: bei rbbtext sogar bis 18.5.2021
+#: osm_watch: way id="683770241" version="6"
 	q4::inwork 19564,1871 19743,1804
 ',
          'from' => 1610431200,
@@ -3299,6 +3299,16 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. gesperrt, Ausweichen auf Gehweg, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '#: by: https://viz.berlin.de/2021/01/verkehrsvorschau27012021/
+	2::inwork 14196,7086 14233,7086 14251,7096 14323,7080 14310,7022
+',
+         'from' => 1611615600,
+         'id' => 3326,
+         'text' => 'Behelfsbrücke Neuköllnische Allee: kurzfristige Sperrungen von maximal 20 Minuten Dauer möglich, vom 27.1.2021 bis ca. 17.2.2021',
+         'type' => 'gesperrt',
+         'until' => 1613602800
        }
      
 );

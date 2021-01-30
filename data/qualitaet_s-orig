@@ -758,7 +758,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2021-01-09
+#: last_checked: 2021-01-29
 #: check_frequency: 90d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -824,7 +824,7 @@ Böcklinstr.: Kopfsteinpflaster	Q2 14674,11370 14598,11245
 #: note: bei regem Kfz-Verkehr ist es nicht möglich, den asphaltierten Fahrbahnabschnitt zu benutzen
 #: corrected_by: Fil (vorher Q1-)
 #: osm_watch: way id="266580485" version="12"
-#: last_checked: 2021-01-18 (mapillary)
+#: last_checked: 2021-01-27 (mapillary)
 #: check_frequency: 90d
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert	Q2 12736,17998 12462,17814
 # 
@@ -935,7 +935,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist.")
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2021-01-22
+#: last_checked: 2021-01-29
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -2228,7 +2228,7 @@ Gartenufer: Kleinsteinpflaster	Q1 6200,11417 6337,11365 6346,11326
 Elisabeth-Abegg-Str.: Kopfsteinpflaster mit großen Fugen	Q3+ 7930,12912 7858,12830 7789,12764
 Elisabeth-Abegg-Str.: Kopfsteinpflaster mit großen Fugen	Q3+ 7858,12830 7837,12860
 Spreeuferweg: glatte Gehwegplatten und fester Sandweg an den Seiten	Q0 7051,12426 7122,12384 7183,12372 7217,12383 7314,12419 7447,12520 7521,12581 7772,12694 7856,12746 7908,12804 7945,12878
-Delbrückstr. (Neukölln): Kopfsteinpflaster	Q2 12743,6645 12860,6667 12981,6689 13099,6712
+Delbrückstr. (Neukölln): Kopfsteinpflaster	Q2- 12743,6645 12860,6667 12981,6689 13099,6712
 Delbrückstr. (Neukölln): Asphalt	Q0 13099,6712 13117,6716
 Rungiusstr.: sehr guter Asphalt	Q0 13158,5490 13136,5593 13116,5689 13105,5748 13077,5893 13064,5953 13027,6168
 #: by: andreas voigt:
@@ -2600,9 +2600,9 @@ Goltzstr.: Asphalt	Q0 10642,-2371 10563,-2432 10454,-2520
 Goltzstr.: Asphalt	Q0 10454,-2520 10394,-2567 10382,-2598
 (Beethovenstr. - Mozartstr., Mauerweg): Asphalt mit Fugen	Q1 10309,-3191 10460,-3199
 Beethovenstr.: kleinteiliges Kopfsteinpflaster, uneben	Q2 10155,-2739 10219,-2895 10272,-3027 10323,-3150
-Marie-Curie-Str.: Asphalt mit leichten Unebenheiten	Q0- 16751,10674 16751,10696 16861,10923
-Marie-Curie-Str.: Asphalt mit Schäden	Q1 16861,10923 16967,11162
-Marie-Curie-Str.: Asphalt mit leichten Unebenheiten	Q0- 16967,11162 17070,11375 17208,11658
+Marie-Curie-Str.: Asphalt	Q0 16751,10674 16751,10696 16861,10923
+Marie-Curie-Str.: Asphalt	Q0+ 16861,10923 16967,11162
+Marie-Curie-Str.: Asphalt	Q0 16967,11162 17070,11375 17208,11658
 Debenzer Str.: Asphalt	Q0 19885,10619 19910,10630 20143,10731 20196,10754 20418,10851 20579,10944
 Debenzer Str.: Plattenweg	Q2+ 19885,10619 19912,10543
 Wilhelmsbrücker Str.: Asphalt	Q0 20509,11174 20369,11174
@@ -3704,9 +3704,10 @@ Dora-Benjamin-Park: Verbundsteinpflaster, "Moabiter Kissen"	Q1 14705,10149 14621
 Dora-Benjamin-Park: Verbundsteinpflaster, "Moabiter Kissen"	Q1 14621,10062 14702,10020 14788,9976
 Dora-Benjamin-Park: Verbundsteinpflaster, "Moabiter Kissen"	Q1 14747,10108 14702,10020
 Dora-Benjamin-Park: Verbundsteinpflaster	Q1 14788,9976 14817,10031
-Balatonstr.: mäßiger Beton	Q1- 17479,10452 17741,10386 17785,10377 17915,10350 17946,10344
-Balatonstr.: mäßiger Beton	Q1- 17785,10377 17817,10496
-(Balatonstr. - Sewanstr.): Beton	Q1 17741,10386 17705,10232 17624,10249 17605,10199
+Balatonstr.: mäßiger Beton	Q1- 17479,10452 17741,10386 17791,10375 17915,10350 17946,10344
+Balatonstr.: mäßiger Beton	Q1- 17791,10375 17793,10382 17822,10490 17823,10495
+(Balatonstr. - Sewanstr.): Beton	Q1 17741,10386 17729,10331 17705,10232 17624,10249 17605,10199
+Sewanstr. [Wohngebiet]: Beton	Q1 17883,10185 17705,10232
 Rienzistr.: Kopfsteinpflaster	Q2 17898,9564 18121,9488
 Marksburgstr.: Asphalt	Q0 18070,9292 18172,9250 18319,9218
 Ilsestr. (Karlshorst, Rummelsburg): Beton	Q0- 18354,9575 18164,9623 18158,9625 18121,9488 18070,9292 18037,9195 18021,9127
@@ -8894,7 +8895,7 @@ Rathausstr.: Verbundsteinpflaster	Q0- 10601,12521 10704,12595
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2018/pressemitteilung.726077.php ("erste Hälfte 2019")
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit; laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022 vvv
-#: last_checked: 2021-01-17 vvv
+#: last_checked: 2021-01-24 vvv
 # REMOVED (unter der provisorischen Decke) --- Weg zur Mühsamstr.: Beton/Verbundsteinpflaster	Q1+ 13067,12583 13091,12563
 Weg zur Mühsamstr.: provisorische Asphaltdecke	Q0- 13067,12583 13091,12563
 Weg zur Mühsamstr.: Schotterweg	Q2 13091,12563 13232,12628
@@ -9917,6 +9918,8 @@ Gilgenburger Pfad: Kleinsteinpflaster	Q1 24387,5672 24351,5696
 (Berliner Balkon - Gründerzeitmuseum): Kleinsteinpflaster	Q1- 24239,10975 24283,10960 24341,10982 24422,10972 24455,10942 24526,10943 24601,10992
 (Park des Gründerzeitmuseums): wassergebundene Decke	Q1 24601,10992 24658,11013
 (Park des Gründerzeitmuseums): Kopfsteinpflaster	Q3 24658,11013 24726,11037
+#: by: srt
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_04_0213_0280_online.pdf (Verkehrsübergabe (etwas verspätet...))
 Lauinger Str.: Asphalt	Q0 21221,11398 21171,11336 21137,11294
 (Gartenstr. - Lauinger Str.): Asphalt	Q0 21168,11303 21171,11336
 (Lauinger Str. - Köpenicker Str.): Asphalt	Q0 21171,11336 21133,11348
@@ -13314,7 +13317,7 @@ Vionvillestr.: Asphalt	Q0 5483,4359 5557,4523
 #: note: "fester Sandweg, Q0" von lepiorz...:
 #: XXX wird dieser Abschnitt vielleicht auch asphaltiert?
 #: osm_watch: way id="115724952" version="8"
-#: last_checked: 2020-10-11
+#: last_checked: 2021-01-23 (mapillary)
 #: check_frequency: 180d
 Stadtpark Steglitz: Parkweg	Q1 5787,4400 5836,4469 5841,4557 5890,4674
 #: corrected_by: srt (Parkweg -> Asphalt, wahrscheinlich neu gemacht)
@@ -15424,7 +15427,7 @@ Markelstr.: asphaltiert	Q0 4528,6700 4583,6682 4645,6646
 #: by: https://api.fixmyberlin.de/api/plannings/198 (Asphaltstreifen)
 #: XXX wird hier die Fahrbahn verbessert (asphaltiert)?
 #: osm_watch: way id="101290096" version="6"
-#: last_checked: 2021-01-16 (mapillary)
+#: last_checked: 2021-01-25 (mapillary)
 #: check_frequency: 120d
 Markelstr.: glattes Kopfsteinpflaster	Q1 4645,6646 4682,6625 4845,6532 4875,6552
 #: confirmed_by: srt
@@ -19321,7 +19324,7 @@ Rue Hyacinthe Vincent: Kleinsteinpflaster	Q1- 3375,16558 3347,16534 3292,16553
 Sachsenwaldstr.: guter Asphalt	Q0 5834,6142 5984,6233 6104,6258 6198,6270 6305,6287 6323,6270
 # 
 #: by: J.F. (jofmoher):
-Moldaustr.: guter Beton	Q0- 17511,10577 17702,10525 17817,10496 17821,10516 17856,10508 17950,10481 17915,10350
+Moldaustr.: guter Beton	Q0- 17511,10577 17702,10525 17823,10495 17828,10514 17856,10508 17950,10481 17915,10350
 # 
 #: by: Matthias Kaller: vvv
 #: corrected_by: Nicole Weber (gutes Kopfsteinpflaster -> Verbundsteinpflaster, plausibler in dieser Gegend)
@@ -23118,7 +23121,7 @@ Küstriner Str.: Asphalt	Q0 15799,14674 15878,14761 15944,14836
 # REMOVED (fertig) --- #: XXX Baubeginn 27.05.2019, Abschluss voraussichtlich im Dezember 2019 --- #: corrected_by: srt (mäßiges Kopfsteinpflaster -> ...) --- #: osm_watch: way id="43899012" version="7" --- #: last_checked: 2019-12-14 --- #: check_frequency: 21d
 #: XXX hier evtl. Umbau bis Sommer 2021? vvv
 #: confirmed_by: srt
-#: osm_watch: way id="593504821" version="3"
+#: osm_watch: way id="593504821" version="4"
 #: last_checked: 2020-06-19 (mapillary)
 #: next_check: 2021-06-01
 Küstriner Str.: mäßiges Kopfsteinpflaster	Q2 16314,15223 16354,15323 16406,15452
@@ -29586,4 +29589,7 @@ Kreuzungsbereich asphaltiert	Q0 6108,2326
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 4248,18066
 Einmündungsbereich mit Kopfsteinpflaster	Q2 15162,11458
 Kreuzungsbereich mit Kleinsteinpflaster	Q1 8027,11000
+Kreuzungsbereich asphaltiert	Q0 16861,10923
+Kreuzungsbereich asphaltiert	Q0 12743,6645
+Kreuzungsbereich mit Kopfsteinpflaster	Q2 12714,9792
 #: ignore ^^^
