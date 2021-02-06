@@ -85,7 +85,7 @@
 #: XXX Nöldnerstraße (Rummelsburg) in beiden Richtungen zwischen Karlshorster Straße und Stadthausstraße: Leitungsbau, Verkehr wird wechselseitig durch eine Baustellenampel geregelt, vom 16.12.2020 09:00 Uhr bis 28.05.2021 17:00 Uhr
 #: source_id: 2147346700
 #: also_indoor: traffic
-#: last_checked: 2021-01-30
+#: last_checked: 2021-02-01
 #: check_frequency: 30d
 #: next_check: 2021-05-28
 #: valid: -20210528
@@ -1784,9 +1784,11 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7138,15437
 	X 6996,15319
 #: by: https://www.deutsches-architekturforum.de/thread/9772-kleinere-projekte-wedding-gesundbrunnen/?postID=675214#post675214
+#: by: https://abendblatt-berlin.de/2021/02/01/berlin-wedding-spd-fordert-fahrradstrasse-fuer-den-sprengelkiez/ ("seit Monaten außer Betrieb")
 #: XXX Ampel ausgeschaltet, vielleicht dauerhaft (Lynar/Tegeler)
 #: osm_watch: node id="3777205512" version="3"
 #: last_checked: 2021-01-10 (krickstadt)
+#: check_frequency: 60d
 	X0 7259,14870
 #: note: Anforderungsampel für Radfahrer aus Richtung Osten Richtung Luisenstr. und für Radfahrer aus der Luisenstr.
 	X 8622,13696
@@ -2740,6 +2742,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX_prog gilt auch für das Linksabbiegen in die Wadzeckstr.
 #: note: Anforderungsampel
 	F 11070,13357
+#: note: Anforderungsampel
 	F 13560,15318
 	X 9549,17625
 	F 6347,17381
@@ -2856,7 +2859,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2021-01-25
+#: last_checked: 2021-02-04 (mapillary)
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
@@ -2882,7 +2885,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) ---
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2020-11-07
+#: last_checked: 2021-02-05
 #: check_frequency: 90d
 #: next_check: 2021-07-15
 	X::inwork 8732,14098
@@ -3257,11 +3260,12 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8062
 #: by: http://www.abendblatt-berlin.de/2018/11/08/in-mahlsdorf-muss-die-ampel-warten/
 #: by: https://www.berliner-woche.de/marzahn/c-verkehr/mehr-schwerverletzte-im-bezirk_a204640 ("dieses Jahr" (2019))
+#: note: laut Tsp vom 2020-01-03 im Sommer 2020
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/mit-13-jahren-verzoegerung_a249310 (spätestens Ende Juli 2020)
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/ampelanlage-wird-spaeter-gebaut_a278629 (bis Ende des Jahres 2020 Inbetriebnahme)
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/sehnsuchtsampel-wird-gebaut_a293518 (Bauampel existiert bereits)
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/baubeginn-fuer-ampelanlage_a298652
-#: note: laut Tsp vom 2020-01-03 im Sommer 2020
+#: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/ampelbau-dauert-laenger-als-erwartet_a300323 (Inbetriebnahme im Frühjahr (2021))
 #: source_id: 2147342270 (nicht mehr aktiv)
 #: source_id: 2147346463 (bis 23.12.2020)
 #: osm_watch: node id="31532791" version="9"

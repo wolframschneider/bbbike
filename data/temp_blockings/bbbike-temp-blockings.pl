@@ -27920,7 +27920,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2021-01-20 (daf)
+#: last_checked: 2021-02-05
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28486,14 +28486,17 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-01-05 15:00:00"), # 1540930270, # 2018-10-30 21:11
-       until => $isodate2epoch->("2021-12-31 17:00:00"), # undef, # 1543014000, # 2018-11-24 00:00
+       until => $isodate2epoch->("2023-08-01 17:00:00"), # undef, # 1543014000, # 2018-11-24 00:00
        text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 6. Januar 2021 bis 31. Dezember 2021',
        type  => 'gesperrt',
        source_id => '2147343394', # hier bis Ende Dezember 2019; laut fritz bis 2019-12-20; mittlerweile inaktiv
        data  => <<EOF,
-#: XXX laut rbbtext "Gesamtbaumaßnahme ... bis August 2023"
-#: source_id: 2147346762
-# REMOVED --- #: add_fragezeichen: Wann ist die Sperrung beendet? --- #: next_check: 2020-02-29
+#: note: laut rbbtext "Gesamtbaumaßnahme ... bis August 2023"
+#: source_id: 2147346762 (bis Ende 2021)
+#: add_fragezeichen: Wann ist die Sperrung beendet?
+#: last_checked: 2021-01-31 (mapillary)
+#: check_frequency: 180d
+#: next_check: 2021-12-31
 	2::inwork 14338,22885 14276,22914
 EOF
      },
@@ -28744,7 +28747,7 @@ EOF
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=627690&postcount=126 (offen)
 # REMOVED --- #: priority: #C --- #: XXX wann werden die Bauzäune entfernt? --- #: last_checked: 2019-03-05 --- #: check_frequency: 60d
 	2::inwork 8169,13705 8131,13770 8086,13862 8057,13923
-# REMOVED (hier nicht mehr) ---	2::inwork 8103,13675 8169,13705
+# REMOVED (hier nicht mehr) ---	2::inwork 8103,13675 8151,13697 8169,13705
 EOF
      },
      { from  => 1548630000, # 2019-01-28 00:00
@@ -29045,7 +29048,8 @@ EOF
 #: also_indoor: traffic
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
 # REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
-# REMOVED (hier nicht mehr?) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
+# REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
+#: last_checked: 2021-02-04
 #: next_check: 2021-02-15
 	q4::inwork 13508,15912 13312,16027 13189,16089 12943,16214
 EOF
@@ -30811,7 +30815,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-01-29
+#: last_checked: 2021-02-04
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31842,8 +31846,8 @@ EOF
 EOF
      },
      { from  => 1610233200, # 2021-01-10 00:00
-       until => 1612566000, # 2021-02-06 00:00
-       text  => 'L30: Sperrung der Unterführung unter der A10, evtl. sind auch Radfahrer und Fußgänger betroffen, vom 11.01.2021 bis 05.02.2021',
+       until => $isodate2epoch->("2021-02-12 18:00:00"), # 1612566000, # 2021-02-06 00:00
+       text  => 'L30: Sperrung der Unterführung unter der A10, evtl. sind auch Radfahrer und Fußgänger betroffen, vom 11.01.2021 bis 12.02.2021',
        type  => 'gesperrt',
        source_id => 'LS/721-E/21/005',
        data  => <<EOF,
@@ -31939,6 +31943,33 @@ EOF
        data  => <<EOF,
 #: by: https://viz.berlin.de/2021/01/verkehrsvorschau27012021/
 	2::inwork 14196,7086 14233,7086 14251,7096 14323,7080 14310,7022
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Hönower Wiesenweg: Durchfahrt wegen Bauarbeiten möglicherweise nicht mehr möglich',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: PARKSTADTKARLSHORST-2021
+#: by: https://www.deutsches-architekturforum.de/thread/14488-parkstadt-karlshorst-im-bau/?postID=673580#post673580 (ab dem kommenden Jahr, also 2021)
+#: confirmed_by: srt (Sackgassenschild am nördlichen Ende)
+#: add_fragezeichen: Wo ist der gesperrte Abschnitt? Gilt die Sperrung auch für Fußgänger und Radfahrer?
+#: osm_watch: way id="26322046" version="24"
+#: osm_watch: way id="165832806" version="21"
+#: last_checked: 2021-02-01
+#: next_check: 2021-02-01
+	2::inwork 17704,8327 17620,8366
+EOF
+     },
+     { from  => 1611529200, # 2021-01-25 00:00
+       until => 1613430000, # 2021-02-16 00:00
+       text  => 'Lehderstr.: Einbahnstraßenregelung, gesperrt Richtung Westen, voraussichtlich bis 15.2.2021',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: LANGHANS-2021
+#: last_checked: 2021-02-04
+#: next_check: 2021-02-15
+	q3::inwork; 13307,15758 13214,15830 13086,15907 12842,16032
 EOF
      },
     );
