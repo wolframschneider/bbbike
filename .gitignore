@@ -286,3 +286,4 @@ images/sqlite-micro.png
 images/sqlite.png
 images/text-micro.png
 images/text.png
+.github/workflows/test.yml
