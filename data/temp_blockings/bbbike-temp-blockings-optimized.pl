@@ -2261,7 +2261,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-02-07
+#: last_checked: 2021-02-09
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2758,7 +2758,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-02-06
+#: last_checked: 2021-02-08
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2828,11 +2828,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '# REMOVED --- #: by: https://sbahn.berlin/fahren/fahrplanaenderungen/detail/12403-montage-bahnsteigdach-in-karlshorst-aufbau-einer-laermschutzwand-gleisarbeiten-in-rummelsburg/#con-14153
 #: last_checked: 2021-02-07
-	q4::inwork; 14490,10610 14541,10735 14675,10693
+	q4::inwork; 14490,10610 14541,10735
+# REMOVED (hier keine Anzeichen für eine Einbahnstraßenregelung) ---	q4::inwork; 14541,10735 14675,10693
 ',
          'from' => undef,
          'id' => 3256,
-         'text' => 'Bödikerstr. und Laskerstr.: Einbahnstraßenregelung, offen Richtung Persiusstr.',
+         'text' => 'Bödikerstr.: Einbahnstraßenregelung, offen Richtung Persiusstr.',
          'type' => 'handicap',
          'until' => undef
        },
@@ -2896,7 +2897,23 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => undef
        },
-       undef,
+       {
+         'data' => '#: by: mapillary
+#: by: https://www.gruene-fraktion-brandenburg.de/im-parlament/kleine-anfragen/2019/fehlender-lueckenschluss-bei-radweg-an-der-b-198/
+#: by: https://www.moz.de/landkreise/barnim/eberswalde/artikel4/dg/0/1/1735352/ (Realisierung eines Radwegs frühestens 2022)
+#: by: https://www.moz.de/landkreise/uckermark/schwedt-und-angermuende/artikel90/dg/0/1/1817154/ (Bauarbeiten am Ziethener Kreuz bis Ende des Jahres (2020))
+#: source_id: LS/721-E/20/050
+#: XXX wie lange gilt das Verbot?
+#: last_checked: 2020-08-22
+#: next_check: 2021-04-15
+	2 48469,65641 47875,64281 47564,63557
+',
+         'from' => undef,
+         'id' => 3268,
+         'text' => 'B2/B198: Richtung Süden Radfahren verboten',
+         'type' => 'gesperrt',
+         'until' => 1618498800
+       },
        {
          'data' => '#: by: https://www.berliner-woche.de/spandau/c-verkehr/radler-muessen-runter-vom-sattel_a177230
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20090917.1110.139163.html
@@ -2949,7 +2966,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: SIGISMUND-2020
 #: XXX wann sind die Bauarbeiten fertig? vvv
 #: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
-#: last_checked: 2021-01-09 vvv
+#: last_checked: 2021-02-12 vvv
 #: note: hier von Osten aus legaler gemeinsamer Rad- und Gehweg auf dem Bürgersteig, mit kurzer asphaltierter Rampe, von Westen aus verboten für Fahrzeuge aller Art
 	q2::inwork 8031,11249 7934,11275 7897,11287
 	q4::inwork 7934,11275 7965,11380
@@ -3183,20 +3200,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        undef,
-       {
-         'data' => '	2::inwork 9640,29628 9996,29712
-',
-         'from' => 1610233200,
-         'id' => 3318,
-         'source_id' => 'LS/721-E/21/005',
-         'text' => 'L30: Sperrung der Unterführung unter der A10, evtl. sind auch Radfahrer und Fußgänger betroffen, vom 11.01.2021 bis 12.02.2021',
-         'type' => 'gesperrt',
-         'until' => 1613149200
-       },
+       undef,
        {
          'data' => '#: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2021-01-11
-	q4::inwork 17794,8429 17774,8342
+#: last_checked: 2021-02-11
+#: check_frequency: 45d
+# REMOVED (hier nicht mehr) ---	q4::inwork 17794,8429 17774,8342
+	q4::inwork 17774,8342 17753,8290
 ',
          'from' => undef,
          'id' => 3319,
@@ -3285,24 +3295,24 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.deutsches-architekturforum.de/thread/14488-parkstadt-karlshorst-im-bau/?postID=673580#post673580 (ab dem kommenden Jahr, also 2021)
-#: confirmed_by: srt (Sackgassenschild am nördlichen Ende)
-#: add_fragezeichen: Wo ist der gesperrte Abschnitt? Gilt die Sperrung auch für Fußgänger und Radfahrer?
+#: confirmed_by: srt (Sackgassenschild am nördlichen und südlichen Ende, aber noch keine Sperrung)
+#: add_fragezeichen: Gibt es mittlerweile eine Sperrung? Falls ja, wo ist der gesperrte Abschnitt und gilt die Sperrung auch für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="24"
 #: osm_watch: way id="165832806" version="21"
-#: last_checked: 2021-02-01
-#: next_check: 2021-02-01
+#: last_checked: 2021-02-11
+#: check_frequency: 45d
 	2::inwork 17704,8327 17620,8366
 ',
          'from' => undef,
          'id' => 3327,
-         'text' => 'Hönower Wiesenweg: Durchfahrt wegen Bauarbeiten möglicherweise nicht mehr möglich',
+         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 2/2021: Durchfahrt ist noch möglich)',
          'type' => 'gesperrt',
          'until' => undef
        },
        {
          'data' => '#: next_check_id: LANGHANS-2021
 #: also_indoor: traffic (H)
-#: last_checked: 2021-02-04
+#: last_checked: 2021-02-12 (mapillary)
 #: next_check: 2021-02-15
 	q3::inwork; 13307,15758 13214,15830 13086,15907 12842,16032
 ',
@@ -3311,6 +3321,17 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Lehderstr.: Einbahnstraßenregelung, gesperrt Richtung Westen, voraussichtlich bis 15.2.2021',
          'type' => 'handicap',
          'until' => 1613430000
+       },
+       {
+         'data' => '#: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
+#: last_checked: 2021-02-12
+	2::inwork 9873,10285 9668,10306
+',
+         'from' => undef,
+         'id' => 3329,
+         'text' => 'Zossener Brücke - Mehringplatz: Weg wegen Bauarbeiten gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );

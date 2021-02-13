@@ -11900,7 +11900,7 @@ EOF
        text  => 'CSD am 28.6.2008',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 8358,11477 8301,11469 8226,11458 8145,11438 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7413,10244 7238,10299 7131,10331 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6532,10529 6685,10690 6740,10755 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
+	2::temp 8358,11477 8301,11469 8226,11458 8145,11438 8096,11393 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7413,10244 7238,10299 7131,10331 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6532,10529 6685,10690 6740,10755 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
 	2::temp 8553,11630 8548,11571 8542,11502 8479,11493 8374,11479
 	2::temp 9984,12426 9934,12420 9858,12410 9780,12401 9771,12400 9713,12392 9664,12387 9613,12381 9475,12365 9358,12351 9141,12320 9164,12172 9064,12156
 	2::temp 8553,11638 8567,11799 8571,11846 8577,11896 8595,12066 8737,12098 8743,12099 8861,12125 9054,12154
@@ -28551,7 +28551,7 @@ EOF
        until => $isodate2epoch->("2021-07-01 17:00:00"), # $isodate2epoch->("2020-12-05 17:00:00"), # 1542826837, # -> handicap_s-orig, 1554073200, # 2019-04-01 01:00
        text  => 'Kynaststr.: Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden nur für Fußgänger, offiziell sollen Radfahrer absteigen und schieben, bis 1.7.2021',
        type  => 'handicap',
-       source_id => '2147343461',
+       source_id => '2147343461', # inaktiv
        data  => <<EOF,
 # REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
 # REMOVED --- #: XXX regelmäßig prüfen --- #: priority: #A --- #: last_checked: 2018-11-16
@@ -28563,7 +28563,7 @@ EOF
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-02-07
+#: last_checked: 2021-02-09
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -30812,7 +30812,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-02-06
+#: last_checked: 2021-02-08
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31019,12 +31019,13 @@ EOF
      { from  => undef, # 1594232559, # 2020-07-08 20:22
        until => undef, # $isodate2epoch->("2020-07-13 01:30:00"),
        # früher öfters Einbahnstraßenregelung wegen SEV
-       text  => 'Bödikerstr. und Laskerstr.: Einbahnstraßenregelung, offen Richtung Persiusstr.',
+       text  => 'Bödikerstr.: Einbahnstraßenregelung, offen Richtung Persiusstr.',
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED --- #: by: https://sbahn.berlin/fahren/fahrplanaenderungen/detail/12403-montage-bahnsteigdach-in-karlshorst-aufbau-einer-laermschutzwand-gleisarbeiten-in-rummelsburg/#con-14153
 #: last_checked: 2021-02-07
-	q4::inwork; 14490,10610 14541,10735 14675,10693
+	q4::inwork; 14490,10610 14541,10735
+# REMOVED (hier keine Anzeichen für eine Einbahnstraßenregelung) ---	q4::inwork; 14541,10735 14675,10693
 EOF
      },
      { from  => 1594474932, # 2020-07-11 15:42
@@ -31165,7 +31166,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2020-11-27 17:00:00"), # 1598197723, # 2020-08-23 17:48
+       until => $isodate2epoch->("2021-04-15 17:00:00"), # 1598197723, # 2020-08-23 17:48
        text  => 'B2/B198: Richtung Süden Radfahren verboten',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -31176,7 +31177,7 @@ EOF
 #: source_id: LS/721-E/20/050
 #: XXX wie lange gilt das Verbot?
 #: last_checked: 2020-08-22
-#: next_check: 2020-11-27
+#: next_check: 2021-04-15
 	2 48469,65641 47875,64281 47564,63557
 EOF
      },
@@ -31322,7 +31323,7 @@ EOF
 #: next_check_id: SIGISMUND-2020
 #: XXX wann sind die Bauarbeiten fertig? vvv
 #: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
-#: last_checked: 2021-01-09 vvv
+#: last_checked: 2021-02-12 vvv
 #: note: hier von Osten aus legaler gemeinsamer Rad- und Gehweg auf dem Bürgersteig, mit kurzer asphaltierter Rampe, von Westen aus verboten für Fahrzeuge aller Art
 	q2::inwork 8031,11249 7934,11275 7897,11287
 	q4::inwork 7934,11275 7965,11380
@@ -31857,8 +31858,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2021-01-11
-	q4::inwork 17794,8429 17774,8342
+#: last_checked: 2021-02-11
+#: check_frequency: 45d
+# REMOVED (hier nicht mehr) ---	q4::inwork 17794,8429 17774,8342
+	q4::inwork 17774,8342 17753,8290
 EOF
      },
      { from  => undef, # 
@@ -31944,17 +31947,17 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Hönower Wiesenweg: Durchfahrt wegen Bauarbeiten möglicherweise nicht mehr möglich',
+       text  => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 2/2021: Durchfahrt ist noch möglich)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.deutsches-architekturforum.de/thread/14488-parkstadt-karlshorst-im-bau/?postID=673580#post673580 (ab dem kommenden Jahr, also 2021)
-#: confirmed_by: srt (Sackgassenschild am nördlichen Ende)
-#: add_fragezeichen: Wo ist der gesperrte Abschnitt? Gilt die Sperrung auch für Fußgänger und Radfahrer?
+#: confirmed_by: srt (Sackgassenschild am nördlichen und südlichen Ende, aber noch keine Sperrung)
+#: add_fragezeichen: Gibt es mittlerweile eine Sperrung? Falls ja, wo ist der gesperrte Abschnitt und gilt die Sperrung auch für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="24"
 #: osm_watch: way id="165832806" version="21"
-#: last_checked: 2021-02-01
-#: next_check: 2021-02-01
+#: last_checked: 2021-02-11
+#: check_frequency: 45d
 	2::inwork 17704,8327 17620,8366
 EOF
      },
@@ -31965,9 +31968,19 @@ EOF
        data  => <<EOF,
 #: next_check_id: LANGHANS-2021
 #: also_indoor: traffic (H)
-#: last_checked: 2021-02-04
+#: last_checked: 2021-02-12 (mapillary)
 #: next_check: 2021-02-15
 	q3::inwork; 13307,15758 13214,15830 13086,15907 12842,16032
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Zossener Brücke - Mehringplatz: Weg wegen Bauarbeiten gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
+#: last_checked: 2021-02-12
+	2::inwork 9873,10285 9668,10306
 EOF
      },
     );

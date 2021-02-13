@@ -935,7 +935,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/_assets/pdf-dateien/radverkehrsplan.pdf (Asphaltierung soll 2018 erfolgen)
 #: by: https://api.fixmyberlin.de/api/plannings/36 ("kann die Asphaltierung der Gärtnerstr. ab 2020 erfolgen, wenn die Baumaßnahme der Berliner Wasserbetriebe (ab Frühjahr 2019) abgeschlossen ist.")
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2021-02-06
+#: last_checked: 2021-02-08
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -19476,6 +19476,7 @@ In den Kaveln: Beton	Q1+ 4041,20472 4026,20428 3999,20367
 #: by: ^^^
 # 
 #: by: Roland (herwig):
+#: confirmed_by: srt
 Stechlinstr.: schlechtes Kopfsteinpflaster	Q3 18005,8517 18086,8634 18222,8843
 # 
 #: by: Klaus Arndt:
@@ -20291,6 +20292,9 @@ Wahnfriedstr.: gut befahrbarer Asphalt	Q1 2019,25360 1931,25511 1884,25628 1843,
 #: corrected_by: srt (Kleinpflastersteine, Q2 -> ..., neu gemacht)
 Stolzingstr.: Asphalt	Q0 1338,25262 1360,25269 1429,25335 1468,25384
 #: confirmed_by: srt (konkretisiert: Kleinpflastersteine -> Mosaikpflaster)
+#: XXX möglicherweise wird hier auch asphaltiert
+#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1051692.php (Erwähnung einer zukünftigen Fahrbahninstandsetzung 2021)
+#: next_check: 2021-06-30
 Stolzingstr.: Mosaikpflaster, uneben	Q2 1468,25384 1542,25483
 #: corrected_by: srt (Kleinpflastersteine, Q2 -> ...)
 Stolzingstr.: Asphalt	Q0 1542,25483 1558,25505
@@ -27994,6 +27998,7 @@ Sprengelstr. (Wilhelmstadt): Asphalt	Q0 -3887,12673 -4026,12720
 Sprengelstr. (Wilhelmstadt): Gehwegplatten	Q1+ -4026,12720 -4119,12763
 #: confirmed_by: srt (östlicher Abschnitt)
 #: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9973 (Baubeginn war für 2020 geplant)
+#: by: https://wilhelmstadt-bewegt.de/category/baustellen-ticker-betckestrasse/ (2021-02-10: noch keine Infos)
 #: XXX geplanter Umbau der Straße --- ändert sich an der Qualität etwas?
 #: last_checked: 2020-10-12
 #: check_frequency: 90d
