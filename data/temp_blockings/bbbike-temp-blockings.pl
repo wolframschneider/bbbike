@@ -15518,8 +15518,15 @@ EOF
 #: note: genauere Uhrzeit von Dieter Heimann
 #: confirmed_by: um 20:30 Uhr steht man vor einem geschlossenen Tor, zumindest an der Nordostseite (2012-08)
 #: tempex: sa,su,holiday,(mo-fr T20:00-sunrise) vvv
-Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21574,7049 21508,7126 21491,7182 21475,7500 21497,7597 21540,7630
-Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21050,7341 21019,7340
+Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21572,7051 21505,7129 21491,7182 21490,7197 21484,7326 21475,7500 21497,7597 21540,7630
+Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21153,7393 21050,7341 21019,7340
+Verlängerte Köpenicker Str.: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21291,7048 21345,7000 21359,6983
+(Straße A, Innovationspark Wuhlheide): Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21484,7326 21343,7321 21231,7249
+(Straße E, Innovationspark Wuhlheide): Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21490,7197 21427,7174 21366,7120 21294,7189 21243,7135 21219,7111
+(Straße E, Innovationspark Wuhlheide): Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21153,7393 21207,7280 21231,7249 21175,7212 21243,7135
+(Straße F, Innovationspark Wuhlheide): Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21505,7129 21410,7027 21394,7040 21371,7021 21345,7000
+(Straße G, Innovationspark Wuhlheide): Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21572,7051 21547,7024 21476,6956 21560,6869 21627,6942 21547,7024
+(Verlängerte Hämmerlingstr. - Straße G, Innovationspark Wuhlheide)	2::night:weekend 21582,6842 21560,6869
 (Innovationspark Wuhlheide - Wuhlewanderweg): Tor nachts ab 20 Uhr und am Wochenende gesperrt	2::night::weekend 21491,7182 21547,7208
 #: tempex ^^^
 #: note: ^^^
@@ -16266,7 +16273,7 @@ EOF
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-01-25
+#: last_checked: 2021-02-19
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -27677,8 +27684,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => 1598634704, # Ende der Bauarbeiten für die *gesamte* Schönstr. --- 2021-06-01 00:00
-       text  => 'Schönstr.: Bauarbeiten zwischen Mirbachplatz und Paul-Oestreich-Str., Fahrbahn gesperrt',
+       until => undef, # 1598634704, # Ende der Bauarbeiten für die *gesamte* Schönstr. --- 2021-06-01 00:00
+       text  => 'Schönstr.: Bauarbeiten zwischen Mirbachplatz und Paul-Oestreich-Str. im Bereich der Klinik, Fahrbahn gesperrt',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php',
        data  => <<EOF,
@@ -27695,8 +27702,12 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.909888.php (nächster Bauabschnitt ab 27. April 2020)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/der-gehweg-ist-jetzt-fertig_a258259
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-auf-der-schoenstrasse-gehen-weiter_a261160
-# REMOVED (zwar nicht komplett fertig, aber die Fahrbahn ist asphaltiert (bis auf oberste Deckschicht, aber keine Qualitätseinbußen deswegen) und kann passiert werden) --- #: XXX nach den Bauarbeiten bessere Qualität --- #: XXX mittlerweile vom Mirbachplatz aus etwa 100m gut befahrbar (Fahrbahn bis auf die Deckschicht hergestellt), danach geht's nur auf dem Gehweg weiter --- #: note: laut fritz bis 16.08.2019 --- #: also_indoor: traffic --- #: priority: #B --- #: last_checked: 2020-06-29 --- #: check_frequency: 60d
-	q4::inwork 13391,16436 13630,16629
+#: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht's nur auf dem Gehweg weiter
+#: also_indoor: traffic (G)
+#: priority: #B
+#: last_checked: 2021-02-17
+#: check_frequency: 60d
+	q3::inwork 13391,16436 13630,16629
 EOF
      },
      { from  => 1530907854, # 2018-07-06 22:10
@@ -27920,7 +27931,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2021-02-05
+#: last_checked: 2021-02-19
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28563,7 +28574,7 @@ EOF
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-02-09
+#: last_checked: 2021-02-15
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -29035,8 +29046,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-01-24 07:00:00"), # 1568571027, # 1557083524, # 2019-05-05 21:12
-       until => $isodate2epoch->("2021-02-15 17:00:00"), # 1569607982, # $isodate2epoch->("2019-10-07 18:00:00"),
-       text  => 'Langhansstr.: zwischen Berliner Allee und Roelckestr. ist die Fahrbahn wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, 25.1.2021 bis 15.2.2021',
+       until => $isodate2epoch->("2021-08-13 17:00:00"), # 1569607982, # $isodate2epoch->("2019-10-07 18:00:00"),
+       text  => 'Langhansstr.: zwischen Berliner Allee und Heinersdorfer Str. ist die Fahrbahn wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, 25.1.2021 bis 13.8.2021',
        type  => 'handicap',
        source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
        data  => <<EOF,
@@ -29045,13 +29056,16 @@ EOF
 #: source_id: 2147346832 (Gesamtbaumaßnahme bis Mitte August 2021)
 #: by: https://viz.berlin.de/2021/01/verkehrsvorschau25012021/ ("Mitte Februar (2021) wird die Sperrung um den Abschnitt Heinersdorfer Straße - Roelckestraße erweitert")
 #: by: https://viz.berlin.de/2021/01/langhansstr-sperrung/
+#: by: https://www.bahninfo-forum.de/read.php?9,691318,693319#msg-693319
+#: XXX teilweise existieren auch Einschränkungen beim Überqueren der Langhansstr., auch für Fußgänger (gesehen: 2021-02-17 an der Behaimstr.)
 #: also_indoor: traffic (H,G)
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
 # REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
-#: last_checked: 2021-02-04
-#: next_check: 2021-02-15
-	q4::inwork 13508,15912 13312,16027 13189,16089 12943,16214
+#: last_checked: 2021-02-17
+#: check_frequency: 60d
+#: next_check: 2021-08-13
+	q4::inwork 13508,15912 13312,16027 13189,16089 12943,16214 12859,16255 12797,16285 12725,16321 12564,16399 12399,16479 12189,16578
 EOF
      },
      { from  => 1557166526, # 2019-05-06 20:15
@@ -30597,7 +30611,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-01-24
+#: last_checked: 2021-02-17
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30812,7 +30826,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-02-13
+#: last_checked: 2021-02-19
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31001,7 +31015,7 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2020-12-30
+#: last_checked: 2021-02-17
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2020-11-07
 	q4::inwork 14136,17170 13996,16959
@@ -31770,7 +31784,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2020-11-14 vvv
+#: last_checked: 2021-02-19 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -31964,14 +31978,15 @@ EOF
 EOF
      },
      { from  => 1611529200, # 2021-01-25 00:00
-       until => 1613430000, # 2021-02-16 00:00
-       text  => 'Lehderstr.: Einbahnstraßenregelung, gesperrt Richtung Westen, voraussichtlich bis 15.2.2021',
+       until => $isodate2epoch->("2021-08-13 17:00:00"), # 1613430000, # 2021-02-16 00:00
+       text  => 'Lehderstr.: Einbahnstraßenregelung, gesperrt Richtung Westen, möglicherweise bis 13.8.2021',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: LANGHANS-2021
+#: source_id: 2147346889 (bis 13.8.2021)
 #: also_indoor: traffic (H)
-#: last_checked: 2021-02-12 (mapillary)
-#: next_check: 2021-02-15
+#: last_checked: 2021-02-17
+#: next_check: 2021-08-13
 	q3::inwork; 13307,15758 13214,15830 13086,15907 12842,16032
 EOF
      },
@@ -31986,6 +32001,53 @@ EOF
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
 #: last_checked: 2021-02-13
 	2::inwork 9873,10285 9668,10306
+EOF
+     },
+     { from  => 1613862000, # 2021-02-21 00:00
+       until => 1614034800, # 2021-02-23 00:00
+       text  => 'Woltersdorf, Brücke über den Stolpkanal: Sperrung am 22.02.2021, evtl. sind auch Radfahrer und Fußgänger betroffen ',
+       type  => 'gesperrt',
+       source_id => 'LS/721-F/21/021',
+       data  => <<EOF,
+	2::inwork 35479,7051 35482,7099
+EOF
+     },
+     { from  => 1613631600, # 2021-02-18 08:00
+       until => 1613977200, # 2021-02-22 08:00
+       text  => 'Bahnhofstr.: Unterführung unter der A114 gesperrt, auch für Fußgänger und Radfahrer, vom 19.02.2021 08:00 Uhr bis 22.02.2021 08:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => '2147346882',
+       data  => <<EOF,
+	2::inwork 12672,20720 12723,20691
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Heinrich-Dathe-Platz.: Wochenmarkt Mo, Do und Fr 08.00-17.00',
+       type  => 'handicap',
+       recurring => 1,
+       data  => <<EOF,
+#: by: https://tierparkcenter.de/wochenmarkt/ (Öffnungszeiten)
+#: tempex: (mo,th,fr) T08-T17
+	q4::temp:clock 18478,10406 18418,10365
+EOF
+     },
+     { from  => 1613588400, # 2021-02-17 20:00
+       until => 1613797200, # 2021-02-20 06:00
+       text  => 'Kleine Rosenthaler Str.: zwischen Linienstr. und Rosenthaler Str. wegen Dreharbeiten gesperrt, vom 18.02.2021 20:00 Uhr bis 20.02.2021 06:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'LMS-BR_r_LMS-BR_231416_LMS-BR_72',
+       data  => <<EOF,
+	2::inwork 10324,13459 10318,13528 10313,13568 10309,13601 10301,13701
+EOF
+     },
+     { from  => 1613763246, # 2021-02-19 20:34
+       until => 1618610400, # 2021-04-17 00:00
+       text  => 'Kaiserin-Augusta-Str.: zwischen Theodorstr. und Kreisverkehr Metzplatz Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, bis 16.04.2021',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: rbbtext
+	q4::inwork 9363,5903 9291,5908
 EOF
      },
     );

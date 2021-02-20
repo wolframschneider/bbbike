@@ -43,14 +43,14 @@
 # 
 #: next_check_id: FRANZOESISCHE-2018
 #: osm_watch: node id="6380038401" version="1"
-#: last_checked: 2020-12-21
+#: last_checked: 2021-02-19
 #: check_frequency: 90d
 #: valid: -20210630
 	X::inwork 9195,11972
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2021-02-13
+#: last_checked: 2021-02-19
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -85,7 +85,7 @@
 #: XXX Nöldnerstraße (Rummelsburg) in beiden Richtungen zwischen Karlshorster Straße und Stadthausstraße: Leitungsbau, Verkehr wird wechselseitig durch eine Baustellenampel geregelt, vom 16.12.2020 09:00 Uhr bis 28.05.2021 17:00 Uhr
 #: source_id: 2147346700
 #: also_indoor: traffic
-#: last_checked: 2021-02-11
+#: last_checked: 2021-02-18
 #: check_frequency: 30d
 #: next_check: 2021-05-28
 #: valid: -20210528
@@ -100,6 +100,20 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linke
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
+# 
+#: next_check_id: LANGHANS-2021
+#: last_checked: 2021-02-17
+#: next_check: 2021-08-13
+Roelckestr./Lehderstr.: temporäre Ampel	X::inwork 12842,16032
+# 
+#: by: https://viz.berlin.de/2021/02/blankenbg-bahnhofstr/
+#: XXX bis wann wird es die Gegenverkehrsregelung geben? Der Radweg auf der Nordseite wird erstmal auch gesperrt sein.
+#: next_check: 2021-03-22 vvv
+#: valid: 20210222- vvv
+Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12672,20720
+Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12723,20691
+#: valid ^^^
+#: next_check ^^^
 # 
 #: temporary ^^^
 # 
@@ -1791,6 +1805,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6996,15319
 #: by: https://www.deutsches-architekturforum.de/thread/9772-kleinere-projekte-wedding-gesundbrunnen/?postID=675214#post675214
 #: by: https://abendblatt-berlin.de/2021/02/01/berlin-wedding-spd-fordert-fahrradstrasse-fuer-den-sprengelkiez/ ("seit Monaten außer Betrieb")
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10432 (sichere Querungsmöglichkeit gefordert)
 #: XXX Ampel ausgeschaltet, vielleicht dauerhaft (Lynar/Tegeler)
 #: osm_watch: node id="3777205512" version="3"
 #: last_checked: 2021-01-10 (krickstadt)
@@ -2871,7 +2886,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2021-02-13 vvv
+#: last_checked: 2021-02-19 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3283,7 +3298,7 @@ Hultschiner Damm/Rahnsdorfer Str.: hier wird eine Ampel gebaut	X::inwork 24653,1
 # 
 #: next_check_id: BERLINERBAHNHOF-2020
 #: XXX wird die provisorische Ampelanlage in eine permanente umgebaut? vvv
-#: last_checked: 2020-12-11 (mapillary) vvv
+#: last_checked: 2021-01-20 (mapillary) vvv
 #: check_frequency: 60d vvv
 	X::inwork 12166,21208
 	X::inwork 12158,21166
