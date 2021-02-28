@@ -37,7 +37,7 @@ Rasthof Avus	1 1870,10406 1882,10356 1847,10323 1723,10289 1692,10348 1793,10424
 Breitenbachplatz (Westseite)	1 4423,6477 4335,6523 4218,6583 4111,6651 4074,6681 4021,6729 3947,6814
 Breitenbachplatz (Ostseite)	1 3981,6850 4061,6753 4103,6716 4141,6688 4248,6620 4347,6551 4423,6477
 Inselstr. Schwanenwerder	1 -5310,4216 -5393,4211 -5453,4274 -5471,4412 -5442,4526 -5386,4539 -5341,4511 -5358,4404 -5356,4296 -5310,4216
-Bayerischer Platz	1 6059,9118 6044,9223 6084,9242 6131,9241 6152,9136 6147,9100 6115,9088 6076,9091 6059,9118
+Bayerischer Platz	1 6059,9118 6044,9223 6084,9242 6131,9241 6152,9136 6147,9100 6115,9088 6066,9094 6059,9118
 orthodoxe Kirche	1 3952,8980 3831,9052
 U-Bahn Dahlem	1 3216,6393 3123,6318 3023,6246 2950,6141 2898,5947 2823,5672 2797,5624 2746,5537 2523,5114 2469,5043 2313,4901 2190,4823 2079,4769 2027,4792
 U-Bahn Dahlem	1 2027,4792 2095,4805 2169,4854 2217,4884 2288,4932 2454,5067 2499,5144 2717,5578
@@ -1098,6 +1098,7 @@ Leipziger Platz (Schulzendorf)	1 23645,-5892 23753,-5811
 Waltersdorf	2::igndisp 21462,-3900 21516,-3839
 Würzburger Str.	1 26031,-4072 26082,-4137 26119,-4215 26125,-4280
 Würzburger Str.	1 26109,-4284 26096,-4218 26060,-4148 26014,-4087
+Spartakusstr.	1s 23907,-3542 23865,-3442 23820,-3337
 Mittelstreifen nicht überquerbar	3nocross::ignrte -974,128015 -724,127995 6,127935 298,127911
 B104: Neubrandenburg -> Feldstr.: Mittelstreifen nicht überquerbar	3::igndisp -974,128015 -724,127995 -719,128043
 Feldstr. -> Pasewalk: Mittelstreifen nicht überquerbar	3::igndisp -719,128043 -724,127995 6,127935
@@ -1708,7 +1709,6 @@ Viktoriastr. -> Tempelhofer Damm: unbequem passierbarer Mittelstreifen	3::igndis
 U-Bahnviadukt	3nocross::ignrte 10969,15944 10964,15896 10953,15787
 Schönhauser Allee -> Kopenhagener Str.: U-Bahnviadukt	3::igndisp 10953,15787 10964,15896 10722,15921
 Kopenhagener Str. -> Schönhauser Allee: U-Bahnviadukt	3::igndisp 10722,15921 10964,15896 10969,15944
-Schönhauser Allee: U-Bahnviadukt	3 10941,15697 10917,15525 11055,15504
 U-Bahnrampe	3nocross::ignrte 10975,16896 10992,16829 11008,16729 11021,16605 11027,16553 11019,16465
 Berliner Str. -> Hallandstr.: U-Bahnrampe	3::igndisp 10975,16896 10992,16829 11270,16890
 Hallandstr. -> Berliner Str.: U-Bahnrampe	3::igndisp 11270,16890 10992,16829 11008,16729
@@ -2341,8 +2341,8 @@ Südwestkorso -> Gustav-Rickelt-Weg: Mittelstreifen, parkende Autos	3::igndisp 42
 Südwestkorso -> Südwestkorso: Mittelstreifen, parkende Autos	3::igndisp 4125,6763 4204,6826 4061,6753
 Gustav-Rickelt-Weg -> Südwestkorso: Mittelstreifen, parkende Autos	3::igndisp 4223,6796 4204,6826 4061,6753
 Mittelstreifen	3nocross::ignrte 1910,20548 1929,20501 1955,20435
-Berliner Str. -> Uferweg am Tegeler Hafen: Mittelstreifen	3::igndisp 1955,20435 1929,20501 1863,20478
-Uferweg am Tegeler Hafen -> Berliner Str.: Mittelstreifen	3::igndisp 1863,20478 1929,20501 1910,20548
+Karolinenstr. -> Uferweg am Tegeler Hafen: Mittelstreifen	3::igndisp 1955,20435 1929,20501 1863,20478
+Uferweg am Tegeler Hafen -> Karolinenstr.: Mittelstreifen	3::igndisp 1863,20478 1929,20501 1910,20548
 Mittelstreifen	3nocross::ignrte 10085,21840 10097,21809 10106,21784
 Lehmweg -> Dietzgenstr.: Mittelstreifen	3::igndisp 10177,21802 10097,21809 10106,21784
 Mittelstreifen	3nocross::ignrte 10120,21464 10118,21510 10114,21586 10111,21661
@@ -2655,7 +2655,6 @@ Rampe und flache Treppe (8 Stufen)	0:25:76 16065,6126
 tragen (Treppe, 12 Stufen)	0:15:-23 5475,7906
 tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
-tragen (Treppe, 3 Stufen)	0:10:-15 19173,14931
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
@@ -3148,14 +3147,16 @@ mehrere Drängelgitter	BNP:12:43:trailer=30 7270,8616
 Drängelgitter	BNP:3:-206:trailer=10 67807,20954
 Drängelgitter, geringe lichte Breite	BNP:6:-34:trailer=no 12996,14562
 Drängelgitter, geringe lichte Breite	BNP:6:-32:trailer=no 13010,14540
-Tor (freilaufende Büffel)	BNP:5:-40 14494,24824
-Tor (freilaufende Büffel)	BNP:5:-40 14848,24411
 Schranke, vorbeifahren mit Bordsteinen	BNP:10:43 5005,2100
 Barriere	BNP:5:-72 4708,21235
 offenes Tor	BNP:3:-151 12592,9249
 Drängelgitter	BNP:3:-193:trailer=10 1035,14996
 Schranke, umständlich zu umfahren	BNP:5:-113:trailer=15 19608,-1953
 Schranke	BNP:2:-157:trailer=5 19617,6208
+Schranke	BNP:5:-109:trailer=15 22855,4348
+(Breiter Weg - Südostallee/Sterndamm): Durchgang ist wegen Bauarbeiten gesperrt	2::inwork 17538,5301 17601,5374
+Ankerweg: kann wegen Hochbauarbeiten nicht passierbar sein	2::inwork 22118,2559 22159,2585 22197,2612
+An der Dahme: kann wegen Hochbauarbeiten nicht passierbar sein	2::inwork 22197,2612 22270,2549
 Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11916,11846 11923,11881 11940,11982
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s 10472,14632 10320,14608
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
@@ -3211,7 +3212,7 @@ Ringeltaubenweg: durch Bauzäune abgesperrt	2::inwork 26519,12808 26460,12858 263
 Mauswieselweg: durch Bauzäune abgesperrt	2::inwork 26570,12860 26503,12912 26421,12959
 Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21379,33
 Weidenkätzchenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21421,158 21447,47
-Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14210,8227 14229,8278
+Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14121,8147 14210,8227 14229,8278
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle): kein Durchgang möglich	2:inwork 17639,5612 17675,5521
 Französische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch für Fußgänger	2:inwork 9076,12054 9183,12076
@@ -3227,7 +3228,7 @@ Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5643,12253
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5574,12237 5535,12206
 Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20627,11552 20631,11621 20633,11651
-Heino-Schmieden-Weg: größtenteils noch wegen Bauarbeiten gesperrt	2::inwork 20720,11484 20726,11539 20735,11613 20831,11604 20818,11480
+Heino-Schmieden-Weg: größtenteils noch wegen Bauarbeiten gesperrt	2::inwork 20726,11539 20735,11613 20831,11604 20818,11480
 Niederlagstr.: Einbahnstraße	1s:inwork 9972,12184 9959,12281
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
 Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409
@@ -3290,8 +3291,8 @@ Wormser Str. -> Lietzenburger Str.: Mittelstreifen schlecht zu überqueren	3::ign
 (Kolonieweg a. d. Forkenbeckstr.): schieben (Rampe 10 Stufen)	0:15:-78 3756,8101
 tragen (2 x 10 Stufen)	0:40:18 1666,4637
 tragen (2 x 10 Stufen)	0:40:21 1689,4630
-Sterzinger Str.	1 6096,8600 6123,8546
-Bozener Str.	1 5900,8930 5971,8926 6042,8917
+Sterzinger Str.	1 6094,8618 6123,8546
+Bozener Str.	1 5900,8930 5971,8926 6033,8919
 Bozener Str.	1 5971,8926 5974,9100
 schwierig zu querender Mittelstreifen	3nocross::ignrte 6532,10529 6636,10492 6753,10446
 Kleiststr. -> Kalckreuthstr.: schwierig zu querender Mittelstreifen	3::igndisp 6753,10446 6636,10492 6628,10318

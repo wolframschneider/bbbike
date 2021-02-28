@@ -85,7 +85,7 @@
 #: XXX Nöldnerstraße (Rummelsburg) in beiden Richtungen zwischen Karlshorster Straße und Stadthausstraße: Leitungsbau, Verkehr wird wechselseitig durch eine Baustellenampel geregelt, vom 16.12.2020 09:00 Uhr bis 28.05.2021 17:00 Uhr
 #: source_id: 2147346700
 #: also_indoor: traffic
-#: last_checked: 2021-02-18
+#: last_checked: 2021-02-24
 #: check_frequency: 30d
 #: next_check: 2021-05-28
 #: valid: -20210528
@@ -106,14 +106,20 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linke
 #: next_check: 2021-08-13
 Roelckestr./Lehderstr.: temporäre Ampel	X::inwork 12842,16032
 # 
+#: next_check_id: BAHNHOF-2021
 #: by: https://viz.berlin.de/2021/02/blankenbg-bahnhofstr/
-#: XXX bis wann wird es die Gegenverkehrsregelung geben? Der Radweg auf der Nordseite wird erstmal auch gesperrt sein.
-#: next_check: 2021-03-22 vvv
+#: XXX bis wann wird es die Gegenverkehrsregelung geben?
+#: source_id: 2147346767 (bis 29.3.2021)
+#: last_checked: 2021-02-26 (mapillary) vvv
+#: check_frequency: 60d vvv
+#: next_check: 2021-03-29 vvv
 #: valid: 20210222- vvv
 Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12672,20720
 Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12723,20691
 #: valid ^^^
 #: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: temporary ^^^
 # 
@@ -973,7 +979,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 1074,8470
 	X 2112,7754
 	X 2757,7604
-	X 6020,8809
+	X 6012,8809
 	X 161,3062
 	X -2280,2177
 	X -4003,1234
@@ -2886,7 +2892,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2021-02-19 vvv
+#: last_checked: 2021-02-25 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3012,6 +3018,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F -1099,14925
 #: note: wahrscheinlich synchronisiert geschaltet, evtl. auch mit den Ampeln an Autobahnanschlussstelle synchron vvv
 	X 9242,7286
+#: note: Anforderungsampel für linksabbiegende Radfahrer (Te-Damm -> Manfred-von-Richthofen-Str.)
 	X 9242,7325
 #: note ^^^
 	F 2944,15880
@@ -3037,15 +3044,15 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: last_checked ^^^
 #: note: Anforderungsampel
 #: note: Radfahrer Richtung Nordosten müssen diese Ampel zum Überqueren benutzen
-#: last_checked: 2021-01-16
-	F::inwork 14213,6840
+#: last_checked: 2021-02-20
+	F::inwork 14239,6875
 #: next_check ^^^
 #: valid ^^^
 #: next_check_id ^^^
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20211231 vvv
-#: last_checked: 2021-01-29
+#: last_checked: 2021-02-27
 #: check_frequency: 90d
 #: next_check: 2022-12-31 vvv
 	X::inwork 13278,6967
@@ -3063,7 +3070,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://twitter.com/VIZ_Berlin/status/1301038406156398593 (vermutlich keine Änderung bis Ende Oktober 2020)
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="5"
-#: last_checked: 2020-12-25
+#: last_checked: 2021-02-20
 #: check_frequency: 60d
 	X::inwork 14174,7505
 # 
@@ -3251,7 +3258,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: provisorische Ampel
 #: note: Anforderungsampel
 #: XXX bleibt die Ampel Hermannstr./Thomasstr. permanent?
-#: last_checked: 2020-12-27
+#: last_checked: 2021-02-27
 #: check_frequency: 90d
 	F::inwork 12181,7390
 # 
@@ -3457,7 +3464,7 @@ Hultschiner Damm/Rahnsdorfer Str.: hier wird eine Ampel gebaut	X::inwork 24653,1
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2021-01-16 vvv
+#: last_checked: 2021-02-24 vvv
 #: check_frequency: 60d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738

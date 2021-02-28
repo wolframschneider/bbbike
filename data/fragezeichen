@@ -894,7 +894,6 @@ Saarmunder Str. - Eduard-Claudius-Str.: gibt es hier eine Verbindung? Qualität?	
 Heinrich-Mann-Allee: gibt es ab "Zum Kahleberg" Richtung Süden Radwege? Benutzungspflicht?	? -10500,-4514 -10359,-4780 -10249,-5048 -10150,-5260 -10075,-5419 -10015,-5551 -9996,-5596
 Kunersdorfer Str. (Potsdam): Kann die Heinrich-Mann-Allee in Höhe Kunersdorfer Str. überquert werden?	? -11322,-3332 -11311,-3322
 Uristr. (Zepernick): Qualität des östlichen Abschnitts?	? 18522,26620 18850,26830 18914,26835
-Schweizer Str. (Zepernick): Qualität des nördlichen Abschnitts?	? 18620,26495 18522,26620 18391,26790
 Steenerbuschstr. (Zepernick): Qualität des verkehrsberuhigten Abschnitts?	? 18697,27189 18719,27191 18814,27266
 Werneuchen - Hirschfelde: Qualität (im Westen asphaltiert, im Osten Kopfsteinpflaster)?	? 34347,26261 34900,26373 36251,26400 36443,26374
 Beiersdorfer Str. (Werneuchen): Qualität?	? 32874,25981 32967,26167 33070,26202 33121,26227 33106,26278 33038,26323
@@ -913,7 +912,6 @@ Grasmückenring: ist der nördliche Teil der Straße schon fertiggestellt? Qualität
 Elsternstr.: ist der nördliche Teil der Straße schon fertiggestellt? Qualität?	? -18145,499 -18145,499 -18146,544 -18146,544 -18140,573
 Brandenburgische Str. (Schöneiche): wie ist die Qualität ab Berliner Str. Richtung Süden?	? 30512,7909 30454,7670 30495,7350
 Rüdersdorfer Str. (Schöneiche): wie ist die Qualität ab Berliner Str. Richtung Süden: genauso schlecht wie im nördlichen Abschnitt?	? 31446,7915 30891,7130
-Pestalozzistr. (Schönow): wie ist die Qualität im westlichen Abschnitt?	? 18040,30176 18008,30247 18037,30316 18132,30351 18236,30497 18330,30529
 Mozartstr.: Qualität des südlichen Abschnitts?	? 8334,26287 8348,26449
 Tegeler Str. (Falkensee): Qualität?	? -10088,17984 -10150,17988 -10292,17929 -10374,17869 -10417,17770
 Trampe - Kruge: Qualität?	? 39683,40892 40258,40191 41298,39991 41731,39846
@@ -1004,7 +1002,7 @@ Melzow - Warnitz: querliegende Betonplatten (Betonplatten zumindest auf der nörd
 Weg am Flughafen - Rotberg: Feldweg (Ist der südöstliche Abschnitt des Weges ein Schotterweg? Oder nur ein unbefestigter Feldweg?)	? 17162,-6465 17910,-6981
 (ist der mittlere Abschnitt der Fritz-Reuter-Str. ebenfalls gepflastert?)	? 2607,-105 2667,-199
 Eichendorffstr. (Schwanebeck-West): unbefestigte Straße (Wurde die Eichendorffstr. mittlerweile befestigt?)	? 17638,24756 17584,24703
-Ernst-Toller-Str.: unbefestigte Straße (Wurde die Ernst-Toller-Str. mittlerweile befestigt?)	? 17581,24815 17638,24756 17766,24624
+Ernst-Toller-Str.: unbefestigte Straße (Wurde die Ernst-Toller-Str. mittlerweile befestigt?)	? 17581,24815 17638,24756
 Stefan-Heym-Str.: unbefestigte Straße (wurde hier mittlerweile gepflastert (Verbundsteinpflaster)?)	? 17776,24912 17870,24821 18057,24641
 Fontanestr.: Asphalt (ist der südöstliche Abschnitt auch asphaltiert?)	? 32365,5789 32560,5574 32725,5392
 Schillerstr.: Asphalt (ist der südliche Abschnitt auch asphaltiert?)	? 32451,6132 32479,5931
@@ -1039,6 +1037,8 @@ Götschendorf - Böckenberg: schlechte Qualität, teilweise Sand (wie ist die Quali
 Groß Friedenwalde - Flieth: Kopfsteinpflaster (wie schlecht ist das Kopfsteinpflaster hier?)	? 35740,80983 35815,81168 35815,81518 35894,81782
 Groß Friedenwalde - Flieth: Asphalt (ist hier tatsächlich asphaltiert?)	? 35894,81782 35998,82265 36009,82890 36430,83497 36578,83835 36590,84086 36693,84235 36676,84495 36696,84495 36715,84579
 Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	? 37515,64395 37608,64317 38095,64055 38327,63933
+# added from handicap_s
+Dolgenseestr.: Bauarbeiten nördlich des Hönower Weges, Fahrbahn gesperrt, Ausweichen auf engen Gehweg (Sind die Bauarbeiten mittlerweile beendet?)	? 17404,9794 17391,9746 17383,9719
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
@@ -1065,5 +1065,3 @@ Pilgramer Str.: Radfahrstreifen oder Radwege in Bau (Gibt es neue Radwege oder R
 # added from bbbike-temp-blockings-optimized
 Betckestraße: zwischen Wörther Str. und Götelstr. Fahrbahn gesperrt, Ausweichen auf nördlichen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt (Wann ist die Fahrbahn wieder offen?)	? -3252,12580 -3444,12580
 Rehagener Platz: Bauarbeiten, Fahrbahn gesperrt (Bis wann gehen die Bauarbeiten? Wird das Kopfsteinpflaster nach den Bauarbeiten etwas besser sein?)	? 10642,-2371 10638,-2452 10563,-2432
-Rungiusstr.: Bauarbeiten zwischen Bürgerstr. und Jahnstr., Fahrbahn gesperrt (Wann sind die Bauarbeiten beendet?)	? 12997,6290 13027,6168
-B96a: Radweg noch nicht offiziell eröffnet (Wann ist der Radweg offiziell befahrbar?)	? 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271

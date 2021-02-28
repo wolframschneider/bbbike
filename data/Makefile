@@ -27,6 +27,7 @@ PERL?=			perl
 # assume we have a modern perl (> 5.8.0, which has utf8 bugs) installed...
 PERL_UTF8?=		${PERL}
 PERL_NO_HASH_RND?=	env PERL_HASH_SEED=0 PERL_PERTURB_KEYS=NO ${PERL}
+PERL_MODERN!=           perl -I$(BBBIKEDIR) -MBBBikeBuildUtil=get_modern_perl -e 'print get_modern_perl(required_modules => { LWP => 0 })'
 NO_LOCALE=		env LANG=C LC_ALL=C LC_CTYPE=C
 SED?=			${NO_LOCALE} sed
 CUT?=			${NO_LOCALE} cut
@@ -112,6 +113,9 @@ INTERMEDIATE_TARGETS=	.strassen.tmp \
 			${PERSISTENTTMPDIR}/gesperrt-orig-valid \
 			${PERSISTENTTMPDIR}/gesperrt-without-nocross \
 			${PERSISTENTTMPDIR}/radwege-orig-valid
+
+# These have to be checked using the check-urls target
+FILES_WITH_URLS=	comments_route-orig comments_ferry-orig comments_misc-orig
 
 COOKED_TARGETS=		strassen-cooked landstrassen-cooked landstrassen2-cooked
 TARGETS+=	${SOURCE_TARGETS} ${COOKED_TARGETS} ${COMPUTED_TARGETS}
@@ -1924,8 +1928,10 @@ ${PERSISTENTTMPDIR}/crossings_gewaesser_ignore.bbd:	\
 
 check-urls: ${PERSISTENTTMPDIR}/url_checks.log
 
-${PERSISTENTTMPDIR}/url_checks.log:	comments_route-orig comments_ferry-orig
-	${PERL} ${MISCSRCDIR}/url_checker.pl -v -log $@ $>
+# Note: use a modern perl here to avoid possible ssl problems with older LWP
+# Note: the sources should be files which actually have url: directives
+${PERSISTENTTMPDIR}/url_checks.log:	.check_daily ${FILES_WITH_URLS}
+	${PERL_MODERN} ${MISCSRCDIR}/url_checker.pl -v -log $@ ${FILES_WITH_URLS}
 
 check-bvg: ${PERSISTENTTMPDIR}/bvg_checks.log
 

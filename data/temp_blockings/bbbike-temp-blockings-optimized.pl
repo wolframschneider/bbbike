@@ -524,7 +524,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-02-19
+#: last_checked: 2021-02-27
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -877,7 +877,8 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 #: note: nördliches Tor verschlossen, gesehen am 2019-09-07 (Sa)
 #: note: südliches Tor verschlossen, gesehen am 2020-10-24 (Sa)
 #: tempex: volatile vvv
-(Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936
+(Gewerbegebiet)	2 21617,3287 21826,3129 21865,3095
+(Gewerbegebiet)	2 21826,3129 21770,2936
 (Gewerbegebiet)	2 21685,2964 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
 #: tempex ^^^
 ',
@@ -2564,6 +2565,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
+#: last_checked: 2021-02-20
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 ',
          'from' => undef,
@@ -2621,20 +2623,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
 # REMOVED (alt) --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php --- #: by: fritz --- #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
 #: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
-#: XXX bis wann ist der Bahnübergang gesperrt?
+#: XXX es wird nochmal im zweiten Halbjahr 2021 eine zweiwöchige Sperrung geben
 #: also_indoor: search Brebacher_Weg Bahnübergang
 #: osm_watch: way id="9829824" version="19"
 #: priority: #A
-#: last_checked: 2020-10-03
+#: last_checked: 2021-02-21
 #: check_frequency: 90d
-#: next_check: 2021-03-01
+#: next_check: 2021-03-31
 	2::inwork 21558,12073 21562,12088 21564,12097
 ',
          'from' => undef,
          'id' => 3171,
-         'text' => 'Brebacher Weg: Bahnübergang gesperrt, möglicherweise bis März 2021',
+         'text' => 'Brebacher Weg: Bahnübergang gesperrt, voraussichtlich bis Ende März 2021',
          'type' => 'gesperrt',
-         'until' => undef
+         'until' => 1617206400
        },
        undef,
        {
@@ -2714,20 +2716,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: wosch
-#: XXX evtl. nur saisonal, vielleicht wandern die Weideflächen an andere Stellen (dann auch ggfs. die Tore aus gesperrt-orig austragen)
-#: last_checked: 2020-04-23 (mapillary)
-#: check_frequency: 180d
-	2 14494,24824 14848,24411
-',
-         'from' => undef,
-         'id' => 3216,
-         'permanent' => 1,
-         'text' => 'Barnimer Dörferweg: freilaufende Büffel (Durchfahrt erlaubt)',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2795,7 +2784,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-02-19
+#: last_checked: 2021-02-25
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2864,7 +2853,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '# REMOVED --- #: by: https://sbahn.berlin/fahren/fahrplanaenderungen/detail/12403-montage-bahnsteigdach-in-karlshorst-aufbau-einer-laermschutzwand-gleisarbeiten-in-rummelsburg/#con-14153
-#: last_checked: 2021-02-07
+#: last_checked: 2021-02-20
 	q4::inwork; 14490,10610 14541,10735
 # REMOVED (hier keine Anzeichen für eine Einbahnstraßenregelung) ---	q4::inwork; 14541,10735 14675,10693
 ',
@@ -2878,6 +2867,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut Baustellenschild der Wasserbetriebe bis Mai 2022
 #: also_indoor: traffic (H)
+#: last_checked: 2021-02-20 (mapillary)
+#: next_check: 2021-03-17
 	q4::inwork; 5244,6261 5390,6299 5560,6344
 #: by: mapillary
 	q4::inwork 5560,6344 5582,6360
@@ -3026,7 +3017,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: last_checked: 2021-01-22
+#: last_checked: 2021-02-26 (architektur-urbanistik: weiterhin Hochbaustelle)
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 ',
@@ -3050,14 +3041,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: priority: #A
 #: last_checked: 2020-12-28
 #: check_frequency: 90d
-#: next_check: 2021-03-01
+#: next_check: 2021-03-31
 	2::inwork 20627,12162 20624,12133 20620,12108
 ',
          'from' => undef,
          'id' => 3282,
-         'text' => 'Oberfeldstr.: Bahnübergang am S-Bhf. Biesdorf gesperrt, möglicherweise bis März 2021',
+         'text' => 'Oberfeldstr.: Bahnübergang am S-Bhf. Biesdorf gesperrt, voraussichtlich bis Ende März 2021',
          'type' => 'gesperrt',
-         'until' => undef
+         'until' => 1617206400
        },
        undef,
        {
@@ -3106,23 +3097,16 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        undef,
-       {
-         'data' => '	q4::inwork 8053,15598 7962,15633
-',
-         'from' => 1603170000,
-         'id' => 3295,
-         'source_id' => '2147346516',
-         'text' => 'Weddingstr.: Zufahrt von der Reinickendorfer Str. gesperrt, 21.10.2020 7:00 Uhr bis 26.02.2021 17:00 Uhr',
-         'type' => 'handicap',
-         'until' => 1614355200
-       },
+       undef,
        undef,
        {
-         'data' => '#: source_id: 2147346816
-#: XXX: Wann sind die Bauarbeiten beendet?
+         'data' => '#: next_check_id: MAINZER-2021
+#: source_id: 2147346816
+#: XXX: Wann sind die Bauarbeiten beendet? Laut rbb 31.03.2021, laut vmz 31.03.2022
 #: also_indoor: traffic (G)
-#: last_checked: 2021-01-09
+#: last_checked: 2021-02-20
 #: check_frequency: 45d
+#: next_check: 2021-03-31
 	q4::inwork 12162,8053 12147,8117
 ',
          'from' => undef,
@@ -3136,8 +3120,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.verkehrslage.de/Berlin/Baustellen/3
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-01-29
-#: check_frequency: 21d
+#: last_checked: 2021-02-27
+#: check_frequency: 14d
 	q4::inwork 12997,6290 13027,6168
 ',
          'from' => undef,
@@ -3158,7 +3142,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: osm_watch: way id="877995097" version="2"
 #: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2020-12-12 (osm)
+#: last_checked: 2021-02-24
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 ',
          'from' => undef,
@@ -3170,11 +3154,12 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        {
-         'data' => '	q4::inwork 8569,4459 8868,4498
+         'data' => '#: last_checked: 2021-02-20
+	q3::inwork 8858,4579 8561,4535
 ',
          'from' => 1606936220,
          'id' => 3310,
-         'text' => 'Reulestr.: Bauarbeiten, Sperrung der Fahrbahn, bis 06.03.2021',
+         'text' => 'Reulestr.: Bauarbeiten, Abschnitt der Fahrbahn gesperrt, bis 06.03.2021',
          'type' => 'handicap',
          'until' => 1615050000
        },
@@ -3199,30 +3184,20 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: LEMKE-2020
-	q4::inwork 25191,12343 25363,12553
-',
-         'from' => 1607814000,
-         'id' => 3312,
-         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.1027826.php',
-         'text' => 'Lemkestr.: zwischen Linderhofstr. und Sudermannstr., Sperrung der Fahrbahn, vom 14. Dezember 2020 bis voraussichtlich 30. Juli 2021 (außer über die Weihnachtsfeiertage)',
-         'type' => 'handicap',
-         'until' => 1627682399
-       },
+       undef,
        {
          'data' => '#: next_check_id: STERNDAMM-2020
 #: by: osm
 #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2020-12-19-adlershof-2/03-2020-12-19-064.html (provisorischer Übergang existiert)
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
-#: last_checked: 2020-12-19
+#: last_checked: 2021-02-24
 #: check_frequency: 90d
 	2::inwork 18836,3611 18943,3508
 ',
          'from' => undef,
          'id' => 3313,
-         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein',
+         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein, ansonsten gibt\'s einen provisorischen Überweg über die Trasse',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3367,26 +3342,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '	2::inwork 35479,7051 35482,7099
-',
-         'from' => 1613862000,
-         'id' => 3330,
-         'source_id' => 'LS/721-F/21/021',
-         'text' => 'Woltersdorf, Brücke über den Stolpkanal: Sperrung am 22.02.2021, evtl. sind auch Radfahrer und Fußgänger betroffen ',
-         'type' => 'gesperrt',
-         'until' => 1614034800
-       },
-       {
-         'data' => '	2::inwork 12672,20720 12723,20691
-',
-         'from' => 1613631600,
-         'id' => 3331,
-         'source_id' => '2147346882',
-         'text' => 'Bahnhofstr.: Unterführung unter der A114 gesperrt, auch für Fußgänger und Radfahrer, vom 19.02.2021 08:00 Uhr bis 22.02.2021 08:00 Uhr ',
-         'type' => 'gesperrt',
-         'until' => 1613977200
-       },
+       undef,
+       undef,
        {
          'data' => '#: by: https://tierparkcenter.de/wochenmarkt/ (Öffnungszeiten)
 #: tempex: (mo,th,fr) T08-T17
@@ -3399,16 +3356,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '	2::inwork 10324,13459 10318,13528 10313,13568 10309,13601 10301,13701
-',
-         'from' => 1613588400,
-         'id' => 3333,
-         'source_id' => 'LMS-BR_r_LMS-BR_231416_LMS-BR_72',
-         'text' => 'Kleine Rosenthaler Str.: zwischen Linienstr. und Rosenthaler Str. wegen Dreharbeiten gesperrt, vom 18.02.2021 20:00 Uhr bis 20.02.2021 06:00 Uhr ',
-         'type' => 'gesperrt',
-         'until' => 1613797200
-       },
+       undef,
        {
          'data' => '#: by: rbbtext
 	q4::inwork 9363,5903 9291,5908
@@ -3418,6 +3366,41 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Kaiserin-Augusta-Str.: zwischen Theodorstr. und Kreisverkehr Metzplatz Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, bis 16.04.2021',
          'type' => 'handicap',
          'until' => 1618610400
+       },
+       undef,
+       {
+         'data' => '#: next_check_id: KARLSHORSTER-2021
+#: last_checked: 2021-02-24
+#: check_frequency: 90d
+#: next_check: 2021-03-01
+	q4::inwork; 15279,10862 15272,10790 15261,10738
+',
+         'from' => 1614578400,
+         'id' => 3336,
+         'source_id' => '2147346922',
+         'text' => 'Karlshorster Str.: Richtung Hauptstr. wegen Bauarbeiten gesperrt, Radfahrer müssen schieben für Kfz-Verkehr ausgewiesen, mit Stauerscheinungen ist zu rechnen, bis Ende Mai 2021',
+         'type' => 'handicap',
+         'until' => 1622473200
+       },
+       {
+         'data' => '	q4::inwork 9547,11819 9536,11922
+',
+         'from' => 1614272400,
+         'id' => 3337,
+         'source_id' => '2147346912',
+         'text' => 'Charlottenstr.: zwischen Taubenstr. und Mohrenstr. Sperrung der Fahrbahn, Radfahrer müssen schieben, vom 26.02.2021 18:00 Uhr bis 06.03.2021 22:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1615064400
+       },
+       {
+         'data' => '	q4::inwork 10141,18030 10089,18180
+',
+         'from' => 1614492000,
+         'id' => 3338,
+         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2021/pressemitteilung.1057628.php',
+         'text' => 'Neue Schönholzer Str.: Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, vom 1.3.2021 7 Uhr bis 5.3.2021 17 Uhr',
+         'type' => 'handicap',
+         'until' => 1614960000
        }
      
 );
