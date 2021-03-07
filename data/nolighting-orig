@@ -1477,7 +1477,7 @@ Wuhlheide	NL 19407,6660 19515,6934 19599,7075
 # REMOVED --- Mauerpark	NL 10037,15421 10052,15429 10070,15438 10076,15455 10093,15463 10107,15457 10127,15463 10155,15473
 Mauerpark	NL 10155,15473 10186,15481
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4186 (Installierung einer Beleuchtung bis 2020)
-#: last_checked: 2021-02-22
+#: last_checked: 2021-03-04 (mapillary)
 #: check_frequency: 60d
 Mauerpark	NL 10130,15653 10186,15481 10188,15474 10210,15407 10240,15318 10319,15090 10354,14987
 Mauerpark	NL 10081,15853 10046,15844 10061,15775 10045,15754 10079,15661 10091,15630 10155,15473
@@ -1847,6 +1847,7 @@ Heinrich-Stahl-Weg	NL 2281,6469 2311,6404
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6341
 Fürstenwalder Allee	NL 32121,3215 32376,3175 32814,3107 33111,3064 33327,2979 33525,2901 33543,2896
 (Gleislinse)	NL 19130,3969 19141,3980 19242,4077 19015,4338 18807,4556 18722,4628
+(Gleislinse - Hans-Schmidt-Str.)	NL 19242,4077 19219,4023
 (Gustav-Hertz-Platz - ...)	NL 18656,4687 18601,4732
 (Löwenbrucher Weg - Lortzingplatz)	NL 10107,-3063 10067,-2952 10058,-2924 10085,-2810
 (Lieselstr. - Alfonsstr.)	NL 18931,1192 18998,1349

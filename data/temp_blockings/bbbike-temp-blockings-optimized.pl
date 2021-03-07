@@ -823,7 +823,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2141,11 +2141,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.909888.php (nächster Bauabschnitt ab 27. April 2020)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/der-gehweg-ist-jetzt-fertig_a258259
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-auf-der-schoenstrasse-gehen-weiter_a261160
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2021/pressemitteilung.1058179.php (Sperrung der Kreuzung Schönstraße/Paul-Oestreich-Straße, bis 26. März 2021)
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht\'s nur auf dem Gehweg weiter
 #: also_indoor: traffic (G)
 #: priority: #B
 #: last_checked: 2021-02-17
 #: check_frequency: 60d
+#: next_check: 2021-03-26
 	q3::inwork 13391,16436 13630,16629
 ',
          'from' => undef,
@@ -2296,7 +2298,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-02-15
+#: last_checked: 2021-03-04
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2436,7 +2438,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2021-01-22
+#: last_checked: 2021-03-05
 #: check_frequency: 60d
 #: next_check: 2021-04-30
 	q3::inwork  8986,16092 9178,16317
@@ -2468,17 +2470,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
 #: last_checked: 2020-12-28 (mapillary)
-#: check_frequency: 60d
-#: next_check: 2021-02-28
+# REMOVED --- #: check_frequency: 60d
+#: next_check: 2021-03-31
 #: XXX_prog: eigentlich q4+::inwork;
 	q4::inwork; 8904,17059 8866,17075 8677,17154
 # REMOVED (hier nicht mehr?) ---	q4::inwork; 8677,17154 8561,17198 8539,17197 8449,17196
 ',
          'from' => undef,
          'id' => 3110,
-         'text' => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 28. Februar 2021',
+         'text' => 'Soldiner Str.: Bauarbeiten zwischen Stockholmer Str. und Koloniestr., Richtung Westen gesperrt, voraussichtlich bis 31. März 2021, unter Umständen auch länger',
          'type' => 'handicap',
-         'until' => 1614528000
+         'until' => undef
        },
        undef,
        undef,
@@ -2561,19 +2563,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: source_id: 2147346164 (bis März 2021, Gesamtbaumaßnahme bis 2024)
+         'data' => '#: source_id: 2147346164 (bis 06.07.2021, Gesamtbaumaßnahme bis 2024)
 #: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
 #: last_checked: 2021-02-20
+#: next_check: 2021-07-06
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 ',
          'from' => undef,
          'id' => 3151,
          'source_id' => '2147344558',
-         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, vermutlich bis März 2021',
+         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, vermutlich bis 06.07.2021',
          'type' => 'gesperrt',
-         'until' => 1615219200
+         'until' => 1625583600
        },
        undef,
        undef,
@@ -2728,7 +2731,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-02-17
+#: last_checked: 2021-03-03
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2784,7 +2787,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-02-25
+#: last_checked: 2021-03-05
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2841,7 +2844,6 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
 #: last_checked: 2021-02-17
 #: check_frequency: 45d
-# REMOVED --- #: next_check: 2020-11-07
 	q4::inwork 14136,17170 13996,16959
 ',
          'from' => undef,
@@ -2853,6 +2855,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '# REMOVED --- #: by: https://sbahn.berlin/fahren/fahrplanaenderungen/detail/12403-montage-bahnsteigdach-in-karlshorst-aufbau-einer-laermschutzwand-gleisarbeiten-in-rummelsburg/#con-14153
+#: also_indoor: traffic (G)
 #: last_checked: 2021-02-20
 	q4::inwork; 14490,10610 14541,10735
 # REMOVED (hier keine Anzeichen für eine Einbahnstraßenregelung) ---	q4::inwork; 14541,10735 14675,10693
@@ -3037,9 +3040,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://viz.berlin.de/2021/01/s5/ (SEV bis 25.1.2021)
 #: XXX bis wann ist der Bahnübergang gesperrt?
 #: also_indoor: search Oberfeldstraße Bahnübergang
-#: osm_watch: way id="868347101" version="2"
+#: osm_watch: way id="868347101" version="3"
 #: priority: #A
-#: last_checked: 2020-12-28
+#: last_checked: 2021-03-01 (osm)
 #: check_frequency: 90d
 #: next_check: 2021-03-31
 	2::inwork 20627,12162 20624,12133 20620,12108
@@ -3104,7 +3107,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: 2147346816
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb 31.03.2021, laut vmz 31.03.2022
 #: also_indoor: traffic (G)
-#: last_checked: 2021-02-20
+#: last_checked: 2021-03-02
 #: check_frequency: 45d
 #: next_check: 2021-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -3155,13 +3158,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: last_checked: 2021-02-20
+#: next_check: 2021-04-01
 	q3::inwork 8858,4579 8561,4535
 ',
          'from' => 1606936220,
          'id' => 3310,
-         'text' => 'Reulestr.: Bauarbeiten, Abschnitt der Fahrbahn gesperrt, bis 06.03.2021',
+         'text' => 'Reulestr.: Bauarbeiten, Abschnitt der Fahrbahn gesperrt, bis 01.04.2021',
          'type' => 'handicap',
-         'until' => 1615050000
+         'until' => 1617292800
        },
        {
          'data' => '#: next_check_id: CORONA-2020
@@ -3191,7 +3195,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2020-12-19-adlershof-2/03-2020-12-19-064.html (provisorischer Übergang existiert)
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
-#: last_checked: 2021-02-24
+#: last_checked: 2021-03-05 (krickstadt)
 #: check_frequency: 90d
 	2::inwork 18836,3611 18943,3508
 ',
@@ -3202,22 +3206,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        undef,
-       {
-         'data' => '	q4::inwork; 4894,6509 4875,6552 4786,6717
-',
-         'from' => 1609668000,
-         'id' => 3315,
-         'source_id' => '2147346755',
-         'text' => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 04.01.2021 11:00 Uhr bis 14.10.2021 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1634223600
-       },
+       undef,
        undef,
        undef,
        undef,
        {
          'data' => '#: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2021-02-11
+#: last_checked: 2021-03-01
 #: check_frequency: 45d
 # REMOVED (hier nicht mehr) ---	q4::inwork 17794,8429 17774,8342
 	q4::inwork 17774,8342 17753,8290
@@ -3274,7 +3269,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        {
-         'data' => '	q2::inwork 8913,16159 9099,16398
+         'data' => '#: last_checked: 2021-03-05
+#: next_check: 2021-08-27
+	q2::inwork 8913,16159 9099,16398
 ',
          'from' => 1611329064,
          'id' => 3324,
@@ -3370,37 +3367,40 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
-#: last_checked: 2021-02-24
-#: check_frequency: 90d
-#: next_check: 2021-03-01
+#: also_indoor: traffic (G(wrong),H)
+#: last_checked: 2021-03-06
+#: check_frequency: 30d
+#: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
 ',
          'from' => 1614578400,
          'id' => 3336,
          'source_id' => '2147346922',
-         'text' => 'Karlshorster Str.: Richtung Hauptstr. wegen Bauarbeiten gesperrt, Radfahrer müssen schieben für Kfz-Verkehr ausgewiesen, mit Stauerscheinungen ist zu rechnen, bis Ende Mai 2021',
+         'text' => 'Karlshorster Str.: Richtung Hauptstr. wegen Bauarbeiten gesperrt, Radfahrer müssen schieben, voraussichtlich ab 2. März 2021 bis Ende Mai 2021',
          'type' => 'handicap',
          'until' => 1622473200
        },
+       undef,
+       undef,
        {
-         'data' => '	q4::inwork 9547,11819 9536,11922
+         'data' => '	q4::inwork 4894,6509 4875,6552 4786,6717
 ',
-         'from' => 1614272400,
-         'id' => 3337,
-         'source_id' => '2147346912',
-         'text' => 'Charlottenstr.: zwischen Taubenstr. und Mohrenstr. Sperrung der Fahrbahn, Radfahrer müssen schieben, vom 26.02.2021 18:00 Uhr bis 06.03.2021 22:00 Uhr ',
+         'from' => 1614754800,
+         'id' => 3339,
+         'source_id' => '2147346935',
+         'text' => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, in beiden Richtungen gesperrt, vom 04.03.2021 08:00 Uhr bis 14.10.2021',
          'type' => 'handicap',
-         'until' => 1615064400
+         'until' => 1634223600
        },
        {
-         'data' => '	q4::inwork 10141,18030 10089,18180
+         'data' => '	2::inwork 22418,19268 22685,19122
 ',
-         'from' => 1614492000,
-         'id' => 3338,
-         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2021/pressemitteilung.1057628.php',
-         'text' => 'Neue Schönholzer Str.: Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, vom 1.3.2021 7 Uhr bis 5.3.2021 17 Uhr',
-         'type' => 'handicap',
-         'until' => 1614960000
+         'from' => 1615071600,
+         'id' => 3340,
+         'source_id' => '216000117',
+         'text' => 'Mehrower Str. (Ahrensfelde): Bauarbeiten, gesperrt, vom 08.03.2021 bis 09.04.2021',
+         'type' => 'gesperrt',
+         'until' => 1618005600
        }
      
 );

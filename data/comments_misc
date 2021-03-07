@@ -733,7 +733,6 @@ ausgeschildert "Parkhaus Steglitzer Kreisel"	CP2; 4911,5428 4856,5375
 nicht ausgeschildert, dem Nordgraben folgen	CP2; 10225,21935 10237,21922
 ausgeschildert als "zu den H‰usern Seefelder Str. 15-49"	CP2; 16975,16164 17071,16174
 ausgeschildert als "zu den H‰usern Seefelder Str. 15-49"	CP2; 17383,16197 17362,16189
-ausgeschildert "Quartiersweg 5-8"	CP2; 7621,7813 7623,7885
 zum Terminal A	CP2; 2853,16293 2812,16348
 am Anfang als Hauptweg 15 (blau-weiﬂe Markierung) ausgeschildert	CP2; 19924,4252 19901,4334
 ausgeschildert als "Scharounstr."	CP2; 7943,11431 8083,11381
@@ -748,3 +747,5 @@ nicht ausgeschildert	CP2; 21231,7249 21175,7212
 nicht ausgeschildert, am Haus 109 abbiegen	CP2; 21243,7135 21175,7212
 nicht ausgeschildert	CP2; 21243,7135 21294,7189
 nicht ausgeschildert	CP2; 21243,7135 21219,7111
+Raoul-Wallenberg-Str. [Wohngebiet]: Zufahrt zur Paul-Dessau-Str.	CS; 20636,16046 20651,16079 20707,16054
+Walter-Felsenstein-Str.: Zufahrt zur Bitterfelder Str.	CS; 20459,16697 20390,16663

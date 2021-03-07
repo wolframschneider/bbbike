@@ -71,10 +71,10 @@ Wilhelplatz	1 -7064,584 -7081,483 -7122,439 -7180,378
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplan-fuer-meinberlin/bebauungsplan.994201.php
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanung/bebauungsplaene-im-verfahren/b-plan-xi-231aba/xi-231aba-planzeichnung.pdf
 #: XXX außerdem Anlage von Radwegen, allerdings nicht benutzungspflichtig
-#: last_checked: 2021-02-21 (mapillary)
+#: last_checked: 2021-03-02
 #: check_frequency: 90d
 #: next_check: 2021-12-31
-Tempelhofer Weg	1 7499,7880 7268,8008 7193,7950
+Ella-Barowsky-Str.	1 7499,7880 7268,8008 7193,7950
 Alt-Mariendorf	1 9732,3883 9831,3876 9953,3806
 Friedenstr./Reißeckstr.	1 9953,3806 9751,3769 9584,3713 9455,3671 9391,3651 9222,3602 9128,3580 8964,3539
 Friedenstr.	1 9462,3642 9391,3651
@@ -1953,7 +1953,7 @@ Prenzlauer Allee: Mittelstreifen mit Straßenbahn, aber Ampel in der Nähe	3nocros
 Prenzlauer Allee: Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3nocross 11709,14856 11682,14777 11655,14697
 #: XXX_prog: eine Überquerungsmöglichkeit existiert 60m weiter südlich
 Prenzlauer Allee: Mittelstreifen mit Straßenbahn	3nocross 12075,16144 12061,16091 12030,15968 11995,15827
-Prenzlauer Allee: Straßenbahntrasse	3nocross 11941,15586 11967,15700 11995,15827
+Prenzlauer Allee: Straßenbahntrasse	3nocross 11941,15586 11963,15681 11967,15700 11995,15827
 Prenzlauer Allee: Straßenbahntrasse	3nocross 11435,14023 11465,14122 11471,14143
 Danziger Str.: Mittelstreifen mit Straßenbahn	3nocross 11709,14856 11609,14881 11535,14900
 Danziger Str.: Mittelstreifen mit Straßenbahn	3nocross 11154,14985 11285,14958 11325,14949 11339,14946
@@ -3241,7 +3241,7 @@ Schranke	BNP:5::trailer=15 22855,4348
 #: next_check_id: NORD52-2019
 #: last_checked: 2021-02-24 vvv
 #: check_frequency: 90d vvv
-#: osm_watch: way id="630987121" version="6"
+#: osm_watch: way id="630987121" version="7"
 Ankerweg: kann wegen Hochbauarbeiten nicht passierbar sein	2::inwork 22118,2559 22159,2585 22197,2612
 An der Dahme: kann wegen Hochbauarbeiten nicht passierbar sein	2::inwork 22197,2612 22270,2549
 #: check_frequency ^^^
@@ -3276,7 +3276,7 @@ Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 #: check_frequency: 60d
 Otto-Ostrowski-Str.: Hochbauarbeiten, gesperrt	2::inwork 13702,13634 13711,13615 13769,13487
 # 
-#: last_checked: 2021-02-18 vvv
+#: last_checked: 2021-03-06 vvv
 #: check_frequency: 30d vvv
 Wege am S-Bhf. Betriebsbahnhof Rummelsburg: wegen Bauarbeiten gesperrt	2::inwork 16895,9922 16841,9997
 Wege am S-Bhf. Betriebsbahnhof Rummelsburg: wegen Bauarbeiten gesperrt	2::inwork 16900,9861 16895,9922
@@ -3291,8 +3291,8 @@ Wege am S-Bhf. Betriebsbahnhof Rummelsburg: wegen Bauarbeiten gesperrt	2::inwork
 Alexanderufer - Charité: Tor ist wegen Corona-Beschränkungen geschlossen	2 8371,13399 8363,13402 8356,13404
 # 
 #: XXX evtl. wird nach den Bauarbeiten die Qualität besser sein
-#: osm_watch: way id="141309175" version="8"
-#: last_checked: 2021-01-08 (osm)
+#: osm_watch: way id="141309175" version="9"
+#: last_checked: 2021-03-01 (osm)
 #: check_frequency: 60d
 Schulstr. (Biesdorf): Bauarbeiten, komplett gesperrt	2::inwork 20599,11938 20708,11918 20738,11915
 # 
@@ -3313,7 +3313,7 @@ Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60
 #: by: https://twitter.com/Technologiepark/status/1337402031569580032 (Sanierung der Brücke bis 10.12.2021)
 #: by: https://www.deutsches-architekturforum.de/thread/14514-square-1-johannisthal/ (Erwähnung)
 #: by: https://www.berliner-woche.de/johannisthal/c-verkehr/betriebsbahnhof-schoeneweide-ist-geschichte_a296360 (bis Ende 2021)
-#: last_checked: 2021-01-25 (daf)
+#: last_checked: 2021-02-21 (krickstadt)
 #: check_frequency: 90d
 #: next_check: 2021-12-10
 Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
@@ -3324,7 +3324,7 @@ Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun 
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/bezirksamt-will-bergmannkiez-entmotorisieren_a287422 ("Fußgängerzone beschlossen" --- bleibt es permanent?)
 #: XXX bis wann bleibt diese Straße eine "Klimastraße"?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-02-20
+#: last_checked: 2021-03-06
 # REMOVED (bleibt vermutlich länger?) --- #: next_check: 2020-12-31
 Danneckerstr.: temporäre "Klimastraße", für Radfahrer gesperrt	2s:q4 13886,10939 13856,10864
 # 
@@ -3373,7 +3373,7 @@ Alexander-von-Humboldt-Weg: Durchgang gesperrt, auch für Fußgänger	2::inwork 188
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/neue-grundschule-entsteht_a279808
 #: by: https://www.deutsches-architekturforum.de/thread/14507-bauprojekte-am-velodrom-prenzlauer-berg/?postID=677089#post677089
 #: XXX vermutlich dauerhaft, Teile der Fahrbahn sind schon aufgerissen; evtl. wird es einen neuen Weg weiter südöstlich geben
-#: osm_watch: way id="860287005" version="3"
+#: osm_watch: way id="860287005" version="4"
 #: last_checked: 2021-02-17
 #: check_frequency: 120d
 #: next_check: 2022-07-01
@@ -3397,7 +3397,7 @@ Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10203,
 # 
 #: by: mapillary
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22806.pdf (Sperrung des Spreeuferwegs zwischen 2020 und 2028)
-#: last_checked: 2021-02-24
+#: last_checked: 2021-03-02
 #: next_check: 2028-01-01
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 # 
@@ -3465,7 +3465,7 @@ Helene-Jacobs-Str.	1::inwork 3332,8207 3326,8100 3320,7982 3309,7782 3210,7786 3
 #: XXX wann wird der Weg wiederhergestellt, wenn überhaupt?
 #: by: https://www.deutsches-architekturforum.de/thread/9401-wasserstadt-stralau-kleine-und-gr%C3%B6%C3%9Fere-projekte/?postID=653296#post653296 (Bauarbeiten bis Ende September 2021)
 #: osm_watch: way id="541556560" version="2"
-#: last_checked: 2021-02-15
+#: last_checked: 2021-03-02
 #: next_check: 2021-09-30
 Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 14569,10055
 # 
@@ -3487,7 +3487,7 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728
 #: by: https://www.bvg.de/de/index.php?section=downloads&cmd=extra:78:2:1&download=3941 (hier: bis Mai 2021)
 #: also_indoor: traffic (G,H) vvv
 #: source_id: 2147345254 (bis 06.06.2021) vvv
-#: last_checked: 2021-02-25 vvv
+#: last_checked: 2021-03-02 vvv
 #: next_check: 2021-05-01 vvv
 #: priority: #A vvv
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10687,11853 10672,11870 10642,11901
@@ -3513,7 +3513,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: check_frequency: 30d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
-#: last_checked: 2021-02-25
+#: last_checked: 2021-03-02
 #: check_frequency: 60d
 Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwork 10805,12468 10803,12470
 # 
@@ -3522,7 +3522,7 @@ Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwor
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="729492933" version="2"
 #: osm_watch: way id="882672445" version="1"
-#: last_checked: 2021-02-26
+#: last_checked: 2021-03-02
 #: check_frequency: 60d
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
 # 
@@ -3589,7 +3589,7 @@ Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
 Rollbergstr.: Bauarbeiten, Zufahrt von der Karl-Marx-Str. gesperrt	2s:q4:inwork 12714,8249 12545,8209
 # 
 #: osm_watch: way id="702306263" version="5"
-#: last_checked: 2021-02-20
+#: last_checked: 2021-03-02
 #: check_frequency: 21d
 Rollbergstr.: wegen Bauarbeiten komplett gesperrt	2::inwork 12226,8137 12295,8154
 # 
@@ -3625,7 +3625,7 @@ Wäscherinnenweg: teilweise gesperrt	2::inwork 21444,5112 21358,5072
 #: by: https://www.parlament-berlin.de/ados/17/IIIPlen/vorgang/d17-2854.pdf (Bebauungsplan, Plan befindet sich auf der tatsächlichen Seite 366 sowie 373)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/virtuelle-stadtwerkstatt-informiert-ueber-bauprojekte-in-berlins-historischer-mitte_a292967
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2021-02-26
+#: last_checked: 2021-03-02
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
 # REMOVED --- #: next_check_id: SOWJETISCHESEHRENMAL-2019 --- #: XXX wann sind die Bauarbeiten beendet? -> laut Schild bis Mai 2020 --- #: last_checked: 2019-11-01 --- #: next_check: 2020-05-15 --- Treptower Park, am Sowjetischen Ehrenmal: Weg wegen Bauarbeiten gesperrt	2::inwork 14824,9390 14797,9396
@@ -3641,7 +3641,7 @@ Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,1
 #: next_check_id: TACHELES-2020
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2021-02-05
+#: last_checked: 2021-03-02 (mapillary)
 #: check_frequency: 60d
 Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 # 
@@ -3724,7 +3724,7 @@ Weidenkätzchenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21421,158 2144
 #: osm_watch: node id="791819743" version="4"
 #: by: osm (kartonage)
 #: confirmed_by: srt
-#: last_checked: 2021-02-20
+#: last_checked: 2021-03-02
 #: check_frequency: 60d
 Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14121,8147 14210,8227 14229,8278
 # 
@@ -3779,7 +3779,7 @@ Mergenthalerring: durch Bauzaun und Tor versperrt	2::inwork 14121,8147 14210,822
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/seit-13-september-ist-der-aufzug-am-bahnhof-schoeneweide-in-betrieb_a232699
 #: by: https://www.abendblatt-berlin.de/2019/09/25/treptow-schoeneweider-fahrstuehle-endlich-in-betrieb/
 #: by: http://thomas.krickstadt.de/s-bahn/2019-10-06-schoeneweide/04-2019-10-06-008.html (existiert noch)
-#: osm_watch: way id="226163591" version="3"
+#: osm_watch: way id="226163591" version="4"
 #: priority: #C
 #: last_checked: 2020-03-12 (krickstadt)
 #: check_frequency: 360d
@@ -3892,10 +3892,10 @@ Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,
 #: by: https://www.berliner-woche.de/lichtenrade/c-verkehr/der-offizielle-baustart-fuer-die-dresdner-bahn-ist-erfolgt_a200203
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22485.pdf (Fertigstellung Ende 2021)
-#: source_id: 2147342379
-#: source_id: LMS-BR_r_LMS-BR_127414_LMS-BR_72
+#: source_id: 2147342379 (bis 31.10.2021)
+#: source_id: LMS-BR_r_LMS-BR_127414_LMS-BR_72 (inaktiv)
 #: last_checked: 2020-10-22 (baustellen-doku)
-#: next_check: 2021-12-31
+#: next_check: 2021-10-31
 Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,898 9024,906 9058,932
 # 
 # REMOVED (mittlerweile kommt man durch) --- #: next_check_id: KLARAFRANKESTR-2018 --- #: XXX außerdem: genaue Lage der Straße --- #: osm_watch: way id="423494183" version="7" --- #: last_checked: 2019-08-28 --- #: check_frequency: 60d --- Klara-Franke-Str.: Bauarbeiten, gesperrt	2::inwork 7542,13956 7662,13784 7564,13735
@@ -4140,7 +4140,7 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 #: next_check_id: ZEUGHAUS-2014
 #: source_id: LMS-BR_r_LMS-BR_44
 #: XXX laut fritz bis 31.12.2019
-#: last_checked: 2021-01-09 vvv
+#: last_checked: 2021-03-03 (mapillary) vvv
 #: check_frequency: 60d vvv
 # REMOVED --- Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::inwork 9984,12426 9934,12420 9858,12410
 # REMOVED --- #: XXX_prog: ":inwork" kann als Attribut nicht genutzt werden!
@@ -4168,7 +4168,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, voraus
 # 
 #: next_check_id: BER-20XX
 #: XXX möglicherweise bleibt das noch erhalten, solange es Terminal 5 gibt? Es gibt aber Kartenwerke (Pharus, Falk), bei denen die Jürgen-Schumann-Allee durchgängig ist
-#: last_checked: 2020-11-03 (mapillary)
+#: last_checked: 2021-03-06 (mapillary)
 # REMOVED --- #: next_check: 2020-10-31
 #: check_frequency: 180d
 # REMOVED (entfernt) --- #: osm_watch: way id="127091100" version="14" brb
