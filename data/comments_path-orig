@@ -529,7 +529,7 @@ Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichsh
 #: XXX wird eventuell im Zuge der Maﬂnahme Nsw.3 verbessert
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5826 (Verkehrsf¸hrung verbessern) (wurde allerdings abgelehnt; die allgemeine Verbesserung der Situation wird aber irgendwann passieren ("Umgestaltung des Bahnhofsvorplatzes")
 #: by: https://www.uvp-verbund.de/documents/ingrid-group_ige-iplug-be/3A22FF18-9B17-4F51-B470-2F50F0C68929/U13-2_Entwurf%20Sterndamm%20und%20Bahnhofsvorplatz_LP-Blatt02.pdf (Linksabbiegemˆglichkeit f¸r Radfahrer im Zuge der Umgestaltung am S-Bhf. Schˆneweide)
-#: last_checked: 2020-11-28
+#: last_checked: 2021-03-09
 #: check_frequency: 180d
 #: next_check: 2021-09-30
 Michael-Br¸ckner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Mˆglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441
@@ -573,7 +573,7 @@ Bornholmer Str. - Tegnerstr.: bereits an der Ampel Schˆnflieﬂer Str. auf den lin
 Dietzgenstr. - (Am Nordgraben): bereits am Kr‰uterweg auf den linken Gehweg wechseln	PI; 10085,21840 10097,21809 10177,21802
 Frankfurter Allee - Alte Frankfurter Allee: ggfs. schon an der Ampel Atzpodienstr. auf den linken Gehweg wechseln	PI; 16413,11906 16512,11894 16535,11920
 Frankfurter Allee - Hubertusstr.: ggfs. schon an der Ampel Atzpodienstr. auf den linken Gehweg wechseln	PI; 16413,11906 16512,11894 16541,12071
-Storkower Str.: ausgeschildert Hausnummern 134-156	CP2; 13731,14200 13639,14133
+Storkower Str.: ausgeschildert Hausnummern 134-156	CP2; 13736,14192 13639,14133
 Storkower Str.: ausgeschildert Finanzamt	CP2; 13784,13908 13715,14018
 # REMOVED (-> routing_helper-orig) --- Otto-Braun-Str: linken Gehweg benutzen, an der Kreuzung Mollstr. ggfs. die Straﬂenseite wechseln	CP; 11326,13196 11352,13180 11368,13170 11451,13301
 Stahnsdorf - Babelsberg: Ausschilderung Richtung Potsdam-Babelsberg	CP2; -5463,-3467 -5662,-3583

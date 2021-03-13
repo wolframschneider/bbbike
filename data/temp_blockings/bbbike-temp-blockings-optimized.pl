@@ -2142,6 +2142,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/der-gehweg-ist-jetzt-fertig_a258259
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-auf-der-schoenstrasse-gehen-weiter_a261160
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2021/pressemitteilung.1058179.php (Sperrung der Kreuzung Schönstraße/Paul-Oestreich-Straße, bis 26. März 2021)
+#: by: https://www.berliner-woche.de/weissensee/c-verkehr/einmuendung-komplett-gesperrt_a303306
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht\'s nur auf dem Gehweg weiter
 #: also_indoor: traffic (G)
 #: priority: #B
@@ -2193,7 +2194,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2021-02-19
+#: last_checked: 2021-03-12
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2298,8 +2299,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-03-04
-#: check_frequency: 30d
+#: last_checked: 2021-03-10
+#: check_frequency: 14d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
 ',
@@ -2787,7 +2788,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-03-05
+#: last_checked: 2021-03-10
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2856,7 +2857,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '# REMOVED --- #: by: https://sbahn.berlin/fahren/fahrplanaenderungen/detail/12403-montage-bahnsteigdach-in-karlshorst-aufbau-einer-laermschutzwand-gleisarbeiten-in-rummelsburg/#con-14153
 #: also_indoor: traffic (G)
-#: last_checked: 2021-02-20
+#: last_checked: 2021-03-11
 	q4::inwork; 14490,10610 14541,10735
 # REMOVED (hier keine Anzeichen für eine Einbahnstraßenregelung) ---	q4::inwork; 14541,10735 14675,10693
 ',
@@ -3205,7 +3206,21 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => undef
        },
-       undef,
+       {
+         'data' => '#: source_id: 2147346949
+#: by: wosch
+# REMOVED (genau so) --- #: XXX genaue Lage der Baustelle? --- #: last_checked: 2021-01-09 --- #: next_check: 2021-01-04
+# REMOVED ---	q4::inwork 9298,12765 9303,12718
+	q4::inwork 9303,12718 9313,12662 9314,12652
+	q3::inwork; 9330,12538 9314,12652
+',
+         'from' => 1615176000,
+         'id' => 3314,
+         'source_id' => '2147346756',
+         'text' => 'Friedrichstr.: in Höhe Bahnhof Friedrichstr. Gleisbauarbeiten, Fahrbahn in beiden Richtungen gesperrt, vom 09.03.2021 05:00 Uhr bis 31.03.2021 17:00 Uhr',
+         'type' => 'handicap',
+         'until' => 1617202800
+       },
        undef,
        undef,
        undef,
@@ -3226,7 +3241,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-02-13
+#: last_checked: 2021-03-08 (mapillary)
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 ',
@@ -3367,8 +3382,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
-#: also_indoor: traffic (G(wrong),H)
-#: last_checked: 2021-03-06
+#: also_indoor: traffic (G,H)
+#: last_checked: 2021-03-10
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -3401,6 +3416,31 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Mehrower Str. (Ahrensfelde): Bauarbeiten, gesperrt, vom 08.03.2021 bis 09.04.2021',
          'type' => 'gesperrt',
          'until' => 1618005600
+       },
+       {
+         'data' => '#: by: rbb
+#: XXX Bis wann geht die Sperrung? Hat die Sperrung etwas mit den Bauarbeiten in der Bahnhofstr. zu tun? Sind Radfahrer betroffen?
+	q4::inwork 10513,-1954 10511,-1985 10508,-2006 10453,-2133
+',
+         'from' => undef,
+         'id' => 3341,
+         'text' => 'Riedingerstr.: Sperrung der Fahrbahn',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: PILGRAMER-2019
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=52381
+#: XXX wie sehr sind Radfahrer betroffen?
+#: next_check: 2021-03-15
+	q4::inwork 25150,10562 25149,10695 25149,10731 25148,10769 25145,10841
+',
+         'from' => 1615676400,
+         'id' => 3342,
+         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1063839.php',
+         'text' => 'Pilgramer Str.: Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, ab 15. März 2021 bis ca. 15. Mai 2021',
+         'type' => 'handicap',
+         'until' => 1621115999
        }
      
 );

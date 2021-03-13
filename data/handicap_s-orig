@@ -34,9 +34,15 @@
 # 
 #: next_check_id: PLANSTRASSEC-2019
 #: osm_watch: way id="491906864" version="4"
-#: last_checked: 2021-02-10
+#: last_checked: 2021-02-12 (mapillary)
 #: check_frequency: 30d
 (Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q3::inwork 12926,11224 12848,11093
+# 
+#: source_id: 2147346950 (bis 31.5.2021)
+#: last_checked: 2021-03-11
+#: next_check: 2021-05-31
+#: valid: -20210531
+Am Rudolfplatz: etwa 35m Fahrbahn vor der Modersohnstr. gesperrt, Ausweichen auf Gehweg	q3::inwork 14011,10812 13896,10851
 # 
 # REMOVED (Fahrräder kommen durch) --- #: next_check_id: GUBENER-2019 --- #: priority: #A --- #: last_checked: 2019-07-03 --- #: check_frequency: 2d --- Gubener Str.: Fahrbahn wegen Asphaltierungsarbeiten Meter gesperrt, Ausweichen auf Gehweg, Bordsteine	q4::inwork 13326,12056 13243,12222
 # REMOVED (Durchfahrt möglich) --- #: last_checked: 2019-05-12 --- #: check_frequency: 30d --- Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261 14357,11148
@@ -123,6 +129,11 @@ Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,1183
 # 
 ### Treptow ###
 # 
+#: XXX der Original-Eintrag muss nach Ablauf wieder aktiviert werden
+#: last_checked: 2021-03-11
+#: check_frequency: 60d
+(Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
+# 
 #: next_check_id: AMTREPTOWERPARK-2020
 #: by: https://www.berliner-woche.de/alt-treptow/c-verkehr/baumassnahmen-fuer-die-a100-gestartet_a289900 (hier: erste Bauphase bis Ende 2021, Bauende bis Juni 2023)
 #: osm_watch: way id="44807035" version="11"
@@ -147,8 +158,8 @@ Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork;
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
-#: XXX laut osm nicht mehr highway=construction --- Fahrbahn ist aber nur im westlichen Abschnitt freigegeben (Stand Februar 2021)
-#: osm_watch: way id="719023968" version="5"
+#: XXX Fahrbahn ist nur im westlichen Abschnitt freigegeben (Stand Februar 2021)
+#: osm_watch: way id="719023968" version="6"
 #: last_checked: 2021-02-21
 #: check_frequency: 60d
 Henriette-Lustig-Str.: nur der sehr enge Gehweg sowie 50m der Fahrbahn sind freigegeben	q4::inwork 21476,5048 21611,5119
@@ -197,7 +208,7 @@ Chausseestr.: gemeinsamer Rad- und Gehweg	q2::inwork; 8732,14098 8607,14253 8570
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic vvv
-#: last_checked: 2021-02-19 vvv
+#: last_checked: 2021-03-12 vvv
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q2::inwork; 8775,12457 8904,12489
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
@@ -229,7 +240,7 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: osm_watch: way id="751595931" version="2"
 #: also_indoor: traffic (H)
-#: last_checked: 2021-03-02
+#: last_checked: 2021-03-12
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10952,12401
 # 
 #: last_checked: 2021-02-25
@@ -302,7 +313,7 @@ Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 96
 # 
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="4597320" version="18"
-#: last_checked: 2021-02-19 (architektur-urbanistik)
+#: last_checked: 2021-03-08 (daf)
 #: next_check: 2021-05-31
 #: valid: 20191218-20210531
 Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, Gehweg explizit für Radfahrer verboten	q4::inwork 8737,12098 8783,11959
@@ -490,7 +501,7 @@ Jahnstr.: Bauarbeiten, etwa 50m der Fahrbahn sind gesperrt	q3::inwork 11500,9116
 #: XXX laut vmz bis Anfang 2019, laut fritz/rbb bis 30.06.2021
 #: by: http://www.dafmap.de/d/berlin.html?id=3451&mt=0&zoom=16
 #: also_indoor: traffic (H)
-#: last_checked: 2021-01-09
+#: last_checked: 2021-03-08
 #: check_frequency: 90d
 #: next_check: 2021-06-30
 #: valid: -20210630
@@ -565,7 +576,7 @@ Schleswiger Ufer, Cuxhavener Str.: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5
 #: by: http://www.infravelo.de/projekt/bundesallee/ (Erwähnung der Hochbauarbeiten an der Pariser Str.; Verbesserungen für den Radverkehr bis 4. Quartal 2023)
 #: XXX siehe unten: anderen Eintrag wieder aktivieren
 #: also_indoor: traffic
-#: last_checked: 2021-01-31 (architektur-urbanistik)
+#: last_checked: 2021-03-11 (architektur-urbanistik)
 #: check_frequency: 60d
 #: next_check: 2022-10-01
 # REMOVED --- #: next_check: 2020-02-03
@@ -615,7 +626,7 @@ Neuköllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
 #: by: https://www.kms-sonne.de/baustellennews/?date=20191023
 #: XXX außerdem gibt es Bauarbeiten auf der Karl-Marx-Str. zwischen Fuldastr. und Weichselstr., evtl. mit Verschwenkungen?
 #: XXX laut fritz bis 31. März 2021
-#: source_id: 2147345357
+#: source_id: 2147345357 (inaktiv)
 #: source_id: 2147345472 (bis März 2021)
 #: also_indoor: traffic (G,H)
 #: last_checked: 2021-01-29
@@ -628,11 +639,12 @@ Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/sperrrung-an-der-fuldastrasse_a275098
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630
 #: by: https://www.kms-sonne.de/baustellennews?date=20201221 (weiterhin gesperrt)
+#: by: https://www.kms-sonne.de/baustellennews?date=202102 (voraussichtlich bis Sommer 2021)
 #: source_id: 2147345472 (Verschwenkung der KMS)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-01-29
+#: last_checked: 2021-03-08
 #: check_frequency: 90d
-#: next_check: 2021-03-31
+#: next_check: 2021-06-30
 Fuldastr.: Sperrung der Einmündung Karl-Marx-Str.	q3::inwork 12551,8612 12500,8504
 # 
 #: next_check_id: KARLMARXSTR-2018
@@ -641,7 +653,8 @@ Fuldastr.: Sperrung der Einmündung Karl-Marx-Str.	q3::inwork 12551,8612 12500,85
 #: osm_watch: way id="822805265" version="6"
 #: also_indoor: traffic (G)
 #: last_checked: 2021-02-27
-#: next_check: 2021-03-31
+#: check_frequency: 60d
+#: next_check: 2021-06-30
 Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 12639,8344
 # 
 #: next_check_id: KARLMARXSTR-2018
@@ -661,6 +674,7 @@ Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/jetzt-wird-von-zwei-seiten-aus-gebuddelt_a249214 (hier: ab Mitte Februar 2020)
 #: by: https://www.kms-sonne.de/baustellennews/?date=20200526 (Abschluss bis Rollberstr. voraussichtlich Mitte Juli 2020)
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (Abschluss bis Rollberstr. voraussichtlich September 2020)
+#: by: https://www.kms-sonne.de/baustellennews?date=202102 (voraussichtlich im Juni/Juli 2021 fertig)
 #: XXX laut rbbtext bis 31.03.2021
 #: source_id: IM_022515
 #: source_id: 2147338550
@@ -671,7 +685,7 @@ Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 
 #: also_indoor: traffic
 #: last_checked: 2021-03-02 vvv
 #: check_frequency: 60d
-#: next_check: 2021-03-31
+#: next_check: 2021-06-30
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249
 # REMOVED (hier mittlerweile weitgehend befahrbar) --- Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12714,8249 12753,8187
 # REMOVED (laut osm hier nicht mehr) --- #: check_frequency: 30d --- #: next_check: 2020-10-20 --- Karl-Marx-Str.: Bauarbeiten zwischen Werbellinstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12753,8187 12794,8103
@@ -738,7 +752,7 @@ Simon-Bolivar-Str./Küstriner Str.: Kreuzungsbereich gesperrt	q3::inwork 15878,14
 # 
 #: next_check_id: DENNEWITZFLOTTWELL-2019
 #: also_indoor: traffic (G,H) vvv
-#: last_checked: 2021-02-06 (daf) vvv
+#: last_checked: 2021-03-08 vvv
 # REMOVED (hier kaum noch Einschränkungen) --- Kurfürstenstr.: Bauarbeiten im Kreuzungsbereich	q3::inwork 8058,10306 7850,10351
 Bauarbeiten im Kreuzungsbereich	q3::inwork 8159,10430 8058,10306
 # REMOVED (verlagert) --- Flottwellstr./Dennewitzstr.: Bauarbeiten, Ausweichen auf Gehweg und Umfahrung über Pohlstr.	q3::inwork; 8199,10634 8159,10430 8058,10306
@@ -908,10 +922,12 @@ Pestalozzistr.: Fußgängerzone	q3 3721,11230 3770,11231 3822,11231
 # 
 #: next_check_id: NKZ-2020
 #: XXX zurzeit Bauarbeiten, nur der Gehweg ist offen (alten Eintrag danach wieder aktivieren); vor Corona-Zeiten gab's außerdem einen großzügigen Restaurantbereich
-#: last_checked: 2021-02-19
+#: last_checked: 2021-02-19 vvv
 (Zufahrt am NKZ): Fußgänger/Lieferverkehr	q2 11291,10438 11317,10485
 # REMOVED (Originaleintrag) --- (Zufahrt am NKZ): Fußgänger/Lieferverkehr	q2 11317,10485 11344,10507
 (Zufahrt am NKZ): Fußgänger/Lieferverkehr, Bauarbeiten, Fahrbahn gesperrt	q4::inwork 11317,10485 11344,10507
+#: last_checked ^^^
+#: last_checked: 2021-02-19
 # REMOVED (Originaleintrag) --- (Zufahrt am NKZ): Fußgänger, unübersichtlich	q3 11344,10507 11392,10520 11411,10515
 (Zufahrt am NKZ): Fußgänger, unübersichtlich, Bauarbeiten, Gerüst	q4::inwork 11344,10507 11392,10520 11411,10515
 # 
@@ -925,7 +941,7 @@ Alexanderplatz [Richtung Alexa]: Fußgängerverkehr	q3 11134,12793 11064,12910
 #: by: https://camera.deckchair.com/park-inn-berlin-alexanderplatz (Webcam)
 #: by: https://www.deutsches-architekturforum.de/thread/2271-u-5/?postID=666937#post666937 (Pflasterungsarbeiten)
 # REMOVED (gelöscht) --- #: osm_watch: relation id="8743849" version="2"
-#: last_checked: 2021-03-06 (webcam)
+#: last_checked: 2021-03-08 (daf)
 #: check_frequency: 10d
 #Rathausstr.: Fußgänger	q1- 10923,12779 10704,12595
 Rathausstr.: Fußgänger, Bauarbeiten	q2 10923,12779 10704,12595
@@ -1445,7 +1461,7 @@ Im Gestell: Fußgänger	q1 371,4453 267,4375
 Heinitzweg: Fußgänger	q2 10325,1083 10379,1097
 #: XXX_prog Bordstein ist am südlichen Wendehammer, ansonsten trotzdem q1
 Haewererweg: enge Durchfahrt, niedriger Bordstein	q1 12125,1282 12097,1243
-(Weichselstr. - Sasarsteig): Spielplatz, Radfahren verboten	q4+ 12287,8602 12170,8548
+(Weichselstr. - Sasarsteig): Spielplatz, Radfahren verboten	q4+ 12287,8602 12165,8566
 #: note: mittlerweile werden Radfahrer offiziell über den Platz geführt
 Kaiser-Wilhelm-Platz: einige Fußgänger	q2 7201,8870 7307,8945
 Kernhofer Str.: Fußgänger, Supermarkt	q2 15380,10946 15355,10875
@@ -2490,8 +2506,8 @@ Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8384,10507 8377,10502
 Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8159,10430 8199,10424 8237,10418 8278,10384 8309,10368 8315,10347 8333,10167 8360,10133 8338,9971
 Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8058,10306 8180,10282 8256,10264
 Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0- 8042,10084 8145,10090
-(Hansastr. - Gartenstr.): Fußgänger	q1 15194,16186 15143,16210 15104,16218 14806,16279 14665,16294
-(Hansastr. - Gartenstr.): Fußgänger	q1 14806,16279 14717,16355
+(Hansastr. - Gartenstr.): Fußgänger, Radfahren nicht erlaubt	q3 15194,16186 15143,16210 15104,16218 14806,16279 14665,16294
+(Hansastr. - Gartenstr.): Fußgänger, Radfahren nicht erlaubt	q3 14806,16279 14717,16355
 (Dohnagestell - Tangastr.): Fußgänger	q2 5802,15399 5889,15457 5961,15562
 Arnimplatz: Fußgänger	q2 10606,16319 10739,16146
 (Weg im Salvador-Allende-Viertel): mehrere Drängelgitter im Parkplatzbereich, kann auf geeigneten Parkplatzzufahrten umfahren werden	q3 22888,4184 22957,4264
@@ -2969,7 +2985,7 @@ Schlosspark Schönhausen: einige Fußgänger, Pflasterreihen	q1 10496,18704 10518,1
 Schlosspark Schönhausen: einige Fußgänger	q1+ 10600,19225 10589,19275 10575,19327 10569,19395 10503,19371
 Schlosspark Schönhausen: einige Fußgänger	q1+ 10600,19225 10636,19289 10575,19327 10503,19371
 Schlosspark Schönhausen: einige Fußgänger	q1+ 10589,19275 10636,19289 10857,19379 11081,19456 11236,19509
-Bitburger Str. teilweise relativ eng	q2 15548,17684 15515,17717 15478,17724 15441,17705
+Bitburger Str. teilweise relativ eng	q2 15548,17684 15515,17717 15488,17721 15461,17702
 (Dohnagestell - Plötzensee): eng	q2 5086,15664 5113,15596 5134,15565
 (Uferweg - Bocksfeldstr.): einige Fußgänger	q1 -3928,11526 -3909,11596 -3872,11619
 (Uferweg): Fußgänger	q1 -4245,11400 -4209,11424 -4181,11458 -4106,11519 -4028,11533 -3928,11526 -3828,11491 -3785,11445 -3752,11373
@@ -3329,7 +3345,8 @@ Zeppelinplatz: einige Fußgänger	q1 6794,15553 6884,15456
 (Straße 50 - Straße 50): einige Fußgänger, schmal	q2 15305,22017 15325,22070 15353,22105
 (S-Bhf. Karow, Bahnhofsunterführung): Fußgänger	q3 14718,23387 14630,23438
 Oberdorfer Steig: schmaler Weg	q2 -8213,14837 -8270,14782
-(Sulzfelder Str. - Hansastr.): einige Fußgänger	q1 15120,16349 15120,16305 15104,16218
+(Sulzfelder Str. - Hansastr.): einige Fußgänger	q1 15120,16349 15120,16305 15112,16262
+(Sulzfelder Str. - Hansastr.): einige Fußgänger, Radfahren nicht erlaubt	q3 15112,16262 15104,16218
 (Weg am Westhafenkanal): einige Fußgänger	q1+ 3656,14150 3666,14162 3651,14172 3203,14054 2899,13934
 (Weg am Westhafenkanal - Tegeler Weg): einige Fußgänger	q1+ 2899,13934 2895,13869 2957,13796 2984,13789
 (Weg am Westhafenkanal - Tegeler Weg): einige Fußgänger	q1+ 2895,13869 2913,13919 2935,13927
@@ -3513,6 +3530,7 @@ An der Kieler Brücke: Fußgängerzone	q3 7877,14504 7804,14445
 (Straße E, Innovationspark Wuhlheide): Gewerbebetriebe	q2 21231,7249 21175,7212 21243,7135
 (Straße G, Innovationspark Wuhlheide): Gewerbebetriebe	q1 21627,6942 21547,7024
 (Relingstr. - Uferweg): einige Fußgänger	q2 22358,2460 22399,2481
+Am Berlin Museum: einige Katzenkopfreihen	q2 10032,10752 9829,10830
 # 
 ######################### User Contributions #################################
 # 
@@ -3929,7 +3947,7 @@ Vereinsweg (Steglitz): Fußgänger, Privatstraße, Radfahren nicht erlaubt	q4 5334,
 Apeldorner Weg: Fußgänger, Bordstein	q2+ 3822,8718 3858,8786 3952,8980
 Münstersche Str.: Fußgänger	q2 3840,9683 3698,9624
 (Hoffmannstr. - Puschkinallee): Fußgänger	q1 14077,10016 13999,9842
-(Hoffmannstr. - Uferweg an den Treptowers): Fußgänger	q1 14077,10016 14116,10149 14126,10176
+# temporär entfernt: (Hoffmannstr. - Uferweg an den Treptowers): Fußgänger	q1 14077,10016 14116,10149 14126,10176
 August-Lindemann-Str.: Fußgänger	q3 14355,12752 14360,12792
 (Jagdschloß Grunewald - Umgehungschaussee): Fußgänger, Hundeauslaufgebiet	q2 878,6651 884,6701 1024,6898 1066,7093 1125,7184
 (Uferweg am Grunewaldsee): Fußgänger, Hundeauslaufgebiet	q2 1251,7429 1197,7457 1168,7473 1089,7496 1007,7334 928,7252 794,6958 762,6906 682,6865 574,6842 524,6795 478,6738 340,6598
