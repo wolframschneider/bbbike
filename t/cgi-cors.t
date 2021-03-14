@@ -46,7 +46,7 @@ my @output_as_defs =
      [undef,     0],
     );
 
-plan tests => @origin_defs * @output_as_defs;
+plan tests => @origin_defs * @output_as_defs * 2;
 
 using_bbbike_test_cgi;
 
