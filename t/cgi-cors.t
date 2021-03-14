@@ -67,10 +67,10 @@ for my $origin_def (@origin_defs) {
 	my $origin_string    = defined $origin    ? $origin    : '<undef>';
 	my $output_as_string = defined $output_as ? $output_as : '<undef>';
 	if ($expected_by_origin && $expected_by_output_as) {
-	    is $resp->header('Access-Control-Allow-Origin'), $origin, "Expected CORS header for Origin=$origin_string and output_as=$output_as_string"
+	    is $resp->header('Access-Control-Allow-Origin'), $origin, "Expected CORS header for Origin=$origin_string and output_as=$output_as_string url=$url"
 		or diag $resp->headers->as_string;
 	} else {
-	    ok !$resp->header('Access-Control-Allow-Origin'), "Expected missing CORS header for Origin=$origin_string and output_as=$output_as_string";
+	    ok !$resp->header('Access-Control-Allow-Origin'), "Expected missing CORS header for Origin=$origin_string and output_as=$output_as_string url=$url";
 	}
     }
 }
