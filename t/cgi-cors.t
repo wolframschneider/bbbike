@@ -35,7 +35,7 @@ my @origin_defs =
      ['https://localhost',     1],
      ['http://bbbike.de',      1],
      ['http://www.bbbike.de',  1],
-     ['http://www.bbbike.org', 1],
+     #['http://www.bbbike.org', 1],
     );
 
 my @output_as_defs =
