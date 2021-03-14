@@ -35,7 +35,7 @@ my @origin_defs =
      ['https://localhost',     1],
      ['http://bbbike.de',      1],
      ['http://www.bbbike.de',  1],
-     #['http://www.bbbike.org', 1],
+     ['http://www.bbbike.org', 1],
     );
 
 my @output_as_defs =
@@ -64,13 +64,15 @@ for my $origin_def (@origin_defs) {
 	my $q = CGI->new({ %std_args, (defined $output_as ? (output_as => $output_as) : ()) });
 	my $url = $testcgi . "?" . $q->query_string;
 	my $resp = $ua->get($url, (defined $origin ? (Origin => $origin) : ()));
+        ok ($resp->is_success, "url=$url") || next;
+
 	my $origin_string    = defined $origin    ? $origin    : '<undef>';
 	my $output_as_string = defined $output_as ? $output_as : '<undef>';
 	if ($expected_by_origin && $expected_by_output_as) {
-	    is $resp->header('Access-Control-Allow-Origin'), $origin, "Expected CORS header for Origin=$origin_string and output_as=$output_as_string url=$url"
+	    is $resp->header('Access-Control-Allow-Origin'), $origin, "Expected CORS header for Origin=$origin_string and output_as=$output_as_string"
 		or diag $resp->headers->as_string;
 	} else {
-	    ok !$resp->header('Access-Control-Allow-Origin'), "Expected missing CORS header for Origin=$origin_string and output_as=$output_as_string url=$url";
+	    ok !$resp->header('Access-Control-Allow-Origin'), "Expected missing CORS header for Origin=$origin_string and output_as=$output_as_string";
 	}
     }
 }
