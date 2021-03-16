@@ -39,7 +39,8 @@
 (Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q3::inwork 12926,11224 12848,11093
 # 
 #: source_id: 2147346950 (bis 31.5.2021)
-#: last_checked: 2021-03-11
+#: also_indoor: traffic (G)
+#: last_checked: 2021-03-15
 #: next_check: 2021-05-31
 #: valid: -20210531
 Am Rudolfplatz: etwa 35m Fahrbahn vor der Modersohnstr. gesperrt, Ausweichen auf Gehweg	q3::inwork 14011,10812 13896,10851
@@ -140,7 +141,7 @@ Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,1183
 #: osm_watch: way id="26285705" version="7"
 #: osm_watch: way id="69166216" version="7"
 #: source_id: 2147346409 (bis Ende 2021, Gesamtbaumaßnahme bis Ende 2023)
-#: last_checked: 2021-02-27 vvv
+#: last_checked: 2021-03-15 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2021-12-31 vvv
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q3::inwork; 14382,9299 14242,9448
@@ -605,7 +606,7 @@ Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen,
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a100_16_ba/pix/los1/NKA_Sperrung_Ueplan_Fussgaenger_gr.gif
-#: last_checked: 2021-02-20 vvv
+#: last_checked: 2021-03-13 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
@@ -683,7 +684,7 @@ Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 
 #: osm_watch: way id="585753318" version="8"
 #: osm_watch: way id="71392596" version="13"
 #: also_indoor: traffic
-#: last_checked: 2021-03-02 vvv
+#: last_checked: 2021-03-13 vvv
 #: check_frequency: 60d
 #: next_check: 2021-06-30
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249
@@ -1657,6 +1658,7 @@ Dora-Benjamin-Park: Bordstein bei der Einfahrt	q1 14705,10149 14621,10062
 Dora-Benjamin-Park: Bordstein bei der Einfahrt	q1 14747,10108 14702,10020
 (Dora-Benjamin-Park - Spreeufer): Fußgänger	q1 14702,10020 14690,9993
 (Hoher Wallgraben - Hegemeisterweg): eng, Fußgänger	q2 18101,8044 18119,7996 18287,7815
+(Hegemeisterweg - Hoher Wallgraben/KGA Stallwiese): einige Fußgänger	q1 17987,7973 18025,7986 18101,8044
 Kleine Hege: sehr eng	q3- 22334,4383 22382,4361
 Schmaler Weg: eng, Fußgängerweg nicht für Radfahrer freigegeben, ggfs. schieben	q3 25571,5829 25442,5813 25294,5761
 (Bölschestr. - Scharnweberstr.): eng, Fußgängerweg nicht für Radfahrer freigegeben, ggfs. schieben	q3 25524,5011 25729,5002
@@ -1678,7 +1680,7 @@ Bänschstr.: mehrere (mindestens fünf) Bodenschwellen	q0 14798,12502 15005,12443
 #: XXX_prog: für Anhänger relevant (q1 oder so)
 Bouchéstr.: Bodenschwellen	q0 13642,9624 13865,9866
 #: XXX_prog: für Anhänger relevant (q1 oder so)
-Bouchéstr.: eine Bodenschwelle	q0 13489,9456 13357,9313
+Bouchéstr.: zwei Bodenschwellen	q0- 13489,9456 13357,9313
 #: XXX_prog: für Anhänger relevant (q2 oder so)
 Radenzer Str.: zwei Bodenschwellen	q1 16220,6277 16304,6358
 #: XXX_prog: für Anhänger relevant (q2 oder so)

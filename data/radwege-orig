@@ -856,7 +856,7 @@ im Bereich der Bushaltestelle wird der Radweg auf dem Gehweg geführt	RW4; 14196,
 #: source_id: 2147345952 (Leitungsarbeiten, 2+1 Fahrspuren; Radfahrer Richtung Südwesten werden auf dem Gehweg geführt; bis 6.7.2020 --- mittlerweile beendet)
 #: source_id: 2147346063
 #: XXX wann wird die Radspur wieder hergestellt? (-> RW4;)
-#: last_checked: 2021-03-11
+#: last_checked: 2021-03-15
 #: check_frequency: 60d
 # REMOVED (vermutlich ohne baldige Änderung) --- #: next_check: 2021-03-31
 provisorischer gemeinsamer Geh- und Radweg	RW2; 14558,10264 14501,10169 14405,10027 14323,9913
@@ -1184,10 +1184,10 @@ Gehweg für Radfahrer frei	RW1; 21002,5755 20880,5736
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2020/pressemitteilung.1021149.php (Verkehrsumstellung auf der Grenzallee, evtl. am 25.11.2020; außerdem wird die Bergiusstr. für den Kfz-Verkehr gesperrt (und später sowieso verlegt))
 #: source_id: 2147343690
 #: source_id: LMS-BR_r_LMS-BR_6571
-#: XXX siehe auch handicap_s-Eintrag vvv
+#: XXX siehe auch ampeln-Eintrag vvv
 # REMOVED --- #: by: https://baudoku.1000eyes.de/cam/a100bdc/ACCC8E04C80C/ (Webcam, funktioniert nicht mehr)
 # REMOVED --- #: by: https://baudoku.1000eyes.de/cam/a100bdc/ACCC8E04C819/ (Webcam)
-#: last_checked: 2021-02-20 vvv
+#: last_checked: 2021-03-13 vvv
 #: check_frequency: 30d vvv
 #	RW1;RW2 14051,6731 14153,6795
 #	RW1;RW1 14344,7003 14257,6895 14239,6875 14153,6795
@@ -1520,7 +1520,7 @@ neu asphaltiert	RW1; 17527,7812 17619,7679 17681,7589 17769,7465
 #: by: https://www.berliner-woche.de/oberschoeneweide/c-verkehr/bisher-schon-rund-35000-euro-kosten-fuer-sperrbaken-angefallen_a273583 (Baubeginn nicht vor Juni 2021)
 #: by: http://www.infravelo.de/projekt/rummelsburger-strasse-und-rummelsburger-landstrasse/ (genaue Führungsform steht noch nicht fest, 2. Quartal 2021 - 4. Quartal 2021)
 #: XXX bei vmz/rbb fälschlicherweise nicht mehr gelistet
-#: last_checked: 2021-03-09 vvv
+#: last_checked: 2021-03-15 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2021-12-31 vvv
 provisorische geschützte Radspur	RW3; 17681,7589 17619,7679 17527,7812 17299,8140 17202,8391 17143,8565
@@ -3695,12 +3695,11 @@ neu asphaltiert	RW1; 23993,14797 24030,14717 24097,14575 24120,14526 24162,14487
 gemeinsamer Rad- und Gehweg, Beton, teilweise eng	RW2; 25256,14110 25095,14171
 	RW2;RW1 25256,14110 25414,14036 25451,14018
 	RW;RW2 23993,14797 23960,15021
-	RW2;RW2 23960,15021 23952,15086 23933,15209 23913,15333 23895,15450 23868,15633
-	RW;RW2 23868,15633 23859,15763 23895,15904
+	RW2;RW2 23960,15021 23952,15086 23933,15209 23913,15333 23895,15450 23868,15633 23859,15763 23895,15904
 neu asphaltiert	RW2; 22771,16194 22698,15788
 	RW2; 22698,15788 22771,16194
-	RW2;RW2 22698,15788 22811,15753 22883,15740 23080,15700 23218,15671 23411,15632 23568,15603 23617,15594
-	RW2;RW 23617,15594 23868,15633
+	RW2;RW2 22698,15788 22811,15753 22883,15740 23080,15700 23218,15671 23411,15632 23568,15603
+	RW2;RW1 23568,15603 23617,15594 23868,15633
 alte Betonplatten/Verbundsteinpflaster	RW1;RW1 25007,15650 25005,15636 25003,15617 24982,15433 24968,15307
 	RW1;RW1 24968,15307 25006,15132 25025,15062 25031,15027
 neu asphaltiert, relativ breit	RW1; 25031,15027 25045,14946
@@ -5843,7 +5842,7 @@ mit Unkraut überwuchertes Verbundsteinpflaster	RW1; 12254,24857 12138,24989 1240
 #: note: oft zugeparkt, insbesondere im nördlichen Abschnitt
 #: XXX Grünmarkierung?
 #: priority: #D
-#: last_checked: 2021-03-02
+#: last_checked: 2021-03-13
 #: check_frequency: 30d
 	RW4; 12714,8249 12753,8187 12794,8103 12830,8031
 Grünmarkierung	RW4; 12830,8031 12846,7981 12865,7923 12892,7850 12898,7832 12914,7785
@@ -5878,7 +5877,7 @@ Grünmarkierung	RW4; 12914,7785 12898,7832 12892,7850 12865,7923 12846,7981 12830
 # REMOVED (hier realisiert, Koordinaten nach oben geschoben) --- #: priority: #D vvv --- #: last_checked: 2019-09-13 vvv --- #: check_frequency: 10d vvv --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: priority ^^^ --- #: XXX ^^^ --- 
 #: XXX Grünmarkierung?
 #: priority: #D
-#: last_checked: 2021-03-02
+#: last_checked: 2021-03-13
 #: check_frequency: 30d
 	RW4; 12830,8031 12794,8103 12753,8187 12714,8249
 # note: Ende Karl-Marx-Str.

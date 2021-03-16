@@ -635,6 +635,7 @@ Dora-Benjamin-Park: Bordstein bei der Einfahrt	q1 14705,10149 14621,10062
 Dora-Benjamin-Park: Bordstein bei der Einfahrt	q1 14747,10108 14702,10020
 (Dora-Benjamin-Park - Spreeufer): Fußgänger	q1 14702,10020 14690,9993
 (Hoher Wallgraben - Hegemeisterweg): eng, Fußgänger	q2 18101,8044 18119,7996 18287,7815
+(Hegemeisterweg - Hoher Wallgraben/KGA Stallwiese): einige Fußgänger	q1 17987,7973 18025,7986 18101,8044
 Kleine Hege: sehr eng	q3 22334,4383 22382,4361
 Schmaler Weg: eng, Fußgängerweg nicht für Radfahrer freigegeben, ggfs. schieben	q3 25571,5829 25442,5813 25294,5761
 (Bölschestr. - Scharnweberstr.): eng, Fußgängerweg nicht für Radfahrer freigegeben, ggfs. schieben	q3 25524,5011 25729,5002
@@ -650,7 +651,7 @@ Uferweg: Fußgänger	q1 3862,12675 3938,12687 4147,12699 4206,12691 4242,12684
 Bänschstr.: mehrere (mindestens fünf) Bodenschwellen	q0 14996,12462 14801,12517
 Bänschstr.: mehrere (mindestens fünf) Bodenschwellen	q0 14798,12502 15005,12443
 Bouchéstr.: Bodenschwellen	q0 13642,9624 13865,9866
-Bouchéstr.: eine Bodenschwelle	q0 13489,9456 13357,9313
+Bouchéstr.: zwei Bodenschwellen	q0 13489,9456 13357,9313
 Radenzer Str.: zwei Bodenschwellen	q1 16220,6277 16304,6358
 Dornbrunner Str.: zwei Bodenschwellen	q1 16147,6545 16043,6414
 (Neue Grünstr. - Alte Jakobstr.): Radfahren verboten	q4 10624,11548 10526,11612

@@ -2325,6 +2325,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: laut rbbtext bis 4.1.2021 (mittlerweile existiert die Meldung hier nicht mehr)
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5735 (bis Ende 2022?)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5772 (bis Ende August 2023?)
+#: by: https://www.berliner-woche.de/bezirk-pankow/c-verkehr/bezirksverordnete-befuerchten-noch-groesseres-verkehrschaos_a303387
 	2::inwork 14539,23306 14573,23295 14597,23280
 ',
          'from' => 1543258848,
@@ -2788,7 +2790,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-03-10
+#: last_checked: 2021-03-14
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -3120,20 +3122,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1617202800
        },
        undef,
-       {
-         'data' => '#: by: https://www.verkehrslage.de/Berlin/Baustellen/3
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: also_indoor: traffic (G)
-#: last_checked: 2021-02-27
-#: check_frequency: 14d
-	q4::inwork 12997,6290 13027,6168
-',
-         'from' => undef,
-         'id' => 3299,
-         'text' => 'Rungiusstr.: Bauarbeiten zwischen Bürgerstr. und Jahnstr., Fahrbahn gesperrt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3211,13 +3200,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: wosch
 # REMOVED (genau so) --- #: XXX genaue Lage der Baustelle? --- #: last_checked: 2021-01-09 --- #: next_check: 2021-01-04
 # REMOVED ---	q4::inwork 9298,12765 9303,12718
-	q4::inwork 9303,12718 9313,12662 9314,12652
 	q3::inwork; 9330,12538 9314,12652
+	q4::inwork; 9314,12652 9313,12662 9303,12718
 ',
          'from' => 1615176000,
          'id' => 3314,
          'source_id' => '2147346756',
-         'text' => 'Friedrichstr.: in Höhe Bahnhof Friedrichstr. Gleisbauarbeiten, Fahrbahn in beiden Richtungen gesperrt, vom 09.03.2021 05:00 Uhr bis 31.03.2021 17:00 Uhr',
+         'text' => 'Friedrichstr.: in Höhe Bahnhof Friedrichstr. Gleisbauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 09.03.2021 05:00 Uhr bis 31.03.2021 17:00 Uhr',
          'type' => 'handicap',
          'until' => 1617202800
        },
@@ -3225,19 +3214,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2021-03-01
-#: check_frequency: 45d
-# REMOVED (hier nicht mehr) ---	q4::inwork 17794,8429 17774,8342
-	q4::inwork 17774,8342 17753,8290
-',
-         'from' => undef,
-         'id' => 3319,
-         'text' => 'Trautenauer Str.: Fahrbahn wegen Bauarbeiten am Projekt "Parkstadt Karlshorst" gesperrt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
@@ -3383,7 +3360,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-03-10
+#: last_checked: 2021-03-15
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -3431,6 +3408,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: PILGRAMER-2019
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=52381
+#: source_id: 2147346982
 #: XXX wie sehr sind Radfahrer betroffen?
 #: next_check: 2021-03-15
 	q4::inwork 25150,10562 25149,10695 25149,10731 25148,10769 25145,10841
