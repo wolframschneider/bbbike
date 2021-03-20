@@ -1246,7 +1246,7 @@ Mercedes-Platz	NN 12990,11006 13063,11147
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="4"
 #: priority: #C
-#: last_checked: 2021-02-12 (mapillary)
+#: last_checked: 2021-03-19
 #: next_check: 2023-01-01
 (Planstraße C)	N 12926,11224 12848,11093
 # 
@@ -6419,6 +6419,7 @@ Schwarzer Weg (Oberschöneweide)	N 17295,7328 17297,7196 17286,7173
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20100119.1405.152701.html
 #: confirmed_by: srt
 Fritz-König-Weg	N 17527,7812 17301,7754 17050,7687
+#: note: bei osm "Rheinweg", eine Ausschilderung vor Ort scheint nicht zu existieren
 (Weg 7)	N 17050,7687 16902,7652
 # REMOVED (existiert nicht mehr, wegen der neuen Minna-Todenhagen-Str.) --- (Elbeweg)	N 17135,7223
 (Elbeweg)	N 17116,7241 17061,7323 16949,7484 16934,7570 16902,7652 16873,7733
