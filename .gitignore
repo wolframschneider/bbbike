@@ -21,7 +21,7 @@ log.check-full
 /data-osm
 /data_*
 /distfiles
-cover_db
+/cover_db/
 Makefile.osm
 data-opensearch
 data-osm
@@ -286,5 +286,6 @@ images/sqlite-micro.png
 images/sqlite.png
 images/text-micro.png
 images/text.png
+
 .github/workflows/test.yml
 /.coveralls.yml

@@ -885,7 +885,7 @@ EOF
        text  => 'Hermannstraßenfest zwischen Flughafenstraße und Thomasstraße, Straße gesperrt, Dauer: 04.09.2004 04:00 Uhr bis 05.09.2004 23:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 12185,7381 12181,7390 12158,7449 12123,7549
+	2 12185,7381 12158,7449 12123,7549
 	2 11920,8252 11931,8206 11933,8198
 	2 11920,8252 11915,8279 11898,8362
 	2 12041,7788 12057,7744 12075,7696
@@ -3101,7 +3101,7 @@ EOF
        data  => <<EOF,
 	2 12090,7651 12081,7679 12075,7696
 	2 12090,7651 12121,7555 12123,7549
-	2 12185,7381 12181,7390 12158,7449 12123,7549
+	2 12185,7381 12158,7449 12123,7549
 	2 11920,8252 11931,8206 11933,8198
 	2 11920,8252 11915,8279 11898,8362
 	2 12041,7788 12057,7744
@@ -4613,7 +4613,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005438',
        data  => <<EOF,
-	2 11979,8014 12001,7937 12025,7852 12041,7788 12057,7744 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12181,7390 12185,7381
+	2 11979,8014 12001,7937 12025,7852 12041,7788 12057,7744 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12185,7381
 EOF
      },
      { from  => 1148565600, # 2006-05-25 16:00
@@ -6278,7 +6278,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003771',
        data  => <<EOF,
-	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12057,7744 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12181,7390 12185,7381
+	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12057,7744 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12185,7381
 EOF
      },
      { from  => 1160107200, # 2006-10-06 06:00
@@ -15496,7 +15496,7 @@ EOF
        type  => 'handicap',
        source_id => 'MoPo 8. August 2009',
        data  => <<EOF,
-	q4::inwork 12645,7087 12632,7137 12613,7236
+	q4::inwork 12648,7080 12634,7151 12613,7236
 EOF
      },
      { from  => 1250373600, # 2009-08-16 00:00
@@ -28680,6 +28680,8 @@ EOF
 #: note: laut rbbtext bis 4.1.2021 (mittlerweile existiert die Meldung hier nicht mehr)
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5735 (bis Ende 2022?)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5772 (bis Ende August 2023?)
+#: by: https://www.berliner-woche.de/bezirk-pankow/c-verkehr/bezirksverordnete-befuerchten-noch-groesseres-verkehrschaos_a303387
 	2::inwork 14539,23306 14573,23295 14597,23280
 EOF
      },
@@ -30833,7 +30835,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-03-10
+#: last_checked: 2021-03-14
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -30868,7 +30870,7 @@ EOF
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.969860.php (Freiwillige gesucht)
 #: by: https://mein.berlin.de/projekte/temporare-spielstrassen/ (Ergebnis der Verlängerungen)
 # REMOVED --- #: priority: #A --- #: last_checked: 2020-07-30 --- #: next_check: 2020-08-10
-# REMOVED (wird nicht verlängert) --- Selkestr. zwischen Schierker Str. und Nogatstr. sowie der Schierker Platz im Körnerkiez	q4::temp::play 12751,7166 12741,7224 12722,7261
+# REMOVED (wird nicht verlängert) --- Selkestr. zwischen Schierker Str. und Nogatstr. sowie der Schierker Platz im Körnerkiez	q4::temp::play 12748,7177 12741,7224 12722,7261
 # REMOVED (nur wenige Termine bis zum 27.9.2020 können übernommen werden -> lohnt wohl nicht) --- Hobrechtstr. zwischen Sanderstr. und Pflügerstr. im Reuterkiez	q4::temp::play 11917,9663 11934,9538
 # REMOVED (wird nicht verlängert) --- die Schnalle zwischen Karl-Marx- und Richardplatz im Richardkiez	q4::temp::play 13100,7626 13177,7644
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954979.php
@@ -31625,15 +31627,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1615652606, # undef, # XXX
        text  => 'Rungiusstr.: Bauarbeiten zwischen Bürgerstr. und Jahnstr., Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.verkehrslage.de/Berlin/Baustellen/3
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: also_indoor: traffic (G)
-#: last_checked: 2021-02-27
-#: check_frequency: 14d
+# REMOVED (beendet) --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet? --- #: also_indoor: traffic (G) --- #: last_checked: 2021-02-27 --- #: check_frequency: 14d
 	q4::inwork 12997,6290 13027,6168
 EOF
      },
@@ -31843,7 +31842,7 @@ EOF
      },
      { from  => $isodate2epoch->("2021-03-08 05:00:00"), # 1609650000, # 2021-01-03 06:00
        until => $isodate2epoch->("2021-03-31 17:00:00"), # 1611590400, # 2021-01-25 17:00
-       text  => 'Friedrichstr.: in Höhe Bahnhof Friedrichstr. Gleisbauarbeiten, Fahrbahn in beiden Richtungen gesperrt, vom 09.03.2021 05:00 Uhr bis 31.03.2021 17:00 Uhr',
+       text  => 'Friedrichstr.: in Höhe Bahnhof Friedrichstr. Gleisbauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 09.03.2021 05:00 Uhr bis 31.03.2021 17:00 Uhr',
        type  => 'handicap',
        source_id => '2147346756', # inaktiv
        data  => <<EOF,
@@ -31851,8 +31850,8 @@ EOF
 #: by: wosch
 # REMOVED (genau so) --- #: XXX genaue Lage der Baustelle? --- #: last_checked: 2021-01-09 --- #: next_check: 2021-01-04
 # REMOVED ---	q4::inwork 9298,12765 9303,12718
-	q4::inwork 9303,12718 9313,12662 9314,12652
 	q3::inwork; 9330,12538 9314,12652
+	q4::inwork; 9314,12652 9313,12662 9303,12718
 EOF
      },
      { from  => 1609668000, # 2021-01-03 11:00
@@ -31892,13 +31891,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1615835277, # undef, # XXX
        text  => 'Trautenauer Str.: Fahrbahn wegen Bauarbeiten am Projekt "Parkstadt Karlshorst" gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2021-03-01
-#: check_frequency: 45d
+# REMOVED (nicht mehr) --- #: next_check_id: PARKSTADTKARLSHORST-2021 --- #: last_checked: 2021-03-01 --- #: check_frequency: 45d
 # REMOVED (hier nicht mehr) ---	q4::inwork 17794,8429 17774,8342
 	q4::inwork 17774,8342 17753,8290
 EOF
@@ -32093,7 +32090,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-03-10
+#: last_checked: 2021-03-15
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -32154,6 +32151,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: PILGRAMER-2019
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=52381
+#: source_id: 2147346982
 #: XXX wie sehr sind Radfahrer betroffen?
 #: next_check: 2021-03-15
 	q4::inwork 25150,10562 25149,10695 25149,10731 25148,10769 25145,10841
