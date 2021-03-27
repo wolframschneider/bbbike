@@ -524,7 +524,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-02-27
+#: last_checked: 2021-03-25
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -858,6 +858,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 #: note: nicht gesperrt: 2011-07-16 (Sa) gegen 16 Uhr
 #: note: nicht gesperrt: 2012-07-19 (Do) gegen 14 Uhr
 #: note: nicht gesperrt: 2013-09-07 (Sa) gegen 13 Uhr
+#: note: nicht gesperrt: 2021-03-21 (So) gegen 15 Uhr
 #: tempex: volatile
 	2::temp 18870,5833 18932,5926
 ',
@@ -2194,7 +2195,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2021-03-12
+#: last_checked: 2021-03-26
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2299,7 +2300,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-03-10
+#: last_checked: 2021-03-20
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2468,11 +2469,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: SOLDINER-2019
 #: by: https://www.soldiner-quartier.de/aktuell.html?tx_news_pi1%5Bnews%5D=445&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=1b5efc55c1b5b262514c4bb696a56d73 (bis Ende 2020 oder Frühjahr 2021)
-#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
+# REMOVED (existiert nicht mehr) --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=50333
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=77297
 #: source_id: 2147343335 (Zeitraum siehe oben)
 #: XXX bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H)
-#: last_checked: 2020-12-28 (mapillary)
+#: last_checked: 2021-03-24 (mapillary)
 # REMOVED --- #: check_frequency: 60d
 #: next_check: 2021-03-31
 #: XXX_prog: eigentlich q4+::inwork;
@@ -2600,10 +2602,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2021-01-22
+#: last_checked: 2021-03-20
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-03-31
-	2::inwork 5894,12480 5944,12548
+	2::inwork 5886,12467 5944,12548
 ',
          'from' => 1570312800,
          'id' => 3168,
@@ -2631,9 +2633,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
 #: XXX es wird nochmal im zweiten Halbjahr 2021 eine zweiwöchige Sperrung geben
 #: also_indoor: search Brebacher_Weg Bahnübergang
-#: osm_watch: way id="9829824" version="19"
+#: osm_watch: way id="9829824" version="20"
 #: priority: #A
-#: last_checked: 2021-02-21
+#: last_checked: 2021-03-19 (osm)
 #: check_frequency: 90d
 #: next_check: 2021-03-31
 	2::inwork 21558,12073 21562,12088 21564,12097
@@ -2734,7 +2736,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-03-18
+#: last_checked: 2021-03-22
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2790,7 +2792,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-03-19
+#: last_checked: 2021-03-22
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2872,10 +2874,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: note: laut Baustellenschild der Wasserbetriebe bis Mai 2022
+#: source_id: 2147346999 (Abschnitt zwischen Alsenstr. und Schöneberger Str., bis 16.4.2021)
 #: also_indoor: traffic (H)
 #: last_checked: 2021-02-20 (mapillary)
 #: next_check: 2021-05-18
 	q4::inwork; 5244,6261 5390,6299 5560,6344
+#: XXX ist der Radverkehr hier noch betroffen?
 #: by: mapillary
 	q4::inwork 5560,6344 5582,6360
 ',
@@ -2894,11 +2898,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
 #: source_id: 2147346671 (bis 3.5.2021)
 #: also_indoor: traffic (H,G) vvv
-#: note: laut rbbtext bis 2021-06-30 vvv
+#: note: laut rbb bis 2021-05-03 vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
 #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
 #: last_checked: 2020-12-27 (mapillary) vvv
-#: next_check: 2021-03-26 vvv
+#: next_check: 2021-05-03 vvv
 	q4::inwork; 4515,4760 4214,4595
 #: note: hier nur ein kurzes Stück
 	q2::inwork; 4214,4595 4039,4500
@@ -3000,22 +3004,23 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: next_check_id: SIGISMUND-2020
+#: next_check_id: MUSEUMDERMODERNE-2021
 #: XXX wann sind die Bauarbeiten fertig? vvv
 #: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
-#: last_checked: 2021-02-12 vvv
-#: note: hier von Osten aus legaler gemeinsamer Rad- und Gehweg auf dem Bürgersteig, mit kurzer asphaltierter Rampe, von Westen aus verboten für Fahrzeuge aller Art
-#: osm_watch: way id="16096289" version="18"
-	q2::inwork 8031,11249 7934,11275 7897,11287
+#: last_checked: 2021-03-20 vvv
+#: note: hier von Osten aus legaler gemeinsamer Rad- und Gehweg auf dem Bürgersteig, mit kurzer asphaltierter Rampe, von Westen aus verboten für Fahrzeuge aller Art; mittlerweile existiert kein Gehweg mehr
+#: osm_watch: way id="16096289" version="19"
+	2::inwork 8031,11249 7934,11275 7897,11287
 #: osm_watch: way id="4597351" version="21"
-	q4::inwork 7934,11275 7965,11380
+	2::inwork 7934,11275 7965,11380
 #: last_checked ^^^
 #: XXX ^^^
 #: XXX ^^^
 ',
          'from' => undef,
          'id' => 3277,
-         'text' => 'Sigismundstr. und Matthäikirchplatz: Bauarbeiten, Fahrbahn gesperrt',
-         'type' => 'handicap',
+         'text' => 'Sigismundstr. und Matthäikirchplatz: Bauarbeiten, Fahrbahn und Bürgersteig unter Umständen komplett gesperrt',
+         'type' => 'gesperrt',
          'until' => undef
        },
        undef,
@@ -3047,7 +3052,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: also_indoor: search Oberfeldstraße Bahnübergang
 #: osm_watch: way id="868347101" version="3"
 #: priority: #A
-#: last_checked: 2021-03-01 (osm)
+#: last_checked: 2021-03-24
 #: check_frequency: 90d
 #: next_check: 2021-03-31
 	2::inwork 20627,12162 20624,12133 20620,12108
@@ -3197,21 +3202,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: 2147346949
-#: by: wosch
-# REMOVED (genau so) --- #: XXX genaue Lage der Baustelle? --- #: last_checked: 2021-01-09 --- #: next_check: 2021-01-04
-# REMOVED ---	q4::inwork 9298,12765 9303,12718
-	q3::inwork; 9330,12538 9314,12652
-	q4::inwork; 9314,12652 9313,12662 9303,12718
-',
-         'from' => 1615176000,
-         'id' => 3314,
-         'source_id' => '2147346756',
-         'text' => 'Friedrichstr.: in Höhe Bahnhof Friedrichstr. Gleisbauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 09.03.2021 05:00 Uhr bis 31.03.2021 17:00 Uhr',
-         'type' => 'handicap',
-         'until' => 1617202800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3277,7 +3268,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: ABBESTR-2021
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-01-22
+#: last_checked: 2021-03-20
 #: check_frequency: 45d
 	q3::inwork 4674,12076 4755,12236
 ',
@@ -3319,20 +3310,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1628866800
        },
-       {
-         'data' => '#: by: http://www.sanierung-suedliche-friedrichstadt.de/aktuelle-projekte/aktuelle-projekte/
-#: by: http://www.sanierung-suedliche-friedrichstadt.de/wp-content/uploads/2020/06/2020-06-08-SFS-Gitschiner-Ufer-Bauschild.pdf (bis 2021)
-#: XXX laut Baustellennotiz gesperrt bis Dezember 2020 (offensichtlich länger)
-#: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2021-02-13
-	2::inwork 9873,10285 9668,10306
-',
-         'from' => undef,
-         'id' => 3329,
-         'text' => 'Zossener Brücke - Mehringplatz: Weg wegen Bauarbeiten gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        {
@@ -3362,7 +3340,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-03-15
+#: last_checked: 2021-03-24
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -3422,6 +3400,69 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Pilgramer Str.: Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, ab 15. März 2021 bis ca. 15. Mai 2021',
          'type' => 'handicap',
          'until' => 1621115999
+       },
+       {
+         'data' => '#: also_indoor: traffic vvv
+#: last_checked: 2021-03-21 vvv
+#: next_check: 2021-06-15 vvv
+	q3::inwork; 18676,6333 18767,6268
+	q3::inwork 18767,6268 18859,6198
+#: next_check ^^^
+#: last_checked ^^^
+#: also_indoor ^^^
+',
+         'from' => 1616340931,
+         'id' => 3343,
+         'text' => 'Plönzeile: wegen Bauarbeiten Einbahnstraßenregelung und Sperrung der Fahrbahn, ggfs. auf Gehweg ausweichen, voraussichtlich bis Juni 2021',
+         'type' => 'handicap',
+         'until' => 1625090400
+       },
+       {
+         'data' => '#: XXX bis wann ist die Fahrbahn gesperrt?
+#: also_indoor: traffic (G)
+#: last_checked: 2021-03-21
+#: check_frequency: 60d
+	q4::inwork 18260,5746 18164,5701
+',
+         'from' => undef,
+         'id' => 3344,
+         'text' => 'Hasselwerderstr.: zwischen Fennstr. und Fließstr. Fahrbahn wegen Bauarbeiten gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: S-SCHICHAUWEG-2021
+#: by: rbb
+#: by: https://viz.berlin.de/2021/03/verkehrsvorschau_220321/
+#: by: https://twitter.com/VIZ_Berlin/status/1373879362806816774 (mit Radfahrer-Icon)
+#: XXX sind tatsächlich Fußgänger und Radfahrer betroffen?
+	2::inwork 9693,-815 9692,-772 9693,-746 9699,-600
+',
+         'from' => 1616281200,
+         'id' => 3345,
+         'text' => 'Kettinger Str.: Verbindung zur Barnetstr. unterbrochen, evtl. sind auch Radfahrer betroffen, bis Juli 2021',
+         'type' => 'gesperrt',
+         'until' => 1627768799
+       },
+       {
+         'data' => '	2::inwork 53811,97943 53912,97812
+',
+         'from' => 1616882400,
+         'id' => 3346,
+         'source_id' => '217300060',
+         'text' => 'Wollin: Bauarbeiten an der Autobahnbrücke, u.U. komplett gesperrt, vom 29.3.2021 bis 11.4.2021',
+         'type' => 'gesperrt',
+         'until' => 1618178400
+       },
+       {
+         'data' => '	2::inwork 21359,18834 21332,18819 21278,18786
+',
+         'from' => 1616698800,
+         'id' => 3347,
+         'source_id' => '2147347017',
+         'text' => 'Ahrensfelder Chaussee: Bahnübergang wegen Bauarbeiten gesperrt, auch für Fußgänger und Radfahrer, vom 26.03.2021 20:00 Uhr bis 12.04.2021 17:00 Uhr ',
+         'type' => 'gesperrt',
+         'until' => 1618239600
        }
      
 );

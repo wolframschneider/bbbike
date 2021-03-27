@@ -335,7 +335,7 @@ Daumstr.: Mittelstreifen	3nocross -1485,15463 -1389,15285 -1345,15060
 Germersheimer Weg	1 -4489,15014 -4507,15068 -4499,15152 -4497,15176 -4495,15198 -4466,15460
 Zweibrücker Str.	1 -4254,15813 -4283,15639 -4294,15525 -4308,15411
 #: by: ^^^
-Potsdamer Str.: Mittelstreifen	3nocross 8226,11458 8301,11469 8358,11477 8374,11479 8479,11493 8542,11502
+Potsdamer Str.: Mittelstreifen	3nocross 8226,11458 8261,11463 8301,11469 8358,11477 8374,11479 8479,11493 8542,11502
 Jägerallee/Hegelallee: Durchfahrt verboten	3 -13221,-718 -13231,-763 -13236,-797
 Jägerallee/Hegelallee: Durchfahrt verboten	3 -13236,-797 -13231,-763 -13221,-718
 Osloer Str.: Straßenbahntrasse	3nocross 9442,16610 9331,16624 9210,16638 8952,16666
@@ -974,7 +974,7 @@ Oelder Weg	1 1967,18743 1965,18686
 #: confirmed_by: srt
 Bernhard-Lichtenberg-Platz	1 2643,18738 2731,18729 2867,18736
 #: by: ^^^
-Fasanenstr.	1 5196,10398 5215,10711 5230,10919 5236,10994 5258,11285
+Fasanenstr.	1 5196,10398 5215,10711 5230,10919 5236,10994 5241,11060 5258,11285
 #: note: Radfahrer können Überquerungsmöglichkeit wenige Meter südlich benutzen, oder ggfs. auf dem linken Gehweg zur Ostseestr./Wisbyer Str. vorfahren
 Prenzlauer Allee: Straßenbahntrasse	3nocross 12030,15968 12061,16091 12075,16144 12090,16199
 Prenzlauer Allee: Straßenbahntrasse	3nocross 11471,14143 11498,14234 11572,14452

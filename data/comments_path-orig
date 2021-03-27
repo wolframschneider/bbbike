@@ -273,6 +273,7 @@ Clayallee - Flanaganstr.: Fuﬂweg vor dem McDrive nehmen	CP; 1746,5922 1736,5850 
 Flanaganstr. - Clayallee: Fuﬂweg am McDrive nehmen, bis zur Ampel an der Kˆnigin-Luise-Str. den linken Gehweg benutzen	PI; 1614,5738 1736,5850 1746,5922
 Helmholtzstr. - Zeppelinstr.: zum ‹berqueren der Edisonstr. Fuﬂg‰ngerampel benutzen	CP; 17845,6986 17919,6968 18041,6924
 Zeppelinstr. - Helmholtzstr.: zum ‹berqueren der Edisonstr. Fuﬂg‰ngerampel benutzen	CP; 18041,6924 17919,6968 17845,6986
+Edisonstr. - Zeppelinstr.: zum Linksabbiegen Fuﬂg‰ngerampel benutzen	PI; 17919,6978 17919,6968 18041,6924
 Mariendorfer Damm - Heinitzweg: bereits an der Buckower Chaussee die Straﬂenseite wechseln	PI; 10427,968 10379,1097 10325,1083
 Heinitzweg - Mariendorfer Damm: zun‰chst auf dem linken Gehweg/Radweg vorfahren	CP; 10325,1083 10379,1097 10329,1231
 Zum Hans-Baluschek-Park/Naturpark Schˆneberg: Weg zwischen den Parkh‰usern nehmen	CP2; 7774,7724 7789,7718
@@ -628,7 +629,7 @@ Rathausstr. - Frankfurter Allee: Fuﬂg‰ngerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ‰ndert sich die Ausschilderung? vvv
-#: last_checked: 2021-03-15 vvv
+#: last_checked: 2021-03-24 vvv
 ausgeschildert "zur Salzmannstraﬂe Huronseestraﬂe"	CP2; 16900,9861 16895,9922
 ausgeschildert "zur Sewanstraﬂe"	CP2; 16900,9861 17005,9953
 #: last_checked ^^^

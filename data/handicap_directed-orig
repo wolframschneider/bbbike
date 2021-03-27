@@ -37,7 +37,7 @@
 #: next_check_id: MUSEUMSINSEL-2020
 #: next_check_id: ZEUGHAUS-2014
 #: note: mittlerweile kann man aber auch direkt überqueren
-#: last_checked: 2021-03-03 (mapillary) vvv
+#: last_checked: 2021-03-20 vvv
 #: check_frequency: 30d vvv
 Schinkelplatz -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9990,12404 9984,12426 9953,12533
 UdL -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9934,12420 9984,12426 9953,12533
@@ -203,7 +203,7 @@ Schlichtallee - Fischerstr.: Pollerreihe	DH:t=3 15880,10680 15970,10755 16080,10
 #: next_check_id: RHINSTRASSENBRUECKE-2018
 #: last_checked: 2021-02-23 vvv
 #: check_frequency: 60d vvv
-#: next_check: 2021-03-22 vvv
+#: next_check: 2021-05-30 vvv
 Rhinstr.: östliche Brücke gesperrt, Radweg auf der linken Seite benutzen	DH:len=50:h=q2,570:tl 18215,12123 18216,12239 18216,12262 18220,12450 18225,12697 18235,13236
 # REMOVED --- Rhinstr.: östliche Brücke gesperrt, bis zur Ampel zurückfahren und Straßenseite wechseln	DH:len=420:h=q2,370 18180,12262 18216,12262 18216,12239 18215,12123
 # REMOVED --- Rhinstr.: östliche Brücke gesperrt, Radweg auf der linken Seite benutzen	DH:len=50:h=q2,330 18191,12451 18220,12450 18216,12262 18216,12239 18215,12123
@@ -343,7 +343,7 @@ Behrenstr. - Ebertstr.: zum Linksabbiegen die linke Fußgängerampel benutzen	DH:t
 # REMOVED  --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.1019139.php (für zwei Wochen) --- #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/kreuzung-bleibt-teilgesperrt_a293815 --- #: by: https://twitter.com/VIZ_Berlin/status/1329290817048023040 --- #: by: https://pbs.twimg.com/media/EnKW9CZWMAAOqU1?format=jpg&name=large --- #: source_id: 2147346612 (bis 22.12.2020, nur Einengung) vvv --- #: last_checked: 2020-12-20 vvv --- #: check_frequency: 7d vvv --- #: next_check: 2020-12-22 vvv --- #: valid: -20201222 vvv --- Fahrbahninstandsetzung der Kreuzung Stralauer Allee/Modersohnstr.: Umweg über Ampel Rochowstr.	DH:len=300 13779,10642 13919,10583 14011,10812 --- Fahrbahninstandsetzung der Kreuzung Stralauer Allee/Modersohnstr.: zunächst den linken Gehweg auf der Stralauer Allee benutzen	DH:h=q3,150 13779,10642 13919,10583 14011,10812 --- #: valid ^^^ --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: source_id ^^^
 # 
 #: next_check_id: KASTANIENALLEE-2021
-#: last_checked: 2021-01-20 (mapillary) vvv
+#: last_checked: 2021-03-17 (mapillary) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2021-10-29 vvv
 Kastanienallee: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 9027,20603 9073,20606 9162,20613
