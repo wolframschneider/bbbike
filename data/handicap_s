@@ -6,7 +6,7 @@
 (Planstraﬂe C): Fahrbahn durch Bauz‰une abgesperrt, Ausweichen auf Gehweg mˆglich	q3::inwork 12926,11224 12848,11093
 Am Rudolfplatz: etwa 35m Fahrbahn vor der Modersohnstr. gesperrt, Ausweichen auf Gehweg	q3::inwork 14011,10812 13896,10851
 Hermann-Stˆhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
-(Notweg Bahn¸bergang Bahnhofstr.): Fuﬂg‰nger, f¸r Radfahrer frei	q3 10231,-2159 10215,-2170 10209,-2171 10198,-2143 10096,-2137
+(Notweg Bahn¸bergang Bahnhofstr.): Fuﬂg‰nger, Fahrrad ggfs. schieben	q3 10231,-2159 10215,-2170 10181,-2174 10161,-2146 10096,-2137
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraﬂe, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q3::inwork; 14382,9299 14242,9448
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork; 14242,9448 14185,9509 14089,9610
@@ -793,7 +793,7 @@ Chiemseestr.: enge Straﬂe	q1 22204,1496 22334,1553
 (Kˆnigsheideweg - Am Alten Fenn): eng	q3 17037,4794 17060,4848
 (Am Alten Fenn - S¸dostallee): teilweise recht eng, Anh‰nger sollten parallelen Weg benutzen	q2 17295,5387 17300,5423 17326,5463 17366,5552
 (D‰meritzstr. - D‰meritzsee): Radfahren verboten	q4 32512,2621 32558,2562
-(Lindenstr. - Bahnhofstr.): gemeinsamer Rad- und Gehweg	q1 22017,5159 22046,5305 22043,5346
+(Lindenstr. - Bahnhofstr.): gemeinsamer Rad- und Gehweg	q1 22023,5160 22056,5314 22054,5360
 Waldpromenade: eng	q2 23792,7861 23710,7940 23668,7967
 Waldpromenade: eng	q2 23579,8037 23473,8114
 Ernst-Grube-Park: Radfahren verboten, ggfs. schieben	q3 21345,5157 21329,5192 21208,5291
@@ -2091,6 +2091,7 @@ Cuxhavener Str.: stellenweise eng, einige Fuﬂg‰nger	q3 5931,12399 5904,12417 588
 (Supermarktparkplatz): Parkplatzverkehr	q2 2554,10258 2551,10266 2706,10362 2718,10359
 (Klara-Weyl-Str. - Landschaftspark Herzberge): Spielplatz, Fuﬂg‰nger, kurvig	q3 17418,12797 17422,12811 17400,12842 17363,12856 17347,12845 17299,12851
 (Allee der Kosmonauten - Wohngebiet): einige Fuﬂg‰nger	q2 19628,13517 19649,13481
+(Lichtenrader Damm - Mellener Str.): einige Fuﬂg‰nger, Bordsteine beim ‹berqueren des Lichtenrader Damms	q2 10903,-1768 10771,-1782
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2910,6 +2911,7 @@ Tannenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3023,1
 Tannenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3038,18063 -3028,18027
 Isarstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 12349,8464 12368,8356
 Anton-Saefkow-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 13183,14400 13084,14472 13013,14523 12901,14594 12862,14618 12789,14670 12700,14726 12575,14812 12528,14845
+Karl-Marx-Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 12969,7610 13100,7626
 Barbarastr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 6456,3038 6372,2959 6329,2916 6359,2875 6372,2856
 Parchimer Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 22212,12403 22212,12422 22257,12481 22258,12573 22272,12610
 Stiftsweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 11001,18528 11239,18832 11263,18842
@@ -3040,8 +3042,6 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt: gesperrt, ggfs. schieben	q4:inwo
 Kreuzung Sewanstr./Am Tierpark	q1::igndisp; 18631,10167 18647,10172
 Am Tierpark, linker Gehweg	q1::igndisp; 18647,10172 18715,10003
 Treskowallee, linker Gehweg	q1::igndisp; 18715,10003 18748,9922
-Treskowallee, linker Gehweg	q3::igndisp; 18567,8041 18642,8169 18672,8238
-Treskowallee, linker Gehweg	q3::igndisp; 18650,8111 18406,7760
 Kreuzung Gregoroviusweg/Treskowallee	q1::igndisp; 18748,9922 18740,9907
 Alt-Friedrichsfelde, linker Gehweg	q2::igndisp; 19735,11721 19005,11767 18778,11742 18624,11712 18520,11685 18216,11656
 Alt-Friedrichsfelde, linker Gehweg	q2::igndisp; 18626,11742 18624,11712
