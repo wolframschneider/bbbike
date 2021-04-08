@@ -210,7 +210,6 @@ persistent-tmp:	fragezeichen-outdoor \
 		${PERSISTENTTMPDIR}/non-faked-plaetze \
 		${PERSISTENTTMPDIR}/non-faked-strassen \
 		${PERSISTENTTMPDIR}/XXX.bbd \
-		${PERSISTENTTMPDIR}/plz-b.bbd \
 		${PERSISTENTTMPDIR}/berlin-fragezeichen-poi.gpx \
 		${PERSISTENTTMPDIR}/.check_data_test_mount \
 		osm-watch-lists \
@@ -1121,16 +1120,6 @@ ${PERSISTENTTMPDIR}/XXX.bbd: ${PERSISTENTTMPDIR}/XXX-outdoor.bbd
 	    ${CONVERT2HAFAS} -basefile ${DATADIR}/handicap_s-orig -- - >> $@~
 	mv $@~ $@
 
-${PERSISTENTTMPDIR}/plz-b.bbd:	$(PERSISTENTTMPDIR)/plz.sql
-	grep -i berlin $> | ${PERL} $(MISCSRCDIR)/parse_mapbender_plz.pl > $@
-
-$(PERSISTENTTMPDIR)/plz.sql:	$(PERSISTENTTMPDIR)/plz.zip
-	cd `dirname $>` && unzip -q -o `basename $>` plz.sql
-	touch -r $(PERSISTENTTMPDIR)/plz.zip $(PERSISTENTTMPDIR)/plz.sql
-
-$(PERSISTENTTMPDIR)/plz.zip:
-	wget -O ${PERSISTENTTMPDIR}/plz.zip http://prdownloads.sourceforge.net/mapbender/plz.zip?download
-
 ${PERSISTENTTMPDIR}/Berlin.coords.bbd: Berlin.coords.data
 	$(PERL) -F'\|' -nale 'print "@F[0,1,2]\tX $$F[3]" if $$F[3]' Berlin.coords.data > $@
 
@@ -1162,11 +1151,7 @@ ${PERSISTENTTMPDIR}/Potsdam.coords.bbd: Potsdam.coords.data
 
 OPENGEODB_D_ORTE_FILE=		DE.tab
 OPENGEODB_D_ORTE_DISTURL=	http://fa-technik.adfc.de/Codierung/opengeodb/DE.tab
-.if exists(/usr/ports/distfiles/opengeodb)
-OPENGEODB_DIR=		/usr/ports/distfiles/opengeodb
-.else
-OPENGEODB_DIR=		${PERSISTENTTMPDIR}
-.endif
+OPENGEODB_DIR=			${PERSISTENTTMPDIR}
 OPENGEODB_D_ORTE_PATH=		${OPENGEODB_DIR}/${OPENGEODB_D_ORTE_FILE}
 
 OPENGEODB_D_PLZ_FILE=		PLZ.tab
@@ -1197,8 +1182,9 @@ ${PERSISTENTTMPDIR}/opengeodb-orte-DE.bbd:	${OPENGEODB_D_ORTE_PATH} ${MISCSRCDIR
 	${PERL_UTF8} ${MISCSRCDIR}/opengeodborte2bbd ${OPENGEODB_D_ORTE_PATH} > $@
 
 # About 70 failures for now. If I correct them all, enlarge the bbox.
-.check_orte_opengeodb:	orte orte2 ${PERSISTENTTMPDIR}/opengeodb-orte-DE.bbd
-	cat orte orte2 | grep -v '^#' | \
+# Use "-orig" versions of orte*, because these are already encoded as utf8 like the opengeodb data.
+.check_orte_opengeodb:	orte-orig orte2-orig ${PERSISTENTTMPDIR}/opengeodb-orte-DE.bbd
+	(cat orte-orig orte2-orig; piconv -f latin1 -t utf-8 berlin_ortsteile) | grep -v '^#' | \
 	    $(PERL) -pe 'if (m{^(.*)\|(.*)\t}) { print "$$1 $$2\n" } s{^([^\|\t]+).*}{$$1}' | \
 	    sort -u > /tmp/orte_bbbike
 	cat ${PERSISTENTTMPDIR}/opengeodb-orte-DE.bbd | \

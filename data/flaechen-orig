@@ -55,7 +55,7 @@ Stadion Züllichauer Str.	F:Sport 10361,8811 10365,8726 10467,8729 10463,8814
 Sportplatz Scharnweberstr.	F:Sport 4264,17526 4027,17612 3974,17657 3959,17714 3987,17808 4344,17667 4335,17642 4280,17551
 Herrfurthplatz	F:P 11689,8006 11653,7982 11647,7940 11671,7904 11713,7899 11748,7922 11754,7964 11731,7998
 Wartheplatz	F:P 11813,7159 11820,7123 11826,7090 11899,7105 11891,7137 11883,7173
-Karl-Marx-Platz	F:P 12969,7610 12987,7560 13100,7626
+Karl-Marx-Platz	F:P 12972,7602 12987,7560 13100,7626
 #: note: eventuell auch "Richardpark" (vmz detailnetz)
 Richardplatz	F:P 13177,7644 13188,7590 13295,7627 13392,7648 13417,7654 13424,7680 13416,7712 13378,7695 13288,7653
 Siegfried-Aufhäuser-Platz	F:P 13952,7497 13941,7522 13953,7548 13980,7548
@@ -678,6 +678,9 @@ Arndtplatz	F:P 20750,3440 20733,3438 20718,3445 20716,3463 20725,3476 20739,3478
 Park am Gleisdreieck	F:P 8518,9929 8468,9939 8456,9989 8341,10013 8317,9912 8316,9581 8358,9568 8511,9521 8511,9521 8546,9641 8775,9763 8779,9812 8779,9812 8779,9829 8779,9851 8779,9851 8780,9968 8783,10166 8742,10167 8641,9894 8542,9923 8579,10030 8558,10022
 #: note: Westpark
 Park am Gleisdreieck	F:P 8328,10831 8358,10782 8367,10745 8350,10662 8335,10518 8328,10485 8322,10451 8295,10385 8321,10369 8333,10249 8280,10246 8303,10077 8145,10090 8169,10224 8104,10253 8074,10292 8058,10306 8159,10430 8225,10420 8255,10609 8320,10784 8304,10816 8304,10816 8328,10831
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7492 (Benennung in Dora-Duncker-Park)
+#: XXX wann wird die Umbenennung wirksam? wann werden vor Ort Schilder aufgestellt?
+#: next_check: 2021-05-05
 Flaschenhalspark	F:P 8316,9581 8316,9098 8346,9096 8495,9526 8316,9581
 Grünanlage an der Gottlieb-Dunkel-Str.	F:P 11456,6103 11272,6100 11101,6122 11063,6007 11160,5990 11257,6015 11338,5992 11456,6103
 Grünanlage an der Gottlieb-Dunkel-Str./Teilestr.	F:P 11003,6013 11015,5925 11055,5843 11166,5821 11196,5851 11338,5992 11257,6015 11160,5990 11063,6007 11068,6006 11003,6013
@@ -1257,9 +1260,9 @@ Bahnhofsvorplatz S-Bhf. Priesterweg	F:P 7227,6080 7252,6080 7252,6058 7227,6058 
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8756 (Benennung eines Platzes)
 #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_09_0573_0632_online.pdf (Benennung)
 #: XXX vorgeschlagener Name: Digedagsplatz (fehlt in Berlin.coords.data). Wann wird die Benennung erfolgen?
-#: last_checked: 2021-02-18
-#: check_frequency: 270d
-#: next_check: 2021-04-05
+#: last_checked: 2021-04-06 (noch keine Ausschilderung zu sehen)
+#: check_frequency: 30d
+# REMOVED --- #: next_check: 2021-04-05
 	F:P 18939,9417 18959,9368 18983,9388 18939,9417
 #: by: https://www.stadtentwicklung.berlin.de/nachhaltige-erneuerung/Kiezpark-Schoenagelstrasse.7965.0.html
 Kiezpark Schönagelstraße	F:P 21622,16110 21752,16098 21740,16036 21616,16054 21617,16061 21622,16110

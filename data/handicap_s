@@ -41,8 +41,8 @@ Schleswiger Ufer: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5886,12467 5944,12
 Meierottostr.: Einbahnstraﬂenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
 Neukˆllnische Allee: Fuﬂg‰ngerschutztunnel	q3::inwork 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 Neukˆllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
-Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12394,8729 12330,8636
-Fuldastr.: Sperrung der Einm¸ndung Karl-Marx-Str.	q3::inwork 12551,8612 12500,8504
+Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12392,8724 12330,8636
+Fuldastr.: Sperrung der Einm¸ndung Karl-Marx-Str.	q3::inwork 12551,8612 12494,8501
 Neckarstr.: Sperrung der Einm¸ndung an der Karl-Marx-Str.	q4::inwork 12509,8318 12639,8344
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung S¸den auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249
 Simon-Bolivar-Str./K¸striner Str.: Kreuzungsbereich gesperrt	q3::inwork 15856,14915 15944,14836 16033,14756
@@ -2093,6 +2093,9 @@ Cuxhavener Str.: stellenweise eng, einige Fuﬂg‰nger	q3 5931,12399 5904,12417 588
 (Allee der Kosmonauten - Wohngebiet): einige Fuﬂg‰nger	q2 19628,13517 19649,13481
 (Lichtenrader Damm - Mellener Str.): einige Fuﬂg‰nger, Bordsteine beim ‹berqueren des Lichtenrader Damms	q2 10903,-1768 10771,-1782
 Bergiusstr. - Grenzallee: kurvig, einige Fuﬂg‰nger	q1 14150,6609 14137,6658 14179,6714 14179,6743 14139,6786
+Traberweg: einige Fuﬂg‰nger	q1 18577,8033 18567,8041 18490,8104 18416,8163 18351,8222 18283,8273 18221,8328 18135,8404 18072,8470 18005,8517 17930,8567 17851,8662
+(Trautenauer Str. - Liepnitzstr.): einige Fuﬂg‰nger	q1 17838,8611 17873,8578 17912,8515 18037,8420
+Campus AF 60: Schranke kann auf Gehweg umfahren werden	q2 18964,11719 18919,11720
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2912,7 +2915,7 @@ Tannenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3023,1
 Tannenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3038,18063 -3028,18027
 Isarstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 12349,8464 12368,8356
 Anton-Saefkow-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 13183,14400 13084,14472 13013,14523 12901,14594 12862,14618 12789,14670 12700,14726 12575,14812 12528,14845
-Karl-Marx-Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 12969,7610 13100,7626
+Karl-Marx-Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 12972,7602 13100,7626
 Barbarastr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 6456,3038 6372,2959 6329,2916 6359,2875 6372,2856
 Parchimer Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 22212,12403 22212,12422 22257,12481 22258,12573 22272,12610
 Stiftsweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 11001,18528 11239,18832 11263,18842
