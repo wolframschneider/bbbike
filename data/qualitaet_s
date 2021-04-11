@@ -1330,7 +1330,8 @@ Schönhorster Str.: asphaltiert	Q0 29902,2379 29549,2267 29414,2373
 Südendstr.: Kopfsteinpflaster	Q2 5676,5488 5840,5456 5993,5422
 Am Teltowkanal: Parkweg mit Verbundsteinradweg	Q1 7994,4430 8234,4660
 Am Teltowkanal: Parkweg, teilweise mit schmalem Verbundsteinradweg	Q1 8234,4660 8575,4980 8598,4985 8618,5019 8784,5095
-Am Teltowkanal: Parkweg	Q1 8784,5095 8881,5143 9171,5263 9196,5272
+Am Teltowkanal: Parkweg mit Verbundsteinradweg	Q1 8784,5095 8881,5143 9080,5225
+Am Teltowkanal: Verbundsteinpflaster	Q1 9080,5225 9171,5263 9196,5272
 Unterführung Emil-Schulz-Brücke: unbefestigt, Schotter	Q2 4274,2717 4272,2704 4247,2652 4209,2641
 Teltowkanal: Parkweg, OK	Q1 4209,2641 4053,2300 3971,2106 3814,1729
 Teltowkanal: Asphalt	Q0 3814,1729 3698,1450
@@ -10570,6 +10571,7 @@ Bergiusstr. - Grenzallee: asphaltiert	Q0 14150,6609 14137,6658 14179,6714 14179,
 (Campus AF 60): Beton	Q1 18967,11639 18966,11676
 (Campus AF 60): Verbundsteinpflaster	Q1 18966,11676 18965,11692 18965,11706 18964,11719
 (Campus AF 60): Verbundsteinpflaster	Q1 18965,11692 18984,11719
+Otto-Weidt-Platz: Kleinsteinpflaster	Q1 7732,14131 7866,14215
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972

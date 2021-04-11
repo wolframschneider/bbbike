@@ -6262,13 +6262,12 @@ EOF
        until => $isodate2epoch->("2019-05-05 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 24, months => 4, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 14, # später nochmal prüfen
+       recurrence_prewarn_days => 2, # wegen Corona
        text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (4.5.2019 und 5.5.2019)',
        type  => 'gesperrt',
        source_id => 'http://www.volksfeste-in-deutschland.de/primavera-fruehling-auf-der-akazienstrasse-in-berlin-schoeneberg.html',
        data  => <<EOF,
-#: XXX wird die Veranstaltung noch abgesagt?
-#: next_check: 2020-05-01
+#: by: https://www.berlin.de/events/4390033-2229501-primavera-fruehlingsfest.html (geplanter Termin: 08. bis 09. Mai 2021)
 	2::temp 7101,9027 7035,9161 7012,9222 7001,9291
 	2::temp 6945,9142 7035,9161
 EOF
@@ -8154,11 +8153,12 @@ EOF
        until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 10, months => 5, start => "2020-10-25T00:00:00"]],
-       #recurrence_prewarn_days => 14, # Termin für 2020 steht noch nicht fest
+       recurrence_prewarn_days => 7, # wegen Corona
        source_id => 'https://www.berlin.de/events/4829161-2229501-rudower-fruehlingsmeile.html',
        text  => 'Alt-Rudow: Rudower Frühlingsmeile, Straße zwischen Köpenicker Str. und Bildhauerweg, sowie Krokusstr. bis Prieroser Str. gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
        data  => <<EOF,
+#: https://www.berlin.de/events/4829161-2229501-rudower-fruehlingsmeile.html?date=20210410 (Termin noch nicht bekannt)
 	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
 	2::temp 16610,1715 16767,1831
 EOF
@@ -14085,11 +14085,13 @@ EOF
      { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 9, months => 5, start => "2020-10-25T00:00:00"]],
+       recurrences => [['yearly', days => 8, months => 5, start => "2020-10-25T00:00:00"]],
+       recurrence_prewarn_days => 7, # wegen Corona
        text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html
+#: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html?date=20210409 (geplant 8. und 9. Mai 2021)
 	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
 EOF
      },
@@ -16276,7 +16278,7 @@ EOF
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-03-25
+#: last_checked: 2021-04-09
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -28591,7 +28593,7 @@ EOF
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-04-07
+#: last_checked: 2021-04-08
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -30302,12 +30304,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2021-07-01 17:00:00"), # 1581782552, # undef, # XXX
+       until => 1617902762, # $isodate2epoch->("2021-07-01 17:00:00"), # 1581782552, # undef, # XXX
        text  => 'Perelsplatz: Parkweg kann wegen Bauarbeiten gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED --- #: next_check_id: PERELSPLATZ-2019 --- #: add_fragezeichen: Wann wird die Sperrung aufgehoben? --- #: last_checked: 2019-12-22 --- #: next_check: 2020-01-31
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.992535.php
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1072925.php (Teilöffnung)
 	2::inwork 5809,7712 5636,7709
 EOF
      },
@@ -30632,10 +30635,11 @@ EOF
        text  => 'Boxhagener Platz: samstags 6 bis 20 Uhr Sperrung der umliegenden Straßen wegen des Wochenmarkts',
        type  => 'handicap',
        data  => <<EOF,
+#: next_check_id: CORONA-2020
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-03-22
+#: last_checked: 2021-04-09
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30850,7 +30854,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-04-07
+#: last_checked: 2021-04-10
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31829,7 +31833,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-02-19 vvv
+#: last_checked: 2021-04-09 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -32249,7 +32253,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic
-#: last_checked: 2021-03-28
+#: last_checked: 2021-04-09
 #: check_frequency: 14d
 	q4::inwork 13025,12523 13067,12583 13202,12790
 EOF
@@ -32335,6 +32339,35 @@ EOF
 (Campus AF 60)	2::night:weekend 18967,11639 18966,11676 18965,11692 18965,11706 18964,11719
 (Campus AF 60)	2::night:weekend 18965,11692 18984,11719
 #: tempex ^^^
+EOF
+     },
+     { from  => 1618610400, # 2021-04-17 00:00
+       until => 1640991599, # 2021-12-31 23:59
+       text  => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Berliner Str., Fahrbahn gesperrt, voraussichtlich vom 18.4.2021 bis Ende 2021',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1073307.php',
+       data  => <<EOF,
+#: note: zwei Bauabschnitte: zunächst der westliche Abschnitt bis Olafstr. (inkl. Kreuzung), danach der östliche Abschnitt
+	q4::inwork 3022,24393 3225,24431 3425,24469 3575,24498 3712,24528 3842,24556
+EOF
+     },
+     { from  => 1616918460, # 2021-03-28 10:01
+       until => 1619190000, # 2021-04-23 17:00
+       text  => 'Wichernstr.: Bauarbeiten zwischen Niederneuendorfer Allee und Holunderweg, Fahrbahn stadtauswärts gesperrt, vom 29.03.2021 10:01 Uhr bis 23.04.2021 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147347035',
+       data  => <<EOF,
+#: note: laut rbb nur stadtauswärts
+	q4::inwork; -2934,17594 -3060,17617 -3093,17647
+EOF
+     },
+     { from  => 1617861600, # 2021-04-08 08:00
+       until => 1622214000, # 2021-05-28 17:00
+       text  => 'Soorstr.: Kreuzung Bredtschneiderstr., Kreuzungsbereich gesperrt, vom 09.04.2021 08:00 Uhr bis 28.05.2021 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => '2147347063',
+       data  => <<EOF,
+	q3::inwork 1884,11126 1861,11284
 EOF
      },
     );

@@ -524,7 +524,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-03-25
+#: last_checked: 2021-04-09
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -565,17 +565,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 216000649
-	2::inwork 45328,48225 45321,48142 45322,48104
-# REMOVED (wrong?) ---	2::inwork 45406,45979 45119,45958
-',
-         'from' => 1617775200,
-         'id' => 1905,
-         'text' => 'L 029 Oderberg - Hohenfinow Klappbrücke über den Finowkanal in Niederfinow Wartungsarbeiten Vollsperrung 8.4.2021 von 8 bis 16 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1617890400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2311,7 +2301,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-04-07
+#: last_checked: 2021-04-08
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2654,17 +2644,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: next_check_id: PERELSPLATZ-2019 --- #: add_fragezeichen: Wann wird die Sperrung aufgehoben? --- #: last_checked: 2019-12-22 --- #: next_check: 2020-01-31
-#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.992535.php
-	2::inwork 5809,7712 5636,7709
-',
-         'from' => undef,
-         'id' => 3193,
-         'text' => 'Perelsplatz: Parkweg kann wegen Bauarbeiten gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => 1625151600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2696,10 +2676,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
+         'data' => '#: next_check_id: CORONA-2020
+#: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-03-22
+#: last_checked: 2021-04-09
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2755,7 +2736,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-04-07
+#: last_checked: 2021-04-10
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -3103,7 +3084,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-02-19 vvv
+#: last_checked: 2021-04-09 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -3287,16 +3268,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1634223600
        },
-       {
-         'data' => '	2::inwork 22418,19268 22685,19122
-',
-         'from' => 1615071600,
-         'id' => 3340,
-         'source_id' => '216000117',
-         'text' => 'Mehrower Str. (Ahrensfelde): Bauarbeiten, gesperrt, vom 08.03.2021 bis 09.04.2021',
-         'type' => 'gesperrt',
-         'until' => 1618005600
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: PILGRAMER-2019
@@ -3381,7 +3353,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: also_indoor: traffic
-#: last_checked: 2021-03-28
+#: last_checked: 2021-04-09
 #: check_frequency: 14d
 	q4::inwork 13025,12523 13067,12583 13202,12790
 ',
@@ -3481,6 +3453,38 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Campus AF 60: am Wochenende und nachts geschlossen',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: note: zwei Bauabschnitte: zunächst der westliche Abschnitt bis Olafstr. (inkl. Kreuzung), danach der östliche Abschnitt
+	q4::inwork 3022,24393 3225,24431 3425,24469 3575,24498 3712,24528 3842,24556
+',
+         'from' => 1618610400,
+         'id' => 3357,
+         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1073307.php',
+         'text' => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Berliner Str., Fahrbahn gesperrt, voraussichtlich vom 18.4.2021 bis Ende 2021',
+         'type' => 'handicap',
+         'until' => 1640991599
+       },
+       {
+         'data' => '#: note: laut rbb nur stadtauswärts
+	q4::inwork; -2934,17594 -3060,17617 -3093,17647
+',
+         'from' => 1616918460,
+         'id' => 3358,
+         'source_id' => '2147347035',
+         'text' => 'Wichernstr.: Bauarbeiten zwischen Niederneuendorfer Allee und Holunderweg, Fahrbahn stadtauswärts gesperrt, vom 29.03.2021 10:01 Uhr bis 23.04.2021 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1619190000
+       },
+       {
+         'data' => '	q3::inwork 1884,11126 1861,11284
+',
+         'from' => 1617861600,
+         'id' => 3359,
+         'source_id' => '2147347063',
+         'text' => 'Soorstr.: Kreuzung Bredtschneiderstr., Kreuzungsbereich gesperrt, vom 09.04.2021 08:00 Uhr bis 28.05.2021 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1622214000
        }
      
 );

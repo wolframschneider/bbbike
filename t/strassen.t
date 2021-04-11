@@ -31,6 +31,15 @@ BEGIN {
     }
 }
 
+my $have_nowarnings;
+BEGIN {
+    $have_nowarnings = 1;
+    eval 'use Test::NoWarnings ":early"';
+    if ($@) {
+	$have_nowarnings = 0;
+    }
+}
+
 sub non_streaming_loop ($);
 
 my $datadir = "$FindBin::RealBin/../data";
@@ -52,8 +61,9 @@ my $multistrassen_tests = 11;
 my $initless_tests = 3;
 my $global_directive_tests = 7;
 my $strict_and_syntax_tests = 12;
+my $get_conversion_tests = 9;
 
-plan tests => $basic_tests + $doit_tests + $strassen_orig_tests + $zebrastreifen_tests + $zebrastreifen2_tests + $zebrastreifen3_tests + $encoding_tests + $multistrassen_tests + $initless_tests + $global_directive_tests + $strict_and_syntax_tests;
+plan tests => $basic_tests + $have_nowarnings + $doit_tests + $strassen_orig_tests + $zebrastreifen_tests + $zebrastreifen2_tests + $zebrastreifen3_tests + $encoding_tests + $multistrassen_tests + $initless_tests + $global_directive_tests + $strict_and_syntax_tests + $get_conversion_tests;
 
 goto XXX if $do_xxx;
 
@@ -430,7 +440,7 @@ EOF
     my $rec = $s->next;
     is($rec->[Strassen::NAME], "\x{20ac}", "Got unicode character");
 
-    my($tmpfh,$tmpfile) = create_temporary_content($data, SUFFIX => ".bbd");
+    my($tmpfh,$tmpfile) = create_temporary_content($octet_data, SUFFIX => ".bbd");
 
     my $s2 = Strassen->new($tmpfile);
     my $global_dirs2 = $s2->get_global_directives;
@@ -680,6 +690,39 @@ EOF
     $s->push(["name",  ["0,0", "1,1"],     "X"]);
     $s->push(["name2", ["10,10", "21,21"], "X"]);
     is_deeply $s->data, ["name\tX 0,0 1,1\n", "name2\tX 10,10 21,21\n"];
+}
+
+{
+    # get_conversion, get_karte, without map directive
+    my $data = <<EOF;
+#:
+#: note: no global directives
+Street 42	H 1000,1000 2000,1000
+EOF
+    my $s = Strassen->new_from_data_string($data);
+    my $k = $s->get_karte;
+    isa_ok $k, 'Karte';
+    isa_ok $k, 'Karte::Standard';
+    is $s->get_conversion, undef, 'no conversion needed (implicit standard)';
+    is $s->get_conversion(-tomap => 'standard'), undef, 'no conversion needed (explicit standard)';
+    my $conv = $s->get_conversion(-tomap => 'polar');
+    isa_ok $conv, 'CODE', 'got conversion function';
+}
+
+{
+    # get_conversion, get_karte, with map directive
+    my $data = <<EOF;
+#: map: polar
+#:
+Street 42	H 13.5,52.5 13.6,52.5
+EOF
+    my $s = Strassen->new_from_data_string($data);
+    my $k = $s->get_karte;
+    isa_ok $k, 'Karte';
+    isa_ok $k, 'Karte::Polar';
+    is $s->get_conversion(-tomap => 'polar'), undef, 'no conversion needed';
+    my $conv = $s->get_conversion;
+    isa_ok $conv, 'CODE', 'got conversion function';
 }
 
 sub non_streaming_loop ($) {
