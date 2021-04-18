@@ -707,6 +707,7 @@ ehem. Bahndamm zwischen L15 undf K7332 bei Hardenbeck: wurde hier ein Radweg rea
 ehem. Bahndamm zwischen L15 undf K7332 bei Hardenbeck: wurde hier ein Radweg realisiert? Ist der Radweg durchgängig asphaltiert? Wo genau befindet sich der Radweg (GPS-Track)?	? 17912,95192 18005,95449
 ehem. Bahndamm zwischen L15 undf K7332 bei Hardenbeck: wurde hier ein Radweg realisiert? Ist der Radweg durchgängig asphaltiert? Wo genau befindet sich der Radweg (GPS-Track)?	? 18029,95408 18507,96268 18676,96867 18954,97944 19022,98128 19442,99078 19582,99411
 Ahlimbsmühle - Templin: Qualität (Asphalt oder etwas anderes)? Ist die gesamte Straße eine Fahrradstraße?	? 23185,74265 22563,74247 21760,74489 21331,74676 20498,75268 19701,76270 19750,76354 19659,77157 19454,77284 19061,78220 18681,78317 18337,78286 18125,78413 17757,78643 17177,79071 16882,79108 16707,79192 16377,78982
+Am Fährgut: neue Privatstraße, schon fertiggestellt, Qualität?	? -13672,3295 -13535,3330 -13567,3403
 Carl-Dähne-Str.: Planstraße A, schon fertiggestellt, Qualität?	? -16317,-541 -16309,-435 -16168,-312
 Zum Düsteren Teich: Planstraße B, schon fertiggestellt, Qualität?	? -16108,-415 -16168,-312 -16268,-218
 Amundsenstr.: Rad- und Gehweg, bereits befahrbar, Qualität?	? -15825,-166 -16108,-415 -16224,-528
@@ -918,9 +919,9 @@ Tegeler Str. (Falkensee): Qualität?	? -10088,17984 -10150,17988 -10292,17929 -10
 Trampe - Kruge: Qualität?	? 39683,40892 40258,40191 41298,39991 41731,39846
 Beiersdorf - Beerbaum: Qualität?	? 35980,34322 35977,34619 36085,34994 36096,35327 36200,35854 36214,36208 36215,36497
 Dollgow - Zernikow: Qualität?	? -17141,74157 -16859,74184 -16629,74151 -15730,74428 -14966,74667 -13662,75159
+Schwanebecker Chaussee: Radwegbau	?::inwork 22048,29221 21772,28566
 # added from strassen
 Süderholmer Steig (Ist dieser Abschnitt ausgeschildert?)	? -2245,21544 -2239,21904
-Straße 89 (Niederschönhausen) (ist die Straße 89 ausgeschildert?)	? 8606,20063 8703,19917
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -967,7 +968,6 @@ Stolzingstr.: Mosaikpflaster, uneben (Ist der Abschnitt zwischen Alemannenstr. u
 # added from qualitaet_l
 Neuruppin - Wuthenow - Gnewikow - Wustrau-Altfriesack: teilweise gut, teilweise mäßiges Kopfsteinpflaster (wird sich die Qualität nach den Bauarbeiten verbessern?)	? -29918,57158 -29816,57117 -29490,56714 -29243,56187 -29198,55801 -29109,55374 -28677,55014 -28367,54202 -28911,54055 -29276,53427 -29210,52915 -28736,52387 -28368,51517 -28001,50966 -27421,50349 -27196,50015 -27035,49829 -25968,49631 -25719,49500 -25060,48842
 Magazinstr.: Asphalt (ist hier tatsächlich asphaltiert?)	? 26953,10903 27047,11144
-Dahlwitz - Neuenhagen: teilweise nur mäßiger Asphalt (nach den Bauarbeiten (2006-10-31) vielleicht besserer Asphalt?)	? 29093,13456 29743,14143
 Heinersdorf: schlechtes Kopfsteinpflaster, sandiger Rand evtl. OK (ist hier mittlerweile asphaltiert?)	? 5633,-2011 5292,-2221 5132,-2299
 Werder - Golm: relativ glatter Feldweg mit einigen Schlaglöchern (welche Nummer des F-Wegs?)	? -21131,-2004 -20954,-1991 -20933,-1960 -20719,-1956 -20528,-1962
 Prenzlau - Schenkenberg: Kopfsteinplaster (liegt hier noch immer Kopfsteinplaster oder ist mittlerweile asphaltiert?)	? 40889,103590 42421,104961 42832,105063 43242,105305 44498,106156
@@ -1064,8 +1064,7 @@ F3.5 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from fragezeichen
 Brauerstr.: evtl. wird hier die Einbahnstraßenregelung für Radfahrer aufgehoben (Wurde die Einbahnstraßenregelung für Radfahrer aufgehoben?)	? 5317,2345 5159,2176
+Schwanebecker Chaussee: Radwegbau (Wird ein Zweirichtungsradweg auf der westlichen Seite entstehen? Wird der Radweg asphaltiert sein?)	? 22048,29221 21772,28566
 # added from bbbike-temp-blockings-optimized
-Münsterberger Weg: Bauarbeiten, Weg ist komplett gesperrt, Ende der Bauarbeiten ist unbekannt (Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?)	? 24029,11363 24172,11320
-Schönstr.: Bauarbeiten zwischen Große Seestr. und Rennbahnstr., Fahrbahn gesperrt (Bis wann gehen die Bauarbeiten?)	? 14136,17170 13996,16959
 Betckestraße: zwischen Wörther Str. und Götelstr. Fahrbahn gesperrt, Ausweichen auf nördlichen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt (Wann ist die Fahrbahn wieder offen?)	? -3252,12580 -3444,12580
 B96a: Radweg noch nicht offiziell eröffnet (Wann ist der Radweg offiziell befahrbar?)	? 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271

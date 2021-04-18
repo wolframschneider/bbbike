@@ -4,7 +4,6 @@
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
 (Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q3::inwork 12926,11224 12848,11093
-Am Rudolfplatz: etwa 35m Fahrbahn vor der Modersohnstr. gesperrt, Ausweichen auf Gehweg	q3::inwork 14011,10812 13896,10851
 Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 (Notweg Bahnübergang Bahnhofstr.): Fußgänger, Fahrrad ggfs. schieben	q3 10231,-2159 10215,-2170 10181,-2174 10161,-2146 10096,-2137
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
@@ -45,8 +44,7 @@ Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 
 Fuldastr.: Sperrung der Einmündung Karl-Marx-Str.	q3::inwork 12551,8612 12494,8501
 Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 12639,8344
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249
-Simon-Bolivar-Str./Küstriner Str.: Kreuzungsbereich gesperrt	q3::inwork 15856,14915 15944,14836 16033,14756
-Simon-Bolivar-Str./Küstriner Str.: Kreuzungsbereich gesperrt	q3::inwork 15878,14761 15944,14836 15977,14871
+Wiesenweg: Sperrung unter der Brücke, Fahrbahn ist gesperrt, auf Gehweg ausweichen	q3::inwork 15055,11505 15126,11474 15162,11458
 Bauarbeiten im Kreuzungsbereich	q3::inwork 8159,10430 8058,10306
 Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3898,4490
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
@@ -2098,6 +2096,9 @@ Traberweg: einige Fußgänger	q1 18577,8033 18567,8041 18490,8104 18416,8163 18351
 Campus AF 60: Schranke kann auf Gehweg umfahren werden	q2 18964,11719 18919,11720
 Otto-Weidt-Platz: einige Fußgänger	q2 7732,14131 7866,14215
 Teltowkanaluferweg: gemeinsamer Geh- und Radweg	q1 7994,4430 8234,4660 8575,4980 8598,4985 8618,5019 8784,5095 8881,5143 9080,5225 9171,5263 9196,5272
+Humannstr. - General-Woyna-Str.: Fußgänger, Bordstein	q3 4324,18523 4340,18497
+Humannstr.: Fußgänger	q2 4332,18581 4324,18523 4311,18454
+(Honsfelder Str. - Wuhlewanderweg): schmale Brücke	q2 21654,10390 21608,10403
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2906,7 +2907,7 @@ Eichborndamm: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 4228
 Archibaldweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 15674,10851 15870,10938
 Nöldnerplatz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 15870,10938 15903,10906
 Dorotheenstr. (Straßenbahn): gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 9454,12558 9330,12538
-Quickborner Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 8016,21499 8162,21302
+Quickborner Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 8016,21499 8078,21415 8162,21302
 Kirchstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q0::igndisp; 22314,4604 22284,4653
 Kietzer Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 22372,4496 22383,4470
 Triftstr. (Buchholz): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 12023,23039 12185,23021
@@ -3029,6 +3030,7 @@ Ludolfinger Platz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp;
 Sewanstr. - Balatonstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 17729,10331 17741,10386
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich): gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
+Rudi-Arndt-Str.: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 13449,13892 13359,13832
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 10472,14632 10320,14608
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9429,12728 9402,12792 9386,12833
 Johannisstr.: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174

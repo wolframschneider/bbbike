@@ -6869,7 +6869,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004175',
        data  => <<EOF,
-	1::inwork 5533,19811 5495,19571 5476,19450
+	1::inwork 5533,19811 5523,19746 5495,19571 5486,19515 5476,19450
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -18060,15 +18060,16 @@ EOF
 	q4::inwork 18586,9172 18511,9185 18430,9199 18319,9218
 EOF
      },
-     { from  => $isodate2epoch->("2019-05-16 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-05-20 04:00:00"), # bis in die Nacht hinein
+     { from  => $isodate2epoch->("2021-09-02 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2021-09-06 04:00:00"), # bis in die Nacht hinein
        periodic => 1,
        recurrences => [['yearly', days => 15, months => 5, start => "2020-06-08T00:00:00"]], # kann auch erst im September stattfinden
        source_id => 'http://www.erkner.de/271.html?date=20190415',
-       text  => 'Erkner: Heimatfest, 17.5.2019 bis 19.5.2019',
+       text  => 'Erkner: Heimatfest, 3.9.2021 bis 5.9.2021',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.laubinger.de/event/28-heimatfest-erkner/ (Absage 2020)
+#: by: https://www.laubinger.de/event/28-heimatfest-erkner/?date=20210415 (2021)
 	2::temp 34421,1950 34359,2165 34250,2546
 EOF
      },
@@ -21550,7 +21551,7 @@ EOF
        until => $isodate2epoch->("2019-04-28 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 21, months => 4, start => "2020-05-01T00:00:00"]],
-       recurrence_prewarn_days => 7, # wegen Corona
+       recurrence_prewarn_days => 0, # wegen Corona
        text  => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 26.4.2019 bis 28.4.2019',
        type  => 'gesperrt',
        source_id => 'http://www.winzerfest-köpenick.de/',
@@ -21726,7 +21727,7 @@ EOF
        text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (03.05.2019 bis 05.05.2019)',
        periodic => 1,
        recurrences => [['yearly', days => 29, months => 4, start => "2020-05-06T00:00:00"]],
-       recurrence_prewarn_days => 14, # wegen Corona
+       recurrence_prewarn_days => 1, # wegen Corona
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (ja) --- #: XXX wird die Veranstaltung noch abgesagt? --- #: next_check: 2020-04-23
@@ -21822,11 +21823,13 @@ EOF
        until => $isodate2epoch->("2019-05-20 04:00:00"), #
        periodic => 1,
        recurrences => [['yearly', days => 17, months => 5, start => "2020-06-01T00:00:00"]], # auf 2021 verlegt
+       recurrence_prewarn_days => -20, # wegen Corona
        text  => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 18.05.2019 bis 20.05.2019 früh',
        type  => 'handicap',
        source_id => 'IM_025248',
        data  => <<EOF,
 #: by: http://www.die-classic-days-berlin.de/programm-2/
+#: by: https://www.berlin.de/events/2902692-2229501-classic-days-berlin.html (voraussichtlich 12.+13.6.2021)
 #: note: kann im Juni oder Juli stattfinden
 # REMOVED --- #: tempex: 20170616T0400-20170619T0400
 	q4::temp 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435
@@ -23133,13 +23136,13 @@ EOF
      { from  => $isodate2epoch->("2019-04-28 00:00:00"),
        until => $isodate2epoch->("2019-05-02 02:00:00"),
        periodic => 1,
-       recurrences => [['yearly', days => 30, months => 4, start => "2020-05-03T00:00:00"]],
-       recurrence_prewarn_days => 14, # wegen Corona
+       recurrences => [['yearly', days => 30, months => 4, start => "2021-05-03T00:00:00"]],
        text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung des DGB), am 1. Mai 2019',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html',
        data  => <<EOF,
 #: by: https://www.dgb.de/termine/++co++8f919aec-3095-11ea-93f3-52540088cada (2020 abgesagt)
+#: by: https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html?date=20210416 (Mai-Kundgebung auf dem Platz des 18. März vor dem Brandenburger Tor findet [2021] ... nicht statt)
 #: tempex: YYYY0428T0000 - YYYY0502T0200 vvv
 	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
 	2::inwork 8573,12325 8540,12420
@@ -27723,7 +27726,7 @@ EOF
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht's nur auf dem Gehweg weiter
 #: also_indoor: traffic (G)
 #: priority: #B
-#: last_checked: 2021-03-29
+#: last_checked: 2021-04-15 (mapillary)
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-03-26
 	q3::inwork 13391,16436 13630,16629
@@ -27950,7 +27953,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2021-03-26
+#: last_checked: 2021-04-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28593,7 +28596,7 @@ EOF
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-04-08
+#: last_checked: 2021-04-14 (mapillary)
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -29257,7 +29260,7 @@ EOF
        data  => <<EOF,
 #: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2021-03-05
+#: last_checked: 2021-04-11
 #: check_frequency: 60d
 #: next_check: 2021-04-30
 	q3::inwork  8986,16092 9178,16317
@@ -30254,15 +30257,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1618661092, # undef, # XXX
        text  => 'Münsterberger Weg: Bauarbeiten, Weg ist komplett gesperrt, Ende der Bauarbeiten ist unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: MUENSTERBERGERWEG-2019
-#: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
-#: last_checked: 2020-10-31
-#: check_frequency: 120d
-#: next_check: 2021-12-31
+# REMOVED --- #: next_check_id: MUENSTERBERGERWEG-2019 --- #: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert? --- #: last_checked: 2020-10-31 --- #: check_frequency: 120d --- #: next_check: 2021-12-31
 	2::inwork 24029,11363 24172,11320
 EOF
      },
@@ -30854,7 +30853,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-04-10
+#: last_checked: 2021-04-15
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31043,7 +31042,7 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2021-02-17
+#: last_checked: 2021-04-15 (mapillary)
 #: check_frequency: 45d
 	q4::inwork 14136,17170 13996,16959
 EOF
@@ -31083,19 +31082,17 @@ EOF
      { from  => 1594635120, # 2020-07-13 12:12
        until => $isodate2epoch->("2022-05-31 18:00:00"), # 1615996800, # 2021-03-17 17:00
        dont_check_date => 1,
-       text  => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Fahrbahn Richtung Osten gesperrt, vor der Schöneberger Str. in beide Richtungen gesperrt, vom 14.07.2020 12:12 Uhr bis 18.05.2021 17:00 Uhr',
+       text  => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Fahrbahn Richtung Osten gesperrt, vom 14.07.2020 12:12 Uhr bis 18.05.2021 17:00 Uhr',
        type  => 'handicap',
        source_id => '2147346108', # bis 17.3.2021, mittlerweile inaktiv, dann wieder bis 18.5.2021
        data  => <<EOF,
 #: note: laut Baustellenschild der Wasserbetriebe bis Mai 2022
-#: source_id: 2147346999 (Abschnitt zwischen Alsenstr. und Schöneberger Str., bis 16.4.2021)
+#: source_id: 2147346999 (Abschnitt zwischen Alsenstr. und Schöneberger Str., bis 16.4.2021) (inaktiv)
 #: also_indoor: traffic (H)
 #: last_checked: 2021-02-20 (mapillary)
 #: next_check: 2021-05-18
 	q4::inwork; 5244,6261 5390,6299 5560,6344
-#: XXX ist der Radverkehr hier noch betroffen?
-#: by: mapillary
-	q4::inwork 5560,6344 5582,6360
+# REMOVED --- #: XXX ist der Radverkehr hier noch betroffen? --- #: by: mapillary ---	q4::inwork 5560,6344 5582,6360
 EOF
      },
      { from  => $isodate2epoch->("2020-07-06 00:00:00"),
@@ -31473,8 +31470,8 @@ EOF
 EOF
      },
      { from  => 1601923909, # 2020-10-05 20:51
-       until => $isodate2epoch->("2021-04-30 17:00:00"),
-       text  => 'Torstr.: Engstelle von Rosenthaler Platz Richtung Mollstr., bis 30.4.2021',
+       until => $isodate2epoch->("2021-05-31 17:00:00"),
+       text  => 'Torstr.: Engstelle von Rosenthaler Platz Richtung Mollstr., bis 31.5.2021',
        type  => 'handicap',
        source_id => '2147346452',
        data  => <<EOF,
@@ -31939,19 +31936,19 @@ EOF
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-03-08 (mapillary)
+#: last_checked: 2021-04-11 (architektur-urbanistik)
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 EOF
      },
      { from  => 1610838000, # 2021-01-17 00:00
-       until => 1618264800, # 2021-04-13 00:00
-       text  => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, Radfahrer können auf den engen Gehwegen vorbeifahren, vom 18.1.2021 bis 12.4.2021',
+       until => $isodate2epoch->("2021-05-18 17:00:00"), # 1618264800, # 2021-04-13 00:00
+       text  => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, Radfahrer können auf den engen Gehwegen vorbeifahren, vom 18.1.2021 bis 18.5.2021',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1039050.php',
        data  => <<EOF,
 #: next_check_id: BOHNSDORFERKREISEL-2017
-#: source_id: 2147346807 (bis 12.4.2021)
+#: source_id: 2147346807 (bis 18.5.2021)
 #: note: laut rbbtext kann der Radverkehr passieren
 #: by: https://viz.berlin.de/2021/01/bohnsdorfer-kreisel/ (keine Einschränkungen für Fußgänger)
 #: by: https://twitter.com/VIZ_Berlin/status/1353990207574581249 (Situation mit Bildern)
@@ -31988,7 +31985,7 @@ EOF
        type  => 'handicap',
        source_id => '2147346268',
        data  => <<EOF,
-#: last_checked: 2021-03-05
+#: last_checked: 2021-04-11
 #: next_check: 2021-08-27
 	q2::inwork 8913,16159 9099,16398
 EOF
@@ -32093,11 +32090,12 @@ EOF
 EOF
      },
      { from  => 1613763246, # 2021-02-19 20:34
-       until => 1618610400, # 2021-04-17 00:00
+       until => 1618593299, # 1618610400, # 2021-04-17 00:00
        text  => 'Kaiserin-Augusta-Str.: zwischen Theodorstr. und Kreisverkehr Metzplatz Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, bis 16.04.2021',
        type  => 'handicap',
        data  => <<EOF,
 #: by: rbbtext
+#: note: Einbahnstraße, vermutlich Radfahrer frei
 	q4::inwork 9363,5903 9291,5908
 EOF
      },
@@ -32119,7 +32117,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-04-06
+#: last_checked: 2021-04-17
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -32174,7 +32172,7 @@ EOF
      },
      { from  => 1615676400, # 2021-03-14 00:00
        until => 1621115999, # 2021-05-15 23:59
-       text  => 'Pilgramer Str.: Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, ab 15. März 2021 bis ca. 15. Mai 2021',
+       text  => 'Pilgramer Str.: Sperrung der Fahrbahn, Sperrung des westlichen Gehwegs ab Theodorpark bis Straße 48, östlicher Gehweg ist noch offen, ab 15. März 2021 bis ca. 15. Mai 2021',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1063839.php',
        data  => <<EOF,
@@ -32183,7 +32181,8 @@ EOF
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/pilgramer-strasse-zwei-monate-beidseitig-gesperrt_a304101 (Fertigstellung im Mai 2021)
 #: source_id: 2147346982
 #: XXX wie sehr sind Radfahrer betroffen?
-#: next_check: 2021-03-15
+#: last_checked: 2021-04-17
+#: next_check: 2021-05-15
 	q4::inwork 25150,10562 25149,10695 25149,10731 25148,10769 25145,10841
 EOF
      },
@@ -32253,7 +32252,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic
-#: last_checked: 2021-04-09
+#: last_checked: 2021-04-11
 #: check_frequency: 14d
 	q4::inwork 13025,12523 13067,12583 13202,12790
 EOF
@@ -32332,7 +32331,7 @@ EOF
 #: note: keine genauen Zeiten verfügbar
 #: by: https://abendblatt-berlin.de/2021/04/03/neue-feuerwehrwache-und-verwaltungsbueros-fuer-friedrichsfelde/
 #: tempex: sa,su,holiday,(mo-fr T20:00-sunrise) vvv
-(Campus AF 60)	2::night:weekend 18619,11463 18638,11479 18702,11480 18740,11480 18762,11496 18794,11504 18961,11546 19035,11550 19159,11546
+(Campus AF 60)	2::night:weekend 18619,11463 18638,11479 18702,11480 18740,11480 18762,11496 18794,11504 18961,11546 19035,11550 19098,11551 19101,11581 19147,11584
 (Campus AF 60)	2::night:weekend 19035,11550 19032,11640 18967,11639 18917,11641 18700,11645 18702,11480
 (Campus AF 60)	2::night:weekend 19000,11719 18984,11719 18964,11719 18919,11720 18798,11707
 (Campus AF 60)	2::night:weekend 18919,11720 18917,11641
@@ -32341,19 +32340,25 @@ EOF
 #: tempex ^^^
 EOF
      },
-     { from  => 1618610400, # 2021-04-17 00:00
-       until => 1640991599, # 2021-12-31 23:59
-       text  => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Berliner Str., Fahrbahn gesperrt, voraussichtlich vom 18.4.2021 bis Ende 2021',
+     { from  => $isodate2epoch->("2021-04-18 00:00:00"), # 1618610400, # 2021-04-17 00:00
+       until => $isodate2epoch->("2021-06-30 00:00:00"), # 1640991599, # 2021-12-31 23:59
+       text  => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Olafstr., Fahrbahn gesperrt, vom 19.4.2021 bis 30.6.2021',
        type  => 'handicap',
-       source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1073307.php',
+       source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1073307.php', # Gesamtmaßnahme bis Ende 2021
        data  => <<EOF,
-#: note: zwei Bauabschnitte: zunächst der westliche Abschnitt bis Olafstr. (inkl. Kreuzung), danach der östliche Abschnitt
-	q4::inwork 3022,24393 3225,24431 3425,24469 3575,24498 3712,24528 3842,24556
+#: by: https://www.berliner-woche.de/hermsdorf/c-verkehr/burgfrauenstrasse-ab-19-april-gesperrt_a306720
+#: source_id: 2147347107 (hier: bis 30.6.2021)
+#: note: zwei Bauabschnitte: zunächst der westliche Abschnitt bis Olafstr. (inkl. Kreuzung), danach der östliche Abschnitt bis Berliner Str.
+#: priority: #A
+#: next_check: 2021-06-30
+	q4::inwork 3022,24393 3225,24431 3425,24469
+	q3::inwork 3425,24469 3575,24498
+# REMOVED (dieser Bereich folgt später) ---	q4::inwork 3575,24498 3712,24528 3842,24556
 EOF
      },
      { from  => 1616918460, # 2021-03-28 10:01
-       until => 1619190000, # 2021-04-23 17:00
-       text  => 'Wichernstr.: Bauarbeiten zwischen Niederneuendorfer Allee und Holunderweg, Fahrbahn stadtauswärts gesperrt, vom 29.03.2021 10:01 Uhr bis 23.04.2021 17:00 Uhr ',
+       until => $isodate2epoch->("2021-05-03 17:00:00"), # 1619190000, # 2021-04-23 17:00
+       text  => 'Wichernstr.: Bauarbeiten zwischen Niederneuendorfer Allee und Holunderweg, Fahrbahn stadtauswärts gesperrt, vom 29.03.2021 10:01 Uhr bis 03.05.2021 17:00 Uhr',
        type  => 'handicap',
        source_id => '2147347035',
        data  => <<EOF,
@@ -32368,6 +32373,25 @@ EOF
        source_id => '2147347063',
        data  => <<EOF,
 	q3::inwork 1884,11126 1861,11284
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Glinkastr.: zwischen Jägerstr. und Mohrenstr. Einbahnstraßenregelung, gesperrt Richtung Süden auch für Radfahrer',
+       type  => 'handicap',
+       data  => <<EOF,
+#: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer?
+#: last_checked: 2021-04-13
+	q4::inwork; 9195,11972 9207,11880 9218,11793
+EOF
+     },
+     { from  => 1618696800, # 2021-04-18 00:00
+       until => 1662069600, # 2022-09-02 00:00
+       text  => 'Ortsdurchfahrt Kerkow: Bauarbeiten und Ersatzneubau Brücke, möglicherweise auch für Radfahrer gesperrt, vom 19.04.2021 bis 01.09.2022',
+       type  => 'gesperrt',
+       source_id => 'LS/721-E/21/032',
+       data  => <<EOF,
+	2::inwork 49011,71344 48996,71176 48982,71121 48929,70947 49089,70562 49253,70168
 EOF
      },
     );

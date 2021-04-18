@@ -141,7 +141,7 @@ Hardenbergplatz	1 5542,11075 5565,11147 5666,11362 5698,11333 5600,11114 5542,11
 Greinerstr.	1 8340,3242 8327,2987
 Dederingstr.	1 8455,2977 8476,3367
 Weserstr. (Friedrichshain)	1 14416,11815 14475,11778
-Quickborner Str.	1s 8016,21499 8162,21302
+Quickborner Str.	1s 8016,21499 8078,21415 8162,21302
 Berliner Str. (Blankenfelde)	1 9490,23531 9437,23680 9415,23699
 Molkenmarkt - zur Stralauer Str.	1 10804,12291 10772,12288 10736,12285 10675,12280
 Herrfurthplatz	1 11647,7940 11653,7982 11689,8006 11731,7998 11754,7964 11748,7922 11713,7899 11671,7904 11647,7940
@@ -1456,8 +1456,8 @@ Mittelstreifen	3nocross::ignrte -3029,16823 -3023,16925 -3018,16974
 Mittelstreifen	3nocross::ignrte 10769,1111 10829,1135 11012,1210
 Marienfelder Chaussee -> Wingerter Str.: Mittelstreifen	3::igndisp 11012,1210 10829,1135 10845,1026
 Wingerter Str. -> Marienfelder Chaussee: Mittelstreifen	3::igndisp 10845,1026 10829,1135 10769,1111
-Mittelstreifen	3nocross::ignrte 5517,20120 5545,19909 5533,19811
-Oranienburger Str. -> Kirschblütenpl.: Mittelstreifen	3::igndisp 5517,20120 5545,19909 5598,19912
+Mittelstreifen	3nocross::ignrte 5517,20120 5527,20044 5545,19909 5533,19811
+Oranienburger Str. -> Kirschblütenpl.: Mittelstreifen	3::igndisp 5527,20044 5545,19909 5598,19912
 Bahntrasse	3nocross::ignrte 15875,1796 15835,1747 15799,1690 15729,1573
 Zwickauer Damm -> Feuchtwangerweg: Bahntrasse	3::igndisp 15799,1690 15835,1747 15788,1747
 Feuchtwangerweg -> Zwickauer Damm: Bahntrasse	3::igndisp 15788,1747 15835,1747 15875,1796
@@ -2796,7 +2796,7 @@ Drängelgitter	BNP:3:-65:trailer=10 10173,1049
 Drängelgitter	BNP:3:-68:trailer=10 10223,1029
 Schranke	BNP:0:-180:trailer=5 7222,6436
 Drängelgitter	BNP:3:83:trailer=10 6129,12976
-Drängelgitter	BNP:3:15:trailer=10 24207,10858
+Drängelgitter	BNP:3:20:trailer=10 24207,10858
 Drängelgitter	BNP:5:-155:trailer=no 22482,9550
 Drängelgitter	BNP:5:-139:trailer=no 22280,9629
 Drängelgitter	BNP:5:-137:trailer=no 22595,9978
@@ -3044,7 +3044,6 @@ Schranke	BNP:5:-147 -8211,5490
 Kurzschranke	BNP:5:-45 6739,15307
 Schranke	BNP:3:-132 6749,15339
 Schranke	BNP:3:-130 6869,15441
-Drängelgitter	BNP:5:3 24759,11666
 Drängelgitter	BNP:5:-130 7925,4477
 Drängelgitter (lichte Breite ca. 80cm)	BNP:8:-151:trailer=no 6526,21015
 Drängelgitter (lichte Breite ca. 80cm)	BNP:8:-139:trailer=no 6548,21041
@@ -3156,14 +3155,13 @@ Drängelgitter	BNP:3:-193:trailer=10 1035,14996
 Schranke, umständlich zu umfahren	BNP:5:-113:trailer=15 19608,-1953
 Schranke	BNP:2:-157:trailer=5 19617,6208
 Schranke	BNP:5:-109:trailer=15 22855,4348
+Rudi-Arndt-Str.: Einbahnstraßenregelung	1s:inwork 13449,13892 13359,13832
 Straße 77: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 15320,12375 15408,12394
 (Zufahrt am NKZ): Fußgänger, unübersichtlich, Bauarbeiten, Gerüst, kaum ein Durchkommen	2::inwork 11344,10507 11392,10520 11411,10515
 Straße des 17. Juni: Radweg gesperrt	1::igndisp 6164,11947 5900,11913
 Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 6024,11978 6132,11984 6164,11947
 (Weg parallel zur und unter der Minna-Todenhagen-Brücke): mit Bauzäunen abgesperrt	2::inwork 16747,6813 16775,6813 16849,6902 16997,7057 16930,7151 16885,7141 16802,6988 16849,6902
 (Breiter Weg - Südostallee/Sterndamm): Durchgang ist wegen Bauarbeiten gesperrt	2::inwork 17538,5301 17601,5374
-Ankerweg: kann wegen Hochbauarbeiten nicht passierbar sein	2::inwork 22118,2559 22159,2585 22197,2612
-An der Dahme: kann wegen Hochbauarbeiten nicht passierbar sein	2::inwork 22197,2612 22270,2549
 Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11916,11846 11923,11881 11940,11982
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s 10472,14632 10320,14608
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
@@ -3174,7 +3172,8 @@ Alexanderufer - Charité: Tor ist wegen Corona-Beschränkungen geschlossen	2 8371,
 Schulstr. (Biesdorf): Bauarbeiten, komplett gesperrt	2::inwork 20599,11938 20708,11918 20738,11915
 Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt	2::inwork 9131,12438 9179,12444
 Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
-Gustav-Hertz-Platz: gesperrt, evtl. wegen der Brückenarbeiten?	2::inwork 18722,4628 18656,4687
+Gustav-Hertz-Platz: wegen Brückenarbeiten gesperrt	2::inwork 18722,4628 18656,4687
+Gustav-Hertz-Platz: wegen Brückenarbeiten gesperrt	2::inwork 18685,4595 18649,4678
 Danneckerstr.: temporäre "Klimastraße", für Radfahrer gesperrt	2s 13886,10939 13856,10864
 Durchgangsweg am Blueberry Inn: wegen Bauarbeiten komplett gesperrt	2::inwork 12165,8566 12287,8602
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9507,-85 9468,-85 9271,323 9253,370 9218,458 9178,556

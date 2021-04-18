@@ -835,7 +835,30 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.laubinger.de/event/28-heimatfest-erkner/ (Absage 2020)
+#: by: https://www.laubinger.de/event/28-heimatfest-erkner/?date=20210415 (2021)
+	2::temp 34421,1950 34359,2165 34250,2546
+',
+         'from' => 1630533600,
+         'id' => 2078,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              15,
+                              'months',
+                              5,
+                              'start',
+                              '2020-06-08T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'http://www.erkner.de/271.html?date=20190415',
+         'text' => 'Erkner: Heimatfest, 3.9.2021 bis 5.9.2021',
+         'type' => 'gesperrt',
+         'until' => 1630893600
+       },
        undef,
        undef,
        undef,
@@ -2148,7 +2171,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht\'s nur auf dem Gehweg weiter
 #: also_indoor: traffic (G)
 #: priority: #B
-#: last_checked: 2021-03-29
+#: last_checked: 2021-04-15 (mapillary)
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-03-26
 	q3::inwork 13391,16436 13630,16629
@@ -2196,7 +2219,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2021-03-26
+#: last_checked: 2021-04-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2301,7 +2324,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-04-08
+#: last_checked: 2021-04-14 (mapillary)
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2443,7 +2466,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2021-03-05
+#: last_checked: 2021-04-11
 #: check_frequency: 60d
 #: next_check: 2021-04-30
 	q3::inwork  8986,16092 9178,16317
@@ -2626,20 +2649,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: MUENSTERBERGERWEG-2019
-#: add_fragezeichen: Wann sind die Bauarbeiten fertig? Wird der Weg asphaltiert?
-#: last_checked: 2020-10-31
-#: check_frequency: 120d
-#: next_check: 2021-12-31
-	2::inwork 24029,11363 24172,11320
-',
-         'from' => undef,
-         'id' => 3188,
-         'text' => 'Münsterberger Weg: Bauarbeiten, Weg ist komplett gesperrt, Ende der Bauarbeiten ist unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2736,7 +2746,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-04-10
+#: last_checked: 2021-04-15
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2791,7 +2801,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2021-02-17
+#: last_checked: 2021-04-15 (mapillary)
 #: check_frequency: 45d
 	q4::inwork 14136,17170 13996,16959
 ',
@@ -2806,20 +2816,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: note: laut Baustellenschild der Wasserbetriebe bis Mai 2022
-#: source_id: 2147346999 (Abschnitt zwischen Alsenstr. und Schöneberger Str., bis 16.4.2021)
+#: source_id: 2147346999 (Abschnitt zwischen Alsenstr. und Schöneberger Str., bis 16.4.2021) (inaktiv)
 #: also_indoor: traffic (H)
 #: last_checked: 2021-02-20 (mapillary)
 #: next_check: 2021-05-18
 	q4::inwork; 5244,6261 5390,6299 5560,6344
-#: XXX ist der Radverkehr hier noch betroffen?
-#: by: mapillary
-	q4::inwork 5560,6344 5582,6360
+# REMOVED --- #: XXX ist der Radverkehr hier noch betroffen? --- #: by: mapillary ---	q4::inwork 5560,6344 5582,6360
 ',
          'dont_check_date' => 1,
          'from' => 1594635120,
          'id' => 3258,
          'source_id' => '2147346108',
-         'text' => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Fahrbahn Richtung Osten gesperrt, vor der Schöneberger Str. in beide Richtungen gesperrt, vom 14.07.2020 12:12 Uhr bis 18.05.2021 17:00 Uhr',
+         'text' => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Fahrbahn Richtung Osten gesperrt, vom 14.07.2020 12:12 Uhr bis 18.05.2021 17:00 Uhr',
          'type' => 'handicap',
          'until' => 1654012800
        },
@@ -2869,23 +2877,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: by: mapillary
-#: by: https://www.gruene-fraktion-brandenburg.de/im-parlament/kleine-anfragen/2019/fehlender-lueckenschluss-bei-radweg-an-der-b-198/
-#: by: https://www.moz.de/landkreise/barnim/eberswalde/artikel4/dg/0/1/1735352/ (Realisierung eines Radwegs frühestens 2022)
-#: by: https://www.moz.de/landkreise/uckermark/schwedt-und-angermuende/artikel90/dg/0/1/1817154/ (Bauarbeiten am Ziethener Kreuz bis Ende des Jahres (2020))
-#: source_id: LS/721-E/20/050
-#: XXX wie lange gilt das Verbot?
-#: last_checked: 2020-08-22
-#: next_check: 2021-04-15
-	2 48469,65641 47875,64281 47564,63557
-',
-         'from' => undef,
-         'id' => 3268,
-         'text' => 'B2/B198: Richtung Süden Radfahren verboten',
-         'type' => 'gesperrt',
-         'until' => 1618498800
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/spandau/c-verkehr/radler-muessen-runter-vom-sattel_a177230
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20090917.1110.139163.html
@@ -2982,9 +2974,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1601923909,
          'id' => 3284,
          'source_id' => '2147346452',
-         'text' => 'Torstr.: Engstelle von Rosenthaler Platz Richtung Mollstr., bis 30.4.2021',
+         'text' => 'Torstr.: Engstelle von Rosenthaler Platz Richtung Mollstr., bis 31.5.2021',
          'type' => 'handicap',
-         'until' => 1619794800
+         'until' => 1622473200
        },
        undef,
        undef,
@@ -3128,7 +3120,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-03-08 (mapillary)
+#: last_checked: 2021-04-11 (architektur-urbanistik)
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 ',
@@ -3141,7 +3133,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: BOHNSDORFERKREISEL-2017
-#: source_id: 2147346807 (bis 12.4.2021)
+#: source_id: 2147346807 (bis 18.5.2021)
 #: note: laut rbbtext kann der Radverkehr passieren
 #: by: https://viz.berlin.de/2021/01/bohnsdorfer-kreisel/ (keine Einschränkungen für Fußgänger)
 #: by: https://twitter.com/VIZ_Berlin/status/1353990207574581249 (Situation mit Bildern)
@@ -3153,9 +3145,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1610838000,
          'id' => 3321,
          'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1039050.php',
-         'text' => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, Radfahrer können auf den engen Gehwegen vorbeifahren, vom 18.1.2021 bis 12.4.2021',
+         'text' => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, Radfahrer können auf den engen Gehwegen vorbeifahren, vom 18.1.2021 bis 18.5.2021',
          'type' => 'handicap',
-         'until' => 1618264800
+         'until' => 1621350000
        },
        {
          'data' => '#: note: bei rbbtext sogar bis 18.5.2021
@@ -3171,7 +3163,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        {
-         'data' => '#: last_checked: 2021-03-05
+         'data' => '#: last_checked: 2021-04-11
 #: next_check: 2021-08-27
 	q2::inwork 8913,16159 9099,16398
 ',
@@ -3230,21 +3222,12 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        undef,
-       {
-         'data' => '#: by: rbbtext
-	q4::inwork 9363,5903 9291,5908
-',
-         'from' => 1613763246,
-         'id' => 3334,
-         'text' => 'Kaiserin-Augusta-Str.: zwischen Theodorstr. und Kreisverkehr Metzplatz Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, bis 16.04.2021',
-         'type' => 'handicap',
-         'until' => 1618610400
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-04-06
+#: last_checked: 2021-04-17
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -3276,13 +3259,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/pilgramer-strasse-zwei-monate-beidseitig-gesperrt_a304101 (Fertigstellung im Mai 2021)
 #: source_id: 2147346982
 #: XXX wie sehr sind Radfahrer betroffen?
-#: next_check: 2021-03-15
+#: last_checked: 2021-04-17
+#: next_check: 2021-05-15
 	q4::inwork 25150,10562 25149,10695 25149,10731 25148,10769 25145,10841
 ',
          'from' => 1615676400,
          'id' => 3342,
          'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1063839.php',
-         'text' => 'Pilgramer Str.: Sperrung der Fahrbahn, eventuell sind auch Radfahrer betroffen, ab 15. März 2021 bis ca. 15. Mai 2021',
+         'text' => 'Pilgramer Str.: Sperrung der Fahrbahn, Sperrung des westlichen Gehwegs ab Theodorpark bis Straße 48, östlicher Gehweg ist noch offen, ab 15. März 2021 bis ca. 15. Mai 2021',
          'type' => 'handicap',
          'until' => 1621115999
        },
@@ -3331,29 +3315,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => 1627768799
        },
-       {
-         'data' => '	2::inwork 53811,97943 53912,97812
-',
-         'from' => 1616882400,
-         'id' => 3346,
-         'source_id' => '217300060',
-         'text' => 'Wollin: Bauarbeiten an der Autobahnbrücke, u.U. komplett gesperrt, vom 29.3.2021 bis 11.4.2021',
-         'type' => 'gesperrt',
-         'until' => 1618178400
-       },
-       {
-         'data' => '	2::inwork 21359,18834 21332,18819 21278,18786
-',
-         'from' => 1616698800,
-         'id' => 3347,
-         'source_id' => '2147347017',
-         'text' => 'Ahrensfelder Chaussee: Bahnübergang wegen Bauarbeiten gesperrt, auch für Fußgänger und Radfahrer, vom 26.03.2021 20:00 Uhr bis 12.04.2021 17:00 Uhr ',
-         'type' => 'gesperrt',
-         'until' => 1618239600
-       },
+       undef,
+       undef,
        {
          'data' => '#: also_indoor: traffic
-#: last_checked: 2021-04-09
+#: last_checked: 2021-04-11
 #: check_frequency: 14d
 	q4::inwork 13025,12523 13067,12583 13202,12790
 ',
@@ -3439,7 +3405,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: note: keine genauen Zeiten verfügbar
 #: by: https://abendblatt-berlin.de/2021/04/03/neue-feuerwehrwache-und-verwaltungsbueros-fuer-friedrichsfelde/
 #: tempex: sa,su,holiday,(mo-fr T20:00-sunrise) vvv
-(Campus AF 60)	2::night:weekend 18619,11463 18638,11479 18702,11480 18740,11480 18762,11496 18794,11504 18961,11546 19035,11550 19159,11546
+(Campus AF 60)	2::night:weekend 18619,11463 18638,11479 18702,11480 18740,11480 18762,11496 18794,11504 18961,11546 19035,11550 19098,11551 19101,11581 19147,11584
 (Campus AF 60)	2::night:weekend 19035,11550 19032,11640 18967,11639 18917,11641 18700,11645 18702,11480
 (Campus AF 60)	2::night:weekend 19000,11719 18984,11719 18964,11719 18919,11720 18798,11707
 (Campus AF 60)	2::night:weekend 18919,11720 18917,11641
@@ -3455,15 +3421,21 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        {
-         'data' => '#: note: zwei Bauabschnitte: zunächst der westliche Abschnitt bis Olafstr. (inkl. Kreuzung), danach der östliche Abschnitt
-	q4::inwork 3022,24393 3225,24431 3425,24469 3575,24498 3712,24528 3842,24556
+         'data' => '#: by: https://www.berliner-woche.de/hermsdorf/c-verkehr/burgfrauenstrasse-ab-19-april-gesperrt_a306720
+#: source_id: 2147347107 (hier: bis 30.6.2021)
+#: note: zwei Bauabschnitte: zunächst der westliche Abschnitt bis Olafstr. (inkl. Kreuzung), danach der östliche Abschnitt bis Berliner Str.
+#: priority: #A
+#: next_check: 2021-06-30
+	q4::inwork 3022,24393 3225,24431 3425,24469
+	q3::inwork 3425,24469 3575,24498
+# REMOVED (dieser Bereich folgt später) ---	q4::inwork 3575,24498 3712,24528 3842,24556
 ',
-         'from' => 1618610400,
+         'from' => 1618696800,
          'id' => 3357,
          'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1073307.php',
-         'text' => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Berliner Str., Fahrbahn gesperrt, voraussichtlich vom 18.4.2021 bis Ende 2021',
+         'text' => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Olafstr., Fahrbahn gesperrt, vom 19.4.2021 bis 30.6.2021',
          'type' => 'handicap',
-         'until' => 1640991599
+         'until' => 1625004000
        },
        {
          'data' => '#: note: laut rbb nur stadtauswärts
@@ -3472,9 +3444,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1616918460,
          'id' => 3358,
          'source_id' => '2147347035',
-         'text' => 'Wichernstr.: Bauarbeiten zwischen Niederneuendorfer Allee und Holunderweg, Fahrbahn stadtauswärts gesperrt, vom 29.03.2021 10:01 Uhr bis 23.04.2021 17:00 Uhr ',
+         'text' => 'Wichernstr.: Bauarbeiten zwischen Niederneuendorfer Allee und Holunderweg, Fahrbahn stadtauswärts gesperrt, vom 29.03.2021 10:01 Uhr bis 03.05.2021 17:00 Uhr',
          'type' => 'handicap',
-         'until' => 1619190000
+         'until' => 1620054000
        },
        {
          'data' => '	q3::inwork 1884,11126 1861,11284
@@ -3485,6 +3457,27 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Soorstr.: Kreuzung Bredtschneiderstr., Kreuzungsbereich gesperrt, vom 09.04.2021 08:00 Uhr bis 28.05.2021 17:00 Uhr ',
          'type' => 'handicap',
          'until' => 1622214000
+       },
+       {
+         'data' => '#: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer?
+#: last_checked: 2021-04-13
+	q4::inwork; 9195,11972 9207,11880 9218,11793
+',
+         'from' => undef,
+         'id' => 3360,
+         'text' => 'Glinkastr.: zwischen Jägerstr. und Mohrenstr. Einbahnstraßenregelung, gesperrt Richtung Süden auch für Radfahrer',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '	2::inwork 49011,71344 48996,71176 48982,71121 48929,70947 49089,70562 49253,70168
+',
+         'from' => 1618696800,
+         'id' => 3361,
+         'source_id' => 'LS/721-E/21/032',
+         'text' => 'Ortsdurchfahrt Kerkow: Bauarbeiten und Ersatzneubau Brücke, möglicherweise auch für Radfahrer gesperrt, vom 19.04.2021 bis 01.09.2022',
+         'type' => 'gesperrt',
+         'until' => 1662069600
        }
      
 );
