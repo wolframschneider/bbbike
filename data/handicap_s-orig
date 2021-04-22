@@ -33,7 +33,7 @@
 # REMOVED (Engstelle nun kürzer und nicht mehr so eng) --- #: next_check_id: STRALAUER-2019 --- #: last_checked: 2020-01-24 --- #: check_frequency: 7d --- #: valid: -20200331 --- Stralauer Allee: enger gemeinsamer Geh- und Radweg während der Bauarbeiten	q3::inwork; 14558,10264 14405,10340
 # 
 #: next_check_id: PLANSTRASSEC-2019
-#: osm_watch: way id="491906864" version="4"
+#: osm_watch: way id="491906864" version="5"
 #: last_checked: 2021-03-19
 #: check_frequency: 60d
 (Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q3::inwork 12926,11224 12848,11093
@@ -45,15 +45,7 @@
 # REMOVED (-> qualitaet_s-orig; für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342929 --- #: priority: #B --- #: next_check: 2018-08-31 --- #: valid: -20180831 --- Helmerdingstr.: Bauarbeiten, Richtung Revaler Str. gesperrt	q4::inwork; 14468,11203 14442,11101
 # REMOVED (-> für Radfahrer offen) --- #: XXX vor Ort prüfen! --- #: source_id: 2147342938 --- #: priority: #B --- #: next_check: 2018-08-10 --- #: valid: -20180810 --- Scharnweberstr.: Bauarbeiten zwischen Colbestr. und Kinzigstr., Fahrbahn Richtung Gürtelstr. gesperrt	q4::inwork; 14468,11992 14589,11975
 # REMOVED (wieder offen) --- #: last_checked: 2020-03-30 --- Lange Str.: Bauarbeiten, kurze Einbahnstraßenregelung	q2::inwork; 12413,11901 12238,11931
-# 
-#: next_check_id: KAUFHOF-2018
-#: XXX bis wann gehen die Bauarbeiten?
-#: XXX ggfs. alten handicap_s-orig-Eintrag wieder aktivieren
-#: last_checked: 2021-04-09
-#: check_frequency: 14d
-# REMOVED --- #: next_check: 2021-03-01
-Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
-# 
+# REMOVED (weitgehend wiederhergestellt) --- #: next_check_id: KAUFHOF-2018 --- #: XXX bis wann gehen die Bauarbeiten? --- #: XXX ggfs. alten handicap_s-orig-Eintrag wieder aktivieren --- #: last_checked: 2021-04-09 --- #: check_frequency: 14d --- # REMOVED --- #: next_check: 2021-03-01 --- Hermann-Stöhr-Platz: Baustelle vor dem ehemaligen Kaufhaus	q4::inwork 12522,11837 12413,11901
 # REMOVED (beendet) --- #: XXX_prog BS (östliche Seite) --- #: last_checked: 2018-06-12 vvv --- #: check_frequency: 7d vvv --- Singerstr.: Bauarbeiten an der Kreuzung Ifflandstr., Fahrbahn gesperrt, Bordstein	q2::inwork 11845,12292 11635,12398 --- Singerstr.: Bauarbeiten an der Kreuzung Ifflandstr., Fahrbahn gesperrt, Bordstein	q4::inwork 11635,12398 11607,12412 --- #: check_frequency ^^^ --- #: last_checked ^^^
 # REMOVED (beendet) --- #: next_check_id: KAUFHOF-2018 --- #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/umbau-zu-buerostandort_a173030 --- #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/fassade-am-buerohochhaus-am-ostbahnhof-ist-fast-fertig_a279073 (bis Frühjahr 2021) --- #: note: laut fritz bis Ende 2020 --- #: XXX_prog BS (auf der östlichen Seite, ansonsten q3+) --- #: also_indoor: traffic (G) --- #: last_checked: 2021-01-25 --- #: check_frequency: 30d --- #: next_check: 2021-03-01 --- Müncheberger Str.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 12450,11980 12617,11888
 # REMOVED --- #: XXX vermutlich wird der Zebrastreifen nördlich der Kreuzung "verstetigt" --- #: source_id: 2147346517 (bis 6.11.2020) --- #: source_id: LMS-BR_r_LMS-BR_221528_LMS-BR_72 (bis 18.12.2020) (inaktiv) --- #: priority: #B --- #: last_checked: 2020-12-15 vvv --- #: check_frequency: 14d vvv
@@ -188,14 +180,12 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607
 # 
 ### Mitte ###
 # 
-#: also_indoor: traffic
-#: last_checked: 2021-04-13
-Singerstr.: Baustelle, etwa 50m Fahrbahn gesperrt	q2::inwork 11613,12408 11497,12463
+# REMOVED --- #: also_indoor: traffic --- #: last_checked: 2021-04-13 --- Singerstr.: Baustelle, etwa 50m Fahrbahn gesperrt	q2::inwork 11613,12408 11497,12463
 # 
 #: osm_watch: way id="822127127" version="1"
 #: osm_watch: way id="736448990" version="7"
-#: last_checked: 2021-01-21
-#: check_frequency: 120d
+#: last_checked: 2021-04-19 (daf)
+#: check_frequency: 90d
 Holzmarktstr. - Ifflandstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg, Bordsteine	q4::inwork 11524,12314 11589,12296
 # 
 #: next_check_id: CHAUSSEE-2020
@@ -208,7 +198,7 @@ Chausseestr.: gemeinsamer Rad- und Gehweg	q2::inwork; 8732,14098 8607,14253 8570
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic vvv
-#: last_checked: 2021-03-20 vvv
+#: last_checked: 2021-04-20 vvv
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q2::inwork; 8775,12457 8904,12489
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
@@ -228,6 +218,11 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 # REMOVED --- #: next_check_id: GOLDAMEIRSTEG-2019 --- #: XXX siehe auch strassen-orig-Eintrag --- #: last_checked: 2020-11-07 --- #: check_frequency: 60d --- #: next_check: 2021-03-01 --- #: valid: -20210301 --- (Umfahrung Kieler Str.): Fußgänger, Kurven	q2::inwork 7965,14207 8025,14251 8033,14241 8039,14232 7972,14185
 # REMOVED (explizit für Radfahrer frei) --- #: next_check_id: VOLTAIRE-2019 --- #: by: http://www.dafmap.de/d/berlin.html?id=3731&mt=0&zoom=18 --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1906/nachricht6759.html (Fertigstellung des Grandaire für III/2020 geplant) --- #: also_indoor: traffic (G) --- #: XXX Fußgängerschutztunnel auf dem südlichen Gehweg --- #: last_checked: 2020-09-23 --- #: check_frequency: 14d --- Voltairestr.: wegen Baustelle kann die Fahrbahn gesperrt sein, Ausweichen auf Gehweg	q3::inwork 11329,12497 11209,12430
 # 
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: also_indoor: traffic
+#: last_checked: 2021-04-20
+Dircksenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 11209,12430 11156,12581
+# 
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2016/5_2016_anlage2_b_plan_1_43a_erneuter_beschluss.pdf
 #: by: http://www.dafmap.de/d/berlin.html?id=3220&mt=0&zoom=16
 #: by: http://www.dafmap.de/d/berlin.html?id=3730&mt=0&zoom=16
@@ -240,10 +235,10 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: osm_watch: way id="751595931" version="2"
 #: also_indoor: traffic (H)
-#: last_checked: 2021-04-13
+#: last_checked: 2021-04-20
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10952,12401
 # 
-#: last_checked: 2021-02-25
+#: last_checked: 2021-04-20
 #: check_frequency: 60d
 (Grunerstr. - Gustav-Böß-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10953,12638 10772,12515
 # 
@@ -260,9 +255,9 @@ Scharrenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 
 #: osm_watch: way id="268002748" version="10"
 #: XXX laut osm opening_date=2021
 #: also_indoor: traffic (G,ex-H)
-#: last_checked: 2021-03-25 (mapillary)
+#: last_checked: 2021-04-20
 #: check_frequency: 30d
-Hirtenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10925,13322 11012,13278
+Hirtenstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11012,13278 10925,13322
 # 
 # REMOVED (mittlerweile existiert auch eine Absenkung) --- #: next_check_id: OTTOBRAUN-2015 --- #: XXX vermutlich im ausgebauten Zustand: q1  --- #: last_checked: 2018-03-16 --- #: check_frequency: 14d --- Wadzeckstr. - Mollstr.: Behinderungen wegen Bauarbeiten möglich	q2::inwork 11315,13210 11399,13333
 # REMOVED --- #: next_check_id: ROSSSTRASSENBRUECKE-2018 --- 
@@ -298,9 +293,9 @@ Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Restaurantbetrieb	q2::inwor
 #: XXX Ende der Bauarbeiten?
 #: way id="507023458" version="1"
 #: by: http://www.dafmap.de/d/berlin.html?id=3204&mt=0&zoom=16
-#: osm_watch: way id="507023458" version="9"
+#: osm_watch: way id="507023458" version="10"
 #: also_indoor: traffic
-#: last_checked: 2021-04-07 (mapillary)
+#: last_checked: 2021-04-20
 #: check_frequency: 45d
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 # 
@@ -366,7 +361,7 @@ Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahr
 #: by: https://blog.sbb.berlin/ab-1-februar-2021-haus-unter-den-linden-fuer-benutzungsbetrieb-geoeffnet/?date=20201226 (Baustelleneinrichtung in der Charlottenstr. wird im Frühjahr 2021 abgebaut, bis Sommer 2021 wird die Straßenseite wiederhergestellt; Sperrung in der Universitätsstraße womöglich bis Mitte 2022)
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
-#: last_checked: 2021-04-09 vvv
+#: last_checked: 2021-04-20 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="9"
@@ -757,10 +752,11 @@ Wiesenweg: Sperrung unter der Brücke, Fahrbahn ist gesperrt, auf Gehweg ausweich
 ### Schöneberg ###
 # 
 #: next_check_id: DENNEWITZFLOTTWELL-2019
+#: XXX unklar, ob die Einbahnstraßenregelung für Radfahrer gelten soll
 #: also_indoor: traffic (G,H) vvv
-#: last_checked: 2021-03-08 vvv
+#: last_checked: 2021-04-19 vvv
 # REMOVED (hier kaum noch Einschränkungen) --- Kurfürstenstr.: Bauarbeiten im Kreuzungsbereich	q3::inwork 8058,10306 7850,10351
-Bauarbeiten im Kreuzungsbereich	q3::inwork 8159,10430 8058,10306
+Dennewitzstr.: Einbahnstraßenregelung	q3::inwork; 8159,10430 8058,10306
 # REMOVED (verlagert) --- Flottwellstr./Dennewitzstr.: Bauarbeiten, Ausweichen auf Gehweg und Umfahrung über Pohlstr.	q3::inwork; 8199,10634 8159,10430 8058,10306
 # REMOVED (nicht mehr) --- Pohlstr.: Bauarbeiten, Umfahrung über Gehweg	q3::inwork 8159,10430 7932,10475
 #: last_checked ^^^
@@ -928,7 +924,7 @@ Pestalozzistr.: Fußgängerzone	q3 3721,11230 3770,11231 3822,11231
 # 
 #: next_check_id: NKZ-2020
 #: XXX zurzeit Bauarbeiten, nur der Gehweg ist offen (alten Eintrag danach wieder aktivieren); vor Corona-Zeiten gab's außerdem einen großzügigen Restaurantbereich
-#: last_checked: 2021-03-20 vvv
+#: last_checked: 2021-04-19 vvv
 (Zufahrt am NKZ): Fußgänger/Lieferverkehr	q2 11291,10438 11317,10485
 # REMOVED (Originaleintrag) --- (Zufahrt am NKZ): Fußgänger/Lieferverkehr	q2 11317,10485 11344,10507
 (Zufahrt am NKZ): Fußgänger/Lieferverkehr, Bauarbeiten, Fahrbahn gesperrt	q4::inwork 11317,10485 11344,10507
@@ -945,7 +941,7 @@ Alexanderplatz [Richtung Alexa]: Fußgängerverkehr	q3 11134,12793 11064,12910
 #: by: https://camera.deckchair.com/park-inn-berlin-alexanderplatz (Webcam)
 #: by: https://www.deutsches-architekturforum.de/thread/2271-u-5/?postID=666937#post666937 (Pflasterungsarbeiten)
 # REMOVED (gelöscht) --- #: osm_watch: relation id="8743849" version="2"
-#: last_checked: 2021-04-13
+#: last_checked: 2021-04-20
 #: check_frequency: 10d
 #Rathausstr.: Fußgänger	q1- 10923,12779 10704,12595
 Rathausstr.: Fußgänger, Bauarbeiten	q2 10923,12779 10704,12595
@@ -1146,7 +1142,8 @@ Gendarmenmarkt: Fußgängerzone, ggfs. schieben	q3 9536,11922 9666,11935
 Gendarmenmarkt: Fußgängerzone, ggfs. schieben	q3 9523,12019 9656,12031
 Am Volkspark: Parkweg	q1 5730,8207 5925,8219
 Karl-Marx-Allee - Marchlewskistr.: Gehweg	q2 12878,12430 12950,12340 12985,12303
-# REMOVED (nun in gesperrt-orig) --- #: XXX_prog: zusätzlich noch Bordsteine an der östlichen Seite (BS) (q2 auch ohne Bordstein) --- Lange Str. [vor dem ehemaligen Kaufhof]: Fußgänger, Bauarbeiten, Bordstein	q3 12413,11901 12522,11837
+#: XXX_prog: zusätzlich noch Bordsteine an der östlichen Seite (BS) (ohne Bordstein q2)
+Lange Str. [vor dem ehemaligen Kaufhof]: Fußgänger, Bordstein	q3 12413,11901 12522,11837
 Hermann-Stöhr-Platz: Fußgänger	q2 12453,11790 12413,11901
 Gotenstr./Cheruskerstr. - Kolonnenstr.: Fußgänger	q2 7485,8777 7531,8848
 Gotenstr./Cheruskerstr. - Kolonnenstr.: Fußgänger	q3 7531,8848 7563,8871
@@ -2544,7 +2541,7 @@ Preußensiedlung: einige Fußgänger	q1 20971,1046 20957,1043 20850,963
 (Bruno-Taut-Str. - Am Gartenstadtweg): Fußgänger, eng, steile Stellen	q2 21790,682 21783,660 21755,625 21723,605 21688,589 21673,590
 #: XXX_prog: BS südliches Ende, kann aber einige Meter weiter südlich umfahren werden, ansonsten: einige Fußgänger, q1
 Erieseering: Bordstein	q3 18141,10173 18132,10183
-(Erieseering - am Tränkegraben): einige Fußgänger	q1 18132,10183 18130,10201 18113,10208 18085,10244 18081,10312 18039,10398 18026,10490 18034,10567
+(Erieseering - am Tränkegraben): einige Fußgänger	q1 18132,10183 18130,10201 18113,10208 18085,10244 18081,10312 18042,10392 18039,10398 18026,10490 18034,10567
 #: note: am nördlichen Eingang existiert ein Schild "Radfahrer absteigen", aber am südlichen Ende fehlt so ein Schild
 (Zachertstr. - am Tränkegraben): Fußgänger	q1 17848,11204 17893,11146 17905,11122 17924,10964 17914,10861 17892,10718 17870,10619
 (am Tränkegraben - Moldaustr.): einige Fußgänger	q1 17870,10619 17856,10560 17864,10537 17856,10508

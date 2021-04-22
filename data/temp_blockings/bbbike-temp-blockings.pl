@@ -36,10 +36,13 @@ my $isodate2epoch = sub {
        until => $isodate2epoch->("2019-06-10 23:59:59"),
        periodic => 1,
        recurrences => [['easter', 47, start => "2020-10-25T00:00:00"]], # zwei Tage vor Pfingsten
+       recurrence_prewarn_days => -60,
        text  => 'Straßenfest rund um den Blücherplatz, 07.06.2019 bis 10.06.2019, Sperrungen fangen schon einen Tag vorher an',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.berlin.de/tickets/suche/detail.php?id=810735
+#: by: https://www.gratis-in-berlin.de/festivals/item/2009881-strassenfest-am-bluecherplatz-kreuzberg-karneval-der-kulturen (geplant 03.06.2022 bis 06.06.2022)
+#: by: https://www.karneval.berlin/ (findet möglicherweise am 15. August 2021 statt --- gibt es überhaupt ein Straßenfest vorher?)
 	2::temp 9521,10010 9827,10051
 	2::temp 9521,10010 9448,10014
 	2::temp 9599,10175 9687,10180 9825,10206
@@ -65,10 +68,12 @@ EOF
        until => $isodate2epoch->("2019-06-09 23:59:59"),
        periodic => 1,
        recurrences => [['easter', 49, start => "2020-10-25T00:00:00"]], # Pfingstsonntag
-       source_id => 'http://www.karneval-berlin.de/de/',
+       recurrence_prewarn_days => -60,
+       source_id => 'https://www.karneval.berlin/', # früher http://www.karneval-berlin.de/de/, heute ist das eine Werbeseite
        text  => 'Karneval der Kulturen, 09.06.2019',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: https://www.karneval.berlin/ (findet möglicherweise am 15. August 2021 statt)
 	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10951,9216 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
 # REMOVED ---	2::temp 9044,9753 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
 	2::temp 10713,9260 10670,9286 10639,9304 10615,9300 10564,9292
@@ -265,6 +270,7 @@ Florastraße zwischen Grunowstraße und Berliner Straße, Baustelle, Straße in beid
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.weinfeste-in-deutschland.de/wein-und-winzerfest-in-berlin-lichtenrade.html
+#: by: https://www.family-and-friends-ev.de/?date=20210418 (10.-12. September 2021)
 	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 EOF
      },
@@ -6262,7 +6268,7 @@ EOF
        until => $isodate2epoch->("2019-05-05 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 24, months => 4, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 2, # wegen Corona
+       recurrence_prewarn_days => -12, # wegen Corona
        text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (4.5.2019 und 5.5.2019)',
        type  => 'gesperrt',
        source_id => 'http://www.volksfeste-in-deutschland.de/primavera-fruehling-auf-der-akazienstrasse-in-berlin-schoeneberg.html',
@@ -8153,7 +8159,7 @@ EOF
        until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 10, months => 5, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 7, # wegen Corona
+       recurrence_prewarn_days => 2, # wegen Corona
        source_id => 'https://www.berlin.de/events/4829161-2229501-rudower-fruehlingsmeile.html',
        text  => 'Alt-Rudow: Rudower Frühlingsmeile, Straße zwischen Köpenicker Str. und Bildhauerweg, sowie Krokusstr. bis Prieroser Str. gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
@@ -8256,14 +8262,14 @@ EOF
      { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 7, months => 5, start => "2020-05-13T00:00:00"]],
-       recurrence_prewarn_days => 6, # wegen Corona
+       recurrences => [['yearly', days => 7, months => 5, start => "2021-05-13T00:00:00"]],
        text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
        source_id => 'https://www.werbegemeinschaft-friedrichshagen.de/projekte/boelschefest/',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.921158.php (Absage 2020)
 #: by: https://www.berlin.de/events/5980135-2229501-boelschefest.html (geplant für 8. und 9. Mai 2021)
+#: by: https://www.berlin.de/events/5980135-2229501-boelschefest.html?date=20210418 (abgesagt)
 	2::temp 25519,4830 25522,4935 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25561,5622 25563,5666 25567,5749 25571,5829 25579,5958
 EOF
      },
@@ -14085,13 +14091,13 @@ EOF
      { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 8, months => 5, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 7, # wegen Corona
+       recurrences => [['yearly', days => 8, months => 5, start => "2021-10-25T00:00:00"]],
        text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html
 #: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html?date=20210409 (geplant 8. und 9. Mai 2021)
+#: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html?date=20210418 (erst 2022)
 	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
 EOF
      },
@@ -16278,7 +16284,7 @@ EOF
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-04-09
+#: last_checked: 2021-04-20
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -19378,7 +19384,7 @@ EOF
        until => $isodate2epoch->("2019-05-19 23:59:59"), # 1 Tag Nachlauf
        periodic => 1,
        recurrences => [['yearly', days => 25, months => 4, start => "2020-06-02T00:00:00"]],
-       recurrence_prewarn_days => 7, # wegen Corona
+       recurrence_prewarn_days => -1, # wegen Corona
        text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 26.04.2019 bis 19.05.2019',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2983315-2970764-neukoellner-maientage.html',
@@ -21550,8 +21556,7 @@ EOF
      { from  => $isodate2epoch->("2019-04-25 14:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-04-28 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 21, months => 4, start => "2020-05-01T00:00:00"]],
-       recurrence_prewarn_days => 0, # wegen Corona
+       recurrences => [['yearly', days => 21, months => 4, start => "2021-05-01T00:00:00"]], # keine Anzeichen dafür, dass der Winzerfrühling 2021 stattfinden könnte
        text  => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 26.4.2019 bis 28.4.2019',
        type  => 'gesperrt',
        source_id => 'http://www.winzerfest-köpenick.de/',
@@ -21662,13 +21667,13 @@ EOF
      { from  => $isodate2epoch->("2019-05-17 00:00:00"), # 1431715044, # 1367560678, # 2013-05-03 07:57
        until => $isodate2epoch->("2019-05-18 23:59:59"), # 1367704799, # 2013-05-04 23:59
        periodic => 1,
-       recurrences => [['yearly', days => 4, months => 5, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 2, # wegen Corona
+       recurrences => [['yearly', days => 4, months => 5, start => "2021-10-25T00:00:00"]],
        text  => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 18. Mai 2019',
        type  => 'gesperrt',
        source_id => 'https://www.berliner-frauenlauf.de/der-tag/strecke.html',
        data  => <<EOF,
 #: by: https://www.berliner-frauenlauf.de/?date=20210404 (geplanter Termin: vom 13. bis 16. Mai 2021)
+#: by: https://www.berlin.de/events/2101687-2229501-avonrunning-berliner-frauenlauf.html (2021 abgesagt)
 # REMOVED --- #: tempex: 20170520 vvv
 	2::temp 8055,12186 8119,12414
 	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
@@ -21727,11 +21732,12 @@ EOF
        text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (03.05.2019 bis 05.05.2019)',
        periodic => 1,
        recurrences => [['yearly', days => 29, months => 4, start => "2020-05-06T00:00:00"]],
-       recurrence_prewarn_days => 1, # wegen Corona
+       recurrence_prewarn_days => -30, # wegen Corona
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (ja) --- #: XXX wird die Veranstaltung noch abgesagt? --- #: next_check: 2020-04-23
 #: by: https://www.volksfeste-in-deutschland.de/kunst-wein-in-lichtenrade.html
+#: by: https://www.family-and-friends-ev.de/?date=20210418 (4.-6. Juni 2021, dann aber vermutlich kein Maientanz")
 # REMOVED (müsste korrigiert werden) --- #: tempex: YYYY0429-YYYY0501
 	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
 EOF
@@ -30853,7 +30859,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-04-15
+#: last_checked: 2021-04-20
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31366,9 +31372,10 @@ EOF
        data  => <<EOF,
 #: next_check_id: SIGISMUND-2020
 #: next_check_id: MUSEUMDERMODERNE-2021
+#: by: https://baudoku.1000eyes.de/cam/deininger/B8A44F22CFEF/responsive.html (Webcam)
 #: XXX wann sind die Bauarbeiten fertig? vvv
 #: XXX außerdem wurde die Einbahnstraßenregelung im Matthäikirchplatz aufgehoben, muss dann rückgängig gemacht werden vvv
-#: last_checked: 2021-03-20 vvv
+#: last_checked: 2021-04-19 vvv
 #: note: hier von Osten aus legaler gemeinsamer Rad- und Gehweg auf dem Bürgersteig, mit kurzer asphaltierter Rampe, von Westen aus verboten für Fahrzeuge aller Art; mittlerweile existiert kein Gehweg mehr
 #: osm_watch: way id="16096289" version="19"
 	2::inwork 8031,11249 7934,11275 7897,11287
@@ -32117,7 +32124,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-04-17
+#: last_checked: 2021-04-21
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -32251,8 +32258,9 @@ EOF
        text  => 'Auerstr.: Fahrbahn wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
+#: XXX nach den Bauarbeiten werden die Parkstreifen gepflastert sein und auf der östlichen Seite breiter sein (für Querparken)
 #: also_indoor: traffic
-#: last_checked: 2021-04-11
+#: last_checked: 2021-04-18
 #: check_frequency: 14d
 	q4::inwork 13025,12523 13067,12583 13202,12790
 EOF
@@ -32330,6 +32338,7 @@ EOF
        data  => <<EOF,
 #: note: keine genauen Zeiten verfügbar
 #: by: https://abendblatt-berlin.de/2021/04/03/neue-feuerwehrwache-und-verwaltungsbueros-fuer-friedrichsfelde/
+#: by: https://www.berliner-woche.de/friedrichsfelde/c-bauen/senat-lobt-demnaechst-einen-realisierungswettbewerb-aus_a306651
 #: tempex: sa,su,holiday,(mo-fr T20:00-sunrise) vvv
 (Campus AF 60)	2::night:weekend 18619,11463 18638,11479 18702,11480 18740,11480 18762,11496 18794,11504 18961,11546 19035,11550 19098,11551 19101,11581 19147,11584
 (Campus AF 60)	2::night:weekend 19035,11550 19032,11640 18967,11639 18917,11641 18700,11645 18702,11480
@@ -32357,10 +32366,10 @@ EOF
 EOF
      },
      { from  => 1616918460, # 2021-03-28 10:01
-       until => $isodate2epoch->("2021-05-03 17:00:00"), # 1619190000, # 2021-04-23 17:00
+       until => 1619029665, # $isodate2epoch->("2021-05-03 17:00:00"), # 1619190000, # 2021-04-23 17:00
        text  => 'Wichernstr.: Bauarbeiten zwischen Niederneuendorfer Allee und Holunderweg, Fahrbahn stadtauswärts gesperrt, vom 29.03.2021 10:01 Uhr bis 03.05.2021 17:00 Uhr',
        type  => 'handicap',
-       source_id => '2147347035',
+       source_id => '2147347035', # inaktiv
        data  => <<EOF,
 #: note: laut rbb nur stadtauswärts
 	q4::inwork; -2934,17594 -3060,17617 -3093,17647

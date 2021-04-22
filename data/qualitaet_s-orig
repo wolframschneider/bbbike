@@ -161,7 +161,7 @@ Waldemarstr.: Kopfsteinpflaster	Q2+ 11552,10863 11328,10957
 Waldemarstr.: Kopfsteinpflaster	Q2 11328,10957 11290,10972 11150,11030
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: XXX Planung eines Asphaltstreifens
-#: last_checked: 2020-06-18
+#: last_checked: 2021-04-19
 #: check_frequency: 360d
 Erkelenzdamm: Kopfsteinpflaster	Q2 11038,10247 11094,10261 11117,10326 11134,10383 11109,10423 11145,10510 11192,10629 11210,10668 11244,10653 11258,10682
 Leuschnerdamm: Kopfsteinpflaster	Q2 11275,10723 11301,10783 11264,10804 11328,10957 11365,11047 11421,11073 11458,11136
@@ -172,7 +172,7 @@ Legiendamm: asphaltiert	Q0 11189,10831 11159,10769
 Segitzdamm: asphaltiert	Q0 11159,10769 11133,10704
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: XXX Planung eines Asphaltstreifens vvv
-#: last_checked: 2020-07-26 vvv
+#: last_checked: 2021-04-19 vvv
 #: check_frequency: 360d vvv
 Segitzdamm: Kopfsteinpflaster	Q2 11133,10704 11164,10687 11145,10638 11100,10530 11065,10443 11017,10435 10987,10360
 Segitzdamm: Kopfsteinpflaster	Q2 10975,10334 10966,10304 10988,10268 10923,10113
@@ -507,7 +507,7 @@ Fürstenberger Str.: Asphalt	Q0 10320,14608 10472,14632
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/senatsverkehrsverwaltung-befuerwortet-umbau-auf-der-metzer-strasse_a190549
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/08-05-2018-fahrradinfrastruktur-in-der-metzer-strasse.pdf
 #: XXX Asphaltierung in Aussicht gestellt, später auch die Metzer Str.
-#: last_checked: 2021-02-22
+#: last_checked: 2021-04-07 (mapillary)
 #: check_frequency: 60d
 Kollwitzstr.: Kopfsteinpflaster	Q2 11006,14087 10937,14006
 # 
@@ -955,7 +955,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9942 (Kopfsteinpflaster bleibt vorerst? außerdem: wird die Colbestr. zur Fahrradstraße?)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2021-04-15
+#: last_checked: 2021-04-20
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -2102,10 +2102,9 @@ Werrastr.: Asphalt mit einigen Schäden	Q1+ 13697,8279 13648,8321
 # 
 #: XXX Neugestaltung geplant, vielleicht verschwindet dabei das Pflaster? vvv
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.794639.php (ab 2021) vvv
-#: last_checked: 2021-01-21 vvv
+#: last_checked: 2021-04-20 vvv
 #: check_frequency: 90d vvv
-Rungestr.: Kopfsteinpflaster	Q2- 11197,11882 11291,11876
-Rungestr.: Kopfsteinpflaster	Q2 11291,11876 11378,11856 11506,11851
+Rungestr.: Kopfsteinpflaster	Q2- 11197,11882 11291,11876 11378,11856 11506,11851
 #: check_frequency ^^^
 #: last_checked ^^^
 #: by ^^^
@@ -3352,8 +3351,8 @@ Wendlandzeile: mäßiger Beton	Q1 6500,7172 6517,7260 6608,7306
 (General-Pape-Str. - Wintgensstr.): Asphalt	Q0 8161,7907 8203,7909 8260,7911
 Wüsthoffstr.: etwas Kopfsteinpflaster, Verbundsteinpflaster, Bodenschwellen	Q1 8265,8092 8461,8097
 Achenbachpromenade: wassergebundene Decke und Verbundsteinpflaster	Q1 8763,8780 8748,8587 8722,8527 8715,8459
-(Salzmannstr. - Betriebsbhf. Rummelsburg): mäßiger Beton	Q1 16847,10092 16835,10052 16830,10030 16841,9997
-(Salzmannstr. - Betriebsbhf. Rummelsburg): Asphalt	Q0 16841,9997 16895,9922 16900,9861
+(Salzmannstr. - Betriebsbhf. Rummelsburg): mäßiger Beton	Q1 16847,10092 16835,10052 16830,10030
+(Salzmannstr. - Betriebsbhf. Rummelsburg): Asphalt	Q0 16830,10030 16841,9997 16895,9922 16900,9861
 (Am Kraatzgraben): unebener Asphalt	Q1- 16835,10052 16666,10219 16544,10337
 (Am Kraatzgraben): wassergebundene Decke	Q1- 16544,10337 16488,10381
 (Kolonie Sanssouci): wassergebundene Decke, Feinschotter	Q1- 16488,10381 16375,10545 16288,10637 16265,10628 16246,10641
@@ -7795,7 +7794,7 @@ Bebelplatz: gepflastert	Q1 9680,12232 9664,12387
 (Park am Gleisdreieck, Eingang Kurfürstenstr.): Beton	Q0 8058,10306 8180,10282 8256,10264
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): wassergebundene Decke	Q1 8264,10192 8276,10079
 #: next_check_id: HELLWEG-2014 vvv
-#: last_checked: 2021-03-26 vvv
+#: last_checked: 2021-04-19 vvv
 #: check_frequency: 100d vvv
 #: osm_watch: way id="531908445" version="8"
 #: XXX wird hier noch eine wassergebundene Decke erstellt?
@@ -8629,7 +8628,7 @@ Straße 74: Asphalt	Q0- 12583,22428 12696,22455 12821,22437 12855,22431 13136,223
 #: next_check_id: KOENIGSTEINBRUECKE-2019
 #: by: wosch
 #: XXX eventuell wird der Asphalt noch glatter gemacht
-#: last_checked: 2021-04-02 (wosch)
+#: last_checked: 2021-04-19 (mapillary)
 Königsteinbrücke: welliger Asphalt	Q1 13136,22397 13148,22396 13176,22409 13203,22390 13295,22383 13334,22355 13386,22378 13394,22373
 Straße 86: Asphalt	Q0 13805,22935 13726,22860
 Straße 86: unbefestigt	Q2 13726,22860 13699,22834
@@ -8958,7 +8957,7 @@ Rathausstr.: Verbundsteinpflaster	Q0- 10601,12521 10704,12595
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.780817.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruenflaechen/baumassnahmen/artikel.273777.php?date=20210405 (Rückbau der unterirdischen Anlagen)
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit; laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022 vvv
-#: last_checked: 2021-04-11 vvv
+#: last_checked: 2021-04-18 vvv
 # REMOVED (unter der provisorischen Decke) --- Weg zur Mühsamstr.: Beton/Verbundsteinpflaster	Q1+ 13067,12583 13091,12563
 Weg zur Mühsamstr.: provisorische Asphaltdecke	Q0- 13067,12583 13091,12563
 Weg zur Mühsamstr.: Schotterweg	Q2 13091,12563 13232,12628
@@ -9949,7 +9948,9 @@ Helene-Weigel-Platz: Asphalt	Q0 19628,13517 19625,13576
 (westlicher Wuhlewanderweg): wassergebundene Decke	Q1 22347,13858 22404,13984 22407,14111 22416,14148
 westlicher Wuhlewanderweg: überwiegend wassergebundene Decke, einige Kleinsteinpflasterabschnitte	Q1 22416,14148 22462,14172 22639,14384 22679,14450 22670,14520 22620,14673 22528,14769 22455,14815 22462,14846 22439,14873 22378,14904 22323,15119
 (Erieseering - am Tränkegraben): Verbundsteinpflaster	Q1- 18132,10183 18130,10201 18113,10208
-(Erieseering - am Tränkegraben): Parkweg	Q1- 18113,10208 18085,10244 18081,10312 18039,10398 18026,10490 18034,10567
+(Erieseering - am Tränkegraben): Parkweg	Q1- 18113,10208 18085,10244 18081,10312 18042,10392
+(Erieseering - am Tränkegraben): Verbundsteinpflaster	Q1 18042,10392 18039,10398
+(Erieseering - am Tränkegraben): Parkweg	Q1- 18039,10398 18026,10490 18034,10567
 (Zachertstr. - am Tränkegraben): Beton	Q0- 17848,11204 17893,11146
 (Zachertstr. - am Tränkegraben): überwiegend Asphalt, kurzer unbefestigter Abschnitt	Q0- 17893,11146 17905,11122 17924,10964 17914,10861 17892,10718 17870,10619
 Schwarzmeerstr. [zur Rummelsburger Str.]: Asphalt	Q0 17751,10904 17763,10950 17676,10976
@@ -11717,7 +11718,8 @@ Metropolitan Park: unbefestigte Baustraße, Schotter	Q2- -8064,13534 -8088,13594 
 Märkische Allee [Wohngebiet]: Asphalt	Q0- 20459,16697 20439,16709 20430,16744 20473,16829 20507,16845 20588,16992
 David-Friedländer-Weg: Betonpflaster	Q0- 20727,18726 20901,18793 21038,18851
 Christian-Dohm-Weg: Betonpflaster	Q0- 20760,18812 20894,18861
-#: last_checked: 2020-12-05
+#: next_check_id: FALKENBERG-2021
+#: last_checked: 2021-04-20 (osm)
 #: check_frequency: 90d
 #: XXX wie wird hier das endgültige Pflaster sein?
 Christian-Dohm-Weg: Baustraße	Q2- 20894,18861 21024,18915
@@ -12007,7 +12009,8 @@ Schloßplatz: Kleinpflastersteine	Q1- 10175,12435 10271,12503
 (Lustgarten - Schloss): Kleinpflastersteine	Q1- 10155,12494 10175,12435
 (Parkweg - Park Biesdorf): wassergebundene Decke	Q1 20779,11801 20804,11797 20818,11812 20835,11810
 Am Kraatzgraben: Verbundsteinpflaster	Q1 16899,10020 16835,10052
-Betriebsbahnhof Rummelsburg - Am Kraatzgraben: unbefestigt	Q1- 16895,9922 16886,9982 16894,10003
+Betriebsbahnhof Rummelsburg - Am Kraatzgraben: Asphalt	Q0 16895,9922 16886,9982
+Betriebsbahnhof Rummelsburg - Am Kraatzgraben: unbefestigt	Q1- 16886,9982 16894,10003
 Betriebsbahnhof Rummelsburg - Am Kraatzgraben: Verbundsteinpflaster	Q1 16894,10003 16899,10020 16912,10054
 Parallelweg am Eichgestell: guter Parkweg	Q1 18134,7173 18908,6834 18944,6870
 Parallelweg am Eichgestell - Wasserwerk Wuhlheide: Parkweg, einige Pfützen möglich	Q1- 18944,6870 19045,6959

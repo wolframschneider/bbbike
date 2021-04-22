@@ -61,9 +61,14 @@ Tempelhofer Damm	HH 9229,8785 9229,8718 9233,8597 9238,8410 9238,8253 9239,8099 
 Möckernstr.	N 8769,9295 8774,9534 8777,9601
 Möckernstr.	NH 8777,9601 8778,9759 8779,9812 8779,9829 8779,9851 8780,9968 8783,10166 8802,10290 8804,10303 8824,10366
 Möckernstr.	N 8824,10366 8878,10514 8926,10626 8941,10663 9022,10857
-#: note: Privatstraße
-#: note: Benennung wurde am 2017-07-01 wirksam
-Möckernkiez	N 8778,9759 8757,9748 8735,9737 8710,9725 8729,9670 8596,9595 8565,9657
+#: note: Privatstraße vvv
+#: note: Benennung wurde am 2017-07-01 wirksam vvv
+#: osm.highway: service
+Möckernkiez	N 8778,9759 8757,9748 8735,9737
+#: note: hier Spielstraßenschilder, deshalb kein osm.highway=service
+Möckernkiez	N 8735,9737 8710,9725 8729,9670 8596,9595 8565,9657
+#: note ^^^
+#: note ^^^
 (Gleisdreieckpark - Möckernkiez)	NN 8729,9747 8735,9737
 Großbeerenstr. (Kreuzberg)	N 8970,9323 9000,9509 9044,9753 9073,9915 9108,10101 9145,10290 9154,10348 9176,10451 9192,10528 9245,10565
 Kleinbeerenstr.	N 8878,10514 8979,10485
@@ -300,7 +305,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://abendblatt-berlin.de/2021/02/25/berlin-mitte-friedrichstrasse-wird-erneut-umgestaltet/
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/naturfreunde-berlin-wollen-nur-fussgaenger-auf-der-friedrichstrasse_a306402
 #: source_id: 2147346249
-#: last_checked: 2021-04-13 vvv
+#: last_checked: 2021-04-19 vvv
 #: next_check: 2021-10-31 vvv
 #: valid: !20200821-20211031
 Friedrichstr. (Mitte, Kreuzberg)	H 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
@@ -1245,7 +1250,7 @@ Mercedes-Platz	NN 12990,11006 13063,11147
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036247069542/247069542/00279027/27-Anlagen/02/DS0254_VzK_BenennungeinerStrassenachFreiaEisne.pdf (erst 2023, nach Umwidmung in eine öffentliche Straße)
 #: XXX Vorschlag: Freia-Eisner-Straße
 #: note: "Privatgelände"
-#: osm_watch: way id="491906864" version="4"
+#: osm_watch: way id="491906864" version="5"
 #: priority: #C
 #: last_checked: 2021-03-19
 #: next_check: 2023-01-01
@@ -4501,12 +4506,13 @@ Gravensteinstr.	N 12185,22465 12229,22457 12257,22452 12366,22434 12397,22429 12
 #: note: Privatstraße
 Gravensteinstr. [Wohngebiet]	N 12694,22570 12738,22546 12781,22593 12738,22630
 # 
-#: XXX Teilfläche soll eingezogen werden ---laut Amtsblatt 50/2019 ist das so gut wie die gesamte Straße
+#: next_check_id: ANDERSTREUOBSTWIESE-2021
+#: XXX Teilfläche soll eingezogen werden ---laut Amtsblatt 50/2019 ist das so gut wie die gesamte Straße; könnte was mit den Bauvorhaben "An der Streuobstwiese" zu tun haben
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_50_7633_7832_online.pdf
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_05_0549_0672_online.pdf
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_47_5497_5582_online.pdf (als "ehemalig" bezeichnet, keine Grundstücksnummern mehr)
-#: last_checked: 2020-09-20
-#: check_frequency: 120d
+#: last_checked: 2021-04-19 (mapillary)
+#: check_frequency: 360d
 Straße 171	N 12694,22570 12657,22596 12628,22604
 # 
 Straße 76a	N 12777,22679 12883,22615 12920,22597
@@ -5895,7 +5901,7 @@ Erieseering	N 18287,10045 18241,10157
 Erieseering	NN 18141,10173 18132,10183
 (Erieseering - Dathepromenade)	NN 18319,10249 18314,10260
 #: note: Beleuchtung existiert
-(Erieseering - am Tränkegraben)	NN 18132,10183 18130,10201 18113,10208 18085,10244 18081,10312 18039,10398 18026,10490 18034,10567
+(Erieseering - am Tränkegraben)	NN 18132,10183 18130,10201 18113,10208 18085,10244 18081,10312 18042,10392 18039,10398 18026,10490 18034,10567
 #: note: Beleuchtung existiert
 (Zachertstr. - am Tränkegraben)	NN 17848,11204 17893,11146 17905,11122 17924,10964 17914,10861 17892,10718 17870,10619
 (am Tränkegraben - Moldaustr.)	NN 17870,10619 17856,10560 17864,10537 17856,10508
@@ -9037,7 +9043,7 @@ Clémentweg	N 11790,22698 11285,23079
 Mühlenstr. (Französisch Buchholz)	N 11790,22698 11936,22570 12004,22526 12040,22519 12187,22486
 Gartenstr. (Französisch Buchholz)	N 12040,22519 11950,22162 11934,22108 11886,21924
 Stephanusring	N 11934,22108 11890,22123 11863,22146 11876,22212 11950,22162
-Bucher Str.	H 12185,23021 12280,23116 12374,23152 12409,23165 12535,23200 12666,23223 12805,23268 12848,23269 12892,23298 12925,23322 12937,23357 13012,23424 13045,23465 13080,23508 13199,23657 13589,24146 13684,24286 14023,24756 14112,24843 14182,24940 14217,24999
+Bucher Str.	H 12185,23021 12280,23116 12374,23152 12409,23165 12535,23200 12666,23223 12805,23268 12882,23312 12915,23337 12937,23357 13012,23424 13045,23465 13080,23508 13199,23657 13589,24146 13684,24286 14023,24756 14112,24843 14182,24940 14217,24999
 Schillerstr. (Niederschönhausen, Rosenthal)	N 10066,20494 10178,20525 10309,20562 10409,20592 10537,20633 10635,20693 10705,20739 10743,20764
 Kreuzgraben	N 10309,20032 10282,20137 10267,20193 10264,20209
 Kreuzgraben	NN 10264,20209 10260,20222 10251,20252
@@ -14635,8 +14641,8 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036637679537/637679537/00220602/02-Anlagen/01/1_Version_vom_03_07_2017.pdf (zweite Karte!)
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
-#: osm_watch: way id="38776757" version="13"
-#: last_checked: 2021-04-15
+#: osm_watch: way id="38776757" version="14"
+#: last_checked: 2021-04-18 (mapillary)
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15011,8 +15017,8 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: XXX Benennung zu "Am Kraatz-Tränke-Graben" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
-#: osm_watch: way id="51230057" version="15"
-#: last_checked: 2021-04-15
+#: osm_watch: way id="51230057" version="17"
+#: last_checked: 2021-04-18 (mapillary)
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -16802,7 +16808,7 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-bauen/die-naechsten-schritte-zur-festsetzung-von-bebauungsplaenen-stehen-an_a293341 (Erwähnung)
 #: osm_watch: way id="59573616" version="1"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
-#: last_checked: 2021-02-24 (mapillary)
+#: last_checked: 2021-04-19 (mapillary)
 #: check_frequency: 180d
 (Rhönstr. - Harzburger Str.)	NN 13598,21360 13709,21334
 Eifelstr.	N 13580,21286 13351,21239 13280,21225
