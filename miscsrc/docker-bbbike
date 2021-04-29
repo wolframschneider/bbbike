@@ -305,6 +305,8 @@ sub ci {
     my($doit, %opt) = @_;
     lock_keys %opt;
 
+    my $t0 = Time::HiRes::time();
+
     my %default_env =
 	(
 	 # build config
@@ -497,7 +499,8 @@ EOF
 	my $scope_cleanups = Doit::ScopeCleanups->new;
 	my $tag = 'bbbike-travis-ci-' . $opt{dist} . '-' . $opt{distver};
 
-	eval { $doit->system(qw(docker rmi), $tag) };
+	eval { $doit->system(qw(docker rmi), "$tag-old") };
+	eval { $doit->system(qw(docker tag), $tag, "$tag-old") };
 	_docker_build_with_retry($doit, "$opt{dist}:$opt{distver}", ['--tag', $tag, ($opt{'no-cache'} ? '--no-cache' : ()), '.']);
 
 	eval { $doit->system(qw(docker rm), $tag) };
@@ -531,6 +534,11 @@ EOF
 	    if ($@) {
 		push @errors, "code test errored: $@";
 	    }
+	}
+
+	if (!$doit->is_dry_run) {
+	    my $t1 = Time::HiRes::time();
+	    info sprintf "Run time: %.1fs", $t1-$t0;
 	}
 
 	{

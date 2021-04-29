@@ -744,8 +744,8 @@ Bauerwitzer Weg	1 22917,12239 23000,12160
 Melanchthonstr.	1 6788,3181 6926,3337
 Pößnecker Str.	1 5934,1310 5863,1453
 Aarberger Str.: Poller	3 * 3581,2105 *
-Rochowstr. - Stralauer Allee	3 14170,10675 14103,10489 14222,10430
-Stralauer Allee - Bossestr.	3 14103,10489 14222,10430 14270,10584
+Rochowstr. - Stralauer Allee	3 14170,10675 14103,10489 14218,10430
+Stralauer Allee - Bossestr.	3 14103,10489 14218,10430 14265,10579
 Adlergestell: Mittelstreifen	3nocross 20565,2754 20451,2869 20339,2983 20289,3033 20207,3115 20064,3278
 Zossener Str.: Straßenbahntrasse	3nocross 22698,15788 22811,15753 22883,15740
 Stendaler Str.: Straßenbahntrasse	3nocross 23933,15209 23952,15086 23960,15021
@@ -1040,7 +1040,6 @@ Hermann-Hesse-Str. -> Schützenstr.	3 9214,18666 8891,18545 8839,18504
 Friedrichstr. -> Am Weidendamm	3 9279,12953 9286,12886 9323,12895
 Murtzaner Ring	1 19593,14452 19593,14472
 Invalidenstr. - Hessische Str.	3 8841,13800 8685,13728 8775,13606
-Waldeyerstr.	1 15058,12329 15003,12241
 Prenzlauer Allee -> Saarbrücker Str.	3 11160,13492 11251,13667 11134,13820
 Stolzenfelsstr.	1 19447,8175 19400,8147 19333,8165 19171,8280 18949,8437 18787,8540
 Treskowallee - Dönhoffstr.	3 18731,8577 18733,8633 18609,8717
@@ -1409,4 +1408,25 @@ Treskowallee: Straßenbahntrasse	3nocross 18406,7760 18577,8033 18633,8126
 Schierker Str. - Karl-Marx-Str.	3 13003,7316 13034,7319 13030,7346
 # 
 Haßlingerweg	1 7644,17054 7894,17073 7926,17050
+# 
+#: by: mapillary
+Wateweg	1 21122,8370 21121,8424 21127,8532 21115,8618 21123,8678 21131,8739
+# 
+#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/bezirksamt-will-bergmannkiez-entmotorisieren_a287422
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9824 (Einwohnerfrage)
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9894 (Einwohnerfrage; vollständiger Umbau ab 2022)
+#: by: https://www.berliner-woche.de/friedrichshain/c-bauen/laut-studie-fehlen-hundert-hektar_a307737 (noch 2021)
+#: osm_watch: way id="4616246" version="23"
+#: last_checked: 2021-04-25
+Krautstr.: für Autos gesperrt, Radfahrer frei	2 12002,12008 12021,12066
+# 
+#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/bezirksamt-will-bergmannkiez-entmotorisieren_a287422
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/artikel.1001430.php ("Umgang mit dem Radverkehr ist noch zu klären")
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1058243.php (Online-Beteiligung bis zum 11. April 2021)
+#: by: https://www.berliner-woche.de/friedrichshain/c-bauen/ideen-fuer-waldeyerstrasse_a302355
+#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/anwohner-koennen-sich-an-der-gestaltung-beteiligen_a303648
+#: osm_watch: way id="4685729" version="17"
+#: last_checked: 2021-04-26
+# früherer Eintrag: Waldeyerstr.	1 15058,12329 15003,12241
+Waldeyerstr.: für Autos gesperrt, Radfahrer frei	2 15058,12329 15003,12241
 # 

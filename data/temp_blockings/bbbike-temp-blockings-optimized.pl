@@ -2219,7 +2219,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2021-04-13
+#: last_checked: 2021-04-27
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2324,7 +2324,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-04-14 (mapillary)
+#: last_checked: 2021-04-22
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2020-12-05
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2388,9 +2388,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1552239604,
          'id' => 3077,
-         'text' => 'Mönchmühler Str.: teilweise Sperrung der Fahrbahn, voraussichtlich bis Ende April 2021',
+         'text' => 'Mönchmühler Str.: teilweise Sperrung der Fahrbahn, voraussichtlich bis Ende Juni 2021',
          'type' => 'handicap',
-         'until' => 1619798400
+         'until' => 1625068800
        },
        undef,
        undef,
@@ -2468,7 +2468,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: also_indoor: traffic (H)
 #: last_checked: 2021-04-11
 #: check_frequency: 60d
-#: next_check: 2021-04-30
+#: next_check: 2021-06-30
 	q3::inwork  8986,16092 9178,16317
 # REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
 ',
@@ -2606,7 +2606,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
 #: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2021-03-20
+#: last_checked: 2021-04-25
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2020-03-31
 	2::inwork 5886,12467 5944,12548
@@ -2690,7 +2690,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-04-09
+#: last_checked: 2021-04-26
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2717,7 +2717,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: VIRCHOW-2020
 #: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-01-22 vvv
+#: last_checked: 2021-04-25 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -2746,7 +2746,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-04-20
+#: last_checked: 2021-04-28
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2868,7 +2868,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: add_fragezeichen: Wann ist die Fahrbahn wieder offen?
 #: also_indoor: traffic
-#: last_checked: 2020-10-12
+#: last_checked: 2021-04-26 (mapillary)
 	q4::inwork -3252,12580 -3444,12580
 ',
          'from' => undef,
@@ -3027,7 +3027,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: 2147346816 (bis 31.03.2025) (früher nur bis 2022)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G)
-#: last_checked: 2021-03-30
+#: last_checked: 2021-04-22
 #: check_frequency: 90d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -3052,28 +3052,18 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: osm_watch: way id="877995097" version="2"
 #: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2021-02-24
+#: last_checked: 2021-04-24
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 ',
          'from' => undef,
          'id' => 3307,
-         'text' => 'B96a: Radweg noch nicht offiziell eröffnet',
+         'text' => 'B96a: Radweg fertig, aber noch nicht offiziell eröffnet',
          'type' => 'gesperrt',
          'until' => undef
        },
        undef,
        undef,
-       {
-         'data' => '#: last_checked: 2021-02-20
-#: next_check: 2021-04-23
-	q3::inwork 8858,4579 8561,4535
-',
-         'from' => 1606936220,
-         'id' => 3310,
-         'text' => 'Reulestr.: Bauarbeiten, Abschnitt der Fahrbahn gesperrt, bis 23.04.2021',
-         'type' => 'handicap',
-         'until' => 1619193600
-       },
+       undef,
        {
          'data' => '#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
@@ -3158,7 +3148,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1610431200,
          'id' => 3322,
          'source_id' => '2147346788',
-         'text' => 'Rudower Str.: zwischen Köpenicker Str. und Lehmfeldsteig wegen Bauarbeiten gesperrt, vom 13.01.2021 07:00 Uhr bis 12.05.2021 17:00 Uhr ',
+         'text' => 'Rudower Str.: Fahrbahn zwischen Köpenicker Str. und Lehmfeldsteig wegen Bauarbeiten gesperrt, vom 13.01.2021 07:00 Uhr bis 12.05.2021 17:00 Uhr ',
          'type' => 'handicap',
          'until' => 1620831600
        },
@@ -3228,7 +3218,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-04-21
+#: last_checked: 2021-04-24
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -3321,7 +3311,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: XXX nach den Bauarbeiten werden die Parkstreifen gepflastert sein und auf der östlichen Seite breiter sein (für Querparken)
 #: also_indoor: traffic
-#: last_checked: 2021-04-18
+#: last_checked: 2021-04-25
 #: check_frequency: 14d
 	q4::inwork 13025,12523 13067,12583 13202,12790
 ',
@@ -3354,14 +3344,17 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        {
-         'data' => '	q4::inwork 17507,4216 17476,4337 17428,4503
+         'data' => '#: next_check_id: WINCKELMANN-2021
+#: XXX: laut rbb nur bis 17.5.2021
+#: next_check: 2021-05-17
+	q4::inwork 17507,4216 17476,4337 17428,4503
 ',
          'from' => 1616306400,
          'id' => 3351,
          'source_id' => '2147346994',
-         'text' => 'Winckelmannstr.: Gleisbauarbeiten zwischen Sterndamm und Köpenicker Str., Fahrbahn gesperrt, vom 22.03.2021 07:00 Uhr bis 26.04.2021 17:00 Uhr ',
+         'text' => 'Winckelmannstr.: Gleisbauarbeiten zwischen Sterndamm und Köpenicker Str., Fahrbahn gesperrt, vom 22.03.2021 07:00 Uhr bis 13.06.2021 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1619449200
+         'until' => 1623596400
        },
        {
          'data' => '	2::inwork 5787,4400 5738,4361 5541,4305
@@ -3471,6 +3464,42 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Ortsdurchfahrt Kerkow: Bauarbeiten und Ersatzneubau Brücke, möglicherweise auch für Radfahrer gesperrt, vom 19.04.2021 bis 01.09.2022',
          'type' => 'gesperrt',
          'until' => 1662069600
+       },
+       {
+         'data' => '	2::temp -1846,8129 -1787,7932 -1643,7828 -1328,7597
+',
+         'from' => undef,
+         'id' => 3362,
+         'permanent' => 1,
+         'text' => 'Dahlemer Feld: kann wegen Beweidung gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: add_fragezeichen: Wie lange gehen die Bauarbeiten?
+#: also_indoor: traffic
+#: priority: #A
+#: last_checked: 2021-04-28
+	q4::inwork 2523,5114 2746,5537
+',
+         'from' => undef,
+         'id' => 3363,
+         'text' => 'Brümmerstr.: zwischen Thielallee und Fabeckstr. Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: add_fragezeichen: Wie lange gehen die Bauarbeiten?
+#: also_indoor: traffic
+#: priority: #A
+#: last_checked: 2021-04-28
+	q4::inwork; 7771,9479 7829,9723
+',
+         'from' => undef,
+         'id' => 3364,
+         'text' => 'Kulmer Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );

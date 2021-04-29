@@ -136,17 +136,17 @@ Sauerbruchweg: Gelände der Charité	CS 8487,13351 8630,13172
 (Luisenstr. - Hufelandweg): Gelände der Charité	CS 8665,13353 8582,13355
 (Reichsstr. - Westendallee): Privatstraße	CS 269,12576 151,12541
 (Guerickestr. - Einsteinufer): Privatstraße	CS 4593,12322 4618,12340 4658,12450
-Stromstr: kann über schmale Furt (keine Anhänger!) gequert werden	CP 6190,12978 6164,12980 6129,12976 6106,12981
+Stromstr: kann über schmale Furt (keine Anhänger!) gequert werden	CP 6190,12978 6164,12980 6122,12971 6118,12980
 Bordstein	CP 12054,12903 11987,12946 11921,12990
 Bordstein	CP2; 12483,12682 12594,12866
 Wilhelmstr.: Fahrbahn vor der britischen Botschaft für Autos gesperrt, passierbar für Radfahrer	CS 8861,12125 8804,12280
 (Weg in Kolonie Bodenreform): entlang des Teltowkanals	CS 20939,2413 20904,2426 20810,2398
-(Weg in Kolonie Bodenreform): entlang des Teltowkanals	CS 20810,2398 20496,2321 20499,2285 20282,2259 20128,2271
+(Weg in Kolonie Bodenreform): entlang des Teltowkanals	CS 20810,2398 20496,2321 20499,2285 20303,2254 20282,2259 20148,2254 20128,2271
 (Alt-Lankwitz - Kamenzer Damm): Rampe für Radfahrer	CS 8026,3298 8036,3253
 als Puschkinallee 6c, 6d ausgeschildert	CP2; 13999,9842 14077,10016
 als Sackgasse ausgeschildert	CP2; 14671,10751 14562,10782
 Radfahren durch den Park erlaubt	CS 6534,1702 6673,1748 6844,1813
-Teltower Weg: nicht ausgeschildert	CP2; -107,5880 -174,5941
+Teltower Weg: nicht ausgeschildert	CP2; -119,5885 -182,5927
 Kreisverkehr	Roundabout 19907,12501
 Röntgentaler Weg: durch den Schloßpark	CS 16166,25767 16222,25829 16532,26174
 (Autobahnzubringer): Fahrbahn ist Kraftfahrzeugstraße	CS 18034,2526 18247,2490 18496,2471
@@ -666,6 +666,9 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 Hödurstr.: Privatstraße	CS 12647,18289 12751,18401
+Bundesratufer: nicht ausgeschildert, kurz vor der Brücke die Rampe benutzen	CP; 6183,13083 6164,12980 6122,12971
+Bochumer Platz: nicht ausgeschildert	CP2; 5938,12848 5914,12845
+Bochumer Platz: als Bundesratufer ausgeschildert	CP2; 5914,12845 5938,12848
 An der Dahme: nicht ausgeschildert	CS 22270,2549 22358,2460
 Relingstr: nicht ausgeschildert	CP2; 22358,2460 22287,2431
 Rheingoldstr.: durch den Rheinsteinpark	CS 19073,8828 19145,8659
@@ -756,3 +759,4 @@ Straße 89 (Niederschönhausen): nicht ausgeschildert	CS 8606,20063 8703,19917
 ausgeschildert "zur General-Woyna-Str."	CP2; 4340,18636 4332,18581
 Schillerhof: Hausdurchfahrt	CP2; 6928,17154 7069,17204
 Münsterberger Weg: nicht ausgeschildert	CS 24172,11320 24029,11363
+(Waltraudstr. - Clayallee): entlang des U-Bahneinschnitts	CS 919,4815 935,4814 1253,4788 1447,4757
