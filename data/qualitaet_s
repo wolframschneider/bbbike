@@ -729,7 +729,10 @@ Rigaer Str.: Asphalt	Q0 14266,12446 14133,12482 14091,12494
 Rigaer Str.: Asphalt mit einigen Aufpflasterungen	Q0 14266,12446 14451,12396 14538,12371 14748,12314 15003,12241 15104,12216
 Rigaer Str.: Asphalt	Q0 15104,12216 15175,12180
 Thaerstr.: Kopfsteinpflaster	Q2 13761,12690 13844,12900
-Diesterwegstr.: Kopfsteinpflaster	Q2 12061,15156 11964,14962 11864,14781
+Diesterwegstr.: Beton	Q0 11852,15281 11900,15238 12056,15159 12060,15141
+Diesterwegstr.: Kopfsteinpflaster	Q2 12060,15141 11995,15012
+Diesterwegstr.: Asphalt	Q0 11995,15012 11964,14962
+Diesterwegstr.: Kopfsteinpflaster	Q2 11964,14962 11864,14781
 Straßmannstr.: Kopfsteinpflaster	Q2 13530,13014 13747,13110 13835,13149
 Niederkirchnerstr.: Asphalt	Q0 8720,11226 9155,11283
 Johanniterstr.: Asphalt	Q0 9837,10117 10066,10071 10251,9979
@@ -10608,6 +10611,7 @@ Schillingstr.: Asphalt mit Querrissen	Q0 11635,12745 11596,12668 11562,12597 114
 Hegauer Weg, Rampe: unbefestigt	Q2 -35,2470 -22,2484
 Sophie-Charlotte-Str.: Kopfsteinpflaster	Q2 1246,4310 1297,4311
 (Waltraudstr. - Clayallee): Rindenmulch	Q3 919,4815 935,4814 1253,4788 1447,4757
+Oberhaardter Weg: Asphalt	Q0 911,8374 1023,8292 1056,8267
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -11690,7 +11694,7 @@ Bernadottestr.: Kopfsteinpflaster	Q2 3020,6450 2935,6448 2875,6485 2793,6593 271
 Bernadottestr.: Kleinsteinpflaster	Q1 1967,7561 1946,7580 1930,7594 1749,7800 1709,7848
 Heydenstr.: Asphalt	Q0 2565,7637 2553,7606
 Heydenstr.: unebenes Kleinsteinpflaster	Q2 2553,7606 2468,7529 2375,7440 2283,7354 2197,7279
-Sulzaer Str.: Asphalt	Q0 2460,7658 2499,7883 2517,7908
+Sulzaer Str.: Asphalt	Q0 2460,7658 2499,7883 2511,7915
 Schellendorffstr.: Kopfsteinpflaster	Q2 2346,7684 2468,7529 2637,7344 2731,7247
 Selchowstr. (Schmargendorf): Kopfsteinpflaster	Q2 2553,7606 2719,7415 2744,7397
 Luciusstr.: Kopfsteinpflaster	Q2 2038,7484 2121,7556 2213,7637
@@ -16271,7 +16275,7 @@ Am Vogelherd: Asphalt	Q1 981,9806 1093,9952 1212,10109
 Rottannenweg: Gehwegplatten	Q1 678,9558 612,9471
 Rottannenweg: Gehwegplatten	Q1 590,9456 560,9439 495,9409
 Gustav-Freytag-Str. (Grunewald): Verbundsteine	Q1 765,8481 831,8558
-Oberhaardter Weg: Kleinsteinpflaster	Q2 1023,8292 1111,8225
+Oberhaardter Weg: Kleinsteinpflaster	Q2 1056,8267 1111,8225
 Griegstr.: Kleinsteinpflaster	Q2 1111,8225 1113,8189 1277,8064 1348,8010 1363,7997 1664,7773
 Nikischstr.: Kleinsteinpflaster	Q2 1113,8189 1011,8060
 Regerstr.: Kopfsteinpflaster	Q2 937,8113 1011,8060 1092,8009 1176,8000 1277,8064
@@ -16310,7 +16314,7 @@ Lilli-Henoch-Str.: Beton	Q0 12584,14928 12477,14987 12393,15030 12357,15020 1231
 (Danziger Str. - Lilli-Henoch-Str.): Verbundsteine	Q1 12123,14643 12183,14757 12193,14775 12212,14781 12252,14860 12236,14870 12314,15008
 (Prenzlauer Allee - Lilli-Henoch-Str.): Verbundsteine	Q1 11877,15366 11937,15349 12003,15311 12103,15218 12208,15108 12284,15068 12314,15008
 (Prenzlauer Allee - Lilli-Henoch-Str.): Verbundsteine	Q1 11860,15309 11919,15314 11937,15349
-(Verlängerte Diesterwegstr.): Verbundsteine	Q0 12061,15156 12082,15206 12103,15218
+(Verlängerte Diesterwegstr.): Verbundsteine	Q0 12056,15159 12082,15206 12103,15218
 Olga-Benario-Prestes-Str.: Asphalt und einige Kopfsteinpflasterabschnitte	Q1 12628,14650 12473,14763
 Margarete-Walter-Str.: Asphalt mit Schäden	Q1 12789,14670 12745,14613 12814,14556
 (Anton-Saefkow-Str. - John-Schehr-Str.): Verbundsteine	Q1 13084,14472 13009,14371 12949,14292
@@ -16710,7 +16714,7 @@ Karlsbader Str.: Asphalt	Q0 2216,8079 2219,8263 2223,8500
 Plöner Str.: Asphalt	Q0 2308,8071 2310,8184 2315,8431
 Gneiststr. (Grunewald): Asphalt	Q0 1421,9173 1587,9320
 Niersteiner Str.: Asphalt	Q0 1677,9404 1562,9436
-Hasensprung (Grunewald): Kleinpflaster	Q1 1485,8845 1474,8859 1440,8903 1415,8937 1394,8965 1374,8992 1360,9012 1324,9057 1316,9067
+Hasensprung (Grunewald): Mosaikpflaster	Q1 1485,8845 1474,8859 1440,8903 1415,8937 1394,8965 1374,8992 1360,9012 1324,9057 1316,9067
 Herbertstr. (Grunewald): Asphalt	Q0 2132,9267 2056,9446
 Herbertstr. (Grunewald): Asphalt	Q0 2165,9155 2183,9101 2282,8869
 Schleinitzstr.: Asphalt	Q0 2183,9101 2059,8954

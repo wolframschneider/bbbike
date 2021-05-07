@@ -6267,13 +6267,12 @@ EOF
      { from  => $isodate2epoch->("2019-05-03 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-05-05 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 24, months => 4, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => -12, # wegen Corona
+       recurrences => [['yearly', days => 24, months => 4, start => "2021-10-25T00:00:00"]],
        text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (4.5.2019 und 5.5.2019)',
        type  => 'gesperrt',
        source_id => 'http://www.volksfeste-in-deutschland.de/primavera-fruehling-auf-der-akazienstrasse-in-berlin-schoeneberg.html',
        data  => <<EOF,
-#: by: https://www.berlin.de/events/4390033-2229501-primavera-fruehlingsfest.html (geplanter Termin: 08. bis 09. Mai 2021)
+#: by: https://www.berlin.de/events/4390033-2229501-primavera-fruehlingsfest.html (geplanter Termin: 08. bis 09. Mai 2021) (2021 abgesagt)
 	2::temp 7101,9027 7035,9161 7012,9222 7001,9291
 	2::temp 6945,9142 7035,9161
 EOF
@@ -21761,7 +21760,7 @@ EOF
        until => $isodate2epoch->("2019-06-16 02:00:00"), 
        text  => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 14.06.2019 und 15.06.2019',
        periodic => 1,
-       recurrences => [['yearly', days => 1, months => 6, start => "2020-10-25T00:00:00"]], # kann Anfang Juni oder Anfang Juli oder Ende August passieren
+       recurrences => [['yearly', days => 1, months => 6, start => "2021-10-01T00:00:00"]], # kann Anfang Juni oder Anfang Juli oder Ende August passieren
        type  => 'gesperrt',
        source_id => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
        data  => <<EOF,
@@ -30860,8 +30859,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
-#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021)
-#: last_checked: 2021-05-01
+#: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
+#: osm_watch: way id="934995899" version="1"
+#: osm_watch: way id="934995901" version="1"
+#: last_checked: 2021-05-06
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31133,16 +31134,15 @@ EOF
 EOF
      },
      { from  => 1589275980, # 2020-05-12 11:33
-       until => $isodate2epoch->("2021-05-03 17:00:00"), # 1599231600, # 2020-09-04 17:00
-       text  => 'Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Lipaer Str. wegen Bauarbeiten gesperrt, bis 03.05.2021',
+       until => $isodate2epoch->("2021-05-31 17:00:00"), # 1599231600, # 2020-09-04 17:00
+       text  => 'Gardeschützenweg: Richtung Drakestraße zwischen Hindenburgdamm und Lipaer Str. wegen Bauarbeiten gesperrt, bis 31.05.2021',
        type  => 'handicap',
        source_id => '2147345834', # (inaktiv)
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
-#: source_id: 2147346671 (bis 3.5.2021)
+#: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
 #: also_indoor: traffic (H,G) vvv
-#: note: laut rbb bis 2021-05-03 vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
 # REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv --- #: last_checked: 2020-12-27 (mapillary) vvv --- #: next_check: 2021-05-03 vvv
 	q4::inwork; 4515,4760 4214,4595
@@ -31150,7 +31150,6 @@ EOF
 	q2::inwork; 4214,4595 4039,4500
 # REMOVED (nicht mehr, laut rbb) ---	q4::inwork 4179,4662 4214,4595
 # REMOVED --- #: next_check ^^^ --- #: last_checked ^^^ --- #: add_fragezeichen ^^^
-#: note ^^^
 #: also_indoor ^^^
 EOF
      },
@@ -31644,7 +31643,7 @@ EOF
 #: source_id: 2147346816 (bis 31.03.2025) (früher nur bis 2022)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G)
-#: last_checked: 2021-05-01
+#: last_checked: 2021-05-06
 #: check_frequency: 90d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -32123,7 +32122,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-04-24
+#: last_checked: 2021-05-03
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -32259,7 +32258,7 @@ EOF
        data  => <<EOF,
 #: XXX nach den Bauarbeiten werden die Parkstreifen gepflastert sein und auf der östlichen Seite breiter sein (für Querparken)
 #: also_indoor: traffic
-#: last_checked: 2021-04-25
+#: last_checked: 2021-05-02
 #: check_frequency: 14d
 	q4::inwork 13025,12523 13067,12583 13202,12790
 EOF

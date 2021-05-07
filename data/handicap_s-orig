@@ -117,7 +117,7 @@
 ### Treptow ###
 # 
 #: XXX der Original-Eintrag muss nach Ablauf wieder aktiviert werden
-#: last_checked: 2021-03-11
+#: last_checked: 2021-05-03 (mapillary)
 #: check_frequency: 60d
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraﬂe, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
 # 
@@ -127,7 +127,7 @@
 #: osm_watch: way id="26285705" version="7"
 #: osm_watch: way id="69166216" version="7"
 #: source_id: 2147346409 (bis Ende 2021, Gesamtbaumaﬂnahme bis Ende 2023)
-#: last_checked: 2021-05-01 vvv
+#: last_checked: 2021-05-06 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2021-12-31 vvv
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q3::inwork; 14382,9299 14242,9448
@@ -170,6 +170,7 @@ Henriette-Lustig-Str.: nur der sehr enge Gehweg sowie 50m der Fahrbahn sind frei
 # 
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.641406.php
 #: by: https://abendblatt-berlin.de/2021/04/05/berlin-wedding-geisterhaus-an-der-burgsdorfstrasse-soll-abgerissen-werden/
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10655 (Abriss?)
 #: osm_watch: way id="549316654" version="8"
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,H)
@@ -255,7 +256,7 @@ Scharrenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 
 #: osm_watch: way id="268002748" version="10"
 #: XXX laut osm opening_date=2021
 #: also_indoor: traffic (G,ex-H)
-#: last_checked: 2021-04-20
+#: last_checked: 2021-05-05 (daf)
 #: check_frequency: 30d
 Hirtenstr.: Bauarbeiten, Einbahnstraﬂenregelung	q3::inwork; 11012,13278 10925,13322
 # 
@@ -698,9 +699,9 @@ Neckarstr.: Sperrung der Einm¸ndung an der Karl-Marx-Str.	q4::inwork 12509,8318 
 #: osm_watch: way id="585753318" version="8"
 #: osm_watch: way id="71392596" version="13"
 #: also_indoor: traffic
-#: last_checked: 2021-05-01 vvv
-#: check_frequency: 60d
-#: next_check: 2021-05-07
+#: last_checked: 2021-05-06 vvv
+#: check_frequency: 30d
+# REMOVED (kann nicht gehalten werden) --- #: next_check: 2021-05-07
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung S¸den auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249
 # REMOVED (hier mittlerweile weitgehend befahrbar) --- Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung S¸den auf engen Gehweg ausweichen	q4::inwork; 12714,8249 12753,8187
 # REMOVED (laut osm hier nicht mehr) --- #: check_frequency: 30d --- #: next_check: 2020-10-20 --- Karl-Marx-Str.: Bauarbeiten zwischen Werbellinstr. und Briesestr., Richtung S¸den auf engen Gehweg ausweichen	q4::inwork; 12753,8187 12794,8103
@@ -723,6 +724,14 @@ Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung S¸den a
 # REMOVED (fertig, noch immer KS) --- #: next_check_id: FRIEDEL-2014 --- #: XXX: eventuell wird mit den Bauarbeiten an den Wasserleitungen auch die Fahrbahn neu gemacht? --- #: last_checked: 2014-12-12 --- #: check_frequency: 60d --- Friedelstr.: Bauarbeiten, Einbahnstraﬂe Richtung S¸den	q3::inwork; 12066,9558 12074,9689 12088,9775
 # 
 ### Lichtenberg ###
+# 
+#: next_check_id: RHINSTRASSENBRUECKE-2018
+#: last_checked: 2021-05-03 vvv
+#: check_frequency: 30d vvv
+Rhinstr.: Zweirichtungsradweg auf engem B¸rgersteig	q2::inwork; 18225,12697 18220,12450 18216,12262 18216,12239 18215,12123
+Rhinstr.: Zweirichtungsradweg auf engem B¸rgersteig, langer Umweg an der Seddiner Str.	q3::inwork; 18215,12123 18216,12239 18216,12262 18220,12450 18225,12697
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: XXX laut rbb und Halteverbotsschildern bis 31.08.2021
 #: also_indoor: traffic (H)
@@ -946,16 +955,7 @@ Pestalozzistr.: Fuﬂg‰ngerzone	q3 3721,11230 3770,11231 3822,11231
 Dresdener Str. - NKZ: Bordsteine	q3 11344,10507 11334,10527
 Alexanderplatz: langsame Straﬂenbahnen, Fuﬂg‰ngerverkehr	q3 11139,13008 11064,12910 10970,12822 10923,12779
 Alexanderplatz [Richtung Alexa]: Fuﬂg‰ngerverkehr	q3 11134,12793 11064,12910
-#: XXX nach den Bauarbeiten den alten Eintrag wiederherstellen
-#: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.582161.php (Sperrung Kfz-Verkehr - kaum Auswirkungen f¸r Radfahrer) (in der Realit‰t aber schon, viele Fuﬂg‰nger laufen auf dem Radweg)
-#: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=637003&postcount=522 (Abbau des Zauns=?)
-#: by: https://camera.deckchair.com/park-inn-berlin-alexanderplatz (Webcam)
-#: by: https://www.deutsches-architekturforum.de/thread/2271-u-5/?postID=666937#post666937 (Pflasterungsarbeiten)
-# REMOVED (gelˆscht) --- #: osm_watch: relation id="8743849" version="2"
-#: last_checked: 2021-05-01 (webcam)
-#: check_frequency: 7d
-#Rathausstr.: Fuﬂg‰nger	q1- 10923,12779 10704,12595
-Rathausstr.: Fuﬂg‰nger, Bauarbeiten	q2 10923,12779 10704,12595
+# REMOVED (beide Eintr‰ge entfernt --- zurzeit wenig Fuﬂg‰ngerverkehr) --- #: XXX nach den Bauarbeiten den alten Eintrag wiederherstellen --- #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.582161.php (Sperrung Kfz-Verkehr - kaum Auswirkungen f¸r Radfahrer) (in der Realit‰t aber schon, viele Fuﬂg‰nger laufen auf dem Radweg) --- #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=637003&postcount=522 (Abbau des Zauns=?) --- #: by: https://camera.deckchair.com/park-inn-berlin-alexanderplatz (Webcam) --- #: by: https://www.deutsches-architekturforum.de/thread/2271-u-5/?postID=666937#post666937 (Pflasterungsarbeiten) --- #: (gelˆscht) osm_watch: relation id="8743849" version="2" --- #: last_checked: 2021-05-01 (webcam) --- #: check_frequency: 7d --- #Rathausstr.: Fuﬂg‰nger	q1- 10923,12779 10704,12595 --- Rathausstr.: Fuﬂg‰nger, Bauarbeiten	q2 10923,12779 10704,12595
 Dircksenstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10970,12822 10849,12944
 Dircksenstr.: Fuﬂg‰nger	q2 10970,12822 11007,12773 11030,12741 11087,12780 11105,12764
 Gontardstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10733,12967 10801,12901 10923,12779
@@ -3571,6 +3571,7 @@ Rudower Str.: drei Bodenschwellen, mit Normalrad gut umfahrbar	q0- 21329,4383 21
 Alemannenstr.: eng und kurvig	q1 20694,1175 20729,1239 20796,1289
 Windhuker Str.: einige Fuﬂg‰nger	q1 5426,16539 5712,16245 5748,16235
 (Waltraudstr. - Clayallee): 1,5m breit, einige Fuﬂg‰nger	q2 919,4815 935,4814 1253,4788 1447,4757
+(Stresemannstr. - Wilhelmstr.): einige Fuﬂg‰nger	q1 9215,10607 9368,10641
 # 
 ######################### User Contributions #################################
 # 
@@ -3946,7 +3947,7 @@ Bautzener Platz: Fufg‰nger, Bordsteine	q3 8102,9262 8183,9260
 (Danziger Str. - Lilli-Henoch-Str.): Fuﬂg‰nger	q2 12123,14643 12183,14757 12193,14775 12212,14781 12252,14860 12236,14870 12314,15008
 (Prenzlauer Allee - Lilli-Henoch-Str.): Fuﬂg‰nger	q2 11877,15366 11937,15349 12003,15311 12103,15218 12208,15108 12284,15068 12314,15008
 (Prenzlauer Allee - Lilly-Henoch-Str.): Fuﬂg‰nger	q2 11860,15309 11919,15314 11937,15349
-(Verl‰ngerte Diesterwegstr.): Fuﬂg‰nger	q2 12061,15156 12082,15206 12103,15218
+(Verl‰ngerte Diesterwegstr.): Fuﬂg‰nger	q2 12056,15159 12082,15206 12103,15218
 #: XXX_prog BS Bordstein an der Rudolf-Schwarz-Str., ansonsten q1
 (Anton-Saefkow-Str. - John-Schehr-Str.): Fuﬂg‰nger, Bordstein	q2 13084,14472 13009,14371
 #: XXX_prog BS Bordstein an der Rudolf-Schwarz-Str., ansonsten q1

@@ -107,7 +107,7 @@ Pannierstr.: Asphalt	Q0 12240,8964 12198,8887
 # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="65707583" version="13"
-#: last_checked: 2021-05-01
+#: last_checked: 2021-05-06
 #: check_frequency: 60d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -784,7 +784,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2021-05-01
+#: last_checked: 2021-05-06
 #: check_frequency: 90d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -964,7 +964,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9942 (Kopfsteinpflaster bleibt vorerst? außerdem: wird die Colbestr. zur Fahrradstraße?)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2021-05-01
+#: last_checked: 2021-05-06
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1018,7 +1018,10 @@ Rigaer Str.: Asphalt	Q0 14266,12446 14133,12482 14091,12494
 Rigaer Str.: Asphalt mit einigen Aufpflasterungen	Q0- 14266,12446 14451,12396 14538,12371 14748,12314 15003,12241 15104,12216
 Rigaer Str.: Asphalt	Q0 15104,12216 15175,12180
 Thaerstr.: Kopfsteinpflaster	Q2 13761,12690 13844,12900
-Diesterwegstr.: Kopfsteinpflaster	Q2 12061,15156 11964,14962 11864,14781
+Diesterwegstr.: Beton	Q0- 11852,15281 11900,15238 12056,15159 12060,15141
+Diesterwegstr.: Kopfsteinpflaster	Q2 12060,15141 11995,15012
+Diesterwegstr.: Asphalt	Q0 11995,15012 11964,14962
+Diesterwegstr.: Kopfsteinpflaster	Q2 11964,14962 11864,14781
 Straßmannstr.: Kopfsteinpflaster	Q2 13530,13014 13747,13110 13835,13149
 Niederkirchnerstr.: Asphalt	Q0 8720,11226 9155,11283
 Johanniterstr.: Asphalt	Q0 9837,10117 10066,10071 10251,9979
@@ -1488,7 +1491,7 @@ Marienburger Str.: Kopfsteinpflaster	Q2 11572,14452 11821,14317 12077,14186
 #: XXX evtl. wird hier asphaltiert und eine Fahrradstraße ausgewiesen
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4680 (Planung ab 2021)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5720 (Prüfung einer Glättung des Kopfsteinpflasters)
-#: by: http://www.infravelo.de/projekt/hufelandstrasse-2/ ("erschütterungsarmer Belag", Bauzeitraum 1. Quartal 2022 - 1. Quartal 2023)
+#: by: http://www.infravelo.de/projekt/hufelandstrasse-2/ ("erschütterungsarmer Belag", Bauzeitraum 1. Quartal 2022 - 1. Quartal 2023) (mittlerweile gelöscht)
 #: last_checked: 2020-12-18
 #: check_frequency: 180d
 #: next_check: 2023-03-31
@@ -6848,11 +6851,11 @@ Veitstr.: Asphalt	Q0 2268,19919 2064,19874 1886,19835
 #: note: während den Bauarbeiten ist der Radverkehr laut viz nicht betroffen
 #: XXX Beton wird durch Asphalt ersetzt, in zwei Bauabschnitten: zunächst der östliche Teil bis Medebacher Weg (2019), dann der westliche Teil (2020)
 #: priority: #C
-#: source_id: 2147344935
-#: source_id: 2147347061 (Leitungsbau, bis 3.5.2021)
+#: source_id: 2147344935 (inaktiv)
+#: source_id: 2147347061 (Leitungsbau, bis 7.5.2021)
 #: last_checked: 2020-11-07
 # REMOVED --- #: check_frequency: 90d
-#: next_check: 2021-05-03
+#: next_check: 2021-05-07
 Veitstr.: Fahrbahn Beton	Q0 1886,19835 1606,19775 1557,19765
 Borsigdamm: Fahrbahn Beton, Radweg asphaltiert	Q0 1557,19765 1509,19693 1463,19417
 Borsigdamm: Asphalt	Q0 1463,19417 1450,19336 1472,19165 1528,18971
@@ -12087,6 +12090,7 @@ Hegauer Weg, Rampe: unbefestigt	Q2 -35,2470 -22,2484
 Sophie-Charlotte-Str.: Kopfsteinpflaster	Q2 1246,4310 1297,4311
 #: note: hoher Rollwiderstand
 (Waltraudstr. - Clayallee): Rindenmulch	Q3+ 919,4815 935,4814 1253,4788 1447,4757
+Oberhaardter Weg: Asphalt	Q0 911,8374 1023,8292 1056,8267
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -14553,7 +14557,7 @@ Heydenstr.: Asphalt	Q0 2565,7637 2553,7606
 #: corrected_by: srt (Kopfsteinpflaster -> ...)
 Heydenstr.: unebenes Kleinsteinpflaster	Q2 2553,7606 2468,7529 2375,7440 2283,7354 2197,7279
 #: corrected_by: srt (Kopfsteinpflaster -> Asphalt)
-Sulzaer Str.: Asphalt	Q0 2460,7658 2499,7883 2517,7908
+Sulzaer Str.: Asphalt	Q0 2460,7658 2499,7883 2511,7915
 Schellendorffstr.: Kopfsteinpflaster	Q2 2346,7684 2468,7529 2637,7344 2731,7247
 Selchowstr. (Schmargendorf): Kopfsteinpflaster	Q2 2553,7606 2719,7415 2744,7397
 Luciusstr.: Kopfsteinpflaster	Q2 2038,7484 2121,7556 2213,7637
@@ -16992,7 +16996,7 @@ Raabestr.: schlechtes Kopfsteinpflaster, enge Asphaltrandstreifen teilweise zuge
 # 
 #: by: Ingrid Beese:
 #: corrected_by: Georg R.-H. (Waldweg -> "Tiefsandwüste")
-Teltower Weg: sandiger Waldweg	Q3 -739,6838 -813,6755 -439,6255 -359,6181 -288,6101 -182,5927 -119,5885
+Teltower Weg: sandiger Waldweg	Q3- -739,6838 -813,6755 -439,6255 -359,6181 -288,6101 -182,5927 -119,5885
 # 
 #: by: Helm Dirk: vvv
 #: confirmed_by: srt
@@ -20476,13 +20480,13 @@ Stolzingstr.: Asphalt	Q0 1338,25262 1360,25269 1429,25335 1468,25384
 #: confirmed_by: srt (konkretisiert: Kleinpflastersteine -> Mosaikpflaster)
 #: XXX möglicherweise wird hier auch asphaltiert
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1051692.php (Erwähnung einer zukünftigen Fahrbahninstandsetzung 2021)
-#: last_checked: 2021-04-28 (mapillary)
+#: last_checked: 2021-05-01 (mapillary)
 #: check_frequency: 120d
 Stolzingstr.: Mosaikpflaster, uneben	Q2 1468,25384 1542,25483
 #: corrected_by: srt (Kleinpflastersteine, Q2 -> ...)
 Stolzingstr.: Asphalt	Q0 1542,25483 1558,25505
 #: XXX Wird der Abschnitt zwischen Alemannenstr. und Nibelungenstr. auch asphaltiert?
-#: last_checked: 2021-04-28 (mapillary)
+#: last_checked: 2021-05-01 (mapillary)
 #: check_frequency: 180d
 #: osm_watch: way id="846771701" version="2"
 Stolzingstr.: Mosaikpflaster, uneben	Q2 1558,25505 1644,25620
@@ -27457,7 +27461,7 @@ Rottannenweg: Gehwegplatten	Q1- 590,9456 560,9439 495,9409
 #: corrected_by ^^^
 Gustav-Freytag-Str. (Grunewald): Verbundsteine	Q1 765,8481 831,8558
 #: corrected_by: srt (Kopfsteinpflaster -> ...)
-Oberhaardter Weg: Kleinsteinpflaster	Q2 1023,8292 1111,8225
+Oberhaardter Weg: Kleinsteinpflaster	Q2 1056,8267 1111,8225
 #: corrected_by: srt (Kopfsteinpflaster -> ...)
 Griegstr.: Kleinsteinpflaster	Q2 1111,8225 1113,8189 1277,8064 1348,8010 1363,7997 1664,7773
 #: corrected_by: srt (Kopfsteinpflaster -> ...)
@@ -27507,7 +27511,7 @@ Lilli-Henoch-Str.: Beton	Q0 12584,14928 12477,14987 12393,15030 12357,15020 1231
 #: confirmed_by: srt
 (Prenzlauer Allee - Lilli-Henoch-Str.): Verbundsteine	Q1+ 11877,15366 11937,15349 12003,15311 12103,15218 12208,15108 12284,15068 12314,15008
 (Prenzlauer Allee - Lilli-Henoch-Str.): Verbundsteine	Q1+ 11860,15309 11919,15314 11937,15349
-(Verlängerte Diesterwegstr.): Verbundsteine	Q0- 12061,15156 12082,15206 12103,15218
+(Verlängerte Diesterwegstr.): Verbundsteine	Q0- 12056,15159 12082,15206 12103,15218
 #: corrected_by: srt (Asphalt -> ...)
 Olga-Benario-Prestes-Str.: Asphalt und einige Kopfsteinpflasterabschnitte	Q1- 12628,14650 12473,14763
 #: corrected_by: srt (Asphalt -> Asphalt mit Schäden)
@@ -28078,8 +28082,8 @@ Karlsbader Str.: Asphalt	Q0 2216,8079 2219,8263 2223,8500
 Plöner Str.: Asphalt	Q0 2308,8071 2310,8184 2315,8431
 Gneiststr. (Grunewald): Asphalt	Q0 1421,9173 1587,9320
 Niersteiner Str.: Asphalt	Q0 1677,9404 1562,9436
-#: confirmed_by: srt
-Hasensprung (Grunewald): Kleinpflaster	Q1 1485,8845 1474,8859 1440,8903 1415,8937 1394,8965 1374,8992 1360,9012 1324,9057 1316,9067
+#: corrected_by: srt (Kleinpflaster -> ...)
+Hasensprung (Grunewald): Mosaikpflaster	Q1 1485,8845 1474,8859 1440,8903 1415,8937 1394,8965 1374,8992 1360,9012 1324,9057 1316,9067
 Herbertstr. (Grunewald): Asphalt	Q0 2132,9267 2056,9446
 #: confirmed_by: srt
 Herbertstr. (Grunewald): Asphalt	Q0 2165,9155 2183,9101 2282,8869
@@ -28495,6 +28499,7 @@ Gehrenseestr.: guter Asphalt	Q0 18494,16750 18324,16625
 #: by: https://www.berlin.de/bebauungsplan-lichtenberg/beteiligung/bebauungsplaene/planzeichnung-11-157.pdf
 #: by: https://www.berliner-woche.de/alt-hohenschoenhausen/c-bauen/anwohner-sehen-noch-einige-ungeklaerte-probleme_a290515
 #: by: https://www.berliner-woche.de/alt-hohenschoenhausen/c-verkehr/die-erschliessung-sicherstellen_a297347
+#: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8743 (Erschließung über die Marzahner Str.?)
 #: last_checked: 2020-08-27 (mapillary)
 #: check_frequency: 360d
 Detlevstr.: teilweise holpriger Asphalt	Q2 18482,16774 18494,16750 18439,16483 18412,16334 18406,16295
@@ -29876,4 +29881,6 @@ Kreuzungsbereich asphaltiert	Q0 18072,8470
 Kreuzungsbereich asphaltiert	Q0 7771,9479
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 7770,9395
 Einmündungsbereich mit Kopfsteinpflaster	Q2 1246,4310
+Kreuzungsbereich asphaltiert	Q0 11964,14962
+Einmündungsbereich asphaltiert	Q0 10793,16636
 #: ignore ^^^
