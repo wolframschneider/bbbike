@@ -898,7 +898,7 @@ Zeesen	OS 26735,-15663
 Zeesen	OS 26460,-13096
 # 
 Körbiskrug	OS 28036,-16508
-Körbiskrug	OS 26863,-16171
+Körbiskrug	OS 26832,-16036
 Körbiskrug	OS 28183,-15331
 # 
 Senzig	OS 28169,-14415
@@ -1314,11 +1314,17 @@ Danewitz	OS 27232,37078
 Woltersdorf	OS 32111,6229
 Woltersdorf	OS 34515,4401
 Woltersdorf	OS 35479,7051
+#: by: mapillary
+Woltersdorf	OS 32671,6592
 # 
 Schönwalde	OS 32111,6229
 # 
 Schöneiche	OS 29168,7350
 Schöneiche	OS 30309,6841
+#: linked: Schöneiche
+Schöneiche bei Berlin	OS 30760,5824
+#: by: mapillary
+Schöneiche	OS 32671,6592
 # 
 Groß Glienicke	OS -9316,7393
 #: note: weißes Schild
@@ -1579,8 +1585,7 @@ Berlin	OS -1982,24514
 Berlin	OS 17328,26912
 #: by: mapillary
 Berlin	OS 5432,-129
-#: by: mapillary
-Berlin	OS 30738,5801
+Berlin	OS 30737,5800
 #: by: mapillary
 Berlin	OS 19579,20554
 #: by: mapillary
@@ -1604,13 +1609,14 @@ Mehrow	OS 25861,19127
 Mehrow	OS 25253,18365
 Mehrow	OS 25327,19421
 Mehrow	OS 24484,18569
+#: note: Schild fehlt mittlerweile, Rahmen steht noch (gesehen 2021-05-08)
 Mehrow	OS 28471,19469
 #: note: hier außerdem ein weißes Schild "Trappenfelde"
 Mehrow	OS 26501,19266
 Mehrow	OS 27278,19874
 # 
 Krummensee	OS 29275,21185
-Krummensee	OS 29536,21843
+Krummensee	OS 29530,21841
 # 
 Eiche	OS 22809,16240
 Eiche	OS 23175,16119

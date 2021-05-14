@@ -593,11 +593,13 @@ EOF
        until => $isodate2epoch->("2019-07-21 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6, start => "2020-10-25T00:00:00"]],
+       recurrence_prewarn_days => -60,
        text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (20.7.2019 bis 21.7.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.stadtfest.berlin/de/index.html
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/strassen-wegen-fest-gesperrt_a170723
+#: by: https://www.stadtfest.berlin/de/index.html (2.+3. Oktober 2021)
 	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
 	2::temp 6729,10212 6971,10346
 	2::temp 6628,10318 6626,10155
@@ -1553,7 +1555,7 @@ EOF
        text  => 'K 6161; (Ernst-Thälmann-Str.); OD Schulzendorf, Kanal- und Straßenbau Vollsperrung 30.06.2005-30.11.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 25173,-3957 25150,-3949 25052,-3980 24933,-4017 24809,-4058 24798,-4061 24758,-4072 24714,-4087 24613,-4121 24295,-4221 24200,-4252 23860,-4362 23658,-4428 23556,-4460 23402,-4512 23387,-4518
+	q4 25173,-3957 25150,-3949 25052,-3980 24933,-4017 24809,-4058 24798,-4061 24758,-4072 24714,-4087 24613,-4121 24501,-4155 24390,-4190 24295,-4221 24200,-4252 23860,-4362 23658,-4428 23556,-4460 23402,-4512 23387,-4518
 EOF
      },
      { from  => 1107475200, # 2005-02-04 01:00
@@ -2848,7 +2850,7 @@ EOF
        text  => 'B 179; (Karl-Liebknecht-Str.); OD Zeesen, zw. Spreewaldstr. u. Weidendamm Straßenausbau Vollsperrung 19.09.2005-24.10.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26471,-14570 26552,-14903 26608,-15124
+	2 26471,-14570 26473,-14578 26552,-14903 26608,-15124
 EOF
      },
      { from  => 1126994400, # 2005-09-18 00:00
@@ -3274,7 +3276,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2 26623,-17859 26703,-17858
-	2 27304,-17961 26989,-17904 26716,-17857 26703,-17858
+	2 27304,-17961 26999,-17905 26989,-17904 26716,-17857 26703,-17858
 EOF
      },
      { from  => 1130277600, # 2005-10-26 00:00
@@ -4882,7 +4884,7 @@ EOF
        text  => 'B 246 OL Bestensee, Hauptstraße OL Bestensee, Hauptstraße, Bahnübergang Bauarbeiten am Gleiskörper Vollsperrung 30.06.2006-04.07.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 26623,-17859 26703,-17858 26716,-17857 26989,-17904 27304,-17961
+	2::inwork 26623,-17859 26703,-17858 26716,-17857 26989,-17904 26999,-17905 27304,-17961
 EOF
      },
      { from  => 1150840800, # 2006-06-21 00:00
@@ -6596,7 +6598,7 @@ EOF
        text  => 'B 246 Bahnübergang in der OD Bestensee Umbauarbeiten Vollsperrung 06.11.2006-17.11.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 26623,-17859 26703,-17858 26716,-17857 26989,-17904 27304,-17961
+	2::inwork 26623,-17859 26703,-17858 26716,-17857 26989,-17904 26999,-17905 27304,-17961
 EOF
      },
      { from  => 1160604000, # 2006-10-12 00:00
@@ -7707,7 +7709,7 @@ EOF
        text  => 'L 030 Ethel-und-Julius-Rosenberg-Str. OD Woltersdorf Straßenbau, Entwässerung Vollsperrung 10.04.2007-29.06.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34521,5351 34532,5208 34510,4849 34545,4585 34549,4551
+	q4::inwork 34521,5351 34532,5208 34524,5091 34531,4965 34517,4929 34506,4884 34545,4585 34549,4551
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -8157,8 +8159,7 @@ EOF
      { from  => $isodate2epoch->("2019-05-10 00:00:00"), # ein Tag Vorlauf
        until => $isodate2epoch->("2019-05-12 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 10, months => 5, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 2, # wegen Corona
+       recurrences => [['yearly', days => 10, months => 5, start => "2021-10-25T00:00:00"]], # note: findet 2021 vermutlich nicht statt
        source_id => 'https://www.berlin.de/events/4829161-2229501-rudower-fruehlingsmeile.html',
        text  => 'Alt-Rudow: Rudower Frühlingsmeile, Straße zwischen Köpenicker Str. und Bildhauerweg, sowie Krokusstr. bis Prieroser Str. gesperrt (11. und 12. Mai 2019)',
        type  => 'gesperrt',
@@ -9771,7 +9772,7 @@ EOF
        text  => 'L 030 Ethel-und-Julius-Rosenberg-Str. OD Woltersdorf, Kno. A.-Bebel-Str. Straßenbau, Entwässerung Vollsperrung 15.08.2007-24.08.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34510,4849 34532,5208 34521,5351
+	q4::inwork 34506,4884 34517,4929 34531,4965 34524,5091 34532,5208 34521,5351
 EOF
      },
      { from  => 1187647200, # 2007-08-21 00:00
@@ -10231,7 +10232,7 @@ EOF
        text  => 'L 030 Altlandsberg-B158 Seefeld zw. Krummensee und Seefeld Neubau Radweg Vollsperrung 08.10.2007-02.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 29826,21526 29573,21750 29536,21843 28936,23307 28921,23343 28886,23429 28777,23697 28753,23756 28581,24020
+	2::inwork 29826,21526 29562,21771 29530,21841 29522,21866 28936,23307 28921,23343 28886,23429 28777,23697 28753,23756 28581,24020
 EOF
      },
      { from  => 1191880800, # 2007-10-09 00:00
@@ -10905,7 +10906,7 @@ EOF
        text  => 'L 030 Ethel-und-Julius-Rosenberg-Str. OD Woltersdorf, zw. A.-Bebel-Str. und R.-Breitscheid Straßenbau, Entwässerung Vollsperrung 21.05.2008-30.06.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34510,4849 34532,5208 34521,5351
+	q4::inwork 34506,4884 34517,4929 34531,4965 34524,5091 34532,5208 34521,5351
 EOF
      },
      { from  => 1197932400, # 2007-12-18 00:00
@@ -11711,7 +11712,7 @@ EOF
        text  => 'L 030 Ethel-und-Julius-Rosenberg-Str. OD Woltersdorf, ab A.-Bebel-Str. in Ri. Erkner Straßenbau, Entwässerung Vollsperrung 21.05.2008-30.06.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 34510,4849 34545,4585 34549,4551
+	q4::inwork 34506,4884 34545,4585 34549,4551
 EOF
      },
      { from  => 1213736980, # 2008-06-17 23:09
@@ -14606,11 +14607,13 @@ EOF
        until => $isodate2epoch->("2019-06-16 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6, start => "2020-10-25T00:00:00"]],
+       recurrence_prewarn_days => 7,
        text  => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt sind gesperrt (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Lindenstr. (14.06.2019 - 16.06.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.volksfeste-in-deutschland.de/koepenicker-sommer-in-berlin-koepenick.html
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.819220.php
+#: by: https://www.berlin.de/events/3415964-2229501-koepenicker-sommer.html (2021: Termin noch nicht bekannt)
 	2::temp 22111,4562 22093,4499 22076,4422
 	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562
 	2::temp 22138,4642 22074,4664
@@ -16283,7 +16286,7 @@ EOF
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-04-20
+#: last_checked: 2021-05-13
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -18294,11 +18297,13 @@ EOF
        until => $isodate2epoch->("2019-06-30 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 6, start => "2020-10-25T00:00:00"]],
+       recurrence_prewarn_days => -60,
        # früher Bergmannstraßenfest
        text  => 'Kreuzbergstr.: Veranstaltung (Kreuzbergstraßenfest), Straße vollständig zwischen Methfesselstr. und Katzbachstr. gesperrt (28. Juni 2019 bis 30. Juni 2019)',
        type  => 'gesperrt',
        source_id => 'https://www.gratis-in-berlin.de/festivals/item/2037452-bergmannstrassenfest-2019-jetzt-kreuzbergstrassenfest-kreuzberg-jazzt-kreuzberg-kocht-und-macht-theater-kreuzbergstrassenfest',
        data  => <<EOF,
+#: by: https://www.berlin.de/events/1934675-2229501-bergmannstrassenfest.html (8.-10.10.2021, als "Kreuzberg-Festival", vermutlich auf Kreuzbergstraße)
 	2::temp 8598,9269 8769,9295 8970,9323 9154,9347 9211,9354
 	3 9000,9509 8970,9323 9007,9264
 	3 9007,9264 8970,9323 9000,9509
@@ -20607,7 +20612,7 @@ EOF
        text  => 'Vollsperrung der Bahnbrücke Karlshorst: 10. bis 15. Mai 2012 (Sperrung der Fahrbahn)',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 18731,8577 18704,8427
+	q4::inwork 18718,8583 18704,8427
 EOF
      },
      { from  => 1381096800, # 2013-10-07 00:00
@@ -20616,7 +20621,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.karlshorst-buergerverein.de/index.php?option=com_content&task=view&id=516
-	2::inwork 18731,8577 18704,8427
+	2::inwork 18718,8583 18704,8427
 EOF
      },
      { from  => undef, # 
@@ -27959,8 +27964,8 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
-#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2021-04-27
+#: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
+#: last_checked: 2021-05-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28039,7 +28044,7 @@ EOF
 # REMOVED --- #: by: https://viz.berlin.de/2020/12/vorschau-14122020/ (Restarbeiten) --- #: XXX bis wann gilt das Verbot? --- #: last_checked: 2020-12-18 (Schild existiert noch an der Marksburgstr., aber eigentlich nicht mehr an der Dorotheastr.)
 # REMOVED (bis Dorotheastr. frei) ---	q4::inwork; 18809,9133 18790,9018 18770,8898
 	q4::inwork; 18770,8898 18737,8686
-# REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18733,8650 18733,8633
+# REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18727,8634
 EOF
      },
      { from  => 1537740000, # 2018-09-24 00:00
@@ -28589,10 +28594,11 @@ EOF
      },
      { from  => $isodate2epoch->("2021-01-19 07:00:00"), # $isodate2epoch->("2020-07-12 07:00:00"), # 1542150096, # 2018-11-14 00:01
        until => $isodate2epoch->("2021-07-01 17:00:00"), # $isodate2epoch->("2020-12-05 17:00:00"), # 1542826837, # -> handicap_s-orig, 1554073200, # 2019-04-01 01:00
-       text  => 'Kynaststr.: Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden nur für Fußgänger, offiziell sollen Radfahrer absteigen und schieben, bis 1.7.2021',
+       text  => 'Kynaststr.: Bauarbeiten an der Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden, mögliche Engstelle, bis 1.7.2021',
        type  => 'handicap',
        source_id => '2147343461', # inaktiv
        data  => <<EOF,
+#: next_check_id: KYNAST-2021
 # REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
 # REMOVED --- #: XXX regelmäßig prüfen --- #: priority: #A --- #: last_checked: 2018-11-16
 #: by: https://viz.berlin.de/2020/07/schau-11_12-07_2020/ ("für den Kraftfahrzeugverkehr gesperrt")
@@ -28603,7 +28609,7 @@ EOF
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-04-29
+#: last_checked: 2021-05-12
 #: check_frequency: 14d
 #: next_check: 2021-07-01
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -29644,8 +29650,8 @@ EOF
 #: source_id: 2147346734 (bis 18.12.2020)
 #: last_checked: 2020-12-12
 #: next_check: 2020-12-18
-# REMOVED (hier normaler Radweg) --- q3::inwork; 18704,8427 18731,8577
-# REMOVED (hier keine Radwegschilder mehr) --- #: note: hier eng und viel Fußgängerverkehr ---	q3::inwork; 18731,8577 18733,8633 18733,8650 18737,8686
+# REMOVED (hier normaler Radweg) --- q3::inwork; 18704,8427 18718,8583
+# REMOVED (hier keine Radwegschilder mehr) --- #: note: hier eng und viel Fußgängerverkehr ---	q3::inwork; 18718,8583 18727,8634 18737,8686
 #: note: hier etwas weniger Fußgängerverkehr
 # REMOVED (hier keine Benutzungspflicht mehr) ---	q2::inwork; 18737,8686 18770,8898
 	q2::inwork; 18770,8898 18790,9018
@@ -30862,7 +30868,7 @@ EOF
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="1"
 #: osm_watch: way id="934995901" version="1"
-#: last_checked: 2021-05-06
+#: last_checked: 2021-05-13
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31787,7 +31793,7 @@ EOF
 #: osm_watch: way id="877995097" version="2"
 #: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2021-04-24
+#: last_checked: 2021-05-10
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 EOF
      },
@@ -31859,15 +31865,16 @@ EOF
      },
      { from  => undef,
        until => undef,
-       text  => q{Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein, ansonsten gibt's einen provisorischen Überweg über die Trasse},
+       text  => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: STERNDAMM-2020
 #: by: osm
 #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2020-12-19-adlershof-2/03-2020-12-19-064.html (provisorischer Übergang existiert)
+#: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2021-05-09-adlershof-2/40-2021-05-09-214-xxl.jpg (kein provisorischer Übergang mehr)
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
-#: last_checked: 2021-03-05 (krickstadt)
+#: last_checked: 2021-05-09 (krickstadt)
 #: check_frequency: 90d
 	2::inwork 18836,3611 18943,3508
 EOF
@@ -32122,7 +32129,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-05-03
+#: last_checked: 2021-05-09
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -32258,9 +32265,11 @@ EOF
        data  => <<EOF,
 #: XXX nach den Bauarbeiten werden die Parkstreifen gepflastert sein und auf der östlichen Seite breiter sein (für Querparken)
 #: also_indoor: traffic
-#: last_checked: 2021-05-02
+#: last_checked: 2021-05-13
 #: check_frequency: 14d
-	q4::inwork 13025,12523 13067,12583 13202,12790
+# REMOVED (hier fertig) ---	q4::inwork 13025,12523 13067,12583
+	q4::inwork 13067,12583 13202,12790
+	q4::inwork; 13273,12902 13202,12790
 EOF
      },
      { from  => undef, # 
@@ -32284,15 +32293,20 @@ EOF
 EOF
      },
      { from  => 1616306400, # 2021-03-21 07:00
-       until => $isodate2epoch->("2021-06-13 17:00:00"), # 1619449200, # 2021-04-26 17:00
-       text  => 'Winckelmannstr.: Gleisbauarbeiten zwischen Sterndamm und Köpenicker Str., Fahrbahn gesperrt, vom 22.03.2021 07:00 Uhr bis 13.06.2021 17:00 Uhr ',
+       until => $isodate2epoch->("2021-07-05 17:00:00"), # 1619449200, # 2021-04-26 17:00
+       text  => 'Winckelmannstr.: Gleisbauarbeiten zwischen Sterndamm und Köpenicker Str., Fahrbahn Richtung Süden gesperrt, Richtung Norden muss auf der Kopfsteinpflasterseite gefahren werden, vom 22.03.2021 07:00 Uhr bis 05.07.2021 17:00 Uhr ',
        type  => 'handicap',
-       source_id => '2147346994',
+       source_id => '2147346994', # bis 13.6.2021
        data  => <<EOF,
 #: next_check_id: WINCKELMANN-2021
-#: XXX: laut rbb nur bis 17.5.2021
-#: next_check: 2021-05-17
-	q4::inwork 17507,4216 17476,4337 17428,4503
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=64640
+#: XXX: laut rbb nur bis 17.5.2021, laut krickstadt und BVG bis 5.7.2021
+#: last_checked: 2021-05-09 (krickstadt) vvv
+#: next_check: 2021-07-05 vvv
+	q4::inwork; 17428,4503 17476,4337 17507,4216
+	q2::inwork; 17507,4216 17476,4337
+#: next_check ^^^
+#: last_checked ^^^
 EOF
      },
      { from  => 1624140000, # 2021-06-20 00:00
@@ -32391,7 +32405,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer?
-#: last_checked: 2021-04-13
+#: last_checked: 2021-05-13
 	q4::inwork; 9195,11972 9207,11880 9218,11793
 EOF
      },
@@ -32435,6 +32449,120 @@ EOF
 #: priority: #A
 #: last_checked: 2021-04-28
 	q4::inwork; 7771,9479 7829,9723
+EOF
+     },
+     { from  => 1622325600, # 2021-05-30 00:00
+       until => 1627768799, # 2021-07-31 23:59
+       text  => 'Jacobsensweg: Bauarbeiten, Einbahnstraßenregelung, voraussichtlich vom 31.5.2021 bis Ende Juli 2021',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1083540.php',
+       data  => <<EOF,
+#: next_check_id: JACOBSENWEG-2021
+	q4::inwork; 2821,19559 2909,19485 2988,19445 3203,19340 3232,19325 3324,19277
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Archibaldweg: Fahrbahn gesperrt, Ende der Sperrung unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: priority: #B
+#: last_checked: 2021-05-09
+#: check_frequency: 14d
+	q4::inwork 15870,10938 15674,10851
+EOF
+     },
+     { from  => 1622412000, # 2021-05-31 00:00
+       until => 1630447199, # 2021-08-31 23:59
+       text  => 'Bänschstr.: Spielstraße sonntags von 15 bis 18 Uhr, 1. Juni 2021 bis 31. August 2021, außer in den Sommerferien',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+       data  => <<EOF,
+#: XXX wird diese Spielstraße verstetigt?
+#: next_check: 2022-05-24
+	q4::temp::play 14798,12502 15005,12443
+EOF
+     },
+     { from  => 1621634400, # 2021-05-22 00:00
+       until => 1633039199, # 2021-09-30 23:59
+       text  => 'Richard-Sorge-Str.: zwischen Mühsamstr. und Straßmannstr. Spielstraße sonntags 14 bis 18 Uhr, 23. Mai 2021 bis 30. September 2021',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+       data  => <<EOF,
+#: XXX wird diese Spielstraße verstetigt?
+#: last_checked: 2021-05-13
+#: next_check: 2022-05-17
+	q4::temp::play 13273,12902 13371,12694
+EOF
+     },
+     { from  => 1621288800, # 2021-05-18 00:00
+       until => 1633039199, # 2021-09-30 23:59
+       text  => 'Simplonstr.: zwischen Helmerdingstr. und Matkowskystr. Spielstraße mittwochs 15.30 bis 18.30 Uhr, 19. Mai 2021 bis 30. September 2021, außer in den Sommerferien',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+       data  => <<EOF,
+#: XXX wird diese Spielstraße verstetigt?
+#: last_checked: 2021-05-12
+#: next_check: 2022-05-12
+	q4::temp::play 14468,11203 14531,11142
+EOF
+     },
+     { from  => 1621461600, # 2021-05-20 00:00
+       until => 1633039199, # 2021-09-30 23:59
+       text  => 'Dresdener Str.: zwischen Erkelenzdamm und NKZ Spielstraße freitags von 15 bis 18 Uhr, 21. Mai 2021 bis 30. September 2021, außer in den Sommerferien',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+       data  => <<EOF,
+#: XXX wird diese Spielstraße verstetigt?
+#: next_check: 2022-05-14
+	q4::temp::play 11258,10682 11334,10527
+EOF
+     },
+     { from  => 1622844000, # 2021-06-05 00:00
+       until => 1633039199, # 2021-09-30 23:59
+       text  => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer Spielstraße sonntags 14 bis 18 Uhr, 6. Juni 2021 bis 30. September 2021, außer in den Sommerferien',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+       data  => <<EOF,
+#: XXX wird diese Spielstraße verstetigt?
+#: next_check: 2022-05-31
+	q4::temp::play 12286,9739 12398,9938
+EOF
+     },
+     { from  => 1621634400, # 2021-05-22 00:00
+       until => 1633039199, # 2021-09-30 23:59
+       text  => 'Waldemarstr.: zwischen Leuschnerdamm und Adalbertstr. Spielstraße sonntags 15 bis 19 Uhr, 23. Mai 2021 bis 30. September 2021',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+       data  => <<EOF,
+#: XXX wird diese Spielstraße verstetigt?
+#: next_check: 2022-05-16
+	q4::temp::play 11552,10863 11328,10957
+EOF
+     },
+     { from  => 1621029600, # 2021-05-15 00:00
+       until => 1633039199, # 2021-09-30 23:59
+       text  => 'Wrangelstr.: zwischen Falckensteinstr. und Oppelner Str. Spielstraße sonntags, 14.30 bis 19 Uhr, 16. Mai 2021 bis 30. September 2021, außer in den Sommerferien ',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+       data  => <<EOF,
+#: XXX wird diese Spielstraße verstetigt? (hier vermutlich erst nach der Beteiligung für die verkehrliche Umgestaltung)
+#: next_check: 2022-05-09
+	q4::temp::play 13032,10355 12897,10439
+EOF
+     },
+     { from  => 1626386400, # 2021-07-16 00:00
+       until => 1630360799, # 2021-08-30 23:59
+       text  => 'Berliner Allee: Gleisbauarbeiten, Fahrbahn stadtauswärts möglicherweise auch für Radfahrer gesperrt, außerdem Einbahnstraßenregelung in der Bizetstr., vom 17. Juli 2021 bis 30. August 2021',
+       type  => 'handicap',
+       source_id => 'https://www.berliner-woche.de/weissensee/c-verkehr/auf-der-berliner-allee-werden-die-gleise-erneuert_a309699',
+       data  => <<EOF,
+#: XXX Wird es tatsächlich Einschränkungen für Radfahrer geben? Werden temporäre Ampeln aufgestellt? vvv
+#: next_check: 2021-07-16 vvv
+	q4::inwork; 13398,15826 13425,15846 13484,15893 13508,15912 13623,15954 13737,15994 13826,16026 14015,16103 14056,16120 14248,16202 14346,16241 14499,16341
+	q4::inwork; 14552,16171 14295,16076 14248,16058 14056,15985 13867,15915 13665,15840 13572,15804 13540,15792 13524,15786 13456,15760
+#: next_check ^^^
+#: XXX ^^^
 EOF
      },
     );

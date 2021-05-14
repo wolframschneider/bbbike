@@ -3,13 +3,14 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
+Krautstr.: Umbau zur Fußgängerzone, Radfahrer frei	q4::inwork 12002,12008 12021,12066
 (Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q3::inwork 12926,11224 12848,11093
 (Notweg Bahnübergang Bahnhofstr.): Fußgänger, Fahrrad ggfs. schieben	q3 10231,-2159 10215,-2170 10181,-2174 10161,-2146 10096,-2137
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q3::inwork; 14382,9299 14242,9448
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork; 14242,9448 14185,9509 14089,9610
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
-Henriette-Lustig-Str.: nur der sehr enge Gehweg sowie 50m der Fahrbahn sind freigegeben	q4::inwork 21476,5048 21611,5119
+Köpenicker Str.: Fahrbahn zwischen Semmelweisstr. und Rudower Str. gesperrt, bis zum 11.6.2021	q2::inwork 19803,1911 19766,1796
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607,15282
 Holzmarktstr. - Ifflandstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg, Bordsteine	q4::inwork 11524,12314 11589,12296
 Chausseestr.: gemeinsamer Rad- und Gehweg	q2::inwork; 8732,14098 8607,14253 8570,14299 8490,14397 8442,14456 8406,14507 8336,14586
@@ -47,6 +48,7 @@ Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden a
 Rhinstr.: Zweirichtungsradweg auf engem Bürgersteig	q2::inwork; 18225,12697 18220,12450 18216,12262 18216,12239 18215,12123
 Rhinstr.: Zweirichtungsradweg auf engem Bürgersteig, langer Umweg an der Seddiner Str.	q3::inwork; 18215,12123 18216,12239 18216,12262 18220,12450 18225,12697
 Wiesenweg: Sperrung unter der Brücke, Fahrbahn ist gesperrt, auf Gehweg ausweichen	q3::inwork 15055,11505 15126,11474 15162,11458
+Langenscheidtbrücke: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung	q3::inwork 7647,9196 7735,9121
 Dennewitzstr.: Einbahnstraßenregelung	q3::inwork; 8159,10430 8058,10306
 Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3898,4490
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
@@ -436,7 +438,7 @@ Wanzlikpfad: eng und kurvig, Fußgänger	q3 13268,7801 13309,7911
 Caroline-Tübbecke-Ufer: Fußgänger, Radfahren erlaubt	q1 15000,9820 15043,9790 15367,9691
 (Wendenwiese): Fußgänger, Radfahren erlaubt	q1 15367,9691 15405,9675 15466,9633 15497,9644 15498,9681 15505,9688
 (Wendenwiese): Fußgänger, Radfahren erlaubt	q1 15436,9731 15405,9675
-(Alt-Stralau - Spreeufer): Fußgänger, Radfahren erlaubt, kurze Rampe	q2 15020,9875 15000,9820
+(Alt-Stralau - Spreeufer): Fußgänger, Radfahren erlaubt, kurze Rampe	q2 15031,9876 15000,9820
 (Strela-Platz): Fußgänger	q1 15400,9742 15465,9860
 Hildburghauser Str.: Bahnunterführung für Fußgänger	q1 4595,1387 4514,1402
 (zur Pfaueninselfähre): an schönen Tagen viele Fußgänger	q3 -8542,2216 -8561,2236 -8564,2276
@@ -564,7 +566,7 @@ nördliches Spreeufer: drei niedrige Stufen, Fußgänger	q2 6180,12972 6102,12960 6
 Wustermarker Str.: Fußgänger, Bordsteine	q2 -4755,14393 -4744,14392 -4678,14382
 Firlstr.: zwei Bodenschwellen	q1 18574,6401 18645,6511
 (Florastr. - Schloßstr.): Fußgänger	q2 5234,6086 5165,6119
-Pankeweg: enger Pfad	q2 13365,22743 13321,22586 13295,22545 13290,22377 13354,22327
+Pankeweg: enger Pfad	q2 13365,22743 13321,22586 13295,22545 13291,22422 13290,22399 13404,22384
 (Bremer Weg): Fußgänger	q1 5858,11863 5907,11874 6264,11901 6337,11887 6384,11926 6550,11954 6642,12010
 (Bremer Weg): Fußgänger	q1 6828,12031 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8122,12147 8215,12156 8327,12174 8466,12197 8522,12239 8538,12245
 Oberlandgarten: Fußgänger, Bordsteine	q2 11250,6555 11256,6502 11253,6473
@@ -1598,7 +1600,7 @@ Giselhersteig: enger Weg	q2 17355,12460 17386,12456 17438,12448 17491,12439 1753
 (Zufahrt zum Stadtbad Tiergarten): Parkplatzverkehr	q2 7332,13367 7306,13418
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): Fußgänger	q1 21992,13045 22141,13036 22171,12965
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): enge Brücke, Fußgänger	q3 22171,12965 22196,12961
-Stolzenfelsstr.: enger Gehweg für Radfahrer in Gegenrichtung offen	q2; 19447,8175 19400,8147 19333,8165 19171,8280 18949,8437 18787,8540
+Stolzenfelsstr.: enger Gehweg für Radfahrer in Gegenrichtung offen	q2; 19447,8175 19407,8143 19333,8165 19171,8280 18949,8437 18787,8540
 Kunkelstr.: einige Fußgänger, Borstein	q2 8229,15128 8227,15075
 Erich-Lodemann-Str.: einige Fußgänger, Rampe	q2 15288,8134 15242,8182
 (Vorplatz S-Bhf. Plänterwald): Fußgänger	q3 15256,8247 15212,8203 15242,8182

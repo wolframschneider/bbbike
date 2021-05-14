@@ -524,7 +524,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-04-20
+#: last_checked: 2021-05-13
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -2218,8 +2218,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
-#: note: Verbotsschild an beiden Seiten (mittlerweile (2020-02) nur an der östlichen Seite)
-#: last_checked: 2021-04-27
+#: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
+#: last_checked: 2021-05-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2314,7 +2314,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        {
-         'data' => '# REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
+         'data' => '#: next_check_id: KYNAST-2021
+# REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
 # REMOVED --- #: XXX regelmäßig prüfen --- #: priority: #A --- #: last_checked: 2018-11-16
 #: by: https://viz.berlin.de/2020/07/schau-11_12-07_2020/ ("für den Kraftfahrzeugverkehr gesperrt")
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
@@ -2324,7 +2325,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-04-29
+#: last_checked: 2021-05-12
 #: check_frequency: 14d
 #: next_check: 2021-07-01
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2332,7 +2333,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1611036000,
          'id' => 3048,
          'source_id' => '2147343461',
-         'text' => 'Kynaststr.: Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden nur für Fußgänger, offiziell sollen Radfahrer absteigen und schieben, bis 1.7.2021',
+         'text' => 'Kynaststr.: Bauarbeiten an der Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden, mögliche Engstelle, bis 1.7.2021',
          'type' => 'handicap',
          'until' => 1625151600
        },
@@ -2748,7 +2749,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="1"
 #: osm_watch: way id="934995901" version="1"
-#: last_checked: 2021-05-06
+#: last_checked: 2021-05-13
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -3048,7 +3049,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: osm_watch: way id="877995097" version="2"
 #: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2021-04-24
+#: last_checked: 2021-05-10
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 ',
          'from' => undef,
@@ -3086,15 +3087,16 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: STERNDAMM-2020
 #: by: osm
 #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2020-12-19-adlershof-2/03-2020-12-19-064.html (provisorischer Übergang existiert)
+#: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2021-05-09-adlershof-2/40-2021-05-09-214-xxl.jpg (kein provisorischer Übergang mehr)
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
-#: last_checked: 2021-03-05 (krickstadt)
+#: last_checked: 2021-05-09 (krickstadt)
 #: check_frequency: 90d
 	2::inwork 18836,3611 18943,3508
 ',
          'from' => undef,
          'id' => 3313,
-         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein, ansonsten gibt\'s einen provisorischen Überweg über die Trasse',
+         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3136,18 +3138,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1621350000
        },
-       {
-         'data' => '#: note: bei rbbtext sogar bis 18.5.2021
-#: osm_watch: way id="683770241" version="6"
-	q4::inwork 19564,1871 19743,1804
-',
-         'from' => 1610431200,
-         'id' => 3322,
-         'source_id' => '2147346788',
-         'text' => 'Rudower Str.: Fahrbahn zwischen Köpenicker Str. und Lehmfeldsteig wegen Bauarbeiten gesperrt, vom 13.01.2021 07:00 Uhr bis 12.05.2021 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1620831600
-       },
+       undef,
        undef,
        {
          'data' => '#: last_checked: 2021-04-11
@@ -3215,7 +3206,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-05-03
+#: last_checked: 2021-05-09
 #: check_frequency: 30d
 #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -3308,9 +3299,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: XXX nach den Bauarbeiten werden die Parkstreifen gepflastert sein und auf der östlichen Seite breiter sein (für Querparken)
 #: also_indoor: traffic
-#: last_checked: 2021-05-02
+#: last_checked: 2021-05-13
 #: check_frequency: 14d
-	q4::inwork 13025,12523 13067,12583 13202,12790
+# REMOVED (hier fertig) ---	q4::inwork 13025,12523 13067,12583
+	q4::inwork 13067,12583 13202,12790
+	q4::inwork; 13273,12902 13202,12790
 ',
          'from' => undef,
          'id' => 3348,
@@ -3342,16 +3335,21 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: WINCKELMANN-2021
-#: XXX: laut rbb nur bis 17.5.2021
-#: next_check: 2021-05-17
-	q4::inwork 17507,4216 17476,4337 17428,4503
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=64640
+#: XXX: laut rbb nur bis 17.5.2021, laut krickstadt und BVG bis 5.7.2021
+#: last_checked: 2021-05-09 (krickstadt) vvv
+#: next_check: 2021-07-05 vvv
+	q4::inwork; 17428,4503 17476,4337 17507,4216
+	q2::inwork; 17507,4216 17476,4337
+#: next_check ^^^
+#: last_checked ^^^
 ',
          'from' => 1616306400,
          'id' => 3351,
          'source_id' => '2147346994',
-         'text' => 'Winckelmannstr.: Gleisbauarbeiten zwischen Sterndamm und Köpenicker Str., Fahrbahn gesperrt, vom 22.03.2021 07:00 Uhr bis 13.06.2021 17:00 Uhr ',
+         'text' => 'Winckelmannstr.: Gleisbauarbeiten zwischen Sterndamm und Köpenicker Str., Fahrbahn Richtung Süden gesperrt, Richtung Norden muss auf der Kopfsteinpflasterseite gefahren werden, vom 22.03.2021 07:00 Uhr bis 05.07.2021 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1623596400
+         'until' => 1625497200
        },
        {
          'data' => '	2::inwork 5787,4400 5738,4361 5541,4305
@@ -3443,7 +3441,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer?
-#: last_checked: 2021-04-13
+#: last_checked: 2021-05-13
 	q4::inwork; 9195,11972 9207,11880 9218,11793
 ',
          'from' => undef,
@@ -3497,6 +3495,130 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Kulmer Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: JACOBSENWEG-2021
+	q4::inwork; 2821,19559 2909,19485 2988,19445 3203,19340 3232,19325 3324,19277
+',
+         'from' => 1622325600,
+         'id' => 3365,
+         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1083540.php',
+         'text' => 'Jacobsensweg: Bauarbeiten, Einbahnstraßenregelung, voraussichtlich vom 31.5.2021 bis Ende Juli 2021',
+         'type' => 'handicap',
+         'until' => 1627768799
+       },
+       {
+         'data' => '#: priority: #B
+#: last_checked: 2021-05-09
+#: check_frequency: 14d
+	q4::inwork 15870,10938 15674,10851
+',
+         'from' => undef,
+         'id' => 3366,
+         'text' => 'Archibaldweg: Fahrbahn gesperrt, Ende der Sperrung unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: XXX wird diese Spielstraße verstetigt?
+#: next_check: 2022-05-24
+	q4::temp::play 14798,12502 15005,12443
+',
+         'from' => 1622412000,
+         'id' => 3367,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Bänschstr.: Spielstraße sonntags von 15 bis 18 Uhr, 1. Juni 2021 bis 31. August 2021, außer in den Sommerferien',
+         'type' => 'handicap',
+         'until' => 1630447199
+       },
+       {
+         'data' => '#: XXX wird diese Spielstraße verstetigt?
+#: last_checked: 2021-05-13
+#: next_check: 2022-05-17
+	q4::temp::play 13273,12902 13371,12694
+',
+         'from' => 1621634400,
+         'id' => 3368,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Richard-Sorge-Str.: zwischen Mühsamstr. und Straßmannstr. Spielstraße sonntags 14 bis 18 Uhr, 23. Mai 2021 bis 30. September 2021',
+         'type' => 'handicap',
+         'until' => 1633039199
+       },
+       {
+         'data' => '#: XXX wird diese Spielstraße verstetigt?
+#: last_checked: 2021-05-12
+#: next_check: 2022-05-12
+	q4::temp::play 14468,11203 14531,11142
+',
+         'from' => 1621288800,
+         'id' => 3369,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Simplonstr.: zwischen Helmerdingstr. und Matkowskystr. Spielstraße mittwochs 15.30 bis 18.30 Uhr, 19. Mai 2021 bis 30. September 2021, außer in den Sommerferien',
+         'type' => 'handicap',
+         'until' => 1633039199
+       },
+       {
+         'data' => '#: XXX wird diese Spielstraße verstetigt?
+#: next_check: 2022-05-14
+	q4::temp::play 11258,10682 11334,10527
+',
+         'from' => 1621461600,
+         'id' => 3370,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Dresdener Str.: zwischen Erkelenzdamm und NKZ Spielstraße freitags von 15 bis 18 Uhr, 21. Mai 2021 bis 30. September 2021, außer in den Sommerferien',
+         'type' => 'handicap',
+         'until' => 1633039199
+       },
+       {
+         'data' => '#: XXX wird diese Spielstraße verstetigt?
+#: next_check: 2022-05-31
+	q4::temp::play 12286,9739 12398,9938
+',
+         'from' => 1622844000,
+         'id' => 3371,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer Spielstraße sonntags 14 bis 18 Uhr, 6. Juni 2021 bis 30. September 2021, außer in den Sommerferien',
+         'type' => 'handicap',
+         'until' => 1633039199
+       },
+       {
+         'data' => '#: XXX wird diese Spielstraße verstetigt?
+#: next_check: 2022-05-16
+	q4::temp::play 11552,10863 11328,10957
+',
+         'from' => 1621634400,
+         'id' => 3372,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Waldemarstr.: zwischen Leuschnerdamm und Adalbertstr. Spielstraße sonntags 15 bis 19 Uhr, 23. Mai 2021 bis 30. September 2021',
+         'type' => 'handicap',
+         'until' => 1633039199
+       },
+       {
+         'data' => '#: XXX wird diese Spielstraße verstetigt? (hier vermutlich erst nach der Beteiligung für die verkehrliche Umgestaltung)
+#: next_check: 2022-05-09
+	q4::temp::play 13032,10355 12897,10439
+',
+         'from' => 1621029600,
+         'id' => 3373,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Wrangelstr.: zwischen Falckensteinstr. und Oppelner Str. Spielstraße sonntags, 14.30 bis 19 Uhr, 16. Mai 2021 bis 30. September 2021, außer in den Sommerferien ',
+         'type' => 'handicap',
+         'until' => 1633039199
+       },
+       {
+         'data' => '#: XXX Wird es tatsächlich Einschränkungen für Radfahrer geben? Werden temporäre Ampeln aufgestellt? vvv
+#: next_check: 2021-07-16 vvv
+	q4::inwork; 13398,15826 13425,15846 13484,15893 13508,15912 13623,15954 13737,15994 13826,16026 14015,16103 14056,16120 14248,16202 14346,16241 14499,16341
+	q4::inwork; 14552,16171 14295,16076 14248,16058 14056,15985 13867,15915 13665,15840 13572,15804 13540,15792 13524,15786 13456,15760
+#: next_check ^^^
+#: XXX ^^^
+',
+         'from' => 1626386400,
+         'id' => 3374,
+         'source_id' => 'https://www.berliner-woche.de/weissensee/c-verkehr/auf-der-berliner-allee-werden-die-gleise-erneuert_a309699',
+         'text' => 'Berliner Allee: Gleisbauarbeiten, Fahrbahn stadtauswärts möglicherweise auch für Radfahrer gesperrt, außerdem Einbahnstraßenregelung in der Bizetstr., vom 17. Juli 2021 bis 30. August 2021',
+         'type' => 'handicap',
+         'until' => 1630360799
        }
      
 );

@@ -37,7 +37,7 @@
 #: next_check_id: MUSEUMSINSEL-2020
 #: next_check_id: ZEUGHAUS-2014
 #: note: mittlerweile kann man aber auch direkt überqueren
-#: last_checked: 2021-04-20 vvv
+#: last_checked: 2021-05-13 vvv
 #: check_frequency: 30d vvv
 Schinkelplatz -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9990,12404 9984,12426 9953,12533
 UdL -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9934,12420 9984,12426 9953,12533
@@ -346,4 +346,9 @@ Kastanienallee: Radfahrer müssen auf den gegenüberliegenden Radweg verlassen	DH:
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
+# 
+#: note: abgeschätzt zwischen 90s und 135s zusätzlicher Passierdauer
+#: source_id: 2147347173
+#: valid: -20210527
+Danziger Str./Landsberger Allee: Radfahrer müssen die Kreuzung auf der linken Seite überqueren	DH:t=120 13228,13615 13330,13468 13375,13367
 # 

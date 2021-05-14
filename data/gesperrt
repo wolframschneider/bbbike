@@ -999,7 +999,7 @@ Max-Lenk-Str. (Zepernick)	1 17834,27001 17659,27135
 Heinestr. (Zepernick)	1 17659,27135 17759,27229
 Lindenberger Weg	1 17193,24683 17226,24664 17228,24640
 Lindenberger Weg	1 17228,24640 17193,24683
-Wiesenweg (Schulzendorf)	1 23717,-3975 23618,-3854 23466,-3768 23456,-3746
+Wiesenweg (Schulzendorf)	1 23717,-3975 23618,-3854 23538,-3808 23466,-3768 23456,-3746
 Str. der Einheit (Caputh)	1 -16868,-6959 -16823,-6996
 Am Stern	1 26002,-3362 26002,-3342 26011,-3331 26029,-3326 26048,-3334 26046,-3365 26013,-3367 26002,-3362
 Am Bergpark	1 30589,-1736 30664,-1629 30758,-1606 30968,-1681
@@ -1032,7 +1032,7 @@ Margaretenstr.	1 25418,14835 25503,14842
 Sophienstr.	1 25503,14842 25527,14696 25555,14657
 Straße am Haussee: abgesperrt, Privatstraße	2 25846,16082 25787,16229
 Freilichtbühne Schwedt	2 69562,73280 69634,73330
-Bahnhofstr.	1s 26103,-11861 26300,-11864
+Bahnhofstr.	1s 26103,-11861 26205,-11862 26300,-11864
 Bernau - Tempelfelde	1 23179,31047 23103,30923
 Dallgower Str.	1 -10799,15946 -10853,16230
 Altlandsberger Chaussee	1 40487,16703 40712,16743
@@ -1103,6 +1103,7 @@ Waltersdorf	2::igndisp 21462,-3900 21516,-3839
 Würzburger Str.	1 26031,-4072 26082,-4137 26119,-4215 26125,-4280
 Würzburger Str.	1 26109,-4284 26096,-4218 26060,-4148 26014,-4087
 Spartakusstr.	1s 23907,-3542 23865,-3442 23820,-3337
+Heckenrosenweg (Schöneiche)	1 32387,6349 32317,6312 32301,6346 32370,6380 32387,6349
 Mittelstreifen nicht überquerbar	3nocross::ignrte -974,128015 -724,127995 6,127935 298,127911
 B104: Neubrandenburg -> Feldstr.: Mittelstreifen nicht überquerbar	3::igndisp -974,128015 -724,127995 -719,128043
 Feldstr. -> Pasewalk: Mittelstreifen nicht überquerbar	3::igndisp -719,128043 -724,127995 6,127935
@@ -1151,8 +1152,9 @@ Gramzow (Dorfstr.?)	1s 49779,90206 49810,90444
 Alt-Tegel	1s 1668,20156 1753,20191 1907,20265
 Alt-Tegel	1s 1668,20156 1529,20131 1543,20060 1630,20097 1668,20156
 May-Ayim-Ufer	1s 13206,10651 13077,10747
-Jahnstr. (KW)	1s 26243,-12300 26116,-12276 26031,-12300
-Maxim-Gorki-Str.	1s 26289,-12055 26288,-12089 26274,-12153 26243,-12300
+Jahnstr. (KW)	1s 26252,-12298 26144,-12280 26116,-12276 26031,-12300
+Friedrich-Engels-Str. (KW)	1 26144,-12280 26181,-12019
+Maxim-Gorki-Str.	1s 26289,-12055 26288,-12089 26274,-12153 26252,-12298
 Seestr. (Potsdam)	1s -11581,559 -11584,452
 Tizianstr. (Potsdam)	1s -11424,542 -11480,621 -11581,559
 Spitzmühlenweg	1s 41728,17918 41668,17984 41556,18146
@@ -3156,6 +3158,8 @@ Drängelgitter	BNP:3:-193:trailer=10 1035,14996
 Schranke, umständlich zu umfahren	BNP:5:-113:trailer=15 19608,-1953
 Schranke	BNP:2:-157:trailer=5 19617,6208
 Schranke	BNP:5:-109:trailer=15 22855,4348
+Drängelgitter	BNP:3:-193:trailer=10 32295,6272
+Drängelgitter	BNP:3:-187:trailer=10 32418,6303
 Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, teilweise lange Umwege über die Gehwege möglich	2::inwork 16227,12280 16159,12301 16056,12317
 Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, teilweise lange Umwege über die Gehwege möglich	2::inwork 16144,12388 16159,12301 16158,12191
 Gotlindestr.: Einbahnstraßenregelung	1s:inwork 16720,12614 16859,12613
@@ -3184,7 +3188,7 @@ Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9271,323 9296,335 9249,434 9218,458
 Alexander-von-Humboldt-Weg: Durchgang gesperrt, auch für Fußgänger	2::inwork 18892,3256 18689,3465
 Cotheniusstr.: Fahrbahn durch Bauzäune abgesperrt	2::inwork 13430,13733 13519,13785
-Abendseglersteig: noch in Bau	2::inwork 33176,2938 33147,2832 33267,2810 33383,2792 33406,2852
+Abendseglersteig: noch in Bau	2::inwork 33176,2938 33147,2832 33267,2810 33383,2792
 Prinzessinnenstr./Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10203,-2137 10228,-2136 10300,-2135
 Pfarrer-Lütkehaus-Platz: Sperrung am Bahnübergang	2::inwork 10228,-2136 10231,-2159
 Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10300,-2135 10296,-2156 10318,-2156
@@ -3203,7 +3207,6 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwork 10805,12468 10803,12470
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
-Pankeweg: Bauarbeiten, gesperrt	2::inwork 13354,22327 13290,22377 13295,22545
 David-Friedländer-Weg: noch Bauarbeiten, gesperrt	2::inwork 20901,18793 21038,18851
 Christian-Dohm-Weg: noch Bauarbeiten, gesperrt	2::inwork 20894,18861 21024,18915
 Rollbergstr.: Bauarbeiten, Zufahrt von der Karl-Marx-Str. gesperrt	2s:inwork 12714,8249 12545,8209
@@ -3211,7 +3214,6 @@ Rollbergstr.: wegen Bauarbeiten komplett gesperrt	2::inwork 12226,8137 12295,815
 Metropolitan Park: Bauarbeiten	2::inwork -8019,14036 -8150,14064
 Carl-Spindler-Str.: durch Bauzäune abgesperrt, manchmal (am Wochenende?) kann man aber durchfahren	2::inwork 21442,5414 21474,5388
 Henriette-Lustig-Str.: teilweise gesperrt	2::inwork 21375,4974 21380,5003
-Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21611,5119 21645,5135
 Wäscherinnenweg: teilweise gesperrt	2::inwork 21444,5112 21358,5072
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148

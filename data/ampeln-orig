@@ -9,7 +9,7 @@
 # 
 # 
 #: next_check_id: GAERTNER-2021
-#: last_checked: 2021-05-02
+#: last_checked: 2021-05-11
 Grünberger Str.: Gegenverkehrsregelung	X::inwork 14272,11775
 # 
 #: next_check_id: HERMANNHESSESTR-2019
@@ -88,10 +88,11 @@ Grünberger Str.: Gegenverkehrsregelung	X::inwork 14272,11775
 	X::inwork 10096,-2137
 # 
 #: by: https://www.bahninfo-forum.de/read.php?9,581614,688517#msg-688517
+#: confirmed_by: srt
 #: XXX Nöldnerstraße (Rummelsburg) in beiden Richtungen zwischen Karlshorster Straße und Stadthausstraße: Leitungsbau, Verkehr wird wechselseitig durch eine Baustellenampel geregelt, vom 16.12.2020 09:00 Uhr bis 28.05.2021 17:00 Uhr
 #: source_id: 2147346700
 #: also_indoor: traffic
-#: last_checked: 2021-05-03
+#: last_checked: 2021-05-09
 #: check_frequency: 30d
 #: next_check: 2021-05-28
 #: valid: -20210528
@@ -2496,8 +2497,8 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
 	F 5373,10981
 # REMOVED --- #: note: war früher (ca. 2006?) ein Zebrastreifen ---	F 18733,8650
 # REMOVED --- #: next_check_id: TRESKOWALLEE-2017 --- #: XXX hier wird eine richtige Ampel entstehen --- #: last_checked: 2020-11-28 --- #: next_check: 2020-12-13
-	X 18731,8577
-	X 18733,8633
+	X 18718,8583
+	X 18727,8634
 	X 18737,8686
 	X 18770,8898
 # 
@@ -2910,13 +2911,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2021-04-20
+#: last_checked: 2021-05-13
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2021-04-20 vvv
+#: last_checked: 2021-05-13 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3525,6 +3526,10 @@ Hultschiner Damm/Rahnsdorfer Str.: hier wird eine Ampel gebaut	X::inwork 24653,1
 # 
 ################################################################################
 #: note: Ampeln elsewhere vvv
+	X 26623,-17859
+	F 26999,-17905
+#: note: Anforderungsampel
+	F 26473,-14578
 	B 83086,5122
 	X -17194,13681
 	X 41698,17577
