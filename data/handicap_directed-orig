@@ -37,7 +37,7 @@
 #: next_check_id: MUSEUMSINSEL-2020
 #: next_check_id: ZEUGHAUS-2014
 #: note: mittlerweile kann man aber auch direkt überqueren
-#: last_checked: 2021-05-13 vvv
+#: last_checked: 2021-05-18 vvv
 #: check_frequency: 30d vvv
 Schinkelplatz -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9990,12404 9984,12426 9953,12533
 UdL -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9934,12420 9984,12426 9953,12533
@@ -222,7 +222,7 @@ Rügenwalder Weg - Gülzower Str.: linker Gehweg	DH:h=q2,90 22400,12171 22388,1219
 Schloßstr. - Kieler Str.: Umweg zur Fußgängerampel	DH:len=65:tl 5018,5854 4998,5817 5030,5800
 Kieler Str. - Schloßstr.: linker Gehweg	DH:h=q3,30 5030,5800 4998,5817 4982,5789
 # 
-Hornstr. - Yorckstr.: linker Gehweg	DH:h=q3,50 8980,9751 9002,9731 9044,9753
+Hornstr. - Yorckstr.: linker Gehweg	DH:h=q3,50 8980,9751 9002,9731 9047,9750
 # 
 Sachsendamm - Torgauer Str.: linker Gehweg	DH:h=q3,80 6935,8208 7001,8161 7158,8208
 # 

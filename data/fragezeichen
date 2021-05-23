@@ -691,6 +691,9 @@ Heinz-Rühmann-Weg (Potsdam): Qualität?	? -8870,-2074 -8913,-2279 -8902,-2292
 An der Jubelitz (Potsdam-Fahrland): Qualität?	? -17173,7182 -17268,7122 -17170,7038 -17057,7062
 Havelwelle: genaue Lage der Straße? Qualität?	? -14725,-2389 -14618,-2295 -14585,-2338
 Müllerweg (Potsdam-Fahrland): Qualität? Genauer Verlauf?	? -15503,6422 -15392,6371
+Fritz-Erler-Allee: werden die Radwege asphaltiert oder saniert?	? 14392,2979 14274,3129 14205,3187 14126,3225
+Fritz-Erler-Allee: werden die Radwege asphaltiert oder saniert?	? 14126,3225 14023,3276 13906,3340 13775,3500
+Gutschmidtstr.: werden die Radwege asphaltiert oder saniert?	? 13775,3500 13710,3522 13623,3523 13526,3519
 Ahornstr. (Potsdam): Qualität?	? -8829,-2741 -8870,-2876 -8970,-3143 -9039,-3379
 Alter Torfweg (Potsdam): Qualität? Existieren Straßenschilder?	? -10836,-5477 -10829,-5608 -10917,-5739 -11089,-5909
 Ahlimbswalde: ist die gesamte Straße asphaltiert?	? 30962,71971 31251,71954 31669,72016 31857,72102 32370,71986 32613,71643
@@ -931,6 +934,7 @@ Am Papenberg (Schulzendorf): Qualität? Ist die Straße verkehrsberuhigt?	? 24105,
 Walther-Rathenau-Str. (Schulzendorf): Qualität?	? 23296,-5280 22983,-5346
 # added from strassen
 Süderholmer Steig (Ist dieser Abschnitt ausgeschildert?)	? -2245,21544 -2239,21904
+(Am Teltowkanal, südl. Ufer) (Hat der Weg bereits den Namen "Gerda-und-Wolfgang-Szepansky-Promenade" bekommen? Stehen schon entsprechende Schilder?)	? 9196,5272 9171,5263 9080,5225 8881,5143 8784,5095
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -967,6 +971,8 @@ Schloßstr. (Einbahnstraße?)	? -14821,106013 -15004,105813 -15070,105705
 Tiergartenstr. (Einbahnstraße?)	? -15004,105813 -14862,105712 -14570,105702 -14288,105530 -14242,105542
 Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105763 -13977,105850 -13932,106157
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
+# added from radwege
+(Existieren nun durchgängig Radspuren in der Oranienburger Straße?)	? 5430,20685 5421,20748 5410,20822 5401,20882 5395,20915
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 (Adlergestell - Sportpromenade/Bammelecke): Waldweg, teilweise loser Schotter (wird sich die Qualität hier bessern (insbesondere: was passiert mit dem losen Schotter)?)	? 24485,-667 24758,-268 25172,345
@@ -1051,6 +1057,7 @@ Stresemannstr. - Wilhelmstr.: vorhandene Beleuchtung ist kaputt (funktioniert di
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
+Soorstr. (gibt es die Einbahnstraßenregelung in der Soorstr. noch?)	? 1861,11284 1884,11126
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 (andere Straßenseite auch?)	? 37093,-151665 37375,-151190
@@ -1073,5 +1080,4 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 Brauerstr.: evtl. wird hier die Einbahnstraßenregelung für Radfahrer aufgehoben (Wurde die Einbahnstraßenregelung für Radfahrer aufgehoben?)	? 5317,2345 5159,2176
 Schwanebecker Chaussee: Radwegbau (Wird ein Zweirichtungsradweg auf der westlichen Seite entstehen? Wird der Radweg asphaltiert sein?)	? 22048,29221 21772,28566
 # added from bbbike-temp-blockings-optimized
-Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 3/2021: Durchfahrt ist noch möglich) (Gibt es mittlerweile eine Sperrung? Falls ja, wo ist der gesperrte Abschnitt und gilt die Sperrung auch für Fußgänger und Radfahrer?)	? 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17483,8644 17449,8720 17416,8767 17380,8858
-Hasselwerderstr.: zwischen Fennstr. und Fließstr. Fahrbahn wegen Bauarbeiten gesperrt (Ist die Fahrbahn noch immer gesperrt?)	? 18260,5746 18164,5701
+Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Fahrbahn Richtung Osten gesperrt, vom 14.07.2020 12:12 Uhr bis 18.05.2021 17:00 Uhr, möglicherweise sogar bis Mai 2022 (Wurden die Bauarbeiten mittlerweile beendet?)	? 5244,6261 5390,6299 5560,6344

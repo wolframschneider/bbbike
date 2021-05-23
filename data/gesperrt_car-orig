@@ -79,7 +79,7 @@ Hoffmannstr./Elsenstr.	3 14077,10016 14289,9870 14323,9913 14405,10027
 Behren/Ebert	3 8861,12125 8743,12099 8737,12098 8595,12066 8577,11896 8571,11846
 UdL/Universitätsstr.	3nocross 9475,12365 9613,12381 9664,12387
 Kolonnenstr. -> Hohenfriedbergstr.	3 7709,8777 7795,8765 7791,8882
-Horn - Yorck	3nocross 8777,9601 9002,9731 9044,9753
+Horn - Yorck	3nocross 8777,9601 9002,9731 9047,9750
 Mehringdamm - Baruther	3nocross 9444,9919 9387,9804 9334,9670
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9226,8967 9227,8890
 Hobrechtstr.	1 12012,9092 11998,8872
@@ -224,7 +224,7 @@ Langhoffstr.	1 19817,14371 19818,14064
 Lintruper Str.	1 10324,925 10380,757
 Edison-/Siemensstr.	3 17991,6431 17962,6674 17860,6644
 Edisonstr.	1 17962,6674 17991,6431
-Brückenstr./Edisonstr.	1 17991,6431 17952,6246 17930,6175 17900,6072
+Brückenstr./Edisonstr.	1 17991,6431 17948,6248 17930,6175 17900,6072
 Müggelheimer Str.	3nocross 22674,4309 22556,4386 22451,4441 22419,4457 22383,4470
 Gropiusstr.	1 8543,16364 8534,16355 8389,16214
 Osloer Str.	3nocross 8503,16716 8721,16689 8759,16684 8952,16666
@@ -757,7 +757,7 @@ Siedlungsstr.	1 16647,25293 16693,25292
 Oderberger Str.: Durchfahrt verboten	3 10723,14772 10864,14692 *
 Oderberger Str.: Durchfahrt verboten	3 * 10864,14692 10723,14772
 #: note: aber der Uferweg muss offensichtlich für Radfahrer doch erreicht werden können...
-Straße 12 (Neukölln): gesperrt für Fahrzeuge aller Art (außer BAB-Versorgung)	2 13883,6682 13881,6634 13915,6592
+Straße 12 (Neukölln): gesperrt für Fahrzeuge aller Art (außer BAB-Versorgung)	2 13882,6674 13881,6634 13915,6592
 Schranke	3 * 10559,2252 *
 Einfahrt verboten	3 * 9561,-748 9340,-829
 Tordurchfahrt nur für Radfahrer/Fußgänger	3 11721,-351 11712,-289 11242,-332
@@ -1316,6 +1316,8 @@ Berkaer Platz	2:Anlieger 2587,7823 2627,7821
 # 
 #: note: Wrangelkiez
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.958670.php vvv
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1086852.php (Bürgerbeteiligung)
+#: by: https://mein.berlin.de/projekte/verkehrswende-wrangelkiez/
 #: confirmed_by: mapillary, srt vvv
 Görlitzer Str.	2:Anlieger 12328,10442 12608,10294 12682,10258 12767,10216 12905,10143 13035,10076 13216,9983
 Wrangelstr.	2:Anlieger 12731,10547 12822,10487 12897,10439 13032,10355 13151,10276 13271,10193
@@ -1420,8 +1422,9 @@ Wateweg	1 21122,8370 21121,8424 21127,8532 21115,8618 21123,8678 21131,8739
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1083749.php (Beginn KW 19/2021, Radfahrer Schrittgeschwindigkeit)
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/neue-fussgaengerzonen_a309780
 #: osm_watch: way id="4685729" version="17"
-#: last_checked: 2021-05-06 (mapillary) (Absperrung wieder entfernt)
-#: next_check: 2021-05-14
+#: last_checked: 2021-05-17
+#: check_frequency: 14d
+# REMOVED --- #: next_check: 2021-05-14
 # früherer Eintrag: Waldeyerstr.	1 15058,12329 15003,12241
 Waldeyerstr.: für Autos gesperrt, Radfahrer frei	2 15058,12329 15003,12241
 # 
@@ -1441,3 +1444,8 @@ Krumme Str.: Poller	3 * 3983,11289 *
 #: note: für Fußgänger und Radfahrer existiert ein Z-Übergang etwa 20m westlich der Kreuzung
 Bornholmer Str./Nordkapstr.: Straßenbahntrasse	3nocross 10533,16505 10458,16509 10370,16516
 # 
+Bergmannstr.	2:Anlieger 9753,9252 9689,9266 9632,9280 9505,9306 9489,9309 9309,9347 9248,9350
+Nostitzstr.	2:Anlieger 9552,9602 9524,9426 9505,9306
+Solmsstr.	2:Anlieger 9676,9564 9650,9404 9632,9280
+# 
+Karl-Marx-Platz: Poller	3	* 13130,7633 *

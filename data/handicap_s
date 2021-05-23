@@ -3,6 +3,7 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
+Pettenkoferstr.: Bauarbeiten an der Kreuzung Eldenaer Str., Sperrung der Fahrbahn	q3::inwork 14858,12775 14836,12826
 Krautstr.: Umbau zur Fußgängerzone, Radfahrer frei	q4::inwork 12002,12008 12021,12066
 (Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q3::inwork 12926,11224 12848,11093
 (Notweg Bahnübergang Bahnhofstr.): Fußgänger, Fahrrad ggfs. schieben	q3 10231,-2159 10215,-2170 10181,-2174 10161,-2146 10096,-2137
@@ -29,13 +30,14 @@ Hirtenstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11012,13278 10925,13
 Neue Roßstr.: Fahrbahn gesperrt	q4::inwork 10687,11853 10722,11816
 Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Restaurantbetrieb	q2::inwork 10687,11853 10869,11949
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
+Hannah-Arendt-Str.: Fahrbahn Richtung Westen gesperrt	q3::inwork; 8901,12008 8844,11984
 Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, Gehweg explizit für Radfahrer verboten	q4::inwork 8737,12098 8783,11959
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwork; 9581,12588 9613,12381
 Sterndamm [Nebenfahrbahn]: Gehweg für Radfahrer frei	q3 17648,5338 17697,5347
-Jahnstr.: Bauarbeiten, etwa 50m der Fahrbahn sind gesperrt	q3::inwork 11500,9116 11509,9392
 Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q3::inwork; 9022,10857 8941,10663 8926,10626
 Wilhelmshavener Str.: Abschnitt der Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 6089,14197 6093,13990
+Matthäikirchplatz: wegen Bauarbeiten am Museum der Moderne mögliche Behinderungen	q3::inwork 7934,11275 7965,11380
 Fasanenstr.: Engstelle in Höhe Kantstr., Radfahrer werden über den Bürgersteig geführt	q3::inwork 5241,11060 5236,10994 5230,10919
 Schleswiger Ufer: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5886,12467 5944,12548
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
@@ -48,7 +50,7 @@ Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden a
 Rhinstr.: Zweirichtungsradweg auf engem Bürgersteig	q2::inwork; 18225,12697 18220,12450 18216,12262 18216,12239 18215,12123
 Rhinstr.: Zweirichtungsradweg auf engem Bürgersteig, langer Umweg an der Seddiner Str.	q3::inwork; 18215,12123 18216,12239 18216,12262 18220,12450 18225,12697
 Wiesenweg: Sperrung unter der Brücke, Fahrbahn ist gesperrt, auf Gehweg ausweichen	q3::inwork 15055,11505 15126,11474 15162,11458
-Langenscheidtbrücke: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung	q3::inwork 7647,9196 7735,9121
+Langenscheidtbrücke und Monumentenstr. bis Hohenfriedbergstr.: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung	q3::inwork 7647,9196 7735,9121 7790,9126
 Dennewitzstr.: Einbahnstraßenregelung	q3::inwork; 8159,10430 8058,10306
 Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3898,4490
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
@@ -515,7 +517,7 @@ Bleckmannweg: Fußgänger, eng	q1 15658,12231 15756,12212
 Hoenerweg: Fußgänger, eng	q1 15668,12304 15790,12289 15896,12273
 S-Bhf. Raoul-Wallenberg-Str.: lange Rampe	q3 20109,16264 20120,16297
 (S-Bhf. Raoul-Wallenberg-Str. - Alfred-Döblin-Str.): Fußgänger	q2 20120,16297 20198,16322
-(S-Bhf. Raoul-Wallenberg-Str. - Kinderbad Platsch): Fußgänger	q1 20328,16473 20342,16499 20429,16482 20520,16479 20547,16485 20851,16454 20898,16420 20923,16435 21065,16412 21124,16421
+(S-Bhf. Raoul-Wallenberg-Str. - Kinderbad Platsch): Fußgänger	q1 20328,16473 20342,16499 20429,16482 20520,16479 20547,16485 20815,16469 20851,16454 20898,16420 20923,16435 21051,16417 21124,16421
 (Kinderbad Platsch - Max-Herrmann-Str.): Fußgänger	q1 21124,16421 21177,16499 21238,16627
 (Bürgerpark Marzahn): einige Fußgänger	q1 20898,16420 21020,16298
 (oberer Wuhlewanderweg - Alte Hellersdorfer Str.): einige Fußgänger	q1 22851,14603 22876,14594 23057,14582
@@ -1258,7 +1260,8 @@ Selkestr.: Fußgänger, Bordsteine	q3 12722,7261 12741,7224
 (Schildhornstr. - Treitschkestr./Hackerstr.): einige Fußgänger	q1 4937,6205 4997,6331 5015,6363 4999,6397
 Eyke-von-Repkow-Platz: einige Fußgänger, Bordsteine	q3 5556,12536 5531,12501
 (Alexandrinenstr. - Wassertorstr.): Fußgänger, Kurven	q1 10293,10645 10401,10601 10431,10606 10492,10582
-(Weg an der Südpanke): einige Fußgänger	q1 8478,13941 8447,13983 8380,14024 8344,14133 8307,14175 8294,14194
+(Weg an der Südpanke): einige Fußgänger	q1 8478,13941 8447,13983 8380,14024 8344,14133 8307,14175 8271,14222 8273,14269 8266,14346 8267,14395 8293,14453 8302,14517
+(Weg an der Südpanke): einige Fußgänger, schmal	q2 8302,14517 8301,14576 8323,14599
 (Weg an der Südpanke - Am Pankepark): einige Fußgänger, Rampe	q2 8307,14175 8323,14142
 (Weg an der Südpanke - Am Pankepark): einige Fußgänger	q1 8323,14142 8282,14116
 (Rhinstr. - Am Mühlenberg): einige Fußgänger, Rampe	q1 18215,11690 18242,11793 18258,11827
@@ -1783,7 +1786,7 @@ Steinrückweg: möglicher Bordstein	q1 4257,6856 4293,6719
 Gedonstr.: Bordsteine, parkende Autos, Fußgänger	q4 7915,17557 7916,17576 7917,17588
 Alexanderufer - Charité: durch das Tor schieben	q4 8371,13399 8363,13402 8356,13404
 Nöldnerplatz [Lückstr. - Nöldnerstr.]: einige Fußgänger	q1 15903,10906 15932,10830
-Nöldnerplatz [Nöldnerstr. - Schlichtallee]: einige Fußgänger	q1 15932,10830 15970,10755
+Nöldnerplatz [Nöldnerstr. - Schlichtallee]: einige Fußgänger	q3 15932,10830 15970,10755
 (Weg im Grünzug): einige Fußgänger	q1 17391,9746 17316,9797 17257,9869 17161,9921 17005,9953
 (Dolgenseestr. - Weg im Grünzug): einige Fußgänger	q1 17275,9892 17257,9869
 Wadzeckstr. - Mollstr.: einige Fußgänger	q1 11315,13210 11399,13333
@@ -2109,6 +2112,8 @@ Alemannenstr.: eng und kurvig	q1 20694,1175 20729,1239 20796,1289
 Windhuker Str.: einige Fußgänger	q1 5426,16539 5712,16245 5748,16235
 (Waltraudstr. - Clayallee): 1,5m breit, einige Fußgänger	q2 919,4815 935,4814 1253,4788 1447,4757
 (Stresemannstr. - Wilhelmstr.): einige Fußgänger	q1 9215,10607 9368,10641
+(Weg im Hochzeitspark): Fußgänger, geschützte Grünanlage, Bordstein	q2 20547,16485 20553,16403 20583,16317
+Voigtstr.: einige Fußgänger	q3 14836,12826 14835,12801
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2850,7 +2855,7 @@ Zerndorfer Weg: enge Straße	q1 3044,25558 3046,25642 3070,25725
 Cedernstr.: enge Straße	q1 23868,4411 23978,4484 24068,4602
 Rudolf-Pechel-Str.: enge Straße	q1 9991,-413 9913,-432 9920,-513 10018,-494
 Buolstr.: enge Straße	q1 559,15342 429,15284 283,15237
-Dompfaffenweg: enge Straße	q1 20068,14516 19729,14564
+Dompfaffenweg: enge Straße	q1 20068,14516 19719,14566
 Luisenstr. (Konradshöhe): enge Straße	q0 -1846,18778 -2050,18643
 Jan-Petersen-Str.: enge Straße	q0 21086,15910 21108,15955 21200,16128 21130,16162 21028,16211
 (Breitenbachstr. - Soltauer Str.): Fußweg, enger Weg	q2 3909,19002 3738,19007
@@ -3022,6 +3027,7 @@ Walsroder Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 63
 Hünensteig: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 6419,5048 6387,5057
 Hünensteig: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 6387,5057 6395,5154
 Paul-Lincke-Ufer: Uferweg ist als Alternative vorhanden. Allerdings kann man aus der Lausitzer Str. nicht in den Uferweg einbiegen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 12116,9825 11946,9913 11735,10022 11512,10105
+Jahnstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 11500,9116 11509,9392
 Neue Schönhauser Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 10527,13257 10423,13215 10310,13227
 Kirchhofstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 13188,7590 13117,7471 13029,7353
 Niemannstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 14254,11377 14211,11229
@@ -3041,6 +3047,7 @@ Ludolfinger Platz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp;
 Sewanstr. - Balatonstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 17729,10331 17741,10386
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich): gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
+Soorstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 1861,11284 1884,11126
 Gotlindestr.: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 16720,12614 16859,12613
 Rudi-Arndt-Str.: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 13449,13892 13359,13832
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 10472,14632 10320,14608
@@ -3073,7 +3080,7 @@ Bundesallee, linker Gehweg zur Durlacher Str.	q3::igndisp; 5438,8402 5399,8344
 Bundesallee, linker Gehweg zur Straße Am Volkspark	q3::igndisp; 5399,8344 5419,8415
 Urbanstr.	q0::igndisp; 11888,9189 11861,9183
 Badstr., linker Gehweg	q3::igndisp; 8534,16355 8486,16412 8486,16425
-Tempelhofer Ufer, linker Gehweg	q4::igndisp; 8804,10303 8717,10322 8661,10377
+Tempelhofer Ufer, linker Gehweg	q4::igndisp; 8810,10305 8717,10322 8661,10377
 Bebelplatz, diagonal über den Platz	q0 9737,12238 9702,12307 9664,12387
 Bebelplatz, diagonal über den Platz	q0 9680,12232 9702,12307 9713,12392
 Leipziger Str., linker Gehweg	q3::igndisp; 9902,11704 9997,11713

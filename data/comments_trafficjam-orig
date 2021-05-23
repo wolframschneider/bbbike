@@ -17,7 +17,7 @@
 #: note: gesehen: 2016-03-27 16:30 (Werktag, keine sonstigen Besonderheiten)
 #: XXX_indoor: oder gibt es auch in den Morgenstunden hier Staus?
 #: tempex: rush_hour_evening
-Möckernstr.	Jam; 8804,10303 8802,10290 8783,10166 8780,9968 8779,9851 8779,9829 8779,9812 8778,9759 8777,9601
+Möckernstr.	Jam; 8810,10305 8808,10290 8790,10157 8784,9972 8779,9851 8779,9829 8779,9812 8778,9759 8777,9601
 # 
 #: tempex: T06-T22 vvv
 Leipziger Str. Richtung Westen	Jam; 9569,11631 9444,11616 9268,11590 9058,11564
@@ -77,7 +77,8 @@ Karl-Marx-Str.	Jam; 12714,8249 12689,8289 12639,8344 12598,8390
 # 
 #: next_check_id: KARLMARXSTR-2018
 #: last_checked: 2021-03-30
-#: check_frequency: 90d
+#: check_frequency: 120d
+#: next_check: 2021-10-08
 Karl-Marx-Str.	Jam; 12330,8636 12494,8501
 # 
 Baumschulenstr./Späthstr.	Jam; 14744,5211 14808,5202 14988,5214 15038,5235 15174,5467 15363,5668 15382,5687 15584,5946 15628,6009 15723,6151
@@ -99,12 +100,14 @@ Sonnenallee	Jam; 11909,9155 12012,9092 12078,9055 12152,9015 12240,8964 12316,89
 # 
 #: next_check_id: FRANZOESISCHE-2018 vvv
 #: source_id: 2147343056 (bis 30.06.2021) vvv
-#: last_checked: 2021-03-12 vvv
+#: last_checked: 2021-05-22 vvv
 #: check_frequency: 90d vvv
+#: next_check: 2021-06-30 vvv
 #: valid: -20210630 vvv
 Behrenstr.	Jam; 8861,12125 9054,12154 9064,12156 9164,12172
 Behrenstr.	Jam; 9164,12172 9064,12156 9054,12154 8861,12125
 #: valid ^^^
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: source_id ^^^
