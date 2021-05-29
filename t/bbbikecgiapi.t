@@ -27,7 +27,7 @@ check_cgi_testing;
 using_bbbike_test_data;
 
 my $tests = 18;
-$tests -= 2 if $ENV{BBBIKE_TEST_ORG};
+$tests -= 3 if $ENV{BBBIKE_TEST_ORG};
 
 plan tests => $tests;
 
