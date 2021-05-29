@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2004,2005,2006,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2004,2005,2006,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -96,11 +96,11 @@ sub teaser {
 }
 
 sub teaser_sternfahrt_adfc {
-    my $out_of_date = $today gt "20190602";
+    my $out_of_date = $today gt "20210606";
     if (!$out_of_date) {
-	my $url = "https://adfc-berlin.de/aktiv-werden/bei-demonstrationen/sternfahrt/673-auf-zur-sternfahrt-2019.html";
+	my $url = "https://adfc-berlin.de/aktiv-werden/bei-demonstrationen/sternfahrt/987-adfc-sternfahrt-am-sonntag-6-juni-2021.html";
 	<<EOF
-<div class="teaser" style="font-size:larger;"><a href="$url"><b>Sternfahrt ${year}</b></a> am 2. Juni $year</div>
+<div class="teaser" style="font-size:larger;"><a href="$url"><b>Sternfahrt ${year}</b></a> am 6. Juni $year</div>
 EOF
     } else {
 	();
@@ -358,15 +358,15 @@ EOF
 sub _teaser_is_iphone { $ENV{HTTP_USER_AGENT} =~ m{\biPhone\b} }
 
 sub teaser_maintenance {
-    my $maintenance_end = 1602140400; # 2020-10-08 09:00:00
+    my $maintenance_end = 1622530800; # 2021-06-01 09:00:00
     if (time < $maintenance_end
-	&& time > $maintenance_end-10*86400
+	&& time > $maintenance_end-10*86400 # 10 Tage vorher
 	&& $ENV{SERVER_NAME} =~ m{(bbbike\.de|bbbike\.hosteurope)$}
        ) {
 	<<EOF;
 <div class="teaser">
 <b>Wartungsarbeiten</b><br>
-Von 07.10.2020 22:00 Uhr bis 08.10.2020 09:00 wird $ENV{SERVER_NAME}
+Von 31.05.2021 22:00 Uhr bis 01.06.2021 09:00 Uhr wird $ENV{SERVER_NAME}
 wegen Wartungsarbeiten kurzzeitig nicht verfügbar sein.
 </div>
 EOF

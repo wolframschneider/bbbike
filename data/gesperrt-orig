@@ -108,7 +108,7 @@ Kurt-Schumacher-Damm (Süd)	1 2831,14219 2803,14288 2788,14364 2905,14754
 Kurt-Schumacher-Damm (Süd)	1 2956,14752 2846,14373 2857,14222
 Kurt-Schumacher-Damm (Nord)	1 3564,16294 3643,16437 3676,16497 3753,16638 3853,16825 3940,16861
 Kurt-Schumacher-Damm (Nord)	1 3940,16861 3788,16621 3711,16481 3585,16252
-Ferdinand-Friedensburg-Platz	1 -914,14602 -1005,14604 -1357,14533 -1392,14527 -1484,14513 -1369,14644 -1119,14659 -925,14631
+Ferdinand-Friedensburg-Platz	1 -914,14602 -1005,14604 -1337,14538 -1392,14527 -1484,14513 -1350,14646 -1119,14659 -941,14637
 Falkenseer Platz	1 -3352,14676 -3368,14723 -3355,14764 -3295,14777 -3251,14741 -3247,14713 -3255,14685 -3301,14669 -3352,14676
 Alt-Müggelheim	1 28317,891 28188,962 28094,1090 28225,1009 28317,891
 Prenzlauer Promenade	2 12008,19613 12042,19682 11990,19741 11907,19749
@@ -153,7 +153,7 @@ Dorfplatz	1 21074,-475 20986,-529 20920,-556 20827,-537 20999,-489 21074,-475
 #: by: https://twitter.com/VIZ_Berlin/status/1386983867136057344
 #: source_id: 2147342746 (nicht mehr aktiv)
 #: source_id: 2147343246 (nicht mehr aktiv)
-#: source_id: 2147342800 (bis 31.05.2021)
+#: source_id: 2147342800 (bis 31.07.2021)
 #: source_id: 2147346790 (bis 30.06.2021)
 # REMOVED (existiert nicht mehr) --- #: osm_watch: way id="846548652" version="2"
 #: osm_watch: way id="871408060" version="1"
@@ -161,7 +161,7 @@ Dorfplatz	1 21074,-475 20986,-529 20920,-556 20827,-537 20999,-489 21074,-475
 #: XXX wird auch auf der Paradiesstr. zwischen B96a und Johannes-Tobei-Str. auf der westlichen Seite ein Radweg entstehen, möglicherweise ein Zweirichtungsradweg?
 #: last_checked: 2021-04-24
 #: check_frequency: 120d
-#: next_check: 2021-06-30
+#: next_check: 2021-07-31
 # REMOVED --- #: next_check: 2021-01-31
 B96a (Kfz-Straße)	2 20272,-501 20585,-272 20781,-82 21115,271
 # REMOVED (Radweg) --- B96a (Kfz-Straße)	2 21115,271 21286,449 21613,923 21656,989 21829,1351
@@ -568,7 +568,7 @@ Bänschstr.	1 15005,12443 14798,12502 14681,12534 14661,12523 14588,12542
 Bänschstr.	1 14599,12584 14672,12565 14686,12549 14801,12517 14996,12462
 Rossitter Platz - Machandelweg: verschlossene Türen	2 -107,12220 -76,12236 -45,12243
 #: by: Robert (no mail):
-Stockholmer Str.	1 8950,17219 8866,17075
+Stockholmer Str.	1 8950,17219 8860,17077
 #: by: Arlt:
 Schulenburgstr. (Reinickendorf)	1 5345,18675 5547,18665
 #: by: müller-list:
@@ -879,7 +879,7 @@ Bundesallee (Richtungsfahrbahn)	1::igndisp 5494,8843 5503,8709 5498,8598 5472,85
 #: note: ^^^
 # 
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -278,14532 -457,14536 -914,14602
-Nonnendammallee (Richtungsfahrbahn)	1::igndisp -925,14631 -278,14532
+Nonnendammallee (Richtungsfahrbahn)	1::igndisp -941,14637 -278,14532
 #: note: Mittelstreifen vvv
 Königsberger Str. (Richtungsfahrbahn)	1::igndisp 4348,2627 4313,2630 4224,2671 4170,2727
 Königsberger Str. (Richtungsfahrbahn)	1::igndisp 4170,2727 4233,2675 4317,2638 4348,2627
@@ -1259,7 +1259,7 @@ Waldstr.	1 9961,19513 10002,19418
 #: by: https://viz.berlin.de/2021/03/bvg-letzte-arbeiten-am-kreuzberger-viadukt/ (Schlesisches Tor wird frühestens etwa am 22. April 2021 angefahren)
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/u-bahnen-fahren-wieder-durch_a306510
 #: XXX mittlerweile wegen Hochbahnarbeiten komplett gesperrt --- laut rbb Rückbau bis Ende Juni 2021
-#: last_checked: 2021-05-18
+#: last_checked: 2021-05-28
 #: check_frequency: 30d
 #: next_check: 2021-06-30
 # REMOVED (Arbeiten am Bahnhof dauern länger) --- #: next_check: 2021-04-01
@@ -1360,8 +1360,8 @@ Adlergestell: Straßenbahntrasse	3nocross 26286,-1901 26698,-2322 26871,-2500
 Bahnhofsvorplatz S-Bhf. Priesterweg	1 7227,6080 7252,6080 7252,6058 7227,6058
 #: by: mapillary
 Am Heidehof	1s:q3 -1410,2726 -1571,2669 -1612,2785
-Otto-Suhr-Allee: Mittelstreifen mit parkenden Autos	3nocross 4507,11936 4596,11912 4653,11896
-Gradestr.: Absperrgitter am nördlichen Gehweg	3nocross 11473,5131 11676,5185 11799,5191
+#: note: gesehen an Pfingstmontag 2021
+Nußbaumallee: durch Tore abgesperrt	2 1113,12392 1206,12364
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1676,10 +1676,11 @@ Eichhornstr.	1s:q3 8232,11414 8253,11306 8280,11296
 #: add_fragezeichen: Ist die Einbahnstraße mittlerweile für Radfahrer offen? vvv
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_16_sitzung.pdf vvv
 #: by: http://www.infravelo.de/projekt/ahornallee/ (2. Quartal 2021 - 4. Quartal 2021, keine Erwähnung der Lindenallee)
+#: source_id: 2147347235 (bis 13.8.2021: Umbau der Ampelanlage)
 #: osm_watch: way id="850742955" version="1"
 #: last_checked: 2021-04-26 (mapillary)
 #: check_frequency: 180d
-#: next_check: 2021-12-31
+#: next_check: 2021-08-13
 Ahornallee	1s:q3 1589,11483 1574,11379
 #: osm_watch: way id="24852084" version="10"
 #: last_checked: 2021-03-20
@@ -1717,9 +1718,10 @@ Neue Bahnhofstr.	1s:q3 14908,11231 14918,11249
 #: add_fragezeichen: gibt es die Einbahnstraßenregelung in der Soorstr. noch?
 #: source_id: 2147347063
 #: osm_watch: way id="4708164" version="16"
-#: last_checked: 2021-03-20
-#: check_frequency: 90d
-#: next_check: 2021-05-17
+#: last_checked: 2021-05-24
+# REMOVED --- #: check_frequency: 90d
+#: next_check: 2021-09-01
+#: valid: 20210901-
 Soorstr.	1s:q3 1861,11284 1884,11126
 # 
 Einkaufszentrum am Gesundbrunnen	1 9291,15740 9363,15738
@@ -1729,6 +1731,9 @@ Einkaufszentrum am Gesundbrunnen	1 9291,15740 9363,15738
 # gesperrte Wegführung (nicht möglich zu umgehen --- wenn es eine
 # Umgehung gibt, sollte sie in comments_path-orig als PI; kommentiert sein)
 # 
+Otto-Suhr-Allee: Mittelstreifen mit parkenden Autos	3nocross 4507,11936 4596,11912 4653,11896
+Gradestr.: Absperrgitter am nördlichen Gehweg	3nocross 11473,5131 11676,5185 11799,5191
+Gatower Str.: Mittelstreifen	3nocross -4412,12179 -4365,12358 -4351,12460
 Brunnenstr.: Mittelstreifen	3nocross 9267,15790 9291,15740 9309,15700
 Hindenburgdamm: Mittelstreifen	3nocross 4596,3738 4603,3704 4603,3658
 An der Urania: breiter Mittelstreifen	3nocross 6740,10755 6685,10690 6532,10529
@@ -3239,7 +3244,7 @@ offenes Tor	BNP:3 12592,9249
 Drängelgitter	BNP:3::trailer=10 1035,14996
 #: next_check_id: BUSINESSPARKBERLIN-2020
 #: add_fragezeichen: existiert die Schranke noch?
-#: last_checked: 2020-11-28
+#: last_checked: 2021-05-20 (mapillary)
 #: check_frequency: 180d
 Schranke, umständlich zu umfahren	BNP:5::trailer=15 19608,-1953
 Schranke	BNP:2::trailer=5 19617,6208
@@ -3251,6 +3256,13 @@ Drängelgitter	BNP:3::trailer=10 32418,6303
 #: section temporäre Sperrungen (Baustellen etc.) vvvvvvvvvvvvvvvvvvvvvvvvvv
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# 
+#: next_check_id: TEGELERBRUECKE-2021
+#: osm_watch: way id="930770437" version="2"
+#: last_checked: 2021-05-24
+#: check_frequency: 180d
+#: next_check: 2023-12-01
+Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, komplett gesperrt	2::inwork -196,16060 -203,16064 -205,16086 -224,16095 -265,16111
 # 
 #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=75609
 #: XXX bis wann ist gilt hier die Einbahnstraßenregelung?
@@ -3282,7 +3294,7 @@ Gotlindestr.: Einbahnstraßenregelung	1s:q4:inwork 16720,12614 16859,12613
 Rudi-Arndt-Str.: Einbahnstraßenregelung	1s:q4:inwork 13449,13892 13359,13832
 # 
 #: osm_watch: way id="871451762" version="1"
-#: last_checked: 2021-03-23
+#: last_checked: 2021-05-26
 #: check_frequency: 90d
 Straße 77: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 15320,12375 15408,12394
 # 
@@ -3320,7 +3332,7 @@ Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 
 #: XXX ggfs. culdesac- und str_cont_ausnahme-Einträge erstellen, sollte ein Teilabschnitt der Straße endgültig verschwinden
 #: XXX mittlerweile (April 2021) wurde der südliche Teil schon weggebaggert
 #: osm_watch: way id="25008069" version="10"
-#: last_checked: 2021-04-09
+#: last_checked: 2021-05-28
 #: check_frequency: 60d
 Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11916,11846 11923,11881 11940,11982
 # 
@@ -3328,7 +3340,7 @@ Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11916,11846 11923,1
 #: by: https://www.trei-wohnen.de/projekte/berlin-fuerstenberger-strasse/ (Fertigstellung Q3/2022)
 #: XXX Bis wann gehen die Bauarbeiten? Eigentlich eine "unechte" Einbahnstraße.
 #: osm_watch: way id="308312347" version="3"
-#: last_checked: 2021-03-29 (daf)
+#: last_checked: 2021-05-24
 #: check_frequency: 90d
 #: next_check: 2022-08-15
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s:q3 10472,14632 10320,14608
@@ -3336,7 +3348,7 @@ Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s:q3 10472,14632 10320,14608
 #: XXX bleibt die Absperrung dauerhaft?
 #: osm_watch: way id="830757933" version="1"
 #: osm_watch: way id="610818155" version="4"
-#: last_checked: 2021-05-03
+#: last_checked: 2021-05-23
 #: check_frequency: 60d
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 # 
@@ -3346,7 +3358,7 @@ Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 #: check_frequency: 60d
 Otto-Ostrowski-Str.: Hochbauarbeiten, gesperrt	2::inwork 13702,13634 13711,13615 13769,13487
 # 
-#: last_checked: 2021-05-16 vvv
+#: last_checked: 2021-05-23 vvv
 #: check_frequency: 14d vvv
 Wege am S-Bhf. Betriebsbahnhof Rummelsburg: wegen Bauarbeiten gesperrt	2::inwork 16900,9861 16895,9922 16841,9997
 Wege am S-Bhf. Betriebsbahnhof Rummelsburg: wegen Bauarbeiten gesperrt	2::inwork 16895,9922 16886,9982
@@ -3573,7 +3585,7 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728
 #: by: https://www.bvg.de/de/index.php?section=downloads&cmd=extra:78:2:1&download=3941 (hier: bis Mai 2021)
 #: also_indoor: traffic (G,H) vvv
 #: source_id: 2147345254 (bis 06.06.2021) vvv
-#: last_checked: 2021-05-13 vvv
+#: last_checked: 2021-05-28 vvv
 #: next_check: 2021-06-06 vvv
 #: priority: #A vvv
 Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10687,11853 10672,11870 10642,11901
@@ -3584,7 +3596,7 @@ Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10680,11875
 #: source_id ^^^
 #: also_indoor ^^^
 # 
-#: last_checked: 2021-04-19
+#: last_checked: 2021-05-24
 #: check_frequency: 60d
 #: priority: #A
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
@@ -3595,11 +3607,11 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="1"
 #: osm_watch: node id="6778873745" version="1"
-#: last_checked: 2021-05-18
+#: last_checked: 2021-05-24
 #: check_frequency: 30d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
-#: last_checked: 2021-05-18
+#: last_checked: 2021-05-28
 #: check_frequency: 60d
 Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwork 10805,12468 10803,12470
 # 
@@ -3608,7 +3620,7 @@ Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwor
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="729492933" version="2"
 #: osm_watch: way id="882672445" version="1"
-#: last_checked: 2021-05-18
+#: last_checked: 2021-05-28
 #: check_frequency: 60d
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
 # 
@@ -3651,12 +3663,7 @@ Rollbergstr.: Bauarbeiten, Zufahrt von der Karl-Marx-Str. gesperrt	2s:q4:inwork 
 #: check_frequency: 21d
 Rollbergstr.: wegen Bauarbeiten komplett gesperrt	2::inwork 12226,8137 12295,8154
 # 
-#: next_check_id: METROPOLITANPARK-2019
-#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2020-08-23
-#: check_frequency: 60d
-Metropolitan Park: Bauarbeiten	2::inwork -8019,14036 -8150,14064
-# 
+# REMOVED (offen) --- #: next_check_id: METROPOLITANPARK-2019 --- #: XXX wann sind die Bauarbeiten beendet? --- #: last_checked: 2020-08-23 --- #: check_frequency: 60d --- Metropolitan Park: Bauarbeiten	2::inwork -8019,14036 -8095,14056 -8183,14041
 # REMOVED (bei osm nicht gesperrt) --- #: osm_watch: way id="686305629" version="2" --- #: last_checked: 2019-09-14 --- #: check_frequency: 90d --- Hohenloher Weg: Bauarbeiten, gesperrt	2::inwork -8295,15778 -8178,15741
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
@@ -3683,7 +3690,7 @@ Wäscherinnenweg: teilweise gesperrt	2::inwork 21444,5112 21358,5072
 #: by: https://www.parlament-berlin.de/ados/17/IIIPlen/vorgang/d17-2854.pdf (Bebauungsplan, Plan befindet sich auf der tatsächlichen Seite 366 sowie 373)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/virtuelle-stadtwerkstatt-informiert-ueber-bauprojekte-in-berlins-historischer-mitte_a292967
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2021-05-18
+#: last_checked: 2021-05-28
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
 # REMOVED --- #: next_check_id: SOWJETISCHESEHRENMAL-2019 --- #: XXX wann sind die Bauarbeiten beendet? -> laut Schild bis Mai 2020 --- #: last_checked: 2019-11-01 --- #: next_check: 2020-05-15 --- Treptower Park, am Sowjetischen Ehrenmal: Weg wegen Bauarbeiten gesperrt	2::inwork 14824,9390 14797,9396
@@ -3692,7 +3699,7 @@ Wäscherinnenweg: teilweise gesperrt	2::inwork 21444,5112 21358,5072
 #: XXX wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="5096644" version="16"
 #: priority: #C
-#: last_checked: 2021-05-18
+#: last_checked: 2021-05-24
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3831,6 +3838,8 @@ Mergenthalerring: durch Tore versperrt	2::inwork 14121,8147 14210,8227 14229,827
 #: XXX rund um das Ministeriums für Ernährung, Landwirtschaft und Verbraucherschutz
 #: XXX "Verkehrsregelung bleibt voraussichtlich bis 2021 bestehen", trotzdem in der Anfangszeit häufiger nachprüfen
 #: XXX in der Glinkastr. Einbahnstraße offen für Radfahrer
+#: XXX laut rbb nur bis 1.6.2021
+#: also_indoor: traffic (G,H)
 #: source_id: 2147343289 (bis Mitte 2021)
 #: source_id: 2147343291 (Einbahnstraße in der Glinkastr.)
 #: osm_watch: way id="43233756" version="17"
@@ -3840,7 +3849,7 @@ Mergenthalerring: durch Tore versperrt	2::inwork 14121,8147 14210,8227 14229,827
 #: priority: #A vvv
 #: last_checked: 2021-05-22 vvv
 #: check_frequency: 60d vvv
-#: next_check: 2021-06-30 vvv
+#: next_check: 2021-06-01 vvv
 #: valid: -20210630 vvv
 Französische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch für Fußgänger	2:inwork 9076,12054 9183,12076
 #: source_id: 2147343292
@@ -4004,16 +4013,17 @@ Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5574,12
 # REMOVED --- #: next_check_id: MOEWENWEG-2017 --- #: osm_watch: way id="618339166" version="7" --- #: XXX nach den Bauarbeiten vermutlich nur ein Rad/Gehweg --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2017/pressemitteilung.632264.php ("Fertigstellung ist für den Sommer 2018 geplant") --- #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_48_5417_5552_online.pdf (Benennung von Privatstraßen) --- #: XXX hier ("Baugebiet Grüne Aue) werden drei Privatstraßen benannt (fehlen alle in Berlin.coords.data, Lage? Qualität?) (siehe auch fragezeichen-orig für die anderen zwei) --- #: XXX An den Grachten: 11123 --- #: XXX Klompenweg: 11124; für Berlin.coords.data: Klompenweg|Biesdorf|12683 --- #: XXX Am Groen: 11125; für Berlin.coords.data siehe fragezeichen-orig --- #: last_checked: 2019-07-28 --- #: check_frequency: 30d --- Möwenweg: wegen Bauarbeiten komplett gesperrt, wird danach wohl zum "Klompenweg", Qualität? Dürfen danach hier weiterhin Kfz fahren?	2::inwork 22101,10985 22146,10995 22172,10996 --- Möwenweg: wegen Bauarbeiten komplett gesperrt, wird danach wohl zum "Klompenweg", Qualität? Dürfen danach hier weiterhin Kfz fahren?	2::inwork 22172,10996 22195,10993
 # 
 #: next_check_id: BEBAUUNGSPLAN-XXI-34A
-#: last_checked: 2021-02-21 vvv
-#: check_frequency: 90d vvv
-#: next_check: 2021-06-30 vvv
+#: last_checked: 2021-05-23 vvv
+#: check_frequency: 60d vvv
+# REMOVED --- #: next_check: 2021-06-30 vvv
 # REMOVED (hier mittlerweile offen) --- Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11489 20627,11552
 #: osm_watch: way id="10432861" version="22"
 Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20627,11552 20631,11621 20633,11651
-#: osm_watch: way id="744233528" version="11"
+# REMOVED --- #: osm_watch: way id="744233528" version="11"
 # REMOVED (hier mittlerweile offen) --- Heino-Schmieden-Weg: größtenteils noch wegen Bauarbeiten gesperrt	2::inwork 20720,11484 20726,11539
-Heino-Schmieden-Weg: größtenteils noch wegen Bauarbeiten gesperrt	2::inwork 20726,11539 20735,11613 20831,11604 20818,11480
-#: next_check ^^^
+# REMOVED (mittlerweile offen) --- Heino-Schmieden-Weg: größtenteils noch wegen Bauarbeiten gesperrt	2::inwork 20726,11539 20730,11574 20735,11613 20831,11604 20827,11562 20823,11527 20818,11480
+Gisela-Reissenberger-Platz: wegen Bauarbeiten gesperrt	2::inwork 20665,11620 20735,11613
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 # 

@@ -70,7 +70,7 @@ sub action_revgeocode {
     @cr = map { $_ eq "" ? $no_name : $_ } @cr;
 
     my $cr = join("/", @cr);
-    print $q->header(-type => 'text/plain', -access_control_allow_origin => '*');
+    print $q->header(-type => 'application/json', -access_control_allow_origin => '*');
     print JSON::XS->new->canonical->ascii->encode({ crossing => $cr,
 						    bbbikepos => $xy,
 						    origlon => $lon,
@@ -80,7 +80,7 @@ sub action_revgeocode {
 
 sub action_config {
     my $q = shift;
-    print $q->header(-type => 'text/plain');
+    print $q->header(-type => 'application/json');
 
     require BBBikeCGI::Config;
     my $r = BBBikeCGI::Config->the_config('json');

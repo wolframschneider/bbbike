@@ -524,7 +524,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-05-13
+#: last_checked: 2021-05-28
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -2219,7 +2219,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-05-13
+#: last_checked: 2021-05-28
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2427,7 +2427,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
 # REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
-#: last_checked: 2021-03-26 (mapillary)
+#: last_checked: 2021-04-14 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2021-08-13
 	q4::inwork 13508,15912 13312,16027 13189,16089 12943,16214 12859,16255 12797,16285 12725,16321 12564,16399 12399,16479 12189,16578
@@ -2467,7 +2467,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2021-04-11
+#: last_checked: 2021-05-24
 #: check_frequency: 60d
 #: next_check: 2021-06-30
 	q3::inwork  8986,16092 9178,16317
@@ -2606,6 +2606,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
+#: by: https://www.architektur-urbanistik.berlin/index.php?threads/oasis-hansahof-bachstra%C3%9Fe-1-2.131/page-4#post-15591 (mittlerweile fertig & bewohnt --- ist der Weg auch schon offen?)
 #: next_check_id: ALTONAERSCHLESWIGER-2019
 #: last_checked: 2021-04-25
 #: check_frequency: 30d
@@ -2656,7 +2657,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194962398" version="11"
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-05-18
+#: last_checked: 2021-05-28
 	2::inwork 11329,12497 11209,12430
 ',
          'from' => undef,
@@ -2704,7 +2705,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-05-17
+#: last_checked: 2021-05-27
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2762,7 +2763,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="1"
 #: osm_watch: way id="934995901" version="1"
-#: last_checked: 2021-05-22
+#: last_checked: 2021-05-28
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2854,8 +2855,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
 #: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
+#: source_id: 2147347233 (bis 23.12.2021)
+#: XXX Aktivierung der Vollsperrung!
+#: priority: #A
+#: next_check: 2021-05-30
 #: also_indoor: traffic (H,G) vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
+#: XXX NEW	Gardeschützenweg (Lichterfelde) in beiden Richtungen zwischen Hindenburgdamm und Lipaer Straße: Leitungsbau,Vollsperrung, Fußverkehr frei, vom 31.05.2021 08:30 Uhr bis 23.12.2021 17:00 Uhr
 # REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv --- #: last_checked: 2020-12-27 (mapillary) vvv --- #: next_check: 2021-05-03 vvv
 	q4::inwork; 4515,4760 4214,4595
 #: note: hier nur ein kurzes Stück
@@ -2879,8 +2885,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: add_fragezeichen: Wann ist die Fahrbahn wieder offen?
 #: also_indoor: traffic
-#: last_checked: 2021-04-26 (mapillary)
-	q4::inwork -3252,12580 -3444,12580
+#: last_checked: 2021-05-24
+	q4::inwork -3259,12580 -3444,12580
 ',
          'from' => undef,
          'id' => 3267,
@@ -2965,9 +2971,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1601923909,
          'id' => 3284,
          'source_id' => '2147346452',
-         'text' => 'Torstr.: Engstelle von Rosenthaler Platz Richtung Mollstr., bis 31.5.2021',
+         'text' => 'Torstr.: Engstelle von Rosenthaler Platz Richtung Mollstr., bis 30.6.2021',
          'type' => 'handicap',
-         'until' => 1622473200
+         'until' => 1625065200
        },
        undef,
        undef,
@@ -3145,7 +3151,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        {
-         'data' => '#: last_checked: 2021-04-11
+         'data' => '#: last_checked: 2021-05-24
 #: next_check: 2021-08-27
 	q2::inwork 8913,16159 9099,16398
 ',
@@ -3191,7 +3197,17 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: 2147347231
+	2::inwork 12672,20720 12723,20691
+',
+         'from' => 1622152800,
+         'id' => 3331,
+         'source_id' => '2147346882',
+         'text' => 'Bahnhofstr.: Unterführung unter der A114 gesperrt, möglicherweise sind auch Fußgänger und Radfahrer betroffen, am 29.5.2021 von 6:00 bis 20:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1622311200
+       },
        {
          'data' => '#: by: https://tierparkcenter.de/wochenmarkt/ (Öffnungszeiten)
 #: tempex: (mo,th,fr) T08-T17
@@ -3210,17 +3226,17 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-05-19 (mapillary)
+#: last_checked: 2021-05-23
 #: check_frequency: 30d
-#: next_check: 2021-05-31
+# REMOVED (kann nicht gehalten werden) --- #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
 ',
          'from' => 1614578400,
          'id' => 3336,
          'source_id' => '2147346922',
-         'text' => 'Karlshorster Str.: Richtung Hauptstr. wegen Bauarbeiten gesperrt, Radfahrer müssen schieben, voraussichtlich ab 2. März 2021 bis Ende Mai 2021',
+         'text' => 'Karlshorster Str.: Richtung Hauptstr. wegen Bauarbeiten gesperrt, Radfahrer müssen schieben, voraussichtlich ab 2. März 2021 bis mindestens Ende Mai 2021, vermutlich noch länger',
          'type' => 'handicap',
-         'until' => 1622473200
+         'until' => 1633017600
        },
        undef,
        undef,
@@ -3296,7 +3312,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: XXX laut rbb bis 28.6.2021
 #: also_indoor: traffic
 #: priority: #A vvv
-#: last_checked: 2021-05-17 vvv
+#: last_checked: 2021-05-23 vvv
 #: check_frequency: 21d vvv
 #: next_check: 2021-06-28 vvv
 # REMOVED (hier fertig) ---	q4::inwork 13025,12523 13067,12583
@@ -3453,7 +3469,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: add_fragezeichen: Wie lange gehen die Bauarbeiten?
-#: also_indoor: traffic
+#: also_indoor: traffic (G)
 #: priority: #A
 #: last_checked: 2021-04-28
 	q4::inwork 2523,5114 2746,5537
@@ -3494,7 +3510,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: ARCHIBALDWEG-2021
 #: priority: #B
 #: also_indoor: traffic (G)
-#: last_checked: 2021-05-20
+#: last_checked: 2021-05-23
 #: check_frequency: 14d
 	q4::inwork 15870,10938 15674,10851
 ',
@@ -3505,7 +3521,10 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        {
-         'data' => '#: XXX wird diese Spielstraße verstetigt?
+         'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/saison-startet_a311283 (und die anderen neuen Spielstraßen in FH-KB)
+#: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen
+#: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen/kieze
+#: XXX wird diese Spielstraße verstetigt?
 #: next_check: 2022-05-24
 	q4::temp::play 14798,12502 15005,12443
 ',
@@ -3606,17 +3625,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1630360799
        },
-       {
-         'data' => '#: XXX check!
-	q4::inwork; 15256,11884 15300,11965
-',
-         'from' => 1621144800,
-         'id' => 3375,
-         'source_id' => '2147347189',
-         'text' => 'Gürtelstr.: Brückenbauarbeiten, Radfahrer Richtung Frankfurter Allee müssen absteigen und schieben, vom 17.05.2021 08:00 Uhr bis 08.06.2021 18:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1623168000
-       },
+       undef,
        {
          'data' => '	q4::temp::play 11917,9663 12074,9689
 ',
@@ -3638,7 +3647,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1631743199
        },
        {
-         'data' => '	q4::inwork 17261,4267 17297,4159 17341,4046 17346,4031 17379,3932
+         'data' => '#: next_check_id: STERNDAMM-2020
+	q4::inwork 17261,4267 17297,4159 17341,4046 17346,4031 17379,3932
 ',
          'from' => 1621202400,
          'id' => 3378,
@@ -3646,6 +3656,43 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Johannes-Werner-Str.: Gleisbauarbeiten, Fahrbahn gesperrt, bis 2.7.2021',
          'type' => 'handicap',
          'until' => 1625238000
+       },
+       {
+         'data' => '#: note: Schild der Wasserbetriebe
+#: also_indoor: traffic (H)
+#: last_checked: 2021-05-24
+#: check_frequency: 60d
+#: next_check: 2021-09-01
+	q4::inwork 1861,11284 1884,11126 1865,11082
+',
+         'from' => 1621880668,
+         'id' => 3379,
+         'text' => 'Soorstr.: zwischen Masurenallee und Bredtschneiderstr. Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis August 2021',
+         'type' => 'handicap',
+         'until' => 1630447200
+       },
+       {
+         'data' => '#: next_check_id: HEIDEKRAUTBAHN-2021
+#: add_fragezeichen: Ist der neue Weg bereits offiziell eröffnet?
+#: last_checked: 2021-05-24
+#: check_frequency: 30d
+	2::inwork 7236,19689 7273,19682 7435,19547 7446,19522 7504,19459
+',
+         'from' => undef,
+         'id' => 3380,
+         'text' => 'An der Nordbahn: neue Führung des Mauerwegs im Bereich Bhf. Wilhelmsruh/zukünftiger Bahnhof der Heidekrautbahn, bereits weitgehend fertig, aber noch nicht offiziell eröffnet',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '	2::inwork 14962,-15017 15046,-14607
+',
+         'from' => 1622325600,
+         'id' => 3381,
+         'source_id' => 'LS/722-W/21/077',
+         'text' => 'Ortsdurchfahrt Groß Machnow: Bauarbeiten, Fahrbahn gesperrrt, evtl. sind auch Radfahrer betroffen, 31.05.2021 bis 20.08.2021',
+         'type' => 'gesperrt',
+         'until' => 1629496800
        }
      
 );
