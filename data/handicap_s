@@ -11,7 +11,7 @@ Krautstr.: Umbau zur Fuﬂg‰ngerzone, Radfahrer frei	q4::inwork 12002,12008 12021,
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q3::inwork; 14382,9299 14242,9448
 Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork; 14242,9448 14185,9509 14089,9610
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
-Kˆpenicker Str.: Fahrbahn zwischen Semmelweisstr. und Rudower Str. gesperrt, bis zum 11.6.2021	q2::inwork 19803,1911 19766,1796
+Kˆpenicker Str.: Fahrbahn zwischen Semmelweisstr. und Rudower Str. gesperrt, bis zum 11.6.2021	q3::inwork 19803,1911 19766,1796
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607,15282
 Holzmarktstr. - Ifflandstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg, Bordsteine	q4::inwork 11524,12314 11589,12296
 Chausseestr.: gemeinsamer Rad- und Gehweg	q2::inwork; 8732,14098 8607,14253 8570,14299 8490,14397 8442,14456 8406,14507 8336,14586
@@ -55,7 +55,6 @@ Dennewitzstr.: Einbahnstraﬂenregelung, gemeinsamer Geh- und Radweg	q3::inwork; 8
 Moltkestraﬂenbr¸cke: Einbahnstraﬂe, Richtung S¸den muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3898,4490
 Erich-Weinert-Str.: Bauarbeiten in Hˆhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
 Erich-Weinert-Str.: Bauarbeiten in Hˆhe Hosemannstr., Gehweg benutzen	q4::inwork 12556,15518 12605,15491 12621,15482
-Neumannstr.: Bauarbeiten Richtung S¸den zwischen Eschengraben und Thulestr., Ausweichen auf Gehweg	q3; 11613,16747 11630,16623
 (provisorische Fuﬂg‰ngerbr¸cke S‰ntisstr.): Fuﬂg‰nger	q3 9014,898 9005,912 9002,919 9047,948 9058,932
 S‰ntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
 (Wuhlewanderweg - Parchimer Str.): einige Fuﬂg‰nger	q1 22031,12208 22080,12218
@@ -248,6 +247,7 @@ Eichgestell: bei schˆnem Wetter viele Fuﬂg‰nger	q1 18186,7200 18944,6870 19052,6
 (Parallelweg am Eichgestell): bei schˆnem Wetter viele Fuﬂg‰nger	q1 18134,7173 18908,6834
 (Parallelweg am Eichgestell - Eichgestell): bei schˆnem Wetter viele Fuﬂg‰nger	q1 18908,6834 18944,6870
 (Parallelweg am Eichgestell - Wasserwerk Wuhlheide): bei schˆnem Wetter viele Fuﬂg‰nger	q1 18944,6870 19045,6959 19080,6986
+(Firlstr. - Eichgestell): Fuﬂg‰nger	q2 18771,6699 18784,6720 18827,6723 18874,6748 18895,6819 18908,6834
 Wuhlheide: bei schˆnem Wetter viele Fuﬂg‰nger und Kinder	q2 20199,6318 20262,6493 20225,6631 20269,6735 20313,6841
 Wuhlheide/R1: Fuﬂg‰nger	q1 20453,6211 20293,6278
 Wuhlheide/FEZ: einige Fuﬂg‰nger	q1 20225,6631 20169,6636 20118,6617 20060,6575 19995,6406
@@ -2093,6 +2093,8 @@ An der Kieler Br¸cke: Fuﬂg‰ngerzone	q3 7877,14504 7804,14445
 (Straﬂe E, Innovationspark Wuhlheide): Gewerbebetriebe	q2 21231,7249 21175,7212 21243,7135
 (Straﬂe G, Innovationspark Wuhlheide): Gewerbebetriebe	q1 21627,6942 21547,7024
 (Relingstr. - Uferweg): einige Fuﬂg‰nger	q2 22358,2460 22399,2481
+(Uferweg): einige Fuﬂg‰nger	q2 22399,2481 22304,2570 22239,2644
+(Am Ruderverein - Uferweg): einige Fuﬂg‰nger	q2 22270,2549 22304,2570
 Am Berlin Museum: einige Katzenkopfreihen	q2 10032,10752 9829,10830
 Cuxhavener Str.: stellenweise eng, einige Fuﬂg‰nger	q3 5931,12399 5904,12417 5886,12467
 (Supermarktparkplatz): Parkplatzverkehr	q2 2554,10258 2551,10266 2706,10362 2718,10359
@@ -2119,6 +2121,9 @@ Voigtstr.: einige Fuﬂg‰nger	q3 14836,12826 14835,12801
 (Gorgasring - Nonnendammallee): gemeinsamer Geh- und Radweg, nicht besonders breit	q2 -695,14819 -676,14773 -679,14743 -941,14637
 (Uferweg an der Stockholmer Str.): Fuﬂg‰nger	q2 8982,17299 8957,17217 8870,17073
 Heubudenbr¸cke: Fuﬂg‰nger	q2 9017,17290 8982,17299 8973,17301
+(Rudower Hˆhe): Fuﬂg‰nger, gesch¸tzte Gr¸nanlage	q4 18245,1699 18300,1612
+(Stanzer Zeile - Mauerweg): schmal	q3 6175,372 6204,331
+Lange Str. (Friedrichshain): mehrere Bodenschwellen	q3 12002,12008 12212,11963
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2482,7 +2487,7 @@ Altenburger Str.: Fuﬂg‰nger, Bordstein	q2 6651,1063 6631,968
 (Lilienthalpark): Fuﬂg‰nger	q2 5571,614 5533,663
 (Lilienthalpark): Fuﬂg‰nger	q2 5531,779 5587,816
 (Hildburghauser Str. - Lilienthalpark): Fuﬂg‰nger, Radfahren nicht erlaubt, ggfs. schieben, einige halbhohe Bordsteine	q2 6446,1033 6435,986 6446,950 6421,892 6414,833 6367,825 6360,825 6352,825 6267,834 6259,835 6250,834 6223,823 6172,822 6163,822 6155,821 6075,821 6066,821 6057,821 5975,821 5964,821 5954,819 5875,807 5867,807 5860,805 5781,800 5742,798 5684,773 5640,746 5590,719
-(Mauerweg Lichtenrade - Lichterfelde): Fuﬂg‰nger	q1 10309,-3191 10051,-3173 9600,-3160 9529,-2628 9506,-2421 9471,-2138 9462,-2050 9081,-2073 8846,-2089 8310,-2037 8376,-1523 7962,-1295 7593,-1034 7144,-565 7169,-520 7164,-473 7146,-466 7098,-523 6965,-387 6668,-100 6498,71 6351,219 6256,363 6198,328 6013,211 5832,93 5441,-150 4842,-547 4596,-707 4406,-910
+(Mauerweg Lichtenrade - Lichterfelde): Fuﬂg‰nger	q1 10309,-3191 10051,-3173 9600,-3160 9529,-2628 9506,-2421 9471,-2138 9462,-2050 9081,-2073 8846,-2089 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568 7176,-515 7175,-479 7164,-473 7146,-466 7097,-527 6961,-389 6668,-100 6498,71 6351,219 6256,363 6204,331 6013,211 5832,93 5441,-150 4842,-547 4596,-707 4406,-910
 Falkenhausenweg: spielende Kinder	q1 7610,1695 7692,1743 7754,1806 7810,1904 7864,2018 7975,2275 8071,2248
 (Gielower Str - Buschkrugallee): Fuﬂg‰nger	q1 14012,4184 14053,4173 14119,4153
 (Parkweg Buschkrugallee - Bruno-Taut-Ring): Fuﬂg‰nger	q1 14053,4173 14045,4164 14009,4148 13910,4090 13873,4067 13798,4037 13721,4023 13656,3989 13601,3895 13632,3875
@@ -2513,7 +2518,7 @@ K¸hleweinstr.: Schule	q1 8014,17468 7998,17564
 Allee der Kosmonauten - Biesdorfer Promenade: Fuﬂg‰nger	q1 19826,13444 19835,13317 19846,13209 19870,13183 19873,13129 20068,13036
 Rathener Str.: enge Straﬂe	q1 24228,14644 24271,14576 24359,14543
 (Paster-Behrens-Str. - H¸sung): Fuﬂg‰nger, hohe Bordsteinkanten	q4 13394,4735 13397,4762
-Stanzer Zeile: enge Straﬂe	q0 6180,376 6130,449 6112,547 6089,643 6066,821 6067,865 6080,1011 6106,1133
+Stanzer Zeile: enge Straﬂe	q0 6175,372 6130,449 6112,547 6089,643 6066,821 6067,865 6080,1011 6106,1133
 (Uferweg an der Havel): enge Br¸cke	q1 -2401,18776 -2434,18832 -2460,18918
 Mommsenstr. (Lichterfelde): enge Straﬂe	q1 3583,4011 3361,3860
 Sodtkestr.: enge Straﬂe	q1 12221,15514 12298,15658 12382,15802 12423,15875
@@ -2709,7 +2714,7 @@ Erna-Sack-Str.: enge Straﬂe	q1 -7486,13321 -7496,13214
 (Buchbinderweg - Zittauer Str.): einige Fuﬂg‰nger	q1 16481,1164 16471,1157 16457,1129 16429,1065 16419,1048 16387,976 16363,956 16349,932
 (Hibiskusweg - Romain-Rolland-Str.): gemeinsamer Rad/Fuﬂweg	q1 13245,17805 13229,17784 13245,17737
 Treutelstr.: enge Straﬂe	q1 5422,19725 5345,19734 5309,19716
-Jenbacher Weg: enge Straﬂe	q0 6400,579 6411,533 6233,412 6180,376 5987,256 5800,138 5703,74 5665,51 5418,-98
+Jenbacher Weg: enge Straﬂe	q0 6400,579 6411,533 6233,412 6175,372 5987,256 5800,138 5703,74 5665,51 5418,-98
 (Charlottenstr. - Allee der Kosmonauten/Fuﬂg‰ngerampel): Gehweg, f¸r Radfahrer freigegeben	q3 20505,14350 20474,14442
 (Charlottenstr. - Annenstr.): als Gehweg ausgeschildert, f¸r Radfahrer nicht freigegeben	q3 20647,14341 20631,14221
 Rudi-Dutschke-Weg: viele Fuﬂg‰nger	q2 2627,5095 2851,5251 2913,5294
@@ -3067,7 +3072,6 @@ Neuenhagener Str. (Mahlsdorf): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	
 Seekorso: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; -8376,6579 -8354,6590
 Seekorso: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; -8339,6578 -8364,6562
 Danneckerstr.: tempor‰re "Klimastraﬂe", f¸r Radfahrer gesperrt: gesperrt, ggfs. schieben	q4::igndisp 13886,10939 13856,10864
-Rollbergstr.: Bauarbeiten, Zufahrt von der Karl-Marx-Str. gesperrt: gesperrt, ggfs. schieben	q4:inwork::igndisp 12714,8249 12545,8209
 Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt: gesperrt, ggfs. schieben	q4:inwork::igndisp 9076,12054 9064,12156
 Kreuzung Sewanstr./Am Tierpark	q1::igndisp; 18631,10167 18647,10172
 Am Tierpark, linker Gehweg	q1::igndisp; 18647,10172 18715,10003

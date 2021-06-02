@@ -182,8 +182,11 @@ Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork;
 # 
 #: XXX wie lange bleibt die Fahrbahn gesperrt?
 #: source_id: 2147347162 (bis 11.6.2021)
+#: priority: #A
+#: last_checked: 2021-05-29
+#: next_check: 2021-06-11
 #: valid: -20210611
-Köpenicker Str.: Fahrbahn zwischen Semmelweisstr. und Rudower Str. gesperrt, bis zum 11.6.2021	q2::inwork 19803,1911 19766,1796
+Köpenicker Str.: Fahrbahn zwischen Semmelweisstr. und Rudower Str. gesperrt, bis zum 11.6.2021	q3::inwork 19803,1911 19766,1796
 # 
 ### Wedding ###
 # 
@@ -289,7 +292,7 @@ Hirtenstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11012,13278 10925,13
 # 
 #: next_check_id: ROSSSTRASSENBRUECKE-2019
 #: last_checked: 2021-05-13 vvv
-#: next_check: 2021-06-06 vvv
+#: next_check: 2021-06-18 vvv
 (Umfahrung Baustelle Neue Roßstraßenbrücke): einige Fußgänger	q3::inwork 10680,11875 10650,11909 10642,11901 10590,11840 10599,11819
 Neue Roßstr.: Fahrbahn gesperrt	q4::inwork 10687,11853 10722,11816
 #: next_check ^^^
@@ -301,7 +304,7 @@ Neue Roßstr.: Fahrbahn gesperrt	q4::inwork 10687,11853 10722,11816
 #: source_id: 2147343739
 #: source_id: 2147343772
 #: last_checked: 2021-04-27
-#: next_check: 2021-06-06
+#: next_check: 2021-06-18
 Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Restaurantbetrieb	q2::inwork 10687,11853 10869,11949
 # 
 # REMOVED --- #: source_id: 2147341587 --- #: last_checked: 2017-11-01 vvv --- #: check_frequency: 21d vvv --- Jägerstr.: Bauarbeiten an der Friedrichstr., auf Gehweg ausweichen	q2::inwork 9195,11972 9393,12000 --- Jägerstr.: Bauarbeiten an der Friedrichstr., auf Gehweg ausweichen	q3::inwork 9393,12000 9523,12019
@@ -338,9 +341,10 @@ Hannah-Arendt-Str.: Fahrbahn Richtung Westen gesperrt	q3::inwork; 8901,12008 884
 # 
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="4597320" version="19"
+#: source_id: 2147343824 (bis 30.6.2021)
 #: last_checked: 2021-05-22
 #: check_frequency: 45d
-# REMOVED --- #: next_check: 2021-05-31
+#: next_check: 2021-06-30
 # REMOVED --- #: valid: 20191218-20210531
 Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, Gehweg explizit für Radfahrer verboten	q4::inwork 8737,12098 8783,11959
 # 
@@ -521,7 +525,7 @@ Sterndamm [Nebenfahrbahn]: Gehweg für Radfahrer frei	q3 17648,5338 17697,5347
 #: XXX laut vmz bis Anfang 2019, laut fritz/rbb bis 30.06.2021
 #: by: http://www.dafmap.de/d/berlin.html?id=3451&mt=0&zoom=16
 #: also_indoor: traffic (H)
-#: last_checked: 2021-05-24
+#: last_checked: 2021-05-30 (daf)
 #: check_frequency: 90d
 #: next_check: 2021-06-30
 #: valid: -20210630
@@ -674,7 +678,7 @@ Neuköllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
 #: source_id: 2147345357 (inaktiv)
 #: source_id: 2147345472 (bis 10.8.2021, Gesamtbaumaßnahme bis 2024)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-03-30
+#: last_checked: 2021-05-30
 #: check_frequency: 120d
 #: next_check: 2021-10-08
 Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12392,8724 12330,8636
@@ -687,7 +691,7 @@ Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 
 #: by: https://www.kms-sonne.de/baustellennews?date=202102 (voraussichtlich bis Sommer 2021)
 #: source_id: 2147345472 (Verschwenkung der KMS)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-03-30
+#: last_checked: 2021-05-30
 #: check_frequency: 120d
 #: next_check: 2021-10-08
 Fuldastr.: Sperrung der Einmündung Karl-Marx-Str.	q3::inwork 12551,8612 12494,8501
@@ -697,7 +701,7 @@ Fuldastr.: Sperrung der Einmündung Karl-Marx-Str.	q3::inwork 12551,8612 12494,85
 #: XXX laut rbbtext bis 4.6.2021
 #: osm_watch: way id="822805265" version="6"
 #: also_indoor: traffic (G)
-#: last_checked: 2021-03-30
+#: last_checked: 2021-05-30
 #: check_frequency: 90d
 #: next_check: 2021-06-30
 Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 12639,8344
@@ -728,7 +732,7 @@ Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 
 #: osm_watch: way id="585753318" version="8"
 #: osm_watch: way id="71392596" version="13"
 #: also_indoor: traffic
-#: last_checked: 2021-05-22 vvv
+#: last_checked: 2021-05-30 vvv
 #: check_frequency: 45d
 #: next_check: 2021-06-30
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249
@@ -862,11 +866,11 @@ Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt
 #: next_check_id: HOSEMANN-2019
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/wasserbetriebe-arbeiten-an-regenueberlaufanlage_a285559 (fertig bis Ende 2021)
 #: source_id: 2147344946 (bis 3. April 2020, Gesamtbaumaßnahme bis Ende 2021)
-#: osm_watch: way id="885619857" version="1"
+#: osm_watch: way id="885619857" version="2"
 #: osm_watch: way id="885619858" version="1"
 #: note: laut rbbtext bis 31.12.2020
 #: priority: #B
-#: last_checked: 2021-04-14 (mapillary) vvv
+#: last_checked: 2021-05-31 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2021-12-31 vvv
 # REMOVED --- #: valid: -20200731 vvv
@@ -891,13 +895,7 @@ Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4+::inwor
 # 
 ### Pankow ###
 # 
-#: next_check_id: NEUMANN-2021
-#: XXX Bis wann gehen die Bauarbeiten (laut Baustellenschild bis Juni 2021)? Wird es dann schon eine Radspur o.ä. geben?
-#: also_indoor: traffic (H,G)
-#: last_checked: 2021-02-22
-#: next_check: 2021-06-01
-Neumannstr.: Bauarbeiten Richtung Süden zwischen Eschengraben und Thulestr., Ausweichen auf Gehweg	q3+; 11613,16747 11630,16623
-# 
+# REMOVED (vermutlich nicht mehr) --- #: next_check_id: NEUMANN-2021 --- #: XXX Bis wann gehen die Bauarbeiten (laut Baustellenschild bis Juni 2021)? Wird es dann schon eine Radspur o.ä. geben? --- #: also_indoor: traffic (H,G) --- #: last_checked: 2021-02-22 --- #: next_check: 2021-06-01 --- Neumannstr.: Bauarbeiten Richtung Süden zwischen Eschengraben und Thulestr., Ausweichen auf Gehweg	q3+; 11613,16747 11630,16623
 # REMOVED --- #: next_check_id: HERMANNHESSESTR-2019 --- #: last_checked: 2019-10-13 vvv --- #: next_check: 2019-12-31 vvv --- Hermann-Hesse-Str.: Bauarbeiten, Radweg wird auf dem Gehweg geführt	q2::inwork 9811,19302 9681,19179 9501,18902 --- #: next_check ^^^ --- #: last_checked ^^^
 # REMOVED --- #: last_checked: 2017-04-09 --- #: next_check: 2017-10-01 --- #: valid: -20171001 --- Schloßallee: Bauarbeiten, Fahrbahn teilweise gesperrt	q2::inwork 11730,19684 11883,19739
 # REMOVED --- #: source_id: 2147340983 vvv --- #: source_id: LMS-BR_r_LMS-BR_91192 --- #: source_id: LMS-BR_r_LMS-BR_91193 --- #: last_checked: 2017-04-09 vvv --- #: next_check: 2017-07-07 vvv --- #: valid: -20170707 vvv --- Blankenburger Weg: Bauarbeiten, Einbahnstraßenregelung, Radweg Richtung Nordosten ist auch gesperrt	q2::inwork; 12222,20637 12442,20805 --- Pankstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 12524,20863 12442,20805
@@ -1182,6 +1180,7 @@ Eichgestell: bei schönem Wetter viele Fußgänger	q1 18186,7200 18944,6870 19052,6
 (Parallelweg am Eichgestell): bei schönem Wetter viele Fußgänger	q1 18134,7173 18908,6834
 (Parallelweg am Eichgestell - Eichgestell): bei schönem Wetter viele Fußgänger	q1 18908,6834 18944,6870
 (Parallelweg am Eichgestell - Wasserwerk Wuhlheide): bei schönem Wetter viele Fußgänger	q1 18944,6870 19045,6959 19080,6986
+(Firlstr. - Eichgestell): Fußgänger	q2 18771,6699 18784,6720 18827,6723 18874,6748 18895,6819 18908,6834
 Wuhlheide: bei schönem Wetter viele Fußgänger und Kinder	q2 20199,6318 20262,6493 20225,6631 20269,6735 20313,6841
 Wuhlheide/R1: Fußgänger	q1 20453,6211 20293,6278
 Wuhlheide/FEZ: einige Fußgänger	q1 20225,6631 20169,6636 20118,6617 20060,6575 19995,6406
@@ -1384,7 +1383,7 @@ Fritz-Schiff-Weg: Fußgänger	q1 13457,12505 13476,12461 13448,12340
 #: next_check_id: ROSSSTRASSENBRUECKE-2019
 #: XXX nach den Bauarbeiten den alten Eintrag wieder herstellen
 #: last_checked: 2021-04-27
-#: next_check: 2021-06-06
+#: next_check: 2021-06-18
 (Fischerinsel, Spreekanalufer): Bauarbeiten, Restaurantbetrieb, Engstelle	q2::inwork 10672,11870 10680,11875 10776,11942
 # --- #: note: an schönen Tagen (oder immer?) zusätzliche Engstelle durch Restaurantbetrieb östlich der Roßstraßenbrücke
 # --- (Fischerinsel, Spreekanalufer): Fußgänger	q1 10672,11870 10680,11875 10776,11942
@@ -3593,6 +3592,8 @@ An der Kieler Brücke: Fußgängerzone	q3 7877,14504 7804,14445
 (Straße E, Innovationspark Wuhlheide): Gewerbebetriebe	q2 21231,7249 21175,7212 21243,7135
 (Straße G, Innovationspark Wuhlheide): Gewerbebetriebe	q1 21627,6942 21547,7024
 (Relingstr. - Uferweg): einige Fußgänger	q2 22358,2460 22399,2481
+(Uferweg): einige Fußgänger	q2 22399,2481 22304,2570 22239,2644
+(Am Ruderverein - Uferweg): einige Fußgänger	q2 22270,2549 22304,2570
 Am Berlin Museum: einige Katzenkopfreihen	q2 10032,10752 9829,10830
 Cuxhavener Str.: stellenweise eng, einige Fußgänger	q3 5931,12399 5904,12417 5886,12467
 (Supermarktparkplatz): Parkplatzverkehr	q2 2554,10258 2551,10266 2706,10362 2718,10359
@@ -3625,6 +3626,9 @@ Voigtstr.: einige Fußgänger	q3 14836,12826 14835,12801
 (Gorgasring - Nonnendammallee): gemeinsamer Geh- und Radweg, nicht besonders breit	q2 -695,14819 -676,14773 -679,14743 -941,14637
 (Uferweg an der Stockholmer Str.): Fußgänger	q2 8982,17299 8957,17217 8870,17073
 Heubudenbrücke: Fußgänger	q2 9017,17290 8982,17299 8973,17301
+(Rudower Höhe): Fußgänger, geschützte Grünanlage	q4 18245,1699 18300,1612
+(Stanzer Zeile - Mauerweg): schmal	q3 6175,372 6204,331
+Lange Str. (Friedrichshain): mehrere Bodenschwellen	q3 12002,12008 12212,11963
 # 
 ######################### User Contributions #################################
 # 
@@ -4266,12 +4270,12 @@ Altenburger Str.: Fußgänger, Bordstein	q2 6651,1063 6631,968
 #: last_checked ^^^
 # 
 #: osm_watch: way id="114381362" version="6"
-#: last_checked: 2021-02-20
+#: last_checked: 2021-05-30
 #: check_frequency: 360d
 (Hildburghauser Str. - Lilienthalpark): Fußgänger, Radfahren nicht erlaubt, ggfs. schieben, einige halbhohe Bordsteine	q2 6446,1033 6435,986 6446,950 6421,892 6414,833 6367,825 6360,825 6352,825 6267,834 6259,835 6250,834 6223,823 6172,822 6163,822 6155,821 6075,821 6066,821 6057,821 5975,821 5964,821 5954,819 5875,807 5867,807 5860,805 5781,800 5742,798 5684,773 5640,746 5590,719
 #: XXX ^^^
 #: by ^^^
-(Mauerweg Lichtenrade - Lichterfelde): Fußgänger	q1 10309,-3191 10051,-3173 9600,-3160 9529,-2628 9506,-2421 9471,-2138 9462,-2050 9081,-2073 8846,-2089 8310,-2037 8376,-1523 7962,-1295 7593,-1034 7144,-565 7169,-520 7164,-473 7146,-466 7098,-523 6965,-387 6668,-100 6498,71 6351,219 6256,363 6198,328 6013,211 5832,93 5441,-150 4842,-547 4596,-707 4406,-910
+(Mauerweg Lichtenrade - Lichterfelde): Fußgänger	q1 10309,-3191 10051,-3173 9600,-3160 9529,-2628 9506,-2421 9471,-2138 9462,-2050 9081,-2073 8846,-2089 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568 7176,-515 7175,-479 7164,-473 7146,-466 7097,-527 6961,-389 6668,-100 6498,71 6351,219 6256,363 6204,331 6013,211 5832,93 5441,-150 4842,-547 4596,-707 4406,-910
 #: by: ^^^
 #: by: Josch [AM]
 Falkenhausenweg: spielende Kinder	q1 7610,1695 7692,1743 7754,1806 7810,1904 7864,2018 7975,2275 8071,2248
@@ -4336,7 +4340,7 @@ Rathener Str.: enge Straße	q1 24228,14644 24271,14576 24359,14543
 # 
 #: by: clara wronski:
 #: corrected_by: srt/policy (q1 -> q0-)
-Stanzer Zeile: enge Straße	q0- 6180,376 6130,449 6112,547 6089,643 6066,821 6067,865 6080,1011 6106,1133
+Stanzer Zeile: enge Straße	q0- 6175,372 6130,449 6112,547 6089,643 6066,821 6067,865 6080,1011 6106,1133
 # 
 #: by: rjoop (Foto):
 (Uferweg an der Havel): enge Brücke	q1 -2401,18776 -2434,18832 -2460,18918
@@ -4893,7 +4897,7 @@ Erna-Sack-Str.: enge Straße	q1 -7486,13321 -7496,13214
 Treutelstr.: enge Straße	q1 5422,19725 5345,19734 5309,19716
 #: by: Franz Puder:
 #: corrected_by: srt/policy (q1 -> ...)
-Jenbacher Weg: enge Straße	q0- 6400,579 6411,533 6233,412 6180,376 5987,256 5800,138 5703,74 5665,51 5418,-98
+Jenbacher Weg: enge Straße	q0- 6400,579 6411,533 6233,412 6175,372 5987,256 5800,138 5703,74 5665,51 5418,-98
 #: by: M.Laufmann: vvv
 #: corrected_by: srt/policy (q4 -> q3)
 (Charlottenstr. - Allee der Kosmonauten/Fußgängerampel): Gehweg, für Radfahrer freigegeben	q3 20505,14350 20474,14442
