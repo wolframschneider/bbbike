@@ -164,6 +164,7 @@ Kreisverkehr	Roundabout 44596,21287
 Kreisverkehr	Roundabout 41204,17507
 Kreisverkehr	Roundabout -17045,14005
 Kreisverkehr	Roundabout 11920,16508
+Kreisverkehr	Roundabout 17167,-1981
 # 
 #: by: Marita:
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
@@ -341,7 +342,7 @@ Bus 334	busroute_N -7330,7878 -7070,7984 -6986,8074 -6869,8150 -6669,8207 -6460,
 Bus 334	busroute_N -5454,6896 -5349,6836 -5123,6701 -5064,6853
 Bus 697	busroute_N -6482,5711 -6398,5661 -6319,5606
 Bus 184, Bus 248	busroute_N 7949,7607 8188,7610 8263,7611
-Bus 184	busroute_N 8263,7611 8267,7572 8302,7508 8376,7440 8386,7430 8429,7403 8479,7389 8604,7381 8715,7384 8806,7382 8886,7377 8971,7359 9051,7340 9107,7297 9242,7286
+Bus 184	busroute_N 8263,7611 8267,7572 8302,7508 8376,7440 8386,7430 8429,7403 8479,7389 8548,7384 8600,7381 8715,7384 8806,7382 8886,7377 8971,7359 9051,7340 9107,7297 9242,7286
 Bus 106	busroute_N 8061,5949 7967,5951 7832,5955 7730,5958 7692,5960 7607,5944
 Bus 106, Bus 204	busroute_N 7578,8358 7494,8354 7497,8168
 Bus M46, Bus 106	busroute_N 7696,7771 7774,7724
@@ -1266,7 +1267,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="5"
-#: last_checked: 2021-04-13
+#: last_checked: 2021-06-08
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
@@ -1307,7 +1308,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2021-04-24
+#: last_checked: 2021-06-04
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1382,7 +1383,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2021-04-30 (mapillary)
+#: last_checked: 2021-06-08
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13390
 # 
@@ -1464,7 +1465,7 @@ ausgeschildert nach Bernau	CP; 32543,18082 32537,18066 32519,18076
 ausgeschildert Sophie-Charlotte-Platz	CP; 3064,11657 3144,11659 3159,11562
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
-#: last_checked: 2021-05-29
+#: last_checked: 2021-06-05
 #: check_frequency: 180d
 Henriette-Lustig-Str.: noch nicht ausgeschildert	CS 21611,5119 21631,5079
 # 
@@ -1538,6 +1539,8 @@ Weg an der Südpanke: Hausdurchfahrt gegenüber der Liesenstr.	CP2; 8323,14599 830
 Heino-Schmieden-Weg: teilweise nicht ausgeschildert	CS 20818,11480 20823,11527 20827,11562 20831,11604 20735,11613
 # 
 ausgeschildert Hauptstr. 2D-2B	CP2; 7617,19748 7578,19753
+# 
+Mirower Str. - Mittelheide: vor den Recycling-Containern in den Waldweg abbiegen	CP; 24387,7751 24387,7708 24365,7657
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)

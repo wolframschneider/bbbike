@@ -87,7 +87,40 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.volksfeste-in-deutschland.de/koepenicker-sommer-in-berlin-koepenick.html
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.819220.php
+#: by: https://www.berlin.de/events/3415964-2229501-koepenicker-sommer.html (2021: Termin noch nicht bekannt) (mittlerweile gibt\'s den Termin)
+	2::temp 22111,4562 22093,4499 22076,4422
+	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562
+	2::temp 22138,4642 22074,4664
+	2::temp 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,4470
+	2::temp 22314,4604 22355,4660 22365,4676 22395,4678
+	2::temp 22144,4660 22212,4655 22284,4653
+	2::temp 22175,4730 22246,4711
+	2::temp 22284,4653 22355,4660
+	2::temp 22212,4655 22214,4548
+# REMOVED ---	2::temp 22111,4562 22162,4546 22214,4548 22324,4586 22314,4604 22355,4660 22365,4676 22395,4678
+',
+         'from' => 1623880800,
+         'id' => 1702,
+         'periodic' => 1,
+         'recurrence_prewarn_days' => 7,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              6,
+                              'start',
+                              '2020-10-25T00:00:00'
+                            ]
+                          ],
+         'text' => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt können gesperrt sein (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Bahnhofstr. (18.06.2021 - 20.06.2021)',
+         'type' => 'gesperrt',
+         'until' => 1624212000
+       },
        undef,
        undef,
        undef,
@@ -525,7 +558,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-05-28
+#: last_checked: 2021-06-06
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -788,7 +821,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10354,8493 10298,8245
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11472,7732 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11472,7732 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9474,7182 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10037,8269 10298,8245 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294 9242,7286
@@ -799,7 +832,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9562,7796 9372,7798 9281,7795
 (Rundkurs/nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9522,7624 9471,7703 9372,7798
 (Rundkurs auf dem Flughafen Tempelhof - südliche Landebahn)	2::night 9545,7426 9592,7330 9712,7215
-(Südliche Landebahn)	2::night 9461,7190 9509,7195 9712,7215 10537,7257 11332,7305 11518,7314 11555,7314 11593,7314
+(Südliche Landebahn)	2::night 9474,7182 9528,7205 9712,7215 10537,7257 11332,7305 11518,7314 11555,7314 11593,7314
 (Südliche Landebahn - Rundkurs)	2::night 11332,7305 11438,7371 11460,7447
 (Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 10204,7680 11279,7768 11388,7777 11430,7781 11460,7802
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
@@ -813,7 +846,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 (Flughafen Tempelhof - Eingang Okerstr.)	2::night 11528,7528 11540,7534
 (Flughafen Tempelhof - Eingang Leinestr.)	2::night 11547,7432 11558,7438
 (Flughafen Tempelhof - Eingang Oderstr.)	2::night 11598,7264 11608,7267
-(Eingang Tempelhofer Damm - südliche Landebahn)	2::night 9302,7294 9351,7241 9461,7190
+(Eingang Tempelhofer Damm - südliche Landebahn)	2::night 9302,7294 9351,7241 9474,7182
 (Alter Hafen)	2::night 10204,7680 10134,7797 10076,8040 10328,8102 10444,8086 10486,7972 10405,7898 10134,7797
 (Alter Hafen)	2::night 10076,8040 10037,8269
 (südliche Landebahn - Alter Hafen)	2::night 10537,7257 10399,7415 10204,7680
@@ -2326,17 +2359,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-05-20
+#: last_checked: 2021-06-09 (mapillary)
 #: check_frequency: 14d
-#: next_check: 2021-07-01
+#: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
 ',
          'from' => 1611036000,
          'id' => 3048,
          'source_id' => '2147343461',
-         'text' => 'Kynaststr.: Bauarbeiten an der Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden, mögliche Engstelle, bis 1.7.2021',
+         'text' => 'Kynaststr.: Bauarbeiten an der Fahrbahn zwischen Alt-Stralau und Untere Kynaststraße in Richtung Norden, mögliche Engstelle, bis 31.10.2021',
          'type' => 'handicap',
-         'until' => 1625151600
+         'until' => 1635696000
        },
        undef,
        undef,
@@ -2605,22 +2638,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/hansaviertel/c-verkehr/sperrung-wegen-bauarbeiten_a234808
-#: by: https://www.architektur-urbanistik.berlin/index.php?threads/oasis-hansahof-bachstra%C3%9Fe-1-2.131/page-4#post-15591 (mittlerweile fertig & bewohnt --- ist der Weg auch schon offen?)
-#: next_check_id: ALTONAERSCHLESWIGER-2019
-#: last_checked: 2021-04-25
-#: check_frequency: 30d
-# REMOVED --- #: next_check: 2020-03-31
-	2::inwork 5886,12467 5944,12548
-',
-         'from' => 1570312800,
-         'id' => 3168,
-         'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.851896.php',
-         'text' => 'Altonaer Str. - Schleswiger Ufer: Sperrung des Durchgangs ab dem 7.10.2019, Ende unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2658,7 +2676,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194962398" version="11"
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-05-28
+#: last_checked: 2021-06-06
 	2::inwork 11329,12497 11209,12430
 ',
          'from' => undef,
@@ -2764,7 +2782,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="1"
 #: osm_watch: way id="934995901" version="1"
-#: last_checked: 2021-06-01
+#: last_checked: 2021-06-08
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2840,14 +2858,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: also_indoor: traffic (H)
 #: last_checked: 2021-02-20 (mapillary)
 #: next_check: 2021-05-18
-	q4::inwork; 5244,6261 5390,6299 5560,6344
+# REMOVED --- hier nicht mehr, siehe mapillary ---	q4::inwork; 5244,6261 5390,6299
+	q4::inwork; 5390,6299 5560,6344
 # REMOVED --- #: XXX ist der Radverkehr hier noch betroffen? --- #: by: mapillary ---	q4::inwork 5560,6344 5582,6360
 ',
          'dont_check_date' => 1,
          'from' => 1594635120,
          'id' => 3258,
          'source_id' => '2147346108',
-         'text' => 'Feuerbachstr.: Bauarbeiten zwischen Schloßstr. und Alsenstr., Fahrbahn Richtung Osten gesperrt, vom 14.07.2020 12:12 Uhr bis 18.05.2021 17:00 Uhr, möglicherweise sogar bis Mai 2022',
+         'text' => 'Feuerbachstr.: möglicherweise noch immer Bauarbeiten, Fahrbahn Richtung Osten gesperrt, bis Mai 2022',
          'type' => 'handicap',
          'until' => 1654012800
        },
@@ -3024,8 +3043,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: 2147346816 (bis 31.03.2025) (früher nur bis 2022)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G)
-#: last_checked: 2021-05-21
-#: check_frequency: 90d
+#: last_checked: 2021-06-06
+#: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
 ',
@@ -3064,7 +3083,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-04-09 vvv
+#: last_checked: 2021-06-08 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -3120,7 +3139,24 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => undef
        },
-       undef,
+       {
+         'data' => '#: next_check_id: BOHNSDORFERKREISEL-2017
+#: source_id: 2147346807 (bis 30.6.2021)
+#: note: laut rbbtext kann der Radverkehr passieren
+#: by: https://viz.berlin.de/2021/01/bohnsdorfer-kreisel/ (keine Einschränkungen für Fußgänger)
+#: by: https://twitter.com/VIZ_Berlin/status/1353990207574581249 (Situation mit Bildern)
+# REMOVED --- #: XXX wie sehen die Einschränkungen (wenn überhaupt) für den Radverkehr aus? vvv
+	q3::inwork 22162,1067 22092,999 22034,1006 21977,988
+	q3::inwork 22092,999 22120,886
+# REMOVED --- #: XXX ^^^
+',
+         'from' => 1610838000,
+         'id' => 3321,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1039050.php',
+         'text' => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, Radfahrer können auf den engen Gehwegen vorbeifahren, vom 18.1.2021 bis 30.6.2021',
+         'type' => 'handicap',
+         'until' => 1625065200
+       },
        {
          'data' => '#: osm_watch: way id="683770241" version="6"
 	q4::inwork 19564,1871 19743,1804
@@ -3199,7 +3235,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-05-29
+#: last_checked: 2021-06-05
 #: check_frequency: 30d
 # REMOVED (kann nicht gehalten werden) --- #: next_check: 2021-05-31
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -3225,25 +3261,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: PILGRAMER-2019
-#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=52381 (mittlerweile "bis auf Weiteres")
-#: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/pilgramer-strasse-zwei-monate-beidseitig-gesperrt_a304101 (Fertigstellung im Mai 2021)
-#: source_id: 2147346982
-#: also_indoor: traffic (H)
-#: XXX wie sehr sind Radfahrer betroffen?
-#: last_checked: 2021-04-17
-# REMOVED --- #: check_frequency: 32d
-#: next_check: 2021-06-30
-	q4::inwork 25150,10562 25149,10695 25149,10731 25148,10769 25145,10841
-',
-         'from' => 1615676400,
-         'id' => 3342,
-         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1063839.php',
-         'text' => 'Pilgramer Str.: Sperrung der Fahrbahn, Sperrung des westlichen Gehwegs ab Theodorpark bis Straße 48, östlicher Gehweg ist noch offen, ab 15. März 2021 bis 30.6.2021',
-         'type' => 'handicap',
-         'until' => 1625068800
-       },
+       undef,
        undef,
        undef,
        {
@@ -3474,7 +3492,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #; also_indoor: traffic (G)
 #: priority: #B
 #: also_indoor: traffic (G)
-#: last_checked: 2021-05-23
+#: last_checked: 2021-06-02
 #: check_frequency: 14d
 	q4::inwork 15870,10938 15674,10851
 ',
@@ -3639,7 +3657,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: HEIDEKRAUTBAHN-2021
 #: add_fragezeichen: Ist der neue Weg bereits offiziell eröffnet?
-#: last_checked: 2021-05-24
+#: last_checked: 2021-05-30 (mapillary)
 #: check_frequency: 30d
 	2::inwork 7236,19689 7273,19682 7435,19547 7446,19522 7504,19459
 ',
@@ -3733,24 +3751,48 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        {
-         'data' => '	q4::inwork 12984,1011 12941,1256 12938,1348
+         'data' => '#: next_check_id: BUCKOWERDAMM-2021
+# REMOVED ---	q4::inwork 12984,1011 12941,1256 12938,1348
+	q4::inwork 12938,1348 12939,1469 12940,1547
 ',
          'from' => 1622527200,
          'id' => 3387,
          'source_id' => '2147347243',
-         'text' => 'Buckower Damm: wegen Bauarbeiten zwischen Gerlinger Str./Ringslebenstr. und Stuthirtenweg/Stadtgrenze gesperrt, auch Radfahrer sind betroffen, vom 02.06.2021 08:00 Uhr bis 31.08.2021 17:00 Uhr ',
+         'text' => 'Buckower Damm: wegen Bauarbeiten zwischen Gerlinger Str./Ringslebenstr. und Mollnerweg gesperrt, auch Radfahrer sind betroffen, vom 02.06.2021 08:00 Uhr bis 31.08.2021 17:00 Uhr ',
          'type' => 'handicap',
          'until' => 1630422000
        },
        {
-         'data' => '	q4::inwork 9861,6693 9863,6617
+         'data' => '	q4::inwork; 9863,6617 9861,6693
 ',
          'from' => 1622527200,
          'id' => 3388,
          'source_id' => '2147347242',
-         'text' => 'Ringbahnstr.: Anbindung Germaniastr. wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, vom 02.06.2021 08:00 Uhr bis 10.09.2021 17:00 Uhr ',
+         'text' => 'Ringbahnstr.: an der Germaniastr. Richtung Tempelhofer Damm wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, vom 02.06.2021 08:00 Uhr bis 10.09.2021 17:00 Uhr ',
          'type' => 'handicap',
          'until' => 1631286000
+       },
+       {
+         'data' => '#: note: laut rbb
+#: also_indoor: traffic (H)
+	q4::inwork 7432,14969 7624,15083 7694,15125 7745,15160
+',
+         'from' => 1623092008,
+         'id' => 3389,
+         'text' => 'Lynarstr.: Sperrung der Fahrbahn zwischen Sparrstr. und Müllerstr., evtl. sind auch Radfahrer betroffen, bis 27.08.2021',
+         'type' => 'handicap',
+         'until' => 1630101600
+       },
+       {
+         'data' => '#: last_checked: 2021-06-08
+#: check_frequency: 7d
+	q4::inwork 12592,12472 12632,12630
+',
+         'from' => undef,
+         'id' => 3390,
+         'text' => 'Koppenstr.: zwischen Palisadenstr. und Karl-Marx-Allee Fahrbahn wegen Kranarbeiten gesperrt',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );
