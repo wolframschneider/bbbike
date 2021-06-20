@@ -1301,7 +1301,7 @@ EOF
        text  => 'L 401; (Lindenallee, Fontaneallee); OL Zeuthen, zw. Forstweg und Fährstr. grundhafter Straßenbau Vollsperrung 01.11.2004-12.08.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 26609,-7136 26506,-6931 26135,-6206
+	q4 26609,-7136 26506,-6931 26376,-6676 26135,-6206
 EOF
      },
      { from  => 1089496800, # 2004-07-11 00:00
@@ -5949,7 +5949,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003518',
        data  => <<EOF,
-	2::inwork 22965,4124 23435,4179
+	2::inwork 22965,4124 22985,4139 23435,4179
 EOF
      },
      { from  => 1157839200, # 2006-09-10 00:00
@@ -13389,7 +13389,7 @@ EOF
        text  => 'L 401 Karl-Marx-Str., Friedrich-Engels-Str. OD Wildau, zw. Freiheitsstr. und Westkorso grundhafter Straßenneubau Wintersicherung 19.12.2008-31.01.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 26609,-7136 26700,-7334 26790,-7918 26786,-7968 26775,-8117 26749,-8481
+	q4::inwork 26609,-7136 26700,-7334 26790,-7918 26786,-7968 26782,-8032 26749,-8481
 EOF
      },
      { from  => 1231196400, # 2009-01-06 00:00
@@ -21445,7 +21445,7 @@ EOF
 #: XXX_prog temporäre Lösung für saisonale Fähren vvv
 #: tempex: ((min(good_friday,YYYY04 sa1)-YYYY1030) & (tu-su, holiday)) & T10-T19 vvv
 	2::temp 27090,-2253 27420,-2067 27492,-1880 27490,-1710 27425,-1601 27374,-1573
-	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29084,3331 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
+	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29059,3377 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
 #: tempex ^^^
 #: XXX_prog ^^^
 EOF
@@ -21578,14 +21578,15 @@ EOF
 # REMOVED --- #: tempex ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2019-07-17 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-07-21 23:59:59"),
+     { from  => $isodate2epoch->("2021-09-16 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2021-09-19 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 13, months => 7, start => "2020-10-25T00:00:00"]],
        source_id => 'https://www.gratis-in-berlin.de/festivals/item/2037758-hafenfest-tegel-2019-mit-programm-und-feuerwerk',
-       text  => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (18.07.2019 bis 21.07.2019)',
+       text  => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (16.09.2021 bis 19.09.2021)',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: https://www.berlin.de/events/5979419-2229501-tegeler-hafenfest.html (2021)
 # REMOVED (was) : tempex: 20160714-20160717
 	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
 EOF
@@ -27745,7 +27746,7 @@ EOF
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht's nur auf dem Gehweg weiter
 #: also_indoor: traffic (G)
 #: priority: #B
-#: last_checked: 2021-04-15 (mapillary)
+#: last_checked: 2021-06-14
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-03-26
 	q3::inwork 13391,16436 13630,16629
@@ -27972,7 +27973,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-05-28
+#: last_checked: 2021-06-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28909,7 +28910,7 @@ EOF
 EOF
      },
      { from  => 1552239604, # 2019-03-10 18:40
-       until => $isodate2epoch->("2021-06-30 18:00:00"), # 1601503199, # 2020-09-30 23:59
+       until => 1623781586, # $isodate2epoch->("2021-06-30 18:00:00"), # 1601503199, # 2020-09-30 23:59
        text  => 'Mönchmühler Str.: teilweise Sperrung der Fahrbahn, voraussichtlich bis Ende Juni 2021',
        type  => 'handicap',
        accept_multi_feature_distance => 1500,
@@ -29101,14 +29102,16 @@ EOF
 #: by: https://viz.berlin.de/2021/01/verkehrsvorschau25012021/ ("Mitte Februar (2021) wird die Sperrung um den Abschnitt Heinersdorfer Straße - Roelckestraße erweitert")
 #: by: https://viz.berlin.de/2021/01/langhansstr-sperrung/
 #: by: https://www.bahninfo-forum.de/read.php?9,691318,693319#msg-693319
+#: by: https://www.bahninfo-forum.de/read.php?9,691318,703556#msg-703556 (angeblich fährt die Straßenbahn wieder ab 24.06.2021)
 #: XXX teilweise existieren auch Einschränkungen beim Überqueren der Langhansstr., auch für Fußgänger (gesehen: 2021-02-17 an der Behaimstr.)
 #: also_indoor: traffic (H,G)
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
 # REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
-#: last_checked: 2021-04-15 (mapillary)
-#: check_frequency: 60d
-#: next_check: 2021-08-13
+#: last_checked: 2021-06-14
+# REMOVED --- #: check_frequency: 60d
+#: next_check: 2021-06-24
+# REMOVED --- #: next_check: 2021-08-13
 	q4::inwork 13508,15912 13312,16027 13189,16089 12943,16214 12859,16255 12797,16285 12725,16321 12564,16399 12399,16479 12189,16578
 EOF
      },
@@ -30290,8 +30293,10 @@ EOF
 #: next_check_id: VOLTAIRE-2019
 #: osm_watch: way id="194962398" version="11"
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
+#: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-06-06
+#: last_checked: 2021-06-13
+#: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 EOF
      },
@@ -30659,7 +30664,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-05-27
+#: last_checked: 2021-06-12
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30874,9 +30879,9 @@ EOF
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
-#: osm_watch: way id="934995899" version="1"
-#: osm_watch: way id="934995901" version="1"
-#: last_checked: 2021-06-11
+#: osm_watch: way id="934995899" version="2"
+#: osm_watch: way id="934995901" version="2"
+#: last_checked: 2021-06-17
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -31066,8 +31071,8 @@ EOF
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX Stand 2021-05-31: Asphaltierungsarbeiten
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2021-05-31
-#: check_frequency: 7d
+#: last_checked: 2021-06-14
+#: check_frequency: 14d
 	q4::inwork 14136,17170 13996,16959
 EOF
      },
@@ -31104,7 +31109,7 @@ EOF
 EOF
      },
      { from  => 1594635120, # 2020-07-13 12:12
-       until => $isodate2epoch->("2022-05-31 18:00:00"), # 1615996800, # 2021-03-17 17:00
+       until => 1623580885, # laut Klaus Bauarbeiten beendet # $isodate2epoch->("2022-05-31 18:00:00"), # 1615996800, # 2021-03-17 17:00
        dont_check_date => 1,
        text  => 'Feuerbachstr.: möglicherweise noch immer Bauarbeiten, Fahrbahn Richtung Osten gesperrt, bis Mai 2022',
        type  => 'handicap',
@@ -31112,10 +31117,7 @@ EOF
        data  => <<EOF,
 #: note: laut Baustellenschild der Wasserbetriebe bis Mai 2022
 #: source_id: 2147346999 (Abschnitt zwischen Alsenstr. und Schöneberger Str., bis 16.4.2021) (inaktiv)
-#: add_fragezeichen: Wurden die Bauarbeiten mittlerweile beendet?
-#: also_indoor: traffic (H)
-#: last_checked: 2021-02-20 (mapillary)
-#: next_check: 2021-05-18
+# REMOVED --- #: add_fragezeichen: Wurden die Bauarbeiten mittlerweile beendet? --- #: also_indoor: traffic (H)--- #: last_checked: 2021-02-20 (mapillary) --- #: next_check: 2021-05-18
 # REMOVED --- hier nicht mehr, siehe mapillary ---	q4::inwork; 5244,6261 5390,6299
 	q4::inwork; 5390,6299 5560,6344
 # REMOVED --- #: XXX ist der Radverkehr hier noch betroffen? --- #: by: mapillary ---	q4::inwork 5560,6344 5582,6360
@@ -31455,7 +31457,7 @@ EOF
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: last_checked: 2021-05-01
+#: last_checked: 2021-05-20 (architektur-urbanistik)
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 EOF
@@ -31517,11 +31519,12 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-06-15 15:00:00"), # $isodate2epoch->("2021-03-09 13:00:00"),
-       until => $isodate2epoch->("2021-06-18 23:59:59"), # 1615579406, # $isodate2epoch->("2021-03-13 23:59:59"),
+       until => 1623963765, # vorzeitig aufgehoben --- $isodate2epoch->("2021-06-18 23:59:59"), # 1615579406, # $isodate2epoch->("2021-03-13 23:59:59"),
        text  => 'Rigaer Str./Liebigstr.: Sperrungen wegen eines Polizeieinsatzes, eventuell ist auch der Radverkehr betroffen, vom 16.06.2021 15:00 Uhr bis 18.06.2021',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_24_2053_2104_online.pdf
+#: by: https://viz.berlin.de/2021/06/verkehrsvorschau-160621/
 #: source_id: 2147346954 (inaktiv)
 #: source_id: 2147346955 (inaktiv)
 #: source_id: 2147346956 (inaktiv)
@@ -31812,7 +31815,7 @@ EOF
 #: osm_watch: way id="877995097" version="2"
 #: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2021-05-10
+#: last_checked: 2021-06-17
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 EOF
      },
@@ -32026,8 +32029,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: ABBESTR-2021
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-05-01
-#: check_frequency: 45d
+#: last_checked: 2021-06-14 (osm note)
+#: check_frequency: 30d
 # REMOVED (hier nicht) ---	q3::inwork 4674,12076 4698,12124
 	q3::inwork 4698,12124 4755,12236
 EOF
@@ -32148,9 +32151,9 @@ EOF
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-06-11
+#: last_checked: 2021-06-19
 #: check_frequency: 30d
-# REMOVED (kann nicht gehalten werden) --- #: next_check: 2021-05-31
+#: next_check: 2021-09-30
 	q4::inwork; 15279,10862 15272,10790 15261,10738
 EOF
      },
@@ -32278,7 +32281,7 @@ EOF
 #: XXX laut rbb bis 28.6.2021
 #: also_indoor: traffic
 #: priority: #A vvv
-#: last_checked: 2021-05-30 vvv
+#: last_checked: 2021-06-14 vvv
 #: check_frequency: 21d vvv
 #: next_check: 2021-06-28 vvv
 # REMOVED (hier fertig) ---	q4::inwork 13025,12523 13067,12583
@@ -32423,11 +32426,12 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Glinkastr.: zwischen Jägerstr. und Mohrenstr. Einbahnstraßenregelung, gesperrt Richtung Süden auch für Radfahrer',
+       text  => 'Glinkastr.: zwischen Jägerstr. und Mohrenstr. Einbahnstraßenregelung, Richtung Süden gesperrt, auch für Radfahrer',
        type  => 'handicap',
        data  => <<EOF,
 #: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer?
-#: last_checked: 2021-05-13
+#: note: 2021-06-13 ("Radfahrer frei"-Schilder fehlen weiterhin, aber zumindest sonntags scheint man auf dem noch existierenden Radstreifen gut durchzukommen)
+#: last_checked: 2021-06-13
 	q4::inwork; 9195,11972 9207,11880 9218,11793
 EOF
      },
@@ -32496,7 +32500,7 @@ EOF
 #; also_indoor: traffic (G)
 #: priority: #B
 #: also_indoor: traffic (G)
-#: last_checked: 2021-06-11
+#: last_checked: 2021-06-19
 #: check_frequency: 14d
 	q4::inwork 15870,10938 15674,10851
 EOF
@@ -32771,7 +32775,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1623580764, # undef, # XXX
        text  => 'Koppenstr.: zwischen Palisadenstr. und Karl-Marx-Allee Fahrbahn wegen Kranarbeiten gesperrt',
        type  => 'handicap',
        data  => <<EOF,
@@ -32806,6 +32810,31 @@ EOF
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1094021.php',
        data  => <<EOF,
 	q4::inwork -1478,18407 -1358,18400
+EOF
+     },
+     { from  => 1625349600, # 2021-07-04 00:00
+       until => 1659304799, # 2022-07-31 23:59
+       text  => 'Bruno-Taut-Str.: Bauarbeiten, Einbahnstraße, offen Richtung Am Falkenberg, vom 5. Juli 2021 bis Juli 2022',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1095642.php',
+       data  => <<EOF,
+	q4::inwork; 21858,811 21902,877 21977,988 22034,1006 22092,999
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Langenscheidtbrücke und Monumentenstr. bis Hohenfriedbergstr.: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung',
+       source_id => '2147347186',
+       data  => <<EOF,
+#: by: https://twitter.com/VIZ_Berlin/status/1392465007393316864 (für ca. vier Wochen, ab 12.5.2021)
+#: by: https://twitter.com/rbbabendschau/status/1392489796426162177
+#: add_fragezeichen: Wurden Fahrbahn und Radwege wieder freigegeben?
+#: also_indoor: traffic (G)
+#: note: bei rbbtext seit 2021-06-18 nicht mehr gelistet
+#: priority: #A
+#: last_checked: 2021-05-14
+#: next_check: 2021-06-18
+	q3::inwork 7647,9196 7735,9121 7790,9126
 EOF
      },
     );

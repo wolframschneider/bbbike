@@ -23,9 +23,6 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1 9444,1
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10952,12401
 (Grunerstr. - Gustav-Böß-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10953,12638 10772,12515
 Scharrenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 10332,11929 10392,11991
-(Umfahrung Baustelle Neue Roßstraßenbrücke): einige Fußgänger	q3::inwork 10680,11875 10650,11909 10642,11901 10590,11840 10599,11819
-Neue Roßstr.: Fahrbahn gesperrt	q4::inwork 10687,11853 10722,11816
-Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Restaurantbetrieb	q2::inwork 10687,11853 10869,11949
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 Hannah-Arendt-Str.: Fahrbahn Richtung Westen gesperrt	q3::inwork; 8901,12008 8844,11984
 Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, Gehweg explizit für Radfahrer verboten	q4::inwork 8737,12098 8783,11959
@@ -46,7 +43,6 @@ Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden a
 S-Bhf. Rummelsburg: Bauarbeiten, Umwege, Schotterwege	q2::inwork 16811,9937 16878,9875
 S-Bhf. Rummelsburg: Bauarbeiten, Umwege, Schotterwege	q3::inwork 16878,9875 16900,9861 16925,9852
 Wiesenweg: Sperrung unter der Brücke, Fahrbahn ist gesperrt, auf Gehweg ausweichen	q3::inwork 15055,11505 15126,11474 15162,11458
-Langenscheidtbrücke und Monumentenstr. bis Hohenfriedbergstr.: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung	q3::inwork 7647,9196 7735,9121 7790,9126
 Dennewitzstr.: Einbahnstraßenregelung, gemeinsamer Geh- und Radweg	q3::inwork; 8159,10430 8058,10306
 Moltkestraßenbrücke: Einbahnstraße, Richtung Süden muss der linke Gehweg benutzt werden	q4::inwork; 3867,4537 3898,4490
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
@@ -79,7 +75,7 @@ Breitscheidplatz: starker Fußgängerverkehr, oft Veranstaltungen	q4 5656,10876 56
 Breitscheidplatz: starker Fußgängerverkehr, oft Veranstaltungen	q4 5782,10884 5829,10964
 Wilmersdorfer Str.: starker Fußgängerverkehr (Fußgängerzone), nachts und sonntags Radfahren erlaubt	q4 3717,11462 3749,11344 3770,11231 3795,11098 3820,10987
 (An der Müggelspree): Fußgänger	q2 23461,4948 23461,5013 23461,5054 23620,5096 23776,5040 23852,5036 23962,5031 23982,5030 24147,4930 24378,4847 24834,4541 25030,4421 25131,4400 25200,4420 25315,4474 25403,4480 25429,4493 25458,4521 25565,4549
-Am Müggelsee: Fußgänger	q2 25474,2848 25667,2787 25857,2654 26006,2615 26158,2647 26339,2667 26457,2660 26627,2610 26859,2596 26989,2570 27081,2528 27135,2500 27173,2444 27267,2414 27363,2448 27471,2527 27565,2637 27743,2842 27822,2910 27937,3016 28273,3143 28496,3253 28588,3285 28668,3297 28852,3293 28852,3277
+Am Müggelsee: Fußgänger	q2 25474,2848 25667,2787 25857,2654 26006,2615 26158,2647 26339,2667 26457,2660 26627,2610 26859,2596 26989,2570 27081,2528 27135,2500 27173,2444 27267,2414 27363,2448 27471,2527 27565,2637 27743,2842 27822,2910 27937,3016 28273,3143 28496,3253 28588,3285 28668,3297 28852,3293 28853,3279
 Pestalozzistr.: Fußgängerzone	q3 3721,11230 3770,11231 3822,11231
 (Zufahrt am NKZ): Fußgänger/Lieferverkehr	q2 11291,10438 11317,10485
 (Zufahrt am NKZ): Fußgänger/Lieferverkehr, Bauarbeiten, Fahrbahn gesperrt	q4::inwork 11317,10485 11344,10507
@@ -381,7 +377,7 @@ Fritz-Schiff-Weg: Fußgänger	q1 13457,12505 13476,12461 13448,12340
 (Molkenmarkt - Parochialstr.): Bordstein	q2 10738,12364 10831,12371
 (Crellestr. - Julius-Leber-Brücke): Fußgänger	q2 7524,9093 7555,8978 7509,8929 7497,8916
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10364,11896 10329,11842 10373,11781 10439,11772 10515,11785 10599,11819 10662,11863 10672,11870
-(Fischerinsel, Spreekanalufer): Bauarbeiten, Restaurantbetrieb, Engstelle	q2::inwork 10672,11870 10680,11875 10776,11942
+(Fischerinsel, Spreekanalufer): Fußgänger	q1 10672,11870 10680,11875 10776,11942
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10776,11942 10824,11992
 (Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17284,10616 17294,10632 17249,10651
 (Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17249,10702 17244,10737 17261,10827 17257,10875
@@ -2126,6 +2122,7 @@ Gertrud-Hanna-Promenade: Fußgänger, Bordsteine	q4 8548,7384 8603,7452
 Breslauer Platz/Lauterstr.: Fußgängerzone, Radfahrer frei	q3; 5810,7337 5817,7223
 Krautstr.: Fußgängerzone, Radfahrer frei	q3 12002,12008 12021,12066
 Mittelheide - S-Bhf. Hirschgarten: schmal, einige Fußgänger	q2 24089,6144 24060,6059 23951,6063
+Waldeyerstr.: Fußgänger, Radfahrer frei	q2 15003,12241 15058,12329
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635

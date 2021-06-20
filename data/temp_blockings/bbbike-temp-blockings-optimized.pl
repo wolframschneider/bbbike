@@ -1323,7 +1323,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 #: tempex: ((min(good_friday,YYYY04 sa1)-YYYY1030) & (tu-su, holiday)) & T10-T19 vvv
 	2::temp 27090,-2253 27420,-2067 27492,-1880 27490,-1710 27425,-1601 27374,-1573
-	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29084,3331 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
+	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29059,3377 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
 #: tempex ^^^
 #: XXX_prog ^^^
 ',
@@ -1370,7 +1370,30 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/events/5979419-2229501-tegeler-hafenfest.html (2021)
+# REMOVED (was) : tempex: 20160714-20160717
+	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
+',
+         'from' => 1631743200,
+         'id' => 2420,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              13,
+                              'months',
+                              7,
+                              'start',
+                              '2020-10-25T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.gratis-in-berlin.de/festivals/item/2037758-hafenfest-tegel-2019-mit-programm-und-feuerwerk',
+         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (16.09.2021 bis 19.09.2021)',
+         'type' => 'gesperrt',
+         'until' => 1632088799
+       },
        undef,
        undef,
        undef,
@@ -2205,7 +2228,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht\'s nur auf dem Gehweg weiter
 #: also_indoor: traffic (G)
 #: priority: #B
-#: last_checked: 2021-04-15 (mapillary)
+#: last_checked: 2021-06-14
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-03-26
 	q3::inwork 13391,16436 13630,16629
@@ -2253,7 +2276,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-05-28
+#: last_checked: 2021-06-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2413,20 +2436,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'accept_multi_feature_distance' => 1500,
-         'data' => '#: note: laut VIZ ist der Radverkehr auch betroffen, aber nicht der Fußverkehr (also schieben möglich?); Dauer 1 1/2 Jahre ab 2019-03-11
-#: source_id: 2147343858
-#: source_id: 2147343859
-	q4::inwork 8904,23365 8900,23274
-	q4::inwork 8400,22010 8430,22110 8439,22143 8464,22215
-',
-         'from' => 1552239604,
-         'id' => 3077,
-         'text' => 'Mönchmühler Str.: teilweise Sperrung der Fahrbahn, voraussichtlich bis Ende Juni 2021',
-         'type' => 'handicap',
-         'until' => 1625068800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2456,14 +2466,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://viz.berlin.de/2021/01/verkehrsvorschau25012021/ ("Mitte Februar (2021) wird die Sperrung um den Abschnitt Heinersdorfer Straße - Roelckestraße erweitert")
 #: by: https://viz.berlin.de/2021/01/langhansstr-sperrung/
 #: by: https://www.bahninfo-forum.de/read.php?9,691318,693319#msg-693319
+#: by: https://www.bahninfo-forum.de/read.php?9,691318,703556#msg-703556 (angeblich fährt die Straßenbahn wieder ab 24.06.2021)
 #: XXX teilweise existieren auch Einschränkungen beim Überqueren der Langhansstr., auch für Fußgänger (gesehen: 2021-02-17 an der Behaimstr.)
 #: also_indoor: traffic (H,G)
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
 # REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
-#: last_checked: 2021-04-15 (mapillary)
-#: check_frequency: 60d
-#: next_check: 2021-08-13
+#: last_checked: 2021-06-14
+# REMOVED --- #: check_frequency: 60d
+#: next_check: 2021-06-24
+# REMOVED --- #: next_check: 2021-08-13
 	q4::inwork 13508,15912 13312,16027 13189,16089 12943,16214 12859,16255 12797,16285 12725,16321 12564,16399 12399,16479 12189,16578
 ',
          'from' => 1611468000,
@@ -2675,8 +2687,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: VOLTAIRE-2019
 #: osm_watch: way id="194962398" version="11"
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
+#: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-06-06
+#: last_checked: 2021-06-13
+#: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 ',
          'from' => undef,
@@ -2724,7 +2738,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-05-27
+#: last_checked: 2021-06-12
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2780,9 +2794,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
-#: osm_watch: way id="934995899" version="1"
-#: osm_watch: way id="934995901" version="1"
-#: last_checked: 2021-06-11
+#: osm_watch: way id="934995899" version="2"
+#: osm_watch: way id="934995901" version="2"
+#: last_checked: 2021-06-17
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -2838,8 +2852,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: XXX Stand 2021-05-31: Asphaltierungsarbeiten
 #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2021-05-31
-#: check_frequency: 7d
+#: last_checked: 2021-06-14
+#: check_frequency: 14d
 	q4::inwork 14136,17170 13996,16959
 ',
          'from' => undef,
@@ -2851,25 +2865,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: laut Baustellenschild der Wasserbetriebe bis Mai 2022
-#: source_id: 2147346999 (Abschnitt zwischen Alsenstr. und Schöneberger Str., bis 16.4.2021) (inaktiv)
-#: add_fragezeichen: Wurden die Bauarbeiten mittlerweile beendet?
-#: also_indoor: traffic (H)
-#: last_checked: 2021-02-20 (mapillary)
-#: next_check: 2021-05-18
-# REMOVED --- hier nicht mehr, siehe mapillary ---	q4::inwork; 5244,6261 5390,6299
-	q4::inwork; 5390,6299 5560,6344
-# REMOVED --- #: XXX ist der Radverkehr hier noch betroffen? --- #: by: mapillary ---	q4::inwork 5560,6344 5582,6360
-',
-         'dont_check_date' => 1,
-         'from' => 1594635120,
-         'id' => 3258,
-         'source_id' => '2147346108',
-         'text' => 'Feuerbachstr.: möglicherweise noch immer Bauarbeiten, Fahrbahn Richtung Osten gesperrt, bis Mai 2022',
-         'type' => 'handicap',
-         'until' => 1654012800
-       },
+       undef,
        undef,
        undef,
        {
@@ -2971,7 +2967,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: last_checked: 2021-05-01
+#: last_checked: 2021-05-20 (architektur-urbanistik)
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 ',
@@ -2996,26 +2992,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1625065200
        },
        undef,
-       {
-         'data' => '#: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_24_2053_2104_online.pdf
-#: source_id: 2147346954 (inaktiv)
-#: source_id: 2147346955 (inaktiv)
-#: source_id: 2147346956 (inaktiv)
-#: source_id: 2147346957 (inaktiv)
-	2::temp 14058,12709 13991,12522 14091,12494 14133,12482 14266,12446
-	3::temp 13761,12578 13991,12522 13905,12374
-	3::temp 13905,12374 13991,12522 13761,12578
-# REMOVED ---	2::temp 14266,12446 14133,12482 14091,12494 13991,12522 13905,12374
-# REMOVED ---	2::temp 13761,12578 13991,12522 14058,12709 14073,12755 14089,12805 14096,12827
-# REMOVED ---	2::temp 14058,12709 14188,12664 14319,12629
-# REMOVED ---	2::temp 13911,12692 14058,12709
-',
-         'from' => 1623762000,
-         'id' => 3286,
-         'text' => 'Rigaer Str./Liebigstr.: Sperrungen wegen eines Polizeieinsatzes, eventuell ist auch der Radverkehr betroffen, vom 16.06.2021 15:00 Uhr bis 18.06.2021',
-         'type' => 'gesperrt',
-         'until' => 1624053599
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3087,7 +3064,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: osm_watch: way id="877995097" version="2"
 #: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2021-05-10
+#: last_checked: 2021-06-17
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 ',
          'from' => undef,
@@ -3203,8 +3180,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: ABBESTR-2021
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-05-01
-#: check_frequency: 45d
+#: last_checked: 2021-06-14 (osm note)
+#: check_frequency: 30d
 # REMOVED (hier nicht) ---	q3::inwork 4674,12076 4698,12124
 	q3::inwork 4698,12124 4755,12236
 ',
@@ -3254,9 +3231,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-06-11
+#: last_checked: 2021-06-19
 #: check_frequency: 30d
-# REMOVED (kann nicht gehalten werden) --- #: next_check: 2021-05-31
+#: next_check: 2021-09-30
 	q4::inwork; 15279,10862 15272,10790 15261,10738
 ',
          'from' => 1614578400,
@@ -3307,7 +3284,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: XXX laut rbb bis 28.6.2021
 #: also_indoor: traffic
 #: priority: #A vvv
-#: last_checked: 2021-05-30 vvv
+#: last_checked: 2021-06-14 vvv
 #: check_frequency: 21d vvv
 #: next_check: 2021-06-28 vvv
 # REMOVED (hier fertig) ---	q4::inwork 13025,12523 13067,12583
@@ -3436,12 +3413,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer?
-#: last_checked: 2021-05-13
+#: note: 2021-06-13 ("Radfahrer frei"-Schilder fehlen weiterhin, aber zumindest sonntags scheint man auf dem noch existierenden Radstreifen gut durchzukommen)
+#: last_checked: 2021-06-13
 	q4::inwork; 9195,11972 9207,11880 9218,11793
 ',
          'from' => undef,
          'id' => 3360,
-         'text' => 'Glinkastr.: zwischen Jägerstr. und Mohrenstr. Einbahnstraßenregelung, gesperrt Richtung Süden auch für Radfahrer',
+         'text' => 'Glinkastr.: zwischen Jägerstr. und Mohrenstr. Einbahnstraßenregelung, Richtung Süden gesperrt, auch für Radfahrer',
          'type' => 'handicap',
          'until' => undef
        },
@@ -3511,7 +3489,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #; also_indoor: traffic (G)
 #: priority: #B
 #: also_indoor: traffic (G)
-#: last_checked: 2021-06-11
+#: last_checked: 2021-06-19
 #: check_frequency: 14d
 	q4::inwork 15870,10938 15674,10851
 ',
@@ -3803,17 +3781,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1630101600
        },
-       {
-         'data' => '#: last_checked: 2021-06-08
-#: check_frequency: 7d
-	q4::inwork 12592,12472 12632,12630
-',
-         'from' => undef,
-         'id' => 3390,
-         'text' => 'Koppenstr.: zwischen Palisadenstr. und Karl-Marx-Allee Fahrbahn wegen Kranarbeiten gesperrt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '	q4::inwork 6636,10492 6628,10318 6626,10155
 ',
@@ -3834,6 +3802,33 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Jörsstr.: Bauarbeiten zwischen Beatestr. und Theresenweg, voraussichtlich von Anfang Juli 2021 bis Anfang Oktober 2021',
          'type' => 'handicap',
          'until' => 1633125599
+       },
+       {
+         'data' => '	q4::inwork; 21858,811 21902,877 21977,988 22034,1006 22092,999
+',
+         'from' => 1625349600,
+         'id' => 3394,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1095642.php',
+         'text' => 'Bruno-Taut-Str.: Bauarbeiten, Einbahnstraße, offen Richtung Am Falkenberg, vom 5. Juli 2021 bis Juli 2022',
+         'type' => 'handicap',
+         'until' => 1659304799
+       },
+       {
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1392465007393316864 (für ca. vier Wochen, ab 12.5.2021)
+#: by: https://twitter.com/rbbabendschau/status/1392489796426162177
+#: add_fragezeichen: Wurden Fahrbahn und Radwege wieder freigegeben?
+#: also_indoor: traffic (G)
+#: note: bei rbbtext seit 2021-06-18 nicht mehr gelistet
+#: priority: #A
+#: last_checked: 2021-05-14
+#: next_check: 2021-06-18
+	q3::inwork 7647,9196 7735,9121 7790,9126
+',
+         'from' => undef,
+         'id' => 3395,
+         'source_id' => '2147347186',
+         'text' => 'Langenscheidtbrücke und Monumentenstr. bis Hohenfriedbergstr.: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung',
+         'until' => undef
        }
      
 );

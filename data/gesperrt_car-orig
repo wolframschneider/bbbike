@@ -851,7 +851,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="8"
-#: last_checked: 2021-05-06
+#: last_checked: 2021-06-13
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
 Scharnhorststr.: Poller	3 7877,14504 7804,14445 *
@@ -1093,7 +1093,7 @@ Andernacher Str.	1 19054,8571 19000,8509
 #: next_check_id: GROSSBERLINERDAMM-2020
 #: by: https://www.baustellen-doku.info/berlin_strassenbahn_adlershof_II_wista_schoeneweide/20201019/
 #: XXX hier wird eine Überfahrt auch für Autos entstehen
-#: last_checked: 2021-05-10
+#: last_checked: 2021-06-17
 #: next_check: 2021-10-01
 Groß-Berliner Damm: Mittelstreifen	3nocross 18541,4125 18374,4307 18239,4453
 Groß-Berliner Damm: Straßenbahntrasse	3nocross 18374,4307 18239,4453 18042,4667
@@ -1415,19 +1415,7 @@ Haßlingerweg	1 7644,17054 7894,17073 7926,17050
 #: by: mapillary
 Wateweg	1 21122,8370 21121,8424 21127,8532 21115,8618 21123,8678 21131,8739
 # 
-#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/bezirksamt-will-bergmannkiez-entmotorisieren_a287422
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/artikel.1001430.php ("Umgang mit dem Radverkehr ist noch zu klären")
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1058243.php (Online-Beteiligung bis zum 11. April 2021)
-#: by: https://www.berliner-woche.de/friedrichshain/c-bauen/ideen-fuer-waldeyerstrasse_a302355
-#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/anwohner-koennen-sich-an-der-gestaltung-beteiligen_a303648
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1083749.php (Beginn KW 19/2021, Radfahrer Schrittgeschwindigkeit)
-#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/neue-fussgaengerzonen_a309780
-#: osm_watch: way id="4685729" version="19"
-#: last_checked: 2021-05-26
-#: check_frequency: 14d
-# REMOVED --- #: next_check: 2021-05-14
-# früherer Eintrag: Waldeyerstr.	1 15058,12329 15003,12241
-Waldeyerstr.: für Autos gesperrt, Radfahrer frei	2 15058,12329 15003,12241
+# REMOVED (N -> NN) --- #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/bezirksamt-will-bergmannkiez-entmotorisieren_a287422 --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/artikel.1001430.php ("Umgang mit dem Radverkehr ist noch zu klären") --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1058243.php (Online-Beteiligung bis zum 11. April 2021) --- #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/ideen-fuer-waldeyerstrasse_a302355 --- #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/anwohner-koennen-sich-an-der-gestaltung-beteiligen_a303648 --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1083749.php (Beginn KW 19/2021, Radfahrer Schrittgeschwindigkeit) --- #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/neue-fussgaengerzonen_a309780 --- #: osm_watch: way id="4685729" version="19" --- #: last_checked: 2021-05-26 --- #: check_frequency: 14d --- #: next_check: 2021-05-14 --- # früherer Eintrag: Waldeyerstr.	1 15058,12329 15003,12241 --- Waldeyerstr.: für Autos gesperrt, Radfahrer frei	2 15058,12329 15003,12241
 # 
 Clayallee -> Sophie-Charlotte-Str.: Linksabbiegen verboten	3 1283,4260 1297,4311 1246,4310
 # 
@@ -1463,6 +1451,13 @@ Chamissoplatz	2:Anlieger 9596,9092 9617,9185
 Chamissoplatz	2:Anlieger 9526,9104 9546,9198
 Am Tempelhofer Berg	2:Anlieger 9295,9047 9298,9112 9304,9241 9309,9347
 # 
-Karl-Marx-Platz: Poller	3	* 13130,7633 *
+Karl-Marx-Platz: Poller	3 * 13130,7633 *
 # 
 (Wohngebiet an der Kopenhagener Str.): Einbahnstraße außer für Radfahrer	1 7578,19753 7546,19665 7578,19648
+# 
+Weidenkätzchenweg: Poller	3 * 21450,38 *
+# 
+#: note: offiziell für allen Verkehr gesperrt, praktisch aber für Fußgänger + Radfahrer offen
+#: osm_watch: way id="104156160" version="8" brb
+Liepe - Bralitz: Brücke gesperrt	2 48210,51009 48230,50933
+# 
