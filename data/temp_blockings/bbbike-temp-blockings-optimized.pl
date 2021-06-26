@@ -87,40 +87,7 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.volksfeste-in-deutschland.de/koepenicker-sommer-in-berlin-koepenick.html
-#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2019/pressemitteilung.819220.php
-#: by: https://www.berlin.de/events/3415964-2229501-koepenicker-sommer.html (2021: Termin noch nicht bekannt) (mittlerweile gibt\'s den Termin)
-	2::temp 22111,4562 22093,4499 22076,4422
-	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562
-	2::temp 22138,4642 22074,4664
-	2::temp 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,4470
-	2::temp 22314,4604 22355,4660 22365,4676 22395,4678
-	2::temp 22144,4660 22212,4655 22284,4653
-	2::temp 22175,4730 22246,4711
-	2::temp 22284,4653 22355,4660
-	2::temp 22212,4655 22214,4548
-# REMOVED ---	2::temp 22111,4562 22162,4546 22214,4548 22324,4586 22314,4604 22355,4660 22365,4676 22395,4678
-',
-         'from' => 1623880800,
-         'id' => 1702,
-         'periodic' => 1,
-         'recurrence_prewarn_days' => 7,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              6,
-                              'start',
-                              '2020-10-25T00:00:00'
-                            ]
-                          ],
-         'text' => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt können gesperrt sein (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Bahnhofstr. (18.06.2021 - 20.06.2021)',
-         'type' => 'gesperrt',
-         'until' => 1624212000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2382,7 +2349,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-06-09 (mapillary)
+#: last_checked: 2021-06-22 (mapillary)
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2467,6 +2434,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://viz.berlin.de/2021/01/langhansstr-sperrung/
 #: by: https://www.bahninfo-forum.de/read.php?9,691318,693319#msg-693319
 #: by: https://www.bahninfo-forum.de/read.php?9,691318,703556#msg-703556 (angeblich fährt die Straßenbahn wieder ab 24.06.2021)
+#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=74297 (Straßebahn fährt erst ab 1.7.2021)
 #: XXX teilweise existieren auch Einschränkungen beim Überqueren der Langhansstr., auch für Fußgänger (gesehen: 2021-02-17 an der Behaimstr.)
 #: also_indoor: traffic (H,G)
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
@@ -2474,7 +2442,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
 #: last_checked: 2021-06-14
 # REMOVED --- #: check_frequency: 60d
-#: next_check: 2021-06-24
+#: next_check: 2021-07-01
 # REMOVED --- #: next_check: 2021-08-13
 	q4::inwork 13508,15912 13312,16027 13189,16089 12943,16214 12859,16255 12797,16285 12725,16321 12564,16399 12399,16479 12189,16578
 ',
@@ -2796,7 +2764,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="2"
 #: osm_watch: way id="934995901" version="2"
-#: last_checked: 2021-06-17
+#: last_checked: 2021-06-25
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 	q4::inwork 14247,11681 14211,11552
@@ -3231,7 +3199,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-06-19
+#: last_checked: 2021-06-20
 #: check_frequency: 30d
 #: next_check: 2021-09-30
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -3246,7 +3214,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        {
-         'data' => '	q4::inwork 4894,6509 4875,6552 4786,6717
+         'data' => '#: source_id: viz2021:13.32146,52.465174,04.03.2021,08:00
+	q4::inwork 4894,6509 4875,6552 4786,6717
 ',
          'from' => 1614754800,
          'id' => 3339,
@@ -3282,9 +3251,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: AUER-2021
 #: XXX nach den Bauarbeiten werden die Parkstreifen gepflastert sein und auf der östlichen Seite breiter sein (für Querparken); außerdem gibt\'s eine Einbahnstraßenregelung für Autos
 #: XXX laut rbb bis 28.6.2021
-#: also_indoor: traffic
+#: also_indoor: traffic (G,H)
 #: priority: #A vvv
-#: last_checked: 2021-06-14 vvv
+#: last_checked: 2021-06-20 vvv
 #: check_frequency: 21d vvv
 #: next_check: 2021-06-28 vvv
 # REMOVED (hier fertig) ---	q4::inwork 13025,12523 13067,12583
@@ -3462,7 +3431,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: add_fragezeichen: Wie lange gehen die Bauarbeiten?
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-05-22
+#: last_checked: 2021-06-25
 	q4::inwork; 7771,9479 7829,9723
 ',
          'from' => undef,
@@ -3639,6 +3608,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: note: laut Schild der Wasserbetriebe bis August 2021
 #: source_id: 2147347187 (Anbindung Soorstraße gesperrt, bis 25.6.2021)
+#: source_id: viz2021:13.278934,52.506793,17.05.2021,07:00 (bis 9.7.2021)
 #: also_indoor: traffic
 #: last_checked: 2021-05-24
 #: check_frequency: 60d
@@ -3686,7 +3656,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        {
-         'data' => '# REMOVED (hier mittlerweile offen) ---	q3::inwork 18080,5376 18245,5551
+         'data' => '#: source_id: viz2021:13.517342,52.454467,25.05.2021,10:00
+# REMOVED (hier mittlerweile offen) ---	q3::inwork 18080,5376 18245,5551
 	q3::inwork 18245,5551 18370,5511 18680,5413 18955,5320
 ',
          'from' => 1621843200,
@@ -3804,7 +3775,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1633125599
        },
        {
-         'data' => '	q4::inwork; 21858,811 21902,877 21977,988 22034,1006 22092,999
+         'data' => '#: by: https://www.berliner-woche.de/bohnsdorf/c-bauen/bruno-taut-strasse-bekommt-unter-anderem-eine-neue-asphaltdecke_a313839 (bis Juli 2022)
+#: by: https://abendblatt-berlin.de/2021/06/23/mit-den-ferien-kommen-die-baustellen/
+	q4::inwork; 21858,811 21902,877 21977,988 22034,1006 22092,999
 ',
          'from' => 1625349600,
          'id' => 3394,
@@ -3829,6 +3802,36 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'source_id' => '2147347186',
          'text' => 'Langenscheidtbrücke und Monumentenstr. bis Hohenfriedbergstr.: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung',
          'until' => undef
+       },
+       {
+         'data' => '	q4::inwork 5452,1940 5396,1774 5335,1616 5299,1524 5273,1456 5223,1318 5201,1227 5178,1123
+',
+         'from' => 1624744800,
+         'id' => 3396,
+         'source_id' => 'https://abendblatt-berlin.de/2021/06/23/mit-den-ferien-kommen-die-baustellen/',
+         'text' => 'Heinersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, vom 28. Juni 2021 bis 30. Juli 2021',
+         'type' => 'handicap',
+         'until' => 1627682399
+       },
+       {
+         'data' => '	q4::inwork; 3716,2063 3746,2108 3805,2196
+',
+         'from' => 1626559200,
+         'id' => 3397,
+         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1099864.php',
+         'text' => 'Goerzallee: Bauarbeiten, Fahrbahn zwischen Ortlerweg und Lausanner Str. Richtung Norden gesperrt, vom 19.07. bis 06.08.2021',
+         'type' => 'handicap',
+         'until' => 1628287199
+       },
+       {
+         'data' => '	q4::inwork; 6055,4950 6182,4931 6187,4930 6215,4926 6276,4915 6354,4901 6385,4896 6531,4865
+',
+         'from' => 1627768800,
+         'id' => 3398,
+         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1099818.php',
+         'text' => 'Steglitzer Damm: Bauarbeiten, Fahrbahn zwischen Bismarckstr. und Heinrich-Seidel-Str. Richtung Osten gesperrt, vom 02.08. bis zum 24.09.2021',
+         'type' => 'handicap',
+         'until' => 1632520799
        }
      
 );

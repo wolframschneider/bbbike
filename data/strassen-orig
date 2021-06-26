@@ -313,6 +313,8 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://www.berliner-woche.de/mitte/c-bauen/flaniermeile-geht-in-den-sommer_a308172
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1088034.php (Befragung)
 #: by: https://twitter.com/VIZ_Berlin/status/1405873886873411584
+#: by: https://abendblatt-berlin.de/2021/06/24/berlin-mitte-kampagne-wirbt-fuer-friedrichstrasse/
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/bund-der-steuerzahler-kritisiert-hohe-kosten-fuer-autofreie-friedrichstrasse_a314448
 #: source_id: 2147346249
 #: last_checked: 2021-06-13 vvv
 #: next_check: 2021-10-31 vvv
@@ -3867,7 +3869,7 @@ Rosensteinweg	N 1718,9653 1917,9821 1927,9820
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7965 (Bericht bis 31.7.2021 erwartet)
 #: note: früher mit Zusatz "(Grunewald)"
 #: XXX Umbenennung zu Baraschstr. soll erfolgen
-#: next_check: 2021-06-27
+#: next_check: 2021-07-31
 Wissmannstr.	N 1341,9244 1421,9173 1434,9154 1483,9132 1569,9137 1708,9298
 Winkler Str.	N 936,8933 1037,8884 1090,8892 1316,9067 1434,9154
 Erdener Str.	N 1457,9344 1587,9320 1708,9298 1757,9282 1782,9270
@@ -10403,7 +10405,7 @@ Bahnhofstr. (Lichtenrade)	H 10983,-2116 10756,-2128 10631,-2130 10509,-2131 1045
 #: osm_watch: way id="855309801" version="2"
 #: osm_watch: way id="810461577" version="4"
 #: XXX bis wann wird es diesen Weg geben?
-#: last_checked: 2020-10-22 (bahninfo-forum)
+#: last_checked: 2021-05-30 (baustellen-doku)
 #: next_check: 2023-07-31
 (Notweg Bahnübergang Bahnhofstr.)	NN 10231,-2159 10215,-2170 10181,-2174 10161,-2146 10096,-2137
 # 
@@ -11044,6 +11046,7 @@ Albert-Hößler-Str.	N 16023,11459 16097,11669 16134,11774
 Albert-Hößler-Str.	N 16097,11669 16083,11733 16099,11786 16128,11881
 (Krautstr./Blumenstr. - Strausberger Platz)	NN 12125,12490 12134,12540
 Krautstr.	N 11963,11813 11966,11832 11993,11978 12002,12008
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_26_2221_2280_online.pdf (Straßenlandeinziehung)
 Krautstr.	NN 12002,12008 12021,12066
 Krautstr.	N 12021,12066 12059,12172 12081,12236 12118,12462
 Lange Str. (Friedrichshain)	N 11993,11978 12238,11931 12413,11901
@@ -13879,6 +13882,7 @@ Weichselstr. (Friedrichshain)	N 14888,11934 14926,12129
 Jessnerstr.	N 15117,12106 15077,11910 14986,11760 14946,11697 14849,11539
 Oderstr. (Friedrichshain)	N 15106,11598 15043,11637 14946,11697 14856,11740 14794,11770 14708,11820 14623,11867
 Waldeyerstr.	N 14926,12129 15003,12241
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_26_2221_2280_online.pdf (Straßenlandeinziehung)
 Waldeyerstr.	NN 15003,12241 15058,12329
 Helmerdingstr.	N 14468,11203 14442,11101
 Haasestr.	N 14328,11320 14286,11186
@@ -13917,7 +13921,7 @@ Schillerpromenade (Neukölln)	N 11713,7899 11738,7790 11763,7687 11785,7583 11803
 Zeitzer Str.	N 13325,7210 13326,7291
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/oderstra%C3%9Fe-188-ecke-siegfriedstr-neubau-einer-apartmentanlage.1058/#post-15273 (Bau einer Apartmentanlage, evtl. wird dann die Straße hier öffentlich?)
 #: osm.highway: service
-#: last_checked: 2021-05-22
+#: last_checked: 2021-06-15 (architektur-urbanistik)
 #: check_frequency: 360d
 (Verlängerung der Siegfriedstr.)	N 11664,6796 11488,6781
 Siegfriedstr. (Neukölln)	N 11664,6796 11935,6848 12122,6886 12342,6936 12479,6969 12664,7013 12810,7047
@@ -15364,7 +15368,7 @@ Togostr.	N 5531,16734 5315,16936
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_12_1737_1920_online.pdf (Widerspruch)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9450
 #: by: https://www.deutschlandfunkkultur.de/widerstand-gegen-manga-bell-platz-wie-in-berlin-um-einen.976.de.html?dram:article_id=455728
-#: osm_watch: way id="333607502" version="7"
+#: osm_watch: way id="333607502" version="8"
 #: also_indoor: search Manga-Bell-Platz
 #: last_checked: 2021-04-25
 #: check_frequency: 90d
