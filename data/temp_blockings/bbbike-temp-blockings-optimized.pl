@@ -525,7 +525,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-06-06
+#: last_checked: 2021-07-02
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -824,7 +824,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2243,7 +2243,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-06-13
+#: last_checked: 2021-07-02
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2434,7 +2434,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://viz.berlin.de/2021/01/langhansstr-sperrung/
 #: by: https://www.bahninfo-forum.de/read.php?9,691318,693319#msg-693319
 #: by: https://www.bahninfo-forum.de/read.php?9,691318,703556#msg-703556 (angeblich fährt die Straßenbahn wieder ab 24.06.2021)
-#: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=74297 (Straßebahn fährt erst ab 1.7.2021)
+# REMOVED --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=74297 (Straßebahn fährt erst ab 1.7.2021)
 #: XXX teilweise existieren auch Einschränkungen beim Überqueren der Langhansstr., auch für Fußgänger (gesehen: 2021-02-17 an der Behaimstr.)
 #: also_indoor: traffic (H,G)
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
@@ -2479,20 +2479,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
+         'data' => '#: source_id: viz2021:13.387177,52.552566,24.05.2019,11:02 (bis 14.9.2021)
+#: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021
 #: also_indoor: traffic (H)
 #: last_checked: 2021-05-24
 #: check_frequency: 60d
-#: next_check: 2021-06-30
+#: next_check: 2021-09-14
 	q3::inwork  8986,16092 9178,16317
 # REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
 ',
          'from' => 1558648800,
          'id' => 3108,
          'source_id' => '2147344253',
-         'text' => 'Grüntaler Str.: in Höhe Bellermannstr. Bauarbeiten, Ausweichen auf Gehweg mit Umwegen, voraussichtlich bis Ende Juni 2021',
+         'text' => 'Grüntaler Str.: in Höhe Bellermannstr. Bauarbeiten, Ausweichen auf Gehweg mit Umwegen, voraussichtlich bis 14.9.2021',
          'type' => 'handicap',
-         'until' => 1625068800
+         'until' => undef
        },
        {
          'data' => '#: note: ggfs. beim Pförtner anmelden
@@ -2657,7 +2658,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-06-13
+#: last_checked: 2021-07-02
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 ',
@@ -2706,7 +2707,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-06-12
+#: last_checked: 2021-06-29
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2763,16 +2764,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="2"
-#: osm_watch: way id="934995901" version="2"
-#: last_checked: 2021-06-25
+#: osm_watch: way id="934995901" version="3"
+#: last_checked: 2021-07-02
 # REMOVED --- #: next_check: 2021-01-29
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
-	q4::inwork 14247,11681 14211,11552
+# REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
 	q3::inwork 14247,11681 14272,11775
 ',
          'from' => 1590562800,
          'id' => 3240,
-         'text' => 'Gärtnerstr.: Bauarbeiten, zwischen Wühlischstr. und Simplonstr. Einbahnstraße Richtung Süden, zwischen Wühlischstr. und Krossener Str. sowie an der Grünberger Str. Fahrbahn gesperrt, evtl. bis Dezember 2021',
+         'text' => 'Gärtnerstr.: Bauarbeiten am Boxhagener Platz. Fahrbahn gesperrt, möglicherweise bis Dezember 2021',
          'type' => 'handicap',
          'until' => 1640966400
        },
@@ -2947,18 +2948,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        undef,
-       {
-         'data' => '#: by: https://pbs.twimg.com/media/EjnrSB_XgAEKrYS?format=jpg&name=medium
-	q4::inwork; 10177,13766 10319,13788
-# REMOVED (hier nicht mehr) ---	q4::inwork; 10319,13788 10459,13760
-',
-         'from' => 1601923909,
-         'id' => 3284,
-         'source_id' => '2147346452',
-         'text' => 'Torstr.: Engstelle von Rosenthaler Platz Richtung Mollstr., bis 30.6.2021',
-         'type' => 'handicap',
-         'until' => 1625065200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3106,6 +3096,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: BOHNSDORFERKREISEL-2017
 #: source_id: 2147346807 (bis 30.6.2021)
+#: source_id: viz2021:13.571014,52.412892,05.08.2020,19:43 (bis 12.7.2021)
 #: note: laut rbbtext kann der Radverkehr passieren
 #: by: https://viz.berlin.de/2021/01/bohnsdorfer-kreisel/ (keine Einschränkungen für Fußgänger)
 #: by: https://twitter.com/VIZ_Berlin/status/1353990207574581249 (Situation mit Bildern)
@@ -3117,20 +3108,21 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1610838000,
          'id' => 3321,
          'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1039050.php',
-         'text' => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, Radfahrer können auf den engen Gehwegen vorbeifahren, vom 18.1.2021 bis 30.6.2021',
+         'text' => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, Radfahrer können auf den engen Gehwegen vorbeifahren, vom 18.1.2021 bis 12.7.2021',
          'type' => 'handicap',
-         'until' => 1625065200
+         'until' => 1626102000
        },
        {
-         'data' => '#: osm_watch: way id="683770241" version="6"
+         'data' => '#: source_id: viz2021:13.536634,52.420965,13.01.2021,07:00
+#: osm_watch: way id="683770241" version="6"
 	q4::inwork 19564,1871 19743,1804
 ',
          'from' => 1610431200,
          'id' => 3322,
          'source_id' => '2147346788',
-         'text' => 'Rudower Str.: Fahrbahn zwischen Köpenicker Str. und Lehmfeldsteig wegen Bauarbeiten gesperrt, vom 13.01.2021 07:00 Uhr bis 30.06.2021 17:00 Uhr ',
+         'text' => 'Rudower Str.: Fahrbahn zwischen Köpenicker Str. und Lehmfeldsteig wegen Bauarbeiten gesperrt, vom 13.01.2021 07:00 Uhr bis 05.01.2022 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1625065200
+         'until' => 1641398400
        },
        undef,
        {
@@ -3180,7 +3172,18 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: 2147347231
+#: source_id: viz2021:13.440907,52.591391,03.07.2021,00:30
+	2::inwork 12672,20720 12723,20691
+',
+         'from' => 1625176800,
+         'id' => 3331,
+         'source_id' => '2147346882',
+         'text' => 'Bahnhofstr.: Unterführung unter der A114 gesperrt, Fußgänger und Radfahrer sind auch betroffen, vom 3.7.2021 bis 5.7.2021 3 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1625446800
+       },
        {
          'data' => '#: by: https://tierparkcenter.de/wochenmarkt/ (Öffnungszeiten)
 #: tempex: (mo,th,fr) T08-T17
@@ -3199,7 +3202,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-06-20
+#: last_checked: 2021-07-01
 #: check_frequency: 30d
 #: next_check: 2021-09-30
 	q4::inwork; 15279,10862 15272,10790 15261,10738
@@ -3250,12 +3253,12 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: AUER-2021
 #: XXX nach den Bauarbeiten werden die Parkstreifen gepflastert sein und auf der östlichen Seite breiter sein (für Querparken); außerdem gibt\'s eine Einbahnstraßenregelung für Autos
-#: XXX laut rbb bis 28.6.2021
+#: XXX laut rbb bis 30.7.2021
 #: also_indoor: traffic (G,H)
 #: priority: #A vvv
-#: last_checked: 2021-06-20 vvv
+#: last_checked: 2021-07-02 vvv
 #: check_frequency: 21d vvv
-#: next_check: 2021-06-28 vvv
+#: next_check: 2021-07-30 vvv
 # REMOVED (hier fertig) ---	q4::inwork 13025,12523 13067,12583
 	q4::inwork 13067,12583 13202,12790
 	q4::inwork; 13273,12902 13202,12790
@@ -3266,7 +3269,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 ',
          'from' => undef,
          'id' => 3348,
-         'text' => 'Auerstr.: Fahrbahn wegen Bauarbeiten gesperrt, vermutlich bis zum 28.6.2021',
+         'text' => 'Auerstr.: Fahrbahn wegen Bauarbeiten gesperrt, vermutlich bis zum 30.7.2021',
          'type' => 'handicap',
          'until' => undef
        },
@@ -3364,9 +3367,10 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://www.berliner-woche.de/hermsdorf/c-verkehr/burgfrauenstrasse-ab-19-april-gesperrt_a306720
 #: source_id: 2147347107 (hier: bis 30.6.2021)
+#: source_id: viz2021:13.299346,52.626261,19.04.2021,07:00 (bis 5.9.2021)
 #: note: zwei Bauabschnitte: zunächst der westliche Abschnitt bis Olafstr. (inkl. Kreuzung), danach der östliche Abschnitt bis Berliner Str.
 #: priority: #A
-#: next_check: 2021-06-30
+#: next_check: 2021-09-05
 	q4::inwork 3022,24393 3225,24431 3425,24469
 	q3::inwork 3425,24469 3575,24498
 # REMOVED (dieser Bereich folgt später) ---	q4::inwork 3575,24498 3712,24528 3842,24556
@@ -3374,9 +3378,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1618696800,
          'id' => 3357,
          'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1073307.php',
-         'text' => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Olafstr., Fahrbahn gesperrt, vom 19.4.2021 bis 30.6.2021',
+         'text' => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Olafstr., Fahrbahn gesperrt, vom 19.4.2021 bis 5.9.2021',
          'type' => 'handicap',
-         'until' => 1625004000
+         'until' => 1630857600
        },
        undef,
        undef,
@@ -3384,7 +3388,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer?
 #: note: 2021-06-13 ("Radfahrer frei"-Schilder fehlen weiterhin, aber zumindest sonntags scheint man auf dem noch existierenden Radstreifen gut durchzukommen)
 #: last_checked: 2021-06-13
-	q4::inwork; 9195,11972 9207,11880 9218,11793
+	q4::inwork; 9195,11972 9207,11880
+# REMOVED (hier nicht mehr) ---	q4::inwork; 9207,11880 9218,11793
 ',
          'from' => undef,
          'id' => 3360,
@@ -3594,17 +3599,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1631743199
        },
-       {
-         'data' => '#: next_check_id: STERNDAMM-2020
-	q4::inwork 17261,4267 17297,4159 17341,4046 17346,4031 17379,3932
-',
-         'from' => 1621202400,
-         'id' => 3378,
-         'source_id' => 'https://www.bahninfo-forum.de/read.php?9,665091,701727#msg-701727',
-         'text' => 'Johannes-Werner-Str.: Gleisbauarbeiten, Fahrbahn gesperrt, bis 2.7.2021',
-         'type' => 'handicap',
-         'until' => 1625238000
-       },
+       undef,
        {
          'data' => '#: note: laut Schild der Wasserbetriebe bis August 2021
 #: source_id: 2147347187 (Anbindung Soorstraße gesperrt, bis 25.6.2021)
@@ -3624,7 +3619,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: HEIDEKRAUTBAHN-2021
 #: add_fragezeichen: Ist der neue Weg bereits offiziell eröffnet?
-#: last_checked: 2021-05-30 (mapillary)
+#: last_checked: 2021-06-25 (daf)
 #: check_frequency: 30d
 	2::inwork 7236,19689 7273,19682 7435,19547 7446,19522 7504,19459
 ',
@@ -3657,8 +3652,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: source_id: viz2021:13.517342,52.454467,25.05.2021,10:00
+#: by: https://www.bahninfo-forum.de/read.php?9,702729,704984#msg-704984 (nun bis zum Bahnübergang)
+#: by: https://twitter.com/VIZ_Berlin/status/1409387334097727491
 # REMOVED (hier mittlerweile offen) ---	q3::inwork 18080,5376 18245,5551
-	q3::inwork 18245,5551 18370,5511 18680,5413 18955,5320
+# REMOVED (hier nicht mehr?) ---	q3::inwork 18245,5551 18370,5511 18680,5413
+	q3::inwork 18680,5413 18955,5320 19037,5316 19186,5310 19328,5304
 ',
          'from' => 1621843200,
          'id' => 3383,
@@ -3804,7 +3802,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        {
-         'data' => '	q4::inwork 5452,1940 5396,1774 5335,1616 5299,1524 5273,1456 5223,1318 5201,1227 5178,1123
+         'data' => '#: source_id: viz2021:13.32537,52.419526,28.06.2021,08:00 (hier: nur zwischen Saaleckplatz und Oskar-Lange-Platz)
+#: note: laut rbb zwei Meldungen: bis Oskar-Lange-Platz bis 31.7.2021, bis Oberhofer Platz bis 6.8.2021
+	q4::inwork 5452,1940 5396,1774 5335,1616 5299,1524 5273,1456 5223,1318 5201,1227 5178,1123
 ',
          'from' => 1624744800,
          'id' => 3396,
@@ -3832,6 +3832,111 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Steglitzer Damm: Bauarbeiten, Fahrbahn zwischen Bismarckstr. und Heinrich-Seidel-Str. Richtung Osten gesperrt, vom 02.08. bis zum 24.09.2021',
          'type' => 'handicap',
          'until' => 1632520799
+       },
+       {
+         'data' => '#: by: rbb
+	q4::inwork 3868,12401 3757,12372
+',
+         'from' => 1624917407,
+         'id' => 3399,
+         'text' => 'Alt-Lietzow: zwischen Wintersteinstr. und Arcostr. gesperrt, bis 05.11.2021) ',
+         'type' => 'handicap',
+         'until' => 1636153200
+       },
+       {
+         'data' => '#: by: rbb
+	q4::inwork 3618,10283 3614,10564
+',
+         'from' => 1624917511,
+         'id' => 3400,
+         'text' => 'Dahlmannstr.: zwischen Sybelstr. und Kurfürstendamm gesperrt, bis 30.07.2021) ',
+         'type' => 'handicap',
+         'until' => 1627682400
+       },
+       {
+         'data' => '#: next_check_id: PICHELSDORFER-2021
+#: note: laut rbb ist der Fuß- und Radverkehr frei (allerdings evtl. mit Einschränkungen, deshalb noch immer q3)
+	q3::inwork -3824,13350 -3786,13267 -3693,13012 -3667,12919
+',
+         'from' => 1624917600,
+         'id' => 3401,
+         'source_id' => 'viz202113.19521252.52793830.06.20210600',
+         'text' => 'Pichelsdorfer Str.: Bauarbeiten zwischen Wilhelmstr. und Zimmerstr., evtl. sind auch Radfahrer betroffen, vom 30.06.2021 06:00 bis 31.12.2021 17:00 ',
+         'type' => 'handicap',
+         'until' => 1640991600
+       },
+       {
+         'data' => '#: next_check_id: SKANDINAVISCHE-2021
+#: note: nicht ganz klar, ob nur die Richtung Bhf. Lichtenberg oder beide Richtungen betroffen sind --- mittlerweile ist es sowieso ein anderer Abschnitt
+#: source_id: viz2021:13.500432,52.510704,28.06.2021,08:00
+#: also_indoor: traffic (G)
+# REMOVED ---	q4::inwork 17338,11969 17210,11950 17166,11944 17082,11909 17013,11849 16958,11778
+	q4::inwork; 16958,11778 16815,11729 16786,11668
+',
+         'from' => 1624744800,
+         'id' => 3402,
+         'source_id' => 'viz202113.50605952.51227328.06.20210800',
+         'text' => 'Weitlingstr.: Fahrbahnsanierung Richtung Lückstr. zwischen Einbecker Str. und Irenenstr., vom 28.06.2021 08:00 bis 07.07.2021 17:00',
+         'type' => 'handicap',
+         'until' => 1625695200
+       },
+       {
+         'data' => '#: by: https://www.berliner-woche.de/niederschoeneweide/c-bauen/hasselwerder-park-mit-neuen-wegen_a314970
+#: next_check_id: HASSELWERDERPARK-2021
+	2::inwork 18506,5596 18560,5539 18608,5501 18695,5453
+',
+         'from' => 1624744800,
+         'id' => 3403,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1100562.php',
+         'text' => 'Hasselwerderpark: Uferweg zwischen Rudower Str. und Britzer Str. gesperrt, vom 28.06.2021 bis voraussichtlich 01.09.2021',
+         'type' => 'gesperrt',
+         'until' => 1630533600
+       },
+       {
+         'data' => '#: last_checked: 2021-07-02 vvv
+#: check_frequency: 30d vvv
+#: next_check: 2021-09-13 vvv
+	3 14888,11934 14926,12129 15003,12241
+	3 15003,12241 14926,12129 14888,11934
+	3 14888,11934 14926,12129 14854,12137
+	3 15003,12241 14926,12129 14994,12121
+	3 14994,12064 14994,12121 14926,12129
+	3 15117,12106 14994,12121 14994,12064
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+',
+         'from' => 1625250931,
+         'id' => 3404,
+         'source_id' => 'viz2021:13.471852,52.513916,22.06.2021,07:00',
+         'text' => 'Frankfurter Allee: Überqueren in Höhe Weichselstr./Waldeyerstr. und Müggelstr. nicht möglich, bis 13.09.2021',
+         'type' => 'gesperrt',
+         'until' => 1631570400
+       },
+       {
+         'data' => '	2::inwork 52006,106839 52191,106842
+',
+         'from' => 1625004000,
+         'id' => 3405,
+         'source_id' => '217300207',
+         'text' => 'Cremzow - Wendtshof: Vollsperrung nach Unwetter-Schaden, eventuell sind auch Radfahrer betroffen, vorraussichtlich bis 09.07.2021',
+         'type' => 'gesperrt',
+         'until' => 1625868000
+       },
+       {
+         'data' => '#: add_fragezeichen: Sind Radfahrer tatsächlich von den Bauarbeiten betroffen? vvv
+#: next_check: 2021-07-05 vvv
+	q4::inwork; 8685,13728 8841,13800
+	q4::inwork; 8935,13844 9085,13919
+#: next_check ^^^
+#: add_fragezeichen ^^^
+',
+         'from' => 1625349600,
+         'id' => 3406,
+         'source_id' => 'viz202113.37937952.52948405.07.20211000',
+         'text' => 'Invalidenstr.: Gleisarbeiten Richtung Brunnenstr. zwischen Hessische Str. und Am Nordbahnhof, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, vom 05.07.2021 10:00 bis 23.07.2021 17:00',
+         'type' => 'handicap',
+         'until' => 1627077600
        }
      
 );

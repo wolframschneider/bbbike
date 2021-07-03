@@ -10,14 +10,7 @@
 # 
 ### Friedrichshain ###
 # 
-#: also_indoor: traffic (G,H)
-#: XXX Parkverbotsschilder bis zum 20.6.2021
-#: add_fragezeichen: Sind die Bauarbeiten in der Pettenkoferstr. bereits beendet?
-#: last_checked: 2021-05-17
-#: next_check: 2021-06-20
-# REMOVED --- #: valid: -20210620
-Pettenkoferstr.: Bauarbeiten an der Kreuzung Eldenaer Str., Sperrung der Fahrbahn	q3::inwork 14858,12775 14836,12826
-# 
+# REMOVED (entfernt) --- #: also_indoor: traffic (G,H) --- #: XXX Parkverbotsschilder bis zum 20.6.2021 --- #: add_fragezeichen: Sind die Bauarbeiten in der Pettenkoferstr. bereits beendet? --- #: last_checked: 2021-05-17 --- #: next_check: 2021-06-20 --- # REMOVED --- #: valid: -20210620 --- Pettenkoferstr.: Bauarbeiten an der Kreuzung Eldenaer Str., Sperrung der Fahrbahn	q3::inwork 14858,12775 14836,12826
 # REMOVED (Bauarbeiten beendet) --- #: next_check_id: RUEDERSDORFER-2016 --- #: osm_watch: way id="472360197" version="1" --- #: last_checked: 2017-04-12 --- #: check_frequency: 7d --- Rüdersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 13173,11788 13161,11795 13066,11854# 
 # REMOVED --- #: last_checked: 2017-03-30 vvv --- #: check_frequency: 14d vvv --- Gubener Str.: Bauarbeiten an der Kreuzung Grünberger/Wedekindstr., Ausweichen auf Gehweg	q2::inwork 13406,11896 13352,12003 --- # REMOVED --- Gubener Str.: Bauarbeiten an der Kreuzung Grünberger/Wedekindstr., Ausweichen auf Gehweg	q3-::inwork 13339,12029 13352,12003
 # REMOVED --- #: last_checked: 2016-07-27 --- #: check_frequency: 14d --- Koppenstr.: Wasserrohrbruch, Fahrbahn gesperrt	q2::inwork 12413,11901 12366,11808
@@ -125,7 +118,7 @@ Pettenkoferstr.: Bauarbeiten an der Kreuzung Eldenaer Str., Sperrung der Fahrbah
 ### Treptow ###
 # 
 #: XXX der Original-Eintrag muss nach Ablauf wieder aktiviert werden
-#: last_checked: 2021-05-03 (mapillary)
+#: last_checked: 2021-07-01
 #: check_frequency: 60d
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
 # 
@@ -159,7 +152,7 @@ Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork;
 # REMOVED (nein) --- #: next_check_id: VERLWERDERSTR-2018 --- #: XXX gibt es hier tatsächlich Einschränkungen? --- #: valid: 20180702-20190530 -- Verlängerte Werderstr.: Bauarbeiten	q4::inwork 20245,2152 20261,2114 20222,2037 20214,1988 20187,1930 20166,1864 20120,1791 20093,1776 20064,1777
 # REMOVED (mittlerweile wieder offen) --- #: by: http://www.dafmap.de/d/berlin.html?id=4505&mt=0&zoom=17 --- #: last_checked: 2017-03-20 --- #: check_frequency: 14d --- Kiefholzstr.: Bauarbeiten, Fahrbahn gesperrt	q2::inwork 13821,9340 13715,9455
 # REMOVED (aber vielleicht nur am Wochenende offen?) --- #: last_checked: 2016-12-20 vvv --- #: check_frequency: 21d vvv --- Schmollerplatz: Bauarbeiten, Fahrbahn gesperrt	q2::inwork 13203,9450 13124,9375 --- Schmollerplatz: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 13124,9375 13111,9361 13126,9347 --- #: check_frequency ^^^ --- #: last_checked ^^^
-# REMOVED --- #: XXX siehe auch valid-Eintrag weiter unten --- #: source_id: 2147340178 --- #: last_checked: 2016-10-05 --- #: valid: -20161115 --- Bouchéstr.: Bauarbeiten, Radfahrer müssen auf dem Gehweg fahren	q2::inwork 13642,9624 13865,9866 13890,9894 -- # REMOVED (wahrscheinlich aufgehoben) --- #: last_checked: 2013-11-22 --- #: check_frequency: 60d --- Beermannstr.: Bauarbeiten, Fahrbahn in Richtung Elsenstr. gesperrt	q4; 13973,9465 14157,9345
+# REMOVED --- #: XXX siehe auch valid-Eintrag weiter unten --- #: source_id: 2147340178 --- #: last_checked: 2016-10-05 --- #: valid: -20161115 --- Bouchéstr.: Bauarbeiten, Radfahrer müssen auf dem Gehweg fahren	q2::inwork 13642,9624 13860,9861 13870,9872 13890,9894 -- # REMOVED (wahrscheinlich aufgehoben) --- #: last_checked: 2013-11-22 --- #: check_frequency: 60d --- Beermannstr.: Bauarbeiten, Fahrbahn in Richtung Elsenstr. gesperrt	q4; 13973,9465 14157,9345
 # REMOVED (Bauarbeiten beendet) --- #: XXX laut Schild gehen die Bauarbeiten bis 10.2017 --- #: XXX nach Beendigung der Bauarbeiten wieder den alten handicap-Eintrag ("Bodenschwellen") aktivieren --- #: last_checked: 2017-11-30 --- #: check_frequency: 14d --- Bouchéstr.: Bauarbeiten an der Heidelberger Str.	q3::inwork; 13489,9456 13357,9313
 # 
 ### Adlershof ###
@@ -168,15 +161,7 @@ Am Treptower Park: Bauarbeiten, Fahrbahn und rechter Gehweg gesperrt	q4::inwork;
 # 
 ### Altglienicke ###
 # 
-#: XXX wie lange bleibt die Fahrbahn gesperrt? Laut rbb "bis voraussichtlich 30.06.2021"
-#: by: https://twitter.com/VIZ_Berlin/status/1400822146331447298 (bis Mitte Juni 2021)
-#: source_id: 2147347162 (bis 11.6.2021) (inaktiv)
-#: also_indoor: traffic (G,H)
-#: priority: #A
-#: last_checked: 2021-05-29
-#: next_check: 2021-06-30
-#: valid: -20210630
-Köpenicker Str.: Fahrbahn zwischen Semmelweisstr. und Rudower Str. gesperrt, voraussichtlich bis 30.6.2021	q3::inwork 19803,1911 19766,1796
+# REMOVED (laut traffic offen) --- #: XXX wie lange bleibt die Fahrbahn gesperrt? Laut rbb "bis voraussichtlich 30.06.2021" --- #: by: https://twitter.com/VIZ_Berlin/status/1400822146331447298 (bis Mitte Juni 2021) --- #: source_id: 2147347162 (bis 11.6.2021) (inaktiv) --- #: also_indoor: traffic (G,H) --- #: priority: #A --- #: last_checked: 2021-05-29 --- #: next_check: 2021-06-30 --- #: valid: -20210630 --- Köpenicker Str.: Fahrbahn zwischen Semmelweisstr. und Rudower Str. gesperrt, voraussichtlich bis 30.6.2021	q3::inwork 19803,1911 19766,1796
 # 
 ### Wedding ###
 # 
@@ -216,7 +201,7 @@ Chausseestr.: gemeinsamer Rad- und Gehweg	q2::inwork; 8732,14098 8607,14253 8570
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic vvv
-#: last_checked: 2021-06-06 vvv
+#: last_checked: 2021-07-02 vvv
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q2::inwork; 8775,12457 8904,12489
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
@@ -227,7 +212,7 @@ Mittelstr.: Bauarbeiten, Fahrbahn teilweise gesperrt	q3::inwork 9011,12423 9131,
 # 
 #: next_check_id: FRIEDRICH-2020
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/polizeibilanz-fuer-radler-auf-der-friedrichstrasse_a294541
-#: last_checked: 2021-02-12
+#: last_checked: 2021-07-02
 #: next_check: 2021-10-31
 #: valid: 20200821-20211031
 Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
@@ -249,7 +234,7 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: osm_watch: way id="751595931" version="2"
 #: also_indoor: traffic (H)
-#: last_checked: 2021-06-25
+#: last_checked: 2021-07-02
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10952,12401
 # 
 #: last_checked: 2021-06-13
@@ -261,7 +246,7 @@ Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontaine
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=632731&postcount=1072
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/arch%C3%A4ologisches-haus-besucherzentrum-am-petriplatz.789/#post-14039
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-06-08
+#: last_checked: 2021-06-28 (daf)
 #: check_frequency: 60d
 Scharrenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 10332,11929 10392,11991
 # 
@@ -271,9 +256,7 @@ Scharrenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 
 # REMOVED (mittlerweile komplett gesperrt) --- #: next_check_id: ROSSSTRASSENBRUECKE-2019 --- #: note: laut fritz dauern die Bauarbeiten bis 28.02.2021 --- #: osm_watch: way id="339201210" version="3" --- #: also_indoor: search Neue Roßstraßenbrücke --- #: last_checked: 2020-01-27 (mapillary) --- #: check_frequency: 21d --- Neue Roßstraßenbrücke: Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 10687,11853 10672,11870
 # REMOVED --- #: next_check_id: ROSSSTRASSENBRUECKE-2019 --- #: last_checked: 2021-06-15 vvv --- #: next_check: 2021-06-18 vvv --- (Umfahrung Baustelle Neue Roßstraßenbrücke): einige Fußgänger	q3::inwork 10680,11875 10650,11909 10642,11901 10590,11840 10599,11819 --- Neue Roßstr.: Fahrbahn gesperrt	q4::inwork 10687,11853 10722,11816 --- #: next_check ^^^ --- #: last_checked ^^^
 # REMOVED --- #: next_check_id: ROSSSTRASSENBRUECKE-2019 --- #: osm_watch: way id="626237089" version="3" --- # REMOVED --- #: XXX evtl. wird hier im Zusammenhang mit den Bauarbeiten auf der Roßstraßenbrücke die Zufahrt komplett gesperrt (bis 29. März 2019?) --- #: source_id: 2147343739 --- #: source_id: 2147343772 --- 
-#: last_checked: 2021-06-22
-# REMOVED --- #: next_check: 2021-06-18
-Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Bordstein	q2::inwork 10687,11853 10869,11949
+# REMOVED --- #: last_checked: 2021-06-22 --- # REMOVED --- #: next_check: 2021-06-18 --- Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Bordstein	q2::inwork 10687,11853 10869,11949
 # REMOVED --- #: source_id: 2147341587 --- #: last_checked: 2017-11-01 vvv --- #: check_frequency: 21d vvv --- Jägerstr.: Bauarbeiten an der Friedrichstr., auf Gehweg ausweichen	q2::inwork 9195,11972 9393,12000 --- Jägerstr.: Bauarbeiten an der Friedrichstr., auf Gehweg ausweichen	q3::inwork 9393,12000 9523,12019
 # REMOVED --- #: last_checked: 2015-06-10 --- Am Zirkus: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9167,13046 9137,13032 9090,13009
 # REMOVED --- #: last_checked: 2016-06-01 --- Kommandantenstr.: Bauarbeiten, Einbahnstraße	q2::inwork; 10437,11352 10389,11390
@@ -289,7 +272,7 @@ Märkisches Ufer: Engstelle vor der Roßstraßenbrücke, Bordstein	q2::inwork 10687,
 #: by: http://www.dafmap.de/d/berlin.html?id=3204&mt=0&zoom=16
 #: osm_watch: way id="507023458" version="10"
 #: also_indoor: traffic
-#: last_checked: 2021-04-30 (daf)
+#: last_checked: 2021-06-28 (daf)
 #: check_frequency: 45d
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 # 
@@ -303,10 +286,13 @@ Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 96
 # 
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="4597320" version="19"
+#: osm_watch: way id="43350531" version="11"
 #: source_id: 2147343824 (bis 30.6.2021)
-#: last_checked: 2021-05-22
+#: source_id: viz2021:13.379936,52.514077,04.03.2019,08:00 (bis 30.6.2021)
+#: add_fragezeichen: Sind die Bauarbeiten hier beendet?
+#: last_checked: 2021-07-02
 #: check_frequency: 45d
-#: next_check: 2021-06-30
+# REMOVED --- #: next_check: 2021-06-30
 # REMOVED --- #: valid: 20191218-20210531
 Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahrbahn gesperrt, Gehweg explizit für Radfahrer verboten	q4::inwork 8737,12098 8783,11959
 # 
@@ -358,7 +344,7 @@ Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahr
 #: by: https://blog.sbb.berlin/ab-1-februar-2021-haus-unter-den-linden-fuer-benutzungsbetrieb-geoeffnet/?date=20201226 (Baustelleneinrichtung in der Charlottenstr. wird im Frühjahr 2021 abgebaut, bis Sommer 2021 wird die Straßenseite wiederhergestellt; Sperrung in der Universitätsstraße womöglich bis Mitte 2022)
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
-#: last_checked: 2021-06-08 vvv
+#: last_checked: 2021-07-02 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="9"
@@ -371,13 +357,7 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 #: last_checked ^^^
 #: next_check_id ^^^
 # 
-#: next_check_id: MUSEUMSINSEL-2020
-#: next_check_id: ZEUGHAUS-2014
-#: priority: #A
-#: last_checked: 2021-06-23 (daf)
-#: check_frequency: 14d
-Schinkelplatz: Fahrbahn wird neu gemacht	q4::inwork 9984,12426 9990,12404 9996,12372
-# 
+# REMOVED (scheint fertig zu sein (daf)) --- #: next_check_id: MUSEUMSINSEL-2020 --- #: next_check_id: ZEUGHAUS-2014 --- #: priority: #A --- #: last_checked: 2021-06-23 (daf) --- #: check_frequency: 14d --- Schinkelplatz: Fahrbahn wird neu gemacht	q4::inwork 9984,12426 9990,12404 9996,12372
 # REMOVED (so gut wie fertig; Radfahrer können recht gut passieren) --- #: source_id: INKO_093369 --- #: note: ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3 --- # REMOVED (Sperrung existiert noch) --- #: XXX bei VMZ ist dieser Eintrag verschwunden --- wurde die Sperrung aufgehoben? --- #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0199-palais-behrens-palais-theising.html --- #: XXX siehe auch http://www.deutsches-architektur-forum.de/forum/showthread.php?t=7390&page=7 --- #: last_checked: 2015-07-20 --- #: check_frequency: 60d --- Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt	q3::inwork; 9164,12172 9373,12197
 # REMOVED (by osm) --- #: last_checked: 2013-06-10 (wosch) vvv --- #: osm_watch: way id="25185423" version="15"--- Gartenstr.: Einbahnstraße zwischen Invalidenstr. und Tieckstr. (Bauarbeiten)	q4::inwork; 9510,13823 9383,13986 --- #: last_checked ^^^
 # REMOVED (by wosch) --- #: osm_watch: way id="4597205" version="6" --- Tieckstr.: Einbahnstraße zwischen Borsigstr. und Gartenstr. (Bauarbeiten)	q3::inwork; 9376,13765 9510,13823 
@@ -458,7 +438,7 @@ Schinkelplatz: Fahrbahn wird neu gemacht	q4::inwork 9984,12426 9990,12404 9996,1
 #: XXX die Ausschilderung wird nach den Bauarbeiten vermutlich aufgehoben
 #: by: http://thomas.krickstadt.de/2020-07-11-bauzustand-adlershof-2
 #: confirmed_by: srt
-#: last_checked: 2021-05-10
+#: last_checked: 2021-06-25 (krickstadt)
 #: check_frequency: 90d
 #: next_check: 2021-10-01
 Sterndamm [Nebenfahrbahn]: Gehweg für Radfahrer frei	q3 17648,5338 17697,5347
@@ -491,13 +471,13 @@ Sterndamm [Nebenfahrbahn]: Gehweg für Radfahrer frei	q3 17648,5338 17697,5347
 #: source_id: 2147341145 (ausgelaufen)
 #: source_id: LMS-BR_r_LMS-BR_93387 (ausgelaufen)
 #: osm_watch: way id="563341816" version="6"
-#: XXX laut vmz bis Anfang 2019, laut fritz/rbb bis 30.06.2021
+#: XXX laut vmz bis Anfang 2019, laut rbb bis 31.08.2021
 #: by: http://www.dafmap.de/d/berlin.html?id=3451&mt=0&zoom=16
 #: also_indoor: traffic (H)
 #: last_checked: 2021-05-30 (daf)
 #: check_frequency: 90d
-#: next_check: 2021-06-30
-#: valid: -20210630
+#: next_check: 2021-08-31
+#: valid: -20210831
 Möckernstr.: Bauarbeiten, Einbahnstraße, ehemaliger Radweg kann benutzt werden	q3+::inwork; 9022,10857 8941,10663 8926,10626
 # 
 # REMOVED --- #: source_id: 2147341141 --- #: source_id: LMS-BR_r_LMS-BR_93355 --- #: XXX laut vmz bis Mitte Mai 2017, laut fritz bis 19. Mai 2017 --- #: last_checked: 2017-05-19 --- Neuenburger Str.: Bauarbeiten, Sperrung der Fahrbahn	q2::inwork 10178,10411 9955,10501
@@ -632,11 +612,12 @@ Neuköllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
 # 
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.kms-sonne.de/baustellennews/?date=20191023
-#: XXX außerdem gibt es Bauarbeiten auf der Karl-Marx-Str. zwischen Fuldastr. und Weichselstr., evtl. mit Verschwenkungen?
+#: by: https://www.kms-sonne.de/assets/2021/06/Baustellenuebersicht-A4-06-2021-Web.pdf (bis November 2021)
+# REMOVED (ja, allerdings nicht relevant) --- #: XXX außerdem gibt es Bauarbeiten auf der Karl-Marx-Str. zwischen Fuldastr. und Weichselstr., evtl. mit Verschwenkungen?
 #: source_id: 2147345357 (inaktiv)
 #: source_id: 2147345472 (bis 10.8.2021, Gesamtbaumaßnahme bis 2024)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-06-06
+#: last_checked: 2021-07-01
 #: check_frequency: 120d
 #: next_check: 2021-10-08
 Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12392,8724 12330,8636
@@ -645,12 +626,13 @@ Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 
 # 
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (ab 1. Juli 2020)
+#: by: https://www.kms-sonne.de/assets/2021/06/Baustellenuebersicht-A4-06-2021-Web.pdf (möglicherweise offen?)
 #: XXX laut rbbtext bis 4.7.2021
 #: osm_watch: way id="822805265" version="8"
 #: also_indoor: traffic (G)
-#: last_checked: 2021-06-04 (osm note)
+#: last_checked: 2021-07-01
 #: check_frequency: 90d
-#: next_check: 2021-07-04
+#: next_check: 2021-07-05
 Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 12639,8344
 # 
 #: next_check_id: KARLMARXSTR-2018
@@ -671,22 +653,25 @@ Neckarstr.: Sperrung der Einmündung an der Karl-Marx-Str.	q4::inwork 12509,8318 
 #: by: https://www.kms-sonne.de/baustellennews/?date=20200526 (Abschluss bis Rollberstr. voraussichtlich Mitte Juli 2020)
 #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (Abschluss bis Rollberstr. voraussichtlich September 2020)
 #: by: https://www.kms-sonne.de/baustellennews?date=202102 (voraussichtlich im Juni/Juli 2021 fertig)
+#: by: https://www.kms-sonne.de/assets/2021/06/Baustellenuebersicht-A4-06-2021-Web.pdf (möglicherweise in beiden Richtungen nun offen?)
 #: XXX laut rbbtext bis 06.04.2021
 #: source_id: IM_022515
 #: source_id: 2147338550
 #: source_id: LMS-BR_r_LMS-BR_19252
 #: source_id: 2147342527 (bis Ende Juni 2021, Gesamtmaßnahme bis 2024)
+#: source_id: viz2021:13.435272,52.480882,22.11.2018,07:00 (bis 5.7.2021, Gesamtmaßnahme bis 2024)
 #: osm_watch: way id="585753318" version="8"
-#: osm_watch: way id="71392596" version="13"
+#: osm_watch: way id="71392596" version="14"
 #: also_indoor: traffic
-#: last_checked: 2021-05-30 vvv
-#: check_frequency: 45d
-#: next_check: 2021-06-30
+#: priority: #A
+#: last_checked: 2021-07-01
+#: check_frequency: 30d
+#: next_check: 2021-07-05
 Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12598,8390 12639,8344 12689,8289 12714,8249
+# 
 # REMOVED (hier mittlerweile weitgehend befahrbar) --- Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12714,8249 12753,8187
 # REMOVED (laut osm hier nicht mehr) --- #: check_frequency: 30d --- #: next_check: 2020-10-20 --- Karl-Marx-Str.: Bauarbeiten zwischen Werbellinstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12753,8187 12794,8103
-#: last_checked ^^^
-# 
+# REMOVED --- #: last_checked ^^^
 # REMOVED (mittlerweile schon offen) --- #: by: https://www.kms-sonne.de/assets/2019/06/Baustellenuebersicht-A4-Info-Juni2019-web.pdf --- #: XXX zwischen Werbellinstr. und Briesestr. wird ab Ende Juni 2019 Zweirichtungsverkehr möglich sein --- #: next_check: 2019-06-30 --- Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Briesestr., Richtung Süden auf engen Gehweg ausweichen	q4::inwork; 12753,8187 12794,8103
 # REMOVED (nicht mehr erkennbar von der KMS) --- #: osm_watch: way id="563341822" version="3" --- Rollbergstr.: Einbahnstraßenregelung, ca. 70m	q3::inwork; 12545,8209 12714,8249
 # REMOVED (fertig) --- Karl-Marx-Str.: Bauarbeiten zwischen Werbellinstr. und Thomasstr., Richtung Süden auf Gehweg ausweichen	q4::inwork; 12753,8187 12794,8103 12830,8031 12846,7981 12865,7923 12892,7850 12898,7832 12914,7785 12969,7610
@@ -707,8 +692,8 @@ Karl-Marx-Str.: Bauarbeiten zwischen Erkstr. und Werbellinstr., Richtung Süden a
 # 
 #: last_checked: 2021-06-19 vvv
 #: check_frequency: 14d vvv
-S-Bhf. Rummelsburg: Bauarbeiten, Umwege, Schotterwege	q2::inwork 16811,9937 16878,9875
-S-Bhf. Rummelsburg: Bauarbeiten, Umwege, Schotterwege	q3::inwork 16878,9875 16900,9861 16925,9852
+S-Bhf. Betriebsbahnhof Rummelsburg: Bauarbeiten, Umwege, Schotterwege	q2::inwork 16811,9937 16878,9875
+S-Bhf. Betriebsbahnhof Rummelsburg: Bauarbeiten, Umwege, Schotterwege	q3::inwork 16878,9875 16900,9861 16925,9852
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
@@ -716,7 +701,7 @@ S-Bhf. Rummelsburg: Bauarbeiten, Umwege, Schotterwege	q3::inwork 16878,9875 1690
 # 
 #: XXX laut rbb und Halteverbotsschildern bis 31.08.2021
 #: also_indoor: traffic (H)
-#: last_checked: 2021-05-31 (mapillary)
+#: last_checked: 2021-07-02
 #: check_frequency: 30d
 #: next_check: 2021-08-31
 #: valid: -20210831
@@ -1300,7 +1285,7 @@ Dieffenbachstr.: Bodenschwellen	q0- 11346,9655 11541,9576
 #: note: drei Schwellen
 Oppelner Str.: Bodenschwellen	q0- 12897,10439 12978,10581
 # REMOVED (alle Bodenschwellen wurden entfernt) --- Schönleinstr.: Bodenschwellen	q1 11560,9524 11541,9576 11594,9604
-Hoffmannstr.: Bodenschwellen (2x)	q1 14077,10016 14289,9870
+Martin-Hoffmann-Str.: Bodenschwellen (2x)	q1 14077,10016 14289,9870
 Lausitzer Platz: einige Bodenschwellen	q2 12197,10494 12172,10585
 Lausitzer Platz: Fußgängerzone, Radfahrer frei, Bodenschwelle	q2 12274,10612 12172,10585
 Lausitzer Platz: einige Bodenschwellen	q2 12328,10442 12274,10612
@@ -1672,7 +1657,7 @@ Bänschstr.: mehrere (mindestens fünf) Bodenschwellen	q0 14996,12462 14801,12517
 #: XXX_prog: für Anhänger relevant (q2 oder so)
 Bänschstr.: mehrere (mindestens fünf) Bodenschwellen	q0 14798,12502 15005,12443
 #: XXX_prog: für Anhänger relevant (q1 oder so)
-Bouchéstr.: Bodenschwellen	q0 13642,9624 13865,9866
+Bouchéstr.: Bodenschwellen	q0 13642,9624 13860,9861
 #: XXX_prog: für Anhänger relevant (q1 oder so)
 Bouchéstr.: zwei Bodenschwellen	q0- 13489,9456 13357,9313
 #: XXX_prog: für Anhänger relevant (q2 oder so)
@@ -2773,11 +2758,13 @@ Borretschweg: eng	q2 24300,6142 24275,6156
 Engelwurzweg: eng	q2 24275,6156 24306,6210 24368,6268 24424,6296 24473,6304
 (Britzer Str. - Uferweg): Radfahren verboten	q4 18470,5600 18506,5596
 (Britzer Str. - Uferweg): Radfahren verboten	q4 18470,5600 18473,5645
+#: next_check_id: HASSELWERDERPARK-2021
 #: XXX wird das Radfahren hier erlaubt werden?
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5388
 #: osm_watch: way id="26995453" version="7"
 #: last_checked: 2021-05-16
-#: check_frequency: 120d
+# REMOVED --- #: check_frequency: 120d
+#: next_check: 2021-09-02
 (Uferweg an der Spree): Radfahren verboten	q4 18695,5453 18608,5501 18560,5539 18506,5596 18430,5719 18413,5799 18400,5841 18334,5900 18199,5935
 (Uferweg an der Spree - Kaisersteg): Radfahren verboten	q4 18413,5799 18339,5853 18326,5850
 Insel-Rügen-Weg: eng	q2 10967,17671 10978,17589 11064,17599
@@ -3586,6 +3573,8 @@ Breslauer Platz/Lauterstr.: Fußgängerzone, Radfahrer frei	q3; 5810,7337 5817,722
 Krautstr.: Fußgängerzone, Radfahrer frei	q3 12002,12008 12021,12066
 Mittelheide - S-Bhf. Hirschgarten: schmal, einige Fußgänger	q2 24089,6144 24060,6059 23951,6063
 Waldeyerstr.: Fußgänger, Radfahrer frei	q2 15003,12241 15058,12329
+Puschkinallee [Nebenstraße]: Fußgänger	q3 14152,9746 14196,9749
+(Bouchéstr. - Puschkinallee, Nebenstraße): Fußgänger	q3 13890,9894 13914,9910
 # 
 ######################### User Contributions #################################
 # 
@@ -4001,7 +3990,7 @@ Vereinsweg (Steglitz): Fußgänger, Privatstraße, Radfahren nicht erlaubt	q4 5334,
 #: XXX_prog: Bordstein am nördlichen Ende, ansonsten wäre es q1
 Apeldorner Weg: Fußgänger, Bordstein	q2+ 3822,8718 3858,8786 3952,8980
 Münstersche Str.: Fußgänger	q2 3840,9683 3698,9624
-(Hoffmannstr. - Puschkinallee): Fußgänger	q1 14077,10016 13999,9842
+(Hoffmannstr. - Puschkinallee): Fußgänger	q1 14077,10016 14011,9868 13999,9842
 # temporär entfernt: (Hoffmannstr. - Uferweg an den Treptowers): Fußgänger	q1 14077,10016 14116,10149 14126,10176
 August-Lindemann-Str.: Fußgänger	q3 14355,12752 14360,12792
 (Jagdschloß Grunewald - Umgehungschaussee): Fußgänger, Hundeauslaufgebiet	q2 878,6651 884,6701 1024,6898 1066,7093 1125,7184

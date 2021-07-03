@@ -39,7 +39,7 @@ Fichtenallee (Potsdam): Qualität?	? -8563,-3805 -8451,-3728 -8226,-3592
 Stern - Nudow: Durchfahrt möglich? Qualität (laut "Berliner Umland" witterungsabhängige Strecke)?	? -7077,-4186 -6902,-4397 -6775,-4326 -6767,-4463 -6671,-6390 -6537,-6488 -6508,-6969 -6191,-7587 -6319,-7795 -5766,-8911 -5387,-8896
 Königsdamm in Schlänitzsee: Qualität? Führt hier die F3 entlang?	? -19316,4365 -19392,4605
 F3 nach Marquardt: genaue Wegführung? Qualität?	? -19392,4605 -18701,4578
-Joachimsthal - Altkünkendorf: Qualität?	? 35512,66695 38125,66800 39287,67537 39575,67262 39875,66425
+Joachimsthal - Altkünkendorf: Qualität?	? 35457,66637 38125,66800 39287,67537 39575,67262 39875,66425
 Mescherin - B113: Qualität?	? 78641,95024 78662,95275 78787,95425 78812,95825 78921,96072
 B2 - Rosow: Qualität?	? 76863,101305 76087,101337 75912,101137 75359,101224
 Rosow - Pomellen: Qualität?	? 75335,101272 75175,101384
@@ -48,7 +48,6 @@ zur B158: Qualität?	? 56450,48250 56587,48550 57328,48981
 Neue Trasse der B167: für Radfahrer benutzbar? Alte Trasse nicht mehr Bundesstraße, sondern K6436?	? 58206,37275 58206,37675 58225,37959 58087,38231 57734,38743 57612,39937 57403,40340 56862,40818 56659,41179 56381,41675 56087,41956 55506,42350 54895,43268 54515,43803 53987,44157 53425,44300 53187,44262 52341,43207
 Kiekebusch (früher Waltersdorf) - Karlshof: laut "Berliner Umland" witterungsabhängige Strecke; Schlenker um See notwendig?	? 20075,-5417 19866,-5382 19809,-5557 19945,-5661 19915,-6315 19907,-6772 19951,-6902 19817,-7484
 Karlshof - Brusendorf: laut "Berliner Umland" geeigneter Radweg (möglicherweise asphaltiert)	? 19092,-9677 18847,-9629 18205,-10432
-Günterberg - Biesenbrow: laut "Regio-Cart" gut geeignet	? 47091,77570 47269,77634 47713,78664 48006,79147 48305,79400 49117,79726 49521,79799 49932,79760 50324,80128
 Mürow - Henriettenhof: Qualität? südlich des Dorfes sah es wie ein Feldweg oder Kopfsteinpflaster aus (Q2 oder schlechter)	? 52361,72080 53566,69842 54031,69280
 Frauenhagen - Schönermark: Qualität? laut "Regio-Cart" gut geeignet	? 53312,76587 53555,77037 53868,77304 54146,77628 54332,77932
 Schönermark - Biesenbrow: Qualität (höchstwahrscheinlich asphaltiert)?	? 54542,78720 54366,78714 54283,78677 54146,78628 54113,78631 53982,78634 53872,78613 53765,78628 53692,78714 53647,78765 52663,79186 52611,79156
@@ -171,7 +170,6 @@ Melzow - Meichow: Qualität? Ist die Straße durchgängig asphaltiert?	? 45024,8747
 Neumeichow: Qualität?	? 46617,88457 46886,88320 47675,88141 47917,88155
 Klein Ziethen: Qualität im östlichen Abschnitt?	? 45901,62746 45689,62706 45450,62546
 Schmargendorf - Angermünde: Qualität im nördlichen Abschnitt?	? 48130,65861 48428,66332 48546,66709 48783,67071 49038,67144
-Am Finowkanal: Qualität?	? 28618,49522 27493,49402 27345,49402 26913,49272 26639,49254 26415,49336 26442,49414 26551,49728 26563,49921 26685,50141
 Ützdorf - Bogensee: Qualität?	? 18337,39131 18345,39215 18503,39436 18534,39567 18733,39862 19076,40228 19213,40479 19053,40540 18784,40575 18665,40616 18519,40801 18124,40730 18048,40906 17964,40999 18022,41084 17879,41267
 Am Neuen Kanal/Trappenallee: Qualität?	? -3996,22969 -3994,23162 -3503,23811
 Sputendorf - Struveshof: Qualität (wahrscheinlich Kopfsteinpflaster/Beton/Sand)? Genaue Wegführung?	? -1371,-7671 -862,-9933
@@ -480,8 +478,6 @@ Wolfshagen - Ottenhage: Qualität?	? 25017,115256 25026,115200 25050,115094 25010
 Fürstenwerder - Bülowssiege: Qualität?	? 21007,109931 21062,109937 21165,109966 21220,109964 21445,110097 21615,110199 21693,110291 21855,110445 21977,110489 22078,110654 22289,110757 22351,110760 22638,110897 22803,110995 23087,111261
 L25 - Hildebrandshagen: Qualität?	? 23242,109707 23226,110446 23385,110586 23413,110757 23274,110878 23274,110963 23087,111261 23087,111306 23153,111439 23077,111655 23118,111699 23134,111848 22992,112273 22836,112384 22674,112533
 Hildebrandshagen - Wolfshagen: Qualität?	? 22674,112533 22785,112612 22909,112768 22972,112939 22766,114059 22849,114201 22836,114325 22934,114693 23096,114947 24289,115273 24587,115502
-Nieden - Göritz: Qualität?	? 43904,115305 43730,115229 42427,113348 42135,112936 42236,112780 42179,112609 42078,112581 42030,112375 42163,112359 42674,112178 42829,112070 43007,111999
-Göritz - Tornow: Qualität (vermutlich asphaltiert?)?	? 43007,111999 43070,112007 43476,111826 43822,111442 44872,110944
 Klockow: Weg nach Carmzow ausgeschildert? Qualität (vermutlich unbefestigt)?	? 49523,111095 49629,111050
 Am Gehölz (Potsdam): Qualität?	? -7758,-2457 -8024,-2468 -8140,-2475
 Hubertusdamm (Potsdam): Qualität östlich der Mendelssohn-Bartholdy-Str.?	? -7803,-2689 -7484,-2745 -7369,-2751
@@ -928,8 +924,10 @@ Schloßstr. (Schulzendorf): Qualität?	? 23724,-7103 23820,-7050 23934,-6967 24034
 Bergstr. (Schulzendorf): Qualität?	? 24045,-7112 24173,-7015
 Am Papenberg (Schulzendorf): Qualität? Ist die Straße verkehrsberuhigt?	? 24105,-7174 24122,-7213 24248,-7168 24243,-7135
 Walther-Rathenau-Str. (Schulzendorf): Qualität?	? 23296,-5280 22983,-5346
+Hönow - Neuenhagen: Bau eines Radwegs	?::inwork 27692,15066 28042,14883 28360,14626
 # added from strassen
 Süderholmer Steig (Ist dieser Abschnitt ausgeschildert?)	? -2245,21544 -2239,21904
+(Am Teltowkanal, südl. Ufer) (Hat der Weg bereits den Namen "Gerda-und-Wolfgang-Szepansky-Promenade" bekommen? Stehen schon entsprechende Schilder?)	? 9196,5272 9171,5263 9080,5225 8881,5143 8784,5095
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -1020,7 +1018,6 @@ Ostpromenade: Asphalt (ist der nordwestliche Abschnitt der Straße ebenfalls asph
 Kirschenallee: Asphalt (ist der östliche Abschnitt der Straße ebenfalls asphaltiert?)	? 24949,-7866 25023,-7877
 Westpromenade: Asphalt (ist der westliche Abschnitt der Straße ebenfalls asphaltiert? Ist die Straße eine Spielstraße?)	? 24695,-8064 24241,-7799
 Am Wasser (Gartz): Kopfsteinpflaster (Stimmt das? Liegt hier tatsächlich Kopfsteinpflaster?)	? 76116,90239 76020,90231 75977,90236
-Hamburger Str. (schlechtes): schlechtes Kopfsteinpflaster (ist im südwestlichen Abschnitt die Straße auch gepflastert?)	? 23875,-6743 23726,-6857
 Reichenberg: grobes Kopfsteinpflaster (genauer Abschnitt fehlt)	? 58453,24209 58390,23910 58422,23806 58340,23653
 Rollwitz - Damerow: Kopfsteinpflaster/Feldweg (genauere Qualitätsbeschreibung fehlt)	? 46872,118656 46914,117945 47156,116507 47087,115725
 Dahme: gutes Kopfsteinpflaster (Wird die Qualität hier nach den Bauarbeiten besser werden? Wird es Radwege geben?)	? 13308,-59619 13503,-59620 13692,-59667 13859,-59831 13957,-59911
@@ -1043,8 +1040,6 @@ Götschendorf - Böckenberg: schlechte Qualität, teilweise Sand (wie ist die Quali
 Groß Friedenwalde - Flieth: Kopfsteinpflaster (wie schlecht ist das Kopfsteinpflaster hier?)	? 35740,80983 35815,81168 35815,81518 35894,81782
 Groß Friedenwalde - Flieth: Asphalt (ist hier tatsächlich asphaltiert?)	? 35894,81782 35998,82265 36009,82890 36430,83497 36578,83835 36590,84086 36693,84235 36676,84495 36696,84495 36715,84579
 Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	? 37515,64395 37608,64317 38095,64055 38327,63933
-# added from handicap_s
-Pettenkoferstr.: Bauarbeiten an der Kreuzung Eldenaer Str., Sperrung der Fahrbahn (Sind die Bauarbeiten in der Pettenkoferstr. bereits beendet?)	? 14858,12775 14836,12826
 # added from nolighting
 Stresemannstr. - Wilhelmstr.: vorhandene Beleuchtung ist kaputt (funktioniert die Beleuchtung wieder?)	? 9245,10565 9375,10616
 # added from brunnels
@@ -1071,6 +1066,9 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from fragezeichen
 Schwanebecker Chaussee: Radwegbau (Wird ein Zweirichtungsradweg auf der westlichen Seite entstehen? Wird der Radweg asphaltiert sein?)	? 22048,29221 21772,28566
 # added from bbbike-temp-blockings-optimized
+Schönstr.: Bauarbeiten zwischen Große Seestr. und Rennbahnstr., Fahrbahn gesperrt (Bis wann gehen die Bauarbeiten?)	? 14136,17170 13996,16959
 Betckestraße: zwischen Wörther Str. und Götelstr. Fahrbahn gesperrt, Ausweichen auf nördlichen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt (Wann ist die Fahrbahn wieder offen?)	? -3259,12580 -3444,12580
+Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 5/2021: Durchfahrt ist noch möglich) (Gibt es mittlerweile eine Sperrung? Falls ja, wo ist der gesperrte Abschnitt und gilt die Sperrung auch für Fußgänger und Radfahrer?)	? 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17483,8644 17449,8720 17416,8767 17380,8858
 Brümmerstr.: zwischen Thielallee und Fabeckstr. Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Wie lange gehen die Bauarbeiten?)	? 2523,5114 2746,5537
+Glashütter Weg - Künnekeweg: Bauarbeiten, Weg ist gesperrt, Umfahrung über Trampelpfade möglich, Ende der Bauarbeiten unbekannt (Wie lange gehen die Bauarbeiten? Wie ist die Wegoberfläche nach den Bauarbeiten?)	? 18432,1352 18290,1574
 Langenscheidtbrücke und Monumentenstr. bis Hohenfriedbergstr.: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung (Wurden Fahrbahn und Radwege wieder freigegeben?)	? 7647,9196 7735,9121 7790,9126
