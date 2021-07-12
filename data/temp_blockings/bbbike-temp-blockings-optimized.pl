@@ -864,7 +864,201 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://csd-berlin.de/event-info-en/
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/gesamte-innenstadt-verkehrseinschrankungen-zum-christopher-street-day
+#: by: https://csd-berlin.de/ (24.7.2021, Route steht noch nicht fest)
+#: by: https://csd-berlin.de/csd-berlin-2021/demo-route-2/
+	2::temp 6744,11936 6809,11979 6828,12031 6787,12099 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954 6744,11936 6778,11742 6809,11570 6825,11486 6851,11346 6880,11110 6882,11061 6873,11011 6824,10904 6740,10755 6685,10690 6532,10529 6494,10440
+	2::temp 10213,11728 10128,11708 10000,11691 9991,11690 9905,11680 9701,11656 9569,11631 9444,11616 9268,11590 9058,11564 8834,11536 8740,11524 8596,11508 8542,11502 8548,11571 8553,11630 8553,11638 8567,11799 8571,11846 8577,11896 8595,12066 8600,12165 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	3 8592,11541 8596,11508 8599,11474
+	3 9992,11682 10000,11691 9997,11713
+	3 6841,11114 6880,11110 7115,11220
+	3 9234,11683 9268,11590 9331,11497
+	3 6550,11954 6642,12010 6164,11947
+	3 7002,11034 6873,11011 6742,11099
+	3 7031,12320 7383,12095 7429,12070
+	3 8481,11638 8553,11638 8743,11663
+	3 6869,11567 6809,11570 6679,11602
+	3 9331,11497 9268,11590 9234,11683
+	3 8599,11474 8596,11508 8592,11541
+	3 6540,11754 6778,11742 6980,11790
+	3 6750,11550 6825,11486 6915,11492
+	3 6750,11550 6825,11486 6716,11439
+	3 9432,11702 9444,11616 9456,11513
+	3 6742,11099 6873,11011 7002,11034
+	3 8327,12174 8344,12221 8391,12389
+	3 8546,12279 8538,12245 8592,12252
+	3 8546,12279 8538,12245 8522,12239
+	3 8546,12279 8538,12245 8522,12187
+	3 7823,12120 7816,12150 7822,12201
+	3 8119,12414 8055,12186 8049,12140
+	3 7429,12070 7383,12095 7031,12320
+	3 8391,12389 8344,12221 8327,12174
+	3 6980,11790 6778,11742 6540,11754
+	3 8743,11663 8553,11638 8481,11638
+	3 8442,11555 8542,11502 8479,11493
+	3 8442,11555 8542,11502 8573,11404
+	3 9702,11647 9701,11656 9692,11732
+	3 7115,11220 6880,11110 6841,11114
+	3 7822,12201 7816,12150 7823,12120
+	3 6692,11365 6851,11346 7103,11247
+	3 6607,10801 6740,10755 6818,10725
+	3 6679,11602 6809,11570 6869,11567
+	3 7103,11247 6851,11346 6692,11365
+	3 6918,10858 6824,10904 6681,10959
+	3 9581,11523 9569,11631 9559,11715
+	3 6636,10492 6532,10529 6468,10550
+	3 9456,11513 9444,11616 9432,11702
+	3 8736,11557 8740,11524 8743,11489
+	3 8743,11489 8740,11524 8736,11557
+	3 8489,11782 8571,11846 8501,11815
+	3 8522,12187 8538,12245 8522,12239
+	3 8522,12187 8538,12245 8592,12252
+	3 8522,12187 8538,12245 8546,12279
+	3 8522,12239 8538,12245 8522,12187
+	3 8522,12239 8538,12245 8592,12252
+	3 8522,12239 8538,12245 8546,12279
+	3 8573,11404 8542,11502 8442,11555
+	3 8573,11404 8542,11502 8479,11493
+	3 8479,11493 8542,11502 8442,11555
+	3 8479,11493 8542,11502 8573,11404
+	3 8501,11815 8571,11846 8489,11782
+	3 6681,10959 6824,10904 6918,10858
+	3 9559,11715 9569,11631 9581,11523
+	3 9000,11727 9058,11564 9155,11283
+	3 9155,11283 9058,11564 9000,11727
+	3 6915,11492 6825,11486 6750,11550
+	3 6915,11492 6825,11486 6716,11439
+	3 9997,11713 10000,11691 9992,11682
+	3 6818,10725 6740,10755 6607,10801
+	3 8592,12252 8538,12245 8546,12279
+	3 8592,12252 8538,12245 8522,12239
+	3 8592,12252 8538,12245 8522,12187
+	3 6164,11947 6642,12010 6550,11954
+	3 6468,10550 6532,10529 6636,10492
+	3 9692,11732 9701,11656 9702,11647
+	3 8049,12140 8055,12186 8119,12414
+	3 6716,11439 6825,11486 6750,11550
+	3 6716,11439 6825,11486 6915,11492
+# REMOVED ---	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6982,10610 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
+# REMOVED ---	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529
+# REMOVED ---# REMOVED (2019 hier nicht) ---	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
+# REMOVED ---# REMOVED (2019 hier nicht) ---	2::temp 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746
+# REMOVED ---# REMOVED (2019 hier nicht) ---	3 6302,10462 6353,10583 6380,10704
+# REMOVED ---# REMOVED (2019 hier nicht) ---	3 6380,10704 6353,10583 6302,10462
+# REMOVED ---# REMOVED (2019 hier nicht) ---	3 6192,10542 6216,10614 6228,10646
+# REMOVED ---# REMOVED (2019 hier nicht) ---	3 6250,10701 6228,10646 6216,10614
+# REMOVED ---# REMOVED (2019 hier nicht) ---	3 6228,10646 6216,10614 6192,10542
+# REMOVED ---# REMOVED (2019 hier nicht) ---	3 6216,10614 6228,10646 6250,10701
+# REMOVED ---#: note 2019 andere Wegführung (wg. Bauarbeiten am Wittenbergplatz) vvv
+# REMOVED ---	2::temp 6025,10746 5866,10492 5808,10396 5764,10322 5898,10318 6020,10351 6147,10383 6276,10401 6403,10424 6494,10440 6532,10529
+# REMOVED ---	3 6128,10319 6147,10383 6192,10542
+# REMOVED ---	3 6128,10319 6020,10351 5997,10286
+# REMOVED ---	3 6128,10319 6020,10351 6033,10403
+# REMOVED ---	3 6033,10403 6020,10351 5997,10286
+# REMOVED ---	3 6033,10403 6020,10351 6128,10319
+# REMOVED ---	3 5520,10453 5764,10322 5700,10226
+# REMOVED ---	3 5520,10453 5764,10322 5808,10284
+# REMOVED ---	3 5700,10226 5764,10322 5520,10453
+# REMOVED ---	3 5700,10226 5764,10322 5808,10284
+# REMOVED ---	3 6265,10359 6276,10401 6302,10462
+# REMOVED ---	3 6302,10462 6276,10401 6265,10359
+# REMOVED ---	3 5780,10542 5866,10492 5921,10461
+# REMOVED ---	3 5921,10461 5866,10492 5780,10542
+# REMOVED ---	3 6192,10542 6147,10383 6128,10319
+# REMOVED ---	3 5997,10286 6020,10351 6128,10319
+# REMOVED ---	3 5997,10286 6020,10351 6033,10403
+# REMOVED ---	3 5894,10287 5898,10318 5907,10347
+# REMOVED ---	3 5907,10347 5898,10318 5894,10287
+# REMOVED ---	3 5808,10284 5764,10322 5700,10226
+# REMOVED ---	3 5808,10284 5764,10322 5520,10453
+# REMOVED ---#: note ^^^
+# REMOVED ---	2::temp 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658
+# REMOVED ---# REMOVED (Aufstellbereich erst ab Uhlandstr.) --- 2::temp 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
+# REMOVED ---# REMOVED ---	3 4239,10358 4245,10435 4256,10583
+# REMOVED ---# REMOVED ---	3 4685,10689 4676,10541 4659,10335
+# REMOVED ---# REMOVED ---	3 4485,10307 4503,10497 4513,10702
+# REMOVED ---# REMOVED ---	3 4847,10677 4847,10589 4828,10356
+# REMOVED ---# REMOVED ---	3 4381,10583 4371,10465 4360,10320
+# REMOVED ---# REMOVED ---	3 4360,10320 4371,10465 4381,10583
+# REMOVED ---# REMOVED ---	3 4828,10356 4847,10589 4847,10677
+# REMOVED ---# REMOVED ---	3 4513,10702 4503,10497 4485,10307
+# REMOVED ---# REMOVED ---	3 5047,10381 5076,10658 5079,10701
+# REMOVED ---# REMOVED ---	3 4256,10583 4245,10435 4239,10358
+# REMOVED ---# REMOVED ---	3 5079,10701 5076,10658 5047,10381
+# REMOVED ---# REMOVED ---	3 4659,10335 4676,10541 4685,10689
+# REMOVED ---	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252
+# REMOVED ---	3 7429,12070 7383,12095 7031,12320
+# REMOVED ---	3 7031,12320 7383,12095 7429,12070
+# REMOVED ---	3 7822,12201 7816,12150 7823,12120
+# REMOVED ---	3 7823,12120 7816,12150 7822,12201
+# REMOVED ---	3 6692,11365 6851,11346 7103,11247
+# REMOVED ---	3 5488,10978 5475,10808 5471,10719
+# REMOVED ---	3 7115,11220 6880,11110 6841,11114
+# REMOVED ---	3 6716,11439 6825,11486 6915,11492
+# REMOVED ---	3 7131,10331 7033,10396 7227,10489
+# REMOVED ---	3 7131,10331 7033,10328 7060,10221
+# REMOVED ---	3 6869,11567 6809,11570 6679,11602 6512,11608
+# REMOVED ---	3 6725,10641 6743,10615 6753,10446 6719,10347
+# REMOVED ---	3 5196,10398 5215,10711 5230,10919
+# REMOVED ---	3 6681,10959 6824,10904 6740,10755
+# REMOVED ---	3 6740,10755 6824,10904 6681,10959
+# REMOVED ---	3 6818,10725 6972,10665 7110,10613
+# REMOVED ---	3 7060,10221 7033,10328 7131,10331
+# REMOVED ---	3 6915,11492 6825,11486 6716,11439
+# REMOVED ---	3 6742,11099 6873,11011 7002,11034
+# REMOVED ---	3 7227,10489 7033,10396 7131,10331
+# REMOVED ---	3 6719,10347 6753,10446 6743,10615 6725,10641
+# REMOVED ---	3 6841,11114 6880,11110 7115,11220
+# REMOVED ---	3 6884,12006 6828,12031 7026,12054
+# REMOVED ---	3 5829,10964 5782,10884 5669,10704
+# REMOVED ---	3 6512,11608 6679,11602 6809,11570 6869,11567
+# REMOVED ---	3 6540,11754 6778,11742 6980,11790
+# REMOVED ---	3 5669,10704 5782,10884 5829,10964
+# REMOVED ---	3 6980,11790 6778,11742 6540,11754
+# REMOVED ---	3 7002,11034 6873,11011 6742,11099
+# REMOVED ---	3 5866,10492 6025,10746 6122,10925
+# REMOVED ---	3 6685,10690 6532,10529 6494,10440
+# REMOVED ---	3 6122,10925 6025,10746 5866,10492
+# REMOVED ---	3 7026,12054 6828,12031 6884,12006
+# REMOVED ---	3 5900,11913 6164,11947 6642,12010 6550,11954
+# REMOVED ---	3 5471,10719 5475,10808 5488,10978
+# REMOVED ---	3 7110,10613 6972,10665 6818,10725
+# REMOVED ---	3 5230,10919 5215,10711 5196,10398
+# REMOVED ---	3 6550,11954 6642,12010 6164,11947 5900,11913
+# REMOVED ---	3 6494,10440 6532,10529 6685,10690
+# REMOVED ---	3 7103,11247 6851,11346 6692,11365
+# REMOVED ---	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252 8637,12258 8722,12268
+# REMOVED ---	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+# REMOVED ---	3 7031,12320 7383,12095 7429,12070
+# REMOVED ---	3 7429,12070 7383,12095 7031,12320
+# REMOVED ---	3 7875,12363 7822,12201 7816,12150 7823,12120
+# REMOVED ---	3 7823,12120 7816,12150 7822,12201 7875,12363
+# REMOVED ---	3 8119,12414 8055,12186 8049,12140
+# REMOVED ---	3 8049,12140 8055,12186 8119,12414
+# REMOVED ---	3 8391,12389 8344,12221 8327,12174
+# REMOVED ---	3 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1626991200,
+         'id' => 2083,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              6,
+                              'start',
+                              '2020-07-30T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.berlin.de/events/2096878-2229501-csd-christopher-street-day.html',
+         'text' => 'CSD am 24.7.2021',
+         'type' => 'gesperrt',
+         'until' => 1627163999
+       },
        undef,
        undef,
        undef,
@@ -1001,7 +1195,19 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://viz.berlin.de/2021/07/verkehrsvorschau-120721/
+#: XXX anschauen!
+#: next_check: 2021-07-12
+	q4::inwork; 13651,11731 13895,11663 13954,11647
+',
+         'from' => 1626024702,
+         'id' => 2188,
+         'source_id' => 'IM_020398',
+         'text' => 'Kopernikusstr. (Friedrichshain): Baustelle, Fahrbahn ab Warschauer Str. bis Simon-Dach-Str. gesperrt, bis Mitte August 2021',
+         'type' => 'handicap',
+         'until' => 1629043200
+       },
        undef,
        undef,
        undef,
@@ -2012,7 +2218,27 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: 2147341611
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_28_2389_2480_online.pdf (2021)
+	2::temp 7435,11514 7322,11177
+	2::temp 7579,11032 7595,11086 7665,11353 7717,11540
+	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
+	2::temp 7595,11086 7575,11076 7252,11188
+# REMOVED ---	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
+# REMOVED ---	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
+# REMOVED ---	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
+# REMOVED ---	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
+# REMOVED ---	2::temp 7665,11353 7745,11332
+# REMOVED ---	2::temp 7745,11332 7690,11108
+',
+         'from' => 1626667200,
+         'id' => 2875,
+         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
+         'text' => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2021 von 12:00 bis 18:30 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1626798600
+       },
        undef,
        undef,
        undef,
@@ -2349,7 +2575,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-06-22 (mapillary)
+#: last_checked: 2021-07-09
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2438,18 +2664,23 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX teilweise existieren auch Einschränkungen beim Überqueren der Langhansstr., auch für Fußgänger (gesehen: 2021-02-17 an der Behaimstr.)
 #: also_indoor: traffic (H,G)
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
-# REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12564,16399 12725,16321 12797,16285 12859,16255 12943,16214
+# REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12474,16443 12564,16399 12725,16321 12764,16302 12797,16285 12826,16271 12859,16255 12943,16214
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
-#: last_checked: 2021-06-14
-# REMOVED --- #: check_frequency: 60d
-#: next_check: 2021-07-01
-# REMOVED --- #: next_check: 2021-08-13
-	q4::inwork 13508,15912 13312,16027 13189,16089 12943,16214 12859,16255 12797,16285 12725,16321 12564,16399 12399,16479 12189,16578
+#: last_checked: 2021-07-06 vvv
+#: next_check: 2021-08-13 vvv
+#: note: hier nur an der Kreuzung Berliner Allee
+	q3::inwork 13508,15912 13312,16027
+# REMOVED (hier nicht mehr) ---	q4::inwork 13312,16027 13250,16058 13189,16089 12943,16214
+	q4::inwork 12943,16214 12859,16255 12826,16271 12797,16285 12764,16302 12725,16321 12564,16399 12474,16443 12399,16479
+#: note: hier keine Absperrungen mehr, aber offiziell nur für Tram und Bus frei
+	q3::inwork 12399,16479 12189,16578
+#: next_check ^^^
+#: last_checked ^^^
 ',
          'from' => 1611468000,
          'id' => 3091,
          'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
-         'text' => 'Langhansstr.: zwischen Berliner Allee und Heinersdorfer Str. ist die Fahrbahn wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, 25.1.2021 bis 13.8.2021',
+         'text' => 'Langhansstr.: zwischen Berliner Allee und Heinersdorfer Str. ist die Fahrbahn abschnittsweise wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, 25.1.2021 bis 13.8.2021',
          'type' => 'handicap',
          'until' => 1628866800
        },
@@ -2590,18 +2821,20 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: source_id: 2147346164 (bis 06.07.2021, Gesamtbaumaßnahme bis 2024)
 #: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
+#: source_id: viz2021:13.373965,52.425564,30.07.2020,09:00 (bis 16.7.2021, Gesamtbaumaßnahme bis 2024)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
+#: also_indoor: traffic (G)
 #: last_checked: 2021-02-20
-#: next_check: 2021-07-06
+#: next_check: 2021-07-16
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 ',
          'from' => undef,
          'id' => 3151,
          'source_id' => '2147344558',
-         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, vermutlich bis 06.07.2021',
+         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, voraussichtlich bis 16.07.2021',
          'type' => 'gesperrt',
-         'until' => 1625583600
+         'until' => 1626447600
        },
        undef,
        undef,
@@ -2707,7 +2940,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-06-29
+#: last_checked: 2021-07-06
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2763,10 +2996,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
-#: osm_watch: way id="934995899" version="2"
+#: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-07-02
-# REMOVED --- #: next_check: 2021-01-29
+#: last_checked: 2021-07-11
+#: check_frequency: 30d
+#: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
 	q3::inwork 14247,11681 14272,11775
@@ -2819,11 +3053,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
-#: XXX Stand 2021-05-31: Asphaltierungsarbeiten
-#: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2021-06-14
+#: XXX Stand 2021-07-06: letzte Deckschicht fehlt
+# REMOVED (eingetragen) --- #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
+#: last_checked: 2021-07-06
 #: check_frequency: 14d
-	q4::inwork 14136,17170 13996,16959
+	q3::inwork 14136,17170 13996,16959
 ',
          'from' => undef,
          'id' => 3254,
@@ -2867,18 +3101,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: add_fragezeichen: Wann ist die Fahrbahn wieder offen?
-#: also_indoor: traffic
-#: last_checked: 2021-05-24
-	q4::inwork -3259,12580 -3444,12580
-',
-         'from' => undef,
-         'id' => 3267,
-         'text' => 'Betckestraße: zwischen Wörther Str. und Götelstr. Fahrbahn gesperrt, Ausweichen auf nördlichen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/spandau/c-verkehr/radler-muessen-runter-vom-sattel_a177230
@@ -2997,7 +3220,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: 2147346816 (bis 31.03.2025) (früher nur bis 2022)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G)
-#: last_checked: 2021-06-06
+#: last_checked: 2021-07-10
 #: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -3063,13 +3286,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2021-05-09-adlershof-2/40-2021-05-09-214-xxl.jpg (kein provisorischer Übergang mehr)
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
-#: last_checked: 2021-05-09 (krickstadt)
+#: last_checked: 2021-07-04
 #: check_frequency: 90d
 	2::inwork 18836,3611 18943,3508
 ',
          'from' => undef,
          'id' => 3313,
-         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein',
+         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein (Stand 4.7.2021: provisorischer Übergang existiert)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3082,7 +3305,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-04-11 (architektur-urbanistik)
+#: last_checked: 2021-07-10
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 ',
@@ -3140,14 +3363,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: ABBESTR-2021
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-06-14 (osm note)
+#: last_checked: 2021-07-10
 #: check_frequency: 30d
-# REMOVED (hier nicht) ---	q3::inwork 4674,12076 4698,12124
-	q3::inwork 4698,12124 4755,12236
+	q3::inwork 4674,12076 4698,12124
+# REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
 ',
          'from' => undef,
          'id' => 3325,
-         'text' => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. gesperrt, Ausweichen auf Gehweg, Ende der Bauarbeiten unbekannt',
+         'text' => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. kann gesperrt sein, Ausweichen auf Gehweg, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -3159,31 +3382,20 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung? Falls ja, wo ist der gesperrte Abschnitt und gilt die Sperrung auch für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="24"
 #: osm_watch: way id="165832806" version="21"
-#: last_checked: 2021-05-16
+#: last_checked: 2021-07-04
 #: check_frequency: 45d
 	2::inwork 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17483,8644 17449,8720 17416,8767 17380,8858
 ',
          'from' => undef,
          'id' => 3327,
-         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 5/2021: Durchfahrt ist noch möglich)',
+         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 7/2021: Fahrbahn im nördlichen Abschnitt gesperrt, enger Fußweg existiert)',
          'type' => 'gesperrt',
          'until' => undef
        },
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147347231
-#: source_id: viz2021:13.440907,52.591391,03.07.2021,00:30
-	2::inwork 12672,20720 12723,20691
-',
-         'from' => 1625176800,
-         'id' => 3331,
-         'source_id' => '2147346882',
-         'text' => 'Bahnhofstr.: Unterführung unter der A114 gesperrt, Fußgänger und Radfahrer sind auch betroffen, vom 3.7.2021 bis 5.7.2021 3 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1625446800
-       },
+       undef,
        {
          'data' => '#: by: https://tierparkcenter.de/wochenmarkt/ (Öffnungszeiten)
 #: tempex: (mo,th,fr) T08-T17
@@ -3199,21 +3411,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: KARLSHORSTER-2021
-#: also_indoor: traffic (G,H)
-#: last_checked: 2021-07-01
-#: check_frequency: 30d
-#: next_check: 2021-09-30
-	q4::inwork; 15279,10862 15272,10790 15261,10738
-',
-         'from' => 1614578400,
-         'id' => 3336,
-         'source_id' => '2147346922',
-         'text' => 'Karlshorster Str.: Richtung Hauptstr. wegen Bauarbeiten gesperrt, Radfahrer müssen schieben, ab 2. März 2021 bis voraussichtlich Ende September 2021',
-         'type' => 'handicap',
-         'until' => 1633017600
-       },
+       undef,
        undef,
        undef,
        {
@@ -3256,8 +3454,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: XXX laut rbb bis 30.7.2021
 #: also_indoor: traffic (G,H)
 #: priority: #A vvv
-#: last_checked: 2021-07-02 vvv
-#: check_frequency: 21d vvv
+#: last_checked: 2021-07-11 vvv
+#: check_frequency: 14d vvv
 #: next_check: 2021-07-30 vvv
 # REMOVED (hier fertig) ---	q4::inwork 13025,12523 13067,12583
 	q4::inwork 13067,12583 13202,12790
@@ -3275,6 +3473,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: by: https://www.bahninfo-forum.de/read.php?9,578649,697260#msg-697260
+#: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA3_Landesgrenze-Mahlow-Blankenfelde/20210530/
 #: confirmed_by: srt
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet?
 #: osm_watch: node id="8599852570" version="1"
@@ -3333,17 +3532,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1634335200
        },
-       {
-         'data' => '#: also_indoor: traffic (G)
-	q4::inwork 5934,2198 6021,2071 6097,1975
-',
-         'from' => 1614466800,
-         'id' => 3355,
-         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.87783.php',
-         'text' => 'Kurfürstenstr.: Sperrung der Fahrbahn zwischen Frobenstr. und Goldaper Str., vom 01.03.2021 bis 09.07.2021',
-         'type' => 'handicap',
-         'until' => 1625868000
-       },
+       undef,
        {
          'data' => '#: note: keine genauen Zeiten verfügbar
 #: by: https://abendblatt-berlin.de/2021/04/03/neue-feuerwehrwache-und-verwaltungsbueros-fuer-friedrichsfelde/
@@ -3458,21 +3647,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1627768799
        },
-       {
-         'data' => '#: next_check_id: ARCHIBALDWEG-2021
-#; also_indoor: traffic (G)
-#: priority: #B
-#: also_indoor: traffic (G)
-#: last_checked: 2021-06-19
-#: check_frequency: 14d
-	q4::inwork 15870,10938 15674,10851
-',
-         'from' => undef,
-         'id' => 3366,
-         'text' => 'Archibaldweg: Fahrbahn gesperrt, Ende der Sperrung unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/saison-startet_a311283 (und die anderen neuen Spielstraßen in FH-KB)
 #: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen
@@ -3604,17 +3779,18 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: note: laut Schild der Wasserbetriebe bis August 2021
 #: source_id: 2147347187 (Anbindung Soorstraße gesperrt, bis 25.6.2021)
 #: source_id: viz2021:13.278934,52.506793,17.05.2021,07:00 (bis 9.7.2021)
+#: source_id: viz2021:13.278934,52.506793,09.07.2021,10:00 (Leitungsarbeiten bis 17.9.2021)
 #: also_indoor: traffic
 #: last_checked: 2021-05-24
 #: check_frequency: 60d
-#: next_check: 2021-09-01
+#: next_check: 2021-09-17
 	q4::inwork 1861,11284 1884,11126 1865,11082
 ',
          'from' => 1621880668,
          'id' => 3379,
-         'text' => 'Soorstr.: zwischen Masurenallee und Bredtschneiderstr. Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis August 2021',
+         'text' => 'Soorstr.: zwischen Masurenallee und Bredtschneiderstr. Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Mitte September 2021',
          'type' => 'handicap',
-         'until' => 1630447200
+         'until' => 1631894400
        },
        {
          'data' => '#: next_check_id: HEIDEKRAUTBAHN-2021
@@ -3655,8 +3831,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.bahninfo-forum.de/read.php?9,702729,704984#msg-704984 (nun bis zum Bahnübergang)
 #: by: https://twitter.com/VIZ_Berlin/status/1409387334097727491
 # REMOVED (hier mittlerweile offen) ---	q3::inwork 18080,5376 18245,5551
-# REMOVED (hier nicht mehr?) ---	q3::inwork 18245,5551 18370,5511 18680,5413
-	q3::inwork 18680,5413 18955,5320 19037,5316 19186,5310 19328,5304
+# REMOVED (hier nicht mehr) ---	q3::inwork 18245,5551 18370,5511 18680,5413 18955,5320
+	q3::inwork 18955,5320 19037,5316 19186,5310 19328,5304 19405,5284
 ',
          'from' => 1621843200,
          'id' => 3383,
@@ -3751,16 +3927,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1630101600
        },
        undef,
-       {
-         'data' => '	q4::inwork 6636,10492 6628,10318 6626,10155
-',
-         'from' => 1623535200,
-         'id' => 3391,
-         'source_id' => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1094397.php',
-         'text' => 'Kalckreuthstr.: Bauarbeiten. Fahrbahn gesperrt, voraussichtlich vom 14.6.2021 bis 2.7.2021',
-         'type' => 'handicap',
-         'until' => 1625263200
-       },
+       undef,
        undef,
        {
          'data' => '	q4::inwork -1478,18407 -1358,18400
@@ -3775,6 +3942,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://www.berliner-woche.de/bohnsdorf/c-bauen/bruno-taut-strasse-bekommt-unter-anderem-eine-neue-asphaltdecke_a313839 (bis Juli 2022)
 #: by: https://abendblatt-berlin.de/2021/06/23/mit-den-ferien-kommen-die-baustellen/
+#: source_id: viz2021:13.569262,52.411283,12.07.2021,09:00 (hier: bis 31.1.2022)
 	q4::inwork; 21858,811 21902,877 21977,988 22034,1006 22092,999
 ',
          'from' => 1625349600,
@@ -3784,23 +3952,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1659304799
        },
-       {
-         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1392465007393316864 (für ca. vier Wochen, ab 12.5.2021)
-#: by: https://twitter.com/rbbabendschau/status/1392489796426162177
-#: add_fragezeichen: Wurden Fahrbahn und Radwege wieder freigegeben?
-#: also_indoor: traffic (G)
-#: note: bei rbbtext seit 2021-06-18 nicht mehr gelistet
-#: priority: #A
-#: last_checked: 2021-05-14
-#: next_check: 2021-06-18
-	q3::inwork 7647,9196 7735,9121 7790,9126
-',
-         'from' => undef,
-         'id' => 3395,
-         'source_id' => '2147347186',
-         'text' => 'Langenscheidtbrücke und Monumentenstr. bis Hohenfriedbergstr.: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: source_id: viz2021:13.32537,52.419526,28.06.2021,08:00 (hier: nur zwischen Saaleckplatz und Oskar-Lange-Platz)
 #: note: laut rbb zwei Meldungen: bis Oskar-Lange-Platz bis 31.7.2021, bis Oberhofer Platz bis 6.8.2021
@@ -3814,7 +3966,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1627682399
        },
        {
-         'data' => '	q4::inwork; 3716,2063 3746,2108 3805,2196
+         'data' => '#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/in-der-goerzallee-wird-die-fahrbahn-vom-19-juli-bis-6-august-erneuert_a315012
+	q4::inwork; 3716,2063 3746,2108 3805,2196
 ',
          'from' => 1626559200,
          'id' => 3397,
@@ -3860,26 +4013,12 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 ',
          'from' => 1624917600,
          'id' => 3401,
-         'source_id' => 'viz202113.19521252.52793830.06.20210600',
+         'source_id' => 'viz2021:13.195212,52.527938,30.06.2021,06:00',
          'text' => 'Pichelsdorfer Str.: Bauarbeiten zwischen Wilhelmstr. und Zimmerstr., evtl. sind auch Radfahrer betroffen, vom 30.06.2021 06:00 bis 31.12.2021 17:00 ',
          'type' => 'handicap',
          'until' => 1640991600
        },
-       {
-         'data' => '#: next_check_id: SKANDINAVISCHE-2021
-#: note: nicht ganz klar, ob nur die Richtung Bhf. Lichtenberg oder beide Richtungen betroffen sind --- mittlerweile ist es sowieso ein anderer Abschnitt
-#: source_id: viz2021:13.500432,52.510704,28.06.2021,08:00
-#: also_indoor: traffic (G)
-# REMOVED ---	q4::inwork 17338,11969 17210,11950 17166,11944 17082,11909 17013,11849 16958,11778
-	q4::inwork; 16958,11778 16815,11729 16786,11668
-',
-         'from' => 1624744800,
-         'id' => 3402,
-         'source_id' => 'viz202113.50605952.51227328.06.20210800',
-         'text' => 'Weitlingstr.: Fahrbahnsanierung Richtung Lückstr. zwischen Einbecker Str. und Irenenstr., vom 28.06.2021 08:00 bis 07.07.2021 17:00',
-         'type' => 'handicap',
-         'until' => 1625695200
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/niederschoeneweide/c-bauen/hasselwerder-park-mit-neuen-wegen_a314970
 #: next_check_id: HASSELWERDERPARK-2021
@@ -3893,7 +4032,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1630533600
        },
        {
-         'data' => '#: last_checked: 2021-07-02 vvv
+         'data' => '#: last_checked: 2021-07-06 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-09-13 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -3913,30 +4052,87 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => 1631570400
        },
+       undef,
        {
-         'data' => '	2::inwork 52006,106839 52191,106842
-',
-         'from' => 1625004000,
-         'id' => 3405,
-         'source_id' => '217300207',
-         'text' => 'Cremzow - Wendtshof: Vollsperrung nach Unwetter-Schaden, eventuell sind auch Radfahrer betroffen, vorraussichtlich bis 09.07.2021',
-         'type' => 'gesperrt',
-         'until' => 1625868000
-       },
-       {
-         'data' => '#: add_fragezeichen: Sind Radfahrer tatsächlich von den Bauarbeiten betroffen? vvv
-#: next_check: 2021-07-05 vvv
+         'data' => '#: also_indoor: traffic (G,H) (beide falsch/unvollständig?)
+#: note: laut rbb: "Radfahrende steigen bitte ab"
+# REMOVED (ja) --- #: add_fragezeichen: Sind Radfahrer tatsächlich von den Bauarbeiten betroffen? vvv --- #: next_check: 2021-07-05 vvv
 	q4::inwork; 8685,13728 8841,13800
 	q4::inwork; 8935,13844 9085,13919
-#: next_check ^^^
-#: add_fragezeichen ^^^
+# REMOVED --- #: next_check ^^^ --- #: add_fragezeichen ^^^
 ',
          'from' => 1625349600,
          'id' => 3406,
-         'source_id' => 'viz202113.37937952.52948405.07.20211000',
+         'source_id' => 'viz2021:13.379379,52.529484,05.07.2021,10:00',
          'text' => 'Invalidenstr.: Gleisarbeiten Richtung Brunnenstr. zwischen Hessische Str. und Am Nordbahnhof, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, vom 05.07.2021 10:00 bis 23.07.2021 17:00',
          'type' => 'handicap',
          'until' => 1627077600
+       },
+       {
+         'data' => '#: source_id: viz2021:13.560042,52.405163,12.07.2021,07:00 (hier: bis 10.9.2021, siehe unten)
+	q4::inwork 21355,-309 21322,-176 21250,118
+',
+         'from' => 1625954400,
+         'id' => 3407,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1103089.php',
+         'text' => 'Paradiesstr.: Bauarbeiten, Fahrbahn zwischen Buntzelstr. und "Thomas Philipps" gesperrt, vom 12.7.2021 bis 20.8.2021',
+         'type' => 'handicap',
+         'until' => 1629496800
+       },
+       {
+         'data' => '	q4::inwork 21115,271 21171,222 21225,172 21250,118 21322,-176
+',
+         'from' => 1628978400,
+         'id' => 3408,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1103089.php',
+         'text' => 'Paradiesstr.: Bauarbeiten, Fahrbahn zwischen "Thomas Philipps" und B96a gesperrt, vom 16.8.2021 bis 10.09.2021',
+         'type' => 'handicap',
+         'until' => 1631311200
+       },
+       {
+         'data' => '#: also_indoor: traffic
+#: XXX gibt es nach den Bauarbeiten bereits den neuen Radweg?
+#: next_check: 2021-10-15
+	2::inwork 27833,-16133 27599,-16162
+',
+         'from' => 1626559200,
+         'id' => 3409,
+         'source_id' => '216101007',
+         'text' => 'B179: Sperrung Brücke Körbiskrug, evtl. sind auch Radfahrer betroffen, 19.07.2021 bis 14.10.2021',
+         'type' => 'gesperrt',
+         'until' => 1634248800
+       },
+       {
+         'data' => '#: by: https://viz.berlin.de/2021/07/oranienburger-chaussee-b96/
+#: source_id: viz2021:13.287552,52.659932,09.07.2021,15:00
+#: note: nächster Termin: 16.07.2021 18:00 Uhr bis 19.07.2021 05:00 Uhr
+#: next_check: 2021-07-12
+	2::inwork 2150,28127 2178,28067 2345,27670
+',
+         'from' => 1625749200,
+         'id' => 3410,
+         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1104559.php',
+         'text' => 'B96: zwischen Staehleweg und Hohen Neuendorf wegen Bauarbeiten gesperrt, vom 09.07.2021 15:00 Uhr bis 12.07.2021 05:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1626058800
+       },
+       {
+         'data' => '#: next_check_id: KARLSHORSTER-2021
+#: note: bei rbb nur bis 30.9.2021
+#: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
+#: last_checked: 2021-07-11
+#: check_frequency: 30d
+#: next_check: 2021-12-15
+	q4::inwork; 15261,10738 15272,10790 15279,10862
+	q3::inwork 15279,10862 15355,10875
+	2::inwork 15272,10790 15388,10758
+',
+         'from' => 1625734800,
+         'id' => 3411,
+         'source_id' => 'viz2021:13.475242,52.50154,09.07.2021,11:00',
+         'text' => 'Karlshorster Str.: Bauarbeiten in Richtung Marktstr. zwischen Hauptstr. und Türrschmidtstr. Radfahrer müssen absteigen und schieben, außerdem ist die Anbindung Türrschmidtstr. gesperrt (nur Fahrbahn, Bürgersteig ist frei), sowie die Anbindung Nöldnerstr. (komplett, auch für Fußgänger), vom 09.07.2021 11:00 bis 15.12.2021 17:00 ',
+         'type' => 'gesperrt',
+         'until' => 1639609200
        }
      
 );

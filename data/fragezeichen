@@ -925,6 +925,10 @@ Bergstr. (Schulzendorf): Qualität?	? 24045,-7112 24173,-7015
 Am Papenberg (Schulzendorf): Qualität? Ist die Straße verkehrsberuhigt?	? 24105,-7174 24122,-7213 24248,-7168 24243,-7135
 Walther-Rathenau-Str. (Schulzendorf): Qualität?	? 23296,-5280 22983,-5346
 Hönow - Neuenhagen: Bau eines Radwegs	?::inwork 27692,15066 28042,14883 28360,14626
+Pernitz - Krahne: Qualität? Gibt es abschnittsweise Radwege?	? -43645,-13973 -44108,-13946 -44505,-13647 -44682,-13351 -44804,-13192 -44984,-12872 -45316,-12460 -45604,-12160 -46022,-11758 -46267,-11025 -46345,-10504
+Krahne - Reckahn: Qualität? Gibt es abschnittsweise Radwege?	? -46345,-10504 -46514,-10282 -47074,-9399 -47136,-9194 -47314,-8794 -47601,-8765
+Reckahn - Göttin: Qualität? Gibt es abschnittsweise Radwege?	? -47601,-8765 -47468,-8524 -47408,-8312 -47404,-8148 -47521,-7191 -47645,-6836 -47826,-6302 -47722,-5922 -47606,-5802 -47625,-5638 -47441,-5325 -47444,-5265
+Göttin - Brandenburg (an der Havel): Qualität?	? -47444,-5265 -47506,-5156 -47567,-4785 -47642,-4220 -47705,-3703 -47685,-2385 -47683,-2073 -47701,-2011
 # added from strassen
 Süderholmer Steig (Ist dieser Abschnitt ausgeschildert?)	? -2245,21544 -2239,21904
 (Am Teltowkanal, südl. Ufer) (Hat der Weg bereits den Namen "Gerda-und-Wolfgang-Szepansky-Promenade" bekommen? Stehen schon entsprechende Schilder?)	? 9196,5272 9171,5263 9080,5225 8881,5143 8784,5095
@@ -964,8 +968,8 @@ Schloßstr. (Einbahnstraße?)	? -14821,106013 -15004,105813 -15070,105705
 Tiergartenstr. (Einbahnstraße?)	? -15004,105813 -14862,105712 -14570,105702 -14288,105530 -14242,105542
 Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105763 -13977,105850 -13932,106157
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
-# added from radwege
-(Existieren nun durchgängig Radspuren in der Oranienburger Straße?)	? 5430,20685 5421,20748 5410,20822
+# added from flaechen
+(Hängen hier Straßenschilder für den neuen "Paulinenplatz"?)	? 3328,3313 3327,3261 3348,3278 3328,3313
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 Halligweg: Rasengittersteine, in der Mitte unbefestigte Spur (ist hier asphaltiert?)	? -779,16591 -910,16608
@@ -1012,7 +1016,6 @@ Petersdorf: Asphalt (ist auch im westlichen Abschnitt asphaltiert?)	? 23256,7673
 Fuchssteig (Erkner): Asphalt (ist der nördliche Abschnitt auch asphaltiert?)	? 34459,3734 34480,3844
 Erich-Mühsam-Str.: Kopfsteinpflaster (liegt hier tatsächlich Kopfsteinpflaster? Wenn ja, wie gut/schlecht ist die Pflasterung?)	? 1787,31375 1851,31451 1878,31471 1916,31483 2027,31518 2082,31535
 Gartenallee: Kopfsteinpflaster (liegt hier tatsächlich Kopfsteinpflaster? Wenn ja, wie gut/schlecht ist die Pflasterung?)	? 1887,31658 2027,31518
-Straße am Hochwald: Asphalt (ist der südwestliche Abschnitt der Straße asphaltiert (wie im nordöstlichen) oder unbefestigt? Ist die Straße eine Spielstraße?)	? 24616,-7384 24593,-7405 24447,-7554 24315,-7711 24241,-7799 24064,-8013
 Am Tonberg: Asphalt (ist der nordwestliche Abschnitt der Straße asphaltiert (wie im südöstlichen) oder unbefestigt? Ist die Straße eine Spielstraße?)	? 24593,-7405 24416,-7241
 Ostpromenade: Asphalt (ist der nordwestliche Abschnitt der Straße ebenfalls asphaltiert? Ist die Straße eine Spielstraße?)	? 24656,-7897 24315,-7711
 Kirschenallee: Asphalt (ist der östliche Abschnitt der Straße ebenfalls asphaltiert?)	? 24949,-7866 25023,-7877
@@ -1066,9 +1069,5 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from fragezeichen
 Schwanebecker Chaussee: Radwegbau (Wird ein Zweirichtungsradweg auf der westlichen Seite entstehen? Wird der Radweg asphaltiert sein?)	? 22048,29221 21772,28566
 # added from bbbike-temp-blockings-optimized
-Schönstr.: Bauarbeiten zwischen Große Seestr. und Rennbahnstr., Fahrbahn gesperrt (Bis wann gehen die Bauarbeiten?)	? 14136,17170 13996,16959
-Betckestraße: zwischen Wörther Str. und Götelstr. Fahrbahn gesperrt, Ausweichen auf nördlichen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt (Wann ist die Fahrbahn wieder offen?)	? -3259,12580 -3444,12580
-Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 5/2021: Durchfahrt ist noch möglich) (Gibt es mittlerweile eine Sperrung? Falls ja, wo ist der gesperrte Abschnitt und gilt die Sperrung auch für Fußgänger und Radfahrer?)	? 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17483,8644 17449,8720 17416,8767 17380,8858
 Brümmerstr.: zwischen Thielallee und Fabeckstr. Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Wie lange gehen die Bauarbeiten?)	? 2523,5114 2746,5537
 Glashütter Weg - Künnekeweg: Bauarbeiten, Weg ist gesperrt, Umfahrung über Trampelpfade möglich, Ende der Bauarbeiten unbekannt (Wie lange gehen die Bauarbeiten? Wie ist die Wegoberfläche nach den Bauarbeiten?)	? 18432,1352 18290,1574
-Langenscheidtbrücke und Monumentenstr. bis Hohenfriedbergstr.: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung (Wurden Fahrbahn und Radwege wieder freigegeben?)	? 7647,9196 7735,9121 7790,9126

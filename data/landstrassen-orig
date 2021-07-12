@@ -2537,10 +2537,8 @@ Eichbergstr.	N -12779,1963 -12700,1851
 Eichbergstr.	N -12761,1770 -12700,1851 -12671,1879
 Viereckremise	N -13337,1680 -13339,1762 -13347,1928 -13335,1927 -13272,1927 -13228,1927 -13205,1928 -13141,1933
 #: note: Privatstraﬂe vvv
-#: last_checked: 2013-05-10 (keine Straﬂenschilder)
-#: XXX laut osm eine Einbahnstraﬂe
+# REMOVED --- #: last_checked: 2013-05-10 (keine Straﬂenschilder) --- #: XXX laut osm eine Einbahnstraﬂe --- #: osm_watch: way id="177903460" version="8" brb
 #: by: http://www.potsdam.de/cms/dokumente/10073161_1189396/13ef9d53/AblPdm1_11.pdf vvv
-#: osm_watch: way id="177903460" version="8" brb
 Bienenwinkel	N -13335,1927 -13333,1957 -13227,1962 -13228,1927
 Zum Exerzierhaus	N -13142,1989 -13075,1990 -13044,1991 -12978,1996 -12981,2115
 (Zum Exerzierhaus - Fritz-von-der-Lancken-Str.)	N -13044,1991 -13044,1931
@@ -3125,7 +3123,7 @@ Kienberger Br¸cke	N 20037,-3899 19904,-3581
 #: last_checked: 2021-03-06 (mapillary) vvv
 #: check_frequency: 180d vvv
 #: osm_watch: way id="192153936" version="9" brb
-#: osm_watch: way id="161704705" version="17" brb
+#: osm_watch: way id="161704705" version="18" brb
 #: osm_watch: way id="161686082" version="17" brb
 Tempor‰re Umleitungsstrecke	H 18578,-1538 18617,-1486 18666,-1397 18768,-1350 18936,-1581 18866,-1674
 #: osm_watch: way id="151819926" version="13" brb
@@ -3709,6 +3707,7 @@ Ibsenstr.	N 12340,-4833 12307,-4851 12278,-4863 12212,-4968 12174,-5030 12085,-5
 Weidenhof	N 10994,-4472 10998,-4391 10963,-4389 10956,-4470
 Eichenhof	N 10898,-4383 10963,-4389 10967,-4309
 #: next_check_id: BERLINERMAHLOW-2021
+#: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA3_Landesgrenze-Mahlow-Blankenfelde/20210530/
 #: osm_watch: way id="943291812" version="1"
 #: last_checked: 2021-05-30 (bahninfo-forum)
 #: check_frequency: 360d

@@ -43,6 +43,8 @@
 
 (setq bbbike-viz2021-regexp "viz2021:[0-9.,:]+")
 
+(defvar bbbike-mc-traffic-base-url "https://mc.bbbike.org/mc/?profile=traffic&zoom=15&") ; add "lat=52.518117&lon=13.498035" for a complete URL
+
 (defconst bbbike-font-lock-defaults
   '(bbbike-font-lock-keywords t nil nil nil (font-lock-multiline . nil)))
 
@@ -667,6 +669,15 @@
   'face 'bbbike-button
   'help-echo "Click button to show OSM note")
 
+(defun bbbike-traffic-button (button)
+  (browse-url (concat bbbike-mc-traffic-base-url "&" (bbbike--convert-coord-to-wgs84 (button-get button :bbbikepos) "lat=%lat&lon=%lon"))))
+
+(define-button-type 'bbbike-traffic-button
+  'action 'bbbike-traffic-button
+  'follow-link t
+  'face 'bbbike-button
+  'help-echo "Click button to show current traffic situation using mc.bbbike.org")
+
 (defun bbbike-create-buttons ()
   ;; For some reason, overlays accumulate if a buffer
   ;; is visited another time, making emacs slower and slower.
@@ -707,16 +718,10 @@
 	    (let* ((begin-pos (match-beginning 1))
 		   (end-pos (match-end 1))
 		   (source-id (buffer-substring begin-pos end-pos)))
-	      (save-excursion
-		(if (not (search-forward-regexp "^[ \t]*data[ \t]*=>" nil t)) ; search next "data" key
-		    (error (format "Cannot find data entry for source_id %s" source-id)))
-		(if (not (search-forward-regexp "^\\([^#].*\t\\|\t\\)[^ ]*[ ]*\\([^,]*,[^ ]*\\)" nil t)) ; search first coordinate (and make available as $1)
-		    (error (format "Cannot find bbd record with coordinate for source_id %s" source-id)))
-		(make-button begin-pos end-pos
-			     :type 'bbbike-sourceid-viz-button
-			     :sourceid source-id
-			     :bbbikepos (buffer-substring (match-beginning 2) (match-end 2))
-			     )))))
+	      (make-button begin-pos end-pos
+			   :type 'bbbike-sourceid-viz-button
+			   :sourceid source-id
+			   ))))
 	))
 
   ;; recognize "#: source_id" directives in bbd files which look like VIZ/VMZ ids (see above)
@@ -726,14 +731,10 @@
       (let* ((begin-pos (match-beginning 1))
 	     (end-pos (match-end 1))
 	     (source-id (buffer-substring begin-pos end-pos)))
-	(save-excursion
-	  (if (not (search-forward-regexp "^\\([^#].*\t\\|\t\\)[^ ]*[ ]*\\([^,]*,[^ ]*\\)" nil t)) ; search first coordinate (and make available as $1)
-	      (error (format "Cannot find bbd record with coordinate for source_id %s" source-id)))
-	  (make-button begin-pos end-pos
-		       :type 'bbbike-sourceid-viz-button
-		       :sourceid source-id
-		       :bbbikepos (buffer-substring (match-beginning 2) (match-end 2))
-		       )))))
+	(make-button begin-pos end-pos
+		     :type 'bbbike-sourceid-viz-button
+		     :sourceid source-id
+		     ))))
 
   ;; recognize "#: osm_watch" directives (ways etc.)
   (save-excursion
@@ -753,6 +754,15 @@
 		   :osmnoteid (buffer-substring-no-properties (match-beginning 2) (match-end 2))
 		   )))
 
+  ;; recognize "#: also_indoor: traffic" directives
+  (save-excursion
+    (goto-char (point-min))
+    (while (search-forward-regexp "^#:[ ]*\\(also_indoor:?[ ]*traffic.*\\)" nil t)
+      (make-button (match-beginning 1) (match-end 1)
+		   :type 'bbbike-traffic-button
+		   ;: very expensive, use only for debugging --- bbbikepos (bbbike--bbd-find-next-coordinate (format "traffic at line %s" (line-number-at-pos (match-beginning 1))))
+		   :bbbikepos (bbbike--bbd-find-next-coordinate "traffic")
+		   )))
   )
 
 ;; convert bbbike "standard" coordinates to WGS84 coordinates using external commands
@@ -766,5 +776,13 @@
       (setq res (replace-regexp-in-string "%lon" lon fmt))
       (setq res (replace-regexp-in-string "%lat" lat res))
       res)))
+
+(defun bbbike--bbd-find-next-coordinate (label)
+  (save-excursion
+    (if (not (search-forward-regexp "^\\([^#].*\t\\|\t\\)[^ ]*[ ]*\\([^,]*,[^ ]*\\)" nil t)) ; search first coordinate (and make available as $1)
+	(error (concat "Cannot find bbd record with coordinate for " label)))
+    )
+  (buffer-substring (match-beginning 2) (match-end 2))
+  )
 
 (provide 'bbbike-mode)
