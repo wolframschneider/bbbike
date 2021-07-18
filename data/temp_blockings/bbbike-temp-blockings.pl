@@ -35,8 +35,7 @@ my $isodate2epoch = sub {
      { from  => $isodate2epoch->("2019-06-06 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-06-10 23:59:59"),
        periodic => 1,
-       recurrences => [['easter', 47, start => "2020-10-25T00:00:00"]], # zwei Tage vor Pfingsten
-       recurrence_prewarn_days => -60,
+       recurrences => [['easter', 47, start => "2021-10-25T00:00:00"]], # zwei Tage vor Pfingsten
        text  => 'Straßenfest rund um den Blücherplatz, 07.06.2019 bis 10.06.2019, Sperrungen fangen schon einen Tag vorher an',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -19286,14 +19285,18 @@ EOF
      },
      { from  => 1626024702, # 1380175440, # 2013-09-26 08:04
        until => $isodate2epoch->("2021-08-15 18:00:00"), # 1381834786, # so gut wie aufgehoben - 1381932000, # 2013-10-16 16:00
-       text  => 'Kopernikusstr. (Friedrichshain): Baustelle, Fahrbahn ab Warschauer Str. bis Simon-Dach-Str. gesperrt, bis Mitte August 2021',
+       text  => 'Kopernikusstr. (Friedrichshain): Baustelle, Fahrbahn ab Libauer Str. bis Simon-Dach-Str. gesperrt, bis Mitte August 2021',
        type  => 'handicap',
        source_id => 'IM_020398',
        data  => <<EOF,
 #: by: https://viz.berlin.de/2021/07/verkehrsvorschau-120721/
 #: XXX anschauen!
-#: next_check: 2021-07-12
-	q4::inwork; 13651,11731 13895,11663 13954,11647
+#: note: offiziell gemeinsamer Rad- und Gehweg, aber der Gehweg ist so schmal, dass es bei q4 bleibt
+#: note: laut rbb nur bis 1.8.2021
+#: last_checked: 2021-07-17
+#: check_frequency: 7d
+# REMOVED (hier nicht)	q4::inwork; 13651,11731 13895,11663
+	q4::inwork; 13895,11663 13954,11647
 EOF
      },
      { from  => 1299992400, # 2011-03-13 06:00
@@ -23700,11 +23703,11 @@ EOF
 	q4::inwork; 16514,15092 16430,15168
 EOF
      },
-     { from  => $isodate2epoch->("2019-08-14 14:00:00"), # 1 Tag Vorlauf (2019 ein paar Tage früher?)
-       until => $isodate2epoch->("2019-08-18 23:59:59"),
+     { from  => $isodate2epoch->("2021-08-19 14:00:00"), # 1 Tag Vorlauf (2019 ein paar Tage früher?)
+       until => $isodate2epoch->("2021-08-22 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 15, months => 8, start => "2020-10-25T00:00:00"]],
-       text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Sperrungen ab 14.8.2919 bis 18.8.2019 möglich',
+       text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Sperrungen ab 20.8.2921 bis 22.8.2021 möglich',
        type  => 'gesperrt',
        source_id => 'http://www.winzerfest-köpenick.de/',
        data  => <<EOF,
@@ -28049,7 +28052,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-07-02
+#: last_checked: 2021-07-12 (mapillary)
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28623,7 +28626,8 @@ EOF
 #: note: laut rbbtext "Gesamtbaumaßnahme ... bis August 2023"
 #: source_id: 2147346762 (bis Ende 2021)
 #: add_fragezeichen: Wann ist die Sperrung beendet?
-#: last_checked: 2021-01-31 (mapillary)
+#: note: manchmal (Wochenende?) kann man an den Absperrungen vorbeifahren (gesehen 2021-07-11)
+#: last_checked: 2021-07-11 (mapillary)
 #: check_frequency: 180d
 #: next_check: 2021-12-31
 	2::inwork 14338,22885 14276,22914
@@ -29915,19 +29919,21 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2021-07-16 17:00:00"), # 1596211200, # 2020-07-31 18:00
-       text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, voraussichtlich bis 16.07.2021',
+       until => $isodate2epoch->("2022-06-04 17:00:00"), # 1596211200, # 2020-07-31 18:00
+       text  => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, voraussichtlich bis Juni 2022',
        type  => 'gesperrt',
        source_id => '2147344558', # bis 2020-09-10
        data  => <<EOF,
 #: source_id: 2147346164 (bis 06.07.2021, Gesamtbaumaßnahme bis 2024)
 #: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
 #: source_id: viz2021:13.373965,52.425564,30.07.2020,09:00 (bis 16.7.2021, Gesamtbaumaßnahme bis 2024)
+#: source_id: viz2021:13.373965,52.425564,30.07.2020,09:00 (bis 4.6.2022)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
 #: also_indoor: traffic (G)
 #: last_checked: 2021-02-20
-#: next_check: 2021-07-16
+#: check_frequency: 180d
+#: next_check: 2022-06-04
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 EOF
      },
@@ -30966,7 +30972,7 @@ EOF
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-07-11
+#: last_checked: 2021-07-16
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31899,7 +31905,7 @@ EOF
 #: osm_watch: way id="877995097" version="2"
 #: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2021-06-17
+#: last_checked: 2021-07-17
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 EOF
      },
@@ -32072,7 +32078,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1353990207574581249 (Situation mit Bildern)
 # REMOVED --- #: XXX wie sehen die Einschränkungen (wenn überhaupt) für den Radverkehr aus? vvv
 	q3::inwork 22162,1067 22092,999 22034,1006 21977,988
-	q3::inwork 22092,999 22120,886
+	q3::inwork 22092,999 22092,977 22100,941 22120,886
 # REMOVED --- #: XXX ^^^
 EOF
      },
@@ -32260,13 +32266,14 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-03-03 08:00:00"),
-       until => 1634223600, # 2021-10-14 17:00
-       text  => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, in beiden Richtungen gesperrt, vom 04.03.2021 08:00 Uhr bis 14.10.2021',
+       until => $isodate2epoch->("2021-11-02 17:00:00"), # 1634223600, # 2021-10-14 17:00
+       text  => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, Richtung Norden gesperrt, bis 2.11.2021',
        type  => 'handicap',
        source_id => '2147346935', # bis 14.10.2021
        data  => <<EOF,
 #: source_id: viz2021:13.32146,52.465174,04.03.2021,08:00
-	q4::inwork 4894,6509 4875,6552 4786,6717
+#: source_id: viz2021:13.320517,52.466345,13.07.2021,08:00
+	q4::inwork; 4894,6509 4875,6552 4786,6717
 EOF
      },
      { from  => 1615071600, # 2021-03-07 00:00
@@ -32669,15 +32676,16 @@ EOF
 	q4::temp::play 13032,10355 12897,10439
 EOF
      },
-     { from  => 1626386400, # 2021-07-16 00:00
-       until => 1630360799, # 2021-08-30 23:59
+     { from  => 1626374087, # 1626386400, # 2021-07-16 00:00
+       until => 1626374091, # 1630360799, # 2021-08-30 23:59
        text  => 'Berliner Allee: Gleisbauarbeiten, Fahrbahn stadtauswärts möglicherweise auch für Radfahrer gesperrt, außerdem Einbahnstraßenregelung in der Bizetstr., vom 17. Juli 2021 bis 30. August 2021',
        type  => 'handicap',
        source_id => 'https://www.berliner-woche.de/weissensee/c-verkehr/auf-der-berliner-allee-werden-die-gleise-erneuert_a309699',
        data  => <<EOF,
 #: XXX Wird es tatsächlich Einschränkungen für Radfahrer geben? Werden temporäre Ampeln aufgestellt? vvv
+#: XXX Sperrung wird mittlerweile nirgendwo erwähnt --- erstmal deaktiviert
 #: also_indoor: traffic
-#: next_check: 2021-07-16 vvv
+#: next_check: 2021-07-17 vvv
 	q4::inwork; 13398,15826 13425,15846 13484,15893 13508,15912 13623,15954 13737,15994 13826,16026 14015,16103 14056,16120 14248,16202 14346,16241 14499,16341
 	q4::inwork; 14552,16171 14295,16076 14248,16058 14056,15985 13867,15915 13665,15840 13572,15804 13540,15792 13524,15786 13456,15760
 #: next_check ^^^
@@ -32935,11 +32943,12 @@ EOF
 EOF
      },
      { from  => 1626559200, # 2021-07-18 00:00
-       until => 1628287199, # 2021-08-06 23:59
+       until => $isodate2epoch->("2021-08-06 17:00:00"), # 1628287199, # 2021-08-06 23:59
        text  => 'Goerzallee: Bauarbeiten, Fahrbahn zwischen Ortlerweg und Lausanner Str. Richtung Norden gesperrt, vom 19.07. bis 06.08.2021',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1099864.php',
        data  => <<EOF,
+#: source_id: viz2021:13.302821,52.425442,19.07.2021,07:00
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/in-der-goerzallee-wird-die-fahrbahn-vom-19-juli-bis-6-august-erneuert_a315012
 	q4::inwork; 3716,2063 3746,2108 3805,2196
 EOF
@@ -33010,7 +33019,8 @@ EOF
        type  => 'gesperrt',
        source_id => 'viz2021:13.471852,52.513916,22.06.2021,07:00',
        data  => <<EOF,
-#: last_checked: 2021-07-06 vvv
+#: next_check_id: FRANKFURTER-2021
+#: last_checked: 2021-07-16 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-09-13 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -33078,16 +33088,17 @@ EOF
 	2::inwork 27833,-16133 27599,-16162
 EOF
      },
-     { from  => 1625749200, # 2021-07-08 15:00
-       until => 1626058800, # 2021-07-12 05:00
-       text  => 'B96: zwischen Staehleweg und Hohen Neuendorf wegen Bauarbeiten gesperrt, vom 09.07.2021 15:00 Uhr bis 12.07.2021 05:00 Uhr',
+     { from  => 1626462247, # $isodate2epoch->("2021-07-15 00:00:00"), # 1625749200, # 2021-07-08 15:00
+       until => 1626462247, # $isodate2epoch->("2021-07-19 05:00:00"), # 1626058800, # 2021-07-12 05:00
+       text  => 'B96: zwischen Staehleweg und Hohen Neuendorf wegen Bauarbeiten gesperrt, vom 16.07.2021 18:00 Uhr bis 19.07.2021 05:00 Uhr',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1104559.php',
        data  => <<EOF,
 #: by: https://viz.berlin.de/2021/07/oranienburger-chaussee-b96/
+#: by: https://twitter.com/VIZ_Berlin/status/1416050417591537667 (zweite Sperrung wurde verschoben)
 #: source_id: viz2021:13.287552,52.659932,09.07.2021,15:00
-#: note: nächster Termin: 16.07.2021 18:00 Uhr bis 19.07.2021 05:00 Uhr
-#: next_check: 2021-07-12
+#: source_id: viz2021:13.287552,52.659932,16.07.2021,18:00
+# REMOVED --- #: note: nächster Termin: 16.07.2021 18:00 Uhr bis 19.07.2021 05:00 Uhr --- #: next_check: 2021-07-12
 	2::inwork 2150,28127 2178,28067 2345,27670
 EOF
      },
@@ -33099,8 +33110,9 @@ EOF
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: note: bei rbb nur bis 30.9.2021
+#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende?) passierbar, gesehen Sa 2021-07-17
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-07-11
+#: last_checked: 2021-07-17
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33119,6 +33131,65 @@ EOF
 	2::temp 8522,12239 8466,12197
 	2::temp 8637,12258 8592,12252 8538,12245
 	2::temp 8344,12221 8538,12245 8600,12165
+EOF
+     },
+     { from  => 1625349600, # 2021-07-04 00:00
+       until => 1627941600, # 2021-08-03 00:00
+       text  => 'Frankfurter Allee: Bauarbeiten zwischen Gürtelstr. und Schulze-Boysen-Str., unter Umständen ist das Überqueren in Höhe Rathausstr. nicht möglich, vom 05.07.2021 06:00 bis 02.08.2021 17:00',
+       type  => 'gesperrt',
+       source_id => 'viz2021:13.480176,52.513101,05.07.2021,06:00',
+       data  => <<EOF,
+	3 15714,11941 15717,12010 15670,12022
+	3 15685,12154 15670,12022 15717,12015
+	3 15361,12071 15670,12022 15685,12154
+EOF
+     },
+     { from  => 1627682400, # 2021-07-31 00:00
+       until => 1633039199, # 2021-09-30 23:59
+       text  => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis Ende September 2021',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106283.php',
+       data  => <<EOF,
+	q4::inwork 5793,23422 5893,23287
+EOF
+     },
+     { from  => 1626300000, # 2021-07-15 00:00
+       until => 1628287200, # 2021-08-07 00:00
+       text  => 'Gehrenseestr. im Bereich S-Bhf.: Bauarbeiten, evtl. für Radfahrer nicht passierbar, vom 16.07.2021 04:00 bis 06.08.2021 17:00',
+       type  => 'gesperrt',
+       source_id => 'viz2021:13.526597,52.556118,16.07.2021,08:00', # mittlerweile inaktiv wegen Startzeitänderung (und dadurch Id-Änderung)
+       data  => <<EOF,
+#: source_id: viz2021:13.526597,52.556118,16.07.2021,04:00
+	2::inwork 18527,16789 18587,16834 18738,16957
+EOF
+     },
+     { from  => 1626116439, # 2021-07-12 21:00
+       until => 1667257200, # 2022-11-01 00:00
+       text  => 'Schönow (Passow): Bauarbeiten, bis 31.10.2022',
+       type  => 'handicap',
+       source_id => '217300297',
+       data  => <<EOF,
+	q4::inwork 60206,86603 59776,86911 59791,87005 59779,87064 59776,87207 59766,87273
+EOF
+     },
+     { from  => 1626559200, # 2021-07-18 00:00
+       until => 1627336800, # 2021-07-27 00:00
+       text  => 'Landsberger Allee: Bauarbeiten an der Rampe zur Märkischen Allee Richtung Ahrensfelde, Fahrbahn gesperrt, vom 19.07.2021 07:00 bis 26.07.2021 17:00',
+       type  => 'gesperrt',
+       source_id => 'viz2021:13.539196,52.539312,19.07.2021,07:00',
+       data  => <<EOF,
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106813.php
+	2::inwork 19614,15061 19643,15025 19615,14960 19551,14961 19516,14993
+EOF
+     },
+     { from  => 1626559200, # 2021-07-18 00:00
+       until => 1629324000, # 2021-08-19 00:00
+       text  => 'Möckernstr.: Bauarbeiten Richtung Süden zwischen Tempelhofer Ufer und Yorckstr., Fahrtrichtung gesperrt, evtl. sind auch Radfahrer betroffen, vom 19.07.2021 07:00 bis 18.08.2021 17:00 ',
+       type  => 'handicap',
+       source_id => 'viz2021:13.380223,52.498741,19.07.2021,07:00',
+       data  => <<EOF,
+#: next_check_id: MOECKERN-2021
+	q4::inwork; 8808,10290 8790,10157 8784,9972 8779,9851 8779,9829 8779,9812 8778,9759 8777,9601
 EOF
      },
     );

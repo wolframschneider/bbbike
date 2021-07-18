@@ -111,10 +111,12 @@ install_non_perl_dependencies() {
 	pdftk_package=pdftk
     fi
 
-    if [ "$CODENAME" = "precise" ]
+    if [ "$CODENAME" = "precise" -o "$CODENAME" = "focal" ]
     then
 	# Since about 2018-06 not installable anymore on the
 	# travis instances
+	#
+	# Also not needed on Ubuntu 20.04, Alien::Proj4 is used for Geo::Proj4 (see below)
 	libproj_packages=
     else
 	libproj_packages="libproj-dev proj-bin"
@@ -157,7 +159,15 @@ install_perl_testonly_dependencies() {
     then
 	sudo apt-get install -y $apt_quiet --no-install-recommends libemail-mime-perl libhtml-treebuilder-xpath-perl libbarcode-zbar-perl libwww-mechanize-formfiller-perl
     else
-	cpanm --quiet --notest Email::MIME HTML::TreeBuilder::XPath Barcode::ZBar
+	if [ "$CODENAME" = "buster" -o "$CODENAME" = "focal" -o "$CODENAME" = "bullseye" ]
+	then
+	    # Does not compile on newer Linux distributions,
+	    # see https://rt.cpan.org/Ticket/Display.html?id=128085
+	    barcode_zbar_module=
+	else
+	    barcode_zbar_module=Barcode::ZBar
+	fi
+	cpanm --quiet --notest Email::MIME HTML::TreeBuilder::XPath $barcode_zbar_module
     fi
 }
 
@@ -269,6 +279,14 @@ install_perl_dependencies() {
 	# distances (this is causing strassen-util.t to fail).
 	# https://github.com/bluefeet/Geo-Distance/issues/15
 	cpanm --quiet --notest 'Geo::Distance~!=0.21,!=0.22'
+
+	# Geo::Proj4 does not compile anymore with newer proj4 versions
+	# https://rt.cpan.org/Ticket/Display.html?id=129389
+	if [ "$CODENAME" = "focal" ]
+	then
+	    cpanm --quiet --notest Alien::Base::Wrapper Alien::Proj4
+	    cpanm --quiet git://github.com/eserte/perl5-Geo-Proj4.git@use-alien
+	fi
 
 	if [ "$CPAN_INSTALLER" = "cpanm" ]
 	then

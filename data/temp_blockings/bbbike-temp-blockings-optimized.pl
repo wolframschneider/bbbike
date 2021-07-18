@@ -1198,13 +1198,17 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        {
          'data' => '#: by: https://viz.berlin.de/2021/07/verkehrsvorschau-120721/
 #: XXX anschauen!
-#: next_check: 2021-07-12
-	q4::inwork; 13651,11731 13895,11663 13954,11647
+#: note: offiziell gemeinsamer Rad- und Gehweg, aber der Gehweg ist so schmal, dass es bei q4 bleibt
+#: note: laut rbb nur bis 1.8.2021
+#: last_checked: 2021-07-17
+#: check_frequency: 7d
+# REMOVED (hier nicht)	q4::inwork; 13651,11731 13895,11663
+	q4::inwork; 13895,11663 13954,11647
 ',
          'from' => 1626024702,
          'id' => 2188,
          'source_id' => 'IM_020398',
-         'text' => 'Kopernikusstr. (Friedrichshain): Baustelle, Fahrbahn ab Warschauer Str. bis Simon-Dach-Str. gesperrt, bis Mitte August 2021',
+         'text' => 'Kopernikusstr. (Friedrichshain): Baustelle, Fahrbahn ab Libauer Str. bis Simon-Dach-Str. gesperrt, bis Mitte August 2021',
          'type' => 'handicap',
          'until' => 1629043200
        },
@@ -1856,7 +1860,36 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: tempex: (YYYY08 & fr-2) - +2d vvv
+	2::temp 22138,4642 22111,4562 22093,4499
+	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
+	2::temp 22144,4660 22212,4655 22284,4653 22355,4660
+	2::temp 22212,4655 22214,4548
+	2::temp 22111,4562 22162,4546 22214,4548 22324,4586
+	2::temp 22314,4604 22355,4660 22365,4676 22395,4678
+	2::temp 22175,4730 22246,4711
+# REMOVED --- #: tempex ^^^
+',
+         'from' => 1629374400,
+         'id' => 2610,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              15,
+                              'months',
+                              8,
+                              'start',
+                              '2020-10-25T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'http://www.winzerfest-köpenick.de/',
+         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Sperrungen ab 20.8.2921 bis 22.8.2021 möglich',
+         'type' => 'gesperrt',
+         'until' => 1629669599
+       },
        undef,
        undef,
        undef,
@@ -2469,7 +2502,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-07-02
+#: last_checked: 2021-07-12 (mapillary)
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2535,7 +2568,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: note: laut rbbtext "Gesamtbaumaßnahme ... bis August 2023"
 #: source_id: 2147346762 (bis Ende 2021)
 #: add_fragezeichen: Wann ist die Sperrung beendet?
-#: last_checked: 2021-01-31 (mapillary)
+#: note: manchmal (Wochenende?) kann man an den Absperrungen vorbeifahren (gesehen 2021-07-11)
+#: last_checked: 2021-07-11 (mapillary)
 #: check_frequency: 180d
 #: next_check: 2021-12-31
 	2::inwork 14338,22885 14276,22914
@@ -2822,19 +2856,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: source_id: 2147346164 (bis 06.07.2021, Gesamtbaumaßnahme bis 2024)
 #: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
 #: source_id: viz2021:13.373965,52.425564,30.07.2020,09:00 (bis 16.7.2021, Gesamtbaumaßnahme bis 2024)
+#: source_id: viz2021:13.373965,52.425564,30.07.2020,09:00 (bis 4.6.2022)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
 #: also_indoor: traffic (G)
 #: last_checked: 2021-02-20
-#: next_check: 2021-07-16
+#: check_frequency: 180d
+#: next_check: 2022-06-04
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
 ',
          'from' => undef,
          'id' => 3151,
          'source_id' => '2147344558',
-         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, voraussichtlich bis 16.07.2021',
+         'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, voraussichtlich bis Juni 2022',
          'type' => 'gesperrt',
-         'until' => 1626447600
+         'until' => 1654354800
        },
        undef,
        undef,
@@ -2998,7 +3034,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-07-11
+#: last_checked: 2021-07-16
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -3245,7 +3281,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: osm_watch: way id="877995097" version="2"
 #: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
 #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2021-06-17
+#: last_checked: 2021-07-17
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 ',
          'from' => undef,
@@ -3316,25 +3352,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: BOHNSDORFERKREISEL-2017
-#: source_id: 2147346807 (bis 30.6.2021)
-#: source_id: viz2021:13.571014,52.412892,05.08.2020,19:43 (bis 12.7.2021)
-#: note: laut rbbtext kann der Radverkehr passieren
-#: by: https://viz.berlin.de/2021/01/bohnsdorfer-kreisel/ (keine Einschränkungen für Fußgänger)
-#: by: https://twitter.com/VIZ_Berlin/status/1353990207574581249 (Situation mit Bildern)
-# REMOVED --- #: XXX wie sehen die Einschränkungen (wenn überhaupt) für den Radverkehr aus? vvv
-	q3::inwork 22162,1067 22092,999 22034,1006 21977,988
-	q3::inwork 22092,999 22120,886
-# REMOVED --- #: XXX ^^^
-',
-         'from' => 1610838000,
-         'id' => 3321,
-         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1039050.php',
-         'text' => 'Richterstr./Bruno-Taut-Str.: Kreuzung wegen Bauarbeiten gesperrt, Radfahrer können auf den engen Gehwegen vorbeifahren, vom 18.1.2021 bis 12.7.2021',
-         'type' => 'handicap',
-         'until' => 1626102000
-       },
+       undef,
        {
          'data' => '#: source_id: viz2021:13.536634,52.420965,13.01.2021,07:00
 #: osm_watch: way id="683770241" version="6"
@@ -3416,14 +3434,15 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: source_id: viz2021:13.32146,52.465174,04.03.2021,08:00
-	q4::inwork 4894,6509 4875,6552 4786,6717
+#: source_id: viz2021:13.320517,52.466345,13.07.2021,08:00
+	q4::inwork; 4894,6509 4875,6552 4786,6717
 ',
          'from' => 1614754800,
          'id' => 3339,
          'source_id' => '2147346935',
-         'text' => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, in beiden Richtungen gesperrt, vom 04.03.2021 08:00 Uhr bis 14.10.2021',
+         'text' => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, Richtung Norden gesperrt, bis 2.11.2021',
          'type' => 'handicap',
-         'until' => 1634223600
+         'until' => 1635868800
        },
        undef,
        undef,
@@ -3737,22 +3756,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1633039199
        },
-       {
-         'data' => '#: XXX Wird es tatsächlich Einschränkungen für Radfahrer geben? Werden temporäre Ampeln aufgestellt? vvv
-#: also_indoor: traffic
-#: next_check: 2021-07-16 vvv
-	q4::inwork; 13398,15826 13425,15846 13484,15893 13508,15912 13623,15954 13737,15994 13826,16026 14015,16103 14056,16120 14248,16202 14346,16241 14499,16341
-	q4::inwork; 14552,16171 14295,16076 14248,16058 14056,15985 13867,15915 13665,15840 13572,15804 13540,15792 13524,15786 13456,15760
-#: next_check ^^^
-#: XXX ^^^
-',
-         'from' => 1626386400,
-         'id' => 3374,
-         'source_id' => 'https://www.berliner-woche.de/weissensee/c-verkehr/auf-der-berliner-allee-werden-die-gleise-erneuert_a309699',
-         'text' => 'Berliner Allee: Gleisbauarbeiten, Fahrbahn stadtauswärts möglicherweise auch für Radfahrer gesperrt, außerdem Einbahnstraßenregelung in der Bizetstr., vom 17. Juli 2021 bis 30. August 2021',
-         'type' => 'handicap',
-         'until' => 1630360799
-       },
+       undef,
        undef,
        {
          'data' => '	q4::temp::play 11917,9663 12074,9689
@@ -3826,21 +3830,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: viz2021:13.517342,52.454467,25.05.2021,10:00
-#: by: https://www.bahninfo-forum.de/read.php?9,702729,704984#msg-704984 (nun bis zum Bahnübergang)
-#: by: https://twitter.com/VIZ_Berlin/status/1409387334097727491
-# REMOVED (hier mittlerweile offen) ---	q3::inwork 18080,5376 18245,5551
-# REMOVED (hier nicht mehr) ---	q3::inwork 18245,5551 18370,5511 18680,5413 18955,5320
-	q3::inwork 18955,5320 19037,5316 19186,5310 19328,5304 19405,5284
-',
-         'from' => 1621843200,
-         'id' => 3383,
-         'source_id' => '2147347210',
-         'text' => 'Schnellerstr.: Bauarbeiten, Fahrbahn teilweise gesperrt, Radfahrer müssen den Bürgersteig benutzen, vom 25.05.2021 10:00 Uhr bis 16.07.2021 17:00 Uhr',
-         'type' => 'handicap',
-         'until' => 1626447600
-       },
+       undef,
        {
          'data' => '#: next_check_id: SEYDLITZ-2021
 #: by: https://www.degewo.de/wachstum/neubau/steglitz-zehlendorf/dessauer-strasse-37-39/ (Fertigstellung 2022)
@@ -3966,7 +3956,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1627682399
        },
        {
-         'data' => '#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/in-der-goerzallee-wird-die-fahrbahn-vom-19-juli-bis-6-august-erneuert_a315012
+         'data' => '#: source_id: viz2021:13.302821,52.425442,19.07.2021,07:00
+#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/in-der-goerzallee-wird-die-fahrbahn-vom-19-juli-bis-6-august-erneuert_a315012
 	q4::inwork; 3716,2063 3746,2108 3805,2196
 ',
          'from' => 1626559200,
@@ -3974,7 +3965,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1099864.php',
          'text' => 'Goerzallee: Bauarbeiten, Fahrbahn zwischen Ortlerweg und Lausanner Str. Richtung Norden gesperrt, vom 19.07. bis 06.08.2021',
          'type' => 'handicap',
-         'until' => 1628287199
+         'until' => 1628262000
        },
        {
          'data' => '	q4::inwork; 6055,4950 6182,4931 6187,4930 6215,4926 6276,4915 6354,4901 6385,4896 6531,4865
@@ -4032,7 +4023,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1630533600
        },
        {
-         'data' => '#: last_checked: 2021-07-06 vvv
+         'data' => '#: next_check_id: FRANKFURTER-2021
+#: last_checked: 2021-07-16 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-09-13 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -4102,25 +4094,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => 1634248800
        },
-       {
-         'data' => '#: by: https://viz.berlin.de/2021/07/oranienburger-chaussee-b96/
-#: source_id: viz2021:13.287552,52.659932,09.07.2021,15:00
-#: note: nächster Termin: 16.07.2021 18:00 Uhr bis 19.07.2021 05:00 Uhr
-#: next_check: 2021-07-12
-	2::inwork 2150,28127 2178,28067 2345,27670
-',
-         'from' => 1625749200,
-         'id' => 3410,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1104559.php',
-         'text' => 'B96: zwischen Staehleweg und Hohen Neuendorf wegen Bauarbeiten gesperrt, vom 09.07.2021 15:00 Uhr bis 12.07.2021 05:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1626058800
-       },
+       undef,
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: note: bei rbb nur bis 30.9.2021
+#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende?) passierbar, gesehen Sa 2021-07-17
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-07-11
+#: last_checked: 2021-07-17
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -4133,6 +4113,72 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Karlshorster Str.: Bauarbeiten in Richtung Marktstr. zwischen Hauptstr. und Türrschmidtstr. Radfahrer müssen absteigen und schieben, außerdem ist die Anbindung Türrschmidtstr. gesperrt (nur Fahrbahn, Bürgersteig ist frei), sowie die Anbindung Nöldnerstr. (komplett, auch für Fußgänger), vom 09.07.2021 11:00 bis 15.12.2021 17:00 ',
          'type' => 'gesperrt',
          'until' => 1639609200
+       },
+       undef,
+       {
+         'data' => '	3 15714,11941 15717,12010 15670,12022
+	3 15685,12154 15670,12022 15717,12015
+	3 15361,12071 15670,12022 15685,12154
+',
+         'from' => 1625349600,
+         'id' => 3413,
+         'source_id' => 'viz2021:13.480176,52.513101,05.07.2021,06:00',
+         'text' => 'Frankfurter Allee: Bauarbeiten zwischen Gürtelstr. und Schulze-Boysen-Str., unter Umständen ist das Überqueren in Höhe Rathausstr. nicht möglich, vom 05.07.2021 06:00 bis 02.08.2021 17:00',
+         'type' => 'gesperrt',
+         'until' => 1627941600
+       },
+       {
+         'data' => '	q4::inwork 5793,23422 5893,23287
+',
+         'from' => 1627682400,
+         'id' => 3414,
+         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106283.php',
+         'text' => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis Ende September 2021',
+         'type' => 'handicap',
+         'until' => 1633039199
+       },
+       {
+         'data' => '#: source_id: viz2021:13.526597,52.556118,16.07.2021,04:00
+	2::inwork 18527,16789 18587,16834 18738,16957
+',
+         'from' => 1626300000,
+         'id' => 3415,
+         'source_id' => 'viz2021:13.526597,52.556118,16.07.2021,08:00',
+         'text' => 'Gehrenseestr. im Bereich S-Bhf.: Bauarbeiten, evtl. für Radfahrer nicht passierbar, vom 16.07.2021 04:00 bis 06.08.2021 17:00',
+         'type' => 'gesperrt',
+         'until' => 1628287200
+       },
+       {
+         'data' => '	q4::inwork 60206,86603 59776,86911 59791,87005 59779,87064 59776,87207 59766,87273
+',
+         'from' => 1626116439,
+         'id' => 3416,
+         'source_id' => '217300297',
+         'text' => 'Schönow (Passow): Bauarbeiten, bis 31.10.2022',
+         'type' => 'handicap',
+         'until' => 1667257200
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106813.php
+	2::inwork 19614,15061 19643,15025 19615,14960 19551,14961 19516,14993
+',
+         'from' => 1626559200,
+         'id' => 3417,
+         'source_id' => 'viz2021:13.539196,52.539312,19.07.2021,07:00',
+         'text' => 'Landsberger Allee: Bauarbeiten an der Rampe zur Märkischen Allee Richtung Ahrensfelde, Fahrbahn gesperrt, vom 19.07.2021 07:00 bis 26.07.2021 17:00',
+         'type' => 'gesperrt',
+         'until' => 1627336800
+       },
+       {
+         'data' => '#: next_check_id: MOECKERN-2021
+	q4::inwork; 8808,10290 8790,10157 8784,9972 8779,9851 8779,9829 8779,9812 8778,9759 8777,9601
+',
+         'from' => 1626559200,
+         'id' => 3418,
+         'source_id' => 'viz2021:13.380223,52.498741,19.07.2021,07:00',
+         'text' => 'Möckernstr.: Bauarbeiten Richtung Süden zwischen Tempelhofer Ufer und Yorckstr., Fahrtrichtung gesperrt, evtl. sind auch Radfahrer betroffen, vom 19.07.2021 07:00 bis 18.08.2021 17:00 ',
+         'type' => 'handicap',
+         'until' => 1629324000
        }
      
 );

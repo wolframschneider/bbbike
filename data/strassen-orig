@@ -357,7 +357,7 @@ Kochstr. (Kreuzberg)	H 9196,11165 9341,11186 9492,11209
 #: oldname: -200805: Kochstr.
 #: ignore_oldname_file: yes
 Rudi-Dutschke-Str.	H 9492,11209 9615,11225 9751,11243 9984,11270 10020,11262
-Oranienstr.	H 10020,11262 10256,11160 10501,11056 10637,10996 10684,10975 10779,10934 10794,10927 10839,10907
+Oranienstr.	H 10020,11262 10256,11160 10501,11056 10562,11029 10637,10996 10684,10975 10779,10934 10794,10927 10839,10907
 Oranienstr.	H 10906,10874 10965,10851 11049,10816 11159,10769 11220,10744 11275,10723 11463,10642 11690,10543 11721,10530 11754,10516 11949,10414
 Puttkamerstr.	N 9523,10964 9275,10932
 Lobeckstr.	N 10684,10975 10585,10766 10492,10582 10484,10567 10433,10456 10363,10303
@@ -707,6 +707,9 @@ Virchowstr.	N 12707,13706 12640,13814
 Langenbeckstr. (Friedrichshain)	N 13151,13367 13081,13457
 (Straßenbahnwendestelle)	N 12925,13373 13081,13457
 Kolonnenstr.	H 8209,8773 8145,8773 8078,8772 8014,8771 8008,8771 7795,8765 7709,8777 7642,8815 7563,8871 7548,8879 7497,8916 7360,8918 7315,8941 7307,8945 7268,8960
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_29_2481_2536_online.pdf (Umbenennung)
+#: XXX wird am 18.10.2021 zum Richard-von-Weizsäcker-Platz umbenannt
+#: next_check: 2021-10-18
 Kaiser-Wilhelm-Platz	NN 7201,8870 7307,8945
 Herbertstr. (Schöneberg)	N 7360,8918 7389,8837 7402,8783 7395,8761
 Feurigstr.	N 6807,8309 7012,8511 7086,8579 7346,8817 7389,8837 7467,8863 7497,8916
@@ -2324,13 +2327,13 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.777571.php
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/a100-baustelle-grenzallee-wieder-offen_a198400
 #: XXX bis Ende 2022
-#: last_checked: 2021-04-04
+#: last_checked: 2021-07-14
 #: check_frequency: 90d
 #: next_check: 2022-12-31 
 (provisorische Umfahrung)	NN 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2021-05-16 vvv
+#: last_checked: 2021-07-14 vvv
 #: check_frequency: 90d vvv
 #: valid: 20140224-20221231
 Neuköllnische Allee	H 14344,7003 14567,6810 14724,6668
@@ -2448,7 +2451,7 @@ Katharina-Boll-Dornberger-Str.	N 19269,3183 19167,3287 19086,3370 19097,3380 190
 Katharina-Boll-Dornberger-Str.	N 18998,3454 18987,3442 19033,3397 19073,3357 19086,3370
 Katharina-Boll-Dornberger-Str.	NN 18943,3508 18836,3611
 Wilhelm-Hoff-Str.	N 18828,3196 18892,3256 18953,3318
-Wilhelm-Hoff-Str.	NN 18953,3318 19033,3397 19057,3422 19125,3491
+Wilhelm-Hoff-Str.	NN 18953,3318 19033,3397 19057,3422 19061,3426 19107,3472 19125,3491
 (Wilhelm-Hoff-Str. - James-Franck-Str.)	NN 18828,3196 18822,3188 18724,3091 18716,3082 18707,3074 18613,2983 18601,2971
 Alexander-von-Humboldt-Weg	NN 19015,3129 18892,3256 18689,3465
 Johann-Hittorf-Str.	N 18946,3077 18802,2993 18757,2966 18716,2966 18601,2971
@@ -2486,7 +2489,7 @@ Straße 12 (Neukölln)	N 13882,6674 13881,6634 13915,6592
 (Grenzallee - Britzer Hafensteg)	NN 13881,6634 13831,6588 13857,6523 13864,6415 13984,6270 13993,6221
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
-#: last_checked: 2021-03-30 vvv
+#: last_checked: 2021-07-14 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: valid: 20140224-20211231
@@ -3106,7 +3109,7 @@ Lindenblütenstr.	N 21703,388 21671,509 21657,580
 (Grünzug am Falkenberg)	NN 21557,351 21513,361 21485,360 21409,331
 (Grünzug am Falkenberg)	NN 21734,580 21723,605
 (Grünzug am Falkenberg - Mohnblütenweg)	NN 21681,326 21688,312
-(Kirchsteig - Grünzug am Falkenberg)	N 21925,612 21876,554 21905,510 21904,481 21886,466 21860,462 21774,412
+(Kirchsteig - Grünzug am Falkenberg)	N 21925,612 21879,557 21876,554 21905,510 21904,481 21886,466 21860,462 21774,412
 (Sternblütenweg - Grünzug am Falkenberg)	NN 21620,372 21621,360 21592,341
 (Weg)	NN 21860,462 21820,524 21777,591
 #: XXX_osm: bei osm teilweise mit oneway getaggt: stimmt das? kann mich nicht entsinnen...
@@ -3135,7 +3138,7 @@ Suevenstr.	N 20734,776 20836,982 20898,1100 20912,1127
 (Bruno-Taut-Str. - Am Gartenstadtweg)	NN 21790,682 21783,660 21755,625 21723,605 21688,589 21673,590
 Bruno-Taut-Str.	N 21790,682 21870,803
 Bruno-Taut-Str.	H 21858,811 21902,877 21977,988 22034,1006 22092,999
-Richterstr. (Bohnsdorf, Grünau)	H 22007,711 22062,773 22120,886 22092,999 22162,1067
+Richterstr. (Bohnsdorf, Grünau)	H 22007,711 22062,773 22120,886 22100,941 22092,977 22092,999 22162,1067
 Kirchsteig	N 22007,711 21925,612
 Buntzelstr.	H 22062,773 22110,702 22162,452 22166,312 22145,208
 Buntzelstr.	NH 22145,208 22073,59 21977,-8 21968,-15 21800,-109 21534,-262 21463,-280 21355,-309 21235,-354 21157,-413 21120,-444
@@ -13489,7 +13492,7 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED (Verschwenkung realisiert) --- #: XXX Verschwenkung der Bergiusstr. --- #: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle --- #: XXX wahrscheinlich ist auch die alte Ampel abgeschaltet? --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1308/nachricht5044.html --- #: prio: #A --- #: next_check: 2013-08-23
 # REMOVED (nein, keine Schilder) --- #: XXX als Bergiusstr. ausgeschildert? --- #: next_check: 2013-09-04
 # REMOVED --- #: last_checked: 2021-03-30 --- #: check_frequency: 90d --- #: next_check: 2021-12-31 --- #: next_check: 2021-04-02 --- (Zufahrt zur Bergiusstr.)	NN 14051,6731 14106,6663
-#: last_checked: 2021-05-16 vvv
+#: last_checked: 2021-07-14 vvv
 #: check_frequency: 90d vvv
 #: XXX im Zuge des A100-Ausbaus wird die Bergiusstr. verschwenkt
 Bergiusstr.	H 14051,6731 14106,6663
@@ -16052,7 +16055,7 @@ Hüttendorfer Weg	N 21463,-280 21409,-109
 #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/stadtplanungsamt/ag2/downloads-b-plaene/planungsvariante_1.pdf?start&ts=1392044607&file=planungsvariante_1.pdf
 #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/stadtplanungsamt/ag2/downloads-b-plaene/planungsvariante_2.pdf?start&ts=1392044611&file=planungsvariante_2.pdf
 #: osm_watch: way id="147717012" version="4"
-#: last_checked: 2021-04-24
+#: last_checked: 2021-07-17
 #: check_frequency: 360d
 (Am Gartenstadtweg - S-Bhf. Altglienicke/Paradiesstr.)	N 21527,547 21368,478 21275,389
 (Am Gartenstadtweg - S-Bhf. Altglienicke/Paradiesstr.)	NN 21275,389 21262,375
@@ -16918,7 +16921,7 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-bauen/die-naechsten-schritte-zur-festsetzung-von-bebauungsplaenen-stehen-an_a293341 (Erwähnung)
 #: osm_watch: way id="59573616" version="1"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
-#: last_checked: 2021-04-19 (mapillary)
+#: last_checked: 2021-07-11 (mapillary)
 #: check_frequency: 180d
 (Rhönstr. - Harzburger Str.)	NN 13598,21360 13709,21334
 Eifelstr.	N 13580,21286 13351,21239 13280,21225
