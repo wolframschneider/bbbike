@@ -446,7 +446,7 @@ Georgenstr. (Mitte)	1 9313,12662 9242,12652 9108,12635
 Georgenstr. (Mitte)	1 9117,12705 9242,12652
 Natalissteig	1 1200,14943 1223,14824 1226,14714
 Alt-Biesdorf	1 20375,11694 20435,11698 20571,11698 20764,11675 21108,11628
-Alt-Biesdorf	1 21108,11628 20963,11618 20633,11651 20540,11660 20375,11694
+Alt-Biesdorf	1 21108,11628 20963,11618 20838,11631 20633,11651 20540,11660 20375,11694
 Privatstr. 14	1s 13159,17196 13103,17280
 Bernkasteler Str.	1s 15208,16939 15015,16908 14923,16901 14923,16914
 Wiedenbrücker Weg	1 4207,1113 4220,1175 4141,1282
@@ -982,6 +982,8 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14191,-818 -14199,-707 -14205,-644
 Bahnhofstr.	1s -8417,-2862 -8410,-2884
 Bienenwinkel	1 -13335,1927 -13333,1957 -13227,1962 -13228,1927
+Emserstr. (KW)	1s 26036,-6780 26080,-6894
+Siedlerweg (KW)	1s 26765,-12240 26783,-12136 26786,-12025 26811,-11927
 Rudolf-Breitscheid-Str. (Woltersdorf)	1 34521,5351 34426,5329 34283,5380
 Seestr. (Woltersdorf)	1 34159,5449 34279,5454
 Diedersdorf	1 7452,-7463 7408,-7483 7296,-7482 7378,-7406
@@ -1058,7 +1060,6 @@ Fürstenberg	1 -8690,85638 -8799,85690
 Fürstenberg	1 -8899,85749 -9028,85866
 Fürstenberg	1 -9028,85866 -8959,85869 -8847,85920 -8800,85923
 Markt (Neustrelitz)	1 -14823,106096 -14782,106096 -14747,106096 -14745,106058 -14745,106011 -14780,106011 -14821,106013 -14824,106060 -14823,106096
-Rochowstr. (Brandenburg)	1 -47685,-2385 -47938,-2184
 Schönermark	1 54542,78720 54850,78769 55047,78740 54850,78692 54542,78720
 Lindenweg (Brüssow)	1 57245,111041 57557,110975
 Marktplatz (Brüssow)	1 57445,111340 57477,111392
@@ -3176,6 +3177,9 @@ Drängelgitter	BNP:3:-187:trailer=10 32418,6303
 Drängelgitter	BNP:2:-135:trailer=8 19107,3472
 Drängelgitter	BNP:2:-135:trailer=8 19061,3426
 Barriere	BNP:1:39:trailer=5 21879,557
+Schranke	BNP:2:-83:trailer=5 20820,11563
+Schranke	BNP:2:-80:trailer=5 20833,11561
+Drängelgitter	BNP:3:-210:trailer=10 25690,-8511
 Hebammensteigbrücke	2::inwork 13168,21706 13046,21734
 Hönower Str.: temporäre Einbahnstraße	1s:inwork 18735,9421 18765,9426 18846,9532
 Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, komplett gesperrt	2::inwork -196,16060 -203,16064 -205,16086 -224,16095 -265,16111
@@ -3186,7 +3190,6 @@ Straße 77: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 153
 (Zufahrt am NKZ): Fußgänger, unübersichtlich, Bauarbeiten, Gerüst, kaum ein Durchkommen	2::inwork 11344,10507 11392,10520 11411,10515
 Straße des 17. Juni: Radweg gesperrt	1::igndisp 6164,11947 5900,11913
 Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 6024,11978 6132,11984 6164,11947
-(Breiter Weg - Südostallee/Sterndamm): Durchgang ist wegen Bauarbeiten gesperrt	2::inwork 17538,5301 17601,5374
 Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11916,11846 11923,11881 11940,11982
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s 10472,14632 10320,14608
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
@@ -3246,7 +3249,7 @@ Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5643,12253
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5574,12237 5535,12206
 Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20627,11552 20631,11621 20633,11651
-Gisela-Reissenberger-Platz: wegen Bauarbeiten gesperrt	2::inwork 20665,11620 20735,11613
+Heino-Schmieden-Weg - Alt-Biesdorf: Durchgang mit Bauzaun versperrt	2::inwork 20830,11610 20838,11631
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
 Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409
 Valeska-Gert-Str. - Am Postbahnhof: wegen Bauarbeiten gesperrt	2::inwork 12807,11287 12713,11372

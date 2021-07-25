@@ -641,7 +641,7 @@ Erich-Müller-Str.	N 16038,9837 15948,9902 15936,9911 15892,9941 15840,9980
 Gisèle-Freund-Hain	N 15892,9941 15847,9881
 Hildegard-Marcusson-Str.	N 16004,10204 15990,10185 15952,10134 15874,10025 15840,9980
 (Hildegard-Marcusson-Str. - Uferweg)	NN 15840,9980 15811,9957 15786,9957
-Marktstr. (Rummelsburg)	H 15279,10862 15144,10905 15113,10916 15085,10956 15060,11006 14988,11130
+Marktstr. (Rummelsburg)	H 15279,10862 15144,10905 15113,10916 15088,10950 15060,11006 14988,11130
 #: note: bei luise-berlin wird fälschlicherweise suggeriert, dass die Boxhagener an der Neuen Bahnhofstraße endet
 Boxhagener Str.	H 14988,11130 14918,11249 14799,11330 14771,11345 14752,11369 14684,11456 14639,11512 14570,11589 14561,11600 14513,11657 14461,11738 14416,11815 14306,11889 14161,11930 14097,11949 14045,11965 13991,11992 13745,12118
 # 
@@ -1278,7 +1278,7 @@ Mercedes-Platz	NN 12990,11006 13063,11147
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="8"
 #: priority: #C
-#: last_checked: 2021-06-04
+#: last_checked: 2021-07-22
 #: next_check: 2023-01-01
 (Planstraße C)	N 12926,11224 12848,11093
 # 
@@ -2085,7 +2085,10 @@ Frankfurter Allee [Nebenfahrbahn]	NN 16535,11920 16512,11894
 #: alias ^^^
 (zur Pablo-Neruda-Bibliothek)	N 14020,12261 14008,12181
 Gudrunstr.	N 17471,12243 17300,12173 17195,12125 17139,12100 17088,12069 16975,12000 16865,11931
-(Kolonie Friedrichsfelde Nord)	NN 17785,12257 17832,12244 18135,12246 18142,12260 18180,12262 18216,12262
+#: osm.highway: service
+#: note: Parkplatz
+(Kolonie Friedrichsfelde Nord)	N 17785,12257 17832,12244
+(Kolonie Friedrichsfelde Nord)	NN 17832,12244 18135,12246 18142,12260 18180,12262 18216,12262
 (Am Städtischen Zentralfriedhof)	N 17785,12257 17749,12239 17540,12222 17485,12240 17471,12243
 (Gudrunstr. - Lichtenberger Brücke)	NN 16837,11920 16833,11897 16818,11878 16803,11859
 (Lichtenberger Brücke - Einbecker Str./Weitlingstr.)	NN 17028,11821 17026,11799 17034,11797
@@ -5515,7 +5518,7 @@ Nennhauser Damm	H -7484,13770 -7522,13651 -7550,13528 -7554,13514 -7584,13421 -7
 Nennhauser Damm [Stichstraße]	N -8049,13332 -8043,13464 -8064,13534
 #: note: Privatstraße
 Metropolitan Park	N -8064,13534 -8088,13594 -7984,13649 -7926,13709 -7893,13781 -7894,13878 -7928,13967 -8019,14036 -8095,14056 -8183,14041
-#: osm_watch: way id="725376312" version="5"
+#: osm_watch: way id="725376312" version="6"
 #: note: Privatstraße
 #: XXX Bekommt diese Straße noch einen Straßennamen und Straßenschilder?
 #: last_checked: 2021-05-24
@@ -5899,6 +5902,9 @@ Glanzstr.	N 16328,7005 16433,6892 16588,6724
 Neue Bahnhofstr.	H 15016,11431 14918,11249
 Neue Bahnhofstr.	N 14918,11249 14908,11231 14879,11182 14817,11068 14798,11058 14760,11044
 # REMOVED (wurde zurückgebaut) --- (provisorischer Zugang zum Bahnhof Ostkreuz)	NN 14712,11039 14727,11005 14808,10978
+#: osm.highway: service
+(Ostkreuz, Zugang Marktstr.)	N 15088,10950 15069,10927
+(Ostkreuz, Zugang Marktstr.)	NN 15069,10927 15054,10910 14945,10945 14902,10967 14808,10978
 (Neue Bahnhofstr. - Bahnhof Ostkreuz)	NN 14798,11058 14809,11037 14808,10978 14851,10966
 (Sonntagstr. - Bahnhof Ostkreuz)	NN 14808,10978 14760,11044
 Sonntagstr.	N 14760,11044 14669,11157 14598,11245 14535,11327 14453,11439 14460,11455
@@ -6049,24 +6055,25 @@ Paul-Gesche-Str.	N 17495,11724 17541,11717 17568,11691 17692,11677 17690,11610
 #: note: eventuell wird dieser Weg bei der Realisierung der TVO unterbrochen, deshalb der osm_watch-Eintrag
 #: osm_watch: way id="30042670" version="7"
 (Alt-Friedrichsfelde - Weißenhöher Str.)	NN 19726,11743 19735,11721 19830,11677 19881,11591
-Weißenhöher Str.	N 19807,11572 19845,11597 19881,11591 19984,11557 20150,11512 20354,11500 20521,11494 20623,11489 20641,11488 20650,11488 20720,11484 20729,11483 20818,11480 20828,11480 20959,11472 21124,11462
+Weißenhöher Str.	N 19807,11572 19845,11597 19881,11591 19984,11557 20150,11512 20354,11500 20521,11494 20569,11492 20616,11490 20641,11488 20650,11488 20720,11484 20729,11483 20818,11480 20828,11480 20959,11472 21124,11462
+Weißenhöher Str. [69-71]	NN 20569,11492 20582,11558
 Hanoier Str.	N 20729,11483 20725,11375
 Arno-Philippsthal-Str.	N 20641,11488 20630,11342
-Stawesdamm	N 20623,11489 20627,11552 20631,11621
+Stawesdamm	N 20616,11490 20627,11552 20631,11621
 Stawesdamm	NN 20631,11621 20633,11651
 #: note: Privatstraßen vvv
+#: note: blaue Straßenschilder vvv
 Heino-Schmieden-Weg	N 20720,11484 20726,11539 20730,11574 20735,11613 20831,11604 20827,11562 20823,11527 20818,11480
+Heino-Schmieden-Weg [4,6,8,12]	N 20730,11574 20820,11563 20827,11562
+Heino-Schmieden-Weg [11]	N 20827,11562 20833,11561 20874,11555
 Elsa-Ledetsch-Weg	N 20650,11488 20659,11548 20726,11539
-Gisela-Reissenberger-Platz	N 20659,11548 20665,11620 20735,11613
+#: note: Poller an beiden Enden
+Gisela-Reissenberger-Platz	NN 20659,11548 20665,11620 20735,11613
 #: note ^^^
-(Verbindungsweg)	NN 20659,11548 20627,11552 20590,11557
+#: note ^^^
+(Heino-Schmieden-Weg - Alt-Biesdorf)	NN 20831,11604 20840,11604 20830,11610 20838,11631
+(Verbindungsweg)	NN 20659,11548 20627,11552 20582,11558
 (Verbindungsweg)	NN 20726,11539 20823,11527 20866,11521
-# 
-#: next_check_id: BEBAUUNGSPLAN-XXI-34A
-#: add_fragezeichen: Wird diese Straße einen Straßennamen bekommen?
-#: last_checked: 2021-05-23
-#: check_frequency: 60d
-(Straße im Gut Biesdorf)	N 20730,11574 20827,11562 20874,11555
 # 
 Minsker Str.	N 20828,11480 20820,11333 20818,11293 20817,11257 20834,11150
 #: note: beleuchtet
@@ -6260,13 +6267,13 @@ Waldbacher-Weg-Brücke	NN 20315,12061 20363,12057
 Haydnstr. (Biesdorf)	NN 19979,11774 19995,11795
 Haydnstr. (Biesdorf)	N 19995,11795 20005,11872 20016,11980 20026,12088
 (Haydnstr. - Märkische Allee)	NN 20026,12088 20006,12128 19954,12140
-(Park Biesdorf)	NN 20810,12031 20857,12027 21100,11960 21132,11943 21134,11926 21150,11925
+(Park Biesdorf)	NN 20810,12031 20857,12027 21100,11960 21132,11943 21134,11913 21150,11925
 Albert-Brodersen-Allee	NN 20857,12027 20835,11810 20831,11771
 (Alt-Biesdorf - Schloss Biesdorf)	NN 20764,11675 20825,11732 20831,11771
 (Parkweg - Park Biesdorf)	NN 20779,11801 20804,11797 20818,11812 20835,11810
 Alt-Biesdorf	HH 19907,11734 19985,11727 20114,11719 20161,11715 20375,11694
 Alt-Biesdorf	HH 21108,11628 20764,11675 20571,11698 20435,11698 20375,11694
-Alt-Biesdorf	HH 20375,11694 20540,11660 20633,11651 20963,11618 21108,11628
+Alt-Biesdorf	HH 20375,11694 20540,11660 20633,11651 20838,11631 20963,11618 21108,11628
 Alt-Biesdorf	HH 21108,11628 21251,11560 21311,11528 21392,11486 21628,11384 21745,11333 21863,11289 21954,11269 22242,11269 22326,11266
 Biesdorfer Friedhofsweg	N 21311,11528 21514,11796
 (Biesdorfer Friedhofsweg - Wuhlewanderweg)	NN 21514,11796 21645,11912 21751,11973 21778,11955 21815,11953 21829,11975 21829,11994 21873,12016 21907,12018
@@ -11610,7 +11617,7 @@ Dahmestr. (Bohnsdorf)	N 21534,-262 21648,-276 21847,-303 21877,-307 21898,-303 2
 Schulzendorfer Str. (Bohnsdorf)	NH 22172,194 22239,166 22303,67 22312,48 22345,-10 22382,-87 22440,-175 22498,-265 22508,-281 22543,-338 22632,-480 22644,-497 22696,-579 22750,-650 22804,-726 22871,-826 22921,-899 22973,-978 23022,-1047 23072,-1116 23170,-1249
 Sandbacher Weg	N 23504,-938 23414,-980 23408,-982 23072,-1116 22845,-1210 22720,-1255 22482,-1226 22322,-1207 22146,-1183 21930,-1159
 (Verlängerter Sandbacher Weg)	NN 23504,-938 23523,-937 23540,-944 23657,-1020 23786,-1108 23811,-1126 23903,-1187 23955,-1223 24056,-1295
-(Brücke über die Görlitzer Bahn)	NN 23955,-1223 24001,-1228 24053,-1241 24121,-1219 24154,-1219 24188,-1248 24216,-1273 24224,-1271
+(Brücke über die Görlitzer Bahn)	NN 23955,-1223 23980,-1220 24001,-1225 24053,-1241 24121,-1219 24154,-1219 24188,-1248 24216,-1273 24224,-1271
 (Alter Radelander Weg/Brücke - Adlergestell)	NN 24158,-1153 24485,-667
 (Adlergestell - Sportpromenade/Bammelecke)	NN 24485,-667 24758,-268 25172,345
 (Sportpromenade - Bammelecke)	NN 25172,345 25287,434 25473,449
@@ -14731,7 +14738,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="15"
-#: last_checked: 2021-07-11
+#: last_checked: 2021-07-21
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15108,7 +15115,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="17"
-#: last_checked: 2021-07-11
+#: last_checked: 2021-07-21
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -19498,13 +19505,7 @@ Am Kaniswall	N 32823,-149 32817,4 32872,128
 #: osm.highway: service
 (Zufahrt Erika-Heß-Eisstadion)	NN 8138,14786 8015,14685 8015,14650
 # 
-#: by: https://www.bahninfo-forum.de/file.php?9,file=15098
-#: osm.highway: service vvv
-#: valid: 20210307- vvv
-(Zufahrt Impfzentrum Flughafen Tempelhof)	N 9268,8029 9276,7823 9426,7827 9653,8480
-(Zufahrt Impfzentrum Flughafen Tempelhof)	N 9240,7811 9276,7823
-#: valid ^^^
-#: osm.highway ^^^
+# REMOVED (wurde geschlossen) --- #: by: https://www.bahninfo-forum.de/file.php?9,file=15098 --- #: osm.highway: service vvv --- #: valid: 20210307-20210720 vvv --- (Zufahrt Impfzentrum Flughafen Tempelhof)	N 9268,8029 9276,7823 9426,7827 9653,8480 --- (Zufahrt Impfzentrum Flughafen Tempelhof)	N 9240,7811 9276,7823 --- #: valid ^^^ --- #: osm.highway ^^^
 # 
 #: next_check_id: STRD17JUNI-2021
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_01_0001_0080_online.pdf (geplant ab 15.3.2021 bis März 2025)

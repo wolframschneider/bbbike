@@ -120,6 +120,10 @@ Kreisverkehr	Roundabout 41204,17507
 Kreisverkehr	Roundabout -17045,14005
 Kreisverkehr	Roundabout 11920,16508
 Kreisverkehr	Roundabout 17167,-1981
+Kreisverkehr	Roundabout -22503,-15767
+Kreisverkehr	Roundabout -27861,-13960
+Kreisverkehr	Roundabout -34556,-11168
+Kreisverkehr	Roundabout -34492,-10500
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
 Privatstraße der DB	CS 5710,7820 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
@@ -764,6 +768,6 @@ ausgeschildert Richtung Blumberg	CP2; 30444,22044 30185,21993
 ausgeschildert Richtung Werneuchen (5,8km)	CP2; 30444,22044 30237,23202
 ausgeschildert Richtung Werneuchen (5,7km)	CP2; 30444,22044 31272,22232
 Weg an der Südpanke: Hausdurchfahrt gegenüber der Liesenstr.	CP2; 8323,14599 8301,14576
-Heino-Schmieden-Weg: teilweise nicht ausgeschildert	CS 20818,11480 20823,11527 20827,11562 20831,11604 20735,11613
 ausgeschildert Hauptstr. 2D-2B	CP2; 7617,19748 7578,19753
 Mirower Str. - Mittelheide: vor den Recycling-Containern in den Waldweg abbiegen	CP; 24387,7751 24387,7708 24365,7657
+ausgeschildert "Egsdorfer Berg"	CP2; 23596,-29215 23640,-29209

@@ -410,7 +410,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        },
        {
          'data' => '#: tempex: T23:00-T06:00 vvv
-	2::night 21150,11925 21134,11926 21132,11943 21100,11960 20857,12027 20810,12031
+	2::night 21150,11925 21134,11913 21132,11943 21100,11960 20857,12027 20810,12031
 	2::night 20857,12027 20835,11810 20831,11771 20825,11732 20764,11675
 	2::night 20779,11801 20804,11797 20818,11812 20835,11810
 #: tempex ^^^
@@ -1200,7 +1200,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 #: XXX anschauen!
 #: note: offiziell gemeinsamer Rad- und Gehweg, aber der Gehweg ist so schmal, dass es bei q4 bleibt
 #: note: laut rbb nur bis 1.8.2021
-#: last_checked: 2021-07-17
+#: last_checked: 2021-07-22
 #: check_frequency: 7d
 # REMOVED (hier nicht)	q4::inwork; 13651,11731 13895,11663
 	q4::inwork; 13895,11663 13954,11647
@@ -2251,27 +2251,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147341611
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_28_2389_2480_online.pdf (2021)
-	2::temp 7435,11514 7322,11177
-	2::temp 7579,11032 7595,11086 7665,11353 7717,11540
-	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
-	2::temp 7595,11086 7575,11076 7252,11188
-# REMOVED ---	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
-# REMOVED ---	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
-# REMOVED ---	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
-# REMOVED ---	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
-# REMOVED ---	2::temp 7665,11353 7745,11332
-# REMOVED ---	2::temp 7745,11332 7690,11108
-',
-         'from' => 1626667200,
-         'id' => 2875,
-         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
-         'text' => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2021 von 12:00 bis 18:30 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1626798600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2483,8 +2463,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
 #: by: https://www.maz-online.de/Lokales/Dahme-Spreewald/Zeuthen/S-Bahnhof-Zeuthen-Fortschritte-auf-der-Baustelle-fuer-den-Personentunnel (noch immer gesperrt)
 #: osm_watch: way id="36936021" version="5" brb
-#: last_checked: 2018-09-18
-#: next_check: 2020-11-01
+#: last_checked: 2021-07-23
+#: check_frequency: 180d
+# REMOVED --- #: next_check: 2020-11-01
 	2::inwork 25929,-5994 25902,-6006
 ',
          'from' => 1533756141,
@@ -2564,23 +2545,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: laut rbbtext "Gesamtbaumaßnahme ... bis August 2023"
-#: source_id: 2147346762 (bis Ende 2021)
-#: add_fragezeichen: Wann ist die Sperrung beendet?
-#: note: manchmal (Wochenende?) kann man an den Absperrungen vorbeifahren (gesehen 2021-07-11)
-#: last_checked: 2021-07-11 (mapillary)
-#: check_frequency: 180d
-#: next_check: 2021-12-31
-	2::inwork 14338,22885 14276,22914
-',
-         'from' => 1609855200,
-         'id' => 3043,
-         'source_id' => '2147343394',
-         'text' => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 6. Januar 2021 bis 31. Dezember 2021',
-         'type' => 'gesperrt',
-         'until' => 1690902000
-       },
+       undef,
        undef,
        undef,
        {
@@ -2609,7 +2574,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-07-09
+#: last_checked: 2021-07-21 (mapillary)
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2702,19 +2667,17 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
 #: last_checked: 2021-07-06 vvv
 #: next_check: 2021-08-13 vvv
-#: note: hier nur an der Kreuzung Berliner Allee
-	q3::inwork 13508,15912 13312,16027
+# REMOVED (wird bei viz nicht mehr erwähnt) --- #: note: hier nur an der Kreuzung Berliner Allee --- q3::inwork 13508,15912 13312,16027
 # REMOVED (hier nicht mehr) ---	q4::inwork 13312,16027 13250,16058 13189,16089 12943,16214
 	q4::inwork 12943,16214 12859,16255 12826,16271 12797,16285 12764,16302 12725,16321 12564,16399 12474,16443 12399,16479
-#: note: hier keine Absperrungen mehr, aber offiziell nur für Tram und Bus frei
-	q3::inwork 12399,16479 12189,16578
+# REMOVED (wird bei viz nicht mehr erwähnt) --- #: note: hier keine Absperrungen mehr, aber offiziell nur für Tram und Bus frei --- q3::inwork 12399,16479 12189,16578
 #: next_check ^^^
 #: last_checked ^^^
 ',
          'from' => 1611468000,
          'id' => 3091,
          'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
-         'text' => 'Langhansstr.: zwischen Berliner Allee und Heinersdorfer Str. ist die Fahrbahn abschnittsweise wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, 25.1.2021 bis 13.8.2021',
+         'text' => 'Langhansstr.: zwischen Roelckestr. und Gustav-Adolf-Str. ist die Fahrbahn abschnittsweise wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, 25.1.2021 bis 13.8.2021',
          'type' => 'handicap',
          'until' => 1628866800
        },
@@ -2927,7 +2890,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-07-02
+#: last_checked: 2021-07-24
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 ',
@@ -3034,7 +2997,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-07-18
+#: last_checked: 2021-07-22
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -3322,13 +3285,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2021-05-09-adlershof-2/40-2021-05-09-214-xxl.jpg (kein provisorischer Übergang mehr)
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
-#: last_checked: 2021-07-04
+#: last_checked: 2021-07-18 (krickstadt)
 #: check_frequency: 90d
 	2::inwork 18836,3611 18943,3508
 ',
          'from' => undef,
          'id' => 3313,
-         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein (Stand 4.7.2021: provisorischer Übergang existiert)',
+         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein (Stand 18.7.2021: provisorischer Übergang existiert)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4045,21 +4008,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1631570400
        },
        undef,
-       {
-         'data' => '#: also_indoor: traffic (G,H) (beide falsch/unvollständig?)
-#: note: laut rbb: "Radfahrende steigen bitte ab"
-# REMOVED (ja) --- #: add_fragezeichen: Sind Radfahrer tatsächlich von den Bauarbeiten betroffen? vvv --- #: next_check: 2021-07-05 vvv
-	q4::inwork; 8685,13728 8841,13800
-	q4::inwork; 8935,13844 9085,13919
-# REMOVED --- #: next_check ^^^ --- #: add_fragezeichen ^^^
-',
-         'from' => 1625349600,
-         'id' => 3406,
-         'source_id' => 'viz2021:13.379379,52.529484,05.07.2021,10:00',
-         'text' => 'Invalidenstr.: Gleisarbeiten Richtung Brunnenstr. zwischen Hessische Str. und Am Nordbahnhof, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, vom 05.07.2021 10:00 bis 23.07.2021 17:00',
-         'type' => 'handicap',
-         'until' => 1627077600
-       },
+       undef,
        {
          'data' => '#: source_id: viz2021:13.560042,52.405163,12.07.2021,07:00 (hier: bis 10.9.2021, siehe unten)
 	q4::inwork 21355,-309 21322,-176 21250,118
@@ -4084,13 +4033,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: also_indoor: traffic
 #: XXX gibt es nach den Bauarbeiten bereits den neuen Radweg?
+#: osm_watch: way id="827384487" version="3"
 #: next_check: 2021-10-15
-	2::inwork 27833,-16133 27599,-16162
+	2::inwork 27833,-16133 27643,-16156
 ',
          'from' => 1626559200,
          'id' => 3409,
          'source_id' => '216101007',
-         'text' => 'B179: Sperrung Brücke Körbiskrug, evtl. sind auch Radfahrer betroffen, 19.07.2021 bis 14.10.2021',
+         'text' => 'B179: Sperrung Brücke Körbiskrug, Radfahrer und Fußgänger sind ebenfalls von der Sperrung betroffen, 19.07.2021 bis 14.10.2021',
          'type' => 'gesperrt',
          'until' => 1634248800
        },
@@ -4098,9 +4048,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: note: bei rbb nur bis 30.9.2021
-#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende?) passierbar, gesehen Sa 2021-07-17
+#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-07-17
+#: last_checked: 2021-07-21
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -4171,6 +4121,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: MOECKERN-2021
+#: note: bei rbb nur bis 9.8.2021
+#: next_check: 2021-08-09
 	q4::inwork; 8808,10290 8790,10157 8784,9972 8779,9851 8779,9829 8779,9812 8778,9759 8777,9601
 ',
          'from' => 1626559200,
@@ -4210,6 +4162,16 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Marheinekeplatz (Richtung Mittenwalder Str.): Trödelmarkt samstags 10 bis 16 Uhr, sonntag 11 bis 17 Uhr (Sommerhalbjahr) bzw. 16 Uhr (Winterhalbjahr)',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '	q4::inwork; 5271,4547 5316,4637 5336,4676
+',
+         'from' => 1627164000,
+         'id' => 3422,
+         'source_id' => 'viz2021:13.326349,52.447526,26.07.2021,07:00',
+         'text' => 'Klingsorstr.: zwischen Birkbuschstr. und Barsekowstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 26.07.2021 07:00 bis 06.11.2021 17:00',
+         'type' => 'handicap',
+         'until' => 1636239600
        }
      
 );

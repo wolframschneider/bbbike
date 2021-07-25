@@ -1853,7 +1853,8 @@ Unterführung S-Bahnhof Poelchaustr.: asphaltiert	Q0 19235,14511 19290,14503 1939
 (Allee der Kosmonauten - Langhoffstr.): betonierte Platten	Q1 19807,13529 19809,13605 19819,13606
 (Allee der Kosmonauten - Langhoffstr.): neues Verbundsteinpflaster	Q0 19856,13794 19847,14019 19843,14064
 Langhoffstr.: Asphalt	Q0 19818,14064 19817,14371 19817,14459
-(Kolonie Friedrichsfelde Nord, entlang der Fernwärmeleitung): feiner Kies, relativ glatt	Q1 17785,12257 17832,12244 18135,12246 18142,12260 18180,12262 18216,12262
+(Kolonie Friedrichsfelde Nord, entlang der Fernwärmeleitung): Schotter	Q2 17785,12257 17832,12244
+(Kolonie Friedrichsfelde Nord, entlang der Fernwärmeleitung): feiner Kies, relativ glatt	Q1 17832,12244 18135,12246 18142,12260 18180,12262 18216,12262
 (Am Städtischen Zentralfriedhof): asphaltiert	Q0 17785,12257 17749,12239 17540,12222
 (Am Städtischen Zentralfriedhof, Platz vor dem Eingang): Asphaltstreifen	Q0 17540,12222 17485,12240 17471,12243
 Gudrunstr.: Asphalt	Q0 17471,12243 17300,12173 17195,12125 17139,12100 17088,12069 16975,12000 16865,11931
@@ -2803,7 +2804,7 @@ Püttlinger Str.: Asphalt, etwas rau	Q0 21283,12066 21281,12042 21275,11942
 Püttlinger Str.: Beton	Q1 21275,11942 21273,11882
 Frankenholzer Weg: Beton	Q0 21152,11945 21275,11942
 Frankenholzer Weg: Asphalt	Q0 21275,11942 21346,11941 21409,11941 21550,11939
-Park Biesdorf: Parkweg	Q1 21150,11925 21134,11926 21132,11943 21100,11960
+Park Biesdorf: Parkweg	Q1 21150,11925 21134,11913 21132,11943 21100,11960
 Park Biesdorf: asphaltiert, mit leichten Schäden	Q1 21100,11960 20857,12027 20810,12031
 Albert-Brodersen-Allee: asphaltiert, mit leichten Schäden	Q1 20857,12027 20835,11810 20831,11771
 Nordpromenade: Asphalt	Q0 20810,12031 20715,12040 20610,12050
@@ -3930,7 +3931,7 @@ Brandorfer Weg: Asphalt	Q0 20536,11022 20524,11016 20365,11025
 Baggerseestr.: unbefestigte Straße	Q2 20281,11341 20346,11337
 Baggerseestr.: Beton/Verbundsteinpflaster	Q1 20346,11337 20413,11334
 Arno-Philippsthal-Str.: Asphalt	Q0 20641,11488 20630,11342
-Stawesdamm: Betonpflaster	Q0 20623,11489 20627,11552
+Stawesdamm: Betonpflaster	Q0 20616,11490 20627,11552
 Stawesdamm: unbefestigter Weg, Feinschotter	Q2 20627,11552 20631,11621 20633,11651
 Parkweg (Biesdorf): rauer Asphalt	Q1 20587,11824 20694,11811
 Parkweg (Biesdorf): Beton	Q0 20694,11811 20779,11801
@@ -9606,7 +9607,7 @@ Uferstr. (Niederschöneweide): Asphalt	Q0 17681,6212 17847,6089
 (Verlängerter Sandbacher Weg): Waldweg	Q2 23504,-938 23523,-937 23540,-944 23657,-1020
 (Verlängerter Sandbacher Weg): Asphalt/Beton	Q0 23657,-1020 23786,-1108 23811,-1126 23903,-1187
 (Verlängerter Sandbacher Weg): Waldweg	Q2 23903,-1187 23955,-1223 24056,-1295
-(Brücke über die Görlitzer Bahn): Asphalt/Beton	Q0 23955,-1223 24001,-1228 24053,-1241 24121,-1219 24154,-1219 24188,-1248 24216,-1273 24224,-1271
+(Brücke über die Görlitzer Bahn): Asphalt/Beton	Q0 23955,-1223 23980,-1220 24001,-1225 24053,-1241 24121,-1219 24154,-1219 24188,-1248 24216,-1273 24224,-1271
 (Alter Radelander Weg/Brücke - Adlergestell): Waldweg	Q2 24158,-1153 24485,-667
 (Adlergestell - Sportpromenade/Bammelecke): Waldweg, teilweise loser Schotter	Q2 24485,-667 24758,-268 25172,345
 (Sportpromenade - Bammelecke): Waldweg	Q2 25172,345 25287,434 25473,449
@@ -10569,10 +10570,10 @@ Quartiersweg: gepflastert	Q2 7537,7859 7548,7884 7548,7937 7499,7937
 Elsa-Ledetsch-Weg: Asphalt	Q0 20650,11488 20659,11548 20726,11539
 Gisela-Reissenberger-Platz: Asphalt	Q0 20659,11548 20665,11620 20735,11613
 (Verbindungsweg): Asphalt	Q0 20659,11548 20627,11552
-(Verbindungsweg): Verbundsteinpflaster	Q1 20627,11552 20590,11557
+(Verbindungsweg): Verbundsteinpflaster	Q1 20627,11552 20582,11558
 (Verbindungsweg): Asphalt	Q0 20726,11539 20823,11527 20866,11521
 Heino-Schmieden-Weg: Asphalt	Q0 20720,11484 20726,11539 20730,11574 20735,11613 20831,11604 20827,11562 20823,11527 20818,11480
-(Straße im Gut Biesdorf): Asphalt	Q0 20730,11574 20827,11562 20874,11555
+(Straße im Gut Biesdorf): Asphalt	Q0 20730,11574 20820,11563 20827,11562 20833,11561 20874,11555
 Franz-Jacob-Str.: Beton	Q0 14754,13819 14810,13930 14803,13966
 Dörpfeldstr. [Nebenstraße]: unbefestigte Straße	Q2 20829,4044 20925,4101 21046,4173 21071,4189
 (Marchwitzastr. - Allee der Kosmonauten): Asphalt	Q0 19934,13318 19835,13317
@@ -10685,6 +10686,12 @@ Dammweg: Asphalt	Q0 15869,8355 16388,8821
 Charlottenburger Ufer: teilweise gepflastert	Q1 3370,12725 3291,12721
 Chlodwigstr.: Asphalt	Q0 8499,5016 8433,5108 8356,5195
 Paul-Schmidt-Str.: Beton	Q0 8264,5383 8242,5427 8212,5445 8165,5447 8059,5457 8038,5514
+(Ostkreuz, Zugang Marktstr.): Kopfsteinpflaster	Q2 15088,10950 15069,10927
+(Ostkreuz, Zugang Marktstr.): provisorischer Asphalt	Q1 15069,10927 15054,10910 14945,10945
+(Ostkreuz, Zugang Marktstr.): Asphalt	Q0 14945,10945 14902,10967 14808,10978
+(Heino-Schmieden-Weg - Alt-Biesdorf): Verbundsteinpflaster	Q1 20831,11604 20840,11604 20830,11610
+(Heino-Schmieden-Weg - Alt-Biesdorf): Kopfsteinpflaster	Q2 20830,11610 20838,11631
+Weißenhöher Str. [69-71]: Verbundsteinpflaster	Q1 20569,11492 20582,11558
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -11612,7 +11619,7 @@ Friedrichstr. (Lichterfelde): glatter Asphalt	Q0 3037,3513 2890,3561
 Friedrichstr. (Lichterfelde): Verbundsteinpflaster	Q1 2890,3561 2717,3600
 Pfleidererstr. (Lichterfelde): Asphalt	Q0 3011,3303 2998,3324 2832,3372
 Kadettenweg: schlechtes Kopfsteinpflaster	Q3 2965,3823 3045,3718 3061,3695 3186,3515 3228,3455
-Kadettenweg: sehr glatte Asphaltstraße	Q0 3228,3455 3328,3313 3348,3278 3450,3142 3462,3113 3462,3042 3459,2944 3456,2835
+Kadettenweg: Asphalt	Q0 3228,3455 3328,3313 3348,3278 3450,3142 3462,3113 3462,3042 3459,2944 3456,2835
 Baseler Str.: Asphalt	Q0 3148,1888 3150,2113 3151,2224
 Baseler Str.: Asphalt	Q0 3151,2224 3161,2482 3163,2598 3171,2848
 Baseler Str.: mäßiges Kopfsteinpflaster	Q2 3171,2848 3174,3052 3184,3427

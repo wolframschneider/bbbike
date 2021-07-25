@@ -67,7 +67,7 @@ EOF
        until => $isodate2epoch->("2019-06-09 23:59:59"),
        periodic => 1,
        recurrences => [['easter', 49, start => "2020-10-25T00:00:00"]], # Pfingstsonntag
-       recurrence_prewarn_days => -60,
+       recurrence_prewarn_days => -67,
        source_id => 'https://www.karneval.berlin/', # früher http://www.karneval-berlin.de/de/, heute ist das eine Werbeseite
        text  => 'Karneval der Kulturen, 09.06.2019',
        type  => 'gesperrt',
@@ -2627,7 +2627,7 @@ EOF
        text  => 'K 6917; (B246 Borkheide-Kanin); OD Borkwalde Straßenbauarbeiten Vollsperrung 08.08.2005-16.12.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -26809,-18383 -27757,-17707
+	q4 -26641,-18501 -27100,-17998 -27669,-17684
 EOF
      },
      { from  => 1124748000, # 2005-08-23 00:00
@@ -3501,8 +3501,8 @@ EOF
        text  => 'K 6950 Gohlitzstr. OL Lehnin, zw. Belziger Str. u. Lindenstr. Straßenbau; Herst.Umleit.stre. Vollsperrung 11.10.2005-31.03.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -34752,-11288 -34324,-11007
-	q4 -34232,-10832 -34324,-11007
+	q4 -34752,-11288 -34556,-11168 -34327,-11004
+	q4 -34250,-10832 -34327,-11004
 EOF
      },
      { from  => 1131836400, # 2005-11-13 00:00
@@ -3555,7 +3555,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2 15682,-26971 15229,-27157
-	2 15682,-26971 15960,-26906
+	2 15682,-26971 15962,-26911
 EOF
      },
      { from  => 1134169200, # 2005-12-10 00:00
@@ -3615,7 +3615,7 @@ EOF
        text  => 'L 074 Chausseestr. Eisenbahnbrücke in der OD Wünsdorf Brückenbauarbeiten Vollsperrung; Umleitung 04.01.2006-06.01.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 15682,-26971 15960,-26906
+	2 15682,-26971 15962,-26911
 EOF
      },
      { from  => 1138143600, # 2006-01-25 00:00
@@ -3623,7 +3623,7 @@ EOF
        text  => 'L 074 Chausseestr. Eisenbahnbrücke in der OD Wünsdorf Brückenbauarbeiten Vollsperrung 26.01.2006-27.01.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 15682,-26971 15960,-26906
+	2 15682,-26971 15962,-26911
 EOF
      },
      { from  => 1130799600, # 2005-11-01 00:00
@@ -3680,7 +3680,7 @@ EOF
        text  => 'L 088 Bahnhofstr. OD Lehnin, Höhe Marktplatz Umgestaltung Marktplatz Vollsperrung 16.01.2006-17.03.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -33986,-10466 -34009,-10453 -34112,-10516 -34429,-10543 -34492,-10500
+	q4 -33993,-10461 -34009,-10453 -34112,-10516 -34429,-10543 -34492,-10500
 EOF
      },
      { from  => undef, # 
@@ -3824,7 +3824,7 @@ EOF
        text  => 'L 401 Richard-Sorge-Str./ Bergstr. OL Wildau, Bahnübergang Bergstr. Gleisbauarbeiten Einmünd. gesp. 05.03.2006-10.03.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26434,-10054 26285,-10054 26262,-10015 26262,-9880 26208,-9801 26093,-9701 25991,-9671 25805,-9553
+	2 26434,-10054 26285,-10054 26262,-10015 26262,-9940 26262,-9880 26208,-9801 26093,-9701 25991,-9671 25805,-9553
 EOF
      },
      { from  => 1141254000, # 2006-03-02 00:00
@@ -3951,7 +3951,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2 15682,-26971 15229,-27157
-	2 15682,-26971 15960,-26906
+	2 15682,-26971 15962,-26911
 EOF
      },
      { from  => 1143583200, # 2006-03-29 00:00
@@ -3960,7 +3960,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2 15682,-26971 15229,-27157
-	2 15682,-26971 15960,-26906
+	2 15682,-26971 15962,-26911
 EOF
      },
      { from  => 1143154477, # 2006-03-23 23:54
@@ -4405,7 +4405,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2 15682,-26971 15229,-27157
-	2 15682,-26971 15960,-26906
+	2 15682,-26971 15962,-26911
 EOF
      },
      { from  => 1145916000, # 2006-04-25 00:00
@@ -4491,7 +4491,7 @@ EOF
        text  => 'L 401 R.-Sorge-/ Bergstr. Bahnübergang Bergstraße Gleisbauarbeiten Zufahrt gesperrt 07.05.2006-12.05.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 26434,-10054 26285,-10054 26262,-10015 26262,-9880 26208,-9801 26093,-9701 25991,-9671 25805,-9553
+	2 26434,-10054 26285,-10054 26262,-10015 26262,-9940 26262,-9880 26208,-9801 26093,-9701 25991,-9671 25805,-9553
 EOF
      },
      { from  => 1146897090, # 2006-05-06 08:31
@@ -4741,7 +4741,7 @@ EOF
        text  => 'L 074 Chausseestraße OL Wünsdorf, zw. Cottbusser/Berliner Str. u. Seestr. Kanalverlegung Vollsperrung 19.06.2006-11.08.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 15960,-26906 15682,-26971 15229,-27157
+	2::inwork 15962,-26911 15682,-26971 15229,-27157
 EOF
      },
      { from  => 1149623437, # 2006-06-06 21:50
@@ -5890,7 +5890,7 @@ EOF
        text  => 'L 401 R.-Sorge-Str./ Bergstr. Bahnübergang Bergstr. in OL Wildau Arbeiten am BÜ Vollsperrung; Umleitung 04.09.2006-06.09.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 26434,-10054 26285,-10054 26262,-10015 26262,-9880 26208,-9801 26093,-9701 25991,-9671 25805,-9553
+	2::inwork 26434,-10054 26285,-10054 26262,-10015 26262,-9940 26262,-9880 26208,-9801 26093,-9701 25991,-9671 25805,-9553
 EOF
      },
      { from  => 1157576473, # 2006-09-06 23:01
@@ -7386,7 +7386,7 @@ EOF
        text  => 'L 742 Klein Köris-Teupitz Bahnübergang in der OD Groß Köris Gleisumbauarbeiten Vollsperrung 09.03.2007-12.03.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 28494,-27010 28207,-27094 27995,-27157 27974,-27162 27709,-27243
+	2::inwork 28494,-27010 28207,-27094 27995,-27157 27974,-27162 27798,-27215 27709,-27243
 EOF
      },
      { from  => 1173913200, # 2007-03-15 00:00
@@ -9048,7 +9048,7 @@ EOF
        text  => 'L 030 Puschkinstr. OL Königs Wusterhausen Open-Air Konzert Vollsperrung 07.07.2007-08.07.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 25859,-11559 25939,-11559 26178,-11660
+	2::temp 25859,-11559 25924,-11558 25939,-11559 26063,-11590 26178,-11660
 EOF
      },
      { from  => 1184450400, # 2007-07-15 00:00
@@ -9333,7 +9333,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006151',
        data  => <<EOF,
-	1::inwork 14988,11130 15060,11006 15085,10956 15113,10916 15144,10905
+	1::inwork 14988,11130 15060,11006 15088,10950 15113,10916 15144,10905
 EOF
      },
      { from  => 1185055200, # 2007-07-22 00:00
@@ -10557,7 +10557,7 @@ EOF
        text  => 'L 088 Klaistow-Lehnin OD Emstal Straßenbauarbeiten Vollsperrung 08.11.2007-30.11.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -32394,-12207 -32010,-12375 -31776,-12438 -31585,-12330
+	q4::inwork -32309,-12245 -32187,-12251 -32153,-12254 -32041,-12326 -31740,-12390 -31582,-12301
 EOF
      },
      { from  => 1193957489, # 2007-11-01 23:51
@@ -11435,7 +11435,7 @@ EOF
        text  => 'L 086 Golzow - Damsdorf OD Lehnin Fläming-Frühlingsfest Vollsperrung 27.04.2008-27.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::temp -33986,-10466 -33923,-10395 -33897,-10328 -33761,-10213
+	q4::temp -33993,-10461 -33925,-10386 -33897,-10328 -33761,-10213
 EOF
      },
      { from  => 1209160800, # 2008-04-26 00:00
@@ -11443,7 +11443,7 @@ EOF
        text  => 'L 088 Emstal - Netzen OD Lehnin Fläming-Frühlingsfest Vollsperrung 27.04.2008-27.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::temp -33986,-10466 -34009,-10453 -34112,-10516 -34429,-10543 -34492,-10500
+	q4::temp -33993,-10461 -34009,-10453 -34112,-10516 -34429,-10543 -34492,-10500
 EOF
      },
      { from  => 1208546772, # 2008-04-18 21:26
@@ -12570,7 +12570,7 @@ EOF
        text  => 'K 6917 K.-Marx-/F.-Engelsstraße OL Borkheide Bahnübergang zw. Birkenhain u. Str.d. Frieden Bauarbeiten am Gleiskörper Vollsperrung 08.09.2008-22.09.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -26249,-20121 -26258,-20094 -26809,-18383
+	2::inwork -26249,-20121 -26258,-20094 -26641,-18501
 EOF
      },
      { from  => 1222552800, # 2008-09-28 00:00
@@ -13190,7 +13190,7 @@ EOF
        text  => 'L 088 Bahnhofstr. OD Lehnin, zw. Friedensstr. und Kreisverkehr Gehwegbau halbseitig gesperrt; Einbahnstraße 20.10.2008-19.12.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -34492,-10500 -34429,-10543 -34112,-10516 -34009,-10453 -33986,-10466
+	q4::inwork -34492,-10500 -34429,-10543 -34112,-10516 -34009,-10453 -33993,-10461
 EOF
      },
      { from  => 1224367200, # 2008-10-19 00:00
@@ -13673,7 +13673,7 @@ EOF
        text  => 'L 086 Belziger Straße OD Lehnin Kreuzungsbereich Gohlitzstraße Straßenbau Vollsperrung 23.03.2009-31.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -34752,-11288 -34324,-11007
+	q4::inwork -34752,-11288 -34556,-11168 -34327,-11004
 EOF
      },
      { from  => 1224540000, # 2008-10-21 00:00
@@ -14015,7 +14015,7 @@ EOF
        text  => 'L 030 Gerichtsstr. (Puschkinstr.) OL Königs Wusterhausen, zw. Brückenstr. und Kirchplatz Kanal- und Straßenbau halbseitig gesperrt; Einbahnstraße 28.04.2009-28.04.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 25859,-11559 25939,-11559 26178,-11660
+	q4::inwork 25859,-11559 25924,-11558 25939,-11559 26063,-11590 26178,-11660
 EOF
      },
      { from  => 1240783200, # 2009-04-27 00:00
@@ -15740,7 +15740,7 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: tempex: T23:00-T06:00 vvv
-	2::night 21150,11925 21134,11926 21132,11943 21100,11960 20857,12027 20810,12031
+	2::night 21150,11925 21134,11913 21132,11943 21100,11960 20857,12027 20810,12031
 	2::night 20857,12027 20835,11810 20831,11771 20825,11732 20764,11675
 	2::night 20779,11801 20804,11797 20818,11812 20835,11810
 #: tempex ^^^
@@ -16116,7 +16116,7 @@ EOF
        text  => 'L 030 Gerichtsstr. OL Königs Wusterhausen, zw. Schloßplatz u. Brückenstr. Schlossfest Vollsperrung 05.09.2009-05.09.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::temp 25859,-11559 25939,-11559 26178,-11660
+	q4::temp 25859,-11559 25924,-11558 25939,-11559 26063,-11590 26178,-11660
 EOF
      },
      { from  => 1252188000, # 2009-09-06 00:00
@@ -18544,7 +18544,7 @@ EOF
        type  => 'handicap',
        source_id => '105100738',
        data  => <<EOF,
-	q4::inwork -48338,-2586 -48114,-2344 -47938,-2184
+	q4::inwork -48338,-2586 -48119,-2343 -47938,-2184
 EOF
      },
      { from  => 1280678128, # 2010-08-01 17:55
@@ -19293,7 +19293,7 @@ EOF
 #: XXX anschauen!
 #: note: offiziell gemeinsamer Rad- und Gehweg, aber der Gehweg ist so schmal, dass es bei q4 bleibt
 #: note: laut rbb nur bis 1.8.2021
-#: last_checked: 2021-07-17
+#: last_checked: 2021-07-22
 #: check_frequency: 7d
 # REMOVED (hier nicht)	q4::inwork; 13651,11731 13895,11663
 	q4::inwork; 13895,11663 13954,11647
@@ -27992,8 +27992,9 @@ EOF
 #: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
 #: by: https://www.maz-online.de/Lokales/Dahme-Spreewald/Zeuthen/S-Bahnhof-Zeuthen-Fortschritte-auf-der-Baustelle-fuer-den-Personentunnel (noch immer gesperrt)
 #: osm_watch: way id="36936021" version="5" brb
-#: last_checked: 2018-09-18
-#: next_check: 2020-11-01
+#: last_checked: 2021-07-23
+#: check_frequency: 180d
+# REMOVED --- #: next_check: 2020-11-01
 	2::inwork 25929,-5994 25902,-6006
 EOF
      },
@@ -28618,18 +28619,15 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-01-05 15:00:00"), # 1540930270, # 2018-10-30 21:11
-       until => $isodate2epoch->("2023-08-01 17:00:00"), # undef, # 1543014000, # 2018-11-24 00:00
-       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 6. Januar 2021 bis 31. Dezember 2021',
+       until => 1626892284, # $isodate2epoch->("2023-08-01 17:00:00"), # undef, # 1543014000, # 2018-11-24 00:00
+       text  => 'Schräger Weg: Sperrung zwischen Boenkestr. und Liebenstr., auch der Fuß- und Radverkehr ist von der Sperrung betroffen, vom 6. Januar 2021 bis 21. Dezember 2021',
        type  => 'gesperrt',
        source_id => '2147343394', # hier bis Ende Dezember 2019; laut fritz bis 2019-12-20; mittlerweile inaktiv
        data  => <<EOF,
 #: note: laut rbbtext "Gesamtbaumaßnahme ... bis August 2023"
 #: source_id: 2147346762 (bis Ende 2021)
-#: add_fragezeichen: Wann ist die Sperrung beendet?
-#: note: manchmal (Wochenende?) kann man an den Absperrungen vorbeifahren (gesehen 2021-07-11)
-#: last_checked: 2021-07-11 (mapillary)
-#: check_frequency: 180d
-#: next_check: 2021-12-31
+#: source_id: viz2021:13.464867,52.610983,06.01.2021,15:00 (bis 21.12.2021)
+# REMOVED (offen) --- #: add_fragezeichen: Wann ist die Sperrung beendet? --- #: note: manchmal (Wochenende?) kann man an den Absperrungen vorbeifahren (gesehen 2021-07-11) --- #: by: https://twitter.com/VIZ_Berlin/status/1417826573483483142 (Ende der Sperrung) --- #: priority: #B --- #: last_checked: 2021-07-11 (mapillary) --- #: check_frequency: 180d --- #: next_check: 2021-12-21
 	2::inwork 14338,22885 14276,22914
 EOF
      },
@@ -28697,7 +28695,7 @@ EOF
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-07-09
+#: last_checked: 2021-07-21 (mapillary)
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -29137,7 +29135,7 @@ EOF
        source_id => '2147344050',
        data  => <<EOF,
 #: source_id: 2147344103 (bis Mitte Mai 2019)
-	2::inwork 20540,11660 20633,11651 20963,11618 21108,11628
+	2::inwork 20540,11660 20633,11651 20838,11631 20963,11618 21108,11628
 EOF
      },
      { from  => undef, # 
@@ -29172,7 +29170,7 @@ EOF
      },
      { from  => $isodate2epoch->("2021-01-24 07:00:00"), # 1568571027, # 1557083524, # 2019-05-05 21:12
        until => $isodate2epoch->("2021-08-13 17:00:00"), # 1569607982, # $isodate2epoch->("2019-10-07 18:00:00"),
-       text  => 'Langhansstr.: zwischen Berliner Allee und Heinersdorfer Str. ist die Fahrbahn abschnittsweise wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, 25.1.2021 bis 13.8.2021',
+       text  => 'Langhansstr.: zwischen Roelckestr. und Gustav-Adolf-Str. ist die Fahrbahn abschnittsweise wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, 25.1.2021 bis 13.8.2021',
        type  => 'handicap',
        source_id => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
        data  => <<EOF,
@@ -29191,12 +29189,10 @@ EOF
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
 #: last_checked: 2021-07-06 vvv
 #: next_check: 2021-08-13 vvv
-#: note: hier nur an der Kreuzung Berliner Allee
-	q3::inwork 13508,15912 13312,16027
+# REMOVED (wird bei viz nicht mehr erwähnt) --- #: note: hier nur an der Kreuzung Berliner Allee --- q3::inwork 13508,15912 13312,16027
 # REMOVED (hier nicht mehr) ---	q4::inwork 13312,16027 13250,16058 13189,16089 12943,16214
 	q4::inwork 12943,16214 12859,16255 12826,16271 12797,16285 12764,16302 12725,16321 12564,16399 12474,16443 12399,16479
-#: note: hier keine Absperrungen mehr, aber offiziell nur für Tram und Bus frei
-	q3::inwork 12399,16479 12189,16578
+# REMOVED (wird bei viz nicht mehr erwähnt) --- #: note: hier keine Absperrungen mehr, aber offiziell nur für Tram und Bus frei --- q3::inwork 12399,16479 12189,16578
 #: next_check ^^^
 #: last_checked ^^^
 EOF
@@ -30386,7 +30382,7 @@ EOF
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-07-02
+#: last_checked: 2021-07-24
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 EOF
@@ -30972,7 +30968,7 @@ EOF
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-07-18
+#: last_checked: 2021-07-22
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31977,7 +31973,7 @@ EOF
      },
      { from  => undef,
        until => undef,
-       text  => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein (Stand 4.7.2021: provisorischer Übergang existiert)',
+       text  => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein (Stand 18.7.2021: provisorischer Übergang existiert)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: STERNDAMM-2020
@@ -31986,7 +31982,7 @@ EOF
 #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2021-05-09-adlershof-2/40-2021-05-09-214-xxl.jpg (kein provisorischer Übergang mehr)
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
-#: last_checked: 2021-07-04
+#: last_checked: 2021-07-18 (krickstadt)
 #: check_frequency: 90d
 	2::inwork 18836,3611 18943,3508
 EOF
@@ -33044,7 +33040,7 @@ EOF
 EOF
      },
      { from  => 1625349600, # 2021-07-04 00:00
-       until => 1627077600, # 2021-07-24 00:00
+       until => $isodate2epoch->("2021-07-23 17:00:00"), # 1627077600, # 2021-07-24 00:00
        text  => 'Invalidenstr.: Gleisarbeiten Richtung Brunnenstr. zwischen Hessische Str. und Am Nordbahnhof, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, vom 05.07.2021 10:00 bis 23.07.2021 17:00',
        type  => 'handicap',
        source_id => 'viz2021:13.379379,52.529484,05.07.2021,10:00',
@@ -33078,19 +33074,20 @@ EOF
      },
      { from  => $isodate2epoch->("2021-07-18 00:00:00"),
        until => 1634248800, # 2021-10-15 00:00
-       text  => 'B179: Sperrung Brücke Körbiskrug, evtl. sind auch Radfahrer betroffen, 19.07.2021 bis 14.10.2021',
+       text  => 'B179: Sperrung Brücke Körbiskrug, Radfahrer und Fußgänger sind ebenfalls von der Sperrung betroffen, 19.07.2021 bis 14.10.2021',
        type  => 'gesperrt',
        source_id => '216101007',
        data  => <<EOF,
 #: also_indoor: traffic
 #: XXX gibt es nach den Bauarbeiten bereits den neuen Radweg?
+#: osm_watch: way id="827384487" version="3"
 #: next_check: 2021-10-15
-	2::inwork 27833,-16133 27599,-16162
+	2::inwork 27833,-16133 27643,-16156
 EOF
      },
-     { from  => 1626462247, # $isodate2epoch->("2021-07-15 00:00:00"), # 1625749200, # 2021-07-08 15:00
-       until => 1626462247, # $isodate2epoch->("2021-07-19 05:00:00"), # 1626058800, # 2021-07-12 05:00
-       text  => 'B96: zwischen Staehleweg und Hohen Neuendorf wegen Bauarbeiten gesperrt, vom 16.07.2021 18:00 Uhr bis 19.07.2021 05:00 Uhr',
+     { from  => $isodate2epoch->("2021-07-21 00:00:00"), # 1625749200, # 2021-07-08 15:00
+       until => $isodate2epoch->("2021-07-24 18:00:00"), # 1626058800, # 2021-07-12 05:00
+       text  => 'B96: zwischen Staehleweg und Hohen Neuendorf wegen Bauarbeiten gesperrt, vom 22.07.2021 18:00 Uhr bis 24.07.2021 18:00 Uhr',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1104559.php',
        data  => <<EOF,
@@ -33098,6 +33095,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1416050417591537667 (zweite Sperrung wurde verschoben)
 #: source_id: viz2021:13.287552,52.659932,09.07.2021,15:00
 #: source_id: viz2021:13.287552,52.659932,16.07.2021,18:00
+#: source_id: viz2021:13.287552,52.659932,22.07.2021,18:00
 # REMOVED --- #: note: nächster Termin: 16.07.2021 18:00 Uhr bis 19.07.2021 05:00 Uhr --- #: next_check: 2021-07-12
 	2::inwork 2150,28127 2178,28067 2345,27670
 EOF
@@ -33110,9 +33108,9 @@ EOF
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: note: bei rbb nur bis 30.9.2021
-#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende?) passierbar, gesehen Sa 2021-07-17
+#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-07-17
+#: last_checked: 2021-07-21
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33189,6 +33187,8 @@ EOF
        source_id => 'viz2021:13.380223,52.498741,19.07.2021,07:00',
        data  => <<EOF,
 #: next_check_id: MOECKERN-2021
+#: note: bei rbb nur bis 9.8.2021
+#: next_check: 2021-08-09
 	q4::inwork; 8808,10290 8790,10157 8784,9972 8779,9851 8779,9829 8779,9812 8778,9759 8777,9601
 EOF
      },
@@ -33218,6 +33218,15 @@ EOF
        source_id => 'https://www.berlin.de/special/shopping/flohmaerkte/2222392-1724959-flohmarkt-am-marheinekeplatz-in-der-berg.html',
        data  => <<EOF,
 	q4::temp:clock 9880,9233 9892,9286
+EOF
+     },
+     { from  => 1627164000, # 2021-07-25 00:00
+       until => 1636239600, # 2021-11-07 00:00
+       text  => 'Klingsorstr.: zwischen Birkbuschstr. und Barsekowstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 26.07.2021 07:00 bis 06.11.2021 17:00',
+       type  => 'handicap',
+       source_id => 'viz2021:13.326349,52.447526,26.07.2021,07:00',
+       data  => <<EOF,
+	q4::inwork; 5271,4547 5316,4637 5336,4676
 EOF
      },
     );
