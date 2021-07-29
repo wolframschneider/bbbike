@@ -1677,7 +1677,7 @@ X	Vf -1494,-303 -1376,-296 -1268,-294
 X	Vf -1376,-296 -1268,-294 -1179,-298
 X	Vf -1268,-294 -1179,-298 -981,-290
 X	Vf 24273,-21078 24714,-20369 25043,-19893
-X	Vf 24797,-6578 24946,-6533 25619,-6350
+X	Vf 24797,-6578 24946,-6533 25400,-6408
 X	Kz 4350,3161
 X	Vf 26534,-13891 26625,-13968 26642,-13980
 X	Vf 26494,-13883 26526,-13880 26476,-13592
@@ -1810,7 +1810,7 @@ X	Vf 24362,11954 24491,11972 24563,11980
 #: next_check_id: FRIEDRICH-2020
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10174 vvv
 #: confirmed_by: srt vvv
-#: last_checked: 2021-07-02 vvv
+#: last_checked: 2021-07-26 vvv
 #: next_check: 2021-10-31 vvv
 #: valid: !20200821-20211031 vvv
 X	Vf 9569,11631 9559,11715 9547,11819
