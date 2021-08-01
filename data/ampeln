@@ -2,7 +2,7 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
-Grünberger Str.: Gegenverkehrsregelung	X::inwork 14272,11775
+Grünberger Str.	F::inwork 14272,11775
 Hauffstr.: Gegenverkehrsregelung	?::inwork 15458,11306
 Schulze-Boysen-Str.: Gegenverkehrsregelung	?::inwork 15477,11338
 	X::inwork 9868,19023
@@ -15,6 +15,7 @@ Schulze-Boysen-Str.: Gegenverkehrsregelung	?::inwork 15477,11338
 	X::inwork 20769,17650
 	X::inwork 10096,-2137
 Nöldnerstr.: Gegenverkehrsregelung	X::inwork 15433,10765
+Nöldnerstr.: Gegenverkehrsregelung	X::inwork 15932,10830
 Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen auf den linken Bürgersteig wechseln	X::inwork 9073,20606
 Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linken Bürgersteig auf die Fahrbahn wechseln	X::inwork 9227,20617
 Roelckestr./Lehderstr.: temporäre Ampel	X::inwork 12842,16032
@@ -1148,6 +1149,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6720,18616
 	X 6685,17922
 	X 6878,17315
+	F 6998,17322
 	X 8503,16716
 	X 9494,15998
 	F 14318,9688

@@ -9,8 +9,9 @@
 # 
 # 
 #: next_check_id: GAERTNER-2021
-#: last_checked: 2021-07-19
-Grünberger Str.: Gegenverkehrsregelung	X::inwork 14272,11775
+#: last_checked: 2021-07-31
+# REMOVED (nicht mehr) --- Grünberger Str.: Gegenverkehrsregelung	X::inwork 14272,11775
+Grünberger Str.	F::inwork 14272,11775
 # 
 #: XXX Hauffstraße (Rummelsburg) in beiden Richtungen zwischen Wiesenweg und Schreiberhauer Straße: Arbeiten an Gasleitung, für beide Richtungen nur ein gemeinsamer Fahrstreifen abwechselnd frei, eine Baustellenampel regelt den Verkehr, vom 06.07.2021 08:00 bis 23.07.2021 17:00
 #: note: Ampeln in der Hauffstr. sowie in der Schulze-Boysen-Str. an der Buchberger Str.; außerdem ist die Anbindung Pfarrstr. offiziell gesperrt
@@ -103,11 +104,16 @@ Schulze-Boysen-Str.: Gegenverkehrsregelung	?::inwork 15477,11338
 #: confirmed_by: srt
 #: source_id: 2147346700 (bis 30.11.2021)
 #: also_indoor: traffic
-#: last_checked: 2021-06-20
+#: last_checked: 2021-07-30
 #: check_frequency: 45d
 #: next_check: 2021-11-30
 #: valid: -20211130
 Nöldnerstr.: Gegenverkehrsregelung	X::inwork 15433,10765
+# 
+#: XXX längerer Abschnitt, etwa 200m, eigentlich müssen Radfahrer in beiden Richtungen den Gehweg benutzen
+#: last_checked: 2021-07-30
+#: check_frequency: 14d
+Nöldnerstr.: Gegenverkehrsregelung	X::inwork 15932,10830
 # 
 # REMOVED (vermutlich nun funktionslos) --- #: next_check_id: RHINSTRASSENBRUECKE-2018 --- #: last_checked: 2021-05-03 --- #: check_frequency: 30d --- #: next_check: 2021-07-30 --- #: note: Anforderung, gilt auch für nach Süden fahrenden Radfahrer --- Rhinstr.: Seitenwechsel für nach Norden fahrende Radfahrer	F::inwork 18225,12697
 # 
@@ -122,7 +128,7 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linke
 #: last_checked ^^^
 # 
 #: next_check_id: LANGHANS-2021
-#: last_checked: 2021-04-14 (mapillary)
+#: last_checked: 2021-07-31 (steht noch, aber war am 31.7.2021 ausgeschaltet (mittlerweile immer? oder nur am Wochenende?))
 #: next_check: 2021-08-13
 Roelckestr./Lehderstr.: temporäre Ampel	X::inwork 12842,16032
 # 
@@ -131,14 +137,14 @@ Roelckestr./Lehderstr.: temporäre Ampel	X::inwork 12842,16032
 #: add_fragezeichen: Gibt es noch immer eine Gegenverkehrsregelung?
 #: source_id: 2147347174 (bis 19.7.2021)
 #: source_id: viz2021:13.440334,52.59161,06.05.2021,09:00 (bis 30.9.2021, Gesamtmaßnahme bis Anfang 2022)
-#: last_checked: 2021-07-02 (mapillary) vvv
+#: last_checked: 2021-07-25 (mapillary) vvv
 #: check_frequency: 60d vvv
-#: next_check: 2021-07-16 vvv
+# REMOVED --- #: next_check: 2021-07-16 vvv
 #: valid: 20210222- vvv
 Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12672,20720
 Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12723,20691
 #: valid ^^^
-#: next_check ^^^
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
@@ -672,6 +678,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX_prog: nur für N->S relevant
 	X 11976,12595
 #: related ^^^
+#: XXX_prog: Anforderungsampel für Radfahrer aus der Schillingstr.; für Linksabbieger sogar eine zweite (die aber vermutlich synchron geschaltet ist)
 	X 11635,12745
 #: XXX_prog nur für linksabbiegende Radfahrer (Karl-Marx-Allee -> Berolinastraße), mit Anforderung
 	X 11678,12727
@@ -1479,6 +1486,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6720,18616
 	X 6685,17922
 	X 6878,17315
+#: note: Anforderungsampel
+	F 6998,17322
 	X 8503,16716
 	X 9494,15998
 	F 14318,9688
