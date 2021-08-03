@@ -824,7 +824,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -1006,7 +1006,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 #: XXX zurzeit (2021-07-26 ist die Baustelle etwa 120m lang)
 #: note: offiziell gemeinsamer Rad- und Gehweg, aber der Gehweg ist so schmal, dass es bei q4 bleibt
 #: note: laut rbb bis 16.8.2021
-#: last_checked: 2021-07-31
+#: last_checked: 2021-08-02
 #: check_frequency: 7d
 	q4::inwork; 13651,11731 13895,11663
 # REMOVED (hier nicht mehr)	q4::inwork; 13895,11663 13954,11647
@@ -2380,7 +2380,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-07-21 (mapillary)
+#: last_checked: 2021-07-28 (mapillary)
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2792,7 +2792,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-07-29
+#: last_checked: 2021-08-02
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -2929,21 +2929,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://viz.berlin.de/2020/09/vorschau-05_06-09-2020/
-#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1111500.php
-	q4::temp 16507,7254 16428,7144
-	q4::temp; 16428,7144 16353,7226 16259,7328 16195,7398 15920,7697 15557,8077 15357,8286 15303,8343 15166,8489
-	q4::temp 15166,8489 15378,8668 15558,8820 15591,8848 15714,8633 15869,8355 16003,8119 16136,7886 16406,7430 16507,7254 16633,7434 16673,7511
-	2::temp 16673,7511 16655,7572 16636,7704 16624,7833 16696,8174 16657,8443 16627,8581 16546,8852 16459,9017 16347,9147 16266,9203 16118,9201 15959,9117 15845,9031 15797,9002 15778,8990
-	q4::temp 15778,8990 15680,8914 15591,8848
-',
-         'from' => 1627639200,
-         'id' => 3274,
-         'text' => 'Köpenicker Landstraße, Neue Krugallee, Bulgarische Straße, Uferweg Plänterwald: wegen des Berlin-Triathlons Sperrungen, evtl. auch für Radfahrer gültig, am 31.7.2021 von 12:00 bis 21:00 Uhr und am 1.8.2021 von 6:30 bis 18:00 Uhr',
-         'type' => 'handicap',
-         'until' => 1627833600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3373,31 +3359,21 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => undef
        },
        {
-         'data' => '#: add_fragezeichen: Wie lange gehen die Bauarbeiten?
+         'data' => '#: XXX laut Baustellenschild der Wasserbetriebe bis Dezember 2021
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-06-25
+#: last_checked: 2021-08-02
+#: check_frequency: 90d
+#: next_check: 2021-12-01
 	q4::inwork; 7771,9479 7829,9723
 ',
          'from' => undef,
          'id' => 3364,
-         'text' => 'Kulmer Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, Ende der Bauarbeiten unbekannt',
+         'text' => 'Kulmer Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, vermutlich bis Dezember 2021',
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: JACOBSENWEG-2021
-#: by: https://www.berliner-woche.de/borsigwalde/c-verkehr/neue-fahrbahn-auf-jacobsenweg_a309825
-#: also_indoor: traffic
-	q4::inwork; 2821,19559 2909,19485 2988,19445 3203,19340 3232,19325 3324,19277
-',
-         'from' => 1622325600,
-         'id' => 3365,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1083540.php',
-         'text' => 'Jacobsensweg: Bauarbeiten, Einbahnstraßenregelung, voraussichtlich vom 31.5.2021 bis Ende Juli 2021',
-         'type' => 'handicap',
-         'until' => 1627768799
-       },
+       undef,
        undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/saison-startet_a311283 (und die anderen neuen Spielstraßen in FH-KB)
@@ -3797,18 +3773,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1639584000
        },
        undef,
-       {
-         'data' => '	3 15714,11941 15717,12010 15670,12022
-	3 15685,12154 15670,12022 15717,12015
-	3 15361,12071 15670,12022 15685,12154
-',
-         'from' => 1625349600,
-         'id' => 3413,
-         'source_id' => 'viz2021:13.480176,52.513101,05.07.2021,06:00',
-         'text' => 'Frankfurter Allee: Bauarbeiten zwischen Gürtelstr. und Schulze-Boysen-Str., unter Umständen ist das Überqueren in Höhe Rathausstr. nicht möglich, vom 05.07.2021 06:00 bis 02.08.2021 17:00',
-         'type' => 'gesperrt',
-         'until' => 1627916400
-       },
+       undef,
        {
          'data' => '	q4::inwork 5793,23422 5893,23287
 ',
@@ -3896,6 +3861,25 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Conrad-Blenkle-Str.: Fahrbahn zwischen Kniprodestr. und Erich-Boltze-Str. wegen einer geplatzten Wasserleitung gesperrt, vom 26.07.2021, Ende unbekannt ',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '	2::inwork 8668,10219 8668,10236 8715,10314
+',
+         'from' => 1627924220,
+         'id' => 3425,
+         'text' => 'Rampe zum Anhalter Steg gesperrt, bis zum 27.8.2021',
+         'type' => 'gesperrt',
+         'until' => 1630101600
+       },
+       {
+         'data' => '	q4::inwork 2793,22640 2652,22615 2556,22598
+',
+         'from' => 1630360800,
+         'id' => 3426,
+         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1111853.php',
+         'text' => 'Schulzendorfer Str.: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich vom 1.9.2021 bis 1.12.2021 ',
+         'type' => 'handicap',
+         'until' => 1638399600
        }
      
 );
