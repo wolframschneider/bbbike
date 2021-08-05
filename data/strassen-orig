@@ -860,11 +860,11 @@ Motzstr.	N 6971,10346 6729,10212 6626,10155 6609,10147 6499,10086 6427,10044 627
 Motzstr.	N 6149,9897 5995,9810
 Motzstr.	N 5900,9737 5831,9730 5648,9642
 #: note: "Begegnungszone", max. Geschwindigkeit 20km/h
-Maaßenstr.	N 7033,10328 7060,10221 7080,10098
+Maaßenstr.	N 7033,10328 7055,10220 7080,10098
 Frobenstr. (Schöneberg)	N 7444,10479 7429,10366 7413,10244 7384,10127 7369,10018
-Schwerinstr.	NN 7384,10127 7201,10180 7060,10221
+Schwerinstr.	NN 7384,10127 7201,10180 7055,10220
 Gleditschstr.	N 7080,10098 7126,9825 7122,9517 7118,9315 7124,9226 7125,9151
-Nollendorfstr.	N 7060,10221 6739,10120
+Nollendorfstr.	N 7055,10220 6739,10120
 Winterfeldtstr.	N 6278,9925 6366,9926 6504,9961 6630,9990 6741,10017 6903,10056 7038,10088 7080,10098 7167,10074 7369,10018 7526,9969
 #: carriageway_width: 57m (11m+medial strip=34m+12m, Höhe Wittenbergplatz) vvv
 Tauentzienstr.	HH 6216,10614 6171,10657
@@ -14743,7 +14743,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="15"
-#: last_checked: 2021-07-30
+#: last_checked: 2021-08-03
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15120,7 +15120,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="17"
-#: last_checked: 2021-07-30
+#: last_checked: 2021-08-03
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -15128,7 +15128,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 (Tränkegraben - Rummelsburger Str.)	NN 17249,10702 17244,10737 17261,10827 17257,10875
 (Tränkegraben - Eggersdorfer Str./Rummelsburger Str.)	NN 17261,10827 17226,10865
 (Tränkegraben - Eggersdorfer Str./Rummelsburger Str.)	NN 17244,10737 17221,10840 17226,10865
-(Weg im Grünzug)	NN 17391,9746 17316,9797 17257,9869 17161,9921 17005,9953
+(Weg im Grünzug)	NN 17391,9746 17316,9797 17257,9869 17161,9921 17005,9953 16963,9960 16886,9982 16841,9997
 (Dolgenseestr. - Weg im Grünzug)	NN 17275,9892 17257,9869
 Balatonstr.	N 17791,10375 17793,10382 17822,10490 17823,10495 17828,10514
 Balatonstr.	N 17479,10452 17741,10386 17791,10375 17915,10350 17946,10344
@@ -16928,7 +16928,7 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berliner-woche.de/blankenburg/c-bauen/neue-plaene-fuer-den-gruenstreifen-zwischen-trift-und-lautentaler-strasse-in-blankenburg_a191653 (außerdem: Erneuerung/Neubau von Triftstr. und Lautentaler Str.)
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.870634.php
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-bauen/die-naechsten-schritte-zur-festsetzung-von-bebauungsplaenen-stehen-an_a293341 (Erwähnung)
-#: osm_watch: way id="59573616" version="1"
+#: osm_watch: way id="59573616" version="2"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
 #: last_checked: 2021-07-11 (mapillary)
 #: check_frequency: 180d
