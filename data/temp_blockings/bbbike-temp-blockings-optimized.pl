@@ -2619,23 +2619,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://viz.berlin.de/2021/07/verkehrsvorschau-120721/
-#: XXX zurzeit (2021-07-26 ist die Baustelle etwa 120m lang)
-#: note: offiziell gemeinsamer Rad- und Gehweg, aber der Gehweg ist so schmal, dass es bei q4 bleibt
-#: note: laut rbb bis 16.8.2021
-#: last_checked: 2021-08-02
-#: check_frequency: 7d
-	q4::inwork; 13651,11731 13895,11663
-# REMOVED (hier nicht mehr)	q4::inwork; 13895,11663 13954,11647
-',
-         'from' => 1626024702,
-         'id' => 2188,
-         'source_id' => 'IM_020398',
-         'text' => 'Kopernikusstr. (Friedrichshain): Baustelle, Fahrbahn zwischen Warschauer Str. bis Libauer Str. in Richtung Osten gesperrt, bis Mitte August 2021',
-         'type' => 'handicap',
-         'until' => 1629129600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2880,8 +2864,82 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => '#: next_check_id: BERLINMARATHON-RECURRING
+#: by: https://www.bmw-berlin-marathon.com/
+# REMOVED --- #: tempex: 20160920T0600-20160922T0600 vvv
+	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+# REMOVED --- #: tempex ^^^
+',
+         'from' => 1632110400,
+         'id' => 2387,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              10,
+                              'months',
+                              9,
+                              'start',
+                              '2020-10-25T00:00:00'
+                            ]
+                          ],
+         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen des Marathons gesperrt, möglicherweise schon ab 20.09.2021',
+         'type' => 'gesperrt',
+         'until' => 1632283200
+       },
+       {
+         'data' => '#: next_check_id: BERLINMARATHON-RECURRING
+# REMOVED --- #: tempex: 20160922T0600-T20160926T0600 vvv
+	2::temp 8573,12325 8540,12420
+	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+	2::temp 8119,12414 8055,12186
+	2::temp 8538,12245 8522,12239 8466,12197 8327,12174 8215,12156 8122,12147 8049,12140 8018,12135 7823,12120 7775,12114 7429,12070
+	2::temp 8538,12245 8522,12187 8453,12099 8262,11883 8244,11878 8221,11876 8167,11865 8140,11850 8026,11764
+	2::temp 8546,12279 8391,12389 8354,12416
+	2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
+	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
+	3 7429,12070 7383,12095 7031,12320
+	3 7031,12320 7383,12095 7429,12070
+	3 7823,12120 7816,12150 7822,12201 7875,12363
+	3 7875,12363 7822,12201 7816,12150 7823,12120
+	2::temp 8119,12414 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612
+	2::temp 8207,12606 8206,12734 8206,12757
+	3 7945,12592 8122,12603 8120,12756
+	3 8120,12756 8122,12603 7945,12592
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+#: note: die Wege im südöstlichen Teil des Tiergartens sind vermutlich nur am Sa & So gesperrt
+	2::temp 8214,12205 8215,12156 8221,11885 8221,11876 8210,11775 8203,11686
+	2::temp 8327,12174 8244,11878 8210,11775 8172,11679
+	2::temp 8501,11815 8244,11878 8221,11885 8132,11910 8095,11919 8020,11937
+	2::temp 8055,12186 8049,12140 8034,12093 8004,12074 7999,12040 8022,12016 8020,11937 8016,11770
+	2::temp 7823,12120 7832,12036 7822,11952 7793,11878
+	2::temp 7775,12114 7772,12040 7717,11918
+# REMOVED --- #: tempex ^^^
+',
+         'from' => 1632283200,
+         'id' => 2388,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              12,
+                              'months',
+                              9,
+                              'start',
+                              '2020-10-25T00:00:00'
+                            ]
+                          ],
+         'text' => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, und einige Wege im Tiergarten, voraussichtlich bis 27.09.2021',
+         'type' => 'gesperrt',
+         'until' => 1632715200
+       },
        undef,
        undef,
        undef,
@@ -4021,7 +4079,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-07-28 (mapillary)
+#: last_checked: 2021-08-05 (mapillary)
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -4326,7 +4384,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-07-26
+#: last_checked: 2021-08-05 (mapillary)
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 ',
@@ -4375,7 +4433,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-07-29
+#: last_checked: 2021-08-09
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4433,7 +4491,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-08-05
+#: last_checked: 2021-08-09
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -4708,13 +4766,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2021-05-09-adlershof-2/40-2021-05-09-214-xxl.jpg (kein provisorischer Übergang mehr)
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
-#: last_checked: 2021-07-18 (krickstadt)
+#: last_checked: 2021-08-01 (krickstadt)
 #: check_frequency: 90d
+#: next_check: 2021-10-31
 	2::inwork 18836,3611 18943,3508
 ',
          'from' => undef,
          'id' => 3313,
-         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein (Stand 18.7.2021: provisorischer Übergang existiert)',
+         'text' => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein (Stand 1.8.2021: provisorischer Übergang existiert)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4766,20 +4825,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1637337600
        },
-       {
-         'data' => '#: next_check_id: ABBESTR-2021
-#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-07-10
-#: check_frequency: 30d
-	q3::inwork 4674,12076 4698,12124
-# REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
-',
-         'from' => undef,
-         'id' => 3325,
-         'text' => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. kann gesperrt sein, Ausweichen auf Gehweg, Ende der Bauarbeiten unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: PARKSTADTKARLSHORST-2021
@@ -4845,13 +4891,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: XXX sind tatsächlich Fußgänger und Radfahrer betroffen? -> ja, allerdings ist es außerhalb der Bauzeiten unter Umständen möglich, hier durchzufahren
 #: add_fragezeichen: Sind die Bauarbeiten beendet? Können Radfahrer wieder durchfahren?
 #: osm_watch: way id="948039533" version="1"
-#: last_checked: 2021-04-02
-#: next_check: 2021-07-31
+#: last_checked: 2021-08-05 (oesten b.)
+# REMOVED --- #: next_check: 2021-07-31
 	2::inwork 9693,-815 9692,-772 9693,-746 9699,-600
 ',
          'from' => 1616281200,
          'id' => 3345,
-         'text' => 'Kettinger Str.: Verbindung zur Barnetstr. wegen Bauarbeiten unterbrochen, voraussichtlich bis Juli 2021, vielleicht auch länger',
+         'text' => 'Kettinger Str.: Verbindung zur Barnetstr. wegen Bauarbeiten unterbrochen, Ende der Bauarbeiten unbekannt',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -5169,13 +5215,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1629496800
        },
        {
-         'data' => '#: last_checked: 2021-05-29
+         'data' => '#: last_checked: 2021-08-08
 #: add_fragezeichen: Wie lange gehen die Bauarbeiten? Wie ist die Wegoberfläche nach den Bauarbeiten?
 	2::inwork 18432,1352 18290,1574
 ',
          'from' => undef,
          'id' => 3382,
-         'text' => 'Glashütter Weg - Künnekeweg: Bauarbeiten, Weg ist gesperrt, Umfahrung über Trampelpfade möglich, Ende der Bauarbeiten unbekannt',
+         'text' => 'Glashütter Weg - Künnekeweg: Bauarbeiten, Weg ist gesperrt, Umfahrung über Trampelpfade möglich, Ende der Bauarbeiten unbekannt (Stand August 2021)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -5275,18 +5321,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        undef,
-       {
-         'data' => '#: source_id: viz2021:13.302821,52.425442,19.07.2021,07:00
-#: by: https://www.berliner-woche.de/lichterfelde/c-bauen/in-der-goerzallee-wird-die-fahrbahn-vom-19-juli-bis-6-august-erneuert_a315012
-	q4::inwork; 3716,2063 3746,2108 3805,2196
-',
-         'from' => 1626559200,
-         'id' => 3397,
-         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1099864.php',
-         'text' => 'Goerzallee: Bauarbeiten, Fahrbahn zwischen Ortlerweg und Lausanner Str. Richtung Norden gesperrt, vom 19.07. bis 06.08.2021',
-         'type' => 'handicap',
-         'until' => 1628262000
-       },
+       undef,
        {
          'data' => '#: source_id: viz2021:13.337982,52.451062,02.08.2021,06:00
 	q4::inwork; 6055,4950 6182,4931 6187,4930 6215,4926 6276,4915 6354,4901 6385,4896 6531,4865
@@ -5336,7 +5371,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: FRANKFURTER-2021
-#: last_checked: 2021-08-03 vvv
+#: last_checked: 2021-08-07 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-09-13 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -5397,9 +5432,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
 #: note: bei rbb nur bis 30.9.2021
-#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30
+#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-08-03
+#: last_checked: 2021-08-10
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -5425,17 +5460,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1633039199
        },
-       {
-         'data' => '#: source_id: viz2021:13.526597,52.556118,16.07.2021,04:00
-	2::inwork 18527,16789 18587,16834 18738,16957
-',
-         'from' => 1626300000,
-         'id' => 3415,
-         'source_id' => 'viz2021:13.526597,52.556118,16.07.2021,08:00',
-         'text' => 'Gehrenseestr. im Bereich S-Bhf.: Bauarbeiten, evtl. für Radfahrer nicht passierbar, vom 16.07.2021 04:00 bis 06.08.2021 17:00',
-         'type' => 'gesperrt',
-         'until' => 1628262000
-       },
+       undef,
        {
          'data' => '	q4::inwork 60206,86603 59776,86911 59791,87005 59779,87064 59776,87207 59766,87273
 ',
@@ -5459,16 +5484,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1633039200
        },
-       {
-         'data' => '	q4::inwork; 749,2616 709,2592 629,2545
-',
-         'from' => 1626614528,
-         'id' => 3420,
-         'source_id' => 'viz2021:13.259269,52.43091,28.06.2021,07:00',
-         'text' => 'Machnower Str.: für Radfahrer Richtung Westen gesperrt, voraussichtlich bis 06.08.2021 17:00',
-         'type' => 'handicap',
-         'until' => 1628262000
-       },
+       undef,
        {
          'data' => '	q4::temp:clock 9880,9233 9892,9286
 ',
@@ -5537,6 +5553,31 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'James-Simon-Park: nachts zwischen 20 und 6 Uhr geschlossen',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: STERNDAMM-2020
+#: last_checked: 2021-08-08 (krickstadt)
+#: check_frequency: 60d
+#: next_check: 2021-10-31
+	q4::inwork 18766,3260 18828,3196 18946,3077
+',
+         'from' => undef,
+         'id' => 3428,
+         'text' => 'Karl-Ziegler-Str.: mögliche Sperrung der Fahrbahn wegen Gleisarbeiten',
+         'type' => 'handicap',
+         'until' => 1635663600
+       },
+       {
+         'data' => '#: XXX wie sehr ist der Radverkehr betroffen?
+#: next_check: 2021-08-13
+	q4::inwork 18939,9417 18977,9322 19048,9146
+',
+         'from' => 1628719200,
+         'id' => 3429,
+         'source_id' => 'viz2021:13.5302,52.487045,13.08.2021,07:00',
+         'text' => 'Waldowallee: Bauarbeiten zwischen Köpenicker Allee und Marksburgstr., Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 13.08.2021 07:00 bis 19.11.2021 17:00',
+         'type' => 'handicap',
+         'until' => 1637362800
        }
      
 );

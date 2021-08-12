@@ -593,14 +593,14 @@ EOF
      { from  => $isodate2epoch->("2019-07-19 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-07-21 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 14, months => 6, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => -60,
+       recurrences => [['yearly', days => 14, months => 6, start => "2021-10-25T00:00:00"]],
        text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (20.7.2019 bis 21.7.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.stadtfest.berlin/de/index.html
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/strassen-wegen-fest-gesperrt_a170723
 #: by: https://www.stadtfest.berlin/de/index.html (2.+3. Oktober 2021)
+#: by: https://www.siegessaeule.de/magazin/lesbisch-schwules-stadtfest-2021-auf-der-kippe/ (Absage)
 	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
 	2::temp 6729,10212 6971,10346
 	2::temp 6628,10318 6626,10155
@@ -916,7 +916,7 @@ EOF
        until => $isodate2epoch->("2019-09-08 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 31, months => 8, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 14,
+       recurrence_prewarn_days => 1,
        text  => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (07.09.2019 bis 08.09.2019)',
        type  => 'gesperrt',
        source_id => 'http://www.hier-in-rudow.de/meilenfeste.html',
@@ -16502,10 +16502,12 @@ EOF
        until => $isodate2epoch->("2019-09-15 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 9, start => "2020-10-25T00:00:00"]],
+       recurrence_prewarn_days => 1,
        text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (14.09.2019 bis 15.09.2019)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: note: by: http://www.family-and-friends-ev.de/ (update.pl bekommt hier aber einen Fehler)
+#: by: https://www.berlin.de/events/3614943-2229501-herbst-in-westend.html (geplant 25.9.2021-26.9.2021)
 	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
 EOF
      },
@@ -19288,17 +19290,15 @@ EOF
 EOF
      },
      { from  => 1626024702, # 1380175440, # 2013-09-26 08:04
-       until => $isodate2epoch->("2021-08-16 18:00:00"), # 1381834786, # so gut wie aufgehoben - 1381932000, # 2013-10-16 16:00
+       until => 1628526407, # $isodate2epoch->("2021-08-16 18:00:00"), # 1381834786, # so gut wie aufgehoben - 1381932000, # 2013-10-16 16:00
        text  => 'Kopernikusstr. (Friedrichshain): Baustelle, Fahrbahn zwischen Warschauer Str. bis Libauer Str. in Richtung Osten gesperrt, bis Mitte August 2021',
        type  => 'handicap',
        source_id => 'IM_020398',
        data  => <<EOF,
 #: by: https://viz.berlin.de/2021/07/verkehrsvorschau-120721/
-#: XXX zurzeit (2021-07-26 ist die Baustelle etwa 120m lang)
 #: note: offiziell gemeinsamer Rad- und Gehweg, aber der Gehweg ist so schmal, dass es bei q4 bleibt
 #: note: laut rbb bis 16.8.2021
-#: last_checked: 2021-08-02
-#: check_frequency: 7d
+# REMOVED (nur noch kürzere Engstelle mit Vorrang vor Gegenvekehr, allerdings dort verpflichtender Rad- und Gehweg) --- #: XXX zurzeit (2021-07-26 ist die Baustelle etwa 120m lang) --- #: last_checked: 2021-08-08 --- #: check_frequency: 2d
 	q4::inwork; 13651,11731 13895,11663
 # REMOVED (hier nicht mehr)	q4::inwork; 13895,11663 13954,11647
 EOF
@@ -19574,7 +19574,7 @@ EOF
        source_id => 'IM_017318',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110530.1300.346009.html
-	2::inwork 15383,9191 14879,9433 14809,9466 14556,9581 14495,9609 14318,9688
+	2::inwork 15383,9191 14879,9433 14809,9466 14556,9581 14495,9609 14389,9656 14318,9688
 EOF
      },
      { from  => undef, # 
@@ -20251,10 +20251,12 @@ EOF
        until => $isodate2epoch->("2019-09-15 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 13, months => 9, start => "2020-10-25T00:00:00"]],
+       recurrence_prewarn_days => 2,
        text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 13.09.2019 bis 15.09.2019',
        type  => 'handicap',
        source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2019',
        data  => <<EOF,
+#: by: https://www.laubinger.de/event/47-rosenthaler-herbst/ (geplant: 18.09.2021 - 19.09.2021)
 	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
 EOF
      },
@@ -21272,13 +21274,15 @@ EOF
 	q4::inwork; 9275,4672 9405,4667 9494,4658 9695,4638 10010,4606
 EOF
      },
-     { from  => $isodate2epoch->("2019-09-23 06:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-09-25 06:00:00"), #
+     { from  => $isodate2epoch->("2021-09-20 06:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2021-09-22 06:00:00"), #
        periodic => 1,
        recurrences => [['yearly', days => 10, months => 9, start => "2020-10-25T00:00:00"]],
-       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen des Marathons gesperrt, voraussichtlich ab 23.09.2019',
+       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen des Marathons gesperrt, möglicherweise schon ab 20.09.2021',
        type  => 'gesperrt',
        data  => <<EOF,
+#: next_check_id: BERLINMARATHON-RECURRING
+#: by: https://www.bmw-berlin-marathon.com/
 # REMOVED --- #: tempex: 20160920T0600-20160922T0600 vvv
 	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
 	3::temp 8391,12389 8344,12221 8327,12174
@@ -21286,13 +21290,14 @@ EOF
 # REMOVED --- #: tempex ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2019-09-25 14:00:00"),
-       until => $isodate2epoch->("2019-09-30 06:00:00"),
+     { from  => $isodate2epoch->("2021-09-22 06:00:00"),
+       until => $isodate2epoch->("2021-09-27 06:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 12, months => 9, start => "2020-10-25T00:00:00"]],
-       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, und einige Wege im Tiergarten, voraussichtlich bis 30.09.2019',
+       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, und einige Wege im Tiergarten, voraussichtlich bis 27.09.2021',
        type  => 'gesperrt',
        data  => <<EOF,
+#: next_check_id: BERLINMARATHON-RECURRING
 # REMOVED --- #: tempex: 20160922T0600-T20160926T0600 vvv
 	2::temp 8573,12325 8540,12420
 	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
@@ -23861,7 +23866,7 @@ EOF
        until => $isodate2epoch->("2019-09-14 23:59:59"),
        periodic => 1,
        recurrences => [["yearly", days => 31, months => 8, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 14,
+       recurrence_prewarn_days => 1,
        text  => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 14. September 2019, 12 bis 21 Uhr ',
        type  => 'gesperrt',
        source_id => 'https://www.turmstrasse.de/aktuelles',
@@ -28701,7 +28706,7 @@ EOF
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-07-28 (mapillary)
+#: last_checked: 2021-08-05 (mapillary)
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -30387,7 +30392,7 @@ EOF
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-07-26
+#: last_checked: 2021-08-05 (mapillary)
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 EOF
@@ -30756,7 +30761,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-07-29
+#: last_checked: 2021-08-09
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30973,7 +30978,7 @@ EOF
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-08-05
+#: last_checked: 2021-08-09
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31979,7 +31984,7 @@ EOF
      },
      { from  => undef,
        until => undef,
-       text  => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein (Stand 18.7.2021: provisorischer Übergang existiert)',
+       text  => 'Katharina-Boll-Dornberger-Str.: Weg kann wegen Straßenbahnbauarbeiten gesperrt sein (Stand 1.8.2021: provisorischer Übergang existiert)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: STERNDAMM-2020
@@ -31988,8 +31993,9 @@ EOF
 #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2021-05-09-adlershof-2/40-2021-05-09-214-xxl.jpg (kein provisorischer Übergang mehr)
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
-#: last_checked: 2021-07-18 (krickstadt)
+#: last_checked: 2021-08-01 (krickstadt)
 #: check_frequency: 90d
+#: next_check: 2021-10-31
 	2::inwork 18836,3611 18943,3508
 EOF
      },
@@ -32119,14 +32125,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1628276337, # undef, # XXX
        text  => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. kann gesperrt sein, Ausweichen auf Gehweg, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: ABBESTR-2021
-#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-07-10
-#: check_frequency: 30d
+#: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kleinere-projekte/?postID=697425#post697425 (sieht weitgehend fertig aus)
+# REMOVED --- #: next_check_id: ABBESTR-2021 --- #: XXX wann sind die Bauarbeiten beendet? --- #: last_checked: 2021-07-10 --- #: check_frequency: 30d
 	q3::inwork 4674,12076 4698,12124
 # REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
 EOF
@@ -32306,7 +32310,7 @@ EOF
        source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1063839.php',
        data  => <<EOF,
 # REMOVED --- #: next_check_id: PILGRAMER-2019 --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=52381 (mittlerweile "bis auf Weiteres") --- #: by: https://www.berliner-woche.de/mahlsdorf/c-verkehr/pilgramer-strasse-zwei-monate-beidseitig-gesperrt_a304101 (Fertigstellung im Mai 2021) --- #: source_id: 2147346982 --- #: also_indoor: traffic (H) --- #: XXX wie sehr sind Radfahrer betroffen? --- #: last_checked: 2021-04-17 --- #: check_frequency: 32d --- #: next_check: 2021-06-30
-	q4::inwork 25150,10562 25149,10695 25149,10731 25148,10769 25145,10841
+	q4::inwork 25150,10562 25149,10695 25149,10731 25149,10744 25148,10769 25147,10841
 EOF
      },
      { from  => 1616340931, # 2021-03-21 16:35
@@ -32335,7 +32339,7 @@ EOF
      },
      { from  => 1616281200, # 2021-03-21 00:00
        until => undef, # 1627768799, # 2021-07-31 23:59
-       text  => 'Kettinger Str.: Verbindung zur Barnetstr. wegen Bauarbeiten unterbrochen, voraussichtlich bis Juli 2021, vielleicht auch länger',
+       text  => 'Kettinger Str.: Verbindung zur Barnetstr. wegen Bauarbeiten unterbrochen, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: S-SCHICHAUWEG-2021
@@ -32345,8 +32349,8 @@ EOF
 #: XXX sind tatsächlich Fußgänger und Radfahrer betroffen? -> ja, allerdings ist es außerhalb der Bauzeiten unter Umständen möglich, hier durchzufahren
 #: add_fragezeichen: Sind die Bauarbeiten beendet? Können Radfahrer wieder durchfahren?
 #: osm_watch: way id="948039533" version="1"
-#: last_checked: 2021-04-02
-#: next_check: 2021-07-31
+#: last_checked: 2021-08-05 (oesten b.)
+# REMOVED --- #: next_check: 2021-07-31
 	2::inwork 9693,-815 9692,-772 9693,-746 9699,-600
 EOF
      },
@@ -32768,10 +32772,10 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Glashütter Weg - Künnekeweg: Bauarbeiten, Weg ist gesperrt, Umfahrung über Trampelpfade möglich, Ende der Bauarbeiten unbekannt',
+       text  => 'Glashütter Weg - Künnekeweg: Bauarbeiten, Weg ist gesperrt, Umfahrung über Trampelpfade möglich, Ende der Bauarbeiten unbekannt (Stand August 2021)',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2021-05-29
+#: last_checked: 2021-08-08
 #: add_fragezeichen: Wie lange gehen die Bauarbeiten? Wie ist die Wegoberfläche nach den Bauarbeiten?
 	2::inwork 18432,1352 18290,1574
 EOF
@@ -33015,7 +33019,7 @@ EOF
        source_id => 'viz2021:13.471852,52.513916,22.06.2021,07:00',
        data  => <<EOF,
 #: next_check_id: FRANKFURTER-2021
-#: last_checked: 2021-08-03 vvv
+#: last_checked: 2021-08-07 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-09-13 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -33107,9 +33111,9 @@ EOF
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: note: bei rbb nur bis 30.9.2021
-#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30
+#: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-08-03
+#: last_checked: 2021-08-10
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33157,7 +33161,7 @@ EOF
        source_id => 'viz2021:13.526597,52.556118,16.07.2021,08:00', # mittlerweile inaktiv wegen Startzeitänderung (und dadurch Id-Änderung)
        data  => <<EOF,
 #: source_id: viz2021:13.526597,52.556118,16.07.2021,04:00
-	2::inwork 18527,16789 18587,16834 18738,16957
+	2::inwork 18527,16789 18587,16834 18674,16904 18738,16957
 EOF
      },
      { from  => 1626116439, # 2021-07-12 21:00
@@ -33280,6 +33284,29 @@ EOF
 	2::night 10132,12941 9977,12912 9944,12921 9930,12947 9900,12942 9724,12992
 	2::night 10166,12777 10105,12855 9977,12912
 #: tempex ^^^
+EOF
+     },
+     { from  => undef, # 
+       until => 1635663600, # 2021-10-31 08:00
+       text  => 'Karl-Ziegler-Str.: mögliche Sperrung der Fahrbahn wegen Gleisarbeiten',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: STERNDAMM-2020
+#: last_checked: 2021-08-08 (krickstadt)
+#: check_frequency: 60d
+#: next_check: 2021-10-31
+	q4::inwork 18766,3260 18828,3196 18946,3077
+EOF
+     },
+     { from  => 1628719200, # 2021-08-12 00:00
+       until => 1637362800, # 2021-11-20 00:00
+       text  => 'Waldowallee: Bauarbeiten zwischen Köpenicker Allee und Marksburgstr., Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 13.08.2021 07:00 bis 19.11.2021 17:00',
+       type  => 'handicap',
+       source_id => 'viz2021:13.5302,52.487045,13.08.2021,07:00',
+       data  => <<EOF,
+#: XXX wie sehr ist der Radverkehr betroffen?
+#: next_check: 2021-08-13
+	q4::inwork 18939,9417 18977,9322 19048,9146
 EOF
      },
     );
