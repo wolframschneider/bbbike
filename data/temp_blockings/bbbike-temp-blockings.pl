@@ -1446,7 +1446,7 @@ EOF
        text  => 'Düsseldorfer Str. in beiden Richtungen zwischen Brandenburgische Str. und Konstanzer Str. Baustelle, Straße vollständig gesperrt (bis 24.12.2004)',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 4152,10033 3902,10043
+	2 4152,10033 3907,10043
 EOF
      },
      { from  => undef, # 
@@ -29141,16 +29141,18 @@ EOF
 	3 7823,12120 7816,12150 7822,12201
 EOF
      },
-     { from  => undef, # 
-       until => 1570116625, # 1680364800, # 2023-04-01 18:00
-       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke evtl. gesperrt (könnte aber auch wieder offen sein)',
+     { from  => $isodate2epoch->("2021-09-03 14:00:00"), # undef, # 
+       until => $isodate2epoch->("2021-09-06 04:00:00"), # 1570116625, # 1680364800, # 2023-04-01 18:00
+       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke gesperrt, von Sonnabend, den 04.09.2021, 14:00 Uhr, bis Montag, den 06.09.2021, 4:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
+#: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2021
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8389 (Frage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
-#: osm_watch: way id="8655276" version="18"
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
+#: osm_watch: way id="8655276" version="21"
 # REMOVED (ja) --- #: add_fragezeichen: Ist der Weg mittlerweile wieder offen? --- #: XXX laut osm wieder offen --- #: last_checked: 2019-08-24 --- #: next_check: 2019-09-28
 	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
 EOF
@@ -30781,7 +30783,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-08-30
+#: last_checked: 2021-09-02
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30998,7 +31000,7 @@ EOF
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-08-30
+#: last_checked: 2021-09-02
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -32167,7 +32169,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 7/2021: Fahrbahn im nördlichen Abschnitt gesperrt, enger Fußweg existiert)',
+       text  => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 9/2021: Fahrbahn im nördlichen Abschnitt gesperrt, enger Fußweg existiert)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: PARKSTADTKARLSHORST-2021
@@ -32176,7 +32178,7 @@ EOF
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung? Falls ja, wo ist der gesperrte Abschnitt und gilt die Sperrung auch für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="24"
 #: osm_watch: way id="165832806" version="21"
-#: last_checked: 2021-07-04
+#: last_checked: 2021-09-03
 #: check_frequency: 45d
 	2::inwork 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17483,8644 17449,8720 17416,8767 17380,8858
 EOF
@@ -32504,19 +32506,21 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-04-18 00:00:00"), # 1618610400, # 2021-04-17 00:00
-       until => $isodate2epoch->("2021-09-05 18:00:00"), # 1640991599, # 2021-12-31 23:59
-       text  => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Olafstr., Fahrbahn gesperrt, vom 19.4.2021 bis 5.9.2021',
+       until => $isodate2epoch->("2021-09-10 18:00:00"), # 1640991599, # 2021-12-31 23:59
+       text  => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Olafstr., Fahrbahn gesperrt, vom 19.4.2021 bis 10.9.2021',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1073307.php', # Gesamtmaßnahme bis Ende 2021
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/hermsdorf/c-verkehr/burgfrauenstrasse-ab-19-april-gesperrt_a306720
 #: source_id: 2147347107 (hier: bis 30.6.2021)
-#: source_id: viz2021:13.299346,52.626261,19.04.2021,07:00 (bis 5.9.2021)
+#: source_id: viz2021:13.299346,52.626261,19.04.2021,07:00 (bis 10.9.2021)
+#: source_id: viz2021:13.3053,52.62692,19.04.2021,07:00
 #: note: zwei Bauabschnitte: zunächst der westliche Abschnitt bis Olafstr. (inkl. Kreuzung), danach der östliche Abschnitt bis Berliner Str.
 #: priority: #A
-#: next_check: 2021-09-05
+#: next_check: 2021-09-10 vvv
 	q4::inwork 3022,24393 3225,24431 3425,24469
 	q3::inwork 3425,24469 3575,24498
+#: next_check ^^^
 # REMOVED (dieser Bereich folgt später) ---	q4::inwork 3575,24498 3712,24528 3842,24556
 EOF
      },
@@ -33035,7 +33039,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-bauen/hasselwerder-park-mit-neuen-wegen_a314970
 #: next_check_id: HASSELWERDERPARK-2021
-	2::inwork 18506,5596 18560,5539 18608,5501 18695,5453
+	2::inwork 18506,5596 18560,5539 18634,5484 18695,5453
 EOF
      },
      { from  => 1625250931, # 2021-07-02 20:35
@@ -33138,8 +33142,9 @@ EOF
 #: next_check_id: KARLSHORSTER-2021
 #: note: bei rbb nur bis 30.9.2021
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
+#: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-08-10
+#: last_checked: 2021-09-03
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33283,10 +33288,13 @@ EOF
 EOF
      },
      { from  => 1627924220, # 2021-08-02 19:10
-       until => 1630101600, # 2021-08-28 00:00
-       text  => 'Rampe zum Anhalter Steg gesperrt, bis zum 27.8.2021',
+       until => undef, # 1630101600, # 2021-08-28 00:00
+       text  => 'Rampe zum Anhalter Steg gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
+#: add_fragezeichen: Ist die Sperrung aufgehoben?
+#: last_checked: 2021-09-02
+#: check_frequency: 21d
 	2::inwork 8668,10219 8668,10236 8715,10314
 EOF
      },
@@ -33331,13 +33339,13 @@ EOF
      },
      { from  => 1628719200, # 2021-08-12 00:00
        until => 1637362800, # 2021-11-20 00:00
-       text  => 'Waldowallee: Bauarbeiten zwischen Köpenicker Allee und Marksburgstr., Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 13.08.2021 07:00 bis 19.11.2021 17:00',
+       text  => 'Waldowallee: Bauarbeiten zwischen Köpenicker Allee und Marksburgstr., Fahrbahn gesperrt, Radfahrer dürfen den Gehweg benutzen, vom 13.08.2021 07:00 bis 19.11.2021 17:00',
        type  => 'handicap',
        source_id => 'viz2021:13.5302,52.487045,13.08.2021,07:00',
        data  => <<EOF,
-#: XXX wie sehr ist der Radverkehr betroffen?
-#: next_check: 2021-08-13
-	q4::inwork 18939,9417 18977,9322 19048,9146
+#: note: Gehweg für Radfahrer frei (beide Richtungen)
+# REMOVED --- #: next_check: 2021-08-13
+	q3::inwork 18939,9417 18977,9322 19048,9146
 EOF
      },
      { from  => $isodate2epoch->("2021-08-15 00:00:00"),
