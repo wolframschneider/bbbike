@@ -724,7 +724,7 @@ Heliosstr. -> Vierlandenstr.: Straßenbahntrasse	3::igndisp 20975,14601 20822,145
 Geitelsteig	1 1988,14870 1977,14751 1974,14646
 Schweiggerweg	1 2081,14570 2079,14704 2099,14852
 Jungfernheideweg	1 1465,14963 1406,14686 1386,14605 1361,14431
-Dihlmannstr.: Radweg existiert	1 651,15091 755,15123 851,15155 957,15189 976,15195 1065,15229
+Dihlmannstr.: Radweg existiert	1 651,15091 755,15123 851,15155 971,15193 976,15195 1065,15229
 Bahntrasse	3nocross::ignrte 16135,2135 16056,2034 16002,1964 15875,1796 15835,1747
 Zwickauer Damm -> Sattlerstr.: Bahntrasse	3::igndisp 16135,2135 16056,2034 16177,1943
 Zwickauer Damm -> U Wutzkyallee: Bahntrasse	3::igndisp 16002,1964 16056,2034 16005,2058
@@ -1332,7 +1332,7 @@ modaler Filter, nur für Radfahrer offen	3nocross::ignrte 12753,8187 12714,8249 1
 Karl-Marx-Str. -> Rollbergstr.: modaler Filter, nur für Radfahrer offen	3::igndisp 12753,8187 12714,8249 12545,8209
 Rollbergstr. -> Karl-Marx-Str.: modaler Filter, nur für Radfahrer offen	3::igndisp 12545,8209 12714,8249 12689,8289
 Belowstr.	1 4992,17908 4946,17701
-Süderholmer Steig	1 -2239,21904 -2245,21544
+Süderholmer Steig	1 -2242,21927 -2245,21544
 Billerbecker Weg	1 1230,18698 1229,18750
 Mescheder Weg	1 2602,18737 2604,18660
 Bauerwitzer Weg	1 22917,12239 23000,12160
@@ -1845,11 +1845,11 @@ Bonhoefferufer -> Mierendorffstr.: Mierendorffstr.	3::igndisp 3193,12857 3327,12
 Bonhoefferufer -> Bonhoefferufer: Mierendorffstr.	3::igndisp 3193,12857 3327,12818 3398,12809
 Lietzenburger Str./Sächsische Str.	3nocross::ignrte 4485,10307 4659,10335 4764,10350
 Lietzenburger Str. -> Sächsische Str.: Lietzenburger Str./Sächsische Str.	3::igndisp 4764,10350 4659,10335 4638,10162
-Lietzenburger Str. -> Bleibtreustr.: Lietzenburger Str./Sächsische Str.	3::igndisp 4485,10307 4659,10335 4676,10541
-Bleibtreustr. -> Lietzenburger Str.: Lietzenburger Str./Sächsische Str.	3::igndisp 4676,10541 4659,10335 4764,10350
-Bleibtreustr. -> Sächsische Str.: Lietzenburger Str./Sächsische Str.	3::igndisp 4676,10541 4659,10335 4638,10162
+Lietzenburger Str. -> Bleibtreustr.: Lietzenburger Str./Sächsische Str.	3::igndisp 4485,10307 4659,10335 4672,10552
+Bleibtreustr. -> Lietzenburger Str.: Lietzenburger Str./Sächsische Str.	3::igndisp 4672,10552 4659,10335 4764,10350
+Bleibtreustr. -> Sächsische Str.: Lietzenburger Str./Sächsische Str.	3::igndisp 4672,10552 4659,10335 4638,10162
 Sächsische Str. -> Lietzenburger Str.: Lietzenburger Str./Sächsische Str.	3::igndisp 4638,10162 4659,10335 4485,10307
-Sächsische Str. -> Bleibtreustr.: Lietzenburger Str./Sächsische Str.	3::igndisp 4638,10162 4659,10335 4676,10541
+Sächsische Str. -> Bleibtreustr.: Lietzenburger Str./Sächsische Str.	3::igndisp 4638,10162 4659,10335 4672,10552
 Biesheimring - Brittendorfer Weg: Poller	3 1987,3166 1946,3142 1884,3106
 Brittendorfer Weg - Biesheimring: Poller	3 1884,3106 1946,3142 1987,3166
 Andernacher Str.	1 18949,8437 19000,8509
@@ -1989,7 +1989,7 @@ Willy-Brandt-Str.: nur für Anlieger	2:Anlieger 8021,12832 8030,12824 8120,12756
 Bamberger Str.	1 5893,9530 5900,9737
 Schönhauser Str.	3 11927,21703 12012,21895 11886,21924
 Schönhauser Str.	3 11927,21703 12012,21895 12042,21886
-Carmerstr.	1 5088,11322 4916,11083
+Carmerstr.	1 5080,11328 4916,11083
 Schenkendorfer Weg (Teltow)	1 1186,-1973 748,-2298 545,-2493 377,-2672 166,-2946 161,-2953
 Ohmstr. (Schwanebeck-West)	1 18039,24940 18127,25162
 Werder, Adolf-Damaschke-Str.	1 -22042,-2060 -21915,-2045
@@ -2170,3 +2170,5 @@ Auerstr.	1 13273,12902 13202,12790 13067,12583 13025,12523
 Bernau, an der Panke	2:Anlieger 22337,29746 22402,29725 22513,29747 22522,29766
 Telekomstr.	2 26919,42412 27062,43000 27277,43233 27857,43642 28681,43910 29112,44050 29478,44280 29730,44644 29887,44928 29965,45291 30273,45860 30592,46332
 Niemannstr.	1 14254,11377 14211,11229
+Kolonie am See	1 -2242,21927 -2245,21544
+Bülowstr./Dennewitzplatz	1 7702,10146 7814,10117 7906,10098

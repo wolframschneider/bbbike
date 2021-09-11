@@ -24,16 +24,7 @@ Indira-Gandhi-Str./Bizetstr.	X::inwork 14552,16171
 # REMOVED (nicht mehr) --- Grünberger Str.: Gegenverkehrsregelung	X::inwork 14272,11775
 Grünberger Str.	F::inwork 14272,11775
 # 
-#: XXX Hauffstraße (Rummelsburg) in beiden Richtungen zwischen Wiesenweg und Schreiberhauer Straße: Arbeiten an Gasleitung, für beide Richtungen nur ein gemeinsamer Fahrstreifen abwechselnd frei, eine Baustellenampel regelt den Verkehr, vom 06.07.2021 08:00 bis 23.07.2021 17:00
-#: note: Ampeln in der Hauffstr. sowie in der Schulze-Boysen-Str. an der Buchberger Str.; außerdem ist die Anbindung Pfarrstr. offiziell gesperrt
-#: source_id: viz2021:13.478302,52.506695,06.07.2021,08:00 (mittlerweile bis 3.9.2021) vvv
-#: last_checked: 2021-08-09 vvv
-#: valid: -20210903 vvv
-Hauffstr.: Gegenverkehrsregelung	X::inwork 15458,11306
-Schulze-Boysen-Str.: Gegenverkehrsregelung	X::inwork 15477,11338
-#: valid ^^^
-#: last_checked ^^^
-#: source_id ^^^
+# REMOVED --- #: XXX Hauffstraße (Rummelsburg) in beiden Richtungen zwischen Wiesenweg und Schreiberhauer Straße: Arbeiten an Gasleitung, für beide Richtungen nur ein gemeinsamer Fahrstreifen abwechselnd frei, eine Baustellenampel regelt den Verkehr, vom 06.07.2021 08:00 bis 23.07.2021 17:00 --- #: note: Ampeln in der Hauffstr. sowie in der Schulze-Boysen-Str. an der Buchberger Str.; außerdem ist die Anbindung Pfarrstr. offiziell gesperrt --- #: source_id: viz2021:13.478302,52.506695,06.07.2021,08:00 (mittlerweile bis 3.9.2021) vvv --- #: last_checked: 2021-08-09 vvv --- #: valid: -20210903 vvv --- Hauffstr.: Gegenverkehrsregelung	X::inwork 15458,11306 --- Schulze-Boysen-Str.: Gegenverkehrsregelung	X::inwork 15477,11338 --- #: valid ^^^ --- #: last_checked ^^^ --- #: source_id ^^^
 # 
 #: next_check_id: HERMANNHESSESTR-2019
 #: XXX wird die temporäre Ampel durch eine permanente ersetzt?
@@ -64,8 +55,9 @@ Schulze-Boysen-Str.: Gegenverkehrsregelung	X::inwork 15477,11338
 	X::inwork -1538,22800
 #: by: https://www.berliner-woche.de/heiligensee/c-verkehr/anregungen-der-eltern-endlich-verwirklicht_a207979
 #: XXX später wird hier ein Kreisverkehr entstehen
-#: last_checked: 2020-06-13
+#: last_checked: 2021-09-04
 #: check_frequency: 180d
+#: next_check: 2021-12-31
 	X::inwork -2504,22626
 # 
 # REMOVED --- #: next_check_id: TRESKOWALLEE-2019 --- #: last_checked: 2020-06-14 ---	X::inwork 18406,7760
@@ -424,13 +416,13 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5905,9795
 	X 5007,10041
 	X 5215,10711
-	X 5076,10658
-	X 5102,11006
+	X 5069,10662
+	X 5090,11007
 	X 5236,10994
 	X 5258,11285
 	X 4911,11018
 	X 4821,11026
-	X 5159,11353
+	X 5153,11357
 	X 5047,10381
 	X 5381,11847
 	X 5478,11860
@@ -889,8 +881,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3546,10962
 	X 4532,11042
 	X 4722,11030
-	X 4503,10497
-	X 4847,10589
+	X 4496,10504
+	X 4838,10597
 	X 4485,10307
 	X 4478,10218
 	X 9581,12588
@@ -2202,6 +2194,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	X 15144,10905
 	X 15272,10790
 	F 11270,13412
+#: off: night (seen Th 2021-09-09 22:20)
 	X 14170,10675
 # 
 #: next_check_id: FRIEDRICH-2020
@@ -2295,7 +2288,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 8867,4506
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, wird aber vermutlich für die Anschlussstelle wieder neu errichtet
-#: last_checked: 2021-08-29
+#: last_checked: 2021-09-09
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
@@ -2308,7 +2301,7 @@ Industriebahn	B0 -2410,13746
 	X 16786,2989
 	F 6937,10363
 	F 12532,11008
-	X 4828,10356
+	X 4819,10355
 #: note: Anforderungsampel
 #: note: kann ausgeschaltet sein (gesehen: Di, 2016-08-23, gegen 18:45)
 	F 11285,14515
@@ -2772,7 +2765,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F -2671,1988
 	F 6480,7992
 	F 6443,7971
-	F 4862,10881
+	F 4857,10909
 #: note: Anforderungsampel
 	F 30037,4176
 	F 23059,4635
@@ -2949,13 +2942,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="1"
 #: osm_watch: node id="5931765488" version="1"
-#: last_checked: 2021-08-31
+#: last_checked: 2021-09-05
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2021-08-31 vvv
+#: last_checked: 2021-09-05 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3209,7 +3202,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: Anforderungsampel
 #: XXX wird diese Ampel jemals wieder in Betrieb genommen?
 #: osm_watch: node id="28321258" version="7"
-#: last_checked: 2021-05-24
+#: last_checked: 2021-09-04
 #: check_frequency: 180d
 #: next_check: 2023-12-01
 	F0 -224,16095
@@ -3531,7 +3524,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
-#: last_checked: 2021-08-08 vvv
+#: last_checked: 2021-09-09 vvv
 #: check_frequency: 60d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
@@ -3557,6 +3550,8 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 ################################################################################
 #: note: Ampeln elsewhere vvv
+	X 46926,-16265
+	Zbr 47077,-15816
 	X 36295,48210
 	X 31943,48571
 	X -45864,-1044
@@ -3631,7 +3626,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 25883,-11875
 	B -17834,-6837
 	F 25779,-9534
-	B 25627,-5177
+	B 25623,-5181
 	X 26466,-10409
 #: note: Anforderungsampel
 	F 26099,-6131
@@ -4011,7 +4006,7 @@ unbeschrankter Bahnübergang	B0 -19229,62430
 	B 44287,133631
 	B 26494,-13883
 	B 26600,-14550
-	B 46004,-16440
+	B 46002,-16436
 	B 56301,83419
 	B 59937,36197
 	B 26040,-6233

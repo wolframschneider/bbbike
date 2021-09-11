@@ -916,7 +916,7 @@ EOF
        until => $isodate2epoch->("2019-09-08 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 31, months => 8, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => -6,
+       recurrence_prewarn_days => -13,
        text  => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (07.09.2019 bis 08.09.2019)',
        type  => 'gesperrt',
        source_id => 'http://www.hier-in-rudow.de/meilenfeste.html',
@@ -2163,7 +2163,7 @@ EOF
        text  => 'K 6152; (Gussower Str.); OD Gräbendorf, ab B246 bis OA Kanal- und Straßenbau Vollsperrung 27.06.2005-30.10.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 31863,-18000 32922,-16523
+	q4 31837,-17968 32007,-17740 32922,-16523
 EOF
      },
      { from  => 1119477600, # 2005-06-23 00:00
@@ -2689,7 +2689,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 	2 5215,10711 5341,10756
-	2 5215,10711 5076,10658
+	2 5215,10711 5069,10662
 	2 5656,10876 5475,10808
 	2 5656,10876 5725,10892
 	2 5725,10892 5782,10884
@@ -5613,7 +5613,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003267',
        data  => <<EOF,
-	2::temp 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658
+	2::temp 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5069,10662
 EOF
      },
      { from  => 1156888800, # 2006-08-30 00:00
@@ -5903,7 +5903,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003491',
        data  => <<EOF,
-	1::inwork 5122,11300 5102,11006
+	1::inwork 5113,11305 5090,11007
 EOF
      },
      { from  => 1157666400, # 2006-09-08 00:00
@@ -7662,7 +7662,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005040',
        data  => <<EOF,
-	2::temp 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658
+	2::temp 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5069,10662
 EOF
      },
      { from  => undef, # 
@@ -7995,7 +7995,7 @@ EOF
        text  => 'B 246 Bahnübergang in der OD Storkow Gleisbauarbeiten Vollsperrung 27.04.2007-30.04.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 46737,-16548 47038,-17056 47112,-17150
+	2::inwork 46737,-16548 47038,-17056 47052,-17078
 EOF
      },
      { from  => 1177192800, # 2007-04-22 00:00
@@ -8503,7 +8503,7 @@ EOF
        text  => 'K 6747 Groß Schauen-Alt Stahnsdorf Bahnübergang bei Philadelphia Gleisbauarbeiten Vollsperrung 01.06.2007-03.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 44269,-15317 44343,-15112 44369,-14650
+	2::inwork 44284,-15441 44343,-15112 44385,-14657
 EOF
      },
      { from  => 1181426400, # 2007-06-10 00:00
@@ -8511,7 +8511,7 @@ EOF
        text  => 'K 6747 Groß Schauen-Alt Stahnsdorf Bahnübergang bei Philadelphia Gleisbauarbeiten Vollsperrung 11.06.2007-12.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 44269,-15317 44343,-15112 44369,-14650
+	2::inwork 44284,-15441 44343,-15112 44385,-14657
 EOF
      },
      { from  => 1181858400, # 2007-06-15 00:00
@@ -8519,7 +8519,7 @@ EOF
        text  => 'K 6747 Groß Schauen-Alt Stahnsdorf Bahnübergang bei Philadelphia Gleisbauarbeiten Vollsperrung 16.06.2007-20.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 44269,-15317 44343,-15112 44369,-14650
+	2::inwork 44284,-15441 44343,-15112 44385,-14657
 EOF
      },
      { from  => 1180562400, # 2007-05-31 00:00
@@ -8527,7 +8527,7 @@ EOF
        text  => 'K 6748 Kummersdorf-Alt Stahnsdorf Bahnübergang in Kummersdorf Gleisbauarbeiten Vollsperrung 01.06.2007-15.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 43279,-13594 42804,-13910 42430,-14398
+	2::inwork 43241,-13479 42804,-13910 42430,-14398
 EOF
      },
      { from  => 1180821600, # 2007-06-03 00:00
@@ -8543,7 +8543,7 @@ EOF
        text  => 'L 040 L 23 Storkow-L 39 Friedersdorf Bahnübergang bei Kummersdorf Gleisbauarbeiten Vollsperrung 18.06.2007-22.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 44261,-14205 43456,-14384 42430,-14398
+	2::inwork 44229,-14131 43456,-14384 42430,-14398
 EOF
      },
      { from  => undef, # 
@@ -9483,7 +9483,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006085',
        data  => <<EOF,
-	1::inwork 23225,192 22916,402 22547,651 22351,862 22162,1067
+	1::inwork 23225,192 22916,402 22547,651 22351,862 22312,919 22162,1067
 EOF
      },
      { from  => undef, # 
@@ -9761,7 +9761,7 @@ EOF
        text  => 'K 6747 Alt Stahnsdorf - L 23, AS Storkow zw. Neu Stahnsdorf und Alt Stahnsdorf Straßenbauarbeiten Vollsperrung 20.08.2007-14.09.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 44592,-9998 44336,-9931 44273,-10358 43912,-10589 43744,-11591 43467,-12187 43278,-12804
+	2::inwork 44586,-9922 44386,-9872 44323,-9918 44311,-10068 44186,-10302 43897,-10507 43840,-10623 43743,-11378 43740,-11511 43348,-12400 43278,-12804
 EOF
      },
      { from  => 1188079200, # 2007-08-26 00:00
@@ -9886,7 +9886,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006499',
        data  => <<EOF,
-	2::temp 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589
+	2::temp 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5069,10662 4838,10597
 EOF
      },
      { from  => 1189288800, # 2007-09-09 00:00
@@ -11709,7 +11709,7 @@ EOF
        text  => 'B 246 R.-Breitscheid-, E.-Thälmann-, Schauener Str. OD Storkow Deckenerneuerung Vollsperrung 30.03.2009-25.05.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork 46518,-16240 46409,-16251 46004,-16440
+	q4::inwork 46650,-16275 46553,-16245 46402,-16245 46276,-16314 46231,-16324 46119,-16353 46068,-16367 46019,-16414 46002,-16436
 EOF
      },
      { from  => 1211234400, # 2008-05-20 00:00
@@ -13645,7 +13645,7 @@ EOF
        text  => 'L 040 L23 Storkow - Friedersdorf Durchlass bei Kummersdorf Ersatzneubau Durchlass Vollsperrung 20.03.2009-30.03.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 44261,-14205 43456,-14384 42430,-14398
+	2::inwork 44229,-14131 43456,-14384 42430,-14398
 EOF
      },
      { from  => 1238277600, # 2009-03-28 23:00
@@ -15238,7 +15238,7 @@ EOF
        text  => 'L 040 L 23, Storkow - Friedersdorf zw. Abzw. Rieplos und Abzw. Alt Stahnsdorf Deckenerneuerung Vollsperrung 27.07.2009-10.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 45753,-14154 45263,-14192 44580,-14101 44261,-14205
+	2::inwork 45709,-14094 45659,-14125 45210,-14118 44507,-14021 44229,-14131
 EOF
      },
      { from  => 1247781600, # 2009-07-17 00:00
@@ -15466,7 +15466,7 @@ EOF
        text  => 'L 040 L 23, Storkow - Friedersdorf zw. Abzw. Alt Stahnsdorf u. Abzw. Kummersdorf Deckenerneuerung Vollsperrung 12.08.2009-28.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 44261,-14205 43456,-14384 42430,-14398
+	2::inwork 44229,-14131 43456,-14384 42430,-14398
 EOF
      },
      { from  => 1249250400, # 2009-08-03 00:00
@@ -17970,7 +17970,7 @@ EOF
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10354,8493 10298,8245
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11472,7732 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9474,7182 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10037,8269 10298,8245 10575,8218
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10902,8012 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294 9242,7286
 (Weg parallel zum Tempelhofer Damm)	2::night  9300,7312 9281,7651 9281,7795
 (Eingang Peter-Strasser-Weg)	2::night 9281,7795 9240,7811
@@ -17985,8 +17985,8 @@ EOF
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
 (Herrfurthstr. - Rundkurs)	2::night 11439,7894 11355,7871
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
-(Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
-(Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10644,8363 10360,8521
+(Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11000,8067 10902,8012
+(Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11319,8010 11298,8097 11153,8145 11000,8067 10803,8251 10644,8363 10360,8521
 (Weg parallel zur Oderstr.)	2::night 11458,7897 11490,7737 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
 (Eingang Kienitzer Str.)	2::night 11504,7738 11490,7737 11482,7735 11472,7732
 (Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11521,7638
@@ -18249,20 +18249,20 @@ EOF
 # REMOVED ---	3 5808,10284 5764,10322 5700,10226
 # REMOVED ---	3 5808,10284 5764,10322 5520,10453
 # REMOVED ---#: note ^^^
-# REMOVED ---	2::temp 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658
-# REMOVED ---# REMOVED (Aufstellbereich erst ab Uhlandstr.) --- 2::temp 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
+# REMOVED ---	2::temp 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5069,10662
+# REMOVED ---# REMOVED (Aufstellbereich erst ab Uhlandstr.) --- 2::temp 5069,10662 4838,10597 4672,10552 4496,10504 4371,10465 4245,10435 4157,10418
 # REMOVED ---# REMOVED ---	3 4239,10358 4245,10435 4256,10583
-# REMOVED ---# REMOVED ---	3 4685,10689 4676,10541 4659,10335
-# REMOVED ---# REMOVED ---	3 4485,10307 4503,10497 4513,10702
-# REMOVED ---# REMOVED ---	3 4847,10677 4847,10589 4828,10356
+# REMOVED ---# REMOVED ---	3 4685,10689 4672,10552 4659,10335
+# REMOVED ---# REMOVED ---	3 4485,10307 4496,10504 4513,10702
+# REMOVED ---# REMOVED ---	3 4841,10686 4838,10597 4819,10355
 # REMOVED ---# REMOVED ---	3 4381,10583 4371,10465 4360,10320
 # REMOVED ---# REMOVED ---	3 4360,10320 4371,10465 4381,10583
-# REMOVED ---# REMOVED ---	3 4828,10356 4847,10589 4847,10677
-# REMOVED ---# REMOVED ---	3 4513,10702 4503,10497 4485,10307
-# REMOVED ---# REMOVED ---	3 5047,10381 5076,10658 5079,10701
+# REMOVED ---# REMOVED ---	3 4819,10355 4838,10597 4841,10686
+# REMOVED ---# REMOVED ---	3 4513,10702 4496,10504 4485,10307
+# REMOVED ---# REMOVED ---	3 5047,10381 5069,10662 5072,10701
 # REMOVED ---# REMOVED ---	3 4256,10583 4245,10435 4239,10358
-# REMOVED ---# REMOVED ---	3 5079,10701 5076,10658 5047,10381
-# REMOVED ---# REMOVED ---	3 4659,10335 4676,10541 4685,10689
+# REMOVED ---# REMOVED ---	3 5072,10701 5069,10662 5047,10381
+# REMOVED ---# REMOVED ---	3 4659,10335 4672,10552 4685,10689
 # REMOVED ---	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252
 # REMOVED ---	3 7429,12070 7383,12095 7031,12320
 # REMOVED ---	3 7031,12320 7383,12095 7429,12070
@@ -19535,11 +19535,11 @@ EOF
        data  => <<EOF,
 #: by: http://www.tempelhoferfreiheit.de/ueber-die-tempelhofer-freiheit/aktuelles/die-challenge-bibendum-startet/
 #: by: http://www.tempelhoferfreiheit.de/fileadmin/user_upload/Ueber_die_Tempelhofer_Freiheit/Aktuelles/Plan_ChallengeBibendum2011-THF.jpg
-	2::temp 11355,7871 11388,7777 11279,7768 10204,7680 9653,7635 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10037,8269 10298,8245 10354,8493 10360,8521 10644,8363 10803,8251 11005,8064 10909,8003
+	2::temp 11355,7871 11388,7777 11279,7768 10204,7680 9653,7635 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10037,8269 10298,8245 10354,8493 10360,8521 10644,8363 10803,8251 11000,8067 10902,8012
 	2::temp 9362,7616 9522,7624 9525,7558
 	2::temp 10360,8521 10384,8628
 	2::temp 10575,8218 10729,8152 10598,8270 10575,8218 10298,8245
-	2::temp 10729,8152 10909,8003 11090,7916 11264,7882
+	2::temp 10729,8152 10902,8012 11090,7916 11264,7882
 	2::temp 10598,8270 10644,8363 10691,8532
 EOF
      },
@@ -20260,12 +20260,14 @@ EOF
        until => $isodate2epoch->("2019-09-15 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 13, months => 9, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => 2,
+       recurrence_prewarn_days => -5,
        text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 13.09.2019 bis 15.09.2019',
        type  => 'handicap',
        source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2019',
        data  => <<EOF,
 #: by: https://www.laubinger.de/event/47-rosenthaler-herbst/ (geplant: 18.09.2021 - 19.09.2021)
+#: XXX findet das Fest 2021 statt?
+#: next_check: 2021-09-16
 	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
 EOF
      },
@@ -21170,7 +21172,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_019071',
        data  => <<EOF,
-	q4::inwork 5102,11006 5122,11300
+	q4::inwork 5090,11007 5113,11305
 EOF
      },
      { from  => 1352918929, # undef, # 
@@ -21949,7 +21951,7 @@ EOF
 #: by: https://www.die-classic-days-berlin.de/programm-2/ (wird auf 2022 verschoben)
 #: note: kann im Juni oder Juli stattfinden
 # REMOVED --- #: tempex: 20170616T0400-20170619T0400
-	q4::temp 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435
+	q4::temp 5475,10808 5341,10756 5215,10711 5069,10662 4838,10597 4672,10552 4496,10504 4371,10465 4245,10435
 EOF
      },
      { from  => 1497556466, # 1370491200, # 2013-06-06 06:00
@@ -22286,7 +22288,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140820.1250.398770.html',
        data  => <<EOF,
-	2::temp 5047,10381 5076,10658
+	2::temp 5047,10381 5069,10662
 EOF
      },
      { from  => undef, # $isodate2epoch->("2014-12-06 00:00:00"), # 1 Tag Vorlauf
@@ -22930,20 +22932,22 @@ EOF
 	2::inwork 2219,11324 2180,11318 2102,11307
 EOF
      },
-     { from  => $isodate2epoch->("2019-09-12 15:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-09-15 22:00:00"),
+     { from  => $isodate2epoch->("2021-09-10 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2021-09-11 22:00:00"),
        periodic => 1, # erster Termin im Jahr
-       #recurrences => [["yearly", days => 9, months => 5]], # wechselnde Termine, kann auch erst Mitte September passieren
-       recurrence_prewarn_days => -6,
-       recurrences => [["yearly", days => 1, months => 9, start => "2020-10-25T00:00:00"]],
+       recurrences => [["yearly", days => 9, months => 5]], # wechselnde Termine, kann auch erst Mitte September passieren
        # früher: Fest der Nationen
-       text  => 'Prager Platz: Veranstaltung "Fest der Vielfalt", Durchfahrt nicht möglich, vom 13.9.2019 15 Uhr bis 15.9.2019 22 Uhr',
+       # früher: Prager Platz
+       text  => 'Nikolsburger Platz: Veranstaltung "Fest der Vielfalt", Durchfahrt vermutlich nicht möglich, am 11.9.2021 von 14 bis 20 Uhr',
        type  => 'gesperrt',
        source_id => 'http://www.partnerschaftsverein-charlottenburg.de/05-Termine/05.html',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.932471.php (Absage 2020)
+#: by: https://www.charlottenburg-wilmersdorf-zeitung.de/fest-der-vielfalt-am-prager-platz/ (11. September 2021, 14-20 Uhr, Nikolsburger Platz/Trautenaustraße)
+#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1123056.php
 #: note: kein tempex-Ausdruck möglich
-	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
+# REMOVED ---	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
+	2::temp 5291,9675 5374,9619 5314,9588 5297,9579 5291,9675
 EOF
      },
      { from  => 1390086000, # 2014-01-19 00:00
@@ -23876,7 +23880,7 @@ EOF
        until => $isodate2epoch->("2019-09-14 23:59:59"),
        periodic => 1,
        recurrences => [["yearly", days => 31, months => 8, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => -7,
+       recurrence_prewarn_days => -14,
        text  => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 14. September 2019, 12 bis 21 Uhr ',
        type  => 'gesperrt',
        source_id => 'https://www.turmstrasse.de/aktuelles',
@@ -23931,7 +23935,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (Einschränkungen weitgehend aufgehoben) --- #: XXX wann sind die Bauarbeiten beendet? --- #: last_checked: 2016-03-26 --- #: check_frequency: 90d
-	q3::inwork 4503,10497 4485,10307
+	q3::inwork 4496,10504 4485,10307
 EOF
      },
      { from  => 1411312807, # 2014-09-21 17:20
@@ -24755,7 +24759,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1505/nachricht5610.html',
        data  => <<EOF,
-	2::temp 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5076,10658
+	2::temp 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5341,10756 5215,10711 5069,10662
 	3 5669,10704 5782,10884 5829,10964
 	3 5488,10978 5475,10808 5471,10719
 	3 5196,10398 5215,10711 5230,10919
@@ -24811,13 +24815,12 @@ EOF
        until => $isodate2epoch->("2020-01-17 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1, start => "2021-01-31T00:00:00"],
-                       ['yearly', days => 27, months => 6, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => -77,
+                       ['yearly', days => 27, months => 6, start => "2021-10-25T00:00:00"]],
        text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 13.01.2020-17.01.2020',
        type  => 'handicap',
        source_id => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termin-fuer-januar-2020.html',
        data  => <<EOF,
-#: by: https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-der-sommertermin-in-2021-steht-fest.html (6. bis 12. September 2021)
+#: by: https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-der-sommertermin-in-2021-steht-fest.html (6. bis 12. September 2021) (allerdings möglicherweise nicht in der Schöneberger/Luckenwalder)
 #: source_id: 2147343639
 #: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
 	q4::temp 8644,10408 8397,10488 8384,10507 8527,10621
@@ -25355,23 +25358,23 @@ EOF
        text  => 'Kurfürstendamm: Faschingsumzug zwischen Adenauerplatz und Breitscheidplatz, 31. Januar 2016',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 3835,10352 3971,10381 4157,10418 4245,10435 4371,10465 4503,10497 4676,10541 4847,10589 5076,10658 5215,10711 5341,10756 5475,10808 5656,10876 5725,10892 5782,10884 5907,10821
+	2::temp 3835,10352 3971,10381 4157,10418 4245,10435 4371,10465 4496,10504 4672,10552 4838,10597 5069,10662 5215,10711 5341,10756 5475,10808 5656,10876 5725,10892 5782,10884 5907,10821
 	3 4172,10406 4157,10418 4153,10453
-	3 4685,10689 4676,10541 4659,10335
-	3 4485,10307 4503,10497 4513,10702
+	3 4685,10689 4672,10552 4659,10335
+	3 4485,10307 4496,10504 4513,10702
 	3 4239,10358 4245,10435 4256,10583
 	3 4381,10583 4371,10465 4360,10320
 	3 5230,10919 5215,10711 5196,10398
-	3 4828,10356 4847,10589 4847,10677
+	3 4819,10355 4838,10597 4841,10686
 	3 5196,10398 5215,10711 5230,10919
-	3 5079,10701 5076,10658 5047,10381
+	3 5072,10701 5069,10662 5047,10381
 	3 4256,10583 4245,10435 4239,10358
 	3 5829,10964 5782,10884 5669,10704
-	3 4513,10702 4503,10497 4485,10307
-	3 4847,10677 4847,10589 4828,10356
+	3 4513,10702 4496,10504 4485,10307
+	3 4841,10686 4838,10597 4819,10355
 	3 4360,10320 4371,10465 4381,10583
-	3 4659,10335 4676,10541 4685,10689
-	3 5047,10381 5076,10658 5079,10701
+	3 4659,10335 4672,10552 4685,10689
+	3 5047,10381 5069,10662 5072,10701
 	3 5471,10719 5475,10808 5488,10978
 	3 4153,10453 4157,10418 4172,10406
 	3 5669,10704 5782,10884 5829,10964
@@ -28016,13 +28019,14 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.zeuthen.de/Die-Deutsche-Bahn-informierte-Grunderneuerung-der-Personenunterfuehrung-am-S-Bahnhof-Zeuthen-642703.html',
        data  => <<EOF,
+#: next_check_id: BHFZEUTHEN-2018
 #: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
 #: by: https://www.maz-online.de/Lokales/Dahme-Spreewald/Zeuthen/S-Bahnhof-Zeuthen-Fortschritte-auf-der-Baustelle-fuer-den-Personentunnel (noch immer gesperrt)
 #: osm_watch: way id="36936021" version="5" brb
-#: last_checked: 2021-07-23
+#: last_checked: 2021-09-09
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2020-11-01
-	2::inwork 25929,-5994 25902,-6006
+	2::inwork 25929,-5994 25902,-6006 25893,-6002
 EOF
      },
      { from  => 1532988000, # 2018-07-31 00:00
@@ -28070,7 +28074,7 @@ EOF
        data  => <<EOF,
 # REMOVED (ja) --- #: XXX sind tatsächlich Radfahrer betroffen?
 # REMOVED (keine Einbahnstraße mehr) --- #: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fuerst-heisst-der-neue-schneidezahn_a209080 --- #: also_indoor: traffic (G,H) --- #: last_checked: 2020-06-21 --- #: next_check: 2020-12-31
-	q4::inwork; 5076,10658 5047,10381
+	q4::inwork; 5069,10662 5047,10381
 EOF
      },
      { from  => undef, # 
@@ -28690,8 +28694,9 @@ EOF
        source_id => '2147343419', # Gesamtmaßnahme bis Ende 2021
        data  => <<EOF,
 #: next_check_id: HENNIGSDORFER-2019
-	q4::inwork; -2504,22626 -2540,22694 -2424,22991 -2306,23259 -2248,23409 -2185,23567
-	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850
+	q4::inwork; -2504,22626 -2540,22694 -2424,22991 -2306,23259
+# REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2306,23259 -2248,23409 -2185,23567
+# REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850
 # REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
 EOF
      },
@@ -28722,7 +28727,7 @@ EOF
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-08-27 (mapillary)
+#: last_checked: 2021-09-09
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -29198,7 +29203,7 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-01-24 07:00:00"), # 1568571027, # 1557083524, # 2019-05-05 21:12
-       until => $isodate2epoch->("2021-09-08 17:00:00"), # 1569607982, # $isodate2epoch->("2019-10-07 18:00:00"),
+       until => $isodate2epoch->("2021-09-22 17:00:00"), # 1569607982, # $isodate2epoch->("2019-10-07 18:00:00"),
        dont_check_date=>1,
        text  => 'Langhansstr.: in Höhe Antonplatz ist die Fahrbahn wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, voraussichtlich bis 8.9.2021',
        type  => 'handicap',
@@ -29219,9 +29224,9 @@ EOF
 # REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12474,16443 12564,16399 12725,16321 12764,16302 12797,16285 12826,16271 12859,16255 12943,16214
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
 #: last_checked: 2021-08-27 (mapillary) vvv
-#: next_check: 2021-09-08 vvv
+#: next_check: 2021-09-22 vvv
 #: note: hier nur an der Kreuzung Berliner Allee
-#: source_id: viz2021:13.450478,52.54864,25.01.2021,07:00 (hier bis 8.9.2021)
+#: source_id: viz2021:13.450478,52.54864,25.01.2021,07:00 (hier bis 22.9.2021)
 	q3::inwork 13508,15912 13312,16027
 # REMOVED (hier nicht mehr) ---	q4::inwork 13312,16027 13250,16058 13189,16089 12943,16214
 # REMOVED (hier nicht mehr? "zwischen Roelckestr. und Gustav-Adolf-Str. sowie ...") ---	q4::inwork 12943,16214 12859,16255 12826,16271 12797,16285 12764,16302 12725,16321 12564,16399 12474,16443 12399,16479
@@ -29399,7 +29404,7 @@ EOF
 #: source_id: viz2021:13.387177,52.552566,24.05.2019,11:02 (bis 14.9.2021)
 #: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2021-07-31
+#: last_checked: 2021-09-04
 #: check_frequency: 60d
 #: next_check: 2021-09-14
 	q3::inwork  8986,16092 9178,16317
@@ -30414,7 +30419,7 @@ EOF
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-08-21 (daf)
+#: last_checked: 2021-09-05
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 EOF
@@ -30801,7 +30806,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1630856365, # -> gesperrt-orig --- undef, # XXX
        text  => 'Zufahrt "Gleis Park": Tore, kann möglicherweise abgesperrt sein',
        type  => 'gesperrt',
        recurring => 1,
@@ -31000,7 +31005,7 @@ EOF
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-09-02
+#: last_checked: 2021-09-05
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31140,7 +31145,7 @@ EOF
        data  => <<EOF,
 #: source_id: 2147345969 (inaktiv)
 #: also_indoor: traffic (G,H)
-	q4::inwork 4847,10677 4847,10589
+	q4::inwork 4841,10686 4838,10597
 EOF
      },
      { from  => 1587963600, # 2020-04-27 07:00
@@ -31577,7 +31582,7 @@ EOF
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: last_checked: 2021-05-20 (architektur-urbanistik)
+#: last_checked: 2021-09-05
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 EOF
@@ -31791,7 +31796,7 @@ EOF
 #: source_id: 2147346816 (bis 31.03.2025) (früher nur bis 2022)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G)
-#: last_checked: 2021-07-10
+#: last_checked: 2021-09-09
 #: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -31845,7 +31850,7 @@ Bergmannstr. (Kreuzberg): Maskenpflicht gilt möglicherweise auch für Radfahrer	q
 Bölschestr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 25579,5958 25571,5829 25567,5749 25563,5666 25561,5622 25553,5486 25548,5398 25546,5359 25544,5326 25539,5237 25524,5011 25522,4935 25519,4830
 Friedrichstr. (Mitte): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9212,13471 9225,13389 9246,13235 9254,13171 9262,13111 9269,13060 9279,12953 9286,12886 9298,12765 9303,12718 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351 9369,12253 9373,12197 9384,12103 9393,12000 9405,11903 9418,11804 9432,11702 9444,11616 9456,11513 9468,11412 9474,11360 9478,11317
 Karl-Marx-Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 13236,6489 13200,6550 13141,6651 13121,6689 13117,6716 13085,6925 13072,7013 13068,7043 13058,7112 13051,7157 13043,7234 13034,7319 13030,7346 13029,7353 13018,7441 13015,7471 12987,7560 12972,7602 12914,7785 12898,7832 12892,7850 12865,7923 12846,7981 12823,8028 12788,8101 12753,8187 12714,8249 12689,8289 12639,8344 12598,8390 12582,8408 12562,8432 12545,8449 12494,8501 12330,8636 12150,8764 12063,8826 11998,8872 11880,8955 11831,8989
-Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2415,9765 2445,9838 2482,9870 2532,9911 2590,9949 2694,10002 2702,10006 2770,10024 2828,10040 2974,10081 3111,10116 3189,10141 3289,10174 3374,10201 3489,10240 3562,10264 3618,10283 3737,10322 3835,10352 3971,10381 4157,10418 4245,10435 4371,10465 4503,10497 4676,10541 4847,10589 5076,10658 5215,10711 5341,10756 5475,10808 5656,10876 5725,10892 5782,10884
+Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2415,9765 2445,9838 2482,9870 2532,9911 2590,9949 2694,10002 2702,10006 2770,10024 2828,10040 2974,10081 3111,10116 3189,10141 3289,10174 3374,10201 3489,10240 3562,10264 3618,10283 3737,10322 3835,10352 3971,10381 4157,10418 4245,10435 4371,10465 4496,10504 4672,10552 4838,10597 5069,10662 5215,10711 5341,10756 5475,10808 5656,10876 5725,10892 5782,10884
 Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2445,9838 2369,9779
 Schloßstr. (Steglitz): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 5370,6486 5346,6443 5312,6382 5269,6305 5244,6261 5219,6215 5165,6119 5137,6066 5099,5994 5091,5979 5083,5964 5048,5904 5018,5854 4998,5817 4982,5789 4963,5754 4946,5725 4900,5648 4861,5581 4832,5522 4767,5389 4745,5344 4741,5309 4677,5274 4593,5235 4512,5199 4432,5160 4343,5112
 Tauentzienstr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 5782,10884 5907,10821 5942,10803 6025,10746 6133,10679 6171,10657
@@ -31927,15 +31932,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1631222771, # am Adlergestell keine Absperrungen oder Verbote mehr # undef, # XXX
        text  => 'B96a: Radweg fertig, aber noch nicht offiziell eröffnet',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: B96A-2020
-#: osm_watch: way id="877995097" version="2"
-#: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
-#: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2021-07-17
+# REMOVED --- #: next_check_id: B96A-2020 --- #: osm_watch: way id="877995097" version="2" --- #: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar) --- #: add_fragezeichen: Wann ist der Radweg offiziell befahrbar? --- #: last_checked: 2021-07-17
 	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
 EOF
      },
@@ -32090,7 +32091,7 @@ EOF
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-07-10
+#: last_checked: 2021-08-20 (osm note)
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 EOF
@@ -32141,20 +32142,24 @@ EOF
        source_id => '2147346268',
        data  => <<EOF,
 #: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021)
-#: last_checked: 2021-07-31
+#: last_checked: 2021-09-04
 #: check_frequency: 90d
 #: next_check: 2021-11-19
 	q2::inwork 8913,16159 9099,16398
 EOF
      },
      { from  => undef, # 
-       until => 1628276337, # undef, # XXX
-       text  => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. kann gesperrt sein, Ausweichen auf Gehweg, Ende der Bauarbeiten unbekannt',
-       type  => 'handicap',
+       until => undef, # 1628276337, # undef, # XXX
+       text  => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. kann gesperrt sein, Ende der Bauarbeiten unbekannt',
+       type  => 'gesperrt',
        data  => <<EOF,
+#: next_check_id: ABBESTR-2021
 #: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kleinere-projekte/?postID=697425#post697425 (sieht weitgehend fertig aus)
-# REMOVED --- #: next_check_id: ABBESTR-2021 --- #: XXX wann sind die Bauarbeiten beendet? --- #: last_checked: 2021-07-10 --- #: check_frequency: 30d
-	q3::inwork 4674,12076 4698,12124
+#: note: reopened, es gibt wieder Bauzäune
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: last_checked: 2021-09-06 (osm)
+#: check_frequency: 30d
+	2::inwork 4674,12076 4698,12124
 # REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
 EOF
      },
@@ -32706,22 +32711,26 @@ EOF
      },
      { from  => $isodate2epoch->("2021-08-22 17:00:00"), # 1626374087, # 1626386400, # 2021-07-16 00:00
        until => $isodate2epoch->("2021-10-11 17:00:00"), # 1626374091, # 1630360799, # 2021-08-30 23:59
-       text  => 'Berliner Allee: Gleisbauarbeiten, Fahrbahn stadtauswärts gesperrt, mögliche Beeinträchtigungen für Radfahrer, vom 23. August 2021 bis 11. Oktober 2021',
+       text  => 'Berliner Allee: Gleisbauarbeiten, Fahrbahn stadtauswärts zwischen Smetanastr. und Indira-Gandhi-Str. gesperrt, vom 23. August 2021 bis 11. Oktober 2021',
        type  => 'handicap',
        source_id => 'https://www.berliner-woche.de/weissensee/c-verkehr/auf-der-berliner-allee-werden-die-gleise-erneuert_a309699',
        data  => <<EOF,
 #: next_check_id: BERLINERALLEE-2021
 #: source_id: viz2021:13.454427,52.549049,23.08.2021,07:00
-#: add_fragezeichen: Gibt es tatsächlich Einschränkungen für Radfahrer? vvv
-#: note: laut rbb kann der Radverkehr den Sperrbereich passieren
+# REMOVED --- #: add_fragezeichen: Gibt es tatsächlich Einschränkungen für Radfahrer? vvv
+#: note: laut rbb kann der Radverkehr den Sperrbereich passieren (stimmt aber nicht)
 #: also_indoor: traffic
-#: next_check: 2021-08-23 vvv
+#: last_checked: 2021-08-31 (mapillary) vvv
+#: check_frequency: 30d vvv
+# REMOVED --- #: next_check: 2021-08-23 vvv
 # REMOVED (hier nicht?) ---	q4::inwork; 13398,15826 13425,15846 13484,15893 13508,15912 13623,15954 13737,15994
 # REMOVED (hier nicht, laut mapillary) ---	q3::inwork; 13737,15994 13826,16026 14015,16103
 	q4::inwork; 14015,16103 14056,16120 14248,16202 14346,16241 14499,16341
 # REMOVED (Umleitung anscheinend via Lehderstr.) ---	q4::inwork; 14552,16171 14295,16076 14248,16058 14056,15985 13867,15915 13665,15840 13572,15804 13540,15792 13524,15786 13456,15760
-#: next_check ^^^
-#: add_fragezeichen ^^^
+# REMOVED --- #: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+# REMOVED --- #: add_fragezeichen ^^^
 Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
 EOF
      },
@@ -32764,7 +32773,7 @@ EOF
 EOF
      },
      { from  => 1621880668, # 2021-05-24 20:24
-       until => $isodate2epoch->("2021-09-17 18:00:00"), # 1630447200, # 2021-09-01 00:00
+       until => 1630858251, # bereits fertig --- $isodate2epoch->("2021-09-17 18:00:00"), # 1630447200, # 2021-09-01 00:00
        text  => 'Soorstr.: zwischen Masurenallee und Bredtschneiderstr. Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Mitte September 2021',
        type  => 'handicap',
        data  => <<EOF,
@@ -32772,10 +32781,7 @@ EOF
 #: source_id: 2147347187 (Anbindung Soorstraße gesperrt, bis 25.6.2021)
 #: source_id: viz2021:13.278934,52.506793,17.05.2021,07:00 (bis 9.7.2021)
 #: source_id: viz2021:13.278934,52.506793,09.07.2021,10:00 (Leitungsarbeiten bis 17.9.2021)
-#: also_indoor: traffic
-#: last_checked: 2021-05-24
-#: check_frequency: 60d
-#: next_check: 2021-09-17
+# REMOVED --- #: also_indoor: traffic --- #: last_checked: 2021-05-24 --- #: check_frequency: 60d --- #: next_check: 2021-09-17
 	q4::inwork 1861,11284 1884,11126 1865,11082
 EOF
      },
@@ -32982,12 +32988,12 @@ EOF
 EOF
      },
      { from  => 1627768800, # 2021-08-01 00:00
-       until => $isodate2epoch->("2021-09-24 17:00:00"), # 1632520799, # 2021-09-24 23:59
+       until => $isodate2epoch->("2021-09-13 16:00:00"), # 1632520799, # 2021-09-24 23:59
        text  => 'Steglitzer Damm: Bauarbeiten, Fahrbahn zwischen Bismarckstr. und Heinrich-Seidel-Str. Richtung Osten gesperrt, vom 02.08. bis zum 24.09.2021',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1099818.php',
        data  => <<EOF,
-#: source_id: viz2021:13.337982,52.451062,02.08.2021,06:00
+#: source_id: viz2021:13.337982,52.451062,02.08.2021,06:00 (nur noch bis 13.9.2021)
 	q4::inwork; 6055,4950 6182,4931 6187,4930 6215,4926 6276,4915 6354,4901 6385,4896 6531,4865
 EOF
      },
@@ -33043,15 +33049,15 @@ EOF
 EOF
      },
      { from  => 1625250931, # 2021-07-02 20:35
-       until => 1631570400, # 2021-09-14 00:00
-       text  => 'Frankfurter Allee: Überqueren in Höhe Weichselstr./Waldeyerstr. und Müggelstr. nicht möglich, bis 13.09.2021',
+       until => $isodate2epoch->("2022-03-31 18:00:00"), # 1631570400, # 2021-09-14 00:00
+       text  => 'Frankfurter Allee: Überqueren in Höhe Weichselstr./Waldeyerstr. und Müggelstr. nicht möglich, möglicherweise bis März 2022',
        type  => 'gesperrt',
        source_id => 'viz2021:13.471852,52.513916,22.06.2021,07:00',
        data  => <<EOF,
 #: next_check_id: FRANKFURTER-2021
 #: last_checked: 2021-09-01 vvv
 #: check_frequency: 30d vvv
-#: next_check: 2021-09-13 vvv
+#: next_check: 2022-03-31 vvv
 	3 14888,11934 14926,12129 15003,12241
 	3 15003,12241 14926,12129 14888,11934
 	3 14888,11934 14926,12129 14854,12137
@@ -33405,13 +33411,14 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Treptower Park: Teile des Parks sind nachts gesperrt (von 22:00 bis 04:00 Uhr)',
+       text  => 'Treptower Park: Teile des Parks können nachts gesperrt sein (von 22:00 bis 04:00 Uhr)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1120239.php
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_37_3401_3492_online.pdf
 #: XXX bis wann bleibt die Sperrung bestehen? vvv
-#: last_checked: 2021-08-29 vvv
+#: note: der Verbindungsweg Puschkinallee und Am Treptower Park war nicht gesperrt: Do 2021-09-09 gegen 22:20 Uhr
+#: last_checked: 2021-09-09 vvv
 #: check_frequency: 30d vvv
 	2::night 15668,9140 15631,9114 15580,9181 15604,9215 15693,9194 15683,9136
 	2::night 14478,9545 14384,9565 14316,9542 14318,9688
@@ -33444,6 +33451,55 @@ EOF
        data  => <<EOF,
 #: by: https://www.mobil-potsdam.de/fileadmin/user_upload/Informationen_Umleitungsplaene_Baumassnahme_Behlertstrasse.pdf
 	q4::inwork -12045,-757 -12106,-699 -12194,-463 -12265,-418
+EOF
+     },
+     { from  => 1630274400, # 2021-08-30 00:00
+       until => 1634310000, # 2021-10-15 17:00
+       text  => 'Triftstr.: zwischen Holzhauser Str. und Am Nordgraben ist die Fahrbahn gesperrt (Richtung Norden), vom 31.08.2021 09:00 bis 15.10.2021 17:00 Uhr',
+       type  => 'handicap',
+       source_id => 'viz2021:13.316247,52.586804,31.08.2021,09:00',
+       data  => <<EOF,
+	q4::inwork; 4262,20025 4319,20182
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Kolonie am See: Weg kann sonntags, feiertags und nachts ab 20h gesperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: tempex: su,holiday,(mo-sa T20:00-sunrise)
+	2::night:weekend -2245,21544 -2242,21927
+EOF
+     },
+     { from  => 1631210400, # 2021-09-09 20:00
+       until => 1631502000, # 2021-09-13 05:00
+       text  => 'Greifswalder Str.: stadtauswärts zwischen Käthe-Niederkirchner-Str. und Hufelandstr. Kranabbau, Fahrbahn gesperrt, vom 10.09.2021 20:00 bis 13.09.2021 05:00 ',
+       type  => 'handicap',
+       source_id => 'viz2021:13.428217,52.532012,10.09.2021,20:00',
+       data  => <<EOF,
+#: source_id: viz2021:13.42832,52.53198,10.09.2021,20:00
+	q4::inwork; 11991,14060 12017,14098 12077,14186
+EOF
+     },
+     { from  => 1630965600, # 2021-09-07 00:00
+       until => 1638313199, # 2021-11-30 23:59
+       text  => 'Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer: Bauarbeiten an der Eisenbahnüberführung, komplette Sperrung des Weges, bis November 2021',
+       type  => 'gesperrt',
+       source_id => 'https://www.dresdnerbahn.de/mediathek/file/371/XuemcxFdBKgO2ODB13RfVD6NGI-aMFPmtCRyf_fgMuk/Downloads/20210604_DrB_virtuelle_Buergerinfo_online.pdf',
+       data  => <<EOF,
+#: XXX Ursprünglich wurde 08/2021 als Beginn geplant, das hat sich aber um einen Monat verschoben --- vielleicht das Ende auch?
+#: add_fragezeichen: Bis wann genau geht die Sperrung?
+#: next_check: 2021-11-01
+	2::inwork 7673,4223 7769,4315
+EOF
+     },
+     { from  => 1626559200, # 2021-07-18 00:00
+       until => $isodate2epoch->("2022-04-30 23:59:59"),
+       text  => 'Glindow - Klaistow: zwischen Autobahnanschlussstelle und Poststraße Bauarbeiten, Fahrbahn gesperrt, für Radfahrer existiert eine Umleitungsstrecke (bei BBBike ist diese nicht bekannt), bis 30.4.2022',
+       type  => 'gesperrt',
+       source_id => 'LS/723-P/20/113',
+       data  => <<EOF,
+	2::inwork -25222,-11698 -24174,-8751 -23816,-7874
 EOF
      },
     );

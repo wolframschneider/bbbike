@@ -2408,7 +2408,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10354,8493 10298,8245
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11472,7732 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9474,7182 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10037,8269 10298,8245 10575,8218
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10902,8012 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294 9242,7286
 (Weg parallel zum Tempelhofer Damm)	2::night  9300,7312 9281,7651 9281,7795
 (Eingang Peter-Strasser-Weg)	2::night 9281,7795 9240,7811
@@ -2423,8 +2423,8 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
 (Herrfurthstr. - Rundkurs)	2::night 11439,7894 11355,7871
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
-(Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
-(Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10644,8363 10360,8521
+(Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11000,8067 10902,8012
+(Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11319,8010 11298,8097 11153,8145 11000,8067 10803,8251 10644,8363 10360,8521
 (Weg parallel zur Oderstr.)	2::night 11458,7897 11490,7737 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
 (Eingang Kienitzer Str.)	2::night 11504,7738 11490,7737 11482,7735 11472,7732
 (Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11521,7638
@@ -2454,30 +2454,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.laubinger.de/event/28-heimatfest-erkner/ (Absage 2020)
-#: by: https://www.laubinger.de/event/28-heimatfest-erkner/?date=20210415 (2021)
-	2::temp 34421,1950 34359,2165 34250,2546
-',
-         'from' => 1630533600,
-         'id' => 2078,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              15,
-                              'months',
-                              5,
-                              'start',
-                              '2020-06-08T00:00:00'
-                            ]
-                          ],
-         'source_id' => 'http://www.erkner.de/271.html?date=20190415',
-         'text' => 'Erkner: Heimatfest, 3.9.2021 bis 5.9.2021',
-         'type' => 'gesperrt',
-         'until' => 1630893600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3268,7 +3245,31 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.932471.php (Absage 2020)
+#: by: https://www.charlottenburg-wilmersdorf-zeitung.de/fest-der-vielfalt-am-prager-platz/ (11. September 2021, 14-20 Uhr, Nikolsburger Platz/Trautenaustraße)
+#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1123056.php
+#: note: kein tempex-Ausdruck möglich
+# REMOVED ---	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
+	2::temp 5291,9675 5374,9619 5314,9588 5297,9579 5291,9675
+',
+         'from' => 1631224800,
+         'id' => 2533,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.partnerschaftsverein-charlottenburg.de/05-Termine/05.html',
+         'text' => 'Nikolsburger Platz: Veranstaltung "Fest der Vielfalt", Durchfahrt vermutlich nicht möglich, am 11.9.2021 von 14 bis 20 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1631390400
+       },
        undef,
        undef,
        undef,
@@ -3925,13 +3926,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
+         'data' => '#: next_check_id: BHFZEUTHEN-2018
+#: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
 #: by: https://www.maz-online.de/Lokales/Dahme-Spreewald/Zeuthen/S-Bahnhof-Zeuthen-Fortschritte-auf-der-Baustelle-fuer-den-Personentunnel (noch immer gesperrt)
 #: osm_watch: way id="36936021" version="5" brb
-#: last_checked: 2021-07-23
+#: last_checked: 2021-09-09
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2020-11-01
-	2::inwork 25929,-5994 25902,-6006
+	2::inwork 25929,-5994 25902,-6006 25893,-6002
 ',
          'from' => 1533756141,
          'id' => 2994,
@@ -4015,8 +4017,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: next_check_id: HENNIGSDORFER-2019
-	q4::inwork; -2504,22626 -2540,22694 -2424,22991 -2306,23259 -2248,23409 -2185,23567
-	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850
+	q4::inwork; -2504,22626 -2540,22694 -2424,22991 -2306,23259
+# REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2306,23259 -2248,23409 -2185,23567
+# REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850
 # REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
 ',
          'from' => 1542148916,
@@ -4039,7 +4042,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-08-27 (mapillary)
+#: last_checked: 2021-09-09
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -4102,23 +4105,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2019
-#: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2021
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8389 (Frage)
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
-#: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
-#: osm_watch: way id="8655276" version="21"
-# REMOVED (ja) --- #: add_fragezeichen: Ist der Weg mittlerweile wieder offen? --- #: XXX laut osm wieder offen --- #: last_checked: 2019-08-24 --- #: next_check: 2019-09-28
-	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
-',
-         'from' => 1630670400,
-         'id' => 3086,
-         'text' => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke gesperrt, von Sonnabend, den 04.09.2021, 14:00 Uhr, bis Montag, den 06.09.2021, 4:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1630893600
-       },
+       undef,
        undef,
        {
          'data' => '	2::night:weekend 18320,2195 18448,2182 18491,2128
@@ -4148,9 +4135,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12474,16443 12564,16399 12725,16321 12764,16302 12797,16285 12826,16271 12859,16255 12943,16214
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
 #: last_checked: 2021-08-27 (mapillary) vvv
-#: next_check: 2021-09-08 vvv
+#: next_check: 2021-09-22 vvv
 #: note: hier nur an der Kreuzung Berliner Allee
-#: source_id: viz2021:13.450478,52.54864,25.01.2021,07:00 (hier bis 8.9.2021)
+#: source_id: viz2021:13.450478,52.54864,25.01.2021,07:00 (hier bis 22.9.2021)
 	q3::inwork 13508,15912 13312,16027
 # REMOVED (hier nicht mehr) ---	q4::inwork 13312,16027 13250,16058 13189,16089 12943,16214
 # REMOVED (hier nicht mehr? "zwischen Roelckestr. und Gustav-Adolf-Str. sowie ...") ---	q4::inwork 12943,16214 12859,16255 12826,16271 12797,16285 12764,16302 12725,16321 12564,16399 12474,16443 12399,16479
@@ -4164,7 +4151,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
          'text' => 'Langhansstr.: in Höhe Antonplatz ist die Fahrbahn wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, voraussichtlich bis 8.9.2021',
          'type' => 'handicap',
-         'until' => 1631113200
+         'until' => 1632322800
        },
        undef,
        undef,
@@ -4195,7 +4182,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: source_id: viz2021:13.387177,52.552566,24.05.2019,11:02 (bis 14.9.2021)
 #: note: laut fritz bis 31.06.2021; laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021
 #: also_indoor: traffic (H)
-#: last_checked: 2021-07-31
+#: last_checked: 2021-09-04
 #: check_frequency: 60d
 #: next_check: 2021-09-14
 	q3::inwork  8986,16092 9178,16317
@@ -4364,7 +4351,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-08-21 (daf)
+#: last_checked: 2021-09-05
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 ',
@@ -4424,16 +4411,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        undef,
-       {
-         'data' => '	2::temp 8367,10745 8350,10662 8335,10518
-',
-         'from' => undef,
-         'id' => 3226,
-         'recurring' => 1,
-         'text' => 'Zufahrt "Gleis Park": Tore, kann möglicherweise abgesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        {
@@ -4471,7 +4449,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-09-02
+#: last_checked: 2021-09-05
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -4620,7 +4598,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: last_checked: 2021-05-20 (architektur-urbanistik)
+#: last_checked: 2021-09-05
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
 ',
@@ -4681,7 +4659,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: 2147346816 (bis 31.03.2025) (früher nur bis 2022)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G)
-#: last_checked: 2021-07-10
+#: last_checked: 2021-09-09
 #: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -4701,20 +4679,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: B96A-2020
-#: osm_watch: way id="877995097" version="2"
-#: by: https://twitter.com/VIZ_Berlin/status/1354746716914900992 (anhand der Fotos nicht erkennbar)
-#: add_fragezeichen: Wann ist der Radweg offiziell befahrbar?
-#: last_checked: 2021-07-17
-	2::inwork 21874,1511 21829,1351 21656,989 21613,923 21286,449 21115,271
-',
-         'from' => undef,
-         'id' => 3307,
-         'text' => 'B96a: Radweg fertig, aber noch nicht offiziell eröffnet',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4767,7 +4732,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-07-10
+#: last_checked: 2021-08-20 (osm note)
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 ',
@@ -4794,7 +4759,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021)
-#: last_checked: 2021-07-31
+#: last_checked: 2021-09-04
 #: check_frequency: 90d
 #: next_check: 2021-11-19
 	q2::inwork 8913,16159 9099,16398
@@ -4806,7 +4771,22 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1637337600
        },
-       undef,
+       {
+         'data' => '#: next_check_id: ABBESTR-2021
+#: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kleinere-projekte/?postID=697425#post697425 (sieht weitgehend fertig aus)
+#: note: reopened, es gibt wieder Bauzäune
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: last_checked: 2021-09-06 (osm)
+#: check_frequency: 30d
+	2::inwork 4674,12076 4698,12124
+# REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
+',
+         'from' => undef,
+         'id' => 3325,
+         'text' => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. kann gesperrt sein, Ende der Bauarbeiten unbekannt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
        undef,
        {
          'data' => '#: next_check_id: PARKSTADTKARLSHORST-2021
@@ -4949,26 +4929,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: by: https://www.berliner-woche.de/hermsdorf/c-verkehr/burgfrauenstrasse-ab-19-april-gesperrt_a306720
-#: source_id: 2147347107 (hier: bis 30.6.2021)
-#: source_id: viz2021:13.299346,52.626261,19.04.2021,07:00 (bis 10.9.2021)
-#: source_id: viz2021:13.3053,52.62692,19.04.2021,07:00
-#: note: zwei Bauabschnitte: zunächst der westliche Abschnitt bis Olafstr. (inkl. Kreuzung), danach der östliche Abschnitt bis Berliner Str.
-#: priority: #A
-#: next_check: 2021-09-10 vvv
-	q4::inwork 3022,24393 3225,24431 3425,24469
-	q3::inwork 3425,24469 3575,24498
-#: next_check ^^^
-# REMOVED (dieser Bereich folgt später) ---	q4::inwork 3575,24498 3712,24528 3842,24556
-',
-         'from' => 1618696800,
-         'id' => 3357,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1073307.php',
-         'text' => 'Burgfrauenstr.: Bauarbeiten zwischen Hohefeldstr. und Olafstr., Fahrbahn gesperrt, vom 19.4.2021 bis 10.9.2021',
-         'type' => 'handicap',
-         'until' => 1631289600
-       },
+       undef,
        undef,
        undef,
        {
@@ -5114,22 +5075,26 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: BERLINERALLEE-2021
 #: source_id: viz2021:13.454427,52.549049,23.08.2021,07:00
-#: add_fragezeichen: Gibt es tatsächlich Einschränkungen für Radfahrer? vvv
-#: note: laut rbb kann der Radverkehr den Sperrbereich passieren
+# REMOVED --- #: add_fragezeichen: Gibt es tatsächlich Einschränkungen für Radfahrer? vvv
+#: note: laut rbb kann der Radverkehr den Sperrbereich passieren (stimmt aber nicht)
 #: also_indoor: traffic
-#: next_check: 2021-08-23 vvv
+#: last_checked: 2021-08-31 (mapillary) vvv
+#: check_frequency: 30d vvv
+# REMOVED --- #: next_check: 2021-08-23 vvv
 # REMOVED (hier nicht?) ---	q4::inwork; 13398,15826 13425,15846 13484,15893 13508,15912 13623,15954 13737,15994
 # REMOVED (hier nicht, laut mapillary) ---	q3::inwork; 13737,15994 13826,16026 14015,16103
 	q4::inwork; 14015,16103 14056,16120 14248,16202 14346,16241 14499,16341
 # REMOVED (Umleitung anscheinend via Lehderstr.) ---	q4::inwork; 14552,16171 14295,16076 14248,16058 14056,15985 13867,15915 13665,15840 13572,15804 13540,15792 13524,15786 13456,15760
-#: next_check ^^^
-#: add_fragezeichen ^^^
+# REMOVED --- #: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+# REMOVED --- #: add_fragezeichen ^^^
 Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
 ',
          'from' => 1629644400,
          'id' => 3374,
          'source_id' => 'https://www.berliner-woche.de/weissensee/c-verkehr/auf-der-berliner-allee-werden-die-gleise-erneuert_a309699',
-         'text' => 'Berliner Allee: Gleisbauarbeiten, Fahrbahn stadtauswärts gesperrt, mögliche Beeinträchtigungen für Radfahrer, vom 23. August 2021 bis 11. Oktober 2021',
+         'text' => 'Berliner Allee: Gleisbauarbeiten, Fahrbahn stadtauswärts zwischen Smetanastr. und Indira-Gandhi-Str. gesperrt, vom 23. August 2021 bis 11. Oktober 2021',
          'type' => 'handicap',
          'until' => 1633964400
        },
@@ -5155,23 +5120,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'until' => 1631743199
        },
        undef,
-       {
-         'data' => '#: note: laut Schild der Wasserbetriebe bis August 2021
-#: source_id: 2147347187 (Anbindung Soorstraße gesperrt, bis 25.6.2021)
-#: source_id: viz2021:13.278934,52.506793,17.05.2021,07:00 (bis 9.7.2021)
-#: source_id: viz2021:13.278934,52.506793,09.07.2021,10:00 (Leitungsarbeiten bis 17.9.2021)
-#: also_indoor: traffic
-#: last_checked: 2021-05-24
-#: check_frequency: 60d
-#: next_check: 2021-09-17
-	q4::inwork 1861,11284 1884,11126 1865,11082
-',
-         'from' => 1621880668,
-         'id' => 3379,
-         'text' => 'Soorstr.: zwischen Masurenallee und Bredtschneiderstr. Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Mitte September 2021',
-         'type' => 'handicap',
-         'until' => 1631894400
-       },
+       undef,
        undef,
        undef,
        {
@@ -5234,16 +5183,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'type' => 'handicap',
          'until' => 1638288000
        },
-       {
-         'data' => '	q4::inwork; 9863,6617 9861,6693
-',
-         'from' => 1622527200,
-         'id' => 3388,
-         'source_id' => '2147347242',
-         'text' => 'Ringbahnstr.: an der Germaniastr. Richtung Tempelhofer Damm wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, vom 02.06.2021 08:00 Uhr bis 10.09.2021 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1631286000
-       },
+       undef,
        {
          'data' => '#: note: laut rbb
 #: also_indoor: traffic (H)
@@ -5286,7 +5226,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        undef,
        undef,
        {
-         'data' => '#: source_id: viz2021:13.337982,52.451062,02.08.2021,06:00
+         'data' => '#: source_id: viz2021:13.337982,52.451062,02.08.2021,06:00 (nur noch bis 13.9.2021)
 	q4::inwork; 6055,4950 6182,4931 6187,4930 6215,4926 6276,4915 6354,4901 6385,4896 6531,4865
 ',
          'from' => 1627768800,
@@ -5294,7 +5234,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1099818.php',
          'text' => 'Steglitzer Damm: Bauarbeiten, Fahrbahn zwischen Bismarckstr. und Heinrich-Seidel-Str. Richtung Osten gesperrt, vom 02.08. bis zum 24.09.2021',
          'type' => 'handicap',
-         'until' => 1632495600
+         'until' => 1631541600
        },
        {
          'data' => '#: by: rbb
@@ -5325,7 +5265,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'data' => '#: next_check_id: FRANKFURTER-2021
 #: last_checked: 2021-09-01 vvv
 #: check_frequency: 30d vvv
-#: next_check: 2021-09-13 vvv
+#: next_check: 2022-03-31 vvv
 	3 14888,11934 14926,12129 15003,12241
 	3 15003,12241 14926,12129 14888,11934
 	3 14888,11934 14926,12129 14854,12137
@@ -5339,9 +5279,9 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'from' => 1625250931,
          'id' => 3404,
          'source_id' => 'viz2021:13.471852,52.513916,22.06.2021,07:00',
-         'text' => 'Frankfurter Allee: Überqueren in Höhe Weichselstr./Waldeyerstr. und Müggelstr. nicht möglich, bis 13.09.2021',
+         'text' => 'Frankfurter Allee: Überqueren in Höhe Weichselstr./Waldeyerstr. und Müggelstr. nicht möglich, möglicherweise bis März 2022',
          'type' => 'gesperrt',
-         'until' => 1631570400
+         'until' => 1648742400
        },
        undef,
        undef,
@@ -5563,16 +5503,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'until' => 1631916000
        },
        undef,
-       {
-         'data' => '	q4::inwork 6552,8281 6560,8219
-',
-         'from' => 1629928800,
-         'id' => 3434,
-         'source_id' => 'viz2021:13.34641,52.48039,27.08.2021,11:13',
-         'text' => 'Koburger Str.: Fahrbahn zwischen Hauptstr. und Heylstr. gesperrt, evtl. sind auch Radfahrer betroffen, vom 27.08.2021 11:13 bis 03.09.2021 23:59 ',
-         'type' => 'handicap',
-         'until' => 1630706400
-       },
+       undef,
        {
          'data' => '	q4::inwork 8555,17928 8415,17902
 ',
@@ -5587,7 +5518,8 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1120239.php
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_37_3401_3492_online.pdf
 #: XXX bis wann bleibt die Sperrung bestehen? vvv
-#: last_checked: 2021-08-29 vvv
+#: note: der Verbindungsweg Puschkinallee und Am Treptower Park war nicht gesperrt: Do 2021-09-09 gegen 22:20 Uhr
+#: last_checked: 2021-09-09 vvv
 #: check_frequency: 30d vvv
 	2::night 15668,9140 15631,9114 15580,9181 15604,9215 15693,9194 15683,9136
 	2::night 14478,9545 14384,9565 14316,9542 14318,9688
@@ -5602,7 +5534,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
 ',
          'from' => undef,
          'id' => 3436,
-         'text' => 'Treptower Park: Teile des Parks sind nachts gesperrt (von 22:00 bis 04:00 Uhr)',
+         'text' => 'Treptower Park: Teile des Parks können nachts gesperrt sein (von 22:00 bis 04:00 Uhr)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -5617,6 +5549,60 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'text' => 'Behlertstr.: Bauarbeiten, Sperrung der Fahrbahn, bis Ende 2022',
          'type' => 'handicap',
          'until' => 1672527599
+       },
+       {
+         'data' => '	q4::inwork; 4262,20025 4319,20182
+',
+         'from' => 1630274400,
+         'id' => 3439,
+         'source_id' => 'viz2021:13.316247,52.586804,31.08.2021,09:00',
+         'text' => 'Triftstr.: zwischen Holzhauser Str. und Am Nordgraben ist die Fahrbahn gesperrt (Richtung Norden), vom 31.08.2021 09:00 bis 15.10.2021 17:00 Uhr',
+         'type' => 'handicap',
+         'until' => 1634310000
+       },
+       {
+         'data' => '#: tempex: su,holiday,(mo-sa T20:00-sunrise)
+	2::night:weekend -2245,21544 -2242,21927
+',
+         'from' => undef,
+         'id' => 3440,
+         'text' => 'Kolonie am See: Weg kann sonntags, feiertags und nachts ab 20h gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: source_id: viz2021:13.42832,52.53198,10.09.2021,20:00
+	q4::inwork; 11991,14060 12017,14098 12077,14186
+',
+         'from' => 1631210400,
+         'id' => 3441,
+         'source_id' => 'viz2021:13.428217,52.532012,10.09.2021,20:00',
+         'text' => 'Greifswalder Str.: stadtauswärts zwischen Käthe-Niederkirchner-Str. und Hufelandstr. Kranabbau, Fahrbahn gesperrt, vom 10.09.2021 20:00 bis 13.09.2021 05:00 ',
+         'type' => 'handicap',
+         'until' => 1631502000
+       },
+       {
+         'data' => '#: XXX Ursprünglich wurde 08/2021 als Beginn geplant, das hat sich aber um einen Monat verschoben --- vielleicht das Ende auch?
+#: add_fragezeichen: Bis wann genau geht die Sperrung?
+#: next_check: 2021-11-01
+	2::inwork 7673,4223 7769,4315
+',
+         'from' => 1630965600,
+         'id' => 3442,
+         'source_id' => 'https://www.dresdnerbahn.de/mediathek/file/371/XuemcxFdBKgO2ODB13RfVD6NGI-aMFPmtCRyf_fgMuk/Downloads/20210604_DrB_virtuelle_Buergerinfo_online.pdf',
+         'text' => 'Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer: Bauarbeiten an der Eisenbahnüberführung, komplette Sperrung des Weges, bis November 2021',
+         'type' => 'gesperrt',
+         'until' => 1638313199
+       },
+       {
+         'data' => '	2::inwork -25222,-11698 -24174,-8751 -23816,-7874
+',
+         'from' => 1626559200,
+         'id' => 3443,
+         'source_id' => 'LS/723-P/20/113',
+         'text' => 'Glindow - Klaistow: zwischen Autobahnanschlussstelle und Poststraße Bauarbeiten, Fahrbahn gesperrt, für Radfahrer existiert eine Umleitungsstrecke (bei BBBike ist diese nicht bekannt), bis 30.4.2022',
+         'type' => 'gesperrt',
+         'until' => 1651355999
        }
      
 );
