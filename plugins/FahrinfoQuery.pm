@@ -17,7 +17,7 @@ package FahrinfoQuery;
 
 use strict;
 use vars qw($VERSION @ISA);
-$VERSION = '0.32';
+$VERSION = '0.33';
 
 use BBBikePlugin;
 push @ISA, 'BBBikePlugin';
@@ -59,9 +59,9 @@ my $bbbike_root = bbbike_root;
 
 ######################################################################
 # configurable
-my $openvbb_download_size = '68MB';
+my $openvbb_download_size = '62MB';
 my $openvbb_year = 2021;
-my $openvbb_index = 1;
+my $openvbb_index = 2;
 my $openvbb_data_url = 'https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip';
 ######################################################################
 
@@ -618,6 +618,35 @@ sub _convert_vbb_stops () {
     rename "$openvbb_bbd_file~", $openvbb_bbd_file
 	or die "Failed to rename $openvbb_bbd_file~ to $openvbb_bbd_file: $!";
     1;
+}
+
+# May be called from cmdline:
+#
+#    (cd $HOME/src/bbbike && perl -Ilib -Iplugins -MFahrinfoQuery -e 'FahrinfoQuery::_check_download_url()')
+#
+sub _check_download_url () {
+    require BBBikeHeavy;
+    my $ua = BBBikeHeavy::get_uncached_user_agent();
+    my $resp = $ua->head($openvbb_data_url);
+    if (!$resp->is_success) {
+	die "HEAD on $openvbb_data_url failed: " . $resp->dump;
+    } else {
+	my $content_length = $resp->content_length;
+	if (!$content_length) {
+	    warn "WARNING: Did not get Content-Length, cannot check length...\n";
+	} else {
+	    my($openvbb_download_size_in_megabytes) = $openvbb_download_size =~ m{(\d+)MB};
+	    if (!$openvbb_download_size_in_megabytes) {
+		die "Cannot parse download size '$openvbb_download_size'";
+	    }
+	    my $content_length_in_megabytes = $content_length / (1024**2);
+	    my $diff = abs($content_length_in_megabytes - $openvbb_download_size_in_megabytes);
+	    if ($diff > 1) {
+		die "Expected Content-Length does not match real ($content_length_in_megabytes vs. $openvbb_download_size_in_megabytes)";
+	    }
+	    print STDERR "All checks OK.\n";
+	}
+    }
 }
 
 ######################################################################

@@ -208,7 +208,7 @@ Dernburgstr.	1 2493,10675 2378,10677 2310,10732 2233,11049
 Schuckertdamm	1 741,14827 1022,14898 1056,14906 1112,14918 1200,14943 1344,14978
 Am Kleinen Wannsee	1 -5499,1349 -5488,1289 -5541,1214 -5749,1146
 Oberhofer Platz	1 5491,1955 5474,1940 5452,1940 5431,1956 5393,2053 5376,2097 5406,2110 5434,2122 5452,2077 5489,1981 5491,1955
-Scheelestr.	1 5741,1234 5697,1098 5556,984 5488,943 5421,902 5342,845
+Scheelestr.	1 5741,1234 5683,1108 5646,1054 5556,984 5488,943 5421,902 5342,845
 Tibertius-Brücke: Kfz-Straße	2 5672,5751 5574,5819 5377,5961 5335,5991 4937,6205
 An der Schillingbrücke	1 12061,11406 12060,11323
 An der Schillingbrücke	1 12021,11349 12061,11406
@@ -879,10 +879,10 @@ Sachsendamm/Schöneberger Str. (Mittelstreifen)	3nocross::ignrte 8319,7084 8229,7
 #: note: ^^^
 #: note: Mittelstreifen/Tunneleinfahrt vvv
 Bundesallee: Straßentunnelrampe	3nocross::ignrte 5494,8843 5503,8709 5498,8598
-Bundesallee: Absperrung auf dem Mittelstreifen	3nocross::ignrte 5503,8709 5498,8598 5472,8507 5433,8407 5399,8344
+Bundesallee: Absperrung auf dem Mittelstreifen	3nocross::ignrte 5503,8709 5498,8598 5476,8521 5433,8407 5399,8344
 # it would be nice if it was possible to have this in the middle of the road, but check_points does not allow this yet --- Bundesallee: Straßentunnelrampe, Absperrung auf dem Mittelstreifen	3nocross::ignrte 5399,8344 5430,8409 5468,8509 5504,8598 5512,8709 5494,8843
-Bundesallee (Richtungsfahrbahn)	1::igndisp 5399,8344 5427,8412 5465,8511 5493,8599 5498,8709 5494,8843
-Bundesallee (Richtungsfahrbahn)	1::igndisp 5494,8843 5503,8709 5498,8598 5472,8507 5433,8407 5399,8344
+Bundesallee (Richtungsfahrbahn)	1::igndisp 5399,8344 5427,8412 5469,8524 5493,8599 5498,8709 5494,8843
+Bundesallee (Richtungsfahrbahn)	1::igndisp 5494,8843 5503,8709 5498,8598 5476,8521 5433,8407 5399,8344
 #: note: ^^^
 # 
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -278,14532 -457,14536 -914,14602
@@ -1236,7 +1236,7 @@ Rosenfelder Str./Ring	1 17480,12003 17429,12030 17384,11976
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2017-03-16-prot-fahrratsitzung.pdf
 #: XXX evtl wird die Straße für Radfahrer geöffnet
 #: osm_watch: way id="31540773" version="15"
-#: last_checked: 2021-02-20
+#: last_checked: 2021-09-12
 #: check_frequency: 180d
 Fritz-Werner-Str.	1s:q3 9105,2779 9081,2594
 # 
@@ -1907,8 +1907,8 @@ Riesaer Str.: Straßenbahntrasse	3nocross 24730,14288 24870,14244 24930,14225 249
 # REMOVED --- Rummelsburger Str.: wegen Überführung nicht überquerbar	3nocross 17527,7812 17568,7753 17619,7679 17681,7589 17769,7465
 Rummelsburger Str.: wegen Überführung nicht überquerbar	3nocross 17769,7465 17847,7356 18010,7133
 Detmolder Str.: Mittelstreifen nicht passierbar	3nocross 4600,8002 4711,8013 4793,8005
-Rhinstr.: Straßenbahntrasse	3nocross 18215,12123 18216,12239 18216,12262 18220,12450
-Rhinstr.: Straßenbahntrasse	3nocross 18181,14110 18184,14078 18187,14039 18198,13816
+Rhinstr.: Straßenbahntrasse	3nocross 18215,12123 18216,12209 18216,12239 18216,12262 18220,12450
+Rhinstr.: Straßenbahntrasse	3nocross 18176,14108 18178,14078 18181,14039 18198,13816
 Rhinstr.: Straßenbahntrasse	3nocross 17829,15015 17886,14899 17937,14795 17991,14684 18057,14549
 Allee der Kosmonauten: Straßenbahntrasse	3nocross 19628,13517 19736,13523 19807,13529 19837,13531 19899,13534
 Bornhomer Str.: Straßenbahntrasse	3nocross 10778,16485 10699,16492 10620,16497
@@ -2106,7 +2106,7 @@ Silberberger -> Adlergestell: Abbiegen verboten	3 19804,3697 19735,3643 19812,35
 Michael-Brückner-Str.: Mittelstreifen	3nocross 18457,5000 18425,5032 18080,5376
 Michael-Brückner-Str.: Mittelstreifen	3nocross 17728,5756 17782,5698 17829,5648
 #: by: Thomas Pörs & srt:
-Rhinstr.: Straßenbahngleise	3nocross 17488,15766 17532,15645 17569,15561 17626,15433 17706,15269 17789,15098 17829,15015
+Rhinstr.: Straßenbahngleise	3nocross 17488,15766 17532,15645 17569,15561 17626,15433 17706,15269 17774,15129 17789,15098 17829,15015
 Potsdamer Chaussee: Mittelstreifen	3nocross -1249,2590 -1085,2653 -984,2692 -870,2737
 #: note: in Höhe Niklasstr. kann man den Mittelstreifen zur Not überqueren (Bordsteine & Trampelpfad)
 Potsdamer Chaussee: Mittelstreifen	3nocross -870,2737 -739,2793 -726,2799 -563,2862 -512,2883 -391,2914
@@ -3306,15 +3306,45 @@ Drängelgitter	BNP:3::trailer=10 -739,23004
 #: note: kann allerdings recht gut umfahren werden
 Schranke	BNP:1::trailer=3 1201,15804
 Drängelgitter	BNP:3::trailer=10 32616,-23392
+Schranke	BNP:3::trailer=10 17837,12277
 #
 ############################################################################
 #: section temporäre Sperrungen (Baustellen etc.) vvvvvvvvvvvvvvvvvvvvvvvvvv
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: by: https://www.berliner-kurier.de/berlin/169-neue-wohnungen-mit-wasserblick-und-zu-bezahlbaren-mieten-li.182642 (Baustart einiger Häuser, Fertigstellung für September 2023 geplant)
+#: by: https://www.architektur-urbanistik.berlin/index.php?threads/howoge-neubau-rummelsburger-bucht-und-stralauer-halbinsel.1106/#post-16492
+#: by: https://www.howoge.de/wohnungsbau/neubauprojekte/kynaststrasse.html
+#: XXX wird es hier nach den Bauarbeiten weiterhin einen Weg geben?
+#: last_checked: 2021-09-15
+#: check_frequency: 180d
+#: next_check: 2023-09-30
+(Kynaststr. - Paul-und-Paula-Ufer): Bauarbeiten, Weg existiert nicht mehr	2::inwork 14843,10621 14911,10587
+# 
+#: osm_watch: way id="175828136" version="8"
+#: source_id: AdB/21-11-00135 (bis 11.03.2022)
+#: last_checked: 2021-09-12 (wosch)
+#: next_check: 2022-03-11
+Schönfließ - Summt: Brücke über die A10 wird neu gebaut	2::inwork 5752,30817 5787,30867
+# 
+# REMOVED (Hilfsbrücke existiert) --- #: osm_watch: way id="976563363" version="1" --- #: source_id: AdB/21-11-00134 (bis 17.12.2021) --- #: next_check: 2021-12-17 --- Fichteallee: Brücke über die A10 wird neu gebaut	2::inwork 2233,32334 2334,32485
+# 
+#: osm_watch: way id="926868384" version="1"
+#: osm_watch: way id="926868383" version="1"
+#: source_id: AdB/21-11-00133 (bis 15.10.2021)
+#: next_check: 2021-10-15
+Stolper Weg: Brücke über die A10 wird neu gebaut	2::inwork 514,32607 525,32437
+# 
+#: next_check_id: WESER-2021
+#: XXX: während der Bauarbeiten ist der Radweg nicht befahrbar
+#: last_checked: 2021-09-12
+#: check_frequency: 90d
+Weserstr.: Einbahnstraßenregelung, für Radfahrer nicht mehr offen	1s:q4:inwork 12328,9117 12402,9080 12480,9037 12531,9009 12590,8977
+# 
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX vermutlich wird die Straße dauerhaft verschwinden -> dann aus strassen-orig & Berlin.coords.data etc. entfernen
-#: last_checked: 2021-09-09
+#: last_checked: 2021-09-12
 #: check_frequency: 180d
 #: next_check: 2024-12-31
 Matthesstr.: Baustelle, keine Durchfahrt möglich	2::inwork 14185,9509 14172,9457
@@ -3363,10 +3393,11 @@ Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, k
 # 
 #: by: https://www.berliner-woche.de/lichtenberg/c-verkehr/ein-halbes-jahr-bleibt-der-roedeliusplatz-dicht_a308544 (27. April 2021, geplant bis November 2021)
 #: XXX ändert sich nach den Bauarbeiten die Fahrbahnbeschaffenheit?
+#: XXX Laut Schild der Wasserbetriebe bis Juni 2022
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-07-14 vvv
+#: last_checked: 2021-09-11 vvv
 #: check_frequency: 60d vvv
-#: next_check: 2021-11-30 vvv
+#: next_check: 2022-06-30 vvv
 Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, teilweise lange Umwege über die Gehwege möglich	2::inwork 16227,12280 16159,12301 16056,12317
 Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, teilweise lange Umwege über die Gehwege möglich	2::inwork 16144,12388 16159,12301 16158,12191
 #: next_check ^^^
@@ -3382,7 +3413,7 @@ Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, te
 Straße 77: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 15320,12375 15408,12394
 # 
 #: next_check_id: NKZ-2020
-#: last_checked: 2021-07-15
+#: last_checked: 2021-09-13
 #: check_frequency: 60d
 (Zufahrt am NKZ): Fußgänger, unübersichtlich, Bauarbeiten, Gerüst, kaum ein Durchkommen	2::inwork 11344,10507 11392,10520 11411,10515
 # 
@@ -3490,14 +3521,14 @@ Am Betriebsbahnhof Schönweide: Straße mit Bauzaun abgesperrt	2::inwork 18254,481
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_26_2221_2280_online.pdf (Straßenlandeinziehung, dauerhaft)
 #: XXX Wird der Radverkehr hier zugelassen?
 #: also_indoor: traffic (G)
-#: last_checked: 2021-08-28
+#: last_checked: 2021-09-11
 # REMOVED (bleibt vermutlich länger?) --- #: next_check: 2020-12-31
 Danneckerstr.: temporäre "Klimastraße", für Radfahrer gesperrt	2s:q4 13886,10939 13856,10864
 # 
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.954987.php
 #: by: https://www.kms-sonne.de/projekte/blueberry-inn/
 #: XXX ab 6.7.2020 gesperrt, Bauarbeiten werden bis 2023 gehen
-#: last_checked: 2021-07-10
+#: last_checked: 2021-09-12
 #: check_frequency: 360d
 #: next_check: 2023-01-01
 #: valid: -20231231
@@ -3576,7 +3607,7 @@ Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10300,-2135 10296,-215
 # 
 #: by: mapillary
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22806.pdf (Sperrung des Spreeuferwegs zwischen 2020 und 2028)
-#: last_checked: 2021-09-09
+#: last_checked: 2021-09-11
 #: next_check: 2028-01-01
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 # 
@@ -3638,8 +3669,9 @@ Uferweg: wegen Bauarbeiten gesperrt	2::inwork 8057,13923 8086,13862
 # REMOVED --- #: next_check_id: WALDBACHERWEGBRUECKE-2020 --- #: XXX der Weg wird hier neu gemacht --- #: last_checked: 2020-06-22 --- #: next_check: 2020-08-13 --- zur Waldbacher-Weg-Brücke: Bauarbeiten, gesperrt	2::inwork 20368,11937 20374,11949 20334,12023
 # 
 #: next_check_id: MAXIMILIANSQUARTIER-2020
+#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8051 (Forderung nach Öffnung der Einbahnstraße für Radfahrer)
 #: XXX wird die Einbahnstraßenregelung nach den Bauarbeiten aufgehoben?
-#: last_checked: 2021-01-22
+#: last_checked: 2021-09-08 (BVV-Ausschusssitzung)
 #: check_frequency: 180d
 Helene-Jacobs-Str.	1::inwork 3332,8207 3326,8100 3320,7982 3309,7782 3210,7786 3219,7987 3224,8106 3230,8230
 # 
@@ -3677,7 +3709,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="2"
 #: osm_watch: node id="6778873745" version="1"
-#: last_checked: 2021-09-02
+#: last_checked: 2021-09-12
 #: check_frequency: 30d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3763,7 +3795,7 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 #: note: laut rbb komplett gesperrt, bis 30.6.2023, in der Realität weiterhin Einbahnstraße
 #: osm_watch: way id="5096644" version="16"
 #: priority: #C
-#: last_checked: 2021-09-02
+#: last_checked: 2021-09-12
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3778,8 +3810,16 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 # REMOVED (offen) --- #: next_check_id: YORCKSTRASSENBRUECKEN-2019 --- #: priority: #A vvv --- #: last_checked: 2020-06-30 vvv --- #: check_frequency: 30d vvv --- #: next_check: 2020-07-03 vvv --- Yorckstraßenbrücke 17: vorübergehend gesperrt	2::inwork 8458,9566 8454,9528 8453,9519 8423,9529 --- An den Yorckstraßenbrücken: Weg wird als Baulogistikfläche benutzt, gesperrt	2::inwork 8458,9566 8426,9572 --- An den Yorckstraßenbrücken: vorübergehend gesperrt	2::inwork 8446,9670 8426,9572
 # REMOVED (aufgehoben) --- #: XXX wann wird die Einbahnstraßenregelung aufgehoben? --- #: also_indoor: traffic --- #: last_checked: 2019-11-05 --- #: check_frequency: 7d --- Alexandrinenstr.: Einbahnstraßenregelung an der Stallschreiberstr.	1s:q3:inwork 10678,11172 10593,11120
 # REMOVED (fertig) --- #: XXX nach den Bauarbeiten könnte man den Extra-Punkt in der Mitte wieder löschen --- #: also_indoor: traffic --- #: last_checked: 2019-10-22 --- #: check_frequency: 14d --- Kommandantenstr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 10518,11232 10593,11120
+# 
 # REMOVED (laut mapillary offen) --- #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 --- #: next_check_id: DRESDENERBAHN-ATTILA-2019 --- 
 # REMOVED (offen) --- #: by: https://twitter.com/VIZ_Berlin/status/1234348978512318465 --- #: by: https://pbs.twimg.com/media/ESFJ2q0WAAAIcnN?format=jpg&name=large --- #: XXX man kann allerdings die gesperrte Stelle umfahren, ca. 80m Umweg über Gehwege --- #: osm_watch: way id="696227207" version="2" --- #: source_id: 2147345522 (nur noch bis 30.4.2020) --- #: last_checked: 2020-05-08 --- #: next_check: 2020-05-30 --- #: valid: -20200530 --- Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Attilastr. vollständig gesperrt, voraussichtlich bis Ende Mai 2020	2::inwork 7667,4549 7692,4464
+# 
+#: next_check_id: DRESDNERBAHN-2021
+#: XXX laut Baustellenschild Erneuerung der EÜ Attilastr. bis 2023
+#: add_fragezeichen: Bis wann genau geht die Sperrung?
+#: last_checked: 2021-09-12 (an der Attilastr. gesehen)
+#: next_check: 2021-11-01
+Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7769,4315 7727,4418 7692,4464 7667,4549
 # 
 #: next_check_id: WUHLETALBRUECKE-2019
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2019/pressemitteilung.813955.php
@@ -3824,7 +3864,7 @@ Ringelblumenweg: Bauarbeiten, Straße gesperrt	2::inwork 21595,271 21618,193
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_17_1305_1380_online.pdf (Einziehung)
 #: XXX wann wird die Straße wieder geöffnet? --- vermutlich nie, sollte man also entfernen?
 #: osm_watch: node id="791819743" version="4"
-#: last_checked: 2021-05-16
+#: last_checked: 2021-09-11
 #: check_frequency: 120d
 Mergenthalerring: durch Tore versperrt	2::inwork 14121,8147 14210,8227 14229,8278
 # 
@@ -3908,12 +3948,12 @@ Mergenthalerring: durch Tore versperrt	2::inwork 14121,8147 14210,8227 14229,827
 #: source_id: 2147343291 (Einbahnstraße in der Glinkastr.) (mittlerweile inaktiv)
 #: source_id: viz2021:13.384789,52.514472,10.10.2018,13:30 (bis 30.9.2022)
 #: note: laut rbb ebenfalls bis 30.9.2022
-#: osm_watch: way id="43233756" version="18"
+#: osm_watch: way id="43233756" version="19"
 #: osm_watch: way id="681299268" version="2"
 #: osm_watch: way id="47935842" version="15"
 #: osm_watch: way id="681299267" version="2"
 #: priority: #A vvv
-#: last_checked: 2021-08-31 vvv
+#: last_checked: 2021-09-14 (osm) vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-09-30 vvv
 #: valid: -20220930 vvv
@@ -4257,7 +4297,7 @@ Bergiusstr.: wegen Bauarbeiten an der BAB100 gesperrt, vielleicht sogar dauerhaf
 #: source_id: 2147343691 (bis 1.9.2022, Gesamtbaumaßnahme bis Ende 2022) (zwischendurch inaktiv, jetzt wieder da)
 #: note: laut rbbtext ebenfalls bis 1.9.2022
 #: also_indoor: traffic (G)
-#: last_checked: 2021-08-08
+#: last_checked: 2021-09-11
 #: check_frequency: 90d
 #: next_check: 2022-09-30
 wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022

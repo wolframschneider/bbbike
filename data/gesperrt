@@ -122,7 +122,7 @@ Dernburgstr.	1 2493,10675 2378,10677 2310,10732 2233,11049
 Schuckertdamm	1 741,14827 1022,14898 1056,14906 1112,14918 1200,14943 1344,14978
 Am Kleinen Wannsee	1 -5499,1349 -5488,1289 -5541,1214 -5749,1146
 Oberhofer Platz	1 5491,1955 5474,1940 5452,1940 5431,1956 5393,2053 5376,2097 5406,2110 5434,2122 5452,2077 5489,1981 5491,1955
-Scheelestr.	1 5741,1234 5697,1098 5556,984 5488,943 5421,902 5342,845
+Scheelestr.	1 5741,1234 5683,1108 5646,1054 5556,984 5488,943 5421,902 5342,845
 Tibertius-Brücke: Kfz-Straße	2 5672,5751 5574,5819 5377,5961 5335,5991 4937,6205
 An der Schillingbrücke	1 12061,11406 12060,11323
 An der Schillingbrücke	1 12021,11349 12061,11406
@@ -543,9 +543,9 @@ Sachsendamm/Schöneberger Str. (Richtungsfahrbahn)	1::igndisp 7938,7406 8074,7295
 Sachsendamm/Schöneberger Str. (Richtungsfahrbahn)	1::igndisp 8319,7084 8224,7148 8150,7200 8069,7288 7938,7406
 Sachsendamm/Schöneberger Str. (Mittelstreifen)	3nocross::ignrte 8319,7084 8229,7154 8176,7194
 Bundesallee: Straßentunnelrampe	3nocross::ignrte 5494,8843 5503,8709 5498,8598
-Bundesallee: Absperrung auf dem Mittelstreifen	3nocross::ignrte 5503,8709 5498,8598 5472,8507 5433,8407 5399,8344
-Bundesallee (Richtungsfahrbahn)	1::igndisp 5399,8344 5427,8412 5465,8511 5493,8599 5498,8709 5494,8843
-Bundesallee (Richtungsfahrbahn)	1::igndisp 5494,8843 5503,8709 5498,8598 5472,8507 5433,8407 5399,8344
+Bundesallee: Absperrung auf dem Mittelstreifen	3nocross::ignrte 5503,8709 5498,8598 5476,8521 5433,8407 5399,8344
+Bundesallee (Richtungsfahrbahn)	1::igndisp 5399,8344 5427,8412 5469,8524 5493,8599 5498,8709 5494,8843
+Bundesallee (Richtungsfahrbahn)	1::igndisp 5494,8843 5503,8709 5498,8598 5476,8521 5433,8407 5399,8344
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -278,14532 -457,14536 -914,14602
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -941,14637 -278,14532
 Königsberger Str. (Richtungsfahrbahn)	1::igndisp 4348,2627 4313,2630 4224,2671 4170,2727
@@ -1611,12 +1611,12 @@ Rummelsburger Str. -> Mentelinstr.: wegen Überführung nicht überquerbar	3::igndi
 Mittelstreifen nicht passierbar	3nocross::ignrte 4600,8002 4711,8013 4793,8005
 Detmolder Str. -> Aachener Str.: Mittelstreifen nicht passierbar	3::igndisp 4572,7936 4711,8013 4672,8031
 Aachener Str. -> Detmolder Str.: Mittelstreifen nicht passierbar	3::igndisp 4672,8031 4711,8013 4793,8005
-Straßenbahntrasse	3nocross::ignrte 18215,12123 18216,12239 18216,12262 18220,12450
+Straßenbahntrasse	3nocross::ignrte 18215,12123 18216,12209 18216,12239 18216,12262 18220,12450
 Kolonie Friedrichsfelde Nord -> Rhinstr.: Straßenbahntrasse	3::igndisp 18180,12262 18216,12262 18220,12450
 Rhinstr. -> Kolonie Friedrichsfelde Nord: Straßenbahntrasse	3::igndisp 18216,12239 18216,12262 18180,12262
-Straßenbahntrasse	3nocross::ignrte 18181,14110 18184,14078 18187,14039 18198,13816
-Rhinstr. -> Rhinstr. [134-130]: Straßenbahntrasse	3::igndisp 18184,14078 18187,14039 18477,14042
-Rhinstr. [134-130] -> Rhinstr.: Straßenbahntrasse	3::igndisp 18477,14042 18187,14039 18198,13816
+Straßenbahntrasse	3nocross::ignrte 18176,14108 18178,14078 18181,14039 18198,13816
+Rhinstr. -> Rhinstr. [134-130]: Straßenbahntrasse	3::igndisp 18178,14078 18181,14039 18477,14042
+Rhinstr. [134-130] -> Rhinstr.: Straßenbahntrasse	3::igndisp 18477,14042 18181,14039 18198,13816
 Straßenbahntrasse	3nocross::ignrte 17829,15015 17886,14899 17937,14795 17991,14684 18057,14549
 Rhinstr. -> Worbiser Str.: Straßenbahntrasse	3::igndisp 17937,14795 17886,14899 17693,14840
 Worbiser Str. -> Rhinstr.: Straßenbahntrasse	3::igndisp 17693,14840 17886,14899 17829,15015
@@ -2160,7 +2160,7 @@ Michael-Brückner-Str. -> Spreestr.: Mittelstreifen	3::igndisp 17728,5756 17782,5
 Michael-Brückner-Str. -> Cajamarcapl.: Mittelstreifen	3::igndisp 17829,5648 17782,5698 17730,5698
 Cajamarcapl. -> Michael-Brückner-Str.: Mittelstreifen	3::igndisp 17730,5698 17782,5698 17728,5756
 Cajamarcapl. -> Spreestr.: Mittelstreifen	3::igndisp 17730,5698 17782,5698 17807,5730
-Straßenbahngleise	3nocross::ignrte 17488,15766 17532,15645 17569,15561 17626,15433 17706,15269 17789,15098 17829,15015
+Straßenbahngleise	3nocross::ignrte 17488,15766 17532,15645 17569,15561 17626,15433 17706,15269 17774,15129 17789,15098 17829,15015
 Rhinstr. -> Str. 156: Straßenbahngleise	3::igndisp 17488,15766 17532,15645 17570,15658
 Str. 156 -> Rhinstr.: Straßenbahngleise	3::igndisp 17570,15658 17532,15645 17569,15561
 Rhinstr. -> Str. 150: Straßenbahngleise	3::igndisp 17532,15645 17569,15561 17640,15583
@@ -2374,7 +2374,6 @@ Mittelstreifen	3nocross::ignrte 9528,23240 9747,22694 9973,22133
 Blankenfelder Chaussee -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9469,22606 9747,22694 9528,23240
 Blankenfelder Chaussee -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9973,22133 9747,22694 9469,22606
 Geländer am Gehweg	3nocross::ignrte 7628,4521 7667,4549 7690,4563
-Mariendorfer-Hafen-Weg -> Attilastr.: Geländer am Gehweg	3::igndisp 7692,4464 7667,4549 7628,4521
 unbequemes Überqueren	3nocross::ignrte 6613,3320 6647,3292 6712,3237
 Paul-Schneider-Str. -> Schulstr.: unbequemes Überqueren	3::igndisp 6613,3320 6647,3292 6653,3297
 Schulstr. -> Paul-Schneider-Str.: unbequemes Überqueren	3::igndisp 6653,3297 6647,3292 6712,3237
@@ -3164,6 +3163,11 @@ Drängelgitter	BNP:3:-210:trailer=10 25690,-8511
 Drängelgitter	BNP:3:-44:trailer=10 -739,23004
 Schranke	BNP:1:90:trailer=3 1201,15804
 Drängelgitter	BNP:3:57:trailer=10 32616,-23392
+Schranke	BNP:3:-115:trailer=10 17837,12277
+(Kynaststr. - Paul-und-Paula-Ufer): Bauarbeiten, Weg existiert nicht mehr	2::inwork 14843,10621 14911,10587
+Schönfließ - Summt: Brücke über die A10 wird neu gebaut	2::inwork 5752,30817 5787,30867
+Stolper Weg: Brücke über die A10 wird neu gebaut	2::inwork 514,32607 525,32437
+Weserstr.: Einbahnstraßenregelung, für Radfahrer nicht mehr offen	1s:inwork 12328,9117 12402,9080 12480,9037 12531,9009 12590,8977
 Matthesstr.: Baustelle, keine Durchfahrt möglich	2::inwork 14185,9509 14172,9457
 Pembabogen: durch Bauzäune abgesperrt	2::inwork -2750,19013 -2747,19074
 Tasmanienweg: durch Bauzäune abgesperrt	2::inwork -2747,19074 -2647,19070
@@ -3218,6 +3222,7 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	2::inwork 10736,12285 10772,12288
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 Johannisstr.: Einbahnstraße	1s:inwork 9588,13174 9385,13174
+Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7769,4315 7727,4418 7692,4464 7667,4549
 Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
 Buschwindröschenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21354,142 21379,33
 Ringelblumenweg: Bauarbeiten, Straße gesperrt	2::inwork 21595,271 21618,193
