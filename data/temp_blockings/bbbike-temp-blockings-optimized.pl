@@ -1,6 +1,957 @@
-$#temp_blocking = 1624;
+$#temp_blocking = 730;
 push @temp_blocking,
 (
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20201002
+#: by: https://twitter.com/VIZ_Berlin/status/1312229648558850048
+#: by: https://pbs.twimg.com/media/EjX56WOWoAIPRUg?format=png&name=900x900
+#: by: https://www.berlin.de/events/4531106-2229501-schoeneberger-kuerbisfest.html (geplant für 2.+3.10.2021)
+#: by: https://www.eventbrite.com/e/22-schoneberger-kurbisfest-tickets-165249199805
+	2::temp 7001,9291 7012,9222 7035,9161 7101,9027 7201,8870
+	2::temp 6945,9142 7035,9161
+	2::temp 6975,8944 7101,9027 7308,9163
+	2::temp 7012,9222 7124,9226
+',
+         'from' => 1633078800,
+         'id' => 731,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Schöneberger Kürbisfest, Akazien- und Belziger Str. gesperrt, 02.10.2021 bis 03.10.2021',
+         'type' => 'gesperrt',
+         'until' => 1633298399
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_44_6553_6696_online.pdf
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_34_2821_2896_online.pdf
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_42_3793_3876_online.pdf
+	2::temp 8424,12853 8503,12895
+	2::temp 7930,12912 8021,12832
+# REMOVED (Adele-Schreiber-Krieger-Str.) ---	2::temp 8737,12757 8596,12760 8545,12760
+# REMOVED (westl. John-Foster-Dulles-Allee) ---	2::temp 7514,12387 7627,12380 7821,12367 7875,12363
+östl. John-Foster-Dulles-Allee	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
+# REMOVED (Schiffbauerdamm) ---	2::temp 8514,12877 8545,12760
+östl. Straße des 17. Juni	2::temp 8775,12457 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150
+# REMOVED (westl. Straße des 17. Juni) ---	2::temp 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 8595,12066 8600,12165 8538,12245
+Große Querallee	2::temp 7816,12150 7822,12201 7875,12363 7945,12592
+südl. Spreeuferweg	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8025,12879 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
+Paul-Löbe-Allee und Verlängerungen	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593 8596,12576
+Yitzhak-Rabin-Str. bis Gustav-Heinemann-Brücke	2::temp 8120,12756 8122,12603 8119,12414 8055,12186 8119,12414 8122,12603 8120,12756 8114,12839 8115,12912 8116,12938 8110,13042
+nördl. Wilhelmstr.	2::temp 8775,12457 8766,12541
+Willy-Brandt-Str. - Konrad-Adenauer-Str.	2::temp 8021,12832 8030,12824 8120,12756 8206,12757 8252,12757 8309,12758 8424,12853
+Platz des 18. März	2::temp 8538,12245 8592,12252
+	2::temp 8252,12757 8115,12912
+	2::temp 8344,12221 8391,12389 8400,12417
+	2::temp 8546,12279 8391,12389 8354,12416
+	2::temp 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414
+	2::temp 8309,12758 8415,12749 8593,12742
+',
+         'from' => 1633989600,
+         'id' => 1422,
+         'text' => 'Straße des 17. Juni und Straßen im Regierungsviertel am 13. Oktober 2021 von 11 bis 21 Uhr gesperrt (Großer Zapfenstreich)',
+         'type' => 'gesperrt',
+         'until' => 1634151600
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => '	2::temp -8625,-1176 -8700,-997 -8813,-933 -8913,-813 -9116,-737 -9254,-656 -9358,-537 -9375,-502 -9445,-377 -9585,-277 -9795,-230
 	2::temp -8084,-1460 -8133,-1474 -8260,-1461
@@ -525,7 +1476,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-09-01
+#: last_checked: 2021-09-24
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 ',
@@ -571,29 +1522,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: by: http://www.family-and-friends-ev.de/ (update.pl bekommt hier aber einen Fehler)
-#: by: https://www.berlin.de/events/3614943-2229501-herbst-in-westend.html (geplant 25.9.2021-26.9.2021) (mittlerweile bestätigt)
-	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
-',
-         'from' => 1632474000,
-         'id' => 1910,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              9,
-                              'start',
-                              '2020-10-25T00:00:00'
-                            ]
-                          ],
-         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (25.09.2021 bis 26.09.2021)',
-         'type' => 'gesperrt',
-         'until' => 1632679200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1107,31 +2036,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.laubinger.de/event/47-rosenthaler-herbst/ (geplant: 18.09.2021 - 19.09.2021)
-#: by: https://www.berliner-woche.de/rosenthal/c-kultur/feiern-mit-abstand-und-einschraenkungen_a321188
-#: by: https://dorf-rosenthal.de/programmheft
-	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
-',
-         'from' => 1631829600,
-         'id' => 2285,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              13,
-                              'months',
-                              9,
-                              'start',
-                              '2020-10-25T00:00:00'
-                            ]
-                          ],
-         'source_id' => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2019',
-         'text' => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 18.09.2021 bis 19.09.2021',
-         'type' => 'handicap',
-         'until' => 1632088799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1246,84 +2151,8 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: BERLINMARATHON-RECURRING
-#: by: https://www.bmw-berlin-marathon.com/
-# REMOVED --- #: tempex: 20160920T0600-20160922T0600 vvv
-	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-# REMOVED --- #: tempex ^^^
-',
-         'from' => 1632110400,
-         'id' => 2387,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              10,
-                              'months',
-                              9,
-                              'start',
-                              '2020-10-25T00:00:00'
-                            ]
-                          ],
-         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen des Marathons gesperrt, möglicherweise schon ab 20.09.2021',
-         'type' => 'gesperrt',
-         'until' => 1632283200
-       },
-       {
-         'data' => '#: next_check_id: BERLINMARATHON-RECURRING
-#: source_id: viz2021:13.371628,52.517781,24.09.2021,18:00
-#: source_id: viz2021:13.376081,52.51616,26.09.2021,07:30
-# REMOVED --- #: tempex: 20160922T0600-T20160926T0600 vvv
-	2::temp 8573,12325 8540,12420
-	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-	2::temp 8119,12414 8055,12186
-	2::temp 8538,12245 8522,12239 8466,12197 8327,12174 8215,12156 8122,12147 8049,12140 8018,12135 7823,12120 7775,12114 7429,12070
-	2::temp 8538,12245 8522,12187 8453,12099 8262,11883 8244,11878 8221,11876 8167,11865 8140,11850 8026,11764
-	2::temp 8546,12279 8391,12389 8354,12416
-	2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
-	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
-	3 7429,12070 7383,12095 7031,12320
-	3 7031,12320 7383,12095 7429,12070
-	3 7823,12120 7816,12150 7822,12201 7875,12363
-	3 7875,12363 7822,12201 7816,12150 7823,12120
-	2::temp 8119,12414 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612
-	2::temp 8207,12606 8206,12734 8206,12757
-	3 7945,12592 8122,12603 8120,12756
-	3 8120,12756 8122,12603 7945,12592
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-#: note: die Wege im südöstlichen Teil des Tiergartens sind vermutlich nur am Sa & So gesperrt
-	2::temp 8214,12205 8215,12156 8221,11885 8221,11876 8210,11775 8203,11686
-	2::temp 8327,12174 8244,11878 8210,11775 8172,11679
-	2::temp 8501,11815 8244,11878 8221,11885 8132,11910 8095,11919 8020,11937
-	2::temp 8055,12186 8049,12140 8034,12093 8004,12074 7999,12040 8022,12016 8020,11937 8016,11770
-	2::temp 7823,12120 7832,12036 7822,11952 7793,11878
-	2::temp 7775,12114 7772,12040 7717,11918
-# REMOVED --- #: tempex ^^^
-',
-         'from' => 1632412800,
-         'id' => 2388,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              12,
-                              'months',
-                              9,
-                              'start',
-                              '2020-10-25T00:00:00'
-                            ]
-                          ],
-         'text' => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, und einige Wege im Tiergarten, voraussichtlich 24.09.2021 bis 27.09.2021',
-         'type' => 'gesperrt',
-         'until' => 1632715200
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1425,30 +2254,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/events/5979419-2229501-tegeler-hafenfest.html (2021)
-# REMOVED (was) : tempex: 20160714-20160717
-	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
-',
-         'from' => 1631743200,
-         'id' => 2420,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              13,
-                              'months',
-                              7,
-                              'start',
-                              '2020-10-25T00:00:00'
-                            ]
-                          ],
-         'source_id' => 'https://www.gratis-in-berlin.de/festivals/item/2037758-hafenfest-tegel-2019-mit-programm-und-feuerwerk',
-         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (16.09.2021 bis 19.09.2021)',
-         'type' => 'gesperrt',
-         'until' => 1632088799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2100,7 +2906,34 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: 2147341611
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_28_2389_2480_online.pdf (2021)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_34_2821_2896_online.pdf (Großer Zapfenstreich 2021)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_35_2897_2964_online.pdf (Aufhebung der letzten Einschränkung)
+#: by: https://www.bmvg.de/de/presse/grosser-zapfenstreich-zur-wuerdigung-einsatz-afghanistan-5181746 (Verschiebung, noch kein neuer Termin)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_42_3793_3876_online.pdf (Großer Zapfenstreich 2021, neuer Termin)
+	2::temp 7435,11514 7322,11177
+	2::temp 7579,11032 7595,11086 7665,11353 7717,11540
+	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
+	2::temp 7595,11086 7575,11076 7252,11188
+Lützowufer	2::temp 7089,11073 7248,11143 7461,11051 7579,11032
+Hiroshimastr.	2::temp 7253,11208 7356,11517
+Hiroshimasteg	2::temp 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7248,11143
+# REMOVED ---	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
+# REMOVED ---	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
+# REMOVED ---	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
+# REMOVED ---	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
+# REMOVED ---	2::temp 7665,11353 7745,11332
+# REMOVED ---	2::temp 7745,11332 7690,11108
+',
+         'from' => 1634022000,
+         'id' => 2875,
+         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
+         'text' => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 13. Oktober 2021 von 09:00 bis 16:30 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1634135400
+       },
        undef,
        undef,
        undef,
@@ -2425,7 +3258,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-09-09
+#: last_checked: 2021-09-17 (mapillary)
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -2535,8 +3368,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED --- #: source_id: 2147344146 (bis Mitte Juni 2019)
 # REMOVED (hier war es 2019) ---	q4::inwork; 12399,16479 12474,16443 12564,16399 12725,16321 12764,16302 12797,16285 12826,16271 12859,16255 12943,16214
 # REMOVED (hier nicht mehr? (2019)) --- #: source_id: 2147344145 ---	q4::inwork; 13312,16027 13508,15912
-#: last_checked: 2021-08-27 (mapillary) vvv
-#: next_check: 2021-09-22 vvv
+#: last_checked: 2021-09-17 (mapillary) vvv
+#: next_check: 2021-10-11 vvv
 #: note: hier nur an der Kreuzung Berliner Allee
 #: source_id: viz2021:13.450478,52.54864,25.01.2021,07:00 (hier bis 22.9.2021)
 	q3::inwork 13508,15912 13312,16027
@@ -2550,9 +3383,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'from' => 1611468000,
          'id' => 3091,
          'source_id' => 'https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/verkehrsvorschau-fur-montag-16-09-19-',
-         'text' => 'Langhansstr.: in Höhe Antonplatz ist die Fahrbahn wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, voraussichtlich bis 8.9.2021',
+         'text' => 'Langhansstr.: in Höhe Antonplatz ist die Fahrbahn wegen Gleisbauarbeiten gesperrt, auch Radfahrer sind betroffen, voraussichtlich bis 11.10.2021',
          'type' => 'handicap',
-         'until' => 1632322800
+         'until' => 1633964400
        },
        undef,
        undef,
@@ -2754,7 +3587,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-09-05
+#: last_checked: 2021-09-24
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 ',
@@ -2803,7 +3636,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-09-02
+#: last_checked: 2021-09-22
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2852,7 +3685,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-09-13
+#: last_checked: 2021-09-22
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -2933,6 +3766,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
 #: source_id: 2147347233 (bis 23.12.2021)
 #: priority: #A
+#: last_checked: 2021-09-26
 #: next_check: 2021-12-23
 #: also_indoor: traffic (H,G) vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
@@ -3116,7 +3950,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt
 #: osm_watch: way id="855549020" version="1"
 #: last_checked: 2021-09-05 (krickstadt)
-#: check_frequency: 90d
+#: check_frequency: 30d
 #: next_check: 2021-10-31
 	2::inwork 18836,3611 18943,3508
 ',
@@ -3374,7 +4208,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: add_fragezeichen: Wie lange gehen die Bauarbeiten?
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2021-07-18
+#: last_checked: 2021-09-26
 	q4::inwork 2523,5114 2746,5537
 ',
          'from' => undef,
@@ -3481,7 +4315,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 # REMOVED --- #: add_fragezeichen: Gibt es tatsächlich Einschränkungen für Radfahrer? vvv
 #: note: laut rbb kann der Radverkehr den Sperrbereich passieren (stimmt aber nicht)
 #: also_indoor: traffic
-#: last_checked: 2021-08-31 (mapillary) vvv
+#: last_checked: 2021-09-22 (mapillary) vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2021-08-23 vvv
 # REMOVED (hier nicht?) ---	q4::inwork; 13398,15826 13425,15846 13484,15893 13508,15912 13623,15954 13737,15994
@@ -3639,7 +4473,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        {
          'data' => '#: next_check_id: FRANKFURTER-2021
 #: note: auch last Schild der Wasserbetriebe bis März 2022
-#: last_checked: 2021-09-11 vvv
+#: last_checked: 2021-09-25 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-03-31 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -3661,18 +4495,18 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        },
        undef,
        undef,
-       {
-         'data' => '#: source_id: viz2021:13.560042,52.405163,12.07.2021,07:00 (hier: bis 24.9.2021, siehe unten)
-	q4::inwork 21355,-309 21322,-176 21250,118
-',
-         'from' => 1625954400,
-         'id' => 3407,
-         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1103089.php',
-         'text' => 'Paradiesstr.: Bauarbeiten, Fahrbahn zwischen Buntzelstr. und "Thomas Philipps" gesperrt, vom 12.7.2021 bis 24.9.2021',
-         'type' => 'handicap',
-         'until' => 1632495600
-       },
        undef,
+       {
+         'data' => '#: source_id: viz2021:13.560042,52.405163,12.07.2021,07:00
+	q4::inwork 21115,271 21171,222 21225,172 21250,118 21322,-176
+',
+         'from' => 1628978400,
+         'id' => 3408,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1103089.php',
+         'text' => 'Paradiesstr.: Bauarbeiten, Fahrbahn zwischen Johannes-Tobei-Str. und B96a gesperrt, vom 16.8.2021 bis 08.10.2021',
+         'type' => 'handicap',
+         'until' => 1633705200
+       },
        {
          'data' => '#: also_indoor: traffic
 #: XXX gibt es nach den Bauarbeiten bereits den neuen Radweg?
@@ -3694,11 +4528,13 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-09-17
+#: last_checked: 2021-09-25
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
+#: osm_watch: way id="984964447" version="1"
 	q3::inwork 15279,10862 15355,10875
+#: osm_watch: way id="984056169" version="1"
 	2::inwork 15272,10790 15388,10758
 ',
          'from' => 1625734800,
@@ -3734,15 +4570,15 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        undef,
        undef,
        {
-         'data' => '	q4::inwork; 3026,3058 3023,2958 3019,2858
-	q4::inwork; 3171,2848 3174,3052
+         'data' => '	q4::inwork; 3011,3303 3030,3276 3026,3058 3023,2958 3019,2858
+	q4::inwork; 3171,2848 3174,3052 3184,3427
 	q4::inwork 3186,3515 3228,3455
 ',
          'from' => 1626614232,
          'id' => 3419,
-         'text' => 'Baseler Str., Kommandantenstr.: Einbahnstraßenregelungen, außerdem Fahrbahn des Kadettenwegs am Karlplatz gesperrt, möglicherweise bis September 2021',
+         'text' => 'Baseler Str., Kommandantenstr.: Einbahnstraßenregelungen, außerdem Fahrbahn des Kadettenwegs am Karlplatz gesperrt, möglicherweise bis Juli 2022',
          'type' => 'handicap',
-         'until' => 1633039200
+         'until' => 1659283200
        },
        undef,
        {
@@ -3783,13 +4619,14 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        },
        {
          'data' => '#: add_fragezeichen: Ist die Sperrung aufgehoben?
-#: last_checked: 2021-09-02
-#: check_frequency: 21d
+#: last_checked: 2021-09-24
+# REMOVED --- #: check_frequency: 21d
+#: next_check: 2021-10-15
 	2::inwork 8668,10219 8668,10236 8715,10314
 ',
          'from' => 1627924220,
          'id' => 3425,
-         'text' => 'Rampe zum Anhalter Steg gesperrt, Ende der Bauarbeiten unbekannt',
+         'text' => 'Rampe zum Anhalter Steg gesperrt, mindestens bis 15.10.2021',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3811,9 +4648,11 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10860 (Frage)
 #: XXX bis wann bleibt die Sperrung bestehen? vvv
 #: tempex: T20-T06 vvv
+#: last_checked: 2021-09-21 (in und um den Park herum stehen Absperrgitter) vvv
 #: next_check: 2021-12-31 vvv
 	2::night 10132,12941 9977,12912 9944,12921 9930,12947 9900,12942 9724,12992
 	2::night 10166,12777 10105,12855 9977,12912
+#: last_checked ^^^
 #: next_check ^^^
 #: tempex ^^^
 #: XXX ^^^
@@ -3865,16 +4704,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'type' => 'handicap',
          'until' => 1633363200
        },
-       {
-         'data' => '	1::inwork 20364,32054 20534,31937
-',
-         'from' => 1629583200,
-         'id' => 3432,
-         'source_id' => '216001757',
-         'text' => 'Bernau - Oranienburg: Bauarbeiten am Brückenbauwerk über die A11, Straße Richtung Bernau gesperrt, evtl. sind auch Radfahrer betroffen, 23.08.2021 bis 24.09.2021 ',
-         'type' => 'gesperrt',
-         'until' => 1632520799
-       },
+       undef,
        undef,
        undef,
        {
@@ -3990,6 +4820,64 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'text' => 'Ellen-Epstein-Str.: Radweg in Richtung Perleberger Str. gesperrt, bis Ende November 2021',
          'type' => 'gesperrt',
          'until' => 1638313199
+       },
+       {
+         'data' => '	q4::inwork; 8514,17634 8536,17786 8555,17928 8571,18037 8580,18106 8583,18127 8597,18214 8610,18309 8622,18402
+',
+         'from' => 1633471200,
+         'id' => 3446,
+         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1129147.php',
+         'text' => 'Provinzstr.: Bauarbeiten zwischen Pankower Allee und Herbststr., Einbahnstraßenregelung, offen Richtung Süden, evtl. sind auch Radfahrer betroffen, vom 7. bis zum 30. Oktober 2021 ',
+         'type' => 'handicap',
+         'until' => 1635631199
+       },
+       {
+         'data' => '#: by: wosch
+#: by: https://www.gmg-ing.de/referenzen/ernst-heilmann-steg-berlin/ ("Torsionsschwingungen")
+#: by: https://www.strassenbauportal.de/oeffentliche_ausschreibung_vobvol_details_10997_Berlin_Instandsetzung_Stahlbau_1924073.html (Ausschreibung)
+#: also_indoor: search Ernst-Heilmann-Steg
+#: last_checked: 2021-09-24
+#: check_frequency: 90d
+	2::inwork 13270,10030 13306,10006
+',
+         'from' => undef,
+         'id' => 3447,
+         'text' => 'Ernst-Heilmann-Steg gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       undef,
+       undef,
+       undef,
+       {
+         'data' => '	2::inwork 30118,-43994 31916,-42708
+',
+         'from' => 1632754800,
+         'id' => 3451,
+         'source_id' => '216101533',
+         'text' => 'Rietzneuendorf-Staakow: L 711/K6168 - Brücke über BAB13 Anschlußstelle Staakow: Brückenbauarbeiten, Vollsperrung, 28.09.2021 17:00 Uhr bis 01.10.2021 14:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1633089600
+       },
+       {
+         'data' => '	q4::inwork 9754,12775 9815,12705 9870,12657
+',
+         'from' => 1632628800,
+         'id' => 3452,
+         'source_id' => 'https://viz.berlin.de/2021/09/verkehrsvorschau-270921/',
+         'text' => 'Am Kupfergraben: Fahrbahn zwischen Dorotheenstr. und Georgenstr. gesperrt, ab 27. September 2021 bis Anfang Oktober 2021',
+         'type' => 'handicap',
+         'until' => 1633125599
+       },
+       {
+         'data' => '	2::inwork -3227,14260 -3173,14216 -3135,14183
+',
+         'from' => 1632607200,
+         'id' => 3453,
+         'source_id' => 'viz2021:13.20521,52.53583,27.09.2021,09:33',
+         'text' => 'Charlottenstr.: Fahrbahn zwischen Fischerstr. und Mauerstr. gesperrt, evtl. sind auch Radfahrer betroffen, vom 27.09.2021 bis 15.10.2021',
+         'type' => 'gesperrt',
+         'until' => 1634335200
        }
      
 );

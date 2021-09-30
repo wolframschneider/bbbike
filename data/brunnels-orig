@@ -158,6 +158,7 @@ Lindenhofbrücke	Br 12108,24547 12136,24607
 #: by: https://www.berliner-woche.de/pankow/c-verkehr/bruecke-ueber-die-a114-wird-neu-gebaut_a264184
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2020/pressemitteilung.1001081.php
 #: osm_watch: way id="9712546" version="15"
+#: source_id: viz2021:13.442786,52.614523,27.09.2021,08:00 (bis Ende 2021; werden bei den Fahrbahnarbeiten auch die Radwege gemacht?)
 #: also_indoor: search Bucher_Straße
 #: last_checked: 2021-07-17 (mapillary)
 #: check_frequency: 45d
@@ -226,8 +227,8 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: source_id: 2147345790 (nicht mehr aktiv)
 #: source_id: 2147346453 (Leitungsbauarbeiten, bis 16.10.2020)
 #: osm_watch: way id="4568174" version="25"
-#: osm_watch: way id="883834106" version="5"
-#: last_checked: 2021-09-04
+#: osm_watch: way id="883834106" version="6"
+#: last_checked: 2021-09-29 (osm)
 #: check_frequency: 180d
 #: next_check: 2023-12-01
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086

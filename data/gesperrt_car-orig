@@ -408,7 +408,7 @@ Stubenrauchstr.: Bahntrasse	3nocross 16135,2135 16182,2200 16242,2279
 #: note: Luftbild:
 Buschkrugallee: Mittelstreifen	3nocross 13294,6386 13307,6359 13316,6320
 Gieselerstr.	1 4609,9027 4619,9200
-Wiener Str., Görlitzer Ufer	1 13026,9854 13086,9825 13136,9883 13216,9983
+Wiener Str., Görlitzer Ufer	1 13026,9854 13086,9825 13136,9883 13155,9907 13216,9983
 #: note: Luftbild:
 Rudower Chaussee: Mittelstreifen	3nocross 15980,2318 15804,2512 15736,2593
 #: by: Hans Lindner
@@ -830,7 +830,7 @@ Straßenbahntrasse	3nocross 10976,13229 11012,13278 11070,13357
 Hasselwerderstr	1 18260,5746 18164,5701 18013,5627
 Haagstr.	1 -2920,2472 -2882,2373 -3030,2349
 Borussenstr.: außer Linienverkehr; für den Radverkehr gibt es einen linksseitigen Radweg	1 -3746,2849 -3756,2790 -3776,2687
-Teutonenstr. (Nikolassee)	1 -3519,2180 -3610,2237 -3689,2267 -3742,2287
+Teutonenstr. (Nikolassee)	1 -3519,2180 -3610,2237 -3740,2295
 #: by: Dennis Anton ("für Radfahrer freigegeben")
 #: confirmed_by: srt
 Goltzstr. (Spandau)	1 -2946,16869 -3031,16807
@@ -863,7 +863,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="9"
-#: last_checked: 2021-08-11
+#: last_checked: 2021-09-26
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
 Scharnhorststr.: Poller	3 7877,14504 7804,14445 *
@@ -1106,7 +1106,7 @@ Andernacher Str.	1 19054,8571 19000,8509
 #: by: https://www.baustellen-doku.info/berlin_strassenbahn_adlershof_II_wista_schoeneweide/20201019/
 #: XXX hier wird eine Überfahrt auch für Autos entstehen
 #: last_checked: 2021-09-05 (krickstadt)
-#: next_check: 2021-10-01
+#: next_check: 2021-10-31
 Groß-Berliner Damm: Mittelstreifen	3nocross 18541,4125 18374,4307 18239,4453
 Groß-Berliner Damm: Straßenbahntrasse	3nocross 18374,4307 18239,4453 18042,4667
 Fahlandgasse	1 7675,17430 7675,17475 7675,17538

@@ -177,7 +177,7 @@ Kreisverkehr	Roundabout 46737,-16548
 # 
 #: by: Marita:
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
-Privatstraße der DB	CS 5710,7820 6273,7849
+Privatstraße der DB	CS 5817,7824 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
 # REMOVED (nur auf der östlichen Seite ist ein Tor; deshalb ist es eigentlich unwahrscheinlich, dass hier geschlossen wird) ---  (Weg über das Sportgelände): evtl. nachts geschlossen	CS 13252,14179 13385,13992
 # REMOVED (Bodenschwellen existieren nicht mehr; außerdem ist dieser Eintrag sowieso in handicap_s-orig gedoppelt) --- Borgmannstr.: zwei Bodenschwellen, rechs vorbei fahren	CS 22513,5747 22531,5871
@@ -493,7 +493,7 @@ Bus 135	busroute_N -4647,12269 -4627,12243 -4412,12179
 Bus M37, Bus 131	busroute_N -5030,13017 -5234,12812 -5269,12764 -5282,12730 -5170,12690 -5146,12632 -5196,12452 -5219,12374 -5437,12440 -5518,12259
 Bus 137	busroute_N -5282,12730 -5307,12737 -5480,12793 -5594,12832 -5706,12869 -5784,12858 -5878,12845 -5975,12827 -6093,12801
 Bus 318	busroute_N -7232,445 -7365,371 -7449,348 -7474,341 -7587,312 -7639,312 -7710,313 -7737,316
-Bus 112	busroute_N -3360,2917 -3417,2886 -3452,2868 -3509,2817 -3635,2668 -3686,2579 -3692,2549 -3709,2517 -3725,2475 -3726,2457 -3742,2287 -3689,2267 -3610,2237 -3519,2180 -3568,2382 -3634,2488 -3692,2549
+Bus 112	busroute_N -3360,2917 -3417,2886 -3452,2868 -3509,2817 -3635,2668 -3686,2579 -3692,2549 -3709,2517 -3725,2475 -3726,2457 -3740,2295 -3610,2237 -3519,2180 -3568,2382 -3634,2488 -3692,2549
 Bus 115, Bus 118	busroute_N -1281,2074 -1377,2077 -1463,2080 -1537,2152 -1596,2307 -1604,2324 -1646,2434
 Bus 115	busroute_N 604,2494 421,2401 290,2328 169,2264 96,2225 23,2185 -38,2152 -134,2098 -226,2048 -285,2015 -343,1983 -468,1919 -541,1883 -649,1831 -726,1799 -775,1781 -837,1753 -908,1749 -971,1738 -1064,1696 -1134,1656 -1436,1499 -1486,1481 -1544,1456
 Bus 101	busroute_N 85,1322 150,1251 155,1228 194,1055 214,969 230,899 247,822 254,792 284,470 286,452 264,227 255,152
@@ -1276,7 +1276,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="5"
-#: last_checked: 2021-09-16
+#: last_checked: 2021-09-24
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
@@ -1393,7 +1393,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2021-08-14 (mapillary)
+#: last_checked: 2021-09-24
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13390
 # 
@@ -1573,6 +1573,8 @@ ausgeschildert als "Promenade"	CP2; -2245,21544 -2242,21927
 # 
 ausgeschildert als "Wilhelminenhofer Weg"	CP2; 28234,-25098 28692,-24856
 ausgeschildert als "Am Klein Köriser See"	CP2; 31385,-24079 31364,-24080
+# 
+Werderstr.: Straßenschild wegen Pflanzenbewuchs schwierig zu sehen	CP2; -267,2945 -309,3016
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)
