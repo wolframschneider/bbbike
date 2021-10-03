@@ -160,10 +160,9 @@ Dorfplatz	1 21074,-475 20986,-529 20920,-556 20827,-537 20999,-489 21074,-475
 #: osm_watch: way id="871408060" version="1"
 #: XXX wird auch zwischen Grünbergallee und Paradiesstr. ein Radweg entstehen?
 #: XXX wird auch auf der Paradiesstr. zwischen B96a und Johannes-Tobei-Str. auf der westlichen Seite ein Radweg entstehen, möglicherweise ein Zweirichtungsradweg?
-#: last_checked: 2021-07-17
-#: check_frequency: 120d
-#: next_check: 2021-07-31
-# REMOVED --- #: next_check: 2021-01-31
+#: last_checked: 2021-09-19 (mapillary)
+#: check_frequency: 60d
+# REMOVED --- #: next_check: 2021-07-31
 B96a (Kfz-Straße)	2 20272,-501 20585,-272 20781,-82 21115,271
 # REMOVED (Radweg) --- B96a (Kfz-Straße)	2 21115,271 21286,449 21613,923 21656,989 21829,1351
 # 
@@ -1182,7 +1181,7 @@ DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615
 Katharina-Boll-Dornberger-Str.	1 19086,3370 19073,3357 19033,3397 18987,3442 18998,3454 19013,3466 19057,3422 19097,3380 19086,3370
 #: XXX laut Maßnahme Gr.8 soll die Einbahnstraße hier aufgehoben werden (nur Prio=mittel, allerdings relativ einfach (?) zu realisieren)
 #: osm_watch: way id="151237878" version="8"
-#: last_checked: 2021-07-17
+#: last_checked: 2021-10-02
 #: check_frequency: 90d
 Tauchersteig	1 21879,2592 22011,2658 22047,2662 22058,2649
 #: note implizit?
@@ -2126,7 +2125,7 @@ Groß-Berliner Damm: Mittelstreifen	3nocross 18930,3703 19029,3595 19125,3491
 #: by: https://www.baustellen-doku.info/berlin_strassenbahn_adlershof_II_wista_schoeneweide/20200831/
 #: confirmed_by: srt
 #: XXX hier wird ein Fußgängerübergang erstellt
-#: last_checked: 2021-07-23
+#: last_checked: 2021-10-02
 #: next_check: 2021-10-31
 Groß-Berliner Damm: Straßenbahntrasse	3nocross 17879,4910 17951,4785 18042,4667
 Stromstr.: Mittelstreifen	3nocross 6228,13324 6229,13517 6230,13596
@@ -3316,8 +3315,9 @@ Schranke	BNP:3::trailer=10 17837,12277
 #: by: https://www.berliner-kurier.de/berlin/169-neue-wohnungen-mit-wasserblick-und-zu-bezahlbaren-mieten-li.182642 (Baustart einiger Häuser, Fertigstellung für September 2023 geplant)
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/howoge-neubau-rummelsburger-bucht-und-stralauer-halbinsel.1106/#post-16492
 #: by: https://www.howoge.de/wohnungsbau/neubauprojekte/kynaststrasse.html
+#: by: https://www.berliner-woche.de/rummelsburg/c-bauen/neue-sozialwohnungen-mit-blick-aufs-wasser_a323324
 #: XXX wird es hier nach den Bauarbeiten weiterhin einen Weg geben?
-#: last_checked: 2021-09-15
+#: last_checked: 2021-10-01
 #: check_frequency: 180d
 #: next_check: 2023-09-30
 (Kynaststr. - Paul-und-Paula-Ufer): Bauarbeiten, Weg existiert nicht mehr	2::inwork 14843,10621 14911,10587
@@ -3384,7 +3384,7 @@ Hönower Str.: temporäre Einbahnstraße	1s:q4:inwork 18735,9421 18765,9426 18846,9
 # 
 #: next_check_id: TEGELERBRUECKE-2021
 #: osm_watch: way id="930770437" version="2"
-#: last_checked: 2021-09-04
+#: last_checked: 2021-09-26 (mapillary)
 #: check_frequency: 180d
 #: next_check: 2023-12-01
 Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, komplett gesperrt	2::inwork -196,16060 -203,16064 -205,16086 -224,16095 -265,16111
@@ -3456,7 +3456,7 @@ Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s:q3 10472,14632 10320,14608
 #: XXX bleibt die Absperrung dauerhaft?
 #: osm_watch: way id="830757933" version="1"
 #: osm_watch: way id="610818155" version="4"
-#: last_checked: 2021-08-03
+#: last_checked: 2021-10-02
 #: check_frequency: 60d
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 # 
@@ -3562,7 +3562,7 @@ Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: osm_watch: way id="229647788" version="7"
 #: osm_watch: way id="850453338" version="4"
-#: last_checked: 2021-07-31 (bahninfo-forum)
+#: last_checked: 2021-09-26 (krickstadt)
 #: check_frequency: 120d
 #: next_check: 2021-10-31
 Alexander-von-Humboldt-Weg: Durchgang gesperrt, auch für Fußgänger	2::inwork 18892,3256 18689,3465
@@ -3621,7 +3621,7 @@ Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/stralauer-allee-15-16.657/page-2#post-13509
 #: by: https://rfr-development.de/projekte/stralauer-allee (hier entsteht ein Bürogebäude)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbrücke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2021-09-09
+#: last_checked: 2021-10-01
 #: check_frequency: 360d
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
 # 
@@ -3685,7 +3685,7 @@ Helene-Jacobs-Str.	1::inwork 3332,8207 3326,8100 3320,7982 3309,7782 3210,7786 3
 #: XXX wann wird der Weg wiederhergestellt, wenn überhaupt?
 #: by: https://www.deutsches-architekturforum.de/thread/9401-wasserstadt-stralau-kleine-und-gr%C3%B6%C3%9Fere-projekte/?postID=653296#post653296 (Bauarbeiten bis Ende September 2021)
 #: osm_watch: way id="541556560" version="2"
-#: last_checked: 2021-09-09
+#: last_checked: 2021-10-01
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-09-30
 Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 14569,10055
@@ -3751,10 +3751,12 @@ Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
 #: XXX wann werden die Straßen in der Wasserstadt Spindlersfeld eröffnet? vvv
-#: last_checked: 2021-07-30 vvv
+#: last_checked: 2021-10-02 vvv
 #: check_frequency: 60d vvv
-Carl-Spindler-Str.: durch Bauzäune abgesperrt, manchmal (am Wochenende?) kann man aber durchfahren	2::inwork 21442,5414 21474,5388
-# REMOVED (hier kann man schon fahren) --- Carl-Spindler-Str.: durch Bauzäune abgesperrt	2::inwork 21474,5388 21485,5377 21514,5314 21547,5245 21413,5180
+Carl-Spindler-Str.: durch Bauzäune abgesperrt, mittlerweile ist eine Durchfahrt nicht mehr möglich	2::inwork 21442,5414 21474,5388
+Carl-Spindler-Str.: Hochbauarbeiten, Fahrbahn kann unpassierbar sein	2::inwork 21379,5163 21413,5180 21547,5245 21514,5310 21483,5374 21474,5388
+Carl-Spindler-Str.: kann durch Bauzäune abgesperrt sein	2::inwork 21346,5165 21379,5163
+Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21386,5251 21355,5254
 Henriette-Lustig-Str.: teilweise gesperrt	2::inwork 21375,4974 21380,5003
 # REMOVED (fast fertig) --- Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21611,5119 21645,5135
 Wäscherinnenweg: teilweise gesperrt	2::inwork 21444,5112 21358,5072
@@ -4276,7 +4278,7 @@ Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 #: next_check_id: GRENZALLEE-2014
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/grenzallee-wird-angebunden_a294931
 #: by: https://twitter.com/VIZ_Berlin/status/1364948097718190084 (bis Ende März 2021 für den Kfz-Verkehr gesperrt)
-#: note laut rbb bis 3.1.2022
+#: note laut rbb bis 31.12.2021
 #: source_id: 2147346461 (bis 31.12.2021)
 #: source_id: 2147346643 (bis 31.12.2021)
 #: osm_watch: way id="194653032" version="23"
@@ -4285,13 +4287,14 @@ Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 #: also_indoor: traffic (G)
 #: last_checked: 2021-08-08
 #: check_frequency: 90d
+#: next_check: 2021-12-31
 Bergiusstr.: wegen Bauarbeiten an der BAB100 gesperrt, vielleicht sogar dauerhaft	2::inwork 14051,6731 14106,6663 14150,6609
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019
 #: source_id: 2147343691 (bis 1.9.2022, Gesamtbaumaßnahme bis Ende 2022) (zwischendurch inaktiv, jetzt wieder da)
 #: note: laut rbbtext ebenfalls bis 1.9.2022
 #: also_indoor: traffic (G)
-#: last_checked: 2021-09-11
+#: last_checked: 2021-09-27 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2022-09-30
 wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022

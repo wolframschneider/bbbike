@@ -1775,7 +1775,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3258,7 +3258,7 @@ Hiroshimasteg	2::temp 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 724
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-09-17 (mapillary)
+#: last_checked: 2021-10-01
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -3491,18 +3491,7 @@ Hiroshimasteg	2::temp 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 724
          'until' => undef
        },
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.813076.php (ab August 2019)
-#: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/berlins-erste-spielstrasse_a216586 (ab 7. August 2019)
-	q4::temp::play 11175,9882 11197,9894 11411,9810
-',
-         'from' => 1617141600,
-         'id' => 3145,
-         'recurring' => 1,
-         'text' => 'Böckhstr.: zwischen Grimmstr. und Graefestr. mittwochs zwischen 14 Uhr und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.4. bis 30.9.',
-         'type' => 'handicap',
-         'until' => 1633017600
-       },
+       undef,
        undef,
        {
          'data' => '#: tempex: sunset-T08 vvv
@@ -3923,7 +3912,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-06-08 vvv
+#: last_checked: 2021-09-18 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -4235,80 +4224,12 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX wird diese Spielstraße verstetigt?
-#: last_checked: 2021-05-13
-#: next_check: 2022-05-17
-	q4::temp::play 13273,12902 13371,12694
-',
-         'from' => 1621634400,
-         'id' => 3368,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Richard-Sorge-Str.: zwischen Mühsamstr. und Straßmannstr. Spielstraße sonntags 14 bis 18 Uhr, 23. Mai 2021 bis 30. September 2021',
-         'type' => 'handicap',
-         'until' => 1633039199
-       },
-       {
-         'data' => '#: XXX wird diese Spielstraße verstetigt?
-#: last_checked: 2021-05-12
-#: next_check: 2022-05-12
-	q4::temp::play 14468,11203 14531,11142
-',
-         'from' => 1621288800,
-         'id' => 3369,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Simplonstr.: zwischen Helmerdingstr. und Matkowskystr. Spielstraße mittwochs 15.30 bis 18.30 Uhr, 19. Mai 2021 bis 30. September 2021, außer in den Sommerferien',
-         'type' => 'handicap',
-         'until' => 1633039199
-       },
-       {
-         'data' => '#: XXX wird diese Spielstraße verstetigt?
-#: next_check: 2022-05-14
-	q4::temp::play 11258,10682 11334,10527
-',
-         'from' => 1621461600,
-         'id' => 3370,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Dresdener Str.: zwischen Erkelenzdamm und NKZ Spielstraße freitags von 15 bis 18 Uhr, 21. Mai 2021 bis 30. September 2021, außer in den Sommerferien',
-         'type' => 'handicap',
-         'until' => 1633039199
-       },
-       {
-         'data' => '#: XXX wird diese Spielstraße verstetigt?
-#: next_check: 2022-05-31
-	q4::temp::play 12286,9739 12398,9938
-',
-         'from' => 1622844000,
-         'id' => 3371,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer Spielstraße sonntags 14 bis 18 Uhr, 6. Juni 2021 bis 30. September 2021, außer in den Sommerferien',
-         'type' => 'handicap',
-         'until' => 1633039199
-       },
-       {
-         'data' => '#: XXX wird diese Spielstraße verstetigt?
-#: next_check: 2022-05-16
-	q4::temp::play 11552,10863 11328,10957
-',
-         'from' => 1621634400,
-         'id' => 3372,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Waldemarstr.: zwischen Leuschnerdamm und Adalbertstr. Spielstraße sonntags 15 bis 19 Uhr, 23. Mai 2021 bis 30. September 2021',
-         'type' => 'handicap',
-         'until' => 1633039199
-       },
-       {
-         'data' => '#: XXX wird diese Spielstraße verstetigt? (hier vermutlich erst nach der Beteiligung für die verkehrliche Umgestaltung)
-#: next_check: 2022-05-09
-	q4::temp::play 13032,10355 12897,10439
-',
-         'from' => 1621029600,
-         'id' => 3373,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Wrangelstr.: zwischen Falckensteinstr. und Oppelner Str. Spielstraße sonntags, 14.30 bis 19 Uhr, 16. Mai 2021 bis 30. September 2021, außer in den Sommerferien ',
-         'type' => 'handicap',
-         'until' => 1633039199
-       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => '#: next_check_id: BERLINERALLEE-2021
 #: source_id: viz2021:13.454427,52.549049,23.08.2021,07:00
@@ -4343,7 +4264,8 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        undef,
        undef,
        {
-         'data' => '#: last_checked: 2021-08-08
+         'data' => '#: last_checked: 2021-10-02
+#: XXX vermutlich werden es Betonstein oder Verbundsteinpflaster, außerdem gibt\'s ein neues Drängelgitter am südlichen Ende
 #: add_fragezeichen: Wie lange gehen die Bauarbeiten? Wie ist die Wegoberfläche nach den Bauarbeiten?
 	2::inwork 18432,1352 18290,1574
 ',
@@ -4418,16 +4340,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        undef,
        undef,
        undef,
-       {
-         'data' => '	q4::inwork -1478,18407 -1358,18400
-',
-         'from' => 1625004000,
-         'id' => 3393,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1094021.php',
-         'text' => 'Jörsstr.: Bauarbeiten zwischen Beatestr. und Theresenweg, voraussichtlich von Anfang Juli 2021 bis Anfang Oktober 2021',
-         'type' => 'handicap',
-         'until' => 1633125599
-       },
+       undef,
        {
          'data' => '#: by: https://www.berliner-woche.de/bohnsdorf/c-bauen/bruno-taut-strasse-bekommt-unter-anderem-eine-neue-asphaltdecke_a313839 (bis Juli 2022)
 #: by: https://abendblatt-berlin.de/2021/06/23/mit-den-ferien-kommen-die-baustellen/
@@ -4528,7 +4441,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-09-25
+#: last_checked: 2021-10-02
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -4546,16 +4459,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        },
        undef,
        undef,
-       {
-         'data' => '	q4::inwork 5793,23422 5893,23287
-',
-         'from' => 1627682400,
-         'id' => 3414,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106283.php',
-         'text' => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis Ende September 2021',
-         'type' => 'handicap',
-         'until' => 1633039199
-       },
+       undef,
        undef,
        {
          'data' => '	q4::inwork 60206,86603 59776,86911 59791,87005 59779,87064 59776,87207 59766,87273
@@ -4666,7 +4570,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        },
        {
          'data' => '#: next_check_id: STERNDAMM-2020
-#: last_checked: 2021-09-05 (krickstadt)
+#: last_checked: 2021-10-02 (bahninfo-forum)
 #: check_frequency: 60d
 #: next_check: 2021-10-31
 	q4::inwork 18766,3260 18828,3196 18946,3077
@@ -4723,7 +4627,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6984 (Antrag)
 #: XXX bis wann bleibt die Sperrung bestehen? vvv
 #: note: der Verbindungsweg Puschkinallee und Am Treptower Park war nicht gesperrt: Do 2021-09-09 gegen 22:20 Uhr
-#: last_checked: 2021-09-09 vvv
+#: last_checked: 2021-10-02 vvv
 #: check_frequency: 30d vvv
 	2::night 15668,9140 15631,9114 15580,9181 15604,9215 15693,9194 15683,9136
 	2::night 14478,9545 14384,9565 14316,9542 14318,9688
@@ -4849,25 +4753,17 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        undef,
        undef,
        undef,
+       undef,
        {
-         'data' => '	2::inwork 30118,-43994 31916,-42708
-',
-         'from' => 1632754800,
-         'id' => 3451,
-         'source_id' => '216101533',
-         'text' => 'Rietzneuendorf-Staakow: L 711/K6168 - Brücke über BAB13 Anschlußstelle Staakow: Brückenbauarbeiten, Vollsperrung, 28.09.2021 17:00 Uhr bis 01.10.2021 14:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1633089600
-       },
-       {
-         'data' => '	q4::inwork 9754,12775 9815,12705 9870,12657
+         'data' => '#: source_id: viz2021:13.395572,52.520171,27.09.2021,06:00
+	q4::inwork 9754,12775 9815,12705 9870,12657
 ',
          'from' => 1632628800,
          'id' => 3452,
          'source_id' => 'https://viz.berlin.de/2021/09/verkehrsvorschau-270921/',
-         'text' => 'Am Kupfergraben: Fahrbahn zwischen Dorotheenstr. und Georgenstr. gesperrt, ab 27. September 2021 bis Anfang Oktober 2021',
+         'text' => 'Am Kupfergraben: Fahrbahn zwischen Dorotheenstr. und Georgenstr. gesperrt, ab 27. September 2021 bis 4. Oktober 2021',
          'type' => 'handicap',
-         'until' => 1633125599
+         'until' => 1633341600
        },
        {
          'data' => '	2::inwork -3227,14260 -3173,14216 -3135,14183
@@ -4878,6 +4774,28 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'text' => 'Charlottenstr.: Fahrbahn zwischen Fischerstr. und Mauerstr. gesperrt, evtl. sind auch Radfahrer betroffen, vom 27.09.2021 bis 15.10.2021',
          'type' => 'gesperrt',
          'until' => 1634335200
+       },
+       {
+         'data' => '#: osm_watch: way id="8069460" version="15"
+#: also_indoor: traffic (none)
+	2::inwork 2885,28906 3450,28728
+',
+         'from' => 1633212000,
+         'id' => 3454,
+         'source_id' => 'LS/721-E/21/119',
+         'text' => 'Hohen Neuendorf: Brücke zwischen An den Rotpfuhlen und der August-Müller-Str. gesperrt, 04.10.2021 bis 31.03.2022 ',
+         'type' => 'gesperrt',
+         'until' => 1648764000
+       },
+       {
+         'data' => '	q4::inwork; 8867,4506 8858,4579 8848,4683 8827,4874 8813,5004
+',
+         'from' => 1633212000,
+         'id' => 3455,
+         'source_id' => 'viz2021:13.378629,52.451139,04.10.2021,08:00',
+         'text' => 'Rathausstr.: zwischen Königstr. und Ullsteinstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, evtl. sind auch Radfahrer betroffen, vom 04.10.2021 08:00 bis 22.12.2021 17:00 ',
+         'type' => 'handicap',
+         'until' => 1640214000
        }
      
 );

@@ -1052,12 +1052,12 @@ EOF
      { from  => $isodate2epoch->("2019-09-30 00:00:00"),
        until => $isodate2epoch->("2019-10-06 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 29, months => 9, start => "2020-10-25T00:00:00"]],
-       recurrence_prewarn_days => -2,
+       recurrences => [['yearly', days => 29, months => 9, start => "2021-10-25T00:00:00"]],
        text  => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt, vor und nach dem 3. Oktober 2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/events/2716319-2229501-tag-der-deutschen-einheit-am-brandenburg.html
+#: by: https://www.berlin.de/events/2716319-2229501-tag-der-deutschen-einheit-am-brandenburg.html?date=20211001 (findet 2021 anscheinend nicht statt)
 #: source_id: LMS-BR_r_LMS-BR_147349_LMS-BR_72
 	2 8055,12186 8089,12190 8214,12205
 	2 8214,12205 8303,12216 8344,12221 8538,12245
@@ -28744,7 +28744,7 @@ EOF
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-09-17 (mapillary)
+#: last_checked: 2021-10-01
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -32005,7 +32005,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-06-08 vvv
+#: last_checked: 2021-09-18 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -32832,7 +32832,8 @@ EOF
        text  => 'Glashütter Weg - Künnekeweg: Bauarbeiten, Weg ist gesperrt, Umfahrung über Trampelpfade möglich, Ende der Bauarbeiten unbekannt (Stand August 2021)',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2021-08-08
+#: last_checked: 2021-10-02
+#: XXX vermutlich werden es Betonstein oder Verbundsteinpflaster, außerdem gibt's ein neues Drängelgitter am südlichen Ende
 #: add_fragezeichen: Wie lange gehen die Bauarbeiten? Wie ist die Wegoberfläche nach den Bauarbeiten?
 	2::inwork 18432,1352 18290,1574
 EOF
@@ -33176,7 +33177,7 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-09-25
+#: last_checked: 2021-10-02
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33371,7 +33372,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: STERNDAMM-2020
-#: last_checked: 2021-09-05 (krickstadt)
+#: last_checked: 2021-10-02 (bahninfo-forum)
 #: check_frequency: 60d
 #: next_check: 2021-10-31
 	q4::inwork 18766,3260 18828,3196 18946,3077
@@ -33456,7 +33457,7 @@ EOF
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6984 (Antrag)
 #: XXX bis wann bleibt die Sperrung bestehen? vvv
 #: note: der Verbindungsweg Puschkinallee und Am Treptower Park war nicht gesperrt: Do 2021-09-09 gegen 22:20 Uhr
-#: last_checked: 2021-09-09 vvv
+#: last_checked: 2021-10-02 vvv
 #: check_frequency: 30d vvv
 	2::night 15668,9140 15631,9114 15580,9181 15604,9215 15693,9194 15683,9136
 	2::night 14478,9545 14384,9565 14316,9542 14318,9688
@@ -33625,11 +33626,12 @@ EOF
 EOF
      },
      { from  => 1632628800, # 2021-09-26 06:00
-       until => 1633125599, # 2021-10-01 23:59
-       text  => 'Am Kupfergraben: Fahrbahn zwischen Dorotheenstr. und Georgenstr. gesperrt, ab 27. September 2021 bis Anfang Oktober 2021',
+       until => $isodate2epoch->("2021-10-04 12:00:00"), # 1633125599, # 2021-10-01 23:59
+       text  => 'Am Kupfergraben: Fahrbahn zwischen Dorotheenstr. und Georgenstr. gesperrt, ab 27. September 2021 bis 4. Oktober 2021',
        type  => 'handicap',
        source_id => 'https://viz.berlin.de/2021/09/verkehrsvorschau-270921/',
        data  => <<EOF,
+#: source_id: viz2021:13.395572,52.520171,27.09.2021,06:00
 	q4::inwork 9754,12775 9815,12705 9870,12657
 EOF
      },
@@ -33640,6 +33642,26 @@ EOF
        source_id => 'viz2021:13.20521,52.53583,27.09.2021,09:33',
        data  => <<EOF,
 	2::inwork -3227,14260 -3173,14216 -3135,14183
+EOF
+     },
+     { from  => $isodate2epoch->("2021-10-03 00:00:00"),
+       until => 1648764000, # 2022-04-01 00:00
+       text  => 'Hohen Neuendorf: Brücke zwischen An den Rotpfuhlen und der August-Müller-Str. gesperrt, 04.10.2021 bis 31.03.2022 ',
+       type  => 'gesperrt',
+       source_id => 'LS/721-E/21/119',
+       data  => <<EOF,
+#: osm_watch: way id="8069460" version="15"
+#: also_indoor: traffic (none)
+	2::inwork 2885,28906 3450,28728
+EOF
+     },
+     { from  => 1633212000, # 2021-10-03 00:00
+       until => 1640214000, # 2021-12-23 00:00
+       text  => 'Rathausstr.: zwischen Königstr. und Ullsteinstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, evtl. sind auch Radfahrer betroffen, vom 04.10.2021 08:00 bis 22.12.2021 17:00 ',
+       type  => 'handicap',
+       source_id => 'viz2021:13.378629,52.451139,04.10.2021,08:00',
+       data  => <<EOF,
+	q4::inwork; 8867,4506 8858,4579 8848,4683 8827,4874 8813,5004
 EOF
      },
     );
