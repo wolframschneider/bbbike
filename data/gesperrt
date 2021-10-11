@@ -261,7 +261,7 @@ Leipziger Platz	1 8596,11508 8599,11474 8639,11441 8713,11448 8743,11489 8740,11
 Leipziger Platz	1 8740,11524 8736,11557 8698,11589 8623,11580 8592,11541 8596,11508
 Crusemarkstr.	1 10825,18634 10712,18975
 Kavalierstr.	1 10625,18831 10721,18575
-Kattegatstr.	1 9323,17667 9475,17557
+Kattegatstr.	1 9323,17667 9469,17560
 Waldhüterpfad	1 510,4202 371,4453 301,4643
 Amalienpark	1 10905,18671 10958,18512
 Amalienpark	1 10934,18500 10860,18650
@@ -320,7 +320,7 @@ Karl-Egon-Str.	1 18375,8874 18406,9052 18430,9199 18459,9354
 (Landsberger Allee - Georg-Knorr-Str.)	1 19169,15015 19314,15059 19364,15045
 Marschnerstr.	1 4629,3916 4634,4053
 Wollankstr.	1 10027,18165 10054,18210
-Kreuzstr.	1 9832,17925 9902,18180 9909,18333
+Kreuzstr.	1 9818,17921 9893,18179 9895,18297 9905,18329
 Vorbergstr.	1 7012,9222 7124,9226 7308,9163
 Wederstr.	1 12981,6366 12813,6334 12597,6293
 DGZ-Ring	1 12989,16921 12911,17021 12877,17039 12850,17084 12795,17151 12707,17085 12789,16977 12783,16925 12813,16884 12837,16853 12858,16825
@@ -350,7 +350,9 @@ Bonifaziusstr.	1 2819,21128 2737,21256 2691,21360 2621,21538
 Sandgrasweg	1 2851,21089 2819,21128
 Sandgrasweg	1 2840,21141 2866,21103
 Max-Eyth-Str.	1 2513,6581 2544,6546 2611,6495
-(IKEA-Zufahrt)	1 8211,7034 8222,7053 8224,7148
+(IKEA/Bauhaus-Zufahrt)	1 8077,7040 8211,7034 8222,7053 8224,7148
+(IKEA/Bauhaus-Zufahrt)	1 8221,7018 8210,7024 8078,7029
+(IKEA/Bauhaus-Zufahrt)	1 8211,7034 8221,7018
 Neumarkplan	1 12485,3933 12572,3764 12578,3728 12560,3697 12530,3669 12485,3658 12445,3674 12420,3707 12415,3743 12421,3767 12485,3933
 Mudrastr.	1 7370,2400 7324,2559 7289,2699 7308,2734 7384,2763 7489,2787
 Heiligental	1 5803,19874 5858,19761 5897,19668 5929,19574
@@ -892,6 +894,7 @@ Nußbaumallee: durch Tore abgesperrt	2 1113,12392 1206,12364
 Mittelstreifen, Bordsteine	3nocross::ignrte 12930,10621 12899,10595 12731,10547
 Skalitzer Str. -> Skalitzer Str.: Mittelstreifen, Bordsteine	3::igndisp 12930,10621 12899,10595 12978,10581
 Zufahrt "Gleis Park": durch Tore abgesperrt	2 8367,10745 8350,10662 8335,10518
+Ehrenfelsstr.	1s 18737,8686 18778,8663
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1509,7 +1512,7 @@ Bärensteinstr. -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 21379,1542
 Bärensteinstr. -> Hinter der Mühle: Straßenbahntrasse	3::igndisp 21379,15427 21228,15449 21090,15525
 Allee der Kosmonauten -> Alt-Marzahn: Straßenbahntrasse	3::igndisp 21163,15289 21187,15350 21139,15376
 Alt-Marzahn -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 21139,15376 21187,15350 21228,15449
-Straßenbahn auf der Fahrbahn	3nocross::ignrte 10089,18180 10054,18210 9909,18333
+Straßenbahn auf der Fahrbahn	3nocross::ignrte 10089,18180 10054,18210 9905,18329
 Schönholzer Str. -> Wollankstr.: Straßenbahn auf der Fahrbahn	3::igndisp 10089,18180 10054,18210 10027,18165
 Straßenbahntrasse	3nocross::ignrte 22674,4309 22713,4286 22812,4227 22888,4184 22907,4169 22949,4136 22965,4124
 Müggelheimer Str. -> Pohlestr.: Straßenbahntrasse	3::igndisp 22888,4184 22812,4227 22831,4070
@@ -2202,19 +2205,12 @@ Neuzeller Weg -> Hansastr.: Straßenbahntrasse	3::igndisp 16658,17142 16578,17285
 Mittelstreifen	3nocross::ignrte 18930,3703 18884,3752 18856,3783 18826,3816
 Landschaftspark Johannisthal -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18592,3743 18884,3752 18856,3783
 Landschaftspark Johannisthal -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18833,3781 18856,3783 18826,3816
-Mittelstreifen	3nocross::ignrte 18826,3816 18779,3866 18541,4125
-Gerhard-Sedlmayr-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18702,3790 18779,3866 18541,4125
+Mittelstreifen	3nocross::ignrte 18826,3816 18779,3866 18739,3909
+Gerhard-Sedlmayr-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18702,3790 18779,3866 18739,3909
 Groß-Berliner Damm -> Gerhard-Sedlmayr-Str.: Mittelstreifen	3::igndisp 18826,3816 18779,3866 18702,3790
 Mittelstreifen	3nocross::ignrte 18930,3703 19029,3595 19125,3491
 Groß-Berliner Damm -> Konrad-Zuse-Str.: Mittelstreifen	3::igndisp 19125,3491 19029,3595 18943,3508
 Konrad-Zuse-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18943,3508 19029,3595 18930,3703
-Straßenbahntrasse	3nocross::ignrte 17879,4910 17951,4785 18042,4667
-Pilotenstr. -> Pilotenstr.: Straßenbahntrasse	3::igndisp 18031,4831 17951,4785 17868,4742
-Pilotenstr. -> Groß-Berliner Damm: Straßenbahntrasse	3::igndisp 18031,4831 17951,4785 18042,4667
-Pilotenstr. -> Pilotenstr.: Straßenbahntrasse	3::igndisp 17868,4742 17951,4785 18031,4831
-Pilotenstr. -> Groß-Berliner Damm: Straßenbahntrasse	3::igndisp 17868,4742 17951,4785 17879,4910
-Groß-Berliner Damm -> Pilotenstr.: Straßenbahntrasse	3::igndisp 17879,4910 17951,4785 18031,4831
-Groß-Berliner Damm -> Pilotenstr.: Straßenbahntrasse	3::igndisp 18042,4667 17951,4785 17868,4742
 Mittelstreifen	3nocross::ignrte 6228,13324 6229,13517 6230,13596
 Stromstr. -> Bugenhagenstr.: Mittelstreifen	3::igndisp 6228,13324 6229,13517 6104,13522
 unbequem zu überqueren, zusätzlich Geländer am Gehweg	3nocross::ignrte 13476,11174 13493,11217 13541,11355
@@ -2408,6 +2404,8 @@ möglicherweise abgeschlossenes Tor	3 11360,20982 11382,21083 11371,21121
 möglicherweise abgeschlossenes Tor	3 11371,21121 11382,21083 11360,20982
 abgeschlossenes Tor	3 14556,409 14701,0 14710,-25
 abgeschlossenes Tor	3 14710,-25 14701,0 14556,409
+abgeschlossenes Tor	3 8161,7907 8203,7909 8260,7911
+abgeschlossenes Tor	3 8260,7911 8203,7909 8161,7907
 tragen (ca. 33 Stufen)	0:30:-86 20661,12140
 tragen	0:30:5 20657,12101
 tragen (16 Stufen)	0:25:-233 20330,12025
@@ -2710,7 +2708,6 @@ Drängelgitter	BNP:2:-76:trailer=6 7886,8335
 Drängelgitter	BNP:2:-75:trailer=6 7911,8329
 Schranke, kann auf Bürgersteig umfahren werden	BNP:3:-217:trailer=5 1778,20377
 Drängelgitter	BNP:5:-65:trailer=10 4626,20960
-Drängelgitter	BNP:5:32:trailer=10 7764,21271
 Schranke	BNP:3:-105:trailer=10 11392,10520
 Schranken (2x)	BNP:3:-151:trailer=10 11317,10485
 Drängelgitter (2x)	BNP:5:2:trailer=10 22187,13304
@@ -3164,6 +3161,8 @@ Drängelgitter	BNP:3:-44:trailer=10 -739,23004
 Schranke	BNP:1:90:trailer=3 1201,15804
 Drängelgitter	BNP:3:57:trailer=10 32616,-23392
 Schranke	BNP:3:-115:trailer=10 17837,12277
+Verlängerung Zwieseler Str.: Baustellenabsperrung	2::inwork 19705,9039 19638,9070
+Wandlitzstr.: in Höhe Lehndorffstr. ist die Fahrbahn gesperrt	1s:inwork 18401,8636 18448,8602
 (Kynaststr. - Paul-und-Paula-Ufer): Bauarbeiten, Weg existiert nicht mehr	2::inwork 14843,10621 14911,10587
 Schönfließ - Summt: Brücke über die A10 wird neu gebaut	2::inwork 5752,30817 5787,30867
 Stolper Weg: Brücke über die A10 wird neu gebaut	2::inwork 514,32607 525,32437
@@ -3205,10 +3204,10 @@ Pfarrer-Lütkehaus-Platz: Sperrung am Bahnübergang	2::inwork 10228,-2136 10231,-2
 Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10300,-2135 10296,-2156 10318,-2156
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
-Uferweg: wegen Bauarbeiten gesperrt	2::inwork 14126,10176 14202,10152 14373,10046
+Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,10152 14373,10046
 Otto-Weidt-Platz: Bauarbeiten	2::inwork 7923,14142 7778,14059
-Lydia-Rabinowitsch-Str. - Hamburger Bahnhof: direkter Durchgang wegen Bauarbeiten gesperrt	2::inwork 7959,13982 7997,13892
-George-Stephenson-Str.: Bauarbeiten, gesperrt	2::inwork 7487,14472 7452,14415 7500,14333 7569,14217 7687,14017
+Lydia-Rabinowitsch-Str. - Hamburger Bahnhof: direkter Durchgang wegen Bauarbeiten gesperrt	2::inwork 7959,13982 7997,13892 8025,13835
+George-Stephenson-Str.: Bauarbeiten, gesperrt	2::inwork 7487,14472 7452,14415 7500,14333 7569,14217 7679,14030
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 8057,13923 8086,13862
 Helene-Jacobs-Str.	1::inwork 3332,8207 3326,8100 3320,7982 3309,7782 3210,7786 3219,7987 3224,8106 3230,8230
 Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 14569,10055
@@ -3258,6 +3257,7 @@ Mühlensteg (Tegeler Hafen): Weg gesperrt	2 1691,20638 1697,20623 1721,20603
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10102,12384 10063,12438
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
+Margarete-Steffin-Str.: Einbahnstraßenregelung	1s:inwork 8700,12810 8732,12804
 Löwenbrücke: gesperrt	2:inwork 6417,11796 6438,11784
 (Güterbahnhof Greifswalder Str.): Brücke gesperrt	2 12602,15006 12649,14977
 (Güterbahnhof Greifswalder Str.): kann bei Veranstaltungen gesperrt sein	2:temp 12520,15057 12602,15006

@@ -7,7 +7,6 @@ Privatweg (Kronenstr.)	2 10132,11810 10114,11789 10079,11765 9910,11755 9896,117
 Maulbronner Ufer	1 7161,4110 7307,4087 7389,4088 7484,4109 7539,4127 7585,4154 7673,4223
 Reichstagufer	1 9098,12687 8892,12576 8766,12541
 Bunsenstr.	1 8892,12576 8904,12489
-Heimstr.	1 9973,9232 9966,9151 9958,9050 9951,8965
 Südstern	1 10705,9234 10547,9233
 Warschauer/Gubener	3nocross::ignrte 13651,11731 13603,11538 13588,11490
 Warschauer Str. -> Gubener Str.: Warschauer/Gubener	3::igndisp 13588,11490 13603,11538 13568,11560
@@ -1253,7 +1252,7 @@ Neuer Steg	3 8337,19160 8277,19210 8209,19107
 Neuer Steg	3 8209,19107 8277,19210 8166,19308
 Neuer Steg	3 8209,19107 8277,19210 8337,19160
 Straße 201	1 9366,18669 9511,18785 9529,18815
-Majakowskiring	1 10373,18889 10354,18814 10203,18762 10041,18697 9985,18735 10003,18798 10055,18831 10162,18867 10184,18875 10307,18915 10373,18889
+Majakowskiring	1 10358,18882 10364,18852 10341,18812 10203,18762 10041,18697 9985,18735 10003,18798 10048,18824 10162,18867 10184,18875 10300,18915 10339,18907 10358,18882
 Killisch-von-Horn-Weg: Poller	3 9590,18082 9707,17941 9730,17927
 Killisch-von-Horn-Weg: Poller	3 9730,17927 9707,17941 9590,18082
 Frauenfelder Weg - Markstr.	3 7441,17009 7647,17037 7644,17054
@@ -1856,13 +1855,6 @@ Andernacher Str.	1 18949,8437 19000,8509
 Pfarrhufenweg	1 25599,13069 25684,13172
 Feldrain	1 25684,13172 25632,13214 25609,13232 25607,13459
 Andernacher Str.	1 19054,8571 19000,8509
-Mittelstreifen	3nocross::ignrte 18541,4125 18374,4307 18239,4453
-Gerhard-Sedlmayr-Str. -> Benno-König-Str.: Mittelstreifen	3::igndisp 18228,4168 18374,4307 18434,4363
-Gerhard-Sedlmayr-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18228,4168 18374,4307 18239,4453
-Benno-König-Str. -> Gerhard-Sedlmayr-Str.: Mittelstreifen	3::igndisp 18434,4363 18374,4307 18228,4168
-Benno-König-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18434,4363 18374,4307 18541,4125
-Groß-Berliner Damm -> Benno-König-Str.: Mittelstreifen	3::igndisp 18239,4453 18374,4307 18434,4363
-Groß-Berliner Damm -> Gerhard-Sedlmayr-Str.: Mittelstreifen	3::igndisp 18541,4125 18374,4307 18228,4168
 Straßenbahntrasse	3nocross::ignrte 18374,4307 18239,4453 18042,4667
 Louis-Blériot-Str. -> Groß-Berliner Damm: Straßenbahntrasse	3::igndisp 18341,4543 18239,4453 18374,4307
 Groß-Berliner Damm -> Louis-Blériot-Str.: Straßenbahntrasse	3::igndisp 18042,4667 18239,4453 18341,4543
@@ -2139,10 +2131,13 @@ Bornholmer Str. -> Nordkapstr.: Straßenbahntrasse	3::igndisp 10370,16516 10458,1
 Nordkapstr. -> Driesener Str.: Straßenbahntrasse	3::igndisp 10465,16656 10458,16509 10449,16415
 Nordkapstr. -> Bornholmer Str.: Straßenbahntrasse	3::igndisp 10465,16656 10458,16509 10533,16505
 Bergmannstr.	2:Anlieger 9753,9252 9689,9266 9632,9280 9505,9306
+Bergmannstr.	1 9505,9306 9632,9280 9689,9266 9753,9252
 Bergmannstr.	2:Anlieger 9505,9306 9489,9309 9309,9347 9248,9350
 Nostitzstr.	2:Anlieger 9552,9602 9524,9426
 Nostitzstr.	2:Anlieger 9524,9426 9505,9306
+Nostitzstr.	1 9524,9426 9505,9306
 Nostitzstr.	2:Anlieger 9505,9306 9487,9209
+Nostitzstr.	1 9487,9209 9505,9306
 Solmsstr.	2:Anlieger 9676,9564 9650,9404 9632,9280
 Riemannstr.	2:Anlieger 9767,9386 9650,9404
 Riemannstr.	2:Anlieger 9524,9426 9578,9417
@@ -2153,11 +2148,14 @@ Schwiebusser Str.	2:Anlieger 9801,8889 9417,8890 9227,8890
 Fidicinstr.	2:Anlieger 9799,8962 9654,8991 9459,9019 9295,9047 9224,9053
 Willibald-Alexis-Str.	2:Anlieger 9958,9050 9797,9063 9669,9080 9596,9092 9526,9104 9477,9113
 Arndtstr.	2:Anlieger 9966,9151 9795,9162 9674,9179 9617,9185 9546,9198 9487,9209
+Heimstr.	2:Anlieger 9951,8965 9958,9050 9966,9151 9973,9232
+Heimstr.	1 9973,9232 9966,9151 9958,9050 9951,8965
 Kopischstr.	2:Anlieger 9459,9019 9477,9113
 Kloedenstr.	2:Anlieger 9654,8991 9669,9080
 Chamissoplatz	2:Anlieger 9596,9092 9617,9185
 Chamissoplatz	2:Anlieger 9526,9104 9546,9198
 Am Tempelhofer Berg	2:Anlieger 9295,9047 9298,9112 9304,9241 9309,9347
+Schleiermacherstr.	1:Anlieger 10032,9456 10004,9268
 Karl-Marx-Platz: Poller	3 13100,7626 13130,7633 13177,7644
 Karl-Marx-Platz: Poller	3 13177,7644 13130,7633 13100,7626
 (Wohngebiet an der Kopenhagener Str.): Einbahnstraße außer für Radfahrer	1 7578,19753 7546,19665 7578,19648
@@ -2167,8 +2165,17 @@ Liepe - Bralitz: Brücke gesperrt	2 48210,51009 48230,50933
 Köpenicker Str. (KW)	1 26044,-11318 26149,-11189
 Rochowstr. (Brandenburg)	1 -47685,-2385 -47938,-2184
 Auerstr.	1 13273,12902 13202,12790 13067,12583 13025,12523
+Weidenweg	1 13025,12523 13176,12500 13357,12473 13457,12505
+Weidenweg	1 13675,12581 13598,12554 13548,12535 13457,12505
 Bernau, an der Panke	2:Anlieger 22337,29746 22402,29725 22513,29747 22522,29766
 Telekomstr.	2 26919,42412 27062,43000 27277,43233 27857,43642 28681,43910 29112,44050 29478,44280 29730,44644 29887,44928 29965,45291 30273,45860 30592,46332
 Niemannstr.	1 14254,11377 14211,11229
 Kolonie am See	1 -2242,21927 -2245,21544
 Bülowstr./Dennewitzplatz	1 7702,10146 7814,10117 7906,10098
+Straßenbahntrasse	3nocross::ignrte 17879,4910 17951,4785 18042,4667
+Pilotenstr. -> Pilotenstr.: Straßenbahntrasse	3::igndisp 18031,4831 17951,4785 17868,4742
+Pilotenstr. -> Groß-Berliner Damm: Straßenbahntrasse	3::igndisp 18031,4831 17951,4785 18042,4667
+Pilotenstr. -> Pilotenstr.: Straßenbahntrasse	3::igndisp 17868,4742 17951,4785 18031,4831
+Pilotenstr. -> Groß-Berliner Damm: Straßenbahntrasse	3::igndisp 17868,4742 17951,4785 17879,4910
+Groß-Berliner Damm -> Pilotenstr.: Straßenbahntrasse	3::igndisp 17879,4910 17951,4785 18031,4831
+Groß-Berliner Damm -> Pilotenstr.: Straßenbahntrasse	3::igndisp 18042,4667 17951,4785 17868,4742

@@ -25,7 +25,7 @@ Leipziger Str. Richtun Osten	Jam; 9268,11590 9444,11616 9569,11631
 Friedrichstr.	Jam; 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351
 # 
 #: next_check_id: FRIEDRICH-2020
-#: last_checked: 2021-07-26 vvv
+#: last_checked: 2021-10-07 vvv
 #: next_check: 2021-10-31 vvv
 #: valid: !20200821-20211031 vvv
 Friedrichstr.	Jam; 9418,11804 9432,11702 9444,11616
@@ -68,9 +68,9 @@ Marktstr./Karlshorster Str.	Jam; 15144,10905 15279,10862
 # REMOVED --- Karl-Marx-Str.	Jam; 12714,8249 12689,8289 12639,8344 12598,8390
 # 
 #: next_check_id: KARLMARXSTR-2018
-#: last_checked: 2021-07-14
-#: check_frequency: 120d
-#: next_check: 2021-10-08
+#: last_checked: 2021-09-27 (mapillary)
+#: check_frequency: 360d
+#: next_check: 2021-12-31
 Karl-Marx-Str.	Jam; 12330,8636 12494,8501 12545,8449 12562,8432 12582,8408 12598,8390
 Karl-Marx-Str.	Jam; 12598,8390 12582,8408 12562,8432 12545,8449 12494,8501
 # 
@@ -122,18 +122,11 @@ Adalbertstr.	Jam; 11552,10863 11589,10947 11640,11067
 # 
 Romain-Rolland-Str.	Jam; 12856,17825 12825,17870 12736,17998
 # 
-#: next_check_id: STERNDAMM-2020
-#: last_checked: 2021-09-17 vvv
-#: check_frequency: 30d vvv
-#: next_check: 2021-10-31 vvv
-#: XXX evtl. nur während der vorbereitenden Arbeiten zur neuen Straßenbahntrasse? vvv
+# REMOVED --- #: next_check_id: STERNDAMM-2020 --- #: last_checked: 2021-09-17 vvv --- #: check_frequency: 30d vvv --- #: next_check: 2021-10-31 vvv --- #: XXX evtl. nur während der vorbereitenden Arbeiten zur neuen Straßenbahntrasse? vvv
 # REMOVED (während des Einbahnstraßenverkehrs nicht mehr) --- #: note: rechts der möglichen Autokolonne sind Straßenbahngleise --- Sterndamm	Jam; 17886,5587 17736,5441 17648,5338
-Sterndamm	Jam; 17648,5338 17736,5441
+# REMOVED (Radweg existiert) --- Sterndamm	Jam; 17648,5338 17736,5441
 # REMOVED (mittlerweile existiert eine provisorische Radspur) --- Sterndamm	Jam; 17736,5441 17886,5587
-#: XXX ^^^
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
+# REMOVED --- #: XXX ^^^ --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
 #: note: nachmittags und abends werktags
 #: note: gesehen: 2021-02-25 18:15 (Werktag, schöner warmer Tag)
