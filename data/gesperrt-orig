@@ -3387,7 +3387,7 @@ Hebammensteigbr¸cke	2::inwork 13168,21706 13046,21734
 #: last_checked ^^^
 # 
 #: XXX Bis wann bleibt die Einbahnstraﬂe bestehen? Siehe auch anderen Eintrag zur mˆglichen Asphaltierung.
-#: osm_watch: way id="4045220" version="41"
+#: osm_watch: way id="4045220" version="42"
 #: osm_watch: way id="938037386" version="1"
 #: osm_watch: way id="868103791" version="2"
 #: last_checked: 2021-08-03
@@ -3576,7 +3576,7 @@ Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dˆrfelweg: gesperrt wegen Bauarbeiten	
 #: XXX Gesperrt wegen Bauarbeiten an der neuen Straﬂenbahntrasse sowie den neuen Baufeldern nˆrdlich davon. Laut bahninfo-forum wird der Weg nach den Bauarbeiten wieder geˆffnet.
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: osm_watch: way id="229647788" version="7"
-#: osm_watch: way id="850453338" version="4"
+#: osm_watch: way id="850453338" version="5"
 #: last_checked: 2021-10-10
 #: check_frequency: 120d
 # REMOVED (Hochbauarbeiten dauern l‰nger) --- #: next_check: 2021-10-31
@@ -3633,11 +3633,12 @@ Pfarrer-L¸tkehaus-Platz: Einbahnstraﬂenregelung	1::inwork 10300,-2135 10296,-215
 #: next_check: 2028-01-01
 Unterf¸hrung unter der Elsenbr¸cke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 # 
-#: by: https://www.architektur-urbanistik.berlin/index.php?threads/stralauer-allee-15-16.657/page-2#post-13509
+#: by: https://www.architektur-urbanistik.berlin/index.php?threads/stralauer-allee-15-16.657/page-2#post-13509 (Fertigstellung zum 30.6.2024 geplant)
 #: by: https://rfr-development.de/projekte/stralauer-allee (hier entsteht ein B¸rogeb‰ude)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbr¸cke zu tun, oder ist es vielleicht ein anderes Baufeld?
 #: last_checked: 2021-10-05
 #: check_frequency: 360d
+#: next_check: 2024-06-30
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
 # 
 #: by: wosch
@@ -4304,7 +4305,7 @@ Rummelsburger Platz: zur H‰lfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 #: source_id: 2147346461 (bis 31.12.2021)
 #: source_id: 2147346643 (bis 31.12.2021)
 #: osm_watch: way id="194653032" version="23"
-#: osm_watch: way id="846595294" version="2"
+#: osm_watch: way id="846595294" version="3"
 #: osm_watch: way id="38725490" version="15"
 #: also_indoor: traffic (G)
 #: last_checked: 2021-08-08
@@ -4519,7 +4520,7 @@ Neue Plantage: hier noch Baustelle	2:inwork -13100,-1411 -13017,-1426
 #: XXX Schlossstraﬂe (ˆstlicher Verlauf) -> Anna-Zielenziger-Straﬂe (PLZ: 14467)
 #: XXX Schwertfegerstraﬂe (ˆstlicher Verlauf) -> Erika-Wolf-Straﬂe (bereits eingetragen)
 #: osm_watch: way id="534669300" version="7" brb
-#: last_checked: 2020-10-13 (daf)
+#: last_checked: 2021-10-11 (daf)
 # REMOVED --- #: next_check: 2020-09-01
 #: check_frequency: 180d
 Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-1449 -12694,-1408 -12727,-1416
@@ -4531,7 +4532,7 @@ Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-14
 #: by: https://www.deutsches-architekturforum.de/thread/10252-potsdam-wiederherstellung-historische-mitte-projekte-news/?postID=643086#post643086
 #: XXX die derzeitige Straﬂe ist asphaltiert, bleibt das so?
 #: osm_watch: way id="765539341" version="3" brb
-#: last_checked: 2020-10-13 (daf)
+#: last_checked: 2021-10-11 (daf)
 # REMOVED --- #: next_check: 2020-09-01
 #: check_frequency: 180d
 Erika-Wolf-Str. (Potsdam): w‰hrend der Bauarbeiten gesperrt	2::inwork -12812,-1490 -12685,-1449
