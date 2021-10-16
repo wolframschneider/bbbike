@@ -321,6 +321,10 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://twitter.com/VIZ_Berlin/status/1405873886873411584
 #: by: https://abendblatt-berlin.de/2021/06/24/berlin-mitte-kampagne-wirbt-fuer-friedrichstrasse/
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/bund-der-steuerzahler-kritisiert-hohe-kosten-fuer-autofreie-friedrichstrasse_a314448
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1135889.php
+#: by: https://www.tagesspiegel.de/berlin/modellprojekt-in-berlin-mitte-flaniermeile-in-der-friedrichstrasse-soll-dauerhaft-autofrei-bleiben/27709124.html
+#: by: https://www.berliner-zeitung.de/mensch-metropole/senat-schafft-vollendete-tatsachen-friedrichstrasse-in-mitte-bleibt-autofrei-li.188723
+#: by: https://berliner-abendblatt.de/2021/10/15/mitte-friedrichstrasse-soll-dauerhaft-autofrei-bleiben/
 #: source_id: 2147346249
 #: last_checked: 2021-07-26 vvv
 #: next_check: 2021-10-31 vvv
@@ -711,8 +715,10 @@ Langenbeckstr. (Friedrichshain)	N 13151,13367 13081,13457
 Kolonnenstr.	H 8209,8773 8145,8773 8078,8772 8014,8771 8008,8771 7795,8765 7709,8777 7642,8815 7563,8871 7548,8879 7497,8916 7360,8918 7315,8941 7307,8945 7268,8960
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7886 (Antrag)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_29_2481_2536_online.pdf (Umbenennung)
-#: XXX wird am 18.10.2021 zum Richard-von-Weizsäcker-Platz umbenannt
-#: next_check: 2021-10-18
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_45_4009_4092_online.pdf (Widerspruch)
+#: XXX wird am 18.10.2021 zum Richard-von-Weizsäcker-Platz umbenannt --- verzögert sich wegen Widerspruchs
+# REMOVED --- #: next_check: 2021-10-18
+#: last_checked: 2021-10-15 (Amtsblatt)
 Kaiser-Wilhelm-Platz	NN 7201,8870 7307,8945
 Herbertstr. (Schöneberg)	N 7360,8918 7389,8837 7402,8783 7395,8761
 Feurigstr.	N 6807,8309 7012,8511 7086,8579 7346,8817 7389,8837 7467,8863 7497,8916
@@ -1289,7 +1295,7 @@ Mercedes-Platz	NN 12990,11006 13063,11147
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="9"
 #: priority: #C
-#: last_checked: 2021-10-03 (osm)
+#: last_checked: 2021-10-13
 #: next_check: 2023-01-01
 (Planstraße C)	N 12926,11224 12848,11093
 # 
@@ -3460,7 +3466,7 @@ Mondsteinpfad	NN 11181,1884 11182,1976
 Säntisstr.	H 10067,1939 9984,1860 9964,1839 9821,1692 9771,1641 9695,1563
 #: next_check_id: SAENTISSTR-2018
 #: XXX nach den Bauarbeiten wieder zu H machen
-#: last_checked: 2020-07-11
+#: last_checked: 2021-10-13 (bahninfo-forum)
 #: next_check: 2021-12-31
 Säntisstr.	N 9695,1563 9391,1235 9241,1073 9165,1014 9129,986 9058,932 9024,906 9014,898 8971,864
 Säntisstr.	H 8971,864 8892,802
@@ -3921,7 +3927,7 @@ Rosensteinweg	N 1718,9653 1917,9821 1927,9820
 #: XXX Umbenennung zu Baraschstr. soll erfolgen (allerdings gibt es noch keinen Amtsblatt-Eintrag)
 #: also_indoor: search Wissmannstraße Baraschstraße
 #: osm_watch: way id="4623428" version="10"
-#: next_check: 2021-10-15
+#: next_check: 2021-10-22
 Wissmannstr.	N 1341,9244 1421,9173 1434,9154 1483,9132 1569,9137 1708,9298
 Winkler Str.	N 936,8933 1037,8884 1090,8892 1316,9067 1434,9154
 Erdener Str.	N 1457,9344 1587,9320 1708,9298 1757,9282 1782,9270
@@ -11125,6 +11131,8 @@ Albert-Hößler-Str.	N 16097,11669 16083,11733 16099,11786 16128,11881
 Krautstr.	N 11963,11813 11966,11832 11993,11978 12002,12008
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_26_2221_2280_online.pdf (Straßenlandeinziehung)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_32_2677_2772_online.pdf (Straßenlandeinziehung)
+#: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/krautstrasse-bleibt-fussgaengerzone_a325172
+#: by: https://berliner-abendblatt.de/2021/10/12/friedrichshain-fussgaengerzone-krautstrasse-bleibt/
 Krautstr.	NN 12002,12008 12021,12066
 Krautstr.	N 12021,12066 12059,12172 12081,12236 12118,12462
 Lange Str. (Friedrichshain)	N 11993,11978 12238,11931 12413,11901
@@ -17089,6 +17097,7 @@ Boetticherstr.	N 2434,4299 2417,4327
 Von-Laue-Str.	N 2532,4364 2713,4087
 Rudeloffweg	N 2545,4565 2630,4432 2682,4364 2815,4162
 Paula-Thiede-Ufer	N 12092,11475 12050,11511 12031,11529 12010,11545
+#: note: Schilder mit "Privatstraße, Durchfahrt verboten" an beiden Enden
 Bona-Peiser-Weg	N 12010,11545 11947,11398
 (südliches Spreeufer)	NN 5574,12237 5604,12244 5643,12253 5714,12290 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
 Elisabeth-Abegg-Str.	N 7930,12912 7858,12830 7789,12764

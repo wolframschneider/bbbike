@@ -1060,39 +1060,7 @@ Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_44_6553_6696_online.pdf
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_34_2821_2896_online.pdf
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_42_3793_3876_online.pdf
-#: by: https://viz.berlin.de/2021/10/verkehrsvorschau-13102021/ (Erwähnung des Großen Zapfenstreichs)
-	2::temp 8424,12853 8503,12895
-	2::temp 7930,12912 8021,12832
-# REMOVED (Adele-Schreiber-Krieger-Str.) ---	2::temp 8737,12757 8596,12760 8545,12760
-# REMOVED (westl. John-Foster-Dulles-Allee) ---	2::temp 7514,12387 7627,12380 7821,12367 7875,12363
-östl. John-Foster-Dulles-Allee	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
-# REMOVED (Schiffbauerdamm) ---	2::temp 8514,12877 8545,12760
-östl. Straße des 17. Juni	2::temp 8775,12457 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150
-# REMOVED (westl. Straße des 17. Juni) ---	2::temp 7816,12150 7383,12095 7026,12054 6828,12031
-	2::temp 8595,12066 8600,12165 8538,12245
-Große Querallee	2::temp 7816,12150 7822,12201 7875,12363 7945,12592
-südl. Spreeuferweg	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8025,12879 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
-Paul-Löbe-Allee und Verlängerungen	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593 8596,12576
-Yitzhak-Rabin-Str. bis Gustav-Heinemann-Brücke	2::temp 8120,12756 8122,12603 8119,12414 8055,12186 8119,12414 8122,12603 8120,12756 8114,12839 8115,12912 8116,12938 8110,13042
-nördl. Wilhelmstr.	2::temp 8775,12457 8766,12541
-Willy-Brandt-Str. - Konrad-Adenauer-Str.	2::temp 8021,12832 8030,12824 8120,12756 8206,12757 8252,12757 8309,12758 8424,12853
-Platz des 18. März	2::temp 8538,12245 8592,12252
-	2::temp 8252,12757 8115,12912
-	2::temp 8344,12221 8391,12389 8400,12417
-	2::temp 8546,12279 8391,12389 8354,12416
-	2::temp 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414
-	2::temp 8309,12758 8415,12749 8593,12742
-',
-         'from' => 1633989600,
-         'id' => 1422,
-         'text' => 'Straße des 17. Juni und Straßen im Regierungsviertel am 13. Oktober 2021 von 11 bis 21 Uhr gesperrt (Großer Zapfenstreich)',
-         'type' => 'gesperrt',
-         'until' => 1634151600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2642,7 +2610,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'from' => undef,
          'id' => 2454,
          'recurring' => 1,
-         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
+         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Winter: 18.00 bis 6.00 Uhr',
          'until' => undef
        },
        {
@@ -3204,18 +3172,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: viz2021:13.458347,52.485839,13.10.2021,20:00
-# REMOVED (hier vermutlich nicht) ---	2::inwork 14363,8738 14318,8790 14261,8851
-	2::inwork 14261,8851 14151,8967
-',
-         'from' => 1634061600,
-         'id' => 2841,
-         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1611/nachricht6250.html',
-         'text' => 'Kiefholzstr.: Sperrung zwischen Treptower Str. und Puderstr. im Bereich der Bahnbrücke, vom 13.10.2021, 20:00 Uhr bis zum 14.10.2021, 05:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1634180400
-       },
+       undef,
        {
          'data' => '#: tempex: sunset-T07
 	2::night -12544,-1799 -12396,-1681 -12253,-1589 -12260,-1503 -12256,-1456
@@ -3260,35 +3217,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147341611
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_28_2389_2480_online.pdf (2021)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_34_2821_2896_online.pdf (Großer Zapfenstreich 2021)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_35_2897_2964_online.pdf (Aufhebung der letzten Einschränkung)
-#: by: https://www.bmvg.de/de/presse/grosser-zapfenstreich-zur-wuerdigung-einsatz-afghanistan-5181746 (Verschiebung, noch kein neuer Termin)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_42_3793_3876_online.pdf (Großer Zapfenstreich 2021, neuer Termin)
-#: by: https://viz.berlin.de/2021/10/verkehrsvorschau-13102021/ (Erwähnung des Großes Zapfenstreichs)
-	2::temp 7435,11514 7322,11177
-	2::temp 7579,11032 7595,11086 7665,11353 7717,11540
-	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
-	2::temp 7595,11086 7575,11076 7252,11188
-Lützowufer	2::temp 7089,11073 7248,11143 7461,11051 7579,11032
-Hiroshimastr.	2::temp 7253,11208 7356,11517
-Hiroshimasteg	2::temp 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7248,11143
-# REMOVED ---	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
-# REMOVED ---	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
-# REMOVED ---	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
-# REMOVED ---	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
-# REMOVED ---	2::temp 7665,11353 7745,11332
-# REMOVED ---	2::temp 7745,11332 7690,11108
-',
-         'from' => 1634022000,
-         'id' => 2875,
-         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
-         'text' => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 13. Oktober 2021 von 09:00 bis 16:30 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1634135400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3524,7 +3453,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-09-16
+#: last_checked: 2021-10-13
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -3608,6 +3537,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
          'data' => '#: next_check_id: KYNAST-2021
 # REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1062401427862110209
 # REMOVED --- #: XXX regelmäßig prüfen --- #: priority: #A --- #: last_checked: 2018-11-16
+#: note: mittlerweile gibt es eine offizielle Radwegführung teilweise via Gehweg, deshalb: q4 -> q3
 #: by: https://viz.berlin.de/2020/07/schau-11_12-07_2020/ ("für den Kraftfahrzeugverkehr gesperrt")
 #: by: https://twitter.com/VIZ_Berlin/status/1282208228005355520 (kein Radweg zu sehen)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1043669.php ("Notweg für Radfahrer" (?))
@@ -3616,10 +3546,10 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-10-01
+#: last_checked: 2021-10-06 (mapillary)
 #: check_frequency: 14d
 #: next_check: 2021-10-31
-	q4::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
+	q3::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
 ',
          'from' => 1611036000,
          'id' => 3048,
@@ -3983,7 +3913,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-09-22
+#: last_checked: 2021-10-15
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4032,7 +3962,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-10-12
+#: last_checked: 2021-10-15
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -4271,7 +4201,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-10-08 vvv
+#: last_checked: 2021-10-13 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -4398,6 +4328,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: source_id: viz2021:13.32146,52.465174,04.03.2021,08:00
 #: source_id: viz2021:13.320517,52.466345,13.07.2021,08:00
+#: note: laut rbb nur bis 15.10.2021
 	q4::inwork; 4894,6509 4875,6552 4786,6717
 ',
          'from' => 1614754800,
@@ -4741,20 +4672,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        undef,
        undef,
        undef,
-       {
-         'data' => '#: also_indoor: traffic
-#: XXX gibt es nach den Bauarbeiten bereits den neuen Radweg?
-#: osm_watch: way id="827384487" version="3"
-#: next_check: 2021-10-15
-	2::inwork 27833,-16133 27643,-16156
-',
-         'from' => 1626559200,
-         'id' => 3409,
-         'source_id' => '216101007',
-         'text' => 'B179: Sperrung Brücke Körbiskrug, Radfahrer und Fußgänger sind ebenfalls von der Sperrung betroffen, 19.07.2021 bis 14.10.2021',
-         'type' => 'gesperrt',
-         'until' => 1634248800
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: KARLSHORSTER-2021
@@ -4843,15 +4761,15 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'until' => 1635699600
        },
        {
-         'data' => '#: add_fragezeichen: Ist die Sperrung aufgehoben?
-#: last_checked: 2021-09-24
-# REMOVED --- #: check_frequency: 21d
-#: next_check: 2021-10-15
+         'data' => '#: add_fragezeichen: Ist die Sperrung mittlerweile aufgehoben?
+#: last_checked: 2021-10-14
+#: check_frequency: 7d
+# REMOVED --- #: next_check: 2021-10-15
 	2::inwork 8668,10219 8668,10236 8715,10314
 ',
          'from' => 1627924220,
          'id' => 3425,
-         'text' => 'Rampe zum Anhalter Steg gesperrt, mindestens bis 15.10.2021',
+         'text' => 'Rampe zum Anhalter Steg wegen Bauarbeiten gesperrt',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4971,16 +4889,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'type' => 'handicap',
          'until' => 1672527599
        },
-       {
-         'data' => '	q4::inwork; 4262,20025 4319,20182
-',
-         'from' => 1630274400,
-         'id' => 3439,
-         'source_id' => 'viz2021:13.316247,52.586804,31.08.2021,09:00',
-         'text' => 'Triftstr.: zwischen Holzhauser Str. und Am Nordgraben ist die Fahrbahn gesperrt (Richtung Norden), vom 31.08.2021 09:00 bis 15.10.2021 17:00 Uhr',
-         'type' => 'handicap',
-         'until' => 1634310000
-       },
+       undef,
        {
          'data' => '#: tempex: su,holiday,(mo-sa T20:00-sunrise)
 	2::night:weekend -2245,21544 -2242,21927
@@ -5061,14 +4970,16 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        undef,
        undef,
        {
-         'data' => '	2::inwork -3227,14260 -3173,14216 -3135,14183
+         'data' => '#: source_id: viz2021:13.20521,52.53583,15.10.2021,12:28
+	2::inwork -3316,14169 -3227,14260 -3173,14216
+# REMOVED ---	2::inwork -3173,14216 -3135,14183
 ',
          'from' => 1632607200,
          'id' => 3453,
          'source_id' => 'viz2021:13.20521,52.53583,27.09.2021,09:33',
-         'text' => 'Charlottenstr.: Fahrbahn zwischen Fischerstr. und Mauerstr. gesperrt, evtl. sind auch Radfahrer betroffen, vom 27.09.2021 bis 15.10.2021',
+         'text' => 'Charlottenstr/Breite Str..: Fahrbahn zwischen Fischerstr. und Mauerstr. gesperrt, evtl. sind auch Radfahrer betroffen, vom 27.09.2021 bis 25.10.2021',
          'type' => 'gesperrt',
-         'until' => 1634335200
+         'until' => 1635199199
        },
        {
          'data' => '#: osm_watch: way id="8069460" version="16"
@@ -5107,18 +5018,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: add_fragezeichen: Bis wann geht die Sperrung in der Alexandrinnenstr.?
-#: also_indoor: traffic (G)
-#: last_checked: 2021-10-07 (eric)
-	q4::inwork; 10069,10151 10083,10192 10122,10294
-',
-         'from' => undef,
-         'id' => 3457,
-         'text' => 'Alexandrinnenstr.: Fahrbahn Richtung Norden zwischen Brachvogelstr. und Gitschiner Str. gesperrt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: XXX_prog: eigentlich q4+::inwork; oder q3-::inwork;
 	q4::inwork; 8196,20096 8224,19977 8234,19936
@@ -5171,6 +5071,32 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'text' => 'Ökomarkt Chamissoplatz: zu Marktzeiten Sperrung der Arndtstr. und des östlichen Teil des Chamissoplatzes, samstags von 9 bis 15 Uhr',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1448195177022164992 (mit grob aufgelöster Karte)
+#: XXX Bauarbeiten überprüfen!
+# REMOVED (hier vermutlich nicht) ---	q4::inwork; 14056,16120 14015,16103 13826,16026 13737,15994 13623,15954
+	q4::inwork; 13623,15954 13508,15912 13484,15893 13425,15846
+',
+         'from' => 1633989600,
+         'id' => 3462,
+         'source_id' => 'viz2021:13.459025,52.550082,13.10.2021,11:00',
+         'text' => 'Berliner Allee: stadteinwärts zwischen Pistoriusstr. und Streustr.: Fahrtrichtung gesperrt, Bauarbeiten, evtl. sind auch Radfahrer betroffen (besonders im Bereich Antonplatz/Langhansstr.), vom 13.10.2021 11:00 bis 25.10.2021 17:00 ',
+         'type' => 'handicap',
+         'until' => 1635199200
+       },
+       {
+         'data' => '#: next_check_id: WUHLETALHAVEMANN-2021
+#: add_fragezeichen: Wann sind die Bauarbeiten hier abgeschlossen und die Sperrung aufgehoben?
+#: next_check: 2022-01-01
+	2::inwork 21539,17442 21555,17546 21559,17617 21576,17678 21639,17803 21698,17920 21726,17974 21804,18125 21843,18198
+',
+         'from' => 1634421600,
+         'id' => 3463,
+         'source_id' => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1135832.php',
+         'text' => 'Radweg zwischen Wuhletalstr. und Havemannstr.: Sperrung des Radwegs während der Sanierung, vom 18.10.2021 bis Anfang 2022',
+         'type' => 'gesperrt',
+         'until' => 1646089200
        }
      
 );

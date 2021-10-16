@@ -309,6 +309,7 @@ sub ci {
 	 # build config
 	 USE_MODPERL                => 1,
 	 USE_SYSTEM_PERL            => 1,
+	 USE_BBBIKE_PPA             => 0,
 	 # init_env_vars() is ineffective in this setup, so set it here
 	 BBBIKE_LONG_TESTS          => 1,
 	 BBBIKE_TEST_SKIP_MAPSERVER => 1,
@@ -327,6 +328,8 @@ FROM $opt{dist}:$opt{distver}
 
 # travis defaults
 ENV DEBIAN_FRONTEND noninteractive
+# on newer systems sudo does not pass the environment, so another setting is needed
+RUN echo "DEBIAN_FRONTEND=noninteractive" >> /etc/environment
 
 EOF
 
@@ -653,6 +656,7 @@ EOF
     _add_invalidate_cmd(\$dockerfile) if $opt{'invalidate-apt'};
     my $docker_port = 5000;
     $dockerfile .= <<EOF;
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -qqy --no-install-recommends \\
       libgd3 libgd-gd2-perl ttf-bitstream-vera ttf-dejavu \\
       libpdf-create-perl libcairo-perl libpango-perl libfont-afm-perl \\
@@ -672,8 +676,20 @@ RUN apt-get update && apt-get install -qqy --no-install-recommends \\
 RUN perl -i -pe 's/^(deb.*main)\$/\$1 contrib non-free/' /etc/apt/sources.list && apt-get update
 RUN apt-get install -qqy --no-install-recommends \\
       agrep wget gnupg
+EOF
+    if ($opt{'use-bbbike-ppa'}) {
+	$dockerfile .= <<EOF;
+RUN apt-get install -qqy --no-install-recommends \\
+      software-properties-common
+RUN add-apt-repository ppa:eserte/bbbike
+EOF
+    } else {
+	$dockerfile .= <<EOF;
 RUN wget -O- http://mydebs.bbbike.de/key/mydebs.bbbike.key | apt-key add -
 RUN CODENAME=\$(perl -nle '/^VERSION="\\d+ \\((.*)\\)/ and print \$1' /etc/os-release); echo deb http://mydebs.bbbike.de \${CODENAME} main > /etc/apt/sources.list.d/mydebs.bbbike.list~ && mv /etc/apt/sources.list.d/mydebs.bbbike.list~ /etc/apt/sources.list.d/mydebs.bbbike.list
+EOF
+    }
+    $dockerfile .= <<EOF;
 RUN apt-get update
 RUN apt-get install -qqy --no-install-recommends \\
       libplack-middleware-rewrite-perl libcgi-emulate-psgi-perl libcgi-compile-perl \\
@@ -873,6 +889,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       test => 0,
 	       'invalidate-apt' => 0,
 	       mapserver => 0,
+	       'use-bbbike-ppa' => 0,
 	      );
     GetOptions(\%opt,
 	       "dist=s",
@@ -880,6 +897,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       "test!",
 	       'invalidate-apt!',
 	       'mapserver!',
+	       'use-bbbike-ppa!',
 	      )
 	or usage_cgi;
     cgi($doit, %opt);
@@ -898,7 +916,27 @@ docker-bbbike - run bbbike tasks in docker
 
 =head1 DESCRIPTION
 
-C<docker-bbbike> may run different tasks in a docker environment.
+C<docker-bbbike> may run different tasks in a docker environment, see below.
+
+Before you start, a working docker environment is needed. On a linux
+system, the following tasks usually need to be done:
+
+=over
+
+=item * install docker and further dependencies
+
+    sudo apt-get install docker.io libipc-perl-run
+
+=item * make sure you can run docker without C<sudo>
+
+Add yourself to the C<docker> group, e.g. using
+
+    sudo usermod -a -G docker $USER
+
+After doing this, it is necessary to have a fresh shell --- either
+logout and login again, or start a new shell.
+
+=back
 
 =head2 GUI
 
