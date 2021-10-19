@@ -27,8 +27,8 @@ init_env_vars() {
     export BBBIKE_LONG_TESTS BBBIKE_TEST_SKIP_MAPSERVER
     # The default www.cpan.org may not be the fastest one, and may
     # even cause problems if an IPv6 address is chosen...
-    export PERL_CPANM_OPT="--mirror https://cpan.metacpan.org --mirror http://cpan.cpantesters.org"
-    CODENAME=$(lsb_release -c -s)
+    export PERL_CPANM_OPT="$PERL_CPANM_OPT --mirror https://cpan.metacpan.org --mirror http://cpan.cpantesters.org"
+    CODENAME=$(lsb_release -c -s || perl -nle '/^VERSION_CODENAME=(.*)/ and print $1' /etc/os-release)
     if [ "$CODENAME" = "" ]
     then
 	if grep -q "Ubuntu 12.04" /etc/issue
@@ -42,9 +42,12 @@ init_env_vars() {
 }
 
 init_perl() {
-    if [ "$USE_SYSTEM_PERL" = "1" -a "$GITHUB_WORKFLOW" = "" ]
+    if [ "$USE_SYSTEM_PERL" = "1" ]
     then
-        perlbrew off
+	if which perlbrew >/dev/null 2>&1
+	then
+	    perlbrew off
+	fi
     fi
 }
 
@@ -460,6 +463,31 @@ start_selenium() {
     then
 	MOZ_HEADLESS=1 java -jar /tmp/selenium-server-standalone-2.53.1.jar &
     fi
+}
+
+######################################################################
+# Functions for the after_script phase:
+
+used_config() {
+    cat <<EOF
+======================================================================
+USED CONFIG
+======================================================================
+CODENAME:                   $CODENAME
+USE_SYSTEM_PERL:            $USE_SYSTEM_PERL
+USE_BBBIKE_PPA:             $USE_BBBIKE_PPA
+USE_MODPERL:                $USE_MODPERL
+CPAN_INSTALLER:             $CPAN_INSTALLER
+PERL_CPANM_OPT:             $PERL_CPANM_OPT
+BBBIKE_LONG_TESTS:          $BBBIKE_LONG_TESTS
+BBBIKE_TEST_GUI:            $BBBIKE_TEST_GUI
+BBBIKE_TEST_SKIP_MODPERL:   $BBBIKE_TEST_SKIP_MODPERL
+BBBIKE_TEST_SKIP_MAPSERVER: $BBBIKE_TEST_SKIP_MAPSERVER
+BBBIKE_TEST_WITH_SELENIUM:  $BBBIKE_TEST_WITH_SELENIUM
+BBBIKE_TEST_NO_NETWORK:     $BBBIKE_TEST_NO_NETWORK
+BBBIKE_TEST_NO_CGI_TESTS:   $BBBIKE_TEST_NO_CGI_TESTS
+======================================================================
+EOF
 }
 
 ######################################################################

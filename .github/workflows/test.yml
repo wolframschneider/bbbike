@@ -5,6 +5,7 @@ on:
     branches-ignore:
       - '*travis*'
       - '*appveyor*'
+      - '*gitlab*'
       - '*doozer*'
   pull_request:
 
@@ -78,9 +79,10 @@ jobs:
         wrapper start_selenium
         wrapper init_data
         # script:
-        perl Makefile.PL && make test HARNESS_OPTIONS=j4
+        perl Makefile.PL && make test HARNESS_OPTIONS=j4 HARNESS_TIMER=1
         # after_script:
         make distcheck
+        used_config
       if: "!startsWith(matrix.os,'windows-')"
   test_in_container:
     name: Docker tests with ${{ matrix.dist }}:${{ matrix.distver }}
@@ -101,7 +103,7 @@ jobs:
             distver:                    bullseye
             bbbike_test_skip_mapserver: 0
           - dist:                       ubuntu
-            distver:                    xenial
+            distver:                    trusty
             bbbike_test_skip_mapserver: 0
     steps:
     - uses: actions/checkout@v2
