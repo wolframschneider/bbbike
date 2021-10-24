@@ -1790,9 +1790,9 @@ Treskowallee - Dˆnhoffstr.	3 18718,8583 18727,8634 18609,8717
 Straﬂenbahntrasse	3nocross::ignrte 15639,10469 15404,10633 15372,10655
 Hauptstr. -> Hauptstr. (Rummelsburg) [Wohngebiet]: Straﬂenbahntrasse	3::igndisp 15639,10469 15404,10633 15358,10562
 Hauptstr. (Rummelsburg) [Wohngebiet] -> Hauptstr.: Straﬂenbahntrasse	3::igndisp 15358,10562 15404,10633 15372,10655
-Mittelstreifen	3nocross::ignrte 5475,10808 5471,10719 5458,10443
+Mittelstreifen	3nocross::ignrte 5475,10808 5471,10719 5462,10523 5458,10443
 Joachimsthaler Str. -> Augsburger Str.: Mittelstreifen	3::igndisp 5475,10808 5471,10719 5497,10719
-Augsburger Str. -> Joachimsthaler Str.: Mittelstreifen	3::igndisp 5497,10719 5471,10719 5458,10443
+Augsburger Str. -> Joachimsthaler Str.: Mittelstreifen	3::igndisp 5497,10719 5471,10719 5462,10523
 Mittelstreifen	3nocross::ignrte 6494,6128 6629,5946 6696,5854
 Friedrichsruher Str. -> Thorwaldsenstr.: Mittelstreifen	3::igndisp 6508,5931 6629,5946 6494,6128
 Thorwaldsenstr. -> Friedrichsruher Str.: Mittelstreifen	3::igndisp 6696,5854 6629,5946 6508,5931
@@ -2188,3 +2188,4 @@ Pilotenstr. -> Pilotenstr.: Straﬂenbahntrasse	3::igndisp 17868,4742 17951,4785 1
 Pilotenstr. -> Groﬂ-Berliner Damm: Straﬂenbahntrasse	3::igndisp 17868,4742 17951,4785 17879,4910
 Groﬂ-Berliner Damm -> Pilotenstr.: Straﬂenbahntrasse	3::igndisp 17879,4910 17951,4785 18031,4831
 Groﬂ-Berliner Damm -> Pilotenstr.: Straﬂenbahntrasse	3::igndisp 18042,4667 17951,4785 17868,4742
+Ahornallee	1 1586,11483 1566,11409 1574,11379

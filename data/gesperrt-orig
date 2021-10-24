@@ -1236,7 +1236,7 @@ Rosenfelder Str./Ring	1 17480,12003 17429,12030 17384,11976
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpartner/fahrrat/2016-07-28-prot-fahrratsitzung3.pdf
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2017-03-16-prot-fahrratsitzung.pdf
 #: XXX evtl wird die Straße für Radfahrer geöffnet
-#: osm_watch: way id="31540773" version="15"
+#: osm_watch: way id="31540773" version="16"
 #: last_checked: 2021-09-12
 #: check_frequency: 180d
 Fritz-Werner-Str.	1s:q3 9105,2779 9081,2594
@@ -1267,7 +1267,7 @@ Waldstr.	1 9961,19513 10002,19418
 # REMOVED --- #: next_check_id: UBAHN1-2020 --- #: by: https://viz.berlin.de/2021/03/bvg-letzte-arbeiten-am-kreuzberger-viadukt/ (Schlesisches Tor wird frühestens etwa am 22. April 2021 angefahren) --- #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/u-bahnen-fahren-wieder-durch_a306510 --- #: XXX mittlerweile wegen Hochbahnarbeiten komplett gesperrt --- laut rbb Rückbau bis Ende Juni 2021 --- 
 #: XXX wieder gesperrt, vermutlich für Aufzugarbeiten
 #: source_id: viz2021:13.440961,52.50069,06.07.2021,07:00 (bis 12.01.2022)
-#: last_checked: 2021-10-14
+#: last_checked: 2021-10-23
 #: check_frequency: 90d
 #: next_check: 2022-01-12
 (Schlesisches Tor - Oppelner Str.)	2::inwork 12978,10581 12930,10621
@@ -1635,6 +1635,11 @@ Heckenrosenweg (Schöneiche)	1 32387,6349 32317,6312 32301,6346 32370,6380 32387,
 Weidenhof	1 10963,-4389 10956,-4470
 Weidenhof	1 10994,-4472 10998,-4391
 #: by ^^^
+# 
+#: by: mapillary
+#: note: explizit für Radfahrer verboten
+B189	2 -92822,74184 -93082,74166 -93764,74187 -94063,74154 -94600,73988 -94721,73963 -94950,73927
+# 
 ######################################################################
 # elsewhere not in Brandenburg
 B104: Mittelstreifen nicht überquerbar	3nocross -974,128015 -724,127995 6,127935 298,127911
@@ -1699,17 +1704,11 @@ Eichhornstr.	1s:q3 8232,11414 8253,11306 8280,11296
 #: add_fragezeichen: Ist die Einbahnstraße mittlerweile für Radfahrer offen? vvv
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_16_sitzung.pdf vvv
 #: by: http://www.infravelo.de/projekt/ahornallee/ (2. Quartal 2021 - 4. Quartal 2021, keine Erwähnung der Lindenallee)
-#: source_id: 2147347235 (bis 13.8.2021: Umbau der Ampelanlage)
-#: source_id: viz2021:13.273928,52.509767,31.05.2021,07:00 (bis 10.9.2021: Umbau der Ampelanlage)
-#: osm_watch: way id="850742955" version="1"
-#: last_checked: 2021-09-05
-#: check_frequency: 180d
-#: next_check: 2021-09-10
-Ahornallee	1s:q3 1589,11483 1574,11379
+# REMOVED (Umbau ist erfolgt) --- #: source_id: 2147347235 (bis 13.8.2021: Umbau der Ampelanlage) --- #: source_id: viz2021:13.273928,52.509767,31.05.2021,07:00 (bis 10.9.2021: Umbau der Ampelanlage) --- #: osm_watch: way id="850742955" version="1" --- #: last_checked: 2021-09-05 --- #: check_frequency: 180d --- #: next_check: 2021-09-10 --- Ahornallee	1s:q3 1586,11483 1566,11409 1574,11379
 #: osm_watch: way id="24852084" version="11"
-#: last_checked: 2021-03-20
-#: check_frequency: 180d
-#: next_check: 2021-12-31
+#: last_checked: 2021-10-20
+#: check_frequency: 120d
+# REMOVED --- #: next_check: 2021-12-31
 Lindenallee	1s:q3 1429,11528 1403,11428
 #: by: ^^^
 #: add_fragezeichen ^^^
@@ -1798,7 +1797,7 @@ Hauptstr.: Straßenbahntrasse	3nocross 16004,10204 16090,10141 16117,10120 16138,
 #: confirmed_by: srt
 Kniprodestr.: Grünstreifen	3nocross 13647,14912 13744,15018 13823,15111
 An der Wuhlheide: Mittelstreifen	3nocross 19578,6165 19405,6276 19276,6359
-Heerstr.: nicht überquerbar	3nocross 504,11243 571,11255 704,11273
+Heerstr.: nicht überquerbar	3nocross 504,11243 571,11255 683,11270
 Heerstr.: Mittelstreifen	3nocross -4078,11800 -4033,11786 -3820,11721 -3708,11686
 #: by: Sabine (schaeffler)
 Altstädter Ring: Mittelstreifen	3nocross -3481,14523 -3498,14413 -3501,14365 -3506,14306
@@ -2992,7 +2991,7 @@ sehr enger Weg	BNP:0::trailer=no 12515,22898
 am Oder-Spree-Kanal: teilweise enger Pfad	BNP:0::trailer=no 29457,-2835
 #: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
 #: by: Stefan Klinkusch
-Gummiweg: ein Befahren mit Anhänger ist nahezu ausgeschlossen	BNP:0::trailer=no -7891,13616
+Gummiweg: ein Befahren mit Anhänger ist nahezu ausgeschlossen	BNP:0::trailer=no -7884,13614
 #: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
 steiler Weg	BNP:0::trailer=no -2046,12036
 #: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
@@ -3342,7 +3341,7 @@ Schönfließ - Summt: Brücke über die A10 wird neu gebaut	2::inwork 5752,30817 578
 # REMOVED (Hilfsbrücke existiert) --- #: osm_watch: way id="976563363" version="1" --- #: source_id: AdB/21-11-00134 (bis 17.12.2021) --- #: next_check: 2021-12-17 --- Fichteallee: Brücke über die A10 wird neu gebaut	2::inwork 2233,32334 2334,32485
 # 
 #: osm_watch: way id="926868384" version="1"
-#: osm_watch: way id="926868383" version="1"
+#: osm_watch: way id="926868383" version="2"
 #: source_id: AdB/21-11-00133 (bis 15.11.2021)
 #: priority: #B
 #: next_check: 2021-11-15
@@ -3356,7 +3355,7 @@ Weserstr.: Einbahnstraßenregelung, für Radfahrer nicht mehr offen	1s:q4:inwork 1
 # 
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX vermutlich wird die Straße dauerhaft verschwinden -> dann aus strassen-orig & Berlin.coords.data etc. entfernen
-#: last_checked: 2021-09-12
+#: last_checked: 2021-10-23
 #: check_frequency: 180d
 #: next_check: 2024-12-31
 Matthesstr.: Baustelle, keine Durchfahrt möglich	2::inwork 14185,9509 14172,9457
@@ -3617,7 +3616,7 @@ Abendseglersteig: noch in Bau	2::inwork 33176,2938 33147,2832 33267,2810 33383,2
 #: last_checked: 2021-10-03 vvv
 #: next_check: 2023-07-31 vvv
 #: osm_watch: way id="152434836" version="21"
-#: osm_watch: way id="30084962" version="25"
+#: osm_watch: way id="30084962" version="26"
 Prinzessinnenstr./Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10203,-2137 10228,-2136 10300,-2135
 Pfarrer-Lütkehaus-Platz: Sperrung am Bahnübergang	2::inwork 10228,-2136 10231,-2159
 Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10300,-2135 10296,-2156 10318,-2156
@@ -3724,7 +3723,7 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728
 # REMOVED (Umfahrung nicht mehr nutzbar) --- #: next_check_id: DBWERKSTRASSE-2019 --- #: last_checked: 2020-05-02 --- Tor	BNP:5 14692,10867
 # REMOVED --- #: next_check_id: ROSSSTRASSENBRUECKE-2019 --- #: by: https://www.berliner-woche.de/mitte/c-verkehr/rossstrassenbruecke-wird-abgerissen_a244615 (Beginn der Bauarbeiten ab 16. Dezember 2019, ab Januar 2020 für alle gesperrt) --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.876928.php (bis Herbst 2021) --- #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/ro%C3%9Fstra%C3%9Fenbrucke-mitte-vollsperrung-%C2%B7-bruckensanierung --- #: by: https://www.bvg.de/de/index.php?section=downloads&cmd=extra:78:2:1&download=3941 (hier: bis Mai 2021) --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1097688.php --- #: also_indoor: traffic (G,H) vvv --- #: source_id: 2147345254 (bis 18.06.2021) vvv --- #: last_checked: 2021-06-15 vvv --- #: next_check: 2021-06-18 vvv --- #: priority: #A vvv --- Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10687,11853 10672,11870 10642,11901 --- Neue Roßstraßenbrücke: wegen Bauarbeiten komplett gesperrt	2::inwork 10680,11875 10672,11870 10662,11863 --- #: priority ^^^ --- #: next_check ^^^ --- #: last_checked ^^^ --- #: source_id ^^^ --- #: also_indoor ^^^
 # 
-#: last_checked: 2021-09-28
+#: last_checked: 2021-10-19
 #: check_frequency: 60d
 #: priority: #A
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
@@ -3735,7 +3734,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="2"
 #: osm_watch: node id="6778873745" version="1"
-#: last_checked: 2021-10-17
+#: last_checked: 2021-10-23
 #: check_frequency: 30d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3825,7 +3824,7 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 #: note: laut rbb komplett gesperrt, bis 30.6.2023, in der Realität weiterhin Einbahnstraße
 #: osm_watch: way id="5096644" version="16"
 #: priority: #C
-#: last_checked: 2021-10-17
+#: last_checked: 2021-10-23
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3847,7 +3846,7 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 #: next_check_id: DRESDNERBAHN-2021
 #: XXX laut Baustellenschild Erneuerung der EÜ Attilastr. bis 2023
 #: add_fragezeichen: Bis wann genau geht die Sperrung?
-#: last_checked: 2021-09-12 (an der Attilastr. gesehen)
+#: last_checked: 2021-09-18 (baustellen-doku)
 #: next_check: 2021-11-01
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7769,4315 7727,4418 7692,4464 7667,4549
 # 
@@ -4319,7 +4318,7 @@ Bergiusstr.: wegen Bauarbeiten an der BAB100 gesperrt, vielleicht sogar dauerhaf
 #: source_id: 2147343691 (bis 1.9.2022, Gesamtbaumaßnahme bis Ende 2022) (zwischendurch inaktiv, jetzt wieder da)
 #: note: laut rbbtext ebenfalls bis 1.9.2022
 #: also_indoor: traffic (G)
-#: last_checked: 2021-09-27 (mapillary)
+#: last_checked: 2021-10-17 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2022-09-30
 wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
@@ -4342,7 +4341,7 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 #: source_id: 2147340791
 #: osm_watch: way id="186329816" version="21"
 #: also_indoor: traffic
-#: last_checked: 2021-09-24
+#: last_checked: 2021-10-20
 #: next_check: 2022-12-30
 #: valid: -20221230
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, voraussichtlich bis Ende 2022	2:inwork 8106,13130 8102,13304 8098,13419
@@ -4419,7 +4418,7 @@ Mühlensteg (Tegeler Hafen): Weg gesperrt	2 1691,20638 1697,20623 1721,20603
 # REMOVED (gelöscht) --- #: osm_watch: way id="33036326" version="7"
 #: osm_watch: way id="940764588" version="2"
 #: osm_watch: way id="940764584" version="1"
-#: last_checked: 2021-10-13
+#: last_checked: 2021-10-20
 #: check_frequency: 360d
 #: next_check: 2023-06-30
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
@@ -4592,7 +4591,7 @@ tragen (2 x 10 Stufen)	0:40 1689,4630
 Sterzinger Str.	1 6094,8618 6123,8546
 Bozener Str.	1 5900,8930 5971,8926 6033,8919
 Bozener Str.	1 5971,8926 5974,9100
-Kleiststr.: schwierig zu querender Mittelstreifen	3nocross 6532,10529 6636,10492 6753,10446
+Kleiststr.: schwierig zu querender Mittelstreifen	3nocross 6532,10529 6602,10504 6636,10492 6753,10446
 # REMOVED (Richtungsfahrbahnen eingezeichnet) --- Bundesallee: Queren nicht möglich	3nocross 5354,8236 5363,8170 5376,8104 5357,8013
 (Los-Angeles-Platz)	1s:q3 5669,10704 5822,10609
 Schwingtor zum Spielplatz	BNP:10 11865,13027
@@ -4682,7 +4681,7 @@ Fröhner Str.	1 -4302,11669 -4432,11621 -4590,11541
 Bocksfeldstr.	1 -4312,11720 -4101,11708
 Roedeliusweg	1 -4432,11621 -4444,11772
 Bollmannweg	1 -4444,11772 -4310,11770
-Weinmeisterhornweg	1s -4798,11231 -4581,11183
+Weinmeisterhornweg	1s:q3 -4798,11231 -4579,11174
 #: note: keine Verbindung zur südlichen Nebenfahrbahn
 Heerstr.	3nocross -1523,11012 -1288,11037 -1050,11061
 Heerstr.	3nocross -4515,11935 -4438,11910 -4311,11872

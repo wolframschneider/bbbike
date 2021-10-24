@@ -1,6 +1,258 @@
-$#temp_blocking = 393;
+$#temp_blocking = 165;
 push @temp_blocking,
 (
+       {
+         'data' => '#: by: https://www.berlin.de/weihnachtsmarkt/3659027-3496862-umwelt-und-weihnachtsmarkt-in-der-sophie.html
+#: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/1001302-955635-weihnachts-und-umweltmarkt-in-der-sophie.html
+#: tempex: before(1st_advent,1d) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1637881200,
+         'id' => 166,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              25,
+                              'months',
+                              11,
+                              'start',
+                              '2021-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (27.11.2021 - 28.11.2021)',
+         'type' => 'gesperrt',
+         'until' => 1638140399
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => '# REMOVED --- #: XXX weiterhin unklar, ob Weihnachtsmärkte noch im November, erst im Dezember oder gar nicht öffnen werden --- #: priority: #A --- #: next_check: 2020-11-30
 # sowieso schon mit q4 markiert, deshalb -> 2
@@ -1955,7 +2207,36 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berliner-woche.de/mitte/c-bauen/weihnachtszauber-gendarmenmarkt-zieht-zum-bebelplatz-um_a279790 (2022 und 2023 vorübergehend am Bebelplatz, evtl. auch schon 2021)
+#: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/971676-955635-weihnachtszauber-gendarmenmarkt.html (2021 schon am Bebelplatz, wegen Bauarbeiten bis 2023)
+#: by: https://www.weihnachtsmarkt-berlin.de/?date=20211019 (2021 noch immer am Gendarmenmarkt?)
+#: by: https://www.berlin.de/weihnachtsmarkt/3235772-3496862-weihnachtsmarkt-am-gendarmenmarkt.html
+#: note "WeihnachtsZauber auf dem Gendarmenmarkt"
+	2::xmas 9536,11922 9666,11935
+	2::xmas 9523,12019 9656,12031
+',
+         'dont_check_date' => 1,
+         'from' => 1636671600,
+         'id' => 1989,
+         'periodic' => 1,
+         'prewarn_days' => 10,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              11,
+                              'start',
+                              '2021-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachtsmarkt-berlin.de/',
+         'text' => 'Gendarmenmarkt: Weihnachtsmarkt vom 22.11.2021 bis 31.12.2021, davor mehrere Tage Aufbauarbeiten, Durchfahrt nicht möglich (Eintritt!)',
+         'type' => 'gesperrt',
+         'until' => 1641164399
+       },
        undef,
        undef,
        undef,
@@ -2741,9 +3022,69 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: tempex: before(2nd_advent,sa) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1638486000,
+         'id' => 2515,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              2,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (04.12.2021 - 05.12.2021)',
+         'type' => 'gesperrt',
+         'until' => 1638745199
+       },
+       {
+         'data' => '#: tempex: before(3rd_advent,sa) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1639090800,
+         'id' => 2516,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (11.12.2021 - 12.12.2021)',
+         'type' => 'gesperrt',
+         'until' => 1639349999
+       },
+       {
+         'data' => '#: tempex: before(4th_advent,sa) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1639695600,
+         'id' => 2517,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              16,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (18.12.2021 - 19.12.2021)',
+         'type' => 'gesperrt',
+         'until' => 1639954799
+       },
        undef,
        undef,
        undef,
@@ -2762,7 +3103,31 @@ Kleistpark	2::night 7310,9622 7307,9528
          'type' => 'gesperrt',
          'until' => undef
        },
-       undef,
+       {
+         'data' => '#: by: https://www.potsdam.de/content/blauer-lichterglanz-der-potsdamer-innenstadt
+#: by: https://www.rbb24.de/panorama/beitrag/2020/10/potsdam-weihnachtsmarkt-brandenburger-strasse-abgesagt-corona.html
+#: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/brandenburg/3404397-1329503-der-traditionelle-potsdamer-weihnachtsma.html
+#: tempex: before(first_advent,mo) - YYYY1230
+	1::xmas -13556,-1182 -13618,-1202 -13626,-1205
+',
+         'from' => 1637449200,
+         'id' => 2526,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              11,
+                              'start',
+                              '2021-01-01T00:00:00'
+                            ]
+                          ],
+         'text' => 'Weihnachtsmarkt am Luisenplatz: vermutlich geänderte Radverkehrsführung, 22.11.2021 - 29.12.2021',
+         'type' => 'gesperrt',
+         'until' => 1640818799
+       },
        undef,
        undef,
        undef,
@@ -3065,7 +3430,33 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/weihnachtsmarkt/3240090-3496862-weihnachtsmarkt-am-alexanderplatz.html
+#: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html
+#: tempex: before(first_advent, monday)-YYYY1226 vvv
+	q3::xmas 11139,13008 11064,12910 10970,12822
+	q4::xmas 11064,12910 11134,12793
+#: tempex ^^^
+',
+         'from' => 1637449200,
+         'id' => 2763,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              11,
+                              'start',
+                              '2021-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html',
+         'text' => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 22. November 2021 bis 26. Dezember 2021',
+         'type' => 'handicap',
+         'until' => 1640559599
+       },
        undef,
        undef,
        undef,
@@ -3398,7 +3789,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2021/pressemitteilung.1058179.php (Sperrung der Kreuzung Schönstraße/Paul-Oestreich-Straße, bis 26. März 2021)
 #: by: https://www.berliner-woche.de/weissensee/c-verkehr/einmuendung-komplett-gesperrt_a303306
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht\'s nur auf dem Gehweg weiter
-#: also_indoor: traffic (G)
+#: also_indoor: traffic (ex-G,H(falsch?))
 #: priority: #B vvv
 #: last_checked: 2021-10-08 vvv
 #: check_frequency: 60d vvv
@@ -3546,7 +3937,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: source_id: 2147346815 (neu)
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-10-13 (mapillary)
+#: last_checked: 2021-10-23
 #: check_frequency: 14d
 #: next_check: 2021-10-31
 	q3::inwork; 14652,10201 14724,10297 14766,10372 14797,10476
@@ -3703,7 +4094,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
          'data' => '#: source_id: viz2021:13.387177,52.552566,24.05.2019,11:02 (bis 31.3.2022)
 #: source_id: viz2021:13.38743,52.55268,14.09.2021,19:35 (bis 31.3.2022, doppelter Eintrag)
 #: note: laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021
-#: also_indoor: traffic (ex-H)
+#: also_indoor: traffic (H)
 #: last_checked: 2021-09-04
 #: check_frequency: 60d
 #: next_check: 2022-03-31
@@ -3808,7 +4199,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
 #: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA1_Marienfelde_Attilastrasse-Schichauweg/20210716/
 #: also_indoor: traffic (G)
-#: last_checked: 2021-09-12
+#: last_checked: 2021-09-18 (bahninfo-forum)
 #: check_frequency: 180d
 #: next_check: 2022-06-04
 	2::inwork 8602,2377 8552,2243 8559,2203 8588,2176 8639,2212
@@ -3863,7 +4254,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-10-12
+#: last_checked: 2021-10-13 (architektur-urbanistik)
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 ',
@@ -3912,7 +4303,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-10-15
+#: last_checked: 2021-10-21
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -3961,7 +4352,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-10-15
+#: last_checked: 2021-10-21
 #: check_frequency: 30d
 #: next_check: 2021-12-31
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -4017,6 +4408,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
+#: also_indoor: traffic (H)
 #: XXX Stand 2021-07-31: letzte Deckschicht fehlt, Gehwege müssen noch gemacht werden
 # REMOVED (eingetragen) --- #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
 #: last_checked: 2021-10-08
@@ -4228,8 +4620,10 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: also_indoor: traffic (G)
-#: last_checked: 2021-09-14 (architektur-urbanistik)
+#: also_indoor: traffic (ex-G)
+#: osm_watch: way id="362719487" version="6"
+#: osm_watch: way id="687428752" version="2"
+#: last_checked: 2021-10-19
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 ',
@@ -4272,6 +4666,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: ABBESTR-2021
 #: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kleinere-projekte/?postID=697425#post697425 (sieht weitgehend fertig aus)
 #: note: reopened, es gibt wieder Bauzäune
+#: osm_watch: way id="152832871" version="16"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: last_checked: 2021-09-06 (osm)
 #: check_frequency: 30d
@@ -4470,12 +4865,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: XXX laut Baustellenschild der Wasserbetriebe bis Dezember 2021
+#: XXX mittlerweile wurde der Bereich verkleinert, der südliche Bereich ist offen
 #: also_indoor: traffic
 #: priority: #A
-#: last_checked: 2021-08-02
+#: last_checked: 2021-10-20
 #: check_frequency: 90d
 #: next_check: 2021-12-01
-	q4::inwork; 7771,9479 7829,9723
+	q3::inwork; 7771,9479 7829,9723
 ',
          'from' => undef,
          'id' => 3364,
@@ -4528,6 +4924,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        {
          'data' => '#: last_checked: 2021-10-02
 #: XXX vermutlich werden es Betonstein oder Verbundsteinpflaster, außerdem gibt\'s ein neues Drängelgitter am südlichen Ende
+#: osm_watch: way id="28450096" version="9"
 #: add_fragezeichen: Wie lange gehen die Bauarbeiten? Wie ist die Wegoberfläche nach den Bauarbeiten?
 	2::inwork 18432,1352 18290,1574
 ',
@@ -4560,6 +4957,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'data' => '#: next_check_id: SEYDLITZ-2021
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1116986.php (Neubau der Fahrbahn, bis Ende November 2021)
 #: by: https://www.berliner-woche.de/lankwitz/c-bauen/retzowstrasse-gesperrt_a320297
+#: osm_watch: way id="24917125" version="11"
 #: add_fragezeichen: Wann wird die Sperrung der Fahrbahn aufgehoben?
 #: last_checked: 2021-09-12
 # REMOVED --- #: check_frequency: 120d
@@ -4637,7 +5035,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        {
          'data' => '#: next_check_id: FRANKFURTER-2021
 #: note: auch last Schild der Wasserbetriebe bis März 2022
-#: last_checked: 2021-10-04 vvv
+#: last_checked: 2021-10-22 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-03-31 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -4751,7 +5149,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
        },
        {
          'data' => '#: add_fragezeichen: Ist die Sperrung mittlerweile aufgehoben?
-#: last_checked: 2021-10-14
+#: last_checked: 2021-10-19
 #: check_frequency: 7d
 # REMOVED --- #: next_check: 2021-10-15
 	2::inwork 8668,10219 8668,10236 8715,10314
@@ -4894,6 +5292,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'data' => '#: next_check_id: DRESDNERBAHN-2021
 #: XXX Ursprünglich wurde 08/2021 als Beginn geplant, das hat sich aber um einen Monat verschoben --- vielleicht das Ende auch?
 #: add_fragezeichen: Bis wann genau geht die Sperrung?
+#: last_checked: 2021-09-18 (bahninfo-forum)
 #: next_check: 2021-11-01
 	2::inwork 7673,4223 7769,4315
 ',
@@ -4942,6 +5341,8 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
 #: confirmed_by: srt
 #: by: https://www.gmg-ing.de/referenzen/ernst-heilmann-steg-berlin/ ("Torsionsschwingungen")
 #: by: https://www.strassenbauportal.de/oeffentliche_ausschreibung_vobvol_details_10997_Berlin_Instandsetzung_Stahlbau_1924073.html (Ausschreibung)
+#: osm_watch: note 2867467 2
+#: osm_watch: way id="16311543" version="17"
 #: also_indoor: search Ernst-Heilmann-Steg
 #: last_checked: 2021-10-05
 #: check_frequency: 120d
@@ -5007,7 +5408,18 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'type' => 'handicap',
          'until' => undef
        },
-       undef,
+       {
+         'data' => '#: add_fragezeichen: Bis wann geht die Sperrung in der Brachvogelstr.?
+#: also_indoor: traffic (G(falsch))
+#: last_checked: 2021-10-19
+	q4::inwork; 10066,10071 10069,10151
+',
+         'from' => undef,
+         'id' => 3457,
+         'text' => 'Brachvogelstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Alexandrinnenstr. gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
        {
          'data' => '#: XXX_prog: eigentlich q4+::inwork; oder q3-::inwork;
 	q4::inwork; 8196,20096 8224,19977 8234,19936
@@ -5063,7 +5475,7 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'until' => 1646089200
        },
        {
-         'data' => '#: also_indoor: traffic
+         'data' => '#: also_indoor: traffic (G)
 #: add_fragezeichen: Wann wird die Sperrung der Fahrbahn beendet?
 #: last_checked: 2021-10-18
 	q3::inwork 16153,10818 16192,10907
@@ -5074,15 +5486,60 @@ Smetanastr.: Einbahnstraßenregelung	q3::inwork; 14056,15985 14015,16103
          'type' => 'handicap',
          'until' => undef
        },
+       undef,
        {
-         'data' => '	q4::inwork 9940,559 10002,695
+         'data' => '#: XXX bleibt das dauerhaft so?
+#: osm_watch: way id="57401221" version="6"
+#: last_checked: 2021-10-20
+#: check_frequency: 360d
+	2 -7663,15304 -7747,15315
 ',
-         'from' => 1634421600,
-         'id' => 3465,
-         'source_id' => 'viz2021:13.39486,52.41213,18.10.2021,00:00',
-         'text' => 'Kettinger Str.: zwischen Schillerstr. und Halker Zeile wegen Baustelle gesperrt, evtl. sind auch Radfahrer betroffen, vom 18.10.2021 00:00 bis 26.11.2021 23:59 ',
+         'from' => undef,
+         'id' => 3466,
+         'text' => 'Zeestower Weg - Finkenkruger Weg: ein Abschnitt laut Schild für Unbefugte verboten',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: SCHARFELANKE-2021
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
+#: osm_watch: way id="187977779" version="13" vvv
+#: last_checked: 2021-10-20 vvv
+#: check_frequency: 60d vvv
+	2::inwork -3752,11373 -3785,11445 -3828,11491 -3928,11526 -4028,11533 -4106,11519 -4181,11458 -4204,11432 -4245,11400
+	2::inwork -4246,11438 -4204,11432
+	2::inwork -3928,11526 -3909,11596
+#: check_frequency ^^^
+#: last_checked ^^^
+#: osm_watch ^^^
+#: add_fragezeichen ^^^
+',
+         'from' => undef,
+         'id' => 3467,
+         'text' => 'Uferweg an der Scharfen Lange: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.berliner-woche.de/tegel/c-verkehr/fuenf-tage-umleitung_a325949
+	2::inwork 1282,21118 1275,21094 1113,21003 976,21009 902,20988 817,20953 625,20738
+',
+         'from' => 1635026400,
+         'id' => 3468,
+         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1137594.php',
+         'text' => 'Schwarzer Weg: Fahrbahnausbesserung zwischen Heiligenseestraße und Dicke Marie, Sperrung vom 25. bis zum 29. Oktober 2021',
+         'type' => 'gesperrt',
+         'until' => 1635544799
+       },
+       {
+         'data' => '	q4::inwork 9207,11880 9218,11793
+',
+         'from' => 1634882400,
+         'id' => 3469,
+         'source_id' => 'viz2021:13.387096,52.510605,23.10.2021,08:00',
+         'text' => 'Mauerstr.: Sperrung zwischen Mohrenstr. und Taubenstr., vom 23.10.2021 08:00 Uhr bis 24.10.2021 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1637967600
+         'until' => 1635087600
        }
      
 );
