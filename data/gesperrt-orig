@@ -1267,7 +1267,7 @@ Waldstr.	1 9961,19513 10002,19418
 # REMOVED --- #: next_check_id: UBAHN1-2020 --- #: by: https://viz.berlin.de/2021/03/bvg-letzte-arbeiten-am-kreuzberger-viadukt/ (Schlesisches Tor wird fr¸hestens etwa am 22. April 2021 angefahren) --- #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/u-bahnen-fahren-wieder-durch_a306510 --- #: XXX mittlerweile wegen Hochbahnarbeiten komplett gesperrt --- laut rbb R¸ckbau bis Ende Juni 2021 --- 
 #: XXX wieder gesperrt, vermutlich f¸r Aufzugarbeiten
 #: source_id: viz2021:13.440961,52.50069,06.07.2021,07:00 (bis 12.01.2022)
-#: last_checked: 2021-10-29
+#: last_checked: 2021-11-03
 #: check_frequency: 90d
 #: next_check: 2022-01-12
 (Schlesisches Tor - Oppelner Str.)	2::inwork 12978,10581 12930,10621
@@ -3314,6 +3314,11 @@ Schranke	BNP:3::trailer=10 17837,12277
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: next_check_id: OSTBAHNHOF-2021
+#: last_checked: 2021-11-03
+#: check_frequency: 14d
+Erich-Steinfurth-Str., Hermann-Stˆhr-Platz: wegen Kranarbeiten gesperrt	2::inwork 12413,11901 12453,11790 12378,11806
+# 
 #: last_checked: 2021-10-10
 #: check_frequency: 180d
 Verl‰ngerung Zwieseler Str.: Baustellenabsperrung	2::inwork 19705,9039 19638,9070
@@ -3328,7 +3333,7 @@ Wandlitzstr.: in Hˆhe Lehndorffstr. ist die Fahrbahn gesperrt	1s:q4:inwork 18401
 #: by: https://www.howoge.de/wohnungsbau/neubauprojekte/kynaststrasse.html
 #: by: https://www.berliner-woche.de/rummelsburg/c-bauen/neue-sozialwohnungen-mit-blick-aufs-wasser_a323324
 #: XXX wird es hier nach den Bauarbeiten weiterhin einen Weg geben?
-#: last_checked: 2021-10-01
+#: last_checked: 2021-11-02
 #: check_frequency: 180d
 #: next_check: 2023-09-30
 (Kynaststr. - Paul-und-Paula-Ufer): Bauarbeiten, Weg existiert nicht mehr	2::inwork 14843,10621 14911,10587
@@ -3426,7 +3431,7 @@ Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, te
 Straﬂe 77: wegen Bauarbeiten komplett gesperrt, auch f¸r Fuﬂg‰nger	2::inwork 15320,12375 15408,12394
 # 
 #: next_check_id: NKZ-2020
-#: last_checked: 2021-10-09
+#: last_checked: 2021-11-03
 #: check_frequency: 60d
 (Zufahrt am NKZ): Fuﬂg‰nger, un¸bersichtlich, Bauarbeiten, Ger¸st, kaum ein Durchkommen	2::inwork 11344,10507 11392,10520 11411,10515
 # 
@@ -3462,7 +3467,7 @@ Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11923,11881 11940,1
 #: XXX Bis wann gehen die Bauarbeiten? Eigentlich eine "unechte" Einbahnstraﬂe. Und manchmal (gesehen am Sonntag, den 2021-10-31; vielleicht auﬂerhalb der Arbeitszeiten?) sind die Einfahrt-verboten-Schilder weggedreht
 #: osm_watch: way id="308312347" version="3"
 #: last_checked: 2021-10-31
-#: check_frequency: 90d
+#: check_frequency: 30d
 #: next_check: 2022-08-15
 F¸rstenberger Str.: Bauarbeiten, Einbahnstraﬂe	1s:q3 10472,14632 10320,14608
 # 
@@ -3544,10 +3549,11 @@ Am Betriebsbahnhof Schˆnweide: Straﬂe mit Bauzaun abgesperrt	2::inwork 18254,481
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1136345.php
 #: by: https://berliner-abendblatt.de/2021/10/18/friedrichshain-danneckestrasse-wird-zur-fussgaengerzone/
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/neue-fussgaengerzone_a325808
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_49_4457_4624_online.pdf (Teileinziehung)
 #: XXX Wird der Radverkehr hier zugelassen?
 #: note: mittlerweile existieren an beiden Enden permanente Pollerreihen
 #: also_indoor: traffic (G)
-#: last_checked: 2021-10-09
+#: last_checked: 2021-10-29
 # REMOVED (bleibt vermutlich l‰nger?) --- #: next_check: 2020-12-31
 Danneckerstr.: tempor‰re "Klimastraﬂe", f¸r Radfahrer gesperrt	2s:q4 13886,10939 13856,10864
 # 
@@ -3581,7 +3587,7 @@ Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dˆrfelweg: gesperrt wegen Bauarbeiten	
 #: by: https://www.bahninfo-forum.de/read.php?9,665091,708278#msg-708278
 #: XXX Gesperrt wegen Bauarbeiten an den neuen Baufeldern nˆrdlich der Straﬂenbahntrasse. Laut bahninfo-forum wird der Weg nach den Bauarbeiten wieder geˆffnet.
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
-#: osm_watch: way id="229647788" version="7"
+#: osm_watch: way id="229647788" version="8"
 #: osm_watch: way id="850453338" version="5"
 #: last_checked: 2021-10-30
 #: check_frequency: 120d
@@ -3720,7 +3726,7 @@ Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 1
 #: by: https://www.deutsches-architekturforum.de/thread/11167-erweiterung-des-admiralspalastes-in-bau/?postID=689721#post689721
 #: by: https://graftlab.com/projects/admiralspalast (Zeitraum 2017-2021)
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-09-18
+#: last_checked: 2021-10-28 (mapillary)
 #: check_frequency: 60d
 Planckstr.: Einbahnstraﬂenregelung, offen Richtung S¸den	1s:q3:inwork 9429,12728 9402,12792 9386,12833
 # 
@@ -3739,7 +3745,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: XXX bleibt die Absperrung? ggfs. culdesac-Eintrag anpassen
 #: osm_watch: way id="722664473" version="2"
 #: osm_watch: node id="6778873745" version="1"
-#: last_checked: 2021-10-23
+#: last_checked: 2021-11-03
 #: check_frequency: 30d
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 # 
@@ -3829,7 +3835,7 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 #: note: laut rbb komplett gesperrt, bis 30.6.2023, in der Realit‰t weiterhin Einbahnstraﬂe
 #: osm_watch: way id="5096644" version="16"
 #: priority: #C
-#: last_checked: 2021-10-23
+#: last_checked: 2021-11-03
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraﬂe wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -4380,7 +4386,7 @@ B96a - Flughafen Berlin-Brandenburg: Abschnitt f¸hrt durch Sicherheitsbereich de
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1051294.php (Baumf‰llungen)
 #: by: https://www.berliner-woche.de/moabit/c-bauen/uferwand-und-promenade-sollen-bis-spaetsommer-fertig-sein_a301440 (bis Sp‰tsommer 2021)
 #: osm_watch: way id="501191631" version="3"
-#: last_checked: 2021-09-27 (daf)
+#: last_checked: 2021-11-03 (daf)
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-09-01
 Wikingerufer: wegen Besch‰digungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
@@ -4398,7 +4404,7 @@ Wikingerufer: wegen Besch‰digungen an der Ufermauer gesperrt	2:inwork 5354,12552
 #: by: https://abendblatt-berlin.de/2020/12/08/berlin-tegel-baustart-fuer-fussgaengerbruecke-an-der-muehle/ (Baubeginn Ende November 2020, Fertigstellung "hoffentlich" im Fr¸hjahr 2021)
 #: by: https://www.berliner-woche.de/tegel/c-bauen/endlich-bauarbeiten_a295949 (voraussichtlich bis Fr¸hjahr 2021)
 # REMOVED (Alexandersteg, nicht gesperrt) --- #: osm_watch: way id="27178371" version="11"
-#: osm_watch: way id="23099023" version="12"
+#: osm_watch: way id="23099023" version="13"
 #: osm_watch: way id="23099024" version="8"
 #: osm_watch: way id="103531998" version="8"
 #: last_checked: 2021-09-04
@@ -4447,7 +4453,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://www.humboldtforum.org/wp-content/uploads/2020/10/20201007_PM_Ero%CC%88ffnung-1.pdf (Erˆffnung am 17.12.2020)
 #: by: https://www.berliner-zeitung.de/kultur-vergnuegen/humboldt-forum-berliner-schloss-teileroeffnung-li.122095 (Erˆffnung wird verschoben)
 #: by: https://berliner-schloss.de/blog/schloss-information-dezember-2020/ (Bauz‰une werden im Dezember 2020 teilweise abgebaut)
-#: last_checked: 2021-10-26 (mapillary)
+#: last_checked: 2021-11-02 (mapillary)
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2021-07-01
 # REMOVED (hier offen) --- Schloﬂplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10102,12384
@@ -4527,7 +4533,7 @@ Neue Plantage: hier noch Baustelle	2:inwork -13100,-1411 -13017,-1426
 #: XXX Kaiserstr. -> Anna-Fl¸gge-Straﬂe (PLZ: 14467)
 #: XXX Schlossstraﬂe (ˆstlicher Verlauf) -> Anna-Zielenziger-Straﬂe (PLZ: 14467)
 #: XXX Schwertfegerstraﬂe (ˆstlicher Verlauf) -> Erika-Wolf-Straﬂe (bereits eingetragen)
-#: osm_watch: way id="534669300" version="7" brb
+#: osm_watch: way id="534669300" version="8" brb
 #: last_checked: 2021-10-11 (daf)
 # REMOVED --- #: next_check: 2020-09-01
 #: check_frequency: 180d

@@ -766,7 +766,7 @@ Gransee - Altlüdersdorf: Qualität? Nur für Radfahrer? Führt hier die Königin-Lui
 Altlüdersdorf - Zabelsdorf: Qualität?	? -5207,70025 -4637,69807 -4542,69772 -4260,69808 -3970,69973 -2897,69894 -2560,69986 -2391,69914 -1170,71073
 Altlüdersdorf - Wentow: Qualität?	? -4637,69807 -4414,70563 -2966,71541 -2768,71868
 Altlüdersdorf - Ribbeck: Qualität?	? -2391,69914 -1840,69754 -1273,69446 -943,69540 -913,69464 -790,69473 -642,69476
-Heinrich-Heine-Str. (Bernau): Qualität zwischen Vierrutenstr. und Torfstr.?	? 19422,29462 19367,29694 19274,30131 19242,30236 19003,30633 18884,30784
+Heinrich-Heine-Str. (Bernau): Qualität zwischen Vierrutenstr. und Torfstr.?	? 19422,29462 19367,29694 19274,30131 19242,30236 19185,30330 19089,30490 19003,30633
 Sieversdorf: Qualität? Ist hier auch asphaltiert?	? -58947,45483 -58977,45352 -58961,45254 -58863,44893 -58804,44826
 Kümmernitz - Vehlgast: Qualität?	? -70888,48135 -70878,48009 -70842,47863 -70849,47706 -70765,47295 -70648,47092 -70583,46902 -70364,46767 -70283,46513 -70155,46272 -70149,46133 -70566,45706 -70547,45421 -70926,44836
 Kümmernitz - Vehlgast: Qualität?	? -71278,44309 -71319,43569 -71325,43158 -71550,42961 -71639,42831 -71698,42657 -71991,42370
@@ -1032,6 +1032,7 @@ Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	?
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
+Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt (Bis wann genau geht die Sperrung?)	? 7769,4315 7727,4418 7692,4464 7667,4549
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 Verbundsteinpflaster, teilweise schadhaft (Wurzelschäden) (Wird die Qualität des Radwegs nach den Bauarbeiten besser sein?)	? 43162,14428 42996,14793
@@ -1055,4 +1056,8 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 Jörsstr.: Asphaltierung geplant (Wurde die Asphaltierung der Jörsstr. bereits abgeschlossen?)	? -1478,18407 -1358,18400
 # added from bbbike-temp-blockings-optimized
 Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. kann gesperrt sein, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 4674,12076 4698,12124
+Kettinger Str.: Verbindung zur Barnetstr. wegen Bauarbeiten unterbrochen, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten beendet? Können Radfahrer wieder durchfahren?)	? 9693,-815 9692,-772 9693,-746 9699,-600
 Brümmerstr.: zwischen Thielallee und Fabeckstr. Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Wie lange gehen die Bauarbeiten?)	? 2523,5114 2746,5537
+Glashütter Weg - Künnekeweg: Bauarbeiten, Weg ist gesperrt, Umfahrung über Trampelpfade möglich, Ende der Bauarbeiten unbekannt (Stand August 2021) (Wie lange gehen die Bauarbeiten? Wie ist die Wegoberfläche nach den Bauarbeiten?)	? 18432,1352 18290,1574
+Rampe zum Anhalter Steg wegen Bauarbeiten gesperrt (Ist die Sperrung mittlerweile aufgehoben?)	? 8668,10219 8668,10236 8715,10314
+Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer: Bauarbeiten an der Eisenbahnüberführung, komplette Sperrung des Weges, bis November 2021 (Bis wann genau geht die Sperrung?)	? 7673,4223 7769,4315
