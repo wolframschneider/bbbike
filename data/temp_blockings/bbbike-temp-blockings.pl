@@ -3600,6 +3600,7 @@ EOF
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/ueber-den-bezirk/veranstaltungen/lichtenrader-lichtermarkt/
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.989619.php (fällt 2020 wegen Corona aus)
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/ueber-den-bezirk/veranstaltungen/lichtenrader-lichtermarkt/?date=20211026 (fällt 2021 ebenfalls aus)
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1145105.php (Absage 2021)
 	q4::xmas 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 EOF
      },
@@ -23888,7 +23889,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140904.1220.399072.html',
        data  => <<EOF,
-	q4::inwork; 5317,12242 5518,12159 5424,11944
+	q4::inwork; 5317,12242 5518,12159 5417,11949
 EOF
      },
      { from  => $isodate2epoch->("2019-09-13 00:00:00"),
@@ -26183,9 +26184,9 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2021-11-09 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2021-11-10 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 10. November 2021 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2021-11-16 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2021-11-17 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 17. November 2021 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
@@ -26194,8 +26195,9 @@ EOF
 #: by: https://viz.berlin.de/2021/10/a115-sprengungen/ (nächste Termine 2021: 3.11., 10.11., 17.11., 24.11)
 #: source_id: 2147341022
 #: source_id: viz2021:13.196408,52.438127,03.11.2021,09:15
+#: source_id: viz2021:13.196408,52.438127,10.11.2021,09:15
 #: priority: #A
-#: next_check: 2021-11-10
+#: next_check: 2021-11-17
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
@@ -27396,7 +27398,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: source_id: 2147342379
-#: source_id: LMS-BR_r_LMS-BR_127414_LMS-BR_72
+#: source_id: LMS-BR_r_LMS-BR_127414_LMS-BR_72 (inaktiv)
 	2::inwork 9014,898 9024,906 9058,932
 EOF
      },
@@ -27892,7 +27894,7 @@ EOF
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht's nur auf dem Gehweg weiter
 #: also_indoor: traffic (ex-G,H(falsch?))
 #: priority: #B vvv
-#: last_checked: 2021-10-08 vvv
+#: last_checked: 2021-11-10 vvv
 #: check_frequency: 60d vvv
 	q3::inwork 13391,16436 13630,16629
 Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
@@ -28124,7 +28126,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-10-13
+#: last_checked: 2021-11-06
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29895,11 +29897,11 @@ EOF
        data  => <<EOF,
 #: XXX Parkverbot mittlerweile bis 31.10.2021 ausgeschildert
 #: also_indoor: traffic (G)
-#: osm_watch: way id="749226300" version="4"
-#: last_checked: 2021-07-18
+#: osm_watch: way id="749226300" version="5"
+#: last_checked: 2021-11-06
 #: check_frequency: 180d
-#: next_check: 2021-10-31
-	2::inwork 3079,5411 3209,5214
+# REMOVED --- #: next_check: 2021-10-31
+	2::inwork 3079,5411 3179,5267
 EOF
      },
      { from  => undef, # 
@@ -30237,7 +30239,7 @@ EOF
 #: by: https://pascalgrothe.de/sperrung-der-bahnuebergaenge-in-biesdorf-vom-8-11-bis-26-11/
 # REMOVED --- #: XXX es wird nochmal im zweiten Halbjahr 2021 eine zweiwöchige Sperrung geben
 #: also_indoor: search Brebacher_Weg Bahnübergang
-#: osm_watch: way id="9829824" version="20"
+# REMOVED --- #: osm_watch: way id="9829824" version="25"
 # REMOVED --- #: priority: #A --- #: last_checked: 2021-03-31 --- # REMOVED --- #: check_frequency: 90d --- #: next_check: 2021-07-01
 	2::inwork 21558,12073 21562,12088 21564,12097
 EOF
@@ -30458,7 +30460,7 @@ EOF
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-10-27
+#: last_checked: 2021-11-06
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 EOF
@@ -30827,7 +30829,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-11-01
+#: last_checked: 2021-11-13
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31043,8 +31045,8 @@ EOF
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
-#: osm_watch: way id="934995901" version="3"
-#: last_checked: 2021-11-02 vvv
+#: osm_watch: way id="934995901" version="4"
+#: last_checked: 2021-11-11 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31242,7 +31244,7 @@ EOF
 #: also_indoor: traffic (H)
 #: XXX Stand 2021-07-31: letzte Deckschicht fehlt, Gehwege müssen noch gemacht werden
 # REMOVED (eingetragen) --- #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2021-10-08
+#: last_checked: 2021-11-10
 #: check_frequency: 30d
 	q3::inwork 14136,17170 13996,16959
 EOF
@@ -31650,7 +31652,7 @@ EOF
 #: by: https://pascalgrothe.de/sperrung-der-bahnuebergaenge-in-biesdorf-vom-8-11-bis-26-11/
 # REMOVED --- #: XXX bis wann ist der Bahnübergang gesperrt?
 #: also_indoor: search Oberfeldstraße Bahnübergang
-#: osm_watch: way id="868347101" version="3"
+# REMOVED --- #: osm_watch: way id="868347101" version="4"
 # REMOVED --- #: priority: #A --- #: last_checked: 2021-03-31 --- # REMOVED --- #: check_frequency: 90d --- #: next_check: 2021-07-01
 	2::inwork 20627,12162 20624,12133 20620,12108
 EOF
@@ -31840,9 +31842,10 @@ EOF
        data  => <<EOF,
 #: next_check_id: MAINZER-2021
 #: source_id: 2147346816 (bis 31.03.2025) (früher nur bis 2022)
+#: source_id: viz2021:13.428783,52.478213,06.04.2020,07:00 (bis 31.03.2025)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G)
-#: last_checked: 2021-09-27 (mapillary)
+#: last_checked: 2021-11-06
 #: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -32128,6 +32131,8 @@ EOF
        source_id => 'https://www.deutsches-architekturforum.de/thread/12678-umbau-des-kadewe/?postID=678680#post678680',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplan-fuer-meinberlin/bebauungsplan.1141399.php (evtl. hat der Bebauungsplan was mit den Bauarbeiten zu tun)
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanung/bebauungsplaene-im-verfahren/b-plan-7-89ve/7-89-ve-pas_ol_11_mit-deckblatt_internetfassung_gez.pdf
 #: also_indoor: traffic (ex-G)
 #: osm_watch: way id="362719487" version="6"
 #: osm_watch: way id="687428752" version="2"
@@ -32182,7 +32187,7 @@ EOF
        source_id => '2147346268',
        data  => <<EOF,
 #: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021) (mittlerweile: 25.11.2021)
-#: last_checked: 2021-10-23 (mapillary)
+#: last_checked: 2021-11-07 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2021-11-25
 	q2::inwork 8913,16159 9099,16398
@@ -32190,17 +32195,17 @@ EOF
      },
      { from  => undef, # 
        until => undef, # 1628276337, # undef, # XXX
-       text  => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. kann gesperrt sein, Ende der Bauarbeiten unbekannt',
-       type  => 'gesperrt',
+       text  => 'Abbestr.: Bauarbeiten, Fahrbahn zwischen Guerickestr. und Fraunhoferstr. kann gesperrt sein, ggfs. auf Bürgersteig ausweichen, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ABBESTR-2021
 #: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kleinere-projekte/?postID=697425#post697425 (sieht weitgehend fertig aus)
 #: note: reopened, es gibt wieder Bauzäune
 #: osm_watch: way id="152832871" version="16"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-09-06 (osm)
-#: check_frequency: 30d
-	2::inwork 4674,12076 4698,12124
+#: last_checked: 2021-11-06
+#: check_frequency: 60d
+	q4::inwork 4674,12076 4698,12124
 # REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
 EOF
      },
@@ -32593,12 +32598,12 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Glinkastr.: zwischen Jägerstr. und Mohrenstr. Richtung Süden offiziell Einbahnstraßenregelung für alle, es existiert aber eine Radspur',
+       text  => 'Glinkastr.: zwischen Jägerstr. und Mohrenstr. Einbahnstraßenregelung, Richtung Süden gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer?
-#: note: 2021-07-26 ("Radfahrer frei"-Schilder fehlen weiterhin, aber manchmal scheint man auf dem noch existierenden Radstreifen gut durchzukommen), ebenso: 2021-08-31
-#: last_checked: 2021-10-07
+# REMOVED --- #: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer? --- 
+#: note: 2021-11-09 ("Radfahrer frei"-Schilder fehlen weiterhin, außerdem gibt es eine explizite Bedarfsumleitung für Radfahrer via Jägerstr.
+#: last_checked: 2021-11-09
 	q4::inwork; 9195,11972 9207,11880
 # REMOVED (hier nicht mehr) ---	q4::inwork; 9207,11880 9218,11793
 EOF
@@ -32629,9 +32634,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: add_fragezeichen: Wie lange gehen die Bauarbeiten?
+#: note: mittlerweile mit expliziten Radfahren-verboten-Schildern
 #: also_indoor: traffic (G)
 #: priority: #A
-#: last_checked: 2021-09-26
+#: last_checked: 2021-11-06
 	q4::inwork 2523,5114 2746,5537
 EOF
      },
@@ -32920,15 +32926,18 @@ EOF
 EOF
      },
      { from  => 1622527200, # 2021-06-01 08:00
-       until => $isodate2epoch->("2021-11-30 17:00:00"), # 1630422000, # 2021-08-31 17:00
-       text  => 'Buckower Damm: wegen Bauarbeiten zwischen Gerlinger Str./Ringslebenstr. und Mollnerweg gesperrt, auch Radfahrer sind betroffen, vom 02.06.2021 08:00 Uhr bis 30.11.2021 17:00 Uhr ', # ursprünglich: Gerlinger Str./Ringslebenstr. und Stuthirtenweg/Stadtgrenze
+       until => $isodate2epoch->("2021-12-23 17:00:00"), # 1630422000, # 2021-08-31 17:00
+       text  => 'Buckower Damm: wegen Bauarbeiten zwischen Gerlinger Str./Ringslebenstr. und Mollnerweg Richtung Norden gesperrt, auch Radfahrer sind betroffen, vom 02.06.2021 08:00 Uhr bis 23.12.2021 17:00 Uhr ', # ursprünglich: Gerlinger Str./Ringslebenstr. und Stuthirtenweg/Stadtgrenze; ursprünglich beide Richtungen
        type  => 'handicap',
        source_id => '2147347243',
        data  => <<EOF,
 #: next_check_id: BUCKOWERDAMM-2021
-#: source_id: viz2021:13.438231,52.41937,02.06.2021,08:00
+#: source_id: viz2021:13.438231,52.41937,02.06.2021,08:00 (inaktiv)
+#: source_id: viz2021:13.438231,52.41937,13.11.2021,08:00
+#: note: bei rbb weiterhin "in beiden Richtungen gesperrt"
+#: by: https://twitter.com/VIZ_Berlin/status/1459408184053932037 (nur Richtung Norden)
 # REMOVED ---	q4::inwork 12984,1011 12941,1256 12938,1348
-	q4::inwork 12938,1348 12939,1469 12940,1547
+	q4::inwork; 12938,1348 12939,1469 12940,1547
 EOF
      },
      { from  => 1622527200, # 2021-06-01 08:00
@@ -33235,11 +33244,12 @@ EOF
 EOF
      },
      { from  => 1627682400, # 2021-07-31 00:00
-       until => 1633039199, # 2021-09-30 23:59
-       text  => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis Ende September 2021',
+       until => $isodate2epoch->("2022-01-01 18:00:00"), # 1633039199, # 2021-09-30 23:59
+       text  => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis voraussichtlich Anfang 2022',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106283.php',
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1145930.php (Verzögerung)
 	q4::inwork 5793,23422 5893,23287
 EOF
      },
@@ -33318,6 +33328,7 @@ EOF
        type  => 'handicap',
        source_id => 'viz2021:13.326349,52.447526,26.07.2021,07:00',
        data  => <<EOF,
+#: note: Eintrag bei rbb am 10.11.2021 entfernt
 	q4::inwork; 5271,4547 5316,4637 5336,4676
 EOF
      },
@@ -33339,20 +33350,19 @@ EOF
        data  => <<EOF,
 #: by: https://twitter.com/VIZ_Berlin/status/1423180617789972483 (bis Ende Oktober 2021) (mittlerweile bis 30.11.2021)
 #: note: nordöstlicher Bürgersteig ist wenig frequentiert; Bordsteine müssen überwunden werden, wenn man zu spät von der Fahrbahn herunterfährt; mittlerweile dürfen Radfahrer offziell über den Gehweg fahren
-#: last_checked: 2021-10-08
-#: check_frequency: 30d
+#: also_indoor: traffic (G,H)
+#: last_checked: 2021-11-10
+#: check_frequency: 14d
 #: next_check: 2021-11-30
 	q3::inwork 13057,14267 13158,14117
 EOF
      },
      { from  => 1627924220, # 2021-08-02 19:10
-       until => undef, # 1630101600, # 2021-08-28 00:00
+       until => 1636480326, # undef, # 1630101600, # 2021-08-28 00:00
        text  => 'Rampe zum Anhalter Steg wegen Bauarbeiten gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: add_fragezeichen: Ist die Sperrung mittlerweile aufgehoben?
-#: last_checked: 2021-10-29
-#: check_frequency: 7d
+# REMOVED (offen) --- #: add_fragezeichen: Ist die Sperrung mittlerweile aufgehoben? --- #: last_checked: 2021-10-29 --- #: check_frequency: 7d
 # REMOVED --- #: next_check: 2021-10-15
 	2::inwork 8668,10219 8668,10236 8715,10314
 EOF
@@ -33466,7 +33476,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1636812815, # undef, # XXX
        text  => 'Treptower Park: Teile des Parks können nachts gesperrt sein (von 22:00 bis 04:00 Uhr)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -33475,10 +33485,8 @@ EOF
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6984 (Antrag)
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1140269.php (Ausweitung)
 #: by: https://www.berlin.de/imgscaler/QDnYYRYHVON_2jnT8kEu7J2TMdjTUnhV5UGJwVZ-KuY/article/L3N5czExLXByb2QvYmEtdHJlcHRvdy1rb2VwZW5pY2svX2Fzc2V0cy9ha3R1ZWxsZXMvcG0vMjAyMS9jcm9wXzE1MDBfNzUwXzBfMjM2XzE1MDBfMTA2Ml82NTFlMDM1NWE0MDI3OTgyYzc0MWEwMWQ2YzBhODU4Yl9sYWdlcGxhbl8yMDAwLW1pbi5qcGc.jpg (Karte)
-#: XXX bis wann bleibt die Sperrung bestehen? vvv
 #: note: der Verbindungsweg Puschkinallee und Am Treptower Park war nicht gesperrt: Do 2021-09-09 gegen 22:20 Uhr
-#: last_checked: 2021-10-30 vvv
-#: check_frequency: 30d vvv
+# REMOVED (wording: "Aufenthalt nicht gestattet") --- #: XXX bis wann bleibt die Sperrung bestehen? vvv --- #: last_checked: 2021-10-30 vvv --- #: check_frequency: 30d vvv
 	2::night 15668,9140 15631,9114 15580,9181 15604,9215 15693,9194 15683,9136
 	2::night 14478,9545 14384,9565 14316,9542 14318,9688
 	2::night 14475,9199 14531,9244 14655,9311 14673,9353 14669,9389 14635,9441 14719,9419 14774,9437 14809,9466
@@ -33492,9 +33500,7 @@ EOF
 	2::night 15214,9090 15190,9027 15181,8967
 	2::night 15159,8934 15181,8967 15245,8916
 	2::night 14837,9517 14809,9466
-#: check_frequency ^^^
-#: last_checked ^^^
-#: XXX ^^^
+# REMOVED --- #: XXX ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 EOF
      },
      { from  => 1630382400, # 2021-08-31 06:00
@@ -33554,10 +33560,11 @@ EOF
        data  => <<EOF,
 #: next_check_id: DRESDNERBAHN-2021
 #: XXX Ursprünglich wurde 08/2021 als Beginn geplant, das hat sich aber um einen Monat verschoben --- vielleicht das Ende auch?
+#: note: Fertigstellung EÜ laut Baustellenschild 2023
 #: osm_watch: way id="229990468" version="6"
 #: add_fragezeichen: Bis wann genau geht die Sperrung?
-#: last_checked: 2021-09-18 (bahninfo-forum)
-#: next_check: 2021-11-01
+#: last_checked: 2021-11-06
+#: next_check: 2021-11-30
 	2::inwork 7673,4223 7769,4315
 EOF
      },
@@ -33706,20 +33713,18 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: XXX Wird nach den Bauarbeiten die Qualität der Fahrbahn besser sein? (jetzt: Q1)
-#: osm_watch: way id="10686356" version="18"
+#: osm_watch: way id="10686356" version="19"
 #: also_indoor: traffic (none)
-#: last_checked: 2021-10-10 (mapillary)
+#: last_checked: 2021-11-13
 	q4::inwork 13510,8138 13663,8011
 EOF
      },
      { from  => undef, # 
-       until => undef,
+       until => 1636480477, # undef,
        text  => 'Brachvogelstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Alexandrinnenstr. gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: add_fragezeichen: Bis wann geht die Sperrung in der Brachvogelstr.?
-#: also_indoor: traffic (G(falsch))
-#: last_checked: 2021-10-19
+# REMOVED (beendet) --- #: add_fragezeichen: Bis wann geht die Sperrung in der Brachvogelstr.? --- #: also_indoor: traffic (G(falsch)) --- #: last_checked: 2021-10-19
 	q4::inwork; 10066,10071 10069,10151
 EOF
      },
@@ -33898,6 +33903,8 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1453699314891595779
 #: by: https://www.berliner-woche.de/pankow/c-verkehr/bauarbeiten-in-der-muehlenstrasse_a327002
 #: source_id: viz2021:13.403429,52.56939,28.10.2021,06:00 (hier: bis 12.11.2021, und nur für Kfz-Verkehr gesperrt) (mittlerweile bis 9.11.2021)
+#: by: https://www.berliner-woche.de/altglienicke/c-verkehr/deckschicht-wird-runderneuert_a327095 (bis 30.11.2021)
+#: note: laut rbb vorzeitiges Ende am 9.11.2021
 	q3::inwork; 10240,18193 10355,17963 10459,17754
 EOF
      },
@@ -33926,6 +33933,27 @@ EOF
        source_id => 'LS/723-P/20/136',
        data  => <<EOF,
 	2::inwork -57797,19638 -55780,18604
+EOF
+     },
+     { from  => 1636213666, # 2021-11-06 16:47
+       until => 1640300400, # 2021-12-24 00:00
+       text  => 'Englische Str. und Gutenbergstr.: Bauarbeiten, Einbahnstraßenregelung (Englische Str.) und Fahrbahn komplett gesperrt (Gutenbergstr.), voraussichtlich bis 23.12.2021',
+       type  => 'handicap',
+       data  => <<EOF,
+	q3::inwork; 5417,11949 5518,12159
+	q2::inwork 5518,12159 5317,12242
+EOF
+     },
+     { from  => 1636747480, # 2021-11-12 21:04
+       until => 1639177200, # 2021-12-11 00:00
+       text  => 'Archenholdstr. und Marie-Curie-Allee: Einbahnstraßenregelungen, voraussichtlich bis 10.12.2021',
+       type  => 'handicap',
+       source_id => 'viz2021:13.496206,52.500247,12.11.2021,06:00',
+       data  => <<EOF,
+#: by: https://twitter.com/VIZ_Berlin/status/1459133374208122880
+#: by: https://pbs.twimg.com/media/FD_h8clXEAUsQ1n?format=jpg&name=large
+	q4::inwork; 16861,10923 16751,10696 16751,10674
+	q4::inwork; 16892,10731 16961,10893
 EOF
      },
     );

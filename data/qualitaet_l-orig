@@ -37,6 +37,9 @@ Kloster Chorin - Chorin: schlechtes Kopfsteinpflaster	Q3 41141,55261 41093,55310
 Kloster Chorin - Chorin: Verbundsteinpflaster	Q1+ 41088,55335 41173,55516
 Neuendorf - Sandkrug: Asphalt	Q0 43004,53843 42735,53816 42570,53776 42225,53915 42083,53909 41950,53876 41675,53967
 Heckelberg - Beerbaum: etwas welliger Asphalt	Q0- 39402,37410 39156,37578 38986,37512 38171,37238 37672,36908 36605,36450 36523,36465 36359,36493
+#: source_id: LS/721-F/21/197 (Ausbesserungsarbeiten, bis 3.12.2021)
+#: add_fragezeichen: Ist die Fahrbahnqualität nach den Bauarbeiten besser geworden?
+#: next_check: 2021-12-03
 Ortsdurchfahrt Beerbaum: schlechtes Kopfsteinpflaster	Q3 36000,36534 36215,36497 36307,36503 36359,36493
 Beerbaum - Gratze: etwas welliger Asphalt	Q0- 36000,36534 34145,36854
 Beerbaum - Gratze: schlechtes Kopfsteinpflaster	Q3 34145,36854 34072,36841
@@ -149,8 +152,7 @@ Groß-Kienitz: Asphalt	Q0 14702,-8736 14913,-9037 15082,-8942
 # REMOVED --- #: XXX Deckenerneuerung, danach vermutlich asphaltiert --- #: source_id: LS/722-W/20/148 --- #: next_check: 2020-09-11
 Kiekebusch: Asphalt	Q0 20439,-6472 20617,-6524 20883,-6592
 Am Fängersee: Feld- und Waldwege, größtenteils gut befahrbar (20 km/h), einige Stellen mit tiefen Sand	Q2 38980,19802 38972,19873 38943,20061 39018,20309 39290,20584 39249,20700 39238,20821 39355,21142 39509,21319 39367,21528 39251,21678 39439,21968 39372,22521
-#: add_fragezeichen: ist hier tatsächlich asphaltiert?
-#: by: osm (früher: Kopfsteinpflaster)
+#: by: osm (früher: Kopfsteinpflaster), mapillary
 Magazinstr.: Asphalt	Q0 26953,10903 27047,11144
 Dahlwitz - Neuenhagen: Beton	Q0 26900,10665 26923,10706 26976,10784
 Dahlwitz - Neuenhagen: Asphalt	Q0 26976,10784 27010,10827
@@ -2862,8 +2864,8 @@ Alter Markt: gepflastert	Q2+ -12614,-1487 -12619,-1549 -12624,-1598
 Alter Markt: gepflastert	Q2+ -12583,-1552 -12619,-1549 -12677,-1536 -12719,-1542
 #: next_check_id: AMALTENMARKT-2018
 #: XXX bleibt es hier asphaltiert?
-#: osm_watch: way id="760022943" version="2" brb
-#: last_checked: 2020-03-08
+#: osm_watch: way id="760022943" version="3" brb
+#: last_checked: 2021-11-05 (osm)
 #: check_frequency: 180d
 Alter Markt: provisorischer Asphalt	Q0- -12719,-1542 -12790,-1560
 Schwertfegerstr.: teils schlechtes Kopfsteinpflaster	Q3 -12812,-1490 -12870,-1493

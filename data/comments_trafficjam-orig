@@ -25,7 +25,7 @@ Leipziger Str. Richtun Osten	Jam; 9268,11590 9444,11616 9569,11631
 Friedrichstr.	Jam; 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351
 # 
 #: next_check_id: FRIEDRICH-2020
-#: last_checked: 2021-10-07 vvv
+#: last_checked: 2021-11-06 vvv
 #: next_check: 2022-04-01 vvv
 #: valid: !20200821-20220401 vvv
 Friedrichstr.	Jam; 9418,11804 9432,11702 9444,11616
@@ -83,8 +83,8 @@ Baumschulenstr./Späthstr.	Jam; 15723,6151 15628,6009 15584,5946 15382,5687 15363
 # REMOVED (Radspur existiert) --- Treskowallee	Jam; 18731,8577 18733,8633 18733,8650 18737,8686
 # REMOVED --- Treskowallee	Jam; 18737,8686 18770,8898
 # REMOVED (nicht mehr gesehen) --- #: note: kein Stau 2020-08-05 morgens (siehe mapillary), auch kein Stau 2020-09-04 am späten Abend --- 
-#: last_checked: 2021-11-01
-#: check_frequency: 7d
+#: last_checked: 2021-11-12 (indoor)
+#: check_frequency: 2d
 #: XXX siehe Verkehrsmeldungen und bahninfo-forum
 #: also_indoor: traffic
 #: tempex: rush_hour_evening
@@ -99,7 +99,7 @@ Sonnenallee	Jam; 11909,9155 12012,9092 12078,9055 12152,9015 12240,8964 12316,89
 # 
 #: next_check_id: FRANZOESISCHE-2018 vvv
 #: source_id: 2147343056 (bis 30.06.2021) vvv
-#: last_checked: 2021-08-31 (morgens zumindest Richtung Osten) vvv
+#: last_checked: 2021-11-09 (morgens zumindest Richtung Osten) vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-09-30 vvv
 #: valid: -20220930 vvv

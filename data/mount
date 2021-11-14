@@ -1270,7 +1270,6 @@ Steigung 2.0% (Werbellinstr. (Neukölln))	St; 12427,8109 12415,8106
 Steigung 2.0% (Werbellinstr. (Neukölln))	St; 12415,8106 12311,8084
 Steigung 2.0% (Warschauer Str.)	St; 13588,11490 13541,11355
 Steigung 2.0% (Trakehner Allee)	St; -157,11943 -110,12019
-Steigung 2.0% (Thaerstr.)	St; 13999,13276 14052,13389
 Steigung 2.0% (Tempelhofer Ufer)	St; 8724,10327 8810,10305
 Steigung 2.0% (Tannenbergallee)	St; -45,10912 48,10922
 Steigung 2.0% (Straße zum Löwen)	St; -5901,1562 -5867,1449
@@ -1371,6 +1370,7 @@ Steigung 1.9% (Wernerstr. (Wannsee))	St; -5944,1004 -6006,1234
 Steigung 1.9% (Wangerooger Steig)	St; 3085,7211 3110,7112
 Steigung 1.9% (Walsheimer Str.)	St; 21251,11560 21352,11701
 Steigung 1.9% (Thüringerallee)	St; 1518,11250 1541,11271
+Steigung 1.9% (Thaerstr.)	St; 13998,13272 14052,13389
 Steigung 1.9% (Teutonenstr. (Altglienicke))	St; 20366,1479 20406,1465
 Steigung 1.9% (Südendstr.)	St; 5115,5551 5274,5557
 Steigung 1.9% (Stindestr.)	St; 6212,4622 6272,4716
@@ -2161,7 +2161,6 @@ Steigung 1.3% (Mettkauer Weg)	St; 22064,-481 22034,-631
 Steigung 1.3% (Löwenberger Str.)	St; 17440,11774 17477,11893
 Steigung 1.3% (Lynarstr. (Grunewald))	St; 1937,9253 2074,9225
 Steigung 1.3% (Ludwig-Pick-Str.)	St; 13552,12435 13548,12535
-Steigung 1.3% (Ludwig-Pick-Str.)	St; 13543,12326 13552,12435
 Steigung 1.3% (Liselotte-Herrmann-Str.)	St; 12281,14164 12423,14066
 Steigung 1.3% (Lindenstr. (Hessenwinkel))	St; 32512,2621 32643,2695
 Steigung 1.3% (Lichtburgring)	St; 9965,15731 10041,15742
@@ -2230,6 +2229,7 @@ Steigung 1.3% (Am Beelitzhof)	St; -4188,2674 -3907,2438
 Steigung 1.3% (Alt-Biesdorf)	St; 21311,11528 21251,11560
 Steigung 1.3% ((Mauerweg Spandau))	St; -7261,12299 -7182,12137
 Steigung 1.3% ((Mauerweg Spandau))	St; -6527,11731 -6580,11771
+Steigung 1.3% ((Ludwig-Pick-Str. - Karl-Marx-Allee))	St; 13543,12326 13552,12435
 Steigung 1.3% ((Grünzug am Falkenberg))	St; 21734,580 21774,412
 Steigung 1.3% ((Friedhofsweg))	St; 13046,12956 12878,13229
 Steigung 1.3% ((Friedhofsweg))	St; 12773,12683 13046,12956

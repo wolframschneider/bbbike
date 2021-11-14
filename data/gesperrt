@@ -6,7 +6,7 @@ Kanalstraﬂen S¸dufer, von Osten bis Kˆthener Br¸cke	1 9865,10227 9825,10206 9687
 Kanalstraﬂen S¸dufer, von Osten bis Kˆthener Br¸cke	1 9368,10211 9146,10284 8810,10305 8724,10327 8661,10377 8644,10408 8527,10621 8430,10710
 Kanalstraﬂen S¸dufer, von Westen bis Flottwellstr.	1 8328,10831 8205,10979 8104,11037 7980,11070 7747,11075 7579,11032 7461,11051 7248,11143 7089,11073 7002,11034
 Kanalstraﬂen Nordufer	1 6880,11110 7115,11220 7160,11225 7253,11208 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108 7828,11133 8000,11137 8102,11099 8241,11024
-Kanalstraﬂen Nordufer	1 8241,11024 8261,11015 8342,10916 8378,10858 8390,10835 8443,10780 8541,10714 8581,10663 8701,10428 8771,10381 8824,10366 8953,10366 9028,10371 9158,10342 9239,10313 9404,10250 9492,10226 9593,10238 9873,10285
+Kanalstraﬂen Nordufer	1 8241,11024 8261,11015 8342,10916 8378,10858 8390,10835 8443,10780 8541,10714 8581,10663 8701,10428 8771,10381 8824,10366 8919,10360 8953,10366 8995,10370 9028,10371 9158,10342 9239,10313 9404,10250 9492,10226 9593,10238 9873,10285
 Gitschiner Str.	1 9873,10285 9948,10280
 Gitschiner Str.	1 9948,10280 9865,10227
 Skalitzer Str.	1 12978,10581 12899,10595
@@ -526,8 +526,8 @@ Torstr. (Straﬂenbahntrasse)	3nocross::ignrte 11160,13492 11117,13521 10898,13632
 Bundesplatz (Richtungsfahrbahn)	1 5346,7860 5331,8012 5304,8088 5304,8144 5354,8236
 Bundesplatz (Richtungsfahrbahn)	1 5354,8236 5363,8170 5376,8104 5357,8013 5350,7915 5346,7860
 Grunerstr. (Richtungsfahrbahn)	1::igndisp 11105,12764 11057,12715 10954,12635 10878,12560 10804,12461
-Grunerstr. (Richtungsfahrbahn)	1::igndisp 10804,12461 10876,12563 10953,12638 11055,12717 11105,12764
-Grunerstr. (Mittelstreifen)	3nocross::ignrte 11105,12764 11055,12717 10953,12638 10876,12563 10804,12461
+Grunerstr. (Richtungsfahrbahn)	1::igndisp 10804,12461 10868,12572 10953,12638 11055,12717 11105,12764
+Grunerstr. (Mittelstreifen)	3nocross::ignrte 11105,12764 11055,12717 10953,12638 10868,12572 10804,12461
 Dircksenstr. (Mittelstreifen/Straﬂentunnel)	2::igndisp 11057,12715 11055,12717
 Badstr. (Richtungsfahrbahn)	1::igndisp 8659,16327 8543,16364 8516,16393 8486,16425
 Badstr. (Richtungsfahrbahn)	1::igndisp 8486,16425 8518,16394 8544,16365 8659,16327
@@ -693,7 +693,7 @@ Halskesteig	1 1058,14459 1157,14459
 Hefnersteig	1 1364,14191 1392,14287 1420,14369
 Bˆdikersteig	1 1141,14237 1182,14384
 Dorfstr. (Rahnsdorf)	1 29998,3170 29921,3079 29902,3104 29998,3170
-Grunerstr. - Gustav-Bˆﬂ-Str.	1 10772,12515 10953,12638
+Grunerstr. - Gustav-Bˆﬂ-Str.	1 10772,12515 10868,12572
 Grumbkowstr.	1 11555,20051 11627,19907 11695,19760
 Hardangerstr.	1 11725,16630 11720,16752
 (Weg)	2 14432,20188 14650,19956
@@ -1534,11 +1534,11 @@ Matternstr. -> Petersburger Str.: Straﬂenbahntrasse	3::igndisp 13798,13003 13579
 Straﬂenbahntrasse	3nocross::ignrte 13530,13014 13487,13115 13434,13234
 Petersburger Str. -> Ebelingstr.: Straﬂenbahntrasse	3::igndisp 13434,13234 13487,13115 13610,13169
 Ebelingstr. -> Petersburger Str.: Straﬂenbahntrasse	3::igndisp 13610,13169 13487,13115 13530,13014
-Straﬂenbahntrasse	3nocross::ignrte 13330,13468 13375,13367 13393,13326 13434,13234
-Petersburger Str. -> An der Brauerei: Straﬂenbahntrasse	3::igndisp 13393,13326 13375,13367 13279,13323
+Straﬂenbahntrasse	3nocross::ignrte 13330,13468 13375,13367 13383,13349 13434,13234
+Petersburger Str. -> An der Brauerei: Straﬂenbahntrasse	3::igndisp 13383,13349 13375,13367 13279,13323
 An der Brauerei -> Petersburger Str.: Straﬂenbahntrasse	3::igndisp 13279,13323 13375,13367 13330,13468
-Petersburger Str. -> Heidenfeldstr.: Straﬂenbahntrasse	3::igndisp 13375,13367 13393,13326 13433,13346
-Heidenfeldstr. -> Petersburger Str.: Straﬂenbahntrasse	3::igndisp 13433,13346 13393,13326 13434,13234
+Petersburger Str. -> Heidenfeldstr.: Straﬂenbahntrasse	3::igndisp 13375,13367 13383,13349 13433,13371
+Heidenfeldstr. -> Petersburger Str.: Straﬂenbahntrasse	3::igndisp 13433,13371 13383,13349 13434,13234
 Bahntrasse	3nocross::ignrte 16635,2796 16677,2856 16786,2989
 Krokusstr. -> Stubenrauchstr.: Bahntrasse	3::igndisp 16739,2736 16677,2856 16635,2796
 Stubenrauchstr. -> Krokusstr.: Bahntrasse	3::igndisp 16786,2989 16677,2856 16739,2736
@@ -3195,7 +3195,6 @@ Fuﬂg‰ngerbr¸cke Betriebsbahnhof Schˆneweide: s¸dwestlicher Abgang durch Bauzaun 
 Gustav-Hertz-Platz: wegen Br¸ckenarbeiten gesperrt	2::inwork 18722,4628 18656,4687
 Gustav-Hertz-Platz: wegen Br¸ckenarbeiten gesperrt	2::inwork 18685,4595 18649,4678
 Am Betriebsbahnhof Schˆnweide: Straﬂe mit Bauzaun abgesperrt	2::inwork 18254,4817 18306,4753 18331,4744 18497,4529
-Danneckerstr.: tempor‰re "Klimastraﬂe", f¸r Radfahrer gesperrt	2s 13886,10939 13856,10864
 Durchgangsweg am Blueberry Inn: wegen Bauarbeiten komplett gesperrt	2::inwork 12165,8566 12287,8602
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dˆrfelweg: gesperrt wegen Bauarbeiten	2::inwork 9507,-85 9468,-85 9271,323 9253,370 9218,458 9178,556
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dˆrfelweg: gesperrt wegen Bauarbeiten	2::inwork 9271,323 9296,335 9249,434 9218,458
@@ -3228,7 +3227,7 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285 10675,12280
 Helen-Ernst-Str.: Einbahnstraﬂe wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 Johannisstr.: Einbahnstraﬂe	1s:inwork 9588,13174 9385,13174
-Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7769,4315 7727,4418 7692,4464 7667,4549
+Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7727,4418 7692,4464 7667,4549
 Wuhletalbr¸cke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
 Ringelblumenweg: Bauarbeiten, Straﬂe gesperrt	2::inwork 21595,271 21618,193
 Mergenthalerring: durch Tore versperrt	2::inwork 14121,8147 14210,8227 14229,8278
@@ -3374,9 +3373,9 @@ Landsberger Allee	3nocross::ignrte 12382,13097 12585,13118 12711,13150
 Landsberger Allee -> Ernst-Zinna-Weg: Landsberger Allee	3::igndisp 12382,13097 12585,13118 12564,13216
 Ernst-Zinna-Weg -> Landsberger Allee: Landsberger Allee	3::igndisp 12564,13216 12585,13118 12711,13150
 Straﬂenbahntrasse	3nocross::ignrte 13635,13605 13702,13634 13854,13701
-Straﬂenbahntrasse	3nocross::ignrte 13151,13367 13246,13420 13330,13468
-Landsberger Allee -> An der Brauerei: Straﬂenbahntrasse	3::igndisp 13330,13468 13246,13420 13279,13323
-An der Brauerei -> Landsberger Allee: Straﬂenbahntrasse	3::igndisp 13279,13323 13246,13420 13151,13367
+Straﬂenbahntrasse	3nocross::ignrte 13151,13367 13241,13415 13330,13468
+Landsberger Allee -> An der Brauerei: Straﬂenbahntrasse	3::igndisp 13330,13468 13241,13415 13279,13323
+An der Brauerei -> Landsberger Allee: Straﬂenbahntrasse	3::igndisp 13279,13323 13241,13415 13151,13367
 Landsberger Allee	3nocross::ignrte 21475,15705 21584,15753 21709,15808
 Landsberger Allee -> Schˆnagelstr.: Landsberger Allee	3::igndisp 21475,15705 21584,15753 21602,15908
 Schˆnagelstr. -> Landsberger Allee: Landsberger Allee	3::igndisp 21602,15908 21584,15753 21709,15808
@@ -3781,26 +3780,26 @@ Poller (Birkenwerder)	BNP:0:-168 1306,33008
 Poller (Birkenwerder)	BNP:0:0 1207,33025
 An den Kanalwiesen (Wendisch Rietz)	1 51857,-20420 51900,-20326 51916,-20240
 Kreuzung Sewanstr./Am Tierpark	1::igndisp 18647,10172 18631,10167
-Am Tierpark, linker Gehweg	1::igndisp 18715,10003 18647,10172
-Treskowallee, linker Gehweg	1::igndisp 18748,9922 18715,10003
+Am Tierpark, linker Radweg	1::igndisp 18715,10003 18647,10172
+Treskowallee, linker Radweg	1::igndisp 18748,9922 18715,10003
 Kreuzung Gregoroviusweg/Treskowallee	1::igndisp 18740,9907 18748,9922
-Alt-Friedrichsfelde, linker Gehweg	1::igndisp 18216,11656 18520,11685 18624,11712 18778,11742 19005,11767 19735,11721
-Alt-Friedrichsfelde, linker Gehweg	1::igndisp 18624,11712 18626,11742
-Landsberger Allee, linker Gehweg	1::igndisp 15430,14272 15256,14237
-Landsberger Allee, linker Gehweg	1::igndisp 13073,13329 12974,13289
-Landsberger Allee, linker Gehweg	1::igndisp 16665,14420 16590,14409
+Alt-Friedrichsfelde, linker Gehweg, ggfs. absteigen	1::igndisp 18216,11656 18520,11685 18624,11712 18778,11742 19005,11767 19735,11721
+Alt-Friedrichsfelde, linker Gehweg, ggfs. absteigen	1::igndisp 18624,11712 18626,11742
+Landsberger Allee, linker Gehweg, ggfs. absteigen	1::igndisp 15430,14272 15256,14237
+Landsberger Allee, linker Gehweg, ggfs. absteigen	1::igndisp 13073,13329 12974,13289
+Landsberger Allee, linker Gehweg, ggfs. absteigen	1::igndisp 16665,14420 16590,14409
 Landsberger Allee, Fuﬂg‰ngerampel	1::igndisp 16590,14409 16590,14386
-Sonnenallee, linker Gehweg	1::igndisp 13457,8069 13474,8060
-Bundesallee, linker Gehweg zur Durlacher Str.	1::igndisp 5399,8344 5438,8402
-Bundesallee, linker Gehweg zur Straﬂe Am Volkspark	1::igndisp 5419,8415 5399,8344
+Sonnenallee, linker Gehweg, ggfs. absteigen	1::igndisp 13457,8069 13474,8060
+Bundesallee, linker Gehweg zur Durlacher Str., ggfs. absteigen	1::igndisp 5399,8344 5438,8402
+Bundesallee, linker Gehweg zur Straﬂe Am Volkspark, ggfs. absteigen	1::igndisp 5419,8415 5399,8344
 Urbanstr.	1::igndisp 11861,9183 11888,9189
-Badstr., linker Gehweg	1::igndisp 8486,16425 8486,16412 8534,16355
-Tempelhofer Ufer, linker Gehweg	1::igndisp 8661,10377 8717,10322 8810,10305
-Leipziger Str., linker Gehweg	1::igndisp 9997,11713 9902,11704
+Badstr., linker Gehweg, ggfs. absteigen	1::igndisp 8486,16425 8486,16412 8534,16355
+Tempelhofer Ufer, linker Gehweg, ggfs. absteigen	1::igndisp 8661,10377 8717,10322 8810,10305
+Leipziger Str., linker Gehweg, ggfs. absteigen	1::igndisp 9997,11713 9902,11704
 zur Ampel Jerusalemer Str.	1::igndisp 9992,11682 10000,11691 9997,11713
-Columbiadamm, linker Gehweg	1::igndisp 10913,8463 10799,8504 10796,8498
-Hohenstaufenstr., linker Gehweg bis zur Fuﬂg‰ngerampel	1::igndisp 6237,9772 6209,9774
-zur M¸nchener Str. auf dem linken Gehweg	1::igndisp 6209,9771 6237,9772
+Columbiadamm, linker Gehweg, ggfs. absteigen	1::igndisp 10913,8463 10799,8504 10796,8498
+Hohenstaufenstr., linker Gehweg bis zur Fuﬂg‰ngerampel, ggfs. absteigen	1::igndisp 6237,9772 6209,9774
+zur M¸nchener Str. auf dem linken Gehweg, ggfs. absteigen	1::igndisp 6209,9771 6237,9772
 Karl-Lieknecht-Str., linker Gehweg	1::igndisp 11070,13357 11082,13371
 Potsdamer Str., linker Gehweg	1::igndisp 7518,9791 7501,9573
 Landsberger Allee, Radweg auf der linken Seite	1::igndisp 15923,14334 15848,14325 15850,14308
