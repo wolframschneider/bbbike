@@ -16308,7 +16308,7 @@ EOF
 	q4::temp:clock 12596,11696 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2021-10-17
+#: last_checked: 2021-11-18
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -17287,16 +17287,18 @@ EOF
 	3 8374,11479 8389,11378 8427,11365
 EOF
      },
-     { from  => $isodate2epoch->("2021-12-02 00:00:00"),
-       until => $isodate2epoch->("2021-12-05 23:59:59"),
+     { from  => $isodate2epoch->("2019-12-05 00:00:00"),
+       until => $isodate2epoch->("2019-12-08 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 1, months => 12, start => "2021-01-01T00:00:00"]], # findet 2020 wegen Corona nicht statt
+       recurrences => [['yearly', days => 1, months => 12, start => "2022-01-01T00:00:00"]], # findet 2020 wegen Corona nicht statt
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1001438-955635-alt-rixdorfer-weihnachtsmarkt.html',
        text  => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (voraussichtlich 03.12.2021 - 05.12.2021)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/weihnachtsmarkt/3240343-3496862-alt-rixdorfer-weihnachtsmarkt.html
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.1016256.php (finder 2020 nicht statt)
+#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2021/pressemitteilung.1147421.php (2021 abgesagt)
+#: by: https://berliner-abendblatt.de/2021/11/17/berliner-weihnachtsmaerkte-werden-abgesagt/
 # REMOVED --- #: XXX Veranstaltung 2020 unter Vorbehalt! --- #: priority: #A --- #: next_check: 2020-12-01
 #: tempex: before(2nd_advent,fr) T17:00 - 2nd_advent T20:00 vvv
 	2::xmas 13416,7712 13424,7680
@@ -26184,8 +26186,8 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2021-11-16 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2021-11-17 10:15:00"),
+     { from  => $isodate2epoch->("2021-11-23 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2021-11-24 10:15:00"),
        text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 17. November 2021 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -26196,8 +26198,8 @@ EOF
 #: source_id: 2147341022
 #: source_id: viz2021:13.196408,52.438127,03.11.2021,09:15
 #: source_id: viz2021:13.196408,52.438127,10.11.2021,09:15
-#: priority: #A
-#: next_check: 2021-11-17
+#: source_id: viz2021:13.196408,52.438127,17.11.2021,09:15
+# REMOVED --- #: priority: #A --- #: next_check: 2021-11-17
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
@@ -26595,9 +26597,9 @@ EOF
 	3 6122,10925 6145,10975 6266,10927
 EOF
      },
-     { from  => $isodate2epoch->("2021-10-12 09:00:00"), # $isodate2epoch->("2021-08-30 00:00:00"), # 
-       until => $isodate2epoch->("2021-10-13 16:30:00"), # $isodate2epoch->("2021-08-31 16:30:00"), # 
-       text  => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 13. Oktober 2021 von 09:00 bis 16:30 Uhr',
+     { from  => $isodate2epoch->("2021-12-01 00:00:00"), # $isodate2epoch->("2021-08-30 00:00:00"), # 
+       until => $isodate2epoch->("2021-12-02 21:00:00"), # $isodate2epoch->("2021-08-31 16:30:00"), # 
+       text  => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 2. Dezember 2021 von 16:00 bis 21:00 Uhr',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
        data  => <<EOF,
@@ -26608,6 +26610,7 @@ EOF
 #: by: https://www.bmvg.de/de/presse/grosser-zapfenstreich-zur-wuerdigung-einsatz-afghanistan-5181746 (Verschiebung, noch kein neuer Termin)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_42_3793_3876_online.pdf (Großer Zapfenstreich 2021, neuer Termin)
 #: by: https://viz.berlin.de/2021/10/verkehrsvorschau-13102021/ (Erwähnung des Großes Zapfenstreichs)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_51_4697_4784_online.pdf (Großer Zapfenstreich für Merkel)
 	2::temp 7435,11514 7322,11177
 	2::temp 7579,11032 7595,11086 7665,11353 7717,11540
 	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
@@ -30460,7 +30463,7 @@ EOF
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-11-06
+#: last_checked: 2021-11-16 (mapillary)
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 EOF
@@ -30829,7 +30832,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-11-13
+#: last_checked: 2021-11-16
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31046,7 +31049,7 @@ EOF
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="4"
-#: last_checked: 2021-11-11 vvv
+#: last_checked: 2021-11-14 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -32032,7 +32035,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-10-13 vvv
+#: last_checked: 2021-11-18 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -32186,10 +32189,10 @@ EOF
        type  => 'handicap',
        source_id => '2147346268',
        data  => <<EOF,
-#: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021) (mittlerweile: 25.11.2021)
+#: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021) (mittlerweile: 25.11.2021) (mittlerweile: 01.02.2022)
 #: last_checked: 2021-11-07 (mapillary)
 #: check_frequency: 90d
-#: next_check: 2021-11-25
+#: next_check: 2022-02-01
 	q2::inwork 8913,16159 9099,16398
 EOF
      },
@@ -32229,7 +32232,7 @@ EOF
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung? Falls ja, wo ist der gesperrte Abschnitt und gilt die Sperrung auch für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="24"
 #: osm_watch: way id="165832806" version="21"
-#: last_checked: 2021-10-24
+#: last_checked: 2021-11-16
 #: check_frequency: 30d
 	2::inwork 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17483,8644 17449,8720 17416,8767 17380,8858
 EOF
@@ -32348,13 +32351,14 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-03-03 08:00:00"),
-       until => $isodate2epoch->("2021-12-02 17:00:00"), # 1634223600, # 2021-10-14 17:00
-       text  => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, Richtung Norden gesperrt, bis 2.12.2021',
+       until => $isodate2epoch->("2022-02-22 17:00:00"), # 1634223600, # 2021-10-14 17:00
+       text  => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, Richtung Norden gesperrt, bis 22.02.2022',
        type  => 'handicap',
        source_id => '2147346935', # bis 14.10.2021
        data  => <<EOF,
 #: source_id: viz2021:13.32146,52.465174,04.03.2021,08:00 (inaktiv)
-#: source_id: viz2021:13.320517,52.466345,13.07.2021,08:00 (mittlerweile bis 2.12.2021)
+#: source_id: viz2021:13.320517,52.466345,13.07.2021,08:00 (mittlerweile bis 2.12.2021) (inaktiv)
+#: source_id: viz2021:13.32146,52.465174,13.07.2021,08:00 (mittlerweile bis 22.2.2022)
 	q4::inwork; 4894,6509 4875,6552 4786,6717
 EOF
      },
@@ -32470,7 +32474,7 @@ EOF
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet?
 #: osm_watch: node id="8599852570" version="1"
 #: osm_watch: node id="8599852571" version="1"
-#: last_checked: 2021-07-16 (baustellen-doku)
+#: last_checked: 2021-11-17 (mapillary)
 #: check_frequency: 180d
 	2::inwork 10346,-4027 10778,-3988 11338,-3945
 EOF
@@ -33209,7 +33213,7 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-11-02
+#: last_checked: 2021-11-17
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33351,7 +33355,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1423180617789972483 (bis Ende Oktober 2021) (mittlerweile bis 30.11.2021)
 #: note: nordöstlicher Bürgersteig ist wenig frequentiert; Bordsteine müssen überwunden werden, wenn man zu spät von der Fahrbahn herunterfährt; mittlerweile dürfen Radfahrer offziell über den Gehweg fahren
 #: also_indoor: traffic (G,H)
-#: last_checked: 2021-11-10
+#: last_checked: 2021-11-19
 #: check_frequency: 14d
 #: next_check: 2021-11-30
 	q3::inwork 13057,14267 13158,14117
@@ -33410,14 +33414,15 @@ EOF
 EOF
      },
      { from  => 1628719200, # 2021-08-12 00:00
-       until => 1637362800, # 2021-11-20 00:00
-       text  => 'Waldowallee: Bauarbeiten zwischen Köpenicker Allee und Marksburgstr., Fahrbahn gesperrt, Radfahrer dürfen den Gehweg benutzen, vom 13.08.2021 07:00 bis 19.11.2021 17:00',
+       until => $isodate2epoch->("2021-12-31 18:00:00"), # 1637362800, # 2021-11-20 00:00
+       text  => 'Köpenicker Str./Rudolf-Grosse-Str.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, voraussichtlich bis Dezember 2021', # Waldowallee: Bauarbeiten zwischen Köpenicker Allee und Marksburgstr., Fahrbahn gesperrt, Radfahrer dürfen den Gehweg benutzen, vom 13.08.2021 07:00 bis 19.11.2021 17:00',
        type  => 'handicap',
-       source_id => 'viz2021:13.5302,52.487045,13.08.2021,07:00',
+       source_id => 'viz2021:13.5302,52.487045,13.08.2021,07:00', # inaktiv
        data  => <<EOF,
-#: note: Gehweg für Radfahrer frei (beide Richtungen)
-# REMOVED --- #: next_check: 2021-08-13
-	q3::inwork 18939,9417 18977,9322 19048,9146
+# REMOVED (hier nicht mehr) --- #: note: Gehweg für Radfahrer frei (beide Richtungen) --- # REMOVED --- #: next_check: 2021-08-13 ---	q3::inwork 18939,9417 18977,9322 19048,9146
+	q2::inwork 19020,9364 19109,9306
+	q2::inwork 19128,9523 19109,9306
+	q2::inwork 19109,9306 19195,9249
 EOF
      },
      { from  => $isodate2epoch->("2021-08-15 00:00:00"),
@@ -33719,13 +33724,14 @@ EOF
 	q4::inwork 13510,8138 13663,8011
 EOF
      },
-     { from  => undef, # 
-       until => 1636480477, # undef,
-       text  => 'Brachvogelstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Alexandrinnenstr. gesperrt',
+     { from  => $isodate2epoch->("2021-11-22 00:00:00"), # undef, # 
+       until => $isodate2epoch->("2021-12-19 17:00:00"), # 1636480477, # undef,
+       text  => 'Brachvogelstr./Alexandrinnenstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Gitschiner Str. gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (beendet) --- #: add_fragezeichen: Bis wann geht die Sperrung in der Brachvogelstr.? --- #: also_indoor: traffic (G(falsch)) --- #: last_checked: 2021-10-19
-	q4::inwork; 10066,10071 10069,10151
+#: source_id: viz2021:13.399042,52.497652,23.11.2021,06:00
+	q4::inwork; 10066,10071 10069,10151 10083,10192 10122,10294
 EOF
      },
      { from  => 1615158000, # 2021-03-08 00:00
@@ -33807,8 +33813,9 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (G)
+#: osm_watch: way id="1003079755" version="1"
 #: add_fragezeichen: Wann wird die Sperrung der Fahrbahn beendet?
-#: last_checked: 2021-10-18
+#: last_checked: 2021-11-17
 	q3::inwork 16153,10818 16192,10907
 EOF
      },

@@ -1387,7 +1387,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2021-10-20
+#: last_checked: 2021-11-18
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13390
 # 
@@ -1576,7 +1576,7 @@ beide Geh/Radwege hinter der Einmündung Neukirchstr. können Richtung Am Feuchten
 # 
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1128830.php (Benennung eines Platzes nach Hans Peters)
 #: XXX wann wird der Platz ausgeschildert?
-#: last_checked: 2021-11-06 (mapillary)
+#: last_checked: 2021-11-18
 Hans-Peters-Platz: nicht ausgeschildert	CS 7732,14131 7679,14030
 # 
 ausgeschildert "Fußweg Grünverbindung Dietzgenstraße 60/Kreuzgraben"	CP2; 10098,20113 10157,20128
@@ -1586,6 +1586,18 @@ Kuckuckweg: ausgeschildert, allerdings sieht man das Schild nur von der anderen 
 ausgeschildert "Finkenkruger Weg 69c"	CP2; -7371,15201 -7408,15219
 # 
 ausgeschildert "Joe-May-Platz"	CP2; 14343,17228 14282,17186
+# 
+ausgeschildert "Sokratesweg 3/29"	CP2; 18520,9585 18610,9569
+ausgeschildert "Sokratesweg 31/57"	CP2; 18514,9552 18604,9535
+ausgeschildert "Sokratesweg 59/85"	CP2; 18505,9500 18596,9485
+# 
+#: next_check_id: AFRIKANISCHESVIERTEL-2020
+#: XXX wird umbenannt, neuer Name: "Manga-Bell-Platz"
+#: last_checked: 2021-11-13 (mapillary)
+#: check_frequency: 90d
+ausgeschildert "Nachtigalplatz"	CP2; 5581,16708 5639,16768
+# 
+ausgeschildert "Danziger Str. 101-109"	CP2; 12123,14643 12183,14757
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)

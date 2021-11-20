@@ -10,20 +10,25 @@
 # 
 ### Friedrichshain ###
 # 
+#: XXX Bauarbeiten der Wasserbetriebe, mˆglicherweise bis April 2022
+#: last_checked: 2021-11-19
+#: check_frequency: 30d
+#: next_check: 2022-04-01
+M¸hsamstr.: Fahrbahn im Kreuzungsbereich Thaerstr. gesperrt	q4::inwork 13844,12900 13818,12897 13838,12884
+# 
 #: next_check_id: OSTBAHNHOF-2021
 #: by: https://bauprojekte.deutschebahn.com/p/berlin-ostbahnhof (bis 2025?)
-#: XXX Wann sind die Bauarbeiten beendet? Ist mittlerweile die gesamte Fahrbahn der Erich-Steinfurth-Str. gesperrt?
+#: XXX Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="272512103" version="9"
 #: osm_watch: way id="767674684" version="1"
-#: last_checked: 2021-11-03
-# REMOVED --- #: check_frequency: 120d
-#: check_frequency: 30d
+#: last_checked: 2021-11-18
+#: check_frequency: 120d
 #: next_check: 2025-01-01
-Erich-Steinfurth-Str.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12596,11696 12453,11790
+Erich-Steinfurth-Str.: Bauarbeiten, Fahrbahn nur f¸r Baufahrzeuge	q3::inwork 12596,11696 12453,11790 12378,11806
 # 
 #: note: laut rbb bis 29.10.2021, laut Parkverbotsschilder bis 28.1.2022 vvv
 #: also_indoor: traffic (H(falsch),G(teilweise))
-#: last_checked: 2021-11-13 vvv
+#: last_checked: 2021-11-17 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-01-28 vvv
 Jessnerstr.: Sperrung der Fahrbahn nˆrdlich der Oderstr.	q3::inwork 14946,11697 14986,11760
@@ -180,11 +185,11 @@ Oderstr.: Einbahnstraﬂenregelung, offen Richtung Osten	q3::inwork; 15043,11637 1
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.641406.php
 #: by: https://abendblatt-berlin.de/2021/04/05/berlin-wedding-geisterhaus-an-der-burgsdorfstrasse-soll-abgerissen-werden/
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10655 (Abriss?)
-#: osm_watch: way id="549316654" version="9"
+#: osm_watch: way id="549316654" version="10"
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,H)
 #: valid: 20171026-
-#: last_checked: 2021-10-08
+#: last_checked: 2021-11-11 (osm)
 #: check_frequency: 60d
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
 # 
@@ -262,11 +267,11 @@ Friedrichstr.: Fuﬂg‰ngerzone mit Radspur, Hˆchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: osm_watch: way id="751595931" version="2"
 #: also_indoor: traffic (H)
-#: last_checked: 2021-10-31
+#: last_checked: 2021-11-18
 Parochialstr.: Fahrbahn zwischen J¸denstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10952,12401
 # 
 #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large
-#: last_checked: 2021-11-06
+#: last_checked: 2021-11-18
 #: check_frequency: 60d
 (Grunerstr. - Gustav-Bˆﬂ-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10868,12572 10772,12515
 # 
@@ -321,7 +326,7 @@ Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 96
 #: source_id: 2147343824 (bis 30.6.2021)
 #: source_id: viz2021:13.379936,52.514077,04.03.2019,08:00 (bis 30.6.2021)
 #: add_fragezeichen: Sind die Bauarbeiten hier beendet?
-#: last_checked: 2021-10-07
+#: last_checked: 2021-11-13 (architektur-urbanistik)
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2021-06-30
 # REMOVED --- #: valid: 20191218-20210531
@@ -455,7 +460,7 @@ Universit‰tsstr.: Fahrbahn wegen Bauarbeiten in Richtung S¸den gesperrt	q4::inwo
 # 
 #: XXX nach den Bauarbeiten den alten Eintrag f¸r die Wildensteiner Str. wieder aktivieren!
 #: also_indoor: traffic (G) vvv
-#: last_checked: 2021-10-10 vvv
+#: last_checked: 2021-11-16 vvv
 #: check_frequency: 60d vvv
 Wandlitzstr./Wildensteiner Str.: Fahrbahn im Bereich der Kreuzung gesperrt	q3::inwork 18557,8525 18627,8475 18704,8427
 Wandlitzstr./Wildensteiner Str.: Fahrbahn im Bereich der Kreuzung gesperrt	q3::inwork 18627,8475 18528,8331
@@ -706,7 +711,10 @@ Boddinstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12
 # 
 #: XXX bis wann dauern die Bauarbeiten an?
 #: also_indoor: traffic (G(zu viel)) vvv
-#: last_checked: 2021-11-02 vvv
+#: osm_watch: way id="1002249853" version="1"
+#: osm_watch: way id="198589916" version="8"
+#: osm_watch: way id="198589913" version="6"
+#: last_checked: 2021-11-17 vvv
 #: check_frequency: 14d vvv
 Nˆldnerstr.: Einbahnstraﬂenregelung, Radfahrer Richtung Westen kˆnnen den Gehweg benutzen	q2::inwork; 15932,10830 15681,10801
 # REMOVED --- Stadthausstr.: Einbahnstraﬂenregelung	q4::inwork; 15681,10801 15674,10851
@@ -724,7 +732,7 @@ Nˆldnerstr.: Einbahnstraﬂenregelung, Radfahrer Richtung Westen kˆnnen den Gehweg
 #: XXX laut rbb (am 31.8.2021 entfernt) und Halteverbotsschildern bis 31.08.2021
 #: also_indoor: traffic (ex-H)
 #: priority: #B
-#: last_checked: 2021-11-13
+#: last_checked: 2021-11-17
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2021-08-31
 # REMOVED --- #: valid: -20210831
@@ -888,7 +896,7 @@ Charlottenburger Str.: Einbahnstraﬂenregelung zwischen Goethestr. und Friesickes
 ### Marienfelde ###
 #: next_check_id: SAENTISSTR-2018 vvv
 #: last_checked: 2021-10-29 (bahninfo-forum) vvv
-#: next_check: 2021-12-31 vvv
+#: next_check: 2021-11-22 vvv
 (provisorische Fuﬂg‰ngerbr¸cke S‰ntisstr.): Fuﬂg‰nger	q3 9014,898 9005,912 9002,919 9047,948 9058,932
 #: XXX_prog BS an der Kreuzung, ansonsten q2
 S‰ntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
@@ -923,7 +931,8 @@ Otto-Ludwig-Str.: Fuﬂg‰ngerzone	q2 4857,10909 4930,10903
 #: XXX_prog BS Bordstein zur Friedrichstr., ansonsten q3 oder trotzdem q4 (wegen der vielen Touristen)
 Mauerstr. (Mitte): Touristen, Bordsteine	q4 9405,11413 9474,11360
 #: XXX_prog BS Bordstein zur Friedrichstr., ansonsten bleibt es bei q3
-Georgenstr.: Fuﬂg‰ngerzone, Bordstein	q3 9441,12670 9313,12662
+#: note: fr¸her "q3"
+Georgenstr.: Fuﬂg‰ngerzone, Bordstein	q4+ 9441,12670 9313,12662
 #: note: besonders in der Touristenhochsaison sehr eng vvv
 #: XXX_prog: Vormittags an Werktagen allerdings besser befahrbar, dann vielleicht q3? vvv
 Neue Promenade: Fuﬂg‰ngerzone, Radfahren erlaubt, aber nur langsam mˆglich	q4 10286,13084 10263,13047 10185,12982
@@ -1241,9 +1250,12 @@ Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
 (Rad- und Wanderweg an Spree und Landwehrkanal): einige Fuﬂg‰nger	q1 4642,12491 4817,12366 5045,12243 5144,12146 5259,11995 5337,11949 5361,11910
 #: note: Radfahren erlaubt, Fuﬂg‰nger haben Vorrang
 Spreeufer: Fuﬂg‰nger, besonders an schˆnen Tagen	q3 10166,12777 10105,12855 9977,12912 9944,12921 9930,12947 9900,12942 9724,12992 9716,12971 9707,12974
+#: note: Radfahren erlaubt, Fuﬂg‰nger haben Vorrang
 Spreeufer: Fuﬂg‰nger	q2 9707,12974 9557,12992 9538,12993 9508,12991 9279,12953
 Henriette-Herz-Platz: Straﬂenbahn	q2 10132,12941 10255,12959 10312,12982 10371,13006
-Monbijoupark - Henriette-Herz-Platz: Fuﬂg‰nger	q1 9977,12912 10132,12941
+#: note: Radfahren erlaubt, Fuﬂg‰nger haben Vorrang
+#: note: fr¸her "q1", heute ist die Fuﬂg‰ngerfrequenz hˆher
+Monbijoupark - Henriette-Herz-Platz: Fuﬂg‰nger	q2 9977,12912 10132,12941
 Monbijoubr¸cke: Fuﬂg‰nger	q1 9707,12974 9683,12913 9654,12882
 Garnisonkirchplatz: Straﬂenbahn	q2 10308,12859 10255,12959
 #: note: Bordstein am Wendehammer, aber einige Meter weiter ist eine Bordsteinabsenkung
@@ -1996,7 +2008,8 @@ Litfaﬂ-Platz: Fuﬂg‰ngerzone, Radfahren erlaubt	q3 10347,12881 10312,12982
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/55re.pdf/file?y=2011
 #: note: Fahrradfahren uneingeschr‰nkt erlaubt (fr¸her: Fuﬂg‰ngerzone)
 Yva-Bogen: Fuﬂg‰nger	q2 5373,10981 5426,11039 5459,11135
-(Georgenkirchstr. - Mollstr.): Fuﬂg‰nger	q1 11578,13310 11526,13252
+#: note: fr¸her "q1", rechtliche Lage unklar
+Pauline-Staegemann-Str.: Fuﬂg‰nger	q2 11578,13310 11526,13252
 Kelchstr.: enge Straﬂe	q1 7387,4696 7424,4821 7437,4855 7456,4934
 Doldenweg: Bordsteine, Fuﬂg‰nger	q2 7424,4821 7487,4802
 #: XXX_prog: BS am Oehlertring und unten an der Treppe, ansonsten q1
@@ -2502,11 +2515,15 @@ Schneefinkweg: enger Pfad	q3 12675,19974 12651,19928 12622,19874
 Tigerfinkweg: Bordstein	q3 12963,19971 12952,19947
 #: XXX_prog: BS
 (Weg im Acker-Park): Radfahren verboten, Bordstein an der Bergstr.	q4 9873,13872 9816,13857 9810,13866 9741,13850
+# 
+#: note: Radfahren erlaubt, Fuﬂg‰nger haben Vorrang vvv
 Park am Nordbahnhof: Fuﬂg‰nger	q1 9224,14169 9147,14151 9181,14186 9175,14193 9119,14255 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
 Park am Nordbahnhof: Fuﬂg‰nger	q1 9147,14151 9070,14058
 Park am Nordbahnhof: Fuﬂg‰nger	q1 8913,14485 8868,14442 8825,14401
 Park am Nordbahnhof: Fuﬂg‰nger	q1 9175,14193 9144,14169 9081,14232 8868,14442
 Park am Nordbahnhof: Fuﬂg‰nger	q1 9119,14255 9081,14232 8992,14176
+#: note ^^^
+# 
 (an der Panke - Mauerweg): einige Fuﬂg‰nger	q1+ 7872,14510 7889,14519 7940,14447
 (an der Panke - Mauerweg): einige Fuﬂg‰nger	q1+ 7927,14438 7940,14447 7996,14487 8050,14556 8097,14573 8234,14686
 # REMOVED (existiert nicht mehr) --- #: XXX_prog: BS --- Bordstein	q3 -2452,17408 -2451,17421
@@ -2530,7 +2547,8 @@ Mendelssohnstr.: Fuﬂg‰nger, Bordstein	q3 11598,13598 11652,13564
 (Weg ¸ber das Sportgel‰nde): zu manchen Zeiten reger Fuﬂg‰ngerverkehr	q1 13252,14179 13385,13992
 #: XXX_prog BS auf nˆrdlicher Seite normal hoch, auf s¸dlicher etwas niedriger, ansonsten q2
 Schliemannstr. [¸ber Helmholtzplatz]: Fuﬂg‰nger, Bordsteine	q3 11368,15301 11334,15248
-(Museumsinsel): Fuﬂg‰nger, besonders zu Museumsˆffnungszeiten	q2 10017,12675 9972,12732 9987,12744 9952,12791
+#: note: fr¸her "q2", rechtliche Lage unklar
+(Museumsinsel): Fuﬂg‰nger, besonders zu Museumsˆffnungszeiten	q3 10017,12675 9972,12732 9987,12744 9952,12791
 Pasedagplatz: Straﬂenbahn	q2 14170,17249 14150,17255 14099,17195
 Hochwaldstr.: eng, kurvig	q3 19577,8438 19544,8421 19526,8458
 Grimmstr. [ehemaliges Urbankrankenhaus]: Wohngebiet, Fuﬂg‰ngerzone	q3 11072,9711 11040,9724 11030,9702 10899,9754 10887,9729 11016,9671 11009,9655 11042,9642
@@ -2542,6 +2560,7 @@ Selkestr.: Fuﬂg‰nger, Bordsteine	q3 12722,7261 12741,7224
 Eyke-von-Repkow-Platz: einige Fuﬂg‰nger, Bordsteine	q3 5556,12536 5531,12501
 #: note: getrennter Rad- und Gehweg
 (Alexandrinenstr. - Wassertorstr.): Fuﬂg‰nger, Kurven	q1- 10293,10645 10401,10601 10431,10606 10492,10582
+#: note: Radfahren erlaubt, Fuﬂg‰nger haben Vorrang
 (Weg an der S¸dpanke): einige Fuﬂg‰nger	q1 8478,13941 8447,13983 8380,14024 8344,14133 8307,14175 8271,14222 8273,14269 8266,14346 8267,14395 8293,14453 8302,14517
 (Weg an der S¸dpanke): einige Fuﬂg‰nger, schmal	q2 8302,14517 8301,14576 8323,14599
 (Weg an der S¸dpanke - Am Pankepark): einige Fuﬂg‰nger, Rampe	q2 8307,14175 8323,14142
@@ -2569,7 +2588,7 @@ Waltershauser Str.: gemeinsamer Rad- und Gehweg, einige Fuﬂg‰nger	q1 6534,1702 6
 (Genslerstr. - Landsberger Allee): Fuﬂg‰nger	q2 16669,14438 16665,14420 16644,14401 16632,14390
 Schweriner Ring [9-19 ungerade]: enge Straﬂe	q1 17444,19115 17259,19121
 (Weg auf dem L‰rmschutzwall): Rampen, nicht sehr breit	q1 16665,19021 16699,19090 17197,18473 17275,18356 17564,18010 17585,17963
-(entlang der Stadtbahn): Fuﬂg‰nger	q2 10117,12973 10004,12966 9930,12947
+(entlang der Stadtbahn): Fuﬂg‰nger, schmal	q3 10117,12973 10004,12966 9930,12947
 Dievenowstr.: Bordstein, Gehweg	q2 3202,7121 3193,7059
 (Armenische Str. - Schwyzer Str., Schillerpark): Fuﬂg‰nger	q1 7144,16781 7131,16790 7115,16827 7097,16915 7094,16938
 (Armenische Str. - Schwyzer Str., Schillerpark): Fuﬂg‰nger	q1 7097,16915 7064,16943
@@ -2855,7 +2874,8 @@ Georg-Steger-Weg: einige Fuﬂg‰nger	q1 1493,2247 1480,2199 1452,2095 1461,2073 14
 (entlang der Wendeschleife): eng, kurvig	q2 23467,3891 23486,3862 23476,3829
 Schillingstr.: breiter Geh- und Radweg	q0- 11472,12406 11485,12391 11417,12243 11388,12202
 #: XXX_prog BS an der Schillingstr., ansonsten q1
-(Schillingstr. - Neue Blumenstr.): Bordstein, einige Fuﬂg‰nger	q2 11596,12668 11712,12614
+#: note: fr¸her "q2", rechtliche Lage unklar
+(Schillingstr. - Neue Blumenstr.): Bordstein, einige Fuﬂg‰nger	q3 11596,12668 11712,12614
 (Wutzkyallee - Zwickauer Damm): einige Fuﬂg‰nger	q1 15349,1614 15437,1613 15505,1591 15606,1537 15670,1474
 #: XXX_prog BS am Zwickauer Damm, allerdings nur beim ‹berqueren oder wenn man sich auf der Fahrbahn befindet, ansonsten q1
 (Zwickauer Damm - Rudower Flieﬂ): einige Fuﬂg‰nger, Bordstein	q2 15688,1506 15776,1456
@@ -2926,6 +2946,7 @@ Parkplatz Einkaufszentrum: Parkplatzverkehr	q2 -2195,3564 -2173,3513 -2164,3488
 (am Kaiser's): Fuﬂg‰nger	q2 15714,11941 15710,11857
 #: note: q3, falls alle vier Gleise mit Straﬂenbahnen belegt sind, aber manchmal sind es nur zwei oder so, und man kommt viel besser durch
 Groﬂe Pr‰sidentenstr.: wartende Straﬂenbahnen	q3 10220,13098 10105,13004
+#: note: Verbot f¸r Fahrzeuge aller Art, Radfahrer+Anlieger frei
 Wilhelmine-Gemberg-Weg: einige Fuﬂg‰nger	q1 11767,11662 11821,11733
 (Zufahrt Debis-Parkhaus): Parkhausverkehr, einige Kurven	q1 8430,10710 8424,10703 8367,10745 8350,10662 8335,10518 8350,10499 8384,10507
 Iranische Str.: einige Fuﬂg‰nger	q1 7843,16524 7713,16557 7447,16613
@@ -3136,8 +3157,8 @@ entlang der Straﬂenbahn: einige Fuﬂg‰nger	q1 17486,17266 17790,17126 17861,17099
 Schulstr. (Lankwitz): Fuﬂg‰nger	q3 6692,3334 6653,3297 6647,3292
 (Biesheimring - Lutterbacher Str.): einige Fuﬂg‰nger	q1 2048,3062 2066,3072
 (Biesheimring - Lutterbacher Str.): einige Fuﬂg‰nger	q1 1987,3166 1999,3177
-#: note: relativ kurz, deshalb q2
-Prinzengasse: einige Fuﬂg‰nger	q2 9955,12300 10006,12306
+#: note: relativ kurz, deshalb q2; mˆglicherweise nur Gehweg, deshalb q3
+Prinzengasse: einige Fuﬂg‰nger	q3 9955,12300 10006,12306
 (Weg im Schloﬂpark Buch): Fuﬂg‰nger	q2 16593,25640 16583,25667 16558,25688 16481,25671 16441,25664 16384,25692 16339,25690 16265,25718 16251,25733
 (Uferpromenade am Humboldthafen): einige Fuﬂg‰nger	q1 8257,13037 8242,13067 8242,13183 8315,13181
 #: XXX_prog BS an der Hauptstr., ansonsten entfernen
@@ -3199,9 +3220,14 @@ Johannesstift: Krankenhausgel‰nde, Aufpflasterungen	q1 -3953,17941 -4108,17776 -
 (Weg am Spekteweg): kurvenreich	q2 -4989,14994 -4997,14985 -4999,14962 -4964,14954 -4963,14969 -4963,14979
 (Hohenzollernring - Flankenschanze): abgeschlossenes Tor, Ausweichen auf Gehweg	q2 -3824,14794 -3799,14806 -3776,14815
 (Parkweg Eiswerder): einige Fuﬂg‰nger	q1 -2427,15493 -2423,15540 -2427,15575 -2448,15612 -2439,15660 -2179,15800 -2150,15740
+#: note: service-‰hnliche Straﬂe
 (Gundelfinger Str. - Rˆmerweg): Wohnanlage, Fuﬂg‰nger	q2 18735,9421 18738,9467 18754,9584 18772,9694 18781,9744
-(Aristotelessteig - Treskowallee): Wohnanlage, Fuﬂg‰nger	q2 18715,9589 18754,9584 18811,9576 18835,9572
+(Aristotelessteig - Treskowallee): Wohnanlage, Fuﬂg‰nger	q2 18715,9589 18754,9584
+#: note: service-‰hnliche Straﬂe
+(Aristotelessteig - Treskowallee): Wohnanlage, Fuﬂg‰nger	q2 18754,9584 18811,9576 18835,9572
+#: note: service-‰hnliche Straﬂe
 (Aristotelessteig - Treskowallee): Wohnanlage, Parkplatz	q2 18835,9572 18865,9608
+#: note: service-‰hnliche Straﬂe
 (Aristotelessteig - Hˆnower Str.): Wohnanlage, Parkplatz	q2 18835,9572 18837,9538 18846,9532
 (Christianstr. - Christophstr.): enger Pfad	q3 17964,16677 17952,16675 17925,16695
 (Birkbuschstr. - Berlinickestr.): Fuﬂg‰nger	q2 4796,5129 4827,5140 4829,5173
@@ -3244,6 +3270,7 @@ Nˆldnerplatz [Nˆldnerstr. - Schlichtallee]: einige Fuﬂg‰nger, Radfahren nicht er
 #: note: hier etwas breiterer Weg
 (Weg im Gr¸nzug): einige Fuﬂg‰nger	q1 16963,9960 16886,9982 16841,9997
 (Dolgenseestr. - Weg im Gr¸nzug): einige Fuﬂg‰nger	q1- 17275,9892 17257,9869
+#: note: hier gibt es einen getrennten Radweg, allerdings unter der Hausdurchfahrt kurvig und un¸bersichtlich, auﬂerdem kˆnnen sich hier Fuﬂg‰gner verirren
 Wadzeckstr. - Mollstr.: einige Fuﬂg‰nger	q1 11315,13210 11399,13333
 (zum Poststadion): Parkplatzverkehr	q1 7452,13904 7417,13880 7445,13792 7431,13740 7343,13679 7338,13649
 (entlang des Vabali Spa): einige Fuﬂg‰nger	q1 7338,13649 7422,13487
@@ -3575,6 +3602,7 @@ Waldbacher-Weg-Br¸cke: Fuﬂg‰nger, Rampen	q3 20363,12057 20385,12022 20377,12057 
 (Parkweg im Zuge der Furkastr.): Fuﬂg‰nger, Bordstein	q3 10318,2839 10329,2882
 #: XXX_prog BS an beiden Seiten der Boxberger Str., alternativ 90m Umweg, ansonsten entfernen
 (Weg am Marzahn-Hohenschˆnhauser Grenzgraben): Bordsteine	q3 19313,16130 19361,16145 19427,16179
+#: note: rechtliche Lage unklar, keine Schilder
 (Alexandrinenstr. - Alte Jakobstr.): einige Fuﬂg‰nger	q1 10736,11212 10555,11475
 #: note: offiziell nur ein Fuﬂweg
 Wilhelm-Zermin-Weg: einige Fuﬂg‰nger	q1 9279,14495 9338,14587
@@ -3613,7 +3641,8 @@ Vorfahrt Urban-Krankenhaus: Krankenhausgel‰nde	q2 10627,9912 10695,9922 10783,98
 Helene-Jung-Platz: einige Fuﬂg‰nger	q1 17750,152 17734,83
 Benedicta-Teresia-Weg: einige Fuﬂg‰nger	q1 17734,83 17730,73
 Fischerinsel: Wohngebietsparkplatz, kurvig	q2 10657,12026 10683,11995 10713,12014
-Fischerinsel: Fuﬂg‰nger	q2 10713,12014 10742,12033 10824,11992
+#: note: fr¸her "q2", "gesch¸tzte Gr¸nanlage" ohne weitere Zusatzschilder
+Fischerinsel: Fuﬂg‰nger	q3 10713,12014 10742,12033 10824,11992
 #: note: Gehweg f¸r Radfahrer frei
 Rosenfelder Ring [Fuﬂweg]: einige Fuﬂg‰nger, abgeflachte Bordsteine	q2+ 18006,11968 17923,11974 17779,11960 17598,11915 17547,11919 17540,11878
 #: XXX_prog BS an der Oderstr., ansonsten entfernen
@@ -3778,6 +3807,10 @@ Mendelssohnstr. [Wohngebiet]: einige Fuﬂg‰nger	q2 11433,13389 11486,13350
 Schulweg: einige Fuﬂg‰nger	q3 12600,12860 12551,12785 12483,12682
 #: note: rechtliche Lage unklar, mˆglicherweise Gehweg
 Diestelmeyerstr.: einige Fuﬂg‰nger	q3 12833,12920 12690,12769
+#: note: Verbot f¸r Fahrzeuge aller Art, Betriebs- und Versorgungsdienst frei, keine anderen expliziten Verbote bzgl. Radfahrer
+(Sebastianstr./Alexandrinenstr. - Dresdener Str.): einige Fuﬂg‰nger	q1 10826,11251 10907,11290 10957,11294 11000,11327
+#: note: rechtliche Lage unklar, mˆglicherweise Gehweg
+Sokratesweg: einige Fuﬂg‰nger	q2 18514,9552 18604,9535
 # 
 ######################### User Contributions #################################
 # 
@@ -4108,20 +4141,33 @@ Claire-Waldoff-Weg: Fuﬂg‰nger	q2 3584,8136 3571,8085 3538,7515
 Bissingzeile: einspurig, eng bei Gegenverkehr	q0- 7959,10910 8119,10797
 # REMOVED (-> Treppe + Rampe) --- #: XXX ist hier tats‰chlich eine Rampe oder nur eine Treppe? --- (Volkspark Friedrichshain, parallel zur Friedenstr.): Fuﬂg‰nger, kurze Rampe	q3 12382,13097 12380,13120
 (Volkspark Friedrichshain, parallel zur Friedenstr.): Fuﬂg‰nger	q1 12382,13097 12380,13120 12344,13157 12244,13240 12185,13298 12141,13341 12060,13422 12002,13485 11957,13528 11857,13596 11823,13610 11785,13625
-(Weydemeyerstr.): Fuﬂg‰nger	q1 11900,12756 11892,12760 11831,12789 11825,12792
-(Weydemeyerstr.): Fuﬂg‰nger	q1 11843,12828 11825,12792 11809,12760
-(Weydemeyerstr.): einige Fuﬂg‰nger	q0- 11933,12701 11971,12785 11925,12807
+#: note: fr¸her "q1", rechtliche Lage unklar
+(Weydemeyerstr.): Fuﬂg‰nger	q2 11900,12756 11892,12760 11831,12789 11825,12792
+#: note: fr¸her "q1", rechtliche Lage unklar
+(Weydemeyerstr.): Fuﬂg‰nger	q2 11843,12828 11825,12792 11809,12760
+#: note: fr¸her "q0-", rechtliche Lage unklar
+(Weydemeyerstr.): einige Fuﬂg‰nger	q2 11933,12701 11971,12785 11925,12807
+#: note: rechtliche Lage unklar, Feuerwehrzufahrt
 (Karl-Marx-Allee): Fuﬂg‰nger, Bordsteine	q1 11622,12850 11716,12803
 # REMOVED (by mapillary) --- #: next_check_id: KARLMARXALLEE-2018 --- #: last_checked: 2020-06-13 --- #: check_frequency: 60d
-(Karl-Marx-Allee - Berolinastr.): Fuﬂg‰nger, kurvig	q1 11601,12858 11589,12768
-(Berolinastr.): Fuﬂg‰nger	q1 11847,12927 11888,12910 11957,12876
-(Berolinastr.): Fuﬂg‰nger	q1 11888,12910 11906,12947 11921,12990
+#: note: fr¸her "q1", gesch¸tzte Gr¸nanlage
+(Karl-Marx-Allee - Berolinastr.): Fuﬂg‰nger, kurvig	q3 11601,12858 11589,12768
+#: note: fr¸her "q1", rechtliche Lage unklar
+(Berolinastr.): Fuﬂg‰nger	q2 11847,12927 11888,12910
+#: note: fr¸her "q1", Schild mit explizitem Radfahren-verboten-Schild
+(Berolinastr.): Fuﬂg‰nger	q4+ 11888,12910 11957,12876
+#: note: fr¸her "q1", Schild mit explizitem Radfahren-verboten-Schild
+(Berolinastr.): Fuﬂg‰nger	q4+ 11888,12910 11906,12947 11921,12990
 #: XXX_prog BS (am ˆstlichen Ende) (ansonsten q1)
-(Berolinastr.): Fuﬂg‰nger, Bordstein	q2 11921,12990 11987,12946
-(Berolinastr.): Fuﬂg‰nger	q1 11921,12990 11865,13027
+#: note: fr¸her "q2", rechtliche Lage unklar
+(Berolinastr.): Fuﬂg‰nger, Bordstein	q3 11921,12990 11987,12946
+#: note: fr¸her "q1", rechtliche Lage unklar
+(Berolinastr.): Fuﬂg‰nger	q2 11921,12990 11865,13027
 #: XXX_prog BS (am westlichen Ende)
-(Berolinastr.): Fuﬂg‰nger, Bordstein	q2 11815,13045 11719,13088
-(Berolinastr.): Weg am Spielplatz vorbei	q2 11865,13027 11815,13045
+#: note: fr¸her "q2", rechtliche Lage unklar
+(Berolinastr.): Fuﬂg‰nger, Bordstein	q3 11815,13045 11719,13088
+#: note: explizites Radfahren-verboten-Schild
+(Berolinastr.): Spielplatz, Gr¸nanlage, Radfahren nicht erlaubt	q4+ 11865,13027 11815,13045
 #: XXX_prog BS (zur Mollstr. hin) (ansonsten -> q2)
 (Berolinastr. - Mollstr.): Fuﬂg‰nger, Bordstein	q3 11865,13027 11874,13048 11896,13075
 #: XXX_prog BS (zur Mollstr. hin)
@@ -4162,12 +4208,11 @@ Bautzener Platz: Fufg‰nger, Bordsteine	q3 8102,9262 8183,9260
 (Prenzlauer Allee - Lilli-Henoch-Str.): Fuﬂg‰nger	q2 11877,15366 11937,15349 12003,15311 12103,15218 12208,15108 12284,15068 12314,15008
 (Prenzlauer Allee - Lilly-Henoch-Str.): Fuﬂg‰nger	q2 11860,15309 11919,15314 11937,15349
 (Verl‰ngerte Diesterwegstr.): Fuﬂg‰nger	q2 12056,15159 12082,15206 12103,15218
-#: XXX mˆglicherweise teilweise eine Servicestraﬂe, ¸berpr¸fen! vvv
-#: XXX_prog BS Bordstein an der Rudolf-Schwarz-Str., ansonsten q1
-(Anton-Saefkow-Str. - John-Schehr-Str.): Fuﬂg‰nger, Bordstein	q2 13084,14472 13009,14371
-#: XXX_prog BS Bordstein an der Rudolf-Schwarz-Str., ansonsten q1
-(Anton-Saefkow-Str. - John-Schehr-Str.): Fuﬂg‰nger, Bordstein	q2 13009,14371 12949,14292
-#: XXX ^^^
+(Anton-Saefkow-Str. - John-Schehr-Str.): einige Fuﬂg‰nger, Parkplatz	q1 13088,14469 13031,14390
+#: XXX_prog: BS
+#: note: beim ‹berqueren des Mittelstreifens m¸ssen insgesamt vier Bordsteine ¸berquert werden
+(Anton-Saefkow-Str. - John-Schehr-Str.): Bordsteine, parkende Autos	q4 13031,14390 13022,14378 13016,14370
+(Anton-Saefkow-Str. - John-Schehr-Str.): einige Fuﬂg‰nger, Parkplatz	q1 13016,14370 12954,14287
 #: note: fr¸her "q1"
 Ernst-F¸rstenberg-Str.: Fuﬂg‰nger, schmal	q3 13049,14141 12992,14196
 # REMOVED (hier nicht) --- An der Brauerei: Fuﬂg‰nger	q1 13288,13300 13279,13323
@@ -4302,7 +4347,8 @@ Willenberger Pfad: Fuﬂg‰nger, schmal	q2 569,10738 673,10727
 #: XXX_prog BS (auf beiden Seiten) (ansonsten w‰re es q3)
 (Machandelweg - Reichsstr.): Fuﬂg‰nger, eng, Bordsteine	q4 -187,12830 -166,12849 -103,12841 -85,12852
 #: XXX_prog BS (auf beiden Seiten) (ansonsten w‰re es q1) (mittlerweile gibt es eine kurze "Asphaltrampe" am nordˆstlichen Ende)
-(zur Karl-Marx-Allee): Bordsteine, Fuﬂg‰nger	q2 11367,12940 11289,12908
+#: note: fr¸her "q2", rechtliche Lage unklar
+(zur Karl-Marx-Allee): Bordsteine, Fuﬂg‰nger	q3 11367,12940 11289,12908
 Bˆrnicker Str. - S¸dpark): Fuﬂg‰nger	q2 -4117,11997 -4095,12006
 Graetschelsteig - S¸dpark): Fuﬂg‰nger	q2 -4195,12139 -4144,12187
 S¸dpark): Fuﬂg‰nger	q2 -4027,11818 -3890,11775 -3712,11714
@@ -5119,7 +5165,9 @@ Roseggerstr. (Mahlsdorf): enge Straﬂe	q1 23661,8597 23860,8480
 #: confirmed_by: srt
 Unionstr.: breiter Fuﬂweg, einige Fuﬂg‰nger, Gitter an der Siemensstr.	q3 5708,14077 5782,14067
 #: by: Bernhard Albers:
-Rhenser Weg: Fuﬂweg	q1 19083,9062 19133,9087
+#: confirmed_by: srt
+#: note: fr¸her "q1", rechtliche Lage unklar
+Rhenser Weg: Fuﬂweg	q3 19083,9062 19133,9087
 #: by: Heike Steinhardt:
 #: corrected_by: srt/policy (q2 -> q1)
 Altenescher Weg: enge Straﬂe	q1 14051,14822 13856,14944 13758,15009 13744,15018

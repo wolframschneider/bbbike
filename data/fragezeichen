@@ -1031,6 +1031,7 @@ Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	?
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
+Schranke, umständlich zu umfahren (existiert die Schranke noch?)	? 19608,-1953
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 Verbundsteinpflaster, teilweise schadhaft (Wurzelschäden) (Wird die Qualität des Radwegs nach den Bauarbeiten besser sein?)	? 43162,14428 42996,14793
@@ -1041,6 +1042,8 @@ asphaltiert (geht der Radweg in Richtung Südwesten weiter?)	? 10744,-25036 9478,
 # added from comments_misc
 Tor (Sperrung möglich?) (Ist das Tor permanent geöffnet?)	? 58041,164268 58324,164202 59544,164184
 Ausschilderung nach Luisenthal (?) folgen (Heißt es tatsächlich "Luisenthal"?)	? 41134,76881 41143,76365
+Mausohrweg: nicht ausgeschildert (wann werden die Straßen ausgeschildert?)	? 33327,2979 33296,2894
+Mausohrweg: nicht ausgeschildert (wann werden die Straßen ausgeschildert?)	? 33176,2938 33296,2894 33406,2852 33503,2818
 # added from comments_route
 F3 (Potsdam) (Wie ist der genaue Verlauf der F3?)	? -26785,5851 -26783,5891 -26689,6111 -26525,6519 -26170,6459 -25898,6447 -25719,6581 -25537,6616 -25318,6593 -25213,6477
 F3 (Potsdam) (Wie ist der genaue Verlauf der F3?)	? -18701,4578 -19392,4605 -19316,4365
@@ -1053,5 +1056,6 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from fragezeichen
 Jörsstr.: Asphaltierung geplant (Wurde die Asphaltierung der Jörsstr. bereits abgeschlossen?)	? -1478,18407 -1358,18400
 # added from bbbike-temp-blockings-optimized
+Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt (Ist der Weg mittlerweile wieder offen?)	? 21135,12127 21169,12113 21282,12115 21307,12132
 Kettinger Str.: Verbindung zur Barnetstr. wegen Bauarbeiten unterbrochen, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten beendet? Können Radfahrer wieder durchfahren?)	? 9693,-815 9692,-772 9693,-746 9699,-600
 Glashütter Weg - Künnekeweg: Bauarbeiten, Weg ist gesperrt, Umfahrung über Trampelpfade möglich, Ende der Bauarbeiten unbekannt (Stand August 2021) (Wie lange gehen die Bauarbeiten? Wie ist die Wegoberfläche nach den Bauarbeiten?)	? 18432,1352 18290,1574
