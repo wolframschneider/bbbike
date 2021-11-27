@@ -398,7 +398,7 @@ Alt-Wittenau	1 4597,20778 4649,20771 4953,20624 5117,20517 4935,20574 4726,20690
 Miningstr.	1 13444,5097 13455,4995 13432,4900 13466,4889 13503,4846
 Dörchläuchtingstr.	1 13511,4695 13486,4650 13485,4496
 Biesenthaler Str. (Hohenschönhausen)	1 17242,14719 17074,14704 17063,14797
-Nollendorfplatz	1 6851,10416 7033,10396 7131,10331 7033,10328
+Nollendorfplatz	1 6851,10416 6937,10407 7033,10396 7131,10331 7033,10328
 Nollendorfplatz	1 6971,10346 6937,10363 6851,10416
 Begonienplatz	1 4193,4897 4132,4988
 Begonienplatz	1 4173,5013 4231,4922
@@ -717,7 +717,6 @@ Edelhofdamm	1 3456,25601 3307,25554
 Edelhofdamm	1 3277,25575 3446,25628
 Olbrichweg	1 5787,19326 5879,19352
 Genfer Str.	1 6890,18190 6821,18216 6683,18243
-Eckertstr.	1s 13598,12554 13585,12584
 Am Krummen Weg	1 -7169,14849 -7026,14890
 Am Krummen Weg	1 -7169,14849 -7248,14826
 Henricistr.	1 5993,19477 5851,19440
@@ -896,8 +895,10 @@ Skalitzer Str. -> Skalitzer Str.: Mittelstreifen, Bordsteine	3::igndisp 12930,10
 Zufahrt "Gleis Park": durch Tore abgesperrt	2 8367,10745 8350,10662 8335,10518
 Ehrenfelsstr.	1s 18737,8686 18778,8663
 Mellenseestr. [Wohngebiet]	1 17587,9655 17633,9793 17633,9898
+Mellenseestr. [Wohngebiet]	1 17777,9649 17738,9822 17738,9922
 Mühsamstr.	1 13818,12897 13844,12900
 Lilli-Henoch-Str.	1s 12357,15020 12388,14926
+(Weydemeyerstr.): durch Tore abgesperrt	2 11933,12701 11971,12785
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1902,8 +1903,8 @@ Angermünder Str. -> Torstr.: Mittelstreifen mit Straßenbahn	3::igndisp 10703,138
 Torstr. -> Christinenstr.: Mittelstreifen mit Straßenbahn	3::igndisp 10459,13760 10572,13731 10599,13775
 Christinenstr. -> Torstr.: Mittelstreifen mit Straßenbahn	3::igndisp 10599,13775 10572,13731 10645,13711
 Linksabbiegen verboten (und unbequem)	3nocross::ignrte 8192,9619 8097,9650 7938,9694
-Yorckstr. -> Katzlerstr.: Linksabbiegen verboten (und unbequem)	3::igndisp 8192,9619 8097,9650 8035,9437
-Katzlerstr. -> Yorckstr.: Linksabbiegen verboten (und unbequem)	3::igndisp 8035,9437 8097,9650 7938,9694
+Yorckstr. -> Katzlerstr.: Linksabbiegen verboten (und unbequem)	3::igndisp 8192,9619 8097,9650 8041,9434
+Katzlerstr. -> Yorckstr.: Linksabbiegen verboten (und unbequem)	3::igndisp 8041,9434 8097,9650 7938,9694
 unbequemes Überqueren, stark befahrene Straße	3nocross::ignrte 7507,9458 7512,9572 7518,9791
 Potsdamer Str. -> Kleistpark: unbequemes Überqueren, stark befahrene Straße	3::igndisp 7507,9458 7512,9572 7501,9573
 Kleistpark -> Potsdamer Str.: unbequemes Überqueren, stark befahrene Straße	3::igndisp 7501,9573 7512,9572 7518,9791
@@ -2058,8 +2059,6 @@ Theanolte-Bähnisch-Str. -> Otto-Braun-Str.: Mittelstreifen	3::igndisp 11235,1314
 Otto-Braun-Str. -> Theanolte-Bähnisch-Str.: Mittelstreifen	3::igndisp 11267,13012 11320,13095 11235,13143
 Mittelstreifen	3nocross::ignrte 11226,12945 11289,12908 11589,12768 11635,12745
 Berolinastr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 11367,12940 11289,12908 11589,12768
-Karl-Marx-Allee -> Berolinastr.: Mittelstreifen	3::igndisp 11289,12908 11589,12768 11601,12858
-Berolinastr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 11601,12858 11589,12768 11635,12745
 unbequem zu überqueren (Bordsteine)	3nocross::ignrte 10796,8498 10911,8457 11225,8350 11266,8336
 Columbiadamm -> Hasenheide, am Rixdorfer Teich: unbequem zu überqueren (Bordsteine)	3::igndisp 10796,8498 10911,8457 10913,8463
 Hasenheide, am Rixdorfer Teich -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 10913,8463 10911,8457 11225,8350
@@ -2419,8 +2418,6 @@ tragen (6+6+1 Stufen)	0:25:-190 5606,12232
 tragen (insgesamt 16 Stufen)	0:35:-160 2913,13919
 tragen (3x13 Stufen)	0:45:-132 18739,4728
 tragen (3x13 Stufen)	0:45:-225 18636,4660
-tragen (3x12 Stufen)	0:35:-212 9005,912
-tragen (2x13 Stufen)	0:30:-122 9047,948
 tragen (28 Stufen)	0:30:-260 6138,12877
 Schranke	BNP:3:-142:trailer=10 20480,5445
 Tor, kann geschlossen sein	BNP:10:-180:trailer=15 20682,9834
@@ -3166,6 +3163,7 @@ Drängelgitter	BNP:3:-44:trailer=10 -739,23004
 Schranke	BNP:1:90:trailer=3 1201,15804
 Drängelgitter	BNP:3:57:trailer=10 32616,-23392
 Schranke	BNP:3:-115:trailer=10 17837,12277
+Pionierweg: wegen Bauarbeiten gesperrt	2::inwork 15714,8633 15772,8667 15922,8717 16026,8731 16074,8776 16084,8833
 Verlängerung Zwieseler Str.: Baustellenabsperrung	2::inwork 19705,9039 19638,9070
 Wandlitzstr.: in Höhe Lehndorffstr. ist die Fahrbahn gesperrt	1s:inwork 18401,8636 18448,8602
 (Kynaststr. - Paul-und-Paula-Ufer): Bauarbeiten, Weg existiert nicht mehr	2::inwork 14843,10621 14911,10587
@@ -3190,8 +3188,6 @@ Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 Otto-Ostrowski-Str.: Hochbauarbeiten, gesperrt	2::inwork 13702,13634 13711,13615 13769,13487
 Alexanderufer - Charité: Tor ist wegen Corona-Beschränkungen geschlossen	2 8371,13399 8363,13402 8356,13404
 Schulstr. (Biesdorf): Bauarbeiten, komplett gesperrt	2::inwork 20599,11938 20708,11918 20738,11915
-Wildrosenweg: Überqueren der Schulstr. nicht möglich	3 20694,11811 20708,11918 20715,12040
-Wildrosenweg: Überqueren der Schulstr. nicht möglich	3 20715,12040 20708,11918 20694,11811
 Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt	2::inwork 9131,12438 9179,12444
 Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18684,4690
 Gustav-Hertz-Platz: wegen Brückenarbeiten gesperrt	2::inwork 18722,4628 18656,4687
@@ -3244,7 +3240,6 @@ Mauerstr.: Bauarbeiten, Einbahnstraße	1s:inwork 9138,11872 9171,11777
 Uferweg zum Speicher: noch keine Durchfahrt möglich	2::inwork -12721,-2082 -12754,-2154
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
 Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,11133
-Säntisstr.: Sperrung des Bahnübergangs, Unterführung wird gebaut	2::inwork 9014,898 9024,906 9058,932
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5643,12253
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5574,12237 5535,12206
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
@@ -3610,8 +3605,8 @@ Blumenweg	1 -9445,-2389 -9343,-2087
 Golliner Str.	1 22217,17989 22276,18107 22191,18150
 Schorfheidestr.	1s 21900,18215 21869,18227
 Jagowstr. (Hermsdorf)	1 3046,22292 3043,22407 3050,22554 3055,22697
-Gehrenseestr.	1 18494,16750 18324,16625
-tragen	0:60:90 18475,16761
+Gehrenseestr.	1 18487,16741 18324,16625
+tragen	0:60:90 18467,16753
 Straßenbahn	3nocross::ignrte 16837,17440 16947,17506 17159,17631
 Falkenberger Chaussee -> Rüdickenstr.: Straßenbahn	3::igndisp 17159,17631 16947,17506 16992,17472
 Falkenberger Chaussee -> Darßer Str.: Straßenbahn	3::igndisp 16837,17440 16947,17506 16848,17530

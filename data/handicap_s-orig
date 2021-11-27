@@ -28,7 +28,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Fahrbahn nur f¸r Baufahrzeuge	q3::inwork 125
 # 
 #: note: laut rbb bis 29.10.2021, laut Parkverbotsschilder bis 28.1.2022 vvv
 #: also_indoor: traffic (H(falsch),G(teilweise))
-#: last_checked: 2021-11-17 vvv
+#: last_checked: 2021-11-24 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-01-28 vvv
 Jessnerstr.: Sperrung der Fahrbahn nˆrdlich der Oderstr.	q3::inwork 14946,11697 14986,11760
@@ -156,7 +156,7 @@ Oderstr.: Einbahnstraﬂenregelung, offen Richtung Osten	q3::inwork; 15043,11637 1
 # 
 #: XXX_prog: BS (ansonsten entfernen)
 #: next_check_id: DIESEL-2019
-#: last_checked: 2021-09-27 (mapillary)
+#: last_checked: 2021-11-23
 #: check_frequency: 60d
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 # 
@@ -196,7 +196,7 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 ### Mitte ###
 # 
 #: next_check_id: MUSEUMSINSEL-2020
-#: last_checked: 2021-11-09
+#: last_checked: 2021-11-25
 Schloﬂplatz: Fuﬂg‰nger, Bauarbeiten	q4::inwork 10102,12384 10063,12438
 # 
 #: next_check_id: MOLKENMARKT-2021
@@ -307,7 +307,7 @@ Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweich
 #: by: http://www.dafmap.de/d/berlin.html?id=3204&mt=0&zoom=16
 #: osm_watch: way id="507023458" version="10"
 #: also_indoor: traffic
-#: last_checked: 2021-11-02 (mapillary)
+#: last_checked: 2021-11-16 (mapillary)
 #: check_frequency: 45d
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 # 
@@ -491,7 +491,7 @@ Wandlitzstr./Wildensteiner Str.: Fahrbahn im Bereich der Kreuzung gesperrt	q3::i
 ### Kreuzberg ###
 # 
 #: note: kann auﬂerhalb der Arbeitszeiten geˆffnet sein (gesehen: 2021-10-19 gegen 19:00, 2021-11-09 gegen 18:10)
-#: last_checked: 2021-11-09
+#: last_checked: 2021-11-20
 #: check_frequency: 14d
 Bˆckhstr.: einige Meter der Fahrbahn gesperrt	q3::inwork 11411,9810 11197,9894
 # 
@@ -530,7 +530,7 @@ Bˆckhstr.: einige Meter der Fahrbahn gesperrt	q3::inwork 11411,9810 11197,9894
 ### Kˆpenick ###
 # 
 #: next_check_id: WUHLHEIDE-2021
-#: last_checked: 2021-10-24
+#: last_checked: 2021-11-23
 #: check_frequency: 30d
 Am Bahnhof Wuhlheide: Bauarbeiten, Engstellen	q3-::inwork 20640,7122 20654,7136 20629,7189 20575,7226
 # 
@@ -562,7 +562,7 @@ Wilhelmshavener Str.: Abschnitt der Fahrbahn wegen Bauarbeiten gesperrt	q3::inwo
 # 
 #: next_check_id: MUSEUMDERMODERNE-2021
 #: by: https://baudoku.1000eyes.de/cam/deininger/B8A44F22CFEF/responsive.html (Webcam)
-#: last_checked: 2021-10-13
+#: last_checked: 2021-11-20
 #: check_frequency: 90d
 Matth‰ikirchplatz: wegen Bauarbeiten am Museum der Moderne mˆgliche Behinderungen	q3::inwork 7934,11275 7965,11380
 # 
@@ -714,7 +714,7 @@ Boddinstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12
 #: osm_watch: way id="1002249853" version="1"
 #: osm_watch: way id="198589916" version="8"
 #: osm_watch: way id="198589913" version="6"
-#: last_checked: 2021-11-17 vvv
+#: last_checked: 2021-11-21 vvv
 #: check_frequency: 14d vvv
 Nˆldnerstr.: Einbahnstraﬂenregelung, Radfahrer Richtung Westen kˆnnen den Gehweg benutzen	q2::inwork; 15932,10830 15681,10801
 # REMOVED --- Stadthausstr.: Einbahnstraﬂenregelung	q4::inwork; 15681,10801 15674,10851
@@ -894,17 +894,7 @@ Charlottenburger Str.: Einbahnstraﬂenregelung zwischen Goethestr. und Friesickes
 # REMOVED (laut osm sind die Bauarbeiten beendet) --- #: next_check_id: BOHNSDORFERKREISEL-2017 --- #: source_id: 2147341295 --- #: osm_watch: way id="410955359" version="3" --- #: last_checked: 2017-08-07 --- #: check_frequency: 30d --- Am Falkenberg: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 21862,807 21870,803 22007,711
 # 
 ### Marienfelde ###
-#: next_check_id: SAENTISSTR-2018 vvv
-#: last_checked: 2021-10-29 (bahninfo-forum) vvv
-#: next_check: 2021-11-22 vvv
-(provisorische Fuﬂg‰ngerbr¸cke S‰ntisstr.): Fuﬂg‰nger	q3 9014,898 9005,912 9002,919 9047,948 9058,932
-#: XXX_prog BS an der Kreuzung, ansonsten q2
-S‰ntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898
-S‰ntisstr.: Bauarbeiten	q3 9058,932 9129,986
-#: next_check ^^^
-#: last_checked ^^^
-#: next_check_id ^^^
-# 
+# REMOVED --- #: next_check_id: SAENTISSTR-2018 vvv --- #: last_checked: 2021-10-29 (bahninfo-forum) vvv --- #: next_check: 2021-11-22 vvv --- (provisorische Fuﬂg‰ngerbr¸cke S‰ntisstr.): Fuﬂg‰nger	q3 9014,898 9005,912 9002,919 9047,948 9058,932 --- #: XXX_prog BS an der Kreuzung, ansonsten q2 --- S‰ntisstr.: Gehweg benutzen, Bordstein	q3 8971,864 9014,898 --- S‰ntisstr.: Bauarbeiten	q3 9058,932 9129,986 --- #: next_check ^^^ --- #: last_checked ^^^ --- #: next_check_id ^^^
 # REMOVED (vermutlich keine Einschr‰nkung) --- #: next_check_id: HILDBURGHAUSER-2018 --- #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.760187.php --- #: XXX "ab voraussichtlich 18.02.2019 erfolgt eine erneute Fahrbahnsperrung zwischen Steinheilpfad und Oberhofer Weg" (am 17.02. wird es allerdings noch nirgendwo erw‰hnt) --- #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/sanierung-der-hildburghauser-strasse-verzoegert-sich-erneut_a193048 (erneute Sperrung ab 18. Februar 2019) --- #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/der-ausbau-der-hildburghauser-strasse-verzoegert-sich-weiter_a201187 --- #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2019/pressemitteilung.789448.php --- #: source_id: 2147341614 --- #: source_id: 2147343257 --- #: also_indoor: traffic --- #: priority: #A --- #: last_checked: 2018-07-02 --- #: next_check: 2019-02-25 --- # REMOVED --- #: valid: 20190218- --- Hildburghauser Str.: Bauarbeiten, Gehweg und Fahrbahn nur provisorisch vorhanden	q3::inwork 5585,1275 5741,1234 --- # REMOVED --- Hildburghauser Str.: Bauarbeiten, Gehweg und Fahrbahn nur provisorisch vorhanden	q3::inwork 5741,1234 5795,1219 5867,1199 5909,1187 6010,1157 6106,1133 6145,1119
 # 
 ### Franzˆsisch Buchholz ###
@@ -1475,7 +1465,7 @@ Langhoffstr.: enge Straﬂe, Gegenverkehr	q1 19817,14371 19818,14064
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5651&date=20140610 (Umgestaltung der Alten Frankfurter Allee)
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6543
 #: osm_watch: way id="223184082" version="7"
-#: last_checked: 2021-09-16 (mapillary)
+#: last_checked: 2021-11-22
 #: check_frequency: 90d
 (Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16535,11920 16512,11894
 Zum Schlachtensee: wegen der groﬂen Steigung/Gef‰lles nur Schrittgeschwindigkeit mˆglich	q4 -1663,4218 -1592,4268
@@ -2335,7 +2325,8 @@ M¸ggelstr.: einige Fuﬂg‰nger	q3 14994,12121 14994,12064
 (Fischerstr. - L¸ckstr.): Fuﬂg‰nger, teilweise recht eng	q2 16404,10286 16488,10381 16516,10448 16501,10460 16572,10613 16587,10613
 # REMOVED (BS existiert nicht mehr) --- #: XXX_prog BS Bordstein am MonimbÛplatz, ansonsten entfernen --- (Skandinavische Str. - Lichtenberger Br¸cke/MonimbÛplatz): Bordstein	q2 17023,11908 17026,11888
 #: note: abgesenkter Bordstein zur Wallstr.
-M‰rkischer Platz: Fuﬂg‰nger	q2 11034,12038 11084,12070 11111,12027
+#: note: fr¸her "q2", Gr¸nanlagen mit Radfahren-verboten-Zusatzschild
+M‰rkischer Platz: Fuﬂg‰nger, Radfahren offiziell nicht erlaubt	q4+ 11034,12038 11084,12070 11111,12027
 #: XXX_prog BS zur Gr¸nstraﬂenbr¸cke
 (Fischerinsel - Gr¸nstraﬂenbr¸cke): Fuﬂg‰nger, niedriger Bordstein	q2+ 10474,11843 10515,11785
 # REMOVED (mittlerweile abgeflacht) --- #: XXX_prog BS zur Helsingforser Str. --- (Rampe Wriezener Park): Fuﬂg‰nger, Bordstein	q3 13427,11431 13416,11425
@@ -2828,7 +2819,7 @@ Magdeburger Platz: Bordsteine	q3 7393,10809 7414,10804
 #: XXX_prog BS an der Privatstraﬂe 10 (ˆstliche Seite), anonsten Eintrag entfernen
 (Gr¸nanlage): Bordsteinkante	q1 17185,17384 17006,17473
 Friedlander Str.: Bodenschwelle	q1 20574,4317 20594,4342
-#: note: Gr¸nanlagen-Schild existiert, ohne Zusatzschilder
+#: note: Gr¸nanlagen-Schild existiert am s¸dlichen Ende, ohne Zusatzschilder, am nˆrdlichen Ende sind keine Schilder
 (Paul-Junius-Str. - Alfred-Jung-Str.): Fuﬂg‰nger	q1 15370,13508 15346,13298
 Hans-B¸low-Str.: Fuﬂg‰nger	q1 8553,11638 8481,11638
 Berliner Freiheit: Fuﬂg‰nger	q1 8481,11638 8387,11637
@@ -3811,6 +3802,8 @@ Diestelmeyerstr.: einige Fuﬂg‰nger	q3 12833,12920 12690,12769
 (Sebastianstr./Alexandrinenstr. - Dresdener Str.): einige Fuﬂg‰nger	q1 10826,11251 10907,11290 10957,11294 11000,11327
 #: note: rechtliche Lage unklar, mˆglicherweise Gehweg
 Sokratesweg: einige Fuﬂg‰nger	q2 18514,9552 18604,9535
+#: note: Radfahrer sollen hier absteigen
+Hans-Baluschek-Park: enge Rampe, Fuﬂg‰nger	q2 7252,6080 7278,6101
 # 
 ######################### User Contributions #################################
 # 
@@ -4150,8 +4143,10 @@ Bissingzeile: einspurig, eng bei Gegenverkehr	q0- 7959,10910 8119,10797
 #: note: rechtliche Lage unklar, Feuerwehrzufahrt
 (Karl-Marx-Allee): Fuﬂg‰nger, Bordsteine	q1 11622,12850 11716,12803
 # REMOVED (by mapillary) --- #: next_check_id: KARLMARXALLEE-2018 --- #: last_checked: 2020-06-13 --- #: check_frequency: 60d
-#: note: fr¸her "q1", gesch¸tzte Gr¸nanlage
-(Karl-Marx-Allee - Berolinastr.): Fuﬂg‰nger, kurvig	q3 11601,12858 11589,12768
+# REMOVED (anderer Weg nun) --- #: note: fr¸her "q1", gesch¸tzte Gr¸nanlage
+#: XXX_prog BS (an der Berolinastr.)
+#: note: rechtliche Lage unklar
+(Karl-Marx-Allee - Berolinastr.): Fuﬂg‰nger, Bordstein	q3 11622,12850 11645,12774 11635,12745
 #: note: fr¸her "q1", rechtliche Lage unklar
 (Berolinastr.): Fuﬂg‰nger	q2 11847,12927 11888,12910
 #: note: fr¸her "q1", Schild mit explizitem Radfahren-verboten-Schild
@@ -4171,7 +4166,8 @@ Bissingzeile: einspurig, eng bei Gegenverkehr	q0- 7959,10910 8119,10797
 #: XXX_prog BS (zur Mollstr. hin) (ansonsten -> q2)
 (Berolinastr. - Mollstr.): Fuﬂg‰nger, Bordstein	q3 11865,13027 11874,13048 11896,13075
 #: XXX_prog BS (zur Mollstr. hin)
-(Berolinastr. - Mollstr.): Fuﬂg‰nger, Bordstein	q2 11656,13100 11681,13161
+#: note: fr¸her "q2", rechtliche Lage unklar
+(Berolinastr. - Mollstr.): Fuﬂg‰nger, Bordstein	q3 11656,13100 11681,13161
 #: note: Charakter eine Service-Straﬂe mit Fuﬂg‰ngerbenutzung; Verbot f¸r Fahrzeuge aller Art (schwarz statt rot)
 (Lichtenberger Str.): Fuﬂg‰nger	q2 12054,12903 12039,12675
 #: XXX_prog BS (zur Georgenkirchstr. hin) (ansonsten w‰re es q1)
@@ -4524,7 +4520,7 @@ Uferweg am Weiﬂen See: Fuﬂg‰nger	q2 14521,16599 14521,16655 14482,16726 14423,16
 # REMOVED (gibt es nicht (mehr?)) --- Berliner Allee - Uferweg: enge Rampe oder 6 Stufen	q4+ 14499,16341 14485,16362
 Seeweg (Weiﬂensee): Fuﬂg‰nger	q2 14485,16362 14480,16449
 Seeweg (Weiﬂensee): Fuﬂg‰nger	q2 14610,16522 14581,16529 14510,16549
-(Treppe zur Gehrenseestr.)	q4 18490,16761 18475,16761 18482,16774
+(Treppe zur Gehrenseestr.)	q4 18478,16753 18467,16753 18471,16765
 # 
 #: by: Lydia Weitmann [AM] vvv
 (Blohmstr. - Diedersdorfer Str.): kaum Fuﬂg‰nger	q1 9093,-1670 8972,-1581 8845,-1521 8776,-1487 8492,-1376 8061,-1117

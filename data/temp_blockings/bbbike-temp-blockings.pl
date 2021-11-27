@@ -11920,7 +11920,7 @@ EOF
        text  => 'CSD am 28.6.2008',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 8358,11477 8301,11469 8261,11463 8226,11458 8145,11438 8096,11393 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7413,10244 7238,10299 7131,10331 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6602,10504 6532,10529 6685,10690 6740,10755 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
+	2::temp 8358,11477 8301,11469 8261,11463 8226,11458 8145,11438 8096,11393 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7536,10199 7413,10244 7238,10299 7131,10331 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6602,10504 6532,10529 6685,10690 6740,10755 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
 	2::temp 8553,11630 8548,11571 8542,11502 8479,11493 8374,11479
 	2::temp 9984,12426 9934,12420 9858,12410 9780,12401 9771,12400 9713,12392 9664,12387 9613,12381 9475,12365 9358,12351 9141,12320 9164,12172 9064,12156
 	2::temp 8553,11638 8567,11799 8571,11846 8577,11896 8595,12066 8737,12098 8743,12099 8861,12125 9054,12154
@@ -17349,11 +17349,12 @@ EOF
        until => $isodate2epoch->("2019-12-15 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 12, start => "2021-01-01T00:00:00"]], # findet 2020 vermutlich nicht statt
-       recurrence_prewarn_days => 10,
+       recurrence_prewarn_days => 7,
        text  => 'Alt-Köpenicker Weihnachtsmarkt vom 13.12.2019 bis zum 15.12.2019',
        type  => 'gesperrt',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1305665-955635-weihnachtsmarktaufdemschlossplatzk%C3%B6peni.html',
        data  => <<EOF,
+#: by: https://www.berlin.de/weihnachtsmarkt/5666333-3496862-weihnachtsmarkt-auf-dem-schlossplatz-koe.html (2021 unter Vorbehalt)
 	2::xmas 22111,4562 22162,4546 22214,4548
 EOF
      },
@@ -17412,7 +17413,7 @@ EOF
        until => $isodate2epoch->("2021-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
-       #recurrence_prewarn_days => -1, # XXX Ausmaß der Sperrung 2020/2021 unklar
+       recurrence_prewarn_days => 7, # XXX Ausmaß der Sperrung 2020/2021 unklar, 2021/2022 ebenso
        text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Ebertstr. zwischen Behrenstr. und Scheidemannstr., ab 26.12.2020 bis 02.01.2021',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -18231,7 +18232,7 @@ EOF
 	3 6716,11439 6825,11486 6750,11550
 	3 6716,11439 6825,11486 6915,11492
 # REMOVED ---	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6982,10610 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
-# REMOVED ---	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6602,10504 6532,10529
+# REMOVED ---	2::temp 7033,10396 6937,10407 6851,10416 6753,10446 6636,10492 6602,10504 6532,10529
 # REMOVED ---# REMOVED (2019 hier nicht) ---	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
 # REMOVED ---# REMOVED (2019 hier nicht) ---	2::temp 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746
 # REMOVED ---# REMOVED (2019 hier nicht) ---	3 6302,10462 6353,10583 6380,10704
@@ -25336,7 +25337,7 @@ EOF
        until => $isodate2epoch->("2020-01-02 23:59:59"), # 1451646000, # 2016-01-01 12:00
        periodic => 1,
        recurrences => [['yearly', days => 28, months => 12, start => "2021-01-01T00:00:00"]], # 2020/2021 keine große Silvesterparty
-       #recurrence_prewarn_days => 2, # XXX Ausmaß der Sperrung 2020/2021 unklar
+       recurrence_prewarn_days => 7, # XXX Ausmaß der Sperrung 2020/2021 unklar, 2021/2022 ebenso
        text  => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 29.12.2019 bis 02.01.2020',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -25581,7 +25582,7 @@ EOF
        text  => 'Karl-Marx-Allee - umliegende Straßen: Zugang wegen Vorbereitungen zum Formel-E-Rennen u.U. nicht möglich, voraussichtlich bis 28.05.2016',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 11601,12858 11589,12768
+	2::temp 11622,12850 11645,12774 11635,12745
 	2::temp 11635,12745 11596,12668
 	2::temp 11678,12727 11716,12803
 EOF
@@ -26199,6 +26200,7 @@ EOF
 #: source_id: viz2021:13.196408,52.438127,03.11.2021,09:15
 #: source_id: viz2021:13.196408,52.438127,10.11.2021,09:15
 #: source_id: viz2021:13.196408,52.438127,17.11.2021,09:15
+#: source_id: viz2021:13.196408,52.438127,24.11.2021,09:15
 # REMOVED --- #: priority: #A --- #: next_check: 2021-11-17
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
@@ -27396,12 +27398,17 @@ EOF
 EOF
      },
      { from  => 1522326966, # 2018-03-29 14:36
-       until => 1523995773, # -> gesperrt-orig --- 1622541600, # 2021-06-01 12:00
-       text  => 'Säntisstr.: Bahnübergang bis 2021 gesperrt, ggfs. gibt es für Fußgänger eine Überquerungsmöglichkeit (tragen!)',
+       until => 1637609328, # undef, # 1523995773, # -> gesperrt-orig --- 1622541600, # 2021-06-01 12:00
+       text  => 'Säntisstr.: Bahnunterführung wird gebaut',
        type  => 'gesperrt',
        data  => <<EOF,
+#: next_check_id: SAENTISSTR-2018
 #: source_id: 2147342379
 #: source_id: LMS-BR_r_LMS-BR_127414_LMS-BR_72 (inaktiv)
+#: source_id: viz2021:13.380614,52.414283,29.03.2018,07:00 (seit 22.11.2021 inaktiv)
+# REMOVED --- #: also_indoor: traffic (H,G)
+# REMOVED --- #: add_fragezeichen: Ist die Bahnunterführung bereits fertig und für Radfahrer benutzbar?
+#: by: https://twitter.com/VIZ_Berlin/status/1462758945030909957 (offen!)
 	2::inwork 9014,898 9024,906 9058,932
 EOF
      },
@@ -28067,8 +28074,8 @@ EOF
 #: next_check_id: BHFZEUTHEN-2018
 #: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
 #: by: https://www.maz-online.de/Lokales/Dahme-Spreewald/Zeuthen/S-Bahnhof-Zeuthen-Fortschritte-auf-der-Baustelle-fuer-den-Personentunnel (noch immer gesperrt)
-#: osm_watch: way id="36936021" version="5" brb
-#: last_checked: 2021-09-09
+#: osm_watch: way id="36936021" version="6" brb
+#: last_checked: 2021-11-23 (osm)
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2020-11-01
 	2::inwork 25929,-5994 25902,-6006 25893,-6002
@@ -28129,7 +28136,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-11-06
+#: last_checked: 2021-11-25
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29190,7 +29197,7 @@ EOF
      },
      { from  => $isodate2epoch->("2021-09-03 14:00:00"), # undef, # 
        until => undef, # $isodate2epoch->("2021-09-06 04:00:00"), # 1570116625, # 1680364800, # 2023-04-01 18:00
-       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt', # , von Sonnabend, den 04.09.2021, 14:00 Uhr, bis Montag, den 06.09.2021, 4:00 Uhr',
+       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt (Stand: Mitte November 2021: Durchfahrt ist gesperrt)', # , von Sonnabend, den 04.09.2021, 14:00 Uhr, bis Montag, den 06.09.2021, 4:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2021
@@ -29198,11 +29205,12 @@ EOF
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
-#: osm_watch: way id="8655276" version="22"
+#: osm_watch: way id="8655276" version="23"
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2021-10-18
+#: last_checked: 2021-11-26 (osm)
 #: check_frequency: 30d
-	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
+	2::inwork 21135,12127 21169,12113 21282,12115
+# REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
 EOF
      },
      { from  => undef, # 
@@ -30832,7 +30840,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-11-16
+#: last_checked: 2021-11-20
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31049,7 +31057,7 @@ EOF
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="4"
-#: last_checked: 2021-11-14 vvv
+#: last_checked: 2021-11-25 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -33213,13 +33221,13 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-11-17
+#: last_checked: 2021-11-26
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
-#: osm_watch: way id="984964447" version="3"
+#: osm_watch: way id="984964447" version="4"
 	q3::inwork 15279,10862 15355,10875
-#: osm_watch: way id="984056169" version="3"
+#: osm_watch: way id="984056169" version="4"
 	2::inwork 15272,10790 15388,10758
 EOF
      },
@@ -33248,12 +33256,15 @@ EOF
 EOF
      },
      { from  => 1627682400, # 2021-07-31 00:00
-       until => $isodate2epoch->("2022-01-01 18:00:00"), # 1633039199, # 2021-09-30 23:59
+       until => $isodate2epoch->("2022-01-31 18:00:00"), # 1633039199, # 2021-09-30 23:59
        text  => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis voraussichtlich Anfang 2022',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106283.php',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1145930.php (Verzögerung)
+#: by: https://www.berliner-woche.de/luebars/c-bauen/fahrbahn-der-strasse-am-vierrutenberg-erst-im-fruehjahr-fertig_a328514
+#: add_fragezeichen: Sind die Bauarbeiten beendet?
+#: next_check: 2022-01-03
 	q4::inwork 5793,23422 5893,23287
 EOF
      },
@@ -33726,11 +33737,12 @@ EOF
      },
      { from  => $isodate2epoch->("2021-11-22 00:00:00"), # undef, # 
        until => $isodate2epoch->("2021-12-19 17:00:00"), # 1636480477, # undef,
-       text  => 'Brachvogelstr./Alexandrinnenstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Gitschiner Str. gesperrt',
+       text  => 'Brachvogelstr./Alexandrinnenstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Gitschiner Str. gesperrt, evtl. ist auch der Radverkehr betroffen, bis 19.12.2021',
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (beendet) --- #: add_fragezeichen: Bis wann geht die Sperrung in der Brachvogelstr.? --- #: also_indoor: traffic (G(falsch)) --- #: last_checked: 2021-10-19
 #: source_id: viz2021:13.399042,52.497652,23.11.2021,06:00
+#: by: https://twitter.com/VIZ_Berlin/status/1463011930226917378 (Radverkehr nicht betroffen)
 	q4::inwork; 10066,10071 10069,10151 10083,10192 10122,10294
 EOF
      },
@@ -33777,7 +33789,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: CORONA-2020
 #: XXX seit Corona ist der Markt auch auf der Arndtstr. --- bleibt das so?
-#: last_checked: 2021-10-09
+#: last_checked: 2021-11-20
 #: check_frequency: 90d
 #: tempex: sa T09-T15
 	2::temp 9546,9198 9617,9185 9596,9092
@@ -33815,7 +33827,7 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="1003079755" version="1"
 #: add_fragezeichen: Wann wird die Sperrung der Fahrbahn beendet?
-#: last_checked: 2021-11-17
+#: last_checked: 2021-11-21
 	q3::inwork 16153,10818 16192,10907
 EOF
      },
@@ -33957,10 +33969,74 @@ EOF
        type  => 'handicap',
        source_id => 'viz2021:13.496206,52.500247,12.11.2021,06:00',
        data  => <<EOF,
+#: next_check_id: LUECK-2021
 #: by: https://twitter.com/VIZ_Berlin/status/1459133374208122880
 #: by: https://pbs.twimg.com/media/FD_h8clXEAUsQ1n?format=jpg&name=large
 	q4::inwork; 16861,10923 16751,10696 16751,10674
 	q4::inwork; 16892,10731 16961,10893
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Schwiebusser Str.: wegen Bauarbeiten Einbahnstraßenregelung, offen Richtung Westen, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: also_indoor: traffic
+#: add_fragezeichen: Wurde die Einbahnstraßenregelung aufgehoben?
+#: last_checked: 2021-11-20
+#: check_frequency: 60d
+	q4::inwork; 9227,8890 9417,8890
+EOF
+     },
+     { from  => 1637599882, # 2021-11-22 17:51
+       until => 1638831600, # 2021-12-07 00:00
+       text  => 'Scharnweberstr./Weichselstr.: Gleisbauarbeiten, Fahrbahn gesperrt, Gehweg für Radfahrer frei, bis 6.12.2021',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.bahninfo-forum.de/read.php?9,689838,718366#msg-718366
+#: by: https://www.bvg.de/de/verbindungen/stoerungsmeldungen/m13?date=20221119 (bis 6.12.2021)
+#: also_indoor: traffic
+#: last_checked: 2021-11-24 vvv
+#: check_frequency: 7d vvv
+	q3::inwork; 14965,11924 15077,11910 15133,11902 15256,11884
+	q3::inwork 14965,11924 14888,11934 14836,11842
+#: note: Fahrbahn kann hier benutzt werden, allerdings nur Kopfsteinpflaster, und q=Q2 kann nicht spezifiziert werden
+Kopfsteinpflaster	q2::inwork; 15256,11884 15133,11902 15077,11910
+#: check_frequency ^^^
+#: last_checked ^^^
+EOF
+     },
+     { from  => 1637608390, # 2021-11-22 20:13
+       until => 1638831600, # 2021-12-07 00:00
+       text  => 'Markgrafenstr., Richterstr. und Prinzenstr.: Sperrung am Mariendorfer Damm, bis 6.12.2021',
+       type  => 'handicap',
+       data  => <<EOF,
+	q4::inwork 9333,4229 9208,4215
+	q4::inwork 9375,4022 9276,3997
+	q4::inwork 9020,4890 9248,4904
+EOF
+     },
+     { from  => 1637449200, # 2021-11-21 00:00
+       until => $isodate2epoch->("2021-11-26 12:00:00"), # 1638054000, # 2021-11-28 00:00
+       text  => 'Storkower Str./Thaerstr.: Bauarbeiten, evtl. sind auch Radfahrer betroffen, vom 22.11.2021 06:00 bis 26.11.2021 12:00',
+       type  => 'handicap',
+       source_id => 'viz2021:13.459082,52.526025,22.11.2021,06:00',
+       data  => <<EOF,
+#: by: https://twitter.com/VIZ_Berlin/status/1462709242088103938/photo/1 (Umleitung für Radfahrer Richtung Osten)
+#: by: https://pbs.twimg.com/media/FEyV9K0XoAEO-Ob?format=jpg&name=large
+#: by: https://viz.berlin.de/2021/11/verkehrsvorschau-23112021/
+	q4::inwork; 14089,13509 14109,13449 14159,13384
+	q4::inwork 14109,13449 14052,13389
+EOF
+     },
+     { from  => 1637953683, # 2021-11-26 20:08
+       until => 1667257200, # 2022-11-01 00:00
+       text  => 'Ruhlsdorf: Bauarbeiten, Sperrung, vermutlich auch für Radfahrer, bis 31.10.2022',
+       type  => 'handicap',
+       source_id => '217202207',
+       data  => <<EOF,
+#: note: innterörtliche Umleitung für Radfahrer existiert, deshalb nur q4 statt 2
+	q4::inwork -4311,-30322 -4686,-30955 -4813,-31339 -4835,-31548
 EOF
      },
     );

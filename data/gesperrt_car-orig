@@ -863,7 +863,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="9"
-#: last_checked: 2021-11-09
+#: last_checked: 2021-11-20
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
 Scharnhorststr.: Poller	3 7877,14504 7804,14445 *
@@ -1519,4 +1519,10 @@ Rudolf-Reusch-Str	1 15710,12365 15668,12304 15658,12231 15651,12214
 # 
 (Anton-Saefkow-Str. - John-Schehr-Str.): durch versenkbaren Poller gesperrt	2:Anlieger 13088,14469 13031,14390
 (Anton-Saefkow-Str. - John-Schehr-Str.): durch versenkbaren Poller gesperrt	2:Anlieger 13016,14370 12954,14287
+# 
+Eckertstr.	1 13598,12554 13585,12584
+# 
+Mittelstr.	1 15647,14693 15539,14493
+# 
+(Weydemeyerstr.): Absperrung	2 11925,12807 11971,12785
 # 

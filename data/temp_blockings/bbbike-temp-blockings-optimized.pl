@@ -3647,26 +3647,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
-#: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
-#: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
-#: by: https://viz.berlin.de/2021/10/a115-sprengungen/ (nächste Termine 2021: 3.11., 10.11., 17.11., 24.11)
-#: source_id: 2147341022
-#: source_id: viz2021:13.196408,52.438127,03.11.2021,09:15
-#: source_id: viz2021:13.196408,52.438127,10.11.2021,09:15
-#: source_id: viz2021:13.196408,52.438127,17.11.2021,09:15
-# REMOVED --- #: priority: #A --- #: next_check: 2021-11-17
-	2::temp -2218,5133 -927,6888
-	2::temp -2825,5588 -1925,6790 -2080,6897
-	2::temp -1925,6790 -1851,6887
-',
-         'from' => 1637622000,
-         'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 17. November 2021 ab ca. 09:30 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1637745300
-       },
+       undef,
        undef,
        {
          'data' => '#: tempex: sunset-T07
@@ -3956,8 +3937,8 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
          'data' => '#: next_check_id: BHFZEUTHEN-2018
 #: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
 #: by: https://www.maz-online.de/Lokales/Dahme-Spreewald/Zeuthen/S-Bahnhof-Zeuthen-Fortschritte-auf-der-Baustelle-fuer-den-Personentunnel (noch immer gesperrt)
-#: osm_watch: way id="36936021" version="5" brb
-#: last_checked: 2021-09-09
+#: osm_watch: way id="36936021" version="6" brb
+#: last_checked: 2021-11-23 (osm)
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2020-11-01
 	2::inwork 25929,-5994 25902,-6006 25893,-6002
@@ -3977,7 +3958,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-11-06
+#: last_checked: 2021-11-25
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4115,15 +4096,16 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
-#: osm_watch: way id="8655276" version="22"
+#: osm_watch: way id="8655276" version="23"
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2021-10-18
+#: last_checked: 2021-11-26 (osm)
 #: check_frequency: 30d
-	2::inwork 21135,12127 21169,12113 21282,12115 21307,12132
+	2::inwork 21135,12127 21169,12113 21282,12115
+# REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
 ',
          'from' => 1630670400,
          'id' => 3086,
-         'text' => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt',
+         'text' => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt (Stand: Mitte November 2021: Durchfahrt ist gesperrt)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4306,24 +4288,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED (alt) --- #: by: https://www.verkehrslage.de/Berlin+Brebacher+Weg/a6095526 --- #: confirmed_by: srt (2019-11-16)
-# REMOVED (alt) --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.889183.php --- #: by: fritz --- #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergang-gesperrt_a251392
-#: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
-#: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergaenge-werden-erneuert_a327470 (neue Sperrung November 2021)
-#: by: https://pascalgrothe.de/sperrung-der-bahnuebergaenge-in-biesdorf-vom-8-11-bis-26-11/
-# REMOVED --- #: XXX es wird nochmal im zweiten Halbjahr 2021 eine zweiwöchige Sperrung geben
-#: also_indoor: search Brebacher_Weg Bahnübergang
-# REMOVED --- #: osm_watch: way id="9829824" version="25"
-# REMOVED --- #: priority: #A --- #: last_checked: 2021-03-31 --- # REMOVED --- #: check_frequency: 90d --- #: next_check: 2021-07-01
-	2::inwork 21558,12073 21562,12088 21564,12097
-',
-         'from' => 1636264800,
-         'id' => 3171,
-         'text' => 'Brebacher Weg: Bahnübergang gesperrt, vom 7.11.2021 bis voraussichtlich 26.11.2021',
-         'type' => 'gesperrt',
-         'until' => 1637942400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4396,7 +4361,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-11-16
+#: last_checked: 2021-11-20
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4445,7 +4410,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: osm_watch: way id="934995899" version="3"
 #: osm_watch: way id="934995901" version="4"
-#: last_checked: 2021-11-14 vvv
+#: last_checked: 2021-11-25 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -4598,29 +4563,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9022 (Frage)
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9049 (ab August (2020 oder 2021?) für sechs Monate, auch beim Brebacher Weg, Bau einer Autoüberfahrt?)
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9184 (fehlende Umleitung)
-#: by: https://www.gruenemarzahnhellersdorf.de/2020/zuegig-nachbessern-und-umleitungen-schaffen-an-den-biesdorfer-bahnuebergaengen/ (bis Frühjahr 2021)
-#: by: https://twitter.com/SBahnBerlin/status/1347543580529758210 (S-Bahn fährt nicht bis 25.1.2021)
-#: by: https://abendblatt-berlin.de/2021/01/13/mit-dem-bus-statt-mit-der-bahn-durch-den-berliner-osten/
-#: by: https://viz.berlin.de/2021/01/s5/ (SEV bis 25.1.2021)
-#: by: https://pascalgrothe.de/neuigkeiten-zur-sperrung-der-bahnuebergaenge-in-biesdorf/ (zweiwöchige Sperrung im 2. Halbjahr 2021)
-#: by: https://www.berliner-woche.de/biesdorf/c-verkehr/bahnuebergaenge-werden-erneuert_a327470 (neue Sperrung November 2021)
-#: by: https://pascalgrothe.de/sperrung-der-bahnuebergaenge-in-biesdorf-vom-8-11-bis-26-11/
-# REMOVED --- #: XXX bis wann ist der Bahnübergang gesperrt?
-#: also_indoor: search Oberfeldstraße Bahnübergang
-# REMOVED --- #: osm_watch: way id="868347101" version="4"
-# REMOVED --- #: priority: #A --- #: last_checked: 2021-03-31 --- # REMOVED --- #: check_frequency: 90d --- #: next_check: 2021-07-01
-	2::inwork 20627,12162 20624,12133 20620,12108
-',
-         'from' => 1636264800,
-         'id' => 3282,
-         'text' => 'Oberfeldstr.: Bahnübergang am S-Bhf. Biesdorf gesperrt, vom 7.11.2021 bis voraussichtlich 26.11.2021',
-         'type' => 'gesperrt',
-         'until' => 1637942400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4758,20 +4701,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1641398400
        },
        undef,
-       {
-         'data' => '#: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021) (mittlerweile: 25.11.2021) (mittlerweile: 01.02.2022)
-#: last_checked: 2021-11-07 (mapillary)
-#: check_frequency: 90d
-#: next_check: 2022-02-01
-	q2::inwork 8913,16159 9099,16398
-',
-         'from' => 1611329064,
-         'id' => 3324,
-         'source_id' => '2147346268',
-         'text' => 'Stettiner Str.: Bauarbeiten, keine direkte Anbindung zur Badstr., bis 25.11.2021',
-         'type' => 'handicap',
-         'until' => 1637856000
-       },
+       undef,
        {
          'data' => '#: next_check_id: ABBESTR-2021
 #: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kleinere-projekte/?postID=697425#post697425 (sieht weitgehend fertig aus)
@@ -5147,13 +5077,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-11-17
+#: last_checked: 2021-11-26
 #: check_frequency: 30d
 #: next_check: 2021-12-15
 	q4::inwork; 15261,10738 15272,10790 15279,10862
-#: osm_watch: way id="984964447" version="3"
+#: osm_watch: way id="984964447" version="4"
 	q3::inwork 15279,10862 15355,10875
-#: osm_watch: way id="984056169" version="3"
+#: osm_watch: way id="984056169" version="4"
 	2::inwork 15272,10790 15388,10758
 ',
          'from' => 1625734800,
@@ -5167,6 +5097,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1145930.php (Verzögerung)
+#: by: https://www.berliner-woche.de/luebars/c-bauen/fahrbahn-der-strasse-am-vierrutenberg-erst-im-fruehjahr-fertig_a328514
+#: add_fragezeichen: Sind die Bauarbeiten beendet?
+#: next_check: 2022-01-03
 	q4::inwork 5793,23422 5893,23287
 ',
          'from' => 1627682400,
@@ -5174,7 +5107,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106283.php',
          'text' => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis voraussichtlich Anfang 2022',
          'type' => 'handicap',
-         'until' => 1641056400
+         'until' => 1643648400
        },
        undef,
        {
@@ -5403,11 +5336,12 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '# REMOVED (beendet) --- #: add_fragezeichen: Bis wann geht die Sperrung in der Brachvogelstr.? --- #: also_indoor: traffic (G(falsch)) --- #: last_checked: 2021-10-19
 #: source_id: viz2021:13.399042,52.497652,23.11.2021,06:00
+#: by: https://twitter.com/VIZ_Berlin/status/1463011930226917378 (Radverkehr nicht betroffen)
 	q4::inwork; 10066,10071 10069,10151 10083,10192 10122,10294
 ',
          'from' => 1637535600,
          'id' => 3457,
-         'text' => 'Brachvogelstr./Alexandrinnenstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Gitschiner Str. gesperrt',
+         'text' => 'Brachvogelstr./Alexandrinnenstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Gitschiner Str. gesperrt, evtl. ist auch der Radverkehr betroffen, bis 19.12.2021',
          'type' => 'handicap',
          'until' => 1639929600
        },
@@ -5427,7 +5361,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: CORONA-2020
 #: XXX seit Corona ist der Markt auch auf der Arndtstr. --- bleibt das so?
-#: last_checked: 2021-10-09
+#: last_checked: 2021-11-20
 #: check_frequency: 90d
 #: tempex: sa T09-T15
 	2::temp 9546,9198 9617,9185 9596,9092
@@ -5457,7 +5391,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: also_indoor: traffic (G)
 #: osm_watch: way id="1003079755" version="1"
 #: add_fragezeichen: Wann wird die Sperrung der Fahrbahn beendet?
-#: last_checked: 2021-11-17
+#: last_checked: 2021-11-21
 	q3::inwork 16153,10818 16192,10907
 ',
          'from' => undef,
@@ -5565,7 +5499,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1640300400
        },
        {
-         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1459133374208122880
+         'data' => '#: next_check_id: LUECK-2021
+#: by: https://twitter.com/VIZ_Berlin/status/1459133374208122880
 #: by: https://pbs.twimg.com/media/FD_h8clXEAUsQ1n?format=jpg&name=large
 	q4::inwork; 16861,10923 16751,10696 16751,10674
 	q4::inwork; 16892,10731 16961,10893
@@ -5576,6 +5511,61 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Archenholdstr. und Marie-Curie-Allee: Einbahnstraßenregelungen, voraussichtlich bis 10.12.2021',
          'type' => 'handicap',
          'until' => 1639177200
+       },
+       {
+         'data' => '#: also_indoor: traffic
+#: add_fragezeichen: Wurde die Einbahnstraßenregelung aufgehoben?
+#: last_checked: 2021-11-20
+#: check_frequency: 60d
+	q4::inwork; 9227,8890 9417,8890
+',
+         'from' => undef,
+         'id' => 3478,
+         'text' => 'Schwiebusser Str.: wegen Bauarbeiten Einbahnstraßenregelung, offen Richtung Westen, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.bahninfo-forum.de/read.php?9,689838,718366#msg-718366
+#: by: https://www.bvg.de/de/verbindungen/stoerungsmeldungen/m13?date=20221119 (bis 6.12.2021)
+#: also_indoor: traffic
+#: last_checked: 2021-11-24 vvv
+#: check_frequency: 7d vvv
+	q3::inwork; 14965,11924 15077,11910 15133,11902 15256,11884
+	q3::inwork 14965,11924 14888,11934 14836,11842
+#: note: Fahrbahn kann hier benutzt werden, allerdings nur Kopfsteinpflaster, und q=Q2 kann nicht spezifiziert werden
+Kopfsteinpflaster	q2::inwork; 15256,11884 15133,11902 15077,11910
+#: check_frequency ^^^
+#: last_checked ^^^
+',
+         'from' => 1637599882,
+         'id' => 3479,
+         'text' => 'Scharnweberstr./Weichselstr.: Gleisbauarbeiten, Fahrbahn gesperrt, Gehweg für Radfahrer frei, bis 6.12.2021',
+         'type' => 'handicap',
+         'until' => 1638831600
+       },
+       {
+         'data' => '	q4::inwork 9333,4229 9208,4215
+	q4::inwork 9375,4022 9276,3997
+	q4::inwork 9020,4890 9248,4904
+',
+         'from' => 1637608390,
+         'id' => 3480,
+         'text' => 'Markgrafenstr., Richterstr. und Prinzenstr.: Sperrung am Mariendorfer Damm, bis 6.12.2021',
+         'type' => 'handicap',
+         'until' => 1638831600
+       },
+       undef,
+       {
+         'data' => '#: note: innterörtliche Umleitung für Radfahrer existiert, deshalb nur q4 statt 2
+	q4::inwork -4311,-30322 -4686,-30955 -4813,-31339 -4835,-31548
+',
+         'from' => 1637953683,
+         'id' => 3482,
+         'source_id' => '217202207',
+         'text' => 'Ruhlsdorf: Bauarbeiten, Sperrung, vermutlich auch für Radfahrer, bis 31.10.2022',
+         'type' => 'handicap',
+         'until' => 1667257200
        }
      
 );

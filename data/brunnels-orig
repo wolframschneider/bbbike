@@ -192,7 +192,7 @@ Scheffelstraßenbrücke	Br 14940,12843 15010,12855
 Südliche Rhinstraßenbrücke	Br 18216,12262 18216,12239 18216,12209 18215,12123
 Falkenberger Chaussee, S-Bahnbrücke	Br 17400,17790 17482,17844 17601,17922 17675,17971 17721,18001 17744,18016
 S-Bahnunterführung Wartenberg	Tu 16998,18695 17024,18674 17008,18701 17068,18736 17086,18719 17077,18744
-Gehrenseestraßenbrücke	Br 18484,16757 18490,16761 18527,16789 18587,16834
+Gehrenseestraßenbrücke	Br 18484,16757 18478,16753 18527,16789 18587,16834
 Hohenschönhausener Rhinstraßebrücke	Br 17706,15269 17626,15433
 Gleimtunnel	Tu 9907,15618 10004,15636 10130,15653
 Sandkrugbrücke	Br 8295,13531 8332,13548
@@ -230,10 +230,10 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: source_id: 2147345790 (nicht mehr aktiv)
 #: source_id: 2147346453 (Leitungsbauarbeiten, bis 16.10.2020)
 #: osm_watch: way id="4568174" version="25"
-#: osm_watch: way id="883834105" version="8"
-#: osm_watch: way id="883834106" version="9"
-#: osm_watch: way id="883834107" version="7"
-#: last_checked: 2021-10-25 (daf)
+#: osm_watch: way id="883834105" version="9"
+#: osm_watch: way id="883834106" version="10"
+#: osm_watch: way id="883834107" version="8"
+#: last_checked: 2021-11-25 (osm)
 #: check_frequency: 180d
 #: next_check: 2023-12-01
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
@@ -332,7 +332,7 @@ Kynastbrücke	Br 14928,10970 14902,10859 14880,10808
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6904 (Vorschlag an Senatsverwaltung weitergeleitet)
 #: XXX Name "Südkreuz-Steg" --- wann wird dieser Name offiziell (Amtsblatt?) und die Brücke ausgeschildert?
 #: osm_watch: way id="10360532" version="24"
-#: last_checked: 2021-10-09
+#: last_checked: 2021-11-20
 #: check_frequency: 120d
 Sachsendammsteg	Br 7757,7563 7747,7521 7733,7483
 # 
@@ -689,7 +689,7 @@ Margarete-Kubicka-Brücke	Br 14384,8056 14425,8052
 #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_09_1157_1272_online.pdf
 Mathilde-Rathenau-Brücke	Br 14261,8851 14318,8790
 # 
-provisorische Fußgängerbrücke	Br 9002,919 9047,948
+# REMOVED (Säntisstr.) --- provisorische Fußgängerbrücke	Br 9002,919 9047,948
 Fußgängerbrücke Betriebsbahnhof Schöneweide	Br 18642,4654 18684,4690 18730,4735
 Hohe Brücke	Br 31896,2512 31903,2497
 	Br 12507,21391 12520,21386

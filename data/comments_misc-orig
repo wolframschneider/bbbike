@@ -1236,7 +1236,7 @@ ausgeschildert als Rüdigerstr. 65+65 A-E	CP2; 17441,12247 17444,12286
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_50_5649_5788_online.pdf (Straßenbenennung)
 #: XXX dieser Weg wird auch in Minna-Todenhagen-Str. umbenannt --- evtl. auf einen Namen hier komplett verzichten. old_name-Eintrag?
 #: XXX wird hier noch irgendwie ausgeschildert?
-#: last_checked: 2021-09-11
+#: last_checked: 2021-11-23
 #: check_frequency: 120d
 Grenzweg (Oberschöneweide): nicht ausgeschildert	CS 17295,7328 17475,7451 17566,7485
 # REMOVED (hier: Heckenweg) --- Grenzweg (Oberschöneweide): nicht ausgeschildert	CS 17566,7485 17669,7515
@@ -1277,7 +1277,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="5"
-#: last_checked: 2021-09-24
+#: last_checked: 2021-11-25
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
@@ -1598,6 +1598,8 @@ ausgeschildert "Sokratesweg 59/85"	CP2; 18505,9500 18596,9485
 ausgeschildert "Nachtigalplatz"	CP2; 5581,16708 5639,16768
 # 
 ausgeschildert "Danziger Str. 101-109"	CP2; 12123,14643 12183,14757
+# 
+Privatstraße	CS 21193,11330 21214,11331
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)

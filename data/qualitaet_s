@@ -73,7 +73,7 @@ Hans-Baluschek-Park: Beton	Q0 7252,6080 7278,6101 7305,6183
 Hans-Baluschek-Park: Asphalt	Q0 7305,6183 7393,6452 7605,7109 7707,7415 7733,7483 7747,7521 7757,7563
 Hans-Baluschek-Park - Südkreuz: Betonpflaster	Q0 7757,7563 7777,7644 7789,7692 7792,7704 7789,7718 7774,7724
 (Lotte-Laserstein-Str. - Hans-Baluschek-Park): Betonpflaster	Q0 7750,7658 7777,7644
-Großgörschenstr.: mäßiges Kopfsteinpflaster	Q2 8186,9380 8086,9418 8035,9437 7960,9466
+Großgörschenstr.: mäßiges Kopfsteinpflaster	Q2 8186,9380 8086,9418 8041,9434 7960,9466
 Großgörschenstr.: verfugtes Kopfsteinpflaster	Q1 7771,9479 7829,9485
 Großgörschenstr.: Asphalt	Q0 7829,9485 7882,9490
 Waldemarstr.: Kopfsteinpflaster	Q2 11552,10863 11328,10957
@@ -438,7 +438,8 @@ Libauer Str.: Kopfsteinpflaster	Q2 13895,11663 13711,11458
 Niederbarnimstr.: Kopfsteinpflaster	Q2 14208,12235 14045,11965
 Simon-Dach-Str.: Kopfsteinpflaster	Q2 14045,11965 14006,11843
 Simon-Dach-Str.: Kopfsteinpflaster	Q2 14006,11843 13981,11746 13954,11647 13888,11405
-Krossener Str.: Kopfsteinpflaster	Q2 14561,11600 14496,11620 14424,11639 14358,11656 14247,11681 14102,11715 13981,11746
+Krossener Str.: Kopfsteinpflaster	Q2 14561,11600 14496,11620 14424,11639 14358,11656 14247,11681 14102,11715
+Krossener Str.: Kopfsteinpflaster	Q2 14102,11715 13981,11746
 Gabriel-Max-Str.: mäßiges bis schlechtes Kopfsteinpflaster	Q2 14161,11930 14127,11811
 Gabriel-Max-Str.: mäßiges bis schlechtes Kopfsteinpflaster	Q2 14102,11715 14065,11605 14049,11553
 Kurfürstenstr.: mäßiges bis schlechtes Kopfsteinpflaster	Q3 7633,10394 7744,10372 7850,10351 8058,10306
@@ -1174,7 +1175,7 @@ Dolomitenstr.: Kopfsteinpflaster	Q2 10572,17573 10466,17464 10298,17299
 (Orankestr. - Orankesee): Parkweg	Q2 15598,15793 15604,15824 15587,15852
 Peter-Vischer-Str.: Asphalt	Q0 6168,6467 6324,6480 6458,6492 6538,6499 6694,6512 6820,6522
 Riemenschneiderweg: Asphalt	Q0 6820,6522 6798,6755 6791,6821 6770,7027
-Riemenschneiderweg: Beton	Q0 6770,7027 6762,7109
+Riemenschneiderweg: Beton, einige Hebungen	Q1 6770,7027 6762,7109
 Wuhlewanderweg (Ahrensfelder Berg): glatter Parkweg	Q1 22631,16215 22657,16287 22672,16341 22690,16383 22701,16451 22746,16596 22722,16906
 Wuhlewanderweg (Ahrensfelder Berg): glatter Parkweg	Q1 22722,16906 22611,17126 22432,17245 22349,17302
 Wuhlewanderweg: Holzbohlen	Q1 22349,17302 22364,17323
@@ -1479,7 +1480,7 @@ Sorauer Str.: Kopfsteinpflaster, teilweise mäßig, teilweise OK	Q2 12822,10487 12
 am Beisheim-Center: glatt gepflastert	Q0 8322,11715 8387,11637 8442,11555
 Hans-Bülow-Str.: Asphalt	Q0 8553,11638 8481,11638
 Berliner Freiheit: glatt gepflastert	Q0 8481,11638 8387,11637
-Katzlerstr.: mäßiges Kopfsteinpflaster	Q2 8035,9437 8097,9650
+Katzlerstr.: mäßiges Kopfsteinpflaster	Q2 8041,9434 8097,9650
 Derfflingerstr.: einige kurze Kopfsteinpflasterabschnitte, sonst Asphalt	Q1 7117,10611 7236,10936
 Weimarer Str.: gutes Kopfsteinpflaster	Q1 4101,11347 4101,11233
 Graudenzer Str.: Kopfsteinpflaster	Q2 13243,12222 13470,12190
@@ -10777,7 +10778,11 @@ Müggelstr.: Mosaikpflaster	Q1 14994,12121 14994,12064
 (Barnimstr. - Mollstr.): Beton	Q0 11785,13241 11762,13207
 Heidenfeldstr. [Stichstraße]: Beton	Q1 13445,13376 13419,13435
 Mellenseestr. [Wohngebiet]: Beton, einige Hebungen	Q1 17633,9898 17633,9793 17587,9655
+Mellenseestr. [Wohngebiet]: Beton, einige Schäden	Q1 17738,9922 17738,9822 17777,9649
 Rhenser Str.: Mosaikpflaster	Q1 19133,9087 19083,9062
+Bergmannstr.: Asphalt, einige leichte Schäden	Q0 10123,9233 10547,9233
+Südstern: Asphalt, einige Querrillen	Q0 10547,9233 10705,9234
+Lückstr.: Asphalt, einige Schäden	Q0; 16153,10818 16300,10753 16313,10747 16468,10695
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -13397,7 +13402,7 @@ Freischützstr.: schlechtes Kopfsteinpflaster	Q3 13315,21969 13601,21826
 Pfingstrosenweg: Verbundsteinpflaster	Q0 22085,10855 22060,10914 22035,10971 22012,11024 21981,11092 21956,11146 21924,11216 21872,11196
 Malersteig: Asphalt	Q0 13606,3085 13596,3039 13561,2898 13510,2690 13487,2621 13452,2548 13420,2509
 Weseler Str.: mäßiger Asphalt	Q1 18865,8740 18857,8790 18854,8831 18860,8886
-Weseler Str.: mäßiger Asphalt	Q1 18860,8886 18877,8973 18881,9002
+Weseler Str.: Asphalt	Q0 18860,8886 18877,8973 18881,9002
 Weseler Str.: Asphalt	Q0 18881,9002 18886,9031
 Weseler Str.: mäßiger Asphalt	Q1 18886,9031 18900,9119
 Arthur-Weisbrodt-Str.: guter Asphalt	Q0 14170,13496 14218,13661
@@ -16271,7 +16276,7 @@ Herkulesufer: Kleinpflaster	Q2 7575,11076 7252,11188 7218,11181 7140,11156 7142,
 Berolinastr.: Beton	Q1 11560,13232 11476,13052 11440,12976 11419,12944 11541,12886 11601,12858
 Berolinastr.: Asphalt	Q0 11476,13052 11590,12995 11609,12986 11659,12962 11673,12955 11771,12909
 Berolinastr.: Beton	Q2 11771,12909 11826,12883 11847,12927
-Berolinastr.: Beton	Q0 11541,12886 11590,12995
+Berolinastr.: Beton	Q1 11541,12886 11590,12995
 Mollstr.: Beton	Q0 11739,13131 11736,13126 11719,13088 11659,12962
 Mollstr.: Beton	Q0 11673,12955 11630,12867 11622,12850
 Weydemeyerstr.: Asphalt	Q0 12112,12861 12054,12903
@@ -16280,18 +16285,20 @@ Weydemeyerstr.: Beton	Q1 11987,12946 11957,12876 11925,12807 11900,12756
 (Weydemeyerstr.): Gehwegplatten	Q0 11900,12756 11892,12760 11831,12789 11825,12792
 (Weydemeyerstr.): Beton	Q0 11843,12828 11825,12792 11809,12760
 (Weydemeyerstr.): Beton	Q1 11933,12701 11971,12785 11925,12807
-Weydemeyerstr.: mäßiger Beton, Fugen	Q2 11716,12803 11809,12760 11933,12701 11969,12681 12039,12675 12064,12673
+Weydemeyerstr.: mäßiger Beton, Fugen	Q2 11716,12803 11809,12760 11933,12701 11969,12681 12039,12675
+Weydemeyerstr.: Asphalt	Q0 12039,12675 12064,12673
 (Karl-Marx-Allee): Gehwegplatten	Q0 11601,12858 11622,12850 11716,12803
 (Karl-Marx-Allee - Berolinastr.): Beton	Q1 11419,12944 11367,12940
 (Karl-Marx-Allee - Berolinastr.): Gehwegplatten	Q0 11367,12940 11289,12908
-(Karl-Marx-Allee - Berolinastr.): unebene Gehwegplatten	Q1 11601,12858 11589,12768
+(Karl-Marx-Allee - Berolinastr.): Gehwegplatten	Q0 11622,12850 11645,12774 11635,12745
 (Berolinastr.): Gehwegplatten	Q1 11847,12927 11888,12910
 (Berolinastr.): Verbundsteine	Q1 11888,12910 11957,12876
 (Berolinastr.): Gehwegplatten	Q0 11888,12910 11906,12947 11921,12990
 (Berolinastr.): unebener Asphalt	Q1 11987,12946 11921,12990 11865,13027
 (Berolinastr.): Gehwegplatten	Q0 11865,13027 11815,13045 11719,13088
 (Berolinastr. - Mollstr.): Gehwegplatten	Q0 11865,13027 11874,13048 11896,13075
-(Berolinastr. - Mollstr.): Beton/Verbundsteine/gepflastert	Q1 11609,12986 11656,13100 11681,13161
+(Berolinastr. - Mollstr.): Beton und kurz gepflastert	Q1 11609,12986 11656,13100
+(Berolinastr. - Mollstr.): Verbundsteinpflaster	Q1 11656,13100 11681,13161
 (Lichtenberger Str.): Verbundsteine	Q1 12054,12903 12039,12675
 Barnimstr.: Asphalt	Q0 11561,13451 11608,13417 11652,13372 11765,13260
 Barnimstr.: Beton	Q0 11765,13260 11774,13251 11785,13241
@@ -17071,7 +17078,7 @@ Auf dem Grat: Asphalt	Q0 1807,5355 1803,5390 1803,5397 1652,5426
 Kehler Weg: asphaltiert	Q0 2027,4792 2012,4861 2025,4935
 Bitscher Str.: asphaltiert	Q0 1884,4811 1939,4949 1969,4978
 Darßer Str.: Beton	Q0 15238,18015 15505,17967 15567,17956 15715,17930 15783,17915 15881,17899 16277,17830 16472,17791 16487,17785 16563,17759 16677,17678 16761,17561 16785,17524 16837,17440
-Gehrenseestr.: Beton	Q0 18316,16636 18484,16757 18490,16761 18527,16789 18587,16834 18674,16904
+Gehrenseestr.: Beton	Q0 18316,16636 18484,16757 18478,16753 18527,16789 18587,16834 18674,16904
 Gehrenseestr.: Asphalt	Q0 18674,16904 18738,16957
 Heubergerweg: Beton	Q1 17387,4446 17276,4539 17225,4568 17171,4575 17125,4565 17075,4525 17025,4462
 Heubergerweg: Asphalt	Q0 17025,4462 16909,4309
@@ -17128,8 +17135,8 @@ Titastr.: schlechtes Kopfsteinpflaster	Q3 17276,16281 17385,16432
 (Entlang der Straßenbahn Wartenberger Str.): Verbundsteinpflaster und Beton	Q1 17861,17099 17886,17072 17788,16926 17625,16695 17497,16506 17424,16407
 Arnimstr.: rauer Asphalt	Q1 17902,17074 18073,17007 18282,16920
 Arnimstr.: mäßiger Asphalt	Q1 18282,16920 18416,16867
-Arnimstr.: guter Asphalt	Q0 18416,16867 18472,16844 18499,16788
-Gehrenseestr.: guter Asphalt	Q0 18499,16788 18482,16774 18308,16645
+Arnimstr.: Beton/Asphalt mit einigen Schäden	Q1 18416,16867 18472,16844 18499,16788
+Gehrenseestr.: guter Asphalt	Q0 18499,16788 18471,16765 18308,16645
 Gottfriedstr.: Asphalt	Q0 17839,16987 18029,16899 18169,16800 18246,16720 18308,16645 18316,16636
 Lotharstr.: rauer Asphalt	Q1 18073,17007 18029,16899
 Lotharstr.: Asphalt	Q0 18029,16899 17997,16828 17997,16812 17908,16792
@@ -17146,10 +17153,12 @@ Anna-Ebermann-Str.: Beton	Q0 17907,16611 17938,16654
 Joseph-Höhn-Str.: Beton	Q0 18096,16523 18076,16559 17938,16654 17886,16690 17832,16727 17870,16782 17863,16815 17884,16849 17793,16922
 Joseph-Höhn-Str.: Beton	Q0 17870,16782 17886,16690
 Gehrenseestr.: Beton mit einigen Schäden	Q1 18153,16551 18096,16523 17877,16423
-Gehrenseestr.: guter Asphalt	Q0 18494,16750 18324,16625
-Detlevstr.: teilweise holpriger Asphalt	Q2 18482,16774 18494,16750 18439,16483 18412,16334 18406,16295
+Gehrenseestr.: guter Asphalt	Q0 18487,16741 18324,16625
+Detlevstr.: rauer Asphalt	Q1 18471,16765 18487,16741 18439,16483
+Detlevstr.: Asphalt mit erhebliche Hebungen	Q2 18439,16483 18412,16334 18406,16295
 Lukasstr.: Asphalt	Q0 18316,16636 18324,16625 18384,16550 18439,16483
-Bennostr.: Asphalt	Q0 17970,16406 18228,16336 18406,16295
+Bennostr.: Asphalt mit einigen Schäden	Q0; 17970,16406 18228,16336 18406,16295
+Bennostr.: Asphalt	Q0; 18406,16295 18228,16336 17970,16406
 Norbertstr.: Asphalt	Q0 18165,16523 18228,16438 18252,16403
 Theobaldstr.: mäßiger Asphalt	Q2 18384,16550 18300,16488 18228,16438
 Oswaldstr.: Asphalt	Q0 18300,16488 18326,16452 18412,16334
