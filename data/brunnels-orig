@@ -192,7 +192,7 @@ Scheffelstraßenbrücke	Br 14940,12843 15010,12855
 Südliche Rhinstraßenbrücke	Br 18216,12262 18216,12239 18216,12209 18215,12123
 Falkenberger Chaussee, S-Bahnbrücke	Br 17400,17790 17482,17844 17601,17922 17675,17971 17721,18001 17744,18016
 S-Bahnunterführung Wartenberg	Tu 16998,18695 17024,18674 17008,18701 17068,18736 17086,18719 17077,18744
-Gehrenseestraßenbrücke	Br 18484,16757 18478,16753 18527,16789 18587,16834
+Gehrenseestraßenbrücke	Br 18478,16753 18527,16789 18587,16834
 Hohenschönhausener Rhinstraßebrücke	Br 17706,15269 17626,15433
 Gleimtunnel	Tu 9907,15618 10004,15636 10130,15653
 Sandkrugbrücke	Br 8295,13531 8332,13548
@@ -229,14 +229,18 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: XXX erstmal wird eine Behelfsbrücke erstellt (westlich); die neue Brücke wird Platz für eine Radwegunterführung haben
 #: source_id: 2147345790 (nicht mehr aktiv)
 #: source_id: 2147346453 (Leitungsbauarbeiten, bis 16.10.2020)
-#: osm_watch: way id="4568174" version="25"
-#: osm_watch: way id="883834105" version="9"
-#: osm_watch: way id="883834106" version="10"
-#: osm_watch: way id="883834107" version="8"
-#: last_checked: 2021-11-25 (osm)
-#: check_frequency: 180d
-#: next_check: 2023-12-01
+#: last_checked: 2021-11-29 (osm) vvv
+#: check_frequency: 360d vvv
+#: next_check: 2023-12-01 vvv
+#: osm_watch: way id="4568174" version="27"
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
+#: osm_watch: way id="883834105" version="15"
+#: osm_watch: way id="883834106" version="18"
+#: osm_watch: way id="883834107" version="13"
+provisorische Tegeler Brücke	Br -255,15993 -239,16077
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 Spandauer-See-Brücke	Br -2209,16501 -1928,16423
 Wasserstadtbrücke	Br -2149,16921 -1832,16858
