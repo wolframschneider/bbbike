@@ -3394,6 +3394,7 @@ EOF
 #: by: https://www.berlin.de/weihnachtsmarkt/3240274-3496862-weihnachtsmarkt-an-der-gedaechtniskirche.html (2020)
 #: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/971524-955635-weihnachtsmarkt-an-der-gedaechtniskirche.html
 #: by: https://berliner-abendblatt.de/2021/11/02/ein-weihnachtsbaum-fuer-den-breitscheidplatz/
+#: by: https://berliner-abendblatt.de/2021/12/07/weihnachtsmarkt-auf-dem-breitscheidplatz-wird-umzaeunt/
 # REMOVED --- #: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020? Laut vmz ist der Radverkehr in der Kantstr. nicht betroffen --- #: last_checked: 2019-11-27 (hier mittlerweile Weihnachtsmarkt, man könnte aber durchschieben) --- #: next_check: 2019-11-25
 #: source_id: 2147345089
 Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
@@ -17350,7 +17351,7 @@ EOF
        until => $isodate2epoch->("2019-12-15 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 12, start => "2021-01-01T00:00:00"]], # findet 2020 vermutlich nicht statt
-       recurrence_prewarn_days => 1,
+       recurrence_prewarn_days => -1,
        text  => 'Alt-Köpenicker Weihnachtsmarkt vom 13.12.2019 bis zum 15.12.2019',
        type  => 'gesperrt',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1305665-955635-weihnachtsmarktaufdemschlossplatzk%C3%B6peni.html',
@@ -24834,14 +24835,16 @@ EOF
      },
      { from  => $isodate2epoch->("2020-01-12 08:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2020-01-17 23:59:59"),
-       periodic => 1,
-       recurrences => [['yearly', days => 8, months => 1, start => "2021-01-31T00:00:00"],
-                       ['yearly', days => 27, months => 6, start => "2021-10-25T00:00:00"]],
+       ## möglicherweise nicht mehr in der Schöneberger Str.
+       #periodic => 1,
+       #recurrences => [['yearly', days => 8, months => 1, start => "2021-01-31T00:00:00"],
+       #                ['yearly', days => 27, months => 6, start => "2021-10-25T00:00:00"]],
        text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 13.01.2020-17.01.2020',
        type  => 'handicap',
        source_id => 'https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-termin-fuer-januar-2020.html',
        data  => <<EOF,
 #: by: https://fashion-week-berlin.com/blog/single-news/berlin-fashion-week-der-sommertermin-in-2021-steht-fest.html (6. bis 12. September 2021) (allerdings möglicherweise nicht in der Schöneberger/Luckenwalder)
+#: by: https://www.fashionstreet-berlin.de/mbfw-berlin-herbst-winter-2021-22-findet-statt-fashion-week-berlin/278738/ (Januar 2021: Kraftwerk Berlin?)
 #: source_id: 2147343639
 #: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
 	q4::temp 8644,10408 8397,10488 8384,10507 8527,10621
@@ -28743,11 +28746,12 @@ EOF
 EOF
      },
      { from  => 1542148916, # 2018-11-13 23:41
-       until => $isodate2epoch->("2021-12-31 23:59:59"), # $isodate2epoch->("2019-07-09 18:00:00"), # 1561931999, # 2019-06-30 23:59
-       text  => 'Henningsdorfer Str.: zwischen Alt-Heiligensee und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, möglicherweise bis Ende 2021',
+       until => $isodate2epoch->("2022-11-15 17:00:00"), # $isodate2epoch->("2019-07-09 18:00:00"), # 1561931999, # 2019-06-30 23:59
+       text  => 'Henningsdorfer Str.: zwischen Alt-Heiligensee und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, bis Mitte November 2022',
        type  => 'handicap',
        source_id => '2147343419', # Gesamtmaßnahme bis Ende 2021
        data  => <<EOF,
+#: source_id: viz2021:13.222469,52.619767,05.11.2018,10:34 (bis 15.11.2022)
 #: next_check_id: HENNIGSDORFER-2019
 	q4::inwork; -2504,22626 -2540,22694 -2424,22991 -2306,23259
 # REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2306,23259 -2248,23409 -2185,23567
@@ -30474,7 +30478,7 @@ EOF
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-11-29
+#: last_checked: 2021-12-04
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 EOF
@@ -30843,7 +30847,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-11-20
+#: last_checked: 2021-12-04
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31058,9 +31062,9 @@ EOF
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
-#: osm_watch: way id="934995899" version="3"
-#: osm_watch: way id="934995901" version="4"
-#: last_checked: 2021-11-28 vvv
+#: osm_watch: way id="934995899" version="4"
+#: osm_watch: way id="934995901" version="5"
+#: last_checked: 2021-12-06 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -32217,7 +32221,7 @@ EOF
 #: note: reopened, es gibt wieder Bauzäune
 #: osm_watch: way id="152832871" version="16"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-11-06
+#: last_checked: 2021-12-04
 #: check_frequency: 60d
 	q4::inwork 4674,12076 4698,12124
 # REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
@@ -32650,17 +32654,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1638545089, # undef, # XXX
        text  => 'Kulmer Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, vermutlich bis Dezember 2021',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX laut Baustellenschild der Wasserbetriebe bis Dezember 2021
-#: XXX mittlerweile wurde der Bereich verkleinert, der südliche Bereich ist offen
-#: also_indoor: traffic
-#: priority: #A
-#: last_checked: 2021-10-20
-#: check_frequency: 90d
-#: next_check: 2021-12-01
+# REMOVED (beendet) --- #: XXX laut Baustellenschild der Wasserbetriebe bis Dezember 2021 --- #: XXX mittlerweile wurde der Bereich verkleinert, der südliche Bereich ist offen --- #: also_indoor: traffic --- #: priority: #A --- #: last_checked: 2021-10-20 --- #: check_frequency: 90d --- #: next_check: 2021-12-01
 	q3::inwork; 7771,9479 7829,9723
 EOF
      },
@@ -32905,18 +32903,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1638814514, # undef, # XXX
        text  => 'Retzowstr.: südlich der Dessauerstr. Bauarbeiten, Fahrbahn gesperrt, Gehweg ist noch offen, Ende der Bauarbeiten vermutlich Ende November 2021',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: SEYDLITZ-2021
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1116986.php (Neubau der Fahrbahn, bis Ende November 2021)
-#: by: https://www.berliner-woche.de/lankwitz/c-bauen/retzowstrasse-gesperrt_a320297
-#: osm_watch: way id="24917125" version="12"
-#: add_fragezeichen: Wann wird die Sperrung der Fahrbahn aufgehoben?
-#: last_checked: 2021-09-12
-# REMOVED --- #: check_frequency: 120d
-#: next_check: 2021-11-30
+# REMOVED (laut osm ist die Fahrbahn nun offen) --- #: next_check_id: SEYDLITZ-2021 --- #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1116986.php (Neubau der Fahrbahn, bis Ende November 2021) --- #: by: https://www.berliner-woche.de/lankwitz/c-bauen/retzowstrasse-gesperrt_a320297 --- #: osm_watch: way id="24917125" version="14" --- #: add_fragezeichen: Wann wird die Sperrung der Fahrbahn aufgehoben? --- #: last_checked: 2021-09-12 --- # REMOVED --- #: check_frequency: 120d --- #: next_check: 2021-11-30
 	q4::inwork 6331,2281 6399,2184
 EOF
      },
@@ -33120,7 +33111,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRANKFURTER-2021
 #: note: auch last Schild der Wasserbetriebe bis März 2022
-#: last_checked: 2021-11-28 vvv
+#: last_checked: 2021-12-06 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-03-31 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -33217,7 +33208,7 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-11-30
+#: last_checked: 2021-12-02
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33354,8 +33345,8 @@ EOF
 EOF
      },
      { from  => 1627164000, # 2021-07-25 00:00
-       until => $isodate2epoch->("2021-11-30 18:00:00"), # undef, # XXX
-       text  => 'Conrad-Blenkle-Str.: Fahrbahn zwischen Kniprodestr. und Erich-Boltze-Str. wegen einer geplatzten Wasserleitung gesperrt, Gehweg für Radfahrer frei, vom 26.07.2021 bis voraussichtlich Ende November 2021',
+       until => $isodate2epoch->("2021-12-20 18:00:00"), # undef, # XXX
+       text  => 'Conrad-Blenkle-Str.: Fahrbahn zwischen Kniprodestr. und Erich-Boltze-Str. wegen einer geplatzten Wasserleitung gesperrt, Gehweg für Radfahrer frei, vom 26.07.2021 bis voraussichtlich 20.12.2021',
        type  => 'handicap',
        source_id => 'viz2021:13.444,52.53356,26.07.2021,08:18',
        data  => <<EOF,
@@ -33363,8 +33354,8 @@ EOF
 #: note: nordöstlicher Bürgersteig ist wenig frequentiert; Bordsteine müssen überwunden werden, wenn man zu spät von der Fahrbahn herunterfährt; mittlerweile dürfen Radfahrer offziell über den Gehweg fahren
 #: also_indoor: traffic (G,H)
 #: last_checked: 2021-11-29
-#: check_frequency: 14d
-# REMOVED --- #: next_check: 2021-11-30
+# REMOVED --- #: check_frequency: 14d
+#: next_check: 2021-12-20
 	q3::inwork 13057,14267 13158,14117
 EOF
      },
@@ -33728,8 +33719,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-11-22 00:00:00"), # undef, # 
-       until => $isodate2epoch->("2021-12-19 17:00:00"), # 1636480477, # undef,
-       text  => 'Brachvogelstr./Alexandrinnenstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Gitschiner Str. gesperrt, evtl. ist auch der Radverkehr betroffen, bis 19.12.2021',
+       until => 1638803714, # $isodate2epoch->("2021-12-19 17:00:00"), # 1636480477, # undef,
+       text  => 'Brachvogelstr./Alexandrinnenstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Gitschiner Str. gesperrt, evtl. ist auch der Radverkehr betroffen, bis 19.12.2021', # -> "Radfahrer frei"
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (beendet) --- #: add_fragezeichen: Bis wann geht die Sperrung in der Brachvogelstr.? --- #: also_indoor: traffic (G(falsch)) --- #: last_checked: 2021-10-19
@@ -33817,9 +33808,9 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (G)
-#: osm_watch: way id="1003079755" version="1"
+#: osm_watch: way id="1003079755" version="2"
 #: add_fragezeichen: Wann wird die Sperrung der Fahrbahn beendet?
-#: last_checked: 2021-11-21
+#: last_checked: 2021-12-05 (osm)
 	q3::inwork 16153,10818 16192,10907
 EOF
      },
@@ -33981,16 +33972,17 @@ EOF
 EOF
      },
      { from  => 1637599882, # 2021-11-22 17:51
-       until => 1638831600, # 2021-12-07 00:00
-       text  => 'Scharnweberstr./Weichselstr.: Gleisbauarbeiten, Fahrbahn gesperrt, Gehweg für Radfahrer frei, bis 6.12.2021',
+       until => undef, # 1638831600, # 2021-12-07 00:00
+       text  => 'Scharnweberstr./Weichselstr.: Gleisbauarbeiten, Fahrbahn gesperrt, Gehweg für Radfahrer frei, Ende der Bauarbeiten unbekannt', # --- bis 6.12.2021
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.bahninfo-forum.de/read.php?9,689838,718366#msg-718366
-#: by: https://www.bvg.de/de/verbindungen/stoerungsmeldungen/m13?date=20221119 (bis 6.12.2021)
-#: also_indoor: traffic
-#: last_checked: 2021-11-28 vvv
-#: check_frequency: 7d vvv
-	q3::inwork; 14965,11924 15077,11910 15133,11902 15256,11884
+#: by: https://www.bvg.de/de/verbindungen/stoerungsmeldungen/m13?date=20221119 (bis 6.12.2021) (Straßenbahn fertig, aber die Bauarbeiten sind noch nicht beendet)
+#: also_indoor: traffic (G)
+#: last_checked: 2021-12-07 vvv
+#: check_frequency: 4d vvv
+	q3::inwork 14965,11924 15077,11910
+	q3::inwork; 15077,11910 15133,11902 15256,11884
 	q3::inwork 14965,11924 14888,11934 14836,11842
 #: note: Fahrbahn kann hier benutzt werden, allerdings nur Kopfsteinpflaster, und q=Q2 kann nicht spezifiziert werden
 Kopfsteinpflaster	q2::inwork; 15256,11884 15133,11902 15077,11910
@@ -33999,7 +33991,7 @@ Kopfsteinpflaster	q2::inwork; 15256,11884 15133,11902 15077,11910
 EOF
      },
      { from  => 1637608390, # 2021-11-22 20:13
-       until => 1638831600, # 2021-12-07 00:00
+       until => 1638817261, # 1638831600, # 2021-12-07 00:00
        text  => 'Markgrafenstr., Richterstr. und Prinzenstr.: Sperrung am Mariendorfer Damm, bis 6.12.2021',
        type  => 'handicap',
        data  => <<EOF,
@@ -34042,6 +34034,69 @@ EOF
 #: osm_watch: way id="114381366" version="13"
 #: add_fragezeichen: Ist die Unterführung tatsächlich gesperrt?
 	2::inwork 9699,-600 9562,-619
+EOF
+     },
+     { from  => 1638385908, # 2021-12-01 20:11
+       until => 1638471600, # 2021-12-02 20:00
+       text  => 'Havelchaussee und Kronprinzessinenweg: Forstarbeiten, Sperrungen für Radfahrer möglich, am 2.12.2021 von 7 Uhr bis 20 Uhr',
+       type  => 'handicap',
+       source_id => 'viz2021:13.191315,52.461666,02.12.2021,07:00',
+       data  => <<EOF,
+#: source_id: viz2021:13.233805,52.467757,02.12.2021,07:00
+#: by: https://viz.berlin.de/2021/12/verkehrsvorschau-02122021/
+	q4::inwork -4001,2858 -3768,3069 -3680,3160 -3296,3686 -3490,4212 -3605,4536 -3729,4687 -3807,4794 -3889,4967 -3962,5129 -4072,5227 -4046,5505 -4003,5621 -3944,6034 -3880,6142 -3723,6254 -3606,6407 -3598,6572 -3589,6721 -3530,6781 -3483,6789 -3382,6821 -3355,6874 -3496,7677 -3531,7825 -3536,7856 -3561,7964 -3567,8031 -3615,8496 -3578,8578 -3389,8624 -3283,8739 -3073,9061 -3140,9294 -3213,9425 -3347,9541 -3426,9684 -3412,9755 -3178,9953 -3025,10116 -2774,10345
+	q4::inwork 425,8766 100,8339 -363,7630 -643,7252 -913,6905 -927,6888 -2218,5133 -3296,3686
+EOF
+     },
+     { from  => $isodate2epoch->("2021-12-11 00:00:00"),
+       until => $isodate2epoch->("2021-12-12 23:59:59"),
+       text  => 'Residenzstr./Reinickendorfer Str./Osloer Str./Seestr.: umfangreiche Sperrungen wegen Bombenentschärfung, am 12.12.2021 voraussichtlich ab 6 Uhr',
+       type  => 'handicap',
+       source_id => 'viz2021:13.191315,52.461666,02.12.2021,07:00',
+# erstellt mit dem folgenden Kommando:
+#    ./miscsrc/grepstrassen -ignoreglobaldirectives -inner /tmp/2.bbd -onlyenclosed data/strassen | perl -pe 's/\t\S+/\t2::temp/' >| /tmp/2s.bbd
+# 2.bbd beschreibt die Fläche:
+#	X 7969,17137 7727,17098 7597,16968 7472,16764 7454,16550 7707,16135 7882,16115 8112,16107 8366,16248 8471,16471 8515,16551 8433,16776 8165,17092
+# und dann manuell editiert/erweitert
+       data  => <<EOF,
+#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1154884.php
+#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1154873.php
+#: by: https://www.berlin.de/polizei/_assets/polizeimeldungen/allgemeinverfuegung_12122021_bombenentschaerfung.pdf
+#: by: https://berliner-abendblatt.de/2021/12/08/bombenentschaerfung-am-sonntag/
+Osloer Str.	2::temp 8467,16718 8249,16741 8161,16752 8144,16754 7852,16790 7763,16779 7681,16769
+Schulstr. (Wedding, Gesundbrunnen)	2::temp 8093,16438 7987,16332 7818,16166
+Heinz-Galinski-Str.	2::temp 8161,16752 8082,16483 8093,16438
+Exerzierstr.	2::temp 8093,16438 8166,16454 8307,16434 8436,16415
+Schwedenstr.	2::temp 8486,16425 8249,16741 8197,16809 8127,16894
+Tromsöer Str.	2::temp 8197,16809 8243,16889
+Uferstr. (Gesundbrunnen)	2::temp 8334,16282 8420,16365
+Reinickendorfer Str.	2::temp 7818,16166 7793,16233 7746,16375 7713,16557 7681,16769
+Seestr. (Wedding, Charlottenburg-Nord, Moabit)	2::temp 7681,16769 7606,16746
+Louise-Schroeder-Platz	2::temp 7681,16769 7672,16834 7666,16879
+Louise-Schroeder-Platz	2::temp 7763,16779 7745,16889
+Louise-Schroeder-Platz	2::temp 7583,16872 7594,16805
+Residenzstr.	2::temp 7970,17087 8079,16953 8127,16894
+Ungarnstr.	2::temp 7583,16872 7666,16879
+Reginhardstr.	2::temp 7970,17087 7926,17050 7841,16966 7745,16889 7666,16879
+Haßlingerweg	2::temp 7894,17073 7926,17050
+Hansastr. (Gesundbrunnen)	2::temp 8079,16953 7884,16940 7841,16966
+Gottschedstr.	2::temp 8014,16089 8077,16178 8307,16434
+Martin-Opitz-Str.	2::temp 8236,16071 8077,16178 7987,16332
+Iranische Str.	2::temp 8082,16483 7843,16524
+Iranische Str.	2::temp 7843,16524 7713,16557 7447,16613
+Liebenwalder Str. (Wedding)	2::temp 7727,16223 7793,16233
+Koloniestr.	2::temp 8467,16718 8486,16425
+Oudenarder Str.	2::temp 7433,16375 7746,16375
+EOF
+     },
+     { from  => 1638745200, # 2021-12-06 00:00
+       until => 1646262000, # 2022-03-03 00:00
+       text  => 'Perleberger Str.: Richtung Heidestr. Bauarbeiten zwischen Lübecker Str. und Birkenstr., Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 07.12.2021 10:00 bis 02.03.2022 17:00 ',
+       type  => 'handicap',
+       source_id => 'viz2021:13.346358,52.530349,07.12.2021,10:00',
+       data  => <<EOF,
+#: add_fragezeichen: Sind Radfahrer von der Baustelle betroffen?
+	q4::inwork; 6366,13716 6493,13822
 EOF
      },
     );

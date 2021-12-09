@@ -256,7 +256,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-28464.pdf (Widersprüche)
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2021-11-06 vvv
+#: last_checked: 2021-11-16 (mapillary) vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -721,7 +721,7 @@ Kolonnenstr.	H 8209,8773 8145,8773 8078,8772 8014,8771 8008,8771 7795,8765 7709,
 #: XXX wird am 18.10.2021 zum Richard-von-Weizsäcker-Platz umbenannt --- verzögert sich wegen Widerspruchs
 #: also_indoor: search Richard-von-Weizsäcker-Platz
 # REMOVED --- #: next_check: 2021-10-18
-#: last_checked: 2021-11-25 (research)
+#: last_checked: 2021-12-08 (research)
 #: check_frequency: 14d
 Kaiser-Wilhelm-Platz	NN 7201,8870 7307,8945
 Herbertstr. (Schöneberg)	N 7360,8918 7389,8837 7402,8783 7395,8761
@@ -1300,7 +1300,7 @@ Mercedes-Platz	NN 12990,11006 13063,11147
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="9"
 #: priority: #C
-#: last_checked: 2021-10-13
+#: last_checked: 2021-12-06
 #: next_check: 2023-01-01
 (Planstraße C)	N 12926,11224 12848,11093
 # 
@@ -1677,8 +1677,11 @@ Heidestr. (Moabit)	N 8092,13467 8059,13551 8048,13578 8019,13650
 Heidestr. (Moabit)	HH 8019,13650 7979,13733 7973,13743 7910,13848 7865,13924 7820,13994 7778,14059 7732,14131 7697,14187 7652,14257 7612,14325 7566,14404 7532,14446 7487,14472 7401,14526 7368,14573
 #: note: blaues Straßenschild vvv
 Otto-Weidt-Platz	NN 7923,14142 7778,14059
-Otto-Weidt-Platz	NN 7732,14131 7866,14215
+Otto-Weidt-Platz	NN 7732,14131 7818,14185 7866,14215
 #: note ^^^
+(provisorischer Weg zum Golda-Meir-Steg)	NN 7818,14185 7861,14133
+Golda-Meir-Steg	NN 7861,14133 7899,14157 7962,14198 7973,14195
+Golda-Meir-Steg	NN 7962,14198 7968,14202
 Lydia-Rabinowitsch-Str.	N 7820,13994 7930,14060 7973,13991 7959,13982 7865,13924
 (Am Hamburger Bahnhof - Lydia-Rabinowitsch-Str.)	NN 7997,13892 7959,13982
 Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7802,14250 7781,14238 7697,14187
@@ -1686,7 +1689,7 @@ Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7802,14250 7781,14238 7
 Lisa-Fittko-Str.	N 7734,13944 7820,13994
 George-Stephenson-Str.	N 7487,14472 7452,14415 7500,14333 7569,14217 7679,14030 7734,13944
 #: XXX zurzeit darf der Platz noch von Fahrzeugen benutzt werden (wegen der Bauarbeiten in der George-Stephenson-Str.?), wird später vermutlich aufgehoben, dann NN ohne osm.highway:service; eigentlich Einbahnstraße, aber der Platz ist breit genug...
-#: last_checked: 2021-11-18
+#: last_checked: 2021-12-04 (daf)
 #: check_frequency: 90d
 #: osm.highway: service
 Hans-Peters-Platz	N 7732,14131 7679,14030
@@ -3980,7 +3983,8 @@ Wundtstr.	N 2233,11049 2249,11082 2346,11147 2365,11179 2417,11254 2623,11385
 Wundtstr.	NN 2623,11385 2764,11500
 Wundtstr.	N 2764,11519 2793,11547 2888,11670 2910,11697 2934,11747 2956,11790 2953,11830
 Wundtstr.	N 2249,11082 2222,11104
-(Wundtstr. - Horstweg)	N 2910,11697 2869,11690
+#: note: durch Poller auf beiden Seiten abgesperrt
+(Wundtstr. - Horstweg)	NN 2910,11697 2869,11690
 Nehringstr.	N 2953,11830 2924,12047 2899,12200 2895,12217 2888,12292
 Kuno-Fischer-Str.	N 2621,11065 2679,10931 2766,10750
 Lietzenseeufer	N 2621,11065 2621,11190 2748,11206 2806,11241 2871,11211
@@ -4145,7 +4149,7 @@ Buchholzweg	N 4535,15530 4466,15350 4389,15336
 #: add_fragezeichen: Wurde die Umbenennung zu "Cornelius-Fredericks-Str." schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: also_indoor: search Cornelius-Fredericks-Straße
 #: osm_watch: way id="247340732" version="17"
-#: last_checked: 2021-11-20 (mapillary)
+#: last_checked: 2021-12-05 (mapillary)
 #: check_frequency: 90d
 Lüderitzstr.	N 6661,15921 6484,16085 6349,16213 6211,16343 6106,16433 6003,16521
 Sansibarstr.	N 6201,16538 6106,16433 6005,16313 5827,16118
@@ -4405,7 +4409,7 @@ Fontanestr. (Wilhelmsruh)	N 7321,20426 7231,20266 7201,20161 7205,20047 7209,199
 #: XXX: bleibt dieser Weg erhalten oder muss er der Heidekrautbahn weichen?
 #: osm_watch: way id="31428032" version="12"
 #: osm_watch: way id="386544517" version="4"
-#: last_checked: 2021-10-31
+#: last_checked: 2021-12-05 (mapillary)
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-05-01
 (Hertzstr./PankowPark - Bhf. Wilhelmsruh)	NN 7090,19943 7123,19855 7138,19839 7184,19783 7264,19717 7273,19682
@@ -5416,7 +5420,7 @@ An der Spreeschanze	N -2623,14396 -2600,14436 -2597,14532
 Lagerweg	N -1392,14527 -1404,14441 -1354,14424
 #: next_check_id: TEGELERBRUECKE-2021
 #: next_check: 2023-12-01
-(provisorische Tegeler Brücke)	H -261,15858 -265,15917 -255,15993 -239,16077 -226,16086
+(provisorische Tegeler Brücke)	H -261,15858 -265,15917 -255,15993 -239,16077 -203,16168
 Gartenfelder Str.	H -1336,14786 -1299,14797 -1258,14846 -1099,14925 -945,14999 -834,15053 -767,15082 -707,15108 -569,15167 -532,15184 -453,15219 -344,15200 -286,15354 -302,15546 -302,15602 -292,15715 -261,15858 -252,15903 -242,15982 -236,16043
 Schwerter Weg	N -692,15491 -676,15370
 Kanalstr. (Haselhorst)	N -736,15294 -593,15300
@@ -13213,7 +13217,7 @@ Am Alten Lokschuppen	NN 15730,11279 15708,11193 15752,11115 15805,10949
 #: next_check_id: SALVADORALLENDEBRUECKE-2017
 #: last_checked: 2021-10-24
 #: check_frequency: 120d
-#: next_check: 2022-02-28
+#: next_check: 2022-08-28
 # REMOVED (eventuell nach den Bauarbeiten wieder aktivieren) --- (Salvador-Allende-Str. - An der Müggelspree)	N 23444,4942 23461,4948
 (Salvador-Allende-Str. - An der Müggelspree)	N 23451,4877 23464,4879 23461,4948
 (Salvador-Allende-Str. - An der Müggelspree)	N 23461,4948 23461,5013
@@ -14209,7 +14213,7 @@ Schwarzer Weg (Mitte)	N 8572,13671 8426,13909
 Habersaathstr.	N 8313,13839 8426,13909 8478,13941 8571,13999 8732,14098
 Habersaathstr. [36A-E und 38E-40]	N 8571,13999 8624,13915
 Kieler Str. (Mitte)	N 8054,14257 8033,14241 7973,14195
-# REMOVED --- #: next_check_id: GOLDAMEIRSTEG-2019 --- #: XXX nach den Bauarbeiten entfernen, auch Extrapunkte löschen --- #: XXX wann sind die Bauarbeiten beendet? Laut Aushang handelt es sich um Brückenbauarbeiten, bis März 2021 --- #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10088 --- #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10081 --- #: priority: #A --- #: also_indoor: traffic (H) --- #: last_checked: 2020-11-07 --- #: check_frequency: 60d --- #: next_check: 2021-03-01 --- #: valid: -20210301 --- (Umfahrung Kieler Str.)	NN 7965,14207 8025,14251 8033,14241 8039,14232 7972,14185
+# REMOVED --- #: next_check_id: GOLDAMEIRSTEG-2019 --- #: XXX nach den Bauarbeiten entfernen, auch Extrapunkte löschen --- #: XXX wann sind die Bauarbeiten beendet? Laut Aushang handelt es sich um Brückenbauarbeiten, bis März 2021 --- #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10088 --- #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10081 --- #: priority: #A --- #: also_indoor: traffic (H) --- #: last_checked: 2020-11-07 --- #: check_frequency: 60d --- #: next_check: 2021-03-01 --- #: valid: -20210301 --- (Umfahrung Kieler Str.)	NN 7968,14202 8025,14251 8033,14241 8039,14232 7972,14185
 Boyenstr.	N 7938,14423 8250,14672
 (Unterführung Nordhafenbrücke)	NN 7661,14398 7636,14414 7612,14449 7551,14464
 (Nordhafenpark West)	NN 7566,14404 7572,14432 7551,14464 7426,14539 7396,14569 7368,14573
@@ -14857,9 +14861,10 @@ Greifenberger Str.	N 17490,89 17287,401 17134,644
 (Wilhelm-Dähne-Siedlung)	N 17228,361 17427,46
 Schleffiner Str.	N 17168,654 17159,703 17106,783 17035,775
 Exiner Str.	N 17412,491 17274,705 17134,908
-Mellenseestr.	N 17527,9899 17633,9898 17738,9922 17841,9960 17958,10012
+Mellenseestr.	N 17527,9899 17633,9898 17738,9922 17838,9956 17958,10012
 Mellenseestr. [Wohngebiet]	N 17633,9898 17633,9793 17587,9655
 Mellenseestr. [Wohngebiet]	N 17738,9922 17738,9822 17777,9649
+Mellenseestr. [Wohngebiet]	N 17838,9956 17868,9823 17920,9698
 Michiganseestr.	N 17025,10193 17042,10269 17081,10415
 Huronseestr.	N 16808,10554 16767,10398 16755,10352 16727,10245 16811,10219
 Huronseestr.	N 16887,10271 16829,10285 16811,10219 16795,10141 16855,10127
@@ -14870,7 +14875,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2021-11-23
+#: last_checked: 2021-12-02
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15247,7 +15252,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2021-11-23
+#: last_checked: 2021-12-02
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -16023,7 +16028,7 @@ Am Hamburger Bahnhof	N 8025,13835 7997,13892
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_04_0705_0832_online.pdf (Ergänzung der Widmung)
 (Uferweg am Berlin-Spandauer Schiffahrtskanal)	NN 8295,13531 8290,13538 8224,13634 8169,13705 8131,13770 8086,13862 8057,13923
 (Uferweg am Berlin-Spandauer Schiffahrtskanal)	NN 7866,14215 7830,14268 7799,14314
-Promenade am Berlin-Spandauer Schiffahrtskanal	NN 8332,13548 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096 8001,14096 7966,14148 7972,14185 7973,14195 7965,14207 7804,14445 7787,14473 7753,14528 7733,14570
+Promenade am Berlin-Spandauer Schiffahrtskanal	NN 8332,13548 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096 8001,14096 7966,14148 7972,14185 7973,14195 7968,14202 7804,14445 7787,14473 7753,14528 7733,14570
 (Am Invalidenfriedhof - Scharnhorststr.)	NN 8096,13951 8200,14016
 Baseler Str. (Reinickendorf)	N 6784,17960 6815,17871 6841,17781 6886,17649 6897,17616 6904,17596 6987,17321
 Grindelwaldweg	N 6904,17596 6797,17568 6679,17568 6642,17571
@@ -17063,7 +17068,7 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-bauen/die-naechsten-schritte-zur-festsetzung-von-bebauungsplaenen-stehen-an_a293341 (Erwähnung)
 #: osm_watch: way id="59573616" version="2"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
-#: last_checked: 2021-10-16 (mapillary)
+#: last_checked: 2021-12-05 (mapillary)
 #: check_frequency: 180d
 (Rhönstr. - Harzburger Str.)	NN 13598,21360 13709,21334
 Eifelstr.	N 13580,21286 13351,21239 13280,21225
@@ -18142,7 +18147,7 @@ Bertolt-Brecht-Platz	N 9193,12875 9160,12932
 #: XXX für den Autoverkehr mittlerweile gesperrt?
 #: XXX oder eventuell wird das eine Einbahnstraße, wenn die Bauarbeiten an der Pankebrücke beendet sind (Schilder hängen schon, obwohl es eine Sackgasse ist?!)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_19_2765_2928_online.pdf
-#: last_checked: 2021-09-24
+#: last_checked: 2021-12-04
 #: check_frequency: 90d
 (Straße vor dem Berliner Ensemble)	N 9212,12969 9160,12932
 Karlplatz	N 8711,12986 8676,12976
@@ -19668,7 +19673,7 @@ Am Kaniswall	N 32823,-149 32817,4 32872,128
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_23_1913_2052_online.pdf (Eingruppierung in Straßenreinigungsverzeichnisse)
 #: note: provisorisch asphaltiert, provisorisch beleuchtet, gelbe Begrenzungslinie zwischen Rad- und Gehwegbereich
 #: source_id: 2147346962 (hier: Einschränkungen an der Gegenfahrbahn, bis 31.1.2025)
-#: last_checked: 2021-11-06
+#: last_checked: 2021-12-04
 #: check_frequency: 180d
 #: next_check: 2025-01-31
 (Umleitungsstrecke im Tiergarten)	NN 6164,11947 6132,11984 6024,11978 5925,11943 5900,11913

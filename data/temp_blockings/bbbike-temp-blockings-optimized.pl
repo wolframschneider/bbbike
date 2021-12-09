@@ -11,6 +11,7 @@ push @temp_blocking,
 #: by: https://www.berlin.de/weihnachtsmarkt/3240274-3496862-weihnachtsmarkt-an-der-gedaechtniskirche.html (2020)
 #: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/971524-955635-weihnachtsmarkt-an-der-gedaechtniskirche.html
 #: by: https://berliner-abendblatt.de/2021/11/02/ein-weihnachtsbaum-fuer-den-breitscheidplatz/
+#: by: https://berliner-abendblatt.de/2021/12/07/weihnachtsmarkt-auf-dem-breitscheidplatz-wird-umzaeunt/
 # REMOVED --- #: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020? Laut vmz ist der Radverkehr in der Kantstr. nicht betroffen --- #: last_checked: 2019-11-27 (hier mittlerweile Weihnachtsmarkt, man könnte aber durchschieben) --- #: next_check: 2019-11-25
 #: source_id: 2147345089
 Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
@@ -2116,7 +2117,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im November von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Dezember von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3273,36 +3274,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147341611
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_28_2389_2480_online.pdf (2021)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_34_2821_2896_online.pdf (Großer Zapfenstreich 2021)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_35_2897_2964_online.pdf (Aufhebung der letzten Einschränkung)
-#: by: https://www.bmvg.de/de/presse/grosser-zapfenstreich-zur-wuerdigung-einsatz-afghanistan-5181746 (Verschiebung, noch kein neuer Termin)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_42_3793_3876_online.pdf (Großer Zapfenstreich 2021, neuer Termin)
-#: by: https://viz.berlin.de/2021/10/verkehrsvorschau-13102021/ (Erwähnung des Großes Zapfenstreichs)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_51_4697_4784_online.pdf (Großer Zapfenstreich für Merkel)
-	2::temp 7435,11514 7322,11177
-	2::temp 7579,11032 7595,11086 7665,11353 7717,11540
-	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
-	2::temp 7595,11086 7575,11076 7252,11188
-Lützowufer	2::temp 7089,11073 7248,11143 7461,11051 7579,11032
-Hiroshimastr.	2::temp 7253,11208 7356,11517
-Hiroshimasteg	2::temp 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7248,11143
-# REMOVED ---	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
-# REMOVED ---	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
-# REMOVED ---	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
-# REMOVED ---	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
-# REMOVED ---	2::temp 7665,11353 7745,11332
-# REMOVED ---	2::temp 7745,11332 7690,11108
-',
-         'from' => 1638313200,
-         'id' => 2875,
-         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
-         'text' => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 2. Dezember 2021 von 16:00 bis 21:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1638475200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3604,7 +3576,8 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
        undef,
        undef,
        {
-         'data' => '#: next_check_id: HENNIGSDORFER-2019
+         'data' => '#: source_id: viz2021:13.222469,52.619767,05.11.2018,10:34 (bis 15.11.2022)
+#: next_check_id: HENNIGSDORFER-2019
 	q4::inwork; -2504,22626 -2540,22694 -2424,22991 -2306,23259
 # REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2306,23259 -2248,23409 -2185,23567
 # REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850
@@ -3613,9 +3586,9 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
          'from' => 1542148916,
          'id' => 3046,
          'source_id' => '2147343419',
-         'text' => 'Henningsdorfer Str.: zwischen Alt-Heiligensee und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, möglicherweise bis Ende 2021',
+         'text' => 'Henningsdorfer Str.: zwischen Alt-Heiligensee und Ruppiner Chaussee Richtung Ruppiner Chaussee Bauarbeiten, Fahrtrichtung gesperrt, eventuell sind auch Radfahrer betroffen, bis Mitte November 2022',
          'type' => 'handicap',
-         'until' => 1640991599
+         'until' => 1668528000
        },
        undef,
        undef,
@@ -3892,7 +3865,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: XXX Unstetige Ausschilderung: mal ist für Radfahrer explizit frei, zumindest von einer Seite, mal nicht.
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-11-29
+#: last_checked: 2021-12-04
 #: check_frequency: 14d
 	2::inwork 11329,12497 11209,12430
 ',
@@ -3941,7 +3914,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-11-20
+#: last_checked: 2021-12-04
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -3988,9 +3961,9 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
-#: osm_watch: way id="934995899" version="3"
-#: osm_watch: way id="934995901" version="4"
-#: last_checked: 2021-11-28 vvv
+#: osm_watch: way id="934995899" version="4"
+#: osm_watch: way id="934995901" version="5"
+#: last_checked: 2021-12-06 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -4288,7 +4261,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: note: reopened, es gibt wieder Bauzäune
 #: osm_watch: way id="152832871" version="16"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-11-06
+#: last_checked: 2021-12-04
 #: check_frequency: 60d
 	q4::inwork 4674,12076 4698,12124
 # REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
@@ -4467,22 +4440,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: XXX laut Baustellenschild der Wasserbetriebe bis Dezember 2021
-#: XXX mittlerweile wurde der Bereich verkleinert, der südliche Bereich ist offen
-#: also_indoor: traffic
-#: priority: #A
-#: last_checked: 2021-10-20
-#: check_frequency: 90d
-#: next_check: 2021-12-01
-	q3::inwork; 7771,9479 7829,9723
-',
-         'from' => undef,
-         'id' => 3364,
-         'text' => 'Kulmer Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, vermutlich bis Dezember 2021',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4532,23 +4490,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: SEYDLITZ-2021
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1116986.php (Neubau der Fahrbahn, bis Ende November 2021)
-#: by: https://www.berliner-woche.de/lankwitz/c-bauen/retzowstrasse-gesperrt_a320297
-#: osm_watch: way id="24917125" version="12"
-#: add_fragezeichen: Wann wird die Sperrung der Fahrbahn aufgehoben?
-#: last_checked: 2021-09-12
-# REMOVED --- #: check_frequency: 120d
-#: next_check: 2021-11-30
-	q4::inwork 6331,2281 6399,2184
-',
-         'from' => undef,
-         'id' => 3385,
-         'text' => 'Retzowstr.: südlich der Dessauerstr. Bauarbeiten, Fahrbahn gesperrt, Gehweg ist noch offen, Ende der Bauarbeiten vermutlich Ende November 2021',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: BUCKOWERDAMM-2021
@@ -4608,7 +4550,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: FRANKFURTER-2021
 #: note: auch last Schild der Wasserbetriebe bis März 2022
-#: last_checked: 2021-11-28 vvv
+#: last_checked: 2021-12-06 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-03-31 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -4640,7 +4582,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-11-30
+#: last_checked: 2021-12-02
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -4719,21 +4661,24 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1643644800
        },
        undef,
-       undef,
-       undef,
        {
-         'data' => '#: note: laut rbb nur bis 5.10.2021 (erste Phase?)
-#: source_id: viz2021:13.29552,52.61058,05.10.2021,19:48
-# REMOVED (hier mittlerweile frei, laut viz)	q4::inwork 2793,22640 2652,22615
-	q4::inwork 2652,22615 2556,22598
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1423180617789972483 (bis Ende Oktober 2021) (mittlerweile bis 30.11.2021)
+#: note: nordöstlicher Bürgersteig ist wenig frequentiert; Bordsteine müssen überwunden werden, wenn man zu spät von der Fahrbahn herunterfährt; mittlerweile dürfen Radfahrer offziell über den Gehweg fahren
+#: also_indoor: traffic (G,H)
+#: last_checked: 2021-11-29
+# REMOVED --- #: check_frequency: 14d
+#: next_check: 2021-12-20
+	q3::inwork 13057,14267 13158,14117
 ',
-         'from' => 1630360800,
-         'id' => 3426,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1111853.php',
-         'text' => 'Schulzendorfer Str.: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich vom 1.9.2021 bis 1.12.2021 ',
+         'from' => 1627164000,
+         'id' => 3424,
+         'source_id' => 'viz2021:13.444,52.53356,26.07.2021,08:18',
+         'text' => 'Conrad-Blenkle-Str.: Fahrbahn zwischen Kniprodestr. und Erich-Boltze-Str. wegen einer geplatzten Wasserleitung gesperrt, Gehweg für Radfahrer frei, vom 26.07.2021 bis voraussichtlich 20.12.2021',
          'type' => 'handicap',
-         'until' => 1638399600
+         'until' => 1640019600
        },
+       undef,
+       undef,
        undef,
        undef,
        {
@@ -4808,17 +4753,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        undef,
-       {
-         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1437641256243453954/photo/2
-	1::inwork 6747,14436 6803,14459 6857,14488 6869,14494 6917,14504 6983,14508 7050,14501 7085,14482 7099,14461 7104,14432 7104,14403
-',
-         'from' => 1631646083,
-         'id' => 3445,
-         'source_id' => 'https://twitter.com/VIZ_Berlin/status/1437641256243453954',
-         'text' => 'Ellen-Epstein-Str.: Radweg in Richtung Perleberger Str. gesperrt, bis Ende November 2021',
-         'type' => 'gesperrt',
-         'until' => 1638313199
-       },
+       undef,
        undef,
        {
          'data' => '#: by: wosch
@@ -4868,18 +4803,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1640214000
        },
        undef,
-       {
-         'data' => '# REMOVED (beendet) --- #: add_fragezeichen: Bis wann geht die Sperrung in der Brachvogelstr.? --- #: also_indoor: traffic (G(falsch)) --- #: last_checked: 2021-10-19
-#: source_id: viz2021:13.399042,52.497652,23.11.2021,06:00
-#: by: https://twitter.com/VIZ_Berlin/status/1463011930226917378 (Radverkehr nicht betroffen)
-	q3::inwork; 10066,10071 10069,10151 10083,10192 10122,10294
-',
-         'from' => 1637535600,
-         'id' => 3457,
-         'text' => 'Brachvogelstr./Alexandrinnenstr.: Fahrbahn Richtung Norden zwischen Johanniterstr. und Gitschiner Str. gesperrt, evtl. ist auch der Radverkehr betroffen, bis 19.12.2021',
-         'type' => 'handicap',
-         'until' => 1639929600
-       },
+       undef,
        {
          'data' => '#: XXX_prog: eigentlich q4+::inwork; oder q3-::inwork;
 	q4::inwork; 8196,20096 8224,19977 8234,19936
@@ -4924,9 +4848,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: also_indoor: traffic (G)
-#: osm_watch: way id="1003079755" version="1"
+#: osm_watch: way id="1003079755" version="2"
 #: add_fragezeichen: Wann wird die Sperrung der Fahrbahn beendet?
-#: last_checked: 2021-11-21
+#: last_checked: 2021-12-05 (osm)
 	q3::inwork 16153,10818 16192,10907
 ',
          'from' => undef,
@@ -4982,27 +4906,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => 1639155600
        },
-       {
-         'data' => '	2::inwork 3419,1061 3481,946 3561,789 3642,727
-',
-         'from' => 1635634800,
-         'id' => 3471,
-         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1139513.php',
-         'text' => 'Ostpreußendamm - Teltowkanal durch die Kolonie Erbkaveln: Sperrung wegen Bauarbeiten, zeitweise ist die Durchfahrt für Radfahrer nicht möglich, vom 01. November 2021 bis voraussichtlich Ende November 2021',
-         'type' => 'gesperrt',
-         'until' => 1638313199
-       },
        undef,
-       {
-         'data' => '	q4::inwork 19743,1804 19669,1729 19653,1671 19636,1609 19599,1557
-',
-         'from' => 1636239600,
-         'id' => 3473,
-         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1140276.php',
-         'text' => 'Alter Schönefelder Weg: Bauarbeiten, Sperrung der Fahrbahn, voraussichtlich vom 8. November 2021 bis 30. November 2021 ',
-         'type' => 'handicap',
-         'until' => 1638313199
-       },
+       undef,
+       undef,
        {
          'data' => '	2::inwork 20850,38827 21039,38033 21051,37792 21040,37527 21159,36785 20969,36076 21015,35757 21193,35322 21465,34816 22153,33963
 ',
@@ -5062,11 +4968,12 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: by: https://www.bahninfo-forum.de/read.php?9,689838,718366#msg-718366
-#: by: https://www.bvg.de/de/verbindungen/stoerungsmeldungen/m13?date=20221119 (bis 6.12.2021)
-#: also_indoor: traffic
-#: last_checked: 2021-11-28 vvv
-#: check_frequency: 7d vvv
-	q3::inwork; 14965,11924 15077,11910 15133,11902 15256,11884
+#: by: https://www.bvg.de/de/verbindungen/stoerungsmeldungen/m13?date=20221119 (bis 6.12.2021) (Straßenbahn fertig, aber die Bauarbeiten sind noch nicht beendet)
+#: also_indoor: traffic (G)
+#: last_checked: 2021-12-07 vvv
+#: check_frequency: 4d vvv
+	q3::inwork 14965,11924 15077,11910
+	q3::inwork; 15077,11910 15133,11902 15256,11884
 	q3::inwork 14965,11924 14888,11934 14836,11842
 #: note: Fahrbahn kann hier benutzt werden, allerdings nur Kopfsteinpflaster, und q=Q2 kann nicht spezifiziert werden
 Kopfsteinpflaster	q2::inwork; 15256,11884 15133,11902 15077,11910
@@ -5075,21 +4982,11 @@ Kopfsteinpflaster	q2::inwork; 15256,11884 15133,11902 15077,11910
 ',
          'from' => 1637599882,
          'id' => 3479,
-         'text' => 'Scharnweberstr./Weichselstr.: Gleisbauarbeiten, Fahrbahn gesperrt, Gehweg für Radfahrer frei, bis 6.12.2021',
+         'text' => 'Scharnweberstr./Weichselstr.: Gleisbauarbeiten, Fahrbahn gesperrt, Gehweg für Radfahrer frei, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
-         'until' => 1638831600
+         'until' => undef
        },
-       {
-         'data' => '	q4::inwork 9333,4229 9208,4215
-	q4::inwork 9375,4022 9276,3997
-	q4::inwork 9020,4890 9248,4904
-',
-         'from' => 1637608390,
-         'id' => 3480,
-         'text' => 'Markgrafenstr., Richterstr. und Prinzenstr.: Sperrung am Mariendorfer Damm, bis 6.12.2021',
-         'type' => 'handicap',
-         'until' => 1638831600
-       },
+       undef,
        undef,
        {
          'data' => '#: note: innterörtliche Umleitung für Radfahrer existiert, deshalb nur q4 statt 2
@@ -5115,6 +5012,55 @@ Kopfsteinpflaster	q2::inwork; 15256,11884 15133,11902 15077,11910
          'text' => 'S-Bhf. Schichauweg: Unterführung an der Nordseite möglicherweise wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1154884.php
+#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1154873.php
+#: by: https://www.berlin.de/polizei/_assets/polizeimeldungen/allgemeinverfuegung_12122021_bombenentschaerfung.pdf
+#: by: https://berliner-abendblatt.de/2021/12/08/bombenentschaerfung-am-sonntag/
+Osloer Str.	2::temp 8467,16718 8249,16741 8161,16752 8144,16754 7852,16790 7763,16779 7681,16769
+Schulstr. (Wedding, Gesundbrunnen)	2::temp 8093,16438 7987,16332 7818,16166
+Heinz-Galinski-Str.	2::temp 8161,16752 8082,16483 8093,16438
+Exerzierstr.	2::temp 8093,16438 8166,16454 8307,16434 8436,16415
+Schwedenstr.	2::temp 8486,16425 8249,16741 8197,16809 8127,16894
+Tromsöer Str.	2::temp 8197,16809 8243,16889
+Uferstr. (Gesundbrunnen)	2::temp 8334,16282 8420,16365
+Reinickendorfer Str.	2::temp 7818,16166 7793,16233 7746,16375 7713,16557 7681,16769
+Seestr. (Wedding, Charlottenburg-Nord, Moabit)	2::temp 7681,16769 7606,16746
+Louise-Schroeder-Platz	2::temp 7681,16769 7672,16834 7666,16879
+Louise-Schroeder-Platz	2::temp 7763,16779 7745,16889
+Louise-Schroeder-Platz	2::temp 7583,16872 7594,16805
+Residenzstr.	2::temp 7970,17087 8079,16953 8127,16894
+Ungarnstr.	2::temp 7583,16872 7666,16879
+Reginhardstr.	2::temp 7970,17087 7926,17050 7841,16966 7745,16889 7666,16879
+Haßlingerweg	2::temp 7894,17073 7926,17050
+Hansastr. (Gesundbrunnen)	2::temp 8079,16953 7884,16940 7841,16966
+Gottschedstr.	2::temp 8014,16089 8077,16178 8307,16434
+Martin-Opitz-Str.	2::temp 8236,16071 8077,16178 7987,16332
+Iranische Str.	2::temp 8082,16483 7843,16524
+Iranische Str.	2::temp 7843,16524 7713,16557 7447,16613
+Liebenwalder Str. (Wedding)	2::temp 7727,16223 7793,16233
+Koloniestr.	2::temp 8467,16718 8486,16425
+Oudenarder Str.	2::temp 7433,16375 7746,16375
+',
+         'from' => 1639177200,
+         'id' => 3485,
+         'source_id' => 'viz2021:13.191315,52.461666,02.12.2021,07:00',
+         'text' => 'Residenzstr./Reinickendorfer Str./Osloer Str./Seestr.: umfangreiche Sperrungen wegen Bombenentschärfung, am 12.12.2021 voraussichtlich ab 6 Uhr',
+         'type' => 'handicap',
+         'until' => 1639349999
+       },
+       {
+         'data' => '#: add_fragezeichen: Sind Radfahrer von der Baustelle betroffen?
+	q4::inwork; 6366,13716 6493,13822
+',
+         'from' => 1638745200,
+         'id' => 3486,
+         'source_id' => 'viz2021:13.346358,52.530349,07.12.2021,10:00',
+         'text' => 'Perleberger Str.: Richtung Heidestr. Bauarbeiten zwischen Lübecker Str. und Birkenstr., Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 07.12.2021 10:00 bis 02.03.2022 17:00 ',
+         'type' => 'handicap',
+         'until' => 1646262000
        }
      
 );

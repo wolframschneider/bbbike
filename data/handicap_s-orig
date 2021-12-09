@@ -28,8 +28,8 @@ Erich-Steinfurth-Str.: Bauarbeiten, Fahrbahn nur für Baufahrzeuge	q3::inwork 125
 # 
 #: note: laut rbb bis 29.10.2021, laut Parkverbotsschilder bis 28.1.2022 vvv
 #: also_indoor: traffic (H(falsch),G(teilweise))
-#: last_checked: 2021-11-28 vvv
-#: check_frequency: 30d vvv
+#: last_checked: 2021-12-07 vvv
+#: check_frequency: 14d vvv
 #: next_check: 2022-01-28 vvv
 Jessnerstr.: Sperrung der Fahrbahn nördlich der Oderstr.	q3::inwork 14946,11697 14986,11760
 Oderstr.: Einbahnstraßenregelung, offen Richtung Osten	q3::inwork; 15043,11637 14946,11697
@@ -63,7 +63,7 @@ Oderstr.: Einbahnstraßenregelung, offen Richtung Osten	q3::inwork; 15043,11637 1
 # 
 #: next_check_id: PLANSTRASSEC-2019
 # REMOVED (ein osm_watch reicht aus) --- #: osm_watch: way id="491906864" version="6"
-#: last_checked: 2021-10-13
+#: last_checked: 2021-12-06
 #: check_frequency: 60d
 (Planstraße C): Fahrbahn durch Bauzäune abgesperrt, Ausweichen auf Gehweg möglich	q3::inwork 12926,11224 12848,11093
 # 
@@ -185,11 +185,11 @@ Oderstr.: Einbahnstraßenregelung, offen Richtung Osten	q3::inwork; 15043,11637 1
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.641406.php
 #: by: https://abendblatt-berlin.de/2021/04/05/berlin-wedding-geisterhaus-an-der-burgsdorfstrasse-soll-abgerissen-werden/
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10655 (Abriss?)
-#: osm_watch: way id="549316654" version="10"
+#: osm_watch: way id="549316654" version="11"
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,H)
 #: valid: 20171026-
-#: last_checked: 2021-11-11 (osm)
+#: last_checked: 2021-12-02 (osm)
 #: check_frequency: 60d
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
 # 
@@ -204,7 +204,7 @@ Sebastianstr.: Bauarbeiten, Fahrbahn an der Alexandrinenstr. gesperrt	q1::inwork
 #: add_fragezeichen ^^^
 # 
 #: next_check_id: MUSEUMSINSEL-2020
-#: last_checked: 2021-11-28 (daf)
+#: last_checked: 2021-12-04
 Schloßplatz: Fußgänger, Bauarbeiten	q4::inwork 10102,12384 10063,12438
 # 
 #: next_check_id: MOLKENMARKT-2021
@@ -219,30 +219,32 @@ Schloßplatz: Fußgänger, Bauarbeiten	q4::inwork 10102,12384 10063,12438
 #: by: https://www.wbm.de/neubau-berlin/mitte/ifflandstrasse/ (Fertigstellung vsl. 01/2022)
 #: osm_watch: way id="822127127" version="2"
 #: osm_watch: way id="736448990" version="8"
-#: last_checked: 2021-10-17
-#: check_frequency: 90d
-#: next_check: 2022-01-01
+#: last_checked: 2021-12-04
+#: check_frequency: 60d
+# REMOVED --- #: next_check: 2022-01-01
 Holzmarktstr. - Ifflandstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg, Bordsteine	q4::inwork 11524,12314 11589,12296
 # 
 #: next_check_id: CHAUSSEE-2020
 #: source_id: 2147346552 (bis 16.7.2021)
 #: source_id: viz2021:13.38026,52.532838,02.11.2020,08:00 (bis 16.7.2021) (mittlerweile bis 15.11.2021, Gesamtbaumaßnahme bis Ende 2022) (mittlerweile bis 30.06.2022, Gesamtbaumaßnahme unverändert)
-#: last_checked: 2021-10-31
+#: last_checked: 2021-12-08
 #: check_frequency: 90d
 #: next_check: 2022-06-30
 Chausseestr.: gemeinsamer Rad- und Gehweg	q2::inwork; 8732,14098 8607,14253 8570,14299 8490,14397 8442,14456 8406,14507 8336,14586
 # 
 #: next_check_id: CHAUSSEE-2020
 #: note: laut rbb bis voraussichtlich 30.4.2022
-#: last_checked: 2021-10-31
+#: note: von Westen her offiziell nur für Bau- und Einsatzfahrzeuge offen, von Osten her keine Einschränkungen
+#: osm_watch: way id="129104626" version="16"
+#: last_checked: 2021-12-08
 #: check_frequency: 90d
 #: next_check: 2022-04-30
-Ida-von-Arnim-Str.: Bauarbeiten an der Kreuzung Chausseestr., Fahrbahn gesperrt	q2::inwork 8266,14346 8442,14456
+Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr.	q2::inwork 8266,14346 8442,14456
 # 
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic vvv
-#: last_checked: 2021-11-28 (daf) vvv
+#: last_checked: 2021-12-04 vvv
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q2::inwork; 8775,12457 8904,12489
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
@@ -275,7 +277,7 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: osm_watch: way id="751595931" version="2"
 #: also_indoor: traffic (H)
-#: last_checked: 2021-11-18
+#: last_checked: 2021-12-04
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10952,12401
 # 
 #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large
@@ -388,7 +390,7 @@ Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahr
 #: by: https://blog.sbb.berlin/ab-1-februar-2021-haus-unter-den-linden-fuer-benutzungsbetrieb-geoeffnet/?date=20201226 (Baustelleneinrichtung in der Charlottenstr. wird im Frühjahr 2021 abgebaut, bis Sommer 2021 wird die Straßenseite wiederhergestellt; Sperrung in der Universitätsstraße womöglich bis Mitte 2022)
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
-#: last_checked: 2021-11-28 (daf) vvv
+#: last_checked: 2021-12-04 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="9"
@@ -498,11 +500,7 @@ Wandlitzstr./Wildensteiner Str.: Fahrbahn im Bereich der Kreuzung gesperrt	q3::i
 # 
 ### Kreuzberg ###
 # 
-#: note: kann außerhalb der Arbeitszeiten geöffnet sein (gesehen: 2021-10-19 gegen 19:00, 2021-11-09 gegen 18:10)
-#: last_checked: 2021-11-20
-#: check_frequency: 14d
-Böckhstr.: einige Meter der Fahrbahn gesperrt	q3::inwork 11411,9810 11197,9894
-# 
+# REMOVED (beendet) --- #: note: kann außerhalb der Arbeitszeiten geöffnet sein (gesehen: 2021-10-19 gegen 19:00, 2021-11-09 gegen 18:10) --- #: last_checked: 2021-11-20 --- #: check_frequency: 14d --- Böckhstr.: einige Meter der Fahrbahn gesperrt	q3::inwork 11411,9810 11197,9894
 # REMOVED (offen) --- #: next_check_id: FRIESEN-2018 --- #: source_id: 2147342598 --- #: source_id: 2147344059 --- #: source_id: 2147344058 --- #: XXX Start 2018-05-16, Dauer vermutlich 12 Monate, bei VMZ bis Juli 2019, laut fritz bis 31.08.2019 --- #: by: https://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=44021 --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.832802.php (Ende der Bauarbeiten KW 31/2019) --- #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/ende-der-bauarbeiten_a225376 (ab Anfang August 2019 passierbar) --- #: also_indoor: traffic vvv --- #: last_checked: 2019-07-30 vvv --- #: next_check: 2019-07-31 vvv --- #: valid: -20190731 vvv --- #: priority: #A vvv
 # REMOVED (hier nicht mehr?) --- #: source_id: 2147344148 --- Friesenstr.: Einbahnstraße zwischen Fidicinstr. und Columbiadamm, offen Richtung Columbiadamm	q3::inwork; 9801,8683 9801,8889 9799,8962
 # REMOVED --- #: source_id: 2147344147 --- Friesenstr.: Fahrbahn zwichen Fidicinstr. und Bergmannstr. gesperrt	q4::inwork 9799,8962 9797,9063 9795,9162 9793,9241
@@ -670,27 +668,14 @@ Neuköllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
 # REMOVED (fertig) --- #: XXX Haltestellenschilder (in der Innstr.) bis zum 7. Dezember 2019 datiert --- #: also_indoor: traffic (H) --- #: priority: #A --- #: last_checked: 2019-11-25 --- #: check_frequency: 7d --- #: next_check: 2019-12-07 --- #: valid: -20191207 --- Donaustr.: zwischen Ganghoferstr. und Innstr. Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12911,8232 12960,8246 12995,8213
 # REMOVED (fertig) --- Innstr.: zwischen Donaustr. und Sonnenallee Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12995,8213 13102,8343
 # REMOVED --- #: next_check_id: KARLMARXSTR-2018 --- #: XXX während der Bauarbeiten keine Einbahnstraße mehr, danach vermutlich wieder die alte Situation wiederherstellen --- #: by: http://cm.kms-sonne.de/mailing/99/2206225/0/8dc0731155/index.html (8. Baustellennewsletter der Aktion KMS) (voraussichtlich Vollsperrung vom 5. September 2019 bis Frühjahr 2020) --- #: by: https://www.abendblatt-berlin.de/2019/10/05/berlin-neukoelln-bauarbeiten-am-rathaus-gehen-voran/ --- #: by: https://www.kms-sonne.de/baustellennews?date=20200630 (Abbiegen ab 1. Juli 2020 wieder möglich) --- #: osm_watch: way id="155605267" version="10" --- #: last_checked: 2020-06-15 --- #: next_check: 2020-07-01 --- Anzengruberstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12689,8289 12865,8346
-# 
-#: next_check_id: KARLMARXSTR-2018
-#: by: https://www.kms-sonne.de/baustellennews/?date=20191023
-#: by: https://www.kms-sonne.de/assets/2021/06/Baustellenuebersicht-A4-06-2021-Web.pdf (bis November 2021)
-# REMOVED (ja, allerdings nicht relevant) --- #: XXX außerdem gibt es Bauarbeiten auf der Karl-Marx-Str. zwischen Fuldastr. und Weichselstr., evtl. mit Verschwenkungen?
-#: source_id: 2147345357 (inaktiv)
-#: source_id: 2147345472 (bis 10.8.2021, Gesamtbaumaßnahme bis 2024)
-#: source_id: viz2021:13.432625,52.482535,18.02.2020,07:00 (bis 14.7.2021, Gesamtbaumaßnahme bis 2024)
-#: source_id: viz2021:13.434398,52.481459,14.07.2021,10:00 (bis 31.12.2021, Gesamtbaumaßnahme bis 2024)
-#: also_indoor: traffic (G,H)
-#: last_checked: 2021-09-27 (mapillary)
-#: check_frequency: 120d
-#: next_check: 2021-12-31
-Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12392,8724 12330,8636
+# REMOVED (laut VIZ aufgehoben) --- #: next_check_id: KARLMARXSTR-2018 --- #: by: https://www.kms-sonne.de/baustellennews/?date=20191023 --- #: by: https://www.kms-sonne.de/assets/2021/06/Baustellenuebersicht-A4-06-2021-Web.pdf (bis November 2021) --- #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/weichselstrasse-wird-geoeffnet_a329831 (bis Mitte Dezember 2021) --- #: by: https://viz.berlin.de/2021/12/verkehrsvorschau-08122021/ (bis 8.11.2021) --- # REMOVED (ja, allerdings nicht relevant) --- #: XXX außerdem gibt es Bauarbeiten auf der Karl-Marx-Str. zwischen Fuldastr. und Weichselstr., evtl. mit Verschwenkungen? --- #: source_id: 2147345357 (inaktiv) --- #: source_id: 2147345472 (bis 10.8.2021, Gesamtbaumaßnahme bis 2024) --- #: source_id: viz2021:13.432625,52.482535,18.02.2020,07:00 (bis 14.7.2021, Gesamtbaumaßnahme bis 2024) --- #: source_id: viz2021:13.434398,52.481459,14.07.2021,10:00 (bis 31.12.2021, Gesamtbaumaßnahme bis 2024) --- #: also_indoor: traffic (G,H) --- #: last_checked: 2021-09-27 (mapillary) --- #: check_frequency: 120d --- #: next_check: 2021-12-08 --- Weichselstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12392,8724 12330,8636
 # 
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/boddinstrasse-wird-gesperrt_a314931
-#: source_id: viz2021:13.434398,52.481459,14.07.2021,10:00 (bis 31.12.2021, Gesamtbaumaßname bis 2024)
+#: source_id: viz2021:13.434398,52.481459,14.07.2021,10:00 (bis 31.12.2021, Gesamtbaumaßname bis 2024) (mittlerweile bis 31.1.2022)
 #: last_checked: 2021-10-11 (mapillary)
 #: check_frequency: 120d
-#: next_check: 2021-12-31
+#: next_check: 2022-01-31
 Boddinstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12368,8356 12582,8408
 # 
 # REMOVED (wieder offen) --- #: next_check_id: KARLMARXSTR-2018 --- #: by: https://www.kms-sonne.de/baustellennews/?date=20200526 (voraussichtlich ab 25. Juni 2020 bis Herbst 2020) --- #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/sperrrung-an-der-fuldastrasse_a275098 --- #: by: https://www.kms-sonne.de/baustellennews?date=20200630 --- #: by: https://www.kms-sonne.de/baustellennews?date=20201221 (weiterhin gesperrt) --- #: by: https://www.kms-sonne.de/baustellennews?date=202102 (voraussichtlich bis Sommer 2021) --- #: source_id: 2147345472 (Verschwenkung der KMS) --- #: also_indoor: traffic (G,H) --- #: last_checked: 2021-05-30 --- #: check_frequency: 120d --- #: next_check: 2021-10-08 --- #: next_check: 2021-06-01 --- Fuldastr.: Sperrung der Einmündung Karl-Marx-Str.	q3::inwork 12551,8612 12494,8501
@@ -740,7 +725,7 @@ Nöldnerstr.: Einbahnstraßenregelung, Radfahrer Richtung Westen können den Gehweg
 #: XXX laut rbb (am 31.8.2021 entfernt) und Halteverbotsschildern bis 31.08.2021
 #: also_indoor: traffic (ex-H)
 #: priority: #B
-#: last_checked: 2021-11-28
+#: last_checked: 2021-12-07
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2021-08-31
 # REMOVED --- #: valid: -20210831
@@ -788,8 +773,10 @@ Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Mer
 ### Schöneberg ###
 # 
 #: by: https://www.nbb-netzgesellschaft.de/ueber-die-nbb/presse/pressemitteilungen/reparatur-beeintraechtigt-verkehr-in-schoeneberg/
-#: last_checked: 2021-09-28
+#: XXX laut Schild bis Dezember 2021
+#: last_checked: 2021-12-03
 #: check_frequency: 60d
+#: next_check: 2021-12-31
 Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3-::inwork 7126,9825 7118,9870
 # 
 # REMOVED (-> temp blockings) --- #: by: https://twitter.com/VIZ_Berlin/status/1392465007393316864 (für ca. vier Wochen, ab 12.5.2021) --- #: by: https://twitter.com/rbbabendschau/status/1392489796426162177 --- #: source_id: 2147347186 --- #: also_indoor: traffic (G) --- #: XXX wann werden die Fahrbahn und die Radwege wieder freigegeben? bei rbb "bis auf Weiteres" --- #: priority: #A --- #: last_checked: 2021-05-14 --- #: next_check: 2021-06-18 --- #: valid: -20210612 --- Langenscheidtbrücke und Monumentenstr. bis Hohenfriedbergstr.: Wasserrohrbruch, Fahrbahn gesperrt, südwestlicher Fußweg steht noch zur Verfügung	q3::inwork 7647,9196 7735,9121 7790,9126
@@ -966,7 +953,7 @@ Pestalozzistr.: Fußgängerzone	q3 3721,11230 3770,11231 3822,11231
 # 
 #: next_check_id: NKZ-2020
 #: XXX zurzeit Bauarbeiten, nur der Gehweg ist offen (alten Eintrag danach wieder aktivieren); vor Corona-Zeiten gab's außerdem einen großzügigen Restaurantbereich
-#: last_checked: 2021-10-06 (mapillary) vvv
+#: last_checked: 2021-12-06 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2022-01-01 vvv
 (Zufahrt am NKZ): Fußgänger/Lieferverkehr	q2 11291,10438 11317,10485
@@ -1219,9 +1206,10 @@ Virchowstr. (Volkspark Friedrichshain): Fußgänger	q1 12876,13440 12826,13526 128
 (Hohenzollerndamm - Friedrichsruher Str.): enger Gehweg	q2 3379,8969 3333,9026
 Gillweg: enger Gehweg	q2 2585,9653 2484,9671 2394,9714
 Leon-Jessel-Platz: Fußgänger	q2 4700,9179 4735,9171 4755,9154
+#: note: mit Schild "Gehweg, Radfahrer frei"
 Nikolsburger Platz: Fußgänger	q2 5374,9619 5291,9675
 #: note: hier kein Zeichen "Gehweg, Radfahrer frei"
-Nikolsburger Platz: Fußgänger	q2 5291,9675 5297,9579
+Nikolsburger Platz: Fußgänger	q3 5291,9675 5297,9579
 #: XXX_prog BS (an der Lewishamstr., ansonsten unbekannter qX-Wert)
 zur Sybelstr.: Bordsteine	q4 3712,10566 3738,10574
 #: XXX_prog BS (an der Lewishamstr., ansonsten unbekannter qX-Wert)
@@ -1305,6 +1293,7 @@ Zauritzweg: Fußgänger	q1 4182,11831 4194,11703
 #: note: früher "q2"
 (Blücherplatz - Zossener Str.): Fußgänger, Grünanlage	q4+ 9702,10129 9827,10051
 Hebbelstr.: Fußgänger	q2 3117,11852 3251,12025 3258,12035 3295,12068
+#: note: Schild "Fußgänger", außerdem Feuerwehrzufahrt, eigentliche eine service-ähnliche Straße
 Spreewaldplatz: Fußgänger	q1 12341,10218 12292,10374
 #: XXX_prog BS auf beiden Seiten, ansonsten q2 oder q2+ (GPS-Tracks anschauen)
 Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8842,8561 8759,8458 8720,8373
@@ -1380,6 +1369,8 @@ Erich-Steinfurth-Str.: Fußgänger	q3 12645,11673 12596,11696
 Elbingeroder Weg: hohe Bordsteine	q4 13178,9062 13146,9085
 #: XXX_prog BS niedriger Bordstein auf der südlichen Seite, keiner an der Kurfüstenstr. (ansonsten q2)
 (An der Apostelkirche - Kurfürstenstr.): Fußgänger, Bordstein	q3 7312,10505 7315,10537
+#: note: eigentlich ausgeschildert als "getrennter ...", aber eine bauliche oder gezeichnete Trennung ist nicht zu erkennen
+Else-Lasker-Schüler-Str.: gemeinsamer Rad- und Gehweg	q1 7281,10510 7315,10537
 Marie-Elisabeth-Lüders-Steg: eng, Fußgänger	q2 8415,12749 8593,12742 8596,12760
 # REMOVED --- #: XXX_prog BS Bordstein höchstens auf der Westseite, auf der Ostseite abgesenkt, aber Gehweg ist ziemlich kurvig
 #: note: theoretisch q3 möglich
@@ -3699,7 +3690,7 @@ Traberweg: einige Fußgänger	q1 18577,8033 18567,8041 18490,8104 18416,8163 18351
 (Trautenauer Str. - Liepnitzstr.): einige Fußgänger	q1 17838,8611 17873,8578 17912,8515 18037,8420
 #: note: und zwar legal, per Schild
 Campus AF 60: Schranke kann auf Gehweg umfahren werden	q2 18964,11719 18919,11720
-Otto-Weidt-Platz: einige Fußgänger	q1 7732,14131 7866,14215
+Otto-Weidt-Platz: einige Fußgänger	q1 7732,14131 7818,14185 7866,14215
 Teltowkanaluferweg: gemeinsamer Geh- und Radweg	q1 7994,4430 8234,4660 8575,4980 8598,4985 8618,5019 8784,5095 8881,5143 9080,5225 9171,5263 9196,5272
 #: XXX_prog BS an der General-Woyna-Str., etwa 20m südlich ist eine Bordsteinabsenkung
 Humannstr. - General-Woyna-Str.: Fußgänger, Bordstein	q3 4324,18523 4340,18497
@@ -3819,6 +3810,9 @@ Diestelmeyerstr.: einige Fußgänger	q3 12833,12920 12690,12769
 Sokratesweg: einige Fußgänger	q2 18514,9552 18604,9535
 #: note: Radfahrer sollen hier absteigen
 Hans-Baluschek-Park: enge Rampe, Fußgänger	q2 7252,6080 7278,6101
+#: note: Radfahrer sollen absteigen
+(provisorischer Weg zum Golda-Meir-Steg): Fußgänger	q3 7818,14185 7861,14133
+Golda-Meir-Steg: Fußgänger	q2 7861,14133 7899,14157 7962,14198
 # 
 ######################### User Contributions #################################
 # 
