@@ -193,7 +193,7 @@ Sackgassenende, Rummelsburger Bucht	culdesac_pseudo 15334,10528
 	culdesac_pseudo 15393,11590
 	culdesac_pseudo 15411,11823
 	culdesac_pseudo 13375,12062
-	culdesac_pseudo 14285,12190
+	culdesac_pseudo 14274,12190
 Sackgassenende, Weg am Moabiter Werder	culdesac_pseudo 7837,12860
 	culdesac 19748,8517
 	culdesac 19705,9039
@@ -1600,6 +1600,7 @@ nördliches Sackgassenende der östlichen Stichstraße	culdesac_pseudo 19243,450
 	culdesac -7925,13550
 	culdesac -8183,14041
 	culdesac_pseudo 24489,5823
+	culdesac 21457,289
 # 
 ######################################################################
 # culdesac entries which should remain invisible

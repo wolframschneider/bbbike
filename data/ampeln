@@ -2,7 +2,7 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
-Lückstr.: Gegenverkehrsregelung	X::inwork 16601,10650
+Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8227,19725
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 Grunerstr./Jüdenstr.	X::inwork 10804,12461
@@ -1056,7 +1056,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12823,8028
 	F 12892,7850
 	F 12846,7981
-	F::inwork 12330,8636
+	F::inwork 12318,8645
 	X 11154,14985
 	X 12025,14695
 	X 12616,14315
@@ -1064,7 +1064,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 13530,13014
 	X 12901,14093
 	X 14709,12156
-	X 16207,11937
+	X 16214,11935
 	X 6575,8469
 	X 5352,7428
 	X 8249,16741
@@ -2301,7 +2301,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 23810,7946
 	X 24801,11261
 	F 9274,13963
-	X 9151,13941
+	X 9148,13944
 	F 10462,3765
 	F 8853,13539
 	X 24426,11265

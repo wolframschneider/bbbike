@@ -4361,9 +4361,9 @@ EOF
        text  => 'Invalidenstraße, Prenzlauer Berg Richtung Tiergarten Zwischen Kreuzung Gartenstraße und Kreuzung Chausseestraße Baustelle, gesperrt, Dauer: 19.04.2006 09:00 Uhr bis 15:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 9383,13986 9285,13965 9274,13963 9203,13953
-	2 9151,13941 9203,13953
-	2 9151,13941 9085,13919
+	2 9383,13986 9285,13965 9274,13963 9189,13953
+	2 9148,13944 9189,13953
+	2 9148,13944 9085,13919
 	2 9085,13919 8935,13844
 EOF
      },
@@ -4382,7 +4382,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002668',
        data  => <<EOF,
-	q4; 15904,12340 15896,12273 15879,12131 15863,11992
+	q4; 15904,12340 15896,12273 15879,12131 15871,12060 15863,11992
 EOF
      },
      { from  => 1146175200, # 2006-04-28 00:00
@@ -5358,7 +5358,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003134',
        data  => <<EOF,
-	1::inwork 15904,12340 15896,12273 15879,12131 15863,11992
+	1::inwork 15904,12340 15896,12273 15879,12131 15871,12060 15863,11992
 EOF
      },
      { from  => 1154210400, # 2006-07-30 00:00
@@ -17347,16 +17347,17 @@ EOF
 	2::inwork -2513,3631 -2464,3631 -2396,3666 -2174,3718 -2042,3838 -2015,3873 -2012,3949 -2030,4089 -1944,4140 -1760,4001 -1701,3980 -1621,3972 -1516,3993 -1488,4009
 EOF
      },
-     { from  => $isodate2epoch->("2019-12-12 00:00:00"),
-       until => $isodate2epoch->("2019-12-15 23:59:59"),
+     { from  => $isodate2epoch->("2021-12-09 14:00:00"),
+       until => $isodate2epoch->("2021-12-12 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 12, start => "2021-01-01T00:00:00"]], # findet 2020 vermutlich nicht statt
        recurrence_prewarn_days => -1,
-       text  => 'Alt-Köpenicker Weihnachtsmarkt vom 13.12.2019 bis zum 15.12.2019',
+       text  => 'Alt-Köpenicker Weihnachtsmarkt vom 10.12.2021 bis zum 12.12.2021',
        type  => 'gesperrt',
        source_id => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1305665-955635-weihnachtsmarktaufdemschlossplatzk%C3%B6peni.html',
        data  => <<EOF,
 #: by: https://www.berlin.de/weihnachtsmarkt/5666333-3496862-weihnachtsmarkt-auf-dem-schlossplatz-koe.html (2021 unter Vorbehalt)
+#: by: https://berliner-abendblatt.de/2021/12/10/dieses-wochenende-weihnachtsmarkt-in-der-altstadt/
 	2::xmas 22111,4562 22162,4546 22214,4548
 EOF
      },
@@ -17415,7 +17416,7 @@ EOF
        until => $isodate2epoch->("2021-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
-       recurrence_prewarn_days => 7, # XXX Ausmaß der Sperrung 2020/2021 unklar, 2021/2022 ebenso
+       recurrence_prewarn_days => 2, # XXX Ausmaß der Sperrung 2020/2021 unklar, 2021/2022 ebenso
        text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Ebertstr. zwischen Behrenstr. und Scheidemannstr., ab 26.12.2020 bis 02.01.2021',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -19660,7 +19661,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_017330',
        data  => <<EOF,
-	q4::inwork; 9383,13986 9285,13965 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8841,13800 8685,13728
+	q4::inwork; 9383,13986 9285,13965 9274,13963 9189,13953 9148,13944 9085,13919 8935,13844 8841,13800 8685,13728
 EOF
      },
      { from  => 1308261600, # 2011-06-17 00:00
@@ -21895,7 +21896,7 @@ EOF
        source_id => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
        data  => <<EOF,
 # REMOVED --- #: tempex: 20170630T2000-20170701T2359
-	2::temp 14161,11930 14285,12190
+	2::temp 14161,11930 14274,12190
 EOF
      },
      { from  => 1377867600, # 2013-08-30 15:00
@@ -25343,7 +25344,7 @@ EOF
        until => $isodate2epoch->("2020-01-02 23:59:59"), # 1451646000, # 2016-01-01 12:00
        periodic => 1,
        recurrences => [['yearly', days => 28, months => 12, start => "2021-01-01T00:00:00"]], # 2020/2021 keine große Silvesterparty
-       recurrence_prewarn_days => 7, # XXX Ausmaß der Sperrung 2020/2021 unklar, 2021/2022 ebenso
+       recurrence_prewarn_days => 2, # XXX Ausmaß der Sperrung 2020/2021 unklar, 2021/2022 ebenso
        text  => 'Tiergarten (östlicher Bereich), Pariser Platz, Wilhelmstr. bis Dorotheenstr.: wegen Silvesterparty gesperrt, vermutlich vom 29.12.2019 bis 02.01.2020',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -29746,7 +29747,7 @@ EOF
 #: priority: #B vvv
 #: last_checked: 2019-12-14 vvv
 #: check_frequency: 7d vvv
-# REMOVED ---	q4::inwork; 13745,12118 13991,11992 14045,11965 14097,11949 14161,11930 14306,11889 14416,11815 14461,11738
+# REMOVED ---	q4::inwork; 13745,12118 13991,11992 14055,11964 14097,11949 14161,11930 14306,11889 14416,11815 14461,11738
 # REMOVED ---	q4::inwork; 14461,11738 14513,11657 14561,11600 14570,11589 14639,11512
 # REMOVED ---	2::inwork 14461,11738 14416,11815
 # REMOVED ---	q4::inwork; 14395,11753 14461,11738
@@ -29758,8 +29759,8 @@ EOF
 # REMOVED ---	q4::inwork 14496,11620 14513,11657
 # REMOVED --- #: note: Sperrung zur Mainzer Str. ---	q3::inwork 14306,11889 14272,11775
 # REMOVED ---	q3::inwork 14354,12012 14306,11889
-# REMOVED --- #: note: Sperrung zur Niederbarnimstr. ---	q3::inwork 14208,12235 14045,11965
-# REMOVED --- #: note: Sperrung zur Simon-Dach-Str. ---	q3::inwork 14045,11965 14006,11843
+# REMOVED --- #: note: Sperrung zur Niederbarnimstr. ---	q3::inwork 14208,12235 14055,11964
+# REMOVED --- #: note: Sperrung zur Simon-Dach-Str. ---	q3::inwork 14055,11964 14021,11910 14006,11843
 # REMOVED --- #: note: Umwege am Wismarplatz, Richtung Kinzigstr. ---	q3::inwork 14475,11778 14461,11738
 # REMOVED (hier nicht) --- #: note: Umwege am Wismarplatz, Richtung Weserstr. ---	q3::inwork 14475,11778 14416,11815
 #: check_frequency: ^^^
@@ -30847,7 +30848,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2021-12-04
+#: last_checked: 2021-12-09
 #: check_frequency: 21d
 	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30946,8 +30947,9 @@ EOF
        data  => <<EOF,
 #: next_check_id: VIRCHOW-2020
 #: next_check_id: CORONA-2020
+#: by: https://www.charite.de/klinikum/themen_klinikum/themenschwerpunkt_coronavirus/#c30751057 (Eingangskontrollen)
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-08-12 (website) vvv
+#: last_checked: 2021-12-10 (website) vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -31057,20 +31059,21 @@ EOF
      },
      { from  => $isodate2epoch->("2020-05-27 09:00:00"),
        until => $isodate2epoch->("2021-12-31 17:00:00"), # der ursprüngliche Termin (14.08.2020) kann wohl nicht gehalten werden; laut Schild bis Ende 2021
-       text  => 'Gärtnerstr./Mainzer Str.: Bauarbeiten zwischen Grünberger Str. und Scharnweberstr., Fahrbahn gesperrt, möglicherweise bis Dezember 2021',
+       text  => 'Mainzer Str.: Bauarbeiten zwischen Boxhagener Str. und Scharnweberstr., Fahrbahn gesperrt, möglicherweise bis Ende Dezember 2021',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
+#: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="5"
-#: last_checked: 2021-12-06 vvv
+#: last_checked: 2021-12-15 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
 # REMOVED (beendet) ---	q3::inwork 14247,11681 14272,11775
-	q3::inwork 14272,11775 14306,11889
+# REMOVED (beendet) ---	q3::inwork 14272,11775 14306,11889
 	q4::inwork 14306,11889 14354,12012
 	q3::inwork 14354,12012 14468,11992
 #: next_check ^^^
@@ -31344,8 +31347,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-05-30 08:30:00"), # 1589275980, # 2020-05-12 11:33
-       until => $isodate2epoch->("2021-12-23 17:00:00"), # $isodate2epoch->("2021-05-31 17:00:00"), # 1599231600, # 2020-09-04 17:00
-       text  => 'Gardeschützenweg: Fahrbahn zwischen Hindenburgdamm und Lipaer Str. wegen Bauarbeiten gesperrt, möglicherweise Einschränkungen für den Radverkehr, vom 31.05.2021 bis 23.12.2021',
+       until => $isodate2epoch->("2022-03-18 17:00:00"), # $isodate2epoch->("2021-05-31 17:00:00"), # 1599231600, # 2020-09-04 17:00
+       text  => 'Gardeschützenweg: Fahrbahn zwischen Hindenburgdamm und Lipaer Str. wegen Bauarbeiten gesperrt, möglicherweise Einschränkungen für den Radverkehr, vom 31.05.2021 bis 18.03.2022',
        type  => 'handicap',
        source_id => '2147345834', # (inaktiv)
        data  => <<EOF,
@@ -31354,9 +31357,7 @@ EOF
 #: by: https://viz.berlin.de/2021/05/verkehrsvorschau-310521/ (Fuß- und Radverkehr ist frei)
 #: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
 #: source_id: 2147347233 (bis 23.12.2021)
-#: priority: #A
-#: last_checked: 2021-09-26
-#: next_check: 2021-12-23
+# REMOVED --- #: priority: #A --- #: last_checked: 2021-09-26 --- #: next_check: 2022-03-18
 #: also_indoor: traffic (H,G) vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
 #: XXX NEW	Gardeschützenweg (Lichterfelde) in beiden Richtungen zwischen Hindenburgdamm und Lipaer Straße: Leitungsbau,Vollsperrung, Fußverkehr frei, vom 31.05.2021 08:30 Uhr bis 23.12.2021 17:00 Uhr
@@ -31863,7 +31864,7 @@ EOF
 #: source_id: viz2021:13.428783,52.478213,06.04.2020,07:00 (bis 31.03.2025)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G)
-#: last_checked: 2021-11-06
+#: last_checked: 2021-12-13
 #: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -31916,7 +31917,7 @@ Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp:
 Bergmannstr. (Kreuzberg): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252 9793,9241 9880,9233 9973,9232 10001,9234 10123,9233 10547,9233
 Bölschestr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 25579,5958 25571,5829 25567,5749 25563,5666 25561,5622 25553,5486 25548,5398 25546,5359 25544,5326 25539,5237 25524,5011 25522,4935 25519,4830
 Friedrichstr. (Mitte): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9212,13471 9225,13389 9246,13235 9254,13171 9262,13111 9269,13060 9279,12953 9286,12886 9298,12765 9303,12718 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351 9369,12253 9373,12197 9384,12103 9393,12000 9405,11903 9418,11804 9432,11702 9444,11616 9456,11513 9468,11412 9474,11360 9478,11317
-Karl-Marx-Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 13236,6489 13200,6550 13141,6651 13121,6689 13117,6716 13085,6925 13072,7013 13068,7043 13058,7112 13051,7157 13043,7234 13034,7319 13030,7346 13029,7353 13018,7441 13015,7471 12987,7560 12972,7602 12914,7785 12898,7832 12892,7850 12865,7923 12846,7981 12823,8028 12788,8101 12753,8187 12714,8249 12689,8289 12639,8344 12598,8390 12582,8408 12562,8432 12545,8449 12494,8501 12330,8636 12150,8764 12063,8826 11998,8872 11880,8955 11831,8989
+Karl-Marx-Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 13236,6489 13200,6550 13141,6651 13121,6689 13117,6716 13085,6925 13072,7013 13068,7043 13058,7112 13051,7157 13043,7234 13034,7319 13030,7346 13029,7353 13018,7441 13015,7471 12987,7560 12972,7602 12914,7785 12898,7832 12892,7850 12865,7923 12846,7981 12823,8028 12788,8101 12753,8187 12714,8249 12689,8289 12639,8344 12598,8390 12582,8408 12562,8432 12545,8449 12494,8501 12330,8636 12318,8645 12150,8764 12063,8826 11998,8872 11880,8955 11831,8989
 Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2415,9765 2445,9838 2473,9861 2532,9911 2590,9949 2694,10002 2702,10006 2770,10024 2828,10040 2974,10081 3111,10116 3189,10141 3289,10174 3374,10201 3489,10240 3562,10264 3618,10283 3737,10322 3835,10352 3971,10381 4157,10418 4245,10435 4371,10465 4496,10504 4672,10552 4838,10597 5069,10662 5215,10711 5341,10756 5475,10808 5656,10876 5725,10892 5782,10884
 Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 2445,9838 2369,9779
 Schloßstr. (Steglitz): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 5370,6486 5346,6443 5312,6382 5269,6305 5244,6261 5219,6215 5165,6119 5137,6066 5099,5994 5091,5979 5083,5964 5048,5904 5018,5854 4998,5817 4982,5789 4963,5754 4946,5725 4900,5648 4861,5581 4832,5522 4767,5389 4745,5344 4741,5309 4677,5274 4593,5235 4512,5199 4432,5160 4343,5112
@@ -32199,8 +32200,8 @@ EOF
 EOF
      },
      { from  => 1611329064, # 2021-01-22 16:24
-       until => $isodate2epoch->("2021-11-25 17:00:00"), # 1630076400, # 2021-08-27 17:00
-       text  => 'Stettiner Str.: Bauarbeiten, keine direkte Anbindung zur Badstr., bis 25.11.2021',
+       until => $isodate2epoch->("2022-02-01 17:00:00"), # 1630076400, # 2021-08-27 17:00
+       text  => 'Stettiner Str.: Bauarbeiten, keine direkte Anbindung zur Badstr., bis 01.02.2022',
        type  => 'handicap',
        source_id => '2147346268',
        data  => <<EOF,
@@ -32238,18 +32239,19 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 10/2021: Einfahrt im Bereich Blockdammweg kann während Arbeitszeiten gesperrt sein, außerdem Fahrbahn im nördlichen Abschnitt gesperrt, enger Fußweg existiert)',
+       text  => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand 12/2021: Einfahrt im Bereich Blockdammweg kann während Arbeitszeiten gesperrt sein, außerdem Fahrbahn im nördlichen Abschnitt gesperrt, schmaler Fußweg existiert)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.deutsches-architekturforum.de/thread/14488-parkstadt-karlshorst-im-bau/?postID=673580#post673580 (ab dem kommenden Jahr, also 2021)
-#: confirmed_by: srt (Sackgassenschild am nördlichen und südlichen Ende, aber noch keine Sperrung)
-#: add_fragezeichen: Gibt es mittlerweile eine Sperrung? Falls ja, wo ist der gesperrte Abschnitt und gilt die Sperrung auch für Fußgänger und Radfahrer?
+#: confirmed_by: srt (Sackgassenschild am nördlichen und südlichen Ende, als Fußgänger und Radfahrer kommt man durch)
+#: XXX im nördlichen Teil entsteht eine neue asphaltierte Straße, etwas weiter östlich versetzt
+#: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="24"
 #: osm_watch: way id="165832806" version="21"
-#: last_checked: 2021-11-16
+#: last_checked: 2021-12-15
 #: check_frequency: 30d
-	2::inwork 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17483,8644 17449,8720 17416,8767 17380,8858
+	2::inwork 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17497,8623 17461,8693 17416,8767 17380,8858
 EOF
      },
      { from  => 1611529200, # 2021-01-25 00:00
@@ -33111,7 +33113,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FRANKFURTER-2021
 #: note: auch last Schild der Wasserbetriebe bis März 2022
-#: last_checked: 2021-12-06 vvv
+#: last_checked: 2021-12-11 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-03-31 vvv
 	3 14888,11934 14926,12129 15003,12241
@@ -33208,7 +33210,7 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-12-02
+#: last_checked: 2021-12-15
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33470,8 +33472,8 @@ EOF
 EOF
      },
      { from  => 1629669600, # 2021-08-23 00:00
-       until => 1640991600, # 2022-01-01 00:00
-       text  => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 31.12.2021 17:00 ',
+       until => $isodate2epoch->("2022-02-04 17:00:00"), # 1640991600, # 2022-01-01 00:00
+       text  => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 04.02.2022 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.377685,52.567221,24.08.2021,07:00',
        data  => <<EOF,
@@ -33700,8 +33702,8 @@ EOF
 EOF
      },
      { from  => 1633212000, # 2021-10-03 00:00
-       until => 1640214000, # 2021-12-23 00:00
-       text  => 'Rathausstr.: zwischen Königstr. und Ullsteinstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 04.10.2021 08:00 bis 22.12.2021 17:00 ',
+       until => $isodate2epoch->("2021-12-30 17:00:00"), # 1640214000, # 2021-12-23 00:00
+       text  => 'Rathausstr.: zwischen Königstr. und Ullsteinstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 04.10.2021 08:00 bis 30.12.2021 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.378629,52.451139,04.10.2021,08:00',
        data  => <<EOF,
@@ -33947,7 +33949,7 @@ EOF
 EOF
      },
      { from  => 1636747480, # 2021-11-12 21:04
-       until => 1639177200, # 2021-12-11 00:00
+       until => 1639076742, # 1639177200, # 2021-12-11 00:00
        text  => 'Archenholdstr. und Marie-Curie-Allee: Einbahnstraßenregelungen, voraussichtlich bis 10.12.2021',
        type  => 'handicap',
        source_id => 'viz2021:13.496206,52.500247,12.11.2021,06:00',
@@ -33977,10 +33979,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.bahninfo-forum.de/read.php?9,689838,718366#msg-718366
-#: by: https://www.bvg.de/de/verbindungen/stoerungsmeldungen/m13?date=20221119 (bis 6.12.2021) (Straßenbahn fertig, aber die Bauarbeiten sind noch nicht beendet)
-#: also_indoor: traffic (G)
-#: last_checked: 2021-12-07 vvv
-#: check_frequency: 4d vvv
+#: by: https://www.bvg.de/de/verbindungen/stoerungsmeldungen/m13?date=20221119 (bis 6.12.2021) (Straßenbahn fährt wieder, aber die Bauarbeiten sind noch nicht beendet)
+#: also_indoor: traffic (G,H)
+#: last_checked: 2021-12-15 vvv
+#: check_frequency: 3d vvv
 	q3::inwork 14965,11924 15077,11910
 	q3::inwork; 15077,11910 15133,11902 15256,11884
 	q3::inwork 14965,11924 14888,11934 14836,11842
@@ -34014,8 +34016,8 @@ EOF
 EOF
      },
      { from  => 1637953683, # 2021-11-26 20:08
-       until => 1667257200, # 2022-11-01 00:00
-       text  => 'Ruhlsdorf: Bauarbeiten, Sperrung, vermutlich auch für Radfahrer, bis 31.10.2022',
+       until => $isodate2epoch->("2022-03-31 18:00:00"), # 1667257200, # 2022-11-01 00:00
+       text  => 'Ruhlsdorf: Bauarbeiten, Sperrung, vermutlich auch für Radfahrer, bis 31.03.2022',
        type  => 'handicap',
        source_id => '217202207',
        data  => <<EOF,
@@ -34049,7 +34051,7 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-12-11 00:00:00"),
-       until => $isodate2epoch->("2021-12-12 23:59:59"),
+       until => 1639334607, # $isodate2epoch->("2021-12-12 23:59:59"),
        text  => 'Residenzstr./Reinickendorfer Str./Osloer Str./Seestr.: umfangreiche Sperrungen wegen Bombenentschärfung, am 12.12.2021 voraussichtlich ab 6 Uhr',
        type  => 'handicap',
        source_id => 'viz2021:13.191315,52.461666,02.12.2021,07:00',
@@ -34097,6 +34099,48 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Sind Radfahrer von der Baustelle betroffen?
 	q4::inwork; 6366,13716 6493,13822
+EOF
+     },
+     { from  => undef, # 
+       until => 1639516380, # undef, # XXX
+       text  => 'Elsenbrücke komplett gesperrt (auch für Fußgänger und Radfahrer), Ende der Sperrung unbekannt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: ELSENBRUECKE-2021
+#: by: https://berliner-abendblatt.de/2021/12/13/elsenbruecke-seit-montagfrueh-komplett-gesperrt/ (Arbeiten am Provisorium bis zum ersten Quartal 2022)
+#: by: https://viz.berlin.de/2021/12/elsenbruecke-gesperrt/
+#: by: https://viz.berlin.de/2021/12/verkehrsvorschau-14122021/
+#: by: https://viz.berlin.de/2021/12/elsenbruecke-gesperrt/?date=20211214 (update: offen?)
+#: by: https://twitter.com/VIZ_Berlin/status/1470700292798832641 (offen oder nicht?)
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1157183.php
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1157085.php
+#: by: https://berliner-abendblatt.de/2021/12/14/elsenbruecke-wieder-frei-fuer-fussgaenger-radler-und-schiffe/
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1158054.php
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1158063.php
+#: by: https://berliner-abendblatt.de/2021/12/15/elsenbruecke-jetzt-auch-wieder-fuer-autos-befahrbar/
+#: source_id: viz2021:13.460136,52.493499,13.12.2021,04:44 (kein Endedatum)
+#: also_indoor: traffic (G,H)
+#: osm_watch: way id="4068043" version="31"
+#: osm_watch: way id="839092016" version="4"
+#: osm_watch: way id="838651758" version="4"
+# REMOVED --- #: XXX laut osm wieder für Radfahrer/Fußgänger offen --- #: add_fragezeichen: Ist die Elsenbrücke mittlerweile wieder für den Radverkehr geöffnet? --- #: priority: #A --- #: last_checked: 2021-12-13 --- #: check_frequency: 7d --- #: next_check: 2021-12-14
+	2::inwork 14323,9913 14405,10027 14501,10169 14558,10264
+EOF
+     },
+     { from  => undef, # 
+       until => undef, #
+       text  => 'Bolleufer: Grünanlage, Radfahren offiziell verboten',
+       permanent => 1,
+       type  => 'handicap',
+       data  => <<EOF,
+	q4 15453,10419 15457,10342 15496,10277 15518,10234 15604,10204 15606,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15910,9860 15931,9846
+	q4 15931,9846 16002,9787 16049,9749
+	q4 16119,9689 16125,9678 16120,9653
+	q4 16120,9653 16182,9591 16268,9670
+	q4 15513,10298 15496,10277
+	q4 15621,10214 15604,10204
+	q4 15840,9980 15811,9957 15786,9957
+	q4 16038,9837 16002,9787
 EOF
      },
     );

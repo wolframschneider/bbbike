@@ -54,7 +54,7 @@ An der Wuhlheide - Alte Försterei: bereits an der Ampel Köpenicker Allee die Str
 Wuhlewanderweg - Lindenstr.: zunächst linken Gehweg benutzen, an der Cardinalstr. oder Ampel Joachimstr. die Straßenseite wechseln	CP; 21744,5804 21618,5699 21602,5685 21706,5541
 Mariendorfer Damm - Am Teltowkanal: bereits an der Ullsteinstr. auf den linken Gehweg wechseln	PI; 9206,5193 9196,5272 9171,5263
 hinter dem "Alten Zollhaus" halbrechts abbiegen	CP; 10313,10084 10168,10085 10158,10117 10069,10151
-Frankfurter Allee - Kreutzigerstr.: Einfahrt in Hausdurchgang	CP2; 14291,12220 14285,12190
+Frankfurter Allee - Kreutzigerstr.: Einfahrt in Hausdurchgang	CP2; 14280,12223 14274,12190
 Lennéstr: Radweg Richtung Ebertstr. auf der linken Seite im Tiergarten	CS; 8203,11686 8322,11715 8456,11763 8489,11782 8571,11846
 dem Schotterweg folgen	CP; 24210,37562 24186,37723 24208,37830
 Hauptstr.: bereits an der Gustav-Holzmann-Str. die Gehwegseite wechseln	PI; 16302,9865 16261,9925 16049,9749
@@ -264,7 +264,7 @@ Hinter dem Straßenbetriebshof rechts in den Weg einbiegen	CP; 16860,12861 16865,
 Bremer Weg: die Einfahrt in den Parkweg befindet sich auf der linken Seite	CP2; 8538,12245 8522,12239
 Lindenstr. - Breitestr.: auf dem linken Geh/Radweg bis zur Dortustr. fahren und dort die Straßenseite wechseln	CP; -13366,-1499 -13375,-1546 -13238,-1569
 Breitestr. - Lindenstr.: bereits an der Kreuzung "Wall am Kiez" auf die linke Straßenseite wechseln	PI; -13516,-1517 -13375,-1546 -13366,-1499
-Frankfurter Allee - Bürgerheimstr.: bereits an der Ampel Alfredstr. auf die linke Straßenseite wechseln, oder an der Ampel Buchberger Str. die Straßenseite wechseln	PI; 16207,11937 16317,11920 16326,11966
+Frankfurter Allee - Bürgerheimstr.: bereits an der Ampel Alfredstr. auf die linke Straßenseite wechseln, oder an der Ampel Buchberger Str. die Straßenseite wechseln	PI; 16214,11935 16317,11920 16326,11966
 Bürgerheimstr. - Frankfurter Allee: auf dem linken Gehweg bis zur Atzpodienstr. fahren und dort die Straßenseite wechseln	CP; 16326,11966 16317,11920 16368,11912
 Gradestr. - Moosrosenstr.: entweder schon an der Holzmindener Str. die Straßenseite wechseln oder am Busbahnhof umdrehen	PI; 12773,5248 12727,5244 12726,5147
 Moosrosenstr. - Gradestr.: auf dem linken Gehweg bis Höhe Busbahnhof fahren und dort die Straßenseite wechseln	CP; 12726,5147 12727,5244 12582,5232
@@ -376,7 +376,7 @@ Mahlsdorfer Str.: zur Weiterfahrt Richtung B1 oder Dorfstr. nicht den Radweg ben
 Kyritzer Str.: nicht ausgeschildert	CP2; 22573,15552 22579,15416
 Buckower Damm - Britzer Park: bereits an der Kreuzung Mohriner Allee auf den linken Gehweg wechseln	PI; 12564,4308 12637,4014 12734,4021
 Britzer Park - Buckower Damm: linken Gehweg bis zur Ampel benutzen	CP; 12734,4021 12637,4014 12655,3882
-Magdalenenstr. - Frankfurter Allee: linken Gehweg bis zur Ampel benutzen	CP; 16158,12191 16127,11950 16207,11937
+Magdalenenstr. - Frankfurter Allee: linken Gehweg bis zur Ampel benutzen	CP; 16158,12191 16127,11950 16214,11935
 Malchower Chaussee - Hohenschönhauser Weg: bereits an der Kreuzung Malchower Chaussee/Ortnitstr. auf den linken Radweg wechseln	PI; 15610,18596 15600,18551 15825,18385
 Bornholmer Str. - Tegnerstr.: bereits an der Ampel Schönfließer Str. auf den linken Gehweg wechseln	PI; 10620,16497 10699,16492 10708,16579
 Dietzgenstr. - (Am Nordgraben): bereits am Kräuterweg auf den linken Gehweg wechseln	PI; 10085,21840 10097,21809 10177,21802
@@ -428,7 +428,7 @@ Heinersdorfer Str. - Weg am Fließ: keine Zugangsmöglichkeit von der Fahrbahn zum
 Schild "Dieselstr. 20"	CP2; 14642,8022 14832,8199
 nicht ausgeschildert, Einfahrt zum Weg ca. 320m hinter dem Mauerweg	PI; 15053,7966 14841,8207 14832,8199
 nicht ausgeschildert, Einfahrt zum Weg ca. 430m hinter der Kreuzung Karpfenteichstr.	PI; 14560,8528 14700,8368 14841,8207 14832,8199
-Schulze-Boysen-Str. - Ruschstr.: Fußgängerampel auf der linken Seite benutzen	CP; 15836,11840 15863,11992 15879,12131
+Schulze-Boysen-Str. - Ruschstr.: Fußgängerampel auf der linken Seite benutzen	CP; 15836,11840 15863,11992 15871,12060
 Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP; 15685,12154 15670,12022 15717,12015
 nicht ausgeschildert, Richtung Salzmannstr./Huronseestr.	CP2; 16900,9861 16895,9922
 nicht ausgeschildert, Richtung Sewanstr.	CP2; 16900,9861 17005,9953
@@ -463,7 +463,7 @@ Otto-von-Simson-Str - Thielallee: Überquerungsmöglichkeit ca. 30m zur rechten Se
 Stahlheimer Str. - Rodenbergstr.: nicht auf das Straßenbahnkap fahren, links abbiegen dort nicht möglich	PI; 11477,15969 11492,15993 11358,16067
 Weißenhöher Str. - Stawesdamm: auf der Fahrbahn bleiben, links abbiegen wegen Bushaltestelle nicht möglich	PI; 20521,11494 20569,11492 20616,11490 20627,11552
 Miersdorfer Str. - Zum Mühlenschlag: auf der Fahrbahn bleiben, links abbiegen vom Rad/Gehweg nicht möglich	PI; 23035,-5990 22866,-5844 22830,-5878
-Frankfurter Allee - Kreutzigerstr.: auf dem alten Bürgersteigradweg bleiben, rechts abbiegen von der Radspur in die Kreutzigerstr. nur über Bordstein möglich	PI; 14208,12235 14291,12220 14285,12190
+Frankfurter Allee - Kreutzigerstr.: auf dem alten Bürgersteigradweg bleiben, rechts abbiegen von der Radspur in die Kreutzigerstr. nur über Bordstein möglich	PI; 14208,12235 14280,12223 14274,12190
 Altentreptower Str./Bhf. Wuhletal: bereits beim Zebrastreifen auf die linke Seite wechseln	PI; 21970,12153 21995,12153 22031,12208
 Modersohnbrücke - DB-Werkstraße: ggfs. bereits an der Bordsteinabsenkung auf die Fahrbahn wecheln	PI; 14076,11057 14043,10928 14107,10911
 Johannisthaler Chaussee - Weg an der Teltowkanalautobahn: ggfs. bereits an der Ampel vor der Autobahnbrücke auf den linken Gehweg wechseln	PI; 15669,4266 15640,4222 15768,4102

@@ -159,7 +159,7 @@ Gärtnerstr.	1 14211,11552 14247,11681 14272,11775
 Wismarplatz	1 14395,11753 14416,11815
 Wismarplatz	3 14461,11738 14416,11815 14395,11753
 Simon-Dach-Str.	1 13954,11647 13981,11746 14006,11843
-Simon-Dach-Str.	1 14045,11965 14006,11843
+Simon-Dach-Str.	1 14055,11964 14021,11910 14006,11843
 Buchhorster Str.	1 7616,20633 7736,20598 7793,20580 7866,20556 7979,20528
 Handjerystr.	1 5641,7189 5624,7113 5565,7024
 Leuthener Str.	1 7494,8354 7578,8358
@@ -814,7 +814,7 @@ Am Rudower Fließ -> Neuköllner Str.: Mittelstreifen	3::igndisp 16650,1356 16698,
 Mittelstreifen	3nocross::ignrte 13151,14855 13110,14879 12812,15053
 Storkower Str. -> Einsteinstr.: Mittelstreifen	3::igndisp 12812,15053 13110,14879 13143,14935
 Einsteinstr. -> Storkower Str.: Mittelstreifen	3::igndisp 13143,14935 13110,14879 13151,14855
-Hönower Wiesenweg: nur für Anlieger und Radfahrer offen	2:Anlieger 17380,8858 17416,8767 17449,8720 17483,8644 17515,8567 17533,8505 17554,8458 17620,8366 17704,8327 17753,8290
+Hönower Wiesenweg: nur für Anlieger und Radfahrer offen	2:Anlieger 17380,8858 17416,8767 17461,8693 17497,8623 17515,8567 17533,8505 17554,8458 17620,8366 17704,8327 17753,8290
 Mittelstreifen	3nocross::ignrte 9248,4904 9239,4980 9206,5193
 Finkenweg -> Mariendorfer Damm: Mittelstreifen	3::igndisp 9360,4996 9239,4980 9248,4904
 Mariendorfer Damm -> Finkenweg: Mittelstreifen	3::igndisp 9206,5193 9239,4980 9360,4996
@@ -1715,8 +1715,8 @@ Knaackstr. -> Immanuelkirchstr.: Straßenbahntrasse	3::igndisp 11418,14290 11498,
 Immanuelkirchstr. -> Prenzlauer Allee: Straßenbahntrasse	3::igndisp 11713,14118 11498,14234 11471,14143
 Immanuelkirchstr. -> Knaackstr.: Straßenbahntrasse	3::igndisp 11713,14118 11498,14234 11418,14290
 B2 - Piesporter Str.: Linksabbiegen verboten	3 15569,18492 15181,18137 15239,18063
-Ruschestr. - Schulze-Boysen-Str.: Geradeausfahren verboten	3 15879,12131 15863,11992 15836,11840
-Schulze-Boysen-Str. - Ruschestr.: Geradeausfahren verboten	3 15836,11840 15863,11992 15879,12131
+Ruschestr. - Schulze-Boysen-Str.: Geradeausfahren verboten	3 15879,12131 15871,12060 15863,11992 15836,11840
+Schulze-Boysen-Str. - Ruschestr.: Geradeausfahren verboten	3 15836,11840 15863,11992 15871,12060 15879,12131
 Schulze-Boysen-Str. - Frankfurter Allee: Linksabbiegen verboten	3 15836,11840 15863,11992 15717,12015
 Bizetstr. - Indira-Gandhi-Str.: nur Rechtsabbiegen erlaubt	3 14295,16076 14552,16171 14522,16260
 Linienstr. - Rosa-Luxemburg-Str.: nur Rechtsabbiegen erlaubt	3 10740,13621 10777,13614 10741,13685
@@ -1955,13 +1955,13 @@ Mittelstreifen	3nocross::ignrte 4867,690 4875,677 4948,562
 Osdorfer Str. -> Mercatorweg: Mittelstreifen	3::igndisp 4948,562 4875,677 4695,556
 Mercatorweg -> Osdorfer Str.: Mittelstreifen	3::igndisp 4695,556 4875,677 4867,690
 Siegfriedstr. - Rüdigerstr.: Abbiegen verboten	3 16826,12408 16820,12339 16918,12325
-Mittelstreifen	3nocross::ignrte 16127,11950 16207,11937 16317,11920
-Frankfurter Allee -> Alfredstr.: Mittelstreifen	3::igndisp 16127,11950 16207,11937 16246,12177
-Frankfurter Allee -> Frankfurter Allee [Wohngebiet]: Mittelstreifen	3::igndisp 16317,11920 16207,11937 16190,11872
-Alfredstr. -> Frankfurter Allee: Mittelstreifen	3::igndisp 16246,12177 16207,11937 16317,11920
-Alfredstr. -> Frankfurter Allee [Wohngebiet]: Mittelstreifen	3::igndisp 16246,12177 16207,11937 16190,11872
-Frankfurter Allee [Wohngebiet] -> Frankfurter Allee: Mittelstreifen	3::igndisp 16190,11872 16207,11937 16127,11950
-Frankfurter Allee [Wohngebiet] -> Alfredstr.: Mittelstreifen	3::igndisp 16190,11872 16207,11937 16246,12177
+Mittelstreifen	3nocross::ignrte 16127,11950 16214,11935 16317,11920
+Frankfurter Allee -> Alfredstr.: Mittelstreifen	3::igndisp 16127,11950 16214,11935 16223,11999
+Frankfurter Allee -> Frankfurter Allee [Wohngebiet]: Mittelstreifen	3::igndisp 16317,11920 16214,11935 16190,11872
+Alfredstr. -> Frankfurter Allee: Mittelstreifen	3::igndisp 16223,11999 16214,11935 16317,11920
+Alfredstr. -> Frankfurter Allee [Wohngebiet]: Mittelstreifen	3::igndisp 16223,11999 16214,11935 16190,11872
+Frankfurter Allee [Wohngebiet] -> Frankfurter Allee: Mittelstreifen	3::igndisp 16190,11872 16214,11935 16127,11950
+Frankfurter Allee [Wohngebiet] -> Alfredstr.: Mittelstreifen	3::igndisp 16190,11872 16214,11935 16223,11999
 Wadzeckstr.	1 11295,13224 11315,13210 11354,13184 11369,13174
 Zimmerstr.	1 -13637,-1164 -13876,-1226
 Alte Köpenicker Allee: Schranke bei der Einfahrt	2 20316,7637 20348,7634 20459,7445 20501,7472 20540,7532
@@ -2127,8 +2127,10 @@ Margarete-Steffin-Str.	1 8525,12958 8406,13127 8315,13181
 Jenbacher Weg: für Radfahrer umfahrbare Schranke	3 5418,-98 5665,51 5703,74
 Jenbacher Weg: für Radfahrer umfahrbare Schranke	3 5703,74 5665,51 5418,-98
 Hasenholzer Allee	2:Anlieger 21903,15174 21927,15303
-Straßenbahntrasse	3nocross::ignrte 18406,7760 18577,8033 18633,8126
-Treskowallee -> Traberweg: Straßenbahntrasse	3::igndisp 18406,7760 18577,8033 18567,8041
+Straßenbahntrasse	3nocross::ignrte 18406,7760 18483,7883 18577,8033 18633,8126
+Treskowallee -> Zufahrt Impfzentrum Trabrennbahn Karlshorst: Straßenbahntrasse	3::igndisp 18577,8033 18483,7883 18662,7914
+Zufahrt Impfzentrum Trabrennbahn Karlshorst -> Treskowallee: Straßenbahntrasse	3::igndisp 18662,7914 18483,7883 18406,7760
+Treskowallee -> Traberweg: Straßenbahntrasse	3::igndisp 18483,7883 18577,8033 18567,8041
 Traberweg -> Treskowallee: Straßenbahntrasse	3::igndisp 18567,8041 18577,8033 18633,8126
 Schierker Str. - Karl-Marx-Str.	3 13003,7316 13034,7319 13030,7346
 Haßlingerweg	1 7644,17054 7894,17073 7926,17050
@@ -2200,3 +2202,4 @@ Rudolf-Reusch-Str	1 15710,12365 15668,12304 15658,12231 15651,12214
 Eckertstr.	1 13598,12554 13585,12584
 Mittelstr.	1 15647,14693 15539,14493
 (Weydemeyerstr.): Absperrung	2 11925,12807 11971,12785
+Roedernstr.	1 18019,7071 18010,7133

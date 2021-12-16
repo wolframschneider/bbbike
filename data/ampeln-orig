@@ -7,14 +7,12 @@
 # 
 #: temporary vvv
 # 
-#: next_check_id: LUECK-2021
-#: source_id: viz2021:13.496206,52.500247,12.11.2021,06:00 (bis 10.12.2021)
-#: by: https://www.bahninfo-forum.de/read.php?9,716845,718464#msg-718464
-#: note: Gegenverkehrsregelung beginnt östlich der Einmündung Wönnichstr. und endet östlich der Kreuzung Rummelsburger Str.
-#: last_checked: 2021-11-21
-#: next_check: 2021-12-10
-#: valid: -20211210
-Lückstr.: Gegenverkehrsregelung	X::inwork 16601,10650
+#: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
+#: last_checked: 2021-12-15
+#: check_frequency: 60d
+Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
+# 
+# REMOVED --- #: next_check_id: LUECK-2021 --- #: source_id: viz2021:13.496206,52.500247,12.11.2021,06:00 (bis 10.12.2021) --- #: by: https://www.bahninfo-forum.de/read.php?9,716845,718464#msg-718464 --- #: note: Gegenverkehrsregelung beginnt östlich der Einmündung Wönnichstr. und endet östlich der Kreuzung Rummelsburger Str. --- #: last_checked: 2021-11-21 --- #: next_check: 2021-12-10 --- #: valid: -20211210 --- Lückstr.: Gegenverkehrsregelung	X::inwork 16601,10650
 # 
 #: source_id: viz2021:13.374553,52.583469,04.08.2021,08:00
 #: last_checked: 2021-10-23 (mapillary) vvv
@@ -133,7 +131,7 @@ Nöldnerstr.: Gegenverkehrsregelung	X::inwork 15433,10765
 #: add_fragezeichen: Gibt es noch immer eine Gegenverkehrsregelung?
 #: source_id: 2147347174 (bis 19.7.2021)
 #: source_id: viz2021:13.440334,52.59161,06.05.2021,09:00 (bis 30.9.2021, Gesamtmaßnahme bis Anfang 2022) (mittlerweile inaktiv)
-#: last_checked: 2021-10-16 (mapillary) vvv
+#: last_checked: 2021-11-06 (mapillary) vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2021-07-16 vvv
 #: valid: 20210222- vvv
@@ -660,6 +658,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: linksabbiegende Radfahrer (Neuköllnische Allee -> Grenzallee Richtung Osten) sollten die Fußgängeranforderung betätigen! (während der Sperrung der Grenzallee)
 	X 14344,7003
 	X 13762,7321
+#: note: gilt nicht auf dem Radweg im Zuge der Sonnenallee (SO -> NW)
 	X 14015,7631
 	X 14617,7243
 	X 13474,8060
@@ -1305,6 +1304,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8540,12420
 	X 7930,12912
 	X 7111,12743
+#: note: Anforderung für linksabbiegende Radfahrer (Frankfurter Allee -> Atzpodienstr.)
 	X 16413,11906
 	X 16368,11912
 	X 6757,13112
@@ -1395,11 +1395,11 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # REMOVED --- #: next_check_id: KARLMARXSTR-2018 --- #: XXX provisorische Ampel an der Briesestr. während der Bauarbeiten --- #: last_checked: 2020-02-27 --- #: check_frequency: 90d ---	X::inwork 12794,8103
 #: next_check_id: KARLMARXSTR-2018
 #: XXX provisorische Ampel an der Weichselstr. während der Bauarbeiten
-#: osm_watch: node id="7241153386" version="1"
-#: last_checked: 2021-11-17 (mapillary)
-#: check_frequency: 30d
+#: osm_watch: node id="7241153386" version="3"
+#: last_checked: 2021-12-13
+#: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-10-08
-	F::inwork 12330,8636
+	F::inwork 12318,8645
 # REMOVED (entfernt) --- #: next_check_id: KARLMARXSTR-2018 --- #: XXX provisorische Ampel an der Rollbergstr. während der Bauarbeiten --- laut osm mittlerweile entfernt --- #: osm_watch: node id="27554998" version="9" --- #: last_checked: 2020-09-29 --- #: next_check: 2020-10-20 ---	X::inwork 12714,8249
 	X 11154,14985
 	X 12025,14695
@@ -1409,7 +1409,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12901,14093
 	X 14709,12156
 #: XXX_prog nicht relevant für Radfahrer Richtung Osten oder beim Einbiegen ins oder Abbiegen aus dem Wohngebiet
-	X 16207,11937
+	X 16214,11935
 	X 6575,8469
 	X 5352,7428
 	X 8249,16741
@@ -1872,7 +1872,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10432 (sichere Querungsmöglichkeit gefordert)
 #: XXX Ampel ausgeschaltet, vielleicht dauerhaft (Lynar/Tegeler)
 #: osm_watch: node id="3777205512" version="4"
-#: last_checked: 2021-12-06 (daf)
+#: last_checked: 2021-12-13 (mapillary)
 #: check_frequency: 90d
 	X0 7259,14870
 #: note: Anforderungsampel für Radfahrer aus Richtung Osten Richtung Luisenstr. und für Radfahrer aus der Luisenstr.
@@ -2314,7 +2314,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 8867,4506
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
-#: last_checked: 2021-11-06
+#: last_checked: 2021-12-13
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
@@ -2993,7 +2993,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) ---
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2021-12-08
+#: last_checked: 2021-12-11
 #: check_frequency: 90d
 #: next_check: 2022-06-30
 	X::inwork 8732,14098
@@ -3117,7 +3117,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20221231 vvv
-#: last_checked: 2021-11-13 vvv
+#: last_checked: 2021-12-13 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
@@ -3156,7 +3156,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://twitter.com/VIZ_Berlin/status/1301038406156398593 (vermutlich keine Änderung bis Ende Oktober 2020)
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="6"
-#: last_checked: 2021-10-02 (mapillary)
+#: last_checked: 2021-12-13
 #: check_frequency: 60d
 	X::inwork 14174,7505
 # 
@@ -3198,7 +3198,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 24801,11261
 #: off: weekend (gesehen: Sa 2015-09-12 nachmittags)
 	F 9274,13963
-	X 9151,13941
+	X 9148,13944
 #: note: Anforderungsampel
 	F 10462,3765
 #: note: Anforderungsampel
@@ -3263,6 +3263,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 13708,17453
 	X 17681,7589
 	X 17211,7280
+#: note: gilt nicht auf dem Radweg in Fahrtrichtung NW->SO
 	X 16747,6813
 	B0 17424,15400
 #: note: Anforderungsampel quer zur Heidestr.
@@ -3305,7 +3306,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 5364,7330
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2021-11-29 (mapillary)
+#: last_checked: 2021-12-11
 #: check_frequency: 90d
 #: next_check: 2022-06-30
 	X::inwork 8336,14586
@@ -3316,13 +3317,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2021-11-29 (mapillary)
+#: last_checked: 2021-12-11
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
 # REMOVED (gibt's nicht mehr) --- #: next_check_id: CORONA-2020 --- #: by: https://www.rbb24.de/panorama/thema/corona/beitraege/2021/08/berlin-impfzentrum-erika-hess-eisstadion-arena-schliessen.html --- #: XXX vermutlich temporär für das Impfzentrum --- #: by: mapillary --- 
 #: XXX wann wird diese Ampel abgebaut?
-#: last_checked: 2021-11-29 (mapillary)
+#: last_checked: 2021-12-11
 #: check_frequency: 90d
 	F::inwork 8138,14786
 # 
@@ -3356,7 +3357,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: provisorische Ampel
 #: note: Anforderungsampel
 #: XXX Die Ampel Hermannstr./Thomasstr. wird vermutlich permanent gemacht, die nächste Ampel weiter nördlich verschwindet dafür.
-#: last_checked: 2021-10-23
+#: last_checked: 2021-12-13
 #: check_frequency: 90d
 	X::inwork 12185,7381
 # 
@@ -3573,7 +3574,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
 #: note: manchmal ausgeschaltet? (gesehen: So 2021-11-28 12:00)
-#: last_checked: 2021-11-28 vvv
+#: last_checked: 2021-12-13 vvv
 #: check_frequency: 60d vvv
 	X::inwork 14151,8967
 # REMOVED (abgebaut) ---	X::inwork 14363,8738
