@@ -10,9 +10,9 @@
 # 
 ### Friedrichshain ###
 # 
-#: XXX Bauarbeiten der Wasserbetriebe, möglicherweise bis April 2022
-#: last_checked: 2021-11-19
-#: check_frequency: 30d
+#: XXX Bauarbeiten der Wasserbetriebe, laut Schild bis April 2022
+#: last_checked: 2021-12-21
+#: check_frequency: 45d
 #: next_check: 2022-04-01
 Mühsamstr.: Fahrbahn im Kreuzungsbereich Thaerstr. gesperrt	q4::inwork 13844,12900 13818,12897 13838,12884
 # 
@@ -21,17 +21,17 @@ Mühsamstr.: Fahrbahn im Kreuzungsbereich Thaerstr. gesperrt	q4::inwork 13844,129
 #: XXX Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="272512103" version="9"
 #: osm_watch: way id="767674684" version="1"
-#: last_checked: 2021-11-18
+#: last_checked: 2021-12-22
 #: check_frequency: 120d
 #: next_check: 2025-01-01
 Erich-Steinfurth-Str.: Bauarbeiten, Fahrbahn nur für Baufahrzeuge	q3::inwork 12596,11696 12453,11790 12378,11806
 # 
 #: note: laut rbb bis 29.10.2021, laut Parkverbotsschilder bis 28.1.2022 vvv
 #: also_indoor: traffic (H(falsch),G(teilweise))
-#: last_checked: 2021-12-11 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2021-12-20 vvv
+#: check_frequency: 10d vvv
 #: next_check: 2022-01-28 vvv
-Jessnerstr.: Sperrung der Fahrbahn nördlich der Oderstr.	q3::inwork 14946,11697 14986,11760
+# REMOVED (offen) --- Jessnerstr.: Sperrung der Fahrbahn nördlich der Oderstr.	q3::inwork 14946,11697 14986,11760
 Oderstr.: Einbahnstraßenregelung, offen Richtung Osten	q3::inwork; 15043,11637 14946,11697
 #: next_check ^^^
 #: check_frequency ^^^
@@ -197,10 +197,12 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 ### Mitte ###
 # 
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet? vvv
-#: last_checked: 2021-11-28 vvv
-Sebastianstr.: Bauarbeiten, Fahrbahn an der Alexandrinenstr. gesperrt	q4::inwork 10826,11251 10818,11269
+#: last_checked: 2021-12-23 vvv
+#: check_frequency: 14d vvv
+# REMOVED (hier nicht mehr) --- Sebastianstr.: Bauarbeiten, Fahrbahn an der Alexandrinenstr. gesperrt	q4::inwork 10826,11251 10818,11269
 #: note: hier nur ein kurzer Abschnitt betroffen
 Sebastianstr.: Bauarbeiten, Fahrbahn an der Alexandrinenstr. gesperrt	q1::inwork 10818,11269 10644,11569
+#: check_frequency ^^^
 #: last_checked ^^^
 #: add_fragezeichen ^^^
 # 
@@ -245,8 +247,8 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr.	q2::inwork 82
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic vvv
-#: last_checked: 2021-12-04 vvv
-Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q2::inwork; 8775,12457 8904,12489
+#: last_checked: 2021-12-23 vvv
+Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8775,12457 8904,12489
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
 Mittelstr.: Bauarbeiten, Fahrbahn teilweise gesperrt	q3::inwork 9011,12423 9131,12438
@@ -256,7 +258,7 @@ Mittelstr.: Bauarbeiten, Fahrbahn teilweise gesperrt	q3::inwork 9011,12423 9131,
 # 
 #: next_check_id: FRIEDRICH-2020
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/polizeibilanz-fuer-radler-auf-der-friedrichstrasse_a294541
-#: last_checked: 2021-11-09
+#: last_checked: 2021-12-23
 #: next_check: 2022-04-01
 # REMOVED --- #: valid: 20200821-20211031
 Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
@@ -272,7 +274,7 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/volt-berlin-baufeld-e3a.312/page-8#post-14027
 #: XXX Bebauungsplanentwurf I-43a "Südliche Alexanderstraße": entsteht hier eine Planstraße?
 #: XXX mittlerweile existiert hier schon eine teilweise asphaltierte Straße, Fahrbahn ist noch abgesperrt
-#: last_checked: 2021-11-29
+#: last_checked: 2021-12-22
 #: check_frequency: 60d
 (zwischen VoltAir und The Student Hotel): Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwork 11240,12368 11344,12410
 # 
@@ -337,7 +339,7 @@ Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 96
 #: source_id: 2147343824 (bis 30.6.2021)
 #: source_id: viz2021:13.379936,52.514077,04.03.2019,08:00 (bis 30.6.2021)
 #: add_fragezeichen: Sind die Bauarbeiten hier beendet?
-#: last_checked: 2021-11-13 (architektur-urbanistik)
+#: last_checked: 2021-12-23
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2021-06-30
 # REMOVED --- #: valid: 20191218-20210531
@@ -391,7 +393,7 @@ Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahr
 #: by: https://blog.sbb.berlin/ab-1-februar-2021-haus-unter-den-linden-fuer-benutzungsbetrieb-geoeffnet/?date=20201226 (Baustelleneinrichtung in der Charlottenstr. wird im Frühjahr 2021 abgebaut, bis Sommer 2021 wird die Straßenseite wiederhergestellt; Sperrung in der Universitätsstraße womöglich bis Mitte 2022)
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
-#: last_checked: 2021-12-04 vvv
+#: last_checked: 2021-12-23 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="9"
@@ -588,10 +590,13 @@ Matthäikirchplatz: wegen Bauarbeiten am Museum der Moderne mögliche Behinderunge
 #: next_check_id: FASANEN-2021
 #: source_id: 2147346973 (Fernwärmebaustelle in Höhe Kantstr., bis März 2022)
 #: source_id: 2147346972 (- " -)
-#: source_id: viz2021:13.329043,52.505488,12.03.2021,09:00 (bis 5.3.2022)
+#: source_id: viz2021:13.329043,52.505488,12.03.2021,09:00 (bis 5.3.2022) (inaktiv)
+#: source_id: viz2021:13.32784,52.505061,22.12.2021,06:00 (bis 5.3.2022)
+#: XXX evtl. sind die Einschränkungen auf der Nordseite aufgehoben?
 #: last_checked: 2021-10-19
 #: check_frequency: 90d
-#: next_check: 2022-03-05
+# REMOVED --- #: next_check: 2022-03-05
+#: next_check: 2021-12-22
 #: valid: -20220305
 Fasanenstr.: Engstelle in Höhe Kantstr., Radfahrer werden über den Bürgersteig geführt	q3::inwork 5241,11060 5236,10994 5230,10919
 # 
@@ -716,7 +721,7 @@ Boddinstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12
 #: XXX laut rbb (am 31.8.2021 entfernt) und Halteverbotsschildern bis 31.08.2021
 #: also_indoor: traffic (ex-H)
 #: priority: #B
-#: last_checked: 2021-12-07
+#: last_checked: 2021-12-18
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2021-08-31
 # REMOVED --- #: valid: -20210831
@@ -755,7 +760,7 @@ Wiesenweg: Sperrung unter der Brücke, Fahrbahn ist gesperrt, auf Gehweg ausweich
 #: add_fragezeichen Bis wann gibt es diese Einschränkung?
 #: source_id: viz2021:13.53378,52.524857,13.07.2021,07:00 (Leitungsarbeiten, bis Ende 2024)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9657 (hier sogar bis Ende 2026)
-#: last_checked: 2021-09-25
+#: last_checked: 2021-12-21 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2024-12-31
 #: valid: -20241231
@@ -823,14 +828,15 @@ Moltkestraßenbrücke: Fahrbahn gesperrt	q4::inwork 3867,4537 3898,4490
 # 
 #: next_check_id: HOSEMANN-2019
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/wasserbetriebe-arbeiten-an-regenueberlaufanlage_a285559 (fertig bis Ende 2021)
+#: XXX laut Schild bis Dezember 2022
 #: source_id: 2147344946 (bis 3. April 2020, Gesamtbaumaßnahme bis Ende 2021)
 #: osm_watch: way id="885619857" version="5"
 #: osm_watch: way id="885619858" version="4"
 #: note: laut rbbtext bis 31.12.2020
 #: priority: #B
-#: last_checked: 2021-11-10 vvv
-#: check_frequency: 45d vvv
-#: next_check: 2021-12-31 vvv
+#: last_checked: 2021-12-21 vvv
+#: check_frequency: 60d vvv
+#: next_check: 2022-12-31 vvv
 # REMOVED --- #: valid: -20200731 vvv
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4+::inwork 12556,15518 12605,15491 12621,15482
@@ -1268,8 +1274,9 @@ St.-Wolfgang-Str.: Fußgänger, Cafés	q3 10219,12701 10285,12744 10360,12793
 Spreegasse: Fußgänger, Cafés	q3 10249,12658 10309,12700 10387,12760
 Heiligegeistgasse: Fußgänger, Cafés, sehr eng	q4 10285,12744 10309,12700 10344,12641 10352,12627
 # REMOVED --- #: XXX_prog: sollte BS werden (1x an der Gormannstr.) --- zur Gormannstr.: Bordstein	q3 10350,13376 10372,13436
-#: note: Flohmarkt ist in temp_blockings erwähnt:
-Am Zeughaus: Fußgänger	q2 9919,12613 9953,12533 9984,12426
+#: note: Flohmarkt ist in temp_blockings erwähnt
+#: note: früher "q2"
+Am Zeughaus: Fußgängerzone	q3 9919,12613 9953,12533 9984,12426
 # REMOVED --- #: XXX nach den Bauarbeiten wieder den alten q2-Eintrag aktivieren --- #: last_checked: 2015-06-10 --- Am Zeughaus: Fußgänger, Bauarbeiten, Engstelle	q4::inwork 9953,12533 9984,12426
 # 
 Steinmetzstr.: Fußgängerzone, Radfahren erlaubt	q1 7625,9771 7657,9942 7698,10147
@@ -1882,7 +1889,8 @@ Nordhafen: Fußgänger	q1 -2477,16351 -2510,16357 -2632,16347 -2779,16330 -2980,16
 Seidenbienenweg: sehr eng	q4 31914,2767 31909,2802 31884,2841
 (entlang des Tränkegrabens): Fußgänger, Radfahren erlaubt	q2+ 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17154,10158 17157,10173 17143,10186 17144,10297 17163,10374 17239,10632 17249,10651 17255,10662 17249,10702 17310,10714 17415,10694 17527,10640 17625,10615 17705,10621 17847,10629 17870,10619 17897,10607 17999,10584 18034,10567 18059,10556 18150,10543
 Hortensienplatz: einige Fußgänger, Bordsteine	q3 4156,4784 4121,4841 4116,4850
-(Lustgarten entlang des Spreekanals): Fußgänger	q2 10063,12438 9956,12617 9948,12631
+#: note: früher q2
+(Lustgarten entlang des Spreekanals): Fußgänger	q3 10063,12438 9956,12617 9948,12631
 Blaurackenweg: enge Straße, spielende Kinder	q1 17613,7989 17647,8071 17532,8125
 # REMOVED (echte Einbahnstraße) --- Adolf-Scheidt-Platz: enge Straße, Gegenverkehr	q2; 8731,8050 8765,8050 8783,8020 8769,7994 8731,7990
 Am Britzer Garten - Straße 229: Fußgänger	q1 11130,3838 11103,3960
@@ -2357,7 +2365,7 @@ Spreeufer: unter der Rohrdammbrücke sehr eng	q3 1123,13523 1186,13529
 (Uranusstr. - Siriusstr.): Schulgelände, teilweise ist das Radfahren explizit verboten	q4 18827,-537 18906,-316
 (Widosteig - Bohnsdorfer Weg): Pfad	q2 19934,1102 19955,1158 19940,1265
 (Parkweg im Business Park Berlin): Fußgänger	q1 20799,-1272 20789,-1275 20624,-1310 20540,-1346 20396,-1370 20388,-1373 20373,-1375 20297,-1377 20191,-1425 20046,-1449 20032,-1451 20018,-1456 19979,-1469 19864,-1480 19773,-1520 19727,-1526 19714,-1529 19706,-1528 19618,-1531
-Vergissmeinnichtweg: Bodenschwellen	q1 21582,185 21608,85
+Vergissmeinnichtweg: Bodenschwellen	q1 21582,185 21596,132 21608,85
 #: XXX_prog BS zur Thaerstr.
 (Bersarinplatz - Thaerstr.): Fußgänger, Bordstein	q2 13747,12642 13761,12690
 #: XXX_prog BS zur Thaerstr.
@@ -2886,7 +2894,7 @@ Engelwurzweg: eng	q2 24275,6156 24306,6210 24368,6268 24424,6296 24473,6304
 #: XXX wird das Radfahren hier erlaubt werden?
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5388
 #: osm_watch: way id="26995453" version="9"
-#: last_checked: 2021-10-10
+#: last_checked: 2021-12-17
 #: check_frequency: 120d
 # REMOVED --- #: next_check: 2021-09-02
 (Uferweg an der Spree): Radfahren verboten	q4 18695,5453 18634,5484 18560,5539 18506,5596 18430,5719 18413,5799 18400,5841 18334,5900 18199,5935
@@ -3803,6 +3811,7 @@ Hans-Baluschek-Park: enge Rampe, Fußgänger	q2 7252,6080 7278,6101
 #: note: Radfahrer sollen absteigen
 (provisorischer Weg zum Golda-Meir-Steg): Fußgänger	q3 7818,14185 7861,14133
 Golda-Meir-Steg: Fußgänger	q2 7861,14133 7899,14157 7962,14198
+(Wilhelmine-Duncker-Str. - Grünzug am Falkenberg): schmal, einige Fußgänger	q2 21440,300 21435,323
 # 
 ######################### User Contributions #################################
 # 
@@ -4200,7 +4209,7 @@ Bautzener Platz: Fußgänger, Bordsteine	q3 8182,9240 8100,9240
 Bautzener Platz: Fufgänger, Bordsteine	q3 8102,9262 8183,9260
 #: XXX_prog ^^^
 (Danziger Str. - Lilli-Henoch-Str.): Fußgänger	q2 12123,14643 12174,14739 12183,14757 12193,14775 12212,14781 12252,14860 12236,14870 12314,15008
-#: note: gemeinsamer Rad- und Gehweg
+#: note: gemeinsamer Rad- und Gehweg (am westlichen Ende fehlt das Schild, ansonsten ausgeschildert)
 (Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 11877,15366 11937,15349 12003,15311 12103,15218 12208,15108 12284,15068 12314,15008
 (Prenzlauer Allee - Lilly-Henoch-Str.): Fußgänger	q2 11860,15309 11919,15314 11937,15349
 (Verlängerte Diesterwegstr.): Fußgänger	q2 12056,15159 12082,15206 12103,15218

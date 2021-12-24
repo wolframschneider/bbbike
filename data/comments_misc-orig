@@ -943,7 +943,7 @@ Ausgeschildert zum Heckerdamm 181-213 und zur Siedlung Juliusruh	CP2; 3765,14746
 Ausgeschildert als Wohlrabedamm 24-30	CP2; 1216,13978 1252,14007
 Am Igelgrund: Privatstraﬂe	CS 9068,20446 9126,20515
 Sterndamm: Richtung Groﬂ-Berliner Damm	CP2; 17648,5338 17705,5223
-Vergissmeinnichtweg: nur f¸r Berechtigte	CS 21582,185 21608,85
+Vergissmeinnichtweg: nur f¸r Berechtigte	CS 21582,185 21596,132 21608,85
 Heidelbeerweg: nur f¸r Berechtigte	CS 21669,99 21645,200
 (Schmiedegasse - Pappelallee): Privatstraﬂe	CS -13581,-10 -13558,88
 Kutscherweg: Privatstraﬂe	CS -13620,-131 -13700,-106 -13775,-85
@@ -1188,11 +1188,11 @@ Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3068,21150 3024,21286
 Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 # 
 #: osm_watch: way id="406201948" version="9"
-#: osm_watch: way id="25367620" version="19"
+#: osm_watch: way id="25367620" version="20"
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788&d=20191216 (Benennung nach Hans Otto Obrikat vorgeschlagen)
 #: XXX oder wird statt Wasserstr. und Uferstr. die Straﬂe nach Hans Otto Obrikat benannt? (erster Vorschlag: "Else-Schierhorn-Str.")
-#: last_checked: 2021-12-15
+#: last_checked: 2021-12-17
 #: check_frequency: 60d
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
@@ -1333,7 +1333,7 @@ Bochumer Platz: als Bundesratufer ausgeschildert	CP2; 5914,12845 5938,12848
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_53_8205_8368_online.pdf (Widmung)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_06_0673_0824_online.pdf (Eingruppierung in die Straﬂenreinigungsverzeichnisse)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_54_4961_5184_online.pdf (Eingruppierung in die Straﬂenreinigungsverzeichnisse)
-#: last_checked: 2021-10-02 vvv
+#: last_checked: 2021-12-20 (daf, teilweise) vvv
 #: check_frequency: 90d vvv
 An der Dahme: nicht ausgeschildert	CS 22270,2549 22358,2460
 # REMOVED --- Gaffelsteig: nicht ausgeschildert	CS 22287,2431 22221,2520
@@ -1489,7 +1489,8 @@ ausgeschildert als "zu den H‰usern Seefelder Str. 15-49"	CP2; 17383,16197 17362,
 # 
 zum Terminal A	CP2; 2853,16293 2812,16348
 # 
-am Anfang als Hauptweg 15 (blau-weiﬂe Markierung) ausgeschildert	CP2; 19924,4252 19901,4334
+am Anfang als Wanderweg 15 (weiﬂ-blau-weiﬂe Markierung) ausgeschildert	CP2; 19924,4252 19901,4334
+als Wanderweg 15 (weiﬂ-blau-weiﬂe Markierung) ausgeschildert	CP2; 19864,4607 19890,4505
 # 
 # REMOVED (mittlerweile wurden die Straﬂenschilder ausgewechselt) --- #: XXX bleibt diese Ausschilderung? Immerhin heiﬂt der Platz nun offiziell "Scharounplatz" --- #: last_checked: 2021-06-13 --- #: check_frequency: 60d --- ausgeschildert als "Scharounstr."	CP2; 7943,11431 8083,11381
 # 
@@ -1602,6 +1603,9 @@ ausgeschildert "Nachtigalplatz"	CP2; 5581,16708 5639,16768
 ausgeschildert "Danziger Str. 101-109"	CP2; 12123,14643 12174,14739
 # 
 Privatstraﬂe	CS 21193,11330 21214,11331
+# 
+blaues Straﬂenschild "Ewaldstr."	CP2; 20685,52 20561,17
+blaues Straﬂenschild "Klettenberger Str."	CP2; 20555,15 20561,17
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straﬂen)

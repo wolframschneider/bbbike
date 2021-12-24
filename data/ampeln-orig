@@ -8,7 +8,7 @@
 #: temporary vvv
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2021-12-15
+#: last_checked: 2021-12-17
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -35,6 +35,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # 
 #: next_check_id: HERMANNHESSESTR-2019
 #: XXX wird die temporäre Ampel durch eine permanente ersetzt?
+#: osm_watch: note 2356634 3
 #: last_checked: 2021-10-08
 #: check_frequency: 60d
 	X::inwork 9868,19023
@@ -79,7 +80,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2021-11-09
+#: last_checked: 2021-12-23
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -157,6 +158,10 @@ Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 	X::inwork 14805,10518
 # 
 #: temporary ^^^
+# 
+#: XXX_prog Gilt nicht für Radfahrer auf der Nebenstraße Richtung Osten
+#: note: Anforderungsampel
+	F 19757,5169
 # 
 ################################################################################
 # Ampeln und Bahnübergänge in Berlin
@@ -737,6 +742,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12317,14535
 	X 13330,13468
 	X 14006,13761
+#: XXX_prog gilt nur für Radfahrer Richtung NO
+#: note: Anforderungsampel
+	F 13906,13722
 	X 9426,3797
 	X 9455,3671
 #: XXX_prog: für rechtsabbiegende Radfahrer auf dem Radweg aus der Rixdorfer Str. nach Alt-Mariendorf nicht relevant (Radweg wird vor der Ampel nach rechts geführt)
@@ -2224,7 +2232,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 # 
 #: next_check_id: FRIEDRICH-2020
 #: note: vorhandene Ampel ist dauerhaft abgeschaltet
-#: last_checked: 2021-11-09
+#: last_checked: 2021-12-23
 #: next_check: 2022-04-01
 # REMOVED --- #: valid: !20200821-20211031
 	X0 9418,11804
@@ -2314,12 +2322,12 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 8867,4506
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
-#: last_checked: 2021-12-13
+#: last_checked: 2021-12-17
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
-#: last_checked: 2021-11-23
+#: last_checked: 2021-12-17
 #: check_frequency: 120d
 	X::inwork 14382,9299
 Industriebahn	B0 -2410,13746
@@ -2332,6 +2340,7 @@ Industriebahn	B0 -2410,13746
 #: note: kann ausgeschaltet sein (gesehen: Di, 2016-08-23, gegen 18:45)
 	F 11285,14515
 # REMOVED (Baustellenampel, existiert nicht mehr, 2009-07) ---	X 10635,13207
+#: XXX_prog Gilt nicht für Radfahrer auf dem Radweg Richtung Süden
 	F 11909,15477
 	X 7880,13315
 # REMOVED (zurzeit ausgeschaltet) ---	X 8019,13650
@@ -2973,7 +2982,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2021-12-04 vvv
+#: last_checked: 2021-12-23 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3416,10 +3425,17 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 18374,4307
 # REMOVED (ausgeschaltet) --- #: next_check_id: STERNDAMM-2020 --- 
 #: XXX wie lange bleibt die provisorische Ampel?
+#: osm_watch: node id="9221296478" version="1"
 #: note: Anforderungsampel
-#: last_checked: 2021-11-26
+#: last_checked: 2021-12-17
 #: check_frequency: 90d
 	F::inwork 17695,5394
+#: XXX wie lange bleibt die provisorische Ampel?
+#: osm_watch: node id="9221296482" version="2"
+#: note: Anforderungsampel
+#: last_checked: 2021-12-17
+#: check_frequency: 90d
+	F::inwork 17747,5452
 # 
 #: note: die Relation Wilhelm-Hoff-Str. ist nicht direkt signalisiert
 	X 18828,3196
@@ -3427,6 +3443,10 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9648 (noch provisorisch, soll noch 2021 dauerhaft gemacht werden)
 #: note: Anforderungsampel
 	F 3450,25617
+#: note: Anforderungsampel
+	X 20895,39
+#: note: Anforderungsampel
+	X 20671,-205
 ################################################################################
 #: note: Potsdam vvv
 	X -17127,-554

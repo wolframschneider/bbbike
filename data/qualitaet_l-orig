@@ -39,6 +39,8 @@ Neuendorf - Sandkrug: Asphalt	Q0 43004,53843 42735,53816 42570,53776 42225,53915
 Heckelberg - Beerbaum: etwas welliger Asphalt	Q0- 39402,37410 39156,37578 38986,37512 38171,37238 37672,36908 36605,36450 36523,36465 36359,36493
 #: source_id: LS/721-F/21/197 (Ausbesserungsarbeiten, bis 3.12.2021)
 #: add_fragezeichen: Ist die Fahrbahnqualität nach den Bauarbeiten besser geworden?
+#: osm_watch: way id="807604094" version="2"
+#: osm_watch: way id="220217811" version="7"
 #: next_check: 2021-12-03
 Ortsdurchfahrt Beerbaum: schlechtes Kopfsteinpflaster	Q3 36000,36534 36215,36497 36307,36503 36359,36493
 Beerbaum - Gratze: etwas welliger Asphalt	Q0- 36000,36534 34145,36854
@@ -1207,7 +1209,7 @@ Bietikow - Grünow: asphaltiert	Q0 45051,96712 45317,96946 45351,96982 45410,9709
 #: XXX wird die Qualität nach den Instandsetzungsarbeiten besser sein? vvv
 #: add_fragezeichen: Wurden die Betonplattenabschnitte durch asphaltierte Abschnitte ersetzt? vvv
 #: source_id: 217300506 vvv
-#: next_check: 2021-11-30 vvv
+#: next_check: 2021-12-24 vvv
 Bietikow - Grünow: mäßige Betonplatten	Q2 45868,100193 45847,100277
 Bietikow - Grünow: asphaltiert	Q0 45847,100277 45806,100487 45648,100789
 Bietikow - Grünow: mäßige Betonplatten	Q2 45648,100789 45543,101043
@@ -5936,7 +5938,7 @@ Groß Glienicker Heide: Kleinsteinpflaster	Q2+ -8661,8457 -8640,8453 -8560,8438 -
 #: next_check_id: BUSINESSPARKBERLIN-2020
 #: osm_watch: way id="193392074" version="4"
 #: XXX wird die Straße befestigt?
-#: last_checked: 2021-05-29
+#: last_checked: 2021-12-17
 #: check_frequency: 180d
 Flughafen Berlin-Brandenburg - Business Park Berlin: unbefestigte Straße, etwas Schotter	Q2+ 19731,-1903 20125,-1739 20412,-1750
 #: next_check_id: BUSINESSPARKBERLIN-2020
@@ -5945,7 +5947,7 @@ Flughafen Berlin-Brandenburg - Business Park Berlin: unbefestigte Straße, etwas 
 #: osm_watch: node id="8243873919" version="1"
 #: osm_watch: node id="2038971392" version="2"
 #: XXX wird hier ein offizieller Durchgang entstehen?
-#: last_checked: 2021-05-29
+#: last_checked: 2021-12-17
 #: check_frequency: 180d
 Flughafen Berlin-Brandenburg - Business Park Berlin: unbefestigter Pfad	Q2 20412,-1750 20416,-1721
 Am Luch (Schulzendorf): schlechtes Kopfsteinpflaster	Q3 24394,-3357 24475,-3093
