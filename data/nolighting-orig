@@ -68,12 +68,12 @@ Uferweg am Plänterwald	NL 15959,9117 15845,9031 15797,9002 15778,8990
 (Treptower Park)	NL 15181,8967 15245,8916
 (Treptower Park)	NL 14705,9578 14791,9537 14823,9523 14837,9517
 (Treptower Park)	NL 14443,9731 14371,9726 14318,9688
-(Treptower Park)	NL 15190,9027 15214,9090 15185,9189
+(Treptower Park)	NL 15190,9027 15214,9090 15183,9186
 (Treptower Park)	NL 14588,9473 14556,9581
 (Treptower Park)	NL 14475,9199 14531,9244 14655,9311 14673,9353 14669,9389 14635,9441
 (Treptower Park, mittlerer Weg)	NL 15184,9373 15249,9337
 (Treptower Park)	NL 14719,9419 14774,9437 14809,9466
-(Treptower Park)	NL 14889,9381 15003,9337 15185,9189 15275,9140 15359,9131 15407,9151
+(Treptower Park)	NL 14889,9381 15003,9337 15163,9200 15183,9186 15213,9166 15275,9140 15359,9131 15407,9151
 (Treptower Park)	NL 14705,9034 14644,9130 14628,9158 14612,9190 14531,9244
 (Treptower Park)	NL 14705,9034 14855,9046 14947,8993 14980,8940
 (Wasserweg - Treptower Park)	NL 15680,8914 15617,8924
@@ -149,7 +149,7 @@ Wuhletal-Wanderweg	NL 22124,13606 22082,13542 22060,13446 22058,13366 22067,1333
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4350&options=4
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4507 (Antrag auf Umwidmung als Straßenland, aber seit Mai 2013 keine Bewegung bei der Drucksache)
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5749 (neue Drucksache)
-#: last_checked: 2021-09-17
+#: last_checked: 2021-12-30
 #: check_frequency: 150d
 (Wuhlewanderweg, östliches Ufer)	NL 22204,6016 22162,5919 22122,5884 22097,5879 22084,5877
 (Wuhlewanderweg, östliches Ufer)	NL 22084,5877 22070,5876 21846,5856 21744,5804 21618,5699 21602,5685 21507,5620

@@ -232,10 +232,10 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: XXX erstmal wird eine Behelfsbrücke erstellt (westlich); die neue Brücke wird Platz für eine Radwegunterführung haben
 #: source_id: 2147345790 (nicht mehr aktiv)
 #: source_id: 2147346453 (Leitungsbauarbeiten, bis 16.10.2020)
-#: last_checked: 2021-11-29 (osm) vvv
+#: last_checked: 2022-01-03 (osm) vvv
 #: check_frequency: 360d vvv
 #: next_check: 2023-12-01 vvv
-#: osm_watch: way id="4568174" version="29"
+#: osm_watch: way id="4568174" version="30"
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
 # REMOVED --- #: osm_watch: way id="883834105" version="16"
 #: osm_watch: way id="883834106" version="18"
@@ -303,6 +303,7 @@ Rathausbrücke	Br 10357,12356 10416,12394
 # 
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/35-strassenbruecken-muessen-dringend-saniert-werden-doch-es-fehlt-an-fachkraeften_a331286 (kein Termin)
 #: XXX Mühlendammbrücke: geplanter Neubau --- wird es zu Einschränkungen für den Radverkehr kommen?
+#: last_checked: 2022-01-03
 #: next_check: 2025-01-01
 Mühlendammbrücke	Br 10574,12131 10625,12206
 # 

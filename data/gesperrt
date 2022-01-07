@@ -522,7 +522,7 @@ Torstr. (Richtungsfahrbahn)	1::igndisp 10898,13632 11117,13521 11160,13492
 Torstr. (Straßenbahntrasse)	3nocross::ignrte 11160,13492 11117,13521 10898,13632
 Bundesplatz (Richtungsfahrbahn)	1 5346,7860 5331,8012 5304,8088 5304,8144 5354,8236
 Bundesplatz (Richtungsfahrbahn)	1 5354,8236 5363,8170 5376,8104 5357,8013 5350,7915 5346,7860
-Grunerstr. (Richtungsfahrbahn)	1::igndisp 11105,12764 11057,12715 10954,12635 10878,12560 10804,12461
+Grunerstr. (Richtungsfahrbahn)	1::igndisp 11105,12764 11057,12715 10954,12635 10887,12570 10804,12461
 Grunerstr. (Richtungsfahrbahn)	1::igndisp 10804,12461 10868,12572 10953,12638 11055,12717 11105,12764
 Grunerstr. (Mittelstreifen)	3nocross::ignrte 11105,12764 11055,12717 10953,12638 10868,12572 10804,12461
 Dircksenstr. (Mittelstreifen/Straßentunnel)	2::igndisp 11057,12715 11055,12717
@@ -897,6 +897,7 @@ Mellenseestr. [Wohngebiet]	1 17920,9698 17868,9823 17838,9956
 Mühsamstr.	1 13818,12897 13844,12900
 Lilli-Henoch-Str.	1s 12357,15020 12388,14926
 (Weydemeyerstr.): durch Tore abgesperrt	2 11933,12701 11971,12785
+Straßenbahntrasse, Mittelstreifen	3nocross::ignrte 17400,17790 17482,17844 17601,17922 17675,17971
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -987,6 +988,7 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14191,-818 -14199,-707 -14205,-644
 Bahnhofstr.	1s -8417,-2862 -8410,-2884
 Bienenwinkel	1 -13335,1927 -13333,1957 -13227,1962 -13228,1927
+Finkenweg (Schulzendorf)	1 23985,-3836 24124,-4044
 Fließsteig (Schulzendorf)	1 24314,-3438 24394,-3534 24533,-3746
 Prieroser Dorfaue	1s 35663,-19764 35627,-19777 35631,-19861
 Am Markt (Storkow)	1 46878,-16038 46905,-16058 46823,-16170
@@ -2115,7 +2117,8 @@ Brook-Taylor-Str. -> Rudower Chaussee: Straßenbahntrasse	3::igndisp 19215,2906 1
 Straßenbahntrasse	3nocross::ignrte 19574,3186 19598,3212 19728,3351
 Karl-Otto-Reinsch-Str. -> Rudower Chaussee: Straßenbahntrasse	3::igndisp 19524,3286 19598,3212 19728,3351
 Mittelstreifen mit Geländer	3nocross::ignrte 6935,8208 7001,8161 7073,8081
-Torgauer Str. -> Sachsendamm: Mittelstreifen mit Geländer	3::igndisp 7158,8208 7001,8161 7073,8081
+Sachsendamm -> Torgauer Str.: Mittelstreifen mit Geländer	3::igndisp 6935,8208 7001,8161 7014,8165
+Torgauer Str. -> Sachsendamm: Mittelstreifen mit Geländer	3::igndisp 7014,8165 7001,8161 7073,8081
 Mittelstreifen	3nocross::ignrte 11963,11813 11916,11846 11764,12001
 Mittelstreifen	3nocross::ignrte 9334,9670 9387,9804 9444,9919
 Mehringdamm -> Baruther Str.: Mittelstreifen	3::igndisp 9444,9919 9387,9804 9588,9827
@@ -3170,6 +3173,8 @@ Drängelgitter	BNP:3:-32:trailer=10 18414,1380
 Drängelgitter	BNP:3:-32:trailer=10 18232,1669
 Drängelgitter	BNP:3:-147:trailer=10 20560,23
 Drängelgitter	BNP:3:-106:trailer=10 20675,56
+Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen	1s:inwork 8266,14346 8442,14456
+(Planstraße C): Einbahnstraßenregelung	1s:inwork 12848,11093 12926,11224
 (Verlängerung der Siegfriedstr.): während der Hochbauarbeiten gesperrt	2::inwork 11664,6796 11488,6781
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 Tegeler Brücke: wird neu gebaut	2::inwork -261,15858 -252,15903 -242,15982 -236,16043 -226,16086
@@ -3184,8 +3189,6 @@ Tasmanienweg: durch Bauzäune abgesperrt	2::inwork -2747,19074 -2647,19070
 Hebammensteigbrücke	2::inwork 13168,21706 13046,21734
 Hönower Str.: temporäre Einbahnstraße	1s:inwork 18735,9421 18765,9426 18846,9532
 Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, komplett gesperrt	2::inwork -196,16060 -203,16064 -205,16086 -224,16095 -265,16111
-Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, teilweise lange Umwege über die Gehwege möglich	2::inwork 16227,12280 16159,12301 16056,12317
-Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, teilweise lange Umwege über die Gehwege möglich	2::inwork 16144,12388 16159,12301 16158,12191
 Straße 77: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 15320,12375 15408,12394
 (Zufahrt am NKZ): Fußgänger, unübersichtlich, Bauarbeiten, Gerüst, kaum ein Durchkommen	2::inwork 11344,10507 11392,10520 11411,10515
 Straße des 17. Juni: Radweg gesperrt	1::igndisp 6164,11947 5900,11913
@@ -3222,11 +3225,9 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:inwork 9429,12728 94
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
-Carl-Spindler-Str.: durch Bauzäune abgesperrt, mittlerweile ist eine Durchfahrt nicht mehr möglich	2::inwork 21442,5414 21474,5388
-Carl-Spindler-Str.: Hochbauarbeiten, Fahrbahn kann unpassierbar sein	2::inwork 21379,5163 21413,5180 21547,5245 21514,5310 21483,5374 21474,5388
-Carl-Spindler-Str.: kann durch Bauzäune abgesperrt sein	2::inwork 21346,5165 21379,5163
+Carl-Spindler-Str.: Hochbauarbeiten, Bauzäune, Durchfahrt nicht möglich	2::inwork 21346,5165 21379,5163 21413,5180 21547,5245 21514,5310 21483,5374 21474,5388 21442,5414
 Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21386,5251 21355,5254
-Wäscherinnenweg: teilweise gesperrt	2::inwork 21444,5112 21358,5072
+Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285 10675,12280
@@ -3246,7 +3247,6 @@ Taubenstr.: Bauarbeiten, Einbahnstraße	1s:inwork 9207,11880 9138,11872
 Mauerstr.: Bauarbeiten, Einbahnstraße	1s:inwork 9138,11872 9171,11777
 Uferweg zum Speicher: noch keine Durchfahrt möglich	2::inwork -12721,-2082 -12754,-2154
 am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 16436,8687
-Neue Nationalgalerie: Bauarbeiten, Parkplatz gesperrt	2::inwork 7874,11293 7828,11133
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5643,12253
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5574,12237 5535,12206
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
@@ -3258,7 +3258,6 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, voraussichtlich bis Ende 2022	2:inwork 8106,13130 8102,13304 8098,13419
 B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich des alten Flughafens	2:inwork 18578,-1538 18688,-1498 18781,-1533 18853,-1656 18866,-1674
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
-Mühlensteg (Tegeler Hafen): Weg gesperrt	2 1691,20638 1697,20623 1721,20603
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10102,12384 10175,12435
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
@@ -3837,4 +3836,5 @@ Bundesallee/Spichernplatz, Radweg bis Nachodstr.	1::igndisp 5487,9864 5491,9935
 Buschkrugallee, linker Gehweg ab Fußgängerampel bis zur Bürgerstr.	1::igndisp 13283,6354 13316,6320
 Otto-Suhr-Allee, linker Gehweg bis zur Fußgängerfurt	1::igndisp 4653,11896 4608,11935
 Jaczostr./Heerstr. - Südpark: linker Gehweg	1::igndisp -4029,11803 -4078,11800
-Clayallee, linker Gehweg	1::igndisp 1297,4311 1310,4335
+Clayallee: linker Gehweg	1::igndisp 1297,4311 1310,4335
+Sachsendamm: linker Gehweg	1::igndisp 7014,8165 6935,8208

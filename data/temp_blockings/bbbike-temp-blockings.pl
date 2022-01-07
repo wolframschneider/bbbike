@@ -22529,7 +22529,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (beendet) --- #: XXX bis wann gehen die Bauarbeiten? --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4579 (eventuell Einschränkungen bis 2018?) --- #: last_checked: 2013-10-16 --- #: check_frequency: 30d --- #: priority: #A
-	q4::inwork 7001,8161 7158,8208 7225,8219 7250,8223
+	q4::inwork 7001,8161 7014,8165 7158,8208 7225,8219 7250,8223
 EOF
      },
      { from  => 1379328680, # 2013-09-16 12:51
@@ -28143,7 +28143,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2021-12-23
+#: last_checked: 2022-01-03
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -30474,17 +30474,17 @@ EOF
      },
      { from  => undef, # 
        until => undef, #
-       text  => 'Voltairestr.: Fahrbahn kann wegen Bauarbeiten gesperrt sein',
+       text  => 'Voltairestr.: Einbahnstraße wegen Bauarbeiten, offen Richtung Osten',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: VOLTAIRE-2019
-#: osm_watch: way id="194962398" version="13"
+#: osm_watch: way id="194962398" version="14"
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-12-22
+#: last_checked: 2022-01-03
 #: check_frequency: 14d
-	2::inwork 11329,12497 11209,12430
+	q4::inwork; 11329,12497 11209,12430
 EOF
      },
      { from  => 1574189084, # 2019-11-19 19:44
@@ -30988,7 +30988,7 @@ EOF
        type  => 'handicap',
        source_id => '2147343596',
        data  => <<EOF,
-#: next_check_id: BOHNSDORFERKREISEL-2017
+# REMOVED (inaktiv) --- #: next_check_id: BOHNSDORFERKREISEL-2017
 	q3::inwork 22120,886 22062,773
 EOF
      },
@@ -31070,7 +31070,7 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="5"
-#: last_checked: 2021-12-28 vvv
+#: last_checked: 2022-01-02 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31652,6 +31652,7 @@ EOF
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
+#: osm_watch: way id="759405498" version="2"
 #: last_checked: 2021-10-26 (daf)
 #: check_frequency: 60d
 	q3::inwork; 5192,10241 5196,10398
@@ -32182,8 +32183,8 @@ EOF
 EOF
      },
      { from  => 1610431200, # 2021-01-12 07:00
-       until => $isodate2epoch->("2022-01-05 17:00:00"), # 1620831600, # 2021-05-12 17:00
-       text  => 'Rudower Str.: Fahrbahn zwischen Köpenicker Str. und Lehmfeldsteig wegen Bauarbeiten gesperrt, vom 13.01.2021 07:00 Uhr bis 05.01.2022 17:00 Uhr ',
+       until => $isodate2epoch->("2022-04-01 17:00:00"), # 1620831600, # 2021-05-12 17:00
+       text  => 'Rudower Str.: Fahrbahn zwischen Köpenicker Str. und Lehmfeldsteig wegen Bauarbeiten gesperrt, vom 13.01.2021 07:00 Uhr bis 01.04.2022 17:00 Uhr ',
        type  => 'handicap',
        source_id => '2147346788',
        data  => <<EOF,
@@ -32379,7 +32380,9 @@ EOF
 #: source_id: viz2021:13.32146,52.465174,04.03.2021,08:00 (inaktiv)
 #: source_id: viz2021:13.320517,52.466345,13.07.2021,08:00 (mittlerweile bis 2.12.2021) (inaktiv)
 #: source_id: viz2021:13.32146,52.465174,13.07.2021,08:00 (mittlerweile bis 22.2.2022)
-	q4::inwork; 4894,6509 4875,6552 4786,6717
+	q4::inwork; 4894,6509 4875,6552
+#: note: im nördlichen Abschnitt mittlerweile (Ende Dez 2021) keine Einschränkungen mehr
+	q3::inwork; 4875,6552 4786,6717
 EOF
      },
      { from  => 1615071600, # 2021-03-07 00:00
@@ -33207,7 +33210,7 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2021-12-27
+#: last_checked: 2022-01-06
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33511,7 +33514,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'viz2021:13.409118,52.51693,01.09.2021,06:00',
        data  => <<EOF,
-#: next_check_id: MOLKENMARKT-2021
+# REMOVED --- #: next_check_id: MOLKENMARKT-2021
 	2::inwork 10804,12291 10738,12364
 	2::inwork 10675,12280 10736,12285 10772,12288
 EOF
@@ -33699,8 +33702,8 @@ EOF
 EOF
      },
      { from  => 1633212000, # 2021-10-03 00:00
-       until => $isodate2epoch->("2021-12-30 17:00:00"), # 1640214000, # 2021-12-23 00:00
-       text  => 'Rathausstr.: zwischen Kaiserstr. und Kurfürstenstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 04.10.2021 08:00 bis 30.12.2021 17:00 ',
+       until => $isodate2epoch->("2022-01-06 17:00:00"), # 1640214000, # 2021-12-23 00:00
+       text  => 'Rathausstr.: zwischen Kaiserstr. und Kurfürstenstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 04.10.2021 08:00 bis 06.01.2022 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.378629,52.451139,04.10.2021,08:00',
        data  => <<EOF,
@@ -33716,7 +33719,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet? --- #: XXX Wird nach den Bauarbeiten die Qualität der Fahrbahn besser sein? (jetzt: Q1) --- #: osm_watch: way id="10686356" version="19" --- #: also_indoor: traffic (none) --- #: last_checked: 2021-11-13
-	q4::inwork 13510,8138 13663,8011
+	q4::inwork 13510,8138 13554,8101 13633,8036 13663,8011
 EOF
      },
      { from  => $isodate2epoch->("2021-11-22 00:00:00"), # undef, # 
@@ -33731,12 +33734,14 @@ EOF
 EOF
      },
      { from  => 1615158000, # 2021-03-08 00:00
-       until => 1641337200, # 2022-01-05 00:00
-       text  => 'Schönholzer Weg: Richtung Süden zwischen Angerweg und Edelweißstr. gesperrt, vom 09.03.2021 07:00 bis 04.01.2022 17:00',
+       until => $isodate2epoch->("2022-03-07 17:00:00"), # undef, # 1641337200, # 2022-01-05 00:00
+       text  => 'Schönholzer Weg: Richtung Süden zwischen Angerweg und Edelweißstr. gesperrt, vom 09.03.2021 07:00 bis 07.03.2022 17:00',
        type  => 'handicap',
        source_id => 'viz2021:13.374359,52.586234,09.03.2021,07:00',
        data  => <<EOF,
 #: XXX_prog: eigentlich q4+::inwork; oder q3-::inwork;
+#: last_checked: 2022-01-01 (mapillary)
+#: next_check: 2022-03-07
 	q4::inwork; 8196,20096 8224,19977 8234,19936
 EOF
      },
@@ -33816,9 +33821,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (G)
-#: osm_watch: way id="1003079755" version="3"
+#: osm_watch: way id="1003079755" version="4"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: last_checked: 2021-12-27
+#: check_frequency: 14d
 	q3::inwork; 16192,10907 16153,10818
 EOF
      },
@@ -34164,6 +34170,8 @@ EOF
 #: source_id: viz2021:13.37737,52.51457,26.12.2021,06:00
 #: source_id: viz2021:13.351326,52.514425,26.12.2021,06:00
 #: source_id: viz2021:13.36968,52.51571,26.12.2021,06:00
+#: source_id: viz2021:13.377132,52.512991,31.12.2021,06:00
+#: source_id: viz2021:13.351095,52.514567,31.12.2021,06:00
 	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8600,12165 8595,12066
 	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8592,12252 8637,12258 8643,12208 8728,12220 8722,12268 8714,12319 8630,12307 8637,12258 8722,12268
 EOF
@@ -34194,6 +34202,52 @@ EOF
        data  => <<EOF,
 #: also_indoor: traffic
 	q4::inwork 1047,10225 1159,10149 1205,10114 1212,10109 1274,10063 1318,10031
+EOF
+     },
+     { from  => 1640808198, # 2021-12-29 21:03
+       until => 1643644800, # 2022-01-31 17:00
+       text  => 'Grunewaldstr.: Wasserrohrbruch, Fahrbahn zwischen Lepsiusstr. und Rothenburgstr. gesperrt, evtl. gibt es Beeinträchtigungen für Radfahrer, voraussichtlich bis Ende Januar 2022',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1162305.php',
+       data  => <<EOF,
+#: source_id: viz2021:13.3156,52.4588,27.12.2021,15:34 (hier kein Endedatum)
+#: by: https://viz.berlin.de/2021/12/grunewaldstrasse/
+#: by: https://www.berliner-woche.de/steglitz/c-bauen/grunewaldstrasse-nach-rohrbruch-wohl-bis-ende-januar-gesperrt_a332651
+#: note: auch laut rbb bis Ende Januar
+	q3::inwork 4520,5793 4671,5697
+EOF
+     },
+     { from  => 1640894267, # 2021-12-30 20:57
+       until => 1643670000, # 2022-02-01 00:00
+       text  => 'Greifswalder Str.: vor der Kreuzung Thomas-Mann-Str. Wasserrohrbruch, Fahrbahn gesperrt, evtl. gibt es Beeinträchtigungen für Radfahrer, bis Januar 2022',
+       type  => 'handicap',
+       source_id => 'https://twitter.com/VIZ_Berlin/status/1476450886004219906',
+       data  => <<EOF,
+#: source_id: viz2021:13.43916,52.54122,29.12.2021,09:14
+#: note: bei rbb seit dem 4.1.2021 entfernt
+#: also_indoor: traffic (G,H)
+	q3::inwork; 12737,15154 12870,15342
+EOF
+     },
+     { from  => 1640905200, # 2021-12-31 00:00
+       until => 1672527600, # 2023-01-01 00:00
+       text  => 'Waitzstr.: Baustelle, gesperrt, evtl. sind auch Radfahrer betroffen, vom 01.01.2022 bis 31.12.2022 ',
+       type  => 'gesperrt',
+       source_id => 'viz2021:13.306069,52.502061,01.01.2022,06:00', # mittlerweile inaktiv
+       data  => <<EOF,
+#: note: vermutlich nur im Bereich Sybelstr. 14
+	2::inwork 3726,10757 3731,10640 3764,10580 3883,10585
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Jahnstr. und Priesterweg: Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: also_indoor: traffic
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: last_checked: 2022-01-05
+	q4::inwork 13355,6235 13227,6209 13220,6237
 EOF
      },
     );

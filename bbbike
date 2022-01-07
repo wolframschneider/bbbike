@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (c) 1995-2021 Slaven Rezic. All rights reserved.
+# Copyright (c) 1995-2022 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -5433,8 +5433,6 @@ dazu verwendet wird",
 	 ['autosave','!',1,
 	  label => M"Speichern beim Beenden", var => \$autosave_opts],
 	 ['environment','=s','normal',
-	  # "novacom" (für GDF-Daten als Standard)
-	  # "onlineoffice" (für Onlineoffice-Präsentationen)
 	  nogui => 1, var => \$environment],
 	 ['mldbm','!',0,
 	  label => M"Verwendung von MLDBM",
@@ -11210,7 +11208,6 @@ sub activate_temp_blockings {
 
     eval {
 	use vars qw(@temp_blocking); # XXX do not use a global such as this
-	use vars qw(%temp_blocking_inx_mapping); # XXX dito
 	@temp_blocking = ();
 	do $file; # XXX Safe?
 	my($file_mtime) = (stat($file))[9];
@@ -11268,9 +11265,8 @@ sub activate_temp_blockings {
 		    last if !@{ $ret->[Strassen::COORDS()] };
 		    $ret->[Strassen::NAME] = $text;
 		    $new_s->push($ret);
-		    $new_s->set_directives_for_current({ info => [$o] });
+		    $new_s->set_directives_for_current({ info => [$o], id => [$global_inx] });
 		    $used_inx++;
-		    $temp_blocking_inx_mapping{$used_inx} = $global_inx;
 		}
 		$new_s->{Modtime} = $mtime;
 		push @s, $new_s;
@@ -12521,6 +12517,18 @@ sub choose_ort {
 			$args{'-width'} = 20;
 			$args{'-type'} = "$type-bg";
 		    } else {
+			if (!defined $showcenter) {
+			    # heuristic: if the bbd file defaults to
+			    # plotting with arrows at the end, then
+			    # usually it should be scrolled to the
+			    # beginning of the feature
+			    if ($object && $object->can('get_global_directive')) {
+				my $line_arrow = $object->get_global_directive('line_arrow');
+				if ($line_arrow && $line_arrow eq 'last') {
+				    $showcenter = 'begin';
+				}
+			    }
+			}
 			if ($showcenter) {
 			    if ($showcenter eq 'begin') {
 				$args{'-scrollto'} = $tcoords->[0][0];

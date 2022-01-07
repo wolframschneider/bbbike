@@ -214,7 +214,7 @@ Kieler Str. - Schloﬂstr.: linker Gehweg	DH:h=q3,30 5030,5800 4998,5817 4982,5789
 # 
 Hornstr. - Yorckstr.: linker Gehweg	DH:h=q3,50 8980,9751 9002,9731 9047,9750
 # 
-Sachsendamm - Torgauer Str.: linker Gehweg	DH:h=q3,80 6935,8208 7001,8161 7158,8208
+Sachsendamm - Torgauer Str.: linker Gehweg	DH:h=q3,80 6935,8208 7001,8161 7014,8165 7158,8208
 # 
 Berliner Allee - Streustr.: linker Gehweg	DH:h=q3,40 13398,15826 13425,15846 13263,15930
 # 
@@ -333,7 +333,7 @@ Behrenstr. - Ebertstr.: zum Linksabbiegen die linke Fuﬂg‰ngerampel benutzen	DH:t
 #: source_id: viz2021:13.454254,52.49393,29.07.2021,08:00 (bis Ende 2021, Gesamtbaumaﬂnahme bis 30.6.2023) (mittlerweile bis 30.6.2022)
 #: source_id: viz2021:13.458241,52.492038,29.07.2021,08:00
 #: osm_watch: way id="1005683568" version="2"
-#: last_checked: 2021-12-25 vvv
+#: last_checked: 2022-01-05 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2022-06-30 vvv
 #: note: allerdings spart man hier eine Ampel

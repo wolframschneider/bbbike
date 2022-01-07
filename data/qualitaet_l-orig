@@ -4052,7 +4052,7 @@ Espengrund: Beton	Q0- -9033,-1385 -9033,-1459
 Otto-Erich-Str.: schlechtes Kopfsteinpflaster	Q3 -8784,-1596 -8786,-1376
 Otto-Erich-Str.: Asphalt	Q0 -8786,-1376 -8786,-1345 -8758,-1346
 Otto-Erich-Str.: Asphalt	Q0 -8758,-1346 -8756,-1273
-Scheffelstr. (Potsdam): Kleinsteinpflaster	Q1- -9434,-1255 -9535,-1222 -9638,-1193
+Scheffelstr. (Potsdam): Kleinsteinpflaster	Q1- -9434,-1255 -9535,-1222 -9638,-1193 -9695,-1182
 Baldurstr.: Asphalt	Q1+ -9535,-1222 -9498,-1132 -9500,-1086 -9515,-1059
 Plantagenplatz: schlechtes Kopfsteinpflaster	Q3 -9874,-1551 -9905,-1627
 Plantagenhof: schlechtes Kopfsteinpflaster	Q3 -9860,-1550 -9832,-1536
@@ -6184,8 +6184,8 @@ Donarstr.: Kleinsteinpflaster	Q1 -9692,-986 -9769,-950
 Donarstr.: Kleinsteinpflaster	Q1 -9769,-950 -9824,-906
 #: corrected_by: srt (Asphalt -> ...)
 Donarstr.: Asphalt/Kopfsteinpflaster/unbefestigt	Q2 -9824,-906 -9858,-862
-#: XXX Ist hier tatsächlich asphaltiert, oder nur ein Teilstück?
-Scheffelstr.: Asphalt	Q0 -9638,-1193 -9751,-1183
+#: confirmed_by: kartaview
+Scheffelstr.: Asphalt	Q0 -9695,-1182 -9751,-1183
 Scheffelstr.: Kleinsteinpflaster	Q1 -9751,-1183 -9826,-1179 -9903,-1171 -9948,-1165
 #: corrected_by: srt (Q2 -> Q3)
 Semmelweisstr.: schlechtes Kopfsteinpflaster	Q3 -10297,-1186 -9991,-1271
@@ -6373,8 +6373,10 @@ Wulkow - Hermersdorf: grobes Kopfsteinpflaster und Sand	Q3 66523,19497 66192,195
 #: by: anonymous: vvv
 #: corrected_by: srt (Kopfsteinpflaster -> )
 Rosa-Luxemburg-Str. (Potsdam): Asphalt	Q0 -9090,-1293 -9176,-1188
-#: XXX Ist die Rosa-Luxemburg-Str. gepflastert oder asphaltiert?
-Rosa-Luxemburg-Str. (Potsdam): mäßiges Kopfsteinpflaster	Q2 -9176,-1188 -9207,-1144 -9306,-1000 -9410,-815
+#: corrected_by: kartaview (mäßiges Kopfsteinpflaster, Q2 -> ...)
+#: XXX Sieht auf den kartaview-Bilder nach unebenen Asphalt aus.
+#: add_fragezeichen: Wie ist die Qualität des Asphalts in der Rosa-Luxemburg-Straße?
+Rosa-Luxemburg-Str. (Potsdam): Asphalt	Q1 -9176,-1188 -9207,-1144 -9306,-1000 -9410,-815
 #: by: ^^^
 # 
 #: by: Andreas Mühlhausen: vvv
@@ -7097,6 +7099,10 @@ Am Kirchberg (Neu Fahrland): Asphalt	Q0 -13783,3919 -13925,3928 -14242,3997 -145
 Kiekebusch - Karlshof: Kopfsteinpflaster mit Sandbanketten	Q3+ 20883,-6592 20870,-6654 20797,-6729 20522,-6989 20385,-7297 20255,-7591
 #: by: osm/srt
 Waldrandstr.: Asphalt	Q0 -11719,13486 -12032,13708 -12089,13741 -12596,13763 -12956,13814
+#: by: kartaview
+Hermann-Maaß-Str.: Asphalt	Q0 -9421,-1103 -9390,-1145
+#: by: kartaview
+Hermann-Maaß-Str.: Asphalt mit einigen Schäden	Q1 -9390,-1145 -9353,-1194 -9204,-1194 -9176,-1188
 ######################################################################
 #: by: Andreas Titz vvv
 #: append_comment Oranienburg vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -8254,6 +8260,11 @@ Heidestr. (Schönow): Asphalt	Q0 19032,30053 18941,30212 18773,30398 18635,30610 
 #: by: ^^^
 # 
 #: by: mapillary vvv
+Egelsteg (Schulzendorf): Asphalt	Q0 23538,-3808 23484,-3871
+Ulmenweg (Schulzendorf): Asphalt	Q0 23657,-3411 23759,-3608
+Am Abhang (Schulzendorf): Asphalt, einige Wurzelschäden	Q1 23955,-3520 23897,-3667 23842,-3871 23854,-3920
+Finkenweg (Schulzendorf): Asphalt	Q0 23897,-3667 23985,-3836 24124,-4044
+Puschkinstr. (Schulzendorf): Beton/Asphalt	Q1+ 23969,-3515 24087,-3734 24237,-3966 24304,-4061 24390,-4190
 Fließsteig (Schulzendorf): Verbundsteinpflaster	Q1 24314,-3438 24394,-3534 24533,-3746
 Dohlenstieg (Schulzendorf): Verbundsteinpflaster	Q1 24169,-3653 24328,-3896 24501,-4155
 Heinrich-Heine-Str. (Bernau): Asphalt	Q0 19003,30633 18953,30697 18884,30784

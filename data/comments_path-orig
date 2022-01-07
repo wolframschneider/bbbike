@@ -34,7 +34,7 @@ bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824
 bereits bei der Ampel an der Corneliusstr. die Straßenseite wechseln	PI; 6880,11110 6882,11061 6873,11011 7002,11034
 auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6742,11099 6873,11011 6882,11061
 bereits an der Kreuzung An der Urania/Kurfürstenstr. die Straßenseite wechseln	PI; 6740,10755 6685,10690 6725,10641
-bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7001,8161 7158,8208 7225,8219 7250,8223
+bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	CP2; 6935,8208 7014,8165
 #: XXX_prog: RL:ja, GPS:nein
 am Domäne-Markt Richtung Hochbahnhof Hallesches Tor abbiegen	CP; 9536,10064 9579,10122 9599,10175
 auf linken Gehweg fahren, Straßenseite an der Fußgängerampel Yorckstr./Katzbachstr. wechseln	CP; 8774,9534 8679,9544 8595,9495
@@ -81,7 +81,7 @@ Neue Bahnhofstr./Boxhagener Str.: Fußgängerampel auf der linken Seite benutzen	C
 #: XXX eventuell wird es hier in Zukunft Verbesserungen geben, siehe BVV-Beschluss
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3277&options=4
 #: source_id: IM_022413
-#: last_checked: 2021-12-22 (mapillary)
+#: last_checked: 2021-12-31
 #: check_frequency: 90d
 Rennbahnstr./Bernkasteler Str.: Fußgängerampel auf der linken Seite zum Überqueren der Berliner Allee benutzen	CP; 14528,16910 14558,16907 14673,16895
 # 
@@ -530,7 +530,7 @@ Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichsh
 #: XXX wird eventuell im Zuge der Maßnahme Nsw.3 verbessert
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5826 (Verkehrsführung verbessern) (wurde allerdings abgelehnt; die allgemeine Verbesserung der Situation wird aber irgendwann passieren ("Umgestaltung des Bahnhofsvorplatzes")
 #: by: https://www.uvp-verbund.de/documents/ingrid-group_ige-iplug-be/3A22FF18-9B17-4F51-B470-2F50F0C68929/U13-2_Entwurf%20Sterndamm%20und%20Bahnhofsvorplatz_LP-Blatt02.pdf (Linksabbiegemöglichkeit für Radfahrer im Zuge der Umgestaltung am S-Bhf. Schöneweide)
-#: last_checked: 2021-12-17
+#: last_checked: 2022-01-06
 #: check_frequency: 180d
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17747,5452
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115
@@ -628,7 +628,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2021-12-02 vvv
+#: last_checked: 2021-12-30 vvv
 #: note: früher: ausgeschildert "zur Salzmannstraße Huronseestraße"
 nicht ausgeschildert, Richtung Salzmannstr./Huronseestr.	CP2; 16900,9861 16895,9922
 #: note: früher: ausgeschildert "zur Sewanstraße"
@@ -714,7 +714,7 @@ Martin-Hoffmann-Str. - An den Treptowers: zum Linksabbiegen die linke Fußgängera
 Ernst-Ruska-Ufer - Albert-Einstein-Str.: unbequemes Überqueren des Ernst-Ruska-Ufers, ggfs. bereits an der Ampel Wegedornstr. auf die linke Seite wechseln	PI; 18929,2454 19091,2443 19094,2495
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2021-09-01 vvv
+#: last_checked: 2022-01-03 vvv
 #: next_check: 2024-06-01 vvv
 Jüdenstr.: zum Überqueren der Grunerstr. Fußgängerampel rechts benutzen	CP; 10831,12371 10804,12461 10772,12515
 Grunerstr. - Jüdenstr.: zum Überqueren der Grunerstr. Fußgängerampel benutzen	CP; 10738,12364 10804,12461 10772,12515

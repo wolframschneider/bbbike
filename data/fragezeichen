@@ -67,7 +67,6 @@ Glindow - Petzow: laut "Berliner Umland" witterungsabhängige Strecke	? -22862,-5
 Werder - zum Plessower See: genaue Wegführung? Qualität?	? -22042,-2060 -22386,-2107 -22756,-2236 -22886,-2174 -22961,-2337 -23280,-2492
 Alt-Brieselang - Brieselang: Qualität? genaue Wegführung?	? -16837,22432 -18103,22064 -17978,21602 -18415,21465 -18378,20766 -18817,19637
 Marquardt, Hauptstr.: Laut mobil-potsdam.de: Asphaltiert	? -18811,4782
-Hermann-Maaß-Str.: Qualität?	? -9421,-1103 -9390,-1145 -9353,-1194 -9204,-1194 -9176,-1188
 Karl-Foerster-Str. (Potsdam): Qualität?	? -11438,-1610 -11358,-1491
 Friesenstr.: Qualität des südöstlichen Abschnitts?	? -10653,-2276 -10655,-2296 -10617,-2353 -10573,-2371
 Walter-Klausch-Str.: Qualität des nordwestlichen Abschnitts?	? -10009,-2467 -10022,-2522 -10080,-2632 -10123,-2712 -10174,-2805 -10192,-2850
@@ -897,12 +896,6 @@ Trampe - Kruge: Qualität?	? 39683,40892 40258,40191 41298,39991 41731,39846
 Beiersdorf - Beerbaum: Qualität?	? 35980,34322 35977,34619 36085,34994 36096,35327 36200,35854 36214,36208 36215,36497
 Dollgow - Zernikow: Qualität?	? -17141,74157 -16859,74184 -16629,74151 -15730,74428 -14966,74667 -13662,75159
 Leipziger Str. (Schöneiche): wie ist die Qualität im nördlichen Abschnitt? ebenfalls unbefestigt?	? 32156,6405 32056,6607 31993,6776 31952,6917 31951,7060
-Puschkinstr. (Schulzendorf): Qualität?	? 23969,-3515 24087,-3734 24237,-3966 24304,-4061 24390,-4190
-Dohlenstieg (Schulzendorf): Qualität?	? 24169,-3653 24328,-3896 24501,-4155
-Ulmenweg (Schulzendorf): Qualität?	? 23657,-3411 23759,-3608
-Egelsteg (Schulzendorf): Qualität?	? 23538,-3808 23484,-3871
-Am Abhang (Schulzendorf): Qualität?	? 23955,-3520 23897,-3667 23842,-3871 23854,-3920
-Finkenweg (Schulzendorf): Qualität?	? 23897,-3667 23985,-3836 24124,-4044
 Kieler Str. (Schulzendorf): Qualität?	? 23782,-6223 23854,-6323 23927,-6423 23993,-6509 24062,-6607
 Otto-Krien-Platz (Schulzendorf): Qualität?	? 23728,-6264 23804,-6360
 Fürstenberger Str. (Schulzendorf): Qualität?	? 23196,-6255 23478,-6844 23572,-7040 23662,-7235
@@ -961,6 +954,7 @@ Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgü
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33176,2938 33296,2894 33406,2852 33503,2818
 Abendseglersteig: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33406,2852 33383,2792 33267,2810 33147,2832 33176,2938
 Campestr.: Asphalt (Wird die Qualität der Fahrbahn nach den Bauarbeiten besser sein?)	? 1127,20434 1128,20525 1080,20617
+Stolzingstr.: Mosaikpflaster, uneben (Sind die Bauarbeiten in der Stolzingstraße beendet? Ist die Fahrbahn mittlerweile asphaltiert?)	? 1468,25384 1542,25483
 # added from qualitaet_l
 Ortsdurchfahrt Beerbaum: schlechtes Kopfsteinpflaster (Ist die Fahrbahnqualität nach den Bauarbeiten besser geworden?)	? 36000,36534 36215,36497 36307,36503 36359,36493
 Neuruppin - Wuthenow - Gnewikow - Wustrau-Altfriesack: teilweise gut, teilweise mäßiges Kopfsteinpflaster (wird sich die Qualität nach den Bauarbeiten verbessern?)	? -29918,57158 -29816,57117 -29490,56714 -29243,56187 -29198,55801 -29109,55374 -28677,55014 -28367,54202 -28911,54055 -29276,53427 -29210,52915 -28736,52387 -28368,51517 -28001,50966 -27421,50349 -27196,50015 -27035,49829 -25968,49631 -25719,49500 -25060,48842
@@ -1010,6 +1004,7 @@ Ostpromenade: Asphalt (ist der nordwestliche Abschnitt der Straße ebenfalls asph
 Kirschenallee: Asphalt (ist der östliche Abschnitt der Straße ebenfalls asphaltiert?)	? 24949,-7866 25023,-7877
 Westpromenade: Asphalt (ist der westliche Abschnitt der Straße ebenfalls asphaltiert? Ist die Straße eine Spielstraße?)	? 24695,-8064 24241,-7799
 Am Wasser (Gartz): Kopfsteinpflaster (Stimmt das? Liegt hier tatsächlich Kopfsteinpflaster?)	? 76116,90239 76020,90231 75977,90236
+Rosa-Luxemburg-Str. (Potsdam): Asphalt (Wie ist die Qualität des Asphalts in der Rosa-Luxemburg-Straße?)	? -9176,-1188 -9207,-1144 -9306,-1000 -9410,-815
 Reichenberg: grobes Kopfsteinpflaster (genauer Abschnitt fehlt)	? 58453,24209 58390,23910 58422,23806 58340,23653
 Rollwitz - Damerow: Kopfsteinpflaster/Feldweg (genauere Qualitätsbeschreibung fehlt)	? 46872,118656 46914,117945 47156,116507 47087,115725
 Dahme: gutes Kopfsteinpflaster (Wird die Qualität hier nach den Bauarbeiten besser werden? Wird es Radwege geben?)	? 13308,-59619 13503,-59620 13692,-59667 13859,-59831 13957,-59911
@@ -1069,6 +1064,7 @@ Rehagener Platz: Bauarbeiten, Fahrbahn gesperrt, außerdem ist der Kreuzungsberei
 Rehagener Platz: Bauarbeiten, Fahrbahn gesperrt, außerdem ist der Kreuzungsbereich Rehagener Str./Kirchbachstr. gesperrt (Bis wann gehen die Bauarbeiten? Wird das Kopfsteinpflaster nach den Bauarbeiten etwas besser sein?)	? 10563,-2432 10638,-2452
 Brümmerstr.: zwischen Thielallee und Fabeckstr. Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten in der Brümmerstraße mittlerweile beendet und die Straße frei?)	? 2523,5114 2746,5537
 Seydlitzstr.: südlich der Dessauerstr. Bauarbeiten, komplett gesperrt, Ende der Sperrung unbekannt (Wann wird die Sperrung aufgehoben?)	? 6511,2284 6459,2364
+Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis voraussichtlich Anfang 2022 (Sind die Bauarbeiten beendet?)	? 5793,23422 5893,23287
 Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer: Bauarbeiten an der Eisenbahnüberführung, komplette Sperrung des Weges, Ende der Bauarbeiten unbekannt (Ist hier noch immer gesperrt?)	? 7673,4223 7769,4315
 Uferweg an der Scharfen Lange: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? -3752,11373 -3785,11445 -3828,11491 -3928,11526 -4028,11533 -4106,11519 -4181,11458 -4204,11432 -4245,11400
 Uferweg an der Scharfen Lange: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? -4246,11438 -4204,11432

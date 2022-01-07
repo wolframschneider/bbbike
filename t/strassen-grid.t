@@ -36,7 +36,7 @@ BEGIN {
 
 use BBBikeTest qw(using_bbbike_test_data);
 
-plan tests => 36;
+plan tests => 43;
 
 my %opt;
 GetOptions(\%opt, "v!") or die "usage!";
@@ -85,6 +85,35 @@ for my $use_cache (1, 0) {
 	is(($kr->nearest_loop(split /,/, $p))[0], $p_kr, "Nearest loop test for $p, $cache_text");
 	is($s_fast->nearest_point($p), $p_fast, "Fast test for $p, $cache_text");
     }
+
+    if ($use_cache) {
+	require Strassen::Util;
+
+	my $grid_cachefile_fast = $s_fast->grid_cachefile(Exact => 0);
+	like $grid_cachefile_fast, qr{^grid_data-test_strassen_1000x1000$}, 'grid cachefile filename (not exact)';
+	my $cache_fast = Strassen::Util::get_from_cache($grid_cachefile_fast, []);
+	isa_ok $cache_fast, 'HASH';
+
+	my $grid_cachefile_exact = $s_fast->grid_cachefile(Exact => 1);
+	like $grid_cachefile_exact, qr{^gridx_data-test_strassen_1000x1000$}, 'grid cachefile filename (exact)';
+	my $cache_exact = Strassen::Util::get_from_cache($grid_cachefile_exact, []);
+	isa_ok $cache_exact, 'HASH';
+    }
+}
+
+{
+    # Test for old bug: objects without associated files should not
+    # share the same cache file
+    my $s1 = Strassen->new_from_data_string("Street1\tX 1000,1000 2000,2000\n");
+    my $s2 = Strassen->new_from_data_string("Strasse A\tX 100,100 200,200\nStrasse B\tX 2000,2000 1000,1000\n");
+
+    $_->make_grid(Exact => 1, UseCache => 1) for ($s1, $s2);
+
+    is $s1->grid_cachefile(Exact => 1), undef, 'no cachefile possible for object without id';
+
+    my $ret = $s2->nearest_point("1000,1000", FullReturn => 1);
+    is $ret->{N}, 1, '2nd element should match';
+    is $ret->{Dist}, 0, 'exact match expected -> distance is zero';
 }
 
 __END__

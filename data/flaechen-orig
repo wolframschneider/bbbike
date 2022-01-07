@@ -69,7 +69,7 @@ Karl-Marx-Platz	F:P 12972,7602 12987,7560 13100,7626
 #: note: eventuell auch "Richardpark" (vmz detailnetz)
 Richardplatz	F:P 13177,7644 13188,7590 13295,7627 13392,7648 13417,7654 13424,7680 13416,7712 13378,7695 13288,7653
 Siegfried-Aufhäuser-Platz	F:P 13952,7497 13941,7522 13953,7548 13980,7548
-Hertzbergplatz	F:P 13474,8060 13478,8095 13510,8138 13663,8011 13616,7949
+Hertzbergplatz	F:P 13474,8060 13478,8095 13510,8138 13554,8101 13633,8036 13663,8011 13616,7949
 #: note: eventuell auch "Wildenbruchpark" (vmz detailnetz)
 Wildenbruchplatz	F:P 13193,8832 13138,8762 13227,8692 13314,8624 13368,8689
 #: note: OpenStreetMap bezeichnet die Grünfläche als "Weichselpark", aber im Netz findet man nur wenige Referenzen dazu
@@ -694,7 +694,7 @@ Park am Gleisdreieck	F:P 8328,10831 8358,10782 8367,10745 8350,10662 8335,10518 
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_15_1089_1220_online.pdf (Benennung einer Grünanlage)
 #: XXX wann wird die Umbenennung wirksam? wann werden vor Ort Schilder aufgestellt?
 #: priority: #C
-#: last_checked: 2021-11-09
+#: last_checked: 2021-12-29
 #: check_frequency: 45d
 Flaschenhalspark	F:P 8316,9581 8316,9098 8346,9096 8495,9526 8316,9581
 Grünanlage an der Gottlieb-Dunkel-Str.	F:P 11456,6103 11272,6100 11101,6122 11063,6007 11160,5990 11257,6015 11338,5992 11456,6103
@@ -1305,6 +1305,7 @@ Lessingplatz	F:P 9826,48 9812,-41 9811,-146 9892,-131 9861,-44 9826,48
 Sparrplatz	F:P 7409,14954 7461,14986 7405,15070 7340,15184 7331,15215 7308,15202 7256,15299 7248,15296 7225,15286 7281,15175 7409,14954
 Hirteplatz	F:P 23744,5262 23751,5248 23765,5248 23775,5258 23775,5271 23766,5281 23756,5280 23746,5276 23743,5268 23744,5262
 Blücherplatz	F:P 9687,10180 9722,10036 9827,10051 9837,10117 9845,10148 9778,10150 9769,10195 9687,10180
+	F:P 9983,20581 10096,20621 10088,20570 10066,20494 9983,20581
 # 
 #############################################################################
 # Plätze (experimentell)
