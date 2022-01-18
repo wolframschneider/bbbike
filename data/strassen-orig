@@ -257,7 +257,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11012 (Frage)
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2021-12-23 vvv
+#: last_checked: 2022-01-17 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -722,7 +722,7 @@ Kolonnenstr.	H 8209,8773 8145,8773 8078,8772 8014,8771 8008,8771 7795,8765 7709,
 #: XXX wird am 18.10.2021 zum Richard-von-Weizsäcker-Platz umbenannt --- verzögert sich wegen Widerspruchs
 #: also_indoor: search Richard-von-Weizsäcker-Platz
 # REMOVED --- #: next_check: 2021-10-18
-#: last_checked: 2022-01-03 (research)
+#: last_checked: 2022-01-15 (research)
 #: check_frequency: 14d
 Kaiser-Wilhelm-Platz	NN 7201,8870 7307,8945
 Herbertstr. (Schöneberg)	N 7360,8918 7389,8837 7402,8783 7395,8761
@@ -852,7 +852,7 @@ Wittenbergplatz	HH 6353,10583 6268,10588 6216,10614
 An der Urania	HH 6532,10529 6685,10690 6740,10755
 Kurfürstenstr. (Tiergarten, Schöneberg)	N 8058,10306 7850,10351 7744,10372 7633,10394
 #: carriageway_width: 37m (10m+medial strip=13m+14m) (Höhe An der Urania; östlich der Einemstr. deutlich schmaler)
-Kurfürstenstr. (Tiergarten, Schöneberg)	H 7633,10394 7444,10479 7315,10537 7117,10611 7110,10613 6972,10665 6818,10725 6740,10755 6607,10801 6471,10851 6378,10887 6277,10924 6266,10927 6145,10975
+Kurfürstenstr. (Tiergarten, Schöneberg)	H 7633,10394 7444,10479 7416,10492 7315,10537 7117,10611 7110,10613 6972,10665 6818,10725 6740,10755 6607,10801 6471,10851 6378,10887 6277,10924 6266,10927 6145,10975
 Derfflingerstr. (Tiergarten)	N 7117,10611 7236,10936
 #: carriageway_width: 29m (12m+medial strip=5m+12m, Höhe Motzstr.)
 Martin-Luther-Str. (Schöneberg)	HH 6532,10529 6494,10440 6487,10277 6499,10086 6504,9961 6504,9865 6492,9782 6447,9661 6445,9538 6445,9432 6446,9328 6440,9192 6442,9068 6445,8949 6445,8934 6449,8845 6449,8807 6460,8688 6454,8653 6461,8463 6459,8281 6459,8272 6460,8186 6460,8093
@@ -2376,13 +2376,13 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.777571.php
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/a100-baustelle-grenzallee-wieder-offen_a198400
 #: XXX bis Ende 2022
-#: last_checked: 2021-10-17 (mapillary)
+#: last_checked: 2022-01-16
 #: check_frequency: 90d
 #: next_check: 2022-12-31 
 (provisorische Umfahrung)	NN 14310,7022 14323,7080 14251,7096 14233,7086 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2021-12-13 vvv
+#: last_checked: 2022-01-16 vvv
 #: check_frequency: 90d vvv
 #: valid: 20140224-20221231
 Neuköllnische Allee	H 14344,7003 14567,6810 14724,6668
@@ -4424,7 +4424,7 @@ Fontanestr. (Wilhelmsruh)	N 7321,20426 7231,20266 7201,20161 7205,20047 7209,199
 #: XXX: bleibt dieser Weg erhalten oder muss er der Heidekrautbahn weichen?
 #: osm_watch: way id="31428032" version="12"
 #: osm_watch: way id="386544517" version="4"
-#: last_checked: 2021-12-05 (mapillary)
+#: last_checked: 2022-01-15 (mapillary)
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-05-01
 (Hertzstr./PankowPark - Bhf. Wilhelmsruh)	NN 7090,19943 7123,19855 7138,19839 7184,19783 7264,19717 7273,19682
@@ -13019,7 +13019,10 @@ Bischofstaler Str.	N 21759,7856 21614,7773 21570,7751
 Bischofstaler Str.	NN 21468,7727 21542,7752
 Drausnitzer Str.	N 21625,8735 21540,8815 21512,8857 21508,8988
 Gleiwitzer Str.	N 21175,9989 20947,9999 20703,10004
-Genthiner Str.	N 7461,11051 7415,10883 7393,10809 7354,10671 7315,10537
+Genthiner Str.	N 7461,11051 7415,10883 7393,10809 7354,10671 7330,10590 7315,10537
+#: note: Privatstraße
+#: osm.highway: service
+Schönegarten	N 7416,10492 7432,10546 7330,10590
 Else-Lasker-Schüler-Str.	N 7033,10396 7227,10489 7281,10510
 Else-Lasker-Schüler-Str.	NN 7281,10510 7315,10537
 Kurmärkische Str.	N 7429,10366 7422,10368 7337,10396 7275,10418
@@ -13646,7 +13649,7 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED (Verschwenkung realisiert) --- #: XXX Verschwenkung der Bergiusstr. --- #: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle --- #: XXX wahrscheinlich ist auch die alte Ampel abgeschaltet? --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1308/nachricht5044.html --- #: prio: #A --- #: next_check: 2013-08-23
 # REMOVED (nein, keine Schilder) --- #: XXX als Bergiusstr. ausgeschildert? --- #: next_check: 2013-09-04
 # REMOVED --- #: last_checked: 2021-03-30 --- #: check_frequency: 90d --- #: next_check: 2021-12-31 --- #: next_check: 2021-04-02 --- (Zufahrt zur Bergiusstr.)	NN 14051,6731 14106,6663
-#: last_checked: 2021-12-13 vvv
+#: last_checked: 2022-01-16 vvv
 #: check_frequency: 90d vvv
 #: XXX im Zuge des A100-Ausbaus wird die Bergiusstr. verschwenkt
 Bergiusstr.	H 14051,6731 14106,6663
@@ -13662,7 +13665,7 @@ Bergiusstr.	N 14106,6663 14150,6609 14193,6556 14366,6337
 Bergiusstr.	N 14366,6337 14396,6298 14398,6184
 Willstätterstr.	N 14193,6556 14306,6651
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2021-10-17 (mapillary) vvv
+#: last_checked: 2022-01-16 vvv
 #: check_frequency: 90d vvv
 #: valid: 20140224-20221231
 Haberstr.	H 14366,6337 14564,6496 14639,6577 14724,6668
@@ -14097,10 +14100,7 @@ Schillerpromenade (Neukölln)	N 11661,8131 11689,8006
 Schillerpromenade (Neukölln)	N 11713,7899 11738,7790 11763,7687 11785,7583 11803,7487
 Zeitzer Str.	N 13325,7210 13326,7291
 #: next_check_id: SIEGFRIED-2021
-#: by: https://www.architektur-urbanistik.berlin/index.php?threads/oderstra%C3%9Fe-188-ecke-siegfriedstr-neubau-einer-apartmentanlage.1058/#post-15273 (Bau einer Apartmentanlage, evtl. wird dann die Straße hier öffentlich?)
 #: osm.highway: service
-#: last_checked: 2021-12-25
-#: check_frequency: 360d
 (Verlängerung der Siegfriedstr.)	N 11664,6796 11488,6781
 Siegfriedstr. (Neukölln)	N 11664,6796 11935,6848 12122,6886 12342,6936 12479,6969 12664,7013 12810,7047
 Kirchhofstr. (Neukölln)	N 12810,7047 12843,7093 12872,7134 12909,7181 13001,7296 13003,7316
@@ -18184,7 +18184,7 @@ Bertolt-Brecht-Platz	N 9193,12875 9160,12932
 #: XXX für den Autoverkehr mittlerweile gesperrt?
 #: XXX oder eventuell wird das eine Einbahnstraße, wenn die Bauarbeiten an der Pankebrücke beendet sind (Schilder hängen schon, obwohl es eine Sackgasse ist?!)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_19_2765_2928_online.pdf
-#: last_checked: 2022-01-08
+#: last_checked: 2022-01-17
 #: check_frequency: 90d
 (Straße vor dem Berliner Ensemble)	N 9212,12969 9160,12932
 Karlplatz	N 8711,12986 8676,12976
@@ -18436,7 +18436,7 @@ Hanseatenweg	N 6442,12545 6445,12495 6428,12439 6368,12455 6324,12455 6314,12518
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8819
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036923752617/923752617/00406668/68-Anlagen/02/MA_1265_V.pdf
 #: osm_watch: way id="26590565" version="17"
-#: last_checked: 2022-01-08
+#: last_checked: 2022-01-15
 #: check_frequency: 120d
 (Zufahrt Parkplätze Klopstockstr.)	N 5909,12073 5870,12106 5982,12291
 (Cuxhavener Str. - Altonaer Str.)	NN 5982,12291 6030,12363 6067,12381 6098,12446

@@ -28143,7 +28143,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2022-01-03
+#: last_checked: 2022-01-17
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -30483,7 +30483,7 @@ EOF
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-01-08
+#: last_checked: 2022-01-15
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 EOF
@@ -30846,15 +30846,15 @@ EOF
      { from  => 1587621600, # 2020-04-23 08:00
        until => undef, # XXX
        text  => 'Boxhagener Platz: samstags 6 bis 20 Uhr Sperrung der umliegenden Straßen wegen des Wochenmarkts',
-       type  => 'handicap',
+       type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: CORONA-2020
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-01-13
+#: last_checked: 2022-01-15
 #: check_frequency: 21d
-	q4::temp 14272,11775 14247,11681 14102,11715 14127,11811
+	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
      },
      { from  => 1587852000, # 2020-04-26 00:00
@@ -31362,7 +31362,7 @@ EOF
 #: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
 #: source_id: 2147347233 (bis 23.12.2021)
 # REMOVED --- #: priority: #A --- #: last_checked: 2021-09-26 --- #: next_check: 2022-03-18
-#: also_indoor: traffic (H,G) vvv
+#: also_indoor: traffic (H,G,B) vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
 #: XXX NEW	Gardeschützenweg (Lichterfelde) in beiden Richtungen zwischen Hindenburgdamm und Lipaer Straße: Leitungsbau,Vollsperrung, Fußverkehr frei, vom 31.05.2021 08:30 Uhr bis 23.12.2021 17:00 Uhr
 # REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv --- #: last_checked: 2020-12-27 (mapillary) vvv --- #: next_check: 2021-05-03 vvv
@@ -31647,15 +31647,18 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung auch für Radfahrer gesperrt',
+       text  => 'Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Hochbaustelle, Fahrtrichtung auch für Radfahrer gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/fasanenstra%C3%9Fe-64.684/
 #: also_indoor: traffic
+#: XXX von Norden her außerdem: Verboten für Fahrzeuge aller Art außer Anlieger
+#: XXX Es gibt nun eine weitere Baustelle, Halteverbotschilder bis Ende Dezember 2022
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
 #: osm_watch: way id="759405498" version="2"
-#: last_checked: 2021-10-26 (daf)
-#: check_frequency: 60d
+#: last_checked: 2022-01-15
+#: check_frequency: 120d
+#: next_check: 2022-12-28
 	q3::inwork; 5192,10241 5196,10398
 EOF
      },
@@ -32160,7 +32163,7 @@ EOF
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="362719487" version="6"
 #: osm_watch: way id="687428752" version="2"
-#: last_checked: 2021-10-19
+#: last_checked: 2022-01-15
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 EOF
@@ -32627,7 +32630,7 @@ EOF
 # REMOVED --- #: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer? --- 
 #: note: 2021-12-23 ("Radfahrer frei"-Schilder fehlen weiterhin, außerdem gibt es eine explizite Bedarfsumleitung für Radfahrer via Jägerstr.
 #: osm_watch: way id="753316505" version="3"
-#: last_checked: 2021-12-23
+#: last_checked: 2022-01-17
 	q4::inwork; 9195,11972 9207,11880
 # REMOVED (hier nicht mehr) ---	q4::inwork; 9207,11880 9218,11793
 EOF
@@ -33256,6 +33259,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1145930.php (Verzögerung)
 #: by: https://www.berliner-woche.de/luebars/c-bauen/fahrbahn-der-strasse-am-vierrutenberg-erst-im-fruehjahr-fertig_a328514
+#: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9770 (Frage)
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: next_check: 2022-01-03
 	q4::inwork 5793,23422 5893,23287
@@ -34192,17 +34196,18 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
-       text  => 'Braunschweiger Str. und Niemetzstr.: Bauarbeiten, Einbahnstraßenregelung bzw. Sperrung, Ende der Bauarbeiten unbekannt',
+       until => $isodate2epoch->("2022-09-30 18:00:00"),
+       text  => 'Braunschweiger Str. und Niemetzstr.: Bauarbeiten, Einbahnstraßenregelung bzw. Sperrung, voraussichtlich bis September 2022',
        type  => 'handicap',
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten in der Braunschweiger Straße und Niemetzstraße beendet? Wann wird die Einbahnstraßenregelung aufgehoben? vvv
-#: XXX Haben die Bauarbeiten etwas mit der geplanten Asphaltierung zu tun, oder sind das nur 
 #: also_indoor: traffic (ex-G,H,B(alle nur Niemetz)) vvv
-#: last_checked: 2021-12-26 vvv
-#: check_frequency: 45d vvv
+#: last_checked: 2022-01-16 vvv
+#: check_frequency: 90d vvv
+#: next_check: 2022-09-30 vvv
 	q4::inwork; 13702,7418 13654,7380 13601,7366 13519,7345 13476,7330
 	q3::inwork 13702,7418 13762,7321
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: also_indoor ^^^
@@ -34299,6 +34304,19 @@ EOF
 #: next_check_id: MESSELSTR-2022
 #: also_indoor: traffic (H)
 	q4::inwork 2403,6962 2304,7059 2139,7239
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Keithstr.: Einbahnstraßenregelung, offen Richtung Norden, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.berlinhyp.de/de/media/newsroom/berlin-hyp-baut-neue-unternehmenszentrale-b-one-nach-h%C3%B6chsten-energiestandards (fertig: Ende 2023)
+#: by: https://www.architektur-urbanistik.berlin/index.php?threads/b-one-berlin-hyp-ag-neubau.955/#post-17434
+#: last_checked: 2022-01-13 (architektur-urbanistik)
+#: check_frequency: 120d
+#: next_check: 2023-12-31
+	q3::inwork; 6626,11178 6549,11015
 EOF
      },
     );
