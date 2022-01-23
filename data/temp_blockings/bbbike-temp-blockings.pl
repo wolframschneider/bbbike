@@ -27911,7 +27911,7 @@ EOF
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht's nur auf dem Gehweg weiter
 #: also_indoor: traffic (G(wieder),H(falsch?),B)
 #: priority: #B vvv
-#: last_checked: 2021-12-16 vvv
+#: last_checked: 2022-01-18 vvv
 #: check_frequency: 60d vvv
 	q3::inwork 13391,16436 13630,16629
 Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
@@ -29215,9 +29215,11 @@ EOF
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
-#: osm_watch: way id="8655276" version="24"
+#: osm_watch: way id="8655276" version="25"
+#: also_indoor: search Blumberger-Damm-Brücke
+#: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2022-01-08 (mapillary)
+#: last_checked: 2022-01-19 (osm)
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -29468,7 +29470,7 @@ EOF
 #: note: laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021
 #: also_indoor: traffic (H,B)
 #: osm_watch: way id="1006570991" version="1"
-#: last_checked: 2021-12-18 (indoor)
+#: last_checked: 2022-01-22
 #: check_frequency: 30d
 #: next_check: 2022-03-31
 	q3::inwork  8986,16092 9178,16317
@@ -30843,6 +30845,7 @@ EOF
 	q4::temp 7126,9825 7118,9870 7080,10098
 EOF
      },
+
      { from  => 1587621600, # 2020-04-23 08:00
        until => undef, # XXX
        text  => 'Boxhagener Platz: samstags 6 bis 20 Uhr Sperrung der umliegenden Straßen wegen des Wochenmarkts',
@@ -30852,7 +30855,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-01-15
+#: last_checked: 2022-01-22
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31063,7 +31066,7 @@ EOF
      },
      { from  => $isodate2epoch->("2020-05-27 09:00:00"),
        until => undef, # $isodate2epoch->("2021-12-31 17:00:00"), # der ursprüngliche Termin (14.08.2020) kann wohl nicht gehalten werden; laut Schild bis Ende 2021
-       text  => 'Mainzer Str.: Bauarbeiten zwischen Boxhagener Str. und Scharnweberstr., Fahrbahn gesperrt, möglicherweise bis Ende Dezember 2021, vielleicht auch länger',
+       text  => 'Mainzer Str.: Bauarbeiten zwischen Boxhagener Str. und Scharnweberstr., mögliche Einschränkugen, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
@@ -31071,14 +31074,14 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="5"
-#: last_checked: 2022-01-13 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2022-01-20 vvv
+#: check_frequency: 7d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
 # REMOVED (beendet) ---	q3::inwork 14247,11681 14272,11775
 # REMOVED (beendet) ---	q3::inwork 14272,11775 14306,11889
-	q4::inwork 14306,11889 14354,12012
+	q2::inwork 14306,11889 14354,12012
 	q3::inwork 14354,12012 14468,11992
 # REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
@@ -31259,7 +31262,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Schönstr.: Bauarbeiten zwischen Große Seestr. und Rennbahnstr., Fahrbahn gesperrt',
+       text  => 'Schönstr.: Bauarbeiten zwischen Große Seestr. und Rennbahnstr., Fahrbahn kann gesperrt sein',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.885612.php (hier (5. Bauabschnitt) ab Februar 2020)
@@ -31267,9 +31270,9 @@ EOF
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (H,B)
-#: XXX Stand 2021-07-31: letzte Deckschicht fehlt, Gehwege müssen noch gemacht werden
+#: XXX Stand 2021-07-31 und 2022-01-18: letzte Deckschicht fehlt, Gehwege müssen noch gemacht werden
 # REMOVED (eingetragen) --- #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2021-12-16
+#: last_checked: 2022-01-18
 #: check_frequency: 30d
 	q3::inwork 14136,17170 13996,16959
 EOF
@@ -32215,7 +32218,8 @@ EOF
        source_id => '2147346268',
        data  => <<EOF,
 #: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021) (mittlerweile: 25.11.2021) (mittlerweile: 01.02.2022)
-#: last_checked: 2021-12-25 (mapillary)
+#: also_indoor: traffic (G)
+#: last_checked: 2022-01-22
 #: check_frequency: 90d
 #: next_check: 2022-02-01
 	q2::inwork 8913,16159 9099,16398
@@ -33217,13 +33221,13 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2022-01-10
+#: last_checked: 2022-01-21
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
-#: osm_watch: way id="984964447" version="5"
+#: osm_watch: way id="984964447" version="6"
 	q3::inwork 15279,10862 15355,10875
-#: osm_watch: way id="984056169" version="5"
+#: osm_watch: way id="984056169" version="6"
 	2::inwork 15272,10790 15388,10758
 EOF
      },
@@ -33340,7 +33344,8 @@ EOF
        type  => 'handicap',
        source_id => 'viz2021:13.326349,52.447526,26.07.2021,07:00',
        data  => <<EOF,
-#: note: Eintrag bei rbb am 10.11.2021 entfernt
+#: note: Eintrag bei rbb am 10.11.2021 entfernt --- mittlerweile wieder da, sogar bis zum 28.2.2022
+#: also_indoor: traffic (G,H,B)
 	q4::inwork; 5271,4547 5316,4637 5336,4676
 EOF
      },
@@ -33641,7 +33646,7 @@ EOF
 # REMOVED (eins reicht) --- #: osm_watch: note 2867467 2
 #: osm_watch: way id="16311543" version="18"
 #: also_indoor: search Ernst-Heilmann-Steg
-#: last_checked: 2021-11-24 (mapillary)
+#: last_checked: 2022-01-20 (mapillary)
 #: check_frequency: 120d
 	2::inwork 13270,10030 13306,10006
 EOF
@@ -33841,7 +33846,7 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="1003079755" version="4"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-01-10
+#: last_checked: 2022-01-21
 #: check_frequency: 14d
 	q3::inwork; 16192,10907 16153,10818
 EOF
@@ -34225,12 +34230,12 @@ EOF
 EOF
      },
      { from  => 1640808198, # 2021-12-29 21:03
-       until => 1643644800, # 2022-01-31 17:00
-       text  => 'Grunewaldstr.: Wasserrohrbruch, Fahrbahn zwischen Lepsiusstr. und Rothenburgstr. gesperrt, evtl. gibt es Beeinträchtigungen für Radfahrer, voraussichtlich bis Ende Januar 2022',
+       until => $isodate2epoch->("2022-01-21 12:00:00"), # 1643644800, # 2022-01-31 17:00
+       text  => 'Grunewaldstr.: Wasserrohrbruch, Fahrbahn zwischen Lepsiusstr. und Rothenburgstr. gesperrt, evtl. gibt es Beeinträchtigungen für Radfahrer, voraussichtlich bis 21. Januar 2022',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1162305.php',
        data  => <<EOF,
-#: source_id: viz2021:13.3156,52.4588,27.12.2021,15:34 (hier kein Endedatum)
+#: source_id: viz2021:13.3156,52.4588,27.12.2021,15:34 (hier kein Endedatum) (mittlerweile bis 21.1.2022)
 #: by: https://viz.berlin.de/2021/12/grunewaldstrasse/
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/grunewaldstrasse-nach-rohrbruch-wohl-bis-ende-januar-gesperrt_a332651
 #: note: auch laut rbb bis Ende Januar
@@ -34238,7 +34243,7 @@ EOF
 EOF
      },
      { from  => 1640894267, # 2021-12-30 20:57
-       until => $isodate2epoch->("2022-01-20 08:00:00"), # 1643670000, # 2022-02-01 00:00
+       until => $isodate2epoch->("2022-01-20 15:00:00"), # 1643670000, # 2022-02-01 00:00
        text  => 'Greifswalder Str.: vor der Kreuzung Thomas-Mann-Str. Wasserrohrbruch, Fahrbahn gesperrt, es gibt auch Beeinträchtigungen für Radfahrer, voraussichtlich bis 20.01.2022',
        type  => 'handicap',
        source_id => 'https://twitter.com/VIZ_Berlin/status/1476450886004219906',
@@ -34317,6 +34322,51 @@ EOF
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 	q3::inwork; 6626,11178 6549,11015
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Antonplatz: Wochenmarkt Mo bis Fr 09:00-18:00',
+       type  => 'handicap',
+       recurring => 1,
+       source_id => 'https://www.berlin.de/sen/web/service/maerkte-feste/wochen-troedelmaerkte/index.php/detail/205',
+       data  => <<EOF,
+#: tempex: mo-fr T09-T18
+	q4::temp:clock 13508,15912 13511,15964
+EOF
+     },
+     { from  => 1614492000, # 2021-02-28 07:00
+       until => 1672502400, # 2022-12-31 17:00
+       text  => 'Ringstr.: Bauarbeiten, Straße abschnittsweise gesperrt, evtl. sind auch Radfahrer betroffen, vom 01.03.2021 07:00 bis 31.12.2022 17:00 ',
+       type  => 'handicap',
+       source_id => 'viz2021:13.287063,52.432721,01.03.2021,07:00',
+       data  => <<EOF,
+#: XXX Sind Radfahrer tatsächlich betroffen? Haben die Bauarbeiten auch was mit den Sperrungen in der Kommandantenstr./Baseler Str. zu tun?
+#: also_indoor: traffic (G,H,B)
+	q4::inwork 3011,3303 2781,3122 2698,3068 2655,3025 2632,2969 2625,2850
+EOF
+     },
+     { from  => 1642917600, # 2022-01-23 07:00
+       until => 1653663600, # 2022-05-27 17:00
+       text  => 'Roseggerstr.: Bauarbeiten zwischen Sonnenallee und Stuttgarter Str., vom 24.01.2022 07:00 bis 27.05.2022 17:00',
+       type  => 'handicap',
+       source_id => 'viz2021:13.445809,52.479541,24.01.2022,07:00',
+       data  => <<EOF,
+	q4::inwork 13277,8211 13331,8283
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Zwieseler Str.: Zufahrt zum Richard-Kolkwitz-Weg kann wegen Bauarbeiten gesperrt sein, auch für Fußgänger',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: ZWIESELER-2022
+#: XXX Stand 2022-01-21: Verbotsschild für Fußgänger am nördlichen Ende, Verbot für Fahrzeuge aller Art außer Grundstücksanlieger am südlichen Ende, man kann aber trotzdem passieren
+#: XXX Halteverbotsschilder gelten bis Ende Juni 2023
+#: last_checked: 2022-01-21
+#: check_frequency: 120d
+#: next_check: 2023-06-30
+	2::inwork 19711,10426 19697,10210
 EOF
      },
     );

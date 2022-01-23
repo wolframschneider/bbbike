@@ -12,7 +12,7 @@
 # 
 #: XXX Bauarbeiten der Wasserbetriebe, laut Schild bis April 2022
 #: also_indoor: traffic (G,B)
-#: last_checked: 2021-12-21
+#: last_checked: 2022-01-18
 #: check_frequency: 45d
 #: next_check: 2022-04-01
 Mühsamstr.: Fahrbahn im Kreuzungsbereich Thaerstr. gesperrt	q4::inwork 13844,12900 13818,12897 13838,12884
@@ -29,7 +29,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Fahrbahn nur für Baufahrzeuge	q3::inwork 125
 # 
 #: note: laut rbb bis 29.10.2021, laut Parkverbotsschilder bis 28.1.2022 vvv
 #: also_indoor: traffic (H(falsch),G(teilweise),B)
-#: last_checked: 2022-01-11 vvv
+#: last_checked: 2022-01-20 vvv
 #: check_frequency: 14d vvv
 #: next_check: 2022-01-28 vvv
 # REMOVED (offen) --- Jessnerstr.: Sperrung der Fahrbahn nördlich der Oderstr.	q3::inwork 14946,11697 14986,11760
@@ -141,7 +141,7 @@ Oderstr.: Einbahnstraßenregelung, offen Richtung Osten	q3::inwork; 15043,11637 1
 ### Treptow ###
 # 
 #: XXX der Original-Eintrag muss nach Ablauf wieder aktiviert werden
-#: last_checked: 2022-01-06 (mapillary)
+#: last_checked: 2022-01-18 (mapillary)
 #: check_frequency: 60d
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
 # 
@@ -180,11 +180,11 @@ Oderstr.: Einbahnstraßenregelung, offen Richtung Osten	q3::inwork; 15043,11637 1
 #: by: https://abendblatt-berlin.de/2021/04/05/berlin-wedding-geisterhaus-an-der-burgsdorfstrasse-soll-abgerissen-werden/
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10655 (Abriss?)
 #: by: https://weddingweiser.de/schrotthaus-blockiert-strasse/
-#: osm_watch: way id="549316654" version="12"
+#: osm_watch: way id="549316654" version="13"
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,ex-H)
 #: valid: 20171026-
-#: last_checked: 2021-12-11
+#: last_checked: 2022-01-21 (osm)
 #: check_frequency: 60d
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
 # 
@@ -711,21 +711,7 @@ Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, Um
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
-#: XXX Bis wann dauern die Bauarbeiten an?
-#: XXX Mittlerweile nur etwa 100m
-#: by: https://www.uvp-verbund.de/trefferanzeige?docuuid=FD6C35EF-640E-43B3-8F22-17914A1869B0 (Verbindungstrasse Fernwärme Klingenberg)
-#: also_indoor: traffic (G,B(beide zu viel)) vvv
-# REMOVED (hier keine Einbahnstraße mehr) --- #: osm_watch: way id="1002249853" version="2"
-# REMOVED (hier keine Einbahnstraße mehr) --- #: osm_watch: way id="198589916" version="9"
-#: osm_watch: way id="198589913" version="6"
-#: last_checked: 2022-01-10 vvv
-#: check_frequency: 14d vvv
-Nöldnerstr.: Einbahnstraßenregelung, Radfahrer Richtung Westen können den Gehweg benutzen	q1::inwork; 15932,10830 15681,10801
-# REMOVED --- Stadthausstr.: Einbahnstraßenregelung	q4::inwork; 15681,10801 15674,10851
-#: check_frequency ^^^
-#: last_checked ^^^
-#: also_indoor ^^^
-# 
+# REMOVED (wieder beendet) --- #: XXX Bis wann dauern die Bauarbeiten an? --- #: XXX Mittlerweile nur etwa 100m --- #: by: https://www.uvp-verbund.de/trefferanzeige?docuuid=FD6C35EF-640E-43B3-8F22-17914A1869B0 (Verbindungstrasse Fernwärme Klingenberg) --- #: also_indoor: traffic (G,B(beide zu viel)) vvv --- # REMOVED (hier keine Einbahnstraße mehr) --- #: osm_watch: way id="1002249853" version="2" --- # REMOVED (hier keine Einbahnstraße mehr) --- #: osm_watch: way id="198589916" version="9" --- #: osm_watch: way id="198589913" version="6" --- #: last_checked: 2022-01-10 vvv --- #: check_frequency: 14d vvv --- Nöldnerstr.: Einbahnstraßenregelung, Radfahrer Richtung Westen können den Gehweg benutzen	q1::inwork; 15932,10830 15681,10801 --- # REMOVED --- Stadthausstr.: Einbahnstraßenregelung	q4::inwork; 15681,10801 15674,10851 --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: also_indoor ^^^
 # REMOVED --- #: by: https://www.berliner-woche.de/bezirk-lichtenberg/c-verkehr/neue-vorstreckungen-ueberwege-mittelinseln-und-abgesenkte-bordsteine_a319370 (Erwähnung der Wege in der Grünanlage) --- #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8710 (Abschluss der Bauarbeiten im 3. Quartal 2021) --- #: last_checked: 2021-09-11 vvv --- #: check_frequency: 7d vvv
 # REMOVED (hier nicht mehr) --- S-Bhf. Betriebsbahnhof Rummelsburg: Bauarbeiten, Umwege, Schotterwege	q2::inwork 16811,9937 16878,9875
 # REMOVED (hier nicht mehr) --- S-Bhf. Betriebsbahnhof Rummelsburg: Bauarbeiten, Umwege, Schotterwege	q3::inwork 16878,9875 16900,9861
@@ -823,15 +809,20 @@ Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3-::inwork 7126,9825 7118,987
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/neubau-der-moltkebruecke-beginnt_a316440
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/der-neubau-der-moltkebruecke-startet-anfang-2022_a330836 (Fertigstellung Anfang 2024)
 #: XXX wann wird die Einschränkung beendet?
-#: osm_watch: way id="13860352" version="16"
+#: osm_watch: way id="13860352" version="17"
 #: also_indoor: traffic (G,ex-H,B)
 #: priority: #A
-#: last_checked: 2021-11-06
+#: last_checked: 2022-01-20 (osm)
 # REMOVED --- #: check_frequency: 90d
 #: next_check: 2022-04-01
 Moltkestraßenbrücke: Fahrbahn gesperrt	q4::inwork 3867,4537 3898,4490
 # 
-# REMOVED (assume ended --- wegen der Sperrung der Moltkestraßenbrücke) --- #: also_indoor: traffic --- #: last_checked: 2021-11-06 vvv --- #: check_frequency: 90d vvv --- Enzianstr.: Einbahnstraßenregelung	q2::inwork; 3806,4628 3839,4577 --- Enzianstr.: Einbahnstraßenregelung	q3::inwork; 3839,4577 3867,4537 --- #: check_frequency ^^^ --- #: last_checked ^^^
+#: by: https://westnordost.de/p/76978.jpg (Bauarbeiten der Wasserbetriebe bis September 2023)
+#: also_indoor: traffic (G)
+#: last_checked: 2022-01-20 (osm)
+#: check_frequency: 180d
+#: next_check: 2023-09-30
+Enzianstr.: Bauarbeiten, Fahrbahn abschnittsweise gesperrt	q3::inwork 3806,4628 3839,4577 3867,4537
 # 
 ### Prenzlauer Berg ###
 # 
@@ -3006,8 +2997,11 @@ Bürgerstr. - Bendastr.: einige Fußgänger	q1 12830,6254 12813,6334 12812,6343 128
 (U-Bhf. Scharnweberstr. - Scharnweberstr.): U-Bahnhof, Türen	q4 3987,17808 3997,17840
 (U-Bhf. Scharnweberstr. - Scharnweberstr.): Fußgänger	q2 3997,17840 4016,17918
 (Hermann-Piper-Str./Olbendorfer Weg - Rathauspromenade): Fußgänger, kurvig	q2 4997,19849 4992,19891 5029,19945 5151,19960 5220,19982
-#: XXX_prog BS am Wendehammer, ansonsten q1
-Brienzer Str.: einige Fußgänger, Bordstein	q2 7282,17318 7289,17277
+# REMOVED (Absenkung existiert am Wendehammer, aber q2 beibehalten) --- #: XXX_prog BS am Wendehammer, ansonsten q1
+Brienzer Str.: einige Fußgänger	q2 7282,17318 7289,17277
+(Weg um den Schäfersee): einige Fußgänger	q1 7320,17718 7215,17689 7189,17666 7173,17591 7222,17471 7253,17467 7350,17464 7455,17495 7477,17544 7466,17627 7415,17696 7320,17718
+(Schäfersee - Baseler Str.): einige Fußgänger	q1 7215,17689 7185,17681 7166,17677 6897,17616
+(Genfer Str. - Schäfersee): einige Fußgänger	q1 7161,17743 7185,17681 7189,17666
 Torfstraßensteg: einige Fußgänger	q1 6847,14735 6824,14821
 (Parkplatz Getränke Hoffmann): Parkplatzverkehr	q2+ 18647,12354 18715,12348
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): Fußgänger	q1 22347,13858 22389,13824 22426,13735 22445,13720 22457,13713

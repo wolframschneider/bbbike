@@ -7,6 +7,12 @@
 # 
 #: temporary vvv
 # 
+#: next_check_id: TRAMTURM-2021
+#: last_checked: 2022-01-22
+#: check_frequency: 180d
+#: next_check: 2022-12-22
+Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
+# 
 #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.?
 #: last_checked: 2022-01-17
 #: check_frequency: 90d
@@ -19,10 +25,11 @@ Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
 # REMOVED --- #: next_check_id: LUECK-2021 --- #: source_id: viz2021:13.496206,52.500247,12.11.2021,06:00 (bis 10.12.2021) --- #: by: https://www.bahninfo-forum.de/read.php?9,716845,718464#msg-718464 --- #: note: Gegenverkehrsregelung beginnt östlich der Einmündung Wönnichstr. und endet östlich der Kreuzung Rummelsburger Str. --- #: last_checked: 2021-11-21 --- #: next_check: 2021-12-10 --- #: valid: -20211210 --- Lückstr.: Gegenverkehrsregelung	X::inwork 16601,10650
 # 
-#: source_id: viz2021:13.374553,52.583469,04.08.2021,08:00
+#: source_id: viz2021:13.374553,52.583469,04.08.2021,08:00 (bis 02.02.2022)
+#: note laut rbb bis 9.2.2022
 #: last_checked: 2022-01-01 (mapillary) vvv
-#: next_check: 2022-02-02 vvv
-#: valid: -20220202 vvv
+#: next_check: 2022-02-09 vvv
+#: valid: -20220209 vvv
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8227,19725
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 #: valid ^^^
@@ -121,7 +128,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 #: source_id: 2147346700 (bis 30.11.2021)
 #: source_id: viz2021:13.479483,52.501885,16.12.2020,09:00 (bis 30.11.2021) (mittlerweile bis 31.03.2022)
 #: also_indoor: traffic
-#: last_checked: 2021-12-27
+#: last_checked: 2022-01-21
 #: check_frequency: 45d
 #: next_check: 2022-03-31
 #: valid: -20220331
@@ -1619,7 +1626,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14235,17103
 #: XXX_prog: Ampel muss beim Überqueren in die Gounodstr. benutzt werden (Straßenbahntrasse)
 	F 14595,15980
-#: note: beim Überqueren der Straße Alt-Friedrichsfelde muss die Fußgängerampel auf der östlichen Seite benutzt werden, keine Anforderungsampel (Stand 2012-11-03)
+#: note: beim Überqueren der Straße Alt-Friedrichsfelde muss die Fußgängerampel auf der östlichen Seite benutzt werden, keine Anforderungsampel (Stand 2012-11-03, 2022-01-21)
 	X 17251,11789
 	X 22483,11261
 	X 23402,5483
@@ -3372,7 +3379,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://mein.berlin.de/projekte/radinfrastruktur-auf-der-hermannstrasse/ (Ampel wird permanent gemacht; vermutlich auch erst ab 2021)
 #: by: http://www.infravelo.de/projekt/hermannstrasse-bauabschnitt-2/ (Erwähnung der Ampel)
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2021/pressemitteilung.1134851.php (temporäre Ampel wird durch eine finale Ampel abgelöst, Ampel am südlichen Ausgang Leinestr. wird dafür abgebaut)
-#: osm_watch: node id="661594841" version="4"
+#: osm_watch: node id="661594841" version="5"
 #: note: provisorische Ampel
 #: note: Anforderungsampel
 #: XXX Die Ampel Hermannstr./Thomasstr. wird vermutlich permanent gemacht, die nächste Ampel weiter nördlich verschwindet dafür.
@@ -3441,7 +3448,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: check_frequency: 90d
 	F::inwork 17695,5394
 #: XXX wie lange bleibt die provisorische Ampel?
-#: osm_watch: node id="9221296482" version="2"
+#: osm_watch: node id="9221296482" version="3"
 #: note: Anforderungsampel
 #: last_checked: 2022-01-06
 #: check_frequency: 90d

@@ -45,10 +45,10 @@ Neuköllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
 Boddinstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12368,8356 12582,8408
 Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, Umwege über die Gehwege möglich	q4::inwork 16227,12280 16159,12301 16056,12317
 Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, Umwege über die Gehwege möglich	q4::inwork 16144,12388 16159,12301 16158,12191
-Nöldnerstr.: Einbahnstraßenregelung, Radfahrer Richtung Westen können den Gehweg benutzen	q1::inwork; 15932,10830 15681,10801
 Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Merler Weg Richtung Süden	q3::inwork; 19181,13485 19198,13272 19180,13219
 Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3::inwork 7126,9825 7118,9870
 Moltkestraßenbrücke: Fahrbahn gesperrt	q4::inwork 3867,4537 3898,4490
+Enzianstr.: Bauarbeiten, Fahrbahn abschnittsweise gesperrt	q3::inwork 3806,4628 3839,4577 3867,4537
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork 12556,15518 12605,15491 12621,15482
 Charlottenburger Str.: Einbahnstraßenregelung zwischen Goethestr. und Friesickestr., offen Richtung Westen	q3:inwork; 12646,16563 12798,16493
@@ -1604,7 +1604,10 @@ Bürgerstr. - Bendastr.: einige Fußgänger	q1 12830,6254 12813,6334 12812,6343 128
 (U-Bhf. Scharnweberstr. - Scharnweberstr.): U-Bahnhof, Türen	q4 3987,17808 3997,17840
 (U-Bhf. Scharnweberstr. - Scharnweberstr.): Fußgänger	q2 3997,17840 4016,17918
 (Hermann-Piper-Str./Olbendorfer Weg - Rathauspromenade): Fußgänger, kurvig	q2 4997,19849 4992,19891 5029,19945 5151,19960 5220,19982
-Brienzer Str.: einige Fußgänger, Bordstein	q2 7282,17318 7289,17277
+Brienzer Str.: einige Fußgänger	q2 7282,17318 7289,17277
+(Weg um den Schäfersee): einige Fußgänger	q1 7320,17718 7215,17689 7189,17666 7173,17591 7222,17471 7253,17467 7350,17464 7455,17495 7477,17544 7466,17627 7415,17696 7320,17718
+(Schäfersee - Baseler Str.): einige Fußgänger	q1 7215,17689 7185,17681 7166,17677 6897,17616
+(Genfer Str. - Schäfersee): einige Fußgänger	q1 7161,17743 7185,17681 7189,17666
 Torfstraßensteg: einige Fußgänger	q1 6847,14735 6824,14821
 (Parkplatz Getränke Hoffmann): Parkplatzverkehr	q2 18647,12354 18715,12348
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): Fußgänger	q1 22347,13858 22389,13824 22426,13735 22445,13720 22457,13713
