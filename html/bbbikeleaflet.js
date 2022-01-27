@@ -226,10 +226,15 @@ function doLeaflet() {
     // reuse osmAttribution
     var osmMapnikBWTileLayer = new L.TileLayer(osmMapnikBWUrl, {maxZoom: 19, attribution: osmAttribution});
 
-    var berlinAerialYear = '2019';
-    var berlinAerialNewestUrl = 'https://tiles.codefor.de/berlin-' + berlinAerialYear + '/{z}/{x}/{y}.png';
+    var berlinAerialYear = '2021';
+    var berlinAerialVariant = '-dop20rgbi';
+    var berlinAerialNewestUrl = 'https://tiles.codefor.de/berlin-' + berlinAerialYear + berlinAerialVariant + '/{z}/{x}/{y}.png';
     var berlinAerialAttribution = M("Kartendaten") + ': <a href="https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=a_luftbild' + berlinAerialYear + '_rgb@senstadt&type=FEED">Geoportal Berlin / Digitale farbige Orthophotos ' + berlinAerialYear + '</a>';
     var berlinAerialTileLayer = new L.TileLayer(berlinAerialNewestUrl, {maxZoom: 20, attribution: berlinAerialAttribution});
+
+    var bvgStadtplanUrl = 'https://stadtplan.bvg.de/api/data/20/{z}/{x}/{y}.png';
+    var bvgStadtplanAttribution = '\u00a9 <a href="https://www.bvg.de/de/datenschutz">2022 Berliner Verkehrsbetriebe</a>';
+    var bvgStadtplanLayer = new L.TileLayer(bvgStadtplanUrl, {maxZoom: 16, attribution: bvgStadtplanAttribution});
 
     map = new L.Map('map',
 		    {
@@ -312,6 +317,7 @@ function doLeaflet() {
 	,{label:"CyclOSM",       layer:cyclosmTileLayer,      abbrev:'C',  inControl:true  }
 	,{label:"OSM B/W",       layer:osmMapnikBWTileLayer,  abbrev:'BW', inControl:false }
 	,{label:"Berlin Aerial", layer:berlinAerialTileLayer, abbrev:'A',  inControl:false }
+	,{label:"BVG",           layer:bvgStadtplanLayer,     abbrev:'BVG',inControl:false }
     ];
     var overlayMaps = {};
     for(var i=0; i<overlayDefs.length; i++) {

@@ -2563,7 +2563,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-01-15
+#: last_checked: 2022-01-25
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 ',
@@ -2971,19 +2971,19 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        {
-         'data' => '#: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021) (mittlerweile: 25.11.2021) (mittlerweile: 01.02.2022)
+         'data' => '#: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021) (mittlerweile: 25.11.2021) (mittlerweile: 01.02.2022) (mittlerweile: 06.04.2022)
 #: also_indoor: traffic (G)
 #: last_checked: 2022-01-22
 #: check_frequency: 90d
-#: next_check: 2022-02-01
+#: next_check: 2022-04-06
 	q2::inwork 8913,16159 9099,16398
 ',
          'from' => 1611329064,
          'id' => 3324,
          'source_id' => '2147346268',
-         'text' => 'Stettiner Str.: Bauarbeiten, keine direkte Anbindung zur Badstr., bis 01.02.2022',
+         'text' => 'Stettiner Str.: Bauarbeiten, keine direkte Anbindung zur Badstr., voraussichtlich bis 06.04.2022',
          'type' => 'handicap',
-         'until' => 1643731200
+         'until' => 1649257200
        },
        {
          'data' => '#: next_check_id: ABBESTR-2021
@@ -3011,7 +3011,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="24"
 #: osm_watch: way id="165832806" version="21"
-#: last_checked: 2022-01-10
+#: last_checked: 2022-01-24
 #: check_frequency: 30d
 	2::inwork 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17497,8623
 # REMOVED (hier neu gemacht) ---	2::inwork 17497,8623 17461,8693 17416,8767 17380,8858
@@ -3129,7 +3129,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '# REMOVED --- #: add_fragezeichen: Bis wann gilt die Einbahnstraßenregelung für Radfahrer? --- 
 #: note: 2021-12-23 ("Radfahrer frei"-Schilder fehlen weiterhin, außerdem gibt es eine explizite Bedarfsumleitung für Radfahrer via Jägerstr.
 #: osm_watch: way id="753316505" version="3"
-#: last_checked: 2022-01-17
+#: last_checked: 2022-01-25
 	q4::inwork; 9195,11972 9207,11880
 # REMOVED (hier nicht mehr) ---	q4::inwork; 9207,11880 9218,11793
 ',
@@ -3286,7 +3286,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2022-01-21
+#: last_checked: 2022-01-26
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -3362,9 +3362,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1627164000,
          'id' => 3422,
          'source_id' => 'viz2021:13.326349,52.447526,26.07.2021,07:00',
-         'text' => 'Klingsorstr.: zwischen Birkbuschstr. und Barsekowstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 26.07.2021 07:00 bis 31.01.2022 17:00',
+         'text' => 'Klingsorstr.: zwischen Birkbuschstr. und Barsekowstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 26.07.2021 07:00 bis 28.03.2022 17:00',
          'type' => 'handicap',
-         'until' => 1643644800
+         'until' => 1648479600
        },
        undef,
        {
@@ -3394,7 +3394,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 # REMOVED (hier nicht mehr) ---	q2::inwork 19109,9306 19195,9249
 #: also_indoor: traffic (G,B)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2022-01-10 vvv
+#: last_checked: 2022-01-26 vvv
 	q3::inwork 19020,9364 18939,9417
 	q2::inwork 18977,9322 19020,9364 19030,9530
 #: last_checked ^^^
@@ -3479,7 +3479,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 # REMOVED (eins reicht) --- #: osm_watch: note 2867467 2
 #: osm_watch: way id="16311543" version="18"
 #: also_indoor: search Ernst-Heilmann-Steg
-#: last_checked: 2022-01-20 (mapillary)
+#: last_checked: 2022-01-23
 #: check_frequency: 120d
 	2::inwork 13270,10030 13306,10006
 ',
@@ -3822,7 +3822,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1672502400
        },
        {
-         'data' => '	q4::inwork 13277,8211 13331,8283
+         'data' => '#: also_indoor: traffic (G,H,B)
+	q4::inwork 13277,8211 13331,8283
 ',
          'from' => 1642917600,
          'id' => 3503,
@@ -3843,6 +3844,21 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => undef,
          'id' => 3504,
          'text' => 'Zwieseler Str.: Zufahrt zum Richard-Kolkwitz-Weg kann wegen Bauarbeiten gesperrt sein, auch für Fußgänger',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10698 (Absperrung wegen eines Chemiewaffenfundes)
+#: by: https://www.deutsches-architekturforum.de/thread/14836-stadtlandhavel-spandau-kleine-eiswerderstra%C3%9Fe/?postID=710407#post710407
+#: by: https://immobilien.stadtlandhavel.com/
+#: osm_watch: way id="577673938" version="5"
+#: osm_watch: way id="35043662" version="10"
+#: add_fragezeichen: Ist dieser Weg tatsächlich gesperrt? Wenn ja: wo genau ist der gesperrte Abschnitt?
+	2::inwork -1923,15684 -1938,15782 -1935,15826 -1978,15940 -1976,16012
+',
+         'from' => undef,
+         'id' => 3505,
+         'text' => 'Uferweg am Salzhof: möglicherweise gesperrt',
          'type' => 'gesperrt',
          'until' => undef
        }

@@ -1707,7 +1707,7 @@ Otto-Weidt-Platz	NN 7732,14131 7818,14185 7866,14215
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/erschliessung-und-grundstuecksuebertragung-bebauungsplan-1-62b-oestlich-heidestrasse-otto-weidt-platz-1032336.php
 #: by: https://www.berliner-woche.de/moabit/c-bauen/golda-meir-steg-verbindet-jetzt-moabit-mit-mitte_a330725
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2021-12-13 (mapillary)
+#: last_checked: 2022-01-25
 #: check_frequency: 60d
 #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7818,14185 7861,14133
@@ -1720,7 +1720,7 @@ Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7802,14250 7781,14238 7
 Lisa-Fittko-Str.	N 7734,13944 7820,13994
 George-Stephenson-Str.	N 7487,14472 7452,14415 7500,14333 7569,14217 7679,14030 7734,13944
 #: XXX zurzeit darf der Platz noch von Fahrzeugen benutzt werden (wegen der Bauarbeiten in der George-Stephenson-Str.?), wird später vermutlich aufgehoben, dann NN ohne osm.highway:service; eigentlich Einbahnstraße, aber der Platz ist breit genug...
-#: last_checked: 2021-12-04 (daf)
+#: last_checked: 2022-01-25
 #: check_frequency: 90d
 #: osm.highway: service
 Hans-Peters-Platz	N 7732,14131 7679,14030
@@ -2389,8 +2389,20 @@ Hertastr. (Neukölln)	H 12470,6586 12592,6741 12649,6833
 Hertastr. (Neukölln)	N 12649,6833 12689,6905
 Silbersteinstr.	H 11689,6634 12044,6707 12395,6785 12649,6833 12702,6846 12816,6870 12973,6902 13085,6925
 Britzer Damm	H 12576,6374 12588,6337 12595,6299 12597,6293 12618,6207 12628,6166 12644,6087 12699,5909 12718,5845 12789,5612 12794,5596 12798,5580 12812,5526 12841,5416 12883,5257 12885,5205 12731,4841 12547,4391 12564,4308
-Lahnstr.	H 13085,6925 13265,6972 13336,6986 13500,7018 13627,7047 13891,7107 13928,7106 13970,7105 14011,7103
+Lahnstr.	H 13085,6925 13265,6972 13336,6986 13500,7018 13627,7047 13891,7107
+#: next_check_id: NEUKOELLNISCHEALLEE-2019
+#: priority: #A vvv
+#: next_check: 2022-12-31 vvv
+#: valid: -20221231
+Lahnstr.	N 13891,7107 13928,7106 13970,7105 14011,7103
+#: valid: !-20221231
+Lahnstr.	H 13891,7107 13928,7106 13970,7105 14011,7103
+#: valid: -20221231
+Neuköllnische Allee	N 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
+#: valid: !-20221231
 Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
+#: next_check ^^^
+#: priority ^^^
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019
 #: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/neukolln-offnung-der-grenzallee-am-24-01-
@@ -3597,13 +3609,33 @@ Waltroper Weg	N 4141,1282 4082,1370
 Waltroper Weg	N 4056,1353 4011,1418
 Waltroper Platz	N 4056,1353 4082,1370 4109,1389
 Lindenstr. (Lichterfelde)	N 3895,1219 3999,1185 4146,1128 4207,1113 4271,1081 4355,1043
+# 
 #: carriageway_width: 33m (16m+medial strip=4 m+13m, Höhe Motzener Str.)
-Nahmitzer Damm	H 7790,672 7937,583 8075,499 8250,392 8382,347 8470,329 8584,320 8736,337 8906,392 9002,471
+Nahmitzer Damm	H 7790,672 7937,583 8075,499 8250,392 8382,347 8470,329 8584,320 8736,337
+#: next_check_id: BUCKOWERCHAUSSEE-2022
+#: priority: #A
+#: next_check: 2025-01-04 vvv
+#: valid: !20220124-20250104
+Nahmitzer Damm	H 8736,337 8906,392 9002,471
+#: valid: 20220124-20250104
+Nahmitzer Damm	N 8736,337 8906,392 9002,471
+#: next_check ^^^
+# 
 #: oldname: -200910: Straße 490 (zwischen Hildburghauser und Marienfelder)
 Friedenfelser Str.	H 7668,471 7688,544 7729,691 7757,834 7759,906 7753,994
+# 
 Buckower Chaussee	N 8533,512 8742,475 8972,498 9002,471
 #: carriageway_width: 12m (aber nur im Bereich des Bahnübergangs, ansonsten breiter, mit Mittelstreifen)
-Buckower Chaussee	H 9002,471 9069,506 9158,551 9178,556 9250,576 9858,744 10047,813 10187,872 10276,906 10324,925 10427,968
+#: next_check_id: BUCKOWERCHAUSSEE-2022
+#: priority: #A
+#: next_check: 2025-01-04 vvv
+#: valid: !20220124-20250104
+Buckower Chaussee	H 9002,471 9069,506 9158,551 9178,556 9250,576 9858,744
+#: valid: 20220124-20250104
+Buckower Chaussee	N 9002,471 9069,506 9158,551 9178,556 9250,576 9858,744
+#: next_check ^^^
+Buckower Chaussee	H 9858,744 10047,813 10187,872 10276,906 10324,925 10427,968
+# 
 Heinitzweg	N 10276,906 10232,1015 10232,1025 10248,1055 10325,1083
 Heinitzweg	NN 10325,1083 10379,1097
 #: note: beleuchtet
@@ -6279,7 +6311,9 @@ Georg-Knorr-Str.	N 19352,15639 19350,15573 19301,15503 19295,15447 19414,15132
 # XXX: laut http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20060921.1145.47773.html ist in der Georg-Knorr-Str. ein Radweg
 Georg-Knorr-Str.	N 19414,15132 19191,15043 19169,15015
 (Landsberger Allee - Georg-Knorr-Str.)	N 19364,15045 19314,15059 19169,15015
-(Fußgängerbrücke am S-Bhf. Marzahn)	NN 19573,15401 19567,15406 19574,15423 19612,15403 19626,15396 19636,15417 19681,15405
+# REMOVED --- #: by: https://www.berliner-woche.de/marzahn/c-bauen/zeitplan-fuer-geplanten-ersatzneubau-am-s-bahnhof-marzahn-unklar_a333896 (im Dez 2021 abgerissen) --- (Fußgängerbrücke am S-Bhf. Marzahn)	NN 19573,15401 19567,15406 19574,15423 19612,15403 19626,15396 19636,15417 19681,15405
+(Fußgängerbrücke S-Bhf. Marzahn - Eastgate)	NN 19653,15544 19671,15561 19657,15527 19672,15519 19687,15513 19767,15473
+(Fußgängerbrücke - Märkische Allee)	NN 19687,15513 19694,15529 19733,15511
 Frank-Schweitzer-Str.	N 19350,14997 19175,14926 19113,14901 19117,14875 19255,14911 19347,14936 19400,15027 19424,15068 19414,15132
 (Landsberger Allee - Frank-Schweitzer-Str.)	N 19214,14966 19244,14980 19400,15027
 (Frank-Schweitzer-Str. - Landsberger Allee)	N 19244,14980 19205,14980
@@ -6580,7 +6614,7 @@ Hönower Wiesenweg	N 17856,8162 17793,8225 17753,8290 17704,8327 17620,8366 17554
 (Hönower Wiesenweg - Betriebsbahnhof Rummelsburg)	N 17308,9090 17300,9135 17284,9198
 # 
 #: note: Parkstadt Karlshorst vvv
-Georg-Klingenberg-Str.	N 17843,8632 17781,8655 17656,8700 17461,8693
+Georg-Klingenberg-Str.	N 17846,8644 17783,8663 17656,8700 17461,8693
 Adolf-Wermuth-Allee	N 17656,8700 17640,8627 17621,8544 17604,8466 17597,8434
 Heiner-Müller-Str.	N 17497,8623 17640,8627 17771,8605
 #: note ^^^
@@ -6633,11 +6667,11 @@ Hoher Wallgraben	N 17988,8350 17999,8336 18078,8112 18101,8044
 (Hoher Wallgraben - Hegemeisterweg)	NN 18101,8044 18119,7996 18287,7815
 (Hegemeisterweg - Hoher Wallgraben/KGA Stallwiese)	NN 17987,7973 18025,7986 18101,8044
 Rödelstr.	N 18007,8377 17813,8508
-Trautenauer Str.	N 17753,8290 17774,8342 17794,8429 17813,8508 17830,8578 17838,8611 17843,8632 17851,8662 17879,8773 17910,8881 17915,8900
+Trautenauer Str.	N 17753,8290 17771,8349 17794,8429 17813,8508 17830,8578 17838,8611 17846,8644 17851,8662 17879,8773 17910,8881 17915,8900
 (Blockdammweg - Trautenauer Str.)	NN 17904,8924 17888,8899 17910,8881
 Schenkestr.	N 17961,8312 17794,8429
 Stechlinstr.	N 18005,8517 18086,8634 18222,8843
-Güntherstr.	N 17976,8106 17920,8256 17774,8342
+Güntherstr.	N 17976,8106 17920,8256 17771,8349
 Sadowastr. (Karlshorst)	N 17856,8162 17925,8101 17976,8106 18078,8112
 Drosselstieg	N 17748,8109 17683,7958
 Gleyeweg	N 17762,7931 17683,7958 17651,7973 17613,7989 17529,8073 17532,8125 17566,8199 17597,8258
@@ -8779,6 +8813,7 @@ Fritz-Lang-Str.	N 23833,15066 23841,15004 23846,14931
 Fritz-Lang-Str.	NN 23856,14868 23878,14748
 Fritz-Lang-Platz	N 23871,14914 23846,14931 23820,14896 23856,14868 23882,14904 23871,14914
 Zerbster Str. (Hellersdorf)	N 24451,15181 24413,15372 24357,15429 24346,15505 24324,15519 24169,15497
+#: by: https://lsg-hoenower-weiherkette.de/
 (Zerbster Str. - Louis-Lewin-Str.)	NN 24324,15519 24379,15511 24459,15526 24468,15554 24811,15513 24827,15564 24927,15611 25003,15617
 (Louis-Lewin-Str. - U-Bhf. Hönow)	NN 25003,15617 25052,15591 25224,15578 25312,15558 25332,15507 25357,15489 25419,15487 25446,15447 25493,15427 25540,15429 25624,15425 25767,15441 25791,15438 25897,15468 25984,15415 25938,15359 25936,15335 25990,15301 26004,15142 25984,15098 25985,15080 26014,15039
 (Gohliser Str. - Wuhle-Hönow-Weg)	NN 25504,15352 25541,15406 25540,15429
@@ -11048,6 +11083,10 @@ Dönhoffstr.	N 18134,9080 18161,9029 18221,8978 18299,8925 18375,8874 18451,8823 
 Hönower Weg	N 16900,9861 16925,9852 16984,9857 17383,9719 17471,9688 17587,9655 17668,9632 17777,9649 17920,9698 18066,9770 18266,9853
 Friedenhorster Str.	N 18266,9853 18301,9946 18312,9985 18296,10027
 Ehrenfelsstr.	N 19468,8168 19447,8175 19375,8250 19228,8350 19148,8406 19107,8435 19000,8509 18945,8547 18891,8586 18846,8616 18778,8663 18737,8686
+#: osm.highway: service
+(Edeka-Parkplatz)	N 18846,8616 18870,8646 18880,8689
+#: note: Privatgrundstück, Durchgang gestattet
+(Edeka-Parkplatz - Rheinsteinstr.)	NN 18880,8689 18865,8740
 (Waldweg)	NN 20872,7268 20892,7236 20867,7165 20869,7116
 (Waldweg an der S-Bahn)	NN 20869,7116 21409,6731 21576,6644
 (Waldweg an der S-Bahn)	NN 20869,7116 20682,7262 20653,7289
@@ -11822,7 +11861,7 @@ Hauffstr.	NN 15620,11210 15694,11125 15740,11028
 Hauffstr.	N 15740,11028 15756,10966
 #: note: zweiter Punkt ist nur ein "Hilfspunkt" "gegen" 3nocross
 Richard-Kolkwitz-Weg	N 18703,9997 18708,10000 18715,10003 18773,10028
-Richard-Kolkwitz-Weg	NN 18773,10028 19124,10175 19675,10410 19711,10426 19925,10499
+Richard-Kolkwitz-Weg	NN 18773,10028 19124,10175 19394,10290 19675,10410 19711,10426 19925,10499
 Richard-Kolkwitz-Weg	N 19925,10499 19954,10442
 Ursula-Goetze-Str.	N 19100,9811 19112,9993 19124,10175
 Schackelsterstr.	N 19954,10442 20215,10554 20294,10585 20362,10611 20523,10686 20681,10772 20835,10875 21032,11033
@@ -13061,6 +13100,7 @@ Eisnerstr.	N 9507,-85 9653,-483 9698,-556
 (Parkplatz S-Bhf. Buckower Chaussee)	N 9178,556 9218,458 9249,434 9296,335 9271,323
 # 
 #: next_check_id: BUCKOWERCHAUSSEE-EISNER-2020
+#: next_check_id: BUCKOWERCHAUSSEE-2022
 #: XXX Gehweg wird vermutlich verlegt
 #: by: http://www.baustellen-doku.info/berlin_dresdener-bahn/PFA1_Marienfelde_Attilastrasse-Schichauweg/20200424/ (Bild 31)
 #: last_checked: 2021-10-03
@@ -14924,7 +14964,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2022-01-21
+#: last_checked: 2022-01-26
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15302,7 +15342,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2022-01-21
+#: last_checked: 2022-01-26
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)

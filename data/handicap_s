@@ -13,7 +13,8 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 Schloﬂplatz: Fuﬂg‰nger, Bauarbeiten	q4::inwork 10102,12384 10063,12438
 (Molkenmarkt - zur Stralauer Str.): Bauarbeiten, Gehweg ist noch offen	q4::inwork 10675,12280 10736,12285 10772,12288 10804,12291 10830,12279
 Holzmarktstr. - Ifflandstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg, Bordsteine	q4::inwork 11524,12314 11589,12296
-Chausseestr.: gemeinsamer Rad- und Gehweg	q2::inwork; 8732,14098 8607,14253 8570,14299 8490,14397 8442,14456 8406,14507 8336,14586
+Chausseestr.: Radweg auf gegen¸berliegenden B¸rgersteig	q2::inwork; 8732,14098 8607,14253 8570,14299 8490,14397 8442,14456
+Chausseestr.: gemeinsamer Geh- und Radweg	q2::inwork; 8442,14456 8406,14507 8336,14586
 Dorotheenstr.: Bauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 8775,12457 8904,12489
 Dorotheenstr.: Bauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 8999,12498 9011,12423
@@ -2206,6 +2207,11 @@ Golda-Meir-Steg: Fuﬂg‰nger	q2 7861,14133 7899,14157 7962,14198
 (Gaudystr. - Sonneberger Weg): einige Fuﬂg‰nger, Bordstein	q4 10547,15586 10542,15609
 (Fuﬂweg zum Wohngebiet Sewanstr.): Fuﬂg‰nger, Bordstein	q4 17882,10128 17889,10163 17883,10185
 (Altonaer Str. - H‰ndelallee): einige Fuﬂg‰nger	q1 6354,12278 6280,12222
+(Fuﬂg‰ngerbr¸cke S-Bhf. Marzahn - Eastgate): Rampe	q3 19653,15544 19671,15561 19657,15527
+(Fuﬂg‰ngerbr¸cke S-Bhf. Marzahn - Eastgate): Fuﬂg‰nger	q4 19657,15527 19672,15519 19687,15513 19767,15473
+(Fuﬂg‰ngerbr¸cke - M‰rkische Allee): Fuﬂg‰nger	q3 19687,15513 19694,15529 19733,15511
+(Edeka-Parkplatz): Parkplatzverkehr	q2 18846,8616 18870,8646 18880,8689
+(Edeka-Parkplatz - Rheinsteinstr.): Fuﬂg‰nger	q3 18880,8689 18865,8740
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635

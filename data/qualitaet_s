@@ -46,6 +46,7 @@ Stuttgarter Str.: Asphalt	Q0 13663,8011 13633,8036 13554,8101 13510,8138
 Stuttgarter Str.: Asphalt	Q0 13510,8138 13331,8283
 Stuttgarter Str.: Kopfsteinpflaster	Q2 13331,8283 13166,8423
 Drübecker Weg: Kopfsteinpflaster	Q2 13909,8471 13808,8533
+Kelbraer Str.: Beton	Q0 13830,8381 13909,8471
 Brockenstr.: Kopfsteinpflaster	Q2 13575,8593 13687,8734
 Sinsheimer Weg: schlechtes Kopfsteinpflaster, aber Ausweichen auf Parkplatz möglich	Q2 13687,8734 13774,8849
 Sinsheimer Weg: Betonstraße	Q0 13774,8849 13837,8932
@@ -151,7 +152,7 @@ Wallensteinstr.: Asphalt mit einigen Schäden	Q1 18037,9195 18092,9141 18134,9080
 Dönhoffstr.: Asphalt	Q0 18134,9080 18161,9029 18221,8978 18299,8925 18375,8874 18451,8823 18518,8778 18609,8717 18727,8634
 Halker Zeile: schlechtes Kopfsteinpflaster	Q3 9940,559 10063,251 10156,13 10214,-142 10266,-284
 Halker Zeile: Asphalt	Q0 10266,-284 10374,-552 10473,-799
-(Am Bahndamm): sehr guter Asphalt	Q0 18703,9997 18708,10000 18715,10003 18773,10028 19124,10175 19675,10410 19711,10426
+(Am Bahndamm): sehr guter Asphalt	Q0 18703,9997 18708,10000 18715,10003 18773,10028 19124,10175 19394,10290 19675,10410 19711,10426
 Alemannenstr.: Asphalt	Q0 -3360,2917 -3417,2886
 Alemannenstr.: gutes Kopfsteinpflaster	Q1 -3417,2886 -3452,2868 -3509,2817 -3635,2668 -3686,2579
 Alemannenstr.: mäßiges Kopfsteinpflaster	Q2 -3686,2579 -3692,2549 -3709,2517 -3725,2475 -3726,2457
@@ -10827,6 +10828,8 @@ Heiner-Müller-Str.: Asphalt	Q0 17497,8623 17640,8627
 Schönegarten: Betonpflaster	Q0 7416,10492 7432,10546 7330,10590
 Wichmannstr.: Kleinsteinpflaster	Q1 6447,11144 6452,11118
 Frobenstr.: Asphalt mit einigen Rissen	Q0; 7429,10366 7413,10244
+(Edeka-Parkplatz): Asphalt	Q0 18846,8616 18870,8646 18880,8689
+(Edeka-Parkplatz - Rheinsteinstr.): Verbundsteinpflaster	Q1 18880,8689 18865,8740
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -11423,7 +11426,7 @@ Bleicheroder Str.: Asphalt	Q0 11263,18842 11439,18890 11526,18929 11622,18964 11
 Paracelsusstr.: schlechter Asphalt	Q2 11523,19393 11575,19296 11543,19279 11549,19258 11599,19171
 Paracelsusstr.: Kopfsteinpflaster	Q2 11634,19187 11727,19001
 Paracelsusstr.: schlechter Asphalt	Q2 11671,19204 11613,19312 11575,19296
-Honnefer Str.: Asphalt	Q0 19299,8946 19195,9122
+Honnefer Str.: Asphalt mit einigen Schäden	Q1 19299,8946 19195,9122
 Voltastr.: Kopfsteinpflaster	Q2 9034,14910 9201,14997 9355,15078 9566,15188
 Zechliner Str.: Asphalt	Q0 16314,14361 16281,14604
 Zechliner Str.: Asphalt mit leichten Schäden	Q0 16281,14604 16537,14641
@@ -13119,7 +13122,7 @@ Isenburger Weg: Kopfsteinpflaster	Q2 -7978,14419 -7952,14632
 Isenburger Weg: guter Beton	Q0 -7952,14632 -7940,14690 -7908,14955
 Isenburger Weg: Beton/Asphalt	Q0 -7908,14955 -7882,15129 -7867,15185
 Isenburger Weg: Kopfsteinpflaster, teilweise mit Asphaltüberzug	Q2 -7867,15185 -7819,15342
-Güntherstr.: schlechtes Kopfsteinpflaster	Q3 17976,8106 17920,8256 17774,8342
+Güntherstr.: schlechtes Kopfsteinpflaster	Q3 17976,8106 17920,8256 17771,8349
 Merler Weg: kleinteiliges Kopfsteinpflaster	Q2 19180,13219 18852,13269
 Hugo-Heimann-Str.: guter Asphalt	Q0 14120,1991 14165,2106 14229,2177 14444,2090 14587,2032
 Klutstr.: mäßiges Kopfsteinpflaster	Q2 26057,5553 25757,5536
@@ -14334,9 +14337,9 @@ Singener Weg: guter Asphalt	Q0 -505,2456 -425,2154 -326,2177
 Hegauer Weg: guter Asphalt	Q0 -326,2177 -172,2274 -84,2376 -38,2438 -26,2460 -35,2470
 Schlehdornsteig: Wechsel zwischen Kopfsteinpflaster und Verbundsteinpflaster	Q1 -2046,2070 -2208,2010
 Mittelstr. (Zehlendorf): schlechtes Kopfsteinpflaster	Q3 104,2802 50,3031
-Trautenauer Str.: Kopfsteinpflaster	Q2 17753,8290 17774,8342 17794,8429 17813,8508
+Trautenauer Str.: Kopfsteinpflaster	Q2 17753,8290 17771,8349 17794,8429 17813,8508
 Trautenauer Str.: Kopfsteinpflaster, mäßiger Asphaltstreifen in der Mitte	Q2 17813,8508 17830,8578
-Trautenauer Str.: Asphalt	Q0 17830,8578 17838,8611 17843,8632 17851,8662 17879,8773 17910,8881 17915,8900
+Trautenauer Str.: Asphalt	Q0 17830,8578 17838,8611 17846,8644 17851,8662 17879,8773 17910,8881 17915,8900
 Am Forstacker: Beton	Q0 -3676,17131 -3671,17202 -3648,17250 -3612,17280 -3532,17333 -3491,17381 -3418,17525
 Talsandweg: guter Asphalt	Q0 3138,21372 3206,21179 3222,21134
 Tourcoingstr.: guter Asphalt	Q0 3781,16175 3796,16202 3836,16273 3895,16381
