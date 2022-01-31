@@ -693,7 +693,7 @@ Karl-Marx-Allee	HH 13785,12292 13543,12326 13448,12340 13163,12382 12878,12430 1
 Karl-Marx-Allee	HH 11976,12595 11678,12727 11635,12745 11589,12768 11289,12908 11226,12945
 Strausberger Platz (Friedrichshain)	HH 12114,12546 12083,12518 12028,12519 11988,12546 11976,12595 12005,12619 12050,12616 12099,12580 12114,12546
 (Straße der Pariser Kommune - Spreeufer)	NN 12497,11459 12441,11373
-Straße der Pariser Kommune	H 12497,11459 12543,11521 12645,11673 12676,11739 12728,11850 12758,11915
+Straße der Pariser Kommune	H 12497,11459 12543,11521 12645,11673 12660,11705 12676,11739 12728,11850 12758,11915
 Straße der Pariser Kommune	H 12822,12067 12833,12154 12854,12287 12862,12332 12878,12430 12891,12549
 Franz-Mehring-Platz	H 12758,11915 12822,12067
 (Vorfahrt Neues-Deutschland-Gebäude)	NN 12788,11898 12891,12008
@@ -724,7 +724,7 @@ Kolonnenstr.	H 8209,8773 8145,8773 8078,8772 8014,8771 8008,8771 7795,8765 7709,
 #: XXX wird am 18.10.2021 zum Richard-von-Weizsäcker-Platz umbenannt --- verzögert sich wegen Widerspruchs
 #: also_indoor: search Richard-von-Weizsäcker-Platz
 # REMOVED --- #: next_check: 2021-10-18
-#: last_checked: 2022-01-15 (research)
+#: last_checked: 2022-01-27 (research)
 #: check_frequency: 14d
 Kaiser-Wilhelm-Platz	NN 7201,8870 7307,8945
 Herbertstr. (Schöneberg)	N 7360,8918 7389,8837 7402,8783 7395,8761
@@ -2535,7 +2535,7 @@ Rumplerzeile	N 19331,3098 19417,3184
 Erich-Thilo-Str.	N 19417,3015 19331,3098 19257,3172
 Katharina-Boll-Dornberger-Str.	N 19269,3183 19167,3287 19086,3370 19097,3380 19057,3422 19013,3466 18998,3454 18943,3508
 Katharina-Boll-Dornberger-Str.	N 18998,3454 18987,3442 19033,3397 19073,3357 19086,3370
-Katharina-Boll-Dornberger-Str.	NN 18943,3508 18836,3611
+Katharina-Boll-Dornberger-Str.	NN 18943,3508 18848,3600 18836,3611
 Wilhelm-Hoff-Str.	N 18828,3196 18892,3256 18953,3318
 Wilhelm-Hoff-Str.	NN 18953,3318 19033,3397 19057,3422 19061,3426 19107,3472 19125,3491
 (Wilhelm-Hoff-Str. - James-Franck-Str.)	NN 18828,3196 18822,3188 18724,3091 18716,3082 18707,3074 18613,2983 18601,2971
@@ -4731,7 +4731,7 @@ Rübländerstr.	N 14321,23378 14382,23574
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3988
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3988&date=20151213
 #: XXX Planstraße D --- bleibt dieser Weg erhalten?
-#: osm_watch: way id="224122378" version="12"
+#: osm_watch: way id="224122378" version="13"
 #: last_checked: 2021-02-25 (mapillary)
 #: check_frequency: 360d
 (S-Bahndamm - Hobrechtsfelder Chaussee)	NN 15469,24813 15339,24861 14434,25388
@@ -7305,8 +7305,9 @@ Waldläuferweg	N 6006,22867 6118,22947
 #: last_checked: 2020-02-29 (mapillary)
 #: next_check: 2023-01-01
 Alter Bernauer Heerweg	NN 6641,22756 6770,22801
-Alter Bernauer Heerweg	N 6770,22801 6779,22804 6836,22824 6892,22843 6948,22862 7004,22881 7072,22905 7109,22919 7171,22942 7493,23064 7609,23108 7839,23195 7852,23200 7930,23227 8143,23305
+Alter Bernauer Heerweg	N 6770,22801 6779,22804 6836,22824 6892,22843 6948,22862 7004,22881 7072,22905 7109,22919 7171,22942 7493,23064 7609,23108 7839,23195 7852,23200 7930,23227 7998,23252 8143,23305
 Alter Bernauer Heerweg	NN 8143,23305 8211,23330 8562,23421
+(Siedlung Talheim)	N 7998,23252 7984,23284 7872,23538
 Feldspatzenweg	NN 7609,23108 7583,23177 7825,23265 7852,23200
 Mehlweg	N 6779,22804 6723,22924
 Mühlsteinweg	N 6836,22824 6778,22950
@@ -7418,7 +7419,7 @@ Tramper Weg	NN 7086,20597 7098,20582
 Alt-Lübars	N 6764,23396 6801,23474 6805,23554
 Alt-Lübars	H 6805,23554 6744,23695 6817,23760 6879,23816 6992,23814 7111,23873 7185,23749
 Alt-Lübars	H 6879,23816 7051,23924 7111,23873
-Blankenfelder Chaussee (Lübars)	H 7185,23749 8141,23477
+Blankenfelder Chaussee (Lübars)	H 7185,23749 7872,23538 8141,23477
 Bahnhofstr. (Blankenfelde)	H 8141,23477 8562,23421 8619,23438 8632,23442 8803,23478 8909,23506
 An der Vogelweide	N 8704,21858 8725,21910 8737,21942
 An der Vogelweide	N 8725,21910 8615,21955 8590,21894 8597,21879
@@ -15083,8 +15084,10 @@ Travestr.	N 14986,11760 14901,11808 14836,11842
 Hiddenseer Str.	N 11828,15210 11651,15273
 Naglerstr.	N 13575,10963 13496,10763
 Müncheberger Str.	N 12450,11980 12617,11888
-Erich-Steinfurth-Str.	NN 12645,11673 12596,11696
-Erich-Steinfurth-Str.	N 12596,11696 12453,11790 12378,11806
+Erich-Steinfurth-Str.	NN 12645,11673 12608,11692
+Erich-Steinfurth-Str.	N 12608,11692 12453,11790 12378,11806
+#: osm.highway: service
+(Straße der Pariser Kommune - Erich-Steinfurth-Str.)	N 12660,11705 12634,11705 12608,11692
 Rütlistr. (Neukölln)	NN 12480,9037 12526,9125 12554,9178 12592,9249 12621,9297
 Schleusenufer	N 13487,10227 13628,10396
 Am Schonungsberg	N 30518,3753 30605,4028 30655,4186 30696,4314
@@ -16938,10 +16941,12 @@ Emmichstr.	N 7282,2386 7370,2400 7424,2400 7559,2385 7648,2356
 (Emmichstr. - Parkweg)	NN 7648,2356 7665,2357
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-28464.pdf
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksamt/protokolle/2021/2021-10-05_maerckerweg-umbebennen_top-10.pdf
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_04_0173_0236_online.pdf (Straßenumbenennung zum 29. April 2022)
 #: XXX geplante Umbenennung in Maria-Rimkus-Weg
 #: also_indoor: search Maria-Rimkus-Weg
 #: last_checked: 2021-10-05 (BA-Beschluss)
-#: check_frequency: 180d
+# REMOVED --- #: check_frequency: 180d
+#: next_check: 2022-04-29
 Maerckerweg	N 7559,2385 7602,2522
 #: note: relativ stark befahren, evtl. NH? (Aber keine Vorfahrtstraße)
 Eiswaldtstr.	N 6718,2443 6834,2449 6965,2418 7051,2366 7172,2343 7282,2386

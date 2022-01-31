@@ -8489,7 +8489,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005637',
        data  => <<EOF,
-	2::inwork 8141,23477 7185,23749
+	2::inwork 8141,23477 7872,23538 7185,23749
 EOF
      },
      { from  => 1180821600, # 2007-06-03 00:00
@@ -16309,10 +16309,10 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: tempex: su T09-T16
-	q4::temp:clock 12596,11696 12453,11790 12378,11806
+	q4::temp:clock 12608,11692 12453,11790 12378,11806
 #: next_check_id: CORONA-2020
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2022-01-08
+#: last_checked: 2022-01-29
 #: check_frequency: 30d
 	q4::temp:clock 12378,11806 12413,11901
 EOF
@@ -25154,7 +25154,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.385612.php',
        data  => <<EOF,
-	2::inwork 8141,23477 7185,23749
+	2::inwork 8141,23477 7872,23538 7185,23749
 EOF
      },
      { from  => 1444849734, # 2015-10-14 21:08
@@ -31068,7 +31068,7 @@ EOF
      },
      { from  => $isodate2epoch->("2020-05-27 09:00:00"),
        until => undef, # $isodate2epoch->("2021-12-31 17:00:00"), # der ursprüngliche Termin (14.08.2020) kann wohl nicht gehalten werden; laut Schild bis Ende 2021
-       text  => 'Mainzer Str.: Bauarbeiten zwischen Boxhagener Str. und Scharnweberstr., mögliche Einschränkugen, Ende der Bauarbeiten unbekannt',
+       text  => 'Mainzer Str.: Bauarbeiten zwischen Boxhagener Str. und Frankfurter Allee, mögliche Einschränkugen, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
@@ -31076,14 +31076,14 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="5"
-#: last_checked: 2022-01-20 vvv
+#: last_checked: 2022-01-29 vvv
 #: check_frequency: 7d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
 # REMOVED (beendet) ---	q3::inwork 14247,11681 14272,11775
 # REMOVED (beendet) ---	q3::inwork 14272,11775 14306,11889
-	q2::inwork 14306,11889 14354,12012
+	q2::inwork 14306,11889 14354,12012 14427,12197
 	q3::inwork 14354,12012 14468,11992
 # REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
@@ -32093,7 +32093,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED (alter Übergang existiert zur Hälfte --- bleibt es so?) --- #: next_check_id: STERNDAMM-2020 --- #: by: osm --- #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2020-12-19-adlershof-2/03-2020-12-19-064.html (provisorischer Übergang existiert) --- #: by: http://thomas.krickstadt.de/strassenbahnen/adlershof-2/2021-05-09-adlershof-2/40-2021-05-09-214-xxl.jpg (kein provisorischer Übergang mehr) --- #: XXX evtl. wegen der neuen Straßenbahntrasse gesperrt --- #: osm_watch: way id="855549020" version="1" --- #: last_checked: 2021-09-05 (krickstadt) --- #: check_frequency: 30d --- #: next_check: 2021-10-31
-	2::inwork 18836,3611 18943,3508
+	2::inwork 18836,3611 18848,3600 18943,3508
 EOF
      },
      { from  => $isodate2epoch->("2021-03-08 05:00:00"), # 1609650000, # 2021-01-03 06:00
@@ -33258,7 +33258,7 @@ EOF
 EOF
      },
      { from  => 1627682400, # 2021-07-31 00:00
-       until => $isodate2epoch->("2022-01-31 18:00:00"), # 1633039199, # 2021-09-30 23:59
+       until => $isodate2epoch->("2022-02-28 18:00:00"), # 1633039199, # 2021-09-30 23:59
        text  => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis voraussichtlich Anfang 2022',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106283.php',
@@ -33266,8 +33266,10 @@ EOF
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1145930.php (Verzögerung)
 #: by: https://www.berliner-woche.de/luebars/c-bauen/fahrbahn-der-strasse-am-vierrutenberg-erst-im-fruehjahr-fertig_a328514
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9770 (Frage)
+#: also_indoor: traffic
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: next_check: 2022-01-03
+#: last_checked: 2022-01-19 (kartaview)
+# REMOVED --- #: next_check: 2022-01-03
 	q4::inwork 5793,23422 5893,23287
 EOF
      },
@@ -33804,7 +33806,7 @@ EOF
 #: next_check_id: CORONA-2020
 #: note: Marktzeiten sind wohl 9 bis 15 Uhr, Parkverbote (und mögliche Sperrung/Beeinträchtigung) aber länger
 #: XXX seit Corona ist der Markt auch auf der Arndtstr. --- bleibt das so? vvv
-#: last_checked: 2021-12-25 vvv
+#: last_checked: 2022-01-28 vvv
 #: check_frequency: 90d vvv
 #: tempex: sa T06-T19 vvv
 	2::temp 9546,9198 9617,9185 9674,9179
@@ -33841,15 +33843,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1643470978, # undef, # XXX
        text  => 'Giselastr.: Bauarbeiten zwischen Lückstr. und Leopoldstr., Einbahnstraßenregelung, offen Richtung Norden',
        type  => 'handicap',
        data  => <<EOF,
-#: also_indoor: traffic (G)
-#: osm_watch: way id="1003079755" version="4"
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-01-21
-#: check_frequency: 14d
+# REMOVED (laut osm beendet) --- #: also_indoor: traffic (G) --- #: osm_watch: way id="1003079755" version="4" --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet? --- #: last_checked: 2022-01-21 --- #: check_frequency: 14d
 	q3::inwork; 16192,10907 16153,10818
 EOF
      },
@@ -34338,14 +34336,20 @@ EOF
 EOF
      },
      { from  => 1614492000, # 2021-02-28 07:00
-       until => 1672502400, # 2022-12-31 17:00
+       until => $isodate2epoch->("2022-12-31 07:00:00"), # 1672502400, # 2022-12-31 17:00
        text  => 'Ringstr.: Bauarbeiten, Straße abschnittsweise gesperrt, evtl. sind auch Radfahrer betroffen, vom 01.03.2021 07:00 bis 31.12.2022 17:00 ',
        type  => 'handicap',
-       source_id => 'viz2021:13.287063,52.432721,01.03.2021,07:00',
+       source_id => 'viz2021:13.287063,52.432721,01.03.2021,07:00', # mittlerweile nur bis 31.1.2022, aber siehe unten
        data  => <<EOF,
-#: XXX Sind Radfahrer tatsächlich betroffen? Haben die Bauarbeiten auch was mit den Sperrungen in der Kommandantenstr./Baseler Str. zu tun?
-#: also_indoor: traffic (G,H,B)
+#: source_id: viz2021:13.287063,52.432721,31.01.2022,07:00 (bis 31.12.2022)
+#: by: https://viz.berlin.de/2022/01/verkehrsvorschau-31012022/ (Gesamtbaumaßnahme bis Ende 2022, Sperrung an der Drakestr. möglicherweise nur bis Ende März 2022, hier nur für den Kfz-Verkehr?)
+#: XXX Sind Radfahrer tatsächlich betroffen? Haben die Bauarbeiten auch was mit den Sperrungen in der Kommandantenstr./Baseler Str. zu tun? vvv
+#: also_indoor: traffic (G,H,B) vvv
 	q4::inwork 3011,3303 2781,3122 2698,3068 2655,3025 2632,2969 2625,2850
+	q3::inwork 3507,3654 3372,3557
+# REMOVED ---	q4::inwork; 3507,3654 3372,3557 3228,3455 3184,3427
+#: also_indoor ^^^
+#: XXX ^^^
 EOF
      },
      { from  => 1642917600, # 2022-01-23 07:00
@@ -34384,6 +34388,15 @@ EOF
 #: osm_watch: way id="35043662" version="10"
 #: add_fragezeichen: Ist dieser Weg tatsächlich gesperrt? Wenn ja: wo genau ist der gesperrte Abschnitt?
 	2::inwork -1923,15684 -1938,15782 -1935,15826 -1978,15940 -1976,16012
+EOF
+     },
+     { from  => 1643397267, # 2022-01-28 20:14
+       until => 1648764000, # 2022-04-01 00:00
+       text  => 'Dreesch - Grünow: Bauarbeiten, Sperrung bis zum 31.03.2022',
+       type  => 'gesperrt',
+       source_id => '217300506',
+       data  => <<EOF,
+	2::inwork 45543,101043 45648,100789 45806,100487 45847,100277 45868,100193
 EOF
      },
     );

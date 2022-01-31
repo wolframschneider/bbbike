@@ -116,7 +116,7 @@ Pannierstr.: Asphalt	Q0 12240,8964 12198,8887
 # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="65707583" version="18"
-#: last_checked: 2021-12-25
+#: last_checked: 2022-01-28
 #: check_frequency: 60d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -172,7 +172,7 @@ Waldemarstr.: Kopfsteinpflaster	Q2 11328,10957 11290,10972 11150,11030
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens
-#: last_checked: 2022-01-15
+#: last_checked: 2022-01-28
 #: check_frequency: 360d
 Erkelenzdamm: Kopfsteinpflaster	Q2 11038,10247 11094,10261 11117,10326 11134,10383 11109,10423 11145,10510 11192,10629 11210,10668 11244,10653 11258,10682
 Leuschnerdamm: Kopfsteinpflaster	Q2 11275,10723 11301,10783 11264,10804 11328,10957 11365,11047 11421,11073 11458,11136
@@ -184,7 +184,7 @@ Segitzdamm: asphaltiert	Q0 11159,10769 11133,10704
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens vvv
-#: last_checked: 2021-12-27 vvv
+#: last_checked: 2022-01-28 vvv
 #: check_frequency: 360d vvv
 Segitzdamm: Kopfsteinpflaster	Q2 11133,10704 11164,10687 11145,10638 11100,10530
 Segitzdamm: Kopfsteinpflaster	Q2- 11100,10530 11065,10443
@@ -1018,7 +1018,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9942 (Kopfsteinpflaster bleibt vorerst? außerdem: wird die Colbestr. zur Fahrradstraße?)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2022-01-25
+#: last_checked: 2022-01-28
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -2158,7 +2158,7 @@ Kienitzer Str.: Kopfsteinpflaster	Q2 11504,7738 11612,7762 11738,7790 11867,7813
 Allerstr.: Kopfsteinpflaster	Q2 11521,7638 11633,7662 11763,7687 11888,7710 12057,7744
 Okerstr.: Kopfsteinpflaster	Q2 11540,7534 11654,7559 11785,7583 11911,7609 12090,7651
 Lasdehner Str.: Kopfsteinpflaster	Q2 13524,12271 13470,12190 13375,12062
-Erich-Steinfurth-Str.: Kopfsteinpflaster	Q2 12596,11696 12453,11790 12378,11806
+Erich-Steinfurth-Str.: Kopfsteinpflaster	Q2 12608,11692 12453,11790 12378,11806
 Rütlistr.: Kopfsteinpflaster	Q2 12480,9037 12526,9125
 Rütlistr.: Asphalt	Q0 12526,9125 12554,9178 12592,9249
 Rütlistr.: Betonpflaster	Q0- 12592,9249 12621,9297
@@ -4254,7 +4254,7 @@ Rumplerzeile: kleinteiliges Pflaster	Q1 19331,3098 19417,3184
 Erich-Thilo-Str.: Asphalt	Q0 19417,3015 19331,3098 19257,3172
 Katharina-Boll-Dornberger-Str.: Asphalt	Q0 19269,3183 19167,3287 19086,3370 19097,3380 19057,3422 19013,3466 18998,3454 18943,3508
 Katharina-Boll-Dornberger-Str.: Asphalt	Q0 18998,3454 18987,3442 19033,3397 19073,3357 19086,3370
-Katharina-Boll-Dornberger-Str.: Verbundsteinpflaster	Q1+ 18943,3508 18836,3611
+Katharina-Boll-Dornberger-Str.: Verbundsteinpflaster	Q1+ 18943,3508 18848,3600 18836,3611
 Alexander-von-Humboldt-Weg: Gehwegplatten	Q1 19015,3129 18892,3256
 Alexander-von-Humboldt-Weg: Verbundsteinpflaster	Q1+ 18892,3256 18689,3465
 Brook-Taylor-Str.: Gehwegplatten	Q1 19146,2975 19101,3028 19015,3129
@@ -9159,7 +9159,7 @@ Rathausstr.: Verbundsteinpflaster	Q0- 10601,12521 10704,12595
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruenflaechen/baumassnahmen/artikel.273777.php?date=20210405 (Rückbau der unterirdischen Anlagen)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1127042.php (Infoveranstaltung am 21.9.2021)
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit; laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022 vvv
-#: last_checked: 2022-01-02 vvv
+#: last_checked: 2022-01-29 vvv
 # REMOVED (unter der provisorischen Decke) --- Weg zur Mühsamstr.: Beton/Verbundsteinpflaster	Q1+ 13067,12583 13091,12563
 Weg zur Mühsamstr.: provisorische Asphaltdecke	Q0- 13067,12583 13091,12563
 Weg zur Mühsamstr.: Schotterweg	Q2 13091,12563 13232,12628
@@ -12289,6 +12289,7 @@ Am Bahnhof Wuhlheide: Betonpflaster	Q0- 20430,7122 20524,7176 20533,7199 20575,7
 An der Schule [Rad- und Gehweg]: Asphalt	Q0 24747,11524 24768,11616 24759,11666
 Hönower Str.: Asphalt, einige Schäden und Unebenheiten	Q0- 24530,12296 24556,12181 24554,12100 24556,12056 24563,11980 24575,11932
 Manfred-von-Richthofen-Str.: Asphalt mit einigen Schäden	Q1+ 9099,8670 9158,8706 9229,8718
+Manfred-von-Richthofen-Str.: Asphalt mit einigen Schäden	Q0-; 8731,7956 8757,7841 8796,7751 8812,7730 8864,7676
 Schillingstr.: Asphalt mit Querrissen	Q0- 11635,12745 11596,12668 11562,12597 11497,12463
 (Verbindungschaussee - Dahlemer Feld, nördlicher Weg): Waldweg, Wurzeln	Q2- -1040,7550 -1248,7704
 (Verbindungschaussee - Dahlemer Feld, nördlicher Weg): Waldweg, teilweise mit unebenen Asphalt befestigt	Q2 -1248,7704 -1852,8155
@@ -12424,6 +12425,7 @@ Frobenstr.: Asphalt mit einigen Rissen	Q0-; 7429,10366 7413,10244
 #: note: paralleler Fußweg mit Verbundsteinpflaster
 (Edeka-Parkplatz): Asphalt	Q0 18846,8616 18870,8646 18880,8689
 (Edeka-Parkplatz - Rheinsteinstr.): Verbundsteinpflaster	Q1 18880,8689 18865,8740
+(Straße der Pariser Kommune - Erich-Steinfurth-Str.): Beton	Q0- 12660,11705 12634,11705 12608,11692
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -15270,7 +15272,7 @@ Fräsersteig: Betonplatten	Q0 5761,20401 5842,20451 5885,20478 5900,20487 5959,20
 Alter Bernauer Heerweg: unbefestigter Pfad	Q2 6641,22756 6770,22801
 #: corrected_by: srt (Q2 -> Q2-)
 Alter Bernauer Heerweg: Kopfsteinpflaster	Q2- 6770,22801 6779,22804 6836,22824 6892,22843 6948,22862 7004,22881 7072,22905
-Alter Bernauer Heerweg: Kopfsteinpflaster	Q2 7072,22905 7109,22919 7171,22942 7493,23064 7609,23108 7839,23195 7852,23200 7930,23227 8143,23305
+Alter Bernauer Heerweg: Kopfsteinpflaster	Q2 7072,22905 7109,22919 7171,22942 7493,23064 7609,23108 7839,23195 7852,23200 7930,23227 7998,23252 8143,23305
 #: by: ^^^
 # 
 #: by: Wolfhard Schleese:
@@ -30246,6 +30248,11 @@ Am Weingarten: Beton	Q1+ 13867,14507 13837,14563
 (KGA Freies Land, G-Weg): Gehwegplatten	Q1 12908,17807 12764,17725 12630,17636
 #: by ^^^
 # 
+#: by: kartaview vvv
+(Siedlung Talheim): Verbundsteinpflaster	Q1+ 7998,23252 7984,23284
+(Siedlung Talheim): Asphalt	Q0 7984,23284 7872,23538
+#: by ^^^
+# 
 #: by: mapillary, osm: vvv
 (Rosenthaler Weg - Aubertstr.): Asphalt	Q0 11747,22496 11278,22848 11220,22886
 (Blankenfelder Str. - Goetheweg): Asphalt	Q0 10968,22546 11220,22886 11228,22914 11219,22932 11162,22939
@@ -30615,4 +30622,6 @@ Kreuzungsbereich mit Kopfsteinpflaster	Q2 7309,17159
 Einmündungsbereich asphaltiert	Q0 10311,14391
 Kreuzungsbereich asphaltiert	Q0 18548,8942
 Kreuzungsbereich asphaltiert	Q0 18319,9218
+#: by: kartaview
+Einmündungsbereich mit Kopfsteinpflaster	Q2 7998,23252
 #: ignore ^^^

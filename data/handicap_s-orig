@@ -12,7 +12,7 @@
 # 
 #: XXX Bauarbeiten der Wasserbetriebe, laut Schild bis April 2022
 #: also_indoor: traffic (G,B)
-#: last_checked: 2022-01-18
+#: last_checked: 2022-01-24 (kartaview)
 #: check_frequency: 45d
 #: next_check: 2022-04-01
 M¸hsamstr.: Fahrbahn im Kreuzungsbereich Thaerstr. gesperrt	q4::inwork 13844,12900 13818,12897 13838,12884
@@ -22,19 +22,23 @@ M¸hsamstr.: Fahrbahn im Kreuzungsbereich Thaerstr. gesperrt	q4::inwork 13844,129
 #: XXX Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="272512103" version="9"
 #: osm_watch: way id="767674684" version="1"
-#: last_checked: 2021-12-22
-#: check_frequency: 120d
-#: next_check: 2025-01-01
-Erich-Steinfurth-Str.: Bauarbeiten, Fahrbahn nur f¸r Baufahrzeuge	q3::inwork 12596,11696 12453,11790 12378,11806
+#: last_checked: 2022-01-29 vvv
+#: check_frequency: 120d vvv
+#: next_check: 2025-01-01 vvv
+Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraﬂenregelung (auﬂer f¸r Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
+(Straﬂe der Pariser Kommune - Erich-Steinfurth-Str.): einige Fuﬂg‰nger	q2; 12660,11705 12634,11705 12608,11692
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: note: laut rbb bis 29.10.2021, laut Parkverbotsschilder bis 28.1.2022 vvv
 #: also_indoor: traffic (H(falsch),G(teilweise),B)
-#: last_checked: 2022-01-20 vvv
+#: last_checked: 2022-01-29 vvv
 #: check_frequency: 14d vvv
-#: next_check: 2022-01-28 vvv
+# REMOVED --- #: next_check: 2022-01-28 vvv
 # REMOVED (offen) --- Jessnerstr.: Sperrung der Fahrbahn nˆrdlich der Oderstr.	q3::inwork 14946,11697 14986,11760
 Oderstr.: Einbahnstraﬂenregelung, offen Richtung Osten	q3::inwork; 15043,11637 14946,11697
-#: next_check ^^^
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: note ^^
@@ -261,7 +265,7 @@ Friedrichstr.: Fuﬂg‰ngerzone mit Radspur, Hˆchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: osm_watch: way id="751595931" version="2"
 #: also_indoor: traffic (H,B)
-#: last_checked: 2022-01-03
+#: last_checked: 2022-01-19 (mapillary)
 Parochialstr.: Fahrbahn zwischen J¸denstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 # 
 #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large
@@ -559,12 +563,7 @@ Wilhelmshavener Str.: Abschnitt der Fahrbahn wegen Bauarbeiten gesperrt	q3::inwo
 # REMOVED --- #: next_check: 2021-08-22
 Neue Nationalgalerie: Bauz‰une, Umfahren ¸ber Gehweg (Bordstein) mˆglich	q3::inwork 7874,11293 7828,11133
 # 
-#: next_check_id: MUSEUMDERMODERNE-2021
-#: by: https://baudoku.1000eyes.de/cam/deininger/B8A44F22CFEF/responsive.html (Webcam)
-#: last_checked: 2021-12-29
-#: check_frequency: 90d
-Matth‰ikirchplatz: wegen Bauarbeiten am Museum der Moderne mˆgliche Behinderungen	q3::inwork 7934,11275 7965,11380
-# 
+# REMOVED (eigentlich keine Behinderungen durch die Bauarbeiten) --- #: next_check_id: MUSEUMDERMODERNE-2021 --- #: by: https://baudoku.1000eyes.de/cam/deininger/B8A44F22CFEF/responsive.html (Webcam) --- #: last_checked: 2021-12-29 --- #: check_frequency: 90d --- Matth‰ikirchplatz: wegen Bauarbeiten am Museum der Moderne mˆgliche Behinderungen	q3::inwork 7934,11275 7965,11380
 # REMOVED --- #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=629697&postcount=1218 --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet? Verschwinden die Radspuren nach den Bauarbeiten? --- #: last_checked: 2019-08-04
 # REMOVED (hier nicht mehr) --- Moltkebr¸cke, Willy-Brandt-Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg mˆglich	q4+::inwork 8206,12757 8120,12756
 # REMOVED (hier nicht mehr) --- Willy-Brandt-Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg mˆglich	q2-::inwork 8120,12756 8030,12824 8021,12832
@@ -674,10 +673,10 @@ Neukˆllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
 # 
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/boddinstrasse-wird-gesperrt_a314931
-#: source_id: viz2021:13.434398,52.481459,14.07.2021,10:00 (bis 31.12.2021, Gesamtbaumaﬂname bis 2024) (mittlerweile bis 31.1.2022)
+#: source_id: viz2021:13.434398,52.481459,14.07.2021,10:00 (bis 31.12.2021, Gesamtbaumaﬂname bis 2024) (mittlerweile bis 31.1.2022) (mittlerweile bis 31.7.2022)
 #: last_checked: 2022-01-16
 #: check_frequency: 120d
-#: next_check: 2022-01-31
+#: next_check: 2022-07-31
 Boddinstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12368,8356 12582,8408
 # 
 # REMOVED (wieder offen) --- #: next_check_id: KARLMARXSTR-2018 --- #: by: https://www.kms-sonne.de/baustellennews/?date=20200526 (voraussichtlich ab 25. Juni 2020 bis Herbst 2020) --- #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/sperrrung-an-der-fuldastrasse_a275098 --- #: by: https://www.kms-sonne.de/baustellennews?date=20200630 --- #: by: https://www.kms-sonne.de/baustellennews?date=20201221 (weiterhin gesperrt) --- #: by: https://www.kms-sonne.de/baustellennews?date=202102 (voraussichtlich bis Sommer 2021) --- #: source_id: 2147345472 (Verschwenkung der KMS) --- #: also_indoor: traffic (G,H) --- #: last_checked: 2021-05-30 --- #: check_frequency: 120d --- #: next_check: 2021-10-08 --- #: next_check: 2021-06-01 --- Fuldastr.: Sperrung der Einm¸ndung Karl-Marx-Str.	q3::inwork 12551,8612 12494,8501
@@ -1364,7 +1363,7 @@ Waldemarstr.: Fuﬂg‰ngerzone	q2 12172,10585 12142,10600
 #: XXX_prog BS Bordstein an der Falkenberger Chausse, ansonsten q2
 (Gr¸nanlage Egon-Erwin-Kisch-Str. - Falkenberger Chaussee): Fuﬂg‰nger, Bordstein	q3 17686,18172 17721,18001
 #: note: etwas weiter nˆrdlich verl‰uft eine Servicestraﬂe
-Erich-Steinfurth-Str.: Fuﬂg‰nger	q3 12645,11673 12596,11696
+Erich-Steinfurth-Str.: Fuﬂg‰nger	q3 12645,11673 12608,11692
 #: XXX_prog BS auf beiden Seiten Bordsteine, auﬂerdem noch zwei Bordsteine beim ‹berqueren der BouchÈstr.; ansonsten Fuﬂg‰nger, q3
 Elbingeroder Weg: hohe Bordsteine	q4 13178,9062 13146,9085
 #: XXX_prog BS niedriger Bordstein auf der s¸dlichen Seite, keiner an der Kurf¸stenstr. (ansonsten q2)
@@ -1476,7 +1475,7 @@ Langhoffstr.: enge Straﬂe, Gegenverkehr	q1 19817,14371 19818,14064
 Zum Schlachtensee: wegen der groﬂen Steigung/Gef‰lles nur Schrittgeschwindigkeit mˆglich	q4 -1663,4218 -1592,4268
 # REMOVED (BS wurde abgesenkt) --- #: XXX_prog BS (an der Rungiusstr., ansonsten weiterhin q4)
 (Treseburger Ufer - Rungiusstr.): nur f¸r Fuﬂg‰nger erlaubt	q4 12736,5913 13064,5953
-Treseburger Ufer: einige Fuﬂg‰nger	q1 12301,5783 12453,5844 12507,5860 12636,5896 12699,5909
+Treseburger Ufer: nur f¸r Fuﬂg‰nger erlaubt	q4 12301,5783 12453,5844 12507,5860 12636,5896 12699,5909
 (Bellevuepark): einige Fuﬂg‰nger	q1 22798,5731 22796,5640 22796,5631 22787,5582 22841,5571 22855,5554 22834,5481 22851,5327
 (Bellevuepark): nur f¸r Fuﬂg‰nger erlaubt	q4 22787,5582 22733,5569 22701,5428 22657,5328
 Walter-Nicklitz-Promenade: eng und kurvenreich, Fuﬂg‰nger	q2 8290,15304 8329,15397 8308,15409 8312,15470
@@ -4039,6 +4038,9 @@ Wentowsteig: enge Straﬂe mit parkenden Autos	q0- 6904,20692 6930,20808 6943,2086
 # REMOVED (nicht mehr relevant, wird neu gebaut) --- #: by: Felix Beutler: --- Nordufer: teilweise sehr schmaler Radweg	q1 7212,14738 7427,14648 7464,14636
 #: by: Jˆrn Busch:
 #: corrected_by: srt (q2 -> q1)
+#: by: https://www.infravelo.de/projekt/nordgraben/ (1. Quartal 2022 - 4. Quartal 2022; Asphaltierung & Verbreiterung auf 4m)
+#: XXX Weg wird asphaltiert
+#: next_check: 2022-03-31
 (Weg am Nordgraben): schmaler Weg, m‰ﬂiger Fuﬂg‰ngerverkehr	q1 3563,20589 3537,20624 3470,20683 3391,20746 3312,20789 3233,20834 3144,20865 3094,20905 3062,20923 3032,20930 2919,20910 2570,20837
 # 
 #: by: Hans-Reiner Padberg: vvv
