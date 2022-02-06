@@ -669,10 +669,12 @@ Neuköllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
 # 
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/boddinstrasse-wird-gesperrt_a314931
+#: by: https://www.kms-sonne.de/baustellennews (nun bis Herbst 2022)
+#: by: https://www.kms-sonne.de/assets/2022/02/Baustellenuebersicht-2022-02.pdf
 #: source_id: viz2021:13.434398,52.481459,14.07.2021,10:00 (bis 31.12.2021, Gesamtbaumaßname bis 2024) (mittlerweile bis 31.1.2022) (mittlerweile bis 31.7.2022)
 #: last_checked: 2022-02-01
 #: check_frequency: 120d
-#: next_check: 2022-07-31
+#: next_check: 2022-09-20
 Boddinstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q3::inwork 12368,8356 12582,8408
 # 
 # REMOVED (wieder offen) --- #: next_check_id: KARLMARXSTR-2018 --- #: by: https://www.kms-sonne.de/baustellennews/?date=20200526 (voraussichtlich ab 25. Juni 2020 bis Herbst 2020) --- #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/sperrrung-an-der-fuldastrasse_a275098 --- #: by: https://www.kms-sonne.de/baustellennews?date=20200630 --- #: by: https://www.kms-sonne.de/baustellennews?date=20201221 (weiterhin gesperrt) --- #: by: https://www.kms-sonne.de/baustellennews?date=202102 (voraussichtlich bis Sommer 2021) --- #: source_id: 2147345472 (Verschwenkung der KMS) --- #: also_indoor: traffic (G,H) --- #: last_checked: 2021-05-30 --- #: check_frequency: 120d --- #: next_check: 2021-10-08 --- #: next_check: 2021-06-01 --- Fuldastr.: Sperrung der Einmündung Karl-Marx-Str.	q3::inwork 12551,8612 12494,8501
@@ -1533,7 +1535,7 @@ Edenkobener Steg: Fußgänger	q1 6618,4191 6633,4272
 #: by: https://www.infravelo.de/projekt/teltowkanalroute/
 #: by: https://www.infravelo.de/assets/PDFs/ergebnisbericht-rsv-teltowkanalroute-2020.pdf (Rampen unter der Königsberger Str. geplant)
 #: osm_watch: way id="77098244" version="14"
-#: last_checked: 2020-12-19
+#: last_checked: 2022-02-05
 #: check_frequency: 360d
 Teltowkanalpromenade: enge und kurvige Unterführung, steile Abschnitte	q4 4274,2717 4272,2704 4247,2652 4209,2641
 Teltowkanalpromenade: schmale und kurvige Unterführung	q2 4778,3352 4815,3382 4822,3431
@@ -2765,6 +2767,7 @@ Gersdorfstr. - Wulfila-Ufer: Bordstein, einige Fußgänger	q2 8255,4791 8192,4710
 (Rewe-Parkplatz): Supermarkt-Parkplatz	q2 3746,2108 3723,2118 3726,2209
 #: XXX_prog BS nur am Wendehammer, ansonsten q1
 Geitnerweg: Bordstein, einige Fußgänger	q2 5420,511 5448,455
+#: note: rechtliche Lage unklar
 Seydlitzstr.: einige Fußgänger	q1 6511,2284 6459,2364
 Trabener Steg: abgeflachte Treppenstufen, Fußgänger	q2 2142,10027 2131,10014 2128,9999
 Trabener Steg: abgeflachte Treppenstufen, Fußgänger	q2 2224,10083 2245,10092
@@ -3828,6 +3831,9 @@ Golda-Meir-Steg: Fußgänger	q2 7861,14133 7899,14157 7962,14198
 (Fußgängerbrücke - Märkische Allee): Fußgänger	q3 19687,15513 19694,15529 19733,15511
 (Edeka-Parkplatz): Parkplatzverkehr	q2 18846,8616 18870,8646 18880,8689
 (Edeka-Parkplatz - Rheinsteinstr.): Fußgänger	q3 18880,8689 18865,8740
+#: note: Radfahren auf dem Uferweg ist wohl Sitte; an einigen Stellen als "Grünanlage" ausgeschildert
+(Uferweg am Paul-Lincke-Ufer): Fußgänger, besonders an schönen Tagen	q2- 11735,10022 11756,9990 11948,9895 12045,9843 12116,9825 12165,9786 12280,9728 12432,9652 12596,9587 12639,9547 12703,9522 12718,9529
+(Uferweg - Lausitzer Str.): Rampe, enge Kurven	q3 11948,9895 11946,9913
 # 
 ######################### User Contributions #################################
 # 

@@ -1667,7 +1667,7 @@ EOF
        text  => 'Ringstr. (Steglitz) Richtung Finkensteinallee zwischen Drakestr. und Finckensteinallee Baustelle, Fahrtrichtung gesperrt (bis 12.2005)',
        type  => 'handicap',
        data  => <<EOF,
-	q4; 3507,3654 3372,3557 3228,3455 3184,3427 3059,3339 3050,3333 3032,3319 3011,3303 2781,3122 2698,3068 2655,3025 2632,2969 2625,2850
+	q4; 3507,3654 3375,3559 3228,3455 3184,3427 3059,3339 3050,3333 3032,3319 3011,3303 2781,3122 2698,3068 2655,3025 2632,2969 2625,2850
 EOF
      },
      { from  => 1110917391, # 2005-03-15 21:09
@@ -28757,6 +28757,8 @@ EOF
 #: source_id: viz2021:13.222469,52.619767,05.11.2018,10:34 (bis 15.11.2022) (mittlerweile bis 31.5.2022) (mittlerweile bis 3.2.2022)
 #: source_id: viz2021:13.217617,52.61126,03.02.2022,10:00 (Umbau der Kreuzung Henningsdorfer Str./Alt-Heiligensee/Schulzendorfer Str./..., möglicherweise sind Radfahrer nicht besonders betroffen, bis 31.5.2022)
 #: by: https://viz.berlin.de/2022/02/verkehrsvorschau-03022022/
+#: by: https://twitter.com/VIZ_Berlin/status/1489146640095006722
+#: by: https://pbs.twimg.com/media/FKmLhoHWYA0Sivj?format=jpg&name=large
 #: next_check_id: HENNIGSDORFER-2019
 	q4::inwork; -2504,22626 -2540,22694 -2424,22991 -2306,23259
 # REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2306,23259 -2248,23409 -2185,23567
@@ -30859,7 +30861,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-01-22
+#: last_checked: 2022-02-05
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -30944,7 +30946,7 @@ S13 - Cuvrystr. zwischen Görlitzer Str. und Schlesische Str.	q4::temp::play 1303
 #: note: gesehen am 2020-07-26: statt der Helmerdingstr. wurde die angrenzende Simplonstr. gesperrt; mittlerweile (August/September 2020) wird immer nur die Simplonstr. gesperrt
 Simplonstr. zwischen Helmerdingstr. und Matkowskystr	q4::temp::play 14468,11203 14531,11142
 # REMOVED --- S14 - Helmerdingstr. zwischen Revaler Str. und Simplonstr.	q4::temp::play 14442,11101 14468,11203
-S15 - Paul-Lincke-Ufer zwischen Glogauer Str. bis Ohlauer Str.	q4::temp::play 12591,9584 12439,9660 12286,9739 12116,9825
+S15 - Paul-Lincke-Ufer zwischen Glogauer Str. bis Ohlauer Str.	q4::temp::play 12596,9587 12441,9663 12286,9739 12116,9825
 S16 - Lilienthalstr. zwischen Bergmannstr. und Züllichauer Str.	q4::temp::play 10705,9234 10709,9192 10748,9054 10675,8940
 S17 - Dresdener Str. zwischen Erkelenzdamm und Adalbertstr.	q4::temp::play 11334,10527 11258,10682
 S18 - Rudolfstr. zwischen Modersohn- und Danneckerstr.	q4::temp::play 14026,10869 13886,10939
@@ -31077,9 +31079,9 @@ EOF
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
-#: osm_watch: way id="934995901" version="5"
-#: last_checked: 2022-02-02 vvv
-#: check_frequency: 7d vvv
+#: osm_watch: way id="934995901" version="6"
+#: last_checked: 2022-02-04 vvv
+#: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
@@ -31359,7 +31361,7 @@ EOF
      },
      { from  => $isodate2epoch->("2021-05-30 08:30:00"), # 1589275980, # 2020-05-12 11:33
        until => $isodate2epoch->("2022-03-18 17:00:00"), # $isodate2epoch->("2021-05-31 17:00:00"), # 1599231600, # 2020-09-04 17:00
-       text  => 'Gardeschützenweg: Fahrbahn zwischen Hindenburgdamm und Lipaer Str. wegen Bauarbeiten gesperrt, möglicherweise Einschränkungen für den Radverkehr, vom 31.05.2021 bis 18.03.2022',
+       text  => 'Gardeschützenweg: Fahrbahn am Hindenburgdamm gesperrt, vom 31.05.2021 bis 18.03.2022',
        type  => 'handicap',
        source_id => '2147345834', # (inaktiv)
        data  => <<EOF,
@@ -31371,9 +31373,10 @@ EOF
 # REMOVED --- #: priority: #A --- #: last_checked: 2021-09-26 --- #: next_check: 2022-03-18
 #: also_indoor: traffic (H,G,B) vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
-#: XXX NEW	Gardeschützenweg (Lichterfelde) in beiden Richtungen zwischen Hindenburgdamm und Lipaer Straße: Leitungsbau,Vollsperrung, Fußverkehr frei, vom 31.05.2021 08:30 Uhr bis 23.12.2021 17:00 Uhr
+# REMOVED --- #: XXX NEW	Gardeschützenweg (Lichterfelde) in beiden Richtungen zwischen Hindenburgdamm und Lipaer Straße: Leitungsbau,Vollsperrung, Fußverkehr frei, vom 31.05.2021 08:30 Uhr bis 23.12.2021 17:00 Uhr
 # REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv --- #: last_checked: 2020-12-27 (mapillary) vvv --- #: next_check: 2021-05-03 vvv
-	q4::inwork 4515,4760 4214,4595
+#: note: nur etwa 100m, deshalb q3 statt q4
+	q3::inwork 4515,4760 4214,4595
 # REMOVED --- #: note: hier nur ein kurzes Stück ---	q2::inwork; 4214,4595 4039,4500
 # REMOVED (nicht mehr, laut rbb) ---	q4::inwork 4179,4662 4214,4595
 # REMOVED --- #: next_check ^^^ --- #: last_checked ^^^ --- #: add_fragezeichen ^^^
@@ -32909,7 +32912,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Seydlitzstr.: südlich der Dessauerstr. Bauarbeiten, komplett gesperrt, Ende der Sperrung unbekannt',
+       text  => 'Seydlitzstr.: südlich der Dessauerstr. Bauarbeiten, Bauzäune können den Zugang versperren, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: SEYDLITZ-2021
@@ -32918,9 +32921,9 @@ EOF
 #: by: https://www.berliner-woche.de/lankwitz/c-bauen/degewo-wohnungsbauprojekt-in-der-dessauerstrasse-soll-noch-in-diesem-jahr-starten_a211105 (Fertigstellung Dezember 2021 (Stand Mai 2019))
 # REMOVED (wurde entfernt) --- #: osm_watch: way id="48490204" version="5"
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
-#: last_checked: 2021-09-12
-#: check_frequency: 120d
-#: next_check: 2021-12-17
+#: last_checked: 2022-02-05
+#: check_frequency: 60d
+# REMOVED --- #: next_check: 2021-12-17
 	2::inwork 6511,2284 6459,2364
 EOF
      },
@@ -32930,7 +32933,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (laut osm ist die Fahrbahn nun offen) --- #: next_check_id: SEYDLITZ-2021 --- #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1116986.php (Neubau der Fahrbahn, bis Ende November 2021) --- #: by: https://www.berliner-woche.de/lankwitz/c-bauen/retzowstrasse-gesperrt_a320297 --- #: osm_watch: way id="24917125" version="14" --- #: add_fragezeichen: Wann wird die Sperrung der Fahrbahn aufgehoben? --- #: last_checked: 2021-09-12 --- # REMOVED --- #: check_frequency: 120d --- #: next_check: 2021-11-30
-	q4::inwork 6331,2281 6399,2184
+	q4::inwork 6331,2281 6391,2200 6410,2169
 EOF
      },
      { from  => undef, # 
@@ -33318,12 +33321,13 @@ EOF
 EOF
      },
      { from  => 1626614232, # 2021-07-18 15:17
-       until => $isodate2epoch->("2022-07-31 18:00:00"), # 1633039200, # 2021-10-01 00:00
-       text  => 'Baseler Str., Kommandantenstr.: Einbahnstraßenregelungen, außerdem Fahrbahn des Kadettenwegs am Karlplatz gesperrt, möglicherweise bis Juli 2022',
+       until => $isodate2epoch->("2022-03-31 18:00:00"), # 1633039200, # 2021-10-01 00:00
+       text  => 'Fahrbahn des Kadettenwegs am Karlplatz gesperrt, möglicherweise bis März 2022', # was also: Baseler Str., Kommandantenstr.: Einbahnstraßenregelungen, außerdem ...
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 3011,3303 3030,3276 3026,3058 3023,2958 3019,2858
-	q4::inwork; 3171,2848 3174,3052 3184,3427
+# REMOVED (nicht mehr) ---	q4::inwork; 3011,3303 3030,3276 3026,3058 3023,2958 3019,2858
+# REMOVED (nicht mehr) ---	q4::inwork; 3171,2848 3174,3052 3184,3427
+#: note: Ende März 2022 laut Schilder der Wasserbetriebe
 	q4::inwork 3186,3515 3228,3455
 EOF
      },
@@ -33346,14 +33350,16 @@ EOF
 EOF
      },
      { from  => 1627164000, # 2021-07-25 00:00
-       until => $isodate2epoch->("2022-03-28 17:00:00"),
-       text  => 'Klingsorstr.: zwischen Birkbuschstr. und Barsekowstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 26.07.2021 07:00 bis 28.03.2022 17:00',
+       until => $isodate2epoch->("2022-02-28 17:00:00"),
+       text  => 'Klingsorstr.: zwischen Birkbuschstr. und Barsekowstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 26.07.2021 07:00 bis 28.02.2022 17:00',
        type  => 'handicap',
-       source_id => 'viz2021:13.326349,52.447526,26.07.2021,07:00',
+       source_id => 'viz2021:13.326349,52.447526,26.07.2021,07:00', # inaktiv
        data  => <<EOF,
 #: note: Eintrag bei rbb am 10.11.2021 entfernt --- mittlerweile wieder da, sogar bis zum 28.2.2022
+#: source_id: viz2021:13.327411,52.448681,26.07.2021,07:00 (mittlerweile nur noch bis 28.2.2022)
 #: also_indoor: traffic (G,H,B)
-	q4::inwork; 5271,4547 5316,4637 5336,4676
+# REMOVED (hier nicht mehr) ---	q4::inwork; 5271,4547 5316,4637 5336,4676
+	q4::inwork; 5336,4676 5407,4815
 EOF
      },
      { from  => 1627077600, # 2021-07-24 00:00
@@ -33375,7 +33381,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1423180617789972483 (bis Ende Oktober 2021) (mittlerweile bis 30.11.2021)
 #: note: nordöstlicher Bürgersteig ist wenig frequentiert; Bordsteine müssen überwunden werden, wenn man zu spät von der Fahrbahn herunterfährt; mittlerweile dürfen Radfahrer offziell über den Gehweg fahren; außerdem sind etwa 100m der Fahrbahn wieder befahrbar (q3 -> q2)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2022-01-09
+#: last_checked: 2022-02-04
 #: check_frequency: 45d
 #: next_check: 2022-03-31
 	q2::inwork 13057,14267 13158,14117
@@ -33597,7 +33603,7 @@ EOF
 #: note: Fertigstellung EÜ laut Baustellenschild 2023
 #: osm_watch: way id="229990468" version="6"
 #: add_fragezeichen: Ist hier noch immer gesperrt?
-#: last_checked: 2021-11-28
+#: last_checked: 2022-02-05
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 	2::inwork 7673,4223 7769,4315
@@ -34210,7 +34216,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten in der Braunschweiger Straße und Niemetzstraße beendet? Wann wird die Einbahnstraßenregelung aufgehoben? vvv
 #: also_indoor: traffic (ex-G,H,B(alle nur Niemetz)) vvv
-#: last_checked: 2022-01-16 vvv
+#: last_checked: 2022-02-05 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-09-30 vvv
 	q4::inwork; 13702,7418 13654,7380 13601,7366 13519,7345 13476,7330
@@ -34276,7 +34282,8 @@ EOF
        data  => <<EOF,
 #: also_indoor: traffic (B)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-01-05
+#: last_checked: 2022-02-05
+#: check_frequency: 30d
 	q4::inwork 13355,6235 13227,6209 13220,6237
 EOF
      },
@@ -34285,9 +34292,10 @@ EOF
        text  => 'Robert-Uhrig-Str.: zwischen Rummelsburger Str. und Zachertstr. Bauarbeiten, Richtung Norden gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: also_indoor: traffic (G,B)
+#: also_indoor: traffic (G,B,H)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-01-07
+#: last_checked: 2022-02-05 (traffic)
+#: check_frequency: 14d
 	q4::inwork; 17719,11092 17725,11228
 EOF
      },
@@ -34340,19 +34348,26 @@ EOF
      },
      { from  => 1614492000, # 2021-02-28 07:00
        until => $isodate2epoch->("2022-12-31 07:00:00"), # 1672502400, # 2022-12-31 17:00
-       text  => 'Ringstr.: Bauarbeiten, Straße abschnittsweise gesperrt, evtl. sind auch Radfahrer betroffen, vom 01.03.2021 07:00 bis 31.12.2022 17:00 ',
+       text  => 'Ringstr.: Bauarbeiten, kurze Abschnitte der Fahrbahn gesperrt, Gehwege sind noch frei, vom 01.03.2021 07:00 bis 31.12.2022 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.287063,52.432721,01.03.2021,07:00', # mittlerweile nur bis 31.1.2022, aber siehe unten
        data  => <<EOF,
 #: source_id: viz2021:13.287063,52.432721,31.01.2022,07:00 (bis 31.12.2022)
 #: by: https://viz.berlin.de/2022/01/verkehrsvorschau-31012022/ (Gesamtbaumaßnahme bis Ende 2022, Sperrung an der Drakestr. möglicherweise nur bis Ende März 2022, hier nur für den Kfz-Verkehr?)
-#: XXX Sind Radfahrer tatsächlich betroffen? Haben die Bauarbeiten auch was mit den Sperrungen in der Kommandantenstr./Baseler Str. zu tun? vvv
+# REMOVED --- #: XXX Sind Radfahrer tatsächlich betroffen? Haben die Bauarbeiten auch was mit den Sperrungen in der Kommandantenstr./Baseler Str. zu tun? vvv
 #: also_indoor: traffic (G,H,B) vvv
-	q4::inwork 3011,3303 2781,3122 2698,3068 2655,3025 2632,2969 2625,2850
-	q3::inwork 3507,3654 3372,3557
-# REMOVED ---	q4::inwork; 3507,3654 3372,3557 3228,3455 3184,3427
+#: last_checked: 2022-02-05 vvv
+#: check_frequency: 150d vvv
+	q2::inwork 3011,3303 2781,3122 2698,3068 2655,3025 2632,2969 2625,2850
+#: note: Länge der Sperrung nur 30m
+	q3::inwork 3507,3654 3375,3559
+	q4::inwork 2655,3025 2594,3009
+	q4::inwork 2632,2969 2594,3009
+# REMOVED ---	q4::inwork; 3507,3654 3375,3559 3228,3455 3184,3427
+#: check_frequency ^^^
+#: last_checked ^^^
 #: also_indoor ^^^
-#: XXX ^^^
+# REMOVED --- #: XXX ^^^
 EOF
      },
      { from  => 1642917600, # 2022-01-23 07:00
@@ -34418,7 +34433,7 @@ EOF
 EOF
      },
      { from  => 1643670000, # 2022-02-01 00:00
-       until => 1645052400, # 2022-02-17 00:00
+       until => 1643917599, # 1645052400, # 2022-02-17 00:00
        text  => 'Konrad-Adenauer-Str., Paul-Löbe-Str.: Sperrung wegen einer Veranstaltung, evtl. sind auch Radfahrer betroffen, vom 2.2.2022 bis 16.2.2022',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -34426,11 +34441,20 @@ EOF
 #: source_id: viz2021:13.37353,52.52075,02.02.2022,06:00-1
 #: source_id: viz2021:13.37353,52.52075,02.02.2022,06:00
 #: also_indoor: traffic (H,B) vvv
-#: add_fragezeichen: Sind Radfahrer von der Sperrung betroffen? vvv
+# REMOVED --- #: add_fragezeichen: Sind Radfahrer von der Sperrung betroffen? vvv
 	2::temp 8369,12609 8306,12609 8309,12758
 	2::temp 8306,12609 8207,12606
-#: add_fragezeichen ^^^
+# REMOVED --- #: add_fragezeichen ^^^
 #: also_indoor ^^^
+EOF
+     },
+     { from  => 1644076653, # 2022-02-05 16:57
+       until => 1666821600, # 2022-10-27 00:00
+       text  => 'Mühlenstr.: Einbahnstraßenregelung, offen Richtung Südwesten, voraussichtlich bis 26.10.2022',
+       type  => 'handicap',
+       source_id => 'viz2021:13.346369,52.431944,20.09.2021,07:30',
+       data  => <<EOF,
+	q4::inwork; 6665,2836 6745,2848 6763,2879 6842,2995 6914,3093
 EOF
      },
     );
