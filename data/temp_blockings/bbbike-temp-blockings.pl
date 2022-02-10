@@ -394,6 +394,7 @@ EOF
 #: by: https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2971249-2970764-myfest-berlin.html
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1170557.php (2022 vermutlich nicht)
 #: by: https://berliner-abendblatt.de/2022/01/26/myfest-findet-nicht-statt/
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10236 (Anfrage)
 	2::temp 11763,10635 11734,10563 11721,10530 11754,10516 11949,10414
 	2::temp 11552,10863 11772,10764 11760,10732 11781,10696 11763,10635 11505,10744 11552,10863 11589,10947 11640,11067
 	2::temp 11961,11041 11899,10886 11839,10736 11824,10708 11781,10696
@@ -26325,14 +26326,17 @@ EOF
 	q3::inwork; 8385,6034 8532,6015
 EOF
      },
-     { from  => 1488236400, # 2017-02-28 00:00
-       until => 1499103102, # $isodate2epoch->("2017-07-14 18:00:00"), # 1493589599, # 2017-04-30 23:59
-       text  => 'Kantstr.: Richtung Budapester Str. ab Joachimsthaler Str. gesperrt, voraussichtlich bis 14. Juli 2017',
+     { from  => $isodate2epoch->("2022-02-07 07:30:00"), # 1488236400, # 2017-02-28 00:00
+       until => 1644349647, # $isodate2epoch->("2022-03-31 17:00:00"), # 1499103102, # $isodate2epoch->("2017-07-14 18:00:00"), # 1493589599, # 2017-04-30 23:59
+       text  => 'Kantstr.: Richtung Budapester Str. ab Joachimsthaler Str. gesperrt, evtl. sind auch Radfahrer betroffen, vom 8.2.2022 bis 31.3.2022',
        type  => 'handicap',
-       source_id => '2147341048',
+       source_id => '2147341048', # inaktiv
        data  => <<EOF,
-#: next_check_id: KANTSTR-2017
-#: source_id: LMS-BR_r_LMS-BR_121
+# REMOVED --- #: next_check_id: KANTSTR-2017 --- #: source_id: LMS-BR_r_LMS-BR_121
+#: by: https://berliner-abendblatt.de/2022/02/08/baustelle-in-der-city-west/
+#: by: https://twitter.com/VIZ_Berlin/status/1490939304281260033 (nicht betroffen)
+#: by: https://pbs.twimg.com/media/FLDhVoCWQAEXRcf?format=jpg&name=large
+#: source_id: viz2021:13.331602,52.505283,08.02.2022,07:30
 	q4::inwork; 5488,10978 5613,10963 5652,11004
 EOF
      },
@@ -28145,7 +28149,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2022-01-17
+#: last_checked: 2022-02-09
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -30491,7 +30495,7 @@ EOF
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-01-25
+#: last_checked: 2022-02-09
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 EOF
@@ -30861,7 +30865,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-02-05
+#: last_checked: 2022-02-07
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31080,14 +31084,15 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="6"
-#: last_checked: 2022-02-04 vvv
+#: last_checked: 2022-02-07 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
 # REMOVED (beendet) ---	q3::inwork 14247,11681 14272,11775
 # REMOVED (beendet) ---	q3::inwork 14272,11775 14306,11889
-	q3::inwork 14306,11889 14354,12012 14427,12197
+	q3::inwork 14306,11889 14354,12012
+	q4::inwork 14354,12012 14427,12197
 	q3::inwork 14354,12012 14468,11992
 # REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
@@ -31278,7 +31283,7 @@ EOF
 #: also_indoor: traffic (H,B)
 #: XXX Stand 2021-07-31 und 2022-01-18: letzte Deckschicht fehlt, Gehwege müssen noch gemacht werden
 # REMOVED (eingetragen) --- #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2022-01-18
+#: last_checked: 2022-02-04 (mapillary)
 #: check_frequency: 30d
 	q3::inwork 14136,17170 13996,16959
 EOF
@@ -32269,7 +32274,7 @@ EOF
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="24"
 #: osm_watch: way id="165832806" version="21"
-#: last_checked: 2022-01-24
+#: last_checked: 2022-02-10
 #: check_frequency: 30d
 	2::inwork 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17497,8623
 # REMOVED (hier neu gemacht) ---	2::inwork 17497,8623 17461,8693 17416,8767 17380,8858
@@ -33229,7 +33234,7 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2022-01-26
+#: last_checked: 2022-02-10
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33264,14 +33269,15 @@ EOF
 EOF
      },
      { from  => 1627682400, # 2021-07-31 00:00
-       until => $isodate2epoch->("2022-02-28 18:00:00"), # 1633039199, # 2021-09-30 23:59
-       text  => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis voraussichtlich Anfang 2022',
+       until => $isodate2epoch->("2022-03-31 18:00:00"), # 1633039199, # 2021-09-30 23:59
+       text  => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis voraussichtlich März 2022',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106283.php',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1145930.php (Verzögerung)
 #: by: https://www.berliner-woche.de/luebars/c-bauen/fahrbahn-der-strasse-am-vierrutenberg-erst-im-fruehjahr-fertig_a328514
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9770 (Frage)
+#: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9876 (möglicherweise bis März 2022?)
 #: also_indoor: traffic
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: last_checked: 2022-01-19 (kartaview)
@@ -33505,8 +33511,8 @@ EOF
 EOF
      },
      { from  => 1629669600, # 2021-08-23 00:00
-       until => $isodate2epoch->("2022-02-04 17:00:00"), # 1640991600, # 2022-01-01 00:00
-       text  => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 04.02.2022 17:00 ',
+       until => $isodate2epoch->("2022-04-30 17:00:00"), # 1640991600, # 2022-01-01 00:00
+       text  => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 30.04.2022 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.377685,52.567221,24.08.2021,07:00',
        data  => <<EOF,
@@ -33656,6 +33662,7 @@ EOF
 #: confirmed_by: srt
 #: by: https://www.gmg-ing.de/referenzen/ernst-heilmann-steg-berlin/ ("Torsionsschwingungen")
 #: by: https://www.strassenbauportal.de/oeffentliche_ausschreibung_vobvol_details_10997_Berlin_Instandsetzung_Stahlbau_1924073.html (Ausschreibung)
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10215 (Anfrage)
 # REMOVED (eins reicht) --- #: osm_watch: note 2867467 2
 #: osm_watch: way id="16311543" version="19"
 #: also_indoor: search Ernst-Heilmann-Steg
@@ -34426,7 +34433,9 @@ EOF
 #: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (diese oder alle Bauabschnitte)? vvv
 #: add_fragezeichen: Haben die Bauarbeiten bereits begonnen? Sind die Uferwege bereits gesperrt? vvv
+#: osm_watch: way id="4410535" version="21"
 	2::inwork 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
+#: osm_watch: way id="4395450" version="25"
 	2::inwork 7031,12320 6694,12627
 #: add_fragezeichen ^^^
 #: XXX ^^^
@@ -34455,6 +34464,32 @@ EOF
        source_id => 'viz2021:13.346369,52.431944,20.09.2021,07:30',
        data  => <<EOF,
 	q4::inwork; 6665,2836 6745,2848 6763,2879 6842,2995 6914,3093
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Nostitzstr.: Hochbaustelle, Einbahnstraße zwischen Gneisenaustr. und Baruther Str., offen Richtung Süden',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://www.kiezundkneipe.de/artikel/das-ende-der-lenau-schule (neue Schule ist 2023 fertig)
+#: osm_watch: way id="49233007" version="8"
+#: last_checked: 2022-02-08
+#: check_frequency: 60d
+#: next_check: 2023-01-01
+	q4::inwork; 9552,9602 9588,9827
+EOF
+     },
+     { from  => 1646694000, # 2022-03-08 00:00
+       until => 1683583200, # 2023-05-09 00:00
+       text  => 'Fürstendamm: Bauarbeiten zwischen Zeltinger Platz und Eltviller Str., Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, ab 9.3.2022, Gesamtbaumaßnahme bis voraussichtlich Mitte 2023',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1175116.php',
+       data  => <<EOF,
+#: next_check_id: FUERSTENDAMM-2022
+#: by: https://berliner-abendblatt.de/2022/02/09/fuerstendamm/
+#: XXX Wann beginnt der 2. Bauabschnitt: Eltviller Straße bis Oranienburger Chaussee?
+#: next_check: 2022-10-01
+	q4::inwork 2486,25156 2599,25047 2647,25018 2673,25012 2818,25022 2904,24993 3015,24965 3117,24966
 EOF
      },
     );

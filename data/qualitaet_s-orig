@@ -172,7 +172,7 @@ Waldemarstr.: Kopfsteinpflaster	Q2 11328,10957 11290,10972 11150,11030
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens
-#: last_checked: 2022-01-31
+#: last_checked: 2022-02-08
 #: check_frequency: 360d
 Erkelenzdamm: Kopfsteinpflaster	Q2 11038,10247 11094,10261 11117,10326 11134,10383 11109,10423 11145,10510 11192,10629 11210,10668 11244,10653 11258,10682
 Leuschnerdamm: Kopfsteinpflaster	Q2 11275,10723 11301,10783 11264,10804 11328,10957 11365,11047 11421,11073 11458,11136
@@ -184,7 +184,7 @@ Segitzdamm: asphaltiert	Q0 11159,10769 11133,10704
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens vvv
-#: last_checked: 2022-01-31 vvv
+#: last_checked: 2022-02-08 vvv
 #: check_frequency: 360d vvv
 Segitzdamm: Kopfsteinpflaster	Q2 11133,10704 11164,10687 11145,10638 11100,10530
 Segitzdamm: Kopfsteinpflaster	Q2- 11100,10530 11065,10443
@@ -268,7 +268,7 @@ Wallensteinstr.: Fahrbahn mäßiges bis schlechtes Kopfsteinpflaster, Geh/Radweg V
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1103618.php (Fahrbahninstandsetzung ab Herbst 2021, bis 2022)
 #: by: https://www.berliner-woche.de/bezirk-lichtenberg/c-bauen/im-bezirk-stehen-bis-ende-2021-noch-einige-strassenbaumassnahmen-an_a320228
 #: XXX wann fangen die Bauarbeiten an?
-#: last_checked: 2022-01-24
+#: last_checked: 2022-02-10
 # REMOVED --- #: next_check: 2021-10-01
 Wallensteinstr.: Asphalt mit einigen Schäden	Q1 18037,9195 18092,9141 18134,9080
 Dönhoffstr.: Asphalt	Q0 18134,9080 18161,9029 18221,8978 18299,8925 18375,8874 18451,8823 18518,8778 18609,8717 18727,8634
@@ -1024,7 +1024,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9942 (Kopfsteinpflaster bleibt vorerst? außerdem: wird die Colbestr. zur Fahrradstraße?)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2022-02-05
+#: last_checked: 2022-02-09
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -3374,6 +3374,7 @@ Mauerweg - Am Rudower Fließ: Asphalt	Q0 15571,-93 15606,-104 15640,-149
 (Straße 618 - Rudower Fließ): Verbundsteinpflaster	Q1 16297,592 16271,609
 # REMOVED (ja, bessere Qualität) --- #: XXX nach den Bauarbeiten vielleicht bessere Qualität? --- #: source_id: IM_021231 --- #: next_check: 2014-07-15
 Waßmannsdorfer Chaussee: asphaltiert	Q0 16536,26 16477,-160 16431,-311
+#: by: https://www.berliner-woche.de/rudow/c-verkehr/da-planungen-voellig-neu-erarbeitet-werden-muessen-bleibt-wassmanndorfer-chaussee-weiter-holperstrecke_a335288 (Sanierung nicht vor 2030)
 Waßmannsdorfer Chaussee: asphaltiert mit Straßenschäden	Q1 16431,-311 16378,-489 16341,-614 16307,-718 16273,-824
 (Mauerweg): Asphalt	Q0 18121,-374 18218,-325 18280,-295
 (Landschaftspark Rudow): Gehwegplatten	Q0- 18385,-173 17973,428
@@ -4978,7 +4979,7 @@ Tegernseestr.: Asphalt	Q0 22287,1165 22209,1278 22163,1363 22128,1443 22095,1572
 Kochelseestr.: Asphalt	Q0 22462,1547 22364,1487
 Kochelseestr.: schlechtes Kopfsteinpflaster	Q3 22364,1487 22247,1409
 Kochelseestr.: Asphalt	Q0 22247,1409 22163,1363
-Walchenseestr.: Asphalt	Q0 22453,1294 22364,1487 22334,1553
+Walchenseestr.: Asphalt	Q0 22453,1294 22364,1487 22334,1553 22300,1627 22222,1831 22130,1961
 Don-Ugoletti-Platz: Kopfsteinpflaster	Q3+ 22449,1569 22462,1547
 Don-Ugoletti-Platz - Regattastr.: Beton	Q1 22449,1569 22478,1602 22549,1644
 #: note: undefinierbarer Belag, aber sehr glatt
@@ -7376,7 +7377,7 @@ Hasenlauf: Asphalt	Q0 21504,2385 21490,2535
 Alkenweg: Asphalt	Q0 21869,2367 21939,2388 22016,2391
 Lahmertstr.: löchriger Beton	Q2+ 22220,2018 22291,1892 22318,1834
 Regattastr. [Wohngebiet]: Beton	Q0- 22388,1947 22291,1892
-Waldstr. (Grünau): Asphalt	Q0 21839,2419 21855,2392 21869,2367 21885,2343 21986,2176 22004,2149 22130,1961 22222,1831
+Waldstr. (Grünau): Asphalt	Q0 21839,2419 21855,2392 21869,2367 21885,2343 21986,2176 22004,2149 22130,1961
 Elstersteg: Asphalt	Q0 21750,2593 21770,2535 21801,2480 21839,2419
 (Ammerseestr. - Waldstr.): Waldweg, teilweise etwas sandig	Q2 22166,1636 22222,1831
 Zur Uferbahn: Asphalt	Q0 23085,898 22952,821 22902,796 22766,778
@@ -9093,6 +9094,10 @@ Münchener Str. (Frohnau): unebenes Mosaikpflaster, einige Asphaltflicken	Q2 1576
 Münchener Str. (Frohnau): Beton	Q0- 1443,25399 1378,25406 1278,25401 1153,25425 1081,25483 975,25627
 Katzensteg: Asphalt mit Schäden	Q1 2756,25260 2744,25314 2728,25386
 Fürstendamm: Asphalt	Q0 2673,25012 2818,25022 2904,24993 3015,24965 3117,24966 3267,24964 3398,24931 3490,24887
+#: next_check_id: FUERSTENDAMM-2022
+#: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9859 (Erwähnung einer Straßenbaumaßnahme 2022/2023 --- hier?)
+#: XXX wird hier die Fahrbahn neu gemacht?
+#: next_check: 2023-05-09
 Fürstendamm: Asphalt mit einigen Schäden	Q1+ 3490,24887 3550,24887 3741,24942 3754,24946
 Hambacher Weg: Kopfsteinpflaster	Q2- 3205,24839 3239,24892 3267,24964
 Hambacher Weg: unbefestigt	Q2 3205,24839 3195,24825 3186,24812
@@ -11784,7 +11789,7 @@ Am Groen: Verbundsteinpflaster	Q1 22131,11084 22137,11033 22146,10995
 #: by: mapillary
 Epensteinplatz: Gehwegplatten	Q1 8432,17798 8417,17790 8409,17774
 # 
-Weichselstr.: Asphalt mit einigen Schäden	Q0- 14926,12129 14888,11934
+Weichselstr.: Asphalt mit einigen Schäden	Q1+ 14926,12129 14888,11934
 (Crivitzer Str. - Woldegker Str./Rostocker Str.): Asphalt/glatte Pflasterung	Q1+ 17584,18551 17511,18636
 (Hosemannstr. - Naugarder Str.): unregelmäßiges Kleinsteinpflaster	Q2 12583,15566 12605,15491
 Färberstr. [Wohngebiet]: Beton/Asphalt	Q0 21622,4884 21591,4902 21631,4991 21643,5020 21665,5035
@@ -15680,6 +15685,7 @@ Lemkestr.: Kopfsteinpflaster	Q2+; 25801,13101 25872,13191 25961,13304
 #: by: https://www.lemkestrasse-feldsteinpflaster.de/
 #: by: https://stefan-ziller.eu/2021/tempo-30-fuer-die-lemkestrasse-und-modellprojekt-fuer-baumfreundlichen-strassenbelag/ (nur Gehwegarbeiten bis zum 1.8.2021, Planung für Neubau der Straße noch nicht abgeschlossen (Stand März 2021))
 #: by: https://stefan-ziller.eu/2021/planungen-fuer-die-lemkestrasse-baumerhalt-und-zweiter-bauabschnitt/ (August 2021: erster Bauabschnitt)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9810 (Anfrage)
 #: also_indoor: search Lemkestraße
 #: last_checked: 2022-01-16 (mapillary) (im südlichen Abschnitt sind schon Bauarbeiten)
 #: check_frequency: 150d
@@ -30490,6 +30496,7 @@ Kreuzungsbereich mit Kleinpflastersteinen	Q2+ 6089,643
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 14814,12626
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 14801,12517
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 14798,12502
+Kreuzungsbereich mit Kopfsteinpflaster	Q2 14776,12418
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 5907,13746
 Einmündungsbereich glatt gepflastert	Q1- 5868,13441
 #: note: gilt nicht für die Relation Gutenbergstr. - rechts in die Flemmingstr., allerdings fährt hier so gut wie niemand lang

@@ -728,7 +728,7 @@ Kolonnenstr.	H 8209,8773 8145,8773 8078,8772 8014,8771 8008,8771 7795,8765 7709,
 #: XXX wird am 18.10.2021 zum Richard-von-Weizsäcker-Platz umbenannt --- verzögert sich wegen Widerspruchs
 #: also_indoor: search Richard-von-Weizsäcker-Platz
 # REMOVED --- #: next_check: 2021-10-18
-#: last_checked: 2022-01-27 (research)
+#: last_checked: 2022-02-09 (research)
 #: check_frequency: 14d
 Kaiser-Wilhelm-Platz	NN 7201,8870 7307,8945
 Herbertstr. (Schöneberg)	N 7360,8918 7389,8837 7402,8783 7395,8761
@@ -1914,7 +1914,7 @@ Prühßstr.	N 8780,4054 8962,4096 9106,4114 9346,4144 9465,4173 9580,4201 9869,427
 Richterstr. (Mariendorf)	N 9375,4022 9276,3997 9118,3983 9106,4114 9099,4204
 Prinzenstr. (Mariendorf)	N 9333,4229 9208,4215 9099,4204 9006,4196 8932,4188
 Straße 7 (Mariendorf)	N 9208,4215 9197,4315
-#: osm_watch: way id="793304549" version="4"
+#: osm_watch: way id="793304549" version="5"
 (Richterstr. - Rathausstr.)	NN 9276,3997 9294,3921 9217,3906 9117,3898 9073,3892 9021,3878
 (Upstallweg - Richterstr.)	NN 9264,3874 9244,3872 9226,3870 9217,3906
 Andlauer Weg	N 9869,4271 9877,4386
@@ -2760,7 +2760,7 @@ Straße 56 (Heinersdorf)	N 12429,17685 12587,17603
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3835 (Vorlange zur Kenntnisnahme)
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/36re.pdf/file?y=2014 (Widerspruch)
 #: osm_watch: way id="45904921" version="11"
-#: last_checked: 2021-10-05 (mapillary)
+#: last_checked: 2022-02-04 (mapillary)
 #: check_frequency: 120d
 Straße 16 (Heinersdorf)	N 13031,17775 13034,17895
 (Straße 16 - Eigerstr.)	NN 13034,17895 12995,17873 12945,17958
@@ -3373,12 +3373,12 @@ Finkenschlag	N 21504,2385 21801,2480
 Elstersteg	N 21750,2593 21770,2535 21801,2480 21839,2419
 Alkenweg	N 21869,2367 21939,2388 22016,2391
 Lummenweg	N 21879,2592 21919,2510 21939,2388
-Waldstr. (Grünau)	N 21839,2419 21855,2392 21869,2367 21885,2343 21986,2176 22004,2149 22130,1961 22222,1831
+Waldstr. (Grünau)	N 21839,2419 21855,2392 21869,2367 21885,2343 21986,2176 22004,2149 22130,1961
 #: note: Privatstraße
 Waldkiefernring	N 21855,2392 21754,2329 21782,2283 21885,2343
 #: note: Privatstraße
 Fähenweg	N 21869,2367 21791,2323
-Walchenseestr.	N 22222,1831 22300,1627 22334,1553 22364,1487 22453,1294
+Walchenseestr.	N 22130,1961 22222,1831 22300,1627 22334,1553 22364,1487 22453,1294
 Würmseestr.	N 22095,1572 22178,1589 22300,1627
 Ammerseestr.	N 22367,1230 22280,1351 22247,1409 22218,1463 22204,1496 22178,1589 22166,1636
 (Ammerseestr. - Waldstr.)	NN 22166,1636 22222,1831
@@ -13317,7 +13317,7 @@ Am Alten Lokschuppen	NN 15730,11279 15708,11193 15752,11115 15805,10949
 (zum Bahnhof Nöldnerplatz)	NN 15805,10949 15859,10970
 (Unterführung S-Bhf. Nöldnerplatz)	NN 15886,10947 15879,10954 15865,10965 15859,10970
 #: next_check_id: SALVADORALLENDEBRUECKE-2017
-#: last_checked: 2021-10-24
+#: last_checked: 2022-02-05 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2022-08-31
 # REMOVED (eventuell nach den Bauarbeiten wieder aktivieren) --- (Salvador-Allende-Str. - An der Müggelspree)	N 23444,4942 23461,4948
@@ -14976,7 +14976,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2022-01-26
+#: last_checked: 2022-02-10
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15356,7 +15356,7 @@ Baikalstr.	N 17210,10350 17255,10510 17284,10616
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2022-01-26
+#: last_checked: 2022-02-10
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
