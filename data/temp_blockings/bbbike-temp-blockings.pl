@@ -27693,13 +27693,18 @@ EOF
 	q2::inwork 20354,11500 20521,11494
 EOF
      },
-     { from  => 1527186848, # 2018-05-24 20:34
-       until => 1559170418, # undef, # 1534536582, # 1534543200, # 2018-08-18 00:00
+     { from  => 1644676199, # 1527186848, # 2018-05-24 20:34
+       until => undef, # 1559170418, # undef, # 1534536582, # 1534543200, # 2018-08-18 00:00
        text  => 'Am Spreebord: Bauarbeiten zwischen Zufahrt zum Uferweg und Röntgenstr., Passieren für Radfahrer möglich, ggfs. Bordsteine, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: by: fritz
-# REMOVED (keine Bauarbeiten mehr) --- #: XXX bis wann geht die Sperrung? --- #: last_checked: 2019-05-01
+# REMOVED --- #: by: fritz --- # REMOVED (keine Bauarbeiten mehr)
+#: by: https://aera.berlin/
+#: by: https://pictures.construction.camera/construction-camera/661BerlinAERA/FullHD102570/webcam.jpg (Webcam)
+#: by: https://www.deutsches-architekturforum.de/thread/12710-am-spreebord-ehem-werkbundstadt-areal-charlottenburg/?postID=705260#post705260
+#: XXX bis wann geht die Sperrung?
+#: last_checked: 2022-02-12
+#: check_frequency: 180d
 	q4::inwork 4234,12710 4303,12692
 EOF
      },
@@ -28094,7 +28099,7 @@ EOF
 #: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
 #: by: https://www.maz-online.de/Lokales/Dahme-Spreewald/Zeuthen/S-Bahnhof-Zeuthen-Fortschritte-auf-der-Baustelle-fuer-den-Personentunnel (noch immer gesperrt)
 #: osm_watch: way id="36936021" version="6" brb
-#: last_checked: 2021-11-23 (osm)
+#: last_checked: 2022-02-12 (mapillary)
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2020-11-01
 	2::inwork 25929,-5994 25902,-6006 25893,-6002
@@ -29235,7 +29240,7 @@ EOF
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2022-01-19 (osm)
+#: last_checked: 2022-02-12 (mapillary)
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -29964,7 +29969,7 @@ EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-03-31 00:00:00") }, # 1 Tag Vorlauf
        until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:00:00") },
-       text  => 'Böckhstr.: zwischen Grimmstr. und Graefestr. mittwochs zwischen 14 Uhr und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.4. bis 30.9.',
+       text  => 'Böckhstr.: zwischen Grimmstr. und Graefestr. mittwochs zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.4. bis 30.9.',
        type  => 'handicap',
        recurring => 1,
        data  => <<EOF,
@@ -30871,7 +30876,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-02-07
+#: last_checked: 2022-02-12
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31090,7 +31095,7 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="6"
-#: last_checked: 2022-02-07 vvv
+#: last_checked: 2022-02-13 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -32253,7 +32258,7 @@ EOF
 #: note: reopened, es gibt wieder Bauzäune
 #: osm_watch: way id="152832871" version="16"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-12-04
+#: last_checked: 2022-02-12
 #: check_frequency: 60d
 	q4::inwork 4674,12076 4698,12124
 # REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
@@ -32722,58 +32727,52 @@ EOF
 	q4::inwork 15870,10938 15674,10851
 EOF
      },
-     { from  => 1622412000, # 2021-05-31 00:00
-       until => 1630447199, # 2021-08-31 23:59
-       text  => 'Bänschstr.: Spielstraße sonntags von 15 bis 18 Uhr, 1. Juni 2021 bis 31. August 2021, außer in den Sommerferien',
+     { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-05-31 00:00:00") }, # 1 Tag Vorlauf
+       until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-08-31 18:00:00") },
+       text  => 'Bänschstr.: zwischen Voigtstr. und Pettenkoferstr. sonntags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 31.08.',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/saison-startet_a311283 (und die anderen neuen Spielstraßen in FH-KB)
 #: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen
 #: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen/kieze
-#: XXX wird diese Spielstraße verstetigt?
-#: next_check: 2022-05-24
+# REMOVED --- #: XXX Spielstraße wurde verstetigt; genaue Geltungszeiten? --- #: next_check: 2022-05-24
 	q4::temp::play 14798,12502 15005,12443
 EOF
      },
-     { from  => 1621634400, # 2021-05-22 00:00
-       until => 1633039199, # 2021-09-30 23:59
-       text  => 'Richard-Sorge-Str.: zwischen Mühsamstr. und Straßmannstr. Spielstraße sonntags 14 bis 18 Uhr, 23. Mai 2021 bis 30. September 2021',
+     { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-04-30 00:00:00") }, # 1 Tag Vorlauf
+       until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:00:00") },
+       text  => 'Richard-Sorge-Str.: zwischen Mühsamstr. und Straßmannstr. sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09.',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
        data  => <<EOF,
-#: XXX wird diese Spielstraße verstetigt?
-#: last_checked: 2021-05-13
-#: next_check: 2022-05-17
+# REMOVED --- #: XXX wird diese Spielstraße verstetigt? --- #: last_checked: 2021-05-13 --- #: next_check: 2022-05-17
 	q4::temp::play 13273,12902 13371,12694
 EOF
      },
-     { from  => 1621288800, # 2021-05-18 00:00
-       until => 1633039199, # 2021-09-30 23:59
-       text  => 'Simplonstr.: zwischen Helmerdingstr. und Matkowskystr. Spielstraße mittwochs 15.30 bis 18.30 Uhr, 19. Mai 2021 bis 30. September 2021, außer in den Sommerferien',
+     { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-04-30 00:00:00") }, # 1 Tag Vorlauf
+       until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:30:00") },
+       text  => 'Simplonstr.: zwischen Helmerdingstr. und Matkowskystr. mittwochs zwischen 15.30 und 18.30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09.',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
        data  => <<EOF,
-#: XXX wird diese Spielstraße verstetigt?
-#: last_checked: 2021-05-12
-#: next_check: 2022-05-12
+# REMOVED --- #: XXX Spielstraße wurde möglicherweise verstetigt; genaue Geltungszeiten? --- #: last_checked: 2021-05-12 --- #: next_check: 2022-05-12
 	q4::temp::play 14468,11203 14531,11142
 EOF
      },
-     { from  => 1621461600, # 2021-05-20 00:00
-       until => 1633039199, # 2021-09-30 23:59
-       text  => 'Dresdener Str.: zwischen Erkelenzdamm und NKZ Spielstraße freitags von 15 bis 18 Uhr, 21. Mai 2021 bis 30. September 2021, außer in den Sommerferien',
+     { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-04-30 00:00:00") }, # 1 Tag Vorlauf
+       until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:00:00") },
+       text  => 'Dresdener Str.: zwischen Erkelenzdamm und NKZ freitags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09.',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
        data  => <<EOF,
-#: XXX wird diese Spielstraße verstetigt?
-#: next_check: 2022-05-14
+# REMOVED --- #: XXX Spielstraße wurde verstetigt; genaue Geltungszeiten? --- #: next_check: 2022-05-14
 	q4::temp::play 11258,10682 11334,10527
 EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-05-31 00:00:00") }, # 1 Tag Vorlauf
        until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:00:00") },
-       text  => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer sonntags zwischen 14 Uhr und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.6. bis 30.9',
+       text  => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 30.09',
        type  => 'handicap',
        recurring => 1,
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
@@ -34432,19 +34431,18 @@ EOF
      },
      { from  => 1643583600, # 2022-01-31 00:00
        until => undef, # XXX
-       text  => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Lessingbrücke sowie am Bellevueufer kann der Uferweg gesperrt sein, ab Anfang Februar 2022',
+       text  => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand 12.2.2022: Weg ist passierbar)',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
        data  => <<EOF,
 #: next_check_id: SPREEUFER-2022
-#: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (diese oder alle Bauabschnitte)? vvv
-#: add_fragezeichen: Haben die Bauarbeiten bereits begonnen? Sind die Uferwege bereits gesperrt? vvv
+#: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)?
+#: add_fragezeichen: Haben die Bauarbeiten bereits begonnen? Ist der Uferweg bereits gesperrt?
+#: last_checked: 2022-02-12
+#: check_frequency: 60d
+#: next_check: 2024-02-12
 #: osm_watch: way id="4410535" version="21"
 	2::inwork 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
-#: osm_watch: way id="4395450" version="25"
-	2::inwork 7031,12320 6694,12627
-#: add_fragezeichen ^^^
-#: XXX ^^^
 EOF
      },
      { from  => 1643670000, # 2022-02-01 00:00
@@ -34493,9 +34491,69 @@ EOF
        data  => <<EOF,
 #: next_check_id: FUERSTENDAMM-2022
 #: by: https://berliner-abendblatt.de/2022/02/09/fuerstendamm/
+#: by: https://www.berliner-woche.de/frohnau/c-verkehr/bauarbeiten-auf-dem-fuerstendamm-ab-9-maerz_a335966
 #: XXX Wann beginnt der 2. Bauabschnitt: Eltviller Straße bis Oranienburger Chaussee?
 #: next_check: 2022-10-01
 	q4::inwork 2486,25156 2599,25047 2647,25018 2673,25012 2818,25022 2904,24993 3015,24965 3117,24966
+EOF
+     },
+     { from  => 1643583600, # 2022-01-31 00:00
+       until => undef, # XXX
+       text  => 'Spreeuferweg: Bauarbeiten, Holsteiner Ufer und Bellevueufer gesperrt, ab Anfang Februar 2022',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
+       data  => <<EOF,
+#: next_check_id: SPREEUFER-2022
+#: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
+#: last_checked: 2022-02-12 vvv
+#: check_frequency: 120d vvv
+#: next_check: 2024-02-12 vvv
+#: osm_watch: way id="4395450" version="25"
+	2::inwork 7031,12320 6694,12627
+#: osm_watch: way id="505363417" version="7"
+	2::inwork 6631,12707 6694,12627
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Wintgensstr./Gontermannstr. - General-Pape-Str.: Tor kann verschlossen sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: note: geöffnet (großes Tor) am 2022-02-13 (So) gegen 14:45
+#: last_checked: 2022-02-13 vvv
+#: check_frequency: 120d vvv
+	3 8260,7911 8203,7909 8161,7907
+	3 8161,7907 8203,7909 8260,7911
+#: check_frequency ^^^
+#: last_checked ^^^
+EOF
+     },
+     { from  => 1644793200, # 2022-02-14 00:00
+       until => 1648763999, # 2022-03-31 23:59
+       text  => 'Landschaftspark Johannisthal: mögliche Sperrungen wegen temporären Baustraßen, Mitte Februar 2022 bis Ende März 2022',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1176225.php',
+       data  => <<EOF,
+#: by: https://berliner-abendblatt.de/2022/02/15/naturschutz-und-bauen/
+	2::inwork 18511,3290 18451,3352 18562,3461
+	2::inwork 18689,3465 18633,3530 18562,3461 18624,3402
+	2::inwork 18326,3141 18304,3208 18337,3238 18451,3352
+	2::inwork 18633,3530 18803,3694
+	2::inwork 18228,4168 18178,4125 18176,4105 18162,4105 18122,4074 18006,3992 18031,3737
+	2::inwork 18337,3238 18395,3176
+EOF
+     },
+     { from  => 1645074000, # 2022-02-17 06:00
+       until => 1645470000, # 2022-02-21 20:00
+       text  => 'Buchberger Str.: zwischen Frankfurter Allee und Coppistr. Aufbau eines Tumrdrehkrans, Sperrung der Fahrbahn, auch für Radfahrer, vom 18.02.2022 06:00 bis 21.02.2022 20:00 ',
+       type  => 'handicap',
+       source_id => 'viz2021:13.488112,52.507697,18.02.2022,06:00',
+       data  => <<EOF,
+	q4::inwork 16242,11533 16119,11435
 EOF
      },
     );

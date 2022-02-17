@@ -392,7 +392,7 @@ Bus M21, Bus M27	busroute_N 3005,13728 3320,13796 3695,13902
 Bus M21	busroute_N 3695,13902 3656,14150
 Bus 123	busroute_N 3408,14741 3418,14661 3431,14586 3443,14535 3455,14460 3464,14407 3472,14366 3421,14318 3269,14316 3184,14265 3169,14256 3126,14216 3106,14195
 Bus 123	busroute_N 4291,14947 4172,15098 4148,15205 4148,15220 4150,15304 4080,15458 3992,15664
-Bus 123	busroute_N 2673,14756 2671,14653 2657,14486 2597,14288 2548,14248 2384,14237 2376,14392 2362,14582 2207,14576 2142,14573 2081,14570 2009,14567 1974,14565 1871,14561 1881,14425 1361,14431 1361,14384
+Bus 123	busroute_N 2673,14756 2671,14653 2657,14486 2591,14296 2526,14252 2378,14249 2371,14392 2362,14582 2207,14576 2142,14573 2081,14570 2009,14567 1974,14565 1871,14561 1881,14425 1361,14431 1361,14384
 Bus 123	busroute_N 1232,15717 1232,15804 1164,15902
 Bus 309	busroute_N 2411,12428 2397,12513 2332,12793 2295,13031 2362,13046 2455,13058 2516,13060 2539,12835 2332,12793
 Bus 245	busroute_N 4591,12511 4658,12450 4807,12348 4973,12256
@@ -463,7 +463,7 @@ Bus 122	busroute_N 6377,17854 6383,18033 6403,18289 6418,18491 6432,18682
 Bus 122	busroute_N 5225,18070 5536,18234 5860,18400 6060,18534 6153,18592 6217,18619 6296,18638 6306,18673 6314,18705
 Bus 122	busroute_N 5068,17384 4914,17399 4901,17341 4891,17289 4997,17241
 Bus 124	busroute_N 488,22275 455,22285 355,22344 231,22418 21,22545 -48,22595 -130,22647 -188,22682 -264,22729 -440,22841 -656,23011
-Bus 125	busroute_N 4326,17801 4377,18037 4421,18243 4291,18264 4181,18284 4102,18298 4009,18322 3909,18342 3733,18376 3738,18573 3731,18601 3713,18621 3562,18712 3680,18913 3700,18965
+Bus 125	busroute_N 4326,17801 4377,18037 4421,18243 4291,18264 4181,18284 4102,18298 4009,18322 3909,18342 3876,18348 3733,18376 3738,18573 3731,18601 3713,18621 3562,18712 3680,18913 3700,18965
 Bus 322	busroute_N 4228,19024 4190,19048 4138,19015 3909,19002 3810,19133 3546,19477
 Bus 327	busroute_N 8456,18371 8286,18331 8222,18375 8096,18456 7997,18524 7861,18333
 Bus 125	busroute_N 3546,19477 3343,19727 3252,19658 3167,19597 3021,19780 2854,19992 2835,20013 2814,20035 2803,20045 2726,20146 2684,20223 2645,20300 2613,20416
@@ -770,10 +770,7 @@ Im Gartenheim: offiziell Einfahrt verboten; an beiden Eingängen Tore, aber ohne 
 Sternblütenweg: Privatstraße	CS 21591,488 21620,372
 #: XXX_osm: bei OSM als living_street gekennzeichnet, aber nicht in der Realität
 Lindenblütenstr.: Privatstraße	CS 21703,388 21671,509
-#: XXX Wann kommen die Straßenschilder?
-#: last_checked: 2021-04-24
-#: check_frequency: 360d
-Ringelblumenweg: Straßenschilder fehlen	CP2; 21618,193 21587,302
+# REMOVED --- #: XXX Wann kommen die Straßenschilder? --- #: last_checked: 2021-04-24 --- #: check_frequency: 360d --- Ringelblumenweg: Straßenschilder fehlen	CP2; 21618,193 21587,302
 (Kleine Waldstr. - Waldstr.): Autobahnunterführung	CS 21531,-1819 21590,-1810
 (Adlergestell - Am Kanal): als "Adlergestell" ausgeschildert	CS 21041,2259 21050,2267 20946,2397
 Grasmückenweg: nur Anlieger frei	CS 14911,3568 14877,3475
@@ -797,7 +794,7 @@ Bordsteine beim Überqueren der Wuhletalstr.	CS 20801,17821 20728,17670 20657,175
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7138 (Realisierung einer Querung Anfang 2021, vielleicht)
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/baumassnahme-an-der-grunewaldstrasse-haengt-von-senatsplaenen-ab_a252769
 #: XXX Realisierung einer Querung geplant
-#: last_checked: 2021-10-20
+#: last_checked: 2022-02-13
 #: check_frequency: 120d
 Bordsteine beim Überqueren der Grunewaldstr.	CP; 6851,9365 6917,9274 7001,9291
 Quastenhornweg: Privatstraße	CS -7595,4374 -7557,4340 -7473,4306 -7413,4304
@@ -895,6 +892,10 @@ Straße 181: Anlieger frei	CS 16991,-81 16989,-147 17036,-421 17065,-589 17076,-6
 Nikolaus-Ehlen-Weg: Privatstraße	CS 17308,-36 17215,94 17176,90
 #: ignore vvv
 #: XXX_indoor: würde besser unter sehenswuerdigkeit passen
+#: by: https://www.morgenpost.de/bezirke/mitte/article230905682/Lichter-der-Vergangenheit-die-Gaslaternen-im-Tiergarten.html
+#: XXX wurden die Gaslaternen mittlerweile umgezogen?
+#: priority: #C
+#: osm_watch: note 2969085 1
 Gaslaternen-Freilichtmuseum Berlin	CS 5895,11692 5835,11768 5858,11863 5900,11913
 #: ignore ^^^
 #: ignore vvv
@@ -1279,7 +1280,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="5"
-#: last_checked: 2022-01-25
+#: last_checked: 2022-02-12
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
@@ -1318,7 +1319,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2022-02-05
+#: last_checked: 2022-02-14
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1598,7 +1599,7 @@ ausgeschildert "Sokratesweg 59/85"	CP2; 18505,9500 18596,9485
 # 
 #: next_check_id: AFRIKANISCHESVIERTEL-2020
 #: XXX wird umbenannt, neuer Name: "Manga-Bell-Platz"
-#: last_checked: 2021-12-13 (mapillary)
+#: last_checked: 2022-02-12
 #: check_frequency: 90d
 ausgeschildert "Nachtigalplatz"	CP2; 5581,16708 5639,16768
 # 
@@ -1613,7 +1614,7 @@ blaues Straßenschild "Klettenberger Str."	CP2; 20555,15 20561,17
 Privatstraße	CS 20694,11811 20708,11918 20715,12040
 # 
 #: next_check_id: SCHOENERGARTEN-2022
-#: last_checked: 2022-01-15
+#: last_checked: 2022-02-13
 Schönegarten: nicht ausgeschildert	CS 7416,10492 7432,10546 7330,10590
 # 
 (Edeka-Parkplatz - Rheinsteinstr.): Hausdurchfahrt	CS 18880,8689 18865,8740
@@ -1625,8 +1626,6 @@ Am Karlsbad: Hausdurchfahrt	CP2; 8027,11000 7959,10910
 #: last_checked: 2022-02-05
 #: check_frequency: 180d
 An der alten Gärtnerei: nicht ausgeschildert	CS 11046,3895 11053,3828 11019,3786 10972,3779 10958,3710
-# 
-Weichselstr. - Sasarsteig: Weg rechts neben dem Parkplatz nehmen	CP2; 12330,8636 12300,8613
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)

@@ -1929,25 +1929,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED ---		2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
-# REMOVED ---	3 8369,12609 8373,12416 8391,12389
-# REMOVED ---		3 8391,12389 8400,12417 8399,12610
-# REMOVED ---	3 8391,12389 8373,12416 8369,12609
-# REMOVED ---		3 8399,12610 8400,12417 8391,12389
-#: by: https://viz.berlin.de/2022/02/verkehrsvorschau12-13022022/
-	2::temp 8399,12610 8369,12609 8306,12609 8207,12606
-	2::temp 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420 8775,12457
-	2::temp 8540,12420 8573,12325 8570,12302 8546,12279
-	2::temp 8306,12609 8309,12758
-	2::temp 8415,12749 8309,12758 8252,12757 8206,12757
-',
-         'from' => 1644645600,
-         'id' => 2849,
-         'text' => 'Regierungsviertel: mögliche Sperrungen wegen der Bundespräsidentwahl, 13.02.2023 zwischen 07:00 und 23:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1644789600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2118,7 +2100,22 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: by: fritz --- # REMOVED (keine Bauarbeiten mehr)
+#: by: https://aera.berlin/
+#: by: https://pictures.construction.camera/construction-camera/661BerlinAERA/FullHD102570/webcam.jpg (Webcam)
+#: by: https://www.deutsches-architekturforum.de/thread/12710-am-spreebord-ehem-werkbundstadt-areal-charlottenburg/?postID=705260#post705260
+#: XXX bis wann geht die Sperrung?
+#: last_checked: 2022-02-12
+#: check_frequency: 180d
+	q4::inwork 4234,12710 4303,12692
+',
+         'from' => 1644676199,
+         'id' => 2961,
+         'text' => 'Am Spreebord: Bauarbeiten zwischen Zufahrt zum Uferweg und Röntgenstr., Passieren für Radfahrer möglich, ggfs. Bordsteine, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        undef,
        undef,
@@ -2189,7 +2186,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.bahninfo-forum.de/read.php?9,672773,672947#msg-672947
 #: by: https://www.maz-online.de/Lokales/Dahme-Spreewald/Zeuthen/S-Bahnhof-Zeuthen-Fortschritte-auf-der-Baustelle-fuer-den-Personentunnel (noch immer gesperrt)
 #: osm_watch: way id="36936021" version="6" brb
-#: last_checked: 2021-11-23 (osm)
+#: last_checked: 2022-02-12 (mapillary)
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2020-11-01
 	2::inwork 25929,-5994 25902,-6006 25893,-6002
@@ -2340,7 +2337,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2022-01-19 (osm)
+#: last_checked: 2022-02-12 (mapillary)
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -2479,7 +2476,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
          'from' => 1648677600,
          'id' => 3145,
          'recurring' => 1,
-         'text' => 'Böckhstr.: zwischen Grimmstr. und Graefestr. mittwochs zwischen 14 Uhr und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.4. bis 30.9.',
+         'text' => 'Böckhstr.: zwischen Grimmstr. und Graefestr. mittwochs zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.4. bis 30.9.',
          'type' => 'handicap',
          'until' => 1664553600
        },
@@ -2616,7 +2613,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-02-07
+#: last_checked: 2022-02-12
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2667,7 +2664,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="6"
-#: last_checked: 2022-02-07 vvv
+#: last_checked: 2022-02-13 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -2997,7 +2994,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: note: reopened, es gibt wieder Bauzäune
 #: osm_watch: way id="152832871" version="16"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2021-12-04
+#: last_checked: 2022-02-12
 #: check_frequency: 60d
 	q4::inwork 4674,12076 4698,12124
 # REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
@@ -3185,10 +3182,53 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/saison-startet_a311283 (und die anderen neuen Spielstraßen in FH-KB)
+#: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen
+#: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen/kieze
+# REMOVED --- #: XXX Spielstraße wurde verstetigt; genaue Geltungszeiten? --- #: next_check: 2022-05-24
+	q4::temp::play 14798,12502 15005,12443
+',
+         'from' => 1653948000,
+         'id' => 3367,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Bänschstr.: zwischen Voigtstr. und Pettenkoferstr. sonntags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 31.08.',
+         'type' => 'handicap',
+         'until' => 1661961600
+       },
+       {
+         'data' => '# REMOVED --- #: XXX wird diese Spielstraße verstetigt? --- #: last_checked: 2021-05-13 --- #: next_check: 2022-05-17
+	q4::temp::play 13273,12902 13371,12694
+',
+         'from' => 1651269600,
+         'id' => 3368,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Richard-Sorge-Str.: zwischen Mühsamstr. und Straßmannstr. sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09.',
+         'type' => 'handicap',
+         'until' => 1664553600
+       },
+       {
+         'data' => '# REMOVED --- #: XXX Spielstraße wurde möglicherweise verstetigt; genaue Geltungszeiten? --- #: last_checked: 2021-05-12 --- #: next_check: 2022-05-12
+	q4::temp::play 14468,11203 14531,11142
+',
+         'from' => 1651269600,
+         'id' => 3369,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Simplonstr.: zwischen Helmerdingstr. und Matkowskystr. mittwochs zwischen 15.30 und 18.30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09.',
+         'type' => 'handicap',
+         'until' => 1664555400
+       },
+       {
+         'data' => '# REMOVED --- #: XXX Spielstraße wurde verstetigt; genaue Geltungszeiten? --- #: next_check: 2022-05-14
+	q4::temp::play 11258,10682 11334,10527
+',
+         'from' => 1651269600,
+         'id' => 3370,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
+         'text' => 'Dresdener Str.: zwischen Erkelenzdamm und NKZ freitags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09.',
+         'type' => 'handicap',
+         'until' => 1664553600
+       },
        {
          'data' => '# REMOVED (ja, Schilder hängen) --- #: XXX wird diese Spielstraße verstetigt? --- #: next_check: 2022-05-31
 	q4::temp::play 12286,9739 12398,9938
@@ -3197,7 +3237,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'id' => 3371,
          'recurring' => 1,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer sonntags zwischen 14 Uhr und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.6. bis 30.9',
+         'text' => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 30.09',
          'type' => 'handicap',
          'until' => 1664553600
        },
@@ -3900,19 +3940,18 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: SPREEUFER-2022
-#: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (diese oder alle Bauabschnitte)? vvv
-#: add_fragezeichen: Haben die Bauarbeiten bereits begonnen? Sind die Uferwege bereits gesperrt? vvv
+#: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)?
+#: add_fragezeichen: Haben die Bauarbeiten bereits begonnen? Ist der Uferweg bereits gesperrt?
+#: last_checked: 2022-02-12
+#: check_frequency: 60d
+#: next_check: 2024-02-12
 #: osm_watch: way id="4410535" version="21"
 	2::inwork 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
-#: osm_watch: way id="4395450" version="25"
-	2::inwork 7031,12320 6694,12627
-#: add_fragezeichen ^^^
-#: XXX ^^^
 ',
          'from' => 1643583600,
          'id' => 3507,
          'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
-         'text' => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Lessingbrücke sowie am Bellevueufer kann der Uferweg gesperrt sein, ab Anfang Februar 2022',
+         'text' => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand 12.2.2022: Weg ist passierbar)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3944,6 +3983,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: FUERSTENDAMM-2022
 #: by: https://berliner-abendblatt.de/2022/02/09/fuerstendamm/
+#: by: https://www.berliner-woche.de/frohnau/c-verkehr/bauarbeiten-auf-dem-fuerstendamm-ab-9-maerz_a335966
 #: XXX Wann beginnt der 2. Bauabschnitt: Eltviller Straße bis Oranienburger Chaussee?
 #: next_check: 2022-10-01
 	q4::inwork 2486,25156 2599,25047 2647,25018 2673,25012 2818,25022 2904,24993 3015,24965 3117,24966
@@ -3954,6 +3994,69 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Fürstendamm: Bauarbeiten zwischen Zeltinger Platz und Eltviller Str., Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, ab 9.3.2022, Gesamtbaumaßnahme bis voraussichtlich Mitte 2023',
          'type' => 'handicap',
          'until' => 1683583200
+       },
+       {
+         'data' => '#: next_check_id: SPREEUFER-2022
+#: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
+#: last_checked: 2022-02-12 vvv
+#: check_frequency: 120d vvv
+#: next_check: 2024-02-12 vvv
+#: osm_watch: way id="4395450" version="25"
+	2::inwork 7031,12320 6694,12627
+#: osm_watch: way id="505363417" version="7"
+	2::inwork 6631,12707 6694,12627
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
+',
+         'from' => 1643583600,
+         'id' => 3512,
+         'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
+         'text' => 'Spreeuferweg: Bauarbeiten, Holsteiner Ufer und Bellevueufer gesperrt, ab Anfang Februar 2022',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: note: geöffnet (großes Tor) am 2022-02-13 (So) gegen 14:45
+#: last_checked: 2022-02-13 vvv
+#: check_frequency: 120d vvv
+	3 8260,7911 8203,7909 8161,7907
+	3 8161,7907 8203,7909 8260,7911
+#: check_frequency ^^^
+#: last_checked ^^^
+',
+         'from' => undef,
+         'id' => 3513,
+         'text' => 'Wintgensstr./Gontermannstr. - General-Pape-Str.: Tor kann verschlossen sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://berliner-abendblatt.de/2022/02/15/naturschutz-und-bauen/
+	2::inwork 18511,3290 18451,3352 18562,3461
+	2::inwork 18689,3465 18633,3530 18562,3461 18624,3402
+	2::inwork 18326,3141 18304,3208 18337,3238 18451,3352
+	2::inwork 18633,3530 18803,3694
+	2::inwork 18228,4168 18178,4125 18176,4105 18162,4105 18122,4074 18006,3992 18031,3737
+	2::inwork 18337,3238 18395,3176
+',
+         'from' => 1644793200,
+         'id' => 3514,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1176225.php',
+         'text' => 'Landschaftspark Johannisthal: mögliche Sperrungen wegen temporären Baustraßen, Mitte Februar 2022 bis Ende März 2022',
+         'type' => 'gesperrt',
+         'until' => 1648763999
+       },
+       {
+         'data' => '	q4::inwork 16242,11533 16119,11435
+',
+         'from' => 1645074000,
+         'id' => 3515,
+         'source_id' => 'viz2021:13.488112,52.507697,18.02.2022,06:00',
+         'text' => 'Buchberger Str.: zwischen Frankfurter Allee und Coppistr. Aufbau eines Tumrdrehkrans, Sperrung der Fahrbahn, auch für Radfahrer, vom 18.02.2022 06:00 bis 21.02.2022 20:00 ',
+         'type' => 'handicap',
+         'until' => 1645470000
        }
      
 );

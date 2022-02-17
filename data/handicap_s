@@ -3,7 +3,6 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
-Mühsamstr.: Fahrbahn im Kreuzungsbereich Thaerstr. gesperrt	q4::inwork 13844,12900 13818,12897 13838,12884
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
 (Straße der Pariser Kommune - Erich-Steinfurth-Str.): einige Fußgänger	q2; 12660,11705 12634,11705 12608,11692
 Oderstr.: Einbahnstraßenregelung, offen Richtung Osten	q3::inwork; 15043,11637 14946,11697
@@ -11,6 +10,7 @@ Oderstr.: Einbahnstraßenregelung, offen Richtung Osten	q3::inwork; 15043,11637 1
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
+Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11197,11882 11160,12071
 Schloßplatz: Fußgänger, Bauarbeiten	q4::inwork 10102,12384 10063,12438
 (Molkenmarkt - zur Stralauer Str.): Bauarbeiten, Gehweg ist noch offen	q4::inwork 10675,12280 10736,12285 10772,12288 10804,12291 10830,12279
 Holzmarktstr. - Ifflandstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg, Bordsteine	q4::inwork 11524,12314 11589,12296
@@ -32,6 +32,7 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 Parkstadt Karlshorst: Beeinträchtigungen durch Bauarbeiten und Baustellenverkehr möglich	q2::inwork 17380,8858 17416,8767 17461,8693 17656,8700 17640,8627 17497,8623
 Hönower Wiesenweg: Beeinträchtigungen durch Bauarbeiten und Baustellenverkehr möglich	q2::inwork; 17497,8623 17461,8693
 Hönower Wiesenweg: temporäre Einbahnstraßenregelung, Baustellenverkehr	q3::inwork; 17461,8693 17497,8623
+Zufahrt Zentrum Schöneweide: Fahrbahn ist gesperrt	q4::inwork 17728,5756 17656,5701
 Am Bahnhof Wuhlheide: Bauarbeiten, Engstellen	q3::inwork 20640,7122 20654,7136 20629,7189 20575,7226
 Wilhelmshavener Str.: Abschnitt der Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 6089,14197 6093,13990
 Neue Nationalgalerie: Bauzäune, Umfahren über Gehweg (Bordstein) möglich	q3::inwork 7874,11293 7828,11133
@@ -1129,7 +1130,8 @@ Max-Pallenberg-Pfad: Bordstein	q2 15460,1764 15465,1953
 Straße 618: schmale Straße	q1 16346,481 16320,538 16297,592
 Harry-Liedtke-Pfad: einige Fußgänger	q1 15788,1747 15783,1820 15806,1903 15834,2024 15843,2065 15836,2113
 Gormannstr.: Bordstein	q2 10350,13376 10353,13384
-(Popitzweg - Halemweg): Fußgänger	q2 1884,14412 2126,14392 2254,14387 2376,14392
+(Popitzweg - Halemweg): Fußgänger	q2 1884,14412 2126,14392 2254,14387
+(Popitzweg - Halemweg): Fußgänger, Bordstein	q3 2254,14387 2371,14392
 (Haeftenzeile - Weg über der U-Bahn): Fußgänger	q1 2135,14475 2126,14392
 (Wohlrabedamm - Reisstr.): Bordstein	q2 1311,14191 1314,14207
 Spreeufer: unter der Rohrdammbrücke sehr eng	q3 1123,13523 1186,13529
@@ -2216,6 +2218,7 @@ Golda-Meir-Steg: Fußgänger	q2 7861,14133 7899,14157 7962,14198
 (Edeka-Parkplatz - Rheinsteinstr.): Fußgänger	q3 18880,8689 18865,8740
 (Uferweg am Paul-Lincke-Ufer): Fußgänger, besonders an schönen Tagen	q2 11735,10022 11756,9990 11948,9895 12045,9843 12116,9825 12165,9786 12280,9728 12432,9652 12596,9587 12639,9547 12703,9522 12718,9529
 (Uferweg - Lausitzer Str.): Rampe, enge Kurven	q3 11948,9895 11946,9913
+(Weg am Kienhorstgraben): einige Fußgänger	q3 3876,18348 3799,18159 3723,17979 3706,17931
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635

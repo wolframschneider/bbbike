@@ -332,7 +332,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/interessenverbund-spricht-sich-gegen-autofreies-friedrichstrassen-quartier-aus_a333761
 #: source_id: 2147346249
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
-#: last_checked: 2021-12-23 vvv
+#: last_checked: 2022-02-12 vvv
 #: next_check: 2022-04-01 vvv
 # REMOVED --- #: valid: !20200821-20211031 --- Friedrichstr. (Mitte, Kreuzberg)	H 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103 --- #: valid: 20200821-20211031
 Friedrichstr. (Mitte, Kreuzberg)	NN 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
@@ -728,7 +728,7 @@ Kolonnenstr.	H 8209,8773 8145,8773 8078,8772 8014,8771 8008,8771 7795,8765 7709,
 #: XXX wird am 18.10.2021 zum Richard-von-Weizsäcker-Platz umbenannt --- verzögert sich wegen Widerspruchs
 #: also_indoor: search Richard-von-Weizsäcker-Platz
 # REMOVED --- #: next_check: 2021-10-18
-#: last_checked: 2022-02-09 (research)
+#: last_checked: 2022-02-13
 #: check_frequency: 14d
 Kaiser-Wilhelm-Platz	NN 7201,8870 7307,8945
 Herbertstr. (Schöneberg)	N 7360,8918 7389,8837 7402,8783 7395,8761
@@ -1810,7 +1810,7 @@ Am Falkplatz	N 10418,15704 10456,15561
 (Friedrich-Ludwig-Jahn-Sportpark)	NN 10456,15561 10512,15406 10530,15356 10583,15208 10607,15142
 (Friedrich-Ludwig-Jahn-Sportpark - Cantianstr.)	NN 10530,15356 10781,15438 10804,15447
 Danziger Str.	HH 13330,13468 13228,13615 13225,13620 13166,13707 13100,13803 13037,13897 12975,13990 12901,14093 12722,14232 12616,14315 12522,14385 12407,14470 12317,14535 12123,14643 12025,14695 11998,14709 11864,14781 11709,14856 11609,14881 11535,14900 11339,14946 11325,14949 11285,14958 11154,14985 11056,15009 10881,15047
-Petersburger Str.	HH 13330,13468 13375,13367 13383,13349 13434,13234 13487,13115 13530,13014 13579,12904 13622,12806 13676,12683 13695,12643
+Petersburger Str.	HH 13330,13468 13375,13367 13383,13349 13434,13234 13481,13128 13530,13014 13579,12904 13622,12806 13676,12683 13695,12643
 Petersburger Str.	HH 13730,12535 13732,12526 13785,12292
 Petersburger Platz	N 13559,12779 13470,12990
 Bersarinplatz	HH 13695,12643 13681,12624 13675,12581 13698,12544 13730,12535 13761,12578 13771,12607 13767,12626 13747,12642 13695,12643
@@ -4226,7 +4226,7 @@ Buchholzweg	N 4535,15530 4466,15350 4389,15336
 #: add_fragezeichen: Wurde die Umbenennung zu "Cornelius-Fredericks-Str." schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: also_indoor: search Cornelius-Fredericks-Straße
 #: osm_watch: way id="247340732" version="17"
-#: last_checked: 2022-01-22
+#: last_checked: 2022-02-12
 #: check_frequency: 90d
 Lüderitzstr.	N 6661,15921 6484,16085 6349,16213 6211,16343 6106,16433 6003,16521
 Sansibarstr.	N 6201,16538 6106,16433 6005,16313 5827,16118
@@ -4739,7 +4739,7 @@ Rübländerstr.	N 14321,23378 14382,23574
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3988&date=20151213
 #: XXX Planstraße D --- bleibt dieser Weg erhalten?
 #: osm_watch: way id="224122378" version="13"
-#: last_checked: 2021-02-25 (mapillary)
+#: last_checked: 2022-02-12 (mapillary)
 #: check_frequency: 360d
 (S-Bahndamm - Hobrechtsfelder Chaussee)	NN 15469,24813 15339,24861 14434,25388
 (Bucher Teiche - Schönerlinder Chaussee)	NN 14321,25216 14056,25378 14036,25433 14017,25482 13942,25711 13966,25777 13970,25785 14106,26057 14187,26214 14491,26714 14497,26727
@@ -5498,6 +5498,7 @@ Zitadellenweg	N -2597,14532 -2594,14571 -2264,14584
 An der Spreeschanze	N -2623,14396 -2600,14436 -2597,14532
 Lagerweg	N -1392,14527 -1404,14441 -1354,14424
 #: next_check_id: TEGELERBRUECKE-2021
+#: last_checked: 2022-02-12
 #: next_check: 2023-12-01
 (provisorische Tegeler Brücke)	H -261,15858 -265,15917 -255,15993 -239,16077 -203,16168
 Gartenfelder Str.	H -1336,14786 -1299,14797 -1258,14846 -1099,14925 -945,14999 -834,15053 -767,15082 -707,15108 -569,15167 -532,15184 -453,15219 -344,15200 -286,15354 -302,15546 -302,15602 -292,15715 -261,15858 -252,15903 -242,15982 -236,16043
@@ -5658,7 +5659,7 @@ Nennhauser Damm	H -7484,13770 -7522,13651 -7550,13528 -7554,13514 -7584,13421 -7
 Nennhauser Damm [Stichstraße]	N -8049,13332 -8043,13464 -8064,13534
 #: note: Privatstraße
 Metropolitan Park	N -8064,13534 -8088,13594 -7984,13649 -7926,13709 -7893,13781 -7894,13878 -7928,13967 -8019,14036 -8095,14056 -8183,14041
-#: osm_watch: way id="725376312" version="8"
+#: osm_watch: way id="725376312" version="9"
 #: note: Privatstraße
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_06_0305_0372_online.pdf (Straßenbenennung)
 #: XXX Straße soll "Eidechsenweg" heißen, Benennung zum 1.3.2022 wirksam, Eintrag in Berlin.coords.data fehlt
@@ -6782,6 +6783,7 @@ Köpenicker Allee	NN 20280,7749 20226,7846
 Köpenicker Allee	N 20226,7846 20096,8077 19990,8253 19898,8410 19813,8564 19697,8776 19610,8933 19575,8978 19500,9043 19392,9116 19267,9201 19206,9243 19195,9249 19109,9306 19020,9364 18939,9417
 # REMOVED --- #: XXX neuer Straßenname: "Am alten Flugplatz", evtl. nur im Bereich der neuen Gartenstadt --- #: XXX fehlt in Berlin.coords.data --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6985 --- #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_31_3489_3616_online.pdf (Benennung) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_39_4845_4932_online.pdf (späte Straßenlandwidmung) --- #: osm_watch: way id="24845022" version="16" --- #: last_checked: 2017-11-05 --- #: check_frequency: 45d
 #: note: am Anfang waren die Straßenschilder mit kleinem "alten" geschrieben, mittlerweile (spätestens 2020) wurde das korrigiert
+#: note: bei LOR ist die Schreibweise weiterhin "Am alten Flugplatz"
 #: oldname: -201801: Straße am Heizhaus
 #: ignore_oldname_file: yes
 Am Alten Flugplatz	N 19697,8776 19754,8809 19778,8823 19815,8844 19891,8887 19949,8920 19972,8935
@@ -10765,7 +10767,7 @@ Pfarrstr.	NH 15458,11306 15477,11338
 Scheffelstr.	NH 15563,12870 15516,12838 15469,12831 15417,12823 15367,12815 15357,12813 15233,12829 15169,12839 15117,12846 15098,12849 15010,12855
 Eberhardstr.	N 15233,12829 15231,12929
 Eldenaer Str.	NH 15010,12855 14940,12843 14906,12837 14836,12826 14731,12809 14661,12798 14556,12781 14435,12761 14355,12752 14162,12808 14096,12827 13979,12861 13960,12866 13844,12900
-Mühsamstr.	N 13844,12900 13818,12897 13622,12806 13559,12779 13506,12752 13371,12694 13273,12649
+Mühsamstr.	N 13830,12907 13818,12897 13622,12806 13559,12779 13506,12752 13371,12694 13273,12649
 Mühsamstr.	N 13818,12897 13838,12884
 (Auerstr. - Mühsamstr.)	NN 13067,12583 13091,12563 13232,12628 13273,12649
 Adalbertstr.	NH 11393,10390 11389,10463 11411,10515 11463,10642 11505,10744 11552,10863 11589,10947 11640,11067 11656,11106
@@ -11592,7 +11594,8 @@ Rue Doret	N 3248,17921 3153,17975
 Rue Marin la Meslée	N 3213,17858 3123,17923
 #: note: Straßenschilder sind "Tulasne" geschrieben, aber einige Quellen im Netz erwähnen "Toulasne"
 Rue du Commandant Jean Tulasne	N 3257,17621 3213,17858
-(Nordufer des Flughafensees)	NN 3108,18103 2848,18138 2839,18131 2819,18130 2792,18130 2768,18147 2747,18162 2226,18228
+(Nordufer des Flughafensees)	NN 3108,18103 2883,18136 2855,18132 2829,18126 2797,18126 2790,18139 2771,18157 2226,18228
+(Ostufer des Flughafensees)	NN 2855,18132 2840,18121 2820,17991
 Mescheder Weg	N 2267,18378 2444,18487 2553,18555 2582,18577 2600,18606 2604,18660 2602,18737
 Weidenauer Weg	N 2244,18465 2426,18544
 Hilchenbacher Weg	NN 2413,18655 2416,18598
@@ -11682,7 +11685,7 @@ Allée du Stade	N 3585,16252 3781,16175 4035,16051 4076,16017 4089,15978 4084,158
 (Uferweg am Hohenzollernkanal)	NN 1349,15797 1232,15804 1201,15804 364,15810 44,15897 -196,16060 -203,16064 -205,16086 -224,16095 -265,16111 -822,16535 -910,16608
 #: next_check_id: TEGELERBRUECKE-2021
 #: osm_watch: way id="930770437" version="3"
-#: last_checked: 2021-09-26 (mapillary)
+#: last_checked: 2022-02-12
 #: check_frequency: 180d
 #: next_check: 2023-12-01
 (provisorische Umleitung)	NN -196,16060 -176,16089
@@ -12632,9 +12635,9 @@ Försterweg	N 13462,2186 13485,2007
 Turfweg	N 13336,2151 13357,2031
 Köbisstr.	N 7160,11225 7103,11247 6851,11346
 Conrad-Blenkle-Str.	NH 13057,14267 13158,14117 13224,14025 13292,13931 13359,13832 13430,13733 13543,13568
-Ebertystr.	NH 13543,13568 13574,13505 13601,13445 13648,13334 13707,13206 13747,13110 13798,13003 13844,12900
-Kochhannstr.	N 13168,13125 13267,13167 13339,13196 13434,13234 13557,13290 13648,13334 13742,13376
-Ebelingstr.	N 13487,13115 13610,13169 13707,13206
+Ebertystr.	NH 13543,13568 13570,13502 13595,13442 13644,13332 13692,13221 13741,13107 13788,13002 13830,12907 13844,12900
+Kochhannstr.	N 13168,13125 13267,13167 13339,13196 13434,13234 13548,13290 13644,13332 13742,13376
+Ebelingstr.	N 13481,13128 13598,13180 13692,13221
 Wassertorstr.	N 10987,10360 10857,10411 10685,10483 10484,10567
 Bergfriedstr.	N 10857,10411 10944,10606
 Moritzstr. (Kreuzberg)	N 10633,10369 10433,10456
@@ -12896,7 +12899,7 @@ Soltauer Str.	N 3377,19325 3483,19190 3749,19031
 (Breitenbachstr. - Soltauer Str.)	NN 3909,19002 3738,19007
 Quäkerstr.	N 3733,18376 3738,18573 3731,18601 3713,18621 3562,18712
 Foxweg	N 3731,18601 3758,18613 3848,18611
-Auguste-Viktoria-Allee	N 5225,18070 4905,18142 4786,18168 4690,18185 4609,18199 4531,18217 4421,18243 4291,18264 4181,18284 4102,18298 4009,18322 3909,18342 3733,18376
+Auguste-Viktoria-Allee	N 5225,18070 4905,18142 4786,18168 4690,18185 4609,18199 4531,18217 4421,18243 4291,18264 4181,18284 4102,18298 4009,18322 3909,18342 3876,18348 3733,18376
 General-Barby-Str.	N 4326,17801 4377,18037 4421,18243 4465,18475 4458,18613 4466,18831 4474,18983
 General-Barby-Str.	NN 4474,18983 4475,18998
 Zobeltitzstr.	N 3733,18376 3674,18372 3663,18187 3799,18159 3871,18144 3970,18126 4059,18107 4139,18091 4248,18066 4377,18037
@@ -12906,6 +12909,7 @@ Berenhorststr.	N 4816,17712 4862,17934 4905,18142
 (Scharnweberstr. - Berenhorststr.)	NN 4801,17623 4816,17712
 Belowstr.	N 4946,17701 4992,17908
 Klixstr. (Reinickendorf)	N 3833,17929 3871,18144 3909,18342
+(Weg am Kienhorstgraben)	NN 3876,18348 3799,18159 3723,17979 3706,17931
 Engelmannweg	N 4558,18342 4531,18217 4492,18013 4462,17892 4429,17763
 Am Doggelhof	N 4462,17892 4537,17874
 General-Woyna-Str.	N 4465,18475 4340,18497 4291,18264 4248,18066 4200,17848 4187,17765
@@ -13951,7 +13955,7 @@ Ella-Kay-Str.	N 12234,15151 12208,15108 12095,14888 12060,14827 12050,14808 1199
 (Greifswalder Str. - Ella-Kay-Str.)	N 12128,14764 12050,14808
 Winsstr.	N 12025,14695 11982,14614 11949,14557 11912,14486 11821,14317 11713,14118 11657,14018 11607,13928
 Auerstr.	N 13025,12523 13067,12583 13202,12790 13273,12902
-Straßmannstr.	N 13273,12902 13368,12943 13435,12973 13470,12990 13530,13014 13747,13110 13835,13149
+Straßmannstr.	N 13273,12902 13368,12943 13435,12973 13470,12990 13530,13014 13741,13107 13835,13149
 Ludwigsfelder Str. (Hellersdorf)	N 22883,15740 22888,15768 22909,15877 22991,15864 23001,15898 23011,15947 22940,15964 22961,16077 22974,16139
 Michendorfer Str. (Hellersdorf)	N 22811,15753 22787,15639 22764,15515
 Zossener Str. (Hellersdorf)	H 22771,16194 22698,15788 22811,15753 22883,15740 23080,15700 23218,15671 23411,15632 23568,15603 23617,15594 23868,15633
@@ -14335,8 +14339,8 @@ Nonnendamm	N 1929,13843 1983,13828 2025,13815 2149,13775 2176,13703 2217,13689 2
 (Goerdelerdamm - Nonnendamm)	N 2247,13805 2149,13775
 (Friedrich-Olbricht-Damm - Goerdelerdamm)	NN 4894,14634 4897,14609
 (Uferweg an der Schleuse - Tegeler Weg)	NN 2817,14003 2881,14061
-Halemweg	N 2382,14800 2361,14673 2362,14582 2376,14392 2384,14237
-Heilmannring	N 1871,14561 1881,14425 1884,14412 1906,14326 1984,14255 2111,14235 2384,14237 2548,14248 2597,14288 2657,14486 2671,14653 2673,14756
+Halemweg	N 2382,14800 2361,14673 2362,14582 2371,14392 2378,14249
+Heilmannring	N 1871,14561 1881,14425 1884,14412 1906,14326 1984,14255 2111,14235 2378,14249 2526,14252 2591,14296 2657,14486 2671,14653 2673,14756
 Syringenweg	N 13879,13967 13961,14020 14015,14061 14032,14099 14042,14249
 Syringenweg	N 13961,14020 13991,13981 14076,13958 14122,13947
 Syringenplatz	N 14042,14249 14025,14519
@@ -15643,7 +15647,7 @@ Togostr.	N 5531,16734 5315,16936
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10895 (Forderung: alte Straßenschilder erneuern)
 #: osm_watch: way id="333607502" version="8"
 #: also_indoor: search Manga-Bell-Platz
-#: last_checked: 2021-12-13 (mapillary)
+#: last_checked: 2022-02-12
 #: check_frequency: 90d
 Nachtigalplatz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,16803 5561,16767 5531,16734 5496,16696 5533,16662
 #: next_check_id: AFRIKANISCHESVIERTEL-2020
@@ -15654,7 +15658,7 @@ Nachtigalplatz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,168
 #: add_fragezeichen: Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: osm_watch: way id="5199719" version="15"
 #: also_indoor: search Maji-Maji-Allee
-#: last_checked: 2021-10-31
+#: last_checked: 2022-02-12
 #: check_frequency: 90d
 Petersallee	N 5426,16539 5533,16662
 #: next_check_id: AFRIKANISCHESVIERTEL-2020
@@ -15667,7 +15671,7 @@ Petersallee	N 5426,16539 5533,16662
 #: add_fragezeichen: Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: osm_watch: way id="47347069" version="13"
 #: also_indoor: search Anna-Mungunda-Allee
-#: last_checked: 2021-12-13 (mapillary)
+#: last_checked: 2022-02-12
 #: check_frequency: 90d
 Petersallee	N 5581,16708 5639,16768 5684,16815 5772,16919
 Usambarastr.	N 5526,16916 5565,16923 5684,16815
@@ -15787,7 +15791,7 @@ Rossinistr.	N 13456,15760 13398,15826
 Varnhagenstr.	N 11614,16034 11680,16151 11808,16343
 Gartenstr. (Zehlendorf)	N 720,2718 835,2715 912,2965 945,3061
 Bogenstr. (Zehlendorf)	N 912,2965 967,2943 1017,2823
-Matternstr.	N 13798,13003 13579,12904
+Matternstr.	N 13788,13002 13579,12904
 Elßholzstr.	N 7202,9329 7209,9507 7216,9657 7223,9815
 (Gleditschstr. - Elßholzstr.)	NN 7122,9517 7158,9509 7209,9507
 (Kleistpark)	NN 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
@@ -15895,7 +15899,8 @@ Lohmestr.	N 11113,17895 11136,17768
 Lauterbachstr.	N 11272,17930 11296,17799
 (Holsteiner Ufer - Lessingstr.)	NN 6150,12875 6172,12878 6182,12900
 (Lessingstr. - südliches Spreeufer)	NN 6150,12875 6138,12877 6123,12887
-Holsteiner Ufer	N 6182,12900 6347,12901 6449,12865 6575,12778 6694,12627
+Holsteiner Ufer	N 6182,12900 6347,12901 6449,12865 6575,12778 6631,12707
+Holsteiner Ufer	NN 6631,12707 6694,12627
 # REMOVED (lohnt nicht) --- Holsteiner Ufer	NN 6575,12778 6469,12867 6449,12865
 Sponholzstr.	N 6144,7677 6166,7658 6163,7237 6163,7225 6157,7117
 Bahnhofstr. (Schöneberg)	N 6082,7066 6151,7078 6157,7117
@@ -16253,7 +16258,7 @@ Rosenheimer Str.	NN 6239,9344 6163,9340
 Rosenheimer Str.	N 6163,9340 6062,9335
 #: oldname: -20130426: Gabelsbergerstr.
 Silvio-Meier-Str.	N 14381,12207 14451,12396
-Heidenfeldstr.	N 13601,13445 13445,13376 13433,13371
+Heidenfeldstr.	N 13595,13442 13445,13376 13433,13371
 Heidenfeldstr.	NN 13433,13371 13383,13349
 Tieckstr.	N 9094,13641 9275,13720 9376,13765 9514,13826
 Hugo-Preuß-Brücke	NH 8160,13053 8274,13052
@@ -16309,7 +16314,7 @@ Hüttendorfer Weg	N 21463,-280 21409,-109
 #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/stadtplanungsamt/ag2/downloads-b-plaene/planungsvariante_1.pdf?start&ts=1392044607&file=planungsvariante_1.pdf
 #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/stadtplanungsamt/ag2/downloads-b-plaene/planungsvariante_2.pdf?start&ts=1392044611&file=planungsvariante_2.pdf
 #: osm_watch: way id="147717012" version="4"
-#: last_checked: 2021-12-17
+#: last_checked: 2022-02-12 (mapillary)
 #: check_frequency: 360d
 (Am Gartenstadtweg - S-Bhf. Altglienicke/Paradiesstr.)	N 21527,547 21368,478 21275,389
 (Am Gartenstadtweg - S-Bhf. Altglienicke/Paradiesstr.)	NN 21275,389 21262,375
@@ -16414,9 +16419,9 @@ Goebelstr.	N 1871,14561 1751,14562 1646,14583 1406,14686 1282,14710 1226,14714 1
 Schwiegersteig	N 1112,14918 1130,14823 1134,14721
 Natalissteig	N 1226,14714 1223,14824 1200,14943
 Popitzweg	N 1361,14431 1881,14425
-(Popitzweg - Halemweg)	NN 1884,14412 2126,14392 2254,14387 2376,14392
+(Popitzweg - Halemweg)	NN 1884,14412 2126,14392 2254,14387 2371,14392
 (Haeftenzeile - Weg über der U-Bahn)	NN 2135,14475 2126,14392
-Dahrendorfzeile	N 2597,14288 2680,14287
+Dahrendorfzeile	N 2591,14296 2680,14287
 Hofackerzeile	N 2657,14486 2769,14482
 (Hofackerzeile - Kurt-Schumacher-Damm)	NN 2769,14482 2770,14420 2788,14364
 Habermannzeile	N 2671,14653 2806,14645
@@ -16713,6 +16718,7 @@ Henriette-Lustig-Str.	N 21375,4974 21380,5003 21476,5048 21611,5119
 Henriette-Lustig-Str.	N 21611,5119 21631,5079
 (Henriette-Lustig-Str. - Uferweg)	NN 21611,5119 21645,5135
 #: note: Privatstraße (laut Amtsblatt)
+#: note: in LOR 1/2022 fälschlicherweise "Wäschnerinnenweg", war auch im DPAG-Mitteilungsblatt so und wurde am 05.12.2019 korrigiert
 Wäscherinnenweg	N 21444,5112 21358,5072 21335,5075
 #: note: Privatstraße (laut Amtsblatt)
 Blütenweißweg	N 21483,5374 21427,5347
@@ -18092,8 +18098,8 @@ Ernst-Zinna-Weg	N 12604,13338 12597,13323 12556,13265 12564,13216 12585,13118
 #: osm.highway: service
 (Volkspark Friedrichshain)	NN 12141,13609 12012,13599 12038,13685
 Heidenfeldstr. [Stichstraße]	N 13445,13376 13419,13435
-# REMOVED (uninteressant geworden, abgeschlossene Tore) --- (Zufahrt Landsberger Allee)	NN 13419,13435 13574,13505
-Weisbachstr.	N 13557,13290 13610,13169
+# REMOVED (uninteressant geworden, abgeschlossene Tore) --- (Zufahrt Landsberger Allee)	NN 13419,13435 13570,13502
+Weisbachstr.	N 13548,13290 13598,13180
 Hausburgstr.	N 13635,13605 13706,13460 13742,13376 13835,13149 13895,13017
 (Treppe zur Landsberger Allee)	NN 13858,13719 13853,13712 13854,13701
 Walter-Friedländer-Str.	N 13875,13532 13918,13438 13934,13403 13976,13309 13998,13272
@@ -19792,10 +19798,7 @@ Am Kaniswall	N 32823,-149 32817,4 32872,128
 (Zufahrt Erika-Heß-Eisstadion)	N 8131,14794 8015,14685 8012,14663 7966,14622
 # 
 # REMOVED (wurde geschlossen) --- #: by: https://www.bahninfo-forum.de/file.php?9,file=15098 --- #: osm.highway: service vvv --- #: valid: 20210307-20210720 vvv --- (Zufahrt Impfzentrum Flughafen Tempelhof)	N 9268,8029 9276,7823 9426,7827 9653,8480 --- (Zufahrt Impfzentrum Flughafen Tempelhof)	N 9240,7811 9276,7823 --- #: valid ^^^ --- #: osm.highway ^^^
-# 
-#: next_check_id: CORONA-2020
-#: osm.highway: service
-(Zufahrt Impfzentrum Trabrennbahn Karlshorst)	N 18483,7883 18662,7914 18633,8126
+# REMOVED (wurde geschlossen) --- #: next_check_id: CORONA-2020 --- #: osm.highway: service --- #: next_check: 2022-02-13 --- #: valid: -20220213 --- (Zufahrt Impfzentrum Trabrennbahn Karlshorst)	N 18483,7883 18662,7914 18633,8126
 # 
 #: next_check_id: STRD17JUNI-2021
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_01_0001_0080_online.pdf (geplant ab 15.3.2021 bis März 2025)
