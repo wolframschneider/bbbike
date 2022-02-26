@@ -3369,7 +3369,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: PLANSTRASSEC-2019
 # REMOVED (ein osm_watch reicht aus) --- #: osm_watch: way id="491906864" version="6"
-#: last_checked: 2022-01-01
+#: last_checked: 2022-02-22
 #: check_frequency: 60d
 (Planstraße C): Einbahnstraßenregelung	1s:q4:inwork 12848,11093 12926,11224
 # 
@@ -3393,7 +3393,7 @@ Tegeler Brücke: wird neu gebaut	2::inwork -261,15858 -252,15903 -242,15982 -236,
 # REMOVED --- #: next_check_id: OSTBAHNHOF-2021 --- #: last_checked: 2021-11-03 --- #: check_frequency: 14d --- Erich-Steinfurth-Str., Hermann-Stöhr-Platz: wegen Kranarbeiten gesperrt	2::inwork 12413,11901 12453,11790 12378,11806
 # 
 #: next_check_id: OSTBAHNHOF-2021
-#: last_checked: 2022-01-29
+#: last_checked: 2022-02-22
 #: check_frequency: 120d
 #: next_check: 2025-01-01
 Erich-Steinfurth-Str.: Bauarbeiten, gesperrt	2::inwork 12608,11692 12645,11673
@@ -3424,7 +3424,7 @@ Wandlitzstr.: in Höhe Lehndorffstr. sind Gehweg und Fahrbahn gesperrt	2::inwork 
 #: by: https://www.berliner-woche.de/rummelsburg/c-bauen/neue-sozialwohnungen-mit-blick-aufs-wasser_a323324
 #: by: https://www.berliner-woche.de/bezirk-lichtenberg/c-bauen/staedtische-und-private-gesellschaften-planen-hunderte-wohnungen_a334934 (Erwähnung der Hochbauarbeiten)
 #: XXX wird es hier nach den Bauarbeiten weiterhin einen Weg geben?
-#: last_checked: 2022-02-02
+#: last_checked: 2022-02-20
 #: check_frequency: 180d
 #: next_check: 2023-09-30
 (Kynaststr. - Paul-und-Paula-Ufer): Bauarbeiten, Weg existiert nicht mehr	2::inwork 14843,10621 14911,10587
@@ -3491,7 +3491,7 @@ Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, k
 # REMOVED --- #: XXX bis wann geht die Einbahnstraßenregelung? --- #: last_checked: 2021-05-17 --- Rudi-Arndt-Str.: Einbahnstraßenregelung	1s:q4:inwork 13449,13892 13359,13832
 # 
 #: osm_watch: way id="871451762" version="1"
-#: last_checked: 2022-01-29
+#: last_checked: 2022-02-24
 #: check_frequency: 30d
 Straße 77: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 15320,12375 15408,12394
 # 
@@ -3519,7 +3519,7 @@ Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 
 #: XXX ggfs. culdesac- und str_cont_ausnahme-Einträge erstellen, sollte ein Teilabschnitt der Straße endgültig verschwinden
 #: XXX mittlerweile (April 2021) wurde der südliche Teil schon weggebaggert
 #: osm_watch: way id="25008069" version="15"
-#: last_checked: 2022-01-08
+#: last_checked: 2022-02-23 (mapillary)
 #: check_frequency: 60d
 # REMOVED (hier ist nichts mehr) --- Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11916,11846 11923,11881
 Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11923,11881 11940,11982
@@ -3554,7 +3554,7 @@ Alexanderufer - Charité: Tor ist wegen Corona-Beschränkungen geschlossen	2 8371,
 # 
 #: XXX evtl. wird nach den Bauarbeiten die Qualität besser sein
 #: osm_watch: way id="141309175" version="12"
-#: last_checked: 2021-12-27 vvv
+#: last_checked: 2022-01-08 (mapillary) vvv
 #: check_frequency: 60d vvv
 Schulstr. (Biesdorf): Bauarbeiten, komplett gesperrt	2::inwork 20599,11938 20708,11918 20738,11915
 # REMOVED (nicht mehr) --- Wildrosenweg: Überqueren der Schulstr. nicht möglich	3 20694,11811 20708,11918 20715,12040
@@ -3567,7 +3567,7 @@ Schulstr. (Biesdorf): Bauarbeiten, komplett gesperrt	2::inwork 20599,11938 20708
 #: osm_watch: way id="690322561" version="3"
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2022-02-09
+#: last_checked: 2022-02-24 (mapillary)
 Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt	2::inwork 9131,12438 9179,12444
 # 
 #: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
@@ -3644,7 +3644,7 @@ Alexander-von-Humboldt-Weg: Durchgang gesperrt, auch für Fußgänger	2::inwork 188
 #: XXX vermutlich dauerhaft, die Fahrbahn ist schon aufgerissen; evtl. wird es einen neuen Weg weiter südöstlich geben
 #: osm_watch: way id="860287005" version="4"
 #: also_indoor: traffic (G)
-#: last_checked: 2022-01-09
+#: last_checked: 2022-02-25
 #: check_frequency: 120d
 #: next_check: 2022-07-01
 Cotheniusstr.: Bauarbeiten, Straße existiert nicht mehr	2::inwork 13430,13733 13519,13785
@@ -3676,14 +3676,14 @@ Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10300,-2135 10296,-215
 # 
 #: by: mapillary
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22806.pdf (Sperrung des Spreeuferwegs zwischen 2020 und 2028)
-#: last_checked: 2022-02-14
+#: last_checked: 2022-02-23
 #: next_check: 2028-01-01
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 # 
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/stralauer-allee-15-16.657/page-2#post-13509 (Fertigstellung zum 30.6.2024 geplant)
 #: by: https://rfr-development.de/projekte/stralauer-allee (hier entsteht ein Bürogebäude)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbrücke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2022-02-06
+#: last_checked: 2022-02-23
 #: check_frequency: 360d
 #: next_check: 2024-06-30
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
@@ -3691,7 +3691,7 @@ Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,1015
 #: by: wosch
 #: confirmed_by: srt
 #: by: https://portal1548.webcam-profi.de/ (webcam)
-#: last_checked: 2022-02-02
+#: last_checked: 2022-02-23
 #: check_frequency: 60d
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,10152 14373,10046
 # 
@@ -3872,7 +3872,7 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 #: note: laut rbb komplett gesperrt, bis 30.6.2023, in der Realität weiterhin Einbahnstraße
 #: osm_watch: way id="5096644" version="16"
 #: priority: #C
-#: last_checked: 2022-02-08
+#: last_checked: 2022-02-22
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3911,12 +3911,13 @@ Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwor
 #: by: https://www.berliner-woche.de/marzahn/c-bauen/abriss-der-wuhletalbruecke-startet-ende-2021_a299255 (Abschluss der Baumaßnahme 2026/2027)
 #: by: https://berliner-abendblatt.de/2022/01/03/abbruch-der-wuhletalbruecke-startet/ (bis 2025)
 #: by: https://www.berliner-woche.de/marzahn/c-bauen/abriss-der-wuhletalbruecke-erfolgt-im-fruehjahr-2022_a332741
+#: by: https://berliner-abendblatt.de/2022/02/21/moltkebruecke/ (bis Mitte 2025)
 #: source_id: viz2021:13.557685,52.561638,03.06.2019,12:00 (bis Ende 2022)
 #: source_id: viz2021:13.558565,52.562687,03.06.2019,12:00 (bis Ende 2022)
 #: XXX Wann wird die Brücke wieder eröffnet?
 #: last_checked: 2021-05-08
 #: next_check: 2022-12-31
-#: valid: 20190603-20250101
+#: valid: 20190603-20250630
 Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
 # 
 # REMOVED (Bauzäune sind nur stellenweise vorhanden (z.B. Seidenschwanzstr., westliche Einfahrt) und können leicht umfahren werden --- siehe mapillary) --- #: next_check_id: SEIDENSCHWANZSTR-2019 --- #: last_checked: 2020-04-26 vvv --- #: check_frequency: 360d vvv --- #: next_check: 2021-01-09 vvv --- #: XXX wann werden die Straßen eröffnet? vvv --- #: XXX laut osm (via StreetComplete) nicht mehr highway=construction vvv --- #: by: http://www.cdu-fraktion-tk.de/image/inhalte/file/Amtsblatt_Nr__21_vom_28__Mai_2010.pdf --- #: by: https://www.google.de/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjn5uqLgY_NAhVHsBQKHcfIAEEQFggvMAE&url=https%3A%2F%2Fwww.berlin.de%2Fba-marzahn-hellersdorf%2Fpolitik-und-verwaltung%2Faemter%2Fstadtentwicklungsamt%2Fstadtplanung%2Fmdb-bamarzahnhellersdorf-stadtplanung-festgesetb-xxiii_15b_1_abzeichnung.pdf&usg=AFQjCNHD5t6sh5hLTtunUdcS4SG222H6xw&cad=rja --- #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_29_3241_3364_online.pdf (Grundstücksnummerierungen) --- #: by; https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_24_3577_3708_online.pdf (Grundstücksnummerierungen) --- #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/degewo-soll-an-der-bisamstrasse-den-bau-von-mehrfamilienhaeusern-pruefen_a228628 --- #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/degewo-plant-mehrgeschosser-im-siedlungsgebiet-zwischen-bisamstrasse-und-landesgrenze_a278290 --- #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.959124.php --- #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/die-degewo-will-ab-2023-an-der-stadtgrenze-200-mietwohnungen-bauen_a300659 --- #: by: https://www.berliner-woche.de/mahlsdorf/c-bauen/buergerinitiative-lehnt-mietwohnungsbau-ab_a301920 --- #: osm_watch: way id="515337708" version="8" --- Seidenschwanzstr.: durch Bauzäune abgesperrt	2::inwork 26666,12935 26570,12860 26519,12808 26475,12761 26428,12708 26369,12756 26288,12801 --- Seidenschwanzstr.: durch Bauzäune abgesperrt	2::inwork 26452,12683 26428,12708 --- #: osm_watch: way id="515337706" version="6" --- Wildkatzenweg: durch Bauzäune abgesperrt	2::inwork 26475,12761 26414,12811 26334,12854 --- #: osm_watch: way id="515337707" version="6" --- Ringeltaubenweg: durch Bauzäune abgesperrt	2::inwork 26519,12808 26460,12858 26379,12909 --- #: osm_watch: way id="515337709" version="6" --- Mauswieselweg: durch Bauzäune abgesperrt	2::inwork 26570,12860 26503,12912 26421,12959 --- #: XXX ^^^ --- #: XXX ^^^ --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
@@ -3930,15 +3931,7 @@ Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,175
 # REMOVED (offen, aber als provisorische Einbahnstraße ausgeschildert) --- #: next_check_id: WEIDENKAETZCHENWEG-2020 --- #: osm_watch: way id="889476798" version="2" ---#: last_checked: 2021-04-24 ---#: check_frequency: 30d ---Weidenkätzchenweg: Bauarbeiten, Straße wird noch gebaut	2::inwork 21421,158 21450,38
 # REMOVED (offen) --- #: last_checked: 2020-08-06 --- #: check_frequency: 90d --- Rosenrotweg: Bauarbeiten, Straße gesperrt	2::inwork 21487,173 21515,67
 # REMOVED (wieder offen) --- #: next_check_id: KARLMARXSTR-2018 --- #: last_checked: 2019-02-13 --- Alfred-Scholz-Platz: wegen Bauarbeiten kein Zugang zur Karl-Marx-Str.	2::inwork 12753,8187 12779,8188
-# 
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_17_1305_1380_online.pdf (Einziehung)
-#: XXX wann wird die Straße wieder geöffnet? --- vermutlich nie, sollte man also entfernen?
-#: XXX mittlerweile werden hier Gebäude errichtet
-#: osm_watch: node id="791819743" version="5"
-#: last_checked: 2022-01-23
-#: check_frequency: 120d
-Mergenthalerring: durch Tore versperrt	2::inwork 14121,8147 14210,8227 14229,8278
-# 
+# REMOVED (existiert nicht mehr) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_17_1305_1380_online.pdf (Einziehung) --- #: XXX wann wird die Straße wieder geöffnet? --- vermutlich nie, sollte man also entfernen? --- #: XXX mittlerweile werden hier Gebäude errichtet --- #: osm_watch: node id="791819743" version="5" --- #: last_checked: 2022-01-23 --- #: check_frequency: 120d --- Mergenthalerring: durch Tore versperrt	2::inwork 14121,8147 14210,8227 14229,8278
 # REMOVED (nicht mehr) --- #: next_check_id: NORD52-2019 --- #: last_checked: 2019-04-20 --- #: check_frequency: 90d --- Relingstr.: Bauarbeiten, gesperrt	2::inwork 22195,2390 22287,2431 22358,2460
 # REMOVED --- #: next_check_id: NORD52-2019 --- #: osm_watch: way id="663013125" version="8" --- #: last_checked: 2019-12-15 (osm) --- #: check_frequency: 90d --- Gaffelsteig: Bauarbeiten, kann gesperrt sein	2::inwork 22287,2431 22221,2520
 # REMOVED --- #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2018/pressemitteilung.750883.php (Ende 2018 bis 2020) --- #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/erster-teil-des-anton-saefkow-parks-ist-fertiggestellt_a186599 --- #: priority: #C vvv --- #: last_checked: 2020-05-10 vvv --- #: check_frequency: 30d vvv --- #: next_check: 2020-05-31 vvv --- #: valid: -20200701 vvv
@@ -4289,12 +4282,12 @@ Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_25_2105_2220_online.pdf (Straßenbenennung)
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/upside-berlin-max-und-moritz.182/
 #: XXX geplante Benennung: Anita-Berber-Platz (fehlt in Berlin.coords.data)
-#: last_checked: 2022-01-16 (daf)
+#: last_checked: 2022-02-22
 #: check_frequency: 120d
 Valeska-Gert-Str. - Am Postbahnhof: wegen Bauarbeiten gesperrt	2::inwork 12807,11287 12713,11372
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2022-01-01
+#: last_checked: 2022-02-22
 #: check_frequency: 90d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
@@ -4331,7 +4324,7 @@ Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 #: osm_watch: way id="846595294" version="6"
 #: osm_watch: way id="38725490" version="15"
 #: also_indoor: traffic (G,B)
-#: last_checked: 2021-12-13
+#: last_checked: 2022-02-23
 #: check_frequency: 90d
 #: next_check: 2022-12-31
 Bergiusstr.: für Radfahrer gesperrt (Autobahnauffahrt)	2::inwork 14051,6731 14106,6663 14150,6609
@@ -4340,7 +4333,7 @@ Bergiusstr.: für Radfahrer gesperrt (Autobahnauffahrt)	2::inwork 14051,6731 1410
 #: source_id: 2147343691 (bis 1.9.2022, Gesamtbaumaßnahme bis Ende 2022) (zwischendurch inaktiv, jetzt wieder da)
 #: note: laut rbbtext ebenfalls bis 1.9.2022
 #: also_indoor: traffic (G,B)
-#: last_checked: 2022-01-16
+#: last_checked: 2022-02-23
 #: check_frequency: 90d
 #: next_check: 2022-09-30
 wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
@@ -4443,7 +4436,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://www.humboldtforum.org/wp-content/uploads/2020/10/20201007_PM_Ero%CC%88ffnung-1.pdf (Eröffnung am 17.12.2020)
 #: by: https://www.berliner-zeitung.de/kultur-vergnuegen/humboldt-forum-berliner-schloss-teileroeffnung-li.122095 (Eröffnung wird verschoben)
 #: by: https://berliner-schloss.de/blog/schloss-information-dezember-2020/ (Bauzäune werden im Dezember 2020 teilweise abgebaut)
-#: last_checked: 2022-01-25
+#: last_checked: 2022-02-15 (mapillary)
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2021-07-01
 # REMOVED (hier offen) --- Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10102,12384
@@ -4457,7 +4450,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10102,12384 10175,12435
 #: by: https://www.berliner-woche.de/mitte/c-bauen/erste-module-fuer-parlamentsneubau-montiert_a309858 (bis Ende 2021 fertig)
 #: XXX wird nach den Bauarbeiten die Einbahnstraßenregelung wieder hergestellt? (see elsehwere)
 #: osm_watch: way id="158025179" version="5"
-#: last_checked: 2022-02-09 vvv
+#: last_checked: 2022-02-24 (mapillary) vvv
 #: check_frequency: 60d vvv
 #: also_indoor: traffic
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760

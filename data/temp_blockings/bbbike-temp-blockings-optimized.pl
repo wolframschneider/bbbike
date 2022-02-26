@@ -521,13 +521,15 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
        },
        undef,
        {
-         'data' => '#: tempex: su T09-T16
-	q4::temp:clock 12608,11692 12453,11790 12378,11806
-#: next_check_id: CORONA-2020
-#: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche
-#: last_checked: 2022-01-29
-#: check_frequency: 30d
+         'data' => '#: tempex: su T09-T16 vvv
+# REMOVED (temporarily removed) ---	q4::temp:clock 12608,11692 12453,11790 12378,11806
+# REMOVED --- #: next_check_id: CORONA-2020
+#: next_check_id: OSTBAHNHOF-2021
+#: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche; mittlerweile: Bauarbeiten am Ostbahnhof, normale Marktfläche existiert vermutlich nicht mehr (siehe oben)
+#: last_checked: 2022-02-25
+#: check_frequency: 120d
 	q4::temp:clock 12378,11806 12413,11901
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 1886,
@@ -2392,9 +2394,9 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: source_id: viz2021:13.38743,52.55268,14.09.2021,19:35 (bis 31.3.2022, doppelter Eintrag)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11007 (Frage)
 #: note: laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021
-#: also_indoor: traffic (H,B)
+#: also_indoor: traffic (H,B,G)
 #: osm_watch: way id="1006570991" version="1"
-#: last_checked: 2022-01-22
+#: last_checked: 2022-02-20 (traffic)
 #: check_frequency: 30d
 #: next_check: 2022-03-31
 	q3::inwork  8986,16092 9178,16317
@@ -2564,7 +2566,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-02-09
+#: last_checked: 2022-02-23 (mapillary)
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 ',
@@ -2613,7 +2615,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-02-18
+#: last_checked: 2022-02-24
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2664,7 +2666,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="6"
-#: last_checked: 2022-02-18 vvv
+#: last_checked: 2022-02-24 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -3050,7 +3052,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: source_id: viz2021:13.32146,52.465174,04.03.2021,08:00 (inaktiv)
 #: source_id: viz2021:13.320517,52.466345,13.07.2021,08:00 (mittlerweile bis 2.12.2021) (inaktiv)
-#: source_id: viz2021:13.32146,52.465174,13.07.2021,08:00 (mittlerweile bis 22.2.2022)
+#: source_id: viz2021:13.32146,52.465174,13.07.2021,08:00 (mittlerweile bis 22.2.2022) (mittlerweile bis 24.5.2022)
 	q4::inwork; 4894,6509 4875,6552
 #: note: im nördlichen Abschnitt mittlerweile (Ende Dez 2021) keine Einschränkungen mehr
 	q3::inwork; 4875,6552 4786,6717
@@ -3058,9 +3060,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1614754800,
          'id' => 3339,
          'source_id' => '2147346935',
-         'text' => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, Richtung Norden gesperrt, bis 22.02.2022',
+         'text' => 'Maßmannstr.: zwischen Lepsiusstr. und Kreuznacher Str. Bauarbeiten, Richtung Norden gesperrt, bis 24.05.2022',
          'type' => 'handicap',
-         'until' => 1645545600
+         'until' => 1653404400
        },
        undef,
        undef,
@@ -3366,6 +3368,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.berliner-woche.de/luebars/c-bauen/fahrbahn-der-strasse-am-vierrutenberg-erst-im-fruehjahr-fertig_a328514
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9770 (Frage)
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9876 (möglicherweise bis März 2022?)
+#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1179022.php (Fahrbahninstandsetzungsmaßnahme 19.04.2022 - 17.05.2022)
 #: also_indoor: traffic
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: last_checked: 2022-01-19 (kartaview)
@@ -3375,9 +3378,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1627682400,
          'id' => 3414,
          'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2021/pressemitteilung.1106283.php',
-         'text' => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, von August bis voraussichtlich März 2022',
+         'text' => 'Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, bis voraussichtlich Mitte Mai 2022',
          'type' => 'handicap',
-         'until' => 1648742400
+         'until' => 1652803200
        },
        undef,
        {
@@ -3417,7 +3420,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: note: Eintrag bei rbb am 10.11.2021 entfernt --- mittlerweile wieder da, sogar bis zum 28.2.2022
-#: source_id: viz2021:13.327411,52.448681,26.07.2021,07:00 (mittlerweile nur noch bis 28.2.2022)
+#: source_id: viz2021:13.327411,52.448681,26.07.2021,07:00 (mittlerweile nur noch bis 28.2.2022) (mittlerweile bis 1.3.2022)
 #: also_indoor: traffic (G,H,B)
 # REMOVED (hier nicht mehr) ---	q4::inwork; 5271,4547 5316,4637 5336,4676
 	q4::inwork; 5336,4676 5407,4815
@@ -3425,16 +3428,16 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1627164000,
          'id' => 3422,
          'source_id' => 'viz2021:13.326349,52.447526,26.07.2021,07:00',
-         'text' => 'Klingsorstr.: zwischen Birkbuschstr. und Barsekowstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 26.07.2021 07:00 bis 28.02.2022 17:00',
+         'text' => 'Klingsorstr.: zwischen Birkbuschstr. und Barsekowstr. Bauarbeiten, Fahrbahn Richtung Norden gesperrt, vom 26.07.2021 07:00 bis 01.03.2022 15:00',
          'type' => 'handicap',
-         'until' => 1646064000
+         'until' => 1646143200
        },
        undef,
        {
          'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1423180617789972483 (bis Ende Oktober 2021) (mittlerweile bis 30.11.2021)
 #: note: nordöstlicher Bürgersteig ist wenig frequentiert; Bordsteine müssen überwunden werden, wenn man zu spät von der Fahrbahn herunterfährt; mittlerweile dürfen Radfahrer offziell über den Gehweg fahren; außerdem sind etwa 100m der Fahrbahn wieder befahrbar (q3 -> q2)
 #: also_indoor: traffic (G,H)
-#: last_checked: 2022-02-04
+#: last_checked: 2022-02-25
 #: check_frequency: 45d
 #: next_check: 2022-03-31
 	q2::inwork 13057,14267 13158,14117
@@ -3614,8 +3617,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: WUHLETALHAVEMANN-2021
 #: add_fragezeichen: Wann sind die Bauarbeiten hier abgeschlossen und die Sperrung aufgehoben?
-#: last_checked: 2021-12-22 (mapillary)
-#: next_check: 2022-03-01
+#: last_checked: 2022-02-20 (mapillary)
+# REMOVED --- #: next_check: 2022-03-01
 	2::inwork 21539,17442 21555,17546 21559,17617 21576,17678 21639,17803 21698,17920 21726,17974 21804,18125 21843,18198 21871,18244
 ',
          'from' => 1634421600,
@@ -3743,8 +3746,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten in der Braunschweiger Straße und Niemetzstraße beendet? Wann wird die Einbahnstraßenregelung aufgehoben? vvv
-#: also_indoor: traffic (ex-G,H,B(alle nur Niemetz)) vvv
-#: last_checked: 2022-02-05 vvv
+#: also_indoor: traffic (G,H(nur Niemetz),B(nur Niemetz)) vvv
+#: last_checked: 2022-02-23 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-09-30 vvv
 	q4::inwork; 13702,7418 13654,7380 13601,7366 13519,7345 13476,7330
@@ -3798,20 +3801,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: also_indoor: traffic (G,ex-B,ex-H)
-#: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2022-02-05 (traffic)
-#: check_frequency: 14d
-#: next_check: 2022-02-18
-	q4::inwork; 17719,11092 17725,11228
-',
-         'from' => undef,
-         'id' => 3497,
-         'text' => 'Robert-Uhrig-Str.: zwischen Rummelsburger Str. und Zachertstr. Bauarbeiten, Richtung Norden gesperrt, Ende der Bauarbeiten unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: next_check_id: EINSTEINPARK-2022
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
@@ -3985,6 +3975,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: FUERSTENDAMM-2022
 #: by: https://berliner-abendblatt.de/2022/02/09/fuerstendamm/
 #: by: https://www.berliner-woche.de/frohnau/c-verkehr/bauarbeiten-auf-dem-fuerstendamm-ab-9-maerz_a335966
+#: source_id: 226500387 (bis 31.12.2022)
 #: XXX Wann beginnt der 2. Bauabschnitt: Eltviller Straße bis Oranienburger Chaussee?
 #: next_check: 2022-10-01
 	q4::inwork 2486,25156 2599,25047 2647,25018 2673,25012 2818,25022 2904,24993 3015,24965 3117,24966
@@ -4049,16 +4040,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'type' => 'gesperrt',
          'until' => 1648763999
        },
-       {
-         'data' => '	q4::inwork 16242,11533 16119,11435
-',
-         'from' => 1645074000,
-         'id' => 3515,
-         'source_id' => 'viz2021:13.488112,52.507697,18.02.2022,06:00',
-         'text' => 'Buchberger Str.: zwischen Frankfurter Allee und Coppistr. Aufbau eines Tumrdrehkrans, Sperrung der Fahrbahn, auch für Radfahrer, vom 18.02.2022 06:00 bis 21.02.2022 20:00 ',
-         'type' => 'handicap',
-         'until' => 1645470000
-       },
+       undef,
        {
          'data' => '	2::inwork 33330,-36389 33356,-36311
 ',
@@ -4071,18 +4053,43 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: next_check_id: NIEMETZ-2022
-#: XXX laut VIZ für Fußgänger nicht gesperrt -> als q4 eintragen; evtl. auch nach handicap_s-orig übertragen
-#: also_indoor: traffic
-#: priority: #B
-#: next_check: 2022-02-21
-	2::inwork 13797,7267 13762,7321
+#: by: https://viz.berlin.de/2022/02/verkehrsvorschau-21022022/ (für Fußgänger offen)
+#: XXX evtl. nach handicap_s-orig übertragen
+#: also_indoor: traffic (B,H(unvollständig),G)
+#: last_checked: 2022-02-23 vvv
+#: check_frequency: 90d vvv
+#: next_check: 2022-12-31 vvv
+	q4::inwork 13797,7267 13762,7321
+	2::inwork 13797,7267 13693,7228 13575,7200
+#: note: evtl. damit zusammenhängend: Einbahnstraßenregelung in der Mierstr. und Teilen des Mittelbuschwegs
+	q4::inwork; 13484,7140 13575,7200 13627,7047
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 ',
          'from' => 1645336800,
          'id' => 3517,
          'source_id' => 'viz2021:13.452362,52.470898,21.02.2022,07:00',
-         'text' => 'Niemetzstr.: Brückenneubau, Sperrung, vom 21.02.2022 07:00 bis 31.12.2022 17:00',
-         'type' => 'gesperrt',
+         'text' => 'Niemetzstr.: Brückenneubau, Sperrung der Fahrbahn, Fußgängerschutztunnel existiert, außerdem kann der Mittelbuschweg vollständig gesperrt sein, vom 21.02.2022 07:00 bis 31.12.2022 17:00',
+         'type' => 'handicap',
          'until' => 1672502400
+       },
+       {
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1495626806573076482
+#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2022/pressemitteilung.1179333.php
+#: by: https://berliner-abendblatt.de/2022/02/23/sturmschaeden-rohrdamm-bleibt-gesperrt/
+#: source_id: viz2021:13.262931,52.540599,20.02.2022,04:15 (kein Endedatum)
+#: also_indoor: traffic (G,H,B)
+#: priority: #A
+#: next_check: 2022-02-26
+	2::inwork 741,14827 778,14713 838,14530
+',
+         'from' => 1645240500,
+         'id' => 3518,
+         'source_id' => 'viz2021:13.26293,52.54059,20.02.2022,04:15',
+         'text' => 'Rohrdamm: zwischen Schuckertdamm und Jugendweg gesperrt, auch für Radfahrer und Fußgänger ',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );
