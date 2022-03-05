@@ -1192,7 +1192,7 @@ Sportfliegerstr.: Betriebsgelände	2 18370,4511 18423,4459
 Schillerhof	1 7069,17204 6928,17154
 Bahnhofstr.	1 12166,21208 12202,21158
 Bahnhofstr.	1 12202,21158 12158,21166
-(Bushaltestelle und Straßenbahnwendestelle Schöneweide): Betriebsgelände	2 17675,5521 17588,5573 17578,5566
+# REMOVED (aber man kann durch) --- (Bushaltestelle und Straßenbahnwendestelle Schöneweide): Betriebsgelände	2 17675,5521 17588,5573 17578,5566
 Allee der Kosmonauten	1 20172,14141 20111,14140 20096,14127
 Augustaplatz	1 3936,4014 3955,4039 3986,4051 4015,4053 4034,4033 4045,4005 4042,3982 4025,3958 4000,3950 3971,3950 3946,3967 3937,3993 3936,4014
 Paul-Koenig-Str.	1 17268,16526 17312,16498 17304,16485 17293,16469 17251,16497 17268,16526
@@ -3384,7 +3384,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2022-02-10
+#: last_checked: 2022-03-03
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -3427,7 +3427,7 @@ Wandlitzstr.: in Höhe Lehndorffstr. sind Gehweg und Fahrbahn gesperrt	2::inwork 
 #: by: https://www.berliner-woche.de/rummelsburg/c-bauen/neue-sozialwohnungen-mit-blick-aufs-wasser_a323324
 #: by: https://www.berliner-woche.de/bezirk-lichtenberg/c-bauen/staedtische-und-private-gesellschaften-planen-hunderte-wohnungen_a334934 (Erwähnung der Hochbauarbeiten)
 #: XXX wird es hier nach den Bauarbeiten weiterhin einen Weg geben?
-#: last_checked: 2022-02-20
+#: last_checked: 2022-03-04
 #: check_frequency: 180d
 #: next_check: 2023-09-30
 (Kynaststr. - Paul-und-Paula-Ufer): Bauarbeiten, Weg existiert nicht mehr	2::inwork 14843,10621 14911,10587
@@ -3679,14 +3679,14 @@ Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10300,-2135 10296,-215
 # 
 #: by: mapillary
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22806.pdf (Sperrung des Spreeuferwegs zwischen 2020 und 2028)
-#: last_checked: 2022-02-23
+#: last_checked: 2022-03-03
 #: next_check: 2028-01-01
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 # 
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/stralauer-allee-15-16.657/page-2#post-13509 (Fertigstellung zum 30.6.2024 geplant)
 #: by: https://rfr-development.de/projekte/stralauer-allee (hier entsteht ein Bürogebäude)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbrücke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2022-02-28
+#: last_checked: 2022-03-04
 #: check_frequency: 360d
 #: next_check: 2024-06-30
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
@@ -3757,7 +3757,7 @@ Helene-Jacobs-Str.	1::inwork 3332,8207 3326,8100 3320,7982 3309,7782 3210,7786 3
 #: XXX wann wird der Weg wiederhergestellt, wenn überhaupt?
 #: by: https://www.deutsches-architekturforum.de/thread/9401-wasserstadt-stralau-kleine-und-gr%C3%B6%C3%9Fere-projekte/?postID=653296#post653296 (Bauarbeiten bis Ende September 2021)
 #: osm_watch: way id="541556560" version="2"
-#: last_checked: 2022-02-02
+#: last_checked: 2022-03-04
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-09-30
 Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 14569,10055
@@ -3769,7 +3769,7 @@ Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 1
 #: by: https://www.deutsches-architekturforum.de/thread/11167-erweiterung-des-admiralspalastes-in-bau/?postID=689721#post689721
 #: by: https://graftlab.com/projects/admiralspalast (Zeitraum 2017-2021)
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-01-08
+#: last_checked: 2022-03-02
 #: check_frequency: 60d
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728 9402,12792 9386,12833
 # 
@@ -3779,7 +3779,7 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728
 # 
 #: by: https://leute.tagesspiegel.de/tempelhof-schoeneberg/macher/2021/01/19/154834/sanierung-des-hochbahnviadukts-bauarbeiten-ab-2023-geplant/ (Sanierung 2023 - Mitte 2024)
 #: osm_watch: way id="223707973" version="10"
-#: last_checked: 2022-02-13
+#: last_checked: 2022-02-27 (architektur-urbanistik)
 #: check_frequency: 120d
 #: priority: #A
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
@@ -3861,7 +3861,7 @@ Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
 #: source_id: viz2021:13.409118,52.51693,01.09.2021,06:00 (bis Ende 2022, Gesamtbaumaßnahme bis 2023)
 #: note: laut rbb nur bis 31.08.2022
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
-#: last_checked: 2022-01-03 vvv
+#: last_checked: 2022-03-02 vvv
 #: next_check: 2024-06-01 vvv
 Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285 10675,12280
@@ -3915,6 +3915,7 @@ Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwor
 #: by: https://berliner-abendblatt.de/2022/01/03/abbruch-der-wuhletalbruecke-startet/ (bis 2025)
 #: by: https://www.berliner-woche.de/marzahn/c-bauen/abriss-der-wuhletalbruecke-erfolgt-im-fruehjahr-2022_a332741
 #: by: https://berliner-abendblatt.de/2022/02/21/moltkebruecke/ (bis Mitte 2025)
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1181845.php
 #: source_id: viz2021:13.557685,52.561638,03.06.2019,12:00 (bis Ende 2022)
 #: source_id: viz2021:13.558565,52.562687,03.06.2019,12:00 (bis Ende 2022)
 #: XXX Wann wird die Brücke wieder eröffnet?
@@ -3966,7 +3967,7 @@ Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,175
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-bauen/bahnhofsvorplatz-nicht-vor-2025_a258757
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.913438.php
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/bauarbeiten-gehen-nun-sichtbar-voran_a259738
-#: last_checked: 2021-12-17
+#: last_checked: 2022-03-03
 #: check_frequency: 360d
 #: next_check: 2022-12-20
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
@@ -4021,7 +4022,7 @@ Wuhletalbrücke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,175
 #: osm_watch: way id="47935842" version="15"
 #: osm_watch: way id="681299267" version="2"
 #: priority: #A vvv
-#: last_checked: 2022-02-12 vvv
+#: last_checked: 2022-03-02 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-09-30 vvv
 #: valid: -20220930 vvv
@@ -4051,12 +4052,12 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 #: by: https://www.glint-berlin.de/ (kein Fertigstellungsdatum)
 #: confirmed_by: srt
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2022-01-17
+#: last_checked: 2022-03-02
 #: check_frequency: 60d
 Taubenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9207,11880 9138,11872
 # 
-#: note: allerdings war das Einbahnstraßenschild am 2022-01-17 weggedreht
-#: last_checked: 2022-01-17
+#: note: allerdings war das Einbahnstraßenschild am 2022-01-17 weggedreht, am 2022-03-02 wieder vollständig aktiv
+#: last_checked: 2022-03-02
 Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
 # 
 #: next_check_id: POTSDAMSPEICHERSTADT-2022
@@ -4439,7 +4440,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://www.humboldtforum.org/wp-content/uploads/2020/10/20201007_PM_Ero%CC%88ffnung-1.pdf (Eröffnung am 17.12.2020)
 #: by: https://www.berliner-zeitung.de/kultur-vergnuegen/humboldt-forum-berliner-schloss-teileroeffnung-li.122095 (Eröffnung wird verschoben)
 #: by: https://berliner-schloss.de/blog/schloss-information-dezember-2020/ (Bauzäune werden im Dezember 2020 teilweise abgebaut)
-#: last_checked: 2022-02-15 (mapillary)
+#: last_checked: 2022-03-04 (daf)
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2021-07-01
 # REMOVED (hier offen) --- Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10102,12384
