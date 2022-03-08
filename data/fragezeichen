@@ -764,7 +764,7 @@ Gransee - Altlüdersdorf: Qualität? Nur für Radfahrer? Führt hier die Königin-Lui
 Altlüdersdorf - Zabelsdorf: Qualität?	? -5207,70025 -4637,69807 -4542,69772 -4260,69808 -3970,69973 -2897,69894 -2560,69986 -2391,69914 -1170,71073
 Altlüdersdorf - Wentow: Qualität?	? -4637,69807 -4414,70563 -2966,71541 -2768,71868
 Altlüdersdorf - Ribbeck: Qualität?	? -2391,69914 -1840,69754 -1273,69446 -943,69540 -913,69464 -790,69473 -642,69476
-Heinrich-Heine-Str. (Bernau): Qualität zwischen Vierrutenstr. und Torfstr.?	? 19422,29462 19367,29694 19274,30131 19242,30236 19185,30330 19089,30490 19003,30633
+Heinrich-Heine-Str. (Bernau): Qualität zwischen Friedenstr. und Torfstr.?	? 19422,29462 19367,29694 19274,30131 19242,30236 19185,30330 19134,30414
 Sieversdorf: Qualität? Ist hier auch asphaltiert?	? -58947,45483 -58977,45352 -58961,45254 -58863,44893 -58804,44826
 Kümmernitz - Vehlgast: Qualität?	? -70888,48135 -70878,48009 -70842,47863 -70849,47706 -70765,47295 -70648,47092 -70583,46902 -70364,46767 -70283,46513 -70155,46272 -70149,46133 -70566,45706 -70547,45421 -70926,44836
 Kümmernitz - Vehlgast: Qualität?	? -71278,44309 -71319,43569 -71325,43158 -71550,42961 -71639,42831 -71698,42657 -71991,42370
@@ -893,13 +893,6 @@ Trampe - Kruge: Qualität?	? 39683,40892 40258,40191 41298,39991 41731,39846
 Beiersdorf - Beerbaum: Qualität?	? 35980,34322 35977,34619 36085,34994 36096,35327 36200,35854 36214,36208 36215,36497
 Dollgow - Zernikow: Qualität?	? -17141,74157 -16859,74184 -16629,74151 -15730,74428 -14966,74667 -13662,75159
 Leipziger Str. (Schöneiche): wie ist die Qualität im nördlichen Abschnitt? ebenfalls unbefestigt?	? 32156,6405 32056,6607 31993,6776 31952,6917 31951,7060
-Helgolandstr. (Schulzendorf): Qualität?	? 23280,-6231 23336,-6312 23488,-6626 23574,-6800 23674,-7001 23724,-7103 23761,-7171 23770,-7250
-Helgolandplatz (Schulzendorf): Qualität?	? 23488,-6626 23591,-6575
-Riesaer Str. (Schulzendorf): Qualität?	? 23591,-6575 23673,-6743 23726,-6857 23768,-6949 23820,-7050 23912,-7174 23940,-7260
-Sophienstr. (Schulzendorf): Qualität?	? 23934,-6967 24045,-7112 24077,-7182
-Luisenstr. (Schulzendorf): Qualität?	? 23572,-7040 23674,-7001 23768,-6949 23950,-6810
-Schloßstr. (Schulzendorf): Qualität?	? 23724,-7103 23820,-7050 23934,-6967 24034,-6887
-Am Papenberg (Schulzendorf): Qualität? Ist die Straße verkehrsberuhigt?	? 24105,-7174 24122,-7213 24248,-7168 24243,-7135
 # added from strassen
 Eidechsenweg (Ist der Eidechsenweg bereits ausgeschildert?)	? -7893,13781 -7720,13839
 Elkartweg (Wurde der Elkartweg zu "Erna-Koschwitz-Weg" umbenannt? Hängen bereits neue Straßenschilder?)	? -2158,17613 -2135,17633 -2119,17647 -2103,17670 -2087,17715 -2120,17786 -2131,17827 -2114,17878 -2066,17896 -2074,17921 -2100,17953 -2196,18069
@@ -942,7 +935,6 @@ Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 (Adlergestell - Sportpromenade/Bammelecke): Waldweg, teilweise loser Schotter (wird sich die Qualität hier bessern (insbesondere: was passiert mit dem losen Schotter)?)	? 24485,-667 24758,-268 25172,345
-Buckower Damm: Asphalt mit Schäden (Wurden während der Bauarbeiten die Asphaltschäden ausgebessert?)	? 12938,1348 12939,1469 12940,1547
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33327,2979 33296,2894
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33176,2938 33296,2894 33406,2852 33503,2818
 Abendseglersteig: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33406,2852 33383,2792 33267,2810 33147,2832 33176,2938
@@ -1049,12 +1041,10 @@ Hennigsdorfer Str.: nach den Bauarbeiten durchgängig asphaltiert mit Radstreifen
 L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen Prenzlau und Güstow einen straßenbegleitenden Radweg? Wenn ja: auf welcher Seite und ist der Radweg asphaltiert?)	? 37020,101115 36600,101499 36138,101586 35027,102258 34671,102369 34607,102396
 (Mausohrweg - R1): Qualität des Geh- und Radweg? Ist der Weg beleichtet? (Ist der Weg asphaltiert und beleuchtet?)	? 33296,2894 33267,2810 33255,2762
 # added from bbbike-temp-blockings-optimized
-Rehagener Platz: Bauarbeiten, Fahrbahn gesperrt, außerdem ist der Kreuzungsbereich Rehagener Str./Kirchbachstr. gesperrt (Bis wann gehen die Bauarbeiten? Wird das Kopfsteinpflaster nach den Bauarbeiten etwas besser sein?)	? 10642,-2371 10638,-2452
-Rehagener Platz: Bauarbeiten, Fahrbahn gesperrt, außerdem ist der Kreuzungsbereich Rehagener Str./Kirchbachstr. gesperrt (Bis wann gehen die Bauarbeiten? Wird das Kopfsteinpflaster nach den Bauarbeiten etwas besser sein?)	? 10563,-2432 10638,-2452
+Schönstr.: Bauarbeiten zwischen Große Seestr. und Rennbahnstr., Fahrbahn kann gesperrt sein (Bis wann gehen die Bauarbeiten?)	? 14136,17170 13996,16959
 Brümmerstr.: zwischen Thielallee und Fabeckstr. Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten in der Brümmerstraße mittlerweile beendet und die Straße frei?)	? 2523,5114 2746,5537
 Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, bis voraussichtlich Mitte Mai 2022 (Sind die Bauarbeiten beendet?)	? 5793,23422 5893,23287
 Uferweg an der Scharfen Lange: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? -3752,11373 -3785,11445 -3828,11491 -3928,11526 -4028,11533 -4106,11519 -4181,11458 -4204,11432 -4245,11400
 Uferweg an der Scharfen Lange: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? -4246,11438 -4204,11432
 Uferweg an der Scharfen Lange: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? -3928,11526 -3909,11596
-S-Bhf. Schichauweg: Unterführung an der Nordseite möglicherweise wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Ist die Unterführung tatsächlich gesperrt?)	? 9699,-600 9562,-619
 Uferweg am Salzhof: möglicherweise gesperrt (Ist dieser Weg tatsächlich gesperrt? Wenn ja: wo genau ist der gesperrte Abschnitt?)	? -1923,15684 -1938,15782 -1935,15826 -1978,15940 -1976,16012
