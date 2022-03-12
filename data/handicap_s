@@ -3,6 +3,8 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
+Mühsamstr.: Bauarbeiten im Kreuzungsbereich Thaerstr., Fahrbahn gesperrt	q4::inwork 13838,12884 13818,12897
+Mühsamstr.: Bauarbeiten im Kreuzungsbereich Thaerstr., Einbahnstraßenrichtung gedreht	q4::inwork; 13830,12907 13818,12897
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
 (Straße der Pariser Kommune - Erich-Steinfurth-Str.): einige Fußgänger	q2; 12660,11705 12634,11705 12608,11692
 (Notweg Bahnübergang Bahnhofstr.): Fußgänger, Fahrrad ggfs. schieben	q3 10231,-2159 10215,-2170 10181,-2174 10161,-2146 10096,-2137
@@ -2290,7 +2292,7 @@ Lothar-Bucher-Str.: enge Straße	q1 5598,6136 5664,6082 5748,6051 5845,6049 6008,
 Gustav-Zahnke-Str.: enge Straße	q1 14439,13600 14417,13517 14337,13541
 Propst-Süßmilch-Weg: Fußgängerzone	q2 856,3188 813,3202 797,3216 727,3231 649,3221
 Zangengasse: parkende Fahrzeuge	q0 5959,20524 5714,20784 5641,20857 5609,20968
-Lintruper Str.: teilweise wegen parkender Autos eng	q1 10324,925 10380,757 10423,636 10506,405 10550,282 10614,105 10665,-200 10729,-386
+Lintruper Str.: teilweise wegen parkender Autos eng	q1 10324,925 10380,757 10423,636 10506,405 10550,282 10613,108 10665,-200 10729,-386
 Spandauer Str.: enge Straße	q1 -6442,14186 -6261,14213
 (Parkplatz Kaufland - Am Steinberg): Fußgänger	q1 12981,17557 12998,17480
 Achenbachstr.: nicht so breite Straße	q1 -3360,14974 -3322,14814

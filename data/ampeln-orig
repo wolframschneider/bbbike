@@ -18,14 +18,7 @@
 #: next_check_id ^^^
 # 
 # REMOVED --- #: note: eigentlich südlich der Kreuzung --- #: source_id: viz2021:13.456209,52.487399,17.01.2022,09:00 (unklar, ob diese Ampel gemeint ist, bis 14.2.2022) (inaktiv) --- #: source_id: viz2021:13.46142,52.48374,14.02.2022,12:27 (bis 28.2.2022) (inaktiv) --- #: source_id: viz2021:13.4617,52.483555,17.01.2022,09:00 (bis 28.2.2022) (mittlerweile bis 1.3.2022) --- #: source_id: viz2021:13.46142,52.48374,25.02.2022,19:42 (zusätzlicher Eintrag) (inaktiv) --- #: also_indoor: traffic --- #: last_checked: 2022-02-23 --- #: next_check: 2022-03-01 --- Kiefholzstr./Puderstr.: Gegenverkehrsregelung	X::inwork 14363,8738
-# 
-#: by: https://twitter.com/VIZ_Berlin/status/1491370038774964227
-#: by: https://pbs.twimg.com/media/FLEUIiEX0AA8mNx?format=jpg&name=large
-#: source_id: viz2021:13.157143,52.539213,09.02.2022,13:00 (bis 12.3.2022)
-#: valid: 20220209-20220312 vvv
-Klosterbuschweg/Torweg: Gegenverkehrsregelung	X::inwork -6442,14535
-Klosterbuschweg/Torweg: Gegenverkehrsregelung	X::inwork -6451,14413
-#: valid ^^^
+# REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1491370038774964227 --- #: by: https://pbs.twimg.com/media/FLEUIiEX0AA8mNx?format=jpg&name=large --- #: source_id: viz2021:13.157143,52.539213,09.02.2022,13:00 (bis 12.3.2022) --- #: valid: 20220209-20220312 vvv --- Klosterbuschweg/Torweg: Gegenverkehrsregelung	X::inwork -6442,14535 --- Klosterbuschweg/Torweg: Gegenverkehrsregelung	X::inwork -6451,14413 --- #: valid ^^^
 # 
 #: next_check_id: TRAMTURM-2021
 #: last_checked: 2022-03-05
@@ -148,10 +141,11 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 #: source_id: 2147346700 (bis 30.11.2021)
 #: source_id: viz2021:13.479483,52.501885,16.12.2020,09:00 (bis 30.11.2021) (mittlerweile bis 31.03.2022)
 #: also_indoor: traffic
-#: last_checked: 2022-01-26
+#: priority: #C
+#: last_checked: 2022-03-09
 #: check_frequency: 45d
 #: next_check: 2022-03-31
-#: valid: -20220331
+# REMOVED --- #: valid: -20220331
 Nöldnerstr.: Gegenverkehrsregelung	X::inwork 15433,10765
 # 
 # REMOVED --- #: XXX längerer Abschnitt, etwa 200m, eigentlich müssen Radfahrer in beiden Richtungen den Gehweg benutzen --- #: last_checked: 2021-08-03 --- #: check_frequency: 14d --- Nöldnerstr.: Gegenverkehrsregelung	X::inwork 15932,10830
@@ -191,12 +185,18 @@ Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 	X::inwork 14805,10518
 # 
 #: next_check_id: BUCKOWERCHAUSSEE-2022
+#: last_checked: 2022-03-07 vvv
+#: check_frequency: 360d vvv
+#: next_check: 2025-01-04 vvv
 #: valid: -20250104 vvv
 #: note: Anforderungsampel
 	F::inwork 8950,847
 #: note: Anforderungsampel
 	F::inwork 9155,1006
 #: valid ^^^
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: temporary ^^^
 # 
@@ -1221,8 +1221,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9621,3155
 	X 9720,2887
 	X 10793,-161
-	X 10831,-808
-	X 10844,-1335
+	X 10822,-806
+	X 10849,-1332
 	X 11073,-2037
 # REMOVED (wird durch eine Unterführung ersetzt) ---	B 10188,-2139
 # 
@@ -3057,7 +3057,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: next_check_id: CHAUSSEE-2020
 #: last_checked: 2022-02-12 (mapillary)
 #: check_frequency: 90d
-#: next_check: 2022-06-30
+#: next_check: 2022-07-31
 	X::inwork 8732,14098
 # 
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) --- X::inwork 8870,13926
@@ -3370,7 +3370,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: next_check_id: CHAUSSEE-2020
 #: last_checked: 2022-02-12
 #: check_frequency: 90d
-#: next_check: 2022-06-30
+#: next_check: 2022-07-31
 	X::inwork 8336,14586
 # 
 #: by: Tsp vom 2018-01-22 (neue Ampeln --- 2019)
