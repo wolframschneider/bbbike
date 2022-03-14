@@ -1196,7 +1196,7 @@ Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788&d=20191216 (Benennung nach Hans Otto Obrikat vorgeschlagen)
 #: XXX oder wird statt Wasserstr. und Uferstr. die Straﬂe nach Hans Otto Obrikat benannt? (erster Vorschlag: "Else-Schierhorn-Str.")
-#: last_checked: 2022-03-03
+#: last_checked: 2022-03-13
 #: check_frequency: 60d
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
@@ -1218,6 +1218,7 @@ zum Marienpark: ausgeschildert "Stone Brewing"	CP2; 8016,3651 8035,3657
 Zossener Str.: Richtung Luckenwalder Str. abbiegen	CP2; 22698,15788 22636,15752
 entlang der Sportst‰tten	CS 6324,3953 6383,3977 6417,3991 6495,4001 6530,4023 6558,4088 6602,4189 6618,4191
 nicht ausgeschildert	CP2; 5541,4305 5738,4361
+nicht ausgeschildert	CP2; 5787,4400 5738,4361
 ausgeschildert Richtung Gorinsee	CP2; 15589,27116 15970,27596
 entlang des IGA-Eingangs	CP2; 23021,13982 23072,14353
 entlang des IGA-Busparkplatzes	CP2; 23084,14472 23081,14418
@@ -1631,6 +1632,8 @@ Am Karlsbad: Hausdurchfahrt	CP2; 8027,11000 7959,10910
 An der alten G‰rtnerei: nicht ausgeschildert	CS 11046,3895 11053,3828 11019,3786 10972,3779 10958,3710
 # 
 ausgeschildert "Gr¸ner Weg 94, 96, 98"	CP2; 13775,3500 13728,3332
+# 
+Birkbuschstr. - Hindenburgdamm: zum Linksabbiegen linke Fuﬂg‰ngerampel benutzen	CP; 4822,5114 4796,5129 4792,5097
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straﬂen)

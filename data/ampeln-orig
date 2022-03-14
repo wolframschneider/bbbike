@@ -142,7 +142,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 #: source_id: viz2021:13.479483,52.501885,16.12.2020,09:00 (bis 30.11.2021) (mittlerweile bis 31.03.2022)
 #: also_indoor: traffic
 #: priority: #C
-#: last_checked: 2022-03-09
+#: last_checked: 2022-03-13
 #: check_frequency: 45d
 #: next_check: 2022-03-31
 # REMOVED --- #: valid: -20220331
@@ -2084,6 +2084,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 10181,4181
 	X 8968,5554
 	X 8206,6774
+#: note: Anforderungsampel
 	F 5070,4770
 	X 5141,5744
 	X 6477,6311
@@ -3055,7 +3056,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) ---
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2022-02-12 (mapillary)
+#: last_checked: 2022-03-12 (daf)
 #: check_frequency: 90d
 #: next_check: 2022-07-31
 	X::inwork 8732,14098
@@ -3480,13 +3481,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296478" version="1"
 #: note: Anforderungsampel
-#: last_checked: 2022-03-03
+#: last_checked: 2022-03-13
 #: check_frequency: 90d
 	F::inwork 17695,5394
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296482" version="3"
 #: note: Anforderungsampel
-#: last_checked: 2022-03-03
+#: last_checked: 2022-03-13
 #: check_frequency: 90d
 	F::inwork 17747,5452
 # 
@@ -4244,6 +4245,7 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 #: last_checked: 2021-08-13 (mapillary) (in der Jürgen-Schumann-Allee gesehen) vvv
 #: check_frequency: 180d vvv
 	X0 19909,-2863
+#: last_checked: 2022-03-12 (mapillary)
 	F0 18517,-4502
 	X0 19131,-2145
 #: XXX ^^^
