@@ -38,6 +38,9 @@ my $s = Strassen->new('strassen');
 my $net = StrassenNetz->new($s);
 $net->make_net;
 
+# debug
+require Data::Dumper; diag(Data::Dumper->new([$net],[qw()])->Indent(1)->Useqq(1)->Sortkeys(1)->Terse(1)->Dump);
+
 my $orig_net = dclone $net;
 
 my $pos = 0;
