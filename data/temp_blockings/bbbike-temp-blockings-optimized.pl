@@ -1350,7 +1350,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'from' => undef,
          'id' => 2454,
          'recurring' => 1,
-         'text' => 'Kleistpark: nachts geschlossen. Schlieﬂzeiten im Winter: 18.00 bis 6.00 Uhr',
+         'text' => 'Kleistpark: nachts geschlossen. Schlieﬂzeiten im Sommer: 21.00 bis 6.00 Uhr',
          'until' => undef
        },
        {
@@ -3321,9 +3321,9 @@ Havelstr.: Fuﬂg‰ngerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
-#: osm_watch: way id="984964447" version="6"
+#: osm_watch: way id="984964447" version="7"
 	q3::inwork 15279,10862 15355,10875
-#: osm_watch: way id="984056169" version="6"
+#: osm_watch: way id="984056169" version="7"
 	2::inwork 15272,10790 15388,10758
 ',
          'from' => 1625734800,
@@ -3587,8 +3587,8 @@ Havelstr.: Fuﬂg‰ngerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: SCHARFELANKE-2021
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
-#: osm_watch: way id="187977779" version="14" vvv
-#: last_checked: 2021-10-20 vvv
+#: osm_watch: way id="187977779" version="15" vvv
+#: last_checked: 2022-03-15 (osm) vvv
 #: check_frequency: 60d vvv
 	2::inwork -3752,11373 -3785,11445 -3828,11491 -3928,11526 -4028,11533 -4106,11519 -4181,11458 -4204,11432 -4245,11400
 	2::inwork -4246,11438 -4204,11432
@@ -4011,32 +4011,7 @@ Havelstr.: Fuﬂg‰ngerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'until' => 1672502400
        },
        undef,
-       {
-         'data' => '#: next_check_id: GNEISENAUKIEZ-2022
-#: also_indoor: traffic (G,B) vvv
-#: by: https://www.berliner-woche.de/kreuzberg/c-bauen/gneisenau-kiez-wird-verkehrsberuhigt_a334304
-#: by: https://berliner-abendblatt.de/2022/01/24/verkehrsberuhigung-im-gneisenaukiez/
-#: XXX Wie werden die verkehrsberuhigenden Maﬂnahmen aussehen? vvv
-#: last_checked: 2022-02-27 vvv
-#: check_frequency: 14d vvv
-#: next_check: 2022-03-15 vvv
-#: XXX Fahrbahn zurzeit gesperrt
-	q4::inwork 9723,9842 9837,9856
-#: XXX hier noch keine Bauarbeiten
-	q3::inwork 9705,9732 9723,9842
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
-#: XXX ^^^
-#: also_indoor ^^^
-',
-         'from' => 1644102000,
-         'id' => 3519,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1169529.php',
-         'text' => 'Baruther Str., Solmsstr.: Bauarbeiten, Fahrbahn kann gesperrt sein, voraussichtlich 07. Februar 2022 - 15. M‰rz 2022',
-         'type' => 'handicap',
-         'until' => 1647385199
-       },
+       undef,
        {
          'data' => '#: next_check_id: MASSMANN-2022
 #: XXX Stehen evtl. im Zusammenhang mit den Bauarbeiten in der Maﬂmannstr.

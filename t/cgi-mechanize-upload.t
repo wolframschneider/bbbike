@@ -6,6 +6,7 @@
 #
 
 use strict;
+use warnings;
 
 BEGIN {
     if (!eval q{
@@ -67,7 +68,10 @@ my $bbbike_org = $ENV{BBBIKE_TEST_ORG} ? 12 : 0;
 plan tests => 3 + $gpsman_tests * @gps_types - 29 - $bbbike_org;
 
 {
-    my $agent = WWW::Mechanize->new(keep_alive => 1);
+    # Because of possible
+    # "Server closed connection without sending any data back" errors
+    # keep_alive is explicitly turned off.
+    my $agent = WWW::Mechanize->new(keep_alive => 0);
     set_user_agent($agent);
 
     $agent->get($cgiurl);
@@ -227,7 +231,7 @@ EOF
 		$form->value("routefile", $filename);
 		eval { $form->value("imagetype", "mapserver") };
 		skip("Cannot do mapserver imagetype", $mapserver_tests) if $@;
-		
+
 		$agent->submit;
 		
 		is($agent->ct, "text/html", "It's a html file (from $testname)");
@@ -280,4 +284,3 @@ EOF
 	$agent->back;
     }
 }
-
