@@ -630,7 +630,7 @@ Leuthener Platz	F:P 7716,8356 7640,8359 7640,8310 7715,8308
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2017/pressemitteilung.592348.php
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5651
 Kitty-Kuse-Platz	F:P 7716,8356 7715,8308 7819,8311 7827,8349 7792,8357 7716,8356
-Alter Karlshorster und Neuer Friedhof Friedrichsfelde/Friedhof Zur frohen Botschaft	F:Cemetery 19182,10199 19366,10278 19352,9828 19242,9815 19144,9810
+Alter Karlshorster und Neuer Friedhof Friedrichsfelde/Friedhof Zur frohen Botschaft	F:Cemetery 19182,10200 19365,10280 19352,9828 19242,9815 19144,9810
 Karl-May-Spielplatz	F:P 6694,18351 6683,18243 6821,18216 6853,18330
 Sportplatz Thurgauer Straße	F:Sport 6821,18216 6890,18190 6976,18135 6985,18128 7071,18232 7026,18267 6971,18299 6887,18330 6853,18330
 Sportplatz Aroser Allee	F:Sport 6694,18351 6720,18616 6830,18599 6810,18339
@@ -1242,7 +1242,7 @@ Jacob-Teitel-Park	F:P 10318,13528 10324,13459 10350,13376 10353,13384 10390,1349
 #: XXX Werden hier Schilder aufgestellt?
 #: osm_watch: way id="28251523" version="13"
 #: priority: #C
-#: last_checked: 2022-02-09
+#: last_checked: 2022-03-19
 # REMOVED --- #: next_check: 2021-06-04
 Agnes-Sorma-Park	F:P 8858,13104 8886,13006 8985,13034 8997,13037 8981,13075 8922,13060 8899,13117
 Karl-Holtz-Platz	F:P 21441,16536 21559,16516 21574,16547 21577,16625 21562,16626 21491,16631 21460,16572 21441,16536

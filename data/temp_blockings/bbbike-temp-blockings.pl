@@ -21691,11 +21691,13 @@ EOF
        until => $isodate2epoch->("2019-04-28 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 21, months => 4, start => "2021-05-01T00:00:00"]], # keine Anzeichen dafür, dass der Winzerfrühling 2021 stattfinden könnte
+       recurrence_prewarn_days => 7,
        text  => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 26.4.2019 bis 28.4.2019',
        type  => 'gesperrt',
        source_id => 'http://www.winzerfest-köpenick.de/',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.907823.php (fällt 2020 aus)
+#: by: https://www.winzerfest-koepenick.de/?date=20220317 (geplant für 22.04. bis zum 24.04.2022)
 # REMOVED --- #: tempex: 20170421T1400-20170423 vvv
 	2::temp 22138,4642 22111,4562 22093,4499
 	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
@@ -26199,21 +26201,24 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2021-11-23 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2021-11-24 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 17. November 2021 ab ca. 09:30 Uhr',
+     { from  => $isodate2epoch->("2022-03-22 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-03-23 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 23. März 2022 ab ca. 09:15 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
 #: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
 #: by: https://viz.berlin.de/2021/10/a115-sprengungen/ (nächste Termine 2021: 3.11., 10.11., 17.11., 24.11)
+#: note: Termine im Frühjahr 2022: 23.3., 13.4., 20.4., 27.4.
 #: source_id: 2147341022
 #: source_id: viz2021:13.196408,52.438127,03.11.2021,09:15
 #: source_id: viz2021:13.196408,52.438127,10.11.2021,09:15
 #: source_id: viz2021:13.196408,52.438127,17.11.2021,09:15
 #: source_id: viz2021:13.196408,52.438127,24.11.2021,09:15
-# REMOVED --- #: priority: #A --- #: next_check: 2021-11-17
+#: source_id: viz2021:13.196408,52.438127,23.03.2022,09:15
+#: priority: #A
+#: next_check: 2022-03-23
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
@@ -28162,7 +28167,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2022-03-02
+#: last_checked: 2022-03-16
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29503,7 +29508,7 @@ EOF
 #: also_indoor: traffic (H,B,G)
 #: osm_watch: way id="1006570991" version="1"
 #: last_checked: 2022-02-20 (traffic)
-#: check_frequency: 30d
+# REMOVED --- #: check_frequency: 30d
 #: next_check: 2022-03-31
 	q3::inwork  8986,16092 9178,16317
 # REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
@@ -30517,7 +30522,7 @@ EOF
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-03-01 (mapillary)
+#: last_checked: 2022-03-16
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 EOF
@@ -30887,7 +30892,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-03-10
+#: last_checked: 2022-03-19
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31106,7 +31111,7 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="6"
-#: last_checked: 2022-03-11 vvv
+#: last_checked: 2022-03-18 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31387,8 +31392,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-05-30 08:30:00"), # 1589275980, # 2020-05-12 11:33
-       until => $isodate2epoch->("2022-03-18 17:00:00"), # $isodate2epoch->("2021-05-31 17:00:00"), # 1599231600, # 2020-09-04 17:00
-       text  => 'Gardeschützenweg: Fahrbahn am Hindenburgdamm gesperrt, vom 31.05.2021 bis 18.03.2022',
+       until => $isodate2epoch->("2022-03-29 17:00:00"), # $isodate2epoch->("2021-05-31 17:00:00"), # 1599231600, # 2020-09-04 17:00
+       text  => 'Gardeschützenweg: Fahrbahn am Hindenburgdamm gesperrt, vom 31.05.2021 bis 29.03.2022',
        type  => 'handicap',
        source_id => '2147345834', # (inaktiv)
        data  => <<EOF,
@@ -31397,6 +31402,7 @@ EOF
 #: by: https://viz.berlin.de/2021/05/verkehrsvorschau-310521/ (Fuß- und Radverkehr ist frei)
 #: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
 #: source_id: 2147347233 (bis 23.12.2021)
+#: source_id: viz2021:13.312919,52.448752,31.05.2021,08:30
 # REMOVED --- #: priority: #A --- #: last_checked: 2021-09-26 --- #: next_check: 2022-03-18
 #: also_indoor: traffic (H,G,B) vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
@@ -33244,7 +33250,7 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2022-03-13
+#: last_checked: 2022-03-20
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -33665,7 +33671,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Ernst-Heilmann-Steg gesperrt',
+       text  => 'Ernst-Heilmann-Steg gesperrt, möglicherweise bis Ende April 2022',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: wosch
@@ -33673,11 +33679,14 @@ EOF
 #: by: https://www.gmg-ing.de/referenzen/ernst-heilmann-steg-berlin/ ("Torsionsschwingungen")
 #: by: https://www.strassenbauportal.de/oeffentliche_ausschreibung_vobvol_details_10997_Berlin_Instandsetzung_Stahlbau_1924073.html (Ausschreibung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10215 (Anfrage)
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10215&date=20220319 (mögliche Freigabe vor Ostern 2022, spätestens Ende April 2022)
 # REMOVED (eins reicht) --- #: osm_watch: note 2867467 2
 #: osm_watch: way id="16311543" version="19"
 #: also_indoor: search Ernst-Heilmann-Steg
+#: priority: #A
 #: last_checked: 2022-03-09 (mapillary)
-#: check_frequency: 120d
+#: check_frequency: 30d
+#: next_check: 2022-04-30
 	2::inwork 13270,10030 13306,10006
 EOF
      },
@@ -33863,7 +33872,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: WUHLETALHAVEMANN-2021
 #: add_fragezeichen: Wann sind die Bauarbeiten hier abgeschlossen und die Sperrung aufgehoben?
-#: last_checked: 2022-02-20 (mapillary)
+#: last_checked: 2022-02-27 (mapillary)
 # REMOVED --- #: next_check: 2022-03-01
 	2::inwork 21539,17442 21555,17546 21559,17617 21576,17678 21639,17803 21698,17920 21726,17974 21804,18125 21843,18198 21871,18244
 EOF
@@ -33984,7 +33993,7 @@ EOF
      },
      { from  => 1635634800, # 2021-10-31 01:00
        until => $isodate2epoch->("2022-04-22 18:00:00"), # 1642287600, # 2022-01-16 00:00
-       text  => 'Bernau - Lanke: Bauarbeiten, Sperrung, vom 01.11.2021 bis 22.04.2022',
+       text  => 'Bernau - Lanke: Bauarbeiten, Sperrung, für Radfahrer unter Umständen bereits passierbar, vom 01.11.2021 bis 22.04.2022',
        type  => 'gesperrt',
        source_id => 'LS/721-E/21/142',
        data  => <<EOF,
@@ -34403,13 +34412,13 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Zwieseler Str.: Zufahrt zum Richard-Kolkwitz-Weg kann wegen Bauarbeiten gesperrt sein, auch für Fußgänger',
+       text  => 'Zwieseler Str.: Zufahrt zum Richard-Kolkwitz-Weg kann wegen Bauarbeiten gesperrt sein, auch für Fußgänger (Stand Mitte März 2022: zumindest am Wochenende passierbar)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: ZWIESELER-2022
 #: XXX Stand 2022-01-21: Verbotsschild für Fußgänger am nördlichen Ende, Verbot für Fahrzeuge aller Art außer Grundstücksanlieger am südlichen Ende, man kann aber trotzdem passieren. Stand 2022-02-26: Passieren weiterhin möglich.
 #: XXX Halteverbotsschilder gelten bis Ende Juni 2023
-#: last_checked: 2022-02-26 (mapillary)
+#: last_checked: 2022-03-20
 #: check_frequency: 120d
 #: next_check: 2023-06-30
 	2::inwork 19711,10426 19697,10210
@@ -34723,6 +34732,30 @@ EOF
        source_id => '227300117',
        data  => <<EOF,
 	2::inwork 49004,64047 48516,64085 48151,64245
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Hannaweg: Bauarbeiten, Abschnitte der Fahrbahn gesperrt, Ausweichen auf engen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: XXX Evtl. gab es hier früher eine Einbahnstraßenregelung, die nach den Bauarbeiten wieder aktiviert wird.
+#: last_checked: 2022-03-20
+#: check_frequency: 60d
+	q4::inwork 20923,13953 20938,14066
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Stadtpark Lichtenberg: Bauarbeiten, Wege können gesperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: STADTPARKLICHTENBERG-2022
+#: priority: #B
+#: last_checked: 2022-03-21
+#: check_frequency: 7d
+	2::inwork 15457,12449 15454,12519
 EOF
      },
     );

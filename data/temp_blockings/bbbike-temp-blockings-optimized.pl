@@ -1911,7 +1911,30 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
+#: by: https://www.berliner-woche.de/nikolassee/c-verkehr/sprengungen-im-grunewald_a188185
+#: by: https://www.stadtrand-nachrichten.de/sprengungen-im-grunewald/
+#: by: https://viz.berlin.de/2021/10/a115-sprengungen/ (nächste Termine 2021: 3.11., 10.11., 17.11., 24.11)
+#: note: Termine im Frühjahr 2022: 23.3., 13.4., 20.4., 27.4.
+#: source_id: 2147341022
+#: source_id: viz2021:13.196408,52.438127,03.11.2021,09:15
+#: source_id: viz2021:13.196408,52.438127,10.11.2021,09:15
+#: source_id: viz2021:13.196408,52.438127,17.11.2021,09:15
+#: source_id: viz2021:13.196408,52.438127,24.11.2021,09:15
+#: source_id: viz2021:13.196408,52.438127,23.03.2022,09:15
+#: priority: #A
+#: next_check: 2022-03-23
+	2::temp -2218,5133 -927,6888
+	2::temp -2825,5588 -1925,6790 -2080,6897
+	2::temp -1925,6790 -1851,6887
+',
+         'from' => 1647903600,
+         'id' => 2840,
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 23. März 2022 ab ca. 09:15 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1648026900
+       },
        undef,
        {
          'data' => '#: tempex: sunset-T07
@@ -2208,7 +2231,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2022-03-02
+#: last_checked: 2022-03-16
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2421,7 +2444,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: also_indoor: traffic (H,B,G)
 #: osm_watch: way id="1006570991" version="1"
 #: last_checked: 2022-02-20 (traffic)
-#: check_frequency: 30d
+# REMOVED --- #: check_frequency: 30d
 #: next_check: 2022-03-31
 	q3::inwork  8986,16092 9178,16317
 # REMOVED (hier nicht (mehr)) ---	q3::inwork 9178,16317 9301,16439
@@ -2590,7 +2613,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-03-01 (mapillary)
+#: last_checked: 2022-03-16
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 ',
@@ -2639,7 +2662,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-03-10
+#: last_checked: 2022-03-19
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -2690,7 +2713,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="6"
-#: last_checked: 2022-03-11 vvv
+#: last_checked: 2022-03-18 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -2777,6 +2800,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://viz.berlin.de/2021/05/verkehrsvorschau-310521/ (Fuß- und Radverkehr ist frei)
 #: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
 #: source_id: 2147347233 (bis 23.12.2021)
+#: source_id: viz2021:13.312919,52.448752,31.05.2021,08:30
 # REMOVED --- #: priority: #A --- #: last_checked: 2021-09-26 --- #: next_check: 2022-03-18
 #: also_indoor: traffic (H,G,B) vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
@@ -2792,9 +2816,9 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
          'from' => 1622356200,
          'id' => 3261,
          'source_id' => '2147345834',
-         'text' => 'Gardeschützenweg: Fahrbahn am Hindenburgdamm gesperrt, vom 31.05.2021 bis 18.03.2022',
+         'text' => 'Gardeschützenweg: Fahrbahn am Hindenburgdamm gesperrt, vom 31.05.2021 bis 29.03.2022',
          'type' => 'handicap',
-         'until' => 1647619200
+         'until' => 1648566000
        },
        undef,
        undef,
@@ -3317,7 +3341,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2022-03-13
+#: last_checked: 2022-03-20
 #: check_frequency: 30d
 #: next_check: 2022-04-29
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -3484,16 +3508,19 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.gmg-ing.de/referenzen/ernst-heilmann-steg-berlin/ ("Torsionsschwingungen")
 #: by: https://www.strassenbauportal.de/oeffentliche_ausschreibung_vobvol_details_10997_Berlin_Instandsetzung_Stahlbau_1924073.html (Ausschreibung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10215 (Anfrage)
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10215&date=20220319 (mögliche Freigabe vor Ostern 2022, spätestens Ende April 2022)
 # REMOVED (eins reicht) --- #: osm_watch: note 2867467 2
 #: osm_watch: way id="16311543" version="19"
 #: also_indoor: search Ernst-Heilmann-Steg
+#: priority: #A
 #: last_checked: 2022-03-09 (mapillary)
-#: check_frequency: 120d
+#: check_frequency: 30d
+#: next_check: 2022-04-30
 	2::inwork 13270,10030 13306,10006
 ',
          'from' => undef,
          'id' => 3447,
-         'text' => 'Ernst-Heilmann-Steg gesperrt',
+         'text' => 'Ernst-Heilmann-Steg gesperrt, möglicherweise bis Ende April 2022',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3558,7 +3585,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: WUHLETALHAVEMANN-2021
 #: add_fragezeichen: Wann sind die Bauarbeiten hier abgeschlossen und die Sperrung aufgehoben?
-#: last_checked: 2022-02-20 (mapillary)
+#: last_checked: 2022-02-27 (mapillary)
 # REMOVED --- #: next_check: 2022-03-01
 	2::inwork 21539,17442 21555,17546 21559,17617 21576,17678 21639,17803 21698,17920 21726,17974 21804,18125 21843,18198 21871,18244
 ',
@@ -3617,7 +3644,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1635634800,
          'id' => 3474,
          'source_id' => 'LS/721-E/21/142',
-         'text' => 'Bernau - Lanke: Bauarbeiten, Sperrung, vom 01.11.2021 bis 22.04.2022',
+         'text' => 'Bernau - Lanke: Bauarbeiten, Sperrung, für Radfahrer unter Umständen bereits passierbar, vom 01.11.2021 bis 22.04.2022',
          'type' => 'gesperrt',
          'until' => 1650643200
        },
@@ -3837,14 +3864,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: ZWIESELER-2022
 #: XXX Stand 2022-01-21: Verbotsschild für Fußgänger am nördlichen Ende, Verbot für Fahrzeuge aller Art außer Grundstücksanlieger am südlichen Ende, man kann aber trotzdem passieren. Stand 2022-02-26: Passieren weiterhin möglich.
 #: XXX Halteverbotsschilder gelten bis Ende Juni 2023
-#: last_checked: 2022-02-26 (mapillary)
+#: last_checked: 2022-03-20
 #: check_frequency: 120d
 #: next_check: 2023-06-30
 	2::inwork 19711,10426 19697,10210
 ',
          'from' => undef,
          'id' => 3504,
-         'text' => 'Zwieseler Str.: Zufahrt zum Richard-Kolkwitz-Weg kann wegen Bauarbeiten gesperrt sein, auch für Fußgänger',
+         'text' => 'Zwieseler Str.: Zufahrt zum Richard-Kolkwitz-Weg kann wegen Bauarbeiten gesperrt sein, auch für Fußgänger (Stand Mitte März 2022: zumindest am Wochenende passierbar)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4092,6 +4119,32 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'text' => 'Herzsprung: Gleisbauarbeiten am Bahnübergang, Vollsperrung vom 23.02.2022 - 8:00 Uhr bis 25.03.2022 18:00 Uhr ',
          'type' => 'gesperrt',
          'until' => 1648227600
+       },
+       {
+         'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: XXX Evtl. gab es hier früher eine Einbahnstraßenregelung, die nach den Bauarbeiten wieder aktiviert wird.
+#: last_checked: 2022-03-20
+#: check_frequency: 60d
+	q4::inwork 20923,13953 20938,14066
+',
+         'from' => undef,
+         'id' => 3527,
+         'text' => 'Hannaweg: Bauarbeiten, Abschnitte der Fahrbahn gesperrt, Ausweichen auf engen Gehweg, Bordsteine, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: STADTPARKLICHTENBERG-2022
+#: priority: #B
+#: last_checked: 2022-03-21
+#: check_frequency: 7d
+	2::inwork 15457,12449 15454,12519
+',
+         'from' => undef,
+         'id' => 3528,
+         'text' => 'Stadtpark Lichtenberg: Bauarbeiten, Wege können gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );

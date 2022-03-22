@@ -430,7 +430,7 @@ neu asphaltiert, relativ breit	RW1; 10794,10927 10779,10934 10684,10975
 # REMOVED (dabei ist nichts passiert) --- #: XXX Bauarbeiten der Wasserbetriebe bis November 2019, südliche Seite zwischen Alexandrinenstr. und Lobeckstr.
 #: source_id: 2147346275 (bis Mitte Oktober 2020, Gesamtbaumaßnahme bis Mai 2021 (restliche Radwege?))
 #: source_id: 2147346758 (Leitungsbau zwischen Alte Jakobstr. und Alexandrinenstr. bis 28.5.2021)
-#: last_checked: 2022-01-17 vvv
+#: last_checked: 2022-03-09 (mapillary) vvv
 #: check_frequency: 60d vvv
 # REMOVED (hier realisiert) --- #: last_checked: 2019-12-06 (Bauarbeiten am Rad/Gehweg Richtung Westen) --- #: check_frequency: 3d
 mäßige bis schlechte Verbundsteinpflasterradwege	RW1; 10020,11262 10256,11160
@@ -698,7 +698,7 @@ teilweise nur aufgemalt, teilweise Verbundsteinpflaster	RW1; 7672,19869 7634,197
 #: source_id: 2147345481
 #: source_id: 2147345753
 #: source_id: viz2021:13.408836,52.517143,22.04.2020,15:00 (Bauarbeiten bis 30.6.2023)
-#: last_checked: 2022-01-25 vvv
+#: last_checked: 2022-03-16 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2023-06-30 vvv
 provisorische Radspuren	RW4; 10738,12364 10673,12434 10644,12469 10601,12521
@@ -726,7 +726,7 @@ teilweise mit Leitboys geschützt	RW4; 14523,12183 14621,12168 14709,12156 14854,
 #: next_check_id: FRANKFURTER-2021
 #: XXX Bauarbeiten, provisorische Radspur bis kurz vor der Gürtelstr., danach entweder ein erneuerter Bürgersteigradweg oder eine Radspur
 #: source_id: viz2021:13.471852,52.513916,22.06.2021,07:00 (bis 31.03.2022)
-#: last_checked: 2022-03-15
+#: last_checked: 2022-03-20
 #: check_frequency: 30d
 #: next_check: 2022-03-31
 	RW4; 14926,12129 14994,12121 15117,12106 15361,12071
@@ -970,7 +970,7 @@ im Bereich der Bushaltestelle wird der Radweg auf dem Gehweg geführt	RW4; 14196,
 #: source_id: viz2021:13.463301,52.496054,12.01.2022,11:00 (bis 2028)
 # REMOVED --- #: XXX wann wird die Radspur wieder hergestellt? (-> RW4;) --- #: XXX ab 16.12.2021 vermutlich wieder eine Radspur, Kfz-Verkehr wird dann nur noch eine Spur haben
 #: XXX wie wird die Regelung mit der Ersatzbrücke aussehen?
-#: last_checked: 2022-03-14 vvv
+#: last_checked: 2022-03-16 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2022-06-30 vvv
 provisorischer gemeinsamer Geh- und Radweg	RW2; 14558,10264 14501,10169
@@ -1617,14 +1617,14 @@ Busspur gilt Mo-Fr 7-19 Uhr	RW5; 10299,11786 10314,11804 10349,11847 10376,11879
 #: by: http://www.abendblatt-berlin.de/2019/03/14/82734/
 #: by: https://twitter.com/VIZ_Berlin/status/1369264298120388614 (Umstellung der Baustelle ab 2021-03-09)
 # REMOVED --- #: osm_watch: way id="882672444" version="6"
-#: osm_watch: way id="82654055" version="10"
+#: osm_watch: way id="82654055" version="12"
 #: source_id: 2147343632 (bis Mitte 2023)
 #: priority: #A vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2021-03-11 vvv
 #: next_check: 2023-06-30 vvv
 #: XXX Wie lange bleibt der provisorische Radweg Richtung Grunertunnel erhalten?
-#: last_checked: 2022-03-02 vvv
+#: last_checked: 2022-03-16 vvv
 # REMOVED --- Busspur gilt Mo-Fr 7-19 Uhr	RW5; 10625,12206 10659,12259 10675,12280
 provisorische Radspur	RW4; 10574,12131 10625,12206 10659,12259 10675,12280
 # REMOVED ---	RW4; 10675,12280 10700,12315 10723,12346 10738,12364
@@ -1645,7 +1645,7 @@ Busspur gilt Mo-Fr 6-20 Uhr	RW5; 10423,11936 10391,11898 10376,11879 10349,11847
 #: by: https://pbs.twimg.com/media/EWNN2nxXsAIlxr-?format=jpg&name=4096x4096
 #: by: https://molkenmarkt01.hi-res-cam.com/ (webcam)
 #: XXX temporäre Radwegführung
-#: last_checked: 2022-02-25 (webcam)
+#: last_checked: 2022-03-16
 #: check_frequency: 30d
 temporäre Führung als Bürgersteigradweg	RW1; 10887,12570 10954,12635
 # wieder herstellen:	RW4; 10887,12570 10954,12635
@@ -2232,7 +2232,7 @@ Poller vor der Kreuzung	RW3;RW3 11159,10769 11220,10744 11275,10723
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: XXX Bauarbeiten, Radspuren sind größtenteils aufgehoben
 #: XXX war: RW3;RW3
-#: last_checked: 2022-02-24 (mapillary)
+#: last_checked: 2022-03-19
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-10-01
 	RW0;RW0 8732,12804 8737,12757 8752,12647 8752,12647 8754,12622 8756,12608
@@ -3459,7 +3459,7 @@ vorhandener Radweg ist abgesperrt	RW0; 23100,12269 23033,12367
 #: source_id: viz2021:13.562465,52.512863,06.07.2021,07:00 (bis 01.06.2025)
 #: XXX wie wird die Situation nach den Bauarbeiten aussehen? vvv
 #: osm_watch: way id="865716506" version="7"
-#: last_checked: 2022-02-12 (mapillary) vvv
+#: last_checked: 2022-03-20 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2025-06-01 vvv
 # REMOVED ---	RW0; 21190,12193 21166,12023
@@ -3713,7 +3713,9 @@ Radspur hinter den parkenden Autos, teilweise kaum Abstand	RW3; 6149,16958 6191,
 schmaler asphaltierter Radweg, kein Unterstreifen gegen parkende Autos (hier wird aber selten geparkt)	RW1;RW2 5700,15043 5625,15132
 schmaler asphaltierter Radweg, kein Unterstreifen gegen parkende Autos (hier wird aber selten geparkt)	RW1;RW1 5625,15132 5587,15177 5553,15271 5522,15354 5490,15440 5446,15489
 	RW3;RW3 2905,14754 2956,14752
-	RW1;RW1 -7050,152 -7050,199 -7067,240 -7078,262 -7123,310
+	RW1; -7050,152 -7050,199 -7067,240 -7078,262 -7123,310
+	RW1; -7123,310 -7078,262 -7067,240 -7050,199
+Gehweg für Radfahrer frei	RW1; -7050,199 -7050,152
 	RW1;RW1 -1012,3465 -968,3438 -800,3409 -741,3410 -645,3434 -548,3467 -478,3509 -370,3585 -267,3657
 	RW1;RW1 -267,3657 -141,3715 -92,3724 16,3744 199,3774 263,3779 394,3694 458,3697
 	RW1;RW 458,3697 627,3749 732,3780
@@ -5703,7 +5705,7 @@ asphaltiert	RW1; 9660,17736 9721,17806
 	RW3; 8921,16578 8776,16268
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-23916.pdf (Umsetzung bis Herbst 2020)
 #: XXX wird aus der Radspur eine Busspur? vvv
-#: last_checked: 2022-01-22 vvv
+#: last_checked: 2022-03-14 (mapillary) vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2020-10-01 vvv
 #: osm_watch: way id="162965650" version="21"
@@ -5747,8 +5749,8 @@ Busspur gilt Mo-Fr 6-18 Uhr	RW5; 7482,4416 7597,4499
 	RW6;RW6 20586,18822 20694,18857
 	RW6;RW6 20635,18707 20553,18734 20494,18755
 	RW6;RW6 20701,18634 20702,18662 20727,18726 20760,18812 20790,18892
-	RW6;RW6 20727,18726 20901,18793 21038,18851 21028,18915 20998,18980
-	RW6;RW6 20760,18812 20894,18861 21028,18915
+# REMOVED (mittlerweile nur Tempo 20) ---	RW6;RW6 20727,18726 20901,18793 21038,18851 21036,18888 21028,18915 20998,18980
+# REMOVED (mittlerweile nur Tempo 20) ---	RW6;RW6 20760,18812 20894,18861 21028,18915
 asphaltiert	RW8;RW2 21165,18715 21137,18782
 	RW4;RW2 20160,18301 20173,18306 20458,18424 20582,18475 20612,18487 20622,18491 20743,18540 20922,18613
 	RW3;RW2 20922,18613 21165,18715
@@ -5925,7 +5927,7 @@ Verbundsteinpflaster	RW1; 21170,16942 21390,16903
 gemeinsamer Geh- und Radweg	RW2; 20832,15981 20712,16011 20636,16046
 	RW2; 20712,16011 20832,15981
 #: note: alter DDR-Radweg, an Kreuzungen entfernt sich der Radweg von der Hauptstraße vvv
-	RW1;RW1 20120,16297 20372,16173 20394,16162 20479,16124 20636,16046
+	RW1;RW1 20120,16297 20212,16252 20372,16173 20394,16162 20479,16124 20636,16046
 	RW1; 20636,16046 20712,16011
 #: note ^^^
 Busspur gilt Mo-Fr 14-18 Uhr	RW5; 21187,15350 21228,15449 21242,15529
@@ -6224,14 +6226,14 @@ mit Unkraut überwuchertes Verbundsteinpflaster	RW1; 12254,24857 12138,24989 1240
 #: note: Karl-Marx-Str. Richtung Süden, Werbellinstr. bis Grenzallee
 #: note: oft zugeparkt, insbesondere im nördlichen Abschnitt
 #: XXX evtl. wird es hier noch eine Grünmarkierung geben
-#: last_checked: 2022-02-11 vvv
+#: last_checked: 2022-03-16 vvv
 #: check_frequency: 60d
 Gelbmarkierung	RW3;RW3 12639,8344 12598,8390
 	RW4; 12639,8344 12689,8289 12714,8249
 #: last_checked ^^^
 #: XXX Grünmarkierung?
 #: priority: #D
-#: last_checked: 2022-02-01
+#: last_checked: 2022-03-16
 #: check_frequency: 60d
 	RW4; 12714,8249 12753,8187 12788,8101 12823,8028
 Grünmarkierung	RW4; 12823,8028 12846,7981 12865,7923 12892,7850 12898,7832 12914,7785
@@ -6266,11 +6268,11 @@ Grünmarkierung	RW4; 12914,7785 12898,7832 12892,7850 12865,7923 12846,7981 12823
 # REMOVED (hier realisiert, Koordinaten nach oben geschoben) --- #: priority: #D vvv --- #: last_checked: 2019-09-13 vvv --- #: check_frequency: 10d vvv --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: priority ^^^ --- #: XXX ^^^ --- 
 #: XXX Grünmarkierung?
 #: priority: #D
-#: last_checked: 2022-02-01
+#: last_checked: 2022-03-16
 #: check_frequency: 60d
 	RW4; 12823,8028 12788,8101 12753,8187 12714,8249
 #: XXX evtl. wird es hier noch eine Grünmarkierung und Radwegschilder geben
-#: last_checked: 2022-02-11
+#: last_checked: 2022-03-16
 	RW3; 12714,8249 12689,8289 12639,8344
 # note: Ende Karl-Marx-Str.
 # 
@@ -6402,7 +6404,7 @@ Grünmarkierung	RW3; 10643,14639 10723,14772 10816,14925 10838,14962 10884,14952
 #: by: https://www.infravelo.de/projekt/kastanienallee/ (1. Halbjahr 2019)
 #: XXX Grünmarkierung geplant vvv
 #: priority: #D vvv
-#: last_checked: 2022-03-07 (mapillary) vvv
+#: last_checked: 2022-03-15 (mapillary) vvv
 #: check_frequency: 60d vvv
 	RW3; 11673,16367 11698,16311 11666,16260 11618,16183
 	RW3; 11542,16070 11531,16053
@@ -6983,7 +6985,7 @@ asphaltiert	RW1; 25522,4935 25519,4830
 	RW4; 16485,25516 16414,25575
 #: next_check_id: KARLMARXSTR-2018
 #: XXX Zwischendurch eine provisorische Radspur, wurde bei der Baustellenumstellung Anfang Februar 2021 wieder entfernt
-#: last_checked: 2022-02-11
+#: last_checked: 2022-03-16
 #: check_frequency: 120d
 #: next_check: 2022-07-31
 # REMOVED --- provisorische Radspur, Gelbmarkierung, sehr breit	RW4; 12494,8501 12330,8636
@@ -7100,7 +7102,7 @@ niedrige Protektionselemente, vereinzelte Poller	RW4; 8919,10360 8824,10366 8771
 #: source_id: viz2021:13.402789,52.498471,01.09.2021,07:00 (bis 24.9.2021) (inaktiv)
 #: source_id: viz2021:13.402789,52.498471,28.09.2021,07:00 (bis 12.10.2021) (inaktiv)
 #: source_id: viz2021:13.397833,52.498335,06.10.2021,08:00 (bis 30.03.2022)
-#: source_id: viz2021:13.398158,52.498346,07.02.2022,07:00 (bis 25.02.2022) (mittlerweile bis 18.03.2022)
+#: source_id: viz2021:13.398158,52.498346,07.02.2022,07:00 (bis 25.02.2022) (mittlerweile bis 18.03.2022) (inaktiv)
 #: note: laut rbb Einspurigkeit Höhe Lobeckstr. bis 22.10.2021
 #: XXX eine permanente Radverkehrsanlage ist geplant vvv
 # REMOVED --- #: XXX temporäre gemeinsame Bus- und Radspur, Richtung Osten zwischen Zossener Brücke und Kottbusser Tor, Richtung Westen ab Alexandrinenstr., außerdem sind die Popup-Radwege zwischen Prinzenstr. und Alexandrinenstr. vorübergehend entfernt (bis ca. 12.4.2021) (Stand 13.4.2021: noch nicht zurückgebaut)
@@ -7136,7 +7138,7 @@ Tempo 10	RW6;RW6 15539,5088 15577,5064
 #: by: https://www.infravelo.de/projekt/kottbusser-strasse/ (4. Quartal 2021)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1158571.php (Verstetigung 2022)
 #: by: https://berliner-abendblatt.de/2021/12/18/pop-up-radwege-bleiben-dauerhaft/
-#: last_checked: 2022-03-12 vvv
+#: last_checked: 2022-03-16 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2022-12-31 vvv
 # ggfs. wiederherstellen, falls die Radspuren aufgehoben werden	RW1;RW1 11393,10390 11512,10105
@@ -7302,6 +7304,7 @@ Busspur gilt Mo-Fr 7-19 Uhr	RW5; 7292,17316 7381,17317 7602,17399
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8273 (Antrag (Mariendorfer Damm))
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1185354.php (Radverkehrsanlage Mariendorfer Damm: Informationsveranstaltung)
 #: by: https://www.berliner-woche.de/mariendorf/c-verkehr/info-abend-zur-radverkehrsanlage_a339422
+#: by: https://berliner-abendblatt.de/2022/03/16/radweg-tempelhofer-damm/
 # REMOVED (not cacheable) --- #: by: https://www.bvg.de/de/verbindungen/stoerungsmeldungen/u6?date=20211006 (bis 8.10.2021)
 #: source_id: 2147347065 (bis 17.10.2021) (mittlerweile inaktiv)
 #: XXX: Werden die provisorischen Radspuren wieder entfernt? vvv
@@ -7389,7 +7392,7 @@ Tempo 10	RW6;RW6 14468,11203 14442,11101
 Tempo 10	RW6;RW6 14531,11142 14513,11075
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2022-01-03 vvv
+#: last_checked: 2022-03-19 vvv
 #: next_check: 2024-06-01 vvv
 	RW2; 10830,12279 10831,12371
 	RW4; 10831,12371 10804,12461
@@ -7418,6 +7421,7 @@ Gehweg für Radfahrer frei	RW1;RW1 475,1202 587,1230 718,1264 857,1300
 # 
 	RW2; 1566,11409 1574,11379
 # 
+#: note: Hermannstr., Richtung Norden
 #: note: Grünmarkierung fehlt an den Bushaltestellen vvv
 Grünmarkierung, Poller	RW3; 12510,6508 12470,6586
 Bushaltestelle	RW5; 12470,6586 12448,6646
@@ -7428,7 +7432,11 @@ Grünmarkierung	RW4; 12342,6936 12317,7007 12304,7039 12291,7074 12259,7164 12244
 #: note ^^^
 provisorische Radspuren	RW4;RW4 12185,7381 12221,7271
 # REMOVED --- #: XXX Radweg markiert und ausgeschildert, allerdings ignoriert --- #: last_checked: 2021-12-13 --- #: check_frequency: 7d
+# 
+#: note: Hermannstr., Richtung Süden
 	RW4; 12221,7271 12244,7205 12259,7164 12291,7074 12304,7039 12317,7007
+#: by: osm
+	RW4?; 12470,6586 12510,6508
 # 
 # REMOVED (korrekt) --- #: XXX Geltungszeit überprüfen!
 Busspur ist immer gültig	RW5; 3835,10352 3813,10435
