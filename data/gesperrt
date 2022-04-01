@@ -65,7 +65,7 @@ Knoten Märkische/Landsberger Allee	1 19452,14807 19464,14971 19408,15007
 Knoten Märkische/Landsberger Allee	1 19516,14993 19551,14961 19615,14960 19643,15025 19614,15061
 Knoten Märkische/Landsberger Allee	1 19694,15141 19707,15206 19654,15219 19577,15166
 Knoten Märkische/Landsberger Allee	1 19502,15089 19604,15227
-Alt-Blankenburg	1 13576,20849 13562,20913 13662,20917 13909,20928
+Alt-Blankenburg	1 13576,20849 13562,20913 13662,20917 13712,20919 13909,20928
 Alt-Blankenburg	1 13909,20928 13677,20873 13576,20849
 Seestr.	1 5043,14671 5255,14757 5311,14786 5440,14840
 Seestr.	1 5440,14840 5331,14735 5293,14699 5264,14671 5051,14606
@@ -422,7 +422,7 @@ Breitenbachplatz	1 4103,6716 4074,6681 4034,6642 3983,6599 3925,6604 3938,6651 4
 Südwestkorso	1 4061,6753 4204,6826
 Südwestkorso	1 4204,6826 4125,6763 4103,6716
 Kleine Markusstr. - Krautstr.	1 12021,12066 11958,12112
-Kleine Markusstr. - Krautstr.	1 11958,12112 11962,12034 12002,12008
+Kleine Markusstr. - Krautstr.	1 11937,12127 11932,12111 11956,12071 11961,12025 12002,12008
 Schönstedtstr.	1 12545,8449 12643,8533
 Erkelenzdamm	1s 11117,10326 11094,10261
 Alt-Tempelhof	1 8787,6660 8722,6656
@@ -993,6 +993,8 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14191,-818 -14199,-707 -14205,-644
 Bahnhofstr.	1s -8417,-2862 -8410,-2884
 Bienenwinkel	1 -13335,1927 -13333,1957 -13227,1962 -13228,1927
+Am Tonberg (Zeuthen)	1 24593,-7405 24492,-7311 24416,-7241
+Am Tonberg (Zeuthen)	1 24493,-7282 24616,-7384
 Finkenweg (Schulzendorf)	1 23985,-3836 24124,-4044
 Fließsteig (Schulzendorf)	1 24314,-3438 24394,-3534 24533,-3746
 Prieroser Dorfaue	1s 35663,-19764 35627,-19777 35631,-19861
@@ -2442,7 +2444,7 @@ Schranke	BNP:3:-7:trailer=10 20849,5266
 tragen (20 Stufen)	0:30:-90 22624,13901
 tragen (8 weite Stufen) bzw. Naturrampe benutzen	0:15:-175 -6004,15050
 tragen (25 Stufen)	0:30:-113 -3144,14170
-tragen (5 Stufen)	0:10:-132 14832,8199
+tragen (5 Stufen)	0:10:-133 14832,8199
 tragen (Schienen der stillgelegten Heidekrautbahn)	0:20:-39 7316,20623
 tragen	0:15:-58 47027,49988
 tragen	0:15:-130 47004,50002
@@ -3179,12 +3181,15 @@ Drängelgitter	BNP:3:-32:trailer=10 18232,1669
 Drängelgitter	BNP:3:-147:trailer=10 20560,23
 Drängelgitter	BNP:3:-106:trailer=10 20675,56
 zwei Drängelgitter (Z-Anordnung)	BNP:5:-225:trailer=15 18848,3600
+(Vorfahrt Neues-Deutschland-Gebäude): mit Bauzäunen abgesperrt	2::inwork 12788,11898 12891,12008
+Überqueren der Straße vor der Russischen Botschaft nicht möglich	3nocross::ignrte 8804,12280 9028,12307 9141,12320
+Schadowstr. -> Unter den Linden: Überqueren der Straße vor der Russischen Botschaft nicht möglich	3::igndisp 9011,12423 9028,12307 9141,12320
+Unter den Linden -> Schadowstr.: Überqueren der Straße vor der Russischen Botschaft nicht möglich	3::igndisp 8804,12280 9028,12307 9011,12423
 Barnimer Dörferweg: wegen Bauarbeiten gesperrt	2::inwork 20865,18933 20889,18943 20948,18968
 Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 9775,12178 9771,12190 9747,12205 9755,12144
 Überqueren wegen eines Gerüsts nicht möglich	3nocross::ignrte 3570,17938 3706,17931 3833,17929
 Seidelstr. -> Weg am Kienhorstgraben: Überqueren wegen eines Gerüsts nicht möglich	3::igndisp 3570,17938 3706,17931 3723,17979
 Weg am Kienhorstgraben -> Scharnweberstr.: Überqueren wegen eines Gerüsts nicht möglich	3::igndisp 3723,17979 3706,17931 3833,17929
-Ackerstr. (Schulzendorf): Hochbauarbeiten, Straße gesperrt	2::inwork 22996,-4983 22962,-5193
 Weg zur Walther-Rathenau-Str.: Bauarbeiten, Weg noch gesperrt	2::inwork 22983,-5346 22677,-5418
 Schönegarten: an beiden Enden gesperrt	2 7416,10492 7432,10546 7330,10590
 Georg-Klingenberg-Str.: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17846,8644 17783,8663 17656,8700
@@ -3210,7 +3215,7 @@ Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, k
 Straße 77: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 15320,12375 15408,12394
 Straße des 17. Juni: Radweg gesperrt	1::igndisp 6164,11947 5900,11913
 Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 6024,11978 6132,11984 6164,11947
-Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11923,11881 11940,11982
+Mehlbeerenweg: Straße existiert nicht mehr	2::inwork 11923,11881 11940,11982
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s 10472,14632 10320,14608
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 Alexanderufer - Charité: Tor ist wegen Corona-Beschränkungen geschlossen	2 8371,13399 8363,13402 8356,13404

@@ -100,7 +100,7 @@ Knoten M‰rkische/Landsberger Allee	1 19452,14807 19464,14971 19408,15007
 Knoten M‰rkische/Landsberger Allee	1 19516,14993 19551,14961 19615,14960 19643,15025 19614,15061
 Knoten M‰rkische/Landsberger Allee	1 19694,15141 19707,15206 19654,15219 19577,15166
 Knoten M‰rkische/Landsberger Allee	1 19502,15089 19604,15227
-Alt-Blankenburg	1 13576,20849 13562,20913 13662,20917 13909,20928
+Alt-Blankenburg	1 13576,20849 13562,20913 13662,20917 13712,20919 13909,20928
 Alt-Blankenburg	1 13909,20928 13677,20873 13576,20849
 Seestr.	1 5043,14671 5255,14757 5311,14786 5440,14840
 Seestr.	1 5440,14840 5331,14735 5293,14699 5264,14671 5051,14606
@@ -230,7 +230,7 @@ Dittersbacher Weg	1 7855,3355 7852,3183
 #: by: https://www.nalepaland.de/
 #: XXX Maﬂnahme Osw.10, auﬂerdem ein "fahrradfreundlicher Belag" im weiteren Verlauf der Nalepastraﬂe
 #: osm_watch: way id="24869862" version="12"
-#: last_checked: 2022-01-24
+#: last_checked: 2022-03-25
 #: check_frequency: 60d
 Nalepastr. am Rundfunkgeb‰ude	2 17065,8396 17057,8235 17056,8159 17059,8097
 Kirchstr.	1 22196,4847 22240,4768 22246,4711 22284,4653
@@ -647,7 +647,7 @@ Breitenbachplatz	1 4103,6716 4074,6681 4034,6642 3983,6599 3925,6604 3938,6651 4
 S¸dwestkorso	1 4061,6753 4204,6826
 S¸dwestkorso	1 4204,6826 4125,6763 4103,6716
 Kleine Markusstr. - Krautstr.	1 12021,12066 11958,12112
-Kleine Markusstr. - Krautstr.	1 11958,12112 11962,12034 12002,12008
+Kleine Markusstr. - Krautstr.	1 11937,12127 11932,12111 11956,12071 11961,12025 12002,12008
 Schˆnstedtstr.	1 12545,8449 12643,8533
 # REMOVED (verk¸rzt) --- Eckertstr.	1 13608,12547 13522,12748
 Erkelenzdamm	1s:q3 11117,10326 11094,10261
@@ -1244,7 +1244,7 @@ Waldstr.	1 9961,19513 10002,19418
 #: XXX wieder gesperrt, vermutlich f¸r Aufzugarbeiten
 #: source_id: viz2021:13.440961,52.50069,06.07.2021,07:00 (bis 12.01.2022) (mittlerweile bis 30.6.2022)
 #: by: https://berliner-abendblatt.de/2022/01/03/viele-u-bahnhoefe-nicht-barrierefrei/ ("in K¸rze")
-#: last_checked: 2022-03-08
+#: last_checked: 2022-03-26
 #: check_frequency: 30d
 #: next_check: 2022-06-30
 (Schlesisches Tor - Oppelner Str.)	2::inwork 12978,10581 12930,10621
@@ -1297,7 +1297,7 @@ Heinrichplatz	1 11734,10563 11754,10516
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/200507_protokoll-1-fahrrat-2020.pdf (Bahn ist nicht bereit, den Eingang f¸r den Radverkehr zu ˆffnen)
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7448&date=20210314 (Antwort: ÷ffnung wird gepr¸ft)
 #: confirmed_by: srt
-#: last_checked: 2021-11-20
+#: last_checked: 2022-03-26
 #: check_frequency: 270d
 Bhf. S¸dkreuz: Eingang gesperrt	2 7838,7848 7804,7783
 # 
@@ -1354,8 +1354,9 @@ Mellenseestr. [Wohngebiet]	1 17777,9649 17738,9822 17738,9922
 Mellenseestr. [Wohngebiet]	1 17920,9698 17868,9823 17838,9956
 #: next_check_id: MUEHSAM-2022
 #: XXX Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-03-11
-#: valid: 20220401-
+#: last_checked: 2022-03-29
+#: check_frequency: 14d
+#: valid: 20220501-
 M¸hsamstr.	1 13818,12897 13830,12907
 #: note: nur ein Einfahrt-verboten-Schild ohne korrespondierendes Einbahnstraﬂenschild
 Lilli-Henoch-Str.	1s:q3 12357,15020 12388,14926
@@ -1482,6 +1483,10 @@ Bienenwinkel	1 -13335,1927 -13333,1957 -13227,1962 -13228,1927
 ###################################################################### 
 # elsewhere in Brandenburg
 # 
+#: by: mapillary
+Am Tonberg (Zeuthen)	1 24593,-7405 24492,-7311 24416,-7241
+#: by: mapillary
+Am Tonberg (Zeuthen)	1 24493,-7282 24616,-7384
 #: by: mapillary
 Finkenweg (Schulzendorf)	1 23985,-3836 24124,-4044
 Flieﬂsteig (Schulzendorf)	1 24314,-3438 24394,-3534 24533,-3746
@@ -3309,7 +3314,7 @@ Dr‰ngelgitter	BNP:3::trailer=10 -739,23004
 #: note: kann allerdings recht gut umfahren werden
 Schranke	BNP:1::trailer=3 1201,15804
 Dr‰ngelgitter	BNP:3::trailer=10 32616,-23392
-#: note: kann offen sein, eine kurvige Umfahrungsmˆglichkeit existiert
+#: note: kann offen sein, eine kurvige sowie eine gerade+enge Umfahrungsmˆglichkeit existieren
 Schranke	BNP:2::trailer=8 17837,12277
 #: note: kann offen sein, eine gerade Umfahrungsmˆglichkeit existiert
 Schranke	BNP:0::trailer=2 18037,12362
@@ -3326,6 +3331,16 @@ zwei Dr‰ngelgitter (Z-Anordnung)	BNP:5::trailer=15 18848,3600
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1191451.php (Umgestaltung bis Sommer 2023)
+#: XXX evtl. wird die Erschlieﬂungsstraﬂe nicht mehr durchg‰ngig sein; evtl. wird man die Fl‰che als Gr¸nfl‰che kennzeichnen kˆnnen
+#: last_checked: 2022-03-31
+#: check_frequency: 30d
+#: next_check: 2023-07-01
+(Vorfahrt Neues-Deutschland-Geb‰ude): mit Bauz‰unen abgesperrt	2::inwork 12788,11898 12891,12008
+# 
+#: last_checked: 2022-03-29
+Unter den Linden/Schadowstr.: ‹berqueren der Straﬂe vor der Russischen Botschaft nicht mˆglich	3nocross 8804,12280 9028,12307 9141,12320
+# 
 #: next_check_id: FALKENBERG-2021
 #: last_checked: 2022-03-20
 #: check_frequency: 150d
@@ -3343,13 +3358,10 @@ Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 977
 #: next_check: 2022-11-30
 Seidelstraﬂenbr¸cke: ‹berqueren wegen eines Ger¸sts nicht mˆglich	3nocross 3570,17938 3706,17931 3833,17929
 # 
-#: by: mapillary
-#: last_checked: 2022-02-05 (mapillary)
-#: check_frequency: 90d
-Ackerstr. (Schulzendorf): Hochbauarbeiten, Straﬂe gesperrt	2::inwork 22996,-4983 22962,-5193
+# REMOVED --- #: by: mapillary --- #: last_checked: 2022-02-05 (mapillary) --- #: check_frequency: 90d --- Ackerstr. (Schulzendorf): Hochbauarbeiten, Straﬂe gesperrt	2::inwork 22996,-4983 22962,-5193
 # 
 #: by: mapillary
-#: last_checked: 2022-03-05 (mapillary)
+#: last_checked: 2022-03-26 (mapillary)
 #: check_frequency: 120d
 Weg zur Walther-Rathenau-Str.: Bauarbeiten, Weg noch gesperrt	2::inwork 22983,-5346 22677,-5418
 # 
@@ -3390,7 +3402,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraﬂ
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2022-03-03
+#: last_checked: 2022-03-25
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -3445,7 +3457,7 @@ Wandlitzstr.: in Hˆhe Lehndorffstr. sind Gehweg und Fahrbahn gesperrt	2::inwork 
 # 
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX vermutlich wird die Straﬂe dauerhaft verschwinden -> dann aus strassen-orig & Berlin.coords.data etc. entfernen
-#: last_checked: 2022-02-14
+#: last_checked: 2022-03-27
 #: check_frequency: 180d
 #: next_check: 2024-12-31
 Matthesstr.: Baustelle, keine Durchfahrt mˆglich	2::inwork 14185,9509 14172,9457
@@ -3495,7 +3507,7 @@ Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Br¸cke, k
 # REMOVED --- #: XXX bis wann geht die Einbahnstraﬂenregelung? --- #: last_checked: 2021-05-17 --- Rudi-Arndt-Str.: Einbahnstraﬂenregelung	1s:q4:inwork 13449,13892 13359,13832
 # 
 #: osm_watch: way id="871451762" version="1"
-#: last_checked: 2022-03-21
+#: last_checked: 2022-03-30
 #: check_frequency: 21d
 Straﬂe 77: wegen Bauarbeiten komplett gesperrt, auch f¸r Fuﬂg‰nger	2::inwork 15320,12375 15408,12394
 # 
@@ -3521,19 +3533,19 @@ Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 
 #: by: https://www.deutsches-architekturforum.de/thread/14527-neubau-holzmarktstra%C3%9Fe-51-friedrichshain-in-planung/?postID=681293#post681293
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_39_3593_3676_online.pdf (Einziehung und Widmung einer Gr¸nanlage)
 #: XXX ggfs. culdesac- und str_cont_ausnahme-Eintr‰ge erstellen, sollte ein Teilabschnitt der Straﬂe endg¸ltig verschwinden
-#: XXX mittlerweile (April 2021) wurde der s¸dliche Teil schon weggebaggert
+#: XXX mittlerweile (April 2021) wurde der s¸dliche Teil schon weggebaggert; Ende M‰rz 2022: die komplette Straﬂe existiert nicht mehr
 #: osm_watch: way id="25008069" version="15"
-#: last_checked: 2022-02-23 (mapillary)
-#: check_frequency: 60d
+#: last_checked: 2022-03-31
+#: check_frequency: 90d
 # REMOVED (hier ist nichts mehr) --- Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11916,11846 11923,11881
-Mehlbeerenweg: wegen Bauarbeiten komplett gesperrt	2::inwork 11923,11881 11940,11982
+Mehlbeerenweg: Straﬂe existiert nicht mehr	2::inwork 11923,11881 11940,11982
 # 
 #: by: https://www.deutsches-architekturforum.de/thread/14299-wohnquartier-f%C3%BCrstenberger-stra%C3%9Fe-8-mitte-in-bau/?postID=686545#post686545
 #: by: https://www.trei-wohnen.de/projekte/berlin-fuerstenberger-strasse/ (Fertigstellung Q3/2022)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_03_0117_0172_online.pdf (Grundst¸cksnummerierung)
 #: XXX Bis wann gehen die Bauarbeiten? Eigentlich eine "unechte" Einbahnstraﬂe. Und manchmal (gesehen am Sonntag, den 2021-10-31; vielleicht auﬂerhalb der Arbeitszeiten?) sind die Einfahrt-verboten-Schilder weggedreht
 #: osm_watch: way id="308312347" version="3"
-#: last_checked: 2022-03-12 (daf)
+#: last_checked: 2022-03-20 (architektur-urbanistik)
 #: check_frequency: 90d
 #: next_check: 2022-08-15
 F¸rstenberger Str.: Bauarbeiten, Einbahnstraﬂe	1s:q3 10472,14632 10320,14608
@@ -3566,7 +3578,7 @@ Alexanderufer - CharitÈ: Tor ist wegen Corona-Beschr‰nkungen geschlossen	2 8371,
 #: osm_watch: way id="690322561" version="3"
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: also_indoor: traffic (G,H)
-#: last_checked: 2022-02-24 (mapillary)
+#: last_checked: 2022-03-29
 Mittelstr.: zwischen Neust‰dtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch f¸r Fuﬂg‰nger, Ende unbekannt	2::inwork 9131,12438 9179,12444
 # 
 #: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Br¸cke 2021)
@@ -3621,7 +3633,7 @@ Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dˆrfelweg: gesperrt wegen Bauarbeiten	
 #: XXX Gesperrt wegen Bauarbeiten an den neuen Baufeldern nˆrdlich der Straﬂenbahntrasse. Laut bahninfo-forum wird der Weg nach den Bauarbeiten wieder geˆffnet.
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: osm_watch: way id="229647788" version="8"
-#: osm_watch: way id="850453338" version="5"
+#: osm_watch: way id="850453338" version="6"
 #: last_checked: 2021-12-15 (krickstadt)
 #: check_frequency: 120d
 #: next_check: 2022-11-01
@@ -3675,14 +3687,14 @@ Pfarrer-L¸tkehaus-Platz: Einbahnstraﬂenregelung	1::inwork 10300,-2135 10296,-215
 # 
 #: by: mapillary
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22806.pdf (Sperrung des Spreeuferwegs zwischen 2020 und 2028)
-#: last_checked: 2022-03-09
+#: last_checked: 2022-03-27
 #: next_check: 2028-01-01
 Unterf¸hrung unter der Elsenbr¸cke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 # 
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/stralauer-allee-15-16.657/page-2#post-13509 (Fertigstellung zum 30.6.2024 geplant)
 #: by: https://rfr-development.de/projekte/stralauer-allee (hier entsteht ein B¸rogeb‰ude)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbr¸cke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2022-03-16
+#: last_checked: 2022-03-23
 #: check_frequency: 360d
 #: next_check: 2024-06-30
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
@@ -3690,7 +3702,7 @@ Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,1015
 #: by: wosch
 #: confirmed_by: srt
 #: by: https://portal1548.webcam-profi.de/ (webcam)
-#: last_checked: 2022-03-16
+#: last_checked: 2022-03-23
 #: check_frequency: 60d
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,10152 14373,10046
 # 
@@ -3728,6 +3740,7 @@ Lydia-Rabinowitsch-Str. - Hamburger Bahnhof: direkter Durchgang wegen Bauarbeite
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_23_1913_2052_online.pdf (Grundst¸cksnummerierungen)
 #: by: https://portal1915.webcam-profi.de/ (Webcam)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_03_0117_0172_online.pdf (Grundst¸cksnummerierung)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_12_0713_0788_online.pdf (Grundst¸cksnummerierung)
 #: XXX f¸r den gesperrten Abschnitt wird Asphalt als Fahrbahnoberfl‰che vermutet (bereits eingetragen)
 #: last_checked: 2022-03-05
 #: check_frequency: 60d
@@ -3760,7 +3773,7 @@ Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 1
 #: by: https://www.deutsches-architekturforum.de/thread/11167-erweiterung-des-admiralspalastes-in-bau/?postID=689721#post689721
 #: by: https://graftlab.com/projects/admiralspalast (Zeitraum 2017-2021)
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-03-02
+#: last_checked: 2022-03-24 (architektur-urbanistik)
 #: check_frequency: 60d
 Planckstr.: Einbahnstraﬂenregelung, offen Richtung S¸den	1s:q3:inwork 9429,12728 9402,12792 9386,12833
 # 
@@ -3770,7 +3783,7 @@ Planckstr.: Einbahnstraﬂenregelung, offen Richtung S¸den	1s:q3:inwork 9429,12728
 # 
 #: by: https://leute.tagesspiegel.de/tempelhof-schoeneberg/macher/2021/01/19/154834/sanierung-des-hochbahnviadukts-bauarbeiten-ab-2023-geplant/ (Sanierung 2023 - Mitte 2024)
 #: osm_watch: way id="223707973" version="10"
-#: last_checked: 2022-03-05
+#: last_checked: 2022-03-24
 #: check_frequency: 120d
 #: priority: #A
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
@@ -3783,7 +3796,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="729492933" version="2"
 #: osm_watch: way id="882672445" version="1"
-#: last_checked: 2022-03-19
+#: last_checked: 2022-03-29
 #: check_frequency: 60d
 Gustav-Bˆﬂ-Str.: Bauarbeiten, Komplettsperrung, Straﬂenf¸hrung wird neu gemacht	2::inwork 10673,12434 10772,12515
 # 
@@ -3842,7 +3855,7 @@ Henriette-Lustig-Str.: durch Bauz‰une abgesperrt	2::inwork 21476,5048 21380,5003
 #: by: https://www.berliner-woche.de/mitte/c-bauen/architekten-koennen-bis-november-ihre-entwuerfe-einreichen_a324605
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/molkenmarkt-klosterviertel-bebauungsplan-1-14.52/page-5#post-17149
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne ‹berquerungsmˆglichkeit an der k¸nftigen Straﬂe "Molkenmarkt"
-#: last_checked: 2022-03-16
+#: last_checked: 2022-03-29
 #: check_frequency: 90d
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingez‰unt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
@@ -3855,7 +3868,7 @@ Henriette-Lustig-Str.: durch Bauz‰une abgesperrt	2::inwork 21476,5048 21380,5003
 #: source_id: viz2021:13.409118,52.51693,01.09.2021,06:00 (bis Ende 2022, Gesamtbaumaﬂnahme bis 2023)
 #: note: laut rbb nur bis 31.08.2022
 # REMOVED --- #: XXX auﬂerdem: J¸denstr. wird zur Einbahnstraﬂe f¸r Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./J¸denstr. geben
-#: last_checked: 2022-03-19 vvv
+#: last_checked: 2022-03-29 vvv
 #: next_check: 2024-06-01 vvv
 Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285 10675,12280
@@ -3869,7 +3882,7 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 #: note: laut rbb komplett gesperrt, bis 30.6.2023, in der Realit‰t weiterhin Einbahnstraﬂe
 #: osm_watch: way id="5096644" version="16"
 #: priority: #C
-#: last_checked: 2022-02-27
+#: last_checked: 2022-03-31
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraﬂe wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3984,7 +3997,7 @@ Wuhletalbr¸cke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,175
 #: by: https://www.berliner-woche.de/niederschoeneweide/c-verkehr/seit-13-september-ist-der-aufzug-am-bahnhof-schoeneweide-in-betrieb_a232699
 #: by: https://www.abendblatt-berlin.de/2019/09/25/treptow-schoeneweider-fahrstuehle-endlich-in-betrieb/
 #: by: http://thomas.krickstadt.de/s-bahn/2019-10-06-schoeneweide/04-2019-10-06-008.html (existiert noch)
-#: osm_watch: way id="226163591" version="4"
+#: osm_watch: way id="226163591" version="5"
 #: priority: #C
 #: last_checked: 2022-01-27 (krickstadt)
 #: check_frequency: 360d
@@ -4018,7 +4031,7 @@ Wuhletalbr¸cke: gesperrt	2::inwork 20843,17745 20798,17664 20768,17609 20717,175
 #: osm_watch: way id="47935842" version="15"
 #: osm_watch: way id="681299267" version="2"
 #: priority: #A vvv
-#: last_checked: 2022-03-02 vvv
+#: last_checked: 2022-03-29 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-09-30 vvv
 #: valid: -20220930 vvv
@@ -4048,12 +4061,12 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 #: by: https://www.glint-berlin.de/ (kein Fertigstellungsdatum)
 #: confirmed_by: srt
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2022-03-02
+#: last_checked: 2022-03-29
 #: check_frequency: 60d
 Taubenstr.: Bauarbeiten, Einbahnstraﬂe	1s:q4:inwork 9207,11880 9138,11872
 # 
 #: note: allerdings war das Einbahnstraﬂenschild am 2022-01-17 weggedreht, am 2022-03-02 wieder vollst‰ndig aktiv
-#: last_checked: 2022-03-02
+#: last_checked: 2022-03-29
 Mauerstr.: Bauarbeiten, Einbahnstraﬂe	1s:q4:inwork 9138,11872 9171,11777
 # 
 #: next_check_id: POTSDAMSPEICHERSTADT-2022
@@ -4325,7 +4338,7 @@ Rummelsburger Platz: zur H‰lfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 #: osm_watch: way id="846595294" version="6"
 #: osm_watch: way id="38725490" version="15"
 #: also_indoor: traffic (G,B)
-#: last_checked: 2022-02-23
+#: last_checked: 2022-03-23
 #: check_frequency: 90d
 #: next_check: 2022-12-31
 Bergiusstr.: f¸r Radfahrer gesperrt (Autobahnauffahrt)	2::inwork 14051,6731 14106,6663 14150,6609
@@ -4438,7 +4451,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://www.humboldtforum.org/wp-content/uploads/2020/10/20201007_PM_Ero%CC%88ffnung-1.pdf (Erˆffnung am 17.12.2020)
 #: by: https://www.berliner-zeitung.de/kultur-vergnuegen/humboldt-forum-berliner-schloss-teileroeffnung-li.122095 (Erˆffnung wird verschoben)
 #: by: https://berliner-schloss.de/blog/schloss-information-dezember-2020/ (Bauz‰une werden im Dezember 2020 teilweise abgebaut)
-#: last_checked: 2022-03-04 (daf)
+#: last_checked: 2022-03-29
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2021-07-01
 # REMOVED (hier offen) --- Schloﬂplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10102,12384
@@ -4452,7 +4465,7 @@ Schloﬂplatz: Bauarbeiten, gesperrt	2:inwork 10102,12384 10175,12435
 #: by: https://www.berliner-woche.de/mitte/c-bauen/erste-module-fuer-parlamentsneubau-montiert_a309858 (bis Ende 2021 fertig)
 #: XXX wird nach den Bauarbeiten die Einbahnstraﬂenregelung wieder hergestellt? (see elsehwere)
 #: osm_watch: way id="158025179" version="8"
-#: last_checked: 2022-02-24 (mapillary) vvv
+#: last_checked: 2022-03-18 (mapillary) vvv
 # REMOVED (fertig?) --- #: check_frequency: 60d vvv
 #: also_indoor: traffic
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
@@ -4522,7 +4535,7 @@ Neue Plantage: hier noch Baustelle	2:inwork -13100,-1411 -13017,-1426
 #: XXX Kaiserstr. -> Anna-Fl¸gge-Straﬂe (PLZ: 14467)
 #: XXX Schlossstraﬂe (ˆstlicher Verlauf) -> Anna-Zielenziger-Straﬂe (PLZ: 14467)
 #: XXX Schwertfegerstraﬂe (ˆstlicher Verlauf) -> Erika-Wolf-Straﬂe (bereits eingetragen)
-#: osm_watch: way id="534669300" version="9" brb
+#: osm_watch: way id="534669300" version="10" brb
 #: last_checked: 2021-10-11 (daf)
 # REMOVED --- #: next_check: 2020-09-01
 #: check_frequency: 180d

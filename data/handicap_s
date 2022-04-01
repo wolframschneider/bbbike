@@ -5,7 +5,6 @@
 #:
 Jessnerstr.: Bauarbeiten an der Kreuzung Frankfurter Allee, schmalen Gehweg nutzen	q2::inwork 15077,11910 15117,12106
 Mühsamstr.: Bauarbeiten im Kreuzungsbereich Thaerstr., Fahrbahn gesperrt	q4::inwork 13838,12884 13818,12897
-Mühsamstr.: Bauarbeiten im Kreuzungsbereich Thaerstr., Einbahnstraßenrichtung gedreht	q4::inwork; 13830,12907 13818,12897
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
 (Straße der Pariser Kommune - Erich-Steinfurth-Str.): einige Fußgänger	q2; 12660,11705 12634,11705 12608,11692
 (Notweg Bahnübergang Bahnhofstr.): Fußgänger, Fahrrad ggfs. schieben	q3 10231,-2159 10215,-2170 10181,-2174 10161,-2146 10096,-2137
@@ -42,7 +41,6 @@ Neue Nationalgalerie: Bauzäune, Umfahren über Gehweg (Bordstein) möglich	q3::inw
 Werner-Richard-Heymann-Platz: große Teile der Fahrbahn gesperrt, Bordsteine	q3 3320,7982 3219,7987
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
 Pariser Str./Bundesallee: Bauarbeiten, enger Durchgang, ggfs. schieben	q4::inwork 5461,9923 5423,9932 5382,9942
-Weserstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12328,9117 12402,9080 12480,9037 12531,9009 12590,8977
 Bergiusstr. - Grenzallee: kurvig, einige Fußgänger	q1 14150,6609 14137,6658 14179,6714 14179,6743
 Bergiusstr. - Grenzallee: kurvig, einige Fußgänger	q3 14179,6743 14139,6786
 Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 14235,7100 14223,7084 14196,7086
@@ -216,7 +214,8 @@ Volkspark Friedrichshain: Fußgänger	q3 12325,13148 12344,13157 12369,13209 12404
 Volkspark Friedrichshain: Fußgänger	q3 12476,13273 12445,13320 12420,13370
 Volkspark Friedrichshain: Fußgänger	q2 12244,13240 12341,13309 12420,13370
 Volkspark Friedrichshain: Fußgänger	q1 12420,13370 12483,13418
-Volkspark Friedrichshain: Fußgänger	q1 12483,13418 12450,13542 12344,13627 12372,13755
+Volkspark Friedrichshain: Fußgänger	q1 12483,13418 12450,13542 12366,13615 12344,13627 12353,13653 12372,13755
+Volkspark Friedrichshain: Fußgänger	q1 12366,13615 12353,13653
 Volkspark Friedrichshain: Fußgänger	q1 12344,13627 12204,13609 12169,13609 12141,13609
 Volkspark Friedrichshain: Fußgänger	q1 12161,13711 12145,13628 12141,13609 12126,13538 12111,13480 12060,13422
 Volkspark Friedrichshain: Fußgänger	q3 12126,13538 12006,13481 11995,13463
@@ -522,7 +521,7 @@ Heinitzweg: Fußgänger	q2 10325,1083 10379,1097
 Haewererweg: enge Durchfahrt, niedriger Bordstein	q1 12125,1282 12097,1243
 (Weichselstr. - Sasarsteig): enger Durchgang	q4 12330,8636 12300,8613 12274,8607
 (Weichselstr. - Sasarsteig): Fußgänger	q3 12274,8607 12276,8590 12165,8566
-Kaiser-Wilhelm-Platz: einige Fußgänger	q2 7201,8870 7307,8945
+Richard-von-Weizsäcker-Platz: einige Fußgänger	q2 7201,8870 7307,8945
 Kernhofer Str.: Fußgänger, Supermarkt	q2 15380,10946 15355,10875
 Ceciliengärten: schmale Rampe oder Treppe	q3 6356,7479 6289,7472
 (Weg am Humboldthain): Radfahren erlaubt, Fußgänger haben Vorrang	q1 9255,15816 9092,15789 8934,15740
@@ -2264,6 +2263,19 @@ Hansastr.: einige Fußgänger	q3 15236,16241 15254,16243
 (Am Dörferweg - Barnimer Dörferweg): provisorische Auffahrt	q3 20951,18961 20948,18968
 Bruno-Baum-Grünzug: Grünanlage, Fußgänger	q3 20260,15434 20245,15394 20004,15251 19870,15172 19811,15126 19740,15086 19703,15043 19631,14926 19595,14881 19539,14749 19528,14673 19523,14644 19519,14559
 (Bruno-Baum-Grünzug - Martha-Arendsee-Str.): Grünanlage, Fußgänger	q3 19528,14673 19543,14663
+(Neuköllnische Wiesen, Wiesenallee): Bodenschwelle, einige Fußgänger	q2 14771,8142 14903,7997
+(Neuköllnische Wiesen, Wiesenallee): einige Fußgänger	q2 14903,7997 14962,7934
+(Neuköllnische Wiesen, Wiesenallee): schmal, einige Fußgänger	q3 14962,7934 14990,7904
+(Neuköllnische Wiesen, Hauptweg): Bodenschwelle, einige Fußgänger	q2 14903,7997 14968,8046
+(Neuköllnische Wiesen, Hauptweg): enges Tor	q3 14968,8046 14976,8053
+(Hänselstr. - Michael-Bohnen-Ring): Grünanlage, Fußgänger	q3 15143,6865 15251,6745
+(Garystr. - Saargemünder Str.): gemeinsamer Rad- und Gehweg, Bordstein	q3 1722,4701 1730,4743
+(Garystr. - Saargemünder Str.): gemeinsamer Rad- und Gehweg	q1 1730,4743 1736,4774 1747,4829
+(Lützelsteiner Weg - Saargemünder Str.): einige Fußgänger	q2 1690,4708 1730,4743
+(Ihnestr. - Clayallee): einige Fußgänger	q2 1450,4766 1730,4743 1870,4732 1981,4741
+(Ihnestr. - Clayallee): einige Fußgänger, Bordstein	q3 1981,4741 2033,4757
+(Breitenbachplatz/Südwestkorso - Kreuznacher Str.): Gehweg	q4 4103,6716 4174,6711
+(Krautstr. - Kleine Markusstr.): zwei Bodenschwellen	q2 12002,12008 11961,12025 11956,12071 11932,12111 11937,12127
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -3013,7 +3025,7 @@ Stadtgärten: kurvige Straße	q2 11544,21897 11575,21888 11566,21829 11534,21831
 Jochen-Klepper-Weg: kombinierter Rad- und Fußweg, Fußgänger haben Vorrang	q1 -3030,2266 -2784,2358 -2690,2385 -2372,2477
 Frommpromenade: enge Straße	q0 5463,20461 5350,20495 5257,20551
 Brodersenstr.: enge Straße	q0 6033,19611 5885,19920 5804,20047
-Eduard-Spranger-Promenade: Verbot für Radfahrer	q4 4317,2638 4659,3065 4866,3371 4951,3516
+Eduard-Spranger-Promenade: Verbot für Radfahrer	q4 4317,2638 4659,3065 4866,3371
 Rosenplüterweg: enge Straße	q0 3657,26240 3431,26192 3328,26193
 Bulgenbachweg: enge Straße	q0 3431,26192 3452,26160 3478,26119 3520,26081 3574,26060 3647,26060
 Schmöckwitzwerder Süd: enge Straße	q1 30343,-3454 30133,-3840

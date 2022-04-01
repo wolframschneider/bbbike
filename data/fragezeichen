@@ -893,6 +893,7 @@ Beiersdorf - Beerbaum: Qualität?	? 35980,34322 35977,34619 36085,34994 36096,353
 Dollgow - Zernikow: Qualität?	? -17141,74157 -16859,74184 -16629,74151 -15730,74428 -14966,74667 -13662,75159
 Leipziger Str. (Schöneiche): wie ist die Qualität im nördlichen Abschnitt? ebenfalls unbefestigt?	? 32156,6405 32056,6607 31993,6776 31952,6917 31951,7060
 # added from strassen
+Straße 16 (Heinersdorf) (Wurde die Straße 16 mittlerweile umbenannt?)	? 13031,17775 13034,17895
 Eidechsenweg (Ist der Eidechsenweg bereits ausgeschildert?)	? -7893,13781 -7720,13839
 Elkartweg (Wurde der Elkartweg zu "Erna-Koschwitz-Weg" umbenannt? Hängen bereits neue Straßenschilder?)	? -2158,17613 -2135,17633 -2119,17647 -2103,17670 -2087,17715 -2120,17786 -2131,17827 -2114,17878 -2066,17896 -2074,17921 -2100,17953 -2196,18069
 # added from landstrassen
@@ -931,6 +932,8 @@ Schloßstr. (Einbahnstraße?)	? -14821,106013 -15004,105813 -15070,105705
 Tiergartenstr. (Einbahnstraße?)	? -15004,105813 -14862,105712 -14570,105702 -14288,105530 -14242,105542
 Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105763 -13977,105850 -13932,106157
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
+# added from radwege
+Busspur ist für Radfahrer freigegeben (Wann sind die Geltungszeiten der Busspur?)	? 1080,1637 1025,1813 980,1893 846,2130 824,2210
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 (Adlergestell - Sportpromenade/Bammelecke): Waldweg, teilweise loser Schotter (wird sich die Qualität hier bessern (insbesondere: was passiert mit dem losen Schotter)?)	? 24485,-667 24758,-268 25172,345
@@ -979,10 +982,6 @@ Petersdorf: Asphalt (ist auch im westlichen Abschnitt asphaltiert?)	? 23256,7673
 Fuchssteig (Erkner): Asphalt (ist der nördliche Abschnitt auch asphaltiert?)	? 34459,3734 34480,3844
 Erich-Mühsam-Str.: Kopfsteinpflaster (liegt hier tatsächlich Kopfsteinpflaster? Wenn ja, wie gut/schlecht ist die Pflasterung?)	? 1787,31375 1851,31451 1878,31471 1916,31483 2027,31518 2082,31535
 Gartenallee: Kopfsteinpflaster (liegt hier tatsächlich Kopfsteinpflaster? Wenn ja, wie gut/schlecht ist die Pflasterung?)	? 1887,31658 2027,31518
-Am Tonberg: Asphalt (ist der nordwestliche Abschnitt der Straße asphaltiert (wie im südöstlichen) oder unbefestigt? Ist die Straße eine Spielstraße?)	? 24593,-7405 24416,-7241
-Ostpromenade: Asphalt (ist der nordwestliche Abschnitt der Straße ebenfalls asphaltiert? Ist die Straße eine Spielstraße?)	? 24656,-7897 24315,-7711
-Kirschenallee: Asphalt (ist der östliche Abschnitt der Straße ebenfalls asphaltiert?)	? 24949,-7866 25023,-7877
-Westpromenade: Asphalt (ist der westliche Abschnitt der Straße ebenfalls asphaltiert? Ist die Straße eine Spielstraße?)	? 24695,-8064 24241,-7799
 Am Wasser (Gartz): Kopfsteinpflaster (Stimmt das? Liegt hier tatsächlich Kopfsteinpflaster?)	? 76116,90239 76020,90231 75977,90236
 Rosa-Luxemburg-Str. (Potsdam): Asphalt (Wie ist die Qualität des Asphalts in der Rosa-Luxemburg-Straße?)	? -9176,-1188 -9207,-1144 -9306,-1000 -9410,-815
 Reichenberg: grobes Kopfsteinpflaster (genauer Abschnitt fehlt)	? 58453,24209 58390,23910 58422,23806 58340,23653
@@ -1039,6 +1038,5 @@ Hennigsdorfer Str.: nach den Bauarbeiten durchgängig asphaltiert mit Radstreifen
 L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen Prenzlau und Güstow einen straßenbegleitenden Radweg? Wenn ja: auf welcher Seite und ist der Radweg asphaltiert?)	? 37020,101115 36600,101499 36138,101586 35027,102258 34671,102369 34607,102396
 (Mausohrweg - R1): Qualität des Geh- und Radweg? Ist der Weg beleichtet? (Ist der Weg asphaltiert und beleuchtet?)	? 33296,2894 33267,2810 33255,2762
 # added from bbbike-temp-blockings-optimized
-Brümmerstr.: zwischen Thielallee und Fabeckstr. Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten in der Brümmerstraße mittlerweile beendet und die Straße frei?)	? 2523,5114 2746,5537
 Am Vierrutenberg: Bauarbeiten zwischen Zehntwerderweg und Benekendorffstr., evtl. wird die Fahrbahn nicht benutzbar sein, bis voraussichtlich Mitte Mai 2022 (Sind die Bauarbeiten beendet?)	? 5793,23422 5893,23287
 Uferweg am Salzhof: möglicherweise gesperrt (Ist dieser Weg tatsächlich gesperrt? Wenn ja: wo genau ist der gesperrte Abschnitt?)	? -1923,15684 -1938,15782 -1935,15826 -1978,15940 -1976,16012
