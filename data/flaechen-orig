@@ -286,7 +286,7 @@ Münsinger Park	F:P -3624,14113 -3582,14283 -3636,14405 -3665,14400 -3710,14510 
 Ramin-Park	F:P -3757,14444 -3769,14429 -3774,14413 -3922,14486 -4000,14614 -4063,14780 -4037,14803 -3898,14559 -3840,14490
 Helmholtzplatz	F:P 11450,15173 11236,15312 11268,15360 11480,15229
 Kollwitzplatz	F:P 11229,14422 11155,14554 11247,14578 11317,14564
-Arnswalder Platz	F:P 12722,14232 12594,14065 12486,14143 12616,14315
+Arnswalder Platz	F:P 12722,14232 12659,14149 12594,14065 12486,14143 12616,14315
 Petersburger Platz	F:P 13622,12806 13559,12779 13470,12990 13530,13014
 # das ehemalige Lenne-Dreieck:
 Henriette-Herz-Park	F:P 8172,11679 8322,11715 8387,11637 8442,11555 8209,11671 8203,11686
@@ -1048,7 +1048,7 @@ Kolonie Eigenheim an der Rothenbachstr.	F:Orchard 12455,18276 12113,18451 12089,
 #: by: https://www.stadtentwicklung.berlin.de/staedtebau/projekte/campus-weissensee/index.shtml (erste Baumaßnahmen ... frühestens 2025 zu erwarten)
 #: by: https://stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_2102/nachricht7039.html
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/campus-wei%C3%9Fensee-wei%C3%9Fensee-kunsthochschule-berlin.928/
-#: osm_watch: way id="59378805" version="13"
+#: osm_watch: way id="59378805" version="14"
 #: last_checked: 2021-07-31
 #: check_frequency: 720d
 #: next_check: 2025-01-01
@@ -1383,6 +1383,8 @@ Schloßplatz (Oranienburg)	F:Square -1495,38569 -1569,38566 -1568,38510 -1553,38
 Marktplatz Griechische Allee	F:Square 18025,6700 17962,6674 18029,6674 18079,6678 18076,6693 18025,6700
 #: note: überwiegend frei befahrbar, allerdings hohe Fußgängerfrequenz
 Richard-von-Weizsäcker-Platz	F:Square 7268,8960 7201,8870 7307,8945 7268,8960
+#: note: nicht frei befahrbar, Stufen
+Maria-von-Maltzan-Platz	F:Square 11403,10799 11382,10805 11376,10788 11397,10781 11400,10790 11403,10799
 #: ignore ^^^
 #############################################################################
 # in Potsdam
@@ -1784,7 +1786,9 @@ Gewerbegebiet	F:Industrial 7840,4121 7999,4178 7990,4237 8185,4271 8428,4161 846
 	F:Industrial 7591,4070 7513,3801 7461,3791 7405,3848 7323,3843 7303,3817 7192,3823 7228,3925 7144,3965 7159,4023 7162,4058 7295,4017 7525,4045
 KGA Alt-Lankwitz	F:Orchard 7852,3183 7837,2957 7828,2843 7819,2713 7779,2722 7757,2732 7775,2772 7807,2961 7812,3064 7776,3163 7852,3183
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/fuer-die-brache-in-der-saentisstrasse-scheiterten-bisher-alle-plaene_a234730 (Verkleinerung)
-KGA Eisenbahn-Landwirtschaft Säntisstr.	F:Orchard 9043,918 9093,857 9181,823 9309,845 9381,904 9449,923 9399,1089 9325,1163 9241,1073
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8349
+# REMOVED --- KGA Eisenbahn-Landwirtschaft Säntisstr.	F:Orchard 9043,918 9093,857 9181,823 9309,845 9381,904 9449,923 9399,1089 9325,1163 9241,1073
+KGA Eisenbahn-Landwirtschaft Säntisstr.	F:Orchard 9124,936 9144,891 9196,917 9209,895 9391,1008 9449,923 9381,904 9309,845 9181,823 9093,857 9049,912 9124,936
 Invalidenpark	F:P 8346,13785 8462,13851 8572,13671 8453,13611
 #: alias: Lasker-Sportanlage
 Lasker-Sportplätze	F:Sport 14506,10783 14489,10705 14331,10744 14312,10657 14199,10685 14213,10758 14111,10786 14130,10843 14087,10853 14107,10911

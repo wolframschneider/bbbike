@@ -11,7 +11,7 @@
 ### Friedrichshain ###
 # 
 #: next_check_id: FRANKFURTER-2021
-#: last_checked: 2022-03-30
+#: last_checked: 2022-04-03
 # REMOVED --- #: check_frequency: 7d
 #: next_check: 2022-04-30
 Jessnerstr.: Bauarbeiten an der Kreuzung Frankfurter Allee, schmalen Gehweg nutzen	q2::inwork 15077,11910 15117,12106
@@ -20,7 +20,7 @@ Jessnerstr.: Bauarbeiten an der Kreuzung Frankfurter Allee, schmalen Gehweg nutz
 #: XXX Bauarbeiten der Wasserbetriebe, laut Schild bis April 2022
 #: XXX Datensatz in gesperrt-orig beachten!
 #: also_indoor: traffic (ex-G,ex-B)
-#: last_checked: 2022-03-29 vvv
+#: last_checked: 2022-04-06 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2022-04-01 vvv
 Mühsamstr.: Bauarbeiten im Kreuzungsbereich Thaerstr., Fahrbahn gesperrt	q4::inwork 13838,12884 13818,12897
@@ -146,7 +146,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 ### Treptow ###
 # 
 #: XXX der Original-Eintrag muss nach Ablauf wieder aktiviert werden
-#: last_checked: 2022-03-14
+#: last_checked: 2022-04-05
 #: check_frequency: 60d
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
 # 
@@ -185,11 +185,11 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 #: by: https://abendblatt-berlin.de/2021/04/05/berlin-wedding-geisterhaus-an-der-burgsdorfstrasse-soll-abgerissen-werden/
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10655 (Abriss?)
 #: by: https://weddingweiser.de/schrotthaus-blockiert-strasse/
-#: osm_watch: way id="549316654" version="15"
+#: osm_watch: way id="549316654" version="16"
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,ex-H)
 #: valid: 20171026-
-#: last_checked: 2022-03-12 (osm)
+#: last_checked: 2022-04-05 (osm)
 #: check_frequency: 60d
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
 # 
@@ -265,11 +265,11 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: osm_watch: way id="751595931" version="3"
 #: also_indoor: traffic (H,B)
-#: last_checked: 2022-03-29
+#: last_checked: 2022-04-07
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 # 
 #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large
-#: last_checked: 2022-03-10 (mapillary)
+#: last_checked: 2022-04-07
 #: check_frequency: 60d
 (Grunerstr. - Gustav-Böß-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10868,12572 10772,12515
 # 
@@ -278,7 +278,7 @@ Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontaine
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=632731&postcount=1072
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/arch%C3%A4ologisches-haus-besucherzentrum-am-petriplatz.789/#post-14039
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-03-16
+#: last_checked: 2022-04-07
 #: check_frequency: 60d
 Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 10364,11896 10332,11929 10392,11991
 # 
@@ -458,13 +458,10 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 # 
 ### Karlshorst ###
 # 
-#: next_check_id: ZWIESELER-2022
-#: last_checked: 2022-03-20
-#: check_frequency: 60d
-Richard-Kolkwitz-Weg: Engstelle wegen Bauarbeiten	q2::inwork 19711,10426 19813,10468
+# REMOVED (fertig) --- #: next_check_id: ZWIESELER-2022 --- #: last_checked: 2022-03-20 --- #: check_frequency: 60d --- Richard-Kolkwitz-Weg: Engstelle wegen Bauarbeiten	q2::inwork 19711,10426 19813,10468
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2022-03-06 vvv
+#: last_checked: 2022-04-02 vvv
 Parkstadt Karlshorst: Beeinträchtigungen durch Bauarbeiten und Baustellenverkehr möglich	q2::inwork 17380,8858 17416,8767 17461,8693 17656,8700 17640,8627 17497,8623
 Hönower Wiesenweg: Beeinträchtigungen durch Bauarbeiten und Baustellenverkehr möglich	q2::inwork; 17497,8623 17461,8693
 Hönower Wiesenweg: temporäre Einbahnstraßenregelung, Baustellenverkehr	q3::inwork; 17461,8693 17497,8623
@@ -486,12 +483,12 @@ Hönower Wiesenweg: temporäre Einbahnstraßenregelung, Baustellenverkehr	q3::inwor
 ### Niederschöneweide ###
 # 
 #: by: https://www.bahninfo-forum.de/read.php?9,726524,726545#msg-726545
-#: source_id: viz2021:13.509646,52.45627,10.02.2022,10:00 (bis 1.4.2022)
+#: source_id: viz2021:13.509646,52.45627,10.02.2022,10:00 (bis 1.4.2022) (mittlerweile bis 31.5.2022)
 #: note: auch als "Verlängerte Brückenstraße" bezeichnet
 # REMOVED (nein) --- #: XXX überprüfen, ob der Gehweg legal für Radfahrer befahrbar ist
 #: XXX Bis wann gehen die Bauarbeiten?
 #: last_checked: 2022-03-20 (krickstadt)
-#: next_check: 2022-04-01
+#: next_check: 2022-05-31
 # REMOVED --- #: valid: -20220401
 Zufahrt Zentrum Schöneweide: Fahrbahn ist gesperrt, Ausweichen auf engen Gehweg, evtl. Buden, Bordsteine	q4::inwork 17728,5756 17656,5701
 # 
@@ -641,7 +638,14 @@ Pariser Str./Bundesallee: Bauarbeiten, enger Durchgang, ggfs. schieben	q4::inwor
 # 
 ### Neukölln ###
 # 
-# REMOVED --- #: next_check_id: WESER-2021 --- #: XXX: während der Bauarbeiten ist der Radweg nicht befahrbar --- #: last_checked: 2022-03-12 --- #: check_frequency: 30d --- Weserstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12328,9117 12402,9080 12480,9037 12531,9009 12590,8977
+#: next_check_id: WESER-2021
+#: XXX: während der Bauarbeiten ist der Radweg nicht befahrbar
+#: last_checked: 2022-04-01
+#: check_frequency: 30d
+#: next_check: 2022-09-15
+# REMOVED (hier fertig) --- Weserstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12328,9117 12402,9080 12480,9037 12531,9009 12590,8977
+Weserstr.: Bauarbeiten, Fahrbahn gesperrt, gemeinsamer Geh- und Radweg. eng	q3::inwork 12590,8977 12740,8862
+# 
 # REMOVED (Sperrung noch da, aber die Bürgersteigüberfahrt ist weggefallen) --- #: add_fragezeichen: Dauern die Bauarbeiten an? --- #: also_indoor: traffic (G,B) --- #: last_checked: 2022-02-01 --- Maybachufer: Bauarbeiten zwischen Friedelstr. und Liberdastr., teilweise Radfahrerführung über den Bürgersteig	q2::inwork 12085,9778 12250,9691
 # REMOVED --- #: next_check_id: BRAUNSCHWEIGER-2020 --- #: last_checked: 2020-10-24 vvv
 # REMOVED (hier kommt man mittlerweile gut durch) --- Braunschweiger Str.: Fahrbahn wird neu gemacht, Ausweichen auf Gehweg	q4::inwork 13702,7418 13781,7524 13854,7620
@@ -941,12 +945,13 @@ Charlottenburger Str.: Einbahnstraßenregelung zwischen Goethestr. und Friesickes
 #: source_id: bvg2021:190#BVG291273_0 (kein Endedatum)
 #: source_id: bvg2021:190#BVG297363_0 (kein Endedatum)
 #: XXX Laut Baustellenschild der Wasserbetriebe bis April 2022
-#: last_checked: 2022-03-20 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2022-04-02 vvv
+#: check_frequency: 7d vvv
 #: next_check: 2022-04-30 vvv
 Kreuzung Grabensprung/Dohlengrund: Bauarbeiten, Fahrbahn gesperrt, umständliche Umwege, Bordsteine	q3::inwork 20725,10594 20716,10434 20713,10293
 Kreuzung Grabensprung/Dohlengrund: Bauarbeiten, Fahrbahn gesperrt, umständliche Umwege, Bordsteine	q3::inwork 20542,10439 20716,10434 21017,10423
 Husumer Str.: Einbahnstraßenregelung	q3::inwork; 20713,10293 20945,10286 21015,10284 21276,10271
+Straubinger Str.: Einbahnstraßenregelung	q3::inwork; 21223,10123 21009,10135 20947,10137 20938,10137 20708,10144
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -1390,7 +1395,7 @@ Ruhlsdorfer Str.: Bordstein, Fußgänger	q4+ 9350,10176 9368,10211
 (Olivaer Platz, Wielandstr. - Bayerische Str.): Fußgänger, Bordstein	q3 4360,10320 4352,10260
 (Güntzelstr. - Pommersche Str.): Fußgänger	q3 4699,9505 4550,9539
 #: note: Radwegführung existiert
-Naunynstr.: Fußgänger	q1 11365,10791 11329,10785
+Naunynstr.: Fußgänger	q1 11366,10793 11329,10787
 # REMOVED (Fahrbahn darf jetzt benutzt werden) --- Hermannplatz: oft Fußgänger auf dem Radweg	q1 11831,8989 11909,9155
 Spreepromenade am DomAquarée: Fußgänger, Cafés, Radfahren verboten	q4 10300,12587 10291,12600 10249,12658 10219,12701 10166,12777
 St.-Wolfgang-Str.: Fußgänger, Cafés	q3 10219,12701 10285,12744 10360,12793
@@ -1422,11 +1427,15 @@ Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8842,8561 8759,8458 8720,8
 #: XXX_prog BS an der Kynaststr., ansonsten q1
 (Kynaststr. - Uferwanderweg): Fußgänger, Bordstein	q2 14843,10621 14911,10587
 (Kynaststr. - Paul-und-Paula-Ufer): Fußgänger	q1 14797,10476 14820,10473 14861,10467
+#: note: früher vermutlich für Radfahrer frei, jetzt nicht mehr
+Am Rummelsburger See: Fußgänger, kurvenreich, Grünanlage	q3 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142 15253,10171
+#: note: früher vermutlich für Radfahrer frei, jetzt gibt es hier ein neues FH-KB-Grünanlagenschild mit einem durchgestrichenen Radfahrer
+Am Rummelsburger See: Fußgänger, Grünanlage	q3 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411
 #: note: Fußweg für Radfahrer frei
-Am Rummelsburger See: Fußgänger, kurvenreich	q1 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411 14864,10451 14861,10467 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15145,10636
+Am Rummelsburger See: Fußgänger, kurvenreich	q1 14892,10411 14864,10451 14861,10467 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15145,10636
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX nach den Bauarbeiten am "My Bay Way" wird der zweite Strang wohl wieder offen sein, dann wieder mit dem vorherigen Eintrag zusammenfügen
-#: last_checked: 2022-03-09
+#: last_checked: 2022-04-02
 #: check_frequency: 90d
 Am Rummelsburger See: Fußgänger, kurvenreich, Engstelle wegen Bauarbeiten	q2 15145,10636 15200,10600 15249,10564
 #: note: siehe auch permanenten temp-blockings-Eintrag (Radfahren verboten)
@@ -1567,16 +1576,23 @@ Am Friedhof: recht enger Radweg	q1 6377,17854 6375,17755 6370,17696 6347,17381
 Gerlachsheimer Weg: Fußgänger	q2 13151,7914 13240,7966
 Jan-Hus-Weg/Kirchgasse: Fußgänger	q2 13085,7904 13117,7939 13151,7914
 Wanzlikpfad: eng und kurvig, Fußgänger	q3 13268,7801 13309,7911
-(Tunnelstr. - Uferweg): Fußgänger	q1 15662,9501 15749,9558
+#: note: Grünanlagenschild ohne weitere Zusatzschilder bzgl. Radfahren
+(Tunnelstr. - Uferweg): Fußgänger, Grünanlage	q3 15662,9501 15749,9558
 # REMOVED --- (Fischzug - Uferweg): Spielplatz, zwei Schwinggitter	q4 15210,10080 15260,10048
 (Alt-Stralau - Spreeufer): Fußgänger, Radfahren erlaubt	q1 14652,10201 14569,10055
-(Spreeufer): Fußgänger, Radfahren erlaubt	q1 14569,10055 14599,10039 14690,9993 14776,9949 15000,9820
-Caroline-Tübbecke-Ufer: Fußgänger, Radfahren erlaubt	q1 15000,9820 15043,9790 15367,9691
+#: note: 2010 war das Radfahren noch explizit erlaubt, heute steht nur das Grünanlagen-Schild ohne weitere Zusatzschilder
+(Spreeufer): Fußgänger, Grünanlage	q3 14569,10055 14599,10039 14690,9993 14776,9949 15000,9820
+#: note: 2010 war das Radfahren noch explizit erlaubt (Bild existiert), heute steht nur das Grünanlagen-Schild ohne weitere Zusatzschilder
+Caroline-Tübbecke-Ufer: Fußgänger, Grünanlage	q3 15000,9820 15043,9790 15367,9691
 # REMOVED (Einschränkung existiert nicht mehr) --- Caroline-Tübbecke-Ufer: Fußgänger, sehr eng, Radfahren erlaubt	q3
-(Wendenwiese): Fußgänger, Radfahren erlaubt	q1 15367,9691 15405,9675 15466,9633 15497,9644 15498,9681 15505,9688
-(Wendenwiese): Fußgänger, Radfahren erlaubt	q1 15436,9731 15405,9675
-(Alt-Stralau - Spreeufer): Fußgänger, Radfahren erlaubt, kurze Rampe	q2 15031,9876 15000,9820
-(Strela-Platz): Fußgänger	q1 15400,9742 15465,9860
+#: note: 2010 war das Radfahren noch explizit erlaubt, heute steht nur das Grünanlagen-Schild ohne weitere Zusatzschilder vvv
+(Wendenwiese): Fußgänger, Grünanlage	q3 15367,9691 15405,9675 15466,9633 15497,9644 15498,9681 15505,9688
+(Wendenwiese): Fußgänger, Grünanlage	q3 15436,9731 15405,9675
+#: note ^^^
+#: note: 2010 war das Radfahren noch explizit erlaubt (dennoch q2), heute steht nur das Grünanlagen-Schild ohne weitere Zusatzschilder
+(Alt-Stralau - Spreeufer): Fußgänger, Grünanlage, kurze Rampe	q3 15031,9876 15000,9820
+#: note: 2010 war das Radfahren noch explizit erlaubt (Bild existiert), heute steht nur das Grünanlagen-Schild ohne weitere Zusatzschilder
+(Strela-Platz): Fußgänger, Grünanlage	q3 15400,9742 15465,9860
 Hildburghauser Str.: Bahnunterführung für Fußgänger	q1 4595,1387 4514,1402
 (zur Pfaueninselfähre): an schönen Tagen viele Fußgänger	q3 -8542,2216 -8561,2236 -8564,2276
 (Unterführung am S-Bhf. Kaulsdorf): Fußgänger	q3 22857,12014 22859,12059
@@ -1824,6 +1840,7 @@ Ida-Wolff-Platz: Fußgänger	q4+ 9215,10607 9192,10528
 Falkstr.: Fußgänger	q1 12179,7979 12216,7838 12220,7822
 (Falkstr. - Mittelweg): gemeinsamer Fuß- und Radweg	q1 12220,7822 12224,7799
 (Platanenweg - Willi-Sänger-Str.): Fußgänger	q1 15787,8073 15808,8099 15843,8125
+#: note: Ausschilderung nicht eindeutig: am östlichen Ende ein Schild "getrennter Geh- und Radweg", dann kommt einige Meter weiter ein Grünanlagen-Schild, am westlichen Ende ist nur ein Grünanlagen-Schild
 Carl-Herz-Ufer: gemeinsamer Fuß- und Radweg	q0- 10066,10071 10168,10085
 #: note: Schild steht zumindest am westlichen Ende
 Am Landwehrkanal: gemeinsamer Fuß- und Radweg	q2 10069,10151 10158,10117 10168,10085
@@ -3970,8 +3987,10 @@ Golda-Meir-Steg: Fußgänger	q2 7861,14133 7899,14157 7962,14198
 (Fußgängerbrücke - Märkische Allee): Fußgänger	q3 19687,15513 19694,15529 19733,15511
 (Edeka-Parkplatz): Parkplatzverkehr	q2 18846,8616 18870,8646 18880,8689
 (Edeka-Parkplatz - Rheinsteinstr.): Fußgänger	q3 18880,8689 18865,8740
-#: note: Radfahren auf dem Uferweg ist wohl Sitte; an einigen Stellen als "Grünanlage" ausgeschildert
+#: note: Radfahren auf dem Uferweg ist wohl Sitte; an einigen Stellen als "Grünanlage" ausgeschildert vvv
+#: note: Der Uferweg fängt erst Höhe Manteuffelstr. an, und hier ist der Zugang wegen eng parkender Autos und eines Bordsteins unbequem. Die meisten Radfahrer scheinen noch den Verbundsteinpflastergehweg bis zur Mariannenstr./Kottbusser Brücke zu nehmen.
 (Uferweg am Paul-Lincke-Ufer): Fußgänger, besonders an schönen Tagen	q2- 11735,10022 11756,9990 11948,9895 12045,9843 12116,9825 12165,9786 12280,9728 12432,9652 12596,9587 12639,9547 12703,9522 12718,9529
+#: note ^^^
 (Uferweg - Lausitzer Str.): Rampe, enge Kurven	q3 11948,9895 11946,9913
 #: note: Grünanlage, kein explizites Radfahrverbot
 (Weg am Kienhorstgraben): einige Fußgänger	q3 3876,18348 3799,18159 3723,17979 3706,17931
@@ -4016,6 +4035,12 @@ Bruno-Baum-Grünzug: Grünanlage, Fußgänger	q3 20260,15434 20245,15394 20004,15251
 (Ihnestr. - Clayallee): einige Fußgänger, Bordstein	q3 1981,4741 2033,4757
 (Breitenbachplatz/Südwestkorso - Kreuznacher Str.): Gehweg	q4+ 4103,6716 4174,6711
 (Krautstr. - Kleine Markusstr.): zwei Bodenschwellen	q2 12002,12008 11961,12025 11956,12071 11932,12111 11937,12127
+An der Wuhlheide: gegenläufiger Geh/Radweg	q3; 21303,5826 21365,5832 21470,5809 21522,5771 21569,5730 21600,5694 21605,5687
+Lindenstr.: gegenläufiger Geh/Radweg	q3; 21605,5687 21706,5541 21789,5427
+#: note: Grünanlage, keine Zusatzschilder
+(Zur Waage - Zur Innung): Grünanlage, einige Fußgänger	q3 14067,13050 14086,13090
+Baruther Str.: asphaltierte Kissen (2x)	q1 9837,9856 9723,9842
+Solmsstr.: asphaltierte Kissen (2x)	q1 9723,9842 9705,9732
 # 
 ######################### User Contributions #################################
 # 
