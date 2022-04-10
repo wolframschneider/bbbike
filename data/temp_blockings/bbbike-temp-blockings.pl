@@ -8083,7 +8083,7 @@ EOF
        text  => 'Reichsstr. (Charlottenburg) in beiden Richtungen zwischen Theodor-Heuss-Platz und Steubenplatz Veranstaltung, Straße vollständig gesperrt (27. und 28. August 2011)',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp 653,12109 738,12025 818,11954 881,11893 1033,11754 1133,11664 1200,11600 1220,11583 1308,11506 1403,11428
+	2::temp 653,12109 738,12025 818,11954 884,11896 1036,11761 1133,11664 1200,11600 1220,11583 1308,11506 1403,11428
 EOF
      },
      { from  => undef, # 
@@ -16324,7 +16324,7 @@ EOF
 # REMOVED --- #: next_check_id: CORONA-2020
 #: next_check_id: OSTBAHNHOF-2021
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche; mittlerweile: Bauarbeiten am Ostbahnhof, normale Marktfläche existiert vermutlich nicht mehr (siehe oben)
-#: last_checked: 2022-02-25
+#: last_checked: 2022-04-09
 #: check_frequency: 120d
 	q4::temp:clock 12378,11806 12413,11901
 #: tempex ^^^
@@ -21438,7 +21438,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_114523',
        data  => <<EOF,
-	q4::inwork; 7315,10537 7117,10611 7110,10613 6972,10665
+	q4::inwork; 7315,10537 7181,10587 7117,10611 7110,10613 6972,10665
 EOF
      },
      { from  => 1352070000, # 2012-11-05 00:00
@@ -29984,8 +29984,8 @@ EOF
        data  => <<EOF,
 #: XXX Parkverbot mittlerweile bis 31.10.2021 ausgeschildert
 #: also_indoor: traffic (G)
-#: osm_watch: way id="749226300" version="5"
-#: last_checked: 2021-11-06
+#: osm_watch: way id="749226300" version="6"
+#: last_checked: 2022-04-08 (osm)
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2021-10-31
 	2::inwork 3079,5411 3179,5267
@@ -30547,7 +30547,7 @@ EOF
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-03-31
+#: last_checked: 2022-04-09
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 EOF
@@ -30917,7 +30917,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-04-06
+#: last_checked: 2022-04-09
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31018,7 +31018,7 @@ EOF
 #: next_check_id: CORONA-2020
 #: by: https://www.charite.de/klinikum/themen_klinikum/themenschwerpunkt_coronavirus/#c30751057 (Eingangskontrollen)
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-12-10 (website) vvv
+#: last_checked: 2022-04-09 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -32232,7 +32232,7 @@ EOF
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="362719487" version="6"
 #: osm_watch: way id="687428752" version="2"
-#: last_checked: 2022-01-15
+#: last_checked: 2022-04-09
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 EOF
@@ -34012,8 +34012,8 @@ EOF
 EOF
      },
      { from  => 1635634800, # 2021-10-31 01:00
-       until => $isodate2epoch->("2022-04-22 18:00:00"), # 1642287600, # 2022-01-16 00:00
-       text  => 'Bernau - Lanke: Bauarbeiten, Sperrung, für Radfahrer unter Umständen bereits passierbar, vom 01.11.2021 bis 22.04.2022',
+       until => $isodate2epoch->("2022-06-04 18:00:00"), # 1642287600, # 2022-01-16 00:00
+       text  => 'Bernau - Lanke: Bauarbeiten, Sperrung, für Radfahrer unter Umständen bereits passierbar, vom 01.11.2021 bis 04.06.2022',
        type  => 'gesperrt',
        source_id => 'LS/721-E/21/142',
        data  => <<EOF,
@@ -34480,14 +34480,14 @@ EOF
      },
      { from  => 1643583600, # 2022-01-31 00:00
        until => undef, # XXX
-       text  => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand 12.2.2022: Weg ist passierbar)',
+       text  => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Anfang April 2022: Weg ist zumindest in Höhe Lessingbrücke nicht passierbar)',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
        data  => <<EOF,
 #: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)?
 #: add_fragezeichen: Haben die Bauarbeiten bereits begonnen? Ist der Uferweg bereits gesperrt?
-#: last_checked: 2022-02-12
+#: last_checked: 2022-04-09
 #: check_frequency: 60d
 #: next_check: 2024-02-12
 #: osm_watch: way id="4410535" version="21"
@@ -34708,17 +34708,18 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Tegeler Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden',
+       text  => 'Tegeler Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, außerdem Einbahnstraße in der Samoastr., offen Richtung Norden',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.359404,52.539514,21.02.2022,09:00 (vielleicht ist das diese Baustelle, die aber falsch lokalisiert ist und fälschlicherweise nur für Kfz-Verkehr spricht; bis 8.4.2022) (mittlerweile bis 20.4.2022) (mittlerweile inaktiv)
 #: add_fragezeichen: Wie lange dauern die Bauarbeiten an? Wo genau gilt die Einbahnstraßenregelung?
 #: also_indoor: traffic (G)
 #: priority: #B
-#: last_checked: 2022-03-05
+#: last_checked: 2022-04-09
 # REMOVED --- #: check_frequency: 30d
 #: next_check: 2022-04-20
 	q4::inwork; 7259,14870 7209,14927 7182,14986
+	q4::inwork; 6945,15045 7007,14911 7000,14832
 # REMOVED (hier vermutlich nicht?) ---	q4::inwork; 7182,14986 7178,14996 7131,15109
 EOF
      },
@@ -34810,7 +34811,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: STRALAUER-2019
 #: note: explizites Verbot für Radfahrer auf der Stralauer Allee Richtung Südosten
-#: last_checked: 2022-04-07
+#: last_checked: 2022-04-08
 #: check_frequency: 30d
 #: next_check: 2022-06-30
 	1::inwork 13596,10722 13678,10685 13779,10642 13919,10583
@@ -34823,7 +34824,7 @@ EOF
        data  => <<EOF,
 #: XXX vermutlich wegen der angrenzenden Hochbauarbeiten, wann ist die Fahrbahn wieder offen?
 #: also_indoor: traffic (B)
-#: last_checked: 2022-03-31
+#: last_checked: 2022-04-09
 	q4::inwork 11273,12301 11355,12331
 EOF
      },
@@ -34849,6 +34850,28 @@ EOF
 #: by: https://nitter.net/pic/media%2FFPQYYPyX0CoHC1A.jpg%3Fname%3Dorig
 #: also_indoor: traffic (G,H)
 	q2::inwork 17900,6072 17728,5756
+EOF
+     },
+     { from  => 1649541600, # 2022-04-10 00:00
+       until => undef, # XXX
+       text  => 'Kroppenstedtweg: Bauarbeiten zwischen Dihlmannstr. und Hauptweg, Weg ist gesperrt, ab 11.04.2022, Ende der Bauarbeiten ist unbekannt',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2022/pressemitteilung.1194824.php',
+       data  => <<EOF,
+#: add_fragezeichen: Bis wann gehen die Bauarbeiten? Ist der Kroppenstedtweg danach komplett asphaltiert?
+#: next_check: 2022-08-01
+	2::inwork 983,15136 971,15193
+EOF
+     },
+     { from  => 1649574000, # 2022-04-10 09:00
+       until => 1667232000, # 2022-10-31 17:00
+       text  => 'Eichbuschallee : Fahrbahn zwischen Kiefholzstr. und Bergaustr. gesperrt, Radfahrer sollen schieben, vom 11.04.2022 09:00 bis 31.10.2022 17:00',
+       type  => 'handicap',
+       source_id => 'viz2021:13.479739,52.472118,11.04.2022,09:00',
+       data  => <<EOF,
+#: XXX sind Radfahrer in beiden Richtungen betroffen?
+#: next_check: 2022-04-11
+	q4::inwork 15560,7400 15693,7512
 EOF
      },
     );
