@@ -17,7 +17,7 @@ package FahrinfoQuery;
 
 use strict;
 use vars qw($VERSION @ISA);
-$VERSION = '0.36';
+$VERSION = '0.37';
 
 use BBBikePlugin;
 push @ISA, 'BBBikePlugin';
@@ -61,9 +61,9 @@ my $bbbike_root = bbbike_root;
 
 ######################################################################
 # configurable
-my $openvbb_download_size = '60MB';
-my $openvbb_year = 2021;
-my $openvbb_index = 3;
+my $openvbb_download_size = '71MB';
+my $openvbb_year = 2022;
+my $openvbb_index = 1;
 my $openvbb_data_url = 'https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip';
 ######################################################################
 
@@ -649,7 +649,7 @@ sub _check_download_url () {
 	    my $content_length_in_megabytes = $content_length / (1024**2);
 	    my $diff = abs($content_length_in_megabytes - $openvbb_download_size_in_megabytes);
 	    if ($diff > 1) {
-		die "Expected Content-Length does not match real ($content_length_in_megabytes vs. $openvbb_download_size_in_megabytes)";
+		die "Expected Content-Length does not match real ($content_length_in_megabytes vs. $openvbb_download_size_in_megabytes).\nFetched URL: $openvbb_data_url\nComplete response headers:\n" . $resp->dump;
 	    }
 	    print STDERR "All checks OK.\n";
 	}

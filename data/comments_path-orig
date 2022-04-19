@@ -81,7 +81,7 @@ Neue Bahnhofstr./Boxhagener Str.: Fuﬂg‰ngerampel auf der linken Seite benutzen	C
 #: XXX eventuell wird es hier in Zukunft Verbesserungen geben, siehe BVV-Beschluss
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3277&options=4
 #: source_id: IM_022413
-#: last_checked: 2022-02-04 (mapillary)
+#: last_checked: 2022-04-12 (mapillary)
 #: check_frequency: 90d
 Rennbahnstr./Bernkasteler Str.: Fuﬂg‰ngerampel auf der linken Seite zum ‹berqueren der Berliner Allee benutzen	CP; 14528,16910 14558,16907 14673,16895
 # 
@@ -278,9 +278,7 @@ Zum Hans-Baluschek-Park/Naturpark Schˆneberg: Weg zwischen den Parkh‰usern nehme
 Hochspannungsweg - Buckower Damm: zun‰chst zur Fuﬂg‰ngerampel links vorfahren	CP; 12593,2472 12694,2517 12694,2544
 Hochspannungsweg: zur ‹berquerung des Buckower Damms Fuﬂg‰ngerampel links nehmen	CP; 12593,2472 12694,2517 12825,2573
 Hochspannungsweg: zur ‹berquerung des Buckower Damms Fuﬂg‰ngerampel rechts nehmen	CP; 12825,2573 12694,2517 12593,2472
-Grenz - Wallmow: links abzweigender Feldweg ist unscheinbar	CP; 51751,104213 51852,104256 52017,104460
 Ausschilderung nach Trampe fehlt	CP2; 54790,104980 54861,105010
-Ausschilderung: nach Wallmow und zum Badesee	CP2; 51751,104213 51852,104256
 # REMOVED (Caligariplatz ist ausgeschildert, kein zus‰tzlicher Kommentar nˆtig) --- Caligariplatz: Richtung Heinersdorfer Str. fahren	CP2; 12097,16263 12121,16317
 Mittenwalder Str. - Zossener Str.: zun‰chst auf dem linken Geh/Radweg fahren, Straﬂenbahntrasse 100m weiter oder an der Kreuzung Kastanienallee ¸berqueren; alternativ parallele Wohngebietsstraﬂe benutzen	CP; 23441,15780 23411,15632 23568,15603 23617,15594
 Zossener Str. - Mittenwalder Str.: bereits an der Kreuzung Alte Hellersdorfer Str. den linken Geh/Radweg benutzen	PI; 23080,15700 23218,15671 23411,15632 23441,15780

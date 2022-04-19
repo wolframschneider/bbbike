@@ -335,6 +335,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11130 (Anfrage)
 #: by: https://berliner-abendblatt.de/2022/03/31/senat-plant-neues-konzept-fuer-autofreie-friedrichstrasse/
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/senatorin-kuendigt-neues-konzept-fuer-friedrichstrassen-kiez-an_a341216
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/senat-will-neues-konzept-fuer-einen-autofreien-kiez-rund-um-die-friedrichstrasse-vorlegen_a342098
 #: source_id: 2147346249
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
 #: last_checked: 2022-03-29
@@ -697,7 +698,7 @@ Mainzer Str. (Friedrichshain)	N 14306,11889 14354,12012 14427,12197
 Colbestr.	N 14416,11815 14468,11992 14523,12183
 Wismarplatz [Grünberger Str.]	H 14461,11738 14395,11753
 Wismarplatz [Colbestr. - Seumestr.]	N 14416,11815 14395,11753
-Karl-Marx-Allee	HH 13785,12292 13543,12326 13448,12340 13163,12382 12878,12430 12603,12470 12592,12472 12352,12509 12134,12540 12114,12546
+Karl-Marx-Allee	HH 13785,12292 13543,12326 13448,12340 13163,12382 12929,12421 12878,12430 12816,12439 12603,12470 12592,12472 12352,12509 12134,12540 12114,12546
 Karl-Marx-Allee	HH 11976,12595 11678,12727 11635,12745 11589,12768 11289,12908 11226,12945
 Strausberger Platz (Friedrichshain)	HH 12114,12546 12083,12518 12028,12519 11988,12546 11976,12595 12005,12619 12050,12616 12099,12580 12114,12546
 (Straße der Pariser Kommune - Spreeufer)	NN 12497,11459 12441,11373
@@ -2427,7 +2428,7 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 (provisorische Umfahrung)	NN 14310,7022 14323,7080 14235,7100 14223,7084 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2022-04-08 vvv
+#: last_checked: 2022-04-18 vvv
 #: check_frequency: 90d vvv
 #: valid: 20140224-20221231
 Neuköllnische Allee	H 14344,7003 14567,6810 14724,6668
@@ -2498,9 +2499,9 @@ Bürgerstr. (Britz)	N 13307,6359 13289,6355 13283,6354 13239,6344 12997,6290 1283
 Priesterweg (Britz)	N 13227,6209 13220,6237 13239,6344
 Mackenroder Weg	N 12805,6248 12833,6127
 Wederstr.	N 12597,6293 12813,6334 12981,6366
-Carl-Weder-Park	NN 12979,6374 12812,6343 12637,6309 12630,6326 12605,6322 12619,6310 12567,6302 12557,6288 12518,6281 12505,6287 12459,6282 12242,6234 12235,6276 12040,6239 11818,6201 11735,6207 11651,6192 11456,6103
+Carl-Weder-Park	NN 12979,6374 12812,6343 12638,6307 12630,6326 12605,6322 12619,6310 12567,6302 12557,6288 12518,6281 12505,6287 12459,6282 12242,6234 12235,6276 12040,6239 11818,6201 11735,6207 11651,6192 11456,6103
 (Carl-Weder-Park - Escherheimer Str.)	NN 11818,6201 11748,6253 11740,6338
-(Carl-Weder-Park - Britzer Damm)	NN 12637,6309 12595,6299
+(Carl-Weder-Park - Britzer Damm)	NN 12638,6307 12614,6301 12595,6299
 (Carl-Weder-Park - Britzer Damm)	NN 12588,6337 12452,6317 12459,6282
 (Carl-Weder-Park - Andreasberger Str.)	NN 12040,6239 12053,6185
 Andreasberger Str.	N 12053,6185 12053,6042 12063,5927
@@ -4694,7 +4695,7 @@ Gravensteinstr. [Wohngebiet]	N 12694,22570 12738,22546 12781,22593 12738,22630
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5704 (Antrag)
 #: by: https://www.berliner-woche.de/franzoesisch-buchholz/c-bauen/gebaut-wird-in-holztafelbauweise_a339233 (bis Herbst 2024)
 #: by: https://www.dafmap.de/d/berlin.html?id=7898&mt=4&zoom=17
-#: last_checked: 2022-03-28 (daf)
+#: last_checked: 2022-04-13 (mapillary)
 #: check_frequency: 360d
 #: next_check: 2024-10-01
 Straße 171	N 12694,22570 12657,22596 12628,22604
@@ -5043,7 +5044,7 @@ Karwendelstr.	NH 3863,2835 4011,2942 4350,3161 4387,3182 4411,3180
 Bäkestr. (Lichterfelde)	NH 4411,3180 4587,3097 4659,3065 4832,2975
 Königsberger Str.	H 4170,2727 4224,2671 4313,2630 4348,2627
 Königsberger Str.	H 4348,2627 4317,2638 4233,2675 4170,2727
-Königsberger Str.	H 4348,2627 4392,2628 4526,2648 4702,2676 4750,2667 4943,2557 4968,2543 5060,2490 5229,2395 5256,2379 5317,2345
+Königsberger Str.	H 4348,2627 4392,2628 4526,2648 4702,2676 4750,2667 4943,2557 4968,2543 5060,2490 5191,2416 5229,2395 5256,2379 5317,2345
 Herwarthstr. (Lichterfelde)	N 4722,2771 4622,2787 4440,2752 4382,2658 4392,2628
 Darser Str.	N 2327,1009 2239,1104 2199,1179 2166,1256 2129,1336 2077,1460
 Goerzallee	H 4170,2727 4065,2576 3983,2454 3805,2196 3746,2108 3716,2063 3640,1959 3584,1877 3526,1792 3432,1667 3226,1470 3140,1411 2824,1273 2663,1199 2527,1136 2515,1131 2404,1078 2364,1049 2327,1009 2142,819 1946,604 1940,587 1820,337 1765,294
@@ -6405,10 +6406,11 @@ Wuhlesteg	NN 22503,14104 22783,14034
 Am Gewerbepark	N 21298,13154 21395,13135 21443,13125
 Oberfeldstr.	NH 20921,14461 20895,14319 20874,14199 20851,14073 20830,13960 20802,13711 20773,13468 20746,13209 20743,13184 20711,12896 20693,12742 20680,12632 20656,12415
 Oberfeldstr.	N 20656,12415 20629,12177 20627,12162
-Oberfeldstr.	NN 20627,12162 20624,12133 20620,12108
-Oberfeldstr.	N 20620,12108 20610,12050 20599,11938 20587,11824 20571,11698
-(Bahnüberführung S-Bhf. Biesdorf)	NN 20627,12162 20643,12141 20661,12140 20657,12101 20620,12108
+Oberfeldstr.	NN 20627,12162 20624,12133 20619,12098
+Oberfeldstr.	N 20619,12098 20610,12050 20599,11938 20587,11824 20571,11698
+(Bahnüberführung S-Bhf. Biesdorf)	NN 20627,12162 20643,12141 20661,12140 20657,12101 20640,12095 20619,12098
 Nordpromenade	N 20610,12050 20715,12040 20810,12031
+(Nordpromenade, entlang der S-Bahn)	NN 20640,12095 20807,12083
 Wildrosenweg	N 20715,12040 20708,11918 20694,11811
 Parkweg (Biesdorf)	N 20587,11824 20694,11811 20779,11801
 Schulstr. (Biesdorf)	N 20016,11980 20173,11971 20275,11960 20324,11952 20368,11937
@@ -6433,6 +6435,7 @@ Haydnstr. (Biesdorf)	NN 19979,11774 19995,11795
 Haydnstr. (Biesdorf)	N 19995,11795 20005,11872 20016,11980 20026,12088
 (Haydnstr. - Märkische Allee)	NN 20026,12088 20006,12128 19954,12140
 (Park Biesdorf)	NN 20810,12031 20857,12027 21100,11960 21132,11943 21134,11913 21150,11925
+(S-Bahnstrecke - Park Biesdorf)	NN 20807,12083 20857,12027
 Albert-Brodersen-Allee	NN 20857,12027 20835,11810 20831,11771
 (Alt-Biesdorf - Schloss Biesdorf)	NN 20764,11675 20825,11732 20831,11771
 (Parkweg - Park Biesdorf)	NN 20779,11801 20804,11797 20818,11812 20835,11810
@@ -13166,7 +13169,7 @@ Eisnerstr.	N 9507,-85 9653,-483 9698,-556
 #: next_check_id: BUCKOWERCHAUSSEE-2022
 #: XXX Gehweg wird vermutlich verlegt
 #: by: http://www.baustellen-doku.info/berlin_dresdener-bahn/PFA1_Marienfelde_Attilastrasse-Schichauweg/20200424/ (Bild 31)
-#: last_checked: 2022-03-07
+#: last_checked: 2022-04-13 (mapillary)
 #: check_frequency: 180d
 (Eisnerstr. - S-Bhf Buckower Chaussee)	NN 9507,-85 9468,-85 9271,323
 # 
@@ -15697,7 +15700,7 @@ Togostr.	N 5531,16734 5315,16936
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9450
 #: by: https://www.deutschlandfunkkultur.de/widerstand-gegen-manga-bell-platz-wie-in-berlin-um-einen.976.de.html?dram:article_id=455728
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10895 (Forderung: alte Straßenschilder erneuern)
-#: osm_watch: way id="333607502" version="8"
+#: osm_watch: way id="333607502" version="9"
 #: also_indoor: search Manga-Bell-Platz
 #: last_checked: 2022-02-12
 #: check_frequency: 90d
@@ -15708,7 +15711,7 @@ Nachtigalplatz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,168
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_02_0441_0548_online.pdf (Widerspruch)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9450
 #: add_fragezeichen: Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
-#: osm_watch: way id="5199719" version="15"
+#: osm_watch: way id="5199719" version="17"
 #: also_indoor: search Maji-Maji-Allee
 #: last_checked: 2022-02-12
 #: check_frequency: 90d
@@ -17013,11 +17016,12 @@ Emmichstr.	N 7282,2386 7370,2400 7424,2400 7559,2385 7648,2356
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-28464.pdf
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksamt/protokolle/2021/2021-10-05_maerckerweg-umbebennen_top-10.pdf
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_04_0173_0236_online.pdf (Straßenumbenennung zum 29. April 2022)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_15_0917_0976_online.pdf (Widerspruch)
 #: XXX geplante Umbenennung in Maria-Rimkus-Weg; im DPAG-Mitteilungsblatt 03/2022 ist die Umbenennung aufgelistet
 #: also_indoor: search Maria-Rimkus-Weg
-#: last_checked: 2021-10-05 (BA-Beschluss)
-# REMOVED --- #: check_frequency: 180d
-#: next_check: 2022-04-29
+#: last_checked: 2022-04-04 (Amtsblatt)
+#: check_frequency: 30d
+# REMOVED --- #: next_check: 2022-04-29
 Maerckerweg	N 7559,2385 7602,2522
 #: note: relativ stark befahren, evtl. NH? (Aber keine Vorfahrtstraße)
 Eiswaldtstr.	N 6718,2443 6834,2449 6965,2418 7051,2366 7172,2343 7282,2386
@@ -17243,7 +17247,7 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-bauen/die-naechsten-schritte-zur-festsetzung-von-bebauungsplaenen-stehen-an_a293341 (Erwähnung)
 #: osm_watch: way id="59573616" version="2"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
-#: last_checked: 2021-12-05 (mapillary)
+#: last_checked: 2022-04-16 (mapillary)
 #: check_frequency: 180d
 (Rhönstr. - Harzburger Str.)	NN 13598,21360 13709,21334
 Eifelstr.	N 13580,21286 13351,21239 13280,21225
@@ -18327,7 +18331,8 @@ Bertolt-Brecht-Platz	N 9193,12875 9160,12932
 #: XXX für den Autoverkehr mittlerweile gesperrt?
 #: XXX oder eventuell wird das eine Einbahnstraße, wenn die Bauarbeiten an der Pankebrücke beendet sind (Schilder hängen schon, obwohl es eine Sackgasse ist?!)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_19_2765_2928_online.pdf
-#: last_checked: 2022-01-17
+#: osm_watch: way id="327518240" version="6"
+#: last_checked: 2022-03-20
 #: check_frequency: 90d
 (Straße vor dem Berliner Ensemble)	N 9212,12969 9160,12932
 Karlplatz	N 8711,12986 8676,12976
