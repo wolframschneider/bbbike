@@ -8174,13 +8174,12 @@ EOF
 	2::temp 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359
 EOF
      },
-     { from  => $isodate2epoch->("2019-05-10 00:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2019-05-12 23:59:59"),
+     { from  => $isodate2epoch->("2022-05-06 00:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2022-05-08 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 10, months => 5, start => "2021-10-25T00:00:00"]], # note: findet 2021 vermutlich nicht statt
-       recurrence_prewarn_days => 14,
+       recurrences => [['yearly', days => 6, months => 5, start => "2021-10-25T00:00:00"]], # note: findet 2021 vermutlich nicht statt
        source_id => 'https://www.berlin.de/events/4829161-2229501-rudower-fruehlingsmeile.html',
-       text  => 'Alt-Rudow: Rudower Frühlingsmeile, Straße zwischen Köpenicker Str. und Bildhauerweg, sowie Krokusstr. bis Prieroser Str. gesperrt (11. und 12. Mai 2019)',
+       text  => 'Alt-Rudow: Rudower Frühlingsmeile, Straße zwischen Köpenicker Str. und Bildhauerweg, sowie Krokusstr. bis Prieroser Str. gesperrt (7. und 8. Mai 2022)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: https://www.berlin.de/events/4829161-2229501-rudower-fruehlingsmeile.html?date=20210410 (Termin noch nicht bekannt)
@@ -14121,12 +14120,11 @@ EOF
 	q4::inwork 9098,42254 9043,42165 9032,42153
 EOF
      },
-     { from  => $isodate2epoch->("2019-05-10 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-05-12 23:59:59"),
+     { from  => $isodate2epoch->("2022-05-06 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-05-08 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 8, months => 5, start => "2021-10-25T00:00:00"]],
-       recurrence_prewarn_days => 14,
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (11. und 12. Mai 2019)',
+       recurrences => [['yearly', days => 7, months => 5, start => "2021-10-25T00:00:00"]],
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (7. und 8. Mai 2022)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/events/3066575-2229501-fruehling-in-westend.html
@@ -19513,12 +19511,11 @@ EOF
 	q4::temp 13206,10651 13305,10789 13332,10832
 EOF
      },
-     { from  => $isodate2epoch->("2019-04-25 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-05-19 23:59:59"), # 1 Tag Nachlauf
+     { from  => $isodate2epoch->("2022-04-28 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-05-23 23:59:59"), # 1 Tag Nachlauf
        periodic => 1,
        recurrences => [['yearly', days => 25, months => 4, start => "2021-06-02T00:00:00"]],
-       recurrence_prewarn_days => 3,
-       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 26.04.2019 bis 19.05.2019',
+       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 29.04.2022 bis 22.05.2022',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2983315-2970764-neukoellner-maientage.html',
        data  => <<EOF,
@@ -21878,12 +21875,11 @@ EOF
 	q4::inwork; 7085,15226 7131,15109
 EOF
      },
-     { from  => $isodate2epoch->("2019-05-02 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-05-05 23:59:59"),
-       text  => 'Alt-Lichtenrade: Veranstaltung (Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (03.05.2019 bis 05.05.2019)', # früher: Lichtenrader Maientanz
+     { from  => $isodate2epoch->("2022-04-28 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-05-01 23:59:59"),
+       text  => 'Alt-Lichtenrade: Veranstaltung (Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (29.04.2022 bis 01.05.2022)', # früher: Lichtenrader Maientanz
        periodic => 1,
        recurrences => [['yearly', days => 29, months => 4, start => "2021-05-06T00:00:00"]],
-       recurrence_prewarn_days => 7,
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (ja) --- #: XXX wird die Veranstaltung noch abgesagt? --- #: next_check: 2020-04-23
@@ -23305,12 +23301,11 @@ EOF
 	2::inwork 48229,74776 48296,74641
 EOF
      },
-     { from  => $isodate2epoch->("2019-04-28 00:00:00"),
-       until => $isodate2epoch->("2019-05-02 02:00:00"),
+     { from  => $isodate2epoch->("2022-04-30 00:00:00"),
+       until => $isodate2epoch->("2022-05-01 02:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 30, months => 4, start => "2021-05-03T00:00:00"]],
-       recurrence_prewarn_days => 7,
-       text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung des DGB), am 1. Mai 2019',
+       text  => 'Platz des 18. März: Veranstaltung (Kundgebung des DGB), am 1. Mai 2022', # wenn größer: "Straße des 17. Juni und Ebertstraße"
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html',
        data  => <<EOF,
@@ -26224,9 +26219,9 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => $isodate2epoch->("2022-04-19 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2022-04-20 10:15:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 20. April 2022 ab ca. 09:15 Uhr',
+     { from  => $isodate2epoch->("2022-04-26 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-04-27 10:15:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 27. April 2022 ab ca. 09:15 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.stadtrand-nachrichten.de/sprengungen-grunewald-avus-gesperrt/
@@ -26240,8 +26235,8 @@ EOF
 #: source_id: viz2021:13.196408,52.438127,17.11.2021,09:15
 #: source_id: viz2021:13.196408,52.438127,24.11.2021,09:15
 #: source_id: viz2021:13.196408,52.438127,23.03.2022,09:15
-#: priority: #A
-#: next_check: 2022-04-20
+#: source_id: viz2021:13.196408,52.438127,20.04.2022,09:15
+# REMOVED --- #: priority: #A --- #: next_check: 2022-04-20
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
@@ -28191,7 +28186,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2022-03-29
+#: last_checked: 2022-04-19
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29279,7 +29274,7 @@ EOF
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
-#: osm_watch: way id="8655276" version="27"
+#: osm_watch: way id="8655276" version="28"
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
@@ -30018,6 +30013,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.813076.php (ab August 2019)
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/berlins-erste-spielstrasse_a216586 (ab 7. August 2019)
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
 	q4::temp::play 11175,9882 11197,9894 11411,9810
 EOF
      },
@@ -30057,8 +30053,8 @@ EOF
 #: last_checked: 2020-10-03
 #: check_frequency: 90d
 #: next_check: 2020-12-31
-# REMOVED (hier fertig) ---	q4::inwork 40166,16723 39984,16734
-	q4::inwork 39984,16734 39287,17231 39235,17255
+# REMOVED (hier fertig) ---	q4::inwork 40166,16723 39983,16747
+	q4::inwork 39983,16747 39839,16849 39780,16893 39447,17131 39287,17231 39235,17255
 EOF
      },
      { from  => 1567288800, # 2019-09-01 00:00
@@ -30549,7 +30545,7 @@ EOF
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-04-12 (mapillary)
+#: last_checked: 2022-04-19
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 EOF
@@ -32128,7 +32124,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2021-12-23 vvv
+#: last_checked: 2022-04-19 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -32768,54 +32764,59 @@ EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-05-31 00:00:00") }, # 1 Tag Vorlauf
        until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-08-31 18:00:00") },
-       text  => 'Bänschstr.: zwischen Voigtstr. und Pettenkoferstr. sonntags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 31.08.',
+       text  => 'Bänschstr.: zwischen Voigtstr. und Pettenkoferstr. sonntags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 31.08., außer in den Sommerferien',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/saison-startet_a311283 (und die anderen neuen Spielstraßen in FH-KB)
 #: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen
 #: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen/kieze
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
 # REMOVED --- #: XXX Spielstraße wurde verstetigt; genaue Geltungszeiten? --- #: next_check: 2022-05-24
 	q4::temp::play 14798,12502 15005,12443
 EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-04-30 00:00:00") }, # 1 Tag Vorlauf
        until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:00:00") },
-       text  => 'Richard-Sorge-Str.: zwischen Mühsamstr. und Straßmannstr. sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09.',
+       text  => 'Richard-Sorge-Str.: zwischen Mühsamstr. und Straßmannstr. sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09., außer in den Sommerferien',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
 # REMOVED --- #: XXX wird diese Spielstraße verstetigt? --- #: last_checked: 2021-05-13 --- #: next_check: 2022-05-17
 	q4::temp::play 13273,12902 13371,12694
 EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-04-30 00:00:00") }, # 1 Tag Vorlauf
        until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:30:00") },
-       text  => 'Simplonstr.: zwischen Helmerdingstr. und Matkowskystr. mittwochs zwischen 15.30 und 18.30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09.',
+       text  => 'Simplonstr.: zwischen Helmerdingstr. und Matkowskystr. mittwochs zwischen 15.30 und 18.30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09., außer in den Sommerferien',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
 # REMOVED --- #: XXX Spielstraße wurde möglicherweise verstetigt; genaue Geltungszeiten? --- #: last_checked: 2021-05-12 --- #: next_check: 2022-05-12
 	q4::temp::play 14468,11203 14531,11142
 EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-04-30 00:00:00") }, # 1 Tag Vorlauf
        until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:00:00") },
-       text  => 'Dresdener Str.: zwischen Erkelenzdamm und NKZ freitags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09.',
+       text  => 'Dresdener Str.: zwischen Erkelenzdamm und NKZ freitags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09., außer in den Sommerferien',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
 # REMOVED --- #: XXX Spielstraße wurde verstetigt; genaue Geltungszeiten? --- #: next_check: 2022-05-14
 	q4::temp::play 11258,10682 11334,10527
 EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-05-31 00:00:00") }, # 1 Tag Vorlauf
        until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:00:00") },
-       text  => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 30.09',
+       text  => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 30.09., außer in den Sommerferien',
        type  => 'handicap',
        recurring => 1,
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
        data  => <<EOF,
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
 # REMOVED (ja, Schilder hängen) --- #: XXX wird diese Spielstraße verstetigt? --- #: next_check: 2022-05-31
 	q4::temp::play 12286,9739 12398,9938
 EOF
@@ -33284,7 +33285,7 @@ EOF
 	q4::inwork; 15261,10738 15272,10790 15279,10862
 #: osm_watch: way id="984964447" version="7"
 	q3::inwork 15279,10862 15355,10875
-#: osm_watch: way id="984056169" version="7"
+#: osm_watch: way id="984056169" version="8"
 	2::inwork 15272,10790 15388,10758
 EOF
      },
@@ -33706,11 +33707,11 @@ EOF
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10215 (Anfrage)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10215&date=20220319 (mögliche Freigabe vor Ostern 2022, spätestens Ende April 2022)
 # REMOVED (eins reicht) --- #: osm_watch: note 2867467 2
-#: osm_watch: way id="16311543" version="19"
+#: osm_watch: way id="16311543" version="20"
 #: also_indoor: search Ernst-Heilmann-Steg
 #: priority: #A
-#: last_checked: 2022-04-05
-#: check_frequency: 14d
+#: last_checked: 2022-04-20
+#: check_frequency: 7d
 #: next_check: 2022-04-30
 	2::inwork 13270,10030 13306,10006
 EOF
@@ -34719,20 +34720,27 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
-       text  => 'Tegeler Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, außerdem Einbahnstraße in der Samoastr., offen Richtung Norden',
+       until => $isodate2epoch->("2022-09-30 17:00:00"), # undef, # XXX
+       text  => 'Tegeler Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, außerdem Anbindung Lynarstr. gesperrt, außerdem Einbahnstraße in der Samoastr., offen Richtung Norden, voraussichtlich bis Ende September 2022',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: viz2021:13.359404,52.539514,21.02.2022,09:00 (vielleicht ist das diese Baustelle, die aber falsch lokalisiert ist und fälschlicherweise nur für Kfz-Verkehr spricht; bis 8.4.2022) (mittlerweile bis 20.4.2022) (mittlerweile inaktiv)
-#: add_fragezeichen: Wie lange dauern die Bauarbeiten an? Wo genau gilt die Einbahnstraßenregelung?
-#: also_indoor: traffic (G)
+#: source_id: viz2021:13.359404,52.539514,21.02.2022,09:00 (vielleicht ist das diese Baustelle, die aber falsch lokalisiert ist und fälschlicherweise nur für Kfz-Verkehr spricht; bis 8.4.2022) (mittlerweile bis 20.4.2022) (mittlerweile inaktiv) (bis 30.9.2022)
+#: source_id: viz2021:13.358072,52.540517,20.04.2022,08:00 (bis 30.9.2022)
+#: note: laut rbb nur bis 20.4.2022
+#: add_fragezeichen: Wie lange dauern die Bauarbeiten an?
+#: also_indoor: traffic (G(falsch?),B(teilweise))
 #: priority: #B
-#: last_checked: 2022-04-09
-# REMOVED --- #: check_frequency: 30d
-#: next_check: 2022-04-20
+#: last_checked: 2022-04-09 vvv
+#: check_frequency: 30d vvv
+#: next_check: 2022-09-30 vvv
 	q4::inwork; 7259,14870 7209,14927 7182,14986
 	q4::inwork; 6945,15045 7007,14911 7000,14832
 # REMOVED (hier vermutlich nicht?) ---	q4::inwork; 7182,14986 7178,14996 7131,15109
+#: XXX hier müsste der Ausmaß der Einschränkung geprüft werden
+	q2::inwork 7259,14870 7409,14954
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 EOF
      },
      { from  => undef, # 
@@ -34816,6 +34824,8 @@ EOF
        data  => <<EOF,
 #: note: Durchfahrt möglich, gesehen am 2022-03-23 mittags
 #: XXX Bleibt es bei der möglichen Durchfahrt?
+#: osm_watch: node id="1511805342" version="4"
+#: osm_watch: node id="9448539551" version="1"
 #: last_checked: 2022-03-23
 	2 14249,8075 14239,8095 14247,8254 14229,8278
 EOF
@@ -34828,7 +34838,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: STRALAUER-2019
 #: note: explizites Verbot für Radfahrer auf der Stralauer Allee Richtung Südosten
-#: last_checked: 2022-04-18
+#: last_checked: 2022-04-20
 #: check_frequency: 30d
 #: next_check: 2022-06-30
 	1::inwork 13596,10722 13678,10685 13779,10642 13919,10583

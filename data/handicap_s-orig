@@ -181,7 +181,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 #: by: https://abendblatt-berlin.de/2021/04/05/berlin-wedding-geisterhaus-an-der-burgsdorfstrasse-soll-abgerissen-werden/
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10655 (Abriss?)
 #: by: https://weddingweiser.de/schrotthaus-blockiert-strasse/
-#: osm_watch: way id="549316654" version="16"
+#: osm_watch: way id="549316654" version="17"
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,ex-H)
 #: valid: 20171026-
@@ -190,6 +190,20 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
 # 
 ### Mitte ###
+# 
+#: next_check_id: ROSENTHALER-2022
+#: by: https://nitter.net/VIZ_Berlin/status/1516286721096310787#m
+#: by: https://nitter.net/pic/media%2FFQTg6WoXsAYOgpa.jpg%3Fname%3Dorig
+#: source_id: viz2021:13.403368,52.527044,19.04.2022,08:30 vvv
+#: last_checked: 2022-04-19 vvv
+#: next_check: 2022-05-31 vvv
+Gipsstr.: Fahrbahn an der Rosenthaler Str. gesperrt, Ausweichen auf Bürgersteig, Bordsteine	q3::inwork 10199,13446 10350,13376
+#: XXX prüfen: wird man Richtung Norden via Gormannstr. geführt?
+#: next_check: 2022-04-25
+Rosenthaler Str.: Fahrbahn gesperrt, Radweg wird auf den Bürgersteig geführt	q2::inwork 10350,13376 10324,13459 10302,13525
+#: next_check ^^^
+#: last_checked ^^^
+#: source_id ^^^
 # 
 #: by: https://www.deutsches-architekturforum.de/thread/7660-marinehaus-umbau-stiftung-stadtmuseum/?postID=712499#post712499
 #: also_indoor: traffic (none)
@@ -203,7 +217,7 @@ Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11197,11882
 Schloßplatz: Fußgänger, Bauarbeiten	q4::inwork 10102,12384 10063,12438
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2022-03-16 vvv
+#: last_checked: 2022-04-19 vvv
 #: next_check: 2024-06-01 vvv
 (Molkenmarkt - zur Stralauer Str.): Bauarbeiten, Gehweg ist noch offen	q4::inwork 10675,12280 10736,12285 10772,12288 10804,12291 10830,12279
 #: next_check ^^^
@@ -219,7 +233,7 @@ Schloßplatz: Fußgänger, Bauarbeiten	q4::inwork 10102,12384 10063,12438
 #: check_frequency: 60d
 #: next_check: 2022-07-31
 Chausseestr.: Radweg auf gegenüberliegenden Bürgersteig	q2::inwork; 8732,14098 8607,14253 8570,14299 8490,14397 8442,14456
-#: last_checked: 2022-03-26 (mapillary)
+#: last_checked: 2022-04-18 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2022-07-31
 Chausseestr.: gemeinsamer Geh- und Radweg	q2::inwork; 8442,14456 8406,14507 8336,14586
@@ -379,10 +393,10 @@ Cora-Berliner-Str.: Bauarbeiten zwischen Behrenstr. und Hannah-Arendt-Str., Fahr
 #: by: https://blog.sbb.berlin/ab-1-februar-2021-haus-unter-den-linden-fuer-benutzungsbetrieb-geoeffnet/?date=20201226 (Baustelleneinrichtung in der Charlottenstr. wird im Frühjahr 2021 abgebaut, bis Sommer 2021 wird die Straßenseite wiederhergestellt; Sperrung in der Universitätsstraße womöglich bis Mitte 2022)
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
-#: last_checked: 2022-04-08 (mapillary) vvv
+#: last_checked: 2022-04-19 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
-#: osm_watch: way id="153698394" version="9"
+#: osm_watch: way id="153698394" version="10"
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 #: also_indoor: traffic (ex-H,ex-G)
 #: osm_watch: way id="114667396" version="11"
@@ -842,6 +856,7 @@ Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3-::inwork 7126,9825 7118,987
 #: by: https://berliner-abendblatt.de/2022/02/21/moltkebruecke/
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/alte-moltkebruecke-wird-abgerissen-und-durch-neubau-ersetzt_a337406 (Freigabe der Behelfsbrücke Ende April 2022)
 #: by: https://berliner-abendblatt.de/2022/02/28/titel-bruecken/
+#: by: https://berliner-abendblatt.de/2022/04/20/abriss-der-moltkebruecke-infotermin-fuer-anwohner/
 #: XXX wann wird die Einschränkung beendet?
 #: osm_watch: way id="13860352" version="18"
 #: also_indoor: traffic (G,ex-H,B)
@@ -867,7 +882,7 @@ Enzianstr.: Bauarbeiten, Fahrbahn abschnittsweise gesperrt	q3::inwork 3806,4628 
 #: XXX nicht der gesamte Abschnitt ist gesperrt, deshalb q3 statt q4
 #: osm_watch: way id="164816805" version="10"
 #: priority: #C
-#: last_checked: 2022-03-20 (mapillary)
+#: last_checked: 2022-04-21
 #: check_frequency: 30d
 Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg möglich	q3::inwork 13702,13634 13711,13615 13769,13487
 # 
@@ -1586,9 +1601,13 @@ Langhoffstr.: enge Straße, Gegenverkehr	q1 19817,14371 19818,14064
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20140603.1435.397678.html (Vorlage 096/2014)
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5651&date=20140610 (Umgestaltung der Alten Frankfurter Allee)
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6543
+#: by: https://www.meinetram.de/de/Umsteigepunkt-SU-Lichtenberg
+#: by: https://www.meinetram.de/de/index.php?section=Downloads&download=69 (komplette Umgestaltung der Alten Frankfurter Allee; hier wird eine Zufahrtsstraße zum Krankenhaus entstehen; Anbindung Siegfriedstr. gesperrt außer für Radfahrer; die Gleisschleife Gudrunstr. - Fanningerstr. wird entfallen)
+#: by: https://www.bahninfo-forum.de/read.php?9,731381,731381#msg-731381
 #: osm_watch: way id="223184082" version="7"
 #: last_checked: 2022-03-18
-#: check_frequency: 90d
+# REMOVED --- #: check_frequency: 90d
+#: check_frequency: 360d
 (Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16535,11920 16512,11894
 Zum Schlachtensee: wegen der großen Steigung/Gefälles nur Schrittgeschwindigkeit möglich	q4 -1663,4218 -1592,4268
 # REMOVED (BS wurde abgesenkt) --- #: XXX_prog BS (an der Rungiusstr., ansonsten weiterhin q4)
@@ -2954,7 +2973,7 @@ Lübbener Str.: Fußgänger	q3 12729,10515 12731,10547
 (Rudolf-Seiffert-Str./Storkower Str. - Paul-Junius-Str.): Fußgänger	q2 14871,13135 14889,13150 14909,13223 14941,13283 14978,13289 15084,13276
 # REMOVED --- #: by: http://www.sanierung-berlin.de/sanwa/Projekte/Helsingforser_Platz/Helsingf_Platz_Fugmann_Pr_sentation.pdf --- #: by: http://www.stadtentwicklung.berlin.de/staedtebau/foerderprogramme/stadtumbau/Helsingforser-Platz.6562.0.html --- #: XXX der handicap_s-Eintrag wird wohl bleiben, q2 oder q1? --- #: last_checked: 2013-11-19 --- #: check_frequency: 7d
 Helsingforser Str.: einige Fußgänger	q1 13496,11384 13427,11431
-#: note: mittlerweile ein gemeinsamer Rad- und Gehweg
+#: note: gemeinsamer Rad- und Gehweg
 Karl-Lade-Str.: Fußgänger	q1 14821,13674 14987,13621
 #: note: offiziell nur für Fußgänger
 Karl-Lade-Str.: Fußgänger	q2 14987,13621 15040,13602
@@ -4469,6 +4488,7 @@ Vereinsweg (Steglitz): Fußgänger, Privatstraße, Radfahren nicht erlaubt	q4 5334,
 #: XXX_prog: Bordstein am nördlichen Ende, ansonsten wäre es q1
 Apeldorner Weg: Fußgänger, Bordstein	q2+ 3822,8718 3858,8786 3952,8980
 Münstersche Str.: Fußgänger	q2 3840,9683 3698,9624
+#: note: gemeinsamer Geh- und Radweg
 (Hoffmannstr. - Puschkinallee): Fußgänger	q1 14077,10016 14011,9868 13999,9842
 # temporär entfernt: (Hoffmannstr. - Uferweg an den Treptowers): Fußgänger	q1 14077,10016 14116,10149 14126,10176
 August-Lindemann-Str.: Fußgänger	q3 14355,12752 14360,12792
