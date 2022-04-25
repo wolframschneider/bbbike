@@ -24689,13 +24689,15 @@ EOF
      },
      { from  => undef,
        until => undef,
-       text  => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 1. Mai bis zum 3. Oktober',
+       text  => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 30. April bis zum 3. Oktober',
        recurring => 1,
        type  => 'gesperrt',
        source_id => 'http://www.bvg.de/de/Aktuell/Newsmeldung?newsid=612',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/rahnsdorf/c-verkehr/ruderfaehre-f-24-geht-erst-spaeter-in-betrieb_a261679
 #: by: https://www.berliner-woche.de/rahnsdorf/c-verkehr/mit-muskelkraft-ueber-die-mueggelspree_a266224
+#: by: https://unternehmen.bvg.de/pressemitteilung/ahoi-paule-iii/
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1198551.php
 #: XXX_prog temporäre Lösung für saisonale Fähren vvv
 #: tempex: (20170430|YYYY0501)-YYYY1003 & (sa|su|holiday) & T11-T19
 	2::temp 29959,3031 29968,2986
@@ -29278,7 +29280,7 @@ EOF
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2022-04-12 (osm)
+#: last_checked: 2022-04-21 (mapillary)
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -30915,7 +30917,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-04-16
+#: last_checked: 2022-04-23
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31134,7 +31136,7 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="4"
 #: osm_watch: way id="934995901" version="6"
-#: last_checked: 2022-04-18 vvv
+#: last_checked: 2022-04-24 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -32300,9 +32302,9 @@ EOF
 #: note: reopened, es gibt wieder Bauzäune
 #: osm_watch: way id="152832871" version="16"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-02-12
+#: last_checked: 2022-04-23
 #: check_frequency: 60d
-	q4::inwork 4674,12076 4698,12124
+	q3::inwork 4674,12076 4698,12124
 # REMOVED (hier nicht mehr) ---	q3::inwork 4698,12124 4755,12236
 EOF
      },
@@ -32326,7 +32328,7 @@ EOF
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="24"
 #: osm_watch: way id="165832806" version="21"
-#: last_checked: 2022-04-02
+#: last_checked: 2022-04-24
 #: check_frequency: 30d
 	2::inwork 17753,8290 17704,8327 17620,8366 17554,8458 17533,8505 17515,8567 17497,8623
 # REMOVED (hier neu gemacht) ---	2::inwork 17497,8623 17461,8693 17416,8767 17380,8858
@@ -33279,7 +33281,7 @@ EOF
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden)
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2022-04-16
+#: last_checked: 2022-04-24
 #: check_frequency: 30d
 #: next_check: 2022-06-20
 	q4::inwork; 15261,10738 15272,10790 15279,10862
@@ -34464,7 +34466,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1650719215, # undef, # XXX
        text  => 'Uferweg am Salzhof: möglicherweise gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -34473,8 +34475,8 @@ EOF
 #: by: https://immobilien.stadtlandhavel.com/
 #: osm_watch: way id="577673938" version="5"
 #: osm_watch: way id="35043662" version="10"
-#: add_fragezeichen: Ist dieser Weg tatsächlich gesperrt? Wenn ja: wo genau ist der gesperrte Abschnitt?
-	2::inwork -1923,15684 -1938,15782 -1935,15826 -1978,15940 -1976,16012
+# REMOVED (Weg ist offen) --- #: add_fragezeichen: Ist dieser Weg tatsächlich gesperrt? Wenn ja: wo genau ist der gesperrte Abschnitt?
+	2::inwork -1923,15684 -1927,15716 -1938,15782 -1935,15826 -1948,15862 -1978,15940 -1976,16012
 EOF
      },
      { from  => 1643397267, # 2022-01-28 20:14
@@ -34866,6 +34868,7 @@ EOF
 #: by: https://nitter.net/VIZ_Berlin/status/1510640770461671434#m
 #: by: https://nitter.net/pic/media%2FFPMDmJMXoAcscus.jpg%3Fname%3Dorig
 #: by: https://nitter.net/pic/media%2FFPMDmJMX0AMSw_N.jpg%3Fname%3Dorig
+#: confirmed_by: srt
 	q4::inwork; 25567,5749 25479,5753 25294,5761 25123,5767 25121,5795
 EOF
      },
@@ -34954,14 +34957,16 @@ EOF
      },
      { from  => 1650305075, # 2022-04-18 20:04
        until => 1656626399, # 2022-06-30 23:59
-       text  => 'Pionierstr.: Bauarbeiten, Einbahnstraßenregelung (offen Richtung Westen), evtl. sind auch Radfahrer betroffen, voraussichtlich bis 30. Juni 2022',
+       #text  => 'Pionierstr.: Bauarbeiten, Einbahnstraßenregelung (offen Richtung Westen), evtl. sind auch Radfahrer betroffen, voraussichtlich bis 30. Juni 2022',
+       text  => 'Wasserwerkstr.: Einbahnstraßenregelung (offen Richtung Norden), voraussichtlich bis 30. Juni 2022',
        type  => 'handicap',
        source_id => 'https://www.berliner-woche.de/falkenhagener-feld/c-bauen/zwischen-bauzeit-und-bauzeitraum-in-der-pionierstrasse_a342872',
        data  => <<EOF,
 #: also_indoor: traffic (G,H,B)
 #: XXX kommt es zu einer Verlängerung der Bauarbeiten?
 #: next_check: 2022-06-22
-	q4::inwork; -5292,16239 -5400,16285 -5544,16339 -5560,16345 -5658,16373 -5804,16415 -5830,16356
+	q4::inwork; -5804,16415 -5830,16356 -5849,16199
+# REMOVED (Radspur existiert in der Gegenrichtung) ---	q4::inwork; -5292,16239 -5400,16285 -5544,16339 -5560,16345 -5658,16373 -5804,16415
 EOF
      },
     );

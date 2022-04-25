@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2017,2018,2019,2020,2021 Slaven Rezic. All rights reserved.
+# Copyright (C) 2017,2018,2019,2020,2021,2022 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -20,6 +20,7 @@ use Doit::Log;
 use Doit::Util qw(in_directory);
 
 use Cwd qw(realpath);
+use File::Glob qw(bsd_glob);
 use File::Temp qw(tempdir);
 use Getopt::Long;
 use Hash::Util qw(lock_keys);
@@ -376,7 +377,7 @@ EOF
 RUN apt-get update -qq && apt-get install -qqy git cpanminus libssl-dev wget
 EOF
     if (
-	$opt{distver} eq 'precise' || $opt{distver} eq 'xenial' || $opt{distver} eq 'bionic' || $opt{distver} eq 'focal' ||
+	($opt{dist} eq 'ubuntu' && $opt{distver} ne 'trusty') ||
 	$opt{dist} eq 'debian'
        ) {
 	# Lacking packages in precise and bionic (18.04) (and debian/stretch, lsb-release at least)
@@ -470,7 +471,8 @@ RUN apt-get install -qqy \\
     libdatetime-event-recurrence-perl \\
     libdatetime-format-iso8601-perl \\
     libkwalify-perl \\
-    libyaml-syck-perl
+    libyaml-syck-perl \\
+    bmake
 EOF
     }
 
@@ -533,7 +535,7 @@ EOF
 
 	    # XXX hmmm --- probably it would be a good idea to wait until the initial CMD was already done
 	    eval {
-		$doit->system(qw(docker exec), $tag, 'sh', '-c', 'cd data && fmake all slow-checks really-slow-checks');
+		$doit->system(qw(docker exec), $tag, 'sh', '-c', 'cd data && bmake all slow-checks really-slow-checks');
 	    };
 	    if ($@) {
 		push @errors, "data build errored: $@";
@@ -664,16 +666,34 @@ sub cgi {
     for my $f ("cgi/GNUmakefile", "cgi/Makefile", "miscsrc/b2gmake") {
 	$doit->copy("$FindBin::RealBin/../$f", "$docker_context_dir/" . File::Basename::dirname($f));
     }
+    if ($opt{mapserver}) {
+	# XXX Actually it would be easier to copy everything in the repository, not just the files mentioned in MANIFEST
+	for my $f ("data/Makefile", "data/Makefile.mapfiles", "data/Makefile.garmin", "data/BASE", bsd_glob("data/*-orig"), "data/temp_blockings/bbbike-temp-blockings.pl", bsd_glob("data/temp_blockings/*.bbd"),  bsd_glob("miscsrc/*")) {
+	    my($src, $dest) = ("$FindBin::RealBin/../$f", "$docker_context_dir/" . File::Basename::dirname($f));
+	    next if -d $src; # ignore directories in miscsrc
+	    $doit->copy($src, $dest);
+	}
+	for my $f ("miscsrc/bbbikedraw.pl", "miscsrc/bbd2esri") {
+	    $doit->chmod(0755, "$docker_context_dir/$f"); # XXX copy should really preserve the file mode
+	}
+	$doit->system("cp", "-rf", "$FindBin::RealBin/../mapserver/", "$docker_context_dir/mapserver/");
+    }
 
     my $dockerfile = <<EOF;
 FROM $opt{dist}:$opt{distver}
 EOF
     _add_invalidate_cmd(\$dockerfile) if $opt{'invalidate-apt'};
     my $docker_port = 5000;
+    my $fonts_dejavu_package = (
+				(
+				 ($opt{dist} eq 'ubuntu' && $opt{distver} =~ m{^(trusty|precise|xenial)$}) ||
+				 ($opt{dist} eq 'debian' && $opt{distver} =~ 'wheezy')
+				) ? 'ttf-dejavu' : 'fonts-dejavu'
+			       );
     $dockerfile .= <<EOF;
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -qqy --no-install-recommends \\
-      libgd3 libgd-gd2-perl ttf-bitstream-vera ttf-dejavu \\
+      libgd3 libgd-gd2-perl ttf-bitstream-vera $fonts_dejavu_package \\
       libpdf-create-perl libcairo-perl libpango-perl libfont-afm-perl \\
       libimager-perl libsvg-perl librsvg2-bin \\
       libstring-approx-perl libdbd-xbase-perl libxml-parser-perl \\
@@ -681,7 +701,7 @@ RUN apt-get update && apt-get install -qqy --no-install-recommends \\
       libobject-realize-later-perl libmldbm-perl \\
       libclass-accessor-perl libarchive-zip-perl \\
       libtemplate-perl libxml-libxml-perl libxml-simple-perl \\
-      libyaml-perl libyaml-syck-perl libjson-xs-perl \\
+      libyaml-libyaml-perl libjson-xs-perl \\
       libtext-unidecode-perl libdata-compare-perl \\
       libdate-calc-perl libdatetime-perl libimage-exiftool-perl \\
       libgeo-metar-perl libtext-csv-xs-perl libxml2-utils libdb-file-lock-perl \\
@@ -699,9 +719,9 @@ RUN apt-get install -qqy --no-install-recommends \\
 RUN add-apt-repository ppa:eserte/bbbike
 EOF
     } else {
-	$dockerfile .= <<EOF;
+	$dockerfile .= <<'EOF';
 RUN wget -O- http://mydebs.bbbike.de/key/mydebs.bbbike.key | apt-key add -
-RUN CODENAME=\$(perl -nle '/^VERSION="\\d+ \\((.*)\\)/ and print \$1' /etc/os-release); echo deb http://mydebs.bbbike.de \${CODENAME} main > /etc/apt/sources.list.d/mydebs.bbbike.list~ && mv /etc/apt/sources.list.d/mydebs.bbbike.list~ /etc/apt/sources.list.d/mydebs.bbbike.list
+RUN CODENAME=$(perl -nle '/^VERSION_CODENAME="?([^"]+)/ and $codename=$1; /^VERSION="\d+ \((.*)\)/ and $maybe_codename=$1; END { print $codename // $maybe_codename }' /etc/os-release); echo deb http://mydebs.bbbike.de ${CODENAME} main > /etc/apt/sources.list.d/mydebs.bbbike.list~ && mv /etc/apt/sources.list.d/mydebs.bbbike.list~ /etc/apt/sources.list.d/mydebs.bbbike.list
 EOF
     }
     $dockerfile .= <<EOF;
@@ -716,10 +736,9 @@ RUN apt-get install -qqy --no-install-recommends \\
       libmime-lite-perl
 EOF
     if ($opt{mapserver}) {
-	# freebsd-buildutils for pmake/fmake needed
 	$dockerfile .= <<EOF;
 RUN apt-get install -qqy --no-install-recommends \\
-      freebsd-buildutils mapserver-bin cgi-mapserver
+      bmake mapserver-bin cgi-mapserver libobject-iterate-perl
 EOF
     }
     $dockerfile .= <<EOF;

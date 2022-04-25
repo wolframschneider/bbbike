@@ -9,7 +9,7 @@
 # 
 #: source_id: viz2021:13.406514,52.51352,16.03.2021,08:00 (bis Ende 2022)
 #: note: Ampel ist eigentlich südöstlich der Einmündung gelegen
-#: last_checked: 2022-04-19
+#: last_checked: 2022-04-22 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2022-12-31
 Fischerinsel	F::inwork 10578,11969
@@ -55,7 +55,7 @@ Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
 Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2022-04-02
+#: last_checked: 2022-04-24
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -115,15 +115,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 #: last_checked: 2021-03-18 (parlamentarische Anfrage)
 #: next_check: 2022-02-03
 	X::inwork -1538,22800
-#: by: https://www.berliner-woche.de/heiligensee/c-verkehr/anregungen-der-eltern-endlich-verwirklicht_a207979
-#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1194601.php (Bauarbeiten für den Kreisverkehr)
-#: by: https://berliner-abendblatt.de/2022/04/08/umbau-fuer-kreisverkehr-kreuzung-wird-voll-gesperrt/
-#: by: https://www.berliner-woche.de/heiligensee/c-verkehr/kreuzungsbereich-wegen-asphaltarbeiten-gesperrt_a342023
-#: XXX später wird hier ein Kreisverkehr entstehen
-#: last_checked: 2021-09-04
-#: check_frequency: 180d
-#: next_check: 2022-11-15
-	X::inwork -2504,22626
+# REMOVED --- #: by: https://www.berliner-woche.de/heiligensee/c-verkehr/anregungen-der-eltern-endlich-verwirklicht_a207979 --- #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1194601.php (Bauarbeiten für den Kreisverkehr) --- #: by: https://berliner-abendblatt.de/2022/04/08/umbau-fuer-kreisverkehr-kreuzung-wird-voll-gesperrt/ --- #: by: https://www.berliner-woche.de/heiligensee/c-verkehr/kreuzungsbereich-wegen-asphaltarbeiten-gesperrt_a342023 --- #: XXX später wird hier ein Kreisverkehr entstehen --- #: last_checked: 2021-09-04 --- #: check_frequency: 180d --- #: next_check: 2022-11-15 ---	X::inwork -2504,22626
 # 
 # REMOVED --- #: next_check_id: TRESKOWALLEE-2019 --- #: last_checked: 2020-06-14 ---	X::inwork 18406,7760
 # 
@@ -910,6 +902,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3761,12298
 	X 3337,12855
 #: note: Kontaktschleife/Anforderungsampel Richtung Osten
+#: XXX_prog: nicht relevant beim Fahren vom Jakob-Kaiser-Platz in den Tegeler Weg
 	X 2860,14118
 #: note: Kontaktschleife/Anforderungsampel von Süden her, auf der Mittelinsel "gegenläufig" geschaltet
 	X 2896,14187
@@ -1398,6 +1391,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5956,13330
 	X -1350,14646
 #: note: Anforderung für linksabbiegende Radfahrer (Am Juliusturm -> Daumstr.)
+#: XXX_prog: gilt nicht für geradesausfahrende Radfahrer
 	X -1337,14538
 	X 5043,14671
 #: XXX_prog: gilt nicht für rechtsabbiegende Radfahrer (Beusselstr. -> Seestr.)
@@ -1469,6 +1463,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -1284,13340
 #: XXX_prog: gilt nicht für stadtauswärts fahrende Radfahrer auf dem Radweg
 	X -1337,13354
+#: XXX_prog: gilt nicht für stadtauswärts fahrende Radfahrer auf dem Radweg
 	X -1560,13418
 	X 5627,10637
 	X 5866,10492
@@ -2690,6 +2685,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 #: by: Message-ID: <f7gpgb$22l$1@mobile.in-berlin.de>
 	F 1442,12480
 	F 1669,12413
+#: XXX_prog: gilt nicht für stadtauswärts fahrende Radfahrer auf dem Radweg
 	X -4290,14025
 	X 4813,5350
 	X 5346,6443
@@ -3072,13 +3068,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
 #: osm_watch: node id="5931765487" version="5"
 #: osm_watch: node id="5931765488" version="5"
-#: last_checked: 2022-03-29
+#: last_checked: 2022-04-23
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2022-04-19 vvv
+#: last_checked: 2022-04-23 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3098,7 +3094,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) ---
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2022-03-26 (mapillary)
+#: last_checked: 2022-04-23 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2022-07-31
 	X::inwork 8732,14098
@@ -3411,7 +3407,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 5364,7330
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2022-04-18 (mapillary)
+#: last_checked: 2022-04-23 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2022-07-31
 	X::inwork 8336,14586
@@ -3422,13 +3418,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2022-04-18 (mapillary)
+#: last_checked: 2022-04-23 (mapillary)
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
 # REMOVED (gibt's nicht mehr) --- #: next_check_id: CORONA-2020 --- #: by: https://www.rbb24.de/panorama/thema/corona/beitraege/2021/08/berlin-impfzentrum-erika-hess-eisstadion-arena-schliessen.html --- #: XXX vermutlich temporär für das Impfzentrum --- #: by: mapillary --- 
 #: XXX wann wird diese Ampel abgebaut?
-#: last_checked: 2022-04-18 (mapillary)
+#: last_checked: 2022-04-23 (mapillary)
 #: check_frequency: 90d
 	F::inwork 8138,14786
 # 
@@ -3524,13 +3520,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296478" version="1"
 #: note: Anforderungsampel
-#: last_checked: 2022-04-10 (bahninfo-forum)
+#: last_checked: 2022-04-22 (mapillary)
 #: check_frequency: 90d
 	F::inwork 17695,5394
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296482" version="3"
 #: note: Anforderungsampel
-#: last_checked: 2022-03-20 (krickstadt)
+#: last_checked: 2022-04-22 (mapillary)
 #: check_frequency: 90d
 	F::inwork 17747,5452
 # 
