@@ -863,7 +863,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="12"
-#: last_checked: 2022-03-26
+#: last_checked: 2022-04-30
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
 Scharnhorststr.: Poller	3 7877,14504 7804,14445 *
@@ -986,7 +986,7 @@ Oelder Weg	1 1967,18743 1965,18686
 #: confirmed_by: srt
 Bernhard-Lichtenberg-Platz	1 2643,18738 2731,18729 2867,18736
 #: by: ^^^
-Fasanenstr.	1 5196,10398 5215,10711 5230,10919 5236,10994 5241,11060 5258,11285
+Fasanenstr.	1 5196,10398 5212,10661 5215,10711 5217,10736 5230,10919 5232,10947 5236,10994 5240,11047 5254,11237 5258,11285
 #: note: Radfahrer können Überquerungsmöglichkeit wenige Meter südlich benutzen, oder ggfs. auf dem linken Gehweg zur Ostseestr./Wisbyer Str. vorfahren
 Prenzlauer Allee: Straßenbahntrasse	3nocross 12030,15968 12061,16091 12075,16144 12090,16199
 Prenzlauer Allee: Straßenbahntrasse	3nocross 11471,14143 11498,14234 11572,14452
@@ -1562,4 +1562,10 @@ Wilhelmshavener Str.	2:Anlieger 6093,13990 6089,14197
 # 
 #: note: zumindest an der Bachstr. hängt ein entsprechendes Schild
 Cuxhavener Str.	2:Anlieger 5951,12353 5982,12291 5870,12106 5909,12073
+# 
+Grimmingweg	1 9832,1380 9870,1398
+# 
+Kettinger Str. [Siedlungsstraße]	2:Anlieger 10116,949 10035,1000 9976,1042
+Kettinger Str. [Siedlungsstraße]	2:Anlieger 10091,892 10011,942 9950,985
+Kettinger Str. [Siedlungsstraße]	2:Anlieger 10035,1000 10011,942 9987,889
 # 

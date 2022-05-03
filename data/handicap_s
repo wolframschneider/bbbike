@@ -40,17 +40,17 @@ Alt-Moabit - Invalidenstr.: Bauarbeiten, getrennter Rad/Gehweg	q3::inwork 7422,1
 Werner-Richard-Heymann-Platz: große Teile der Fahrbahn gesperrt, Bordsteine	q3 3320,7982 3219,7987
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
 Pariser Str./Bundesallee: Bauarbeiten, enger Durchgang, ggfs. schieben	q4::inwork 5461,9923 5423,9932 5382,9942
-Weserstr.: Bauarbeiten, Fahrbahn gesperrt, gemeinsamer Geh- und Radweg. eng	q3::inwork 12590,8977 12740,8862
+Weserstr.: Bauarbeiten, Fahrbahn gesperrt, gemeinsamer Geh- und Radweg, eng	q3::inwork 12590,8977 12740,8862
 Bergiusstr. - Grenzallee: kurvig, einige Fußgänger	q1 14150,6609 14137,6658 14179,6714 14179,6743
 Bergiusstr. - Grenzallee: kurvig, einige Fußgänger	q3 14179,6743 14139,6786
 Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 14235,7100 14223,7084 14196,7086
 Neuköllnische Allee: Fahrbahn gesperrt	q3::inwork 14344,7003 14310,7022
 Boddinstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12368,8356 12582,8408
 Flughafenstr.: zwischen Karl-Marx-Str. und Isarstr. Richtung Westen gesperrt	q4::inwork; 12494,8501 12349,8464
-Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, Umwege über die Gehwege möglich	q4::inwork 16276,12273 16227,12280 16159,12301 16056,12317
+Roedeliusplatz: wegen Fahrbahnarbeiten gesperrt	q4::inwork 16276,12273 16227,12280 16159,12301
 Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Merler Weg Richtung Süden	q3::inwork; 19181,13485 19198,13272 19180,13219
 Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3::inwork 7126,9825 7118,9870
-Moltkestraßenbrücke: Fahrbahn gesperrt	q4::inwork 3867,4537 3898,4490
+Moltkestraßenbrücke: für Fußgänger existiert eine Behelfsbrücke	q4::inwork 3867,4537 3898,4490
 Enzianstr.: Bauarbeiten, Fahrbahn abschnittsweise gesperrt	q3::inwork 3806,4628 3839,4577 3867,4537
 Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg möglich	q3::inwork 13702,13634 13711,13615 13769,13487
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
@@ -176,7 +176,8 @@ Hasenheide, zur Lilienthalstr.: Parkweg	q1 10709,9192 11111,9104 11141,9107
 Am Flutgraben: Fußgänger	q1 13333,9929 13418,9944 13579,10146
 (durch den Schlesischen Busch): Fußgänger	q1 13418,9944 13657,9983 13711,10022
 Kolonie Albrechtshöhe: einige Fußgänger	q1 10260,5953 10215,5959 9955,5993
-Am Landwehrkanal: Parkweg	q2 12739,9576 12796,9548 12919,9584 12981,9672 13086,9825 13145,9861 13230,9981
+Am Landwehrkanal: Parkweg, Fußgänger	q3 12739,9576 12796,9548 12919,9584 12981,9672
+Am Landwehrkanal: Parkweg, Fußgänger	q2 12981,9672 13086,9825 13145,9861 13230,9981
 Uferweg an den Treptowers: enger und kurviger Weg	q3 14467,9887 14459,9897 14464,9927 14509,9997 14432,10059 14373,10046
 Denewitzstr.: kombinierter Fuß- und Radweg	q1 8058,10306 7947,10155
 Linienstr.: einige Fußgänger	q1 10709,13629 10740,13621
@@ -703,7 +704,6 @@ Bouchéstr.: zwei Bodenschwellen	q0 13489,9456 13357,9313
 Radenzer Str.: zwei Bodenschwellen	q1 16220,6277 16304,6358
 Dornbrunner Str.: zwei Bodenschwellen	q1 16147,6545 16043,6414
 (Neue Grünstr. - Alte Jakobstr.): Radfahren verboten	q4 10624,11548 10526,11612
-Cuvrystr.: Bodenschwellen, Aufpflasterungen	q1 13035,10076 13132,10239
 Elsensteg: Fußgänger	q3 13368,8689 13379,8703
 Elsensteg: Fußgänger	q4 13379,8703 13397,8727
 Elsensteg: Fußgänger	q3 13397,8727 13405,8737
@@ -1295,7 +1295,7 @@ Grützmacherpark: Fußgänger	q1 -1532,15225 -1389,15285
 Ansbacher Str./Wittenbergplatz: Fußgänger	q2 6192,10542 6216,10614 6228,10646 6250,10701
 (Planufer - Böckhstr.): einige Fußgänger	q1 11160,9932 11170,9919 11197,9894
 Mendelssohnstr.: Fußgänger, Bordstein	q3 11598,13598 11652,13564
-(Wiese vor dem Reichstag): Fußgänger, Bordsteine, Radfahren nicht erlaubt	q3 8373,12416 8369,12609
+(Wiese vor dem Reichstag): Fußgänger, Bordsteine, Radfahren nicht erlaubt	q4 8373,12416 8369,12609
 (Weg über das Sportgelände): zu manchen Zeiten reger Fußgängerverkehr	q1 13252,14179 13385,13992
 Schliemannstr. [über Helmholtzplatz]: Fußgänger, Bordsteine	q3 11368,15301 11334,15248
 (Museumsinsel): Fußgänger, besonders zu Museumsöffnungszeiten	q3 10017,12675 9972,12732 9987,12744 9952,12791
@@ -1630,7 +1630,7 @@ Biedermannweg: einige Fußgänger	q1 -717,12823 -686,12735
 Am Murellenteich: Bordstein	q3 -440,12767 -408,12766
 (Am Nordhafen - Uferweg am Nordhafen): Fußgänger, Gefälle	q1; 7733,14570 7696,14577 7662,14579 7653,14570
 (Am Nordhafen - Uferweg am Nordhafen): Fußgänger, Steigung	q2; 7653,14570 7662,14579 7696,14577 7733,14570
-(Uferweg am Nordhafen - Am Nordhafen/Fennstr.): Fußgänger	q1 7605,14600 7589,14627 7549,14664 7514,14686
+(Uferweg am Nordhafen - Am Nordhafen/Fennstr.): Fußgänger	q1 7605,14600 7589,14627 7549,14664 7514,14687
 Kelheimer Str.: einige Fußgänger, Bordstein	q2 5894,10287 5898,10318
 Würzburger Str.: einige Fußgänger, Bordsteine	q3 5898,10318 5907,10347
 Wilhelm-Hoff-Str.: einige Fußgänger, kurvig	q1 19057,3422 19033,3397

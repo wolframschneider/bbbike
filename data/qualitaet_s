@@ -1429,7 +1429,7 @@ Christburger Str.: Asphalt	Q0 11912,14486 12177,14335
 Pasteurstr.: Asphalt	Q0 12188,14350 12335,14246 12486,14143
 Pasteurstr.: Kopfsteinpflaster	Q2 12486,14143 12594,14065 12766,13942
 Ebelingstr.: Kopfsteinpflaster	Q2 13481,13128 13598,13180 13692,13221
-Cuvrystr.: Asphalt	Q0 13035,10076 13132,10239
+Cuvrystr.: Asphalt und gepflasterte Abschnitte	Q1 13035,10076 13132,10239
 Cuvrystr.: gutes Kopfsteinpflaster	Q1 13132,10239 13151,10276 13197,10355
 Cuvrystr.: Asphalt	Q0 13197,10355 13249,10445
 Cuvrystr.: Asphalt	Q0 13249,10445 13292,10513
@@ -8302,8 +8302,8 @@ Drebkauer Str.: Beton	Q0 6317,20751 6117,20738
 John-Sieg-Str.: Beton	Q0 15434,11846 15504,11809 15532,11753 15660,11695
 (am Kaiser's): Verbundsteinpflaster	Q1 15714,11941 15710,11857
 Frankfurter Allee [Wohngebiet]: Asphalt	Q0 15714,11941 15717,12010 15717,12015
-Frankfurter Allee [Wohngebiet]: Beton	Q0 15335,11943 15400,11976 15504,11967 15597,11957 15714,11941
-Frankfurter Allee [Wohngebiet]/Schulze-Boysen-Str.: Beton	Q0 15597,11957 15592,11881 15710,11857 15738,11851 15836,11840
+Frankfurter Allee [Wohngebiet]: Beton	Q0 15330,11946 15405,11983 15504,11969 15602,11956 15714,11941
+Frankfurter Allee [Wohngebiet]/Schulze-Boysen-Str.: Beton	Q0 15602,11956 15592,11881 15710,11857 15738,11851 15836,11840
 Frankfurter Allee [Wohngebiet]: Beton	Q0 15836,11840 15856,11835 15871,11832 15930,11843 15941,11855 15952,11905 16128,11881 16190,11872 16214,11935
 Elsterwerdaer Platz: Gehwegplatten	Q0 20818,11293 20829,11275 20839,11300 21055,11284 21084,11319 21110,11326 21134,11331
 Haltoner Str.: Verbundsteinpflaster	Q1 20968,11203 21010,11223 21055,11284
@@ -8717,7 +8717,7 @@ Branitzer Platz (Westend): Asphalt mit einigen Schäden	Q1 1338,12055 1381,12064 
 Kastanienallee (Westend): Asphalt mit einigen Schäden	Q1 1366,12168 1379,12219
 Westendallee: Asphalt	Q0 131,12672 130,12624 151,12541 179,12434 208,12305 232,12207 262,12085 301,11942 323,11801 329,11696 395,11486 425,11455 461,11455 541,11464
 Schulze-Boysen-Str. [Wohngebiet]: Beton	Q1 15856,11835 15766,11680 15730,11694 15724,11680 15679,11591 15555,11351
-John-Sieg-Str.: Asphalt	Q0 15504,11967 15461,11897 15434,11846 15411,11823
+John-Sieg-Str.: Asphalt	Q0 15504,11969 15461,11897 15434,11846 15411,11823
 Kaiser-Wilhelm-Str.: Asphalt mit Löchern	Q1; 6613,3320 6780,3497
 Liebenowzeile: Asphalt	Q0 6820,4347 6826,4472 6826,4500 6841,4667 6845,4761 6846,4808
 Franckepark: wassergebundene Decke	Q1 9339,6076 9349,6102 9376,6102
@@ -9672,7 +9672,7 @@ Alter Fischerweg: unbefestigte Straße	Q2 29960,5467 30001,5460
 Alter Fischerweg: Kopfsteinpflaster	Q2 30001,5460 30090,5446
 (Am Nordhafen - Uferweg am Nordhafen): Asphalt	Q0 7733,14570 7696,14577 7662,14579 7653,14570
 (Nordhafenpark): asphaltähnlicher Belag	Q0 7696,14577 7635,14628 7560,14670 7533,14702
-(Uferweg am Nordhafen - Am Nordhafen/Fennstr.): Asphalt	Q0 7605,14600 7589,14627 7549,14664 7514,14686
+(Uferweg am Nordhafen - Am Nordhafen/Fennstr.): Asphalt	Q0 7605,14600 7589,14627 7549,14664 7514,14687
 Bergstr.: Kleinsteinpflaster	Q1 9118,14306 9135,14317
 Bergstr.: Asphalt	Q0 9135,14317 9182,14281 9272,14208
 Pfarrhufenanger: Asphalt	Q0 25614,13057 25441,12838 25272,12629 25261,12615
@@ -10739,7 +10739,7 @@ Otto-Weidt-Platz: Kleinsteinpflaster	Q1 7732,14131 7818,14185 7866,14215
 Am Bahnhof Wuhlheide: Betonpflaster	Q0 20430,7122 20524,7176 20533,7199 20575,7226 20629,7189
 An der Schule [Rad- und Gehweg]: Asphalt	Q0 24747,11524 24768,11616 24759,11666
 Hönower Str.: Asphalt, einige Schäden und Unebenheiten	Q0 24530,12296 24556,12181 24554,12100 24556,12056 24563,11980 24575,11932
-Manfred-von-Richthofen-Str.: Asphalt mit einigen Schäden	Q1 9099,8670 9158,8706 9229,8718
+Manfred-von-Richthofen-Str.: Asphalt mit einigen Schäden	Q1 9093,8665 9158,8706 9229,8718
 Manfred-von-Richthofen-Str.: Asphalt mit einigen Schäden	Q0; 8731,7956 8757,7841 8796,7751 8812,7730 8864,7676
 Schillingstr.: Asphalt mit Querrissen	Q0 11635,12745 11596,12668 11562,12597 11497,12463
 (Verbindungschaussee - Dahlemer Feld, nördlicher Weg): Waldweg, Wurzeln	Q2 -1040,7550 -1248,7704
@@ -10897,6 +10897,8 @@ Witzlebenstr.: Asphalt mit einigen Aufpflasterungen	Q0; 2986,11413 2921,11311
 Park Biesdorf: wassergebundene Decke	Q1 20807,12083 20857,12027
 Gubener Str.: Asphalt mit leichten Schäden	Q1; 13568,11560 13467,11778
 Gubener Str.: Asphalt	Q0; 13467,11778 13568,11560
+In den Alboingärten: Betonpflaster	Q0 7971,6087 7910,6090
+In den Alboingärten: unbefestigte Baustraße	Q2 7910,6090 7739,6099 7646,6031 7638,5967
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -14902,7 +14904,7 @@ Lutherstr. (Lichtenrade): Beton	Q0 10692,-804 10726,-1166
 Lutherstr. (Lichtenrade): Gehwegplatten	Q0 10726,-1166 10728,-1198 10720,-1340
 Grimmingweg: guter Beton	Q0 9984,1860 10001,1814 10004,1787 10003,1768 9947,1559
 Grimmingweg: guter Asphalt	Q0 9947,1559 9943,1543 9931,1502 9908,1416
-Grimmingweg: Verbundsteinpflaster	Q1 9908,1416 9832,1380
+Grimmingweg: Verbundsteinpflaster	Q1 9908,1416 9870,1398 9832,1380
 Gallipoliweg: guter Beton	Q0 10455,4189 10460,4272
 Gallipoliweg: guter Beton	Q0 10460,4272 10462,4328
 Straße 9 (Lichtenrade): guter Asphalt	Q0 11747,-440 11644,-451 11454,-470 11203,-495 11176,-489

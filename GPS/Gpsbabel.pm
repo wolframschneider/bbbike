@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2005,2008,2012,2013,2015,2016 Slaven Rezic. All rights reserved.
+# Copyright (C) 2005,2008,2012,2013,2015,2016,2022 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -17,7 +17,7 @@ push @ISA, 'GPS';
 
 use strict;
 use vars qw($VERSION $GPSBABEL $DEBUG);
-$VERSION = '1.20';
+$VERSION = '1.21';
 
 use File::Basename qw(dirname);
 use BBBikeUtil qw(is_in_path bbbike_root);
@@ -96,35 +96,33 @@ sub convert_to_route {
     @coords;
 }
 
+# Note: in the case of .gpx as input file gpsbabel is not used.
 sub convert_to_strassen_using_gpsbabel {
     my($self, $file, %args) = @_;
     my $title = $args{title} || $file;
     my $input_format = $args{input_format} || die "input_format is missing";
-    require File::Temp;
-    my(undef,$ofilename) = File::Temp::tempfile(UNLINK => 1);
-    my @cmd = ("-t",
-	       "-i", $input_format, "-f", $file,
-	       "-o", "gpsman", "-F", $ofilename,
-	      );
-    warn "Run\n    @cmd\n    ...\n" if $DEBUG;
-    $self->run_gpsbabel([@cmd]);
-    # Hack: set track name
-    my($o2fh,$o2filename) = File::Temp::tempfile(UNLINK => 1);
-    open my $F, $ofilename
-	or die "Can't open $ofilename: $!";
-    while(<$F>) {
-	s/(^!T:)/$1\t$title/;
-	print $o2fh $_;
+    my($gpxfile, $tmpfile);
+    if ($input_format ne 'gpx') {
+	require File::Temp;
+	(undef,$tmpfile) = File::Temp::tempfile(UNLINK => 1);
+	my @cmd = ("-t",
+		   "-i", $input_format, "-f", $file,
+		   "-o", "gpx", "-F", $tmpfile,
+		  );
+	warn "Run\n    @cmd\n    ...\n" if $DEBUG;
+	$self->run_gpsbabel([@cmd]);
+	$gpxfile = $tmpfile;
+    } else {
+	$gpxfile = $file;
     }
-    close $F;
-    close $o2fh
-	or die "Error writing to $o2filename: $!";
 
-    require Strassen::Gpsman;
-    my $s = Strassen::Gpsman->new($o2filename, cat => "#000080");
+    require Strassen::GPX;
+    my $s = Strassen::GPX->new($gpxfile, cat => "#000080");
+    $s->set_global_directives({title => [$title]});
 
-    unlink $ofilename unless $File::Temp::KEEP_ALL;
-    unlink $o2filename unless $File::Temp::KEEP_ALL;
+    if (defined $tmpfile) {
+	unlink $tmpfile unless $File::Temp::KEEP_ALL;
+    }
 
     $s;
 }
@@ -178,6 +176,19 @@ sub gpsbabel_available {
     } else {
 	return is_in_path($GPSBABEL);
     }
+}
+
+sub gpsbabel_supports {
+    my($self, $fileformat) = @_;
+    die "gpsbabel_supports can currently only check if 'gpsman' support is built in.\n"
+	if $fileformat ne 'gpsman';
+    open my $ofh, '-|', 'gpsbabel', '-h' or die $!;
+    while(<$ofh>) {
+	if (/\b\Q$fileformat\E\b/) {
+	    return 1;
+	}
+    }
+    return 0;
 }
 
 # May be called also as a static method
