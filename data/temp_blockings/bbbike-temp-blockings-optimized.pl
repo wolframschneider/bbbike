@@ -3386,8 +3386,8 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1191050.php
 #: osm_watch: way id="29547073" version="11"
 #: XXX Nach den Bauarbeiten vermutlich bessere Qualität
-#: last_checked: 2022-03-03
-#: next_check: 2022-05-01
+#: last_checked: 2022-05-04
+# REMOVED --- #: next_check: 2022-05-01
 	2::inwork 14980,8940 14947,8993 14855,9046 14705,9034
 ',
          'from' => undef,
@@ -3718,7 +3718,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-04-21 (mapillary)
+#: last_checked: 2022-05-03 (mapillary)
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 ',
@@ -4818,7 +4818,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://www.berlinhyp.de/de/media/newsroom/berlin-hyp-baut-neue-unternehmenszentrale-b-one-nach-h%C3%B6chsten-energiestandards (fertig: Ende 2023)
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/b-one-berlin-hyp-ag-neubau.955/#post-17434
-#: last_checked: 2022-01-13 (architektur-urbanistik)
+#: by: https://baustelle.strabag.com/deutschland?tx_ecxsitebaustelle_webcam%5Baction%5D=detail&tx_ecxsitebaustelle_webcam%5Bcontroller%5D=Webcam&tx_ecxsitebaustelle_webcam%5Bday%5D=4&tx_ecxsitebaustelle_webcam%5Bmonth%5D=05&tx_ecxsitebaustelle_webcam%5Buid%5D=300&tx_ecxsitebaustelle_webcam%5Byear%5D=2022&cHash=96b9a3ee3c205301473cfbdb541e9d2a (Webcam)
+#: last_checked: 2022-05-04 (webcam)
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 	q3::inwork; 6626,11178 6549,11015
@@ -5157,11 +5158,11 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'until' => undef
        },
        {
-         'data' => '#: note: Durchfahrt möglich, gesehen am 2022-03-23 mittags
+         'data' => '#: note: Durchfahrt möglich, gesehen: 2022-03-23 mittags, 2022-05-04 mittags
 #: XXX Bleibt es bei der möglichen Durchfahrt?
 #: osm_watch: node id="1511805342" version="4"
 #: osm_watch: node id="9448539551" version="1"
-#: last_checked: 2022-03-23
+#: last_checked: 2022-05-04
 	2 14249,8075 14239,8095 14247,8254 14229,8278
 ',
          'from' => undef,
@@ -5173,7 +5174,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: next_check_id: STRALAUER-2019
 #: note: explizites Verbot für Radfahrer auf der Stralauer Allee Richtung Südosten (wird aber von so gut wie allen Radfahrern ignoriert; abgesperrte Fahrspur ist meistens gut passierbar)
-#: last_checked: 2022-05-03
+#: last_checked: 2022-05-05
 #: check_frequency: 30d
 #: next_check: 2022-06-30
 	1::inwork 13596,10722 13678,10685 13779,10642 13919,10583
@@ -5203,6 +5204,8 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1510640770461671434#m
 #: by: https://nitter.net/pic/media%2FFPMDmJMXoAcscus.jpg%3Fname%3Dorig
 #: by: https://nitter.net/pic/media%2FFPMDmJMX0AMSw_N.jpg%3Fname%3Dorig
+#: by: https://viz.berlin.de/2022/05/verkehrsvorschau-050522/ (Unterbrechung während des Bölschestraßenfests)
+#: source_id: viz2021:13.618661,52.455532,09.05.2022,06:00
 #: confirmed_by: srt
 	q4::inwork; 25567,5749 25479,5753 25294,5761 25123,5767 25121,5795
 ',
@@ -5230,7 +5233,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1513397936151044099#m
 #: by: https://nitter.net/pic/media%2FFP1LIs8XMAENMUm.jpg%3Fname%3Dorig
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? vvv
-#: last_checked: 2022-04-18 vvv
+#: last_checked: 2022-05-04 vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2022-04-11 vvv
 	q4::inwork; 15560,7400 15693,7512
@@ -5325,6 +5328,33 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'text' => 'Jessnerstr.: zwischen Travestr. und Oderstr. dienstags zwischen 15 und 19 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 03.05. bis 06.07.',
          'type' => 'handicap',
          'until' => 1657123200
+       },
+       {
+         'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: also_indoor: traffic (none)
+#: last_checked: 2022-05-04
+	q4::inwork; 15436,7031 15555,7133 15695,7254
+',
+         'from' => undef,
+         'id' => 3544,
+         'text' => 'Hänselstr.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Südwesten, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: note: etwa 40m sind gesperrt; laut rbb bis Anfang Juni 2022
+#: by: https://nitter.net/VIZ_Berlin/status/1522185157117108224#m
+#: by: https://nitter.net/pic/media%2FFR_IhjAXIAAI5Cf.jpg%3Fname%3Dorig
+#: by: https://nitter.net/pic/media%2FFR_Iyz8WUAAg28B.jpg%3Fname%3Dorig
+#: XXX_prog: eigentlich q4+::inwork;
+	q4::inwork; 5248,13434 5368,13406
+',
+         'from' => 1651655760,
+         'id' => 3545,
+         'source_id' => 'viz2021:13.328697,52.527383,05.05.2022,11:16',
+         'text' => 'Turmstr.: Fahrbahn zwischen Beusselstr. und Gotzkowskystr. Richtung Osten gesperrt (geplatzte Wasserleitung), vom 05.05.2022 bis voraussichtlich Anfang Juni 2022',
+         'type' => 'handicap',
+         'until' => 1654095600
        }
      
 );

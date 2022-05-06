@@ -35,13 +35,14 @@ my $isodate2epoch = sub {
      { from  => $isodate2epoch->("2019-06-06 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-06-10 23:59:59"),
        periodic => 1,
-       recurrences => [['easter', 47, start => "2021-10-25T00:00:00"]], # zwei Tage vor Pfingsten
+       recurrences => [['easter', 47, start => "2022-10-25T00:00:00"]], # zwei Tage vor Pfingsten
        text  => 'Straßenfest rund um den Blücherplatz, 07.06.2019 bis 10.06.2019, Sperrungen fangen schon einen Tag vorher an',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.berlin.de/tickets/suche/detail.php?id=810735
 #: by: https://www.gratis-in-berlin.de/festivals/item/2009881-strassenfest-am-bluecherplatz-kreuzberg-karneval-der-kulturen (geplant 03.06.2022 bis 06.06.2022)
 #: by: https://www.karneval.berlin/ (findet möglicherweise am 15. August 2021 statt --- gibt es überhaupt ein Straßenfest vorher?)
+#: by: https://www.berlin.de/events/2092491-2229501-karneval-der-kulturen.html (2022 abgesagt)
 	2::temp 9521,10010 9827,10051
 	2::temp 9521,10010 9448,10014
 	2::temp 9599,10175 9687,10180 9825,10206
@@ -66,13 +67,14 @@ EOF
      { from  => $isodate2epoch->("2019-06-08 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2019-06-09 23:59:59"),
        periodic => 1,
-       recurrences => [['easter', 49, start => "2021-10-25T00:00:00"]], # Pfingstsonntag
+       recurrences => [['easter', 49, start => "2022-10-25T00:00:00"]], # Pfingstsonntag
        source_id => 'https://www.karneval.berlin/', # früher http://www.karneval-berlin.de/de/, heute ist das eine Werbeseite
        text  => 'Karneval der Kulturen, 09.06.2019',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.karneval.berlin/ (findet möglicherweise am 15. August 2021 statt)
 #: by: https://www.karneval.berlin/de/aktuell.html (fällt 2021 wieder aus)
+#: by: https://www.berlin.de/events/2092491-2229501-karneval-der-kulturen.html (2022 abgesagt)
 	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10951,9216 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9047,9750
 # REMOVED ---	2::temp 9047,9750 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
 	2::temp 10713,9260 10670,9286 10639,9304 10615,9300 10564,9292
@@ -28594,8 +28596,8 @@ EOF
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1191050.php
 #: osm_watch: way id="29547073" version="11"
 #: XXX Nach den Bauarbeiten vermutlich bessere Qualität
-#: last_checked: 2022-03-03
-#: next_check: 2022-05-01
+#: last_checked: 2022-05-04
+# REMOVED --- #: next_check: 2022-05-01
 	2::inwork 14980,8940 14947,8993 14855,9046 14705,9034
 EOF
      },
@@ -30551,7 +30553,7 @@ EOF
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-04-21 (mapillary)
+#: last_checked: 2022-05-03 (mapillary)
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 EOF
@@ -34404,7 +34406,8 @@ EOF
        data  => <<EOF,
 #: by: https://www.berlinhyp.de/de/media/newsroom/berlin-hyp-baut-neue-unternehmenszentrale-b-one-nach-h%C3%B6chsten-energiestandards (fertig: Ende 2023)
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/b-one-berlin-hyp-ag-neubau.955/#post-17434
-#: last_checked: 2022-01-13 (architektur-urbanistik)
+#: by: https://baustelle.strabag.com/deutschland?tx_ecxsitebaustelle_webcam%5Baction%5D=detail&tx_ecxsitebaustelle_webcam%5Bcontroller%5D=Webcam&tx_ecxsitebaustelle_webcam%5Bday%5D=4&tx_ecxsitebaustelle_webcam%5Bmonth%5D=05&tx_ecxsitebaustelle_webcam%5Buid%5D=300&tx_ecxsitebaustelle_webcam%5Byear%5D=2022&cHash=96b9a3ee3c205301473cfbdb541e9d2a (Webcam)
+#: last_checked: 2022-05-04 (webcam)
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 	q3::inwork; 6626,11178 6549,11015
@@ -34847,11 +34850,11 @@ EOF
        text  => 'Dieselstr. - westlicher Mergenthalerring: Durchfahrt kann möglicherweise durch Bauzäune versperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: note: Durchfahrt möglich, gesehen am 2022-03-23 mittags
+#: note: Durchfahrt möglich, gesehen: 2022-03-23 mittags, 2022-05-04 mittags
 #: XXX Bleibt es bei der möglichen Durchfahrt?
 #: osm_watch: node id="1511805342" version="4"
 #: osm_watch: node id="9448539551" version="1"
-#: last_checked: 2022-03-23
+#: last_checked: 2022-05-04
 	2 14249,8075 14239,8095 14247,8254 14229,8278
 EOF
      },
@@ -34863,7 +34866,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: STRALAUER-2019
 #: note: explizites Verbot für Radfahrer auf der Stralauer Allee Richtung Südosten (wird aber von so gut wie allen Radfahrern ignoriert; abgesperrte Fahrspur ist meistens gut passierbar)
-#: last_checked: 2022-05-03
+#: last_checked: 2022-05-05
 #: check_frequency: 30d
 #: next_check: 2022-06-30
 	1::inwork 13596,10722 13678,10685 13779,10642 13919,10583
@@ -34886,11 +34889,13 @@ EOF
        until => 1654786800, # 2022-06-09 17:00
        text  => 'Lindenstr. (Friedrichshagen): temporäre Einbahnstraßenregelung, vom 04.04.2022 07:00 bis 09.06.2022 17:00',
        type  => 'handicap',
-       source_id => 'viz2021:13.618661,52.455532,04.04.2022,07:00',
+       source_id => 'viz2021:13.618661,52.455532,04.04.2022,07:00', # inaktiv
        data  => <<EOF,
 #: by: https://nitter.net/VIZ_Berlin/status/1510640770461671434#m
 #: by: https://nitter.net/pic/media%2FFPMDmJMXoAcscus.jpg%3Fname%3Dorig
 #: by: https://nitter.net/pic/media%2FFPMDmJMX0AMSw_N.jpg%3Fname%3Dorig
+#: by: https://viz.berlin.de/2022/05/verkehrsvorschau-050522/ (Unterbrechung während des Bölschestraßenfests)
+#: source_id: viz2021:13.618661,52.455532,09.05.2022,06:00
 #: confirmed_by: srt
 	q4::inwork; 25567,5749 25479,5753 25294,5761 25123,5767 25121,5795
 EOF
@@ -34927,7 +34932,7 @@ EOF
 #: by: https://nitter.net/VIZ_Berlin/status/1513397936151044099#m
 #: by: https://nitter.net/pic/media%2FFP1LIs8XMAENMUm.jpg%3Fname%3Dorig
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? vvv
-#: last_checked: 2022-04-18 vvv
+#: last_checked: 2022-05-04 vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2022-04-11 vvv
 	q4::inwork; 15560,7400 15693,7512
@@ -35038,6 +35043,31 @@ EOF
        data  => <<EOF,
 #: confirmed_by: srt (am 2022-05-03 gesehen)
 	q4::temp::play 14946,11697 14986,11760
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Hänselstr.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Südwesten, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: also_indoor: traffic (none)
+#: last_checked: 2022-05-04
+	q4::inwork; 15436,7031 15555,7133 15695,7254
+EOF
+     },
+     { from  => 1651655760, # 2022-05-04 11:16
+       until => 1654095600, # 2022-06-01 17:00
+       text  => 'Turmstr.: Fahrbahn zwischen Beusselstr. und Gotzkowskystr. Richtung Osten gesperrt (geplatzte Wasserleitung), vom 05.05.2022 bis voraussichtlich Anfang Juni 2022',
+       type  => 'handicap',
+       source_id => 'viz2021:13.328697,52.527383,05.05.2022,11:16', # kein Endedatum
+       data  => <<EOF,
+#: note: etwa 40m sind gesperrt; laut rbb bis Anfang Juni 2022
+#: by: https://nitter.net/VIZ_Berlin/status/1522185157117108224#m
+#: by: https://nitter.net/pic/media%2FFR_IhjAXIAAI5Cf.jpg%3Fname%3Dorig
+#: by: https://nitter.net/pic/media%2FFR_Iyz8WUAAg28B.jpg%3Fname%3Dorig
+#: XXX_prog: eigentlich q4+::inwork;
+	q4::inwork; 5248,13434 5368,13406
 EOF
      },
     );
