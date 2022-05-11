@@ -148,7 +148,7 @@ Wichmannstr.	1 6549,11015 6681,10959 6824,10904
 Burggrafenstr.	1 6266,10927 6278,10949 6472,11049
 L¸tzowufer	1 6873,11011 6742,11099 6626,11178 6582,11202
 Mulackstr.	1 10313,13568 10406,13543 10535,13509 10633,13474
-Kirchhofstr.	1 13188,7590 13117,7471 13029,7353
+Kirchhofstr.	1 13179,7613 13173,7567 13117,7471 13029,7353
 Prenzlauer Allee/Sredzkistr.	3nocross::ignrte 11655,14697 11633,14631 11572,14452
 Prenzlauer Allee -> Sredzkistr.: Prenzlauer Allee/Sredzkistr.	3::igndisp 11572,14452 11633,14631 11535,14688
 Prenzlauer Allee -> Christburger Str.: Prenzlauer Allee/Sredzkistr.	3::igndisp 11655,14697 11633,14631 11912,14486
@@ -284,7 +284,7 @@ Buchholzer Str. -> Milastr.: Schˆnhauser Allee	3::igndisp 11055,15504 10917,1552
 Milastr. -> Schˆnhauser Allee: Schˆnhauser Allee	3::igndisp 10768,15534 10917,15525 10941,15697
 Milastr. -> Buchholzer Str.: Schˆnhauser Allee	3::igndisp 10768,15534 10917,15525 11055,15504
 Am Kupfergraben	1 9754,12775 9815,12705 9870,12657 9900,12643 9919,12613
-Uthmannstr.	1 13150,7845 12914,7785
+Uthmannstr.	1 13156,7839 12916,7775
 Herrnhuter Str.	1 12898,7832 13103,7889
 Ganghoferstr.	1 12779,8188 12805,8194 12873,8218 12911,8232
 Richardstr.	1 12870,8087 12797,8168 12779,8188
@@ -556,7 +556,6 @@ Mittelstreifen	3nocross::ignrte 1228,3210 1338,3300 1415,3362
 Berliner Str. -> Mˆrchinger Str.: Mittelstreifen	3::igndisp 1415,3362 1338,3300 1388,3197
 Mˆrchinger Str. -> Berliner Str.: Mittelstreifen	3::igndisp 1388,3197 1338,3300 1228,3210
 Mittelstreifen	3nocross::ignrte 8952,16666 9008,16799 9030,16853 9033,16862 9082,16982
-Prinzenallee -> Gotenburger Str.: Mittelstreifen	3::igndisp 8952,16666 9008,16799 8847,16870
 Gotenburger Str. -> Prinzenallee: Mittelstreifen	3::igndisp 8847,16870 9008,16799 9030,16853
 Prinzenallee -> Biesentaler Str.: Mittelstreifen	3::igndisp 9033,16862 9030,16853 9245,16758
 Biesentaler Str. -> Prinzenallee: Mittelstreifen	3::igndisp 9245,16758 9030,16853 9008,16799
@@ -994,7 +993,7 @@ Hermannswerder	1 -14306,-2867 -14044,-2918 -13765,-2974 -13733,-2967
 Neue Schˆnholzer Str.	1 10089,18180 10141,18030 10179,17772
 Kleine Kurstr.	1 10230,11839 10189,11773
 Schendelgasse	1 10644,13497 10703,13467 10767,13443
-Leipziger Str. (Potsdam)	1 -12431,-2096 -12534,-2125 -12620,-2174 -12697,-2235 -12708,-2257 -12713,-2279 -12743,-2387 -12756,-2437 -12779,-2467 -12796,-2488 -12879,-2573 -13003,-2754 -13022,-2776 -13062,-2901
+Leipziger Str. (Potsdam)	1 -12431,-2096 -12534,-2125 -12620,-2174 -12655,-2202 -12697,-2235 -12708,-2257 -12713,-2279 -12743,-2387 -12756,-2437 -12779,-2467 -12796,-2488 -12879,-2573 -13003,-2754 -13022,-2776 -13062,-2901
 Mittelstreifen	3nocross::ignrte 6152,9136 6264,9156 6361,9175
 Grunewaldstr. -> M¸nchener Str.: Mittelstreifen	3::igndisp 6361,9175 6264,9156 6276,9042
 Grunewaldstr. -> M¸nchener Str.: Mittelstreifen	3::igndisp 6152,9136 6264,9156 6255,9194
@@ -1061,12 +1060,14 @@ Eisenzahnstr. -> Paulsborner Str.: Mittelstreifen	3::igndisp 3720,10027 3701,100
 Paulsborner Str. -> Eisenzahnstr.: Mittelstreifen	3::igndisp 3701,10047 3741,10097 3728,10125
 Eisenzahnstr. -> Paulsborner Str.: Mittelstreifen	3::igndisp 3728,10125 3741,10097 3852,10236
 Eisenhartstr.	1 -12637,-8 -12779,-294 -12821,-417
-Fuﬂg‰ngerzone	3nocross::ignrte -13556,-1140 -13410,-1101 -13289,-1071 -13173,-1039 -12999,-1000 -12883,-976
+Fuﬂg‰ngerzone	3nocross::ignrte -13556,-1140 -13525,-1131 -13410,-1101 -13289,-1071 -13173,-1039 -12999,-1000 -12883,-976
+Schopenhauerstr. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13516,-1225 -13525,-1131 -13556,-1140
+Brandenburger Str. -> Schopenhauerstr.: Fuﬂg‰ngerzone	3::igndisp -13410,-1101 -13525,-1131 -13516,-1225
 Brandenburger Str. -> Hermann-Elflein-Str.: Fuﬂg‰ngerzone	3::igndisp -13289,-1071 -13410,-1101 -13392,-1196
-Brandenburger Str. -> Hermann-Elflein-Str.: Fuﬂg‰ngerzone	3::igndisp -13556,-1140 -13410,-1101 -13433,-991
+Brandenburger Str. -> Hermann-Elflein-Str.: Fuﬂg‰ngerzone	3::igndisp -13525,-1131 -13410,-1101 -13433,-991
 Hermann-Elflein-Str. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13433,-991 -13410,-1101 -13289,-1071
 Hermann-Elflein-Str. -> Hermann-Elflein-Str.: Fuﬂg‰ngerzone	3::igndisp -13433,-991 -13410,-1101 -13392,-1196
-Hermann-Elflein-Str. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13392,-1196 -13410,-1101 -13556,-1140
+Hermann-Elflein-Str. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13392,-1196 -13410,-1101 -13525,-1131
 Hermann-Elflein-Str. -> Hermann-Elflein-Str.: Fuﬂg‰ngerzone	3::igndisp -13392,-1196 -13410,-1101 -13433,-991
 Brandenburger Str. -> Lindenstr.: Fuﬂg‰ngerzone	3::igndisp -13173,-1039 -13289,-1071 -13305,-1176
 Brandenburger Str. -> Lindenstr.: Fuﬂg‰ngerzone	3::igndisp -13410,-1101 -13289,-1071 -13264,-952
@@ -1595,7 +1596,7 @@ Friedbergstr.:	3 2793,10752 2766,10750 2673,10670
 Friedbergstr.:	3 2793,10752 2766,10750 2679,10931
 Friedbergstr.:	3 2793,10752 2766,10750 2845,10840
 Wilhelm-Staab-Str. (Potsdam)	1 -13001,-1329 -12988,-1265 -12981,-1222 -12961,-1105
-B‰ckerstr. (Potsdam)	1 -13314,-1226 -13287,-1231 -13203,-1246
+B‰ckerstr. (Potsdam)	1 -13314,-1226 -13287,-1231 -13202,-1250
 Brandenburger Str. (Potsdam)	1 -12801,-960 -12883,-976
 Stadtheide (Potsdam)	1 -15432,-2763 -15504,-2984 -15537,-3091 -15501,-3122
 Stormstr. (Potsdam)	1 -15243,-2459 -15168,-2529 -15060,-2626
@@ -2080,8 +2081,8 @@ Oberj‰gerweg	2:Anlieger -3858,21445 -3929,21102
 H¸gelschanze	1 -3881,15589 -3982,15577
 Petrusweg	2:Anlieger 15225,1553 15217,1463
 Lappiner Str.	1 20418,12699 20545,12683
-Mittelstreifen	3nocross::ignrte 12892,7850 12898,7832 12914,7785
-Herrnhuter Weg -> Karl-Marx-Str.: Mittelstreifen	3::igndisp 13103,7889 12898,7832 12914,7785
+Mittelstreifen	3nocross::ignrte 12892,7850 12898,7832 12916,7775
+Herrnhuter Weg -> Karl-Marx-Str.: Mittelstreifen	3::igndisp 13103,7889 12898,7832 12916,7775
 Mittelstreifen	3nocross::ignrte 11589,12768 11635,12745 11678,12727 11976,12595
 Karl-Marx-Allee -> Schillingstr.: Mittelstreifen	3::igndisp 11678,12727 11635,12745 11596,12668
 Karl-Marx-Allee -> Berolinastr.: Mittelstreifen	3::igndisp 11589,12768 11635,12745 11645,12774
@@ -2174,8 +2175,8 @@ Chamissoplatz	2:Anlieger 9526,9104 9546,9198
 Am Tempelhofer Berg	2:Anlieger 9295,9047 9298,9112 9304,9241 9309,9347
 Schleiermacherstr.	1:Anlieger 10032,9456 10004,9268
 Marheinekeplatz	2:Anlieger 9759,9307 9892,9286
-Karl-Marx-Platz: Poller	3 13100,7626 13130,7633 13177,7644
-Karl-Marx-Platz: Poller	3 13177,7644 13130,7633 13100,7626
+Karl-Marx-Platz: Poller	3 13100,7626 13130,7633 13174,7644
+Karl-Marx-Platz: Poller	3 13174,7644 13130,7633 13100,7626
 (Wohngebiet an der Kopenhagener Str.): Einbahnstraﬂe auﬂer f¸r Radfahrer	1 7578,19753 7546,19665 7578,19648
 Weidenk‰tzchenweg: Poller	3 21435,99 21450,38 21465,-15
 Weidenk‰tzchenweg: Poller	3 21465,-15 21450,38 21435,99
@@ -2237,3 +2238,7 @@ Grimmingweg	1 9832,1380 9870,1398
 Kettinger Str. [Siedlungsstraﬂe]	2:Anlieger 10116,949 10035,1000 9976,1042
 Kettinger Str. [Siedlungsstraﬂe]	2:Anlieger 10091,892 10011,942 9950,985
 Kettinger Str. [Siedlungsstraﬂe]	2:Anlieger 10035,1000 10011,942 9987,889
+Gotenburger Str.	1 9008,16799 8847,16870
+In der Feldmark - Marie-Curie-Ring: Poller	3 -18405,203 -18449,351 -18451,355
+In der Feldmark - Marie-Curie-Ring: Poller	3 -18451,355 -18449,351 -18405,203
+Karl-Marx-Platz	1 12972,7602 13100,7626

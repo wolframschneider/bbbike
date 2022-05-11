@@ -22,6 +22,7 @@ Dorotheenstr.: Bauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 8775,12457 8904,1
 Dorotheenstr.: Bauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 8999,12498 9011,12423
 Mittelstr.: Bauarbeiten, Fahrbahn teilweise gesperrt	q3::inwork 9011,12423 9131,12438
+Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
 Friedrichstr.: Fuﬂg‰ngerzone mit Radspur, Hˆchstgeschwindigkeit 20km/h	q1 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
 (zwischen VoltAir und The Student Hotel): Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwork 11240,12368 11344,12410
 Parochialstr.: Fahrbahn zwischen J¸denstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
@@ -1110,7 +1111,7 @@ Anna-Nemitz-Weg: Fuﬂg‰nger	q1 13943,2284 13905,2381 13885,2377 13872,2497 13891,
 (Park am Fennpfuhlpark - Anton-Saefkow-Platz): Fuﬂg‰nger	q1 15179,13872 15062,13827
 Anton-Saefkow-Platz: Fuﬂg‰ngerzone, Radfahrer frei	q2 15062,13827 15034,13814 15010,13807 14989,13815 14846,13760 14821,13674
 (Darﬂer Str. - Malchower See): Fuﬂg‰nger	q1 15505,17967 15825,18385 15949,18555
-Am Malchower See: Fuﬂg‰nger	q1 15611,18627 15732,18666 15774,18656 15873,18561 15949,18555 16161,18687
+Am Malchower See: Fuﬂg‰nger	q1 15611,18627 15732,18666 15774,18656 15873,18561 15949,18555 16036,18604 16161,18687
 (Wartenberger Str. - Margaretenhˆhe): Gehweg, f¸r Radfahrer freigegeben	q0 16216,19183 16314,19210 16349,19442 16343,19470 16309,19542 16359,19590 16384,19678
 (Siedlung Wartenberg - Tierheim): eng, mit Anh‰nger nur langsam passierbar	q2 19279,19517 19381,19830 19691,19748 19819,19602
 (J‰nschwalder Str. - Hˆnower Str.): eng	q2 25370,14421 25408,14189 25451,14018
@@ -2284,6 +2285,10 @@ Baruther Str.: asphaltierte Kissen (2x)	q1 9837,9856 9723,9842
 Solmsstr.: asphaltierte Kissen (2x)	q1 9723,9842 9705,9732
 (Nordpromenade, entlang der S-Bahn): einige Fuﬂg‰nger	q2 20640,12095 20807,12083
 Carl-Weder-Park: gemeinsamer Geh- und Radweg	q1 12595,6299 12614,6301 12638,6307 12812,6343 12979,6374
+(Pieskower Weg - Hanns-Eisler-Str.): einige Fuﬂg‰nger	q1 13224,15049 13249,15037 13270,15046 13295,15107 13313,15113 13324,15109
+(Falkenberger Chaussee - Wartenberger Str.): Bordstein, Rampe	q4 17577,17910 17521,17894
+(Falkenberger Chaussee - Wartenberger Str.): Rampe	q3 17521,17894 17568,17945
+Max-und Herta-Naujocks-Weg: Fuﬂg‰nger, schmaler Weg	q2 16036,18604 16077,18674 16112,18692 16133,18765 16163,18780
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -3093,7 +3098,6 @@ Tannenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3023,1
 Tannenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3038,18063 -3028,18027
 Isarstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 12349,8464 12368,8356
 Anton-Saefkow-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 13183,14400 13088,14469 13013,14523 12901,14594 12862,14618 12789,14670 12700,14726 12575,14812 12528,14845
-Karl-Marx-Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 12972,7602 13100,7626
 Barbarastr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 6456,3038 6372,2959 6329,2916 6359,2875
 Parchimer Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 22212,12403 22212,12422 22257,12481 22258,12573 22272,12610
 Stiftsweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 11001,18528 11239,18832 11263,18842
@@ -3156,7 +3160,6 @@ Kriemhildstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 173
 Am Lehnshof: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4291,22986 4264,22992 4202,23034
 Gartenstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 720,2718 835,2715
 Belﬂstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 7899,2391 7983,2348 7987,2337
-Gotenburger Str.: Einfahrt verboten: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9008,16799 8847,16870
 Fritz-Werner-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9105,2779 9081,2594
 Gravensteinstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 12229,22457 12185,22465
 Hauptstr. (Franzˆsisch Buchholz): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 12199,22367 12229,22457
@@ -3177,6 +3180,7 @@ Gr¸ne Aue: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 21954,1
 Am Heidehof: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -1410,2726 -1571,2669 -1612,2785
 Ehrenfelsstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 18737,8686 18778,8663
 Lilli-Henoch-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 12357,15020 12388,14926
+Sinsheimer Weg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 13774,8849 13687,8734
 Am Krusenick: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 22751,4970 22652,4966 22667,4912 22705,4874
 Josef-Nawrocki-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25796,4683 25796,4823
 Josef-Nawrocki-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25695,4714 25554,4758 25552,4829
@@ -3191,7 +3195,7 @@ H¸nensteig: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 6387,5
 Paul-Lincke-Ufer: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 12116,9825 11946,9913 11735,10022 11512,10105
 Jahnstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 11500,9116 11509,9392
 Neue Schˆnhauser Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 10527,13257 10423,13215 10310,13227
-Kirchhofstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13188,7590 13117,7471 13029,7353
+Kirchhofstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13179,7613 13173,7567 13117,7471 13029,7353
 Bjˆrnsonstr: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q1::igndisp; 10209,16674 10197,16528
 Ibsenstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q1::igndisp; 10295,16667 10209,16674
 Eichhornstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 8232,11414 8253,11306 8280,11296

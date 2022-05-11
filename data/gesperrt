@@ -238,7 +238,6 @@ Mariabrunner Weg	1 6841,17781 6909,17796 6985,17812
 Gustav-Müller-Platz	1 7644,8560 7606,8598 7643,8634 7682,8598 7644,8560
 Kolk/Behnitz	1 -3042,14682 -3025,14644 -2950,14624 -2944,14652 -2942,14666
 Karl-Marx-Platz	1 13100,7626 12987,7560
-Karl-Marx-Platz	1s 12972,7602 13100,7626
 Olympischer Platz	1 -157,11943 -505,11882 -514,11991 -272,12039 -193,12051 -110,12019
 Florapromenade	1 10207,17448 10284,17458 10320,17487 10311,17764
 Takustr.	1 2958,5598 2909,5674
@@ -810,7 +809,6 @@ Belßstr.	1s 7899,2391 7983,2348 7987,2337
 Röbeler Weg: Privatstraße, Durchfahrt verboten	2 24831,10730 24831,10772 24760,10790
 Markgrafenstr.	1 9799,10846 9834,10840
 Morgensternstr.	1 5212,2360 5229,2395
-Gotenburger Str.: Einfahrt verboten	1s 9008,16799 8847,16870
 Rosenfelder Str./Ring	1 17480,12003 17429,12030 17384,11976
 Fritz-Werner-Str.	1s 9105,2779 9081,2594
 Kraftwerk Reuter West	2 -447,14338 -495,14311 -650,14355 -792,14258 -1002,14162 -1020,14084
@@ -899,9 +897,12 @@ Ehrenfelsstr.	1s 18737,8686 18778,8663
 Mellenseestr. [Wohngebiet]	1 17587,9655 17633,9793 17633,9898
 Mellenseestr. [Wohngebiet]	1 17777,9649 17738,9822 17738,9922
 Mellenseestr. [Wohngebiet]	1 17920,9698 17868,9823 17838,9956
+Mühsamstr.	1 13818,12897 13830,12907
 Lilli-Henoch-Str.	1s 12357,15020 12388,14926
 (Weydemeyerstr.): durch Tore abgesperrt	2 11933,12701 11971,12785
-Straßenbahntrasse, Mittelstreifen	3nocross::ignrte 17400,17790 17482,17844 17601,17922 17675,17971
+Falkenberger Chaussee (Richtungsfahrbahn)	1::igndisp 17482,17844 17577,17910 17675,17971
+Falkenberger Chaussee (Richtungsfahrbahn)	1::igndisp 17675,17971 17579,17908 17482,17844
+Falkenberger Chaussee (Straßenbahntrasse)	3nocross::ignrte 17482,17844 17577,17910 17675,17971
 (An der Ostbahn - S-Bhf. Warschauer Str.): durch Zaun abgesperrt	2 13377,11345 13546,11280
 Eythstr. (Wendeschleife)	1 7682,5963 7615,5938 7606,5939 7618,5960 7638,5967 7682,5963
 Röblingstr.	1 7598,5926 7606,5939
@@ -911,6 +912,7 @@ Birkbuschstr. - Wolfensteindamm	1 4794,5161 4810,5134 4822,5114
 Mittelstreifen	3nocross::ignrte 6239,15553 6348,15423 6375,15391
 Amrumer Str. -> Ost-West-Str., Virchow-Klinikum: Mittelstreifen	3::igndisp 6375,15391 6348,15423 6265,15349
 Ost-West-Str., Virchow-Klinikum -> Amrumer Str.: Mittelstreifen	3::igndisp 6265,15349 6348,15423 6239,15553
+Sinsheimer Weg	1s 13774,8849 13687,8734
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1001,6 +1003,7 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 (Am Grünen Gitter - Schloss): auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14191,-818 -14199,-707 -14205,-644
 Bahnhofstr.	1s -8417,-2862 -8410,-2884
 Bienenwinkel	1 -13335,1927 -13333,1957 -13227,1962 -13228,1927
+Luisenhof: durch Tore abgesperrt	2 -13558,-2841 -13570,-2795
 Segelfliegerdamm (Zernsdorf - Niederlehme)	2 28499,-10164 28454,-10018 28385,-9820 28312,-9695 27950,-8900 27754,-8708
 Königs Wusterhausen - Wernsdorf	1 27704,-8747 27719,-8666
 Am Tonberg (Zeuthen)	1 24593,-7405 24492,-7311 24416,-7241
@@ -1032,7 +1035,7 @@ Heinestr. (Zepernick)	1 17659,27135 17759,27229
 Lindenberger Weg	1 17193,24683 17226,24664 17228,24640
 Lindenberger Weg	1 17228,24640 17193,24683
 Wiesenweg (Schulzendorf)	1 23717,-3975 23618,-3854 23538,-3808 23466,-3768 23456,-3746
-Str. der Einheit (Caputh)	1 -16868,-6959 -16823,-6996
+Str. der Einheit (Caputh)	1 -16885,-6959 -16834,-6993
 Am Stern	1 26002,-3362 26002,-3342 26011,-3331 26029,-3326 26048,-3334 26046,-3365 26013,-3367 26002,-3362
 Am Bergpark	1 30589,-1736 30664,-1629 30758,-1606 30968,-1681
 August-Bebel-Str. (Eichwalde)	1s 25269,-3906 25322,-4042
@@ -1179,7 +1182,7 @@ Stallschreiberstr.	1 10482,11398 10615,11240 10674,11170
 Jahnstr.	1s 11500,9116 11509,9392
 Waldweg	1s 25496,2429 24981,2580
 Neue Schönhauser Str.	1s 10527,13257 10423,13215 10310,13227
-Kirchhofstr.	1s 13188,7590 13117,7471 13029,7353
+Kirchhofstr.	1s 13179,7613 13173,7567 13117,7471 13029,7353
 Björnsonstr	1s 10209,16674 10197,16528
 Ibsenstr.	1s 10295,16667 10209,16674
 Eichhornstr.	1s 8232,11414 8253,11306 8280,11296
@@ -1994,6 +1997,9 @@ Bödikerstr. -> Stralauer Allee: unbequem passierbare Straße	3::igndisp 14447,104
 Mittelstreifen	3nocross::ignrte 11221,12250 11300,12241 11347,12223
 Stralauer Str. -> Dircksenstr.: Mittelstreifen	3::igndisp 11221,12250 11300,12241 11273,12301
 Dircksenstr. -> Stralauer Str.: Mittelstreifen	3::igndisp 11273,12301 11300,12241 11347,12223
+Mittelstreifen	3nocross::ignrte 12152,9015 12078,9055 12012,9092
+Sonnenallee -> Friedelstr.: Mittelstreifen	3::igndisp 12012,9092 12078,9055 12074,9217
+Friedelstr. -> Sonnenallee: Mittelstreifen	3::igndisp 12074,9217 12078,9055 12152,9015
 unbequemes Passieren des Mittelstreifens (parkende Autos)	3nocross::ignrte 12670,8679 12736,8629 12765,8605
 Sonnenallee -> Schönstedtstr.: unbequemes Passieren des Mittelstreifens (parkende Autos)	3::igndisp 12765,8605 12736,8629 12643,8533
 Schönstedtstr. -> Sonnenallee: unbequemes Passieren des Mittelstreifens (parkende Autos)	3::igndisp 12643,8533 12736,8629 12670,8679
@@ -2599,8 +2605,8 @@ tragen (Treppen zur U-Bahnbrücke, 2 x 3 Stufen)	0:20:-40 2292,4927
 tragen (Treppen zur U-Bahnbrücke, 2 x 3 Stufen)	0:20:-34 2175,4845
 tragen (Eisenbahnbrücke Templiner See)	0:60:-168 -15537,-4535
 tragen (Eisenbahnbrücke Templiner See)	0:60:-230 -15652,-4441
-tragen (Eisenbahnbrücke Caputh)	0:60:-167 -18002,-7496
-tragen (Eisenbahnbrücke Caputh)	0:60:-168 -17978,-7375
+tragen (Eisenbahnbrücke Caputh)	0:60:-60 -18002,-7496
+tragen (Eisenbahnbrücke Caputh)	0:60:-179 -18001,-7395
 tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60:-36 -21125,-2012
 tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60:87 -21227,-2017
 tragen (Elsensteg, 6 Stufen)	0:10:-141 13379,8703
@@ -3229,7 +3235,6 @@ Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, k
 Straße 77: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 15320,12375 15408,12394
 Straße des 17. Juni: Radweg gesperrt	1::igndisp 6164,11947 5900,11913
 Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 6024,11978 6132,11984 6164,11947
-Mehlbeerenweg: Straße existiert nicht mehr	2::inwork 11923,11881 11940,11982
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s 10472,14632 10320,14608
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 Alexanderufer - Charité: Tor ist wegen Corona-Beschränkungen geschlossen	2 8371,13399 8363,13402 8356,13404
@@ -3297,7 +3302,6 @@ Löwenbrücke: gesperrt	2:inwork 6417,11796 6438,11784
 Berliner Str. (Mahlow): Straße gesperrt, neue Bahnunterführung wird gebaut	2:inwork 10776,-4460 10896,-4469 10956,-4470
 tragen (Treppe) oder Aufzug benutzen	0:35:-104 10860,-4393
 tragen (Treppe) oder Aufzug benutzen	0:35:-107 10888,-4384
-Neue Plantage: hier noch Baustelle	2:inwork -13100,-1411 -13017,-1426
 Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-1449 -12694,-1408 -12727,-1416
 Erika-Wolf-Str. (Potsdam): während der Bauarbeiten gesperrt	2::inwork -12812,-1490 -12685,-1449
 Tor	BNP:5:-106:trailer=10 10281,19364

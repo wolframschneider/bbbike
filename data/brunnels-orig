@@ -191,7 +191,8 @@ Thaerstraßenbrücke	Br 14052,13389 14109,13449
 Eldenaer Brücke	Br 14906,12837 14940,12843
 Scheffelstraßenbrücke	Br 14940,12843 15010,12855
 Südliche Rhinstraßenbrücke	Br 18216,12262 18216,12239 18216,12209 18215,12123
-Falkenberger Chaussee, S-Bahnbrücke	Br 17400,17790 17482,17844 17601,17922 17675,17971 17721,18001 17744,18016
+Falkenberger Chaussee, S-Bahnbrücke	Br 17579,17908 17675,17971
+Falkenberger Chaussee, S-Bahnbrücke	Br 17577,17910 17675,17971
 S-Bahnunterführung Wartenberg	Tu 16998,18695 17024,18674 17008,18701 17068,18736 17086,18719 17077,18744
 Gehrenseestraßenbrücke	Br 18478,16753 18527,16789 18587,16834
 Hohenschönhausener Rhinstraßebrücke	Br 17706,15269 17626,15433
@@ -234,14 +235,14 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: XXX erstmal wird eine Behelfsbrücke erstellt (westlich); die neue Brücke wird Platz für eine Radwegunterführung haben
 #: source_id: 2147345790 (nicht mehr aktiv)
 #: source_id: 2147346453 (Leitungsbauarbeiten, bis 16.10.2020)
-#: last_checked: 2022-04-30 (mapillary) vvv
+#: last_checked: 2022-05-09 (osm) vvv
 #: check_frequency: 360d vvv
 #: next_check: 2023-12-01 vvv
-#: osm_watch: way id="4568174" version="36"
+#: osm_watch: way id="4568174" version="37"
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
 # REMOVED --- #: osm_watch: way id="883834105" version="16"
-#: osm_watch: way id="883834106" version="20"
-#: osm_watch: way id="883834107" version="16"
+#: osm_watch: way id="883834106" version="21"
+#: osm_watch: way id="883834107" version="17"
 provisorische Tegeler Brücke	Br -255,15993 -239,16077
 #: next_check ^^^
 #: check_frequency ^^^
