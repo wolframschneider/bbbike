@@ -263,17 +263,18 @@ Florastraße zwischen Grunowstraße und Berliner Straße, Baustelle, Straße in beid
        text  => 'Fürstenwalder Damm zwischen Bölschestraße und Hartlebenstraße Baustell stadtauswärts, Straße gesperrt, eine Umleitung ist eingerichtet, Dauer: 07.09.2003,04.00 Uhr bis 21.09.2003',
        type  => 'gesperrt',
      },
-     { from  => $isodate2epoch->("2021-09-09 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2021-09-12 21:00:00"),
+     { from  => $isodate2epoch->("2022-09-08 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-09-11 21:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 6, months => 9, start => "2020-10-25T00:00:00"]],
-       text  => 'am Lichtenrader Dorfteich: Wein- und Winzerfest, vom 10.09.2021 16:00 Uhr bis 12.09.2021 20:00 Uhr',
+       text  => 'am Lichtenrader Dorfteich: Wein- und Winzerfest, vom 09.09.2022 14:00 Uhr bis 11.09.2022 20:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.weinfeste-in-deutschland.de/wein-und-winzerfest-in-berlin-lichtenrade.html
 #: by: https://www.family-and-friends-ev.de/?date=20210418 (10.-12. September 2021)
 #: by: https://www.vinoflix.com/blog/wein-und-winzerfest-lichtenrade
 #: by: https://www.visitberlin.de/en/event/wine-festival-lichtenrade
+#: by: https://www.berlin.de/tickets/volksfeste-strassenfeste/35-wein-und-winzerfest-29d68374-a7db-402e-9595-697a7fb58cc1/
 	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 EOF
      },
@@ -596,17 +597,18 @@ EOF
        source_id => 'IM_015896',
        file  => 'badstr.bbd',
      },
-     { from  => $isodate2epoch->("2019-07-19 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-07-21 23:59:59"),
+     { from  => $isodate2epoch->("2022-07-15 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-07-17 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6, start => "2021-10-25T00:00:00"]],
-       text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (20.7.2019 bis 21.7.2019)',
+       text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (16.7.2022 und 17.7.2022)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.stadtfest.berlin/de/index.html
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/strassen-wegen-fest-gesperrt_a170723
 #: by: https://www.stadtfest.berlin/de/index.html (2.+3. Oktober 2021)
 #: by: https://www.siegessaeule.de/magazin/lesbisch-schwules-stadtfest-2021-auf-der-kippe/ (Absage)
+#: by: https://www.stadtfest.berlin/de/index.html?date=20220515
 	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
 	2::temp 6729,10212 6971,10346
 	2::temp 6628,10318 6626,10155
@@ -14642,11 +14644,11 @@ EOF
 	2::inwork 25997,-6245 26040,-6233 26135,-6206
 EOF
      },
-     { from  => $isodate2epoch->("2021-06-17 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2021-06-20 20:00:00"),
+     { from  => $isodate2epoch->("2022-06-16 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-06-19 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6, start => "2020-10-25T00:00:00"]],
-       text  => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt können gesperrt sein (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Bahnhofstr. (18.06.2021 - 20.06.2021)',
+       text  => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt können gesperrt sein (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Bahnhofstr. (17.06.2022 - 19.06.2022)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.volksfeste-in-deutschland.de/koepenicker-sommer-in-berlin-koepenick.html
@@ -17883,7 +17885,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015553',
        data  => <<EOF,
-	q4::inwork 5271,4547 5165,4667 5132,4704 5076,4762
+	q4::inwork 5271,4547 5165,4667 5132,4704 5081,4758
 EOF
      },
      { from  => 1271855220, # 2010-04-21 15:07
@@ -26832,12 +26834,12 @@ EOF
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2017/pressemitteilung.616643.php
 # REMOVED ---	2::temp 10638,19149 10600,19225 10584,19132 10529,19055 10507,18959 10497,18883 10513,18854 10518,18750
-# REMOVED ---	2::temp 10569,19395 10575,19327 10636,19289 10600,19225 10589,19275 10636,19289 10857,19379 11081,19456 11236,19509 11273,19521 11328,19413 11364,19313
+# REMOVED ---	2::temp 10569,19395 10575,19327 10636,19289 10600,19225 10589,19275 10636,19289 10857,19379 11081,19456 11236,19509 11268,19519 11328,19413 11364,19313
 # REMOVED ---	2::temp 10249,19148 10339,19179 10382,19066 10434,18907
 # REMOVED ---	2::temp 10575,19327 10503,19371
 # REMOVED ---	2::temp 10294,19298 10339,19179
 #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2017/pressemitteilung.619226.php
-	2::temp 10636,19289 10857,19379 11081,19456 11236,19509 11273,19521
+	2::temp 10636,19289 10857,19379 11081,19456 11236,19509 11268,19519
 EOF
      },
      { from  => 1501439878, # 2017-07-30 20:37
@@ -28204,7 +28206,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: last_checked: 2022-04-28
+#: last_checked: 2022-05-12
 #: check_frequency: 14d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29548,7 +29550,7 @@ EOF
 #: note: laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021, mittlerweile bis Juli 2022
 #: also_indoor: traffic (H,B,G)
 #: osm_watch: way id="1006570991" version="1"
-#: last_checked: 2022-04-13 (mapillary)
+#: last_checked: 2022-05-14
 #: check_frequency: 45d
 #: next_check: 2022-11-30
 	q3::inwork  8986,16092 9178,16317
@@ -30939,7 +30941,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-05-03
+#: last_checked: 2022-05-14
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31156,9 +31158,9 @@ EOF
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
 #: also_indoor: traffic (G)
-#: osm_watch: way id="934995899" version="6"
-#: osm_watch: way id="934995901" version="6"
-#: last_checked: 2022-05-09 vvv
+#: osm_watch: way id="934995899" version="9"
+#: osm_watch: way id="934995901" version="8"
+#: last_checked: 2022-05-14 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31442,7 +31444,7 @@ EOF
      },
      { from  => $isodate2epoch->("2021-05-30 08:30:00"), # 1589275980, # 2020-05-12 11:33
        until => $isodate2epoch->("2022-09-30 17:00:00"), # $isodate2epoch->("2021-05-31 17:00:00"), # 1599231600, # 2020-09-04 17:00
-       text  => 'Gardeschützenweg: Fahrbahn am Hindenburgdamm sowie zwischen Tietzenweg und Viktoriaplatz gesperrt, vom 31.05.2021 bis 30.09.2022',
+       text  => 'Gardeschützenweg: Fahrbahn zwischen Lipaer Str. und Chlumer Str. sowie zwischen Tietzenweg und Viktoriaplatz gesperrt, bis 30.09.2022',
        type  => 'handicap',
        source_id => '2147345834', # (inaktiv)
        data  => <<EOF,
@@ -31450,8 +31452,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
 #: by: https://viz.berlin.de/2021/05/verkehrsvorschau-310521/ (Fuß- und Radverkehr ist frei)
 #: by: https://www.openstreetmap.org/note/3032478 (nicht mehr gesperrt!)
-#: XXX laut osm-Notiz nicht mehr gesperrt
-#: add_fragezeichen: Sind die Bauarbeiten bereits beendet?
+# REMOVED --- #: XXX laut osm-Notiz nicht mehr gesperrt --- #: add_fragezeichen: Sind die Bauarbeiten bereits beendet?
 #: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
 #: source_id: 2147347233 (bis 23.12.2021)
 #: source_id: viz2021:13.312919,52.448752,31.05.2021,08:30 (bis 30.9.2022)
@@ -31461,8 +31462,9 @@ EOF
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
 # REMOVED --- #: XXX NEW	Gardeschützenweg (Lichterfelde) in beiden Richtungen zwischen Hindenburgdamm und Lipaer Straße: Leitungsbau,Vollsperrung, Fußverkehr frei, vom 31.05.2021 08:30 Uhr bis 23.12.2021 17:00 Uhr
 # REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv --- #: last_checked: 2020-12-27 (mapillary) vvv --- #: next_check: 2021-05-03 vvv
-#: note: nur etwa 100m, deshalb q3 statt q4
-	q3::inwork 4515,4760 4214,4595
+# REMOVED (hier nicht mehr) --- #: note: nur etwa 100m, deshalb q3 statt q4 ---	q3::inwork 4515,4760 4214,4595
+#: note: Einbahnstraßenregelung, Bauarbeiten laut Baustellenschild bis September 2022
+	q4::inwork; 4214,4595 4039,4500
 #: note: Einbahnstraßenregelung, bis 30.6.2022
 	q4::inwork; 3643,4232 3523,4139
 # REMOVED --- #: note: hier nur ein kurzes Stück ---	q2::inwork; 4214,4595 4039,4500
@@ -31753,7 +31755,7 @@ EOF
 #: XXX von Norden her außerdem: Verboten für Fahrzeuge aller Art außer Anlieger
 #: XXX Es gibt nun eine weitere Baustelle, Halteverbotschilder bis Ende Dezember 2022
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
-#: osm_watch: way id="759405498" version="2"
+#: osm_watch: way id="759405498" version="3"
 #: last_checked: 2022-04-26 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2022-12-28
@@ -32305,17 +32307,17 @@ EOF
 EOF
      },
      { from  => 1611329064, # 2021-01-22 16:24
-       until => $isodate2epoch->("2022-05-19 17:00:00"), # 1630076400, # 2021-08-27 17:00
-       text  => 'Stettiner Str.: Bauarbeiten, keine direkte Anbindung zur Badstr., voraussichtlich bis 06.04.2022',
+       until => $isodate2epoch->("2022-07-01 17:00:00"), # 1630076400, # 2021-08-27 17:00
+       text  => 'Stettiner Str.: Bauarbeiten, keine direkte Anbindung zur Badstr., möglicherweise bis Juli 2022',
        type  => 'handicap',
        source_id => '2147346268',
        data  => <<EOF,
 #: XXX laut Baustellenschild bis Juli 2022
 #: source_id: viz2021:13.382754,52.551838,25.08.2020,07:00 (bis 19.11.2021) (mittlerweile: 25.11.2021) (mittlerweile: 01.02.2022) (mittlerweile: 06.04.2022) (mittlerweile: bis 19.05.2022)
 #: also_indoor: traffic (G)
-#: last_checked: 2022-04-17 (mapillary)
-#: check_frequency: 90d
-#: next_check: 2022-05-19
+#: last_checked: 2022-05-14
+# REMOVED --- #: check_frequency: 90d
+#: next_check: 2022-07-01
 	q2::inwork 8913,16159 9099,16398
 EOF
      },
@@ -33313,7 +33315,7 @@ EOF
 #: check_frequency: 21d
 #: next_check: 2022-06-20
 	q4::inwork; 15261,10738 15272,10790 15279,10862
-#: osm_watch: way id="984964447" version="7"
+#: osm_watch: way id="984964447" version="8"
 	q3::inwork 15279,10862 15355,10875
 #: osm_watch: way id="984056169" version="8"
 	2::inwork 15272,10790 15388,10758
@@ -33677,13 +33679,9 @@ EOF
        source_id => 'https://www.dresdnerbahn.de/mediathek/file/371/XuemcxFdBKgO2ODB13RfVD6NGI-aMFPmtCRyf_fgMuk/Downloads/20210604_DrB_virtuelle_Buergerinfo_online.pdf',
        data  => <<EOF,
 #: next_check_id: DRESDNERBAHN-2021
-#: XXX Ursprünglich wurde 08/2021 als Beginn geplant, das hat sich aber um einen Monat verschoben --- vielleicht das Ende auch?
-#: XXX ggfs nach gesperrt-orig überführen
-#: by: https://bauprojekte.deutschebahn.com/p/dresdner-bahn/infobauarbeiten?date=20220111 (bis Ende 2023)
-#: note: Fertigstellung EÜ laut Baustellenschild 2023
-#: osm_watch: way id="229990468" version="6"
+#: note: Dieser Eintrag ist nun zusätzlich in gesperrt-orig.
 #: add_fragezeichen: Ist hier noch immer gesperrt?
-#: last_checked: 2022-02-05
+#: last_checked: 2022-04-09
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 	2::inwork 7673,4223 7769,4315
@@ -33849,14 +33847,18 @@ EOF
 EOF
      },
      { from  => 1615158000, # 2021-03-08 00:00
-       until => $isodate2epoch->("2022-04-30 17:00:00"), # undef, # 1641337200, # 2022-01-05 00:00
-       text  => 'Schönholzer Weg: Richtung Süden zwischen Angerweg und Edelweißstr. gesperrt, vom 09.03.2021 07:00 bis 30.04.2022 17:00',
+       until => undef, # $isodate2epoch->("2022-04-30 17:00:00"), # undef, # 1641337200, # 2022-01-05 00:00
+       text  => 'Schönholzer Weg: Richtung Süden zwischen Angerweg und Edelweißstr. gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        source_id => 'viz2021:13.374359,52.586234,09.03.2021,07:00',
        data  => <<EOF,
-#: XXX_prog: eigentlich q4+::inwork; oder q3-::inwork;
-#: last_checked: 2022-03-18 (mapillary)
-#: next_check: 2022-04-30
+#: next_check_id: SCHOENHOLZER-2022
+# REMOVED (wg. Konflikt mit XXX) --- #: XXX_prog: eigentlich q4+::inwork; oder q3-::inwork;
+#: XXX wann sind die Bauarbeiten beendet?
+#: also_indoor: traffic (H,B)
+#: last_checked: 2022-05-14
+#: check_frequency: 45d
+# REMOVED --- #: next_check: 2022-04-30
 	q4::inwork; 8196,20096 8224,19977 8234,19936
 EOF
      },
@@ -33961,7 +33963,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Uferweg an der Scharfen Lange: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt',
+       text  => 'Uferweg an der Scharfen Lanke: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: SCHARFELANKE-2021
@@ -34044,8 +34046,8 @@ EOF
 EOF
      },
      { from  => 1635634800, # 2021-10-31 01:00
-       until => $isodate2epoch->("2022-06-04 18:00:00"), # 1642287600, # 2022-01-16 00:00
-       text  => 'Bernau - Lanke: Bauarbeiten, Sperrung, für Radfahrer unter Umständen bereits passierbar, vom 01.11.2021 bis 04.06.2022',
+       until => $isodate2epoch->("2022-06-24 18:00:00"), # 1642287600, # 2022-01-16 00:00
+       text  => 'Bernau - Lanke: Bauarbeiten, Sperrung, für Radfahrer unter Umständen bereits passierbar, vom 01.11.2021 bis 24.06.2022',
        type  => 'gesperrt',
        source_id => 'LS/721-E/21/142',
        data  => <<EOF,
@@ -34719,10 +34721,10 @@ EOF
 #: XXX Stehen evtl. im Zusammenhang mit den Bauarbeiten in der Maßmannstr.
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G,B)
-#: last_checked: 2022-04-10 (indoor)
+#: last_checked: 2022-05-15
 # REMOVED --- #: check_frequency: 30d
-#: check_frequency: 10d
-#: next_check: 2022-05-24
+# REMOVED --- #: check_frequency: 10d
+# REMOVED --- #: next_check: 2022-05-24
 	q3::inwork 5020,6434 5269,6305
 EOF
      },
@@ -34881,7 +34883,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: STRALAUER-2019
 #: note: explizites Verbot für Radfahrer auf der Stralauer Allee Richtung Südosten (wird aber von so gut wie allen Radfahrern ignoriert; abgesperrte Fahrspur ist meistens gut passierbar)
-#: last_checked: 2022-05-10
+#: last_checked: 2022-05-15
 #: check_frequency: 30d
 #: next_check: 2022-06-30
 	1::inwork 13596,10722 13678,10685 13779,10642 13919,10583
@@ -34895,7 +34897,7 @@ EOF
 #: XXX vermutlich wegen der angrenzenden Hochbauarbeiten, wann ist die Fahrbahn wieder offen?
 #: source_id: viz2021:13.418121,52.516467,15.01.2020,07:00 (angrenzende Alexanderstraße, bis 13.5.2022) (mittlerweile bis 20.5.2022)
 #: also_indoor: traffic (B)
-#: last_checked: 2022-05-08
+#: last_checked: 2022-05-12
 #: check_frequency: 30d
 #: next_check: 2022-05-20
 	q4::inwork 11273,12301 11355,12331
@@ -35055,7 +35057,7 @@ EOF
 EOF
      },
      { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-05-02 00:00:00") }, # 1 Tag Vorlauf
-       until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-07-06 18:00:00") },
+       until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("2022-07-06 18:00:00") }, # nur temporäre Schilder, möglicherweise nicht mehr nach den Sommerferien 2022 verlängert
        text  => 'Jessnerstr.: zwischen Travestr. und Oderstr. dienstags zwischen 15 und 19 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 03.05. bis 06.07.',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php',
@@ -35148,6 +35150,43 @@ EOF
 #: by: https://nitter.net/VIZ_Berlin/status/1523578356306169857#m
 #: by: https://nitter.net/pic/media%2FFSTWWSqXIAAPomO.jpg%3Fname%3Dorig
 	q4::inwork; 16166,25767 16121,25818
+EOF
+     },
+     { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-05-12 00:00:00") }, # 1 Tag Vorlauf
+       until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("2022-07-08 18:30:00") }, # nur temporäre Schilder, wird noch nach den Sommerferien 2022 verlängert?
+       text  => 'Wrangelstr.: zwischen Sorauer Str. und Oppelner Str. freitags zwischen 15:30 und 18:30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 13.05. bis 08.07.',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php',
+       data  => <<EOF,
+#: XXX laut Pressemitteilung "Wrangelstraße, zwischen Sorauer Straße und Oppelner Straße, freitags 15.30 bis 18.30 Uhr, 13. Mai bis September, außer in den Sommerferien" -> nach den Sommerferien nachschauen und ggfs. verlängern
+#: next_check: 2022-08-19
+	q4::temp::play 12822,10487 12897,10439
+EOF
+     },
+     { from  => 1652642891, # 2022-05-15 21:28
+       until => 1661983200, # 2022-09-01 00:00
+       text  => 'Braillestr.: Arbeiten der Wasserbetriebe, Fahrbahn gesperrt, voraussichtlich bis August 2022',
+       type  => 'handicap',
+       data  => <<EOF,
+#: also_indoor: traffic (B)
+#: last_checked: 2022-05-15
+#: check_frequency: 90d
+#: next_check: 2022-08-31
+	q4::inwork 4512,5199 4477,5250 4430,5324
+EOF
+     },
+     { from  => 1652421600, # 2022-05-13 08:00
+       until => 1652562000, # 2022-05-14 23:00
+       periodic => 1,
+       recurrences => [['yearly', days => 14, months => 5]],
+       text  => 'Schnellerstr./Spreestr.: Straßenfest, Fahrbahnen gesperrt, am 14.5.2022 von 08:00 bis 23:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://nitter.net/VIZ_Berlin/status/1525328801823133698#m',
+       data  => <<EOF,
+#: by: https://nitter.net/pic/media%2FFSi8fsTXMAAtSC7.jpg%3Fname%3Dorig
+	2::temp 17782,5698 17807,5730 17916,5675
+	2::temp 17810,5736 17877,5860
+	2::temp 18013,5627 17916,5675 17931,5695
 EOF
      },
     );
