@@ -23,7 +23,7 @@ BEGIN {
 }
 
 use BBBikeVar;
-use BBBikeBuildUtil qw(module_path);
+use BBBikeBuildUtil qw(module_path monkeypatch_manifind);
 
 my $action;
 GetOptions('action=s' => \$action)
@@ -32,6 +32,8 @@ GetOptions('action=s' => \$action)
 my $author = 'Slaven Rezic (' . $BBBike::EMAIL . ')',
 my $abstract = "BBBike - ein Routenplaner für Radfahrer in Berlin und Brandenburg";
 my($version_major, $version_minor) = $BBBike::VERSION =~ /^(\d+)\.(\d+)/;
+
+monkeypatch_manifind();
 
 ######################################################################
 # Required modules
@@ -191,7 +193,9 @@ my @req_table =
   [qw/Imager::Screenshot	0	all	0	devel,gui/,
    'better screenshot module'],
   [qw/Image::ExifTool	0	all	0	devel/,
-   'für geocode_images'],
+   'für geocode_images und exif2gpsman'],
+  [qw/DateTime::Format::ISO8601	0	all	0	devel/,
+   'für exif2gpsman und temp_blockings_tasks'],
   [qw/SVG	0	all	2	cgi/,
    'additional optional BBBikeDraw backend for SVG graphics'],
   [qw/GD::SVG	0.31	all	0	devel/,
@@ -614,6 +618,12 @@ ext:
 
 sub MY::test {
     my $is_ci = ($ENV{TRAVIS}||'') eq 'true' || ($ENV{GITHUB_WORKFLOW}||'') ne '';
+
+    my $bbbike_test_for_live_setting = '';
+    if (!exists $ENV{BBBIKE_TEST_FOR_LIVE} && $is_ci) {
+	$bbbike_test_for_live_setting = 'BBBIKE_TEST_FOR_LIVE=1';
+    }
+
     my $out = "test ::\n";
 
     # XXX This is some kind of hack, travis skips the "make all" step (rightly, I should fix my deps!)
@@ -629,15 +639,9 @@ EOF
 EOF
     }
     if (-r "t/Makefile") {
-	if ($is_ci) { # XXX actually, should check for no-cgi setup
-	    $out .= <<'EOF';
-	cd t && BBBIKE_TEST_FOR_LIVE=1 $(MAKE) test PERL=$(FULLPERL)
+	$out .= <<"EOF";
+	cd t && $bbbike_test_for_live_setting \$(MAKE) test PERL=\$(FULLPERL)
 EOF
-	} else {
-	    $out .= <<'EOF';
-	cd t && $(MAKE) test PERL=$(FULLPERL)
-EOF
-	}
     }
     if (-r "ext/Makefile") {
 	if ($is_ci) {
@@ -801,6 +805,20 @@ distdir : create_distdir
 EOF
 }
 
+sub MY::dist_basics {
+    <<'EOF';
+distclean :: realclean distcheck
+	$(NOECHO) $(NOOP)
+
+distcheck :
+	$(PERLRUN) -I. -MBBBikeBuildUtil=monkeypatch_manifind "-MExtUtils::Manifest=fullcheck" -e "monkeypatch_manifind; fullcheck"
+
+# not implemented
+# - skipcheck: never used
+# - manifest:  does not work, because some files in directories listed in MANIFEST.SKIP should actually be included
+# - veryclean: never used
+EOF
+}
 
 sub MY::postamble {
     use vars qw($bbbike_makefile_admin);

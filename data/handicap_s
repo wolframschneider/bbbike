@@ -36,8 +36,8 @@ Parkstadt Karlshorst: Beeinträchtigungen durch Bauarbeiten und Baustellenverkehr
 Hönower Wiesenweg: Beeinträchtigungen durch Bauarbeiten und Baustellenverkehr möglich	q2::inwork; 17497,8623 17461,8693
 Hönower Wiesenweg: temporäre Einbahnstraßenregelung, Baustellenverkehr	q3::inwork; 17461,8693 17497,8623
 Zufahrt Zentrum Schöneweide: Fahrbahn ist gesperrt, Ausweichen auf engen Gehweg, evtl. Buden, Bordsteine	q4::inwork 17728,5756 17656,5701
-Alt-Moabit - Invalidenstr.: Bauarbeiten, getrennter Rad/Gehweg	q3::inwork 7422,13012 7415,13060
-Werner-Richard-Heymann-Platz: große Teile der Fahrbahn gesperrt, Bordsteine	q3 3320,7982 3219,7987
+Turmstr.: teilweise verwinkelte Wegführung des Radwegs	q1::inwork; 7069,13381 6919,13360 6814,13349 6692,13333 6674,13332 6535,13327 6377,13321
+Turmstr.: Bauarbeiten, Engstellen	q1::inwork; 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
 Pariser Str./Bundesallee: Bauarbeiten, enger Durchgang, ggfs. schieben	q4::inwork 5461,9923 5423,9932 5382,9942
 Weserstr.: Bauarbeiten, Fahrbahn gesperrt, gemeinsamer Geh- und Radweg, eng	q3::inwork 12590,8977 12740,8862
@@ -369,8 +369,7 @@ Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8842,8561 8759,8458 8720,8
 (Kynaststr. - Paul-und-Paula-Ufer): Fußgänger	q1 14797,10476 14820,10473 14861,10467
 Am Rummelsburger See: Fußgänger, kurvenreich, Grünanlage	q3 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142 15253,10171
 Am Rummelsburger See: Fußgänger, Grünanlage	q3 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411
-Am Rummelsburger See: Fußgänger, kurvenreich	q1 14892,10411 14864,10451 14861,10467 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15145,10636
-Am Rummelsburger See: Fußgänger, kurvenreich, Engstelle wegen Bauarbeiten	q2 15145,10636 15200,10600 15249,10564
+Am Rummelsburger See: Fußgänger, kurvenreich	q1 14892,10411 14864,10451 14861,10467 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15145,10636 15200,10600 15249,10564
 Am Rummelsburger See: teilweise enge Kurven, Fußgänger an schönen Tagen	q2 15453,10419 15457,10342 15496,10277 15518,10234 15604,10204 15606,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15910,9860 15931,9846
 Am Rummelsburger See: Fußgänger an schönen Tagen	q1 15931,9846 16002,9787 16049,9749 16119,9689 16125,9678 16120,9653
 Am Rummelsburger See: Fußgänger an schönen Tagen	q2 16120,9653 16182,9591 16268,9670
@@ -628,9 +627,9 @@ Nollendorfplatz: Gehweg oder Parkplatz Richtung Motzstr. benutzen	q3; 7033,10328
 Arenholzsteig: Bordsteine	q2 8481,6900 8496,6919
 Mergenthalerring: Asphaltschwellen, können teilweise umfahren werden	q1 14425,8116 14563,8243 14422,8407
 Grazer Platz: Fußgänger, Bordsteine	q2 6546,6724 6530,6786 6529,6798
-(Vorarlberger Damm - Kleingartenkolonie): Fußgänger	q1 6817,7101 6852,7246 6841,7283
-(Nordmannzeile - Kleingartenkolonie): Fußgänger	q1 6807,7262 6809,7272 6841,7283
-(Nordmannzeile - Vorarlberger Damm): Fußgänger	q1 7220,7442 7307,7457
+(Vorarlberger Damm - Kleingartenkolonie): Fußgänger	q1 6817,7101 6852,7246 6843,7293
+(Nordmannzeile - Kleingartenkolonie): Fußgänger	q2 6811,7266 6820,7287 6843,7293
+(Nordmannzeile - Vorarlberger Damm): Fußgänger	q1 7220,7445 7307,7457
 Achenbachpromenade: Fußgänger, Radfahren erlaubt	q1 8763,8780 8748,8587 8722,8527 8715,8459
 Wildensteiner Str.: enge Straße	q0 18627,8475 18528,8331
 Wildensteiner Str.: enge Straße	q1 18528,8331 18416,8163 18365,8094 18333,8059
@@ -659,12 +658,11 @@ Carl-Herz-Ufer: gemeinsamer Fuß- und Radweg	q0 10066,10071 10168,10085
 Am Landwehrkanal: gemeinsamer Fuß- und Radweg	q2 10069,10151 10158,10117 10168,10085
 Münsterberger Weg: gemeinsamer Fuß- und Radweg	q1 23225,11649 23032,11729
 Münsterberger Weg: gemeinsamer Fuß- und Radweg	q1 22886,11776 22701,11843
-Münsterberger Weg: Pfad, Bordstein	q3 24029,11363 24172,11320
 Dorfstr. - Wuhletal: Bordstein	q2 22112,11936 22104,11925
 Unterführung Wuhletal: Fußgänger	q2 21970,12153 21972,12038 21936,12022
 Park Biesdorf: Fußgänger	q2 21150,11925 21134,11913 21132,11943 21100,11960 20857,12027 20810,12031
 Park Biesdorf: Fußgänger	q2 20807,12083 20857,12027
-Albert-Brodersen-Allee: Fußgänger	q2 20857,12027 20835,11810 20831,11771 20825,11732
+Albert-Brodersen-Allee: Fußgänger	q2 20857,12027 20835,11810 20831,11777 20825,11732
 (Schulstr. - Braunsdorfstr.): sehr eng	q3 20413,11953 20396,11983
 (Am Schlachtensee - Altvaterstr., Unterführung): enge Unterführung	q3 -3192,3129 -3176,3081 -3170,3070
 (Altvaterstr. - Spanische Allee): eng	q1 -3223,3034 -3368,2942 -3378,2936
@@ -868,7 +866,7 @@ Wirsitzer Weg: Bodenschwelle	q0 22448,6957 22641,6918
 Fritzi-Massary-Str: Bordsteine	q3 15428,6355 15452,6384
 (Rotkehlchenweg - Kormoranweg): eng, einige Fußgänger, Bordsteine	q3 14099,3772 14185,3734
 Dürtenstr.: Fußgänger	q2 13785,4839 13825,4850 13874,4867 13914,4877
-Angelikaweg: Fußgänger	q1 15459,2921 15537,3026
+Angelikaweg: Fußgänger	q2 15459,2921 15537,3026
 Primelweg: Fußgänger, eng	q1 15804,2512 15862,2588
 (Kleestr. - Neuköllner Str.): Fußgänger	q1 16302,2034 16254,1999
 Kerbelweg: Fußgänger	q1 16603,2641 16547,2680
@@ -1315,8 +1313,8 @@ Eyke-von-Repkow-Platz: einige Fußgänger, Bordsteine	q3 5556,12536 5531,12501
 (Kolonie Sanssouci): einige Fußgänger	q1 16488,10381 16375,10545 16288,10637 16265,10628 16246,10641
 (Kolonie Sanssouci): einige Fußgänger	q1 16288,10637 16265,10681
 Müggelstr., Hausdurchfahrt: einige Fußgänger	q3 14837,11706 14858,11744
-(Bushaltestelle und Straßenbahnwendestelle Schöneweide): Bus- und Straßenbahnverkehr	q2 17736,5441 17675,5521
-(Bushaltestelle und Straßenbahnwendestelle Schöneweide): Bus- und Straßenbahnverkehr, Gehweg, Bordsteine	q4 17675,5521 17588,5573 17578,5566
+(Straßenbahnwendestelle Schöneweide): Straßenbahnverkehr	q3 17736,5441 17675,5521
+(Straßenbahnwendestelle Schöneweide): Straßenbahnverkehr, Gehweg, Bordsteine	q4 17675,5521 17588,5573 17578,5566
 (Fröbel-Kindergarten - Oststr.): Fußgänger, Kindergarten	q3 17416,5388 17455,5355
 (Schönburger Str. - Bosestr./Blumenthalstr.): Radfahren verboten, Bordsteine an beiden Enden	q4 8953,6492 8930,6295
 (Prühßstr. - Rixdorfer Str.): getrennter Rad- und Gehweg, einige Fußgänger	q1 9869,4271 9965,4299 10051,4295 10140,4280 10221,4245
@@ -1361,6 +1359,8 @@ Salvador-Allende-Viertel [Wohngebiet]: eine Bodenschwelle, kann umfahren werden	
 (Weg im Salvador-Allende-Viertel - Am Berg): Fußgänger, Bordstein	q3 23051,4461 23010,4506
 Am Amtsgraben: einige Fußgänger, Bordstein	q2 22927,4400 22866,4352
 (Möllendorffstr. - Karl-Lade-Str.): Fußgänger	q2 15513,13539 15374,13542
+(Möllendorffstr. - Karl-Lade-Str.): gemeinsamer Rad- und Gehweg	q1 15374,13542 15239,13580 15097,13621 14995,13645
+(Möllendorffstr. - Karl-Lade-Str.): gemeinsamer Rad- und Gehweg	q1 14995,13645 14821,13674
 Lilienweg: Fußgänger	q2 15143,5705 15154,5706 15209,5713 15252,5719 15296,5725 15337,5730
 Rosenweg: Fußgänger	q2 15343,5687 15337,5730 15330,5821 15325,5934
 Spielplatzweg: Fußgänger	q2 15141,5800 15201,5807 15246,5812 15288,5816 15330,5821
@@ -1656,6 +1656,7 @@ Giselhersteig: enger Weg	q2 17355,12460 17386,12456 17438,12448 17491,12439 1753
 (Zufahrt zum Stadtbad Tiergarten): Parkplatzverkehr	q2 7332,13367 7306,13418
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): Fußgänger	q1 21992,13045 22141,13036 22171,12965
 (westlicher Wuhlewanderweg - östlicher Wuhlewanderweg): enge Brücke, Fußgänger	q3 22171,12965 22196,12961
+Stolzenfelsstr.: Gehweg für Radfahrer frei	q2 19468,8168 19446,8152 19407,8143
 Stolzenfelsstr.: enger Gehweg für Radfahrer in Gegenrichtung offen	q2; 19447,8175 19407,8143 19333,8165 19171,8280 18949,8437 18787,8540
 Kunkelstr.: einige Fußgänger, Bordstein	q2 8229,15128 8227,15075
 Erich-Lodemann-Str.: einige Fußgänger, Rampe	q2 15288,8134 15242,8182
@@ -1741,7 +1742,7 @@ Armbrustweg: einige Fußgänger, Bordsteine	q3 7620,18615 7635,18570
 (Illerzeile - Gorkistr.): einige Fußgänger, Bordsteine	q3 2544,20304 2530,20345
 Maienwerderweg: einige Fußgänger, Hunde	q1 2731,18729 2723,18675 2622,18546 2440,18440 2284,18310 2243,18274 2226,18228 1547,17726 1270,17566 660,17352 281,17236 130,17187
 (südliches Spreeufer): einige Fußgänger, Bordstein	q3 5225,12450 5235,12461
-(südliches Spreeufer): einige Fußgänger	q1 5235,12461 5287,12465 5299,12420 5360,12331 5405,12292
+(südliches Spreeufer): einige Fußgänger	q1 5235,12461 5287,12465 5299,12420 5360,12331 5411,12290
 Dammbrücke: einige Fußgänger, Bordstein	q3 -3066,14718 -3042,14682
 Pulvermühlenweg: Bordstein	q2 -1848,15535 -1794,15517
 Alboinstr. - Paul-Schmidt-Str.: Fußgänger, Bordstein	q2 8242,5427 8200,5510
@@ -1880,7 +1881,7 @@ Pepitapromenade: einige Fußgänger	q1 -2856,17489 -2873,17369 -2878,17324
 (Park am Klötzebecken): Bordstein	q1 5815,22870 5926,22738
 (am Packereigraben): einige Fußgänger	q1 6924,21550 6958,21549 7074,21513 7161,21494 7261,21504 7447,21509
 (Gandenitzer Weg - Quickborner Str.): einige Fußgänger	q1 7549,21524 7713,21484 7782,21508 7802,21553 7853,21557 7939,21600
-Salvador-Allende-Str. [Zufahrt zum Krankenhaus]: einige Fußgänger	q2 23448,4145 23453,4181
+Salvador-Allende-Str. [Zufahrt zum Krankenhaus]: einige Fußgänger, Bordstein	q3 23448,4145 23453,4181
 Fasanenplatz, östliche Fahrbahn: einige Fußgänger, Bordsteine	q2 5220,10192 5229,10210 5223,10243
 Admiralstr.: Fußgänger, Bodenschwellen	q2 11244,10111 11274,10184
 Innsbrucker Platz - Eisackstr.: Bordstein	q1 6418,7958 6429,7876
@@ -2016,7 +2017,7 @@ Oberdorfer Steig: schmaler Weg	q2 -8213,14837 -8270,14782
 (Margueritenring - Köpenicker Str.): einige Fußgänger, Bordstein	q3 17193,2062 17173,2003
 (Margueritenring - Köpenicker Str.): einige Fußgänger	q2 17173,2003 17083,1776 17051,1743 17046,1708 17100,1650
 (Grünstreifen 1929): Radfahren verboten	q4 17102,2420 17039,2358 17179,2186 17194,2131 17193,2062
-(Am Plänterwald - Spreepark): einige Fußgänger	q1 15714,8633 15772,8667 15922,8717 16026,8731 16074,8776 16084,8833
+(Am Plänterwald - Spreepark): einige Fußgänger	q1 15714,8633 15772,8667 15922,8717 16026,8731 16074,8776 16084,8833 16086,8860
 (Uferweg am Nordhafen - Havelschanze): Fußgänger, Spielplatz	q2 -2980,16401 -2994,16364 -2973,16354 -3009,16269 -3040,16246
 Frieda-Arnheim-Promenade: einige Fußgänger	q1 -2779,15358 -2769,15389 -2751,15383
 Frieda-Arnheim-Promenade: Fußgängerzone, Radfahren verboten	q4 -2751,15383 -2733,15377 -2707,15456
@@ -2071,7 +2072,7 @@ Einstein-Park: Fußgänger, Radfahren offiziell verboten, flacher Bordstein am Sto
 (Lehrter Str. - Klara-Franke-Str.): Fußgänger	q2 7438,13930 7493,13918
 (Fußweg 552 - Straße 567a): enger Pfad	q3 29930,3450 29947,3464
 (Mausohrweg - Hessenwinkler Str.): hohe Stufe an der Hessenwinkler Str.	q4 33503,2818 33531,2808
-(Hoppendorfer Str. - Wuhlewanderweg): einige Fußgänger	q1 21592,7640 21609,7579
+(Hoppendorfer Str. - Wuhlewanderweg): einige Fußgänger, niedriger Bordstein	q3 21592,7640 21609,7579
 (Innovationspark Wuhlheide - Wuhlewanderweg): einige Fußgänger	q1 21491,7182 21547,7208
 (Innovationspark Wuhlheide - Wuhlewanderweg): einige Fußgänger, eng	q2 21547,7208 21542,7246 21569,7252
 (Weg im erweiterten Mauerpark): Fußgänger	q2 10235,14934 10215,14977 10192,14967
@@ -2144,7 +2145,7 @@ Schloßplatz: Fußgänger	q2 10174,12284 10102,12384
 (Lustgarten - Schloss): Fußgänger	q2 10155,12494 10175,12435
 (Uferweg am Humboldtforum): Fußgänger	q2 10357,12356 10336,12404 10271,12503 10243,12546
 Schloßplatz: Fußgänger	q3 10175,12435 10271,12503
-(Parkweg - Park Biesdorf): Fußgänger	q2 20779,11801 20804,11797 20818,11812 20835,11810
+(Parkweg - Park Biesdorf): Fußgänger	q2 20775,11801 20801,11797 20804,11813 20835,11810
 Am Kraatzgraben: einige Fußgänger	q1 16899,10020 16835,10052
 Betriebsbahnhof Rummelsburg - Am Kraatzgraben: einige Fußgänger	q1 16894,10003 16899,10020 16912,10054
 (Nördliche Landebahn - Eingang Peter-Strasser-Weg): schmal	q2 9362,7616 9281,7651
@@ -2285,6 +2286,7 @@ Lindenstr.: gegenläufiger Geh/Radweg	q3; 21605,5687 21706,5541 21789,5427
 (Zur Waage - Zur Innung): Grünanlage, einige Fußgänger	q3 14067,13050 14086,13090
 Baruther Str.: asphaltierte Kissen (2x)	q1 9837,9856 9723,9842
 Solmsstr.: asphaltierte Kissen (2x)	q1 9723,9842 9705,9732
+Fürbringerstr.: asphaltierte Kissen (2x)	q1 9705,9732 9820,9718
 (Nordpromenade, entlang der S-Bahn): einige Fußgänger	q2 20640,12095 20807,12083
 Carl-Weder-Park: gemeinsamer Geh- und Radweg	q1 12595,6299 12614,6301 12638,6307 12812,6343 12979,6374
 (Pieskower Weg - Hanns-Eisler-Str.): einige Fußgänger	q1 13224,15049 13249,15037 13270,15046 13295,15107 13313,15113 13324,15109
@@ -2293,6 +2295,8 @@ Carl-Weder-Park: gemeinsamer Geh- und Radweg	q1 12595,6299 12614,6301 12638,6307
 Max-und Herta-Naujocks-Weg: Fußgänger, schmaler Weg	q2 16036,18604 16077,18674 16112,18692 16133,18765 16163,18780
 (Einkaufszentrum Lagunenweg): Fußgänger	q2 31762,3202 31650,3218
 (Mausohrweg - R1): Bordsteine, Fußgänger	q3 33296,2894 33267,2810 33255,2762
+Haydnstr. - Märkische Allee: Bordsteine, einige Fußgänger	q3 19995,11795 19979,11774
+Fenchelweg: enge Straße	q1 15410,3179 15500,3299 15611,3448 15674,3528 15732,3602 15791,3686 15838,3754 15860,3838 15872,3888 15859,3924 15695,4051 15585,4139
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2388,7 +2392,7 @@ Hünensteig: Fußgänger	q2 6395,5154 6405,5238 6108,5253
 (Götzstr. - Albrechtstr.): Fußgänger	q2 9373,6179 9367,6160 9366,6150 9376,6102 9349,6102 9339,6076
 (Ringstr. - Gersdorfstr. (Kolonie Marienhöhe)): Kleingartenanlage, Fußgänger (schieben!), tiefe Steinregenabläufe quer zum Weg, Bordstein	q4 7911,4465 7925,4477 8027,4571 8076,4606 8192,4710
 Mühlenbecker Weg: Fußgänger	q1 20150,15678 20321,16043 20330,16040
-(Nordmannzeile - Vorarlberger Damm): Fußgänger, Kleingartenweg	q1 6841,7283 6846,7306 7062,7376 7108,7416 7220,7442
+(Nordmannzeile - Vorarlberger Damm): Fußgänger, Kleingartenweg	q2 6843,7293 6847,7314 7089,7398 7097,7419 7220,7445
 Herschelstr.: enge Wohnstraße	q1 3200,13277 3239,13461 3262,13547 3280,13625
 Togostr.: teilweise recht enger Radweg	q1 6244,16096 6104,16223
 Konradinstr.: enge Straße	q0 8575,5202 8556,5234 8632,5331 8674,5357 8872,5484 8887,5564
@@ -3102,6 +3106,7 @@ Tannenweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; -3023,1
 Tannenweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; -3038,18063 -3028,18027
 Isarstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 12349,8464 12368,8356
 Anton-Saefkow-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 13183,14400 13088,14469 13013,14523 12901,14594 12862,14618 12789,14670 12700,14726 12575,14812 12528,14845
+Niederlagstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 9943,12364 9934,12420
 Barbarastr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 6456,3038 6372,2959 6329,2916 6359,2875
 Parchimer Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 22212,12403 22212,12422 22257,12481 22258,12573 22272,12610
 Stiftsweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 11001,18528 11239,18832 11263,18842
@@ -3215,8 +3220,8 @@ Ludolfinger Platz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp;
 Sewanstr. - Balatonstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 17729,10331 17741,10386
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich): gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
+Möllhausenufer: Bauarbeiten, Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 23608,1210 23520,1194
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 8266,14346 8442,14456
-(Planstraße C): Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 12848,11093 12926,11224
 Hönower Str.: temporäre Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 18735,9421 18765,9426 18846,9532
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 10472,14632 10320,14608
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9429,12728 9402,12792 9386,12833 9375,12911

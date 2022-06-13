@@ -176,6 +176,13 @@ Kreisverkehr	Roundabout 35885,49505
 Kreisverkehr	Roundabout 46737,-16548
 #: by: https://nitter.net/pic/media%2FFQ9rZfDWQAEo-e8.jpg%3Fname%3Dorig
 Kreisverkehr	Roundabout -2504,22626
+#: by: osm
+Kreisverkehr	Roundabout -2498,-1741
+#: note: zusätzlich Zebrastreifen ohne Schilder vvv
+Mini-Kreisverkehr	Roundabout -3252,-2368
+Mini-Kreisverkehr	Roundabout -3484,-2531
+Mini-Kreisverkehr	Roundabout -3650,-2609
+#: note ^^^
 # 
 #: by: Marita:
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
@@ -264,7 +271,7 @@ Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist 
 (Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21978,8132 22077,8104 22181,8009 22631,7692
 # REMOVED (nicht mehr) --- Petriplatz: zusätzliche Ausschilderung "Zur Brüderstr."	CS; 10460,11979 10418,12016
 # REMOVED (lange nicht mehr beobachtet) --- DB-Gelände: bei starken Regenfällen regelmäßig eine große und tiefe Pfütze, die die Durchfahrt erschwert	CS 14107,10911 14043,10928
-Straße 77: die Straße ist nicht ausgeschildert	CS 15408,12394 15320,12375
+Straße 77: nicht ausgeschildert	CS 15408,12394 15320,12375
 # REMOVED (das gilt für das gesamte Märchenland, deshalb Kommentar entfernt) --- #: by: antje weiss dorn: --- Drosselbartweg: Radfahren erlaubt	CS 13899,18833 13909,18835 13953,18842 13967,18842 13993,18833 14061,18791 14206,18700 14218,18674 14222,18666
 (Seeburger Str./Seecktstr. - Bullengraben): Zufahrt über Supermarktparkplatz (Lidl)	CS; -4299,13304 -4372,13384
 #: by: Ralf Henze vvv
@@ -515,7 +522,7 @@ Bus M85	busroute_N 4136,505 4122,421 4068,406 3912,362 3898,466 3834,502 3655,75
 Bus M85	busroute_N 7873,12927 7872,13022 7939,13026 7937,13109 7867,13106 7872,13022
 Bus M77, Bus M82	busroute_N 6966,880 6961,836 6941,690 6937,671 6959,509 7007,333 7014,203 6982,88
 Bus 283	busroute_N 7235,2542 7324,2559 7392,2570 7488,2558 7517,2574 7555,2540 7602,2522 7667,2501 7704,2482 7777,2447 7899,2391 7923,2319 7987,2337 7983,2348 7983,2348 7899,2391
-Bus 187	busroute_N 7852,3183 7855,3355 7784,3369 7755,3376 7705,3386 7587,3411 7501,3432 7483,3440 7458,3451 7407,3473 7183,3570 7109,3635 7012,3743 6993,3765
+Bus 187	busroute_N 7852,3183 7855,3355 7784,3369 7755,3376 7705,3386 7587,3411 7501,3432 7483,3440 7458,3451 7407,3473 7183,3570 7109,3635 7012,3743 6996,3762
 Bus 187	busroute_N 7755,3376 7734,3290 7719,3219 7720,3148
 Bus M77, ...	busroute_N 8490,2084 8561,2015 8599,1896
 Bus 179	busroute_N 9106,3703 9128,3580
@@ -899,7 +906,7 @@ Nikolaus-Ehlen-Weg: Privatstraße	CS 17308,-36 17215,94 17176,90
 #: XXX Wann ziehen die Gaslaternen um?
 #: osm_watch: note 2969085 3
 #: priority: #C
-#: last_checked: 2022-05-11 (mapillary)
+#: last_checked: 2022-06-11
 #: check_frequency: 90d
 Gaslaternen-Freilichtmuseum Berlin	CS 5895,11692 5835,11768 5858,11863 5900,11913
 #: ignore ^^^
@@ -1132,7 +1139,7 @@ Alter Markt: nicht ausgeschildert, Platz am Potsdamer Stadtschloss	CS -12624,-15
 Alter Markt: nicht ausgeschildert, Platz am Potsdamer Stadtschloss	CS -12583,-1552 -12619,-1549 -12677,-1536 -12719,-1542 -12790,-1560
 Friedrich-Wilhelm-Boelcke-Str.: nicht ausgeschildert	CS -12796,-2488 -12831,-2439 -12815,-2419 -12779,-2467
 Zur Königlichen Hofbrauerei: nicht ausgeschildert	CS -12815,-2419 -12781,-2376
-Herzbergstr. - Paul-Junius-Str.: am Roederplatz auf die gegenüberliegende Straßenseite wechseln	CP; 15626,13541 15513,13539 15470,13509
+Herzbergstr. - Paul-Junius-Str.: am Roederplatz auf die gegenüberliegende Straßenseite wechseln	CP; 15626,13541 15580,13540 15513,13539 15470,13509
 Heinrich-Dathe-Platz: nicht ausgeschildert	CP2; 18442,10471 18456,10454
 Ahornsteig: nicht ausgeschildert	CS 7059,11978 7007,11923 6984,11859 6980,11790 6996,11661 7018,11615 7092,11593 7362,11561 7418,11566 7549,11608 7612,11597 7648,11592 7664,11597
 ausgeschildert Floraplatz	CP2; 8016,11770 8020,11937
@@ -1194,12 +1201,12 @@ Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3068,21150 3024,21286
 # REMOVED (mittlerweile existieren Staßenschilder) --- #: XXX sind die Straßen mittlerweile ausgeschildert? vvv --- Altes Gaswerk Mariendorf: ausgeschildert "Marienpark"	CP2; 8461,3410 8404,3648 --- Im Marienpark: nicht ausgeschildert	CP2; 8404,3648 8346,3633
 Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 # 
-#: osm_watch: way id="406201948" version="11"
+#: osm_watch: way id="406201948" version="12"
 #: osm_watch: way id="25367620" version="21"
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788&d=20191216 (Benennung nach Hans Otto Obrikat vorgeschlagen)
 #: XXX oder wird statt Wasserstr. und Uferstr. die Straße nach Hans Otto Obrikat benannt? (erster Vorschlag: "Else-Schierhorn-Str.")
-#: last_checked: 2022-04-22 (mapillary)
+#: last_checked: 2022-06-04
 #: check_frequency: 60d
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
@@ -1286,7 +1293,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="5"
-#: last_checked: 2022-05-12
+#: last_checked: 2022-06-10
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
@@ -1326,7 +1333,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2022-03-23
+#: last_checked: 2022-06-08
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1342,11 +1349,11 @@ Bochumer Platz: als Bundesratufer ausgeschildert	CP2; 5914,12845 5938,12848
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_53_8205_8368_online.pdf (Widmung)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_06_0673_0824_online.pdf (Eingruppierung in die Straßenreinigungsverzeichnisse)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_54_4961_5184_online.pdf (Eingruppierung in die Straßenreinigungsverzeichnisse)
-#: last_checked: 2021-12-26 (mapillary) vvv
-#: check_frequency: 90d vvv
-An der Dahme: nicht ausgeschildert	CS 22270,2549 22358,2460
+#: last_checked: 2022-06-06 vvv
+#: check_frequency: 120d vvv
+# REMOVED --- An der Dahme: nicht ausgeschildert	CS 22270,2549 22358,2460
 # REMOVED --- Gaffelsteig: nicht ausgeschildert	CS 22287,2431 22221,2520
-Relingstr: nicht ausgeschildert	CP2; 22358,2460 22287,2431
+# REMOVED --- Relingstr: nicht ausgeschildert	CP2; 22358,2460 22287,2431
 Ankerweg: nicht ausgeschildert	CS 22118,2559 22159,2585
 Ankerweg: nicht ausgeschildert	CP2; 22159,2585 22197,2612
 #: check_frequency ^^^
@@ -1579,7 +1586,7 @@ beide Geh/Radwege hinter der Einmündung Neukirchstr. können Richtung Am Feuchten
 #: next_check_id: HANSPETERSPLATZ-2022
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1128830.php (Benennung eines Platzes nach Hans Peters)
 #: XXX wann wird der Platz ausgeschildert?
-#: last_checked: 2022-05-01 (mapillary)
+#: last_checked: 2022-05-19
 #: check_frequency: 45d
 Hans-Peters-Platz: nicht ausgeschildert	CS 7732,14131 7679,14030
 # 
@@ -1662,6 +1669,14 @@ Luisenhof: Privatstraße	CS -13635,-2900 -13634,-2978
 ausgeschildert "Aldi, Edeka"	CP2; 31609,3232 31650,3218
 # 
 ausgeschildert "Zugang Stralauer Allee 6"	CP2; 13835,10577 13805,10528
+# 
+Am Pankepark: nicht ausgeschildert	CS 8152,14130 8238,14181 8282,14116 8207,14067 8184,14052
+# 
+#: XXX Wann wird hier ausgeschildert?
+#: last_checked: 2022-05-21
+Kleiner Parkweg: nicht ausgeschildert	CS 20775,11801 20790,11990
+# 
+Volkerweg: nicht ausgeschildert	CS 16005,4012 16046,4073 16060,4093 16145,4217 16151,4226
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)

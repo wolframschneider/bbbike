@@ -300,7 +300,7 @@ Wanderweg Erkner - Hessenwinkel	NL 33526,2771 33419,2765 33406,2738 33255,2762 3
 #: XXX wird hier eine Beleuchtung entstehen? Wird hier asphaltiert werden?
 #: by: https://fahrradfreundliches-neukoelln.de/blog/ausschusssitzung-strassen-gruenflaechen-und-ordnung-am-9-januar-2019
 #: by: https://api.fixmyberlin.de/api/projects/75 (Asphaltierung)
-#: last_checked: 2022-05-15
+#: last_checked: 2022-06-08
 #: check_frequency: 60d
 (Weg am Friedhof)	NL 11608,7267 11687,7284 12185,7381
 # 
@@ -531,8 +531,8 @@ Seefelder Str. (Fußweg)	NL 17325,16189 17362,16189 17383,16197
 Matthäifriedhofsweg	NL 7229,7188 7302,7190 7353,7193 7382,7175 7477,7122 7563,7113 7605,7109
 Naturpark	NL 7296,5872 7344,6104 7666,7093 7655,7096 7621,7105 7605,7109
 # REMOVED (Beleuchtung existiert) --- Dammweg	NL 15874,8345 16388,8821
-Wasserweg: überwiegend nicht beleuchtet	NL 15680,8914 15873,8884 15981,8872 16028,8867 16161,8852 16201,8860 16358,8841 16388,8821
-(Umfahrung Spreepark)	NL 16028,8867 16084,8833 16161,8852
+Wasserweg: überwiegend nicht beleuchtet	NL 15680,8914 15873,8884 15981,8872 16028,8867 16086,8860 16161,8852 16201,8860 16358,8841 16388,8821
+# REMOVED --- (Umfahrung Spreepark)	NL 16028,8867 16084,8833 16161,8852
 Kiehnwerderallee	NL 16388,8821 16436,8687 16490,8432 16534,8182 16602,7810 16620,7574 16633,7434
 (Uferweg - Kiehnwerderallee)	NL 16627,8581 16577,8581 16436,8687
 (Fähre - Kiehnwerderallee)	NL 16655,7572 16620,7574
@@ -611,7 +611,7 @@ Kolonie Albrechtshöhe	NL 10260,5953 10215,5959 9955,5993
 # 
 #: by: ^^^
 #: by: Christian Marwitz:
-Hönower Wiesenweg	NL 17380,8858 17416,8767 17461,8693 17497,8623 17515,8567 17533,8505 17554,8458 17620,8366 17704,8327 17753,8290
+Hönower Wiesenweg	NL 17380,8858 17416,8767 17461,8693 17497,8623 17515,8567 17524,8536 17533,8505 17554,8458 17620,8366 17704,8327 17753,8290
 #: by: Wolfhard Schleese: vvv
 (Wilhelm-Kuhr-Str. - Wollankstr.)	NL 9303,17965 9314,17943 9341,17917 9348,17885 9363,17868 9396,17863 9586,17665
 #: confirmed_by: srt
@@ -661,9 +661,9 @@ Nernstweg	NL 14789,7630 14659,7505 14650,7500
 # REMOVED --- Münsterberger Weg	NL 23032,11729 22999,11725 22886,11776
 Münsterberger Weg	NL 22886,11776 22701,11843
 # REMOVED (Leuchten existieren) --- Park Biesdorf	NL 21150,11925 21134,11926 21132,11943 21100,11960 20857,12027 20810,12031
-Albert-Brodersen-Allee	NL 20857,12027 20835,11810 20831,11771
-# REMOVED (hier existiert eine Laterne) --- Park Biesdorf	NL 20779,11801 20804,11797
-Park Biesdorf	NL 20804,11797 20818,11812 20835,11810
+Albert-Brodersen-Allee	NL 20857,12027 20835,11810 20831,11777
+# REMOVED (hier existiert eine Laterne) --- Park Biesdorf	NL 20779,11801 20801,11797
+Park Biesdorf	NL 20801,11797 20804,11813 20835,11810
 # REMOVED (Beleuchtung existiert) --- Park Biesdorf	NL 20807,12083 20857,12027
 (Altvaterstr. - Spanische Allee)	NL -3223,3034 -3368,2942 -3378,2936
 (An der Güterbahn)	NL 15351,1653 15205,1670 15110,1732 14986,1820
@@ -713,7 +713,7 @@ Müggelschlößchenweg	NL 25385,4414 25132,4385 24181,4270
 (Volkspark Anton Saefkow)	NL 12970,14632 12962,14613 12968,14585 12989,14572 12996,14562 13010,14540 13013,14523
 Plänterwald	NL 16136,7886 16534,8182
 Plänterwald	NL 16657,8443 16490,8432
-# REMOVED (neue Straßenlaternen existieren nun) --- #: note: alte Straßenlaternen existieren, sehen aber funktionsuntüchtig aus --- Plänterwald	NL 15714,8633 15772,8667 15922,8717 16026,8731 16074,8776 16084,8833
+# REMOVED (neue Straßenlaternen existieren nun) --- #: note: alte Straßenlaternen existieren, sehen aber funktionsuntüchtig aus --- Plänterwald	NL 15714,8633 15772,8667 15922,8717 16026,8731 16074,8776 16084,8833 16086,8860
 (James-Franck-Str. - Arthur-Müller-Str.)	NL 18601,2971 18583,2972 18390,2972 18374,2971 18361,2972 18229,2973 18220,2973 18196,2974
 (Wilhelm-Hoff-Str. - James-Franck-Str.)	NL 18828,3196 18822,3188 18724,3091 18716,3082 18707,3074 18613,2983 18601,2971
 # Orankestrand: beleuchtet	Lit 15871,16399 15782,16277 15731,16208 15664,16115 15599,16077 15479,16072
@@ -1099,7 +1099,7 @@ Oderstr.	NL 11565,7402 11601,7362 11615,7284 11608,7267 11593,7237
 #: by: Matthias Dörge:
 Jochen-Klepper-Weg	NL -3030,2266 -2784,2358 -2690,2385 -2372,2477
 # REMOVED (Beleuchtung funktioniert wieder) --- #: XXX Beleuchtung existiert, funktioniert aber nicht --- #: last_checked: 2013-12-09 --- #: next_check: 2014-09-23 --- entlang der Stadtbahn	NL 12132,11788 11966,11832
-Krautstr.	NL 11993,11978 11966,11832
+# REMOVED (Laternen existieren (mittlerweile?)) --- Krautstr.	NL 11993,11978 11966,11832
 #: note: keine direkte Beleuchtung, aber eigentlich genug indirekte
 Hermann-Stöhr-Platz	NL 12453,11790 12413,11901
 (Zobtener Str. - Fischerstr.)	NL 16353,10207 16404,10286
@@ -1748,7 +1748,7 @@ Osdorfer Str.	NL 1852,-770 1861,-754 2078,-640 2250,-570 2477,-548
 (Falkenberger Krugwiesen - Hohenschönhauser Str.)	NL 19772,18064 19679,18119 19410,18200 19293,18249 19251,18248
 (Uferweg - Sömmeringstr.)	NL 3572,12866 3574,12916 3716,12925
 Maienwerderweg	NL 130,17187 -744,16895
-(südliches Spreeufer)	NL 5225,12450 5235,12461 5287,12465 5299,12420 5360,12331 5405,12292
+(südliches Spreeufer)	NL 5225,12450 5235,12461 5287,12465 5299,12420 5360,12331 5411,12290
 Götelstr. - Tharsanderweg	NL -3416,12165 -3524,11980
 Zur Alten Fahrt	NL -12500,-1437 -12489,-1465 -12485,-1482
 An der Alten Fahrt	NL -12265,-1434 -12485,-1482 -12474,-1559
@@ -1987,3 +1987,4 @@ Blankenfelde - Lübars	NL 8619,23438 8562,23421 8141,23477 7872,23538 7185,23749
 (Garystr. - Saargemünder)	NL 1722,4701 1730,4743
 (Lützelsteiner Weg - Saargemünder Str.)	NL 1690,4708 1730,4743
 (Ihnestr. - Clayallee)	NL 1870,4732 1981,4741 2033,4757
+(Am Buckersberg - Volkerweg)	NL 16090,4021 16039,4062

@@ -248,7 +248,7 @@ Am Juliusturm - Zitadelle: an der Ampel "An der Spreeschanze" die Straßenseite w
 Loewenhardtdamm - Höhndorfstr.: bereits an der General-Pape-Str. auf den linken Gehweg wechseln	PI; 8306,8722 8334,8655 8438,8676
 Ausgeschildert zum Bayernring	CP2; 8531,8404 8454,8574
 Mehringdamm - Wilhelmshöhe: bereits an der Fidicinstr. die Straßenseite wechseln	PI; 9224,9053 9225,9111 9186,9107
-Kaiser-Wilhelm-Str. - Langkofelweg: bereits an der Ampel Edenkobener Weg die Straßenseite wechseln	PI; 6993,3765 6954,3703 6998,3596
+Kaiser-Wilhelm-Str. - Langkofelweg: bereits an der Ampel Edenkobener Weg die Straßenseite wechseln	PI; 6996,3762 6954,3703 6998,3596
 Altentreptower Str. - Wuhlgartenweg: zum Linksabbiegen frühzeitig auf die Fahrbahn oder den linken Gehweg wechseln	PI; 21573,12140 21400,12135 21307,12132 21282,12115
 Heerstr. - Preußenallee: bereits an der Kreuzung Teufelsseestr./Heerstr. auf die linke Straßenseite wechseln	PI; 504,11243 571,11255 541,11464
 Preußenallee - Heerstr.: auf der linken Gehwegseite bis zur Ampel Länderallee vorfahren und dann die Straßenseite wechseln	CP; 541,11464 571,11255 683,11270
@@ -295,7 +295,7 @@ Groß-Berliner Damm - Landschaftspark Johannisthal: bereits an der Hermann-Dorner
 Groß-Berliner Damm - Landschaftspark Johannisthal: bereits an der Hermann-Dorner-Allee die Straßenseite wechseln	PI; 18930,3703 18884,3752 18856,3783 18833,3781
 Wilhelm-Gericke-Str. - Oranienburger Str.: zunächst linken Gehweg bis zur Ampel an der Jansenstr. benutzen	CP; 5598,19912 5545,19909 5533,19811
 Bugenhagenstr. - Stromstr.: zunächst linken Gehweg bis zur Ampel an der Perleberger Str. benutzen	CP; 6104,13530 6230,13532 6230,13596
-Munsterdamm - Kottesteig: bereits 40m vor der Kreuzung die Straßenseite wechseln	PI; 6771,5273 6767,5233 6806,5230
+Munsterdamm - Kottesteig: bereits 40m vor der Kreuzung die Straßenseite wechseln	PI; 6767,5274 6767,5233 6806,5230
 Schorlemerallee - Albrecht-Thaer-Weg: bereits an der Kreuzung Schweinfurthstr. die Straßenseite wechseln	PI; 3306,6453 3350,6467 3449,6863
 Alemannenallee - Badenallee: Fußgängerampel rechts zum Überqueren der Heerstr. benutzen	CP; 1070,11226 943,11302 743,11462
 Badenallee - Alemannenallee: Fußgängerampel links zum Überqueren der Heerstr. benutzen	CP; 743,11462 943,11302 1070,11226
@@ -303,7 +303,7 @@ bereits an der Ampel Parchimer Allee/Onkel-Bräsig-Str. auf die linke Straßenseit
 Weg am Marzahn-Hohenschönhauser Grenzgraben: zum Überqueren der Boxberger Str. rechts halten, um Bordsteine zu vermeiden	CP; 19313,16130 19361,16145 19427,16179
 Weg am Marzahn-Hohenschönhauser Grenzgraben: zum Überqueren der Boxberger Str. links halten, um Bordsteine zu vermeiden	CP; 19427,16179 19361,16145 19313,16130
 Walsheimer Str. - Alt-Biesdorf: zunächst linken Gehweg bis zum Biesdorfer Friedhofsweg benutzen	CP; 21352,11701 21251,11560 21311,11528
-Grenzallee - Straße 12: ggfs. schon an der Ampel Autobahnausfahrt/Bergiusstr. auf den linken Gehweg wechseln	PI; 14051,6731 13932,6680 13882,6674 13881,6634
+Grenzallee - Straße 12: ggfs. schon an der Ampel Autobahnausfahrt/Bergiusstr. auf den linken Gehweg wechseln	PI; 14051,6731 13979,6700 13932,6680 13882,6674 13881,6634
 Prenzlauer Allee - Wohngebiet: bereits an der Krügerstr. oder Wisbyer Str. auf den linken Gehweg wechseln	PI; 12075,16144 12061,16091 12030,15968 12154,15902
 Mariendorfer Damm - Göllweg: Mittelstreifen kann nicht überquert werden, bis zum Ankogelweg vorfahren und dort den Mariendorfer Damm überqueren	CP; 10276,1383 10239,1481 10119,1435
 Göllweg - Mariendorfer Damm: zunächst den linken Gehweg benutzen und am Ankogelweg die Straßenseite wechseln	CP; 10119,1435 10239,1481 10226,1515

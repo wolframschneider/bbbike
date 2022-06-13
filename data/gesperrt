@@ -236,6 +236,7 @@ Braillestr.	1 4430,5324 4477,5250 4512,5199
 Mudrackzeile	1 6985,17812 7020,17690
 Mariabrunner Weg	1 6841,17781 6909,17796 6985,17812
 Gustav-Müller-Platz	1 7644,8560 7606,8598 7643,8634 7682,8598 7644,8560
+Niederlagstr.	1s 9943,12364 9934,12420
 Kolk/Behnitz	1 -3042,14682 -3025,14644 -2950,14624 -2944,14652 -2942,14666
 Karl-Marx-Platz	1 13100,7626 12987,7560
 Olympischer Platz	1 -157,11943 -505,11882 -514,11991 -272,12039 -193,12051 -110,12019
@@ -284,7 +285,6 @@ Parchimer Str.	1s 22212,12403 22212,12422 22257,12481 22258,12573 22272,12610
 Stiftsweg	1s 11001,18528 11239,18832 11263,18842
 Bleicheroder Str.	1 11263,18842 11439,18890 11526,18929 11622,18964 11727,19001 11762,19014 11818,19089
 Renée-Sintenis-Platz	1 5642,7255 5664,7244 5675,7224 5661,7202 5641,7189 5621,7204 5614,7223 5624,7244 5642,7255
-Spreepark	2 16028,8867 16161,8852
 Staakener Str.	1 -4147,14274 -4155,14261 -4316,14240 -4390,14257
 Langensteiner Weg	1 7285,4724 7335,4879 7437,4855
 Lowise-Reuter-Ring	1 13680,4715 13589,4681 13560,4681 13511,4695 13482,4718 13468,4766 13476,4812 13503,4846 13540,4861 13574,4862 13639,4850 13675,4855
@@ -443,7 +443,7 @@ Georgenstr. (Mitte)	1 9313,12662 9242,12652 9108,12635
 Georgenstr. (Mitte)	1 9117,12705 9242,12652
 Natalissteig	1 1200,14943 1223,14824 1226,14714
 Alt-Biesdorf	1 20375,11694 20435,11698 20571,11698 20764,11675 21108,11628
-Alt-Biesdorf	1 21108,11628 20963,11618 20838,11631 20633,11651 20540,11660 20375,11694
+Alt-Biesdorf	1 21108,11628 20963,11618 20838,11631 20739,11641 20633,11651 20540,11660 20375,11694
 Privatstr. 14	1s 13159,17196 13103,17280
 Bernkasteler Str.	1s 15208,16939 15015,16908 14923,16901 14923,16914
 Wiedenbrücker Weg	1 4207,1113 4220,1175 4141,1282
@@ -774,7 +774,6 @@ Edith-Kiss-Str.	1 12793,11132 12866,11256
 Garzauer Str.	1 21830,13688 21722,13708 21731,13789
 Flankenschanze	1 -3507,15341 -3534,15219
 Berliner Str. (Pankow, Prenzlauer Berg) [zur Tiroler Str.]	1 10862,17087 10891,17088 10917,17088
-Alt-Moabit - Invalidenstr.	1 7415,13060 7422,13012
 (Puschkinallee - Elsenstr.)	1 14244,9812 14250,9756 14271,9712
 Parkaue	1s 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
@@ -913,6 +912,7 @@ Mittelstreifen	3nocross::ignrte 6239,15553 6348,15423 6375,15391
 Amrumer Str. -> Ost-West-Str., Virchow-Klinikum: Mittelstreifen	3::igndisp 6375,15391 6348,15423 6265,15349
 Ost-West-Str., Virchow-Klinikum -> Amrumer Str.: Mittelstreifen	3::igndisp 6265,15349 6348,15423 6239,15553
 Sinsheimer Weg	1s 13774,8849 13687,8734
+Stolzenfelsstr.	1 19447,8175 19407,8143
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1143,6 +1143,10 @@ Weidenhof	1 10994,-4472 10998,-4391
 B189	2 -92822,74184 -93082,74166 -93764,74187 -94063,74154 -94600,73988 -94721,73963 -94950,73927
 Prenzlau, Bahnhofsvorplatz	1 39907,102441 39949,102431
 Prenzlau, Bahnhofsvorplatz	1 39918,102499 39966,102492 39949,102431 39946,102422 39904,102425
+Markt (Luckenwalde)	1 -4358,-35445 -4307,-35421 -4274,-35352
+Markt (Luckenwalde)	1 -4274,-35352 -4248,-35379 -4309,-35471
+Breite Str. (Luckenwalde)	1s -4299,-35514 -4208,-35409
+Breite Str. (Luckenwalde)	1s -4568,-35783 -4478,-35736
 Mittelstreifen nicht überquerbar	3nocross::ignrte -974,128015 -724,127995 6,127935 298,127911
 B104: Neubrandenburg -> Feldstr.: Mittelstreifen nicht überquerbar	3::igndisp -974,128015 -724,127995 -719,128043
 Feldstr. -> Pasewalk: Mittelstreifen nicht überquerbar	3::igndisp -719,128043 -724,127995 6,127935
@@ -1296,7 +1300,7 @@ Mittelstreifen	3nocross::ignrte 7437,1859 7423,1905 7409,1953
 Malteserstr. -> Weygerweg: Mittelstreifen	3::igndisp 7409,1953 7423,1905 7514,1930
 Weygerweg -> Malteserstr.: Mittelstreifen	3::igndisp 7514,1930 7423,1905 7437,1859
 Marienfelder/Daimler: Abbiegen nicht erlaubt	3 8602,2377 8579,2265 8639,2212
-Mittelstreifen	3nocross::ignrte 6771,5273 6767,5233 6747,5010
+Mittelstreifen	3nocross::ignrte 6767,5274 6767,5233 6747,5010
 Kottest. -> Munsterdamm: Mittelstreifen	3::igndisp 6806,5230 6767,5233 6747,5010
 Hecken	3nocross::ignrte 13782,9954 13711,10022 13579,10146
 Puschkinallee -> durch den Schlesischen Busch: Hecken	3::igndisp 13782,9954 13711,10022 13657,9983
@@ -1349,8 +1353,8 @@ Jüdenstr. -> Altstädter Ring: Mittelstreifen mit Zaun	3::igndisp -3481,14308 -35
 Altstädter Ring -> Jüdenstr.: Mittelstreifen mit Zaun	3::igndisp -3501,14365 -3506,14306 -3481,14308
 Altstädter Ring -> Münsinger Park: Mittelstreifen mit Zaun	3::igndisp -3552,14082 -3517,14218 -3607,14249
 Münsinger Park -> Altstädter Ring: Mittelstreifen mit Zaun	3::igndisp -3607,14249 -3517,14218 -3511,14260
-Mittelstreifen	3nocross::ignrte 6993,3765 6954,3703 6930,3666
-Langkofelweg -> Kaiser-Wilhelm-Str.: Mittelstreifen	3::igndisp 6998,3596 6954,3703 6930,3666
+Mittelstreifen	3nocross::ignrte 6996,3762 6954,3703 6915,3642
+Langkofelweg -> Kaiser-Wilhelm-Str.: Mittelstreifen	3::igndisp 6998,3596 6954,3703 6915,3642
 umbequemes Überqueren wegen Bordsteinen	3nocross::ignrte 11329,12497 11340,12443 11344,12410 11355,12331
 Schillingstr. -> Alexanderstr.: umbequemes Überqueren wegen Bordsteinen	3::igndisp 11353,12436 11340,12443 11344,12410
 Alexanderstr. -> Schillingstr.: umbequemes Überqueren wegen Bordsteinen	3::igndisp 11329,12497 11340,12443 11353,12436
@@ -1800,11 +1804,11 @@ Alt-Biesdorf -> Märkische Allee: nicht passierbarer Mittelstreifen	3::igndisp 19
 Märkische Allee -> Alt-Biesdorf: nicht passierbarer Mittelstreifen	3::igndisp 20064,11687 20114,11719 19985,11727
 Märkische Allee -> Märkische Allee: nicht passierbarer Mittelstreifen	3::igndisp 20064,11687 20114,11719 20025,11747
 Märkische Allee -> Alt-Biesdorf: nicht passierbarer Mittelstreifen	3::igndisp 20025,11747 20114,11719 20161,11715
-Mozartstr. -> Alt-Biesdorf: nicht passierbarer Mittelstreifen	3::igndisp 20169,11852 20161,11715 20375,11694
-Mozartstr. -> Lötschbergstr.: nicht passierbarer Mittelstreifen	3::igndisp 20169,11852 20161,11715 20150,11512
-Alt-Biesdorf -> Mozartstr.: nicht passierbarer Mittelstreifen	3::igndisp 20114,11719 20161,11715 20169,11852
+Mozartstr. -> Alt-Biesdorf: nicht passierbarer Mittelstreifen	3::igndisp 20170,11859 20161,11715 20375,11694
+Mozartstr. -> Lötschbergstr.: nicht passierbarer Mittelstreifen	3::igndisp 20170,11859 20161,11715 20150,11512
+Alt-Biesdorf -> Mozartstr.: nicht passierbarer Mittelstreifen	3::igndisp 20114,11719 20161,11715 20170,11859
 Alt-Biesdorf -> Lötschbergstr.: nicht passierbarer Mittelstreifen	3::igndisp 20375,11694 20161,11715 20150,11512
-Lötschbergstr. -> Mozartstr.: nicht passierbarer Mittelstreifen	3::igndisp 20150,11512 20161,11715 20169,11852
+Lötschbergstr. -> Mozartstr.: nicht passierbarer Mittelstreifen	3::igndisp 20150,11512 20161,11715 20170,11859
 Lötschbergstr. -> Alt-Biesdorf: nicht passierbarer Mittelstreifen	3::igndisp 20150,11512 20161,11715 20114,11719
 Straßentunnelrampe	3nocross::ignrte 18215,11690 18364,11698 18520,11707 18626,11742
 Alt-Friedrichsfelde: Straßentunnelrampe	1::igndisp 18215,11690 18517,11718 18626,11742
@@ -2191,9 +2195,9 @@ Silberberger -> Adlergestell: Abbiegen verboten	3 19804,3697 19735,3643 19812,35
 Mittelstreifen	3nocross::ignrte 18457,5000 18425,5032 18080,5376
 Michael-Brückner-Str. -> Hartriegelstr.: Mittelstreifen	3::igndisp 18080,5376 18425,5032 18514,5028
 Hartriegelstr. -> Michael-Brückner-Str.: Mittelstreifen	3::igndisp 18514,5028 18425,5032 18457,5000
-Mittelstreifen	3nocross::ignrte 17728,5756 17782,5698 17829,5648
+Mittelstreifen	3nocross::ignrte 17728,5756 17782,5698 17808,5669
 Michael-Brückner-Str. -> Spreestr.: Mittelstreifen	3::igndisp 17728,5756 17782,5698 17807,5730
-Michael-Brückner-Str. -> Cajamarcapl.: Mittelstreifen	3::igndisp 17829,5648 17782,5698 17730,5698
+Michael-Brückner-Str. -> Cajamarcapl.: Mittelstreifen	3::igndisp 17808,5669 17782,5698 17730,5698
 Cajamarcapl. -> Michael-Brückner-Str.: Mittelstreifen	3::igndisp 17730,5698 17782,5698 17728,5756
 Cajamarcapl. -> Spreestr.: Mittelstreifen	3::igndisp 17730,5698 17782,5698 17807,5730
 Straßenbahngleise	3nocross::ignrte 17488,15766 17532,15645 17569,15561 17626,15433 17706,15269 17774,15129 17789,15098 17829,15015
@@ -2573,7 +2577,7 @@ tragen (ca. 10 Stufen)	0:20:-198 26407,161781
 tragen (15 Stufen oder steile Kinderwagenrampe)	0:30:55 2956,24373
 tragen (Treppe)	0:30:-96 2854,23062
 tragen (ca. 30 Stufen)	0:30:-173 8773,10399
-tragen (ca. 25 Stufen)	0:30:-14 -18702,4551
+tragen (mehrere langgezogene Stufen, mit Rampen als Schiebehilfe)	0:30:-14 -18702,4551
 tragen (11 Stufen)	0:20:-195 -12676,-1742
 tragen (9 Stufen)	0:20:-235 -12606,-1694
 tragen (29 Stufen)	0:30:-246 -13802,-1856
@@ -2692,6 +2696,9 @@ tragen (Treppe, 47 Stufen, mit Führungsrampe für Fahrräder)	0:60:8 8376,8813
 tragen (Treppe, 16 Stufen)	0:25:36 22104,11925
 tragen (Treppe, 2x6 Stufen)	0:25:-225 15023,13800
 tragen (Treppe, 10 Stufen) oder steile Rampe benutzen	0:15:-181 2199,26440
+tragen (einige Stufen)	0:15:-82 -18612,4568
+tragen (Treppe)	0:30:-19 -18875,5375
+tragen (Treppe)	0:30:-101 -18860,5378
 Schranke	BNP:3:-130:trailer=10 18638,11479
 Schranke	BNP:10:-180:trailer=30 18965,11706
 Schranke	BNP:3:-164:trailer=10 17793,10382
@@ -3124,7 +3131,8 @@ Schranke, kann auch mit Anhänger umfahren werden	BNP:1:-168 49137,24422
 Drängelgitter	BNP:3:0:trailer=6 3644,8441
 Poller, Abstand 80cm (mit Anhänger über Gehweg umfahren)	BNP:1:1:trailer=10 7816,5682
 Tor	BNP:3:-209 6431,3417
-Tor	BNP:10:-146 16145,4217
+Tor, üblicherweise geschlossen	BNP:10:-145 16145,4217
+Tor, üblicherweise geschlossen	BNP:10:-146 16046,4073
 Drängelgitter (lichte Breite ca. 100cm)	BNP:3:-145:trailer=10 16497,3453
 Schranke und Pfosten	BNP:3:-233:trailer=10 15028,4272
 Schranke (lichte Breite ca. 120cm)	BNP:2:-50:trailer=8 14448,4501
@@ -3199,9 +3207,12 @@ Drängelgitter	BNP:3:-32:trailer=10 18414,1380
 Drängelgitter	BNP:3:-32:trailer=10 18232,1669
 Drängelgitter	BNP:3:-147:trailer=10 20560,23
 Drängelgitter	BNP:3:-106:trailer=10 20675,56
+Drängelgitter	BNP:2:-19:trailer=3 -3838,-47018
 zwei Drängelgitter (Z-Anordnung)	BNP:5:-225:trailer=15 18848,3600
 zwei Drängelgitter (Z-Anordnung)	BNP:5:-224:trailer=15 18825,3325
 weites Drängelgitter	BNP:2:75:trailer=7 12614,6301
+Alt-Moabit - Invalidenstr.: Bauarbeiten, Gehweg gesperrt, Fahrbahn nur für Tram	2:inwork 7422,13012 7415,13060
+Möllhausenufer: Bauarbeiten, Einbahnstraßenregelung	1s 23608,1210 23520,1194
 Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer	2::inwork 7673,4223 7769,4315
 (Vorfahrt Neues-Deutschland-Gebäude): an der Rüdersdorfer Str. mit Bauzäunen abgesperrt	2::inwork 12788,11898 12891,12008
 Überqueren der Straße vor der Russischen Botschaft nicht möglich	3nocross::ignrte 8804,12280 9028,12307 9141,12320
@@ -3219,12 +3230,11 @@ Adolf-Wermuth-Allee: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestell
 Heiner-Müller-Str.: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17640,8627 17771,8605
 Parkstadt Karlshorst: temporäre Einbahnstraßenregelung	1::inwork 17497,8623 17640,8627 17656,8700 17461,8693
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen	1s:inwork 8266,14346 8442,14456
-(Planstraße C): Einbahnstraßenregelung	1s:inwork 12848,11093 12926,11224
 (Verlängerung der Siegfriedstr.): während der Hochbauarbeiten gesperrt	2::inwork 11664,6796 11488,6781
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 Tegeler Brücke: wird neu gebaut	2::inwork -261,15858 -252,15903 -242,15982 -236,16043 -226,16086
 Erich-Steinfurth-Str.: Bauarbeiten, gesperrt	2::inwork 12608,11692 12645,11673
-Pionierweg: wegen Bauarbeiten gesperrt	2::inwork 16026,8731 16074,8776 16084,8833
+Pionierweg: wegen Bauarbeiten gesperrt	2::inwork 16084,8833 16086,8860
 Verlängerung Zwieseler Str.: Baustellenabsperrung	2::inwork 19705,9039 19638,9070
 (Kynaststr. - Paul-und-Paula-Ufer): Bauarbeiten, Weg existiert nicht mehr	2::inwork 14843,10621 14911,10587
 Matthesstr.: Baustelle, keine Durchfahrt möglich	2::inwork 14185,9509 14172,9457
@@ -3233,7 +3243,6 @@ Tasmanienweg: durch Bauzäune abgesperrt	2::inwork -2747,19074 -2647,19070
 Hebammensteigbrücke	2::inwork 13168,21706 13046,21734
 Hönower Str.: temporäre Einbahnstraße	1s:inwork 18735,9421 18765,9426 18846,9532
 Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, komplett gesperrt	2::inwork -196,16060 -203,16064 -205,16086 -224,16095 -265,16111
-Straße 77: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 15320,12375 15408,12394
 Straße des 17. Juni: Radweg gesperrt	1::igndisp 6164,11947 5900,11913
 Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 6024,11978 6132,11984 6164,11947
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s 10472,14632 10320,14608
@@ -3254,7 +3263,6 @@ Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,10152 14373,10046
 Otto-Weidt-Platz: Bauarbeiten	2::inwork 7923,14142 7778,14059
-Lydia-Rabinowitsch-Str. - Hamburger Bahnhof: direkter Durchgang wegen Bauarbeiten gesperrt	2::inwork 7959,13982 7997,13892 8025,13835
 George-Stephenson-Str.: Bauarbeiten, gesperrt	2::inwork 7487,14472 7452,14415 7500,14333 7569,14217 7679,14030
 Helene-Jacobs-Str.	1::inwork 3332,8207 3326,8100 3320,7982 3309,7782 3210,7786 3219,7987 3224,8106 3230,8230
 Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 14569,10055

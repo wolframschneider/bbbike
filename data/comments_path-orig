@@ -122,7 +122,7 @@ Nordufer: bereits an der Ampel Föhrer Str. auf den linken Zweirichtungsradweg we
 #: XXX hier wird eine Querungshilfe erstellt (nach Brückenneubau)
 #: last_checked: 2022-05-11
 #: check_frequency: 180d
-#: next_check: 2022-06-09
+#: next_check: 2022-12-31
 An der Wuhlheide - Wuhlewanderweg: bereits an der Ampel Rudolf-Rühl-Allee die Straßenseite wechseln	PI; 21303,5826 21365,5832 21470,5809 21522,5771 21569,5730 21600,5694 21605,5687 21618,5699
 # 
 #: XXX_prog: RL:ja, GPS:nein
@@ -403,7 +403,7 @@ Loewenhardtdamm - Höhndorfstr.: bereits an der General-Pape-Str. auf den linken 
 Ausgeschildert zum Bayernring	CP2; 8531,8404 8454,8574
 Mehringdamm - Wilhelmshöhe: bereits an der Fidicinstr. die Straßenseite wechseln	PI; 9224,9053 9225,9111 9186,9107
 #: by: Steini (immerlocker)
-Kaiser-Wilhelm-Str. - Langkofelweg: bereits an der Ampel Edenkobener Weg die Straßenseite wechseln	PI; 6993,3765 6954,3703 6998,3596
+Kaiser-Wilhelm-Str. - Langkofelweg: bereits an der Ampel Edenkobener Weg die Straßenseite wechseln	PI; 6996,3762 6954,3703 6998,3596
 Altentreptower Str. - Wuhlgartenweg: zum Linksabbiegen frühzeitig auf die Fahrbahn oder den linken Gehweg wechseln	PI; 21573,12140 21400,12135 21307,12132 21282,12115
 Heerstr. - Preußenallee: bereits an der Kreuzung Teufelsseestr./Heerstr. auf die linke Straßenseite wechseln	PI; 504,11243 571,11255 541,11464
 Preußenallee - Heerstr.: auf der linken Gehwegseite bis zur Ampel Länderallee vorfahren und dann die Straßenseite wechseln	CP; 541,11464 571,11255 683,11270
@@ -464,7 +464,7 @@ Groß-Berliner Damm - Landschaftspark Johannisthal: bereits an der Hermann-Dorner
 Groß-Berliner Damm - Landschaftspark Johannisthal: bereits an der Hermann-Dorner-Allee die Straßenseite wechseln	PI; 18930,3703 18884,3752 18856,3783 18833,3781
 Wilhelm-Gericke-Str. - Oranienburger Str.: zunächst linken Gehweg bis zur Ampel an der Jansenstr. benutzen	CP; 5598,19912 5545,19909 5533,19811
 Bugenhagenstr. - Stromstr.: zunächst linken Gehweg bis zur Ampel an der Perleberger Str. benutzen	CP; 6104,13530 6230,13532 6230,13596
-Munsterdamm - Kottesteig: bereits 40m vor der Kreuzung die Straßenseite wechseln	PI; 6771,5273 6767,5233 6806,5230
+Munsterdamm - Kottesteig: bereits 40m vor der Kreuzung die Straßenseite wechseln	PI; 6767,5274 6767,5233 6806,5230
 Schorlemerallee - Albrecht-Thaer-Weg: bereits an der Kreuzung Schweinfurthstr. die Straßenseite wechseln	PI; 3306,6453 3350,6467 3449,6863
 Alemannenallee - Badenallee: Fußgängerampel rechts zum Überqueren der Heerstr. benutzen	CP; 1070,11226 943,11302 743,11462
 Badenallee - Alemannenallee: Fußgängerampel links zum Überqueren der Heerstr. benutzen	CP; 743,11462 943,11302 1070,11226
@@ -475,7 +475,7 @@ Weg am Marzahn-Hohenschönhauser Grenzgraben: zum Überqueren der Boxberger Str. l
 Walsheimer Str. - Alt-Biesdorf: zunächst linken Gehweg bis zum Biesdorfer Friedhofsweg benutzen	CP; 21352,11701 21251,11560 21311,11528
 # REMOVED (nicht mehr notwendig, Brücke existiert) --- Yorckstr. - Park am Gleisdreieck: schon an der Ampel Bautzener Str. auf den linken Gehweg wechseln (wegen Geländer keine Überquerung der Yorckstr. mehr möglich)	PI; 8192,9619 8358,9568 8357,9598
 #: note: Lastwagen parken an der Einmündung Grenzallee/Straße 12, unübersichtlich!
-Grenzallee - Straße 12: ggfs. schon an der Ampel Autobahnausfahrt/Bergiusstr. auf den linken Gehweg wechseln	PI; 14051,6731 13932,6680 13882,6674 13881,6634
+Grenzallee - Straße 12: ggfs. schon an der Ampel Autobahnausfahrt/Bergiusstr. auf den linken Gehweg wechseln	PI; 14051,6731 13979,6700 13932,6680 13882,6674 13881,6634
 # REMOVED (-> routing_helper-orig) --- Buschkrugallee - Bürgerstr.: bereits an der Fußgängerampel die Straßenseite wechseln	PI; 13316,6320 13307,6359 13289,6355 13283,6354 13239,6344
 Prenzlauer Allee - Wohngebiet: bereits an der Krügerstr. oder Wisbyer Str. auf den linken Gehweg wechseln	PI; 12075,16144 12061,16091 12030,15968 12154,15902
 Mariendorfer Damm - Göllweg: Mittelstreifen kann nicht überquert werden, bis zum Ankogelweg vorfahren und dort den Mariendorfer Damm überqueren	CP; 10276,1383 10239,1481 10119,1435
@@ -524,7 +524,7 @@ Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichsh
 #: XXX wird eventuell im Zuge der Maßnahme Nsw.3 verbessert
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5826 (Verkehrsführung verbessern) (wurde allerdings abgelehnt; die allgemeine Verbesserung der Situation wird aber irgendwann passieren ("Umgestaltung des Bahnhofsvorplatzes")
 #: by: https://www.uvp-verbund.de/documents/ingrid-group_ige-iplug-be/3A22FF18-9B17-4F51-B470-2F50F0C68929/U13-2_Entwurf%20Sterndamm%20und%20Bahnhofsvorplatz_LP-Blatt02.pdf (Linksabbiegemöglichkeit für Radfahrer im Zuge der Umgestaltung am S-Bhf. Schöneweide)
-#: last_checked: 2022-04-22 (mapillary)
+#: last_checked: 2022-06-04
 #: check_frequency: 180d
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17747,5452
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115
@@ -622,7 +622,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2022-04-24 vvv
+#: last_checked: 2022-05-24 vvv
 #: note: früher: ausgeschildert "zur Salzmannstraße Huronseestraße"
 nicht ausgeschildert, Richtung Salzmannstr./Huronseestr.	CP2; 16900,9861 16895,9922
 #: note: früher: ausgeschildert "zur Sewanstraße"

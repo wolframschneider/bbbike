@@ -128,6 +128,10 @@ Kreisverkehr	Roundabout 32253,49050
 Kreisverkehr	Roundabout 35885,49505
 Kreisverkehr	Roundabout 46737,-16548
 Kreisverkehr	Roundabout -2504,22626
+Kreisverkehr	Roundabout -2498,-1741
+Mini-Kreisverkehr	Roundabout -3252,-2368
+Mini-Kreisverkehr	Roundabout -3484,-2531
+Mini-Kreisverkehr	Roundabout -3650,-2609
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
 Privatstraße der DB	CS 5817,7824 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
@@ -182,7 +186,7 @@ Begasstr. - Riemenschneiderweg: Hausdurchfahrten	CS 6513,7005 6650,7017 6770,702
 Gartentor, Zufahrt zum Gemeindehaus (dürfte immer offen sein)	CS 2201,43954
 Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist mit Wildschweinen zu rechnen	CS 30124,4664 30254,4692 30369,4697 30478,4715 30527,4724 30588,4720 30636,4717 30686,4731 30810,4765 30857,4770 30913,4766 31011,4750 31118,4768 31209,4781 31224,4775 31311,4742 31339,4726 31364,4711 31424,4658
 (Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21978,8132 22077,8104 22181,8009 22631,7692
-Straße 77: die Straße ist nicht ausgeschildert	CS 15408,12394 15320,12375
+Straße 77: nicht ausgeschildert	CS 15408,12394 15320,12375
 (Seeburger Str./Seecktstr. - Bullengraben): Zufahrt über Supermarktparkplatz (Lidl)	CS; -4299,13304 -4372,13384
 Straße R: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -203,16168 -269,16241 -312,16288 -386,16347 -460,16408 -542,16475 -632,16541 -719,16608 -784,16658 -792,16659
 Straße Y: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -632,16541 -671,16488
@@ -574,7 +578,7 @@ Alter Markt: nicht ausgeschildert, Platz am Potsdamer Stadtschloss	CS -12624,-15
 Alter Markt: nicht ausgeschildert, Platz am Potsdamer Stadtschloss	CS -12583,-1552 -12619,-1549 -12677,-1536 -12719,-1542 -12790,-1560
 Friedrich-Wilhelm-Boelcke-Str.: nicht ausgeschildert	CS -12796,-2488 -12831,-2439 -12815,-2419 -12779,-2467
 Zur Königlichen Hofbrauerei: nicht ausgeschildert	CS -12815,-2419 -12781,-2376
-Herzbergstr. - Paul-Junius-Str.: am Roederplatz auf die gegenüberliegende Straßenseite wechseln	CP; 15626,13541 15513,13539 15470,13509
+Herzbergstr. - Paul-Junius-Str.: am Roederplatz auf die gegenüberliegende Straßenseite wechseln	CP; 15626,13541 15580,13540 15513,13539 15470,13509
 Heinrich-Dathe-Platz: nicht ausgeschildert	CP2; 18442,10471 18456,10454
 Ahornsteig: nicht ausgeschildert	CS 7059,11978 7007,11923 6984,11859 6980,11790 6996,11661 7018,11615 7092,11593 7362,11561 7418,11566 7549,11608 7612,11597 7648,11592 7664,11597
 ausgeschildert Floraplatz	CP2; 8016,11770 8020,11937
@@ -677,8 +681,6 @@ Hödurstr.: Privatstraße	CS 12647,18289 12751,18401
 Bundesratufer: nicht ausgeschildert, kurz vor der Brücke die Rampe benutzen	CP; 6183,13083 6164,12980 6122,12971
 Bochumer Platz: nicht ausgeschildert	CP2; 5938,12848 5914,12845
 Bochumer Platz: als Bundesratufer ausgeschildert	CP2; 5914,12845 5938,12848
-An der Dahme: nicht ausgeschildert	CS 22270,2549 22358,2460
-Relingstr: nicht ausgeschildert	CP2; 22358,2460 22287,2431
 Ankerweg: nicht ausgeschildert	CS 22118,2559 22159,2585
 Ankerweg: nicht ausgeschildert	CP2; 22159,2585 22197,2612
 Rheingoldstr.: durch den Rheinsteinpark	CS 19073,8828 19145,8659
@@ -823,3 +825,6 @@ Luisenhof: Privatstraße	CS -13705,-2875 -13763,-2926
 Luisenhof: Privatstraße	CS -13635,-2900 -13634,-2978
 ausgeschildert "Aldi, Edeka"	CP2; 31609,3232 31650,3218
 ausgeschildert "Zugang Stralauer Allee 6"	CP2; 13835,10577 13805,10528
+Am Pankepark: nicht ausgeschildert	CS 8152,14130 8238,14181 8282,14116 8207,14067 8184,14052
+Kleiner Parkweg: nicht ausgeschildert	CS 20775,11801 20790,11990
+Volkerweg: nicht ausgeschildert	CS 16005,4012 16046,4073 16060,4093 16145,4217 16151,4226
