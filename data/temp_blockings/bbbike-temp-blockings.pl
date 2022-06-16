@@ -686,7 +686,7 @@ EOF
        text  => 'OD Pritzwalk, zw. F.-Reuter-Str. und A.-Bartels-Weg; Brückenbauarbeiten; Vollsperrung: 16.08.2004-23.08.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -74489,80545 -74038,78181
+	q4 -74575,80611 -74430,80375 -74117,78048
 EOF
      },
      { from  => undef, # 
@@ -799,7 +799,7 @@ EOF
        text  => 'B 103; (Havelberger Str.); OD Pritzwalk, Bahnübergang Gleissanierung Vollsperrung 15.07.2005-17.07.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -74489,80545 -74653,81289
+	2 -74575,80611 -74665,81210
 EOF
      },
      { from  => 1093471200, # 2004-08-26 00:00
@@ -2831,7 +2831,7 @@ EOF
        text  => 'B 103; (Kyritzer Chaussee); OD Pritzwalk, zw. Fritz-Reuter-Str. u. Havelberger Str. Bau OU B189n halbseitig gesperrt; Einbahnstraße 15.09.2005-29.02.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 -74489,80545 -74038,78181
+	q4 -74575,80611 -74430,80375 -74117,78048
 EOF
      },
      { from  => 1127772000, # 2005-09-27 00:00
@@ -11066,7 +11066,7 @@ EOF
        text  => 'B 103 Kyritz - Pritzwalk OD Buchholz, zw. Eggersdorfer Damm und OA Kanal- und Straßenbau Vollsperrung 19.02.2008-30.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork -73678,77438 -73946,77861 -74038,78181
+	q4::inwork -73833,77566 -74021,77888 -74117,78048
 EOF
      },
      { from  => 1204585200, # 2008-03-04 00:00
@@ -14389,7 +14389,7 @@ EOF
        text  => 'B 103 Kyritz - Pritzwalk zw. Kyritz u. Gantikow, Bahnübergang Erneuerung Bahnübergang Vollsperrung 25.05.2009-21.06.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -60072,61047 -61764,62280
+	2::inwork -60095,61028 -61969,62314
 EOF
      },
      { from  => 1243116000, # 2009-05-24 00:00
@@ -14648,7 +14648,7 @@ EOF
        until => $isodate2epoch->("2022-06-19 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6, start => "2020-10-25T00:00:00"]],
-       text  => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt können gesperrt sein (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); außerdem Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Bahnhofstr. (17.06.2022 - 19.06.2022)',
+       text  => 'Köpenicker Sommer: Veranstaltung, einige Straßen in der Köpenicker Altstadt können gesperrt sein (vermutlich: Alt-Köpenick, Schlossplatz, Schlossinsel, Luisenhain, Rosenstr., Grünstr., Schüßlerplatz, Laurenzstr., Jägerstr., Böttcherstr.); vielleicht auch Sperrung im Kietz (Kietzer Sommer); außerdem Umzug am Samstag Nachmittag in der Köpenicker Bahnhofstr. (17.06.2022 - 19.06.2022)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.volksfeste-in-deutschland.de/koepenicker-sommer-in-berlin-koepenick.html
@@ -14665,7 +14665,8 @@ EOF
 	2::temp 22175,4730 22246,4711
 	2::temp 22284,4653 22355,4660
 	2::temp 22212,4655 22214,4548
-# REMOVED ---	2::temp 22111,4562 22162,4546 22214,4548 22324,4586 22314,4604 22355,4660 22365,4676 22395,4678
+	2::temp 22111,4562 22162,4546 22214,4548 22324,4586
+# REMOVED ---	2::temp 22324,4586 22314,4604
 EOF
      },
      { from  => 1246207038, # 2009-06-28 18:37
@@ -17023,7 +17024,7 @@ EOF
        text  => 'B 103 Kyritz - Pritzwalk zw. Kollrep u. Abzw. K7012 Deckenerneuerung Vollsperrung 29.10.2009-07.11.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork -67657,68360 -67922,68633 -69298,70111 -70126,70529 -70280,70719 -70377,70966 -70384,71350
+	2::inwork -67456,68308 -67855,68623 -69148,69912 -70215,70554 -70359,70727 -70422,70985 -70409,71337
 EOF
      },
      { from  => 1257634800, # 2009-11-08 00:00
@@ -21720,15 +21721,16 @@ EOF
 # REMOVED --- #: tempex ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2021-09-16 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2021-09-19 23:59:59"),
+     { from  => $isodate2epoch->("2022-07-13 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-07-17 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 13, months => 7, start => "2020-10-25T00:00:00"]],
        source_id => 'https://www.gratis-in-berlin.de/festivals/item/2037758-hafenfest-tegel-2019-mit-programm-und-feuerwerk',
-       text  => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (16.09.2021 bis 19.09.2021)',
+       text  => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (14.07.2022 bis 17.07.2022)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/events/5979419-2229501-tegeler-hafenfest.html (2021)
+#: by: https://www.berlin.de/events/5979419-2229501-tegeler-hafenfest.html?date=20220613
 # REMOVED (was) : tempex: 20160714-20160717
 	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
 EOF
@@ -21997,8 +21999,10 @@ EOF
 #: by: https://www.die-classic-days-berlin.de/programm-2/ (wird auf 2022 verschoben)
 #: by: https://www.die-classic-days-berlin.de/programm-2/?date=20220416 (geplant: 18. und 19. Juni 2022)
 #: note: kann im Juni oder Juli stattfinden
+#: source_id: viz2021:13.325285,52.502859,16.06.2022,12:00
 # REMOVED --- #: tempex: 20170616T0400-20170619T0400
 	q4::temp 5475,10808 5341,10756 5215,10711 5069,10662 4838,10597 4672,10552 4496,10504 4371,10465 4245,10435
+	q4::temp 5072,10701 5069,10662
 EOF
      },
      { from  => 1497556466, # 1370491200, # 2013-06-06 06:00
@@ -27964,13 +27968,17 @@ EOF
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-auf-der-schoenstrasse-gehen-weiter_a261160
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2021/pressemitteilung.1058179.php (Sperrung der Kreuzung Schönstraße/Paul-Oestreich-Straße, bis 26. März 2021)
 #: by: https://www.berliner-woche.de/weissensee/c-verkehr/einmuendung-komplett-gesperrt_a303306
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2022/pressemitteilung.1216456.php (ab 21.6.2022 Vollsperrung, Freigabe am 28.6.2022)
 #: XXX mittlerweile ist die Fahrbahn im Bereich der Klinik gesperrt, hier geht's nur auf dem Gehweg weiter
 #: also_indoor: traffic (G(wieder),H(falsch?),B)
 #: priority: #B vvv
 #: last_checked: 2022-06-10 vvv
 #: check_frequency: 60d vvv
+#: next_check: 2022-06-20 vvv
+# REMOVED --- #: next_check: 2022-06-28 vvv
 	q3::inwork 13391,16436 13630,16629
 Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: priority ^^^
@@ -28827,7 +28835,7 @@ EOF
 #: by: https://twitter.com/VIZ_Berlin/status/1489146640095006722
 #: by: https://pbs.twimg.com/media/FKmLhoHWYA0Sivj?format=jpg&name=large
 #: next_check_id: HENNIGSDORFER-2019
-	q4::inwork; -2504,22626 -2540,22694 -2424,22991 -2306,23259
+	q4::inwork; -2508,22627 -2540,22694 -2424,22991 -2306,23259
 # REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2306,23259 -2248,23409 -2185,23567
 # REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2185,23567 -2168,23607 -2132,23697 -2071,23850
 # REMOVED (Bauarbeiten beendet) ---	q4::inwork; -2071,23850 -2051,23901 -1940,24176 -1896,24275 -1872,24336
@@ -29290,11 +29298,11 @@ EOF
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
-#: osm_watch: way id="8655276" version="28"
+#: osm_watch: way id="8655276" version="29"
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2022-04-21 (mapillary)
+#: last_checked: 2022-06-14 (osm)
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -29603,13 +29611,16 @@ EOF
 # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2019-06-10 18:00:00"), # 1560204000, # 2019-06-10 00:00 # --- die Sperrungen sind schon am Tag vor der Staffel aktiv, in Zukunft immer berücksichtigen!
-       until => $isodate2epoch->("2019-06-15 09:00:00"), # 1560549599, # 2019-06-14 23:59
-       text  => 'Nördlicher Tiergarten und John-Foster-Dulles-Allee: 5 x 5 km TEAM-Staffel, Wege und Straßen können gesperrt sein, vom 11. Juni 2019 18 Uhr bis 15. Juni 2019 9 Uhr',
+     { from  => $isodate2epoch->("2022-06-13 18:00:00"), # 1560204000, # 2019-06-10 00:00 # --- die Sperrungen sind schon am Tag vor der Staffel aktiv, in Zukunft immer berücksichtigen!
+       until => $isodate2epoch->("2022-06-18 09:00:00"), # 1560549599, # 2019-06-14 23:59
+       text  => 'Nördlicher Tiergarten und John-Foster-Dulles-Allee: 5 x 5 km TEAM-Staffel, Wege und Straßen können gesperrt sein, vom 14. Juni 2022 18 Uhr bis 18. Juni 2022 9 Uhr',
        type  => 'gesperrt',
        source_id => 'https://www.berliner-teamstaffel.de/der-tag/strecke.html',
        data  => <<EOF,
 #: source_id: 2147344332
+#: source_id: viz2021:13.3546,52.51713,14.06.2022,18:00
+#: source_id: viz2021:13.354603,52.517071,14.06.2022,18:00
+#: source_id: viz2021:13.350711,52.51499,15.06.2022,06:00
 	2::temp 8119,12414 8070,12409 8017,12359 7875,12363 7822,12201 7816,12150
 	2::temp 7383,12095 7031,12320 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 7945,12592
 	3 6694,12627 7031,12320 7051,12426
@@ -30564,7 +30575,7 @@ EOF
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-06-03
+#: last_checked: 2022-06-12
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 EOF
@@ -31086,7 +31097,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED (laut daf mittlerweile offen) --- #: XXX wann wird hier wieder offen sein? Wird es dann auch einen Radweg geben? --- #: last_checked: 2020-05-16 --- #: check_frequency: 90d
-	2::inwork 17844,-4231 18143,-4094
+	2::inwork 17844,-4231 17992,-4162 18060,-4131 18143,-4094
 EOF
      },
      { from  => 1588490580, # 2020-05-03 09:23
@@ -32921,8 +32932,8 @@ EOF
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2022/pressemitteilung.1214512.php
 #: by: https://berliner-abendblatt.de/2022/06/08/zwei-spielstrassen-fuer-neukoelln/
-#: XXX Spielstraße ab 2023 vom 15.05.
-#: next_check: 2022-06-12
+#: XXX Spielstraße ab 2023 vom 15.05. -> from+text anpassen
+#: next_check: 2022-09-15
 	q4::temp::play 11917,9663 12074,9689
 EOF
      },
@@ -33309,19 +33320,19 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2021-07-08 11:00:00"),
-       until => $isodate2epoch->("2022-08-01 17:00:00"), # undef, # Termin kann wohl nicht gehalten werden --- $isodate2epoch->("2021-12-15 17:00:00"),
-       text  => 'Karlshorster Str.: Bauarbeiten in Richtung Marktstr. zwischen Hauptstr. und Türrschmidtstr., noch geringe Einschränkungen; außerdem ist die Anbindung Türrschmidtstr. gesperrt (nur Fahrbahn, Bürgersteig ist frei), vom 09.07.2021 11:00 bis voraussichtlich 01.08.2022',
+       until => $isodate2epoch->("2022-06-20 17:00:00"), # undef, # Termin kann wohl nicht gehalten werden --- $isodate2epoch->("2021-12-15 17:00:00"),
+       text  => 'Karlshorster Str.: Bauarbeiten in Richtung Marktstr. zwischen Hauptstr. und Türrschmidtstr., noch geringe Einschränkungen; außerdem ist die Anbindung Türrschmidtstr. gesperrt (nur Fahrbahn, Bürgersteig ist frei), vom 09.07.2021 11:00 bis voraussichtlich 20.06.2022',
        type  => 'gesperrt',
-       source_id => 'viz2021:13.475242,52.50154,09.07.2021,11:00', # bis 20.6.2022, mittlerweile bis 1.8.2002
+       source_id => 'viz2021:13.475242,52.50154,09.07.2021,11:00', # bis 20.6.2022, mittlerweile bis 1.8.2002, mittlerweile wieder bis 20.6.2022
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2021
 #: note: bei rbb nur bis 30.9.2021
 #: note: die Anbindung Nöldnerstr. ist zurzeit manchmal (am Wochenende? nach Feierabend?) passierbar, gesehen Sa 2021-07-17, Mi 2021-07-21, Fr 2021-07-30, So 2021-08-08, Di 2021-08-10 vormittags
 #: note: mittlerweile sind aktive Bauarbeiten an der Anbindung Nöldnerstr. (Fahrbahn ist aufgerissen), evtl. auch für Fußgänger unpassierbar, Fr 2021-09-03 abends, Sa 2021-09-11 nachmittags, Mi 2021-09-15 mittags (man könnte sein Rad rübertragen), Fr 2021-09-17 abends (ebenso), So 2021-10-24 (die Grube ist tiefer geworden) --- mittlerweile ist der Bürgersteig frei
 #: also_indoor: traffic (H,G) (letzteres falsch, beide Richtungen statt einer)
-#: last_checked: 2022-06-07
+#: last_checked: 2022-06-15
 #: check_frequency: 14d
-#: next_check: 2022-08-01
+#: next_check: 2022-06-20
 	q2::inwork; 15261,10738 15272,10790 15279,10862
 #: osm_watch: way id="984964447" version="8"
 	q3::inwork 15279,10862 15355,10875
@@ -34407,7 +34418,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: EINSTEINPARK-2022
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-06-03
+#: last_checked: 2022-06-14
 #: check_frequency: 30d
 #: next_check: 2022-07-24
 	2::inwork 13204,15062 13207,14998 13163,14924
@@ -34614,9 +34625,9 @@ EOF
 #: last_checked: 2022-06-03 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-02-12 vvv
-#: osm_watch: way id="4395450" version="25"
+#: osm_watch: way id="4395450" version="26"
 	2::inwork 7031,12320 6694,12627
-#: osm_watch: way id="505363417" version="8"
+#: osm_watch: way id="505363417" version="9"
 	2::inwork 6631,12707 6694,12627
 #: next_check ^^^
 #: check_frequency ^^^
@@ -34734,7 +34745,7 @@ EOF
 #: next_check_id: MASSMANN-2022
 #: XXX Stehen evtl. im Zusammenhang mit den Bauarbeiten in der Maßmannstr.
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: also_indoor: traffic (G,B)
+#: also_indoor: traffic (ex-G,ex-B)
 #: last_checked: 2022-05-15
 # REMOVED --- #: check_frequency: 30d
 # REMOVED --- #: check_frequency: 10d
@@ -34787,7 +34798,7 @@ EOF
 #: add_fragezeichen: Wie lange dauern die Bauarbeiten an?
 #: also_indoor: traffic (G(falsch?),B(teilweise))
 #: priority: #B
-#: last_checked: 2022-05-16 (daf) (Lynarstr.) vvv
+#: last_checked: 2022-06-12 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-09-30 vvv
 	q4::inwork; 7259,14870 7209,14927 7182,14986
@@ -34953,7 +34964,7 @@ EOF
        data  => <<EOF,
 #: by: https://nitter.net/VIZ_Berlin/status/1513397936151044099#m
 #: by: https://nitter.net/pic/media%2FFP1LIs8XMAENMUm.jpg%3Fname%3Dorig
-#: source_id: viz2021:13.478607,52.471557,11.05.2022,11:00 (Baustellenampel in der Kiefholzstr., bis 14.6.2022)
+#: source_id: viz2021:13.478607,52.471557,11.05.2022,11:00 (Baustellenampel in der Kiefholzstr., bis 14.6.2022) (mittlerweile bis 27.6.2022)
 #: by: https://nitter.net/VIZ_Berlin/status/1524307007557222401#m
 #: by: https://nitter.net/pic/media%2FFSdtBqDX0AEFDN8.jpg%3Fname%3Dorig
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? vvv
@@ -35088,7 +35099,7 @@ EOF
      },
      { from  => 1651960800, # 2022-05-08 00:00
        until => $isodate2epoch->("2022-07-03 13:00:00"), # 1653861600, # 2022-05-30 00:00
-       text  => 'Rennbahnstr. und Bernkastler Str.: Sperrung der Fahrbahn wegen Gleisbauarbeiten, bis 3.7.2022 ',
+       text  => 'Rennbahnstr.: Sperrung der Fahrbahn wegen Gleisbauarbeiten, bis 3.7.2022 ',
        type  => 'handicap',
        source_id => 'https://viz.berlin.de/wp-content/uploads/BA2.jpg',
        data  => <<EOF,
@@ -35098,10 +35109,7 @@ EOF
 #: by: https://nitter.net/VIZ_Berlin/status/1523659832569389058#m (Rennbahnstr. bis 3.7.2022 gesperrt)
 	q4::inwork 14558,16907 14528,16910
 	q3::inwork 14528,16910 14341,17030
-#: XXX hier (Bernkastler Str.) nur bis 12.6.2022
-#: source_id: viz2021:13.467365,52.557032,30.05.2022,07:00 (Bernkastler Str. 30.5.2022 bis 12.6.2022) (bis 13.6.2022)
-#: next_check: 2022-06-13
-	q3::inwork 14558,16907 14673,16895
+# REMOVED --- #: XXX hier (Bernkastler Str.) nur bis 12.6.2022 --- #: source_id: viz2021:13.467365,52.557032,30.05.2022,07:00 (Bernkastler Str. 30.5.2022 bis 12.6.2022) (bis 13.6.2022) --- #: next_check: 2022-06-13 ---	q3::inwork 14558,16907 14673,16895
 EOF
      },
      { from  => 1651986000, # 2022-05-08 07:00
@@ -35281,6 +35289,68 @@ EOF
 #: last_checked: 2022-06-11
 #: check_frequency: 90d
 	q4::inwork 4961,12940 4932,12968
+EOF
+     },
+     { from  => 1656108000, # 2022-06-25 00:00
+       until => 1656277200, # 2022-06-26 23:00
+       text  => 'Kranoldplatz: Veranstaltung, Straße gesperrt, am 26.06.2022 von 7:00 bis 23.00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1215737.php',
+       data  => <<EOF,
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2022/verkehrszeichenplan-kranoldplatz-26-06-2022-7-23-uhr-quelle-abs-verkehrstechnik-gmbh.png
+#: by: https://www.standortmanagement-lichterfelde-ost.de/neuigkeiten/event-auf-dem-kranoldplatz-26-06-2022/
+	2::temp 5417,2383 5317,2345
+EOF
+     },
+     { from  => $isodate2epoch->("2022-06-14 05:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-06-26 23:00:00"),
+       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor sowie Ebertstr.: Sportveranstaltung, Straßen auch für Radfahrer gesperrt (vom 15.6.2022 05:00 bis 26.6.2022 23:00)',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: note: Juni 2022: Special Olympics Nationale Spiele
+#: source_id: viz2021:13.351095,52.514567,15.06.2022,05:00
+#: source_id: viz2021:13.369855,52.515768,15.06.2022,05:00
+#: by: https://viz.berlin.de/2022/06/sons-2022/
+#: by: https://nitter.net/pic/orig/media%2FFVMxeqIWYAAvJKt.jpg
+	2::temp 8538,12245 8592,12252
+	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+	2::temp 8538,12245 8522,12239
+	2::temp 8538,12245 8522,12187
+Straße des 17. Juni zwischen Großer Stern und Yitzhak-Rabin-Str.	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186
+Yitzhak-Rabin-Str	2::temp 8055,12186 8119,12414
+EOF
+     },
+     { from  => 1655449200, # 2022-06-17 09:00
+       until => 1656277200, # 2022-06-26 23:00
+       text  => 'John-Foster-Dulles-Allee und Heinrich von Gagern-Str.: Sportveranstaltung, Sperrung der Fahrbahn Richtung Osten bzw. Norden, Von 18.06.2022, ca. 09:00 Uhr bis 26.06.2022, ca. 23:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://viz.berlin.de/2022/06/sons-2022/',
+       data  => <<EOF,
+	1::temp 8119,12414 8122,12603
+	1::temp 7031,12320 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
+EOF
+     },
+     { from  => 1655449200, # 2022-06-17 09:00
+       until => 1656277200, # 2022-06-26 23:00
+       text  => 'John-Foster-Dulles-Allee und Heinrich von Gagern-Str.: Sportveranstaltung, nur zu wettbewerbsfreien Zeiten offen, Von 18.06.2022, ca. 09:00 Uhr bis 26.06.2022, ca. 23:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://viz.berlin.de/2022/06/sons-2022/',
+       data  => <<EOF,
+	1::temp 8122,12603 8119,12414
+	1::temp 8119,12414 8070,12409 8017,12359 7875,12363 7821,12367 7627,12380 7514,12387 7437,12368 7215,12295 7031,12320
+EOF
+     },
+     { from  => 1655978400, # 2022-06-23 12:00
+       until => 1656108000, # 2022-06-25 00:00
+       text  => 'Ebertstr., Behrenstr., Cora-Berliner-Str.: Sportveranstaltung, Straßen gesperrt, Von 24.06.2022, ca. 12:00 Uhr bis 24.06.2022, ca. 24:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://viz.berlin.de/2022/06/sons-2022/',
+       data  => <<EOF,
+	2::temp 8743,12099 8861,12125
+	2::temp 8737,12098 8595,12066 8577,11896 8783,11959 8844,11984 8901,12008
 EOF
      },
     );

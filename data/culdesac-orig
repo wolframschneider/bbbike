@@ -287,7 +287,6 @@ Schloss Köpenick	culdesac 22076,4422
 #: note: Weiterfahrt in Kleingartenanlage möglich
 Kleingartenanlage	culdesac_pseudo 22858,4567
 Sackgassenende, Spreeufer	culdesac 21901,5117
-	culdesac 21494,5011
 	culdesac 21271,5065
 	culdesac 21203,5054
 	culdesac 21081,5096
@@ -865,7 +864,7 @@ Sackgassenende, zum Uferweg	culdesac_pseudo -2231,19360
 	culdesac 2997,18632
 Sackgassenende, Eingang U-Bhf. Scharnweberstr.	culdesac 4187,17765
 #: note: laut OSM geht's hier weiter
-	culdesac_pseudo 1080,20617
+	culdesac_pseudo 1099,20621
 	culdesac 1137,20712
 	culdesac 1218,20724
 	culdesac 1299,20722

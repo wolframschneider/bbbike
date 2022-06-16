@@ -1050,7 +1050,7 @@ Karower Weg (Lindenberg)	1s 17825,21931 17837,21917 17895,21854
 Zehlendorfer Str. (Teltow)	1 1329,-753 1388,-685
 Lindenstr. (Teltow)	1 1235,-714 1273,-626
 Sandstr. (Teltow)	1 965,-585 948,-684
-Poststr. (Hennigsdorf)	1 -3495,25739 -3438,25572
+Poststr. (Hennigsdorf)	1 -3494,25751 -3456,25741 -3436,25581
 B1/B5	2 30678,10923 29749,10911 29194,10899 27817,10875
 Hanns-Eisler-Weg	1 68794,73965 68643,73843 68594,73737 68608,73622 68694,73474
 B166	1 63418,78608 63579,78548 63634,78433
@@ -1750,8 +1750,8 @@ Viktoriastr. -> Tempelhofer Damm: unbequem passierbarer Mittelstreifen	3::igndis
 U-Bahnviadukt	3nocross::ignrte 10969,15944 10964,15896 10953,15787
 Schönhauser Allee -> Kopenhagener Str.: U-Bahnviadukt	3::igndisp 10953,15787 10964,15896 10722,15921
 Kopenhagener Str. -> Schönhauser Allee: U-Bahnviadukt	3::igndisp 10722,15921 10964,15896 10969,15944
-U-Bahnrampe	3nocross::ignrte 10975,16896 10992,16829 11008,16729 11021,16605 11027,16553 11019,16465
-Berliner Str. -> Hallandstr.: U-Bahnrampe	3::igndisp 10975,16896 10992,16829 11270,16890
+U-Bahnrampe	3nocross::ignrte 10971,16907 10992,16829 11008,16729 11021,16605 11027,16553 11019,16465
+Berliner Str. -> Hallandstr.: U-Bahnrampe	3::igndisp 10971,16907 10992,16829 11270,16890
 Hallandstr. -> Berliner Str.: U-Bahnrampe	3::igndisp 11270,16890 10992,16829 11008,16729
 Berliner Str. -> Eschengraben: U-Bahnrampe	3::igndisp 10992,16829 11008,16729 11274,16743
 Eschengraben -> Berliner Str.: U-Bahnrampe	3::igndisp 11274,16743 11008,16729 11021,16605
@@ -3074,7 +3074,7 @@ Enges Drängelgitter	BNP:5:52:trailer=15 7887,24043
 Enges Drängelgitter	BNP:5:-32 2380,21510
 Drängelgitter	BNP:5:-153 8776,16718
 Schranke	BNP:5:-147 -8211,5490
-Kurzschranke	BNP:5:-45 6739,15307
+Kurzschranke	BNP:3:-45 6739,15307
 Schranke	BNP:3:-132 6749,15339
 Schranke	BNP:3:-130 6869,15441
 Drängelgitter	BNP:5:-130 7925,4477
@@ -3269,10 +3269,10 @@ Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 1
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:inwork 9429,12728 9402,12792 9386,12833 9375,12911
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
-Carl-Spindler-Str.: Hochbauarbeiten, Bauzäune, Durchfahrt nicht möglich	2::inwork 21413,5180 21547,5245 21514,5310 21483,5374 21474,5388 21442,5414
-Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21386,5251 21355,5254
+Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355,5254
 Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
 Henriette-Lustig-Str.: durch Bauzäune abgesperrt	2::inwork 21476,5048 21380,5003 21375,4974
+Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285 10675,12280

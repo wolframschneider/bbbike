@@ -351,7 +351,7 @@ Mahlsdorfer Str. - Straße im Walde: die Straßenbahntrasse ca. 40 Meter vor der E
 # REMOVED (nicht notwendig) --- Landsberger Allee - Am Wasserwerk: zum Linksabbiegen entweder schon an der Siegfriedstr. die Straßenseite wechseln oder die Fußgängerampel hinter der Einmündung benutzen	PI; 16852,14412 16632,14390 16634,14373 16641,14329 16659,14192
 Stubenrauchstr. - Wegerichstr.: Fußgängerübergang am Glockenblumenweg benutzen	CP; 16547,2680 16475,2586 16538,2543
 Mühlenstr. - Vinetastr.: Fußgängerampel auf der linken Seite zum Überqueren der Kreuzung nutzen	CP; 10862,17087 10927,17022 11267,17027
-Vinetastr. - Berliner Str.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17027 10927,17022 10975,16896
+Vinetastr. - Berliner Str.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17027 10927,17022 10971,16907
 Vinetastr. - Brennerstr.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17027 10927,17022 10656,17018
 Vinetastr. - Mühlenstr.: die Fahrradampel links benutzen	CP; 11267,17027 10927,17022 10862,17087
 # REMOVED (alle Wege sind jetzt eingezeichnet) --- Admiralbrücke - Böckhstr.: Gehweg zur Böckhstr. benutzen	PI; 11177,9935 11170,9919 11163,9903 11200,9889
@@ -622,7 +622,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2022-05-24 vvv
+#: last_checked: 2022-06-15 vvv
 #: note: früher: ausgeschildert "zur Salzmannstraße Huronseestraße"
 nicht ausgeschildert, Richtung Salzmannstr./Huronseestr.	CP2; 16900,9861 16895,9922
 #: note: früher: ausgeschildert "zur Sewanstraße"
@@ -709,7 +709,7 @@ Martin-Hoffmann-Str. - An den Treptowers: zum Linksabbiegen die linke Fußgängera
 Ernst-Ruska-Ufer - Albert-Einstein-Str.: unbequemes Überqueren des Ernst-Ruska-Ufers, ggfs. bereits an der Ampel Wegedornstr. auf die linke Seite wechseln	PI; 18929,2454 19091,2443 19094,2495
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2022-04-19 vvv
+#: last_checked: 2022-06-12 vvv
 #: next_check: 2024-06-01 vvv
 Jüdenstr.: zum Überqueren der Grunerstr. Fußgängerampel rechts benutzen	CP; 10831,12371 10804,12461 10772,12515
 Grunerstr. - Jüdenstr.: zum Überqueren der Grunerstr. Fußgängerampel benutzen	CP; 10738,12364 10804,12461 10772,12515

@@ -439,6 +439,7 @@ Kleingartenanlage Erbkaveln	F:Orchard 3607,982 3662,878 3399,716 3320,823 3426,9
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung-und-denkmalschutz/stadtplanung/bebauungsplanung/artikel.81905.php
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung-und-denkmalschutz/stadtplanung/bebauungsplanung/oeffentlichkeits-beteiligungen/2021/02-planentwurf_6-41ve.pdf
 #: XXX wird im Zuge des Bebauungsplans 6-41VE verkleinert
+#: last_checked: 2022-06-12 (mapillary)
 #: next_check: 2024-06-01
 KGA Eugen-Kleine-Brücke	F:Orchard 3766,1389 3695,1308 3628,1219 3750,1164 3787,1196 3841,1083 3866,1134 3869,1144 3839,1197 3860,1207 3857,1235 3795,1365 3766,1389
 Kolonie Giesensdorf	F:Orchard 4007,1993 4103,1933 4191,1823 4090,1654 3842,1532 3908,1420 3864,1403 3800,1491 3854,1643
@@ -1318,6 +1319,8 @@ KGA Alte Baumschule	F:Orchard 9458,18859 9487,18887 9525,18938 9478,18980 9526,1
 KGA Zingertal	F:Orchard 9114,19265 9069,19258 9093,19327 9092,19407 9072,19452 8806,19268 8834,19253 8944,19197 9114,19083 9304,18962 9339,19005 9181,19075 9126,19221 9114,19265
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_21_1257_1304_online.pdf
 	F:P -8450,15702 -8342,15978 -8388,15991 -8388,15991 -8464,15708 -8450,15702
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1216937.php (Name)
+Grünanlage am Vierling	F:P -776,4065 -731,4124 -799,4274 -755,4387 -696,4614 -732,4743 -635,4856 -580,4793 -519,4737 -552,4698 -581,4662 -625,4607 -591,4558 -561,4475 -630,4395 -640,4216 -658,4131 -734,4031 -762,4054 -776,4065
 # 
 #############################################################################
 # Plätze (experimentell)

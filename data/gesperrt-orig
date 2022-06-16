@@ -176,7 +176,7 @@ Petersburger Platz	1 13470,12990 13559,12779
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll-2-sitzung.pdf
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/verwaltung/aemter/ordnungsamt/strassenverkehr-parken/5-protokoll-fahr-rat.pdf
 #: osm_watch: way id="4490214" version="15"
-#: last_checked: 2022-04-26 (mapillary)
+#: last_checked: 2022-06-12
 #: check_frequency: 90d
 Dernburgstr.	1 2493,10675 2378,10677 2310,10732 2233,11049
 # 
@@ -1580,7 +1580,7 @@ Karower Weg (Lindenberg)	1s:q3 17825,21931 17837,21917 17895,21854
 Zehlendorfer Str. (Teltow)	1 1329,-753 1388,-685
 Lindenstr. (Teltow)	1 1235,-714 1273,-626
 Sandstr. (Teltow)	1 965,-585 948,-684
-Poststr. (Hennigsdorf)	1 -3495,25739 -3438,25572
+Poststr. (Hennigsdorf)	1 -3494,25751 -3456,25741 -3436,25581
 B1/B5	2 30678,10923 29749,10911 29194,10899 27817,10875
 Hanns-Eisler-Weg	1 68794,73965 68643,73843 68594,73737 68608,73622 68694,73474
 B166	1 63418,78608 63579,78548 63634,78433
@@ -2023,7 +2023,7 @@ Unter den Eichen: Mittelstreifen, Tunnelrampe	1::igndisp 3344,4488 3266,4438 304
 Tempelhofer Damm: unbequem passierbarer Mittelstreifen	3nocross 9206,5193 9196,5272 9188,5333 9176,5413 9161,5535
 Schönhauser Allee: U-Bahnviadukt	3nocross 10969,15944 10964,15896 10953,15787
 # REMOVED --- Schönhauser Allee: U-Bahnviadukt	3 10941,15697 10917,15525 11055,15504
-Berliner Str.: U-Bahnrampe	3nocross 10975,16896 10992,16829 11008,16729 11021,16605 11027,16553 11019,16465
+Berliner Str.: U-Bahnrampe	3nocross 10971,16907 10992,16829 11008,16729 11021,16605 11027,16553 11019,16465
 Wisbyer Str.: Straßenbahn	3nocross 11673,16367 11727,16358 11750,16354
 Wisbyer Str.: Straßenbahn	3nocross 11750,16354 11808,16343 11829,16339 11889,16328
 #: note: laut Kristina Nazarek ist die Wisbyer Str. in Höhe Talstr. überquerbar
@@ -3185,7 +3185,8 @@ Drängelgitter	BNP:5 8776,16718
 #: by: Sandra Hummel:
 Schranke	BNP:5 -8211,5490
 #: by: Charly Huber:
-Kurzschranke	BNP:5 6739,15307
+#: corrected_by: srt (BNP:5 -> ...)
+Kurzschranke	BNP:3 6739,15307
 Schranke	BNP:3 6749,15339
 Schranke	BNP:3 6869,15441
 # REMOVED --- #: by: popanne: vvv
@@ -3356,7 +3357,7 @@ Drängelgitter	BNP:3::trailer=10 1035,14996
 #: next_check_id: BUSINESSPARKBERLIN-2020
 #: osm_watch: node id="8176571994" version="1"
 #: add_fragezeichen: existiert die Schranke noch?
-#: last_checked: 2021-05-20 (mapillary)
+#: last_checked: 2022-06-11 (mapillary)
 #: check_frequency: 180d
 Schranke, umständlich zu umfahren	BNP:5::trailer=15 19608,-1953
 Schranke	BNP:2::trailer=5 19617,6208
@@ -3406,7 +3407,7 @@ Alt-Moabit - Invalidenstr.: Bauarbeiten, Gehweg gesperrt, Fahrbahn nur für Tram	
 # 
 #: XXX laut Schild der Wasserbetriebe bis April 2023; Einbahnstraßenregelung fängt schon 30m westlich der Einmündung Zum Langen See an
 #: XXX man kommt als Radfahrer aber recht gut vorbei
-#: last_checked: 2022-06-06
+#: last_checked: 2022-06-15
 #: check_frequency: 180d
 #: next_check: 2023-04-30
 #: valid: -20230531
@@ -3428,13 +3429,13 @@ Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer	2::inwork 7673,4223 7769,4
 #: by: https://images.competitionline.com/image/f/9/5/a/b/e/1/b/f95abe1bc3b10ee4f2778b024afc5734_1.jpg?auto=format,compress&fm=jpg&ixlib=imgixjs-3.4.1&w=4742
 #: by: https://www.gm013.la/work/fmp
 #: XXX evtl. wird die Erschließungsstraße nicht mehr durchgängig sein; evtl. wird man die Fläche als Grünfläche kennzeichnen können
-#: last_checked: 2022-06-02
+#: last_checked: 2022-06-12
 #: check_frequency: 30d
 #: next_check: 2023-07-01
 (Vorfahrt Neues-Deutschland-Gebäude): an der Rüdersdorfer Str. mit Bauzäunen abgesperrt	2::inwork 12788,11898 12891,12008
 # 
 #: also_indoor: traffic (G,B)
-#: last_checked: 2022-05-11 (mapillary)
+#: last_checked: 2022-06-12
 Unter den Linden/Schadowstr.: Überqueren der Straße vor der Russischen Botschaft nicht möglich	3nocross 8804,12280 9028,12307 9141,12320
 # 
 #: next_check_id: FALKENBERG-2021
@@ -3498,7 +3499,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2022-06-04
+#: last_checked: 2022-06-15
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -3605,7 +3606,7 @@ Uferweg am Hohenzollernkanal: vorbereitende Bauarbeiten an der Tegeler Brücke, k
 # REMOVED --- #: next_check_id: NKZ-2020 --- #: last_checked: 2022-01-03 --- #: check_frequency: 30d --- (Zufahrt am NKZ): Fußgänger, unübersichtlich, Bauarbeiten, Gerüst, kaum ein Durchkommen	2::inwork 11344,10507 11392,10520 11411,10515
 # 
 #: next_check_id: STRD17JUNI-2021
-#: last_checked: 2022-06-03 vvv
+#: last_checked: 2022-06-12 vvv
 #: check_frequency: 180d vvv
 #: next_check: 2025-01-31 vvv
 Straße des 17. Juni: Radweg gesperrt	1::igndisp 6164,11947 5900,11913
@@ -3623,7 +3624,7 @@ Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 
 #: by: https://www.trei-wohnen.de/projekte/berlin-fuerstenberger-strasse/ (Fertigstellung Q3/2022)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_03_0117_0172_online.pdf (Grundstücksnummerierung)
 #: XXX Bis wann gehen die Bauarbeiten? Eigentlich eine "unechte" Einbahnstraße. Und manchmal (gesehen am Sonntag, den 2021-10-31; vielleicht außerhalb der Arbeitszeiten?) sind die Einfahrt-verboten-Schilder weggedreht
-#: osm_watch: way id="308312347" version="5"
+#: osm_watch: way id="308312347" version="6"
 #: last_checked: 2022-05-25 (daf)
 #: check_frequency: 90d
 #: next_check: 2022-08-15
@@ -3657,8 +3658,8 @@ Alexanderufer - Charité: Tor ist wegen Corona-Beschränkungen geschlossen	2 8371,
 #: osm_watch: way id="690322561" version="4"
 #: add_fragezeichen: Wann wird die Sperrung aufgehoben?
 #: XXX laut osm offen
-#: also_indoor: traffic (G,H)
-#: last_checked: 2022-06-07 (osm)
+#: also_indoor: traffic (ex-G,ex-H)
+#: last_checked: 2022-06-13 (daf)
 Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, ca. 60 Meter komplett gesperrt, auch für Fußgänger, Ende unbekannt	2::inwork 9131,12438 9179,12444
 # 
 #: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021)
@@ -3771,7 +3772,7 @@ Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/stralauer-allee-15-16.657/page-2#post-13509 (Fertigstellung zum 30.6.2024 geplant)
 #: by: https://rfr-development.de/projekte/stralauer-allee (hier entsteht ein Bürogebäude)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbrücke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2022-05-20
+#: last_checked: 2022-06-13
 #: check_frequency: 360d
 #: next_check: 2024-06-30
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
@@ -3779,7 +3780,7 @@ Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,1015
 #: by: wosch
 #: confirmed_by: srt
 #: by: https://portal1548.webcam-profi.de/ (webcam)
-#: last_checked: 2022-05-05
+#: last_checked: 2022-06-13
 #: check_frequency: 60d
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,10152 14373,10046
 # 
@@ -3796,7 +3797,7 @@ Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,1015
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/erschliessung-und-grundstuecksuebertragung-bebauungsplan-1-62b-oestlich-heidestrasse-otto-weidt-platz-1032336.php (Bauarbeiten bis Ende 2022)
 #: XXX überwiegend noch unbefestigt, im weiteren Verlauf recht eng, noch keine Verbindung zum unfertigen Uferweg, Treppe zum Golda-Meir-Steg kann benutzt werden, wenn die Bauzäune weggeschoben sind
 #: osm_watch: way id="642581102" version="4"
-#: last_checked: 2022-05-19
+#: last_checked: 2022-06-12
 #: check_frequency: 60d
 #: next_check: 2022-12-31
 Otto-Weidt-Platz: Bauarbeiten	2::inwork 7923,14142 7778,14059
@@ -3870,7 +3871,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="729492933" version="3"
 # REMOVED (wurde entfernt) --- #: osm_watch: way id="882672445" version="2"
-#: last_checked: 2022-05-31
+#: last_checked: 2022-06-12
 #: check_frequency: 60d
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
 # 
@@ -3894,21 +3895,22 @@ Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
 #: XXX wann werden die Straßen in der Wasserstadt Spindlersfeld eröffnet? vvv
-#: last_checked: 2022-05-11 vvv
+#: last_checked: 2022-06-15 vvv
 #: check_frequency: 60d vvv
-#: osm_watch: way id="729324149" version="6"
-#: osm_watch: way id="162120178" version="10"
-#: osm_watch: node id="6751063701" version="4"
+#: osm_watch: way id="729324149" version="7"
+#: osm_watch: way id="162120178" version="11"
+# REMOVED --- #: osm_watch: node id="6751063701" version="5"
 # REMOVED (wieder offen) --- Carl-Spindler-Str.: Hochbauarbeiten, Bauzäune, Durchfahrt nicht möglich	2::inwork 21346,5165 21379,5163 21413,5180
-#: note: Bauzäune können während der Arbeitszeiten offen sein
-Carl-Spindler-Str.: Hochbauarbeiten, Bauzäune, Durchfahrt nicht möglich	2::inwork 21413,5180 21547,5245 21514,5310 21483,5374 21474,5388 21442,5414
-#: osm_watch: way id="719023970" version="9"
-Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21386,5251 21355,5254
+# REMOVED --- #: note: Bauzäune können während der Arbeitszeiten offen sein --- #: XXX bei osm wurde access=no in der Carl-Spindler-Str. entfernt --- #: add_fragezeichen: Ist die Carl-Spindler-Str. mittlerweile durchgängig befahrbar? --- #: next_check: 2020-06-13 --- Carl-Spindler-Str.: Hochbauarbeiten, Bauzäune, Durchfahrt nicht möglich	2::inwork 21413,5180 21547,5245 21514,5310 21483,5374 21474,5388 21442,5414
+#: osm_watch: way id="719023970" version="10"
+Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355,5254
 #: osm_watch: way id="719023969" version="10"
 Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
 #: note: allerdings können die Bauzäune offen sein, gesehen am 2022-03-06 (So)
 #: osm_watch: way id="944115137" version="3"
 Henriette-Lustig-Str.: durch Bauzäune abgesperrt	2::inwork 21476,5048 21380,5003 21375,4974
+#: osm_watch: way id="719023971" version="7"
+Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 # REMOVED (fast fertig) --- Henriette-Lustig-Str.: noch nicht fertig gebaut	2::inwork 21611,5119 21645,5135
 # REMOVED (offen) --- Am Kutscherhaus: Bauzaun, Zufahrt zur Ernst-Grube-Str. nicht möglich	2::inwork 21355,5254 21386,5251
 #: check_frequency ^^^
@@ -3957,14 +3959,14 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 #: note: laut rbb komplett gesperrt, bis 30.6.2023, in der Realität weiterhin Einbahnstraße
 #: osm_watch: way id="5096644" version="17"
 #: priority: #C
-#: last_checked: 2022-06-10
+#: last_checked: 2022-06-13
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
 #: next_check_id: TACHELES-2020
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2022-04-27
+#: last_checked: 2022-06-12
 #: check_frequency: 60d
 Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 # 
@@ -4297,7 +4299,7 @@ Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5574,12
 #: XXX danach könnte die Qualität der Wege besser sein
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6146.html
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_13_1401_1520_online.pdf (Widmung als Grünanlage)
-#: last_checked: 2022-05-19 vvv
+#: last_checked: 2022-06-12 vvv
 #: check_frequency: 60d vvv
 #: source_id: 2147341188
 #: osm_watch: way id="593108603" version="3"
@@ -4413,9 +4415,9 @@ Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 #: source_id: 2147346461 (bis 31.12.2021)
 #: source_id: 2147346643 (bis 31.12.2021)
 #: source_id: viz2021:13.456584,52.465328,25.11.2020,08:00 (bis 31.12.2022)
-#: osm_watch: way id="194653032" version="23"
-#: osm_watch: way id="846595294" version="6"
-#: osm_watch: way id="38725490" version="15"
+#: osm_watch: way id="194653032" version="24"
+#: osm_watch: way id="846595294" version="7"
+#: osm_watch: way id="38725490" version="16"
 #: also_indoor: traffic (G,B)
 #: last_checked: 2022-06-08
 #: check_frequency: 90d
@@ -4508,7 +4510,7 @@ Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552
 # REMOVED (gelöscht) --- #: osm_watch: way id="33036326" version="7"
 #: osm_watch: way id="940764588" version="4"
 #: osm_watch: way id="940764584" version="3"
-#: last_checked: 2022-05-08 (osm)
+#: last_checked: 2022-06-12
 #: check_frequency: 360d
 #: next_check: 2023-06-30
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
@@ -4530,7 +4532,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: https://www.humboldtforum.org/wp-content/uploads/2020/10/20201007_PM_Ero%CC%88ffnung-1.pdf (Eröffnung am 17.12.2020)
 #: by: https://www.berliner-zeitung.de/kultur-vergnuegen/humboldt-forum-berliner-schloss-teileroeffnung-li.122095 (Eröffnung wird verschoben)
 #: by: https://berliner-schloss.de/blog/schloss-information-dezember-2020/ (Bauzäune werden im Dezember 2020 teilweise abgebaut)
-#: last_checked: 2022-06-10
+#: last_checked: 2022-06-12
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2021-07-01
 # REMOVED (hier offen) --- Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10102,12384

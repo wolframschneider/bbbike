@@ -4,6 +4,7 @@
 #:
 Kronprinzessinnenweg: Gegenverkehrsregelung	X::inwork -4368,1731
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317
+Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245
 Treptower Str./Werrastr.: Gegenverkehrsregelung	X::inwork 13650,8320
 Fischerinsel	F::inwork 10578,11969
 Mollstr./Büschingstr.	F::inwork 11913,13077
@@ -505,7 +506,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 10938,14159
 	X 10893,14705
 	X 10982,16121
-	X 10975,16896
+	X 10971,16907
 	X 9442,16610
 	X 10228,18196
 	X 10680,18380
@@ -2523,6 +2524,10 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -13181,2285
 	X -13142,1989
 	F -14457,-1797
+	F -3495,23770
+	F -3666,22384
+	F -3136,25693
+	X -3049,25593
 	X -10032,-45258
 	X -13709,-45699
 	B0 -6838,-41430
