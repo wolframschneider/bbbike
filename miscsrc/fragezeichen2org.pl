@@ -316,7 +316,13 @@ for my $file (@files) {
 	     my($southmost_px,$southmost_py) = $Karte::Polar::obj->standard2map(split /,/, $coord_southmost);
 
 	     # OSM URL
-	     push @extra_url_defs, ['OSM', 'http://www.openstreetmap.org/#map=17/'.$py.'/'.$px];
+	     {
+		 my @layers = ('N'); # always turn notes on
+		 if ($subject =~ /zebrastreifen/i) {
+		     push @layers, 'C'; # OpenCycleMap has the best zebra rendering
+		 }
+		 push @extra_url_defs, ['OSM', 'https://www.openstreetmap.org/#map=17/'.$py.'/'.$px.'&layers='.join('', @layers)];
+	     }
 
 	     # fresh Mapillary URL
 	     {
