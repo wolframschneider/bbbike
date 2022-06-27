@@ -3361,7 +3361,19 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: viz2021:13.3802,52.56039,25.06.2022,09:00
+	2::temp 8677,17154 8860,17077
+# REMOVED (früher) ---	2::temp 8606,16973 8677,17154
+# REMOVED (früher) ---	2::temp 8503,16716 8583,16914
+',
+         'from' => 1656054000,
+         'id' => 2485,
+         'source_id' => 'IM_020277',
+         'text' => 'Soldiner Str.: Veranstaltung, zwischen Koloniestr. und Stockholmer Str. gesperrt, vom 25.06.2022 09:00 bis 26.06.2022 21:00',
+         'type' => 'gesperrt',
+         'until' => 1656270000
+       },
        undef,
        undef,
        undef,
@@ -4518,7 +4530,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-06-17
+#: last_checked: 2022-06-23 (mapillary)
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 ',
@@ -4633,7 +4645,7 @@ Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="9"
 #: osm_watch: way id="934995901" version="8"
-#: last_checked: 2022-06-21 vvv
+#: last_checked: 2022-06-26 vvv
 #: check_frequency: 14d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -4906,7 +4918,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="362719487" version="6"
 #: osm_watch: way id="687428752" version="2"
-#: last_checked: 2022-04-09
+#: last_checked: 2022-06-24
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 ',
@@ -5642,7 +5654,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: source_id: viz2021:13.445912,52.478966,13.06.2022,07:00 (zusätzliche Meldung zur Sonnenallee)
 #: also_indoor: traffic (G,ex-H,B)
-#: last_checked: 2022-06-08
+#: last_checked: 2022-06-24
 #: next_check: 2022-08-13
 	q4::inwork 13277,8211 13331,8283
 ',
@@ -5735,12 +5747,12 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
-#: last_checked: 2022-06-03 vvv
+#: last_checked: 2022-06-24 (osm) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-02-12 vvv
 #: osm_watch: way id="4395450" version="26"
 	2::inwork 7031,12320 6694,12627
-#: osm_watch: way id="505363417" version="9"
+#: osm_watch: way id="505363417" version="10"
 	2::inwork 6631,12707 6694,12627
 #: next_check ^^^
 #: check_frequency ^^^
@@ -5802,11 +5814,12 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: next_check_id: MASSMANN-2022
 #: XXX Stehen evtl. im Zusammenhang mit den Bauarbeiten in der Maßmannstr.
+#: osm_watch: note 3030340 3
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: also_indoor: traffic (ex-G,ex-B)
-#: last_checked: 2022-05-15
+#: also_indoor: traffic (ex-G,B)
+#: last_checked: 2022-06-23 (traffic, osm note)
 # REMOVED --- #: check_frequency: 30d
-# REMOVED --- #: check_frequency: 10d
+#: check_frequency: 14d
 # REMOVED --- #: next_check: 2022-05-24
 	q3::inwork 5020,6434 5269,6305
 ',
@@ -5947,17 +5960,18 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1513397936151044099#m
 #: by: https://nitter.net/pic/media%2FFP1LIs8XMAENMUm.jpg%3Fname%3Dorig
-#: source_id: viz2021:13.478607,52.471557,11.05.2022,11:00 (Baustellenampel in der Kiefholzstr., bis 14.6.2022) (mittlerweile bis 27.6.2022)
+#: source_id: viz2021:13.478607,52.471557,11.05.2022,11:00 (Baustellenampel in der Kiefholzstr., bis 14.6.2022) (mittlerweile bis 27.6.2022) (mittlerweile bis 1.8.2022)
+#: source_id: viz2021:13.47859,52.47157,11.04.2022,09:00 (zusätzlicher Eintrag, bis 1.8.2022)
 #: by: https://nitter.net/VIZ_Berlin/status/1524307007557222401#m
 #: by: https://nitter.net/pic/media%2FFSdtBqDX0AEFDN8.jpg%3Fname%3Dorig
-#: XXX Bleibt die Baustelle bis Oktober 2022 so? vvv
-#: last_checked: 2022-06-06 vvv
+#: XXX Bleibt die Baustelle bis Oktober 2022 so? oder nur bis August 2022? vvv
+#: last_checked: 2022-06-24 vvv
 #: check_frequency: 90d vvv
-# REMOVED --- #: next_check: 2022-04-11 vvv
+#: next_check: 2022-08-01 vvv
 	q4::inwork; 15560,7400 15693,7512
 #: note: teilweise ragt die Baustellenabsperrung in den Radweg Richtung Kiefholzstraße rein
 	q3::inwork; 15693,7512 15560,7400
-# REMOVED --- #: next_check ^^^
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -5986,13 +6000,14 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'until' => 1667232000
        },
        {
-         'data' => '#: last_checked: 2022-04-26 (mapillary)
+         'data' => '#: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
+#: last_checked: 2022-04-26 (mapillary)
 #: check_frequency: 60d
 	q4::inwork; 4277,9895 4126,9932 3927,9935
 ',
          'from' => undef,
          'id' => 3540,
-         'text' => 'Zähringerstr.: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung offen Richtung Osten',
+         'text' => 'Zähringerstr.: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung offen Richtung Osten, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -6069,7 +6084,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        },
        {
          'data' => '#: XXX laut Pressemitteilung "Wrangelstraße, zwischen Sorauer Straße und Oppelner Straße, freitags 15.30 bis 18.30 Uhr, 13. Mai bis September, außer in den Sommerferien" -> nach den Sommerferien nachschauen und ggfs. verlängern
-#: last_checked: 2022-05-21
+#: last_checked: 2022-06-22
 #: next_check: 2022-08-19
 	q4::temp::play 12822,10487 12897,10439
 ',
@@ -6107,7 +6122,8 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2022-05-28 (mapillary)
+         'data' => '#: also_indoor: traffic (none)
+#: last_checked: 2022-05-28 (mapillary)
 	q4::inwork; 3603,10765 3614,10564
 ',
          'from' => undef,
@@ -6128,19 +6144,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1534754662301171713#m
-#: by: https://nitter.net/pic/orig/media%2FFUvPeV8WQAEuiW4.jpg
-#: by: https://nitter.net/pic/orig/media%2FFUvO7u4WAAw1fjO.jpg
-	q4::inwork; 25579,5958 26080,5946
-',
-         'from' => 1654678800,
-         'id' => 3558,
-         'source_id' => 'viz2021:13.625514,52.456971,09.06.2022,11:00',
-         'text' => 'Fürstenwalder Damm. Fahrbahn ab Bölschstraße stadtauswärts gesperrt, vom 09.06.2022 11:00 bis 23.06.2022 17:00',
-         'type' => 'handicap',
-         'until' => 1655996400
-       },
+       undef,
        {
          'data' => '	q4::inwork 9011,14019 8870,13926
 ',
@@ -6219,42 +6223,9 @@ Yitzhak-Rabin-Str	2::temp 8055,12186 8119,12414
          'type' => 'gesperrt',
          'until' => 1656277200
        },
-       {
-         'data' => '	1::temp 8119,12414 8122,12603
-	1::temp 7031,12320 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
-',
-         'from' => 1655449200,
-         'id' => 3564,
-         'source_id' => 'https://viz.berlin.de/2022/06/sons-2022/',
-         'text' => 'John-Foster-Dulles-Allee und Heinrich von Gagern-Str.: Sportveranstaltung, Sperrung der Fahrbahn Richtung Osten bzw. Norden, Von 18.06.2022, ca. 09:00 Uhr bis 26.06.2022, ca. 23:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1656277200
-       },
-       {
-         'data' => '#: source_id: viz2021:13.37082,52.517842,18.06.2022,09:00
-	1::temp 8122,12603 8119,12414
-#: source_id: viz2021:13.3546,52.51713,18.06.2022,09:00 (inaktiv)
-#: source_id: viz2021:13.354603,52.517071,18.06.2022,09:00
-	1::temp 8119,12414 8070,12409 8017,12359 7875,12363 7821,12367 7627,12380 7514,12387 7437,12368 7215,12295 7031,12320
-',
-         'from' => 1655449200,
-         'id' => 3565,
-         'source_id' => 'https://viz.berlin.de/2022/06/sons-2022/',
-         'text' => 'John-Foster-Dulles-Allee und Heinrich von Gagern-Str.: Sportveranstaltung, nur zu wettbewerbsfreien Zeiten offen, Von 18.06.2022, ca. 09:00 Uhr bis 26.06.2022, ca. 23:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1656277200
-       },
-       {
-         'data' => '	2::temp 8743,12099 8861,12125
-	2::temp 8737,12098 8595,12066 8577,11896 8783,11959 8844,11984 8901,12008
-',
-         'from' => 1655978400,
-         'id' => 3566,
-         'source_id' => 'https://viz.berlin.de/2022/06/sons-2022/',
-         'text' => 'Ebertstr., Behrenstr., Cora-Berliner-Str.: Sportveranstaltung, Straßen gesperrt, Von 24.06.2022, ca. 12:00 Uhr bis 24.06.2022, ca. 24:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1656108000
-       },
+       undef,
+       undef,
+       undef,
        {
          'data' => '#: by: http://www.taz.de/!5516248/ (möglicherweise dauerhaft)
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2019-05-16-prot-fahrratsitzung3.pdf (Vorplanung)
@@ -6301,6 +6272,76 @@ Yitzhak-Rabin-Str	2::temp 8055,12186 8119,12414
          'text' => 'Eichgestell: der Weg kann entlang der Parkbühne Wuhlheide komplett gesperrt sein, Konzertsaison bis zum 17. September 2022',
          'type' => 'gesperrt',
          'until' => 1663538399
+       },
+       {
+         'data' => '#: by: Gonsolo & osm
+	2::temp -8489,-2220 -8574,-2204 -8653,-2195
+',
+         'from' => undef,
+         'id' => 3570,
+         'permanent' => 1,
+         'text' => 'Joe-May-Str.: RBB-Gelände, eventuell nicht zugänglich',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2021
+#: by: https://berliner-abendblatt.de/2022/06/22/bauarbeiten-legen-blumberger-damm-lahm/
+#: source_id: viz2021:13.562568,52.51298,24.06.2022,20:00 (hier nur Kfz-Verkehr)
+#: source_id: viz2021:13.56283,52.51426,24.06.2022,20:00
+	2::inwork 21152,11945 21166,12023 21190,12193 21199,12258
+',
+         'from' => 1656007200,
+         'id' => 3571,
+         'source_id' => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1219254.php',
+         'text' => 'Blumberger Damm: Sperrung zwischen der Altentreptower Str. und dem Frankenholzer Weg, vielleicht sind auch Radfahrer betroffen, 24. Juni 2022 20:00 Uhr bis 01. Juli 2022 04:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1656640800
+       },
+       {
+         'data' => '	2::temp 12198,8887 12392,8724
+',
+         'from' => 1656590400,
+         'id' => 3572,
+         'source_id' => 'https://berliner-abendblatt.de/2022/06/22/kiezfest-donaustrasse-wird-zur-kreativen-meile/',
+         'text' => 'Donaustr.: zwischen Pannierstr. und Weichselstr. Veranstaltung, Fahrbahn kann gesperrt sein, am 1. Juli 2022 von 14 bis 20 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1656698400
+       },
+       {
+         'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1539528243316985856#m
+#: by: https://nitter.net/pic/orig/media%2FFV2AstdX0AEWnIn.jpg
+	q4::inwork; 10710,18393 10650,18544
+	q4::inwork 10721,18575 10784,18426
+',
+         'from' => 1655798400,
+         'id' => 3573,
+         'source_id' => 'viz2021:13.414144,52.572092,22.06.2022,10:00',
+         'text' => 'Kavalierstr. und Eintrachtstr.: Bauarbeiten an der Breiten Str., Umwege erforderlich,, vom 22.06.2022 10:00 bis 30.08.2022 17:00',
+         'type' => 'handicap',
+         'until' => 1661871600
+       },
+       {
+         'data' => '#: next_check_id: KWEISENBAHNBRUECKE-2022
+	2::inwork 26327,-11708 26395,-11699
+',
+         'from' => 1656194400,
+         'id' => 3574,
+         'source_id' => 'https://sbahn.berlin/fileadmin/user_upload/Punkt3/PDF-Archiv/2022/punkt3-Ausgabe12_23.06.2022.pdf',
+         'text' => 'Storkower Straße (Königs Wusterhausen): Neubau der Eisenbahnbrücke, voraussichtlich Sperrung vom 27. Juni 2022 bis 30. Dezember 2024',
+         'type' => 'gesperrt',
+         'until' => 1735599599
+       },
+       {
+         'data' => '#: next_check_id: SCHAEFERSEE-2022
+	2::inwork 7189,17666 7173,17591 7222,17471 7253,17467
+',
+         'from' => 1656194400,
+         'id' => 3575,
+         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1220100.php',
+         'text' => 'Schäfersee: Bauarbeiten, Weg kann gesperrt sein, vom 27.6.2022 bis 1.7.2022 ',
+         'type' => 'gesperrt',
+         'until' => 1656712800
        }
      
 );

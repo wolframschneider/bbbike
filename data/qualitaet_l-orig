@@ -4404,8 +4404,10 @@ Humboldtstr.: Verbundsteinpflaster	Q1+ 17699,24874 17728,24824 17831,24725
 Humboldtstr.: Asphalt	Q0 17831,24725 17990,24572 18122,24440
 Humboldtstr.: Verbundsteinpflaster	Q1+ 18122,24440 18190,24368
 Humboldtstr. (Schwanebeck): unbefestigte Straﬂe	Q2 18190,24368 18492,24049
-#: add_fragezeichen: wurde hier mittlerweile gepflastert (Verbundsteinpflaster)?
-Stefan-Heym-Str.: unbefestigte Straﬂe	Q2 17776,24912 17870,24821 18057,24641
+#: corrected_by: mapillary (unbefestigte Straﬂe, Q2 -> ...) vvv
+Stefan-Heym-Str.: Verbundsteinpflaster	Q1+ 17776,24912 17870,24821
+Stefan-Heym-Str.: Asphalt	Q0 17870,24821 18057,24641
+#: corrected_by ^^^
 Stefan-Heym-Str.: Asphalt	Q0 18057,24641 18200,24498
 Einsteinstr.: Verbundsteinpflaster	Q1+ 17864,24956 17901,24919
 Einsteinstr.: Asphalt	Q0 17901,24919 18124,24709 18280,24557
@@ -6011,9 +6013,9 @@ Groﬂ Glienicker Heide: Kleinsteinpflaster	Q2+ -8661,8457 -8640,8453 -8560,8438 -
 Flughafen Berlin-Brandenburg - Business Park Berlin: unbefestigte Straﬂe, etwas Schotter	Q2+ 19731,-1903 20125,-1739 20412,-1750
 #: next_check_id: BUSINESSPARKBERLIN-2020
 #: osm_watch: way id="188908388" version="6"
-#: osm_watch: way id="193392059" version="4"
+#: osm_watch: way id="193392059" version="5"
 #: osm_watch: node id="8243873919" version="1"
-#: osm_watch: node id="2038971392" version="2"
+#: osm_watch: node id="2038971392" version="3"
 #: XXX wird hier ein offizieller Durchgang entstehen?
 #: last_checked: 2022-06-11 (mapillary)
 #: check_frequency: 180d
@@ -6970,7 +6972,7 @@ Heideweg: Kopfsteinpflaster	Q2 -9889,-2139 -9864,-2209 -9814,-2275 -9720,-2317
 Heideweg: Asphalt	Q1 -9720,-2317 -9500,-2389 -9478,-2379
 Blumenweg: Asphalt	Q0 -9445,-2389 -9343,-2087
 Groﬂbeerenstr. - An der Sandscholle: Mosaikpflaster	Q1- -9114,-2650 -9092,-2599
-Gr¸nstr.: Asphalt	Q0 -9210,-2994 -9142,-2756 -9137,-2738 -9114,-2650
+Gr¸nstr.: Asphalt	Q0 -9210,-2994 -9155,-2804 -9142,-2756 -9137,-2738 -9114,-2650
 Paul-Neumann-Str.: Kopfsteinpflaster	Q2 -9735,-1845 -9734,-1896
 Paul-Neumann-Str.: Asphalt	Q1 -9734,-1896 -9698,-1987 -9660,-2082 -9653,-2100
 Paul-Neumann-Str.: Kopfsteinpflaster	Q2 -9626,-2096 -9478,-2379
@@ -7272,6 +7274,10 @@ Waldrandstr.: Asphalt	Q0 -11719,13486 -12032,13708 -12089,13741 -12596,13763 -12
 Hermann-Maaﬂ-Str.: Asphalt	Q0 -9421,-1103 -9390,-1145
 #: by: kartaview
 Hermann-Maaﬂ-Str.: Asphalt mit einigen Sch‰den	Q1 -9390,-1145 -9353,-1194 -9204,-1194 -9176,-1188
+#: by: Gonsolo
+Joe-May-Str.: Asphalt	Q0 -8437,-2226 -8489,-2220 -8574,-2204 -8653,-2195
+#: by: Gonsolo
+Ahornstr.: Asphalt	Q0 -8829,-2741 -8873,-2887 -8941,-3115 -8996,-3106 -9114,-3340
 ######################################################################
 #: by: Andreas Titz vvv
 #: append_comment Oranienburg vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv

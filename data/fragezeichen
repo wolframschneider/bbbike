@@ -441,7 +441,7 @@ Kleewall (Potsdam): Qualität?	? -9806,-2861 -9693,-2899
 Prager Str. (Potsdam): Qualität?	? -9464,-2868 -9503,-3005
 Otterweg (Potsdam): Qualität? Ist die Straße verkehrsberuhigt?	? -9583,-3090 -9438,-3133
 Beetzweg: Qualität?	? -9372,-2915 -9419,-3068 -9438,-3133 -9464,-3239
-Orenstein-&-Koppel-Str. (Potsdam): Qualität?	? -8846,-3474 -9020,-3395 -9039,-3379 -9074,-3354 -9221,-3307 -9239,-3291 -9268,-3283 -9327,-3265 -9377,-3267 -9464,-3239
+Orenstein-&-Koppel-Str. (Potsdam): Qualität?	? -8846,-3474 -9020,-3395 -9039,-3379 -9074,-3354 -9114,-3340 -9221,-3307 -9239,-3291 -9268,-3283 -9327,-3265 -9377,-3267 -9464,-3239
 Beetzweg - Fritz-Zubeil-Str.: Qualität? Radfahren erlaubt?	? -9464,-3239 -9494,-3242 -9531,-3408
 Am Alten Friedhof (Potsdam): Qualität?	? -11770,-2743 -11637,-2617 -11595,-2635 -11466,-2698
 (Heinrich-Mann-Allee - Kolonie Daheim): Qualität des Rad/Fußwegs? Nachts beleuchtet?	? -11656,-2944 -11642,-2903 -11437,-2748
@@ -508,7 +508,6 @@ Basdorf: Qualität des Radwegs entlang der Bahnstrecke?	? 12025,35002 12083,35157
 Buckow - Lichterfelde: wo genau ist der Radweg?	? 31634,53303 32692,53191 32718,53044 32856,52150 33002,51944
 Jägersteig (Potsdam): Qualität?	? -8191,-2259 -8297,-2220 -8434,-2197
 Försterweg (Potsdam): Qualität?	? -8244,-2373 -8329,-2330 -8446,-2328
-Joe-May-Str. (Potsdam): Qualität? Öffentliche Straße?	? -8437,-2226 -8489,-2220 -8574,-2204 -8653,-2195
 G.-W.-Pabst-Str. (Potsdam): Qualität? Öffentliche Straße?	? -8450,-2371 -8503,-2362 -8596,-2346 -8677,-2331 -8702,-2330 -8793,-2315
 Zarah-Leander-Str. (Potsdam): Qualität? Öffentliche Straße?	? -8648,-2697 -8623,-2492 -8727,-2473 -8775,-2469
 Albert-Wilkening-Str. (Potsdam): Qualität? Öffentliche Straße?	? -8501,-2285 -8583,-2272
@@ -669,7 +668,6 @@ Heinz-Rühmann-Weg (Potsdam): Qualität?	? -8870,-2074 -8913,-2279 -8902,-2292
 An der Jubelitz (Potsdam-Fahrland): Qualität?	? -17173,7182 -17268,7122 -17170,7038 -17057,7062
 Havelwelle: genaue Lage der Straße? Qualität?	? -14725,-2389 -14618,-2295 -14585,-2338
 Müllerweg (Potsdam-Fahrland): Qualität? Genauer Verlauf?	? -15503,6422 -15392,6371
-Ahornstr. (Potsdam): Qualität?	? -8829,-2741 -8870,-2876 -8970,-3143 -9039,-3379
 Alter Torfweg (Potsdam): Qualität? Existieren Straßenschilder?	? -10836,-5477 -10829,-5608 -10917,-5739 -11089,-5909
 Ahlimbswalde: ist die gesamte Straße asphaltiert?	? 30962,71971 31251,71954 31669,72016 31857,72102 32370,71986 32613,71643
 Vogelsangsruh: ist die gesamte Straße asphaltiert?	? 66431,84540 66638,84513
@@ -910,7 +908,6 @@ Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 Busspur ist für Radfahrer freigegeben (Wann sind die Geltungszeiten der Busspur?)	? 1080,1637 1025,1813 980,1893 846,2130 824,2210
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
-(Adlergestell - Sportpromenade/Bammelecke): Waldweg, teilweise loser Schotter (wird sich die Qualität hier bessern (insbesondere: was passiert mit dem losen Schotter)?)	? 24485,-667 24758,-268 25172,345
 Weitbrucher Str.: Verbundsteinpflaster (Ist das Verbundsteinpflaster hier tatsächlich nur mäßig?)	? 10845,1026 11061,1029
 Weitbrucher Str.: Verbundsteinpflaster (Liegt hier Verbundsteinpflaster oder Asphalt?)	? 11061,1029 11257,995 11582,816
 # added from qualitaet_l
@@ -945,7 +942,6 @@ Am Neuen Garten: holpriges Kopfsteinpflaster (Liegt hier teilweise Asphalt?)	? -
 Weg am Flughafen - Rotberg: Feldweg (Ist der südöstliche Abschnitt des Weges ein Schotterweg? Oder nur ein unbefestigter Feldweg?)	? 17162,-6465 17910,-6981
 Eichendorffstr. (Schwanebeck-West): unbefestigte Straße (Wurde die Eichendorffstr. mittlerweile befestigt?)	? 17638,24756 17584,24703
 Ernst-Toller-Str.: unbefestigte Straße (Wurde die Ernst-Toller-Str. mittlerweile befestigt?)	? 17581,24815 17638,24756
-Stefan-Heym-Str.: unbefestigte Straße (wurde hier mittlerweile gepflastert (Verbundsteinpflaster)?)	? 17776,24912 17870,24821 18057,24641
 Maienhöhe: Asphalt (ist der südöstliche Abschnitt der Maienhöhe ebenfalls asphaltiert?)	? 32780,5513 32819,5506 32940,5485 33047,5433
 Lenzstr.: Asphalt (ist der nördliche Abschnitt der Lenzstr. ebenfalls asphaltiert?)	? 33098,5856 33119,6053 33135,6164
 Petersdorf: Asphalt (ist auch im westlichen Abschnitt asphaltiert?)	? 23256,76732 22470,76523
@@ -1008,4 +1004,4 @@ Schulzendorfer Str.: Asphaltierung (Wurde die Asphaltierung der Straße abgeschlo
 Uferweg an der Scharfen Lanke: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? -3752,11373 -3785,11445 -3828,11491 -3928,11526 -4028,11533 -4106,11519 -4181,11458 -4204,11432 -4245,11400
 Uferweg an der Scharfen Lanke: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? -4246,11438 -4204,11432
 Uferweg an der Scharfen Lanke: Bauarbeiten, komplett gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? -3928,11526 -3909,11596
-Markelstr.: Bauarbeiten, Fahrbahn abschnittsweise gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 5020,6434 5269,6305
+Zähringerstr.: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung offen Richtung Osten, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten mittlerweile beendet?)	? 4277,9895 4126,9932 3927,9935
