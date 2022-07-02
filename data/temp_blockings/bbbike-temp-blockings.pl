@@ -15576,6 +15576,7 @@ EOF
        data  => <<EOF,
 #: note: Sperrung bestätigt von Stefan (s.sms): vvv
 #: note: genauere Uhrzeit von Dieter Heimann
+#: note: Öffnung im Sommer ab 4:30 Uhr (laut Sicherheitsdienst)
 #: confirmed_by: um 20:30 Uhr steht man vor einem geschlossenen Tor, zumindest an der Nordostseite (2012-08); mapillary tagsüber am 2022-03-08 (Frauentag)
 #: tempex: sa,su,holiday,(mo-fr T20:00-sunrise) vvv
 Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr, am Wochenende und an Feiertagen gesperrt	2::night:weekend 21683,6946 21572,7051 21505,7129 21491,7182 21490,7197 21484,7326 21475,7500 21497,7597 21540,7630
@@ -18428,9 +18429,14 @@ EOF
 #: by: https://www.berlin.de/events/1934675-2229501-bergmannstrassenfest.html (8.-10.10.2021, als "Kreuzberg-Festival", vermutlich auf Kreuzbergstraße)
 #: by: https://kreuzberg-festival.de/
 #: by: https://www.berlin.de/events/1934675-2229501-bergmannstrassenfest.html?date=20220509 (1.-3. Juli 2022)
+#: by: https://nitter.net/VIZ_Berlin/status/1542565377942532096#m (auch Großbeerenstr.)
+#: by: https://berliner-abendblatt.de/2022/06/30/kreuzberg-festival-wir-haben-nicht-aufgegeben/
+#: source_id: viz2021:13.38274,52.49156,01.07.2022,06:00
+#: source_id: viz2021:13.3767,52.4894,01.07.2022,06:00
 	2::temp 8598,9269 8769,9295 8970,9323 9154,9347 9211,9354
 	3 9000,9509 8970,9323 9007,9264
 	3 9007,9264 8970,9323 9000,9509
+	2::temp 9000,9509 8970,9323
 EOF
      },
      { from  => 1277443049, # 2010-06-25 07:17
@@ -26086,19 +26092,26 @@ EOF
 	q4::inwork; -2511,17430 -2573,17314 -2599,17269 -2659,17165 -2728,17038
 EOF
      },
-     { from  => $isodate2epoch->("2021-09-14 06:00:00"), # 1504201168, # 1473285600, # 2016-09-08 00:00
-       until => $isodate2epoch->("2021-09-16 07:00:00"),
-       text  => 'Straße des 17. Juni, Ebertstr. und weitere Straßen am Tiergarten: Sperrungen wegen einer Sportveranstaltung (Berliner Firmenlauf), evtl. sind auch Radfahrer betroffen, ab 15.09.2021 06 Uhr bis 16.09.2021 07 Uhr',
+     { from  => $isodate2epoch->("2022-06-28 18:00:00"), # 1504201168, # 1473285600, # 2016-09-08 00:00
+       until => $isodate2epoch->("2022-06-29 23:59:59"),
+       text  => 'Straße des 17. Juni, Ebertstr. und weitere Straßen am Tiergarten: Sperrungen wegen einer Sportveranstaltung (Berliner Firmenlauf), evtl. sind auch Radfahrer betroffen, am 29.6.2022 18:00-21:30 Uhr',
        type  => 'gesperrt',
        source_id => '2147339672',
        data  => <<EOF,
 #: source_id: 2147339672
 #: by: https://twitter.com/VIZ_Berlin/status/1437755743051128833 (2021)
 #: by: https://berliner-firmenlauf.de/infos-zum-lauf/ (2021)
+#: by: https://berliner-firmenlauf.de/infos-zum-lauf/?date=20220627
+#: by: https://berliner-firmenlauf.de/wp-content/uploads/2021/04/BFL-2022-Strecke-800x456.jpg
+#: by: https://viz.berlin.de/2022/06/verkehrsvorschau-29062022/
 	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
 	2::temp 8600,12165 8538,12245 8592,12252
 	2::temp 8119,12414 8055,12186
 	2::temp 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	3 8209,11671 8203,11686 8210,11775
+	3 8210,11775 8203,11686 8209,11671
+	3 8226,11458 8172,11679 8026,11764
+	3 8026,11764 8172,11679 8226,11458
 	3 7429,12070 7383,12095 7031,12320
 	3 7031,12320 7383,12095 7429,12070
 	3 7822,12201 7816,12150 7823,12120
@@ -26107,8 +26120,11 @@ EOF
 	3 8522,12187 8538,12245 8522,12239
 	3 8391,12389 8344,12221 8327,12174
 	3 8327,12174 8344,12221 8391,12389
-	2::temp 8595,12066 8737,12098 8743,12099 8861,12125 8901,12008 8844,11984 8783,11959 8577,11896 8571,11846 8489,11782 8456,11763 8322,11715 8203,11686 8172,11679 8094,11657 8005,11627 7816,11571 7717,11540 7665,11353 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208 7160,11225 7115,11220 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6809,11979 6828,12031
-	2::temp 6828,12031 6884,12006
+	3 6692,11365 6851,11346 7103,11247
+	3 7103,11247 6851,11346 6692,11365
+	2::temp 8595,12066 8737,12098 8743,12099 8861,12125 8901,12008 8844,11984 8783,11959 8577,11896 8571,11846 8489,11782 8456,11763 8322,11715 8203,11686 8172,11679 8094,11657 8005,11627 7816,11571 7717,11540 7665,11353 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208 7160,11225 7115,11220 6880,11110
+	1::temp 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
+	2::temp 6744,11936 6809,11979 6828,12031 6884,12006
 	3 8014,11753 8005,11627 7943,11431
 	3 7943,11431 8005,11627 8014,11753
 	3 6716,11439 6825,11486 6915,11492
@@ -27952,8 +27968,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # 1598634704, # Ende der Bauarbeiten für die *gesamte* Schönstr. --- 2021-06-01 00:00
-       text  => 'Schönstr.: Bauarbeiten zwischen Mirbachplatz und Paul-Oestreich-Str., Fahrbahn gesperrt, voraussichtlich bis 28.6.2022',
+       until => 1656694833, # undef, # 1598634704, # Ende der Bauarbeiten für die *gesamte* Schönstr. --- 2021-06-01 00:00
+       text  => 'Schönstr.: Bauarbeiten zwischen Mirbachplatz und Paul-Oestreich-Str., Fahrbahn gesperrt, Sperrung war bis zum 28.6.2022 vorgesehen, ist also möglicherweise beendet',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php',
        data  => <<EOF,
@@ -27974,19 +27990,12 @@ EOF
 #: by: https://www.berliner-woche.de/weissensee/c-verkehr/einmuendung-komplett-gesperrt_a303306
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2022/pressemitteilung.1216456.php (ab 21.6.2022 Vollsperrung, Freigabe am 28.6.2022)
 #: by: https://berliner-abendblatt.de/2022/06/17/vollsperrung-in-weissensee/
-#: add_fragezeichen: Sind die Bauarbeiten beendet und die Straße frei befahrbar?
-#: also_indoor: traffic (G(wieder),H(falsch?),B)
+# REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten beendet und die Straße frei befahrbar? --- #: also_indoor: traffic (G(wieder),H(falsch?),B)
 #: source_id: viz2021:13.450024,52.553419,21.06.2022,08:00 (hier: Rad- und Fußverkehr frei)
-#: priority: #B vvv
-#: last_checked: 2022-06-21 vvv
-#: check_frequency: 60d vvv
-#: next_check: 2022-06-28 vvv
+# REMOVED --- #: priority: #B vvv --- #: last_checked: 2022-06-21 vvv --- #: check_frequency: 60d vvv --- #: next_check: 2022-06-28 vvv
 	q4::inwork 13391,16436 13630,16629
 Anbindung Paul-Oestreich-Str. gesperrt	q3::inwork 13710,16544 13630,16629
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
-#: priority ^^^
+# REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: priority ^^^
 EOF
      },
      { from  => 1530907854, # 2018-07-06 22:10
@@ -28214,7 +28223,7 @@ EOF
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
 #: XXX keine Bauarbeiten mehr, aber die Schilder sind geblieben --- vielleicht permanent?
-#: last_checked: 2022-05-31
+#: last_checked: 2022-06-30
 #: check_frequency: 30d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -29303,11 +29312,11 @@ EOF
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
-#: osm_watch: way id="8655276" version="29"
+#: osm_watch: way id="8655276" version="30"
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2022-06-14 (osm)
+#: last_checked: 2022-06-29 (osm)
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -29556,7 +29565,7 @@ EOF
 #: source_id: viz2021:13.38743,52.55268,14.09.2021,19:35 (bis 31.3.2022, doppelter Eintrag) (inaktiv)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11007 (Frage)
 #: note: laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021, mittlerweile bis Juli 2022
-#: also_indoor: traffic (H,B,G)
+#: also_indoor: traffic (ex-H,B,G)
 #: osm_watch: way id="1006570991" version="1"
 #: last_checked: 2022-05-14
 #: check_frequency: 45d
@@ -30585,7 +30594,7 @@ EOF
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-06-23 (mapillary)
+#: last_checked: 2022-06-27 (mapillary)
 #: check_frequency: 14d
 	q4::inwork; 11329,12497 11209,12430
 EOF
@@ -31061,7 +31070,7 @@ EOF
 #: next_check_id: CORONA-2020
 #: by: https://www.charite.de/klinikum/themen_klinikum/themenschwerpunkt_coronavirus/#c30751057 (Eingangskontrollen)
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2022-04-09 vvv
+#: last_checked: 2022-06-30 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -31179,15 +31188,16 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="9"
 #: osm_watch: way id="934995901" version="8"
-#: last_checked: 2022-06-26 vvv
-#: check_frequency: 14d vvv
+#: last_checked: 2022-06-30 vvv
+#: check_frequency: 3d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
 # REMOVED (beendet) ---	q3::inwork 14247,11681 14272,11775
 # REMOVED (beendet) ---	q3::inwork 14272,11775 14306,11889
 # REMOVED (beendet) ---	q3::inwork 14306,11889 14354,12012
-	q4::inwork 14354,12012 14427,12197
+#: XXX mittlerweile Asphaltierungsarbeiten, nur ein paar Meter an der Frankfurter Allee sind noch richtig gesperrt
+	q3::inwork 14354,12012 14427,12197
 # REMOVED (beendet) ---	q3::inwork 14354,12012 14468,11992
 # REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
@@ -31475,7 +31485,7 @@ EOF
 #: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
 #: source_id: 2147347233 (bis 23.12.2021)
 #: source_id: viz2021:13.312919,52.448752,31.05.2021,08:30 (bis 30.9.2022)
-#: source_id: viz2021:13.301624,52.444612,02.05.2022,07:00 (bis 30.6.2022)
+#: source_id: viz2021:13.301624,52.444612,02.05.2022,07:00 (bis 30.6.2022) (inaktiv)
 # REMOVED --- #: priority: #A --- #: last_checked: 2021-09-26 --- #: next_check: 2022-03-18
 #: also_indoor: traffic (H,ex-G,ex-B) vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
@@ -31484,8 +31494,7 @@ EOF
 # REMOVED (hier nicht mehr) --- #: note: nur etwa 100m, deshalb q3 statt q4 ---	q3::inwork 4515,4760 4214,4595
 #: note: Einbahnstraßenregelung, Bauarbeiten laut Baustellenschild bis September 2022
 	q4::inwork; 4214,4595 4039,4500
-#: note: Einbahnstraßenregelung, bis 30.6.2022
-	q4::inwork; 3643,4232 3523,4139
+# REMOVED --- #: note: Einbahnstraßenregelung, bis 30.6.2022 ---	q4::inwork; 3643,4232 3523,4139
 # REMOVED --- #: note: hier nur ein kurzes Stück ---	q2::inwork; 4214,4595 4039,4500
 # REMOVED (nicht mehr, laut rbb) ---	q4::inwork 4179,4662 4214,4595
 # REMOVED --- #: next_check ^^^ --- #: last_checked ^^^ --- #: add_fragezeichen ^^^
@@ -33618,8 +33627,8 @@ EOF
 EOF
      },
      { from  => 1629669600, # 2021-08-23 00:00
-       until => $isodate2epoch->("2022-06-30 17:00:00"), # 1640991600, # 2022-01-01 00:00
-       text  => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 30.06.2022 17:00 ',
+       until => $isodate2epoch->("2022-07-08 17:00:00"), # 1640991600, # 2022-01-01 00:00
+       text  => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 08.07.2022 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.377685,52.567221,24.08.2021,07:00', # aktiv
        data  => <<EOF,
@@ -34002,8 +34011,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: SCHARFELANKE-2021
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
-#: osm_watch: way id="187977779" version="15" vvv
-#: last_checked: 2022-03-15 (osm) vvv
+#: osm_watch: way id="187977779" version="16" vvv
+#: last_checked: 2022-06-26 (osm) vvv
 #: check_frequency: 60d vvv
 	2::inwork -3752,11373 -3785,11445 -3828,11491 -3928,11526 -4028,11533 -4106,11519 -4181,11458 -4204,11432 -4245,11400
 	2::inwork -4246,11438 -4204,11432
@@ -34054,9 +34063,9 @@ EOF
 	2::inwork 3419,1061 3481,946 3561,789 3642,727
 EOF
      },
-     { from  => 1635285600, # 2021-10-27 00:00
-       until => $isodate2epoch->("2021-11-09 11:00:00"), # 1637017199, # 2021-11-15 23:59
-       text  => 'Mühlenstr.: Bauarbeiten zwischen Breite Str. und Florastr., Richtung Süden gesperrt, Radfahrer dürfen den Gehweg benutzen, vom 28. Oktober 2021 bis 09.11.2021',
+     { from  => $isodate2epoch->("2022-07-05 00:00:00"), # 1635285600, # 2021-10-27 00:00
+       until => $isodate2epoch->("2022-07-19 18:00:00"), # $isodate2epoch->("2021-11-09 11:00:00"), # 1637017199, # 2021-11-15 23:59
+       text  => 'Mühlenstr.: Bauarbeiten zwischen Breite Str. und Florastr., Richtung Süden gesperrt, vom 6.7.2022 bis voraussichtlich 19.7.2022', # alt: Radfahrer dürfen den Gehweg benutzen, vom 28. Oktober 2021 bis 09.11.2021
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2021/pressemitteilung.1139346.php',
        data  => <<EOF,
@@ -34067,7 +34076,9 @@ EOF
 #: source_id: viz2021:13.403429,52.56939,28.10.2021,06:00 (hier: bis 12.11.2021, und nur für Kfz-Verkehr gesperrt) (mittlerweile bis 9.11.2021)
 #: by: https://www.berliner-woche.de/altglienicke/c-verkehr/deckschicht-wird-runderneuert_a327095 (bis 30.11.2021)
 #: note: laut rbb vorzeitiges Ende am 9.11.2021
-	q3::inwork; 10228,18196 10347,17959 10448,17751
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2022/pressemitteilung.1221641.php (neue Bauarbeiten)
+#: by: https://berliner-abendblatt.de/2022/06/30/muehlenstrasse-wird-gesperrt/
+	q4::inwork; 10228,18196 10347,17959 10448,17751
 EOF
      },
      { from  => 1636239600, # 2021-11-07 00:00
@@ -34520,16 +34531,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1656429973, # undef, # XXX
        text  => 'Zwieseler Str.: Zufahrt zum Richard-Kolkwitz-Weg kann wegen Bauarbeiten gesperrt sein, auch für Fußgänger (Stand April 2022: zumindest am Wochenende passierbar)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: ZWIESELER-2022
-#: XXX Stand 2022-01-21: Verbotsschild für Fußgänger am nördlichen Ende, Verbot für Fahrzeuge aller Art außer Grundstücksanlieger am südlichen Ende, man kann aber trotzdem passieren. Stand 2022-02-26: Passieren weiterhin möglich.
-#: XXX Halteverbotsschilder gelten bis Ende Juni 2023
-#: last_checked: 2022-04-02
-#: check_frequency: 120d
-#: next_check: 2023-06-30
+# REMOVED (keine Einschränkungen) --- #: XXX Stand 2022-01-21: Verbotsschild für Fußgänger am nördlichen Ende, Verbot für Fahrzeuge aller Art außer Grundstücksanlieger am südlichen Ende, man kann aber trotzdem passieren. Stand 2022-02-26: Passieren weiterhin möglich. --- #: XXX Halteverbotsschilder gelten bis Ende Juni 2023 --- #: last_checked: 2022-06-28 --- #: check_frequency: 120d --- #: next_check: 2023-06-30
 	2::inwork 19711,10426 19697,10210
 EOF
      },
@@ -34770,8 +34777,8 @@ EOF
 EOF
      },
      { from  => 1645945200, # 2022-02-27 08:00
-       until => $isodate2epoch->("2022-07-01 17:00:00"), # undef, # 1651244400, # 2022-04-29 17:00
-       text  => 'Ritterstr.: Bauarbeiten am Kreuzungsbereich Prinzenstr., Fahrbahn gesperrt, Umwege für Radfahrer, voraussichtlich bis 1.7.2022', # vom 28.02.2022 08:00 bis 29.04.2022 17:00 ',
+       until => $isodate2epoch->("2022-08-01 17:00:00"), # undef, # 1651244400, # 2022-04-29 17:00
+       text  => 'Ritterstr.: Bauarbeiten am Kreuzungsbereich Prinzenstr., Fahrbahn gesperrt, Umwege für Radfahrer, voraussichtlich bis 1.8.2022', # vom 28.02.2022 08:00 bis 29.04.2022 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.409755,52.50158,28.02.2022,08:00', # (mittlerweile inaktiv)
        data  => <<EOF,
@@ -34779,15 +34786,15 @@ EOF
 #: by: https://pbs.twimg.com/media/FMrYBZQXEAAQlaA?format=jpg&name=large
 #: XXX bis wann gehen die Bauarbeiten?
 # REMOVED --- #: note: es existiert ein etwas breiterer Fußgängerschutztunnel, etwa 50m lang --- #: also_indoor: traffic (G(partial),B(partial)) --- #: source_id: bvg2021:140#BVG297945_0 (bis 1.8.2022) --- #: last_checked: 2022-04-29 vvv --- #: check_frequency: 30d vvv --- #: next_check: 2022-07-01 vvv ---	q3::inwork 10776,10682 10944,10606
-#: also_indoor: traffic (G,B)
+#: also_indoor: traffic (G(falsch),B)
 #: note: Kreuzungsbereich zur Prinzenstr. gesperrt
-#: source_id: viz2021:13.408387,52.502028,14.03.2022,08:00 (bis 1.7.2022)
-#: last_checked: 2022-05-31 vvv
-#: check_frequency: 30d vvv
-#: next_check: 2022-07-01 vvv
+#: source_id: viz2021:13.408387,52.502028,14.03.2022,08:00 (bis 1.7.2022) (bis 1.8.2022)
+#: last_checked: 2022-06-12 (mapillary) vvv
+# REMOVED --- #: check_frequency: 30d vvv
+#: next_check: 2022-08-01 vvv
 	q2::inwork 10776,10682 10585,10766
 #: next_check ^^^
-#: check_frequency ^^^
+# REMOVED --- #: check_frequency ^^^
 #: last_checked ^^^
 EOF
      },
@@ -34814,7 +34821,7 @@ EOF
 #: add_fragezeichen: Wie lange dauern die Bauarbeiten an?
 #: also_indoor: traffic (G(falsch?),B(teilweise))
 #: priority: #B
-#: last_checked: 2022-06-12 vvv
+#: last_checked: 2022-06-30 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-09-30 vvv
 	q4::inwork; 7259,14870 7209,14927 7182,14986
@@ -34978,7 +34985,7 @@ EOF
 #: by: https://nitter.net/VIZ_Berlin/status/1513397936151044099#m
 #: by: https://nitter.net/pic/media%2FFP1LIs8XMAENMUm.jpg%3Fname%3Dorig
 #: source_id: viz2021:13.478607,52.471557,11.05.2022,11:00 (Baustellenampel in der Kiefholzstr., bis 14.6.2022) (mittlerweile bis 27.6.2022) (mittlerweile bis 1.8.2022)
-#: source_id: viz2021:13.47859,52.47157,11.04.2022,09:00 (zusätzlicher Eintrag, bis 1.8.2022)
+#: source_id: viz2021:13.47859,52.47157,11.04.2022,09:00 (zusätzlicher Eintrag, bis 1.8.2022) (mittlerweile inaktiv)
 #: by: https://nitter.net/VIZ_Berlin/status/1524307007557222401#m
 #: by: https://nitter.net/pic/media%2FFSdtBqDX0AEFDN8.jpg%3Fname%3Dorig
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? oder nur bis August 2022? vvv
@@ -35113,13 +35120,13 @@ EOF
 EOF
      },
      { from  => 1651960800, # 2022-05-08 00:00
-       until => $isodate2epoch->("2022-07-03 13:00:00"), # 1653861600, # 2022-05-30 00:00
-       text  => 'Rennbahnstr.: Sperrung der Fahrbahn wegen Gleisbauarbeiten, bis 3.7.2022 ',
+       until => $isodate2epoch->("2022-07-04 10:00:00"), # 1653861600, # 2022-05-30 00:00
+       text  => 'Rennbahnstr.: Sperrung der Fahrbahn wegen Gleisbauarbeiten, bis 4.7.2022 ',
        type  => 'handicap',
        source_id => 'https://viz.berlin.de/wp-content/uploads/BA2.jpg',
        data  => <<EOF,
 #: next_check_id: BERLINERALLEE-2022
-#: source_id: viz2021:13.463558,52.558311,09.05.2022,04:00 (bis 30.5.2022, hier: nur Kfz-Verkehr erwähnt) (bis 3.7.2022)
+#: source_id: viz2021:13.463558,52.558311,09.05.2022,04:00 (bis 30.5.2022, hier: nur Kfz-Verkehr erwähnt) (bis 3.7.2022) (bis 4.7.2022)
 #: source_id: viz2021:13.46681,52.55708,27.05.2022,16:41 (bis 3.7.2022) (inaktiv)
 #: by: https://nitter.net/VIZ_Berlin/status/1523659832569389058#m (Rennbahnstr. bis 3.7.2022 gesperrt)
 	q4::inwork 14558,16907 14528,16910
@@ -35154,12 +35161,13 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2022-05-02 00:00:00"),
-       until => $isodate2epoch->("2022-05-22 18:00:00"),
-       text  => 'Eisenbahnbrücke Werder: wegen Bauarbeiten montags bis freitags tagsüber (6:30 bis 18:00 Uhr) gesperrt, bis zum 22.5.2022',
+       until => $isodate2epoch->("2022-07-31 18:00:00"),
+       text  => 'Eisenbahnbrücke Werder: wegen Bauarbeiten montags bis freitags tagsüber (6:30 bis 18:00 Uhr) gesperrt, bis zum 31.7.2022',
        type  => 'gesperrt',
        source_id => 'https://www.mobil-potsdam.de/de/baustellen/aktuell/?c=4210',
        data  => <<EOF,
 #: next_check_id: BRUECKEWERDER-2022
+#: by: https://www.mobil-potsdam.de/de/aktuelle-verkehrsthemen/radwegbruecke-potsdam-werder-havel/
 	2::inwork -21227,-2017 -21125,-2012	
 EOF
      },
@@ -35271,8 +35279,8 @@ EOF
 EOF
      },
      { from  => 1655010000, # 2022-06-12 07:00
-       until => 1656514800, # 2022-06-29 17:00
-       text  => 'Zinnowitzer Str.: zwischen Chausseestr. und Am Nordbahnhof gesperrt, auch für den Radverkehr, vom 13.06.2022 07:00 bis 29.06.2022 17:00',
+       until => $isodate2epoch->("2022-06-29 11:00:00"), # 1656514800, # 2022-06-29 17:00
+       text  => 'Zinnowitzer Str.: zwischen Chausseestr. und Am Nordbahnhof gesperrt, auch für den Radverkehr, vom 13.06.2022 07:00 bis 29.06.2022 11:00',
        type  => 'handicap',
        source_id => 'viz2021:13.38248,52.53138,13.06.2022,07:00',
        data  => <<EOF,
@@ -35340,7 +35348,7 @@ EOF
 	2::temp 8538,12245 8522,12239
 	2::temp 8538,12245 8522,12187
 Straße des 17. Juni zwischen Großer Stern und Yitzhak-Rabin-Str.	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186
-Yitzhak-Rabin-Str	2::temp 8055,12186 8119,12414
+Yitzhak-Rabin-Str.	2::temp 8055,12186 8119,12414
 EOF
      },
      { from  => 1655449200, # 2022-06-17 09:00
@@ -35433,14 +35441,14 @@ EOF
      },
      { from  => 1656007200, # 2022-06-23 20:00
        until => 1656640800, # 2022-07-01 04:00
-       text  => 'Blumberger Damm: Sperrung zwischen der Altentreptower Str. und dem Frankenholzer Weg, vielleicht sind auch Radfahrer betroffen, 24. Juni 2022 20:00 Uhr bis 01. Juli 2022 04:00 Uhr',
+       text  => 'Blumberger Damm: Sperrung zwischen der Altentreptower Str. und dem Frankenholzer Weg, auch Radfahrer und Fußgänger sind betroffen, 24. Juni 2022 20:00 Uhr bis 01. Juli 2022 04:00 Uhr',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1219254.php',
        data  => <<EOF,
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2021
 #: by: https://berliner-abendblatt.de/2022/06/22/bauarbeiten-legen-blumberger-damm-lahm/
 #: source_id: viz2021:13.562568,52.51298,24.06.2022,20:00 (hier nur Kfz-Verkehr)
-#: source_id: viz2021:13.56283,52.51426,24.06.2022,20:00
+#: source_id: viz2021:13.56283,52.51426,24.06.2022,20:00 (mittlerweile inaktiv)
 	2::inwork 21152,11945 21166,12023 21190,12193 21199,12258
 EOF
      },
@@ -35472,6 +35480,8 @@ EOF
        source_id => 'https://sbahn.berlin/fileadmin/user_upload/Punkt3/PDF-Archiv/2022/punkt3-Ausgabe12_23.06.2022.pdf',
        data  => <<EOF,
 #: next_check_id: KWEISENBAHNBRUECKE-2022
+#: by: https://www.koenigs-wusterhausen.de/1013639/Eisenbahnunterfuehrung
+#: note: zusätzlich existiert ein (zeitlich kürzerer) gesperrt-orig-Eintrag
 	2::inwork 26327,-11708 26395,-11699
 EOF
      },
@@ -35482,7 +35492,99 @@ EOF
        source_id => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1220100.php',
        data  => <<EOF,
 #: next_check_id: SCHAEFERSEE-2022
+#: by: https://www.berliner-woche.de/reinickendorf/c-bauen/sperrung-am-schaefersee_a350672
 	2::inwork 7189,17666 7173,17591 7222,17471 7253,17467
+EOF
+     },
+     { from  => 1656302400, # 2022-06-27 06:00
+       until => 1656561600, # 2022-06-30 06:00
+       text  => 'Straße des 17. Juni und Ebertstr.: Vorbereitungen für den Berliner Firmenlauf, Straßen gesperrt, vom 28.06.2022 06:00 bis 30.06.2022 06:00 ',
+       type  => 'gesperrt',
+       source_id => 'viz2021:13.351095,52.514567,28.06.2022,06:00',
+       data  => <<EOF,
+#: by: https://nitter.net/VIZ_Berlin/status/1541479975991316485#m
+	2::temp 8592,12252 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
+	2::temp 8595,12066 8600,12165 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	3 7822,12201 7816,12150 7823,12120
+	3 7429,12070 7383,12095 7031,12320
+	3 8049,12140 8055,12186 8119,12414
+	3 8327,12174 8344,12221 8391,12389
+	3 8522,12239 8538,12245 8522,12187
+	3 8522,12187 8538,12245 8522,12239
+	3 8119,12414 8055,12186 8049,12140
+	3 8391,12389 8344,12221 8327,12174
+	3 7031,12320 7383,12095 7429,12070
+	3 7823,12120 7816,12150 7822,12201
+EOF
+     },
+     { from  => 1656475200, # 2022-06-29 06:00
+       until => 1657036800, # 2022-07-05 18:00
+       text  => 'Straße des 17. Juni: Sperrung zwischen Yitzhak-Rabin-Str. und Ebertstr., vom 30.06.2022, 06:00 Uhr bis 05.07.2022, 18:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'https://viz.berlin.de/2022/06/17_juni-sperrungen/',
+       data  => <<EOF,
+#: source_id: viz2021:13.351095,52.514567,30.06.2022,06:00
+	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
+	3 8391,12389 8344,12221 8327,12174
+	3 8327,12174 8344,12221 8391,12389
+EOF
+     },
+     { from  => 1656604800, # 2022-06-30 18:00
+       until => 1656907200, # 2022-07-04 06:00
+       text  => 'Straße des 17. Juni, Ebertstr., Scheidemannstr., John-Foster-Duller-Allee: Sperrungen vom 01.07.2022, 18:00 Uhr bis 04.07.2022, 06:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'https://viz.berlin.de/2022/06/17_juni-sperrungen/',
+       data  => <<EOF,
+#: source_id: viz2021:13.38045,52.51808,01.07.2022,18:00
+#: source_id: viz2021:13.37688,52.51775,01.07.2022,18:00
+#: source_id: viz2021:13.36975,52.51584,01.07.2022,18:00
+	2::temp 8595,12066 8600,12165 8538,12245 8592,12252
+	2::temp 8573,12325 8540,12420 8775,12457
+	2::temp 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414
+	2::temp 8538,12245 8546,12279 8570,12302
+	2::temp 7215,12295 7031,12320
+	3 7945,12592 7875,12363 7822,12201
+	3 8344,12221 8538,12245 8522,12187
+	3 8344,12221 8538,12245 8522,12239
+	3 8522,12187 8538,12245 8522,12239
+	3 8522,12187 8538,12245 8344,12221
+	3 7603,12353 7627,12380 7654,12464
+	3 7822,12201 7875,12363 7945,12592
+	3 7822,12201 7816,12150 7823,12120
+	3 8522,12239 8538,12245 8522,12187
+	3 8522,12239 8538,12245 8344,12221
+	3 7823,12120 7816,12150 7822,12201
+	3 7031,12320 7383,12095 7429,12070
+	3 8391,12389 8400,12417 8399,12610
+	3 8089,12190 8055,12186 8049,12140
+	3 8399,12610 8400,12417 8391,12389
+	3 7654,12464 7627,12380 7603,12353
+	3 7429,12070 7383,12095 7031,12320
+	3 8049,12140 8055,12186 8089,12190
+EOF
+     },
+     { from  => 1656799200, # 2022-07-03 00:00
+       until => 1667861999, # 2022-11-07 23:59
+       text  => 'Schönstr./Große Seestr.: Sperrung des Kreuzungsbereichs, vom 04. Juli 2022 bis voraussichtlich 07. November 2022',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2022/pressemitteilung.1221094.php',
+       data  => <<EOF,
+#: XXX Wie groß sind die Einschränkungen für Radfahrer? vvv
+#: next_check: 2022-07-04 vvv
+	q3::inwork 13996,16959 14107,16889 14184,16889
+	q3::inwork 14014,16722 14107,16889 14235,17103
+#: next_check ^^^
+#: XXX ^^^
+EOF
+     },
+     { from  => 1656799200, # 2022-07-03 00:00
+       until => 1657317600, # 2022-07-09 00:00
+       text  => 'Ludwigsluster Str.: Bauarbeiten zwischen Gadebuscher Str. und Lion-Feuchtwanger-Str., Fahrbahn ist gesperrt, vom 04.07.2022 bis zum 08.07.2022 ',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1222045.php',
+       data  => <<EOF,
+	q4::inwork 22472,12343 22568,12408
 EOF
      },
     );

@@ -351,7 +351,7 @@ Lohmühlenbrücke: Asphalt	Q0 12868,9359 12897,9365
 #: XXX wird die Kiefholzstr. asphaltiert?
 #: XXX Baumaßnahme: 9.9 (Realisierung nach 2011)
 #: osm_watch: way id="4686083" version="24"
-#: last_checked: 2022-04-01
+#: last_checked: 2022-06-29
 #: check_frequency: 90d
 Kiefholzstr.: Kopfsteinpflaster	Q2 13602,9581 13450,9714 13251,9829
 # 
@@ -1010,7 +1010,7 @@ Tegeler Weg: Asphalt	Q0 7259,14870 7209,14927 7182,14986 7178,14996 7131,15109 7
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/211123_-sachstandsbericht.pdf
 #: by: https://www.infravelo.de/projekt/lynarstrasse/ (3. Quartal 2021 - 3. Quartal 2022)
 #: XXX Wird die restliche Lynarstr. auch asphaltiert?
-#: last_checked: 2022-06-12
+#: last_checked: 2022-06-30
 #: check_frequency: 60d
 #: next_check: 2022-09-30
 Lynarstr.: Kopfsteinpflaster	Q2 7129,14787 7143,14794 7259,14870 7409,14954
@@ -1041,7 +1041,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9942 (Kopfsteinpflaster bleibt vorerst? außerdem: wird die Colbestr. zur Fahrradstraße?)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2022-06-26
+#: last_checked: 2022-06-30
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1335,6 +1335,7 @@ Köpenicker Allee: holpriger Fahrweg mit asphaltierten Stellen	Q2 19898,8410 1999
 Köpenicker Allee: unbefestigter Weg, sandige Stellen	Q2 20226,7846 20280,7749
 Köpenicker Allee: Beton	Q0- 19500,9043 19575,8978 19633,8892 19697,8776 19813,8564
 Köpenicker Allee: mäßiger Asphalt	Q1 18939,9417 19020,9364
+Köpenicker Allee: Asphalt mit Rissen	Q1+; 19206,9243 19267,9201 19392,9116 19500,9043
 #: by: Roy Fischer [AM]
 #: confirmed_by: srt
 Vulkanstr.: Asphalt	Q0 15912,13153 15912,13301 15896,13387 15896,13512 15896,13547 15896,13594 15896,13760 15897,13942 15871,14106 15860,14208 15850,14308
@@ -1364,7 +1365,7 @@ Pankeweg: Asphalt mit einigen Unebenheiten	Q1+ 13206,22290 13141,22018
 Pankeweg: mäßiger Asphalt, Wurzelschäden	Q1- 13141,22018 13078,21754
 Pankeweg: wassergebundene Decke	Q1- 13078,21754 13031,21538 12914,21229 12854,21147 12880,21134 12807,20944 12753,20884 12553,20757
 Pankeweg: unbefestigter Weg	Q2+ 13365,22743 13321,22586 13295,22545 13291,22422
-Pankeweg: Feinschotter	Q1 13291,22422 13290,22399 13404,22384
+Pankeweg: Feinschotter	Q1 13291,22422 13290,22399 13388,22386 13404,22384
 Weinapfelweg: unbefestigte Straße, relativ gut befahrbar	Q2+ 13136,22397 13117,22337 13110,22313
 Weinapfelweg: unbefestigter Weg	Q2- 12940,21738 12963,21835 12968,21848 12996,21953 13025,21984 13050,21994 13060,22043 13075,22130 13091,22220 13110,22313
 Weinapfelweg: unbefestigter Weg	Q2- 13136,22397 13162,22480 13180,22539 13202,22605 13221,22667
@@ -1586,7 +1587,7 @@ Marienburger Str.: Kopfsteinpflaster	Q2 11572,14452 11821,14317 12077,14186
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5720 (Prüfung einer Glättung des Kopfsteinpflasters)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/verkehrsprojekte-im-boetzowviertel_a319036 (Erwähnung der Hufelandstraße)
 #: by: http://www.infravelo.de/projekt/hufelandstrasse/ ("erschütterungsarmer Belag", Bauzeitraum 1. Quartal 2022 - 1. Quartal 2023) (mittlerweile: 3. Quartal 2022 - 2. Quartal 2023) (mittlerweile: 2. Quartal 2023 - 2. Quartal 2024)
-#: osm_watch: way id="4615063" version="27"
+#: osm_watch: way id="4615063" version="28"
 #: last_checked: 2022-03-31
 #: check_frequency: 210d
 #: next_check: 2023-06-30
@@ -8631,6 +8632,7 @@ Letterhausweg: Asphalt	Q0- 2111,14235 2087,14078
 #: by: https://www.deutsches-architekturforum.de/thread/9771-neue-und-erneuerte-parks-und-gr%C3%BCnfl%C3%A4chen/?postID=687886#post687886
 #: by: https://www.berliner-woche.de/charlottenburg-nord/c-bauen/infoabend-zum-staedtebau_a318865
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1220157.php (Eröffnung am 29.6.2022)
+#: by: https://berliner-abendblatt.de/2022/06/27/neuer-gruenzug-am-halemweg/
 #: note: laut Baustellenschild Bauzeit des jetzigen Bauabschnitts: 2021-2022
 #: last_checked: 2022-02-12
 # REMOVED --- #: check_frequency: 120d
@@ -10793,7 +10795,7 @@ Alfred-Kowalke-Str. [Mittelstreifen]: Gehwegplatten	Q0- 18200,11269 18202,11253
 #: next_check_id: STADTPARKLICHTENBERG-2022
 #: by: https://www.berliner-woche.de/lichtenberg/c-bauen/gruenanlage-zwischen-moellendorff-und-scheffelstrasse-wird-umgestaltet_a229540 (Anfang 2020 - Ende 2021)
 #: XXX Wird sich nach den Bauarbeiten hier etwas ändern?
-#: last_checked: 2022-06-10
+#: last_checked: 2022-06-30
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-12-31
 Stadtpark Lichtenberg: leicht schadhafter Asphalt und Gehwegplatten	Q0- 15454,12519 15433,12686 15424,12732 15395,12762
@@ -11494,8 +11496,8 @@ Nettelbeckplatz: teilweise gepflastert	Q1 7891,15417 7974,15418 8024,15401
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2018/pressemitteilung.715459.php (Umgestaltung)
 #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2019/pressemitteilung.806805.php (baulichen Umsetzung ab Anfang 2020)
 #: XXX was wird sich nach der Umgestaltung ändern? Wird sich die Qualität verbessern?
-#: last_checked: 2021-10-20
-#: check_frequency: 120d
+#: last_checked: 2022-06-26 (osm)
+#: check_frequency: 60d
 (Uferweg): welliges Verbundsteinpflaster	Q1- -4245,11400 -4204,11432 -4181,11458 -4106,11519 -4028,11533 -3928,11526 -3828,11491 -3785,11445 -3752,11373
 Havel-Ufer Hohengatow: Asphalt	Q0 -4774,6514 -4689,6661 -4684,6755 -4667,6814 -4624,6872 -4498,7095 -4481,7142 -4488,7200 -4488,7317 -4506,7375 -4508,7456 -4494,7510 -4531,7549 -4539,7643 -4534,7695 -4540,7801 -4778,7791
 Havel-Ufer Hohengatow, unterer Weg: unbefestigter Weg	Q1- -4774,6514 -4734,6531 -4678,6625 -4664,6746 -4579,6913 -4460,7071 -4438,7169 -4488,7200
@@ -12442,10 +12444,13 @@ Puschkinallee [Nebenstraße]: teilweise etwas schadhafter Asphalt	Q0- 13870,9872 
 #: by: https://www.berliner-woche.de/plaenterwald/c-verkehr/anreise-zum-spreepark-soll-mit-schiffen-und-mehr-bussen-erfolgen_a315294 (Fahrbahn soll wasserdurchlässige Deckschicht bekommen)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_50_4625_4696_online.pdf (Absichtserklärung zu einer Straßenlandeinziehung)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_02_0049_0116_online.pdf (Teileinziehung)
+#: by: https://www.berliner-woche.de/plaenterwald/c-bauen/dammweg-zum-spreepark-soll-einen-gehweg-bekommen_a350024 (Schranke für Autos? Umbaumaßnahme laut BA "nicht terminiert")
+#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/stadtentwicklungsamt/bebauungsplaene/bebauungsplan.1212256.php
+#: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/00_entwurf-b-plan-9-7.pdf (Dammweg wird zum Fußgänger/Radfahrerbereich)
 #: osm_watch: way id="24202434" version="24"
 #: XXX Wann wird der Asphalt ersetzt? Wann wird die Straße nur für Anlieger/Radfahrer frei sein?
 #: last_checked: 2022-06-25
-# REMOVED --- #: check_frequency: 180d
+#: check_frequency: 90d
 Dammweg: Asphalt	Q0 15869,8355 16388,8821
 Charlottenburger Ufer: teilweise gepflastert	Q1- 3370,12725 3291,12721
 Chlodwigstr.: Asphalt	Q0 8499,5016 8433,5108 8356,5195
@@ -12605,6 +12610,10 @@ Grüne Trift: Asphalt mit einigen Rissen und Schäden	Q0- 23349,2240 23395,2392 23
 Grüne Trift: Asphalt	Q0 23416,2808 23370,3024 23338,3173 23298,3295 23231,3480 23158,3648 23105,3770 23055,3885 23046,3905 23036,3929 22971,4077 22965,4124
 (Lindenstr. - Uferweg): Betonpflaster, etwas große Fugen	Q1 21739,5492 21655,5432
 (Uferweg): wassergebundene Decke	Q1- 21901,5117 21822,5153 21754,5221 21730,5267 21672,5407 21660,5424 21655,5432 21629,5470
+#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2022/pressemitteilung.1215606.php (Betonplatten)
+#: by: https://www.berliner-woche.de/staaken/c-bauen/barrierefrei-durch-die-gruenanlage-reckeweg_a348809
+#: confirmed_by: mapillary
+(Straße 603 - Reckeweg): Betonplatten	Q0- -6831,15260 -6891,15228
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -13232,6 +13241,9 @@ Ludwigsluster Str.: Beton mit einigen Schäden	Q1+ 22780,12567 22688,12489 22607,
 #: corrected_by: srt (Beton -> Asphalt)
 Ludwigsluster Str.: Asphalt	Q0 22607,12422 22568,12408
 #: corrected_by: srt (guter Beton -> ...)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1222045.php (Bauarbeiten zwischen Gadebuscher Str. und Lion-Feuchtwanger-Str.)
+#: add_fragezeichen: Ist die Qualität nach den Bauarbeiten besser geworden?
+#: next_check: 2022-07-08
 Ludwigsluster Str.: Beton mit einigen Schäden	Q1+ 22568,12408 22472,12343 22385,12268 22292,12198
 Ludwigsluster Str.: guter Beton	Q0- 22775,12984 22883,13013
 #: corrected_by: srt (guter Asphalt -> ...)
@@ -16991,8 +17003,8 @@ Ernst-Liesegang-Ufer: Asphalt	Q0 -6474,5144 -6366,5215
 #: corrected_by: srt (added "etwas sandig")
 #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/pressemitteilung.1121547.php (Asphaltierung geplant)
 #: XXX wird hier asphaltiert?
-#: last_checked: 2021-11-24 (kartaview)
-#: next_check: 2022-08-01
+#: last_checked: 2022-06-26 (mapillary)
+#: check_frequency: 180d
 Ernst-Liesegang-Ufer: wassergebundene Decke, etwas sandig	Q1- -6366,5215 -6280,5176 -6037,5371 -5932,5556 -5924,5602
 #: confirmed_by: srt
 Ernst-Liesegang-Ufer: wassergebundene Decke	Q1 -5924,5602 -5911,5619 -5853,5674
@@ -29319,7 +29331,7 @@ Gehrenseestr.: guter Asphalt	Q0 18487,16741 18324,16625
 #: by: https://www.berliner-woche.de/alt-hohenschoenhausen/c-verkehr/die-erschliessung-sicherstellen_a297347
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8743 (Erschließung über die Marzahner Str.?)
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9161 (frühzeitige Öffentlichkeitsbeteiligung)
-#: last_checked: 2022-03-20 vvv
+#: last_checked: 2022-06-25 (mapillary) vvv
 #: check_frequency: 360d vvv
 #: corrected_by: srt (teilweise holpriger Asphalt, Q2 -> ...)
 Detlevstr.: rauer Asphalt	Q1- 18471,16765 18487,16741 18439,16483
@@ -30897,7 +30909,8 @@ Einmündungsbereich asphaltiert	Q0 9193,12875
 Einmündungsbereich teilweise asphaltiert, teilweise Kleinsteinpflaster	Q1- 9239,12923
 Einmündungsbereich asphaltiert	Q0 14188,12664
 Kreuzungsbereich asphaltiert	Q0 13665,15840
-Kreuzungsbereich asphaltiert	Q0 13701,15744
+Kreuzungsbereich asphaltiert	Q0- 13701,15744
+Kreuzungsbereich asphaltiert	Q0- 13609,15706
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 10228,14564
 Kreuzungsbereich asphaltiert	Q0 10155,14719
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 9646,15737
