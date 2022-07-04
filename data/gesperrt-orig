@@ -330,7 +330,7 @@ Gritznerstr.	1 4511,6318 4555,6403
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_14032017.pdf
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll-2-sitzung.pdf (Ablehnung durch Polizei)
 #: osm_watch: way id="4437134" version="10"
-#: last_checked: 2022-04-26 (mapillary)
+#: last_checked: 2022-07-02
 #: check_frequency: 120d
 Duisburger Str.	1 4183,10144 3880,10154
 # 
@@ -447,7 +447,7 @@ Pfahlerstr.	1 5301,18447 5423,18438 5541,18435
 #: confirmed_by: srt
 Harnackstr.	1 15837,11529 15881,11621 15875,11692 15917,11782 15984,11827 16020,11814 16099,11786 16134,11774
 Mirbachplatz	1 13331,16424 13347,16447 13391,16436 13399,16398 13377,16378 13348,16387 13331,16424
-Treskowstr. (Mahlsdorf)	1 24563,11980 24491,11972
+Treskowstr. (Mahlsdorf)	1s:q4 24563,11980 24491,11972
 Knoten am Flughafen Tegel	1 2996,15930 2960,15847
 Knoten am Flughafen Tegel	1 2913,15944 2949,15922 2977,15923 2996,15930
 Knoten am Flughafen Tegel	1 2960,15847 2880,15884 2828,15903
@@ -934,7 +934,6 @@ Fichtenweg	1s:q3 -2961,17875 -2949,17946 -2968,18038 -3000,18196
 Johann-Landefeldt-Str.	1 -8598,7018 -8532,7041 -8466,7064 -8404,7087 -8341,7108 -8275,7131 -8207,7156
 Johann-Landefeldt-Str.	1s:q4 -8619,7012 -8598,7018
 Schüßlerplatz	1 22284,4653 22355,4660
-Karlstr. (Köpenick)	1 22556,4386 22458,4134
 Eichenstr./Lindenstr.	1 32162,2542 32316,2468 32467,2582
 Moosstr. [Wohngebiet]	1 19210,5150 19233,5076 19236,5025 19241,4958 19306,4969 19294,5033 19255,5164
 Abtstr./Platz der Befreiung	1 20066,3466 19990,3416 20038,3357
@@ -1032,8 +1031,6 @@ Kokoschkaplatz	1 24102,14928 24107,14947 24091,14964 24071,14961 24066,14945 240
 Kokoschkastr.	1 24071,14961 24063,15035
 Peter-Weiss-Gasse	1 24151,14982 24120,14949 24107,14947
 Quedlinburger Str.: nur die Durchfahrt ist verboten	1s:q2 24051,15099 24009,15094
-Henny-Porten-Str.	1 23833,15066 23772,15058
-Kurt-Weill-Platz	1 23772,15058 23778,14995
 Fritz-Lang-Platz	1 23871,14914 23882,14904 23856,14868 23820,14896 23846,14931 23871,14914
 Wuhletalstr. (Richtungsfahrbahn)	1::igndisp 20769,17650 20895,17594 21066,17503
 Wuhletalstr. (Richtungsfahrbahn)	1::igndisp 21066,17503 20891,17572 20769,17650
@@ -1276,7 +1273,7 @@ Waldstr.	1 9961,19513 10002,19418
 #: XXX wieder gesperrt, vermutlich für Aufzugarbeiten
 #: source_id: viz2021:13.440961,52.50069,06.07.2021,07:00 (bis 12.01.2022) (mittlerweile bis 30.6.2022) (bis 31.10.2022)
 #: by: https://berliner-abendblatt.de/2022/01/03/viele-u-bahnhoefe-nicht-barrierefrei/ ("in Kürze")
-#: last_checked: 2022-06-29
+#: last_checked: 2022-07-02
 #: check_frequency: 90d
 #: next_check: 2022-10-31
 (Schlesisches Tor - Oppelner Str.)	2::inwork 12978,10581 12930,10621
@@ -1584,6 +1581,7 @@ Margaretenstr.	1 25418,14835 25503,14842
 Sophienstr.	1 25503,14842 25527,14696 25555,14657
 Straße am Haussee: abgesperrt, Privatstraße	2 25846,16082 25787,16229
 #: note: möglicherweise nur im Frühling/Sommer?
+#: osm_watch: note 1414569 2
 Freilichtbühne Schwedt	2 69562,73280 69634,73330
 Bahnhofstr.	1s 26103,-11861 26205,-11862 26300,-11864
 #: note: Radweg in einer Richtung
@@ -1917,7 +1915,7 @@ Marienfelder Chaussee: Mittelstreifen	3nocross 10769,1111 10829,1135 11012,1210
 Oranienburger Str.: Mittelstreifen	3nocross 5517,20120 5527,20044 5545,19909 5533,19811
 #: by: rjoop/srt
 Bahntrasse	3nocross 15875,1796 15835,1747 15799,1690 15729,1573
-Zossener Str.: Straßenbahntrasse	3nocross 23080,15700 23218,15671 23411,15632 23568,15603 23617,15594
+Zossener Str.: Straßenbahntrasse	3nocross 23080,15700 23218,15671 23388,15637 23411,15632 23568,15603 23617,15594
 Schloßstr.: Mittelstreifen	3nocross 4741,5309 4745,5344 4767,5389 4832,5522 4861,5581
 #: note: Luftbild
 Blumberger Damm: Mittelstreifen	3nocross 21378,14490 21408,14591 21537,14932
@@ -3388,6 +3386,11 @@ weites Drängelgitter	BNP:2::trailer=7 12614,6301
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: note: "Referenzfläche", Wald wird sich selber überlassen
+#: last_checked: 2022-07-03
+#: check_frequency: 180d
+Mittelheide: umgefallene Baumstämme	2 24365,7657 24275,7550
+# 
 #: next_check_id: KWEISENBAHNBRUECKE-2022
 #: source_id: 226110967 (hier: bis 27.6.2023)
 #: osm_watch: way id="8042965" version="22"
@@ -3410,7 +3413,7 @@ Alt-Moabit - Invalidenstr.: Bauarbeiten, Gehweg gesperrt, Fahrbahn nur für Tram	
 # 
 #: XXX laut Schild der Wasserbetriebe bis April 2023; Einbahnstraßenregelung fängt schon 30m westlich der Einmündung Zum Langen See an
 #: XXX man kommt als Radfahrer aber recht gut vorbei
-#: last_checked: 2022-06-26
+#: last_checked: 2022-07-03
 #: check_frequency: 180d
 #: next_check: 2023-04-30
 #: valid: -20230531
@@ -3468,8 +3471,8 @@ Weg zur Walther-Rathenau-Str.: Bauarbeiten, Weg noch gesperrt	2::inwork 22983,-5
 #: next_check_id: SCHOENERGARTEN-2022
 #: XXX Bleibt das so? Am westlichen Ende ist ein Zaun mit Tor, am südlichen Ende ein (ab?)geschlossenes Tor
 #: osm_watch: way id="478067706" version="6"
-#: last_checked: 2022-04-29 (architektur-urbanistik)
-#: check_frequency: 60d
+#: last_checked: 2022-07-02
+#: check_frequency: 90d
 Schönegarten: an beiden Enden gesperrt	2 7416,10492 7432,10546 7330,10590
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
@@ -3504,7 +3507,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2022-06-26
+#: last_checked: 2022-07-03
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -3855,15 +3858,12 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728
 # 
 #: by: https://leute.tagesspiegel.de/tempelhof-schoeneberg/macher/2021/01/19/154834/sanierung-des-hochbahnviadukts-bauarbeiten-ab-2023-geplant/ (Sanierung 2023 - Mitte 2024)
 #: osm_watch: way id="223707973" version="10"
-#: last_checked: 2022-06-17
+#: last_checked: 2022-07-02
 #: check_frequency: 120d
 #: priority: #A
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
 # 
-#: last_checked: 2022-06-17
-#: check_frequency: 14d
-Gleisdreieckpark: Nord-Süd-Verbindung wegen S21-Vorbereitungsarbeiten gesperrt	2::inwork 8276,10079 8264,10192
-# 
+# REMOVED (war vermutlich nur kurzzeitig) --- #: last_checked: 2022-06-17 --- #: check_frequency: 14d --- Gleisdreieckpark: Nord-Süd-Verbindung wegen S21-Vorbereitungsarbeiten gesperrt	2::inwork 8276,10079 8264,10192
 # REMOVED (beendet, etwas besser) --- #: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität des Wegs danach besser sein? --- #: last_checked: 2019-12-29 --- #: check_frequency: 21d --- (Stresemannstr. - Wilhelmstr.): Bauarbeiten, komplett gesperrt	2::inwork 9215,10607 9368,10641
 # REMOVED --- #: last_checked: 2021-07-26 --- #: check_frequency: 60d --- Jüdenstr.: Überqueren der Grunerstr. wegen Bauzäunen nicht mehr möglich	2::inwork 10804,12461 10804,12461
 # 
@@ -3898,7 +3898,7 @@ Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
 #: XXX wann werden die Straßen in der Wasserstadt Spindlersfeld eröffnet? vvv
-#: last_checked: 2022-06-15 vvv
+#: last_checked: 2022-07-03 vvv
 #: check_frequency: 60d vvv
 #: osm_watch: way id="729324149" version="7"
 #: osm_watch: way id="162120178" version="11"
@@ -4552,7 +4552,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10102,12384 10175,12435
 #: osm_watch: way id="158025179" version="8"
 #: last_checked: 2022-06-03 vvv
 # REMOVED (fertig?) --- #: check_frequency: 60d vvv
-#: also_indoor: traffic
+#: also_indoor: traffic (G)
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # REMOVED (wieder offen) --- #: also_indoor: traffic (G) --- Margarete-Steffin-Str.: Einbahnstraßenregelung	1s:q4:inwork 8559,12912 8631,12848 8700,12810 8732,12804
 # REMOVED --- #: check_frequency ^^^

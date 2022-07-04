@@ -28593,7 +28593,7 @@ EOF
        source_id => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.742824.php',
        data  => <<EOF,
 #: source_id: 2147343251
-	2::inwork 23444,4942 23433,5037 23420,5159 23404,5325
+	2::inwork 23447,4906 23433,5037 23420,5159 23404,5325
 EOF
      },
      { from  => 1537934400, # 2018-09-26 06:00
@@ -30564,13 +30564,13 @@ EOF
        data  => <<EOF,
 	2::temp 23778,14995 23708,14989 23735,14814 23531,14781 23517,14873
 	2::temp 23787,14919 23798,14826 23735,14814
-	2::temp 23265,15351 23082,15329 23113,15110 23117,15081 23104,14827
+	2::temp 23265,15351 23082,15329 23109,15140 23113,15110 23117,15081 23104,14827
 	2::temp 23297,14772 23318,14847
 	2::temp 23933,15209 23952,15086 23833,15066 23841,15004 23778,14995 23772,15058
 	2::temp 23952,15086 23960,15021 23841,15004
-	2::temp 23617,15594 23568,15603 23411,15632 23218,15671 23080,15700 23060,15588 23067,15429 23082,15329
+	2::temp 23617,15594 23568,15603 23411,15632 23388,15637 23218,15671 23080,15700 23060,15588 23067,15429 23082,15329
 	2::temp 23067,15429 23245,15442
-	2::temp 23269,15062 23117,15081
+	2::temp 23265,15054 23117,15081
 	2::temp 23775,15428 23895,15450 23868,15633 23617,15594 23629,15498
 	2::temp 23297,14772 23354,14756 23405,14758 23531,14781
 EOF
@@ -31188,7 +31188,7 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="9"
 #: osm_watch: way id="934995901" version="8"
-#: last_checked: 2022-06-30 vvv
+#: last_checked: 2022-07-03 vvv
 #: check_frequency: 3d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31790,7 +31790,7 @@ EOF
 #: XXX Es gibt nun eine weitere Baustelle, Halteverbotschilder bis Ende Dezember 2022
 #: add_fragezeichen: Bis wann gilt die Sperrung für Radfahrer?
 #: osm_watch: way id="759405498" version="3"
-#: last_checked: 2022-06-04 (architektur-urbanistik)
+#: last_checked: 2022-07-02
 #: check_frequency: 120d
 #: next_check: 2022-12-28
 	q3::inwork; 5192,10241 5196,10398
@@ -34401,7 +34401,7 @@ EOF
      },
      { from  => 1640905200, # 2021-12-31 00:00
        until => 1672527600, # 2023-01-01 00:00
-       text  => 'Waitzstr.: Baustelle, gesperrt, evtl. sind auch Radfahrer betroffen, vom 01.01.2022 bis 31.12.2022 ',
+       text  => 'Waitzstr.: Baustelle, Fahrbahn gesperrt, vom 01.01.2022 bis 31.12.2022 ',
        type  => 'gesperrt',
        source_id => 'viz2021:13.306069,52.502061,01.01.2022,06:00', # mittlerweile inaktiv
        data  => <<EOF,
@@ -35043,12 +35043,14 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Zähringerstr.: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung offen Richtung Osten, Ende der Bauarbeiten unbekannt',
+       text  => 'Zähringerstr.: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung offen Richtung Osten, voraussichtlich bis November 2022',
        type  => 'handicap',
        data  => <<EOF,
+#: osm_watch: way id="874517258" version="7"
 #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
-#: last_checked: 2022-04-26 (mapillary)
-#: check_frequency: 60d
+#: last_checked: 2022-07-02
+#: check_frequency: 90d
+#: next_check: 2022-11-30
 	q4::inwork; 4277,9895 4126,9932 3927,9935
 EOF
      },
@@ -35234,12 +35236,11 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1656768758, # undef, # XXX
        text  => 'Dahlmannstr.: Einbahnstraßenregelung wegen Bauarbeiten, offen Richtung Norden, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: also_indoor: traffic (none)
-#: last_checked: 2022-05-28 (mapillary)
+# REMOVED (nicht mehr gesehen) --- #: also_indoor: traffic (none) --- #: last_checked: 2022-05-28 (mapillary)
 	q4::inwork; 3603,10765 3614,10564
 EOF
      },
@@ -35262,6 +35263,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: add_fragezeichen: Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?
+#: also_indoor: traffic (G(nördlicher?),B)
 #: last_checked: 2022-06-04
 	q4::inwork 6293,2583 6349,2510
 EOF
@@ -35426,6 +35428,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.wuhlheide.de/programm',
        data  => <<EOF,
+#: note: zwischen den Konzertterminen offen, z.B. gesehen am 2022-07-03
 	2::temp 20199,6318 20106,6357 20081,6368 19995,6406
 EOF
      },
@@ -35572,8 +35575,8 @@ EOF
        data  => <<EOF,
 #: XXX Wie groß sind die Einschränkungen für Radfahrer? vvv
 #: next_check: 2022-07-04 vvv
-	q3::inwork 13996,16959 14107,16889 14184,16889
-	q3::inwork 14014,16722 14107,16889 14235,17103
+	q4::inwork 13914,17016 13996,16959 14107,16889
+	q4::inwork 13996,16959 13974,16924
 #: next_check ^^^
 #: XXX ^^^
 EOF
