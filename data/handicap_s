@@ -10,9 +10,11 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6739,15307 6833,15215
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
-Gipsstr.: Fahrbahn an der Rosenthaler Str. gesperrt, Ausweichen auf Bürgersteig, Umwege, Bordsteine	q4::inwork 10199,13446 10350,13376
-Rosenthaler Str.: Fahrbahn gesperrt, Radweg wird auf den Bürgersteig geführt	q2::inwork; 10324,13459 10350,13376
-Rosenthaler Str.: Fahrbahn gesperrt, offizielle Umleitung über Gormannstr.	q4::inwork; 10350,13376 10324,13459
+Gipsstr.: Fahrbahn an der Rosenthaler Str. gesperrt, Ausweichen auf Bürgersteig, Bordsteine	q3::inwork 10199,13446 10350,13376
+Rosenthaler Str.: Fahrbahn wegen Gleisarbeiten gesperrt	q4::inwork 10263,13594 10302,13525 10324,13459 10350,13376
+Rosenthaler Str./Steinstr.: Kreuzungsbereich wegen Gleisarbeiten gesperrt	q4::inwork 10302,13525 10318,13528
+Rosenthaler Str./Auguststr.: Kreuzungsbereich wegen Gleisarbeiten gesperrt	q3::inwork 10220,13694 10263,13594
+Rosenthaler Str./Auguststr.: Kreuzungsbereich wegen Gleisarbeiten gesperrt	q3::inwork 10142,13556 10263,13594 10309,13601
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11197,11882 11160,12071
 Schloßplatz: Fußgänger, Bauarbeiten	q4::inwork 10102,12384 10063,12438
 (Molkenmarkt - zur Stralauer Str.): Bauarbeiten, Gehweg ist noch offen	q4::inwork 10675,12280 10736,12285 10772,12288 10804,12291 10830,12279
@@ -1300,7 +1302,7 @@ Mendelssohnstr.: Fußgänger, Bordstein	q3 11598,13598 11652,13564
 (Weg über das Sportgelände): zu manchen Zeiten reger Fußgängerverkehr	q1 13252,14179 13385,13992
 Schliemannstr. [über Helmholtzplatz]: Fußgänger, Bordsteine	q3 11368,15301 11334,15248
 (Museumsinsel): Fußgänger, besonders zu Museumsöffnungszeiten	q3 10017,12675 9972,12732 9987,12744 9952,12791
-Pasedagplatz: Straßenbahn	q2 14170,17249 14150,17255 14099,17195
+Pasedagplatz: Straßenbahn	q2 14167,17215 14151,17234 14127,17237 14099,17195
 Hochwaldstr.: eng, kurvig	q3 19577,8438 19544,8421 19526,8458
 Grimmstr. [ehemaliges Urbankrankenhaus]: Wohngebiet, Fußgängerzone	q3 11072,9711 11040,9724 11030,9702 10899,9754 10887,9729 11016,9671 11009,9655 11042,9642
 (Vorfahrt am Bahnhof Friedrichstr.): eng, Taxis, querende Fußgänger	q2 9171,12758 9303,12718
@@ -1748,7 +1750,7 @@ Maienwerderweg: einige Fußgänger, Hunde	q1 2731,18729 2723,18675 2622,18546 2440
 (südliches Spreeufer): einige Fußgänger	q1 5235,12461 5287,12465 5299,12420 5360,12331 5411,12290
 Dammbrücke: einige Fußgänger, Bordstein	q3 -3066,14718 -3042,14682
 Pulvermühlenweg: Bordstein	q2 -1848,15535 -1794,15517
-Alboinstr. - Paul-Schmidt-Str.: Fußgänger, Bordstein	q2 8242,5427 8200,5510
+Alboinstr. - Paul-Schmidt-Str.: Fußgänger, Bordstein	q3 8242,5427 8200,5510
 (an der alten Bolle-Meierei): Bodenschwelle	q1 6443,12952 6500,13164
 (Fußweg zur Gehrenseestr.): einige Fußgänger	q1 17610,16307 17640,16259
 (Wartenberger Str. - Harry-Glaß-Str.): einige Fußgänger, Bordstein an der Wartenberger Str.	q2 17504,16489 17544,16463

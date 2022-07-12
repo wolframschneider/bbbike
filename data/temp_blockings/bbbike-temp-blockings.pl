@@ -1671,7 +1671,7 @@ EOF
        text  => 'Ringstr. (Steglitz) Richtung Finkensteinallee zwischen Drakestr. und Finckensteinallee Baustelle, Fahrtrichtung gesperrt (bis 12.2005)',
        type  => 'handicap',
        data  => <<EOF,
-	q4; 3507,3654 3375,3559 3228,3455 3184,3427 3059,3339 3050,3333 3032,3319 3011,3303 2781,3122 2698,3068 2655,3025 2632,2969 2625,2850
+	q4; 3507,3654 3375,3559 3228,3455 3184,3427 3059,3339 3050,3333 3032,3319 3011,3303 2778,3132 2698,3068 2655,3025 2632,2969 2625,2850
 EOF
      },
      { from  => 1110917391, # 2005-03-15 21:09
@@ -3826,7 +3826,7 @@ EOF
        text  => 'Peschkestraße zwischen Rheinstraße und Holsteinische Straße wegen Tiefbauarbeiten bis voraussichtlich 10.03.06 gesperrt. ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 5533,6517 5424,6584
+	2 5535,6521 5424,6584
 EOF
      },
      { from  => 1140908400, # 2006-02-26 00:00
@@ -21739,6 +21739,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berlin.de/events/5979419-2229501-tegeler-hafenfest.html (2021)
 #: by: https://www.berlin.de/events/5979419-2229501-tegeler-hafenfest.html?date=20220613
+#: by: https://berliner-abendblatt.de/2022/07/11/tegeler-hafenfest-startet-am-donnerstag/
 # REMOVED (was) : tempex: 20160714-20160717
 	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
 EOF
@@ -30593,9 +30594,11 @@ EOF
 #: osm_watch: way id="194962398" version="14"
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
+#: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: last_checked: 2022-06-27 (mapillary)
-#: check_frequency: 14d
+#: check_frequency: 21d
+#: next_check_id: 2022-08-31
 	q4::inwork; 11329,12497 11209,12430
 EOF
      },
@@ -30969,7 +30972,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-07-07
+#: last_checked: 2022-07-11
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31188,7 +31191,7 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="9"
 #: osm_watch: way id="934995901" version="8"
-#: last_checked: 2022-07-08 vvv
+#: last_checked: 2022-07-10 vvv
 #: check_frequency: 3d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -31383,6 +31386,7 @@ EOF
        text  => 'Schönstr.: Bauarbeiten zwischen Große Seestr. und Rennbahnstr., Fahrbahn kann gesperrt sein',
        type  => 'handicap',
        data  => <<EOF,
+#: next_check_id: SCHOEN-2022
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.885612.php (hier (5. Bauabschnitt) ab Februar 2020)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/firma-hat-keine-freien-kapazitaeten-fuer-den-leitungsbau_a251101
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php (Fertigstellung voraussichtlich 11/2020)
@@ -31390,8 +31394,9 @@ EOF
 #: also_indoor: traffic (H,B)
 #: XXX Stand 2021-07-31 und 2022-01-18: letzte Deckschicht fehlt, Gehwege müssen noch gemacht werden; März 2023: letzte Deckschicht ist drauf
 # REMOVED (eingetragen) --- #: XXX nach den Bauarbeiten wird die Qualität vermutlich besser sein: Q0- -> Q0
-#: last_checked: 2022-06-10
-#: check_frequency: 30d
+#: last_checked: 2022-07-09
+#: check_frequency: 90d
+#: next_check: 2022-11-07
 	q3::inwork 14136,17170 13996,16959
 EOF
      },
@@ -34488,30 +34493,37 @@ EOF
 EOF
      },
      { from  => 1614492000, # 2021-02-28 07:00
-       until => $isodate2epoch->("2022-08-31 07:00:00"), # 1672502400, # 2022-12-31 17:00
-       text  => 'Ringstr.: Bauarbeiten, kurze Abschnitte der Fahrbahn gesperrt, Gehwege sind noch frei, vom 01.03.2021 07:00 bis 31.08.2022 17:00 ',
+       until => $isodate2epoch->("2022-12-31 07:00:00"), # 1672502400, # 2022-12-31 17:00
+       text  => 'Ringstr.: Bauarbeiten, kurze Abschnitte der Fahrbahn gesperrt, Gehwege sind noch frei, voraussichtlich bis Dezember 2022',
        type  => 'handicap',
        source_id => 'viz2021:13.287063,52.432721,01.03.2021,07:00', # mittlerweile nur bis 31.1.2022, aber siehe unten (inaktiv)
        data  => <<EOF,
+#: XXX laut Schild der Wasserbetriebe bis Dezember 2022
 #: source_id: viz2021:13.287063,52.432721,31.01.2022,07:00 (bis 31.8.2022, kein Zeitraum für die Gesamtbaumaßnahme mehr) vvv
 #: by: https://viz.berlin.de/2022/01/verkehrsvorschau-31012022/ (Gesamtbaumaßnahme bis Ende 2022, Sperrung an der Drakestr. möglicherweise nur bis Ende März 2022, hier nur für den Kfz-Verkehr?)
 # REMOVED --- #: XXX Sind Radfahrer tatsächlich betroffen? Haben die Bauarbeiten auch was mit den Sperrungen in der Kommandantenstr./Baseler Str. zu tun? vvv
 #: also_indoor: traffic (G,H,B) vvv
-#: last_checked: 2022-02-05 vvv
+#: last_checked: 2022-07-10 vvv
 #: check_frequency: 150d vvv
-	q2::inwork 3011,3303 2781,3122 2698,3068 2655,3025 2632,2969 2625,2850
-# REMOVED (hier vermutlich nicht mehr, by mapillary) --- #: note: Länge der Sperrung nur 30m ---	q3::inwork 3507,3654 3375,3559
-	q4::inwork 2655,3025 2594,3009
-	q4::inwork 2632,2969 2594,3009
-#: XXX werden die Bauarbeiten hier noch verlängert? vvv
-#: note: bei rbb bis 31.10.2022
 #: next_check: 2022-08-31 vvv
-Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3059,3339 3184,3427 3228,3455
-Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3185,3476 3184,3427 3174,3052
-#: next_check ^^^
-#: XXX ^^^
+	q3::inwork 3011,3303 2778,3132
+# REMOVED (hier nicht mehr) ---	q2::inwork 2778,3132 2698,3068 2655,3025 2632,2969 2625,2850
+# REMOVED (hier vermutlich nicht mehr, by mapillary) --- #: note: Länge der Sperrung nur 30m ---	q3::inwork 3507,3654 3375,3559
+# REMOVED (hier nicht mehr) ---	q4::inwork 2655,3025 2594,3009
+# REMOVED (hier nicht mehr) ---	q4::inwork 2632,2969 2594,3009
 # REMOVED ---	q4::inwork; 3507,3654 3375,3559 3228,3455 3184,3427
+#: next_check ^^^
 #: check_frequency ^^^
+#: last_checked ^^^
+# 
+#: note: bei rbb bis 31.10.2022
+#: last_checked: 2022-07-10 vvv
+#: next_check: 2022-10-31 vvv
+Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3059,3339 3184,3427
+Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q4::inwork 3184,3427 3228,3455
+Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q4::inwork 3185,3476 3184,3427
+Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3184,3427 3174,3052
+#: next_check ^^^
 #: last_checked ^^^
 #: also_indoor ^^^
 # REMOVED --- #: XXX ^^^
@@ -34761,8 +34773,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
-       text  => 'Markelstr.: Bauarbeiten, Fahrbahn abschnittsweise gesperrt, Ende der Bauarbeiten unbekannt',
+       until => $isodate2epoch->("2023-05-31 18:00:00"), # undef, # XXX
+       text  => 'Markelstr.: Bauarbeiten, Fahrbahn abschnittsweise gesperrt, möglicherweise bis Mai 2023',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: MASSMANN-2022
@@ -34770,10 +34782,9 @@ EOF
 #: osm_watch: note 3030340 3
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (ex-G,B)
-#: last_checked: 2022-06-23 (traffic, osm note)
-# REMOVED --- #: check_frequency: 30d
-#: check_frequency: 14d
-# REMOVED --- #: next_check: 2022-05-24
+#: last_checked: 2022-07-10
+#: check_frequency: 90d
+#: next_check: 2023-05-31
 	q3::inwork 5020,6434 5269,6305
 EOF
      },
@@ -35202,7 +35213,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (B)
-#: last_checked: 2022-05-15
+#: last_checked: 2022-07-10
 #: check_frequency: 90d
 #: next_check: 2022-08-31
 	q4::inwork 4512,5199 4477,5250 4430,5324
@@ -35257,13 +35268,15 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Seydlitzstr.: Bauarbeiten zwischen Frobenstr. und Havensteinstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
+       text  => 'Seydlitzstr.: Bauarbeiten zwischen Frobenstr. und Derfflingerstr., Fahrbahn gesperrt, möglicherweise bis Ende August 2022',
        type  => 'handicap',
        data  => <<EOF,
+#: XXX Halteverbot gilt bis 2022-08-26
 #: add_fragezeichen: Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?
 #: also_indoor: traffic (G(nördlicher?),B)
-#: last_checked: 2022-06-04
-	q4::inwork 6293,2583 6349,2510
+#: last_checked: 2022-07-10
+#: next_check: 2022-08-26
+	q4::inwork 6273,2609 6293,2583 6349,2510
 EOF
      },
      { from  => 1654678800, # 2022-06-08 11:00
@@ -35408,14 +35421,14 @@ EOF
      },
      { from  => undef, # 
        until => 1704042000, # 2023-12-31 18:00
-       text  => 'Fischerinsel: Wege können wegen Bauarbeiten gesperrt sein',
+       text  => 'Fischerinsel: Wege können wegen Bauarbeiten gesperrt sein (Stand Mitte Juli 2022: keine Einschränkung beim Weg Richtung Inselbrücke)',
        type  => 'gesperrt',
        source_id => 'https://berliner-abendblatt.de/2022/06/01/arbeiten-an-der-fischerinsel-werden-fortgesetzt/',
        data  => <<EOF,
 #: by: https://berliner-abendblatt.de/2022/06/01/arbeiten-an-der-fischerinsel-werden-fortgesetzt/ (Bauarbeiten bis Ende 2023)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/fischerinsel-park-wird-umgestaltet_a347705
-#: last_checked: 2022-06-17 (mapillary)
-#: check_frequency: 30d
+#: last_checked: 2022-07-11
+#: check_frequency: 60d
 #: next_check: 2023-12-31
 	2::inwork 10824,11992 10742,12033 10713,12014
 EOF
@@ -35567,18 +35580,23 @@ EOF
      },
      { from  => 1656799200, # 2022-07-03 00:00
        until => 1667861999, # 2022-11-07 23:59
-       text  => 'Schönstr./Große Seestr.: Sperrung des Kreuzungsbereichs, vom 04. Juli 2022 bis voraussichtlich 07. November 2022',
+       text  => 'Schönstr./Große Seestr.: Sperrung des Kreuzungsbereichs, Ausweichen auf den Bürgersteig, Bordsteine, vom 04. Juli 2022 bis voraussichtlich 07. November 2022',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2022/pressemitteilung.1221094.php',
        data  => <<EOF,
+#: next_check_id: SCHOEN-2022
 #: also_indoor: traffic (none)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-im-kreuzungsbereich_a351236
-#: XXX Wie groß sind die Einschränkungen für Radfahrer? vvv
-#: next_check: 2022-07-04 vvv
-	q4::inwork 13914,17016 13996,16959 14107,16889
+# REMOVED --- #: XXX Wie groß sind die Einschränkungen für Radfahrer? vvv
+#: last_checked: 2022-07-09 vvv
+#: check_frequency: 90d vvv
+#: next_check: 2022-11-07 vvv
+	q3::inwork 13914,17016 13996,16959 14107,16889
 	q4::inwork 13996,16959 13974,16924
 #: next_check ^^^
-#: XXX ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+# REMOVED --- #: XXX ^^^
 EOF
      },
      { from  => 1656799200, # 2022-07-03 00:00
@@ -35590,13 +35608,25 @@ EOF
 	q4::inwork 22472,12343 22568,12408
 EOF
      },
-     { from  => 1656993600, # 2022-07-05 06:00
-       until => 1657308352, # 1659106800, # 2022-07-29 17:00
-       text  => 'Plauener Stra.: Bauarbeiten in Höhe Treffurter Str., Sperrung der Fahrbahn, vom 06.07.2022 06:00 bis 29.07.2022 17:00 ',
+     { from  => $isodate2epoch->("2022-07-10 06:00:00"), # 1656993600, # 2022-07-05 06:00
+       until => 1659106800, # 2022-07-29 17:00
+       text  => 'Plauener Stra.: Bauarbeiten in Höhe Treffurter Str., Sperrung der Fahrbahn, vom 11.07.2022 06:00 bis 29.07.2022 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.515318,52.539821,06.07.2022,06:00', # am 8.7.2022 bereits wieder inaktiv
        data  => <<EOF,
+#: by: https://nitter.it/pic/orig/enc/bWVkaWEvRlhKb0R3S1hFQUl5Ti1fLmpwZw==
+#: source_id: viz2021:13.515318,52.539821,11.07.2022,06:00 (neuer Versuch)
+#: note: laut rbb_verkehr sollen Radfahrer explizit absteigen und schieben
 	q4::inwork 17959,15084 17902,15039
+EOF
+     },
+     { from  => 1658034000, # 2022-07-17 07:00
+       until => 1662127200, # 2022-09-02 16:00
+       text  => 'Oderberg - Liepe: Bauarbeiten, Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, 18.07.2022 07:00 Uhr bis 02.09.2022 16:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'LS/221-E/22/094',
+       data  => <<EOF,
+	2::inwork 49875,51562 49211,51421
 EOF
      },
     );

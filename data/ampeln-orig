@@ -101,18 +101,11 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 #: last_checked ^^^
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2022-06-12
+#: last_checked: 2022-07-11
 #: next_check: 2024-06-01
 Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # 
-# REMOVED --- #: next_check_id: BERLINERALLEE-2021
-#: next_check_id: BERLINERALLEE-2022
-#: XXX evtl. bis zum Ende der jetzigen Bauphase, oder bis zum Ende der Gesamtbaumaßname?
-#: last_checked: 2022-06-10
-#: next_check: 2022-07-25
-#: valid: -20220725
-Indira-Gandhi-Str./Bizetstr.	X::inwork 14552,16171
-# 
+# REMOVED --- #: next_check_id: BERLINERALLEE-2021 --- #: next_check_id: BERLINERALLEE-2022 --- #: XXX evtl. bis zum Ende der jetzigen Bauphase, oder bis zum Ende der Gesamtbaumaßname? --- #: last_checked: 2022-06-10 --- #: next_check: 2022-07-25 --- #: valid: -20220725 --- Indira-Gandhi-Str./Bizetstr.	X::inwork 14552,16171
 # REMOVED --- #: next_check_id: GAERTNER-2021 --- #: last_checked: 2021-09-02 --- # REMOVED (nicht mehr) --- Grünberger Str.: Gegenverkehrsregelung	X::inwork 14272,11775 --- Grünberger Str.	F::inwork 14272,11775
 # REMOVED --- #: XXX Hauffstraße (Rummelsburg) in beiden Richtungen zwischen Wiesenweg und Schreiberhauer Straße: Arbeiten an Gasleitung, für beide Richtungen nur ein gemeinsamer Fahrstreifen abwechselnd frei, eine Baustellenampel regelt den Verkehr, vom 06.07.2021 08:00 bis 23.07.2021 17:00 --- #: note: Ampeln in der Hauffstr. sowie in der Schulze-Boysen-Str. an der Buchberger Str.; außerdem ist die Anbindung Pfarrstr. offiziell gesperrt --- #: source_id: viz2021:13.478302,52.506695,06.07.2021,08:00 (mittlerweile bis 3.9.2021) vvv --- #: last_checked: 2021-08-09 vvv --- #: valid: -20210903 vvv --- Hauffstr.: Gegenverkehrsregelung	X::inwork 15458,11306 --- Schulze-Boysen-Str.: Gegenverkehrsregelung	X::inwork 15477,11338 --- #: valid ^^^ --- #: last_checked ^^^ --- #: source_id ^^^
 # 
@@ -223,7 +216,7 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linke
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fußgängerampel nordöstlich der Einmündung; Anforderungsampel
-#: last_checked: 2022-07-08
+#: last_checked: 2022-07-11
 #: check_frequency: 90d
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 # 
@@ -2985,7 +2978,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX_prog gilt auch für das Linksabbiegen in die Wadzeckstr.
 #: note: Anforderungsampel
 	F 11070,13357
-#: note: Anforderungsampel
+#: note: Anforderungsampel, auf der Mittelinsel "gegenläufig" geschaltet
 	F 13560,15318
 	X 9544,17629
 	F 6347,17381
@@ -3135,7 +3128,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) ---
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2022-07-03 (mapillary)
+#: last_checked: 2022-07-10 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2022-07-31
 	X::inwork 8732,14098
@@ -3457,7 +3450,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 5364,7330
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2022-07-05
+#: last_checked: 2022-07-10 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2022-07-31
 	X::inwork 8336,14586
@@ -3468,13 +3461,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
 #: note: Anforderungsampel
-#: last_checked: 2022-07-05
+#: last_checked: 2022-07-10 (mapillary)
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
 # REMOVED (gibt's nicht mehr) --- #: next_check_id: CORONA-2020 --- #: by: https://www.rbb24.de/panorama/thema/corona/beitraege/2021/08/berlin-impfzentrum-erika-hess-eisstadion-arena-schliessen.html --- #: XXX vermutlich temporär für das Impfzentrum --- #: by: mapillary --- 
 #: XXX wann wird diese Ampel abgebaut?
-#: last_checked: 2022-07-05
+#: last_checked: 2022-07-10 (mapillary)
 #: check_frequency: 90d
 	F::inwork 8138,14786
 # 

@@ -312,7 +312,7 @@ Travestr.	1 14836,11842 14901,11808 14986,11760
 Müggelstr.	1 14901,11808 14965,11924
 # REMOVED (stimmt nicht (mehr?)) --- Schmollerplatz/str.	1 13231,9422 13178,9363 13206,9335
 Isarstr.	1s:q4 12349,8464 12368,8356
-Ohmstr.	1 11324,11689 11378,11856
+Ohmstr.	1 11324,11689 11380,11863
 Anton-Saefkow-Str.	1s:q4 13183,14400 13088,14469 13013,14523 12901,14594 12862,14618 12789,14670 12700,14726 12575,14812 12528,14845
 Spilstr.	1 3865,6758 3826,6656 3836,6550
 Strausberger Str.	1 12416,13045 12368,13031 12247,12848
@@ -1137,7 +1137,7 @@ Alfred-Kowalke-Str.	1 18229,11256 18202,11253 18061,11240 18027,11244
 Wittenbergplatz	1 6171,10657 6228,10646 6292,10627 6353,10583
 Wittenbergplatz	1 6353,10583 6268,10588 6216,10614 6171,10657
 Amalienstr.	1s:q3 13794,16773 13722,16843 13653,16907 13581,16968
-Pasedagplatz	1 14099,17195 14150,17255 14170,17249
+Pasedagplatz	1 14099,17195 14127,17237 14151,17234 14167,17215
 (Vorfahrt am Bahnhof Friedrichstr.)	1 9303,12718 9171,12758
 Aristotelessteig	1s:q3 18435,9639 18496,9628 18527,9623 18660,9599
 #: by: Stefan Klinkusch vvv
@@ -1273,7 +1273,7 @@ Waldstr.	1 9961,19513 10002,19418
 #: XXX wieder gesperrt, vermutlich für Aufzugarbeiten
 #: source_id: viz2021:13.440961,52.50069,06.07.2021,07:00 (bis 12.01.2022) (mittlerweile bis 30.6.2022) (bis 31.10.2022)
 #: by: https://berliner-abendblatt.de/2022/01/03/viele-u-bahnhoefe-nicht-barrierefrei/ ("in Kürze")
-#: last_checked: 2022-07-05
+#: last_checked: 2022-07-10
 #: check_frequency: 90d
 #: next_check: 2022-10-31
 (Schlesisches Tor - Oppelner Str.)	2::inwork 12978,10581 12930,10621
@@ -3401,8 +3401,8 @@ Storkower Straße (Königs Wusterhausen): Neubau der Eisenbahnbrücke, Sperrung	2::
 # 
 #: by: https://www.deutsches-architekturforum.de/thread/10487-projektthread-treptow-k%C3%B6penick/?postID=715173#post715173
 #: XXX culdesac-Eintrag für die Spreestr. anpassen!
-#: last_checked: 2022-05-11
-#: check_frequency: 60d
+#: last_checked: 2022-07-03
+#: check_frequency: 45d
 (Uferweg): Bauarbeiten, noch gesperrt	2::inwork 21901,5117 21822,5153
 # 
 #: next_check_id: TRAMTURM-2021
@@ -3522,7 +3522,7 @@ Tegeler Brücke: wird neu gebaut	2::inwork -261,15858 -252,15903 -242,15982 -236,
 # REMOVED --- #: next_check_id: OSTBAHNHOF-2021 --- #: last_checked: 2021-11-03 --- #: check_frequency: 14d --- Erich-Steinfurth-Str., Hermann-Stöhr-Platz: wegen Kranarbeiten gesperrt	2::inwork 12413,11901 12453,11790 12378,11806
 # 
 #: next_check_id: OSTBAHNHOF-2021
-#: last_checked: 2022-06-03
+#: last_checked: 2022-07-11
 #: check_frequency: 120d
 #: next_check: 2025-01-01
 Erich-Steinfurth-Str.: Bauarbeiten, gesperrt	2::inwork 12608,11692 12645,11673
@@ -3880,7 +3880,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="729492933" version="3"
 # REMOVED (wurde entfernt) --- #: osm_watch: way id="882672445" version="2"
-#: last_checked: 2022-07-07 (webcam)
+#: last_checked: 2022-07-11
 #: check_frequency: 60d
 #: next_check: 2022-11-30
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
@@ -3942,7 +3942,7 @@ Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 #: by: https://www.berliner-woche.de/mitte/c-bauen/architekten-koennen-bis-november-ihre-entwuerfe-einreichen_a324605
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/molkenmarkt-klosterviertel-bebauungsplan-1-14.52/page-5#post-17149
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2022-06-17
+#: last_checked: 2022-07-11
 #: check_frequency: 90d
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
@@ -3969,7 +3969,7 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 #: note: laut rbb komplett gesperrt, bis 30.6.2023, in der Realität weiterhin Einbahnstraße
 #: osm_watch: way id="5096644" version="18"
 #: priority: #C
-#: last_checked: 2022-07-05
+#: last_checked: 2022-07-09
 #: check_frequency: 90d
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,11236 13537,11186 13540,11148
 # 
@@ -3994,7 +3994,7 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174
 #: osm_watch: way id="696227207" version="3"
 #: source_id: viz2021:13.3621,52.447308,22.12.2020,10:00 (angrenzende Attilastr., bis 31.7.2022, Gesamtbaumaßnahme bis 2024)
 #: add_fragezeichen: Bis wann genau geht die Sperrung?
-#: last_checked: 2022-05-15
+#: last_checked: 2022-07-10
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7727,4418 7692,4464 7667,4549
@@ -4458,11 +4458,12 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 # REMOVED (existiert hier wohl nicht mehr) --- #: last_checked: 2014-03-01 --- #: check_frequency: 100d --- Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?) gesperrt	2:inwork -11407,-1086 -11460,-1098 -11538,-1138 -11615,-1094
 # REMOVED (offen, verschiedene Quellen) --- #: next_check_id: NORDUFER-2014 --- #: by: Torben Müllers --- #: confirmed_by: srt --- #: by: http://weddingweiser.wordpress.com/2012/10/16/die-s-21-wird-gebaut-weddinger-strasen-werden-neu-gefuhrt/ (Projektplan) --- #: XXX geplante Fertigstellung (als Autostraße) im Dezember 2013 --- #: by: http://www.berliner-woche.de/wedding/verkehr/senat-lehnt-fussgaengerueberweg-ab-radweg-soll-unter-der-fennbruecke-gebaut-werden-d131062.html (ggfs. auch Unterführung unter der Fennbrücke) --- #: by: http://www.baustellen-doku.info/berlin_neubau_s-bahn_s21/20190313/ --- #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=634400&postcount=2205 --- #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9615 --- #: by: https://www.bvg.de/images/content/unternehmen/medien/plus/2019/BVG_PLUS_1119_web_Doppelseiten.pdf (PDF-Seite 23) --- #: osm_watch: way id="183406331" version="3" --- #: osm_watch: way id="220646748" version="5" --- #: priority: #A --- #: last_checked: 2019-11-21 --- #: next_check: 2019-12-02 --- Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738 7139,14785
 # 
+#: next_check_id: S21-2018
 #: by: http://www.berliner-zeitung.de/verkehr/s-bahn-linie-21--baustelle-am-hauptbahnhof--ab-durch-die-mitte,10809298,20580624.html (ab 2012-10-15 für 30 Monate, also mindestens bis ca. 2015-04)
 #: source_id: 2147340791
-#: osm_watch: way id="186329816" version="21"
+#: osm_watch: way id="186329816" version="22"
 #: also_indoor: traffic
-#: last_checked: 2022-05-08
+#: last_checked: 2022-07-09 (osm)
 #: next_check: 2022-12-30
 #: valid: -20221230
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, voraussichtlich bis Ende 2022	2:inwork 8106,13130 8102,13304 8098,13419

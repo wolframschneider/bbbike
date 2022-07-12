@@ -1656,7 +1656,7 @@ Cremzow - Carmzow: nicht ausgeschildert	CP2; 51293,106693 51301,106780
 Kirchstr. (Gramzow): nicht ausgeschildert	CS 49655,90469 49651,90395 49640,90243
 # 
 #: next_check_id: INDENALBOINGARTEN-2022
-#: last_checked: 2022-05-01
+#: last_checked: 2022-07-10
 #: check_frequency: 60d
 In den Alboingärten: nicht ausgeschildert	CS 7971,6087 7910,6090 7739,6099 7646,6031 7638,5967
 # 
@@ -1685,6 +1685,8 @@ Volkerweg: nicht ausgeschildert	CS 16005,4012 16046,4073 16060,4093 16145,4217 1
 Eiselenweg - Uferweg: Einfahrt zum Uferweg ist etwas versteckt, vor dem Neubaugebiet links abbiegen	CP; 21364,5430 21442,5414 21476,5434
 # 
 Büxensteinallee: diagonal über die Straßenbahngleise, erst dahinter ist ausgeschildert	CP2; 22162,1067 22228,1071
+# 
+Am Weingarten: an der Einmündung Sigridstr. den linken Strang benutzen	CP2; 13867,14507 13765,14665
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)
