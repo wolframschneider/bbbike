@@ -2,6 +2,7 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+B179/Fichtestr.	X::inwork 26138,-12596
 Kronprinzessinnenweg: Gegenverkehrsregelung	X::inwork -4368,1731
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245
@@ -2522,6 +2523,8 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -13181,2285
 	X -13142,1989
 	F -14457,-1797
+	X 24408,-12045
+	X 24383,-12050
 	F -3495,23770
 	F -3666,22384
 	F -3136,25693
@@ -2546,6 +2549,7 @@ Umgehung mit Treppen existiert	Zbr 47077,-15816
 	X 24278,-9878
 	X 24343,-10276
 	X 24353,-10504
+	X 24361,-11236
 	X 17344,-1351
 	X 26623,-17859
 	F 26999,-17905

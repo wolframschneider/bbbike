@@ -7,9 +7,16 @@
 # 
 #: temporary vvv
 # 
-#: source_id: viz2021:13.181825,52.422784,09.02.2022,11:00 (bis 12.7.2022)
-#: next_check: 2022-07-12
-#: valid: -20220712
+#: next_check_id: KWEISENBAHNBRUECKE-2022
+#: last_checked: 2022-07-12
+#: next_check: 2023-06-27
+#: valid: -20230627
+B179/Fichtestr.	X::inwork 26138,-12596
+# 
+#: source_id: viz2021:13.181825,52.422784,09.02.2022,11:00 (bis 12.7.2022) (nicht verlängert)
+#: note: bei rbbtext bis 26.7.2022 verlängert
+#: next_check: 2022-07-26
+#: valid: -20220726
 Kronprinzessinnenweg: Gegenverkehrsregelung	X::inwork -4368,1731
 # 
 #: next_check_id: HAEMMERLING-2022
@@ -83,7 +90,7 @@ Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2022-07-03
+#: last_checked: 2022-07-12
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -151,7 +158,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 #: next_check: 2022-09-30 vvv
 #: check_frequency: 90d vvv
 #: valid: -20220930 vvv
-#: last_checked: 2022-06-30
+#: last_checked: 2022-07-15
 #: osm_watch: node id="6380038401" version="1"
 	X::inwork 9195,11972
 #: note: Ampel befindet sich westlich der Kreuzung
@@ -163,7 +170,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2022-07-05
+#: last_checked: 2022-07-15
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -216,7 +223,7 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linke
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fußgängerampel nordöstlich der Einmündung; Anforderungsampel
-#: last_checked: 2022-07-11
+#: last_checked: 2022-07-15
 #: check_frequency: 90d
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 # 
@@ -3128,7 +3135,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) ---
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2022-07-10 (mapillary)
+#: last_checked: 2022-07-14
 #: check_frequency: 90d
 #: next_check: 2022-07-31
 	X::inwork 8732,14098
@@ -3450,7 +3457,8 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 5364,7330
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2022-07-10 (mapillary)
+#: osm_watch: node id="26748289" version="9"
+#: last_checked: 2022-07-14
 #: check_frequency: 90d
 #: next_check: 2022-07-31
 	X::inwork 8336,14586
@@ -3460,14 +3468,16 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/433_2018_zu_ds_0680_v_ampelstandort_chaussee_boyenstr_bav.pdf
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
 #: XXX erst einmal provisorisch
+#: osm_watch: node id="7041133991" version="1"
 #: note: Anforderungsampel
-#: last_checked: 2022-07-10 (mapillary)
+#: last_checked: 2022-07-14
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
 # REMOVED (gibt's nicht mehr) --- #: next_check_id: CORONA-2020 --- #: by: https://www.rbb24.de/panorama/thema/corona/beitraege/2021/08/berlin-impfzentrum-erika-hess-eisstadion-arena-schliessen.html --- #: XXX vermutlich temporär für das Impfzentrum --- #: by: mapillary --- 
-#: XXX wann wird diese Ampel abgebaut?
-#: last_checked: 2022-07-10 (mapillary)
+#: XXX steht vermutlich im Zusammenhang mit den Bauarbeiten an der Schule (Gehweg gesperrt)
+#: osm_watch: node id="9454113715" version="1"
+#: last_checked: 2022-07-14
 #: check_frequency: 90d
 	F::inwork 8138,14786
 # 
@@ -3563,13 +3573,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296478" version="1"
 #: note: Anforderungsampel
-#: last_checked: 2022-06-25
+#: last_checked: 2022-07-12
 #: check_frequency: 90d
 	F::inwork 17695,5394
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296482" version="3"
 #: note: Anforderungsampel
-#: last_checked: 2022-06-25
+#: last_checked: 2022-07-12
 #: check_frequency: 90d
 	F::inwork 17747,5452
 # 
@@ -3748,6 +3758,11 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 ################################################################################
 #: note: Ampeln elsewhere vvv
+#: XXX_prog gemeinsame Ampelanlage vvv
+#: note: Anforderungsampel
+	X 24408,-12045
+	X 24383,-12050
+#: XXX_prog ^^^
 	F -3495,23770
 	F -3666,22384
 #: off: 2022-06-12 (Sun) gegen 10 Uhr
@@ -3778,6 +3793,8 @@ Umgehung mit Treppen existiert	Zbr 47077,-15816
 #: note: für den Radweg nicht relevant
 	X 24343,-10276
 	X 24353,-10504
+#: note: Anforderungsampel
+	X 24361,-11236
 	X 17344,-1351
 	X 26623,-17859
 	F 26999,-17905
