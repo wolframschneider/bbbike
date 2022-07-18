@@ -29321,7 +29321,7 @@ EOF
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2022-06-29 (osm)
+#: last_checked: 2022-07-16
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -30600,7 +30600,7 @@ EOF
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-07-15
+#: last_checked: 2022-07-17
 #: check_frequency: 21d
 #: next_check_id: 2022-08-31
 	q4::inwork; 11329,12497 11209,12430
@@ -31195,8 +31195,8 @@ EOF
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="9"
 #: osm_watch: way id="934995901" version="8"
-#: last_checked: 2022-07-14 vvv
-#: check_frequency: 4d vvv
+#: last_checked: 2022-07-17 vvv
+#: check_frequency: 3d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
@@ -32368,7 +32368,7 @@ EOF
 #: next_check_id: ABBESTR-2021
 #: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kleinere-projekte/?postID=697425#post697425 (sieht weitgehend fertig aus)
 #: note: reopened, es gibt wieder Bauzäune; Juni 2022: mittlerweile gibt es zumindest auf der Nordseite eine Radweg-Beschilderung, deshalb q3 -> q2
-#: osm_watch: way id="152832871" version="16"
+#: osm_watch: way id="152832871" version="17"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: last_checked: 2022-06-11
 #: check_frequency: 60d
@@ -34582,14 +34582,14 @@ EOF
      },
      { from  => 1643583600, # 2022-01-31 00:00
        until => undef, # XXX
-       text  => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Anfang April 2022: Weg ist zumindest in Höhe Lessingbrücke nicht passierbar; Stand Juni 2022: nicht passierbare Stelle in Höhe Flotowstr.)',
+       text  => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Anfang April 2022: Weg ist zumindest in Höhe Lessingbrücke nicht passierbar; Stand Juli 2022: nicht passierbare Stelle in Höhe Flotowstr.)',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
        data  => <<EOF,
 #: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)?
 #: add_fragezeichen: Wo genau ist der Uferweg wegen Bauarbeiten gesperrt?
-#: last_checked: 2022-07-12 (mapillary)
+#: last_checked: 2022-07-17
 #: check_frequency: 60d
 #: next_check: 2024-02-12
 #: osm_watch: way id="4410535" version="23"
@@ -35495,14 +35495,15 @@ EOF
      },
      { from  => 1656194400, # 2022-06-26 00:00
        until => 1735599599, # 2024-12-30 23:59
-       text  => 'Storkower Straße (Königs Wusterhausen): Neubau der Eisenbahnbrücke, voraussichtlich Sperrung vom 27. Juni 2022 bis 30. Dezember 2024',
+       text  => 'Storkower Straße (Königs Wusterhausen): Neubau der Eisenbahnbrücke, Sperrung vom 27. Juni 2022 bis voraussichtlich 30. Dezember 2024, außerdem Einbahnstraßenregelung in der Maxim-Gorki-Str.',
        type  => 'gesperrt',
        source_id => 'https://sbahn.berlin/fileadmin/user_upload/Punkt3/PDF-Archiv/2022/punkt3-Ausgabe12_23.06.2022.pdf',
        data  => <<EOF,
 #: next_check_id: KWEISENBAHNBRUECKE-2022
 #: by: https://www.koenigs-wusterhausen.de/1013639/Eisenbahnunterfuehrung
 #: note: zusätzlich existiert ein (zeitlich kürzerer) gesperrt-orig-Eintrag
-	2::inwork 26327,-11708 26395,-11699
+Storkower Straße (Königs Wusterhausen): Neubau der Eisenbahnbrücke, Sperrung	2::inwork 26327,-11708 26395,-11699
+Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s:q4 26300,-11727 26301,-11824 26300,-11864
 EOF
      },
      { from  => 1656194400, # 2022-06-26 00:00
@@ -35642,6 +35643,18 @@ EOF
        source_id => 'LS/73-H/22/007',
        data  => <<EOF,
 	2::inwork 22726,18834 22709,19109
+EOF
+     },
+     { from  => undef, # 
+       until => $isodate2epoch->("2022-07-29 18:00:00"), # undef, # XXX
+       text  => 'Hauffstr.: Einbahnstraßenregelung vor der Pfarrstr., offen Richtung Westen, voraussichtlich bis 29. Juli 2022',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX Halteverbote gelten bis 29.7.2022
+#: also_indoor: traffic (none)
+#: last_checked: 2022-07-16
+#: next_check: 2022-07-29
+	q4::inwork; 15356,11338 15458,11306
 EOF
      },
     );

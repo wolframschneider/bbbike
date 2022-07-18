@@ -1642,7 +1642,7 @@ Werderstr.: unebenes Kleinsteinpflaster	Q2- 8968,5554 8981,5692
 Werderstr.: asphaltiert	Q0 8981,5692 8996,5823
 Werderstr.: Kopfsteinpflaster	Q2; 8996,5823 8996,5956
 Werderstr.: provisorischer Asphalt	Q1-; 8996,5956 8996,5823
-Wikingerufer: Kopfsteinpflaster	Q2 5354,12552 5376,12661 5376,12781 5341,12875 5350,12906
+Wikingerufer: Kopfsteinpflaster	Q2- 5354,12552 5376,12661 5376,12781 5341,12875 5350,12906
 Wullenweberstr.: eher unangenehmes Kopfsteinpflaster	Q2- 5354,12552 5372,12538 5427,12495 5497,12448 5524,12430 5657,12339
 (Gemeindewäldchen): Parkweg	Q1 452,3133 71,3179
 Beerenstr.: Kopfsteinpflaster	Q2 71,3179 -107,3194 -179,3204 -300,3219 -434,3236 -530,3241 -654,3249 -779,3257 -1026,3321
@@ -2097,7 +2097,7 @@ Landsberger Allee: Asphaltradweg nur mit mäßiger Qualität	Q1 18365,14607 18410,1
 Landsberger Allee: Beton-Radwege nur mit mäßiger Qualität (Bordsteinkanten!)	Q1; 20260,15434 20532,15564 20580,15586 20733,15657
 Landsberger Allee: Beton-Radwege, mit einigen leichten Schäden	Q0-; 20733,15657 20866,15673 21009,15658 21068,15646 21119,15635 21239,15633
 #: last_checked ^^^
-#: last_checked: 2022-03-20 (mapillary)
+#: last_checked: 2022-04-30 (mapillary)
 Landsberger Allee: Beton-Radwege, mit einigen leichten Schäden, Bordsteinkanten	Q1 21239,15633 21398,15671 21475,15705 21584,15753 21709,15808
 #: check_frequency ^^^
 #: by: ^^^
@@ -3942,10 +3942,11 @@ Dora-Benjamin-Park: Verbundsteinpflaster, "Moabiter Kissen"	Q1 14621,10062 14702
 Dora-Benjamin-Park: Verbundsteinpflaster, "Moabiter Kissen"	Q1 14747,10108 14702,10020
 Dora-Benjamin-Park: Verbundsteinpflaster	Q1 14788,9976 14817,10031
 Balatonstr.: mäßiger Beton	Q2+ 17479,10452 17741,10386
-Balatonstr.: mäßiger Beton	Q1- 17741,10386 17791,10375 17915,10350 17946,10344
+Balatonstr.: mäßiger Beton	Q1- 17741,10386 17791,10375 17915,10350 17946,10344 17954,10367
 Balatonstr.: mäßiger Beton	Q1- 17791,10375 17793,10382 17822,10490 17823,10495
 (Balatonstr. - Sewanstr.): Beton	Q1 17741,10386 17729,10331 17705,10232 17624,10249 17605,10199
 Sewanstr. [Wohngebiet]: Beton	Q1 17883,10185 17705,10232
+Sewanstr. [Parkplatz]: Beton	Q1 17624,10249 17642,10316
 Rienzistr.: Kopfsteinpflaster	Q2 17898,9564 18121,9488
 Marksburgstr.: Asphalt	Q0 18070,9292 18172,9250 18319,9218
 Ilsestr. (Karlshorst, Rummelsburg): Beton	Q0- 18354,9575 18164,9623 18158,9625 18121,9488 18070,9292 18037,9195 18021,9127
@@ -4054,7 +4055,7 @@ Park am Karlsbad: wassergebundene Decke	Q1+ 8143,10903 8190,10960
 #: note: neu gemacht (Herbst 2014)
 Singerstr.: Asphalt	Q0 11920,12266 12081,12236
 Puderstr.: Asphalt	Q0 14614,9052 14567,8966 14525,8894 14492,8853 14363,8738
-Upstallweg (Lichtenberg): Beton	Q0 17946,10344 17954,10367 18039,10398 18116,10403 18184,10387 18245,10398 18336,10436
+Upstallweg (Lichtenberg): Beton	Q0 17954,10367 18039,10398 18116,10403 18184,10387 18245,10398 18336,10436
 # REMOVED (teilweise) --- #: XXX hat sich hier die Qualität durch den Wohnungsneubau verbessert?
 Hönower Str.: Asphalt	Q0 18660,9410 18735,9421
 Hönower Str.: Kopfsteinpflaster	Q3 18735,9421 18765,9426 18846,9532 18875,9570
@@ -6273,7 +6274,7 @@ Am Dörferweg: Asphalt	Q0 20790,18892 20868,18926 20889,18935
 # 
 #: next_check_id: FALKENBERG-2021
 #: XXX: letzte Deckschicht fehlt noch
-#: last_checked: 2022-03-20
+#: last_checked: 2022-03-27 (mapillary)
 #: check_frequency: 150d
 Am Dörferweg: provisorischer Asphalt	Q1+ 20889,18935 20951,18961 20998,18980 21021,18989
 # 
@@ -8546,7 +8547,7 @@ Kaskelstr.: Asphalt	Q0 15251,11175 15090,11237 15058,11250
 #: by: https://www.berliner-woche.de/bezirk-lichtenberg/c-verkehr/bezirk-und-senat-bauen-fuer-45-millionen-euro-radverkehrsinfrastruktur-aus_a313995
 # REMOVED (note wurde bearbeitet) --- #: osm_watch: note 1177573 1
 #: osm_watch: way id="35873435" version="7"
-#: last_checked: 2022-05-02
+#: last_checked: 2022-07-16
 #: check_frequency: 120d
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Asphalt mit einigen Schäden	Q1- 17210,11950 17201,11975 17137,11969 17035,11909 17022,11890
 Rüdersdorfer Str. [Rückseite]: Beton	Q0- 12923,12043 13014,11955 13040,11921 13088,11945 13050,11979 13014,11955
@@ -9272,7 +9273,7 @@ Rathausstr.: Verbundsteinpflaster	Q0- 10601,12521 10704,12595
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruenflaechen/baumassnahmen/artikel.273777.php?date=20210405 (Rückbau der unterirdischen Anlagen)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1127042.php (Infoveranstaltung am 21.9.2021)
 #: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit; laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022 vvv
-#: last_checked: 2022-07-10 vvv
+#: last_checked: 2022-07-17 vvv
 # REMOVED (unter der provisorischen Decke) --- Weg zur Mühsamstr.: Beton/Verbundsteinpflaster	Q1+ 13067,12583 13091,12563
 Weg zur Mühsamstr.: provisorische Asphaltdecke	Q0- 13067,12583 13091,12563
 Weg zur Mühsamstr.: Schotterweg	Q2 13091,12563 13232,12628
@@ -11104,6 +11105,7 @@ Fellbacher Str.: Kopfsteinpflaster	Q2 3610,23272 3653,23305
 (Weg zum großen Bunkerberg): kleinteiliges Kopfsteinpflaster	Q1- 12307,13329 12355,13366 12391,13416 12386,13452 12305,13514 12232,13523 12197,13488 12196,13453 12235,13383 12274,13372 12327,13394 12344,13424 12307,13491 12254,13495 12232,13477 12246,13440 12278,13418 12287,13443
 Torstr. - Weydingerstr.: Verbundsteinpflaster	Q1+ 11079,13492 11111,13518
 Wilhelmine-Gemberg-Weg: Steinpflaster	Q1+ 11715,11522 11767,11662 11821,11733
+#: note: mittlerweile sind große Flächen überasphaltiert, aber dadurch ist die Qualität auch nicht besser
 Alexanderplatz: Pflasterung mit Schäden	Q1- 11055,12717 11030,12741 11007,12773 10970,12822
 Alexanderplatz: Pflasterung mit Schäden	Q1- 11030,12741 11087,12780
 (Zufahrt Debis-Parkhaus und "Gleis Park"): Asphalt	Q0 8430,10710 8424,10703 8367,10745
@@ -13270,11 +13272,13 @@ Ludwigsluster Str.: Beton und Asphalt mit erheblichen Schäden	Q2 22906,12766 229
 Ludwigsluster Str.: Beton mit einigen Schäden	Q1+ 22780,12567 22688,12489 22607,12422
 #: corrected_by: srt (Beton -> Asphalt)
 Ludwigsluster Str.: Asphalt	Q0 22607,12422 22568,12408
-#: corrected_by: srt (guter Beton -> ...)
+#: corrected_by: srt (guter Beton -> Beton mit einigen Schäden	Q1+ -> ... neu gemacht)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1222045.php (Bauarbeiten zwischen Gadebuscher Str. und Lion-Feuchtwanger-Str.)
-#: add_fragezeichen: Ist die Qualität nach den Bauarbeiten besser geworden?
-#: next_check: 2022-07-08
-Ludwigsluster Str.: Beton mit einigen Schäden	Q1+ 22568,12408 22472,12343 22385,12268 22292,12198
+# REMOVED --- #: add_fragezeichen: Ist die Qualität nach den Bauarbeiten besser geworden? --- #: next_check: 2022-07-08
+#: note: der nördliche zum Parken benutzte Streifen besteht weiterhin aus Beton
+Ludwigsluster Str.: Asphalt	Q0 22568,12408 22472,12343
+#: corrected_by: srt (guter Beton -> ...)
+Ludwigsluster Str.: Beton mit einigen Schäden	Q1+ 22472,12343 22385,12268 22292,12198
 Ludwigsluster Str.: guter Beton	Q0- 22775,12984 22883,13013
 #: corrected_by: srt (guter Asphalt -> ...)
 Sulzfelder Str.: guter Beton	Q0- 15134,16499 15120,16349
@@ -13409,9 +13413,12 @@ Heesestr.: sehr guter Asphalt	Q0 21611,9893 21594,9895 21534,9901 21371,9923 211
 #: confirmed_by ^^^
 #: confirmed_by: srt
 Parchimer Str.: guter Beton	Q1 22319,12637 22272,12610 22258,12573 22257,12481 22212,12422 22212,12403
-#: corrected_by: srt (guter Beton -> schadhafter Beton)
+#: corrected_by: srt (guter Beton -> ...)
 Parchimer Str.: schadhafter Beton	Q2+ 22212,12403 22215,12303 22225,12281
-Parchimer Str.: guter Beton	Q1 22225,12281 22292,12198 22304,12157
+#: confirmed_by: srt
+Parchimer Str.: guter Beton	Q1 22225,12281 22292,12198
+#: corrected_by: srt (guter Beton -> ...)
+Parchimer Str.: Asphalt	Q0- 22292,12198 22304,12157
 #: corrected_by: srt (mäßiger Beton -> ...)
 Arberstr.: Asphalt mit einigen Schäden	Q1 19392,9116 19406,9236
 Arberstr.: mäßiger Beton	Q1 19406,9236 19424,9502
@@ -28748,9 +28755,9 @@ Wiebestr.: Kopfsteinpflaster	Q2 4605,13525 4619,13708 4583,13845
 #: confirmed_by: srt
 Klarenbachstr.: Asphalt	Q0 4553,13294 4363,13336
 #: confirmed_by: srt
-Rostocker Str. (Tiergarten): Kopfsteinpflaster mit Bodenwellen	Q2 5100,14014 5109,13823 5116,13457
+Rostocker Str. (Tiergarten): Kopfsteinpflaster mit Bodenwellen	Q2 5089,14010 5100,13822 5116,13457
 #: confirmed_by: srt (zumindest das Pflaster)
-Wittstocker Str.: Kopfsteinpflaster mit Bodenwellen	Q2 4972,13804 5109,13823 5231,13843
+Wittstocker Str.: Kopfsteinpflaster mit Bodenwellen	Q2 4972,13804 5100,13822 5231,13843
 #: confirmed_by: srt (added "unebener")
 Mierendorffplatz: unebener Parkweg	Q2 3707,13274 3583,13313
 #: confirmed_by: srt
@@ -28865,8 +28872,8 @@ Mehlbeerenweg: Asphalt	Q0 11993,11978 11940,11982 11909,11985
 Kleine Markusstr.: Beton	Q1 12059,12172 11958,12195 11937,12127
 (nördliches Spreeufer): Parkweg	Q1 6122,12971 6064,12950 6019,12923 5962,12854 5921,12663 5890,12602 5871,12595
 (nördliches Spreeufer): Parkweg	Q1 5871,12595 5868,12566 5806,12487 5746,12413 5683,12342 5661,12323 5607,12307 5550,12305 5484,12320 5411,12380 5362,12469
-#: corrected_by: srt (Parkweg -> asphaltiert, Q2 -> Q1)
-(nördliches Spreeufer): asphaltiert mit Rillen	Q1 5362,12469 5356,12494 5372,12538
+#: corrected_by: srt (Parkweg -> asphaltiert, Q2 -> Q1; später doch Q2+)
+(nördliches Spreeufer): asphaltiert mit Ablaufrinnen	Q2+ 5362,12469 5356,12494 5372,12538
 (nördliches Spreeufer): Parkweg	Q1 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
 (nördliches Spreeufer): Parkweg mit Kanten	Q2 5657,12339 5607,12307
 #: confirmed_by: srt
@@ -31164,4 +31171,6 @@ Einmündungsbereich asphaltiert	Q0 8010,14014
 Einmündungsbereich asphaltiert	Q0 7965,14081
 Kreuzungsbereich asphaltiert	Q0 8601,13584
 Kreuzungsbereich asphaltiert	Q0 8674,13593
+Einmündungsbereich mit Kopfsteinpflaster	Q2- 5376,12781
+Wendehammerbereich asphaltiert	Q0 5657,12339
 #: ignore ^^^

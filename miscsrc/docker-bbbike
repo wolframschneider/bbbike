@@ -396,12 +396,18 @@ EOF
     if ($opt{'perl-ver'}) {
 	(my $short_perl_ver = $opt{'perl-ver'}) =~ s{\.\d+$}{};
 	# Probably travis has only perls for ubuntu trusty and precise
-	my $distnumver = { ubuntu => { trusty  => '14.04',
+	my $distnumver = { ubuntu => {
+				       jammy   => '22.04',
+				       focal   => '20.04',
+				       bionic  => '18.04',
+				       xenial  => '16.04',
+				       trusty  => '14.04',
 				       precise => '12.04',
 				     } }->{$opt{dist}}->{$opt{distver}};
 	if (!$distnumver) {
 	    error "No support for --perl-ver and $opt{dist}:$opt{distver}";
 	}
+	# alternatively the tarballs are also available on https://storage.googleapis.com/travis-ci-language-archives/perl/binaries/$opt{dist}/$distnumver.04/x86_64/perl-$short_perl_ver.tar.bz2
 	$dockerfile .= <<EOF;
 RUN apt-get install -qqy bzip2
 RUN wget https://s3.amazonaws.com/travis-perl-archives/binaries/$opt{dist}/$distnumver/x86_64/perl-$short_perl_ver.tar.bz2
@@ -446,7 +452,16 @@ WORKDIR bbbike
 # "-e" -> init_travis must not be run anymore
 # init_env_vars does not work in a Dockerbuild environment. Set some env vars manually
 ENV CODENAME $opt{distver}
+EOF
 
+    # Apply --build-env
+    for my $key (sort keys %{ $opt{'build-env'} }) {
+	$dockerfile .= <<EOF;
+ENV $key "$opt{'build-env'}->{$key}"
+EOF
+    }
+
+    $dockerfile .= <<EOF;
 RUN /bin/bash --login -e -c "wrapper init_perl"
 RUN /bin/bash --login -e -c "wrapper init_apt"
 RUN /bin/bash --login -e -c "wrapper install_non_perl_dependencies"
@@ -886,6 +901,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       src     => 'github',
 	       branch  => undef,
 	       env     => {},
+	       'build-env' => {},
 	       'with-data-build' => 0,
 	       'no-cache' => 0,
 	       'invalidate-apt' => 0,
@@ -899,6 +915,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       "src=s",
 	       'branch=s',
 	       'env=s%',
+	       'build-env=s%',
 	       "with-data-build!",
 	       'no-cache',
 	       'invalidate-apt!',
