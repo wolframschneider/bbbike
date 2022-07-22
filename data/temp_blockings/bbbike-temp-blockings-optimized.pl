@@ -69,37 +69,7 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.stadtfest.berlin/de/index.html
-#: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/strassen-wegen-fest-gesperrt_a170723
-#: by: https://www.stadtfest.berlin/de/index.html (2.+3. Oktober 2021)
-#: by: https://www.siegessaeule.de/magazin/lesbisch-schwules-stadtfest-2021-auf-der-kippe/ (Absage)
-#: by: https://www.stadtfest.berlin/de/index.html?date=20220515
-	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
-	2::temp 6729,10212 6971,10346
-	2::temp 6628,10318 6626,10155
-	2::temp 6487,10277 6628,10318 6719,10347
-	2::temp 6719,10347 6729,10212 6739,10120
-	2::temp 6609,10147 6630,9990
-',
-         'from' => 1657836000,
-         'id' => 74,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              6,
-                              'start',
-                              '2021-10-25T00:00:00'
-                            ]
-                          ],
-         'text' => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (16.7.2022 und 17.7.2022)',
-         'type' => 'gesperrt',
-         'until' => 1658095199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3164,32 +3134,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/events/5979419-2229501-tegeler-hafenfest.html (2021)
-#: by: https://www.berlin.de/events/5979419-2229501-tegeler-hafenfest.html?date=20220613
-#: by: https://berliner-abendblatt.de/2022/07/11/tegeler-hafenfest-startet-am-donnerstag/
-# REMOVED (was) : tempex: 20160714-20160717
-	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
-',
-         'from' => 1657663200,
-         'id' => 2420,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              13,
-                              'months',
-                              7,
-                              'start',
-                              '2020-10-25T00:00:00'
-                            ]
-                          ],
-         'source_id' => 'https://www.gratis-in-berlin.de/festivals/item/2037758-hafenfest-tegel-2019-mit-programm-und-feuerwerk',
-         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (14.07.2022 bis 17.07.2022)',
-         'type' => 'gesperrt',
-         'until' => 1658095199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3875,37 +3820,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147341611
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_28_2389_2480_online.pdf (2021)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_34_2821_2896_online.pdf (Großer Zapfenstreich 2021)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_35_2897_2964_online.pdf (Aufhebung der letzten Einschränkung)
-#: by: https://www.bmvg.de/de/presse/grosser-zapfenstreich-zur-wuerdigung-einsatz-afghanistan-5181746 (Verschiebung, noch kein neuer Termin)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_42_3793_3876_online.pdf (Großer Zapfenstreich 2021, neuer Termin)
-#: by: https://viz.berlin.de/2021/10/verkehrsvorschau-13102021/ (Erwähnung des Großes Zapfenstreichs)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_51_4697_4784_online.pdf (Großer Zapfenstreich für Merkel)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_28_1693_1828_online.pdf (feierliches Gelöbnis 2022)
-Hildebrandstr.	2::temp 7435,11514 7322,11177
-Stauffenbergstr.	2::temp 7579,11032 7595,11086 7665,11353 7717,11540
-Reichpietschufer	2::temp 7595,11086 7492,11111 7419,11137 7322,11177 7253,11208
-Herkulesufer	2::temp 7595,11086 7575,11076 7252,11188
-Lützowufer	2::temp 7089,11073 7248,11143 7461,11051 7579,11032
-Hiroshimasteg	2::temp 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7248,11143
-# REMOVED --- Hiroshimastr.	2::temp 7253,11208 7356,11517
-# REMOVED ---	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7690,11108
-# REMOVED ---	2::temp 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
-# REMOVED ---	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
-# REMOVED ---	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
-# REMOVED ---	2::temp 7665,11353 7745,11332
-# REMOVED ---	2::temp 7745,11332 7690,11108
-',
-         'from' => 1658181600,
-         'id' => 2875,
-         'source_id' => 'https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_29_3697_3844_online.pdf',
-         'text' => 'Straßen rund um das Verteidigungsministerium (Reichpietschufer, Stauffenbergstr. u.a.): Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2022 von 12:00 bis 20:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1658271600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4515,7 +4430,7 @@ Hiroshimasteg	2::temp 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 724
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-07-17
+#: last_checked: 2022-07-20 (mapillary)
 #: check_frequency: 21d
 #: next_check_id: 2022-08-31
 	q4::inwork; 11329,12497 11209,12430
@@ -4579,7 +4494,7 @@ Hiroshimasteg	2::temp 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 724
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-07-11
+#: last_checked: 2022-07-18
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4631,7 +4546,7 @@ Hiroshimasteg	2::temp 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 724
 #: also_indoor: traffic (G)
 #: osm_watch: way id="934995899" version="9"
 #: osm_watch: way id="934995901" version="8"
-#: last_checked: 2022-07-17 vvv
+#: last_checked: 2022-07-20 vvv
 #: check_frequency: 3d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
@@ -5285,9 +5200,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1629669600,
          'id' => 3435,
          'source_id' => 'viz2021:13.377685,52.567221,24.08.2021,07:00',
-         'text' => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 20.07.2022 17:00 ',
+         'text' => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 31.07.2022 17:00 ',
          'type' => 'handicap',
-         'until' => 1658329200
+         'until' => 1659279600
        },
        undef,
        undef,
@@ -5427,26 +5342,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1452987451476172804 (hier: nur für Kfz-Verkehr gesperrt)
-#: by: https://twitter.com/VIZ_Berlin/status/1453704442986049548 (Radfahrer frei)
-#: by: https://twitter.com/VIZ_Berlin/status/1453699314891595779
-#: by: https://www.berliner-woche.de/pankow/c-verkehr/bauarbeiten-in-der-muehlenstrasse_a327002
-#: source_id: viz2021:13.403429,52.56939,28.10.2021,06:00 (hier: bis 12.11.2021, und nur für Kfz-Verkehr gesperrt) (mittlerweile bis 9.11.2021)
-#: by: https://www.berliner-woche.de/altglienicke/c-verkehr/deckschicht-wird-runderneuert_a327095 (bis 30.11.2021)
-#: note: laut rbb vorzeitiges Ende am 9.11.2021
-#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2022/pressemitteilung.1221641.php (neue Bauarbeiten)
-#: by: https://berliner-abendblatt.de/2022/06/30/muehlenstrasse-wird-gesperrt/
-#: source_id: viz2021:13.403429,52.56939,06.07.2022,06:00 (bis 19.7.2022, nur Kfz-Verkehr betroffen)
-	q3::inwork; 10228,18196 10347,17959 10448,17751
-',
-         'from' => 1656972000,
-         'id' => 3472,
-         'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2021/pressemitteilung.1139346.php',
-         'text' => 'Mühlenstr.: Bauarbeiten zwischen Breite Str. und Florastr., Richtung Süden gesperrt, Radfahrer dürfen voraussichtlich den Gehweg benutzen, vom 6.7.2022 bis voraussichtlich 19.7.2022',
-         'type' => 'handicap',
-         'until' => 1658246400
-       },
+       undef,
        undef,
        undef,
        {
@@ -5712,21 +5608,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'type' => 'handicap',
          'until' => 1666821600
        },
-       {
-         'data' => '#: by: https://www.kiezundkneipe.de/artikel/das-ende-der-lenau-schule (neue Schule ist 2023 fertig)
-#: note: Die Einbahnstraßenregelung fängt erst 60m nördlich der Gneisenaustr. an und es gibt keine Sackgassenschilder.
-#: osm_watch: way id="49233007" version="8"
-#: last_checked: 2022-05-31
-#: check_frequency: 60d
-#: next_check: 2023-01-01
-	q4::inwork; 9552,9602 9588,9827
-',
-         'from' => undef,
-         'id' => 3510,
-         'text' => 'Nostitzstr.: Hochbaustelle, Einbahnstraße zwischen Gneisenaustr. und Baruther Str., offen Richtung Süden',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: next_check_id: FUERSTENDAMM-2022
 #: by: https://berliner-abendblatt.de/2022/02/09/fuerstendamm/
@@ -6139,28 +6021,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.taz.de/!5516248/ (möglicherweise dauerhaft)
-#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2019-05-16-prot-fahrratsitzung3.pdf (Vorplanung)
-#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/2019-10-16-prot-fahrratsitzung4.pdf
-#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7448
-#: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/bahnhofseingang-wieder-oeffnen_a269101
-#: by: https://leute.tagesspiegel.de/tempelhof-schoeneberg/macher/2020/08/11/134285/am-bayerischen-platz-soll-der-fahrstuhl-nun-kommen/ ("Überlegungen")
-#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/200507_protokoll-1-fahrrat-2020.pdf (Bahn ist nicht bereit, den Eingang für den Radverkehr zu öffnen)
-#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7448&date=20210314 (Antwort: Öffnung wird geprüft)
-#: note: offen, gesehen: 2022-06-18 (abends und nachts)
-#: confirmed_by: srt
-#: last_checked: 2022-06-18
-#: check_frequency: 30d
-	2::temp 7838,7848 7804,7783
-',
-         'from' => undef,
-         'id' => 3567,
-         'permanent' => 1,
-         'text' => 'Bhf. Südkreuz: Ein/Ausgang Nord-Süd-Grünzug kann gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: by: https://berliner-abendblatt.de/2022/06/01/arbeiten-an-der-fischerinsel-werden-fortgesetzt/ (Bauarbeiten bis Ende 2023)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/fischerinsel-park-wird-umgestaltet_a347705
@@ -6277,16 +6138,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'type' => 'gesperrt',
          'until' => 1662127200
        },
-       {
-         'data' => '	2::inwork 22726,18834 22709,19109
-',
-         'from' => 1657695600,
-         'id' => 3583,
-         'source_id' => 'LS/73-H/22/007',
-         'text' => 'Ahrensfelde - Eiche: Erneuerung Durchlass (Wuhlgraben), Sperrung, evtl. sind auch Radfahrer betroffen, 14.07.2022 09:00 Uhr bis 20.07.2022 16:00 Uhr ',
-         'type' => 'gesperrt',
-         'until' => 1658325600
-       },
+       undef,
        {
          'data' => '#: XXX Halteverbote gelten bis 29.7.2022
 #: also_indoor: traffic (none)
@@ -6299,6 +6151,51 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'text' => 'Hauffstr.: Einbahnstraßenregelung vor der Pfarrstr., offen Richtung Westen, voraussichtlich bis 29. Juli 2022',
          'type' => 'handicap',
          'until' => 1659110400
+       },
+       {
+         'data' => '	2::inwork 42938,96695 43612,96993 44588,96894 44825,96893
+',
+         'from' => 1657083600,
+         'id' => 3585,
+         'source_id' => '227300224',
+         'text' => 'Bietikow - Seelübbe: Asphaltsanierung, Sperrung der Straße, 07.07.2022 07:00 Uhr bis 20.08.2022 16:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1661004000
+       },
+       {
+         'data' => '	2::inwork 47334,21218 47192,21608 47072,21650 46672,21791 46264,21879 46072,21966
+',
+         'from' => 1657094400,
+         'id' => 3586,
+         'source_id' => '226400344',
+         'text' => 'Strauberg - Klosterdorf: Bauarbeiten, Sperrung der Straße, 07.07.2022 10:00 Uhr bis 19.08.2022 16:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1660917600
+       },
+       {
+         'data' => '	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245
+	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8600,12165 8595,12066
+	3 8119,12414 8055,12186 8049,12140
+	3 7429,12070 7383,12095 7031,12320
+	3 7823,12120 7816,12150 7822,12201
+	3 7822,12201 7816,12150 7823,12120
+	3 7031,12320 7383,12095 7429,12070
+	3 8327,12174 8344,12221 8391,12389
+	3 8592,12252 8538,12245 8522,12239
+	3 8592,12252 8538,12245 8522,12187
+	3 8391,12389 8344,12221 8327,12174
+	3 8049,12140 8055,12186 8119,12414
+	3 8522,12187 8538,12245 8592,12252
+	3 8522,12187 8538,12245 8522,12239
+	3 8522,12239 8538,12245 8592,12252
+	3 8522,12239 8538,12245 8522,12187
+',
+         'from' => 1658313000,
+         'id' => 3587,
+         'source_id' => 'viz2021:13.369347,52.515752,21.07.2022,12:30',
+         'text' => 'Straße des 17. Juni und Ebertstr.: zwischen Großer Stern und Dorotheenstr./Behrenstr. Sperrung der Straße, möglicherweise sind auch Radfahrer betroffen, vom 21.07.2022 12:30 bis 24.07.2022 10:00 ',
+         'type' => 'gesperrt',
+         'until' => 1658649600
        }
      
 );
