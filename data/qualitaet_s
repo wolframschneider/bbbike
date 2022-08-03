@@ -6,7 +6,7 @@
 (Mergenthalerring - Dieselstr.): unbefestigt	Q2 14429,8074 14484,8044
 Mozartstr.: Kopfsteinpflaster	Q3 10259,-2660 10392,-2980 10462,-3149
 Mozartstr.: Asphalt	Q0 10462,-3149 10470,-3169 10460,-3199
-Eiswerder (Brücken, Straßen): Asphalt	Q0 -2675,15513 -2453,15476 -2447,15476 -2427,15493 -2324,15590 -2338,15636 -2150,15740 -2118,15709 -2038,15683 -1978,15684 -1923,15684 -1848,15686 -1835,15693 -1706,15768
+Eiswerder (Brücken, Straßen): Asphalt	Q0 -2675,15513 -2453,15476 -2447,15476 -2427,15493 -2324,15590 -2338,15636 -2150,15740 -2118,15709 -2023,15683 -1978,15684 -1923,15684 -1849,15683 -1833,15689 -1700,15762
 Eiswerderstr.: Asphalt	Q0 -2883,15571 -2783,15538 -2712,15520 -2702,15517 -2675,15513
 Neue Kreisstr.: Kopfsteinpflaster	Q2; -7575,-1383 -7482,-1319 -7383,-1211 -7310,-1131 -7196,-1029
 Neue Kreisstr.: Asphaltstreifen	Q0; -7196,-1029 -7310,-1131 -7383,-1211 -7482,-1319 -7575,-1383
@@ -3576,7 +3576,7 @@ Weg im Maselakepark: Asphalt	Q0 -2504,16558 -2510,16357
 Uferweg am Nordhafen: Beton	Q0 -2477,16351 -2510,16357 -2632,16347 -2779,16330 -2980,16401
 Uferweg am Nordhafen: Kopfsteinpflaster	Q2 -2980,16401 -2972,16420
 Parkweg durch Maselakepark: wassergebundene Decke	Q1 -2632,16347 -2587,16600
-Havelschanze: Asphalt	Q0 -3040,16246 -2642,16216 -2561,16206
+Havelschanze: Asphalt	Q0 -3040,16246 -3004,16252 -2642,16216 -2561,16206
 Havelschanze: Verbundsteinpflaster	Q1 -2642,16216 -2633,16283 -2545,16291
 Zum alten Strandbad: Verbundsteinpflaster	Q1 -2493,16189 -2538,16196 -2561,16206
 Am Bootshaus: Verbundsteinpflaster	Q1 -2561,16206 -2545,16291 -2507,16292 -2506,16315
@@ -5123,7 +5123,7 @@ Carl-Ludwig-Schleich-Promenade: Waldweg	Q1 2273,8640 2317,8616 2361,8608
 Lausitzer Platz: Kopfsteinpflaster	Q2 12212,10440 12197,10494
 Zu den Krugwiesen: Asphalt	Q0 18506,17236 18644,17349
 (Zu den Krugwiesen - Vincent-van-Gogh-Str.): Asphalt	Q0 18650,17367 18656,17389 18704,17565
-(Zu den Krugwiesen - Vincent-van-Gogh-Str.): Asphalt	Q0 18656,17389 18613,17427 18694,17577
+(Zu den Krugwiesen - Vincent-van-Gogh-Str.): Asphalt, einige Wurzelhebungen	Q1 18656,17389 18613,17427 18694,17577
 Vincent-van-Gogh-Str.: Beton	Q0 18704,17565 18694,17577 18635,17649
 Vincent-van-Gogh-Str.: Asphalt mit einigen Schäden	Q0 18635,17649 18553,17749 18476,17842 18412,17920 18279,18079 18223,18153 18196,18254
 (Weg durch die Falkenberger Krugwiesen): wassergebundene Decke	Q1 18704,17565 18756,17498
@@ -6043,7 +6043,7 @@ Uferweg: Waldweg	Q1 -997,18069 -984,18136 -934,18284 -930,18337
 (Uferweg am Salzhof): Asphalt	Q0 -1978,15940 -1976,16012 -1948,16045 -1942,16105
 (Uferweg am Salzhof): Asphalt und Verbundsteinpflaster, einige Wurzelschäden	Q1 -1942,16105 -1945,16202 -1956,16220 -1958,16269 -1950,16292 -1962,16312 -1967,16380 -1937,16383 -1928,16423
 (Daumstr. - Uferweg): wassergebundene Decke	Q1 -1816,16111 -1942,16105
-(Uferweg Eiswerder): Asphalt	Q0 -2038,15683 -2094,15663 -2138,15622 -2163,15571 -2177,15511 -2325,15431 -2431,15436 -2465,15471 -2454,15472 -2453,15476
+(Uferweg Eiswerder): Asphalt, einige Schäden	Q0 -2023,15683 -2075,15664 -2117,15638 -2154,15576 -2175,15504 -2303,15436 -2431,15436 -2456,15463 -2468,15468 -2454,15472 -2453,15476
 Menzelstr.: Beton	Q0 25149,12266 25318,12294
 Menzelstr.: Asphalt	Q0 25318,12294 25578,12336
 Ridbacher Str.: leicht welliger Asphalt	Q0 24530,12296 24434,12402 24354,12510
@@ -7061,15 +7061,15 @@ Schnitterinnenweg: fester Splitbelag	Q0 17679,19532 17351,19411 17015,19287 1676
 (entlang des Hechtgrabens): mäßiger Beton	Q2 16325,18796 16426,18812 16616,18969 16665,19021
 (Hagenower Ring - Schweriner Ring): Verbundsteinpflaster	Q1 17260,19192 17447,19197
 Genossenschaftsweg: Kopfsteinpflaster	Q2 17900,18972 17956,19139
-Dorfstr. (Falkenberg): Asphalt	Q0 18161,18814 18144,18813
-Dorfstr. (Wartenberg): Beton	Q0 18144,18813 18025,18858 18007,18938
+Dorfstr. (Wartenberg): Beton	Q0 18161,18814 18144,18813 18025,18858
+Dorfstr. (Wartenberg): rauer Asphalt	Q0 18025,18858 18007,18938
 (Hechtgraben - Richtung Norden): Asphalt mit Schäden	Q1 17626,19367 17679,19532
 Pappelweg: Asphalt, kurze Verbundsteinpflasterabschnitte	Q0 17679,19532 17842,20065
 Pappelweg: Trampelpfad, viele Wurzeln, stark bewachsen	Q3 17842,20065 18042,20612 18061,20715
 Am Schilf: Verbundsteinpflaster	Q0 18278,19051 18287,18999 18270,18947 18223,18961
 Am Genossenschaftsring: Verbundsteinpflaster	Q0 18179,19095 18152,19043 18132,18968 18218,18948 18223,18961 18254,19063
 Am Kletterplatz: Verbundsteinpflaster	Q0 18100,19127 18078,19075 18152,19043
-Straße 10 (Wartenberg): Beton/Asphalt	Q0 18119,19400 18025,19433 17808,19508
+Straße 10 (Wartenberg): Beton/Asphalt	Q1 18118,19394 18025,19433 17808,19508
 (entlang des Hechtgrabens - Straße 10): Asphalt	Q0 17808,19508 17679,19532
 Straße 11 (Wartenberg): unbefestigte Straße	Q2 18025,19433 18108,19692 18202,19663
 Straße 1 (Wartenberg): betoniert	Q1 18771,19892 18719,19911
@@ -8423,7 +8423,7 @@ Am Vorwerk: Beton	Q0 12697,25704 12591,25762
 Am Vorwerk: Asphalt	Q0 12591,25762 12488,25757 12118,26153
 (Pankeweg - Wolfgang-Heinz-Str.): Verbundsteinpflaster	Q1 16131,24988 16168,24908
 Mühlenweg (Karow): Verbundsteinpflaster	Q1 15347,22275 15411,22369 15445,22352
-(Hechtgraben - Wartenberger Weg): Verbundsteinpflaster	Q1 16325,18796 16216,19183
+(Hechtgraben - Wartenberger Weg): Asphalt, einige Wurzelschäden	Q0 16325,18796 16216,19183
 (entlang des Hechtgrabens): Asphalt	Q0 16163,18780 16325,18796
 Alfred-Jung-Str.: Asphalt	Q0 15224,13269 15347,13268 15479,13273
 (Hafersteig - Wuhlgartenweg): Beton	Q1 20835,12200 20824,12177 20823,12139
@@ -8611,7 +8611,7 @@ Carossastr.: Asphalt	Q0 -2602,16809 -2946,16869
 (Havelwiesen): Asphalt	Q0 -2602,16809 -2516,16791 -2433,16776 -2371,16776
 (Am Maselakepark - Maselake): Asphalt	Q0 -2638,16609 -2587,16600 -2504,16558
 (hinter und unter den Wohnhäusern der Hugo-Cassirer-Str.): Verbundsteinpflaster	Q1 -2371,16776 -2391,16607
-(Kleine Eiswerderstr. - Lilli-Palmer-Promenade): unbefestigter Weg	Q2 -1835,15693 -1833,15599
+(Kleine Eiswerderstr. - Lilli-Palmer-Promenade): unbefestigter Weg	Q2 -1833,15689 -1833,15599
 (Kleine Eiswerderstr. - Lilli-Palmer-Promenade): Beton	Q1 -1833,15599 -1845,15572 -1848,15535
 Lilli-Palmer-Promenade: wassergebundene Decke	Q1 -1848,15535 -1903,15333 -1926,15254
 Krienickepark: Gehwegplatten	Q0 -1848,15535 -1903,15553
@@ -10509,6 +10509,8 @@ Hilda-Geiringer-Weg: gepflastert	Q2 8236,13495 8241,13393
 Hilda-Geiringer-Weg: glatt gepflastert	Q1 8167,13457 8174,13390 8241,13393 8281,13394 8302,13430 8293,13527
 (Pappelallee - Schönhauser Allee): Kopfsteinpflaster	Q2 10916,15098 10883,15129
 (Uferweg am Nordhafen - Havelschanze): wassergebundene Decke	Q1 -2980,16401 -2994,16364 -2973,16354 -3009,16269 -3040,16246
+(Uferweg am Nordhafen - Havelschanze): wassergebundene Decke	Q1 -2973,16354 -2966,16351
+(Uferweg am Nordhafen - Havelschanze): Verbundsteinpflaster	Q1 -2966,16351 -3004,16252
 Frieda-Arnheim-Promenade: Betonpflaster	Q0 -2779,15358 -2769,15389 -2751,15383 -2733,15377 -2707,15456 -2699,15478 -2722,15486
 (Frieda-Arnheim-Promenade - Eiswerderstr.): Betonpflaster	Q0 -2722,15486 -2712,15520
 (Heinersdorfer Str. - Am Steinberg): asphaltierter Radweg	Q0 12257,16876 12307,16950
@@ -10893,7 +10895,8 @@ Golda-Meir-Steg: Kopfsteinpflaster	Q2 7962,14198 7968,14202
 (Wilhelmine-Duncker-Str. - Grünzug am Falkenberg): wassergebundene Decke	Q1 21440,300 21435,323
 Wilhelmine-Duncker-Str.: Asphalt	Q0 21487,173 21464,279 21440,300
 (Demminer Str. - Am Gutshof): Betonpflaster	Q0 17797,18675 17813,18726
-(Dolgenseestr., Fußgängerzone): Betonpflaster	Q0 17457,10083 17384,9807
+(Dolgenseestr., Fußgängerzone): Betonpflaster	Q0 17457,10083 17412,9911 17384,9807
+Dolgenseestr. [8B, 8C, 9, 9A, 9B]: Betonpflaster	Q0 17523,9882 17412,9911
 (Gaudystr. - Sonneberger Weg): glatte Pflasterung	Q0 10547,15586 10542,15609
 Georg-Klingenberg-Str.: Asphalt	Q0 17468,8692 17656,8700
 Adolf-Wermuth-Allee: Asphalt	Q0 17656,8700 17640,8627
@@ -10976,6 +10979,8 @@ Goltzstr.: Asphalt mit einigen Schäden	Q1; 11073,-2037 10983,-2116
 (Falkstr. - Morusstr.): Verbundsteinpflaster	Q1 12219,7958 12407,8000 12439,8014 12450,8016
 Leonore-Goldschmidt-Str.: Steinplatten, etwas uneben	Q1 3224,8106 3326,8100
 Kletterrosenweg: Verbundsteinpflaster	Q1 21382,149 21344,300
+(Seychellenring - Uferweg): unbefestigter Weg	Q2 -2524,19005 -2511,19004
+Alte Potsdamer Str.: Kleinsteinpflaster	Q1 8389,11378 8375,11368
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -13391,11 +13396,11 @@ Am Seeschloß: Asphalt	Q0 4757,23184 4750,23211 4713,23254
 (Mauerweg am Eiskeller): unbefestigte Straße	Q2 -7943,19710 -7990,19888
 (Mauerweg am Eiskeller): unbefestigter Pfad	Q2 -8469,19845 -8494,19713 -8438,19699 -8521,19390 -8419,19408 -8361,19374 -8272,19086 -8206,19007
 (Mauerweg am Eiskeller): Asphalt	Q0 -8206,19007 -8011,19059
-(Mauerweg Spandau): asphaltiert, aber nicht unterhalten (Laub ...)	Q0 -2908,19715 -3012,19757 -3161,19627
+(Mauerweg Spandau): asphaltiert, aber nicht unterhalten (Laub ...)	Q0 -2908,19715 -2966,19746 -3012,19757 -3161,19627
 (Uferweg an der Havel): sehr guter Asphalt	Q0 -2096,18376 -2051,18411 -2051,18434 -2210,18526 -2282,18615 -2328,18721 -2401,18776
-(Uferweg an der Havel): Holzbohlen	Q0 -2401,18776 -2434,18832 -2460,18918
-(Uferweg an der Havel): sehr guter Asphalt	Q0 -2460,18918 -2503,18945 -2516,19186 -2597,19251 -2723,19255
-(Uferweg an der Havel): gut befahrbarer Wanderweg	Q0 -2723,19255 -2726,19408 -2763,19450 -2775,19532 -2870,19589 -2905,19636 -2908,19715
+(Uferweg an der Havel): Holzbohlen	Q0 -2401,18776 -2451,18851 -2460,18918
+(Uferweg an der Havel): sehr guter Asphalt	Q0 -2460,18918 -2503,18945 -2511,19004 -2503,19147 -2523,19211 -2583,19239 -2723,19255
+(Uferweg an der Havel): Asphalt	Q0 -2723,19255 -2746,19418 -2763,19450 -2780,19530 -2870,19589 -2905,19636 -2908,19715
 (Um den Laßzinssee): Asphalt	Q0 -6482,20783 -6442,20864 -6465,21060 -6099,21157 -6044,20971 -5795,20965
 Scheiblerstr.: mäßiges Kopfsteinpflaster	Q2 16375,7070 16494,6948
 Scheiblerstr.: asphaltiert	Q0 16494,6948 16630,6800
@@ -15154,7 +15159,7 @@ Küstriner Str.: Asphalt	Q0 16211,15105 16314,15223
 Küstriner Str.: Asphalt	Q0 15944,14836 15977,14871
 Küstriner Str.: Asphalt	Q0 15977,14871 16123,15025
 Küstriner Str.: Asphalt	Q0 15799,14674 15878,14761 15944,14836
-Küstriner Str.: mäßiges Kopfsteinpflaster	Q2 16314,15223 16354,15323 16406,15452
+Küstriner Str.: mäßiges Kleinsteinpflaster	Q2 16314,15223 16354,15323 16406,15452
 Am Rötepfuhl: Beton	Q0 11643,1338 11683,1285 11798,1212 11820,1185 11800,1135 11729,1102
 Fichtestr. (Hermsdorf): Verbundsteinpflaster	Q1 3495,22803 3477,23002
 Fichtestr. (Hermsdorf): mäßiges Kopfsteinpflaster	Q2 3477,23002 3494,23057 3530,23122 3544,23179
@@ -15301,7 +15306,7 @@ Ascheberger Weg: guter Beton	Q0 1411,18447 1448,18436 1501,18429 1510,18429 1557
 Herscheider Weg: guter Beton	Q0 1743,18604 1758,18421 1771,18303 1760,18200
 Fennpfuhlweg: Asphalt, teilweise etwas grob	Q1 18055,19106 17956,19139 17845,19186
 Fennpfuhlweg: Verbundsteinpflaster	Q1 17845,19186 17761,19221 17750,19181
-Fennpfuhlweg: Asphalt mit Bodenschwellen	Q0 17750,19181 17697,18989
+Fennpfuhlweg: Asphalt	Q0 17750,19181 17697,18989
 Sallgaster Str.: Beton	Q0 6337,20826 6027,20807
 Oberjägerweg: fester Sandweg, mal Sand, mal uneben, mal Kopfsteinpflaster	Q2 -6608,17562 -6547,17884 -6501,17981 -6635,18128 -5708,19113 -5209,19643 -5024,19831 -4844,20024 -4559,20331 -4485,20420
 Kiepertstr.: guter Asphalt	Q0 8522,1870 8374,1815

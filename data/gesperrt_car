@@ -1437,9 +1437,6 @@ Hermann-Kasack-Str. -> Georg-Hermann-Allee: Straßenbahntrasse, Drängelgitter für
 Hermann-Kasack-Str. -> Hermann-Kasack-Str.: Straßenbahntrasse, Drängelgitter für Radfahrer/Fußgänger	3::igndisp -13618,839 -13432,782 -13220,728
 Kutscherweg: Poller	3 -13620,-131 -13700,-106 -13775,-85
 Kutscherweg: Poller	3 -13775,-85 -13700,-106 -13620,-131
-Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11113,10943 10937,11033
-Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11113,10943 11049,10816
-Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11113,10943 11150,11030
 Rennbahnstr. -> Bernkastler	3 14528,16910 14558,16907 14673,16895
 Rennbahnstr. -> Berliner Allee	3 14528,16910 14558,16907 14535,17003
 Stephaniweg: Poller	3 4836,1659 4855,1616 4800,1582
@@ -2274,3 +2271,4 @@ Karlstr. (Köpenick)	1 22556,4386 22502,4260 22458,4134
 Henny-Porten-Str.	1 23833,15066 23772,15058 23698,15049
 Kurt-Weill-Platz	1 23772,15058 23778,14995
 Am Nordbahnhof - Invalidenstr.: nur rechts abbiegen erlaubt	3 9011,14019 9085,13919 9148,13944
+Bruchsaler Str.	1 5522,8011 5520,8132

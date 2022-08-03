@@ -817,8 +817,7 @@ Handjerystr./Schmiljanstr.	3 5478,6959 5565,7024 5559,7031
 Straßenbahntrasse, Drängelgitter für Radfahrer/Fußgänger	3nocross -13433,693 -13432,782 -13429,1069
 Kutscherweg: Poller	3 * -13700,-106 *
 # REMOVED (wurde aufgehoben) --- Dresdner Str.: Einfahrt vom Oranienplatz gesperrt	3 * 11189,10831 11162,10919
-#: note: könnte auch die andere Richtung gesperrt sein
-Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11113,10943 *
+# REMOVED (wurde aufgehoben) --- #: note: könnte auch die andere Richtung gesperrt sein --- Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11113,10943 *
 Rennbahnstr. -> Bernkastler	3 14528,16910 14558,16907 14673,16895
 Rennbahnstr. -> Berliner Allee	3 14528,16910 14558,16907 14535,17003
 Stephaniweg: Poller	3 4836,1659 4855,1616 *
@@ -1433,12 +1432,12 @@ Clayallee -> Sophie-Charlotte-Str.: Linksabbiegen verboten	3 1283,4260 1297,4311
 #: by: https://abendblatt-berlin.de/2021/05/02/berlin-charlottenburg-kritik-an-sperrung-der-krummen-strasse/
 #: by: https://mein.berlin.de/projekte/verkehrskonzept-karl-august-kiez/?date=20210503 (bis 4.7.2021)
 #: XXX bleiben die Poller permanent? zurzeit Halteverbot bis Ende Oktober 2021 (laut osm), nun bis Juni 2022 (laut Notiz)
-#: also_indoor: traffic (H)
+#: also_indoor: traffic (H,B)
 # REMOVED (entfernt) --- #: osm_watch: node id="8709493528" version="3"
 # REMOVED (entfernt) --- #: osm_watch: node id="8709493529" version="3"
 #: osm_watch: way id="940405708" version="3"
 #: osm_watch: note 2648361 17
-#: last_checked: 2022-07-02
+#: last_checked: 2022-07-31 (traffic)
 # REMOVED --- #: next_check: 2022-06-30
 # REMOVED --- #: check_frequency: 90d
 # REMOVED --- #: next_check: 2021-10-31
@@ -1619,4 +1618,7 @@ Henny-Porten-Str.	1 23833,15066 23772,15058 23698,15049
 Kurt-Weill-Platz	1 23772,15058 23778,14995
 # 
 Am Nordbahnhof - Invalidenstr.: nur rechts abbiegen erlaubt	3 9011,14019 9085,13919 9148,13944
+# 
+#: note: möglicherweise "unechte Einbahnstraße"
+Bruchsaler Str.	1 5522,8011 5520,8132
 # 

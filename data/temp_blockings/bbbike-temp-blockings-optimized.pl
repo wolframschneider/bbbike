@@ -107,7 +107,29 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: note: keine Anzeichen für eine Veranstaltung 2021 
+	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
+',
+         'from' => 1662112800,
+         'id' => 112,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              31,
+                              'months',
+                              8,
+                              'start',
+                              '2021-10-25T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'http://www.hier-in-rudow.de/meilenfeste.html',
+         'text' => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (03.09.2022 bis 04.09.2022)',
+         'type' => 'gesperrt',
+         'until' => 1662328799
+       },
        undef,
        undef,
        undef,
@@ -2450,7 +2472,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3288,7 +3310,34 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.gratis-in-berlin.de/festivals/item/2056177-moabiter-kiezfest-2022
+#: by: https://www.gratis-in-berlin.de/images/stories/tipps/l_plakat_kiezfest_2022_dina4_2.jpg
+# REMOVED --- : tempex YYYY09 & sa2 & T14-T18
+# REMOVED --- : tempex YYYY09 & sa3 & T14-T18
+# REMOVED --- : tempex YYYY09 & sa1 & T12-T21
+# REMOVED ---	2::temp 5857,13342 5868,13441 5882,13548
+	2::temp 5857,13342 5868,13441 5956,13433 5956,13330
+',
+         'from' => 1662674400,
+         'id' => 2625,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              31,
+                              'months',
+                              8,
+                              'start',
+                              '2021-10-25T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.turmstrasse.de/aktuelles',
+         'text' => 'Bremer Str., Jonasstr., Arminiusstr.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 10. September 2022, 12 bis 21 Uhr ',
+         'type' => 'gesperrt',
+         'until' => 1662836400
+       },
        undef,
        undef,
        undef,
@@ -4315,7 +4364,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-07-18
+#: last_checked: 2022-07-30
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4335,7 +4384,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: next_check_id: CORONA-2020
 #: by: https://www.charite.de/klinikum/themen_klinikum/themenschwerpunkt_coronavirus/#c30751057 (Eingangskontrollen)
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2022-06-30 vvv
+#: last_checked: 2022-07-31 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -4364,11 +4413,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
-#: also_indoor: traffic (G)
+#: also_indoor: traffic (G,H(unvollständig))
 #: osm_watch: way id="934995899" version="9"
 #: osm_watch: way id="934995901" version="8"
-#: last_checked: 2022-07-24 vvv
-#: check_frequency: 3d vvv
+#: last_checked: 2022-08-02 vvv
+#: check_frequency: 4d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
@@ -4384,7 +4433,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => 1590562800,
          'id' => 3240,
-         'text' => 'Mainzer Str.: Bauarbeiten zwischen Scharnweberstr. und Frankfurter Allee, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
+         'text' => 'Mainzer Str.: Einmündung Frankfurter Allee gesperrt, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -4400,9 +4449,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX_prog: eigentlich q3-::inwork
+#: add_fragezeichen: Wurden die Bauarbeiten in der Nestorstraße beendet?
 #: also_indoor: traffic (G,H)
 #: last_checked: 2022-05-10 (kartaview)
-#: next_check: 2022-09-30
+#: next_check: 2022-07-27
+# REMOVED --- #: next_check: 2022-09-30
 	q3::inwork 3348,9806 3340,9700
 ',
          'from' => 1587963600,
@@ -4607,7 +4658,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2022-07-05 vvv
+#: last_checked: 2022-08-02 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -4643,7 +4694,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="362719487" version="6"
 #: osm_watch: way id="687428752" version="2"
-#: last_checked: 2022-06-24
+#: last_checked: 2022-07-29
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 ',
@@ -4933,6 +4984,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: also_indoor: traffic (G,B)
 #: source_id: viz2021:13.569262,52.411283,12.07.2021,09:00 (hier: bis 31.1.2022) (inaktiv)
 #: source_id: viz2021:13.56928,52.411326,13.06.2022,07:00 (bis 8.7.2022) (bis 19.8.2022)
+#: osm_watch: way id="1082326438" version="1"
 #: next_check: 2022-08-19
 	q4::inwork 21858,811 21902,877
 # REMOVED ---	q4::inwork; 21902,877 21977,988 22034,1006 22092,999
@@ -5019,15 +5071,16 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: source_id: viz2021:13.37876,52.56731,02.05.2022,16:04 (inaktiv)
 #: source_id: viz2021:13.37876,52.56731,06.05.2022,14:35 (zweiter Eintrag) (wieder inaktiv)
+#: source_id: viz2021:13.377685,52.567221,24.08.2021,07:00
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10354
 	q4::inwork 8555,17928 8415,17902
 ',
          'from' => 1629669600,
          'id' => 3435,
          'source_id' => 'viz2021:13.377685,52.567221,24.08.2021,07:00',
-         'text' => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 31.07.2022 17:00 ',
+         'text' => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 04.08.2022 17:00 ',
          'type' => 'handicap',
-         'until' => 1659279600
+         'until' => 1659625200
        },
        undef,
        undef,
@@ -5088,11 +5141,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: SCHOENHOLZER-2022
 # REMOVED (wg. Konflikt mit XXX) --- #: XXX_prog: eigentlich q4+::inwork; oder q3-::inwork;
+#: source_id: viz2021:13.37418,52.58681,02.08.2022,11:31 (bis 3.8.2022)
+#: source_id: viz2021:13.37418,52.58681,03.08.2022,12:00 (evtl. Umstellung der Baustelle, zwischen Schillerstr. und Friesenstr. Gegenverkehrsregelung bis Ende März 2023, siehe auch Ampeln in der Germanenstr.)
+#: source_id: viz2021:13.374712,52.584761,03.08.2022,12:00 (dito)
 #: XXX wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (H,B)
 #: last_checked: 2022-05-14
-#: check_frequency: 45d
-# REMOVED --- #: next_check: 2022-04-30
+# REMOVED --- #: check_frequency: 45d
+#: next_check: 2022-08-03
 	q4::inwork; 8196,20096 8224,19977 8234,19936
 ',
          'from' => 1615158000,
@@ -5510,7 +5566,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: add_fragezeichen: Wie lange dauern die Bauarbeiten an?
 #: also_indoor: traffic (G(falsch?),B(teilweise))
 #: priority: #B
-#: last_checked: 2022-06-30 vvv
+#: last_checked: 2022-07-31 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-09-30 vvv
 	q4::inwork; 7259,14870 7209,14927 7182,14986
@@ -5611,14 +5667,14 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1513397936151044099#m
 #: by: https://nitter.net/pic/media%2FFP1LIs8XMAENMUm.jpg%3Fname%3Dorig
-#: source_id: viz2021:13.478607,52.471557,11.05.2022,11:00 (Baustellenampel in der Kiefholzstr., bis 14.6.2022) (mittlerweile bis 27.6.2022) (mittlerweile bis 1.8.2022)
+#: source_id: viz2021:13.478607,52.471557,11.05.2022,11:00 (Baustellenampel in der Kiefholzstr., bis 14.6.2022) (mittlerweile bis 27.6.2022) (mittlerweile bis 1.8.2022) (mittlerweile bis 2.8.2022) (mittlerweile bis 30.11.2022)
 #: source_id: viz2021:13.47859,52.47157,11.04.2022,09:00 (zusätzlicher Eintrag, bis 1.8.2022) (mittlerweile inaktiv)
 #: by: https://nitter.net/VIZ_Berlin/status/1524307007557222401#m
 #: by: https://nitter.net/pic/media%2FFSdtBqDX0AEFDN8.jpg%3Fname%3Dorig
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? oder nur bis August 2022? vvv
 #: last_checked: 2022-07-06 vvv
 #: check_frequency: 90d vvv
-#: next_check: 2022-08-01 vvv
+#: next_check: 2022-08-02 vvv
 	q4::inwork; 15560,7400 15693,7512
 #: note: teilweise ragt die Baustellenabsperrung in den Radweg Richtung Kiefholzstraße rein
 	q3::inwork; 15693,7512 15560,7400
@@ -5627,12 +5683,13 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: last_checked ^^^
 #: XXX ^^^
 ',
+         'dont_check_date' => 1,
          'from' => 1649574000,
          'id' => 3536,
          'source_id' => 'viz2021:13.479739,52.472118,11.04.2022,09:00',
-         'text' => 'Eichbuschallee : Fahrbahn zwischen Kiefholzstr. und Bergaustr. gesperrt, Radfahrer sollen schieben, vom 11.04.2022 09:00 bis 31.10.2022 17:00',
+         'text' => 'Eichbuschallee : Fahrbahn zwischen Kiefholzstr. und Bergaustr. gesperrt, Radfahrer sollen schieben, vom 11.04.2022 09:00 bis 02.08.2022 17:00, evtl. auch länger, bis Ende November 2022',
          'type' => 'handicap',
-         'until' => 1667232000
+         'until' => 1669824000
        },
        undef,
        undef,
@@ -5703,9 +5760,9 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'from' => 1651442400,
          'id' => 3549,
          'source_id' => 'https://www.mobil-potsdam.de/de/baustellen/aktuell/?c=4210',
-         'text' => 'Eisenbahnbrücke Werder: wegen Bauarbeiten montags bis freitags tagsüber (6:30 bis 18:00 Uhr) gesperrt, bis zum 31.7.2022',
+         'text' => 'Eisenbahnbrücke Werder: wegen Bauarbeiten montags bis freitags tagsüber (6:30 bis 18:00 Uhr) gesperrt, bis zum 29.9.2022',
          'type' => 'gesperrt',
-         'until' => 1659283200
+         'until' => 1664467200
        },
        {
          'data' => '#: next_check_id: WILTBERG-2022
@@ -5909,19 +5966,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'until' => 1667861999
        },
        undef,
-       {
-         'data' => '#: by: https://nitter.it/pic/orig/enc/bWVkaWEvRlhKb0R3S1hFQUl5Ti1fLmpwZw==
-#: source_id: viz2021:13.515318,52.539821,11.07.2022,06:00 (neuer Versuch)
-#: note: laut rbb_verkehr sollen Radfahrer explizit absteigen und schieben
-	q4::inwork 17959,15084 17902,15039
-',
-         'from' => 1657425600,
-         'id' => 3581,
-         'source_id' => 'viz2021:13.515318,52.539821,06.07.2022,06:00',
-         'text' => 'Plauener Stra.: Bauarbeiten in Höhe Treffurter Str., Sperrung der Fahrbahn, vom 11.07.2022 06:00 bis 29.07.2022 17:00 ',
-         'type' => 'handicap',
-         'until' => 1659106800
-       },
+       undef,
        {
          'data' => '	2::inwork 49875,51562 49211,51421
 ',
@@ -5933,19 +5978,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'until' => 1662127200
        },
        undef,
-       {
-         'data' => '#: XXX Halteverbote gelten bis 29.7.2022
-#: also_indoor: traffic (none)
-#: last_checked: 2022-07-16
-#: next_check: 2022-07-29
-	q4::inwork; 15356,11338 15458,11306
-',
-         'from' => undef,
-         'id' => 3584,
-         'text' => 'Hauffstr.: Einbahnstraßenregelung vor der Pfarrstr., offen Richtung Westen, voraussichtlich bis 29. Juli 2022',
-         'type' => 'handicap',
-         'until' => 1659110400
-       },
+       undef,
        {
          'data' => '	2::inwork 42938,96695 43612,96993 44588,96894 44825,96893
 ',
@@ -5996,7 +6029,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
 #: by: https://nitter.it/pic/orig/enc/bWVkaWEvRllNNkVpeVhrQUUxVXo3LmpwZw==
 #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0822_barrierefrei.pdf
 # REMOVED --- #: XXX sind Radfahrer tatsächlich betroffen? Laut rbb gibt\'s hier ein Einbahnstraßensystem (ohne konkrete Angabe von Richtungen). vvv --- #: next_check: 2022-07-25 vvv
-	q4::inwork; 10264,13097 10286,13084 10301,13075
+	q4::inwork; 10264,13097 10286,13084 10301,13075 10339,13052 10371,13006
 	q4::inwork 10220,13098 10105,13004
 # REMOVED (hier nicht) ---	q4::inwork 10339,13052 10301,13075 10286,13084 10264,13097 10220,13098 10077,13100
 # REMOVED --- #: next_check ^^^ --- #: XXX ^^^

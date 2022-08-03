@@ -920,11 +920,11 @@ EOF
 	2 2624,1704 2824,1273
 EOF
      },
-     { from  => $isodate2epoch->("2019-09-06 12:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2019-09-08 23:59:59"),
+     { from  => $isodate2epoch->("2022-09-02 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2022-09-04 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 31, months => 8, start => "2021-10-25T00:00:00"]],
-       text  => 'Alt-Rudow: zwischen Bildhauerweg und Kˆpenicker Str. Veranstaltung (Rudower Meilenfest), Straﬂe vollst‰ndig gesperrt (07.09.2019 bis 08.09.2019)',
+       text  => 'Alt-Rudow: zwischen Bildhauerweg und Kˆpenicker Str. Veranstaltung (Rudower Meilenfest), Straﬂe vollst‰ndig gesperrt (03.09.2022 bis 04.09.2022)',
        type  => 'gesperrt',
        source_id => 'http://www.hier-in-rudow.de/meilenfeste.html',
        data  => <<EOF,
@@ -1269,7 +1269,7 @@ EOF
        text  => 'L 171; (Hohen Neuendorf-Hennigsdorf); Bereich Anschluﬂstelle Straﬂenbau Vollsperrung 28.10.2004-18.12.2004 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -926,27132 -1941,26218 -2118,26060
+	2 -926,27132 -1941,26218 -2109,26055
 EOF
      },
      { from  => 1099177200, # 2004-10-31 01:00
@@ -2690,7 +2690,7 @@ EOF
        text  => 'L 171; (Hohen Neuendorf-Hennigsdorf); zw. Kreisverkehr bei Hennigsd. und AS Stolpe Straﬂenbau Vollsperrung 04.10.2005-15.10.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 -2446,25386 -2118,26060
+	2 -2446,25386 -2356,25540 -2326,25625 -2130,26026 -2109,26055
 EOF
      },
      { from  => 1124486293, # 2005-08-19 23:18
@@ -23953,18 +23953,21 @@ EOF
 	q4::inwork; 5317,12242 5518,12159 5417,11949
 EOF
      },
-     { from  => $isodate2epoch->("2019-09-13 00:00:00"),
-       until => $isodate2epoch->("2019-09-14 23:59:59"),
+     { from  => $isodate2epoch->("2022-09-09 00:00:00"),
+       until => $isodate2epoch->("2022-09-10 21:00:00"),
        periodic => 1,
        recurrences => [["yearly", days => 31, months => 8, start => "2021-10-25T00:00:00"]], # 2021 scheint nichts stattzufinden
-       text  => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 14. September 2019, 12 bis 21 Uhr ',
+       text  => 'Bremer Str., Jonasstr., Arminiusstr.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 10. September 2022, 12 bis 21 Uhr ',
        type  => 'gesperrt',
        source_id => 'https://www.turmstrasse.de/aktuelles',
        data  => <<EOF,
+#: by: https://www.gratis-in-berlin.de/festivals/item/2056177-moabiter-kiezfest-2022
+#: by: https://www.gratis-in-berlin.de/images/stories/tipps/l_plakat_kiezfest_2022_dina4_2.jpg
 # REMOVED --- : tempex YYYY09 & sa2 & T14-T18
 # REMOVED --- : tempex YYYY09 & sa3 & T14-T18
 # REMOVED --- : tempex YYYY09 & sa1 & T12-T21
-	2::temp 5857,13342 5868,13441 5882,13548
+# REMOVED ---	2::temp 5857,13342 5868,13441 5882,13548
+	2::temp 5857,13342 5868,13441 5956,13433 5956,13330
 EOF
      },
      { from  => $isodate2epoch->("2014-09-08 04:00:00"), # 1409954400, # 2014-09-06 00:00
@@ -24790,7 +24793,7 @@ EOF
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-spandau/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8094&options=4
 # REMOVED (nicht mehr gesperrt) --- #: next_check: 2016-03-01
-	2::inwork -2453,15476 -2454,15472 -2465,15471
+	2::inwork -2453,15476 -2454,15472 -2468,15468
 EOF
      },
      { from  => undef, # 
@@ -30979,7 +30982,7 @@ EOF
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-07-18
+#: last_checked: 2022-07-30
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 EOF
@@ -31080,7 +31083,7 @@ EOF
 #: next_check_id: CORONA-2020
 #: by: https://www.charite.de/klinikum/themen_klinikum/themenschwerpunkt_coronavirus/#c30751057 (Eingangskontrollen)
 #: XXX w‰hrend der Corona-Krise vvv
-#: last_checked: 2022-06-30 vvv
+#: last_checked: 2022-07-31 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -31190,16 +31193,16 @@ EOF
      },
      { from  => $isodate2epoch->("2020-05-27 09:00:00"),
        until => undef, # $isodate2epoch->("2021-12-31 17:00:00"), # der urspr¸ngliche Termin (14.08.2020) kann wohl nicht gehalten werden; laut Schild bis Ende 2021
-       text  => 'Mainzer Str.: Bauarbeiten zwischen Scharnweberstr. und Frankfurter Allee, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
+       text  => 'Mainzer Str.: Einm¸ndung Frankfurter Allee gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: GAERTNER-2021
 #: source_id: 2147345874 (hier: bis 29.1.2021) (bei rbb bis 31.3.2021) (inaktiv)
-#: also_indoor: traffic (G)
+#: also_indoor: traffic (G,H(unvollst‰ndig))
 #: osm_watch: way id="934995899" version="9"
 #: osm_watch: way id="934995901" version="8"
-#: last_checked: 2022-07-24 vvv
-#: check_frequency: 3d vvv
+#: last_checked: 2022-08-02 vvv
+#: check_frequency: 4d vvv
 # REMOVED (kann vermutlich nicht gehalten werden) --- #: next_check: 2021-12-31 vvv
 # REMOVED (beendet) ---	q3::inwork; 14181,11434 14211,11552
 # REMOVED (beendet) ---	q4::inwork 14247,11681 14211,11552
@@ -31355,9 +31358,11 @@ EOF
        source_id => '2147345679',
        data  => <<EOF,
 #: XXX_prog: eigentlich q3-::inwork
+#: add_fragezeichen: Wurden die Bauarbeiten in der Nestorstraﬂe beendet?
 #: also_indoor: traffic (G,H)
 #: last_checked: 2022-05-10 (kartaview)
-#: next_check: 2022-09-30
+#: next_check: 2022-07-27
+# REMOVED --- #: next_check: 2022-09-30
 	q3::inwork 3348,9806 3340,9700
 EOF
      },
@@ -31741,9 +31746,9 @@ EOF
 # REMOVED --- #: last_checked: 2021-04-19 vvv
 #: note: hier von Osten aus legaler gemeinsamer Rad- und Gehweg auf dem B¸rgersteig, mit kurzer asphaltierter Rampe, von Westen aus verboten f¸r Fahrzeuge aller Art; mittlerweile existiert kein Gehweg mehr
 #: osm_watch: way id="16096289" version="19"
-	2::inwork 8031,11249 7934,11275 7897,11287
+	2::inwork 8031,11249 7934,11275 7894,11288
 #: osm_watch: way id="4597351" version="21"
-	2::inwork 7934,11275 7965,11380
+	2::inwork 7934,11275 7970,11396
 # REMOVED --- #: last_checked ^^^
 # REMOVED --- #: XXX ^^^
 # REMOVED --- #: XXX ^^^
@@ -32202,7 +32207,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: CORONA-2020
 #: XXX w‰hrend der Corona-Krise vvv
-#: last_checked: 2022-07-05 vvv
+#: last_checked: 2022-08-02 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -32309,7 +32314,7 @@ EOF
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="362719487" version="6"
 #: osm_watch: way id="687428752" version="2"
-#: last_checked: 2022-06-24
+#: last_checked: 2022-07-29
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 EOF
@@ -33169,6 +33174,7 @@ EOF
 #: also_indoor: traffic (G,B)
 #: source_id: viz2021:13.569262,52.411283,12.07.2021,09:00 (hier: bis 31.1.2022) (inaktiv)
 #: source_id: viz2021:13.56928,52.411326,13.06.2022,07:00 (bis 8.7.2022) (bis 19.8.2022)
+#: osm_watch: way id="1082326438" version="1"
 #: next_check: 2022-08-19
 	q4::inwork 21858,811 21902,877
 # REMOVED ---	q4::inwork; 21902,877 21977,988 22034,1006 22092,999
@@ -33643,13 +33649,14 @@ EOF
 EOF
      },
      { from  => 1629669600, # 2021-08-23 00:00
-       until => $isodate2epoch->("2022-07-31 17:00:00"), # 1640991600, # 2022-01-01 00:00
-       text  => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 31.07.2022 17:00 ',
+       until => $isodate2epoch->("2022-08-04 17:00:00"), # 1640991600, # 2022-01-01 00:00
+       text  => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 04.08.2022 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.377685,52.567221,24.08.2021,07:00', # aktiv
        data  => <<EOF,
 #: source_id: viz2021:13.37876,52.56731,02.05.2022,16:04 (inaktiv)
 #: source_id: viz2021:13.37876,52.56731,06.05.2022,14:35 (zweiter Eintrag) (wieder inaktiv)
+#: source_id: viz2021:13.377685,52.567221,24.08.2021,07:00
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10354
 	q4::inwork 8555,17928 8415,17902
 EOF
@@ -33913,11 +33920,14 @@ EOF
        data  => <<EOF,
 #: next_check_id: SCHOENHOLZER-2022
 # REMOVED (wg. Konflikt mit XXX) --- #: XXX_prog: eigentlich q4+::inwork; oder q3-::inwork;
+#: source_id: viz2021:13.37418,52.58681,02.08.2022,11:31 (bis 3.8.2022)
+#: source_id: viz2021:13.37418,52.58681,03.08.2022,12:00 (evtl. Umstellung der Baustelle, zwischen Schillerstr. und Friesenstr. Gegenverkehrsregelung bis Ende M‰rz 2023, siehe auch Ampeln in der Germanenstr.)
+#: source_id: viz2021:13.374712,52.584761,03.08.2022,12:00 (dito)
 #: XXX wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (H,B)
 #: last_checked: 2022-05-14
-#: check_frequency: 45d
-# REMOVED --- #: next_check: 2022-04-30
+# REMOVED --- #: check_frequency: 45d
+#: next_check: 2022-08-03
 	q4::inwork; 8196,20096 8224,19977 8234,19936
 EOF
      },
@@ -34627,7 +34637,7 @@ EOF
 #: by: https://www.berliner-woche.de/bezirk-mitte/c-bauen/sanierungen-an-schulen-laufen-auf-hochtouren_a352193 (Neubau der Schule soll Anfang 2024 fertig werden)
 #: note: Die Einbahnstraﬂenregelung f‰ngt erst 60m nˆrdlich der Gneisenaustr. an und es gibt keine Sackgassenschilder.
 #: osm_watch: way id="49233007" version="8"
-# REMOVED (Sackgassenschild steht wieder, daf¸r kein Einfahrt-verboten-Schild mehr) --- #: last_checked: 2022-05-31 --- #: check_frequency: 90d --- #: next_check: 2024-02-01
+# REMOVED (Sackgassenschild steht wieder, daf¸r kein Einfahrt-verboten-Schild mehr --- logisch, die Anbindung Baruther Str./Mehringdamm ist zurzeit gesperrt) --- #: last_checked: 2022-05-31 --- #: check_frequency: 90d --- #: next_check: 2024-02-01
 	q4::inwork; 9552,9602 9588,9827
 EOF
      },
@@ -34830,7 +34840,7 @@ EOF
 #: add_fragezeichen: Wie lange dauern die Bauarbeiten an?
 #: also_indoor: traffic (G(falsch?),B(teilweise))
 #: priority: #B
-#: last_checked: 2022-06-30 vvv
+#: last_checked: 2022-07-31 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-09-30 vvv
 	q4::inwork; 7259,14870 7209,14927 7182,14986
@@ -34987,21 +34997,22 @@ EOF
 EOF
      },
      { from  => 1649574000, # 2022-04-10 09:00
-       until => 1667232000, # 2022-10-31 17:00
-       text  => 'Eichbuschallee : Fahrbahn zwischen Kiefholzstr. und Bergaustr. gesperrt, Radfahrer sollen schieben, vom 11.04.2022 09:00 bis 31.10.2022 17:00',
+       until => $isodate2epoch->("2022-11-30 17:00:00"), # 1667232000, # 2022-10-31 17:00
+       text  => 'Eichbuschallee : Fahrbahn zwischen Kiefholzstr. und Bergaustr. gesperrt, Radfahrer sollen schieben, vom 11.04.2022 09:00 bis 02.08.2022 17:00, evtl. auch l‰nger, bis Ende November 2022',
+       dont_check_date => 1,
        type  => 'handicap',
-       source_id => 'viz2021:13.479739,52.472118,11.04.2022,09:00', # bis 31.10.2022, mittlerweile nur noch bis 1.8.2022
+       source_id => 'viz2021:13.479739,52.472118,11.04.2022,09:00', # bis 31.10.2022, mittlerweile nur noch bis 1.8.2022, mittlerweile bis 30.11.2022, mittlerweile bis 2.8.2022, inaktiv
        data  => <<EOF,
 #: by: https://nitter.net/VIZ_Berlin/status/1513397936151044099#m
 #: by: https://nitter.net/pic/media%2FFP1LIs8XMAENMUm.jpg%3Fname%3Dorig
-#: source_id: viz2021:13.478607,52.471557,11.05.2022,11:00 (Baustellenampel in der Kiefholzstr., bis 14.6.2022) (mittlerweile bis 27.6.2022) (mittlerweile bis 1.8.2022)
+#: source_id: viz2021:13.478607,52.471557,11.05.2022,11:00 (Baustellenampel in der Kiefholzstr., bis 14.6.2022) (mittlerweile bis 27.6.2022) (mittlerweile bis 1.8.2022) (mittlerweile bis 2.8.2022) (mittlerweile bis 30.11.2022)
 #: source_id: viz2021:13.47859,52.47157,11.04.2022,09:00 (zus‰tzlicher Eintrag, bis 1.8.2022) (mittlerweile inaktiv)
 #: by: https://nitter.net/VIZ_Berlin/status/1524307007557222401#m
 #: by: https://nitter.net/pic/media%2FFSdtBqDX0AEFDN8.jpg%3Fname%3Dorig
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? oder nur bis August 2022? vvv
 #: last_checked: 2022-07-06 vvv
 #: check_frequency: 90d vvv
-#: next_check: 2022-08-01 vvv
+#: next_check: 2022-08-02 vvv
 	q4::inwork; 15560,7400 15693,7512
 #: note: teilweise ragt die Baustellenabsperrung in den Radweg Richtung Kiefholzstraﬂe rein
 	q3::inwork; 15693,7512 15560,7400
@@ -35173,8 +35184,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2022-05-02 00:00:00"),
-       until => $isodate2epoch->("2022-07-31 18:00:00"),
-       text  => 'Eisenbahnbr¸cke Werder: wegen Bauarbeiten montags bis freitags tags¸ber (6:30 bis 18:00 Uhr) gesperrt, bis zum 31.7.2022',
+       until => $isodate2epoch->("2022-09-29 18:00:00"),
+       text  => 'Eisenbahnbr¸cke Werder: wegen Bauarbeiten montags bis freitags tags¸ber (6:30 bis 18:00 Uhr) gesperrt, bis zum 29.9.2022',
        type  => 'gesperrt',
        source_id => 'https://www.mobil-potsdam.de/de/baustellen/aktuell/?c=4210',
        data  => <<EOF,
@@ -35615,7 +35626,7 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2022-07-10 06:00:00"), # 1656993600, # 2022-07-05 06:00
-       until => 1659106800, # 2022-07-29 17:00
+       until => 1659029719, # 1659106800, # 2022-07-29 17:00
        text  => 'Plauener Stra.: Bauarbeiten in Hˆhe Treffurter Str., Sperrung der Fahrbahn, vom 11.07.2022 06:00 bis 29.07.2022 17:00 ',
        type  => 'handicap',
        source_id => 'viz2021:13.515318,52.539821,06.07.2022,06:00', # am 8.7.2022 bereits wieder inaktiv
@@ -35730,7 +35741,7 @@ EOF
 #: by: https://nitter.it/pic/orig/enc/bWVkaWEvRllNNkVpeVhrQUUxVXo3LmpwZw==
 #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0822_barrierefrei.pdf
 # REMOVED --- #: XXX sind Radfahrer tats‰chlich betroffen? Laut rbb gibt's hier ein Einbahnstraﬂensystem (ohne konkrete Angabe von Richtungen). vvv --- #: next_check: 2022-07-25 vvv
-	q4::inwork; 10264,13097 10286,13084 10301,13075
+	q4::inwork; 10264,13097 10286,13084 10301,13075 10339,13052 10371,13006
 	q4::inwork 10220,13098 10105,13004
 # REMOVED (hier nicht) ---	q4::inwork 10339,13052 10301,13075 10286,13084 10264,13097 10220,13098 10077,13100
 # REMOVED --- #: next_check ^^^ --- #: XXX ^^^
