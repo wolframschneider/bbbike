@@ -4062,11 +4062,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8483 ("... in den nächsten Jahren Baustelle ...")
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
-#: osm_watch: way id="8655276" version="30"
+#: osm_watch: way id="8655276" version="31"
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2022-07-16
+#: last_checked: 2022-08-02 (osm)
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -5068,20 +5068,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: viz2021:13.37876,52.56731,02.05.2022,16:04 (inaktiv)
-#: source_id: viz2021:13.37876,52.56731,06.05.2022,14:35 (zweiter Eintrag) (wieder inaktiv)
-#: source_id: viz2021:13.377685,52.567221,24.08.2021,07:00
-#: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10354
-	q4::inwork 8555,17928 8415,17902
-',
-         'from' => 1629669600,
-         'id' => 3435,
-         'source_id' => 'viz2021:13.377685,52.567221,24.08.2021,07:00',
-         'text' => 'Schwartzstr.: Baustelle, Sperrung der Fahrbahn, vom 24.08.2021 07:00 bis 04.08.2022 17:00 ',
-         'type' => 'handicap',
-         'until' => 1659625200
-       },
+       undef,
        undef,
        undef,
        {
@@ -5474,12 +5461,12 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
-#: last_checked: 2022-07-12 (mapillary) vvv
+#: last_checked: 2022-08-03 (osm) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-02-12 vvv
 #: osm_watch: way id="4395450" version="27"
 	2::inwork 7031,12320 6694,12627
-#: osm_watch: way id="505363417" version="11"
+#: osm_watch: way id="505363417" version="12"
 	2::inwork 6631,12707 6694,12627
 #: next_check ^^^
 #: check_frequency ^^^
@@ -5671,14 +5658,15 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: source_id: viz2021:13.47859,52.47157,11.04.2022,09:00 (zusätzlicher Eintrag, bis 1.8.2022) (mittlerweile inaktiv)
 #: by: https://nitter.net/VIZ_Berlin/status/1524307007557222401#m
 #: by: https://nitter.net/pic/media%2FFSdtBqDX0AEFDN8.jpg%3Fname%3Dorig
+#: note: Baustelle existiert weiterhin, trotz der entfernten VIZ-Meldung
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? oder nur bis August 2022? vvv
-#: last_checked: 2022-07-06 vvv
-#: check_frequency: 90d vvv
-#: next_check: 2022-08-02 vvv
+#: last_checked: 2022-08-03 vvv
+#: check_frequency: 14d vvv
+# REMOVED --- #: next_check: 2022-08-02 vvv
 	q4::inwork; 15560,7400 15693,7512
 #: note: teilweise ragt die Baustellenabsperrung in den Radweg Richtung Kiefholzstraße rein
 	q3::inwork; 15693,7512 15560,7400
-#: next_check ^^^
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -5727,7 +5715,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G(falsch))
-#: last_checked: 2022-07-06
+#: last_checked: 2022-08-03
 	q4::inwork; 15436,7031 15555,7133 15695,7254
 ',
          'from' => undef,
@@ -6108,6 +6096,67 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'text' => 'Platz der Luftbrücke: Wasserrohrbruch, Fahrbahn und Gehweg Richtung Osten gesperrt, Umweg über Wege in der Parkfläche, bis 9.8.2022',
          'type' => 'handicap',
          'until' => 1660082400
+       },
+       {
+         'data' => '#: next_check_id: WALLENSTEIN-2022
+Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
+Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
+Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
+',
+         'from' => 1659546069,
+         'id' => 3597,
+         'source_id' => 'viz2021:13.516327,52.486802,02.08.2022,07:00',
+         'text' => 'Walllensteinstr.: Bauarbeiten zwischen Ilsestr. und Sangeallee, Fahrbahn gesperrt, bis 16.12.2022 ',
+         'type' => 'handicap',
+         'until' => 1671231600
+       },
+       {
+         'data' => '#: by: https://partner-fuer-spandau.de/veranstaltungen/spandauer-sommerklassiker-das-spandauer-havelfest/263
+	2::temp -2918,14496 -2964,14478 -3026,14358 -3054,14305 -3091,14220 -3135,14183 -3275,14114
+	2::temp -3054,14305 -3019,14286
+	2::temp -2964,14478 -2939,14433 -3019,14286 -3042,14255 -3059,14230 -3090,14198 -3153,14141 -3187,14116 -3291,14043 -3306,14035 -3345,13994
+	2::temp -3042,14255 -3091,14220
+',
+         'from' => 1660168800,
+         'id' => 3598,
+         'source_id' => 'https://berliner-abendblatt.de/2022/08/03/spandauer-havelfest-nach-zwei-jahren-pause-zurueck/',
+         'text' => 'Lindenufer und Havelpromenade: Veranstaltung (Havelfest), Straßen und Wege können gesperrt sein, 12. bis 14. August 2022',
+         'type' => 'gesperrt',
+         'until' => 1660514399
+       },
+       {
+         'accept_multi_feature_distance' => 3000,
+         'data' => '#: by: https://nitter.it/VIZ_Berlin/status/1555042445792092164#m
+#: by: https://berliner-abendblatt.de/2022/08/04/feuerwehr-einsatz-im-grunewald-zieht-sich-bis-freitag/
+#: by: https://nitter.it/VIZ_Berlin/status/1555249442940395524#m
+#: source_id: viz2021:13.194739,52.449865,04.08.2022,07:00
+#: source_id: viz2021:13.242156,52.468429,04.08.2022,06:32
+#: source_id: viz2021:13.250049,52.457088,04.08.2022,06:31
+#: last_checked: 2022-08-04 (research) vvv
+#: check_frequency: 1d vvv
+	2::temp -1328,7597 -1851,6887 -1493,6984 -1241,7017 -1006,6911 -927,6888 -2218,5133
+	2::temp -2634,6907 -2668,6862 -2581,6834 -2468,6839 -2366,6869 -2230,6909 -2080,6897 -1925,6790 -2825,5588 -2218,5133 -2112,5050 -1424,4504
+	2::temp -1851,6887 -1925,6790
+	2::temp -2668,6862 -2632,6789 -2638,6641
+# weitere Sperrungen im Grunewald möglich (Havelchaussee, Koenigsallee, Huettenweg)
+	2::temp 40,5606 -119,5885 -150,6168 -138,6681 -739,6838 -927,6888
+	2::temp -138,6681 674,7758
+	2::temp -2774,10345 -3025,10116 -3178,9953 -3412,9755 -3426,9684 -3347,9541 -3213,9425 -3140,9294 -3073,9061 -3283,8739 -3389,8624 -3578,8578 -3615,8496 -3567,8031 -3561,7964 -3536,7856 -3531,7825 -3496,7677 -3355,6874 -3382,6821 -3483,6789 -3530,6781 -3589,6721 -3598,6572 -3606,6407 -3723,6254 -3880,6142 -3944,6034 -4003,5621 -4046,5505 -4072,5227 -3962,5129
+	2::temp -1588,9194 -1484,9175 -1435,9168 -1279,9093
+	2::temp -913,6905 -1020,7446 -1040,7550 -1112,7891 -1317,8836 -1336,9001 -1435,9168 -1487,9271 -1529,9465 -1464,9626 -1467,9768 -1491,9801 -1602,9915 -1860,10317
+	2::temp -119,5885 -182,5927 -288,6101
+	2::temp -2825,5588 -3021,5328 -3093,5223 -3605,4536
+	2::temp -360,9193 -310,8989
+	2::temp -3962,5129 -3889,4967 -3807,4794 -3729,4687 -3605,4536 -3490,4212 -3296,3686 -2218,5133
+	2::temp 425,8766 100,8339 -363,7630 -643,7252 -913,6905
+#: check_frequency ^^^
+#: last_checked ^^^
+',
+         'from' => undef,
+         'id' => 3599,
+         'text' => 'Waldbrand im Grunewald: Kronprinzessinenweg, Wege rund um den Sprengplatz und vermutlich auch weitere Straßen (Havelchaussee, Hüttenweg...) sind gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );
