@@ -23,7 +23,7 @@
 # 
 # REMOVED (Umfahrung nicht mehr nutzbar) --- #: next_check_id: DBWERKSTRASSE-2019 --- #: last_checked: 2020-05-02 --- (Umfahrung Baustelle): Verbundsteinpflaster, Asphalt, wassergebundene Decke	Q1- 14717,10855 14692,10867 14667,10904 14485,10959 14477,10941 14397,10966 14390,10984 14314,10998 14287,10892
 # REMOVED (mittlerweile weitgehend hergestellt) --- #: source_id: IM_023718 --- #: source_id: 2147339540 --- #: next_check_id: SONNENALLEE-2014 --- #: last_checked: 2018-09-11 --- Sonnenallee: teilweise unfertige Radwege	Q1 14174,7505 14334,7395 14369,7376 14530,7301
-# REMOVED (mittlerweile wieder der alte Zustand weitgehend wieder hergestellt) --- #: next_check_id: STRALAUERALLEE-2018 --- #: XXX_prog: auf der Fahrbahn (kein benutzungspflichtiger Radweg!) keine Einschränkungen --- #: priority: #B --- #: last_checked: 2018-11-30 --- #: check_frequency: 7d --- Stralauer Allee: asphaltierter Geh/Radweg mit unbefestigten Abschnitten	Q2 13678,10685 13779,10642 13919,10583
+# REMOVED (mittlerweile wieder der alte Zustand weitgehend wieder hergestellt) --- #: next_check_id: STRALAUERALLEE-2018 --- #: XXX_prog: auf der Fahrbahn (kein benutzungspflichtiger Radweg!) keine Einschränkungen --- #: priority: #B --- #: last_checked: 2018-11-30 --- #: check_frequency: 7d --- Stralauer Allee: asphaltierter Geh/Radweg mit unbefestigten Abschnitten	Q2 13678,10685 13779,10642 13850,10612 13919,10583
 # 
 #: temporary ^^^
 ######################################################################
@@ -80,8 +80,8 @@ Weserstr.: asphaltiert	Q0 11888,9189 12005,9211 12074,9217 12148,9209 12180,9193
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2022/pressemitteilung.1192214.php
 Weserstr.: Asphalt	Q0 12328,9117 12402,9080 12480,9037 12531,9009 12590,8977
 #: next_check_id: WESER-2021
-#: last_checked: 2022-07-19
-#: check_frequency: 21d
+#: last_checked: 2022-08-05
+#: check_frequency: 14d
 #: next_check: 2022-09-15
 Weserstr.: Asphalt, Kreuzungsanbindungen noch nicht fertig	Q1 12590,8977 12740,8862
 Weserstr.: Kopfsteinpflaster, schmale Verbundsteinpflaster-Radwege in teilweise schlechter Qualität	Q2+ 12740,8862 12881,8750 13033,8628 13124,8562 13217,8493 13384,8354 13566,8212 13724,8090
@@ -855,13 +855,13 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2022-07-24
+#: last_checked: 2022-08-05
 #: check_frequency: 120d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
 Uwe-Lieschied-Str.: schlechtes Kopfsteinpflaster	Q3+ 12407,8177 12427,8109
 Falkstr.: Asphalt	Q0 12162,8053 12178,7985 12179,7979
-Falkstr.: Kopfsteinpflaster	Q2 12179,7979 12186,7952 12216,7838 12220,7822
+Falkstr.: Kopfsteinpflaster	Q2 12179,7979 12186,7952 12195,7916 12216,7838 12220,7822
 (Falkstr. - Mittelweg): Verbundsteinpflaster, einige Schäden	Q1- 12220,7822 12224,7799
 Schillerpromenade: Kopfsteinpflaster	Q2- 11661,8131 11689,8006
 Schillerpromenade: Kopfsteinpflaster	Q2 11713,7899 11738,7790 11763,7687 11785,7583 11803,7487
@@ -1054,7 +1054,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9942 (Kopfsteinpflaster bleibt vorerst? außerdem: wird die Colbestr. zur Fahrradstraße?)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2022-08-03
+#: last_checked: 2022-08-06
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -3310,7 +3310,7 @@ Mauerweg Lichterfelde: sehr guter Asphalt	Q0 4034,-255 3982,-181 3941,-127 3908,
 Mauerweg Lichterfelde: Asphalt mit Wurzelschäden	Q1- 3908,-117 3842,-6 3788,26
 Mauerweg Lichterfelde: Asphalt mit Fugen	Q1 3788,26 3767,66 3689,182 3607,283 3417,524
 Alexanderufer: Asphalt	Q0 8315,13042 8315,13181 8314,13323
-Alexanderufer: Asphalt	Q0 8314,13323 8356,13404 8365,13431 8362,13466 8354,13523 8332,13548
+Alexanderufer: Asphalt	Q0 8314,13323 8356,13404 8365,13431 8362,13466 8354,13523 8342,13536 8332,13548
 Koppenstr.: Asphalt	Q0 12532,12150 12573,12227 12592,12472 12632,12630
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/de/bild_tvo_april_2007_2.shtml
 (Weg unterhalb der Spindlersfelder Str.): Verbundsteinpflaster	Q0- 21108,4725 21130,4596 21130,4481
@@ -3833,7 +3833,7 @@ Lahnsteiner Str.: Beton	Q1 18877,8973 18968,8959
 #: XXX wird die Straße hier ausgebaut und asphaltiert?
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7124 (Anfrage von Juli 2017)
 #: by: https://politik-bei-uns.de/file/597985b41ae6a07d5fb74916 (Antwort: soll teilweise mit einem Asphaltstreifen befestigt werden, erster von drei Bauabschnitten 2018)
-#: osm_watch: way id="47159365" version="14"
+#: osm_watch: way id="47159365" version="15"
 #: last_checked: 2022-06-15
 #: check_frequency: 180d
 #: note: früher: "holpriger unbefestigter Fahrweg"
@@ -12133,7 +12133,7 @@ Wilhelm-Caspar-Wegely-Platz: Betonpflaster	Q0- 5621,12150 5606,12232 5604,12244
 Lepsiusstr.: Asphalt mit einigen Schäden und Schlaglöchern	Q0- 4520,5793 4558,5863 4603,5954 4646,6040 4652,6052 4689,6122 4716,6173 4730,6198 4776,6284 4840,6405 4846,6417 4894,6509
 Reichenhaller Str.: Verbundsteinpflaster	Q1 3094,7790 3198,7787
 Hilda-Geiringer-Weg: gepflastert	Q2 8236,13495 8241,13393
-Hilda-Geiringer-Weg: glatt gepflastert	Q1- 8167,13457 8174,13390 8241,13393 8281,13394 8302,13430 8293,13527
+Hilda-Geiringer-Weg: glatt gepflastert	Q1- 8167,13457 8174,13397 8241,13393 8281,13394 8302,13430 8295,13511 8293,13527
 (Pappelallee - Schönhauser Allee): Kopfsteinpflaster	Q2 10916,15098 10883,15129
 (Uferweg am Nordhafen - Havelschanze): wassergebundene Decke	Q1 -2980,16401 -2994,16364 -2973,16354 -3009,16269 -3040,16246
 (Uferweg am Nordhafen - Havelschanze): wassergebundene Decke	Q1 -2973,16354 -2966,16351
@@ -12620,7 +12620,7 @@ Birkbuschstr. - Wolfensteindamm: Asphalt	Q0 4822,5114 4810,5134 4794,5161
 (Neuköllnische Wiesen, Wiesenallee): Verbundsteinpflaster	Q1 14903,7997 14962,7934 14990,7904
 (Neuköllnische Wiesen, Hauptweg): Verbundsteinpflaster	Q1 14903,7997 14968,8046 14976,8053
 (Hänselstr. - Michael-Bohnen-Ring): neues Betonsteinpflaster	Q0- 15143,6865 15251,6745
-(Dieselstr. - westlicher Mergenthalerring): unbefestigte Straße	Q2- 14249,8075 14239,8095 14247,8254 14229,8278
+(Dieselstr. - westlicher Mergenthalerring): unbefestigte Straße	Q2- 14249,8075 14250,8098 14238,8100 14247,8254 14229,8278
 Holstweg: Beton und Asphalt	Q0- -1013,2579 -882,2260
 (Lützelsteiner Weg - Saargemünder Str.): wassergebundene Decke	Q1- 1690,4708 1730,4743
 (Uferweg - Forster Str.): unbefestigt	Q2 12280,9728 12286,9739
@@ -12686,6 +12686,7 @@ Goltzstr.: Asphalt mit einigen Schäden	Q1; 11073,-2037 10983,-2116
 (Falkstr. - Morusstr.): Kopfsteinpflaster	Q2+ 12186,7952 12219,7958
 #: note: einige kurze gepflasterte Abschnitte
 (Falkstr. - Morusstr.): Verbundsteinpflaster	Q1- 12219,7958 12407,8000 12439,8014 12450,8016
+(Falkstr. - Morusstr.): Verbundsteinpflaster, einige gepflasterte Abschnitte	Q1- 12195,7916 12414,7965 12450,7963 12462,7965
 Leonore-Goldschmidt-Str.: Steinplatten, etwas uneben	Q1+ 3224,8106 3326,8100
 #: by: osm, mapillary
 Kletterrosenweg: Verbundsteinpflaster	Q1+ 21382,149 21344,300
@@ -12694,6 +12695,7 @@ Alte Potsdamer Str.: Kleinsteinpflaster	Q1 8389,11378 8375,11368
 Straßenbahnwendeschleife Langenbeckstr.: Asphalti mit Rissen und Schäden	Q1+ 12925,13373 13081,13457
 (Dolgenseestr., Erschließungsweg): Beton, Betonpflaster	Q0- 17288,9952 17412,9911
 Singerstr.: Asphalt mit Querrissen	Q0- 11635,12398 11613,12408 11497,12463
+(Friedrich-List-Ufer - Hilda-Geiringer-Weg): glatt gepflastert	Q1 8099,13391 8106,13393 8111,13358 8119,13396 8174,13397
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -30047,7 +30049,7 @@ Rettigweg: mäßiges bis schlechtes Kopfsteinpflaster	Q2- 9831,17652 9760,17612 97
 #: confirmed_by: srt (zumindest die Existenz des Asphalts)
 Pradelstr.: mäßiger Asphalt	Q2+ 9760,17612 9660,17736
 #: confirmed_by: srt
-Friedrich-List-Ufer: sehr guter Asphalt	Q0 8110,13042 8106,13130 8102,13304 8098,13419
+Friedrich-List-Ufer: sehr guter Asphalt	Q0 8110,13042 8106,13130 8102,13304 8099,13391 8098,13419
 #: by: ^^^
 # 
 #: by: anonymous [AM]
