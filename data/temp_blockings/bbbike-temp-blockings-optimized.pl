@@ -4299,7 +4299,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
 #: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-07-20 (mapillary)
+#: last_checked: 2022-07-22 (mapillary)
 #: check_frequency: 21d
 #: next_check_id: 2022-08-31
 	q4::inwork; 11329,12497 11209,12430
@@ -5705,13 +5705,14 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'data' => '#: next_check_id: HAEMMERLING-2022
 #: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00
 #: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig
-	q4::inwork 21984,6317 21856,6390
+#: note: anscheinend auch für Fußgänger gesperrt, hier gibt es keinen Gehweg
+	2::inwork 21984,6317 21856,6390
 ',
          'from' => 1651953282,
          'id' => 3548,
          'source_id' => 'https://nitter.net/VIZ_Berlin/status/1522508674073350144#m',
-         'text' => 'Schubertstr.: Baustelle, Fahrbahn gesperrt, voraussichtlich bis 30.11.2022',
-         'type' => 'handicap',
+         'text' => 'Schubertstr.: Baustelle, Straße gesperrt, voraussichtlich bis 30.11.2022',
+         'type' => 'gesperrt',
          'until' => 1669849200
        },
        {
@@ -6067,15 +6068,17 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'from' => undef,
          'id' => 3596,
          'source_id' => 'viz2021:13.385942,52.484944,11.07.2022,06:07',
-         'text' => 'Platz der Luftbrücke: Wasserrohrbruch, Fahrbahn und Gehweg Richtung Osten gesperrt, Umweg über Wege in der Parkfläche, bis 9.8.2022',
+         'text' => 'Platz der Luftbrücke: Wasserrohrbruch, Fahrbahn und Gehweg Richtung Osten gesperrt, Umweg über Wege in der Parkfläche, bis 15.8.2022',
          'type' => 'handicap',
-         'until' => 1660082400
+         'until' => 1660575600
        },
        {
          'data' => '#: next_check_id: WALLENSTEIN-2022
+#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags vvv
 Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
 Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
 Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
+#: note ^^^
 ',
          'from' => 1659546069,
          'id' => 3597,
@@ -6106,22 +6109,29 @@ Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
 #: by: https://viz.berlin.de/2022/08/waldbrand-im-grunewald/ (bis auf Weiteres)
 #: by: https://berliner-abendblatt.de/2022/08/06/bahn-kann-wieder-durch-berliner-grunewald-fahren/ (Avus mindestens bis 2022-08-07 gesperrt)
 #: by: https://berliner-abendblatt.de/2022/08/06/feuerwehr-noch-einige-tage-sperrkreis-um-sprengplatz/
+#: by: https://nitter.it/VIZ_Berlin/status/1556286617232490498#m
+#: by: https://berliner-abendblatt.de/2022/08/07/feuerwehr-will-gefahrenbereich-um-sprengplatz-verkleinern-2/
+#: by: https://berliner-abendblatt.de/2022/08/08/berliner-feuerwehr-autobahn-avus-bleibt-weiter-gesperrt/
+#: by: https://berliner-abendblatt.de/2022/08/09/hubschrauber-sollen-sprengplatz-mit-wasser-aus-luft-kuehlen/
+#: by: https://nitter.cz/VIZ_Berlin/status/1556967983343439877#m
+#: by: https://nitter.cz/VIZ_Berlin/status/1556901867388604417#m
 #: source_id: viz2021:13.194739,52.449865,04.08.2022,07:00
 #: source_id: viz2021:13.242156,52.468429,04.08.2022,06:32
 #: source_id: viz2021:13.250049,52.457088,04.08.2022,06:31
-#: last_checked: 2022-08-06 (research) vvv
+#: last_checked: 2022-08-09 (research) vvv
 #: check_frequency: 1d vvv
 	2::temp -1328,7597 -1851,6887 -1493,6984 -1241,7017 -1006,6911 -927,6888 -2218,5133 -3296,3686
 	2::temp -2634,6907 -2668,6862 -2581,6834 -2468,6839 -2366,6869 -2230,6909 -2080,6897 -1925,6790 -2825,5588 -2218,5133 -2112,5050 -1424,4504
 	2::temp -1851,6887 -1925,6790
 	2::temp -2668,6862 -2632,6789 -2638,6641
 # weitere Sperrungen im Grunewald möglich (Havelchaussee, Koenigsallee, Hüttenweg)
-	2::temp 40,5606 -119,5885 -150,6168 -138,6681 -739,6838 -927,6888
-	2::temp -138,6681 674,7758
+#Onkel-Tom-Str.	2::temp 40,5606 -119,5885 -150,6168 -138,6681
+#Koenigsallee	2::temp -138,6681 674,7758
+#Teltower Weg	2::temp -119,5885 -182,5927 -288,6101
+Hüttenweg	2::temp -138,6681 -739,6838 -927,6888
 	2::temp -2774,10345 -3025,10116 -3178,9953 -3412,9755 -3426,9684 -3347,9541 -3213,9425 -3140,9294 -3073,9061 -3283,8739 -3389,8624 -3578,8578 -3615,8496 -3567,8031 -3561,7964 -3536,7856 -3531,7825 -3496,7677 -3355,6874 -3382,6821 -3483,6789 -3530,6781 -3589,6721 -3598,6572 -3606,6407 -3723,6254 -3880,6142 -3944,6034 -4003,5621 -4046,5505 -4072,5227 -3962,5129
 	2::temp -1588,9194 -1484,9175 -1435,9168 -1279,9093
 	2::temp -913,6905 -1020,7446 -1040,7550 -1112,7891 -1317,8836 -1336,9001 -1435,9168 -1487,9271 -1529,9465 -1464,9626 -1467,9768 -1491,9801 -1602,9915 -1860,10317
-	2::temp -119,5885 -182,5927 -288,6101
 	2::temp -2825,5588 -3021,5328 -3093,5223 -3605,4536
 	2::temp -360,9193 -310,8989
 	2::temp -3962,5129 -3889,4967 -3807,4794 -3729,4687 -3605,4536 -3490,4212 -3296,3686 -3680,3160 -3768,3069 -4001,2858
@@ -6134,6 +6144,16 @@ Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
          'text' => 'Waldbrand im Grunewald: Kronprinzessinenweg, Wege rund um den Sprengplatz und vermutlich auch weitere Straßen (Havelchaussee, Hüttenweg...) sind gesperrt',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '	q4::inwork -1167,10873 -1318,10854
+',
+         'from' => 1659844800,
+         'id' => 3600,
+         'source_id' => 'viz2021:13.231908,52.505332,08.08.2022,06:00',
+         'text' => 'Kranzallee: Baustelle in Höhe Kiplingweg, Sperrung, evtl. sind auch Radfahrer betroffen, vom 08.08.2022 06:00 bis 30.09.2022 20:00 ',
+         'type' => 'handicap',
+         'until' => 1664560800
        }
      
 );
