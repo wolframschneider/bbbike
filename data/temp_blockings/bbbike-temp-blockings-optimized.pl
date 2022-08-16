@@ -4167,10 +4167,10 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: source_id: viz2021:13.387177,52.552566,24.05.2019,11:02 (bis 31.3.2022) (mittlerweile bis 30.11.2022)
 #: source_id: viz2021:13.38743,52.55268,14.09.2021,19:35 (bis 31.3.2022, doppelter Eintrag) (inaktiv)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11007 (Frage)
-#: note: laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021, mittlerweile bis Juli 2022
+#: note: laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021, mittlerweile bis Juli 2022 (wird nicht mehr aktualisiert)
 #: also_indoor: traffic (ex-H,B,ex-G)
 #: osm_watch: way id="1006570991" version="1"
-#: last_checked: 2022-07-08
+#: last_checked: 2022-08-13 (mapillary)
 #: check_frequency: 45d
 #: next_check: 2022-11-30
 	q3::inwork  8986,16092 9178,16317
@@ -5468,10 +5468,10 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
-#: last_checked: 2022-08-03 (osm) vvv
+#: last_checked: 2022-08-13 (osm) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-02-12 vvv
-#: osm_watch: way id="4395450" version="27"
+#: osm_watch: way id="4395450" version="28"
 	2::inwork 7031,12320 6694,12627
 #: osm_watch: way id="505363417" version="12"
 	2::inwork 6631,12707 6694,12627
@@ -5665,7 +5665,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: source_id: viz2021:13.47859,52.47157,11.04.2022,09:00 (zusätzlicher Eintrag, bis 1.8.2022) (mittlerweile inaktiv)
 #: by: https://nitter.net/VIZ_Berlin/status/1524307007557222401#m
 #: by: https://nitter.net/pic/media%2FFSdtBqDX0AEFDN8.jpg%3Fname%3Dorig
-#: note: Baustelle existiert weiterhin, trotz der entfernten VIZ-Meldung
+#: note: Baustelle existiert weiterhin, trotz der entfernten VIZ-Meldung; laut rbb bis 30.11.2022
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? oder nur bis August 2022? vvv
 #: last_checked: 2022-08-11 vvv
 #: check_frequency: 14d vvv
@@ -6107,20 +6107,10 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'type' => 'handicap',
          'until' => 1667232000
        },
-       {
-         'data' => '#: by: https://viz.berlin.de/2022/07/verkehrsvorschau-12072022/
-	q4::inwork; 9229,8785 9272,8781 9395,8726
-',
-         'from' => undef,
-         'id' => 3596,
-         'source_id' => 'viz2021:13.385942,52.484944,11.07.2022,06:07',
-         'text' => 'Platz der Luftbrücke: Wasserrohrbruch, Fahrbahn und Gehweg Richtung Osten gesperrt, Umweg über Wege in der Parkfläche, bis 15.8.2022',
-         'type' => 'handicap',
-         'until' => 1660575600
-       },
+       undef,
        {
          'data' => '#: next_check_id: WALLENSTEIN-2022
-#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags vvv
+#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags, 2022-08-14 mittags vvv
 Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
 Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
 Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
@@ -6129,24 +6119,11 @@ Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
          'from' => 1659546069,
          'id' => 3597,
          'source_id' => 'viz2021:13.516327,52.486802,02.08.2022,07:00',
-         'text' => 'Walllensteinstr.: Bauarbeiten zwischen Ilsestr. und Sangeallee, Fahrbahn gesperrt, bis 16.12.2022 ',
+         'text' => 'Walllensteinstr.: Bauarbeiten zwischen Ilsestr. und Sangeallee, Fahrbahn gesperrt, bis 16.12.2022',
          'type' => 'handicap',
          'until' => 1671231600
        },
-       {
-         'data' => '#: by: https://partner-fuer-spandau.de/veranstaltungen/spandauer-sommerklassiker-das-spandauer-havelfest/263
-	2::temp -2918,14496 -2964,14478 -3026,14358 -3054,14305 -3091,14220 -3135,14183 -3275,14114
-	2::temp -3054,14305 -3019,14286
-	2::temp -2964,14478 -2939,14433 -3019,14286 -3042,14255 -3059,14230 -3090,14198 -3153,14141 -3187,14116 -3291,14043 -3306,14035 -3345,13994
-	2::temp -3042,14255 -3091,14220
-',
-         'from' => 1660168800,
-         'id' => 3598,
-         'source_id' => 'https://berliner-abendblatt.de/2022/08/03/spandauer-havelfest-nach-zwei-jahren-pause-zurueck/',
-         'text' => 'Lindenufer und Havelpromenade: Veranstaltung (Havelfest), Straßen und Wege können gesperrt sein, 12. bis 14. August 2022',
-         'type' => 'gesperrt',
-         'until' => 1660514399
-       },
+       undef,
        {
          'data' => '#: by: https://nitter.it/VIZ_Berlin/status/1555042445792092164#m
 #: by: https://berliner-abendblatt.de/2022/08/04/feuerwehr-einsatz-im-grunewald-zieht-sich-bis-freitag/
@@ -6168,11 +6145,13 @@ Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
 #: by: https://nitter.cz/VIZ_Berlin/status/1558046983465615360#m
 #: by: https://nitter.cz/VIZ_Berlin/status/1558124118003879937#m (Kronprinzessinenweg weiterhin gesperrt)
 #: by: https://nitter.cz/VIZ_Berlin/status/1558123538028138498#m (Hüttenweg ebenso)
+#: by: https://nitter.cz/Kemistorm/status/1559047585553231872#m
+#: by: https://nitter.cz/brliner5/status/1558910908885237760#m
 #: source_id: viz2021:13.194739,52.449865,04.08.2022,07:00 (inaktiv)
 #: source_id: viz2021:13.242156,52.468429,04.08.2022,06:32 (inaktiv)
 #: source_id: viz2021:13.250049,52.457088,04.08.2022,06:31 (inaktiv)
 #: source_id: viz2021:13.219236,52.456277,11.08.2022,07:03
-#: last_checked: 2022-08-13 (research) vvv
+#: last_checked: 2022-08-15 (research) vvv
 #: check_frequency: 1d vvv
 Hüttenweg (westlicher Abschnitt)	2::temp -1851,6887 -1493,6984 -1241,7017 -1006,6911 -927,6888
 Kronprinzessinenweg (NN)	2::temp -927,6888 -2218,5133 -3296,3686
@@ -6201,16 +6180,7 @@ Hüttenweg	2::temp -138,6681 -739,6838 -927,6888
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '	q4::inwork -1167,10873 -1318,10854
-',
-         'from' => 1659844800,
-         'id' => 3600,
-         'source_id' => 'viz2021:13.231908,52.505332,08.08.2022,06:00',
-         'text' => 'Kranzallee: Baustelle in Höhe Kiplingweg, Sperrung, evtl. sind auch Radfahrer betroffen, vom 08.08.2022 06:00 bis 30.09.2022 20:00 ',
-         'type' => 'handicap',
-         'until' => 1664560800
-       },
+       undef,
        {
          'data' => '	q4::inwork; 13622,12806 13818,12897
 ',
@@ -6240,6 +6210,20 @@ Hüttenweg	2::temp -138,6681 -739,6838 -927,6888
          'from' => undef,
          'id' => 3602,
          'text' => 'Fidicinstr./Am Tempelhofer Berg: Bauarbeiten im Einmündungsbereich, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
+#: last_checked: 2022-08-14 vvv
+	q3::inwork 16887,10271 16855,10127
+	q4::inwork 16855,10127 16847,10092
+#: last_checked ^^^
+#: add_fragezeichen ^^^
+',
+         'from' => undef,
+         'id' => 3603,
+         'text' => 'Salzmannstr.: Leitungsarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        }
