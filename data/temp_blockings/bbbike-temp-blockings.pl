@@ -32017,7 +32017,7 @@ EOF
 #: source_id: viz2021:13.428783,52.478213,06.04.2020,07:00 (bis 31.03.2025)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G,H,B)
-#: last_checked: 2022-04-18
+#: last_checked: 2022-08-16
 #: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -35728,7 +35728,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: also_indoor: traffic (ex-H(incomplete),B(incomplete)) vvv
-#: last_checked: 2022-08-13 vvv
+#: last_checked: 2022-08-16 vvv
 	q3::inwork; 13102,8343 12995,8213 12960,8246
 	q3::inwork 12995,8213 13060,8148
 #: last_checked ^^^
@@ -35737,9 +35737,9 @@ EOF
      },
      { from  => 1658631600, # 2022-07-24 05:00
        until => 1661180400, # 2022-08-22 17:00
-       text  => 'Bereich Hackescher Markt: Gleisarbeiten, Richtung An der Spandauer Brücke sowie Große Präsidentenstr. gesperrt, vom 25.07.2022 05:00 bis 22.08.2022 17:00',
+       text  => 'Bereich Hackescher Markt: Gleisarbeiten, Richtung An der Spandauer Brücke sowie Große Präsidentenstr. gesperrt, vom 25.07.2022 05:00 bis 22.08.2022 17:00, evtl. auch nur bis Freitag Abend',
        type  => 'handicap',
-       source_id => 'viz2021:13.40229,52.523644,25.07.2022,05:00',
+       source_id => 'viz2021:13.40229,52.523644,25.07.2022,05:00', # mittlerweile nur noch bis 19.8.2022
        data  => <<EOF,
 #: by: https://nitter.it/VIZ_Berlin/status/1551255892011716609#m
 #: by: https://nitter.it/pic/orig/enc/bWVkaWEvRllNNkVpeVhrQUUxVXo3LmpwZw==
@@ -35804,12 +35804,13 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2022-08-15 17:00:00"), # 1660082400, # 2022-08-10 00:00
-       text  => 'Platz der Luftbrücke: Wasserrohrbruch, Fahrbahn und Gehweg Richtung Osten gesperrt, Umweg über Wege in der Parkfläche, bis 15.8.2022',
+       until => undef, # $isodate2epoch->("2022-08-15 17:00:00"), # 1660082400, # 2022-08-10 00:00
+       text  => 'Platz der Luftbrücke: Wasserrohrbruch, Fahrbahn und Gehweg Richtung Osten gesperrt, Umweg über Wege in der Parkfläche, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        source_id => 'viz2021:13.385942,52.484944,11.07.2022,06:07', # ursprünglich bis 9.8.2022, mittlerweile bis 15.8.2022
        data  => <<EOF,
 #: by: https://viz.berlin.de/2022/07/verkehrsvorschau-12072022/
+#: source_id: viz2021:13.38606,52.48488,11.07.2022,12:01
 	q4::inwork; 9229,8785 9272,8781 9395,8726
 EOF
      },
@@ -35869,11 +35870,14 @@ EOF
 #: by: https://nitter.cz/VIZ_Berlin/status/1558123538028138498#m (Hüttenweg ebenso)
 #: by: https://nitter.cz/Kemistorm/status/1559047585553231872#m
 #: by: https://nitter.cz/brliner5/status/1558910908885237760#m
+#: by: https://viz.berlin.de/2022/08/sprengplatz-grunewald/ (Kronprinzessinenweg weiterhin gesperrt)
+#: by: https://nitter.cz/VIZ_Berlin/status/1559866883565912064#m (Sperrung könnte mehrere Wochen lang andauern)
+#: note: check now with https://nitter.cz/search?f=tweets&q=Kronprinzessinnenweg&since=2022-08-16&until=&near=
 #: source_id: viz2021:13.194739,52.449865,04.08.2022,07:00 (inaktiv)
 #: source_id: viz2021:13.242156,52.468429,04.08.2022,06:32 (inaktiv)
 #: source_id: viz2021:13.250049,52.457088,04.08.2022,06:31 (inaktiv)
 #: source_id: viz2021:13.219236,52.456277,11.08.2022,07:03
-#: last_checked: 2022-08-15 (research) vvv
+#: last_checked: 2022-08-17 (research) vvv
 #: check_frequency: 1d vvv
 Hüttenweg (westlicher Abschnitt)	2::temp -1851,6887 -1493,6984 -1241,7017 -1006,6911 -927,6888
 Kronprinzessinenweg (NN)	2::temp -927,6888 -2218,5133 -3296,3686
@@ -35947,6 +35951,30 @@ EOF
 	q4::inwork 16855,10127 16847,10092
 #: last_checked ^^^
 #: add_fragezeichen ^^^
+EOF
+     },
+     { from  => undef, # 
+       until => $isodate2epoch->("2022-08-21 23:59:59"),
+       text  => 'Zietenplatz: Veranstaltung, Sperrung der Fahrbahn, voraussichtlich bis 21.8.2022',
+       type  => 'handicap',
+       data  => <<EOF,
+#: note: vermutlich für den Tag der offenen Tür der Bundesregierung, 20.+21. August 2022; Sperrung der Fahrbahn bereits am Dienstag vorher
+#: by: https://www.bundesregierung.de/breg-de/themen/tag-der-offenen-tuer/veranstaltungen-tag-der-offenen-tuer-2022/bundesministerium-fuer-arbeit-und-soziales-2063814
+	q4::temp 9075,11756 9171,11777
+EOF
+     },
+     { from  => 1660582743, # 2022-08-15 18:59
+       until => $isodate2epoch->("2022-09-12 17:00:00"), # 1672527600, # 2023-01-01 00:00
+       text  => 'Hüttenweg: Anbindung Clayallee gesperrt',
+       type  => 'handicap',
+       source_id => 'https://viz.berlin.de/2022/08/verkehrsvorschau-170822/', # "bis 2023"
+       data  => <<EOF,
+#: source_id: viz2021:13.272377,52.453518,17.08.2022,09:00 (hier nur bis 12.9.2022)
+#: by: https://nitter.cz/VIZ_Berlin/status/1559793397908381696#m
+#: by: https://nitter.cz/pic/media%2FFaSkXFdX0AQFyze.jpg%3Fname%3Dorig
+#: by: https://nitter.cz/pic/media%2FFaSkXFeXEAAqM9x.jpg%3Fname%3Dorig
+	q4::inwork 1514,5163 1573,5152
+	q2::inwork 1573,5152 1964,5070
 EOF
      },
     );
