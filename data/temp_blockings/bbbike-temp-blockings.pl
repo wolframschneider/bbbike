@@ -2855,7 +2855,7 @@ EOF
        text  => 'B 166 Zichow-Gramzow OD Gramzow Kanal- und Straßenbau Vollsperrung 26.11.2005-22.12.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 50107,89717 49930,89857
+	q4 50107,89708 49930,89857
 EOF
      },
      { from  => 1126994400, # 2005-09-18 00:00
@@ -3570,7 +3570,7 @@ EOF
        text  => 'L 74 Chausseestr. Eisenbahnbrücke in der OD Wünsdorf Brückenbauarbeiten Vollsperrung; Umleitung 07.12.2005-08.12.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 15682,-26971 15229,-27157
+	2 15682,-26971 15223,-27156
 	2 15682,-26971 15962,-26911
 EOF
      },
@@ -3968,7 +3968,7 @@ EOF
        text  => 'L 074 Chausseestraße OL Wünsdorf, Bahnbrücke Brückenbauarbeiten Vollsperrung 02.05.2006-02.05.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 15682,-26971 15229,-27157
+	2 15682,-26971 15223,-27156
 	2 15682,-26971 15962,-26911
 EOF
      },
@@ -3977,7 +3977,7 @@ EOF
        text  => 'L 074 Chausseestraße OL Wünsdorf, Bahnbrücke Brückenbauarbeiten Vollsperrung 30.03.2006-30.03.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 15682,-26971 15229,-27157
+	2 15682,-26971 15223,-27156
 	2 15682,-26971 15962,-26911
 EOF
      },
@@ -4422,7 +4422,7 @@ EOF
        text  => 'L 074 Chausseestraße OL Wünsdorf, Bahnbrücke Brückenbauarbeiten Vollsperrung 12.05.2006-12.05.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 15682,-26971 15229,-27157
+	2 15682,-26971 15223,-27156
 	2 15682,-26971 15962,-26911
 EOF
      },
@@ -4759,7 +4759,7 @@ EOF
        text  => 'L 074 Chausseestraße OL Wünsdorf, zw. Cottbusser/Berliner Str. u. Seestr. Kanalverlegung Vollsperrung 19.06.2006-11.08.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 15962,-26911 15682,-26971 15229,-27157
+	2::inwork 15962,-26911 15682,-26971 15223,-27156
 EOF
      },
      { from  => 1149623437, # 2006-06-06 21:50
@@ -7347,7 +7347,7 @@ EOF
        text  => 'B 113 B 2-Damitzow Bahnübergang in der OD Tantow Gleisbauarbeiten Vollsperrung 06.03.2007-10.03.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 73204,97424 73031,97443 73017,97449 72960,97477 72583,97595
+	2::inwork 73204,97424 73031,97443 73016,97447 72945,97466 72614,97584
 EOF
      },
      { from  => 1172962800, # 2007-03-04 00:00
@@ -7453,7 +7453,7 @@ EOF
        text  => 'B 113 B 2-Damitzow Bahnübergang in der OD Tantow Gleisbauarbeiten Vollsperrung 16.03.2007-19.03.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 73204,97424 73031,97443 73017,97449 72960,97477 72583,97595
+	2::inwork 73204,97424 73031,97443 73016,97447 72945,97466 72614,97584
 EOF
      },
      { from  => undef, # 
@@ -7547,7 +7547,7 @@ EOF
        text  => 'B 113 B 2-Damitzow Bahnübergang in der OD Tantow Gleisbauarbeiten Vollsperrung 23.03.2007-26.03.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 73204,97424 73031,97443 73017,97449 72960,97477 72583,97595
+	2::inwork 73204,97424 73031,97443 73016,97447 72945,97466 72614,97584
 EOF
      },
      { from  => 1174258800, # 2007-03-19 00:00
@@ -11270,7 +11270,7 @@ EOF
        text  => 'B 113 B 2 - Damitzow - BG Bahnübergang in der OD Tantow Gleisbauarbeiten Vollsperrung 21.03.2008-24.03.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 72960,97477 73017,97449 73031,97443
+	2::inwork 72945,97466 73016,97447 73031,97443
 EOF
      },
      { from  => 1207432800, # 2008-04-06 00:00
@@ -28236,7 +28236,7 @@ EOF
 #: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
 #: XXX keine Bauarbeiten mehr, aber die Schilder sind geblieben --- vielleicht permanent?
-#: last_checked: 2022-08-06
+#: last_checked: 2022-08-23
 #: check_frequency: 30d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 EOF
@@ -28639,7 +28639,7 @@ EOF
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1191050.php
 #: osm_watch: way id="29547073" version="11"
 #: XXX Nach den Bauarbeiten vermutlich bessere Qualität
-#: last_checked: 2022-08-11
+#: last_checked: 2022-08-24
 # REMOVED --- #: next_check: 2022-05-01
 	2::inwork 14980,8940 14947,8993 14855,9046 14705,9034
 EOF
@@ -31087,7 +31087,7 @@ EOF
 #: next_check_id: CORONA-2020
 #: by: https://www.charite.de/klinikum/themen_klinikum/themenschwerpunkt_coronavirus/#c30751057 (Eingangskontrollen)
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2022-07-31 vvv
+#: last_checked: 2022-08-23 vvv
 #: check_frequency: 120d vvv
 	2::temp 6159,14921 6231,14952 6305,14964 6414,14981 6400,15080 6433,15085 6431,15098 6545,15116
 	2::temp 6104,14937 6025,14924 6012,15024 6007,15053 5998,15112 6056,15162 6170,15263 6265,15349
@@ -31727,7 +31727,7 @@ EOF
        source_id => 'http://www.berlin-usedom-radweginfo.de/neuer_weg.php',
        data  => <<EOF,
 #: by: wosch
-	2::inwork 38096,68983 38048,68993
+	2::inwork 38123,68982 38048,68993
 EOF
      },
      { from  => undef, # 
@@ -32783,7 +32783,7 @@ EOF
 EOF
      },
      { from  => 1618696800, # 2021-04-18 00:00
-       until => 1662069600, # 2022-09-02 00:00
+       until => 1661192906, # 1662069600, # 2022-09-02 00:00
        text  => 'Ortsdurchfahrt Kerkow: Bauarbeiten und Ersatzneubau Brücke, möglicherweise auch für Radfahrer gesperrt, vom 19.04.2021 bis 01.09.2022',
        type  => 'gesperrt',
        source_id => 'LS/721-E/21/032',
@@ -34538,7 +34538,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 EOF
      },
      { from  => 1642917600, # 2022-01-23 07:00
-       until => $isodate2epoch->("2022-09-02 17:00:00"), # 1653663600, # 2022-05-27 17:00
+       until => 1661192947, # $isodate2epoch->("2022-09-02 17:00:00"), # 1653663600, # 2022-05-27 17:00
        text  => 'Roseggerstr.: Bauarbeiten zwischen Sonnenallee und Stuttgarter Str., Fahrbahn gesperrt, vom 24.01.2022 07:00 bis 02.09.2022 17:00',
        type  => 'handicap',
        source_id => 'viz2021:13.445809,52.479541,24.01.2022,07:00', # bis 13.8.2022, im Anschluss weitere Arbeiten; mittlerweile bis 2.9.2022
@@ -34546,9 +34546,7 @@ EOF
 #: source_id: viz2021:13.445912,52.478966,13.06.2022,07:00 (zusätzliche Meldung zur Sonnenallee)
 #: source_id: viz2021:13.4453,52.47919,24.01.2022,07:00 (zusätzlicher Eintrag)
 #: source_id: viz2021:13.4453,52.47919,13.06.2022,07:00 (zusätzlicher Eintrag)
-#: also_indoor: traffic (G,ex-H,B)
-#: last_checked: 2022-06-24
-#: next_check: 2022-09-02
+# REMOVED --- #: also_indoor: traffic (G,ex-H,B) --- #: last_checked: 2022-06-24 --- #: next_check: 2022-09-02
 	q4::inwork 13277,8211 13331,8283
 EOF
      },
@@ -34650,6 +34648,7 @@ EOF
 #: next_check_id: FUERSTENDAMM-2022
 #: by: https://berliner-abendblatt.de/2022/02/09/fuerstendamm/
 #: by: https://www.berliner-woche.de/frohnau/c-verkehr/bauarbeiten-auf-dem-fuerstendamm-ab-9-maerz_a335966
+#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1238153.php
 #: source_id: 226500387 (bis 31.12.2022)
 #: source_id: viz2021:13.298114,52.631634,09.03.2022,07:00 (bis 31.12.2022)
 #: XXX Wann beginnt der 2. Bauabschnitt: Eltviller Straße bis Oranienburger Chaussee?
@@ -34840,7 +34839,7 @@ EOF
 #: add_fragezeichen: Wie lange dauern die Bauarbeiten an?
 #: also_indoor: traffic (G(falsch?),B(teilweise))
 #: priority: #B
-#: last_checked: 2022-07-31 vvv
+#: last_checked: 2022-08-23 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-09-30 vvv
 	q4::inwork; 7259,14870 7209,14927 7182,14986
@@ -34934,7 +34933,7 @@ EOF
 #: XXX Bleibt es bei der möglichen Durchfahrt?
 #: osm_watch: node id="1511805342" version="4"
 #: osm_watch: node id="9448539551" version="1"
-#: last_checked: 2022-08-05
+#: last_checked: 2022-08-24
 	2 14249,8075 14250,8098 14238,8100 14247,8254 14229,8278
 EOF
      },
@@ -35011,8 +35010,9 @@ EOF
 #: by: https://nitter.net/pic/media%2FFSdtBqDX0AEFDN8.jpg%3Fname%3Dorig
 #: note: Baustelle existiert weiterhin, trotz der entfernten VIZ-Meldung; laut rbb bis 30.11.2022
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? oder nur bis August 2022? vvv
+#: also_indoor: traffic (G,H,B) vvv
 #: last_checked: 2022-08-11 vvv
-#: check_frequency: 14d vvv
+#: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2022-08-02 vvv
 	q4::inwork; 15560,7400 15693,7512
 #: note: teilweise ragt die Baustellenabsperrung in den Radweg Richtung Kiefholzstraße rein
@@ -35020,6 +35020,7 @@ EOF
 # REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
+#: also_indoor ^^^
 #: XXX ^^^
 EOF
      },
@@ -35211,17 +35212,17 @@ EOF
 	q4::inwork; 16166,25767 16121,25818
 EOF
      },
-     { #from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-05-12 00:00:00") }, # 1 Tag Vorlauf
-       from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("2022-08-25 00:00:00") }, # 1 Tag Vorlauf
-       until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("2022-09-30 18:30:00") }, # nur temporäre Schilder, wird noch nach den Sommerferien 2022 verlängert?
+     { from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-05-12 00:00:00") }, # 1 Tag Vorlauf
+       #from  => do { my $year = (localtime)[5]+1900; $isodate2epoch->("2022-08-25 00:00:00") }, # 1 Tag Vorlauf
+       until => do { my $year = (localtime)[5]+1900; $isodate2epoch->("$year-09-30 18:30:00") }, # nur temporäre Schilder, gibt es die Spielstraße auch 2023?
        text  => 'Wrangelstr.: zwischen Sorauer Str. und Oppelner Str. freitags zwischen 15:30 und 18:30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 26.08. bis Ende September',
        type  => 'handicap',
        source_id => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php',
        data  => <<EOF,
-#: XXX laut Pressemitteilung "Wrangelstraße, zwischen Sorauer Straße und Oppelner Straße, freitags 15.30 bis 18.30 Uhr, 13. Mai bis September, außer in den Sommerferien" -> nach den Sommerferien nachschauen und ggfs. verlängern
 #: by: http://spielstraßen.de/uebersicht.php#kreu
-#: last_checked: 2022-06-22
-#: next_check: 2022-08-26
+#: XXX laut Pressemitteilung "Wrangelstraße, zwischen Sorauer Straße und Oppelner Straße, freitags 15.30 bis 18.30 Uhr, 13. Mai bis September, außer in den Sommerferien" -> nach den Sommerferien nachschauen und ggfs. verlängern -> 2023 nachschauen
+#: last_checked: 2022-08-23
+#: next_check: 2023-05-12
 	q4::temp::play 12822,10487 12897,10439
 EOF
      },
@@ -35736,7 +35737,7 @@ EOF
 EOF
      },
      { from  => 1658631600, # 2022-07-24 05:00
-       until => 1661180400, # 2022-08-22 17:00
+       until => 1661112619, # 1661180400, # 2022-08-22 17:00
        text  => 'Bereich Hackescher Markt: Gleisarbeiten, Richtung An der Spandauer Brücke sowie Große Präsidentenstr. gesperrt, vom 25.07.2022 05:00 bis 22.08.2022 17:00, evtl. auch nur bis Freitag Abend',
        type  => 'handicap',
        source_id => 'viz2021:13.40229,52.523644,25.07.2022,05:00', # mittlerweile nur noch bis 19.8.2022
@@ -35804,10 +35805,10 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # $isodate2epoch->("2022-08-15 17:00:00"), # 1660082400, # 2022-08-10 00:00
-       text  => 'Platz der Luftbrücke: Wasserrohrbruch, Fahrbahn und Gehweg Richtung Osten gesperrt, Umweg über Wege in der Parkfläche, Ende der Bauarbeiten unbekannt',
+       until => $isodate2epoch->("2022-08-25 14:00:00"), # 1660082400, # 2022-08-10 00:00
+       text  => 'Platz der Luftbrücke: Wasserrohrbruch, Fahrbahn und Gehweg Richtung Osten gesperrt, Umweg über Wege in der Parkfläche, bis 25.8.2022',
        type  => 'handicap',
-       source_id => 'viz2021:13.385942,52.484944,11.07.2022,06:07', # ursprünglich bis 9.8.2022, mittlerweile bis 15.8.2022
+       source_id => 'viz2021:13.385942,52.484944,11.07.2022,06:07', # ursprünglich bis 9.8.2022, mittlerweile bis 15.8.2022, bis 25.8.2022
        data  => <<EOF,
 #: by: https://viz.berlin.de/2022/07/verkehrsvorschau-12072022/
 #: source_id: viz2021:13.38606,52.48488,11.07.2022,12:01
@@ -35844,7 +35845,7 @@ EOF
      { from  => undef, # 
        until => undef, # XXX
        # früher: Waldbrand im Grunewald: Kronprinzessinenweg, Wege rund um den Sprengplatz und vermutlich auch weitere Straßen (Havelchaussee, Hüttenweg...) sind gesperrt
-       text  => 'Waldbrand im Grunewald: Kronprinzessinenweg, Wege rund um den Sprengplatz und Hüttenweg sind vermutlich weiterhin gesperrt',
+       text  => 'Waldbrand im Grunewald: Kronprinzessinenweg und Wege rund um den Sprengplatz sind vermutlich weiterhin gesperrt',
        type  => 'gesperrt',
 #       accept_multi_feature_distance => 3000,
        data  => <<EOF,
@@ -35872,26 +35873,34 @@ EOF
 #: by: https://nitter.cz/brliner5/status/1558910908885237760#m
 #: by: https://viz.berlin.de/2022/08/sprengplatz-grunewald/ (Kronprinzessinenweg weiterhin gesperrt)
 #: by: https://nitter.cz/VIZ_Berlin/status/1559866883565912064#m (Sperrung könnte mehrere Wochen lang andauern)
-#: note: check now with https://nitter.cz/search?f=tweets&q=Kronprinzessinnenweg&since=2022-08-16&until=&near=
+#: by: https://nitter.cz/VIZ_Berlin/status/1560176606701830145#m
+#: by: https://nitter.cz/P_Groeschel/status/1561631350616199168#m
+#: by: https://nitter.cz/VIZ_Berlin/status/1561963807618080768#m
+#: by: https://nitter.cz/VIZ_Berlin/status/1562408060727033856#m
+#: also_indoor: url https://nitter.cz/search?f=tweets&q=Kronprinzessinnenweg&since=2022-08-23&until=&near=
 #: source_id: viz2021:13.194739,52.449865,04.08.2022,07:00 (inaktiv)
 #: source_id: viz2021:13.242156,52.468429,04.08.2022,06:32 (inaktiv)
 #: source_id: viz2021:13.250049,52.457088,04.08.2022,06:31 (inaktiv)
 #: source_id: viz2021:13.219236,52.456277,11.08.2022,07:03
-#: last_checked: 2022-08-17 (research) vvv
+#: last_checked: 2022-08-24 (research) vvv
 #: check_frequency: 1d vvv
 Hüttenweg (westlicher Abschnitt)	2::temp -1851,6887 -1493,6984 -1241,7017 -1006,6911 -927,6888
-Kronprinzessinenweg (NN)	2::temp -927,6888 -2218,5133 -3296,3686
+Kronprinzessinenweg (NN)	2::temp -927,6888 -2218,5133
+Kronprinzessinenweg (NN)	2::temp -2218,5133 -3296,3686
 #Königsweg	2::temp 425,8766 100,8339 -363,7630 -643,7252 -913,6905 -927,6888
 Hüttenweg - Havelchaussee	2::temp -2634,6907 -2668,6862 -2581,6834 -2468,6839 -2366,6869 -2230,6909 -2080,6897 -1925,6790
 #Verbindungschaussee	2::temp -360,9193 -310,8989 -345,8899 -1112,7891 -1248,7704 -1328,7597
-Verlängerung Verbindungschaussee	2::temp -1328,7597 -1851,6887 -1925,6790 -2825,5588 -3021,5328 -3093,5223 -3605,4536
-Fischerhüttenweg	2::temp -2825,5588 -2218,5133 -2112,5050 -1424,4504
+Verlängerung Verbindungschaussee	2::temp -1328,7597 -1851,6887 -1925,6790 -2825,5588
+#Verlängerung Verbindungschaussee	2::temp -2825,5588 -3021,5328 -3093,5223 -3605,4536
+Fischerhüttenweg	2::temp -2825,5588 -2218,5133 -2112,5050
+#Fischerhüttenweg	2::temp -2112,5050 -1424,4504
 Schwarzer Weg	2::temp -2668,6862 -2632,6789 -2638,6641
 # weitere Sperrungen im Grunewald möglich (Havelchaussee, Koenigsallee, Hüttenweg)
 #Onkel-Tom-Str.	2::temp 40,5606 -119,5885 -150,6168 -138,6681
 #Koenigsallee	2::temp -138,6681 674,7758
 #Teltower Weg	2::temp -119,5885 -182,5927 -288,6101
-Hüttenweg	2::temp -138,6681 -739,6838 -927,6888
+#Hüttenweg	2::temp -138,6681 -739,6838
+Hüttenweg	2::temp -739,6838 -927,6888
 #Havelchaussee	2::temp -2774,10345 -3025,10116 -3178,9953 -3412,9755 -3426,9684 -3347,9541 -3213,9425 -3140,9294 -3073,9061 -3283,8739 -3389,8624 -3578,8578 -3615,8496 -3567,8031 -3561,7964 -3536,7856 -3531,7825 -3496,7677 -3355,6874 -3382,6821 -3483,6789 -3530,6781 -3589,6721 -3598,6572 -3606,6407 -3723,6254 -3880,6142 -3944,6034 -4003,5621 -4046,5505 -4072,5227 -3962,5129 -3889,4967 -3807,4794 -3729,4687 -3605,4536 -3490,4212 -3296,3686
 #Kronprinzessinenweg (H)	2::temp -3296,3686 -3680,3160 -3768,3069 -4001,2858
 #Schildhornweg	2::temp -1588,9194 -1484,9175 -1435,9168 -1279,9093
@@ -35975,6 +35984,79 @@ EOF
 #: by: https://nitter.cz/pic/media%2FFaSkXFeXEAAqM9x.jpg%3Fname%3Dorig
 	q4::inwork 1514,5163 1573,5152
 	q2::inwork 1573,5152 1964,5070
+EOF
+     },
+     { from  => 1661112782, # 2022-08-21 22:13
+       until => 1672441200, # 2022-12-31 00:00
+       text  => 'Zur Gartenstadt: zwischen Buntzelstr. und Grottewitzstr. gesperrt, bis 30.12.2022 ',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: viz2021:13.56812,52.40301,20.08.2022,06:00
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1237046.php
+#: by: https://berliner-abendblatt.de/2022/08/22/umfangreiche-bauarbeiten-in-der-strasse-zur-gartenstadt/
+#: also_indoor: traffic (H(einseitig),G(kürzer),B)
+	q4::inwork 21742,115 21769,-30 21800,-109
+EOF
+     },
+     { from  => 1661193050, # 2022-08-22 20:30
+       until => 1664575200, # 2022-10-01 00:00
+       text  => 'Goslarer Ufer: zwischen Gaußstr. und Goslarer Platz Sperrung, evtl. sind auch Radfahrer betroffen, bis 30.09.2022',
+       type  => 'handicap',
+       data  => <<EOF,
+#: note: laut rbb
+	q4::inwork 4186,13710 4295,13234
+EOF
+     },
+     { from  => 1661032800, # 2022-08-21 00:00
+       until => 1665439199, # 2022-10-10 23:59
+       text  => 'Dorotheenstr. und Georgenstr.: Gleisarbeiten, Fahrbahn gesperrt, außerdem Einbahnstraßenregelung Am Kupfergraben, gesperrt ab Bauhofstr., vom 22. August 2022 bis 10. Oktober 2022',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: https://berliner-abendblatt.de/2022/08/17/neue-gleise-fuer-die-dorotheenstrasse/ (vom 22. August bis zum 10. Oktober 2022)
+#: by: https://berliner-abendblatt.de/2022/08/21/diese-baustellen-sorgen-fuer-staus/
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/neue-gleise-und-weichen_a355298
+#: source_id: viz2021:13.391637,52.520049,22.08.2022,06:00
+Georgenstr.	q4::inwork 9568,12688 9441,12670
+#: source_id: viz2021:13.395309,52.519431,22.08.2022,06:00 (2x mit der gleichen Koordinate)
+Dorotheenstr.	q4::inwork 9742,12609 9870,12657
+Am Kupfergraben	q4::inwork; 9815,12705 9870,12657
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Ostender Str.: Einbahnstraßenregelung an der Müllerstr., gesperrt Richtung Nordosten, Ende der Hochbauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: note: Einbahnstraße etwa 70m lang
+#: by: https://www.deutsches-architekturforum.de/thread/9772-wedding-gesundbrunnen-kleinere-projekte/?postID=706715#post706715
+#: add_fragezeichen: Wurde die Einbahnstraßenregelung aufgehoben?
+#: last_checked: 2022-08-23
+#: check_frequency: 60d
+	q3::inwork; 6919,15666 7024,15810
+EOF
+     },
+     { from  => 1661230800, # 2022-08-23 07:00
+       until => 1667232000, # 2022-10-31 17:00
+       text  => 'Dorotheenstr.: Bauarbeiten zwischen Ebertstr. und Wilhelmstr., Fahrbahn gesperrt, vom 24.08.2022 07:00 bis 31.10.2022 17:00',
+       type  => 'gesperrt',
+       source_id => 'viz2021:13.378615,52.517943,24.08.2022,07:00',
+       data  => <<EOF,
+#: note: Fußverkehr eingeschränkt
+#: by: https://nitter.cz/VIZ_Berlin/status/1562303691562041344#m
+#: by: https://nitter.cz/pic/media%2FFa19ZroWYAAUS6d.jpg%3Fname%3Dorig
+	2::inwork 8775,12457 8540,12420
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Oberseestr.: Einmündung Degnerstr. komplett gesperrt, Ende der Bauarbeiten unbekannt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: note: Gehweg scheint auch gesperrt zu sein
+#: by: https://www.goellner-architekten.de/projekte-1/2017-degner-stra%C3%9Fe/
+#: last_checked: 2022-08-24
+#: check_frequency: 120d
+	2::inwork 16615,15737 16537,15827
 EOF
      },
     );

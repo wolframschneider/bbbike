@@ -1310,10 +1310,10 @@ Ferdinandstr.	1s:q4 5398,2422 5417,2383
 Klingsorplatz	1 4760,4075 4760,4112 4787,4133 4818,4125 4834,4102
 #: by: ^^^
 # 
-Heinrichplatz	1 11690,10543 11734,10563
-Heinrichplatz	1 11708,10497 11690,10543
-Heinrichplatz	1 11754,10516 11708,10497
-Heinrichplatz	1 11734,10563 11754,10516
+Rio-Reiser-Platz	1 11690,10543 11734,10563
+Rio-Reiser-Platz	1 11708,10497 11690,10543
+Rio-Reiser-Platz	1 11754,10516 11708,10497
+Rio-Reiser-Platz	1 11734,10563 11754,10516
 # 
 (Landsberger Allee - Frank-Schweitzer-Str.)	1 19205,14980 19244,14980
 (Frank-Schweitzer-Str. - Landsberger Allee)	1 19244,14980 19214,14966
@@ -1401,6 +1401,8 @@ Hannaweg	1s:q4 20938,14066 20923,13953
 Birkholzer Weg	1 18118,19394 18143,19384
 Birkholzer Weg	1 18143,19384 18106,19353
 Tempelhofer Damm: Mittelstreifen	3nocross 9254,6542 9253,6484 9250,6414 9246,6364
+Lütticher Str.	1 6716,15310 6628,15411 6522,15532
+Lütticher Str.	1 6539,15548 6649,15427 6736,15328
 # 
 ######################################################################
 # empfohlene und unechte Sperrungen
@@ -1584,7 +1586,7 @@ Krumme Str.	1 25490,14601 25444,14665 25418,14835
 Margaretenstr.	1 25418,14835 25503,14842
 Sophienstr.	1 25503,14842 25527,14696 25555,14657
 Straße am Haussee: abgesperrt, Privatstraße	2 25846,16082 25787,16229
-#: note: möglicherweise nur im Frühling/Sommer?
+#: note: möglicherweise nur im Frühling/Sommer? Gesehen auch Im Sommer 2022.
 #: osm_watch: note 1414569 2
 Freilichtbühne Schwedt	2 69562,73280 69634,73330
 #: note: Radweg in einer Richtung
@@ -1693,6 +1695,7 @@ Breite Str. (Luckenwalde)	1s:q4 -4299,-35514 -4208,-35409
 #: XXX add_fragezeichen: Gibt es noch eine Einbahnstraßenregelung on der Breiten Straße? Auch für Radfahrer?
 Breite Str. (Luckenwalde)	1s:q4 -4568,-35783 -4478,-35736
 #: by ^^^
+Schulstr. (Joachimsthal)	1s:q3 32331,64049 32388,64047 32459,64042
 # 
 ######################################################################
 # elsewhere not in Brandenburg
@@ -1781,7 +1784,7 @@ Seestr. (Potsdam)	1s -11581,559 -11584,452
 Tizianstr. (Potsdam)	1s -11424,542 -11480,621 -11581,559
 Spitzmühlenweg	1s 41728,17918 41668,17984 41556,18146
 Stephanstr.	1s 6523,4491 6360,4504
-Am Poetensteig, Gramzow	1s:q1 50043,90187 50107,89717
+Am Poetensteig, Gramzow	1s:q1 50031,90234 50066,89991 50107,89708
 #: by: Juliane Bölker:
 Atzpodienstr. (Umgehung auf Gehweg möglich)	1s:q3 16485,12384 16509,12518 16564,12513
 Behrenstr./Bebelplatz	1s:q3 9798,12267 9737,12238 9730,12238 9680,12232 9631,12227
@@ -3184,7 +3187,7 @@ Drängelgitter	BNP:5 8776,16718
 Schranke	BNP:5 -8211,5490
 #: by: Charly Huber:
 #: corrected_by: srt (BNP:5 -> ...)
-Kurzschranke	BNP:3 6739,15307
+Kurzschranke	BNP:3 6748,15313
 Schranke	BNP:3 6749,15339
 Schranke	BNP:3 6869,15441
 # REMOVED --- #: by: popanne: vvv
@@ -3492,7 +3495,7 @@ Unter den Linden/Schadowstr.: Überqueren der Straße vor der Russischen Botschaft
 Barnimer Dörferweg: wegen Bauarbeiten gesperrt	2::inwork 20865,18933 20889,18943 20948,18968
 # 
 #: by: https://www.hedwigs-kathedrale.de/umgestaltung/ (Umbauarbeiten bis 1. November 2023 geplant)
-#: last_checked: 2022-08-06
+#: last_checked: 2022-08-23
 #: check_frequency: 360d
 #: next_check: 2023-11-01
 Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 9775,12178 9771,12190 9747,12205 9755,12144
@@ -3543,7 +3546,7 @@ Parkstadt Karlshorst: temporäre Einbahnstraßenregelung	1::inwork 17738,8450 1775
 #: note: von Westen her offiziell nur für Bau- und Einsatzfahrzeuge offen, von Osten her keine Einschränkungen
 #: osm_watch: way id="129104626" version="18"
 #: also_indoor: traffic (ex-H,ex-G,ex-B(alle falsch))
-#: last_checked: 2022-07-15
+#: last_checked: 2022-08-23
 # REMOVED --- #: check_frequency: 90d
 # REMOVED --- #: next_check: 2022-07-15
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen	1s:q3:inwork 8266,14346 8442,14456
@@ -3581,10 +3584,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, gesperrt	2::inwork 12608,11692 12645,11673
 # REMOVED (hier mittlerweile offen) --- Pionierweg: wegen Bauarbeiten gesperrt	2::inwork 15714,8633 15772,8667 15922,8717 16026,8731
 # REMOVED (hier mittlerweile offen) --- Pionierweg: wegen Bauarbeiten gesperrt	2::inwork 16026,8731 16074,8776 16084,8833
 # REMOVED (laut osm komplett freigegeben) --- Pionierweg: wegen Bauarbeiten gesperrt	2::inwork 16084,8833 16086,8860
-# 
-#: last_checked: 2022-06-28
-#: check_frequency: 180d
-Verlängerung Zwieseler Str.: Baustellenabsperrung	2::inwork 19705,9039 19638,9070
+# REMOVED --- #: last_checked: 2022-06-28 --- #: check_frequency: 180d --- Verlängerung Zwieseler Str.: Baustellenabsperrung	2::inwork 19705,9039 19638,9070
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: by: https://www.berliner-kurier.de/berlin/169-neue-wohnungen-mit-wasserblick-und-zu-bezahlbaren-mieten-li.182642 (Baustart einiger Häuser, Fertigstellung für September 2023 geplant)
@@ -3668,14 +3668,14 @@ Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_03_0117_0172_online.pdf (Grundstücksnummerierung)
 #: XXX Bis wann gehen die Bauarbeiten? Eigentlich eine "unechte" Einbahnstraße. Und manchmal (gesehen am Sonntag, den 2021-10-31; vielleicht außerhalb der Arbeitszeiten?) sind die Einfahrt-verboten-Schilder weggedreht
 #: osm_watch: way id="308312347" version="6"
-#: last_checked: 2022-08-12
+#: last_checked: 2022-08-21
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2022-08-15
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s:q3 10472,14632 10320,14608
 # 
 #: XXX bleibt die Absperrung dauerhaft?
 #: osm_watch: way id="830757933" version="1"
-#: osm_watch: way id="610818155" version="4"
+#: osm_watch: way id="610818155" version="5"
 #: last_checked: 2022-08-03
 #: check_frequency: 60d
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
@@ -3873,7 +3873,7 @@ Alt-Stralau - Spreeufer: Verbindung existiert nicht mehr	2::inwork 14652,10201 1
 #: by: https://www.deutsches-architekturforum.de/thread/11167-erweiterung-des-admiralspalastes-in-bau/?postID=689721#post689721
 #: by: https://graftlab.com/projects/admiralspalast (Zeitraum 2017-2021)
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-07-29
+#: last_checked: 2022-08-23
 #: check_frequency: 60d
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728 9402,12792 9386,12833 9375,12911
 # 
@@ -3979,7 +3979,7 @@ Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 #: source_id: viz2021:13.409315,52.517356,20.02.2020,08:00 (bis 31.12.2022)
 #: note: laut rbb nur bis 31.08.2022
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
-#: last_checked: 2022-07-25 (daf) vvv
+#: last_checked: 2022-08-24 vvv
 #: next_check: 2024-06-01 vvv
 Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285 10675,12280
@@ -4000,7 +4000,7 @@ Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg	1::inwork 13422,1
 #: next_check_id: TACHELES-2020
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2022-08-16
+#: last_checked: 2022-08-23
 #: check_frequency: 60d
 Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174 9254,13171
 # 

@@ -1904,6 +1904,8 @@ Landsberger Allee [Wohngebiet]	N 20776,15851 20770,15832 20803,15812 20789,15736
 Landsberger Allee [Wohngebiet]	N 22092,16029 22112,16137
 Landsberger Allee [zur Nebenfahrbahn]	N 22109,15990 22092,16029
 Landsberger Allee [Nebenfahrbahn]	N 22092,16029 21891,15938 21816,15954
+#: osm.highway: service
+Landsberger Allee [Nebenfahrbahn]	N 16669,14438 16845,14461
 (Marzahner Promenade - Landsberger Allee [Wohngebiet])	NN 20731,15742 20759,15740 20789,15736
 (Georg-Knorr-Str. - Landsberger Allee)	N 19169,15015 19150,15009 19133,15004
 (Georg-Knorr-Str. - Landsberger Allee)	NN 19150,15009 19152,14999 19133,14987 19156,14987 19157,14979 19163,14981 19171,14984 19175,14968
@@ -10532,7 +10534,7 @@ Hamburger Str. (Mahlsdorf)	N 26029,13245 26190,13426 26371,13630 26540,13826 266
 Stettiner Str. (Mahlsdorf)	N 26610,14049 26847,14002 26888,13976 26906,13960
 Dahlwitzer Str.	H 26592,14117 26610,14049 26662,13876 26684,13794 26717,13687 26759,13550 26792,13441 26825,13331 26878,13150 26904,13065
 Markgrafenstr. (Mahlsdorf, Kaulsdorf)	N 24459,12664 24551,12614 24659,12555 24804,12481 24907,12425
-Liebenwalder Str. (Alt-Hohenschönhausen)	NH 16852,14412 16834,14539 16839,14676 16821,14765 16768,14849
+Liebenwalder Str. (Alt-Hohenschönhausen)	NH 16852,14412 16845,14461 16834,14539 16839,14676 16821,14765 16768,14849
 Heiligenstadter Str.	N 16738,14695 16839,14676
 Genslerstr.	N 16669,14438 16715,14609 16738,14695 16752,14745 16768,14849 16783,14927 16799,15007 16816,15092 16835,15188 16849,15263 16858,15300 16868,15337 16898,15453
 Genslerstr.	N 16715,14609 16544,14593
@@ -10646,7 +10648,7 @@ Grellstr.	NH 11941,15586 12252,15376 12325,15328 12417,15272 12704,15105
 Preußstr.	N 12325,15328 12367,15396
 Oranienplatz	NN 11264,10804 11227,10821
 Oranienplatz	NN 11275,10723 11253,10778 11227,10821
-(Heinrichplatz)	N 11754,10516 11734,10563 11690,10543 11708,10497 11754,10516
+(Rio-Reiser-Platz)	N 11754,10516 11734,10563 11690,10543 11708,10497 11754,10516
 Bolivarallee	N 795,12652 765,12564 743,12498 714,12403 676,12298 668,12190
 Steubenplatz	N 653,12109 689,12152 668,12190 620,12144
 Am Oder-Spree-Kanal	N 30588,-3000 30710,-3037 30727,-2911 30703,-2841 30629,-2817 30599,-2827 30588,-3000
@@ -11274,7 +11276,7 @@ Zühlsdorfer Str.	N 19988,16039 20214,15923 20262,16029 20170,16075
 Lea-Grundig-Str.	N 20832,15981 20843,16007 20870,16024 20945,16136 21001,16159 21028,16211 21084,16319 21163,16350 21217,16446 21349,16687 21491,16631 21562,16626 21602,16866
 (Lea-Grundig-Str. - Radweg/Straßenbahnübergang)	NN 21349,16687 21321,16696
 Karl-Holtz-Str.	N 21361,16377 21381,16418 21429,16513 21460,16572 21491,16631
-Karl-Holtz-Str. [Stichstraße]	N 21381,16418 21433,16396 21496,16384
+Karl-Holtz-Str. [Stichstraße]	N 21381,16418 21433,16396 21493,16387
 Havemannstr.	NH 21251,18508 21446,18405 21520,18367 21684,18283 21843,18198 21854,18192 22065,18087 22143,18047 22217,17989 22314,17916
 Havemannstr.	N 21662,18252 21644,18274 21507,18343
 Havemannstr.	N 21281,18451 21432,18376
@@ -13052,7 +13054,8 @@ Schönagelstr.	N 21640,16279 21617,16061 21602,15908 21220,15741
 (Landsberger Allee - Schönagelstr.)	NN 21584,15753 21602,15908
 (Radweg an der Straßenbahn - Rudolf-Leonhard-Str.)	NN 21192,16466 21217,16446
 Rudolf-Leonhard-Str.	N 21217,16446 21361,16377 21483,16325 21640,16279 21782,16253
-Rudolf-Leonhard-Str. [Stichstraße]	N 21483,16325 21496,16384
+Rudolf-Leonhard-Str. [Stichstraße]	N 21483,16325 21493,16387
+(Rudolf-Leonhard-Str. - Blumberger Damm)	NN 21493,16387 21538,16444 21574,16547
 Egelpfuhlstr.	N -5472,13235 -5510,13326 -5559,13438 -5592,13534 -5612,13586 -5621,13613 -5595,13916
 Walzelstr.	N -5559,13438 -5333,13515 -5254,13542
 Lazarusstr.	N -5592,13534 -5493,13569 -5278,13606 -5170,13628 -5057,13630 -4922,13609
@@ -13717,15 +13720,16 @@ Renatenweg	NN 6463,2724 6529,2642
 Am Springebruch	N 6130,23062 6258,22899
 Herrnholzweg	N 6279,23170 6491,22915
 Charlottenburger Str. (Zehlendorf)	N 1125,3139 1201,3445
-Brüsseler Str.	N 6375,15391 6539,15548 6690,15671 6802,15790 6914,15908
+Brüsseler Str.	N 6375,15391 6522,15532 6539,15548 6690,15671 6802,15790 6914,15908
 Zeppelinplatz	N 6862,15615 6950,15514
-Limburger Str.	N 6562,15177 6727,15319 6749,15339 6815,15398
+Limburger Str.	N 6562,15177 6716,15310 6736,15328 6749,15339 6815,15398
 Limburger Str.	NN 6815,15398 6835,15412
 Limburger Str.	N 6835,15412 6869,15441 6884,15456
 Limburger Str.	N 6884,15456 6950,15514 7012,15571
 Elise-und-Otto-Hampel-Weg	NN 7012,15571 7129,15686 7115,15702 7129,15717
-Lütticher Str.	N 6422,15708 6539,15548 6640,15421 6727,15319
-(Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule))	NN 6727,15319 6739,15307 6833,15215
+Lütticher Str.	N 6422,15708 6539,15548 6649,15427 6736,15328
+Lütticher Str.	N 6522,15532 6628,15411 6716,15310
+(Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule))	NN 6736,15328 6748,15313 6833,15215
 Goeckestr.	N 16128,14685 16248,14819 16354,14928 16361,14936 16377,14952 16514,15092 16604,15224 16651,15345
 (Goeckestr. - Neustrelitzer Str.)	NN 16354,14928 16448,14831
 Cottbusser Str.	N 23104,14827 23175,14823 23222,14809 23297,14772 23354,14756 23405,14758 23531,14781 23735,14814 23798,14826
@@ -16590,7 +16594,7 @@ Groninger Str.	N 7393,16566 7409,16542 7415,16502 7433,16375 7458,16207 7474,160
 Hochstädter Str.	N 7543,16016 7727,16223
 Ruheplatzstr.	N 7436,15746 7518,15605 7540,15566 7627,15412
 (Müllerstr. - Gerichtstr.)	NN 7607,15282 7723,15417
-Ostender Str.	N 6474,15278 6640,15421 6794,15553 6862,15615 6919,15666 7024,15810
+Ostender Str.	N 6474,15278 6628,15411 6649,15427 6794,15553 6862,15615 6919,15666 7024,15810
 Mehlbeerenweg	N 11993,11978 11940,11982 11909,11985
 Kleine Markusstr.	N 12059,12172 11958,12195 11937,12127
 (Kleine Markusstr. - Krautstr.)	N 11937,12127 11958,12112 12021,12066
@@ -17318,7 +17322,7 @@ Paul-Koenig-Str.	N 17268,16526 17251,16497 17293,16469 17304,16485
 Titastr.	N 17276,16281 17385,16432
 (Rüdickenstr. - Wartenberger Str.)	NN 17486,17266 17790,17126 17861,17099
 Röttkenring	N 17872,17226 17860,17212 17830,17146 17815,17149 17680,17210 17714,17285 17724,17307 17784,17357
-(Straßenbahnquerung)	NN 17422,17288 17421,17314
+(Straßenbahnquerung)	NN 17422,17288 17424,17292 17414,17299 17421,17314
 (Röttkenring - Arnimstr.)	NN 17815,17149 17811,17140 17866,17116 17884,17103 17892,17092 17902,17074
 (Straßenbahnquerung)	NN 17790,17126 17799,17145 17811,17140
 (Straßenbahnquerung)	NN 17861,17099 17866,17116
@@ -17626,7 +17630,8 @@ Kollwitzplatz	Pl 11229,14422
 Lustgarten	Pl 10176,12506
 Molkenmarkt	Pl 10738,12364
 Jannowitzbrücke	Pl 11343,12182
-Heinrichplatz	Pl 11721,10530
+#: oldname: -20220821: Heinrichplatz
+Rio-Reiser-Platz	Pl 11721,10530
 Hohenstaufenplatz	Pl 11541,9576
 Lohmühlenplatz	Pl 12868,9359
 Hertzbergplatz	Pl 13474,8060
@@ -17854,18 +17859,25 @@ Otto-Hahn-Platz	Pl 3125,4780
 Otto-Hahn-Platz	Pl 3057,4731
 Otto-Hahn-Platz	Pl 3095,4680
 Mierendorffplatz	Pl 3645,13206
+#: oldname: -20210908: <namenslos>
 Digedagsplatz	Pl 18939,9417
 Breslauer Platz	Pl 5810,7337
 Lessingplatz	Pl 9861,-44
+#: oldname: -20211011: <namenslos> vvv
 Hans-Söhnker-Platz	Pl 3357,5178
 Hans-Söhnker-Platz	Pl 3328,5218
 Hans-Söhnker-Platz	Pl 3426,5292
+#: oldname: ^^^
+#: oldname: -20220310: <namenslos> vvv
 Gertrud-Pincus-Platz	Pl 11899,16037
 Gertrud-Pincus-Platz	Pl 11852,16061
 Gertrud-Pincus-Platz	Pl 11926,16088
+#: oldname: ^^^
+#: oldname: -202203: <namenslos> vvv
 Paulinenplatz	Pl 3328,3313
 Paulinenplatz	Pl 3327,3261
 Paulinenplatz	Pl 3348,3278
+#: oldname: ^^^
 Kottbusser Tor	Pl 11393,10390
 Anhalter Bahnhof	Pl 8947,10956
 Flughafen Tempelhof	Pl 9884,8265
@@ -17900,6 +17912,7 @@ Alte Nationalgalerie	Pl 9987,12744
 Altes Museum	Pl 10094,12635
 Neues Museum	Pl 9972,12732
 Bodemuseum	Pl 9683,12913
+#: alias: DHM
 Deutsches Historisches Museum	Pl 9934,12420
 Jagdschloß Grunewald	Pl 878,6651
 Grunewaldturm	Pl -3603,7798
@@ -17912,14 +17925,19 @@ Müggelturm	Pl 25662,1502
 Müggelberg	Pl 25662,1502
 Insel der Jugend	Pl 15674,9095
 Johannesstift	Pl -3953,17941
+#: alias: Strandbad Wendenschloß
 Seebad Wendenschloß	Pl 23869,1282
 Strandbad Müggelsee	Pl 29089,4759
 Strandbad Wannsee	Pl -4684,3318
+#: alias: Freibad Tegeler See
+#: alias: Strandbad Tegelsee
 Strandbad Tegel	Pl -629,18977
 Strandbad Orankesee	Pl 15793,16162
 Strandbad Weißensee	Pl 14510,16549
 Strandbad Grünau	Pl 24571,514
+#: alias: Freibad Jungfernheide
 Strandbad Jungfernheide	Pl 1498,15196
+#: alias: Freibad Plötzensee
 Strandbad Plötzensee	Pl 5252,15182
 Bürgerablage	Pl -2905,19636
 Bammelecke	Pl 25473,449
@@ -17929,6 +17947,7 @@ Tegel-Center	Pl 2297,20353
 Nikolskoe	Pl -8881,1668
 Schäferberg	Pl -8169,760
 Moorlake	Pl -9629,1408
+#: alias: Teufelssee
 Ökowerk Teufelssee	Pl -977,9425
 Pfaueninsel	Pl -8564,2276
 Museumsinsel	Pl 9948,12631
@@ -17952,6 +17971,7 @@ Klinikum Buch	Pl 17428,25235
 Klinikum Kaulsdorf	Pl 23182,11534
 Urban-Krankenhaus	Pl 10783,9892
 Krankenhaus Havelhöhe	Pl -6032,5895
+#: alias: Unfallkrankenhaus Marzahn
 Unfallkrankenhaus Berlin	Pl 21520,12741
 Waldfriedhof Zehlendorf	Pl -2671,1988
 Waldfriedhof Müggelheim	Pl 29116,502
@@ -17960,7 +17980,10 @@ Waldfriedhof Oberschöneweide	Pl 19372,6579
 Wasserwerk an der Wuhlheide	Pl 19463,7117
 Avus Innenraum	Pl 1692,10348
 Avus Nordkurve	Pl 1870,10406
+#: alias: Sportplatz Eichkamp
+#: alias: Sportanlage Eichkamp
 Julius-Hirsch-Sportanlage	Pl 556,10122
+#: alias: Sportplatz Kühler Weg
 Hans-Rosenthal-Sportanlage	Pl 743,9772
 Wally-Wittmann-Sportanlage	Pl 863,10363
 Sportplatz Maikäferpfad	Pl 748,9981
@@ -18037,6 +18060,7 @@ DIN-Platz	Pl 6266,10927
 Kitty-Kuse-Platz	Pl 7716,8356
 Lucie-Strewe-Platz	Pl -216,3623
 Karmielplatz	Pl 884,8954
+#: oldname: -20200815: <namenslos>
 Platz der Weißen Rose	Pl -4351,12460
 Nettelbeckplatz	Pl 7974,15418
 Kreuzung Sewanstr./Am Tierpark	NN::igndisp 18631,10167 18647,10172

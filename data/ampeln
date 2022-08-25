@@ -2819,7 +2819,6 @@ S-Bahn ca. alle 10 Minuten	B 10896,-4469
 	X -1664,-1720
 	X -3368,-4430
 	X -1715,-1767
-	B 15580,-26698
 	B 49463,69701
 	B 50401,70720
 	B 55594,74156
@@ -2944,7 +2943,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 9055,28814
 nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 	B 45152,-53482
 	B 47038,-17056
-	B 73017,97449
+	B 73016,97447
 	B -18726,-19242
 	B 27688,-26047
 	B 27995,-27157
