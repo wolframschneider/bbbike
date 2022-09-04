@@ -109,7 +109,8 @@ push @temp_blocking,
        undef,
        {
          'data' => '#: note: keine Anzeichen für eine Veranstaltung 2021 
-	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
+Alt-Rudow	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
+Krokusstr.	2::temp 16610,1715 16767,1831
 ',
          'from' => 1662112800,
          'id' => 112,
@@ -126,7 +127,7 @@ push @temp_blocking,
                             ]
                           ],
          'source_id' => 'http://www.hier-in-rudow.de/meilenfeste.html',
-         'text' => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (03.09.2022 bis 04.09.2022)',
+         'text' => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. sowie Krokusstr. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (03.09.2022 bis 04.09.2022)',
          'type' => 'gesperrt',
          'until' => 1662328799
        },
@@ -748,7 +749,33 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20201002
+#: by: https://twitter.com/VIZ_Berlin/status/1312229648558850048
+#: by: https://pbs.twimg.com/media/EjX56WOWoAIPRUg?format=png&name=900x900
+#: by: https://www.berlin.de/events/4531106-2229501-schoeneberger-kuerbisfest.html (geplant für 2.+3.10.2021)
+#: by: https://www.eventbrite.com/e/22-schoneberger-kurbisfest-tickets-165249199805
+	2::temp 7001,9291 7012,9222 7035,9161 7101,9027 7201,8870
+	2::temp 6945,9142 7035,9161
+	2::temp 6975,8944 7101,9027 7308,9163
+	2::temp 7012,9222 7124,9226
+',
+         'from' => 1664528400,
+         'id' => 731,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Schöneberger Kürbisfest, Akazien- und Belziger Str. gesperrt, 01.10.2022 bis 02.10.2022',
+         'type' => 'gesperrt',
+         'until' => 1664747999
+       },
        undef,
        undef,
        undef,
@@ -2494,7 +2521,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3788,7 +3815,19 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: viz2021:13.359035,52.489045,20.05.2021,07:00 (bis 28.9.2022)
+#: XXX prüfen, ob es tatsächlich Behinderungen für Radfahrer gibt vvv
+	q4::inwork 7382,9187 7444,9148
+# REMOVED ---	q4::inwork 7308,9163 7363,9152
+#: XXX ^^^
+',
+         'from' => undef,
+         'id' => 2933,
+         'text' => 'Helmstr.: an der Hauptstr. Baustelle, Fahrbahn kann gesperrt sein, bis voraussichtlich 28.09.2022',
+         'type' => 'handicap',
+         'until' => 1664377200
+       },
        undef,
        undef,
        undef,
@@ -3925,8 +3964,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
-#: XXX keine Bauarbeiten mehr, aber die Schilder sind geblieben --- vielleicht permanent?
-#: last_checked: 2022-08-23
+#: XXX kaum noch Bauarbeiten, aber die Schilder sind geblieben --- vielleicht permanent?
+#: last_checked: 2022-08-30
 #: check_frequency: 30d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4032,7 +4071,6 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: source_id: 2147343519 (bis 31.12.2021)
 #: source_id: viz2021:13.468875,52.614511,27.11.2018,09:00 (bis 31.08.2023)
-#: note: laut rbb nur bis 31.08.2022
 #: also_indoor: traffic (G,H,B)
 #: by: https://www.berliner-woche.de/karow/c-bauen/db-netz-ag-informiert-anwohner-ueber-die-bauarbeiten-in-karow_a205342 (voraussichtlich bis Ende 2021)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5735 (bis Ende 2022?)
@@ -4314,11 +4352,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="194962398" version="14"
 #: XXX mittlerweile "Einfahrt verboten"-Schilder am östlichen Ende
 #: source_id: 2147347291 (Kraneinsatz bis 18.6.2021)
-#: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022)
+#: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022) (inaktiv)
+#: note: laut rbb mittlerweile bis 30.12.2022
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-08-12
+#: last_checked: 2022-08-30
 #: check_frequency: 21d
-#: next_check_id: 2022-08-31
+#: next_check: 2022-12-30
 	q4::inwork; 11329,12497 11209,12430
 ',
          'from' => undef,
@@ -4596,7 +4635,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: viz2021:13.428783,52.478213,06.04.2020,07:00 (bis 31.03.2025)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G,H,B)
-#: last_checked: 2022-08-16
+#: last_checked: 2022-09-01
 #: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -4623,7 +4662,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2022-08-02 vvv
+#: last_checked: 2022-08-30 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -4699,7 +4738,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: confirmed_by: srt (Sackgassenschild am nördlichen und südlichen Ende, als Fußgänger und Radfahrer kommt man durch)
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="25"
-#: osm_watch: way id="165832806" version="22"
+#: osm_watch: way id="165832806" version="23"
 #: last_checked: 2022-08-25
 #: check_frequency: 30d
 	2::inwork 17753,8290 17707,8328 17652,8349 17617,8363 17554,8458 17533,8505 17524,8536 17515,8567 17497,8623
@@ -4817,23 +4856,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/saison-startet_a311283 (und die anderen neuen Spielstraßen in FH-KB)
-#: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen
-#: by: https://fixmyberlin.de/friedrichshain-kreuzberg/spielstrassen/kieze
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
-#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-verkehr/neun-spielstrassen-im-sommer_a343397
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10412 (allgemein zu temporären Spiel- und Nachbarschaftsstraßen)
-# REMOVED --- #: XXX Spielstraße wurde verstetigt; genaue Geltungszeiten? --- #: next_check: 2022-05-24
-	q4::temp::play 14798,12502 15005,12443
-',
-         'from' => 1653948000,
-         'id' => 3367,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Bänschstr.: zwischen Voigtstr. und Pettenkoferstr. sonntags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 31.08., außer in den Sommerferien',
-         'type' => 'handicap',
-         'until' => 1661961600
-       },
+       undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
 # REMOVED --- #: XXX wird diese Spielstraße verstetigt? --- #: last_checked: 2021-05-13 --- #: next_check: 2022-05-17
@@ -4950,9 +4973,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1624917600,
          'id' => 3401,
          'source_id' => 'viz2021:13.195212,52.527938,30.06.2021,06:00',
-         'text' => 'Pichelsdorfer Str.: Bauarbeiten zwischen Wilhelmstr. und Zimmerstr., evtl. sind auch Radfahrer betroffen, vom 30.06.2021 06:00 bis 31.12.2022 17:00 ',
+         'text' => 'Pichelsdorfer Str.: Bauarbeiten zwischen Wilhelmstr. und Zimmerstr., evtl. sind auch Radfahrer betroffen, vom 30.06.2021 bis 28.04.2023',
          'type' => 'handicap',
-         'until' => 1672502400
+         'until' => 1682694000
        },
        undef,
        undef,
@@ -5109,12 +5132,12 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: SCHARFELANKE-2021
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
 #: osm_watch: way id="187977779" version="16" vvv
-#: last_checked: 2022-06-26 (osm) vvv
-#: check_frequency: 60d vvv
+#: last_checked: 2022-08-28 (twitter) vvv
+#: next_check: 2022-12-31 vvv
 	2::inwork -3752,11373 -3785,11445 -3828,11491 -3928,11526 -4028,11533 -4106,11519 -4181,11458 -4204,11432 -4245,11400
 	2::inwork -4246,11438 -4204,11432
 	2::inwork -3928,11526 -3909,11596
-#: check_frequency ^^^
+#: next_check ^^^
 #: last_checked ^^^
 #: osm_watch ^^^
 #: add_fragezeichen ^^^
@@ -5138,9 +5161,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1617573600,
          'id' => 3475,
          'source_id' => 'LS/723-P/20/136',
-         'text' => 'Bamme - Rathenow: Brückenneubau, Sperrung vom 06.04.2021 bis 08.09.2022',
+         'text' => 'Bamme - Rathenow: Brückenneubau, Sperrung vom 06.04.2021 bis 30.09.2022',
          'type' => 'gesperrt',
-         'until' => 1662674400
+         'until' => 1664575199
        },
        undef,
        undef,
@@ -5219,17 +5242,17 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        {
          'data' => '#: also_indoor: traffic (ex-B)
-#: note: am 2022-03-07 noch immer Bauarbeiten und Schild "Durchfahrt verboten", allerdings konnten anscheinend sogar Autos durchfahren; am 2022-04-18 und 2022-08-05 ebenso
+#: note: am 2022-03-07 noch immer Bauarbeiten und Schild "Durchfahrt verboten", allerdings konnten anscheinend sogar Autos durchfahren; am 2022-04-18, 2022-08-05 und 2022-09-03 ebenso
 #: add_fragezeichen: Sind die Bauarbeiten bereits beendet?
-#: last_checked: 2022-08-05
+#: last_checked: 2022-09-03
 #: check_frequency: 14d
-#: next_check: 2022-08-31
+# REMOVED --- #: next_check: 2022-08-31
 # REMOVED (hier nicht mehr) ---	q4::inwork 13355,6235 13227,6209 13220,6237
 	q4::inwork 13027,6168 13227,6209
 ',
          'from' => undef,
          'id' => 3496,
-         'text' => 'Jahnstr.: zwischen Priesterweg und Rungiusstr. Bauarbeiten, Fahrbahn kann gesperrt sein, voraussichtlich bis Ende August 2022',
+         'text' => 'Jahnstr.: zwischen Priesterweg und Rungiusstr. Bauarbeiten, Fahrbahn kann gesperrt sein',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5277,14 +5300,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: XXX laut Schild der Wasserbetriebe bis Dezember 2022
 #: source_id: viz2021:13.287063,52.432721,31.01.2022,07:00 (bis 31.8.2022, kein Zeitraum für die Gesamtbaumaßnahme mehr) (inaktiv) vvv
 #: source_id: bvg2021:188#BVG296003_0
-#: source_id: viz2021:13.300936,52.440024,31.01.2022,07:00 (bis 31.8.2022)
-#: source_id: viz2021:13.289248,52.435248,31.01.2022,07:00 (bis 31.8.2022)
+#: source_id: viz2021:13.300936,52.440024,31.01.2022,07:00 (bis 31.8.2022) (bis 22.12.2022)
+#: source_id: viz2021:13.289248,52.435248,31.01.2022,07:00 (bis 31.8.2022) (bis 22.12.2022)
 #: by: https://viz.berlin.de/2022/01/verkehrsvorschau-31012022/ (Gesamtbaumaßnahme bis Ende 2022, Sperrung an der Drakestr. möglicherweise nur bis Ende März 2022, hier nur für den Kfz-Verkehr?)
 # REMOVED --- #: XXX Sind Radfahrer tatsächlich betroffen? Haben die Bauarbeiten auch was mit den Sperrungen in der Kommandantenstr./Baseler Str. zu tun? vvv
 #: also_indoor: traffic (G,H,B) vvv
 #: last_checked: 2022-07-10 vvv
 #: check_frequency: 150d vvv
-#: next_check: 2022-08-31 vvv
+#: next_check: 2022-12-22 vvv
 	q3::inwork 3011,3303 2778,3132
 # REMOVED (hier nicht mehr) ---	q2::inwork 2778,3132 2698,3068 2655,3025 2632,2969 2625,2850
 # REMOVED (hier vermutlich nicht mehr, by mapillary) --- #: note: Länge der Sperrung nur 30m ---	q3::inwork 3507,3654 3375,3559
@@ -5297,7 +5320,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 # 
 #: note: bei rbb bis 31.10.2022
 #: last_checked: 2022-07-10 vvv
-#: next_check: 2022-10-31 vvv
+#: next_check: 2022-12-22 vvv
 Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3059,3339 3184,3427
 Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q4::inwork 3184,3427 3228,3455
 Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q4::inwork 3185,3476 3184,3427
@@ -5311,9 +5334,9 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'from' => 1614492000,
          'id' => 3502,
          'source_id' => 'viz2021:13.287063,52.432721,01.03.2021,07:00',
-         'text' => 'Ringstr.: Bauarbeiten, kurze Abschnitte der Fahrbahn gesperrt, Gehwege sind noch frei, voraussichtlich bis Dezember 2022',
+         'text' => 'Ringstr.: Bauarbeiten, kurze Abschnitte der Fahrbahn gesperrt, Gehwege sind noch frei, voraussichtlich bis 22. Dezember 2022',
          'type' => 'handicap',
-         'until' => 1672466400
+         'until' => 1671688800
        },
        undef,
        undef,
@@ -5486,12 +5509,13 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'data' => '#: next_check_id: BRAUNSCHWEIGER-2022
 #: add_fragezeichen: Wann sind die Bauarbeiten in der Braunschweiger Straße und Zeitzer Straße beendet? Wann wird die Einbahnstraßenregelung aufgehoben? vvv
 #: XXX Laut Baustellenschild der Wasserbetriebe bis September 2022 vvv
-#: last_checked: 2022-07-24 vvv
+#: last_checked: 2022-09-03 vvv
 #: check_frequency: 60d vvv
-#: next_check: 2022-12-31 vvv
-#: also_indoor: traffic (G,B) vvv
+#: next_check: 2022-09-30 vvv
+#: also_indoor: traffic (G(unvollständig),B) vvv
 	q4::inwork; 13043,7234 13150,7254 13326,7291 13368,7300 13476,7330
 	q4::inwork 13326,7291 13325,7210
+	q4::inwork 13341,7423 13373,7426 13476,7330
 #: also_indoor ^^^
 #: next_check ^^^
 #: check_frequency ^^^
@@ -5501,7 +5525,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 ',
          'from' => undef,
          'id' => 3524,
-         'text' => 'Braunschweiger Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Westen; außerdem Sperrung der Zeitzer Str., voraussichtlich bis September 2022',
+         'text' => 'Braunschweiger Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Westen; außerdem Sperrung der Zeitzer Str. und Kanner Str., voraussichtlich bis September 2022',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5696,19 +5720,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'type' => 'handicap',
          'until' => 1664555400
        },
-       {
-         'data' => '#: also_indoor: traffic (B)
-#: last_checked: 2022-07-10
-#: check_frequency: 90d
-#: next_check: 2022-08-31
-	q4::inwork 4512,5199 4477,5250 4430,5324
-',
-         'from' => 1652642891,
-         'id' => 3552,
-         'text' => 'Braillestr.: Arbeiten der Wasserbetriebe, Fahrbahn gesperrt, voraussichtlich bis August 2022',
-         'type' => 'handicap',
-         'until' => 1661983200
-       },
+       undef,
        undef,
        {
          'data' => '#: by: mapillary
@@ -5827,19 +5839,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        },
        undef,
        undef,
-       {
-         'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1539528243316985856#m
-#: by: https://nitter.net/pic/orig/media%2FFV2AstdX0AEWnIn.jpg
-	q4::inwork; 10710,18393 10650,18544
-	q4::inwork 10721,18575 10784,18426
-',
-         'from' => 1655798400,
-         'id' => 3573,
-         'source_id' => 'viz2021:13.414144,52.572092,22.06.2022,10:00',
-         'text' => 'Kavalierstr. und Eintrachtstr.: Bauarbeiten an der Breiten Str., Umwege erforderlich,, vom 22.06.2022 10:00 bis 30.08.2022 17:00',
-         'type' => 'handicap',
-         'until' => 1661871600
-       },
+       undef,
        {
          'data' => '#: next_check_id: KWEISENBAHNBRUECKE-2022
 #: by: https://www.koenigs-wusterhausen.de/1013639/Eisenbahnunterfuehrung
@@ -5882,20 +5882,20 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
        },
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'data' => '	2::inwork 49875,51562 49211,51421
+         'data' => '	2::inwork 47334,21218 47192,21608 47072,21650 46672,21791 46264,21879 46072,21966
 ',
-         'from' => 1658034000,
-         'id' => 3582,
-         'source_id' => 'LS/221-E/22/094',
-         'text' => 'Oderberg - Liepe: Bauarbeiten, Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, 18.07.2022 07:00 Uhr bis 02.09.2022 16:00 Uhr',
+         'from' => 1657094400,
+         'id' => 3586,
+         'source_id' => '226400344',
+         'text' => 'Strauberg - Klosterdorf: Bauarbeiten, Sperrung der Straße, 07.07.2022 10:00 Uhr bis 30.09.2022',
          'type' => 'gesperrt',
-         'until' => 1662127200
+         'until' => 1664575199
        },
-       undef,
-       undef,
-       undef,
-       undef,
        undef,
        undef,
        {
@@ -5947,7 +5947,16 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'type' => 'gesperrt',
          'until' => 1672495200
        },
-       undef,
+       {
+         'data' => '	2::inwork 42833,41088 42225,41215 41992,41263 39354,41395
+',
+         'from' => 1653804000,
+         'id' => 3594,
+         'source_id' => '226400817',
+         'text' => 'Falkenberg: K6431 von Gersdorf bis Ackermannshof Deckensanierung, Sperrung der Straße, bis 09.09.2022',
+         'type' => 'gesperrt',
+         'until' => 1662760799
+       },
        {
          'data' => '#: by: https://nitter.it/VIZ_Berlin/status/1552156830029185024#m
 #: by: https://nitter.it/pic/orig/enc/bWVkaWEvRllwVlhWTFh3QU11UF9MLmpwZw== (Korrektur)
@@ -5964,7 +5973,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
        undef,
        {
          'data' => '#: next_check_id: WALLENSTEIN-2022
-#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags, 2022-08-14 mittags vvv
+#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags, 2022-08-14 mittags, 2022-09-03 (Sa) nachmittags vvv
 Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
 Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
 Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
@@ -5973,7 +5982,7 @@ Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
          'from' => 1659546069,
          'id' => 3597,
          'source_id' => 'viz2021:13.516327,52.486802,02.08.2022,07:00',
-         'text' => 'Walllensteinstr.: Bauarbeiten zwischen Ilsestr. und Sangeallee, Fahrbahn gesperrt, bis 16.12.2022',
+         'text' => 'Wallensteinstr.: Bauarbeiten zwischen Ilsestr. und Sangeallee, Fahrbahn gesperrt, außerhalb der Arbeitszeiten unter Umständen offen, bis 16.12.2022',
          'type' => 'handicap',
          'until' => 1671231600
        },
@@ -6010,16 +6019,19 @@ Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
 #: by: https://nitter.cz/polizeiberlin/status/1562774623414255617#m
 #: by: https://nitter.cz/VIZ_Berlin/status/1562798467298525185#m
 #: by: https://viz.berlin.de/2022/08/sprengplatz-grunewald/?date=20220825 (bis Ende September 2022)
-#: also_indoor: url https://nitter.cz/search?f=tweets&q=Kronprinzessinnenweg&since=2022-08-27&until=&near=
+#: by: https://berliner-abendblatt.de/2022/08/29/vollsperrung-vier-bomben-legen-die-avus-lahm/
+#: by: https://berliner-abendblatt.de/2022/08/30/nach-brand-im-grunewald-soll-munition-gesprengt-werden/https://berliner-abendblatt.de/2022/08/30/nach-brand-im-grunewald-soll-munition-gesprengt-werden/
+#: also_indoor: url https://nitter.cz/search?f=tweets&q=Kronprinzessinnenweg&since=2022-09-03&until=&near=
 #: source_id: viz2021:13.194739,52.449865,04.08.2022,07:00 (inaktiv)
 #: source_id: viz2021:13.242156,52.468429,04.08.2022,06:32 (inaktiv)
 #: source_id: viz2021:13.250049,52.457088,04.08.2022,06:31 (inaktiv)
 #: source_id: viz2021:13.219236,52.456277,11.08.2022,07:03
-#: last_checked: 2022-08-28 (research) vvv
+#: last_checked: 2022-09-03 (research) vvv
 #: check_frequency: 1d vvv
 #: next_check: 2022-09-30 vvv
 #Hüttenweg (westlicher Abschnitt)	2::temp -1854,6898 -1521,6972 -1241,7017 -1006,6911
 Hüttenweg (westlicher Abschnitt)	1::temp -927,6888 -1006,6911
+#: osm_watch: way id="50830991" version="22"
 Kronprinzessinenweg (NN)	2::temp -927,6888 -2218,5133
 Kronprinzessinenweg (NN)	1::temp -3296,3686 -2218,5133
 #Königsweg	2::temp 425,8766 100,8339 -363,7630 -643,7252 -913,6905 -927,6888
@@ -6063,28 +6075,7 @@ Fischerhüttenweg	2::temp -2528,5366 -2218,5133
          'type' => 'handicap',
          'until' => 1665759600
        },
-       {
-         'data' => '#: next_check_id: FIDICIN-2022
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10154 (Herbst 2021)
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1217600.php
-#: by: https://berliner-abendblatt.de/2022/06/17/bergmannkiez-fidicinstrasse-wird-zur-einbahnstrasse/
-#: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/verkehrsberuhigung-im-bergmannkiez-geht-weiter_a349916
-#: also_indoor: traffic (B) vvv
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2022-08-13 vvv
-	q4::inwork 9224,9053 9295,9047
-	q3::inwork 9295,9047 9459,9019
-	q4::inwork 9295,9047 9298,9112
-#: last_checked ^^^
-#: add_fragezeichen ^^^
-#: also_indoor ^^^
-',
-         'from' => undef,
-         'id' => 3602,
-         'text' => 'Fidicinstr./Am Tempelhofer Berg: Bauarbeiten im Einmündungsbereich, Ende der Bauarbeiten unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
 #: last_checked: 2022-08-14 vvv
@@ -6119,6 +6110,7 @@ Fischerhüttenweg	2::temp -2528,5366 -2218,5133
          'data' => '#: source_id: viz2021:13.56812,52.40301,20.08.2022,06:00
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1237046.php
 #: by: https://berliner-abendblatt.de/2022/08/22/umfangreiche-bauarbeiten-in-der-strasse-zur-gartenstadt/
+#: by: https://www.berliner-woche.de/altglienicke/c-bauen/strasse-zur-gartenstadt-wird-erneuert_a355592
 #: also_indoor: traffic (H(einseitig),G(kürzer),B)
 	q4::inwork 21742,115 21769,-30 21800,-109
 ',
@@ -6142,9 +6134,11 @@ Fischerhüttenweg	2::temp -2528,5366 -2218,5133
          'data' => '#: by: https://berliner-abendblatt.de/2022/08/17/neue-gleise-fuer-die-dorotheenstrasse/ (vom 22. August bis zum 10. Oktober 2022)
 #: by: https://berliner-abendblatt.de/2022/08/21/diese-baustellen-sorgen-fuer-staus/
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/neue-gleise-und-weichen_a355298
-#: source_id: viz2021:13.391637,52.520049,22.08.2022,06:00
+#: note: laut rbb ist die Georgenstr. nur bis 5.9.2022 gesperrt
+#: source_id: viz2021:13.391637,52.520049,22.08.2022,06:00 (hier nur bis 5.9.2022) (mittlerweile bis 29.9.2022)
 Georgenstr.	q4::inwork 9568,12688 9441,12670
-#: source_id: viz2021:13.395309,52.519431,22.08.2022,06:00 (2x mit der gleichen Koordinate)
+#: note: laut rbb ist die Dorotheenstr. sogar bis 31.10.2022 gesperrt
+#: source_id: viz2021:13.395309,52.519431,22.08.2022,06:00 (2x mit der gleichen Koordinate) (hier nur bis 5.9.2022)
 Dorotheenstr.	q4::inwork 9742,12609 9870,12657
 Am Kupfergraben	q4::inwork; 9815,12705 9870,12657
 ',
@@ -6152,7 +6146,7 @@ Am Kupfergraben	q4::inwork; 9815,12705 9870,12657
          'id' => 3608,
          'text' => 'Dorotheenstr. und Georgenstr.: Gleisarbeiten, Fahrbahn gesperrt, außerdem Einbahnstraßenregelung Am Kupfergraben, gesperrt ab Bauhofstr., vom 22. August 2022 bis 10. Oktober 2022',
          'type' => 'handicap',
-         'until' => 1665439199
+         'until' => 1667235600
        },
        {
          'data' => '#: note: Einbahnstraße etwa 70m lang
@@ -6215,6 +6209,65 @@ Am Kupfergraben	q4::inwork; 9815,12705 9870,12657
          'text' => 'Marwitzer Str.: Sperrung der Eisenbahnüberführung vom 08.08.2022 - 27.11.2024',
          'type' => 'gesperrt',
          'until' => 1732719600
+       },
+       undef,
+       {
+         'data' => '#: note: Länge des Einbahnstraßenabschnitts nur etwa 50m
+	q3::inwork; 4838,10597 4819,10355
+',
+         'from' => 1658970000,
+         'id' => 3615,
+         'source_id' => 'viz2021:13.321852,52.501972,29.07.2022,03:00',
+         'text' => 'Knesebeckstr.: Einbahnstraße zwischen Lietzenburger Str. und Kurfürstendamm, offen Richtung Norden, vom 29.07.2022 03:00 bis 28.10.2022 17:00',
+         'type' => 'handicap',
+         'until' => 1666969200
+       },
+       {
+         'data' => '#: add_fragezeichen: Ist der Uferweg tatsächlich gesperrt?
+#: osm_watch: way id="147686211" version="9"
+#: osm_watch: way id="481651814" version="4"
+	2::inwork 6882,11061 6920,11064 7142,11145
+',
+         'from' => undef,
+         'id' => 3616,
+         'text' => 'Herkulesufer: Neubau Bauhaus-Archiv, Uferweg möglicherweise gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: also_indoor: traffic (none)
+#: note: auch bei rbb erwähnt
+	q4::inwork 5090,11007 5084,10890 5072,10701
+',
+         'from' => 1661922000,
+         'id' => 3617,
+         'source_id' => 'viz2021:13.32575,52.50557,01.09.2022,07:00',
+         'text' => 'Uhlandstr.: zwischen Kantstr. und Grolmanstr. Baustelle, gesperrt, evtl. sind auch Radfahrer betroffen, vom 01.09.2022 07:00 bis 31.03.2023 23:59 ',
+         'type' => 'handicap',
+         'until' => 1680299940
+       },
+       {
+         'data' => '#: add_fragezeichen: Sind die Bauarbeiten in der Krautstr. beendet?
+#: also_indoor: traffic (none)
+#: last_checked: 2022-09-01
+#: check_frequency: 14d
+	q4::inwork 12081,12236 12059,12172
+',
+         'from' => undef,
+         'id' => 3618,
+         'text' => 'Krautstr.: Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '	2::temp 8306,12609 8207,12606
+',
+         'from' => 1662012000,
+         'id' => 3619,
+         'source_id' => 'viz2021:13.37203,52.51939,02.09.2022,08:00',
+         'text' => 'Paul-Löbe-Allee: Veranstaltung, zwischen Annemarie-Renger-Str. und Konrad-Adenauer-Str. gesperrt, vom 02.09.2022 08:00 bis 04.09.2022 23:00',
+         'type' => 'gesperrt',
+         'until' => 1662325200
        }
      
 );
