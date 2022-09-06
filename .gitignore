@@ -160,7 +160,7 @@ cgi/download.cgi
 cgi/log.cgi
 world
 
-images/mapsme-*
+images/organicmaps-*
 images/svg-*
 images/osmand-*
 images/geojson*
