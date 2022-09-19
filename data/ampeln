@@ -2,6 +2,7 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+Kiefholzstr./Hänselstr.: provisorische Fußgängerampel	F::inwork 15695,7254
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
 B179/Fichtestr.	X::inwork 26138,-12596
@@ -10,8 +11,6 @@ Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245
 Treptower Str./Werrastr.: Gegenverkehrsregelung	X::inwork 13650,8320
 Fischerinsel	F::inwork 10578,11969
-Mollstr./Büschingstr.	F::inwork 11913,13077
-Mollstr./Platz der Vereinten Nationen	F::inwork 11984,13081
 Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 	X::inwork 14151,8967
 Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
@@ -1185,7 +1184,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6377,13321
 	X 6124,12694
 	X 6227,13938
-	X 11616,10288
 	X 22383,4470
 	X 22419,4457
 	X 22674,4309
@@ -2022,7 +2020,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	F 2580,24028
 	X 13398,15826
 	F 6440,6707
-	F 7310,7818
+	F 7315,7814
 	X 3754,24946
 	X 3767,24887
 	F 1398,10201
@@ -2523,6 +2521,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -13181,2285
 	X -13142,1989
 	F -14457,-1797
+	F -8864,-42991
 	X 1737,31303
 	F 1430,31503
 	X 24408,-12045

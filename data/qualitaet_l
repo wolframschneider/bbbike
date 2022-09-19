@@ -193,7 +193,7 @@ Heinersdorf: schlechtes Kopfsteinpflaster, sandiger Rand evtl. OK	Q3 5633,-2011 
 Heinersdorf - Teltow: schlechtes Kopfsteinpflaster, sandiger Rand evtl. OK	Q3 5132,-2299 4998,-2359
 Heinersdorf - Teltow: Asphalt	Q0 4998,-2359 4278,-2339 4245,-2350
 Iserstr.: Asphalt	Q0 -248,-1160 -173,-1397
-Sputendorf: Asphalt	Q0 -1371,-7671 -1550,-7692 -1837,-7653 -1987,-7591 -2444,-7517
+Sputendorf: Asphalt	Q0 -1371,-7671 -1550,-7692 -1837,-7653 -1987,-7591 -2156,-7563 -2409,-7523
 Fahlhorst: Asphalt	Q0 -5661,-11016 -5452,-11456
 Briesetal: Waldweg, sandig, Wurzeln, aber nicht unangenehm zu fahren	Q3 2902,33051 3058,33080 3187,33227 3372,33103 3778,33058 4101,33202 4289,33361 4448,33327 4591,33646 4806,33767 5198,33766 5386,34009 5762,34303 5886,34555 5911,34736 6086,34885 6368,35173 6427,35375 6667,35501 6951,35920 7198,35904 7456,36042
 Briesetal - Zühlsdorf: Waldweg, teils sandig	Q3 7456,36042 7734,35999 7943,35803 8117,35796 8241,35780 8350,35841 8665,35825
@@ -5415,6 +5415,7 @@ Breite Str. (Luckenwalde): Gehwegplatten	Q0 -4309,-35471 -4319,-35500 -4299,-355
 Breite Str. (Luckenwalde): Gehwegplatten	Q0 -4319,-35500 -4478,-35736
 Bahnhofstr. (Luckenwalde): Kleinsteinpflaster	Q1 -5201,-35443 -5156,-35411 -5119,-35347 -5115,-35308
 Bahnhofstr. (Luckenwalde): Asphalt	Q0 -5115,-35308 -5003,-35099 -4888,-34952
+Poststr. (Luckenwalde): Fahrbahn Asphalt, Bürgersteige Verbundsteinpflaster	Q0 -5003,-35099 -4736,-35247 -4446,-35414
 Parkstr. (Luckenwalde): Asphalt	Q0 -4478,-35736 -4435,-35830
 Am Nuthefließ (Luckenwalde): Asphalt	Q0 -4614,-35852 -4539,-35852 -4493,-35881 -4483,-35884 -4435,-35830 -4358,-35722
 zum Flugplatz: Asphalt	Q0 -2344,-56936 -2400,-56629 -2187,-56677
@@ -5441,7 +5442,7 @@ Jüterbog - Werder: Asphalt	Q0 -10100,-45547 -10080,-45551 -10034,-45511 -9935,-4
 Jüterbog - Werder (Flaeming-Skate): Asphalt	Q0 -8295,-44523 -8110,-44463 -7803,-44419 -7549,-44355 -7522,-44347
 Werder - Kloster Zinna (Flaeming-Skate): Asphalt	Q0 -8295,-44523 -8369,-44555 -8408,-44557 -8658,-44152 -8688,-44102 -8866,-43908 -9067,-43884 -9147,-43833
 Bahnhofstr. (Kloster Zinna): Asphalt	Q0 -9390,-42540 -9091,-42729
-Klosterstr. (Kloster Zinna): Kopfsteinpflaster	Q2 -9091,-42729 -8825,-42779
+Klosterstr. (Kloster Zinna): Kopfsteinpflaster	Q2 -9091,-42729 -8990,-42747 -8825,-42779
 Klosterstr. (Kloster Zinna): Asphalt	Q0 -8825,-42779 -8567,-42822
 Grüna: Asphalt	Q0 -10590,-42004 -10549,-42029 -10267,-42032 -10093,-42039 -10021,-42071 -10016,-42168 -9911,-42193 -9879,-42200
 Grüna - Kloster Zinna: Asphalt	Q0 -9879,-42200 -9795,-42216 -9614,-42398 -9390,-42540
@@ -5518,6 +5519,12 @@ Neurochlitz: Beton	Q1 76953,98837 76787,98838
 Neurochlitz: Asphalt	Q0 76787,98838 76578,98839
 Neurochlitz: Asphalt	Q0 76575,98467 76574,98263
 Staffelde - Mescherin (Radweg): Asphalt	Q0 78489,97072 78512,97050 78529,96985 78555,96928 78514,96693
+Jüterboger Str. (Kloster Zinna): Kleinsteinpflaster	Q1 -8990,-42747 -9044,-42958 -9091,-43151 -9050,-43212 -9006,-43232
+Wallstr. (Kloster Zinna): Kleinsteinpflaster	Q1 -9006,-43232 -8922,-43250 -8668,-43314
+Mühlenstr. (Kloster Zinna): Kleinsteinpflaster	Q1 -8668,-43314 -8613,-43051 -8567,-42822
+König-Friedrich-Platz (Kloster Zinna): Kleinsteinpflaster	Q1 -8858,-42961 -8893,-42955 -8900,-42989 -8908,-43025 -8873,-43034 -8835,-43041 -8828,-43007 -8822,-42970 -8858,-42961
+Mittelstr. (Kloster Zinna): Kleinsteinpflaster	Q1 -8613,-43051 -8828,-43007
+Mittelstr. (Kloster Zinna): Kleinsteinpflaster	Q1 -8900,-42989 -9044,-42958
 Prieros - Neubrück: Sand	Q3 35093,-21361 34097,-22246
 Birkenweg: Asphalt	Q0 27432,12680 27427,12773 27483,12922
 Sankt-Georgs-Weg: Asphalt	Q0 29674,13008 29093,13456
@@ -6847,6 +6854,10 @@ Altlandsberg - Wegendorf: schlechtes Kopfsteinpflaster	Q3 32483,18870 32561,1909
 Friedrich-Engels-Str.: Asphalt	Q0 950,29767 707,29911 590,29922 320,29941 171,29953 0,30042
 Jägerstr.: Asphalt	Q0 667,29004 719,29085 934,29434
 Heidestr. (Schönow): Asphalt	Q0 19032,30053 18941,30212 18773,30398 18635,30610 18580,30715
+Schenkenhorst: schlechtes Kopfsteinpflaster	Q3 -3848,-7423 -3596,-7607
+Schenkenhorst: unbefestigte Straße	Q2 -3848,-7423 -4388,-7159 -5550,-6808
+Sputendorf - Struveshof: schlechtes Kopfsteinpflaster, schmale Verbundsteinpflastergehwege existieren	Q3 -1371,-7671 -1351,-7831
+Sputendorf - Struveshof: Asphalt	Q0 -1351,-7831 -1344,-7858 -906,-9454 -830,-9748 -847,-9888 -840,-9896
 Alter Weinberg (Groß Glienicke): sandige Straße	Q3 -9273,7221 -9198,7051
 BER - Karlshof: sandiger Weg	Q3 19673,-5149 19937,-5454 19879,-5678 19873,-5697 19859,-6278 19858,-6330
 Margaretenstr. (Zeuthen): Asphalt	Q0 24487,-7143 24490,-7241 24493,-7282 24492,-7311

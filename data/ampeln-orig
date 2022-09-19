@@ -7,12 +7,17 @@
 # 
 #: temporary vvv
 # 
+#: next_check_id: HAENSEL-2022
+#: last_checked: 2022-09-15
+#: XXX Ampel befindet sich südöstlich der Einmündung
+Kiefholzstr./Hänselstr.: provisorische Fußgängerampel	F::inwork 15695,7254
+# 
 #: by: https://www.deutsches-architekturforum.de/thread/11145-bauprojekte-im-rudolfkiez-friedrichshain/?postID=659363#post659363 (vermutlich steht die Ampel im Zusammenhang mit den Bauarbeiten)
 #: by: https://officehome.de/ostkreuz-campus-a
 #: osm_watch: way id="936801541" version="3"
 #: XXX Ampel befindet sich östlich der Einmündung
 #: note: Anforderungsampel
-#: last_checked: 2022-09-01
+#: last_checked: 2022-09-04
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 # 
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
@@ -65,18 +70,7 @@ Treptower Str./Werrastr.: Gegenverkehrsregelung	X::inwork 13650,8320
 #: next_check: 2022-12-31
 Fischerinsel	F::inwork 10578,11969
 # 
-#: source_id: viz2021:13.42641,52.523117,17.11.2021,07:00 (mittlerweile bis 5.8.2022) (bis 12.8.2022) (bis 19.8.2022) (bis 31.8.2022) (bis 15.9.2022)
-#: source_id: viz2021:13.42544,52.52334,17.11.2021,07:00 (Engstelle) (inaktiv)
-#: last_checked: 2022-08-30 vvv
-#: check_frequency: 90d vvv
-#: next_check: 2022-09-15 vvv
-# REMOVED --- #: valid: -20220730 vvv
-Mollstr./Büschingstr.	F::inwork 11913,13077
-Mollstr./Platz der Vereinten Nationen	F::inwork 11984,13081
-# REMOVED --- #: valid ^^^
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
+# REMOVED --- #: source_id: viz2021:13.42641,52.523117,17.11.2021,07:00 (mittlerweile bis 5.8.2022) (bis 12.8.2022) (bis 19.8.2022) (bis 31.8.2022) (bis 15.9.2022) --- #: source_id: viz2021:13.42544,52.52334,17.11.2021,07:00 (Engstelle) (inaktiv) --- #: last_checked: 2022-09-07 (mapillary) vvv --- #: check_frequency: 90d vvv --- #: next_check: 2022-09-15 vvv --- # REMOVED --- #: valid: -20220730 vvv --- Mollstr./Büschingstr.	F::inwork 11913,13077 --- Mollstr./Platz der Vereinten Nationen	F::inwork 11984,13081 --- # REMOVED --- #: valid ^^^ --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
 #: by: https://www.berliner-woche.de/wedding/c-bauen/virchow-klinikum-wird-standort-fuer-die-spitzenforschung_a346784 (Bauarbeiten bis Ende 2023)
 #: XXX Ampel hängt mit den Bauarbeiten am Forschungsgebäude Si-M zusammen
@@ -108,7 +102,7 @@ Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2022-08-14
+#: last_checked: 2022-09-18
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -125,7 +119,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8234,19936
 #: source_id ^^^
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2022-08-26
+#: last_checked: 2022-09-17 (webcam)
 #: next_check: 2024-06-01
 Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # 
@@ -138,7 +132,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # REMOVED (closed) --- #: osm_watch: note 2356634 3
 #: osm_watch: node id="9569639494" version="1"
 #: osm_watch: node id="9569639496" version="1"
-#: last_checked: 2022-05-14
+#: last_checked: 2022-09-03 (mapillary)
 #: check_frequency: 60d
 	X::inwork 9868,19023
 # 
@@ -187,7 +181,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2022-08-16
+#: last_checked: 2022-09-16
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -710,6 +704,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3710,4728
 	X 3754,4755
 #: related ^^^
+#: note: Anforderung für linksabbiegende Radfahrer (Schloßstr. -> Hindenburgdamm)
 	X 4512,5199
 	F 4153,5001
 	X 3048,4305
@@ -1081,7 +1076,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX: Ampel temporär verlegt
 # XXX	F 8065,11349
 #: note: Anforderungsampel
-#: last_checked: 2022-06-24
+#: osm_watch: node id="9858938170" version="1"
+#: last_checked: 2022-09-16
 #: check_frequency: 180d
 #: next_check: 2026-01-01
 	F::inwork 8096,11393
@@ -1530,7 +1526,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX provisorische Ampel an der Weichselstr. während der Bauarbeiten
 # REMOVED --- #: osm_watch: node id="7241153386" version="4"
 #: osm_watch: node id="9498243538" version="1"
-#: last_checked: 2022-08-05 (manchmal ausgeschaltet (abends?))
+#: last_checked: 2022-09-15 (manchmal ausgeschaltet (abends?))
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-10-08
 	F::inwork 12318,8645
@@ -1671,7 +1667,12 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6377,13321
 	X 6124,12694
 	X 6227,13938
-	X 11616,10288
+# 
+#: XXX: seit mindestens Ende Juli 2022 ausgeschaltet
+#: add_fragezeichen: Bleibt die Ampel Mariannenstr./Reichenberger Str. dauerhaft ausgeschaltet?
+#: last_checked: 2022-09-16
+	X0 11616,10288
+# 
 #: XXX_prog: zusammenhängende Ampelanlage vvv
 	X 22383,4470
 	X 22419,4457
@@ -2373,7 +2374,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 # 
 #: next_check_id: FRIEDRICH-2020
 #: note: vorhandene Ampel ist dauerhaft abgeschaltet
-#: last_checked: 2022-06-15 (mapillary)
+#: last_checked: 2022-09-17
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2022-04-01
 # REMOVED --- #: valid: !20200821-20211031
@@ -2466,13 +2467,13 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 8867,4506
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
-#: last_checked: 2022-08-16
+#: last_checked: 2022-09-17
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: manchmal ausgeschaltet (gesehen 2022-08-24 13:10)
-#: last_checked: 2022-08-24
+#: last_checked: 2022-09-17
 #: check_frequency: 120d
 	X::inwork 14382,9299
 Industriebahn	B0 -2410,13746
@@ -2807,8 +2808,9 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	X 13398,15826
 	F 6440,6707
 # REMOVED (nö, in beiden Richtungen nur Fußgängerampel) --- #: XXX_prog: Richtung Osten reguläre Ampel, Richtung Westen nur Fußgängerampel
-#: off: Sunday (seen 2019-10-13 14:30)
-	F 7310,7818
+#: off: Sunday (seen 2019-10-13 14:30, 2022-09-04 12:15)
+#: note: Anforderungsampel
+	F 7315,7814
 # REMOVED (temporäre Ampel existiert nicht mehr und wird auch nicht mehr eingerichtet) --- #: XXX existiert diese Ampel noch? --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5227&options=4 ---	F 18413,7774
 # REMOVED (existiert nicht mehr) ---	X 16187,10033
 #: by: Wolfhard Schleese vvv
@@ -2820,7 +2822,9 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	F 7110,10613
 provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 13520,6583
+#: note: Anforderungsampel
 	F 6315,3974
+#: note: Anforderungsampel
 	F 6489,3578
 #: note: Anforderungsampel
 #: XXX_prog: beide Ampeln sind getrennt geschaltet, man muss auf dem Mittelstreifen neu anfordern
@@ -3135,13 +3139,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX_prog Anforderungsampel
 #: osm_watch: node id="5931765487" version="5"
 #: osm_watch: node id="5931765488" version="5"
-#: last_checked: 2022-08-30
+#: last_checked: 2022-09-17
 #: check_frequency: 30d
 	F::inwork 9984,12426
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2022-08-26 vvv
+#: last_checked: 2022-09-17 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3288,7 +3292,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20221231 vvv
-#: last_checked: 2022-08-05 vvv
+#: last_checked: 2022-09-15 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
@@ -3302,10 +3306,10 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED --- #: note: Anforderungsampel --- #: note: Radfahrer Richtung Nordosten müssen diese Ampel zum Überqueren benutzen --- #: last_checked: 2021-04-04 ---	F::inwork 14239,6875
 #: note: Anforderungsampel
 #: XXX Ampel wird verstetigt, siehe auch Verschwenkung der Bergiusstr.
-#: last_checked: 2022-08-05
+#: last_checked: 2022-09-15
 	F::inwork 14139,6786
 #: note: Anforderungsampel
-#: last_checked: 2022-08-05
+#: last_checked: 2022-09-15
 	F::inwork 13979,6700
 #: next_check ^^^
 #: valid ^^^
@@ -3313,7 +3317,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20211231 vvv
-#: last_checked: 2022-07-06
+#: last_checked: 2022-09-15
 #: check_frequency: 90d
 #: next_check: 2023-06-30 vvv
 	X::inwork 13265,6972
@@ -3331,7 +3335,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://twitter.com/VIZ_Berlin/status/1301038406156398593 (vermutlich keine Änderung bis Ende Oktober 2020)
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="6"
-#: last_checked: 2022-08-05
+#: last_checked: 2022-09-15
 #: check_frequency: 60d
 	X::inwork 14174,7505
 # 
@@ -3464,6 +3468,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 7354,9135
 #: note: Anforderungsampel
 	F 1485,8845
+#: note: Anforderungsampel
 	F 7740,1041
 	X 22092,999
 	X -5886,10837
@@ -3496,6 +3501,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/schulneubau-bekommt-ampel_a189100 (2019, kein genauer Termin)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/433_2018_zu_ds_0680_v_ampelstandort_chaussee_boyenstr_bav.pdf
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/603_2018_ds_680_ampel_standort_chaussee_boyenstrasse_langfristig_sichern.pdf
+#: by: https://www.berliner-woche.de/wedding/c-bauen/neubau-der-grundschule-am-nordhafen-eroeffnet_a357236 (Schule in der Nähe der Ampel)
 #: XXX erst einmal provisorisch
 #: osm_watch: node id="7041133991" version="2"
 #: note: Anforderungsampel
@@ -3782,6 +3788,8 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 ################################################################################
 #: note: Ampeln elsewhere vvv
+#: note: Anforderungsampel
+	F -8864,-42991
 	X 1737,31303
 #: note: Anforderungsampel
 	F 1430,31503

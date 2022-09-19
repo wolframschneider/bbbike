@@ -133,6 +133,7 @@ Mini-Kreisverkehr	Roundabout -3252,-2368
 Mini-Kreisverkehr	Roundabout -3484,-2531
 Mini-Kreisverkehr	Roundabout -3650,-2609
 Kreisverkehr	Roundabout -2508,22627
+Kreisverkehr	Roundabout -862,-9933
 (Waldweg ¸ber den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
 Privatstraﬂe der DB	CS 5817,7824 6273,7849
 Albrecht-Thaer-Weg: Privatstraﬂe, Tore bei den Einfahrten	CS 3350,6467 3449,6863
@@ -816,7 +817,8 @@ Am Johannistisch: nicht ausgeschildert	CP2; 10029,9989 10111,9942
 Dauer - Schenkenberg: nicht ausgeschildert	CP2; 42779,109523 44444,109014
 Cremzow - Carmzow: nicht ausgeschildert	CP2; 51293,106693 51301,106780
 Kirchstr. (Gramzow): nicht ausgeschildert	CS 49655,90469 49651,90395 49640,90243
-In den Alboing‰rten: nicht ausgeschildert	CS 7971,6087 7910,6090 7739,6099 7646,6031 7638,5967
+In den Alboing‰rten: nicht ausgeschildert	CS 7971,6087 7936,6089 7739,6099 7646,6031 7638,5967
+In den Alboing‰rten: linke Straﬂe nehmen	CP2; 7638,5967 7646,6031
 ausgeschildert "Kettinger Str. 18A-18H 16A-16H"	CP2; 10116,949 10035,1000
 Luisenhof: Privatstraﬂe	CS -13532,-2963 -13548,-2893 -13558,-2841 -13570,-2795
 Luisenhof: Privatstraﬂe	CS -13548,-2893 -13635,-2900 -13671,-2903 -13705,-2875 -13719,-2846
@@ -841,3 +843,5 @@ ausgeschildert als "Zugang zur Falkstr. 23"	CP2; 12195,7916 12414,7965
 ausgeschildert als "Falkstr. 25"	CP2; 12186,7952 12219,7958
 Brigitte-Reimann-Str.: noch nicht ausgeschildert	CS 23368,15469 23363,15517 23388,15637
 Klaus-Selmke-Str.: Straﬂenname ist nicht offiziell, Privatgrundst¸ck	CS 21130,11384 21275,11547
+Curtiusstr. [Stichstraﬂe]: nicht ausgeschildert	CS 2965,3823 2915,3905
+Richtung Schenkenberg nicht ausgeschildert	CP2; 44444,109014 44605,108715

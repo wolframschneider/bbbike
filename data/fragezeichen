@@ -167,7 +167,6 @@ Klein Ziethen: Qualität im östlichen Abschnitt?	? 45901,62746 45689,62706 45450,
 Schmargendorf - Angermünde: Qualität im nördlichen Abschnitt?	? 48130,65861 48428,66332 48546,66709 48783,67071 49038,67144
 Ützdorf - Bogensee: Qualität?	? 18337,39131 18345,39215 18503,39436 18534,39567 18733,39862 19076,40228 19213,40479 19053,40540 18784,40575 18665,40616 18519,40801 18124,40730 18048,40906 17964,40999 18022,41084 17879,41267
 Am Neuen Kanal/Trappenallee: Qualität?	? -3996,22969 -3994,23162 -3503,23811
-Sputendorf - Struveshof: Qualität (wahrscheinlich Kopfsteinpflaster/Beton/Sand)? Genaue Wegführung?	? -1371,-7671 -862,-9933
 B198: laut Aktiv Regional viele Steigungen und Gefälle	? -8925,105645 -7678,105895 -7335,106120 -6912,106399 -6284,106468 -5887,106647 -4681,106367 -3724,105742 -3482,105401 -3330,105252 -2961,105166 -2570,105293
 Dewitz - Rosenhagen: laut Aktiv Regional viele Steigungen und Gefälle	? 6502,121010 6567,120649 7986,119379 8226,119058
 Brieselang - Finkenkrug: Ist der Weg neu asphaltiert?	? -14277,18001 -14603,18132
@@ -760,7 +759,6 @@ Auf der Breite (Kleinmachnow): Qualität im nördlichen Abschnitt?	? -1309,-59 -13
 Wilhelm-Külz-Weg (Kleinmachnow): Qualität im östlichen Abschnitt?	? -632,-172 -547,-231
 Erlenweg (Kleinmachnow): Qualität?	? -133,-371 -193,-298 -217,-250 -144,-156
 Erlenweg (Kleinmachnow): Qualität?	? -37,83 15,209 12,326 11,549 12,640 -27,702
-Schleusenweg (Stahnsdorf): Radweg Richtung Norden?	?; -2498,-1741 -2519,-1605
 Heinersdorfer Weg (Teltow): Qualität des östlichen Abschnitts? nur für Radfahrer/Fußgänger frei?	? 2578,-871 2637,-933 2807,-987
 An den Koppeln (Teltow): Qualität?	? 2807,-987 2855,-1022 2940,-1031 3004,-1036 3118,-1063
 Osdorfer Str. (Teltow): Qualität im östlichen Abschnitt?	? 3623,-384 3843,-401
@@ -781,7 +779,7 @@ Am Windmühlenberg (Potsdam-Bornim): Qualität? Ausgeschildert?	? -17052,841 -1707
 An der Brauerei (Potsdam): Qualität? Ausgeschildert?	? -9434,-5753 -9381,-5813
 Bebraer Str. (Potsdam): Qualität?	? -8259,-4119 -8339,-4151 -8377,-4091
 Bergweg (Potsdam): Qualität? Für Kfz gesperrt? Nachts beleuchtet?	? -9425,-524 -9561,-544
-Fritze-Bollmann-Steig (Potsdam-Grube): Qualität? Genaue Lage?	? -19538,4264 -19587,4355 -19625,4416 -19612,4534 -19612,4573
+Fritze-Bollmann-Steig (Potsdam-Grube): Qualität? Genaue Lage? Ist der richtige Straßenname "Bollmannsteig"?	? -19538,4264 -19587,4355 -19625,4416 -19612,4534 -19612,4573
 Weg nach Bornim (Potsdam-Eiche): Qualität? Ausgeschildert?	? -16856,-529 -16856,-498 -16808,-279
 Weg nach Bornim (Potsdam-Eiche): Qualität des Pfads? Ausgeschildert? Nachts beleuchtet?	? -16808,-279 -16746,-94 -16736,211 -16755,318 -16908,579 -16939,671 -16970,848 -17062,957
 Eichelkamp (Potsdam): Qualität?	? -14426,3083 -14432,3014 -14536,2959
@@ -863,6 +861,8 @@ Technologiepark KW - Funkerberg: Qualität der Verbindung?	? 24452,-10414 24518,-
 # added from strassen
 Eidechsenweg (Ist der Eidechsenweg bereits ausgeschildert?)	? -7893,13781 -7720,13839
 Elkartweg (Hängen bereits neue Straßenschilder für den "Erna-Koschwitz-Weg"?)	? -2158,17613 -2135,17633 -2119,17647 -2103,17670 -2087,17715 -2120,17786 -2131,17827 -2114,17878 -2066,17896 -2074,17921 -2100,17953 -2196,18069
+Petersallee (Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5426,16539 5533,16662
+Petersallee (Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5581,16708 5639,16768 5684,16815 5772,16919
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -897,8 +897,6 @@ Schloßstr. (Einbahnstraße?)	? -14821,106013 -15004,105813 -15070,105705
 Tiergartenstr. (Einbahnstraße?)	? -15004,105813 -14862,105712 -14570,105702 -14288,105530 -14242,105542
 Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105763 -13977,105850 -13932,106157
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
-# added from radwege
-Busspur ist für Radfahrer freigegeben (Wann sind die Geltungszeiten der Busspur?)	? 1080,1637 1025,1813 980,1893 846,2130 824,2210
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33327,2979 33296,2894
@@ -983,6 +981,7 @@ Ausschilderung nach Luisenthal (?) folgen (Heißt es tatsächlich "Luisenthal"?)	?
 Taubenbogen (Potsdam-Golm): noch nicht ausgeschildert (Sind die Straßen mittlerweile ausgeschildert?)	? -18222,253 -18238,364 -18251,459 -18249,551
 Grasmückenring (Potsdam-Golm): noch nicht ausgeschildert (Sind die Straßen mittlerweile ausgeschildert?)	? -18238,364 -18135,397 -18049,424 -17997,440 -17993,490
 Elsternstr. (Potsdam-Golm): noch nicht ausgeschildert (Sind die Straßen mittlerweile ausgeschildert?)	? -18135,397 -18140,452 -18131,476 -18145,499 -18146,544
+Brigitte-Reimann-Str.: noch nicht ausgeschildert (Ist die Brigitte-Reimann-Str. ausgeschildert?)	? 23368,15469 23363,15517 23388,15637
 # added from comments_route
 F3 (Potsdam) (Wie ist der genaue Verlauf der F3?)	? -26785,5851 -26783,5891 -26689,6111 -26525,6519 -26170,6459 -25898,6447 -25719,6581 -25537,6616 -25318,6593 -25213,6477
 F3 (Potsdam) (Wie ist der genaue Verlauf der F3?)	? -18701,4578 -19392,4605 -19316,4365
@@ -996,6 +995,5 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 Jörsstr.: Asphaltierung vermutlich bereits durchgeführt (Wurde die Asphaltierung der Jörsstr. bereits abgeschlossen?)	? -1478,18407 -1358,18400
 Schulzendorfer Str.: Asphaltierung (Wurde die Asphaltierung der Straße abgeschlossen?)	? 2556,22598 2652,22615
 # added from bbbike-temp-blockings-optimized
+Jahnstr.: zwischen Priesterweg und Rungiusstr. Bauarbeiten, Fahrbahn kann gesperrt sein (Sind die Bauarbeiten bereits beendet?)	? 13027,6168 13227,6209
 Kroppenstedtweg: Bauarbeiten zwischen Dihlmannstr. und Hauptweg, Weg ist gesperrt, ab 11.04.2022, Ende der Bauarbeiten ist unbekannt (Bis wann gehen die Bauarbeiten? Ist der Kroppenstedtweg danach komplett asphaltiert?)	? 983,15136 971,15193
-Seydlitzstr.: Bauarbeiten zwischen Frobenstr. und Derfflingerstr., Fahrbahn gesperrt, möglicherweise bis Ende August 2022 (Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?)	? 6273,2609 6293,2583 6349,2510
-Herkulesufer: Neubau Bauhaus-Archiv, Uferweg möglicherweise gesperrt (Ist der Uferweg tatsächlich gesperrt?)	? 6882,11061 6920,11064 7142,11145

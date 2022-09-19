@@ -114,8 +114,8 @@ Parochialstr.	1 10957,12401 11040,12415
 Waisenstr.	1 11040,12415 11032,12439 11059,12450
 Waisenstr.	1 11040,12415 11049,12386 11094,12243
 # nicht mehr: Jacobystr.	1 11207,12706 11260,12809 11594,12662
-Sonnenallee - Tellstr.	3 12240,8964 12316,8921 12402,9080
-Tellstr. - Sonnenallee	3 12402,9080 12316,8921 12435,8853
+Sonnenallee - Tellstr.	3 12240,8964 12323,8917 12406,9076
+Tellstr. - Sonnenallee	3 12406,9076 12323,8917 12429,8856
 Lettestr	1 11268,15360 11368,15301 11480,15229
 Kleine Auguststr.	1 10049,13528 9993,13682
 Steinstr. (Mitte)	1 10596,13398 10390,13493 10318,13528 10302,13525
@@ -726,7 +726,8 @@ Sensburger Allee	1 200,11428 326,11391 438,11236
 Kyllburger - Darßer Str	3 16670,17454 16785,17524 16761,17561
 Am Steinberg	1 13156,17579 12998,17480
 Schäßburger Weg: Poller	3 * 7127,-248 *
-Fuchsmühler Weg: Durchfahrt gesperrt	2 7277,-77 7231,25
+Fuchsmühler Weg: Durchfahrt gesperrt (Poller)	2 7277,-77 7231,25
+Fuchsmühler Weg	2:Anlieger 7277,-77 7231,25 7179,147
 Poller	3 7181,-15 7231,25 *
 Poller	3 * 7231,25 7181,-15
 Mittelstreifen	3nocross 9346,4144 9375,4022 9426,3797
@@ -860,7 +861,8 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="12"
-#: last_checked: 2022-08-13
+#: last_checked: 2022-09-16
+#: check_frequency: 60d
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
 Scharnhorststr.: Poller	3 7877,14504 7804,14445 *
@@ -1435,10 +1437,9 @@ Clayallee -> Sophie-Charlotte-Str.: Linksabbiegen verboten	3 1283,4260 1297,4311
 # REMOVED (entfernt) --- #: osm_watch: node id="8709493529" version="3"
 #: osm_watch: way id="940405708" version="3"
 #: osm_watch: note 2648361 17
-#: last_checked: 2022-07-31 (traffic)
+#: last_checked: 2022-09-16
+#: check_frequency: 120d
 # REMOVED --- #: next_check: 2022-06-30
-# REMOVED --- #: check_frequency: 90d
-# REMOVED --- #: next_check: 2021-10-31
 Krumme Str.: Poller	3 * 3983,11289 *
 # 
 #: note: für Fußgänger und Radfahrer existiert ein Z-Übergang etwa 20m westlich der Kreuzung
@@ -1579,7 +1580,7 @@ Karl-Marx-Str./Neckarstr.	3nocross 12689,8289 12639,8344 12598,8390
 # 
 Birkbuschstr. - Hindenburgdamm	3 4822,5114 4796,5129 4792,5097
 # 
-Weserstr.	1 12531,9009 12480,9037 12402,9080 12328,9117
+Weserstr.	1 12524,9012 12480,9037 12406,9076 12328,9117
 # 
 Edith-Stein-Str.: Poller an der Einmündung "Zur Marktflagge"	3 14089,13247 14035,13104 *
 # 
@@ -1622,4 +1623,19 @@ Am Nordbahnhof - Invalidenstr.: nur rechts abbiegen erlaubt	3 9011,14019 9085,13
 Bruchsaler Str.	1 5522,8011 5520,8132
 # 
 Adolf-Menzel-Str.: Poller	3 * 22110,10090 *
+# 
+#: by: https://www.berliner-woche.de/steglitz/c-verkehr/radfahren-gegen-die-einbahnstrasse_a238207
+# REMOVED --- #: XXX: Wird die Einbahnstraße für Radfahrer geöffnet? --- #: osm_watch: way id="4475205" version="10" --- #: last_checked: 2022-05-15 --- #: check_frequency: 90d
+Gritznerstr.	1 4511,6318 4555,6403
+# 
+Alt-Lankwitz	2:Anlieger 7407,3473 7419,3500 7236,3605 7012,3743
+# 
+#: next_check_id: ABBESTR-2021
+#: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kleinere-projekte/?postID=697425#post697425 (sieht weitgehend fertig aus)
+#: by: https://www.deutsches-architekturforum.de/thread/14781-physikalisch-technische-bundesanstalt-campus-um-und-neubauten/?postID=724237#post724237
+#: osm_watch: way id="152832871" version="19"
+#: priority: #C
+#: last_checked: 2022-09-16
+#: check_frequency: 120d
+Abbestr.	2 4674,12076 4698,12124
 # 

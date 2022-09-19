@@ -1620,6 +1620,7 @@ X	Vf 3976,11869 4149,11887 4238,12067
 X	Vf 4914,17399 4901,17341 4891,17289
 X	Kz 2682,4364
 X	Kz 2858,4372
+X	Vf 11671,10402 11616,10288 11512,10105
 X	Vf 11671,10402 11708,10497 11721,10530
 X	Vf 11721,10530 11734,10563 11763,10635
 X	Kz 8909,23506
@@ -1829,7 +1830,7 @@ X	Vf 24362,11954 24491,11972 24563,11980
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10174 vvv
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1202275.php (Charlottenstraﬂe wird zur Fahrradstraﬂe)
 #: confirmed_by: srt vvv
-#: last_checked: 2022-08-31 (mapillary) vvv
+#: last_checked: 2022-09-16 vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2022-04-01 vvv
 # REMOVED --- #: valid: !20200821-20211031 vvv
@@ -1979,9 +1980,9 @@ X	Vf 15026,6391 14843,6558 14724,6668
 X	Vf 14843,6558 15026,6391 15135,6291
 X	Vf 15026,6391 15135,6291 15187,6245
 X	Vf 15135,6291 15187,6245 15300,6148
-X	Vf 12328,9117 12402,9080 12480,9037
-X	Vf 12480,9037 12531,9009 12590,8977
-X	Vf 12531,9009 12590,8977 12740,8862
+X	Vf 12328,9117 12406,9076 12480,9037
+X	Vf 12480,9037 12524,9012 12590,8977
+X	Vf 12524,9012 12590,8977 12740,8862
 # 
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8171 (Forderung nach "Rechts vor links") vvv
 #: confirmed_by: mapillary vvv
@@ -2023,3 +2024,4 @@ X	Vf 15641,1426 15880,1291 15984,1233
 X	Vf 15984,1233 16142,1141 16282,1052
 #: note: implizit, Bordsteinkante
 X	Vf 16142,1141 16282,1052 16342,959
+X	Vf 7007,333 7014,203 6982,88

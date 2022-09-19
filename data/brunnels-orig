@@ -218,10 +218,10 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: XXX erstmal wird eine Behelfsbrücke erstellt (westlich); die neue Brücke wird Platz für eine Radwegunterführung haben
 #: source_id: 2147345790 (nicht mehr aktiv)
 #: source_id: 2147346453 (Leitungsbauarbeiten, bis 16.10.2020)
-#: last_checked: 2022-08-24 (daf) vvv
+#: last_checked: 2022-09-05 (osm) vvv
 #: check_frequency: 360d vvv
 #: next_check: 2023-12-01 vvv
-#: osm_watch: way id="4568174" version="42"
+#: osm_watch: way id="4568174" version="43"
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
 # REMOVED --- #: osm_watch: way id="883834105" version="16"
 #: osm_watch: way id="883834106" version="21"
@@ -300,6 +300,7 @@ Jannowitzbrücke	Br 11325,12021 11343,12182
 Emil-Schulz-Brücke	Br 4224,2671 4313,2630
 Emil-Schulz-Brücke	Br 4317,2638 4233,2675
 Eugen-Kleine-Brücke	Br 3698,1450 3766,1389
+#: next_check_id: BAEKEBRUECKE-2022
 #: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/wasserstrassen-neubauamt-will-baekebruecke-2022-neu-errichten_a284203
 #: by: https://plus.tagesspiegel.de/berlin/neubau-der-bakebrucke-um-ein-jahr-verschoben-was-aus-zwolf-projekten-aus-dem-jahr-2021-wurde-351799.html (Neubau um ein Jahr verschoben)
 #: XXX möglicherweise Neubau ab 2022 --- mittlerweile ab 2023?
@@ -335,7 +336,7 @@ Kynastbrücke	Br 14928,10970 14902,10859 14880,10808
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6904 (Vorschlag an Senatsverwaltung weitergeleitet)
 #: XXX Name "Südkreuz-Steg" --- wann wird dieser Name offiziell (Amtsblatt?) und die Brücke ausgeschildert?
 #: osm_watch: way id="10360532" version="24"
-#: last_checked: 2022-03-26
+#: last_checked: 2022-09-04
 #: check_frequency: 120d
 Sachsendammsteg	Br 7757,7563 7747,7521 7733,7483
 # 
@@ -479,7 +480,7 @@ Seidelstr., Brücke über Autobahn	Br 3570,17938 3706,17931
 Rote Chaussee, Brücke über Autobahn	Br -430,23912 -406,23934
 Halenseestr., Brücke über Autobahn	Br 1928,10728 1900,10617 1901,10566
 Dresselsteg	Br 2228,11317 2300,11292
-(Brücke über Autobahn)	Br 7226,7622 7220,7445
+(Brücke über Autobahn)	Br 7224,7553 7220,7445
 Königswegbrücke	Br -3413,843 -3506,791
 Aristide-Briand-Brücke	Br 3676,16497 3711,16481
 Robert-Schuman-Brücke	Br 3753,16638 3788,16621
@@ -597,11 +598,12 @@ Brigittenbrücke	Br 19348,-434 19385,-444
 Parkringbrücke	Br 8670,8370 8666,8305
 Nonnendammbrücke	Br 2149,13775 2176,13703
 #: by: https://www.berliner-woche.de/borsigwalde/c-verkehr/sanierung-der-schneckenbruecke-verzoegert-sich-weiter_a317523 (Sanierung 2022, Dauer vier Monate, evtl. mit Sperrungen "Nutzungseinschränkungen")
+#: XXX laut checkpoint.tagesspiegel Bauarbeiten nicht vor 2023
 #: also_indoor: search Ernststraßensteg
 #: osm_watch: way id="182526639" version="7"
 #: XXX Wird es während der Bauarbeiten Sperrungen geben? Wie wird die Situation nach den Bauarbeiten aussehen? (vermutlich unverändert)
 #: last_checked: 2022-08-06 (indoor research)
-# REMOVED --- #: next_check: 2022-05-01
+#: next_check: 2023-05-01
 Ernststraßensteg	Br 2689,19544 2714,19529 2780,19548 2821,19559
 Brücke über die Erpe	Br 23675,5706 23675,5729
 Brücke über die Erpe	Br 24126,5874 24118,5895
