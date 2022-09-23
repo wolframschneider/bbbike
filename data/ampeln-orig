@@ -17,7 +17,7 @@ Kiefholzstr./Hänselstr.: provisorische Fußgängerampel	F::inwork 15695,7254
 #: osm_watch: way id="936801541" version="3"
 #: XXX Ampel befindet sich östlich der Einmündung
 #: note: Anforderungsampel
-#: last_checked: 2022-09-04
+#: last_checked: 2022-09-21
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 # 
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
@@ -65,7 +65,7 @@ Treptower Str./Werrastr.: Gegenverkehrsregelung	X::inwork 13650,8320
 # 
 #: source_id: viz2021:13.406514,52.51352,16.03.2021,08:00 (bis Ende 2022)
 #: note: Ampel ist eigentlich südöstlich der Einmündung gelegen
-#: last_checked: 2022-09-20
+#: last_checked: 2022-09-22
 #: check_frequency: 120d
 #: next_check: 2022-12-31
 Fischerinsel	F::inwork 10578,11969
@@ -83,7 +83,7 @@ Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
 #: note: manchmal ausgeschaltet? (gesehen: So 2021-11-28 12:00)
-#: last_checked: 2022-09-03 vvv
+#: last_checked: 2022-09-21 vvv
 #: check_frequency: 60d vvv
 	X::inwork 14151,8967
 #: check_frequency ^^^
@@ -169,7 +169,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 #: next_check: 2022-09-30 vvv
 #: check_frequency: 90d vvv
 #: valid: -20220930 vvv
-#: last_checked: 2022-08-16
+#: last_checked: 2022-09-22
 #: osm_watch: node id="6380038401" version="1"
 	X::inwork 9195,11972
 #: note: Ampel befindet sich westlich der Kreuzung
@@ -181,7 +181,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2022-09-16
+#: last_checked: 2022-09-22
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -1526,7 +1526,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX provisorische Ampel an der Weichselstr. während der Bauarbeiten
 # REMOVED --- #: osm_watch: node id="7241153386" version="4"
 #: osm_watch: node id="9498243538" version="1"
-#: last_checked: 2022-09-15 (manchmal ausgeschaltet (abends?))
+#: last_checked: 2022-09-21 (manchmal ausgeschaltet (abends? selten?))
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-10-08
 	F::inwork 12318,8645
@@ -1982,6 +1982,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -5030,13017
 	X -4737,13132
 	X -5595,13916
+#: note: mittlerweile aus der Nauener Str. separate Rechtsabbiegeampel für Autofahrer, Radfahrer bekommen nur kurz grün
 	X -4759,13992
 	X -4748,14237
 	X -4724,14482
@@ -2374,7 +2375,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 # 
 #: next_check_id: FRIEDRICH-2020
 #: note: vorhandene Ampel ist dauerhaft abgeschaltet
-#: last_checked: 2022-09-20
+#: last_checked: 2022-09-22
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2022-04-01
 # REMOVED --- #: valid: !20200821-20211031
@@ -2467,13 +2468,13 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 8867,4506
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
-#: last_checked: 2022-09-17
+#: last_checked: 2022-09-21
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: manchmal ausgeschaltet (gesehen 2022-08-24 13:10)
-#: last_checked: 2022-09-17
+#: last_checked: 2022-09-21
 #: check_frequency: 120d
 	X::inwork 14382,9299
 Industriebahn	B0 -2410,13746
@@ -3159,9 +3160,9 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) ---
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2022-08-23
-# REMOVED --- #: check_frequency: 90d
-# REMOVED --- #: next_check: 2022-07-31
+#: last_checked: 2022-08-30
+#: check_frequency: 60d
+#: next_check: 2022-11-02
 	X::inwork 8732,14098
 # 
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) --- X::inwork 8870,13926
@@ -3327,7 +3328,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://twitter.com/VIZ_Berlin/status/1301038406156398593 (vermutlich keine Änderung bis Ende Oktober 2020)
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="6"
-#: last_checked: 2022-09-15
+#: last_checked: 2022-09-21
 #: check_frequency: 60d
 	X::inwork 14174,7505
 # 
@@ -3485,8 +3486,8 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: next_check_id: CHAUSSEE-2020
 #: osm_watch: node id="26748289" version="9"
 #: last_checked: 2022-08-30
-# REMOVED --- #: check_frequency: 90d
-# REMOVED --- #: next_check: 2022-07-31
+#: check_frequency: 60d
+#: next_check: 2022-11-02
 	X::inwork 8336,14586
 # 
 #: by: Tsp vom 2018-01-22 (neue Ampeln --- 2019)
@@ -3563,7 +3564,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: next_check_id: BERLINERBAHNHOF-2020
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6134 (Antrag) (im Ausschuss abgelehnt)
 #: XXX wird die provisorische Ampelanlage in eine permanente umgebaut? vvv
-#: last_checked: 2022-08-13 (mapillary) vvv
+#: last_checked: 2022-09-18 (mapillary) vvv
 #: check_frequency: 60d vvv
 	X::inwork 12166,21208
 	X::inwork 12158,21166
