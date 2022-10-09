@@ -279,7 +279,7 @@ Straße 77: nicht ausgeschildert	CS 15408,12394 15320,12375
 (Seeburger Str./Seecktstr. - Bullengraben): Zufahrt über Supermarktparkplatz (Lidl)	CS; -4299,13304 -4372,13384
 #: by: Ralf Henze vvv
 #: note: das gilt für alle Straßen von R bis Z vvv
-Straße R: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -203,16168 -269,16241 -312,16288 -386,16347 -460,16408 -542,16475 -632,16541 -719,16608 -784,16658 -792,16659
+Straße R: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -204,16162 -269,16241 -312,16288 -386,16347 -460,16408 -542,16475 -632,16541 -719,16608 -784,16658 -792,16659
 Straße Y: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -632,16541 -671,16488
 #: note: ^^^
 #: by: ^^^
@@ -489,7 +489,7 @@ Bus 139	busroute_N -834,15053 -934,15254 -1013,15433 -1037,15482 -1095,15621 -10
 Bus 139	busroute_N -2728,17038 -2659,17165 -2599,17269 -2573,17314 -2511,17430 -2856,17489 -2959,17507
 Bus 139	busroute_N -2835,17843 -2881,17857 -2897,17861 -2906,17661
 Bus 134	busroute_N -3216,15155 -3241,15118 -3349,15229 -3492,15331 -3507,15341 -3529,15358 -3555,15377 -3696,15463 -3778,15520 -3825,15551 -3881,15589 -3905,15605 -3997,15664 -4155,15763 -4254,15813 -4544,15940 -4630,15978 -4798,16050 -4893,16090 -4951,16116 -5077,16162 -5190,16203 -5292,16239 -5400,16285 -5544,16339 -5560,16345 -5658,16373 -5804,16415 -5960,16441
-Bus 337	busroute_N -3481,14523 -3598,14587 -3640,14643 -3721,14495 -3835,14668 -3880,14770 -3900,14818 -3926,14879 -4017,15077 -4061,15164 -4084,15264 -4110,15367
+Bus 337	busroute_N -3481,14523 -3598,14587 -3640,14643 -3721,14495 -3757,14552 -3835,14668 -3880,14770 -3900,14818 -3926,14879 -4017,15077 -4053,15167 -4090,15261 -4118,15370
 Bus 137	busroute_N -7003,16188 -6990,16321 -6982,16403 -6980,16452 -7037,16469 -7072,16489
 Bus M37	busroute_N -6722,16112 -6732,15998 -6766,15741 -6755,15682 -6733,15661 -6700,15653 -6629,15646 -6514,15629 -6345,15600 -6267,15585 -6182,15569 -6098,15559 -6045,15668 -5955,15778 -5911,15877
 Bus 131	busroute_N -6098,15559 -6116,15407 -6148,15306 -6175,15261 -6214,15211 -6256,15169 -6309,15125 -6361,15054 -6405,14971
@@ -532,8 +532,8 @@ Bus 179	busroute_N 9106,3703 9128,3580
 Bus 179	busroute_N 11791,834 11794,550
 Bus M77	busroute_N 9732,3883 9751,3769
 Bus 282	busroute_N 10185,4187 10269,4136 10355,4085 10409,4060 10586,4039 10756,4018 10978,4075 11014,4347 10879,4360 10802,4367 10731,4302 10614,4314 10550,4320 10462,4328 10371,4337 10288,4354
-Bus 181	busroute_N 14023,4475 14295,4462 14299,4383 14239,4367 14164,4271 14111,4181 14108,4175
-Bus M46	busroute_N 14290,3908 14238,3857 14185,3734 14141,3614 14056,3374 14023,3276
+Bus 181	busroute_N 14023,4475 14295,4462 14302,4379 14267,4379 14239,4367 14164,4271 14111,4181 14108,4175
+Bus M46	busroute_N 14290,3908 14233,3840 14189,3732 14141,3614 14056,3374 14023,3276
 Bus 172, ...	busroute_N 15301,3038 15254,2926 15174,2773 15078,2647 14946,2519
 Bus 373	busroute_N 14946,2519 14744,2308 14681,2231 14633,2145 14587,2032 14444,2090 14229,2177 14165,2106 14120,1991
 Bus 172	busroute_N 13501,2413 13640,2229 13661,2207 13700,2173 13835,2099 14120,1991
@@ -548,7 +548,7 @@ Bus 175	busroute_N 9959,-1918 9853,-1921 9750,-1925 9648,-1928 9534,-1926 9428,-
 Bus 175	busroute_N 10096,-2137 10173,-2402 10253,-2643 10287,-2644 10365,-2603 10382,-2598 10420,-2644 10510,-2642 10638,-2638 10657,-2639 10678,-2640 10832,-2636 10949,-2635 11063,-2615 11308,-2535 11496,-2484 11706,-2409 11818,-2356 11882,-2326 12052,-2250 12122,-2219 12154,-2202 12082,-1908 12058,-1785 12050,-1715 12046,-1678 11778,-1706
 Bus X76, ...	busroute_N 11778,-1706 11746,-1442 11739,-1384 11717,-1204
 Bus 373	busroute_N 16135,2135 16056,2034 16002,1964 15875,1796 15835,1747 15799,1690 15729,1573 15719,1557 15688,1506 15670,1474 15641,1426 15880,1291 15984,1233 16142,1141 16282,1052 16342,959 16349,932
-Bus 271	busroute_N 15757,610 15810,525 15835,489 15944,368 15995,328 16035,298 16057,284 16130,239 16055,153 15966,52 15960,-10 15995,-115 16051,-264 16079,-337 16142,-414 16234,-450 16297,-468 16378,-489 16431,-311 16477,-160 16536,26 16590,216 16642,393 16726,642 16735,668 16779,775 16796,820 16813,865 16887,1051 16886,1094 16839,1162
+Bus 271	busroute_N 15757,610 15810,525 15835,489 15944,368 15995,328 16035,298 16057,284 16130,239 16055,153 15966,52 15960,-10 15995,-115 16051,-264 16079,-337 16142,-414 16234,-450 16297,-468 16378,-489 16431,-311 16477,-160 16498,-92 16536,26 16590,216 16642,393 16726,642 16735,668 16779,775 16796,820 16813,865 16887,1051 16886,1094 16839,1162
 Bus 260, ...	busroute_N 16450,1691 16549,1758
 Bus 372	busroute_N 16698,1392 16805,1488
 Bus 372	busroute_N 16849,1437 16988,1571 17100,1650 17241,1750 17347,1823 17431,1882 17567,1942 17747,2028 17764,2032
@@ -623,7 +623,7 @@ Bus 326	busroute_N 3842,24556 3963,24559 4111,24488 4233,24459 4340,24413 4457,2
 Bus 350	busroute_N 15529,22981 15382,23051 15310,23085 15280,23097 15141,22896
 Bus 350	busroute_N 14632,23257 14718,23387 14761,23453 14845,23565 14902,23655 15029,23857 15130,24012 15256,24056 15367,24118 15490,24198 15591,24137 15675,24086 15689,24045 15794,23778 15826,23723 15845,23717 15957,23635 16070,23566 16064,23547 16079,23535 16095,23539 16183,23476 16425,23323 16444,23298 16440,23283 16383,23197 16315,23094 16304,23077
 Bus 350	busroute_N 16095,23539 16094,23554 16072,23565
-Bus 353	busroute_N 16669,25373 16731,25310 17023,25014 17109,24924 17117,24902 17156,24786 17193,24683
+Bus 353	busroute_N 16663,25349 16694,25342 16731,25310 17023,25014 17109,24924 17117,24902 17156,24786 17193,24683
 Bus 353	busroute_N 17117,24902 16999,24735 16921,24608 16883,24630 16791,24482 16872,24432 16963,24578 16921,24608
 Bus 363	busroute_N 21844,238 21799,234 21712,215 21645,200 21618,193 21582,185 21520,170 21487,173 21421,158 21382,149 21354,142 21250,118
 Bus 390	busroute_N 21854,18192 21869,18227 21871,18244 21938,18370 21946,18415 21933,18521 21875,18700 21875,18717 21884,18771 21890,18821 21880,18866 21871,18887 21868,18896 21821,19021
@@ -660,7 +660,7 @@ Tordurchfahrt	CS 9341,6163 9367,6160
 # REMOVED (-> cul-de-sac) --- An den Haselbüschen: Sackgasse, kein Durchgang zur Daumstr.	CS; -1273,15539 -1291,15580 -1402,15592
 #: XXX_indoor: sollte das nach handicap_s wandern bzw. durch die Bordstein-Implementation behandelt werden?
 Pfähle und hohe Bordsteine	CP2 2211,4280 2254,4376
-Uferweg am Plötzensee	CS 5618,14981 5455,15245 5391,15331 5306,15387 5134,15565 5073,15611 5040,15606 5015,15564 5051,15508 5084,15415 5075,15354 5005,15213
+Uferweg am Plötzensee	CS 5618,14981 5455,15245 5391,15331 5306,15387 5134,15565 5073,15611 5040,15606 5015,15564 5051,15508 5084,15415 5075,15354 5001,15211
 # REMOVED (komischer Kommentar) --- (Wintgensstr. - General-Pape-Str.): eine mögliche Route über das ehem. Werksgelände	CS 7950,7840 8140,7845 8140,7906 8207,7909
 (Im Schäferfeld - Wetzlarer Str.): am Baggersee entlang	CS -8563,-3805 -8562,-3849 -8661,-3971 -8982,-3860 -9002,-3896 -8970,-3923
 #: by: Tom Urig
@@ -908,7 +908,7 @@ Nikolaus-Ehlen-Weg: Privatstraße	CS 17308,-36 17215,94 17176,90
 #: XXX_indoor: würde besser unter sehenswuerdigkeit passen
 #: by: https://www.morgenpost.de/bezirke/mitte/article230905682/Lichter-der-Vergangenheit-die-Gaslaternen-im-Tiergarten.html
 #: XXX Wann ziehen die Gaslaternen um?
-#: osm_watch: note 2969085 3
+#: osm_watch: note 2969085 4
 #: priority: #C
 #: last_checked: 2022-09-22
 #: check_frequency: 90d
@@ -1211,7 +1211,7 @@ Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788&d=20191216 (Benennung nach Hans Otto Obrikat vorgeschlagen)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_29_1829_2008_online.pdf (Straßenlandwidmung, als "Schnellerstr." bezeichnet)
 #: XXX oder wird statt Wasserstr. und Uferstr. die Straße nach Hans Otto Obrikat benannt? (erster Vorschlag: "Else-Schierhorn-Str.")
-#: last_checked: 2022-08-03
+#: last_checked: 2022-10-05
 #: check_frequency: 60d
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
@@ -1298,7 +1298,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="5"
-#: last_checked: 2022-08-30
+#: last_checked: 2022-10-06
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
@@ -1338,7 +1338,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2022-09-03
+#: last_checked: 2022-10-05
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1354,7 +1354,7 @@ Bochumer Platz: als Bundesratufer ausgeschildert	CP2; 5914,12845 5938,12848
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_53_8205_8368_online.pdf (Widmung)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_06_0673_0824_online.pdf (Eingruppierung in die Straßenreinigungsverzeichnisse)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_54_4961_5184_online.pdf (Eingruppierung in die Straßenreinigungsverzeichnisse)
-#: last_checked: 2022-06-06 vvv
+#: last_checked: 2022-10-05 vvv
 #: check_frequency: 120d vvv
 # REMOVED --- An der Dahme: nicht ausgeschildert	CS 22270,2549 22358,2460
 # REMOVED --- Gaffelsteig: nicht ausgeschildert	CS 22287,2431 22221,2520
@@ -1410,7 +1410,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 #: next_check_id: HILDAGEIRINGERWEG-2019
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2022-08-30
+#: last_checked: 2022-10-03
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13397
 # 
@@ -1454,14 +1454,14 @@ ausgeschildert nach Cremzow	CP2; 51128,104358 50931,104373
 nicht ausgeschildert, hinter dem Netto links abbiegen	CP; 5429,19165 5476,19450 5398,19463
 nicht ausgeschildert, vor dem Netto links abbiegen	CP; 5495,19571 5486,19515 5476,19450 5398,19463
 # 
-nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5198,17433 5109,17507 5138,17630
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5198,17433 5109,17507 5121,17559
 nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5198,17433 5109,17507 5068,17384
-nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5138,17630 5109,17507 4801,17623
-nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5138,17630 5109,17507 5198,17433
-nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 4801,17623 5109,17507 5068,17384
-nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 4801,17623 5109,17507 5138,17630
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5121,17559 5109,17507 5034,17535
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5121,17559 5109,17507 5198,17433
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5034,17535 5109,17507 5068,17384
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5034,17535 5109,17507 5121,17559
 nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5068,17384 5109,17507 5198,17433
-nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5068,17384 5109,17507 4801,17623
+nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5068,17384 5109,17507 5034,17535
 # 
 auf der Verbundsteinpflasterstraße bleiben, nicht der Ausschilderung nach Glambeck folgen	CS; -16343,58851 -16043,58884
 # 
@@ -1471,7 +1471,8 @@ ausgeschildert nach Königs Wusterhausen	CP; 20187,-20230 20738,-20432 20707,-202
 # 
 ausgeschildert Köriser Str.	CP2; 23482,-22742 23775,-22788
 # 
-(Tangermünder Str. - Stendaler Str.): Rampe benutzen um Treppen zu vermeiden	CP2; 24169,15497 24076,15481
+#: note: beim direkten Weg gibt es zwei Stufen
+(Tangermünder Str. - Stendaler Str.): Rampe benutzen, um Treppen zu vermeiden	CP2; 24169,15497 24076,15481
 # 
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.993292.php (neuer Name)
 Helmholtz-Zentrum, früher Hahn-Meitner-Institut	CS -9313,54 -8629,175 -8387,190 -8398,242 -8301,326 -8021,393 -7844,392 -7742,330 -7737,316
@@ -1584,9 +1585,9 @@ beide Geh/Radwege hinter der Einmündung Neukirchstr. können Richtung Am Feuchten
 #: next_check_id: HANSPETERSPLATZ-2022
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1128830.php (Benennung eines Platzes nach Hans Peters)
 #: XXX wann wird der Platz ausgeschildert?
-#: last_checked: 2022-08-27 (mapillary)
+#: last_checked: 2022-09-30
 #: check_frequency: 45d
-Hans-Peters-Platz: nicht ausgeschildert	CS 7732,14131 7679,14030
+Hans-Peters-Platz: nicht ausgeschildert	CS 7739,14119 7679,14030
 # 
 ausgeschildert "Fußweg Grünverbindung Dietzgenstraße 60/Kreuzgraben"	CP2; 10098,20113 10157,20128
 # 
@@ -1602,7 +1603,7 @@ ausgeschildert "Sokratesweg 59/85"	CP2; 18505,9500 18596,9485
 # 
 #: next_check_id: AFRIKANISCHESVIERTEL-2020
 #: XXX wird umbenannt, neuer Name: "Manga-Bell-Platz"
-#: last_checked: 2022-06-12
+#: last_checked: 2022-10-03
 #: check_frequency: 90d
 ausgeschildert "Nachtigalplatz"	CP2; 5581,16708 5639,16768
 # 
@@ -1627,9 +1628,9 @@ Am Karlsbad: Hausdurchfahrt	CP2; 7959,10910 8027,11000
 Am Karlsbad: Hausdurchfahrt	CP2; 8027,11000 7959,10910
 # 
 #: next_check_id: ANDERGAERTNEREI-2022
-#: last_checked: 2022-02-05
+#: last_checked: 2022-10-02
 #: check_frequency: 180d
-An der alten Gärtnerei: nicht ausgeschildert	CS 11046,3895 11053,3828 11019,3786 10972,3779 10958,3710
+An der alten Gärtnerei: am Bauzaun hängt nur ein provisorisches schwarzes Schild	CP2; 10958,3710 10972,3779
 # 
 ausgeschildert "Grüner Weg 94, 96, 98"	CP2; 13775,3500 13728,3332
 # 
@@ -1710,7 +1711,7 @@ ausgeschildert als "Zugang zur Falkstr. 23"	CP2; 12195,7916 12414,7965
 ausgeschildert als "Falkstr. 25"	CP2; 12186,7952 12219,7958
 # 
 #: add_fragezeichen: Ist die Brigitte-Reimann-Str. ausgeschildert?
-#: last_checked: 2022-08-09 (mapillary)
+#: last_checked: 2022-10-05
 Brigitte-Reimann-Str.: noch nicht ausgeschildert	CS 23368,15469 23363,15517 23388,15637
 # 
 Klaus-Selmke-Str.: Straßenname ist nicht offiziell, Privatgrundstück	CS 21130,11384 21275,11547
@@ -1720,6 +1721,17 @@ Curtiusstr. [Stichstraße]: nicht ausgeschildert	CS 2965,3823 2915,3905
 Richtung Schenkenberg nicht ausgeschildert	CP2; 44444,109014 44605,108715
 # 
 Nußbaumallee: nicht ausgeschildert	CP2; 1788,12252 1732,12224
+# 
+#: add_fragezeichen: Ist der Eidechsenweg bereits ausgeschildert? vvv
+#: last_checked: 2022-10-08 vvv
+#: check_frequency: 120d vvv
+Eidechsenweg: nicht ausgeschildert	CS -7720,13839 -7893,13781
+ausgeschildert "Zu den Häusern Metropolitan Park"	CP2; -7720,13839 -7893,13781
+#: check_frequency ^^^
+#: last_checked ^^^
+#: add_fragezeichen ^^^
+# 
+Bootshausweg: nicht ausgeschildert	CP2; -1691,16848 -1673,16939
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)

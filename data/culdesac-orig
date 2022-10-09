@@ -1,7 +1,7 @@
 #:# -*- coding: iso-8859-1 -*-
 #: title: Sackgassen
 #: category_image.culdesac: ../misc/verkehrszeichen/Zeichen_357.svg:12x12=1:12000,xxx
-#: category_image.culdesac_pseudo: ../misc/verkehrszeichen/Zeichen_357.svg:8x8=1:12000,xxx
+#: category_image.culdesac_pseudo: ../misc/verkehrszeichen/Zeichen_357-52.svg:12x12=1:12000,xxx
 #:
 ######################################################################
 # cul-de-sac
@@ -469,7 +469,7 @@ Sackgassenende im südlichen Abschnitt	culdesac 12724,5051
 	culdesac_pseudo 15550,1953
 	culdesac 15056,2096
 	culdesac 14454,2367
-	culdesac 14322,2449
+	culdesac 14331,2447
 	culdesac_pseudo 14254,2566
 	culdesac 14092,2585
 	culdesac_pseudo 16472,19818
@@ -934,7 +934,7 @@ Klinikumsgebäude	culdesac 17428,25235
 	culdesac 23508,19025
 	culdesac 22914,17893
 # REMOVED --- #: next_check_id: AMLOKDEPOT-2014 --- #: XXX evtl. entfernen, falls die beiden Abschnitte verbunden werden, oder verschieben, wenn die Straße nur länger wird --- #: last_checked: 2016-03-26 --- #: check_frequency: 90d
-	culdesac 8383,8862
+	culdesac_pseudo 8383,8862
 Sackgassenende, Ulmenhof	culdesac 32090,3599
 	culdesac_pseudo 32230,3770
 	culdesac_pseudo 32224,3889
@@ -1014,7 +1014,6 @@ Sackgassenende, S-Bhf. Hermsdorf	culdesac_pseudo 3653,23305
 Sackgassenende, Tor	culdesac -6053,6686
 	culdesac -6077,6627
 	culdesac -5947,6395
-	culdesac_pseudo -8064,13534
 	culdesac -8150,14064
 	culdesac 16098,12743
 	culdesac 15997,12743
@@ -1410,7 +1409,7 @@ südwestliches Sackgassenende	culdesac 11476,20058
 	culdesac -7670,12310
 	culdesac -7824,12249
 	culdesac -7976,12217
-	culdesac -8110,12160
+	culdesac -8108,12170
 	culdesac -8235,12144
 	culdesac -8359,12112
 	culdesac -7883,13166
@@ -1613,10 +1612,16 @@ nördliches Sackgassenende der östlichen Stichstraße	culdesac_pseudo 19243,450
 	culdesac 15512,3157
 	culdesac 21629,5470
 Sackgassenende an der Hauptstr.	culdesac 16182,10069
+#: note: es folgt ein Weg durch einen Spielplatz, Radfahrer verboten
+	culdesac 14588,4154
+	culdesac 13497,3111
+	culdesac 23213,15297
 # 
 ######################################################################
 # culdesac entries which should remain invisible
 #: ignore vvv
+	culdesac_pseudo 25086,15298
+	culdesac_pseudo 13822,3494
 	culdesac_pseudo -4195,12139
 	culdesac_pseudo 5541,12221
 	culdesac_pseudo 22110,10090

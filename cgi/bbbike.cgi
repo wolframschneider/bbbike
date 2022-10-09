@@ -5,7 +5,7 @@
 # $Id: bbbike.cgi,v 9.30 2009/04/04 11:13:58 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2020 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2020,2022 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -5869,7 +5869,7 @@ sub display_route {
 		    print qq{ type="hidden"}
 		};
 		print qq{ name="custom" value="temp-blocking-$tb->{'index'}"> };
-		print $tb->{text};
+		print _linkify($tb->{text});
 		if ($lost_time_info && $lost_time_info->{lost_time_string_de}) {
 		    print " ($lost_time_info->{lost_time_string_de})";
 		}
@@ -10224,6 +10224,11 @@ sub add_qrcode_html {
     qq{<a href="$qrcode_href" onclick='return show_single_image(this.href);' title="QR Code - $title"><img style="vertical-align:bottom; padding-left:2px;" src="$bbbike_images/QR_icon_16x16.png" width="16" height="16" border="0" alt="QR Code - $title"></a>};
 }
 
+sub _linkify {
+    my $text = shift;
+    $text =~ s{\b(https:\S+)}{<a href="$1">$1</a>}g;
+    $text;
+}
 
 
 
@@ -10233,7 +10238,7 @@ Slaven Rezic <slaven@rezic.de>
 
 =head1 COPYRIGHT
 
-Copyright (C) 1998-2018 Slaven Rezic. All rights reserved.
+Copyright (C) 1998-2020,2022 Slaven Rezic. All rights reserved.
 This is free software; you can redistribute it and/or modify it under the
 terms of the GNU General Public License, see the file COPYING.
 

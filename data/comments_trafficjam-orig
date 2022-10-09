@@ -17,9 +17,10 @@
 #: temporary vvv
 # 
 #: next_check_id: MARKGRAFENDAMM-2022
-#: note: Stau gesehen: 2022-08-24 (Mi) gegen 13:00, 2022-08-25 (Do) gegen 14:30, 2022-08-27 (Sa) gegen 17:30
-#: note: keinen Stau gesehen: 2022-08-29 (Mo) gegen 18:10, 2022-09-01 (Do) gegen 19:00, 2022-09-03 (Sa) gegen 12:45, 2022-09-04 (So) gegen 15:00, 2022-09-21 (Mi) gegen 19:50
-#: last_checked: 2022-09-21
+#: note: Stau gesehen: 2022-08-24 (Mi) gegen 13:00, 2022-08-25 (Do) gegen 14:30, 2022-08-27 (Sa) gegen 17:30, 2022-10-07 (Fr) gegen 13:20
+#: note: kurzen Stau gesehen (bis Corinthstr.): 2022-09-24 (Sa) gegen 16:40
+#: note: keinen Stau gesehen: 2022-08-29 (Mo) gegen 18:10, 2022-09-01 (Do) gegen 19:00, 2022-09-03 (Sa) gegen 12:45, 2022-09-04 (So) gegen 15:00, 2022-09-21 (Mi) gegen 19:50, 2022-09-28 (Mi) gegen 11:15
+#: last_checked: 2022-10-07
 #: check_frequency: 90d
 #: next_check: 2023-03-15
 	Jam; 14641,10552 14608,10409 14558,10264
@@ -44,6 +45,7 @@
 #: source_id: viz2021:13.467574,52.553893,04.07.2022,07:00 (bis 25.7.2022) (inaktiv)
 #: source_id: viz2021:13.470292,52.553666,04.07.2022,07:00 (bis 25.7.2022, nur Kfz-Verkehr) (inaktiv)
 #: source_id: viz2021:13.465999,52.55224,25.07.2022,10:00 (Kanalarbeiten zwischen Lindenstr. und Rennbahnstr. bis 14.10.2022)
+#: source_id: viz2021:13.4604,52.550369,26.09.2022,07:00 (zwischen Pistoriusstr. und Lindenstr. bis 25.10.2022)
 #: XXX Einzelne Straßenanbindungen werden abgesperrt (Wegenerstr., Rennbahnstr.), außerdem wird direktes Linksabbiegen an einigen Stellen nicht möglich sein. Wie wird sich das auf Radfahrer auswirken?
 #: also_indoor: traffic vvv
 #: last_checked: 2022-09-14 (mapillary) vvv
@@ -60,7 +62,7 @@ Berliner Allee: Gleisbauarbeiten	Jam; 14619,16551 14610,16522 14556,16391 14499,
 #: also_indoor ^^^
 # 
 #: next_check_id: KARLMARXSTR-2018
-#: last_checked: 2022-09-21 vvv
+#: last_checked: 2022-10-02 vvv
 #: check_frequency: 120d vvv
 # REMOVED --- #: next_check: 2022-09-01 vvv
 Karl-Marx-Str.	Jam; 12330,8636 12494,8501 12545,8449 12562,8432 12582,8408 12598,8390
@@ -71,16 +73,18 @@ Karl-Marx-Str.	Jam; 12598,8390 12582,8408 12562,8432 12545,8449 12494,8501
 # 
 #: next_check_id: FRANZOESISCHE-2018 vvv
 #: source_id: 2147343056 (bis 30.06.2021) vvv
-#: last_checked: 2022-09-16 vvv
+#: source_id: viz2021:13.385078,52.515417,10.10.2018,13:25 (bis 27.2.2023) vvv
+#: last_checked: 2022-09-23 vvv
 #: check_frequency: 90d vvv
-#: next_check: 2022-09-30 vvv
-#: valid: -20220930 vvv
+#: next_check: 2023-02-27 vvv
+#: valid: -20230227 vvv
 Behrenstr.	Jam; 8861,12125 9054,12154 9064,12156 9164,12172
 Behrenstr.	Jam; 9164,12172 9064,12156 9054,12154 8861,12125
 #: valid ^^^
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
+#: source_id ^^^
 #: source_id ^^^
 #: next_check_id ^^^
 # 
@@ -104,7 +108,7 @@ Leipziger Str. (Richtung Osten)	Jam; 9268,11590 9444,11616 9569,11631
 Friedrichstr.	Jam; 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351
 # 
 #: next_check_id: FRIEDRICH-2020
-#: last_checked: 2022-09-22 vvv
+#: last_checked: 2022-09-23 vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2022-04-01 vvv
 # REMOVED --- #: valid: !20200821-20220401 vvv
@@ -144,7 +148,7 @@ Dorotheenstr.	Jam; 8775,12457 8540,12420
 Boxhagener Str.	Jam; 14799,11330 14918,11249
 # 
 #: note: kann manchmal schon an der Kreuzung Kynaststr. anfangen
-Marktstr./Karlshorster Str.	Jam; 15144,10905 15279,10862
+Marktstr./Karlshorster Str.	Jam; 15088,10950 15113,10916 15144,10905 15279,10862
 # REMOVED (Radweg existiert) --- Marktstr./Karlshorster Str.	Jam; 15279,10862 15272,10790 15261,10738
 # REMOVED (fertig) --- #: next_check_id: HAUPTSTR-2015 vvv --- #: last_checked: 2017-12-03 vvv --- #: check_frequency: 21d vvv --- #: note: Stau eher abends --- #: tempex: rush_hour_evening --- Hauptstr.	Jam; 14674,10811 14717,10855 14810,10832 14904,10812 15000,10792 15261,10738 --- #: note: Stau eher morgens --- #: tempex: rush_hour_morning --- Hauptstr.	Jam; 15261,10738 14904,10812 14810,10832 14717,10855 14674,10811 --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: next_check_id ^^^
 # 
@@ -176,12 +180,7 @@ Wendenschloßstr.	Jam; 22832,4491 22791,4457 22759,4430 22740,4415 22700,4351
 # REMOVED --- Treskowallee	Jam; 18737,8686 18770,8898
 # REMOVED (nicht mehr gesehen) --- #: note: kein Stau 2020-08-05 morgens (siehe mapillary), auch kein Stau 2020-09-04 am späten Abend --- 
 # REMOVED (seit dem 2021-12-16 keine nennenswerten Staus mehr) --- #: last_checked: 2021-12-22 (indoor) --- #: check_frequency: 2d --- #: XXX siehe Verkehrsmeldungen und bahninfo-forum --- #: note: früher (2020) nur ab Heiligenberger Str. eingezeichnet, 2021-11 ab Lehndorffstr. (und manchmal fängt der Stau schon Liepnitzstr. oder sogar Trautenauer Str. an) --- 
-#: also_indoor: traffic
-#: source_id: viz2021:13.525209,52.480103,21.02.2022,08:00 (bis 19.3.2022) (inaktiv)
-#: note: größere Staus typischerweise nur bei gleichzeitigen Problemen (Baustellen, sonstiges) in der Treskowallee
-#: tempex: rush_hour_evening
-#: valid: -20220319
-Ehrlichstr.	Jam; 18322,8470 18391,8425 18461,8377 18528,8331 18615,8269
+# REMOVED --- #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9442&date=20221002 (wird nicht mehr "kritisch" eingeschätzt) --- #: also_indoor: traffic --- #: source_id: viz2021:13.525209,52.480103,21.02.2022,08:00 (bis 19.3.2022) (inaktiv) --- #: note: größere Staus typischerweise nur bei gleichzeitigen Problemen (Baustellen, sonstiges) in der Treskowallee --- #: tempex: rush_hour_evening --- #: valid: -20220319 --- Ehrlichstr.	Jam; 18322,8470 18391,8425 18461,8377 18528,8331 18615,8269
 # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
 #: tempex: rush_hour_evening

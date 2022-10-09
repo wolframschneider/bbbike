@@ -138,7 +138,7 @@ Raumerstr. -> Fröbelstr.: Prenzlauer Allee	3::igndisp 11609,15114 11776,15060 11
 Fröbelstr. -> Prenzlauer Allee: Prenzlauer Allee	3::igndisp 11873,15010 11776,15060 11740,14950
 Fröbelstr. -> Raumerstr.: Prenzlauer Allee	3::igndisp 11873,15010 11776,15060 11609,15114
 Große Weinmeisterstr. (Potsdam)	1 -12557,11 -12561,35 -12582,127 -12623,308
-Stellmacherweg	1 13129,2999 13453,2930
+Stellmacherweg	1 13129,2999 13457,2929
 Hittorfstr	1 2442,4806 2469,4882 2516,4936 2577,4959
 Lefèvrestr.	1 5360,6642 5215,6643
 Kühlebornweg	1 5165,4667 5075,4600 5007,4705
@@ -711,12 +711,12 @@ Allee der Kosmonauten -> Annenstr.: Straßenbahntrasse	3::igndisp 20281,14361 202
 Annenstr. -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20376,14244 20262,14255 20249,14143
 Allee der Kosmonauten -> Allee der Kosmonauten [Wohngebiet]: Straßenbahntrasse	3::igndisp 20235,14017 20249,14143 20172,14141
 Allee der Kosmonauten [Wohngebiet] -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20172,14141 20249,14143 20262,14255
-Straßenbahntrasse	3nocross::ignrte 20756,14486 20822,14594 20868,14698
-Allee der Kosmonauten -> Vierlandenstr.: Straßenbahntrasse	3::igndisp 20756,14486 20822,14594 20761,14589
+Straßenbahntrasse	3nocross::ignrte 20755,14479 20822,14594 20868,14698
+Allee der Kosmonauten -> Vierlandenstr.: Straßenbahntrasse	3::igndisp 20755,14479 20822,14594 20761,14589
 Allee der Kosmonauten -> Heliosstr.: Straßenbahntrasse	3::igndisp 20868,14698 20822,14594 20975,14601
 Vierlandenstr. -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20761,14589 20822,14594 20868,14698
 Vierlandenstr. -> Heliosstr.: Straßenbahntrasse	3::igndisp 20761,14589 20822,14594 20975,14601
-Heliosstr. -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20975,14601 20822,14594 20756,14486
+Heliosstr. -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20975,14601 20822,14594 20755,14479
 Heliosstr. -> Vierlandenstr.: Straßenbahntrasse	3::igndisp 20975,14601 20822,14594 20761,14589
 Geitelsteig	1 1988,14870 1977,14751 1974,14646
 Schweiggerweg	1 2081,14570 2079,14704 2099,14852
@@ -1261,13 +1261,13 @@ Killisch-von-Horn-Weg: Poller	3 9590,18082 9707,17941 9730,17927
 Killisch-von-Horn-Weg: Poller	3 9730,17927 9707,17941 9590,18082
 Frauenfelder Weg - Markstr.	3 7441,17009 7647,17037 7644,17054
 Kongostr.	1 6349,16213 6447,16321
-Polierweg: Schranke vor dem Malersteig	3 13650,3025 13596,3039 13483,3064
+Polierweg: Schranke vor dem Malersteig	3 13650,3025 13596,3039 13488,3062
 Polierweg: Schranke vor dem Malersteig	3 13650,3025 13596,3039 13561,2898
 Polierweg: Schranke vor dem Malersteig	3 13650,3025 13596,3039 13606,3085
-Polierweg: Schranke vor dem Malersteig	3 13483,3064 13596,3039 13650,3025
+Polierweg: Schranke vor dem Malersteig	3 13488,3062 13596,3039 13650,3025
 Polierweg: Schranke vor dem Malersteig	3 13561,2898 13596,3039 13650,3025
 Polierweg: Schranke vor dem Malersteig	3 13606,3085 13596,3039 13650,3025
-Polierweg	1 13483,3064 13100,3159 13048,3134
+Polierweg	1 13488,3062 13100,3159 13048,3134
 Zantochweg: Poller	3 12328,3831 12266,3863 12250,3839
 Zantochweg: Poller	3 12328,3831 12266,3863 12271,3906
 Zantochweg: Poller	3 12250,3839 12266,3863 12328,3831
@@ -1320,12 +1320,6 @@ Baumstamm	3 24982,2519 24981,2565 25116,2529
 Baumstamm	3 25116,2529 24981,2565 24978,2634
 Baumstamm	3 25116,2529 24981,2565 24982,2519
 Franz-Klühs-Str.	1 9384,10536 9570,10566 9770,10590
-Karower Str.	3 16659,25409 16669,25373 16583,25440
-Karower Str.	3 16659,25409 16669,25373 16647,25293
-Karower Str.	3 16659,25409 16669,25373 16731,25310
-Karower Str.	3 16583,25440 16669,25373 16659,25409
-Karower Str.	3 16647,25293 16669,25373 16659,25409
-Karower Str.	3 16731,25310 16669,25373 16659,25409
 Efeuweg	3 15590,2724 15613,2739 15599,2752
 Efeuweg	3 15590,2724 15613,2739 15736,2593
 Efeuweg	3 15599,2752 15613,2739 15590,2724
@@ -1862,8 +1856,6 @@ Sächsische Str. -> Bleibtreustr.: Lietzenburger Str./Sächsische Str.	3::igndisp 
 Biesheimring - Brittendorfer Weg: Poller	3 1987,3166 1946,3142 1884,3106
 Brittendorfer Weg - Biesheimring: Poller	3 1884,3106 1946,3142 1987,3166
 Andernacher Str.	1 18949,8437 19000,8509
-Pfarrhufenweg	1 25599,13069 25684,13172
-Feldrain	1 25684,13172 25632,13214 25609,13232 25607,13459
 Andernacher Str.	1 19054,8571 19000,8509
 Straßenbahntrasse	3nocross::ignrte 18374,4307 18239,4453 18042,4667
 Louis-Blériot-Str. -> Groß-Berliner Damm: Straßenbahntrasse	3::igndisp 18341,4543 18239,4453 18374,4307
@@ -2125,7 +2117,7 @@ Lausitzer Str. -> Lausitzer Str.: Wiener Str./Lausitzer Str.	3::igndisp 12048,10
 Lausitzer Str. -> Wiener Str.: Wiener Str./Lausitzer Str.	3::igndisp 12048,10097 12169,10310 11949,10414
 Wiener Str. -> Lausitzer Str.: Wiener Str./Lausitzer Str.	3::igndisp 11949,10414 12169,10310 12220,10398
 Wiener Str. -> Lausitzer Str.: Wiener Str./Lausitzer Str.	3::igndisp 12243,10274 12169,10310 12048,10097
-Braunschweiger Str.	1 13919,7707 13854,7620
+Braunschweiger Str.	1 13919,7707 13858,7617
 Fürstenwalder Str.: Poller	2 12243,12604 12242,12594
 Margarete-Steffin-Str.	1 8525,12958 8406,13127 8315,13181
 Jenbacher Weg: für Radfahrer umfahrbare Schranke	3 5418,-98 5665,51 5703,74
@@ -2283,3 +2275,6 @@ Adolf-Menzel-Str.: Poller	3 22177,10082 22110,10090 22096,10090
 Gritznerstr.	1 4511,6318 4555,6403
 Alt-Lankwitz	2:Anlieger 7407,3473 7419,3500 7236,3605 7012,3743
 Abbestr.	2 4674,12076 4698,12124
+Otto-Marquardt-Str. -> Landsberger Allee	3 14888,14280 14954,14119 14964,14123
+Pfarrhufenweg	1 25599,13069 25684,13172
+Hempelsteig	2:Anlieger -472,12961 -525,13034 -724,13120 -787,13147

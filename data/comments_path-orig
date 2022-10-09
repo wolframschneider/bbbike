@@ -27,8 +27,7 @@
 Rasthof Avus: zweite Möglichkeit nach rechts	CP; 1939,10446 1870,10406 1833,10427
 #: XXX_prog: RL:ja, GPS:nein
 vor der Autobahnbrücke links abbiegen, Ausschilderung nach "Rasthof Avus"	CP; 1692,10348 1723,10289 1847,10323
-bereits an der Ampel am Ringcenter die Straßenseite wechseln	PI; 15361,12071 15300,11965 15330,11946
-bereits an der Ampel "Am Containerbahnhof" die Straßenseite wechseln	PI; 15420,12178 15443,12222 15370,12264
+bereits an der Ampel am U-Bhf. Frankfurter Allee die Straßenseite wechseln	PI; 15361,12071 15300,11965 15330,11946
 bis zur Ampel an der Scharnweberstr. auf dem linken Gehweg vorfahren	CP; 15330,11946 15300,11965 15256,11884
 bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824,10904 6873,11011 6742,11099
 bereits bei der Ampel an der Corneliusstr. die Straßenseite wechseln	PI; 6880,11110 6882,11061 6873,11011 7002,11034
@@ -391,10 +390,10 @@ Rudower Str. - Grünauer Str.: linken Gehweg bis zur Ampel benutzen	CP; 21585,445
 Rudower Chaussee - Walther-Nernst-Str.: bereits an der Ampel Groß-Berliner Damm die Straßenseite wechseln	PI; 19501,3101 19475,3074 19498,3054
 Rügenwalder Weg - Gülzower Str.: auf dem linken Bürgersteig bis zur Parchimer Str. oder zum Zebrastreifen vor dem U/S-Bhf. Wuhletal vorfahren	CP; 22400,12171 22388,12190 22304,12157
 Allee der Kosmonauten - Heliosstr.: Straßenbahntrasse kurz hinter der Vierlandenstr. überqueren	CP; 20868,14698 20822,14594 20975,14601
-Heliosstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse links	CP; 20975,14601 20822,14594 20756,14486
+Heliosstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse links	CP; 20975,14601 20822,14594 20755,14479
 Heliosstr. - Vierlandenstr.: Überquerungsmöglichkeit der Straßenbahntrasse links	CP; 20975,14601 20822,14594 20761,14589
 Vierlandenstr. - Heliosstr.: Überquerungsmöglichkeit der Straßenbahntrasse rechts	CP; 20761,14589 20822,14594 20975,14601
-Allee der Kosmonauten - Vierlandenstr.: Straßenbahntrasse kurz vor der Heliosstr. überqueren	CP; 20756,14486 20822,14594 20761,14589
+Allee der Kosmonauten - Vierlandenstr.: Straßenbahntrasse kurz vor der Heliosstr. überqueren	CP; 20755,14479 20822,14594 20761,14589
 Vierlandenstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse rechts	CP; 20761,14589 20822,14594 20868,14698
 Kleine Andreasstr.: Einfahrt befindet sich links von der Edeka-Parkplatzeinfahrt	CP2; 12279,12113 12211,12128
 Zitadelle - Am Juliusturm: bis zur Ampel am Zitadellenweg auf dem linken Gehweg vorfahren	CP; -2668,14635 -2656,14582 -2652,14559 -2647,14532 -2597,14532
@@ -524,7 +523,7 @@ Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichsh
 #: XXX wird eventuell im Zuge der Maßnahme Nsw.3 verbessert
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5826 (Verkehrsführung verbessern) (wurde allerdings abgelehnt; die allgemeine Verbesserung der Situation wird aber irgendwann passieren ("Umgestaltung des Bahnhofsvorplatzes")
 #: by: https://www.uvp-verbund.de/documents/ingrid-group_ige-iplug-be/3A22FF18-9B17-4F51-B470-2F50F0C68929/U13-2_Entwurf%20Sterndamm%20und%20Bahnhofsvorplatz_LP-Blatt02.pdf (Linksabbiegemöglichkeit für Radfahrer im Zuge der Umgestaltung am S-Bhf. Schöneweide)
-#: last_checked: 2022-09-03
+#: last_checked: 2022-10-05
 #: check_frequency: 180d
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17747,5452
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115
@@ -622,7 +621,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2022-09-03 vvv
+#: last_checked: 2022-10-05 vvv
 #: note: früher: ausgeschildert "zur Salzmannstraße Huronseestraße"
 nicht ausgeschildert, Richtung Salzmannstr./Huronseestr.	CP2; 16900,9861 16895,9922
 #: note: früher: ausgeschildert "zur Sewanstraße"
@@ -709,7 +708,7 @@ Martin-Hoffmann-Str. - An den Treptowers: zum Linksabbiegen die linke Fußgängera
 Ernst-Ruska-Ufer - Albert-Einstein-Str.: unbequemes Überqueren des Ernst-Ruska-Ufers, ggfs. bereits an der Ampel Wegedornstr. auf die linke Seite wechseln	PI; 18929,2454 19091,2443 19094,2495
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2022-08-26 vvv
+#: last_checked: 2022-10-03 vvv
 #: next_check: 2024-06-01 vvv
 Jüdenstr.: zum Überqueren der Grunerstr. Fußgängerampel rechts benutzen	CP; 10831,12371 10804,12461 10772,12515
 Grunerstr. - Jüdenstr.: zum Überqueren der Grunerstr. Fußgängerampel benutzen	CP; 10738,12364 10804,12461 10772,12515
@@ -745,4 +744,6 @@ Feldstedter Weg - Reichnerweg: Überquerungsmöglichkeit 30m links benutzen	CP; 10
 Gounodstr.: ggfs. frühzeitig auf den Gehweg wechseln, direkte Zufahrt kann zugeparkt sein	CP2; 14366,15877 14251,15828
 # 
 Tempelhofer Damm - Parkstr.: an der Fußgängerampel am Rathaus auf die linke Seite wechseln	CP2; 9245,6352 9237,6413
+# 
+Heerstr. -> Reimerweg: entweder schon an der Fußgängerampel Pillnitzer Weg auf die linke Seite wechseln oder zur Ampel Gärtnereiring fahren, die Heerstr. überqueren und etwas zurückfahren	PI; -6512,12581 -6538,12590 -6590,12606 -6791,12429
 # 

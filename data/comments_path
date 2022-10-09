@@ -4,8 +4,7 @@
 #:
 Rasthof Avus: zweite Möglichkeit nach rechts	CP; 1939,10446 1870,10406 1833,10427
 vor der Autobahnbrücke links abbiegen, Ausschilderung nach "Rasthof Avus"	CP; 1692,10348 1723,10289 1847,10323
-bereits an der Ampel am Ringcenter die Straßenseite wechseln	PI; 15361,12071 15300,11965 15330,11946
-bereits an der Ampel "Am Containerbahnhof" die Straßenseite wechseln	PI; 15420,12178 15443,12222 15370,12264
+bereits an der Ampel am U-Bhf. Frankfurter Allee die Straßenseite wechseln	PI; 15361,12071 15300,11965 15330,11946
 bis zur Ampel an der Scharnweberstr. auf dem linken Gehweg vorfahren	CP; 15330,11946 15300,11965 15256,11884
 bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824,10904 6873,11011 6742,11099
 bereits bei der Ampel an der Corneliusstr. die Straßenseite wechseln	PI; 6880,11110 6882,11061 6873,11011 7002,11034
@@ -237,10 +236,10 @@ Rudower Str. - Grünauer Str.: linken Gehweg bis zur Ampel benutzen	CP; 21585,445
 Rudower Chaussee - Walther-Nernst-Str.: bereits an der Ampel Groß-Berliner Damm die Straßenseite wechseln	PI; 19501,3101 19475,3074 19498,3054
 Rügenwalder Weg - Gülzower Str.: auf dem linken Bürgersteig bis zur Parchimer Str. oder zum Zebrastreifen vor dem U/S-Bhf. Wuhletal vorfahren	CP; 22400,12171 22388,12190 22304,12157
 Allee der Kosmonauten - Heliosstr.: Straßenbahntrasse kurz hinter der Vierlandenstr. überqueren	CP; 20868,14698 20822,14594 20975,14601
-Heliosstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse links	CP; 20975,14601 20822,14594 20756,14486
+Heliosstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse links	CP; 20975,14601 20822,14594 20755,14479
 Heliosstr. - Vierlandenstr.: Überquerungsmöglichkeit der Straßenbahntrasse links	CP; 20975,14601 20822,14594 20761,14589
 Vierlandenstr. - Heliosstr.: Überquerungsmöglichkeit der Straßenbahntrasse rechts	CP; 20761,14589 20822,14594 20975,14601
-Allee der Kosmonauten - Vierlandenstr.: Straßenbahntrasse kurz vor der Heliosstr. überqueren	CP; 20756,14486 20822,14594 20761,14589
+Allee der Kosmonauten - Vierlandenstr.: Straßenbahntrasse kurz vor der Heliosstr. überqueren	CP; 20755,14479 20822,14594 20761,14589
 Vierlandenstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse rechts	CP; 20761,14589 20822,14594 20868,14698
 Kleine Andreasstr.: Einfahrt befindet sich links von der Edeka-Parkplatzeinfahrt	CP2; 12279,12113 12211,12128
 Zitadelle - Am Juliusturm: bis zur Ampel am Zitadellenweg auf dem linken Gehweg vorfahren	CP; -2668,14635 -2656,14582 -2652,14559 -2647,14532 -2597,14532
@@ -490,3 +489,4 @@ Reichnerweg - Feldstedter Weg: Überquerungsmöglichkeit 30m rechts benutzen	CP; 1
 Feldstedter Weg - Reichnerweg: Überquerungsmöglichkeit 30m links benutzen	CP; 10423,636 10539,662 10726,739
 Gounodstr.: ggfs. frühzeitig auf den Gehweg wechseln, direkte Zufahrt kann zugeparkt sein	CP2; 14366,15877 14251,15828
 Tempelhofer Damm - Parkstr.: an der Fußgängerampel am Rathaus auf die linke Seite wechseln	CP2; 9245,6352 9237,6413
+Heerstr. -> Reimerweg: entweder schon an der Fußgängerampel Pillnitzer Weg auf die linke Seite wechseln oder zur Ampel Gärtnereiring fahren, die Heerstr. überqueren und etwas zurückfahren	PI; -6512,12581 -6538,12590 -6590,12606 -6791,12429

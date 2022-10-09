@@ -68,8 +68,6 @@ for my $f (@files) {
 	    if $f =~ m{^( lib/TkChange.pm
 			| lib/AutoInstall/Tk.pm
                         | bbbike
-		        | BBBikeAdvanced.pm
-		        | BBBikeEdit.pm
 		        | PointEdit.pm
 			| GPS/GpsmanData/Tk.pm
 			| GPS/GpsmanData/TkViewer.pm
@@ -224,7 +222,6 @@ for my $f (@files) {
 		     | Wizards.pm
 		     | install.pl
 		     | cgi/configure-bbbike.cgi
-		     | BBBikeAdvanced.pm
 		     | Karte/SatmapGIF.pm
 		     | PointEdit.pm
 		     | Strassen/Storable.pm

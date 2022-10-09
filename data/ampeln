@@ -2,6 +2,7 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+Wilhelmstr./Am Omnibushof: provisorische Ampel	X::inwork -4647,12269
 Kiefholzstr./Hänselstr.: provisorische Fußgängerampel	F::inwork 15695,7254
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
@@ -17,6 +18,8 @@ Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8227,19725
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8234,19936
+Germanenstr.: Gegenverkehrsregelung	X::inwork 8311,19458
+Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 Grunerstr./Jüdenstr.	X::inwork 10804,12461
 	X::inwork 9868,19023
 	X::inwork -1538,22800
@@ -171,7 +174,7 @@ Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 	X 19628,13517
 	X 20318,14402
 	X 19395,14477
-	X 20756,14486
+	X 20755,14479
 	X 21378,14490
 	X 21239,15633
 	X 21599,15213
@@ -643,7 +646,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -3227,14260
 	X -3009,17090
 	X -4591,15496
-	X -4110,15367
+	X -4118,15370
 	X -3552,14082
 	X -3721,14495
 	X -3625,13889
@@ -1132,7 +1135,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12628,8711
 	X 5231,13843
 	X 5220,14043
-	X 5205,14253
 	X 5753,15096
 	X 5895,15229
 	X 5581,16708
@@ -1380,6 +1382,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -2856,15687
 	X -3040,16246
 	F -3029,16823
+	X -3033,16757
 	F -3043,16601
 	X -2959,17507
 	X -302,15546
@@ -2183,7 +2186,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 16370,24600
 	F 16039,25903
 	F 16166,25767
-	X 16669,25373
+	X 16663,25349
 	F 16606,25141
 	X 17879,4910
 	X 17775,5083
@@ -2238,6 +2241,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 9821,14073
 	F 9659,14043
 	X 5086,14504
+	X 5205,14253
 	X 1932,14146
 	F -2866,17760
 	X -2728,17038

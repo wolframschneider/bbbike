@@ -186,7 +186,7 @@ Gerickesteg	Br 6702,12633 6748,12669
 Lessingbrücke	Br 6150,12875 6157,12933 6164,12980
 Hansabrücke	Br 5871,12595 5905,12573 5944,12548
 Wullenwebersteg	Br 5657,12339 5714,12266
-Beusselbrücke	Br 5205,14253 5220,14043
+Beusselbrücke	Br 5205,14253 5212,14154
 Finsterwalder Brücke	Br 6320,21777 6373,21810
 Eichwerdersteg	Br 5363,24109 5408,24068 5545,23993
 Sickingenbrücke	Br 4186,13710 4265,13742
@@ -218,7 +218,7 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: XXX erstmal wird eine Behelfsbrücke erstellt (westlich); die neue Brücke wird Platz für eine Radwegunterführung haben
 #: source_id: 2147345790 (nicht mehr aktiv)
 #: source_id: 2147346453 (Leitungsbauarbeiten, bis 16.10.2020)
-#: last_checked: 2022-09-05 (osm) vvv
+#: last_checked: 2022-10-08 vvv
 #: check_frequency: 360d vvv
 #: next_check: 2023-12-01 vvv
 #: osm_watch: way id="4568174" version="43"
@@ -232,7 +232,7 @@ provisorische Tegeler Brücke	Br -255,15993 -239,16077
 #: last_checked ^^^
 # 
 Spandauer-See-Brücke	Br -2209,16501 -1928,16423
-Wasserstadtbrücke	Br -2149,16921 -1832,16858
+Wasserstadtbrücke	Br -2149,16921 -2087,16909 -1832,16858
 Tiefwerderbrücke	Br -2780,12858 -2788,12880
 Nennhauser Damm, S-Bahnbrücke	Br -7445,14392 -7457,14317
 Loerkesteig	Br 2925,24350 2956,24373

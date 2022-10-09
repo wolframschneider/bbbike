@@ -127,7 +127,7 @@ John-Schehr-Str. - Greifswalder Str.	3 12573,14581 12512,14626 12422,14692 12403
 Prenzlauer Allee	3nocross 11828,15210 11801,15132 11776,15060 11740,14950 11709,14856
 Große Weinmeisterstr. (Potsdam)	1 -12557,11 -12561,35 -12582,127 -12623,308
 #: by: Christian Marten (Einbahnstraße nur für Autofahrer)
-Stellmacherweg	1 13129,2999 13453,2930
+Stellmacherweg	1 13129,2999 13457,2929
 #: by: Andreas Mühlhausen (Einbahnstraße nur für Autofahrer) vvv
 Hittorfstr	1 2442,4806 2469,4882 2516,4936 2577,4959
 #: confirmed_by: srt
@@ -388,7 +388,7 @@ Lichtenrader Damm: Mittelstreifen	3nocross 10735,137 10753,83 10782,-24
 #: note: Luftbild: 
 Allee der Kosmonauten: Straßenbahntrasse	3nocross 20281,14361 20262,14255 20249,14143 20235,14017
 #: note: Luftbild: 
-Allee der Kosmonauten: Straßenbahntrasse	3nocross 20756,14486 20822,14594 20868,14698
+Allee der Kosmonauten: Straßenbahntrasse	3nocross 20755,14479 20822,14594 20868,14698
 #: by: HGinzel (offen für Radfahrer): vvv
 Geitelsteig	1 1988,14870 1977,14751 1974,14646
 Schweiggerweg	1 2081,14570 2079,14704 2099,14852
@@ -703,7 +703,7 @@ Frauenfelder Weg - Markstr.	3 7441,17009 7647,17037 7644,17054
 Kongostr.	1 6349,16213 6447,16321
 Polierweg: Schranke vor dem Malersteig	3 13650,3025 13596,3039 *
 Polierweg: Schranke vor dem Malersteig	3 * 13596,3039 13650,3025
-Polierweg	1 13483,3064 13100,3159 13048,3134
+Polierweg	1 13488,3062 13100,3159 13048,3134
 Zantochweg: Poller	3 12328,3831 12266,3863 *
 Zantochweg: Poller	3 * 12266,3863 12328,3831
 Douglasienweg: Poller	3 11633,4117 11563,4099 *
@@ -740,8 +740,7 @@ Pestalozzistr.	1 24769,11819 24908,11785
 Baumstamm	3 * 24981,2565 25116,2529
 Baumstamm	3 25116,2529 24981,2565 *
 Franz-Klühs-Str.	1 9384,10536 9570,10566 9770,10590
-Karower Str.	3 16659,25409 16669,25373 *
-Karower Str.	3 * 16669,25373 16659,25409
+# REMOVED (mittlerweile reiner Radweg) --- Karower Str.	3 16662,25386 16663,25349 * --- Karower Str.	3 * 16663,25349 16662,25386
 Efeuweg	3 15590,2724 15613,2739 *
 Efeuweg	3 * 15613,2739 15590,2724
 Rollbergstr.: Poller	3 * 12327,8161 *
@@ -1098,8 +1097,6 @@ Lietzenburger Str./Sächsische Str.	3nocross 4485,10307 4659,10335 4764,10350
 Biesheimring - Brittendorfer Weg: Poller	3 1987,3166 1946,3142 1884,3106
 Brittendorfer Weg - Biesheimring: Poller	3 1884,3106 1946,3142 1987,3166
 Andernacher Str.	1 18949,8437 19000,8509
-Pfarrhufenweg	1 25599,13069 25684,13172
-Feldrain	1 25684,13172 25632,13214 25609,13232 25607,13459
 Andernacher Str.	1 19054,8571 19000,8509
 # REMOVED (realisiert) --- #: next_check_id: GROSSBERLINERDAMM-2020 --- #: by: https://www.baustellen-doku.info/berlin_strassenbahn_adlershof_II_wista_schoeneweide/20201019/ --- #: XXX hier wird eine Überfahrt auch für Autos entstehen --- #: last_checked: 2021-09-05 (krickstadt) --- #: next_check: 2021-10-31 --- Groß-Berliner Damm: Mittelstreifen	3nocross 18541,4125 18374,4307 18239,4453
 Groß-Berliner Damm: Straßenbahntrasse	3nocross 18374,4307 18239,4453 18042,4667
@@ -1401,7 +1398,7 @@ Wiener Str./Lausitzer Str.	3nocross 11949,10414 12169,10310 12243,10274
 # 
 #: by: mapillary
 #: confirmed_by: srt
-Braunschweiger Str.	1 13919,7707 13854,7620
+Braunschweiger Str.	1 13919,7707 13858,7617
 # 
 Fürstenwalder Str.: Poller	2 12243,12604 12242,12594
 # 
@@ -1431,15 +1428,15 @@ Clayallee -> Sophie-Charlotte-Str.: Linksabbiegen verboten	3 1283,4260 1297,4311
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/krumme-strasse-fuer-autos-gesperrt_a308592
 #: by: https://abendblatt-berlin.de/2021/05/02/berlin-charlottenburg-kritik-an-sperrung-der-krummen-strasse/
 #: by: https://mein.berlin.de/projekte/verkehrskonzept-karl-august-kiez/?date=20210503 (bis 4.7.2021)
-#: XXX bleiben die Poller permanent? zurzeit Halteverbot bis Ende Oktober 2021 (laut osm), nun bis Juni 2022 (laut Notiz)
+#: XXX bleiben die Poller permanent? zurzeit Halteverbot bis Ende Oktober 2021 (laut osm), nun bis Juni 2022 (laut Notiz), nun bis Dezember 2022 (ebenfalls laut Notiz)
 #: also_indoor: traffic (H,B)
 # REMOVED (entfernt) --- #: osm_watch: node id="8709493528" version="3"
 # REMOVED (entfernt) --- #: osm_watch: node id="8709493529" version="3"
 #: osm_watch: way id="940405708" version="3"
-#: osm_watch: note 2648361 17
+#: osm_watch: note 2648361 18
 #: last_checked: 2022-09-16
 #: check_frequency: 120d
-# REMOVED --- #: next_check: 2022-06-30
+#: next_check: 2022-12-31
 Krumme Str.: Poller	3 * 3983,11289 *
 # 
 #: note: für Fußgänger und Radfahrer existiert ein Z-Übergang etwa 20m westlich der Kreuzung
@@ -1638,4 +1635,10 @@ Alt-Lankwitz	2:Anlieger 7407,3473 7419,3500 7236,3605 7012,3743
 #: last_checked: 2022-09-16
 #: check_frequency: 120d
 Abbestr.	2 4674,12076 4698,12124
+# 
+Otto-Marquardt-Str. -> Landsberger Allee	3 14888,14280 14954,14119 14964,14123
+# 
+Pfarrhufenweg	1 25599,13069 25684,13172
+# 
+Hempelsteig	2:Anlieger -472,12961 -525,13034 -724,13120 -787,13147
 # 
