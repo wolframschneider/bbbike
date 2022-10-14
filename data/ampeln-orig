@@ -23,7 +23,7 @@ Kiefholzstr./Hänselstr.: provisorische Fußgängerampel	F::inwork 15695,7254
 #: osm_watch: way id="936801541" version="3"
 #: XXX Ampel befindet sich östlich der Einmündung
 #: note: Anforderungsampel
-#: last_checked: 2022-10-07
+#: last_checked: 2022-10-10
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 # 
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
@@ -46,12 +46,12 @@ Kronprinzessinnenweg: Gegenverkehrsregelung	X::inwork -4368,1731
 # 
 #: next_check_id: HAEMMERLING-2022
 #: by: https://www.bahninfo-forum.de/read.php?9,726467,730605#msg-730605 (19.4.2022 - 30.11.2022)
-#: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (Gegenverkehrsregelung mit Baustellenampel, bis 10.11.2022) (mittlerweile inaktiv, bereits Ende Juli 2022) (wieder aktiviert, bis 30.9.2022) (bis 10.10.2022)
+#: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (Gegenverkehrsregelung mit Baustellenampel, bis 10.11.2022) (mittlerweile inaktiv, bereits Ende Juli 2022) (wieder aktiviert, bis 30.9.2022) (bis 10.10.2022) (inaktiv) (bis 23.10.2022)
 #: by: https://nitter.net/VIZ_Berlin/status/1522508674073350144#m
 #: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig
 #: last_checked: 2022-08-14 vvv
 # REMOVED --- #: next_check: 2022-11-10 vvv
-#: next_check: 2022-10-10 vvv
+#: next_check: 2022-10-23 vvv
 #: valid: -20221110 vvv
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245
@@ -108,7 +108,7 @@ Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2022-09-18
+#: last_checked: 2022-10-09
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -181,7 +181,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 #: osm_watch: node id="6380038401" version="1"
 	X::inwork 9195,11972
 #: note: Ampel befindet sich westlich der Kreuzung
-#: last_checked: 2022-07-12 (mapillary)
+#: last_checked: 2022-08-30
 	F::inwork 9076,12054
 #: valid ^^^
 #: check_frequency ^^^
@@ -1681,7 +1681,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # 
 #: XXX: seit mindestens Ende Juli 2022 ausgeschaltet
 #: add_fragezeichen: Bleibt die Ampel Mariannenstr./Reichenberger Str. dauerhaft ausgeschaltet?
-#: last_checked: 2022-09-16
+#: last_checked: 2022-10-13
 	X0 11616,10288
 # 
 #: XXX_prog: zusammenhängende Ampelanlage vvv

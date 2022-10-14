@@ -130,7 +130,7 @@ Eichborndamm	1 4223,18982 4211,18882 4163,18676 4102,18298 4059,18107 4016,17918
 Spreestr.	1 17900,6072 17939,5968 17877,5860 17810,5736 17807,5730 17782,5698
 Buckower Chaussee	1 8742,475 8972,498 9002,471
 # REMOVED (nein, wird nicht) --- #: XXX evtl. wird die Einbahnstraßenregelung aufgehoben --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6025 --- #: last_checked: 2015-05-05 --- #: check_frequency: 30d
-Archibaldweg	1s:q4 15674,10851 15870,10938
+Archibaldweg	1s:q4 15674,10851 15820,10916 15870,10938
 Nöldnerplatz	1s:q4 15870,10938 15903,10906
 Nöldnerplatz	1 15903,10906 16049,10844
 Adlergestell (extra Radweg)	2 22096,1136 21837,1340 21812,1366 21506,1768 21388,1895
@@ -682,7 +682,7 @@ Alt-Biesdorf	1 21108,11628 20963,11618 20838,11631 20739,11641 20633,11651 20540
 Privatstr. 14	1s:q3 13159,17196 13103,17280
 #: by: Ilka Gomoll, osm
 #: confirmed_by: srt
-Bernkasteler Str.	1s:q3 15208,16939 15015,16908 14923,16901 14923,16914
+Bernkasteler Str.	1s:q3 15208,16939 15015,16908 14923,16901
 Wiedenbrücker Weg	1 4207,1113 4220,1175 4141,1282
 #: by: Kamai:
 #: confirmed_by: srt
@@ -1277,7 +1277,7 @@ Waldstr.	1 9961,19513 10002,19418
 #: XXX wieder gesperrt, vermutlich für Aufzugarbeiten
 #: source_id: viz2021:13.440961,52.50069,06.07.2021,07:00 (bis 12.01.2022) (mittlerweile bis 30.6.2022) (bis 31.10.2022)
 #: by: https://berliner-abendblatt.de/2022/01/03/viele-u-bahnhoefe-nicht-barrierefrei/ ("in Kürze")
-#: last_checked: 2022-10-08
+#: last_checked: 2022-10-13
 #: check_frequency: 90d
 #: next_check: 2022-10-31
 (Schlesisches Tor - Oppelner Str.)	2::inwork 12978,10581 12930,10621
@@ -2528,8 +2528,8 @@ tragen (Eisenbahnbrücke Templiner See)	0:60 -15537,-4535
 tragen (Eisenbahnbrücke Templiner See)	0:60 -15652,-4441
 tragen (Eisenbahnbrücke Caputh)	0:60 -18002,-7496
 tragen (Eisenbahnbrücke Caputh)	0:60 -18001,-7395
-tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60 -21125,-2012
-tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60 -21227,-2017
+# REMOVED --- tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60 -21125,-2012
+# REMOVED --- tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60 -21227,-2017
 tragen (Elsensteg, 6 Stufen)	0:10 13379,8703
 tragen (Elsensteg, 6 Stufen)	0:10 13397,8727
 tragen (Gerickesteg, ungefähr 20 Stufen)	0:30 6748,12669
@@ -3456,7 +3456,7 @@ Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt	2::inwork 1333
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/ekgf3qoJIrr9337BpG4iMbZ0LD6NRaRRMlLcP8ms/QGmTBUWW/94-Anlagen/02/161-2022-01BPlanXVII-9-1AuswertungderBeteilig.pdf
 #: osm_watch: way id="1086484458" version="1"
 #: osm_watch: way id="36780316" version="10"
-#: last_checked: 2022-09-18
+#: last_checked: 2022-10-09
 #: check_frequency: 90d
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 # REMOVED --- Hauptstr. - Rummelsburger Ufer: gesperrt, möglicherweise dauerhaft	2::inwork 16178,9861 16049,9749
@@ -3562,7 +3562,7 @@ Weg zur Walther-Rathenau-Str.: Bauarbeiten, Weg noch gesperrt	2::inwork 22983,-5
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.schmalfuss-immobilien.de/karlshorst (Abschnitt 9 bezugsfertig Anfang August 2022, 7 Anfang September 2022)
-#: last_checked: 2022-09-22 (osm) vvv
+#: last_checked: 2022-10-09 vvv
 # REMOVED --- #: next_check: 2022-08-01 vvv
 #: osm_watch: way id="1061057020" version="3"
 Georg-Klingenberg-Str.: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17846,8644 17792,8660 17656,8700
@@ -3604,7 +3604,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2022-09-18
+#: last_checked: 2022-10-09
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -3699,7 +3699,7 @@ Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_03_0117_0172_online.pdf (Grundstücksnummerierung)
 #: XXX Bis wann gehen die Bauarbeiten? Eigentlich eine "unechte" Einbahnstraße. Und manchmal (gesehen am Sonntag, den 2021-10-31; vielleicht außerhalb der Arbeitszeiten?) sind die Einfahrt-verboten-Schilder weggedreht
 #: osm_watch: way id="308312347" version="6"
-#: last_checked: 2022-08-21
+#: last_checked: 2022-10-11 (mapillary)
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2022-08-15
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s:q3 10472,14632 10320,14608
@@ -3904,7 +3904,7 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9429,12728
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/drei-bauphasen-am-gleisdreieck_a354176
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/aenderungen-bei-drei-u-bahnlinien_a354389
 #: osm_watch: way id="223707973" version="10"
-#: last_checked: 2022-08-28
+#: last_checked: 2022-10-13
 #: check_frequency: 120d
 #: priority: #A
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
@@ -4012,12 +4012,12 @@ Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 # 
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/edge-eastside-tower-140m.18/page-13#post-14549
 #: XXX wann sind die Bauarbeiten beendet?
-#: note: laut rbb komplett gesperrt, bis 30.6.2023, in der Realität weiterhin Einbahnstraße --- mittlerweile (oder manchmal?) tatsächlich gesperrt
+#: note: laut rbb komplett gesperrt, bis 30.6.2023, in der Realität weiterhin Einbahnstraße --- mittlerweile manchmal tatsächlich gesperrt (gesperrt: gesehen 2022-10-04; nicht gesperrt: gesehen 2022-10-13)
 #: osm_watch: way id="5096644" version="19"
 #: priority: #C
-#: last_checked: 2022-10-04
+#: last_checked: 2022-10-13
 #: check_frequency: 90d
-Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	2::inwork 13422,11236 13537,11186 13540,11148
+Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	1::inwork 13422,11236 13537,11186 13540,11148
 # 
 #: next_check_id: TACHELES-2020
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
@@ -4183,8 +4183,10 @@ Französische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch für
 #: source_id: viz2021:13.384963,52.513983,10.10.2018,13:30 (bis 30.9.2022) (bis 27.2.2023)
 Mauerstr..: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9108,11961 9076,12054
 #: source_id: 2147343293
-#: source_id: viz2021:13.385749,52.513657,10.10.2018,13:30 (bis 30.9.2022) (bis 27.2.2023)
+#: source_id: viz2021:13.385749,52.513657,10.10.2018,13:30 (bis 30.9.2022) (bis 27.2.2023) (inaktiv)
 #: source_id: viz2021:13.38639,52.5137,29.09.2022,18:06 (inaktiv)
+#: note: Meldung wurde auch bei rbb entfernt
+#: next_check: 2022-10-10
 Jägerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9195,11972 9108,11961
 #: XXX laut googlemaps bis 30. Oktober 2018
 #: XXX laut VIZ hier Komplettsperrung, auch für Fußgänger --- aber am 2018-10-10, 2018-10-17, 2018-10-25 ist man noch durchgekommen
@@ -4235,6 +4237,7 @@ Uferweg zum Speicher: noch keine Durchfahrt möglich	2::inwork -12721,-2082 -1275
 #: by: https://plus.tagesspiegel.de/berlin/spreepark-zeitplan-verschiebt-sich-eierhauschen-geht-erst-2023-in-betrieb-388960.html (Frühjahr 2023)
 #: by: https://www.berliner-woche.de/plaenterwald/c-bauen/schiffsanleger-und-eierhaeuschen-sollen-bis-ende-des-jahres-fertig-werden_a335405 (Ende 2022 fertig?)
 #: by: https://www.berliner-woche.de/plaenterwald/c-verkehr/spreepark-wird-fuer-radfahrer-und-fussgaenger-besser-erreichbar_a346511 (Modernisierung des Stichwegs)
+#: by: https://www.berliner-woche.de/plaenterwald/c-bauen/eierhaeuschen-oeffnet-zur-kommenden-saison_a358490
 #: priority: #C
 #: last_checked: 2022-07-26
 #: check_frequency: 120d
@@ -4470,7 +4473,7 @@ Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 #: source_id: 2147346643 (bis 31.12.2021)
 #: source_id: viz2021:13.456584,52.465328,25.11.2020,08:00 (bis 31.12.2022)
 # REMOVED (wurde für was anderes recyclet) --- #: osm_watch: way id="194653032" version="26"
-#: osm_watch: way id="846595294" version="7"
+#: osm_watch: way id="846595294" version="8"
 #: osm_watch: way id="38725490" version="16"
 #: also_indoor: traffic (G,B)
 #: last_checked: 2022-09-24 vvv
@@ -4509,9 +4512,9 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 #: next_check_id: S21-2018
 #: by: http://www.berliner-zeitung.de/verkehr/s-bahn-linie-21--baustelle-am-hauptbahnhof--ab-durch-die-mitte,10809298,20580624.html (ab 2012-10-15 für 30 Monate, also mindestens bis ca. 2015-04)
 #: source_id: 2147340791
-#: osm_watch: way id="186329816" version="23"
+#: osm_watch: way id="186329816" version="24"
 #: also_indoor: traffic
-#: last_checked: 2022-10-03
+#: last_checked: 2022-10-12 (osm)
 #: next_check: 2022-12-30
 # REMOVED --- #: valid: -20221230
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, mindestens bis Ende 2022, vermutlich länger	2:inwork 8106,13130 8102,13304 8099,13391

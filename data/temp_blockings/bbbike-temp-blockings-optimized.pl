@@ -1,6 +1,62 @@
-$#temp_blocking = 416;
+$#temp_blocking = 393;
 push @temp_blocking,
 (
+       {
+         'data' => '# REMOVED --- #: XXX weiterhin unklar, ob Weihnachtsmärkte noch im November, erst im Dezember oder gar nicht öffnen werden --- #: priority: #A --- #: next_check: 2020-11-30
+# sowieso schon mit q4 markiert, deshalb -> 2
+	2::xmas 5829,10964 5782,10884
+	2::xmas 5656,10876 5652,11004
+#: by: https://twitter.com/VIZ_Berlin/status/1063061013334032384
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/breitscheidplatz-charlottenburg-sicherungsma%C3%9Fnahmen-%C2%B7-weihnachtsmarkt
+#: by: https://www.berlin.de/weihnachtsmarkt/3240274-3496862-weihnachtsmarkt-an-der-gedaechtniskirche.html (2020)
+#: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/971524-955635-weihnachtsmarkt-an-der-gedaechtniskirche.html
+#: by: https://berliner-abendblatt.de/2021/11/02/ein-weihnachtsbaum-fuer-den-breitscheidplatz/
+#: by: https://berliner-abendblatt.de/2021/12/07/weihnachtsmarkt-auf-dem-breitscheidplatz-wird-umzaeunt/
+# REMOVED --- #: XXX beginnen die Sperrungen schon früher? Ab 2019-11-11 und dauern bis Mitte Januar 2020? Laut vmz ist der Radverkehr in der Kantstr. nicht betroffen --- #: last_checked: 2019-11-27 (hier mittlerweile Weihnachtsmarkt, man könnte aber durchschieben) --- #: next_check: 2019-11-25
+#: source_id: 2147345089
+Kantstr.: Logistik Markt	2::xmas 5613,10963 5652,11004
+',
+         'from' => 1668898800,
+         'id' => 394,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              18,
+                              'months',
+                              11,
+                              'start',
+                              '2021-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.schaustellerverband-berlin.de/weihnachtsmarkt-berlin.html',
+         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, außerdem kann die Kantstr. an der Einmündung Budapester Str. gesperrt sein, vom 21. November 2022 bis 08. Januar 2023',
+         'type' => 'gesperrt',
+         'until' => 1673218799
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/ueber-den-bezirk/veranstaltungen/lichtenrader-lichtermarkt/
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.989619.php (fällt 2020 wegen Corona aus)
@@ -3496,9 +3552,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: viz2021:13.528029,52.490354,25.08.2022,07:00 (bis 12.9.2022) (bis 23.9.2022) (inaktiv)
 #: source_id: viz2021:13.527268,52.487826,23.09.2022,15:00 (bis 21.8.2023, Umleitung für Radfahrer Richtung Norden)
 #: note: Gehweg-Radfahrer-frei-Schilder Richtung Norden an der Rheinsteinstr. bis Waldowallee
-#: note: von der Marksburgstr. und Godesberger Str. ist nur das Rechtsabbiegen Richtung Norden möglich
+#: note: von der Marksburgstr. und Godesberger Str. ist nur das Rechtsabbiegen Richtung Norden möglich (oder man nimmt die Fußgängerampeln)
+#: note: Einbahnstraßenregelung in der Marksburgstr. zwischen Gundelfinger Str. und Treskowallee aufgehoben
+#: note: möglicherweise kann die eigentlich gesperrte westliche Fahrbahn zeitweise (außerhalb der Arbeitszeiten? sonntags?) Richtung Süden befahren werden (gesehen 2022-10-09)
 #: priority: #B
-#: last_checked: 2022-09-25
+#: last_checked: 2022-10-09
 #: check_frequency: 90d
 #: next_check: 2023-08-21
 # REMOVED --- #: next_check_id: TRESKOWALLEE-2017
@@ -3904,7 +3962,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-10-08
+#: last_checked: 2022-10-12
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4186,7 +4244,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="25"
 #: osm_watch: way id="165832806" version="26"
-#: last_checked: 2022-09-18
+#: last_checked: 2022-10-09
 #: check_frequency: 30d
 	2::inwork 17753,8290 17707,8328 17652,8349 17617,8363 17554,8458 17533,8505 17524,8536
 # REMOVED (hier wohl nicht mehr) ---	2::inwork 17524,8536 17515,8567 17497,8623
@@ -4194,7 +4252,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 ',
          'from' => undef,
          'id' => 3327,
-         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand September 2021: Bauarbeiten im südlichen Abschnitt, Komplettsperrung möglich)',
+         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand Oktober 2021: Bauarbeiten im südlichen Abschnitt, nur enge Passage für Fußgänger offen)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4479,7 +4537,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: CORONA-2020
 #: note: Marktzeiten sind wohl 9 bis 15 Uhr, Parkverbote (und mögliche Sperrung/Beeinträchtigung) aber länger
 #: XXX seit Corona ist der Markt auch auf der Arndtstr. --- bleibt das so? vvv
-#: last_checked: 2022-08-13 vvv
+#: last_checked: 2022-10-13 vvv
 #: check_frequency: 90d vvv
 #: tempex: sa T06-T19 vvv
 	2::temp 9546,9198 9617,9185 9674,9179
@@ -4538,7 +4596,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: viz2021:13.470538,52.512351,12.09.2022,07:00
 #: source_id: viz2021:13.468932,52.511298,12.09.2022,07:00
 #: source_id: viz2021:13.469582,52.511928,12.09.2022,07:00
-#: last_checked: 2022-10-05 vvv
+#: last_checked: 2022-10-10 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-12-09 vvv
 Weichselstr. (Traveplatz)	q4::inwork; 14798,11777 14802,11784 14836,11842
@@ -4743,17 +4801,17 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)?
 #: add_fragezeichen: Wo genau ist der Uferweg wegen Bauarbeiten gesperrt?
-#: last_checked: 2022-09-26 (osm)
+#: last_checked: 2022-10-08 (osm)
 #: check_frequency: 60d
 #: next_check: 2024-02-12
-#: osm_watch: way id="4410535" version="25"
-#: osm_watch: way id="4993234" version="15"
-	2::inwork 5714,12290 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
+#: osm_watch: way id="4993234" version="16"
+	2::inwork 5714,12290 5796,12372 5940,12564
+# REMOVED (laut osm hier fertiggestellt) --- #: osm_watch: way id="4410535" version="26" --- 2::inwork 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
 ',
          'from' => 1643583600,
          'id' => 3507,
          'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
-         'text' => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Anfang April 2022: Weg ist zumindest in Höhe Lessingbrücke nicht passierbar; Stand Juli 2022: nicht passierbare Stelle in Höhe Flotowstr.)',
+         'text' => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Hansabrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Juli 2022: nicht passierbare Stelle in Höhe Flotowstr.)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -5075,14 +5133,15 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        undef,
        {
          'data' => '#: next_check_id: HAEMMERLING-2022
-#: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00
+#: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (inaktiv) (mittlerweile bis 23.10.2022)
 #: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig
 #: by: https://nitter.cz/VIZ_Berlin/status/1575006478804873217#m
 #: by: https://nitter.cz/pic/orig/media%2FFdqVlEEXEAI-lOQ.jpg
 #: note: anscheinend auch für Fußgänger gesperrt, hier gibt es keinen Gehweg
 #: note: laut rbb nur bis 20.10.2022
-Schubertstr.	2::inwork 21984,6317 21856,6390
+#: also_indoor: traffic (B+G[nur Am Bahndamm],H[nur Schubert])
 Am Bahndamm	2::inwork 21984,6317 22238,6195
+Schubertstr.	2::inwork 21984,6317 21856,6390
 ',
          'from' => 1651953282,
          'id' => 3548,
@@ -5091,18 +5150,7 @@ Am Bahndamm	2::inwork 21984,6317 22238,6195
          'type' => 'gesperrt',
          'until' => 1669849200
        },
-       {
-         'data' => '#: next_check_id: BRUECKEWERDER-2022
-#: by: https://www.mobil-potsdam.de/de/aktuelle-verkehrsthemen/radwegbruecke-potsdam-werder-havel/
-	2::inwork -21227,-2017 -21125,-2012	
-',
-         'from' => 1651442400,
-         'id' => 3549,
-         'source_id' => 'https://www.mobil-potsdam.de/de/baustellen/aktuell/?c=4210',
-         'text' => 'Eisenbahnbrücke Werder: wegen Bauarbeiten gesperrt, bis zum 10.10.2022',
-         'type' => 'gesperrt',
-         'until' => 1665376200
-       },
+       undef,
        {
          'data' => '#: next_check_id: WILTBERG-2022
 #: by: https://nitter.net/VIZ_Berlin/status/1523578356306169857#m
@@ -5152,14 +5200,19 @@ Am Bahndamm	2::inwork 21984,6317 22238,6195
        undef,
        undef,
        {
-         'data' => '#: XXX Halteverbot gilt bis 2022-10-10
-#: add_fragezeichen: Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?
-#: also_indoor: traffic (G(nördlicher?),B)
-#: last_checked: 2022-09-04
-#: next_check: 2022-10-10
+         'data' => '#: XXX Halteverbot gilt bis 2022-10-10 vvv
+#: add_fragezeichen: Sind die Bauarbeiten beendet und die Fahrbahn wieder offen? vvv
+#: also_indoor: traffic (B,ex-G(nördlicher?)) vvv
+#: last_checked: 2022-09-04 vvv
+#: next_check: 2022-10-10 vvv
 # REMOVED (hier nicht mehr) ---	q4::inwork 6273,2609 6293,2583
 Seydlitzstr.	q4::inwork 6293,2583 6349,2510 6459,2364
 Frobenstr.	q3::inwork 6349,2510 6529,2642
+#: next_check ^^^
+#: last_checked ^^^
+#: also_indoor ^^^
+#: add_fragezeichen ^^^
+#: XXX ^^^
 ',
          'from' => undef,
          'id' => 3557,
@@ -5380,7 +5433,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
        undef,
        {
          'data' => '#: next_check_id: WALLENSTEIN-2022
-#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags, 2022-08-14 mittags, 2022-09-03 (Sa) nachmittags vvv
+#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags, 2022-08-14 mittags, 2022-09-03 (Sa) nachmittags, 2022-10-09 (So) nachmittags vvv
 Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
 Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
 Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
@@ -5405,10 +5458,12 @@ Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/verkehrsberuhigung-im-bergmannkiez-geht-weiter_a349916
 #: also_indoor: traffic vvv
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2022-09-04 vvv
+#: last_checked: 2022-10-13 vvv
 #Fidicinstr. (ab Mehringdamm)	q4::inwork 9224,9053 9295,9047
-Fidicinstr.	q3::inwork 9295,9047 9459,9019 9654,8991
-Kopischstr.	q3::inwork 9477,9113 9459,9019
+#Fidicinstr.	q3::inwork 9295,9047 9459,9019 9654,8991
+Fidicinstr.	q3::inwork 9459,9019 9654,8991 9799,8962
+Kloedenstr.	q3::inwork 9654,8991 9669,9080
+#Kopischstr.	q3::inwork 9477,9113 9459,9019
 #Am Tempelhofer Berg	q4::inwork 9295,9047 9298,9112
 #: last_checked ^^^
 #: add_fragezeichen ^^^
@@ -5416,7 +5471,7 @@ Kopischstr.	q3::inwork 9477,9113 9459,9019
 ',
          'from' => undef,
          'id' => 3602,
-         'text' => 'Fidicinstr./Kopischstr.: Bauarbeiten im Einmündungsbereich, Ende der Bauarbeiten unbekannt',
+         'text' => 'Fidicinstr./Kloedenstr.: Bauarbeiten im Einmündungsbereich, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5463,14 +5518,14 @@ Kopischstr.	q3::inwork 9477,9113 9459,9019
 #: by: https://nitter.cz/pic/orig/media%2FFeXP3TTWAAI6GUd.jpg
 #: note: laut rbb ist die Georgenstr. länger (bis 6.10.2022) gesperrt
 #: XXX Dauern die Bauarbeiten und Sperrungen länger an?
-#: next_check: 2022-10-10 vvv
+#: next_check: 2022-10-29 vvv
 #: source_id: viz2021:13.391637,52.520049,22.08.2022,06:00 (hier nur bis 5.9.2022) (mittlerweile bis 29.9.2022) (bis 4.10.2022) (inaktiv)
 #: source_id: viz2021:13.392073,52.520077,06.10.2022,09:30 (bis 19.10.2022)
 #: last_checked: 2022-10-06
 Georgenstr.	q3::inwork 9568,12688 9441,12670
 #: note: laut rbb ist die Dorotheenstr. sogar bis 31.10.2022 gesperrt
 #: source_id: viz2021:13.395309,52.519431,22.08.2022,06:00 (2x mit der gleichen Koordinate) (hier nur bis 5.9.2022) (mittlerweile bis 29.9.2022) (bis 30.9.2022) (inaktiv)
-#: source_id: viz2021:13.395207,52.520461,05.10.2022,07:00 (Am Kupfergraben, bis 17.10.2022)
+#: source_id: viz2021:13.395207,52.520461,05.10.2022,07:00 (Am Kupfergraben, bis 17.10.2022) (bis 29.10.2022)
 #: last_checked: 2022-10-06 vvv
 # REMOVED --- #: next_check: 2022-09-30 vvv
 # REMOVED (laut rbb hier aufgehoben) --- Dorotheenstr.	q4::inwork 9742,12609 9870,12657
@@ -5482,9 +5537,9 @@ Am Kupfergraben	q4::inwork 9754,12775 9815,12705 9870,12657
 ',
          'from' => 1661032800,
          'id' => 3608,
-         'text' => 'Am Kupfergraben und Georgenstr.: Gleisarbeiten, Fahrbahn gesperrt, bis 10. Oktober 2022, evtl. wird verlängert',
+         'text' => 'Am Kupfergraben und Georgenstr.: Gleisarbeiten, Fahrbahn gesperrt, bis 29. Oktober 2022',
          'type' => 'handicap',
-         'until' => 1666022400
+         'until' => 1667059200
        },
        {
          'data' => '#: note: Einbahnstraße etwa 70m lang
@@ -5711,10 +5766,10 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
 #: note: Barrieren geöffnet, Durchfahrt zumindest für Radfahrer möglich: 2022-09-18 (Sonntag)
 #: note: Barrieren geschlossen, Durchfahrt nur auf dem Gehweg möglich: 2022-09-25 (Sonntag), 2022-09-26 (Montag) gegen 13:00
 #: also_indoor: traffic (B)
-#: last_checked: 2022-10-05
+#: last_checked: 2022-10-10
 #: check_frequency: 21d
 #: next_check: 2022-10-30
-	q3::inwork 15674,10851 15870,10938
+	q3::inwork 15674,10851 15820,10916
 ',
          'from' => undef,
          'id' => 3630,
@@ -5734,19 +5789,7 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
          'until' => 1666357200
        },
        undef,
-       {
-         'data' => '#: next_check_id: KOEPENICKERALLEE-2022
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-09-25
-#: check_frequency: 14d
-	q4::inwork 19020,9364 18939,9417
-',
-         'from' => undef,
-         'id' => 3634,
-         'text' => 'Köpenicker Allee: zwischen Waldowallee und Rolandseck Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '	q4::inwork 3737,10322 3739,10495 3770,10508
 ',
@@ -5845,7 +5888,7 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
 #: also_indoor: traffic (H,B) vvv
 #: XXX Ende der Sperrung? vvv
 #: check_frequency: 14d vvv
-#: last_checked: 2022-10-05 vvv
+#: last_checked: 2022-10-10 vvv
 einige Meter vor der Siegfriedstr. gesperrt, evtl. Bordsteine	q3::inwork 16859,12613 16720,12614
 etwa 70m gesperrt, auf Gehweg ausweichen	q3::inwork 16720,12614 16576,12612
 # REMOVED (hier nicht) ---	q4::inwork 16576,12612 16470,12612 16432,12612 16409,12612
@@ -5861,14 +5904,14 @@ etwa 70m gesperrt, auf Gehweg ausweichen	q3::inwork 16720,12614 16576,12612
          'until' => undef
        },
        {
-         'data' => '#: source_id: viz2021:13.38709,52.527156,05.10.2022,03:30
+         'data' => '#: source_id: viz2021:13.38709,52.527156,05.10.2022,03:30 (bis 9.11.2022)
 #: by: https://viz.berlin.de/2022/10/verkehrsvorschau-071022/ (bis Ende Dezember 2022)
 #: by: https://www.berliner-zeitung.de/news/bvg-schienenbruch-in-berlin-mitte-trambahn-chaos-bis-ende-dezember-li.273968
 #: by: https://unternehmen.bvg.de/pressemitteilung/da-muessen-wir-ran/
 #: XXX Bis wann ist die Kreuzung gesperrt?
 #: last_checked: 2022-10-08 vvv
 #: check_frequency: 30d vvv
-#: next_check: 2022-12-31 vvv
+#: next_check: 2022-11-09 vvv
 Chausseestr.	q4::inwork 9207,13493 9212,13471
 Hannoversche Str.	q3::inwork 9212,13471 9047,13446
 Torstr.	q3::inwork 9353,13521 9212,13471
@@ -5879,7 +5922,7 @@ Friedrichstr.	q4::inwork 9212,13471 9225,13389
 ',
          'from' => 1665077956,
          'id' => 3643,
-         'text' => 'Chausseestr./Friedrichstr./Torstr./Hannoversche Str.: Gleisbauarbeiten, Kreuzungsbereich gesperrt, Dauer der Sperrung voraussichtlich bis Dezember 2022',
+         'text' => 'Chausseestr./Friedrichstr./Torstr./Hannoversche Str.: Gleisbauarbeiten, Kreuzungsbereich gesperrt, Dauer der Sperrung voraussichtlich bis zum 9.11.2022',
          'type' => 'handicap',
          'until' => 1672527600
        },
@@ -5917,6 +5960,59 @@ Friedrichstr.	q4::inwork 9212,13471 9225,13389
          'text' => 'Betckestr.: Einbahnstraßenregelung, offen Richtung Westen',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
+#: also_indoor: traffic (B) vvv
+#: last_checked: 2022-10-07 (mapillary) vvv
+nur Gehweg frei	q4::inwork 7641,20745 7630,20698 7616,20633
+Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
+#: last_checked ^^^
+#: also_indoor ^^^
+#: add_fragezeichen ^^^
+',
+         'from' => undef,
+         'id' => 3647,
+         'text' => 'Uhlandstr.: Fahrbahn zwischen Lessingstr. und Friedhof gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://berliner-abendblatt.de/2022/10/11/strasse-am-steinberg-ab-sofort-gesperrt/
+#: by: https://nitter.cz/VIZ_Berlin/status/1579714664237178880#m
+#: by: https://nitter.cz/pic/orig/media%2FFes2IopXgAEvJgi.jpg
+	q4::inwork; 12010,16774 12230,16915 12267,16946
+',
+         'from' => 1665385200,
+         'id' => 3648,
+         'source_id' => 'viz2021:13.429184,52.556411,11.10.2022,09:00',
+         'text' => 'Am Steinberg: Bauarbeiten zwischen Prenzlauer Promenade und Tino-Schwierzina-Str., Fahrtrichtung gesperrt, vom 11.10.2022 09:00 bis 05.11.2022 17:00',
+         'type' => 'handicap',
+         'until' => 1667664000
+       },
+       {
+         'data' => '#: also_indoor: traffic (B)
+#: note: laut rbb ist die Danckelmannstr. von der Christstr. aus noch befahrbar
+	q4::inwork 2641,12458 2658,12312
+',
+         'from' => 1665291600,
+         'id' => 3649,
+         'source_id' => 'viz2021:13.29031,52.51775,10.10.2022,07:00',
+         'text' => 'Danckelmannstr.: in Höhe Gardes-du-Corps-Str. wegen Baustelle gesperrt, vom 10.10.2022 07:00 bis 04.11.2022 17:00',
+         'type' => 'handicap',
+         'until' => 1667577600
+       },
+       {
+         'data' => '#: by: https://nitter.cz/VIZ_Berlin/status/1579329626811338752#m
+#: by: https://nitter.cz/pic/orig/media%2FFeekfbYXgAEaA2q.jpg (Umleitung für Radfahrer nur in Richtung Norden)
+	q4::inwork; 4920,9000 4920,9029 4957,9437
+',
+         'from' => 1665291600,
+         'id' => 3650,
+         'source_id' => 'viz2021:13.322705,52.4884,10.10.2022,07:00',
+         'text' => 'Uhlandstr.: Sperrung zwischen Güntzelstr. und Fechnerstr., vom 10.10.2022 07:00 bis 14.10.2022 20:00',
+         'type' => 'handicap',
+         'until' => 1665770400
        }
      
 );

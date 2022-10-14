@@ -91,7 +91,7 @@ Eichborndamm	1s 4228,19024 4223,18982
 Eichborndamm	1 4223,18982 4211,18882 4163,18676 4102,18298 4059,18107 4016,17918
 Spreestr.	1 17900,6072 17939,5968 17877,5860 17810,5736 17807,5730 17782,5698
 Buckower Chaussee	1 8742,475 8972,498 9002,471
-Archibaldweg	1s 15674,10851 15870,10938
+Archibaldweg	1s 15674,10851 15820,10916 15870,10938
 Nöldnerplatz	1s 15870,10938 15903,10906
 Nöldnerplatz	1 15903,10906 16049,10844
 Adlergestell (extra Radweg)	2 22096,1136 21837,1340 21812,1366 21506,1768 21388,1895
@@ -443,7 +443,7 @@ Natalissteig	1 1200,14943 1223,14824 1226,14714
 Alt-Biesdorf	1 20375,11694 20435,11698 20571,11698 20764,11675 21108,11628
 Alt-Biesdorf	1 21108,11628 20963,11618 20838,11631 20739,11641 20633,11651 20540,11660 20375,11694
 Privatstr. 14	1s 13159,17196 13103,17280
-Bernkasteler Str.	1s 15208,16939 15015,16908 14923,16901 14923,16914
+Bernkasteler Str.	1s 15208,16939 15015,16908 14923,16901
 Wiedenbrücker Weg	1 4207,1113 4220,1175 4141,1282
 Am Langen Weg:	1 -7033,14984 -7026,14890 -7015,14772 -7011,14693 -7013,14578
 Wehneltsteig	1 1256,14217 1305,14384
@@ -2628,8 +2628,6 @@ tragen (Eisenbahnbrücke Templiner See)	0:60:-168 -15537,-4535
 tragen (Eisenbahnbrücke Templiner See)	0:60:-230 -15652,-4441
 tragen (Eisenbahnbrücke Caputh)	0:60:-60 -18002,-7496
 tragen (Eisenbahnbrücke Caputh)	0:60:-179 -18001,-7395
-tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60:-36 -21125,-2012
-tragen (Eisenbahnbrücke Werder, 27 Stufen)	0:60:87 -21227,-2017
 tragen (Elsensteg, 6 Stufen)	0:10:-141 13379,8703
 tragen (Elsensteg, 6 Stufen)	0:10:-143 13397,8727
 tragen (Gerickesteg, ungefähr 20 Stufen)	0:30:-128 6748,12669
@@ -3133,7 +3131,7 @@ Barriere	BNP:10:-13 12178,7985
 Schranke, ggfs. auf dem Bürgersteig umfahren	BNP:2:-15:trailer=4 12216,7838
 Drängelgitter	BNP:10:-77 7158,9509
 Drängelgitter	BNP:5:-51 -6162,16287
-Drängelgitter	BNP:5:-193 38562,100725
+Drängelgitter	BNP:5 38562,100725
 Drängelgitter	BNP:5:3 38662,97200
 Schwingtor an der Luiseninsel	BNP:5:-135 7693,11627
 Schwingtor an der Luiseninsel	BNP:5:-130 7732,11660
@@ -3309,7 +3307,7 @@ Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285 10675,12280
-Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	2::inwork 13422,11236 13537,11186 13540,11148
+Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	1::inwork 13422,11236 13537,11186 13540,11148
 Johannisstr.: Einbahnstraße	1s:inwork 9588,13174 9385,13174 9254,13171
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7727,4418 7692,4464 7667,4549
 Wuhletalbrücke: wird neu gebaut	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
