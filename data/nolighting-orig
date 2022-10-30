@@ -149,10 +149,10 @@ Wuhletal-Wanderweg	NL 22124,13606 22082,13542 22060,13446 22058,13366 22067,1333
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4350&options=4
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4507 (Antrag auf Umwidmung als Straßenland, aber seit Mai 2013 keine Bewegung bei der Drucksache)
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5749 (neue Drucksache)
-#: last_checked: 2022-06-15
+#: last_checked: 2022-10-16
 #: check_frequency: 150d
 (Wuhlewanderweg, östliches Ufer)	NL 22204,6016 22162,5919 22122,5884 22097,5879 22084,5877
-(Wuhlewanderweg, östliches Ufer)	NL 22084,5877 22070,5876 21846,5856 21744,5804 21618,5699 21605,5687 21600,5683 21507,5620
+(Wuhlewanderweg, östliches Ufer)	NL 22084,5877 22070,5876 21846,5856 21744,5804 21651,5730 21618,5699 21605,5687 21600,5683 21581,5670 21507,5620
 (Wuhlewanderweg) (?)	NL 22441,15118 22413,15187 22396,15254 22393,15292 22400,15321 22507,15373 22516,15399 22518,15417 22518,15510 22515,15620 22539,15729 22554,15780 22623,15959 22670,16063 22717,16142 22771,16194
 (Wuhlheide/FEZ)	NL 19957,5941 19961,5989
 (Wuhlheide/FEZ)	NL 19961,5989 20015,6069 20293,6278
@@ -301,7 +301,7 @@ Wanderweg Erkner - Hessenwinkel	NL 33526,2771 33419,2765 33406,2738 33255,2762 3
 #: XXX wird hier eine Beleuchtung entstehen? Wird hier asphaltiert werden?
 #: by: https://fahrradfreundliches-neukoelln.de/blog/ausschusssitzung-strassen-gruenflaechen-und-ordnung-am-9-januar-2019
 #: by: https://api.fixmyberlin.de/api/projects/75 (Asphaltierung)
-#: last_checked: 2022-09-30
+#: last_checked: 2022-10-23
 #: check_frequency: 60d
 (Weg am Friedhof)	NL 11608,7267 11687,7284 12185,7381
 # 
@@ -358,8 +358,8 @@ Landschaftspark Johannisthal	NL 18229,2973 18228,2989 18046,3192 18031,3257 1802
 Landschaftspark Johannisthal	NL 18856,3783 18833,3781 18500,3782 18347,3947 18196,4106 18176,4105 18162,4105 18122,4074
 Landschaftspark Johannisthal	NL 18689,3465 18633,3530
 Landschaftspark Johannisthal	NL 18337,3238 18395,3176
-Spreeuferweg	NL 5541,12221 5550,12238 5573,12242 5604,12244 5643,12253 5714,12290 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
-Gartenufer	NL 5790,11643 5845,11615 6067,11479 6200,11417 6337,11365 6346,11326
+Spreeuferweg	NL 5541,12221 5550,12238 5573,12242 5604,12244 5643,12253 5714,12290 5796,12372 5940,12564 5953,12592 6001,12699 6045,12830 6123,12887 6182,12900
+Gartenufer	NL 5790,11643 5845,11615 6067,11479 6200,11417 6277,11397 6337,11365 6346,11326
 (Weg in d. Kolonie Norderney)	NL 3596,6828 3607,6952 3582,6964
 Franz-Cornelsen-Weg	NL 3594,7191 3596,7199 3612,7335 3619,7587
 (Bad Kissingen)	NL 3596,7566 3609,7842
@@ -551,7 +551,9 @@ An der Wuhle	NL 22059,10782 22103,10814 22166,10839
 An der Wuhle	NL 22244,11311 22268,11285 22279,11272 22270,11210 22236,11208
 An der Wuhle	NL 22359,13599 22259,13508
 Bürgerpark	NL 9419,18330 9424,18276 9462,18234
-Bürgerpark	NL 20328,16473 20342,16499 20429,16482 20520,16479 20547,16485 20815,16469 20851,16454 20898,16420 20923,16435 21051,16417 21124,16421 21177,16499 21238,16627
+# REMOVED --- Bürgerpark	NL 20328,16473 20342,16499
+# REMOVED (neue und alte Beleuchtung) --- Bürgerpark	NL 20342,16499 20395,16481 20409,16486 20520,16479 20547,16485 20815,16469 20851,16454 20898,16420
+Bürgerpark	NL 20898,16420 20923,16435 20996,16429 21070,16415 21107,16418 21129,16426 21176,16480 21177,16499 21238,16627
 # REMOVED (Beleuchtung existiert) --- (Fortsetzung der Walter-Felsenstein-Str.)	NL 20617,16614 20547,16485 20523,16469 20487,16392
 #: by: rjoop (Fotos):
 Jungfernheide	NL 2905,14754 2923,14853 2900,14891 2840,14982 2685,15167 2707,15205 2695,15258 2632,15295
@@ -852,6 +854,7 @@ Waldpromenade	NL 23473,8114 23376,8186 23261,8274 23149,8364 23047,8439 22974,84
 # REMOVED (hier stehen Lampen) --- Rosa-Valetti-Str.	NL 24404,10387 24618,10601 24660,10643
 Parlerstr.	NL 24186,10035 24263,10183 24333,10317 24404,10387
 Bellevuepark	NL 22787,5582 22841,5571 22855,5554 22834,5481 22851,5327
+Bellevuepark	NL 22514,5534 22534,5552 22574,5554 22717,5591 22787,5582
 (Ernst-Grube-Str. - S-Bahngleise)	NL 21343,5140 21231,5086 21183,5077 21147,5081 21081,5096
 #: by: guylian
 (Marienhöhe)	NL 8070,5325 8075,5307 8116,5276 8115,5245 8052,5154 8115,5086
@@ -1714,7 +1717,7 @@ Weg am Klötzbecken, nördlicher Weg	NL 5851,22538 5883,22565 5922,22598 5971,2264
 (Sendener Str. - Semmelweg)	NL 964,18321 915,18352
 (Maienwerderweg - Kamener Weg)	NL 2243,18274 2211,18257 2097,18183 2035,18166 1928,18136 1661,18161
 zur Straße Bürgersruh	NL 8054,22688 8070,22693 8130,22772
-(Frithjofstr. - Rotkardinalweg)	NL 12696,19334 12650,19462 12543,19760 12552,19765
+(Frithjofstr. - Rotkardinalweg)	NL 12696,19334 12652,19460 12543,19760 12552,19765
 (Am Lehnshof - Tegeler Fließ)	NL 4336,22984 4332,22916
 #: note: teilweise etwas indirekte Beleuchtung durch Leuchttafeln
 (Dieselstr. - Kiefholzstr.)	NL 14642,8022 14771,8142 14832,8199 14841,8207
@@ -1789,7 +1792,7 @@ Gutspark Neukladow	NL -6366,5215 -6359,5220 -6339,5237 -6198,5357 -6141,5413 -61
 (In der Falkenberger Feldmark)	NL 20044,18774 20262,19367 20388,19721 20435,19869 20536,20006
 (Falkenberger Fußsteig - Falkenberger Chaussee)	NL 18507,18541 18483,18433 18521,18347 18530,18327
 (Falkenberger Fußsteig - Hellersdorfer Weg)	NL 19679,18119 19820,18091
-(Bürgerpark Marzahn)	NL 20898,16420 21020,16298
+# REMOVED ((neue?) Beleuchtung existiert) --- (Bürgerpark Marzahn)	NL 20898,16420 21020,16298
 #: note: vermutlich
 (Hinter dem Kurpark - Spitzwegerichweg)	NL 25315,6232 25278,6272 25243,6286 25113,6386 25113,6418 25087,6444
 # REMOVED (Lampen an Strommasten) --- Hinter dem Kurpark	NL 24964,6046 25315,6232 25372,6262 25405,6278
@@ -1807,7 +1810,8 @@ Tegeler Forst	NL 605,20714 462,20694 65,20594 -105,20611 -329,20685 -750,20878 -
 (Am Städtischen Zentralfriedhof - Landschaftspark Herzberge)	NL 17485,12240 17524,12313 17585,12539 17580,12625 17548,12703 17507,12760 17507,12781
 (Im Lindenhof - Am Städtischen Zentralfriedhof)	NL 17571,12557 17585,12539
 (Oderstr. - Kirchhofweg)	NL 11565,7402 11602,7375 11656,7375 11677,7351 11687,7284
-(Nizzastr. - Dr.-Markus-Str.)	NL 12434,21160 12520,21199 12535,21282 12507,21391 12501,21468 12494,21493 12518,21559 12517,21573 12517,21587
+# REMOVED (hier beleuchtet) --- (Nizzastr. - Dr.-Markus-Str.)	NL 12434,21160 12520,21199
+(Nizzastr. - Dr.-Markus-Str.)	NL 12520,21199 12535,21282 12507,21391 12501,21468 12494,21493 12518,21559 12517,21573 12517,21587
 (Wiesenweg - Waldweg)	NL 9940,26273 9898,26310 9848,26349 9812,26385
 # 
 # REMOVED (hier gibt's gar keine Laternenmasten) --- #: XXX wird die existierende Beleuchtung wieder hergestellt? vvv --- #: last_checked: 2020-02-25 vvv --- #: osm_watch: way id="202157023" version="6" --- #: osm_watch: way id="202157026" version="4" --- #: osm_watch: way id="169067264" version="7"
@@ -1844,7 +1848,7 @@ Park am Klötzebecken	NL 5815,22870 5926,22738 6003,22642
 (Weg am Grimbartgraben)	NL -1647,22153 -1482,22104 -1398,22050 -1148,21872 -1023,21788 -947,21737 -795,21685 -727,21676
 (Wittenauer Str. - Klötzgraben)	NL 6155,22394 6057,22513 6024,22583
 (Mauerweg nach Lübars)	NL 7813,21258 7937,21427 7991,21531
-(Neuer Mauerweg)	NL 7512,19480 7572,19490 7679,19421 7704,19366 7824,19269 7873,19261 8016,19143 8313,18940 8347,18916 8476,18773
+(Neuer Mauerweg)	NL 7512,19480 7572,19490 7679,19421 7704,19366 7763,19318 7824,19269 7873,19261 8016,19143 8313,18940 8347,18916 8476,18773
 (Neuer Mauerweg)	NL 7572,19490 7540,19550
 # REMOVED (ja) --- #: add_fragezeichen: funktioniert die Beleuchtung wieder? --- #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6313 --- #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/gruene-sammeln-vorschlaege-fuer-bessere-beleuchtung_a191290 --- #: osm_watch: way id="138160584" version="12" --- #: last_checked: 2018-11-09 (gegen 18:20 Uhr) --- Straße 645: Beleuchtung existiert, funktioniert aber nicht (aber stellenweise hilft das Flutlicht des Jahn-Sportplatzes)	NL 11424,8284 11434,8194 11419,8077 11450,7921
 # REMOVED (existiert nicht mehr) --- #: note: im südlichen Abschnitt etwas indirekte Beleuchtung --- Mergenthalerring	NL 14121,8147 14210,8227 14229,8278
@@ -1895,7 +1899,7 @@ Wladimir-Gall-Weg	NL -2735,15062 -2708,15004 -2738,14961 -2858,14961 -2885,14943
 #: note: Beleuchtung existiert, ist aber ausgeschaltet
 #: note: die Laternen sind nicht bei https://www.stoerung24.de/?Mandant=StromnetzBerlin gelistet
 #: XXX wird die Beleuchtung repariert?
-#: last_checked: 2022-04-29
+#: last_checked: 2022-10-27
 #: check_frequency: 90d
 Moabiter Werder	NL 7649,12764 7707,12813 7787,12918 7813,12961
 Ingeborg-Drewitz-Allee	NL 7541,12754 7556,12763 7623,12764 7649,12764 7789,12764 7867,12765
@@ -2009,3 +2013,9 @@ Uferweg	NL 21730,5267 21754,5221 21822,5153
 Severingstr. - Otto-Wels-Ring	NL 13692,3024 13724,3026 13747,3016 13763,3015 13787,3017 13854,3016
 (Hönower Weiherkette - Torgauer Str.)	NL 25234,15577 25216,15462 25215,15413
 (Waldweg)	NL 25175,7953 25191,7918 25207,7908
+Am Teltowkanal	NL 14806,4763 14967,4641 15338,4341 15571,4168
+Am Teltowkanal	NL 15594,4152 15585,4139 15695,4051 15859,3924 15878,3936 16066,3799 16175,3715 16233,3671 16292,3626 16344,3586 16503,3464 16674,3331
+(Straße 79 - Mauerweg)	NL 7793,19346 7784,19332 7763,19318
+(Straße 78 - Mauerweg)	NL 7715,19408 7704,19366
+(Rosenstr.)	NL 12725,19459 12711,19438 12652,19460
+(Türksteinweg - Jänickestr.)	NL 1372,1208 1416,1228 1458,1266 1530,1282 1600,1262 1702,1278

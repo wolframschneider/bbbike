@@ -518,9 +518,9 @@ Bus 349	busroute_N 676,9104 693,9129 890,9399 1019,9573 1117,9706 1238,9869 1344
 Bus 284, Bus 380	busroute_N 5317,2345 5406,2110 5376,2097 5393,2053 5431,1956 5452,1940 5396,1774 5335,1616 5299,1524 5273,1456 5223,1318 5201,1227 5178,1123 5162,1110 5162,1110 5162,1098 5187,1059 5204,1057 5204,1057
 Bus 284, Bus 380	busroute_N 5204,1057 5204,1057 5212,1074 5190,1114 5178,1123
 Bus 284, Bus 380	busroute_N 5452,1940 5474,1940 5491,1955 5489,1981 5452,2077 5434,2122 5406,2110
-Bus 284	busroute_N 5204,1057 5342,845 5358,822 5514,580 5584,475 5486,461 5448,455 5061,409 4948,562
-Bus 186	busroute_N 4542,1188 4605,1089 4768,840 4867,690 4875,677 4948,562
-Bus 186, Bus 284	busroute_N 4948,562 4748,453 4505,465 4279,459
+Bus 284	busroute_N 5204,1057 5342,845 5358,822 5514,580 5584,475 5486,461 5448,455 5061,409 4937,579
+Bus 186	busroute_N 4542,1188 4605,1089 4768,840 4867,690 4875,677 4937,579
+Bus 186, Bus 284	busroute_N 4937,579 4748,453 4505,465 4279,459
 Bus M85	busroute_N 4136,505 4122,421 4068,406 3912,362 3898,466 3834,502 3655,752
 Bus M85	busroute_N 7873,12927 7872,13022 7939,13026 7937,13109 7867,13106 7872,13022
 Bus M77, Bus M82	busroute_N 6966,880 6961,836 6941,690 6937,671 6959,509 7007,333 7014,203 6982,88
@@ -908,7 +908,7 @@ Nikolaus-Ehlen-Weg: Privatstraße	CS 17308,-36 17215,94 17176,90
 #: XXX_indoor: würde besser unter sehenswuerdigkeit passen
 #: by: https://www.morgenpost.de/bezirke/mitte/article230905682/Lichter-der-Vergangenheit-die-Gaslaternen-im-Tiergarten.html
 #: XXX Wann ziehen die Gaslaternen um?
-#: osm_watch: note 2969085 4
+#: osm_watch: note 2969085 5
 #: priority: #C
 #: last_checked: 2022-09-22
 #: check_frequency: 90d
@@ -1195,7 +1195,7 @@ ausgeschildert nach Grünow/Bietikow	CP2; 47047,99449 46429,99430
 ausgeschildert "Köpenicker Landstr."	CP2; 15303,8343 15242,8263
 # REMOVED (Schild existiert) --- #: XXX Wann wird ausgeschildert, wenn überhaupt? --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7023 --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7013 --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7135 --- #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2016/pressemitteilung.440980.php --- #: last_checked: 2016-02-08 --- #: next_check: 2016-02-19 --- Vera-Brittain-Ufer: nicht ausgeschildert, Uferpromenade am DomAquarée	CS 10300,12587 10291,12600 10249,12658 10219,12701 10166,12777
 Deilingeweg: nicht ausgeschildert?	CP2; 6259,23379 6229,23415
-(Frithjofstr. - Rotkardinalweg): entlang der ehemaligen Industriebahn	CS 12696,19334 12650,19462 12543,19760 12552,19765
+(Frithjofstr. - Rotkardinalweg): entlang der ehemaligen Industriebahn	CS 12696,19334 12652,19460 12543,19760 12552,19765
 Schönower Str. - An der Panke: Weg entlang Bahn und NSG "Faule Wiesen"	CS 18801,28360 18827,28385 18852,28381 19027,28536 19154,28637 19217,28681 19287,28718 19502,28812 19532,28867 19573,28968 19535,29067
 Albrechtstr. - Selerweg: an der Kreuzung Klingsorstr./Neue Filandastr. abbiegen	CP; 5527,5217 5583,5179 5633,5184
 (Verlängerte Hertzallee): TU-Gelände	CS 5352,11502 5171,11589 4950,11696 4905,11785
@@ -1299,7 +1299,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="5"
-#: last_checked: 2022-10-14
+#: last_checked: 2022-10-22 (mapillary)
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
@@ -1339,7 +1339,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2022-10-05
+#: last_checked: 2022-10-18
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1349,6 +1349,10 @@ Bundesratufer: nicht ausgeschildert, kurz vor der Brücke die Rampe benutzen	CP; 
 # 
 Bochumer Platz: nicht ausgeschildert	CP2; 5938,12848 5914,12845
 Bochumer Platz: als Bundesratufer ausgeschildert	CP2; 5914,12845 5938,12848
+# 
+Rosenstr.: erst einige Meter weiter ausgeschildert	CP2; 12652,19460 12711,19438
+# 
+Eigene Scholle: nicht ausgeschildert	CS 8912,21308 8825,21246 8729,21185
 # 
 #: next_check_id: NORD52-2019
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_13_1921_2084_online.pdf (Grundstücksnummerierungen)
@@ -1400,7 +1404,7 @@ entlang des ehemaligen Spreeparks	CS 15981,8872 15973,8894 15879,8994 15845,9031
 # REMOVED --- #: next_check_id: METROPOLITANPARK-2019 --- #: XXX wann wird die Straße ausgeschildert? --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_48_5583_5626_online.pdf (Grundstücksnummerierungen) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_27_2281_2388_online.pdf (Grundstücksnummerierungen) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_44_3933_4008_online.pdf (Grundstücksnummerierungen) --- #: last_checked: 2021-05-24 --- #: check_frequency: 180d --- Metropolitan Park: nicht ausgeschildert	CS -8064,13534 -8088,13594 -7984,13649 -7926,13709 -7893,13781 -7894,13878 -7928,13967 -8019,14036 -8095,14056 -8183,14041
 # 
 #: by: mapillary
-Straße 3 (Heinersdorf): nicht ausgeschildert	CP2; 12725,19459 12746,19474
+Straße 3 (Heinersdorf): nicht ausgeschildert	CP2; 12725,19459 12741,19474
 # 
 ausgeschildert als "Zufahrt zur Frankfurter Allee 286-266"	CP2; 17020,11748 17034,11797
 # 
@@ -1490,9 +1494,13 @@ ausgeschildert nach Bernau	CP; 32543,18082 32537,18066 32519,18076
 ausgeschildert Sophie-Charlotte-Platz	CP; 3064,11657 3144,11659 3159,11562
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
-#: last_checked: 2022-08-14
-#: check_frequency: 180d
-Henriette-Lustig-Str.: noch nicht ausgeschildert	CS 21611,5119 21631,5079
+#: last_checked: 2022-10-16 vvv
+#: check_frequency: 180d vvv
+#: note: hier ist das Schild wohl verloren gegangen?
+Henriette-Lustig-Str.: nicht ausgeschildert	CS 21476,5048 21611,5119
+Henriette-Lustig-Str.: nicht ausgeschildert	CS 21611,5119 21631,5079
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 ausgeschildert "Parkhaus Steglitzer Kreisel"	CP2; 4905,5438 4851,5377
 # 
@@ -1680,7 +1688,7 @@ Kleiner Parkweg: nicht ausgeschildert	CS 20775,11801 20790,11990
 Volkerweg: nicht ausgeschildert	CS 16005,4012 16046,4073 16060,4093 16145,4217 16151,4226
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
-#: last_checked: 2022-08-14
+#: last_checked: 2022-10-16
 #: check_frequency: 60d
 Eiselenweg - Uferweg: Einfahrt zum Uferweg ist etwas versteckt, vor dem Neubaugebiet links abbiegen	CP; 21364,5430 21442,5414 21476,5434
 # 
@@ -1733,6 +1741,8 @@ ausgeschildert "Zu den Häusern Metropolitan Park"	CP2; -7720,13839 -7893,13781
 #: add_fragezeichen ^^^
 # 
 Bootshausweg: nicht ausgeschildert	CP2; -1691,16848 -1673,16939
+# 
+ausgeschildert "Späthstr. 16 - 158"	CP2; 14028,5325 14063,5313
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)

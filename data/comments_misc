@@ -616,7 +616,7 @@ Hochspannungsweg: nicht ausgeschildert	CP2; 13761,2993 13631,2938
 ausgeschildert nach Grünow/Bietikow	CP2; 47047,99449 46429,99430
 ausgeschildert "Köpenicker Landstr."	CP2; 15303,8343 15242,8263
 Deilingeweg: nicht ausgeschildert?	CP2; 6259,23379 6229,23415
-(Frithjofstr. - Rotkardinalweg): entlang der ehemaligen Industriebahn	CS 12696,19334 12650,19462 12543,19760 12552,19765
+(Frithjofstr. - Rotkardinalweg): entlang der ehemaligen Industriebahn	CS 12696,19334 12652,19460 12543,19760 12552,19765
 Schönower Str. - An der Panke: Weg entlang Bahn und NSG "Faule Wiesen"	CS 18801,28360 18827,28385 18852,28381 19027,28536 19154,28637 19217,28681 19287,28718 19502,28812 19532,28867 19573,28968 19535,29067
 Albrechtstr. - Selerweg: an der Kreuzung Klingsorstr./Neue Filandastr. abbiegen	CP; 5527,5217 5583,5179 5633,5184
 (Verlängerte Hertzallee): TU-Gelände	CS 5352,11502 5171,11589 4950,11696 4905,11785
@@ -683,6 +683,8 @@ Hödurstr.: Privatstraße	CS 12647,18289 12751,18401
 Bundesratufer: nicht ausgeschildert, kurz vor der Brücke die Rampe benutzen	CP; 6183,13083 6164,12980 6122,12971
 Bochumer Platz: nicht ausgeschildert	CP2; 5938,12848 5914,12845
 Bochumer Platz: als Bundesratufer ausgeschildert	CP2; 5914,12845 5938,12848
+Rosenstr.: erst einige Meter weiter ausgeschildert	CP2; 12652,19460 12711,19438
+Eigene Scholle: nicht ausgeschildert	CS 8912,21308 8825,21246 8729,21185
 Ankerweg: nicht ausgeschildert	CS 22118,2559 22159,2585
 Ankerweg: nicht ausgeschildert	CP2; 22159,2585 22197,2612
 Rheingoldstr.: durch den Rheinsteinpark	CS 19073,8828 19145,8659
@@ -700,7 +702,7 @@ entlang des Lichtenrader Grabens	CS 10067,-2952 10107,-3063
 (Waldpark Steinberg und am Steinbergsee): linken Weg nehmen (rechts sind einige Stufen)	CS; 4116,21296 4190,21181
 Im Lichtenhain: Hausdurchfahrt	CP2; 16497,10685 16491,10655
 entlang des ehemaligen Spreeparks	CS 15981,8872 15973,8894 15879,8994 15845,9031
-Straße 3 (Heinersdorf): nicht ausgeschildert	CP2; 12725,19459 12746,19474
+Straße 3 (Heinersdorf): nicht ausgeschildert	CP2; 12725,19459 12741,19474
 ausgeschildert als "Zufahrt zur Frankfurter Allee 286-266"	CP2; 17020,11748 17034,11797
 ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2; 19214,14966 19244,14980
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13397
@@ -744,7 +746,8 @@ ausgeschildert nach Rehfelde	CP2; 40540,16584 40793,16343
 ausgeschildert nach Petershagen	CP2; 35225,17557 35196,17190
 ausgeschildert nach Bernau	CP; 32543,18082 32537,18066 32519,18076
 ausgeschildert Sophie-Charlotte-Platz	CP; 3064,11657 3144,11659 3159,11562
-Henriette-Lustig-Str.: noch nicht ausgeschildert	CS 21611,5119 21631,5079
+Henriette-Lustig-Str.: nicht ausgeschildert	CS 21476,5048 21611,5119
+Henriette-Lustig-Str.: nicht ausgeschildert	CS 21611,5119 21631,5079
 ausgeschildert "Parkhaus Steglitzer Kreisel"	CP2; 4905,5438 4851,5377
 nicht ausgeschildert, dem Nordgraben folgen	CP2; 10225,21935 10237,21922
 ausgeschildert als "zu den Häusern Seefelder Str. 15-49"	CP2; 16975,16164 17071,16174
@@ -849,3 +852,4 @@ Nußbaumallee: nicht ausgeschildert	CP2; 1788,12252 1732,12224
 Eidechsenweg: nicht ausgeschildert	CS -7720,13839 -7893,13781
 ausgeschildert "Zu den Häusern Metropolitan Park"	CP2; -7720,13839 -7893,13781
 Bootshausweg: nicht ausgeschildert	CP2; -1691,16848 -1673,16939
+ausgeschildert "Späthstr. 16 - 158"	CP2; 14028,5325 14063,5313

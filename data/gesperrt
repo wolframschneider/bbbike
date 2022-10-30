@@ -554,11 +554,14 @@ Invalidenstr. (Straßenbahntrasse)	3nocross::ignrte 8332,13548 8295,13531 8187,13
 Schönhauser Allee (Richtungsfahrbahn)	1::igndisp 10883,15129 10883,15251 10887,15287
 Schönhauser Allee (Richtungsfahrbahn)	1::igndisp 10887,15287 10886,15251 10883,15129
 Schönhauser Allee (Mittelstreifen, U-Bahnhof)	3nocross::ignrte 10883,15129 10886,15251 10887,15287
-Lindenstr./Pyramidenbrücke/An der Wuhlheide (Straßenbahntrasse)	1::igndisp 21789,5427 21739,5492 21703,5538 21649,5617 21600,5683 21594,5691 21567,5727 21519,5767 21467,5802 21364,5827 21303,5826
+Lindenstr./Pyramidenbrücke/An der Wuhlheide (Straßenbahntrasse)	1::igndisp 21789,5427 21739,5492 21703,5538 21649,5617
+Lindenstr./Pyramidenbrücke/An der Wuhlheide (Straßenbahntrasse)	1::igndisp 21519,5767 21467,5802 21364,5827 21303,5826
 Lindenstr. (Straßenbahntrasse)	3nocross::ignrte 21649,5617 21703,5538 21739,5492 21789,5427
 Lindenstr./Pyramidenbrücke: Übergang wegen Bauarbeiten gesperrt	2::igndisp 21600,5683 21605,5687
 Lindenstr. (Straßenbahntrasse)	3nocross::ignrte 21706,5541 21605,5687 21600,5694
-Wuhlewanderweg: wegen Baustelleneinrichtung gesperrt	2::inwork 21600,5683 21507,5620
+Wuhlewanderweg: wegen Baustelleneinrichtung gesperrt	2::inwork 21600,5683 21581,5670
+Lindenstr./Pyramidenbrücke/An der Wuhlheide (Straßenbahntrasse): Fahrbahn gesperrt (Benutzungspflicht des Radwegs)	2::igndisp 21649,5617 21600,5683 21594,5691 21567,5727 21519,5767
+Wuhlewanderweg: wegen Baustelle gesperrt	2::inwork 21651,5730 21618,5699 21605,5687
 Lötschbergstr.	1s 20161,11715 20150,11512
 Brodenbacher Weg	1s 15178,17134 14897,17093
 Huttwiler Weg	1 6913,18460 6961,18453 7035,18413 7098,18383 7120,18295 7071,18232
@@ -876,7 +879,6 @@ Berlepschstr., Wendeschleife	1 -1486,1481 -1436,1499
 Berlepschstr., Wendeschleife	1 -1436,1499 -1467,1466 -1486,1481
 Bürgerstr.: Mittelstreifen	2 13289,6355 13307,6359
 Boltonstr.	1 -390,14476 -457,14536
-Marktplatz Adlershof	1 20290,3756 20336,3783
 Straßenbahntrasse	3nocross::ignrte 26286,-1901 26698,-2322 26871,-2500
 Adlergestell -> Langer See: Straßenbahntrasse	3::igndisp 26286,-1901 26698,-2322 26846,-2176
 Langer See -> Adlergestell: Straßenbahntrasse	3::igndisp 26846,-2176 26698,-2322 26871,-2500
@@ -921,6 +923,9 @@ Schönegarten: verschlossene Tore an beiden Enden	2 7416,10492 7432,10546 7330,10
 Parchimer Allee	1 14466,4624 14427,4571
 Parchimer Allee	1 14427,4571 14425,4593 14454,4626 14466,4624
 Feldrain	1s 25684,13172 25632,13214 25609,13232 25607,13459
+Bitterfelder Str. (Richtungsfahrbahn)	1::igndisp 20397,16621 20382,16582 20358,16560 20328,16546 20230,16560
+Bitterfelder Str. (Richtungsfahrbahn)	1::igndisp 20230,16560 20325,16551 20354,16563 20379,16585 20397,16621
+Bitterfelder Str. (Mittelstreifen)	3nocross::ignrte 20230,16560 20328,16546 20358,16560 20382,16582 20397,16621
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1470,7 +1475,7 @@ Alt-Mahlsdorf -> Frettchenweg: Mittelstreifen	3::igndisp 23648,11265 23848,11264
 Mittelstreifen	3nocross::ignrte 11012,1210 11157,1269 11216,1293
 Marienfelder Chaussee -> Muschelkalkweg: Mittelstreifen	3::igndisp 11012,1210 11157,1269 11120,1384
 Muschelkalkweg -> Marienfelder Chaussee: Mittelstreifen	3::igndisp 11120,1384 11157,1269 11216,1293
-Mittelstreifen	3nocross::ignrte 11865,1564 11765,1522 11476,1398
+Mittelstreifen	3nocross::ignrte 11865,1564 11765,1522 11483,1401
 Straßenbahntrasse	3nocross::ignrte 22539,6258 22645,6431 22675,6498
 Mahlsdorfer Str. -> Hoernlestr.: Straßenbahntrasse	3::igndisp 22539,6258 22645,6431 22509,6519
 Hoernlestr. -> Mahlsdorfer Str.: Straßenbahntrasse	3::igndisp 22509,6519 22645,6431 22675,6498
@@ -1750,9 +1755,9 @@ unbequem passierbarer Mittelstreifen	3nocross::ignrte 9865,10227 9858,10199 9837
 Brachvogelstr. -> Zossener Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9884,10192 9858,10199 9837,10117
 Waterloo-Ufer -> Brachvogelstr.: unbequem passierbarer Mittelstreifen	3::igndisp 9825,10206 9858,10199 9884,10192
 Waterloo-Ufer -> Zossener Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9825,10206 9858,10199 9865,10227
-Straßentunnelrampe	3nocross::ignrte 2713,4087 2815,4162 2941,4245 3048,4305
-Unter den Eichen: Straßentunnelrampe	1::igndisp 2713,4087 2815,4162 2941,4245 3048,4305
-Unter den Eichen: Straßentunnelrampe	1::igndisp 3048,4305 2950,4232 2823,4152 2713,4087
+Straßentunnelrampe	3nocross::ignrte 2723,4093 2815,4162 2941,4245 3048,4305
+Unter den Eichen: Straßentunnelrampe	1::igndisp 2723,4093 2815,4162 2941,4245 3048,4305
+Unter den Eichen: Straßentunnelrampe	1::igndisp 3048,4305 2950,4232 2823,4152 2723,4093
 Mittelstreifen, Tunnelrampe	3nocross::ignrte 3344,4488 3260,4444 3048,4305
 Unter den Eichen: Mittelstreifen, Tunnelrampe	1::igndisp 3048,4305 3260,4444 3344,4488
 Unter den Eichen: Mittelstreifen, Tunnelrampe	1::igndisp 3344,4488 3266,4438 3048,4305
@@ -1984,9 +1989,11 @@ Lessingstr. -> Lessingstr.: unpassierbarer Mittelstreifen	3::igndisp 6172,12878 
 Lessingstr. -> südliches Spreeufer: unpassierbarer Mittelstreifen	3::igndisp 6172,12878 6150,12875 6138,12877
 südliches Spreeufer -> Lessingstr.: unpassierbarer Mittelstreifen	3::igndisp 6138,12877 6150,12875 6157,12933
 südliches Spreeufer -> Lessingstr.: unpassierbarer Mittelstreifen	3::igndisp 6138,12877 6150,12875 6172,12878
-Linksabbiegen verboten	3nocross::ignrte 20120,16297 20232,16522 20323,16706
-Alfred-Döblin-Str. -> Märkische Allee: Linksabbiegen verboten	3::igndisp 20286,16494 20232,16522 20120,16297
-Märkische Allee -> Alfred-Döblin-Str.: Linksabbiegen verboten	3::igndisp 20323,16706 20232,16522 20286,16494
+Mittelstreifen	3nocross::ignrte 20120,16297 20232,16522 20242,16543 20323,16706
+Alfred-Döblin-Str. -> Märkische Allee: Mittelstreifen	3::igndisp 20286,16494 20232,16522 20120,16297
+Märkische Allee -> Alfred-Döblin-Str.: Mittelstreifen	3::igndisp 20242,16543 20232,16522 20286,16494
+Rampe Bitterfelder Brücke -> Märkische Allee: Mittelstreifen	3::igndisp 20267,16539 20242,16543 20232,16522
+Märkische Allee -> Rampe Bitterfelder Brücke: Mittelstreifen	3::igndisp 20323,16706 20242,16543 20267,16539
 Linksabbiegen verboten	3nocross::ignrte 20516,17088 20691,17463 20717,17516 20768,17609 20798,17664 20843,17745 20889,17838 20912,17872 21009,18055
 zur Märkischen Allee -> Märkische Allee: Linksabbiegen verboten	3::igndisp 20727,17558 20691,17463 20717,17516
 Wuhletalstr. -> Märkische Allee: Linksabbiegen verboten	3::igndisp 20853,17528 20717,17516 20691,17463
@@ -2205,8 +2212,8 @@ Husstr. -> Adlergestell: Mittelstreifen	3::igndisp 19736,3858 19633,3751 19676,3
 Mittelstreifen	3nocross::ignrte 19472,3922 19335,4067 18725,4715 18457,5000
 Adlergestell -> Sonnenallee: Mittelstreifen	3::igndisp 18725,4715 19335,4067 19345,4077
 Sonnenallee -> Adlergestell: Mittelstreifen	3::igndisp 19345,4077 19335,4067 19472,3922
-Fußgängerbrücke Betriebsbahnhof Schöneweide -> Adlergestell: Mittelstreifen	3::igndisp 18739,4728 18725,4715 19335,4067
-Adlergestell -> Fußgängerbrücke Betriebsbahnhof Schöneweide: Mittelstreifen	3::igndisp 18457,5000 18725,4715 18739,4728
+Fußgängerbrücke Bhf. Johannisthal -> Adlergestell: Mittelstreifen	3::igndisp 18739,4728 18725,4715 19335,4067
+Adlergestell -> Fußgängerbrücke Bhf. Johannisthal: Mittelstreifen	3::igndisp 18457,5000 18725,4715 18739,4728
 Silberberger -> Adlergestell: Abbiegen verboten	3 19804,3697 19735,3643 19812,3561
 Mittelstreifen	3nocross::ignrte 18457,5000 18425,5032 18080,5376
 Michael-Brückner-Str. -> Hartriegelstr.: Mittelstreifen	3::igndisp 18080,5376 18425,5032 18514,5028
@@ -2612,7 +2619,7 @@ tragen (7 Stufen)	0:20:-7 9762,16119
 tragen (3+20 Stufen)	0:40:-263 -6458,14292
 tragen (ca. 35 Stufen)	0:30:-75 7621,7105
 tragen (ca. 35 Stufen)	0:30:-75 7655,7096
-tragen (30 Stufen)	0:30:-53 15571,4168
+tragen (30 Stufen mit Kinderwagenrampe)	0:30:-53 15571,4168
 tragen (26 Stufen, steile Treppe)	0:30:-213 15156,6034
 tragen (Treppe)	0:30:-151 4808,3406
 tragen (zwei Treppen, je ca. 10 Stufen)	0:30:-255 8823,16877
@@ -3170,7 +3177,7 @@ Schranke	BNP:3:-64:trailer=10 6876,-2731
 Schranke	BNP:3:-78:trailer=10 17215,12485
 Schranke	BNP:10:-182:trailer=20 15334,16718
 Drängelgitter	BNP:3:0:trailer=10 3783,-2079
-Drängelgitter	BNP:3:50:trailer=10 21618,5699
+Drängelgitter	BNP:3:46:trailer=10 21618,5699
 Drängelgitter	BNP:3:85:trailer=10 22070,5876
 Drängelgitter	BNP:3:78:trailer=10 22097,5879
 Drängelgitter	BNP:3:26:trailer=10 24454,-14845
@@ -3242,6 +3249,10 @@ Tor	BNP:10:-196 1473,1740
 Drängelgitter	BNP:2:-126:trailer=7 -4234,11408
 Schranke	BNP:5:-188:trailer=15 23221,15226
 Schranke	BNP:3:-207:trailer=10 -1486,16789
+Schranke	BNP:1:-52:trailer=3 14967,4641
+Neue Fahlenbergbrücke	2::inwork 31009,19 31080,-19
+(Fortsetzung Wandlitzstr.): gesperrt, Bauzäune	2::inwork 17981,9000 17837,9086
+Marktplatz Adlershof: gesperrt wegen Umbauarbeiten	2::inwork 20336,3783 20290,3756
 Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt	2::inwork 13333,9929 13271,9927 13225,9897 13109,9743 12905,9470
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 Grünfläche Auerdreieck: Bauarbeiten, Weg ist gesperrt	2::inwork 13232,12628 13091,12563
@@ -3253,9 +3264,6 @@ Alt-Moabit - Invalidenstr.: Bauarbeiten, Gehweg gesperrt, Fahrbahn nur für Tram	
 Möllhausenufer: Bauarbeiten, Einbahnstraßenregelung	1s 23608,1210 23520,1194
 Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer	2::inwork 7673,4223 7769,4315
 (Vorfahrt Neues-Deutschland-Gebäude): an der Rüdersdorfer Str. mit Bauzäunen abgesperrt	2::inwork 12788,11898 12891,12008
-Überqueren der Straße vor der Russischen Botschaft nicht möglich	3nocross::ignrte 8804,12280 9028,12307 9141,12320
-Schadowstr. -> Unter den Linden: Überqueren der Straße vor der Russischen Botschaft nicht möglich	3::igndisp 9011,12423 9028,12307 9141,12320
-Unter den Linden -> Schadowstr.: Überqueren der Straße vor der Russischen Botschaft nicht möglich	3::igndisp 8804,12280 9028,12307 9011,12423
 Barnimer Dörferweg: wegen Bauarbeiten gesperrt	2::inwork 20865,18933 20889,18943 20948,18968
 Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 9775,12178 9771,12190 9747,12205 9755,12144
 Überqueren wegen eines Gerüsts nicht möglich	3nocross::ignrte 3570,17938 3706,17931 3833,17929
@@ -3283,15 +3291,15 @@ Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 
 Fürstenberger Str.: Bauarbeiten, Einbahnstraße	1s 10472,14632 10320,14608
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 Alexanderufer - Charité: Tor ist wegen Corona-Beschränkungen geschlossen	2 8371,13399 8363,13402 8356,13404
-Fußgängerbrücke Betriebsbahnhof Schöneweide: südwestlicher Abgang durch Bauzaun gesperrt	2::inwork 18621,4675 18636,4660 18642,4654 18664,4673
+Fußgängerbrücke Bhf. Johannisthal: südwestlicher Abgang wird zurückgebaut	2::inwork 18621,4675 18636,4660 18642,4654 18664,4673
 Gustav-Hertz-Platz: wegen Brückenarbeiten gesperrt	2::inwork 18685,4595 18649,4678
-Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9507,-85 9468,-85 9271,323 9253,370 9218,458 9178,556
+Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9473,-92 9271,323 9253,370 9218,458 9178,556
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9271,323 9296,335 9249,434 9218,458
 Alexander-von-Humboldt-Weg: Durchgang gesperrt, auch für Fußgänger	2::inwork 18825,3325 18689,3465
 Cotheniusstr.: Bauarbeiten, Straße existiert nicht mehr	2::inwork 13430,13733 13519,13785
 Prinzessinnenstr./Bahnhofstr. (Lichtenrade): Sperrung am Bahnübergang	2::inwork 10096,-2137 10194,-2138 10228,-2136 10300,-2135
 Pfarrer-Lütkehaus-Platz: Sperrung am Bahnübergang	2::inwork 10228,-2136 10231,-2159
-Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10300,-2135 10296,-2156 10318,-2156
+Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10310,-2136 10300,-2135 10296,-2156 10318,-2156
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,10152 14373,10046
@@ -3302,18 +3310,18 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
 Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355,5254
 Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
-Henriette-Lustig-Str.: durch Bauzäune abgesperrt	2::inwork 21476,5048 21380,5003 21375,4974
+Henriette-Lustig-Str.: Durchfart nicht möglich	2::inwork 21476,5048 21380,5003 21375,4974
 Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285 10675,12280
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	1::inwork 13422,11236 13537,11186 13540,11148
-Johannisstr.: Einbahnstraße	1s:inwork 9588,13174 9385,13174 9254,13171
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7727,4418 7692,4464 7667,4549
 Wuhletalbrücke: wird neu gebaut	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle): kein Durchgang möglich	2:inwork 17639,5612 17675,5521
 (Bushaltestelle und Straßenbahnwendeschleife Schöneweide): wegen Bauarbeiten gesperrt	2::inwork 17736,5441 17675,5521 17588,5573 17578,5566
+Zufahrt Zentrum Schöneweide: Fahrbahn und Bürgersteig gesperrt	2:inwork 17728,5756 17656,5701
 Französische Str.: zwischen Mauerstr. und Glinkastr. komplett gesperrt, auch für Fußgänger	2:inwork 9076,12054 9183,12076
 Mauerstr..: Bauarbeiten, Einbahnstraße	1s:inwork 9108,11961 9076,12054
 Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:inwork 9076,12054 9064,12156

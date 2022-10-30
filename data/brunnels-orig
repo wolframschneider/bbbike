@@ -369,7 +369,8 @@ Märkische-Allee-Brücke	Br 19982,12405 19967,12270
 Märkische-Allee-Brücke	Br 19962,12222 19958,12177
 Märkische-Allee-Brücke	Br 19951,12114 19946,12075
 Südliche Blumberger-Damm-Brücke	Br 21190,12193 21166,12023
-Bitterfelder Brücke	Br 20319,16542 20230,16560 20150,16572
+Bitterfelder Brücke	Br 20325,16551 20230,16560 20150,16572
+Bitterfelder Brücke	Br 20230,16560 20328,16546
 Marzahner Brücke	Br 19350,14997 19408,15007 19614,15061
 Marzahner Brücke	Br 19565,15106 19502,15089 19364,15045
 #: alias: Fußgängerbrücke Waldbacher Weg
@@ -702,7 +703,7 @@ Margarete-Kubicka-Brücke	Br 14384,8056 14425,8052
 Mathilde-Rathenau-Brücke	Br 14261,8851 14318,8790
 # 
 # REMOVED (Säntisstr.) --- provisorische Fußgängerbrücke	Br 9002,919 9047,948
-Fußgängerbrücke Betriebsbahnhof Schöneweide	Br 18642,4654 18664,4673 18730,4735
+Fußgängerbrücke Bhf. Johannisthal	Br 18642,4654 18664,4673 18730,4735
 Hohe Brücke	Br 31896,2512 31903,2497
 	Br 12507,21391 12520,21386
 	Br 7768,11736 7773,11731

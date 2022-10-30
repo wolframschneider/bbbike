@@ -1,6 +1,259 @@
-$#temp_blocking = 393;
+$#temp_blocking = 165;
 push @temp_blocking,
 (
+       {
+         'data' => '#: by: https://www.berlin.de/weihnachtsmarkt/3659027-3496862-umwelt-und-weihnachtsmarkt-in-der-sophie.html
+#: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/1001302-955635-weihnachts-und-umweltmarkt-in-der-sophie.html
+#: by: https://www.weihnachtsmarkt-sophienstrasse.de/ (Absage 2021)
+#: tempex: before(1st_advent,1d) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1669330800,
+         'id' => 166,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              25,
+                              'months',
+                              11,
+                              'start',
+                              '2022-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (26.11.2022 - 27.11.2022)',
+         'type' => 'gesperrt',
+         'until' => 1669589999
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => '# REMOVED --- #: XXX weiterhin unklar, ob Weihnachtsmärkte noch im November, erst im Dezember oder gar nicht öffnen werden --- #: priority: #A --- #: next_check: 2020-11-30
 # sowieso schon mit q4 markiert, deshalb -> 2
@@ -1820,7 +2073,7 @@ Hauptallee: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	
 #: by: https://www.visitberlin.de/de/event/antikflohmarkt-trabrennbahn-karlshorst
 #: note: Der Antikmarkt fällt an den Sonntagen aus, an denen der Antikflohmarkt in Karlshorst stattfindet; das ist üblicherweise der Sonntag nach dem ersten Samstag im Monat.
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche; mittlerweile: Bauarbeiten am Ostbahnhof, normale Marktfläche existiert vermutlich nicht mehr (siehe oben)
-#: last_checked: 2022-10-15
+#: last_checked: 2022-10-28
 #: check_frequency: 120d
 	q4::temp:clock 12378,11806 12413,11901
 #: tempex ^^^
@@ -2813,9 +3066,75 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: tempex: before(2nd_advent,sa) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1669935600,
+         'id' => 2515,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              2,
+                              'months',
+                              12,
+                              'start',
+                              '2022-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (03.12.2022 - 04.12.2022)',
+         'type' => 'gesperrt',
+         'until' => 1670194799
+       },
+       {
+         'data' => '#: tempex: before(3rd_advent,sa) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1670540400,
+         'id' => 2516,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              12,
+                              'start',
+                              '2022-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (10.12.2022 - 11.12.2022)',
+         'type' => 'gesperrt',
+         'until' => 1670799599
+       },
+       {
+         'data' => '#: tempex: before(4th_advent,sa) - +1d
+	2::xmas 9986,13412 10317,13248
+',
+         'from' => 1671145200,
+         'id' => 2517,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              16,
+                              'months',
+                              12,
+                              'start',
+                              '2022-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (17.12.2022 - 18.12.2022)',
+         'type' => 'gesperrt',
+         'until' => 1671404399
+       },
        undef,
        undef,
        undef,
@@ -2837,7 +3156,32 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.weihnachtsmarkt-deutschland.de/berlin-rudow-weihnachtsmarkt.html
+#: by: https://www.berlin.de/weihnachtsmarkt/5685707-3496862-rudower-weihnachtsmeile.html (findet 2021 nicht statt)
+#: source_id: 2147345257
+# note: früher Alt-Rudow zwischen Köpenicker Str. und Krokusstr.:	2::xmas 16849,1437 16805,1488 16610,1715
+	2::xmas 16610,1715 16767,1831
+',
+         'from' => 1671188400,
+         'id' => 2529,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              12,
+                              'start',
+                              '2022-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'IM_020883',
+         'text' => 'Krokusstraße: Rudower Weihnachtsmeile, Straße gesperrt, 17.12.2022 und 18.12.2022',
+         'type' => 'gesperrt',
+         'until' => 1671393600
+       },
        undef,
        undef,
        undef,
@@ -3141,7 +3485,34 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/weihnachtsmarkt/3240090-3496862-weihnachtsmarkt-am-alexanderplatz.html
+#: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html
+#: tempex: before(first_advent, monday)-YYYY1226 vvv
+#: note: wegen der Tunnelarbeiten vermutlich enger als sonst, früher q3
+	q4::xmas 11139,13008 11086,12900 11102,12845 11005,12855 10970,12822
+	q4::xmas 11102,12845 11134,12793
+#: tempex ^^^
+',
+         'from' => 1668898800,
+         'id' => 2763,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              11,
+                              'start',
+                              '2021-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/1304487-955635-weihnachtsmarkt-auf-dem-alexanderplatz.html',
+         'text' => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 21. November 2022 bis 26. Dezember 2022',
+         'type' => 'handicap',
+         'until' => 1672095599
+       },
        undef,
        undef,
        undef,
@@ -3457,16 +3828,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.deutsches-architekturforum.de/thread/12710-am-spreebord-ehem-werkbundstadt-areal-charlottenburg/?postID=705260#post705260
 #: source_id: viz2021:13.310551,52.521111,01.03.2022,08:00 (hier: zwischen Sömmering- und Darwinstr., Radfahrer frei)
 #: last_checked: 2022-09-16
-#: check_frequency: 180d
-#: next_check: 2022-10-31
+#: check_frequency: 90d
+#: next_check: 2023-01-31
 # REMOVED (hier nicht mehr) ---	q4::inwork 4234,12710 4303,12692
 	q3::inwork 3828,12697 3981,12709 4071,12720 4124,12721
 ',
          'from' => 1644676199,
          'id' => 2961,
-         'text' => 'Am Spreebord: Bauarbeiten, Abschnitte der Fahrbahn gesperrt, voraussichtlich bis Ende Oktober 2022',
+         'text' => 'Am Spreebord: Bauarbeiten, Abschnitte der Fahrbahn gesperrt, voraussichtlich bis Ende Januar 2023',
          'type' => 'handicap',
-         'until' => 1667232000
+         'until' => 1675180800
        },
        undef,
        undef,
@@ -3747,7 +4118,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: note: laut Baustellenschild der Wasserbetriebe bis April 2021, mittlerweile bis September 2021, mittlerweile bis Juli 2022 (wird nicht mehr aktualisiert)
 #: also_indoor: traffic (ex-H,B,ex-G)
 #: osm_watch: way id="1006570991" version="1"
-#: last_checked: 2022-09-24 (mapillary, Sackgassenschild)
+#: last_checked: 2022-10-22 (Fahrbahn wird wiederhergestellt)
 #: check_frequency: 45d
 #: next_check: 2022-11-30
 	q3::inwork  8986,16092 9178,16317
@@ -3912,7 +4283,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022) (inaktiv) (bis 31.12.2022)
 #: note: laut rbb mittlerweile bis 30.12.2022
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-10-13 (mapillary)
+#: last_checked: 2022-10-27
 #: check_frequency: 30d
 #: next_check: 2022-12-31
 	q4::inwork; 11329,12497 11209,12430
@@ -3962,7 +4333,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-10-12
+#: last_checked: 2022-10-29
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4061,7 +4432,53 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425
+#: by: https://twitter.com/VIZ_Berlin/status/1285909653487079425/photo/1
+#: by: https://viz.berlin.de/2021/05/verkehrsvorschau-310521/ (Fuß- und Radverkehr ist frei)
+#: by: https://www.openstreetmap.org/note/3032478 (nicht mehr gesperrt!)
+# REMOVED --- #: XXX laut osm-Notiz nicht mehr gesperrt --- #: add_fragezeichen: Sind die Bauarbeiten bereits beendet?
+#: source_id: 2147346671 (bis 31.5.2021, Gesamtbaumaßnahme bis Ende 2021)
+#: source_id: 2147347233 (bis 23.12.2021)
+#: source_id: viz2021:13.312919,52.448752,31.05.2021,08:30 (bis 30.9.2022) (bis 7.10.2022)
+#: source_id: viz2021:13.301624,52.444612,02.05.2022,07:00 (bis 30.6.2022) (inaktiv)
+#: source_id: viz2021:13.312919,52.448752,31.05.2021,08:30 (bis 30.9.2022, zwischen Moltkestr. und Hindenburgdamm) (bis 7.10.2022)
+#: source_id: viz2021:13.31527,52.44953,29.09.2022,18:39 (bis 7.10.2022) (inaktiv)
+#: source_id: bvg2021:188#BVG259885_0
+#: source_id: viz2021:13.301624,52.444612,02.05.2022,07:00 (bis 30.11.2022)
+# REMOVED --- #: priority: #A --- #: last_checked: 2021-09-26 --- #: next_check: 2022-03-18
+#: also_indoor: traffic (H,ex-G,ex-B) vvv
+#: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
+# REMOVED --- #: XXX NEW	Gardeschützenweg (Lichterfelde) in beiden Richtungen zwischen Hindenburgdamm und Lipaer Straße: Leitungsbau,Vollsperrung, Fußverkehr frei, vom 31.05.2021 08:30 Uhr bis 23.12.2021 17:00 Uhr
+# REMOVED (hier nicht mehr) --- #: note: nur etwa 100m, deshalb q3 statt q4 ---	q3::inwork 4515,4760 4214,4595
+#: note: Einbahnstraßenregelung, Bauarbeiten laut Baustellenschild bis September 2022
+# REMOVED (doppelt) ---	q4::inwork; 4214,4595 4039,4500
+# REMOVED (doppelt) ---	q4::inwork; 4039,4500 3934,4441
+# REMOVED (hier nicht) ---	q4::inwork; 3934,4441 3643,4232
+# REMOVED (hier nicht) ---	q4::inwork 3934,4441 4039,4500
+#: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
+#: last_checked: 2022-10-24 vvv
+#: next_check: 2022-11-30 vvv
+	q4::inwork; 3643,4232 3523,4139
+	q3::inwork; 4214,4595 4039,4500
+Chlumer Str.: Anbindung gesperrt	q3::inwork 4008,4555 4039,4500
+Tietzenweg: Anbindung gesperrt	q3::inwork 3587,4312 3643,4232 3766,4058
+#: next_check ^^^
+#: last_checked ^^^
+#: add_fragezeichen ^^^
+# REMOVED (hier nicht) --- q4::inwork 4214,4595 4515,4760
+# REMOVED --- #: note: Einbahnstraßenregelung, bis 30.6.2022 ---	q4::inwork; 3643,4232 3523,4139
+# REMOVED --- #: note: hier nur ein kurzes Stück ---	q2::inwork; 4214,4595 4039,4500
+# REMOVED (nicht mehr, laut rbb) ---	q4::inwork 4179,4662 4214,4595
+#: also_indoor ^^^
+',
+         'from' => 1622356200,
+         'id' => 3261,
+         'source_id' => '2147345834',
+         'text' => 'Gardeschützenweg: abschnittsweise Sperrungen der Fahrbahn zwischen Hindenburgdamm und Viktoriaplatz (nur Richtung Westen), außerdem Anbindungen Tietzenweg und Chlumer Str. gesperrt, voraussichtlich bis Ende November 2022',
+         'type' => 'handicap',
+         'until' => 1669824000
+       },
        undef,
        undef,
        undef,
@@ -4184,7 +4601,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: CORONA-2020
 #: XXX während der Corona-Krise vvv
-#: last_checked: 2022-08-30 vvv
+#: last_checked: 2022-10-27 vvv
 #: check_frequency: 120d vvv
 	2::temp 8548,13577 8503,13553 8554,13476 8581,13487 8600,13448 8586,13440 8554,13476 8504,13441 8538,13388 8487,13351
 	2::temp 8363,13402 8371,13399 8377,13463 8503,13553
@@ -4220,7 +4637,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: also_indoor: traffic (H,G)
 #: osm_watch: way id="362719487" version="7"
 #: osm_watch: way id="687428752" version="2"
-#: last_checked: 2022-10-10 (architektur-urbanistik)
+#: last_checked: 2022-10-28
 #: check_frequency: 90d
 	q4::inwork 6033,10403 6133,10679
 ',
@@ -4355,9 +4772,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => 1618696800,
          'id' => 3361,
          'source_id' => 'LS/721-E/21/032',
-         'text' => 'Ortsdurchfahrt Kerkow: Bauarbeiten und Ersatzneubau Brücke, möglicherweise auch für Radfahrer gesperrt, vom 19.04.2021 bis 31.10..2022',
+         'text' => 'Ortsdurchfahrt Kerkow: Bauarbeiten und Ersatzneubau Brücke, möglicherweise auch für Radfahrer gesperrt, vom 19.04.2021 bis 23.12.2022',
          'type' => 'gesperrt',
-         'until' => 1667228400
+         'until' => 1671807600
        },
        {
          'data' => '	2::temp -1846,8129 -1798,7949 -1640,7832 -1328,7597
@@ -4410,14 +4827,20 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: next_check_id: PICHELSDORFER-2021
 #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0822_barrierefrei.pdf (hier nur bis Ende August 2022)
+#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2022/pressemitteilung.1256599.php (ab 24.10.2022: Metzer Platz - Weißenburger Str.)
+#: by: https://wilhelmstadt-bewegt.de/category/baustellen-ticker-pichelsdorfer-strasse/
+#: by: https://www.berliner-woche.de/wilhelmstadt/c-verkehr/umgestaltung-der-pichelsdorfer-strasse-geht-in-die-zweite-phase_a361376
 #: source_id: bvg2021:m36#BVG279266_0
+#: source_id: viz2021:13.196928,52.525518,30.06.2021,06:00
 #: note: laut rbb ist der Fuß- und Radverkehr frei (allerdings evtl. mit Einschränkungen, deshalb noch immer q3)
-	q3::inwork -3824,13350 -3786,13267 -3693,13012 -3667,12919
+# REMOVED --- #: priority: #A --- #: next_check: 2022-10-24
+# REMOVED ---	q3::inwork -3824,13350 -3786,13267 -3693,13012 -3667,12919
+	q3::inwork -3693,13012 -3667,12919 -3658,12854 -3650,12762
 ',
          'from' => 1624917600,
          'id' => 3401,
          'source_id' => 'viz2021:13.195212,52.527938,30.06.2021,06:00',
-         'text' => 'Pichelsdorfer Str.: Bauarbeiten zwischen Wilhelmstr. und Zimmerstr., evtl. sind auch Radfahrer betroffen, vom 30.06.2021 bis 28.04.2023',
+         'text' => 'Pichelsdorfer Str.: Bauarbeiten zwischen Metzer Platz und Weißenburger Str., evtl. sind auch Radfahrer betroffen, bis 28.04.2023',
          'type' => 'handicap',
          'until' => 1682694000
        },
@@ -4462,7 +4885,28 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1423180617789972483 (bis Ende Oktober 2021) (mittlerweile bis 30.11.2021)
+# REMOVED --- #: note: nordöstlicher Bürgersteig ist wenig frequentiert; Bordsteine müssen überwunden werden, wenn man zu spät von der Fahrbahn herunterfährt; mittlerweile dürfen Radfahrer offziell über den Gehweg fahren; außerdem sind etwa 100m der Fahrbahn wieder befahrbar (q3 -> q2)
+#: by: https://www.deutsches-architekturforum.de/thread/14507-bauprojekte-am-velodrom-prenzlauer-berg/?postID=723688#post723688
+#: by: https://www.wg-a.com/projects/conrad-blenkle-strasse-36-berlin/ (Fertigstellung 05/2023)
+#: add_fragezeichen: Sind die Bauarbeiten beendet und die Fahrbahn wieder frei?
+#: note: In der Praxis kommt man als Radfahrer hier gut durch.
+#: also_indoor: traffic
+#: osm_watch: way id="8084121" version="37"
+#: osm_watch: way id="75617418" version="6"
+#: last_checked: 2022-10-22
+#: check_frequency: 60d
+#: next_check: 2023-05-31
+	q3::inwork 13057,14267 13158,14117
+',
+         'from' => 1666449676,
+         'id' => 3424,
+         'source_id' => 'viz2021:13.444,52.53356,26.07.2021,08:18',
+         'text' => 'Conrad-Blenkle-Str.: Fahrbahn zwischen Kniprodestr. und Erich-Boltze-Str. nur für Fußgänger frei, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        undef,
        undef,
@@ -4596,7 +5040,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: viz2021:13.470538,52.512351,12.09.2022,07:00
 #: source_id: viz2021:13.468932,52.511298,12.09.2022,07:00
 #: source_id: viz2021:13.469582,52.511928,12.09.2022,07:00
-#: last_checked: 2022-10-10 vvv
+#: last_checked: 2022-10-26 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-12-09 vvv
 Weichselstr. (Traveplatz)	q4::inwork; 14798,11777 14802,11784 14836,11842
@@ -4630,7 +5074,7 @@ Scharnweberstr./Weichselstr.: Gehweg für Radfahrer frei, allerdings an der Trave
 #: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA1_Marienfelde_Attilastrasse-Schichauweg/20220426/
 #: osm_watch: way id="114381366" version="13"
 #: add_fragezeichen: Ist die Unterführung noch immer gesperrt?
-#: last_checked: 2022-07-24
+#: last_checked: 2022-10-24
 #: check_frequency: 180d
 	2::inwork 9699,-600 9562,-619
 ',
@@ -4693,17 +5137,17 @@ Scharnweberstr./Weichselstr.: Gehweg für Radfahrer frei, allerdings an der Trave
        },
        {
          'data' => '#: also_indoor: traffic (ex-B)
-#: note: am 2022-03-07 noch immer Bauarbeiten und Schild "Durchfahrt verboten", allerdings konnten anscheinend sogar Autos durchfahren; am 2022-04-18, 2022-08-05, 2022-09-03, 2022-09-24 ebenso; Halteverbotsschilder bis 14.10.2022
+#: note: am 2022-03-07 noch immer Bauarbeiten und Schild "Durchfahrt verboten", allerdings konnten anscheinend sogar Autos durchfahren; am 2022-04-18, 2022-08-05, 2022-09-03, 2022-09-24, 2022-10-16 ebenso; Halteverbotsschilder bis 14.10.2022
 #: add_fragezeichen: Sind die Bauarbeiten bereits beendet?
-#: last_checked: 2022-09-24
+#: last_checked: 2022-10-16
 # REMOVED --- #: check_frequency: 14d
-#: next_check: 2022-10-14
+# REMOVED --- #: next_check: 2022-10-14
 # REMOVED (hier nicht mehr) ---	q4::inwork 13355,6235 13227,6209 13220,6237
 	q4::inwork 13027,6168 13227,6209
 ',
          'from' => undef,
          'id' => 3496,
-         'text' => 'Jahnstr.: zwischen Priesterweg und Rungiusstr. Bauarbeiten, Fahrbahn kann gesperrt sein',
+         'text' => 'Jahnstr.: zwischen Priesterweg und Rungiusstr. Bauarbeiten, Fahrbahn kann gesperrt sein (Stand Mitte Oktober 2022: außerhalb der Arbeitszeiten könnte die Durchfahrt möglich sein)',
          'type' => 'handicap',
          'until' => undef
        },
@@ -4724,7 +5168,7 @@ Scharnweberstr./Weichselstr.: Gehweg für Radfahrer frei, allerdings an der Trave
          'data' => '#: by: https://www.berlinhyp.de/de/media/newsroom/berlin-hyp-baut-neue-unternehmenszentrale-b-one-nach-h%C3%B6chsten-energiestandards (fertig: Ende 2023)
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/b-one-berlin-hyp-ag-neubau.955/#post-17434
 #: by: https://baustelle.strabag.com/deutschland?tx_ecxsitebaustelle_webcam%5Baction%5D=detail&tx_ecxsitebaustelle_webcam%5Bcontroller%5D=Webcam&tx_ecxsitebaustelle_webcam%5Bday%5D=4&tx_ecxsitebaustelle_webcam%5Bmonth%5D=05&tx_ecxsitebaustelle_webcam%5Buid%5D=300&tx_ecxsitebaustelle_webcam%5Byear%5D=2022&cHash=96b9a3ee3c205301473cfbdb541e9d2a (Webcam)
-#: last_checked: 2022-09-16
+#: last_checked: 2022-10-29
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 	q3::inwork; 6626,11178 6549,11015
@@ -4753,6 +5197,7 @@ Scharnweberstr./Weichselstr.: Gehweg für Radfahrer frei, allerdings an der Trave
 #: source_id: bvg2021:188#BVG296003_0
 #: source_id: viz2021:13.300936,52.440024,31.01.2022,07:00 (bis 31.8.2022) (bis 22.12.2022)
 #: source_id: viz2021:13.289248,52.435248,31.01.2022,07:00 (bis 31.8.2022) (bis 22.12.2022)
+#: source_id: viz2021:13.29541,52.43779,28.10.2022,12:36 (bis 22.12.2022)
 #: by: https://viz.berlin.de/2022/01/verkehrsvorschau-31012022/ (Gesamtbaumaßnahme bis Ende 2022, Sperrung an der Drakestr. möglicherweise nur bis Ende März 2022, hier nur für den Kfz-Verkehr?)
 # REMOVED --- #: XXX Sind Radfahrer tatsächlich betroffen? Haben die Bauarbeiten auch was mit den Sperrungen in der Kommandantenstr./Baseler Str. zu tun? vvv
 #: also_indoor: traffic (G,H,B) vvv
@@ -4801,24 +5246,25 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)?
 #: add_fragezeichen: Wo genau ist der Uferweg wegen Bauarbeiten gesperrt?
-#: last_checked: 2022-10-08 (osm)
-#: check_frequency: 60d
+#: last_checked: 2022-10-29
+#: check_frequency: 45d
 #: next_check: 2024-02-12
 #: osm_watch: way id="4993234" version="16"
 	2::inwork 5714,12290 5796,12372 5940,12564
-# REMOVED (laut osm hier fertiggestellt) --- #: osm_watch: way id="4410535" version="26" --- 2::inwork 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
+# REMOVED (laut osm hier fertiggestellt) --- #: osm_watch: way id="4410535" version="26" --- 2::inwork 5940,12564 5953,12592 6001,12699 6045,12830 6123,12887 6182,12900
 ',
          'from' => 1643583600,
          'id' => 3507,
          'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
-         'text' => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Hansabrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Juli 2022: nicht passierbare Stelle in Höhe Flotowstr.)',
+         'text' => 'Spreeuferweg: Bauarbeiten, zwischen Flotowstr. und Hansabrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Ende Oktober 2022: Wegarbeiten zwischen Flotowstr. und Hansabrücke)',
          'type' => 'gesperrt',
          'until' => undef
        },
        undef,
        {
-         'data' => '#: last_checked: 2022-10-15
-#: next_check: 2022-10-26
+         'data' => '#: also_indoor: traffic (B[unvollständig])
+#: last_checked: 2022-10-15
+#: next_check: 2022-12-21
 	q4::inwork; 6665,2836 6745,2848 6763,2879 6842,2995 6914,3093
 ',
          'from' => 1644076653,
@@ -4826,7 +5272,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'source_id' => 'viz2021:13.346369,52.431944,20.09.2021,07:30',
          'text' => 'Mühlenstr.: Einbahnstraßenregelung, offen Richtung Südwesten, voraussichtlich bis 26.10.2022',
          'type' => 'handicap',
-         'until' => 1666821600
+         'until' => 1671638400
        },
        undef,
        {
@@ -4853,7 +5299,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
-#: last_checked: 2022-09-23 (osm) vvv
+#: last_checked: 2022-10-29 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-02-12 vvv
 #: osm_watch: way id="4395450" version="30"
@@ -4939,8 +5385,8 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        undef,
        undef,
        {
-         'data' => '#: source_id: viz2021:13.359404,52.539514,21.02.2022,09:00 (vielleicht ist das diese Baustelle, die aber falsch lokalisiert ist und fälschlicherweise nur für Kfz-Verkehr spricht; bis 8.4.2022) (mittlerweile bis 20.4.2022) (mittlerweile inaktiv) (bis 30.9.2022) (bis 28.10.2022)
-#: source_id: viz2021:13.358072,52.540517,20.04.2022,08:00 (bis 30.9.2022) (bis 28.10.2022)
+         'data' => '#: source_id: viz2021:13.359404,52.539514,21.02.2022,09:00 (vielleicht ist das diese Baustelle, die aber falsch lokalisiert ist und fälschlicherweise nur für Kfz-Verkehr spricht; bis 8.4.2022) (mittlerweile bis 20.4.2022) (mittlerweile inaktiv) (bis 30.9.2022) (bis 28.10.2022) (bis 3.12.2022)
+#: source_id: viz2021:13.358072,52.540517,20.04.2022,08:00 (bis 30.9.2022) (bis 28.10.2022) (bis 3.12.2022)
 #: source_id: viz2021:13.358728,52.540006,29.09.2022,18:39 (inaktiv)
 #: note: laut rbb nur bis 20.4.2022
 #: add_fragezeichen: Wie lange dauern die Bauarbeiten an?
@@ -4948,7 +5394,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: priority: #B
 #: last_checked: 2022-10-08 vvv
 #: check_frequency: 60d vvv
-#: next_check: 2022-10-28 vvv
+#: next_check: 2022-12-03 vvv
 	q4::inwork; 7259,14870 7209,14927 7182,14986
 	q4::inwork; 6945,15045 7007,14911 7000,14832
 # REMOVED (hier vermutlich nicht?) ---	q4::inwork; 7182,14986 7178,14996 7131,15109
@@ -4960,24 +5406,25 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 ',
          'from' => undef,
          'id' => 3523,
-         'text' => 'Tegeler Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, außerdem Anbindung Lynarstr. gesperrt, außerdem Einbahnstraße in der Samoastr., offen Richtung Norden, voraussichtlich bis Ende Oktober 2022',
+         'text' => 'Tegeler Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, außerdem Anbindung Lynarstr. gesperrt, außerdem Einbahnstraße in der Samoastr., offen Richtung Norden, voraussichtlich bis Anfang Dezember 2022',
          'type' => 'handicap',
-         'until' => 1666969200
+         'until' => 1670083200
        },
        {
          'data' => '#: next_check_id: BRAUNSCHWEIGER-2022
 #: add_fragezeichen: Wann sind die Bauarbeiten in der Braunschweiger Straße und Zeitzer Straße beendet? Wann wird die Einbahnstraßenregelung aufgehoben? vvv
-#: XXX Laut Baustellenschild der Wasserbetriebe bis September 2022 vvv
+#: XXX Laut Baustellenschild der Wasserbetriebe bis September 2022; Halteverbot in der Kanner Str. bis 2022-12-03 vvv
 #: priority: #B vvv
-#: last_checked: 2022-10-02 vvv
-#: check_frequency: 30d vvv
-# REMOVED --- #: next_check: 2022-09-30 vvv
+#: last_checked: 2022-10-25 vvv
+#: check_frequency: 7d vvv
+#: next_check: 2022-12-03 vvv
 #: also_indoor: traffic (G(unvollständig),B) vvv
-	q4::inwork; 13043,7234 13150,7254 13326,7291 13368,7300 13476,7330
-	q4::inwork 13326,7291 13325,7210
+# REMOVED (laut osm nicht mehr) ---	q4::inwork; 13043,7234 13150,7254 13326,7291 13368,7300
+	q4::inwork; 13368,7300 13476,7330
+# REMOVED (offen) ---	q4::inwork 13326,7291 13325,7210
 	q4::inwork 13341,7423 13373,7426 13476,7330
 #: also_indoor ^^^
-# REMOVED --- #: next_check ^^^
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: priority ^^^
@@ -5019,11 +5466,11 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_29_1829_2008_online.pdf (zum bereits eingezogenen Abschnitt des Mergenthalerrings)
 #: note: Durchfahrt möglich, gesehen: 2022-03-23 (Mi) mittags, 2022-05-04 (Mi) mittags, 2022-07-06 (Mi) mittags, 2022-08-05 (Fr) vormittags
-#: note: Bauzaun am südlichen Ende geschlossen, gesehen: 2022-09-21 (Mi) abends (19:40)
+#: note: Bauzaun am südlichen Ende geschlossen, gesehen: 2022-09-21 (Mi) abends (19:40), 2022-10-18 (Di) abends (17:40)
 #: XXX Bleibt es bei der möglichen Durchfahrt?
 #: osm_watch: node id="1511805342" version="4"
 #: osm_watch: node id="9448539551" version="1"
-#: last_checked: 2022-09-21
+#: last_checked: 2022-10-18
 	2 14249,8075 14250,8098 14238,8100 14247,8254 14229,8278
 ',
          'from' => undef,
@@ -5060,13 +5507,13 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: note: Baustelle existiert weiterhin, trotz der entfernten VIZ-Meldung; laut rbb bis 30.11.2022
 #: XXX Bleibt die Baustelle bis Oktober 2022 so? oder nur bis August 2022? vvv
 #: also_indoor: traffic (G,H,B) vvv
-#: last_checked: 2022-10-05 vvv
+#: last_checked: 2022-10-24 vvv
 #: check_frequency: 30d vvv
-# REMOVED --- #: next_check: 2022-08-02 vvv
+#: next_check: 2022-11-30 vvv
 	q4::inwork; 15560,7400 15693,7512
 #: note: teilweise ragt die Baustellenabsperrung in den Radweg Richtung Kiefholzstraße rein
 	q3::inwork; 15693,7512 15560,7400
-# REMOVED --- #: next_check ^^^
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: also_indoor ^^^
@@ -5080,7 +5527,24 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'type' => 'handicap',
          'until' => 1669824000
        },
-       undef,
+       {
+         'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/markthalle-101-ehemalige-quellekaufhaus.587/#post-17884
+#: by: https://www.deutsches-architekturforum.de/thread/14587-revitalisierung-b%C3%BCrokomplex-kalle-neuk%C3%B6lln-in-bau/
+#: by: https://www.kalle-neukoelln.com/#architektur (Erstbezüge ab 2022 möglich)
+#: osm_watch: way id="734271970" version="5"
+#: osm_watch: way id="975241319" version="4"
+#: osm_watch: way id="970452276" version="3"
+# REMOVED (laut osm note 3139636 wieder offen) --- #: also_indoor: traffic (none) --- #: last_checked: 2022-04-18 --- #: check_frequency: 45d --- #: next_check: 2022-12-31
+# REMOVED ---	q4::inwork 12779,8188 12805,8194 12873,8218 12911,8232
+#: last_checked: 2022-10-23
+	q3::inwork; 12805,8194 12873,8218 12911,8232
+',
+         'from' => undef,
+         'id' => 3537,
+         'text' => 'Ganghoferstr.: Einbahnstraße wegen Bauarbeiten, Gültigkeit für Radfahrer unklar',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        {
          'data' => '#: also_indoor: traffic (G,H,B)
@@ -5115,30 +5579,17 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: HAENSEL-2022
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: also_indoor: traffic (ex-G(falsch))
-#: last_checked: 2022-10-05
-	q4::inwork; 15436,7031 15555,7133 15695,7254
-',
-         'from' => undef,
-         'id' => 3544,
-         'text' => 'Hänselstr.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Südwesten, Ende der Bauarbeiten unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
        {
          'data' => '#: next_check_id: HAEMMERLING-2022
-#: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (inaktiv) (mittlerweile bis 23.10.2022)
+#: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (inaktiv) (mittlerweile bis 23.10.2022) (bis 25.10.2022) (bis 10.11.2022)
 #: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig
 #: by: https://nitter.cz/VIZ_Berlin/status/1575006478804873217#m
 #: by: https://nitter.cz/pic/orig/media%2FFdqVlEEXEAI-lOQ.jpg
 #: note: anscheinend auch für Fußgänger gesperrt, hier gibt es keinen Gehweg
-#: note: laut rbb nur bis 20.10.2022
 #: also_indoor: traffic (B+G[nur Am Bahndamm],H[nur Schubert])
 Am Bahndamm	2::inwork 21984,6317 22238,6195
 Schubertstr.	2::inwork 21984,6317 21856,6390
@@ -5159,7 +5610,10 @@ Schubertstr.	2::inwork 21984,6317 21856,6390
 #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0822_barrierefrei.pdf 
 #: by: https://unternehmen.bvg.de/wp-content/uploads/2022/10/BVG_PLUSNAVI_1022_barrierefrei.pdf ("weiterhin für ca. 2 Jahre")
 #: source_id: bvg2021:150#BVG300484_0
-#: source_id: viz2021:13.491292,52.637683,09.09.2022,09:00 (bis 24.10.2022)
+#: source_id: viz2021:13.491292,52.637683,09.09.2022,09:00 (bis 24.10.2022) (inaktiv)
+#: source_id: viz2021:13.492898,52.636603,09.09.2022,09:00 (bis 31.01.2024)
+#: XXX Keine Verkehrsmeldung mehr --- wurde die Baustelle aufgehoben?
+#: next_check: 2024-01-31
 	q4::inwork; 16166,25767 16121,25818
 ',
          'from' => 1652122429,
@@ -5255,9 +5709,8 @@ Seydlitzstr.	q3::inwork 6349,2510 6459,2364
          'data' => '#: by: https://www.deutsches-architekturforum.de/thread/14258-bauprojekte-in-charlottenburg-nordost/?postID=717436#post717436
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="791796343" version="4"
-#: last_checked: 2022-09-16
-#: check_frequency: 90d
-#: next_check: 2022-10-31
+#: last_checked: 2022-10-17 (daf)
+#: check_frequency: 30d
 	q4::inwork 4961,12940 4932,12968
 ',
          'from' => undef,
@@ -5275,7 +5728,7 @@ Seydlitzstr.	q3::inwork 6349,2510 6459,2364
        {
          'data' => '#: by: https://berliner-abendblatt.de/2022/06/01/arbeiten-an-der-fischerinsel-werden-fortgesetzt/ (Bauarbeiten bis Ende 2023)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/fischerinsel-park-wird-umgestaltet_a347705
-#: last_checked: 2022-08-26
+#: last_checked: 2022-10-29
 #: check_frequency: 60d
 #: next_check: 2023-12-31
 	2::inwork 10824,11992 10742,12033 10713,12014
@@ -5283,7 +5736,7 @@ Seydlitzstr.	q3::inwork 6349,2510 6459,2364
          'from' => undef,
          'id' => 3568,
          'source_id' => 'https://berliner-abendblatt.de/2022/06/01/arbeiten-an-der-fischerinsel-werden-fortgesetzt/',
-         'text' => 'Fischerinsel: Wege können wegen Bauarbeiten gesperrt sein (Stand Ende August 2022: keine Einschränkung beim Weg Richtung Inselbrücke)',
+         'text' => 'Fischerinsel: Wege können wegen Bauarbeiten gesperrt sein (Stand Ende Oktober 2022: keine Einschränkung beim Weg Richtung Inselbrücke)',
          'type' => 'gesperrt',
          'until' => 1704042000
        },
@@ -5337,7 +5790,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
 #: also_indoor: traffic (none)
 #: by: https://www.berliner-woche.de/weissensee/c-bauen/bauarbeiten-im-kreuzungsbereich_a351236
 # REMOVED --- #: XXX Wie groß sind die Einschränkungen für Radfahrer? vvv
-#: last_checked: 2022-09-21 (mapillary) vvv
+#: last_checked: 2022-10-22 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-11-07 vvv
 	q3::inwork 13914,17016 13996,16959 14107,16889
@@ -5366,7 +5819,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
        {
          'data' => '#: XXX einige Halteverbotsschilder bis 1.11.2022
 #: also_indoor: traffic (ex-H(incomplete),B(incomplete)) vvv
-#: last_checked: 2022-09-30 vvv
+#: last_checked: 2022-10-23 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-11-01 vvv
 	q3::inwork; 13102,8343 12995,8213 12960,8246
@@ -5394,19 +5847,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'type' => 'gesperrt',
          'until' => 1726351200
        },
-       {
-         'data' => '#: by: https://nitter.it/VIZ_Berlin/status/1552155569997299712#m
-#: by: https://nitter.it/pic/orig/enc/bWVkaWEvRllseWFCaFhvQUVnZVZTLmpwZw==
-#: by: https://nitter.it/pic/orig/enc/bWVkaWEvRllseWk2RVhnQUFqd0FqLmpwZw==
-	q4::inwork; 9569,11631 9559,11715
-',
-         'from' => 1658811600,
-         'id' => 3592,
-         'source_id' => 'viz2021:13.391787,52.510533,27.07.2022,07:00',
-         'text' => 'Charlottenstr.: Bauarbeiten zwischen Leipziger Str. und Kronenstr., Fahrbahn Richtung Norden gesperrt, vermutlich sind auch Radfahrer betroffen, vom 27.07.2022 07:00 bis 25.10.2022 17:00',
-         'type' => 'handicap',
-         'until' => 1666710000
-       },
+       undef,
        {
          'data' => '	2::inwork 23910,-54100 23623,-54115
 ',
@@ -5427,18 +5868,17 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'from' => 1658811600,
          'id' => 3595,
          'source_id' => 'viz2021:13.545559,52.434572,27.07.2022,07:00',
-         'text' => 'Radickestr.: Bauarbeiten, Fahrbahn zwischen Anna-Seghers-Str. und Thomas-Müntzer-Str. Richtung Osten gesperrt, sowie Einbahnstraßenregelung in der Thomas-Müntzer-Str., vom 27.07.2022 07:00 bis 31.10.2022 17:00',
+         'text' => 'Radickestr.: Bauarbeiten, Fahrbahn zwischen Anna-Seghers-Str. und Thomas-Müntzer-Str. Richtung Osten gesperrt, sowie Einbahnstraßenregelung in der Thomas-Müntzer-Str., vom 27.07.2022 07:00 bis 28.11.2022 17:00',
          'type' => 'handicap',
-         'until' => 1667232000
+         'until' => 1669651200
        },
        undef,
        {
          'data' => '#: next_check_id: WALLENSTEIN-2022
-#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags, 2022-08-14 mittags, 2022-09-03 (Sa) nachmittags, 2022-10-09 (So) nachmittags vvv
+#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags, 2022-08-14 mittags, 2022-09-03 (Sa) nachmittags, 2022-10-09 (So) nachmittags, 2022-10-16 (So) mittags, 2022-10-26 (Mi) gegen 12:30
 Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
 Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
 Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
-#: note ^^^
 ',
          'from' => 1659546069,
          'id' => 3597,
@@ -5509,45 +5949,13 @@ Kloedenstr.	q3::inwork 9654,8991 9669,9080
          'until' => 1672441200
        },
        undef,
-       {
-         'data' => '#: by: https://berliner-abendblatt.de/2022/08/17/neue-gleise-fuer-die-dorotheenstrasse/ (vom 22. August bis zum 10. Oktober 2022)
-#: by: https://berliner-abendblatt.de/2022/08/21/diese-baustellen-sorgen-fuer-staus/
-#: by: https://www.berliner-woche.de/mitte/c-verkehr/neue-gleise-und-weichen_a355298
-#: by: https://www.bahninfo-forum.de/read.php?9,708604,744663#msg-744663 (Verlängerung bis 11.12.2022)
-#: by: https://unternehmen.bvg.de/wp-content/uploads/2022/10/BVG_PLUSNAVI_1022_barrierefrei.pdf (hier noch bis 10.10.2022, danach Sperrung der Oranienburger Str. (gleiche Linien betroffen))
-#: by: https://nitter.cz/VIZ_Berlin/status/1577924117503827969#m
-#: by: https://nitter.cz/pic/orig/media%2FFeXP3TTWAAI6GUd.jpg
-#: note: laut rbb ist die Georgenstr. länger (bis 6.10.2022) gesperrt
-#: XXX Dauern die Bauarbeiten und Sperrungen länger an?
-#: next_check: 2022-10-29 vvv
-#: source_id: viz2021:13.391637,52.520049,22.08.2022,06:00 (hier nur bis 5.9.2022) (mittlerweile bis 29.9.2022) (bis 4.10.2022) (inaktiv)
-#: source_id: viz2021:13.392073,52.520077,06.10.2022,09:30 (bis 19.10.2022)
-#: last_checked: 2022-10-06
-Georgenstr.	q3::inwork 9568,12688 9441,12670
-#: note: laut rbb ist die Dorotheenstr. sogar bis 31.10.2022 gesperrt
-#: source_id: viz2021:13.395309,52.519431,22.08.2022,06:00 (2x mit der gleichen Koordinate) (hier nur bis 5.9.2022) (mittlerweile bis 29.9.2022) (bis 30.9.2022) (inaktiv)
-#: source_id: viz2021:13.395207,52.520461,05.10.2022,07:00 (Am Kupfergraben, bis 17.10.2022) (bis 29.10.2022)
-#: last_checked: 2022-10-06 vvv
-# REMOVED --- #: next_check: 2022-09-30 vvv
-# REMOVED (laut rbb hier aufgehoben) --- Dorotheenstr.	q4::inwork 9742,12609 9870,12657
-Georgenstr.	q3::inwork 9754,12775 9659,12704
-Am Kupfergraben	q4::inwork 9754,12775 9815,12705 9870,12657
-# REMOVED --- #: next_check ^^^
-#: last_checked ^^^
-#: next_check ^^^
-',
-         'from' => 1661032800,
-         'id' => 3608,
-         'text' => 'Am Kupfergraben und Georgenstr.: Gleisarbeiten, Fahrbahn gesperrt, bis 29. Oktober 2022',
-         'type' => 'handicap',
-         'until' => 1667059200
-       },
+       undef,
        {
          'data' => '#: note: Einbahnstraße etwa 70m lang
 #: by: https://www.deutsches-architekturforum.de/thread/9772-wedding-gesundbrunnen-kleinere-projekte/?postID=706715#post706715
 #: add_fragezeichen: Wurde die Einbahnstraßenregelung aufgehoben?
-#: last_checked: 2022-08-23
-#: check_frequency: 60d
+#: last_checked: 2022-10-19
+#: check_frequency: 45d
 	q3::inwork; 6919,15666 7024,15810
 ',
          'from' => undef,
@@ -5566,9 +5974,9 @@ Am Kupfergraben	q4::inwork 9754,12775 9815,12705 9870,12657
          'from' => 1661230800,
          'id' => 3610,
          'source_id' => 'viz2021:13.378615,52.517943,24.08.2022,07:00',
-         'text' => 'Dorotheenstr.: Bauarbeiten zwischen Ebertstr. und Wilhelmstr., Fahrbahn gesperrt, vom 24.08.2022 07:00 bis 31.10.2022 17:00',
+         'text' => 'Dorotheenstr.: Bauarbeiten zwischen Ebertstr. und Wilhelmstr., Fahrbahn gesperrt, vom 24.08.2022 bis 15.12.2022',
          'type' => 'handicap',
-         'until' => 1667232000
+         'until' => 1671120000
        },
        {
          'data' => '#: note: Gehweg scheint auch gesperrt zu sein
@@ -5602,9 +6010,9 @@ Am Kupfergraben	q4::inwork 9754,12775 9815,12705 9870,12657
          'from' => 1658970000,
          'id' => 3615,
          'source_id' => 'viz2021:13.321852,52.501972,29.07.2022,03:00',
-         'text' => 'Knesebeckstr.: Einbahnstraße zwischen Lietzenburger Str. und Kurfürstendamm, offen Richtung Norden, vom 29.07.2022 03:00 bis 28.10.2022 17:00',
+         'text' => 'Knesebeckstr.: Einbahnstraße zwischen Lietzenburger Str. und Kurfürstendamm, offen Richtung Norden, vom 29.07.2022 bis 31.12.2022',
          'type' => 'handicap',
-         'until' => 1666969200
+         'until' => 1672502400
        },
        {
          'data' => '#: by: https://www.youtube.com/watch?v=swATp4lDNFs (Webcam)
@@ -5640,7 +6048,7 @@ Am Kupfergraben	q4::inwork 9754,12775 9815,12705 9870,12657
        {
          'data' => '#: add_fragezeichen: Sind die Bauarbeiten in der Krautstr. beendet?
 #: also_indoor: traffic (none)
-#: last_checked: 2022-10-14
+#: last_checked: 2022-10-29
 # REMOVED --- #: check_frequency: 14d
 	q4::inwork 12081,12236 12059,12172
 ',
@@ -5712,7 +6120,7 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
        {
          'data' => '#: next_check_id: ALTEPOTSDAMER-2022
 #: XXX Wie lange dauern die Bauarbeiten an?
-#: last_checked: 2022-09-22 (daf)
+#: last_checked: 2022-10-28
 #: next_check: 2022-12-10
 	q4::inwork 8389,11378 8481,11447 8479,11493
 ',
@@ -5722,17 +6130,7 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: add_fragezeichen: Gibt es hier weiterhin eine Einbahnstraßenregelung?
-#: last_checked: 2022-09-16
-	q4::inwork; 5800,12361 5714,12266
-',
-         'from' => undef,
-         'id' => 3627,
-         'text' => 'Schleswiger Ufer: Bauarbeiten, Einbahnstraßenregelung, Ende der Bauarbeiten unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: by: https://www.deutsches-architekturforum.de/thread/11059-charlottenburg-charlottenburg-nord-westend-kleinere-projekte/?postID=721317#post721317
 #: by: https://bautagebuch.twentyseven-berlin.de/ (kein Inhalt, nur ein Login)
@@ -5749,14 +6147,21 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
          'until' => undef
        },
        {
-         'data' => '#: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
-#: also_indoor: traffic (none)
-#: last_checked: 2022-09-17
-	q4::inwork; 6753,9814 6747,9912 6741,10017
+         'data' => '# REMOVED (hier nicht mehr, aber vielleicht Bauarbeiten etwas weiter nördlich?) --- #: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer? --- #: also_indoor: traffic (none) --- #: last_checked: 2022-09-17 ---	q4::inwork; 6753,9814 6747,9912 6741,10017
+#: note: laut Bauschild der Wasserbetriebe bis Mai 2023
+#: also_indoor: traffic (B)
+#: last_checked: 2022-10-29 vvv
+#: check_frequency: 90d vvv
+#: next_check: 2023-05-31 vvv
+Eisenacher Str.	q3::inwork 6739,10120 6741,10017 6747,9912
+Winterfeldtstr.	q3::inwork 6630,9990 6741,10017 6903,10056
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 ',
          'from' => undef,
          'id' => 3629,
-         'text' => 'Eisenacher Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, Ende der Bauarbeiten unbekannt',
+         'text' => 'Eisenacher Str./Witerfeldtstr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt, möglicherweise bis Mai 2023',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5764,12 +6169,12 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
          'data' => '#: next_check_id: LICHTENBERGERBRUECKEN-2022
 #: add_fragezeichen: Besteht die Sperrung im Archibaldweg weiterhin?
 #: XXX Barrieren sowie Durchfahrtsverbotsschilder existieren
-#: note: Barrieren geöffnet, Durchfahrt zumindest für Radfahrer möglich: 2022-09-18 (Sonntag)
+#: note: Barrieren geöffnet, Durchfahrt zumindest für Radfahrer möglich: 2022-09-18 (Sonntag), 2022-10-16 (Sonntag)
 #: note: Barrieren geschlossen, Durchfahrt nur auf dem Gehweg möglich: 2022-09-25 (Sonntag), 2022-09-26 (Montag) gegen 13:00
 #: also_indoor: traffic (B)
-#: last_checked: 2022-10-10
-#: check_frequency: 21d
-#: next_check: 2022-10-30
+#: last_checked: 2022-10-26
+#: check_frequency: 7d
+# REMOVED --- #: next_check: 2022-10-30
 	q3::inwork 15674,10851 15820,10916
 ',
          'from' => undef,
@@ -5779,16 +6184,7 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
          'until' => undef
        },
        undef,
-       {
-         'data' => '	2::inwork 39156,37578 38986,37512 38171,37238 37672,36908 36605,36450
-',
-         'from' => 1663480800,
-         'id' => 3632,
-         'source_id' => 'LS/221-F/22/131',
-         'text' => 'Heckelberg - Beerbaum: Deckenerneuerung, Sperrung, 19.09.2022 08:00 Uhr bis 21.10.2022 15:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1666357200
-       },
+       undef,
        undef,
        undef,
        {
@@ -5804,8 +6200,8 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
        {
          'data' => '#: also_indoor: traffic (G,B)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-10-08
-#: check_frequency: 14d
+#: last_checked: 2022-10-27 (Asphaltierungsarbeiten)
+#: check_frequency: 7d
 	q3::inwork 10755,13152 10846,13362
 ',
          'from' => undef,
@@ -5874,10 +6270,10 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
        },
        {
          'data' => '#: note: laut rbb
-#: also_indoor: traffic (H,B) vvv
+#: also_indoor: traffic (H,B,G) vvv
 #: XXX Ende der Sperrung? vvv
 #: check_frequency: 14d vvv
-#: last_checked: 2022-10-10 vvv
+#: last_checked: 2022-10-26 vvv
 einige Meter vor der Siegfriedstr. gesperrt, evtl. Bordsteine	q3::inwork 16859,12613 16720,12614
 etwa 70m gesperrt, auf Gehweg ausweichen	q3::inwork 16720,12614 16576,12612
 # REMOVED (hier nicht) ---	q4::inwork 16576,12612 16470,12612 16432,12612 16409,12612
@@ -5892,29 +6288,7 @@ etwa 70m gesperrt, auf Gehweg ausweichen	q3::inwork 16720,12614 16576,12612
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: viz2021:13.38709,52.527156,05.10.2022,03:30 (bis 9.11.2022)
-#: by: https://viz.berlin.de/2022/10/verkehrsvorschau-071022/ (bis Ende Dezember 2022)
-#: by: https://www.berliner-zeitung.de/news/bvg-schienenbruch-in-berlin-mitte-trambahn-chaos-bis-ende-dezember-li.273968
-#: by: https://unternehmen.bvg.de/pressemitteilung/da-muessen-wir-ran/
-#: XXX Bis wann ist die Kreuzung gesperrt?
-#: last_checked: 2022-10-08 vvv
-#: check_frequency: 30d vvv
-#: next_check: 2022-11-09 vvv
-Chausseestr.	q4::inwork 9207,13493 9212,13471
-Hannoversche Str.	q3::inwork 9212,13471 9047,13446
-Torstr.	q3::inwork 9353,13521 9212,13471
-Friedrichstr.	q4::inwork 9212,13471 9225,13389
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
-',
-         'from' => 1665077956,
-         'id' => 3643,
-         'text' => 'Chausseestr./Friedrichstr./Torstr./Hannoversche Str.: Gleisbauarbeiten, Kreuzungsbereich gesperrt, Dauer der Sperrung voraussichtlich bis zum 9.11.2022',
-         'type' => 'handicap',
-         'until' => 1672527600
-       },
+       undef,
        {
          'data' => '#: by: https://www.bahninfo-forum.de/read.php?9,721782,722126#msg-722126
 #: by: https://www.bahninfo-forum.de/read.php?9,725584,728443#msg-728443 (nur nachts/am Wochenende zu?)
@@ -5929,15 +6303,16 @@ Friedrichstr.	q4::inwork 9212,13471 9225,13389
        },
        {
          'data' => '#: by: https://www.youtube.com/watch?v=-UWvhPunrr8 (Sperrung der Fußgängerbrücke wegen Bauarbeiten ab November 2022)
-#: XXX Bis wann bleibt die Sperrung?
-#: next_check: 2022-12-31
+#: by: https://www.berliner-woche.de/westend/c-bauen/rohbau-fuer-neues-ausbildungszentrum-fertig_a360518 (Haben die Bauarbeiten hier etwas damit zu tun? Fertigstellung Herbst 2023)
+#: by: https://www.bahninfo-forum.de/read.php?9,690942,747836#msg-747836 (vom 7.11.2022 bis zum 17.3.2023?)
+# REMOVED --- #: XXX Bis wann bleibt die Sperrung? --- #: next_check: 2022-12-31
 	2::inwork -107,12220 -76,12236 -45,12243
 ',
-         'from' => 1667257200,
+         'from' => 1667689200,
          'id' => 3645,
-         'text' => 'Rossitter Platz - Machandelweg: wegen Bauarbeiten ist der Durchgang ab November 2022 komplett gesperrt, Ende der Sperrung unbekannt',
+         'text' => 'Rossitter Platz - Machandelweg: wegen Bauarbeiten ist der Durchgang voraussichtlich vom 7.11.2022 bis zum 17.3.2023 komplett gesperrt',
          'type' => 'gesperrt',
-         'until' => undef
+         'until' => 1679093999
        },
        {
          'data' => '#: also_indoor: traffic (B)
@@ -5951,9 +6326,10 @@ Friedrichstr.	q4::inwork 9212,13471 9225,13389
          'until' => undef
        },
        {
-         'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
+         'data' => '#: note: evtl. außerhalb der Arbeitszeiten problemlos für Radfahrer passierbar, gesehen 2022-10-17 (So)
+#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
 #: also_indoor: traffic (B) vvv
-#: last_checked: 2022-10-07 (mapillary) vvv
+#: last_checked: 2022-10-16 (mapillary) vvv
 nur Gehweg frei	q4::inwork 7641,20745 7630,20698 7616,20633
 Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
 #: last_checked ^^^
@@ -5962,7 +6338,7 @@ Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
 ',
          'from' => undef,
          'id' => 3647,
-         'text' => 'Uhlandstr.: Fahrbahn zwischen Lessingstr. und Friedhof gesperrt',
+         'text' => 'Uhlandstr.: Fahrbahn zwischen Lessingstr. und Friedhof kann wegen Bauarbeiten gesperrt sein',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5994,24 +6370,25 @@ Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
        undef,
        {
          'data' => '#: next_check_id: TRIFTGERICHT-2022
-#: XXX Sind Radfahrer tatsächlich von den Sperrungen betroffen? vvv
-#: begin_check: 2022-10-17 vvv
+#: XXX Bis wann gehen die Bauarbeiten? vvv
+#: also_indoor: traffic (B) vvv
+#: last_checked: 2022-10-19 vvv
 #: check_frequency: 30d vvv
-#: next_check: 2022-10-17 vvv
-Genter Str.	q3::inwork 7138,15437 7270,15307
-Triftstr.	q4::inwork 7248,15296 7270,15307
+# REMOVED (hier nicht) --- Genter Str.	q3::inwork 7138,15437 7270,15307
+# REMOVED (hier (noch) nicht) --- Triftstr.	q4::inwork 7248,15296 7270,15307
 Triftstr.	q3::inwork 7270,15307 7356,15350
-Gerichtstr.	q3::inwork 7464,15409 7627,15412 7723,15417
-Ruheplatzstr.	q3::inwork 7627,15412 7540,15566
-#: next_check ^^^
+Gerichtstr.	q3::inwork 7464,15409 7627,15412
+# REMOVED (hier nicht) --- Gerichtstr.	q3::inwork 7627,15412 7723,15417
+# REMOVED (hier nicht) --- Ruheplatzstr.	q3::inwork 7627,15412 7540,15566
 #: check_frequency ^^^
-#: begin_check ^^^
+#: last_checked ^^^
+#: also_indoor ^^^
 #: XXX ^^^
 ',
          'from' => 1665871200,
          'id' => 3651,
          'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1254588.php',
-         'text' => 'Triftstr./Genter Str. und Gerichtstr./Ruheplatzstr.: Bauarbeiten in den Einmündungsbereichen, Fahrbahn gesperrt, evtl. sind Radfahrer auch betroffen, ab 17.10.2022',
+         'text' => 'Triftstr./Genter Str. und Gerichtstr./Ruheplatzstr.: Bauarbeiten in den Einmündungsbereichen, Fahrbahn gesperrt, ab 17.10.2022',
          'type' => 'handicap',
          'until' => undef
        },
@@ -6027,15 +6404,286 @@ Ruheplatzstr.	q3::inwork 7627,15412 7540,15566
          'type' => 'handicap',
          'until' => 1669417200
        },
+       undef,
        {
-         'data' => '	q4::inwork; 7073,8081 7139,8079 7268,8008
+         'data' => '#: next_check_id: GRUENBERGER-2022
+#: by: https://nitter.cz/VIZ_Berlin/status/1580164107835125760#m (Einbahnstraße, offen Richtung Osten, ab 2022-10-17)
+#: by: https://nitter.cz/VIZ_Berlin/status/1580448626056519680#m (... bis 14.02.2023)
+#: XXX Bleibt es bei der Einbahnstraßenregelung auch für Radfahrer?
+# REMOVED (nein) --- #: XXX Außerdem: wird es wegen der Umleitung des 240er in der (engen) Kopernikusstraße zu einer Einbahnstraßenregelung kommen? Zumindest wird es einige Halteverbotsschilder geben
+#: source_id: bvg2021:240#BVG310117_0
+#: source_id: bvg2021:n40#BVG310118_0
+#: also_indoor: traffic (H,B)
+#: priority: #A
+#: last_checked: 2022-10-22
+#: check_frequency: 30d
+#: next_check: 2023-02-14
+	q4::inwork; 13696,11920 13515,11969
+# REMOVED (hier nicht) ---	q4::inwork; 13515,11969 13352,12003
 ',
-         'from' => 1665836837,
-         'id' => 3653,
-         'source_id' => 'https://sbahn.berlin/fahren/bauen-stoerung/detail/neubau-der-moltkestrassenbruecke-am-s-bf-botanischer-garten-reparatur-bahnsteigdach-in-friedenau/',
-         'text' => 'Ella-Barowsky-Str.: temporäre Einbahnstraßenregelung (wegen SEV), voraussichtlich bis 17.10.2022',
+         'from' => 1665896400,
+         'id' => 3654,
+         'source_id' => 'viz2021:13.451202,52.512713,17.10.2022,07:00',
+         'text' => 'Grünberger Str.: Einbahnstraßenregelung zwischen Kadiner Str. und Warschauer Str., offen Richtung Osten, auch Radfahrer sind betroffen, vom 17.10.2022 07:00 bis 14.02.2023 17:00',
          'type' => 'handicap',
-         'until' => 1665993600
+         'until' => 1676390400
+       },
+       {
+         'data' => '	2::inwork -5554,12929 -5493,12994 -5446,13137 -5472,13235
+',
+         'from' => 1665940464,
+         'id' => 3655,
+         'source_id' => 'https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2022/pressemitteilung.1255376.php',
+         'text' => 'Jonny-K.-Aktivpark/Egelpfuhlwiesen: wegen Bauarbeiten ist der Hauptweg gesperrt, voraussichtlich bis Mitte Februar 2023',
+         'type' => 'gesperrt',
+         'until' => 1676660400
+       },
+       {
+         'data' => '#: by: https://www.berliner-woche.de/koepenick/c-bauen/bezirksamt-und-berliner-forsten-sanieren-den-mueggelschloesschenweg_a360860
+	2::inwork 25385,4414 25132,4385 24181,4270
+',
+         'from' => 1666476000,
+         'id' => 3656,
+         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1255224.php',
+         'text' => 'Müggelschlößchenweg: Bauarbeiten, Sperrung, 24. Oktober 2022 bis 25. November 2022',
+         'type' => 'gesperrt',
+         'until' => 1669417199
+       },
+       {
+         'data' => '#: by: https://gruen-berlin.de/pressemitteilung/berliner-mauerweg-beginn-der-baumassnahmen-am-jenbacher-weg
+#: add_fragezeichen: Wo genau sind die gesperrten Abschnitte des Mauerwegs? vvv
+#: last_checked: 2022-10-24 vvv
+#: check_frequency: 60d vvv
+Mauerweg Marienfelde - Lichterfelde	2::inwork 7097,-527 6961,-389 6668,-100 6498,71 6351,219 6256,363
+# REMOVED (separater Eintrag) --- Mauerweg Marienfelde - Lichterfelde	2::inwork 6256,363 6204,331 6013,211 5832,93 5441,-150
+Mauerweg Marienfelde - Lichterfelde	2::inwork 5441,-150 4842,-547 4596,-707 4406,-910
+Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568
+#: check_frequency ^^^
+#: last_checked ^^^
+#: add_fragezeichen ^^^
+',
+         'from' => 1665942194,
+         'id' => 3657,
+         'source_id' => 'https://www.berliner-woche.de/tempelhof-schoeneberg/c-bauen/bauarbeiten-an-der-berliner-stadtgrenze-sollen-ein-jahr-lang-dauern_a360599',
+         'text' => 'Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023',
+         'type' => 'gesperrt',
+         'until' => 1697565600
+       },
+       {
+         'data' => '#: by: mapillary
+#: Wann sind die Bauarbeiten beendet? Wird der Weg neu asphaltiert sein?
+#: last_checked: 2022-10-16
+	2::inwork 20996,16429 20923,16435 20898,16420
+',
+         'from' => undef,
+         'id' => 3658,
+         'text' => 'Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg gesperrt, Ende der Bauarbeiten unbekannt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: source_id: AdB/21-11-00135 (inaktiv)
+#: osm_watch: way id="175828136" version="8"
+#: add_fragezeichen: Wann ist die Brücke wieder offen?
+#: last_checked: 2022-10-17 (mapillary, Asphaltierungsarbeiten)
+	2::inwork 5752,30817 5787,30867
+',
+         'from' => undef,
+         'id' => 3659,
+         'text' => 'Schönfließ - Summt: Brücke über die A10 wird neu gebaut, Ende der Bauarbeiten unbekannt',
+         'until' => undef
+       },
+       undef,
+       undef,
+       {
+         'data' => '#: tempex: (sa) T09-T15
+	q4::temp:clock 12594,14065 12486,14143
+',
+         'from' => undef,
+         'id' => 3662,
+         'recurring' => 1,
+         'source_id' => 'http://www.boetzowmarkt.de/',
+         'text' => 'Pasteurstr.: samstags 9-15 Uhr Wochenmarkt Arnswalder Platz, Fahrbahn zwischen Bötzowstr. und Hans-Otto-Str. gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: add_fragezeichen: Bis wann geht die Sperrung?
+#: last_checked: 2022-10-28
+	q3::inwork 12328,10442 12274,10612
+',
+         'from' => undef,
+         'id' => 3663,
+         'text' => 'Lausitzer Platz: Sperrung der westlichen Fahrbahn an der Skalitzer Str.',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '# REMOVED (vorfristig entfernt) --- #: source_id: bvg2021:240#BVG310665_0
+# REMOVED (ja, etwas) --- #: add_fragezeichen: Sind Radfahrer auch betroffen? --- #: next_check: 2022-10-24
+	q3::inwork; 16468,10695 16537,10895
+',
+         'from' => 1666501200,
+         'id' => 3664,
+         'source_id' => 'viz2021:13.493078,52.501052,24.10.2022,07:00',
+         'text' => 'Weitlingstr.: Bauarbeiten, zwischen Lückstr. und Rupprechtstr. etwa 100m der Fahrbahn Richtung Norden gesperrt, vom 24.10.2022 07:00 bis 04.11.2022 17:00 ',
+         'type' => 'handicap',
+         'until' => 1667577600
+       },
+       {
+         'data' => '#: add_fragezeichen: Ist dieser Abschnitt des Mauerwegs noch gesperrt?
+#: last_checked: 2022-10-24
+#: check_frequency: 60d
+Mauerweg Marienfelde - Lichterfelde	2::inwork 6256,363 6204,331 6013,211 5832,93 5441,-150
+',
+         'from' => 1665942194,
+         'id' => 3665,
+         'source_id' => 'https://www.berliner-woche.de/tempelhof-schoeneberg/c-bauen/bauarbeiten-an-der-berliner-stadtgrenze-sollen-ein-jahr-lang-dauern_a360599',
+         'text' => 'Mauerweg: Bauarbeiten zwischen Osdorfer Str. und Jenbacher Weg, Weg ist gesperrt (Stand Ende Oktober 2022)',
+         'type' => 'gesperrt',
+         'until' => 1697565600
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9442 (Bauzeit: 01.08.2022 bis 16.02.2023)
+#: by: https://www.bahninfo-forum.de/read.php?9,727655,738857#msg-738857 (hier: Bauzeit bis 8.5.2023)
+#: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0822_barrierefrei.pdf (hier: bis Mai 2023)
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1230428.php
+#: by: https://www.berliner-woche.de/oberschoeneweide/c-verkehr/bvg-baut-in-der-treskowallee-bis-mai-2023-gleise-fuer-neue-strassenbahnen_a353375
+#: by: https://berliner-abendblatt.de/2022/07/27/gleisbauarbeiten-in-der-treskowallee/
+#: by: https://www.bahninfo-forum.de/embed_images/47d/1a0/1f3/bc1/149/fa9/6cd/407/c85/26e/51_1200x920.png
+#: by: https://fahrinfo.vbb.de/him-uploads/1659119978201_bvg_22_BM_tram_treskowallee_aushang_din_a3_220718.pdf
+#: by: https://viz.berlin.de/2022/08/oberschoeneweide-gleisarbeiten/ (Radverkehr kann in der Edisonstraße passieren)
+#: by: https://unternehmen.bvg.de/wp-content/uploads/2022/10/BVG_PLUSNAVI_1022_barrierefrei.pdf (weiterhin bis Mai 2023)
+#: source_id: viz2021:13.519751,52.473389,10.08.2022,07:00 (bis 20.12.2022)
+#: XXX außerdem möglich: Einbahnstraßenregelung in Wandlitzstr. und Wildensteiner Str.? (zurzeit wohl nicht)
+#: add_fragezeichen: Ist der Übergang Hegemeisterweg/Treskowallee noch immer gesperrt? vvv
+#: priority: #A vvv
+#: last_checked: 2022-10-26 vvv
+#: check_frequency: 14d vvv
+#: next_check: 2022-12-20 vvv
+## generated with: ./miscsrc/convert2hafas -specsperre=strassen /tmp/3 | perl -pe \'s/: 	/	/; s/igndisp/inwork/; ="# " if /3nocross/\' >| /tmp/3.new
+#	3nocross::ignrte 18256,7520 18382,7724 18406,7760 18471,7862
+Treskowallee -> Hegemeisterweg	3::inwork 18256,7520 18382,7724 18325,7778
+Hegemeisterweg -> Treskowallee	3::inwork 18325,7778 18382,7724 18406,7760
+Treskowallee -> Hegemeisterweg	3::inwork 18382,7724 18406,7760 18325,7778
+Treskowallee -> Modellpark Wuhlheide	3::inwork 18471,7862 18406,7760 18437,7752
+Hegemeisterweg -> Treskowallee	3::inwork 18325,7778 18406,7760 18471,7862
+Hegemeisterweg -> Modellpark Wuhlheide	3::inwork 18325,7778 18406,7760 18437,7752
+Modellpark Wuhlheide -> Treskowallee	3::inwork 18437,7752 18406,7760 18382,7724
+Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,7778
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+#: priority ^^^
+#: add_fragezeichen ^^^
+',
+         'from' => undef,
+         'id' => 3666,
+         'text' => 'Hegemeisterweg/Treskowallee: Übergang kann wegen Bauarbeiten gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://viz.berlin.de/wp-content/uploads/Roedernallee.png
+## generated with: ./miscsrc/convert2hafas -specsperre=strassen /tmp/3 | perl -pe \'s/: 	/	/; s/igndisp/inwork/; ="# " if /3nocross/\' >| /tmp/3.new
+#	3nocross::ignrte 6437,18958 6435,18839 6432,18682
+Roedernallee -> Veltener Str., Kienhorstpark	3::inwork 6432,18682 6435,18839 6360,18861
+Roedernallee -> Alt-Reinickendorf	3::inwork 6437,18958 6435,18839 6528,18808
+Alt-Reinickendorf -> Roedernallee	3::inwork 6528,18808 6435,18839 6432,18682
+Alt-Reinickendorf -> Veltener Str., Kienhorstpark	3::inwork 6528,18808 6435,18839 6360,18861
+Veltener Str., Kienhorstpark -> Roedernallee	3::inwork 6360,18861 6435,18839 6437,18958
+Veltener Str., Kienhorstpark -> Alt-Reinickendorf	3::inwork 6360,18861 6435,18839 6528,18808
+',
+         'from' => 1666764000,
+         'id' => 3667,
+         'source_id' => 'https://viz.berlin.de/2022/10/roedernallee/',
+         'text' => 'Alt-Reinickendorf/Roedernallee: Überqueren der Kreuzung nicht möglich, 26.10.2022 bis Mitte November 2022',
+         'type' => 'gesperrt',
+         'until' => 1668553199
+       },
+       {
+         'data' => '#: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kudamm-%C3%B6stlich-der-fasanenstr-tauentzienstr-kleinere-projekte/?postID=725395#post725395 (bis 2024-10-31, hier nur Gegenverkehrsregelung)
+#: by: https://www.deutsches-architekturforum.de/thread/13327-neubau-dgb-zentrale-sch%C3%B6neberg-in-bau/?pageNo=3 (bis Ende 2022, hier nur der östliche Gehweg frei)
+#: note: Kurioserweise gibt es am nördlichen Ende ein "Einfahrt verboten, Radfahrer frei"-Schild
+#: also_indoor: traffic (none)
+#: add_fragezeichen: Gibt es die Sperrung der Fahrbahn noch immer?
+#: last_checked: 2022-10-29
+#: check_frequency: 30d
+#: next_check: 2022-12-31
+	q3::inwork 6468,10550 6471,10851
+',
+         'from' => undef,
+         'id' => 3668,
+         'text' => 'Keithstr.: Abschnitt der Fahrbahn wegen einer Hochbaustelle gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.deutsches-architekturforum.de/thread/11061-tempelhof-sch%C3%B6neberg-kleinere-projekte/?postID=717652#post717652 (Projektabschluss: 2024-12-31)
+#: by: https://www.rockstonere.com/de/aktuelles/news-details/berlin-rockstone-real-estate-und-gbr-kotek-semel-planen-mit-barbarossadreieck-gemischt-genutztes-gebaeudeensemble-in-schoeneberg/
+#: note: Halteverbotsschilder bis 31.12.2023
+#: note: Außerdem Bauschild der Wasserbetriebe, bis November 2023; es gibt auch kleinere Einschränkungen an den Kreuzungen der Barbarossastr.
+#: also_indoor: traffic (B)
+#: last_checked: 2022-10-29
+#: check_frequency: 150d
+#: next_check: 2023-12-31
+	q3::inwork 6447,9661 6348,9541
+',
+         'from' => undef,
+         'id' => 3669,
+         'text' => 'Speyerer Str.: Hochbaustelle, Abschnitte der Fahrbahn gesperrt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: EISWALDT-2022
+#: by: https://berliner-abendblatt.de/2022/10/28/vollsperrung-in-lankwitz/
+#: note: Soll noch 2022 fertig werden.
+#: also_indoor: traffic
+#: next_check: 2022-11-01
+	q4::inwork 6718,2443 6862,2452 6965,2418 7051,2366 7172,2343 7285,2377
+',
+         'from' => 1667170800,
+         'id' => 3670,
+         'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1259184.php',
+         'text' => 'Eiswaldtstr.: Instandsetzung der Fahrbahn, ab 1.11.2022',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.berliner-woche.de/kaulsdorf/c-verkehr/fussgaengersteig-ueber-die-wuhle-wurde-gesperrt_a361880
+#: by: https://berliner-abendblatt.de/2022/10/27/einsturzgefahr-fussgaengersteg-am-stadion-wuhletal-gesperrt/
+#: XXX: Wird möglicherweise zurückgebaut. Ob es einen neuen Steg geben wird, ist noch nicht entschieden.
+#: osm_watch: way id="27944267" version="12"
+#: next_check: 2022-12-01
+	2::inwork 22171,12965 22196,12961
+',
+         'from' => undef,
+         'id' => 3671,
+         'source_id' => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1258812.php',
+         'text' => 'Fußgängersteg am Stadion Wuhletal: gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '	2::inwork 40032,-65726 40133,-65833 40166,-66024 40300,-66128 40499,-66148 41566,-66838
+',
+         'from' => 1667199600,
+         'id' => 3672,
+         'source_id' => 'LS/222-W/22/140',
+         'text' => 'Schlabendorf am See: Bauarbeiten, Sperrung, 01.11.2022 08:00 Uhr bis 21.04.2023 16:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1682085600
+       },
+       {
+         'data' => '	2::inwork 38720,115773 39259,115457 39384,115027 39168,114713 38881,113150 38762,112839
+',
+         'from' => 1667199600,
+         'id' => 3673,
+         'source_id' => 'LS/221-E/22/140',
+         'text' => 'Bandelo - Trebenow: Bauarbeiten, Sperrung, 01.11.2022 08:00 Uhr bis 30.06.2023 15:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1688130000
        }
      
 );
