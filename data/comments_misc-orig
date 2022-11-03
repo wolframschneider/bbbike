@@ -457,7 +457,7 @@ Bus 294	busroute_N 17488,15766 17378,15760 17238,15764 17115,15769 16946,15801 1
 Bus 256, Bus 294	busroute_N 16884,15833 16819,15912
 Bus 294	busroute_N 17940,15771 18173,15778 18576,15788 18623,15587 18422,15583 18177,15579 18173,15778
 Bus 156	busroute_N 15635,16833 15819,16857
-Bus 156	busroute_N 12417,15272 12325,15328 12252,15376 11941,15586
+Bus 156	busroute_N 12417,15272 12325,15328 12245,15380 11941,15586
 Bus 250	busroute_N 10908,17142 11116,17140 11262,17139 11362,17139 11458,17138 11536,17153 11522,17248 11508,17315 11482,17459 11457,17585 11442,17664 11412,17823 11390,17962 11272,17930 11195,17911 11113,17895 11047,17883 11023,17878 10944,17863 10922,17886
 Bus 250	busroute_N 10904,17288 10758,17288 10502,17286 10298,17299 10252,17357 10214,17401 10207,17448 10203,17478 10179,17772
 Bus 250	busroute_N 10377,19565 10457,19670 10527,19867
@@ -1110,9 +1110,7 @@ Straße 357: Privatstraße	CS -6046,14253 -6053,14278 -6064,14321 -6091,14391 -614
 Kolonie Golfplatz	CP2; 795,12652 969,13290
 Am Rosengarten: nicht ausgeschildert	CP2; 18654,12255 18707,12225
 Weg ist schwierig zu erkennen	CP2; 18445,9887 18436,9842
-#: url: http://www.wuhlheide.de/de/programm/
-#: note: Zeitverlust ca. 2 Minuten
-An einigen Tagen im Sommer ist das Eichgestell vor der Freilichtbühne wegen Veranstaltungen gesperrt, in diesem Fall die Freilichtbühne nördlich umfahren	CS 19995,6406 20081,6368 20106,6357 20199,6318
+# REMOVED (-> temp blockings) --- # REMOVED --- #: url: http://www.wuhlheide.de/de/programm/ --- #: url: http://www.wuhlheide.de/programm --- #: note: Zeitverlust ca. 2 Minuten --- An einigen Tagen im Sommer ist das Eichgestell vor der Freilichtbühne wegen Veranstaltungen gesperrt, in diesem Fall die Freilichtbühne nördlich umfahren	CS 19995,6406 20081,6368 20106,6357 20199,6318
 Am Bahnhof Wuhlheide: nicht ausgeschildert	CP2; 20640,7122 20654,7136
 Lindenschwärmerweg: Privatstraße	CS 21308,11075 21294,11097 21187,11132
 Fechinger Weg: Privatstraße	CS 21409,11941 21411,11863 21456,11825

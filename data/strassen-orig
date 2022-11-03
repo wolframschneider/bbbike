@@ -359,6 +359,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/verwaltungsgericht-hebt-autoverbot-in-der-friedrichstrasse-auf_a361775
 #: by: https://berliner-abendblatt.de/2022/10/28/remlinger-umgestaltung-der-friedrichstrasse-kann-noch-dauern/
 #: by: https://berliner-abendblatt.de/2022/10/29/friedrichstrasse-festhalten-an-der-fussgaengerzone/
+#: by: https://berliner-abendblatt.de/2022/11/01/senat-haelt-sich-beschwerde-gegen-gerichtsbeschluss-offen/
 #: source_id: 2147346249
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
 #: priority: #A
@@ -1617,7 +1618,7 @@ Kuglerstr.	N 12030,15968 11961,16002 11899,16037 11852,16061 11750,16116 11680,1
 Lewaldstr.	N 11401,16265 11470,16394
 Meyerheimstr.	N 11852,15765 11905,15878 11961,16002
 Zelterstr.	N 11967,15700 11852,15765 11777,15808
-Gubitzstr.	N 12222,15306 12252,15376 12299,15463 12375,15615 12463,15774 12492,15833 12532,15924 12583,16025 12607,16068
+Gubitzstr.	N 12201,15299 12245,15380 12292,15464 12375,15615 12463,15774 12492,15833 12532,15924 12583,16025 12607,16068
 (Gubitzstr. - Hosemannstr.)	N 12463,15774 12642,15668
 Schieritzstr.	N 12642,15668 12821,15565 12962,15480
 Mandelstr.	N 12821,15565 12903,15695 12948,15771 12979,15822 12911,15865
@@ -1625,7 +1626,7 @@ Mandelstr.	N 12821,15565 12903,15695 12948,15771 12979,15822 12911,15865
 Paul-Grasse-Str.	N 12783,15921 12583,16025 12423,16109
 Georg-Blank-Str.	N 12492,15833 12423,15875 12341,15932 12295,15953 12263,15973 12248,15971 12198,15999
 Sodtkestr.	N 12221,15514 12298,15658 12382,15802 12423,15875
-Küselstr.	N 12299,15463 12221,15514 12158,15556 12094,15598 12058,15621
+Küselstr.	N 12292,15464 12221,15514 12158,15556 12094,15598 12058,15621
 (Küselstr. - Prenzlauer Allee, Lidl-Parkplatz)	N 12058,15621 11963,15681
 Trachtenbrodtstr.	N 12158,15556 12232,15695 12310,15837
 Lindenhoekweg	N 12382,15802 12310,15837 12247,15868
@@ -1735,7 +1736,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/erschliessung-und-grundstuecksuebertragung-bebauungsplan-1-62b-oestlich-heidestrasse-otto-weidt-platz-1032336.php
 #: by: https://www.berliner-woche.de/moabit/c-bauen/golda-meir-steg-verbindet-jetzt-moabit-mit-mitte_a330725
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2022-10-08
+#: last_checked: 2022-11-01 (daf)
 #: check_frequency: 30d
 #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -12203,7 +12204,7 @@ Viechtacher Str.	N 19657,9666 19727,9672 19801,9680 19871,9680 19923,9682
 Eisensteiner Str.	N 19727,9672 19722,9483
 #: note: Privatstraße
 #: XXX wird hier noch ein verkehrsberuhigter Bereich ausgewiesen?
-#: osm_watch: way id="338124008" version="14"
+#: osm_watch: way id="338124008" version="15"
 #: priority: #C
 #: last_checked: 2022-08-21 (mapillary)
 #: check_frequency: 120d
@@ -12232,7 +12233,7 @@ Seelower Str.	N 10778,16485 10754,16305 10739,16146 10729,16042
 Gotlandstr.	N 10778,16485 10793,16636 10798,16769
 Tegnerstr.	N 10699,16492 10708,16579
 Wichertstr.	NH 10982,16121 11214,16043 11307,15995 11445,15920 11567,15842 11736,15727 11941,15586
-Grellstr.	NH 11941,15586 12252,15376 12325,15328 12417,15272 12704,15105
+Grellstr.	NH 11941,15586 12245,15380 12325,15328 12417,15272 12704,15105
 Preußstr.	N 12325,15328 12367,15396
 Oranienplatz	NN 11264,10804 11227,10821
 Oranienplatz	NN 11275,10723 11253,10778 11227,10821
@@ -13307,7 +13308,7 @@ Eisnerstr.	N 9507,-85 9653,-483 9698,-556
 #: next_check_id: BUCKOWERCHAUSSEE-2022
 #: XXX Gehweg wird vermutlich verlegt
 #: by: http://www.baustellen-doku.info/berlin_dresdener-bahn/PFA1_Marienfelde_Attilastrasse-Schichauweg/20200424/ (Bild 31)
-#: last_checked: 2022-10-24
+#: last_checked: 2022-10-31 (daf)
 #: check_frequency: 180d
 (Eisnerstr. - S-Bhf Buckower Chaussee)	NN 9507,-85 9473,-92 9271,323
 # 
@@ -15350,7 +15351,8 @@ Beermannstr.	N 13973,9465 14119,9368
 # REMOVED (wg. Autobahnbau verkürzt) --- Beermannstr.	N 14119,9368 14157,9345
 # REMOVED (existiert nicht mehr) --- #: XXX temporäre Hilfsstraße --- #: last_checked: 2015-11-22 --- #: check_frequency: 60d --- (Beermannstr. - Matthesstr.)	N 14119,9368 14162,9381
 # REMOVED (wg. Autobahnbau verkürzt) --- Matthesstr.	N 14157,9345 14162,9381 14172,9457
-Matthesstr.	N 14172,9457 14185,9509
+# REMOVED: früherer Berlin.coords.data-Eintrag: Matthesstr.|Alt-Treptow|12435|14157,9345
+# REMOVED (nicht mehr als Stadtstraße erkennbar) --- Matthesstr.	N 14172,9457 14185,9509
 Elbestr.	N 12765,8605 12822,8675 12881,8750 12954,8840 13045,8951
 Schandauer Str.	N 13105,8720 12954,8840
 Laubestr.	N 12982,8564 12822,8675
