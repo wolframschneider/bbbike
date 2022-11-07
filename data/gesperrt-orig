@@ -127,7 +127,7 @@ Edelhofdamm	1 3185,25437 3101,25402 2909,25322 2756,25260 2683,25238 2713,25300 
 Antonienstr.	1 3930,17923 3970,18126 4009,18322 4070,18695 4144,18896 4228,19024
 Eichborndamm	1s:q3 4228,19024 4223,18982
 Eichborndamm	1 4223,18982 4211,18882 4163,18676 4102,18298 4059,18107 4016,17918
-Spreestr.	1 17900,6072 17939,5968 17877,5860 17810,5736 17807,5730 17782,5698
+Spreestr.	1 17900,6072 17939,5968 17931,5955 17877,5860 17810,5736 17807,5730 17782,5698
 Buckower Chaussee	1 8742,475 8972,498 9002,471
 # REMOVED (nein, wird nicht) --- #: XXX evtl. wird die Einbahnstraßenregelung aufgehoben --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6025 --- #: last_checked: 2015-05-05 --- #: check_frequency: 30d
 Archibaldweg	1s:q4 15674,10851 15820,10916 15870,10938
@@ -1435,6 +1435,8 @@ Bitterfelder Str. (Richtungsfahrbahn)	1::igndisp 20397,16621 20382,16582 20358,1
 Bitterfelder Str. (Richtungsfahrbahn)	1::igndisp 20230,16560 20325,16551 20354,16563 20379,16585 20397,16621
 Bitterfelder Str. (Mittelstreifen)	3nocross::ignrte 20230,16560 20328,16546 20358,16560 20382,16582 20397,16621
 # 
+Zufahrt Bhf. Ahrensfelde	1 21251,18508 21224,18519 21285,18637 21309,18626
+# 
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1995,8 +1997,6 @@ Berliner Str.: Straßenbahntrasse	3nocross 13737,15994 13826,16026 14015,16103
 Berliner Str.: Straßenbahntrasse	3nocross 12166,21208 12176,21266 12188,21330 12209,21448
 Karl-Liebknecht-Str.: Straßenbahntrasse	3nocross 10923,13156 10976,13229 11012,13278
 Riesaer Str.: Straßenbahntrasse	3nocross 24120,14526 24097,14575 24030,14717
-#: note: Luftbild:
-Riesaer Str.: Straßenbahntrasse	3nocross 24198,14454 24162,14487 24120,14526
 Riesaer Str.: Straßenbahntrasse	3nocross 24730,14288 24870,14244 24930,14225 24983,14208 25095,14171
 # REMOVED --- Rummelsburger Str.: wegen Überführung nicht überquerbar	3nocross 17527,7812 17568,7753 17619,7679 17681,7589 17769,7465
 Rummelsburger Str.: wegen Überführung nicht überquerbar	3nocross 17769,7465 17847,7356 18010,7133
@@ -3448,11 +3448,24 @@ Drängelgitter	BNP:2::trailer=7 -4234,11408
 Schranke	BNP:5::trailer=15 23221,15226
 Schranke	BNP:3::trailer=10 -1486,16789
 Schranke	BNP:1::trailer=3 14967,4641
+#: note: evtl. kann die Schranke über den Gehwegbereich umfahren werden
+Schranke	BNP:3::trailer=10 8702,13362
 #
 ############################################################################
 #: section temporäre Sperrungen (Baustellen etc.) vvvvvvvvvvvvvvvvvvvvvvvvvv
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# 
+#: next_check_id: WUHLESTEG-2022
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1258812.php
+#: by: https://www.berliner-woche.de/kaulsdorf/c-verkehr/fussgaengersteig-ueber-die-wuhle-wurde-gesperrt_a361880
+#: by: https://berliner-abendblatt.de/2022/10/27/einsturzgefahr-fussgaengersteg-am-stadion-wuhletal-gesperrt/
+#: by: https://berliner-abendblatt.de/2022/11/06/wuhletal-stadion-ersatzneubau-fuer-fussgaenger-muss-kommen/
+#: XXX: Wird möglicherweise zurückgebaut. Ob es einen neuen Steg geben wird, ist noch nicht entschieden.
+#: osm_watch: way id="27944267" version="13"
+#: last_checked: 2022-11-06
+#: check_frequency: 120d
+Wuhlesteg: gesperrt	2::inwork 22171,12965 22196,12961
 # 
 #: next_check_id: FAHLENBERGBRUECKE-2022
 #: by: https://www.berliner-woche.de/mueggelheim/c-bauen/ersatzneubau-der-neuen-fahlenbergbruecke-soll-nun-ende-2022-fertig-sein_a299399 (Ertüchtigung der Umfahrungsstrecke im 2. Quartal 2021; Ende 2022 wird der Neubau fertig)
@@ -3474,8 +3487,10 @@ Schranke	BNP:1::trailer=3 14967,4641
 #: source_id: viz2021:13.703997,52.402579,28.10.2022,06:00 (bis 30.6.2023)
 #: note: die Verkehrsmeldung wurde beim rbb am nächsten Tag (11.10.2022) bereits entfernt
 #: XXX ab dem 28.10.2022 ist die südliche Umfahrung aktiv
-#: osm_watch: way id="10275794" version="16"
-#: osm_watch: way id="897616703" version="2"
+# REMOVED (gelöscht) --- #: osm_watch: way id="10275794" version="17"
+# REMOVED (gelöscht) --- #: osm_watch: way id="897616703" version="2"
+#: osm_watch: way id="1110732558" version="8"
+#: osm_watch: way id="325319592" version="12"
 #: priority: #A
 #: last_checked: 2022-06-15
 # REMOVED --- #: check_frequency: 60d
@@ -3524,7 +3539,7 @@ Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9
 # REMOVED --- Hauptstr. - Rummelsburger Ufer: gesperrt, möglicherweise dauerhaft	2::inwork 16178,9861 16049,9749
 # 
 #: next_check_id: AUERDREIECK-2022
-#: last_checked: 2022-10-14
+#: last_checked: 2022-11-06
 Grünfläche Auerdreieck: Bauarbeiten, Weg ist gesperrt	2::inwork 13232,12628 13091,12563
 # 
 #: note: "Referenzfläche", Wald wird sich selber überlassen
@@ -3587,7 +3602,7 @@ Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer	2::inwork 7673,4223 7769,4
 #: by: https://www.gm013.la/work/fmp
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/pl%C3%A4tze-vorpl%C3%A4tze.93/page-2#post-19593
 #: XXX evtl. wird die Erschließungsstraße nicht mehr durchgängig sein; evtl. wird man die Fläche als Grünfläche kennzeichnen können
-#: last_checked: 2022-10-29
+#: last_checked: 2022-11-03
 #: check_frequency: 30d
 #: next_check: 2023-07-01
 (Vorfahrt Neues-Deutschland-Gebäude): an der Rüdersdorfer Str. mit Bauzäunen abgesperrt	2::inwork 12788,11898 12891,12008
@@ -3595,7 +3610,7 @@ Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer	2::inwork 7673,4223 7769,4
 # REMOVED (Absperrgitter mittlerweile üblicherweise verschoben) --- #: note: manchmal stehen die Absperrgitter etwas verschoben mit einer Öffnung, so dass man mit einem Fahrrad doch passieren kann (gesehen: 2022-09-23, 2022-09-30, 2022-10-29) --- #: also_indoor: traffic (G,B) --- #: last_checked: 2022-09-30 --- Unter den Linden/Schadowstr.: Überqueren der Straße vor der Russischen Botschaft nicht möglich	3nocross 8804,12280 9028,12307 9141,12320
 # 
 #: next_check_id: FALKENBERG-2021
-#: last_checked: 2022-03-27 (mapillary)
+#: last_checked: 2022-11-06
 #: check_frequency: 150d
 Barnimer Dörferweg: wegen Bauarbeiten gesperrt	2::inwork 20865,18933 20889,18943 20948,18968
 # 
@@ -3622,7 +3637,7 @@ Weg zur Walther-Rathenau-Str.: Bauarbeiten, Weg noch gesperrt	2::inwork 22983,-5
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.schmalfuss-immobilien.de/karlshorst (Abschnitt 9 bezugsfertig Anfang August 2022, 7 Anfang September 2022)
-#: last_checked: 2022-10-09 vvv
+#: last_checked: 2022-11-05 vvv
 # REMOVED --- #: next_check: 2022-08-01 vvv
 #: osm_watch: way id="1061057020" version="3"
 Georg-Klingenberg-Str.: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17846,8644 17792,8660 17656,8700
@@ -3664,7 +3679,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2022-10-26
+#: last_checked: 2022-11-05
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -3978,7 +3993,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: XXX bis wann geht die Sperrung?
 #: osm_watch: way id="729492933" version="3"
 # REMOVED (wurde entfernt) --- #: osm_watch: way id="882672445" version="2"
-#: last_checked: 2022-10-03
+#: last_checked: 2022-11-03
 #: check_frequency: 60d
 #: next_check: 2022-11-30
 Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10673,12434 10772,12515
@@ -4043,7 +4058,7 @@ Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/molkenmarkt-klosterviertel-bebauungsplan-1-14.52/page-5#post-17149
 #: by: https://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_2209/nachricht7327.html
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2022-09-30
+#: last_checked: 2022-11-03
 #: check_frequency: 90d
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10738,12364 10831,12371
 # 
@@ -4057,7 +4072,7 @@ Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 #: source_id: viz2021:13.409315,52.517356,20.02.2020,08:00 (bis 31.12.2022)
 #: note: laut rbb nur bis 31.08.2022
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
-#: last_checked: 2022-10-03 vvv
+#: last_checked: 2022-11-03 vvv
 #: next_check: 2024-06-01 vvv
 Stralauer Str.: wegen Baurbeiten gesperrt	2::inwork 10804,12291 10738,12364
 (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285 10675,12280
@@ -4233,7 +4248,7 @@ Zufahrt Zentrum Schöneweide: Fahrbahn und Bürgersteig gesperrt	2:inwork 17728,57
 #: osm_watch: way id="43233756" version="20"
 #: osm_watch: way id="681299268" version="2"
 #: osm_watch: way id="47935842" version="15"
-#: osm_watch: way id="681299267" version="2"
+#: osm_watch: way id="681299267" version="4"
 #: priority: #A vvv
 #: last_checked: 2022-10-27 (mapillary) vvv
 #: check_frequency: 90d vvv
@@ -4269,7 +4284,7 @@ Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt	2s:q4:inwork 9076,12054 9064,1215
 Taubenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9207,11880 9138,11872
 # 
 #: note: allerdings war das Einbahnstraßenschild am 2022-01-17 weggedreht, am 2022-03-02 wieder vollständig aktiv
-#: last_checked: 2022-10-14
+#: last_checked: 2022-11-03
 Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
 # 
 #: next_check_id: POTSDAMSPEICHERSTADT-2022
@@ -4561,7 +4576,7 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 # REMOVED (mittlerweile kann man durchkommen) --- Hinter dem Gießhaus: Durchfahrt zu Unter den Linden gesperrt	2::inwork 9846,12516 9858,12410
 # REMOVED --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
-# REMOVED (offen) --- #: next_check_id: CHARITE-2014 --- #: XXX eine Umleitung existiert, ist aber von der Westseite schwierig zu finden und könnte nachts gesperrt sein --- #: last_checked: 2016-11-22 --- #: check_frequency: 30d --- An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8665,13353 8736,13369 8806,13384
+# REMOVED (offen) --- #: next_check_id: CHARITE-2014 --- #: XXX eine Umleitung existiert, ist aber von der Westseite schwierig zu finden und könnte nachts gesperrt sein --- #: last_checked: 2016-11-22 --- #: check_frequency: 30d --- An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8665,13353 8702,13362 8806,13384
 # REMOVED (existiert hier wohl nicht mehr) --- #: last_checked: 2014-03-01 --- #: check_frequency: 100d --- Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?) gesperrt	2:inwork -11407,-1086 -11460,-1098 -11538,-1138 -11615,-1094
 # REMOVED (offen, verschiedene Quellen) --- #: next_check_id: NORDUFER-2014 --- #: by: Torben Müllers --- #: confirmed_by: srt --- #: by: http://weddingweiser.wordpress.com/2012/10/16/die-s-21-wird-gebaut-weddinger-strasen-werden-neu-gefuhrt/ (Projektplan) --- #: XXX geplante Fertigstellung (als Autostraße) im Dezember 2013 --- #: by: http://www.berliner-woche.de/wedding/verkehr/senat-lehnt-fussgaengerueberweg-ab-radweg-soll-unter-der-fennbruecke-gebaut-werden-d131062.html (ggfs. auch Unterführung unter der Fennbrücke) --- #: by: http://www.baustellen-doku.info/berlin_neubau_s-bahn_s21/20190313/ --- #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=634400&postcount=2205 --- #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9615 --- #: by: https://www.bvg.de/images/content/unternehmen/medien/plus/2019/BVG_PLUS_1119_web_Doppelseiten.pdf (PDF-Seite 23) --- #: osm_watch: way id="183406331" version="3" --- #: osm_watch: way id="220646748" version="5" --- #: priority: #A --- #: last_checked: 2019-11-21 --- #: next_check: 2019-12-02 --- Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738 7139,14785
 # 
@@ -4631,7 +4646,7 @@ Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552
 # REMOVED (gelöscht) --- #: osm_watch: way id="33036326" version="7"
 #: osm_watch: way id="940764588" version="6"
 #: osm_watch: way id="940764584" version="4"
-#: last_checked: 2022-10-27
+#: last_checked: 2022-11-03
 #: check_frequency: 120d
 #: next_check: 2023-06-30
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
@@ -4667,7 +4682,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10102,12384 10175,12435
 #: by: https://www.berliner-woche.de/mitte/c-bauen/erste-module-fuer-parlamentsneubau-montiert_a309858 (bis Ende 2021 fertig)
 #: XXX wird nach den Bauarbeiten die Einbahnstraßenregelung wieder hergestellt? (see elsehwere)
 #: osm_watch: way id="158025179" version="8"
-#: last_checked: 2022-10-03 vvv
+#: last_checked: 2022-11-03 vvv
 # REMOVED (fertig?) --- #: check_frequency: 60d vvv
 #: also_indoor: traffic (G)
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760

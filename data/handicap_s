@@ -54,8 +54,6 @@ Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg m
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork 12556,15518 12605,15491 12621,15482
 Charlottenburger Str.: Einbahnstraßenregelung zwischen Goethestr. und Friesickestr., offen Richtung Westen	q3:inwork; 12646,16563 12798,16493
-Lorenzstr.: Fahrbahn gesperrt, Gehweg für Radfahrer frei	q2::inwork 5539,2497 5660,2219
-Lorenzstr.: Fahrbahn gesperrt, Gehweg für Radfahrer frei	q3::inwork 5660,2219 5720,2081
 (Wuhlewanderweg - Parchimer Str.): einige Fußgänger	q1 22031,12208 22080,12218
 (An der Wuhle, östliches Ufer): Fußgänger	q1 21316,8487 21333,8355 21371,8289 21594,8107 21627,8024 21629,7921
 Pappelplatz (Mitte): gemeinsamer Fuß- und Radweg	q2 9750,14132 9676,14046
@@ -649,7 +647,7 @@ Baruther Str.: gemeinsamer Rad- und Gehweg	q1 9588,9827 9723,9842
 (Schmidstr. - Heinrich-Heine-Str.): Bordsteine, Fußgänger	q3 11236,11508 11174,11554
 (Entlang des Stadtbahnviadukts): Bordsteine, Fußgänger	q3 11966,11832 12132,11788
 (Maybachufer - Weigandufer): Fußgänger, explizit für Radfahrer verboten	q4 12845,9304 12862,9273 12909,9085 12902,9066
-(an der Notfallaufnahme Charité): Notfallwagen, Fußgänger	q2 8833,13440 8836,13396 8806,13384 8736,13369 8665,13353
+(an der Notfallaufnahme Charité): Notfallwagen, Fußgänger	q2 8833,13440 8836,13396 8806,13384 8702,13362 8665,13353
 (Lasdehner Str. - Gubener Str.): Fußgänger, Bordsteine	q4 13375,12062 13339,12029
 Perleberger - Kieler: unterhalb der Brücke sehr eng	q3 7636,14414 7612,14449
 Ida-Wolff-Platz: Fußgänger	q4 9215,10607 9192,10528
@@ -1437,7 +1435,7 @@ Straße 17: kurze Rampe	q3 7307,7435 7296,7443
 (Lortzingstr. - Mauerpark): einige Fußgänger	q1 10037,15421 10052,15429 10070,15438 10076,15455 10092,15461 10105,15454 10127,15463 10155,15473 10186,15481
 (Lortzingstr. - Mauerpark): einige Fußgänger	q1 10070,15438 10083,15425 10101,15426 10110,15440 10105,15454
 (Weg im erweiterten Mauerpark - über den Gleimtunnel): einige Fußgänger	q2 10070,15626 10091,15630
-(Lauinger Str. - Biesdorfer Friedhofsweg/Alt-Biesdorf): einige Fußgänger, Engstelle wegen Hochbauarbeiten	q2 21221,11398 21311,11528
+(Lauinger Str. - Biesdorfer Friedhofsweg/Alt-Biesdorf): einige Fußgänger	q1 21221,11398 21311,11528
 Eigerstr.: einige Bodenschwellen, können aber umfahren werden	q0 12825,17870 12882,17895 12902,17933 12945,17958 12994,17986 13036,18010 13043,18126 13042,18152
 Wischbergweg: sehr enger Pfad	q4 13733,18161 13751,18180
 (Blankenburger Pflasterweg - Ortnitstr.): wenig Fußgänger, haben aber Vorrang	q0 15424,19861 15393,19671 15383,19610 15386,19485 15426,19216 15412,19082 15407,19024 15376,18908 15400,18840 15399,18782 15434,18731 15413,18626

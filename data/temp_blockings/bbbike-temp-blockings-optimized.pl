@@ -3135,10 +3135,103 @@ Kleistpark	2::night 7310,9622 7307,9528
          'type' => 'gesperrt',
          'until' => 1671404399
        },
-       undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/weihnachtsmarkt/3250022-3496862-adventsmarkt-am-kollwitzplatz.html
+#: by: https://www.grueneliga-berlin.de/themen-projekte2/oekomarkt/adventsoekomarkt/ (2021 abgesagt)
+#: by: https://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarkt-am-kollwitzplatz.html (Termin 2022 nicht bekannt)
+#: by: https://www.grueneliga-berlin.de/themen-projekte2/oekomarkt/adventsoekomarkt/?date=20221103
+#: tempex: 1st_advent & T12-T19
+	2::xmas 11317,14564 11247,14578 11155,14554
+',
+         'from' => 1669460400,
+         'id' => 2518,
+         'periodic' => 1,
+         'recurrence_prewarn_days' => 14,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              26,
+                              'months',
+                              11,
+                              'start',
+                              '2022-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarkt-am-kollwitzplatz.html',
+         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 27. November 2022, 12:00 bis 19:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1669572000
+       },
+       {
+         'data' => '#: tempex: 2nd_advent & T12-T19
+	2::xmas 11317,14564 11247,14578 11155,14554
+',
+         'from' => 1670065200,
+         'id' => 2519,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              3,
+                              'months',
+                              12,
+                              'start',
+                              '2022-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarkt-am-kollwitzplatz.html',
+         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 4. Dezember 2022, 12:00 bis 19:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1670176800
+       },
+       {
+         'data' => '#: tempex: 3rd_advent & T12-T19
+	2::xmas 11317,14564 11247,14578 11155,14554
+',
+         'from' => 1670670000,
+         'id' => 2520,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              10,
+                              'months',
+                              12,
+                              'start',
+                              '2022-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarkt-am-kollwitzplatz.html',
+         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 11. Dezember 2022, 12:00 bis 19:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1670781600
+       },
+       {
+         'data' => '#: tempex: 4th_advent & T12-T19
+	2::xmas 11317,14564 11247,14578 11155,14554
+',
+         'from' => 1671267600,
+         'id' => 2521,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              17,
+                              'months',
+                              12,
+                              'start',
+                              '2022-01-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarkt-am-kollwitzplatz.html',
+         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 18. Dezember 2022, 12:00 bis 19:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1671379200
+       },
        undef,
        undef,
        undef,
@@ -3914,10 +4007,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: von der Marksburgstr. und Godesberger Str. ist nur das Rechtsabbiegen Richtung Norden möglich (oder man nimmt die Fußgängerampeln)
 #: note: Einbahnstraßenregelung in der Marksburgstr. zwischen Gundelfinger Str. und Treskowallee aufgehoben
 #: note: möglicherweise kann die eigentlich gesperrte westliche Fahrbahn zeitweise (außerhalb der Arbeitszeiten? sonntags?) Richtung Süden befahren werden (gesehen 2022-10-09)
-#: priority: #B
-#: last_checked: 2022-10-09
-#: check_frequency: 90d
-#: next_check: 2023-08-21
+#: priority: #B vvv
+#: check_frequency: 90d vvv
+#: next_check: 2023-08-21 vvv
 # REMOVED --- #: next_check_id: TRESKOWALLEE-2017
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
@@ -3926,8 +4018,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (alt) --- q4::inwork; 18770,8898 18737,8686
 # REMOVED (hier kann man legal fahren, wenn man z.B. aus der Rheinsteinstr. kommt) ---	q4::inwork; 18737,8686 18727,8634
 # REMOVED (zwar steht ein Radfahren-verboten-Schild an der Hönower Str., aber die Radspur bis zur Waldowallee existiert weiterhin und die Ampel funktioniert auch noch) ---	q4::inwork; 18875,9570 18878,9517
+#: last_checked: 2022-10-09
 Treskowallee	q4::inwork; 18878,9517 18867,9464 18834,9256 18809,9133 18790,9018 18770,8898 18737,8686
+#: last_checked: 2022-11-05
 Andernacher Str.	q3::inwork; 19000,8509 18949,8437
+#: next_check ^^^
+#: check_frequency ^^^
+#: priority ^^^
 ',
          'from' => undef,
          'id' => 3007,
@@ -4271,7 +4368,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022) (inaktiv) (bis 31.12.2022)
 #: note: laut rbb mittlerweile bis 30.12.2022
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-10-27
+#: last_checked: 2022-11-03 (mapillary)
 #: check_frequency: 30d
 #: next_check: 2022-12-31
 	q4::inwork; 11329,12497 11209,12430
@@ -4321,7 +4418,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://www.rbb24.de/politik/thema/2020/coronavirus/beitraege_neu/2020/04/strassensperrungen-spielplaetze-friedrichshain-kreuzberg.html
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-10-29
+#: last_checked: 2022-11-05
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4636,7 +4733,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="25"
 #: osm_watch: way id="165832806" version="26"
-#: last_checked: 2022-10-09
+#: last_checked: 2022-11-05
 #: check_frequency: 30d
 	2::inwork 17753,8290 17707,8328 17652,8349 17617,8363 17554,8458 17533,8505 17524,8536
 # REMOVED (hier wohl nicht mehr) ---	2::inwork 17524,8536 17515,8567 17497,8623
@@ -4644,7 +4741,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 ',
          'from' => undef,
          'id' => 3327,
-         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand Oktober 2021: Bauarbeiten im südlichen Abschnitt, nur enge Passage für Fußgänger offen)',
+         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand November 2022: Bauarbeiten im südlichen Abschnitt, schmale Passage offen)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -5004,11 +5101,13 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.berliner-woche.de/friedrichshain/c-verkehr/ersatzverkehr-auf-zwei-tramlinien_a357227
 #: by: https://www.berliner-woche.de/lichtenberg/c-verkehr/die-bvg-erneuert-gleisanlagen_a356780
 #: by: https://unternehmen.bvg.de/wp-content/uploads/2022/10/BVG_PLUSNAVI_1022_barrierefrei.pdf (hier bis 9.12.2022)
+#: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1261737.php (Baumaßnahmen Gürtelstraße 7.11.2022-22.12.2022, keine Einschränkung des Radverkehrs)
+#: by: https://berliner-abendblatt.de/2022/11/04/strassensperrung-bis-dezember-baumassnahmen-der-bvg-auf-der-guertelstrasse/
 #: source_id: viz2021:13.474058,52.512017,12.09.2022,07:00 (hier: bis 2.10.2022) (bis 11.12.2022)
 #: source_id: viz2021:13.470538,52.512351,12.09.2022,07:00
 #: source_id: viz2021:13.468932,52.511298,12.09.2022,07:00
 #: source_id: viz2021:13.469582,52.511928,12.09.2022,07:00
-#: last_checked: 2022-10-26 vvv
+#: last_checked: 2022-11-06 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-12-09 vvv
 Weichselstr. (Traveplatz)	q4::inwork; 14798,11777 14802,11784 14836,11842
@@ -5775,7 +5874,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
          'source_id' => 'https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2022/pressemitteilung.1221094.php',
          'text' => 'Schönstr./Große Seestr.: Sperrung des Kreuzungsbereichs, Ausweichen auf den Bürgersteig, Bordsteine und Umwege, vom 04. Juli 2022 bis voraussichtlich 07. November 2022',
          'type' => 'handicap',
-         'until' => 1667861999
+         'until' => undef
        },
        undef,
        undef,
@@ -5845,7 +5944,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
        undef,
        {
          'data' => '#: next_check_id: WALLENSTEIN-2022
-#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags, 2022-08-14 mittags, 2022-09-03 (Sa) nachmittags, 2022-10-09 (So) nachmittags, 2022-10-16 (So) mittags, 2022-10-26 (Mi) gegen 12:30
+#: note: zurzeit Sperrung wohl nur während der Arbeitszeiten, Durchfahrt war möglich am: 2022-08-07 mittags, 2022-08-14 mittags, 2022-09-03 (Sa) nachmittags, 2022-10-09 (So) nachmittags, 2022-10-16 (So) mittags, 2022-10-26 (Mi) gegen 12:30, 2022-11-05 (Sa) gegen 10:15
 Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
 Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
 Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
@@ -5980,9 +6079,9 @@ Kloedenstr.	q3::inwork 9654,8991 9669,9080
          'from' => 1658970000,
          'id' => 3615,
          'source_id' => 'viz2021:13.321852,52.501972,29.07.2022,03:00',
-         'text' => 'Knesebeckstr.: Einbahnstraße zwischen Lietzenburger Str. und Kurfürstendamm, offen Richtung Norden, vom 29.07.2022 bis 31.12.2022',
+         'text' => 'Knesebeckstr.: Einbahnstraße zwischen Lietzenburger Str. und Kurfürstendamm, offen Richtung Norden, vom 29.07.2022 bis 25.02.2023',
          'type' => 'handicap',
-         'until' => 1672502400
+         'until' => 1677340800
        },
        {
          'data' => '#: by: https://www.youtube.com/watch?v=swATp4lDNFs (Webcam)
@@ -6019,7 +6118,7 @@ Kloedenstr.	q3::inwork 9654,8991 9669,9080
        {
          'data' => '#: add_fragezeichen: Sind die Bauarbeiten in der Krautstr. beendet?
 #: also_indoor: traffic (none)
-#: last_checked: 2022-10-29
+#: last_checked: 2022-11-03
 # REMOVED --- #: check_frequency: 14d
 	q4::inwork 12081,12236 12059,12172
 ',
@@ -6140,11 +6239,11 @@ Winterfeldtstr.	q3::inwork 6630,9990 6741,10017 6903,10056
          'data' => '#: next_check_id: LICHTENBERGERBRUECKEN-2022
 #: add_fragezeichen: Besteht die Sperrung im Archibaldweg weiterhin?
 #: XXX Barrieren sowie Durchfahrtsverbotsschilder existieren
-#: note: Barrieren geöffnet, Durchfahrt zumindest für Radfahrer möglich: 2022-09-18 (Sonntag), 2022-10-16 (Sonntag)
+#: note: Barrieren geöffnet, Durchfahrt zumindest für Radfahrer möglich: 2022-09-18 (Sonntag), 2022-10-16 (Sonntag), 2022-11-05 (Samstag) gegen 10:00
 #: note: Barrieren geschlossen, Durchfahrt nur auf dem Gehweg möglich: 2022-09-25 (Sonntag), 2022-09-26 (Montag) gegen 13:00
 #: also_indoor: traffic (B,G[mittlerweile])
 #: source_id: bvg2021:396#BVG307357_0
-#: last_checked: 2022-10-26
+#: last_checked: 2022-11-05
 #: check_frequency: 7d
 # REMOVED --- #: next_check: 2022-10-30
 	q3::inwork 15674,10851 15820,10916
@@ -6170,9 +6269,9 @@ Winterfeldtstr.	q3::inwork 6630,9990 6741,10017 6903,10056
          'until' => 1672527600
        },
        {
-         'data' => '#: also_indoor: traffic (G,B)
+         'data' => '#: also_indoor: traffic (ex-G,B)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-10-27 (Asphaltierungsarbeiten)
+#: last_checked: 2022-11-03 (Asphaltierungsarbeiten)
 #: check_frequency: 7d
 	q3::inwork 10755,13152 10846,13362
 ',
@@ -6244,13 +6343,13 @@ Winterfeldtstr.	q3::inwork 6630,9990 6741,10017 6903,10056
          'data' => '#: note: laut rbb
 #: also_indoor: traffic (H,B,G) vvv
 #: XXX Ende der Sperrung? vvv
+#: last_checked: 2022-11-06 vvv
 #: check_frequency: 14d vvv
-#: last_checked: 2022-10-26 vvv
 einige Meter vor der Siegfriedstr. gesperrt, evtl. Bordsteine	q3::inwork 16859,12613 16720,12614
 etwa 70m gesperrt, auf Gehweg ausweichen	q3::inwork 16720,12614 16576,12612
 # REMOVED (hier nicht) ---	q4::inwork 16576,12612 16470,12612 16432,12612 16409,12612
-#: last_checked ^^^
 #: check_frequency ^^^
+#: last_checked ^^^
 #: XXX ^^^
 #: also_indoor ^^^
 ',
@@ -6260,7 +6359,27 @@ etwa 70m gesperrt, auf Gehweg ausweichen	q3::inwork 16720,12614 16576,12612
          'type' => 'handicap',
          'until' => undef
        },
-       undef,
+       {
+         'data' => '#: source_id: viz2021:13.38709,52.527156,05.10.2022,03:30 (bis 9.11.2022) (bis 21.11.2022)
+#: source_id: bvg2021:142#BVG311081_0
+#: by: https://viz.berlin.de/2022/10/verkehrsvorschau-071022/ (bis Ende Dezember 2022)
+#: by: https://www.berliner-zeitung.de/news/bvg-schienenbruch-in-berlin-mitte-trambahn-chaos-bis-ende-dezember-li.273968
+#: by: https://unternehmen.bvg.de/pressemitteilung/da-muessen-wir-ran/
+#: by: https://nitter.net/tramathon/status/1583012911013761024
+#: note: Möglicherweise wegen der Sperrung verstärkter Verkehr in der Gartenstr. zwischen Invalidenstr. und Torstr.
+# REMOVED --- #: XXX Bis wann ist die Kreuzung gesperrt? --- #: last_checked: 2022-10-08 vvv --- #: check_frequency: 30d vvv --- #: next_check: 2022-11-09 vvv
+# REMOVED (hier nichts) --- Chausseestr.	q4::inwork 9207,13493 9212,13471
+# REMOVED (Radfahrfurt) --- Hannoversche Str.	q3::inwork 9212,13471 9047,13446
+# REMOVED (Radfahrfurt) --- Torstr.	q3::inwork 9353,13521 9212,13471
+Friedrichstr.	q4::inwork 9212,13471 9225,13389
+# REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
+',
+         'from' => 1667499233,
+         'id' => 3643,
+         'text' => 'Friedrichstr.: Fahrbahn zwischen Oranienburger Str. und Torstr. gesperrt (Gleisbauarbeiten), voraussichtlich bis zum 21.11.2022',
+         'type' => 'handicap',
+         'until' => 1669046400
+       },
        {
          'data' => '#: by: https://www.bahninfo-forum.de/read.php?9,721782,722126#msg-722126
 #: by: https://www.bahninfo-forum.de/read.php?9,725584,728443#msg-728443 (nur nachts/am Wochenende zu?)
@@ -6324,9 +6443,9 @@ Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
          'from' => 1665385200,
          'id' => 3648,
          'source_id' => 'viz2021:13.429184,52.556411,11.10.2022,09:00',
-         'text' => 'Am Steinberg: Bauarbeiten zwischen Prenzlauer Promenade und Tino-Schwierzina-Str., Fahrtrichtung gesperrt, vom 11.10.2022 09:00 bis 05.11.2022 17:00',
+         'text' => 'Am Steinberg: Bauarbeiten zwischen Prenzlauer Promenade und Tino-Schwierzina-Str., Fahrtrichtung gesperrt, vom 11.10.2022 09:00 bis 06.01.2023 17:00',
          'type' => 'handicap',
-         'until' => 1667664000
+         'until' => 1673020800
        },
        {
          'data' => '#: also_indoor: traffic (B)
@@ -6373,7 +6492,7 @@ Gerichtstr.	q3::inwork 7464,15409 7627,15412
 ',
          'from' => 1665772021,
          'id' => 3652,
-         'text' => 'Derfflingerstr.: Sperrung der Fahrbahn zwischen vor der Seydlitzstr., bis 25.11.2022 ',
+         'text' => 'Derfflingerstr.: Sperrung der Fahrbahn vor der Einmündung Seydlitzstr., bis 25.11.2022 ',
          'type' => 'handicap',
          'until' => 1669417200
        },
@@ -6458,7 +6577,7 @@ Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 75
          'data' => '#: source_id: AdB/21-11-00135 (inaktiv)
 #: osm_watch: way id="175828136" version="8"
 #: add_fragezeichen: Wann ist die Brücke wieder offen?
-#: last_checked: 2022-10-17 (mapillary, Asphaltierungsarbeiten)
+#: last_checked: 2022-11-05 (mapillary, Asphaltierungsarbeiten)
 	2::inwork 5752,30817 5787,30867
 ',
          'from' => undef,
@@ -6491,18 +6610,7 @@ Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 75
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '# REMOVED (vorfristig entfernt) --- #: source_id: bvg2021:240#BVG310665_0
-# REMOVED (ja, etwas) --- #: add_fragezeichen: Sind Radfahrer auch betroffen? --- #: next_check: 2022-10-24
-	q3::inwork; 16468,10695 16537,10895
-',
-         'from' => 1666501200,
-         'id' => 3664,
-         'source_id' => 'viz2021:13.493078,52.501052,24.10.2022,07:00',
-         'text' => 'Weitlingstr.: Bauarbeiten, zwischen Lückstr. und Rupprechtstr. etwa 100m der Fahrbahn Richtung Norden gesperrt, vom 24.10.2022 07:00 bis 04.11.2022 17:00 ',
-         'type' => 'handicap',
-         'until' => 1667577600
-       },
+       undef,
        {
          'data' => '#: add_fragezeichen: Ist dieser Abschnitt des Mauerwegs noch gesperrt?
 #: last_checked: 2022-10-24
@@ -6531,7 +6639,7 @@ Mauerweg Marienfelde - Lichterfelde	2::inwork 6256,363 6204,331 6013,211 5832,93
 #: XXX außerdem möglich: Einbahnstraßenregelung in Wandlitzstr. und Wildensteiner Str.? (zurzeit wohl nicht)
 #: add_fragezeichen: Ist der Übergang Hegemeisterweg/Treskowallee noch immer gesperrt? vvv
 #: priority: #A vvv
-#: last_checked: 2022-10-26 vvv
+#: last_checked: 2022-11-05 vvv
 #: check_frequency: 14d vvv
 #: next_check: 2022-12-20 vvv
 ## generated with: ./miscsrc/convert2hafas -specsperre=strassen /tmp/3 | perl -pe \'s/: \\t/\\t/; s/igndisp/inwork/; $_="# $_" if /3nocross/\' >| /tmp/3.new
@@ -6552,7 +6660,7 @@ Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,777
 ',
          'from' => undef,
          'id' => 3666,
-         'text' => 'Hegemeisterweg/Treskowallee: Übergang kann wegen Bauarbeiten gesperrt sein',
+         'text' => 'Hegemeisterweg/Treskowallee: Übergang kann wegen Bauarbeiten gesperrt sein (Stand Anfang November 2022: eine Fußgängerfurt existiert)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -6612,8 +6720,9 @@ Veltener Str., Kienhorstpark -> Alt-Reinickendorf	3::inwork 6360,18861 6435,1883
        {
          'data' => '#: next_check_id: EISWALDT-2022
 #: by: https://berliner-abendblatt.de/2022/10/28/vollsperrung-in-lankwitz/
+#: by: https://www.berliner-woche.de/lankwitz/c-bauen/eiswaldtstrasse-wird-erneuert_a362396
 #: note: Soll noch 2022 fertig werden.
-#: also_indoor: traffic
+#: also_indoor: traffic (B[Gallwitz-AmGemeindepark])
 #: next_check: 2022-11-01
 	q4::inwork 6718,2443 6862,2452 6965,2418 7051,2366 7172,2343 7285,2377
 ',
@@ -6624,21 +6733,7 @@ Veltener Str., Kienhorstpark -> Alt-Reinickendorf	3::inwork 6360,18861 6435,1883
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: by: https://www.berliner-woche.de/kaulsdorf/c-verkehr/fussgaengersteig-ueber-die-wuhle-wurde-gesperrt_a361880
-#: by: https://berliner-abendblatt.de/2022/10/27/einsturzgefahr-fussgaengersteg-am-stadion-wuhletal-gesperrt/
-#: XXX: Wird möglicherweise zurückgebaut. Ob es einen neuen Steg geben wird, ist noch nicht entschieden.
-#: osm_watch: way id="27944267" version="13"
-#: next_check: 2022-12-01
-	2::inwork 22171,12965 22196,12961
-',
-         'from' => undef,
-         'id' => 3671,
-         'source_id' => 'https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1258812.php',
-         'text' => 'Fußgängersteg am Stadion Wuhletal: gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '	2::inwork 40032,-65726 40133,-65833 40166,-66024 40300,-66128 40499,-66148 41566,-66838
 ',
@@ -6682,15 +6777,18 @@ Veltener Str., Kienhorstpark -> Alt-Reinickendorf	3::inwork 6360,18861 6435,1883
          'type' => 'handicap',
          'until' => undef
        },
+       undef,
        {
-         'data' => '	2::inwork 12586,20131 12547,20154
+         'data' => '	q4::inwork 18939,9417 18977,9322
+hier ist der Gehweg für Radfahrer frei	q2::inwork; 18977,9322 19048,9146
+	q4::inwork; 19048,9146 18977,9322
 ',
-         'from' => 1667335329,
-         'id' => 3676,
-         'source_id' => 'https://nitter.cz/VIZ_Berlin/status/1587373430076329989#m',
-         'text' => 'Grünkardinalweg: Autobahn-Unterführung ist voraussichtlich bis zum 3. November 2022 gesperrt',
-         'type' => 'gesperrt',
-         'until' => 1667516399
+         'from' => 1667710800,
+         'id' => 3677,
+         'source_id' => 'viz2021:13.52942,52.488069,07.11.2022,06:00',
+         'text' => 'Waldowallee: Fahrbahn wegen Sanierungsarbeiten zwischen Köpenicker Allee und Marksburgstr. gesperrt, vom 07.11.2022 06:00 bis 02.12.2022 17:00',
+         'type' => 'handicap',
+         'until' => 1669996800
        }
      
 );

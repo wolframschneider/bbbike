@@ -133,7 +133,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 ### Treptow ###
 # 
 #: XXX der Original-Eintrag muss nach Ablauf wieder aktiviert werden
-#: last_checked: 2022-09-14 (mapillary)
+#: last_checked: 2022-11-02 (mapillary)
 #: check_frequency: 60d
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
 # 
@@ -271,7 +271,7 @@ Chausseestr.: Radweg auf gegenüberliegenden Bürgersteig	q2::inwork; 8732,14098 8
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic vvv
-#: last_checked: 2022-10-29 vvv
+#: last_checked: 2022-11-03 vvv
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8775,12457 8904,12489
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
@@ -297,7 +297,7 @@ Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1- 9444,
 # 
 #: osm_watch: way id="751595931" version="3"
 #: also_indoor: traffic (H,B)
-#: last_checked: 2022-10-06 (mapillary)
+#: last_checked: 2022-11-03
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 # 
 #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large
@@ -310,7 +310,7 @@ Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontaine
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=632731&postcount=1072
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/arch%C3%A4ologisches-haus-besucherzentrum-am-petriplatz.789/#post-14039
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-10-29
+#: last_checked: 2022-11-03
 #: check_frequency: 60d
 Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 10364,11896 10332,11929 10392,11991
 # 
@@ -749,7 +749,7 @@ Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kan
 #: XXX Bauarbeiten der Wasserbetriebe, laut Baustellenschild bis Oktober 2023
 #: XXX Einbahnstraßenregelung nach den Bauarbeiten wiederherstellen
 #: also_indoor: traffic (G)
-#: last_checked: 2022-10-26
+#: last_checked: 2022-11-06
 #: check_frequency: 90d
 #: next_check: 2023-10-31
 Parkaue: Bauarbeiten der Wasserbetriebe, Fahrbahn gesperrt	q4+::inwork 15535,12420 15457,12449
@@ -762,7 +762,7 @@ Parkaue: Bauarbeiten der Wasserbetriebe, Fahrbahn gesperrt	q4+::inwork 15535,124
 #: XXX Laut Schild der Wasserbetriebe bis Juni 2022
 #: XXX Laut Schild des Bezirksamts Umgestaltung bis August 2023 (!)
 #: also_indoor: traffic (ex-G[unvollständig],H[mittlerweile richtig],B)
-#: last_checked: 2022-10-26 vvv
+#: last_checked: 2022-11-06 vvv
 #: check_frequency: 7d vvv
 #: next_check: 2023-08-31 vvv
 Roedeliusplatz: wegen Fahrbahnarbeiten gesperrt	q4::inwork 16276,12273 16227,12280 16159,12301
@@ -817,7 +817,7 @@ Roedeliusplatz: wegen Fahrbahnarbeiten gesperrt	q4::inwork 16276,12273 16227,122
 #: by: https://berliner-abendblatt.de/2022/10/04/eisenacher-strasse-gesperrt-bauarbeiten-dauern-bis-2025/
 #: by: https://viz.berlin.de/2022/10/eisenacher-strasse/
 #: source_id: viz2021:13.575415,52.540241,05.10.2022,06:00 (hier nur Kfz-Verkehr, bis 10.11.2022)
-#: last_checked: 2022-10-05 vvv
+#: last_checked: 2022-11-06 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-11-10 vvv
 Eisenacher Str.: Radfahrer müssen Bürgersteig benutzen, Bordsteine	q1-::inwork; 21809,15186 21903,15174 22059,15153 22323,15119
@@ -962,7 +962,7 @@ Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4+::inwor
 #: osm_watch: way id="1040605739" version="1"
 #: add_fragezeichen: Bis wann dauern die Bauarbeiten an?
 #: XXX laut osm opening_date=2023-12
-#: last_checked: 2022-08-02 (mapillary)
+#: last_checked: 2022-11-03 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 Charlottenburger Str.: Einbahnstraßenregelung zwischen Goethestr. und Friesickestr., offen Richtung Westen	q3:inwork; 12646,16563 12798,16493
@@ -1002,21 +1002,7 @@ Charlottenburger Str.: Einbahnstraßenregelung zwischen Goethestr. und Friesickes
 # 
 ### Lichterfelde ###
 # 
-#: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0822_barrierefrei.pdf (ab 22.8.2022, kein Endedatum)
-#: by: https://berliner-abendblatt.de/2022/08/21/diese-baustellen-sorgen-fuer-staus/ (zwischen Jägerstraße und Parallelstraße bis Ende Oktober 2022, nur für Kfz-Verkehr gesperrt?)
-#: by: https://unternehmen.bvg.de/wp-content/uploads/2022/10/BVG_PLUSNAVI_1022_barrierefrei.pdf (ca. bis 28.10.2022)
-#: source_id: viz2021:13.331807,52.425977,22.08.2022,07:00 (nur Kfz-Verkehr) (mittlerweile bis 4.11.2022) vvv
-#: last_checked: 2022-10-15 vvv
-#: next_check: 2022-11-04 vvv
-#: valid: -20221104 vvv
-#: note: hier nur 30m vor der Jägerstr.
-Lorenzstr.: Fahrbahn gesperrt, Gehweg für Radfahrer frei	q2::inwork 5539,2497 5660,2219
-Lorenzstr.: Fahrbahn gesperrt, Gehweg für Radfahrer frei	q3::inwork 5660,2219 5720,2081
-#: valid ^^^
-#: next_check ^^^
-#: last_checked ^^^
-#: source_id ^^^
-# 
+# REMOVED --- #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0822_barrierefrei.pdf (ab 22.8.2022, kein Endedatum) --- #: by: https://berliner-abendblatt.de/2022/08/21/diese-baustellen-sorgen-fuer-staus/ (zwischen Jägerstraße und Parallelstraße bis Ende Oktober 2022, nur für Kfz-Verkehr gesperrt?) --- #: by: https://unternehmen.bvg.de/wp-content/uploads/2022/10/BVG_PLUSNAVI_1022_barrierefrei.pdf (ca. bis 28.10.2022) --- #: source_id: viz2021:13.331807,52.425977,22.08.2022,07:00 (nur Kfz-Verkehr) (mittlerweile bis 4.11.2022) (inaktiv) vvv --- #: last_checked: 2022-10-15 vvv --- #: next_check: 2022-11-04 vvv --- #: valid: -20221104 vvv --- #: note: hier nur 30m vor der Jägerstr. --- Lorenzstr.: Fahrbahn gesperrt, Gehweg für Radfahrer frei	q2::inwork 5539,2497 5660,2219 --- Lorenzstr.: Fahrbahn gesperrt, Gehweg für Radfahrer frei	q3::inwork 5660,2219 5720,2081 --- #: valid ^^^ --- #: next_check ^^^ --- #: last_checked ^^^ --- #: source_id ^^^
 # REMOVED --- #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2018/pressemitteilung.719385.php (aufgehoben) --- #: source_id: 2147342640 --- #: last_checked: 2018-07-01 --- #: next_check: 2018-07-30 --- #: valid: -20180730 --- Dahlemer Weg: Bauarbeiten, Fahrbahn und Radweg Richtung Norden gesperrt, Gehweg darf von Radfahrern benutzt werden	q2::inwork; 2123,2803 2146,2878 2152,2912 2198,3169 2203,3213
 # 
 ### Mahlsdorf ###
@@ -1660,7 +1646,7 @@ Langhoffstr.: enge Straße, Gegenverkehr	q1 19817,14371 19818,14064
 #: by: https://berliner-abendblatt.de/2022/05/05/bahnhof-lichtenberg-enhaltestelle-der-strassenbahn-wird-verlegt/
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1212005.php (Bauarbeiten nicht vor 2025)
 #: osm_watch: way id="223184082" version="7"
-#: last_checked: 2022-07-16
+#: last_checked: 2022-11-06
 # REMOVED --- #: check_frequency: 90d
 #: check_frequency: 360d
 #: next_check: 2025-12-31
@@ -1890,7 +1876,7 @@ Baruther Str.: gemeinsamer Rad- und Gehweg	q1 9588,9827 9723,9842
 (Entlang des Stadtbahnviadukts): Bordsteine, Fußgänger	q3 11966,11832 12132,11788
 #: note: früher "q2"
 (Maybachufer - Weigandufer): Fußgänger, explizit für Radfahrer verboten	q4+ 12845,9304 12862,9273 12909,9085 12902,9066
-(an der Notfallaufnahme Charité): Notfallwagen, Fußgänger	q2 8833,13440 8836,13396 8806,13384 8736,13369 8665,13353
+(an der Notfallaufnahme Charité): Notfallwagen, Fußgänger	q2 8833,13440 8836,13396 8806,13384 8702,13362 8665,13353
 #: XXX_prog BS am westlichen Ende, am östlichen existiert eine Bordsteinabsenkung; ansonsten (früher) q2
 #: note: theoretisch q3 möglich
 (Lasdehner Str. - Gubener Str.): Fußgänger, Bordsteine	q4+ 13375,12062 13339,12029
@@ -2965,13 +2951,8 @@ Straße 17: kurze Rampe	q3 7307,7435 7296,7443
 (Lortzingstr. - Mauerpark): einige Fußgänger	q1 10037,15421 10052,15429 10070,15438 10076,15455 10092,15461 10105,15454 10127,15463 10155,15473 10186,15481
 (Lortzingstr. - Mauerpark): einige Fußgänger	q1 10070,15438 10083,15425 10101,15426 10110,15440 10105,15454
 (Weg im erweiterten Mauerpark - über den Gleimtunnel): einige Fußgänger	q2 10070,15626 10091,15630
-#: by: https://pascalgrothe.de/neues-lagerhaus-entsteht-in-der-launigen-strasse/
-#: by: https://pascalgrothe.de/lagerhaus-in-der-lauinger-strasse-waechst-in-die-hoehe/
-#: XXX: früher (wiederherstellen!): einige Fußgänger, q1
-#: osm_watch: way id="965996899" version="1"
-#: last_checked: 2022-08-27
-#: check_frequency: 45d
-(Lauinger Str. - Biesdorfer Friedhofsweg/Alt-Biesdorf): einige Fußgänger, Engstelle wegen Hochbauarbeiten	q2 21221,11398 21311,11528
+# REMOVED --- #: by: https://pascalgrothe.de/neues-lagerhaus-entsteht-in-der-launigen-strasse/ --- #: by: https://pascalgrothe.de/lagerhaus-in-der-lauinger-strasse-waechst-in-die-hoehe/ --- #: XXX: früher (wiederherstellen!): einige Fußgänger, q1 --- #: osm_watch: way id="965996899" version="1" --- #: last_checked: 2022-08-27 --- #: check_frequency: 45d --- #: note: zwischendurch: einige Fußgänger, Engstelle wegen Hochbauarbeiten, q2
+(Lauinger Str. - Biesdorfer Friedhofsweg/Alt-Biesdorf): einige Fußgänger	q1 21221,11398 21311,11528
 #: XXX_prog mit Anhänger allerdings q1 oder sogar q2
 Eigerstr.: einige Bodenschwellen, können aber umfahren werden	q0- 12825,17870 12882,17895 12902,17933 12945,17958 12994,17986 13036,18010 13043,18126 13042,18152
 Wischbergweg: sehr enger Pfad	q4 13733,18161 13751,18180

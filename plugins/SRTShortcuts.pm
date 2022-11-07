@@ -455,6 +455,10 @@ EOF
 		layer_checkbutton([$do_compound->('brunnels', $images{bridge})],
 				  'str', "$main::datadir/brunnels",
 				  maybe_orig_file => 1),
+		layer_checkbutton([$do_compound->('mudways')],
+				  'str', "$bbbike_auxdir/bbd/mudways.bbd",
+				  above => $str_layer_level,
+				 ),
 		layer_checkbutton([$do_compound->('geocoded images', $images{camera})],
 				  'str', "$ENV{HOME}/.bbbike/geocoded_images.bbd",
 				  above => $str_layer_level,
@@ -591,9 +595,9 @@ EOF
 				  'str', "$main::datadir/exits",
 				  maybe_orig_file => 1),
 		layer_checkbutton([$do_compound->('Kneipen/Cafes', main::load_photo($mf, 'glas', -persistent => 1))],
-				  'str', "$bbbike_rootdir/data_berlin_osm/kneipen"),
+				  'str', "$bbbike_rootdir/data_berlin_osm_bbbike/kneipen"),
 		layer_checkbutton([$do_compound->('Restaurants', main::load_photo($mf, 'essen', -persistent => 1))],
-				  'str', "$bbbike_rootdir/data_berlin_osm/restaurants"),
+				  'str', "$bbbike_rootdir/data_berlin_osm_bbbike/restaurants"),
 		[Button => $do_compound->("Current route"), -command => sub { add_current_route_as_layer() }],
 		[Cascade => $do_compound->('Berlin/Potsdam coords'), -menuitems =>
 		 [

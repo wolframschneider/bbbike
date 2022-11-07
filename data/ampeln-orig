@@ -55,7 +55,7 @@ Kronprinzessinnenweg: Gegenverkehrsregelung	X::inwork -4368,1731
 #: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (Gegenverkehrsregelung mit Baustellenampel, bis 10.11.2022) (mittlerweile inaktiv, bereits Ende Juli 2022) (wieder aktiviert, bis 30.9.2022) (bis 10.10.2022) (inaktiv) (bis 23.10.2022) (bis 25.10.2022)
 #: by: https://nitter.net/VIZ_Berlin/status/1522508674073350144#m
 #: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig
-#: last_checked: 2022-08-14 vvv
+#: last_checked: 2022-11-05 vvv
 # REMOVED --- #: next_check: 2022-11-10 vvv
 #: next_check: 2022-11-10 vvv
 #: valid: -20221110 vvv
@@ -77,7 +77,7 @@ Treptower Str./Werrastr.: Gegenverkehrsregelung	X::inwork 13650,8320
 # 
 #: source_id: viz2021:13.406514,52.51352,16.03.2021,08:00 (bis Ende 2022)
 #: note: Ampel ist eigentlich s¸dˆstlich der Einm¸ndung gelegen
-#: last_checked: 2022-10-29
+#: last_checked: 2022-11-03
 #: check_frequency: 30d
 #: next_check: 2022-12-31
 Fischerinsel	F::inwork 10578,11969
@@ -106,7 +106,7 @@ Amrumer Str./Br¸sseler Str.	X::inwork 6375,15391
 # REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1491370038774964227 --- #: by: https://pbs.twimg.com/media/FLEUIiEX0AA8mNx?format=jpg&name=large --- #: source_id: viz2021:13.157143,52.539213,09.02.2022,13:00 (bis 12.3.2022) --- #: valid: 20220209-20220312 vvv --- Klosterbuschweg/Torweg: Gegenverkehrsregelung	X::inwork -6442,14535 --- Klosterbuschweg/Torweg: Gegenverkehrsregelung	X::inwork -6451,14413 --- #: valid ^^^
 # 
 #: next_check_id: TRAMTURM-2021
-#: last_checked: 2022-10-23 (daf)
+#: last_checked: 2022-11-05 (bahninfo-forum)
 #: check_frequency: 180d
 #: next_check: 2022-12-22
 Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
@@ -114,7 +114,7 @@ Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Franzˆsischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2022-10-26
+#: last_checked: 2022-11-05
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -185,7 +185,7 @@ Grunerstr./J¸denstr.	X::inwork 10804,12461
 #: valid: -20230227 vvv
 # REMOVED (abgebaut) --- #: last_checked: 2022-09-30 --- #: osm_watch: node id="6380038401" version="1"---	X::inwork 9195,11972
 #: note: Ampel befindet sich westlich der Kreuzung
-#: last_checked: 2022-10-27 (mapillary)
+#: last_checked: 2022-11-03
 	F::inwork 9076,12054
 #: valid ^^^
 #: check_frequency ^^^
@@ -193,7 +193,7 @@ Grunerstr./J¸denstr.	X::inwork 10804,12461
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter s¸dlich gelegen
-#: last_checked: 2022-10-14
+#: last_checked: 2022-11-03
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -242,7 +242,25 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten m¸ssen vom linke
 # 
 # REMOVED (steht noch, aber ausgeschaltet) --- #: next_check_id: LANGHANS-2021 --- #: last_checked: 2021-10-12 --- #: next_check: 2021-10-25 --- Roelckestr./Lehderstr.: tempor‰re Ampel	X::inwork 12842,16032
 # 
-# REMOVED --- #: next_check_id: BAHNHOF-2021 --- #: by: https://viz.berlin.de/2021/02/blankenbg-bahnhofstr/ --- #: by: https://viz.berlin.de/2022/05/bahnhofstr/ (keine Gegenverkehrsregelung mehr) --- #: add_fragezeichen: Gibt es noch immer eine Gegenverkehrsregelung? --- #: source_id: 2147347174 (bis 19.7.2021) --- #: source_id: viz2021:13.440334,52.59161,06.05.2021,09:00 (bis 30.9.2021, Gesamtmaﬂnahme bis Anfang 2022) (mittlerweile inaktiv) --- #: source_id: viz2021:13.44047,52.591526,07.02.2022,04:30 (bis 28.2.2022) (mittlerweile bis 20.5.2022) (mittlerweile bis 21.5.2022) (inaktiv) --- #: last_checked: 2022-05-17 (mapillary) vvv --- #: check_frequency: 60d vvv --- #: next_check: 2022-05-23 vvv --- #: valid: 20210222-20220521 vvv --- Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12672,20720 --- Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12723,20691 --- #: valid ^^^ --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
+#: next_check_id: BAHNHOF-2021
+#: by: https://viz.berlin.de/2021/02/blankenbg-bahnhofstr/
+#: by: https://viz.berlin.de/2022/05/bahnhofstr/ (keine Gegenverkehrsregelung mehr)
+#: add_fragezeichen: Gibt es noch immer eine Gegenverkehrsregelung?
+#: source_id: 2147347174 (bis 19.7.2021)
+#: source_id: viz2021:13.440334,52.59161,06.05.2021,09:00 (bis 30.9.2021, Gesamtmaﬂnahme bis Anfang 2022) (mittlerweile inaktiv)
+#: source_id: viz2021:13.44047,52.591526,07.02.2022,04:30 (bis 28.2.2022) (mittlerweile bis 20.5.2022) (mittlerweile bis 21.5.2022) (inaktiv)
+#: source_id: viz2021:13.440454,52.591541,07.11.2022,04:30 (bis 18.11.2022)
+#: last_checked: 2022-05-17 (mapillary) vvv
+# REMOVED --- #: check_frequency: 60d vvv
+#: next_check: 2022-11-18 vvv
+# REMOVED --- #: valid: 20210222-20220521 vvv
+#: valid: 20221107-20221118 vvv
+Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12672,20720
+Bahnhofstr.: (Blankenburg): Gegenverkehrsregelung	X::inwork 12723,20691
+#: valid ^^^
+#: next_check ^^^
+# REMOVED --- #: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fuﬂg‰ngerampel nordˆstlich der Einm¸ndung; Anforderungsampel
@@ -444,6 +462,8 @@ Straﬂe der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 #: XXX_prog: in O-W und W-O-Richtung verliert man garantiert 1:30 min, wenn man auf dem Radweg (Benutzungsplicht!) f‰hrt
 	X 18215,11690
 	X 18215,12123
+#: note: Anforderungsampel, kann automatisch aktiviert sein
+	F 18216,12209
 	X 18586,12151
 	X 19181,13485
 	X 19628,13517
@@ -1976,7 +1996,9 @@ Etwa 40 Meter nˆrdlich in der Straﬂe der Pariser Kommune eine weitere Fuﬂg‰ngera
 #: XXX_prog: gilt nicht auf dem Radweg im Zuge der Wartenberger Str. Richtung Nordosten
 	X 17516,16208
 #: XXX_prog: gilt nicht auf dem Radweg im Zuge der Wartenberger Str., S->NO
+#: note: indirekt links abbiegende Radfahrer aus Malchower Str. -> Wartenberger Str. haben u.U. 3x rot (2x Fahrbahn, 1x Straﬂenbahn)
 	X 17425,16165
+#: note: Kontaktschleife in der Bahnhofszufahrt, reagiert nicht auf Radfahrer 
 	X 21251,18508
 #: XXX_prog: nur eine Ampel: vvv
 	X 21843,18198

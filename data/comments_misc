@@ -532,6 +532,7 @@ Eingang Heerstr.	CP2; 22274,9622 22280,9629
 Eingang Eschenstr.	CP2; 22473,9530 22482,9550
 unter der S-Bahnbrücke	CP2; 24650,6034 24647,5995
 (Siegfriedstr. - Am Wasserwerk): entlang der Kolonie Weiße Taube	CS 16873,14236 16762,14237 16641,14329
+ausgeschildert als Siegfriedstr., ohne Hausnummern	CP2; 16873,14236 16965,14235
 ausgeschildert als Weydemeyerstr. 3-18	CP2; 11809,12760 11825,12792
 Hauptstr., linker Gehweg: an der Ampel Hauptstr./Hildegard-Marcusson-Str. auf die linke Seite wechseln	CP2; 16004,10204 16018,10212
 (Otisstr. - Wackerweg): Privatgelände	CP2; 3680,18913 3753,18889
@@ -851,3 +852,5 @@ Eidechsenweg: nicht ausgeschildert	CS -7720,13839 -7893,13781
 ausgeschildert "Zu den Häusern Metropolitan Park"	CP2; -7720,13839 -7893,13781
 Bootshausweg: nicht ausgeschildert	CP2; -1691,16848 -1673,16939
 ausgeschildert "Späthstr. 16 - 158"	CP2; 14028,5325 14063,5313
+Weideplan: nicht ausgeschildert	CP2; 19077,8149 19113,8121
+Binnendüne: nicht ausgeschildert	CP2; 19060,8125 19116,8096
