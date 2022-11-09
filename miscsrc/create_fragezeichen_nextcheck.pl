@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2009,2012,2016,2018,2020,2021 Slaven Rezic. All rights reserved.
+# Copyright (C) 2009,2012,2016,2018,2020,2021,2022 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -143,7 +143,7 @@ sub handle_file {
 					     $cat .= "::" . join("::", @attr);
 					 }
 				     }
-				     $cat .= ";" if $is_directed;
+				     $cat .= ";" if $is_directed && $cat !~ m{;$};
 				     $add_name = "($dir->{_nextcheck_label}[0])";
 				     $check_now = 1;
 				     last CHECK_TIME_LIMITS;
@@ -195,6 +195,9 @@ sub handle_file {
 		     $cat = "?::$1";
 		 } else {
 		     $cat = '?';
+		 }
+		 if ($r->[Strassen::CAT] =~ m{;$} && $cat !~ m{;$}) {
+		     $cat .= ';';
 		 }
 	     }
 

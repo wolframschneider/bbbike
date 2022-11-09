@@ -29,12 +29,18 @@ jobs:
            use_modperl:              0
            use_bbbike_ppa:           1
            bbbike_test_skip_modperl: 1
-         - os:                       'ubuntu-18.04'
+         - os:                       'ubuntu-20.04'
            add_name:                 '+ mod_perl'
            bbbike_test_gui:          0
            use_modperl:              1
            use_bbbike_ppa:           1
            bbbike_test_skip_modperl: 0
+         - os:                       'ubuntu-22.04'
+           add_name:                 '+ gui tests'
+           bbbike_test_gui:          1
+           use_modperl:              0
+           use_bbbike_ppa:           1
+           bbbike_test_skip_modperl: 1
 
     steps:
     - name: network check
@@ -52,7 +58,7 @@ jobs:
         sudo apt-get update -qq
         sudo apt-get remove -y libgd3 nginx
       if: "startsWith(matrix.os, 'ubuntu-')"
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build and test
       env:
         USE_SYSTEM_PERL:          1
@@ -118,10 +124,10 @@ jobs:
             distver:                    trusty
             bbbike_test_skip_mapserver: 0
             use_bbbike_ppa:             0
-          - dist:                       ubuntu
-            distver:                    jammy
-            bbbike_test_skip_mapserver: 0
-            use_bbbike_ppa:             1
+          #- dist:                       ubuntu
+          #  distver:                    jammy
+          #  bbbike_test_skip_mapserver: 0
+          #  use_bbbike_ppa:             1
     env:
       TRY_MYDEBS_BBBIKE_DE_FALLBACK_PORT: 1
     steps:
@@ -132,7 +138,7 @@ jobs:
         echo "My IP address: $(curl -s ipinfo.io/ip)"; true
         { set -o pipefail; curl -s -I http://bbbike.de/robots.txt | head -1; } || { echo "::warning::network check on port 80 failed"; }
         { set -o pipefail; curl -s -I http://mydebs.bbbike.de:8000/dists/jessie/InRelease | head -1; true; } || { echo "::warning::network check on port 8000 failed"; }
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build and test
       run: |
         set -e
