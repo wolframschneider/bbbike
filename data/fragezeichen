@@ -929,7 +929,6 @@ Melzow - Warnitz: querliegende Betonplatten (Betonplatten zumindest auf der nörd
 Am Neuen Garten: holpriges Kopfsteinpflaster (Liegt hier teilweise Asphalt?)	? -12582,127 -12332,585
 Weg am Flughafen - Rotberg: Feldweg (Ist der südöstliche Abschnitt des Weges ein Schotterweg? Oder nur ein unbefestigter Feldweg?)	? 17162,-6465 17910,-6981
 Eichendorffstr. (Schwanebeck-West): unbefestigte Straße (Wurde die Eichendorffstr. mittlerweile befestigt?)	? 17638,24756 17584,24703
-Ernst-Toller-Str.: unbefestigte Straße (Wurde die Ernst-Toller-Str. mittlerweile befestigt?)	? 17581,24815 17638,24756
 Maienhöhe: Asphalt (ist der südöstliche Abschnitt der Maienhöhe ebenfalls asphaltiert?)	? 32780,5513 32819,5506 32940,5485 33047,5433
 Lenzstr.: Asphalt (ist der nördliche Abschnitt der Lenzstr. ebenfalls asphaltiert?)	? 33098,5856 33119,6053 33135,6164
 Petersdorf: Asphalt (ist auch im westlichen Abschnitt asphaltiert?)	? 23256,76732 22470,76523
@@ -963,7 +962,6 @@ Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	?
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
-tragen (Wie viele Stufen sind hier?)	? -45,12243
 Alexander-von-Humboldt-Weg: Durchgang gesperrt, auch für Fußgänger (Ist der Straßenbahnübergang mittlerweile offen?)	? 18825,3325 18689,3465
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
@@ -990,8 +988,7 @@ F3.5 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from fragezeichen
 Jörsstr.: Asphaltierung vermutlich bereits durchgeführt (Wurde die Asphaltierung der Jörsstr. bereits abgeschlossen?)	? -1478,18407 -1358,18400
-Schulzendorfer Str.: Asphaltierung (Wurde die Asphaltierung der Straße abgeschlossen?)	? 2556,22598 2652,22615
 L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen Prenzlau und Güstow einen straßenbegleitenden Radweg? Wenn ja: auf welcher Seite und ist der Radweg asphaltiert?)	? 37020,101115 36600,101499 36138,101586 35027,102258 34671,102369 34607,102396
 # added from bbbike-temp-blockings-optimized
-Zähringerstr.: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung offen Richtung Osten, voraussichtlich bis November 2022 (Sind die Bauarbeiten mittlerweile beendet?)	? 4126,9932 3927,9935
-Braillestr.: Arbeiten der Wasserbetriebe, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten in der Braillestr. beendet?)	? 4512,5199 4477,5250 4430,5324
+Seydlitzstr.: Bauarbeiten zwischen Frobenstr. und Dessauerstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt Seydlitzstr. (Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?)	? 6349,2510 6459,2364
+Pascalstr.: Fahrbahn zwischen Heisenbergstr. und Schlesingerstr. wegen Hochbauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 4961,12940 4932,12968

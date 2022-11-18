@@ -224,8 +224,8 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: osm_watch: way id="4568174" version="44"
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
 # REMOVED --- #: osm_watch: way id="883834105" version="16"
-#: osm_watch: way id="883834106" version="21"
-#: osm_watch: way id="883834107" version="18"
+#: osm_watch: way id="883834106" version="22"
+#: osm_watch: way id="883834107" version="19"
 provisorische Tegeler Brücke	Br -255,15993 -239,16077
 #: next_check ^^^
 #: check_frequency ^^^
@@ -292,7 +292,7 @@ Rathausbrücke	Br 10357,12356 10416,12394
 #: by: https://berliner-abendblatt.de/2022/06/22/muehlendammbruecke-konzept-wurde-ueberarbeitet/
 #: by: https://www.berliner-woche.de/mitte/c-bauen/senat-ueberarbeitet-plaene-fuer-muehlendammbruecke-und-gertraudenbruecke_a350225
 #: XXX Mühlendammbrücke: geplanter Neubau --- wird es zu Einschränkungen für den Radverkehr kommen?
-#: last_checked: 2022-08-24
+#: last_checked: 2022-11-10
 #: next_check: 2024-06-01
 Mühlendammbrücke	Br 10574,12131 10625,12206
 # 
@@ -536,7 +536,7 @@ Fließbrücke	Br 1808,20817 1787,20836
 Fußgängerunterführung Mehrower Allee	Tu 20533,17051 20439,17103
 # REMOVED (alt) --- Eisenbahnbrücke Werder	Br -21227,-2017 -21125,-2012
 Eisenbahnbrücke Werder	Br -21243,-2038 -21117,-2031
-Oraniendammbrücke	Br 4222,22854 4193,22873
+Oraniendammbrücke	Br 4222,22854 4188,22867
 Havellandbrücke	Br -70554,38960 -70719,38954
 Peenebrücke Wolgast	Br 32743,183832 32848,183868 32956,183906
 Zecheriner Brücke	Br 35953,162870 36080,162883 36480,162910

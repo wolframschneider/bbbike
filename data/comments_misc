@@ -480,7 +480,7 @@ Am Alten Lokschuppen: nicht ausgeschildert	CS 15730,11279 15708,11193 15752,1111
 Creienfelder Weg: Privatstraße	CS 6817,23167 6712,23252
 Rosenthaler Str.: Richtung Kleine Rosenthaler Str.	CP2; 10324,13459 10318,13528
 (Schlitzer Str. - Welzower Steig): ausgeschildert als "Welzower Steig"	CP2; 6162,21938 6257,22005
-(Finsterwalder Str. - Quickborner Str.): am Bruckstückengraben, auch als "Möbelweg" bekannt	CS 6434,22244 6593,22302 6651,22324 6755,22331 7439,22306
+(Finsterwalder Str. - Quickborner Str.): am Bruckstückengraben, "Möbelweg" steht auf "wegweiserartigen" Schildern	CS 6434,22244 6593,22302 6651,22324 6755,22331 6943,22324 7439,22306
 nicht ausgeschildert	CP2; 8501,25358 8584,25371
 nicht ausgeschildert	CP2; 8776,25332 8722,25296
 Waldweg (Blankenfelde): Privatstraße	CS 9757,26351 9812,26385
@@ -617,7 +617,7 @@ ausgeschildert "Köpenicker Landstr."	CP2; 15303,8343 15242,8263
 Deilingeweg: nicht ausgeschildert?	CP2; 6259,23379 6229,23415
 (Frithjofstr. - Rotkardinalweg): entlang der ehemaligen Industriebahn	CS 12696,19334 12652,19460 12543,19760 12552,19765
 Schönower Str. - An der Panke: Weg entlang Bahn und NSG "Faule Wiesen"	CS 18801,28360 18827,28385 18852,28381 19027,28536 19154,28637 19217,28681 19287,28718 19502,28812 19532,28867 19573,28968 19535,29067
-Albrechtstr. - Selerweg: an der Kreuzung Klingsorstr./Neue Filandastr. abbiegen	CP; 5527,5217 5583,5179 5633,5184
+Albrechtstr. - Selerweg: an der Kreuzung Klingsorstr./Neue Filandastr. abbiegen	CP; 5527,5217 5583,5179 5616,5182 5633,5184
 (Verlängerte Hertzallee): TU-Gelände	CS 5352,11502 5171,11589 4950,11696 4905,11785
 Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3024,21286 3068,21150
 Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3068,21150 3024,21286
@@ -834,7 +834,7 @@ Volkerweg: nicht ausgeschildert	CS 16005,4012 16046,4073 16060,4093 16145,4217 1
 Eiselenweg - Uferweg: Einfahrt zum Uferweg ist etwas versteckt, vor dem Neubaugebiet links abbiegen	CP; 21364,5430 21442,5414 21476,5434
 Büxensteinallee: diagonal über die Straßenbahngleise, erst dahinter ist ausgeschildert	CP2; 22162,1067 22228,1071
 Am Weingarten: an der Einmündung Sigridstr. den linken Strang benutzen	CP2; 13867,14507 13765,14665
-Upstallweg: nicht ausgeschildert	CP2; 17954,10367 18039,10398
+Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
 Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17794,8429 17738,8450
 ausgeschildert als "Dora-Duncker-Park"	CP2; 8358,9567 8359,9537
 ausgeschildert als "zum Am Gutshof"	CP2; 17887,18975 17874,18936
@@ -854,3 +854,5 @@ Bootshausweg: nicht ausgeschildert	CP2; -1691,16848 -1673,16939
 ausgeschildert "Späthstr. 16 - 158"	CP2; 14028,5325 14063,5313
 Weideplan: nicht ausgeschildert	CP2; 19077,8149 19113,8121
 Binnendüne: nicht ausgeschildert	CP2; 19060,8125 19116,8096
+Am Werksgarten: nicht ausgeschildert	CP2; 22802,5327 22803,5278
+Am Werksgarten: nicht ausgeschildert	CP2; 22805,5179 22803,5241

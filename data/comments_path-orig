@@ -119,7 +119,7 @@ Nordufer: bereits an der Ampel Föhrer Str. auf den linken Zweirichtungsradweg we
 #: next_check_id: PYRAMIDENBRUECKE-2022
 #: note: vor den Bauarbeiten: unbequemes Überqueren, aber (mittlerweile?) möglich; 
 #: XXX hier wird eine Querungshilfe erstellt (nach Brückenneubau)
-#: last_checked: 2022-06-26
+#: last_checked: 2022-11-12
 #: check_frequency: 180d
 #: next_check: 2022-12-31
 An der Wuhlheide - Wuhlewanderweg: bereits an der Ampel Rudolf-Rühl-Allee die Straßenseite wechseln	PI; 21303,5826 21365,5832 21470,5809 21522,5771 21569,5730 21600,5694 21605,5687 21618,5699
@@ -621,7 +621,7 @@ Rathausstr. - Frankfurter Allee: Fußgängerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ändert sich die Ausschilderung? vvv
-#: last_checked: 2022-11-05 vvv
+#: last_checked: 2022-11-12 vvv
 #: note: früher: ausgeschildert "zur Salzmannstraße Huronseestraße"
 nicht ausgeschildert, Richtung Salzmannstr./Huronseestr.	CP2; 16900,9861 16895,9922
 #: note: früher: ausgeschildert "zur Sewanstraße"
@@ -708,7 +708,7 @@ Martin-Hoffmann-Str. - An den Treptowers: zum Linksabbiegen die linke Fußgängera
 Ernst-Ruska-Ufer - Albert-Einstein-Str.: unbequemes Überqueren des Ernst-Ruska-Ufers, ggfs. bereits an der Ampel Wegedornstr. auf die linke Seite wechseln	PI; 18929,2454 19091,2443 19094,2495
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2022-11-03 vvv
+#: last_checked: 2022-11-15 vvv
 #: next_check: 2024-06-01 vvv
 Jüdenstr.: zum Überqueren der Grunerstr. Fußgängerampel rechts benutzen	CP; 10831,12371 10804,12461 10772,12515
 Grunerstr. - Jüdenstr.: zum Überqueren der Grunerstr. Fußgängerampel benutzen	CP; 10738,12364 10804,12461 10772,12515
@@ -748,4 +748,8 @@ Tempelhofer Damm - Parkstr.: an der Fußgängerampel am Rathaus auf die linke Seit
 Heerstr. -> Reimerweg: entweder schon an der Fußgängerampel Pillnitzer Weg auf die linke Seite wechseln oder zur Ampel Gärtnereiring fahren, die Heerstr. überqueren und etwas zurückfahren	PI; -6512,12581 -6538,12590 -6590,12606 -6791,12429
 # 
 Keithstr. - Kleiststr.: ggfs. auf dem linken Gehweg bis zur Ampel fahren	CP; 6471,10851 6468,10550 6532,10529
+# 
+Bellevuestr. - Weg an der Alten Erpe: ggfs. schon an der Ampel Salvador-Allende-Str./Fürstenwalder Damm auf die linke Seite wechseln	PI; 23402,5483 23384,5541 23379,5559 23321,5560
+# 
+Breite Str. - Eintrachtstr.: wegen der Straßenbahntrasse frühzeitig auf den linken Gehweg wechseln	PI; 10680,18380 10710,18393 10650,18544
 # 
