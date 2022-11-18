@@ -49,7 +49,7 @@ if (!defined $cgi_url) {
 
 plan tests => 24;
 
-my $ua = LWP::UserAgent->new(keep_alive => 1);
+my $ua = LWP::UserAgent->new(keep_alive => 1, 'no_proxy' => ["localhost"]);
 $ua->agent('BBBike-Test/1.0');
 $ua->env_proxy;
 
