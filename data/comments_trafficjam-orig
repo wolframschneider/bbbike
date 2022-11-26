@@ -19,13 +19,14 @@
 #: next_check_id: SCHARNWEBERTRAM-2022
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1261737.php (Baumaßnahmen Gürtelstraße 7.11.2022-22.12.2022, keine Einschränkung des Radverkehrs)
 #: by: https://berliner-abendblatt.de/2022/11/04/strassensperrung-bis-dezember-baumassnahmen-der-bvg-auf-der-guertelstrasse/
+#: by: https://www.berliner-woche.de/lichtenberg/c-verkehr/die-guertelstrasse-ist-gesperrt_a363620
 #: source_id: viz2021:13.476298,52.512793,08.11.2022,08:00 (Gürtelstr., 8.11.2022-2.12.2022)
-#: last_checked: 2022-11-14 vvv
+#: last_checked: 2022-11-22 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-12-02 vvv
 #: valid: -20221202 vvv
 #: note: Stau gesehen: 2022-11-08 (Di) gegen 14:25
-#: note: keinen Stau gesehen: 2022-11-11 (Fr) gegen 13:00, 2022-11-14 (Mo) gegen 12:30
+#: note: keinen Stau gesehen: 2022-11-11 (Fr) gegen 13:00, 2022-11-14 (Mo) gegen 12:30, 2022-11-22 (Di) gegen 13:00
 Jessnerstr.	Jam; 14849,11539 14946,11697 14986,11760 15077,11910
 #: note: Stau gesehen: 2022-11-08 (Di) gegen 14:25, 2022-11-11 (Fr) gegen 13:00
 #: note: kaum Stau gesehen: 2022-11-14 (Mo) gegen 12:30
@@ -38,7 +39,7 @@ Jessnerstr.	Jam; 15077,11910 15117,12106
 # 
 #: next_check_id: ORANIENBURGERTORTRAM-2022
 #: note: Stau gesehen: 2022-11-08 (Di) gegen 09:30 vvv
-#: last_checked: 2022-11-08 vvv
+#: last_checked: 2022-11-19 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-12-01 vvv
 #: valid: -20221201 vvv
@@ -52,9 +53,9 @@ Gartenstr.	Jam; 9383,13986 9514,13826 9535,13801 9670,13637
 # 
 #: next_check_id: MARKGRAFENDAMM-2022
 #: note: Stau gesehen: 2022-08-24 (Mi) gegen 13:00, 2022-08-25 (Do) gegen 14:30, 2022-08-27 (Sa) gegen 17:30, 2022-10-07 (Fr) gegen 13:20
-#: note: kurzen Stau gesehen (ab Corinthstr.): 2022-09-24 (Sa) gegen 16:40, vermutlich 2022-10-10 (Mo) gegen 13:05, 2022-10-24 (Mo) gegen 16:30
-#: note: keinen Stau gesehen: 2022-08-29 (Mo) gegen 18:10, 2022-09-01 (Do) gegen 19:00, 2022-09-03 (Sa) gegen 12:45, 2022-09-04 (So) gegen 15:00, 2022-09-21 (Mi) gegen 19:50, 2022-09-28 (Mi) gegen 11:15, 2022-10-16 (So) gegen 14:40, 2022-10-18 (Di) gegen 17:30, 2022-10-20 (Do) gegen 12:30, 2022-10-23 (So) gegen 15:50, 2022-11-01 (Di) gegen 17:50, 2022-11-08 (Di) gegen 13:50, 2022-11-12 (Sa) gegen 14:00 und 16:00, 2022-11-13 (So) gegen 11:45
-#: last_checked: 2022-11-13
+#: note: kurzen Stau gesehen (ab Corinthstr.): 2022-09-24 (Sa) gegen 16:40, vermutlich 2022-10-10 (Mo) gegen 13:05, 2022-10-24 (Mo) gegen 16:30, 2022-11-21 (Mo) gegen 13:40
+#: note: keinen Stau gesehen: 2022-08-29 (Mo) gegen 18:10, 2022-09-01 (Do) gegen 19:00, 2022-09-03 (Sa) gegen 12:45, 2022-09-04 (So) gegen 15:00, 2022-09-21 (Mi) gegen 19:50, 2022-09-28 (Mi) gegen 11:15, 2022-10-16 (So) gegen 14:40, 2022-10-18 (Di) gegen 17:30, 2022-10-20 (Do) gegen 12:30, 2022-10-23 (So) gegen 15:50, 2022-11-01 (Di) gegen 17:50, 2022-11-08 (Di) gegen 13:50, 2022-11-12 (Sa) gegen 14:00 und 16:00, 2022-11-13 (So) gegen 11:45, 2022-12-18 (Fr) mittags (2x)
+#: last_checked: 2022-11-21
 #: check_frequency: 90d
 #: next_check: 2023-03-15
 	Jam; 14641,10552 14608,10409 14558,10264
@@ -82,7 +83,7 @@ Gartenstr.	Jam; 9383,13986 9514,13826 9535,13801 9670,13637
 #: source_id: viz2021:13.4604,52.550369,26.09.2022,07:00 (zwischen Pistoriusstr. und Lindenstr. bis 25.10.2022) (bis 28.2.2023)
 #: XXX Einzelne Straßenanbindungen werden abgesperrt (Wegenerstr., Rennbahnstr.), außerdem wird direktes Linksabbiegen an einigen Stellen nicht möglich sein. Wie wird sich das auf Radfahrer auswirken?
 #: also_indoor: traffic vvv
-#: last_checked: 2022-10-20 (mapillary) vvv
+#: last_checked: 2022-11-08 (mapillary) vvv
 #: check_frequency: 30d vvv
 #: next_check: 2023-02-28 vvv
 #: valid: -20230228 vvv
@@ -96,7 +97,7 @@ Berliner Allee: Gleisbauarbeiten	Jam; 14619,16551 14610,16522 14556,16391 14499,
 #: also_indoor ^^^
 # 
 #: next_check_id: KARLMARXSTR-2018
-#: last_checked: 2022-11-01 vvv
+#: last_checked: 2022-11-24 vvv
 #: check_frequency: 120d vvv
 # REMOVED --- #: next_check: 2022-09-01 vvv
 Karl-Marx-Str.	Jam; 12330,8636 12494,8501 12545,8449 12562,8432 12582,8408 12598,8390
@@ -143,15 +144,15 @@ Leipziger Str. (Richtung Osten)	Jam; 9268,11590 9444,11616 9569,11631
 Friedrichstr.	Jam; 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351
 # 
 #: next_check_id: FRIEDRICH-2020
-#: last_checked: 2022-09-23 vvv
+#: last_checked: 2022-11-23 vvv
 #: check_frequency: 90d vvv
-# REMOVED --- #: next_check: 2022-04-01 vvv
+#: next_check: 2022-12-31 vvv
 # REMOVED --- #: valid: !20200821-20220401 vvv
-#: valid: -20200821 vvv
+# REMOVED --- #: valid: -20200821 vvv
 Friedrichstr.	Jam; 9418,11804 9432,11702 9444,11616
 Friedrichstr.	Jam; 9444,11616 9432,11702 9418,11804
-#: valid ^^^
-# REMOVED --- #: next_check ^^^
+# REMOVED --- #: valid ^^^
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 # 

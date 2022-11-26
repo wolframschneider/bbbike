@@ -1211,6 +1211,7 @@ Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788&d=20191216 (Benennung nach Hans Otto Obrikat vorgeschlagen)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_29_1829_2008_online.pdf (Straßenlandwidmung, als "Schnellerstr." bezeichnet)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_41_2765_2832_online.pdf (Benennung: Obrikatstr.)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_46_3097_3200_online.pdf (Berichtigung)
 #: XXX oder wird statt Wasserstr. und Uferstr. die Straße nach Hans Otto Obrikat benannt? (erster Vorschlag: "Else-Schierhorn-Str.")
 #: last_checked: 2022-10-14 (Amtsblatt)
 #: check_frequency: 45d
@@ -1299,7 +1300,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="5"
-#: last_checked: 2022-10-22 (mapillary)
+#: last_checked: 2022-11-23
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CS 9939,12174 9909,12261
 # 
@@ -1339,7 +1340,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2022-10-18
+#: last_checked: 2022-11-18
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1594,7 +1595,7 @@ beide Geh/Radwege hinter der Einmündung Neukirchstr. können Richtung Am Feuchten
 #: next_check_id: HANSPETERSPLATZ-2022
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1128830.php (Benennung eines Platzes nach Hans Peters)
 #: XXX wann wird der Platz ausgeschildert?
-#: last_checked: 2022-09-30
+#: last_checked: 2022-11-19
 #: check_frequency: 45d
 Hans-Peters-Platz: nicht ausgeschildert	CS 7739,14119 7679,14030
 # 
@@ -1700,7 +1701,7 @@ Am Weingarten: an der Einmündung Sigridstr. den linken Strang benutzen	CP2; 1386
 Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2022-11-12 vvv
+#: last_checked: 2022-11-25 vvv
 Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17794,8429 17738,8450
 # REMOVED --- Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17738,8450 17682,8464 17608,8483
 # REMOVED --- Irmtraud-Morgner-Str.: noch nicht ausgeschildert	CS 17524,8536 17627,8556 17755,8519
@@ -1750,6 +1751,12 @@ Binnendüne: nicht ausgeschildert	CP2; 19060,8125 19116,8096
 # 
 Am Werksgarten: nicht ausgeschildert	CP2; 22802,5327 22803,5278
 Am Werksgarten: nicht ausgeschildert	CP2; 22805,5179 22803,5241
+# 
+Schilder VoltAir-Parkhaus und Zugang Dircksenstraße 04	CP2; 11240,12368 11344,12410
+# 
+#: XXX Wird hier noch ausgeschildert?
+#: last_checked: 2022-11-22
+Forum an der Museumsinsel: nicht ausgeschildert	CS 9650,13074 9682,13167 9633,13192 9602,13081
 # 
 # REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
 ##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)

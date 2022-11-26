@@ -24,12 +24,12 @@ Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8904,12489 8999,1
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
 Mittelstr.: Bauarbeiten, Fahrbahn teilweise gesperrt	q3::inwork 9011,12423 9131,12438
 Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
-Friedrichstr.: Fußgängerzone mit Radspur, Höchstgeschwindigkeit 20km/h	q1 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 (Grunerstr. - Gustav-Böß-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10868,12572 10772,12515
 Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 10364,11896 10332,11929 10392,11991
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwork; 9581,12588 9613,12381
+Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9133
 Wandlitzstr.: in Höhe Lehndorffstr. kann die Fahrbahn gesperrt sein	q4::inwork 18401,8636 18448,8602
 Turmstr.: Bauarbeiten, teilweise Führung des Radwegs über den engen Gehweg	q2::inwork; 6692,13333 6674,13332 6535,13327 6377,13321
 Turmstr.: Bauarbeiten, Engstellen, Umweg über den Kleinen Tiergarten	q3::inwork; 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
@@ -65,7 +65,7 @@ Neue Promenade: Fußgängerzone, Radfahren erlaubt, aber nur langsam möglich	q4 10
 Am Zwirngraben: Tische auf der Straße, Fußgänger	q4 10339,13052 10185,12982
 Neue Promenade: Fußgängerzone, Radfahren erlaubt	q2 10185,12982 10132,12941
 Pariser Platz/Brandenburger Tor: Fußgänger	q2 8804,12280 8722,12268 8637,12258 8592,12252 8538,12245
-Pariser Platz: Fußgänger	q2 8637,12258 8643,12208 8728,12220 8722,12268 8717,12302 8714,12319 8673,12315 8630,12310 8637,12258
+Pariser Platz: Fußgänger	q2 8637,12258 8641,12227 8643,12208 8705,12217 8728,12220 8722,12268 8717,12302 8714,12319 8673,12315 8630,12310 8637,12258
 Potsdamer Platz: Fußgänger	q3 8542,11502 8442,11555
 Blücherplatz: reger Fußgängerverkehr	q4 9579,10122 9599,10175
 Blücherplatz: Fußgängerverkehr	q4 9599,10175 9631,10142
@@ -411,7 +411,9 @@ Fritz-Schiff-Weg: Fußgänger	q1 13457,12505 13476,12461 13448,12340
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10364,11896 10329,11842 10373,11781 10439,11772 10515,11785 10599,11819 10662,11863 10672,11870
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10672,11870 10680,11875 10776,11942
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10776,11942 10824,11992
-(Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17284,10616 17294,10632 17249,10651
+(Baikalstr. - Rummelsburger Str.): Fußgänger, Bordstein	q3 17276,10617 17277,10633
+(Baikalstr. - Rummelsburger Str.): Fußgänger, Rampe	q2 17277,10633 17298,10633
+(Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17298,10633 17249,10651
 (Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17249,10702 17244,10737 17261,10827 17257,10875
 (Tränkegraben - Eggersdorfer Str./Rummelsburger Str.): Fußgänger	q1 17261,10827 17226,10865
 Verl. Pücklerstr.: Fußgänger, Hundeauslaufgebiet	q1 1553,6741 1338,6708 1154,6672 956,6631 902,6642 878,6651 818,6616 775,6615 698,6592 663,6575 546,6583 369,6594 340,6598 218,6571
@@ -1450,7 +1452,6 @@ Cajamarcaplatz: viele Fußgänger	q4 17728,5756 17713,5728 17730,5698
 Cajamarcaplatz: viele Fußgänger, Bordstein	q4 17730,5698 17782,5698
 (Fußgängertunnel S-Bhf. Schöneweide): viele Fußgänger, ggfs. schieben	q4 17730,5698 17639,5612
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle): Fußgänger, Bordstein	q3 17639,5612 17675,5521
-Wasserweg: Bordstein	q2 15680,8914 15873,8884
 (Ella-Trebe-Str. - Invalidenstr.): einige Fußgänger	q1 7938,13302 7968,13335 8003,13374
 Europaplatz: einige Fußgänger	q1 7880,13315 7938,13302
 Wuhlestr. [Wohngebiet]: Fußgänger	q1 21580,13583 21430,13602
@@ -2376,6 +2377,7 @@ Azaleenstr.: Bodenschwelle	q1 23443,4524 23491,4534 23536,4543
 (entlang der Alten Erpe): einige Fußgänger, schmal	q2 22855,5554 22872,5555 22932,5594 22983,5601 23216,5560 23270,5567 23321,5560 23379,5559
 (Berliner Str. - Kissingenstr.): Lieferverkehr, einige Fußgänger	q2 10852,17801 10896,17846 10944,17863
 (Blitzenroder Ring - Packereigraben): einige Fußgänger	q2 5808,22387 5796,22401 5796,22412
+Johannisthaler Park: Grünanlage, Fußgänger	q4 17760,4867 17659,4849 17580,4761
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -3303,6 +3305,8 @@ Ludolfinger Platz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp;
 Sewanstr. - Balatonstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 17729,10331 17741,10386
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich): gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
+Holteistr.: Hochbauarbeiten, Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 14535,11327 14506,11275
+Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 5522,8011 5520,8132 5573,8197
 Möllhausenufer: Bauarbeiten, Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 23608,1210 23520,1194
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 8266,14346 8442,14456
 Hönower Str.: temporäre Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 18735,9421 18765,9426 18846,9532

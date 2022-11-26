@@ -259,7 +259,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/2022/08/18/gegen-umbenennung-mohrenstrasse-koennen-nur-anwohner-vorgehen/
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2022-11-03 vvv
+#: last_checked: 2022-11-23 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -369,17 +369,21 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://berliner-abendblatt.de/2022/11/07/friedrichstrasse-verein-fordert-neues-gesamtkonzept/
 #: by: https://berliner-abendblatt.de/2022/11/07/friedrichstrasse-ab-22-november-rollt-wieder-der-autoverkehr/
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/freie-fahrt-auf-der-friedrichstrasse_a363323
+#: by: https://viz.berlin.de/2022/11/verkehrsvorschau-221122/ (offen für Kfz-Verkehr, bis Ende 2022 Umwidmung in eine dauerhafte Fußgängerzone)
+#: by: https://berliner-abendblatt.de/2022/11/22/ab-mitternacht-wieder-autos-in-der-friedrichstrasse-erlaubt/
+#: by: https://berliner-abendblatt.de/2022/11/23/wieder-autos-in-der-berliner-friedrichstrasse-erlaubt/
+#: by: https://berliner-abendblatt.de/2022/11/23/friedrichstrasse-aktionsbuendnis-demonstriert-fuer-einen-neustart/
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/aktionsbuendnis-fordert-echten-neuanfang-fuer-die-friedrichstrasse_a364814
 #: source_id: 2147346249
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
 #: priority: #A
-#: last_checked: 2022-10-28
+#: last_checked: 2022-11-23
 # REMOVED --- #: check_frequency: 14d
 # REMOVED --- #: check_frequency: 90d
-#: next_check: 2022-11-22
-#: valid: !20200821-20221122
+#: next_check: 2022-12-31
+# REMOVED --- #: valid: !20200821-20221122
 Friedrichstr. (Mitte, Kreuzberg)	H 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
-#: valid: 20200821-20221122
-Friedrichstr. (Mitte, Kreuzberg)	NN 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
+# REMOVED --- #: valid: 20200821-20221122 --- Friedrichstr. (Mitte, Kreuzberg)	NN 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
 # 
 Friedrichstr. (Mitte, Kreuzberg)	H 9384,12103 9373,12197 9369,12253 9358,12351 9343,12464 9330,12538 9314,12652 9313,12662 9303,12718 9298,12765 9286,12886 9279,12953 9269,13060 9262,13111 9254,13171 9246,13235 9225,13389 9212,13471
 #: street_width ^^^
@@ -1510,7 +1514,7 @@ Heinrich-Heine-Str.	H 11250,11715 11174,11554 11094,11377 11039,11254 10937,1103
 Ebertstr.	H 8542,11502 8548,11571 8553,11630 8553,11638 8562,11744 8567,11799 8571,11846 8577,11896 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
 Pariser Platz	N 8804,12280 8722,12268
 Pariser Platz	NN 8722,12268 8637,12258 8592,12252
-Pariser Platz	NN 8637,12258 8643,12208 8728,12220 8722,12268 8717,12302 8714,12319 8673,12315 8630,12310 8637,12258
+Pariser Platz	NN 8637,12258 8641,12227 8643,12208 8705,12217 8728,12220 8722,12268 8717,12302 8714,12319 8673,12315 8630,12310 8637,12258
 #: oldname: -20000616: Platz vor dem Brandenburger Tor
 Platz des 18. März	NN 8592,12252 8538,12245
 Simsonweg	NN 8354,12416 8391,12389 8546,12279
@@ -1529,7 +1533,8 @@ Bodestr.	N 9919,12613 9948,12631 10017,12675 10054,12699 10086,12725
 #: note: laut Wikipedia befindet sich die "Museumsstr." hier, aber es gibt keine Straßenschilder...
 (Museumsinsel)	NN 10017,12675 9972,12732 9987,12744 9952,12791
 Friedrichsbrücke	NN 10086,12725 10166,12777
-Monbijouplatz	H 9932,13109 10105,13004
+Monbijouplatz	H 9938,13114 10000,13079 10105,13004
+Monbijouplatz	N 10014,13108 10000,13079
 Kleine Präsidentenstr.	H 10105,13004 10117,12973 10132,12941
 Neue Promenade	NN 10132,12941 10185,12982 10263,13047 10286,13084
 Neue Promenade	NN 10264,13097 10263,13047
@@ -1680,7 +1685,7 @@ Torstr.	H 10898,13632 10741,13685 10645,13711 10572,13731 10459,13760 10319,1378
 An der Spandauer Brücke	H 10418,12922 10371,13006 10339,13052 10301,13075
 Hackescher Markt [An der Spandauer Brücke]	H 10301,13075 10286,13084 10264,13097
 Hackescher Markt [Oranienburger Str.]	H 10264,13097 10220,13098
-Oranienburger Str. (Mitte)	H 10220,13098 10077,13100 9932,13109 9786,13178 9771,13182 9611,13245 9415,13315 9293,13366 9225,13389
+Oranienburger Str. (Mitte)	H 10220,13098 10074,13103 10014,13108 9938,13114 9786,13178 9771,13182 9611,13245 9415,13315 9293,13366 9225,13389
 Große Präsidentenstr.	N 10220,13098 10105,13004
 Ebertsbrücke	N 9533,12925 9538,12993
 Tucholskystr.	N 9538,12993 9559,13087 9588,13174 9611,13245 9651,13406 9609,13522 9579,13604
@@ -1709,7 +1714,7 @@ Schönhauser Allee	HH 10883,15129 10886,15251 10887,15287
 Schönhauser Allee	HH 10887,15287 10902,15422 10917,15525 10941,15697 10953,15787 10964,15896 10969,15944 10975,16010 10982,16121 10989,16197 10997,16280 11004,16360 11019,16465 11027,16553
 Choriner Str.	N 10480,13871 10487,13928 10502,14070 10561,14181 10629,14299 10864,14692 10893,14705
 Brunnenstr.	H 10177,13766 10002,14092 9938,14356 9864,14578 9855,14598 9838,14640 9800,14722 9718,14888 9642,15038 9566,15188 9540,15238 9443,15430 9309,15700 9291,15740 9267,15790 9255,15816 9242,15843 9183,15909 9123,15963
-Große Hamburger Str.	N 10077,13100 10016,13306 9986,13412 9961,13502
+Große Hamburger Str.	N 10074,13103 10016,13306 9986,13412 9961,13502
 Kleine Hamburger Str.	N 9670,13637 9744,13584 9793,13549
 Kleine Hamburger Str.	N 9853,13511 9898,13484
 Kleine Auguststr.	N 9993,13682 10049,13528
@@ -1736,18 +1741,18 @@ Minna-Cauer-Str.	HH 7880,13315 7879,13438 7890,13515 7930,13578 8019,13650
 Heidestr. (Moabit)	NN 8098,13419 8092,13467
 Heidestr. (Moabit)	N 8092,13467 8059,13551 8048,13578 8019,13650
 Heidestr. (Moabit)	HH 8019,13650 7979,13733 7973,13743 7910,13848 7865,13924 7820,13994 7778,14059 7739,14119 7732,14131 7697,14187 7652,14257 7612,14325 7566,14404 7532,14446 7487,14472 7401,14526 7368,14573
-#: note: blaues Straßenschild vvv
+# REMOVED (nicht mehr) --- #: note: blaues Straßenschild vvv
 Otto-Weidt-Platz	NN 7923,14142 7850,14100
 #: osm.highway: service
 #: note: Einfahrt verboten, Anlieger frei
 Otto-Weidt-Platz	N 7850,14100 7778,14059
-#: note ^^^
+# REMOVED (nicht mehr) --- #: note ^^^
 Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: next_check_id: EUROPACITY-2015
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/erschliessung-und-grundstuecksuebertragung-bebauungsplan-1-62b-oestlich-heidestrasse-otto-weidt-platz-1032336.php
 #: by: https://www.berliner-woche.de/moabit/c-bauen/golda-meir-steg-verbindet-jetzt-moabit-mit-mitte_a330725
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2022-11-01 (daf)
+#: last_checked: 2022-11-19
 #: check_frequency: 30d
 #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -1760,7 +1765,7 @@ Lydia-Rabinowitsch-Str.	N 7820,13994 7930,14060 7973,13991 7959,13982 7865,13924
 (Am Hamburger Bahnhof - Lydia-Rabinowitsch-Str.)	NN 7997,13892 7959,13982
 #: XXX wie wird diese Straße heißen? Der erste Vorschlag "Annemarie-Renger-Str." wird es wohl nicht werden...
 # REMOVED (mittlerweile: Spielstraße) --- #: XXX wird es Einschränkungen für den Autoverkehr geben? --- es sieht aus nach: Einfahrt verboten, Tiefgarage frei
-#: last_checked: 2022-09-30
+#: last_checked: 2022-11-19
 #: check_frequency: 60d
 (Uferweg - Heidestr.)	N 8057,13923 7997,13892 7910,13848
 Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7781,14238 7697,14187
@@ -1769,7 +1774,7 @@ Lisa-Fittko-Str.	N 7734,13944 7820,13994
 George-Stephenson-Str.	N 7487,14472 7452,14415 7500,14333 7569,14217 7679,14030 7734,13944
 #: next_check_id: HANSPETERSPLATZ-2022
 #: XXX zurzeit darf der Platz noch von Fahrzeugen benutzt werden (wegen der Bauarbeiten in der George-Stephenson-Str.?), wird später vermutlich aufgehoben, dann NN ohne osm.highway:service; eigentlich Einbahnstraße, aber der Platz ist breit genug...
-#: last_checked: 2022-09-30
+#: last_checked: 2022-11-19
 #: check_frequency: 90d
 #: osm.highway: service
 Hans-Peters-Platz	N 7739,14119 7679,14030
@@ -2474,7 +2479,7 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 (provisorische Umfahrung)	NN 14310,7022 14276,7021 14245,7037 14236,7058 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2022-10-18 vvv
+#: last_checked: 2022-11-18 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: valid: 20140224-20221231
@@ -2601,7 +2606,7 @@ Katharina-Boll-Dornberger-Str.	NN 18943,3508 18848,3600 18836,3611
 Wilhelm-Hoff-Str.	N 18828,3196 18892,3256 18953,3318
 Wilhelm-Hoff-Str.	NN 18953,3318 19033,3397 19057,3422 19061,3426 19107,3472 19125,3491
 (Wilhelm-Hoff-Str. - James-Franck-Str.)	NN 18828,3196 18822,3188 18724,3091 18716,3082 18707,3074 18613,2983 18601,2971
-Alexander-von-Humboldt-Weg	NN 19015,3129 18892,3256 18825,3325 18689,3465
+Alexander-von-Humboldt-Weg	NN 19015,3129 18892,3256 18818,3332 18689,3465
 Johann-Hittorf-Str.	N 18946,3077 18802,2993 18757,2966 18716,2966 18601,2971
 Karl-Ziegler-Str.	N 18946,3077 18828,3196 18766,3260 18624,3402
 Zum Trudelturm	N 19021,2946 19101,3028
@@ -2637,7 +2642,7 @@ Straße 12 (Neukölln)	N 13882,6674 13881,6634 13915,6592
 (Grenzallee - Britzer Hafensteg)	NN 13881,6634 13831,6588 13857,6523 13864,6415 13984,6270 13993,6221
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
-#: last_checked: 2022-09-15 vvv
+#: last_checked: 2022-11-18 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 #: valid: 20140224-20230630
@@ -4288,6 +4293,7 @@ Buchholzweg	N 4535,15530 4466,15350 4389,15336
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036599644659/599644659/00476532/32-Anlagen/02/MA_2627_V.pdf (Klagen)
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1265051.php (Umbenennung am 2.12.2022)
 #: by: https://berliner-abendblatt.de/2022/11/16/jetzt-wirklich-strassen-im-afrikanischen-viertel-werden-umbenannt/
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_47_3201_3352_online.pdf (endgültige Umbenennung)
 #: add_fragezeichen: Wurde die Umbenennung zu "Cornelius-Fredericks-Str." schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: also_indoor: search Cornelius-Fredericks-Straße
 #: osm_watch: way id="247340732" version="20"
@@ -5965,7 +5971,7 @@ Segelfliegerdamm	H 17490,3630 17522,3653 17552,3675 17585,3745 17592,3901 17607,
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5033
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036590665323/590665323/00106020/20-Anlagen/04/B0932SB.pdf (Ablehnung)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_42_4657_4844_online.pdf (Widmung von Straßenland)
-#: osm_watch: way id="40571026" version="12"
+#: osm_watch: way id="40571026" version="13"
 #: last_checked: 2022-05-14 (mapillary)
 #: check_frequency: 360d
 Segelfliegerdamm [Stichstraße]	N 17592,3901 17782,3880
@@ -6723,7 +6729,7 @@ Köpenicker Chaussee	H 16374,9760 16432,9673 16791,9137 16831,9078 17067,8725 171
 Blockdammweg	H 17067,8725 17126,8750 17380,8858 17729,8850
 Blockdammweg	N 17754,8863 17760,8853 17904,8924 17972,8968
 Blockdammweg	NN 17972,8968 17990,8963 18070,9022
-Hönower Wiesenweg	N 17856,8162 17793,8225 17753,8290 17707,8328 17652,8349 17617,8363 17554,8458 17533,8505 17524,8536 17515,8567 17497,8623 17468,8692 17416,8767 17380,8858 17335,8971 17308,9090 17282,9135
+Hönower Wiesenweg	N 17856,8162 17793,8225 17753,8290 17707,8328 17652,8349 17617,8363 17584,8413 17554,8458 17533,8505 17524,8536 17515,8567 17497,8623 17468,8692 17416,8767 17380,8858 17335,8971 17308,9090 17282,9135
 (Hönower Wiesenweg - Betriebsbahnhof Rummelsburg)	N 17308,9090 17300,9135 17284,9198
 # 
 #: note: Parkstadt Karlshorst vvv
@@ -13905,7 +13911,10 @@ Annemarie-Renger-Str.	NH 8207,12606 8206,12734 8206,12757
 # REMOVED (laut osm "komplett abgetragen") --- (Umfahrung an der Schweizer Botschaft)	N 8206,12757 8204,12816 8168,12848 8114,12839 8030,12824
 Monbijoubrücke	NN 9654,12882 9683,12913 9707,12974
 Monbijoustr.	N 9707,12974 9714,12995 9736,13061 9771,13182
-Ziegelstr. (Mitte)	N 9269,13060 9401,13072 9559,13087 9636,13076 9736,13061
+#: note: privat
+#: osm.highway: service
+Forum an der Museumsinsel	N 9650,13074 9682,13167 9633,13192 9602,13081
+Ziegelstr. (Mitte)	N 9269,13060 9401,13072 9559,13087 9602,13081 9650,13074 9736,13061
 Johannisstr.	N 9254,13171 9385,13174 9588,13174
 John-Schehr-Str.	N 13026,14234 12954,14287 12881,14342 12832,14378 12730,14458 12573,14581 12512,14626 12422,14692
 Geraer Str.	N 5414,1304 5435,1390 5467,1409 5661,1499 5854,1585 5908,1612 6010,1657 6132,1709 6170,1707 6258,1697 6377,1671 6486,1680 6526,1688
@@ -15604,8 +15613,8 @@ Rüdickenstr. [Wohngebiet]	N 17264,17489 17172,17424 17101,17460 17064,17515 1718
 #: by: https://de.wikipedia.org/wiki/Berlin-Alt-Hohensch%C3%B6nhausen (Erwähnung des Rüdickengrabens)
 (Weg am Rüdickengraben)	NN 17006,17473 17185,17384 17384,17307 17397,17310
 Baikalstr.	N 17479,10452 17255,10510
-Baikalstr.	N 17210,10350 17255,10510 17284,10616
-(Baikalstr. - Tränkegraben)	NN 17284,10616 17294,10632 17249,10651
+Baikalstr.	N 17210,10350 17255,10510 17276,10617
+(Baikalstr. - Tränkegraben)	NN 17276,10617 17277,10633 17298,10633 17249,10651
 #: next_check_id: ZUMBETRIEBSBHF-2017
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7121
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036637679537/637679537/00220602/02-Anlagen/01/1_Version_vom_03_07_2017.pdf (zweite Karte!)
@@ -15906,6 +15915,7 @@ Togostr.	N 5531,16734 5315,16936
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10895 (Forderung: alte Straßenschilder erneuern)
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1265051.php (Umbenennung am 2.12.2022)
 #: by: https://berliner-abendblatt.de/2022/11/16/jetzt-wirklich-strassen-im-afrikanischen-viertel-werden-umbenannt/
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_47_3201_3352_online.pdf (endgültige Umbenennung)
 #: osm_watch: way id="333607502" version="10"
 #: also_indoor: search Manga-Bell-Platz
 #: last_checked: 2022-11-08

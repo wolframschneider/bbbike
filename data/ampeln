@@ -7,10 +7,8 @@ Kiefholzstr./Hänselstr.: provisorische Fußgängerampel	F::inwork 15695,7254
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
 B179/Fichtestr.	X::inwork 26138,-12596
-Kronprinzessinnenweg: Gegenverkehrsregelung	X::inwork -4368,1731
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245
-Treptower Str./Werrastr.: Gegenverkehrsregelung	X::inwork 13650,8320
 Fischerinsel	F::inwork 10578,11969
 Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 	X::inwork 14151,8967
@@ -1736,6 +1734,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	X 15272,10790
 	F 11270,13412
 	X 14170,10675
+	X 9418,11804
 	F 14624,16659
 	F 18179,16534
 	F 5294,7216

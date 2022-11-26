@@ -814,7 +814,7 @@ Am Rudower Fließ -> Neuköllner Str.: Mittelstreifen	3::igndisp 16650,1356 16698,
 Mittelstreifen	3nocross::ignrte 13148,14850 13107,14873 12807,15045
 Storkower Str. -> Einsteinstr.: Mittelstreifen	3::igndisp 12807,15045 13107,14873 13143,14935
 Einsteinstr. -> Storkower Str.: Mittelstreifen	3::igndisp 13143,14935 13107,14873 13148,14850
-Hönower Wiesenweg: nur für Anlieger und Radfahrer offen	2:Anlieger 17380,8858 17416,8767 17468,8692 17497,8623 17515,8567 17524,8536 17533,8505 17554,8458 17617,8363 17652,8349 17707,8328 17753,8290
+Hönower Wiesenweg: nur für Anlieger und Radfahrer offen	2:Anlieger 17380,8858 17416,8767 17468,8692 17497,8623 17515,8567 17524,8536 17533,8505 17554,8458 17584,8413 17617,8363 17652,8349 17707,8328 17753,8290
 Mittelstreifen	3nocross::ignrte 9248,4904 9239,4980 9206,5193
 Finkenweg -> Mariendorfer Damm: Mittelstreifen	3::igndisp 9360,4996 9239,4980 9248,4904
 Mariendorfer Damm -> Finkenweg: Mittelstreifen	3::igndisp 9206,5193 9239,4980 9360,4996
@@ -2139,8 +2139,6 @@ Schierker Str. - Karl-Marx-Str.	3 13003,7316 13034,7319 13030,7346
 Haßlingerweg	1 7644,17054 7894,17073 7926,17050
 Wateweg	1 21122,8370 21121,8424 21127,8532 21115,8618 21123,8678 21131,8739
 Clayallee -> Sophie-Charlotte-Str.: Linksabbiegen verboten	3 1283,4260 1297,4311 1246,4310
-Krumme Str.: Poller	3 3981,11232 3983,11289 3986,11347
-Krumme Str.: Poller	3 3986,11347 3983,11289 3981,11232
 Straßenbahntrasse	3nocross::ignrte 10533,16505 10458,16509 10370,16516
 Driesener Str. -> Bornholmer Str.: Straßenbahntrasse	3::igndisp 10449,16415 10458,16509 10370,16516
 Driesener Str. -> Nordkapstr.: Straßenbahntrasse	3::igndisp 10449,16415 10458,16509 10465,16656
@@ -2303,3 +2301,9 @@ Freiheitsweg -> Roedernallee: Mittelstreifen	3::igndisp 6490,18952 6437,18958 64
 Freiheitsweg -> Veltener Str.: Mittelstreifen	3::igndisp 6490,18952 6437,18958 6125,18971
 Veltener Str. -> Roedernallee: Mittelstreifen	3::igndisp 6125,18971 6437,18958 6437,19013
 Veltener Str. -> Freiheitsweg: Mittelstreifen	3::igndisp 6125,18971 6437,18958 6490,18952
+Rudolf-Breitscheid-Str. (Luckenwalde)	1 -4478,-35736 -4568,-35783
+Charlottenstr.	1 9496,12215 9489,12263 9475,12365
+Charlottenstr.	1 9496,12215 9509,12117
+Charlottenstr.	1 9547,11819 9536,11922 9523,12019 9509,12117
+Charlottenstr.	1 9547,11819 9559,11715 9569,11631
+Triftstr.	1 7356,15350 7464,15409
