@@ -3,6 +3,10 @@
 #: line_color.busroute_N: #7f00e5
 #: line_width.busroute_N: 1,1,1,1,1,1
 #: line_dash.busroute_N: 2,4
+#: category_image.otb0: ../misc/verkehrszeichen/Zeichen_277.1.svg:12x12=1:12000,xxx
+#: line_color.otb0: #80d080
+#: line_dash.otb0: 4,4
+#: line_do_offset.otb0: 1
 #
 # z.B.: path finding helper (maybe candidates for comments_path):
 #       * "ausgeschildert als"
@@ -76,6 +80,111 @@ Keine Straße ausgeschildert, entlang des Ostbahnhofs fahren	CS; 12645,11673 1260
 unter der S-Bahnbrücke: Glassplitter	CS 6176,20545 6279,20587
 Hegelstr.: Ausweichmöglichkeit auf Nebenstraße mit Kopfsteinpflaster oder grünen Mittelstreifen mit Parkweg	CS -13625,-902 -13468,-847 -13433,-831 -13231,-763 -13137,-737 -13064,-715 -13044,-709 -12877,-655
 # 
+#: by: Marita:
+(Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
+Privatstraße der DB	CS 5817,7824 6273,7849
+Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
+# REMOVED (nur auf der östlichen Seite ist ein Tor; deshalb ist es eigentlich unwahrscheinlich, dass hier geschlossen wird) ---  (Weg über das Sportgelände): evtl. nachts geschlossen	CS 13252,14179 13385,13992
+# REMOVED (Bodenschwellen existieren nicht mehr; außerdem ist dieser Eintrag sowieso in handicap_s-orig gedoppelt) --- Borgmannstr.: zwei Bodenschwellen, rechs vorbei fahren	CS 22513,5747 22531,5871
+Hermann-Blankenstein-Str.: Tor für Kfz evtl. geschlossen, auf Gehweg ausweichen	CS 13886,13668 13858,13719
+Georg-Wilhelm-Str.: 3 Bodenschwellen, rechts vorbei fahren	CS 2710,10245 2698,10067 2687,10053
+#: XXX_prog: doubled in gesperrt_orig, but needs implementation in Perl/Tk version
+Carionweg: Kette	CS 3382,9223 3370,9215
+#: XXX_prog: doubled in gesperrt_orig, but needs implementation in Perl/Tk version
+Sesselmannweg: Kette	CS 3264,9261 3332,9181
+Apeldorner Weg: kein Straßenname ausgeschildert; Weg verläuft westl. direkt an der BAB (104)	CS 3822,8718 3858,8786 3952,8980
+#: XXX_prog: BS - should be superseded by a superiour BNP-like implementation
+(Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; * 3992,8487 4139,8485
+Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8377,13463 8371,13399 8434,13310 8550,13150 8603,13076 8623,13049 8632,13037
+Hufelandweg: Gelände der Charité	CS 8503,13553 8554,13476 8504,13441 8538,13388 8582,13355 8618,13306 8630,13172 8632,13133 8603,13076
+Bonhoefferweg: Gelände der Charité	CS 8538,13388 8487,13351 8434,13310
+Sauerbruchweg: Gelände der Charité	CS 8487,13351 8630,13172
+(Luisenstr. - Hufelandweg): Gelände der Charité	CS 8665,13353 8582,13355
+(Reichsstr. - Westendallee): Privatstraße	CS 269,12576 151,12541
+(Guerickestr. - Einsteinufer): Privatstraße	CS 4593,12322 4618,12340 4658,12450
+#: XXX_prog: trailer=no implementation missing vvv
+Stromstr: kann über schmale Furt (keine Anhänger!) gequert werden	CP 6190,12978 6164,12980 6122,12971 6118,12980
+#: XXX_prog ^^^
+# REMOVED ("normale" Straße, die Märkte sind besser über "An der Ostbahn" erschlossen, jedenfalls für KfZ) --- #: XXX stimmt das noch mit den Märkten? --- Am Wriezener Bahnhof: Privatstraße zu diversen Märkten	CS 12794,11893 12944,11760 12993,11717
+#: XXX_prog should be superseded by a superiour BNP-like implementation/wird irgendwann mal zu "BS" vvv
+Bordstein	CP 12054,12903 11987,12946 11921,12990
+Bordstein	CP2; 12483,12682 12551,12785
+#: XXX_prog ^^^
+Wilhelmstr.: Fahrbahn vor der britischen Botschaft für Autos gesperrt, passierbar für Radfahrer	CS 8861,12125 8804,12280
+# REMOVED --- Am Petersberg: Privatstraße	CS 948,5597 820,5455
+(Weg in Kolonie Bodenreform): entlang des Teltowkanals	CS 20939,2413 20904,2426 20810,2398
+(Weg in Kolonie Bodenreform): entlang des Teltowkanals	CS 20810,2398 20496,2321 20499,2285 20303,2254 20282,2259 20148,2254 20128,2271
+#: note: (URL existiert nicht mehr) http://www.stadtentwicklung.berlin.de/verkehr/radverkehr/infrastruktur/de/seperater_weg01.shtml
+(Alt-Lankwitz - Kamenzer Damm): Rampe für Radfahrer	CS 8026,3298 8036,3253
+als Puschkinallee 6c, 6d ausgeschildert	CP2; 14011,9868 14077,10016
+# REMOVED (Tor existiert schon lange nicht mehr) --- Durch Toreinfahrt (immer offen)	CP2; 14043,10928 14107,10911
+als Sackgasse ausgeschildert	CP2; 14671,10751 14562,10782
+Radfahren durch den Park erlaubt	CS 6534,1702 6673,1748 6844,1813
+#: by: Ingrid Beese:
+Teltower Weg: nicht ausgeschildert	CP2; -119,5885 -182,5927
+Röntgentaler Weg: durch den Schloßpark	CS 16166,25767 16222,25829 16532,26174
+(Autobahnzubringer): Fahrbahn ist Kraftfahrzeugstraße	CS 18034,2526 18247,2490 18496,2471
+#: by: Karin Millonig
+(In den Gärten - Hochspannungsweg): Privatweg	CS 11724,1629 11704,1692 11718,1771 11652,1959
+# REMOVED (es existieren keine Hinweise dazu mehr) --- Privatweg, Durchfahrt eigentlich verboten, aber möglich	CS 19735,11721 19830,11677 19881,11591
+#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060505.1315.39412.html
+Dreipfuhlpark: Freigegeben für Radfahrer	CS 1536,3780 1523,3904 1520,4006 1524,4054 1548,4168 1608,4313 1670,4477 1692,4575 1682,4607 1689,4630 1698,4653
+#: by: Kay-Uwe Ludwig [AM]
+Seefelder Str.: Schranken, für Radler gut passierbar	CS 17341,16136 17344,16081
+#: by: Daniel Weber [AM] vvv
+# REMOVED (mittlerweile ein gemeinsamer Geh- und Radweg) --- (Malteserstr. - Hanielweg): Geschützte Grünanlage, Radfahren verboten	CS 7451,1818 7534,1818 7562,1796
+(Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6762,1226 6702,1197 6698,1190
+(Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6668,1192 6597,1201 6530,1210 6505,1212 6481,1215 6411,1223
+(Parkweg Blankenhainer Str. - Hildburghauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6572,1601 6554,1564 6539,1476 6515,1418 6479,1312 6481,1215 6487,1169 6455,1101 6446,1033
+(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5514,580 5571,614 5677,650 5683,673 5640,746 5587,816 5571,864 5540,919
+(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5578,936 5540,919 5358,822
+(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5533,663 5485,751 5503,783 5531,779 5590,719 5593,679 5575,660 5533,663
+(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5571,614 5533,663
+(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5531,779 5587,816
+(Hildburghauser Str. - Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 6446,1033 6435,986 6446,950 6421,892 6414,833 6367,825 6360,825 6352,825 6267,834 6259,835 6250,834 6223,823 6172,822 6163,822 6155,821 6075,821 6066,821 6057,821 5975,821 5964,821 5954,819 5875,807 5867,807 5860,805 5781,800 5742,798 5684,773 5640,746 5590,719
+#: by: ^^^
+#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060505.1315.39412.html
+(Parkweg Schloßpark Lichterfelde): Radfahren erlaubt	CS 4603,3704 4611,3705 4617,3706 4657,3711 4694,3702 4723,3681 4754,3651 4815,3615 4858,3613 4910,3599
+#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060505.1315.39412.html
+(Parkweg Bäkepark): Radfahren erlaubt	CS 5337,4192 5314,4216 5246,4240 5162,4256 5129,4262 5090,4291 5015,4339 4957,4448 4873,4604 4848,4668 4810,4765 4795,4801 4760,4843 4742,4885
+#: by: Ben [AM] vvv
+Poller	CS -9025,5988
+Poller	CS -8929,5984
+#: by: ^^^
+#: by: rjoop:
+ausgeschildert "zum Bahnhof"	CS; 20772,-104623 20754,-104514
+Am Stand - Klemkepark: Torbogen in der Häuserfront in den Klemkepark benutzen	CS 7484,18778 7480,18828
+Begasstr. - Riemenschneiderweg: Hausdurchfahrten	CS 6513,7005 6650,7017 6770,7027
+"Brücke" ausgeschildert	CP; 2452,281 2195,42 2175,71
+#: by: Andreas Titz vvv
+# Malz, Ausbau
+Gartentor, Zufahrt zum Gemeindehaus (dürfte immer offen sein)	CS 2201,43954
+#: by: ^^^
+#: by: Jürgen Schulze (jochen):
+Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist mit Wildschweinen zu rechnen	CS 30124,4664 30254,4692 30369,4697 30478,4715 30527,4724 30588,4720 30636,4717 30686,4731 30810,4765 30857,4770 30913,4766 31011,4750 31118,4768 31209,4781 31224,4775 31311,4742 31339,4726 31364,4711 31424,4658
+#: by: Daniel (mag645):
+(Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21978,8132 22077,8104 22181,8009 22631,7692
+# REMOVED (nicht mehr) --- Petriplatz: zusätzliche Ausschilderung "Zur Brüderstr."	CS; 10460,11979 10418,12016
+# REMOVED (lange nicht mehr beobachtet) --- DB-Gelände: bei starken Regenfällen regelmäßig eine große und tiefe Pfütze, die die Durchfahrt erschwert	CS 14107,10911 14043,10928
+Straße 77: nicht ausgeschildert	CS 15408,12394 15320,12375
+# REMOVED (das gilt für das gesamte Märchenland, deshalb Kommentar entfernt) --- #: by: antje weiss dorn: --- Drosselbartweg: Radfahren erlaubt	CS 13899,18833 13909,18835 13953,18842 13967,18842 13993,18833 14061,18791 14206,18700 14218,18674 14222,18666
+(Seeburger Str./Seecktstr. - Bullengraben): Zufahrt über Supermarktparkplatz (Lidl)	CS; -4299,13304 -4372,13384
+#: by: Ralf Henze vvv
+#: note: das gilt für alle Straßen von R bis Z vvv
+Straße R: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -204,16162 -269,16241 -312,16288 -386,16347 -460,16408 -542,16475 -632,16541 -719,16608 -784,16658 -792,16659
+Straße Y: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -632,16541 -671,16488
+#: note: ^^^
+#: by: ^^^
+# REMOVED (Haus existiert nicht mehr) --- Zur Pariser Str.: Hausdurchfahrt benutzen	CS; 5461,9923 5423,9932 5382,9942
+# 
+######################################################################
+# Kreisverkehre
+# 
+#: ignore vvv
+#: XXX_prog: it's not clear what to do with this in the routelist (currently shown) or while rendering (currently ignored in normal perl/tk mode) vvv
+Kreisverkehr	Roundabout 19907,12501
+#: note: "unechter" Kreisverkehr, auf der südlichen Fahrbahn kaum merkbar, auf der nördlichen aber schon
+Kreisverkehr	Roundabout 11393,10390
 #: note: siehe auch Eintrag in comments_danger
 Kreisverkehr	Roundabout 16355,9622 16355,9603 16376,9602 16388,9614 16389,9633 16368,9632 16355,9622
 Kreisverkehr	Roundabout 27079,15430
@@ -186,109 +295,6 @@ Mini-Kreisverkehr	Roundabout -3650,-2609
 Kreisverkehr	Roundabout -2508,22627
 #: by: osm
 Kreisverkehr	Roundabout -862,-9933
-# 
-#: by: Marita:
-(Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
-Privatstraße der DB	CS 5817,7824 6273,7849
-Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
-# REMOVED (nur auf der östlichen Seite ist ein Tor; deshalb ist es eigentlich unwahrscheinlich, dass hier geschlossen wird) ---  (Weg über das Sportgelände): evtl. nachts geschlossen	CS 13252,14179 13385,13992
-# REMOVED (Bodenschwellen existieren nicht mehr; außerdem ist dieser Eintrag sowieso in handicap_s-orig gedoppelt) --- Borgmannstr.: zwei Bodenschwellen, rechs vorbei fahren	CS 22513,5747 22531,5871
-Hermann-Blankenstein-Str.: Tor für Kfz evtl. geschlossen, auf Gehweg ausweichen	CS 13886,13668 13858,13719
-Georg-Wilhelm-Str.: 3 Bodenschwellen, rechts vorbei fahren	CS 2710,10245 2698,10067 2687,10053
-#: XXX_prog: doubled in gesperrt_orig, but needs implementation in Perl/Tk version
-Carionweg: Kette	CS 3382,9223 3370,9215
-#: XXX_prog: doubled in gesperrt_orig, but needs implementation in Perl/Tk version
-Sesselmannweg: Kette	CS 3264,9261 3332,9181
-Apeldorner Weg: kein Straßenname ausgeschildert; Weg verläuft westl. direkt an der BAB (104)	CS 3822,8718 3858,8786 3952,8980
-#: XXX_prog: BS - should be superseded by a superiour BNP-like implementation
-(Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; * 3992,8487 4139,8485
-Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8377,13463 8371,13399 8434,13310 8550,13150 8603,13076 8623,13049 8632,13037
-Hufelandweg: Gelände der Charité	CS 8503,13553 8554,13476 8504,13441 8538,13388 8582,13355 8618,13306 8630,13172 8632,13133 8603,13076
-Bonhoefferweg: Gelände der Charité	CS 8538,13388 8487,13351 8434,13310
-Sauerbruchweg: Gelände der Charité	CS 8487,13351 8630,13172
-(Luisenstr. - Hufelandweg): Gelände der Charité	CS 8665,13353 8582,13355
-(Reichsstr. - Westendallee): Privatstraße	CS 269,12576 151,12541
-(Guerickestr. - Einsteinufer): Privatstraße	CS 4593,12322 4618,12340 4658,12450
-#: XXX_prog: trailer=no implementation missing vvv
-Stromstr: kann über schmale Furt (keine Anhänger!) gequert werden	CP 6190,12978 6164,12980 6122,12971 6118,12980
-#: XXX_prog ^^^
-# REMOVED ("normale" Straße, die Märkte sind besser über "An der Ostbahn" erschlossen, jedenfalls für KfZ) --- #: XXX stimmt das noch mit den Märkten? --- Am Wriezener Bahnhof: Privatstraße zu diversen Märkten	CS 12794,11893 12944,11760 12993,11717
-#: XXX_prog should be superseded by a superiour BNP-like implementation/wird irgendwann mal zu "BS" vvv
-Bordstein	CP 12054,12903 11987,12946 11921,12990
-Bordstein	CP2; 12483,12682 12551,12785
-#: XXX_prog ^^^
-Wilhelmstr.: Fahrbahn vor der britischen Botschaft für Autos gesperrt, passierbar für Radfahrer	CS 8861,12125 8804,12280
-# REMOVED --- Am Petersberg: Privatstraße	CS 948,5597 820,5455
-(Weg in Kolonie Bodenreform): entlang des Teltowkanals	CS 20939,2413 20904,2426 20810,2398
-(Weg in Kolonie Bodenreform): entlang des Teltowkanals	CS 20810,2398 20496,2321 20499,2285 20303,2254 20282,2259 20148,2254 20128,2271
-#: note: (URL existiert nicht mehr) http://www.stadtentwicklung.berlin.de/verkehr/radverkehr/infrastruktur/de/seperater_weg01.shtml
-(Alt-Lankwitz - Kamenzer Damm): Rampe für Radfahrer	CS 8026,3298 8036,3253
-als Puschkinallee 6c, 6d ausgeschildert	CP2; 14011,9868 14077,10016
-# REMOVED (Tor existiert schon lange nicht mehr) --- Durch Toreinfahrt (immer offen)	CP2; 14043,10928 14107,10911
-als Sackgasse ausgeschildert	CP2; 14671,10751 14562,10782
-Radfahren durch den Park erlaubt	CS 6534,1702 6673,1748 6844,1813
-#: by: Ingrid Beese:
-Teltower Weg: nicht ausgeschildert	CP2; -119,5885 -182,5927
-Kreisverkehr	Roundabout 19907,12501
-Röntgentaler Weg: durch den Schloßpark	CS 16166,25767 16222,25829 16532,26174
-(Autobahnzubringer): Fahrbahn ist Kraftfahrzeugstraße	CS 18034,2526 18247,2490 18496,2471
-#: by: Karin Millonig
-(In den Gärten - Hochspannungsweg): Privatweg	CS 11724,1629 11704,1692 11718,1771 11652,1959
-# REMOVED (es existieren keine Hinweise dazu mehr) --- Privatweg, Durchfahrt eigentlich verboten, aber möglich	CS 19735,11721 19830,11677 19881,11591
-#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060505.1315.39412.html
-Dreipfuhlpark: Freigegeben für Radfahrer	CS 1536,3780 1523,3904 1520,4006 1524,4054 1548,4168 1608,4313 1670,4477 1692,4575 1682,4607 1689,4630 1698,4653
-#: by: Kay-Uwe Ludwig [AM]
-Seefelder Str.: Schranken, für Radler gut passierbar	CS 17341,16136 17344,16081
-#: by: Daniel Weber [AM] vvv
-# REMOVED (mittlerweile ein gemeinsamer Geh- und Radweg) --- (Malteserstr. - Hanielweg): Geschützte Grünanlage, Radfahren verboten	CS 7451,1818 7534,1818 7562,1796
-(Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6762,1226 6702,1197 6698,1190
-(Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6668,1192 6597,1201 6530,1210 6505,1212 6481,1215 6411,1223
-(Parkweg Blankenhainer Str. - Hildburghauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6572,1601 6554,1564 6539,1476 6515,1418 6479,1312 6481,1215 6487,1169 6455,1101 6446,1033
-(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5514,580 5571,614 5677,650 5683,673 5640,746 5587,816 5571,864 5540,919
-(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5578,936 5540,919 5358,822
-(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5533,663 5485,751 5503,783 5531,779 5590,719 5593,679 5575,660 5533,663
-(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5571,614 5533,663
-(Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5531,779 5587,816
-(Hildburghauser Str. - Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 6446,1033 6435,986 6446,950 6421,892 6414,833 6367,825 6360,825 6352,825 6267,834 6259,835 6250,834 6223,823 6172,822 6163,822 6155,821 6075,821 6066,821 6057,821 5975,821 5964,821 5954,819 5875,807 5867,807 5860,805 5781,800 5742,798 5684,773 5640,746 5590,719
-#: by: ^^^
-#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060505.1315.39412.html
-(Parkweg Schloßpark Lichterfelde): Radfahren erlaubt	CS 4603,3704 4611,3705 4617,3706 4657,3711 4694,3702 4723,3681 4754,3651 4815,3615 4858,3613 4910,3599
-#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060505.1315.39412.html
-(Parkweg Bäkepark): Radfahren erlaubt	CS 5337,4192 5314,4216 5246,4240 5162,4256 5129,4262 5090,4291 5015,4339 4957,4448 4873,4604 4848,4668 4810,4765 4795,4801 4760,4843 4742,4885
-#: by: Ben [AM] vvv
-Poller	CS -9025,5988
-Poller	CS -8929,5984
-#: by: ^^^
-#: by: rjoop:
-ausgeschildert "zum Bahnhof"	CS; 20772,-104623 20754,-104514
-Am Stand - Klemkepark: Torbogen in der Häuserfront in den Klemkepark benutzen	CS 7484,18778 7480,18828
-Begasstr. - Riemenschneiderweg: Hausdurchfahrten	CS 6513,7005 6650,7017 6770,7027
-"Brücke" ausgeschildert	CP; 2452,281 2195,42 2175,71
-#: by: Andreas Titz vvv
-# Malz, Ausbau
-Gartentor, Zufahrt zum Gemeindehaus (dürfte immer offen sein)	CS 2201,43954
-#: by: ^^^
-#: by: Jürgen Schulze (jochen):
-Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist mit Wildschweinen zu rechnen	CS 30124,4664 30254,4692 30369,4697 30478,4715 30527,4724 30588,4720 30636,4717 30686,4731 30810,4765 30857,4770 30913,4766 31011,4750 31118,4768 31209,4781 31224,4775 31311,4742 31339,4726 31364,4711 31424,4658
-#: by: Daniel (mag645):
-(Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21978,8132 22077,8104 22181,8009 22631,7692
-# REMOVED (nicht mehr) --- Petriplatz: zusätzliche Ausschilderung "Zur Brüderstr."	CS; 10460,11979 10418,12016
-# REMOVED (lange nicht mehr beobachtet) --- DB-Gelände: bei starken Regenfällen regelmäßig eine große und tiefe Pfütze, die die Durchfahrt erschwert	CS 14107,10911 14043,10928
-Straße 77: nicht ausgeschildert	CS 15408,12394 15320,12375
-# REMOVED (das gilt für das gesamte Märchenland, deshalb Kommentar entfernt) --- #: by: antje weiss dorn: --- Drosselbartweg: Radfahren erlaubt	CS 13899,18833 13909,18835 13953,18842 13967,18842 13993,18833 14061,18791 14206,18700 14218,18674 14222,18666
-(Seeburger Str./Seecktstr. - Bullengraben): Zufahrt über Supermarktparkplatz (Lidl)	CS; -4299,13304 -4372,13384
-#: by: Ralf Henze vvv
-#: note: das gilt für alle Straßen von R bis Z vvv
-Straße R: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -204,16162 -269,16241 -312,16288 -386,16347 -460,16408 -542,16475 -632,16541 -719,16608 -784,16658 -792,16659
-Straße Y: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -632,16541 -671,16488
-#: note: ^^^
-#: by: ^^^
-# REMOVED (Haus existiert nicht mehr) --- Zur Pariser Str.: Hausdurchfahrt benutzen	CS; 5461,9923 5423,9932 5382,9942
-#: note: "unechter" Kreisverkehr, auf der südlichen Fahrbahn kaum merkbar, auf der nördlichen aber schon
-Kreisverkehr	Roundabout 11393,10390
-# 
-#: ignore vvv
-#: XXX_prog: it's not clear what to do with this in the routelist (currently shown) or while rendering (currently ignored in normal perl/tk mode) vvv
 Kreisverkehr	Roundabout 4818,2279 4824,2266 4813,2256 4803,2257 4796,2271 4803,2280 4818,2279
 Kreisverkehr	Roundabout 19414,15132
 Kreisverkehr	Roundabout 10839,10907 10856,10856 10906,10874 10887,10922 10839,10907
@@ -350,6 +356,15 @@ Kreisverkehr	Roundabout 27754,-8708
 #: XXX_prog ^^^
 #: ignore ^^^
 #
+######################################################################
+# overtaking:motorcar:conditional=no @ singletrack (Radfahrer dürfen nicht überholt werden)
+# 
+# Nur permanente Schilder aufnehmen!
+# 
+#: ignore vvv
+Brandenburgische Str.: Radfahrer dürfen nicht überholt werden	otb0; 3852,10236 3896,10042 3927,9935
+#: ignore ^^^
+# 
 ######################################################################
 # busroute
 #
@@ -1205,7 +1220,7 @@ Im Brachfeldwinkel: ausgeschildert zum "Schwedenhaus"	CP2; 3068,21150 3024,21286
 # REMOVED (mittlerweile existieren Staßenschilder) --- #: XXX sind die Straßen mittlerweile ausgeschildert? vvv --- Altes Gaswerk Mariendorf: ausgeschildert "Marienpark"	CP2; 8461,3410 8404,3648 --- Im Marienpark: nicht ausgeschildert	CP2; 8404,3648 8346,3633
 Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 # 
-#: osm_watch: way id="406201948" version="15"
+#: osm_watch: way id="406201948" version="16"
 #: osm_watch: way id="25367620" version="25"
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5788&d=20191216 (Benennung nach Hans Otto Obrikat vorgeschlagen)
@@ -1213,8 +1228,8 @@ Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_41_2765_2832_online.pdf (Benennung: Obrikatstr.)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_46_3097_3200_online.pdf (Berichtigung)
 #: XXX oder wird statt Wasserstr. und Uferstr. die Straße nach Hans Otto Obrikat benannt? (erster Vorschlag: "Else-Schierhorn-Str.")
-#: last_checked: 2022-10-14 (Amtsblatt)
-#: check_frequency: 45d
+#: last_checked: 2022-11-27
+#: check_frequency: 30d
 Obrikatstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17847,6089
 # 
 #: by: Max Mütze
@@ -1340,7 +1355,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2022-11-18
+#: last_checked: 2022-11-27
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1755,41 +1770,11 @@ Am Werksgarten: nicht ausgeschildert	CP2; 22805,5179 22803,5241
 Schilder VoltAir-Parkhaus und Zugang Dircksenstraße 04	CP2; 11240,12368 11344,12410
 # 
 #: XXX Wird hier noch ausgeschildert?
-#: last_checked: 2022-11-22
+#: last_checked: 2022-11-26
 Forum an der Museumsinsel: nicht ausgeschildert	CS 9650,13074 9682,13167 9633,13192 9602,13081
 # 
-# REMOVED (gilt nicht mehr) --- #: next_check_id: COVID19-MASK-2020 vvv
-##: by: https://www.berlin.de/corona/massnahmen/verordnung/ (Liste der Straßen)
-##: by: https://www.rbb24.de/panorama/thema/2020/coronavirus/av7/video-bergmannstr-polizei-kontrolle-maskenpflicht-radfahrer.html
-##: priority: #A vvv
-##: next_check: 2020-10-31 vvv
-##: note: in der Verordnung fälschlicherweise im Ortsteil PB verortet
-#Alte Schönhauser Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 10527,13257 10596,13398 10633,13474 10644,13497 10709,13629 10741,13685
-##: note Altstadt Spandau vvv
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340 -3227,14260
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3155,14340 -3204,14368 -3231,14383 -3275,14407
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3089,14440 -3150,14478
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3110,14408 -3060,14380
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3142,14358 -3092,14331
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3110,14408 -3174,14438 -3228,14468
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3293,14304 -3231,14383
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3552,14082 -3457,14189 -3409,14241 -3338,14333 -3275,14407 -3228,14468 -3205,14512 -3185,14556 -3150,14631
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3404,14147 -3457,14189
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3227,14260 -3293,14304 -3338,14333 -3397,14370
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3275,14407 -3350,14446
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3316,14169 -3409,14241
-#Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS -3150,14631 -3122,14557 -3107,14535 -3054,14498
-##: note ^^^
-#Bergmannstr. (Kreuzberg): Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252 9793,9241 9880,9233 9973,9232 10001,9234 10123,9233 10547,9233
-#Bölschestr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 25579,5958 25571,5829 25567,5749 25563,5666 25561,5622 25553,5486 25548,5398 25546,5359 25544,5326 25539,5237 25524,5011 25522,4935 25519,4830
-#Friedrichstr. (Mitte): Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 9212,13471 9225,13389 9246,13235 9254,13171 9262,13111 9269,13060 9279,12953 9286,12886 9298,12765 9303,12718 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351 9369,12253 9373,12197 9384,12103 9393,12000 9405,11903 9418,11804 9432,11702 9444,11616 9456,11513 9468,11412 9474,11360 9478,11317
-#Karl-Marx-Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 13236,6489 13200,6550 13141,6651 13121,6689 13117,6716 13085,6925 13072,7013 13068,7043 13058,7112 13051,7157 13043,7234 13034,7319 13030,7346 13029,7353 13018,7441 13015,7471 12987,7560 12969,7610 12914,7785 12898,7832 12892,7850 12865,7923 12846,7981 12830,8031 12794,8103 12753,8187 12714,8249 12689,8289 12639,8344 12598,8390 12582,8408 12562,8432 12540,8458 12500,8504 12330,8636 12156,8760 12063,8826 11998,8872 11880,8955 11831,8989
-#Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 2415,9765 2445,9838 2482,9870 2532,9911 2590,9949 2694,10002 2702,10006 2770,10024 2828,10040 2974,10081 3111,10116 3189,10141 3289,10174 3374,10201 3489,10240 3562,10264 3618,10283 3737,10322 3835,10352 3971,10381 4157,10418 4245,10435 4371,10465 4503,10497 4676,10541 4847,10589 5076,10658 5215,10711 5341,10756 5475,10808 5656,10876 5725,10892 5782,10884
-#Kurfürstendamm: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 2445,9838 2369,9779
-#Schloßstr. (Steglitz): Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 5370,6486 5346,6443 5312,6382 5269,6305 5244,6261 5219,6215 5165,6119 5137,6066 5099,5994 5091,5979 5083,5964 5048,5904 5018,5854 4998,5817 4982,5789 4963,5754 4946,5725 4900,5648 4861,5581 4832,5522 4767,5389 4745,5344 4741,5309 4677,5274 4593,5235 4512,5199 4432,5160 4343,5112
-#Tauentzienstr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 5782,10884 5907,10821 5942,10803 6025,10746 6133,10679 6171,10657
-#Wilmersdorfer Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	CS 3813,10435 3870,10510 3883,10585 3881,10699 3869,10760 3847,10865 3835,10915 3820,10987 3795,11098 3770,11231 3749,11344 3717,11462 3689,11637 3671,11799 3666,11855 3651,12001 3643,12092 3630,12201 3623,12284 3612,12377
-##: next_check ^^^
-##: priority ^^^
-##: next_check_id ^^^
+#: by: mapillary (kein Scherz)
+#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5832
+#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/fnLHXQriPYaXCg11dvvhibO6O8AmZFFbDGfEsncu/GcavYgrs/69-Anlagen/04/B0316SB.pdf (hier wird auch "Weg" erwähnt)
+ausgeschildert als "Weg"	CP2; 21640,-582 21403,-859
 # 
