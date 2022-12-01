@@ -565,7 +565,7 @@ Swinemünder Str.: Kopfsteinpflaster	Q2 10228,14564 10311,14391
 #: by: https://www.berliner-woche.de/wedding/c-verkehr/brunnenviertel-ev-will-baumfaellungen-stoppen_a336818
 #: by: https://www.infravelo.de/projekt/3d740cd762db0422f5e5e06d18bc752a/ (2. Quartal 2023 - 4. Quartal 2024)
 #: XXX Umgestaltungsmaßnahmen geplant: Kopfsteinpflaster kommt weg + es entsteht ein Radfahrstreifen
-#: last_checked: 2022-11-15
+#: last_checked: 2022-11-30
 #: check_frequency: 150d
 #: next_check: 2024-12-31
 Swinemünder Str.: Kopfsteinpflaster auf der Fahrbahn, Radweg OK	Q1 9732,15581 9646,15737 9623,15777
@@ -579,7 +579,7 @@ Fürstenberger Str.: Asphalt	Q0 10320,14608 10472,14632
 #: osm_watch: way id="4606258" version="27"
 #: osm_watch: way id="184077626" version="16"
 #: osm_watch: way id="49180827" version="20"
-#: last_checked: 2022-10-19
+#: last_checked: 2022-11-30
 #: check_frequency: 60d
 Kollwitzstr.: Kopfsteinpflaster	Q2 11006,14087 10937,14006
 # 
@@ -1054,7 +1054,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9942 (Kopfsteinpflaster bleibt vorerst? außerdem: wird die Colbestr. zur Fahrradstraße?)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2022-11-26
+#: last_checked: 2022-11-29
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1725,7 +1725,7 @@ Kopenhagener Str.: Kopfsteinpflaster	Q2- 10097,15856 10365,15902
 Kopenhagener Str.: Kopfsteinpflaster	Q2 10571,15933 10722,15921 10964,15896
 Ystader Str.: Kopfsteinpflaster	Q2 10365,15902 10355,15946
 #: by: (URL existiert nicht mehr) http://www.stadtentwicklung.berlin.de/verkehr/radverkehr/infrastruktur/de/asphalt01.shtml
-Esplanade: asphaltiert	Q0 10971,16907 10886,16893
+Esplanade: asphaltiert	Q0 10971,16907 10936,16892 10886,16893
 Esplanade: Kleinsteinpflaster	Q2+ 10886,16893 10655,16904
 Glinkastr.: Asphalt	Q0+ 9183,12076 9195,11972 9207,11880 9218,11793 9220,11781
 Ettaler Str.: Kopfsteinpflaster	Q2 5997,10286 5948,10152
@@ -4098,7 +4098,7 @@ Weidenweg: Kopfsteinpflaster	Q2; 13828,12658 13863,12677
 Weidenweg: asphaltiert	Q0; 13863,12677 13828,12658
 Weidenweg: Asphalt	Q0 13863,12677 13911,12692 14058,12709
 Roedeliusplatz: Kopfsteinpflaster	Q2 16158,12191 16248,12177
-Freiastr.: Kopfsteinpflaster	Q2 16826,12408 16694,12422
+Freiastr.: Kopfsteinpflaster	Q2 16831,12419 16696,12437
 (Siegfriedstr. - Herzbergstr.): Asphalt	Q0+ 16865,13000 17048,13000 17113,13025 17170,13070 17227,13075 17257,13117 17219,13430 17201,13510 17201,13519
 (Siegfriedstr. - Herzbergstr.): Asphalt	Q0+ 17219,13430 17300,13459
 Herzbergstr.: betoniert/Verbundsteinpflaster	Q0- 17232,13518 17300,13459 17330,13437 17479,13434 17688,13430
@@ -4250,7 +4250,7 @@ Rosenfelder Ring: Kopfsteinpflaster	Q2+ 17460,11961 17384,11976
 Rosenfelder Ring: Beton	Q1+ 18014,11837 18006,11968 18004,12010 17978,12084 17961,12096 17916,12103 17833,12097 17511,12019 17480,12003 17460,11961
 Rosenfelder Ring: Beton	Q0- 17477,11893 17540,11878 17775,11858 18014,11837
 Rhinstr. [Wohngebiet]: Asphalt	Q0 18215,12123 18174,12116 18165,12091 18160,11938
-Rhinstr. [Wohngebiet]: Beton	Q0- 18160,11938 18140,11932 18139,11833
+Rhinstr. [Wohngebiet]: Beton	Q0- 18160,11938 18140,11932 18139,11833 18014,11837
 #: note: aus der S-Bahn gesehen:
 Seebeckstr.: Kopfsteinpflaster	Q2+ 8495,18566 8425,18542
 Fontanestr.: betoniert	Q0 7209,19928 7223,19826 7324,19795 7522,19804
@@ -8669,7 +8669,7 @@ Kaskelstr.: Asphalt	Q0 15251,11175 15090,11237 15058,11250
 #: by: https://www.berliner-woche.de/bezirk-lichtenberg/c-verkehr/bezirk-und-senat-bauen-fuer-45-millionen-euro-radverkehrsinfrastruktur-aus_a313995
 # REMOVED (note wurde bearbeitet) --- #: osm_watch: note 1177573 1
 #: osm_watch: way id="35873435" version="10"
-#: last_checked: 2022-11-14
+#: last_checked: 2022-11-28
 #: check_frequency: 120d
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Asphalt mit einigen Schäden	Q1- 17210,11950 17201,11975 17137,11969 17035,11909 17022,11890
 Rüdersdorfer Str. [Rückseite]: Beton	Q0- 12923,12043 13014,11955 13040,11921 13088,11945 13050,11979 13014,11955
@@ -9627,9 +9627,7 @@ Am Oder-Spree-Kanal: Asphalt	Q0 30646,-2732 30629,-2817
 (Straße zur Krampenburg - Uferweg am Langen See): Schotterweg, teilweise grober Schotter	Q2- 27202,173 26666,-54
 (Straße zur Krampenburg - Uferweg am Langen See): Waldweg, zweispurig	Q2- 26666,-54 26488,-131
 Kuglerstr.: Asphalt mit leichten Schäden	Q1+ 11750,16116 11680,16151 11618,16183
-Kuglerstr.: Asphalt	Q0- 12030,15968 11961,16002
-Kuglerstr.: Asphalt mit leichten Schäden	Q1+ 11961,16002 11899,16037
-Kuglerstr.: Asphalt	Q0- 11899,16037 11852,16061
+Kuglerstr.: Asphalt	Q0 12030,15968 11961,16002 11899,16037 11852,16061
 Kuglerstr.: Asphalt mit leichten Schäden	Q1+ 11852,16061 11750,16116
 (Schönhauser Str. - Rosenthaler Str.): Asphalt	Q0 11858,21541 11889,21543
 (Nisbléstr. - Schönhauser Str.): Asphalt	Q0 11838,21580 11858,21541
@@ -11646,7 +11644,7 @@ Feuerdornweg: unbefestigte Straße	Q2 11008,23572 10887,23796
 Kirschlorbeerweg: unbefestigte Straße	Q2 11069,23647 11028,23624 10927,23816
 # REMOVED (Fahrbahn ist OK) --- Gallwitzallee: schadhafter Radweg sowie Asphalt auf Fahrbahn mit Schäden	Q1 6844,1813 6799,1922 6759,2137
 (Parkplatz S-Bhf. Buckower Chaussee): Asphalt	Q0 9178,556 9218,458 9249,434 9296,335 9271,323
-(Eisnerstr. - S-Bhf. Buckower Chaussee): Asphalt	Q0 9271,323 9253,370 9218,458
+(Eisnerstr. - S-Bhf. Buckower Chaussee): Asphalt	Q0 9271,323 9253,370 9233,418 9218,458
 Zachenberger Str.: Verbundsteinpflaster	Q1+ 19889,9400 19824,9405 19780,9409
 Am S-Bhf. Bellevue: Gehwegplatten	Q1 6694,12627 6516,12650
 Gerichtstr.: Verbundsteinpflaster	Q1 7817,15418 7765,15417
@@ -17832,7 +17830,8 @@ Höltermannsteig: Gehwegpflasterung	Q0- 13999,2727 13951,2801 13948,2910 13954,30
 #: by: ^^^
 # 
 #: by: Christian (cm-germany):
-Dankwartstr.: Asphalt	Q0 17184,12286 17210,12486
+#: corrected_by: srt (Asphalt, Q0 -> ...)
+Dankwartstr.: Asphalt mit einigen Rissen	Q1+ 17184,12286 17210,12486
 # 
 #: by: waskowski:
 Wichernstr. (Spandau): Asphalt	Q0 -3477,18012 -3469,18005 -3439,17974 -3288,17831 -3226,17772 -3204,17749 -3093,17647 -3060,17617 -2934,17594
@@ -18522,8 +18521,8 @@ Imhoffweg: guter Asphalt	Q0 8953,-1089 8909,-918
 Cambridger Str.: mäßiger Asphalt	Q1 5866,17419 5778,17436 5691,17404 5556,17254
 # 
 #: by: Astrid Friedrich:
-#: confirmed_by: srt (zumindest das Kopfsteinpflaster)
-Glücksburger Str.: schlechtes Kopfsteinpflaster	Q3 9498,16480 9603,16468
+#: corrected_by: srt (schlechtes Kopfsteinpflaster, Q3 -> ...)
+Glücksburger Str.: Kopfsteinpflaster	Q2 9498,16480 9603,16468
 # 
 #: by: Stefan Schirra:
 Propst-Süßmilch-Weg: Verbundsteinpflaster	Q1 856,3188 813,3202 797,3216 727,3231 649,3221
@@ -19379,7 +19378,7 @@ Albert-Hößler-Str.: mit Teer verbundene Betonplatten	Q1 16097,11669 16083,11733 
 #: confirmed_by ^^^
 #: confirmed_by: srt:
 #: note: (Kommentar vom Autor) Ausweichmöglichkeit auf breitem Fußweg
-Wotanstr. (Lichtenberg): Kopfsteinpflaster	Q2 16720,12614 16694,12422 16685,12358 16657,12165
+Wotanstr. (Lichtenberg): Kopfsteinpflaster	Q2 16720,12614 16696,12437 16685,12358 16657,12165
 #: by: ^^^
 # 
 #: by: C. Appel:
@@ -30530,10 +30529,11 @@ Gotlindestr.: Beton mit Schäden	Q1- 16284,12616 16409,12612
 Gotlindestr.: Beton mit Schäden	Q1 16409,12612 16432,12612 16470,12612 16576,12612 16720,12614 16859,12613
 #: corrected_by ^^^
 #: confirmed_by: srt
-Dietlindestr.: Asphalt	Q0 17056,12304 17087,12501
+Dietlindestr.: Asphalt	Q0 17056,12304 17088,12506
 #: corrected_by: srt (Q0 -> )
-Dietlindestr.: Asphalt mit leichten Schäden	Q1+ 17087,12501 17088,12617
-Ortliebstr.: Asphalt	Q0 17087,12501 17210,12486 17215,12485 17249,12478
+Dietlindestr.: Asphalt mit leichten Schäden	Q1+ 17088,12506 17088,12617
+#: corrected_by: srt (Asphalt, Q0 -> ...)
+Ortliebstr.: Asphalt/Beton mit einigen Rissen	Q1+ 17088,12506 17210,12486 17215,12485 17249,12478
 #: corrected_by: srt (früher Kopfsteinpflaster, jetzt neu gemacht)
 Kriemhildstr.: Asphalt	Q0 17300,12173 17314,12265
 #: confirmed_by: srt
@@ -31564,6 +31564,7 @@ Einmündungsbereich mit schlechtem Kopfsteinpflaster	Q3+ 25200,9939
 Einmündungsbereich betoniert	Q0- 22855,3902
 #: XXX_prog: allerdings ist zur Eulerstr. hin ein paar Meter gepflastert
 Kreuzungsbereich asphaltiert	Q0 9498,16480
+Kreuzungsbereich asphaltiert	Q0 9475,16307
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 7389,8837
 Kreuzungsbereich asphaltiert	Q0 7086,8579
 Kreuzungsbereich asphaltiert	Q0 5959,6976
@@ -31701,4 +31702,5 @@ Einmündungsbereich asphaltiert	Q0 13976,13309
 Einmündungsbereich asphaltiert	Q0 13934,13403
 Einmündungsbereich asphaltiert	Q0 13918,13438
 Einmündungsbereich mit Kopfsteinpflaster	Q2 4959,13347
+Einmündungsbereich asphaltiert	Q0 9603,16468
 #: ignore ^^^

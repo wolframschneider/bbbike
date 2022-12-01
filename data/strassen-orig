@@ -259,7 +259,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/2022/08/18/gegen-umbenennung-mohrenstrasse-koennen-nur-anwohner-vorgehen/
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2022-11-23 vvv
+#: last_checked: 2022-11-27 (mapillary) vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -862,8 +862,8 @@ Potsdamer Str. (Schöneberg, Tiergarten)	HH 7471,9360 7507,9458 7512,9572 7518,97
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_42_2833_2916_online.pdf (Teileinziehung, Radverkehr wird möglich sein, eingezogener Bereich bis zur Schellingstr.)
 #: XXX wird die Straße zur Fußgängerzone?
 #: osm_watch: way id="4597334" version="25"
-#: last_checked: 2022-09-22 (daf)
-#: next_check: 2022-12-10
+#: last_checked: 2022-11-27 (mapillary)
+#: next_check: 2022-12-31
 Alte Potsdamer Str.	N 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296
 Kulmer Str.	N 7771,9479 7829,9723
 Kulmer Str.	HH 7829,9723 7848,9814 7866,9902
@@ -1833,7 +1833,7 @@ Schönfließer Str. (Prenzlauer Berg)	N 10593,16037 10603,16158 10606,16319 10613,
 Stavangerstr.	N 10620,16497 10632,16644 10635,16706 10638,16770 10798,16769 10845,16770 10883,16824 10886,16893
 Björnsonstr. (Prenzlauer Berg)	N 10197,16528 10209,16674
 (Kolonie Bornholm 1 und 2)	NN 10209,16674 10190,16930
-Esplanade	N 10971,16907 10886,16893 10655,16904 10569,16910 10490,16914 10229,16927 10190,16930 10013,16972
+Esplanade	N 10971,16907 10936,16892 10886,16893 10655,16904 10569,16910 10490,16914 10229,16927 10190,16930 10013,16972
 Finnländische Str.	N 9975,16425 10225,16436
 Czarnikauer Str.	N 10225,16436 10449,16415 10613,16403
 Driesener Str.	N 10458,16509 10449,16415 10438,16340 10421,16175 10405,16017
@@ -3707,9 +3707,9 @@ Buckower Chaussee	N 8533,525 8742,475 8972,498 9002,471
 #: priority: #A
 #: next_check: 2025-01-04 vvv
 #: valid: !20220124-20250104
-Buckower Chaussee	H 9002,471 9069,506 9158,551 9178,556 9250,576 9858,744
+Buckower Chaussee	H 9002,471 9069,506 9123,533 9158,551 9178,556 9250,576 9858,744
 #: valid: 20220124-20250104
-Buckower Chaussee	NH 9002,471 9069,506 9158,551 9178,556 9250,576 9858,744
+Buckower Chaussee	NH 9002,471 9069,506 9123,533 9158,551 9178,556 9250,576 9858,744
 #: next_check ^^^
 Buckower Chaussee	H 9858,744 10047,813 10187,872 10276,906 10324,925 10427,968
 # 
@@ -11154,7 +11154,7 @@ Franz-Klühs-Str.	N 9770,10590 9570,10566 9384,10536
 Friedrich-Stampfer-Str.	N 9388,10393 9527,10389
 Brandesstr.	N 9858,10350 9698,10348 9675,10351
 Siegfriedstr. (Lichtenberg)	NH 16852,14412 16873,14236 16881,14063 16875,13834 16868,13611 16866,13532
-Siegfriedstr. (Lichtenberg)	H 16866,13532 16863,13138 16865,13000 16860,12861 16859,12613 16857,12600 16826,12408 16820,12339
+Siegfriedstr. (Lichtenberg)	H 16866,13532 16863,13138 16865,13000 16860,12861 16859,12613 16857,12600 16831,12419 16820,12339
 Siegfriedstr. (Lichtenberg)	N 16820,12339 16794,12144 16764,11919
 Bornitzstr.	N 16860,12861 16484,12871 16439,12872 16384,12874 16376,12874 16312,12876 16242,12878 16197,12880 16146,12881 16073,12883 15950,12886 15747,12880 15643,12875 15563,12870
 Bornitzstr. [76 A-D und 78 A-D]	N 16312,12876 16313,12762
@@ -11188,8 +11188,8 @@ Roedeliusplatz	N 16159,12293 16227,12281 16276,12273
 Glaschkestr.	N 16159,12293 16144,12388 16147,12434
 Atzpodienstr.	N 16576,12612 16564,12513 16509,12518 16485,12384
 Atzpodienstr.	H 16485,12384 16456,12191 16413,11906
-Wotanstr. (Lichtenberg)	N 16720,12614 16694,12422 16685,12358 16657,12165
-Freiastr.	N 16826,12408 16694,12422
+Wotanstr. (Lichtenberg)	N 16720,12614 16696,12437 16685,12358 16657,12165
+Freiastr.	N 16831,12419 16696,12437
 Zwickauer Damm	NH 16135,2135 16056,2034 16002,1964 15875,1796 15835,1747 15799,1690 15729,1573 15719,1557 15688,1506 15670,1474 15641,1426
 Zwickauer Damm	N 15641,1426 15591,1332 15540,1239 15482,1138 15426,1041 15337,889 15272,778
 (U Zwickauer Damm - Agnes-Straub-Weg)	NN 15931,2061 15930,2112 15923,2129
@@ -11897,7 +11897,7 @@ Allée du Stade	N 3585,16252 3781,16175 4035,16051 4076,16017 4089,15978 4084,158
 (Uferweg am Hohenzollernkanal)	N 1737,15789 1349,15797
 (Uferweg am Hohenzollernkanal)	NN 1349,15797 1232,15804 1201,15804 364,15810 44,15897 -192,16054 -203,16064 -205,16086 -224,16095 -265,16111 -822,16535 -910,16608
 #: next_check_id: TEGELERBRUECKE-2021
-#: osm_watch: way id="930770437" version="3"
+#: osm_watch: way id="930770437" version="4"
 #: last_checked: 2022-10-08
 #: check_frequency: 180d
 #: next_check: 2023-12-01
@@ -12723,8 +12723,8 @@ Am Buschfeld	N 14171,1634 14124,1857
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_05_0237_0304_online.pdf (Verkauf eines Flurstücks)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_17_1033_1092_online.pdf (Einziehung von Straßenland)
 #: XXX ändert sich durch die (teilweise?) Straßenlandwidmung etwas?
-#: osm_watch: way id="156346093" version="6"
-#: osm_watch: way id="23106203" version="13"
+#: osm_watch: way id="156346093" version="7"
+#: osm_watch: way id="23106203" version="14"
 #: last_checked: 2022-09-24 (mapillary)
 #: check_frequency: 150d
 Stuthirtenweg	NN 12984,1011 13040,1021 13113,1046 13181,1082 13241,1113
@@ -13342,7 +13342,7 @@ Lessingstr. (Lichtenrade)	N 10735,137 10613,108 10512,83 10425,67 10300,42 10156
 Dörfelweg	N 9730,-33 9593,-45 9507,-85
 Eisnerstr.	N 9507,-85 9653,-483 9698,-556
 #: osm.highway: service
-(Parkplatz S-Bhf. Buckower Chaussee)	N 9178,556 9218,458 9249,434 9296,335 9271,323
+(Parkplatz S-Bhf. Buckower Chaussee)	N 9218,458 9249,434 9296,335 9271,323
 # 
 #: next_check_id: BUCKOWERCHAUSSEE-EISNER-2020
 #: next_check_id: BUCKOWERCHAUSSEE-2022
@@ -13352,9 +13352,18 @@ Eisnerstr.	N 9507,-85 9653,-483 9698,-556
 #: check_frequency: 180d
 (Eisnerstr. - S-Bhf Buckower Chaussee)	NN 9507,-85 9473,-92 9271,323
 # 
+#: next_check_id: BUCKOWERCHAUSSEE-2022
+#: XXX bauzeitliche Umleitung, vermutlich bis 2025 vvv
+#: next_check: 2022-12-01 vvv
+(Buckower Chaussee - Fußgängerbrücke)	NN 9123,533 9195,405
+(Fußgängerbrücke S-Bhf. Buckower Chaussee)	NN 9195,405 9212,411 9228,417 9233,418
+(Fußgängerbrücke - Buckower Chaussee)	NN 9233,418 9218,458 9178,556
+#: next_check ^^^
+#: XXX ^^^
+# 
 #: osm.highway: service
 (Eisnerstr. - S-Bhf Buckower Chaussee)	N 9271,323 9253,370
-(Eisnerstr. - S-Bhf Buckower Chaussee)	NN 9253,370 9218,458
+(Eisnerstr. - S-Bhf Buckower Chaussee)	NN 9253,370 9233,418
 (unter der S-Bahn)	NN 9699,-600 9562,-619 9520,-641
 Miethepfad	N 9520,-641 9561,-748 9598,-846
 Poleigrund	N 9156,-883 9340,-829 9561,-748
@@ -15298,8 +15307,8 @@ In den Floragärten	N 9895,17649 9894,17708 9893,17748
 In den Floragärten	N 9894,17708 9996,17707 9995,17642
 #: note ^^^
 Guntherstr. (Lichtenberg)	N 17020,12309 16993,12118 16975,12000
-Dietlindestr.	N 17056,12304 17087,12501 17088,12617
-Ortliebstr.	N 17087,12501 17210,12486 17215,12485 17249,12478
+Dietlindestr.	N 17056,12304 17088,12506 17088,12617
+Ortliebstr.	N 17088,12506 17210,12486 17215,12485 17249,12478
 Borkumer Str. (Schmargendorf, Wilmersdorf)	N 3056,7095 3110,7112 3202,7121 3302,7092 3382,7074 3488,7050 3585,7028
 Cheruskerstr.	N 7446,8200 7412,8253 7412,8273 7412,8351 7410,8593 7408,8648 7439,8716 7485,8777
 #: note: Übergang über die Wannseebahn
@@ -18660,7 +18669,7 @@ Ramlerstr. [entlang der Swinemünder Brücke]	N 9666,15739 9644,15780
 #: by: https://weddingweiser.de/hines-plant-kaufland-abzureissen/
 #: by: https://architektur-urbanistik.berlin/index.php?threads/brunnenstrasse-105.1103/#post-16459
 #: XXX Falls das Einkaufszentrum abgerissen wird: bleibt die Zufahrtsstraße? Bleibt die Zugangsmöglichkeit vom Bärbel-Bohley-Ring?
-#: last_checked: 2022-08-21
+#: last_checked: 2022-11-30
 #: check_frequency: 360d
 #: osm.highway: service
 (Zufahrtsstraße am Einkaufszentrum)	N 9291,15740 9363,15738 9596,15780 9592,15800 9571,15838 9478,15826 9328,15806 9267,15790
