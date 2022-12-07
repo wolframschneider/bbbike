@@ -605,7 +605,7 @@ Bus 190	busroute_N 21019,7340 21050,7341 21153,7393 21341,7487 21475,7500
 Bus 190	busroute_N 21175,9989 20947,9999 20703,10004 20706,10047 20708,10144 20711,10230 20713,10293 20716,10434 21017,10423 21281,10428
 Bus 190	busroute_N 21019,7340 21050,7341 21153,7393 21341,7487 21475,7500
 Bus 398	busroute_N 21135,10995 21249,11042 21308,11075 21354,11101 21385,11119 21420,11150 21457,11188 21535,11267 21628,11384
-Bus 108	busroute_N 21124,11462 20959,11472 20828,11480 20818,11480 20729,11483 20720,11484 20650,11488 20641,11488 20616,11490 20569,11492 20521,11494 20540,11660 20571,11698
+Bus 108	busroute_N 21124,11462 21074,11465 20959,11472 20828,11480 20818,11480 20729,11483 20720,11484 20650,11488 20641,11488 20616,11490 20569,11492 20521,11494 20540,11660 20571,11698
 Bus 192	busroute_N 18586,12151 18927,12135 19094,12127 19148,12073 19138,11815 19136,11739 19135,11713 19121,11681 19021,11675 18999,11705 19000,11719 19005,11767 19004,11780
 Bus 108, Bus 192	busroute_N 19389,11761 19138,11815
 Bus 108	busroute_N 19138,11815 18934,11796 18853,11780
@@ -1355,7 +1355,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2022-11-27
+#: last_checked: 2022-12-04
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1626,11 +1626,9 @@ ausgeschildert "Sokratesweg 3/29"	CP2; 18520,9585 18610,9569
 ausgeschildert "Sokratesweg 31/57"	CP2; 18514,9552 18604,9535
 ausgeschildert "Sokratesweg 59/85"	CP2; 18505,9500 18596,9485
 # 
-#: next_check_id: AFRIKANISCHESVIERTEL-2020
-#: XXX wird umbenannt, neuer Name: "Manga-Bell-Platz"
-#: last_checked: 2022-10-03
-#: check_frequency: 90d
-ausgeschildert "Nachtigalplatz"	CP2; 5581,16708 5639,16768
+# REMOVED --- #: next_check_id: AFRIKANISCHESVIERTEL-2020 --- #: XXX wird umbenannt, neuer Name: "Manga-Bell-Platz" --- #: last_checked: 2022-10-03 --- #: check_frequency: 90d
+#: historical_note: früher: ausgeschildert "Nachtigalplatz"
+ausgeschildert "Manga-Bell-Platz"	CP2; 5581,16708 5639,16768
 # 
 ausgeschildert "Danziger Str. 101-109"	CP2; 12123,14643 12174,14739
 # 
@@ -1770,11 +1768,13 @@ Am Werksgarten: nicht ausgeschildert	CP2; 22805,5179 22803,5241
 Schilder VoltAir-Parkhaus und Zugang Dircksenstraße 04	CP2; 11240,12368 11344,12410
 # 
 #: XXX Wird hier noch ausgeschildert?
-#: last_checked: 2022-11-26
+#: last_checked: 2022-12-02
 Forum an der Museumsinsel: nicht ausgeschildert	CS 9650,13074 9682,13167 9633,13192 9602,13081
 # 
 #: by: mapillary (kein Scherz)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5832
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/fnLHXQriPYaXCg11dvvhibO6O8AmZFFbDGfEsncu/GcavYgrs/69-Anlagen/04/B0316SB.pdf (hier wird auch "Weg" erwähnt)
 ausgeschildert als "Weg"	CP2; 21640,-582 21403,-859
+# 
+Rewe/Penny/Kik-Parkplatz	CP2; 17503,10544 17422,10571
 # 

@@ -670,7 +670,7 @@ Am Hanffgraben	1 16698,1392 16805,1488
 #: note: "Für Radfahrer ist in der Gegenrichtung die Benutzung des Gehweges möglich."
 Wustermarker Str.:	1 -4385,14305 -4559,14341
 #: note: großzügige Drängelgitter für Radfahrer/Fußgänger
-Berliner Str.: Mittelstreifen und Straßennbahntrasse	3nocross 10849,17848 10852,17801 10858,17721 10883,17491
+Berliner Str.: Mittelstreifen und Straßennbahntrasse	3nocross 10849,17848 10853,17802 10858,17721 10883,17491
 #: note: public imagery vvv
 Hundekehlestr.: Mittelstreifen	3nocross 2346,7684 2460,7658 2565,7637
 Lietzenburger Str.	3nocross 5047,10381 5196,10398 5313,10420
@@ -859,7 +859,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: by: http://www.flickr.com/photos/lapidarium42/7708833948/in/pool-gwb
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
-#: osm_watch: way id="155071540" version="14"
+#: osm_watch: way id="155071540" version="15"
 #: last_checked: 2022-11-13
 #: check_frequency: 60d
 #: priority: #D

@@ -1960,7 +1960,28 @@ sub create {
 # Return information about clicked line as a LinePartInfo struct
 sub click_info {
     my $o = shift;
-    my(undef, @tags) = main::find_below_rx($o->canvas, [qr{.}], undef, [qr{^(show|pp)$}]);
+
+    # XXX temp blockings always have precedence, even if below other
+    # items. Main use case is a temp blockings item with a
+    # fragezeichen/XXX item above, but editing must always be done in
+    # the temp blockings item (the fragezeichen/XXX item is just
+    # auto-generated).
+    my(undef, @tags) = main::find_below_rx($o->canvas, [qr{^temp_sperre(?:_s)?$}]);
+    if (!@tags) {
+	my @ignored_layers = qw(show pp);
+	push @ignored_layers, grep {
+	    $o->str_file->{$_} =~ m{(
+				      \bbbbike/misc/gps_data/
+				    | \bbbbike/tmp/streets-accurate.*\.bbd$
+				    | \bbbbike/tmp/fit\.bbd$
+				    | ^/tmp/.*\.trk-gpsspeed\.bbd$
+				    )}x;
+	} keys %{ $o->str_file };
+	my $ignored_layers_rx = '^(' . join('|', map { quotemeta } @ignored_layers) . ')$';
+	$ignored_layers_rx = qr{$ignored_layers_rx};
+	(undef, @tags) = main::find_below_rx($o->canvas, [qr{.}], undef, [$ignored_layers_rx]);
+    }
+
     if (@tags) {
 	my $abk = $tags[0];
 	my $pos = $tags[3];
@@ -2351,10 +2372,10 @@ sub start_editor {
     my($file, $line) = @_;
     require BBBikeUtil;
     my @try = ((defined $main::texteditor && $main::texteditor !~ m{^\s*$} ? $main::texteditor : ()),
-	       "gnuclient",
-	       "emacsclient",
-	       "emacsclient-snapshot",
-	       "vi",
+	       "emacsclient",          # https://www.emacswiki.org/emacs/GnuClient: as of emacs 22.1, emacsclient supports everything gnuclient used to do
+	       "gnuclient",            # part of XEmacs
+	       "emacsclient-snapshot", # https://www.emacswiki.org/emacs/EmacsSnapshotAndDebian
+	       "vi",                   # used within an xterm
 	      );
     for my $try (@try) {
 	if ($try =~ m{gnuclient} && BBBikeUtil::is_in_path($try)) {
@@ -2369,12 +2390,14 @@ sub start_editor {
 		main::status_message("Error while starting $try", "die");
 	    }
 	    return;
-	} elsif ($try eq 'vi' && BBBikeUtil::is_in_path($try) && BBBikeUtil::is_in_path("xterm")) {
-	    system("xterm", "-e", "vi", "+".$line, $file);
-	    if ($?/256 != 0) {
-		main::status_message("Error while starting $try in an xterm", "die");
+	} elsif ($try eq 'vi') {
+	    if (BBBikeUtil::is_in_path($try) && BBBikeUtil::is_in_path("xterm")) {
+		system("xterm", "-e", "vi", "+".$line, $file);
+		if ($?/256 != 0) {
+		    main::status_message("Error while starting $try in an xterm", "die");
+		}
+		return;
 	    }
-	    return;
 	} elsif (BBBikeUtil::is_in_path($try)) {
 	    system($try, "+".$line, $file);
 	    if ($?/256 != 0) {

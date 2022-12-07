@@ -17,11 +17,20 @@ use warnings;
 use FindBin;
 use lib "$FindBin::RealBin/..";
 
+use Getopt::Long;
 use JSON::XS qw(decode_json);
 use YAML::XS qw(LoadFile);
 use Term::ANSIColor qw(colored);
 
-use BBBikeUtil qw(bbbike_root);
+use BBBikeUtil qw(bbbike_root is_in_path);
+
+my $use_pager = -t STDOUT && is_in_path('less');
+my $highlight_days = 3;
+GetOptions(
+	   'pager!'           => \$use_pager,
+	   'highlight-days=i' => \$highlight_days,
+	  )
+    or die "usage: $0 [--no-pager] [--highlight-days days]\n";
 
 my $sourceids_all     = LoadFile(bbbike_root . "/tmp/sourceid-all.yml");
 my $sourceids_current = LoadFile(bbbike_root . "/tmp/sourceid-current.yml");
@@ -35,9 +44,9 @@ for my $dd (@{ $d->{data}->{allDisruptions}->{disruptions} }) {
     my $from = "$dd->{gueltigVonDatum} $dd->{gueltigVonZeit}";
     my $sourceid = "bvg2021:" . lc($dd->{linie}) . "#" . $dd->{meldungsId};
     my $text =
+	"$from - " . ($dd->{gueltigBisDatum} // "?") . " " . ($dd->{gueltigBisZeit} // "") . "\n" .
 	($sourceids_all->{$sourceid} ? colored($sourceid, (!$sourceids_current->{$sourceid} ? "yellow on_black" : "green on_black")) . " INUSE" : $sourceid) . "\n" .
 	"$dd->{beginnAbschnittName} - $dd->{endeAbschnittName}\n" .
-	"$from - " . ($dd->{gueltigBisDatum} // "?") . " " . ($dd->{gueltigBisZeit} // "") . "\n" .
 	highlight_words($dd->{textIntAuswirkung}) . "\n";
     $text .= "SEV: $dd->{sev}\n" if $dd->{sev} ne "";
     push @records, {from=>$from, text=>$text};
@@ -45,10 +54,20 @@ for my $dd (@{ $d->{data}->{allDisruptions}->{disruptions} }) {
 
 @records = sort { $a->{from} cmp $b->{from} } @records;
 
-binmode STDOUT, ":utf8";
+my $outfh;
+if ($use_pager) {
+    require POSIX;
+    my @next_days = map { POSIX::strftime('%F', localtime(time + 86400*$_)) } (0..$highlight_days-1); # XXX incorrect on DST switches!
+    my $rx = '^(' . join('|', map { quotemeta } @next_days) . ')$';
+    open $outfh, '|-', 'less', '+/'.$rx
+	or die $!;
+} else {
+    $outfh = \*STDOUT;
+}
+$outfh->binmode(':utf8');
 for my $record (@records) {
-    print $record->{text};
-    print "="x70, "\n";
+    $outfh->print($record->{text});
+    $outfh->print("="x70, "\n");
 }
 
 sub highlight_words {

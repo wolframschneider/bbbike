@@ -259,7 +259,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/2022/08/18/gegen-umbenennung-mohrenstrasse-koennen-nur-anwohner-vorgehen/
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2022-11-27 (mapillary) vvv
+#: last_checked: 2022-12-02 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -378,7 +378,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: source_id: 2147346249
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
 #: priority: #A
-#: last_checked: 2022-11-23
+#: last_checked: 2022-12-02
 # REMOVED --- #: check_frequency: 14d
 # REMOVED --- #: check_frequency: 90d
 #: next_check: 2022-12-31
@@ -2277,7 +2277,7 @@ Diesterwegstr.	N 11852,15281 11900,15238 12056,15159 12060,15141 11995,15012 119
 Wisbyer Str.	HH 11019,16465 11289,16423 11397,16405 11448,16398 11470,16394 11542,16384 11632,16373 11673,16367 11727,16358 11750,16354 11808,16343 11829,16339 11889,16328 11936,16302 12012,16250 12090,16199
 Berliner Str. (Pankow, Prenzlauer Berg)	HH 11027,16553 11021,16605 11008,16729 10992,16829 10971,16907 10927,17022
 Berliner Str. (Pankow, Prenzlauer Berg)	H 10927,17022 10917,17088 10908,17142 10904,17288 10899,17331 10892,17396 10885,17469 10883,17491 10858,17721
-Berliner Str. (Pankow, Prenzlauer Berg)	H 10858,17721 10852,17801 10849,17848
+Berliner Str. (Pankow, Prenzlauer Berg)	H 10858,17721 10853,17802 10849,17848
 Berliner Str. (Pankow, Prenzlauer Berg)	H 10849,17848 10858,17721
 Berliner Str. (Pankow, Prenzlauer Berg)	H 10849,17848 10830,17985 10815,18074 10755,18231 10739,18262 10718,18304 10680,18380
 #: XXX_prog: Achtung: mittlerer Punkt als Workaround für 3nocross-Probleme
@@ -2473,14 +2473,14 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a100_16_ba/pix/los1/NKA_Sperrung_Ueplan_Fussgaenger_gr.gif
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.777571.php
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/a100-baustelle-grenzallee-wieder-offen_a198400
-#: last_checked: 2022-11-13 (mapillary)
+#: last_checked: 2022-12-04
 #: check_frequency: 90d
 #: next_check: 2023-06-30
 # REMOVED --- (provisorische Umfahrung)	NN 14310,7022 14323,7080 14235,7100 14223,7084 14196,7086
 (provisorische Umfahrung)	NN 14310,7022 14276,7021 14245,7037 14236,7058 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2022-11-18 vvv
+#: last_checked: 2022-12-04 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2022-12-31 vvv
 #: valid: 20140224-20221231
@@ -4281,8 +4281,6 @@ Adam-von-Trott-Str.	N 3854,15670 3852,15533 3860,15485 3857,15226 4148,15220
 Thaters Privatweg	N 3956,14750 3899,14868 3893,14911 3892,14944 4103,15137 4148,15205
 Riedemannweg	N 4248,15647 4389,15336
 Buchholzweg	N 4535,15530 4466,15350 4389,15336
-#: next_check_id: AFRIKANISCHESVIERTEL-2020
-#: XXX wird umbenannt, neuer Name: "Cornelius-Fredericks-Str."
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/426_2018_zu_ds_-1118_v_neue_strassennamen_im_afrikanischen_viertel.pdf
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8954 (andere Schreibweise: Cornelius-Fredericks-Str.)
 #: by: http://www.abendblatt-berlin.de/2018/12/04/verwechslungsgefahr-im-afrikanischen-viertel/
@@ -4295,13 +4293,9 @@ Buchholzweg	N 4535,15530 4466,15350 4389,15336
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1265051.php (Umbenennung am 2.12.2022)
 #: by: https://berliner-abendblatt.de/2022/11/16/jetzt-wirklich-strassen-im-afrikanischen-viertel-werden-umbenannt/
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_47_3201_3352_online.pdf (endgültige Umbenennung)
-#: add_fragezeichen: Wurde die Umbenennung zu "Cornelius-Fredericks-Str." schon durchgeführt? Hängen schon die neuen Straßenschilder?
-#: also_indoor: search Cornelius-Fredericks-Straße
-#: osm_watch: way id="247340732" version="21"
-#: last_checked: 2022-08-27 (mapillary)
-# REMOVED --- #: check_frequency: 90d
-#: next_check: 2022-12-02
-Lüderitzstr.	N 6661,15921 6484,16085 6349,16213 6211,16343 6106,16433 6003,16521
+# REMOVED --- #: next_check_id: AFRIKANISCHESVIERTEL-2020 --- #: XXX wird umbenannt, neuer Name: "Cornelius-Fredericks-Str." --- #: add_fragezeichen: Wurde die Umbenennung zu "Cornelius-Fredericks-Str." schon durchgeführt? Hängen schon die neuen Straßenschilder? --- #: also_indoor: search Cornelius-Fredericks-Straße --- #: osm_watch: way id="247340732" version="21" --- #: last_checked: 2022-08-27 (mapillary) --- #: check_frequency: 90d --- #: next_check: 2022-12-02
+#: oldname: -20221202: Lüderitzstr.
+Cornelius-Fredericks-Str.	N 6661,15921 6484,16085 6349,16213 6211,16343 6106,16433 6003,16521
 Sansibarstr.	N 6201,16538 6106,16433 6005,16313 5827,16118
 Otawistr.	N 6098,16630 6003,16521 5906,16403 5748,16235
 Transvaalstr.	H 5446,15489 5722,15795 5907,16000 5981,16091 6104,16223 6211,16343 6304,16447
@@ -4669,7 +4663,7 @@ Friesenstr. (Niederschönhausen)	NN 8765,19288 8834,19253 8944,19197 9458,18859
 (Pankeweg)	NN 11907,19749 11995,19759 12154,20325 12216,20344 12235,20380 12266,20467 12310,20523 12363,20582 12386,20636 12505,20702 12578,20749
 (Pankeweg)	NN 12553,20757 12753,20884 12807,20944 12880,21134
 #: XXX Wird der Pankeweg nach den Bauarbeiten hier wieder begradigt?
-#: last_checked: 2022-08-03 (mapillary)
+#: last_checked: 2022-09-09 (mapillary)
 #: check_frequency: 120d
 (Pankeweg)	NN 12880,21134 12854,21147 12914,21229
 (Pankeweg)	NN 12914,21229 13031,21538 13078,21754 13141,22018 13206,22290 13110,22313
@@ -6199,7 +6193,7 @@ Heinrich-Dathe-Platz	NN 18418,10365 18387,10406
 Dathepromenade	NN 18394,10348 18320,10318 18302,10289 18314,10260 18132,10183 18101,10169 18058,10166
 (Dathepromenade - Sewanstr.)	N 18058,10166 18025,10152 17970,10132
 (Dathepromenade - Sewanstr.)	NN 17970,10132 17905,10122
-Volkradstr.	H 17427,10259 17479,10452 17511,10577 17527,10640 17569,10801 17621,10994
+Volkradstr.	H 17427,10259 17479,10452 17503,10544 17511,10577 17527,10640 17569,10801 17621,10994
 Moldaustr.	N 17511,10577 17702,10525 17823,10495
 Moldaustr.	N 17828,10514 17856,10508 17950,10481 17915,10350
 Moldaustr.	N 17856,10508 17837,10425
@@ -6297,7 +6291,7 @@ Paul-Gesche-Str.	N 17495,11724 17541,11717 17568,11691 17692,11677 17690,11610
 #: note: eventuell wird dieser Weg bei der Realisierung der TVO unterbrochen, deshalb der osm_watch-Eintrag
 #: osm_watch: way id="30042670" version="8"
 (Alt-Friedrichsfelde - Weißenhöher Str.)	NN 19726,11743 19735,11721 19830,11677 19881,11591
-Weißenhöher Str.	N 19807,11572 19845,11597 19881,11591 19984,11557 20150,11512 20354,11500 20521,11494 20569,11492 20616,11490 20641,11488 20650,11488 20720,11484 20729,11483 20818,11480 20828,11480 20959,11472 21124,11462
+Weißenhöher Str.	N 19807,11572 19845,11597 19881,11591 19984,11557 20150,11512 20354,11500 20521,11494 20569,11492 20616,11490 20641,11488 20650,11488 20720,11484 20729,11483 20818,11480 20828,11480 20959,11472 21074,11465 21124,11462
 Weißenhöher Str. [69-71]	NN 20569,11492 20582,11558
 Hanoier Str.	N 20729,11483 20725,11375
 Arno-Philippsthal-Str.	N 20641,11488 20630,11342
@@ -6316,13 +6310,15 @@ Gisela-Reissenberger-Platz	NN 20659,11548 20665,11620 20735,11613
 (Verbindungsweg)	NN 20659,11548 20627,11552 20582,11558
 (Verbindungsweg)	NN 20726,11539 20823,11527 20866,11521
 # 
-Minsker Str.	N 20828,11480 20820,11333 20818,11293 20817,11257 20834,11150
+Minsker Str.	N 20828,11480 20820,11333 20818,11293 20817,11257 20835,11144
 #: note: beleuchtet
 #: note: vorletzer Punkt ist ein "Pseudo-Punkt" für die 3nocross-Problematik
 Elsterwerdaer Platz	NN 20818,11293 20829,11275 20839,11300 21055,11284 21084,11319 21110,11326 21134,11331
+Elsterwerdaer Platz	N 21074,11465 21073,11350 21134,11331
+Elsterwerdaer Platz	NN 21073,11350 21082,11333 21084,11319
 (U-Bahnunterführung Elsterwerdaer Platz)	NN 21137,11294 21084,11319
-Haltoner Str.	N 20536,11022 20602,11050 20659,11076 20719,11101 20834,11150 20968,11203
-Haltoner Str.	NN 20968,11203 21010,11223 21055,11284
+Haltoner Str.	N 20536,11022 20602,11050 20659,11076 20719,11101 20835,11144 20940,11186 20985,11186
+Haltoner Str.	NN 20985,11186 21010,11223 21055,11284
 Wettersternweg	N 20719,11101 20708,11145 20710,11234
 Wettersternweg	NN 20710,11234 20713,11263
 Stachelbartweg	N 20713,10982 20659,11076 20645,11127 20646,11237
@@ -8470,6 +8466,9 @@ An der Bastion	N -7985,6017 -7945,6060 -7932,6101 -7944,6133 -7974,6189
 Grüner Wall	N -7932,6101 -7834,6109
 (Am ehem. Flugplatz Gatow)	N -7999,6258 -7916,6250 -7824,6208 -7652,6130 -7561,6227
 (Golfklub Gatow)	N -7561,6227 -7374,6416
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_49_3361_3472_online.pdf ("Kohleweg" (Text) und "Am Kohleweg" (Karte) werden erwähnt)
+#: alias: Kohleweg
+#: alias: Am Kohleweg
 (Am Golfplatz)	N -7561,6227 -6977,5851
 Am Ritterholz	N -7045,5745 -7321,5920 -7428,6061 -7458,6084 -7488,6083 -7520,6052
 Mascha-Kaléko-Weg	N -6319,5606 -6342,5548
@@ -9607,7 +9606,7 @@ Tiniusstr.	N 12555,18375 11984,18650
 Stubnitzstr.	N 11303,18096 11102,17942 11047,17883
 Stubnitzstr.	N 11113,17895 11102,17942
 #: osm.highway: service
-(Berliner Str. - Kissingenstr.)	N 10852,17801 10896,17846 10944,17863
+(Berliner Str. - Kissingenstr.)	N 10853,17802 10896,17846 10944,17863
 Kissingenstr.	N 10922,17886 10944,17863 11023,17878 11047,17883 11113,17895 11195,17911 11272,17930 11390,17962 11487,17984 11621,18011 11655,18018 11725,18032 11819,18050 11884,18063
 Kissingenplatz	N 11487,17984 11448,18051 11405,17985
 Kissingenplatz	NN 11405,17985 11390,17962
@@ -10036,6 +10035,8 @@ Märkische Allee [Wohngebiet]	N 20459,16697 20439,16709 20430,16744 20473,16829 2
 Märkische Allee [Wohngebiet]	N 19649,13481 19653,13253 19706,13102 19821,12986 19933,12984
 Märkische Allee [Wohngebiet]	N 19777,12949 19821,12986
 Märkische Allee [Wohngebiet]	N 21377,18663 21299,18508
+Märkische Allee [Wohngebiet]	N 19653,13253 19743,13210 19804,13185
+(Märkische Allee - Biesdorfer Promenade)	NN 19743,13210 19757,13191 19830,13170 19842,13144 19873,13129
 Märkische Spitze	N 19994,12484 19907,12501 19917,12602 19894,12695 19849,12778 19800,12862 19739,12914 19777,12949
 Märkische Allee - Alt-Friedrichsfelde	HH 19924,11890 19890,11830 19849,11779 19785,11760 19726,11743
 Alt-Friedrichsfelde - Märkische Allee	HH 19985,11727 20018,11698 20026,11663
@@ -12862,7 +12863,7 @@ Bergfriedstr.	N 10857,10411 10944,10606
 Moritzstr. (Kreuzberg)	N 10633,10369 10433,10456
 Lebuser Str.	NH 12352,12509 12355,12541 12359,12592 12384,12718
 Scharnweberstr. (Friedrichshain)	N 14354,12012 14468,11992 14589,11975 14675,11964 14783,11949 14888,11934
-Scharnweberstr. (Friedrichshain)	NH 14888,11934 14965,11924 15077,11910 15133,11902 15256,11884
+Scharnweberstr. (Friedrichshain)	NH 14888,11934 14965,11924 15077,11910 15133,11902 15174,11896 15217,11890 15256,11884
 Weserstr. (Friedrichshain)	N 14416,11815 14475,11778 14550,11732 14622,11685 14651,11666 14710,11626 14764,11591 14830,11551 14849,11539 14949,11474 15016,11431
 # REMOVED (vermutlich ja) --- #: note: "Schreibfederpassage" (by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=6033) --- #: XXX wird diese Passage dauerhaft gesperrt werden? --- #: last_checked: 2018-12-22 --- (Weserstr. - Boxhagener Str.)	NN 14949,11474 14838,11410 14792,11391 14752,11369
 Caroline-Herschel-Platz	NN 14752,11369 14737,11347
@@ -13967,7 +13968,7 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED (Verschwenkung realisiert) --- #: XXX Verschwenkung der Bergiusstr. --- #: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle --- #: XXX wahrscheinlich ist auch die alte Ampel abgeschaltet? --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1308/nachricht5044.html --- #: prio: #A --- #: next_check: 2013-08-23
 # REMOVED (nein, keine Schilder) --- #: XXX als Bergiusstr. ausgeschildert? --- #: next_check: 2013-09-04
 # REMOVED --- #: last_checked: 2021-03-30 --- #: check_frequency: 90d --- #: next_check: 2021-12-31 --- #: next_check: 2021-04-02 --- (Zufahrt zur Bergiusstr.)	NN 14051,6731 14106,6663
-#: last_checked: 2022-10-18 vvv
+#: last_checked: 2022-12-04 vvv
 #: check_frequency: 90d vvv
 #: XXX im Zuge des A100-Ausbaus wird die Bergiusstr. verschwenkt
 Bergiusstr.	H 14051,6731 14106,6663
@@ -15248,7 +15249,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2022-11-12
+#: last_checked: 2022-12-05
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15624,7 +15625,10 @@ Rüdickenstr. [Wohngebiet]	N 17264,17489 17172,17424 17101,17460 17064,17515 1718
 (Weg am Rüdickengraben)	NN 17006,17473 17185,17384 17384,17307 17397,17310
 Baikalstr.	N 17479,10452 17255,10510
 Baikalstr.	N 17210,10350 17255,10510 17276,10617
-(Baikalstr. - Tränkegraben)	NN 17276,10617 17277,10633 17298,10633 17249,10651
+(Baikalstr. - Tränkegraben)	NN 17276,10617 17277,10633 17298,10633
+(Tränkegraben - Volkradstr.)	NN 17249,10651 17298,10633 17329,10620 17363,10587 17422,10571
+#: osm.highway: service
+(Tränkegraben - Volkradstr.)	N 17422,10571 17503,10544
 #: next_check_id: ZUMBETRIEBSBHF-2017
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7121
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036637679537/637679537/00220602/02-Anlagen/01/1_Version_vom_03_07_2017.pdf (zweite Karte!)
@@ -15632,7 +15636,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2022-11-12
+#: last_checked: 2022-12-05
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -15913,8 +15917,6 @@ Togostr.	N 5531,16734 5315,16936
 (Otawistr. - Dauerkolonie Togo)	NN 6003,16521 5965,16555 5801,16700
 #: note: Beleuchtung existiert
 (Usambarastr. - Dauerkolonie Togo)	NN 5684,16815 5710,16792 5807,16709
-#: next_check_id: AFRIKANISCHESVIERTEL-2020
-#: XXX wird umbenannt, neuer Name: "Manga-Bell-Platz"
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/426_2018_zu_ds_-1118_v_neue_strassennamen_im_afrikanischen_viertel.pdf
 #: by: https://www.tagesspiegel.de/berlin/bezirke/spandau/berlin-mitte-neue-strassennamen-fuers-afrikanische-viertel-gefunden/21163352.html
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8959 ("Manga-Bell-Platz")
@@ -15926,17 +15928,15 @@ Togostr.	N 5531,16734 5315,16936
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1265051.php (Umbenennung am 2.12.2022)
 #: by: https://berliner-abendblatt.de/2022/11/16/jetzt-wirklich-strassen-im-afrikanischen-viertel-werden-umbenannt/
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_47_3201_3352_online.pdf (endgültige Umbenennung)
-#: osm_watch: way id="333607502" version="11"
-#: also_indoor: search Manga-Bell-Platz
-#: last_checked: 2022-11-08
-# REMOVED --- #: check_frequency: 90d
-#: next_check: 2022-12-02
-Nachtigalplatz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,16803 5561,16767 5531,16734 5496,16696 5533,16662
+# REMOVED --- #: next_check_id: AFRIKANISCHESVIERTEL-2020 --- #: osm_watch: way id="333607502" version="11" --- #: also_indoor: search Manga-Bell-Platz --- #: last_checked: 2022-11-08 --- #: check_frequency: 90d --- #: next_check: 2022-12-02
+#: oldname: -20221202: Nachtigalplatz
+Manga-Bell-Platz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,16803 5561,16767 5531,16734 5496,16696 5533,16662
 #: next_check_id: AFRIKANISCHESVIERTEL-2020
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2018/426_2018_zu_ds_-1118_v_neue_strassennamen_im_afrikanischen_viertel.pdf
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_47_6363_6522_online.pdf (Umbenennung, Widerspruchsfrist bis 2018-12-23)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_02_0441_0548_online.pdf (Widerspruch)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9450
+#: by: https://berliner-abendblatt.de/2022/12/02/strasse-und-platz-in-berlin-nach-freiheitskaempfern-benannt/ (mit Bild)
 #: add_fragezeichen: Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: osm_watch: way id="5199719" version="19"
 #: also_indoor: search Maji-Maji-Allee
