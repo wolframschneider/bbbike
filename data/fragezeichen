@@ -626,6 +626,7 @@ Grüner Weg (Groß Glienicke): Qualität?	? -9616,6980 -9707,7077 -9848,7181
 Interessentenweg (Groß Glienicke): Qualität?	? -9670,7190 -9726,7239 -9798,7341
 Am Anger (Groß Glienicke): Qualität?	? -9668,6423 -9803,6453 -9839,6497 -9843,6554
 Waldweg (Groß Glienicke): Qualität?	? -10261,6466 -10127,6469
+Wilhelm-Stintzing-Platz (Groß Glienicke): neuer Platz, wo genau?	? -9593,6646 -9602,6680 -9620,6698
 Eichengrund (Groß Glienicke): Qualität?	? -9506,7421 -9935,7406
 Zum Teufelssee - Am Moosfenn (Potsdam): Qualität der Gehwegverbindung?	? -10397,-5379 -10503,-5165
 Am Pappeltor (Potsdam, Geltow): Qualität?	? -18894,-5272 -18885,-5173 -18908,-4810 -18928,-4677 -18928,-4595 -18910,-4561 -18771,-4330 -18604,-3755
@@ -889,6 +890,8 @@ Schloßstr. (Einbahnstraße?)	? -14821,106013 -15004,105813 -15070,105705
 Tiergartenstr. (Einbahnstraße?)	? -15004,105813 -14862,105712 -14570,105702 -14288,105530 -14242,105542
 Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105763 -13977,105850 -13932,106157
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
+# added from ampeln
+Wilhelmstr./Am Omnibushof: provisorische Ampel (Existiert die provisorische Ampel noch immer?)	? -4647,12269
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 Müggelschlößchenweg: Asphalt, einige Wurzelhebungen (Ist die Fahrbahn östlich der Bus-Endhaltestelle nach den Bauarbeiten besser geworden?)	? 25385,4414 25132,4385 24181,4270 24135,4264 23879,4233 23753,4218
@@ -964,6 +967,7 @@ Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	?
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
+Schranke, umständlich zu umfahren (existiert die Schranke noch?)	? 19608,-1953
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 Verbundsteinpflaster, teilweise schadhaft (Wurzelschäden) (Wird die Qualität des Radwegs nach den Bauarbeiten besser sein?)	? 43162,14428 42996,14793
@@ -992,8 +996,9 @@ Jörsstr.: Asphaltierung vermutlich bereits durchgeführt (Wurde die Asphaltierung
 L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen Prenzlau und Güstow einen straßenbegleitenden Radweg? Wenn ja: auf welcher Seite und ist der Radweg asphaltiert?)	? 37020,101115 36600,101499 36138,101586 35027,102258 34671,102369 34607,102396
 # added from bbbike-temp-blockings-optimized
 Seydlitzstr.: Bauarbeiten zwischen Frobenstr. und Dessauerstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt Seydlitzstr. (Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?)	? 6349,2510 6459,2364
+Schönstr./Große Seestr.: Sperrung des Kreuzungsbereichs, Ausweichen auf den Bürgersteig, Bordsteine und Umwege, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 13914,17016 13996,16959 14107,16889
 Uhlandstr.: Fahrbahn zwischen Lessingstr. und Friedhof kann wegen Bauarbeiten gesperrt sein nur Gehweg frei (Wann sind die Bauarbeiten beendet?)	? 7641,20745 7630,20698 7616,20633
 Uhlandstr.: Fahrbahn zwischen Lessingstr. und Friedhof kann wegen Bauarbeiten gesperrt sein Fahrbahn noch passierbar (Wann sind die Bauarbeiten beendet?)	? 7616,20633 7577,20450
 Schönfließ - Summt: Brücke über die A10 wird neu gebaut, Ende der Bauarbeiten unbekannt (Wann ist die Brücke wieder offen?)	? 5752,30817 5787,30867
+Keithstr.: Abschnitt der Fahrbahn wegen einer Hochbaustelle gesperrt (Gibt es die Sperrung der Fahrbahn noch immer?)	? 6468,10550 6471,10851
 Buckower Chaussee: der Bahnübergang wird demnächst (voraussichtlich ab 1.12.2022) wegen Bauarbeiten für eine neue Brücke komplett gesperrt (Ist der Bahnübergang Buckower Chaussee noch für Radfahrer passierbar?)	? 9123,533 9158,551 9178,556
-Wasserweg: mögliche Bauarbeiten und Sperrung des Wegs, Dezember 2022 bis Mitte 2023 (Haben die Bauarbeiten schon angefangen?)	? 15680,8914 15873,8884 15981,8872

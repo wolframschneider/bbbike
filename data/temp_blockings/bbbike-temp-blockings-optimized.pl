@@ -3167,7 +3167,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        undef,
        {
          'data' => '#: tempex: before(3rd_advent,sa) - +1d
-	2::xmas 9986,13412 10317,13248
+	2::xmas 9986,13412 10321,13259
 ',
          'from' => 1670540400,
          'id' => 2516,
@@ -3190,7 +3190,7 @@ Kleistpark	2::night 7310,9622 7307,9528
        },
        {
          'data' => '#: tempex: before(4th_advent,sa) - +1d
-	2::xmas 9986,13412 10317,13248
+	2::xmas 9986,13412 10321,13259
 ',
          'from' => 1671145200,
          'id' => 2517,
@@ -4356,8 +4356,8 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
          'data' => '#: XXX Parkverbot mittlerweile bis 31.10.2021 ausgeschildert
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8405 (Anfrage) (mindestens bis 31.12.2022)
 #: also_indoor: traffic (G)
-#: osm_watch: way id="749226300" version="7"
-#: last_checked: 2022-11-14 (osm)
+#: osm_watch: way id="749226300" version="8"
+#: last_checked: 2022-12-08 (osm)
 # REMOVED --- #: check_frequency: 180d
 #: next_check: 2022-12-31
 	2::inwork 3079,5411 3179,5267
@@ -4460,7 +4460,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022) (inaktiv) (bis 31.12.2022)
 #: note: laut rbb mittlerweile bis 30.12.2022
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2022-12-06
+#: last_checked: 2022-12-09
 #: check_frequency: 30d
 #: next_check: 2022-12-31
 	q4::inwork; 11329,12497 11209,12430
@@ -4511,7 +4511,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10694 ("Corona bedingte Erweiterungen ... fallen weg")
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2022-11-29
+#: last_checked: 2022-12-08
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -5156,12 +5156,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.berliner-woche.de/lichtenberg/c-verkehr/die-bvg-erneuert-gleisanlagen_a356780
 #: by: https://unternehmen.bvg.de/wp-content/uploads/2022/10/BVG_PLUSNAVI_1022_barrierefrei.pdf (hier bis 9.12.2022)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10632 (Erwähnung von Radfahrstreifen, allerdings nur geplant)
-#: source_id: viz2021:13.474058,52.512017,12.09.2022,07:00 (hier: bis 2.10.2022) (bis 11.12.2022) (bis 23.12.2022)
-#: source_id: viz2021:13.470538,52.512351,12.09.2022,07:00
-#: source_id: viz2021:13.468932,52.511298,12.09.2022,07:00
-#: source_id: viz2021:13.469582,52.511928,12.09.2022,07:00
+#: source_id: viz2021:13.474058,52.512017,12.09.2022,07:00 (hier: bis 2.10.2022) (bis 11.12.2022) (bis 23.12.2022) (bis 9.12.2022, Ersatz existiert) (inaktiv)
+#: source_id: viz2021:13.470538,52.512351,12.09.2022,07:00 (inaktiv)
+#: source_id: viz2021:13.468932,52.511298,12.09.2022,07:00 (inaktiv)
+#: source_id: viz2021:13.469582,52.511928,12.09.2022,07:00 (inaktiv)
+#: source_id: viz2021:13.471948,52.512205,09.12.2022,07:00 (bis 23.12.2022)
+#: source_id: viz2021:13.4693,52.511651,09.12.2022,07:00
 #: XXX Hier werden Haltestellenkaps gebaut, Scharnweberstraße Höhe Ede-und-Unku-Weg und Weichselstraße nördlich Traveplatz
-#: last_checked: 2022-12-03 vvv
+#: last_checked: 2022-12-07 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2022-12-23 vvv
 Weichselstr. (Traveplatz)	q4::inwork; 14798,11777 14802,11784 14836,11842
@@ -5740,7 +5742,7 @@ Seydlitzstr.	q3::inwork 6349,2510 6459,2364
 #: osm_watch: way id="4531799" version="13"
 #: add_fragezeichen: Wann wird die Einbahnstraßenregelung wieder aufgehoben?
 #: also_indoor: traffic (none)
-#: last_checked: 2022-10-29 (daf)
+#: last_checked: 2022-12-07 (daf)
 #: check_frequency: 90d
 	q4::inwork; 4434,11227 4415,11050
 ',
@@ -6075,7 +6077,7 @@ Kloedenstr.	q3::inwork 9654,8991 9669,9080
        {
          'data' => '#: add_fragezeichen: Sind die Bauarbeiten in der Krautstr. beendet?
 #: also_indoor: traffic (none)
-#: last_checked: 2022-12-02
+#: last_checked: 2022-12-09
 # REMOVED --- #: check_frequency: 14d
 	q4::inwork 12081,12236 12059,12172
 ',
@@ -6098,12 +6100,12 @@ Kloedenstr.	q3::inwork 9654,8991 9669,9080
 #: source_id: viz2021:13.487047,52.465576,12.09.2022,07:00 (bis 23.11.2022) (inaktiv)
 #: source_id: viz2021:13.491317,52.469108,10.09.2022,13:00 (bis 23.11.2022) (inaktiv)
 #: source_id: viz2021:13.492477,52.468642,10.09.2022,13:00 (bis 23.11.2022) (inaktiv)
-#: source_id: viz2021:13.491311,52.469102,12.09.2022,07:00 (bis 25.11.2022) (bis 12.12.2022)
-#: source_id: viz2021:13.478746,52.477572,10.09.2022,13:00 (bis 23.11.2022) (inaktiv) (wieder aktiv, bis 12.12.2022)
-#: source_id: viz2021:13.493194,52.467852,10.09.2022,13:00 (bis 23.11.2022) (inaktiv) (wieder aktiv, bis 12.12.2022)
+#: source_id: viz2021:13.491311,52.469102,12.09.2022,07:00 (bis 25.11.2022) (bis 12.12.2022) (bis 16.12.2022)
+#: source_id: viz2021:13.478746,52.477572,10.09.2022,13:00 (bis 23.11.2022) (inaktiv) (wieder aktiv, bis 12.12.2022) (bis 16.12.2022)
+#: source_id: viz2021:13.493194,52.467852,10.09.2022,13:00 (bis 23.11.2022) (inaktiv) (wieder aktiv, bis 12.12.2022) (bis 16.12.2022)
 #: source_id: viz2021:13.47869,52.47755,14.11.2022,00:00 (bis 28.11.2022) (inaktiv, schon am nächsten Tag)
 #: last_checked: 2022-11-27
-#: next_check: 2022-12-14
+#: next_check: 2022-12-16
 Köpenicker Landstr.: Umwege an der Kreuzung Baumschulenstr. (Baustelle links umfahren)	q3::inwork; 16563,7012 16428,7144
 Köpenicker Landstr.: Umwege an der Kreuzung Baumschulenstr. (Baustelle rechts umfahren)	q2::inwork; 16353,7226 16428,7144
 Schreiblerstr.: Einbahnstraße	q4::inwork; 16494,6948 16375,7070
@@ -6114,7 +6116,7 @@ Trojanstr.: Einbahnstraße	q4::inwork; 16290,7160 16353,7226
          'source_id' => 'https://nitter.cz/VIZ_Berlin/status/1569967900588474368#m',
          'text' => 'Köpenicker Landstr./Baumschulenstr.: Kreuzungsbereich teilweise gesperrt, Umwege bei der Fahrt Richtung Nordwesten/Südosten, außerdem Einbahnstraßenregelung in der Scheiblerstr. und Trojanstr., voraussichtlich bis Mitte Dezember 2022',
          'type' => 'handicap',
-         'until' => 1670860800
+         'until' => 1671206400
        },
        undef,
        undef,
@@ -6137,17 +6139,7 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
          'until' => undef
        },
        undef,
-       {
-         'data' => '	2::inwork 7431,34989 7346,32257
-',
-         'from' => 1662271200,
-         'id' => 3625,
-         'source_id' => 'LS/221-E/22/115',
-         'text' => 'Summter Chaussee: Straße gesperrt, 05.09.2022 - 09.12
-.2022',
-         'type' => 'gesperrt',
-         'until' => 1670598000
-       },
+       undef,
        {
          'data' => '#: next_check_id: ALTEPOTSDAMER-2022
 #: XXX Wie lange dauern die Bauarbeiten an?
@@ -6275,10 +6267,10 @@ Winterfeldtstr.	q3::inwork 6630,9990 6741,10017 6903,10056
        {
          'data' => '#: note: laut rbb
 #: also_indoor: traffic (H,B,G) vvv
-#: XXX Ende der Sperrung? Halteverbote bis zum 6.12.2022 vvv
-#: last_checked: 2022-11-28 vvv
-#: check_frequency: 14d vvv
-#: next_check: 2022-12-06 vvv
+#: XXX Ende der Sperrung? Halteverbote bis zum 6.12.2022, mittlerweile bis 31.12.2022 vvv
+#: last_checked: 2022-12-07 vvv
+#: check_frequency: 10d vvv
+#: next_check: 2022-12-31 vvv
 # REMOVED (hier mittlerweile wieder offen) --- einige Meter vor der Siegfriedstr. gesperrt, evtl. Bordsteine	q3::inwork 16859,12613 16720,12614
 etwa 70m gesperrt, auf Gehweg ausweichen	q3::inwork 16720,12614 16576,12612
 # REMOVED (hier nicht) ---	q4::inwork 16576,12612 16470,12612 16432,12612 16409,12612
@@ -6312,7 +6304,7 @@ etwa 70m gesperrt, auf Gehweg ausweichen	q3::inwork 16720,12614 16576,12612
 #: by: https://nitter.net/pic/orig/media%2FFizho6UWQAI-o77.jpg (Umleitung für den Radverkehr)
 #: note: Möglicherweise wegen der Sperrung verstärkter Verkehr in der Gartenstr. zwischen Invalidenstr. und Torstr.
 #: XXX Bis wann ist die Kreuzung gesperrt?
-#: last_checked: 2022-11-26 vvv
+#: last_checked: 2022-12-07 (mapillary) vvv
 #: check_frequency: 30d vvv
 #: next_check: 2023-01-16 vvv
 # REMOVED (hier nichts) --- Chausseestr.	q4::inwork 9207,13493 9212,13471
@@ -6434,16 +6426,16 @@ Triftstr.	q3::inwork 7356,15350 7464,15409
          'until' => undef
        },
        {
-         'data' => '#: note: rbb-Meldung (verlängert)
+         'data' => '#: note: rbb-Meldung (verlängert) (nochmal verlängert)
 #: also_indoor: traffic (B,H)
 # REMOVED (ja) --- #: XXX Sind Radfahrer tatsächlich betroffen?
 	q4::inwork 6273,2609 6065,2443
 ',
          'from' => 1665772021,
          'id' => 3652,
-         'text' => 'Derfflingerstr.: Sperrung der Fahrbahn vor der Einmündung Seydlitzstr., bis 08.12.2022 ',
+         'text' => 'Derfflingerstr.: Sperrung der Fahrbahn vor der Einmündung Seydlitzstr., bis 20.01.2023',
          'type' => 'handicap',
-         'until' => 1670518800
+         'until' => 1674234000
        },
        undef,
        {
@@ -6713,12 +6705,12 @@ Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,777
        undef,
        undef,
        {
-         'data' => '#: last_checked: 2022-11-11
+         'data' => '#: last_checked: 2022-12-07
 	2::inwork 15468,14430 15425,14360
 ',
          'from' => undef,
          'id' => 3681,
-         'text' => 'Mittelstr./Altenhofer Str. - Landsberger Allee: Verbindung wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
+         'text' => 'Mittelstr./Altenhofer Str. - Landsberger Allee: Verbindung wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Stand 7. Dezember 2022: noch immer gesperrt)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -6780,16 +6772,7 @@ Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,777
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '	q4::inwork 6860,8878 6664,8787 6644,8780
-',
-         'from' => 1668598860,
-         'id' => 3688,
-         'source_id' => 'viz2021:13.34791,52.48535,17.11.2022,12:41',
-         'text' => 'Belziger Str.: Bauarbeiten zwischen Gothaer Str. und Eisenacher Str., evtl. sind auch Radfahrer betroffen, vom 17.11.2022 12:41 bis 09.12.2022 23:59 ',
-         'type' => 'handicap',
-         'until' => 1670626740
-       },
+       undef,
        {
          'data' => '#: next_check_id: BUCKOWERCHAUSSEE-2022
 #: by: https://www.berliner-woche.de/lichtenrade/c-verkehr/ende-2022-wird-die-buckower-chaussee-gesperrt_a316425 (ab Herbst 2022 für vier Jahre)
@@ -6811,6 +6794,7 @@ Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,777
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,750256#msg-750256 (asphaltierte Rampe auf der Westseite)
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,751023#msg-751023
 #: by: https://sbahn.berlin/fahren/bauen-stoerung/detail/bauvorhaben-dresdner-bahn-anschluss-der-neuen-gleislage/
+#: by: https://berliner-abendblatt.de/2022/12/07/bauarbeiten-beendet-s2-faehrt-wieder-bis-mahlow/
 #: source_id: viz2021:13.382329,52.411072,24.01.2022,06:00 (Sperrung für Kfz-Verkehr vom 24.1.2022 bis 4.1.2023 (wird vermutlich bis 2025 verlängert))
 #: source_id: bvg2021:x11#BVG312077_0
 #: note: laut rbb Sperrung für den Kfz-Verkehr bis 4.1.2025
@@ -6927,9 +6911,17 @@ Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,777
        },
        {
          'data' => '#: next_check_id: SPREEPARK-2022
-#: add_fragezeichen: Haben die Bauarbeiten schon angefangen?
-#: next_check: 2022-12-06
-	2::inwork 15680,8914 15873,8884 15981,8872
+#: note: Zusätzlich in gesperrt-orig eingetragen
+#: add_fragezeichen: Gibt es noch immer Sperrungen wegen der Bauarbeiten? vvv
+#: last_checked: 2022-12-08 vvv
+#: check_frequency: 60d vvv
+#: next_check: 2023-06-30 vvv
+	2::inwork 15680,8914 15873,8884 15981,8872 16028,8867 16086,8860 16129,8855 16201,8860 16358,8841 16388,8821
+	2::inwork 16086,8860 16084,8833
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+#: add_fragezeichen ^^^
 ',
          'from' => 1670264861,
          'id' => 3699,
