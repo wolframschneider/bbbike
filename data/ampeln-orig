@@ -14,9 +14,9 @@
 #: check_frequency: 30d
 Friedrichstr./Ziegelstr.	X::inwork 9269,13060
 #: XXX hier noch nicht eingeschaltet
-#: last_checked: 2022-12-02
-#: check_frequency: 7d
-Friedrichstr./Tucholskystr.	X0::inwork 9559,13087
+#: last_checked: 2022-12-16 (mapillary)
+#: check_frequency: 30d
+Friedrichstr./Tucholskystr.	X::inwork 9559,13087
 #: valid ^^^
 #: next_check ^^^
 # 
@@ -39,7 +39,7 @@ Wilhelmstr./Am Omnibushof: provisorische Ampel	X::inwork -4647,12269
 #: osm_watch: way id="936801541" version="3"
 #: XXX Ampel befindet sich östlich der Einmündung
 #: note: Anforderungsampel
-#: last_checked: 2022-12-08
+#: last_checked: 2022-12-15
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 # 
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
@@ -58,13 +58,13 @@ B179/Fichtestr.	X::inwork 26138,-12596
 # 
 #: next_check_id: HAEMMERLING-2022
 #: by: https://www.bahninfo-forum.de/read.php?9,726467,730605#msg-730605 (19.4.2022 - 30.11.2022)
-#: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (Gegenverkehrsregelung mit Baustellenampel, bis 10.11.2022) (mittlerweile inaktiv, bereits Ende Juli 2022) (wieder aktiviert, bis 30.9.2022) (bis 10.10.2022) (inaktiv) (bis 23.10.2022) (bis 25.10.2022) (bis 10.11.2022) (bis 30.11.2022) (bis 16.12.2022)
+#: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (Gegenverkehrsregelung mit Baustellenampel, bis 10.11.2022) (mittlerweile inaktiv, bereits Ende Juli 2022) (wieder aktiviert, bis 30.9.2022) (bis 10.10.2022) (inaktiv) (bis 23.10.2022) (bis 25.10.2022) (bis 10.11.2022) (bis 30.11.2022) (bis 16.12.2022) (bis 31.1.2023)
 #: by: https://nitter.net/VIZ_Berlin/status/1522508674073350144#m
 #: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig
 #: last_checked: 2022-11-05 vvv
 # REMOVED --- #: next_check: 2022-11-10 vvv
-#: next_check: 2022-12-16 vvv
-#: valid: -20221216 vvv
+#: next_check: 2023-01-31 vvv
+#: valid: -20230131 vvv
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245
 #: valid ^^^
@@ -75,7 +75,7 @@ Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245
 # 
 #: source_id: viz2021:13.406514,52.51352,16.03.2021,08:00 (bis Ende 2022)
 #: note: Ampel ist eigentlich südöstlich der Einmündung gelegen
-#: last_checked: 2022-12-09
+#: last_checked: 2022-12-14
 #: check_frequency: 30d
 #: next_check: 2022-12-31
 Fischerinsel	F::inwork 10578,11969
@@ -93,8 +93,8 @@ Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
 #: note: manchmal ausgeschaltet? (gesehen: So 2021-11-28 12:00) (scheint sehr selten zu sein, nicht wieder beobachtet)
-#: last_checked: 2022-12-08 vvv
-#: check_frequency: 60d vvv
+#: last_checked: 2022-12-15 vvv
+#: check_frequency: 30d vvv
 	X::inwork 14151,8967
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -104,7 +104,7 @@ Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 # REMOVED --- #: by: https://twitter.com/VIZ_Berlin/status/1491370038774964227 --- #: by: https://pbs.twimg.com/media/FLEUIiEX0AA8mNx?format=jpg&name=large --- #: source_id: viz2021:13.157143,52.539213,09.02.2022,13:00 (bis 12.3.2022) --- #: valid: 20220209-20220312 vvv --- Klosterbuschweg/Torweg: Gegenverkehrsregelung	X::inwork -6442,14535 --- Klosterbuschweg/Torweg: Gegenverkehrsregelung	X::inwork -6451,14413 --- #: valid ^^^
 # 
 #: next_check_id: TRAMTURM-2021
-#: last_checked: 2022-11-11 (bahninfo-forum)
+#: last_checked: 2022-12-10 (bahninfo-forum)
 #: check_frequency: 120d
 #: next_check: 2023-07-07
 Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
@@ -112,7 +112,7 @@ Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2022-12-05
+#: last_checked: 2022-12-13
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -131,7 +131,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 #: source_id ^^^
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2022-12-09
+#: last_checked: 2022-12-14
 #: next_check: 2024-06-01
 Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # 
@@ -181,7 +181,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 #: by: https://www.bahninfo-forum.de/read.php?9,721782,727530#msg-727530 (Gleisarbeiten 01.08-10.12.2022)
 #: by: https://www.bahninfo-forum.de/read.php?9,727655,737635#msg-737635 (Baubeginn 1.8.2022, Inbetriebnahme zum Jahresende 2022)
 #: XXX Ampel wird wohl permanent gemacht
-#: last_checked: 2022-12-05
+#: last_checked: 2022-12-13
 	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
@@ -2047,7 +2047,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10432 (sichere Querungsmöglichkeit gefordert)
 #: XXX Ampel ausgeschaltet, vielleicht dauerhaft (Lynar/Tegeler)
 #: osm_watch: node id="3777205512" version="4"
-#: last_checked: 2022-11-19
+#: last_checked: 2022-12-17
 #: check_frequency: 90d
 	X0 7259,14870
 #: note: Anforderungsampel für Radfahrer aus Richtung Osten Richtung Luisenstr. und für Radfahrer aus der Luisenstr.
@@ -2501,13 +2501,13 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
 #: XXX evtl. als zwei Ampeln eintragen, falls die Ampelphasen für Radfahrer ungünstig sind
-#: last_checked: 2022-12-01
+#: last_checked: 2022-12-15
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: manchmal ausgeschaltet (gesehen 2022-08-24 13:10)
-#: last_checked: 2022-12-01
+#: last_checked: 2022-12-15
 #: check_frequency: 120d
 	X::inwork 14382,9299
 Industriebahn	B0 -2410,13746
@@ -3176,7 +3176,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2022-12-09 vvv
+#: last_checked: 2022-12-17 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3200,7 +3200,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: next_check_id: CHAUSSEE-2020
 #: last_checked: 2022-11-19
 #: check_frequency: 60d
-# REMOVED --- #: next_check: 2022-11-02
+#: next_check: 2023-04-30
 	X::inwork 8732,14098
 # 
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) --- X::inwork 8870,13926
@@ -3527,9 +3527,9 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: CHAUSSEE-2020
 #: osm_watch: node id="26748289" version="9"
-#: last_checked: 2022-11-19
+#: last_checked: 2022-12-17
 #: check_frequency: 60d
-# REMOVED --- #: next_check: 2022-11-02
+#: next_check: 2023-04-30
 	X::inwork 8336,14586
 # 
 #: by: Tsp vom 2018-01-22 (neue Ampeln --- 2019)
@@ -3540,7 +3540,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX erst einmal provisorisch
 #: osm_watch: node id="7041133991" version="2"
 #: note: Anforderungsampel
-#: last_checked: 2022-11-19
+#: last_checked: 2022-12-17
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -4111,7 +4111,11 @@ UBB, halbstündlich	B 51270,179246
 	B 26568,178286
 	B 18326,173768
 	B 16716,174712
-	B 32187,64661
+#: note Bahnstrecke Joachimsthal - Templin (ehemalige RB63) vvv
+	B0 32187,64661
+	B0 29542,69987
+	B0 24754,77507
+#: note ^^^
 	B 19029,81437
 #: note: Schranke noch in Betrieb; Züge werden hinter der Straße gewendet
 	B 16196,79268
@@ -4270,7 +4274,6 @@ unbeschrankter Bahnübergang	B0 -4990,55852
 	B 40249,186550
 	B -216,128147
 	B 5401,128721
-	B 24754,77507
 	B -54891,-35326
 	B 24165,-103467
 	B -19695,59899
@@ -4288,7 +4291,6 @@ unbeschrankter Bahnübergang	B0 -19229,62430
 	B0 -27809,58912
 	B -7352,54661
 	B 3476,63906
-	B 29542,69987
 	B -62229,18971
 #: note ^^^
 #: note: Luftbild:

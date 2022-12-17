@@ -268,14 +268,16 @@
 #: by: https://sbahn.berlin/aktuelles/artikel/fahrplanwechsel-das-hat-sich-geaendert/ (neuer Bahnsteig wird zum 11.12.2022 teilweise in Betrieb genommen)
 #: by: https://berliner-abendblatt.de/2022/12/06/s-bahnhof-lichtenrade-neuer-bahnsteig-ist-fertig/
 #: by: https://berliner-abendblatt.de/2022/12/07/bauarbeiten-beendet-s2-faehrt-wieder-bis-mahlow/
+#: by: https://berliner-abendblatt.de/2022/12/12/dresdner-bahn-bau-kommt-voran-bahnhof-lichtenrade-eroeffnet/
+#: by: https://www.berliner-woche.de/lichtenrade/c-verkehr/der-s-bahnhof-ist-verschoben-zuege-fahren-wieder-bis-mahlow_a366917
 #: XXX bauzeitlicher Zugang vvv
 #: priority: #C vvv
 #: last_checked: 2022-10-31 (daf) vvv
 # REMOVED --- #: next_check: 2023-07-31 vvv
 #: next_check: 2022-12-11 vvv
 #: note: ebenerdig vvv
-	X 10310,-2136 10307,-2086 10175,-2068
-	X 10303,-1954 10307,-2086 10175,-2068
+	X 10310,-2136 10307,-2086 10166,-2070
+	X 10303,-1954 10307,-2086 10166,-2070
 #: note ^^^
 #: next_check ^^^
 #: last_checked ^^^

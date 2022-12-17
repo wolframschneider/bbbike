@@ -626,7 +626,6 @@ Grüner Weg (Groß Glienicke): Qualität?	? -9616,6980 -9707,7077 -9848,7181
 Interessentenweg (Groß Glienicke): Qualität?	? -9670,7190 -9726,7239 -9798,7341
 Am Anger (Groß Glienicke): Qualität?	? -9668,6423 -9803,6453 -9839,6497 -9843,6554
 Waldweg (Groß Glienicke): Qualität?	? -10261,6466 -10127,6469
-Wilhelm-Stintzing-Platz (Groß Glienicke): neuer Platz, wo genau?	? -9593,6646 -9602,6680 -9620,6698
 Eichengrund (Groß Glienicke): Qualität?	? -9506,7421 -9935,7406
 Zum Teufelssee - Am Moosfenn (Potsdam): Qualität der Gehwegverbindung?	? -10397,-5379 -10503,-5165
 Am Pappeltor (Potsdam, Geltow): Qualität?	? -18894,-5272 -18885,-5173 -18908,-4810 -18928,-4677 -18928,-4595 -18910,-4561 -18771,-4330 -18604,-3755
@@ -855,7 +854,7 @@ Dollgow - Zernikow: Qualität?	? -17141,74157 -16859,74184 -16629,74151 -15730,74
 Leipziger Str. (Schöneiche): wie ist die Qualität im nördlichen Abschnitt? ebenfalls unbefestigt?	? 32156,6405 32056,6607 31993,6776 31952,6917 31951,7060
 Technologiepark KW - Funkerberg: Qualität der Verbindung?	? 24452,-10414 24518,-10498 24950,-10965 25233,-11257 25366,-11396 25528,-11392
 # added from strassen
-Elkartweg (Hängen bereits neue Straßenschilder für den "Erna-Koschwitz-Weg"?)	? -2158,17613 -2135,17633 -2119,17647 -2103,17670 -2087,17715 -2120,17786 -2131,17827 -2114,17878 -2066,17896 -2074,17921 -2100,17953 -2196,18069
+Erna-Koschwitz-Weg (Hängen bereits neue Straßenschilder für den "Erna-Koschwitz-Weg"?)	? -2158,17613 -2135,17633 -2119,17647 -2103,17670 -2087,17715 -2120,17786 -2131,17827 -2114,17878 -2066,17896 -2074,17921 -2100,17953 -2196,18069
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -894,7 +893,6 @@ Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 Wilhelmstr./Am Omnibushof: provisorische Ampel (Existiert die provisorische Ampel noch immer?)	? -4647,12269
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
-Müggelschlößchenweg: Asphalt, einige Wurzelhebungen (Ist die Fahrbahn östlich der Bus-Endhaltestelle nach den Bauarbeiten besser geworden?)	? 25385,4414 25132,4385 24181,4270 24135,4264 23879,4233 23753,4218
 Grünkardinalweg (Unterführung): schlechtes Kopfsteinpflaster (Ist die Deckschicht nach den Bauarbeiten besser geworden?)	? 12586,20131 12547,20154
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33327,2979 33296,2894
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33167,2940 33296,2894 33406,2852 33503,2818
@@ -995,8 +993,9 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 Jörsstr.: Asphaltierung vermutlich bereits durchgeführt (Wurde die Asphaltierung der Jörsstr. bereits abgeschlossen?)	? -1478,18407 -1358,18400
 L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen Prenzlau und Güstow einen straßenbegleitenden Radweg? Wenn ja: auf welcher Seite und ist der Radweg asphaltiert?)	? 37020,101115 36600,101499 36138,101586 35027,102258 34671,102369 34607,102396
 # added from bbbike-temp-blockings-optimized
+Jahnstr.: zwischen Priesterweg und Rungiusstr. Bauarbeiten, Abschnitt der Fahrbahn kann gesperrt sein (Stand Mitte November 2022: außerhalb der Arbeitszeiten könnte die Durchfahrt möglich sein) (Sind die Bauarbeiten bereits beendet?)	? 13027,6168 13227,6209
 Seydlitzstr.: Bauarbeiten zwischen Frobenstr. und Dessauerstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt Seydlitzstr. (Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?)	? 6349,2510 6459,2364
-Schönstr./Große Seestr.: Sperrung des Kreuzungsbereichs, Ausweichen auf den Bürgersteig, Bordsteine und Umwege, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 13914,17016 13996,16959 14107,16889
+Tauroggener Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Norden, Ende der Bauarbeiten unbekannt (Besteht die Einbahnstraßenregelung noch immer?)	? 3429,13227 3400,13107
 Uhlandstr.: Fahrbahn zwischen Lessingstr. und Friedhof kann wegen Bauarbeiten gesperrt sein nur Gehweg frei (Wann sind die Bauarbeiten beendet?)	? 7641,20745 7630,20698 7616,20633
 Uhlandstr.: Fahrbahn zwischen Lessingstr. und Friedhof kann wegen Bauarbeiten gesperrt sein Fahrbahn noch passierbar (Wann sind die Bauarbeiten beendet?)	? 7616,20633 7577,20450
 Schönfließ - Summt: Brücke über die A10 wird neu gebaut, Ende der Bauarbeiten unbekannt (Wann ist die Brücke wieder offen?)	? 5752,30817 5787,30867

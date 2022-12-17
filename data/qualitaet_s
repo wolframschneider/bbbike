@@ -317,7 +317,7 @@ Adalbertstr.: Kopfsteinpflaster, Asphaltstreifen neben den parkenden Autos	Q1; 1
 Adalbertstr.: Kopfsteinpflaster	Q2; 11808,11482 11726,11265 11656,11106
 Adalbertstr.: Asphalt, einige Schäden	Q0; 11640,11067 11589,10947 11552,10863
 Oderstr.: Fahrbahn Kopfsteinpflaster, Radwege nur mäßiges Verbundsteinpflaster	Q2 11607,7145 11617,7083 11652,6879
-Friedelstr.: Asphalt	Q0 12085,9778 12074,9689 12066,9558 12047,9429 12074,9217
+Friedelstr.: Asphalt	Q0 12085,9778 12074,9689 12066,9558 12054,9429 12074,9217
 Friedelstr.: mäßiges, teilweise auch schlechtes Kopfsteinpflaster	Q2 12074,9217 12078,9055
 Naglerstr.: Kopfsteinpflaster und zusätzlich Bodenschwellen	Q2 13575,10963 13496,10763
 Rotherstr.: Kopfsteinpflaster	Q2 14011,10812 13896,10851 13856,10864
@@ -334,7 +334,7 @@ Volkmarstr.: Kopfsteinpflaster	Q2 9703,5274 9974,5385 10230,5498
 Str. 229: Kopfsteinpflaster mit asphaltierten Banketten	Q1 11073,4342 11125,4331 11196,4325
 Koppelweg: Kopfsteinpflaster mit asphaltierten Banketten	Q2 11196,4325 11244,4325
 Reuterstr.: Kopfsteinpflaster	Q2 12148,9209 12146,9384 12148,9426 12150,9545
-Lenaustr.: Kopfsteinpflaster	Q2 12148,9426 12047,9429 11954,9415 11803,9390
+Lenaustr.: Kopfsteinpflaster	Q2 12148,9426 12054,9429 11954,9415 11803,9390
 Pflügerstr.: mäßiges, teilweise auch schlechtes Kopfsteinpflaster	Q2 12481,9390 12333,9470 12316,9477 12150,9545 12066,9558 11934,9538
 Pflügerstr.: Kopfsteinpflaster	Q2 11934,9538 11757,9509
 Liberdastr.: Kopfsteinpflaster	Q2 12150,9545 12207,9632 12250,9691
@@ -696,7 +696,8 @@ Tegeler Weg: Kopfsteinpflaster	Q2 7429,14667 7353,14767
 Tegeler Weg: Kopfsteinpflaster	Q2 7308,14814 7259,14870
 Tegeler Weg: Asphalt	Q0 7259,14870 7209,14927 7182,14986 7178,14996 7131,15109 7085,15226 6996,15319
 Lynarstr.: Kopfsteinpflaster	Q2 7129,14787 7143,14794 7259,14870
-Lynarstr.: Asphalt	Q0 7259,14870 7409,14954
+Lynarstr.: Asphalt	Q0; 7259,14870 7409,14954
+Lynarstr.: Kopfsteinpflaster	Q2; 7409,14954 7259,14870
 Lynarstr.: Kopfsteinpflaster	Q2 7409,14954 7461,14986
 Lynarstr.: Asphalt	Q0 7461,14986 7624,15083 7694,15125
 Lynarstr.: Asphalt	Q0 7694,15125 7745,15160
@@ -1292,7 +1293,7 @@ Albrecht-Achilles-Str.: wechselnd Asphalt und gutes Kopfsteinpflaster	Q1 3618,10
 (Stresemannstr. - Wilhelmstr.): Asphalt	Q0 9245,10565 9375,10616
 Fröbelstr.: guter Asphalt	Q0 11776,15060 11873,15010 11964,14962 12095,14888
 Ella-Kay-Str.: guter Asphalt	Q0 12095,14888 12060,14827 12050,14808 11998,14709
-Ella-Kay-Str.: Beton	Q0 12234,15151 12208,15108 12095,14888
+Ella-Kay-Str.: Beton	Q0 12234,15151 12208,15108 12195,15083 12095,14888
 (Greifswalder Str. - Ella-Kay-Str.): Verbundsteinpflaster	Q1 12371,14615 12224,14707 12213,14742 12183,14757 12060,14827
 Landecker Str.: Kopfsteinpflaster	Q2 3137,8538 2966,8586
 Kufsteiner Str.: glatter Parkweg	Q1 5913,8415 5917,8351 5925,8219
@@ -4113,7 +4114,8 @@ Straße zum Müggelhort: Asphalt	Q0 28729,3084 28639,3005 28442,2926 28359,2722 28
 Straße zum Müggelhort: Asphalt	Q0 27761,2124 27599,1521
 Straße zum Müggelhort: Asphalt	Q0 28729,3084 28715,3198 28751,3243 28853,3279 28958,3273 29069,3264
 (Zum Hotel Müggelsee): Beton	Q0 26713,2064 26805,2381 26836,2480 26859,2596
-Müggelschlößchenweg: Asphalt, einige Wurzelhebungen	Q1 25385,4414 25132,4385 24181,4270 24135,4264 23879,4233 23753,4218
+Müggelschlößchenweg: Asphalt	Q0 25385,4414 25132,4385 24181,4270
+Müggelschlößchenweg: Asphalt, einige Wurzelhebungen	Q1 24181,4270 24135,4264 23879,4233 23753,4218
 Müggelschlößchenweg: Beton	Q0 23753,4218 23658,4208 23453,4181 23435,4179
 Strandschloßweg: Asphalt	Q0 23368,3894 23439,3892 23467,3891 23749,3883
 Strandschloßweg: Beton	Q0 23749,3883 23925,3886
@@ -11106,6 +11108,7 @@ Forum an der Museumsinsel: Kopfsteinpflaster	Q2 9650,13074 9682,13167 9633,13192
 (Tränkegraben - Volkradstr.): Asphalt	Q0 17249,10651 17298,10633 17329,10620 17363,10587 17422,10571
 (Tränkegraben - Volkradstr.): Verbundsteinpflaster	Q1 17422,10571 17503,10544
 Vulkanstr./Landsberger Allee - Altenhofer Str.: unbefestigter Pfad	Q2 15796,14310 15791,14320 15699,14350
+(Diesterwegstr. - Ella-Kay-Str.): Asphalt	Q0 12056,15159 12195,15083
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
@@ -16804,7 +16807,7 @@ Ernst-Zinna-Weg: Kopfsteinpflaster	Q2 12586,13368 12604,13338 12597,13323 12556,
 (Volkspark Friedrichshain): kleinteiliges Kopfsteinpflaster	Q1 12420,13370 12341,13309 12244,13240 12236,13229
 (Volkspark Friedrichshain): Asphalt	Q0 12344,13627 12204,13609 12169,13609 12141,13609 12012,13599
 (Volkspark Friedrichshain): kleinteiliges Kopfsteinpflaster	Q1 12012,13599 12038,13685
-Weisbachstr.: Asphalt	Q1 13548,13290 13598,13180
+Weisbachstr.: Asphalt	Q0 13548,13290 13598,13180
 Otto-Ostrowski-Str.: Kopfsteinpflaster	Q2 13702,13634 13711,13615 13769,13487 13811,13390 13825,13359 13869,13260 13924,13135 13943,13129
 Kurt-Exner-Str.: Kopfsteinpflaster	Q2 13976,13309 13869,13260
 Agnes-Wabnitz-Str.: Kopfsteinpflaster	Q2 13934,13403 13825,13359

@@ -189,7 +189,7 @@ Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,ex-H)
 #: valid: 20171026-
-#: last_checked: 2022-10-19
+#: last_checked: 2022-12-17
 #: check_frequency: 60d
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
 # 
@@ -204,16 +204,12 @@ Bebelplatz: Weihnachtsmarkt, schmaler Durchgang	q3 9664,12387 9680,12232
 #: next_check_id: TACHELES-2020
 #: XXX Wann wird der Kran abgebaut? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2022-12-02
+#: last_checked: 2022-12-16 (mapillary)
 #: check_frequency: 30d
 #: next_check: 2023-06-30
 Johannisstr.: Abschnitt der Fahrbahn gesperrt	q3::inwork 9588,13174 9385,13174
 # 
-#: XXX Bis wann gehen die Bauarbeiten? Auf der einen Seite Halteverbot bis 31.12.2023, auf der anderen Straßenseite bis 16.12.2022
-#: osm_watch: way id="184632250" version="3"
-#: last_checked: 2022-11-30
-#: next_check: 2022-12-31
-Saarbrücker Str.: Einbahnstraßenregelung	q3::inwork; 10895,13961 11052,13870
+# REMOVED (keine Einbahnstraße, sondern nur noch eine Gegenverkehrsregelung (wobei das Schild auf der westlichen Seite fehlt) --- #: XXX Bis wann gehen die Bauarbeiten? Auf der einen Seite Halteverbot bis 31.12.2023, auf der anderen Straßenseite bis 16.12.2022 --- #: osm_watch: way id="184632250" version="3" --- #: last_checked: 2022-11-30 --- #: next_check: 2022-12-31 --- Saarbrücker Str.: Einbahnstraßenregelung	q3::inwork; 10895,13961 11052,13870
 # 
 #: next_check_id: ROSENTHALER-2022
 #: by: https://nitter.net/VIZ_Berlin/status/1516286721096310787#m
@@ -231,7 +227,7 @@ Saarbrücker Str.: Einbahnstraßenregelung	q3::inwork; 10895,13961 11052,13870
 #: source_id: viz2021:13.402613,52.528076,15.11.2022,08:00 (bis 16.12.2022) (bis 6.12.2022) (inaktiv)
 #: source_id: viz2021:13.402613,52.528076,06.12.2022,08:00 (bis 20.12.2022)
 #: priority: #A
-#: last_checked: 2022-12-06 vvv
+#: last_checked: 2022-12-13 (mapillary) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2022-12-20 vvv
 Gipsstr.: Fahrbahn an der Rosenthaler Str. gesperrt, Ausweichen auf Bürgersteig, Bordsteine	q3::inwork 10199,13446 10341,13376
@@ -252,7 +248,7 @@ Gipsstr.: Fahrbahn an der Rosenthaler Str. gesperrt, Ausweichen auf Bürgersteig,
 # 
 #: by: https://www.deutsches-architekturforum.de/thread/7660-marinehaus-umbau-stiftung-stadtmuseum/?postID=712499#post712499
 #: also_indoor: traffic (none)
-#: last_checked: 2022-12-09
+#: last_checked: 2022-12-14
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11197,11882 11160,12071
 # 
 # REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet? vvv --- #: last_checked: 2021-12-23 vvv --- #: check_frequency: 14d vvv --- # REMOVED (hier nicht mehr) --- Sebastianstr.: Bauarbeiten, Fahrbahn an der Alexandrinenstr. gesperrt	q4::inwork 10826,11251 10818,11269 --- #: note: hier nur ein kurzer Abschnitt betroffen --- Sebastianstr.: Bauarbeiten, Fahrbahn an der Alexandrinenstr. gesperrt	q1::inwork 10818,11269 10644,11569 --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: add_fragezeichen ^^^
@@ -270,12 +266,12 @@ Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11197,11882
 # 
 #: next_check_id: CHAUSSEE-2020
 #: source_id: 2147346552 (bis 16.7.2021)
-#: source_id: viz2021:13.38026,52.532838,02.11.2020,08:00 (bis 16.7.2021) (mittlerweile bis 15.11.2021, Gesamtbaumaßnahme bis Ende 2022) (mittlerweile bis 30.06.2022, Gesamtbaumaßnahme unverändert) (mittlerweile bis 31.7.2022) (mittlerweile kein Endedatum mehr) (bis 2.11.2022) (kein Endedatum mehr)
+#: source_id: viz2021:13.38026,52.532838,02.11.2020,08:00 (bis 16.7.2021) (mittlerweile bis 15.11.2021, Gesamtbaumaßnahme bis Ende 2022) (mittlerweile bis 30.06.2022, Gesamtbaumaßnahme unverändert) (mittlerweile bis 31.7.2022) (mittlerweile kein Endedatum mehr) (bis 2.11.2022) (kein Endedatum mehr) (bis 30.4.2023)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11465 (Antrag)
 #: note: bei rbb noch bis 31.12.2022
-#: last_checked: 2022-11-19
+#: last_checked: 2022-12-17
 #: check_frequency: 60d
-# REMOVED --- #: next_check: 2022-11-02
+#: next_check: 2023-04-30
 Chausseestr.: Radweg auf gegenüberliegenden Bürgersteig	q2::inwork; 8732,14098 8607,14253 8570,14299 8490,14397 8442,14456 8406,14507 8336,14586
 # REMOVED --- #: last_checked: 2022-07-17 (mapillary) --- # REMOVED --- #: check_frequency: 90d --- # REMOVED --- #: next_check: 2022-07-31 --- Chausseestr.: gemeinsamer Geh- und Radweg	q2::inwork; 8442,14456 8406,14507 8336,14586
 # 
@@ -302,11 +298,11 @@ Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
 # 
 #: osm_watch: way id="751595931" version="3"
 #: also_indoor: traffic (H,B)
-#: last_checked: 2022-12-09
+#: last_checked: 2022-12-14
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 # 
 #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large
-#: last_checked: 2022-12-09
+#: last_checked: 2022-12-14
 #: check_frequency: 60d
 (Grunerstr. - Gustav-Böß-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10868,12572 10772,12515
 # 
@@ -393,8 +389,8 @@ Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweich
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
 #: priority: #B vvv
-#: last_checked: 2022-12-09 vvv
-#: check_frequency: 30d vvv
+#: last_checked: 2022-12-17 vvv
+#: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="12"
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
@@ -472,24 +468,20 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 # 
 ### Karlshorst ###
 # 
-#: source_id: viz2021:13.526449,52.486646,14.11.2022,07:00 (bis 14.12.2022)
+#: source_id: viz2021:13.526449,52.486646,14.11.2022,07:00 (bis 14.12.2022) (bis 31.12.2022)
 #: last_checked: 2022-11-25
-#: next_check: 2022-12-14
-#: valid: -20221214
+#: next_check: 2022-12-31
+#: valid: -20221231
 Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9133
 # 
 #: next_check_id: WANDLITZ-2021
 #: note: am 2022-04-22 war die Fahrbahn offen, aber möglicherweise war das nur "zufällig" so, weil Baufahrzeuge reinfahren mussten; jedenfalls stehen an beiden Enden Bauzäune, die umgeklappt werden können
 #: also_indoor: traffic
-#: last_checked: 2022-10-26
+#: last_checked: 2022-12-13
 #: check_frequency: 90d
 Wandlitzstr.: in Höhe Lehndorffstr. kann die Fahrbahn gesperrt sein	q4::inwork 18401,8636 18448,8602
 # 
-#: source_id: viz2021:13.52358,52.480928,28.11.2022,06:30 (bis 09.12.2022, hier nur Kfz-Verkehr) (bis 12.12.2022)
-#: last_checked: 2022-12-05
-#: next_check: 2022-12-12
-#: valid: -20221212
-Wandlitzstr.: Fahrbahn zwischen Wildensteiner Str. und Heiligenberger Str. gesperrt	q4::inwork 18627,8475 18557,8525
+# REMOVED --- #: source_id: viz2021:13.52358,52.480928,28.11.2022,06:30 (bis 09.12.2022, hier nur Kfz-Verkehr) (bis 12.12.2022) --- #: last_checked: 2022-12-05 --- #: next_check: 2022-12-12 --- #: valid: -20221212 --- Wandlitzstr.: Fahrbahn zwischen Wildensteiner Str. und Heiligenberger Str. gesperrt	q4::inwork 18627,8475 18557,8525
 # 
 # REMOVED (wohl nicht mehr) --- #: next_check_id: WANDLITZ-2021 --- #: last_checked: 2022-10-16 vvv --- Wandlitzstr.: Sperrung der Fahrbahn zwischen Heiligenberger Str. und Stühlinger Str.	q2::inwork 18627,8475 18557,8525 --- Wandlitzstr.: Sperrung der Fahrbahn zwischen Heiligenberger Str. und Stühlinger Str.	q3::inwork 18557,8525 18494,8569 --- #: last_checked ^^^
 # REMOVED (fertig) --- #: next_check_id: ZWIESELER-2022 --- #: last_checked: 2022-03-20 --- #: check_frequency: 60d --- Richard-Kolkwitz-Weg: Engstelle wegen Bauarbeiten	q2::inwork 19711,10426 19813,10468
@@ -575,7 +567,7 @@ Wandlitzstr.: Fahrbahn zwischen Wildensteiner Str. und Heiligenberger Str. gespe
 #: check_frequency: 90d vvv
 #: last_checked: 2022-10-20 (bahninfo-forum) vvv
 #: source_id: viz2021:13.355319,52.52676,28.04.2022,07:00 (bis 7.7.2023)
-#: osm_watch: way id="140336721" version="26"
+#: osm_watch: way id="140336721" version="27"
 #: note: früher "teilweise verwinkelte Wegführung des Radwegs - q1-::inwork;"
 # REMOVED (hier nicht mehr) --- Turmstr.: Bauarbeiten, Engstellen, teilweise Führung des Radwegs über den engen Gehweg	q2+::inwork; 7069,13381 6919,13360 6814,13349 6692,13333
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11522 (Antrag)
@@ -583,8 +575,8 @@ Turmstr.: Bauarbeiten, teilweise Führung des Radwegs über den engen Gehweg	q2+::
 # REMOVED (hier nicht) --- Turmstr.: Bauarbeiten, Engstellen, teilweise Führung des Radwegs über den engen Gehweg	q2+::inwork; 6377,13321 6228,13324
 #: source_id: viz2021:13.339142,52.52642,28.04.2022,07:00 (bis 7.7.2023) (inaktiv)
 #: source_id: viz2021:13.340409,52.526379,28.04.2022,07:00 (bis 7.7.2023)
-#: osm_watch: way id="30195541" version="28"
-#: last_checked: 2022-11-27 (mapillary)
+#: osm_watch: way id="30195541" version="29"
+#: last_checked: 2022-12-10 (bahninfo-forum)
 Turmstr.: Bauarbeiten, Engstellen, Umweg über den Kleinen Tiergarten	q3::inwork; 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 #: last_checked ^^^
 #: note: zurzeit wird man Richtung Westen auf die südliche Fahrbahn geleitet
@@ -663,26 +655,12 @@ Pariser Str./Bundesallee: Bauarbeiten, Durchgang verengt	q3::inwork 5461,9923 54
 # 
 ### Neukölln ###
 # 
-#: next_check_id: WESER-2021
-#: XXX: im Kreuzungsbereich wird ein Kfz-Diagonalfilter entstehen
-#: osm_watch: way id="1050315263" version="5"
-#: osm_watch: way id="996616281" version="10"
-#: osm_watch: way id="996616282" version="9"
-#: osm_watch: way id="1100696455" version="1"
-#: also_indoor: traffic (B) vvv
-#: last_checked: 2022-12-04 vvv
-#: check_frequency: 7d vvv
+# REMOVED (vermutlich frei befahrbar) --- #: next_check_id: WESER-2021 --- #: osm_watch: way id="1050315263" version="5" --- #: osm_watch: way id="996616281" version="10" --- #: osm_watch: way id="996616282" version="9" --- #: osm_watch: way id="1100696455" version="1" --- #: also_indoor: traffic (B) vvv --- #: last_checked: 2022-12-04 vvv --- #: check_frequency: 7d vvv
 # REMOVED --- #: next_check: 2022-09-15 vvv
 # REMOVED (hier fertig) --- Weserstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12328,9117 12402,9080 12480,9037 12531,9009 12590,8977
 # REMOVED (fertig) --- Weserstr.: vor der Weichselstr. Bauarbeiten, gemeinsamer Geh- und Radweg, eng	q2::inwork 12590,8977 12740,8862
 # REMOVED (fertig) --- Weserstr./Weichselstr.: Arbeiten im Kreuzungsbereich	q2::inwork 12682,9089 12590,8977 12478,8829
-Weserstr./Fuldastr.: Arbeiten im Kreuzungsbereich	q2::inwork 12590,8977 12740,8862 12881,8750
-Weserstr./Fuldastr.: Arbeiten im Kreuzungsbereich	q2::inwork 12628,8711 12740,8862 12836,8980
-# REMOVED --- #: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
-#: also_indoor ^^^
-# 
+# REMOVED --- Weserstr./Fuldastr.: Arbeiten im Kreuzungsbereich	q2::inwork 12590,8977 12740,8862 12881,8750 --- Weserstr./Fuldastr.: Arbeiten im Kreuzungsbereich	q2::inwork 12628,8711 12740,8862 12836,8980 --- # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: also_indoor ^^^
 # REMOVED (Sperrung noch da, aber die Bürgersteigüberfahrt ist weggefallen) --- #: add_fragezeichen: Dauern die Bauarbeiten an? --- #: also_indoor: traffic (G,B) --- #: last_checked: 2022-02-01 --- Maybachufer: Bauarbeiten zwischen Friedelstr. und Liberdastr., teilweise Radfahrerführung über den Bürgersteig	q2::inwork 12085,9778 12250,9691
 # REMOVED --- #: next_check_id: BRAUNSCHWEIGER-2020 --- #: last_checked: 2020-10-24 vvv
 # REMOVED (hier kommt man mittlerweile gut durch) --- Braunschweiger Str.: Fahrbahn wird neu gemacht, Ausweichen auf Gehweg	q4::inwork 13702,7418 13781,7524 13858,7617
@@ -732,7 +710,7 @@ Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14310,7022 14276,702
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.kms-sonne.de/baustellennews?date=20220830
 #: by: https://www.kms-sonne.de/assets/2022/08/Baustellenuebersicht-2022-08-web.pdf
-#: osm_watch: way id="640465875" version="11"
+#: osm_watch: way id="640465875" version="12"
 #: last_checked: 2022-12-04
 #: check_frequency: 120d
 #: next_check: 2024-06-01
@@ -787,7 +765,7 @@ Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kan
 #: XXX Bauarbeiten der Wasserbetriebe, laut Baustellenschild bis Oktober 2023
 #: XXX Einbahnstraßenregelung nach den Bauarbeiten wiederherstellen
 #: also_indoor: traffic (G)
-#: last_checked: 2022-12-03
+#: last_checked: 2022-12-10
 #: check_frequency: 90d
 #: next_check: 2023-10-31
 Parkaue: Bauarbeiten der Wasserbetriebe, Fahrbahn gesperrt	q4+::inwork 15535,12420 15457,12449
@@ -3967,7 +3945,7 @@ Borkheider Str.: Bordstein	q3 21726,17974 21748,17963
 Landschaftspark Johannisthal: einige Fußgänger	q1 18164,2712 18167,2724 18191,2822 18229,2973 18228,2989 18046,3192 18031,3257 18027,3276 18025,3291 18015,3380 18000,3513 17997,3535 17996,3540 17978,3713 17976,3735 17975,3744 17953,3955
 #: next_check_id: EINHEITSDENKMAL-2022
 #: by: https://berliner-abendblatt.de/2022/11/09/einheitsdenkmal-soll-nach-lieferproblemen-2023-fertig-sein/
-#: last_checked: 2022-12-09
+#: last_checked: 2022-12-14
 #: check_frequency: 60d
 #: next_check: 2023-10-01
 # REMOVED (früher: Schloßplatz: Fußgänger	q2 10174,12284 10102,12384)
