@@ -1696,10 +1696,7 @@ Kleiner Parkweg: nicht ausgeschildert	CS 20775,11801 20790,11990
 # 
 Volkerweg: nicht ausgeschildert	CS 16005,4012 16046,4073 16060,4093 16145,4217 16151,4226
 # 
-#: next_check_id: WASSERSTADTSPINDLERSFELD-2019
-#: last_checked: 2022-11-12
-#: check_frequency: 60d
-Eiselenweg - Uferweg: Einfahrt zum Uferweg ist etwas versteckt, vor dem Neubaugebiet links abbiegen	CP; 21364,5430 21442,5414 21476,5434
+# REMOVED --- #: next_check_id: WASSERSTADTSPINDLERSFELD-2019 --- #: last_checked: 2022-11-12 --- #: check_frequency: 60d --- Eiselenweg - Uferweg: Einfahrt zum Uferweg ist etwas versteckt, vor dem Neubaugebiet links abbiegen	CP; 21364,5430 21442,5414 21476,5434
 # 
 Büxensteinallee: diagonal über die Straßenbahngleise, erst dahinter ist ausgeschildert	CP2; 22162,1067 22228,1071
 # 
@@ -1763,7 +1760,7 @@ Am Werksgarten: nicht ausgeschildert	CP2; 22805,5179 22803,5241
 Schilder VoltAir-Parkhaus und Zugang Dircksenstraße 04	CP2; 11240,12368 11344,12410
 # 
 #: XXX Wird hier noch ausgeschildert?
-#: last_checked: 2022-12-16 (mapillary)
+#: last_checked: 2022-12-29 (mapillary)
 Forum an der Museumsinsel: nicht ausgeschildert	CS 9650,13074 9682,13167 9633,13192 9602,13081
 # 
 #: by: mapillary (kein Scherz)
@@ -1776,4 +1773,6 @@ Rewe/Penny/Kik-Parkplatz	CP2; 17503,10544 17422,10571
 Bleckmannweg: nicht ausgeschildert	CP2; 15886,12190 15756,12212
 # 
 Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
+# 
+Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 

@@ -889,6 +889,8 @@ Schloßstr. (Einbahnstraße?)	? -14821,106013 -15004,105813 -15070,105705
 Tiergartenstr. (Einbahnstraße?)	? -15004,105813 -14862,105712 -14570,105702 -14288,105530 -14242,105542
 Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105763 -13977,105850 -13932,106157
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
+# added from flaechen
+(Hängen bereits Schilder für den Susanne-und-Kurt-Crohn-Platz?)	? 11447,16507 11535,16498 11542,16384 11470,16394 11448,16398 11447,16507
 # added from ampeln
 Wilhelmstr./Am Omnibushof: provisorische Ampel (Existiert die provisorische Ampel noch immer?)	? -4647,12269
 # added from qualitaet_s
@@ -897,6 +899,7 @@ Grünkardinalweg (Unterführung): schlechtes Kopfsteinpflaster (Ist die Deckschich
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33327,2979 33296,2894
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33167,2940 33296,2894 33406,2852 33503,2818
 Abendseglersteig: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33406,2852 33383,2792 33267,2810 33139,2835 33167,2940
+Eiswaldtstr.: Asphalt, stellenweise etwas uneben (Wird die Fahrbahn nach den Bauarbeiten besser sein?)	? 6718,2443 6862,2452 6965,2418 7051,2366 7172,2343 7285,2377
 Tennstedter Str.: Kopfsteinpflaster (Liegt in der Tennstedter Straße südlich der Blankenhainer Straße Asphalt oder Kopfsteinpflaster?)	? 6716,1667 6818,1459 6921,1259
 # added from qualitaet_l
 Heckelberg - Beerbaum: etwas welliger Asphalt (Ist die Fahrbahnqualität nach den Bauarbeiten besser geworden?)	? 39402,37410 39156,37578 38986,37512 38171,37238 37672,36908 36605,36450 36523,36465 36359,36493
@@ -929,6 +932,7 @@ Mühlental - Lebus: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 
 Mützlitz: gutes Kopfsteinpflaster (nach Ende der Bauarbeiten (2006-10-06) vielleicht asphaltiert?)	? -50578,15920 -50505,15845 -50271,15917
 Melzow - Warnitz: querliegende Betonplatten (Betonplatten zumindest auf der nördlichen Seite)	? 41910,85359 41901,85524 42245,86063
 Am Neuen Garten: holpriges Kopfsteinpflaster (Liegt hier teilweise Asphalt?)	? -12582,127 -12332,585
+Herzfelde - Wichmannsdorf: schlechtes Kopfsteinpflaster (Wird das Kopfsteinpflaster bei den Bauarbeiten durch Asphalt ersetzt werden?)	? 22537,87990 22643,87937
 Weg am Flughafen - Rotberg: Feldweg (Ist der südöstliche Abschnitt des Weges ein Schotterweg? Oder nur ein unbefestigter Feldweg?)	? 17162,-6465 17910,-6981
 Eichendorffstr. (Schwanebeck-West): unbefestigte Straße (Wurde die Eichendorffstr. mittlerweile befestigt?)	? 17638,24756 17584,24703
 Maienhöhe: Asphalt (ist der südöstliche Abschnitt der Maienhöhe ebenfalls asphaltiert?)	? 32780,5513 32819,5506 32940,5485 33047,5433
@@ -965,7 +969,9 @@ Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	?
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
+Dernburgstr. (Ist die Einbahnstraße mittlerweile für Radfahrer geöffnet oder wird das in Zukunft passieren?)	? 2493,10675 2378,10677 2310,10732 2233,11049
 Schranke, umständlich zu umfahren (existiert die Schranke noch?)	? 19608,-1953
+Alexander-von-Humboldt-Weg: Straßenbahnübergang gesperrt (Ist der Straßenbahnübergang mittlerweile offen?)	? 18818,3332 18829,3321
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 Verbundsteinpflaster, teilweise schadhaft (Wurzelschäden) (Wird die Qualität des Radwegs nach den Bauarbeiten besser sein?)	? 43162,14428 42996,14793
@@ -993,8 +999,9 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 Jörsstr.: Asphaltierung vermutlich bereits durchgeführt (Wurde die Asphaltierung der Jörsstr. bereits abgeschlossen?)	? -1478,18407 -1358,18400
 L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen Prenzlau und Güstow einen straßenbegleitenden Radweg? Wenn ja: auf welcher Seite und ist der Radweg asphaltiert?)	? 37020,101115 36600,101499 36138,101586 35027,102258 34671,102369 34607,102396
 # added from bbbike-temp-blockings-optimized
+Takustr.: wegen Bauarbeiten ist eine Durchfahrt nicht möglich (auch nicht für Fußgänger) (Ist die Takustraße weiterhin voll gesperrt?)	? 3079,5411 3179,5267
 Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Hochbaustelle, Fahrtrichtung auch für Radfahrer gesperrt (Bis wann gilt die Sperrung für Radfahrer?)	? 5192,10241 5196,10398
-Kanner Str.: Bauarbeiten, Fahrbahn gesperrt (Wann sind die Bauarbeiten in der Braunschweiger Straße und Zeitzer Straße beendet? Wann wird die Einbahnstraßenregelung aufgehoben?)	? 13341,7423 13373,7426 13476,7330
+Jahnstr./Rungiusstr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt (Stand Mitte Dezember 2022) Jahnstr. (Sind die Bauarbeiten bereits beendet?)	? 12833,6127 13027,6168 13227,6209
 Seydlitzstr.: Bauarbeiten zwischen Frobenstr. und Dessauerstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt Seydlitzstr. (Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?)	? 6349,2510 6459,2364
 Pascalstr.: Fahrbahn zwischen Heisenbergstr. und Schlesingerstr. wegen Hochbauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 4961,12940 4932,12968
 Ostender Str.: Einbahnstraßenregelung an der Müllerstr., gesperrt Richtung Nordosten, Ende der Hochbauarbeiten unbekannt (Wurde die Einbahnstraßenregelung aufgehoben?)	? 6919,15666 7024,15810
@@ -1002,5 +1009,4 @@ Tauroggener Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Norden, En
 Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023 Mauerweg Marienfelde - Lichterfelde (Wo genau sind die gesperrten Abschnitte des Mauerwegs?)	? 7097,-527 6961,-389 6668,-100 6498,71 6351,219 6256,363
 Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023 Mauerweg Marienfelde - Lichterfelde (Wo genau sind die gesperrten Abschnitte des Mauerwegs?)	? 5441,-150 4842,-547 4596,-707 4406,-910
 Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023 Mauerweg Lichtenrade - Marienfelde (Wo genau sind die gesperrten Abschnitte des Mauerwegs?)	? 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568
-Schönfließ - Summt: Brücke über die A10 wird neu gebaut, Ende der Bauarbeiten unbekannt (Wann ist die Brücke wieder offen?)	? 5752,30817 5787,30867
 Mauerweg: Bauarbeiten zwischen Osdorfer Str. und Jenbacher Weg, Weg ist gesperrt (Stand Ende Oktober 2022) Mauerweg Marienfelde - Lichterfelde (Ist dieser Abschnitt des Mauerwegs noch gesperrt?)	? 6256,363 6204,331 6013,211 5832,93 5441,-150

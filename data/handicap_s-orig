@@ -17,7 +17,7 @@
 #: by: https://www.gm013.la/work/fmp
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/pl%C3%A4tze-vorpl%C3%A4tze.93/page-2#post-19593
 #: XXX evtl. wird die Erschließungsstraße nicht mehr durchgängig sein; evtl. wird man die Fläche als Grünfläche kennzeichnen können
-#: last_checked: 2022-12-23
+#: last_checked: 2023-01-05
 #: check_frequency: 30d
 #: next_check: 2023-07-01
 (Vorfahrt Neues-Deutschland-Gebäude): Bauarbeiten, schmaler Gehweg ist frei	q4::inwork 12788,11898 12891,12008
@@ -154,7 +154,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 # 
 #: XXX_prog: BS (ansonsten entfernen)
 #: next_check_id: DIESEL-2019
-#: last_checked: 2022-11-07
+#: last_checked: 2023-01-04
 #: check_frequency: 60d
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 # 
@@ -180,13 +180,13 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 # 
 #: XXX Wie lange bleibt der Container hier? Hat es was mit den Bauarbeiten an der TFH zu tun?
 #: osm_watch: way id="998905878" version="1"
-#: last_checked: 2022-10-19
+#: last_checked: 2022-12-30 (mapillary)
 #: check_frequency: 150d
 Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 6835,15412 6815,15398
 # 
 #: XXX laut osm opening_date=2024-10-01, "Wedding Advanced Laboratories"
 #: osm_watch: way id="885130938" version="5"
-#: last_checked: 2022-10-19
+#: last_checked: 2022-12-30 (mapillary)
 #: check_frequency: 150d
 #: next_check: 2024-10-01
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6748,15313 6833,15215
@@ -209,14 +209,17 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 # 
 #: next_check_id: BEBELPLATZXMAS-2022
 #: note: eigentlich "q3::xmas", wird aber weder gerendert noch von Strassen::Cat akzeptiert
-#: next_check: 2023-01-02
-#: valid: 20221111-20230102
+#: last_checked: 2023-01-05
+#: check_frequency: 2d
+# REMOVED --- #: next_check: 2023-01-02
+# REMOVED --- #: valid: 20221111-20230102
+#: valid: 20221111-20230108
 Bebelplatz: Weihnachtsmarkt, schmaler Durchgang	q3 9664,12387 9680,12232
 # 
 #: next_check_id: TACHELES-2020
 #: XXX Wann wird der Kran abgebaut? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2022-12-27 (mapillary)
+#: last_checked: 2022-12-29 (mapillary)
 #: check_frequency: 30d
 #: next_check: 2023-06-30
 Johannisstr.: Abschnitt der Fahrbahn gesperrt	q3::inwork 9588,13174 9385,13174
@@ -239,7 +242,7 @@ Johannisstr.: Abschnitt der Fahrbahn gesperrt	q3::inwork 9588,13174 9385,13174
 #: source_id: viz2021:13.402613,52.528076,15.11.2022,08:00 (bis 16.12.2022) (bis 6.12.2022) (inaktiv)
 #: source_id: viz2021:13.402613,52.528076,06.12.2022,08:00 (bis 20.12.2022) (bis 15.3.2023)
 #: priority: #A
-#: last_checked: 2022-12-27 (mapillary) vvv
+#: last_checked: 2023-01-03 (mapillary) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2023-03-15 vvv
 Gipsstr.: Fahrbahn an der Rosenthaler Str. gesperrt, Ausweichen auf Bürgersteig, Bordsteine	q3::inwork 10199,13446 10341,13376
@@ -294,7 +297,7 @@ Chausseestr.: Radweg auf gegenüberliegenden Bürgersteig	q2::inwork; 8732,14098 8
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic vvv
-#: last_checked: 2022-12-27 vvv
+#: last_checked: 2023-01-05 vvv
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8775,12457 8904,12489
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
@@ -314,7 +317,7 @@ Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
 # 
 #: osm_watch: way id="751595931" version="3"
 #: also_indoor: traffic (H,B)
-#: last_checked: 2022-12-27
+#: last_checked: 2023-01-05
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 # 
 #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large
@@ -405,7 +408,7 @@ Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweich
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
 #: priority: #B vvv
-#: last_checked: 2022-12-28 vvv
+#: last_checked: 2023-01-05 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="13"
@@ -596,7 +599,7 @@ Turmstr.: Bauarbeiten, teilweise Führung des Radwegs über den engen Gehweg	q2+::
 Turmstr.: Bauarbeiten, Engstellen, Umweg über den Kleinen Tiergarten	q3::inwork; 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 #: last_checked ^^^
 #: note: zurzeit wird man Richtung Westen auf die südliche Fahrbahn geleitet
-#: source_id: viz2021:13.360357,52.523267,26.09.2022,10:00 (bis 9.1.2023)
+#: source_id: viz2021:13.360357,52.523267,26.09.2022,10:00 (bis 9.1.2023) (bis 7.7.2023)
 #: last_checked: 2022-11-26
 Alt-Moabit: Bauarbeiten, Umwege	q3::inwork; 7422,13012 7346,13022
 #: check_frequency ^^^
@@ -643,14 +646,14 @@ Alt-Moabit: Bauarbeiten, Umwege	q3::inwork; 7422,13012 7346,13022
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/bundesallee-13-14-pariser-str.599/page-5#post-17417
 #: XXX siehe unten: anderen Eintrag wieder aktivieren
 #: also_indoor: traffic
-#: last_checked: 2022-12-27 (webcam)
+#: last_checked: 2022-12-31 (webcam)
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-10-01
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2-::inwork; 5463,9961 5246,10168
 # 
 #: next_check_id: PARISER-2021
 #: by: https://www.tagesspiegel.de/berlin/kreative-loesungen-fuer-den-berliner-radverkehr-bezirk-stellt-poller-am-kudamm-auf/25685748.html
-#: last_checked: 2022-12-27 (webcam)
+#: last_checked: 2022-12-31 (webcam)
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2022-10-01
 Pariser Str./Bundesallee: Bauarbeiten, Durchgang verengt	q3::inwork 5461,9923 5423,9932 5382,9942
@@ -681,7 +684,7 @@ Pariser Str./Bundesallee: Bauarbeiten, Durchgang verengt	q3::inwork 5461,9923 54
 # REMOVED (laut osm nur noch construction=minor) --- Donaustr.: Fahrbahn an der Kreuzung Pannierstr. kann wegen Bauarbeiten noch nicht befahrbar sein	q2::inwork 12202,8895 12392,8724
 # 
 #: next_check_id: GRENZALLEE-2014
-#: last_checked: 2022-12-04 vvv
+#: last_checked: 2023-01-04 vvv
 #: check_frequency: 90d vvv
 Bergiusstr. - Grenzallee: kurvig, einige Fußgänger	q1 14150,6609 14137,6658 14179,6714 14179,6743
 Bergiusstr. - Grenzallee: kurvig, einige Fußgänger	q3 14179,6743 14139,6786
@@ -690,7 +693,7 @@ Bergiusstr. - Grenzallee: kurvig, einige Fußgänger	q3 14179,6743 14139,6786
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a100_16_ba/pix/los1/NKA_Sperrung_Ueplan_Fussgaenger_gr.gif
-#: last_checked: 2022-12-04 vvv
+#: last_checked: 2023-01-04 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 # REMOVED --- Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 14235,7100 14223,7084 14196,7086
@@ -767,7 +770,7 @@ Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kan
 #: XXX Bauarbeiten der Wasserbetriebe, laut Baustellenschild bis Oktober 2023
 #: XXX Einbahnstraßenregelung nach den Bauarbeiten wiederherstellen
 #: also_indoor: traffic (G)
-#: last_checked: 2022-12-21
+#: last_checked: 2023-01-06
 #: check_frequency: 90d
 #: next_check: 2023-10-31
 Parkaue: Bauarbeiten der Wasserbetriebe, Fahrbahn gesperrt	q4+::inwork 15535,12420 15457,12449
@@ -1893,7 +1896,7 @@ Kiautschoustr.: Fußgänger, Bordsteine	q3 6837,14848 6853,14854
 Baruther Str.: gemeinsamer Rad- und Gehweg	q1 9588,9827 9723,9842
 (Aldi/Getränke-Hoffmann-Parkplatz): Parkplatz	q1 13202,11666 13186,11692 13173,11788
 #: XXX_prog BS am östlichen Ende, am westlichen ist abgesenkt, ansonsten q2
-(Schmidstr. - Heinrich-Heine-Str.): Bordsteine, Fußgänger	q3 11236,11508 11174,11554
+(Schmidstr. - Heinrich-Heine-Str.): Bordsteine, Fußgänger	q3 11233,11510 11174,11554
 #: XXX_prog BS am westlichen Ende und kann zugeparkt sein, östliches ist leicht abgesenkt und kann auch zugeparkt sein
 #: note: früher "q2"
 (Entlang des Stadtbahnviadukts): Bordsteine, Fußgänger	q3 11966,11832 12132,11788
@@ -2043,8 +2046,9 @@ Elli-Voigt-Str.: vier Bodenwellen	q1- 15833,13596 15831,13760
 Elli-Voigt-Str.: zwei Bodenwellen	q1- 15792,13764 15794,13975
 Landsberger Allee - Große-Leege-Str.: Gehweg, Radfahrer frei	q1 15920,14357 15902,14498
 Landsberger Allee - Große-Leege-Str.: Gehweg, Radfahrer frei	q1 15902,14498 15896,14548 15899,14598
-Verdener Gasse: enge Straße	q1 15878,14761 15946,14702
-Verdener Gasse: Bordsteine	q3 15946,14702 15968,14684
+Verdener Gasse: enge Straße	q0- 15878,14761 15946,14702
+#: XXX_prog: BS an beiden Enden, sonst q1
+Verdener Gasse: einige Fußgänger, Bordsteine	q3 15946,14702 15968,14684
 #: note: außerdem zu kurz für eine höhere Geschwindigkeit
 (Waisenstr. - Littenstr.): Fußgänger	q3 11049,12386 11084,12395
 Karl-Vesper-Str.: enge Straße	q1 14184,13670 14205,13755 14263,13739
@@ -2076,7 +2080,7 @@ Riemenschneiderweg: gemeinsamer Rad- und Gehweg, eng	q3 6878,5946 6895,5873
 Harkortstr.: Bodenschwellen	q1 7570,5508 7621,5494
 (Plauener Str. - Küllstedter Str.): Fußgänger	q2 17352,14827 17363,14760
 #: XXX_prog: für Anhänger q2
-Orankeweg: einige Bodenschwellen, ohne Anhänger leicht umfahrbar	q0 14967,15885 14994,15861 15313,15858 15395,15852 15453,15848
+Orankeweg: einige Bodenschwellen, ohne Anhänger leicht umfahrbar	q0 14967,15885 14994,15861 15313,15858 15395,15852 15441,15850
 (Gounodstr. - Otto-Brahm-Str.): abschnittsweise eng und kurvig	q1 14433,15908 14451,15873 14383,15848 14349,15825 14365,15778
 #: XXX_prog: BS an der Lindenallee, ansonsten q1
 Gounodstr.: Fußgänger, flacher Bordstein	q2 14239,15810 14251,15828 14366,15877
@@ -3951,7 +3955,7 @@ Borkheider Str.: Bordstein	q3 21726,17974 21748,17963
 Landschaftspark Johannisthal: einige Fußgänger	q1 18164,2712 18167,2724 18191,2822 18229,2973 18228,2989 18046,3192 18031,3257 18027,3276 18025,3291 18015,3380 18000,3513 17997,3535 17996,3540 17978,3713 17976,3735 17975,3744 17953,3955
 #: next_check_id: EINHEITSDENKMAL-2022
 #: by: https://berliner-abendblatt.de/2022/11/09/einheitsdenkmal-soll-nach-lieferproblemen-2023-fertig-sein/
-#: last_checked: 2022-12-27
+#: last_checked: 2023-01-05
 #: check_frequency: 60d
 #: next_check: 2023-10-01
 # REMOVED (früher: Schloßplatz: Fußgänger	q2 10174,12284 10102,12384)
@@ -4068,8 +4072,12 @@ Niemannstr.: Bodenschwellen, allerdings nur für Anhänger relevant	q0- 14254,1137
 Helmerdingstr.: Bodenschwellen, allerdings nur für Anhänger relevant	q0- 14468,11203 14442,11101
 #: XXX_prog mit Anhänger aber ggfs. q2
 Matkowskystr.: Bodenschwellen, allerdings nur für Anhänger relevant	q0- 14531,11142 14513,11075
+# 
+#: note: am nördlichen Ende ein Grünanlagenschild ohne Zusatzschilder
 Orankestrand: Fußgänger, Radfahren offiziell verboten	q3 15479,16060 15592,16069 15664,16115 15731,16208
-Zum Orankestrand: schmal	q2 15435,16063 15479,16060
+#: note: am südlichen Ende Grünanlagenschild mit einem expliziten "Radfahren verboten"
+Zum Orankestrand: schmal, Fußgänger, Radfahren offiziell verboten	q3 15435,16063 15479,16060
+# 
 (Zechliner Str. - Neustrelitzer Str.): Gehweg	q3- 16281,14604 16323,14672
 (Neustrelitzer Str., Gehweg): Gehweg	q3- 16323,14672 16356,14725
 #: note: gemeinsamer Rad- und Gehweg
@@ -4149,7 +4157,7 @@ Johannes-Zoschke-Str.: einige Fußgänger	q1 19037,9636 19042,9708
 Brodenbacher Weg: einige Fußgänger	q2 15278,17152 15308,17166
 #: note: Grünanlage, Zusatzschild existiert, aber nicht erkennbar vvv
 Orankesee, südliches Ufer: Fußgänger	q2 15856,15924 15815,15939 15758,15932 15703,15953 15587,15852 15534,15911 15486,16000 15479,16060
-(Orankestr. - Orankesee): Fußgänger	q2 15598,15793 15604,15824 15587,15852
+(Orankestr. - Orankesee): Fußgänger	q2 15599,15786 15604,15824 15587,15852
 (Oranksee - Hansastr.): einige Fußgänger	q1- 15479,16060 15358,16151 15320,16163 15270,16205
 #: note ^^^
 Hansastr.: einige Fußgänger	q3 15236,16241 15254,16243
@@ -4781,7 +4789,7 @@ Käuzchensteig: Fußgänger, Bordsteine	q1 1918,6456 1895,6470
 (Parkweg Robert-Stolz-Anlage): Fußgänger, schmal	q3 1869,7525 1946,7580
 (Luisenstr. - Hufelandweg): Fußgänger	q3 8665,13353 8582,13355
 Rahel-Hirsch-Weg: Fußgänger	q3 8582,13355 8595,13375 8587,13436 8586,13440
-Helga-Hahnemann-Str.: Fußgänger, schmal	q2 9415,13315 9408,13282 9385,13174
+# REMOVED --- Helga-Hahnemann-Str.: Fußgänger, schmal	q2 9415,13315 9408,13282 9385,13174
 An der Karolinenhöhe: Fußgänger, spielende Kinder	q3 -5900,11726 -5848,11779 -5892,11820 -5847,11876
 Obstallee: Bodenschwellen, Fußgänger, spielende Kinder	q3 -5437,12440 -5890,12579
 Leubnitzweg: Fußgänger (Wohngebiet), Bordsteine	q3 -5385,12540 -5400,12509 -5437,12440

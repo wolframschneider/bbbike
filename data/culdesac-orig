@@ -292,7 +292,7 @@ Sackgassenende, Spreeufer	culdesac 21901,5117
 östliches Sackgassenende	culdesac 22141,6143
 westliches Sackgassenende	culdesac 21993,6133
 	culdesac 22234,5921
-	culdesac 22018,5452
+	culdesac 22006,5460
 östliches Sackgassenende	culdesac 21729,6989
 westliches Sackgassenende	culdesac_pseudo 21541,6800
 #: note: Weiterfahrt in den Innovationspark möglich
@@ -1801,7 +1801,7 @@ südliches Sackgassenende	culdesac_pseudo 22478,4659
 	culdesac_pseudo 11334,10527
 	culdesac_pseudo 10911,11080
 	culdesac_pseudo 11000,11327
-	culdesac_pseudo 11236,11508
+	culdesac_pseudo 11233,11510
 	culdesac_pseudo 14837,11706
 	culdesac_pseudo 14994,12064
 #: note: als Radfahrer/Fußgänger kann man über den Gehweg weiterfahren/gehen
@@ -1938,7 +1938,7 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac_pseudo 14676,2375
 	culdesac_pseudo 15381,15873
 	culdesac_pseudo 15395,15852
-	culdesac_pseudo 15453,15848
+	culdesac_pseudo 15441,15850
 	culdesac_pseudo 15313,15848
 	culdesac_pseudo 16161,18687
 	culdesac_pseudo 25157,13790

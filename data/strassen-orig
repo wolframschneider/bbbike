@@ -259,7 +259,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/2022/08/18/gegen-umbenennung-mohrenstrasse-koennen-nur-anwohner-vorgehen/
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2022-12-28 (mapillary) vvv
+#: last_checked: 2023-01-05 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -381,7 +381,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: source_id: 2147346249
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
 #: priority: #A
-#: last_checked: 2022-12-28 (mapillary)
+#: last_checked: 2023-01-05
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 # REMOVED --- #: valid: !20200821-20221122
@@ -1366,7 +1366,7 @@ Mercedes-Platz	NN 12990,11006 13063,11147
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036247069542/247069542/00279027/27-Anlagen/02/DS0254_VzK_BenennungeinerStrassenachFreiaEisne.pdf (erst 2023, nach Umwidmung in eine öffentliche Straße)
 #: XXX Vorschlag: Freia-Eisner-Straße; mittlerweile tatsächlich als "Planstraße C" offiziell ausgeschildert
 #: note: "Privatgelände"
-#: osm_watch: way id="491906864" version="12"
+#: osm_watch: way id="491906864" version="13"
 #: priority: #C
 #: last_checked: 2022-12-16
 #: check_frequency: 30d
@@ -1489,7 +1489,7 @@ Heiligegeistgasse	NN 10285,12744 10309,12700 10344,12641 10352,12627
 Karl-Liebknecht-Str.	HH 10243,12546 10300,12587 10352,12627 10431,12709 10515,12780 10525,12789 10695,12933 10733,12967 10776,13005 10863,13095 10923,13156 10976,13229 11012,13278 11070,13357
 Karl-Liebknecht-Str.	HH 11070,13357 11081,13372 11107,13410 11135,13452 11160,13492
 Karl-Liebknecht-Str.	HH 11160,13492 11131,13455 11080,13373 11070,13357
-Unter den Linden	HH 10024,12431 9984,12426 9934,12420 9858,12410 9780,12401 9771,12400 9713,12392 9664,12387 9613,12381 9475,12365 9358,12351 9303,12343 9141,12320 9028,12307 8804,12280
+Unter den Linden	HH 10024,12431 9984,12426 9934,12420 9858,12410 9780,12401 9771,12400 9713,12392 9664,12387 9613,12381 9475,12365 9429,12359 9358,12351 9303,12343 9141,12320 9028,12307 8804,12280
 Hinter der Katholischen Kirche	N 9812,12150 9808,12182 9798,12267
 #: note: Privatgelände, auf der westlichen Seite ein Fahrrad/Einfahrt verboten-Schild, auf der östlichen Seite nicht
 (entlang der Hedwigskathedrale)	NN 9808,12182 9775,12178 9771,12190 9747,12205
@@ -1509,15 +1509,27 @@ Fischerinsel [Wohngebiet]	N 10578,11969 10657,12026 10683,11995 10713,12014
 (Fischerinsel [Wohngebiet] - Inselbrücke)	NN 10713,12014 10742,12033 10824,11992
 (Fischerinsel - Grünstraßenbrücke)	NN 10474,11843 10515,11785
 Neue Roßstr.	NH 10672,11870 10687,11853 10722,11816 10815,11662
-Annenstr. (Mitte)	NH 10815,11662 10892,11555 11039,11425 11052,11414 11094,11377 11158,11324 11249,11268
+Annenstr. (Mitte)	NH 10815,11662 10892,11555 11039,11425 11052,11414 11094,11377 11158,11324 11217,11288 11249,11268
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/artikel.1209145.php (2018-2024)
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/schmidtstrasse_lageplan.pdf
+#: XXX Hier soll es eine Einbahnstraßenregelung Radfahrer frei geben; evtl. wird auch die Qualtität besser werden
+#: last_checked: 2023-01-05
+#: check_frequency: 180d
+#: next_check: 2024-12-31
+Annenstr. [Wohngebiet] (Mitte)	N 11192,11429 11259,11391 11217,11288
 #: note: keine Straßenschilder, Postadressen möglicherweise Heinrich-Heine-Str.
 (Wohngebiet)	N 11052,11414 11131,11579 11166,11664
 (Wohngebiet)	N 11166,11664 11080,11712 11017,11658
-Schmidstr.	N 11415,11392 11236,11508
-(Schmidstr. - Heinrich-Heine-Str.)	NN 11236,11508 11174,11554
+Schmidstr.	N 11233,11510 11415,11392
+Schmidstr.	N 11415,11392 11480,11526
+#: osm.highway: service
+#: note: nur für Lieferverkehr frei
+Schmidstr.	N 11480,11526 11281,11612
+(Schmidstr. - Heinrich-Heine-Str.)	NN 11233,11510 11174,11554
 Heinrich-Heine-Platz	NH 11349,11227 11249,11268
 Heinrich-Heine-Platz	N 11249,11268 11241,11247 11337,11197
 Heinrich-Heine-Str.	H 11250,11715 11174,11554 11094,11377 11039,11254 10937,11033
+Heinrich-Heine-Str. [Wohngebiet]	N 11281,11612 11233,11510 11192,11429
 Ebertstr.	H 8542,11502 8548,11571 8553,11630 8553,11638 8562,11744 8567,11799 8571,11846 8577,11896 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
 Pariser Platz	N 8804,12280 8722,12268
 Pariser Platz	NN 8722,12268 8637,12258 8592,12252
@@ -1692,7 +1704,7 @@ Torstr.	H 10898,13632 10741,13685 10645,13711 10572,13731 10459,13760 10319,1378
 An der Spandauer Brücke	H 10418,12922 10371,13006 10339,13052 10301,13075
 Hackescher Markt [An der Spandauer Brücke]	H 10301,13075 10286,13084 10264,13097
 Hackescher Markt [Oranienburger Str.]	H 10264,13097 10220,13098
-Oranienburger Str. (Mitte)	H 10220,13098 10074,13103 10014,13108 9938,13114 9786,13178 9771,13182 9611,13245 9415,13315 9293,13366 9225,13389
+Oranienburger Str. (Mitte)	H 10220,13098 10074,13103 10014,13108 9938,13114 9786,13178 9771,13182 9611,13245 9476,13293 9415,13315 9293,13366 9225,13389
 Große Präsidentenstr.	N 10220,13098 10105,13004
 Ebertsbrücke	N 9533,12925 9538,12993
 Tucholskystr.	N 9538,12993 9559,13087 9588,13174 9611,13245 9651,13406 9609,13522 9579,13604
@@ -1759,7 +1771,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/erschliessung-und-grundstuecksuebertragung-bebauungsplan-1-62b-oestlich-heidestrasse-otto-weidt-platz-1032336.php
 #: by: https://www.berliner-woche.de/moabit/c-bauen/golda-meir-steg-verbindet-jetzt-moabit-mit-mitte_a330725
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2022-12-17
+#: last_checked: 2022-12-30 (mapillary)
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -2487,7 +2499,7 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 (provisorische Umfahrung)	NN 14310,7022 14276,7021 14245,7037 14236,7058 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2022-12-04 vvv
+#: last_checked: 2023-01-04 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 #: valid: 20140224-20230630
@@ -4671,6 +4683,8 @@ Friesenstr. (Niederschönhausen)	NN 8765,19288 8834,19253 8944,19197 9458,18859
 (Pankeweg)	NN 11907,19749 11995,19759 12154,20325 12216,20344 12235,20380 12266,20467 12310,20523 12363,20582 12386,20636 12505,20702 12578,20749
 (Pankeweg)	NN 12553,20757 12753,20884 12807,20944 12880,21134
 #: XXX Wird der Pankeweg nach den Bauarbeiten hier wieder begradigt?
+#: osm_watch: way id="1046951300" version="1"
+#: osm_watch: way id="1046951302" version="1"
 #: last_checked: 2022-09-09 (mapillary)
 #: check_frequency: 120d
 (Pankeweg)	NN 12880,21134 12854,21147 12914,21229
@@ -6953,7 +6967,7 @@ Arberstr.	N 19392,9116 19406,9236 19424,9502 19437,9653
 Arberstr.	NN 19437,9653 19450,9728
 Grafenauer Weg	N 19488,9223 19510,9497 19523,9648 19437,9653
 #: XXX_osm: bei osm evtl. falsch geschrieben (Bindestriche!)
-Am Maria-Jankowski-Park	N 22087,5404 22018,5452
+Am Maria-Jankowski-Park	N 22087,5404 22006,5460
 Am Generalshof	N 22165,5434 22167,5416 22056,5314
 (Lindenstr. - Bahnhofstr.)	NN 22023,5160 22056,5314 22054,5360
 #: osm.highway: service
@@ -12608,12 +12622,13 @@ Buddestr. (Tegel)	H 2241,20487 2297,20353
 Buddestr. (Tegel)	N 2297,20353 2352,20224 2381,20157 2395,20126 2435,20032 2471,19945 2492,19897
 (Vorfahrt S-Bhf. Tegel)	N 2381,20157 2398,20166 2384,20196 2371,20225 2352,20224
 (Weg am Stadion Borsigpark)	NN 2436,19606 2498,19682 2482,19787 2495,19808 2492,19897
-Gropiusstr. (Alt-Hohenschönhausen)	N 15877,15673 15825,15547
+Gropiusstr. (Alt-Hohenschönhausen)	N 15876,15670 15825,15547
 Orankeweg	N 14609,15921 14695,15911 14769,15867 14936,15857
 Orankeweg	N 14967,15885 14994,15861 15313,15858 15395,15852
-Orankeweg	NN 15395,15852 15453,15848
-Orankestr.	N 15453,15848 15598,15793 15665,15765 15801,15706 15877,15673 15996,15620 16331,15486
-Orankestrand	NN 15866,16393 15782,16277 15731,16208 15664,16115 15592,16069 15479,16060
+Orankeweg	NN 15395,15852 15441,15850
+Orankestr.	N 15441,15850 15599,15786 15659,15759 15799,15701 15876,15670 15996,15620 16331,15486
+Orankestrand	N 15866,16393 15813,16319
+Orankestrand	NN 15813,16319 15782,16277 15731,16208 15664,16115 15592,16069 15479,16060
 (zum Orankestrand)	NN 15435,16063 15479,16060
 (NSG Fauler See - Elsastr./Suermondtstr.)	NN 15965,16482 15918,16383
 (NSG Fauler See)	NN 15965,16482 15990,16479 16091,16523 16107,16586 16138,16605 16172,16686 16239,16737 16303,16816 16369,16821
@@ -12746,6 +12761,9 @@ Stuthirtenweg	NN 12984,1011 13040,1021 13113,1046 13181,1082 13241,1113
 Stuthirtenweg	N 13241,1113 13336,1162 13450,1222
 Stuthirtenweg	N 13450,1222 13542,1268 13580,1300 13635,1347 13634,1371
 Christoph-Ruden-Str.	N 12785,1308 12725,1429 12643,1706
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_01_0001_0140_online.pdf (Benennung eines Geh- und Radweges zum 5. Mai 2023)
+#: XXX neuer Name "Wolfgang-Seifert-Weg", fehlt in Berlin.coords.data, PLZ=?
+#: next_check: 2023-05-05
 (Christoph-Ruden-Str. - Buckower Damm)	NN 12725,1429 12939,1469
 Kestenzeile	N 12725,1429 12623,1415 12489,1439 12364,1471 12286,1540
 Haewererweg	N 12295,1560 12286,1540 12206,1418 12156,1346 12125,1282
@@ -13988,7 +14006,7 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED (Verschwenkung realisiert) --- #: XXX Verschwenkung der Bergiusstr. --- #: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle --- #: XXX wahrscheinlich ist auch die alte Ampel abgeschaltet? --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1308/nachricht5044.html --- #: prio: #A --- #: next_check: 2013-08-23
 # REMOVED (nein, keine Schilder) --- #: XXX als Bergiusstr. ausgeschildert? --- #: next_check: 2013-09-04
 # REMOVED --- #: last_checked: 2021-03-30 --- #: check_frequency: 90d --- #: next_check: 2021-12-31 --- #: next_check: 2021-04-02 --- (Zufahrt zur Bergiusstr.)	NN 14051,6731 14106,6663
-#: last_checked: 2022-12-04 vvv
+#: last_checked: 2023-01-04 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 #: XXX im Zuge des A100-Ausbaus wird die Bergiusstr. verschwenkt
@@ -14745,7 +14763,7 @@ Lauterstr.	N 5817,7223 5810,7337 5811,7433 5812,7536 5810,7662 5810,7684 5809,77
 #: osm.highway: service
 (Orankesee - Hansastr.)	N 15292,16200 15270,16205 15251,16217 15254,16243
 (Orankesee - Hansastr.)	NN 15254,16243 15236,16241
-Oberseestr.	N 15665,15765 15761,15840 15856,15924 15891,16041 15894,16096 15937,16118 15968,16133 16046,16134 16119,16113 16208,16087 16322,16049 16369,16003 16442,15926 16491,15874 16537,15827 16615,15737
+Oberseestr.	N 15659,15759 15761,15840 15856,15924 15891,16041 15894,16096 15937,16118 15968,16133 16046,16134 16119,16113 16208,16087 16322,16049 16369,16003 16442,15926 16491,15874 16537,15827 16615,15737
 (Oberseestr. - Gertrudstr.)	N 15894,16096 15869,16078
 Gertrudstr. (Alt-Hohenschönhausen)	N 15891,16041 15869,16078 15793,16162 15731,16208
 Käthestr. (Alt-Hohenschönhausen)	N 16369,16003 16349,15935 16351,15914 16360,15889 16393,15868 16491,15874
@@ -14759,7 +14777,7 @@ Hertastr. (Alt-Hohenschönhausen)	N 16119,16113 16154,16227
 Annemariestr.	N 16046,16134 16075,16249 16099,16339
 Marie-Luise-Str.	N 15968,16133 15976,16220 15997,16272
 Manetstr.	N 16412,15559 16251,15629 16036,15722 15840,15806 15761,15840
-Chamierstr.	N 15840,15806 15801,15706
+Chamierstr.	N 15840,15806 15799,15701
 Lindenweg (Alt-Hohenschönhausen)	N 16251,15629 16297,15737 16360,15889
 Scharnweberstr. (Alt-Hohenschönhausen)	N 15996,15620 16036,15722 16080,15830
 Augustastr. (Alt-Hohenschönhausen)	N 15894,16096 15894,16189 15927,16344
@@ -15867,8 +15885,8 @@ Reichenberger Str. (Alt-Hohenschönhausen)	N 15937,15134 16075,15069 16123,15025
 Freienwalder Str. (Alt-Hohenschönhausen)	N 16849,15263 16651,15345 16618,15356 16406,15452 16331,15486
 Wriezener Str. (Alt-Hohenschönhausen)	N 16604,15224 16522,15258 16354,15323 16218,15386
 Roedernstr. (Alt-Hohenschönhausen)	N 16218,15386 15825,15547 15552,15660
-Friedhofstr.	N 15552,15660 15598,15793
-(Orankestr. - Orankesee)	NN 15598,15793 15604,15824 15587,15852
+Friedhofstr.	N 15552,15660 15599,15786
+(Orankestr. - Orankesee)	NN 15599,15786 15604,15824 15587,15852
 Lettestr.	N 11268,15360 11368,15301 11480,15229
 Waldstr. (Niederschönhausen)	N 10002,19418 9961,19513 9916,19625 9878,19741 9864,19793 9832,19885 9824,19910 9788,20035 9754,20134 9727,20251 9723,20269 9724,20291 9717,20501
 Waldstr. (Niederschönhausen)	N 9961,19513 9942,19505 9982,19413
@@ -17026,6 +17044,7 @@ Färberstr.	NN 21607,4850 21622,4884 21649,4946 21662,4974
 Färberstr. [Wohngebiet]	N 21622,4884 21591,4902 21631,4991 21643,5020 21665,5035
 (Färberstr. - Uferweg Richtung Westen)	NN 21662,4974 21670,4997 21665,5035 21696,5053
 (Färberstr. - Uferweg Richtung Osten)	NN 21662,4974 21740,5004
+(Uferweg - Carl-Spindler-Str.)	NN 21518,5389 21483,5374
 #: note: Privatstraße (laut Amtsblatt)
 Carl-Spindler-Str.	N 21442,5414 21474,5388 21483,5374 21514,5310 21547,5245 21413,5180 21379,5163 21346,5165
 #: note: Privatstraße (laut Amtsblatt)
@@ -18603,7 +18622,7 @@ Bertolt-Brecht-Platz	N 9193,12875 9160,12932
 #: XXX oder eventuell wird das eine Einbahnstraße, wenn die Bauarbeiten an der Pankebrücke beendet sind (Schilder hängen schon, obwohl es eine Sackgasse ist?!)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_19_2765_2928_online.pdf
 #: osm_watch: way id="327518240" version="8"
-#: last_checked: 2022-12-28
+#: last_checked: 2023-01-05
 #: check_frequency: 90d
 (Straße vor dem Berliner Ensemble)	N 9212,12969 9160,12932
 Karlplatz	N 8711,12986 8676,12976
@@ -18644,7 +18663,7 @@ Promenade Schiffbauerdamm	NN 8635,12629 8709,12605 8756,12608
 (Uferpromenade - Schiffbauerdamm)	NN 8529,12757 8536,12758 8545,12760
 (Uferpromenade - Schiffbauerdamm)	NN 8498,12870 8507,12873 8514,12877
 (Uferpromenade - Schiffbauerdamm)	NN 8464,12919 8480,12909 8503,12895
-Helga-Hahnemann-Str.	NN 9415,13315 9408,13282 9385,13174
+# REMOVED (ist seit 2011 nicht mehr befahrbar, wird auch nicht mehr wiederhergestellt) --- Helga-Hahnemann-Str.	NN 9415,13315 9408,13282 9385,13174
 Blasewitzer Ring	N -5437,12440 -5219,12374 -5196,12452 -5146,12632 -5170,12690 -5282,12730
 Reclamweg	N -5196,12452 -5126,12425
 #: note: beleuchtet (by Stefan Klinkusch)
@@ -20161,10 +20180,10 @@ Am Kaniswall	N 32823,-149 32817,4 32872,128
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_01_0001_0080_online.pdf (geplant ab 15.3.2021 bis März 2025)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_23_1913_2052_online.pdf (Eingruppierung in Straßenreinigungsverzeichnisse)
 #: note: provisorisch asphaltiert, provisorisch beleuchtet, gelbe Begrenzungslinie zwischen Rad- und Gehwegbereich
-#: source_id: 2147346962 (hier: Einschränkungen an der Gegenfahrbahn, bis 31.1.2025)
+#: source_id: viz2021:13.338005,52.51368,16.03.2021,08:00 (hier: Einschränkungen an der Gegenfahrbahn, bis 10.1.2025)
 #: last_checked: 2022-12-28
 #: check_frequency: 180d
-#: next_check: 2025-01-31
+#: next_check: 2025-01-10
 (Umleitungsstrecke im Tiergarten)	NN 6164,11947 6132,11984 6024,11978 5925,11943 5900,11913
 # 
 #: next_check_id: PYRAMIDENBRUECKE-2022

@@ -124,7 +124,6 @@ An der Kreuzung ca. 50m vor der Jugenerholungsstätte links	CP; 1553,6741 1495,66
 Den rechten Weg direkt an den Grundstücken entlang wählen	CP2; 761,7922 614,8006
 (Luisenstr. - Hufelandweg): durch die Gebäudedurchfahrt	CP2; 8665,13353 8582,13355
 (Hufelandweg - Luisenstr.): durch die Gebäudedurchfahrt	CP2; 8582,13355 8665,13353
-Helga-Hahnemann-Str.: Zugang rechts vom grossen Parkplatz, nicht ausgeschildert	CP2; 9415,13315 9408,13282
 Theodor-Heuss-Weg: beginnt links vom Spielplatz der Kita	CP2; 9250,14658 9223,14608
 zur Gustav-Heinemann-Brücke durch schmalen Durchbruch in der Böschung	CP2; 8025,12879 8041,12866
 zum Spreeufer: den Garten hinunter, am Ende ist ein Durchbruch nach rechts	CP2; 8116,12938 8041,12866
@@ -307,7 +306,7 @@ Prenzlauer Allee - Wohngebiet: bereits an der Krügerstr. oder Wisbyer Str. auf d
 Mariendorfer Damm - Göllweg: Mittelstreifen kann nicht überquert werden, bis zum Ankogelweg vorfahren und dort den Mariendorfer Damm überqueren	CP; 10276,1383 10239,1481 10119,1435
 Göllweg - Mariendorfer Damm: zunächst den linken Gehweg benutzen und am Ankogelweg die Straßenseite wechseln	CP; 10119,1435 10239,1481 10226,1515
 Johannisthaler Chaussee - Weg zur Gutschmidtstr.: bereits an der Kreuzung Johannisthaler Chaussee/Kirschnerweg auf den linken Radweg wechseln	PI; 13886,2653 13915,2673 13887,2710
-Suermondtstr. - Orankestrand: bereits an der Kreuzung Augustastr. die Straßenseite wechseln	PI; 15918,16383 15866,16393 15782,16277
+Suermondtstr. - Orankestrand: bereits an der Kreuzung Augustastr. die Straßenseite wechseln	PI; 15918,16383 15866,16393 15813,16319
 Hasenheide - Park: bereits an der Kreuzung Hasenheide/Jahnstr. auf den linken Gehweg wechseln	PI; 11500,9116 11449,9125 11439,9049
 Hasenheide - Park: bereits an der Ampel Neue Welt auf den linken Gehweg wechseln	PI; 11629,9086 11550,9104 11515,9066
 Park - Hasenheide: auf dem linken Gehweg bis zur Ampel fahren	CP; 11515,9066 11550,9104 11500,9116
@@ -364,7 +363,7 @@ Mergenthalerring: links halten	CP2; 14469,8455 14422,8407
 Karl-Marx-Allee - Berolinastr.: links am Kino International vorbei	PI; 11635,12745 11645,12774 11622,12850
 Jüdenstr. - Falkenseer Platz: auf den linken Gehweg bis zum Falkenseer Platz fahren	CP; -3239,14641 -3209,14662 -3255,14685
 Am Juliusturm - Jüdenstr.: bereits an der Ampel Hoher Steinweg auf den linken Gehweg wechseln	PI; -3150,14631 -3209,14662 -3239,14641
-Bahnhofstr. - Am Maria-Jankowski-Park: bereits an der Ampel Bahnhofstr./Lindenstr. auf den linken Gehweg wechseln	PI; 21954,5229 22054,5360 22087,5404 22018,5452
+Bahnhofstr. - Am Maria-Jankowski-Park: bereits an der Ampel Bahnhofstr./Lindenstr. auf den linken Gehweg wechseln	PI; 21954,5229 22054,5360 22087,5404 22006,5460
 Ausgeschildert als "Pieskower Weg"	CP; 13123,15244 13094,15196 13131,15175
 Apollofalterallee - Lindenschwärmerweg: spätestens an der Rapsweißlingstr. auf die Fahrbahn wechseln, an der Einmündung Lindenschwärmerweg fehlt eine Bordsteinabsenkung am Radweg	PI; 21249,11042 21308,11075 21294,11097
 Am Stadtpark: linken Gehweg benutzen, um Bordstein zu vermeiden	CP2; 15357,12813 15395,12762
@@ -493,3 +492,4 @@ Heerstr. -> Reimerweg: entweder schon an der Fußgängerampel Pillnitzer Weg auf d
 Keithstr. - Kleiststr.: ggfs. auf dem linken Gehweg bis zur Ampel fahren	CP; 6471,10851 6468,10550 6532,10529
 Bellevuestr. - Weg an der Alten Erpe: ggfs. schon an der Ampel Salvador-Allende-Str./Fürstenwalder Damm auf die linke Seite wechseln	PI; 23402,5483 23384,5541 23379,5559 23321,5560
 Breite Str. - Eintrachtstr.: wegen der Straßenbahntrasse frühzeitig auf den linken Gehweg wechseln	PI; 10680,18380 10710,18393 10650,18544
+zusätzlich ausgeschildert "Zur Michaelkirchstraße 24-30"	CP2; 11415,11392 11480,11526
