@@ -155,7 +155,7 @@ Ausgeschildert als Matheshöher Weg	CP2; 49488,96427 49056,96700
 Ausgeschildert als Britzer Str.	CP2; 33044,51831 33415,51839
 Ausgeschildert als Blütenberger Weg	CP2; 36914,54197 34819,54697
 (Lauterberger Str. - Andreasberger Str.): Privatstraße	CS 12053,6042 12154,6063
-ausgeschildert "zum Sportplatz"	CP2; 16136,7886 16534,8182
+ausgeschildert "zum Sportplatz"	CP2; 16144,7882 16534,8182
 ausgeschildert "zu den Häusern Gubitzstr. 18 - 20a"	CP2; 12463,15774 12642,15668
 ausgeschildert "zu den Häusern Hosemannstr. 50 - 39"	CP2; 12642,15668 12463,15774
 Philosophenweg: Privatstraße	CS 16073,12883 16074,12778
@@ -733,6 +733,7 @@ ausgeschildert "Zugang Stralauer Allee 6"	CP2; 13835,10577 13805,10528
 Am Pankepark: nicht ausgeschildert	CS 8152,14130 8238,14181 8282,14116 8207,14067 8184,14052
 Kleiner Parkweg: nicht ausgeschildert	CS 20775,11801 20790,11990
 Volkerweg: nicht ausgeschildert	CS 16005,4012 16046,4073 16060,4093 16145,4217 16151,4226
+Carl-Spindler-Str. - Uferweg: in Höhe Blütenweißweg zwischen den Neubauten links abbiegen	CP; 21474,5388 21483,5374 21518,5389
 Büxensteinallee: diagonal über die Straßenbahngleise, erst dahinter ist ausgeschildert	CP2; 22162,1067 22228,1071
 Am Weingarten: an der Einmündung Sigridstr. den linken Strang benutzen	CP2; 13867,14507 13765,14665
 Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
@@ -764,3 +765,4 @@ Rewe/Penny/Kik-Parkplatz	CP2; 17503,10544 17422,10571
 Bleckmannweg: nicht ausgeschildert	CP2; 15886,12190 15756,12212
 Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
+Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469

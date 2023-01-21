@@ -10,12 +10,13 @@
 #: next_check_id: ORANIENBURGERTORTRAM-2022
 #: next_check: 2023-01-30 vvv
 #: valid: -20230130 vvv
-#: last_checked: 2022-12-28 (mapillary)
+#: XXX schon seit mehreren Tagen anscheinend ausgeschaltet
+#: last_checked: 2023-01-16 (mapillary)
 #: check_frequency: 30d
-Friedrichstr./Ziegelstr.	X::inwork 9269,13060
-#: last_checked: 2022-12-29 (mapillary)
+Friedrichstr./Ziegelstr.	X0::inwork 9269,13060
+#: last_checked: 2023-01-12 (mapillary)
 #: check_frequency: 30d
-Friedrichstr./Tucholskystr.	X::inwork 9559,13087
+Tucholskystr./Ziegelstr.	X::inwork 9559,13087
 #: valid ^^^
 #: next_check ^^^
 # 
@@ -38,11 +39,11 @@ Wilhelmstr./Am Omnibushof: provisorische Ampel	X::inwork -4647,12269
 #: osm_watch: way id="936801541" version="3"
 #: XXX Ampel befindet sich östlich der Einmündung
 #: note: Anforderungsampel
-#: last_checked: 2023-01-04
+#: last_checked: 2023-01-17
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 # 
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
-#: last_checked: 2022-11-27
+#: last_checked: 2023-01-14
 #: check_frequency: 120d
 #: note: Anforderungsampel
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
@@ -60,8 +61,7 @@ B179/Fichtestr.	X::inwork 26138,-12596
 #: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (Gegenverkehrsregelung mit Baustellenampel, bis 10.11.2022) (mittlerweile inaktiv, bereits Ende Juli 2022) (wieder aktiviert, bis 30.9.2022) (bis 10.10.2022) (inaktiv) (bis 23.10.2022) (bis 25.10.2022) (bis 10.11.2022) (bis 30.11.2022) (bis 16.12.2022) (bis 31.1.2023)
 #: by: https://nitter.net/VIZ_Berlin/status/1522508674073350144#m
 #: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig
-#: last_checked: 2022-11-05 vvv
-# REMOVED --- #: next_check: 2022-11-10 vvv
+#: last_checked: 2023-01-15 vvv
 #: next_check: 2023-01-31 vvv
 #: valid: -20230131 vvv
 Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317
@@ -74,7 +74,7 @@ Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245
 # 
 #: source_id: viz2021:13.406514,52.51352,16.03.2021,08:00 (bis Ende 2022) (bis Ende 2023)
 #: note: Ampel ist eigentlich südöstlich der Einmündung gelegen
-#: last_checked: 2022-12-27 (mapillary)
+#: last_checked: 2023-01-19
 #: check_frequency: 30d
 #: next_check: 2023-12-31
 Fischerinsel	F::inwork 10578,11969
@@ -92,7 +92,7 @@ Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
 #: note: manchmal ausgeschaltet? (gesehen: So 2021-11-28 12:00) (scheint sehr selten zu sein, nicht wieder beobachtet)
-#: last_checked: 2023-01-04 vvv
+#: last_checked: 2023-01-17 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 #: check_frequency ^^^
@@ -111,7 +111,7 @@ Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2022-12-28
+#: last_checked: 2023-01-15
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -119,7 +119,7 @@ Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # REMOVED --- #: source_id: viz2021:13.374553,52.583469,04.08.2021,08:00 (bis 02.02.2022) (mittlerweile bis 7.3.2022) (mittlerweile bis 30.4.2022) (mittlerweile bis 31.7.2022) (bis 1.8.2022) (inaktiv) --- #: source_id: viz2021:13.3751,52.58195,02.08.2022,11:32 (bis 3.8.2022) --- #: note laut rbb bis 9.2.2022 --- #: last_checked: 2022-03-19 (mapillary) vvv --- #: next_check: 2022-08-03 vvv --- #: valid: -20220803 vvv --- Germanenstr.: Gegenverkehrsregelung	X::inwork 8227,19725 --- Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558 --- #: valid ^^^ --- #: next_check ^^^ --- #: last_checked ^^^
 # 
 #: source_id: viz2021:13.374712,52.584761,03.08.2022,12:00 (bis 31.3.2023) vvv
-#: last_checked: 2022-09-30 (mapillary) vvv
+#: last_checked: 2023-01-15 (mapillary) vvv
 #: next_check: 2023-03-31 vvv
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8227,19725
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8234,19936
@@ -129,11 +129,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 #: last_checked ^^^
 #: source_id ^^^
 # 
-#: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2023-01-05
-#: next_check: 2024-06-01
-Grunerstr./Jüdenstr.	X::inwork 10804,12461
-# 
+# REMOVED --- #: next_check_id: MOLKENMARKT-2021 --- #: last_checked: 2023-01-05 --- #: next_check: 2024-06-01 --- Grunerstr./Jüdenstr.	X::inwork 10807,12451
 # REMOVED --- #: next_check_id: BERLINERALLEE-2021 --- #: next_check_id: BERLINERALLEE-2022 --- #: XXX evtl. bis zum Ende der jetzigen Bauphase, oder bis zum Ende der Gesamtbaumaßname? --- #: last_checked: 2022-06-10 --- #: next_check: 2022-07-25 --- #: valid: -20220725 --- Indira-Gandhi-Str./Bizetstr.	X::inwork 14552,16171
 # REMOVED --- #: next_check_id: GAERTNER-2021 --- #: last_checked: 2021-09-02 --- # REMOVED (nicht mehr) --- Grünberger Str.: Gegenverkehrsregelung	X::inwork 14272,11775 --- Grünberger Str.	F::inwork 14272,11775
 # REMOVED --- #: XXX Hauffstraße (Rummelsburg) in beiden Richtungen zwischen Wiesenweg und Schreiberhauer Straße: Arbeiten an Gasleitung, für beide Richtungen nur ein gemeinsamer Fahrstreifen abwechselnd frei, eine Baustellenampel regelt den Verkehr, vom 06.07.2021 08:00 bis 23.07.2021 17:00 --- #: note: Ampeln in der Hauffstr. sowie in der Schulze-Boysen-Str. an der Buchberger Str.; außerdem ist die Anbindung Pfarrstr. offiziell gesperrt --- #: source_id: viz2021:13.478302,52.506695,06.07.2021,08:00 (mittlerweile bis 3.9.2021) vvv --- #: last_checked: 2021-08-09 vvv --- #: valid: -20210903 vvv --- Hauffstr.: Gegenverkehrsregelung	X::inwork 15458,11306 --- Schulze-Boysen-Str.: Gegenverkehrsregelung	X::inwork 15477,11338 --- #: valid ^^^ --- #: last_checked ^^^ --- #: source_id ^^^
@@ -175,13 +171,7 @@ Grunerstr./Jüdenstr.	X::inwork 10804,12461
 # REMOVED --- #: by: https://www.berliner-woche.de/heiligensee/c-verkehr/anregungen-der-eltern-endlich-verwirklicht_a207979 --- #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1194601.php (Bauarbeiten für den Kreisverkehr) --- #: by: https://berliner-abendblatt.de/2022/04/08/umbau-fuer-kreisverkehr-kreuzung-wird-voll-gesperrt/ --- #: by: https://www.berliner-woche.de/heiligensee/c-verkehr/kreuzungsbereich-wegen-asphaltarbeiten-gesperrt_a342023 --- #: XXX später wird hier ein Kreisverkehr entstehen --- #: last_checked: 2021-09-04 --- #: check_frequency: 180d --- #: next_check: 2022-11-15 ---	X::inwork -2508,22627
 # 
 # REMOVED --- #: next_check_id: TRESKOWALLEE-2019
-#: next_check_id: TRESKOWALLEE-2022
-#: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8851 (2. Halbjahr 2022)
-#: by: https://www.bahninfo-forum.de/read.php?9,721782,727530#msg-727530 (Gleisarbeiten 01.08-10.12.2022)
-#: by: https://www.bahninfo-forum.de/read.php?9,727655,737635#msg-737635 (Baubeginn 1.8.2022, Inbetriebnahme zum Jahresende 2022)
-#: XXX Ampel wird wohl permanent gemacht
-#: last_checked: 2022-12-13
-	X::inwork 18406,7760
+# REMOVED (keine Baustellenampel mehr) --- #: next_check_id: TRESKOWALLEE-2022 --- #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8851 (2. Halbjahr 2022) --- #: by: https://www.bahninfo-forum.de/read.php?9,721782,727530#msg-727530 (Gleisarbeiten 01.08-10.12.2022) --- #: by: https://www.bahninfo-forum.de/read.php?9,727655,737635#msg-737635 (Baubeginn 1.8.2022, Inbetriebnahme zum Jahresende 2022) --- #: XXX Ampel wird wohl permanent gemacht --- #: last_checked: 2023-01-10 ---	X::inwork 18406,7760
 # 
 #: next_check_id: FRANZOESISCHE-2018
 #: next_check: 2023-02-27 vvv
@@ -250,7 +240,7 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linke
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fußgängerampel nordöstlich der Einmündung; Anforderungsampel
-#: last_checked: 2022-12-18
+#: last_checked: 2023-01-11
 #: check_frequency: 90d
 #: next_check: 2025-01-01
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
@@ -610,7 +600,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9358,12351
 	X 10213,11728
 	X 10512,12039
-	X 10738,12364
+	X 10685,12422
+	X 10697,12303
 	X 11347,12223
 #: note: eventuell im gleichen Zyklus wie die benachbarte Ampel?
 	F 11388,12202
@@ -620,7 +611,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 10515,12780
 	X 10601,12521
 #: related vvv
-	X 11134,12793
+	X 11141,12806
 	F 11105,12764
 #: related ^^^
 #: note: gilt nicht für rechtsabbiegende Radfahrer aus der Alexanderstr. in die Karl-Marx-Allee
@@ -854,7 +845,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: off: night (seen 2015-06-25, 2022-04-29 23:40)
 	F 10689,10491
 	F 7631,9770
-	X 15117,12106
+	X 15110,12107
 	X 14208,12235
 	X 12382,13097
 	X 12126,13088
@@ -1048,7 +1039,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4485,10307
 	X 4478,10218
 	X 9581,12588
-	X 10946,12241
+	X 10951,12249
 #: off: night (seen 2018-02-01 00:20, 2022-06-30 23:15)
 	X 12295,12197
 #: off: night (seen 2015-01-29 00:45, 2018-02-01 00:20, 2022-04-29 23:55, 2022-06-30 23:15)
@@ -1198,7 +1189,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5240 (Prüfung für einen Umbau)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036154063735/154063735/00111219/19-Anlagen/05/B1138ZB2.pdf
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7226 (Antrag)
-#: last_checked: 2022-08-11
+#: last_checked: 2023-01-15
 #: check_frequency: 180d
 	X 18080,5376
 	X 19904,3464
@@ -2410,7 +2401,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 # 
 #: next_check_id: FRIEDRICH-2020
 # REMOVED --- #: note: vorhandene Ampel ist dauerhaft abgeschaltet
-#: last_checked: 2022-12-23
+#: last_checked: 2023-01-18
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 # REMOVED --- #: valid: !20200821-20211031
@@ -2782,7 +2773,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
 	F 10846,17121
 #: XXX_prog Richtung Norden für Radfahrer nicht sehr relevant, nur Fußgängerampel
 #: note: Anforderungsampel (Fußgänger)
-Parkhausausfahrt auf der westlichen Seite	X 11252,12644
+Parkhausausfahrt auf der westlichen Seite	X 11256,12647
 #: by: Message-ID: <f7gpgb$22l$1@mobile.in-berlin.de>
 	F 1442,12480
 	F 1669,12413
@@ -3126,8 +3117,9 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 16606,25141
 #: note: Anforderungsampeln beim Überqueren des Groß-Berliner Damms (sowohl Geradeausfahrer als auch Linksabbieger)
 	X 17879,4910
-#: note: Richtung Südosten nur mit Gelb-Rot-Signalisierung, bereits an der Pietschkerstr.
 	X 17775,5083
+#: note: nur Richtung Südosten, im Zuge des Groß-Berliner Damms mit Gelb-Rot-Signalisierung; Anforderung für Radfahrer aus der Pietschkerstr.
+	X 17763,5104
 	F 718,2735
 	F 13999,2727
 	B0 17953,15221
@@ -3179,7 +3171,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2023-01-05 vvv
+#: last_checked: 2023-01-18 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3201,7 +3193,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) ---
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2022-11-19
+#: last_checked: 2023-01-15 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2023-04-30
 	X::inwork 8732,14098
@@ -3357,12 +3349,12 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 #: valid: 20140224-20211231 vvv
-#: last_checked: 2022-12-22
+#: last_checked: 2023-01-17
 #: check_frequency: 90d
 #: next_check: 2023-06-30 vvv
 	X::inwork 13265,6972
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2023-01-04
+#: last_checked: 2023-01-17
 #: check_frequency: 90d
 	X::inwork 13627,7047
 # REMOVED --- #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren ---	X0::inwork 14011,7103
@@ -3487,6 +3479,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: Anforderung quer zur Rennbahnstr.
 #: XXX_prog gilt nicht für Radfahrer auf dem Radweg in Richtung Nordwesten
 	X 13708,17453
+#: note: Anforderung für linksabbiegende Radfahrer (Rummelsburger Str. -> Minna-Todenhagen-Str.)
 	X 17681,7589
 	X 17211,7280
 #: note: gilt nicht auf dem Radweg in Fahrtrichtung NW->SO
@@ -3534,7 +3527,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: CHAUSSEE-2020
 #: osm_watch: node id="26748289" version="9"
-#: last_checked: 2022-12-17
+#: last_checked: 2023-01-07 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2023-04-30
 	X::inwork 8336,14586
@@ -3648,14 +3641,14 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296478" version="2"
 #: note: Anforderungsampel
-#: last_checked: 2023-01-01 (krickstadt)
-#: check_frequency: 90d
+#: last_checked: 2023-01-14
+#: check_frequency: 120d
 	F::inwork 17695,5394
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296482" version="14"
 #: note: Anforderungsampel
-#: last_checked: 2023-01-01 (krickstadt)
-#: check_frequency: 90d
+#: last_checked: 2023-01-14
+#: check_frequency: 120d
 	F::inwork 17747,5452
 # 
 #: note: die Relation Wilhelm-Hoff-Str. ist nicht direkt signalisiert
@@ -3671,6 +3664,12 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: mapillary
 #: note: Anforderungsampel
 	F 31967,3238
+#: next_check_id: MOLKENMARKT-2021
+#: XXX zurzeit erstreckt sich die Ampelanlage bis zur Einmündung der alten Grunerstr.; nach den Bauarbeiten bleibt vermutlich nur eine Fußgängerampel
+#: note: gilt nicht für Radfahrer Richtung Südwesten
+#: last_checked: 2023-01-16
+#: check_frequency: 90d
+	X 10873,12577
 ################################################################################
 #: note: Potsdam vvv
 	X -17127,-554
@@ -4437,9 +4436,8 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 #: last_checked: 2022-06-11 (mapillary)
 #: check_frequency: 90d
 	F0 18517,-4502
-#: XXX hier existieren nur Masten
 #: osm_watch: node id="1736933178" version="6"
-#: last_checked: 2022-06-11 (mapillary)
+#: last_checked: 2023-01-09 (mapillary)
 #: check_frequency: 360d
 	X0 19131,-2145
 #: XXX ^^^

@@ -447,7 +447,7 @@ Bus 246	busroute_N 6439,6716 6517,6722 6546,6724 6675,6740
 Bus 246	busroute_N 5314,7217 5310,7325 5318,7424 5352,7428
 Bus 166	busroute_N 15560,7400 15693,7512 15763,7569 15920,7697
 Bus 170, Bus 265	busroute_N 16428,7144 16507,7254
-# REMOVED (NH!) --- Bus 265	busroute_N 16507,7254 16406,7430 16136,7886 16003,8119 15869,8355 15714,8633 15591,8848
+# REMOVED (NH!) --- Bus 265	busroute_N 16507,7254 16406,7430 16144,7882 16003,8119 15869,8355 15714,8633 15591,8848
 Bus 170	busroute_N 16507,7254 16633,7434 16673,7511
 Bus 166, ...	busroute_N 15303,8343 15242,8263 15256,8247 15284,8214 15357,8286
 Bus 171	busroute_N 13863,8597 13687,8734 13510,8872 13333,9017 13264,9073 13188,9134 13098,9205 13044,9248 12977,9301 12913,9353 12897,9365
@@ -601,7 +601,7 @@ Bus 164	busroute_N 20166,3344 20113,3408 20089,3438 20066,3466 20012,3532
 Bus 164	busroute_N 22383,4470 22372,4496 22358,4521 22324,4586 22314,4604 22284,4653 22246,4711 22240,4768 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562 22093,4499
 Bus 164	busroute_N 22196,4847 22154,4923 22133,4986 22128,5003 22101,5064 22023,5160 21974,5208 21954,5229
 Bus X69	busroute_N 22467,6135 22365,6149 22325,6385 22305,6404 22192,6659 22186,6672 22075,6967
-Bus X69	busroute_N 22325,6385 22539,6258
+Bus X69	busroute_N 22325,6385 22534,6249
 Bus 167, ...	busroute_N 23435,4179 23453,4181 23658,4208 23753,4218 23879,4233 24135,4264 24181,4270
 Bus 190	busroute_N 21019,7340 21050,7341 21153,7393 21341,7487 21475,7500
 Bus 190	busroute_N 21175,9989 20947,9999 20703,10004 20706,10047 20708,10144 20711,10230 20713,10293 20716,10434 21017,10423 21281,10428
@@ -742,7 +742,7 @@ Ausgeschildert als Blütenberger Weg	CP2; 36914,54197 34819,54697
 # An der Kreuzung Bundesallee/Durlacher Str. die Straßenseite wechseln und zurück fahren	CP; 5449,8402 5421,8337 5439,8408
 # #: XXX_prog ^^^
 (Lauterberger Str. - Andreasberger Str.): Privatstraße	CS 12053,6042 12154,6063
-ausgeschildert "zum Sportplatz"	CP2; 16136,7886 16534,8182
+ausgeschildert "zum Sportplatz"	CP2; 16144,7882 16534,8182
 ausgeschildert "zu den Häusern Gubitzstr. 18 - 20a"	CP2; 12463,15774 12642,15668
 ausgeschildert "zu den Häusern Hosemannstr. 50 - 39"	CP2; 12642,15668 12463,15774
 Philosophenweg: Privatstraße	CS 16073,12883 16074,12778
@@ -827,7 +827,7 @@ Bordsteine beim Überqueren der Wuhletalstr.	CS 20801,17821 20728,17670 20657,175
 #: XXX Realisierung einer Querung geplant
 #: note: Der osm_watch-Way enthält zurzeit wheelchair=limited
 #: osm_watch: way id="523802314" version="2"
-#: last_checked: 2022-08-28
+#: last_checked: 2023-01-19
 #: check_frequency: 120d
 Bordsteine beim Überqueren der Grunewaldstr.	CP; 6851,9365 6917,9274 7001,9291
 Quastenhornweg: Privatstraße	CS -7595,4374 -7557,4340 -7473,4306 -7413,4304
@@ -1349,7 +1349,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2022-12-28
+#: last_checked: 2023-01-17
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1696,7 +1696,11 @@ Kleiner Parkweg: nicht ausgeschildert	CS 20775,11801 20790,11990
 # 
 Volkerweg: nicht ausgeschildert	CS 16005,4012 16046,4073 16060,4093 16145,4217 16151,4226
 # 
-# REMOVED --- #: next_check_id: WASSERSTADTSPINDLERSFELD-2019 --- #: last_checked: 2022-11-12 --- #: check_frequency: 60d --- Eiselenweg - Uferweg: Einfahrt zum Uferweg ist etwas versteckt, vor dem Neubaugebiet links abbiegen	CP; 21364,5430 21442,5414 21476,5434
+#: next_check_id: WASSERSTADTSPINDLERSFELD-2019
+#: last_checked: 2023-01-15
+#: check_frequency: 60d
+Carl-Spindler-Str. - Uferweg: in Höhe Blütenweißweg zwischen den Neubauten links abbiegen	CP; 21474,5388 21483,5374 21518,5389
+# REMOVED --- Eiselenweg - Uferweg: Einfahrt zum Uferweg ist etwas versteckt, vor dem Neubaugebiet links abbiegen	CP; 21364,5430 21442,5414 21476,5434
 # 
 Büxensteinallee: diagonal über die Straßenbahngleise, erst dahinter ist ausgeschildert	CP2; 22162,1067 22228,1071
 # 
@@ -1706,7 +1710,7 @@ Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9724 (Anfrage)
-#: last_checked: 2022-12-28 vvv
+#: last_checked: 2023-01-13 vvv
 Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17794,8429 17738,8450
 # REMOVED --- Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17738,8450 17682,8464 17608,8483
 # REMOVED --- Irmtraud-Morgner-Str.: noch nicht ausgeschildert	CS 17524,8536 17627,8556 17755,8519
@@ -1775,4 +1779,9 @@ Bleckmannweg: nicht ausgeschildert	CP2; 15886,12190 15756,12212
 Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 # 
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
+# 
+#: next_check_id: MOLKENMARKT-2021
+#: last_checked: 2023-01-18
+#: check_frequency: 90d
+Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
 # 

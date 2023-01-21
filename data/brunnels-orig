@@ -36,7 +36,7 @@ Spreetunnel	Tu 25571,4553 25658,4619
 Grünauer Brücke	Br 22050,2736 22058,2700 22074,2656
 #: alias: Galgen
 Kaulsdorfer Brücke	Br 22688,12007 22684,12016 22669,12049 22693,12084
-Blockdammbrücke	Br 17972,8968 17990,8963 18070,9022
+Blockdammbrücke	Br 17990,8963 18070,9022
 Grabensprung, U-Bahnbrücke	Br 20622,10874 20641,10840
 Fußgängerbrücke Rebenweg - Erxlebenstr.	Br 19746,-92 19762,-160
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/08re.pdf/file?y=2012 (Alias)
@@ -307,8 +307,8 @@ Eugen-Kleine-Brücke	Br 3698,1450 3766,1389
 #: by: https://www.berliner-zeitung.de/mensch-metropole/marggraffbruecke-in-berlin-wird-eine-weitere-bruecke-abgerissen-li.207787
 #: XXX möglicherweise Neubau ab 2022 --- mittlerweile ab 2023?
 #: also_indoor: search Bäkebrücke
-#: last_checked: 2022-10-15
-#: check_frequency: 90d
+#: last_checked: 2023-01-12 (research)
+# REMOVED --- #: check_frequency: 90d
 # REMOVED --- #: next_check: 2023-01-01
 Bäkebrücke	Br 4587,3097 4659,3065
 Krahmersteg	Br 4800,3391 4866,3371

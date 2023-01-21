@@ -109,9 +109,9 @@ Almstadtstr.	1 10797,13575 10767,13443 10757,13401 10699,13173
 Schendelgasse	1 10644,13497 10703,13467 10767,13443
 Mulackstr.	1 10313,13568 10406,13543 10535,13509 10633,13474
 Karl-Liebknecht-Str.: Straßenbahntrasse	3nocross 10976,13229 11012,13278 11070,13357
-Parochialstr.	1 10957,12401 11040,12415
-Waisenstr.	1 11040,12415 11032,12439 11059,12450
-Waisenstr.	1 11040,12415 11049,12386 11094,12243
+Parochialstr.	1 10957,12401 11040,12420
+Waisenstr.	1 11040,12420 11033,12439 11065,12452
+Waisenstr.	1 11040,12420 11053,12387 11094,12243
 # nicht mehr: Jacobystr.	1 11207,12706 11260,12809 11594,12662
 Sonnenallee - Tellstr.	3 12240,8964 12323,8917 12406,9076
 Tellstr. - Sonnenallee	3 12406,9076 12323,8917 12429,8856
@@ -181,7 +181,7 @@ Gustav-Freytag-Str. (Grunewald)	1 834,8273 815,8283 748,8456 765,8481
 Schumannstr.	1 8701,13058 8957,13134
 Albrechtstr. (Mitte)	1 8957,13134 8997,13037 9042,12931 9102,12790
 Charitéstr.	1 8693,12951 8676,12976 8632,13037
-Spandauer Str. (Mitte)	3nocross 10738,12364 10673,12434 10644,12469 10601,12521
+Spandauer Str. (Mitte)	3nocross 10710,12377 10685,12422 10644,12469 10601,12521
 Siegfriedstr.	1 12342,6936 12479,6969 12664,7013 12810,7047
 Onkel-Herse-Str.	1 13680,4715 13757,4729 13836,4759 13853,4759
 Paulstr.	3nocross 7051,12426 7077,12575 7085,12610
@@ -304,7 +304,7 @@ Gregor-Mendel-Str. (Potsdam)	1 -13596,-508 -13415,-506 -13257,-512 -13182,-515
 Donaustr.	1 12150,8884 12198,8887
 Altstadt Köpenick: nur für Busse frei	2 22388,4737 22390,4702
 #: note: Luftbild
-Köpenicker Landstr.: Mittelstreifen	3nocross 16428,7144 16353,7226 16259,7328 16195,7398 15920,7697
+Köpenicker Landstr.: Mittelstreifen	3nocross 16428,7144 16377,7200 16353,7226 16259,7328 16195,7398 15920,7697
 #: note: Luftbild
 Buschallee: Straßenbahntrasse	3nocross 14809,16525 15134,16499 15142,16499
 Alt Mahlsdorf: Mittelstreifen	3nocross 24801,11261 24893,11252 25138,11215
@@ -419,7 +419,7 @@ Rosenthaler Weg: Straßenbahntrasse	3nocross 11279,22316 11383,22369 11484,22406 
 Delbrückstr.	1 12743,6645 12470,6586
 Emser Str.	1 13051,7157 12872,7134
 Stuthirtenweg: Gitter	3 * 13542,1268 *
-Grunerstr.: Mittelstreifen	3nocross 10738,12364 10804,12461 10887,12570 10954,12635
+# REMOVED --- Grunerstr.: Mittelstreifen	3nocross 10697,12303 10746,12364 10804,12461 10838,12496 10849,12557 10954,12635
 Bayernring	1 8616,8605 8454,8574 8380,8545
 Georg-Hermann-Allee (Potsdam): (teilweise) Einbahnstraße	1 -13429,1069 -13424,1290 -13422,1383 -13420,1478 -13418,1576 -13418,1668
 Ruhlebener Str.: Mittelstreifen	3nocross -3002,13442 -2977,13424 -2967,13417 -2937,13399 -2725,13287
@@ -859,7 +859,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="16"
-#: last_checked: 2022-12-18
+#: last_checked: 2023-01-19
 #: check_frequency: 60d
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
@@ -1468,7 +1468,7 @@ Dolziger Str.	2:Anlieger 14405,12738 14436,12731 14628,12682 14814,12626 14935,1
 Voigtstr.	2:Anlieger 14709,12156 14748,12314 14776,12418
 Voigtstr.	2:Anlieger 14776,12418 14798,12502 14801,12517 14814,12626 14832,12755 14835,12801
 Pettenkoferstr.	2:Anlieger 14836,12826 14858,12765 14935,12596 14996,12462
-Pettenkoferstr	2:Anlieger 15005,12443 15046,12355 15058,12329 15104,12216 15117,12106
+Pettenkoferstr	2:Anlieger 15005,12443 15046,12355 15058,12329 15104,12216 15110,12107
 Rigaer Str.	2:Anlieger 13761,12578 13991,12522 14091,12494 14133,12482 14266,12446 14451,12396 14538,12371 14748,12314 15003,12241 15104,12216 15175,12180
 Silvio-Meier-Str.	2:Anlieger 14381,12207 14451,12396
 Waldeyerstr	2:Anlieger 14926,12129 15003,12241
@@ -1620,9 +1620,10 @@ Alt-Lankwitz	2:Anlieger 7407,3473 7419,3500 7236,3605 7012,3743
 #: next_check_id: ABBESTR-2021
 #: by: https://www.deutsches-architekturforum.de/thread/9593-city-west-kleinere-projekte/?postID=697425#post697425 (sieht weitgehend fertig aus)
 #: by: https://www.deutsches-architekturforum.de/thread/14781-physikalisch-technische-bundesanstalt-campus-um-und-neubauten/?postID=724237#post724237
-#: osm_watch: way id="152832871" version="20"
+#: osm_watch: way id="152832871" version="22"
+#: osm_watch: way id="1132383957" version="1"
 #: priority: #C
-#: last_checked: 2022-10-25 (osm)
+#: last_checked: 2023-01-17 (mapillary)
 #: check_frequency: 120d
 Abbestr.	2 4674,12076 4698,12124
 # 
@@ -1670,4 +1671,33 @@ Jägerstr./Gutenbergstr. (Potsdam)	3 -13158,-930 -13025,-901 -12886,-869
 Jägerstr./Gutenbergstr. (Potsdam)	3 -12886,-869 -13025,-901 -13158,-930
 # 
 Schmidstr.: nur Lieferverkehr	2 11480,11526 11281,11612
+# 
+#: by: https://nitter.cz/SenUMVKBerlin/status/1613113627392806913#m
+Krumme Str.: Poller	3 * 3983,11289 *
+# 
+Kaulsdorfer Str.	1 22534,6249 22325,6385
+# 
+Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,6431
+# 
+#: next_check_id: MOLKENMARKT-2021
+#: by: https://viz.berlin.de/2021/08/umbau-molkenmarkt/ (Umstellung ab 1.9.2021)
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1120689.php (Fertigstellung: Mitte 2024)
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/ein-jahr-lang-bauarbeiten_a320747
+#: by: https://abendblatt-berlin.de/2021/08/31/berlin-mitte-an-der-stralauer-strasse-droht-dauerstau/
+#: by: https://molkenmarkt.berlin.de/webcam/ (Webcam)
+#: source_id: viz2021:13.409118,52.51693,01.09.2021,06:00 (bis Ende 2022, Gesamtbaumaßnahme bis 2023) (bis 30.6.2023) (bis 15.1.2023) (inaktiv)
+#: source_id: viz2021:13.409109,52.516928,14.01.2023,06:00 (bis 15.01.2023) (inaktiv)
+#: source_id: viz2021:13.409315,52.517356,20.02.2020,08:00 (bis 31.12.2022) (bis 30.06.2023)
+#: source_id: viz2021:13.409118,52.51693,15.01.2023,18:00 (bis 30.06.2023)
+#: note: laut rbb nur bis 31.08.2022
+# REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
+#: last_checked: 2023-01-18 vvv
+#: next_check: 2024-06-01 vvv
+Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
+# REMOVED --- (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285
+#: next_check ^^^
+#: last_checked ^^^
+# 
+Gustav-Böß-Str./Grunerstr./Jüdenstr.	3nocross 10685,12422 10783,12502 10849,12557
+Grunerstr./Klosterstr.	3nocross 10849,12557 10873,12577 10950,12640
 # 
