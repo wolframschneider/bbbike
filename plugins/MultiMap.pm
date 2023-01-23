@@ -20,7 +20,7 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.87;
+$VERSION = 1.89;
 
 use vars qw(%images);
 
@@ -155,6 +155,12 @@ sub register {
 	  callback_3_std => sub { showmap_url_bing_street(@_) },
 	  ($images{Bing} ? (icon => $images{Bing}) : ()),
 	};
+    $main::info_plugins{__PACKAGE__ . "_Waze"} =
+	{ name => "Waze",
+	  callback => sub { showmap_waze(@_) },
+	  callback_3_std => sub { showmap_url_waze(@_) },
+	  ($images{Waze} ? (icon => $images{Waze}) : ()),
+	};
     if ($is_berlin) {
 	$main::info_plugins{__PACKAGE__ . "_FIS_Broker_1_5000"} =
 	    { name => "FIS-Broker (1:5000)",
@@ -189,6 +195,15 @@ sub register {
 	       : (callback => sub { main::perlmod_install_advice("Geo::Proj4") })
 	      ),
 	      ($images{VIZ} ? (icon => $images{VIZ}) : ()),
+	    };
+	$main::info_plugins{__PACKAGE__ . '_BerlinRadverkehr'} =
+	    { name => 'Radverkehrsnetz Berlin',
+	      (module_exists('Geo::Proj4')
+	       ? (callback => sub { showmap_gdi_berlin(layers => 'radverkehrsnetz', @_) },
+		  callback_3_std => sub { showmap_url_gdi_berlin(layers => 'radverkehrsnetz', @_) })
+	       : (callback => sub { main::perlmod_install_advice("Geo::Proj4") })
+	      ),
+	      ($images{Berlin} ? (icon => $images{Berlin}) : ()),
 	    };
     }
     $main::info_plugins{__PACKAGE__ . "_BKG"} =
@@ -464,6 +479,27 @@ hyMhADs=
 EOF
     }
 
+    if (!defined $images{Waze}) {
+	# Created with:
+	#   wget 'https://www.waze.com/livemap/assets/wazer-b704da66a0980396d93be87ea64c4e2b.svg'
+	#   convert -resize 16x16 wazer-b704da66a0980396d93be87ea64c4e2b.svg png:- | base64
+	$images{Waze} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ
+cwAADdcAAA3XAUIom3gAAAAHdElNRQfnARQULy+HbGZ6AAABEklEQVQY0y3BTyhDcQAH8O97vzfl
+1WPtwEEu/qwczZKji+IkFynpHXByINGkSHJxI+WwdnCh1pODJLUNBwdZnDis1bKVzMrzk83M3ntf
+F5+PQgC/KetVeGp4qhNQCMjd/GioyX1J3JnDCsjK8rokSfJ+/JwgD+a/+S89kVNhJ2caUcp4wHMh
+3Huk4snfA0SnJeqRDQylNeTbBTDWZ0Cb86HN1VDVAXR1+KAMuBCqinIDgIetMpz9U3y6wn872QoE
+bqxc/M00ku8IWSTJ6lX0TNI2E4jNFimLDkmysrZZF8eFw4/VvZ9+AS+zjSVdoXOxmEVgoeXrMRU8
+aYYGbSSeBVDasTFoACB5HdRXarWI3n1J8g/njYW7wvgGUAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAy
+My0wMS0yMFQyMDo0Nzo0NyswMTowMHwAIGoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDEtMjBU
+MjA6NDc6NDcrMDE6MDANXZjWAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAA
+AABJRU5ErkJggg==
+EOF
+    }
+
     if (!defined $images{DAF}) {
 	# Created with:
 	#   convert http://www.deutsches-architektur-forum.de/forum/favicon.ico png:- | base64
@@ -725,6 +761,35 @@ bGo2aLG2bm1rD+7o7OruYQA5xsbTsze7r0S3f8LESQxA2yZPmTpt+oyZs2bPmTtvPlhggfjC
 RYuXOC5dtnzFSpDAqtVr1q5b77Bh46bNW7YCAKJlS6V7R7bEAAAAJXRFWHRkYXRlOmNyZWF0
 ZQAyMDEzLTAyLTE5VDIxOjQyOjUxKzAxOjAws5ftwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAx
 Mi0wOC0xNFQxNjoyODo1MCswMjowMOv6tcMAAAAASUVORK5CYII=
+EOF
+    }
+
+    if (!defined $images{Berlin}) {
+	# Created with:
+	#   wget https://gdi.berlin.de/viewer/_shared/resources/img/favicon.ico
+	#   convert -resize 16x16 favicon.ico png:- | base64
+	$images{Berlin} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACH1BMVEUBAQEODg4PDQ0PGRgR
+JiMRJCERJCIRJCIRJCEQIB4PEhIODAwODw8PDw8NDQ0NDQ3d29zz/PvnsrnfaXnhdIPhd4Xhd4Xh
+d4Xkjprs3N7v+fft6+vy8vLe3t4ODg7t6en////yf4nlAAHnBRfkAAPkAAHlAQnnABrsIT37xMz/
+///u7u4ODg7s6OnwgpHhABLlEy/wfYzyipjtWm7kBiThABTmJTr88vTt7Ozt6erxgpDhAA3mFjL+
+8fPtWW3jABfkBiP4wMjt6+vxgZDhAA3mFjL98fP//v7xfIziABHkByP4w8nt6+zxgZDhAA3mFTH8
+5Of++fr5yM7oJT/iABPoLkX99/ju7e3xgZDiABDlCSflDSrlDivkBSHjABzmEi/6zNLu7u7lCSfl
+DSrlDivlDCnjARzkAyDygpH////u7e3mFTH85Of+9vf96u3wbH7jABnjARr4wcnt6+vmFjL98fP9
+6u3mFDDiABHxiJbt6erxgpD+8vP5w8rlCSfiABTyjpvt6ers6OnwgpHhABLlEy/wfYzxiJbweYnm
+IDviABfjCiL50dft6+vt6enyf4nlAAHnBRfkAAPkAAHlAQTnABbqDCv5nanu7u7d29zz/Pvnsrnf
+aXnhdIPhd4Xhd4Xhd4XjhpPqyc7v+fft7Ozy8vLe3t4ODg4PDQ0PGRgRJiMRJCERJCIRJCIRJCEQ
+IR8PFhUODAwODg4PDw8NDQ1k3tIxAAAAAWJLR0Qgs2s9gAAAAAd0SU1FB+YIChICB+D0eaUAAAEA
+SURBVBjTY2BgZGJmYWVj5+Dk4ubh5WNg4BcQFBIWERUTl5CUkpaR5WeQk1dQVFJWUVVT19DUUtCW
+Y9DRVdDTNzA0MjYxNTNXsNBhkLNUsLK2sVVQsLN3cFRwkgMJOLu4urkreHh6eSv4gAV8/fwDAoOC
+Q0LDFMLBAhGRUdExsXHxCQoKiVCBpOSU1LT0jEyFLKiW7JzcvPyCwiKFYqihJaUKCmXlFZUKVWCB
+amubGgWF2rr6BoVGoMOaFJpbWtvaOzq7unsUeoEO61PonzBx0uQpU6dNV1CYIcfAP3PW7Dlz581f
+sHDR4iVLl/EzMCxfsXLV6jVr163fsHHT5i0MABrnSmdAqo40AAAAJXRFWHRkYXRlOmNyZWF0ZQAy
+MDIzLTAxLTIwVDIxOjAzOjUyKzAxOjAwhjYFLgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wOC0x
+MFQxODowMjowNyswMjowMHHB1SsAAAAASUVORK5CYII=
 EOF
     }
 
@@ -1175,7 +1240,7 @@ sub showmap_url_bikemapnet {
     my $py = $args{py};
     my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
     $scale = 17 if $scale > 17;
-    sprintf "https://www.bikemap.net/en/search/?zoom=%d&center=%s%2C%s",
+    sprintf "https://www.bikemap.net/en/search/?zoom=%d&center=%s%%2C%s",
 	$scale, $py, $px;
 
 }
@@ -1238,6 +1303,22 @@ sub showmap_url_bing_street {
 sub showmap_bing_street {
     my(%args) = @_;
     my $url = showmap_url_bing_street(%args);
+    start_browser($url);
+}
+
+######################################################################
+# Waze
+
+sub showmap_url_waze {
+    my(%args) = @_;
+    my $px = $args{px};
+    my $py = $args{py};
+    sprintf 'https://www.waze.com/en/live-map/directions?to=ll.%s%%2C%s', $py, $px;
+}
+
+sub showmap_waze {
+    my(%args) = @_;
+    my $url = showmap_url_waze(%args);
     start_browser($url);
 }
 
@@ -1600,6 +1681,37 @@ sub showmap_url_viz {
 sub showmap_viz {
     my(%args) = @_;
     my $url = showmap_url_viz(%args);
+    start_browser($url);
+}
+
+######################################################################
+# gdi.berlin.de (z.B. Radverkehrsnetz Berlin)
+
+sub showmap_url_gdi_berlin {
+    my(%args) = @_;
+
+    my $layerids = {
+        radverkehrsnetz => 'k_alkis_land:1,webatlas_wms_grau,radverkehrsnetz:0,radverkehrsnetz:2,radverkehrsnetz:1',
+    }->{$args{layers}};
+    if (!$layerids) {
+	main::status_message('error', 'no layers found or invalid layers');
+	return;
+    }
+    my $number_layerids = scalar split /,/, $layerids;
+    my $visibility = join ',', ("true") x $number_layerids;
+    my $transparency = join ',', ("0") x $number_layerids;
+
+    require Geo::Proj4;
+    my $proj4 = Geo::Proj4->new("+proj=utm +zone=33 +ellps=intl +units=m +no_defs") # see http://www.spatialreference.org/ref/epsg/2078/
+	or die Geo::Proj4->error;
+    my($x,$y) = $proj4->forward($args{py}, $args{px});
+    my $scale = 5; # XXX hardcoded for now
+    sprintf 'https://gdi.berlin.de/viewer/radverkehrsnetz/?Map/layerIds=%s&visibility=%s&transparency=%s&Map/center=[%s,%s]&Map/zoomLevel=%d', $layerids, $visibility, $transparency, $x, $y, $scale;
+}
+
+sub showmap_gdi_berlin {
+    my(%args) = @_;
+    my $url = showmap_url_gdi_berlin(%args);
     start_browser($url);
 }
 
