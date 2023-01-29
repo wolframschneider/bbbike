@@ -113,15 +113,15 @@ Jüterboger Str.	N 9799,8962 9951,8965 10266,8946
 Golßener Str.	N 10209,8661 10269,8770 10291,8810
 Golßener Str.	N 10269,8770 10268,8810 10266,8946
 Heimstr.	N 9951,8965 9958,9050 9966,9151 9973,9232
-Willibald-Alexis-Str.	N 9477,9113 9526,9104 9596,9092 9669,9080 9797,9063 9958,9050
+Willibald-Alexis-Str.	N 9477,9113 9540,9102 9589,9093 9600,9091 9669,9080 9797,9063 9958,9050
 Schenkendorfstr.	N 9674,9179 9689,9266
 Am Tempelhofer Berg	N 9295,9047 9298,9112 9304,9241 9309,9347
 Kopischstr.	N 9459,9019 9477,9113
-Arndtstr. (Kreuzberg)	N 9487,9209 9546,9198 9617,9185 9674,9179 9795,9162 9966,9151
+Arndtstr. (Kreuzberg)	N 9487,9209 9553,9196 9566,9194 9614,9186 9674,9179 9795,9162 9966,9151
 Kloedenstr.	N 9654,8991 9669,9080
 Fidicinstr.	N 9224,9053 9295,9047 9459,9019 9654,8991 9799,8962
-Chamissoplatz	N 9526,9104 9546,9198
-Chamissoplatz	N 9596,9092 9617,9185
+Chamissoplatz	N 9540,9102 9553,9196
+Chamissoplatz	N 9600,9091 9614,9186
 Züllichauer Str.	N 10268,8810 10291,8810 10481,8814 10675,8940
 Lilienthalstr.	N 10615,8558 10633,8705 10640,8832 10661,8914 10675,8940 10748,9054 10709,9192 10705,9234 10713,9260
 #: note: ehemaliger Flughafen Tempelhof vvv
@@ -378,12 +378,27 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11600 (Anfrage)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11621 (Antrag)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11636 (Teileinziehung am Checkpoint Charlie?)
-#: source_id: 2147346249
+#: by: https://berliner-abendblatt.de/2023/01/24/abschnitt-der-friedrichstrasse-ab-montag-wieder-autofrei/ (ab 30.1.2023 autofrei?)
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1287342.php
+#: by: https://www.berlin.de/friedrichstrasse/
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/ab-montag-wieder-autofreie-friedrichstrasse-aktionsbuendnis-sieht-in-ankuendigung-einen-vertrauensbruch-und-ist-vom-politik-stil-der-verkehrssenatorin-enttaeuscht_a370586
+#: by: https://berliner-abendblatt.de/2023/01/25/teile-der-friedrichstrasse-sind-ab-montag-fussgaengerzone/
+#: by: https://berliner-abendblatt.de/2023/01/25/giffey-zur-friedrichstrasse-aktion-nicht-im-senat-abgestimmt/
+#: by: https://berliner-abendblatt.de/2023/01/25/linke-vorsitzende-streit-um-friedrichstrasse-ist-nebenthema/
+#: by: https://berliner-abendblatt.de/2023/01/25/jarasch-kein-verstaendnis-fuer-aufregung-um-friedrichstrasse/
+#: by: https://berliner-abendblatt.de/2023/01/25/kritik-an-autofreier-friedrichstrasse/
+#: by: https://berliner-abendblatt.de/2023/01/25/ab-montag-friedrichstrasse-soll-wieder-autofrei-werden/
+#: by: https://viz.berlin.de/2023/01/friedrichstrasse-wird-fussgaengerzone/
+#: by: https://berliner-abendblatt.de/2023/01/26/jarasch-hofft-auf-konzeptverfahren-fuer-friedrichstrasse/
+#: by: https://www.bahninfo-forum.de/read.php?9,757005,757005#msg-757005 (Radfahren bleibt erstmal in Schrittgeschwindigkeit gestattet)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_04_0361_0452_online.pdf (Teileinziehung)
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11668 (Anfrage)
+#: source_id: 2147346249 (vermutlich inaktiv)
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
 #: priority: #A
 #: last_checked: 2023-01-18
 #: check_frequency: 30d
-# REMOVED --- #: next_check: 2022-12-31
+#: next_check: 2023-01-30
 # REMOVED --- #: valid: !20200821-20221122
 Friedrichstr. (Mitte, Kreuzberg)	H 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
 # REMOVED --- #: valid: 20200821-20221122 --- Friedrichstr. (Mitte, Kreuzberg)	NN 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
@@ -864,7 +879,7 @@ Potsdamer Str. (Schöneberg, Tiergarten)	HH 7471,9360 7507,9458 7512,9572 7518,97
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_42_2833_2916_online.pdf (Teileinziehung, Radverkehr wird möglich sein, eingezogener Bereich bis zur Schellingstr.)
 #: XXX wird die Straße zur Fußgängerzone?
 #: osm_watch: way id="4597334" version="26"
-#: last_checked: 2023-01-16 (mapillary)
+#: last_checked: 2023-01-26
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2022-12-31
 Alte Potsdamer Str.	N 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296
@@ -1368,7 +1383,7 @@ Mercedes-Platz	NN 12990,11006 13063,11147
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="14"
 #: priority: #C
-#: last_checked: 2023-01-19 (mapillary)
+#: last_checked: 2023-01-28
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2023-01-01
 Planstraße C	N 12926,11224 12848,11093
@@ -1779,7 +1794,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/erschliessung-und-grundstuecksuebertragung-bebauungsplan-1-62b-oestlich-heidestrasse-otto-weidt-platz-1032336.php
 #: by: https://www.berliner-woche.de/moabit/c-bauen/golda-meir-steg-verbindet-jetzt-moabit-mit-mitte_a330725
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2022-12-30 (mapillary)
+#: last_checked: 2023-01-22 (daf)
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -1801,8 +1816,8 @@ Lisa-Fittko-Str.	N 7734,13944 7820,13994
 George-Stephenson-Str.	N 7487,14472 7452,14415 7500,14333 7569,14217 7679,14030 7734,13944
 #: next_check_id: HANSPETERSPLATZ-2022
 #: XXX zurzeit darf der Platz noch von Fahrzeugen benutzt werden (wegen der Bauarbeiten in der George-Stephenson-Str.?), wird später vermutlich aufgehoben, dann NN ohne osm.highway:service; eigentlich Einbahnstraße, aber der Platz ist breit genug...
-#: osm_watch: way id="977556359" version="8"
-#: last_checked: 2022-12-17
+#: osm_watch: way id="977556359" version="9"
+#: last_checked: 2023-01-22 (daf)
 #: check_frequency: 90d
 #: osm.highway: service
 Hans-Peters-Platz	N 7739,14119 7679,14030
@@ -5884,8 +5899,9 @@ Cosmarweg	N -6151,13001 -6254,12976 -6360,12970 -6514,13017 -6626,13049 -6828,13
 Cosmarweg	NN -6828,13106 -6898,13126 -6908,13129 -6951,13141
 Cosmarweg	N -6951,13141 -7103,13191 -7195,13216 -7303,13248
 Kretzerzeile	N -6254,12976 -6299,13147
-Gärtnereiring	N -6675,12632 -6692,12669 -6717,12678 -7048,12790 -7141,12821 -7237,12848 -7195,13216
+Gärtnereiring	N -6675,12632 -6692,12669 -6717,12678 -7048,12790 -7141,12821 -7237,12848 -7231,12890 -7219,12993 -7195,13216
 Gärtnereiring	NN -7195,13216 -7183,13324
+Gärtnereiring	N -7231,12890 -7345,12930
 (Gärtnereiring - Cosmarweg)	NN -6717,12678 -6705,12735 -6781,12965 -6828,13106
 Pfarrer-Theile-Str.	N -7141,12821 -7103,13191 -7105,13304
 Richard-Münch-Str.	N -7048,12790 -6961,12967 -6959,12986 -6951,13141 -6956,13268
@@ -8151,7 +8167,7 @@ Oppenheimer Weg	N 3485,25112 3484,25139 3469,25206 3441,25280 3416,25311 3387,25
 Silvestersteig	N 3472,24709 3481,24686
 (Am Rosenanger/Silvestersteig - Am Sandkrug, Entenschnabel)	NN 3481,24686 3514,24652 3535,24626
 Oranienburger Chaussee	HH 3827,24622 3820,24654 3809,24702 3801,24736 3791,24783 3767,24887 3754,24946 3711,25100 3606,25288 3551,25387 3459,25595 3456,25601 3450,25617 3446,25628 3415,25731 3348,25902 3271,26067 3145,26256 3124,26288 3013,26458 2842,26710 2666,27009 2345,27670 2178,28067 2150,28127
-Streitstr.	H -3040,16246 -3050,16429 -3046,16548 -3043,16601 -3042,16609 -3033,16757 -3031,16807 -3029,16823 -3023,16925 -3018,16974 -3017,16984 -3009,17090 -3006,17128 -2959,17507 -2934,17594
+Streitstr.	H -3040,16246 -3050,16429 -3046,16548 -3043,16601 -3042,16609 -3034,16719 -3033,16757 -3031,16807 -3029,16823 -3023,16925 -3018,16974 -3017,16984 -3009,17090 -3006,17128 -2959,17507 -2934,17594
 Rauchstr. (Hakenfelde)	H -3009,17090 -2908,17072 -2728,17038 -2667,17026 -2563,17004 -2414,16975 -2295,16951 -2234,16939 -2149,16921
 Am Wasserbogen	N -2044,17003 -2056,17041 -2080,17077 -2105,17098 -2152,17108
 Asnièresstr.	N -2044,17003 -2119,17015 -2170,17024 -2212,17031
@@ -8246,7 +8262,7 @@ Spekteweg	NN -5608,15105 -5641,15109 -5681,15113 -5686,15113
 (Uferweg an der Havel)	NN -2051,18411 -2053,18375
 Niederneuendorfer Allee	H -2934,17594 -2906,17661 -2871,17749 -2866,17760 -2835,17843 -2813,17904 -2806,17922 -2764,18035 -2744,18090 -2724,18149 -2721,18247 -2741,18333 -2759,18400 -2821,18620 -2827,18639 -2900,18887 -2937,19008 -3161,19627 -3371,19864 -3497,20003 -3495,20025
 Niederneuendorfer Allee (Wendeschleife)	N -2906,17661 -2897,17861
-Am Maselakepark	N -2955,16418 -2939,16495 -2666,16447 -2638,16609 -2602,16809
+Am Maselakepark	N -2955,16418 -2939,16495 -2666,16447 -2638,16609 -2629,16653 -2602,16809
 Bamihlstr.	N -2602,16809 -2585,16900 -2563,17004
 Hohenzollernring	N -2955,16418 -2972,16420 -3050,16429
 Hohenzollernring	H -3050,16429 -3218,16426 -3312,16425 -3348,16406 -3495,16393 -3665,16378 -3755,16369 -3851,16360
@@ -13397,7 +13413,8 @@ Gleiwitzer Str.	N 21175,9989 20947,9999 20703,10004
 Genthiner Str.	N 7461,11051 7415,10883 7393,10809 7354,10671 7330,10590 7315,10537
 #: note: Privatstraße
 #: osm.highway: service
-Schönegarten	N 7416,10492 7432,10546 7330,10590
+Schönegarten	N 7416,10492 7432,10546 7337,10587 7330,10590
+(Kurfüstenstr. - Pohlstr.)	NN 7432,10546 7450,10625
 Else-Lasker-Schüler-Str.	N 7033,10396 7227,10489 7281,10510
 Else-Lasker-Schüler-Str.	NN 7281,10510 7315,10537
 Kurmärkische Str.	N 7429,10366 7422,10368 7337,10396 7275,10418
@@ -15331,7 +15348,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2023-01-15
+#: last_checked: 2023-01-27
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15718,7 +15735,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2023-01-15
+#: last_checked: 2023-01-27
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -18306,7 +18323,7 @@ Hewaldstr.	N 6377,8460 6385,8274
 Nymphenburger Str.	N 6163,8398 6246,8222
 Mettestr.	N 5910,8170 6009,8101
 Kuppenheimer Str.	NN 5820,8117 5824,8035
-(Parkplatz Möbel Hübner)	NN 7478,10612 7354,10671
+(Parkplatz Möbel Hübner)	NN 7478,10612 7450,10625 7354,10671
 Magdeburger Platz	NN 7393,10809 7414,10804
 Magdeburger Platz	N 7414,10804 7517,10775
 (Herkulesufer - Von-der-Heydtstr.)	NN 7135,11171 7115,11220

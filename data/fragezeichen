@@ -869,6 +869,7 @@ Glasmeisterstr. (ist der westliche Abschnitt der Glasmeisterstr. für Autos gespe
 (Heinrich-Mann-Allee - Am Nuthetal) (heißt diese Straße "Drewitzer Str."?)	? -11068,-3574 -11027,-3591 -10889,-3671
 Zur Königlichen Hofbrauerei (Fahrbahnbeschaffenheit?)	? -12814,-2270 -12783,-2269 -12713,-2279
 Peter-Kühne-Siedlung (Ist der Weg ausgeschildert? Nachts beleuchtet?)	? -15962,-2003 -15961,-2168
+(Unterführung Poststr.) (Sind alle Rampen der Unterführung bereits fertiggestellt worden?)	? 11082,-5172 11030,-5183 11002,-5208
 Karl-Marx-Str. (Qualität?)	? 950,29767 1078,29668 1141,29607 1272,29447 1366,29416
 (zwischen Sandweg und Havelhausener Str.) (Welcher Teil ist NN und welche sind N?)	? -4100,34709 -4039,34618 -4007,34553 -3996,34499
 Bruno-Schönlank-Str. (wie ist die Qualität der Bruno-Schönlank-Str.?)	? 1386,30391 708,30406 517,30342 476,30325 456,30295 446,30260
@@ -1000,6 +1001,7 @@ L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen P
 # added from bbbike-temp-blockings-optimized
 Takustr.: wegen Bauarbeiten ist eine Durchfahrt nicht möglich (auch nicht für Fußgänger) (Ist die Takustraße weiterhin voll gesperrt?)	? 3079,5411 3179,5267
 Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Hochbaustelle, Fahrtrichtung auch für Radfahrer gesperrt (Bis wann gilt die Sperrung für Radfahrer?)	? 5192,10241 5196,10398
+Jahnstr./Rungiusstr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt (Stand Mitte Januar 2022) Jahnstr. (Sind die Bauarbeiten bereits beendet?)	? 12833,6127 13027,6168 13227,6209
 Zähringerstr.: Einbahnstraßenregelung (Wurde die Einbahnstraßenregelung mittlerweile aufgehoben?)	? 4126,9932 3927,9935
 Seydlitzstr.: Bauarbeiten zwischen Frobenstr. und Dessauerstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt Seydlitzstr. (Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?)	? 6349,2510 6459,2364
 Pascalstr.: Fahrbahn zwischen Heisenbergstr. und Schlesingerstr. wegen Hochbauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 4961,12940 4932,12968

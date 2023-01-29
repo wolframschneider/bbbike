@@ -2,6 +2,7 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+Gürtelstr./Weserstr.	F::inwork 15016,11431
 	F::inwork 18831,14823
 	F::inwork 19196,14976
 Tucholskystr./Ziegelstr.	X::inwork 9559,13087
@@ -2917,7 +2918,6 @@ unbeschrankter Bahnübergang	B0 -19229,62430
 	B -7352,54661
 	B 3476,63906
 	B -62229,18971
-	B 11077,-5335
 	B -63533,72983
 	B 47463,70752
 	B 60676,170842

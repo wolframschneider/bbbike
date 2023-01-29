@@ -780,6 +780,7 @@ Garzauer Str.	1 21830,13688 21722,13708 21731,13789
 Flankenschanze	1 -3507,15341 -3534,15219
 Berliner Str. (Pankow, Prenzlauer Berg) [zur Tiroler Str.]	1 10862,17087 10891,17088 10917,17088
 (Puschkinallee - Elsenstr.)	1 14244,9812 14250,9756 14271,9712
+Parkaue	1s 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
 Am Zirkus	1s 9212,12969 9167,13046 9137,13032
 DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615,9675 1724,9772
@@ -925,7 +926,8 @@ Parkstr. -> Tempelhofer Damm: Mittelstreifen	3::igndisp 9237,6413 9250,6414 9253
 Lütticher Str.	1 6716,15310 6628,15411 6522,15532
 Lütticher Str.	1 6539,15548 6649,15427 6736,15328
 Klaus-Selmke-Str.	2 21130,11384 21275,11547
-Schönegarten: verschlossene Tore an beiden Enden	2 7416,10492 7432,10546 7330,10590
+Schönegarten: verschlossenes Tor	3 7330,10590 7337,10587 7432,10546
+Schönegarten: verschlossenes Tor	3 7432,10546 7337,10587 7330,10590
 Parchimer Allee	1 14466,4624 14427,4571
 Parchimer Allee	1 14427,4571 14425,4593 14454,4626 14466,4624
 Feldrain	1s 25684,13172 25632,13214 25609,13232 25607,13459
@@ -3355,7 +3357,6 @@ am Eierhäuschen: Weg wegen Bauarbeiten gesperrt	2::inwork 16627,8581 16577,8581 
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
 Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409
 Valeska-Gert-Str. - Am Postbahnhof: wegen Bauarbeiten gesperrt	2::inwork 12807,11287 12713,11372
-Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 Bergiusstr.: wird vermutlich zurückgebaut	2::inwork 14051,6731 14106,6663
 Bergiusstr.: für Radfahrer gesperrt (Autobahnauffahrt)	2::inwork 14106,6663 14150,6609
 wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
@@ -3366,6 +3367,7 @@ Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,127
 Löwenbrücke: gesperrt	2:inwork 6417,11796 6438,11784
 (Güterbahnhof Greifswalder Str.): Brücke gesperrt	2 12602,15006 12649,14977
 (Güterbahnhof Greifswalder Str.): kann bei Veranstaltungen gesperrt sein	2:temp 12520,15057 12602,15006
+Trebbiner Straße (Mahlow): Bahnübergang gesperrt, neue Unterführung wird gebaut	2::inwork 11065,-5338 11077,-5335 11119,-5326
 Berliner Str. (Mahlow): Straße gesperrt, neue Bahnunterführung wird gebaut	2:inwork 10776,-4460 10896,-4469 10956,-4470
 tragen (Treppe) oder Aufzug benutzen	0:35:-104 10860,-4393
 tragen (Treppe) oder Aufzug benutzen	0:35:-107 10888,-4384

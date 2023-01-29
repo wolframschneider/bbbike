@@ -943,7 +943,7 @@ Kolberger Platz: Wochenmarkt Mi+Sa, 08.00-14.00, Fahrbahn weiterhin befahrbar, n
 Str. des 17. Juni: Kunst- und Trödelmarkt, Sa+So, 10.00-17.00, Radweg wird freigehalten	CS; 5758,11895 5565,11871 5478,11860
 Boxhagener Platz: Wochenmarkt Sa 09.00-15.30, Trödelmarkt So 10.00-18.00, Fahrbahn weiterhin befahrbar, nur Halteverbote	CS; 14127,11811 14272,11775 14247,11681 14102,11715 14127,11811
 Schönleinstr.: Wochenmarkt Di+Sa, 11.00-19.00, betroffen ist wohl nur der abgesperrte und in BBBike sowieso nicht eingezeichnete Abschnitt	CS 11560,9524
-Chamissoplatz: Öko-Markt, Sa, 09.00-15.00, wahrscheinlich nur Halteverbote	CS 9596,9092 9617,9185
+Chamissoplatz: Öko-Markt, Sa, 09.00-15.00, wahrscheinlich nur Halteverbote	CS 9600,9091 9614,9186
 Bergmannstr.: Trödelmarkt Sa, 10.00-16.00, nur die Fahrbahn ist betroffen	CS 9973,9232 9880,9233 9793,9241
 Skalitzer Str.: Trödelmarkt, Sa+So, 08.00-16.00, Gehweg ist betroffen	CS; 12731,10547 12545,10496
 # REMOVED (möglicherweise durch die neue offizielle Radwegführung nicht mehr relevant?) --- Schillingstr.: Wochenmarkt, Di,Do,Fr, 09.00-17.00, Gehweg ist betroffen, man kann eigentlich immer irgendwie vorbeifahren	CS 11472,12406 11472,12406 11485,12391
@@ -1045,6 +1045,7 @@ Creienfelder Weg: Privatstraße	CS 6817,23167 6712,23252
 Rosenthaler Str.: Richtung Kleine Rosenthaler Str.	CP2; 10324,13459 10318,13528
 (Schlitzer Str. - Welzower Steig): ausgeschildert als "Welzower Steig"	CP2; 6162,21938 6257,22005
 #: by: schlafauto ("Möbelweg")
+#: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11064 (kleines Schild -> Ersuchen)
 #: confirmed_by: srt
 (Finsterwalder Str. - Quickborner Str.): am Bruckstückengraben, "Möbelweg" steht auf "wegweiserartigen" Schildern	CS 6434,22244 6593,22302 6651,22324 6755,22331 6943,22324 7439,22306
 nicht ausgeschildert	CP2; 8501,25358 8584,25371
@@ -1170,7 +1171,9 @@ ausgeschildert Venusbassin	CP2; 8020,11937 8095,11919
 am U-Bahn-Viadukt entlang fahren	CP2; 7906,10098 7928,10094
 ausgeschildert Parzelle 16-25	CP2; 17832,12244 18135,12246
 #: XXX_prog: deutlicher Zeitverlust, man muss drei langgeschaltete Ampeln benutzen (Rückrichtung geht besser)
-Oderbruchstr. - Karl-Vesper-Str.: Ampeln auf der linken Seite benutzen	CP; 14261,13932 14243,13890 14218,13834 14205,13755
+Oderbruchstr. - Karl-Vesper-Str.: Ampeln auf der linken Seite benutzen	CP; 14243,13890 14218,13834 14205,13755
+#: XXX_prog: hier ähnlicher Zeitverlust
+Oderbruchstr. - Karl-Lade-Str.: Ampeln auf der linken Seite benutzen	CP; 14243,13890 14218,13834 14425,13780
 ausgeschildert Vogelsang/Wegnershof	CP2; 57168,102780 57073,102788
 ausgeschildert "Zum Ramsteinweg"	CP2; 247,822 332,819
 Hundsfelder Str.: westliche Fahrbahn	CS 21640,-582 21769,-432 21877,-307
@@ -1604,7 +1607,7 @@ beide Geh/Radwege hinter der Einmündung Neukirchstr. können Richtung Am Feuchten
 #: next_check_id: HANSPETERSPLATZ-2022
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1128830.php (Benennung eines Platzes nach Hans Peters)
 #: XXX wann wird der Platz ausgeschildert?
-#: last_checked: 2022-12-17
+#: last_checked: 2023-01-22 (daf)
 #: check_frequency: 45d
 Hans-Peters-Platz: nicht ausgeschildert	CS 7739,14119 7679,14030
 # 
@@ -1637,7 +1640,7 @@ Privatstraße	CS 20694,11811 20708,11918 20715,12040
 # REMOVED --- #: next_check_id: SCHOENERGARTEN-2022 --- #: last_checked: 2022-08-09 (mapillary) --- #: check_frequency: 90d
 Schönegarten: nicht ausgeschildert	CP2; 7416,10492 7432,10546
 #: note: blaues Schild
-ausgeschildert "Schönegarten 2-10"	CP2; 7330,10590 7432,10546
+ausgeschildert "Schönegarten 2-10"	CP2; 7330,10590 7337,10587
 # 
 (Edeka-Parkplatz - Rheinsteinstr.): Hausdurchfahrt	CS 18880,8689 18865,8740
 # 
@@ -1645,8 +1648,10 @@ Am Karlsbad: Hausdurchfahrt	CP2; 7959,10910 8027,11000
 Am Karlsbad: Hausdurchfahrt	CP2; 8027,11000 7959,10910
 # 
 #: next_check_id: ANDERGAERTNEREI-2022
+#: XXX laut osm "Straßenname vorhanden", siehe https://www.openstreetmap.org/note/3038739
 #: last_checked: 2022-10-02
 #: check_frequency: 180d
+#: next_check: 2023-01-26
 An der alten Gärtnerei: am Bauzaun hängt nur ein provisorisches schwarzes Schild	CP2; 10958,3710 10972,3779
 # 
 ausgeschildert "Grüner Weg 94, 96, 98"	CP2; 13775,3500 13728,3332
