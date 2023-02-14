@@ -36,6 +36,7 @@ use Karte::Polar;
 use Karte::Standard;
 use Strassen::Util ();
 use StrassenNextCheck;
+use VectorUtil qw(get_polygon_center);
 
 use constant ORG_MODE_HEADLINE_LENGTH => 77; # used for tag alignment
 
@@ -310,13 +311,14 @@ for my $file (@files) {
 		  grep { $_ ne '*' }
 		  @{ $r->[Strassen::COORDS] }
 		 )[0];
+	     my $coord_middle = ($r->[Strassen::CAT] =~ /^F:/ && @{ $r->[Strassen::COORDS] } >= 3
+				 ? join ',', get_polygon_center(map { split /,/ } @{ $r->[Strassen::COORDS] })
+				 : $r->[Strassen::COORDS][$#{$r->[Strassen::COORDS]}/2]
+				);
 
 	     # WGS84 coordinates
-	     my($px,$py) = do {
-		 my $middle = $r->[Strassen::COORDS][$#{$r->[Strassen::COORDS]}/2];
-		 $Karte::Polar::obj->standard2map(split /,/, $middle);
-	     };
-	     my($southmost_px,$southmost_py) = $Karte::Polar::obj->standard2map(split /,/, $coord_southmost);
+	     my($px,$py) = $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $coord_middle));
+	     my($southmost_px,$southmost_py) = $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $coord_southmost));
 
 	     # fresh Mapillary URL
 	     {
@@ -367,9 +369,9 @@ for my $file (@files) {
 			 } else {
 			     warn "WARN: 'also_indoor: search' without search term\n";
 			 }
-		     } elsif ($also_indoor_dir =~ m{^(url)\s+(https?://\S+)}) {
-			 my $type = uc $1;
-			 my $url = $2;
+		     } elsif ($also_indoor_dir =~ m{^(url|webcam)\s+(https?://\S+)}) {
+			 my($type, $url) = ($1, $2);
+			 $type = $type =~ /webcam/ ? 'Webcam' : uc $type;
 			 push @extra_url_defs, [$type, $url];
 		     } else {
 			 warn "WARN: unsupported 'also_indoor' directive '$also_indoor_dir'\n";
@@ -377,9 +379,10 @@ for my $file (@files) {
 		 }
 	     }
 	     # Further URLs which work as good as also_indoor directives
+	     # (however, using "#: also_indoor webcam ..." is preferred)
 	     if ($dir->{by}) {
 		 for my $by (@{ $dir->{by} }) {
-		     if ($by =~ m{(https?://\S+).*\bWebcam\b}) {
+		     if ($by =~ m{(https?://\S+).*\bWebcam\b}i) {
 			 push @extra_url_defs, ['Webcam', $1];
 		     }
 		 }
@@ -436,7 +439,7 @@ for my $file (@files) {
 		     push @layers, 'Y'; # CyclOSM
 		 }
 		 push @layers, 'N'; # always turn notes on
-		 push @extra_url_defs, ['OSM', 'https://www.openstreetmap.org/#map=17/'.$py.'/'.$px.'&layers='.join('', @layers)];
+		 push @extra_url_defs, ['OSM', 'https://www.openstreetmap.org/?mlat='.$py.'&mlon='.$px.'#map=17/'.$py.'/'.$px.'&layers='.join('', @layers)];
 	     }
 
 	     # BBBike Leaflet URL

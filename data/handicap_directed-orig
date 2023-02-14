@@ -135,8 +135,8 @@ Blaubeerweg -> Rosenthaler Weg: Umweg wegen Straßenbahngleisen	DH:len=40 10910,2
 # 
 Zeppelinstr. -> Helmholtzstr.: Fußgängerampel	DH:len=20:tl 18041,6924 17919,6968 17845,6986
 Helmholtzstr. -> Zeppelinstr.: Fußgängerampel	DH:len=20:tl 17845,6986 17919,6968 18041,6924
-Edisonstr. -> Helmholtzstr.: Fußgängerampel	DH:len=20:tl 17962,6674 17919,6968 17845,6986
-Zeppelinstr. -> Edisonstr.: Fußgängerampel	DH:len=20:tl 18041,6924 17919,6968 17962,6674
+Edisonstr. -> Helmholtzstr.: Fußgängerampel	DH:len=20:tl 17962,6674 17945,6788 17919,6968 17845,6986
+Zeppelinstr. -> Edisonstr.: Fußgängerampel	DH:len=20:tl 18041,6924 17919,6968 17945,6788 17962,6674
 # 
 # REMOVED (Ampel existiert) --- #: next_check_id: HOLZMARKT-2017 --- #: XXX hier wird noch eine zusätzliche Ampel entstehen --- #: last_checked: 2018-10-18 vvv --- #: check_frequency: 14d vvv --- # REMOVED --- #: next_check: 2018-09-14 vvv --- Schillingstr. -> Holzmarktstr.: Ampel	DH:len=90:tl 11452,12318 11388,12202 11513,12138 --- Holzmarktstr. -> Schillingstr.: linker Gehweg	DH:h=q2,45 11347,12223 11388,12202 11452,12318 --- # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
@@ -328,7 +328,7 @@ Behrenstr. - Ebertstr.: zum Linksabbiegen die linke Fußgängerampel benutzen	DH:t
 # REMOVED  --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.1019139.php (für zwei Wochen) --- #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/kreuzung-bleibt-teilgesperrt_a293815 --- #: by: https://twitter.com/VIZ_Berlin/status/1329290817048023040 --- #: by: https://pbs.twimg.com/media/EnKW9CZWMAAOqU1?format=jpg&name=large --- #: source_id: 2147346612 (bis 22.12.2020, nur Einengung) vvv --- #: last_checked: 2020-12-20 vvv --- #: check_frequency: 7d vvv --- #: next_check: 2020-12-22 vvv --- #: valid: -20201222 vvv --- Fahrbahninstandsetzung der Kreuzung Stralauer Allee/Modersohnstr.: Umweg über Ampel Rochowstr.	DH:len=300 13779,10642 13919,10583 14011,10812 --- Fahrbahninstandsetzung der Kreuzung Stralauer Allee/Modersohnstr.: zunächst den linken Gehweg auf der Stralauer Allee benutzen	DH:h=q3,150 13779,10642 13919,10583 14011,10812 --- #: valid ^^^ --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: source_id ^^^
 # 
 #: next_check_id: KASTANIENALLEE-2021
-#: last_checked: 2022-12-23 (mapillary) vvv
+#: last_checked: 2023-02-11 (mapillary) vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2021-10-29 vvv
 Kastanienallee: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 9027,20603 9073,20606 9162,20613
@@ -417,7 +417,7 @@ Pietschkerstr. - Groß-Berliner Damm: Umweg über Ampel Greifstr.	DH:len=50:tl 177
 # 
 #: next_check_id: KNOTENMARZAHN-2022
 #: note: Mindestwartezeit an den Ampeln etwa eine Minute
-#: last_checked: 2023-01-21 vvv
+#: last_checked: 2023-01-29 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2026-12-31 vvv
 Landsberger Allee	DH:t=50 18553,14678 18831,14823 19013,14905

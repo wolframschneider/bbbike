@@ -3,24 +3,22 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
+Untere Kynaststr.: Einbahnstraßenregelung, ggfs. vor der Einmündung auf den linken Gehweg ausweichen	q3::inwork; 14843,10621 14828,10561 14832,10512 14815,10516 14805,10518
 (Vorfahrt Neues-Deutschland-Gebäude): Bauarbeiten, schmaler Gehweg ist frei	q4::inwork 12788,11898 12891,12008
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
 (Straße der Pariser Kommune - Erich-Steinfurth-Str.): einige Fußgänger	q2; 12660,11705 12634,11705 12608,11692
-Seumestr.: Bauarbeiten vor der Kreuzung Wühlischstr., Sperrung der Fahrbahn, Bordsteine	q3::inwork 14254,11377 14305,11514
 (Notweg Bahnübergang Bahnhofstr.): Fußgänger, Fahrrad ggfs. schieben	q3 10231,-2159 10207,-2173 10200,-2176 10182,-2183 10161,-2146 10096,-2137
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149 14126,10176
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 6835,15412 6815,15398
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6748,15313 6833,15215
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
+Stralauer Str.: Radweg auf schmalen Bürgersteig	q1::inwork; 11139,12243 11094,12243 10951,12249
 Stralauer Str.: Radweg auf schmalen Bürgersteig	q2::inwork; 10951,12249 10830,12279
 Grunerstr.: Gehweg	q4 10900,12546 10973,12612 11057,12715
-Johannisstr.: Abschnitt der Fahrbahn gesperrt	q3::inwork 9588,13174 9385,13174
-Gipsstr.: Fahrbahn an der Rosenthaler Str. gesperrt, Ausweichen auf Bürgersteig, Bordsteine	q3::inwork 10199,13446 10341,13376
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883 11160,12071
 Chausseestr.: Radweg auf gegenüberliegenden Bürgersteig	q2::inwork; 8732,14098 8607,14253 8570,14299 8490,14397 8442,14456 8406,14507 8336,14586
-Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8775,12457 8904,12489
-Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8904,12489 8999,12498
+Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8775,12457 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
 Mittelstr.: Bauarbeiten, Fahrbahn teilweise gesperrt	q3::inwork 9011,12423 9131,12438
 Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
@@ -318,7 +316,7 @@ Rosa-Luxemburg-Str.: Fußgänger, Bordsteine	q3 10695,12933 10685,12966
 Lehniner Platz/Damaschkestr.: Gehweg, Bordsteine	q4 3562,10264 3492,10307
 Brücke Schönfließer Str.: Fußgänger	q3 10593,16037 10592,15968 10575,15968
 (Kolonie Bornholm 1 und 2): Fußgänger, enger Weg, Radfahren nicht erlaubt, ggfs. schieben	q3 10209,16674 10190,16930
-(zum Rolandufer): Gehweg	q2 11347,12223 11278,12185
+(zum Rolandufer): Gehweg, niedriger Bordstein	q3 11347,12223 11278,12185
 Rolandufer: Gehweg, viele Fußgänger	q3 10821,12153 10660,12176 10591,12203 10583,12206
 Spreeufer: Gehweg, viele Fußgänger, im Sommer Straßencafe	q4 10583,12206 10492,12289 10417,12378 10416,12394
 Herthastr.: Gehweg, Bordsteine	q4 1937,9253 1932,9263
@@ -638,7 +636,7 @@ Achenbachpromenade: Fußgänger, Radfahren erlaubt	q1 8763,8780 8748,8587 8722,852
 Wildensteiner Str.: enge Straße	q0 18627,8475 18528,8331
 Wildensteiner Str.: enge Straße	q1 18528,8331 18416,8163 18365,8094 18333,8059
 Linienstr./Oranienburger Str.: Fußgänger	q2 9225,13389 9312,13388
-Fontanestr.: zwei Schwellen, können evtl. umfahren werden	q1 18240,6845 18254,6679
+Fontanestr.: zwei Schwellen, können zumeist nicht umfahren werden	q1 18240,6845 18254,6679
 Plönzeile: zwei Schwellen	q2 18574,6401 18676,6333
 Triniusstr.: zwei Schwellen, können umfahren werden	q1 18417,6775 18339,6660
 Kiautschoustr.: Fußgänger, Bordsteine	q3 6837,14848 6853,14854
@@ -2394,6 +2392,8 @@ Hochstr.: Fußgänger, Bordsteine	q3 8933,15872 8917,15851
 (Griechischer Park Höhe Parsevalstr.): Grünanlage, einige Fußgänger	q3 18159,6642 18162,6668 18158,6689
 Schönegarten: einige Fußgänger	q1 7416,10492 7432,10546 7337,10587 7330,10590
 Kurfürstenstr. - Pohlstr.: einige Fußgänger	q1 7432,10546 7450,10625
+Friedrichstr.: Fußgängerzone, Radfahrer frei	q3 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
+(Roedernstr. - Edisonstr.): Gehweg, Bordsteine	q4 17981,6793 17945,6788
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2900,7 +2900,7 @@ Bleichertstr.: enge Straße	q0 8383,1311 8455,1280 8494,1293 8530,1379 8569,1457 
 Redwitzgang: enge Straße	q1 17266,4720 17225,4568
 Hellersdorfer Promenade: Fußgängerzone	q1 24131,15109 24112,15236 24094,15360 24076,15481
 Muschelkalkweg: enge Straße	q0 10722,1222 10795,1251 10868,1281 10950,1315 11042,1352 11120,1384 11157,1269
-Großstr.: enge Straße	q0 18574,6401 18491,6464 18462,6495 18429,6582
+Großstr.: enge Straße	q0 18574,6401 18487,6469 18462,6495 18429,6582
 Rothariweg: enge Straße	q0 8292,6331 8290,6191 8291,6048
 Küselstr.: enge Straße	q1 12292,15464 12221,15514 12158,15556 12094,15598 12058,15621
 Zillertalstr.: enge Straße	q0 10807,17193 10498,17192 10228,17191 10198,17196
@@ -3283,7 +3283,7 @@ Am Groen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 22146,10
 Klompenweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 22101,10985 22146,10995 22172,10996
 Fabeckstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 2717,5578 2678,5621 2669,5677
 Enckestr. - Friedrichstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 9666,10848 9537,10837
-(Straße vor dem Berliner Ensemble): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 9160,12932 9212,12969
+(Straße vor dem Berliner Ensemble): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 9153,12928 9212,12969
 Grüne Aue: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 21954,11269 21956,11246 21994,11209 22018,11165 22054,11091
 Am Heidehof: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; -1410,2726 -1571,2669 -1612,2785
 Lilli-Henoch-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 12357,15020 12388,14926
@@ -3327,6 +3327,7 @@ Möllhausenufer: Bauarbeiten, Einbahnstraßenregelung: gegen die Einbahnstraßenric
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 8266,14346 8442,14456
 Hönower Str.: temporäre Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 18735,9421 18765,9426 18846,9532
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9429,12728 9402,12792 9386,12833 9375,12911
+Johannisstr.: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174 9254,13171
 Mauerstr..: Bauarbeiten, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 9108,11961 9076,12054
 Glinkastr.: Einbahnstraßenregelung wegen Bauarbeiten, auch für Radfahrer: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9183,12076 9195,11972
 Taubenstr.: Bauarbeiten, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 9207,11880 9138,11872
@@ -3338,6 +3339,7 @@ Neuenhagener Str. (Mahlsdorf): gegen die Einbahnstraßenrichtung, ggfs. schieben	
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8376,6579 -8354,6590
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8339,6578 -8364,6562
 Mauerstr.: Fahrbahn wegen Bauarbeiten gesperrt: gesperrt, ggfs. schieben	q4:inwork::igndisp 9076,12054 9064,12156
+Jägerstr.: etwa 40m Fahrbahn an der Glinkastr. gesperrt: gesperrt, ggfs. schieben	q2:inwork::igndisp 9195,11972 9393,12000
 Kreuzung Sewanstr./Am Tierpark	q0::igndisp; 18631,10167 18647,10172
 Am Tierpark, linker Radweg	q0::igndisp; 18647,10172 18715,10003
 Treskowallee, linker Radweg	q0::igndisp; 18715,10003 18748,9922

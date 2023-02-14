@@ -324,7 +324,7 @@ Prinzenallee: Mittelstreifen	3nocross 8952,16666 9008,16799 9030,16853 9033,1686
 #: note: Luftbild
 Berliner Allee: Straßenbahntrasse	3nocross 13508,15912 13623,15954 13737,15994
 #: note: Luftbild
-Edisonstr.: Straßenbahntrasse	3nocross 17919,6978 17919,6968 17962,6674
+Edisonstr.: Straßenbahntrasse	3nocross 17919,6978 17919,6968 17945,6788 17962,6674
 #: note: Luftbild
 Berliner Str.: Mittelstreifen	3nocross 4918,8872 5022,8879 5172,8880 5182,8880 5195,8880 5266,8903
 #: note: Luftbild
@@ -858,7 +858,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: by: http://www.flickr.com/photos/lapidarium42/7708833948/in/pool-gwb
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
-#: osm_watch: way id="155071540" version="16"
+#: osm_watch: way id="155071540" version="19"
 #: last_checked: 2023-01-23
 #: check_frequency: 60d
 #: priority: #D
@@ -1658,6 +1658,8 @@ Charlottenstr.	1 9547,11819 9559,11715 9569,11631
 # 
 Triftstr.	1 7270,15307 7356,15350 7417,15383
 Triftstr.	1 7270,15307 7248,15296 7085,15226
+Triftstr.	1 6886,15156 7085,15226
+Genter Str.	1 7138,15437 7270,15307
 # 
 Anlieferung Hohenschönhausener Tor - Konrad-Wolf-Str.	3 15225,14545 15174,14638 15066,14579
 # 
@@ -1684,14 +1686,14 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1120689.php (Fertigstellung: Mitte 2024)
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/ein-jahr-lang-bauarbeiten_a320747
 #: by: https://abendblatt-berlin.de/2021/08/31/berlin-mitte-an-der-stralauer-strasse-droht-dauerstau/
-#: by: https://molkenmarkt.berlin.de/webcam/ (Webcam)
+#: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
 #: source_id: viz2021:13.409118,52.51693,01.09.2021,06:00 (bis Ende 2022, Gesamtbaumaßnahme bis 2023) (bis 30.6.2023) (bis 15.1.2023) (inaktiv)
 #: source_id: viz2021:13.409109,52.516928,14.01.2023,06:00 (bis 15.01.2023) (inaktiv)
 #: source_id: viz2021:13.409315,52.517356,20.02.2020,08:00 (bis 31.12.2022) (bis 30.06.2023)
 #: source_id: viz2021:13.409118,52.51693,15.01.2023,18:00 (bis 30.06.2023)
 #: note: laut rbb nur bis 31.08.2022
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
-#: last_checked: 2023-01-18 vvv
+#: last_checked: 2023-02-10 vvv
 #: next_check: 2024-06-01 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
 # REMOVED --- (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285

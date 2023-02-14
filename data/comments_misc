@@ -738,7 +738,7 @@ Carl-Spindler-Str. - Uferweg: in Höhe Blütenweißweg zwischen den Neubauten links
 Büxensteinallee: diagonal über die Straßenbahngleise, erst dahinter ist ausgeschildert	CP2; 22162,1067 22228,1071
 Am Weingarten: an der Einmündung Sigridstr. den linken Strang benutzen	CP2; 13867,14507 13765,14665
 Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
-Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17794,8429 17738,8450
+Ruth-Baumgarte-Str.: noch nicht ausgeschildert, stattdessen Wegweiser zu fünf Straßen im Wohngebiet	CS 17794,8429 17738,8450
 ausgeschildert als "Dora-Duncker-Park"	CP2; 8358,9567 8359,9537
 ausgeschildert als "zum Am Gutshof"	CP2; 17887,18975 17874,18936
 ausgeschildert als "Lindenberger Str. 60-80"	CP2; 18143,19384 18118,19394
@@ -746,7 +746,6 @@ ausgeschildert als "Morusstr. 16, 18"	CP2; 12450,8016 12439,8014
 ausgeschildert als "Morusstr. 22, 20"	CP2; 12462,7965 12450,7963
 ausgeschildert als "Zugang zur Falkstr. 23"	CP2; 12195,7916 12414,7965
 ausgeschildert als "Falkstr. 25"	CP2; 12186,7952 12219,7958
-Brigitte-Reimann-Str.: noch nicht ausgeschildert	CS 23368,15469 23363,15517 23388,15637
 Klaus-Selmke-Str.: Straßenname ist nicht offiziell, Privatgrundstück	CS 21130,11384 21275,11547
 Curtiusstr. [Stichstraße]: nicht ausgeschildert	CS 2965,3823 2915,3905
 Richtung Schenkenberg nicht ausgeschildert	CP2; 44444,109014 44605,108715
@@ -767,3 +766,5 @@ Bleckmannweg: nicht ausgeschildert	CP2; 15886,12190 15756,12212
 Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
+ausgeschildert "Zu den Häusern Zur Marktflagge 33-59"	CP2; 14152,13072 14200,13213
+Zur Marktflagge: nicht ausgeschildert	CP2; 14200,13213 14152,13072

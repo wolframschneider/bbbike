@@ -11,13 +11,13 @@
 #: by: https://berliner-abendblatt.de/2023/01/24/bauarbeiten-staugefahr-in-der-guertelstrasse/
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024)
 #: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung
-#: last_checked: 2023-01-27
+#: last_checked: 2023-02-05
 #: check_frequency: 120d
 #: next_check: 2024-06-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
 # 
 #: next_check_id: KNOTENMARZAHN-2022
-#: last_checked: 2023-01-22 (mapillary) vvv
+#: last_checked: 2023-01-29 (mapillary) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2026-12-31 vvv
 #: XXX_prog gilt nicht für stadteinwärts fahrende Radfahrer auf dem Bürgersteig
@@ -31,13 +31,13 @@ Gürtelstr./Weserstr.	F::inwork 15016,11431
 #: last_checked ^^^
 # 
 #: next_check_id: ORANIENBURGERTORTRAM-2022
-#: next_check: 2023-01-30 vvv
-#: valid: -20230130 vvv
+#: next_check: 2023-03-02 vvv
+#: valid: -20230302 vvv
 #: XXX schon seit mehreren Tagen anscheinend ausgeschaltet
-#: last_checked: 2023-01-25 (mapillary)
+#: last_checked: 2023-02-12
 #: check_frequency: 30d
 Friedrichstr./Ziegelstr.	X0::inwork 9269,13060
-#: last_checked: 2023-01-12 (mapillary)
+#: last_checked: 2023-02-12
 #: check_frequency: 30d
 Tucholskystr./Ziegelstr.	X::inwork 9559,13087
 #: valid ^^^
@@ -61,8 +61,9 @@ Wilhelmstr./Am Omnibushof: provisorische Ampel	X::inwork -4647,12269
 #: by: https://officehome.de/ostkreuz-campus-a
 #: osm_watch: way id="936801541" version="3"
 #: XXX Ampel befindet sich östlich der Einmündung
+#: note: manchmal ausgeschaltet? gesehen: 2023-02-05 (So) gegen 15:45
 #: note: Anforderungsampel
-#: last_checked: 2023-01-17
+#: last_checked: 2023-02-05
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 # 
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
@@ -78,26 +79,12 @@ Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
 B179/Fichtestr.	X::inwork 26138,-12596
 # 
 # REMOVED --- #: source_id: viz2021:13.181825,52.422784,09.02.2022,11:00 (bis 12.7.2022) (nicht verlängert) (bis 28.9.2022) (nicht verlängert) --- #: source_id: viz2021:13.183144,52.423471,27.10.2022,10:00 (bis 23.11.2022) --- #: note: laut rbb bis 28.10.2022 --- #: next_check: 2022-11-23 --- #: valid: -20221123 --- Kronprinzessinnenweg: Gegenverkehrsregelung	X::inwork -4368,1731
-# 
-#: next_check_id: HAEMMERLING-2022
-#: by: https://www.bahninfo-forum.de/read.php?9,726467,730605#msg-730605 (19.4.2022 - 30.11.2022)
-#: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (Gegenverkehrsregelung mit Baustellenampel, bis 10.11.2022) (mittlerweile inaktiv, bereits Ende Juli 2022) (wieder aktiviert, bis 30.9.2022) (bis 10.10.2022) (inaktiv) (bis 23.10.2022) (bis 25.10.2022) (bis 10.11.2022) (bis 30.11.2022) (bis 16.12.2022) (bis 31.1.2023)
-#: by: https://nitter.net/VIZ_Berlin/status/1522508674073350144#m
-#: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig
-#: last_checked: 2023-01-15 vvv
-#: next_check: 2023-01-31 vvv
-#: valid: -20230131 vvv
-Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317
-Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245
-#: valid ^^^
-#: next_check ^^^
-#: last_checked ^^^
-# 
+# REMOVED (vermutlich wegen der Sperrung nicht mehr) --- #: next_check_id: HAEMMERLING-2022 --- #: by: https://www.bahninfo-forum.de/read.php?9,726467,730605#msg-730605 (19.4.2022 - 30.11.2022) --- #: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (Gegenverkehrsregelung mit Baustellenampel, bis 10.11.2022) (mittlerweile inaktiv, bereits Ende Juli 2022) (wieder aktiviert, bis 30.9.2022) (bis 10.10.2022) (inaktiv) (bis 23.10.2022) (bis 25.10.2022) (bis 10.11.2022) (bis 30.11.2022) (bis 16.12.2022) (bis 31.1.2023) --- #: by: https://nitter.net/VIZ_Berlin/status/1522508674073350144#m --- #: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig --- #: last_checked: 2023-01-15 vvv --- #: next_check: 2023-01-31 vvv --- #: valid: -20230131 vvv --- Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317 --- Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245 --- #: valid ^^^ --- #: next_check ^^^ --- #: last_checked ^^^
 # REMOVED --- #: by: https://berliner-abendblatt.de/2022/04/27/das-sind-die-aktuellen-staufallen-in-berlin/ (bis Anfang Juni 2022) --- #: source_id: viz2021:13.450705,52.480066,28.04.2022,09:00 (hier: bis 4.7.2022) (mittlerweile bis 30.9.2022) (bis 31.10.2022) (bis 30.11.2022) (bis 18.11.2022) --- #: source_id: viz2021:13.45071,52.48007,28.04.2022,09:00 (zusätzlicher Eintrag) (entfernt) --- #: by: https://nitter.net/VIZ_Berlin/status/1519602332090179585#m (hier: bis Anfang Juni 2022) --- #: by: https://nitter.net/pic/media%2FFRWA3_cWYAAYbnf.jpg%3Fname%3Dorig (südlich der Kreuzung) --- #: last_checked: 2022-11-07 --- #: next_check: 2022-11-18 --- #: valid: -20221118 --- Treptower Str./Werrastr.: Gegenverkehrsregelung	X::inwork 13650,8320
 # 
 #: source_id: viz2021:13.406514,52.51352,16.03.2021,08:00 (bis Ende 2022) (bis Ende 2023)
 #: note: Ampel ist eigentlich südöstlich der Einmündung gelegen
-#: last_checked: 2023-01-23
+#: last_checked: 2023-02-10
 #: check_frequency: 30d
 #: next_check: 2023-12-31
 Fischerinsel	F::inwork 10578,11969
@@ -134,7 +121,7 @@ Rathenower Str./Seydlitzstr.	X::inwork 7131,13261
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2023-01-15
+#: last_checked: 2023-02-11
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -210,7 +197,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2023-01-05
+#: last_checked: 2023-02-10
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -248,7 +235,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 # REMOVED (vermutlich nun funktionslos) --- #: next_check_id: RHINSTRASSENBRUECKE-2018 --- #: last_checked: 2021-05-03 --- #: check_frequency: 30d --- #: next_check: 2021-07-30 --- #: note: Anforderung, gilt auch für nach Süden fahrenden Radfahrer --- Rhinstr.: Seitenwechsel für nach Norden fahrende Radfahrer	F::inwork 18225,12697
 # 
 #: next_check_id: KASTANIENALLEE-2021
-#: last_checked: 2022-12-23 (mapillary) vvv
+#: last_checked: 2023-02-11 (mapillary) vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2021-10-29 vvv
 Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen auf den linken Bürgersteig wechseln	X::inwork 9073,20606
@@ -263,7 +250,7 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linke
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fußgängerampel nordöstlich der Einmündung; Anforderungsampel
-#: last_checked: 2023-01-28
+#: last_checked: 2023-02-10
 #: check_frequency: 90d
 #: next_check: 2025-01-01
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
@@ -2423,12 +2410,12 @@ S-Bahn und Regionalbahn	B 21562,12088
 	X 14170,10675
 # 
 #: next_check_id: FRIEDRICH-2020
-# REMOVED --- #: note: vorhandene Ampel ist dauerhaft abgeschaltet
-#: last_checked: 2023-01-18
-#: check_frequency: 30d
+#: note: vorhandene Ampel ist vermutlich dauerhaft abgeschaltet
+#: last_checked: 2023-02-10
+#: check_frequency: 90d
 # REMOVED --- #: next_check: 2022-12-31
 # REMOVED --- #: valid: !20200821-20211031
-	X 9418,11804
+	X0 9418,11804
 # 
 # REMOVED (abgeschafft, seit Verschwenkung der Autobahnausfahrt) --- #: XXX wird diese Ampel abgeschafft oder bleibt sie als faktische Fußgängerampel bestehen? --- #: last_checked: 2013-08-25 --- #: next_check: 2013-09-02 ---	F 14153,6795
 #: by: Andreas Mühlhausen: vvv
@@ -2785,6 +2772,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
 #: off: night? (seen Fri 2022-08-12 23:50)
 	X 14109,13449
 #: XXX_prog Radfahrer Richtung Heinz-Galinski-Str. müssen auch die Fußgängerampel benutzen; insgesamt drei Ampeln, unabhängig voneinander geschaltet
+#: XXX_prog Richtung Osten für Radfahrer auf dem Radweg nicht relevant (keine Haltelinie)
 #: note: Anforderungsampel
 	F 8144,16754
 	F 4122,11694
@@ -3194,7 +3182,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2023-01-26 (mapillary) vvv
+#: last_checked: 2023-02-10 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3216,7 +3204,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED (ausgeschaltet, vermutlich dauerhaft) ---
 # 
 #: next_check_id: CHAUSSEE-2020
-#: last_checked: 2023-01-15 (mapillary)
+#: last_checked: 2023-02-11 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2023-04-30
 	X::inwork 8732,14098
@@ -3550,7 +3538,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: CHAUSSEE-2020
 #: osm_watch: node id="26748289" version="9"
-#: last_checked: 2023-01-22 (mapillary)
+#: last_checked: 2023-02-12
 #: check_frequency: 60d
 #: next_check: 2023-04-30
 	X::inwork 8336,14586
@@ -3563,7 +3551,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX erst einmal provisorisch
 #: osm_watch: node id="7041133991" version="2"
 #: note: Anforderungsampel
-#: last_checked: 2022-12-17
+#: last_checked: 2023-02-12
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -3664,13 +3652,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296478" version="2"
 #: note: Anforderungsampel
-#: last_checked: 2023-01-14
+#: last_checked: 2023-02-08 (krickstadt)
 #: check_frequency: 120d
 	F::inwork 17695,5394
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296482" version="14"
 #: note: Anforderungsampel
-#: last_checked: 2023-01-14
+#: last_checked: 2023-02-08 (krickstadt)
 #: check_frequency: 120d
 	F::inwork 17747,5452
 # 

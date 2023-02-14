@@ -259,7 +259,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/2022/08/18/gegen-umbenennung-mohrenstrasse-koennen-nur-anwohner-vorgehen/
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2023-01-18 vvv
+#: last_checked: 2023-02-10 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -393,14 +393,14 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://www.bahninfo-forum.de/read.php?9,757005,757005#msg-757005 (Radfahren bleibt erstmal in Schrittgeschwindigkeit gestattet)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_04_0361_0452_online.pdf (Teileinziehung)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11668 (Anfrage)
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/harsche-kritik-am-alleingang-der-senatorin_a370655
+#: by: https://www.berliner-woche.de/mitte/c-verkehr/senatorin-fuehrt-fussgaengerzone-auf-friedrichstrasse-im-alleingang-ein_a371027
+#: by: https://berliner-abendblatt.de/2023/01/30/anrainer-der-friedrichstrasse-widersprueche-und-klagen/
 #: source_id: 2147346249 (vermutlich inaktiv)
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
-#: priority: #A
-#: last_checked: 2023-01-18
-#: check_frequency: 30d
-#: next_check: 2023-01-30
+# REMOVED --- #: priority: #A --- #: last_checked: 2023-01-18 --- #: check_frequency: 30d --- #: next_check: 2023-01-30
 # REMOVED --- #: valid: !20200821-20221122
-Friedrichstr. (Mitte, Kreuzberg)	H 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
+Friedrichstr. (Mitte, Kreuzberg)	NN 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
 # REMOVED --- #: valid: 20200821-20221122 --- Friedrichstr. (Mitte, Kreuzberg)	NN 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
 # 
 Friedrichstr. (Mitte, Kreuzberg)	H 9384,12103 9373,12197 9369,12253 9358,12351 9343,12464 9330,12538 9314,12652 9313,12662 9303,12718 9298,12765 9286,12886 9279,12953 9269,13060 9262,13111 9254,13171 9246,13235 9225,13389 9212,13471
@@ -878,7 +878,7 @@ Potsdamer Str. (Schöneberg, Tiergarten)	HH 7471,9360 7507,9458 7512,9572 7518,97
 #: by: https://www.deutsches-architekturforum.de/thread/5528-rund-um-den-potsdamer-platz/?postID=726648#post726648
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_42_2833_2916_online.pdf (Teileinziehung, Radverkehr wird möglich sein, eingezogener Bereich bis zur Schellingstr.)
 #: XXX wird die Straße zur Fußgängerzone?
-#: osm_watch: way id="4597334" version="26"
+#: osm_watch: way id="4597334" version="27"
 #: last_checked: 2023-01-26
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2022-12-31
@@ -1794,7 +1794,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/erschliessung-und-grundstuecksuebertragung-bebauungsplan-1-62b-oestlich-heidestrasse-otto-weidt-platz-1032336.php
 #: by: https://www.berliner-woche.de/moabit/c-bauen/golda-meir-steg-verbindet-jetzt-moabit-mit-mitte_a330725
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2023-01-22 (daf)
+#: last_checked: 2023-02-12
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -1807,7 +1807,7 @@ Lydia-Rabinowitsch-Str.	N 7820,13994 7930,14060 7973,13991 7959,13982 7865,13924
 (Am Hamburger Bahnhof - Lydia-Rabinowitsch-Str.)	NN 7997,13892 7959,13982
 #: XXX wie wird diese Straße heißen? Der erste Vorschlag "Annemarie-Renger-Str." wird es wohl nicht werden...
 # REMOVED (mittlerweile: Spielstraße) --- #: XXX wird es Einschränkungen für den Autoverkehr geben? --- es sieht aus nach: Einfahrt verboten, Tiefgarage frei
-#: last_checked: 2022-12-17
+#: last_checked: 2023-02-12
 #: check_frequency: 90d
 (Uferweg - Heidestr.)	N 8057,13923 7997,13892 7910,13848
 Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7781,14238 7697,14187
@@ -4879,7 +4879,7 @@ Rübländerstr.	N 14321,23378 14382,23574
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3988&date=20151213
 #: XXX Planstraße D --- bleibt dieser Weg erhalten?
 #: osm_watch: way id="224122378" version="15"
-#: last_checked: 2022-02-12 (mapillary)
+#: last_checked: 2022-06-06 (mapillary)
 #: check_frequency: 360d
 (S-Bahndamm - Hobrechtsfelder Chaussee)	NN 15469,24813 15339,24861 14434,25388
 (Bucher Teiche - Schönerlinder Chaussee)	NN 14321,25216 14056,25378 14036,25433 14017,25482 13942,25711 13966,25777 13970,25785 14106,26057 14187,26214 14491,26714 14497,26727
@@ -6877,7 +6877,7 @@ Eginhardstr.	N 18615,8269 18490,8104 18412,7985
 Lehndorffstr.	N 18401,8636 18397,8611 18407,8592 18428,8588 18448,8602
 Lehndorffstr.	N 18407,8592 18322,8470 18221,8328 18215,8316 18266,8160 18276,8136 18333,8059 18412,7985
 #: note: die Kreuzung Edisonstr./Wilhelminenhofstr. (17991,6431) hieß bis 1936 "Königsplatz" und wird auch heute selten so genannt. Siehe auch https://mein.berlin.de/mapideas/2018-00904/ und https://de.wikipedia.org/wiki/Liste_der_Stra%C3%9Fen_und_Pl%C3%A4tze_in_Berlin-Obersch%C3%B6neweide
-Edisonstr.	H 18010,7133 17934,7029 17919,6978 17919,6968 17962,6674 17991,6431 17948,6248 17930,6175
+Edisonstr.	H 18010,7133 17934,7029 17919,6978 17919,6968 17945,6788 17962,6674 17991,6431 17948,6248 17930,6175
 Obrikatstr.	N 17483,6024 17681,6212 17847,6089
 Obrikatstr.	NN 17847,6089 17900,6072
 (Schnellerstr. - Obrikatstr.)	NN 17628,5865 17678,5916
@@ -9881,24 +9881,27 @@ Nadrauer Str.	N 17215,26263 17367,26349
 (Pankeweg)	NN 16580,26154 16616,26158 16655,26127 16686,26128 16895,26295 16928,26311 17043,26407 17363,26609 17381,26585 17414,26524
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6192
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6262 (Vorlage zur Kenntnisnahme)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_06_0509_0660_online.pdf (Straßenbenennung, Wirksamkeit am 27. April 2023)
 #: XXX Straße soll in "Ilse-Krause-Str." umbenannt werden
 #: osm_watch: way id="14116958" version="9"
 #: last_checked: 2023-01-21 (indoor, noch kein Amtsblatt-Eintrag)
-# REMOVED --- #: next_check: 2022-12-31
+#: next_check: 2023-04-27
 Straße 5 (Buch)	N 17542,26302 17493,26391 17448,26469 17414,26524
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6191
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6260 (Vorlage zur Kenntnisnahme)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_06_0509_0660_online.pdf (Straßenbenennung, Wirksamkeit am 27. April 2023)
 #: XXX Straße soll in "Rosa-Coutelle-Str." umbenannt werden
 #: osm_watch: way id="14117217" version="8"
 #: last_checked: 2023-01-21 (indoor, noch kein Amtsblatt-Eintrag)
-# REMOVED --- #: next_check: 2022-12-31
+#: next_check: 2023-04-27
 Straße 6 (Buch)	N 17493,26391 17714,26509
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6193
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6263 (Vorlage zur Kenntnisnahme)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_06_0509_0660_online.pdf (Straßenbenennung, Wirksamkeit am 27. April 2023)
 #: XXX Straße soll in "Rose-Scheuer-Karpin-Str." umbenannt werden
 #: osm_watch: way id="14117181" version="15"
 #: last_checked: 2023-01-21 (indoor, noch kein Amtsblatt-Eintrag)
-# REMOVED --- #: next_check: 2022-12-31
+#: next_check: 2023-04-27
 Straße 7 (Buch)	N 17448,26469 17668,26607
 (Straße 7 - Zepernicker Str.)	N 17668,26607 17714,26509 17764,26410
 (Radweg Berlin-Usedom)	NN 17668,26607 17661,26617 17938,26787 17964,26823
@@ -11972,7 +11975,7 @@ Allée du Stade	N 3585,16252 3781,16175 4035,16051 4076,16017 4089,15978 4084,158
 (Uferweg am Hohenzollernkanal)	N 1737,15789 1349,15797
 (Uferweg am Hohenzollernkanal)	NN 1349,15797 1232,15804 1201,15804 364,15810 44,15897 -192,16054 -203,16064 -205,16086 -224,16095 -265,16111 -822,16535 -910,16608
 #: next_check_id: TEGELERBRUECKE-2021
-#: osm_watch: way id="930770437" version="4"
+#: osm_watch: way id="930770437" version="5"
 #: last_checked: 2022-10-08
 #: check_frequency: 180d
 #: next_check: 2023-12-01
@@ -13887,7 +13890,7 @@ August-Lindemann-Str.	N 14360,12792 14376,12849 14411,12951 14419,12978 14433,13
 #: note: Tor war offen am 2013-01-02 gegen 19:15, ebenso 2021-11-11 gegen 12:40
 #: note: am südlichen Ende kann man durch ein Tor zur Eldenaer Str. gelangen, allerdings ist nicht klar, ob das Tor manchmal (nachts?) zu ist; außerdem muss man Bordsteine und Kopfsteinpflaster überwinden, nicht besonders attraktiv
 (Weg im Blankensteinpark)	NN 14355,13109 14289,12876 14268,12799
-Erich-Nehlhans-Str.	N 13998,13272 14089,13247 14132,13234 14231,13204
+Erich-Nehlhans-Str.	N 13998,13272 14089,13247 14132,13234 14200,13213 14231,13204
 Richard-Ermisch-Str.	N 14252,13263 14231,13204 14211,13150 14180,13064 14166,13024 14130,12926 14096,12827
 #: note: Privatstraße
 Edith-Stein-Str.	N 14089,13247 14035,13104
@@ -13895,7 +13898,8 @@ Viehtrift	N 14130,12926 14029,12954 14015,12958 13886,12995
 Am Viehhof	N 14015,12958 13979,12861
 Zur Waage	N 14029,12954 14067,13050
 Zur Börse	N 14166,13024 14067,13050 13926,13090
-Zur Marktflagge	N 14180,13064 14086,13090 14035,13104 13943,13129
+Zur Marktflagge	N 14180,13064 14152,13072 14086,13090 14035,13104 13943,13129
+Zur Marktflagge [Wohngebietsstraße]	N 14152,13072 14200,13213
 Zur Innung	N 14086,13090 14132,13234
 (Zur Waage - Zur Innung)	NN 14067,13050 14086,13090
 #: note: Planstr. BS 13:
@@ -14598,7 +14602,7 @@ Kottmeierstr.	N 18645,6511 18801,6471 19118,6248
 Griechische Allee	N 17962,6674 18029,6674 18079,6678 18159,6642 18273,6606 18429,6582 18494,6588 18624,6520 18645,6511
 Griechische Allee	N 18494,6588 18339,6660 18254,6679 18158,6689 18119,6693 18076,6693 18025,6700 17962,6674
 (Griechischer Park Höhe Parsevalstr.)	NN 18159,6642 18162,6668 18158,6689
-Großstr.	N 18574,6401 18491,6464 18462,6495 18429,6582
+Großstr.	N 18574,6401 18487,6469 18462,6495 18429,6582
 Schillerpromenade (Oberschöneweide)	N 18191,6363 18219,6447 18246,6525 18273,6606
 #: note: Brademannbrücke
 (Fußgängerbrücke Ostkreuz)	NN 14808,10978 14763,10987 14738,10892 14810,10832
@@ -15348,7 +15352,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2023-01-27
+#: last_checked: 2023-02-11
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15735,7 +15739,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2023-01-27
+#: last_checked: 2023-02-11
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -16039,7 +16043,7 @@ Manga-Bell-Platz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,1
 #: add_fragezeichen: Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: osm_watch: way id="5199719" version="19"
 #: also_indoor: search Maji-Maji-Allee
-#: last_checked: 2022-11-08
+#: last_checked: 2023-02-05 (research)
 #: check_frequency: 90d
 Petersallee	N 5426,16539 5533,16662
 #: next_check_id: AFRIKANISCHESVIERTEL-2020
@@ -16052,7 +16056,7 @@ Petersallee	N 5426,16539 5533,16662
 #: add_fragezeichen: Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: osm_watch: way id="47347069" version="14"
 #: also_indoor: search Anna-Mungunda-Allee
-#: last_checked: 2022-11-08
+#: last_checked: 2023-02-05 (research)
 #: check_frequency: 90d
 Petersallee	N 5581,16708 5639,16768 5684,16815 5772,16919
 Usambarastr.	N 5526,16916 5565,16923 5684,16815
@@ -17361,9 +17365,11 @@ Emmichstr.	N 7285,2377 7370,2400 7424,2400 7559,2385 7648,2356
 #: by: https://berliner-abendblatt.de/2022/10/07/maerckerweg-in-lankwitz-umbenennung-sorgt-fuer-chaos/
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8510 (Anfrage)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_50_3473_3552_online.pdf (Wirksamkeit der Umbenennung am 17. Februar 2023)
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1292075.php (Benennungsfeier)
 #: XXX geplante Umbenennung in Maria-Rimkus-Weg; im DPAG-Mitteilungsblatt 03/2022 ist die Umbenennung aufgelistet; im DPAG-Mitteilungsblatt 09/2022 wurde wieder zurückbenannt
 #: also_indoor: search Maria-Rimkus-Weg
-#: osm_watch: way id="4792052" version="12"
+#: osm_watch: way id="4792052" version="13"
+#: priority: #B
 #: last_checked: 2022-09-04
 # REMOVED --- #: check_frequency: 30d
 #: next_check: 2023-02-17
@@ -17782,7 +17788,9 @@ Hiroshimasteg	NN 7252,11188 7248,11143
 Zeppelinstr. (Oberschöneweide)	N 18700,6604 18417,6775 18240,6845 18041,6924 17919,6968
 Triniusstr. (Oberschöneweide)	N 18273,6606 18339,6660 18417,6775 18492,6893
 Fontanestr. (Oberschöneweide)	N 18225,7004 18240,6845 18254,6679 18273,6606
-Roedernstr. (Oberschöneweide)	N 18010,7133 18019,7071 18041,6924 18068,6748 18076,6693 18079,6678
+Roedernstr. (Oberschöneweide)	N 18010,7133 18019,7071 18041,6924 18059,6804 18068,6748 18076,6693 18079,6678
+(Roedernstr. - Edisonstr.)	N 18059,6804 17981,6793
+(Roedernstr. - Edisonstr.)	NN 17981,6793 17945,6788
 Antoniuskirchstr.	N 18119,6693 18147,6747 18122,6773 18068,6748
 Keplerstr. (Oberschöneweide)	N 19161,6291 19259,6133 19283,6123
 Scharnweberstr. (Oberschöneweide)	N 19344,6119 19495,6029 19650,5920
@@ -17841,7 +17849,7 @@ Gustav-Mahler-Platz	N 3756,6127 3878,6110
 Rückertstr. (Steglitz)	N 4028,6099 4118,6091 4238,6080
 Buggestr.	N 3800,6418 3899,6411 3926,6409 4045,6402 4117,6435 4178,6507 4218,6583
 Goethestr. (Oberschöneweide)	NN 18025,6700 18029,6674
-Goethestr. (Oberschöneweide)	N 18029,6674 18035,6621 18057,6575 18092,6523 18219,6447 18429,6407 18491,6464
+Goethestr. (Oberschöneweide)	N 18029,6674 18035,6621 18057,6575 18092,6523 18219,6447 18436,6396 18487,6469
 Kilianistr.	N 18127,6556 18246,6525 18462,6495
 Beymestr.	N 5499,4999 5797,4846
 Reiherbeize	N 593,4262 444,4498
@@ -18372,7 +18380,11 @@ Bautzener Platz	NN 8102,9262 8183,9260
 Lilli-Henoch-Str.	N 12584,14928 12477,14987 12393,15030 12357,15020 12314,15008 12317,14967 12347,14931 12359,14904 12388,14926 12357,15020
 (Güterbahnhof Greifswalder Str.)	N 12477,14987 12520,15057 12602,15006 12649,14977 12727,14929 12717,14908 12620,14979
 (Danziger Str. - Lilli-Henoch-Str.)	NN 12123,14643 12174,14739 12183,14757 12193,14775 12212,14781 12252,14860 12236,14870 12314,15008
-(Prenzlauer Allee - Lilli-Henoch-Str.)	NN 11877,15366 11937,15349 12003,15311 12103,15218 12208,15108 12284,15068 12314,15008
+#: historical_note: früher "(Prenzlauer Allee - Lilli-Henoch-Str.)"
+(Prenzlauer Allee - Diesterwegstr.)	NN 11877,15366 11937,15349 12003,15311 12103,15218
+(Prenzlauer Allee - Lilli-Henoch-Str.)	NN 12103,15218 12208,15108
+#: historical_note: früher "(Prenzlauer Allee - Lilli-Henoch-Str.)"
+(Ella-Kay-Str. - Lilli-Henoch-Str.)	NN 12208,15108 12284,15068 12314,15008
 (Verlängerte Diesterwegstr.)	NN 12056,15159 12082,15206 12103,15218
 (Prenzlauer Allee - Lilli-Henoch-Str.)	NN 11860,15309 11919,15314 11937,15349
 Olga-Benario-Prestes-Str.	N 12628,14650 12473,14763
@@ -18672,14 +18684,14 @@ Philippstr.	N 8892,13498 8833,13440
 Claire-Waldoff-Str.	N 9246,13235 9132,13187
 Am Zirkus	N 9118,13070 9137,13032
 Am Zirkus	N 9090,13009 9137,13032 9167,13046 9212,12969 9239,12923
-Bertolt-Brecht-Platz	N 9193,12875 9160,12932
+Bertolt-Brecht-Platz	N 9193,12875 9153,12928
 #: XXX für den Autoverkehr mittlerweile gesperrt?
 #: XXX oder eventuell wird das eine Einbahnstraße, wenn die Bauarbeiten an der Pankebrücke beendet sind (Schilder hängen schon, obwohl es eine Sackgasse ist?!)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_19_2765_2928_online.pdf
-#: osm_watch: way id="327518240" version="8"
-#: last_checked: 2023-01-05
+#: osm_watch: way id="327518240" version="9"
+#: last_checked: 2023-02-10
 #: check_frequency: 90d
-(Straße vor dem Berliner Ensemble)	N 9212,12969 9160,12932
+(Straße vor dem Berliner Ensemble)	N 9212,12969 9153,12928
 Karlplatz	N 8711,12986 8676,12976
 Charitéstr.	N 8693,12951 8676,12976 8632,13037
 Margarete-Steffin-Str.	N 8315,13181 8406,13127 8525,12958 8559,12912 8631,12848 8700,12810 8732,12804
@@ -18934,7 +18946,7 @@ Hanseatenweg	N 6442,12545 6445,12495 6428,12439 6368,12455 6324,12455 6314,12518
 #: XXX wie sieht die Zukunft dieser Straße aus? (Widmung als Grünanlage)
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8819
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036923752617/923752617/00406668/68-Anlagen/02/MA_1265_V.pdf
-#: osm_watch: way id="26590565" version="17"
+#: osm_watch: way id="26590565" version="18"
 #: last_checked: 2022-12-28
 #: check_frequency: 120d
 (Zufahrt Parkplätze Klopstockstr.)	N 5909,12073 5870,12106 5982,12291
@@ -20242,10 +20254,10 @@ Am Kaniswall	N 32823,-149 32817,4 32872,128
 (Umleitungsstrecke im Tiergarten)	NN 6164,11947 6132,11984 6024,11978 5925,11943 5900,11913
 # 
 #: next_check_id: PYRAMIDENBRUECKE-2022
-#: last_checked: 2023-01-15
+#: last_checked: 2023-02-05 (mapillary)
 #: check_frequency: 180d
 (südliche Behelfsbrücke an der Pyramidenbrücke)	NN 21519,5767 21545,5738 21553,5698 21581,5670 21630,5600 21649,5617
-#: last_checked: 2023-01-15
+#: last_checked: 2023-02-05 (mapillary)
 #: check_frequency: 30d
 (Umfahrung Baustelle Pyramidenbrücke)	NN 21651,5730 21666,5705 21632,5670 21605,5687
 # 

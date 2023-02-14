@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2017,2018,2019,2020,2021,2022 Slaven Rezic. All rights reserved.
+# Copyright (C) 2017,2018,2019,2020,2021,2022,2023 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -17,9 +17,10 @@ use lib "$FindBin::RealBin/..", "$FindBin::RealBin/../lib";
 
 use Doit;
 use Doit::Log;
-use Doit::Util qw(in_directory);
+use Doit::Util qw(in_directory copy_stat);
 
 use Cwd qw(realpath);
+use File::Basename qw(basename dirname);
 use File::Glob qw(bsd_glob);
 use File::Temp qw(tempdir);
 use Getopt::Long;
@@ -87,7 +88,7 @@ sub _dockerfile_frag_src ($) {
     }
     if ($optref->{src} eq 'github') {
 	$dockerfile .= <<EOF;
-RUN git clone --depth=1 https://github.com/eserte/bbbike.git$branch_args
+RUN git clone --depth=1 https://github.com/eserte/bbbike.git$branch_args /bbbike
 EOF
     } elsif ($optref->{src} eq 'local') {
 	$dockerfile .= <<EOF;
@@ -99,9 +100,20 @@ EOF
     $dockerfile;
 }
 
-sub _add_invalidate_cmd ($) {
-    my $dockerfile_ref = shift;
-    $$dockerfile_ref .= <<"EOF";
+sub _dockerfile_apt_auth ($) {
+    my $optref = shift;
+    my $dockerfile = '';
+
+    if ($optref->{distver} eq 'jessie') {
+	$dockerfile .= <<EOF;
+RUN echo "APT::Get::AllowUnauthenticated 1;" > /etc/apt/apt.conf.d/02allow-unsigned
+EOF
+    }
+    $dockerfile;
+}
+
+sub _dockerfile_invalidate_cache () {
+    <<"EOF";
 # Just a hack to make sure that the following lines
 # are executed at least once a day
 RUN echo @{[ POSIX::strftime("%F", localtime) ]}
@@ -148,7 +160,17 @@ sub gui {
     my $dockerfile = <<EOF;
 FROM $opt{dist}:$opt{distver}
 EOF
-    _add_invalidate_cmd(\$dockerfile) if $opt{'invalidate-apt'};
+    $dockerfile .= _dockerfile_invalidate_cache if $opt{'invalidate-apt'};
+
+    my $username;
+    if ($^O ne 'MSWin32') {
+	my $uid = $<;
+	$username = (getpwuid($uid))[0];
+	$dockerfile .= <<"EOF";
+RUN adduser --disabled-password --force-badname -u $uid --gecos '' $username
+EOF
+    }
+
     if ($opt{src} =~ m{^(github|local)$}) {
 	my @packages = qw(perl-tk);
 	if ($opt{'feature-pdf'}) {
@@ -164,17 +186,25 @@ EOF
 RUN apt-get update && apt-get install -qqy @packages
 EOF
 	if ($opt{src} eq 'github') {
+	    $dockerfile .= <<'EOF';
+RUN mkdir bbbike
+EOF
+	    if (defined $username) {
+		$dockerfile .= <<"EOF";
+RUN chown $username bbbike
+EOF
+	    }
 	    $docker_cmd = "git clone --depth=1 https://github.com/eserte/bbbike.git && bbbike/bbbike $opt{'bbbike-args'}";
 	} elsif ($opt{src} eq 'local') {
 	    $docker_cmd = "/bbbike/bbbike $opt{'bbbike-args'}";
 	}
     } elsif ($opt{src} =~ m{\.deb$}) {
-	require File::Basename;
-	my $base_src = File::Basename::basename($opt{src});
+	my $base_src = basename $opt{src};
 	$dockerfile .= <<EOF;
-COPY $base_src /tmp
-COPY install-deb /tmp
+COPY $base_src /tmp/
+COPY install-deb /tmp/
 WORKDIR /tmp
+RUN apt-get update
 RUN sh install-deb $add_apt_args ./$base_src
 EOF
 	$docker_cmd = "bbbike $opt{'bbbike-args'}";
@@ -182,12 +212,8 @@ EOF
 	usage "Invalid --src value '$opt{src}', only 'github', 'local' or a path to a .deb are possible";
     }
 
-    my $username;
-    if ($^O ne 'MSWin32') {
-	my $uid = $<;
-	$username = (getpwuid($uid))[0];
+    if (defined $username) {
 	$dockerfile .= <<"EOF";
-RUN adduser --disabled-password --force-badname -u $uid --gecos '' $username
 USER $username
 EOF
     }
@@ -241,8 +267,14 @@ EOF
     $doit->write_binary("$docker_context_dir/Dockerfile", $dockerfile);
 
     if ($opt{src} =~ m{\.deb$}) {
-	$doit->copy($opt{src}, $docker_context_dir);
-	$doit->copy("$FindBin::RealBin/../port/debian/helper/install-deb", $docker_context_dir);
+	for my $copy_def (
+			  [$opt{src}, $docker_context_dir],
+			  ["$FindBin::RealBin/../port/debian/helper/install-deb", $docker_context_dir],
+			 ) {
+	    my($src,$dest) = @$copy_def;
+	    $doit->copy($src, $dest);
+	    copy_stat($src, "$dest/" . basename($src));
+	}
     }
 
     my $tag = 'bbbike-gui-'.$opt{dist}.'-'.$opt{distver};
@@ -345,6 +377,15 @@ sub ci {
 	$image .= "-" . $opt{'image-variant'};
     }
 
+    if (defined $opt{'cover-dir'}) {
+	if ($opt{'with-data-build'}) {
+	    error "--cover-dir conflicts with --with-data-build option";
+	}
+	if (!-d $opt{'cover-dir'}) {
+	    $doit->make_path($opt{'cover-dir'});
+	}
+    }
+
     ## Build the Dockerfile
     my $dockerfile = <<EOF;
 FROM $image
@@ -388,14 +429,10 @@ EOF
 RUN echo 'Acquire::Retries "3";' > /etc/apt/apt.conf.d/80-retries
 EOF
 
-    if ($opt{distver} eq 'jessie') {
-	$dockerfile .= <<EOF;
-RUN echo "APT::Get::AllowUnauthenticated 1;" > /etc/apt/apt.conf.d/02allow-unsigned
-EOF
-    }
+    $dockerfile .= _dockerfile_apt_auth(\%opt);
 
     # basic packages
-    _add_invalidate_cmd(\$dockerfile) if $opt{'invalidate-apt'};
+    $dockerfile .= _dockerfile_invalidate_cache if $opt{'invalidate-apt'};
     $dockerfile .= <<EOF;
 RUN apt-get update -qq && apt-get install -qqy git cpanminus libssl-dev wget
 EOF
@@ -458,8 +495,6 @@ ENV $key "$val"
 EOF
     }
 
-    $dockerfile .= _dockerfile_frag_src(\%opt);
-
     # Emulate .travis.yml
     $dockerfile .= <<EOF;
 ENV TRAVIS_BUILD_DIR /bbbike
@@ -486,6 +521,11 @@ RUN /bin/bash --login -e -c "wrapper install_old_perl_dependencies"
 RUN /bin/bash --login -e -c "wrapper install_webserver_dependencies"
 RUN /bin/bash --login -e -c "wrapper install_selenium"
 RUN /bin/bash --login -e -c "wrapper install_perl_dependencies"
+EOF
+
+    $dockerfile .= _dockerfile_frag_src(\%opt);
+
+    $dockerfile .= <<EOF;
 RUN /bin/bash --login -e -c "wrapper init_cgi_config"
 RUN /bin/bash --login -e -c "wrapper fix_cgis"
 RUN /bin/bash --login -e -c "wrapper init_webserver_config"
@@ -514,9 +554,19 @@ RUN apt-get install -qqy \\
 EOF
     }
 
+    # Dependencies for test coverage
+    if (defined $opt{'cover-dir'}) {
+	$dockerfile .= <<EOF
+RUN apt-get install -qqy \\
+    libdevel-cover-perl
+EOF
+    }
+
     # Start all services and finally run the test suite
     $dockerfile .= qq{CMD /bin/bash --login -e -c "wrapper start_webserver && wrapper start_xserver && wrapper init_webserver_environment && wrapper start_selenium && wrapper init_data && perl Makefile.PL && make distcheck && };
-    if (!$opt{'with-data-build'}) {
+    if (defined $opt{'cover-dir'}) {
+	$dockerfile .= qq{make ext coverage && used_config};
+    } elsif (!$opt{'with-data-build'}) {
 	$dockerfile .= qq{HARNESS_TIMER=1 make test HARNESS_OPTIONS=j$opt{jobs} && used_config};
     } else {
 	# ... except in with-data-build mode; actual test will run later (see below)
@@ -558,8 +608,13 @@ EOF
 
 	my @errors;
 	if (!$opt{'with-data-build'}) {
+	    my @docker_cmd = (qw(docker run --rm --name), $tag);
+	    if (defined $opt{'cover-dir'}) {
+		push @docker_cmd, '-v', $opt{'cover-dir'}.':/bbbike/cover_db';
+	    }
+	    push @docker_cmd, $tag;
 	    eval {
-		$doit->system(qw(docker run --rm --name), $tag, $tag);
+		$doit->system(@docker_cmd);
 	    };
 	    if ($@) {
 		push @errors, "docker run failed: $@";
@@ -618,12 +673,10 @@ sub build_deb {
     my($doit, %opt) = @_;
     lock_keys %opt;
 
-    require File::Basename;
-
     my($distfile, $distvname);
     if ($opt{distfile}) {
 	$distfile = $opt{distfile};
-	($distvname = File::Basename::basename($distfile)) =~ s{.tar.gz$}{};
+	($distvname = basename($distfile)) =~ s{.tar.gz$}{};
     } else {
 	require BBBikeBuildUtil;
 	my $bsdmake = BBBikeBuildUtil::get_pmake(fallback => 0);
@@ -640,7 +693,7 @@ sub build_deb {
     if (!-s $distfile) {
 	error "Expected distfile $distfile is missing";
     }
-    my $distbasefile = File::Basename::basename($distfile);
+    my $distbasefile = basename $distfile;
 
     # Look into tarball for Debian version
     my $dist_tempdir = tempdir("bbbike_deb_XXXXXXXX", TMPDIR => 1, CLEANUP => 1);
@@ -664,7 +717,7 @@ sub build_deb {
     my $dockerfile = <<EOF;
 FROM $opt{dist}:$opt{distver}
 EOF
-    _add_invalidate_cmd(\$dockerfile) if $opt{'invalidate-apt'};
+    $dockerfile .= _dockerfile_invalidate_cache if $opt{'invalidate-apt'};
     $dockerfile .= <<EOF;
 RUN apt-get update && apt-get install -qqy dpkg-dev lintian rsync debhelper
 RUN mkdir /bbbike
@@ -695,6 +748,8 @@ sub cgi {
     my $pwd = save_pwd2;
     chdir bbbike_root or die "Can't chdir: $!";
 
+    my $docker_port = 5000;
+
     my $use_bbbike_ppa;
     if (defined $opt{'use-bbbike-ppa'}) {
 	$use_bbbike_ppa = $opt{'use-bbbike-ppa'};
@@ -705,17 +760,16 @@ sub cgi {
 
     # Prepare docker environment
     my $docker_context_dir = tempdir("docker_context_XXXXXXXX", TMPDIR => 1, CLEANUP => 1);
-    require File::Basename;
     require ExtUtils::Manifest;
     ExtUtils::Manifest::manicopy(ExtUtils::Manifest::maniread(), $docker_context_dir, "cp");
     # Additional files needed not listed in MANIFEST
     for my $f ("cgi/GNUmakefile", "cgi/Makefile", "miscsrc/b2gmake") {
-	$doit->copy("$FindBin::RealBin/../$f", "$docker_context_dir/" . File::Basename::dirname($f));
+	$doit->copy("$FindBin::RealBin/../$f", "$docker_context_dir/" . dirname($f));
     }
     if ($opt{mapserver}) {
 	# XXX Actually it would be easier to copy everything in the repository, not just the files mentioned in MANIFEST
 	for my $f ("data/Makefile", "data/Makefile.mapfiles", "data/Makefile.garmin", "data/BASE", bsd_glob("data/*-orig"), "data/temp_blockings/bbbike-temp-blockings.pl", bsd_glob("data/temp_blockings/*.bbd"),  bsd_glob("miscsrc/*")) {
-	    my($src, $dest) = ("$FindBin::RealBin/../$f", "$docker_context_dir/" . File::Basename::dirname($f));
+	    my($src, $dest) = ("$FindBin::RealBin/../$f", "$docker_context_dir/" . dirname($f));
 	    next if -d $src; # ignore directories in miscsrc
 	    $doit->copy($src, $dest);
 	}
@@ -728,8 +782,9 @@ sub cgi {
     my $dockerfile = <<EOF;
 FROM $opt{dist}:$opt{distver}
 EOF
-    _add_invalidate_cmd(\$dockerfile) if $opt{'invalidate-apt'};
-    my $docker_port = 5000;
+    $dockerfile .= _dockerfile_invalidate_cache if $opt{'invalidate-apt'};
+    $dockerfile .= _dockerfile_apt_auth(\%opt);
+
     my $fonts_dejavu_package = (
 				(
 				 ($opt{dist} eq 'ubuntu' && $opt{distver} =~ m{^(trusty|precise|xenial)$}) ||
@@ -920,8 +975,8 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 } elsif ($subcmd eq 'ci' || $subcmd eq 'test' || $subcmd eq 'travis-ci') {
     my %opt = (
 	       jobs    => 1,
-	       dist    => 'ubuntu',
-	       distver => 'trusty',
+	       dist    => 'debian',
+	       distver => 'jessie',
 	       src     => 'github',
 	       branch  => undef,
 	       env     => {},
@@ -931,6 +986,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       'invalidate-apt' => 0,
 	       'perl-ver' => undef,
 	       'image-variant' => undef,
+	       'cover-dir' => undef,
 	      );
     GetOptions(\%opt,
 	       "jobs|j=i",
@@ -945,6 +1001,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       'invalidate-apt!',
 	       'perl-ver=s',
 	       'image-variant=s',
+	       'cover-dir=s',
 	      )
 	or usage_ci;
     _check_distver $opt{distver};
@@ -1086,6 +1143,13 @@ source directory into the docker container:
 A crontab entry may look like this:
 
     48 0 * * *      mkdir -p $HOME/log/docker-bbbike-debian-jessie && cd $HOME/cvrsnica/src/bbbike && ./miscsrc/docker-bbbike test --dist debian --distver jessie --src local --env BBBIKE_TEST_SKIP_MAPSERVER=0 > $HOME/log/docker-bbbike-debian-jessie/$(date +\%FT\%T.log) 2>&1
+
+Coverage testing may be activated using the C<--cover-dir> option
+which needs to be set to a directory which contains the coverage
+files, including F<coverage.html>:
+
+    ./miscsrc/docker-bbbike ci --cover-dir /tmp/bbbike-cover_db
+    firefox /tmp/bbbike-cover_db/coverage.html
 
 =head2 DEB PACKAGE BUILD
 
