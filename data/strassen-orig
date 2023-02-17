@@ -1421,6 +1421,7 @@ Mühlendamm	HH 10512,12039 10574,12131 10625,12206 10646,12234 10662,12255 10697,
 # REMOVED --- #: note: früher Hauptverkehrsstraße, jetzt nur noch als Gehweg übrig, wird beim Umbau des Molkenmarkts um/zurückgebaut --- (Molkenmarkt - zur Stralauer Str.)	NN 10736,12285 10772,12288
 Littenstr.	N 11155,12184 11139,12243 11088,12382 11084,12395 11065,12452 10973,12612 10951,12637
 Magazinstr. (Mitte)	N 11562,12597 11329,12497
+#: note: Privatstraße ("Unbefugten ist das Betreten und Befahren verboten")
 (zwischen VoltAir und The Student Hotel)	N 11240,12368 11344,12410
 Voltairestr.	N 11329,12497 11202,12426 11088,12382
 Stralauer Str.	HH 10697,12303 10772,12288 10830,12279 10951,12249 11094,12243 11139,12243 11221,12250 11300,12241 11347,12223
@@ -1536,7 +1537,7 @@ Annenstr. (Mitte)	NH 10815,11662 10892,11555 11039,11425 11052,11414 11094,11377
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/artikel.1209145.php (2018-2024)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/schmidtstrasse_lageplan.pdf
 #: XXX Hier soll es eine Einbahnstraßenregelung Radfahrer frei geben; evtl. wird auch die Qualtität besser werden
-#: last_checked: 2023-01-05
+#: last_checked: 2023-02-15 (mapillary)
 #: check_frequency: 180d
 #: next_check: 2024-12-31
 Annenstr. [Wohngebiet] (Mitte)	N 11192,11429 11259,11391 11217,11288
@@ -2526,14 +2527,14 @@ Neuköllnische Allee	H 14011,7103 14069,7100 14196,7086 14310,7022 14344,7003
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a100_16_ba/pix/los1/NKA_Sperrung_Ueplan_Fussgaenger_gr.gif
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.777571.php
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/a100-baustelle-grenzallee-wieder-offen_a198400
-#: last_checked: 2022-12-04
+#: last_checked: 2023-02-16
 #: check_frequency: 90d
 #: next_check: 2023-06-30
 # REMOVED --- (provisorische Umfahrung)	NN 14310,7022 14323,7080 14235,7100 14223,7084 14196,7086
 (provisorische Umfahrung)	NN 14310,7022 14276,7021 14245,7037 14236,7058 14196,7086
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
-#: last_checked: 2023-01-04 vvv
+#: last_checked: 2023-02-16 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 #: valid: 20140224-20230630
@@ -2696,7 +2697,7 @@ Straße 12 (Neukölln)	N 13882,6674 13881,6634 13915,6592
 (Grenzallee - Britzer Hafensteg)	NN 13881,6634 13831,6588 13857,6523 13864,6415 13984,6270 13993,6221
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
-#: last_checked: 2022-12-22 vvv
+#: last_checked: 2023-02-16 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 #: valid: 20140224-20230630
@@ -2739,6 +2740,11 @@ Rudolf-Baschant-Str.	N 12898,16898 12837,16853
 Wilhelm-Wagenfeld-Str.	N 12789,16977 12797,16983 12810,16994 12853,17024 12877,17039
 Johannes-Itten-Str.	N 12797,16983 12850,16911 12813,16884
 Buschallee	H 14619,16551 14809,16525 15134,16499 15142,16499 15437,16491 15541,16479 15771,16421 15843,16400
+#: osm.highway: service
+(Buschallee - Falkenberger Str.)	N 15134,16499 15131,16618
+(Buschallee - Falkenberger Str.)	NN 15131,16618 15144,16701
+#: osm.highway: service
+(Buschallee - Falkenberger Str.)	N 15144,16701 15139,16747
 Else-Jahn-Str.	N 15120,16349 14807,16396 14769,16414
 (Hansastr. - Gartenstr.)	NN 15194,16186 15143,16210 15104,16218 14806,16279 14665,16294
 (Hansastr. - Gartenstr.)	NN 14806,16279 14717,16355
@@ -2746,7 +2752,7 @@ Gartenstr. (Weißensee)	N 14522,16260 14628,16249 14665,16294 14692,16328 14717,1
 Wegenerstr. (Weißensee)	N 14556,16391 14692,16328
 Sulzfelder Str.	N 15134,16499 15120,16349
 (Sulzfelder Str. - Hansastr.)	NN 15120,16349 15120,16305 15112,16262 15104,16218
-Falkenberger Str.	H 14622,16674 14723,16686 14836,16701 15219,16759 15235,16761 15333,16776 15370,16781 15635,16833
+Falkenberger Str.	H 14622,16674 14723,16686 14836,16701 15139,16747 15219,16759 15235,16761 15333,16776 15370,16781 15635,16833
 Falkenberger Str.	N 15635,16833 15819,16857
 Falkenberger Str.	NN 15819,16857 15892,16834
 Trierer Str.	N 14800,16887 14796,16856 14732,16770 14717,16751 14723,16686
@@ -14063,7 +14069,7 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED (Verschwenkung realisiert) --- #: XXX Verschwenkung der Bergiusstr. --- #: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle --- #: XXX wahrscheinlich ist auch die alte Ampel abgeschaltet? --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1308/nachricht5044.html --- #: prio: #A --- #: next_check: 2013-08-23
 # REMOVED (nein, keine Schilder) --- #: XXX als Bergiusstr. ausgeschildert? --- #: next_check: 2013-09-04
 # REMOVED --- #: last_checked: 2021-03-30 --- #: check_frequency: 90d --- #: next_check: 2021-12-31 --- #: next_check: 2021-04-02 --- (Zufahrt zur Bergiusstr.)	NN 14051,6731 14106,6663
-#: last_checked: 2023-01-04 vvv
+#: last_checked: 2023-02-16 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 #: XXX im Zuge des A100-Ausbaus wird die Bergiusstr. verschwenkt
@@ -15497,8 +15503,8 @@ Mengerzeile	N 13098,9205 13176,9302
 Schmollerstr.	N 13298,9252 13206,9335
 Schmollerplatz	N 13178,9363 13234,9426 13298,9491 13270,9518 13202,9455 13124,9375 13111,9361 13126,9347 13176,9302 13206,9335 13178,9363
 Wildenbruchplatz	N 13138,8762 13227,8692 13314,8624
-Finowstr. (Neukölln)	N 13227,8692 13171,8621 13124,8562 13011,8416
-Kleine Innstr.	N 13171,8621 13262,8554
+Finowstr. (Neukölln)	N 13227,8692 13173,8623 13124,8562 13011,8416
+Kleine Innstr.	N 13173,8623 13262,8554
 Erlanger Str.	N 12349,8464 12293,8494 12166,8557
 Sasarsteig	NN 12165,8566 12115,8556 12057,8529
 (Weichselstr. - Sasarsteig)	NN 12330,8636 12300,8613 12274,8607 12276,8590 12165,8566
@@ -15769,8 +15775,8 @@ Bleicheroder Str.	N 11263,18842 11439,18890 11526,18929 11622,18964 11727,19001 
 #: by: https://www.deutsches-architekturforum.de/thread/11142-pankow-ot-von-pankow-kleinere-projekte/?postID=724110#post724110
 #: by: https://www.meyer-bau.de/pdf/download?url=https://www.meyer-bau.de/de/referenzen/hochbau/berlin-neubau-mehrfamilienhaus.html
 #: XXX Wird dieser Weg zurückgebaut? Evtl. als "Ersatz" den nördlich verlaufenden Weg aufnehmen?
-#: osm_watch: way id="59204281" version="8"
-#: osm_watch: way id="881307384" version="2"
+#: osm_watch: way id="59204281" version="9"
+#: osm_watch: way id="881307384" version="3"
 #: last_checked: 2022-05-14
 #: check_frequency: 360d
 (Pasewalker Str. - Vesaliusstr.)	NN 11884,19169 11841,19188 11763,19191
@@ -17366,14 +17372,9 @@ Emmichstr.	N 7285,2377 7370,2400 7424,2400 7559,2385 7648,2356
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8510 (Anfrage)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_50_3473_3552_online.pdf (Wirksamkeit der Umbenennung am 17. Februar 2023)
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1292075.php (Benennungsfeier)
-#: XXX geplante Umbenennung in Maria-Rimkus-Weg; im DPAG-Mitteilungsblatt 03/2022 ist die Umbenennung aufgelistet; im DPAG-Mitteilungsblatt 09/2022 wurde wieder zurückbenannt
-#: also_indoor: search Maria-Rimkus-Weg
-#: osm_watch: way id="4792052" version="13"
-#: priority: #B
-#: last_checked: 2022-09-04
-# REMOVED --- #: check_frequency: 30d
-#: next_check: 2023-02-17
-Maerckerweg	N 7559,2385 7602,2522
+# REMOVED --- #: XXX geplante Umbenennung in Maria-Rimkus-Weg; im DPAG-Mitteilungsblatt 03/2022 ist die Umbenennung aufgelistet; im DPAG-Mitteilungsblatt 09/2022 wurde wieder zurückbenannt --- #: also_indoor: search Maria-Rimkus-Weg --- #: osm_watch: way id="4792052" version="13" --- #: priority: #B --- #: last_checked: 2022-09-04 --- # REMOVED --- #: check_frequency: 30d --- #: next_check: 2023-02-17
+#: oldname: -20230217: Maerckerweg
+Maria-Rimkus-Weg	N 7559,2385 7602,2522
 #: note: relativ stark befahren, evtl. NH? (Aber keine Vorfahrtstraße)
 Eiswaldtstr.	N 6718,2443 6862,2452 6965,2418 7051,2366 7172,2343 7285,2377
 Beselerstr.	N 7034,2586 6965,2418

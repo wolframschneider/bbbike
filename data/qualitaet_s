@@ -1641,9 +1641,9 @@ Rütlistr.: Betonpflaster	Q0 12592,9249 12621,9297
 Schleusenufer: Kopfsteinpflaster	Q2 13487,10227 13628,10396
 Schmollerplatz: Beton	Q1 13270,9518 13298,9491
 Wildenbruchplatz: mäßiges Kopfsteinpflaster	Q2 13138,8762 13227,8692 13314,8624
-Finowstr. (Neukölln): Kopfsteinpflaster	Q2 13227,8692 13171,8621 13124,8562
+Finowstr. (Neukölln): Kopfsteinpflaster	Q2 13227,8692 13173,8623 13124,8562
 Finowstr. (Neukölln): Asphalt	Q0 13124,8562 13011,8416
-Kleine Innstr.: Asphalt	Q0 13171,8621 13262,8554
+Kleine Innstr.: Asphalt	Q0 13173,8623 13262,8554
 Erlanger Str.: Kopfsteinpflaster	Q2 12293,8494 12166,8557
 Tellstr.: Kopfsteinpflaster	Q2 12323,8917 12406,9076
 Jansastr.: Kopfsteinpflaster	Q2 12429,8856 12524,9012
@@ -3479,7 +3479,7 @@ Schleizer Str.: Asphalt	Q0 17231,14979 17562,14992 17608,15010
 Lichtenauer Str.: Beton	Q1 16835,15188 17062,15184
 Lichtenauer Str.: Verbundsteinpflaster	Q1 17062,15184 17221,15181
 Lindenweg (Alt-Hohenschönhausen): Asphalt	Q0 16251,15629 16297,15737 16360,15889
-Waldowstr.: brüchiger Asphalt	Q1 15856,15924 16080,15830
+Waldowstr.: Asphalt	Q0 15856,15924 16080,15830
 Waldowstr.: Asphalt	Q0 16080,15830 16297,15737 16469,15659 16497,15636
 Oberseestr.: Asphalt	Q0 16615,15737 16537,15827
 (Oberseestr. - Gertrudstr.): glattes Kopfsteinpflaster	Q2 15894,16096 15869,16078
@@ -10795,7 +10795,7 @@ Havemannstr. [Wohngebietsstraße]: Beton	Q1 22058,18066 21893,18148 21838,18149
 (Barnimer Dörferweg - Gehrensee): Asphalt	Q0 21035,19005 21040,19007 21015,19070
 Einödshoferweg: Asphalt	Q0 9519,4537 9494,4658
 Zietenstr. (Lankwitz) [Stichstraße]: schlechtes Kopfsteinpflaster	Q3 6158,2256 6246,2318
-Schloßplatz: Asphalt	Q0 10174,12284 10102,12384
+Schloßplatz: Kleinpflastersteine	Q1 10174,12284 10102,12384
 Schloßplatz: Kleinpflastersteine	Q1 10102,12384 10175,12435
 Schloßplatz: Kleinpflastersteine	Q1 10102,12384 10063,12438
 (Uferweg am Humboldtforum): Kleinpflastersteine	Q1 10357,12356 10336,12404 10271,12503 10243,12546
@@ -11142,6 +11142,9 @@ Ella-Kay-Str. [Wohngebietsstraße]: Beton	Q0 12173,15040 12214,15018 12136,14868 
 (Griechischer Park Höhe Parsevalstr.): Asphalt	Q0 18159,6642 18162,6668 18158,6689
 Rummelsburger Platz: Asphalt mit einigen Schäden, kurzer Kopfsteinpflasterabschnitt	Q1 12766,11223 12664,11310
 Zur Marktflagge [Wohngebietsstraße]: Verbundsteinpflaster	Q1 14152,13072 14200,13213
+(Buschallee - Falkenberger Str.): Beton	Q0 15134,16499 15131,16618
+(Buschallee - Falkenberger Str.): Asphalt	Q0 15131,16618 15144,16701
+(Buschallee - Falkenberger Str.): Asphalt/Beton	Q0 15144,16701 15139,16747
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
