@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998,2002,2003,2004,2009,2015,2016,2020,2021,2022 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998,2002,2003,2004,2009,2015,2016,2020,2021,2022,2023 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -3698,39 +3698,21 @@ sub temp_blockings_editor {
 	require "$FindBin::RealBin/miscsrc/check_bbbike_temp_blockings";
     }; warn $@ if $@;
 
-    my $initialdir = $BBBike::check_bbbike_temp_blockings::temp_blockings_dir . "/";
     my $pl_file = $BBBike::check_bbbike_temp_blockings::temp_blockings_pl;
-    my $file = $initialdir;
-    my $as_data; # default set below with "invoke"
     my $prewarn_days = 1;
     my $blocking_type = "gesperrt";
     my $edit_after = 0;
     my $do_delete_blockings = 1;
     my $auto_cross_road_blockings = 0;
     my $is_in_work = 1;
-    my $meta_data_handling = "append";
-    my $pe;
-    my $as_data_cb;
-    Tk::grid($t->Label(-text => M("bbd-Datei").":"),
-	     $pe = $t->PathEntry(-textvariable => \$file),
-	     $as_data_cb = $t->Checkbutton(-text => "as data",
-					   -variable => \$as_data,
-					   -command => sub {
-					       $pe->configure(-state => $as_data ? "disabled" : "normal"),
-					   },
-					  ),
-	     -sticky => "w",
-	    );
-    $pe->focus;
-    $pe->icursor("end");
-    $as_data_cb->invoke; # default to "as data"
+    my $action = "append";
 
     Tk::grid($t->Label(-text => M("Beschreibung").":"),
 	     -sticky => "w",
 	    );
     my $txt;
     Tk::grid($txt = $t->Scrolled("Text", -scrollbars => "e",
-				 -width => 40, -height => 3,
+				 -width => 50, -height => 5,
 				),
 	     -sticky => "ew",
 	     -columnspan => 2);
@@ -3841,30 +3823,44 @@ sub temp_blockings_editor {
 	    );
 
     {
-	my $f = $t->LabFrame(-label => M"Metadaten",
+	my $f = $t->LabFrame(-label => M"Aktion",
 			     -labelside => "acrosstop");
 	Tk::grid($f, -sticky => "ew", -columnspan => $cs);
-	$f->Radiobutton(-text => M"Nach STDERR schreiben",
-			-value => "",
-			-variable => \$meta_data_handling,
-		       )->pack(-anchor => "w");
 	$f->Radiobutton(-text => M"An zentrale pl-Datei anhängen",
 			-value => "append",
-			-variable => \$meta_data_handling,
+			-variable => \$action,
 		       )->pack(-anchor => "w");
 	$f->Radiobutton(-text => M"Existierenden Eintrag ersetzen",
 			-value => "replace",
-			-variable => \$meta_data_handling,
+			-variable => \$action,
 		       )->pack(-anchor => "w");
 	$f->Radiobutton(-text => M"Existierenden Eintrag ersetzen, alte Strecken beibehalten",
 			-value => "replace_preserve_data",
-			-variable => \$meta_data_handling,
-		       )->pack(-anchor => "w");
-	$f->Radiobutton(-text => M"Eintrag anzeigen",
-			-value => "show",
-			-variable => \$meta_data_handling,
+			-variable => \$action,
 		       )->pack(-anchor => "w");
     }
+
+    my $get_formatted;
+    Tk::grid($t->Button(-text => M("Preview"),
+			-command => sub {
+			    my($pl_entry, undef) = $get_formatted->();
+
+			    my $t = $main::top->Toplevel(-title => M("Temporäre Sperrungen") . " - " . M"Preview");
+			    my $txt = $t->Scrolled('ROText')->pack(qw(-fill both -expand 1));
+			    $txt->insert('end', $pl_entry);
+			    $t->Button(-text => M"To selection",
+				       -command => sub {
+					   $t->SelectionOwn;
+					   $t->SelectionHandle(sub {
+								   my($offset, $maxbytes) = @_;
+								   return undef if $offset > length($pl_entry);
+								   substr($pl_entry, $offset, $maxbytes);
+							       });
+				       })->pack(-side => 'left');
+			}),
+	     -sticky => 'e',
+	     -columnspan => $cs,
+	    );
 
     {
 	my $f = $t->LabFrame(-label => M"Im Anschluss...",
@@ -3936,231 +3932,203 @@ sub temp_blockings_editor {
 	     my $btxt = $real_txt->get("1.0", "end");
 	     $btxt =~ s/^(?:NEW|CHANGED|UNCHANGED|REMOVED)(,\s+\((coords|text)\))?\s*//;
 	     $btxt =~ s/[;,]\s+(?:eine\s+)?umleitung\s+ist\s+(?:ausgeschildert|eingerichtet)//i;
-	     $btxt =~ s/[;,]\s+umleitung\s+ausgeschildert//i;
+	     $btxt =~ s/[;,]\s+umleitung\s+(ausgeschildert|ausgewiesen)//i;
 	     $btxt =~ s/[;,]\s+umleitung//i;
 	     $btxt =~ s/[;,]\s+hohe\s+staugefahr//i;
+	     $btxt =~ s/(?<!^)(s)tra(ss|ß)e(?!\s+\d)/$1tr./gi; # straße -> str., except at beginning (Straße des 17. Juni) or for Nummernstraßen (Straße 42)
 	     $btxt =~ s/\s*\(\d{1,2}:\d{2}\)\s*$//; # seen in vmz records
+	     $btxt =~ s/\s*\z//;
 	     $real_txt->delete("1.0","end");
 	     $real_txt->insert("end", $btxt);
 	 });
 
-    Tk::grid($t->Button
-	     (-text => "Ok",
-	      -command => sub {
-		  if (!$as_data) {
-		      if (!defined $file || $file =~ /^\s*$/) {
-			  $t->messageBox(-message => "Dateiname fehlt oder `as data' wählen");
-			  return;
-		      }
-		      if (-d $file) {
-			  $t->messageBox(-message => "Bitte neue bbd-Datei auswählen oder `as data' wählen");
-			  return;
-		      }
-		      if (-e $file) {
-			  my $ans = $t->messageBox(-type => "YesNo", -icon => "question", -message => "Soll die existierende Datei `$file' überschrieben werden?");
-			  if ($ans !~ /yes/i) {
-			      return;
-			  }
-		      }
-		  }
-		  my $blocking_text = $get_text->();
-		  $blocking_text =~ s/\'/\\\'/g; # mask for perl sq string
-		  if ($blocking_text eq '') {
-		      $t->messageBox(-message => "Beschreibender Text fehlt");
-		      return;
-		  }
-		  if ($blocking_text =~ m{[^\x00-\xff]}) {
-		      my $ans = $t->messageBox(-type => 'OkCancel', -icon => 'question', -message => "Unicode-Zeichen oberhalb des Codespoints 255 enthalten. Diese Zeichen können zurzeit nicht verwendet werden. Automatisch konvertieren? Achtung: Informationsverlust kann auftreten!");
-		      if ($ans !~ /ok/i) {
-			  return;
-		      }
-		      if (eval { require Text::Unidecode; 1 }) {
-			  $blocking_text = unidecode_any($blocking_text, "iso-8859-1");
-		      }
-		  }
-		  my $start_time = $start_undef ? undef : $start_w->get;
-		  my $end_time   = $end_undef   ? undef : $end_w->get;
-		  if ((!$start_undef && !defined $start_time) ||
-		      (!$end_undef && !defined $end_time)) {
-		      $t->messageBox(-message => "Bitte Start/Endzeit eintragen oder `undef' wählen");
-		      return;
-		  }
-		  if ($start_time) {
-		      $start_time -= $prewarn_days * 86400;
-		  }
+    $get_formatted = sub {
+	my $blocking_text = $get_text->();
+	$blocking_text =~ s/\'/\\\'/g; # mask for perl sq string
+	if ($blocking_text eq '') {
+	    $t->messageBox(-message => "Beschreibender Text fehlt");
+	    return;
+	}
+	if ($blocking_text =~ m{[^\x00-\xff]}) {
+	    my $ans = $t->messageBox(-type => 'OkCancel', -icon => 'question', -message => "Unicode-Zeichen oberhalb des Codespoints 255 enthalten. Diese Zeichen können zurzeit nicht verwendet werden. Automatisch konvertieren? Achtung: Informationsverlust kann auftreten!");
+	    if ($ans !~ /ok/i) {
+		return;
+	    }
+	    if (eval { require Text::Unidecode; 1 }) {
+		$blocking_text = unidecode_any($blocking_text, "iso-8859-1");
+	    }
+	}
+	my $start_time = $start_undef ? undef : $start_w->get;
+	my $end_time   = $end_undef   ? undef : $end_w->get;
+	if ((!$start_undef && !defined $start_time) ||
+	    (!$end_undef && !defined $end_time)) {
+	    $t->messageBox(-message => "Bitte Start/Endzeit eintragen oder `undef' wählen");
+	    return;
+	}
+	if ($start_time) {
+	    $start_time -= $prewarn_days * 86400;
+	}
 
-		  if ($as_data) {
-		      require File::Temp;
-		      (my($fh), $file) = File::Temp::tempfile(SUFFIX => ".bbd",
-							      UNLINK => 1);
-		  }
+	# XXX It would be better to work without a temporary
+	# file here, but save_user_dels and
+	# save_user_deletions in StrassenNetzHeavy.pm
+	# operate only on files.
+	require File::Temp;
+	my($fh, $file) = File::Temp::tempfile(SUFFIX => ".bbd",
+							UNLINK => 1);
+	main::save_user_dels($file,
+			     -type => $blocking_type,
+			     ($is_in_work ? (-addinfo => "inwork") : (-addinfo => "temp")),
+			    );
+	if ($auto_cross_road_blockings) {
+	    my $add_userdels = add_cross_road_blockings();
+	    if ($add_userdels) {
+		$add_userdels->append($file);
+	    }
+	}
 
-		  main::save_user_dels($file,
-				       -type => $blocking_type,
-				       ($is_in_work ? (-addinfo => "inwork") : (-addinfo => "temp")),
-				      );
-		  if ($auto_cross_road_blockings) {
-		      my $add_userdels = add_cross_road_blockings();
-		      if ($add_userdels) {
-			  $add_userdels->append($file);
-		      }
-		  }
-
-		  my $rel_file = $file;
-		  if (index($rel_file, $initialdir) != 0) {
-		      $rel_file = File::Spec->abs2rel($rel_file); # XXX base needed?
-		  } else {
-
-		      $rel_file = File::Basename::basename($rel_file); # XXX handle deeper hiearchies?
-		  }
-
-		  File::Copy::copy($pl_file, "$pl_file~");
-		  my @old_contents;
-		  open(PL_FILE, $pl_file)
-		      or main::status_message("Can't open $pl_file: $!", "die");
-		  @old_contents = <PL_FILE>;
-		  close PL_FILE;
-
-		  my $blocking_type2 = $blocking_type;
-		  if ($blocking_type =~ /^handicap/) {
-		      $blocking_type = "handicap";
-		  } elsif ($blocking_type eq 'oneway') {
-		      $blocking_type = "gesperrt";
-		  } elsif ($blocking_type ne "gesperrt") {
-		      main::status_message("Unknown blocking type <$blocking_type>", "info");
-		  }
-		  $start_time = "undef" if $start_undef;
-		  $end_time = "undef" if $end_undef;
-		  my $pl_entry = <<EOF;
+	my $blocking_type2 = $blocking_type;
+	if ($blocking_type =~ /^handicap/) {
+	    $blocking_type = "handicap";
+	} elsif ($blocking_type eq 'oneway') {
+	    $blocking_type = "gesperrt";
+	} elsif ($blocking_type ne "gesperrt") {
+	    main::status_message("Unknown blocking type <$blocking_type>", "info");
+	}
+	$start_time = "undef" if $start_undef;
+	$end_time = "undef" if $end_undef;
+	my $pl_entry = <<EOF;
      { from  => $start_time, # @{[ $start_undef ? "" : POSIX::strftime("%Y-%m-%d %H:%M", localtime $start_time) ]}
        until => $end_time, # @{[ $end_undef ? "XXX" : POSIX::strftime("%Y-%m-%d %H:%M", localtime $end_time) ]}
        text  => '$blocking_text',
        type  => '$blocking_type',
 EOF
-		  if (defined $source_id && $source_id !~ /^\s*$/) {
-		      $pl_entry .= <<EOF;
+	if (defined $source_id && $source_id !~ /^\s*$/) {
+	    $pl_entry .= <<EOF;
        source_id => '$source_id',
 EOF
-		  }
-		  if ($meta_data_handling eq 'replace_preserve_data') {
-		      $pl_entry .= "###PRESERVE DATA\n";
-		  } else {
-		      if ($as_data) {
-			  my $s = Strassen->new($file);
-			  if ($s->count == 0) {
-			      if ($meta_data_handling eq '' ||
-				  $meta_data_handling eq 'show') {
-				  # don't warn if it's only written to STDERR or Tk widget
-			      } else {
-				  $t->messageBox(-message => "Keine Blockierungen ausgewählt");
-				  return;
-			      }
-			  }
-			  $pl_entry .= "       data  => <<EOF,\n" . $s->as_string . "EOF\n";
-		      } else {
-			  $pl_entry .= <<EOF;
-       file  => '$rel_file',
-EOF
-		      }
-		  }
-		  $pl_entry .= <<EOF;
+	}
+
+	if ($action eq 'replace_preserve_data') {
+	    $pl_entry .= "###PRESERVE DATA\n";
+	} else {
+	    my $s = Strassen->new($file);
+	    if ($s->count == 0) {
+		if ($action eq 'show') {
+		    # don't warn if it's only written to STDERR or Tk widget
+		} else {
+		    $t->messageBox(-message => "Keine Blockierungen ausgewählt");
+		    return;
+		}
+	    }
+	    $pl_entry .= "       data  => <<EOF,\n" . $s->as_string . "EOF\n";
+	}
+	$pl_entry .= <<EOF;
      },
 EOF
 
-		  if ($meta_data_handling eq 'show') {
-		      my $t = $main::top->Toplevel;
-		      my $txt = $t->Scrolled('ROText')->pack(qw(-fill both -expand 1));
-		      $txt->insert('end', $pl_entry);
-		      return;
-		  }
+	($pl_entry, $blocking_text);
+    };
 
-		  if ($old_contents[-1] =~ m{^\s*\);\s*$}) {
-		      splice @old_contents, -1, 0, $pl_entry;
-		      if ($meta_data_handling eq 'append') {
-			  ask_for_co($t, $pl_file);
-			  open(PL_OUT, "> $pl_file")
-			      or main::status_message("Kann auf $pl_file nicht schreiben: $!", "die");
-			  binmode PL_OUT;
-			  print PL_OUT join "", @old_contents;
-			  close PL_OUT;
-		      } elsif ($meta_data_handling eq 'replace' ||
-			       $meta_data_handling eq 'replace_preserve_data') {
-			  my $ret = temp_blockings_editor_replace
-			      (-string => $pl_entry,
-			       -text   => $blocking_text,
-			       -preserve_data => $meta_data_handling eq 'replace_preserve_data',
-			       -source_id => $source_id,
-			      );
-			  if (!$ret) {
-			      return;
-			  }
-		      } else {
-			  print STDERR join "", @old_contents;
-		      }
-		  } else {
-		      main::status_message("Can't parse old contents in file <$pl_file>", "err");
-		      return;
-		  }
+    {
+	my $f = $t->Frame;
+	Tk::grid($f, -sticky => 'ew', -columnspan => $cs);
+	$f->Button
+	    (-text => "Ok",
+	     -command => sub {
+		 my($pl_entry, $blocking_text) = $get_formatted->();
+		 if (!defined $pl_entry) {
+		     main::status_message("Cannot proceed", "error");
+		     return;
+		 }
 
-		  if ($do_delete_blockings) {
-		      main::delete_user_dels(-force => 1);
-		  }
+		 File::Copy::copy($pl_file, "$pl_file~");
+		 my @old_contents;
+		 open(PL_FILE, $pl_file)
+		     or main::status_message("Can't open $pl_file: $!", "die");
+		 @old_contents = <PL_FILE>;
+		 close PL_FILE;
+		 my $old_line_number = scalar @old_contents;
 
-		  if (Tk::Exists($t)) {
-		      $t->destroy;
-		  }
+		 if ($old_contents[-1] =~ m{^\s*\);\s*$}) {
+		     splice @old_contents, -1, 0, $pl_entry;
+		     if ($action eq 'append') {
+			 ask_for_co($t, $pl_file);
+			 open(PL_OUT, "> $pl_file")
+			     or main::status_message("Kann auf $pl_file nicht schreiben: $!", "die");
+			 binmode PL_OUT;
+			 print PL_OUT join "", @old_contents;
+			 close PL_OUT;
+		     } elsif ($action eq 'replace' ||
+			      $action eq 'replace_preserve_data') {
+			 my $ret = temp_blockings_editor_replace
+			     (-string => $pl_entry,
+			      -text   => $blocking_text,
+			      -preserve_data => $action eq 'replace_preserve_data',
+			      -source_id => $source_id,
+			     );
+			 if (!$ret) {
+			     return;
+			 }
+		     } else {
+			 print STDERR join "", @old_contents;
+		     }
+		 } else {
+		     main::status_message("Can't parse old contents in file <$pl_file>", "err");
+		     return;
+		 }
 
-		  my $check_cmd = "$FindBin::RealBin/miscsrc/check_bbbike_temp_blockings";
-		  if (eval { require Tk::ExecuteCommand; 1 }) {
-		      $main::top->update;
-		      my $check_tl = $main::top->Toplevel(-title => "check_bbbike_temp_blockings problems");
-		      $check_tl->withdraw;
-		      my $exec = $check_tl->ExecuteCommand (-command => $check_cmd)->pack(qw(-fill both -expand 1));
-		      $exec->terse_gui;
-		      $exec->execute_command;
-		      my($stat,$err) = $exec->get_status;
-		      if ($stat != 0) {
-			  $check_tl->deiconify;
-			  $check_tl->raise;
-		      } else {
-			  $check_tl->destroy;
-		      }
-							    
-		  } else {
-		      my $err = `$check_cmd`;
-		      if ($? != 0) {
-			  my $t = $main::top->Toplevel(-title => "check_bbbike_temp_blockings problems");
-			  my $txt = $t->Scrolled("ROText")->pack(-fill => "both",
-								 -expand => 1);
-			  $txt->insert("end", $err);
-			  $txt->insert("end", "\nBitte auch STDERR beachten!");
-		      }
-		  }
+		 if ($do_delete_blockings) {
+		     main::delete_user_dels(-force => 1);
+		 }
 
-		  # Im Anschluss...
-		  if ($edit_after) {
-		      if (fork == 0) {
-			  exec("emacsclient", "-n", $pl_file);
-			  CORE::exit(1);
-		      }
-		      if (!$as_data) {
-			  if (fork == 0) {
-			      exec("emacsclient", "-n", $file);
-			      CORE::exit(1);
-			  }
-		      }
-		  }
-	      }),
-	     $t->Button
-	      (-text => M"Abbruch",
-	       -command => sub {
-		   $t->destroy;
-	       }),
-	      -sticky => "ew",
-	     );
+		 if (Tk::Exists($t)) {
+		     $t->destroy;
+		 }
 
-    $pe->idletasks; # to fill the variable
-    $pe->xview(1);#XXX does not work???
+		 my $check_cmd = "$FindBin::RealBin/miscsrc/check_bbbike_temp_blockings";
+		 if (eval { require Tk::ExecuteCommand; 1 }) {
+		     $main::top->update;
+		     my $check_tl = $main::top->Toplevel(-title => "check_bbbike_temp_blockings problems");
+		     $check_tl->withdraw;
+		     my $exec = $check_tl->ExecuteCommand (-command => $check_cmd)->pack(qw(-fill both -expand 1));
+		     $exec->terse_gui;
+		     $exec->execute_command;
+		     my($stat,$err) = $exec->get_status;
+		     if ($stat != 0) {
+			 $check_tl->deiconify;
+			 $check_tl->raise;
+		     } else {
+			 $check_tl->destroy;
+		     }
+
+		 } else {
+		     my $err = `$check_cmd`;
+		     if ($? != 0) {
+			 my $t = $main::top->Toplevel(-title => "check_bbbike_temp_blockings problems");
+			 my $txt = $t->Scrolled("ROText")->pack(-fill => "both",
+								-expand => 1);
+			 $txt->insert("end", $err);
+			 $txt->insert("end", "\nBitte auch STDERR beachten!");
+		     }
+		 }
+
+		 # Im Anschluss...
+		 if ($edit_after) {
+		     if (fork == 0) {
+			 exec("emacsclient",
+			      ($old_line_number ? "+$old_line_number" : ()),
+			      "-n", $pl_file);
+			 CORE::exit(1);
+		     }
+		 }
+	     })->pack(-side => 'left', -fill => 'x', -expand => 1);
+	$f->Button
+	    (-text => M"Abbruch",
+	     -command => sub {
+		 $t->destroy;
+	     })->pack(-side => 'left', -fill => 'x', -expand => 1);
+    }
 }
 
 sub temp_blockings_editor_preserve_data {
