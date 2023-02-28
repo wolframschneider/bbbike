@@ -25,12 +25,12 @@ BEGIN {
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 2.11;
+$VERSION = 2.12;
 
 use File::Glob qw(bsd_glob);
 
 use your qw(%MultiMap::images $BBBikeLazy::mode
-	    %main::line_width %main::p_width %main::str_draw %main::p_draw
+	    %main::line_width %main::p_width %main::str_draw %main::p_draw %main::p_file
 	    %main::p_obj
 	    $main::lazy_plot %main::lazy_p %main::layer_active_color
 	    %main::add_net
@@ -406,11 +406,15 @@ EOF
 				Width => 20),
 	      [Cascade => $do_compound->('Add layer', $main::newlayer_photo), -menuitems =>
 	       [
-		layer_checkbutton([$do_compound->('hm96.bbd (Höhenpunkte)')],
-				  'p', "$bbbike_auxdir/data/senat_b/hm96.bbd",
-				  oncallback  => sub { $main::top->bind("<F12>"=> \&find_nearest_hoehe) },
-				  offcallback => sub { $main::top->bind("<F12>"=> '') },
-				 ),
+		(defined $bbbike_auxdir ?
+		 (
+		  layer_checkbutton([$do_compound->('hm96.bbd (Höhenpunkte)')],
+				    'p', "$bbbike_auxdir/data/senat_b/hm96.bbd",
+				    oncallback  => sub { $main::top->bind("<F12>"=> \&find_nearest_hoehe) },
+				    offcallback => sub { $main::top->bind("<F12>"=> '') },
+				   )
+		 ) : ()
+		),
 		layer_checkbutton([$do_compound->('Zebrastreifen', main::load_photo($mf, "misc/verkehrszeichen/Zeichen_350.svg", -w => 16, -h => 16, -persistent => 1))],
 				  'p', "$main::datadir/zebrastreifen",
 				  above => $str_layer_level,
@@ -430,11 +434,10 @@ EOF
 				  maybe_orig_file => 0, # does not exist in non-orig version, already resoved to strassen+handicap
 				  above => $str_layer_level,
 				 ),
-		[Button => $do_compound->("gesperrt_car", $images{car_cross}), -command => sub { add_new_nonlazy_maybe_orig_layer("sperre", "gesperrt_car", -interactivelyselected => 0) }],
-## XXX no support for "sperre" type yet:
-#		layer_checkbutton([$do_compound->('gesperrt_car', $images{car_cross})]
-#				  'sperre', 'gesperrt_car,
-#				  maybe_orig_file => 1),
+		layer_checkbutton([$do_compound->('gesperrt_car', $images{car_cross})],
+				  'sperre', 'gesperrt_car',
+				  maybe_orig_file => 1,
+				  above => $str_layer_level),
 		layer_checkbutton([$do_compound->('Gerichtete Handicaps')],
 				  'str', "$main::datadir/handicap_directed",
 				  maybe_orig_file => 1,
@@ -448,10 +451,21 @@ EOF
 		layer_checkbutton([$do_compound->('brunnels', $images{bridge})],
 				  'str', "$main::datadir/brunnels",
 				  maybe_orig_file => 1),
-		layer_checkbutton([$do_compound->('mudways')],
-				  'str', "$bbbike_auxdir/bbd/mudways.bbd",
-				  above => $str_layer_level,
-				 ),
+		(defined $bbbike_auxdir ?
+		 (
+		  layer_checkbutton([$do_compound->('mudways')],
+				    'str', "$bbbike_auxdir/bbd/mudways.bbd",
+				    above => $str_layer_level,
+				   ),
+		  layer_checkbutton([$do_compound->('current mudways')],
+				    'str', "/tmp/mudways_prognosis.bbd",
+				    above => $str_layer_level,
+				    preparecallback => sub {
+					prepare_mudways_prognosis();
+				    },
+				   ),
+		 ) : ()
+		),
 		layer_checkbutton([$do_compound->('geocoded images', $images{camera})],
 				  'str', "$ENV{HOME}/.bbbike/geocoded_images.bbd",
 				  above => $str_layer_level,
@@ -504,19 +518,21 @@ EOF
 				    'str', "$bbbike_rootdir/tmp/fragezeichen-nextcheck.bbd"),
 		 ],
 		],
-		layer_checkbutton([$do_compound->('Unique matches')],
-				  'str', "$bbbike_rootdir/tmp/unique-matches.bbd",
-				  above => $str_layer_level,
-				 ),
-		[Cascade => $do_compound->('Unique matches since year...'), -menuitems =>
+		[Cascade => $do_compound->('Unique matches...'), -menuitems =>
 		 [
-		  map {
-		      my $year = $_;
-		      layer_checkbutton("Unique matches since $year", 'str',
-					"$bbbike_rootdir/tmp/unique-matches-since$year.bbd",
-					above => $str_layer_level,
-				       );
-		  } @acc_cat_split_streets_years,
+		  layer_checkbutton('Unique matches since beginning',
+				    'str', "$bbbike_rootdir/tmp/unique-matches.bbd",
+				    above => $str_layer_level,
+				   ),
+		  (
+		   map {
+		       my $year = $_;
+		       layer_checkbutton("Unique matches since $year", 'str',
+					 "$bbbike_rootdir/tmp/unique-matches-since$year.bbd",
+					 above => $str_layer_level,
+					);
+		   } @acc_cat_split_streets_years,
+		  ),
 		 ],
 		],
 		do {
@@ -582,8 +598,12 @@ EOF
 		     below => '*landuse*',
 		 }
 		],
-		layer_checkbutton([$do_compound->('Neue Sehenswürdigkeiten')],
-				  'str', "$bbbike_auxdir/images/sehenswuerdigkeit_img/bw/test.bbd"),
+		(defined $bbbike_auxdir ?
+		 (
+		  layer_checkbutton([$do_compound->('Neue Sehenswürdigkeiten')],
+				    'str', "$bbbike_auxdir/images/sehenswuerdigkeit_img/bw/test.bbd"),
+		 ) : ()
+		),
 		layer_checkbutton([$do_compound->('Exits (ÖPNV)')],
 				  'str', "$main::datadir/exits",
 				  maybe_orig_file => 1),
@@ -614,27 +634,34 @@ EOF
 # 		  ],
 		 ]
 		],
-		[Cascade => $do_compound->("VMZ-Detailnetz", $images{VIZ}), -menuitems =>
-		 [	
-		  layer_checkbutton('strassen', 'str',
-				    "$bbbike_auxdir/vmz/bbd/strassen",
-				    below => $str_layer_level,
-				   ),
-		  [Button => 'gesperrt', -command => sub { add_new_nonlazy_layer('sperre', "$bbbike_auxdir/vmz/bbd/gesperrt") }],
-		  layer_checkbutton('qualitaet', 'str',
-				    "$bbbike_auxdir/vmz/bbd/qualitaet_s",
-				    above => $str_layer_level,
-				   ),
-		  layer_checkbutton('radwege', 'str',
-				    "$bbbike_auxdir/vmz/bbd/radwege",
-				    above => $str_layer_level,
-				   ),
-		  layer_checkbutton('ampeln', 'str', # yes, str, otherwise symbol is not plotted
-				    "$bbbike_auxdir/vmz/bbd/ampeln",
-				    above => $str_layer_level,
-				   ),
-		 ],
-		],
+		($bbbike_auxdir ?
+		 (
+		  [Cascade => $do_compound->("VMZ-Detailnetz", $images{VIZ}), -menuitems =>
+		   [	
+		    layer_checkbutton('strassen', 'str',
+				      "$bbbike_auxdir/vmz/bbd/strassen",
+				      below => $str_layer_level,
+				     ),
+		    layer_checkbutton('gesperrt', 'sperre',
+				      "$bbbike_auxdir/vmz/bbd/gesperrt",
+				      above => $str_layer_level,
+				     ),
+		    layer_checkbutton('qualitaet', 'str',
+				      "$bbbike_auxdir/vmz/bbd/qualitaet_s",
+				      above => $str_layer_level,
+				     ),
+		    layer_checkbutton('radwege', 'str',
+				      "$bbbike_auxdir/vmz/bbd/radwege",
+				      above => $str_layer_level,
+				     ),
+		    layer_checkbutton('ampeln', 'str', # yes, str, otherwise symbol is not plotted
+				      "$bbbike_auxdir/vmz/bbd/ampeln",
+				      above => $str_layer_level,
+				     ),
+		   ],
+		  ],
+		 ) : ()
+		),
 		[Button => $do_compound->("All layers for editing"),
 		 -command => sub { enable_all_layers_for_editing() },
 		],
@@ -939,6 +966,30 @@ EOF
     }
 }
 
+sub prepare_mudways_prognosis {
+    if (!defined $bbbike_auxdir) {
+	main::status_message("Works only with bbbike-aux directory", "die");
+    }
+    my $dwd_soil = `$bbbike_auxdir/misc/dwd-soil-update.pl -q`;
+    print STDERR $dwd_soil;
+
+    my $dwd_station = 'Dahlem';
+    my $bf10;
+    for my $line (split /\n/, $dwd_soil) {
+	if ($line =~ m{^\Q$dwd_station\E.*\s+(\d+)$}) {
+	    $bf10 = $1;
+	    last;
+	}
+    }
+    if (!defined $bf10) {
+	main::status_message("Cannot get soil data for DWD station '$dwd_station', please see stderr for more information", "die");
+    }
+
+    system("$bbbike_auxdir/misc/mudways-enrich.pl"); die $? if $? != 0;
+    system("$bbbike_auxdir/misc/mudways-enriched-to-handicap.pl --bf10=$bf10 > /tmp/mudways_prognosis.bbd~"); die $? if $? != 0;
+    rename "/tmp/mudways_prognosis.bbd~", "/tmp/mudways_prognosis.bbd" or die "Error while renaming: $!";
+}
+
 sub add_keybindings {
     # same like in Merkaartor
     $main::top->bind("<Control-D>" => sub {
@@ -1099,15 +1150,21 @@ sub add_new_layer {
 	}
     }
     $layer_for_type_file{"$type $file"} = $free_layer;
-    if (!$BBBikeLazy::mode) {
-	require BBBikeLazy;
-	BBBikeLazy::bbbikelazy_empty_setup();
-	main::handle_global_directives($file, $free_layer);
-	main::bbbikelazy_add_data($type, $free_layer, $file);
-	main::bbbikelazy_init();
+    if ($type eq 'sperre') { # XXX BBBikeLazy does not handle sperre type yet
+	$main::p_draw{$free_layer} = 1;
+	$main::p_file{$free_layer} = $file; # XXX not needed for plot_sperre, but for the LayerEditor (to display the file name as label)
+	main::plot_sperre($file, -abk => $free_layer);
     } else {
-	main::handle_global_directives($file, $free_layer);
-	main::bbbikelazy_add_data($type, $free_layer, $file);
+	if (!$BBBikeLazy::mode) {
+	    require BBBikeLazy;
+	    BBBikeLazy::bbbikelazy_empty_setup();
+	    main::handle_global_directives($file, $free_layer);
+	    main::bbbikelazy_add_data($type, $free_layer, $file);
+	    main::bbbikelazy_init();
+	} else {
+	    main::handle_global_directives($file, $free_layer);
+	    main::bbbikelazy_add_data($type, $free_layer, $file);
+	}
     }
     # XXX add_to_stack functionality gots destroyed by calling once the layer_editor, because it used special_raise for *all*. get rid of special_raise/lower!
     main::add_to_stack($free_layer, "before", "pp");
@@ -1137,23 +1194,29 @@ sub toggle_new_layer {
 	    main::status_message("Cannot toggle layer: $@", 'die');
 	}
     } else {
-	eval {
-	    $layer = $layer_for_type_file{$type_file};
-	    delete $main::str_draw{$layer};
+	$layer = $layer_for_type_file{$type_file};
+	if ($type eq 'sperre') { # XXX BBBikeLazy does not handle sperre type yet
 	    delete $main::p_draw{$layer};
-	    if ($type eq 'p') {
-		$main::c->delete($layer.'-fg');
-		$main::c->delete($layer.'-img');
-	    } else {
-		$main::c->delete($layer);
-	    }
+	    main::plot_sperre(undef, -abk => $layer);
 	    delete $layer_for_type_file{$type_file};
-	    BBBikeLazy::bbbikelazy_remove_data($type, $layer);
-	    $active = 0;
-	};
-	if ($@) {
-	    $want_plot_type_file{$type_file} = 1;
-	    main::status_message("Cannot toggle layer: $@", 'die');
+	} else {
+	    eval {
+		delete $main::str_draw{$layer};
+		delete $main::p_draw{$layer};
+		if ($type eq 'p') {
+		    $main::c->delete($layer.'-fg');
+		    $main::c->delete($layer.'-img');
+		} else {
+		    $main::c->delete($layer);
+		}
+		delete $layer_for_type_file{$type_file};
+		BBBikeLazy::bbbikelazy_remove_data($type, $layer);
+		$active = 0;
+	    };
+	    if ($@) {
+		$want_plot_type_file{$type_file} = 1;
+		main::status_message("Cannot toggle layer: $@", 'die');
+	    }
 	}
     }
     ($layer, $active);
@@ -1164,6 +1227,7 @@ sub layer_checkbutton {
     my($label, $type, $file, %args) = @_;
     my $oncallback  = delete $args{oncallback};
     my $offcallback = delete $args{offcallback};
+    my $preparecallback = delete $args{preparecallback};
     my $below = delete $args{below};
     my $above = delete $args{above};
     # XXX This does not seem to work, $main::edit_normal_mode value
@@ -1187,6 +1251,10 @@ sub layer_checkbutton {
 	     }
 	 }
 
+	 if ($preparecallback && !$layer_for_type_file{$key}) {
+	     $preparecallback->();
+	 }
+
 	 my($layer, $active) = toggle_new_layer($type, $real_file, below => $below, above => $above, %args);
 	 if ($oncallback && $layer_for_type_file{$key}) {
 	     $oncallback->($layer, $type, $real_file);
@@ -1201,18 +1269,6 @@ sub layer_checkbutton {
 	 }
      },
     ];
-}
-
-sub add_new_nonlazy_maybe_orig_layer {
-    my($type, $file, %args) = @_;
-    add_new_nonlazy_layer($type, _maybe_orig_file($file), %args);
-}
-
-sub add_new_nonlazy_layer {
-    my($type, $file, %args) = @_;
-    require BBBikeAdvanced;
-    local $main::lazy_plot = 0; # lazy mode does not support bbd images yet
-    main::plot_additional_layer($type, $file, %args);
 }
 
 sub set_layer_highlightning {

@@ -200,8 +200,8 @@ Ruhwaldweg: Schranke gesperrt	2 773,13375 758,13334
 Alt-Reinickendorf	1 7003,18715 6869,18721 6775,18726 6734,18728 6572,18793 6716,18788 6793,18763 6879,18737 7003,18715
 Breslauer Platz/Lauterstr.	1s 5817,7223 5810,7337
 Friedrich-Wilhelm-Platz	1 5318,7424 5310,7325 5314,7217
-Stolbergstr.	1 8864,6440 8852,6642
-Richnowstr.	1 8953,6492 8912,6448 8864,6440
+Stolbergstr.	1 8864,6440 8862,6467 8852,6642
+Richnowstr.	1 8961,6490 8912,6448 8864,6440
 Menzelstr.	1 6168,6467 6155,6722
 Cranachstr.	1 6303,6736 6324,6480 6343,6297
 Boddinstr.	1 12582,8408 12368,8356 12216,8323 12168,8313 12104,8299 11920,8252
@@ -471,7 +471,7 @@ Möllendorffstr.	1 15546,12690 15516,12838 15515,13134
 Joachimsthaler Str. (Hohenschönhausen)	1 17117,14885 17129,14804 17063,14797 16943,14785
 Otto-Brahm-Str.	1 14440,15682 14400,15787 14365,15778 14282,15746 14321,15636
 Prenzlauer Allee [Wohngebiet]	1 12154,15902 12030,15968
-(Prenzlauer Allee - Ostseestr.)	1 12254,16097 12198,15999 12154,15902
+(Prenzlauer Allee - Ostseestr.)	1 12198,15999 12154,15902
 Blumenstr.	1 12125,12490 12306,12459 12305,12440
 Blumenstr.	1 12305,12440 12118,12462
 Friedensplatz	1 8971,6154 8994,6144 9003,6121 8996,6106 8976,6094 8952,6109 8944,6127 8955,6147 8971,6154
@@ -509,7 +509,7 @@ Kemmannweg	1 -4207,14473 -4117,14458 -4053,14428 -3937,14340 -3911,14331 -3819,1
 Privatstr. 13	1 13171,17335 13103,17280 13018,17264
 Preunelstr.	1 13012,17332 12965,17324 12930,17302 12865,17381
 Berliner Str. (Straßenbahntrasse)	3nocross::ignrte 10858,17721 10853,17802 10849,17848
-Berliner Str. (Richtungsfahrbahn)	1::igndisp 10858,17721 10849,17848
+Berliner Str. (Richtungsfahrbahn)	1::igndisp 10858,17721 10853,17788 10849,17848
 Berliner Str. (Richtungsfahrbahn)	1::igndisp 10849,17848 10853,17802 10858,17721
 Karl-Liebknecht-Str. (Richtungsfahrbahn)	1::igndisp 11160,13492 11135,13452 11107,13410 11081,13372 11070,13357
 Karl-Liebknecht-Str. (Richtungsfahrbahn)	1::igndisp 11070,13357 11080,13373 11131,13455 11160,13492
@@ -1955,8 +1955,6 @@ Rykestr. -> Danziger Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11535,14688
 Mittelstreifen mit Straßenbahn	3nocross::ignrte 11154,14985 11285,14958 11325,14949 11339,14946
 Danziger Str. -> Husemannstr.: Mittelstreifen mit Straßenbahn	3::igndisp 11325,14949 11285,14958 11265,14756
 Husemannstr. -> Danziger Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11265,14756 11285,14958 11154,14985
-Danziger Str. -> Dunckerstr.: Mittelstreifen mit Straßenbahn	3::igndisp 11285,14958 11325,14949 11450,15173
-Dunckerstr. -> Danziger Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11450,15173 11325,14949 11339,14946
 Mittelstreifen mit Straßenbahn	3nocross::ignrte 12317,14535 12123,14643 12025,14695
 Danziger Str. -> Lilli-Henoch-Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12025,14695 12123,14643 12174,14739
 Lilli-Henoch-Str. -> Danziger Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12174,14739 12123,14643 12317,14535
@@ -2216,6 +2214,7 @@ Zum Trudelturm -> Max-Born-Str.: Straßenbahntrasse	3::igndisp 19101,3028 19021,2
 Max-Born-Str. -> Zum Trudelturm: Straßenbahntrasse	3::igndisp 18946,3077 19021,2946 19101,3028
 Mittelstreifen	3nocross::ignrte 12216,16120 12254,16097 12347,16039
 Prenzlauer Allee -> Ostseestr.: Mittelstreifen	3::igndisp 12198,15999 12254,16097 12216,16120
+Ostseestr. -> Prenzlauer Allee: Mittelstreifen	3::igndisp 12347,16039 12254,16097 12198,15999
 Mittelstreifen	3nocross::ignrte 19735,3643 19812,3561 19857,3514 19904,3464
 Adlergestell -> Altheider Str.: Mittelstreifen	3::igndisp 19735,3643 19812,3561 19871,3600
 Altheider Str. -> Adlergestell: Mittelstreifen	3::igndisp 19871,3600 19812,3561 19857,3514
@@ -2267,9 +2266,15 @@ Mittelstreifen	3nocross::ignrte -2280,2177 -2074,2258 -2023,2279
 Wiesenschlag -> Potsdamer Chaussee: Mittelstreifen	3::igndisp -2036,2150 -2074,2258 -2280,2177
 Mittelstreifen	3nocross::ignrte -2023,2279 -1959,2305 -1646,2434
 Potsdamer Chaussee -> Mutter-Mochow-Weg: Mittelstreifen	3::igndisp -1646,2434 -1959,2305 -1849,2043
-Straßenbahntrasse	3nocross::ignrte 22116,5442 22087,5404 22054,5360 21954,5229
+Straßenbahntrasse	3nocross::ignrte 22116,5442 22087,5404 22054,5360 21974,5255 21954,5229
 Am Maria-Jankowski-Park -> Bhf.str.: Straßenbahntrasse	3::igndisp 22006,5460 22087,5404 22116,5442
-Lindenstr. -> Bhf.str.: Straßenbahntrasse	3::igndisp 22056,5314 22054,5360 21954,5229
+Lindenstr. -> Bhf.str.: Straßenbahntrasse	3::igndisp 22056,5314 22054,5360 21974,5255
+Bhf.str. -> Lindenstr.: Straßenbahntrasse	3::igndisp 22087,5404 22054,5360 22056,5314
+Uferweg -> Bhf.str.: Straßenbahntrasse	3::igndisp 22035,5217 21974,5255 21954,5229
+Bhf.str. -> Uferweg: Straßenbahntrasse	3::igndisp 22054,5360 21974,5255 22035,5217
+Straßenbahnhaltestelle	3nocross::ignrte 21974,5208 22023,5160 22033,5148 22078,5093
+Bhf.str. -> Lindenstr.: Straßenbahnhaltestelle	3::igndisp 22035,5217 22023,5160 22033,5148
+Lindenstr. -> Bhf.str.: Straßenbahnhaltestelle	3::igndisp 21974,5208 22023,5160 22035,5217
 Lärmschutzwand	3nocross::ignrte 18496,2471 18656,2465 18929,2454
 North-Willys-Str. -> Ernst-Ruska-Ufer: Lärmschutzwand	3::igndisp 18644,2582 18656,2465 18929,2454
 Ernst-Ruska-Ufer -> North-Willys-Str.: Lärmschutzwand	3::igndisp 18496,2471 18656,2465 18644,2582
@@ -3267,12 +3272,13 @@ Schranke	BNP:0:0:trailer=3 3218,8223
 Halbschranke	BNP:0:-2:trailer=1 28519,337
 Tor	BNP:10:-180 1432,1953
 Tor	BNP:10:-196 1473,1740
-Drängelgitter	BNP:2:-126:trailer=7 -4234,11408
 Schranke	BNP:5:-188:trailer=15 23221,15226
 Schranke	BNP:3:-207:trailer=10 -1486,16789
 Schranke	BNP:1:-52:trailer=3 14967,4641
 Schranke	BNP:3:78:trailer=10 8702,13362
 Drängelgitter	BNP:3:-206:trailer=10 5746,22582
+Drängelgitter	BNP:3:-23:trailer=10 22085,5111
+Am Generalshof: Hochbauarbeiten, Fahrbahn gesperrt	2::inwork 22056,5314 22140,5392
 Dieselstr. - westlicher Mergenthalerring: Durchfahrt durch Bauzäune versperrt	2 14249,8075 14250,8098 14238,8100 14247,8254 14229,8278
 Schule am Planetarium: Weg dauerhaft gesperrt	2::inwork 12103,15218 12208,15108
 Wasserweg: Weg wegen Bauarbeiten gesperrt	2::inwork 15680,8914 15873,8884 15981,8872 16028,8867 16086,8860 16129,8855 16201,8860 16358,8841 16388,8821
@@ -3338,7 +3344,7 @@ Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355
 Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
 Henriette-Lustig-Str.: Durchfahrt nicht möglich	2::inwork 21476,5048 21380,5003 21375,4974
 Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
-(Eiselenweg - Uferweg)	2::inwork 21442,5414 21476,5434 21512,5404 21518,5389
+(Eiselenweg - Uferweg): gesperrt	2::inwork 21442,5414 21476,5434 21512,5404 21518,5389
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10746,12364 10831,12371
 Jüdenstr.: Anbindung an die Stralauer Str. komplett gesperrt	2::inwork 10830,12313 10830,12279
 Jüdenstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451

@@ -270,7 +270,7 @@ Finowstr.+Weichselstr./Frankfurter Allee	3nocross 14709,12156 14854,12137 14926,
 Friedrichstr. (Straßenbahn)	3nocross 9225,13389 9246,13235 9254,13171 9262,13111
 Friedrichstr. (Straßenbahn)	3nocross 9262,13111 9269,13060 9279,12953
 Oranienburger Str. (Straßenbahnhaltestelle)	3nocross 9225,13389 9293,13366 9415,13315
-Saarstr.: Durchfahrt für Autofahrer per Poller gesperrt	3nocross 5966,6747 5896,6785 5811,6833
+Saarstr.: Durchfahrt für Autofahrer per Poller gesperrt	3nocross 5966,6747 5928,6768 5896,6785 5811,6833
 #: by: rjoop:
 Putlitzstr.	1 6212,13944 6204,14220
 Bornitzstr.	1 15643,12875 15563,12870
@@ -1672,6 +1672,10 @@ Jägerstr./Gutenbergstr. (Potsdam)	3 -12886,-869 -13025,-901 -13058,-740
 Jägerstr./Gutenbergstr. (Potsdam)	3 -13158,-930 -13025,-901 -12886,-869
 Jägerstr./Gutenbergstr. (Potsdam)	3 -12886,-869 -13025,-901 -13158,-930
 # 
+Charlottenstr. (Potsdam): Durchfahrt für den "normalen" Kfz-Verkehr verboten	2 -12359,-1096 -12285,-1174
+# 
+Joliot-Curie-Str. (Potsdam)	1 -12549,-1277 -12542,-1305 -12526,-1356 -12500,-1437
+# 
 Schmidstr.: nur Lieferverkehr	2 11480,11526 11281,11612
 # 
 #: by: https://nitter.cz/SenUMVKBerlin/status/1613113627392806913#m
@@ -1693,7 +1697,7 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: source_id: viz2021:13.409118,52.51693,15.01.2023,18:00 (bis 30.06.2023)
 #: note: laut rbb nur bis 31.08.2022
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
-#: last_checked: 2023-02-10 vvv
+#: last_checked: 2023-02-24 vvv
 #: next_check: 2024-06-01 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
 # REMOVED --- (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285
@@ -1726,4 +1730,19 @@ Chamissoplatz: Poller	3 * 9589,9093 *
 Buschallee: Straßenbahntrasse	3nocross 15843,16400 15866,16393 15918,16383
 # 
 Siegfriedstr.: Durchfahrt zur Hermannstr. nur für BVG+Radfahrer	3 12122,6886 12342,6936 *
+# 
+Michael-Bohnen-Ring: Poller	3 15453,6434 15453,6784 15350,6781
+# 
+Lange Str.	1 11993,11978 12238,11931
+# 
+#: note: für Autos nur rechts abbiegen erlaubt, geradeaus fahren ist wegen "Einfahrt verboten" sowieso nicht möglich
+Hinter dem Gießhaus - Unter den Linden	3 9846,12516 9858,12410 9934,12420
+# 
+#: note: Radfahrer können hier die Fußgängerführung (nur teilweise ampelgesichert) (schiebend) benutzen vvv
+Thorwaldsenstr. - Lenbachstr.	3 6168,6467 6071,6559 5883,6519
+Thorwaldsenstr. - Knausstr.	3 6168,6467 6071,6559 6083,6451
+#: note ^^^
+# 
+#: note: für Fußgänger/Radfahrer Übergang mit Bordstein
+Manteuffelstr./zum Bosepark: Mittelstreifen	3nocross 8683,6326 8699,6468 8707,6537
 # 
