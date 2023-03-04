@@ -24744,6 +24744,7 @@ EOF
 #: by: https://www.berlinerbaeder.de/baeder/stadtbad-tiergarten/
 #: by: https://www.berlinerbaeder.de/aktuelles/detail/einblicke-in-die-sanierung-des-stadtbades-tiergarten/ (Fertigstellung Mitte 2023)
 #: by: https://www.berliner-woche.de/tiergarten/c-bauen/aussenbecken-im-stadtbad-tiergarten-ist-nicht-ausfinanziert_a369047 (Eröffnung: Spätsommer 2023)
+#: by: https://berliner-abendblatt.de/berlin-news/baederbetriebe-investieren-so-viel-wie-nie-id209419
 #: osm_watch: way id="462738551" version="15"
 #: osm_watch: way id="848019125" version="3"
 #: add_fragezeichen: Besteht die Sperrung weiterhin?
@@ -32477,7 +32478,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand Februar 2023: südlicher Abschnitt ist asphaltiert, aber noch nicht freigegeben)',
+       text  => 'Hönower Wiesenweg: Durchfahrt kann wegen Bauarbeiten gesperrt sein (Stand Ende Februar 2023: südlicher Abschnitt ist asphaltiert, aber noch nicht freigegeben)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: PARKSTADTKARLSHORST-2021
@@ -32486,7 +32487,7 @@ EOF
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="26"
 #: osm_watch: way id="165832806" version="30"
-#: last_checked: 2023-02-11
+#: last_checked: 2023-02-28
 #: check_frequency: 30d
 	2::inwork 17753,8290 17707,8328 17652,8349 17617,8363 17584,8413 17554,8458 17533,8505 17524,8536
 # REMOVED (hier wohl nicht mehr) ---	2::inwork 17524,8536 17515,8567 17497,8623
@@ -34817,7 +34818,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: note: geöffnet (großes Tor): 2022-02-13 (So) gegen 14:45, 2022-03-27 (So) gegen 13:45, 2022-07-27 (Mi) gegen 17:30, 2022-12-18 (So) gegen 12:15
-#: osm_watch: node id="575826622" version="3" vvv
+#: osm_watch: node id="575826622" version="4" vvv
 #: last_checked: 2022-12-18 vvv
 #: check_frequency: 120d vvv
 	3 8260,7911 8203,7909 8161,7907
@@ -35607,7 +35608,7 @@ EOF
      },
      { from  => undef, # 
        until => 1704042000, # 2023-12-31 18:00
-       text  => 'Fischerinsel: Wege können wegen Bauarbeiten gesperrt sein (Stand Ende Oktober 2022: keine Einschränkung beim Weg Richtung Inselbrücke)',
+       text  => 'Fischerinsel: Weg zwischen Inselbrücke und Fischerinsel wegen Bauarbeiten gesperrt, voraussichtlich bis April 2023',
        type  => 'gesperrt',
        source_id => 'https://berliner-abendblatt.de/2022/06/01/arbeiten-an-der-fischerinsel-werden-fortgesetzt/',
        data  => <<EOF,
@@ -35615,10 +35616,12 @@ EOF
 #: by: https://berliner-abendblatt.de/2022/06/01/arbeiten-an-der-fischerinsel-werden-fortgesetzt/ (Bauarbeiten bis Ende 2023)
 #: by: https://www.berliner-woche.de/mitte/c-bauen/fischerinsel-park-wird-umgestaltet_a347705
 #: by: https://www.deutsches-architekturforum.de/thread/9771-neue-und-erneuerte-parks-und-gr%C3%BCnfl%C3%A4chen/?postID=733862#post733862
+#: by: https://www.berliner-woche.de/mitte/c-bauen/inselbruecke-gesperrt_a373424 (entgegen des Artikels sind Inselbrücke+Uferweg nicht gesperrt)
 #: XXX vielleicht auch interessant: neuer Zugang zur Mühlendammbrücke inkl. Rampe
-#: last_checked: 2023-01-16
+#: last_checked: 2023-03-01
 #: check_frequency: 60d
-#: next_check: 2023-12-31
+#: next_check: 2023-04-15
+# REMOVED --- #: next_check: 2023-12-31
 	2::inwork 10824,11992 10742,12033 10713,12014
 EOF
      },
@@ -35969,14 +35972,14 @@ EOF
 EOF
      },
      { from  => 1658811600, # 2022-07-26 07:00
-       until => $isodate2epoch->("2023-02-28 17:00:00"), # 1667232000, # 2022-10-31 17:00
-       text  => 'Radickestr.: Bauarbeiten, Fahrbahn zwischen Anna-Seghers-Str. und Thomas-Müntzer-Str. Richtung Osten gesperrt, sowie Einbahnstraßenregelung in der Thomas-Müntzer-Str., vom 27.07.2022 07:00 bis 28.02.2023 17:00',
+       until => $isodate2epoch->("2023-03-31 17:00:00"), # 1667232000, # 2022-10-31 17:00
+       text  => 'Radickestr.: Bauarbeiten, Fahrbahn zwischen Anna-Seghers-Str. und Thomas-Müntzer-Str. Richtung Osten gesperrt, sowie Einbahnstraßenregelung in der Thomas-Müntzer-Str., vom 27.07.2022 07:00 bis 31.03.2023 17:00',
        type  => 'handicap',
-       source_id => 'viz2021:13.545559,52.434572,27.07.2022,07:00', # bis 31.12.2022, mittlerweile bis 27.1.2023, bis 28.2.2023
+       source_id => 'viz2021:13.545559,52.434572,27.07.2022,07:00', # bis 31.12.2022; mittlerweile bis 27.1.2023; bis 28.2.2023; bis 31.3.2023
        data  => <<EOF,
 #: by: https://nitter.it/VIZ_Berlin/status/1552156830029185024#m
 #: by: https://nitter.it/pic/orig/enc/bWVkaWEvRllwVlhWTFh3QU11UF9MLmpwZw== (Korrektur)
-#: next_check: 2023-02-28
+#: next_check: 2023-03-31
 # REMOVED ---	q4::inwork; 20064,3278 20166,3344 20237,3392
 	q4::inwork; 20166,3344 20237,3392 20262,3409 20299,3435 20149,3617
 EOF
@@ -36003,7 +36006,7 @@ EOF
 # REMOVED (keine Sperrung mehr) --- Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
 #: XXX Wie lange dauern noch die Bauarbeiten?
 #: also_indoor: traffic (ex-G,B)
-#: last_checked: 2023-02-19
+#: last_checked: 2023-02-28
 #: check_frequency: 21d
 # REMOVED (keine Sperrung mehr) --- Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
 Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
@@ -36174,7 +36177,7 @@ EOF
 #: by: https://nitter.cz/pic/media%2FFaSkXFdX0AQFyze.jpg%3Fname%3Dorig
 #: by: https://nitter.cz/pic/media%2FFaSkXFeXEAAqM9x.jpg%3Fname%3Dorig
 	q4::inwork 1514,5163 1573,5152
-	q2::inwork 1573,5152 1964,5070
+# REMOVED (hier keine Einschränkung, siehe mapillary) ---	q2::inwork 1573,5152 1964,5070
 EOF
      },
      { from  => 1661112782, # 2022-08-21 22:13
@@ -36353,7 +36356,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Sind die Bauarbeiten in der Krautstr. beendet?
 #: also_indoor: traffic (none)
-#: last_checked: 2023-02-24
+#: last_checked: 2023-03-01
 #: check_frequency: 14d
 	q4::inwork 12081,12236 12059,12172
 EOF
@@ -36677,9 +36680,9 @@ etwa 70m gesperrt, auf Gehweg ausweichen	q3::inwork 16720,12614 16576,12612
 EOF
      },
      { from  => 1667499233, # 1665077956, # 2022-10-06 19:39
-       until => $isodate2epoch->("2023-03-02 17:00:00"), # 1666368032, # Sperrung aufgehoben --- 1672527600, # 2023-01-01 00:00
+       until => $isodate2epoch->("2023-03-13 17:00:00"), # 1666368032, # Sperrung aufgehoben --- 1672527600, # 2023-01-01 00:00
 #       text  => 'Chausseestr./Friedrichstr./Torstr./Hannoversche Str.: Gleisbauarbeiten, Kreuzungsbereich gesperrt, Dauer der Sperrung voraussichtlich bis zum 21.11.2022',
-       text  => 'Friedrichstr.: Fahrbahn zwischen Oranienburger Str. und Torstr. gesperrt, außerdem Oranienburger Str. zwischen Friedrichstr. und Linienstr. (Gleisbauarbeiten), voraussichtlich bis 2.3.2023', # was: voraussichtlich bis Ende Januar 2023
+       text  => 'Friedrichstr.: Fahrbahn zwischen Oranienburger Str. und Torstr. gesperrt, außerdem Oranienburger Str. zwischen Friedrichstr. und Linienstr. (Gleisbauarbeiten), voraussichtlich bis 13.3.2023', # was: voraussichtlich bis Ende Januar 2023
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: ORANIENBURGERTORTRAM-2022
@@ -36689,7 +36692,7 @@ EOF
 #: source_id: viz2021:13.384646,52.526904,05.10.2022,03:30 (bis 1.12.2022, Kreuzungsbereich für Kfz-Verkehr gesperrt) (inaktiv)
 #: source_id: viz2021:13.387093,52.527156,05.10.2022,11:47 (bis 16.1.2023, nur Richtung Norden) (bis 31.1.2023) (inaktiv)
 #: source_id: viz2021:13.387679,52.524493,30.01.2023,11:58 (bis 02.03.2023) (inaktiv)
-#: source_id: viz2021:13.387251,52.526281,30.11.2022,11:39 (bis 16.1.2023, beide Richtungen) (bis 31.1.2023) (bis 2.3.2023)
+#: source_id: viz2021:13.387251,52.526281,30.11.2022,11:39 (bis 16.1.2023, beide Richtungen) (bis 31.1.2023) (bis 2.3.2023) (bis 13.3.2023)
 #: by: https://viz.berlin.de/2022/10/verkehrsvorschau-071022/ (bis Ende Dezember 2022)
 #: by: https://www.berliner-zeitung.de/news/bvg-schienenbruch-in-berlin-mitte-trambahn-chaos-bis-ende-dezember-li.273968
 #: by: https://unternehmen.bvg.de/pressemitteilung/da-muessen-wir-ran/
@@ -36701,7 +36704,7 @@ EOF
 #: note: Möglicherweise wegen der Sperrung verstärkter Verkehr in der Gartenstr. zwischen Invalidenstr. und Torstr.
 #: XXX Bis wann ist die Kreuzung gesperrt?
 #: last_checked: 2023-02-19 (bahninfo-forum) vvv
-#: next_check: 2023-03-02 vvv
+#: next_check: 2023-03-13 vvv
 # REMOVED (hier nichts) --- Chausseestr.	q4::inwork 9207,13493 9212,13471
 # REMOVED (Radfahrfurt) --- Hannoversche Str.	q3::inwork 9212,13471 9047,13446
 # REMOVED (Radfahrfurt) --- Torstr.	q3::inwork 9353,13521 9212,13471
@@ -36968,7 +36971,7 @@ EOF
 #: by: https://www.starkundstilb-architekten-berlin.de/projekte/524-emmauskirche/
 #: by: https://www.deutsches-architekturforum.de/thread/11488-gottesh%C3%A4user-in-berlin/?postID=730631#post730631
 #: add_fragezeichen: Bis wann geht die Sperrung?
-#: last_checked: 2023-02-26
+#: last_checked: 2023-03-01
 #: check_frequency: 60d
 	q3::inwork 12328,10442 12274,10612
 EOF
@@ -37020,7 +37023,7 @@ EOF
 #: XXX außerdem möglich: Einbahnstraßenregelung in Wandlitzstr. und Wildensteiner Str.? (zurzeit wohl nicht)
 #: add_fragezeichen: Ist der Übergang Hegemeisterweg/Treskowallee gesperrt? vvv
 #: priority: #A vvv
-#: last_checked: 2023-02-11 vvv
+#: last_checked: 2023-02-28 vvv
 #: check_frequency: 21d vvv
 # REMOVED --- #: next_check: 2023-01-12 vvv
 ## generated with: ./miscsrc/convert2hafas -specsperre=strassen /tmp/3 | perl -pe 's/: \t/\t/; s/igndisp/inwork/; $_="# $_" if /3nocross/' >| /tmp/3.new
@@ -37131,13 +37134,15 @@ EOF
 
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Weserstr.: Fahrbahn vor der Ederstr. gesperrt, Engstellen auf dem Bürgersteig, Ende der Bauarbeiten unbekannt',
+       text  => 'Ederstr.: Fahrbahn vor Weserstr. gesperrt, Ende der Bauarbeiten unbekannt', # was: 'Weserstr.: Fahrbahn vor der Ederstr. gesperrt, Engstellen auf dem Bürgersteig, Ende der Bauarbeiten unbekannt'
        type  => 'handicap',
        data  => <<EOF,
-#: also_indoor: traffic (G,B[zuviel],W) vvv
-#: last_checked: 2023-01-22 vvv
-	q4::inwork; 13946,7918 13891,7961
-	q3::inwork; 13891,7961 13946,7918
+# REMOVED (als die Bauarbeiten noch in der Weserstr. waren) --- #: also_indoor: traffic (G,B[zuviel],W) vvv
+#: also_indoor: traffic (B) vvv
+#: last_checked: 2023-03-02 vvv
+# REMOVED --- Weserstr. Richtung Westen	q4::inwork; 13946,7918 13891,7961
+# REMOVED --- Weserstr. Richtung Osten	q3::inwork; 13891,7961 13946,7918
+Ederstr.	q3::inwork 13946,7918 13919,7707
 #: last_checked ^^^
 #: also_indoor ^^^
 EOF
@@ -37149,7 +37154,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX nördlicher Geh- und Radweg wegen Bauarbeiten gesperrt
-#: last_checked: 2023-02-17
+#: last_checked: 2023-03-02
 #: check_frequency: 60d
 	q4::inwork; 14382,9299 14242,9448 14185,9509 14089,9610
 EOF
@@ -37485,7 +37490,8 @@ EOF
 #: next_check_id: SCHOTT-2022
 #: XXX vermutlich Arbeiten der Wasserbetriebe
 #: also_indoor: traffic (ex-B)
-#: last_checked: 2023-01-24
+#: last_checked: 2023-03-02
+#: check_frequency: 21d
 	q4::inwork; 16255,12224 16276,12273
 EOF
      },
@@ -37553,7 +37559,7 @@ EOF
 #: next_check_id: EDISON-2022
 #: by: https://nitter.net/StefanB94551270/status/1617960021819797505#m
 #: also_indoor: traffic (H,G,W)
-#: last_checked: 2023-02-11
+#: last_checked: 2023-02-28
 	q4::inwork; 17962,6674 17991,6431
 EOF
      },
@@ -37804,7 +37810,7 @@ EOF
        text  => 'Fußgängerbrücke Ostkreuz: Ausgang Hauptstr. gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2023-02-25
+#: last_checked: 2023-02-28
 #: check_frequency: 14d
 	2::inwork 14810,10832 14738,10892
 EOF
@@ -37816,8 +37822,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: FISCHERINSEL-2023
 #: by: https://www.berliner-woche.de/mitte/c-bauen/inselbruecke-gesperrt_a373424
-#: XXX prüfen!
-#: priority: #B
+# REMOVED (hier nicht, siehe anderen Eintrag) --- #: XXX prüfen! --- #: priority: #B
 	2::inwork 10680,11875 10776,11942 10824,11992 10869,11949
 EOF
      },
@@ -37882,6 +37887,18 @@ EOF
        source_id => 'viz2021:13.31502,52.50085,27.02.2023,07:00',
        data  => <<EOF,
 	q4::inwork 4371,10465 4360,10320
+EOF
+     },
+     { from  => 1677610008, # 2023-02-28 19:46
+       until => 1681595999, # 2023-04-15 23:59
+       text  => 'Oskarstr.: zwischen Hegemeisterweg und Gleyeweg Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Mitte April 2023',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX Halteverbotsschilder gelten bis zum 14.4.2023
+#: XXX Evtl. ist der Asphalt nach den Bauarbeiten besser?
+#: last_checked: 2023-02-28
+#: next_check: 2023-04-14
+	q3::inwork 17803,8079 17808,8042 17793,8012 17762,7931
 EOF
      },
     );
