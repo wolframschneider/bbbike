@@ -19,7 +19,7 @@ BAB100 (Rudolf-Wissel-Brücke)	BAB::Br 2029,12917 2105,13451 2321,13882
 # 
 BAB100	BAB 2321,13882 2537,14022 2665,14041 2905,14085 3202,14142 3616,14250 5038,14619 5268,14745
 BAB100 (Hermann-Maaß-Brücke)	BAB::Br 5268,14745 5311,14769
-BAB100	BAB 5311,14769 5440,14840
+BAB100	BAB 5311,14769 5437,14844
 BAB100 (Anschlußstelle Jakob-Kaiser-Platz)	BAB 3202,14142 3106,14195
 BAB100 (Anschlußstelle Alboinstr.)	BAB 8319,7084 8408,7149
 BAB103	BAB 4813,5350 4923,5402 5609,6321
@@ -43,6 +43,7 @@ BAB100 (Konstanzer Str. - Schildhornstr.)	BAB 3952,8980 3892,8781 3839,8468 3854
 BAB100 (Tunnel Schlangenbader Str.)	BAB::Tu 3854,7614 3853,7068
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/verkehrssenatorin-stellt-ergebnis-der-machbarkeitsstudie-zum-breitenbachplatz-vor_a368498 (Abriss könnte 2024 beginnen)
 #: by: https://www.stadtrand-nachrichten.de/breitenbachplatz-rueckbau/
+#: by: https://berliner-abendblatt.de/kiez-news/steglitz-zehlendorf/ausstellung-der-breitenbachplatz-von-morgen-id211569
 BAB100 (Konstanzer Str. - Schildhornstr.)	BAB 3853,7068 3948,6842 4097,6689 4291,6571 4423,6477
 #: note ^^^
 #: osm.highway: motorway_link vvv
@@ -300,3 +301,8 @@ B87	BAB 32148,-59841 32610,-59637 32948,-59613 33352,-59734 33727,-59915 34331,-
 #: by: mapillary
 #: note: Kfz-Straße
 B189	BAB -94950,73927 -95291,73960 -95934,74241 -96472,74317 -97109,74105 -97486,73791 -97794,73366 -97957,72925 -98002,72363 -97927,71808 -97670,71090 -97658,70694 -97791,70326 -99421,68273 -99629,68110 -99949,68007 -100297,68004 -100653,67953 -101012,67784 -101335,67500 -101510,67183 -101676,66806 -101859,66606
+# 
+#: by: mapillary
+#: note: Kfz-Straße
+B112	BAB 82404,-2102 82339,-2426 82345,-2589 82428,-2910 82637,-3226 83231,-3643 83407,-3893 83492,-4181 83507,-4831 83555,-5028 83677,-5350 84021,-5886 84049,-6066 84009,-6405 83922,-6678 83731,-7023 83621,-7201 83567,-7404 83590,-8309
+# 

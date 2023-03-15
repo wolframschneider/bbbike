@@ -2,6 +2,8 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+	X::inwork 16328,7005
+Bellevuestr.: Gegenverkehrsregelung	X::inwork 8326,11613
 Gegenverkehrsregelung	X::inwork 8737,12757
 Gürtelstr./Weserstr.	F::inwork 15016,11431
 	F::inwork 18831,14823
@@ -1005,7 +1007,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -1337,14538
 	X 5043,14671
 	X 5051,14606
-	X 5700,15043
+	X 5687,15057
 	X 13078,15586
 	X 13307,15758
 	X 14499,16341
@@ -1133,8 +1135,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12628,8711
 	X 5231,13843
 	X 5220,14043
-	X 5753,15096
-	X 5895,15229
+	X 5736,15098
+	X 5889,15231
 	X 5581,16708
 	X 3895,1219
 	X 4261,1601
@@ -1684,7 +1686,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 19985,11727
 	X 20114,11719
 	X 10849,17848
-	F 5618,14981
+	F 5605,14988
 	F 17810,5736
 	X 18740,9907
 	X 10405,9795
@@ -2525,6 +2527,9 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -13181,2285
 	X -13142,1989
 	F -14457,-1797
+	X 32957,10948
+	X 33470,10823
+	X 34678,10536
 	F -8864,-42991
 	X 1737,31303
 	F 1430,31503

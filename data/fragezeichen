@@ -82,7 +82,7 @@ Hegemühlenstr. - Herrensee: genaue Wegführung? Qualität?	? 42866,17621 42823,174
 Hohenwutzen - Bad Freienwalde: Qualität (zumindest am östlichen Ende asphaltiert)?	? 58211,48747 57884,48807 57505,48703 57396,48965 57328,48981
 Straße der Freiheit (Lebus): Qualität? Radweg?	? 87940,3516 87722,3688 87539,3653 87443,3671 87344,3693
 Lebus - Boosen: Qualität (wahrscheinlich asphaltiert)?	? 87151,3688 86366,3391 85940,3299 84607,3437 84089,3284 83773,3285 83289,3308 83153,3202 83024,3058 83457,2462 83335,1616 83476,155 83137,-401 83022,-798 83038,-965 83319,-1506 83327,-1933 83175,-2268 83182,-2420
-Boosen - Rosengarten: Qualität?	? 83500,-2486 83327,-2679 83327,-2778 83167,-2786 83175,-3136 83457,-4180 83464,-5040
+Boosen - Rosengarten: Qualität?	? 83500,-2486 83327,-2679 83327,-2778 83167,-2786 83166,-3173 83269,-3562 83236,-3686 83284,-3768 83344,-3828 83366,-3937 83320,-4006 83338,-4073 83417,-4127 83459,-4242 83464,-5040
 Frankfurt - Schlaubehammer: Qualität?	? 87379,-9565 87181,-9984 86831,-11347 86694,-11500 86458,-11941 86351,-12208 86442,-12444 86390,-12552 85391,-12772 84241,-13122 84104,-13419 83990,-13808 83929,-14623 83845,-14714 84051,-15392 84013,-16047 83914,-16184 83901,-16522
 Brieskow-Finkenheerd: Qualität?	? 90164,-16382 90129,-16123 90183,-15925 90183,-15636 90259,-15331 90464,-15324 90632,-15087 91013,-15004
 Oder-Neiße-Radweg: Qualität?	? 90929,-14801 91203,-14745 91249,-14508 91340,-13206 91516,-13092 91767,-13412 92072,-13564 92856,-13747 93344,-13747 93664,-13838 94083,-14044 94821,-14569 95362,-14676 95949,-14592 96840,-14798 98188,-15598 99262,-16710 99316,-17441 99544,-18104 99734,-18363 99567,-19361 99232,-19841 98759,-20930 98112,-21608 98097,-22385 98417,-23177 99270,-24076 99468,-24601 99437,-25066 99117,-25531 98851,-25706 97647,-27138 97632,-27290 97343,-27595 97487,-27778 97609,-28204 97617,-28318 98066,-29720 98082,-29979 97952,-30634 97990,-31045 98866,-32386 98813,-32554 98950,-32820 99681,-33224 100214,-33399 101075,-33391 101227,-33460 102614,-34801 102614,-35204 102934,-35639 103063,-35692 103101,-35913 102347,-37010 102530,-37398 102690,-37924 102629,-38404 102896,-38746 102896,-39059 102698,-39455 102583,-39897 102720,-39958 102667,-40072 102400,-40140 102286,-40376 102309,-40826 102172,-41070 101677,-41572 101418,-41466 101159,-41473 100847,-41329 100458,-41915 99727,-42662 99300,-43225 99453,-43477 99565,-43453 99811,-43385 99933,-44147 99719,-44475 99626,-44753 99516,-44815
@@ -900,8 +900,6 @@ Grünkardinalweg (Unterführung): schlechtes Kopfsteinpflaster (Ist die Deckschich
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33327,2979 33296,2894
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33167,2940 33296,2894 33406,2852 33503,2818
 Abendseglersteig: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33406,2852 33383,2792 33267,2810 33139,2835 33167,2940
-Eiswaldtstr.: Asphalt, stellenweise etwas uneben (Wird die Fahrbahn nach den Bauarbeiten besser sein?)	? 6718,2443 6862,2452 6965,2418 7051,2366 7172,2343 7285,2377
-Tennstedter Str.: Kopfsteinpflaster (Liegt in der Tennstedter Straße südlich der Blankenhainer Straße Asphalt oder Kopfsteinpflaster?)	? 6716,1667 6818,1459 6921,1259
 # added from qualitaet_l
 Heckelberg - Beerbaum: etwas welliger Asphalt (Ist die Fahrbahnqualität nach den Bauarbeiten besser geworden?)	? 39402,37410 39156,37578 38986,37512 38171,37238 37672,36908 36605,36450 36523,36465 36359,36493
 Ortsdurchfahrt Beerbaum: schlechtes Kopfsteinpflaster (Ist die Fahrbahnqualität nach den Bauarbeiten besser geworden?)	? 36000,36534 36215,36497 36307,36503 36359,36493
@@ -970,10 +968,8 @@ Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	?
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
-Dernburgstr. (Ist die Einbahnstraße mittlerweile für Radfahrer geöffnet oder wird das in Zukunft passieren?)	? 2493,10675 2378,10677 2310,10732 2233,11049
 Schranke, umständlich zu umfahren (existiert die Schranke noch?)	? 19608,-1953
 Alexander-von-Humboldt-Weg: Straßenbahnübergang gesperrt (Ist der Straßenbahnübergang mittlerweile offen?)	? 18818,3332 18829,3321
-Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt (Bis wann genau geht die Sperrung?)	? 7727,4418 7692,4464 7667,4549
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 Verbundsteinpflaster, teilweise schadhaft (Wurzelschäden) (Wird die Qualität des Radwegs nach den Bauarbeiten besser sein?)	? 43162,14428 42996,14793
@@ -1003,13 +999,15 @@ Jörsstr.: Asphaltierung vermutlich bereits durchgeführt (Wurde die Asphaltierung
 Brauerstr.: evtl. wird hier die Einbahnstraßenregelung für Radfahrer aufgehoben (Wurde die Einbahnstraßenregelung für Radfahrer aufgehoben?)	? 5317,2345 5159,2176
 L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen Prenzlau und Güstow einen straßenbegleitenden Radweg? Wenn ja: auf welcher Seite und ist der Radweg asphaltiert?)	? 37020,101115 36600,101499 36138,101586 35027,102258 34671,102369 34607,102396
 # added from bbbike-temp-blockings-optimized
-Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer: Bauarbeiten an der Eisenbahnüberführung, komplette Sperrung des Weges, voraussichtlich bis Ende 2023 (Ist hier noch immer gesperrt?)	? 7673,4223 7769,4315
 Kroppenstedtweg: Bauarbeiten zwischen Dihlmannstr. und Hauptweg, Weg ist gesperrt, ab 11.04.2022, Ende der Bauarbeiten ist unbekannt (Stand Oktober 2022: Weg ist weitehin gesperrt) (Bis wann gehen die Bauarbeiten? Ist der Kroppenstedtweg danach komplett asphaltiert?)	? 983,15136 971,15193
 Zähringerstr.: Einbahnstraßenregelung (Wurde die Einbahnstraßenregelung mittlerweile aufgehoben?)	? 4126,9932 3927,9935
-Seydlitzstr.: Bauarbeiten zwischen Frobenstr. und Dessauerstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt Seydlitzstr. (Sind die Bauarbeiten beendet und die Fahrbahn wieder offen?)	? 6349,2510 6459,2364
+Pascalstr.: Fahrbahn zwischen Heisenbergstr. und Schlesingerstr. wegen Hochbauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 4961,12940 4932,12968
 Tauroggener Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Norden, Ende der Bauarbeiten unbekannt (Besteht die Einbahnstraßenregelung noch immer?)	? 3429,13227 3400,13107
 Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023 Mauerweg Marienfelde - Lichterfelde (Wo genau sind die gesperrten Abschnitte des Mauerwegs?)	? 7097,-527 6961,-389 6668,-100 6498,71 6351,219 6256,363
 Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023 Mauerweg Marienfelde - Lichterfelde (Wo genau sind die gesperrten Abschnitte des Mauerwegs?)	? 5441,-150 4842,-547 4596,-707 4406,-910
 Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023 Mauerweg Lichtenrade - Marienfelde (Wo genau sind die gesperrten Abschnitte des Mauerwegs?)	? 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568
+Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet? Wird der Weg neu asphaltiert sein?)	? 20996,16429 20923,16435 20898,16420
 Mauerweg: Bauarbeiten zwischen Osdorfer Str. und Jenbacher Weg, Weg ist gesperrt (Stand Ende Oktober 2022) Mauerweg Marienfelde - Lichterfelde (Ist dieser Abschnitt des Mauerwegs noch gesperrt?)	? 6256,363 6204,331 6013,211 5832,93 5441,-150
 Am Betriebsbahnhof Schöneweide: Bauarbeiten, Straße gesperrt, Ende der Bauarbeiten unbekannt (Ist der Weg wieder geöffnet?)	? 18107,5011 17822,5409
+Lehderstr.: Einbahnstraßenregelung zwischen Börnestr. und Behaimstr., offen Richtung Westen, Ende der Bauarbeiten unbekannt (Besteht die Einbahnstraßenregelung noch immer?)	? 13086,15907 13214,15830
+Ella-Kay-Str.: Fahrbahn und Bürgersteig im nördlichen Abschnitt gesperrt, Ende der Bauarbeiten unbekannt (Wie lange dauern die Bauarbeiten an?)	? 12173,15040 12095,14888

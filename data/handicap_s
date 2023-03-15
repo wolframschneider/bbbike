@@ -93,6 +93,7 @@ Alexanderplatz [Richtung Alexa]: Fuﬂg‰ngerverkehr	q3 11141,12806 11064,12910
 Dircksenstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10970,12822 10849,12944
 Dircksenstr.: Fuﬂg‰nger	q2 10970,12822 11007,12773 11030,12741 11087,12780 11105,12764
 Gontardstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10733,12967 10801,12901 10923,12779
+Gontardstr.: Fuﬂg‰nger	q2 10923,12779 11013,12684
 Uferweg im Treptower Park: Fuﬂg‰nger, besonders an schˆnen Tagen	q2 15778,8990 15623,9028 15527,9096 15513,9144 15453,9259 15432,9322 15304,9464 15186,9550 15052,9584 14909,9649 14889,9660 14807,9704 14635,9786
 Uferweg im Treptower Park: Fuﬂg‰nger, besonders an schˆnen Tagen	q2 14635,9786 14500,9863 14467,9887
 Uferweg im Treptower Park: Fuﬂg‰nger, besonders an schˆnen Tagen	q2 14467,9887 14455,9892 14448,9922
@@ -341,7 +342,7 @@ F¸rther Str.: Gehweg	q2 5764,10322 5808,10284
 Goerdelersteg: enge wendelfˆrmige Rampen	q3 3656,14150 3634,14187 3625,14230 3601,14284 3595,14267
 Goerdelersteg: enge wendelfˆrmige Rampen	q3 3655,14237 3610,14219 3625,14230
 Schneckenbr¸cke: Rampe	q3 2012,3356 2009,3362 1980,3409 1977,3414
-Radweg eng und bewachsen	q1 5051,14606 5264,14671 5293,14699 5331,14735 5440,14840
+Radweg eng und bewachsen	q1 5051,14606 5264,14671 5293,14699 5331,14735 5437,14844
 zum Tunnel S-Bhf. Grunewald: Fuﬂg‰nger	q1 693,9129 731,9103
 Tunnel S-Bhf. Grunewald: Fuﬂg‰nger, Radfahren nicht erlaubt, ggfs. absteigen	q3 731,9103 884,8954
 enge Kurven	q2 33526,2771 33419,2765 33406,2738
@@ -641,7 +642,7 @@ Linienstr./Oranienburger Str.: Fuﬂg‰nger	q2 9225,13389 9312,13388
 Fontanestr.: zwei Schwellen, kˆnnen zumeist nicht umfahren werden	q1 18240,6845 18254,6679
 Plˆnzeile: zwei Schwellen	q2 18574,6401 18676,6333
 Triniusstr.: zwei Schwellen, kˆnnen umfahren werden	q1 18417,6775 18339,6660
-Kiautschoustr.: Fuﬂg‰nger, Bordsteine	q3 6837,14848 6853,14854
+Kiautschoustr.: Fuﬂg‰nger, Bordsteine	q4 6837,14848 6880,14861
 (Warschauer Br¸cke - Tamara-Danz-Str.): Fuﬂg‰nger	q4 13454,11119 13483,11143 13498,11136 13524,11204 13514,11208
 (Warschauer Br¸cke - Tamara-Danz-Str.): Fuﬂg‰nger, Bordstein	q4 13514,11208 13503,11179 13479,11147
 (Blenheimstr. - B‰rensteinstr.): Fuﬂg‰nger bzw. Parkplatzverkehr	q2 21163,15289 21263,15291 21350,15292
@@ -1018,7 +1019,7 @@ Kirchgasse (Tegel): Fuﬂg‰nger	q1 1630,20097 1669,19982
 Hilchenbacher Weg: Fuﬂg‰nger, eng	q2 2413,18655 2416,18598
 Hilchenbacher Weg: Fuﬂg‰nger, eng	q2 2426,18544 2444,18487
 Straﬂe 455: Bordstein	q2 4916,17201 4931,17174
-(Uferweg Plˆtzensee): Fuﬂg‰nger	q1 5618,14981 5455,15245 5391,15331 5306,15387 5134,15565 5073,15611 5040,15606 5015,15564 5051,15508 5084,15415 5075,15354 5001,15211
+(Uferweg Plˆtzensee): Fuﬂg‰nger	q1 5605,14988 5455,15245 5391,15331 5306,15387 5134,15565 5073,15611 5040,15606 5015,15564 5051,15508 5084,15415 5075,15354 5001,15211
 (Br¸cke ¸ber den Maselakekanal): Steigung 14%	q2 -2152,17108 -2140,17171 -2165,17176
 Kleingartenstr.: enge Straﬂe	q1 24118,4404 24075,4417 24022,4442 23978,4484
 Gladiolenstr.: enge Straﬂe	q1 23536,4543 23541,4439
@@ -1477,7 +1478,7 @@ Gersdorfstr. - Wulfila-Ufer: Bordstein, einige Fuﬂg‰nger	q2 8255,4791 8192,4710
 (Brentanostr. - Breitenbachplatz): einige Fuﬂg‰nger	q1 4058,6602 4034,6642
 (Rewe-Parkplatz): Supermarkt-Parkplatz	q2 3746,2108 3723,2118 3726,2209
 Geitnerweg: Bordstein, einige Fuﬂg‰nger	q2 5420,511 5448,455
-Seydlitzstr.: einige Fuﬂg‰nger	q1 6511,2284 6459,2364
+Seydlitzstr.: einige Fuﬂg‰nger	q1 6511,2284 6454,2366
 Trabener Steg: abgeflachte Treppenstufen, Fuﬂg‰nger	q2 2142,10027 2131,10014 2128,9999
 Trabener Steg: abgeflachte Treppenstufen, Fuﬂg‰nger	q2 2224,10083 2245,10092
 Wilhelm-Stolze-Str.: Fuﬂg‰nger	q3 13267,13167 13233,13242
@@ -2064,12 +2065,22 @@ Kissinger Str. (Schmargendorf): einige Fuﬂg‰nger	q2 3219,7987 3206,7988
 (Brusebergstr. - Gotthardstr.): einige Fuﬂg‰nger	q1 6045,18305 6046,18290 6040,18289 6031,18151 6065,18004 6049,17839 6056,17798
 (Provinzstr. - Verl‰ngerte Koloniestr.): Fuﬂg‰nger, eng	q2 8628,18441 8823,18252 8918,18159
 (Koloniestr. - Pankeweg): einige Fuﬂg‰nger	q2 8973,17756 9024,17780 9050,17794 9110,17784
-(Virchow-Klinikum, Eingang Augustenburger Platz): Radfahren verboten, schieben	q4 6545,15116 6431,15098
-(Mittelallee, Virchow-Klinikum): Krankenhausgel‰nde	q2 6007,15053 6395,15109 6429,15115 6431,15098 6433,15085 6400,15080 6012,15024
-(Weststr., Virchow-Klinikum): Krankenhausgel‰nde	q2 5944,15172 5998,15112 6007,15053 6012,15024 6025,14924
-(Ost-West-Str., Virchow-Klinikum): Krankenhausgel‰nde	q2 5998,15112 6056,15162 6170,15263 6265,15349 6348,15423
-(S¸dstr., Virchow-Klinikum): Krankenhausgel‰nde	q2 6414,14981 6305,14964 6231,14952 6159,14921 6104,14937 6025,14924
-(Oststr., Virchow-Klinikum): Krankenhausgel‰nde	q2 6414,14981 6400,15080 6395,15109 6380,15210
+(Virchow-Klinikum, Eingang Augustenburger Platz): Radfahren verboten, schieben	q3 6545,15116 6524,15113
+(Virchow-Klinikum, Eingang Augustenburger Platz): Radfahren verboten, schieben	q4 6524,15113 6443,15100
+(Virchow-Klinikum, Eingang Augustenburger Platz): Radfahren verboten, schieben	q3 6443,15100 6431,15098
+(Mittelallee, Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 6007,15053 6395,15109 6429,15115 6431,15098 6433,15085 6400,15080 6012,15024
+(Weststr., Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 5944,15172 5998,15112 6007,15053 6012,15024 6030,14924
+(Ost-West-Str., Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 5998,15112 6056,15162 6170,15263 6265,15349 6331,15408 6348,15423
+(S¸dstr., Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 6414,14981 6305,14964 6231,14952 6159,14921 6104,14937 6030,14924
+(Oststr., Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 6414,14981 6400,15080 6395,15109 6380,15210
+(Oststr., Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 6414,14981 6470,14990 6504,14969
+(S¸dring, Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 6158,14851 6078,14864 6073,14892 6118,14889 6158,14851 6180,14806 6210,14808 6252,14812 6319,14821 6305,14964
+(S¸dring, Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 6231,14952 6252,14812
+(Virchow-Klinikum, Einfahrt Nordufer/S¸dring): Krankenhausgel‰nde, 20km/h-Zone	q2 6210,14808 6213,14777
+(S¸dring - Weststr., Virchow-Klinikum): einige Fuﬂg‰nger	q2 6073,14892 6035,14913 6030,14924
+(Nordstr., Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 6056,15162 6254,15191 6380,15210
+(Nordring, Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 6265,15349 6275,15335 6293,15330
+(Nordring, Virchow-Klinikum): Krankenhausgel‰nde, 20km/h-Zone	q2 6275,15335 6262,15323 6272,15249 6249,15237 6254,15191
 Dresdener Str.: Fuﬂg‰nger	q3 11021,11287 11000,11327
 (Lutterbacher Str. - Dahlemer Weg): einige Fuﬂg‰nger, Umlaufgitter am Bahn¸bergang	q3 2151,3126 2166,3138 2193,3142
 Fischer-Dieskau-Weg: einige Fuﬂg‰nger	q1 -151,2975 -81,2699
@@ -2942,7 +2953,7 @@ Battenheimer Weg: enge Straﬂe	q1 11762,1040 11681,1031 11393,1243
 Birnbaumring: enge Straﬂe	q0 8661,24952 8751,24988 8785,25014 8825,25052 8871,25109 8922,25212 8856,25267 8776,25332 8735,25366 8673,25418 8584,25371 8501,25358
 Stavenhagener Str.: enge Straﬂe	q1 13632,5126 13534,5111 13444,5097 13359,5086
 Glambecker Weg: enge Straﬂe	q1 2577,24048 2482,23985 2430,24155 2385,24298 2362,24370
-Thaliaweg: enge Straﬂe	q1 6638,3138 6482,3004
+Thaliaweg: enge Straﬂe	q0 6638,3138 6482,3004
 Marmaraweg: Fuﬂg‰nger	q1 10368,4279 10371,4337
 Kolonie Bismarckruh: Fuﬂg‰nger, Radfahren erlaubt	q1 1293,13332 1311,13210 1336,12967 1335,12921 1242,12535
 Damwildsteig: enge Straﬂe	q1 -482,21392 -777,21455 -1090,21526 -1213,21553
@@ -3226,8 +3237,8 @@ Erkelenzdamm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1111
 Privatstr. 14: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13159,17196 13103,17280
 Bernkasteler Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 15208,16939 15015,16908 14923,16901
 (Breite Str., Verbindung): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 10463,18321 10487,18270
-Sauerbruchweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 8487,13351 8630,13172
-Virchowweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 8603,13076 8550,13150
+Sauerbruchweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 8490,13354 8632,13155
+Virchowweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 8595,13085 8550,13150
 Steintr‰gerweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 12987,2220 13023,2093
 Harzburger Str. (Pankow), Klaustaler Str...: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 11442,18736 11419,18801 11463,18817 11469,18799 11483,18753 11462,18743 11442,18736
 Rˆmerweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 19236,9710 19450,9728 19459,9842
