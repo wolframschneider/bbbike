@@ -986,6 +986,8 @@ Kielblockstr. - Rutnikstr.: Linksabbiegen Pflicht	3 15433,12686 15546,12690 1564
 Möllendorffstr. - Rutnikstr.: Abbiegen verboten	3 15516,12838 15546,12690 15648,12687
 Hermannswerder	1 -14306,-2867 -14044,-2918 -13765,-2974 -13733,-2967
 Neue Schönholzer Str.	1 10089,18180 10141,18030 10179,17772
+Neue Schönholzer Str. - Schönholzer Str.	3 10141,18030 10089,18180 10054,18210
+Neue Schönholzer Str. - Wollankstr.	3 10141,18030 10089,18180 10027,18165
 Kleine Kurstr.	1 10230,11839 10189,11773
 Schendelgasse	1 10644,13497 10703,13467 10767,13443
 Leipziger Str. (Potsdam)	1 -12431,-2096 -12534,-2125 -12620,-2174 -12655,-2202 -12697,-2235 -12708,-2257 -12713,-2279 -12743,-2387 -12756,-2437 -12779,-2467 -12796,-2488 -12879,-2573 -13003,-2754 -13022,-2776 -13062,-2901
@@ -1201,7 +1203,7 @@ Schillerstr. -> Schillerstr.: Mittelinsel	3::igndisp 4452,11570 4331,11554 4155,
 Schillerstr. -> Leibnizstr.: Mittelinsel	3::igndisp 4155,11527 4331,11554 4337,11721
 Schillerstr. -> Schillerstr.: Mittelinsel	3::igndisp 4155,11527 4331,11554 4452,11570
 Sybelstr.	1 4017,10585 4256,10583
-Hüttendorfer Weg	1 21409,-109 21463,-280
+Hüttendorfer Weg	1 21402,-116 21466,-281
 Brückenstr.: Anlieger frei	1:Anlieger 17728,5756 17900,6072
 Passauer -> Lietzenburger	3 6033,10403 6020,10351 6147,10383
 Am Hanffgraben	1 16698,1392 16805,1488
@@ -1644,7 +1646,7 @@ Bayerische Str. -> Wielandstr.: Mittelstreifen	3::igndisp 4352,10260 4360,10320 
 Wielandstr. -> Olivaer Pl. [Verl. Lietzenburger Str.]: Mittelstreifen	3::igndisp 4371,10465 4360,10320 4485,10307
 Wielandstr. -> Bayerische Str.: Mittelstreifen	3::igndisp 4371,10465 4360,10320 4352,10260
 Suarezstr.	1 2845,10840 2921,10928 2987,11055
-Temporäre Umleitungsstrecke: eigentlich nur für Versorgung und Taxis offen	2 18768,-1350 18666,-1397 18617,-1486 18578,-1538
+Temporäre Umleitungsstrecke: eigentlich nur für Versorgung und Taxis offen	2 18767,-1343 18653,-1408 18617,-1486 18578,-1538
 (BAB113 - Flughafen Berlin-Brandenburg)	1 18048,-4186 18220,-4115 18329,-4154 18400,-4258 18497,-4285
 (Flughafen Berlin-Brandenburg - BAB113)	1 18497,-4285 18444,-4329 18429,-4421 18393,-4518 18222,-4592
 Elly-Beinhorn-Ring	1 18386,-4109 18423,-4094 18861,-3921 19005,-3862 19059,-3882 19105,-3940 19153,-4033 19158,-4083 19126,-4141 18984,-4202 18492,-4417 18480,-4374 18386,-4109

@@ -1355,7 +1355,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'from' => undef,
          'id' => 2454,
          'recurring' => 1,
-         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Winter: 18.00 bis 6.00 Uhr',
+         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
          'until' => undef
        },
        {
@@ -1840,23 +1840,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://viz.berlin.de/2023/03/staatsbesuch/ (neu)
-# REMOVED (diesmal nicht) --- Hardenbergstr.	2::temp 5459,11135 5542,11075
-	2::temp 5542,11075 5652,11004 5613,10963 5488,10978
-# REMOVED (diesmal nicht) --- Joachimsthaler südl. Kantstr.	2::temp 5488,10978 5475,10808
-	2::temp 5652,11004 5716,10978
-# REMOVED (diesmal nicht) --- Kantstr. westl. Joachimsthaler Str.	2::temp 5373,10981 5488,10978
-Joachimsthaler Str.	1::temp 5488,10978 5542,11075
-# REMOVED (diesmal nicht) --- Hardenbergplatz	3 5600,11114 5542,11075 5565,11147
-# REMOVED (diesmal nicht) ---	3 5565,11147 5542,11075 5600,11114
-',
-         'from' => 1678791600,
-         'id' => 2769,
-         'text' => 'Hardenbergstr., Joachimsthaler Str., Kantstr.: Staatsbesuch, Sperrungen möglich, vom 15. März 2023, 12:00 Uhr bis zum 17. März 2023, 12:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1679050800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1983,16 +1967,16 @@ Joachimsthaler Str.	1::temp 5488,10978 5542,11075
 #: source_id: viz2021:13.196408,52.438127,13.12.2022,09:15
 #: source_id: viz2021:13.196408,52.438127,15.03.2023,09:15 (bis 15.03.2023)
 #: priority: #A
-#: next_check: 2023-03-15
+#: next_check: 2023-03-22
 	2::temp -2218,5133 -927,6888
 	2::temp -2825,5588 -2600,5888 -1934,6804 -2095,6918
 	2::temp -1934,6804 -1854,6898
 ',
-         'from' => 1678748400,
+         'from' => 1679353200,
          'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 15. März 2023 zwischen 09:15 und 10:15 Uhr',
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 22. März 2023 zwischen 09:15 und 10:15 Uhr',
          'type' => 'gesperrt',
-         'until' => 1678871700
+         'until' => 1679476500
        },
        undef,
        {
@@ -2037,47 +2021,8 @@ Joachimsthaler Str.	1::temp 5488,10978 5542,11075
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://viz.berlin.de/2023/03/staatsbesuch/ (neu)
-	2::temp 8044,12989 8110,13042 8111,13029 8116,12938 8041,12866 8025,12879
-	2::temp 8277,13032 8317,13015 8408,12968 8464,12919 8480,12909 8503,12895 8424,12853 8309,12758 8252,12757 8206,12757 8120,12756 8030,12824
-# REMOVED ---	2::temp 8030,12824 8114,12839
-	2::temp 8168,12945 8235,12945 8304,12938 8370,12902
-	2::temp 8116,12938 8115,12912 8114,12839 8120,12756 8122,12603 8119,12414
-	2::temp 8464,12919 8498,12870
-	2::temp 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593
-	2::temp 8111,13029 8132,13034 8137,13024 8044,12989 7966,12913
-	2::temp 8050,12893
-# REMOFED ---	2::temp 8168,12848 8204,12816 8206,12757
-	2::temp 8206,12757 8206,12734 8207,12606
-	2::temp 8207,12606 8306,12609 8309,12758
-	2::temp 8030,12857 8021,12832 7930,12912
-	2::temp 8207,12606 8122,12603 7945,12592 7875,12363
-	2::temp 8369,12609 8373,12416
-	2::temp 7945,12592 7851,12590 7741,12586 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8025,12879 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8445,12755 8415,12749 8309,12758 8304,12938
-',
-         'from' => 1678860000,
-         'id' => 2872,
-         'source_id' => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
-         'text' => 'Straßen rund um das Bundeskanzleramt: wegen eines Staatsbesuchs Sperrungen möglich, am 16. März 2023 von 07:00 Uhr bis 16:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1678978800
-       },
-       {
-         'data' => '#: by: https://viz.berlin.de/2023/03/staatsbesuch/ (neuer Staatsbesuch)
-	2::temp 7215,12295 7031,12320 7051,12426 7077,12575
-	2::temp 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954 6744,11936 6809,11979 6828,12031 6787,12099 6831,12150 7001,12274 7031,12320 7383,12095
-	2::temp 6694,12627 7031,12320
-	3 7183,12372 7122,12384 7051,12426 6859,12567 6808,12604
-	3 6808,12604 6859,12567 7051,12426 7122,12384 7183,12372
-',
-         'from' => 1678870800,
-         'id' => 2873,
-         'source_id' => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
-         'text' => 'Straßen am Schloss Bellevue (inklusive Großer Stern): wegen eines Staatsbesuchs Sperrungen möglich, 16. März 2023 von 10:00 bis 20:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1678993200
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -2758,7 +2703,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10694 ("Corona bedingte Erweiterungen ... fallen weg")
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2023-03-11
+#: last_checked: 2023-03-18
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -3062,18 +3007,20 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: by: https://www.bahninfo-forum.de/read.php?9,578649,697260#msg-697260
 #: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA3_Landesgrenze-Mahlow-Blankenfelde/20210530/
 #: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA3_Landesgrenze-Mahlow-Blankenfelde/20210716/
+#: by: https://bauprojekte.deutschebahn.com/p/dresdner-bahn?date=20230316 (voraussichtliche Freigabe im Herbst 2023)
 #: confirmed_by: srt
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet?
 # REMOVED --- #: osm_watch: node id="8599852570" version="2"
 # REMOVED --- #: osm_watch: node id="8599852571" version="1"
 #: osm_watch: way id="1060570985" version="1"
 #: last_checked: 2022-10-31 (daf)
-#: check_frequency: 180d
+# REMOVED --- #: check_frequency: 180d
+#: next_check: 2023-10-01
 	2::inwork 10346,-4027 10778,-3988 11338,-3945
 ',
          'from' => undef,
          'id' => 3349,
-         'text' => 'Bahnübergang Ziethener Str. wegen Bauarbeiten gesperrt',
+         'text' => 'Bahnübergang Ziethener Str. wegen Bauarbeiten gesperrt, voraussichtliche Freigabe im Herbst 2023',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3734,14 +3681,14 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: next_check_id: WILHELMVONSIEMENSPARK-2019
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten? Ist der Kroppenstedtweg danach komplett asphaltiert?
-#: last_checked: 2022-10-03
-#: check_frequency: 120d
+#: last_checked: 2023-03-18
+#: check_frequency: 90d
 	2::inwork 983,15136 971,15193
 ',
          'from' => 1649541600,
          'id' => 3535,
          'source_id' => 'https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2022/pressemitteilung.1194824.php',
-         'text' => 'Kroppenstedtweg: Bauarbeiten zwischen Dihlmannstr. und Hauptweg, Weg ist gesperrt, ab 11.04.2022, Ende der Bauarbeiten ist unbekannt (Stand Oktober 2022: Weg ist weitehin gesperrt)',
+         'text' => 'Kroppenstedtweg: Bauarbeiten zwischen Dihlmannstr. und Hauptweg, Weg ist gesperrt, ab 11.04.2022, Ende der Bauarbeiten ist unbekannt (Stand März 2023: Weg ist weitehin gesperrt)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3754,7 +3701,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: osm_watch: way id="975241319" version="5"
 #: osm_watch: way id="970452276" version="4"
 #: also_indoor: traffic (none)
-#: last_checked: 2023-02-14
+#: last_checked: 2023-03-15
 #: check_frequency: 30d
 	q3::inwork; 12805,8194 12873,8218 12911,8232
 # REMOVED ---	q4::inwork 12873,8218 12911,8232
@@ -3883,6 +3830,7 @@ Hämmerlingstr.	2::inwork 21984,6317 22000,6245 22033,6144
        undef,
        {
          'data' => '#: by: mapillary
+#: osm_watch: way id="80883496" version="15"
 #: last_checked: 2022-06-04 (mapillary)
 #: check_frequency: 180d
 	2::inwork 17236,-602 17076,-644 16997,-663
@@ -4018,7 +3966,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.338684.php?date=20221231 (geplante Fertigstellung Ende 12/2022)
 # REMOVED --- #: XXX Wie groß sind die Einschränkungen für Radfahrer? vvv
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2023-03-06 vvv
+#: last_checked: 2023-03-16 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2022-11-07 vvv
 #: osm_watch: way id="1043813287" version="2"
@@ -4085,7 +4033,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
 # REMOVED (keine Sperrung mehr) --- Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
 #: XXX Wie lange dauern noch die Bauarbeiten?
 #: also_indoor: traffic (ex-G,B)
-#: last_checked: 2023-03-14
+#: last_checked: 2023-03-17
 #: check_frequency: 21d
 # REMOVED (keine Sperrung mehr) --- Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
 Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
@@ -4202,7 +4150,7 @@ Wallensteinstr.: Einbahnstraßenregelung	q4::inwork; 18134,9080 18092,9141 18037,
        {
          'data' => '#: add_fragezeichen: Sind die Bauarbeiten in der Krautstr. beendet?
 #: also_indoor: traffic (none)
-#: last_checked: 2023-03-13
+#: last_checked: 2023-03-18
 #: check_frequency: 10d
 	q4::inwork 12081,12236 12059,12172
 ',
@@ -4261,8 +4209,8 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
 #: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
 #: osm_watch: way id="1094113747" version="1"
 #: also_indoor: traffic (none)
-#: last_checked: 2022-09-17
-#: check_frequency: 90d
+#: last_checked: 2023-03-18
+#: check_frequency: 180d
 #: next_check: 2024-06-30
 	q4::inwork; 3429,13227 3400,13107
 ',
@@ -4339,13 +4287,16 @@ Winterfeldtstr.	q3::inwork 6630,9990 6741,10017 6903,10056
 #: by: https://berliner-abendblatt.de/2023/01/11/senat-plant-auszug-der-fluechtlinge-aus-terminals-in-tegel/ (bis Mitte März 2023; allerdings bleibt Terminal C möglicherweise weiterhin als Unterkunft erhalten)
 #: osm_watch: way id="8039689" version="17"
 #: XXX Wie lange bleibt das Gelände gesperrt? vvv
-#: last_checked: 2022-11-18 (osm) vvv
+#: note: Wachschutz an der Einfahrt "Zum Flughafen Tegel", theoretisch kan man über die Straße zur Luftfracht auf das Gelände gelangen
+#: last_checked: 2023-03-18 vvv
 #: check_frequency: 180d vvv
-#: next_check: 2023-03-15 vvv
-# REMOVED --- #: next_check: 2026-12-31 vvv
+#: next_check: 2026-12-31 vvv
 	2::temp 2987,16486 2869,16464 2832,16376 2847,16348 2839,16337 2800,16368 2720,16353 2696,16271 2757,16194
-	2::temp 2226,16096 2290,16022 2580,15939 2595,15922 2604,15875 2638,15842 2701,15853 2787,15870 2828,15903 2880,15884 2787,15870
-	2::temp 2996,15930 2960,15847 2944,15880 2913,15944 2880,15908 2828,15903 2810,15931 2818,15966 2846,15986 2954,16006 2988,15999 3009,15965 2996,15930 2977,15923 2949,15922 2913,15944 2809,16143 2757,16194 2709,16291 2692,16326 2621,16344 2552,16330 2517,16380 2538,16435 2601,16447 2638,16406 2675,16361 2733,16343 2812,16348 2853,16293 2839,16337
+# REMOVED (hier keine Einschränkungen) ---	2::temp 2226,16096 2290,16022 2580,15939 2595,15922 2604,15875 2638,15842 2701,15853 2787,15870
+	2::temp 2787,15870 2828,15903 2880,15884 2787,15870
+	2::temp 2996,15930 2960,15847 2944,15880 2913,15944 2880,15908 2828,15903 2810,15931 2818,15966 2846,15986 2954,16006 2988,15999 3009,15965 2996,15930 2977,15923 2949,15922 2913,15944 2892,15983
+Brückenabriss, Komplettsperrung	2::temp 2892,15983 2809,16143
+	2::temp 2809,16143 2757,16194 2709,16291 2692,16326 2621,16344 2552,16330 2517,16380 2538,16435 2601,16447 2638,16406 2675,16361 2733,16343 2812,16348 2853,16293 2839,16337
 	2::temp 2809,16143 2853,16293
 	2::temp 2880,15884 2960,15847
 #: next_check ^^^
@@ -4355,7 +4306,7 @@ Winterfeldtstr.	q3::inwork 6630,9990 6741,10017 6903,10056
 ',
          'from' => undef,
          'id' => 3641,
-         'text' => 'Flughafen Tegel: Privatgelände, für den öffentlichen Verkehr gesperrt',
+         'text' => 'Flughafen Tegel: Privatgelände, für den öffentlichen Verkehr gesperrt, teilweise auch Sperrungen wegen Bauarbeiten',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4379,7 +4330,7 @@ Winterfeldtstr.	q3::inwork 6630,9990 6741,10017 6903,10056
 #: by: https://nitter.net/pic/orig/media%2FFizho6UWQAI-o77.jpg (Umleitung für den Radverkehr)
 #: note: Möglicherweise wegen der Sperrung verstärkter Verkehr in der Gartenstr. zwischen Invalidenstr. und Torstr.
 #: XXX Bis wann ist die Kreuzung gesperrt?
-#: last_checked: 2023-03-12 vvv
+#: last_checked: 2023-03-18 vvv
 #: next_check: 2023-03-28 vvv
 # REMOVED (hier nichts) --- Chausseestr.	q4::inwork 9207,13493 9212,13471
 # REMOVED (Radfahrfurt) --- Hannoversche Str.	q3::inwork 9212,13471 9047,13446
@@ -4413,23 +4364,7 @@ Oranienburger Str.	q4::inwork; 9225,13389 9293,13366
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: MACHANDELWEG-2022
-#: by: https://www.youtube.com/watch?v=-UWvhPunrr8 (Sperrung der Fußgängerbrücke wegen Bauarbeiten ab November 2022)
-#: by: https://www.berliner-woche.de/westend/c-bauen/rohbau-fuer-neues-ausbildungszentrum-fertig_a360518 (Haben die Bauarbeiten hier etwas damit zu tun? Fertigstellung Herbst 2023)
-#: by: https://www.bahninfo-forum.de/read.php?9,690942,747836#msg-747836 (vom 7.11.2022 bis zum 17.3.2023?)
-#: by: https://www.bahninfo-forum.de/read.php?9,748153,748153#msg-748153
-#: by: https://www.berliner-woche.de/westend/c-bauen/bvg-baut-neue-bruecke_a362501
-#: source_id: bvg2021:u2#BVG311197_0 (bis 17.3.2023)
-# REMOVED --- #: XXX Bis wann bleibt die Sperrung? --- #: next_check: 2022-12-31
-	2::inwork -107,12220 -76,12236 -45,12243
-',
-         'from' => 1667689200,
-         'id' => 3645,
-         'text' => 'Rossitter Platz - Machandelweg: wegen Bauarbeiten ist der Durchgang voraussichtlich vom 7.11.2022 bis zum 17.3.2023 komplett gesperrt',
-         'type' => 'gesperrt',
-         'until' => 1679093999
-       },
+       undef,
        undef,
        {
          'data' => '#: note: evtl. außerhalb der Arbeitszeiten problemlos für Radfahrer passierbar, gesehen 2022-10-17 (So)
@@ -4482,7 +4417,7 @@ Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
 #: source_id: bvg2021:n40#BVG310118_0
 #: also_indoor: traffic (H,B)
 #: priority: #A
-#: last_checked: 2023-03-12
+#: last_checked: 2023-03-18
 #: check_frequency: 30d
 #: next_check: 2023-04-27
 	q4::inwork; 13696,11920 13515,11969
@@ -4587,13 +4522,14 @@ Mauerweg Marienfelde - Lichterfelde	2::inwork 6256,363 6204,331 6013,211 5832,93
 #: by: https://nitter.net/StefanB94551270/status/1595076736168992768
 #: by: https://viz.berlin.de/2023/02/verkehrsvorschau-270223/ (Gleisüberfahrten zwischen An der Wuhlheide und Hegemeisterweg)
 #: by: https://berliner-abendblatt.de/kiez-news/lichtenberg/bauarbeiten-in-treskowallee-staugefahr-id208687
+#: by: https://www.bahninfo-forum.de/read.php?9,727655,761981#msg-761981 (Verlängerung der Straßenbahnarbeiten bis 28.08.2023)
 #: source_id: viz2021:13.519751,52.473389,10.08.2022,07:00 (bis 20.12.2022) (bis 4.1.2023) (bis 12.1.2023) (inaktiv)
 #: source_id: viz2021:13.517279,52.471065,27.02.2023,07:00 (weiter südlich, bis 30.03.2023)
 #: source_id: viz2021:13.515661,52.469682,06.03.2023,07:00 (zusätzlicher Eintrag, bis 30.04.2023)
 #: XXX außerdem möglich: Einbahnstraßenregelung in Wandlitzstr. und Wildensteiner Str.? (zurzeit wohl nicht)
 #: add_fragezeichen: Ist der Übergang Hegemeisterweg/Treskowallee gesperrt? vvv
 #: priority: #A vvv
-#: last_checked: 2023-02-28 vvv
+#: last_checked: 2023-03-17 vvv
 #: check_frequency: 21d vvv
 # REMOVED --- #: next_check: 2023-01-12 vvv
 ## generated with: ./miscsrc/convert2hafas -specsperre=strassen /tmp/3 | perl -pe \'s/: \\t/\\t/; s/igndisp/inwork/; $_="# $_" if /3nocross/\' >| /tmp/3.new
@@ -4614,7 +4550,7 @@ Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,777
 ',
          'from' => undef,
          'id' => 3666,
-         'text' => 'Hegemeisterweg/Treskowallee: Übergang kann wegen Bauarbeiten gesperrt sein (Stand Ende Februar 2023: enger Übergang existiert, oder man benutzt die Fahrbahnverbindung zum Überqueren)',
+         'text' => 'Hegemeisterweg/Treskowallee: Übergang kann wegen Bauarbeiten gesperrt sein (Stand Mitte März 2023: enger Übergang existiert)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4680,7 +4616,7 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
        {
          'data' => '#: next_check_id: AMTREPTOWERPARK-2020
 #: XXX nördlicher Geh- und Radweg wegen Bauarbeiten gesperrt
-#: last_checked: 2023-03-14
+#: last_checked: 2023-03-15
 #: check_frequency: 60d
 	q4::inwork; 14382,9299 14242,9448 14185,9509 14089,9610
 ',
@@ -4796,18 +4732,7 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: add_fragezeichen: Ist der Weg wieder geöffnet?
-#: last_checked: 2022-11-27
-#: check_frequency: 90d
-	2::inwork 18107,5011 17822,5409
-',
-         'from' => undef,
-         'id' => 3693,
-         'text' => 'Am Betriebsbahnhof Schöneweide: Bauarbeiten, Straße gesperrt, Ende der Bauarbeiten unbekannt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: by: https://www.berlin.de/sen/uvk/_assets/verkehr/infrastruktur/brueckenbau/bruecken-poelnitzwiesen/umleitung-radfernweg-berlin-usedom.pdf
 	2::inwork 17414,26524 17381,26585 17363,26609 17043,26407 16928,26311 16895,26295 16686,26128 16655,26127 16616,26158 16580,26154
@@ -4865,7 +4790,7 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
        {
          'data' => '#: also_indoor: traffic (none)
 #: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
-#: last_checked: 2023-01-09
+#: last_checked: 2023-03-16
 #: check_frequency: 60d
 	q4::inwork; 13086,15907 13214,15830
 ',
@@ -4878,7 +4803,7 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
        {
          'data' => '#: by: https://www.deutsches-architekturforum.de/thread/13358-wei%C3%9Fensee-ot-von-pankow-kleinere-projekte/?postID=719774#post719774 (Geplanter Projektabschluss: 2023-12-31)
 #: by: https://lp.bestplace-immobilien.de/streustrasse/
-#: last_checked: 2023-01-09
+#: last_checked: 2023-03-16
 #: check_frequency: 90d
 #: next_check: 2023-12-31
 	q3::inwork 13263,15930 13140,16000
@@ -4908,9 +4833,10 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
          'data' => '#: by: https://berliner-abendblatt.de/2023/01/16/ein-monat-nach-platzen-des-aquariums-schaden-sehr-gross/
 #: by: https://berliner-abendblatt.de/2023/01/21/aquarium-teile-des-zerstoerten-zylinders-aus-hotel-entfernt/
 #: by: https://berliner-abendblatt.de/kiez-news/mitte/geplatzes-aquarium-mehr-als-500-bruchstuecke-wurden-entfernt-id208661 (Heiligegeistgasse bis Mitte März 2023 freigeräumt)
+#: by: https://berliner-abendblatt.de/kiez-news/mitte/nach-chaos-wegen-aquarium-ddr-museum-mit-neuem-konzept-id212321
 #: by: https://www.berliner-woche.de/mitte/c-bauen/aufraeumarbeiten-dauern-an_a373874
 #: priority: #C
-#: last_checked: 2023-03-13
+#: last_checked: 2023-03-16
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2023-03-15
 	2::inwork 10352,12627 10344,12641 10309,12700
@@ -4947,7 +4873,7 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
        {
          'data' => '#: add_fragezeichen: Wie lange dauern die Bauarbeiten an?
 #: also_indoor: traffic (none)
-#: last_checked: 2023-02-09
+#: last_checked: 2023-03-16
 	2::inwork 12173,15040 12095,14888
 ',
          'from' => undef,
@@ -4961,7 +4887,7 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
          'data' => '#: next_check_id: EDISON-2022
 #: by: https://nitter.net/StefanB94551270/status/1617960021819797505#m
 #: also_indoor: traffic (H,G,W)
-#: last_checked: 2023-02-28
+#: last_checked: 2023-03-17
 	q4::inwork; 17962,6674 17991,6431
 ',
          'from' => undef,
@@ -5125,7 +5051,7 @@ Semmelweisstr.: Fahrbahn gesperrt	q4::inwork 19198,2163 19019,2217
 ',
          'from' => 1677452400,
          'id' => 3727,
-         'text' => 'Uferweg am Teltowkanal: zwischen Königsberger Str. und Kleingartenanlage Zukunft Leitungsarbeiten, Weg ist gesperrt, von Februar 2023 bis voraussichtlich Dezember 2024',
+         'text' => 'Uferweg am Teltowkanal: zwischen Königsberger Str. und Kleingartenanlage Zukunft Leitungsarbeiten, Weg kann bis Ende 2024 gesperrt sein, Stand Mitte März 2023: Weg ist frei',
          'type' => 'gesperrt',
          'until' => 1735685999
        },
@@ -5160,8 +5086,8 @@ Küstriner Str.	q4::inwork 16354,15323 16314,15223
        },
        undef,
        {
-         'data' => '#: last_checked: 2023-03-07
-#: check_frequency: 14d
+         'data' => '#: last_checked: 2023-03-17
+#: check_frequency: 21d
 	2::inwork 14810,10832 14738,10892
 ',
          'from' => undef,
@@ -5186,14 +5112,16 @@ Küstriner Str.	q4::inwork 16354,15323 16314,15223
          'data' => '#: next_check_id: SEIDELSTRASSENBRUECKE-2022
 #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG-NAVI-03-23-barrierefrei.pdf
 #: by: https://www.berliner-woche.de/reinickendorf/c-verkehr/die-seidelstrassenbruecke-wird-ab-17-maerz-abgerissen_a374135
-#: add_fragezeichen: Tatsächlich auch für Radfahrer und Fußgänger gesperrt?
-#: begin_check: 2023-03-16
-#: next_check: 2023-03-16
+#: by: https://berliner-abendblatt.de/kiez-news/reinickendorf/u6-in-tegel-arbeiten-an-bruecke-ueber-seidelstrasse-starten-id212679 (auch für Radfahrer+Fußgänger)
+#: by: https://nitter.net/VIZ_Berlin/status/1636346966010470403#m
+#: by: https://nitter.net/pic/orig/media%2FFrV443CXwAMqn6l.jpg
+# REMOVED --- #: add_fragezeichen: Tatsächlich auch für Radfahrer und Fußgänger gesperrt? --- #: begin_check: 2023-03-16 --- #: next_check: 2023-03-16
+#: source_id: viz2021:13.3065,52.568067,17.03.2023,20:00 (bis 20.03.2023)
 	2::inwork 3570,17938 3628,17935 3706,17931 3833,17929
 ',
          'from' => 1678993200,
          'id' => 3733,
-         'text' => 'Seidelstr.: voraussichtlich Sperrung im Bereich der U-Bahnbrücke, von 17.03.2023 20:00 bis 20.03.2023 04:00',
+         'text' => 'Seidelstr.: Sperrung im Bereich der U-Bahnbrücke, auch für Fußgänger und Radfahrer, von 17.03.2023 20:00 bis 20.03.2023 04:00',
          'type' => 'gesperrt',
          'until' => 1679281200
        },
@@ -5207,6 +5135,7 @@ Küstriner Str.	q4::inwork 16354,15323 16314,15223
 #: by: https://nitter.cz/VIZ_Berlin/status/1633742841686941697#m (Vorarbeiten)
 #: by: https://nitter.net/pic/orig/media%2FFqxhyiCXgAERnYq.jpg (Vorarbeiten)
 #: by: https://viz.berlin.de/wp-content/uploads/ULP_3_Radverkehr-1.pdf
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1304897.php
 #: source_id: viz2021:13.57926,52.458574,06.03.2023,11:00 (Vorbereitung, bis 20.03.2023)
 #: XXX Tatsächlich auch für Radfahrer/Fußgänger gesperrt? Gibt es vielleicht eine Umwegsmöglichkeit durch den Bahnhof?
 #: REMOVED (offizielle Umleitungsstrecke für Radfahrer) --- XXX Wird vielleicht die Hämmerlingstr. temporär während dieser Zeit geöffnet?
@@ -5379,17 +5308,83 @@ Blumenthalstr.	q4::inwork 8944,6293 8971,6154
          'type' => 'gesperrt',
          'until' => 1688162400
        },
+       undef,
        {
-         'data' => '#: by: https://viz.berlin.de/2023/03/staatsbesuch/
-#: note: Staatsbesuch am Mahnmal "Gleis 17"
-	2::temp 731,8867 920,8895 870,8939 884,8954 901,8969 936,8933 1037,8884
-	2::temp 918,8795 920,8895 936,8933 1141,9078
+         'data' => '	q4::inwork 3041,10732 3012,10812
 ',
-         'from' => 1678849200,
-         'id' => 3748,
-         'text' => 'Karmielplatz am Bhf. Grunewald: wegen eines Staatsbesuchs sind Sperrungen möglich, am 16. März 2023, von 04:00 Uhr bis 14:00 Uhr',
+         'from' => 1678805940,
+         'id' => 3749,
+         'source_id' => 'viz2021:13.2955,52.50343,15.03.2023,15:59',
+         'text' => 'Holtzendorffstr.: zwischen Rönnestr. und Friedbergstr. wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, vom 15.03.2023 15:59 bis 07.04.2023 07:00',
+         'type' => 'handicap',
+         'until' => 1680843600
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_40_4933_5036_online.pdf (Grundstücksnummerierungen (neues Wohngebiet?))
+#: by: https://www.bahninfo-forum.de/read.php?9,665091,708278#msg-708278
+#: by: https://www.berliner-woche.de/adlershof/c-bauen/richtfest-am-neuen-quartier-wohnen-am-campus-der-howoge-gefeiert_a326705 (Fertigstellung November 2022 geplant)
+#: XXX Gesperrt wegen Bauarbeiten an den neuen Baufeldern nördlich der Straßenbahntrasse. Laut bahninfo-forum wird der Weg nach den Bauarbeiten wieder geöffnet.
+#: XXX Mittlerweile ist der Weg bis zum Bahnübergang offen; Schild an der Hermann-Dorner-Allee fehlt
+#: add_fragezeichen: Ist der Straßenbahnübergang mittlerweile offen?
+# REMOVED (landuse wurde geändert) --- #: osm_watch: way id="229647788" version="10"
+# REMOVED (offener Teil des Weges) --- #: osm_watch: way id="850453338" version="9"
+#: osm_watch: way id="1117716285" version="1"
+#: last_checked: 2023-03-17
+#: check_frequency: 30d
+	2::inwork 18818,3332 18834,3315
+',
+         'from' => undef,
+         'id' => 3750,
+         'text' => 'Alexander-von-Humboldt-Weg: Straßenbahnübergang kann noch mit Bauzäunen gesperrt sein',
          'type' => 'gesperrt',
-         'until' => 1678971600
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1636791099103559680#m (voraussichtlich Bombenentschärfung am 2023-03-20, 500m-Radius um den Fundort in der Berlepschstr.)
+#: by: https://nitter.net/polizeiberlin/status/1636851536969048067#m
+#: by: https://nitter.net/pic/orig/media%2FFrc-E15WAAALkU0.jpg
+#: by: https://berliner-abendblatt.de/kiez-news/steglitz-zehlendorf/nach-fund-von-kriegsbombe-vorbereitungen-zur-entschaerfung-id213179
+Radolfzeller Weg	2::bomb -38,2438 -4,2413 23,2356
+Idsteiner Str.	2::bomb -409,2510 -326,2177 -285,2015 -227,1805
+Hegauer Weg	2::bomb -326,2177 -172,2274 -84,2376 -38,2438 -26,2460 -35,2470
+Hegauer Weg	2::bomb -35,2470 -22,2484
+(Königsweg - Berlepschstr.)	2::bomb -197,2634 -174,2616 -74,2529 -22,2484 57,2404
+(Königsweg - Berlepschstr.)	2::bomb 57,2404 115,2340 120,2334 169,2264
+Machnower Str. (Zehlendorf)	2::bomb 604,2494 561,2395 457,2251 324,2034 243,1820 242,1816 198,1689
+Bismarckstr. (Zehlendorf)	2::bomb 146,2073 177,2031 243,1820
+Rotherstieg	2::bomb 244,2165 163,2091
+Grenzpfad	2::bomb 446,2297 271,2129
+Camphausenstr.	2::bomb 169,2264 244,2165 271,2129 324,2034 345,1977 379,1846
+Dallwitzstr.	2::bomb 96,2225 163,2091 146,2073 93,2014 80,1998 18,1928
+Thürstr.	2::bomb 93,2014 23,2185
+Berlepschstr.	2::bomb 604,2494 421,2401 290,2328 169,2264 96,2225 23,2185 -38,2152 -134,2098 -226,2048 -285,2015 -343,1983
+Schrockstr.	2::bomb 565,1903 524,2031 495,2133 457,2251 446,2297 421,2401
+Am Weißen Steg	2::bomb 290,2328 329,2246
+Radtkestr.	2::bomb 29,1877 18,1928 -38,2152
+Albertinenstr.	2::bomb 29,1877 107,1592
+Biesestr.	2::bomb 495,2133 556,2126 585,2129 662,1930
+Schädestr.	2::bomb 585,2129 668,2143
+Kunzendorfstr.	2::bomb 602,2248 578,2189 585,2129
+Karolinenstr. (Zehlendorf)	2::bomb 345,1977 444,2008 524,2031
+Beuckestr.	2::bomb 344,2679 249,2653 84,2618 45,2592
+Beuckestr.	2::bomb 84,2618 45,2644
+Neue Str. (Zehlendorf)	2::bomb 226,2752 249,2653 272,2548
+Düppelstr. (Zehlendorf)	2::bomb 37,2562 45,2592 45,2644 39,2669 21,2728 12,2752
+Hohentwielsteig	2::bomb -273,2521 -247,2411 -172,2274
+Anhaltinerstr.	2::bomb -155,2658 37,2562 186,2532 272,2548 638,2637
+Königsweg	2::bomb -298,2577 -197,2634 -155,2658 -81,2699 12,2752
+Seibtweg	2::bomb -168,1821 -117,1836 -73,1847 -44,1856 29,1877
+Loebellstr.	2::bomb -226,2048 -168,1821
+Kösterstr.	2::bomb -134,2098 -73,1847
+Ernst-Lemmer-Ring	2::bomb -44,1856 7,1617
+Gertraudstr.	2::bomb 80,1998 181,1703
+Gimplesteig	2::bomb 243,1820 266,1815 379,1846 484,1879 530,1893 565,1903
+Rombsweg	2::bomb 444,2008 484,1879
+',
+         'from' => 1679158800,
+         'id' => 3751,
+         'text' => 'Berlepschstr. und Umgebung: Bombenfund, Entschärfung am 20.3.2023, Sperrkreis gilt voraussichtlich zwischen 8 und 18 Uhr',
+         'until' => 1679331600
        }
      
 );
