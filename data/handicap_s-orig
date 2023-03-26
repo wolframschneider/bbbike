@@ -10,12 +10,17 @@
 # 
 ### Friedrichshain ###
 # 
+#: 
+#: last_checked: 2023-03-22
+#: also_indoor: traffic (B)
+Kinzigstr.: Bauarbeiten nördlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975
+# 
 #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0223_barrierefrei.pdf (20.2.2023 - 23.4.2023)
 #: by: https://viz.berlin.de/2023/02/verkehrsvorschau-200223/ (bis 24.4.2023)
 #: source_id: bvg2021:16#BVG316317_0
 #: note: siehe auch https://www.openstreetmap.org/note/3474648
 #: XXX evtl. ist auch die Travestr. betroffen
-#: last_checked: 2023-03-16
+#: last_checked: 2023-03-22
 #: next_check: 2023-04-24
 #: valid: -20230424
 Müggelstr./Travestr.: Gleisbauarbeiten	q4::inwork 14965,11924 14901,11808 14836,11842
@@ -29,13 +34,11 @@ Müggelstr./Travestr.: Gleisbauarbeiten	q4::inwork 14965,11924 14901,11808 14836,
 #: source_id: viz2021:13.468993,52.501198,30.01.2023,08:00 (bis 17.5.2023, nur Kfz-Verkehr betroffen) (ersetzt, inaktiv)
 #: source_id: viz2021:13.4675,52.498041,30.01.2023,08:00 (bis 17.05.2023)
 #: source_id: viz2021:13.468961,52.501075,17.03.2023,08:00 (bis 17.05.2023)
-#: note: laut Baustellenplan Wegführung über den linken Gehweg, in der Realität gibt es keine Freigabe des Gehwegs
-#: XXX Baustellenführung wurd geändert
-#: last_checked: 2023-03-06
-#: next_check: 2023-03-18
-# REMOVED --- #: next_check: 2023-05-17
+#: note: laut Baustellenplan Wegführung über den linken Gehweg, in der Realität gibt es keine Freigabe des Gehwegs; wegen des erhöhten Verkehrs (obere Kynaststr. wurde mittlerweile komplett für den Kfz-Verkehr gesperrt: q3 -> q4+)
+#: last_checked: 2023-03-19
+#: next_check: 2023-05-17
 #: valid: -20230517
-Untere Kynaststr.: Einbahnstraßenregelung, ggfs. vor der Einmündung auf den linken Gehweg ausweichen	q3::inwork; 14843,10621 14828,10561 14832,10512 14815,10516 14805,10518
+Untere Kynaststr.: Einbahnstraßenregelung, ggfs. vor der Einmündung auf den linken Gehweg ausweichen	q4+::inwork; 14843,10621 14828,10561 14832,10512 14815,10516 14805,10518
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1191451.php (Umgestaltung bis Sommer 2023)
 #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/bauarbeiten-am-franz-mehring-platz_a340931
@@ -44,7 +47,7 @@ Untere Kynaststr.: Einbahnstraßenregelung, ggfs. vor der Einmündung auf den link
 #: by: https://www.gm013.la/work/fmp
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/pl%C3%A4tze-vorpl%C3%A4tze.93/page-2#post-19593
 #: XXX evtl. wird die Erschließungsstraße nicht mehr durchgängig sein; evtl. wird man die Fläche als Grünfläche kennzeichnen können
-#: last_checked: 2023-03-18
+#: last_checked: 2023-03-25
 #: check_frequency: 30d
 #: next_check: 2023-07-01
 (Vorfahrt Neues-Deutschland-Gebäude): Bauarbeiten, schmaler Gehweg ist frei	q4::inwork 12788,11898 12891,12008
@@ -236,9 +239,10 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 # 
 ### Mitte ###
 # 
-#: XXX evtl. wird die Straße nach den Bauarbeiten nicht mehr gepflastert sein
-#: last_checked: 2023-03-18
-#: check_frequency: 60d
+#: by: https://www.deutsches-architekturforum.de/thread/14788-band-des-bundes-spreebogenpark-und-reichstag/?postID=737430#post737430
+#: XXX evtl. wird die Straße nach den Bauarbeiten nicht mehr gepflastert sein -> ja, es ist schon asphaltiert (bereits eingetragen, bis auf die Stichstraße)
+#: last_checked: 2023-03-20 (daf)
+#: check_frequency: 30d
 Elisabeth-Abegg-Str.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 7930,12912 7858,12830 7789,12764
 # 
 #: next_check_id: MOLKENMARKT-2021
@@ -276,7 +280,7 @@ Grunerstr.: Gehweg	q4 10900,12546 10973,12612 11057,12715
 #: by: https://www.deutsches-architekturforum.de/thread/7660-marinehaus-umbau-stiftung-stadtmuseum/?postID=712499#post712499
 #: by: https://www.berliner-woche.de/mitte/c-bauen/maerkisches-museum-oeffnet-sich-fuer-die-stadtgesellschaft_a367415 (Sanierung des Marinehauses bis Mitte 2025)
 #: also_indoor: traffic (none)
-#: last_checked: 2023-03-16
+#: last_checked: 2023-03-25
 #: check_frequency: 90d
 #: next_check: 2025-06-30
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883 11160,12071
@@ -411,7 +415,7 @@ Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweich
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
 #: priority: #B vvv
-#: last_checked: 2023-03-16 vvv
+#: last_checked: 2023-03-20 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="13"
@@ -572,9 +576,11 @@ Wandlitzstr.: in Höhe Lehndorffstr. kann die Fahrbahn gesperrt sein	q4::inwork 1
 ### Köpenick ###
 # 
 #: next_check_id: HAEMMERLING-2022
-#: last_checked: 2023-02-19
+#: source_id: viz2021:13.572881,52.460427,25.03.2023,06:00 (bis 25.05.2023)
+#: last_checked: 2023-03-21
+# REMOVED --- #: next_check: 2023-03-25
 #: next_check: 2023-05-25
-#: valid: -20230525
+#: valid: 20230325-20230525
 Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, Gehweg	q4::inwork 21984,6317 22000,6245 22033,6144
 # 
 # REMOVED (Bauarbeiten weitgehende fertig) --- #: next_check_id: WUHLHEIDE-2021 --- #: last_checked: 2022-03-06 --- #: check_frequency: 45d --- Am Bahnhof Wuhlheide: Bauarbeiten, Engstellen	q3-::inwork 20640,7122 20654,7136 20629,7189 20575,7226
@@ -604,15 +610,15 @@ Turmstr.: Bauarbeiten, teilweise Führung des Radwegs über den engen Gehweg	q2+::
 # REMOVED (hier nicht) --- Turmstr.: Bauarbeiten, Engstellen, teilweise Führung des Radwegs über den engen Gehweg	q2+::inwork; 6377,13321 6228,13324
 #: source_id: viz2021:13.339142,52.52642,28.04.2022,07:00 (bis 7.7.2023) (inaktiv)
 #: source_id: viz2021:13.340409,52.526379,28.04.2022,07:00 (bis 7.7.2023)
-#: osm_watch: way id="30195541" version="31"
-#: osm_watch: way id="1101061991" version="4"
-#: osm_watch: way id="310164489" version="23"
-#: last_checked: 2023-03-18
+#: osm_watch: way id="30195541" version="32"
+#: osm_watch: way id="1101061991" version="5"
+#: osm_watch: way id="310164489" version="24"
+#: last_checked: 2023-03-23 (twitter)
 #: check_frequency: 45d
 Turmstr.: Bauarbeiten, Engstellen, Umweg über den Kleinen Tiergarten	q3::inwork; 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 #: source_id: viz2021:13.339142,52.52642,06.01.2023,10:00 (Thusnelda-Allee für Kfz-Verkehr gesperrt, bis 7.7.2023)
 #: source_id: bvg2021:101#BVG301286_0
-#: osm_watch: way id="4571954" version="26"
+#: osm_watch: way id="4571954" version="27"
 #: last_checked: 2023-03-18
 #: check_frequency: 45d
 Thusnelda-Allee: noch offen für Radfahrer, aber Einschränkungen im Kreuzungsbereich	q3::inwork 5956,13330 5975,13256
@@ -620,7 +626,7 @@ Thusnelda-Allee: noch offen für Radfahrer, aber Einschränkungen im Kreuzungsbere
 #: last_checked: 2023-03-18
 Turmstr.: Bauarbeiten, gemeinsamer Geh- und Radweg	q2::inwork; 6919,13360 7069,13381
 #: osm_watch: way id="1101405485" version="5"
-#: osm_watch: way id="217183438" version="14"
+#: osm_watch: way id="217183438" version="15"
 #: last_checked: 2023-03-18
 Rathenower Str.: Bauarbeiten, gemeinsamer Geh- und Radweg	q2::inwork; 7069,13381 7084,13352 7131,13261 7161,13190 7187,13126 7172,13051
 #: last_checked ^^^
@@ -675,7 +681,7 @@ Alt-Moabit: Bauarbeiten, teilweise gemeinsamer Geh- und Radweg	q2::inwork; 7346,
 #: XXX siehe unten: anderen Eintrag wieder aktivieren
 #: also_indoor: traffic
 #: also_indoor: webcam https://portal1443.webcam-profi.de/
-#: last_checked: 2023-03-15 (webcam)
+#: last_checked: 2023-03-25 (webcam)
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-10-01
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2-::inwork; 5463,9961 5246,10168
@@ -683,7 +689,7 @@ Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen,
 #: next_check_id: PARISER-2021
 #: by: https://www.tagesspiegel.de/berlin/kreative-loesungen-fuer-den-berliner-radverkehr-bezirk-stellt-poller-am-kudamm-auf/25685748.html
 #: also_indoor: webcam https://portal1443.webcam-profi.de/
-#: last_checked: 2023-03-15 (webcam)
+#: last_checked: 2023-03-25 (webcam)
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2022-10-01
 Pariser Str./Bundesallee: Bauarbeiten, Durchgang verengt	q3::inwork 5461,9923 5423,9932 5382,9942
@@ -724,11 +730,11 @@ Bergiusstr. - Grenzallee: kurvig, einige Fußgänger	q3 14179,6743 14139,6786
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019
 #: by: https://www.berlin.de/senuvk/bauen/strassenbau/a100_16_ba/pix/los1/NKA_Sperrung_Ueplan_Fussgaenger_gr.gif
-#: last_checked: 2023-02-16 vvv
+#: last_checked: 2023-03-19 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 # REMOVED --- Neuköllnische Allee: Fußgängerschutztunnel	q3::inwork 14310,7022 14323,7080 14235,7100 14223,7084 14196,7086
-Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14310,7022 14276,7021 14245,7037 14236,7058 14196,7086
+Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14310,7022 14276,7021 14246,7042 14236,7058 14196,7086
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -747,7 +753,7 @@ Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14310,7022 14276,702
 #: by: https://www.kms-sonne.de/baustellennews?date=20220830
 #: by: https://www.kms-sonne.de/assets/2022/08/Baustellenuebersicht-2022-08-web.pdf
 #: osm_watch: way id="640465875" version="12"
-#: last_checked: 2023-03-15
+#: last_checked: 2023-03-19
 #: check_frequency: 120d
 #: next_check: 2024-06-01
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
@@ -861,11 +867,12 @@ Parkaue: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung	q4+::inwork; 155
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10804 (Anfrage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1293657.php (Baumfällungen)
 #: source_id: viz2021:13.575415,52.540241,05.10.2022,06:00 (hier nur Kfz-Verkehr, bis 10.11.2022) (bis 16.11.2022) (bis 29.11.2022) (bis 13.11.2023)
-#: last_checked: 2023-02-11 (mapillary) vvv
+#: note: Bauarbeiten gehen sogar bis zur Gothaer Str.; Radfahrer Richtung Osten können hier aber eine asphaltierte Service-Straße benutzen
+#: last_checked: 2023-03-18 (mapillary) vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-11-12 vvv
 Eisenacher Str.: Radfahrer müssen Bürgersteig benutzen, Bordsteine	q1-::inwork; 21809,15186 21903,15174 22059,15153 22323,15119
-Eisenacher Str.: Radfahrer teilen sich mit Fußgängern den Bürgersteig	q1-::inwork; 22599,15105 22577,15109 22441,15118 22323,15119 22059,15153 21903,15174 21809,15186 21718,15198 21599,15213
+Eisenacher Str.: Radfahrer teilen sich mit Fußgängern den Bürgersteig, Umwege	q2+::inwork; 22599,15105 22577,15109 22441,15118 22323,15119 22059,15153 21903,15174 21809,15186 21718,15198 21599,15213
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -892,7 +899,7 @@ Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Mer
 #: source_id: viz2021:13.35399,52.49475,20.01.2023,12:26 (bis 14.04.2023) (inaktiv)
 #: source_id: viz2021:13.355106,52.494649,25.02.2022,14:00 (Gasleitungsbaustelle, bis 02.05.2022) (mittlerweile bis 31.5.2022) (bis 31.10.2022) (bis 23.12.2022) (bis 5.12.2022) (bis 23.1.2023) (bis 14.4.2023)
 #: also_indoor: traffic (ex-H,B,ex-G,W)
-#: last_checked: 2023-01-26
+#: last_checked: 2023-03-25
 #: check_frequency: 90d
 #: next_check: 2023-04-14
 Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3-::inwork 7126,9825 7118,9870
@@ -900,7 +907,7 @@ Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3-::inwork 7126,9825 7118,987
 #: by: https://www.amwinterfeldt.com/#dasprojekt (erwartete Fertigstellung 2024)
 #: by: https://www.deutsches-architekturforum.de/thread/11061-tempelhof-sch%C3%B6neberg-kleinere-projekte/?postID=732933#post732933
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/am-winterfeldt-pallasstra%C3%9Fe-24-26.492/page-2#post-20080
-#: last_checked: 2023-03-01 (daf) vvv
+#: last_checked: 2023-03-25 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-12-31 vvv
 Elßholzstr.: Hochbauarbeiten, Einbahnstraßenregelung	q4::inwork; 7223,9815 7216,9657
@@ -958,6 +965,9 @@ Gleditschstr.: Hochbauarbeiten, Zweirichtungsradweg auf dem westlichen Bürgerste
 #: by: https://www.berliner-woche.de/lichterfelde/c-verkehr/s-bahnhof-botanischer-garten-gesperrt_a344162
 #: by: https://berliner-abendblatt.de/2022/04/28/abriss-der-moltkebruecke-ersatzverkehr-am-wochenende/
 #: by: https://www.bz-berlin.de/berlin/steglitz-zehlendorf/moltkebruecke-in-lichterfelde-ist-nur-noch-geschichte
+#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1306410.php
+#: by: https://berliner-abendblatt.de/kiez-news/steglitz-zehlendorf/neubau-der-moltkebruecke-s1-unterbrochen-id213531
+#: by: https://nitter.cz/VIZ_Berlin/status/1639304567061102592#m
 #: XXX Neubau der Brücke, laut osm bis 2024
 #: osm_watch: way id="13860352" version="24"
 #: osm_watch: way id="1056377427" version="2"
@@ -984,7 +994,7 @@ Jablonskistr.: Baustelle an der Kreuzung Winsstr., nur Gehweg ist frei	q3::inwor
 #: XXX nicht der gesamte Abschnitt ist gesperrt, deshalb q3 statt q4
 #: osm_watch: way id="164816805" version="11"
 #: priority: #C
-#: last_checked: 2023-02-22
+#: last_checked: 2023-03-22
 #: check_frequency: 30d
 Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg möglich	q3::inwork 13702,13634 13711,13615 13769,13487
 # 
@@ -1200,7 +1210,7 @@ Tiergarten: Rampe, eng	q3 8091,12011 8091,12023 8099,12022
 Tiergarten: Parkweg	q1 8099,12022 8102,12043 8099,12058 8107,12068 8122,12147
 Tiergarten: Parkweg	q1 8016,11770 8020,11937 8022,12016
 Tiergarten: Parkweg	q1 8034,12093 8057,12065 8052,12033 8022,12016 7999,12040 8004,12074 8034,12093 8049,12140 8055,12186
-Tiergarten: Parkweg	q1 8214,12205 8215,12156 8221,11885 8221,11876 8210,11775 8203,11686
+Tiergarten: Parkweg	q1 8214,12205 8215,12156 8221,11885 8221,11876 8210,11775 8221,11690
 Tiergarten: Parkweg	q1 8005,11627 8014,11753 8016,11770
 Tiergarten: Parkweg	q1 7658,11947 7634,11920 7559,11888 7449,11883 7240,11907 7200,11881 7182,11870 7173,11864 7058,11809 6980,11790 6778,11742 6540,11754
 #: XXX_prog: niedriger BS am Südende (nicht aufgeführt in q1)
@@ -1232,6 +1242,9 @@ Hasenheide, zur Lilienthalstr.: Parkweg	q1 10709,9192 11111,9104 11141,9107
 (Hasenheide, östlicher Rundweg): Fußgänger	q1 11560,8480 11549,8601 11578,8784 11587,8882 11549,8917 11484,8928 11406,8941 11182,8983
 (Hasenheide, südöstlicher Rundweg): Fußgänger	q1 11467,8329 11523,8327 11559,8357 11570,8409 11560,8480
 (Flughafenstr. - Rundweg in der Hasenheide): Fußgänger	q1 11632,8302 11577,8315 11559,8357
+#: next_check_id: SCHLESISCHERBUSCH-2023
+#: XXX_prog: Konflikt mit gesperrt-orig-Eintrag
+#: valid: 20230601-
 Am Flutgraben: Fußgänger	q1 13333,9929 13418,9944 13579,10146
 (durch den Schlesischen Busch): Fußgänger	q1 13418,9944 13657,9983 13711,10022
 Kolonie Albrechtshöhe: einige Fußgänger	q1 10260,5953 10215,5959 9955,5993
@@ -1433,7 +1446,7 @@ Volkspark Wilmersdorf: einige Fußgänger	q1- 5761,8339 5699,8308 5687,8280 5700,8
 (Weg zwischen S-Hohenschönhausen und S-Wartenberg): eng und teilweise kurvenreich	q1 17159,18375 17206,18332
 (Weg im Wustrower Park): eng und teilweise kurvenreich	q1 17235,18352 17206,18332
 #: note: jeweils zwei Serpentinen pro Seite, großer Zeitverlust
-Bernburger Treppe: Rampen	q4 8536,11063 8512,11069 8516,11086 8484,11097 8478,11080 8454,11086
+Bernburger Treppe: Rampen	q4+ 8536,11063 8525,11063 8526,11080 8515,11065 8519,11084 8484,11097 8478,11080 8479,11099 8470,11082 8454,11086
 (Buckower Ring - Cecilienstr.): Fußgänger, eng, einige Regenablaufrinnen	q2 21879,13515 21894,13514 21920,13680
 (Hohenzollerndamm - Friedrichsruher Str.): enger Gehweg	q2 3379,8969 3333,9026
 Gillweg: enger Gehweg	q2 2585,9653 2484,9671 2394,9714
@@ -3150,6 +3163,7 @@ Karl-Lade-Str.: Fußgänger	q1 14821,13674 14987,13621
 #: note: offiziell nur für Fußgänger
 Karl-Lade-Str.: Fußgänger	q2 14987,13621 15040,13602
 #: XXX_prog BS zu beiden Seiten, ansonsten q1 oder q2 wegen Fußgänger
+#: note: mittlerweile wurden auf der östlichen Seite mit etwas Asphalt provisorische Auffahrten gemacht
 Magdeburger Platz: Bordsteine	q3 7393,10809 7414,10804
 (Fanny-Zobel-Str. - Uferweg): Fußgänger, eng	q2 14049,10164 14116,10149
 #: XXX_prog BS an der Privatstraße 10 (östliche Seite), anonsten Eintrag entfernen
@@ -3204,6 +3218,7 @@ Georg-Steger-Weg: Radfahrer sollen schieben	q4 1432,1964 1432,1953 1432,1904 147
 (Verlängerung Hiddenseestr.): Fußgänger	q2 10960,17674 10969,17587
 (entlang der Wendeschleife): eng, kurvig	q2 23467,3891 23486,3862 23476,3829
 Schillingstr.: breiter Geh- und Radweg	q0- 11472,12406 11485,12391 11417,12243 11388,12202
+(Jannowitzbrücke - Schillingstr.): einige Fußgänger	q2+ 11347,12223 11417,12243
 #: XXX_prog BS an der Schillingstr., ansonsten q1
 #: note: früher "q2", rechtliche Lage unklar
 (Schillingstr. - Neue Blumenstr.): Bordstein, einige Fußgänger	q3 11596,12668 11712,12614
@@ -3776,7 +3791,7 @@ Siegfried-Hirschmann-Park: einige Fußgänger	q4+ 14779,11505 14745,11487
 Siegfried-Hirschmann-Park: einige Fußgänger	q2 14745,11487 14684,11456
 #: XXX_prog BS am südlichen Ende, ansonsten entfernen
 Tuchollaplatz: Bordstein	q3; 15626,10915 15616,10920
-Heilbronner Str.: einige Fußgänger	q1- 6163,9340 6131,9241
+Heilbronner Str.: einige Fußgänger	q1- 6140,9338 6144,9295 6131,9241
 #: XXX_prog BS, ansonsten entfernen
 Landsberger Allee - Frank-Schweitzer-Str.: Bordstein	q3 19214,14966 19244,14980
 #: XXX_prog BS, ansonsten entfernen

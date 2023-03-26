@@ -349,7 +349,7 @@ Große Präsidentenstr.	1 10105,13004 10220,13098
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_14032017.pdf
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll-2-sitzung.pdf (Ablehnung durch Polizei)
 #: osm_watch: way id="4437134" version="14"
-#: last_checked: 2022-11-26
+#: last_checked: 2022-12-15 (mapillary)
 #: check_frequency: 120d
 Duisburger Str.	1 4183,10144 3880,10154
 # 
@@ -940,14 +940,14 @@ Lindenstr. (Straßenbahntrasse)	3nocross::ignrte 21649,5617 21703,5538 21739,5492
 #: source_id: viz2021:13.56657,52.45535,29.12.2022,09:39 (bis 15.7.2023) (später am Tag wieder entfernt -> inaktiv) (wieder aktiv, bis 15.7.2023) (inaktiv)
 #: source_id: viz2021:13.566629,52.455193,07.02.2022,14:00 (Brückenneubau, Verengung, bis 09.06.2022) (bis 31.12.2022) (bis 15.7.2023)
 #: source_id: viz2021:13.56849,52.45383,20.12.2022,15:27 (bis 15.07.2023)
-#: last_checked: 2023-02-05 (mapillary) vvv
+#: last_checked: 2023-03-21 vvv
 #: check_frequency: 180d vvv
 #: next_check: 2023-07-15 vvv
 Lindenstr./Pyramidenbrücke: Übergang wegen Bauarbeiten gesperrt	2::igndisp 21600,5683 21605,5687
 Lindenstr. (Straßenbahntrasse)	3nocross::ignrte 21706,5541 21605,5687 21600,5694
 Wuhlewanderweg: wegen Baustelleneinrichtung gesperrt	2::inwork 21600,5683 21581,5670
 Lindenstr./Pyramidenbrücke/An der Wuhlheide (Straßenbahntrasse): Fahrbahn gesperrt (Benutzungspflicht des Radwegs)	2::igndisp 21649,5617 21600,5683 21594,5691 21567,5727 21519,5767
-#: osm_watch: way id="25216398" version="34"
+#: osm_watch: way id="25216398" version="35"
 #: check_frequency: 30d
 Wuhlewanderweg: wegen Baustelle gesperrt	2::inwork 21651,5730 21618,5699 21605,5687
 # REMOVED (offen) --- Wuhlewanderweg: wegen Baustelleneinrichtung gesperrt	2::inwork 21581,5670 21507,5620
@@ -1329,7 +1329,7 @@ Waldstr.	1 9961,19513 10002,19418
 #: XXX wieder gesperrt, vermutlich für Aufzugarbeiten
 #: source_id: viz2021:13.440961,52.50069,06.07.2021,07:00 (bis 12.01.2022) (mittlerweile bis 30.6.2022) (bis 31.10.2022) (bis 11.1.2023) (bis 30.4.2023)
 #: by: https://berliner-abendblatt.de/2022/01/03/viele-u-bahnhoefe-nicht-barrierefrei/ ("in Kürze")
-#: last_checked: 2023-03-01
+#: last_checked: 2023-03-23
 #: check_frequency: 60d
 #: next_check: 2023-04-30
 (Schlesisches Tor - Oppelner Str.)	2::inwork 12978,10581 12930,10621
@@ -3538,8 +3538,11 @@ Drängelgitter	BNP:3::trailer=10 22085,5111
 #: by: https://berliner-abendblatt.de/2023/01/02/adlershof-neues-quartier-fuer-rund-1-000-menschen/ (keine Erwähnung)
 #: by: https://www.berliner-woche.de/adlershof/c-bauen/autofreies-quartier-wohnen-am-campus-nach-drei-jahren-bauzeit-fertiggestellt_a367172 (keine Erwähnung)
 #: last_checked: 2023-03-17 vvv
+#: osm_watch: way id="1155774800" version="1"
 Weg entlang der Straßenbahnstrecke: fertig, aber noch mit Bauzäunen abgesperrt	2::inwork 18836,3203 18834,3315
+#: osm_watch: way id="1155774804" version="2"
 Weg entlang der Straßenbahnstrecke: fertig, aber noch mit Bauzäunen abgesperrt	2::inwork 18835,3562 18851,3598
+#: osm_watch: way id="1155774792" version="1"
 (Straßenbahnstrecke - Konrad-Zuse-Str.): noch nicht fertiggestellt	2::inwork 18833,3388 18857,3418
 #: last_checked ^^^
 # 
@@ -3580,7 +3583,7 @@ Schule am Planetarium: Weg dauerhaft gesperrt	2::inwork 12103,15218 12208,15108
 # REMOVED (laut osm offen) --- #: next_check_id: ERNSTTHAELMANNPARK-2022 --- #: last_checked: 2023-01-20 --- #: check_frequency: 14d --- #: next_check: 2023-02-01 --- (Diesterwegstr. - Ella-Kay-Str.): noch nicht freigegeben	2::inwork 12056,15159 12195,15083
 # 
 #: next_check_id: SPREEPARK-2022
-#: last_checked: 2023-03-11 vvv
+#: last_checked: 2023-03-19 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2023-06-30 vvv
 #: valid: -20230630 vvv
@@ -3591,7 +3594,7 @@ Platz vor dem Spreepark: wegen Bauarbeiten gesperrt	2::inwork 16086,8860 16084,8
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
-#: last_checked: 2023-03-17
+#: last_checked: 2023-03-24
 #: check_frequency: 30d
 Holteistr.: Hochbauarbeiten, Einbahnstraßenregelung	1s:q3:inwork 14535,11327 14506,11275
 # 
@@ -3700,12 +3703,14 @@ Neue Fahlenbergbrücke	2::inwork 31009,19 31080,-19
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2022/pressemitteilung.1237306.php
 #: XXX was ist mit der Erweiterung im nördlichen Bereich? entfällt die dortige Fahrbahn dauerhaft?
 #: osm_watch: way id="20554168" version="20"
+#: osm_watch: way id="1155308749" version="1"
 #: last_checked: 2022-10-16
 #: check_frequency: 150d
 #: next_check: 2023-06-30
 # früher: Marktplatz Adlershof	1 20290,3756 20336,3783
 Marktplatz Adlershof: gesperrt wegen Umbauarbeiten	2::inwork 20336,3783 20290,3756
 # 
+#: next_check_id: SCHLESISCHERBUSCH-2023
 #: by: https://www.berliner-woche.de/alt-treptow/c-bauen/begonnene-bauarbeiten-enden-im-sommer-2023-im-schlesischen-busch_a357557 (bis Sommer 2023)
 #: by: https://nitter.cz/VIZ_Berlin/status/1570686227954954240#m
 #: by: https://nitter.cz/pic/orig/media%2FFcwyqHOXgAAeape.jpg
@@ -3713,14 +3718,20 @@ Marktplatz Adlershof: gesperrt wegen Umbauarbeiten	2::inwork 20336,3783 20290,37
 #: by: https://gruen-berlin.de/pressemitteilung/berliner-mauerweg-baustart-fuer-aufwertung-des-historischen-rundwegs
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6522
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/WVKySlkVmF78sBtLvLmoLknIXWdWp2EXcKYDvhkx/kwYUvir/24-Anlagen/04/B1004SB.pdf
-#: osm_watch: way id="358602468" version="8"
-#: osm_watch: way id="24189226" version="24"
-#: XXX Qualität nach den Bauarbeiten?
-#: XXX wird es auch Bauarbeiten am Flutgraben geben?
-#: last_checked: 2023-02-14
-#: check_frequency: 60d
-#: next_check: 2023-06-01
+#: XXX Qualität nach den Bauarbeiten? vvv
+#: last_checked: 2023-03-19 vvv
+#: check_frequency: 60d vvv
+#: next_check: 2023-06-01 vvv
+#: osm_watch: way id="358602468" version="9"
+#: osm_watch: way id="24189226" version="25"
 Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt	2::inwork 13333,9929 13271,9927 13225,9897 13109,9743 12905,9470
+#: osm_watch: way id="72183569" version="10"
+#: valid: -20230601
+Am Flutgraben: Bauarbeiten, Weg ist gesperrt, enger Pfad daneben existiert	2s:q4:inwork	13333,9929 13418,9944 13579,10146
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
 # 
 #: by: https://www.berliner-woche.de/rummelsburg/c-bauen/baustelle-wird-eingerichtet_a351209
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1240151.php
@@ -3733,13 +3744,13 @@ Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt	2::inwork 1333
 #: by: https://www.berliner-woche.de/rummelsburg/c-bauen/bebauungsplan-fuer-grundschule_a365015
 #: osm_watch: way id="1086484458" version="2"
 #: osm_watch: way id="36780316" version="11"
-#: last_checked: 2023-03-17
+#: last_checked: 2023-03-21
 #: check_frequency: 90d
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 # REMOVED --- Hauptstr. - Rummelsburger Ufer: gesperrt, möglicherweise dauerhaft	2::inwork 16178,9861 16049,9749
 # 
 #: next_check_id: AUERDREIECK-2022
-#: last_checked: 2023-02-19
+#: last_checked: 2023-03-19
 Grünfläche Auerdreieck: Bauarbeiten, Weg ist gesperrt	2::inwork 13232,12628 13091,12563
 # 
 #: note: "Referenzfläche", Wald wird sich selber überlassen
@@ -3859,7 +3870,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2023-03-17
+#: last_checked: 2023-03-21
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -3909,7 +3920,7 @@ Hebammensteigbrücke	2::inwork 13168,21706 13046,21734
 #: osm_watch: way id="4045220" version="49"
 #: osm_watch: way id="938037386" version="3"
 #: osm_watch: way id="868103791" version="3"
-#: last_checked: 2023-01-24
+#: last_checked: 2023-03-24
 #: check_frequency: 60d
 Hönower Str.: temporäre Einbahnstraße	1s:q4:inwork 18735,9421 18765,9426 18846,9532
 # 
@@ -3955,7 +3966,7 @@ Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 # REMOVED --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
 # REMOVED --- #: next_check_id: CORONA-2020 --- #: XXX während der Corona-Krise
-#: osm_watch: note 2832326 10
+# REMOVED (closed) --- #: osm_watch: note 2832326 10
 #: last_checked: 2023-03-12
 # REMOVED --- #: check_frequency: 90d
 Alexanderufer - Charité: Tor ist geschlossen	2 8371,13399 8363,13402 8356,13404
@@ -4763,7 +4774,7 @@ Bergiusstr.: für Radfahrer gesperrt (Autobahnauffahrt)	2::inwork 14106,6663 1415
 #: source_id: viz2021:13.454141,52.469122,24.01.2019,10:00 (bis 30.6.2023)
 #: note: laut rbbtext ebenfalls bis 1.9.2022
 #: also_indoor: traffic (G,B)
-#: last_checked: 2023-02-16
+#: last_checked: 2023-03-19
 #: check_frequency: 90d
 #: next_check: 2023-06-30
 wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
@@ -4888,25 +4899,7 @@ Löwenbrücke: gesperrt	2:inwork 6417,11796 6438,11784
 #: next_check: 2023-12-31
 Trebbiner Straße (Mahlow): Bahnübergang gesperrt, neue Unterführung wird gebaut	2::inwork 11065,-5338 11077,-5335 11119,-5326
 # 
-# REMOVED (laut osm #: next_check_id: BERLINERMAHLOW-2021
-#: by: osm
-#: by: https://www.bahninfo-forum.de/read.php?9,654720,702391#msg-702391
-#: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA3_Landesgrenze-Mahlow-Blankenfelde/20210530/
-#: by: https://bauprojekte.deutschebahn.com/p/dresdner-bahn?date=20230316 (voraussichtliche Freigabe am 16. März 2023)
-#: note: laut osm Sperrung bis 01/2023
-#: osm_watch: way id="663005792" version="11" brb
-#: also_indoor: traffic
-#: last_checked: 2023-03-16 (osm, offen!) vvv
-# REMOVED --- #: check_frequency: 360d vvv
-#: check_frequency: 7d vvv
-# REMOVED --- #: next_check: 2023-01-31 vvv
-Berliner Str. (Mahlow): Straße gesperrt, neue Bahnunterführung wird gebaut	2:inwork 10776,-4460 10896,-4469 10956,-4470
-tragen (Treppe) oder Aufzug benutzen	0:35 10860,-4393
-tragen (Treppe) oder Aufzug benutzen	0:35 10888,-4384
-# REMOVED --- #: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
-# 
+# REMOVED (laut osm zurückgebaut) --- #: next_check_id: BERLINERMAHLOW-2021 --- #: by: osm --- #: by: https://www.bahninfo-forum.de/read.php?9,654720,702391#msg-702391 --- #: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA3_Landesgrenze-Mahlow-Blankenfelde/20210530/ --- #: by: https://bauprojekte.deutschebahn.com/p/dresdner-bahn?date=20230316 (voraussichtliche Freigabe am 16. März 2023) --- #: note: laut osm Sperrung bis 01/2023 --- #: osm_watch: way id="663005792" version="11" brb --- #: also_indoor: traffic --- #: last_checked: 2023-03-16 (osm, offen!) vvv --- # REMOVED --- #: check_frequency: 360d vvv --- #: check_frequency: 7d vvv --- # REMOVED --- #: next_check: 2023-01-31 vvv --- Berliner Str. (Mahlow): Straße gesperrt, neue Bahnunterführung wird gebaut	2:inwork 10776,-4460 10896,-4469 10956,-4470 --- tragen (Treppe) oder Aufzug benutzen	0:35 10860,-4393 --- tragen (Treppe) oder Aufzug benutzen	0:35 10888,-4384 --- # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 # REMOVED (andere Straßenführung) --- #: XXX wann wird die Straße fertig werden? wie wird die genaue Wegführung sein? wird hier auch gepflastert sein? --- #: last_checked: 2019-05-25 --- #: check_frequency: 180d --- Neue Plantage: hier noch Baustelle	2:inwork -13116,-1525 -13017,-1426
 # 
 #: by: osm

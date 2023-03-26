@@ -3307,6 +3307,7 @@ Neue Fahlenbergbrücke	2::inwork 31009,19 31080,-19
 (Fortsetzung Wandlitzstr.): gesperrt, Bauzäune	2::inwork 17981,9000 17837,9086
 Marktplatz Adlershof: gesperrt wegen Umbauarbeiten	2::inwork 20336,3783 20290,3756
 Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt	2::inwork 13333,9929 13271,9927 13225,9897 13109,9743 12905,9470
+Am Flutgraben: Bauarbeiten, Weg ist gesperrt, enger Pfad daneben existiert	2s:inwork 13333,9929 13418,9944 13579,10146
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 Grünfläche Auerdreieck: Bauarbeiten, Weg ist gesperrt	2::inwork 13232,12628 13091,12563
 Mittelheide: umgefallene Baumstämme	2 24365,7657 24275,7550
@@ -3388,9 +3389,6 @@ Löwenbrücke: gesperrt	2:inwork 6417,11796 6438,11784
 (Güterbahnhof Greifswalder Str.): Brücke gesperrt	2 12602,15006 12649,14977
 (Güterbahnhof Greifswalder Str.): kann bei Veranstaltungen gesperrt sein	2:temp 12520,15057 12602,15006
 Trebbiner Straße (Mahlow): Bahnübergang gesperrt, neue Unterführung wird gebaut	2::inwork 11065,-5338 11077,-5335 11119,-5326
-Berliner Str. (Mahlow): Straße gesperrt, neue Bahnunterführung wird gebaut	2:inwork 10776,-4460 10896,-4469 10956,-4470
-tragen (Treppe) oder Aufzug benutzen	0:35:-104 10860,-4393
-tragen (Treppe) oder Aufzug benutzen	0:35:-107 10888,-4384
 Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-1449 -12694,-1408 -12727,-1416 -12747,-1336
 Erika-Wolf-Str. (Potsdam): während der Bauarbeiten gesperrt	2::inwork -12812,-1490 -12685,-1449 -12628,-1423
 Pariser Platz: Sperrung vor der französischen Botschaft	2 8717,12302 8714,12319 8673,12315

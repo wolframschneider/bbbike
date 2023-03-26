@@ -22,7 +22,7 @@
 #: check_frequency: 90d
 #: next_check: 2023-12-31
 #: valid: -20231231
-Bellevuestr.: Gegenverkehrsregelung	X::inwork 8326,11613
+Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: note: laut rbb bis Ende März 2023, zwischen Adele-Schreiber-Krieger-Str. und Schiffbauerdamm
@@ -37,7 +37,7 @@ Gegenverkehrsregelung	X::inwork 8737,12757
 #: source_id: viz2021:13.47181,52.50783,24.01.2023,09:00 (bis 03.06.2024) (inaktiv)
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024)
 #: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung
-#: last_checked: 2023-03-17
+#: last_checked: 2023-03-19
 #: check_frequency: 120d
 #: next_check: 2024-06-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
@@ -109,7 +109,7 @@ B179/Fichtestr.	X::inwork 26138,-12596
 # REMOVED --- #: by: https://berliner-abendblatt.de/2022/04/27/das-sind-die-aktuellen-staufallen-in-berlin/ (bis Anfang Juni 2022) --- #: source_id: viz2021:13.450705,52.480066,28.04.2022,09:00 (hier: bis 4.7.2022) (mittlerweile bis 30.9.2022) (bis 31.10.2022) (bis 30.11.2022) (bis 18.11.2022) --- #: source_id: viz2021:13.45071,52.48007,28.04.2022,09:00 (zusätzlicher Eintrag) (entfernt) --- #: by: https://nitter.net/VIZ_Berlin/status/1519602332090179585#m (hier: bis Anfang Juni 2022) --- #: by: https://nitter.net/pic/media%2FFRWA3_cWYAAYbnf.jpg%3Fname%3Dorig (südlich der Kreuzung) --- #: last_checked: 2022-11-07 --- #: next_check: 2022-11-18 --- #: valid: -20221118 --- Treptower Str./Werrastr.: Gegenverkehrsregelung	X::inwork 13650,8320
 # 
 #: next_check_id: HAEMMERLING-2022
-#: last_checked: 2023-03-12 (mapillary)
+#: last_checked: 2023-03-21
 #: next_check: 2023-05-25
 #: valid: -20230525
 Hämmerlingstr./Am Bahndamm: Gegenverkehrsregelung	X::inwork 21984,6317
@@ -141,7 +141,7 @@ Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2023-03-17
+#: last_checked: 2023-03-21
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -1115,7 +1115,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # XXX	F 8065,11349
 #: note: Anforderungsampel
 #: osm_watch: node id="9858938170" version="1"
-#: last_checked: 2023-01-26
+#: last_checked: 2023-03-20
 #: check_frequency: 180d
 #: next_check: 2026-01-01
 	F::inwork 8096,11393
@@ -1837,7 +1837,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 984,14086
 	X 6489,16658
 	X 6702,16900
-	X 8226,11458
+	X 8217,11455
 	X -4644,1514
 	F -4827,1433
 	X 346,4833
@@ -3201,7 +3201,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2023-03-16 vvv
+#: last_checked: 2023-03-20 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3350,7 +3350,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: GRENZALLEE-2014 vvv
 #: valid: 20140224-20230630 vvv
-#: last_checked: 2023-02-16 vvv
+#: last_checked: 2023-03-19 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
@@ -3368,17 +3368,17 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED --- #: note: Anforderungsampel --- #: note: Radfahrer Richtung Nordosten müssen diese Ampel zum Überqueren benutzen --- #: last_checked: 2021-04-04 ---	F::inwork 14239,6875
 #: note: Anforderungsampel
 #: XXX Ampel wird verstetigt, siehe auch Verschwenkung der Bergiusstr.
-#: last_checked: 2023-02-16
+#: last_checked: 2023-03-19
 	F::inwork 14139,6786
 #: note: Anforderungsampel
-#: last_checked: 2023-02-16
+#: last_checked: 2023-03-19
 	F::inwork 13979,6700
 #: next_check ^^^
 #: valid ^^^
 #: next_check_id ^^^
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
-#: valid: 20140224-20211231 vvv
+# REMOVED --- #: valid: 20140224-20211231 vvv
 #: last_checked: 2023-01-17
 #: check_frequency: 90d
 #: next_check: 2023-06-30 vvv
@@ -3389,7 +3389,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X::inwork 13627,7047
 # REMOVED --- #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren ---	X0::inwork 14011,7103
 #: next_check ^^^
-#: valid ^^^
+# REMOVED --- #: valid ^^^
 #: next_check_id ^^^
 # 
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=14709&options=8 (beschlossen durch BVV, Realisierung steht noch aus)
