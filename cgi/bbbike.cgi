@@ -5,7 +5,7 @@
 # $Id: bbbike.cgi,v 9.30 2009/04/04 11:13:58 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2020,2022 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2020,2022,2023 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -8305,7 +8305,6 @@ sub cors_handling {
     if ($origin && $origin =~ m{^https?://
 				(?: localhost
 				|   bbbike-pps
-				|   bbbike-vmz
 				|   (?:.*\.)?bbbike\.de
 				|   (?:.*\.)?bbbike\.org
 				|   (?:.*\.)?herceg\.de

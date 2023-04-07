@@ -957,8 +957,8 @@ In der Aue: Kopfsteinpflaster (Sind Teilabschnitte der Straße "In der Aue" aspha
 Geschwister-Scholl-Allee: schlechtes Kopfsteinpflaster (liegt im nördlichen Abschnitt der Geschwister-Scholl-Allee tatsächlich Kopfsteinpflaster? Wie schlecht ist das Pflaster?)	? -399,364 -313,571
 Geschwister-Scholl-Allee: schlechtes Kopfsteinpflaster (liegt im nördlichen Abschnitt der Geschwister-Scholl-Allee tatsächlich Kopfsteinpflaster? Wie schlecht ist das Pflaster?)	? -313,571 -184,722 -119,800 -189,890
 Bahnhofstr. (Altdöbern): Asphalt (Wo genau sind die Radstreifen?)	? 53571,-83335 54112,-83500 54378,-83571 54973,-83435 55102,-83320 55116,-83084 55259,-83091
-Röhrenstr. (Potsdam): Kopfsteinpflaster (liegtim nördlichen Abschnitt Kopfsteinpflaster oder ist hier auch asphaltiert?)	? -7774,-3091 -7772,-3209
-Melzow - Gramzow: Kopfsteinpflaster (ist das Kopfsteinpflaster eher mäßig oder eher schlecht? Oder liegt hier asphaltiert?)	? 45082,88685 46529,89125
+Röhrenstr. (Potsdam): Kopfsteinpflaster (liegt im nördlichen Abschnitt Kopfsteinpflaster oder ist hier auch asphaltiert?)	? -7774,-3091 -7772,-3209
+Melzow - Gramzow: Kopfsteinpflaster (ist das Kopfsteinpflaster eher mäßig oder eher schlecht? Oder liegt hier Asphalt?)	? 45082,88685 46529,89125
 Halbe - Löpten: unbefestigte Straße (wie ist die Qualität der Straße zwischen Halbe und Löpten?)	? 31459,-31859 31409,-31716 31211,-31151 31092,-29859 31089,-29262 30980,-28665 30875,-28366
 Löpten - Kleinköris: Sand (wie ist die Qualität der Straße zwischen Löpten und Kleinköris?)	? 30875,-28366 30805,-28162 30787,-27822 30852,-27302
 Kleinköris - Neubrücke: unbefestigte Straße (wie ist die Qualität der Straße zwischen Kleinköris und Neubrück?)	? 31154,-25834 31240,-25274 31428,-24938 31548,-24479
@@ -997,13 +997,11 @@ F3.5 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from fragezeichen
 Jörsstr.: Asphaltierung vermutlich bereits durchgeführt (Wurde die Asphaltierung der Jörsstr. bereits abgeschlossen?)	? -1478,18407 -1358,18400
-Brauerstr.: evtl. wird hier die Einbahnstraßenregelung für Radfahrer aufgehoben (Wurde die Einbahnstraßenregelung für Radfahrer aufgehoben?)	? 5317,2345 5159,2176
 L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen Prenzlau und Güstow einen straßenbegleitenden Radweg? Wenn ja: auf welcher Seite und ist der Radweg asphaltiert?)	? 37020,101115 36600,101499 36138,101586 35027,102258 34671,102369 34607,102396
 # added from bbbike-temp-blockings-optimized
-Zähringerstr.: Einbahnstraßenregelung (Wurde die Einbahnstraßenregelung mittlerweile aufgehoben?)	? 4126,9932 3927,9935
 Pascalstr.: Fahrbahn zwischen Heisenbergstr. und Schlesingerstr. wegen Hochbauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 4961,12940 4932,12968
-Ostender Str.: Einbahnstraßenregelung an der Müllerstr., gesperrt Richtung Nordosten, Ende der Hochbauarbeiten unbekannt (Wurde die Einbahnstraßenregelung aufgehoben?)	? 6919,15666 7024,15810
 Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023 Mauerweg Marienfelde - Lichterfelde (Wo genau sind die gesperrten Abschnitte des Mauerwegs?)	? 7097,-527 6961,-389 6668,-100 6498,71 6351,219 6256,363
 Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023 Mauerweg Marienfelde - Lichterfelde (Wo genau sind die gesperrten Abschnitte des Mauerwegs?)	? 5441,-150 4842,-547 4596,-707 4406,-910
 Mauerweg: Bauarbeiten im Bereich Lichterfelde und Marienfelde, einige Abschnitte des Mauerwegs können gesperrt sein, bis Herbst 2023 Mauerweg Lichtenrade - Marienfelde (Wo genau sind die gesperrten Abschnitte des Mauerwegs?)	? 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568
 Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet? Wird der Weg neu asphaltiert sein?)	? 20996,16429 20923,16435 20898,16420
+Alexander-von-Humboldt-Weg: Straßenbahnübergang kann noch mit Bauzäunen gesperrt sein (Ist der Straßenbahnübergang mittlerweile offen?)	? 18818,3332 18834,3315

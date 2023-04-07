@@ -457,6 +457,7 @@ Berliner Allee -> Rossinistr.	3 13425,15846 13398,15826 13456,15760
 Prenzlauer Promenade: Straßenbahntrasse	3nocross 12010,16774 12017,16734 12045,16574
 Karl-Marx-Allee: Mittelstreifen	3nocross 12114,12546 12134,12540 12352,12509
 Karl-Marx-Allee: Mittelstreifen	3nocross 12352,12509 12592,12472 12603,12470 12816,12439 12848,12434 12878,12430
+Koppenstr. -> Karl-Marx-Allee: Durchfahrt verboten	3 12632,12630 12592,12472 12352,12509
 # REMOVED (Reorganisation des Spittelmarktes) --- Leipziger Str.: Mittelstreifen	3nocross 10240,11740 10213,11728 10128,11714 10000,11691 9991,11690
 # REMOVED (Reorganisation des Spittelmarktes) --- Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10189,11773 10205,11758 10240,11740 10320,11627
 # REMOVED (Reorganisation des Spittelmarktes) --- Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10189,11773 10205,11758 10240,11740 10299,11786
@@ -869,7 +870,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="19"
-#: last_checked: 2023-03-25
+#: last_checked: 2023-04-02
 #: check_frequency: 60d
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
@@ -974,10 +975,10 @@ Kaulsdorfer Str. (Hönow): Poller	3 * 25749,14812 *
 Treskowallee: Straßenbahntrasse	3nocross 18740,9907 18769,9839 18807,9746
 #: note: für Radfahrer aus der Fichtestr. gibt es mittlerweile eine offizielle Wegführung Richtung Park
 Hasenheide: Mittelstreifen	3nocross 11136,9183 11108,9187 10951,9216 10713,9260
-Rüdesheimer Str.	1 4317,7069 4393,7266
+Rüdesheimer Str.	1 4322,7085 4393,7266
 Deidesheimer Str.	1 4978,7530 4785,7518 4616,7563 4486,7597
 #: note: Überquerungsmöglichkeit für Fußgänger/Radfahrer
-Brandenburgische Str.: Mittelstreifen	3nocross 4467,9163 4609,9027 4701,8941
+Brandenburgische Str.: Mittelstreifen	3nocross 4467,9163 4609,9027 4689,8953
 #: note: auch keine Überquerungsmöglichkeit für Fußgänger, Umweg über Ampel erforderlich
 Blissestr.: Mittelstreifen	3nocross 4783,8557 4772,8599 4777,8731
 #: note: Radfahrer können den Gehweg durch die Grünfläche nutzen
@@ -1216,6 +1217,8 @@ Hertelstr.	1 4885,6908 4787,6907
 Suermondtstr.: Straßenbahntrasse	3nocross 16653,16150 16753,16111 16880,16064
 Bärbel-Bohley-Ring	1 9917,15813 9910,15876
 Bärbel-Bohley-Ring	1 9997,15884 9910,15876 9747,15847 9744,15793
+Lichtburgring	1 10041,15742 10016,15823 9997,15884
+Lichtburgring	1 10016,15823 9933,15815
 Osdorfer Str.: Mittelstreifen	3nocross 4867,690 4875,677 4937,579
 # REMOVED (wurde wieder abgeordnet) --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7491 --- #: by: http://www.berliner-woche.de/biesdorf/verkehr/verkehrsberuhigung-im-getreideviertel-bezirk-kappt-zufahrt-zum-blumberger-damm-ueber-rapsweg-d140516.html --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7561 --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/_assets/ba-beschluesse-2018/bvv-vorlage_0309_v_verkehrsregelung_rapsweg.pdf --- Rapsweg	1 21168,12794 21251,12767
 Siegfriedstr. - Rüdigerstr.: Abbiegen verboten	3 16831,12419 16820,12339 16918,12325
@@ -1708,7 +1711,7 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: source_id: viz2021:13.409118,52.51693,15.01.2023,18:00 (bis 30.06.2023)
 #: note: laut rbb nur bis 31.08.2022
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
-#: last_checked: 2023-03-28 vvv
+#: last_checked: 2023-04-06 vvv
 #: next_check: 2024-06-01 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
 # REMOVED --- (Molkenmarkt - zur Stralauer Str.): Fahrbahn wegen Bauarbeiten gesperrt	1::igndisp 10736,12285
