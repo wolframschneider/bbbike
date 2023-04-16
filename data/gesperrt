@@ -241,6 +241,7 @@ Kolk/Behnitz	1 -3042,14682 -3025,14644 -2950,14624 -2944,14652 -2942,14666
 Karl-Marx-Platz	1 13100,7626 12987,7560
 Olympischer Platz	1 -157,11943 -505,11882 -514,11991 -272,12039 -193,12051 -110,12019
 Florapromenade	1 10207,17448 10284,17458 10320,17487 10311,17764
+Takustr.	1 3273,5214 3226,5227 3179,5267 3079,5411
 Takustr.	1 2958,5598 2909,5674
 Schˆnerlinder Str.	1 21799,4319 21633,4355
 Mentzelstr.	1 21579,4579 21546,4457
@@ -778,6 +779,7 @@ Edith-Kiss-Str.	1 12793,11132 12866,11256
 Garzauer Str.	1 21830,13688 21722,13708 21731,13789
 Flankenschanze	1 -3507,15341 -3534,15219
 Berliner Str. (Pankow, Prenzlauer Berg) [zur Tiroler Str.]	1 10862,17087 10891,17088 10917,17088
+Alt-Moabit - Invalidenstr.	1 7415,13060 7422,13012
 (Puschkinallee - Elsenstr.)	1 14244,9812 14250,9756 14271,9712
 Parkaue	1s 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
@@ -946,6 +948,8 @@ Oberspreestr. [Nebenfahrbahn]	1s 19965,5101 19957,5083 19940,5090
 (Allee der Kosmonauten - Poelchaustr.)	1 20194,14435 20309,14431 20367,14429
 S¸dring, Virchow-Klinikum	1 6305,14964 6319,14821 6252,14812
 S¸dring, Virchow-Klinikum	1 6252,14812 6231,14952
+Am Feuchten Winkel	1 12020,19333 11937,19175
+Schmˆckwitzwerdersteg: die alte Querung ist nicht mehr nutzbar	2 30534,-3105 30546,-3072
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Gˆrlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -2688,8 +2692,8 @@ tragen (Durchgang unter der U-Bahn zur Warschauer Str., 15 Stufen)	0:20:-249 134
 tragen (Treppe, 12 Stufen)	0:20:-87 7370,6451
 tragen (Bahn¸bergang ehem. Bhf. Satzkorn)	0:60:89 -19150,7320
 tragen (Bahn¸bergang ehem. Bhf. Satzkorn)	0:60:57 -19183,7299
-schieben (Rampe Schmˆckwitzwerdersteg)	0:30:-156 30534,-3105
-schieben (Rampe Schmˆckwitzwerdersteg)	0:30:30 30546,-3072
+schieben (Rampe Schmˆckwitzwerdersteg)	0:30:-166 30534,-3105
+schieben (Rampe Schmˆckwitzwerdersteg)	0:30:19 30546,-3072
 tragen (14 Stufen)	0:25:-269 3619,9331
 tragen (21 Stufen)	0:30:-263 9557,12992
 tragen (Treppe)	0:30:86 9508,12991
@@ -3285,11 +3289,15 @@ Schranke	BNP:1:-52:trailer=3 14967,4641
 Schranke	BNP:3:78:trailer=10 8702,13362
 Dr‰ngelgitter	BNP:3:-206:trailer=10 5746,22582
 Dr‰ngelgitter	BNP:3:-23:trailer=10 22085,5111
+Reinickendorfer Str.: Einbahnstraﬂenregelung im Bereich des Weddingplatzes	1s:inwork 7998,15068 8015,15047 8037,14958 8091,14895
+Nˆldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15844,10894 15856,10821
+(Vorfahrt Neues-Deutschland-Geb‰ude): Bauarbeiten, Abschnitte des Gehwegs sind gesperrt	2::inwork 12788,11898 12891,12008
 (Ingeborg-Drewitz-Allee): wegen Bauarbeiten gesperrt	2::inwork 7789,12764 7649,12764
 (Ingeborg-Drewitz-Allee): wegen Bauarbeiten gesperrt	2::inwork 7588,12734 7819,12729
 (Joachim-Karnatz-Allee - Ingeborg-Drewitz-Allee): wegen Bauarbeiten gesperrt	2::inwork 7418,12601 7377,12729
 Mauerpark: Bauarbeiten im 1. Bauabschnitt, Wege sind vermutlich bis Ende 2024 komplett gesperrt	2::inwork 10081,15853 10046,15844 10061,15775 10045,15754 10079,15661 10091,15630
 Caroline-von-Humboldt-Weg: Kraneinsatz, Fahrbahn und B¸rgersteig komplett gesperrt	2::inwork 9961,12094 10050,11942
+Kurstr.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 10230,11839 10122,11913
 Wateweg: Bauarbeiten, Weg komplett gesperrt	2::inwork 21131,8739 21124,8792
 Weg entlang der Straﬂenbahnstrecke: fertig, aber noch mit Bauz‰unen abgesperrt	2::inwork 18836,3203 18834,3315
 Weg entlang der Straﬂenbahnstrecke: fertig, aber noch mit Bauz‰unen abgesperrt	2::inwork 18835,3562 18851,3598
@@ -3318,7 +3326,6 @@ Gr¸nfl‰che Auerdreieck: Bauarbeiten, Weg ist gesperrt	2::inwork 13232,12628 1309
 Mittelheide: umgefallene Baumst‰mme	2 24356,7644 24275,7550
 Storkower Straﬂe (Kˆnigs Wusterhausen): Neubau der Eisenbahnbr¸cke, Sperrung	2::inwork 26327,-11708 26395,-11699
 Maxim-Gorki-Str. (Kˆnigs Wusterhausen): Einbahnstraﬂenregelung wegen des SEVs	1s 26300,-11727 26301,-11824 26300,-11864
-Alt-Moabit - Invalidenstr.: Bauarbeiten, Gehweg gesperrt, Fahrbahn nur f¸r Tram	2::inwork 7422,13012 7415,13060
 Mˆllhausenufer: Bauarbeiten, Einbahnstraﬂenregelung	1s 23608,1210 23520,1194
 Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer	2::inwork 7673,4223 7769,4315
 Barnimer Dˆrferweg: wegen Bauarbeiten gesperrt	2::inwork 20865,18933 20889,18943 20948,18968
@@ -3705,6 +3712,7 @@ Treskowallee -> Weg entlang der Bahnstrecke: Straﬂenbahntrasse	3::igndisp 18740,
 Treskowallee -> Richard-Kolkwitz-Weg: Straﬂenbahntrasse	3::igndisp 18694,10018 18703,9997 18708,10000
 Weg entlang der Bahnstrecke -> Treskowallee: Straﬂenbahntrasse	3::igndisp 18445,9887 18703,9997 18694,10018
 Weg entlang der Bahnstrecke -> Richard-Kolkwitz-Weg: Straﬂenbahntrasse	3::igndisp 18445,9887 18703,9997 18708,10000
+Richard-Kolkwitz-Weg -> Treskowallee: Straﬂenbahntrasse	3::igndisp 18708,10000 18703,9997 18740,9907
 Richard-Kolkwitz-Weg -> Weg entlang der Bahnstrecke: Straﬂenbahntrasse	3::igndisp 18708,10000 18703,9997 18445,9887
 Straﬂenbahn	3nocross::ignrte 18878,9517 18875,9570 18865,9608 18823,9708
 Hˆnower Str. -> Treskowallee: Straﬂenbahn	3::igndisp 18846,9532 18875,9570 18865,9608

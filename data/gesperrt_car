@@ -71,7 +71,7 @@ Mangerstr. (Potsdam)	1 -12054,-274 -12123,-294 -12265,-418
 Rudolf-Breitscheid-Str.	1 -10429,-1944 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 Bendastr.	1 12689,6905 12702,6846
 Bendastr.	1 12715,6775 12702,6846
-Puschkin/Bulgarische	1 14196,9749 14271,9712 14318,9688 14389,9656 14495,9609 14556,9581 14809,9466 14879,9433 15383,9191 15407,9151 15442,9095 15452,9079 15534,8943 15591,8848 15558,8820 15378,8668 15166,8489
+Puschkin/Bulgarische	1 14196,9749 14271,9712 14318,9688 14389,9656 14495,9609 14556,9581 14809,9466 14879,9433 15383,9191 15407,9151 15442,9095 15445,9090 15452,9079 15534,8943 15591,8848 15558,8820 15378,8668 15166,8489
 Karl-Marx-Str./Schönstedt	3nocross::ignrte 12494,8501 12545,8449 12562,8432 12582,8408
 Karl-Marx-Str. -> Schönstedtstr.: Karl-Marx-Str./Schönstedt	3::igndisp 12494,8501 12545,8449 12643,8533
 Schönstedtstr. -> Karl-Marx-Str.: Karl-Marx-Str./Schönstedt	3::igndisp 12643,8533 12545,8449 12562,8432
@@ -1987,9 +1987,16 @@ Boppstr.	1 11785,9437 11560,9524
 Schmiedeweg (Bestensee)	1 26459,-17745 26354,-17641 26321,-17629 26297,-17628
 Bohnsdorf - Siedlung Waltersdorf	1 22985,-1319 22993,-1340 23073,-1551 23088,-1588 23246,-2008 23253,-2022
 Weißenhöher Str.: Durchfahrt zur Pichelsdorfer Str. gesperrt	2 -3739,12756 -3650,12762
-Wulkower Str.	1 21017,10423 21021,10583
-Paulinenauer Str.	1 21131,10812 21025,10815
-Kreuzschnabelstr.	1 21223,10573 21021,10583
+Wulkower Str.: Anlieger frei	2:Anlieger 21017,10423 21021,10583
+Wulkower Str.: Anlieger frei	2:Anlieger 21136,11134 21067,11131 21035,11100 21032,11033 21025,10815 21021,10583
+Paulinenauer Str.: Anlieger frei	2:Anlieger 21131,10812 21025,10815
+Paulinenauer Str.: Anlieger frei	2:Anlieger 21025,10815 20879,10820
+Kreuzschnabelstr.: Anlieger frei	2:Anlieger 21223,10573 21021,10583
+Kreuzschnabelstr.: Anlieger frei	2:Anlieger 21021,10583 20872,10591 20725,10594
+Grabensprung: Anlieger frei	2:Anlieger 20681,10772 20716,10687 20723,10639 20725,10594 20716,10434
+Heidefalterweg: Anlieger frei	2:Anlieger 21140,10786 21322,10863
+Aurorafalterweg: Anlieger frei	2:Anlieger 21132,10923 21182,10920 21284,10956
+Mohrenfalterstr.: Anlieger frei	2:Anlieger 21180,10683 21370,10764
 Moltkebrücke: nur für Anlieger	2:Anlieger 7930,12912 8021,12832
 Willy-Brandt-Str.: nur für Anlieger	2:Anlieger 8021,12832 8030,12824 8120,12756
 Bamberger Str.	1 5893,9530 5900,9737
@@ -2005,7 +2012,6 @@ Grüntaler Str. -> Badstr.: Mittelstreifen, für Fußgänger/Radfahrer Übergangsmögl
 Lintruper Str.	1 10324,925 10380,757
 Glaserweg	1 10187,872 10237,749
 Friedrichstr. (Prenzlau)	1 39550,101671 39574,101863
-Heidefalterweg: unechte Einbahnstraße, Verbotsschild steht etwa 50m von der Köpenicker Str.	1 21140,10786 21322,10863
 Eberswalder Str. (Bernau): Radweg vorhanden	1 23109,30968 23103,30923 23084,30893 22917,30635
 Linienstr.	1 9609,13522 9744,13584
 Linienstr.	1 9993,13682 9947,13674
@@ -2371,3 +2377,10 @@ Im Marienpark: für Fahrzeuge verboten	2 8167,3641 8178,3591 8070,3563
 Straßenbahntrasse	3nocross::ignrte 15066,14579 15120,14481 15168,14395
 Weißenseer Weg -> Anlieferung Hohenschönhauser Tor: Straßenbahntrasse	3::igndisp 15066,14579 15120,14481 15225,14545
 Anlieferung Hohenschönhauser Tor -> Weißenseer Weg: Straßenbahntrasse	3::igndisp 15225,14545 15120,14481 15168,14395
+Schwedt - Angermünde	1 50831,68659 50958,68666
+Görlsdorf - Peetzig	2:Anlieger 45683,72646 45651,72706 45595,72753 45557,72838 45503,72909 45468,73067 45425,73282 45273,73431 45178,73581 45098,73740 45178,73830 45193,73919 45141,74055 44912,74243 44857,74294 44571,74470 44344,74590 44297,74757 44356,74890 44412,74962 44403,75026
+Mittelstreifen	3nocross::ignrte 2732,4741 2745,4729 2762,4713
+Habelschwerdter Allee -> Schwendenerstr.: Mittelstreifen	3::igndisp 2732,4741 2745,4729 2816,4789
+Schwendenerstr. -> Habelschwerdter Allee: Mittelstreifen	3::igndisp 2816,4789 2745,4729 2762,4713
+Schwabenallee: Anlieger frei	2:Anlieger 21371,9923 21429,10207
+Dramburger Str.: Anlieger frei	2:Anlieger 21594,9895 21606,10010

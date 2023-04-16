@@ -738,7 +738,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -6442,1150
 	X 10010,4606
 	X 10412,4552
-	X 10288,4354
+	X 10291,4353
 	X 10800,5203
 	X 11266,5097
 	X 11386,5107
@@ -1599,7 +1599,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 13305,4504
 	F 12794,5596
 	X 12841,5416
-	F 10181,4181
+	F 10185,4179
 	X 8968,5554
 	X 8206,6774
 	F 5070,4770
@@ -2536,6 +2536,8 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -13181,2285
 	X -13142,1989
 	F -14457,-1797
+	X 50863,68629
+	X 52036,69172
 	X 32957,10948
 	X 33470,10823
 	X 34678,10536
@@ -2974,6 +2976,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 	X 22690,30909
 	X 39873,102249
 	X 39715,101866
+	X 39344,101920
 	X 39682,101543
 	X 39962,101085
 	X 41193,100575

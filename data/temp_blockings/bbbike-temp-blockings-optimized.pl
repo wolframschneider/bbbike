@@ -3731,8 +3731,9 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.berliner-woche.de/rahnsdorf/c-verkehr/ruderfaehre-der-bvg-ab-sofort-wieder-auf-der-mueggelspree-unterwegs_a343523
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1309467.php
 #: by: https://berliner-abendblatt.de/kiez-news/treptow-koepenick/ahoi-paule-iii-sticht-wieder-in-see-saisonstart-der-traditionellen-ruderfaehre-id215621
+#: by: https://www.berliner-woche.de/rahnsdorf/c-verkehr/ruderfaehre-paule-iii-beginnt-saison_a376859
 #: XXX_prog temporäre Lösung für saisonale Fähren vvv
-#: tempex: (20170430|YYYY0501)-YYYY1003 & (sa|su|holiday) & T11-T19
+#: tempex: (20170430|20230429|YYYY0501)-YYYY1003 & (sa|su|holiday) & T11-T19
 	2::temp 29959,3031 29968,2986
 #: XXX_prog ^^^
 ',
@@ -3740,7 +3741,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 2703,
          'recurring' => 1,
          'source_id' => 'http://www.bvg.de/de/Aktuell/Newsmeldung?newsid=612',
-         'text' => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 30. April bis zum 3. Oktober',
+         'text' => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 29. April bis zum 3. Oktober',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3948,17 +3949,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: viz2021:13.196408,52.438127,15.03.2023,09:15 (bis 15.03.2023) (inaktiv)
 #: source_id: viz2021:13.196408,52.438127,22.03.2023,09:15 (bis 22.03.2023) (inaktiv)
 #: source_id: viz2021:13.196408,52.438127,05.04.2023,09:15 (bis 05.04.2023) (inaktiv)
+#: source_id: viz2021:13.196408,52.438127,13.04.2023,09:15 (bis 13.04.2023) (inaktiv)
 #: priority: #A
-#: next_check: 2023-04-13
+#: next_check: 2023-04-20
 	2::bomb -2218,5133 -927,6888
 	2::bomb -2825,5588 -2600,5888 -1934,6804 -2095,6918
 	2::bomb -1934,6804 -1854,6898
 ',
-         'from' => 1681250400,
+         'from' => 1681855200,
          'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 13. April 2023 zwischen 09:15 und 10:15 Uhr',
+         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 20. April 2023 zwischen 09:15 und 10:15 Uhr',
          'type' => 'gesperrt',
-         'until' => 1681373700
+         'until' => 1681978500
        },
        undef,
        {
@@ -4152,24 +4154,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://aera.berlin/
-# REMOVED (404) --- #: by: https://pictures.construction.camera/construction-camera/661BerlinAERA/FullHD102570/webcam.jpg (Webcam)
-#: by: https://www.deutsches-architekturforum.de/thread/12710-am-spreebord-ehem-werkbundstadt-areal-charlottenburg/?postID=705260#post705260
-#: source_id: viz2021:13.30619,52.5212,30.01.2023,13:52 (bis 14.4.2023) (inaktiv)
-#: source_id: viz2021:13.310551,52.521111,01.03.2022,08:00 (hier: zwischen Sömmering- und Darwinstr., Radfahrer frei) (bis 31.3.2023) (bis 14.4.2023)
-#: last_checked: 2022-09-16
-#: check_frequency: 90d
-#: next_check: 2023-04-14
-# REMOVED (hier nicht mehr) ---	q4::inwork 4234,12710 4303,12692
-	q3::inwork 3828,12697 3981,12709 4071,12720 4124,12721
-',
-         'from' => 1644676199,
-         'id' => 2961,
-         'text' => 'Am Spreebord: Bauarbeiten, Abschnitte der Fahrbahn gesperrt, voraussichtlich bis Mitte April 2023',
-         'type' => 'handicap',
-         'until' => 1681484400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4231,7 +4216,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
 #: XXX kaum noch Bauarbeiten, aber die Schilder sind geblieben --- vielleicht permanent?
-#: last_checked: 2023-04-01
+#: last_checked: 2023-04-13
 #: check_frequency: 30d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4560,7 +4545,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
 #: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA1_Marienfelde_Attilastrasse-Schichauweg/20210716/
 #: also_indoor: traffic (G,H)
-#: last_checked: 2022-10-31 (daf)
+#: last_checked: 2023-04-10
 # REMOVED --- #: check_frequency: 90d
 #: next_check: 2023-05-31
 # REMOVED --- #: next_check: 2024-01-01
@@ -4585,14 +4570,17 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
        {
          'data' => '#: next_check_id: WRIEZENERPARK-2019
 #: XXX "voraussichtlich ab September 2023 können die neuen Wege genutzt werden", aber weitere Bauarbeiten bis Ende Oktober 2023
-#: XXX Sperrung möglicherweise doch nur bis Ende März 2023?
-#: last_checked: 2023-04-03
-#: check_frequency: 14d
-# REMOVED --- #: next_check: 2023-04-01
-#: next_check: 2023-09-01
-	2::inwork 13172,11651 13239,11567 13261,11572
+#: last_checked: 2023-04-12 vvv
+#: check_frequency: 14d vvv
+#: next_check: 2023-09-01 vvv
+	2::inwork 13172,11651 13239,11567 13261,11572 13274,11585
+	2::inwork 13261,11572 13308,11515 13323,11497
+	2::inwork 13324,11529 13308,11515
 # REMOVED ---	2::inwork 13095,11703 13123,11675 13172,11651 13239,11567
 # REMOVED ---	2::inwork 13172,11651 13202,11666
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 ',
          'from' => 1677970800,
          'id' => 3159,
@@ -4706,7 +4694,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10694 ("Corona bedingte Erweiterungen ... fallen weg")
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2023-03-31
+#: last_checked: 2023-04-15
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -5238,17 +5226,19 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        },
        undef,
        {
-         'data' => '#: by: https://www.berliner-woche.de/niederschoeneweide/c-bauen/hasselwerder-park-mit-neuen-wegen_a314970
-#: XXX neue Sperrung, bis wann?
+         'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1100562.php (Sperrung 2021)
+#: by: https://www.berliner-woche.de/niederschoeneweide/c-bauen/hasselwerder-park-mit-neuen-wegen_a314970 (Sperrung 2021)
+#: XXX neue Sperrung 2022-2023, bis wann? Bekommt der gesperrte Abschnitt einen neuen Belag (Verbundsteinpflaster?)?
 #: add_fragezeichen: Ist der Weg im Hasselwerderpark noch immer gesperrt?
 #: next_check_id: HASSELWERDERPARK-2021
-#: last_checked: 2023-03-08 (mapillary)
-	2::inwork 18506,5596 18560,5539 18634,5484 18695,5453
+#: last_checked: 2023-04-14
+#: check_frequency: 60d
+	2::inwork 18634,5484 18695,5453
+# REMOVED (hier nicht) ---	2::inwork 18506,5596 18560,5539 18634,5484
 ',
          'from' => undef,
          'id' => 3403,
-         'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2021/pressemitteilung.1100562.php',
-         'text' => 'Hasselwerderpark: Uferweg zwischen Rudower Str. und Britzer Str. wegen Bauarbeiten gesperrt',
+         'text' => 'Hasselwerderpark: Uferweg zwischen Rudower Str. und Britzer Str. wegen Bauarbeiten gesperrt (Stand Mitte April 2023)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -5313,7 +5303,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'data' => '#: next_check_id: DRESDNERBAHN-2021
 #: note: Dieser Eintrag ist nun zusätzlich in gesperrt-orig.
 #: add_fragezeichen: Ist hier noch immer gesperrt?
-#: last_checked: 2023-03-11
+#: last_checked: 2023-04-02 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 	2::inwork 7673,4223 7769,4315
@@ -5541,10 +5531,10 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: last_checked: 2023-04-06 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2024-02-12 vvv
-#: osm_watch: way id="4993234" version="20"
+#: osm_watch: way id="4993234" version="21"
 	2::inwork 5714,12290 5796,12372 5940,12564
 #: XXX laut osm hier fertiggestellt, aber es sind weiterhin Bauarbeiten und Sperrungen möglich
-#: osm_watch: way id="4410535" version="26"
+#: osm_watch: way id="4410535" version="27"
 	2::inwork 5940,12564 5953,12592 6001,12699 6045,12830 6123,12887 6182,12900
 #: next_check ^^^
 #: check_frequency ^^^
@@ -5616,7 +5606,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: also_indoor: traffic (B,H(unvollständig),G)
 #: osm_watch: way id="1047544509" version="2"
 #: osm_watch: way id="1047544510" version="1"
-#: last_checked: 2023-04-05 vvv
+#: last_checked: 2023-04-07 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-02 vvv
 	q4::inwork 13797,7267 13762,7321
@@ -5647,7 +5637,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: add_fragezeichen: Wann sind die Bauarbeiten in der Braunschweiger Straße und Zeitzer Straße beendet? Wann wird die Einbahnstraßenregelung aufgehoben? vvv
 #: XXX Laut Baustellenschild der Wasserbetriebe bis September 2022; Halteverbot in der Kanner Str. bis 2022-12-03 vvv
 #: priority: #B vvv
-#: last_checked: 2023-04-05 vvv
+#: last_checked: 2023-04-10 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2022-12-03 vvv
 #: also_indoor: traffic (G,B,W) vvv
@@ -5838,7 +5828,7 @@ Schubertstr.	2::inwork 21984,6317 21856,6390
        {
          'data' => '#: by: http://spielstraßen.de/uebersicht.php#kreu
 #: XXX laut Pressemitteilung "Wrangelstraße, zwischen Sorauer Straße und Oppelner Straße, freitags 15.30 bis 18.30 Uhr, 13. Mai bis September, außer in den Sommerferien" -> nach den Sommerferien nachschauen und ggfs. verlängern -> 2023 nachschauen
-#: last_checked: 2023-04-06
+#: last_checked: 2023-04-10
 #: next_check: 2023-05-12
 	q4::temp::play 12822,10487 12897,10439
 ',
@@ -5873,21 +5863,7 @@ Schubertstr.	2::inwork 21984,6317 21856,6390
          'type' => 'gesperrt',
          'until' => 1683396000
        },
-       {
-         'data' => '#: by: mapillary
-#: XXX Am 2023-03-26 (mapillary) waren Bauarbeiten zu sehen
-#: osm_watch: way id="80883496" version="16"
-#: last_checked: 2023-03-26 (mapillary)
-# REMOVED --- #: check_frequency: 180d
-#: check_frequency: 90d
-	2::inwork 17236,-602 17076,-644 16997,-663
-',
-         'from' => undef,
-         'id' => 3554,
-         'text' => 'Mauerweg Rudow: Abschnitt westlich der Schönefelder Str. kann durch Bauzäune abgesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -5908,7 +5884,7 @@ Schubertstr.	2::inwork 21984,6317 21856,6390
          'data' => '#: by: https://www.deutsches-architekturforum.de/thread/11059-charlottenburg-charlottenburg-nord-westend-kleinere-projekte/?postID=720279#post720279
 #: by: https://abload.de/img/img_417223kcb.jpg
 #: osm_watch: way id="742199631" version="2"
-#: osm_watch: way id="4531799" version="14"
+#: osm_watch: way id="4531799" version="16"
 #: add_fragezeichen: Wann wird die Einbahnstraßenregelung wieder aufgehoben?
 #: also_indoor: traffic (none)
 #: last_checked: 2023-04-06
@@ -5948,9 +5924,9 @@ Schubertstr.	2::inwork 21984,6317 21856,6390
 #: by: https://www.deutsches-architekturforum.de/thread/9771-neue-und-erneuerte-parks-und-gr%C3%BCnfl%C3%A4chen/?postID=733862#post733862
 #: by: https://www.berliner-woche.de/mitte/c-bauen/inselbruecke-gesperrt_a373424 (entgegen des Artikels sind Inselbrücke+Uferweg nicht gesperrt)
 #: XXX vielleicht auch interessant: neuer Zugang zur Mühlendammbrücke inkl. Rampe
-#: last_checked: 2023-04-04
-#: check_frequency: 60d
-#: next_check: 2023-04-15
+#: last_checked: 2023-04-15
+#: check_frequency: 30d
+# REMOVED --- #: next_check: 2023-04-17
 # REMOVED --- #: next_check: 2023-12-31
 	2::inwork 10824,11992 10742,12033 10713,12014
 ',
@@ -6066,16 +6042,16 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
 # REMOVED (keine Sperrung mehr) --- Wallensteinstr.: auf Gehweg ausweichen, keine Freigabe	q3::inwork; 18037,9195 18092,9141 18134,9080
 #: XXX Wie lange dauern noch die Bauarbeiten?
 #: also_indoor: traffic (ex-G,B)
-#: last_checked: 2023-03-26 (mapillary)
+#: last_checked: 2023-04-14
 #: check_frequency: 21d
-# REMOVED (keine Sperrung mehr) --- Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
 Ilsestr.: Sperrung vor der Einmündung	q3::inwork 18037,9195 18070,9292
-Wallensteinstr.: Einbahnstraßenregelung	q4::inwork; 18134,9080 18092,9141 18037,9195
+# REMOVED (keine Sperrung mehr) --- Wallensteinstr.: auf linken Gehweg ausweichen, oder Umweg an der Ilsestr. benutzen	q4::inwork; 18134,9080 18092,9141 18037,9195
+# REMOVED (nicht mehr) --- Wallensteinstr.: Einbahnstraßenregelung	q4::inwork; 18134,9080 18092,9141 18037,9195
 ',
          'from' => 1659546069,
          'id' => 3597,
          'source_id' => 'viz2021:13.516327,52.486802,02.08.2022,07:00',
-         'text' => 'Wallensteinstr.: Bauarbeiten, Einbahnstraßenregelung zwischen Ilsestr. und Sangeallee; außerdem ist die Ilsestr. an der Wallensteinstr. gesperrt, Ende der Sperrung unbekannt',
+         'text' => 'Ilsestr.: Bauarbeiten, an der Wallensteinstr. gesperrt, Ende der Sperrung unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -6088,7 +6064,7 @@ Wallensteinstr.: Einbahnstraßenregelung	q4::inwork; 18134,9080 18092,9141 18037,
        undef,
        {
          'data' => '#: source_id: viz2021:13.272377,52.453518,17.08.2022,09:00 (hier nur bis 12.9.2022) (mittlerweile bis 19.9.2022) (inaktiv)
-#: source_id: viz2021:13.272377,52.453518,19.09.2022,12:00 (bis 25.11.2022) (bis 26.1.2023) (bis 3.3.2023) (bis 13.4.2023)
+#: source_id: viz2021:13.272377,52.453518,19.09.2022,12:00 (bis 25.11.2022) (bis 26.1.2023) (bis 3.3.2023) (bis 13.4.2023) (bis 21.4.2023)
 #: by: https://nitter.cz/VIZ_Berlin/status/1559793397908381696#m
 #: by: https://nitter.cz/pic/media%2FFaSkXFdX0AQFyze.jpg%3Fname%3Dorig
 #: by: https://nitter.cz/pic/media%2FFaSkXFeXEAAqM9x.jpg%3Fname%3Dorig
@@ -6098,9 +6074,9 @@ Wallensteinstr.: Einbahnstraßenregelung	q4::inwork; 18134,9080 18092,9141 18037,
          'from' => 1660582743,
          'id' => 3605,
          'source_id' => 'https://viz.berlin.de/2022/08/verkehrsvorschau-170822/',
-         'text' => 'Hüttenweg: Anbindung Clayallee gesperrt, voraussichtlich bis 13.4.2023',
+         'text' => 'Hüttenweg: Anbindung Clayallee gesperrt, voraussichtlich bis 21.4.2023',
          'type' => 'handicap',
-         'until' => 1681398000
+         'until' => 1682089200
        },
        undef,
        undef,
@@ -6337,16 +6313,18 @@ Brückenabriss, Komplettsperrung	2::temp 2892,15983 2809,16143
 #: by: https://nitter.net/VIZ_Berlin/status/1597901017756368898#m
 #: by: https://nitter.net/pic/orig/media%2FFizhNZlXkAArDsW.png
 #: by: https://nitter.net/pic/orig/media%2FFizho6UWQAI-o77.jpg (Umleitung für den Radverkehr)
+#: by: https://www.bahninfo-forum.de/read.php?9,751033,764779#msg-764779
 #: note: Möglicherweise wegen der Sperrung verstärkter Verkehr in der Gartenstr. zwischen Invalidenstr. und Torstr.
 #: XXX Bis wann ist die Kreuzung gesperrt?
-#: last_checked: 2023-04-06 vvv
+#: last_checked: 2023-04-15 vvv
 #: next_check: 2023-04-24 vvv
 # REMOVED (hier nichts) --- Chausseestr.	q4::inwork 9207,13493 9212,13471
 # REMOVED (Radfahrfurt) --- Hannoversche Str.	q3::inwork 9212,13471 9047,13446
 # REMOVED (Radfahrfurt) --- Torstr.	q3::inwork 9353,13521 9212,13471
-Friedrichstr.	q4::inwork; 9212,13471 9225,13389
-Friedrichstr. (vor der Oranienburger Str.)	q3::inwork 9225,13389 9246,13235
-Oranienburger Str.	q4::inwork; 9225,13389 9293,13366
+# REMOVED (hier nicht mehr) --- Friedrichstr.	q3::inwork; 9212,13471 9225,13389
+# REMOVED (hier nicht mehr) --- Friedrichstr. (Richtung Süden, ab der Oranienburger Str.)	q3::inwork; 9225,13389 9246,13235
+Friedrichstr. (Richtung Norden, vor der Oranienburger Str.)	q4::inwork; 9254,13171 9246,13235 9225,13389
+# REMOVED (hier nicht mehr) --- Oranienburger Str.	q4::inwork; 9225,13389 9293,13366
 # REMOVED (hier nicht mehr) --- Chausseestr.	q4::inwork; 9212,13471 9207,13493
 # REMOVED (hier nicht mehr) --- Chausseestr.	q2::inwork; 9207,13493 9094,13641
 # REMOVED --- #: note: hier nicht gesperrt, aber das Abbiegen nach/von Süden ist nicht direkt möglich --- Linienstr.	q4::inwork 9225,13389 9312,13388
@@ -6357,7 +6335,7 @@ Oranienburger Str.	q4::inwork; 9225,13389 9293,13366
 ',
          'from' => 1667499233,
          'id' => 3643,
-         'text' => 'Friedrichstr.: Fahrbahn zwischen Oranienburger Str. und Torstr. gesperrt, außerdem Oranienburger Str. zwischen Friedrichstr. und Linienstr. (Gleisbauarbeiten), voraussichtlich bis 24.4.2023',
+         'text' => 'Friedrichstr.: Fahrbahn zwischen Johannisstr. und Oranienburger Str. gesperrt (Gleisbauarbeiten), voraussichtlich bis 24.4.2023',
          'type' => 'handicap',
          'until' => 1682348400
        },
@@ -6379,7 +6357,7 @@ Oranienburger Str.	q4::inwork; 9225,13389 9293,13366
          'data' => '#: note: evtl. außerhalb der Arbeitszeiten problemlos für Radfahrer passierbar, gesehen 2022-10-17 (So)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
 #: also_indoor: traffic (B,H) vvv
-#: last_checked: 2023-03-27 (mapillary) vvv
+#: last_checked: 2023-04-02 (mapillary) vvv
 #: check_frequency: 30d vvv
 nur Gehweg frei	q4::inwork 7641,20745 7630,20698 7616,20633
 Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
@@ -6426,7 +6404,7 @@ Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
 #: source_id: bvg2021:n40#BVG310118_0
 #: also_indoor: traffic (H,B)
 #: priority: #A
-#: last_checked: 2023-04-01
+#: last_checked: 2023-04-13
 #: check_frequency: 30d
 #: next_check: 2023-04-27
 	q4::inwork; 13696,11920 13515,11969
@@ -6444,9 +6422,9 @@ Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
        {
          'data' => '#: by: https://gruen-berlin.de/pressemitteilung/berliner-mauerweg-beginn-der-baumassnahmen-am-jenbacher-weg
 #: add_fragezeichen: Wo genau sind die gesperrten Abschnitte des Mauerwegs? vvv
-#: last_checked: 2022-10-24 vvv
-#: check_frequency: 60d vvv
-Mauerweg Marienfelde - Lichterfelde	2::inwork 7097,-527 6961,-389 6668,-100 6498,71 6351,219 6256,363
+#: last_checked: 2023-04-10 vvv
+#: check_frequency: 30d vvv
+Mauerweg Marienfelde - Lichterfelde	2::inwork 7097,-527 6961,-389 6668,-100 6498,71 6357,215 6256,363
 # REMOVED (separater Eintrag) --- Mauerweg Marienfelde - Lichterfelde	2::inwork 6256,363 6204,331 6013,211 5832,93 5441,-150
 Mauerweg Marienfelde - Lichterfelde	2::inwork 5441,-150 4842,-547 4596,-707 4406,-910
 Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568
@@ -6492,7 +6470,7 @@ Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 75
          'data' => '#: by: https://www.starkundstilb-architekten-berlin.de/projekte/524-emmauskirche/
 #: by: https://www.deutsches-architekturforum.de/thread/11488-gottesh%C3%A4user-in-berlin/?postID=730631#post730631
 #: add_fragezeichen: Bis wann geht die Sperrung?
-#: last_checked: 2023-04-06
+#: last_checked: 2023-04-15
 #: check_frequency: 60d
 	q3::inwork 12328,10442 12274,10612
 ',
@@ -6506,14 +6484,14 @@ Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 75
        {
          'data' => '#: add_fragezeichen: Ist dieser Abschnitt des Mauerwegs noch gesperrt?
 #: XXX Auf den mapillary-Bildern von 2023-03-26 sieht es nach einer baldigen Freigabe aus; außerdem ist der Weg frisch asphaltiert.
-#: last_checked: 2023-03-26 (mapillary)
+#: last_checked: 2023-04-10
 #: check_frequency: 30d
 Mauerweg Marienfelde - Lichterfelde	2::inwork 6256,363 6204,331 6013,211 5832,93 5441,-150
 ',
          'from' => 1665942194,
          'id' => 3665,
          'source_id' => 'https://www.berliner-woche.de/tempelhof-schoeneberg/c-bauen/bauarbeiten-an-der-berliner-stadtgrenze-sollen-ein-jahr-lang-dauern_a360599',
-         'text' => 'Mauerweg: Bauarbeiten zwischen Osdorfer Str. und Jenbacher Weg, Weg ist gesperrt (Stand Ende Oktober 2022)',
+         'text' => 'Mauerweg: Bauarbeiten zwischen Osdorfer Str. und Jenbacher Weg, Weg ist weitgehend fertig, aber noch nicht offiziell freigegeben (Stand April 2023)',
          'type' => 'gesperrt',
          'until' => 1697565600
        },
@@ -6534,13 +6512,13 @@ Mauerweg Marienfelde - Lichterfelde	2::inwork 6256,363 6204,331 6013,211 5832,93
 #: by: https://berliner-abendblatt.de/kiez-news/lichtenberg/bauarbeiten-in-treskowallee-staugefahr-id208687
 #: by: https://www.bahninfo-forum.de/read.php?9,727655,761981#msg-761981 (Verlängerung der Straßenbahnarbeiten bis 28.08.2023)
 #: source_id: viz2021:13.519751,52.473389,10.08.2022,07:00 (bis 20.12.2022) (bis 4.1.2023) (bis 12.1.2023) (inaktiv)
-#: source_id: viz2021:13.517279,52.471065,27.02.2023,07:00 (weiter südlich, bis 30.03.2023) (bis 15.4.2023)
+#: source_id: viz2021:13.517279,52.471065,27.02.2023,07:00 (weiter südlich, bis 30.03.2023) (bis 15.4.2023) (bis 19.4.2023)
 #: source_id: viz2021:13.515661,52.469682,06.03.2023,07:00 (zusätzlicher Eintrag, bis 30.04.2023)
 #: source_id: viz2021:13.51474,52.46874,27.02.2023,07:00 (zusätzlicher Eintrag, bis 15.04.2023) (inaktiv)
 #: XXX außerdem möglich: Einbahnstraßenregelung in Wandlitzstr. und Wildensteiner Str.? (zurzeit wohl nicht)
 #: add_fragezeichen: Ist der Übergang Hegemeisterweg/Treskowallee gesperrt? vvv
 #: priority: #A vvv
-#: last_checked: 2023-03-21 vvv
+#: last_checked: 2023-04-11 vvv
 #: check_frequency: 21d vvv
 # REMOVED --- #: next_check: 2023-01-12 vvv
 ## generated with: ./miscsrc/convert2hafas -specsperre=strassen /tmp/3 | perl -pe \'s/: \\t/\\t/; s/igndisp/inwork/; $_="# $_" if /3nocross/\' >| /tmp/3.new
@@ -6561,7 +6539,7 @@ Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,777
 ',
          'from' => undef,
          'id' => 3666,
-         'text' => 'Hegemeisterweg/Treskowallee: Übergang kann wegen Bauarbeiten gesperrt sein (Stand Mitte März 2023: enger Übergang existiert)',
+         'text' => 'Hegemeisterweg/Treskowallee: Übergang kann wegen Bauarbeiten gesperrt sein (Stand Mitte April 2023: enger Übergang existiert, direkte Anbindung Hegemeisterweg abgesperrt)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -6593,6 +6571,8 @@ Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,777
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1306690.php (Fortsetzung)
 #: by: https://www.berliner-woche.de/lankwitz/c-bauen/strassenbau-geht-weiter_a376430
 #: by: https://berliner-abendblatt.de/kiez-news/steglitz-zehlendorf/bauarbeiten-gehen-weiter-erneute-vollsperrung-in-lankwitz-id216990
+#: by: https://viz.berlin.de/2023/04/eiswaldtstr/
+#: source_id: viz2021:13.350401,52.428232,13.04.2023,06:00 (bis 31.07.2023)
 #: note: Sollte noch 2022 fertig werden, jetzt wird\'s Sommer 2023
 #: XXX: nächste Bauabschnitte: von Beselerstraße bis Am Gemeindepark: vom 03.05.2023 bis 28.06.2023 + von Am Gemeindepark bis Malteserstraße: vom 29.06.2023 bis 31.07.2023
 #: next_check: 2023-05-02
@@ -6601,12 +6581,13 @@ westlicher Abschnitt bis Beselerstr.	q4::inwork 6718,2443 6862,2452 6965,2418
 # REMOVED (hier später) --- mittlerer Abschnitt	q4::inwork 6965,2418 7051,2366 7172,2343
 # REMOVED (hier später) --- östlicher Abschnitt ab Am Gemeindepark	q4::inwork 7172,2343 7285,2377
 ',
+         'dont_check_date' => 1,
          'from' => 1681077600,
          'id' => 3670,
          'source_id' => 'https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1259184.php',
-         'text' => 'Eiswaldtstr.: Instandsetzung der Fahrbahn, von Gallwitzallee bis Beselerstr., vom 11.04.2023 bis 02.05.2023',
+         'text' => 'Eiswaldtstr.: Instandsetzung der Fahrbahn, von Gallwitzallee bis Beselerstr., vom 11.04.2023 bis 02.05.2023, weitere Bauabschnitte folgen',
          'type' => 'handicap',
-         'until' => 1683064799
+         'until' => 1690840799
        },
        undef,
        {
@@ -6632,7 +6613,7 @@ westlicher Abschnitt bis Beselerstr.	q4::inwork 6718,2443 6862,2452 6965,2418
        {
          'data' => '# REMOVED (als die Bauarbeiten noch in der Weserstr. waren) --- #: also_indoor: traffic (G,B[zuviel],W) vvv
 #: also_indoor: traffic (B) vvv
-#: last_checked: 2023-04-05 vvv
+#: last_checked: 2023-04-10 vvv
 # REMOVED --- Weserstr. Richtung Westen	q4::inwork; 13946,7918 13891,7961
 # REMOVED --- Weserstr. Richtung Osten	q3::inwork; 13891,7961 13946,7918
 Ederstr.	q3::inwork 13946,7918 13919,7707
@@ -6648,7 +6629,7 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
        {
          'data' => '#: next_check_id: AMTREPTOWERPARK-2020
 #: XXX nördlicher Geh- und Radweg wegen Bauarbeiten gesperrt
-#: last_checked: 2023-04-05
+#: last_checked: 2023-04-10
 #: check_frequency: 60d
 	q4::inwork; 14382,9299 14242,9448 14185,9509 14089,9610
 ',
@@ -6664,21 +6645,7 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: INDENALBOINGARTEN-2022
-#: note: Durchfahrt war möglich am 2022-12-27 gegen 21:00, am 2023-02-26 (So) gegen 12:10
-#: osm_watch: way id="1119211815" version="3"
-#: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: last_checked: 2023-02-26
-#: check_frequency: 45d
-	2::inwork 7646,6031 7638,5967
-',
-         'from' => undef,
-         'id' => 3682,
-         'text' => 'In den Alboingärten: Zufahrt zur Eythstr. kann wegen Bauarbeiten gesperrt sein, evtl. nur außerhalb der Arbeitszeiten offen',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: next_check_id: SCHOENFLIESSER-2023
 #: by: https://nitter.cz/VIZ_Berlin/status/1592390689735659522#m
@@ -6805,7 +6772,7 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
          'data' => '#: next_check_id: SPREEPARK-2022
 #: note: Zusätzlich in gesperrt-orig eingetragen
 #: add_fragezeichen: Gibt es noch immer Sperrungen wegen der Bauarbeiten? vvv
-#: last_checked: 2023-03-27 vvv
+#: last_checked: 2023-04-14 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2023-06-30 vvv
 	2::inwork 15680,8914 15873,8884 15981,8872 16028,8867 16086,8860 16129,8855 16201,8860 16358,8841 16388,8821
@@ -6908,11 +6875,11 @@ Ederstr.	q3::inwork 13946,7918 13919,7707
        },
        {
          'data' => '# REMOVED --- nördlicher Abschnitt	q4::inwork 5350,12906 5341,12875 5376,12781
-#: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: also_indoor: traffic (G[falsch])
-#: osm_watch: way id="169659243" version="22"
-#: last_checked: 2023-03-19 (osm)
-mittlerer Abschnitt	q4::inwork 5376,12781 5376,12661
+# REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten beendet? --- #: also_indoor: traffic (ex-G[falsch]) --- #: last_checked: 2023-03-19 (osm)
+# REMOVED --- #: osm_watch: way id="169659243" version="23" --- mittlerer Abschnitt	q4::inwork 5376,12781 5376,12661
+#: osm_watch: way id="1155654228" version="3"
+#: last_checked: 2023-04-09 (osm)
+südlicher Abschnitt	q4::inwork 5376,12661 5354,12552
 ',
          'from' => undef,
          'id' => 3708,
@@ -6925,7 +6892,7 @@ mittlerer Abschnitt	q4::inwork 5376,12781 5376,12661
          'data' => '#: next_check_id: EDISON-2022
 #: by: https://nitter.net/StefanB94551270/status/1617960021819797505#m
 #: also_indoor: traffic (H,G,W)
-#: last_checked: 2023-03-17
+#: last_checked: 2023-04-14
 	q4::inwork; 17962,6674 17991,6431
 ',
          'from' => undef,
@@ -6964,17 +6931,7 @@ mittlerer Abschnitt	q4::inwork 5376,12781 5376,12661
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: Einbahnstraßenabschnitt etwa 190m lang, im östlichen Bereich
-	q4::inwork; 17608,15010 17562,14992 17231,14979
-',
-         'from' => 1674460800,
-         'id' => 3717,
-         'source_id' => 'viz2021:13.508757,52.539432,24.01.2023,09:00',
-         'text' => 'Schleizer Str.: Richtung Genslerstr. zwischen Ferdinand-Schulze-Str.und Arendsweg Bauarbeiten, Fahrtrichtung gesperrt (auch für Radfahrer), vom 24.01.2023 09:00 bis 07.04.2023 17:00 ',
-         'type' => 'handicap',
-         'until' => 1680879600
-       },
+       undef,
        {
          'data' => '#: note: Ausschilderung: Privatgrundstück/Parken im Hof verboten (nur Südseite)/Durchgang zur Pohlstraße (bzw. Kurfürstenstraße) gestattet/22:00-07:00 Uhr geschlossen
 	2::night 7416,10492 7432,10546 7337,10587
@@ -6989,7 +6946,7 @@ mittlerer Abschnitt	q4::inwork 5376,12781 5376,12661
        {
          'data' => '#: by: https://www.berliner-woche.de/gruenau/c-bauen/regattastrasse-wird-voll-gesperrt_a371402
 #: source_id: viz2021:13.58341,52.41363,08.02.2023,15:02 (bis 31.03.2023) (inaktiv)
-#: source_id: viz2021:13.582488,52.415092,03.01.2023,10:00 (hier: bis 31.3.2023) (bis 14.4.2023)
+#: source_id: viz2021:13.582488,52.415092,03.01.2023,10:00 (hier: bis 31.3.2023) (bis 14.4.2023) (bis 28.4.2023)
 #: also_indoor: traffic (G,H,B,W)
 	q4::inwork 22766,1226 22821,1086
 Sperrung beginnt ab Café Liebig	q2::inwork 22766,1226 22655,1450
@@ -6997,9 +6954,9 @@ Sperrung beginnt ab Café Liebig	q2::inwork 22766,1226 22655,1450
          'from' => 1675896728,
          'id' => 3719,
          'source_id' => 'https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1290457.php',
-         'text' => 'Regattastr.: zwischen Büxensteinallee und Libboldallee Bauarbeiten, Sperrung der Fahrbahn, bis voraussichtlich Mitte April 2023',
+         'text' => 'Regattastr.: zwischen Büxensteinallee und Libboldallee Bauarbeiten, Sperrung der Fahrbahn, bis voraussichtlich Ende April 2023',
          'type' => 'handicap',
-         'until' => 1681484400
+         'until' => 1682694000
        },
        {
          'data' => '#: by: https://berliner-abendblatt.de/kiez-news/tempelhof-schoeneberg/schoeneberg-barbarossastrasse-monatelang-gesperrt-id204159
@@ -7019,12 +6976,13 @@ Landshuter Str. (im Kreuzungsbereich "abgehängt")	q3::inwork 5990,9730 6030,9542
        },
        {
          'data' => '#: note: laut VIZ nur der Kfz-Verkehr betroffen
-	q4::inwork 23698,15049 23692,15088 23686,15128 23663,15270 23643,15392
+# REMOVED (hier nicht, siehe Mapillary) ---	q4::inwork 23698,15049 23693,15080 23686,15128
+	q4::inwork 23686,15128 23663,15270 23643,15392
 ',
          'from' => 1675749600,
          'id' => 3721,
          'source_id' => 'viz2021:13.600257,52.54031,08.02.2023,07:00',
-         'text' => 'Kastanienallee: Bauarbeiten zwischen Havelländer Ring und Henny-Porten-Str., evtl. sind auch Radfahrer betroffen, vom 08.02.2023 07:00 bis 10.06.2023 17:00',
+         'text' => 'Kastanienallee: Bauarbeiten zwischen Havelländer Ring und Sarah-Kirsch-Str., Fahrbahn gesperrt, vom 08.02.2023 07:00 bis 10.06.2023 17:00',
          'type' => 'handicap',
          'until' => 1686409200
        },
@@ -7072,37 +7030,19 @@ Semmelweisstr.: Fahrbahn gesperrt	q4::inwork 19198,2163 19019,2217
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1296743.php
 #: by: https://berliner-abendblatt.de/kiez-news/steglitz-zehlendorf/lichterfelde-uferweg-am-teltowkanal-gesperrt-id207815
 #: by: https://wärme.vattenfall.de/energie-news/netzverstaerkung-hindenburgdamm/
-#: osm_watch: way id="46907541" version="11"
+#: osm_watch: way id="46907541" version="12"
+#: note: laut osm: Bauarbeiten erst ab Juni 2023
 #: note: siehe auch Eintrag in gesperrt-orig
 	2::inwork 4053,2300 4209,2641 4247,2652
 	2::inwork 4209,2641 4220,2664
 ',
-         'from' => 1677452400,
+         'from' => 1685397600,
          'id' => 3727,
-         'text' => 'Uferweg am Teltowkanal: zwischen Königsberger Str. und Kleingartenanlage Zukunft Leitungsarbeiten, Weg kann bis Ende 2024 gesperrt sein, Stand Mitte März 2023: Weg ist frei',
+         'text' => 'Uferweg am Teltowkanal: zwischen Königsberger Str. und Kleingartenanlage Zukunft Leitungsarbeiten, Weg kann ab Juni 2023 bis Ende 2024 gesperrt sein, Stand Mitte April 2023: Weg ist frei',
          'type' => 'gesperrt',
          'until' => 1735685999
        },
-       {
-         'data' => '#: next_check_id: KUESTRINER-2023
-#: XXX haben die Bauarbeiten etwas mit der Asphaltierung der Küstriner Str. zu tun?
-#: add_fragezeichen: Bis wann gehen die Bauarbeiten? vvv
-#: also_indoor: traffic (W[unvollständig]) vvv
-#: last_checked: 2023-03-29 vvv
-#: check_frequency: 14d vvv
-Wriezener Str.: nur der Kreuzungsbereich ist betroffen	q3::inwork 16522,15258 16354,15323 16218,15386
-Küstriner Str.	q4::inwork 16354,15323 16314,15223
-#: check_frequency ^^^
-#: last_checked ^^^
-#: also_indoor ^^^
-#: add_fragezeichen ^^^
-',
-         'from' => undef,
-         'id' => 3728,
-         'text' => 'Küstriner Str./Wriezener Str.: Bauarbeiten, Sperrung der Fahrbahn, Ende der Bauarbeiten unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: by: https://nitter.cz/VIZ_Berlin/status/1628999413598408708#m
 #: by: https://nitter.it/pic/orig/media%2FFpp930OXEAEr-JC.jpg
@@ -7118,8 +7058,8 @@ Küstriner Str.	q4::inwork 16354,15323 16314,15223
        },
        undef,
        {
-         'data' => '#: last_checked: 2023-03-26
-#: check_frequency: 21d
+         'data' => '#: last_checked: 2023-04-11
+#: check_frequency: 10d
 	2::inwork 14810,10832 14738,10892
 ',
          'from' => undef,
@@ -7128,19 +7068,7 @@ Küstriner Str.	q4::inwork 16354,15323 16314,15223
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: FISCHERINSEL-2023
-#: by: https://www.berliner-woche.de/mitte/c-bauen/inselbruecke-gesperrt_a373424
-#: priority: #B
-#: next_check: 2023-04-15
-	2::inwork 10680,11875 10776,11942 10824,11992 10869,11949
-',
-         'from' => 1677359677,
-         'id' => 3732,
-         'text' => 'Inselbrücke und Uferweg: Bauarbeiten, Sperrungen, voraussichtlich bis Mitte April 2023',
-         'type' => 'gesperrt',
-         'until' => 1681595999
-       },
+       undef,
        undef,
        {
          'data' => '#: next_check_id: RBAHNHOFKOEPENICK-2022
@@ -7209,13 +7137,16 @@ Blumenthalstr.	q4::inwork 8944,6293 8971,6154
        {
          'data' => '#: next_check_id: OSKAR-2023
 #: XXX Halteverbotsschilder gelten bis zum 14.4.2023
-#: last_checked: 2023-03-27
-#: next_check: 2023-04-14
-	q3::inwork 17803,8079 17808,8042 17793,8012 17762,7931
+#: add_fragezeichen: Sind die Bauarbeiten beendet?
+#: last_checked: 2023-04-14
+#: check_frequency: 10d
+# REMOVED --- #: next_check: 2023-04-14
+	q3::inwork 17793,8012 17762,7931
+# REMOVED (hier nicht mehr) ---	q3::inwork 17803,8079 17808,8042 17793,8012
 ',
          'from' => 1677610008,
          'id' => 3738,
-         'text' => 'Oskarstr.: zwischen Hegemeisterweg und Gleyeweg Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Mitte April 2023',
+         'text' => 'Oskarstr.: zwischen Hegemeisterweg und Gleyeweg Bauarbeiten, Fahrbahn gesperrt; Stand Mitte April 2023: noch immer Bauarbeiten',
          'type' => 'handicap',
          'until' => 1681595999
        },
@@ -7231,22 +7162,7 @@ Blumenthalstr.	q4::inwork 8944,6293 8971,6154
          'type' => 'gesperrt',
          'until' => 1704063599
        },
-       {
-         'data' => '#: by: https://viz.berlin.de/2023/03/verkehrsvorschau-130323/
-#: by: https://berliner-abendblatt.de/kiez-news/treptow-koepenick/bauarbeiten-staugefahr-in-baumschulenweg-id211581
-#: by: https://nitter.cz/VIZ_Berlin/status/1635178881606103040#m
-#: by: https://nitter.net/pic/orig/media%2FFq3V4joXgAEsbE1.jpg
-#: source_id: viz2021:13.480741,52.461219,13.03.2023,09:00 (bis 31.03.2023) (bis 14.04.2023)
-# REMOVED (zu kurz) --- #: XXX vielleicht wird der Asphalt danach etwas besser sein (zurzeit Q0-)? --- #: next_check: 2023-03-31
-	q4::inwork 15725,6235 15740,6261
-# REMOVED (hier nicht) ---	q4::inwork 15740,6261 15715,6394
-',
-         'from' => 1678348800,
-         'id' => 3740,
-         'text' => 'Heidekampweg: Fahrbahn an der Sonnenallee gesperrt, bis Mitte April 2023',
-         'type' => 'handicap',
-         'until' => 1681484400
-       },
+       undef,
        {
          'data' => '#: by: https://viz.berlin.de/2023/03/verkehrsvorschau-130323/
 #: by: https://nitter.cz/VIZ_Berlin/status/1635151200550281217#m
@@ -7306,26 +7222,17 @@ Blumenthalstr.	q4::inwork 8944,6293 8971,6154
        },
        undef,
        {
-         'data' => '#: last_checked: 2023-03-12 (mapillary)
+         'data' => '#: last_checked: 2023-04-02 (mapillary)
 	2::inwork 13078,21754 13031,21538
 ',
          'from' => 1678819239,
          'id' => 3747,
-         'text' => 'Pankeweg: möglicherweise im Bereich zukünftige Hebammensteigbrücke wegen Bauarbeiten gesperrt, evtl. bis zum 30.6.2023',
+         'text' => 'Pankeweg: im Bereich der zukünftigen Hebammensteigbrücke wegen Bauarbeiten gesperrt, evtl. bis zum 30.6.2023',
          'type' => 'gesperrt',
          'until' => 1688162400
        },
        undef,
-       {
-         'data' => '	q4::inwork 3041,10732 3012,10812
-',
-         'from' => 1678805940,
-         'id' => 3749,
-         'source_id' => 'viz2021:13.2955,52.50343,15.03.2023,15:59',
-         'text' => 'Holtzendorffstr.: zwischen Rönnestr. und Friedbergstr. wegen Bauarbeiten gesperrt, evtl. sind auch Radfahrer betroffen, vom 15.03.2023 15:59 bis 07.04.2023 07:00',
-         'type' => 'handicap',
-         'until' => 1680843600
-       },
+       undef,
        {
          'data' => '#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_40_4933_5036_online.pdf (Grundstücksnummerierungen (neues Wohngebiet?))
 #: by: https://www.bahninfo-forum.de/read.php?9,665091,708278#msg-708278
@@ -7378,13 +7285,18 @@ Magdalenenstr., südlicher Abschnitt	q2::inwork 16158,12191 16127,11950
        {
          'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1307011.php ("Radfahrende werden gebeten ... abzusteigen und den Gehweg zu nutzen")
 #: by: https://www.berliner-woche.de/baumschulenweg/c-verkehr/fahrbahn-wird-neu-gemacht_a376622
-	q4::inwork 16563,7012 16615,7062 16507,7254
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1313008.php (mittlerweile bis 1.5.2023)
+#: source_id: viz2021:13.49247,52.47005,11.04.2023,15:56 (hier: bis 02.05.2023) (vorfristig entfernt)
+# REMOVED --- #: next_check: 2023-04-21
+# REMOVED (hier nicht, Radwege existieren weiterhin) ---	q4::inwork 16563,7012 16615,7062
+Gehweg für Radfahrer frei	q2::inwork; 16615,7062 16507,7254
+# REMOVED (hier nicht, Radweg existiert weiterhin) ---	q4::inwork; 16507,7254 16615,7062
 ',
          'from' => 1681077600,
          'id' => 3754,
-         'text' => 'Rodelbergweg und Neue Krugallee: Fahrbahnerneuerung, von 11. bis 21. April 2023',
+         'text' => 'Neue Krugallee: Fahrbahnerneuerung, Gehweg für Radfahrer frei, von 11. April 2023 bis 1. Mai 2023',
          'type' => 'handicap',
-         'until' => 1682114399
+         'until' => 1683064799
        },
        {
          'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/euref-campus-am-gasometer.128/page-5#post-20353
@@ -7407,7 +7319,7 @@ Leberstr.: Einbahnstraßenregelung	q2::inwork; 7582,8123 7578,8358 7574,8596
        },
        {
          'data' => '#: XXX möglicherweise Asphaltierung?
-#: last_checked: 2023-03-27
+#: last_checked: 2023-04-14
 #: check_frequency: 45d
 #: check_frequency: 2023-06-30
 	q4::inwork 17856,8162 17793,8225 17753,8290 17771,8349
@@ -7443,6 +7355,84 @@ Zugang zum Uferweg	2::inwork 5800,12361 5796,12372
          'text' => 'Schleswiger Ufer: Bauarbeiten, Fahrbahn gesperrt, außerdem Zufahrt zum Uferweg komplett gesperrt, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '#: by: https://www.moz.de/lokales/schwedt/strassensperrung-passow-bahnhof-in-passow-kaum-noch-erreichbar-_-anwohner-ohne-auto-haben-das-nachsehen-69248727.html
+#: by: https://www.nordkurier.de/regional/uckermark/kilometerlanger-umweg-in-passow-1437197
+#: by: https://www.schwedt.eu/de/politik-und-verwaltung/stadtverwaltung/hoch-und-tiefbau-stadt-und-ortsteilpflege--fb-4-//ausbau-der-bahnstrecke-angermuende-%E2%80%93-grenze/31541
+#: also_indoor: traffic (G,W)
+#: last_checked: 2023-04-10
+#: check_frequency: 30d
+#: next_check: 2023-06-03
+	2::inwork 56280,83440 56301,83419 56317,83407
+',
+         'from' => 1677452400,
+         'id' => 3760,
+         'text' => 'Passow: Bahnübergang komplett gesperrt, bis zum 2.6.2023 (Umfahrungsmöglichkeit über Ortsumfahrung Passow, Kraftfahrzeugstr. wurde hier aufgehoben, Routing in BBBike nicht möglich)',
+         'type' => 'gesperrt',
+         'until' => 1685743200
+       },
+       {
+         'data' => '#: by: https://www.schwedt.eu/de/politik-und-verwaltung/stadtverwaltung/hoch-und-tiefbau-stadt-und-ortsteilpflege--fb-4-//sanierung-der-vierradener-chaussee-4-ba/30713
+	2::inwork 69806,77907 69823,77953 69972,78155 69990,78244 70010,78347 70001,78510 70014,78585 70037,78775
+',
+         'from' => 1679180400,
+         'id' => 3761,
+         'text' => 'Vierradener Chaussee: Bauarbeiten zwischen Am Markt/Welsestr. und Hafenstr., Sperrung, vom 20. März 2023 bis 31. Mai 2023',
+         'type' => 'gesperrt',
+         'until' => 1685570399
+       },
+       {
+         'data' => '#: also_indoor: traffic (H,B)
+	q4::inwork 3291,10853 3295,10831 3041,10732
+',
+         'from' => 1680843600,
+         'id' => 3762,
+         'source_id' => 'viz2021:13.2955,52.50343,08.04.2023,07:00',
+         'text' => 'Rönnestr.: Bauarbeiten, zwischen Holtzendorffstr. und Stuttgarter Platz gesperrt, evtl. sind auch Radfahrer betroffen, vom 08.04.2023 07:00 bis 02.05.2023 12:00',
+         'type' => 'handicap',
+         'until' => 1683021600
+       },
+       {
+         'data' => '	q4::inwork 3869,10760 4267,10724 4393,10712
+',
+         'from' => 1681189200,
+         'id' => 3763,
+         'source_id' => 'viz2021:13.3076,52.50361,12.04.2023,07:00',
+         'text' => 'Mommsenstr.: Bauarbeiten zwischen Hindemithplatz und Wielandstr., evtl. sind auch Radfahrer betroffen, vom 12.04.2023 07:00 bis 31.08.2023 04:00',
+         'type' => 'handicap',
+         'until' => 1693447200
+       },
+       undef,
+       {
+         'data' => '	2::inwork 45275,34475 49143,34577 49557,34424 49925,34368 51490,34128
+',
+         'from' => 1682229600,
+         'id' => 3765,
+         'source_id' => 'LS/221-F/22/138',
+         'text' => 'Haselberg - Steinbeck: Deckenerneuerung, Sperrung, 24.04.2023 07:00 Uhr bis 12.05.2023 16:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1683900000
+       },
+       {
+         'data' => '	2::inwork 93720,-26200 92960,-25954
+',
+         'from' => 1681624800,
+         'id' => 3766,
+         'source_id' => 'LS/221-F/23/036',
+         'text' => 'Eisenhüttenstadt, Grubenbahnstr.: Rückbau der Brücke, Sperrung vom 17.04.2023 bis 06.09.2023',
+         'type' => 'gesperrt',
+         'until' => 1694008800
+       },
+       {
+         'data' => '	2::inwork 13271,-20531 13412,-20513 13526,-20548
+',
+         'from' => 1681617600,
+         'id' => 3767,
+         'source_id' => '237200773',
+         'text' => 'Bahnübergang zwischen Zossen und Nächst Neuendorf: Sperrung vom 17.04.2023 - 6:00 Uhr bis 19.04.2023 - 18:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1681920000
        }
      
 );

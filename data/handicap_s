@@ -6,7 +6,6 @@
 Kinzigstr.: Bauarbeiten nˆrdlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975
 M¸ggelstr./Travestr.: Gleisbauarbeiten	q4::inwork 14965,11924 14901,11808 14836,11842
 Untere Kynaststr.: Einbahnstraﬂenregelung, ggfs. vor der Einm¸ndung auf den linken Gehweg ausweichen	q4::inwork; 14843,10621 14828,10561 14832,10512 14815,10516 14805,10518
-(Vorfahrt Neues-Deutschland-Geb‰ude): Bauarbeiten, schmaler Gehweg ist frei	q4::inwork 12788,11898 12891,12008
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraﬂenregelung (auﬂer f¸r Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
 (Straﬂe der Pariser Kommune - Erich-Steinfurth-Str.): einige Fuﬂg‰nger	q2; 12660,11705 12634,11705 12608,11692
 (Notweg Bahn¸bergang Bahnhofstr.): Fuﬂg‰nger, Fahrrad ggfs. schieben	q3 10231,-2159 10215,-2170 10225,-2207 10215,-2210 10209,-2211 10161,-2146 10096,-2137
@@ -1339,7 +1338,7 @@ M¸ggelstr., Hausdurchfahrt: einige Fuﬂg‰nger	q3 14837,11706 14858,11744
 (Straﬂenbahnwendeschleife Schˆneweide): Straﬂenbahnverkehr, Gehweg, Bordsteine	q4 17675,5521 17588,5573 17578,5566
 (Frˆbel-Kindergarten - Oststr.): Fuﬂg‰nger, Kindergarten	q3 17416,5388 17455,5355
 (Schˆnburger Str. - Bosestr./Blumenthalstr.): Radfahren verboten, Bordsteine an beiden Enden	q4 8961,6490 8929,6363 8930,6295
-(Pr¸hﬂstr. - Rixdorfer Str.): getrennter Rad- und Gehweg, einige Fuﬂg‰nger	q1 9869,4271 9965,4299 10051,4295 10140,4280 10221,4245
+(Pr¸hﬂstr. - Rixdorfer Str.): getrennter Rad- und Gehweg, einige Fuﬂg‰nger	q1 9869,4271 9965,4299 10051,4295 10143,4283 10220,4236
 (Westphalweg/Dirschelweg - Schwimmbad): Fuﬂg‰nger	q2 10059,4396 10051,4295
 (Richterstr. - Rathausstr.): Fuﬂg‰nger	q2 9276,3997 9294,3921 9217,3906 9117,3898
 (Richterstr. - Rathausstr.): Fuﬂg‰nger, Regenablaufrinne	q3 9117,3898 9073,3892 9021,3878
@@ -1577,7 +1576,7 @@ Borretschweg: eng	q2 24300,6142 24275,6156
 Engelwurzweg: eng	q2 24275,6156 24306,6210 24368,6268 24424,6296 24473,6304
 (Britzer Str. - Uferweg): Radfahren verboten	q4 18470,5600 18506,5596
 (Britzer Str. - Uferweg): Radfahren verboten	q4 18470,5600 18473,5645
-(Uferweg an der Spree): Radfahren verboten	q4 18695,5453 18634,5484 18560,5539 18506,5596 18430,5719 18413,5799 18400,5841 18334,5900 18199,5935
+(Uferweg an der Spree): Radfahren verboten	q4 18695,5453 18634,5484 18560,5539 18506,5596 18473,5645 18430,5719 18413,5799 18400,5841 18334,5900 18199,5935
 (Uferweg an der Spree - Kaisersteg): Radfahren verboten	q4 18413,5799 18339,5853 18326,5850
 Insel-R¸gen-Weg: eng	q2 10967,17671 10978,17589 11064,17599
 (Weg im Wustrower Park): einige Fuﬂg‰nger, eng	q2 17206,18332 17162,18304 17087,18434 17102,18490 17021,18663
@@ -2428,6 +2427,8 @@ Waiblinger Weg: Gehweg, Bordstein	q3 17743,5260 17771,5278
 (Dahlienstr. - M¸ggelschlˆﬂchenweg): Bordstein (Bushaltestelle) oder Umweg	q3 24098,4310 24103,4260
 (Schwedter Steg - B‰rbel-Bohley-Ring/Lichtburgring): einige Fuﬂg‰nger	q2 10064,15920 9996,15901 9997,15884
 Hubertusallee: Fuﬂg‰nger, Bordsteine	q4 2107,8407 2126,8426
+(Fuﬂweg zum Supermarktparkplatz): Fuﬂweg, schmal	q2 6831,1096 6842,1060
+(Supermarktparkplatz): Parkplatzverkehr	q1 6842,1060 6812,925
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2780,7 +2781,7 @@ Altenburger Str.: Fuﬂg‰nger, Bordstein	q2 6651,1063 6631,968
 (Lilienthalpark): Fuﬂg‰nger, Radfahren erlaubt	q2 5571,614 5533,663
 (Lilienthalpark): Fuﬂg‰nger, Radfahren erlaubt	q2 5531,779 5587,816
 (Hildburghauser Str. - Lilienthalpark): Fuﬂg‰nger, Radfahren nicht erlaubt, ggfs. schieben, einige halbhohe Bordsteine	q2 6446,1033 6435,986 6446,950 6421,892 6414,833 6367,825 6360,825 6352,825 6267,834 6259,835 6250,834 6223,823 6172,822 6163,822 6155,821 6075,821 6066,821 6057,821 5975,821 5964,821 5954,819 5875,807 5867,807 5860,805 5781,800 5742,798 5684,773 5640,746 5590,719
-(Mauerweg Lichtenrade - Lichterfelde): Fuﬂg‰nger	q1 10309,-3191 10051,-3173 9600,-3160 9529,-2628 9506,-2421 9471,-2138 9462,-2050 9081,-2073 8846,-2089 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568 7176,-515 7175,-479 7164,-473 7146,-466 7097,-527 6961,-389 6668,-100 6498,71 6351,219 6256,363 6204,331 6013,211 5832,93 5441,-150 4842,-547 4596,-707 4406,-910
+(Mauerweg Lichtenrade - Lichterfelde): Fuﬂg‰nger	q1 10309,-3191 10051,-3173 9600,-3160 9529,-2628 9506,-2421 9471,-2138 9462,-2050 9081,-2073 8846,-2089 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568 7176,-515 7175,-479 7164,-473 7146,-466 7097,-527 6961,-389 6668,-100 6498,71 6357,215 6256,363 6204,331 6013,211 5832,93 5441,-150 4842,-547 4596,-707 4406,-910
 Falkenhausenweg: spielende Kinder	q1 7610,1695 7692,1743 7754,1806 7810,1904 7864,2018 7975,2275 8071,2248
 (Gielower Str - Buschkrugallee): Fuﬂg‰nger	q1 14012,4184 14053,4173 14119,4153
 (Parkweg Buschkrugallee - Bruno-Taut-Ring): Fuﬂg‰nger	q1 14053,4173 14045,4164 14009,4148 13910,4090 13873,4067 13798,4037 13721,4023 13656,3989 13601,3895 13632,3875
@@ -3036,7 +3037,7 @@ Martinstr.: enge Straﬂe	q1 4956,5121 5102,5031
 Straﬂe 113: enge Straﬂe	q1 9924,20951 9897,21035 9852,21151
 Schnepfenreuther Weg: enge Straﬂe	q1 -3495,16393 -3466,16455 -3444,16576 -3426,16837 -3404,17147
 Hohenzollernstr. (Zehlendorf): enge Straﬂe	q1 21,2728 58,2710 226,2752 322,2772 466,2811 487,2815 546,2850
-Hohenzollernstr. (Zehlendorf): enge Straﬂe	q1 487,2815 522,2802 537,2772
+Hohenzollernstr. (Zehlendorf): enge Straﬂe	q1 487,2815 514,2804 535,2785
 Hohenzollernstr. (Zehlendorf): enge Straﬂe	q1 58,2710 39,2669
 Rosa-Reinglass-Steig	q1 -2878,15304 -2856,15383
 Am Lupinenfeld: enge Straﬂe	q0 24159,13507 24347,13465 24539,13427 24746,13384 24817,13370 24875,13333 25031,13242 25138,13183 25181,13157
@@ -3352,6 +3353,7 @@ Ludolfinger Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp;
 Sewanstr. - Balatonstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 17729,10331 17741,10386
 Hˆnower Str. (Karlshorst) (Ausweichen auf Sandbankette mˆglich): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
+Reinickendorfer Str.: Einbahnstraﬂenregelung im Bereich des Weddingplatzes: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 7998,15068 8015,15047 8037,14958 8091,14895
 Holteistr.: Hochbauarbeiten, Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 14535,11327 14506,11275
 Bruchsaler Str.: Hochbauarbeiten, Einbahnstraﬂe auch f¸r Radfahrer: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 5522,8011 5520,8132 5573,8197
 Mˆllhausenufer: Bauarbeiten, Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 23608,1210 23520,1194
