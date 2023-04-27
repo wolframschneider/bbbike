@@ -15,13 +15,14 @@
 #: valid: -20230530
 	X::inwork 16328,7005
 # 
+#: next_check_id: SONYCENTER-2023
 #: by: https://entwicklungsstadt.de/sony-center-am-potsdamer-platz-investition-und-umbau/ (bis Ende 2023)
 #: XXX Möglicherweise im Zusammenhang mit Bauarbeiten am Sony-Center
 #: note: Länge der Gegenverkehrstrecke ist ca. 80m
-#: last_checked: 2023-03-13
+#: last_checked: 2023-04-25
 #: check_frequency: 90d
 #: next_check: 2023-12-31
-#: valid: -20231231
+#: valid: -20240701
 Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
@@ -59,8 +60,8 @@ Gürtelstr./Weserstr.	F::inwork 15016,11431
 #: last_checked ^^^
 # 
 #: next_check_id: ORANIENBURGERTORTRAM-2022
-#: next_check: 2023-04-24 vvv
-#: valid: -20230424 vvv
+#: next_check: 2023-05-10 vvv
+#: valid: -20230510 vvv
 #: XXX schon seit mehreren Tagen ausgeschaltet
 #: last_checked: 2023-04-06
 #: check_frequency: 30d
@@ -84,7 +85,7 @@ Tucholskystr./Ziegelstr.	X::inwork 9559,13087
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 # 
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
-#: last_checked: 2023-03-17
+#: last_checked: 2023-04-22
 #: check_frequency: 120d
 #: note: Anforderungsampel
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
@@ -102,7 +103,7 @@ B179/Fichtestr.	X::inwork 26138,-12596
 #: next_check_id: RBAHNHOFKOEPENICK-2022
 #: next_check_id: HAEMMERLING-2022
 #: note: Länge der Gegenverkehrsregelung: östlicher Abschnitt ca. 50m, nördlicher Abschnitt ca. 40m
-#: last_checked: 2023-03-26
+#: last_checked: 2023-04-22
 #: next_check: 2023-05-25
 #: valid: -20230525
 Hämmerlingstr./Am Bahndamm: Gegenverkehrsregelung	X::inwork 21984,6317
@@ -152,7 +153,7 @@ Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 #: next_check_id: KIEFHOLZ-2015 vvv
 #: osm_watch: node id="31260916" version="5"
 #: note: manchmal ausgeschaltet? (gesehen: So 2021-11-28 12:00) (scheint sehr selten zu sein, nicht wieder beobachtet)
-#: last_checked: 2023-04-10 vvv
+#: last_checked: 2023-04-22 vvv
 #: check_frequency: 30d vvv
 	X::inwork 14151,8967
 #: check_frequency ^^^
@@ -234,7 +235,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2023-04-18
+#: last_checked: 2023-04-25
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -287,7 +288,7 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linke
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fußgängerampel nordöstlich der Einmündung; Anforderungsampel
-#: last_checked: 2023-04-17
+#: last_checked: 2023-04-25
 #: check_frequency: 90d
 #: next_check: 2025-01-01
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
@@ -1143,7 +1144,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # XXX	F 8065,11349
 #: note: Anforderungsampel
 #: osm_watch: node id="9858938170" version="1"
-#: last_checked: 2023-04-16
+#: last_checked: 2023-04-25
 #: check_frequency: 180d
 #: next_check: 2027-01-01
 	F::inwork 8096,11393
@@ -2066,7 +2067,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: off: night (seen 2010-02-15 23:30)
 	X -4220,14311
 	X -4378,14388
-	X -3851,14174
+	X -3842,14171
 	X -3638,14995
 	X -3892,12560
 	X -4239,12626
@@ -2556,7 +2557,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: manchmal ausgeschaltet (gesehen 2022-08-24 13:10)
-#: last_checked: 2023-04-10
+#: last_checked: 2023-04-22
 #: check_frequency: 120d
 	X::inwork 14382,9299
 # 

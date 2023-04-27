@@ -439,9 +439,7 @@ strassen_bab: strassen_bab-orig
 	mv $@~ $@
 	-@$(READONLY) $@
 
-# Get categories with:
-# perl -nle '/\t(\S+)/ && print $1' sbahn-orig | sort -u
-SBAHN_CATEGORIES=	SA SB SC S0 SBau
+SBAHN_CATEGORIES!=	${PERL} -I${BBBIKEDIR} -MStrassen::Cat -e '@cats = Strassen::Cat::get_category_list(q{sbahn}); print "@cats"'
 
 sbahn: sbahn-orig Makefile $(CONVERT_ORIG_FILE)
 	-@$(WRITEABLE) $@
@@ -467,15 +465,14 @@ sbahnhof:	sbahnhof-orig
 # cp -f data/Berlin.coords.data /tmp
 # perl -Ilib -MObject::Iterate=iterate -MStrassen::Core -MTie::File -e '$s = Strassen->new("sbahnhof"); iterate { $p{$_->[Strassen::NAME]} = $_->[Strassen::COORDS][0] } $s; tie @f, "Tie::File", "/tmp/Berlin.coords.data" or die ; for (@f) { if (/^S-Bhf (.*?)\|.*\|$/ && $p{$1}) { $_ .= $p{$1}; warn "$1 $p{$1}" } }'
 
-# See SBAHN_CATEGORIES comment
-RBAHN_CATEGORIES=	RA RB RC R R0 RBau RG RP
+RBAHN_CATEGORIES!=	${PERL} -I${BBBIKEDIR} -MStrassen::Cat -e '@cats = Strassen::Cat::get_category_list(q{rbahn}); print "@cats"'
 
 rbahn: rbahn-orig Makefile $(CONVERT_ORIG_FILE)
 	-@$(WRITEABLE) $@
 	-@rm -f /tmp/rbahn
 	$(CONVERT_ORIG) -strip-future-categories rbahn-orig > /tmp/rbahn
 .for cat in $(RBAHN_CATEGORIES)
-	$(GREPSTRASSEN) -catrx ^$(cat).* /tmp/rbahn | ${PERL} $(MISCSRCDIR)/merge_overlapping_streets.pl -sep "," - | $(COMBINE_STREETS) - | $(SORT_NO_LOCALE) > /tmp/rbahn-$(cat)
+	$(GREPSTRASSEN) -catrx '^$(cat)($$|[:;].*)' /tmp/rbahn | ${PERL} $(MISCSRCDIR)/merge_overlapping_streets.pl -sep "," - | $(COMBINE_STREETS) - | $(SORT_NO_LOCALE) > /tmp/rbahn-$(cat)
 .endfor
 	cat $(RBAHN_CATEGORIES:S/^/\/tmp\/rbahn-/) > rbahn~
 	mv rbahn~ rbahn
@@ -638,7 +635,7 @@ plz berlin:	plz-orig
 	cat plz-orig | \
 	    ${GREPSTRASSEN} -v -sectionrx "ortsteile" -preserveglobaldirectives | \
 	    $(CONVERT2HAFAS) -basefile plz-orig -specborder=berlin - > plz~
-	${COMBINE_STREETS} berlin > berlin~
+	${COMBINE_STREETS} -closedpolygon berlin > berlin~
 	mv -f berlin~ berlin
 	mv -f plz~ plz
 	-@$(READONLY) plz berlin
@@ -655,7 +652,7 @@ potsdam:	potsdam-orig
 	-@$(WRITEABLE) $@
 	$(CONVERT2HAFAS) potsdam-orig > potsdam~
 	mv -f potsdam~ potsdam
-	${COMBINE_STREETS} potsdam > potsdam~
+	${COMBINE_STREETS} -closedpolygon potsdam > potsdam~
 	mv -f potsdam~ potsdam
 	-@$(READONLY) $@
 

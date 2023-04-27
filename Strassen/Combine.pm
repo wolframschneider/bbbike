@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1999,2001,2006,2007,2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 1999,2001,2006,2007,2012,2023 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -69,7 +69,7 @@ Slaven Rezic <slaven@rezic.de>
 
 =head1 COPYRIGHT
 
-Copyright (c) 1999,2001,2006,2007 Slaven Rezic. All rights reserved.
+Copyright (c) 1999,2001,2006,2007,2012,2023 Slaven Rezic. All rights reserved.
 This module is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
@@ -171,27 +171,27 @@ sub make_long_streets {
 
 	if (exists $strdata->[0]{$keys[0]}) {
 	    # CASE 1: beginning matches with another already recorded beginning
-	    shift @{ $r->[1] };
-	    @{ $r->[1] } = reverse @{ $r->[1] };
+	    shift @{ $r->[Strassen::COORDS] };
+	    @{ $r->[Strassen::COORDS] } = reverse @{ $r->[Strassen::COORDS] };
 	    $append = -1;
 	    $old_firstlast = 0;
 	    $new_firstlast = 0;
 	} elsif (exists $strdata->[1]{$keys[0]}) {
 	    # CASE 2: beginning matches with another already recorded end
-	    shift @{ $r->[1] };
+	    shift @{ $r->[Strassen::COORDS] };
 	    $append = 1;
 	    $old_firstlast = 1;
 	    $new_firstlast = 0;
 	} elsif (exists $strdata->[0]{$keys[1]}) {
 	    # CASE 3: end matches with another already recorded beginning
-	    pop @{ $r->[1] };
+	    pop @{ $r->[Strassen::COORDS] };
 	    $append = -1;
 	    $old_firstlast = 0;
 	    $new_firstlast = 1;
 	} elsif (exists $strdata->[1]{$keys[1]}) {
 	    # CASE 4: end matches with another already recorded end
-	    pop @{ $r->[1] };
-	    @{ $r->[1] } = reverse @{ $r->[1] };
+	    pop @{ $r->[Strassen::COORDS] };
+	    @{ $r->[Strassen::COORDS] } = reverse @{ $r->[Strassen::COORDS] };
 	    $append = 1;
 	    $old_firstlast = 1;
 	    $new_firstlast = 1;
@@ -205,20 +205,20 @@ sub make_long_streets {
 	my $inx; # Index of already recorded street data which matched (or 0).
 	if ($append == -1) {
 	    $inx = $strdata->[$old_firstlast]{$keys[$new_firstlast]};
-	    unshift @{ $strdata[$inx]->[1] },
-                @{ $r->[1] };
+	    unshift @{ $strdata[$inx]->[Strassen::COORDS] },
+                @{ $r->[Strassen::COORDS] };
 	    #warn "del $keys[$new_firstlast]";
 	    delete $strdata->[$old_firstlast]{$keys[$new_firstlast]};
-	    #	my $newkey = $keyname->($strdata[$inx]->[1], 0);
+	    #	my $newkey = $keyname->($strdata[$inx]->[Strassen::COORDS], 0);
 	    #	$strdata->[$old_firstlast]{$newkey} = $inx;
 
 	    if (exists $strdata->[0]{$keys[$other_firstlast]}) {
 
-		shift @{ $strdata[$inx]->[1] };
 		my $inx2 = $strdata->[0]{$keys[$other_firstlast]};
 		if ($inx != $inx2) {
-		    unshift @{ $strdata[$inx]->[1] },
-			reverse @{ $strdata[$inx2]->[1] };
+		    shift @{ $strdata[$inx]->[Strassen::COORDS] };
+		    unshift @{ $strdata[$inx]->[Strassen::COORDS] },
+			reverse @{ $strdata[$inx2]->[Strassen::COORDS] };
 		    delete $strdata->[0]{$keys[$other_firstlast]};
 		    $del_all_same_key->($inx2);
 		    undef $strdata[$inx2];
@@ -226,11 +226,11 @@ sub make_long_streets {
 
 	    } elsif (exists $strdata->[1]{$keys[$other_firstlast]}) {
 
-		shift @{ $strdata[$inx]->[1] };
 		my $inx2 = $strdata->[1]{$keys[$other_firstlast]};
 		if ($inx != $inx2) {
-		    unshift @{ $strdata[$inx]->[1] },
-			@{ $strdata[$inx2]->[1] };
+		    shift @{ $strdata[$inx]->[Strassen::COORDS] };
+		    unshift @{ $strdata[$inx]->[Strassen::COORDS] },
+			@{ $strdata[$inx2]->[Strassen::COORDS] };
 		    delete $strdata->[1]{$keys[$other_firstlast]};
 		    $del_all_same_key->($inx2);
 		    undef $strdata[$inx2];
@@ -240,20 +240,20 @@ sub make_long_streets {
 
 	} elsif ($append == 1) {
 	    $inx = $strdata->[$old_firstlast]{$keys[$new_firstlast]};
-	    CORE::push(@{ $strdata[$inx]->[1] },
-		       @{ $r->[1] });
+	    CORE::push(@{ $strdata[$inx]->[Strassen::COORDS] },
+		       @{ $r->[Strassen::COORDS] });
 	    #warn "del $keys[$new_firstlast]";
 	    delete $strdata->[$old_firstlast]{$keys[$new_firstlast]};
-	    #	my $newkey = $keyname->($strdata[$inx]->[1], -1);
+	    #	my $newkey = $keyname->($strdata[$inx]->[Strassen::COORDS], -1);
 	    #	$strdata->[$old_firstlast]{$newkey} = $inx;
 
 	    if (exists $strdata->[0]{$keys[$other_firstlast]}) {
 
-		pop @{ $strdata[$inx]->[1] };
 		my $inx2 = $strdata->[0]{$keys[$other_firstlast]};
 		if ($inx != $inx2) {
-		    CORE::push(@{ $strdata[$inx]->[1] },
-			       @{ $strdata[$inx2]->[1] });
+		    pop @{ $strdata[$inx]->[Strassen::COORDS] };
+		    CORE::push(@{ $strdata[$inx]->[Strassen::COORDS] },
+			       @{ $strdata[$inx2]->[Strassen::COORDS] });
 		    delete $strdata->[0]{$keys[$other_firstlast]};
 		    $del_all_same_key->($inx2);
 		    undef $strdata[$inx2];
@@ -261,11 +261,11 @@ sub make_long_streets {
 
 	    } elsif (exists $strdata->[1]{$keys[$other_firstlast]}) {
 
-		pop @{ $strdata[$inx]->[1] };
-		my $inx2 = $strdata->[1]{$keys[$other_firstlast]};
+		my $inx2 = $strdata->[Strassen::COORDS]{$keys[$other_firstlast]};
 		if ($inx != $inx2) {
-		    CORE::push(@{ $strdata[$inx]->[1] },
-			       reverse @{ $strdata[$inx2]->[1] });
+		    pop @{ $strdata[$inx]->[Strassen::COORDS] };
+		    CORE::push(@{ $strdata[$inx]->[Strassen::COORDS] },
+			       reverse @{ $strdata[$inx2]->[Strassen::COORDS] });
 		    delete $strdata->[1]{$keys[$other_firstlast]};
 		    $del_all_same_key->($inx2);
 		    undef $strdata[$inx2];
