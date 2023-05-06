@@ -57,13 +57,14 @@
 #: source_id: viz2021:13.465999,52.55224,27.04.2023,10:00 (bis 19.05.2023)
 #: XXX Einzelne Straßenanbindungen werden abgesperrt (Wegenerstr., Rennbahnstr.), außerdem wird direktes Linksabbiegen an einigen Stellen nicht möglich sein. Wie wird sich das auf Radfahrer auswirken?
 #: also_indoor: traffic vvv
-#: last_checked: 2023-04-04 vvv
+#: last_checked: 2023-05-02 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2023-05-19 vvv
 #: valid: -20230519 vvv
 # REMOVED (gesamter Bereich) --- Berliner Allee und Rennbahnstr.: Gleisarbeiten	? 14346,16241 14499,16341 14556,16391 14610,16522 14619,16551 14624,16659 14622,16674 14608,16772 14558,16907 14528,16910 14341,17030
-Berliner Allee: Sperrung einer Fahrbahn	Jam; 14056,16120 14248,16202 14346,16241 14499,16341
-Berliner Allee: Sperrung einer Fahrbahn	Jam; 14499,16341 14346,16241 14248,16202 14056,16120
+# REMOVED (hier zweispurig) --- Berliner Allee: Sperrung einer Fahrbahn	Jam; 14056,16120 14248,16202
+Berliner Allee: Sperrung einer Fahrbahn	Jam; 14248,16202 14346,16241 14499,16341
+# REMOVED (hier mittlerweile zweispurig) --- Berliner Allee: Sperrung einer Fahrbahn	Jam; 14499,16341 14346,16241 14248,16202 14056,16120
 # REMOVED (zwischen Indira-Gandhi-Str. und Buschallee nicht mehr) --- Berliner Allee: Sperrung einer Fahrbahn	Jam; 14499,16341 14556,16391 14610,16522 14619,16551
 # REMOVED (zwischen Indira-Gandhi-Str. und Buschallee nicht mehr) --- Berliner Allee: Sperrung einer Fahrbahn	Jam; 14619,16551 14610,16522 14556,16391 14499,16341
 #: valid ^^^
@@ -135,6 +136,7 @@ Boxhagener Str.	Jam; 14799,11330 14918,11249
 # 
 #: note: kann manchmal schon an der Kreuzung Kynaststr. anfangen, gesehen: (allerdings Sperrung der Oberen Kynaststr. seit Ende Januer 2023) 2023-02-20 (Mo) gegen 12:20 und 12:55, 2023-03-02 (Do) gegen 13:30, 2023-03-21 (Di) gegen 12:50, 2023-03-24 (Fr) gegen 12:45, 2023-03-27 (Mo, S-Bahnstreik) gegen 11:45, 2023-04-19 (Mi) gegen 11:35
 #: note: oder in Höhe Krummhübler Str., gesehen: 2023-03-14 (Di) um 11:55, 2023-04-11 (Di, Osterferien) gegen 12:10, 2023-04-14 (Fr, Osterferien) gegen 18:05, 2023-04-19 (Mi) gegen 11:10
+#: note: oder der übliche Stau ab Schreiberhauer Str., gesehen: 2023-05-03 (Mi) um 17:50
 Marktstr.	Jam; 15088,10950 15113,10916 15144,10905 15279,10862
 Marktstr.	Jam; 15279,10862 15144,10905
 # REMOVED (Radweg existiert) --- Marktstr./Karlshorster Str.	Jam; 15279,10862 15272,10790 15261,10738

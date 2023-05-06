@@ -595,7 +595,7 @@ Swinemünder Str.: Kopfsteinpflaster	Q2 10228,14564 10311,14391
 #: by: https://www.infravelo.de/projekt/swinemuender-strasse/ (2. Quartal 2023 - 4. Quartal 2024)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11695 (Antrag zur Swinemünder Brücke)
 #: XXX Umgestaltungsmaßnahmen geplant: Kopfsteinpflaster kommt weg + es entsteht ein Radfahrstreifen
-#: last_checked: 2023-04-09
+#: last_checked: 2023-04-30
 #: check_frequency: 150d
 #: next_check: 2024-12-31
 Swinemünder Str.: Kopfsteinpflaster auf der Fahrbahn, Radweg OK	Q1 9732,15581 9646,15737 9623,15777
@@ -945,11 +945,11 @@ Wipperstr.: Kopfsteinpflaster	Q2- 13117,7471 13133,7375 13150,7254
 Wipperstr.: Asphalt	Q0 13150,7254 13161,7173
 Schöneweider Str.: Kopfsteinpflaster	Q2- 13133,7375 13341,7423
 #: historical_note: früher: gutes Kopfsteinpflaster, Q1
-#: note: glattes Moabiter Kissen
-Kanner Str.: Asphalt	Q0 13341,7423 13373,7426
+#: note: mit "Rixdorfer Kissen"
+Kanner Str.: Asphalt	Q0- 13341,7423 13373,7426
 #: historical_note: früher: Asphalt mit Schäden, Q1
-#: note: glattes Moabiter Kissen
-Kanner Str.: Asphalt	Q0 13373,7426 13476,7330
+#: note: mit erhöhter Überquerungshilfe für Fußgänger
+Kanner Str.: Asphalt	Q0- 13373,7426 13476,7330
 Unstrutstr.: Asphalt	Q0 13476,7330 13495,7249
 Königsheideweg: Asphalt	Q0 16279,5170 16062,5242 15870,5251 15807,5286 15731,5369 15642,5468 15382,5687
 #: note: nach Regenfällen Pfützen
@@ -1099,7 +1099,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/mobilitaetswenderat/22-08-24-mobilitaetswenderat-protokoll_final.pdf (neben der Asphaltierung wird auch ein modaler Filter am Boxhagener Platz erwähnt)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2023-04-19
+#: last_checked: 2023-05-05
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1504,6 +1504,7 @@ Zum Seddinsee: teils schlechter Waldweg	Q3 30869,-5 30857,-60 30803,-147 30778,-
 Melchiorstr.: Asphalt	Q0 11917,11186 11726,11265 11542,11342
 #: note: mit gepflasterten Parkstreifen
 Hansa-Ufer: Asphalt	Q0 5871,12595 5797,12494 5740,12419
+Hansa-Ufer: Gehwegplatten	Q0- 5740,12419 5657,12339
 Bochumer Platz: Kleinpflaster	Q1 5914,12845 5938,12848
 Unionstr: Kopfsteinpflaster	Q2 5782,14067 5943,14049
 Bremer Str.: Fahrbahn Kopfsteinpflaster, Verbundsteinpflasterradweg	Q1 5956,14168 5943,14049
@@ -2183,7 +2184,7 @@ Landsberger Allee: Asphaltradweg nur mit mäßiger Qualität	Q1 18365,14607 18410,1
 Landsberger Allee: Beton-Radwege nur mit mäßiger Qualität (Bordsteinkanten!)	Q1; 20260,15434 20532,15564 20580,15586 20733,15657
 Landsberger Allee: Beton-Radwege, mit einigen leichten Schäden	Q0-; 20733,15657 20866,15673 21009,15658 21068,15646 21119,15635 21239,15633
 #: last_checked ^^^
-#: last_checked: 2023-03-18 (mapillary)
+#: last_checked: 2023-04-29 (mapillary)
 Landsberger Allee: Beton-Radwege, mit einigen leichten Schäden, Bordsteinkanten	Q1 21239,15633 21398,15671 21475,15705 21584,15753 21709,15808
 #: check_frequency ^^^
 #: by: ^^^
@@ -2338,7 +2339,7 @@ Werrastr.: Asphalt mit einigen Schäden	Q1+ 13697,8279 13650,8320
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.794639.php (ab 2021)
 #: by: https://www.luisenstadt-mitte.de/projekte/rungestrasse-strasse-am-koellnischen-park-0 (kein konkretes Datum; "Asphaltierung der Fahrgassen")
 #: XXX Neugestaltung geplant, vielleicht verschwindet dabei das Pflaster?
-#: last_checked: 2023-02-10 (mapillary)
+#: last_checked: 2023-04-13 (mapillary)
 #: check_frequency: 90d
 Rungestr.: Kopfsteinpflaster	Q2- 11185,11883 11291,11876 11380,11863 11507,11860
 # 
@@ -3186,7 +3187,7 @@ Wasserweg: alter Asphalt	Q1 16028,8867 16086,8860 16129,8855
 Wasserweg: fester Sandweg	Q2 16129,8855 16201,8860
 #: next_check_id: SPREEPARK-2022
 #: XXX wird hier der Asphalt wieder komplett hergestellt?
-#: last_checked: 2023-02-28
+#: last_checked: 2023-05-03
 #: check_frequency: 120d
 #: next_check: 2023-06-30
 Wasserweg: Beton/Asphalt, in der Fahrbahnmitte fehlt der Asphalt	Q1- 16201,8860 16358,8841 16388,8821
@@ -3640,6 +3641,8 @@ Heideweg: Beton	Q1 15800,4464 15835,4437 15851,4424
 Heideweg: Asphalt	Q0 15851,4424 15887,4400 15947,4361 16001,4325 16061,4285 16151,4226 16234,4171
 Am Buckersberg: Schotter	Q2 16048,3978 16090,4021 16234,4171 16357,4346 16382,4381 16445,4454
 Ostweg: Schotter	Q2 16445,4454 16483,4505 16518,4551 16547,4590
+#: XXX wird anscheinend neu gemacht, siehe mapillary
+#: last_checked: 2023-04-29 (mapillary)
 Ostweg: zweispuriger Verbundsteinpflasterweg	Q1+ 16547,4590 16604,4668 16781,4910
 #: note: von der S-Bahn aus gesehen:
 Resedenstr.: Kopfsteinpflaster	Q2 4274,4808 4332,4819 4515,4966
@@ -3690,13 +3693,9 @@ Fritz-Kortner-Str.: Asphalt	Q0 19258,7943 19282,7976 19303,8005 19320,8027 19334
 (Fritz-Kortner-Str. - Maria-Matray-Str.): Verbundsteinpflaster	Q1+ 19320,8027 19443,7937
 Am Birkenrevier: Verbundsteinpflaster	Q1+ 19303,8005 19176,8098
 Rohrlake: Verbundsteinpflaster	Q1+ 19168,7942 19109,7983 19061,7904
-#: next_check_id: OSKAR-2023
-#: XXX der Asphalt wird neu gemacht und ist nach den Bauarbeiten vielleicht besser
-#: last_checked: 2023-04-22
-# REMOVED --- #: next_check: 2023-04-14
-Oskarstr.: Asphalt mit Schäden	Q1- 17771,7880 17762,7931
-#: historical_note: bis März/April 2023 Asphalt mit Schäden, Q1-
-Oskarstr.: Asphalt	Q0 17762,7931 17793,8012 17808,8042 17803,8079
+# REMOVED --- #: next_check_id: OSKAR-2023 --- #: XXX der Asphalt wird neu gemacht und ist nach den Bauarbeiten vielleicht besser --- #: last_checked: 2023-04-22 --- #: next_check: 2023-04-14
+#: historical_note: bis März/April/Mai 2023 Asphalt mit Schäden, Q1-
+Oskarstr.: Asphalt	Q0 17771,7880 17762,7931 17793,8012 17808,8042 17803,8079
 Gleyeweg: Asphalt	Q0 17762,7931 17683,7958 17651,7973 17613,7989 17529,8073 17532,8125 17566,8199 17597,8258
 Fuchsbau (Karlshorst): Asphalt	Q0 17651,7973 17590,7828
 Blaurackenweg: Asphalt mit Rissen und Schäden	Q1 17613,7989 17647,8071 17532,8125
@@ -4961,7 +4960,7 @@ Willstätterstr.: Asphalt	Q0 14193,6556 14306,6651
 Ederstr.: Fahrbahn asphaltiert, gemeinsamer Rad- und Gehweg mit Verbundsteinpflaster	Q0 13946,7918 13958,8106
 Ederstr.: Verbundsteinpflaster	Q0- 13958,8106 13967,8195 13939,8228
 (Zur Eisackstr.): Kleinkopfsteinpflaster	Q1 6388,7999 6418,7958 6429,7876
-Brascheweg: Asphalt	Q0 18881,9865 18810,9850
+Brascheweg: Asphalt mit einigen Schäden	Q1+ 18881,9865 18810,9850
 Brekowweg: Beton	Q0- 18951,9995 18919,10061
 Horterweg: Asphalt mit Schäden	Q1 19005,9816 19018,10022
 Horterweg: Beton	Q0- 19018,10022 19023,10088
@@ -7272,6 +7271,7 @@ Veitstr.: Asphalt	Q0 2268,19919 2064,19874 1886,19835
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2020/pressemitteilung.940819.php (ab 8.6.2020 für ca. drei Monate)
 #: by: https://www.berliner-woche.de/tegel/c-verkehr/veitstrasse-wird-erneuert-und-ist-drei-monate-gesperrt_a276028
 #: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1317571.php (zur geplanten Gehwegverbreiterung)
+#: by: https://www.berliner-woche.de/tegel/c-verkehr/neue-cdu-verkehrsstadtraetin-laesst-gehwegparken-in-der-veithstrasse-weiter-zu_a379534
 #: note: während den Bauarbeiten ist der Radverkehr laut viz nicht betroffen
 #: XXX Beton wird durch Asphalt ersetzt, in zwei Bauabschnitten: zunächst der östliche Teil bis Medebacher Weg (2019), dann der westliche Teil (2020)
 #: priority: #C
@@ -9505,12 +9505,16 @@ Rathausstr.: Verbundsteinpflaster	Q0- 10601,12521 10704,12595
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruenflaechen/baumassnahmen/artikel.273777.php?date=20210405 (Rückbau der unterirdischen Anlagen)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1127042.php (Infoveranstaltung am 21.9.2021)
 #: by: https://mein.berlin.de/projekte/sanierung-grunflache-auerdreieck/?initialSlide=6 (vermutlich bleiben die Stufen am nördlichen Ende)
-#: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit; laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022 vvv
-#: last_checked: 2023-04-01 vvv
+#: XXX möglicherweise nach den Bauarbeiten interessant: Entsiegelung, Barrierefreiheit; laut Baustellenschild gibt es zwei Bauabschnitte, vollständige Fertigstellung erst 2022; Stand Mai 2023: laut Papieraushang bis Juni 2023, laut Baustellenschild bis Herbst 2023 vvv
+#: last_checked: 2023-05-02 vvv
+#: check_frequency: 60d vvv
+#: next_check: 2023-10-31 vvv
 # REMOVED (unter der provisorischen Decke) --- Weg zur Mühsamstr.: Beton/Verbundsteinpflaster	Q1+ 13067,12583 13091,12563
 Weg zur Mühsamstr.: provisorische Asphaltdecke	Q0- 13067,12583 13091,12563
 Weg zur Mühsamstr.: Schotterweg	Q2 13091,12563 13232,12628
 Weg zur Mühsamstr.: Gehwegplatten	Q0- 13232,12628 13273,12649
+#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
 # 
@@ -11974,7 +11978,7 @@ Heinersdorfer Str.: Asphalt	Q0 5223,1318 5201,1227 5178,1123
 Heinersdorfer Str.: Asphalt	Q0 5223,1318 5273,1456 5299,1524 5335,1616
 Heinersdorfer Str.: Asphalt	Q0 5335,1616 5396,1774 5452,1940
 # REMOVED --- #: next_check ^^^ --- #: priority ^^^ --- #: add_fragezeichen ^^^ --- #: by ^^^ --- #: by ^^^
-(Christoph-Ruden-Str. - Buckower Damm): Asphalt	Q0 12725,1429 12939,1469
+Wolfgang-Seifert-Weg: Asphalt	Q0 12725,1429 12939,1469
 (Olivaer Platz, Wielandstr. - Bayerische Str.): Asphalt	Q0 4360,10320 4352,10260
 (Tegeler Forst): Waldweg	Q2+ 2088,22798 2047,22829
 (Anschlussstelle Schulzendorfer Str.): Verbundsteinpflaster	Q1 -429,23030 -595,23025 -656,23011
@@ -14959,7 +14963,7 @@ Majakowskiring: asphaltiert	Q0 10434,18907 10358,18882
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5094&date=20220724 (BPU 2022 anvisiert, außerdem Erwähnung der Planung in der Hermann-Hesse-Str.)
 #: by: https://www.berliner-woche.de/pankow/c-bauen/senat-stellt-mehr-foerdermittel-fuer-hertha-und-hugenottenplatz-bereit_a365807 (Erwähnung, außerdem Weiterführung der Fahrradstraße in der Waldstr.)
 #: osm_watch: way id="4764684" version="25"
-#: osm_watch: way id="26790073" version="14"
+#: osm_watch: way id="26790073" version="15"
 #: last_checked: 2022-11-15
 #: check_frequency: 360d
 Güllweg: mäßiges Kopfsteinpflaster	Q2 10115,19105 10095,19179 10086,19209 10014,19421
@@ -16064,7 +16068,7 @@ Marienstr. (Französisch Buchholz): Asphalt	Q0 11686,21058 12095,20832
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=4928 ("in Aussicht gestellt ... 2014/2015", "... 4 m breiten asphaltierten Geh- und Radweges")
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/buergerbeteiligung/fahrrat-protokoll-29-10-2015.pdf
 #: osm_watch: way id="42689070" version="11"
-#: last_checked: 2023-04-05 (mapillary)
+#: last_checked: 2023-05-02
 #: check_frequency: 60d
 Orankeweg: Sandweg im Grünzug, mäßig bis gut	Q2+ 14936,15857 14769,15867 14695,15911 14609,15921
 #: confirmed_by: srt
@@ -29264,13 +29268,12 @@ Margarete-Kühn-Str.: Asphalt	Q0 5133,12240 5194,12398 5225,12450
 Otto-Dibelius-Str.: Asphalt	Q0 5181,12195 5243,12303 5299,12420
 #: confirmed_by: srt
 Hannah-Karminski-Str.: Asphalt	Q0 5233,12109 5258,12128 5317,12242 5360,12331
+# REMOVED --- #: by: https://www.deutsches-architekturforum.de/thread/10386-gr%C3%BCne-wege-in-berlin-neu-oder-erneuert/?postID=734501#post734501 (Erneuerung der Straße) --- #: XXX Mitte der Fahrbahn ist mittlerweile asphaltiert, Parkstreifen weiterhin gepflastert --- #: osm_watch: way id="35433912" version="10" --- #: last_checked: 2023-04-06 --- #: check_frequency: 30d
+#: corrected_by: srt (früher: Kopfsteinpflaster, Q2 -> ..., neu gemacht)
+#: note: Parkstreifen sind weiterhin gepflastert
+Schleswiger Ufer: Asphalt	Q0 5714,12266 5800,12361
 #: confirmed_by: srt
-#: by: https://www.deutsches-architekturforum.de/thread/10386-gr%C3%BCne-wege-in-berlin-neu-oder-erneuert/?postID=734501#post734501 (Erneuerung der Straße)
-#: XXX Mitte der Fahrbahn ist mittlerweile asphaltiert, Parkstreifen weiterhin gepflastert
-#: osm_watch: way id="35433912" version="10"
-#: last_checked: 2023-04-06
-#: check_frequency: 30d
-Schleswiger Ufer: Kopfsteinpflaster	Q2 5714,12266 5800,12361 5858,12425
+Schleswiger Ufer: Kopfsteinpflaster	Q2 5800,12361 5858,12425
 Schleswiger Ufer: Kopfsteinpflaster	Q1 5858,12425 5886,12467 5944,12548
 Cuxhavener Str.: Asphalt	Q1 5886,12467 5904,12417 5931,12399
 # REMOVED (lohnt nicht) --- Holsteiner Ufer: Verbundsteine	Q1 6575,12778 6469,12867 6449,12865
@@ -32152,4 +32155,5 @@ Einmündungsbereich mit Kopfsteinpflaster	Q2 20380,3855
 Einmündungsbereich mit Kopfsteinpflaster	Q2 20329,3928
 Kreuzungsbereich asphaltiert	Q0 20790,4114
 Einmündungsbereich asphaltiert	Q0 20981,4628
+Kreuzungsbereich asphaltiert	Q0 5800,12361
 #: ignore ^^^
