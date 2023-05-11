@@ -78,7 +78,7 @@ Wilhelplatz	1 -7064,584 -7081,483 -7122,439 -7180,378
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8374 (Festsetzung)
 #: XXX außerdem Anlage von Radwegen, allerdings nicht benutzungspflichtig
 #: osm_watch: way id="152264786" version="21"
-#: last_checked: 2023-04-21
+#: last_checked: 2023-05-10
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2021-12-31
 Ella-Barowsky-Str.	1 7499,7880 7268,8008 7193,7950
@@ -259,7 +259,7 @@ Dittersbacher Weg	1 7855,3355 7852,3183
 #: XXX Maßnahme Osw.10, außerdem ein "fahrradfreundlicher Belag" im weiteren Verlauf der Nalepastraße
 #: osm_watch: way id="207757723" version="6"
 #: last_checked: 2023-03-14
-#: check_frequency: 60d
+#: check_frequency: 90d
 Nalepastr. am Rundfunkgebäude	2 17065,8396 17057,8235 17056,8159 17059,8097
 Kirchstr.	1 22196,4847 22240,4768 22246,4711 22284,4653
 Kietzer Str.	1s:q3 22372,4496 22383,4470
@@ -1493,6 +1493,8 @@ Südring, Virchow-Klinikum	1 6252,14812 6231,14952
 Am Feuchten Winkel	1 12020,19333 11937,19175
 # 
 # REMOVED (Brücke wird abgerissen) --- #: by: osm --- #: XXX Wann wird die alte Brücke endgültig demontiert? --- #: osm_watch: way id="883242877" version="2" --- #: last_checked: 2023-04-09 --- #: check_frequency: 120d --- Schmöckwitzwerdersteg: die alte Querung ist nicht mehr nutzbar	2 30534,-3105 30546,-3072
+# 
+Hauptstr.: Mittelstreifen, unbequemes Überqueren	3nocross 15261,10738 15163,10758 15004,10791
 # 
 ######################################################################
 # empfohlene und unechte Sperrungen
@@ -3541,6 +3543,12 @@ Drängelgitter	BNP:3::trailer=10 22085,5111
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: XXX evtl. entsteht hier eine neue Verbindungsstraße?
+#: osm_watch: way id="519370786" version="4"
+#: osm_watch: note 3678184 2
+#: last_checked: 2023-05-07 (mapillary)
+Falkenberger Str. - Hansastr: Bauarbeiten, gesperrt	2::inwork 15819,16857 15892,16834
+# 
 #: next_check_id: SONYCENTER-2023
 #: last_checked: 2023-04-25
 #: check_frequency: 90d
@@ -3589,14 +3597,14 @@ Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15
 #: last_checked ^^^
 # 
 #: note: am 2023-04-25 gab es einen recht schmalen Durchgang, mit einem Fahrrad ist man noch gerade so durchgekommen; am 2023-05-04 auch der gleiche schmale Durchgang, aber ein davor geparktes Auto hätte vielleicht einiges an Rangierarbeit verursacht
-#: last_checked: 2023-05-04
+#: last_checked: 2023-05-10
 Caroline-von-Humboldt-Weg: Kraneinsatz, Fahrbahn gesperrt	2::inwork 9961,12094 10050,11942
 # 
 #: by: https://www.deutsches-architekturforum.de/thread/415-erweiterung-und-sanierung-ausw%C3%A4rtiges-amt-in-bau/?postID=722372#post722372
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/erweiterungsbau-ausw%C3%A4rtige-amt-kursra%C3%9Fe.249/
 #: by: https://www.bbr.bund.de/BBR/DE/Bauprojekte/Berlin/Politik/auswaertiges-amt/kurstrasse-33-35.html (Fertigstellung 2027/2028)
 #: also_indoor: traffic (B,W,G)
-#: last_checked: 2023-05-04
+#: last_checked: 2023-05-10
 #: check_frequency: 14d
 Kurstr.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 10230,11839 10122,11913
 # 
@@ -3780,7 +3788,7 @@ Neue Fahlenbergbrücke	2::inwork 31009,19 31080,-19
 # 
 #: osm_watch: way id="26322024" version="22"
 #: priority: #C
-#: last_checked: 2023-04-22
+#: last_checked: 2023-05-08
 #: check_frequency: 60d
 (Fortsetzung Wandlitzstr.): gesperrt, Bauzäune	2::inwork 17981,9000 17837,9086
 # 
@@ -3806,12 +3814,14 @@ Marktplatz Adlershof: Fahrbahn gesperrt wegen Umbauarbeiten	1s:q4:inwork 20336,3
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6522
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/WVKySlkVmF78sBtLvLmoLknIXWdWp2EXcKYDvhkx/kwYUvir/24-Anlagen/04/B1004SB.pdf
 #: XXX Qualität nach den Bauarbeiten? vvv
-#: last_checked: 2023-05-02 (mapillary) vvv
+#: last_checked: 2023-05-10 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2023-06-01 vvv
 #: osm_watch: way id="358602468" version="12"
 #: osm_watch: way id="24189226" version="27"
-Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt	2::inwork 13333,9929 13271,9927 13225,9897 13109,9743 12905,9470
+#: XXX Achtung: alten Eintrag in handicap_s-orig reaktivieren!
+Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt, Umfahrung existiert	2s:q3:inwork 13333,9929 13271,9927 13225,9897
+# REMOVED (hier nicht mehr) --- Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt, Umfahrung existiert	2s:q2:inwork 13225,9897 13109,9743 12905,9470
 #: osm_watch: way id="72183569" version="11"
 #: valid: -20230601 vvv
 Am Flutgraben: Bauarbeiten, Weg ist gesperrt, enger Pfad daneben existiert	2s:q4:inwork 13333,9929 13418,9944
@@ -3833,7 +3843,7 @@ Am Flutgraben: Bauarbeiten, Weg ist gesperrt	2::inwork 13418,9944 13579,10146
 #: by: https://www.berliner-woche.de/rummelsburg/c-bauen/bebauungsplan-fuer-grundschule_a365015
 #: osm_watch: way id="1086484458" version="2"
 #: osm_watch: way id="36780316" version="11"
-#: last_checked: 2023-03-27
+#: last_checked: 2023-05-08
 #: check_frequency: 90d
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 # REMOVED --- Hauptstr. - Rummelsburger Ufer: gesperrt, möglicherweise dauerhaft	2::inwork 16178,9861 16049,9749
@@ -3897,7 +3907,7 @@ Barnimer Dörferweg: wegen Bauarbeiten gesperrt	2::inwork 20865,18933 20889,18943
 # 
 #: by: https://www.hedwigs-kathedrale.de/umgestaltung/ (Umbauarbeiten bis 1. November 2023 geplant)
 #: by: https://berliner-abendblatt.de/2022/12/16/umbau-der-st-hedwigs-kathedrale-im-zeitplan-aber-teurer/
-#: last_checked: 2023-04-01
+#: last_checked: 2023-05-10
 #: check_frequency: 360d
 #: next_check: 2023-11-01
 Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 9775,12178 9771,12190 9747,12205 9755,12144
@@ -3913,7 +3923,7 @@ Weg zur Walther-Rathenau-Str.: Bauarbeiten, Weg noch gesperrt	2::inwork 22983,-5
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.schmalfuss-immobilien.de/karlshorst (Abschnitt 9 bezugsfertig Anfang August 2022, 7 Anfang September 2022)
-#: last_checked: 2023-04-22 vvv
+#: last_checked: 2023-05-08 vvv
 # REMOVED --- #: next_check: 2022-08-01 vvv
 #: osm_watch: way id="1061057020" version="7"
 Georg-Klingenberg-Str.: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17846,8644 17792,8660 17656,8700
@@ -3955,7 +3965,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2023-04-11
+#: last_checked: 2023-05-08
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -4426,7 +4436,7 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174 9254,13171
 #: source_id: viz2021:13.3621,52.447308,22.12.2020,10:00 (angrenzende Attilastr., bis 31.7.2022, Gesamtbaumaßnahme bis 2024) (mittlerweile inaktiv)
 #: source_id: viz2021:13.361375,52.44703,01.04.2021,08:44 (angrenzende Attilastr., bis 31.7.2023)
 #: add_fragezeichen: Bis wann genau geht die Sperrung?
-#: last_checked: 2023-03-11
+#: last_checked: 2023-05-10
 #: check_frequency: 120d
 #: next_check: 2023-07-31
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7727,4418 7692,4464 7667,4549
@@ -4579,7 +4589,7 @@ Zufahrt Zentrum Schöneweide: Fahrbahn und Bürgersteig gesperrt	2:inwork 17728,57
 #: by: https://www.glint-berlin.de/ (kein Fertigstellungsdatum)
 #: confirmed_by: srt
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2023-04-25
+#: last_checked: 2023-05-10 (daf)
 #: check_frequency: 60d
 Taubenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9207,11880 9138,11872
 # 
@@ -4869,9 +4879,9 @@ wegen Autobahntunnelarbeiten gesperrt	2::inwork 14196,7086 14310,7022
 #: source_id: 2147340791 (möglicherweise inaktiv)
 #: source_id: viz2021:13.3707,52.52584,03.01.2023,13:38 (bis 31.12.2026) (inaktiv)
 #: source_id: viz2021:13.370715,52.524195,15.10.2012,08:00 (bis 31.12.2026)
-#: osm_watch: way id="186329816" version="27"
+#: osm_watch: way id="186329816" version="28"
 #: also_indoor: traffic
-#: last_checked: 2023-04-16
+#: last_checked: 2023-05-07 (osm)
 #: check_frequency: 180d
 #: next_check: 2023-12-11
 # REMOVED --- #: valid: -20221230

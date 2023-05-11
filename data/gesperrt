@@ -948,6 +948,7 @@ Oberspreestr. [Nebenfahrbahn]	1s 19965,5101 19957,5083 19940,5090
 Südring, Virchow-Klinikum	1 6305,14964 6319,14821 6252,14812
 Südring, Virchow-Klinikum	1 6252,14812 6231,14952
 Am Feuchten Winkel	1 12020,19333 11937,19175
+Mittelstreifen, unbequemes Überqueren	3nocross::ignrte 15261,10738 15163,10758 15004,10791
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -3288,6 +3289,7 @@ Schranke	BNP:1:-52:trailer=3 14967,4641
 Schranke	BNP:3:78:trailer=10 8702,13362
 Drängelgitter	BNP:3:-206:trailer=10 5746,22582
 Drängelgitter	BNP:3:-23:trailer=10 22085,5111
+Falkenberger Str. - Hansastr: Bauarbeiten, gesperrt	2::inwork 15819,16857 15892,16834
 Potsdamer Platz - Bellevuestr.: wegen Bauarbeiten am ehemaligen Sony-Center gesperrt	2::inwork 8542,11502 8442,11555
 Götelstr.: Einbahnstraßenregelung	1 -3260,12540 -3252,12405 -3255,12338 -3284,12304 -3293,12304
 Mauerweg: Weg gesperrt	2::inwork 10091,15630 10155,15473
@@ -3318,7 +3320,7 @@ Wuhlesteg: gesperrt	2::inwork 22171,12965 22196,12961
 Neue Fahlenbergbrücke	2::inwork 31009,19 31080,-19
 (Fortsetzung Wandlitzstr.): gesperrt, Bauzäune	2::inwork 17981,9000 17837,9086
 Marktplatz Adlershof: Fahrbahn gesperrt wegen Umbauarbeiten	1s:inwork 20336,3783 20362,3750
-Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt	2::inwork 13333,9929 13271,9927 13225,9897 13109,9743 12905,9470
+Schlesischer Busch - Landwehrkanal: Bauarbeiten, Weg ist gesperrt, Umfahrung existiert	2s:inwork 13333,9929 13271,9927 13225,9897
 Am Flutgraben: Bauarbeiten, Weg ist gesperrt, enger Pfad daneben existiert	2s:inwork 13333,9929 13418,9944
 Am Flutgraben: Bauarbeiten, Weg ist gesperrt	2::inwork 13418,9944 13579,10146
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861

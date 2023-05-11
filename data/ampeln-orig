@@ -60,7 +60,7 @@ Gürtelstr./Weserstr.	F::inwork 15016,11431
 # 
 #: next_check_id: ORANIENBURGERTORTRAM-2022
 #: next_check: 2023-05-10 vvv
-#: valid: -20230510 vvv
+#: valid: -20230731 vvv
 #: XXX schon seit mehreren Tagen ausgeschaltet
 #: last_checked: 2023-05-05
 #: check_frequency: 30d
@@ -78,9 +78,9 @@ Tucholskystr./Ziegelstr.	X::inwork 9559,13087
 #: by: https://officehome.de/ostkreuz-campus-a
 #: osm_watch: way id="936801541" version="3"
 #: XXX Ampel befindet sich östlich der Einmündung
-#: note: manchmal ausgeschaltet? gesehen: 2023-02-05 (So) gegen 15:45
+#: note: manchmal ausgeschaltet? gesehen: 2023-02-05 (So) gegen 15:45, 2023-05-08 (Mo) gegen 12:30 und 13:20
 #: note: Anforderungsampel
-#: last_checked: 2023-04-16
+#: last_checked: 2023-05-08
 Persiusstr./Bossestr.: provisorische Fußgängerampel	F::inwork 14312,10657
 # 
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
@@ -165,7 +165,7 @@ Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2023-04-11
+#: last_checked: 2023-05-08
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -234,7 +234,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2023-04-25
+#: last_checked: 2023-05-10 (daf)
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -272,7 +272,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 # REMOVED (vermutlich nun funktionslos) --- #: next_check_id: RHINSTRASSENBRUECKE-2018 --- #: last_checked: 2021-05-03 --- #: check_frequency: 30d --- #: next_check: 2021-07-30 --- #: note: Anforderung, gilt auch für nach Süden fahrenden Radfahrer --- Rhinstr.: Seitenwechsel für nach Norden fahrende Radfahrer	F::inwork 18225,12697
 # 
 #: next_check_id: KASTANIENALLEE-2021
-#: last_checked: 2023-02-11 (mapillary) vvv
+#: last_checked: 2023-05-07 (mapillary) vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2021-10-29 vvv
 Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen auf den linken Bürgersteig wechseln	X::inwork 9073,20606
@@ -1596,7 +1596,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX provisorische Ampel an der Weichselstr. während der Bauarbeiten
 # REMOVED --- #: osm_watch: node id="7241153386" version="4"
 #: osm_watch: node id="9498243538" version="1"
-#: last_checked: 2023-03-11 (manchmal ausgeschaltet (abends? selten?))
+#: last_checked: 2023-05-10 (manchmal ausgeschaltet (abends? selten?))
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-10-08
 	F::inwork 12318,8645

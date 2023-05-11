@@ -11,7 +11,7 @@ Methfesselstr.	N 8982,8781 9063,8935 9111,9036 9115,9046 9125,9078 9150,9152 917
 (Methfesselstr. - Denkmal im Viktoriapark)	NN 9115,9046 9091,9054 9079,9058 9026,9042 8962,9048 8943,9098
 (Methfesselstr. - Kreuzbergstr., Viktoriapark)	NN 9150,9152 9080,9163 9020,9150 8990,9166 8982,9198 9007,9264 8970,9323
 Mehringdamm	HH 9229,8785 9227,8890 9226,8967 9225,9038 9224,9053 9225,9111 9232,9187 9248,9350 9283,9487 9334,9670 9387,9804 9444,9919 9448,10014 9416,10196 9409,10226
-Katzbachstr.	H 8594,8777 8598,9074 8598,9269 8595,9495
+Katzbachstr.	H 8594,8777 8595,8827 8598,9074 8598,9269 8595,9495
 Eylauer Str.	N 8480,9080 8478,8776
 Höhndorfstr.	N 8434,8775 8438,8676 8454,8574
 Kreuzbergstr.	NH 8389,9087 8471,9244 8499,9253 8598,9269
@@ -259,7 +259,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/2022/08/18/gegen-umbenennung-mohrenstrasse-koennen-nur-anwohner-vorgehen/
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2023-04-25 vvv
+#: last_checked: 2023-05-10 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -647,7 +647,7 @@ Heidelberger Str.	N 13491,9201 13421,9260 13357,9313 13234,9426 13202,9455 13058
 Laskerstr.	N 14675,10693 14541,10735
 Bödikerstr.	N 14541,10735 14490,10610 14447,10491 14405,10340
 Markgrafendamm	H 14558,10264 14608,10409 14641,10552 14675,10693 14671,10751 14680,10837 14717,10855
-Hauptstr. (Rummelsburg)	H 14717,10855 14810,10832 14904,10812 15004,10791 15261,10738 15307,10701 15372,10655 15404,10633 15639,10469 15831,10329 16004,10204 16090,10141 16117,10120 16138,10105 16187,10033 16257,9929 16302,9865 16374,9760
+Hauptstr. (Rummelsburg)	H 14717,10855 14810,10832 14904,10812 15004,10791 15163,10758 15261,10738 15307,10701 15372,10655 15404,10633 15639,10469 15831,10329 16004,10204 16090,10141 16117,10120 16138,10105 16187,10033 16257,9929 16302,9865 16374,9760
 Hauptstr. (Rummelsburg) [Wohngebiet]	N 15404,10633 15358,10562 15334,10528
 (Hauptstr. - Rummelsburger Ufer)	NN 15334,10528 15322,10513
 (Unterführung S-Bhf. Rummelsburg)	NN 15372,10655 15409,10709 15433,10765
@@ -670,8 +670,9 @@ Kynaststr.	NH 14652,10201 14738,10317 14766,10372 14797,10476 14805,10518 14828,
 # REMOVED (an dieser Stelle wird es definitiv keinen Weg mehr geben --- hier steht bereits ein Wohnriegel) --- (Kynaststr. - Paul-und-Paula-Ufer)	NN 14843,10621 14911,10587
 # REMOVED --- #: next_check_id: KYNASTSTRASSE-2018 --- #: last_checked: 2019-07-06 --- #: next_check: 2019-06-15 --- (Kynaststr. - Paul-und-Paula-Ufer)	NN 14815,10516 14820,10473
 (Kynaststr. - Flaschenkai)	NN 14797,10476 14820,10473 14861,10467
-#: alias: Untere Kynaststr.
-Kynaststr.	N 14805,10518 14815,10516 14832,10512 14828,10561 14843,10621 14882,10732 14904,10812
+#: note: "Untere Kynaststr." war kein offizieller, aber durchaus gebräuchlicher Name, um diesen Strang von der restlichen Kynaststr. zu unterscheiden
+#: oldname: -202305: Untere Kynaststr.
+An der Mole	N 14805,10518 14815,10516 14832,10512 14828,10561 14843,10621 14882,10732 14904,10812
 # REMOVED (Asphalt ist entfernt) --- #: XXX wann erfolgt der Rückbau der Ersatzstraße? --- #: osm_watch: way id="58929537" version="32" --- #: last_checked: 2014-09-06 --- #: next_check: 2014-09-16 --- Kynaststr. [Ersatzstraße]	NN 14688,10167 14752,10246 14794,10336 14820,10473 14832,10512
 # REMOVED (es existiert kein Weg mehr) --- (Alt-Stralau - Spreeufer)	NN 14652,10201 14569,10055
 (Spreeufer)	NN 14569,10055 14599,10039 14690,9993 14776,9949 15000,9820
@@ -686,7 +687,7 @@ Zur Alten Flussbadeanstalt	N 16355,9603 16376,9602 16388,9614 16389,9633
 (Zur Alten Flussbadeanstalt - Bolleufer)	NN 16347,9594 16268,9670 16182,9591 16120,9653 16125,9678 16119,9689
 Gustav-Holzmann-Str.	N 16302,9865 16119,9689
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/24re.pdf/file
-Paul-und-Paula-Ufer	NN 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15145,10636 15200,10600
+Paul-und-Paula-Ufer	NN 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15135,10639 15200,10600
 # REMOVED (Ende der Bauarbeiten) --- #: XXX nach den Bauarbeiten wieder entfernen --- #: last_checked: 2013-08-19 --- #: next_check: 2013-10-03 (geplantes Bauende ist Ende September) --- (Umleitungsstrecke für das Paul-und-Paula-Ufer)	NN 15056,10625 14930,10646
 (Engelwiese)	NN 14974,10018 15050,10160
 (Engelwiese - Uferweg)	NN 15050,10160 15054,10168 15097,10255 15101,10263
@@ -1189,7 +1190,8 @@ Rubensstr. (Schöneberg) [Richtung Stadtautobahn]	N 6307,7893 6429,7876 6489,7908
 Vorarlberger Damm	H 6389,7196 6500,7172 6640,7138 6762,7109 6817,7101 6894,7102 6991,7126 7101,7198 7227,7352 7296,7443 7307,7457 7338,7498 7422,7607 7480,7683
 (Vorarlberger Damm - Kleingartenkolonie)	NN 6817,7101 6852,7246 6843,7293
 #: note: Privatstraße vvv
-Quartiersweg	N 7621,7813 7623,7885 7624,7946 7612,7996 7516,8063 7498,8062
+Quartiersweg	N 7621,7813 7623,7885 7622,7986
+Quartiersweg	N 7639,7974 7622,7986 7516,8063 7498,8062
 #: note: Fußgänger/Radfahrerzone, Lieferverkehr frei
 Quartiersweg	NN 7537,7859 7548,7884 7548,7937 7499,7937
 #: note: Fußgänger/Radfahrerzone
@@ -1275,11 +1277,11 @@ Friedrich-Franz-Str.	N 8767,5571 8786,5720 8801,5844 8816,5980 8830,6145 8846,63
 Podewilsstr.	N 8707,6537 8551,6552
 Gäßnerweg	N 8532,6015 8550,6165 8546,6190 8552,6319 8553,6339 8551,6552 8553,6665
 Burchardstr.	N 8200,6668 8553,6665 8722,6656
-Schönburgstr.	N 8949,6644 8961,6490 8995,6473 9029,6360
+Schönburgstr.	N 8949,6644 8961,6490 8995,6473 9031,6355
 Bayernring	N 8380,8545 8454,8574 8616,8605 8748,8587 8842,8561 8916,8511 9030,8431 9128,8414 9238,8410
 (Achenbachpromenade)	NN 8763,8780 8748,8587 8722,8527 8715,8459
-Parkstr. (Tempelhof)	N 8944,6293 8992,6312 9029,6360
-Parkstr. (Tempelhof)	NN 9029,6360 9078,6360 9143,6415
+Parkstr. (Tempelhof)	N 8944,6293 8992,6312 9031,6355
+Parkstr. (Tempelhof)	NN 9031,6355 9078,6360 9143,6415
 Parkstr. (Tempelhof)	N 9143,6415 9202,6412 9237,6413 9250,6414
 Luise-Henriette-Str.	N 9253,6484 9242,6482 9150,6467
 Reinhardtstr. (Tempelhof)	N 9154,6638 9136,6552 9150,6467 9141,6459 9143,6415
@@ -1975,7 +1977,7 @@ Marienhöher Weg	N 8356,5195 8203,5203 8115,5086 8052,5009 7986,4984 7913,4996 78
 (Marienhöhe)	NN 8070,5325 8075,5307 8116,5276 8115,5245 8052,5154 8115,5086
 Gerdsmeyerweg	N 8165,5447 8161,5399 8130,5353 8070,5325 8036,5309
 (Gerdsmeyerweg - Marienhöher Weg)	NN 8036,5309 7944,5237
-Attilastr.	H 8724,5570 8687,5554 8593,5491 8480,5350 8406,5258 8356,5195 8348,5184 8219,5010 8130,4932 8014,4832 7896,4732 7825,4672 7690,4563 7667,4549 7628,4521 7597,4499 7482,4416 7450,4397 7410,4373 7366,4345 7310,4308 7263,4281 7221,4255 7171,4200 7161,4110 7162,4058
+Attilastr.	H 8724,5570 8687,5554 8593,5491 8480,5350 8406,5258 8356,5195 8348,5184 8219,5010 8130,4932 8014,4832 7986,4808 7896,4732 7825,4672 7743,4605 7690,4563 7667,4549 7628,4521 7597,4499 7482,4416 7450,4397 7410,4373 7366,4345 7310,4308 7263,4281 7221,4255 7171,4200 7161,4110 7162,4058
 Attilagarten	N 8491,5150 8435,5239
 Attilagarten	NN 8435,5239 8406,5258
 Ingostr.	N 7896,4732 7970,4640
@@ -12857,6 +12859,7 @@ Stuthirtenweg	N 13241,1113 13336,1162 13450,1222
 Stuthirtenweg	N 13450,1222 13542,1268 13580,1300 13635,1347 13634,1371
 Christoph-Ruden-Str.	N 12785,1308 12725,1429 12643,1706
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_01_0001_0140_online.pdf (Benennung eines Geh- und Radweges zum 5. Mai 2023)
+#: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2023/pressemitteilung.1321335.php (mit Straßenschild)
 # REMOVED --- #: XXX neuer Name "Wolfgang-Seifert-Weg", fehlt in Berlin.coords.data, PLZ=? --- #: next_check: 2023-05-05
 #: historical_note: früher in BBBike gekennzeichnet als "(Christoph-Ruden-Str. - Buckower Damm)"
 #: oldname: -20230505: <namenslos>
@@ -15389,7 +15392,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2023-05-06
+#: last_checked: 2023-05-08
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15777,7 +15780,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2023-05-06
+#: last_checked: 2023-05-08
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
