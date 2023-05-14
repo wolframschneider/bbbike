@@ -3197,6 +3197,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
          'data' => '#: by: https://www.berliner-frauenlauf.de/?date=20210404 (geplanter Termin: vom 13. bis 16. Mai 2021)
 #: by: https://www.berlin.de/events/2101687-2229501-avonrunning-berliner-frauenlauf.html (2021 abgesagt)
 #: by: https://viz.berlin.de/2022/05/laufveranstaltungen/
+#: source_id: viz2021:13.37679,52.5163,12.05.2023,20:00 (bis 14.05.2023)
 # REMOVED --- #: tempex: 20170520 vvv
 	2::temp 8055,12186 8119,12414
 	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
@@ -3235,7 +3236,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
          'source_id' => 'https://www.berliner-frauenlauf.de/der-tag/strecke.html',
          'text' => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 13. Mai 2023',
          'type' => 'gesperrt',
-         'until' => 1684015199
+         'until' => 1684036800
        },
        undef,
        undef,
@@ -4538,7 +4539,20 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED --- #: next_check_id: LIBAUER-2019 --- #: by: fritz (bis 25.11.2019) --- #: last_checked: 2019-12-16 --- #: check_frequency: 14d
+# REMOVED --- #: next_check: 2019-11-25
+#: add_fragezeichen: Wann sind die Kranarbeiten beendet?
+#: last_checked: 2023-05-13
+#: check_frequency: 3d
+	q3::inwork 13711,11458 13895,11663
+',
+         'from' => undef,
+         'id' => 3180,
+         'text' => 'Libauer Str.: Kranarbeiten, ein Abschnitt der Fahrbahn ist gesperrt, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        undef,
        undef,
@@ -4556,7 +4570,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022) (inaktiv) (bis 31.12.2022) (bis 31.5.2023)
 #: note: laut rbb mittlerweile bis 30.12.2022
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2023-05-01
+#: last_checked: 2023-05-12
 #: check_frequency: 30d
 #: next_check: 2023-05-31
 	q4::inwork; 11329,12497 11202,12426
@@ -5149,7 +5163,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: XXX neue Sperrung 2022-2023, bis wann? Bekommt der gesperrte Abschnitt einen neuen Belag (Verbundsteinpflaster?)?
 #: add_fragezeichen: Ist der Weg im Hasselwerderpark noch immer gesperrt?
 #: next_check_id: HASSELWERDERPARK-2021
-#: last_checked: 2023-04-14
+#: last_checked: 2023-05-13
 #: check_frequency: 60d
 	2::inwork 18634,5484 18695,5453
 # REMOVED (hier nicht) ---	2::inwork 18506,5596 18560,5539 18634,5484
@@ -5483,27 +5497,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: FUERSTENDAMM-2022
-#: by: https://berliner-abendblatt.de/2022/02/09/fuerstendamm/
-#: by: https://www.berliner-woche.de/frohnau/c-verkehr/bauarbeiten-auf-dem-fuerstendamm-ab-9-maerz_a335966
-#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1238153.php
-#: by: https://www.berliner-woche.de/frohnau/c-verkehr/information-zu-bauarbeiten_a355817
-#: source_id: 226500387 (bis 31.12.2022) (inaktiv)
-#: source_id: viz2021:13.298114,52.631634,09.03.2022,07:00 (bis 31.12.2022) (bis 30.04.2023) (inaktiv)
-#: XXX Wann beginnt der 2. Bauabschnitt: Eltviller Straße bis Oranienburger Chaussee?
-#: last_checked: 2022-09-09 (kartaview)
-#: next_check: 2023-05-12
-# REMOVED (hier bereits fertig, siehe kartaview)	q4::inwork 2486,25156 2599,25047 2647,25018 2673,25012 2818,25022 2904,24993 3015,24965
-	q4::inwork 3015,24965 3117,24966
-',
-         'from' => 1646694000,
-         'id' => 3511,
-         'source_id' => 'https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2022/pressemitteilung.1175116.php',
-         'text' => 'Fürstendamm: Bauarbeiten in Höhe Eltviller Str., Sperrung der Fahrbahn, evtl. sind auch Radfahrer betroffen, bis 12.05.2023',
-         'type' => 'handicap',
-         'until' => 1683903600
-       },
+       undef,
        {
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
@@ -5637,7 +5631,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: osm_watch: way id="975241319" version="5"
 #: osm_watch: way id="970452276" version="5"
 #: also_indoor: traffic (none)
-#: last_checked: 2023-04-16
+#: last_checked: 2023-05-11
 #: check_frequency: 30d
 	q3::inwork; 12805,8194 12873,8218 12911,8232
 # REMOVED ---	q4::inwork 12873,8218 12911,8232
@@ -5671,7 +5665,17 @@ Ravensberger Str.	q4::inwork; 3711,9855 3927,9935
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: confirmed_by: srt (am 2022-05-03 gesehen)
+	q4::temp::play 14946,11697 14986,11760
+',
+         'from' => 1685916000,
+         'id' => 3543,
+         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php',
+         'text' => 'Jessnerstr.: zwischen Travestr. und Oderstr. dienstags zwischen 15:30 und 18:30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, im Juni 2023',
+         'type' => 'handicap',
+         'until' => 1687881600
+       },
        undef,
        undef,
        undef,
@@ -5687,11 +5691,11 @@ Ravensberger Str.	q4::inwork; 3711,9855 3927,9935
 #: by: https://nitter.cz/pic/orig/media%2FFdqVlEEXEAI-lOQ.jpg
 #: by: https://www.bahninfo-forum.de/read.php?9,757699,759980#msg-759980 (vielleicht nur bei Union-Heimspielen für Fußgänger gesperrt?)
 #: by: https://bauprojekte.deutschebahn.com/media/projects/6790/docs/PR_berlin-frankfurt-oder-bundesgrenze-d-pl_umbau_koepenick_bf_20230223.pdf (Westumfahrung Bahnhofstr.)
-#: note: anscheinend Schubertstr. auch für Fußgänger gesperrt, hier gibt es keinen Gehweg (noch immer?); außerhalb der Arbeitszeiten ggfs. passierbar (gesehen So 2023-03-26)
-#: note: Unterführung passierbar: 2023-02-19 mittags
+#: note: anscheinend Schubertstr. auch für Fußgänger gesperrt, hier gibt es keinen Gehweg (noch immer?); außerhalb der Arbeitszeiten ggfs. passierbar (gesehen So 2023-03-26, Sa 2023-05-13)
+#: note: Unterführung passierbar: 2023-02-19 mittags, 2023-05-13 (Union-Spiel!)
 #: also_indoor: traffic (B[Schubert fehlt],G[falsch],H[Schubert fehlt],W[Schubert fehlt]) vvv
 #: add_fragezeichen: Kann man das Fahrrad hier wenigstens durchschieben? vvv
-#: last_checked: 2023-04-22 vvv
+#: last_checked: 2023-05-13 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-05-25 vvv
 # REMOVED (hier nicht mehr) --- Am Bahndamm	2::inwork 21984,6317 22238,6195
@@ -5734,15 +5738,15 @@ Schubertstr.	2::inwork 21984,6317 21856,6390
        },
        {
          'data' => '#: by: http://spielstraßen.de/uebersicht.php#kreu
-#: XXX laut Pressemitteilung "Wrangelstraße, zwischen Sorauer Straße und Oppelner Straße, freitags 15.30 bis 18.30 Uhr, 13. Mai bis September, außer in den Sommerferien" -> nach den Sommerferien nachschauen und ggfs. verlängern -> 2023 nachschauen
-#: last_checked: 2023-05-07
-#: next_check: 2023-05-12
+#: XXX laut Pressemitteilung "Wrangelstraße, zwischen Sorauer Straße und Oppelner Straße, freitags 15.30 bis 18.30 Uhr, 13. Mai bis September, außer in den Sommerferien" -> nach den Sommerferien nachschauen und ggfs. verlängern -> 2023 nachschauen; erster Termin 2023 laut Spielstraßenseite am 26.05.
+#: last_checked: 2023-05-13
+#: next_check: 2023-05-26
 	q4::temp::play 12822,10487 12897,10439
 ',
-         'from' => 1683842400,
+         'from' => 1684965600,
          'id' => 3551,
          'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php',
-         'text' => 'Wrangelstr.: zwischen Sorauer Str. und Oppelner Str. freitags zwischen 15:30 und 18:30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 26.08. bis Ende September',
+         'text' => 'Wrangelstr.: zwischen Sorauer Str. und Oppelner Str. freitags zwischen 15:30 und 18:30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, voraussichtlich von Ende Mai bis Ende September',
          'type' => 'handicap',
          'until' => 1696091400
        },
@@ -6028,10 +6032,12 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
 #: source_id: viz2021:13.40978,52.38751,30.03.2023,11:51 (Goltzstr., zusätzlicher Eintrag, bis 30.09.2023) (inaktiv)
 #: source_id: viz2021:13.407871,52.386721,19.09.2022,11:00 (bis 31.3.2023) (bis 30.9.2023)
 #: add_fragezeichen: Wann ist der erste Bauabschnitt in der Bahnhofstraße fertig? vvv
+#: last_checked: 2023-05-13 vvv
 #: next_check: 2023-09-30 vvv
 Bahnhofstr.	q4::inwork; 11073,-2037 10983,-2116 10756,-2128
 Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 10980,-1919
 #: next_check ^^^
+#: last_checked ^^^
 #: add_fragezeichen ^^^
 ',
          'from' => 1663524336,
@@ -6178,7 +6184,7 @@ Brückenabriss, Komplettsperrung	2::temp 2892,15983 2809,16143
 #: source_id: viz2021:13.384646,52.526904,05.10.2022,03:30 (bis 1.12.2022, Kreuzungsbereich für Kfz-Verkehr gesperrt) (inaktiv)
 #: source_id: viz2021:13.387093,52.527156,05.10.2022,11:47 (bis 16.1.2023, nur Richtung Norden) (bis 31.1.2023) (inaktiv)
 #: source_id: viz2021:13.387679,52.524493,30.01.2023,11:58 (bis 02.03.2023) (inaktiv)
-#: source_id: viz2021:13.387251,52.526281,30.11.2022,11:39 (bis 16.1.2023, beide Richtungen) (bis 31.1.2023) (bis 2.3.2023) (bis 13.3.2023) (bis 28.3.2023) (bis 24.4.2023) (bis 10.5.2023)
+#: source_id: viz2021:13.387251,52.526281,30.11.2022,11:39 (bis 16.1.2023, beide Richtungen) (bis 31.1.2023) (bis 2.3.2023) (bis 13.3.2023) (bis 28.3.2023) (bis 24.4.2023) (bis 10.5.2023) (inaktiv)
 #: by: https://viz.berlin.de/2022/10/verkehrsvorschau-071022/ (bis Ende Dezember 2022)
 #: by: https://www.berliner-zeitung.de/news/bvg-schienenbruch-in-berlin-mitte-trambahn-chaos-bis-ende-dezember-li.273968
 #: by: https://unternehmen.bvg.de/pressemitteilung/da-muessen-wir-ran/
@@ -6194,9 +6200,8 @@ Brückenabriss, Komplettsperrung	2::temp 2892,15983 2809,16143
 # REMOVED (nicht mehr) --- #: note: Möglicherweise wegen der Sperrung verstärkter Verkehr in der Gartenstr. zwischen Invalidenstr. und Torstr.
 #: XXX Bis wann ist die Friedrichstr. gesperrt?
 #: note: laut rbb läuft diese Bauphase bis 16.06.2023
-#: last_checked: 2023-05-05 vvv
-#: next_check: 2023-05-10 vvv
-# REMOVED --- #: next_check: 2023-06-15 vvv
+#: last_checked: 2023-05-12 vvv
+#: next_check: 2023-06-15 vvv
 # REMOVED (hier nichts) --- Chausseestr.	q4::inwork 9207,13493 9212,13471
 # REMOVED (Radfahrfurt) --- Hannoversche Str.	q3::inwork 9212,13471 9047,13446
 # REMOVED (Radfahrfurt) --- Torstr.	q3::inwork 9353,13521 9212,13471
@@ -6310,13 +6315,15 @@ Fahrbahn noch passierbar	q2::inwork 7616,20633 7577,20450
        undef,
        {
          'data' => '#: by: https://gruen-berlin.de/pressemitteilung/berliner-mauerweg-beginn-der-baumassnahmen-am-jenbacher-weg
-#: add_fragezeichen: Wo genau sind die gesperrten Abschnitte des Mauerwegs? vvv
-#: last_checked: 2023-04-10 vvv
-#: check_frequency: 30d vvv
+#: add_fragezeichen: Ist der Mauerweg noch immer gesperrt? vvv
+#: last_checked: 2023-05-13 vvv
+#: check_frequency: 90d vvv
+#: next_check: 2023-10-30 vvv
 # REMOVED (laut osm hier nicht mehr) --- Mauerweg Marienfelde - Lichterfelde	2::inwork 7097,-527 6961,-389 6668,-100 6498,71 6357,215 6256,363
 # REMOVED (separater Eintrag) --- Mauerweg Marienfelde - Lichterfelde	2::inwork 6256,363 6204,331 6013,211 5832,93 5441,-150
 # REMOVED (laut osm hier nicht mehr) --- Mauerweg Marienfelde - Lichterfelde	2::inwork 5441,-150 4842,-547 4596,-707 4406,-910
 Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 7593,-1034 7142,-568
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 #: add_fragezeichen ^^^
@@ -6324,7 +6331,7 @@ Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 75
          'from' => 1665942194,
          'id' => 3657,
          'source_id' => 'https://www.berliner-woche.de/tempelhof-schoeneberg/c-bauen/bauarbeiten-an-der-berliner-stadtgrenze-sollen-ein-jahr-lang-dauern_a360599',
-         'text' => 'Mauerweg: Bauarbeiten im Bereich Marienfelde, einige Abschnitte des Mauerwegs (B101 - Abzweig nach Diedersdorf) können gesperrt sein, bis Herbst 2023',
+         'text' => 'Mauerweg: Bauarbeiten im Bereich Marienfelde, einige Abschnitte des Mauerwegs (B101 - Abzweig nach Diedersdorf) können gesperrt sein, bis Herbst 2023 (Stand Mitte Mai 2023: Mauerweg ist hier gesperrt)',
          'type' => 'gesperrt',
          'until' => 1697565600
        },
@@ -6359,7 +6366,7 @@ Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 75
          'data' => '#: by: https://www.starkundstilb-architekten-berlin.de/projekte/524-emmauskirche/
 #: by: https://www.deutsches-architekturforum.de/thread/11488-gottesh%C3%A4user-in-berlin/?postID=730631#post730631
 #: add_fragezeichen: Bis wann geht die Sperrung?
-#: last_checked: 2023-05-07
+#: last_checked: 2023-05-11
 #: check_frequency: 60d
 	q3::inwork 12328,10442 12274,10612
 ',
@@ -6399,7 +6406,7 @@ Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 75
 #: XXX außerdem: hier wird eine neue Ampel gebaut
 #: add_fragezeichen: Ist der Übergang Hegemeisterweg/Treskowallee gesperrt? vvv
 #: priority: #A vvv
-#: last_checked: 2023-05-03 vvv
+#: last_checked: 2023-05-13 vvv
 #: check_frequency: 21d vvv
 #: next_check: 2023-09-03 vvv
 ## generated with: ./miscsrc/convert2hafas -specsperre=strassen /tmp/3 | perl -pe \'s/: \\t/\\t/; s/igndisp/inwork/; $_="# $_" if /3nocross/\' >| /tmp/3.new
@@ -6420,7 +6427,7 @@ Modellpark Wuhlheide -> Hegemeisterweg	3::inwork 18437,7752 18406,7760 18325,777
 ',
          'from' => undef,
          'id' => 3666,
-         'text' => 'Hegemeisterweg/Treskowallee: Übergang kann wegen Bauarbeiten gesperrt sein (Stand Anfang Mai 2023: Übergang existiert)',
+         'text' => 'Hegemeisterweg/Treskowallee: Übergang kann wegen Bauarbeiten gesperrt sein (Stand Mitte Mai 2023: keine Einschränkungen)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -6486,7 +6493,7 @@ mittlerer Abschnitt	q4::inwork 6965,2418 7051,2366 7172,2343
        {
          'data' => '# REMOVED (als die Bauarbeiten noch in der Weserstr. waren) --- #: also_indoor: traffic (G,B[zuviel],W) vvv
 #: also_indoor: traffic (ex-B) vvv
-#: last_checked: 2023-04-10 vvv
+#: last_checked: 2023-05-11 vvv
 # REMOVED --- Weserstr. Richtung Westen	q4::inwork; 13946,7918 13891,7961
 # REMOVED --- Weserstr. Richtung Osten	q3::inwork; 13891,7961 13946,7918
 Ederstr.	q3::inwork 13946,7918 13919,7707
@@ -6761,7 +6768,7 @@ südlicher Abschnitt	q4::inwork 5376,12661 5354,12552
          'data' => '#: next_check_id: SCHOENEWEIDE-2018
 #: by: https://www.meinetram.de/de/index.php?section=Downloads&download=78 (Präsentation vom 28.2.2022, Seite 16)
 #: also_indoor: traffic (none)
-#: last_checked: 2023-04-22
+#: last_checked: 2023-05-13
 #: check_frequency: 120d
 	q4::temp; 17763,5104 17729,5091 17652,5082 17601,5090
 ',
@@ -6793,6 +6800,7 @@ südlicher Abschnitt	q4::inwork 5376,12661 5354,12552
          'data' => '#: by: https://www.berliner-woche.de/gruenau/c-bauen/regattastrasse-wird-voll-gesperrt_a371402
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1320004.php (kein Endedatum mehr)
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1322779.php (bis Mitte/Ende Juni 2023)
+#: by: https://www.berliner-woche.de/gruenau/c-verkehr/verzoegerungen-in-der-regattastrasse_a380986
 #: source_id: viz2021:13.58341,52.41363,08.02.2023,15:02 (bis 31.03.2023) (inaktiv)
 #: source_id: viz2021:13.582488,52.415092,03.01.2023,10:00 (hier: bis 31.3.2023) (bis 14.4.2023) (bis 28.4.2023) (bis 5.5.2023) (bis 9.6.2023)
 #: also_indoor: traffic (G,H,B,W)
@@ -6948,6 +6956,7 @@ Semmelweisstr.: Fahrbahn gesperrt	q4::inwork 19198,2163 19019,2217
          'data' => '#: next_check_id: SCHOENBURG-2023
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten? vvv
 #: also_indoor: traffic (ex-G[falsch]) vvv
+#: osm_watch: way id="1171918026" version="2" vvv
 #: last_checked: 2023-05-10 vvv
 #: check_frequency: 60d vvv
 	q2::inwork 9031,6355 8995,6473
@@ -6956,6 +6965,7 @@ Semmelweisstr.: Fahrbahn gesperrt	q4::inwork 19198,2163 19019,2217
 # REMOVED (hier nicht mehr) --- Blumenthalstr.	q4::inwork 8944,6293 8971,6154
 #: check_frequency ^^^
 #: last_checked ^^^
+#: osm_watch ^^^
 #: also_indoor ^^^
 #: add_fragezeichen ^^^
 ',
@@ -6978,19 +6988,7 @@ Semmelweisstr.: Fahrbahn gesperrt	q4::inwork 19198,2163 19019,2217
        },
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2023/pressemitteilung.1302099.php
-#: by: https://berliner-abendblatt.de/kiez-news/pankow/schlosspark-buch-kein-eingang-wegen-bauarbeiten-id210739
-#: by: https://www.berliner-woche.de/buch/c-bauen/schlosspark-buch-eingang-alt-buch-gesperrt_a375113
-#: by: https://www.berliner-woche.de/buch/c-bauen/sanierung-des-schlossparks-ist-beendet_a378976
-	2::inwork 16558,25688 16583,25667 16593,25640
-',
-         'from' => 1678575600,
-         'id' => 3739,
-         'text' => 'Schlosspark Buch: Eingang Alt-Buch wegen Bauarbeiten am Kirchturm gesperrt, vom 13.03.2023 bis voraussichtlich 13. Mai 2023',
-         'type' => 'gesperrt',
-         'until' => 1683990000
-       },
+       undef,
        undef,
        {
          'data' => '#: by: https://viz.berlin.de/2023/03/verkehrsvorschau-130323/
@@ -7137,7 +7135,7 @@ Leberstr.: Einbahnstraßenregelung	q4::inwork; 7563,8871 7574,8596 7578,8358
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2023-05-08 vvv
+         'data' => '#: last_checked: 2023-05-13 vvv
 #: check_frequency: 45d vvv
 #: next_check: 2023-06-30 vvv
 #: XXX möglicherweise Asphaltierung?
@@ -7214,9 +7212,9 @@ Zugang zum Uferweg	2::inwork 5800,12361 5796,12372
          'from' => 1682229600,
          'id' => 3765,
          'source_id' => 'LS/221-F/22/138',
-         'text' => 'Haselberg - Steinbeck: Deckenerneuerung, Sperrung, 24.04.2023 07:00 Uhr bis 12.05.2023 16:00 Uhr',
+         'text' => 'Haselberg - Steinbeck: Deckenerneuerung, Sperrung, 24.04.2023 bis 02.06.2023',
          'type' => 'gesperrt',
-         'until' => 1683900000
+         'until' => 1685714400
        },
        {
          'data' => '	2::inwork 93720,-26200 92960,-25954
@@ -7400,20 +7398,7 @@ Birnbaumer Str.	q4::inwork 22186,6672 22093,6630
          'type' => 'gesperrt',
          'until' => 1702652400
        },
-       {
-         'data' => '#: last_checked: 2023-05-10 vvv
-#: check_frequency: 1d vvv
-	q4::inwork 9737,11349 9945,11371
-	q3::inwork 9945,11371 10072,11384
-#: check_frequency ^^^
-#: last_checked ^^^
-',
-         'from' => undef,
-         'id' => 3783,
-         'text' => 'Zimmerstr.: Kraneinsatz, Fahrbahn zwischen Axel-Springer-Str. und Markgrafenstr. gesperrt, Ende unbekannt',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: also_indoor: traffic (none)
@@ -7425,6 +7410,35 @@ Birnbaumer Str.	q4::inwork 22186,6672 22093,6630
          'text' => 'Grabertstr.: Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: RBAHNHOFKOEPENICK-2022
+#: note: am 2023-05-13 (Sa) mittags konnte man an der Absperrung vorbeifahren
+#: last_checked: 2023-05-13
+#: check_frequency: 120d
+#: next_check: 2027-07-31
+	2::inwork 22280,6128 22296,6170
+',
+         'from' => undef,
+         'id' => 3785,
+         'text' => 'Forumszufahrt: Bahnunterführung wegen Bauarbeiten gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: https://nitter.cz/VIZ_Berlin/status/1657358780785479681#m
+#: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnY3LW9VMld3QU1waW1jLmpwZw==
+#: by: https://www.berlin.de/polizei/polizeimeldungen/2023/pressemitteilung.1323864.php
+#: by: https://www.berlin.de/polizei/polizeimeldungen/allgemeinverfuegung.pdf?ts=1683902505
+	2::temp 8442,11555 8328,11617 8226,11672 8221,11690 8322,11715 8387,11637 8442,11555 8490,11562 8548,11571 8542,11502
+	2::temp 8490,11562 8481,11638 8456,11763 8489,11782 8571,11846 8567,11799 8562,11744 8553,11638 8481,11638 8387,11637
+	2::temp 8548,11571 8553,11630
+',
+         'from' => 1684003905,
+         'id' => 3786,
+         'text' => 'Lennéstr., Ebertstr., Bellevuestr.: Staatsbesuch, Sperrungen am 14.05.2023',
+         'type' => 'gesperrt',
+         'until' => 1684101599
        }
      
 );
