@@ -850,10 +850,7 @@ Beiersdorf - Beerbaum: Qualität?	? 35980,34322 35977,34619 36085,34994 36096,353
 Dollgow - Zernikow: Qualität?	? -17141,74157 -16859,74184 -16629,74151 -15730,74428 -14966,74667 -13662,75159
 Leipziger Str. (Schöneiche): wie ist die Qualität im nördlichen Abschnitt? ebenfalls unbefestigt?	? 32156,6405 32056,6607 31993,6776 31952,6917 31951,7060
 Technologiepark KW - Funkerberg: Qualität der Verbindung?	? 24452,-10414 24518,-10498 24950,-10965 25233,-11257 25366,-11396 25528,-11392
-Zum Freibad (Luckenwalde): Qualität?	? -4943,-36146 -4926,-36163 -4834,-36184 -4674,-36289 -4540,-36412 -4471,-36548 -4426,-36604 -4321,-36680 -4265,-36700 -3931,-36759 -3838,-36755 -3610,-36765 -3593,-36757
-Färberweg - Stadtpark Luckenwalde: Qualität?	? -4246,-36485 -4249,-36452
-# added from strassen
-Erna-Koschwitz-Weg (Hängen bereits neue Straßenschilder für den "Erna-Koschwitz-Weg"?)	? -2158,17613 -2135,17633 -2119,17647 -2103,17670 -2087,17715 -2120,17786 -2131,17827 -2114,17878 -2066,17896 -2074,17921 -2100,17953 -2196,18069
+Promenade (Jüterbog): Qualität des südlichen Abschnitts?	? -10165,-45794 -10193,-46048
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -888,10 +885,9 @@ Schloßstr. (Einbahnstraße?)	? -14821,106013 -15004,105813 -15070,105705
 Tiergartenstr. (Einbahnstraße?)	? -15004,105813 -14862,105712 -14570,105702 -14288,105530 -14242,105542
 Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105763 -13977,105850 -13932,106157
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
-# added from flaechen
-(Hängen bereits Schilder für den Susanne-und-Kurt-Crohn-Platz?)	? 11447,16507 11535,16498 11542,16384 11470,16394 11448,16398 11447,16507
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
+Fürstendamm: Asphalt mit einigen Schäden (Sind die Bauarbeiten hier beendet? Wurde die Fahrbahn neu gemacht?)	? 3490,24887 3550,24887 3741,24942 3754,24946
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33327,2979 33296,2894
 Mausohrweg: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33167,2940 33296,2894 33406,2852 33503,2818
 Abendseglersteig: Asphalt, letzte Deckschicht fehlt (wann wird die Fahrbahndecke endgültig hergestellt?)	? 33406,2852 33383,2792 33267,2810 33139,2835 33167,2940
@@ -953,11 +949,16 @@ Götschendorf - Böckenberg: schlechte Qualität, teilweise Sand (wie ist die Quali
 Groß Friedenwalde - Flieth: Kopfsteinpflaster (wie schlecht ist das Kopfsteinpflaster hier?)	? 35740,80983 35815,81168 35815,81518 35894,81782
 Groß Friedenwalde - Flieth: Asphalt (ist hier tatsächlich asphaltiert?)	? 35894,81782 35998,82265 36009,82890 36430,83497 36578,83835 36590,84086 36693,84235 36676,84495 36696,84495
 Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	? 37515,64395 37608,64317 38095,64055 38327,63933
+# added from handicap_s
+Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Merler Weg Richtung Süden (Bis wann gibt es diese Einschränkung?)	? 19181,13485 19198,13272 19180,13219
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
 tragen (Wie viele Stufen sind hier?)	? -45,12243
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
+# added from gesperrt_car
+Brixplatz (Ist die Einbahnstraße für Radfahrer offen?)	? 179,12434 269,12462 329,12503
+Brixplatz (Ist die Einbahnstraße für Radfahrer offen?)	? 419,12397 335,12343 208,12305
 # added from comments_cyclepath
 Verbundsteinpflaster, teilweise schadhaft (Wurzelschäden) (Wird die Qualität des Radwegs nach den Bauarbeiten besser sein?)	? 43162,14428 42996,14793
 (andere Straßenseite auch?)	? 37093,-151665 37375,-151190
@@ -979,9 +980,8 @@ F3.4 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.5 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from fragezeichen
-Jörsstr.: Asphaltierung vermutlich bereits durchgeführt (Wurde die Asphaltierung der Jörsstr. bereits abgeschlossen?)	? -1478,18407 -1358,18400
 L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen Prenzlau und Güstow einen straßenbegleitenden Radweg? Wenn ja: auf welcher Seite und ist der Radweg asphaltiert?)	? 37020,101115 36600,101499 36138,101586 35027,102258 34671,102369 34607,102396
 # added from bbbike-temp-blockings-optimized
 Wielandstr.: Einbahnstraße zwischen Kantstr. und Pestalozzistr., offen Richtung Norden, Ende der Bauarbeiten unbekannt (Wann wird die Einbahnstraßenregelung wieder aufgehoben?)	? 4434,11227 4415,11050
 Pascalstr.: Fahrbahn zwischen Heisenbergstr. und Schlesingerstr. wegen Hochbauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 4961,12940 4932,12968
-Charlottenburger Str.: Bauarbeiten an der Roelckestr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Bis wann gehen die Bauarbeiten?)	? 13286,16267 13033,16387
+Götelstr.: Bauarbeiten, Fahrbahn zwischen Betckestr. und Weverstr. gesperrt (Stand Mitte April 2023), Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten beendet?)	? -3269,12406 -3260,12540

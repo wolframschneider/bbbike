@@ -889,8 +889,8 @@ Rosenthaler Weg -> Guyotstr.: Straßenbahntrasse	3::igndisp 11073,22225 10999,221
 Guyotstr. -> Rosenthaler Weg: Straßenbahntrasse	3::igndisp 11056,21978 10999,22195 10935,22174
 Elisabethstr. (Spandau)	1 -3387,15410 -3451,15372 -3492,15331
 Eisenacher Str.	1 22899,15073 23113,15110
-Mittelstreifen	3nocross::ignrte -3009,17090 -3017,16984 -3018,16974
-Streitstr. -> Chamissostr.: Mittelstreifen	3::igndisp -3009,17090 -3017,16984 -2838,16951
+Mittelstreifen	3nocross::ignrte -3009,17090 -3013,17024 -3017,16984 -3018,16974
+Streitstr. -> Chamissostr.: Mittelstreifen	3::igndisp -3013,17024 -3017,16984 -2838,16951
 Chamissostr. -> Streitstr.: Mittelstreifen	3::igndisp -2838,16951 -3017,16984 -3018,16974
 Straßenbahntrasse	3nocross::ignrte 18770,8898 18737,8686 18727,8634
 Treskowallee -> Ehrenfelsstr.: Straßenbahntrasse	3::igndisp 18770,8898 18737,8686 18778,8663
@@ -2011,8 +2011,8 @@ Schenkendorfer Weg (Teltow)	1 1186,-1973 748,-2298 545,-2493 377,-2672 166,-2946
 Ohmstr. (Schwanebeck-West)	1 18039,24940 18127,25162
 Werder, Adolf-Damaschke-Str.	1 -22042,-2060 -21915,-2045
 Mittelstreifen, für Fußgänger/Radfahrer Übergangsmöglichkeit südöstlich der Einmündung	3nocross::ignrte 8913,16159 8986,16092 9053,16029
-Badstr. -> Grüntaler Str.: Mittelstreifen, für Fußgänger/Radfahrer Übergangsmöglichkeit südöstlich der Einmündung	3::igndisp 8913,16159 8986,16092 9178,16317
-Grüntaler Str. -> Badstr.: Mittelstreifen, für Fußgänger/Radfahrer Übergangsmöglichkeit südöstlich der Einmündung	3::igndisp 9178,16317 8986,16092 9053,16029
+Badstr. -> Grüntaler Str.: Mittelstreifen, für Fußgänger/Radfahrer Übergangsmöglichkeit südöstlich der Einmündung	3::igndisp 8913,16159 8986,16092 9148,16282
+Grüntaler Str. -> Badstr.: Mittelstreifen, für Fußgänger/Radfahrer Übergangsmöglichkeit südöstlich der Einmündung	3::igndisp 9148,16282 8986,16092 9053,16029
 Lintruper Str.	1 10324,925 10380,757
 Glaserweg	1 10187,872 10237,749
 Friedrichstr. (Prenzlau)	1 39550,101671 39574,101863
@@ -2399,3 +2399,11 @@ Prinzregentenstr. -> Berliner Str.: Mittelstreifen für den Kfz-Verkehr geschloss
 Prinzregentenstr. -> Prinzregentenstr.: Mittelstreifen für den Kfz-Verkehr geschlossen	3::igndisp 5633,9263 5635,9018 5641,8831
 Radieschenpfad	1 20582,18475 20635,18381
 Dammweg: durch Barrieren für den Autoverkehr gesperrt	2 15869,8355 16388,8821
+Mittelstreifen	3nocross::ignrte 2169,20095 2224,20007 2268,19919
+Berliner Str. -> Schlieperstr.: Mittelstreifen	3::igndisp 2268,19919 2224,20007 2029,19963
+Berliner Str. -> Schlieperstr.: Mittelstreifen	3::igndisp 2169,20095 2224,20007 2435,20032
+Schlieperstr. -> Berliner Str.: Mittelstreifen	3::igndisp 2029,19963 2224,20007 2169,20095
+Schlieperstr. -> Schlieperstr.: Mittelstreifen	3::igndisp 2029,19963 2224,20007 2435,20032
+Schlieperstr. -> Berliner Str.: Mittelstreifen	3::igndisp 2435,20032 2224,20007 2268,19919
+Schlieperstr. -> Schlieperstr.: Mittelstreifen	3::igndisp 2435,20032 2224,20007 2029,19963
+Schmollerplatz	1 13270,9518 13298,9491 13234,9426 13178,9363 13206,9335
