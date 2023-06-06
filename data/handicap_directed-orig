@@ -329,7 +329,7 @@ Behrenstr. - Ebertstr.: zum Linksabbiegen die linke Fußgängerampel benutzen	DH:t
 # REMOVED  --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.1019139.php (für zwei Wochen) --- #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/kreuzung-bleibt-teilgesperrt_a293815 --- #: by: https://twitter.com/VIZ_Berlin/status/1329290817048023040 --- #: by: https://pbs.twimg.com/media/EnKW9CZWMAAOqU1?format=jpg&name=large --- #: source_id: 2147346612 (bis 22.12.2020, nur Einengung) vvv --- #: last_checked: 2020-12-20 vvv --- #: check_frequency: 7d vvv --- #: next_check: 2020-12-22 vvv --- #: valid: -20201222 vvv --- Fahrbahninstandsetzung der Kreuzung Stralauer Allee/Modersohnstr.: Umweg über Ampel Rochowstr.	DH:len=300 13779,10642 13919,10583 14011,10812 --- Fahrbahninstandsetzung der Kreuzung Stralauer Allee/Modersohnstr.: zunächst den linken Gehweg auf der Stralauer Allee benutzen	DH:h=q3,150 13779,10642 13919,10583 14011,10812 --- #: valid ^^^ --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: source_id ^^^
 # 
 #: next_check_id: KASTANIENALLEE-2021
-#: last_checked: 2023-05-07 (mapillary) vvv
+#: last_checked: 2023-06-02 (mapillary) vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2021-10-29 vvv
 Kastanienallee: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 9027,20603 9073,20606 9162,20613
@@ -350,7 +350,7 @@ Kastanienallee: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:t=20
 #: source_id: viz2021:13.45316,52.49472,29.07.2021,08:00 (bis 30.06.2023) (inaktiv)
 #: source_id: viz2021:13.458241,52.492038,29.07.2021,08:00 (bis 30.6.2022) (inaktiv) (bis 31.12.2022) (bis 31.7.2023)
 #: osm_watch: way id="1005683568" version="10"
-#: last_checked: 2023-05-31 (osm) vvv
+#: last_checked: 2023-06-04 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-06-30 vvv
 #: note: allerdings spart man hier eine Ampel
@@ -453,6 +453,7 @@ Scharnweberstr.: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:t=2
 Oderbruchstr. -> Karl-Vesper-Str.: Ampel auf der linken Seite benutzen, Umwege	DH:len=50:tl 14243,13890 14218,13834 14205,13755
 Karl-Vesper-Str. -> Oderbruchstr.: Ampel auf der rechten Seite benutzen, Umwege	DH:len=50:tl 14205,13755 14218,13834 14243,13890
 # 
+#: next_check_id: TEMPELHOFERWEG-2023
 #: by: https://viz.berlin.de/2023/01/gradestr-rohrbruch/
 #: by: https://berliner-abendblatt.de/2023/01/17/verkehrschaos-in-britz-auffahrt-zur-a100-wochenlang-gesperrt/
 #: by: https://berliner-abendblatt.de/2023/01/18/gradestrasse-so-geht-es-an-der-chaos-kreuzung-weiter/
@@ -487,14 +488,5 @@ Gradestr.: vermuteter Umweg	DH:len=50:h=q3,50 12336,5219 12507,5228 12582,5232
 #: valid: -20230609
 Oberspreestr.: Umweg wegen Bauarbeiten	DH:len=30:h=q3,50 21332,4655 21390,4637 21494,4605
 # 
-#: by: https://nitter.cz/VIZ_Berlin/status/1657962005427257344#m
-#: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnY3MGk0TlgwQVl4bVBCLmpwZw==
-#: source_id: viz2021:13.473477,52.536115,15.05.2023,07:00 (bis 02.06.2023) (bis 05.06.2023)
-#: source_id: viz2021:13.473455,52.536108,15.05.2023,07:00 (bis 05.06.2023)
-#: next_check: 2023-06-05 vvv
-#: valid: -20230605 vvv
-Hohenschönhauser Str./Weißenseer Weg: Umweg wegen Gleisbauarbeiten	DH:len=60 14990,14537 15066,14579 15174,14638
-Hohenschönhauser Str./Weißenseer Weg: Umweg wegen Gleisbauarbeiten	DH:len=60 14990,14537 15066,14579 14959,14752
-#: valid ^^^
-#: next_check ^^^
+# REMOVED --- #: by: https://nitter.cz/VIZ_Berlin/status/1657962005427257344#m --- #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnY3MGk0TlgwQVl4bVBCLmpwZw== --- #: source_id: viz2021:13.473477,52.536115,15.05.2023,07:00 (bis 02.06.2023) (bis 05.06.2023) (inaktiv) --- #: source_id: viz2021:13.473455,52.536108,15.05.2023,07:00 (bis 05.06.2023) (inaktiv) --- #: last_checked: 2023-06-02 vvv --- #: next_check: 2023-06-05 vvv --- #: valid: -20230605 vvv --- Hohenschönhauser Str./Weißenseer Weg: Umweg wegen Gleisbauarbeiten	DH:len=60 14990,14537 15066,14579 15174,14638 --- Hohenschönhauser Str./Weißenseer Weg: Umweg wegen Gleisbauarbeiten	DH:len=60 14990,14537 15066,14579 14959,14752 --- #: valid ^^^ --- #: next_check ^^^ --- #: last_checked ^^^
 # 

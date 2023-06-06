@@ -130,7 +130,7 @@ ausgeschildert als "Köllnischer Platz"	CP2; 21789,4520 22071,4501
 Kambergstr. - Mauerweg: Achtung, scharfkantiges Metallteil in der Erde, Gefahr einer Reifenpanne	CS 11677,-58 11746,-62
 Moor: Achtung, schlechte Ausschilderung der Radroute! Nicht in die Sackgasse fahren!	CP; 55653,109956 55319,109799 55318,109732 55317,109697
 Zum Uferweg: als Privatweg gekennzeichnet	CP2; 4751,13245 4742,13157
-(Bleicheroder Str. - Pasewalker Str.): entlang der Straßenbahntrasse	CS 11818,19089 11845,19121 11884,19169 11895,19183 11912,19279 11927,19308
+(Bleicheroder Str. - Pasewalker Str.): entlang der Straßenbahntrasse	CS 11818,19089 11845,19121 11884,19169 11895,19183 11908,19255 11912,19279 11927,19308
 ausgeschildert zum Reichpietschufer 22	CP2; 8102,11099 8199,11152
 Gluckweg: Spazierweg längs des Bahndamms für Radfahrer befahrbar	CS 6039,3275 6171,3400
 als Potsdamer Platz ausgeschildert	CS 8602,11369 8573,11404 8542,11502
@@ -793,3 +793,8 @@ ausgeschildert "Am Juliusturm 62,64,66,68"	CP2; -2647,14532 -2652,14559
 Münsingerpark: Richtung Kemmannweg/Galenstr.	CP2; -3621,14270 -3661,14274
 B198 - Alexanderhof: nicht ausgeschildert	CP2; 42328,99227 42355,99280
 Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
+Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699 15140,10647 15138,10638
+Ulrich-Plenzdorf-Str.: nicht ausgeschildert	CS 14994,10732 15071,10716 15151,10699 15220,10682
+Gustav-Tempel-Str.: nicht ausgeschildert	CS 15220,10682 15205,10616 15200,10600
+An den Eiswerken: nicht ausgeschildert	CS 15004,10791 14994,10732 14984,10677
+Paul-und-Paula-Promenade: nicht ausgeschildert	CS 14886,10748 14984,10677
