@@ -10,11 +10,16 @@
 # 
 ### Friedrichshain ###
 # 
+#: by: https://www.openstreetmap.org/note/3677860
+#: also_indoor: traffic (B)
+#: last_checked: 2023-06-10
+Wühlischstr.: Bauarbeiten an der Einmündung Boxhagener Str., Fahrbahn gesperrt	q4::inwork 14759,11339 14771,11345
+# 
 #: next_check_id: NIEMANN-2023
 #: XXX Bauarbeiten dauern möglicherweise bis November 2023 (Halteverbotsschilder)
 #: XXX alten handicap-Eintrag in der Niemannstr. wieder aktivieren bzw. valid-Direktive anpassen
 #: also_indoor: traffic (B) vvv
-#: last_checked: 2023-06-05 vvv
+#: last_checked: 2023-06-10 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2023-11-10 vvv
 #: valid: -20231110 vvv
@@ -42,7 +47,28 @@ Bödikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbaua
 Kinzigstr.: Bauarbeiten nördlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975
 # 
 # REMOVED --- #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0223_barrierefrei.pdf (20.2.2023 - 23.4.2023) --- #: by: https://viz.berlin.de/2023/02/verkehrsvorschau-200223/ (bis 24.4.2023) --- #: source_id: bvg2021:16#BVG316317_0 --- #: source_id: bvg2021:16#BVG318556_0 (bis 29.4.4023) --- #: note: siehe auch https://www.openstreetmap.org/note/3474648 --- #: XXX evtl. ist auch die Travestr. betroffen --- #: last_checked: 2023-04-18 --- #: next_check: 2023-04-24 --- #: valid: -20230429 --- Müggelstr./Travestr.: Gleisbauarbeiten	q4::inwork 14965,11924 14901,11808 14836,11842
-# REMOVED --- #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0123_barrierefrei.pdf (ab 30.1.2023 für ca. 7 Monate) --- #: by: https://nitter.cz/VIZ_Berlin/status/1620389056898269185#m --- #: by: https://nitter.cz/pic/orig/media%2FFnzGTtUXEAImMiS.jpg --- #: by: https://nitter.net/VIZ_Berlin/status/1636751731508871169#m --- #: by: https://viz.berlin.de/2023/05/verkehrsvorschau-220523/ (bis 26.05.2023) --- #: by: https://nitter.cz/VIZ_Berlin/status/1660499223828402181#m --- #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRndlcTdIZ1dZQUlvMjc5LmpwZw== --- #: source_id: viz2021:13.47,52.50223,31.01.2023,12:45 (bis 17.05.2023) (inaktiv) --- #: source_id: bvg2021:m43#BVG315520_0 --- #: source_id: bvg2021:m43#BVG321058_0 --- #: source_id: viz2021:13.468993,52.501198,30.01.2023,08:00 (bis 17.5.2023, nur Kfz-Verkehr betroffen) (ersetzt, inaktiv) --- #: source_id: viz2021:13.4675,52.498041,30.01.2023,08:00 (bis 17.05.2023) (inaktiv) --- #: source_id: viz2021:13.468961,52.501075,17.03.2023,08:00 (bis 17.05.2023) (inaktiv) --- #: source_id: viz2021:13.470533,52.504112,22.05.2023,06:00 (unklare Verkehrsmeldung, bis 26.05.2023) (inaktiv) --- #: note: laut Baustellenplan Wegführung über den linken Gehweg, in der Realität gibt es keine Freigabe des Gehwegs; wegen des erhöhten Verkehrs (obere Kynaststr. wurde mittlerweile komplett für den Kfz-Verkehr gesperrt: q3 -> q4+); bei der neuerlichen Sperrung gibt es nun doch Radfahrer-frei-Schilder, allerdings recht schmal --- #: last_checked: 2023-05-22 --- #: next_check: 2023-05-26 --- #: valid: -20230526 --- An der Mole: Einbahnstraßenregelung, für Radfahrer offen	q2::inwork; 14843,10621 14828,10561 14832,10512 14815,10516 14805,10518
+# 
+#: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0123_barrierefrei.pdf (ab 30.1.2023 für ca. 7 Monate)
+#: by: https://nitter.cz/VIZ_Berlin/status/1620389056898269185#m
+#: by: https://nitter.cz/pic/orig/media%2FFnzGTtUXEAImMiS.jpg
+#: by: https://nitter.net/VIZ_Berlin/status/1636751731508871169#m
+#: by: https://viz.berlin.de/2023/05/verkehrsvorschau-220523/ (bis 26.05.2023)
+#: by: https://nitter.cz/VIZ_Berlin/status/1660499223828402181#m
+#: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRndlcTdIZ1dZQUlvMjc5LmpwZw==
+#: source_id: viz2021:13.47,52.50223,31.01.2023,12:45 (bis 17.05.2023) (inaktiv)
+#: source_id: bvg2021:m43#BVG315520_0
+#: source_id: bvg2021:m43#BVG321058_0
+#: source_id: viz2021:13.468993,52.501198,30.01.2023,08:00 (bis 17.5.2023, nur Kfz-Verkehr betroffen) (ersetzt, inaktiv)
+#: source_id: viz2021:13.4675,52.498041,30.01.2023,08:00 (bis 17.05.2023) (inaktiv)
+#: source_id: viz2021:13.468961,52.501075,17.03.2023,08:00 (bis 17.05.2023) (inaktiv)
+#: source_id: viz2021:13.470533,52.504112,22.05.2023,06:00 (unklare Verkehrsmeldung, bis 26.05.2023) (inaktiv)
+#: note: laut Baustellenplan Wegführung über den linken Gehweg, in der Realität gibt es keine Freigabe des Gehwegs; wegen des erhöhten Verkehrs (obere Kynaststr. wurde mittlerweile komplett für den Kfz-Verkehr gesperrt: q3 -> q4+); bei der neuerlichen Sperrung gibt es nun doch Radfahrer-frei-Schilder, allerdings recht schmal; die neue Sperrung ab Juni 2023 wieder ohne Radfahrer-frei-Schilder
+#: note: laut rbbtext von 6.6.2023 bis Ende August 2023
+#: last_checked: 2023-06-07
+#: next_check: 2023-08-31
+#: valid: -2023-08-31
+An der Mole: Einbahnstraßenregelung	q3::inwork; 14843,10621 14828,10561 14832,10512 14815,10516 14805,10518
+# 
 # REMOVED --- #: by: https://nitter.cz/VIZ_Berlin/status/1660486892675301376#m (bis 26.05.2023) --- #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRndlcWpYQ1gwQUFOOUg4LmpwZw== --- #: next_check: 2023-05-26 --- #: valid: -20230526 --- Kynaststr.: Fahrbahn hinter der Marktstr./Boxhagener Str. gesperrt	q3::inwork; 14988,11130 14950,11049
 # REMOVED --- #: next_check_id: FRANKFURTER-2021 --- #: last_checked: 2022-04-03 --- # REMOVED --- #: check_frequency: 7d --- #: next_check: 2022-04-30 --- Jessnerstr.: Bauarbeiten an der Kreuzung Frankfurter Allee, schmalen Gehweg nutzen	q2::inwork 15077,11910 15117,12106
 # REMOVED (wieder offen) --- #: next_check_id: MUEHSAM-2022 --- #: XXX Bauarbeiten der Wasserbetriebe, laut Schild bis April 2022 --- #: XXX Datensatz in gesperrt-orig beachten! --- #: also_indoor: traffic (ex-B,G(falsch)) --- #: last_checked: 2022-05-06 vvv --- #: check_frequency: 14d vvv --- # REMOVED --- #: next_check: 2022-04-01 vvv --- Mühsamstr.: Bauarbeiten im Kreuzungsbereich Thaerstr., Fahrbahn gesperrt	q4::inwork 13838,12884 13818,12897
@@ -276,7 +302,7 @@ Grunerstr.: Gehweg	q4 10900,12546 10973,12612 11057,12715
 #: by: https://www.deutsches-architekturforum.de/thread/7660-marinehaus-umbau-stiftung-stadtmuseum/?postID=712499#post712499
 #: by: https://www.berliner-woche.de/mitte/c-bauen/maerkisches-museum-oeffnet-sich-fuer-die-stadtgesellschaft_a367415 (Sanierung des Marinehauses bis Mitte 2025)
 #: also_indoor: traffic (none)
-#: last_checked: 2023-05-25
+#: last_checked: 2023-06-06
 #: check_frequency: 90d
 #: next_check: 2025-06-30
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883 11160,12071
@@ -491,13 +517,7 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 #: valid: -20230731
 Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9133
 # 
-#: next_check_id: WANDLITZ-2021
-#: note: am 2022-04-22 war die Fahrbahn offen, aber möglicherweise war das nur "zufällig" so, weil Baufahrzeuge reinfahren mussten; jedenfalls stehen an beiden Enden Bauzäune, die umgeklappt werden können
-#: also_indoor: traffic
-#: last_checked: 2023-03-17
-#: check_frequency: 90d
-Wandlitzstr.: in Höhe Lehndorffstr. kann die Fahrbahn gesperrt sein	q4::inwork 18401,8636 18448,8602
-# 
+# REMOVED (Bauarbeiten sind beendet) --- #: next_check_id: WANDLITZ-2021 --- #: note: am 2022-04-22 war die Fahrbahn offen, aber möglicherweise war das nur "zufällig" so, weil Baufahrzeuge reinfahren mussten; jedenfalls stehen an beiden Enden Bauzäune, die umgeklappt werden können --- #: also_indoor: traffic --- #: last_checked: 2023-03-17 --- #: check_frequency: 90d --- Wandlitzstr.: in Höhe Lehndorffstr. kann die Fahrbahn gesperrt sein	q4::inwork 18401,8636 18448,8602
 # REMOVED --- #: source_id: viz2021:13.52358,52.480928,28.11.2022,06:30 (bis 09.12.2022, hier nur Kfz-Verkehr) (bis 12.12.2022) --- #: last_checked: 2022-12-05 --- #: next_check: 2022-12-12 --- #: valid: -20221212 --- Wandlitzstr.: Fahrbahn zwischen Wildensteiner Str. und Heiligenberger Str. gesperrt	q4::inwork 18627,8475 18557,8525
 # 
 # REMOVED (wohl nicht mehr) --- #: next_check_id: WANDLITZ-2021 --- #: last_checked: 2022-10-16 vvv --- Wandlitzstr.: Sperrung der Fahrbahn zwischen Heiligenberger Str. und Stühlinger Str.	q2::inwork 18627,8475 18557,8525 --- Wandlitzstr.: Sperrung der Fahrbahn zwischen Heiligenberger Str. und Stühlinger Str.	q3::inwork 18557,8525 18494,8569 --- #: last_checked ^^^
@@ -569,13 +589,14 @@ Wandlitzstr.: in Höhe Lehndorffstr. kann die Fahrbahn gesperrt sein	q4::inwork 1
 #: next_check_id: HAEMMERLING-2022
 #: by: https://bauprojekte.deutschebahn.com/media/projects/6790/docs/PR_berlin-frankfurt-oder-bundesgrenze-d-pl_umbau_koepenick_bf_20230330.pdf (hier bis 15.6.2023)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1331223.php (ab Ende Juni 2023 passierbar)
+#: by: https://bauprojekte.deutschebahn.com/media/projects/6790/docs/PR_berlin-frankfurt-oder-bundesgrenze-d-pl_umbau_koepenick_bf_20230531.pdf (bis 11.7.2023)
 #: osm_watch: way id="794278028" version="10"
 #: source_id: viz2021:13.572881,52.460427,25.03.2023,06:00 (bis 25.05.2023) (bis 30.6.2023) vvv
 #: also_indoor: traffic (H,G,B,W) vvv
-#: last_checked: 2023-05-13 vvv
+#: last_checked: 2023-06-01 (bahninfo-forum) vvv
 # REMOVED --- #: check_frequency: 30d
-#: next_check: 2023-06-30 vvv
-#: valid: 20230325-20230630 vvv
+#: next_check: 2023-07-11 vvv
+#: valid: 20230325-20230711 vvv
 Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q4::inwork 21984,6317 22000,6245
 Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q3::inwork 22000,6245 22033,6144
 #: valid ^^^
@@ -741,7 +762,7 @@ Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14310,7022 14276,702
 #: by: https://www.kms-sonne.de/baustellennews?date=20220830
 #: by: https://www.kms-sonne.de/assets/2022/08/Baustellenuebersicht-2022-08-web.pdf
 #: osm_watch: way id="640465875" version="12"
-#: last_checked: 2023-05-11
+#: last_checked: 2023-06-09
 #: check_frequency: 120d
 #: next_check: 2024-06-01
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
@@ -763,7 +784,7 @@ Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwor
 #: osm_watch: way id="625667165" version="18"
 #: also_indoor: traffic (G[falsch],B,H)
 #: priority: #B
-#: last_checked: 2023-05-11
+#: last_checked: 2023-06-09
 #: check_frequency: 90d
 #: next_check: 2023-10-31
 Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kann zugeparkt sein	q2::inwork; 12494,8501 12349,8464
@@ -1266,10 +1287,11 @@ Hasenheide, zur Lilienthalstr.: Parkweg	q1 10709,9192 11111,9104 11141,9107
 (Hasenheide, östlicher Rundweg): Fußgänger	q1 11560,8480 11549,8601 11578,8784 11587,8882 11549,8917 11484,8928 11406,8941 11182,8983
 (Hasenheide, südöstlicher Rundweg): Fußgänger	q1 11467,8329 11523,8327 11559,8357 11570,8409 11560,8480
 (Flughafenstr. - Rundweg in der Hasenheide): Fußgänger	q1 11632,8302 11577,8315 11559,8357
+Am Flutgraben: Fußgänger	q1 13333,9929 13418,9944
 #: next_check_id: SCHLESISCHERBUSCH-2023
 #: XXX_prog: Konflikt mit gesperrt-orig-Eintrag
 #: valid: 20230915-
-Am Flutgraben: Fußgänger	q1 13333,9929 13418,9944 13579,10146
+Am Flutgraben: Fußgänger	q1 13418,9944 13579,10146
 (durch den Schlesischen Busch): Fußgänger	q1 13418,9944 13657,9983 13711,10022
 Kolonie Albrechtshöhe: einige Fußgänger	q1 10260,5953 10215,5959 9955,5993
 #: note: Grünanlage mit "Radfahren-verboten-Zeichen" (FH/KB-Style), früher "q1"
@@ -3283,7 +3305,7 @@ Engelwurzweg: eng	q2 24275,6156 24306,6210 24368,6268 24424,6296 24473,6304
 #: XXX wird das Radfahren hier erlaubt werden? vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5388
 #: osm_watch: way id="26995453" version="10"
-#: last_checked: 2023-05-13 vvv
+#: last_checked: 2023-06-10 vvv
 #: check_frequency: 120d vvv
 (Uferweg an der Spree): Radfahren verboten	q4 18695,5453 18634,5484 18560,5539 18506,5596 18473,5645 18430,5719 18413,5799 18400,5841 18334,5900 18199,5935
 (Uferweg an der Spree - Kaisersteg): Radfahren verboten	q4 18413,5799 18339,5853 18326,5850
@@ -4335,7 +4357,7 @@ Bruno-Baum-Grünzug: Grünanlage, Fußgänger	q3 20260,15434 20245,15394 20004,15251
 (Breitenbachplatz/Südwestkorso - Kreuznacher Str.): Gehweg	q4+ 4103,6716 4174,6711
 (Krautstr. - Kleine Markusstr.): zwei Bodenschwellen	q2 12002,12008 11961,12025 11956,12071 11932,12111 11937,12127
 An der Wuhlheide: gegenläufiger Geh/Radweg	q3; 21303,5826 21365,5832 21470,5809 21522,5771 21569,5730 21600,5694 21605,5687
-Lindenstr.: gegenläufiger Geh/Radweg	q3; 21605,5687 21706,5541 21789,5427
+Lindenstr.: gegenläufiger Geh/Radweg	q3; 21605,5687 21623,5661 21706,5541 21789,5427
 #: note: Grünanlage, keine Zusatzschilder
 (Zur Waage - Zur Innung): Grünanlage, einige Fußgänger	q3 14067,13050 14086,13090
 Baruther Str.: asphaltierte Kissen (2x)	q1 9837,9856 9723,9842
@@ -4543,11 +4565,11 @@ Waldemarstr.: einige Fußgänger, Bordstein	q3 10464,20390 10475,20355
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_29_1829_2008_online.pdf
 #: by: https://www.berliner-woche.de/alt-treptow/c-bauen/umgestaltung-des-schmollerplatzes-ist-geplant-aber-erst-ab-2025_a350879 (Erwähnung der Teileinziehung)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_40_2729_2764_online.pdf
-#: XXX Bleibt die Komplettsperrung auch für Radfahrer?
-#: XXX Bleibt die Ausschilderung der TR4-Routenführung?
+#: XXX Bleibt die Komplettsperrung auch für Radfahrer? Laut SGA Treptow-Köpenick ist in Zukunft kein Radverkehr mehr vorgesehen, siehe auch https://www.openstreetmap.org/note/3390316
+#: XXX Bleibt die Ausschilderung der TR4-Routenführung? Laut SGA TK wird die Radroutenführung mit SenMVKU und InfraVelo abgestimmt
 # REMOVED (closed) --- #: osm_watch: note 3390316 1
 #: osm_watch: way id="856982239" version="5"
-#: last_checked: 2023-05-22
+#: last_checked: 2023-06-09
 #: check_frequency: 30d
 Heidelberger Str.: Fahrbahn in Bereich des Schmollerplatzes gesperrt	q3 13234,9426 13202,9455
 # 

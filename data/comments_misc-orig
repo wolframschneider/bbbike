@@ -599,7 +599,7 @@ Bus 160	busroute_N 18675,-231 18906,-316 18997,-351 19105,-376 19270,-417 19348,
 Bus 161	busroute_N 29901,4264 29947,4268 30020,4273 30132,4281 30246,4287 30293,4290 30345,4293 30461,4300 30562,4306 30614,4309 30665,4312 30696,4314 30655,4186 30605,4028 30518,3753
 Bus 161	busroute_N 31447,3372 31500,3427 31528,3456 31670,3604 31724,3592 31756,3620 31745,3679 31839,3774 31905,3839 31966,3902 32081,4021
 Bus 161	busroute_N 31745,3679 31695,3690 31661,3665 31670,3604
-Bus 161	busroute_N 32814,3107 32785,2935 32790,2792 32643,2695 32512,2621 32467,2582 32316,2468 32162,2542 32115,2581 32031,2723 31965,2920 31967,2966 31971,3170 31973,3237
+Bus 161	busroute_N 32814,3107 32785,2935 32790,2792 32643,2695 32512,2621 32467,2582 32316,2468 32162,2542 32115,2581 32031,2723 31965,2920 31965,2966 31965,2999 31971,3170 31973,3237
 Bus 161	busroute_N 32162,2542 32445,2716 32512,2621
 Bus 164	busroute_N 20839,3163 20772,3244 20717,3310 20644,3395 20499,3572 20451,3538 20366,3480 20299,3435 20262,3409 20237,3392 20166,3344 20064,3278
 Bus 164	busroute_N 20166,3344 20113,3408 20089,3438 20066,3466 20012,3532
@@ -1359,7 +1359,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2023-05-30
+#: last_checked: 2023-06-09
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1514,7 +1514,7 @@ ausgeschildert nach Bernau	CP; 32543,18082 32537,18066 32519,18076
 ausgeschildert Sophie-Charlotte-Platz	CP; 3064,11657 3144,11659 3159,11562
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
-#: last_checked: 2023-05-13 vvv
+#: last_checked: 2023-06-08 vvv
 #: check_frequency: 180d vvv
 #: note: hier ist das Schild wohl verloren gegangen?
 Henriette-Lustig-Str.: nicht ausgeschildert	CS 21476,5048 21611,5119
@@ -1714,7 +1714,7 @@ Am Pankepark: nicht ausgeschildert	CS 8152,14130 8238,14181 8282,14116 8207,1406
 Volkerweg: nicht ausgeschildert	CS 16005,4012 16046,4073 16060,4093 16145,4217 16151,4226
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
-#: last_checked: 2023-05-13
+#: last_checked: 2023-06-08
 #: check_frequency: 60d
 Carl-Spindler-Str. - Uferweg: in Höhe Blütenweißweg zwischen den Neubauten links abbiegen	CP; 21474,5388 21483,5374 21518,5389
 # REMOVED --- Eiselenweg - Uferweg: Einfahrt zum Uferweg ist etwas versteckt, vor dem Neubaugebiet links abbiegen	CP; 21364,5430 21442,5414 21476,5434
@@ -1727,7 +1727,7 @@ Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9724 (Anfrage)
-#: last_checked: 2023-05-08 vvv
+#: last_checked: 2023-06-08 vvv
 Ruth-Baumgarte-Str.: noch nicht ausgeschildert, stattdessen Wegweiser zu fünf Straßen im Wohngebiet	CS 17794,8429 17738,8450
 # REMOVED --- Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17738,8450 17682,8464 17608,8483
 # REMOVED --- Irmtraud-Morgner-Str.: noch nicht ausgeschildert	CS 17524,8536 17627,8556 17755,8519
@@ -1808,6 +1808,7 @@ Boveristr.: nicht ausgeschildert	CS 19053,2890 19069,2904 19146,2975
 # 
 Neue Schönholzer Str.: zur Weiterfahrt in die Schönholzer Str. Radweg und Radfahrampel auf der linken Seite benutzen	CP; 10141,18030 10089,18180 10054,18210
 # 
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_25_2521_2620_online.pdf (Grundstücksnummerierungen)
 #: add_fragezeichen: Wann wird der Krabbentaucherweg ausgeschildert?
 #: last_checked: 2023-04-13 (mapillary)
 #: check_frequency: 90d
@@ -1839,7 +1840,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen offen? vvv
-#: last_checked: 2023-06-05 vvv
+#: last_checked: 2023-06-08 vvv
 #: check_frequency: 60d vvv
 #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand
 Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699 15140,10647 15138,10638

@@ -343,14 +343,15 @@ Verbundsteinpflasterradweg	RW1;RW1 -650,-1077 -861,-1207 -882,-1220
 Verbundsteinpflasterradweg	RW2; -1664,-1720 -1656,-1702 -1573,-1477 -1503,-1328 -1331,-1092 -1345,-1016 -1395,-830
 Radweg auf Gehweg	RW2;RW2 -14919,-1817 -14733,-1812
 Radweg auf Gehweg	RW2; -14612,-1809 -14733,-1812
-Verbundsteinpflaster	RW2;RW2 -850,-203 -781,-309 -645,-524
-Verbundsteinpflaster	RW;RW1 -645,-524 -601,-589 -549,-678
+Gehweg für Radfahrer frei, Verbundsteinpflaster	RW1; -850,-203 -781,-309 -645,-524 -601,-589 -549,-678
+Verbundsteinpflaster	RW2; -645,-524 -781,-309 -850,-203
+Verbundsteinpflaster	RW1; -549,-678 -601,-589 -645,-524
 # 
 #: by: https://www.berliner-woche.de/teltow/c-bauen/rammrathbruecke-wird-erneuert_a230938
 #: by: https://www.berliner-woche.de/zehlendorf/c-bauen/wasserstrassen-neubauamt-liess-haupttraeger-der-neuen-rammrathbruecke-einbauen_a285844
 #: by: https://www.berliner-woche.de/zehlendorf/c-bauen/neubau-der-rammrathbruecke-wohl-schon-im-sommer-fertig_a306339
 # REMOVED (laut osm track) --- #: XXX nach Ende der Brückenarbeiten (Rammrathbrücke) soll hier ein kombinierter Geh- und Radweg entstehen --- #: source_id: 2019B00234 (bis 31.12.2021) (inaktiv) --- #: osm_watch: way id="5364051" version="19" brb --- #: osm_watch: way id="757445000" version="2" brb --- #: next_check: 2021-07-01
-	RW; -549,-678 -543,-691 -513,-736
+Gehweg für Radfahrer frei	RW1; -549,-678 -543,-691 -513,-736
 Gehweg für Radfahrer frei	RW1; -513,-736 -543,-691 -549,-678
 # 
 	RW3;RW4 -12317,-1212 -12348,-1220 -12364,-1224 -12549,-1277 -12666,-1311
@@ -872,6 +873,8 @@ Gehweg für Radfahrer frei	RW1;RW9 18751,27519 18658,27539
 	RW6;RW6 -14119,-2778 -14163,-2706 -14182,-2679 -14234,-2587 -14169,-2548 -14110,-2642 -14182,-2679
 	RW3;RW3 -9928,-4643 -10069,-4508 -10072,-4507 -10170,-4416 -10183,-4402 -10222,-4363 -10277,-4312 -10329,-4263 -10360,-4236 -10394,-4204 -10451,-4149 -10630,-3994 -10676,-3954
 #: by: mapillary vvv
+#: note: keine Schilder
+asphaltiert	RW9;RW1 40580,9711 40301,10729 40312,11145 40314,11223
 	RW3; -9620,-4939 -9642,-4916 -9809,-4754 -9862,-4705 -9872,-4694 -9928,-4643
 	RW3; -9928,-4643 -9872,-4694 -9862,-4705 -9809,-4754
 #: by ^^^
@@ -1701,7 +1704,8 @@ Verbundsteinpflaster	RW2; -2577,-3189 -2617,-3262 -2740,-3476
 Verbundsteinpflaster	RW2; -248,-1160 -321,-1038
 Verbundsteinpflaster	RW1; -321,-1038 -395,-920 -444,-841
 Gehweg für Radfahrer frei, Verbundsteinpflaster	RW1; -444,-841 -513,-736
-	RW; -513,-736 -444,-841 -395,-920 -321,-1038 -248,-1160
+Gehweg für Radfahrer frei	RW1; -513,-736 -444,-841 -395,-920
+	RW2; -395,-920 -321,-1038 -248,-1160
 	RW8;RW2 4424,26240 4920,26815 5496,27009
 	RW2;RW8 7617,26640 6880,27351 5939,27781
 asphaltiert	RW2;RW8 5486,27745 4807,28338 4435,28862
@@ -1920,7 +1924,7 @@ Verbundsteinpflaster	RW2;RW8 40763,15190 40505,14994 40413,14869 40272,14553
 Gehweg für Radfahrer frei, Verbundsteinpflaster	RW1;RW9 40272,14553 39515,14603
 Gehweg für Radfahrer frei, Verbundsteinpflaster	RW9;RW1 40259,14530 39791,13780
 Verbundsteinpflaster	RW1; 40305,12773 40446,12631 40565,12409
-Gehweg für Radfahrer frei, Verbundsteinpflaster	RW1; 40412,11647 40179,11450 39925,11298
+Gehweg für Radfahrer frei, Verbundsteinpflaster	RW1; 40412,11647 40179,11450 40084,11390 39925,11298
 Gehweg für Radfahrer frei	RW1; 39925,11298 39813,11268 39563,11244 39310,11034 38808,10458 38546,10223 38409,10178
 asphaltiert	RW8;RW2 37621,9843 37133,9978 36994,10003
 #: note: hier gibt's ein "Radweg-Ende"-Schild --- ist das tatsächlich die Intention?
