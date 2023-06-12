@@ -5,6 +5,13 @@
 # Author: Slaven Rezic
 #
 
+BEGIN {
+    if (system("egrep -q bookworm /usr/lib/os-release") == 0) {
+        print "1..0 # skip debian12/bookworm\n";
+        exit;
+    }
+}
+
 use strict;
 use FindBin;
 use lib (
