@@ -1107,7 +1107,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/mobilitaetswenderat/22-08-24-mobilitaetswenderat-protokoll_final.pdf (neben der Asphaltierung wird auch ein modaler Filter am Boxhagener Platz erwähnt)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2023-06-13
+#: last_checked: 2023-06-16
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -13142,6 +13142,9 @@ Paul-und-Paula-Promenade: unbefestigte Baustraße	Q2 14886,10748 14984,10677
 # 
 Bölschestr. [Marktplatz]: Kopfsteinpflaster	Q2 25491,5240 25497,5327 25544,5326
 Bölschestr. [Kirchplatz]: Kopfsteinpflaster	Q2 25544,5326 25592,5322 25588,5235
+# 
+Am Flutgraben: Kopfsteinpflaster	Q3+ 13579,10146 13613,10187
+Am Flutgraben: brüchiger Beton, Schienen	Q2 13613,10187 13647,10218
 ######################### User Contributions #################################
 #: by: anonymous vvv
 # 

@@ -835,7 +835,7 @@ Bordsteine beim Überqueren der Wuhletalstr.	CS 20801,17821 20728,17670 20657,175
 #: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/baumassnahme-an-der-grunewaldstrasse-haengt-von-senatsplaenen-ab_a252769
 #: XXX Realisierung einer Querung geplant
 #: note: Der osm_watch-Way enthält zurzeit wheelchair=limited
-#: osm_watch: way id="523802314" version="2"
+#: osm_watch: way id="523802314" version="3"
 #: last_checked: 2023-04-02
 #: check_frequency: 120d
 Bordsteine beim Überqueren der Grunewaldstr.	CP; 6851,9365 6917,9274 7001,9291
@@ -1321,7 +1321,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 11399
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="6"
-#: last_checked: 2023-06-04
+#: last_checked: 2023-06-15
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CP2; 9939,12174 9909,12261
 ausgeschildert als Falkoniergasse 3, blaues Schild mit Frakturschrift	CP2; 9909,12261 9939,12174
@@ -1781,10 +1781,8 @@ Am Werksgarten: nicht ausgeschildert	CP2; 22805,5179 22803,5241
 # 
 Schilder VoltAir-Parkhaus und Zugang Dircksenstraße 04	CP2; 11240,12368 11344,12410
 # 
-#: by: https://www.berliner-woche.de/mitte/c-bauen/forum-an-der-museumsinsel-ist-fertig-saniert_a380269
-#: XXX Wird hier noch ausgeschildert?
-#: last_checked: 2023-05-29
-Forum an der Museumsinsel: nicht ausgeschildert	CS 9650,13074 9682,13167 9633,13192 9602,13081
+# REMOVED --- #: by: https://www.berliner-woche.de/mitte/c-bauen/forum-an-der-museumsinsel-ist-fertig-saniert_a380269 --- #: XXX Wird hier noch ausgeschildert? --- #: last_checked: 2023-05-29
+Forum an der Museumsinsel: keine Standard-Ausschilderung	CS 9650,13074 9682,13167 9633,13192 9602,13081
 # 
 #: by: mapillary (kein Scherz)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5832

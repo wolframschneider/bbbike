@@ -10,6 +10,18 @@
 # 
 ### Friedrichshain ###
 # 
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1191451.php (Umgestaltung bis Sommer 2023)
+#: by: https://www.berliner-woche.de/friedrichshain/c-bauen/bauarbeiten-am-franz-mehring-platz_a340931
+#: by: https://www.competitionline.com/de/news/ergebnisse/neugestaltung-franz-mehring-platz-in-berlin-280286/prizegroup/1-preis-101800.html
+#: by: https://images.competitionline.com/image/f/9/5/a/b/e/1/b/f95abe1bc3b10ee4f2778b024afc5734_1.jpg?auto=format,compress&fm=jpg&ixlib=imgixjs-3.4.1&w=4742
+#: by: https://www.gm013.la/work/fmp
+#: by: https://www.architektur-urbanistik.berlin/index.php?threads/pl%C3%A4tze-vorpl%C3%A4tze.93/page-2#post-19593
+#: XXX evtl. wird die Erschließungsstraße nicht mehr durchgängig sein; evtl. wird man die Fläche als Grünfläche kennzeichnen können
+#: last_checked: 2023-06-15
+#: check_frequency: 30d
+#: next_check: 2023-07-01
+(Vorfahrt Neues-Deutschland-Gebäude): Bauarbeiten, enger Weg	q4::inwork 12788,11898 12891,12008
+# 
 #: by: https://www.openstreetmap.org/note/3677860
 #: also_indoor: traffic (B)
 #: last_checked: 2023-06-10
@@ -19,7 +31,7 @@ Wühlischstr.: Bauarbeiten an der Einmündung Boxhagener Str., Fahrbahn gesperrt	q
 #: XXX Bauarbeiten dauern möglicherweise bis November 2023 (Halteverbotsschilder)
 #: XXX alten handicap-Eintrag in der Niemannstr. wieder aktivieren bzw. valid-Direktive anpassen
 #: also_indoor: traffic (B) vvv
-#: last_checked: 2023-06-13 vvv
+#: last_checked: 2023-06-16 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2023-11-10 vvv
 #: valid: -20231110 vvv
@@ -43,7 +55,7 @@ Seumestr./Niemannstr.: Bauarbeiten vor der Kreuzung Simplonstr., Abschnitte der 
 Bödikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
 # 
 #: also_indoor: traffic (B,H)
-#: last_checked: 2023-06-13
+#: last_checked: 2023-06-16
 Kinzigstr.: Bauarbeiten nördlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975
 # 
 # REMOVED --- #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0223_barrierefrei.pdf (20.2.2023 - 23.4.2023) --- #: by: https://viz.berlin.de/2023/02/verkehrsvorschau-200223/ (bis 24.4.2023) --- #: source_id: bvg2021:16#BVG316317_0 --- #: source_id: bvg2021:16#BVG318556_0 (bis 29.4.4023) --- #: note: siehe auch https://www.openstreetmap.org/note/3474648 --- #: XXX evtl. ist auch die Travestr. betroffen --- #: last_checked: 2023-04-18 --- #: next_check: 2023-04-24 --- #: valid: -20230429 --- Müggelstr./Travestr.: Gleisbauarbeiten	q4::inwork 14965,11924 14901,11808 14836,11842
@@ -238,8 +250,9 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 # 
 #: next_check_id: PLDVEREINTENNATIONEN-2023
 #: last_checked: 2023-06-01
-#: next_check: 2023-06-16
-#: valid: -20230616
+#: check_frequency: 30d
+#: next_check: 2023-06-30
+#: valid: -20230630
 Platz der Vereinten Nationen: Anbindung Mollstr. gesperrt, Bordsteine, Engstellen	q4::inwork 11896,13075 11904,13052
 # 
 # REMOVED (mittlerweile wieder Führung via Fahrbahn trotz nicht ganz abgeschlossener Baustelle) --- #: source_id: viz2021:13.414995,52.527328,22.05.2023,06:00 (bis 09.06.2023) --- #: by: https://nitter.cz/VIZ_Berlin/status/1660510235155484672#m --- #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRndldEE0b1dBQVU0VmE2LmpwZw== --- #: next_check: 2023-06-09 --- #: valid: -20230609 --- Mollstr.: Fahrbahnsanierungsarbeiten, Radfahrer werden über den Gehweg geführt	q1-::inwork; 11160,13492 11216,13451 11270,13412 11276,13408
@@ -281,7 +294,7 @@ Grunerstr.: Gehweg	q4 10900,12546 10973,12612 11057,12715
 #: by: https://www.deutsches-architekturforum.de/thread/7660-marinehaus-umbau-stiftung-stadtmuseum/?postID=712499#post712499
 #: by: https://www.berliner-woche.de/mitte/c-bauen/maerkisches-museum-oeffnet-sich-fuer-die-stadtgesellschaft_a367415 (Sanierung des Marinehauses bis Mitte 2025)
 #: also_indoor: traffic (none)
-#: last_checked: 2023-06-06
+#: last_checked: 2023-06-15
 #: check_frequency: 90d
 #: next_check: 2025-06-30
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883 11160,12071
@@ -297,7 +310,7 @@ Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic vvv
-#: last_checked: 2023-06-04 vvv
+#: last_checked: 2023-06-15 vvv
 #: check_frequency: 60d vvv
 #: osm_watch: way id="24242892" version="40"
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8775,12457 8904,12489 8999,12498
@@ -329,13 +342,9 @@ Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontaine
 #: by: http://www.deal-magazin.com/news/3/123294/Berlin-Naechste-Projektphase-fuer-das-Mehrreligionenhaus-House-of-One
 #: XXX wann sind die Bauarbeiten beendet?
 #: XXX verursachende Bauarbeiten sind die am Archäologischen Haus, nicht am House of One
-#: last_checked: 2023-05-27 (daf)
+#: last_checked: 2023-06-13 (mapillary)
 #: check_frequency: 60d
 Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 10364,11896 10332,11929 10392,11991
-# 
-#: note: am 2023-04-25 gab es einen recht schmalen Durchgang, mit einem Fahrrad ist man noch gerade so durchgekommen; am 2023-05-04 auch der gleiche schmale Durchgang, aber ein davor geparktes Auto hätte vielleicht einiges an Rangierarbeit verursacht; am 2023-05-16 existiert wieder ein schmaler Durchgang -> von gesperrt nach handicap_s verschoben
-#: last_checked: 2023-05-10
-Caroline-von-Humboldt-Weg: Kraneinsatz, Fahrbahn gesperrt, schmaler Durchgang existiert	q4::inwork 9961,12094 10050,11942
 # 
 # REMOVED --- #: source_id: viz2021:13.404739,52.514839,10.05.2021,06:00 (bis 1.10.2021) (inaktiv) --- #: note: laut rbb bis 1.11.2021 --- #: last_checked: 2021-10-26 (mapillary) --- #: check_frequency: 21d --- # REMOVED --- #: next_check: 2021-10-30 --- # REMOVED --- #: valid: -20211030 --- Scharrenstr.: Bauarbeiten an der Breiten Str., einige Meter der Fahrbahn gesperrt	q3::inwork 10480,12077 10418,12016
 # REMOVED (explizit für Radfahrer frei, siehe Mapillary) --- #: osm_watch: way id="639343525" version="2" --- #: osm_watch: way id="268002748" version="10" --- #: XXX laut osm opening_date=2021 --- #: also_indoor: traffic (G,ex-H) --- #: last_checked: 2021-05-22 --- #: check_frequency: 30d --- Hirtenstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11012,13278 10925,13322
@@ -411,7 +420,7 @@ Caroline-von-Humboldt-Weg: Kraneinsatz, Fahrbahn gesperrt, schmaler Durchgang ex
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
 #: priority: #B vvv
-#: last_checked: 2023-06-01 vvv
+#: last_checked: 2023-06-15 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="14"
@@ -798,15 +807,7 @@ Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kan
 #: last_checked: 2023-06-02
 Frankfurter Allee [Wohngebiet]: Bauarbeiten, Anbindung zur richtigen Frankfurter Allee unterbrochen, Bordsteine	q3::inwork 16190,11872 16214,11935
 # 
-#: next_check_id: PARKAUE-2022
-#: XXX Bauarbeiten der Wasserbetriebe, laut Baustellenschild bis Oktober 2023
-#: XXX Einbahnstraßenregelung nach den Bauarbeiten wiederherstellen
-#: also_indoor: traffic (ex-G)
-#: last_checked: 2023-03-16
-#: check_frequency: 90d
-#: next_check: 2023-10-31
-Parkaue: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung	q4+::inwork; 15535,12420 15457,12449
-# 
+# REMOVED (keine Einschränkung mehr) --- #: next_check_id: PARKAUE-2022 --- #: XXX Bauarbeiten der Wasserbetriebe, laut Baustellenschild bis Oktober 2023 --- #: XXX Einbahnstraßenregelung nach den Bauarbeiten wiederherstellen --- #: also_indoor: traffic (ex-G) --- #: last_checked: 2023-06-16 --- #: check_frequency: 90d --- #: next_check: 2023-10-31 --- Parkaue: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung	q4+::inwork; 15535,12420 15457,12449
 # REMOVED (am nächsten Tag aufgehoben) --- #: last_checked: 2022-06-18 --- #: check_frequency: 14d --- Gustav-Holzmann-Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 16119,9689 16302,9865
 # REMOVED (Fahrbahn ist frei) --- #: next_check_id: ROEDELIUSPLATZ-2022 --- #: by: https://www.berliner-woche.de/lichtenberg/c-verkehr/ein-halbes-jahr-bleibt-der-roedeliusplatz-dicht_a308544 (27. April 2021, geplant bis November 2021) --- #: XXX ändert sich nach den Bauarbeiten die Fahrbahnbeschaffenheit? --- #: XXX Laut Schild der Wasserbetriebe bis Juni 2022 --- #: XXX Laut Schild des Bezirksamts Umgestaltung bis August 2023 (!) --- #: also_indoor: traffic (ex-G[unvollständig],H[mittlerweile richtig],B) --- #: last_checked: 2022-11-06 vvv --- #: check_frequency: 7d vvv --- #: next_check: 2023-08-31 vvv --- Roedeliusplatz: wegen Fahrbahnarbeiten gesperrt	q4::inwork 16276,12273 16227,12280 16159,12293
 # REMOVED (hier auch offen, Einbahnstraßenregelung für Nicht-Radfahrer) --- Roedeliusplatz: Kreuzung Roedeliusplatz/Glaschkestr./Magdalenenstr. gesperrt, Umwege über die Gehwege möglich	q4::inwork 16159,12293 16056,12317
@@ -4094,7 +4095,7 @@ Landschaftspark Johannisthal: einige Fußgänger	q1 18164,2712 18167,2724 18191,28
 #: next_check_id: EINHEITSDENKMAL-2022
 #: by: https://berliner-abendblatt.de/2022/11/09/einheitsdenkmal-soll-nach-lieferproblemen-2023-fertig-sein/
 #: XXX außerdem prüfen: Wird diese Verbindung auch zur Fußgängerzone gehören?
-#: last_checked: 2023-06-04
+#: last_checked: 2023-06-15
 #: check_frequency: 45d
 #: next_check: 2023-10-01
 # REMOVED (früher: Schloßplatz: Fußgänger	q2 10174,12284 10102,12384)
