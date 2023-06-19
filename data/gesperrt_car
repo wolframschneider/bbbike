@@ -1614,9 +1614,11 @@ Sembritzkistr.: nur für Radfahrer	3 7157,5418 7199,5479 7245,5568
 Sembritzkistr.: nur für Radfahrer	3 7245,5568 7199,5479 7157,5418
 Egon-Erwin-Kisch-Str. [Wohngebiet]: Schranke (für Autofahrer)	3 17053,18879 17067,19004 17068,19016
 Egon-Erwin-Kisch-Str. [Wohngebiet]: Schranke (für Autofahrer)	3 17068,19016 17067,19004 17053,18879
-Straßenbahntrasse	3nocross::ignrte 18417,10738 18446,10620 18554,10354
+Straßenbahntrasse	3nocross::ignrte 18417,10738 18446,10620 18554,10354 18585,10278
 Am Tierpark -> Erich-Kurz-Str.: Straßenbahntrasse	3::igndisp 18554,10354 18446,10620 18397,10608
 Erich-Kurz-Str. -> Am Tierpark: Straßenbahntrasse	3::igndisp 18397,10608 18446,10620 18417,10738
+Otto-Schmirgal-Str. -> Am Tierpark: Straßenbahntrasse	3::igndisp 18512,10337 18554,10354 18446,10620
+Am Tierpark -> Otto-Schmirgal-Str.: Straßenbahntrasse	3::igndisp 18585,10278 18554,10354 18512,10337
 Domnauer Str.: Poller	3 7816,5519 7816,5682 7817,5719
 Domnauer Str.: Poller	3 7817,5719 7816,5682 7816,5519
 Hermannswerder	1 -14306,-2867 -14044,-2918 -13765,-2974 -13733,-2967
@@ -2108,10 +2110,10 @@ Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5631,8011 5631,8141 5573,8197
 Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5573,8197 5631,8141 5631,8011
 Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5631,8011 5631,8141 5651,8218
 Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5651,8218 5631,8141 5631,8011
-Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5573,8197 5631,8141 5820,8117
-Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5820,8117 5631,8141 5573,8197
-Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5820,8117 5631,8141 5651,8218
-Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5651,8218 5631,8141 5820,8117
+Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5573,8197 5631,8141 5808,8124
+Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5808,8124 5631,8141 5573,8197
+Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5808,8124 5631,8141 5651,8218
+Prinzegentenstr./Durlacher Str.: Diagonalsperre	3 5651,8218 5631,8141 5808,8124
 Mittelinsel	3nocross::ignrte 13138,8762 13193,8832 13227,8877
 Wildenbruchstr. -> Weigandufer: Mittelinsel	3::igndisp 13138,8762 13193,8832 13045,8951
 Wildenbruchstr. -> Weigandufer: Mittelinsel	3::igndisp 13227,8877 13193,8832 13368,8689
@@ -2413,3 +2415,5 @@ Meyerbeerstr.	1 14086,15892 13904,15818
 Meyerbeerstr.	1 14086,15892 14286,15962
 Gounodstr.	1 14125,15796 13939,15723
 Smetanastr.	1 14125,15796 14133,15773 14195,15604
+Stedingerweg	1 13908,14654 13933,14622 13947,14513
+Süderbrokweg	1 13940,14654 13933,14622
