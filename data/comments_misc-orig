@@ -1553,7 +1553,7 @@ zunächst als "Hertastr." ausgeschildert	CP; 12510,6508 12470,6586 12743,6645
 # 
 #: note: Innovationspark Wuhlheide vvv
 ausgeschildert als (Bereich) "E"	CP2; 21219,7111 21243,7135
-ausgeschildert "Häuser 131, 210, 211, 212, 213"	CP2; 21345,7000 21371,7021
+ausgeschildert "Häuser 131, 210, 211, 212, 213"	CP2; 21342,6995 21371,7021
 nicht ausgeschildert (leerer Straßenschildrahmen)	CP2; 21233,7246 21207,7280
 nicht ausgeschildert	CP2; 21233,7246 21294,7189
 nicht ausgeschildert	CP2; 21233,7246 21284,7289
@@ -1626,7 +1626,7 @@ beide Geh/Radwege hinter der Einmündung Neukirchstr. können Richtung Am Feuchten
 #: next_check_id: HANSPETERSPLATZ-2022
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1128830.php (Benennung eines Platzes nach Hans Peters)
 #: XXX wann wird der Platz ausgeschildert?
-#: last_checked: 2023-05-18
+#: last_checked: 2023-06-22
 #: check_frequency: 45d
 Hans-Peters-Platz: nicht ausgeschildert	CS 7739,14119 7679,14030
 # 
@@ -1799,7 +1799,7 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2023-06-01
+#: last_checked: 2023-06-21
 #: check_frequency: 90d
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
 # 
@@ -1842,7 +1842,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen offen? vvv
-#: last_checked: 2023-06-08 vvv
+#: last_checked: 2023-06-21 vvv
 #: check_frequency: 60d vvv
 #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand
 Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699 15140,10647 15138,10638

@@ -403,6 +403,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://viz.berlin.de/2023/05/friedrichstr/
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/ueberraschende-kehrtwende-im-streit-um-die-friedrichstrasse_a382411
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_24_2481_2520_online.pdf (Aussetzung der Teileinziehung)
+#: by: https://www.berliner-zeitung.de/mensch-metropole/wieder-autos-in-der-friedrichstrasse-was-berlin-durch-die-oeffnung-entgeht-mitte-natascha-von-hirschhausen-galeries-lafayette-li.360709
 #: source_id: 2147346249 (vermutlich inaktiv)
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
 #: priority: #A
@@ -1821,7 +1822,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: osm_watch: way id="1010731431" version="5"
 #: osm_watch: way id="642581102" version="6"
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2023-06-18
+#: last_checked: 2023-06-22
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -1844,7 +1845,7 @@ George-Stephenson-Str.	N 7487,14472 7452,14415 7500,14333 7569,14217 7679,14030 
 #: next_check_id: HANSPETERSPLATZ-2022
 #: XXX zurzeit darf der Platz noch von Fahrzeugen benutzt werden (wegen der Bauarbeiten in der George-Stephenson-Str.?), wird später vermutlich aufgehoben, dann NN ohne osm.highway:service; eigentlich Einbahnstraße, aber der Platz ist breit genug...
 #: osm_watch: way id="977556359" version="10"
-#: last_checked: 2023-05-18
+#: last_checked: 2023-06-22
 #: check_frequency: 90d
 #: osm.highway: service
 Hans-Peters-Platz	N 7739,14119 7679,14030
@@ -2670,6 +2671,8 @@ Gustav-Hertz-Platz	NN 18722,4628 18656,4687 18649,4678 18685,4595
 Igo-Etrich-Str.	N 18930,3703 19162,3935
 Georg-Schendel-Str.	N 19125,3491 19363,3730
 Merlitzstr.	N 19417,3184 19524,3286 19661,3421
+#: osm.highway: service
+(Verlängerung Merlitzstr.)	N 19661,3421 19746,3501
 Karl-Otto-Reinsch-Str.	NN 19598,3212 19524,3286
 Walther-Nernst-Str.	N 19592,2965 19498,3054
 Walther-Nernst-Str.	NN 19498,3054 19475,3074
@@ -2869,7 +2872,7 @@ Naugarder Str.	N 12737,15154 12712,15176 12693,15225 12610,15455 12621,15482
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5238 (Vorlage zur Kenntnisnahme)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5356
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_01_0001_0152_online.pdf (Benennung: Gertrud-Classen-Platz, Wirksamkeit am 6. März 2020)
-#: last_checked: 2023-04-13 (mapillary) (keine Schilder zu sehen)
+#: last_checked: 2023-06-21 (keine Schilder zu sehen)
 #: check_frequency: 60d
 (Hosemannstr. - Naugarder Str.)	N 12583,15566 12605,15491
 Malchower Chaussee	HH 14832,17867 15152,18115 15181,18137 15569,18492 15600,18551 15610,18596
@@ -4655,7 +4658,7 @@ Fontanestr. (Wilhelmsruh)	N 7321,20426 7231,20266 7201,20161 7205,20047 7209,199
 #: XXX: Bebauungsplan 3-15b
 #: osm_watch: way id="31428032" version="15"
 #: osm_watch: way id="386544517" version="4"
-#: osm_watch: note 2048562 10
+#: osm_watch: note 2048562 11
 #: last_checked: 2023-06-18
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-05-01
@@ -7291,7 +7294,7 @@ Elmsteiner Weg	N 27393,732 27567,936
 Wolfsteiner Weg	N 27329,786 27497,981
 Am Müggelberg	N 27074,863 27119,996 27170,1149 27213,1302 27229,1359
 Eppenbrunner Weg	N 27194,661 27351,526 27600,292
-(Müggelturm - Marienlust)	N 25626,1314 25552,997
+(Müggelturm - Marienlust)	N 25626,1314 25562,1038 25552,997
 (Müggelturm - Marienlust)	NN 25552,997 25548,941 25543,879
 Möllhausenufer	N 23295,1145 23408,1170 23520,1194 23608,1210 23747,1243
 #: alias: Dahmewanderweg
@@ -8870,7 +8873,7 @@ Hadubrandstr.	N 20918,8383 21010,8379 21055,8374 21122,8370 21178,8367 21257,836
 (Straße E, Innovationspark Wuhlheide)	N 21490,7197 21427,7174 21366,7120 21294,7189 21233,7246 21207,7280 21153,7393
 (Straße E, Innovationspark Wuhlheide)	N 21294,7189 21243,7135 21219,7111
 (Straße E, Innovationspark Wuhlheide)	N 21233,7246 21181,7199 21243,7135
-(Straße F, Innovationspark Wuhlheide)	N 21505,7129 21410,7027 21394,7040 21371,7021 21345,7000
+(Straße F, Innovationspark Wuhlheide)	N 21505,7129 21410,7027 21394,7040 21371,7021 21342,6995
 (Straße G, Innovationspark Wuhlheide)	N 21572,7051 21547,7024 21476,6956 21560,6869 21627,6942 21547,7024
 (Verlängerte Hämmerlingstr. - Straße G, Innovationspark Wuhlheide)	N 21582,6842 21560,6869
 Biesdorfer Weg	N 21178,8367 21164,8243 21166,8195 21169,8112 21233,8022 21243,8010 21312,7943 21324,7931 21383,7872 21410,7824 21419,7806 21468,7727 21532,7695 21541,7674 21540,7630
@@ -11482,7 +11485,7 @@ Birnbaumer Str.	N 22093,6630 22186,6672
 Hämmerlingstr.	N 21683,6946 21705,6931 21774,6880 21833,6810 21861,6719 21913,6554 21984,6317 22000,6245 22033,6144 22075,5996 22083,5899 22084,5877 22089,5782 22092,5673 22095,5585
 Verlängerte Hämmerlingstr.	N 21729,6989 21683,6946 21582,6842 21541,6800
 (Waldweg an der S-Bahn - Verlängerte Hämmerlingstr.)	NN 21412,6735 21459,6744 21541,6800
-Verlängerte Köpenicker Str.	N 21012,7328 21219,7111 21291,7048 21345,7000 21359,6983
+Verlängerte Köpenicker Str.	N 21012,7328 21219,7111 21289,7045 21342,6995 21357,6981
 Schmale Str.	N 21984,6317 22018,6350 22049,6364
 Rombiner Weg	N 21712,6800 21833,6810
 Friedenstr. (Köpenick)	N 21993,6133 22033,6144 22141,6143
@@ -13047,7 +13050,7 @@ Spreeufer	NN 10583,12206 10492,12289 10417,12378 10416,12394
 Klosterstr. (Mitte)	N 10945,12150 10951,12249 10957,12401 10947,12457 10900,12546
 #: next_check_id: MOLKENMARKT-2021
 #: XXX provisorische Anbindung
-#: last_checked: 2023-06-04
+#: last_checked: 2023-06-21
 #: check_frequency: 90d
 Klosterstr. (Mitte)	NN 10900,12546 10873,12577
 (Molkenmarkt - Parochialstr.)	NN 10746,12364 10831,12371
@@ -15425,7 +15428,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2023-06-10
+#: last_checked: 2023-06-19
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15813,7 +15816,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2023-06-10
+#: last_checked: 2023-06-19
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -18007,7 +18010,7 @@ Lüdenscheider Weg	N -1037,15482 -1389,15285
 #: note: Beleuchtung existiert
 (Krienickepark - Goldbeckweg)	NN -1903,15333 -1848,15317 -1762,15291 -1685,15270 -1606,15248 -1532,15225
 (Lilli-Palmer-Promenade - Grützmacherweg)	NN -1926,15254 -1870,15233
-Telegrafenweg	N -1336,14786 -1369,14802 -1411,14875 -1480,14922 -1543,14938 -1610,14925 -2056,15041
+Telegrafenweg	N -1336,14786 -1369,14802 -1411,14875 -1480,14922 -1543,14938 -1610,14925 -1789,14972 -2056,15041
 Goldbeckweg	N -1480,14922 -1489,15027 -1511,15127 -1532,15225 -1556,15319 -1547,15377 -1485,15463
 Elisabeth-Flickenschildt-Str.	N -1489,15027 -1811,15121
 (Elisabeth-Flickenschildt-Str., Verlängerung)	N -1811,15121 -1955,15164 -1993,15175
@@ -18576,7 +18579,7 @@ Kurze Str. (Steglitz)	N 5145,5095 5102,5031 5050,4959 4985,4884
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7221 (Antrag)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7343 (Antrag) (abgelehnt)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/5TQj0X86Z3AV6QO6ibyHnoLSeLd4YmEqqKXJTU7c/vMYbgDSP/73-Anlagen/06/B1481SB.pdf (Schlussbericht)
-#: last_checked: 2023-03-26
+#: last_checked: 2023-06-19
 #: next_check: 2025-06-01
 Elcknerplatz	N 22431,6068 22478,6048 22538,6046 22624,6044
 Parrisiusstr.	N 22358,5918 22531,5871 22631,5866 22766,5840 22819,5812 22885,5835
