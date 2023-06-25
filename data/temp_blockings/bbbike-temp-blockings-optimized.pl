@@ -2122,7 +2122,7 @@ Pestalozzistr.	q4::temp:clock 4101,11233 3981,11232
 #: by: https://berliner-abendblatt.de/berlin-news/karlshorst-antikflohmarkt-startet-in-saison-id215216
 #: note: Der Antikmarkt fällt an den Sonntagen aus, an denen der Antikflohmarkt in Karlshorst stattfindet; das ist üblicherweise der Sonntag nach dem ersten Samstag im Monat, allerdings vermutlich nicht im Winter (Januar - März)
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche; mittlerweile: Bauarbeiten am Ostbahnhof, normale Marktfläche existiert vermutlich nicht mehr (siehe oben)
-#: last_checked: 2023-05-19
+#: last_checked: 2023-06-23
 #: check_frequency: 120d
 	q4::temp:clock 12378,11806 12413,11901
 #: tempex ^^^
@@ -3995,10 +3995,12 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://www.maz-online.de/lokales/dahme-spreewald/zeuthen/deutsche-bahn-legt-zeitplan-fuer-baustelle-am-bahnhof-zeuthen-vor-PLTNQXWDNV37DD7HLPDMVTFL6I.html (bis Mai 2023)
 #: by: https://www.maz-online.de/lokales/dahme-spreewald/zeuthen/zeuthen-fussgaengertunnel-am-bahnhof-im-rohbau-fertig-freigabe-mai-2023-geplant-ITXXXXQB35TUQUAUQ5F7PVVHKE.html
 #: by: https://www.bahninfo-forum.de/read.php?9,672773,765387#msg-765387 (bis Juli 2023)
+#: by: https://www.maz-online.de/lokales/dahme-spreewald/zeuthen/zeuthen-deutsche-bahn-verschiebt-eroeffnung-des-fussgaengertunnels-auf-oktober-2023-BJPDHYCZBJCIFPASHOF4QWWE6I.html
+#: by[nocache]: https://archive.ph/2023.06.22-094813/https://www.maz-online.de/lokales/dahme-spreewald/zeuthen/zeuthen-deutsche-bahn-verschiebt-eroeffnung-des-fussgaengertunnels-auf-oktober-2023-BJPDHYCZBJCIFPASHOF4QWWE6I.html
 #: osm_watch: way id="36936021" version="7" brb
 #: last_checked: 2023-04-22 (zdf)
 # REMOVED --- #: check_frequency: 360d
-#: next_check: 2023-07-31
+#: next_check: 2023-09-30
 	2::inwork 25929,-5994 25902,-6006 25893,-6002
 ',
          'from' => 1533756141,
@@ -4253,7 +4255,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: note: Halteverbotsschilder bis 29.06.2023
 #: also_indoor: traffic (ex-H,B,ex-G)
 #: osm_watch: way id="1006570991" version="1"
-#: last_checked: 2023-06-03
+#: last_checked: 2023-06-24 (sieht mittlerweile recht fertig aus)
 #: check_frequency: 90d
 #: next_check: 2023-06-29
 # REMOVED (hier nicht (mehr)) ---	q3::inwork  8986,16092 9148,16282 9178,16317
@@ -4263,7 +4265,7 @@ Bellermannstr.	q3::inwork; 9248,16248 9200,16295 9178,16317 9156,16339 9099,1639
          'from' => 1558648800,
          'id' => 3108,
          'source_id' => '2147344253',
-         'text' => 'Grüntaler Str.: in Höhe Bellermannstr. Bauarbeiten, Ausweichen auf Gehweg mit Umwegen, außerdem Einbahnstraßenregelung in der Bellermannstr., voraussichtlich bis 29.06.2023, eventuell noch länger',
+         'text' => 'Grüntaler Str.: in Höhe Bellermannstr. Bauarbeiten, Ausweichen auf Gehweg mit Umwegen, außerdem Einbahnstraßenregelung in der Bellermannstr., voraussichtlich bis 29.06.2023',
          'type' => 'handicap',
          'until' => 1688054400
        },
@@ -4438,7 +4440,7 @@ außerhalb der Arbeitszeiten Zugang möglich, Rampe ist aber noch enger als sonst	
 #: source_id: viz2021:13.417868,52.518038,02.09.2020,09:51 (Hochbaumaßnahme in der Alexanderstr., bis 31.8.2022) (inaktiv) (bis 31.12.2022) (bis 31.5.2023) (bis 30.06.2023)
 #: note: laut rbb mittlerweile bis 30.12.2022
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2023-06-04
+#: last_checked: 2023-06-23
 #: check_frequency: 30d
 #: next_check: 2023-06-30
 	q4::inwork; 11329,12497 11202,12426
@@ -4521,7 +4523,7 @@ außerhalb der Arbeitszeiten Zugang möglich, Rampe ist aber noch enger als sonst	
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10694 ("Corona bedingte Erweiterungen ... fallen weg")
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2023-06-17
+#: last_checked: 2023-06-24
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -4687,6 +4689,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 # REMOVED --- #: XXX Wird es eine Umfahrung durch den Wald oder auf dem gegenüberliegenden Gehweg geben?
 #: source_id: 2147346494 (inaktiv)
 #: source_id: viz2021:13.488572,52.458994,05.06.2023,08:00 (bis 23.06.2023) (bis 30.06.2023)
+#: note: bei rbb sogar bis 4.7.2023
 # REMOVED ---	q4::inwork; 16122,6084 16169,6064 16510,5917 16868,5938
 # REMOVED --- #: next_check: 2023-06-05
 	q2::inwork; 16169,6064 16510,5917 16868,5938
@@ -5404,13 +5407,13 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
        {
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
-#: note: Kann außerhalb der Arbeitszeiten offen sein, gesehen am 2022-12-26, 2022-12-28, 2023-02-25 (Sa), 2023-06-11 (So) vvv
-#: last_checked: 2023-06-11 vvv
+#: note: Kann außerhalb der Arbeitszeiten offen sein, gesehen am 2022-12-26, 2022-12-28, 2023-02-25 (Sa), 2023-06-11 (So), 2023-06-23 (Fr) gegen 20 Uhr vvv
+#: last_checked: 2023-06-23 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-02-12 vvv
 #: osm_watch: way id="4395450" version="36"
 	2::inwork 7031,12320 6694,12627
-#: osm_watch: way id="505363417" version="20"
+#: osm_watch: way id="505363417" version="21"
 	2::inwork 6631,12707 6694,12627
 #: next_check ^^^
 #: check_frequency ^^^
@@ -6127,7 +6130,7 @@ Brückenabriss, Komplettsperrung	2::temp 2892,15983 2809,16143
 # REMOVED (nicht mehr) --- #: note: Möglicherweise wegen der Sperrung verstärkter Verkehr in der Gartenstr. zwischen Invalidenstr. und Torstr.
 #: XXX Bis wann ist die Friedrichstr. gesperrt?
 #: note: laut rbb läuft diese Bauphase bis 16.06.2023
-#: last_checked: 2023-06-22 vvv
+#: last_checked: 2023-06-23 vvv
 #: next_check: 2023-06-30 vvv
 # REMOVED (hier nichts) --- Chausseestr.	q4::inwork 9207,13493 9212,13471
 # REMOVED (Radfahrfurt) --- Hannoversche Str.	q3::inwork 9212,13471 9047,13446
@@ -6590,7 +6593,7 @@ mittlerer Abschnitt	q4::inwork 6965,2418 7051,2366 7172,2343
 # REMOVED --- #: osm_watch: way id="169659243" version="23" --- mittlerer Abschnitt	q4::inwork 5376,12781 5376,12661
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: osm_watch: way id="1155654228" version="7"
-#: last_checked: 2023-06-12 (daf)
+#: last_checked: 2023-06-22 (osm note)
 südlicher Abschnitt	q4::inwork 5376,12661 5354,12552
 ',
          'from' => undef,
@@ -6670,7 +6673,8 @@ Sperrung beginnt ab Café Liebig	q2::inwork 22766,1226 22655,1450
        {
          'data' => '#: note: laut VIZ nur der Kfz-Verkehr betroffen
 # REMOVED (hier nicht, siehe Mapillary) ---	q4::inwork 23698,15049 23693,15080 23686,15128
-	q4::inwork 23686,15128 23663,15270 23643,15392
+	q4::inwork 23686,15128 23663,15270
+# REMOVED (hier nicht, siehe Mapillary) ---	q4::inwork 23663,15270 23643,15392
 ',
          'from' => 1675749600,
          'id' => 3721,
@@ -7203,7 +7207,7 @@ Hanstedter Weg	q4::inwork 6923,5057 6908,5053 6783,5011
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/fuer-provisorischen-gehweg-wird-viel-geld-ausgegeben_a383912
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 #: also_indoor: traffic (B)
-#: last_checked: 2023-05-30 (mapillary)
+#: last_checked: 2023-06-24
 	q3::inwork 12707,13706 12640,13814
 ',
          'from' => undef,
@@ -7324,6 +7328,8 @@ Hanstedter Weg	q4::inwork 6923,5057 6908,5053 6783,5011
 #: by: https://nitter.cz/VIZ_Berlin/status/1663772295704494081#m
 #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnhZRFI4d1djQUEyX0FFLmpwZw== (laut Verkehrszeichenplan gibt es keine gesonderte Radverkehrsführung)
 #: source_id: viz2021:13.294234,52.633866,31.05.2023,07:00 (Radwegebau, Sperrung für Kfz-Verkehr, bis 09.08.2023)
+#: osm_watch: way id="688087510" version="11"
+#: osm_watch: way id="844709935" version="16"
 	q4::inwork 2909,25322 2756,25260 2683,25238 2615,25225
 hier nur der Kreuzungsbereich Dinkelsbühler Str./Edelhofdamm gesperrt	q3::inwork 2615,25225 2490,25211
 ',
@@ -7560,7 +7566,7 @@ Baustellenbereich an der Bahnhofstr.	q3::inwork 22531,5871 22358,5918
        undef,
        {
          'data' => '#: source_id: viz2021:13.228423,52.508685,15.06.2023,06:00 (bis 25.06.2023)
-#: source_id: viz2021:13.228423,52.508685,15.06.2023,00:00 (bis 25.06.2023)
+#: source_id: viz2021:13.228423,52.508685,15.06.2023,00:00 (bis 25.06.2023) (inaktiv) (bis 25.06.2023)
 #: note: laut rbb nur zwischn 06:00 und 22:00 Uhr
 	2::temp -1994,11496 -1875,11602 -1824,11656 -1750,11719 -1680,11758 -1398,11803 -1382,11736 -1375,11555 -1368,11525 -1427,11491 -1471,11416 -1505,11307 -1515,11278 -1536,11176
 ',
@@ -7592,21 +7598,21 @@ Baustellenbereich an der Bahnhofstr.	q3::inwork 22531,5871 22358,5918
        },
        {
          'data' => '#: by: https://nitter.cz/VIZ_Berlin/status/1663451791374053377#m
-#: source_id: viz2021:13.37979,52.46581,30.05.2023,09:08 (kein Endedatum) (bis 23.6.2023)
+#: source_id: viz2021:13.37979,52.46581,30.05.2023,09:08 (kein Endedatum) (bis 23.6.2023) (bis 30.6.2023)
 #: also_indoor: traffic (H)
 	q3::inwork 8852,6642 8949,6644
 ',
          'from' => 1685397600,
          'id' => 3825,
-         'text' => 'Alt-Tempelhof: Wasserrohrbruch, Fahrbahn gesperrt, voraussichtlich bis 23.6.2023',
+         'text' => 'Alt-Tempelhof: Wasserrohrbruch, Fahrbahn gesperrt, voraussichtlich bis 30.6.2023',
          'type' => 'handicap',
-         'until' => 1687557600
+         'until' => 1688137200
        },
        {
          'data' => '#: next_check_id: HEIDEKRAUTBAHN-2021
 #: add_fragezeichen: Ist der Weg noch immer gesperrt?
 #: XXX Es scheinen Fassadenarbeiten stattzufinden; noch hat es anscheinend nichts mit der Heidekrautbahn zu tun
-#: last_checked: 2023-06-18
+#: last_checked: 2023-06-24
 	2::inwork 7090,19943 7123,19855 7138,19839
 ',
          'from' => undef,
@@ -7617,11 +7623,12 @@ Baustellenbereich an der Bahnhofstr.	q3::inwork 22531,5871 22358,5918
        },
        undef,
        {
-         'data' => '#: osm_watch: note 3359195 6
+         'data' => '#: osm_watch: note 3359195 7
 #: osm_watch: way id="311338440" version="4"
 #: by: l.epp
+#: confirmed_by: osm, srt
 #: add_fragezeichen: Ist die Holzbohlenbrücke noch immer gesperrt?
-#: last_checked: 2023-06-18 (user/osm)
+#: last_checked: 2023-06-24
 #: check_frequency: 120d
 	2::inwork 2829,18126 2797,18126 2790,18139
 ',
@@ -7654,14 +7661,15 @@ Baustellenbereich an der Bahnhofstr.	q3::inwork 22531,5871 22358,5918
          'until' => 1699052399
        },
        {
-         'data' => '	2::inwork 62767,106530 62837,105731 62745,105429
+         'data' => '#: source_id: 237300173
+	2::inwork 62767,106530 62837,105731 62745,105429
 ',
-         'from' => 1687672800,
+         'from' => 1687413600,
          'id' => 3831,
          'source_id' => '237300001',
-         'text' => 'Bagemühl: Deckensanierung, Vollsperrung, voraussichtlich 26.06.2023 08:00 Uhr bis 27.07.2023 16:00 Uhr',
+         'text' => 'Bagemühl: Deckensanierung, Vollsperrung, voraussichtlich 23.06.2023 08:00 Uhr bis 22.07.2023 16:00 Uhr',
          'type' => 'gesperrt',
-         'until' => 1690466400
+         'until' => 1690034400
        },
        {
          'data' => '	q3::inwork 12632,12630 12690,12769
@@ -7672,6 +7680,31 @@ Baustellenbereich an der Bahnhofstr.	q3::inwork 22531,5871 22358,5918
          'text' => 'Koppenstr.: Anbindung Friedenstr. wegen Bauarbeiten gesperrt, Radfahrer sollen schieben, vom 23.06.2023 06:00 bis 31.08.2023 17:00',
          'type' => 'handicap',
          'until' => 1693494000
+       },
+       {
+         'data' => '#: source_id: viz2021:13.301971,52.571657,21.03.2023,09:00
+#: also_indoor: traffic (H,G,W)
+#: last_checked: 2023-05-18
+#: check_frequency: 360d
+#: next_check: 2024-12-31
+	q2::inwork 3213,18115 3420,18470
+',
+         'from' => 1687609413,
+         'id' => 3833,
+         'text' => 'Otisstr..: Baustelle unter der U-Bahnbrücke, Gehweg für Radfahrer frei, Bordstein, voraussichtlich bis 31.12.2024 17:00',
+         'type' => 'handicap',
+         'until' => 1735686000
+       },
+       {
+         'data' => '#: source_id: viz2021:13.298741,52.573871,27.03.2023,09:00
+#: XXX wie groß sind die Einschränkungen hier?
+	q2::inwork 3267,18767 3008,18464
+',
+         'from' => 1687609413,
+         'id' => 3834,
+         'text' => 'Flohrstr..: Baustelle unter der U-Bahnbrücke, Gehweg für Radfahrer frei, voraussichtlich bis 31.12.2024 17:00',
+         'type' => 'handicap',
+         'until' => 1735686000
        }
      
 );

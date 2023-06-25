@@ -15,7 +15,7 @@ package Strassen::GeoJSON;
 
 use strict;
 use vars qw($VERSION @ISA);
-$VERSION = '0.08';
+$VERSION = '0.09';
 
 use Strassen::Core;
 @ISA = qw(Strassen);
@@ -162,6 +162,7 @@ sub bbd2geojson {
     my $bbbgeojsonp = delete $args{bbbgeojsonp};
     my $combine = delete $args{combine};
     my $combine_module = delete $args{combinemodule};
+    my $manipulate_module = delete $args{manipulatemodule};
     die "Unhandled options: " . join(" ", %args) if %args;
 
     if ($multiline) {
@@ -179,12 +180,21 @@ sub bbd2geojson {
     my $combine_object;
     if ($combine) {
 	if ($combine_module) {
-	    eval "require $combine_module";
-	    die $@ if $@;
+	    my $code = "require $combine_module";
+	    eval $code;
+	    die "Failed to call '$code': $@" if $@;
 	} else {
 	    $combine_module = 'Strassen::GeoJSON::CombineFeatureNames';
 	}
-	$combine_object= $combine_module->new;
+	$combine_object = $combine_module->new;
+    }
+
+    my $manipulate_object;
+    if ($manipulate_module) {
+	my $code = "require $manipulate_module";
+	eval $code;
+	die "Failed to call '$code': $@" if $@;
+	$manipulate_object = $manipulate_module->new;
     }
 
     $self->init;
@@ -195,7 +205,8 @@ sub bbd2geojson {
 
 	my $name = $r->[Strassen::NAME];
 	my $cat = $r->[Strassen::CAT];
-	my @urls = @{ $self->get_directives->{'url'} || [] };
+	my $directives = $self->get_directives;
+	my @urls = @{ $directives->{'url'} || [] };
 
 	my $geometry = (@c > 1
 			? ($cat =~ m{^F:}
@@ -220,6 +231,11 @@ sub bbd2geojson {
 				      (@urls ? (urls => \@urls) : ()),
 				     }
 		      };
+
+	if ($manipulate_object) {
+	    $manipulate_object->manipulate_feature($feature, $r, $directives);
+	}
+
 	push @features, $feature;
 
 	if ($combine_object) {
