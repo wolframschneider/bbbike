@@ -18,6 +18,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 6835,15412 6815,15398
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6748,15313 6833,15215
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
+(Umleitungsstrecke Rotes Rathaus): kurvig, einige Fußgänger	q2 10704,12595 10695,12616 10615,12642 10542,12587
 Platz der Vereinten Nationen: Anbindung Mollstr. gesperrt, Bordsteine, Engstellen	q4::inwork 11896,13075 11904,13052
 Stralauer Str.: Radweg auf schmalen Bürgersteig	q2::inwork; 10951,12249 10830,12279
 Grunerstr.: Gehweg	q4 10900,12546 10973,12612 11057,12715
@@ -34,13 +35,13 @@ Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9
 Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q4::inwork 21984,6317 22000,6245
 Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q3::inwork 22000,6245 22033,6144
 Turmstr.: Bauarbeiten, teilweise Führung des Radwegs über den engen Gehweg	q2::inwork; 6692,13333 6674,13332 6535,13327 6377,13321
-Turmstr.: Bauarbeiten, Engstellen, Umweg über den Kleinen Tiergarten	q3::inwork; 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
+Turmstr.: Bauarbeiten, Engstellen, Umweg über den Kleinen Tiergarten	q3::inwork; 5857,13342 5956,13330
 Thusnelda-Allee: noch offen für Radfahrer, aber Einschränkungen im Kreuzungsbereich	q3::inwork 5956,13330 5975,13256
 Turmstr.: Bauarbeiten, gemeinsamer Geh- und Radweg	q2::inwork; 6919,13360 7069,13381
 Rathenower Str.: Bauarbeiten, gemeinsamer Geh- und Radweg	q2::inwork; 7069,13381 7084,13352 7131,13261 7161,13190 7187,13126 7172,13051
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
 Pariser Str./Bundesallee: Bauarbeiten, Durchgang verengt	q3::inwork 5461,9923 5423,9932 5382,9942
-Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14310,7022 14276,7021 14246,7042 14236,7058 14196,7086
+Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14319,7001 14276,7021 14246,7042 14236,7058 14196,7086
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
 Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kann zugeparkt sein	q2::inwork; 12494,8501 12349,8464
 Am Walde: kurze Einbahnstraßenregelung an der Rummelsburger Landstraße, Bürgersteig existiert	q3::inwork; 17527,7812 17590,7828
@@ -186,8 +187,8 @@ Hasenheide, zur Lilienthalstr.: Parkweg	q1 10709,9192 11111,9104 11141,9107
 Am Flutgraben: Fußgänger	q1 13333,9929 13418,9944
 (durch den Schlesischen Busch): Fußgänger	q1 13418,9944 13657,9983 13711,10022
 Kolonie Albrechtshöhe: einige Fußgänger	q1 10260,5953 10215,5959 9955,5993
-Am Landwehrkanal: Parkweg, Fußgänger	q3 12739,9576 12796,9548 12919,9584 12981,9672
-Am Landwehrkanal: Parkweg, Fußgänger	q2 12981,9672 13086,9825 13145,9861 13230,9981
+Am Landwehrkanal: Parkweg, Fußgänger	q3 12739,9576 12796,9548 12919,9584 12981,9672 13086,9825
+Am Landwehrkanal: Parkweg, Fußgänger	q2 13086,9825 13145,9861 13230,9981
 Uferweg an den Treptowers: enger und kurviger Weg	q3 14467,9887 14459,9897 14464,9927 14509,9997 14432,10059 14373,10046
 Denewitzstr.: kombinierter Fuß- und Radweg	q1 8058,10306 7947,10155
 Linienstr.: einige Fußgänger	q1 10709,13629 10740,13621
@@ -2425,7 +2426,6 @@ Hochstr.: Fußgänger, Bordsteine	q3 8933,15872 8917,15851
 (Griechischer Park Höhe Parsevalstr.): Grünanlage, einige Fußgänger	q3 18159,6642 18162,6668 18158,6689
 Schönegarten: einige Fußgänger	q1 7416,10492 7432,10546 7337,10587 7330,10590
 Kurfürstenstr. - Pohlstr.: einige Fußgänger	q1 7432,10546 7450,10625
-Friedrichstr.: Fußgängerzone, Radfahrer frei	q3 9444,11616 9432,11702 9418,11804 9405,11903 9393,12000 9384,12103
 (Roedernstr. - Edisonstr.): Gehweg, Bordsteine	q4 17981,6793 17945,6788
 (Buschallee - Falkenberger Str.): gemeinsamer Geh- und Radweg	q1 15131,16618 15144,16701
 (Kolonie Märkische Aue - Schwarzmeerstr./Am Lindenplatz): einige Fußgänger, Bordstein	q2 17915,10866 17856,10879

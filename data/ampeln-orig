@@ -129,10 +129,10 @@ Köpenicker Str./Dubickstr.	F::inwork 21079,8931
 #: next_check_id: PLDVEREINTENNATIONEN-2023
 #: by: https://nitter.cz/VIZ_Berlin/status/1641500130158481409#m
 #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnNmSGFIWFhvQUE0a2JrLmpwZw==
-#: source_id: viz2021:13.427586,52.523136,31.03.2023,04:00 (bis 19.05.2023) (inaktiv) (bis 16.06.2023) (bis 30.06.2023)
+#: source_id: viz2021:13.427586,52.523136,31.03.2023,04:00 (bis 19.05.2023) (inaktiv) (bis 16.06.2023) (bis 30.06.2023) (bis 28.07.2023)
 #: last_checked: 2023-04-09
-#: next_check: 2023-06-30
-#: valid: -20230630
+#: next_check: 2023-07-28
+#: valid: -20230728
 	F::inwork 11913,13077
 # 
 #: by: https://www.berliner-woche.de/wedding/c-bauen/virchow-klinikum-wird-standort-fuer-die-spitzenforschung_a346784 (Bauarbeiten bis Ende 2023)
@@ -1125,7 +1125,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # XXX	F 8065,11349
 #: note: Anforderungsampel
 #: osm_watch: node id="9858938170" version="1"
-#: last_checked: 2023-06-11
+#: last_checked: 2023-06-30
 #: check_frequency: 180d
 #: next_check: 2027-01-01
 	F::inwork 8096,11393
@@ -2438,12 +2438,12 @@ S-Bahn und Regionalbahn	B 21562,12088
 	X 14170,10675
 # 
 #: next_check_id: FRIEDRICH-2020
-#: note: vorhandene Ampel ist vermutlich dauerhaft abgeschaltet
+#: XXX: vorhandene Ampel ist vermutlich wieder eingeschaltet, prüfen!
 #: last_checked: 2023-06-15
 # REMOVED --- #: check_frequency: 90d
 #: next_check: 2023-07-01
 # REMOVED --- #: valid: !20200821-20211031
-	X0 9418,11804
+	X 9418,11804
 # 
 # REMOVED (abgeschafft, seit Verschwenkung der Autobahnausfahrt) --- #: XXX wird diese Ampel abgeschafft oder bleibt sie als faktische Fußgängerampel bestehen? --- #: last_checked: 2013-08-25 --- #: next_check: 2013-09-02 ---	F 14153,6795
 #: by: Andreas Mühlhausen: vvv
@@ -3372,12 +3372,12 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # REMOVED --- #: note: Anforderungsampel --- #: note: Radfahrer Richtung Nordosten müssen diese Ampel zum Überqueren benutzen --- #: last_checked: 2021-04-04 ---	F::inwork 14239,6875
 #: note: Anforderungsampel
 #: XXX Ampel wird verstetigt, siehe auch Verschwenkung der Bergiusstr.
-#: last_checked: 2023-05-30
-#: next_check: 2023-06-30
+#: last_checked: 2023-06-29
+#: next_check: 2023-07-06
 	F::inwork 14139,6786
 #: XXX wird später möglicherweise nur eine Fußgängerampel sein? eine weitere Ampel wird an der Einmündung Autobahnausfahrt/Bergiusstr. entstehen
-#: last_checked: 2023-05-30
-#: next_check: 2023-06-30
+#: last_checked: 2023-06-29
+#: next_check: 2023-07-06
 	X::inwork 14051,6731
 # REMOVED --- #: note: Anforderungsampel --- #: last_checked: 2023-04-05 ---	F::inwork 13979,6700
 # REMOVED --- #: next_check ^^^ --- #: valid ^^^
@@ -3385,12 +3385,12 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: NEUKOELLNISCHEALLEE-2019 vvv
 # REMOVED --- #: valid: 20140224-20211231 vvv
-#: last_checked: 2023-04-16
+#: last_checked: 2023-06-29
 #: check_frequency: 90d
-#: next_check: 2023-06-30 vvv
+#: next_check: 2023-07-06 vvv
 	X::inwork 13265,6972
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
-#: last_checked: 2023-05-30
+#: last_checked: 2023-06-29
 #: check_frequency: 90d
 	X::inwork 13627,7047
 # REMOVED --- #: note: Verengung auf Brücke, Radfahrer können die Ampel über die Sperrfläche oder legal auf dem Radweg umfahren ---	X0::inwork 14011,7103
@@ -3403,7 +3403,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://twitter.com/VIZ_Berlin/status/1301038406156398593 (vermutlich keine Änderung bis Ende Oktober 2020)
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="6"
-#: last_checked: 2023-05-30
+#: last_checked: 2023-06-29
 #: check_frequency: 60d
 	X::inwork 14174,7505
 # 
@@ -3610,7 +3610,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: note: provisorische Ampel
 #: note: Anforderungsampel
 #: XXX Die Ampel Hermannstr./Thomasstr. wird vermutlich permanent gemacht, die nächste Ampel weiter nördlich verschwindet dafür.
-#: last_checked: 2023-04-27
+#: last_checked: 2023-06-29
 #: check_frequency: 120d
 	X::inwork 12185,7381
 # 
