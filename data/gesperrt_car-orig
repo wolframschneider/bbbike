@@ -873,7 +873,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="19"
-#: last_checked: 2023-06-17
+#: last_checked: 2023-07-06
 #: check_frequency: 60d
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
@@ -1505,13 +1505,6 @@ Karl-Marx-Platz: Poller	3 * 13130,7633 *
 # 
 Weidenkätzchenweg: Poller	3 * 21450,38 *
 # 
-# REMOVED --- #: note: offiziell für allen Verkehr gesperrt, praktisch aber für Fußgänger + Radfahrer offen
-#: osm_watch: way id="104156160" version="10" brb
-#: XXX Brücke wird neu gebaut, laut osm Fertigstellung frühestens Ende 2023
-#: last_checked: 2023-05-01 (osm)
-#: next_check: 2023-12-31
-Liepe - Bralitz: Brücke wurde abgerissen und wird neu gebaut	2::inwork 48210,51009 48230,50933
-# 
 Köpenicker Str. (KW)	1 26044,-11318 26149,-11189
 # 
 #: by: michael kammler:
@@ -1842,8 +1835,10 @@ Bizetstr.	1 14056,15985 14248,16058 14295,16076
 Bizetstr.	1 14056,15985 13867,15915
 Smetanastr.	1 14015,16103 14056,15985 14086,15892 14125,15796
 #: by: osm vvv
+#: confirmed_by: srt
 Meyerbeerstr.	1 14086,15892 13904,15818
 Meyerbeerstr.	1 14086,15892 14286,15962
+#: confirmed_by: srt
 Gounodstr.	1 14125,15796 13939,15723
 Smetanastr.	1 14125,15796 14133,15773 14195,15604
 #: by ^^^

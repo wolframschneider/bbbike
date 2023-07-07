@@ -45,12 +45,13 @@ Weserstr.: Hochbauarbeiten, Einbahnstraﬂenregelung	q3::inwork; 14710,11626 14651
 #: osm_watch: way id="936801541" version="5"
 #: osm_watch: way id="36987812" version="15"
 #: also_indoor: traffic (W,G)
-#: last_checked: 2023-05-30
+#: last_checked: 2023-07-04
 #: check_frequency: 90d
 Bˆdikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
 # 
 #: also_indoor: traffic (B,H)
-#: last_checked: 2023-06-18
+#: last_checked: 2023-07-03
+#: check_frequency: 7d
 Kinzigstr.: Bauarbeiten nˆrdlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975
 # 
 # REMOVED --- #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0223_barrierefrei.pdf (20.2.2023 - 23.4.2023) --- #: by: https://viz.berlin.de/2023/02/verkehrsvorschau-200223/ (bis 24.4.2023) --- #: source_id: bvg2021:16#BVG316317_0 --- #: source_id: bvg2021:16#BVG318556_0 (bis 29.4.4023) --- #: note: siehe auch https://www.openstreetmap.org/note/3474648 --- #: XXX evtl. ist auch die Travestr. betroffen --- #: last_checked: 2023-04-18 --- #: next_check: 2023-04-24 --- #: valid: -20230429 --- M¸ggelstr./Travestr.: Gleisbauarbeiten	q4::inwork 14965,11924 14901,11808 14836,11842
@@ -180,7 +181,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraﬂenregelung (auﬂer f¸r Baufahrzeu
 ### Treptow ###
 # 
 #: XXX der Original-Eintrag muss nach Ablauf wieder aktiviert werden
-#: last_checked: 2023-05-11
+#: last_checked: 2023-07-04
 #: check_frequency: 60d
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraﬂe, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149
 # REMOVED (hier gar kein Durchgang) --- (Hoffmannstr. - Uferweg an den Treptowers): Baustraﬂe, enger Gehweg ist noch offen	q4::inwork 14116,10149 14126,10176
@@ -233,10 +234,10 @@ Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 
 #: by: https://abendblatt-berlin.de/2021/04/05/berlin-wedding-geisterhaus-an-der-burgsdorfstrasse-soll-abgerissen-werden/
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10655 (Abriss?)
 #: by: https://weddingweiser.de/schrotthaus-blockiert-strasse/
-#: osm_watch: way id="549316654" version="25"
+#: osm_watch: way id="549316654" version="26"
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,ex-H)
-#: last_checked: 2023-06-24
+#: last_checked: 2023-07-02 (osm)
 #: check_frequency: 60d
 #: valid: 20171026-
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
@@ -245,7 +246,7 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 # 
 #: next_check_id: ROTESRATHAUS-2023
 #: also_indoor: webcam https://tv-turm.de/wp-content/uploads/webcam/webcam.jpg
-#: last_checked: 2023-07-02
+#: last_checked: 2023-07-05 (webcam)
 #: check_frequency: 7d
 (Umleitungsstrecke Rotes Rathaus): kurvig, einige Fuﬂg‰nger	q2 10704,12595 10695,12616 10615,12642 10542,12587
 # 
@@ -295,7 +296,7 @@ Grunerstr.: Gehweg	q4 10900,12546 10973,12612 11057,12715
 #: by: https://www.deutsches-architekturforum.de/thread/7660-marinehaus-umbau-stiftung-stadtmuseum/?postID=712499#post712499
 #: by: https://www.berliner-woche.de/mitte/c-bauen/maerkisches-museum-oeffnet-sich-fuer-die-stadtgesellschaft_a367415 (Sanierung des Marinehauses bis Mitte 2025)
 #: also_indoor: traffic (none)
-#: last_checked: 2023-06-22
+#: last_checked: 2023-07-06
 #: check_frequency: 90d
 #: next_check: 2025-06-30
 Am Kˆllnischen Park: Bauarbeiten, Einbahnstraﬂenregelung	q3::inwork; 11185,11883 11160,12071
@@ -422,7 +423,7 @@ Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweich
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
 #: priority: #B vvv
-#: last_checked: 2023-06-23 vvv
+#: last_checked: 2023-07-05 (mapillary) vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="14"
@@ -630,8 +631,8 @@ Turmstr.: Bauarbeiten, Engstelle	q3::inwork; 5857,13342 5956,13330
 # REMOVED (hier wieder F¸hrung auf der Fahrbahn, siehe bahninfo-forum) --- #: osm_watch: way id="30195541" version="38" --- #: osm_watch: way id="1101061991" version="10" --- #: osm_watch: way id="310164489" version="30" --- Turmstr.: Bauarbeiten, Engstellen, Umweg ¸ber den Kleinen Tiergarten	q3::inwork; 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 #: source_id: viz2021:13.339142,52.52642,06.01.2023,10:00 (Thusnelda-Allee f¸r Kfz-Verkehr gesperrt, bis 7.7.2023)
 #: source_id: bvg2021:101#BVG301286_0
-#: osm_watch: way id="4571954" version="32"
-#: last_checked: 2023-06-12 (osm)
+#: osm_watch: way id="4571954" version="33"
+#: last_checked: 2023-07-02 (osm)
 #: check_frequency: 45d
 Thusnelda-Allee: noch offen f¸r Radfahrer, aber Einschr‰nkungen im Kreuzungsbereich	q3::inwork 5956,13330 5975,13256
 #: osm_watch: way id="269696665" version="24"
@@ -805,16 +806,16 @@ Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kan
 # 
 #: by: https://viz.berlin.de/2023/06/verkehrsvorschau-260623/ (bis 03.07.2023, weitere Bauabschnitte bis Mitte Juli 2023)
 #: by: https://nitter.cz/VIZ_Berlin/status/1673195634050859008#m
-#: source_id: viz2021:13.507611,52.474933,26.06.2023,06:00
+#: source_id: viz2021:13.507611,52.474933,26.06.2023,06:00 (bis 3.7.2023) (bis 10.7.2023)
 #: note: Halteverbote bis 2023-07-14
 #: last_checked: 2023-06-26
-#: next_check: 2023-07-03
+#: next_check: 2023-07-10
 #: valid: -20230714
 Am Walde: kurze Einbahnstraﬂenregelung an der Rummelsburger Landstraﬂe, B¸rgersteig existiert	q3::inwork; 17527,7812 17590,7828
 # 
 #: add_fragezeichen: Wann ist die Sperrung beendet?
 #: also_indoor: traffic (B)
-#: last_checked: 2023-06-26
+#: last_checked: 2023-07-05 (mapillary)
 Frankfurter Allee [Wohngebiet]: Bauarbeiten, Anbindung zur richtigen Frankfurter Allee unterbrochen, Bordsteine	q3::inwork 16190,11872 16214,11935
 # 
 # REMOVED (keine Einschr‰nkung mehr) --- #: next_check_id: PARKAUE-2022 --- #: XXX Bauarbeiten der Wasserbetriebe, laut Baustellenschild bis Oktober 2023 --- #: XXX Einbahnstraﬂenregelung nach den Bauarbeiten wiederherstellen --- #: also_indoor: traffic (ex-G) --- #: last_checked: 2023-06-16 --- #: check_frequency: 90d --- #: next_check: 2023-10-31 --- Parkaue: Bauarbeiten der Wasserbetriebe, Einbahnstraﬂenregelung	q4+::inwork; 15535,12420 15457,12449
@@ -848,7 +849,7 @@ Frankfurter Allee [Wohngebiet]: Bauarbeiten, Anbindung zur richtigen Frankfurter
 # REMOVED --- #: last_checked: 2015-03-15 --- #: check_frequency: 60d --- Dottistr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 15685,12154 15879,12131
 # REMOVED (keine Behinderungen mehr) --- #: next_check_id: HAUPTBUCHT-2014 --- #: last_checked: 2014-10-05 (Absperrgitter existieren noch, werden aber oft von Fuﬂg‰ngern weggeschoben) (deshalb nur q3) --- #: check_frequency: 60d --- (Rummelsburger Ufer - Hauptstr.): Bauarbeiten, ggfs. Umweg ¸ber Norma-Parkplatz notwendig	q3::inwork 15249,10564 15307,10701
 # REMOVED (anscheinend schon beendet) --- #: last_checked: 2014-05-06 --- #: next_check: 2014-05-31 (Bauarbeiten bis Mai 2014) --- #: valid: -20140531 --- Archibaldweg: Bauarbeiten zwischen Leopoldstr. und Rupprechtstr. Richtung Nordosten	q3::inwork; 15950,10987 16034,11053
-# REMOVED (wieder Einbahnstraﬂe) --- #: source_id: IM_024674 --- #: last_checked: 2015-04-26 --- #: next_check: 2015-04-30 --- #: priority: #A --- Archibaldweg: Bauarbeiten, teilweise ¸ber Gehweg ausweichen	q2::inwork 15674,10851 15820,10916 15870,10938
+# REMOVED (wieder Einbahnstraﬂe) --- #: source_id: IM_024674 --- #: last_checked: 2015-04-26 --- #: next_check: 2015-04-30 --- #: priority: #A --- Archibaldweg: Bauarbeiten, teilweise ¸ber Gehweg ausweichen	q2::inwork 15674,10851 15777,10897 15820,10916 15870,10938
 # REMOVED (nicht mehr Einbahnstraﬂe) --- #: osm_watch: way id="31526264" version="6" --- #: last_checked: 2015-04-08 --- #: check_frequency: 30d --- Stadthausstr.: Bauarbeiten, Einbahnstraﬂe, Richtung Tuchollaplatz gesperrt	q3::inwork; 15681,10801 15674,10851
 # REMOVED (Bauarbeiten sind beendet) --- #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20120217.1445.366291.html --- #: osm_watch: way id="7543672" version="17" --- #: XXX ad osm_watch: ab version=17 wieder als befahrbar markiert, aber das stimmt nicht ganz --- #: last_checked: 2013-06-24 --- #: check_frequency: 45d --- Radweg Herzberge: wegen Bauarbeiten m¸ssen teilweise Trampelpfade benutzt werden	q4::inwork 17154,14093 17219,14133 17267,14146
 # REMOVED (man kann eigentlich schon problemlos durch) --- #: last_checked: 2013-11-26 vvv --- #: next_check: 2013-12-03 vvv --- #: priority: #A vvv --- Parkaue: Bauarbeiten, ggfs. auf Gehweg ausweichen	q4::inwork 15399,12444 15457,12449 15535,12420 --- Am Stadtpark: Bauarbeiten, ggfs. auf Gehweg ausweichen	q3::inwork 15457,12449 15454,12519 --- #: priority ^^^ --- #: next_check ^^^ --- #: last_checked ^^^
@@ -872,6 +873,7 @@ Frankfurter Allee [Wohngebiet]: Bauarbeiten, Anbindung zur richtigen Frankfurter
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10804 (Anfrage)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1293657.php (Baumf‰llungen)
 #: source_id: viz2021:13.575415,52.540241,05.10.2022,06:00 (hier nur Kfz-Verkehr, bis 10.11.2022) (bis 16.11.2022) (bis 29.11.2022) (bis 13.11.2023)
+#: source_id: viz2021:13.575415,52.540241,04.07.2023,06:00 (hier nur Kfz-Verkehr, bis 13.11.2023)
 #: note: Bauarbeiten gehen sogar bis zur Gothaer Str.; Radfahrer Richtung Osten kˆnnen hier aber eine asphaltierte Service-Straﬂe benutzen
 #: last_checked: 2023-05-06 vvv
 #: check_frequency: 90d vvv
@@ -1027,7 +1029,7 @@ Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg m
 # REMOVED (wurde entfernt) --- #: note: laut rbbtext bis 31.12.2020
 #: also_indoor: traffic (G,B,W)
 #: priority: #B
-#: last_checked: 2023-06-21 vvv
+#: last_checked: 2023-07-03 vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2022-12-31 vvv
 # REMOVED --- #: valid: -20200731 vvv
@@ -1047,6 +1049,13 @@ Erich-Weinert-Str.: Bauarbeiten in Hˆhe Hosemannstr., Gehweg benutzen	q4+::inwor
 # REMOVED (nun offen, aber Bauarbeiten an der Kreuzung -> temp blockings) --- #: XXX mittlerweile bis zur H‰lfte offen --- #: last_checked: 2017-12-26 --- #: check_frequency: 14d --- F¸rstenberger Str.: Bauarbeiten, Fahrbahn gesperrt	q2::inwork 10320,14608 10472,14632
 # 
 ### Weiﬂensee ###
+# 
+# 
+#: XXX Bleibt es bei der ausschlieﬂlichen Busfreigabe oder entsteht hier eine neue Verbindungsstraﬂe?
+#: osm_watch: way id="519370786" version="4"
+#: osm_watch: note 3678184 2
+#: last_checked: 2023-07-03
+Falkenberger Str. - Hansastr: Bauarbeiten, Fahrbahn nur f¸r Linienverkehr frei	q4::inwork 15819,16857 15892,16834
 # 
 # REMOVED (fertig) --- #: last_checked: 2020-12-30 --- Charlottenburger Str.: Einbahnstraﬂenregelung zwischen Tassostr. und Pistoriusplatz, ggfs. auf Gehweg ausweichen	q3:inwork; 13642,16118 13479,16182
 # 
@@ -2684,7 +2693,7 @@ Anna-Nemitz-Weg: Fuﬂg‰nger	q1 13943,2284 13905,2381 13885,2377 13872,2497 13891,
 (Park am Fennpfuhl): Fuﬂg‰nger	q1 15097,13621 15141,13647 15180,13665 15247,13662 15266,13667 15323,13777 15305,13829 15254,13899 15219,13888 15179,13872 15153,13931 15118,13961 15089,13990 15054,14056
 (Park am Fennpfuhl): Fuﬂg‰nger	q1 15204,14087 15189,14027 15118,13961
 #: note: Gr¸nanlagenschild
-(Park am Fuﬂg‰nger): Fuﬂg‰nger, drei Stufen oder verwinkelte Rampe	q3 15256,14237 15204,14087
+(Park am Fuﬂg‰nger): Fuﬂg‰nger, drei Stufen oder verwinkelte Rampe, auf der Parkseite noch weitere zwei Stufen	q3 15256,14237 15204,14087
 (Park am Fennpfuhl): Fuﬂg‰nger	q1 15060,13735 15055,13768 15023,13800 15010,13807
 (Park am Fennpfuhl - Karl-Lade-Str./Rudolf-Seiffert-Str.): Fuﬂg‰nger	q1 15179,13872 15192,13834 15181,13791 15144,13772 15094,13750 15060,13735 15035,13701 14995,13645
 (Bernhard-B‰stlein-Str. - Park am Fennpfuhl): Fuﬂg‰nger	q1- 15354,13998 15267,13967 15254,13899
@@ -3301,7 +3310,13 @@ Georg-Steger-Weg: Radfahrer sollen schieben	q4 1432,1964 1432,1953 1432,1904 147
 (Grolmanstr./Goethestr. - Am Schillertheater): gemeinsamer Rad- und Gehweg, Fuﬂg‰nger haben Vorrang	q1 4651,11368 4648,11445 4616,11507 4574,11587
 (Verl‰ngerung Hiddenseestr.): Fuﬂg‰nger	q2 10960,17674 10969,17587
 (entlang der Wendeschleife): eng, kurvig	q2 23467,3891 23486,3862 23476,3829
-Schillingstr.: breiter Geh- und Radweg	q0- 11472,12406 11485,12391 11417,12243 11388,12202
+Schillingstr.: breiter Geh- und Radweg	q0- 11472,12406 11485,12391 11435,12282
+#: osm_watch: way id="1076571010" version="1"
+#: last_checked: 2023-07-06
+#: check_frequency: 180d
+#: note: fr¸her: breiter Geh- und Radweg	q0-
+Schillingstr.: Engstelle wegen Baustelle	q1- 11435,12282 11417,12243
+Schillingstr.: breiter Geh- und Radweg	q0- 11417,12243 11388,12202
 (Jannowitzbr¸cke - Schillingstr.): einige Fuﬂg‰nger	q2+ 11347,12223 11417,12243
 #: XXX_prog BS an der Schillingstr., ansonsten q1
 #: note: fr¸her "q2", rechtliche Lage unklar
@@ -3529,8 +3544,7 @@ Nordsternstr.: Feuerwehrzufahrt	q2 6268,8884 6292,8899
 Finckensteinallee: Fuﬂg‰nger, Bordstein	q3 4115,2726 4140,2706 4170,2727
 Kietzgrabensteg: einige Fuﬂg‰nger	q1 22514,4632 22531,4605
 Br¸cke ¸ber den Britzer Damm: Rampe, enge Kurven	q2 12638,6307 12630,6326 12605,6322 12619,6310
-#: XXX_prog BS am Wendehammer, ansonsten vielleicht q1 wg. Fuﬂg‰ngern
-Falkenberger Str.: Bordstein	q3 15819,16857 15892,16834
+# REMOVED (Bauarbeiten; sp‰tere Situation wird vermutlich anders aussehen) ---  #: XXX_prog BS am Wendehammer, ansonsten vielleicht q1 wg. Fuﬂg‰ngern --- Falkenberger Str.: Bordstein	q3 15819,16857 15892,16834
 (Mauerstr. - Sternbergpromenade): Fuﬂg‰nger	q1 -3275,14114 -3187,14116
 #: XXX_prog BS am Wendehammer, ansonsten q1
 (Neuhausweg - Ramin-Park): einige Fuﬂg‰nger, Bordstein	q2 -3964,14507 -3950,14519

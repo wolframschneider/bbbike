@@ -257,9 +257,10 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11012 (Frage)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11193 (Gebühren für Widerspruchsbescheide)
 #: by: https://berliner-abendblatt.de/2022/08/18/gegen-umbenennung-mohrenstrasse-koennen-nur-anwohner-vorgehen/
+#: by: https://berliner-abendblatt.de/berlin-news/gericht-urteilt-ueber-umbenennung-der-mohrenstrasse-id226365
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2023-07-01 vvv
+#: last_checked: 2023-07-05 (mapillary) vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -306,7 +307,7 @@ Mehringplatz	NN 9593,10238 9592,10263 9606,10263 9646,10279 9668,10306 9675,1035
 #: by: https://de.wikipedia.org/wiki/Friedrichstra%C3%9Fe (Straßenbreite 15-17m)
 #: street_width: 17m vvv
 Friedrichstr. (Mitte, Kreuzberg)	NN 9587,10421 9570,10566
-Friedrichstr. (Mitte, Kreuzberg)	N 9570,10566 9556,10666 9554,10695 9539,10820 9537,10837 9527,10927 9523,10964 9492,11209
+Friedrichstr. (Mitte, Kreuzberg)	N 9570,10566 9556,10666 9554,10695 9538,10827 9537,10837 9527,10927 9523,10964 9492,11209
 Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9456,11513 9444,11616
 # 
 #: next_check_id: FRIEDRICH-2020
@@ -409,6 +410,7 @@ Friedrichstr. (Mitte, Kreuzberg)	H 9492,11209 9478,11317 9474,11360 9468,11412 9
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1340711.php
 #: by: https://berliner-abendblatt.de/berlin-news/senatorin-friedrichstrasse-nicht-dauerhaft-autostrasse-id225746
 #: by: https://berliner-abendblatt.de/berlin-news/autos-zurueck-in-der-friedrichstrasse-id225944
+#: by: https://berliner-abendblatt.de/berlin-news/protest-gegen-oeffnung-der-friedrichstrasse-fuer-autoverkehr-id226023
 #: source_id: 2147346249 (vermutlich inaktiv)
 #: source_id: viz2021:13.389186,52.514762,21.08.2020,06:00 (inaktiv)
 # REMOVED --- #: priority: #A --- #: last_checked: 2023-06-15 --- #: check_frequency: 30d --- #: next_check: 2023-07-01
@@ -1343,7 +1345,7 @@ Andreasstr.	NH 12180,11657 12204,11748 12207,11763 12238,11931 12279,12113 12295
 Kleine Andreasstr.	N 12059,12172 12211,12128
 Kleine Andreasstr.	NN 12211,12128 12279,12113
 (Jannowitzbrücke - Schillingstr.)	NN 11347,12223 11417,12243
-Schillingstr. (Mitte)	NN 11388,12202 11417,12243 11485,12391 11472,12406
+Schillingstr. (Mitte)	NN 11388,12202 11417,12243 11435,12282 11485,12391 11472,12406
 Schillingstr. (Mitte)	N 11340,12443 11353,12436 11462,12384 11472,12406 11497,12463 11562,12597 11596,12668 11635,12745
 (Schillingstr. - Neue Blumenstr.)	NN 11596,12668 11712,12614
 Neue Blumenstr.	N 11613,12408 11712,12614 12006,12464 12118,12462
@@ -1551,7 +1553,7 @@ Planckstr.	N 9375,12911 9386,12833 9402,12792 9429,12728 9441,12670 9454,12558
 Charlottenstr. (Kreuzberg, Mitte)	N 9454,12558 9462,12481 9475,12365 9489,12263 9496,12215 9509,12117 9523,12019 9536,11922 9547,11819 9559,11715 9569,11631 9581,11523 9593,11424 9603,11328 9615,11225 9653,10950
 Rosmarinstr.	NN 9369,12253 9489,12263
 Besselstr.	N 9527,10927 9653,10950 9786,10971
-Hedemannstr.	N 9131,10716 9323,10791 9539,10820
+Hedemannstr.	N 9131,10716 9323,10791 9538,10827
 # 
 # REMOVED --- #: next_check_id: ROSSSTRASSENBRUECKE-2019 --- #: last_checked: 2021-04-27 --- #: next_check: 2021-06-18 --- (Umfahrung Baustelle Neue Roßstraßenbrücke)	NN 10680,11875 10650,11909 10642,11901 10590,11840 10599,11819
 # 
@@ -2329,7 +2331,7 @@ Kaskelstr.	N 15805,10949 15756,10966 15586,11030 15509,11058 15434,11086 15359,1
 Am Bremsenwerk	N 15251,11175 15090,11237 15058,11250
 Spittastr.	N 15447,10883 15509,11058 15578,11241
 Stadthausstr.	N 15649,10922 15674,10851 15681,10801
-Archibaldweg	N 15674,10851 15820,10916 15870,10938 15886,10947 15945,10984 16034,11053 16160,11154
+Archibaldweg	N 15674,10851 15777,10897 15820,10916 15870,10938 15886,10947 15945,10984 16034,11053 16160,11154
 Münsterlandstr.	N 16160,11154 16273,11113 16381,11080 16492,11042 16575,11013 16702,10972 16792,10945
 Münsterlandplatz	N 16719,11021 16590,11059
 Wönnichstr.	N 16597,10651 16702,10972 16719,11021 16785,11212 16856,11438 16887,11545 16915,11634 16977,11769
@@ -14174,7 +14176,7 @@ Klutstr.	N 26057,5553 25757,5536
 # REMOVED --- #: XXX im Zuge des A100-Ausbaus wird die Bergiusstr. verschwenkt --- Bergiusstr.	H 14051,6731 14106,6663
 # REMOVED --- #: valid: 20140224-20230630 --- Bergiusstr.	H 14106,6663 14150,6609
 # REMOVED --- #: valid: !20140224-20230630 --- Bergiusstr.	N 14106,6663 14150,6609
-#: source_id: viz2021:13.457432,52.464731,19.04.2023,14:00 (bis 06.07.2023)
+#: source_id: viz2021:13.457432,52.464731,19.04.2023,14:00 (bis 06.07.2023) (inaktiv)
 #: last_checked: 2023-06-29 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-07-06 vvv
@@ -19243,6 +19245,7 @@ Kleine Markusstr.	N 12059,12172 11958,12195 11937,12127
 (Krautstr. - Kleine Markusstr.)	N 12002,12008 11961,12025 11956,12071 11932,12111 11937,12127
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11016
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/3Ip0mPrtHdHfEEJK92UAk9fSljJVnFBwbl4AUfvB/KGefaPE/54-Anlagen/01/DS0765_VzK_IngeMeysel.pdf
+#: by: https://berliner-abendblatt.de/berlin-news/strasse-wird-nach-schauspielerin-inge-meysel-benannt-id226034
 #: XXX Benennung nach Inge Meysel; ist diese Straße gemeint?
 #: last_checked: 2023-06-28 (BVV-Beschluss)
 #: check_frequency: 90d
@@ -20406,7 +20409,7 @@ Paul-und-Paula-Promenade	N 14886,10748 14984,10677
 # 
 #: next_check_id: ROTESRATHAUS-2023
 #: also_indoor: webcam https://tv-turm.de/wp-content/uploads/webcam/webcam.jpg
-#: last_checked: 2023-07-02
+#: last_checked: 2023-07-05 (webcam)
 #: check_frequency: 7d
 (Umleitungsstrecke Rotes Rathaus)	NN 10704,12595 10695,12616 10615,12642 10542,12587
 # 

@@ -16,10 +16,10 @@ Neuköllnische Allee: welliger Asphalt	Q2 14344,7003 14319,7001 14276,7021 14246,
 # REMOVED (Bauarbeiten beendet) --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5898 --- #: note: oder man fährt auf dem mit zahlreichen Engstellen zugestellten Radweg, muss dann aber ggfs. warten --- #: last_checked: 2014-03-21 --- #: valid: -20140523 --- Bergmannstr.: während der Bauarbeiten zwischen Heim- und Friesenstr. Umleitung über gepflasterte Fahrbahn	Q2 9973,9232 9880,9233 9793,9241
 # 
 #: next_check_id: DIESEL-2019
-#: XXX und eventuell auch schauen, ob das Tor zum Mergenthalerring wieder ein Schloss hat
+#: XXX und außerdem auch schauen, ob es wieder zum Mergenthalerring wieder ein Tor gibt und dieses ein Schloss hat
 # REMOVED --- #: osm_watch: way id="524560334" version="5"
-#: osm_watch: way id="524560332" version="6"
-#: last_checked: 2023-05-11 vvv
+#: osm_watch: way id="524560332" version="7"
+#: last_checked: 2023-07-04 vvv
 #: check_frequency: 60d vvv
 (Mergenthalerring - Dieselstr.): Asphalt	Q0 14419,8112 14429,8074
 #: osm_watch: way id="680579631" version="4"
@@ -386,7 +386,7 @@ Lohmühlenbrücke: Asphalt	Q0 12868,9359 12897,9365
 #: XXX wird die Kiefholzstr. asphaltiert?
 #: XXX Baumaßnahme: 9.9 (Realisierung nach 2011)
 #: osm_watch: way id="4686083" version="26"
-#: last_checked: 2023-06-29
+#: last_checked: 2023-07-04
 #: check_frequency: 90d
 Kiefholzstr.: Kopfsteinpflaster	Q2 13602,9581 13450,9714 13251,9829
 # 
@@ -4992,7 +4992,8 @@ Willstätterstr.: Asphalt	Q0 14193,6556 14306,6651
 (Alter Hafen): Asphalt	Q0 10204,7680 10134,7797 10076,8040 10328,8102 10444,8086 10486,7972 10405,7898 10134,7797
 (Alter Hafen): Asphalt	Q0 10076,8040 10037,8269
 (südliche Landebahn - Alter Hafen): Verbundsteinpflaster	Q1- 10537,7257 10399,7415 10204,7680
-Ederstr.: Fahrbahn asphaltiert, gemeinsamer Rad- und Gehweg mit Verbundsteinpflaster	Q0 13946,7918 13958,8106
+#: historical_note: früher war hier ein ausgeschilderter Radweg: Fahrbahn asphaltiert, gemeinsamer Rad- und Gehweg mit Verbundsteinpflaster, Q0
+Ederstr.: Asphalt	Q0 13946,7918 13958,8106
 Ederstr.: Verbundsteinpflaster	Q0- 13958,8106 13967,8195 13939,8228
 (Zur Eisackstr.): unebenes Mosaikpflaster	Q1- 6388,7999 6418,7958 6429,7876
 Brascheweg: Asphalt mit einigen Schäden	Q1+ 18881,9865 18810,9850
@@ -11121,7 +11122,7 @@ Alfred-Kowalke-Str. [Mittelstreifen]: Gehwegplatten	Q0- 18200,11269 18202,11253
 #: next_check_id: STADTPARKLICHTENBERG-2022
 #: by: https://www.berliner-woche.de/lichtenberg/c-bauen/gruenanlage-zwischen-moellendorff-und-scheffelstrasse-wird-umgestaltet_a229540 (Anfang 2020 - Ende 2021)
 #: XXX Wird sich nach den Bauarbeiten hier etwas ändern?
-#: last_checked: 2023-05-15
+#: last_checked: 2023-07-03
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-12-31
 Stadtpark Lichtenberg: leicht schadhafter Asphalt und Gehwegplatten	Q0- 15454,12519 15433,12686 15424,12732 15395,12762
@@ -13152,7 +13153,7 @@ Burgfrauenstr.: neuer Asphalt	Q0+ 3022,24393 3225,24431 3425,24469
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wie wird der endgültige Belag aussehen? vvv
-#: last_checked: 2023-06-21 vvv
+#: last_checked: 2023-07-05 vvv
 #: check_frequency: 60d vvv
 Ingrid-Reschke-Str.: asphaltiert, letzte Deckschicht fehlt	Q1 15163,10758 15151,10699 15140,10647 15138,10638
 Ulrich-Plenzdorf-Str.: asphaltiert, letzte Deckschicht fehlt	Q1 14994,10732 15071,10716 15151,10699 15220,10682
@@ -13176,6 +13177,8 @@ Nymphenburger Str.: Asphalt mit leichten Schäden	Q0- 6163,8398 6246,8222
 (Verlängerung Merlitzstr.): Asphalt	Q0 19661,3421 19746,3501
 # 
 (Passage am Tacheles): glattes Pflaster	Q0 9371,13333 9353,13273 9244,13253
+# 
+Ida-Wolff-Platz: Verbundsteinpflaster	Q1 9161,10574 9192,10528
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -16165,7 +16168,7 @@ Marienstr. (Französisch Buchholz): Asphalt	Q0 11686,21058 12095,20832
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=4928 ("in Aussicht gestellt ... 2014/2015", "... 4 m breiten asphaltierten Geh- und Radweges")
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/buergerbeteiligung/fahrrat-protokoll-29-10-2015.pdf
 #: osm_watch: way id="42689070" version="11"
-#: last_checked: 2023-06-02
+#: last_checked: 2023-07-03
 #: check_frequency: 60d
 Orankeweg: Sandweg im Grünzug, mäßig bis gut	Q2+ 14936,15857 14769,15867 14695,15911 14609,15921
 #: confirmed_by: srt
@@ -30753,6 +30756,7 @@ Johannes-Zoschke-Str.: brüchiger Asphalt	Q1- 19020,9364 19030,9530
 Johannes-Zoschke-Str.: mäßiger Asphalt	Q2+ 19030,9530 19037,9636
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8654 vvv
 #: by: https://www.berliner-woche.de/karlshorst/c-bauen/rheinpfalzallee-wird-ab-2024-saniert_a332567 (Instandsetzung ab 2024) vvv
+#: by: https://www.tagesspiegel.de/berlin/bezirke/700-000-euro-fur-70-meter-strasse-diskussion-um-ausbau-dieser-strasse-in-berlin-10088179.html
 #: XXX Instandsetzung geplant, danach vielleicht befestigt? vvv
 #: last_checked: 2023-03-24 vvv
 #: next_check: 2024-06-01 vvv
