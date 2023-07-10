@@ -40,7 +40,7 @@ use URI;
 use Http;
 use Strassen::Core;
 
-use BBBikeTest qw(check_network_testing);
+use BBBikeTest qw(check_network_testing image_ok);
 
 check_network_testing;
 
@@ -59,8 +59,10 @@ if ($ENV{BBBIKE_TEST_HTMLDIR}) {
     push @urls, $bbbike_data_pps_url;
 }
 
-my $tests_per_url = 19;
+my $tests_per_url = 23;
 plan tests => $tests_per_url * scalar(@urls);
+
+my $content_checks_tests = 4;
 
 my $ua_string = 'BBBike-Test/1.0';
 
@@ -86,27 +88,39 @@ for my $url (@urls) {
 	    my $resp = $ua->get("$url/temp_blockings/bbbike-temp-blockings-optimized.pl");
 	    ok($resp->is_success, ".pl file which should be treated as text ($url)")
 		or diag $resp->dump;
-	    like($resp->content, qr{temp_blocking});
+	SKIP: {
+		skip "Skip content tests because of failed response", 1 if !$resp->is_success;
+		like($resp->content, qr{temp_blocking});
+	    }
 	}
 
 	{
 	    my $resp = $ua->get("$url/handicap_l");
 	    ok($resp->is_success, "normal bbd file")
 		or diag $resp->dump;
-	    do_content_checks($resp->decoded_content, "LWP");
+	SKIP: {
+		skip "Skip content tests because of failed response", $content_checks_tests if !$resp->is_success;
+		do_content_checks($resp->decoded_content, "LWP");
+	    }
 	}
 
 	{
 	    my $resp = $uagzip->get("$url/handicap_l");
 	    ok($resp->is_success, "normal bbd file")
 		or diag $resp->dump;
-	    do_content_checks($resp->decoded_content, "LWP (gzip)");
+	SKIP: {
+		skip "Skip content tests because of failed response", $content_checks_tests if !$resp->is_success;
+		do_content_checks($resp->decoded_content, "LWP (gzip)");
+	    }
 	}
 
 	{
 	    my %res = Http::get(url => "$url/handicap_l");
 	    is($res{'error'}, 200, "Got $url/handicap_l with Http.pm");
-	    do_content_checks($res{'content'}, 'Http (SRT)');
+	SKIP: {
+		skip "Skip content tests because of failed response", $content_checks_tests if $res{'error'} != 200;
+		do_content_checks($res{'content'}, 'Http (SRT)');
+	    }
 	}
 
 	my $root_url = URI->new($url);
@@ -118,6 +132,8 @@ for my $url (@urls) {
 	    my $resp = $ua->get("$robots_url");
 	    ok($resp->is_success, 'robots.txt exists')
 		or diag($resp->as_string);
+	    like($resp->decoded_content, qr/^User-Agent:/m, 'expected User-Agent line in robots.txt');
+	    like($resp->decoded_content, qr/^Disallow:/m, 'expected Disallow line in robots.txt');
 	}
 
 	{
@@ -126,6 +142,7 @@ for my $url (@urls) {
 	    my $resp = $ua->get("$favicon_url");
 	    ok($resp->is_success, 'favicon exists')
 		or diag($resp->as_string);
+	    image_ok(\($resp->decoded_content), 'favicon image check');
 	}
     }
 }

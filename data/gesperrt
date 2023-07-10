@@ -3320,12 +3320,13 @@ weites Dr‰ngelgitter	BNP:2:-68:trailer=7 15698,8903
 weites Dr‰ngelgitter	BNP:2:-81:trailer=7 16369,8836
 Schranke, kann nur auf dem B¸rgersteig umfahren werden (Bordstein!)	BNP:5:83:trailer=15 3135,12101
 Dr‰ngelgitter	BNP:3:-33:trailer=10 4067,22066
+Henriette-Herz-Allee: (fr¸herer Vorschlag Georg-Fˆrster-Allee) Wann wird die Straﬂe erˆffnet?	2::inwork 20922,18613 20910,18719
 Flughafensee: Br¸cke gesperrt	2::inwork 2829,18126 2797,18126 2790,18139
 Forumszufahrt: Bahnunterf¸hrung wegen Bauarbeiten gesperrt	2::inwork 22280,6128 22296,6170
 Caroline-von-Humboldt-Weg: Hochbauarbeiten, Fahrbahn gesperrt	2::inwork 9961,12094 10050,11942
 (Fahlenbergstr. - Einkaufszentrum Lagunenweg): Bauarbeiten, Straﬂe wird neu gemacht	2::inwork 31971,3170 31788,3192 31762,3202
 An den Eiswerken	2::inwork 15004,10791 14994,10732 14984,10677
-Paul-und-Paula-Promenade	2::inwork 14886,10748 14984,10677
+Paul-und-Paula-Promenade	2::inwork 14886,10748 14909,10732 14984,10677
 Ulrich-Plenzdorf-Str.	2::inwork 14994,10732 15071,10716 15151,10699
 Potsdamer Platz - Bellevuestr.: wegen Bauarbeiten am ehemaligen Sony-Center gesperrt	2::inwork 8542,11502 8442,11555
 Gˆtelstr.: Einbahnstraﬂenregelung	1 -3260,12540 -3252,12405 -3255,12338 -3284,12304 -3293,12304
@@ -3397,7 +3398,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 Grunerstr.	1::inwork 10849,12557 10838,12496 10807,12451 10746,12364 10697,12303
 Bl¸tenweiﬂweg: durch Bauz‰une abgesperrt	2::inwork 21427,5347 21483,5374
 Am Kutscherhaus: durch Bauz‰une abgesperrt	2::inwork 21514,5310 21386,5251 21355,5254
-W‰scherinnenweg: durch Bauz‰une abgesperrt	2::inwork 21444,5112 21358,5072
+Uferweg - Carl-Spindler-Str.: noch nicht offiziell geˆffnet	2::inwork 21547,5245 21580,5259
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingez‰unt und gesperrt	2::inwork 10746,12364 10831,12371
 J¸denstr.: Anbindung an die Stralauer Str. komplett gesperrt	2::inwork 10830,12313 10830,12279
 J¸denstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451
@@ -3583,6 +3584,9 @@ Treppe zur Putlitzbr¸cke -> An der Putlitzbr¸cke: Mittelstreifen schlecht zu ¸be
 schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)	3nocross::ignrte 7172,13051 7187,13126 7161,13190
 Rathenower Str. -> Otto-Dix-Str.: schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)	3::igndisp 7161,13190 7187,13126 7356,13213
 Otto-Dix-Str. -> Rathenower Str.: schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)	3::igndisp 7356,13213 7187,13126 7172,13051
+Straﬂenbahntrasse	3nocross::ignrte 6377,13321 6480,13325 6535,13327 6674,13332
+Turmstr. -> Kleiner Tiergarten: Straﬂenbahntrasse	3::igndisp 6674,13332 6535,13327 6564,13260
+Kleiner Tiergarten -> Turmstr.: Straﬂenbahntrasse	3::igndisp 6564,13260 6535,13327 6480,13325
 Eichkatzweg	1 1137,9921 1026,9772 925,9644
 L‰rchenweg	1 1046,9989 1093,9952 1137,9921 1157,9907 1238,9869
 schieben - einzelne Stufen	0:20:-147 1372,8011
