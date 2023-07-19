@@ -10,11 +10,7 @@
 # 
 ### Friedrichshain ###
 # 
-#: by: https://www.openstreetmap.org/note/3677860
-#: also_indoor: traffic (G,H[falsch],B,W)
-#: last_checked: 2023-07-11
-#: check_frequency: 14d
-W¸hlischstr.: Bauarbeiten an der Einm¸ndung Boxhagener Str., Fahrbahn gesperrt	q4::inwork 14759,11339 14771,11345
+# REMOVED (fertig) --- #: by: https://www.openstreetmap.org/note/3677860 --- #: also_indoor: traffic (G,H[falsch],B,W) --- #: last_checked: 2023-07-15 --- #: check_frequency: 14d --- W¸hlischstr.: Bauarbeiten an der Einm¸ndung Boxhagener Str., Fahrbahn gesperrt	q4::inwork 14759,11339 14771,11345
 # 
 #: next_check_id: NIEMANN-2023
 #: by: https://nitter.cz/VIZ_Berlin/status/1673932919125995523#m
@@ -46,7 +42,7 @@ Weserstr.: Hochbauarbeiten, Einbahnstraﬂenregelung	q3::inwork; 14710,11626 14651
 #: osm_watch: way id="936801541" version="5"
 #: osm_watch: way id="36987812" version="15"
 #: also_indoor: traffic (W,G)
-#: last_checked: 2023-07-11 (daf)
+#: last_checked: 2023-07-15
 #: check_frequency: 90d
 Bˆdikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
 # 
@@ -272,9 +268,9 @@ Stralauer Str.: Radweg auf schmalen B¸rgersteig	q2::inwork; 10951,12249 10830,12
 # 
 #: next_check_id: MOLKENMARKT-2021
 #: XXX nach Fertigstellung des Molkenmarkts entfernen
-#: last_checked: 2023-06-30
+#: last_checked: 2023-07-17
 #: check_frequency: 90d
-Grunerstr.: Gehweg	q4 10900,12546 10973,12612 11057,12715
+Grunerstr.: Gehweg	q4 10900,12546 10982,12597 11057,12715
 # 
 # REMOVED --- #: next_check_id: BEBELPLATZXMAS-2022 --- #: note: eigentlich "q3::xmas", wird aber weder gerendert noch von Strassen::Cat akzeptiert --- #: last_checked: 2023-01-05 --- #: check_frequency: 2d --- # REMOVED --- #: next_check: 2023-01-02 --- # REMOVED --- #: valid: 20221111-20230102 --- #: valid: 20221111-20230108 --- Bebelplatz: Weihnachtsmarkt, schmaler Durchgang	q3 9664,12387 9680,12232
 # 
@@ -332,7 +328,7 @@ Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
 #: also_indoor: traffic (H,B)
 #: note: Die H‰lfte der Container ist mittlerweile weg, aber es ist weiterhin die gesamte Breite der Fahrbahn gesperrt.
-#: last_checked: 2023-07-01
+#: last_checked: 2023-07-17
 Parochialstr.: Fahrbahn zwischen J¸denstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 # 
 # REMOVED --- #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large --- #: last_checked: 2022-12-27 --- #: check_frequency: 60d --- (Grunerstr. - Gustav-Bˆﬂ-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10868,12572 10772,12515
@@ -421,7 +417,7 @@ Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweich
 #: by: https://blog.sbb.berlin/25-januar-digitale-wiedereroeffnung-des-hauses-unter-den-linden/
 #: also_indoor: traffic
 #: priority: #B vvv
-#: last_checked: 2023-07-05 (mapillary) vvv
+#: last_checked: 2023-07-18 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2021-04-01 vvv
 #: osm_watch: way id="153698394" version="14"
@@ -609,7 +605,7 @@ H‰mmerlingstr.: Fahrbahn unter der Eisenbahnbr¸cke gesperrt, sehr enger Gehweg e
 ### Moabit ###
 # 
 #: next_check_id: TRAMTURM-2021
-# REMOVED --- #: source_id: bvg2021:m27#BVG305466_0
+#: source_id[inactive]: bvg2021:m27#BVG305466_0
 #: next_check: 2023-09-06 vvv
 #: check_frequency: 90d vvv
 #: last_checked: 2023-05-14 (osm) vvv
@@ -627,8 +623,8 @@ Turmstr.: Bauarbeiten, Engstelle	q3::inwork; 5857,13342 5956,13330
 # REMOVED (hier wieder F¸hrung auf der Fahrbahn, siehe bahninfo-forum) --- #: osm_watch: way id="30195541" version="38" --- #: osm_watch: way id="1101061991" version="10" --- #: osm_watch: way id="310164489" version="30" --- Turmstr.: Bauarbeiten, Engstellen, Umweg ¸ber den Kleinen Tiergarten	q3::inwork; 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 #: source_id: viz2021:13.339142,52.52642,06.01.2023,10:00 (Thusnelda-Allee f¸r Kfz-Verkehr gesperrt, bis 7.7.2023) (bis 6.9.2023)
 #: source_id: viz2021:13.33913,52.5264,07.07.2023,16:48 (bis 06.09.2023) (inaktiv)
-# REMOVED --- #: source_id: bvg2021:101#BVG301286_0
-#: osm_watch: way id="4571954" version="33"
+#: source_id[inactive]: bvg2021:101#BVG301286_0
+#: osm_watch: way id="4571954" version="34"
 #: last_checked: 2023-07-02 (osm)
 #: check_frequency: 45d
 Thusnelda-Allee: noch offen f¸r Radfahrer, aber Einschr‰nkungen im Kreuzungsbereich	q3::inwork 5956,13330 5975,13256
@@ -682,7 +678,7 @@ Thusnelda-Allee: noch offen f¸r Radfahrer, aber Einschr‰nkungen im Kreuzungsbere
 #: XXX siehe unten: anderen Eintrag wieder aktivieren
 #: also_indoor: traffic (none)
 #: also_indoor: webcam https://portal1443.webcam-profi.de/ (leider mittlerweile verpixelt)
-#: last_checked: 2023-06-11
+#: last_checked: 2023-07-18
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-10-01
 Meierottostr.: Einbahnstraﬂenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2-::inwork; 5463,9961 5246,10168
@@ -690,7 +686,7 @@ Meierottostr.: Einbahnstraﬂenregelung an der Bundesallee, auf Gehweg ausweichen,
 #: next_check_id: PARISER-2021
 #: by: https://www.tagesspiegel.de/berlin/kreative-loesungen-fuer-den-berliner-radverkehr-bezirk-stellt-poller-am-kudamm-auf/25685748.html
 #: also_indoor: webcam https://portal1443.webcam-profi.de/
-#: last_checked: 2023-06-11
+#: last_checked: 2023-07-18
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-10-01
 Pariser Str./Bundesallee: Bauarbeiten, Durchgang verengt	q3::inwork 5461,9923 5423,9932 5382,9942
@@ -797,14 +793,7 @@ Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kan
 # 
 ### Lichtenberg ###
 # 
-#: by: https://viz.berlin.de/2023/06/verkehrsvorschau-260623/ (bis 03.07.2023, weitere Bauabschnitte bis Mitte Juli 2023)
-#: by: https://nitter.cz/VIZ_Berlin/status/1673195634050859008#m
-#: source_id: viz2021:13.507611,52.474933,26.06.2023,06:00 (bis 3.7.2023) (bis 10.7.2023) (inaktiv)
-#: note: Halteverbote bis 2023-07-14
-#: last_checked: 2023-07-11
-#: next_check: 2023-07-14
-#: valid: -20230714
-Am Walde: kurze Einbahnstraﬂenregelung an der Rummelsburger Landstraﬂe, B¸rgersteig existiert	q3::inwork; 17527,7812 17590,7828
+# REMOVED (zwar steht hier noch ein Einfahrt-verboten-Schild, aber es gibt keine Verengung der Fahrbahn mehr) --- #: by: https://viz.berlin.de/2023/06/verkehrsvorschau-260623/ (bis 03.07.2023, weitere Bauabschnitte bis Mitte Juli 2023) --- #: by: https://nitter.cz/VIZ_Berlin/status/1673195634050859008#m --- #: source_id: viz2021:13.507611,52.474933,26.06.2023,06:00 (bis 3.7.2023) (bis 10.7.2023) (inaktiv) --- #: note: Halteverbote bis 2023-07-14 --- #: last_checked: 2023-07-11 --- #: next_check: 2023-07-14 --- #: valid: -20230714 --- Am Walde: kurze Einbahnstraﬂenregelung an der Rummelsburger Landstraﬂe, B¸rgersteig existiert	q3::inwork; 17527,7812 17590,7828
 # 
 #: add_fragezeichen: Wann ist die Sperrung beendet?
 #: also_indoor: traffic (B)
@@ -910,7 +899,7 @@ Rembrandtstr.: Engstelle an einer Hochbaustelle	q2::inwork 6344,7174 6234,7020
 #: source_id: viz2021:13.355106,52.494649,25.02.2022,14:00 (Gasleitungsbaustelle, bis 02.05.2022) (mittlerweile bis 31.5.2022) (bis 31.10.2022) (bis 23.12.2022) (bis 5.12.2022) (bis 23.1.2023) (bis 14.4.2023) (bis 05.06.2023) (bis 28.06.2023) (inaktiv)
 #: osm_watch: way id="1096203482" version="7"
 #: also_indoor: traffic (ex-H,B,ex-G,W)
-#: last_checked: 2023-07-01
+#: last_checked: 2023-07-18
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2023-06-28
 Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3-::inwork 7126,9825 7118,9870
@@ -918,10 +907,10 @@ Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3-::inwork 7126,9825 7118,987
 #: by: https://www.amwinterfeldt.com/#dasprojekt (erwartete Fertigstellung 2024)
 #: by: https://www.deutsches-architekturforum.de/thread/11061-tempelhof-sch%C3%B6neberg-kleinere-projekte/?postID=732933#post732933
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/am-winterfeldt-pallasstra%C3%9Fe-24-26.492/page-2#post-20080
-#: last_checked: 2023-07-01 vvv
+#: last_checked: 2023-07-18 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-12-31 vvv
-Elﬂholzstr.: Hochbauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 7223,9815 7216,9657
+Elﬂholzstr.: Hochbauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 7202,9329 7209,9507 7216,9657 7223,9815
 #: osm_watch: way id="51196438" version="21"
 #: note: der Zweirichtungsradweg-Abschnitt ist etwa 100m lang
 Gleditschstr.: Hochbauarbeiten, Zweirichtungsradweg auf dem westlichen B¸rgersteig	q2::inwork; 7122,9517 7126,9825
@@ -1130,7 +1119,7 @@ Neumannstr.: Bauarbeiten, etwa 30m Fahrbahn gesperrt	q2::inwork 11630,16623 1165
 #: by: https://www.berliner-woche.de/rosenthal/c-verkehr/arbeiten-an-der-abwasserleitung_a371543
 #: XXX Fahrbahn schlechtes Kopfsteinpflaster --- wird das nach den Bauarbeiten vielleicht besser werden? (ggfs. nach fragezeichen-orig verschieben)
 #: note: laut Bauschild der Wasserbetriebe bis Juli 2024
-#: osm_watch: way id="22966091" version="36"
+#: osm_watch: way id="22966091" version="37"
 #: source_id: viz2021:13.379045,52.601105,07.11.2022,06:00 (bis 8.5.2023) (inaktiv) (bis 30.6.2023) (bis 30.9.2023) vvv
 #: last_checked: 2023-05-21 vvv
 #: next_check: 2023-09-30 vvv
@@ -1314,9 +1303,7 @@ Hasenheide, zur Lilienthalstr.: Parkweg	q1 10709,9192 11111,9104 11141,9107
 (Hasenheide, s¸dˆstlicher Rundweg): Fuﬂg‰nger	q1 11467,8329 11523,8327 11559,8357 11570,8409 11560,8480
 (Flughafenstr. - Rundweg in der Hasenheide): Fuﬂg‰nger	q1 11632,8302 11577,8315 11559,8357
 Am Flutgraben: Fuﬂg‰nger	q1 13333,9929 13418,9944
-#: next_check_id: SCHLESISCHERBUSCH-2023
-#: XXX_prog: Konflikt mit gesperrt-orig-Eintrag
-#: valid: 20230915-
+# REMOVED --- #: next_check_id: SCHLESISCHERBUSCH-2023 --- #: XXX_prog: Konflikt mit gesperrt-orig-Eintrag --- #: valid: 20230915-
 Am Flutgraben: Fuﬂg‰nger	q1 13418,9944 13579,10146
 (durch den Schlesischen Busch): Fuﬂg‰nger	q1 13418,9944 13657,9983 13711,10022
 Kolonie Albrechtshˆhe: einige Fuﬂg‰nger	q1 10260,5953 10215,5959 9955,5993
@@ -2188,6 +2175,8 @@ Viktoria-Luise-Platz: Fuﬂg‰ngerzone, Radfahren verboten	q4 6142,9934 6224,9980
 Viktoria-Luise-Platz: Fuﬂg‰ngerzone, Radfahrer frei	q1 6149,9897 6209,9885
 Viktoria-Luise-Platz: Fuﬂg‰ngerzone, Radfahrer frei	q1 6278,9925 6275,9962
 Luitpoldstr.: Schulhof	q3 6611,9879 6688,9897
+#: XXX_prog: BS (Bordstein am Wendehammer und zur Martin-Luther-Str., sonst q2 bis q3)
+Luitpoldstr.: Fuﬂg‰nger, Bordsteine	q3 6463,9862 6504,9865
 Weg am Tempodrom: Fuﬂg‰nger, eng, kurvig	q2 8853,10708 8798,10678 8738,10704 8698,10756
 Kienheideweg: Fuﬂg‰nger, Bordsteine	q2 13136,5593 13331,5640
 Kienheideweg: Fuﬂg‰nger	q1 13331,5640 13414,5655
@@ -3225,7 +3214,8 @@ Ackerstr.: einige Fuﬂg‰nger, Bordstein	q2 -3937,15299 -3869,15333
 Heerstr. - Tiefenwerder: teilweise recht eng	q2 -3217,11570 -3179,11763 -3116,12012
 (Sonnenallee - Aronsstr.): einige Fuﬂg‰nger	q1 14530,7301 14558,7350 14571,7427
 (Landschaftspark Herzberge, Weg am ehemaligen Zeltlager): einige Fuﬂg‰nger, kurvenreich	q2 17187,13609 17185,13765 17204,13800 17209,13856 17178,13896 17190,13903 17213,13931 17210,14054 17164,14067 17152,14084
-(Hellweg-Parkplatz): Parkplatzverkehr	q1 8243,9766 8242,9699 8201,9647 8192,9619
+(Hellweg-Parkplatz): Parkplatzverkehr	q1 8243,9766 8242,9699 8213,9662 8201,9647 8192,9619
+(Hellweg-Parkplatz): Parkplatzverkehr	q2 8243,9766 8181,9707 8213,9662
 (Langensalzaer Str. - Gr‰fentaler Str.): Fuﬂg‰nger, eng, kurvig	q3 6188,1542 6182,1536 6199,1486 6212,1483 6231,1442
 # REMOVED (existiert nicht mehr) --- #: XXX_prog Steigung -> eigentlich comments_mount --- Am Lokdepot: starke Steigung	q4; 8390,8879 8370,8775
 #: XXX_prog BS und wenn man Pech hat, ist der bordsteinlose Zugang zugeparkt, deshalb q3 (ansonsten q2)
@@ -3932,7 +3922,7 @@ Malchower Teichweg: enger Pfad	q3 16074,19436 16081,19656 16082,19754
 (Lˆwenbrucher Weg - Lortzingplatz): eng, einige Fuﬂg‰nger	q3 10107,-3063 10067,-2952
 (Lˆwenbrucher Weg - Lortzingplatz): einige Fuﬂg‰nger	q1 10067,-2952 10058,-2924 10085,-2810
 (Wittelsbacherstr. - Mauerweg): enger Pfad	q3 12268,-2139 12331,-2108
-(Lieselstr. - Alfonsstr.): einige Fuﬂg‰nger	q1 18931,1192 18998,1349
+(Lieselstr. - Alfonsstr.): einige Fuﬂg‰nger	q1 18931,1192 18964,1270 18998,1349
 (zur Yorckstraﬂenbr¸cke 17): enge Kurven	q3 8423,9529 8453,9519 8454,9528
 Weichselstr./Maybachufer: asphaltierte Kissen	q1+ 12755,9188 12845,9304 12837,9353
 Marie-Elisabeth-von-Humboldt-Weg: schmaler Trampelpfad	q3 20802,19316 20716,19441 20442,19697 20388,19721
@@ -4636,6 +4626,10 @@ Kuppenheimerstr.: einige Fuﬂg‰nger, Bordstein an der Wexstr.	q3 5808,8124 5801,8
 (Passage am Tacheles): Fuﬂg‰nger	q4 9371,13333 9353,13273 9244,13253
 # 
 Eulerstr.: Fuﬂg‰ngerbereich, Quartierplatz	q4 9465,16464 9493,16481
+# 
+(Mauerweg - Schˆnefelder Chaussee): einige Fuﬂg‰nger	q1 18702,1338 18739,1329 18964,1270 19032,1250 19081,1236 19160,1215 19221,1198
+# 
+(Adlergestell/Am Seegraben - Walchenseestr.): schmaler Pfad	q3 21879,1517 21899,1526
 # 
 ######################### User Contributions #################################
 # 

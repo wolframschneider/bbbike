@@ -1993,15 +1993,16 @@ sub current_route_in_bbbike_cgi {
     }
     require Route;
     require Route::GPLE;
+	require Route::GPLEU;
     my $rte = Route->new_from_realcoords(\@main::realcoords);
     $rte->set_coord_system($main::coord_system);
-    my $gple = Route::GPLE::as_gple($rte);
+    my $gpleu = Route::GPLEU::gple_to_gpleu(Route::GPLE::as_gple($rte));
 
     require BBBikeUtil;
     my $url = BBBikeUtil::uri_with_query
 	("http://localhost/bbbike/cgi/bbbike.cgi",
 	 # [ @params ], raw_query => [ gple => $gple ], # minimal, but may cause problems in start_browser call
-	 [ gple => $gple, @params ],
+	 [ gpleu => $gpleu, @params ],
 	);
     main::status_message("Der WWW-Browser wird mit der URL $url gestartet.", "info");
     require WWWBrowser;
@@ -2020,19 +2021,20 @@ sub current_route_in_bbbikeleaflet_cgi {
 
     my $cgiurl = $live ? "http://bbbike.de/cgi-bin/bbbikeleaflet.cgi" : "http://localhost/bbbike/cgi/bbbikeleaflet.cgi";
 
-    my($coords_string, $gple);
+    my($coords_string, $gpleu);
     if (0) {
 	$coords_string = join("!", map { join(",", @$_) } @main::realcoords);
     } else {
 	require Route;
 	require Route::GPLE;
+	require Route::GPLEU;
 	my $rte = Route->new_from_realcoords(\@main::realcoords);
 	$rte->set_coord_system($main::coord_system);
-	$gple = Route::GPLE::as_gple($rte);
+	$gpleu = Route::GPLEU::gple_to_gpleu(Route::GPLE::as_gple($rte));
     }
 
     require BBBikeUtil;
-    my %coord_params = ($gple ? (gple => $gple) : (coords => $coords_string));
+    my %coord_params = ($gpleu ? (gpleu => $gpleu) : (coords => $coords_string));
     my $url;
     if ($selection) {
 	# use raw_query here to make URL shorter

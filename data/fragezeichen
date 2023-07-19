@@ -170,7 +170,6 @@ Häsen - Gutengermendorf: Qualität? Westlich/nördlich der Bahnstrecke anscheinend
 Gutengermendorf - Häsen: Qualität? am Bahnübergang anscheinend Feldweg (Q2) (oder doch asphaltiert, zumindest östlich des Bahnübergangs?), in Häsen asphaltiert	? -6423,59523 -6070,59687 -5307,60095 -5190,59900 -4574,59775 -4389,59885 -3799,59684 -3515,59622
 (bei Altlüdersdorf): Qualität? westlich des Bahnübergangs anscheinend mäßiger Asphalt (Q1)	? -7200,71146 -6211,71583 -5320,71996
 Beelitz - Schönefeld: laut "Berliner Umland" wurde die Straße etwas nach Süden verlegt	? -18265,-20481 -18031,-20502 -17867,-20681
-Tempelfelde - Beiersdorf: Qualität?	? 31420,34133 31827,33780 33310,33365 35441,32759
 Schönfeld - Tempelfelde: Qualität?	? 32875,31143 32722,31273 33310,33365
 Nonnenfließ: Qualität? Ist die "Eiszeittour" ausgeschildert?	? 34323,42461 34462,42668 34868,42781 34750,43118 34843,43731 34906,43787 34975,43781 35031,43918 34856,44193 34681,44312 34706,44437 34562,44462 34556,44693 34500,44718 34512,44837 34612,44906 34691,45228
 Schönholz - Nonnenfließ: Qualität? Ausschilderung? Ist die "Eiszeittour" ausgeschildert?	? 34323,42461 34462,42668 34868,42781 34750,43118 34843,43731 34906,43787 34975,43781
@@ -880,8 +879,6 @@ Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 # added from qualitaet_s
 Steinstr.: Kopfsteinpflaster (ist hier noch immer Kopfsteinpflaster?)	? -7909,-2375 -7996,-2293
 # added from qualitaet_l
-Heckelberg - Beerbaum: etwas welliger Asphalt (Ist die Fahrbahnqualität nach den Bauarbeiten besser geworden?)	? 39402,37410 39156,37578 38986,37512 38171,37238 37672,36908 36605,36450 36523,36465 36359,36493
-Ortsdurchfahrt Beerbaum: schlechtes Kopfsteinpflaster (Ist die Fahrbahnqualität nach den Bauarbeiten besser geworden?)	? 36000,36534 36215,36497 36307,36503 36359,36493
 Neuruppin - Wuthenow - Gnewikow - Wustrau-Altfriesack: teilweise gut, teilweise mäßiges Kopfsteinpflaster (wird sich die Qualität nach den Bauarbeiten verbessern?)	? -29918,57158 -29816,57117 -29490,56714 -29243,56187 -29198,55801 -29109,55374 -28677,55014 -28367,54202 -28911,54055 -29276,53427 -29210,52915 -28736,52387 -28368,51517 -28001,50966 -27421,50349 -27196,50015 -27035,49829 -25968,49631 -25719,49500 -25060,48842
 Ortsdurchfahrt Sacrow: teilweise mäßiger Asphalt (Ist die Fahrbahnoberfläche nach der Sanierung besser geworden?)	? -10722,2111 -10633,2154 -10489,2151 -10309,2155 -10123,2226 -10118,2280 -10105,2458
 Heinersdorf: schlechtes Kopfsteinpflaster, sandiger Rand evtl. OK (ist hier mittlerweile asphaltiert?)	? 5633,-2011 5292,-2221 5132,-2299
@@ -971,3 +968,4 @@ Spreeuferweg: Bauarbeiten, zwischen Wullenwebersteg und Lessingbrücke kann der U
 Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet? Wird der Weg neu asphaltiert sein?)	? 20996,16429 20923,16435 20898,16420
 Verlängerte Neukladower Allee: Sperrung wegen Bauarbeiten, voraussichtlich bis Mai 2023 (Ist die Verlängerte Neukladower Allee weiterhin gesperrt?)	? -6319,5606 -6246,5562 -6125,5447
 Schleswiger Ufer - Uferweg: Bauarbeiten, Zufahrt zum Uferweg komplett gesperrt, Ende der Bauarbeiten unbekannt [Zugang zum Uferweg] (Wann sind die Bauarbeiten hier fertig?)	? 5800,12361 5796,12372
+Götelstr.: Bauarbeiten, Fahrbahn zwischen Betckestr. und Weverstr. gesperrt (Stand Mitte April 2023), Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten beendet?)	? -3269,12406 -3260,12540

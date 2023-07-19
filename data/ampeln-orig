@@ -70,7 +70,7 @@ Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
 #: source_id: viz2021:13.47181,52.50783,24.01.2023,09:00 (bis 03.06.2024) (inaktiv)
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024)
 #: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung
-#: last_checked: 2023-06-24
+#: last_checked: 2023-07-15
 #: check_frequency: 120d
 #: next_check: 2024-06-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
@@ -177,7 +177,7 @@ Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2023-06-26
+#: last_checked: 2023-07-15
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 # 
@@ -413,6 +413,7 @@ Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 	F 11316,10372
 	X 10357,9807
 	X 10144,9856
+#: note: Kontaktschleifen in der Relation Alte Jakobstr.
 	X 10256,11160
 	X 10198,9405
 	X 10306,9640
@@ -3240,7 +3241,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2023-07-05 (mapillary) vvv
+#: last_checked: 2023-07-18 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3684,7 +3685,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX ^^^
 # 
 #: note: Anforderungsampel
-	X 21874,1511
+	X 21878,1500
 #: by: mapillary
 	X 11952,24153
 #: note: Anforderungsampel
@@ -3708,13 +3709,13 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296478" version="2"
 #: note: Anforderungsampel
-#: last_checked: 2023-07-07
+#: last_checked: 2023-07-15
 #: check_frequency: 120d
 	F::inwork 17695,5394
 #: XXX wie lange bleibt die provisorische Ampel?
 #: osm_watch: node id="9221296482" version="15"
 #: note: Anforderungsampel
-#: last_checked: 2023-07-07
+#: last_checked: 2023-07-15
 #: check_frequency: 120d
 	F::inwork 17747,5452
 # 
@@ -4190,8 +4191,15 @@ Bahn kommt ca. halbstündlich	B 40222,103642
 	B 26650,-15695
 	B 43031,-50423
 	B 44496,-51922
+# 
+#: by: https://berliner-abendblatt.de/berlin-news/grosses-bauvorhaben-in-luebbenau-startet-id227435 (Bahnübergänge werden beseitigt, bis Ende 2027)
+#: osm_watch: node id="440824347" version="10"
+#: next_check: 2027-12-31
 	B 49226,-59451
+#: osm_watch: node id="1492003972" version="8"
+#: next_check: 2027-12-31
 	B 50161,-60073
+# 
 	B 50153,-67024
 	B 51374,-71361
 	B 40359,139907
