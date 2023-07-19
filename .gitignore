@@ -48,6 +48,7 @@ cgi/extract.cgi
 cgi/tile-size.cgi
 cgi/extract-email.cgi
 cgi/route.cgi
+cgi/timestamp.cgi
 data-osm.bbbike.tgz
 data-osm.bbbike/
 data-osm.old/
