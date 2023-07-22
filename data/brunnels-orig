@@ -221,10 +221,10 @@ Gartenfelder Brücke	Br -302,15602 -302,15546
 #: also_indoor: webcam https://portal1682.webcam-profi.de/ (Nummer 4, oben links im Bild)
 #: source_id: 2147345790 (nicht mehr aktiv)
 #: source_id: 2147346453 (Leitungsbauarbeiten, bis 16.10.2020)
-#: last_checked: 2023-07-03 (osm) vvv
+#: last_checked: 2023-07-18 (osm) vvv
 #: check_frequency: 360d vvv
 #: next_check: 2023-12-01 vvv
-#: osm_watch: way id="4568174" version="50"
+#: osm_watch: way id="4568174" version="51"
 Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
 # REMOVED --- #: osm_watch: way id="883834105" version="16"
 #: osm_watch: way id="883834106" version="23"
@@ -295,7 +295,7 @@ Rathausbrücke	Br 10357,12356 10416,12394
 #: by: https://berliner-abendblatt.de/2022/06/22/muehlendammbruecke-konzept-wurde-ueberarbeitet/
 #: by: https://www.berliner-woche.de/mitte/c-bauen/senat-ueberarbeitet-plaene-fuer-muehlendammbruecke-und-gertraudenbruecke_a350225
 #: XXX Mühlendammbrücke: geplanter Neubau --- wird es zu Einschränkungen für den Radverkehr kommen?
-#: last_checked: 2023-07-17
+#: last_checked: 2023-07-20
 #: next_check: 2024-06-01
 Mühlendammbrücke	Br 10574,12131 10625,12206
 # 

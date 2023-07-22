@@ -91,7 +91,7 @@ Edelhofdamm	1 3185,25437 3101,25402 2909,25322 2756,25260 2683,25238 2713,25300 
 Antonienstr.	1 3930,17923 3946,18003 3970,18126 4009,18322 4070,18695 4144,18896 4228,19024
 Eichborndamm	1s 4228,19024 4223,18982
 Eichborndamm	1 4223,18982 4211,18882 4163,18676 4102,18298 4059,18107 4016,17918
-Spreestr.	1 17900,6072 17939,5968 17931,5955 17877,5860 17810,5736 17807,5730 17782,5698
+Spreestr.	1 17900,6072 17939,5968 17935,5961 17877,5860 17810,5736 17807,5730 17782,5698
 Buckower Chaussee	1 8742,475 8972,498 9002,471
 Archibaldweg	1s 15674,10851 15777,10897 15820,10916 15870,10938
 Nˆldnerplatz	1s 15870,10938 15903,10906
@@ -525,7 +525,9 @@ Torstr. (Richtungsfahrbahn)	1::igndisp 10898,13632 11117,13521 11160,13492
 Torstr. (Straﬂenbahntrasse)	3nocross::ignrte 11160,13492 11117,13521 10898,13632
 Bundesplatz (Richtungsfahrbahn)	1 5346,7860 5331,8012 5304,8088 5304,8144 5354,8236
 Bundesplatz (Richtungsfahrbahn)	1 5354,8236 5363,8170 5376,8104 5357,8013 5350,7915 5346,7860
-Grunerstr. (Richtungsfahrbahn)	1::igndisp 11105,12764 11057,12715 10951,12637 10873,12577
+Grunerstr. (Richtungsfahrbahn)	1::igndisp 11105,12764 11057,12715
+Grunerstr. [Fahrbahn]: gesperrt	2::inwork 10931,12622 10951,12637 11057,12715
+Grunerstr. (Richtungsfahrbahn)	1::igndisp 10931,12622 10873,12577
 Grunerstr. (Richtungsfahrbahn)	1::igndisp 10873,12577 10950,12640 11013,12684 11055,12717 11105,12764
 Grunerstr. (Mittelstreifen)	3nocross::ignrte 11105,12764 11055,12717 11013,12684 10950,12640 10873,12577
 Dircksenstr. (Mittelstreifen/Straﬂentunnel)	2::igndisp 11057,12715 11055,12717
@@ -3298,7 +3300,7 @@ Dr‰ngelgitter	BNP:3:-44:trailer=10 -739,23004
 Schranke	BNP:1:90:trailer=3 1201,15804
 Dr‰ngelgitter	BNP:3:57:trailer=10 32616,-23392
 Schranke	BNP:2:-115:trailer=8 17837,12277
-Schranke	BNP:0:-113:trailer=2 18037,12362
+Schranke	BNP:2:-113:trailer=8 18037,12362
 Schranke	BNP:1:9:trailer=5 20813,-941
 Dr‰ngelgitter	BNP:3:-32:trailer=10 18414,1380
 Dr‰ngelgitter	BNP:3:-32:trailer=10 18232,1669
@@ -3328,6 +3330,10 @@ weites Dr‰ngelgitter	BNP:2:-68:trailer=7 15698,8903
 weites Dr‰ngelgitter	BNP:2:-81:trailer=7 16369,8836
 Schranke, kann nur auf dem B¸rgersteig umfahren werden (Bordstein!)	BNP:5:83:trailer=15 3135,12101
 Dr‰ngelgitter	BNP:3:-33:trailer=10 4067,22066
+Am Werkstor: Bauz‰une, Straﬂe gesperrt	2::inwork 18019,5786 18062,5856 18075,5880
+Kupferkamp: Bauz‰une, Straﬂe gesperrt	2::inwork 17935,5961 18075,5880
+Helga-Hahnemann-Str.: Bauz‰une, Straﬂe gesperrt	2::inwork 18260,5746 18062,5856
+Wilhelminenhofstr.: wegen Bauarbeiten am Behrens-Ufer gesperrt	2::inwork 19139,5627 19184,5554
 Hellweg-Parkplatz: wegen Bauarbeiten an der Rampe zur Yorckstraﬂenbr¸cke 5 gesperrt	2::inwork 8242,9699 8243,9766
 Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
 Henriette-Herz-Allee: (fr¸herer Vorschlag Georg-Fˆrster-Allee) Wann wird die Straﬂe erˆffnet?	2::inwork 20922,18613 20910,18719
@@ -3359,7 +3365,7 @@ Bruchsaler Str.: Hochbauarbeiten, Einbahnstraﬂe auch f¸r Radfahrer	1s:inwork 552
 U-Bhf. Scharnweberstr.: Durchgang gesperrt	2::inwork 3987,17808 3997,17840
 Wuhlesteg: gesperrt	2::inwork 22171,12965 22196,12961
 Neue Fahlenbergbr¸cke	2::inwork 31009,19 31080,-19
-(Fortsetzung Wandlitzstr.): gesperrt, Bauz‰une	2::inwork 17981,9000 17837,9086
+(Fortsetzung Wandlitzstr.): mˆgliche Bauarbeiten	2::inwork 17981,9000 17837,9086
 Marktplatz Adlershof: Fahrbahn gesperrt wegen Umbauarbeiten	2s:inwork 20336,3783 20362,3750
 Am Flutgraben: Bauarbeiten, Weg ist gesperrt	2::inwork 13418,9944 13579,10146
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
@@ -3410,7 +3416,8 @@ Uferweg - Carl-Spindler-Str.: noch nicht offiziell geˆffnet	2::inwork 21547,5245
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingez‰unt und gesperrt	2::inwork 10746,12364 10831,12371
 J¸denstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork 10831,12371 10830,12313 10830,12279
 J¸denstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451
-Littenstr.: Anbindung an die Grunerstr. gesperrt	2::inwork 10982,12597 10951,12637
+Littenstr.: Anbindung an die Grunerstr. gesperrt	2::inwork 10973,12611 10951,12637
+Grunerstr.: Radweg	1::igndisp 11057,12715 10973,12611 10954,12604 10931,12622
 Helen-Ernst-Str.: Einbahnstraﬂe wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	1::inwork 13422,11236 13537,11186 13540,11148
 Johannisstr.: Einbahnstraﬂe	1s:inwork 9588,13174 9385,13174 9254,13171
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7727,4418 7692,4464 7667,4549
@@ -3431,6 +3438,7 @@ Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,127
 Lˆwenbr¸cke: gesperrt	2:inwork 6417,11796 6438,11784
 (G¸terbahnhof Greifswalder Str.): Br¸cke gesperrt	2 12602,15006 12649,14977
 (G¸terbahnhof Greifswalder Str.): kann bei Veranstaltungen gesperrt sein	2:temp 12520,15057 12602,15006
+Bhf. Blankenfelde: Bahn¸bergang gesperrt, neue Unterf¸hrung wird gebaut	2::inwork 11667,-7536 11601,-7560 11551,-7599
 Trebbiner Straﬂe (Mahlow): Bahn¸bergang gesperrt, neue Unterf¸hrung wird gebaut	2::inwork 11065,-5338 11077,-5335 11119,-5326
 Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-1449 -12694,-1408 -12727,-1416 -12747,-1336
 Erika-Wolf-Str. (Potsdam): w‰hrend der Bauarbeiten gesperrt	2::inwork -12812,-1490 -12685,-1449 -12628,-1423
@@ -3595,6 +3603,13 @@ Otto-Dix-Str. -> Rathenower Str.: Straﬂenbahntrasse	3::igndisp 7356,13213 7187,1
 Straﬂenbahntrasse	3nocross::ignrte 6377,13321 6480,13325 6535,13327 6674,13332
 Turmstr. -> Kleiner Tiergarten: Straﬂenbahntrasse	3::igndisp 6674,13332 6535,13327 6564,13260
 Kleiner Tiergarten -> Turmstr.: Straﬂenbahntrasse	3::igndisp 6564,13260 6535,13327 6480,13325
+Straﬂenbahntrasse	3nocross::ignrte 5857,13342 5956,13330 6011,13330
+Turmstr. -> Jonasstr.: Straﬂenbahntrasse	3::igndisp 5857,13342 5956,13330 5956,13433
+Turmstr. -> Thusnelda-Allee: Straﬂenbahntrasse	3::igndisp 6011,13330 5956,13330 5975,13256
+Thusnelda-Allee -> Turmstr.: Straﬂenbahntrasse	3::igndisp 5975,13256 5956,13330 5857,13342
+Thusnelda-Allee -> Jonasstr.: Straﬂenbahntrasse	3::igndisp 5975,13256 5956,13330 5956,13433
+Jonasstr. -> Turmstr.: Straﬂenbahntrasse	3::igndisp 5956,13433 5956,13330 6011,13330
+Jonasstr. -> Thusnelda-Allee: Straﬂenbahntrasse	3::igndisp 5956,13433 5956,13330 5975,13256
 Eichkatzweg	1 1137,9921 1026,9772 925,9644
 L‰rchenweg	1 1046,9989 1093,9952 1137,9921 1157,9907 1238,9869
 schieben - einzelne Stufen	0:20:-147 1372,8011
