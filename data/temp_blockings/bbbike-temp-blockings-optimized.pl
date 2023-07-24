@@ -530,7 +530,7 @@ Pestalozzistr.	q4::temp:clock 4101,11233 3981,11232
 #: by: https://berliner-abendblatt.de/berlin-news/karlshorst-antikflohmarkt-startet-in-saison-id215216
 #: note: Der Antikmarkt fällt an den Sonntagen aus, an denen der Antikflohmarkt in Karlshorst stattfindet; das ist üblicherweise der Sonntag nach dem ersten Samstag im Monat, allerdings vermutlich nicht im Winter (Januar - März)
 #: XXX hier vermutlich nur Corona-bedingte Ausweitung der Marktfläche; mittlerweile: Bauarbeiten am Ostbahnhof, normale Marktfläche existiert vermutlich nicht mehr (siehe oben)
-#: last_checked: 2023-06-23
+#: last_checked: 2023-07-23
 #: check_frequency: 120d
 	q4::temp:clock 12378,11806 12413,11901
 #: tempex ^^^
@@ -847,190 +847,7 @@ Pestalozzistr.	q4::temp:clock 4101,11233 3981,11232
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://csd-berlin.de/event-info-en/
-#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/gesamte-innenstadt-verkehrseinschrankungen-zum-christopher-street-day
-#: by: https://csd-berlin.de/ (24.7.2021, Route steht noch nicht fest)
-#: by: https://csd-berlin.de/csd-berlin-2021/demo-route-2/
-#: by: https://csd-berlin.de/demo-route-finale-2022/
-#: by: https://berliner-abendblatt.de/2022/07/13/hunderttausende-bei-csd-parade-am-23-juli-erwartet/
-#: by: https://csd-berlin.de/csd-berlin-2023/route-finale
-#: source_id: viz2021:13.3899,52.51036,21.07.2023,19:32 (bis 22.07.2023)
-	2::temp 10213,11728 10133,11708 10000,11691 9991,11690 9905,11680 9701,11656 9569,11631 9444,11616 9268,11590 9058,11564 8834,11536 8740,11524 8596,11508 8542,11502 8479,11493 8374,11479 8358,11477 8301,11469 8261,11463 8217,11455 8145,11438 8096,11393 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7536,10199 7413,10244 7238,10299 7131,10331 7033,10396 7003,10513 6982,10610 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6809,11979 6828,12031 6787,12099 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954
-	2::temp 8722,12268 8637,12258 8592,12252 8538,12245 8546,12279 8570,12302
-	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8600,12165
-	3 8573,11404 8542,11502 8548,11571
-	3 8573,11404 8542,11502 8442,11555
-	3 9997,11713 10000,11691 9992,11682
-	3 8743,11489 8740,11524 8736,11557
-	3 7103,11247 6851,11346 6692,11365
-	3 6716,11439 6825,11486 6915,11492
-	3 6716,11439 6825,11486 6750,11550
-	3 9456,11513 9444,11616 9432,11702
-	3 8119,12414 8055,12186 8049,12140
-	3 8049,12140 8055,12186 8119,12414
-	3 8630,12310 8637,12258 8641,12227 8643,12208
-	3 6841,11114 6880,11110 7004,11168 7115,11220
-	3 6742,11099 6873,11011 7002,11034
-	3 8232,11414 8217,11455 8172,11679
-	3 8548,11571 8542,11502 8442,11555
-	3 8548,11571 8542,11502 8573,11404
-	3 7444,10479 7633,10394 7744,10372
-	3 7698,10147 7579,10183 7526,9969
-	3 8327,12174 8344,12221 8391,12389
-	3 7002,11034 6873,11011 6742,11099
-	3 8643,12208 8641,12227 8637,12258 8630,12310
-	3 7744,10372 7633,10394 7444,10479
-	3 9581,11523 9569,11631 9559,11715
-	3 9331,11497 9268,11590 9234,11683
-	3 9000,11727 9058,11564 9155,11283
-	3 6164,11947 6642,12010 6550,11954
-	3 8522,12239 8538,12245 8522,12187
-	3 8104,11037 7980,11070 7747,11075
-	3 7031,12320 7383,12095 7429,12070
-	3 9155,11283 9058,11564 9000,11727
-	3 7963,10716 7820,10768 7534,10850
-	3 7534,10850 7820,10768 7963,10716
-	3 6681,10959 6824,10904 6740,10755
-	3 8102,11099 8000,11137 7828,11133
-	3 6540,11754 6778,11742 6980,11790
-	3 8592,11541 8596,11508 8599,11474
-	3 7822,12201 7816,12150 7823,12120
-	3 8442,11555 8542,11502 8548,11571
-	3 8442,11555 8542,11502 8573,11404
-	3 7033,10328 7033,10396 6937,10407
-	3 7033,10328 7033,10396 7227,10489
-	3 7110,10613 6972,10665 6818,10725
-	3 7429,10366 7413,10244 7384,10127
-	3 7429,12070 7383,12095 7031,12320
-	3 7384,10127 7413,10244 7429,10366
-	3 6750,11550 6825,11486 6716,11439
-	3 6750,11550 6825,11486 6915,11492
-	3 7849,10488 7689,10514 7478,10612
-	3 7115,11220 7004,11168 6880,11110 6841,11114
-	3 8391,12389 8344,12221 8327,12174
-	3 8736,11557 8740,11524 8743,11489
-	3 6980,11790 6778,11742 6540,11754
-	3 6679,11602 6809,11570 6869,11567
-	3 7823,12120 7816,12150 7822,12201
-	3 7828,11133 8000,11137 8102,11099
-	3 9559,11715 9569,11631 9581,11523
-	3 6740,10755 6824,10904 6681,10959
-	3 7526,9969 7579,10183 7698,10147
-	3 8522,12187 8538,12245 8522,12239
-	3 6692,11365 6851,11346 7103,11247
-	3 6818,10725 6972,10665 7110,10613
-	3 9234,11683 9268,11590 9331,11497
-	3 7209,10205 7238,10299 7275,10418
-	3 7275,10418 7238,10299 7209,10205
-	3 8599,11474 8596,11508 8592,11541
-	3 7478,10612 7689,10514 7849,10488
-	3 7747,11075 7980,11070 8104,11037
-	3 6937,10407 7033,10396 7033,10328
-	3 6937,10407 7033,10396 7227,10489
-	3 6915,11492 6825,11486 6750,11550
-	3 6915,11492 6825,11486 6716,11439
-	3 9992,11682 10000,11691 9997,11713
-	3 6869,11567 6809,11570 6679,11602
-	3 6550,11954 6642,12010 6164,11947
-	3 8172,11679 8217,11455 8232,11414
-	3 9692,11732 9701,11656 9702,11647
-	3 9432,11702 9444,11616 9456,11513
-	3 7227,10489 7033,10396 6937,10407
-	3 7227,10489 7033,10396 7033,10328
-	3 9702,11647 9701,11656 9692,11732
-# REMOVED ---	2::temp 6744,11936 6809,11979 6828,12031 6787,12099 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954 6744,11936 6778,11742 6809,11570 6825,11486 6851,11346 6880,11110 6882,11061 6873,11011 6824,10904 6740,10755 6685,10690 6532,10529 6494,10440
-# REMOVED ---	2::temp 10213,11728 10133,11708 10000,11691 9991,11690 9905,11680 9701,11656 9569,11631 9444,11616 9268,11590 9058,11564 8834,11536 8740,11524 8596,11508 8542,11502 8548,11571 8553,11630 8553,11638 8562,11744 8567,11799 8571,11846 8577,11896 8595,12066 8600,12165 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-# REMOVED ---	3 8592,11541 8596,11508 8599,11474
-# REMOVED ---	3 9992,11682 10000,11691 9997,11713
-# REMOVED ---	3 6841,11114 6880,11110 7004,11168 7115,11220
-# REMOVED ---	3 9234,11683 9268,11590 9331,11497
-# REMOVED ---	3 6550,11954 6642,12010 6164,11947
-# REMOVED ---	3 7002,11034 6873,11011 6742,11099
-# REMOVED ---	3 7031,12320 7383,12095 7429,12070
-# REMOVED ---	3 8481,11638 8553,11638 8743,11663
-# REMOVED ---	3 6869,11567 6809,11570 6679,11602
-# REMOVED ---	3 9331,11497 9268,11590 9234,11683
-# REMOVED ---	3 8599,11474 8596,11508 8592,11541
-# REMOVED ---	3 6540,11754 6778,11742 6980,11790
-# REMOVED ---	3 6750,11550 6825,11486 6915,11492
-# REMOVED ---	3 6750,11550 6825,11486 6716,11439
-# REMOVED ---	3 9432,11702 9444,11616 9456,11513
-# REMOVED ---	3 6742,11099 6873,11011 7002,11034
-# REMOVED ---	3 8327,12174 8344,12221 8391,12389
-# REMOVED ---	3 8546,12279 8538,12245 8592,12252
-# REMOVED ---	3 8546,12279 8538,12245 8522,12239
-# REMOVED ---	3 8546,12279 8538,12245 8522,12187
-# REMOVED ---	3 7823,12120 7816,12150 7822,12201
-# REMOVED ---	3 8119,12414 8055,12186 8049,12140
-# REMOVED ---	3 7429,12070 7383,12095 7031,12320
-# REMOVED ---	3 8391,12389 8344,12221 8327,12174
-# REMOVED ---	3 6980,11790 6778,11742 6540,11754
-# REMOVED ---	3 8743,11663 8553,11638 8481,11638
-# REMOVED ---	3 8442,11555 8542,11502 8479,11493
-# REMOVED ---	3 8442,11555 8542,11502 8573,11404
-# REMOVED ---	3 9702,11647 9701,11656 9692,11732
-# REMOVED ---	3 7115,11220 7004,11168 6880,11110 6841,11114
-# REMOVED ---	3 7822,12201 7816,12150 7823,12120
-# REMOVED ---	3 6692,11365 6851,11346 7103,11247
-# REMOVED ---	3 6607,10801 6740,10755 6818,10725
-# REMOVED ---	3 6679,11602 6809,11570 6869,11567
-# REMOVED ---	3 7103,11247 6851,11346 6692,11365
-# REMOVED ---	3 6918,10858 6824,10904 6681,10959
-# REMOVED ---	3 9581,11523 9569,11631 9559,11715
-# REMOVED ---	3 6636,10492 6602,10504 6532,10529 6468,10550
-# REMOVED ---	3 9456,11513 9444,11616 9432,11702
-# REMOVED ---	3 8736,11557 8740,11524 8743,11489
-# REMOVED ---	3 8743,11489 8740,11524 8736,11557
-# REMOVED ---	3 8489,11782 8571,11846 8501,11815
-# REMOVED ---	3 8522,12187 8538,12245 8522,12239
-# REMOVED ---	3 8522,12187 8538,12245 8592,12252
-# REMOVED ---	3 8522,12187 8538,12245 8546,12279
-# REMOVED ---	3 8522,12239 8538,12245 8522,12187
-# REMOVED ---	3 8522,12239 8538,12245 8592,12252
-# REMOVED ---	3 8522,12239 8538,12245 8546,12279
-# REMOVED ---	3 8573,11404 8542,11502 8442,11555
-# REMOVED ---	3 8573,11404 8542,11502 8479,11493
-# REMOVED ---	3 8479,11493 8542,11502 8442,11555
-# REMOVED ---	3 8479,11493 8542,11502 8573,11404
-# REMOVED ---	3 8501,11815 8571,11846 8489,11782
-# REMOVED ---	3 6681,10959 6824,10904 6918,10858
-# REMOVED ---	3 9559,11715 9569,11631 9581,11523
-# REMOVED ---	3 9000,11727 9058,11564 9155,11283
-# REMOVED ---	3 9155,11283 9058,11564 9000,11727
-# REMOVED ---	3 6915,11492 6825,11486 6750,11550
-# REMOVED ---	3 6915,11492 6825,11486 6716,11439
-# REMOVED ---	3 9997,11713 10000,11691 9992,11682
-# REMOVED ---	3 6818,10725 6740,10755 6607,10801
-# REMOVED ---	3 8592,12252 8538,12245 8546,12279
-# REMOVED ---	3 8592,12252 8538,12245 8522,12239
-# REMOVED ---	3 8592,12252 8538,12245 8522,12187
-# REMOVED ---	3 6164,11947 6642,12010 6550,11954
-# REMOVED ---	3 6468,10550 6532,10529 6602,10504 6636,10492
-# REMOVED ---	3 9692,11732 9701,11656 9702,11647
-# REMOVED ---	3 8049,12140 8055,12186 8119,12414
-# REMOVED ---	3 6716,11439 6825,11486 6750,11550
-# REMOVED ---	3 6716,11439 6825,11486 6915,11492
-',
-         'from' => 1689890400,
-         'id' => 2083,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              20,
-                              'months',
-                              6,
-                              'start',
-                              '2020-07-30T00:00:00'
-                            ]
-                          ],
-         'source_id' => 'https://www.berlin.de/events/2096878-2229501-csd-christopher-street-day.html',
-         'text' => 'CSD am 22.7.2023',
-         'type' => 'gesperrt',
-         'until' => 1690149599
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2353,15 +2170,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: viz2021:13.310551,52.521111,01.03.2022,08:00 (hier: zwischen Sömmering- und Darwinstr., Radfahrer frei) (bis 31.3.2023) (bis 14.4.2023) (inaktiv)
 #: source_id: viz2021:13.313479,52.521076,26.06.2023,06:00 (bis 31.12.2023) (inaktiv)
 #: note: bei rbb weiterhin gelistet, bis Ende 2023, mittlerweile bis Ende 2024
-#: last_checked: 2022-09-16
-#: check_frequency: 90d
-#: next_check: 2023-06-26
+#: last_checked: 2023-07-22
+# REMOVED --- #: check_frequency: 90d
+#: next_check: 2023-12-31
 # REMOVED (hier nicht mehr) ---	q4::inwork 4234,12710 4303,12692
-	q3::inwork 3828,12697 3981,12709 4071,12720 4124,12721
+	q3::inwork 3828,12697 3981,12709 4071,12720
+# REMOVED (hier nicht) ---	q3::inwork 4071,12720 4124,12721
 ',
          'from' => 1687804758,
          'id' => 2961,
-         'text' => 'Am Spreebord: Bauarbeiten, Abschnitte der Fahrbahn möglicherweise gesperrt, voraussichtlich bis Ende 2023',
+         'text' => 'Am Spreebord: Bauarbeiten, Abschnitte der Fahrbahn gesperrt, Radfahrer können auf den Gehweg ausweichen, voraussichtlich bis Ende 2023',
          'type' => 'handicap',
          'until' => 1704063599
        },
@@ -2605,14 +2423,14 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2023-07-15 (osm)
+#: last_checked: 2023-07-23
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
 ',
          'from' => 1630670400,
          'id' => 3086,
-         'text' => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt (Stand April 2022: Durchfahrt ist gesperrt)',
+         'text' => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt (Stand Juli 2022: Durchfahrt ist gesperrt)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -2769,7 +2587,7 @@ Bellermannstr.	q3::inwork; 9248,16248 9200,16295 9178,16317 9156,16339 9099,1639
 #: by: https://nitter.cz/VIZ_Berlin/status/1674654999844995072#m
 #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnp5Mjk4YmFnQUVETTdSLmpwZw==
 #: also_indoor: traffic (G,H)
-#: last_checked: 2023-07-08 (mapillary)
+#: last_checked: 2023-07-19 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2023-09-30
 # REMOVED --- #: next_check: 2024-01-01
@@ -2794,7 +2612,7 @@ Bellermannstr.	q3::inwork; 9248,16248 9200,16295 9178,16317 9156,16339 9099,1639
        {
          'data' => '#: next_check_id: WRIEZENERPARK-2019
 #: XXX "voraussichtlich ab September 2023 können die neuen Wege genutzt werden", aber weitere Bauarbeiten bis Ende Oktober 2023
-#: last_checked: 2023-07-12 vvv
+#: last_checked: 2023-07-23 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2023-08-31 vvv
 # REMOVED (hier nicht) ---	2::inwork 13172,11651 13239,11567
@@ -2879,7 +2697,8 @@ außerhalb der Arbeitszeiten Zugang möglich, Rampe ist aber noch enger als sonst	
        undef,
        undef,
        {
-         'data' => '#: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/gleditschstrasse-am-2-mai-gesperrt_a262750
+         'data' => '#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.923431.php
+#: by: https://www.berliner-woche.de/schoeneberg/c-verkehr/gleditschstrasse-am-2-mai-gesperrt_a262750
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8458 (Antrag: dauerhaft beibehalten)
 #: XXX ist die Ausweitung des Marktes dauerhaft?
 #: last_checked: 2023-03-25
@@ -2891,7 +2710,6 @@ außerhalb der Arbeitszeiten Zugang möglich, Rampe ist aber noch enger als sonst	
          'from' => 1646348400,
          'id' => 3223,
          'recurring' => 1,
-         'source_id' => 'https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2020/pressemitteilung.923431.php',
          'text' => 'Gleditschstr. am Winterfeldplatz: samstags Sperrung wegen des Wochenmarkts, 6 bis 19 Uhr',
          'type' => 'handicap',
          'until' => undef
@@ -2902,7 +2720,7 @@ außerhalb der Arbeitszeiten Zugang möglich, Rampe ist aber noch enger als sonst	
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10694 ("Corona bedingte Erweiterungen ... fallen weg")
 #: note: Halteverbotschilder von 6 bis 20 Uhr
 #: XXX bis wann wird hier gesperrt sein?
-#: last_checked: 2023-07-19
+#: last_checked: 2023-07-22
 #: check_frequency: 21d
 	2::temp 14272,11775 14247,11681 14102,11715 14127,11811
 ',
@@ -3676,12 +3494,12 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: viz2021:13.289248,52.435248,31.01.2022,07:00 (bis 31.8.2022) (bis 22.12.2022) (bis 31.3.2023) (inaktiv)
 #: source_id: viz2021:13.29541,52.43779,28.10.2022,12:36 (bis 22.12.2022) (inaktiv)
 #: source_id: viz2021:13.29541,52.43779,21.12.2022,14:37 (bis 31.03.2023) (inaktiv)
-#: source_id: bvg2021:188#BVG296003_0
+#: source_id[inactive]: bvg2021:188#BVG296003_0
 #: source_id: viz2021:13.293116,52.436827,31.01.2022,07:00 (bis 31.3.2023) (bis 31.05.2023) (bis 19.7.2023) (inaktiv)
 #: source_id: viz2021:13.29541,52.43779,30.03.2023,12:14 (Baseler Str., bis 31.05.2023) (inaktiv)
 #: by: https://viz.berlin.de/2022/01/verkehrsvorschau-31012022/ (Gesamtbaumaßnahme bis Ende 2022, Sperrung an der Drakestr. möglicherweise nur bis Ende März 2022, hier nur für den Kfz-Verkehr?)
 # REMOVED --- #: XXX Sind Radfahrer tatsächlich betroffen? Haben die Bauarbeiten auch was mit den Sperrungen in der Kommandantenstr./Baseler Str. zu tun? vvv
-#: also_indoor: traffic (G,H,B) vvv
+#: also_indoor: traffic (ex-G,ex-H,B) vvv
 #: last_checked: 2022-09-04 vvv
 # REMOVED --- #: check_frequency: 180d vvv
 #: next_check: 2023-07-19 vvv
@@ -3746,7 +3564,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
 #: add_fragezeichen: Ist der Uferweg noch immer wegen Bauarbeiten gesperrt? vvv
-#: last_checked: 2023-06-11 vvv
+#: last_checked: 2023-07-22 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2024-02-12 vvv
 #: osm_watch: way id="4993234" version="22"
@@ -3763,7 +3581,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'from' => 1643583600,
          'id' => 3507,
          'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
-         'text' => 'Spreeuferweg: Bauarbeiten, zwischen Wullenwebersteg und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Anfang Mai 2023: weiterhin Bauarbeiten und vereinzelte Sperrungen)',
+         'text' => 'Spreeuferweg: Bauarbeiten, zwischen Wullenwebersteg und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Mitte Juli 2023: weiterhin Bauarbeiten, aber Weg kann zeitweise offen sein)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3772,7 +3590,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'data' => '#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1346703.php (Bauarbeiten 2023)
 #: also_indoor: traffic (none)
 #: last_checked: 2022-10-15
-#: check_frequency: 90d
+# REMOVED --- #: check_frequency: 90d
 #: next_check: 2023-07-31
 	q4::inwork; 6665,2836 6745,2848 6763,2879 6842,2995 6914,3093
 ',
@@ -3789,7 +3607,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
 #: note: Kann außerhalb der Arbeitszeiten offen sein, gesehen am 2022-12-26, 2022-12-28, 2023-02-25 (Sa), 2023-06-11 (So), 2023-06-23 (Fr) gegen 20 Uhr, 2023-07-01 (Sa) vvv
-#: last_checked: 2023-07-13 vvv
+#: last_checked: 2023-07-22 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-02-12 vvv
 #: osm_watch: way id="4395450" version="36"
@@ -3919,7 +3737,7 @@ Kreuzungsbereich Ringstr./Baseler Str. gesperrt, auch für Radfahrer	q3::inwork 3
 #: osm_watch: way id="975241319" version="5"
 #: osm_watch: way id="970452276" version="5"
 #: also_indoor: traffic (none)
-#: last_checked: 2023-07-11
+#: last_checked: 2023-07-22
 #: check_frequency: 30d
 	q3::inwork; 12805,8194 12873,8218 12911,8232
 # REMOVED ---	q4::inwork 12873,8218 12911,8232
@@ -4105,37 +3923,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1680938171305951232#m
-#: by: https://viz.berlin.de/2023/07/csd-berlin/
-#: source_id: viz2021:13.369347,52.515752,21.07.2022,12:30 (inaktiv)
-#: source_id: viz2021:13.376805,52.516213,20.07.2023,08:00 (bis 23.07.2023)
-#: source_id: viz2021:13.364259,52.515422,20.07.2023,08:00 (bis 23.07.2023)
-#: source_id: viz2021:13.370204,52.516676,20.07.2023,08:00 (bis 23.07.2023)
-	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245
-	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8600,12165 8595,12066
-	3 8119,12414 8055,12186 8049,12140
-	3 7429,12070 7383,12095 7031,12320
-	3 7823,12120 7816,12150 7822,12201
-	3 7822,12201 7816,12150 7823,12120
-	3 7031,12320 7383,12095 7429,12070
-	3 8327,12174 8344,12221 8391,12389
-	3 8592,12252 8538,12245 8522,12239
-	3 8592,12252 8538,12245 8522,12187
-	3 8391,12389 8344,12221 8327,12174
-	3 8049,12140 8055,12186 8119,12414
-	3 8522,12187 8538,12245 8592,12252
-	3 8522,12187 8538,12245 8522,12239
-	3 8522,12239 8538,12245 8592,12252
-	3 8522,12239 8538,12245 8522,12187
-Yitzhak-Rabin-Str.	2::temp 8055,12186 8119,12414
-',
-         'from' => 1689746400,
-         'id' => 3587,
-         'text' => 'Straße des 17. Juni und Ebertstr.: zwischen Großer Stern und Dorotheenstr./Behrenstr. Sperrung der Straße, möglicherweise sind auch Radfahrer betroffen, vom 20.07.2023 08:00 bis 23.07.2023 18:00 ',
-         'type' => 'gesperrt',
-         'until' => 1690128000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4420,7 +4208,7 @@ Brückenabriss, Komplettsperrung	2::temp 2892,15983 2809,16143
 # REMOVED (nicht mehr) --- #: note: Möglicherweise wegen der Sperrung verstärkter Verkehr in der Gartenstr. zwischen Invalidenstr. und Torstr.
 #: XXX Bis wann ist die Friedrichstr. gesperrt?
 #: note: laut rbb läuft diese Bauphase bis 16.06.2023
-#: last_checked: 2023-07-13 vvv
+#: last_checked: 2023-07-18 (mapillary) vvv
 #: next_check: 2023-07-31 vvv
 # REMOVED (hier nichts) --- Chausseestr.	q4::inwork 9207,13493 9212,13471
 # REMOVED (Radfahrfurt) --- Hannoversche Str.	q3::inwork 9212,13471 9047,13446
@@ -4909,12 +4697,12 @@ Mauerweg Lichtenrade - Marienfelde	2::inwork 8310,-2037 8379,-1524 7875,-1247 75
          'data' => '#: next_check_id: VOLKSPARKWILMERSDORF-2023
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1328147.php (ab 25.5.2023 für voraussichtlich zwei Monate)
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1347368.php (ab KW 30/2023 für voraussichtlich drei Monate, zwischen Bundesallee und Prinzregentenstraße)
-#: last_checked: 2023-07-19 (Pressemitteilung) vvv
+#: last_checked: 2023-07-22 vvv
 #: next_check: 2023-10-23 vvv
 # REMOVED (hier nicht) ---	2::inwork 5651,8218 5730,8207
 # REMOVED (hier vermutlich fertig) ---	2::inwork 5730,8207 5700,8241
 # REMOVED (hier fertig) ---	2::inwork 5700,8241 5687,8280 5699,8308
-# REMOVED (hier vermutlich fertig) ---	q4::inwork 5730,8207 5918,8221
+	2::inwork 5730,8207 5918,8221
 	2::inwork 5438,8402 5611,8252
 #: next_check ^^^
 #: last_checked ^^^
@@ -5074,13 +4862,16 @@ Semmelweisstr.: Fahrbahn gesperrt	q4::inwork 19198,2163 19019,2217
        {
          'data' => '#: by: https://www.deutsches-architekturforum.de/thread/11059-charlottenburg-und-westend-kleinere-projekte/?postID=739232#post739232
 #: note: Endedatum anhand Halteverbotsschilder
+#: last_checked: 2023-07-22
+#: check_frequency: 180d
+#: next_check: 2024-12-31
 	q4::inwork; 4032,12167 4101,12356
 ',
          'from' => 1678738906,
          'id' => 3745,
-         'text' => 'Warburgzeile: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, voraussichtlich bis 31.7.2023',
+         'text' => 'Warburgzeile: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, voraussichtlich bis Ende 2024',
          'type' => 'handicap',
-         'until' => 1690815600
+         'until' => 1735685999
        },
        undef,
        {
@@ -5116,18 +4907,14 @@ Semmelweisstr.: Fahrbahn gesperrt	q4::inwork 19198,2163 19019,2217
        undef,
        {
          'data' => '#: by: https://www.architektur-urbanistik.berlin/index.php?threads/euref-campus-am-gasometer.128/page-5#post-20353
-#: also_indoor: traffic (none) vvv
-#: source_id: bvg2021:106#BVG312090_0 vvv
-#: source_id[inactive]: bvg2021:106#BVG312086_0 vvv
-#: last_checked: 2023-06-17 vvv
+#: also_indoor: traffic (none)
+#: source_id: bvg2021:106#BVG312090_0
+#: source_id[inactive]: bvg2021:106#BVG312086_0
+#: last_checked: 2023-07-22
+Leberstr.: Einbahnstraßenregelung	q3::inwork; 7574,8596 7578,8358
 # REMOVED (nicht mehr) --- Leuthener Str.: Abschnitt der Fahrbahn gesperrt, Bordsteine	q3::inwork 7640,8359 7578,8358
 # REMOVED (umgedreht, verlagert) --- Leberstr.: Einbahnstraßenregelung	q2::inwork; 7582,8123 7578,8358 7574,8596
 # REMOVED (hier nicht (mehr?)) --- Leberstr.: Einbahnstraßenregelung	q4::inwork; 7563,8871 7574,8596
-Leberstr.: Einbahnstraßenregelung	q3::inwork; 7574,8596 7578,8358
-#: last_checked ^^^
-#: source_id[inactive] ^^^
-#: source_id ^^^
-#: also_indoor ^^^
 ',
          'from' => undef,
          'id' => 3755,
@@ -5158,7 +4945,7 @@ Leberstr.: Einbahnstraßenregelung	q3::inwork; 7574,8596 7578,8358
        undef,
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten hier fertig? vvv
-#: last_checked: 2023-06-11 vvv
+#: last_checked: 2023-07-22 vvv
 # REMOVED (Schleswiger Ufer) ---	q3::inwork 5858,12425 5800,12361 5714,12266
 Zugang zum Uferweg	2::inwork 5800,12361 5796,12372
 #: last_checked ^^^
@@ -5166,7 +4953,7 @@ Zugang zum Uferweg	2::inwork 5800,12361 5796,12372
 ',
          'from' => undef,
          'id' => 3759,
-         'text' => 'Schleswiger Ufer - Uferweg: Bauarbeiten, Zufahrt zum Uferweg komplett gesperrt, Ende der Bauarbeiten unbekannt',
+         'text' => 'Schleswiger Ufer - Uferweg: Bauarbeiten, Zufahrt zum Uferweg noch nicht offiziell eröffnet',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5337,22 +5124,7 @@ Hanstedter Weg	q4::inwork 6923,5057 6908,5053 6783,5011
        },
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0523_Doppelseiten_web.pdf (22.5.2023 für zwei Monate)
-#: source_id: bvg2021:347#BVG321063_0
-#: osm_watch: way id="45689070" version="5"
-#: also_indoor: traffic (G)
-#: last_checked: 2023-07-05
-#: check_frequency: 30d
-#: next_check: 2023-07-22
-	q4::inwork 15090,10140 15050,10160
-',
-         'from' => 1684620000,
-         'id' => 3794,
-         'text' => 'Fischzug: zwischen Engelswiese und Bootsbauerstr. Bauarbeiten, Fahrbahn gesperrt, ab 22.5.2023 für ca. zwei Monate',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '	q4::inwork; 24730,14288 24667,14088
 ',
@@ -5450,7 +5222,7 @@ hier nur der Kreuzungsbereich Dinkelsbühler Str./Edelhofdamm gesperrt	q3::inwork
        {
          'data' => '#: note: Einbahnstraßenbereich ist 50m lang
 #: osm_watch: way id="1177919961" version="1"
-#: last_checked: 2023-06-02
+#: last_checked: 2023-07-23
 #: check_frequency: 90d
 #: next_check: 2023-09-30
 	q3::inwork; 15648,12687 15643,12875
@@ -5521,12 +5293,13 @@ Cyclopstr.	q4::inwork 4812,21737 4829,21714
        {
          'data' => '#: next_check_id: RUMMELSBURGERBUCHT-2021
 #: note: Weitere Sperrungen sind in gesperrt-orig, dort wo eindeutig nur Baustelle ist
+#: source_id: viz2021:13.472998,52.501877,24.07.2023,07:00 (Straßenbau in Höhe Ingrid-Reschke-Str., bis 25.08.2023)
 #: XXX Wann sind die Straßen offen? vvv
-#: last_checked: 2023-07-19 vvv
+#: last_checked: 2023-07-23 vvv
 #: check_frequency: 60d vvv
 Ingrid-Reschke-Str.	2::inwork 15163,10758 15151,10699 15140,10647 15138,10638
 Ulrich-Plenzdorf-Str.	2::inwork 15151,10699 15220,10682
-Gustav-Tempel-Str.	2::inwork 15220,10682 15205,10616 15200,10600
+Gustav-Tempel-Str.	2::inwork 15261,10738 15236,10684 15220,10682 15205,10616 15200,10600
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -5609,7 +5382,7 @@ Baustellenbereich zwischen Bahnhofstr. und Borgmannstr.	q4::inwork 22531,5871 22
        {
          'data' => '#: next_check_id: SPREEUFER-2022
 #: note: vermutlich wird hier asphaltiert; Halteverbotsschilder bis 23.09.2023
-#: last_checked: 2023-06-11
+#: last_checked: 2023-07-22
 #: check_frequency: 60d
 #: next_check: 2023-09-23
 	q4::inwork 6182,12900 6347,12901 6449,12865 6575,12778
@@ -5712,15 +5485,15 @@ Baustellenbereich zwischen Bahnhofstr. und Borgmannstr.	q4::inwork 22531,5871 22
          'until' => 1699052399
        },
        {
-         'data' => '#: source_id: 237300173
+         'data' => '#: source_id: 237300173 (bis 22.07.2023) (inaktiv)
+#: source_id: 237300001 (bis 27.07.2023)
 	2::inwork 62767,106530 62837,105731 62745,105429
 ',
          'from' => 1687413600,
          'id' => 3831,
-         'source_id' => '237300001',
-         'text' => 'Bagemühl: Deckensanierung, Vollsperrung, voraussichtlich 23.06.2023 08:00 Uhr bis 22.07.2023 16:00 Uhr',
+         'text' => 'Bagemühl: Deckensanierung, Vollsperrung, voraussichtlich 23.06.2023 08:00 Uhr bis 27.07.2023 16:00 Uhr',
          'type' => 'gesperrt',
-         'until' => 1690034400
+         'until' => 1690466400
        },
        {
          'data' => '	q3::inwork 12632,12630 12690,12769
@@ -5769,9 +5542,10 @@ Baustellenbereich zwischen Bahnhofstr. und Borgmannstr.	q4::inwork 22531,5871 22
        },
        undef,
        {
-         'data' => '#: also_indoor: traffic (none)
+         'data' => '#: next_check_id: BUERGER-2023
+#: also_indoor: traffic (none)
 #: add_fragezeichen: Ist die Einbahnstraßenregelung mittlerweile aufgehoben?
-#: last_checked: 2023-06-29
+#: last_checked: 2023-07-22
 	q4::inwork; 12618,6207 12805,6248
 ',
          'from' => undef,
@@ -5819,7 +5593,7 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
 #: source_id: viz2021:13.45273,52.48801,04.07.2023,09:00 (bis 21.07.2023) (inaktiv)
 #: source_id: viz2021:13.45398,52.48894,04.07.2023,00:00 (bis 21.07.2023) (inaktiv)
 #: note: Die Umleitungsstrecke geht via Wildenbruchstr. - Kiefholzstr. Halteverbote, geänderte Vorfahrtsregelung.
-#: last_checked: 2023-07-21 vvv
+#: last_checked: 2023-07-22 vvv
 #: check_frequency: 14d vvv
 #: next_check: 2023-07-25 vvv
 Karl-Kunger-Str.	q3::inwork; 13614,9333 13647,9304
@@ -5995,14 +5769,41 @@ Kreuzungsbereich Kanner Str./Unstrutstr. auch gesperrt	q3::inwork 13495,7249 134
        {
          'data' => '#: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG-NAVI-07-23-barrierefrei.pdf (Einschränkung beim Straßenbahnverkehr, bis 20.8.2023)
 #: by: https://viz.berlin.de/2023/07/verkehrsvorschau-240723/ (auch Radverkehr, bis Ende August 2023)
+#: source_id: bvg2021:61#BVG324735_0 (hier bis 28.8.2023)
+#: source_id: viz2021:13.576366,52.445991,24.07.2023,04:00 (bis 27.08.2023)
 # REMOVED --- #: last_checked: 2023-07-15 --- #: next_check: 2023-07-24
 	q4::inwork 22314,4604 22284,4653 22246,4711 22240,4768 22196,4847
 ',
          'from' => 1690077600,
          'id' => 3859,
-         'text' => 'Kirchstr.: Bauarbeiten zwischen Grünstr. und Alt-Köpenick, Sperrung auch für Radfahrer, vom 24.07.2023 04:00 Uhr bis 20.08.2023',
+         'text' => 'Kirchstr.: Bauarbeiten zwischen Grünstr. und Alt-Köpenick, Sperrung auch für Radfahrer, vom 24.07.2023 04:00 Uhr bis 28.08.2023',
          'type' => 'handicap',
-         'until' => 1692547200
+         'until' => 1693184400
+       },
+       {
+         'data' => '#: next_check_id: BUERGER-2023
+#: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
+#: last_checked: 2023-07-22
+	q3::inwork 12794,6407 12801,6377 12792,6358 12810,6348 12812,6343 12813,6334
+',
+         'from' => undef,
+         'id' => 3860,
+         'text' => 'Carl-Weder-Park: Bauarbeiten, verengte und verschwenkte Wege, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: source_id: viz2021:13.383835,52.457024,22.05.2023,07:00 (bis 24.07.2023)
+#: also_indoor: traffic (B)
+#: last_checked: 2023-07-22
+#: next_check: 2023-07-24
+	q3::inwork 9176,5803 8996,5823
+',
+         'from' => undef,
+         'id' => 3861,
+         'text' => 'Friedrich-Wilhelm-Str.: Bauarbeiten am Tempelhofer Damm, etwa 60m der Fahrbahn sind gesperrt',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );

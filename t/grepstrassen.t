@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 # -*- cperl -*-
+# -*- coding: iso-8859-1 -*-
 
 #
 # Author: Slaven Rezic
@@ -11,6 +12,7 @@ use lib $FindBin::RealBin;
 
 use Cwd qw(realpath);
 use IO::File;
+use Encode qw(from_to);
 
 BEGIN {
     if (!eval q{
@@ -397,6 +399,41 @@ EOF
 	my $fragezeichen_bbd = join '', IO::File->new($fragezeichen_result_bbd)->getlines;
 	eq_or_diff $fragezeichen_bbd, '', '-special fragezeichen + filternextcheck result is empty';
 	unlink $fragezeichen_result_bbd;
+    }
+}
+
+######################################################################
+# encoding tests
+{
+    my $sample_latin1_bbd = <<'EOF';
+#: #: -*- coding: iso-8859-1 -*-
+#: encoding: iso-8859-1
+#:
+Öschelbrunner Weg	X1 100,100 200,200
+EOF
+
+    (my $sample_no_encoding_directive_bbd = $sample_latin1_bbd) =~ s{#: encoding.*\n}{};
+
+    my $sample_utf8_bbd = $sample_latin1_bbd;
+    from_to($sample_utf8_bbd, 'iso-8859-1', 'utf-8');
+    $sample_utf8_bbd =~ s{iso-8859-1}{utf-8}g;	    
+
+    for my $def (
+		 [$sample_latin1_bbd,                'latin1 encoding'],
+		 [$sample_no_encoding_directive_bbd, 'no encoding directive'],
+		 [$sample_utf8_bbd,                  'utf-8 encoding'],
+		) {
+	my($bbd, $test_label) = @$def;
+
+	{
+	    my $out = run_grepstrassen $bbd, [];
+	    eq_or_diff $out, $bbd, "bbd file with $test_label - roundtrip with no grepstrassen arguments";
+	}
+
+	{
+	    my $out = run_grepstrassen $bbd, ['-preserveglobaldirectives'];
+	    eq_or_diff $out, $bbd, "bbd file with $test_label - roundtrip with -preserveglobaldirectives";
+	}
     }
 }
 

@@ -47,10 +47,12 @@ Weserstr.: Hochbauarbeiten, Einbahnstraßenregelung	q3::inwork; 14710,11626 14651
 Bödikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
 # 
 #: also_indoor: traffic (B[unvollständig],H[unvollständig])
-#: note: eigentlich auch Einbahnstraßenregelung in der Scharnweberstr., offen Richtung Westen, ggfs. nochmal genauer anschauen
-#: last_checked: 2023-07-14
-#: check_frequency: 14d
+#: last_checked: 2023-07-22 vvv
+#: check_frequency: 14d vvv
 Kinzigstr.: Bauarbeiten nördlich und südlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975 14475,11778
+Schwarnweberstr.: Einbahnstraßenregelung	q3::inwork; 14589,11975 14675,11964
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 # REMOVED --- #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0223_barrierefrei.pdf (20.2.2023 - 23.4.2023) --- #: by: https://viz.berlin.de/2023/02/verkehrsvorschau-200223/ (bis 24.4.2023) --- #: source_id: bvg2021:16#BVG316317_0 --- #: source_id: bvg2021:16#BVG318556_0 (bis 29.4.4023) --- #: note: siehe auch https://www.openstreetmap.org/note/3474648 --- #: XXX evtl. ist auch die Travestr. betroffen --- #: last_checked: 2023-04-18 --- #: next_check: 2023-04-24 --- #: valid: -20230429 --- Müggelstr./Travestr.: Gleisbauarbeiten	q4::inwork 14965,11924 14901,11808 14836,11842
 # 
@@ -66,7 +68,7 @@ Kinzigstr.: Bauarbeiten nördlich und südlich des Kreuzungsbereichs Scharnweberst
 #: XXX Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="272512103" version="9"
 #: osm_watch: way id="767674684" version="1"
-#: last_checked: 2023-06-23 vvv
+#: last_checked: 2023-07-23 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2025-01-01 vvv
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
@@ -246,7 +248,7 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 # REMOVED --- #: next_check_id: ROTESRATHAUS-2023 --- #: also_indoor: webcam https://tv-turm.de/wp-content/uploads/webcam/webcam.jpg --- #: last_checked: 2023-07-05 (webcam) --- #: check_frequency: 7d --- (Umleitungsstrecke Rotes Rathaus): kurvig, einige Fußgänger	q2 10704,12595 10695,12616 10615,12642 10542,12587
 # 
 #: next_check_id: PLDVEREINTENNATIONEN-2023
-#: last_checked: 2023-07-02
+#: last_checked: 2023-07-23
 #: check_frequency: 30d
 #: next_check: 2023-07-28
 #: valid: -20230728
@@ -599,12 +601,13 @@ Rathenaustr./Plönzeile: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 18970,6110 188
 #: osm_watch: way id="1181902719" version="1"
 #: source_id: viz2021:13.572881,52.460427,25.03.2023,06:00 (bis 25.05.2023) (bis 30.6.2023) (bis 01.08.2023) vvv
 #: also_indoor: traffic (H,G,B,W) vvv
-#: last_checked: 2023-07-09 vvv
+#: last_checked: 2023-07-22 (mapillary) vvv
 # REMOVED --- #: check_frequency: 30d
 #: next_check: 2023-08-01 vvv
 #: valid: 20230325-20230801 vvv
-Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q4::inwork 21984,6317 22000,6245
-Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q3::inwork 22000,6245 22033,6144
+# REMOVED --- Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q4::inwork 21984,6317 22000,6245
+# REMOVED --- Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q3::inwork 22000,6245 22033,6144
+Hämmerlingstr.: Bauarbeiten, Engstellen und Verschwenkungen	q3::inwork 21984,6317 22000,6245 22033,6144
 #: valid ^^^
 #: next_check ^^^
 #: last_checked ^^^
@@ -742,7 +745,7 @@ Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14319,7001 14276,702
 #: by: https://www.kms-sonne.de/baustellennews?date=20220830
 #: by: https://www.kms-sonne.de/assets/2022/08/Baustellenuebersicht-2022-08-web.pdf
 #: osm_watch: way id="640465875" version="12"
-#: last_checked: 2023-07-11
+#: last_checked: 2023-07-22
 #: check_frequency: 120d
 #: next_check: 2024-06-01
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
@@ -793,18 +796,17 @@ Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kan
 # 
 ### Lichtenberg ###
 # 
+#: next_check_id: RUMMELSBURGERBUCHT-2021
+#: last_checked: 2023-07-23
+Gustav-Tempel-Str.: Bauarbeiten, Absperrungen, ggfs. auf Bürgersteig ausweichen	q3::inwork 15261,10738 15236,10684
+# 
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: also_indoor: traffic (none)
 #: last_checked: 2023-07-19
 Margaretenstr.: Fahrbahn zwischen Metastr. und Heinrichstr. gesperrt	q3::inwork 17006,11391 16948,11409
 # 
 # REMOVED (zwar steht hier noch ein Einfahrt-verboten-Schild, aber es gibt keine Verengung der Fahrbahn mehr) --- #: by: https://viz.berlin.de/2023/06/verkehrsvorschau-260623/ (bis 03.07.2023, weitere Bauabschnitte bis Mitte Juli 2023) --- #: by: https://nitter.cz/VIZ_Berlin/status/1673195634050859008#m --- #: source_id: viz2021:13.507611,52.474933,26.06.2023,06:00 (bis 3.7.2023) (bis 10.7.2023) (inaktiv) --- #: note: Halteverbote bis 2023-07-14 --- #: last_checked: 2023-07-11 --- #: next_check: 2023-07-14 --- #: valid: -20230714 --- Am Walde: kurze Einbahnstraßenregelung an der Rummelsburger Landstraße, Bürgersteig existiert	q3::inwork; 17527,7812 17590,7828
-# 
-#: add_fragezeichen: Wann ist die Sperrung beendet?
-#: also_indoor: traffic (B)
-#: last_checked: 2023-07-05 (mapillary)
-Frankfurter Allee [Wohngebiet]: Bauarbeiten, Anbindung zur richtigen Frankfurter Allee unterbrochen, Bordsteine	q3::inwork 16190,11872 16214,11935
-# 
+# REMOVED (beendet) --- #: add_fragezeichen: Wann ist die Sperrung beendet? --- #: also_indoor: traffic (B) --- #: last_checked: 2023-07-05 (mapillary) --- Frankfurter Allee [Wohngebiet]: Bauarbeiten, Anbindung zur richtigen Frankfurter Allee unterbrochen, Bordsteine	q3::inwork 16190,11872 16214,11935
 # REMOVED (keine Einschränkung mehr) --- #: next_check_id: PARKAUE-2022 --- #: XXX Bauarbeiten der Wasserbetriebe, laut Baustellenschild bis Oktober 2023 --- #: XXX Einbahnstraßenregelung nach den Bauarbeiten wiederherstellen --- #: also_indoor: traffic (ex-G) --- #: last_checked: 2023-06-16 --- #: check_frequency: 90d --- #: next_check: 2023-10-31 --- Parkaue: Bauarbeiten der Wasserbetriebe, Einbahnstraßenregelung	q4+::inwork; 15535,12420 15457,12449
 # REMOVED (am nächsten Tag aufgehoben) --- #: last_checked: 2022-06-18 --- #: check_frequency: 14d --- Gustav-Holzmann-Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 16119,9689 16302,9865
 # REMOVED (Fahrbahn ist frei) --- #: next_check_id: ROEDELIUSPLATZ-2022 --- #: by: https://www.berliner-woche.de/lichtenberg/c-verkehr/ein-halbes-jahr-bleibt-der-roedeliusplatz-dicht_a308544 (27. April 2021, geplant bis November 2021) --- #: XXX ändert sich nach den Bauarbeiten die Fahrbahnbeschaffenheit? --- #: XXX Laut Schild der Wasserbetriebe bis Juni 2022 --- #: XXX Laut Schild des Bezirksamts Umgestaltung bis August 2023 (!) --- #: also_indoor: traffic (ex-G[unvollständig],H[mittlerweile richtig],B) --- #: last_checked: 2022-11-06 vvv --- #: check_frequency: 7d vvv --- #: next_check: 2023-08-31 vvv --- Roedeliusplatz: wegen Fahrbahnarbeiten gesperrt	q4::inwork 16276,12273 16227,12280 16159,12293
@@ -1003,7 +1005,7 @@ Jablonskistr.: Baustelle an der Kreuzung Winsstr., nur Gehweg ist frei	q3::inwor
 #: XXX nicht der gesamte Abschnitt ist gesperrt, deshalb q3 statt q4
 #: osm_watch: way id="164816805" version="11"
 #: priority: #C
-#: last_checked: 2023-06-28 (mapillary)
+#: last_checked: 2023-07-22
 #: check_frequency: 30d
 Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg möglich	q3::inwork 13702,13634 13711,13615 13769,13487
 # 
@@ -1187,15 +1189,10 @@ Wilmersdorfer Str.: starker Fußgängerverkehr (Fußgängerzone), nachts und sonntag
 #: by: https://www.berliner-woche.de/mitte/c-verkehr/sommerstrassen-zum-flanieren_a379426
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1333304.php (ab 19.6.2023)
 #: by: https://www.berliner-woche.de/charlottenburg/c-bauen/fussgaengerzone-verlaengert_a384342
-#: osm_watch: way id="4495307" version="18"
-#: osm_watch: way id="1133396210" version="2"
-#: also_indoor: search Wilmersdorfer_Straße Fußgängerzone
-#: XXX Prüfen, ob der Radverkehr vielleicht nicht doch erlaubt ist. Außerdem prüfen, ob es im Zuge der Schillerstr. Einschränkungen gibt.
-#: last_checked: 2023-06-04
-# REMOVED --- #: check_frequency: 30d
-#: next_check: 2022-06-19
-Wilmersdorfer Str.: Fußgängerzone	q4 3717,11462 3708,11519
-# REMOVED (hier nicht) --- Wilmersdorfer Str.: Verlängerung der Fußgängerzone geplant	?::projected 3708,11519 3689,11637
+# REMOVED --- #: osm_watch: way id="4495307" version="18" --- #: osm_watch: way id="1133396210" version="2" --- #: also_indoor: search Wilmersdorfer_Straße Fußgängerzone --- #: XXX Prüfen, ob der Radverkehr vielleicht nicht doch erlaubt ist. Außerdem prüfen, ob es im Zuge der Schillerstr. Einschränkungen gibt. --- #: last_checked: 2023-06-04 --- #: check_frequency: 30d --- #: next_check: 2022-06-19
+#: note: laut Ausschilderung nachts 21-8h und sonntags/feiertags frei
+Wilmersdorfer Str.: Fußgängerzone, nachts und sonntags Radfahren erlaubt	q4 3717,11462 3706,11534
+# REMOVED (hier nicht) --- Wilmersdorfer Str.: Verlängerung der Fußgängerzone geplant	?::projected 3706,11534 3689,11637
 # 
 # REMOVED (hier ist eh' noch eine normale Straße) --- (An der Müggelspree): Fußgänger	q2 23444,4942 23462,4906
 (An der Müggelspree): Fußgänger	q2 23462,4906 23461,5013 23461,5054 23620,5096 23776,5040 23852,5036 23962,5031 23982,5030 24147,4930 24378,4847 24834,4541 25030,4421 25131,4400 25200,4420 25315,4474 25403,4480 25429,4493 25458,4521 25565,4549
@@ -1391,7 +1388,10 @@ Volkspark Friedrichshain: Fußgänger	q3 12141,13341 12131,13333
 Volkspark Friedrichshain: Fußgänger	q3 12038,13685 12145,13628 12169,13609
 #: XXX_prog: Steigung sollte in comments_mount erwähnt werden?
 #: note: kein offizieller Radweg
-Volkspark Friedrichshain, Weg zum großen Bunkerberg: Fußgänger, Steigung	q3 12307,13329 12355,13366 12391,13416 12386,13452 12305,13514 12232,13523 12197,13488 12196,13453 12235,13383 12274,13372 12327,13394 12344,13424 12307,13491 12254,13495 12232,13477 12246,13440 12278,13418 12287,13443
+Volkspark Friedrichshain, Weg zum großen Bunkerberg: Fußgänger, Steigung	q3 12307,13329 12355,13366 12391,13416 12386,13452 12305,13514 12232,13523 12197,13488 12196,13453 12235,13383 12274,13372 12327,13394 12344,13424 12337,13436 12310,13481 12254,13495 12232,13477 12238,13441 12247,13444 12256,13428 12278,13418 12295,13433 12275,13445
+#: XXX_prog: Steigung sollte in comments_mount erwähnt werden?
+#: note: kein offizieller Radweg
+Volkspark Friedrichshain, Weg zum großen Bunkerberg: Fußgänger, Steigung	q3 12337,13436 12294,13395 12275,13392 12250,13413 12238,13441
 #: note: kein offizieller Radweg
 Volkspark Friedrichshain: Fußgänger	q3 13100,13803 12987,13727 12965,13709 12829,13621 12766,13621
 #: note: kein offizieller Radweg
@@ -1496,9 +1496,11 @@ Volkspark Wilmersdorf: kombinierter Rad- und Fußweg	q1 5913,8415 5831,8358 5806,
 Volkspark Wilmersdorf: einige Fußgänger	q1- 5917,8351 5831,8358
 Volkspark Wilmersdorf: einige Fußgänger	q1- 5680,8355 5699,8308
 zum Volksparksteg: kombinierter Rad- und Fußweg, enge Kurven	q3 5533,8478 5531,8458
-Volksparksteg: kombinierter Rad- und Fußweg	q1 5531,8458 5401,8528 5405,8549
+Volksparksteg: kombinierter Rad- und Fußweg	q1 5531,8458 5511,8480 5497,8486 5429,8516 5401,8528 5405,8549
 Volkspark Wilmersdorf: kombinierter Rad- und Fußweg	q1 5469,8524 5405,8549 5331,8581
 Volkspark Wilmersdorf: einige Fußgänger	q1- 5761,8339 5699,8308 5687,8280 5700,8241 5730,8207
+#: note: Radfahren ist aber erlaubt
+(Uhlandstr./Blissestr. - Mannheimer Str.): schmaler Weg, Fußgänger	q2 4769,8563 4677,8605
 #: XXX_prog BS (Bordstein an der Stülerstr.; ansonsten muss man wohl auch über Gras schieben, deshalb kann man trotzdem die q4 beibehalten)
 (zur Thomas-Dehler-Str.): Fußgänger, Bordstein	q4 6657,11467 6716,11439
 # REMOVED (?) --- #: by: ADFC-Karte --- Ernststr.: Fußgänger	q2 2488,19520 2553,19524 2689,19544
@@ -1580,8 +1582,8 @@ Görlitzer Ufer: Bordsteine	q3 13275,10055 13283,10069
 #: note: früher "q3"
 Ruhlsdorfer Str.: Bordstein, Fußgänger	q4+ 9350,10176 9368,10211
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8335 (noch (?) keine Freigabe für Radfahrer)
-#: XXX_prog flacher BS am südlichen Ende, ansonsten q2
-(Olivaer Platz, Wielandstr. - Bayerische Str.): Fußgänger, Bordstein	q3 4360,10320 4352,10260
+#: note: Grünanlagenschild ohne Zusatzschilder
+(Olivaer Platz, Wielandstr. - Bayerische Str.): Fußgänger	q3 4360,10320 4352,10260
 (Güntzelstr. - Pommersche Str.): Fußgänger	q3 4699,9505 4550,9539
 #: note: Radwegführung existiert
 Naunynstr.: Fußgänger	q1 11366,10793 11329,10787
@@ -1804,7 +1806,7 @@ Langhoffstr.: enge Straße, Gegenverkehr	q1 19817,14371 19818,14064
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1212005.php (Bauarbeiten nicht vor 2025)
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-15226.pdf
 #: osm_watch: way id="223184082" version="7"
-#: last_checked: 2023-07-19
+#: last_checked: 2023-07-23
 # REMOVED --- #: check_frequency: 90d
 #: check_frequency: 360d
 #: next_check: 2025-12-31
@@ -2604,8 +2606,8 @@ Lion-Feuchtwanger-Str.: Fußgänger, Rampe	q2 22538,12955 22562,12944 22591,12959
 #: XXX_prog BS am nördlichen Ende (ansonsten q1)
 #: XXX bleibt es beim Bordstein? Möglicherweise nur wegen der benachbarten Hochbauarbeiten?
 #: osm_watch: way id="733001657" version="4"
-#: last_checked: 2022-07-17
-#: check_frequency: 360d
+#: last_checked: 2023-07-23
+#: check_frequency: 120d
 Lion-Feuchtwanger-Weg: Fußgänger, Bordstein	q3 22516,12946 22493,12999
 (Erich-Kästner-Str. - Peter-Huchel-Str.): eng, Fußgänger	q2 23070,13711 23042,13657 23060,13624 23052,13586 23019,13551 23007,13509
 (Carola-Neher-Str. - U-Bhf. Cottbusser Platz): Fußgänger	q1 23438,14355 23476,14409 23458,14439
@@ -2613,6 +2615,7 @@ Lion-Feuchtwanger-Weg: Fußgänger, Bordstein	q3 22516,12946 22493,12999
 (Unterführung U-Bhf. Cottbusser Platz): Rampe	q3 23423,14543 23454,14556 23421,14549 23458,14563 23463,14552
 (Cottbusser Platz - Hellersdorfer Str.): Fußgänger	q2 23366,14537 23399,14520
 Kastanienallee (Hellersdorf): Fußgänger	q1 23756,14696 23758,14683 23740,14667 23760,14669 23769,14609 23778,14568 23781,14545 23772,14523 23794,14511 23801,14500 23817,14461 23877,14315 23897,14274 23962,14140 24055,13984
+Kastanienallee (Hellersdorf): Fußgänger	q1 23781,14545 23800,14534 23807,14512 23801,14500
 (Kastanienallee - Stollberger Str.): Fußgänger	q1 23897,14274 23983,14318
 enge Rampe	q3 23778,14568 23792,14561 23793,14573
 #: XXX_prog BS (2x), ansonsten q3 wegen der Fußgänger
@@ -4637,6 +4640,10 @@ Eulerstr.: Fußgängerbereich, Quartierplatz	q4 9465,16464 9493,16481
 (Adlergestell/Am Seegraben - Walchenseestr.): schmaler Pfad	q3 21879,1517 21899,1526
 # 
 (Umfahrung Baustelle Behrens-Ufer): schmal, kurvig	q3 19139,5627 19137,5613 19165,5568 19134,5544
+# 
+(Havelländer Ring - Elfriede-Brüning-Str./Eva-Strittmatter-Str.): einige Fußgänger, Kurve	q2 23387,15322 23404,15324
+(Havelländer Ring - Elfriede-Brüning-Str./Eva-Strittmatter-Str.): einige Fußgänger	q1+ 23404,15324 23418,15234
+(Eva-Strittmatter-Str. - Kastanienallee): einige Fußgänger	q1+ 23536,15252 23550,15261 23661,15282
 # 
 ######################### User Contributions #################################
 # 
