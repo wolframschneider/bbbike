@@ -2,7 +2,6 @@
 # -*- perl -*-
 
 #
-# $Id: plzlogfile.t,v 1.13 2006/05/23 21:33:37 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -46,10 +45,11 @@ GetOptions("doit!" => \$doit,
 	   "forward" => \$forward,
 	   "potsdam!" => \$potsdam,
 	   "extern!" => \$extern,
+	   "tre-agrep!" => sub { $PLZ::AGREP_VARIANT = 'tre-agrep' },
 	   "v" => \$v,
 	  ) or die <<EOF;
 usage: $0 -doit [-hnr] [-logfile file] [-seek pos]
-          [-nopotsdam] [-noextern] [-forward] [-v]
+          [-nopotsdam] [-noextern | -tre-agrep] [-forward] [-v]
 EOF
 SKIP: {
 skip("Call this test script with -doit", 1) unless $doit;
@@ -73,13 +73,29 @@ my @standard_look_loop_args =
      Noextern => !$extern,
     );
 
+if ($logfile =~ /\.gz$/) {
+    if ($seek) {
+	die "Refusing operation on gzipped file if -seek is given"
+    }
+    if (!$forward) {
+	diag "Switching to forward operation for gzipped file";
+	$forward = 1;
+    }
+}
+
 my $LOGFILE;
 #open(LOGFILE, $logfile)
 if ($forward) {
-    require IO::File;
-    $LOGFILE = IO::File->new($logfile, "r")
-	or die "Can't open $logfile in forward mode: $!";
-    $LOGFILE->seek($seek, SEEK_SET);
+    if ($logfile =~ /\.gz$/) {
+	require PerlIO::gzip;
+	open $LOGFILE, '<:gzip', $logfile
+	    or die "Can't open gzipped file $logfile: $!";
+    } else {
+	require IO::File;
+	$LOGFILE = IO::File->new($logfile, "r")
+	    or die "Can't open $logfile in forward mode: $!";
+	$LOGFILE->seek($seek, SEEK_SET);
+    }
 } else {
     $LOGFILE = File::ReadBackwards->new($logfile)
 	or die "Can't open $logfile: $!";
@@ -150,3 +166,19 @@ sub lookup {
 }
 
 __END__
+
+=head1 EXAMPLE USAGE
+
+Grab a bbbike apache accesslog file
+and try it with different PLZ.pm methods:
+
+    ALOGFILE=/path/to/bbbike.de_access.log
+    time perl t/plzlogfile.t --doit             --logfile $ALOGFILE >| /tmp/alog-extern
+    time perl t/plzlogfile.t --doit --noextern  --logfile $ALOGFILE >| /tmp/alog-noextern
+    time perl t/plzlogfile.t --doit --tre-agrep --logfile $ALOGFILE >| /tmp/alog-tre-agrep
+
+Do a diff or try multi-diff (see L<https://github.com/eserte/srezic-misc/blob/master/scripts/multi-diff>):
+
+    multi-diff /tmp/alog-extern /tmp/alog-noextern /tmp/alog-tre-agrep
+
+=cut

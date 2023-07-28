@@ -7,6 +7,8 @@
 # 
 #: temporary vvv
 # 
+#: by: https://nitter.net/VIZ_Berlin/status/1683357845155115010#m
+#: by: https://nitter.net/pic/orig/media%2FF1fwqZtXgA4eKSM.jpg
 #: source_id: viz2021:13.541546,52.423078,24.07.2023,09:00 (bis 21.08.2023)
 #: next_check: 2023-08-21
 #: valid: -20230821
@@ -18,7 +20,7 @@ Köpenicker Str.: Gegenverkehrsregelung	X::inwork 19933,2078
 Alt-Heiligensee: Gegenverkehrsregelung	X::inwork -3020,21786
 # 
 #: next_check_id: PISTORIUS-2023
-#: source_id: viz2021:13.44623,52.55365,19.06.2023,08:00 (bis 28.07.2023, Gesamtbaumaßnahme bis Ende 10/2023)
+#: source_id: viz2021:13.44623,52.55365,19.06.2023,08:00 (bis 28.07.2023, Gesamtbaumaßnahme bis Ende 10/2023) (bis 13.08.2023)
 #: last_checked: 2023-07-20
 #: next_check: 2023-10-23
 #: valid: -20231023
@@ -37,7 +39,7 @@ Gegenverkehrsregelung	X::inwork 20302,1613
 Gegenverkehrsregelung	X::inwork 18527,16789
 # 
 #: next_check_id: KATHARINAPAULUS-2023
-#: source_id: viz2021:13.367709,52.522369,03.05.2023,09:00 (bis 05.09.2023)
+#: source_id: viz2021:13.367709,52.522369,03.05.2023,09:00 (bis 05.09.2023) (inaktiv)
 #: last_checked: 2023-07-01
 #: check_frequency: 120d
 #: next_check: 2025-09-05
@@ -67,7 +69,7 @@ Gegenverkehrsregelung	X::inwork 22192,6659
 #: by: https://entwicklungsstadt.de/sony-center-am-potsdamer-platz-investition-und-umbau/ (bis Ende 2023)
 #: XXX Möglicherweise im Zusammenhang mit Bauarbeiten am Sony-Center
 #: note: Länge der Gegenverkehrstrecke ist ca. 80m
-#: last_checked: 2023-05-31
+#: last_checked: 2023-07-27
 #: check_frequency: 90d
 #: next_check: 2023-12-31
 #: valid: -20240701
@@ -80,7 +82,7 @@ Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
 #: source_id: viz2021:13.47181,52.50783,24.01.2023,09:00 (bis 03.06.2024) (inaktiv)
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024)
 #: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung
-#: last_checked: 2023-07-23
+#: last_checked: 2023-07-26
 #: check_frequency: 120d
 #: next_check: 2024-06-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
@@ -103,8 +105,8 @@ Gürtelstr./Weserstr.	F::inwork 15016,11431
 #: next_check_id: ORANIENBURGERTORTRAM-2022
 #: last_checked: 2023-07-05 (mapillary)
 #: check_frequency: 30d
-#: next_check: 2023-07-31
-#: valid: -20230731
+#: next_check: 2023-08-09
+#: valid: -20230809
 Tucholskystr./Ziegelstr.	X::inwork 9559,13087
 # REMOVED (entfernt) --- #: XXX schon seit mehreren Tagen ausgeschaltet --- #: last_checked: 2023-05-05 --- #: check_frequency: 30d --- Friedrichstr./Ziegelstr.	X0::inwork 9269,13060
 # 
@@ -404,6 +406,7 @@ Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 #: note: Rundum-Grün für Fußgänger (Kochstr./Friedrichstr.)
 #: by: https://berliner-abendblatt.de/berlin-news/ampel-mit-fussgaenger-gruen-in-alle-richtungen-abgestellt-id224856 (Abstellen des Rundum-Grüns voraussichtlich 2024)
 #: by: https://www.bz-berlin.de/ticker/berlin-stellt-ampelversuch-mit-diagonalgehen-ein
+#: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/rundum-gruen-ampel-am-checkpoint-wird-nach-23-jahren-eingestellt_a388066
 	X 9492,11209
 	X 9388,10393
 #: off: night (seen 2015-06-25)
@@ -1164,7 +1167,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # XXX	F 8065,11349
 #: note: Anforderungsampel
 #: osm_watch: node id="9858938170" version="1"
-#: last_checked: 2023-07-01
+#: last_checked: 2023-07-27
 #: check_frequency: 180d
 #: next_check: 2027-01-01
 	F::inwork 8096,11393
@@ -2144,9 +2147,11 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12870,15342
 #: off: night (seen 2013-05-30 00:30)
 	X 13273,12902
-#: off: night (seen Thu 2022-06-03 00:15, Fri 2022-08-12 23:55, Mon 2023-03-06 23:05)
+#: off: night (seen Thu 2022-06-03 00:15, Mon 2023-03-06 23:00, Wed 2023-07-26 22:40)
+	X 13644,13332
+#: off: night (seen Thu 2022-06-03 00:15, Fri 2022-08-12 23:55, Mon 2023-03-06 23:05, Wed 2023-07-26 22:40)
 	X 13741,13107
-#: off: night (seen Thu 2022-06-03 00:15, Fri 2022-08-12 23:55, Mon 2023-03-06 23:05)
+#: off: night (seen Thu 2022-06-03 00:15, Fri 2022-08-12 23:55, Mon 2023-03-06 23:05, Wed 2023-07-26 22:40)
 	X 13844,12900
 	X 13073,13329
 	X 14771,14048
@@ -3220,8 +3225,6 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: ^^^
 	F 4646,6040
 	F 12347,6923
-#: off: night (seen Thu 2022-06-03 00:15, Mon 2023-03-06 23:00)
-	X 13644,13332
 #: XXX_prog: Ampel gilt nicht auf dem Radweg
 #: note: keine Anforderungsampel
 	F 13163,12382
