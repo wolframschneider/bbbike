@@ -968,6 +968,8 @@ Mauerweg -> Schönefelder Chaussee: Mittelstreifen	3::igndisp 19160,1215 19221,11
 Mittelstreifen	3nocross::ignrte 4769,8563 4768,8608 4777,8731
 Blissestr. -> zur Mannheimer Str.: Mittelstreifen	3::igndisp 4769,8563 4768,8608 4754,8608
 zur Mannheimer Str. -> Blissestr.: Mittelstreifen	3::igndisp 4754,8608 4768,8608 4777,8731
+Martin-Luther-Str.	1 6485,8639 6455,8613
+Martin-Luther-Str.	1 6455,8613 6454,8653 6460,8688
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1284,6 +1286,9 @@ Einkaufszentrum am Gesundbrunnen	1 9291,15740 9363,15738
 Mittelstreifen mit parkenden Autos	3nocross::ignrte 4507,11936 4596,11912 4653,11896
 Otto-Suhr-Allee -> Abbestr.: Mittelstreifen mit parkenden Autos	3::igndisp 4507,11936 4596,11912 4608,11935
 Abbestr. -> Otto-Suhr-Allee: Mittelstreifen mit parkenden Autos	3::igndisp 4608,11935 4596,11912 4653,11896
+Mittelstreifen	3nocross::ignrte 3279,12533 3328,12512 3350,12502
+Eosanderstr. -> Otto-Suhr-Allee: Mittelstreifen	3::igndisp 3357,12562 3328,12512 3350,12502
+Otto-Suhr-Allee -> Eosanderstr.: Mittelstreifen	3::igndisp 3279,12533 3328,12512 3357,12562
 Absperrgitter am nördlichen Gehweg	3nocross::ignrte 11473,5131 11676,5185 11799,5191
 Cafeastr. -> Gradestr.: Absperrgitter am nördlichen Gehweg	3::igndisp 11603,5241 11676,5185 11799,5191
 Gradestr. -> Cafeastr.: Absperrgitter am nördlichen Gehweg	3::igndisp 11473,5131 11676,5185 11603,5241
@@ -2821,7 +2826,7 @@ Drängelgitter	BNP:3:-244:trailer=10 11831,12789
 weites Drängelgitter	BNP:1:37:trailer=3 -2103,18367
 Drängelgitter	BNP:3:2:trailer=10 -2170,18273
 Drängelgitter	BNP:3:-158:trailer=10 24925,10710
-Drängelgitter	BNP:3:-166:trailer=10 7056,835
+Drängelgitter	BNP:3:-152:trailer=10 7056,835
 Drängelgitter	BNP:3:-175:trailer=10 16433,12626
 Drängelgitter	BNP:3:2:trailer=10 16428,12741
 Drängelgitter	BNP:3:4:trailer=10 7916,17576
@@ -3385,7 +3390,7 @@ Barnimer Dörferweg: wegen Bauarbeiten gesperrt	2::inwork 20865,18933 20889,18943
 Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 9775,12178 9771,12190 9747,12205 9755,12144
 Georg-Klingenberg-Str.: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17846,8644 17792,8660 17656,8700
 Samuel-Lewin-Str.: noch Baustelle und gesperrt	2::inwork 17773,8588 17792,8660
-Adolf-Wermuth-Allee: noch nicht fertiggestellt	2::inwork 17608,8483 17597,8434
+Adolf-Wermuth-Allee: noch nicht freigegeben	2::inwork 17608,8483 17588,8413
 Irmtraud-Morgner-Str.: noch nicht fertiggestellt	2::inwork 17524,8536 17627,8556
 Parkstadt Karlshorst: temporäre Einbahnstraßenregelung	1::inwork 17497,8623 17640,8627 17656,8700 17468,8692
 Parkstadt Karlshorst: temporäre Einbahnstraßenregelung	1::inwork 17755,8519 17627,8556

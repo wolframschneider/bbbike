@@ -56,7 +56,6 @@ Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordstein
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork 12556,15518 12605,15491 12621,15482
 Falkenberger Str. - Hansastr: Bauarbeiten, Fahrbahn nur für Linienverkehr frei	q4::inwork 15819,16857 15892,16834
 Charlottenburger Str.: Einbahnstraßenregelung zwischen Goethestr. und Friesickestr., offen Richtung Westen	q3:inwork; 12646,16563 12798,16493
-Neumannstr.: Bauarbeiten, etwa 30m Fahrbahn gesperrt	q2::inwork 11630,16623 11655,16486
 (Buckower Chaussee - Bahnhof): einige Fußgänger	q1 9200,562 9239,461 9254,413
 (Fußgängerbrücke S-Bhf. Buckower Chaussee): Fußgängerbrücke, Bahnsteig	q4 9200,450 9209,417 9210,414 9246,426 9249,421 9254,413
 (Buckower Chaussee - Bahnhof): einige Fußgänger	q1 9123,533 9160,460 9200,450
@@ -1862,7 +1861,7 @@ Mariannenplatz: einige Fußgänger, insbesondere vor dem Bethanienhaus	q2 11804,10
 (Schnellerstr. - Uferstr.): Parkplatzverkehr, besonders zu Geschäftszeiten	q1 17678,5916 17847,6089
 Schnellerstr.: einige Fußgänger	q2 17728,5756 17807,5730
 an den Gewächshäusern: kurvig	q2 17659,12823 17638,12813 17637,12785
-Hampstedtstr.: einige Fußgänger	q1 749,2616 816,2658
+Hampstedtstr.: einige Fußgänger	q2 749,2616 816,2658
 (Oderstr. - Kirchhofweg): einige Fußgänger	q1 11565,7402 11602,7375 11656,7375 11677,7351 11687,7284
 (Greifswalder Str. - Ella-Kay-Str.): einige Fußgänger	q1 12371,14615 12224,14707
 (Greifswalder Str. - Ella-Kay-Str.): einige Fußgänger	q2 12224,14707 12213,14742 12183,14757
@@ -2731,7 +2730,7 @@ Rossitter Weg: Fußgänger (nur bei Veranstaltungen ein Problem)	q0 -107,12220 -12
 (Dahlienweg): Fußgänger	q2 3823,13540 3829,13572 3833,13590
 (Lambertstr. - Lise-Meitner-Str.): Fußgänger, schmal	q3 3508,13727 3713,13787
 (Bonhoefferufer - Tegeler Weg): Fußgänger	q2 3154,12936 3164,13067
-Eosanderstr.: Fußgänger	q1 3344,12611 3271,12609
+Eosanderstr.: Fußgänger	q1 3323,12615 3271,12609
 Siemenssteg: Fußgänger, schmal, Bordstein	q2 4129,12619 4128,12637 4124,12706 4124,12721
 (Müllerstr. - Gerichtstr.): Fußgänger	q3 7607,15282 7723,15417
 (südliches Spreeufer): Fußgänger	q2 5550,12238 5573,12242 5604,12244 5643,12253 5714,12290 5770,12346 5796,12372 5940,12564 5953,12592 6001,12699 6045,12830 6123,12887 6182,12900
@@ -3166,7 +3165,8 @@ Nordische Str.: enge Straße	q1 15126,21799 15209,21985
 Grünrockweg: Fußgängerzone, Radfahrer frei	q1 7377,18498 7269,18460
 Kollostr.: enge Straße	q0 9668,4403 9677,4518 9695,4638
 (Mauerweg - Töpchiner Weg): einige Fußgänger	q1 11794,550 11672,554 11596,583
-(Marienfelder Allee - Hildburghauser Str., Grünzug): Fußgänger	q1 7501,83 7231,236 7032,533 7019,655 7023,694 7056,835 7058,844
+(Marienfelder Allee - Hildburghauser Str., Grünzug): Fußgänger	q1 7501,83 7231,236
+(Marienfelder Allee - Hildburghauser Str., Grünzug): Fußgänger	q1 7231,236 7063,444 7055,498 7021,557 7019,655 7019,694 7023,772 7056,835 7058,844
 Janischweg: enge Straße	q1 537,14919 481,15088 473,15169 453,15173 431,15230 429,15284
 Reclamweg: Bordsteinkanten	q2 -5196,12452 -5126,12425
 Baseler Str. (Reinickendorf): enge Straße	q0 6784,17960 6815,17871 6841,17781 6886,17649 6897,17616 6904,17596 6987,17321

@@ -1084,7 +1084,7 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = '11.011';
+$VERSION = '11.012';
 
 use vars qw($delim $font);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
