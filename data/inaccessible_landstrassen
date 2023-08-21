@@ -31,6 +31,7 @@ Adlergestell	X 21862,1532
 Adlergestell	X 21937,1343
 Adlergestell	X 21812,1366
 Adlergestell	X 21837,1340
+An der Villa Bolle	X 22477,3109
 Buckower Chaussee	X 9164,552
 (Hans-Baluschek-Park - Schöneberger Südgelände, Fußgängerbrücke)	X 7621,7105
 (Hans-Baluschek-Park - Schöneberger Südgelände, Fußgängerbrücke)	X 7655,7096
@@ -47,6 +48,10 @@ Halenseestr.	X 1961,10646
 Gartenfelder Str.	X -252,15903
 Gartenfelder Str.	X -242,15982
 Gartenfelder Str.	X -236,16043
+Heinrich-Hertz-Str.	X 59,15518
+Heinrich-Hertz-Str.	X 149,15237
+Heinrich-Hertz-Str.	X -159,15486
+Elsa-Neumann-Str.	X -213,15529
 (Bushaltestelle und Straßenbahnwendeschleife Schöneweide)	X 17675,5521
 (Bushaltestelle und Straßenbahnwendeschleife Schöneweide)	X 17588,5573
 (Fußgängertunnel S-Bhf. Schöneweide)	X 17639,5612
@@ -128,7 +133,8 @@ Schwimmerweg	X -3642,11216
 Schwimmerweg	X -3673,11216
 Rudererweg	X -3570,11289
 Rudererweg	X -3689,11291
-(Fortsetzung Wandlitzstr.)	X 17837,9086
+(Fortsetzung Wandlitzstr.)	X 17743,9116
+(Fortsetzung Wandlitzstr.)	X 17570,9103
 Am Konsulat	X 9990,19644
 Blütenweißweg	X 21427,5347
 Am Kutscherhaus	X 21386,5251
@@ -175,6 +181,11 @@ B1/B5: Berlin - Müncheberg	X 33629,10787
 B179n	X 24368,-11972
 B179n	X 24320,-11722
 B179n	X 24353,-11553
+B102, Ortsumfahrung Schmerzke	X -44222,-3387
+B102, Ortsumfahrung Schmerzke	X -43986,-3248
+B102, Ortsumfahrung Schmerzke	X -43805,-2898
+B102, Ortsumfahrung Schmerzke	X -43844,-2696
+B102, Ortsumfahrung Schmerzke	X -43939,-2557
 Siedlung Hubertus - Flughafen Berlin-Brandenburg	X 19996,-2880
 Siedlung Hubertus - Flughafen Berlin-Brandenburg	X 19909,-2863
 Trappenfelder Str.	X 26721,19700

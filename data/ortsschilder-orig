@@ -225,12 +225,46 @@ Heinersdorf	OS 64034,77011
 # 
 Hohenwutzen	OS 58642,50396
 Hohenwutzen	OS 58657,50391
+Hohenwutzen	OS 57496,48789
+#: by: mapillary
+Hohenwutzen	OS 57452,49024
 # 
-Vevais	OS 59908,33095
+Altglietzen	OS 57114,48711
 # 
-Möglin	OS 57517,28972
+Wriezen	OS 59739,33525
+#: by: mapillary
+Wriezen	OS 58494,36725
+#: by: mapillary
+Wriezen	OS 58934,35686
+#: by: mapillary
+Wriezen	OS 59390,34757
+#: by: mapillary
+Wriezen	OS 60160,36201
 # 
-Reichenow	OS 56092,27341
+Vevais	OS 59911,33077
+Vevais	OS 60234,32315
+#: by: mapillary
+Vevais	OS 60447,32524
+# 
+#: by: mapillary
+Bliesdorf	OS 61000,32743
+# 
+Kunersdorf	OS 61114,31140
+# 
+Möglin	OS 57520,28977
+# 
+Reichenow	OS 56102,27334
+#: by: mapillary
+Reichenow	OS 55912,27090
+#: by: mapillary
+Reichenow	OS 55079,28031
+# 
+Prädikow	OS 51845,25574
+Prädikow	OS 51143,25220
+#: by: mapillary
+Prädikow	OS 51575,25608
+#: by: mapillary
+Prädikow	OS 51352,26010
 # 
 Klosterdorf	OS 47846,21582
 Klosterdorf	OS 47044,21127
@@ -239,13 +273,17 @@ Klosterdorf	OS 47072,21650
 #: by: mapillary
 Klosterdorf	OS 47407,20854
 # 
-Strausberg	OS 46317,21005
+Strausberg	OS 46250,21008
 Strausberg	OS 43266,21790
 Strausberg	OS 41672,16084
 #: by: mapillary
 Strausberg	OS 40882,16328
 #: by: mapillary
 Strausberg	OS 45602,21749
+#: by: mapillary
+Strausberg	OS 44389,18949
+#: by: mapillary
+Strausberg	OS 43116,21361
 Strausberg	OS 44461,21657
 Strausberg	OS 41529,17556
 # 
@@ -823,6 +861,7 @@ Lindenberg	OS 17752,21797
 Lindenberg	OS 18349,22132
 Lindenberg	OS 17837,21917
 Lindenberg	OS 19720,20697
+Lindenberg	OS 19579,20554
 #: by: mapillary
 Lindenberg	OS 18958,21878
 #: note ^^^
@@ -899,7 +938,8 @@ Bruchmühle	OS 34886,17660
 # 
 #: linked: Eggersdorf b. Strausberg vvv
 Eggersdorf	OS 38734,17430
-Eggersdorf	OS 40386,16711
+# REMOVED (verschoben) --- Eggersdorf	OS 40386,16711
+Eggersdorf	OS 40495,16686
 #: linked ^^^
 # 
 #: linked: Neuenhagen|bei Berlin vvv
@@ -1423,7 +1463,7 @@ Kruge	OS 41864,39489
 Kruge	OS 42157,39879
 # 
 Gersdorf	OS 42755,40871
-Gersdorf	OS 42904,41464
+Gersdorf	OS 42905,41477
 #: by: mapillary
 Gersdorf	OS 42225,41215
 #: by: mapillary
@@ -1439,8 +1479,9 @@ Hohenfinow	OS 44692,45954
 Hohenfinow	OS 45342,45470
 # 
 Struwenberg|(Hohenfinow)	OS 45634,47733
+Struwenberg|(Hohenfinow)	OS 45588,47552
 #: note: unsymmetrisch; Struwenberg wird nur als Ortsteil erwähnt
-Hohenfinow	OS 45322,48104
+Hohenfinow	OS 45317,48119
 # 
 Falkenberg|/Mark	OS 46205,46819
 #: by: mapillary
@@ -1448,8 +1489,8 @@ Falkenberg|/Mark	OS 46599,45080
 #: by: mapillary
 Falkenberg|/Mark	OS 48129,44537
 # 
-Niederfinow	OS 46681,50693
-Niederfinow	OS 45322,48104
+Niederfinow	OS 46690,50697
+Niederfinow	OS 45317,48119
 Niederfinow	OS 42849,49552
 Niederfinow	OS 43609,49473
 # 
@@ -1711,6 +1752,16 @@ Gustavsruh	OS 34528,88822
 # 
 Sachsenhausen	OS -476,40852
 # 
+#: by: mapillary vvv
+Nassenheide	OS -2342,44404
+Nassenheide	OS -2731,45311
+#: by ^^^
+# 
+#: by: mapillary vvv
+Teschendorf	OS -5641,48958
+Teschendorf	OS -6598,50356
+#: by ^^^
+# 
 #: linked: Blankensee|(Mittenwalde) vvv
 Mittenwalde Ortsteil Blankensee	OS 29344,87921
 Mittenwalde Ortsteil Blankensee	OS 27967,87384
@@ -1794,8 +1845,7 @@ Berlin	OS 17328,26912
 #: by: mapillary
 Berlin	OS 5432,-129
 Berlin	OS 30737,5800
-#: by: mapillary
-Berlin	OS 19579,20554
+# REMOVED (Schild ist wieder verschwunden) --- #: by: mapillary --- Berlin	OS 19579,20554
 Berlin	OS -8077,16172
 #: by: mapillary
 Berlin	OS -9005,13354
@@ -1853,6 +1903,8 @@ Buckow|(Märkische Schweiz)	OS 56458,18864
 Buckow|(Märkische Schweiz)	OS 55982,17893
 #: by: mapillary
 Buckow|(Märkische Schweiz)	OS 55494,19905
+#: by: mapillary
+Buckow|(Märkische Schweiz)	OS 55083,17426
 # 
 Waldsieversdorf	OS 56591,16565
 Waldsieversdorf	OS 56695,15918
@@ -2257,20 +2309,24 @@ Hohensaaten	OS 59084,52185
 #: by: mapillary
 Hohensaaten	OS 59616,53202
 # 
-Liepe	OS 46800,50852
-#: by: mapillary
-Liepe	OS 50143,51769
+Liepe	OS 46805,50848
+Liepe	OS 50150,51772
 # 
 Oderberg	OS 52495,50375
 #: by: mapillary
 Oderberg	OS 53887,53272
-#: by: mapillary
-Oderberg	OS 51219,51702
+Oderberg	OS 51222,51704
 # 
 Bralitz	OS 52089,49683
 Bralitz	OS 49908,48927
 #: by: mapillary
 Bralitz	OS 50653,47929
+# 
+#: linked Neuenhagen|(Oderbruch) vvv
+Neuenhagen	OS 53345,49119
+#: by: mapillary
+Neuenhagen	OS 54447,47982
+#: linked ^^^
 # 
 #: linked Wullwinkel|(Biesenthal) vvv
 Wullwinkel	OHT 25886,37782

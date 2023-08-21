@@ -2,6 +2,9 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+Germanenstr.: Gegenverkehrsregelung	X::inwork 20381,1390
+Rohrdammbrücke: Gegenverkehrsregelung	X::inwork 1170,13521
+Rohrdammbrücke: Gegenverkehrsregelung	X::inwork 1124,13599
 Köpenicker Str.: Gegenverkehrsregelung	X::inwork 19933,2078
 Alt-Heiligensee: Gegenverkehrsregelung	X::inwork -3020,21786
 Roelckestr./Gäblerstr.	X::inwork 13272,16672
@@ -22,11 +25,10 @@ Kaulsdorfer Str./Wongrowitzer Steig	F::inwork 22035,7146
 Kaulsdorfer Str./Bahrendorfer Str.	F::inwork 21956,7428
 Kaulsdorfer Str./Feuersteiner Str.	F::inwork 21708,7981
 Köpenicker Str./Dubickstr.	F::inwork 21079,8931
-	F::inwork 11913,13077
+Köpenicker Str./Geraldweg: Gegenverkehrsregelung	X::inwork 21072,8742
 Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8227,19725
-Germanenstr.: Gegenverkehrsregelung	X::inwork 8234,19936
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8311,19458
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 	X::inwork 9868,19023
@@ -874,6 +876,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -3803,13464
 	X -3716,13724
 	X -3824,13350
+	X -3836,13310
 	X -3650,12762
 	X -3635,12572
 	X -3630,12251
@@ -2129,7 +2132,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 23933,8879
 	F 24435,10065
 	F 25546,5359
-	F 11056,15009
+	F 11045,15012
 	F 12158,7449
 	F 12121,7555
 	B 19302,-734
@@ -2741,7 +2744,7 @@ Umgehung mit Treppen existiert	Zbr 4611,63946
 	B 24078,22265
 	B 21665,19490
 geschlossen jede volle Stunde	Zbr 28488,-26166
-geschlossen bei Bedarf	Zbr 45321,48142
+geschlossen bei Bedarf	Zbr 45316,48141
 geschlossen 5x täglich für max. 20 Minuten	Zbr 36080,162883
 geschlossen 5x täglich für max. 30 Minuten	Zbr 32848,183868
 Ziegelgrabenklappbrücke, geschlossen 5x täglich für ca. 20 Minuten	Zbr -13517,211254
@@ -3119,7 +3122,7 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	X -3111,-4047
 	X 14934,42934
 	B 15485,43058
-	X 40540,16584
+	X 40528,16613
 	X 41356,16225
 	X 57093,-1882
 	X 58249,-5090
@@ -3137,6 +3140,13 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	B -59520,59145
 	B -67724,-66871
 	X 40361,104822
+	X 52616,51837
+	X 52771,51844
+	F 53573,48942
+	X 43669,19252
+	F 43421,19504
+	B 43192,19730
+	X 43131,19792
 Aderluch (Oranienburg)	F -435,39823
 André-Pican-Str. / Bernauer Str. (Oranienburg)	X -292,39051
 André-Pican-Str. / Saarlandstr. / Lehnitzstr. (Oranienburg)	X -234,37510

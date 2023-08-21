@@ -19,7 +19,7 @@ Neuköllnische Allee: welliger Asphalt	Q2 14344,7003 14319,7001 14276,7021 14246,
 #: XXX und außerdem auch schauen, ob es wieder zum Mergenthalerring wieder ein Tor gibt und dieses ein Schloss hat
 # REMOVED --- #: osm_watch: way id="524560334" version="5"
 #: osm_watch: way id="524560332" version="7"
-#: last_checked: 2023-07-04 vvv
+#: last_checked: 2023-08-19 vvv
 #: check_frequency: 60d vvv
 (Mergenthalerring - Dieselstr.): Asphalt	Q0 14419,8112 14429,8074
 #: osm_watch: way id="680579631" version="4"
@@ -135,7 +135,7 @@ Pannierstr.: Asphalt	Q0 12240,8964 12198,8887
 # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="65707583" version="19"
-#: last_checked: 2023-08-05
+#: last_checked: 2023-08-18
 #: check_frequency: 60d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -195,7 +195,7 @@ Waldemarstr.: Kopfsteinpflaster	Q2- 11328,10957 11290,10972 11150,11030
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens
-#: last_checked: 2023-08-05
+#: last_checked: 2023-08-20
 #: check_frequency: 360d
 Erkelenzdamm: Kopfsteinpflaster	Q2 11038,10247 11094,10261 11117,10326 11134,10383 11109,10423 11145,10510 11192,10629 11210,10668 11244,10653 11258,10682
 Leuschnerdamm: Kopfsteinpflaster	Q2 11275,10723 11301,10783 11264,10804 11328,10957 11365,11047 11421,11073 11458,11136
@@ -207,7 +207,7 @@ Segitzdamm: asphaltiert	Q0 11159,10769 11133,10704
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens vvv
-#: last_checked: 2023-08-05 vvv
+#: last_checked: 2023-08-20 vvv
 #: check_frequency: 360d vvv
 Segitzdamm: Kopfsteinpflaster	Q2 11133,10704 11164,10687 11145,10638 11100,10530
 Segitzdamm: Kopfsteinpflaster	Q2- 11100,10530 11065,10443
@@ -300,7 +300,7 @@ Wallensteinstr.: Fahrbahn mäßiges bis schlechtes Kopfsteinpflaster, Geh/Radweg V
 #: source_id[inactive]: bvg2021:396#BVG305961_0 (bis auf Weiteres)
 #: XXX Wird hier neu asphaltiert werden?
 #: XXX evtl. in https://www.openstreetmap.org/note/3304298 berichten (mittlerweile geschlossen)
-#: last_checked: 2023-08-04
+#: last_checked: 2023-08-19
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2022-12-16
 Wallensteinstr.: Asphalt mit einigen Schäden	Q1 18037,9195 18092,9141 18134,9080
@@ -323,7 +323,7 @@ Nymphenufer: neuer Asphalt	Q0 -4134,1984 -4113,1974 -4079,1882
 Nymphenufer: Kopfsteinpflaster	Q2 -4079,1882 -4048,1851
 Lyckallee: Asphalt	Q0 368,11051 251,11039 37,11014 -57,11006 -233,10989 -333,10976 -434,10964
 Lyckallee: mäßiges bis gutes Kopfsteinpflaster	Q1- -434,10964 -532,10994 -640,10997 -691,10954 -760,10921 -865,10906 -909,10899 -929,10897 -1028,10889
-Lyckallee: Beton	Q0 -1028,10889 -1167,10873 -1318,10854 -1501,10833
+Lyckallee: Beton	Q0- -1028,10889 -1167,10873 -1318,10854 -1501,10833
 Trakehner Allee: Kleinsteinpflaster	Q1 -157,11943 -278,11843 -496,11720
 Trakehner Allee: Asphalt	Q0 -496,11720 -722,11598
 Crellestr.: gutes Kopfsteinpflaster	Q1 7307,8945 7484,9066 7524,9093 7570,9124 7647,9196
@@ -500,7 +500,7 @@ Gartenstr.: Asphalt	Q0 8663,14960 8685,14966 8700,14956 8701,14932 8692,14923 86
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_25_2521_2620_online.pdf (Teileinziehung, weiterhin für Radfahrer offen)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_32_3341_3408_online.pdf (Teileinziehung)
 #: XXX Kopfsteinpflaster soll durch Asphalt ersetzt werden vvv
-#: last_checked: 2023-07-25 (mapillary) vvv
+#: last_checked: 2023-08-17 vvv
 #: next_check: 2023-12-31 vvv
 Gartenstr.: Kopfsteinpflaster	Q2 8663,14960 8570,15107
 Gerichstr.: Kopfsteinpflaster	Q2 8456,15235 8570,15107
@@ -548,7 +548,7 @@ Adalbertstr.: Asphalt, einige Schäden	Q0-; 11640,11067 11589,10947 11552,10863
 #: by: https://www.berliner-woche.de/tempelhof/c-verkehr/buendnisgruene-stellen-antrag-auf-umbau-der-eschersheimer-strasse_a368051
 #: source_id: viz2021:13.421328,52.466121,14.02.2023,08:00 (Sperrung für Kfz-Verkehr, bis 24.02.2023) (inaktiv)
 #: note: Kopfsteinpflaster auf der Fahrbahn nur Q2-, im nördlichen Abschnitt sogar Q3+
-#: last_checked: 2023-05-13
+#: last_checked: 2023-08-18
 #: check_frequency: 180d
 #: next_check: 2024-06-30
 Oderstr.: Fahrbahn Kopfsteinpflaster, Radwege nur mäßiges Verbundsteinpflaster	Q2+ 11607,7145 11617,7083 11652,6879
@@ -676,6 +676,7 @@ Dahlwitzer Landstr.: Asphalt	Q0 25584,6029 25579,5958
 Auguste-Viktoria-Str.: Fahrbahn Kopfsteinpflaster, Radwege Verbundsteinpflaster	Q1- 2685,8819 2680,8608 2678,8571 2668,8372
 Auguste-Viktoria-Str.: Beton	Q0 3733,18376 3876,18348 3909,18342 4009,18322
 Hüttenweg: Kleinsteinpflaster	Q1 1573,5152 1964,5070
+Birnbaumer Str.: Beton	Q1 21576,6644 21639,6602
 #: note: und in der kälteren Jahreszeit kann es an einigen Stellen leicht matschig sein
 Wuhlheide: fester Waldweg, bei Trockenheit etwas sandig, Wurzeln	Q2- 20872,7268 20892,7236 20867,7165 20870,7122 21194,6891 21412,6735 21576,6644
 Wuhlheide: fester Waldweg	Q2 20870,7122 20682,7262 20653,7289
@@ -949,7 +950,7 @@ Nördliche Monbijoubrücke: Kleinsteinpflaster	Q1- 9707,12974 9683,12913
 Südliche Monbijoubrücke: Kopfsteinpflaster	Q2 9683,12913 9654,12882
 Lüneburger Str.: Kopfsteinpflaster	Q2 7595,12980 7365,12775 7343,12758 7322,12735 7175,12630
 Lüneburger Str.: Asphalt	Q0 7175,12630 7131,12615 7085,12610
-Flensburger Str.: Kopfsteinpflaster	Q2 6309,12678 6400,12662 6516,12650
+Flensburger Str.: Kopfsteinpflaster	Q2 6333,12677 6399,12673 6516,12650
 Braunschweiger Str.: Asphalt	Q0 13043,7234 13150,7254 13326,7291 13368,7300
 Braunschweiger Str.: schlechtes bis mäßiges Kopfsteinpflaster	Q2- 13368,7300 13476,7330 13519,7345
 #: note: Parkstreifen sind gepflastert
@@ -1057,13 +1058,9 @@ Hasenheide: asphaltiert	Q0 11266,8336 11275,8387 11282,8428 11279,8489 11259,859
 # REMOVED --- #: next_check_id: LILIENTHALWEG-2020 --- #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.923140.php --- #: by: https://abendblatt-berlin.de/2020/04/26/neukoelln-sanierung-des-lilienthalwegs/ --- #: XXX Weg wird gepflastert (Betonpflaster, kleines Stück Kleinsteinpflaster) --- #: last_checked: 2020-08-12 --- # REMOVED --- #: next_check: 2020-07-31 --- #: check_frequency: 7d
 Hasenheide, zur Lilienthalstr.: Verbundsteinpflaster, kleine Stück mit Kleinsteinpflaster	Q1+ 10709,9192 11111,9104 11141,9107
 Carl-Herz-Ufer: Kopfsteinpflaster	Q2 10627,9912 10602,9957 10500,10081
-#: note: Kategorisierung ist ein Kompromiss zwischen dem Kopfsteinpflaster (Q2 bis Q2+) und der Sitte, auf dem Uferweg zu fahren (größtenteils Q1+ und besser)
-#: XXX Uferweg wird gerade neu gemacht und ist gesperrt; laut Aushang bis August 2023, danach eine Oberfläche ähnlich wie in der Grimmpromenade
-#: last_checked: 2023-07-17
-#: check_frequency: 30d
-#: next_check: 2023-08-31
-# REMOVED --- Carl-Herz-Ufer: Kopfsteinpflaster (aber es existiert ein breiter asphaltierter Uferweg)	Q1- 10168,10085 10313,10084 10430,10081 10500,10081
-Carl-Herz-Ufer: Kopfsteinpflaster	Q2 10168,10085 10313,10084 10430,10081 10500,10081
+#: note: Kategorisierung ist ein Kompromiss zwischen dem Kopfsteinpflaster (Q2 bis Q2+) und der Sitte, auf dem Uferweg zu fahren (Q1)
+# REMOVED --- #: XXX Uferweg wird gerade neu gemacht und ist gesperrt; laut Aushang bis August 2023, danach eine Oberfläche ähnlich wie in der Grimmpromenade --- #: last_checked: 2023-07-17 --- #: check_frequency: 30d --- #: next_check: 2023-08-31
+Carl-Herz-Ufer: Fahrbahn Kopfsteinpflaster, Uferweg mit relativ glatter Oberfläche	Q1- 10168,10085 10313,10084 10430,10081 10500,10081
 Schloßstr.: asphaltiert	Q0 3117,11852 3103,11968
 # REMOVED (realisiert) --- #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4745&options=4 --- #: XXX Ist eine Verbesserung in Zukunft in Sicht? --- #: last_checked: 2013-06-27 --- #: next_check: 2013-08-01
 Zillestr.: Asphalt	Q0 3268,11847 3117,11852
@@ -1088,7 +1085,7 @@ Lynarstr.: Asphalt	Q0; 7259,14870 7409,14954
 # REMOVED (noch nicht) --- #: note: Parkstreifen (Senkrechtparken) auf der Nordseite noch immer gepflastert
 #: XXX Es wird noch immer längs geparkt, wann wird das Senkrechtparken angeordnet?
 #: osm_watch: way id="717490209" version="18"
-#: last_checked: 2023-06-22
+#: last_checked: 2023-08-17
 #: check_frequency: 45d
 #: next_check: 2023-09-30
 Lynarstr.: Kopfsteinpflaster	Q2+; 7409,14954 7259,14870
@@ -1122,7 +1119,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/mobilitaetswenderat/22-08-24-mobilitaetswenderat-protokoll_final.pdf (neben der Asphaltierung wird auch ein modaler Filter am Boxhagener Platz erwähnt)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2023-08-05
+#: last_checked: 2023-08-14
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1540,11 +1537,14 @@ Bremer Str.: Kopfsteinpflaster	Q2 5928,13922 5921,13866
 Bremer Str.: mehrere gepflasterte Moabiter Kissen	Q1 5921,13866 5907,13746 5882,13548
 Bremer Str.: Asphalt	Q0 5882,13548 5868,13441 5857,13342
 Zum Langen See: Kopfsteinpflaster	Q2 23325,2070 23390,1785 23409,1699 23464,1449 23520,1194
+#: historical_note: früher Kopfsteinpflaster, Q2
 Müggelbergallee: Asphaltstreifen in der Mitte	Q0 23102,1637 23185,1649
-Müggelbergallee: Kopfsteinpflaster	Q2 23185,1649 23278,1668
+#: historical_note: früher (bis Sommer 2023) Kopfsteinpflaster	Q2
+Müggelbergallee: Asphaltstreifen in der Mitte	Q0 23185,1649 23278,1668
 Müggelbergplatz: Kopfsteinpflaster	Q2 23293,1697 23278,1668 23303,1650 23321,1678 23293,1697
-Müggelbergallee: Kopfsteinpflaster	Q2 23321,1678 23409,1699 23669,1759
-(Müggelbergallee - Straße zum Müggelturm): Waldweg, meist OK	Q1- 23669,1759 24265,1891 24879,1728
+#: historical_note: früher (bis Sommer 2023) Kopfsteinpflaster	Q2
+Müggelbergallee: Asphaltstreifen in der Mitte	Q0 23321,1678 23409,1699 23618,1746
+(Müggelbergallee - Straße zum Müggelturm): Waldweg, meist OK	Q1- 23618,1746 24265,1891 24879,1728
 (Müggelbergallee - Müggelheimer Damm): Waldweg, meist OK	Q1- 24265,1891 24528,1949 24630,2034
 Am Oder-Spree-Kanal: holpriger Fahrweg	Q2 30546,-3072 30572,-2997 30588,-3000
 Am Oder-Spree-Kanal: Asphalt	Q0 30588,-3000 30599,-2827 30629,-2817
@@ -1823,7 +1823,7 @@ Fasanenplatz, östliche Fahrbahn: Kleinsteinpflaster	Q1- 5220,10192 5229,10210 52
 Meierottostr.: Asphalt mit einigen Schäden	Q1+ 5246,10168 5463,9961
 Virchowstr.: Kopfsteinpflaster	Q2 12925,13373 12876,13440
 Dunckerstr.: Kopfsteinpflaster	Q2 11325,14949 11450,15173 11480,15229 11595,15460
-Raumerstr.: Kopfsteinpflaster	Q2 11450,15173 11334,15248 11236,15312 11112,15387
+Raumerstr.: Kopfsteinpflaster	Q2 11450,15173 11334,15248 11223,15319 11112,15387
 # REMOVED --- siehe http://www.berlin.de/ba-pankow/verwaltung/tiefbau/berliner_strasse.html --- #: XXX nach den Bauarbeiten wahrscheinlich asphaltiert, außerdem gibt es vermutlich Radwege --- #: next_check: 2012-01-01 (public) --- Berliner Str. (Pankow): außen Kopfsteinpflaster, innen betoniert	Q2 10830,17985 10815,18074 10755,18231 10739,18262 10718,18304 10680,18380
 Schudomastr.: Kleinsteinpflaster	Q1 13815,7490 13785,7520
 Schwarzastr.: Kleinsteinpflaster	Q1 13840,7513 13815,7490
@@ -1862,7 +1862,7 @@ Schönholzer Weg: asphaltiert	Q0 8001,20530 8003,20507
 #: by: https://www.berliner-woche.de/wilhelmsruh/c-bauen/abwasserleitung-wird-erneuert_a303255 (Bauarbeiten des Wasserbetriebe, bis April 2023)
 #: osm_watch: way id="34428911" version="15" vvv
 #: XXX wird hier asphaltiert? vvv
-#: last_checked: 2023-01-15 (mapillary) vvv
+#: last_checked: 2023-08-17 (mapillary) vvv
 #: check_frequency: 360d vvv
 #: next_check: 2025-09-30 vvv
 #: by: mapillary
@@ -1923,7 +1923,7 @@ Fröbelstr.: guter Asphalt	Q0 11776,15060 11873,15010 11964,14962 12095,14888
 #: confirmed_by: srt
 Ella-Kay-Str.: guter Asphalt	Q0 12095,14888 12060,14827 12050,14808 11998,14709
 #: confirmed_by: srt
-Ella-Kay-Str.: Beton	Q0 12234,15151 12208,15108 12195,15083 12173,15040 12095,14888
+Ella-Kay-Str.: Beton	Q0 12250,15123 12217,15123 12208,15108 12195,15083 12173,15040 12095,14888
 #: by ^^^^^^^^^^^^^^^
 (Greifswalder Str. - Ella-Kay-Str.): Verbundsteinpflaster	Q1 12371,14615 12224,14707 12213,14742 12183,14757 12060,14827
 Landecker Str.: Kopfsteinpflaster	Q2 3137,8538 2966,8586
@@ -1997,7 +1997,7 @@ Wilhelm-Kuhr-Str.: Asphalt	Q0- 9460,18053 9590,18082
 Cantianstr.: mäßiges Kopfsteinpflaster	Q2 10713,15753 10733,15638 10768,15534 10804,15447 10855,15283 10865,15244
 Cantianstr.: mäßiges Kopfsteinpflaster	Q2 10887,15287 10855,15283
 Rosenthaler Str.: Asphalt mit leichten Schäden	Q0- 12166,21208 12096,21224 11982,21392 11889,21543 11870,21574
-Lise-Meitner-Str.: Beton	Q0 3707,13274 3719,13346 3737,13429 3741,13495 3739,13563
+Lise-Meitner-Str.: Beton	Q0 3710,13290 3719,13346 3737,13429 3741,13495 3739,13563
 # REMOVED (von der Bahn aus gesehen) --- #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2018/pressemitteilung.701215.php --- #: XXX nach den Bauarbeiten asphaltiert ("bituminöser Fahrbahnoberbau") --- prüfen, ob das tatsächlich stimmt --- #: next_check: 2018-07-07
 Lise-Meitner-Str.: Asphalt	Q0 3739,13563 3724,13702
 Lise-Meitner-Str.: Beton	Q0 3724,13702 3713,13787 3702,13865 3695,13902 3656,14150
@@ -2131,7 +2131,7 @@ May-Ayim-Ufer: gut verfugtes Kopfsteinpflaster	Q2+ 12951,10839 13077,10747 13206
 Bevernstr.: Kopfsteinpflaster	Q2 13015,10659 13077,10747
 Naunynstr.: Kopfsteinpflaster	Q2 11400,10790 11397,10781 11376,10788 11366,10793
 Maria-von-Maltzan-Platz: Kopfsteinpflaster	Q2 11376,10788 11382,10805 11403,10799 11400,10790
-Lychener Str.: Kopfsteinpflaster	Q2 11056,15009 11236,15312 11268,15360 11418,15587 11499,15710
+Lychener Str.: Kopfsteinpflaster	Q2 11045,15012 11058,15069 11223,15319 11262,15374 11407,15595 11486,15718
 Arndtstr.: Kopfsteinpflaster	Q2 9487,9209 9553,9196 9566,9194 9614,9186 9674,9179 9795,9162 9966,9151
 Fidicinstr.: Kopfsteinpflaster	Q2 9224,9053 9295,9047 9459,9019 9654,8991 9799,8962
 Kopischstr.: Kopfsteinpflaster	Q2 9459,9019 9477,9113
@@ -2355,7 +2355,7 @@ Beermannstr.: Kopfsteinpflaster	Q2 13973,9465 14119,9368
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/elbestrasse-soll-spaetestens-ab-2024-fuer-fussgaenger-und-radfahrer-attraktiver-werden_a324155
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/senatsverwaltung-startet-machbarkeitsstudie-mit-fuenf-varianten_a382462
 #: XXX Umgestaltung geplant, vielleicht auch Asphaltierung?
-#: last_checked: 2023-08-01 (mapillary)
+#: last_checked: 2023-08-13 (mapillary)
 #: next_check: 2024-01-01
 Elbestr.: mäßiges, eher schlechteres Kopfsteinpflaster	Q2- 12765,8605 12822,8675 12881,8750 12954,8840 13045,8951
 Schandauer Str.: mäßiges, eher schlechteres Kopfsteinpflaster	Q2- 13105,8720 12954,8840
@@ -2794,7 +2794,7 @@ Parkstr.: leicht welliger Asphalt	Q0 9905,18329 10075,18472 10205,18575 10359,18
 Eintrachtstr.: Asphalt	Q0 10710,18393 10650,18544
 Hiddenseer Str.: neuer Asphalt, aber wellig	Q0- 11651,15273 11828,15210
 Stubbenkammerstr.: Asphalt mit leichten Schäden	Q0- 11631,15192 11801,15132
-(Chausseestr. - Schulzendorfer Str.): Parkweg	Q1 8286,14635 8322,14687 8292,14734 8275,14869 8264,14902
+(Chausseestr. - Schulzendorfer Str.): Parkweg	Q1 8286,14635 8322,14687 8292,14734 8275,14869 8262,14910
 (Pankeweg zwischen Pankstr. und Wiesenstr.): Kopfsteinpflaster	Q2 8176,15635 8150,15700 8164,15840
 Gropiusstr.: Fahrbahn Kopfsteinpflaster, Uferweg mit Verbundsteinpflaster	Q1 8389,16214 8534,16355 8543,16364
 Orthstr.: Verbundsteinpflaster	Q1 8164,15840 8250,16008
@@ -3253,7 +3253,7 @@ Jordanstr.: Asphalt	Q0 13642,9624 13419,9784 13311,9905
 #: next_check_id: DRESDNERBAHN-2021
 #: by: http://www.baustellen-doku.info/berlin_dresdener-bahn/PFA1_Marienfelde_Attilastrasse-Schichauweg/20190216/
 #: XXX bleibt die asphaltierte Baustraße auch nach den Bauarbeiten an der Dresdener Bahn erhalten?
-#: osm_watch: way id="30893534" version="24"
+#: osm_watch: way id="30893534" version="25"
 #: osm_watch: way id="1155399359" version="1"
 #: last_checked: 2023-05-27 (mapillary)
 #: check_frequency: 180d
@@ -3665,7 +3665,8 @@ Preußstr.: Asphalt	Q0 12325,15328 12367,15396
 Wisbyer Str. 9-11: Asphalt	Q0 11289,16423 11255,16313
 Niederlagstr.: Asphalt	Q0 9943,12364 9955,12300 9959,12281 9972,12184
 Werdersche Rosenstr.: Asphalt	Q0 9883,12251 9909,12261 9959,12281
-Müncheberger Str.: mäßiger Asphalt	Q1+ 12450,11980 12558,11920 12617,11888
+Müncheberger Str.: Asphalt	Q0- 12450,11980 12558,11920
+Müncheberger Str.: mäßiger Asphalt	Q1+ 12558,11920 12617,11888
 Theodorstr. (Tempelhof): Asphalt	Q0 9321,6079 9293,5919
 Kolonie Albrechtshöhe: wassergebundene Decke	Q1 10260,5953 10215,5959 9955,5993
 Wussowstr.: Asphalt	Q0- 12798,5580 12702,5553
@@ -3826,9 +3827,9 @@ Mönchstr.: kleinteiliges Kopfsteinpflaster	Q1 -3110,14408 -3174,14438 -3228,1446
 #: by: https://www.youtube.com/watch?v=B50vFn-hZOg
 #: by: https://www.berliner-woche.de/spandau/c-bauen/wenn-ein-platz-schon-reformationsplatz-heisst_a345908 (Erwähnung der Umbauarbeiten am "Marktplatz")
 #: by: https://www.berliner-woche.de/spandau/c-bauen/neugestaltung-des-marktplatzes-in-der-spandauer-altstadt-erneut-verschoben_a366173 (Baustart nach 2023)
-#: last_checked: 2022-04-23
-# REMOVED --- #: check_frequency: 240d
-#: next_check: 2024-03-01
+#: last_checked: 2023-08-20
+#: check_frequency: 240d
+# REMOVED --- #: next_check: 2024-03-01
 Markt: kleinteiliges Kopfsteinpflaster	Q1 -3155,14340 -3204,14368 -3231,14383 -3275,14407
 #: by: mapillary
 Moritzstr.: kleinteiliges Kopfsteinpflaster	Q1 -3350,14446 -3275,14407
@@ -4136,7 +4137,8 @@ Hönower Str. (Karlshorst): schlechtes Kopfsteinpflaster	Q3+ 18490,9387 18377,936
 #: historical_note: früher: Asphalt mit einigen schadhaften Stellen, Q1-
 (Wandlitzstr. - Blockdammweg): Asphalt	Q0 18021,8976 17981,9000 17950,8974
 (Wandlitzstr. - Blockdammweg): Asphalt	Q0 17950,8974 17915,8945 17754,8863 17729,8850
-(Fortsetzung Wandlitzstr.): Betonplattenstraße	Q2 17981,9000 17837,9086
+#: historical_note: früher: Betonplattenstraße, Q2
+(Fortsetzung Wandlitzstr.): Asphalt	Q0 17981,9000 17837,9086 17743,9116 17570,9103
 Schmiedeberger Weg: Verbundsteinpflaster	Q0- 18021,8976 17987,8954 17956,8935
 Grimnitzstr. (Karlshorst): schlechtes Kopfsteinpflaster	Q3- 18070,8945 17929,8742
 Müritzstr.: schlechtes Kopfsteinpflaster	Q3- 18147,8895 18009,8687 17930,8567
@@ -7887,7 +7889,7 @@ Kummerower Ring: Kleinsteinpflaster	Q1 22678,13756 22615,13734
 #: note: Platten "umrahmt" mit Kopfsteinpflaster
 (Ehm-Welk-Str. - Feldberger Ring): Beton	Q1+ 22685,13738 22678,13756 22664,13811 22692,13836
 Clara-Zetkin-Weg: Verbundsteinpflaster	Q1 22572,13025 22591,12959
-Clara-Zetkin-Weg: Gehwegplatten	Q1 22591,12959 22612,12966 22681,12985 22693,12970 22775,12984
+Clara-Zetkin-Weg: Gehwegplatten	Q1 22591,12959 22612,12966 22687,12986 22690,12979 22768,13004
 (Clara-Zetkin-Platz - Bansiner Str.): Gehwegplatten	Q1 22612,12966 22623,12944
 Bansiner Str. [Parkplatz]: Asphalt	Q0 22623,12944 22619,12885
 Lion-Feuchtwanger-Str.: Verbundsteinpflaster/Gehwegplatten	Q1 22528,12924 22516,12946 22538,12955 22562,12944 22591,12959
@@ -8916,7 +8918,7 @@ Harry-Liedtke-Pfad: Gehwegplatten	Q0- 15788,1747 15783,1820 15806,1903
 Harry-Liedtke-Pfad: Gehwegplatten	Q0- 15806,1903 15834,2024
 Harry-Liedtke-Pfad: Gehwegplatten	Q0- 15834,2024 15843,2065 15836,2113
 Senefelderstr.: Kleinsteinpflaster	Q1 11595,15058 11582,15021
-Knackstr.: Kopfsteinpflaster	Q2 11094,14769 11038,14972 11056,15009
+Knackstr.: Kopfsteinpflaster	Q2 11094,14769 11038,14972 11045,15012
 Ida-von-Arnim-Str.: Asphalt	Q0 8077,14227 8266,14346 8442,14456
 Riedemannweg: Beton	Q0 4248,15647 4389,15336
 #: note: Ausweichen auf sehr schmalen unbefestigten Gehweg möglich
@@ -8943,7 +8945,7 @@ Straße A: Verbundsteinpflaster	Q1+ 1164,15902 1194,15917
 Straße A: Asphalt	Q0 1194,15917 1266,15927 1275,15839
 Am Laubwald: Beton	Q0 978,15496 1083,15529
 #: corrected_by: mapillary (früher wassergebundene Decke), srt
-(Dihlmannstr. - Schuckertplatz): Asphalt	Q0 1179,15260 1265,15192 1329,15124 1351,15081
+(Dihlmannstr. - Schuckertplatz): Asphalt	Q0 1192,15257 1265,15192 1329,15124 1351,15081
 Schuckertplatz: Asphalt	Q0 1344,14978 1351,15057
 Straße am Schaltwerk: Asphalt	Q0 717,14894 537,14919 510,14923 443,14900
 Jungfernsteig: Kopfsteinpflaster	Q2 862,14463 938,14457
@@ -11647,6 +11649,7 @@ Schützenstr. (Altglienicke): Beton	Q1 19678,-817 19754,-786
 (Alter Radelander Weg - Schappachstr.): Waldweg, gut befahrbar	Q1 24997,-2601 25731,-1524
 Lindenstr. (Schmöckwitz): schlechtes Kopfsteinpflaster	Q3 26931,-2871 26954,-3322 26960,-3403 26913,-3613
 Heinrich-Grüber-Str.: Verbundsteinpflaster	Q1 23446,12852 23377,12765
+Heinrich-Grüber-Str.: Gehwegplatten	Q0- 23377,12765 23355,12732
 Am Theodorpark: Asphalt	Q0 24907,10955 24949,10956 25055,10959 25145,10961
 Am Theodorpark: Asphalt	Q0 24949,10956 24952,11046
 (namenslose Straße im Theodorpark): Asphalt	Q0 24899,11044 24904,11044 24952,11046
@@ -12413,7 +12416,7 @@ Ingelfinger Weg: Verbundsteinpflaster	Q1+ -8295,15778 -8251,15892
 Hohenloher Weg: Verbundsteinpflaster	Q1+ -8373,15788 -8300,15764 -8295,15778 -8178,15741
 Wladimir-Gall-Weg: unbefestigter Weg, teilweise Schotter	Q2 -2735,15062 -2708,15004 -2738,14961 -2858,14961 -2885,14943 -2900,14896 -2888,14743 -2838,14589 -2800,14566 -2668,14635
 #: corrected_by: daf (unbefestigter Weg, teilweise Schotter, Q2 -> ..., neu gemacht)
-Wladimir-Gall-Weg: wassergebundene Decke	Q1 -2668,14635 -2570,14661 -2464,14664 -2452,14664 -2430,14675 -2424,14718 -2480,14818 -2412,14800 -2364,14812
+Wladimir-Gall-Weg: wassergebundene Decke	Q1 -2668,14635 -2618,14654 -2570,14661 -2464,14664 -2452,14664 -2430,14675 -2424,14718 -2480,14818 -2412,14800 -2364,14812
 #: next_check_id: METROPOLITANPARK-2019
 #: XXX welche Fahrbahnbeschaffenheit wird die Straße nach den Bauarbeiten haben? "Privater verkehrsberuhigter Bereich" --- werden hier Kfz fahren dürfen?
 #: last_checked: 2023-04-21
@@ -12453,7 +12456,7 @@ Wilhelm-Caspar-Wegely-Platz: Betonpflaster	Q0- 5621,12150 5606,12232 5604,12244
 (Am Plänterwald - Spreepark): relativ glattes Pflaster	Q1- 15714,8633 15772,8667 15922,8717 16026,8731 16074,8776 16084,8833
 #: next_check_id: SPREEPARK-2022
 #: XXX wird hier die Fahrbahndecke noch verbessert?
-#: last_checked: 2023-07-16 (mapillary)
+#: last_checked: 2023-08-14
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2023-06-30
 (Am Plänterwald - Spreepark): unbefestigt	Q2 16084,8833 16086,8860
@@ -12556,7 +12559,9 @@ Riedingerstr.: Asphalt	Q0 10512,-1994 10507,-2016 10465,-2129
 (Oststr., Virchow-Klinikum): Asphalt	Q0 6395,15109 6380,15210 6320,15283
 (Oststr., Virchow-Klinikum): Beton	Q0 6320,15283 6309,15320
 (Oststr., Virchow-Klinikum): Asphalt	Q0 6309,15320 6293,15330
-(Oststr., Virchow-Klinikum): Asphalt	Q0 6504,14969 6470,14990 6414,14981
+(Oststr., Virchow-Klinikum): Asphalt	Q0 6504,14969 6470,14990
+(Oststr., Virchow-Klinikum): Asphalt	Q0; 6470,14990 6414,14981
+(Oststr., Virchow-Klinikum): Kleinsteinpflaster	Q1-; 6414,14981 6470,14990
 (Südring, Virchow-Klinikum): Asphalt	Q0 6158,14851 6078,14864 6073,14892
 (Südring, Virchow-Klinikum): Beton	Q0 6073,14892 6118,14889 6158,14851 6180,14806 6210,14808 6252,14812 6319,14821 6305,14964
 (Südring, Virchow-Klinikum): Beton	Q0 6231,14952 6252,14812
@@ -12646,7 +12651,7 @@ Münstersche Str.: Kopfsteinpflaster	Q2 3840,9683 3869,9699
 Münstersche Str.: Asphalt	Q0 3869,9699 3980,9761
 #: next_check_id: HEER-2020
 #: XXX nach der geplanten Sanierung hoffentlich asphaltiert
-#: last_checked: 2022-09-22
+#: last_checked: 2023-08-20
 #: check_frequency: 360d
 Heerstr.: holprige, enge Radwege	Q1- -2317,11254 -2413,11283 -2476,11301 -2871,11423 -3069,11487
 (Parkweg im Zuge der Furkastr.): wassergebundene Decke	Q1- 10322,2815 10318,2839 10329,2882
@@ -12801,7 +12806,8 @@ Otto-Weidt-Platz: Kleinsteinpflaster	Q1- 7850,14100 7923,14142
 Am Bahnhof Wuhlheide: Betonpflaster	Q0- 20430,7122 20524,7176 20533,7199 20575,7226 20629,7189
 An der Schule [Rad- und Gehweg]: Asphalt	Q0 24747,11524 24768,11616 24759,11666
 Hönower Str.: Asphalt, einige Schäden und Unebenheiten	Q1+ 24530,12296 24556,12181 24554,12100 24556,12056 24563,11980 24575,11932
-Manfred-von-Richthofen-Str.: Asphalt mit einigen Schäden	Q1+ 9093,8665 9158,8706 9229,8718
+Manfred-von-Richthofen-Str.: Asphalt mit einigen Schäden	Q1+; 9093,8665 9158,8706 9229,8718
+Manfred-von-Richthofen-Str.: Asphalt mit einigen Schäden	Q1; 9229,8718 9158,8706 9093,8665
 Manfred-von-Richthofen-Str.: Asphalt mit einigen Schäden	Q0-; 8731,7956 8757,7841 8796,7751 8812,7730 8864,7676
 Schillingstr.: Asphalt mit Querrissen	Q1+ 11635,12745 11596,12668 11562,12597
 Schillingstr.: Asphalt mit Querrissen	Q0- 11562,12597 11497,12463
@@ -12911,7 +12917,8 @@ Mellenseestr. [Wohngebiet]: Beton	Q0- 17838,9956 17868,9823 17920,9698
 Rhenser Str.: Mosaikpflaster	Q1- 19133,9087 19083,9062
 Bergmannstr.: Asphalt, einige leichte Schäden	Q0- 10123,9233 10547,9233
 Südstern: Asphalt, einige Querrillen	Q0- 10547,9233 10705,9234
-Lückstr.: Asphalt, einige Schäden	Q0-; 16153,10818 16300,10753 16313,10747 16468,10695
+#: historical_note: bis August 2023 in Richtung Osten: Asphalt, einige Schäden, Q0-;
+Lückstr.: Asphalt	Q0+; 16153,10818 16300,10753 16313,10747 16468,10695
 (Greifswalder Str. - Ella-Kay-Str.): Verbundsteinpflaster	Q1 12174,14739 12128,14764
 (Greifswalder Str. - Ella-Kay-Str.): Beton	Q1+ 12128,14764 12050,14808
 Aschaffenburger Str. (Schöneberg, Wilmersdorf): Kleinsteinpflaster	Q1 5668,9590 5642,9613
@@ -12928,13 +12935,14 @@ Wilhelmine-Duncker-Str.: Asphalt	Q0 21487,173 21464,279 21440,300
 (Dolgenseestr., Fußgängerzone): Betonpflaster	Q0- 17457,10083 17412,9911 17384,9807
 Dolgenseestr. [8B, 8C, 9, 9A, 9B]: Betonpflaster	Q0- 17523,9882 17412,9911
 (Gaudystr. - Sonneberger Weg): glatte Pflasterung	Q0- 10547,15586 10542,15609
+Georg-Klingenberg-Str.: Asphalt	Q0 17468,8692 17656,8700
 #: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2023-08-04
-#: check_frequency: 14d
-Georg-Klingenberg-Str.: Asphalt, letzte Deckschicht fehlt	Q1 17468,8692 17656,8700 17792,8660 17846,8644
+#: last_checked: 2023-08-14
+#: check_frequency: 45d
+Georg-Klingenberg-Str.: Asphalt, letzte Deckschicht fehlt	Q1 17656,8700 17792,8660 17846,8644
 Adolf-Wermuth-Allee: Asphalt	Q0 17656,8700 17640,8627
 #: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2023-08-04
+#: last_checked: 2023-08-14
 #: check_frequency: 45d
 Adolf-Wermuth-Allee: Asphalt, letzte Deckschicht fehlt	Q1 17648,8626 17627,8556 17608,8483 17588,8413
 Heiner-Müller-Str.: Asphalt	Q0 17497,8623 17640,8627
@@ -13165,7 +13173,7 @@ Bahamasbogen: Verbundsteinpflaster	Q1+ -2759,18843 -2621,18840 -2482,18836 -2485
 (Mauerweg - Lohmühlenstr.): neu asphaltiert	Q0 13109,9743 13128,9726
 #: next_check_id: SCHLESISCHERBUSCH-2023
 #: XXX bleibt der unbefestigte Abschnitt?
-#: last_checked: 2023-07-24
+#: last_checked: 2023-08-18
 #: check_frequency: 30d
 #: next_check: 2023-09-15
 (Mauerweg - Lohmühlenstr.): unbefestigt/Verbundsteinpflaster	Q2+ 13128,9726 13156,9702
@@ -13226,6 +13234,28 @@ Wilhelminenhofstr.: Kleinsteinpflaster	Q1 19010,5833 19017,5815
 # 
 (Havelländer Ring - Elfriede-Brüning-Str./Eva-Strittmatter-Str.): Asphalt	Q0 23387,15322 23404,15324 23418,15234
 (Eva-Strittmatter-Str. - Kastanienallee): Asphalt	Q0 23536,15252 23550,15261 23661,15282
+# 
+An der Villa Bolle: Asphalt	Q0 22790,3135 22668,3125
+#: next_check_id: MARIENUFER-2023
+#: last_checked: 2023-08-19
+#: check_frequency: 120d
+#: next_check: 2026-12-31
+An der Villa Bolle: Baustraße	Q2 22668,3125 22477,3109
+An der Villa Bolle: Verbundsteinpflaster	Q1+ 22668,3125 22674,3052
+# 
+Havelwerke: schlechtes Kopfsteinpflaster	Q3 -1945,15018 -1959,14962
+Havelwerke: Asphalt, kurze Kopfsteinpflasterabschnitte	Q1 -1959,14962 -2082,14997
+Havelwerke: Asphalt	Q0 -2082,14997 -2092,14963
+Havelwerke: Asphalt	Q0 -2112,14968 -2092,14963 -2037,14946
+Havelwerke: schlechtes Kopfsteinpflaster	Q3 -2037,14946 -2038,14934
+Havelwerke: schlechtes Kopfsteinpflaster, etwas besserer Streifen am Rand	Q3+; -2038,14934 -1985,14916
+Havelwerke: schlechtes Kopfsteinpflaster	Q3; -1985,14916 -2038,14934
+Havelwerke: Asphalt, teilweise mäßige Stellen	Q1 -1985,14916 -1946,14907 -1937,14955 -1959,14962
+Havelwerke - Zitadellenweg: Kleinsteinpflaster	Q2 -1985,14916 -2002,14861 -2006,14811
+# 
+(Zitadellenpark - Zitadellenweg): Asphalt	Q0 -2364,14812 -2340,14834 -2299,14842 -2274,14862 -2246,14857 -2213,14855 -2208,14811 -2193,14799
+(Zitadellenpark - Zitadellenweg): Verbundsteinpflaster	Q1+ -2193,14799 -2127,14798
+(Zitadellenpark - Zitadellenweg): Asphalt	Q0 -2127,14798 -2006,14811
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -13861,7 +13891,7 @@ Schauflerpfad: Beton	Q0 -716,21284 -734,21360 -796,21375
 Schauflerpfad: schlechtes Kopfsteinpflaster	Q3 -796,21375 -868,21367 -901,21374
 #: corrected_by: srt (mäßiges Kopfsteinpflaster -> ...)
 Schauflerpfad: Verbundsteinpflaster	Q1 -901,21374 -1128,21421 -1218,21436
-Ludwigsluster Str.: guter Beton	Q0- 22743,13077 22775,12984 22790,12937 22868,12899
+Ludwigsluster Str.: guter Beton	Q0- 22743,13077 22768,13004 22775,12984 22790,12937 22868,12899
 #: corrected_by: srt (guter Beton, Q0- -> ..., neu gemacht?)
 Ludwigsluster Str.: Asphalt	Q0 22831,12999 22868,12899 22896,12827 22906,12766
 #: corrected_by: srt (guter Beton -> ...)
@@ -14138,7 +14168,7 @@ Hannaweg: Beton mit Schäden	Q1 20923,13953 20938,14066
 Boskoopweg: mäßiger Asphalt	Q1 20755,15450 20615,15237
 #: note: anonymous hat handicap=q0 angegeben, ignoriert
 #: corrected_by: srt (Kopfsteinpflaster -> Beton)
-Wilhelmshavener Str.: Beton mit gepflasterten Parkstreifen	Q0 -3880,13763 -3851,13849 -3824,13947
+Wilhelmshavener Str.: Beton mit gepflasterten Parkstreifen	Q1+ -3880,13763 -3851,13849 -3824,13947
 #: corrected_by: srt (Q0 -> Q0-)
 Boschweg: Beton mit einigen Schäden	Q0-; 14784,6169 14788,6261 14760,6319 14564,6496
 #: confirmed_by: srt
@@ -14218,7 +14248,7 @@ Presselstr.: mäßiges Kopfsteinpflaster	Q2+ 6107,4718 6186,4783
 #: corrected_by: srt (schlechtes Kopfsteinpflaster -> )
 Presselstr.: mäßiges Kopfsteinpflaster	Q2 6186,4783 6204,4835 6215,4926
 #: confirmed_by: srt
-Kunkelstr.: Beton	Q0- 8219,14897 8227,15075
+Kunkelstr.: Beton	Q0- 8219,14908 8227,15075
 #: corrected_by: srt (Q0 -> Q1)
 Kunkelstr.: Gehwegplatten	Q1 8227,15075 8229,15128
 Kunkelstr.: Fahrbahn ist Kopfsteinpflaster, Uferweg ist wassergebundene Decke	Q1 8229,15128 8232,15220
@@ -14652,9 +14682,9 @@ Homburger Str.: Asphalt	Q0 3971,7533 4066,7514 4162,7510 4330,7507 4400,7508 459
 # 
 #: by: Britta Steindamm: vvv
 #: confirmed_by: srt
-Claudiusstr.: Asphalt	Q0 6361,12617 6400,12662
+Claudiusstr.: Asphalt	Q0 6361,12617 6399,12673
 #: corrected_by: srt (added "einige Aufpflasterungen")
-Claudiusstr.: Asphalt, einige Aufpflasterungen	Q0- 6400,12662 6347,12901
+Claudiusstr.: Asphalt, einige Aufpflasterungen	Q0- 6399,12673 6347,12901
 #: by ^^^
 # 
 #: by: Gerald Grelka
@@ -15240,7 +15270,7 @@ Fregestr.: guter Asphalt	Q0 5896,6785 5957,6889 5959,6976 5961,7229 5955,7420
 # 
 #: by: Andrea Beu: vvv
 #: confirmed_by: srt
-Lettestr.: Kopfsteinpflaster	Q2 11268,15360 11368,15301 11480,15229
+Lettestr.: Kopfsteinpflaster	Q2 11262,15374 11368,15301 11480,15229
 Apostel-Paulus-Str.: Kopfsteinpflaster	Q2 7035,9161 6945,9142 6885,9132 6735,9103 6588,9087
 #: corrected_by: srt (Kopfsteinpflaster -> Asphalt)
 Apostel-Paulus-Str.: Asphalt	Q0 6588,9087 6509,9077
@@ -15481,6 +15511,10 @@ Vogelbeerstr.: schlechtes Kopfsteinpflaster	Q3+ 19723,4175 19759,4160 19815,4148
 Florian-Geyer-Str.: Asphalt	Q0 19869,4151 19884,4018 19888,3990 19924,3939
 #: corrected_by: Hartmut Schröder (mäßiges Q2 -> schlechtes Q3+)
 #: corrected_by: srt (Q3+ -> Q3)
+#: next_check_id: FLORIANGEYER-2023
+#: XXX Bleibt das Kopfsteinpflaster im südlichen Bereich?
+#: last_checked: 2023-08-19
+#: check_frequency: 90d
 Florian-Geyer-Str.: schlechtes Kopfsteinpflaster	Q3 19924,3939 19954,3887 19992,3839 20073,3734 20159,3623
 #: corrected_by: srt (Kopfsteinpflaster -> Asphalt)
 Borkumstr.: Asphalt	Q0 11412,17823 11335,17807 11296,17799
@@ -15647,8 +15681,12 @@ Argenauer Str.: Kopfsteinpflaster	Q2 22035,7146 21944,7122 21846,7096 21791,7126
 Argenauer Str.: Beton	Q0- 21791,7126 21594,7233
 #: corrected_by: srt (Kopfsteinpflaster, Q2 -> ...)
 Argenauer Str.: Asphalt, etwas wellig	Q0- 21594,7233 21569,7252
+#: corrected_by: srt (schlechtes Kopfsteinpflaster, Q3 -> ...)
+Staakener Str.: Asphalt	Q0 -4147,14274 -4155,14261
 #: confirmed_by: srt
-Staakener Str.: schlechtes Kopfsteinpflaster	Q3 -4147,14274 -4155,14261 -4316,14240 -4390,14257
+Staakener Str.: schlechtes Kopfsteinpflaster	Q3 -4155,14261 -4316,14240
+#: corrected_by: srt (schlechtes Kopfsteinpflaster -> )
+Staakener Str.: Kopfsteinpflaster	Q2 -4316,14240 -4390,14257
 #: corrected_by: srt (schlechtes Kopfsteinpflaster -> )
 Staakener Str.: Asphalt	Q0 -4390,14257 -4434,14215
 #: corrected_by: srt (schlechtes Kopfsteinpflaster -> )
@@ -15809,10 +15847,12 @@ Doberaner Str. (Schmargendorf): Kopfsteinpflaster	Q2 2731,7247 2827,7246
 (Verlängerter Dauerwaldweg): befestigter Waldweg	Q1 467,9516 461,9556 418,9752
 #: corrected_by: srt (Q1 -> Q1-)
 (Verlängerte Alte Allee): befestigter Waldweg	Q1- 616,9602 418,9752 328,9820 262,9867 84,10003 -45,10096 -57,10103
-#: source_id: viz2021:13.26431,52.4958,17.07.2023,07:00 (Fahrbahnerneuerung bis 04.08.2023) (inaktiv)
-#: XXX nach den Bauarbeiten bessere Qualität?
-#: next_check: 2023-08-04
-Maikäferpfad: Asphalt mit Löchern	Q2 841,9914 937,9841 981,9806 1026,9772 1117,9706
+# REMOVED --- #: source_id: viz2021:13.26431,52.4958,17.07.2023,07:00 (Fahrbahnerneuerung bis 04.08.2023) (inaktiv) --- #: XXX nach den Bauarbeiten bessere Qualität? --- #: next_check: 2023-08-04
+#: corrected_by: srt (Asphalt mit Löchern, Q2 -> ..., 2023 neu gemacht?)
+Maikäferpfad: Asphalt	Q0 841,9914 937,9841 981,9806 1026,9772
+#: corrected_by: srt (Asphalt mit Löchern, Q2 -> ..., war vermutlich immer so)
+Maikäferpfad: Asphalt mit einigen leichten Schäden	Q1+ 1026,9772 1117,9706
+#: confirmed_by: srt
 Maikäferpfad: Verbundsteinpflaster	Q1 841,9914 748,9981 556,10122
 #: confirmed_by: srt
 Reichenhaller Str.: Kopfsteinpflaster	Q2 2751,7811 2655,7819
@@ -16070,6 +16110,7 @@ Melanchthonstr. (Wilhelmstadt): grobes Kopfsteinpflaster	Q3 -4169,12371 -4180,12
 # REMOVED (realisiert) --- #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2020/pressemitteilung.998882.php (asphaltierter Fuß- und Radweg, bis Frühjahr 2021) --- #: XXX hier (oder ein anderer, parallel verlaufender Weg) wird asphaltiert --- #: next_check: 2021-04-15
 (Südpark): Asphalt	Q0 -4033,11786 -4030,11794 -4029,11803 -4027,11818 -4090,11954 -4095,12006 -4093,12040
 (Südpark): wassergebundene Decke	Q1 -4093,12040 -4092,12062 -4106,12100
+(Südpark): wassergebundene Decke	Q1 -4106,12100 -4063,12104
 (Südpark): Asphalt	Q0 -4106,12100 -4144,12187 -4169,12371
 (Tiefwerder-Wiesen): Schotterweg	Q2+ -2976,12057 -2888,12049
 #: corrected_by: srt (Waldweg -> )
@@ -16137,7 +16178,7 @@ Wandlitzstr.: Asphalt mit leichten Schäden	Q0- 18627,8475 18557,8525 18494,8569 
 #: by: https://www.buergerhaushalt-lichtenberg.de/vorschlag/ausbau-fahrradwege-fahrradstrassen-karlshorst
 #: by: https://www.deutsches-architekturforum.de/thread/11397-lichtenberg-kleinere-projekte/?postID=736614#post736614 (BV Kaisergärten)
 #: XXX neue Häuser geplant (zwischen Liepnitzstr. und Stühlinger Str., Bebauungsplan 11-57a), vielleicht wird nach Fertigstellung die Fahrbahn saniert?
-#: last_checked: 2023-07-21
+#: last_checked: 2023-08-19
 #: check_frequency: 90d
 #: next_check: 2023-12-31
 Wandlitzstr.: mäßiger Asphalt, z. T. mit Kopfsteinpflaster durchbrochen	Q2 18448,8602 18401,8636 18331,8685 18301,8707 18272,8764
@@ -18253,6 +18294,7 @@ Scabellstr.: mäßiger Asphalt	Q1 -4290,2304 -4421,2350
 Rieflerstr.: Beton	Q0 9989,-1278 10147,-1273
 # 
 #: by: Michael Wedel:
+#: confirmed_by: srt
 Luise-Henriette-Str.: Asphalt	Q0 9253,6484 9242,6482 9150,6467
 # 
 #: by: Manfred Köhnen: vvv
@@ -18697,7 +18739,7 @@ Emil-Fischer-Str.: Asphalt	Q0 -5867,1449 -5997,1410
 Straße 246: Asphalt	Q0 13590,17368 13812,17206
 # 
 #: by: Marcel Länger: vvv
-Zitadellenweg: guter Asphalt	Q0 -2343,14446 -2264,14584 -1993,14594 -1997,14800
+Zitadellenweg: guter Asphalt	Q0 -2343,14446 -2264,14584 -1993,14594 -2006,14811
 Graacher Str.: gute Betonstraße	Q0 14533,17084 14672,17085
 #: by: ^^^
 # 
@@ -18782,10 +18824,12 @@ Herrnholzweg: Verbundsteinpflaster	Q1 6279,23170 6491,22915
 #: by: Michael Hess:
 Marienfelder Str.: Kopfsteinpflaster	Q2 10853,-1475 10981,-1564 11068,-1574
 # 
-#: by: Martin Helmhart:
+#: by: Martin Helmhart: vvv
 #: note: laut ADFC-Karte (alt und neu) mäßig geeignet, aber Widerspruch von Martin ("uneingeschränkt zu empfehlen")
-#: confirmed_by: srt (zumindest der östliche Abschnitt)
-Altonaer Str.: guter Asphalt	Q0 -4934,13890 -4775,13880 -4314,13828 -4170,13809 -3989,13785 -3880,13763 -3850,13756 -3716,13724
+Altonaer Str.: guter Asphalt	Q0 -4934,13890 -4775,13880 -4314,13828 -4170,13809 -3989,13785 -3880,13763
+#: corrected_by: srt (guter Asphalt, Q0 -> ...)
+Altonaer Str.: Asphalt mit Querrissen	Q1+ -3880,13763 -3850,13756 -3716,13724
+#: by ^^^
 # 
 #: by: smike:
 #: confirmed_by: srt
@@ -23005,19 +23049,15 @@ Rieppelstr.: Kleinsteinpflaster	Q2+ 763,15527 768,15486 772,15460 794,15362 780,
 Harriesstr.: Kleinsteinpflaster	Q2+ 525,15435 659,15469 768,15486
 #: corrected_by: srt (Kopfsteinpflaster, Q2 -> ...)
 Rapsstr.: Asphalt	Q0 755,15123 702,15274 693,15335 665,15414 659,15469
-#: corrected_by: srt (Radweg ist Verbundsteinpflaster)
-#: next_check_id: WILHELMVONSIEMENSPARK-2019
-#: by: http://www.infravelo.de/projekt/wilhelm-von-siemens-park/ (Sanierung des Verbundsteinpflasters, 2. Quartal 2021 - 4. Quartal 2022) (mittlerweile Start 1. Quartal 2022) (mittlerweile: 4. Quartal 2022 - 4. Quartal 2022) (4. Quartal 2019 - 4. Quartal 2019, falsch?) (gelöscht)
-#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/pressemitteilung.1146290.php (Bauarbeiten im Park ab 15.11.2021 für insgesamt 1 1/2 Jahre, Sanierung einiger Wege, möglicherweise auch hier)
-#: XXX Radweg wird asphaltiert
-#: last_checked: 2023-03-18
-#: check_frequency: 90d
-#: next_check: 2023-05-31
-Dihlmannstr.: Fahrbahn Kopfsteinpflaster, paralleler Radweg Verbundsteinpflaster	Q1- 1065,15229 976,15195 971,15193 851,15155 755,15123 651,15091
+#: corrected_by: srt (? -> ...)
+Dihlmannstr.: Kleinsteinpflaster	Q1-; 1065,15229 976,15195 971,15193 851,15155 755,15123 651,15091
+# REMOVED --- #: next_check_id: WILHELMVONSIEMENSPARK-2019 --- #: by: http://www.infravelo.de/projekt/wilhelm-von-siemens-park/ (Sanierung des Verbundsteinpflasters, 2. Quartal 2021 - 4. Quartal 2022) (mittlerweile Start 1. Quartal 2022) (mittlerweile: 4. Quartal 2022 - 4. Quartal 2022) (4. Quartal 2019 - 4. Quartal 2019, falsch?) (gelöscht) --- #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/pressemitteilung.1146290.php (Bauarbeiten im Park ab 15.11.2021 für insgesamt 1 1/2 Jahre, Sanierung einiger Wege, möglicherweise auch hier) --- #: XXX Radweg wird asphaltiert --- #: last_checked: 2023-03-18 --- #: check_frequency: 90d --- #: next_check: 2023-05-31
+#: corrected_by: srt (Radweg ist Verbundsteinpflaster; mittlerweile asphaltiert)
+Dihlmannstr.: neu asphaltierter Radweg	Q0; 651,15091 755,15123 851,15155 971,15193 976,15195 1065,15229
 #: corrected_by: srt (glatt gepflasterter Weg -> ...)
-(Dihlmannstr. - Jungfernheideweg): wassergebundene Decke, Rillen	Q1- 1065,15229 1179,15260
+(Dihlmannstr. - Jungfernheideweg): wassergebundene Decke, Rillen	Q1- 1065,15229 1192,15257
 #: corrected_by: mapillary (neu gemacht), srt
-(Dihlmannstr. - Jungfernheideweg): Asphalt	Q0 1179,15260 1374,15314
+(Dihlmannstr. - Jungfernheideweg): Asphalt	Q0 1192,15257 1374,15314
 #: by: ^^^
 # 
 #: by: Ines Junge: vvv
@@ -23544,6 +23584,7 @@ Teutonenstr. (Nikolassee): asphaltiert	Q0 -3249,2002 -3237,1945
 #: by: ^^^
 # 
 #: by: Maria (ferrusac):
+#: confirmed_by: srt
 Reinhardtstr. (Tempelhof): Asphalt	Q0 9154,6638 9136,6552 9150,6467 9141,6459 9143,6415
 # 
 #: by: Johann-Christian Hanke: vvv
@@ -23742,23 +23783,18 @@ Klemkepark - Kopenhagener Str./Freiheitsweg: Mosaikpflaster	Q1- 7313,18781 7248,
 #: note: erlaubte Höchstgeschwindigkeit 10 km/h
 #: confirmed_by: Christian Marwitz meint "Unebener Weg mit teilweise Schienen und Betonflächen... Bodenmängel":
 #: corrected_by: srt (Q3 -> Q2+, kein Kopfsteinpflaster, Beton mit alten Bahngleisen -> ...; ... -> ..., neu gemacht)
-Hönower Wiesenweg: Asphalt	Q0 17308,9090 17335,8971 17380,8858
-#: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2023-08-04
-#: check_frequency: 14d
-#: next_check: 2023-08-11
-Hönower Wiesenweg: Asphalt, letzte Deckschicht fehlt	Q1 17380,8858 17416,8767 17468,8692
+Hönower Wiesenweg: Asphalt	Q0 17308,9090 17335,8971 17380,8858 17416,8767 17468,8692
 # REMOVED (früher) --- Hönower Wiesenweg: Beton mit alten Bahngleisen	Q2+ 17468,8692 17497,8623 17515,8567
 #: corrected_by: srt (... -> ..., neu gemacht)
 Hönower Wiesenweg: Asphalt	Q0 17468,8692 17497,8623
 #: corrected_by: srt (... -> ..., neu gemacht)
-Hönower Wiesenweg: Asphalt	Q0 17497,8623 17515,8567 17524,8536
-#: corrected_by: srt (... -> ..., neu gemacht)
-Hönower Wiesenweg: Asphalt	Q0 17524,8536 17533,8505
-#: corrected_by: srt (... -> ..., neu gemacht)
-Hönower Wiesenweg: Asphalt	Q0 17533,8505 17554,8458
+#: next_check_id: PARKSTADTKARLSHORST-2021
+#: last_checked: 2023-08-14
+#: check_frequency: 14d
+# REMOVED --- #: next_check: 2023-08-11
+Hönower Wiesenweg: Asphalt, letzte Deckschicht fehlt	Q1+ 17497,8623 17515,8567 17524,8536 17533,8505 17554,8458 17588,8413
 #: corrected_by: srt: (Q3 -> Q2-, Kopfsteinpflaster und Sandweg mit Schlaglöchern -> ...)
-Hönower Wiesenweg: Asphalt	Q0 17554,8458 17588,8413 17617,8363 17652,8349 17707,8328 17753,8290
+Hönower Wiesenweg: Asphalt	Q0 17588,8413 17617,8363 17652,8349 17707,8328 17753,8290
 #: corrected_by: srt (früher (bis Juni 2023) Kopfsteinpflaster und Sandweg mit Schlaglöchern, Q2 -> ..., neu gemacht)
 Hönower Wiesenweg: Asphalt	Q0 17753,8290 17793,8225 17856,8162
 #: by: ^^^
@@ -25177,7 +25213,7 @@ Oggenhauser Str.: schlechtes Kopfsteinpflaster	Q3 3476,23310 3463,23194
 # 
 #: by: Frederike (pure shore) vvv
 #: confirmed_by: srt
-Leisniger Str.: guter Beton	Q0 25095,14171 25041,14016 25025,13974 25014,13937 24992,13870 24983,13843
+Leisniger Str.: guter Beton	Q0- 25095,14171 25041,14016 25025,13974 25014,13937 24992,13870 24983,13843
 #: confirmed_by: srt
 Geithainer Str.: Beton	Q0 25041,14016 25112,13991 25225,13956
 #: by: ^^^
@@ -26485,20 +26521,9 @@ Flatower Str.: Asphalt	Q0 -4628,16899 -4319,16879 -4151,16857
 Kroppenstedtweg: Verbundsteinpflaster	Q1 1056,14906 1035,14996
 #: corrected_by: mapillary (wassergebundene Decke, Q1 -> ..., neu gemacht)
 Kroppenstedtweg: Asphalt	Q0 1035,14996 998,15094 983,15136
-#: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/gremien/fahrrat/uebersicht-siemenspark-14-03-19.pdf
-#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2019/pressemitteilung.863236.php (ab 25.11.2019 für eine Dauer von 1,5 Jahren; Asphaltierung, Gehweg, Radfahren erlaubt)
-#: by: https://www.berliner-woche.de/siemensstadt/c-bauen/bauarbeiten-im-wilhelm-von-siemens-park_a239818
-#: by: https://api.fixmyberlin.de/api/projects/134
-#: by: https://www.berliner-woche.de/siemensstadt/c-bauen/gasleuchten-in-siemensstadt-werden-umgeruestet_a248611 (Baumaßnahme wird 2023 fertig sein)
-#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/pressemitteilung.1146290.php (Bauarbeiten ab 15.11.2021 für insgesamt 1 1/2 Jahre, hier: Asphaltierung)
-#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2022/pressemitteilung.1194824.php (Asphaltierung, Bauarbeiten ab 11.4.2022)
-#: XXX wird hier auch die Fahrbahndecke verbessert?
-# REMOVED (anderer Abschnitt) --- #: osm_watch: way id="28259369" version="19"
-#: osm_watch: way id="844089355" version="3"
-#: last_checked: 2023-03-18
-#: check_frequency: 120d
-#: next_check: 2023-05-31
-Kroppenstedtweg: wassergebundene Decke	Q1 983,15136 971,15193
+# REMOVED --- #: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/gremien/fahrrat/uebersicht-siemenspark-14-03-19.pdf --- #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2019/pressemitteilung.863236.php (ab 25.11.2019 für eine Dauer von 1,5 Jahren; Asphaltierung, Gehweg, Radfahren erlaubt) --- #: by: https://www.berliner-woche.de/siemensstadt/c-bauen/bauarbeiten-im-wilhelm-von-siemens-park_a239818 --- #: by: https://api.fixmyberlin.de/api/projects/134 --- #: by: https://www.berliner-woche.de/siemensstadt/c-bauen/gasleuchten-in-siemensstadt-werden-umgeruestet_a248611 (Baumaßnahme wird 2023 fertig sein) --- #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/pressemitteilung.1146290.php (Bauarbeiten ab 15.11.2021 für insgesamt 1 1/2 Jahre, hier: Asphaltierung) --- #: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2022/pressemitteilung.1194824.php (Asphaltierung, Bauarbeiten ab 11.4.2022) --- #: XXX wird hier auch die Fahrbahndecke verbessert? --- # REMOVED (anderer Abschnitt) --- #: osm_watch: way id="28259369" version="19" --- #: osm_watch: way id="844089355" version="3" --- #: last_checked: 2023-03-18 --- #: check_frequency: 120d --- #: next_check: 2023-05-31
+#: corrected_by: srt (wassergebundene Decke, Q1 -> ..., 2023 neu gemacht)
+Kroppenstedtweg: Asphalt	Q0 983,15136 971,15193
 #: by ^^^
 # 
 #: by: Alexander (mrubi...): vvv
@@ -28243,7 +28268,7 @@ Burgwallsteg - Betckestr.: Asphalt	Q0 -3337,13111 -3230,12938 -3228,12920
 Burgwallsteg - Betckestr.: Verbundsteinpflaster	Q1 -3228,12920 -3208,12889 -3211,12868 -3211,12784 -3170,12603
 Spandauer Ölhafen: unbefestigter Weg, Schotter	Q2+ -3221,12925 -3199,12888
 #: corrected_by: srt ("Rechteckpflaster" -> ...)
-Spandauer Ölhafen: Verbundsteinpflaster	Q1+ -3199,12888 -3205,12816 -3180,12719 -3142,12615
+Spandauer Ölhafen: Verbundsteinpflaster	Q1+ -3199,12888 -3205,12816 -3180,12719 -3142,12615 -3170,12603
 Cosmarweg: sehr guter Beton	Q0 -6151,13001 -6254,12976 -6360,12970 -6514,13017
 Cosmarweg: sehr guter Asphalt	Q0 -6514,13017 -6626,13049 -6828,13106 -6898,13126 -6908,13129 -6951,13141 -7103,13191 -7195,13216 -7303,13248
 #: confirmed_by: srt
@@ -28501,8 +28526,10 @@ Chamissostr. (Hakenfelde): guter Asphalt	Q0 -2585,16900 -2838,16951
 Chamissostr. (Hakenfelde): Kopfsteinpflaster	Q2- -2838,16951 -3017,16984
 #: confirmed_by: srt
 Telegrafenweg: Asphalt	Q0 -1336,14786 -1369,14802 -1411,14875 -1480,14922 -1543,14938 -1610,14925 -1789,14972
-#: corrected_by: mapillary, daf (Asphalt, Q0 -> ...)
-Telegrafenweg: Kopfsteinpflaster	Q2 -1789,14972 -2056,15041
+#: corrected_by: mapillary, daf, srt (Asphalt, Q0 -> ...)
+Telegrafenweg: Kleinsteinpflaster	Q2 -1789,14972 -1854,14989 -1945,15018
+#: corrected_by: srt (Asphalt, Q0 -> ...)
+Telegrafenweg: schlechtes Kopfsteinpflaster	Q3 -1945,15018 -2009,15033 -2070,15046
 Schwerter Weg: mäßiger Beton	Q2 -692,15491 -676,15370
 #: confirmed_by: srt
 Kanalstr. (Haselhorst): guter Beton	Q1+ -736,15294 -593,15300
@@ -29061,15 +29088,9 @@ Hirtestr.: am Rand Beton, zwischen den Gleisen asphaltiert	Q1-; 22727,6487 22753
 #: corrected_by: mapillary (Asphalt -> ...)
 Hirtestr.: Beton	Q0- 22727,6487 22675,6498
 # 
-#: next_check_id: PARRISIUS-2023
-#: confirmed_by: srt
-#: XXX Ist die Fahrbahn der Parrisiusstr. nach den Bauarbeiten besser, vielleicht asphaltiert? vvv
-#: last_checked: 2023-07-09 vvv
-#: next_check: 2023-08-18 vvv
-Parrisiusstr.: Kopfsteinpflaster	Q2 22358,5918 22531,5871
-#: next_check ^^^
-#: last_checked ^^^
-#: XXX ^^^
+# REMOVED --- #: next_check_id: PARRISIUS-2023 --- #: XXX Ist die Fahrbahn der Parrisiusstr. nach den Bauarbeiten besser, vielleicht asphaltiert? vvv --- #: last_checked: 2023-07-09 vvv --- #: next_check: 2023-08-18 vvv
+#: corrected_by: srt (Kopfsteinpflaster, Q2 -> ..., seit 2023-08 neu gemacht)
+Parrisiusstr.: Asphalt	Q0 22358,5918 22531,5871
 #: confirmed_by: srt
 Parrisiusstr.: schlechtes Kopfsteinpflaster	Q3 22531,5871 22631,5866 22766,5840 22819,5812 22885,5835
 # 
@@ -29240,7 +29261,11 @@ Lilli-Henoch-Str.: Beton	Q0 12584,14928 12477,14987 12393,15030 12357,15020 1231
 #: corrected_by: srt (Q0- -> Q1)
 (Danziger Str. - Lilli-Henoch-Str.): Verbundsteine	Q1 12123,14643 12174,14739 12183,14757 12193,14775 12212,14781 12252,14860 12236,14870 12314,15008
 #: confirmed_by: srt
-(Prenzlauer Allee - Lilli-Henoch-Str.): Verbundsteine	Q1+ 11877,15366 11937,15349 12003,15311 12103,15218 12208,15108 12284,15068 12314,15008
+(Prenzlauer Allee - Lilli-Henoch-Str.): Verbundsteine	Q1+ 11877,15366 11937,15349 12003,15311 12103,15218
+# REMOVED --- (Prenzlauer Allee - Lilli-Henoch-Str.): Verbundsteine	Q1+ 12103,15218 12208,15108
+#: confirmed_by: srt
+(Prenzlauer Allee - Lilli-Henoch-Str.): Verbundsteine	Q1+ 12208,15108 12284,15068 12314,15008
+#: confirmed_by: srt
 (Prenzlauer Allee - Lilli-Henoch-Str.): Verbundsteine	Q1+ 11860,15309 11919,15314 11937,15349
 (Verlängerte Diesterwegstr.): Verbundsteine	Q0- 12056,15159 12082,15206 12103,15218
 #: corrected_by: srt (Asphalt -> ...)
@@ -29326,7 +29351,7 @@ Gustav-Heinemann-Brücke: Holzbohlen mit Fugen	Q1 8116,12938 8111,13029 8110,1304
 Platz vor dem Neuen Tor: Kopfsteinpflaster	Q2 8674,13593 8670,13633 8664,13688
 Platz vor dem Neuen Tor: Kopfsteinpflaster	Q2 8670,13633 8633,13629 8594,13625
 Linienstr.: Kleinsteinpflaster	Q1 9225,13389 9312,13388
-Kleine Hamburger Str.: Asphalt mit leichten Unebenheiten	Q0- 9670,13637 9744,13584 9793,13549
+Kleine Hamburger Str.: Asphalt mit leichten Unebenheiten	Q0- 9670,13637 9744,13584 9771,13564
 # REMOVED --- Helga-Hahnemann-Str.: Schotter, bei Regen große Pfützen	Q2 9415,13315 9408,13282 9385,13174
 Blasewitzer Ring: Asphalt	Q0 -5437,12440 -5219,12374 -5196,12452 -5146,12632 -5170,12690 -5282,12730
 Gruberzeile: Beton	Q0 -6013,12009 -5881,11902 -5847,11876 -5789,11831 -5735,11793 -5674,11800 -5618,11884
@@ -29422,7 +29447,7 @@ Max-Urich-Str.: Kopfsteinpflaster	Q2 9034,14910 8953,14758
 #: confirmed_by: srt
 Gartenplatz: Asphalt	Q0 8870,14637 8953,14758
 Ravenéstr.: Kopfsteinpflaster	Q2 8232,15220 8001,15205
-(Schulzendorfer - Schönwalder Str.): Verbundsteine	Q1 8264,14902 8245,15004 8266,15134
+(Schulzendorfer - Schönwalder Str.): Verbundsteine	Q1 8262,14910 8245,15004 8266,15134
 #: note: früher schlechtes Kopfsteinpflaster, aber mittlerweile wegen Benutzung als Baustraße asphaltiert
 Döberitzer Str.: asphaltiert	Q0 7979,13733 7872,13685
 #: confirmed_by: srt
@@ -29514,7 +29539,7 @@ Cuxhavener Str.: Asphalt	Q1 5886,12467 5904,12417 5931,12399
 # REMOVED (lohnt nicht) --- Holsteiner Ufer: Verbundsteine	Q1 6575,12778 6469,12867 6449,12865
 (Zufahrt Parkplätze Bartningallee): Kopfsteinpflaster	Q2 6500,12605 6361,12617 6304,12603 6188,12553 6179,12513
 (Zufahrt Parkplätze Bartningallee): Gehwegplatten	Q1 6179,12513 6149,12454
-(Altonaer Str. - Flensburger Str.): Gehwegplatten	Q1 6173,12396 6149,12454 6137,12532 6160,12681
+(Altonaer Str. - Flensburger Str.): Gehwegplatten	Q1 6173,12396 6149,12454 6137,12532 6162,12690
 Cuxhavener Str.: Kopfsteinpflaster	Q2 5931,12399 5951,12353 5982,12291
 #: corrected_by: srt (Q2 -> Q2-)
 (Zufahrt Parkplätze Kloppstockstr.): Kopfsteinpflaster	Q2- 5909,12073 5870,12106 5982,12291
@@ -29582,11 +29607,14 @@ Shawweg: Beton	Q1 -848,11086 -835,11004
 Byronweg: Beton	Q1 -733,11098 -726,11031
 Teufelsseestr.: Kopfsteinpflaster	Q2 438,11236 454,11159
 #: corrected_by: srt (Q0 -> Q0-)
-Teufelsseechaussee: Asphalt mit einigen leichten Schäden	Q0- -977,9425 -938,9394 -886,9447 -817,9533 -697,9598 -471,9647 -324,9701 -232,9768 -153,9854 -103,9934 -75,10017 -57,10103 -1,10327 41,10501 96,10701 194,10846
+Teufelsseechaussee: Asphalt mit einigen leichten Schäden	Q0- -977,9425 -938,9394 -886,9447 -817,9533 -697,9598 -471,9647 -324,9701 -232,9768 -153,9854 -103,9934 -75,10017 -57,10103 -1,10327 41,10501 96,10701 200,10851
 Teufelsseechaussee [Auffahrt zum ehem. Horchposten]: Asphalt	Q1 -817,9533 -883,9664 -910,9717 -923,9757 -943,9826 -935,9846 -865,9920 -850,9940 -839,9968 -826,9977 -817,9968 -818,9894 -809,9867 -791,9854 -769,9856
 #: corrected_by: srt (Q2 -> Q2+)
-(Teufelsseechaussee - Waldschulallee): fester Waldweg	Q2+ 194,10846 355,10740
-(Teufelsseechaussee - Maikäferpfad): fester Waldweg	Q1 556,10122 460,10193 304,10305 41,10501
+(Teufelsseechaussee - Waldschulallee): fester Waldweg	Q2+ 200,10851 324,10763
+#: corrected_by: srt (fester Waldweg, Q1 -> ...)
+(Teufelsseechaussee - Maikäferpfad): unbefestigte Straße, holprig	Q2 556,10122 460,10193 335,10284
+#: corrected_by: srt (Q1 -> Q2+)
+(Teufelsseechaussee - Maikäferpfad): fester Waldweg, abschnittsweise etwas Schotter	Q2+ 335,10284 41,10501
 #: corrected_by: srt (Beton -> ...)
 Angerburger Allee: Asphalt	Q0 -1538,11126 -1608,11133 -1885,11392 -1931,11437 -1994,11496 -2109,11598 -2138,11772
 #: corrected_by: srt (Asphalt Q1 -> Beton Q1+)
@@ -29644,11 +29672,12 @@ Rostocker Str. (Tiergarten): Kopfsteinpflaster mit Bodenwellen	Q2 5089,14010 510
 #: confirmed_by: srt (zumindest das Pflaster)
 Wittstocker Str.: Kopfsteinpflaster mit Bodenwellen	Q2 4972,13804 5100,13822 5231,13843
 #: confirmed_by: srt (added "unebener")
-Mierendorffplatz: unebener Parkweg	Q2 3707,13274 3583,13313
+#: note: außerdem existiert parallel ein Privatweg mit Betonpflaster, unklar, ob das Tor am westlichen Ende immer offen ist
+Mierendorffplatz: unebener Parkweg	Q2 3710,13290 3585,13320
 #: confirmed_by: srt
-Brahestr.: Asphalt	Q0 3583,13313 3463,13357 3351,13411 3240,13464 3159,13492 3066,13514
+Brahestr.: Asphalt	Q0 3585,13320 3460,13351 3351,13411 3240,13464 3159,13492 3066,13514
 #: confirmed_by: srt
-Tauroggener Str.: Asphalt	Q0 3463,13357 3429,13227 3400,13107 3337,12855
+Tauroggener Str.: Asphalt	Q0 3460,13351 3429,13227 3400,13107 3337,12855
 #: confirmed_by: srt
 Fabriciusstr.: Asphalt	Q0 3159,13492 3194,13554 3262,13547 3371,13501
 Bonhoefferufer: Kleinkopfsteinpflaster	Q1 3444,12804 3398,12809
@@ -30009,12 +30038,14 @@ Betckestr.: Asphalt	Q0 -3635,12572 -3444,12573 -3259,12580
 #: confirmed_by: srt
 # REMOVED (steht nicht mehr) --- #: XXX Baustellenschild der Wasserbetriebe, bis 10.3.2023
 #: osm_watch: way id="475812733" version="5"
-#: last_checked: 2023-06-17 (mapillary)
-#: check_frequency: 90d
+#: last_checked: 2023-08-20
+#: check_frequency: 60d
 # REMOVED --- #: next_check: 2023-03-10
-Betckestr.: Kopfsteinpflaster	Q2 -3259,12580 -3170,12603 -3142,12615 -3113,12549
+#: corrected_by: srt (Kopfsteinpflaster, Q2 -> ..., 2023 neu gemacht)
+Betckestr.: Asphalt, letzte Deckschicht fehlt	Q1 -3259,12580 -3192,12591 -3170,12603
 #: also_indoor ^^^
 #: XXX ^^^
+Betckestr.: Kopfsteinpflaster	Q2 -3170,12603 -3138,12605 -3113,12549
 # 
 #: corrected_by: srt (Kopfsteinpflaster -> Asphalt)
 Franzstr. (Wilhelmstadt): Asphalt	Q0 -3637,12668 -3446,12728 -3275,12769
@@ -31580,6 +31611,8 @@ Curtiusstr. [Stichstraße]: Kopfsteinpflaster	Q2 2965,3823 2915,3905
 (Am Wäldchen - Barnimer Dörferweg): wassergebundene Decke	Q1- 9032,24700 9212,24525 9170,24443 9171,24349
 (Schloßpark Schönhausen - Majakowskiring): unbefestigter Weg, etwas Schotter	Q2+ 10507,18959 10434,18907
 Rudolf-Leonhard-Str. - Blumberger Damm: Verbundsteinpflaster	Q1+ 21493,16387 21538,16444 21574,16547
+Heinrich-Hertz-Str.: Asphalt	Q0 37,15597 59,15518 149,15237
+Elsa-Neumann-Str.: Asphalt	Q0 149,15237 -159,15486 -213,15529 -218,15558
 #: by ^^^
 # 
 ######################################################################
@@ -32377,7 +32410,7 @@ Kreuzungsbereich mit Kopfsteinpflaster	Q2 2397,6960
 Einmündungsbereich asphaltiert	Q0 6975,8944
 Kreuzungsbereich asphaltiert	Q0 11595,15460
 Einmündungsbereich asphaltiert	Q0 11502,15527
-Kreuzungsbereich asphaltiert	Q0 11418,15587
+Kreuzungsbereich asphaltiert	Q0 11407,15595
 Kreuzungsbereich asphaltiert	Q0 11086,15772
 Kreuzungsbereich asphaltiert	Q0 10713,15753
 Einmündungsbereich mit Kleinsteinpflaster	Q2 8388,6322
@@ -32498,4 +32531,11 @@ Einmündungsbereich mit Kopfsteinpflaster	Q2- 9580,4201
 Kreuzungsbereich mit gutem Kleinsteinpflaster	Q1 2937,4645
 Kreuzungsbereich mit gutem Kleinsteinpflaster	Q1 3057,4731
 Kreuzungsbereich asphaltiert	Q0 6588,9087
+Kreuzungsbereich asphaltiert	Q0 8412,14923
+Kreuzungsbereich asphaltiert	Q0 22531,5871
+Kreuzungsbereich mit Kopfsteinpflaster	Q2 -3259,12580
+Kreuzungsbereich asphaltiert	Q0 556,10122
+Kreuzungsbereich mit Kopfsteinpflaster	Q2 6399,12673
+Einmündungsbereich asphaltiert	Q0 -4390,14257
+Kreuzungsbereich mit Kleinsteinpflaster	Q1- -434,10964
 #: ignore ^^^

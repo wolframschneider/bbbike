@@ -19,7 +19,7 @@
 #: XXX alten handicap-Eintrag in der Niemannstr. wieder aktivieren bzw. valid-Direktive anpassen
 #: source_id: viz2021:13.460598,52.507475,28.06.2023,07:00 (bis 10.11.2023)
 #: also_indoor: traffic (G[falsch],H[falsch],B,W) vvv
-#: last_checked: 2023-08-05 vvv
+#: last_checked: 2023-08-17 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2023-11-10 vvv
 #: valid: -20231110 vvv
@@ -35,19 +35,19 @@ Haasestr.: Bauarbeiten vor der Kreuzung Simplonstr., Abschnitte der Fahrbahn ges
 # REMOVED --- #: also_indoor: traffic (G,W) --- #: last_checked: 2023-05-11 --- #: check_frequency: 7d --- Modersohnstr.: einige Meter der Fahrbahn Richtung Süden wegen Bauarbeiten gesperrt	q2::inwork; 14181,11434 14134,11272
 # 
 #: also_indoor: traffic (G,W)
-#: last_checked: 2023-07-16
+#: last_checked: 2023-08-12
 Weserstr.: Hochbauarbeiten, Einbahnstraßenregelung	q3::inwork; 14710,11626 14651,11666
 # 
 #: note: der übriggebliebene Gehweg ist sehr holprig und stellenweise schmal
-#: osm_watch: way id="936801541" version="5"
+#: osm_watch: way id="936801541" version="6"
 #: osm_watch: way id="36987812" version="15"
 #: also_indoor: traffic (W,G)
 #: last_checked: 2023-08-07
 #: check_frequency: 90d
 Bödikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
 # 
-#: also_indoor: traffic (B[unvollständig],H[unvollständig])
-#: last_checked: 2023-08-04 vvv
+#: also_indoor: traffic (B[unvollständig],H[unvollständig],G[unvollständig],W)
+#: last_checked: 2023-08-20 vvv
 #: check_frequency: 14d vvv
 Kinzigstr.: Bauarbeiten nördlich und südlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975 14475,11778
 Schwarnweberstr.: Einbahnstraßenregelung	q3::inwork; 14589,11975 14675,11964
@@ -68,7 +68,7 @@ Schwarnweberstr.: Einbahnstraßenregelung	q3::inwork; 14589,11975 14675,11964
 #: XXX Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="272512103" version="9"
 #: osm_watch: way id="767674684" version="1"
-#: last_checked: 2023-07-23 vvv
+#: last_checked: 2023-08-17 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2025-01-01 vvv
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
@@ -192,7 +192,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 # 
 #: XXX_prog: BS (ansonsten entfernen)
 #: next_check_id: DIESEL-2019
-#: last_checked: 2023-07-04
+#: last_checked: 2023-08-19
 #: check_frequency: 60d
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
 # 
@@ -224,7 +224,7 @@ Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 
 # 
 #: XXX laut osm opening_date=2024-10-01, "Wedding Advanced Laboratories"
 #: osm_watch: way id="885130938" version="5"
-#: last_checked: 2023-05-01
+#: last_checked: 2023-08-17
 #: check_frequency: 150d
 #: next_check: 2024-10-01
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6748,15313 6833,15215
@@ -238,7 +238,7 @@ Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 
 #: osm_watch: way id="549316654" version="27"
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,ex-H)
-#: last_checked: 2023-07-18 (osm)
+#: last_checked: 2023-08-17
 #: check_frequency: 60d
 #: valid: 20171026-
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
@@ -249,22 +249,11 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 # REMOVED (hier keine Bauarbeiten mehr) --- #: next_check_id: PLDVEREINTENNATIONEN-2023 --- #: last_checked: 2023-08-09 --- #: check_frequency: 30d --- #: next_check: 2023-08-11 --- #: valid: -20230811 --- Platz der Vereinten Nationen: Anbindung Mollstr. gesperrt, Bordsteine, Engstellen	q4::inwork 11896,13075 11904,13052
 # REMOVED (mittlerweile wieder Führung via Fahrbahn trotz nicht ganz abgeschlossener Baustelle) --- #: source_id: viz2021:13.414995,52.527328,22.05.2023,06:00 (bis 09.06.2023) --- #: by: https://nitter.cz/VIZ_Berlin/status/1660510235155484672#m --- #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRndldEE0b1dBQVU0VmE2LmpwZw== --- #: next_check: 2023-06-09 --- #: valid: -20230609 --- Mollstr.: Fahrbahnsanierungsarbeiten, Radfahrer werden über den Gehweg geführt	q1-::inwork; 11160,13492 11216,13451 11270,13412 11276,13408
 # REMOVED (fertig) --- #: by: https://www.deutsches-architekturforum.de/thread/14788-band-des-bundes-spreebogenpark-und-reichstag/?postID=737430#post737430 --- #: XXX evtl. wird die Straße nach den Bauarbeiten nicht mehr gepflastert sein -> ja, es ist schon asphaltiert (bereits eingetragen, bis auf die Stichstraße) --- #: last_checked: 2023-04-06 --- #: check_frequency: 30d --- Elisabeth-Abegg-Str.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 7930,12912 7858,12830 7789,12764
-# 
-#: next_check_id: MOLKENMARKT-2021
-#: next_check_id: STRALAUER-2023
-#: source_id: viz2021:13.412245,52.51585,02.11.2022,08:00 (bis 30.09.2023)
-#: last_checked: 2023-06-29 vvv
-#: check_frequency: 90d vvv
-#: next_check: 2023-09-30 vvv
-# REMOVED (hier nicht mehr) --- Stralauer Str.: Radweg auf schmalen Bürgersteig	q1::inwork; 11139,12243 11094,12243 10951,12249
-Stralauer Str.: Radweg auf schmalen Bürgersteig	q2::inwork; 10951,12249 10830,12279
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
+# REMOVED (nicht mehr) --- #: next_check_id: MOLKENMARKT-2021 --- #: next_check_id: STRALAUER-2023 --- #: source_id: viz2021:13.412245,52.51585,02.11.2022,08:00 (bis 30.09.2023) --- #: last_checked: 2023-08-11 vvv --- #: check_frequency: 90d vvv --- #: next_check: 2023-09-30 vvv --- # REMOVED (hier nicht mehr) --- Stralauer Str.: Radweg auf schmalen Bürgersteig	q1::inwork; 11139,12243 11094,12243 10951,12249 --- Stralauer Str.: Radweg auf schmalen Bürgersteig	q2::inwork; 10951,12249 10830,12279 --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
 #: next_check_id: MOLKENMARKT-2021
 #: XXX nach Fertigstellung des Molkenmarkts entfernen
-#: last_checked: 2023-07-17 vvv
+#: last_checked: 2023-08-17 vvv
 #: check_frequency: 90d vvv
 Grunerstr.: verschwenkter Radweg	q2 10931,12622 10954,12604 10973,12611
 Grunerstr.: Radweg auf Gehweg	q1 10973,12611 11057,12715
@@ -289,7 +278,7 @@ Grunerstr.: Radweg auf Gehweg	q1 10973,12611 11057,12715
 #: by: https://www.deutsches-architekturforum.de/thread/7660-marinehaus-umbau-stiftung-stadtmuseum/?postID=712499#post712499
 #: by: https://www.berliner-woche.de/mitte/c-bauen/maerkisches-museum-oeffnet-sich-fuer-die-stadtgesellschaft_a367415 (Sanierung des Marinehauses bis Mitte 2025)
 #: also_indoor: traffic (none)
-#: last_checked: 2023-07-25
+#: last_checked: 2023-08-16
 #: check_frequency: 90d
 #: next_check: 2025-06-30
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883 11160,12071
@@ -305,7 +294,7 @@ Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic vvv
-#: last_checked: 2023-07-26 (mapillary) vvv
+#: last_checked: 2023-08-17 vvv
 #: check_frequency: 60d vvv
 #: osm_watch: way id="24242892" version="40"
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8775,12457 8904,12489 8999,12498
@@ -327,7 +316,7 @@ Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
 #: also_indoor: traffic (H,B)
 #: note: Die Hälfte der Container ist mittlerweile weg, aber es ist weiterhin die gesamte Breite der Fahrbahn gesperrt.
-#: last_checked: 2023-07-20
+#: last_checked: 2023-08-17
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 # 
 # REMOVED --- #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large --- #: last_checked: 2022-12-27 --- #: check_frequency: 60d --- (Grunerstr. - Gustav-Böß-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10868,12572 10772,12515
@@ -337,14 +326,14 @@ Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontaine
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/arch%C3%A4ologisches-haus-besucherzentrum-am-petriplatz.789/#post-14039
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: XXX verursachende Bauarbeiten sind die am Archäologischen Haus
-#: last_checked: 2023-07-27
+#: last_checked: 2023-08-17
 #: check_frequency: 60d
 Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 10364,11896 10332,11929 10392,11991
 # 
 #: by: http://www.deal-magazin.com/news/3/123294/Berlin-Naechste-Projektphase-fuer-das-Mehrreligionenhaus-House-of-One
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: XXX verursachende Bauarbeiten sind die am House of One
-#: last_checked: 2023-07-27
+#: last_checked: 2023-08-17
 #: check_frequency: 90d
 Petriplatz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwork 10418,12016 10460,11979
 # 
@@ -535,7 +524,7 @@ Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9
 ### Oberschöneweide ###
 # 
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
-#: also_indoor: traffic (B) vvv
+#: also_indoor: traffic (B,W,G,ex-H[ungenau]) vvv
 #: last_checked: 2023-07-21 vvv
 Rathenaustr./Plönzeile: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 19033,6167 18970,6110 18861,6000
 Rathenaustr./Plönzeile: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 18970,6110 18859,6198
@@ -587,17 +576,18 @@ Rathenaustr./Plönzeile: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 18970,6110 188
 #: by: https://bauprojekte.deutschebahn.com/media/projects/6790/docs/PR_berlin-frankfurt-oder-bundesgrenze-d-pl_umbau_koepenick_bf_20230330.pdf (hier bis 15.6.2023)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1331223.php (ab Ende Juni 2023 passierbar)
 #: by: https://bauprojekte.deutschebahn.com/media/projects/6790/docs/PR_berlin-frankfurt-oder-bundesgrenze-d-pl_umbau_koepenick_bf_20230531.pdf (bis 11.7.2023)
+#: by: https://www.berliner-woche.de/koepenick/c-verkehr/erneute-sperrung-der-bahnhofstrasse-am-bahnhof-koepenick-verschaerft-die-verkehrssituation_a390734 (rechtzeitig zur Sperrung der Bahnhofstr. offen?)
 #: note: Unterführung passierbar: 2023-02-19 mittags, 2023-05-13 (Union-Spiel!)
 #: osm_watch: way id="794278028" version="10"
 #: osm_watch: way id="1181902719" version="1"
 #: source_id: viz2021:13.572881,52.460427,25.03.2023,06:00 (bis 25.05.2023) (bis 30.6.2023) (bis 01.08.2023) (bis 14.09.2023) vvv
 #: also_indoor: traffic (H,G,B,W) vvv
 #: priority: #A vvv
-#: last_checked: 2023-07-22 (mapillary) vvv
+#: last_checked: 2023-08-19 vvv
 # REMOVED --- #: check_frequency: 30d
 # REMOVED --- #: next_check: 2023-09-14 vvv
 #: next_check: 2023-08-28 vvv
-#: valid: 20230325-20230914 vvv
+#: valid: 20230325-20230828 vvv
 # REMOVED --- Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q4::inwork 21984,6317 22000,6245
 # REMOVED --- Hämmerlingstr.: Fahrbahn unter der Eisenbahnbrücke gesperrt, sehr enger Gehweg existiert, ggfs. schieben	q3::inwork 22000,6245 22033,6144
 Hämmerlingstr.: Bauarbeiten, Engstellen und Verschwenkungen	q3::inwork 21984,6317 22000,6245 22033,6144
@@ -675,7 +665,7 @@ Hämmerlingstr.: Bauarbeiten, Engstellen und Verschwenkungen	q3::inwork 21984,631
 #: XXX siehe unten: anderen Eintrag wieder aktivieren
 #: also_indoor: traffic (none)
 #: also_indoor: webcam https://portal1443.webcam-profi.de/ (leider mittlerweile verpixelt)
-#: last_checked: 2023-07-18
+#: last_checked: 2023-08-20
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-10-01
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2-::inwork; 5463,9961 5246,10168
@@ -683,7 +673,8 @@ Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen,
 #: next_check_id: PARISER-2021
 #: by: https://www.tagesspiegel.de/berlin/kreative-loesungen-fuer-den-berliner-radverkehr-bezirk-stellt-poller-am-kudamm-auf/25685748.html
 #: also_indoor: webcam https://portal1443.webcam-profi.de/
-#: last_checked: 2023-07-18
+#: note: wobei mittlerweile die Einschränkungen recht gering sind
+#: last_checked: 2023-08-20
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-10-01
 Pariser Str./Bundesallee: Bauarbeiten, Durchgang verengt	q3::inwork 5461,9923 5423,9932 5382,9942
@@ -757,8 +748,8 @@ Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwor
 #: source_id: viz2021:13.43372,52.4819,11.10.2022,15:00 (bis 31.10.2023) (inaktiv)
 #: source_id: viz2021:13.432818,52.481758,10.02.2022,08:00 (mittlerweile bis 1.9.2022) (bis 1.10.2022) (inaktiv) (allerdings hat sich die Situation nicht verändert)
 #: source_id: viz2021:13.432818,52.481758,10.02.2022,08:00 (bis 6.10.2022) (mittlerweile bis 11.10.2022) (bis 31.10.2023)
-#: osm_watch: way id="137623800" version="29"
-#: osm_watch: way id="625667165" version="20"
+#: osm_watch: way id="137623800" version="31"
+#: osm_watch: way id="625667165" version="22"
 #: also_indoor: traffic (G[falsch],B,H)
 #: priority: #B
 #: last_checked: 2023-07-11
@@ -791,13 +782,8 @@ Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kan
 ### Lichtenberg ###
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
-#: last_checked: 2023-08-04
+#: last_checked: 2023-08-14
 Gustav-Tempel-Str.: Bauarbeiten, Absperrungen, ggfs. auf Bürgersteig ausweichen	q3::inwork 15261,10738 15245,10719 15236,10684
-# 
-#: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: also_indoor: traffic (none)
-#: last_checked: 2023-07-19
-Margaretenstr.: Fahrbahn zwischen Metastr. und Heinrichstr. gesperrt	q3::inwork 17006,11391 16948,11409
 # 
 # REMOVED (zwar steht hier noch ein Einfahrt-verboten-Schild, aber es gibt keine Verengung der Fahrbahn mehr) --- #: by: https://viz.berlin.de/2023/06/verkehrsvorschau-260623/ (bis 03.07.2023, weitere Bauabschnitte bis Mitte Juli 2023) --- #: by: https://nitter.cz/VIZ_Berlin/status/1673195634050859008#m --- #: source_id: viz2021:13.507611,52.474933,26.06.2023,06:00 (bis 3.7.2023) (bis 10.7.2023) (inaktiv) --- #: note: Halteverbote bis 2023-07-14 --- #: last_checked: 2023-07-11 --- #: next_check: 2023-07-14 --- #: valid: -20230714 --- Am Walde: kurze Einbahnstraßenregelung an der Rummelsburger Landstraße, Bürgersteig existiert	q3::inwork; 17527,7812 17590,7828
 # REMOVED (beendet) --- #: add_fragezeichen: Wann ist die Sperrung beendet? --- #: also_indoor: traffic (B) --- #: last_checked: 2023-07-05 (mapillary) --- Frankfurter Allee [Wohngebiet]: Bauarbeiten, Anbindung zur richtigen Frankfurter Allee unterbrochen, Bordsteine	q3::inwork 16190,11872 16214,11935
@@ -892,23 +878,12 @@ Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Mer
 #: next_check: 2023-12-31
 Rembrandtstr.: Engstelle an einer Hochbaustelle	q2::inwork 6344,7174 6234,7020
 # 
-#: by: https://www.nbb-netzgesellschaft.de/ueber-die-nbb/presse/pressemitteilungen/reparatur-beeintraechtigt-verkehr-in-schoeneberg/
-#: XXX laut Schild bis Dezember 2021 (dauer aber länger)
-#: source_id: viz2021:13.355106,52.494649,17.01.2022,11:00 (Gasleitungsbaustelle, bis 28.02.2022) (inaktiv)
-#: source_id: viz2021:13.35399,52.49475,02.05.2022,13:59 (bis 31.5.2022) (wieder entfernt (Duplikat?), inaktiv)
-#: source_id: viz2021:13.35399,52.49475,20.01.2023,12:26 (bis 14.04.2023) (inaktiv)
-#: source_id: viz2021:13.355106,52.494649,25.02.2022,14:00 (Gasleitungsbaustelle, bis 02.05.2022) (mittlerweile bis 31.5.2022) (bis 31.10.2022) (bis 23.12.2022) (bis 5.12.2022) (bis 23.1.2023) (bis 14.4.2023) (bis 05.06.2023) (bis 28.06.2023) (inaktiv)
-#: osm_watch: way id="1096203482" version="8"
-#: also_indoor: traffic (ex-H,B,ex-G,W)
-#: last_checked: 2023-08-05
-#: check_frequency: 30d
-# REMOVED --- #: next_check: 2023-06-28
-Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3-::inwork 7126,9825 7118,9870
+# REMOVED (offen) --- #: by: https://www.nbb-netzgesellschaft.de/ueber-die-nbb/presse/pressemitteilungen/reparatur-beeintraechtigt-verkehr-in-schoeneberg/ --- #: XXX laut Schild bis Dezember 2021 (dauer aber länger) --- #: source_id: viz2021:13.355106,52.494649,17.01.2022,11:00 (Gasleitungsbaustelle, bis 28.02.2022) (inaktiv) --- #: source_id: viz2021:13.35399,52.49475,02.05.2022,13:59 (bis 31.5.2022) (wieder entfernt (Duplikat?), inaktiv) --- #: source_id: viz2021:13.35399,52.49475,20.01.2023,12:26 (bis 14.04.2023) (inaktiv) --- #: source_id: viz2021:13.355106,52.494649,25.02.2022,14:00 (Gasleitungsbaustelle, bis 02.05.2022) (mittlerweile bis 31.5.2022) (bis 31.10.2022) (bis 23.12.2022) (bis 5.12.2022) (bis 23.1.2023) (bis 14.4.2023) (bis 05.06.2023) (bis 28.06.2023) (inaktiv) --- #: osm_watch: way id="1096203482" version="8" --- #: also_indoor: traffic (ex-H,B,ex-G,W) --- #: last_checked: 2023-08-05 --- #: check_frequency: 30d --- #: next_check: 2023-06-28 --- Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3-::inwork 7126,9825 7118,9870
 # 
 #: by: https://www.amwinterfeldt.com/#dasprojekt (erwartete Fertigstellung 2024)
 #: by: https://www.deutsches-architekturforum.de/thread/11061-tempelhof-sch%C3%B6neberg-kleinere-projekte/?postID=732933#post732933
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/am-winterfeldt-pallasstra%C3%9Fe-24-26.492/page-2#post-20080
-#: last_checked: 2023-08-05 vvv
+#: last_checked: 2023-08-20 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-12-31 vvv
 Elßholzstr.: Hochbauarbeiten, Einbahnstraßenregelung	q4::inwork; 7202,9329 7209,9507 7216,9657 7223,9815
@@ -999,7 +974,7 @@ Jablonskistr.: Baustelle an der Kreuzung Winsstr., nur Gehweg ist frei	q3::inwor
 #: XXX nicht der gesamte Abschnitt ist gesperrt, deshalb q3 statt q4
 #: osm_watch: way id="164816805" version="11"
 #: priority: #C
-#: last_checked: 2023-07-22
+#: last_checked: 2023-08-20
 #: check_frequency: 30d
 Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg möglich	q3::inwork 13702,13634 13711,13615 13769,13487
 # 
@@ -1012,8 +987,8 @@ Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg m
 # REMOVED (wurde entfernt) --- #: note: laut rbbtext bis 31.12.2020
 #: also_indoor: traffic (G,B,W)
 #: priority: #B
-#: last_checked: 2023-07-03 vvv
-#: check_frequency: 60d vvv
+#: last_checked: 2023-08-20 (Straßenarbeiten) vvv
+#: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2022-12-31 vvv
 # REMOVED --- #: valid: -20200731 vvv
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
@@ -1038,8 +1013,8 @@ Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4+::inwor
 #: XXX Bleibt es bei der ausschließlichen Busfreigabe oder entsteht hier eine neue Verbindungsstraße?
 #: osm_watch: way id="519370786" version="4"
 #: osm_watch: note 3678184 3
-#: last_checked: 2023-07-03
-Falkenberger Str. - Hansastr: Bauarbeiten, Fahrbahn nur für Linienverkehr frei	q4::inwork 15819,16857 15892,16834
+#: last_checked: 2023-08-15
+Falkenberger Str. - Hansastr: Bauarbeiten, Fahrbahn nur für Linienverkehr frei	q4::inwork 15832,16846 15866,16823 15875,16816
 # 
 # REMOVED (fertig) --- #: last_checked: 2020-12-30 --- Charlottenburger Str.: Einbahnstraßenregelung zwischen Tassostr. und Pistoriusplatz, ggfs. auf Gehweg ausweichen	q3:inwork; 13642,16118 13479,16182
 # 
@@ -1528,7 +1503,7 @@ Spreeufer: Gehweg, viele Fußgänger, im Sommer Straßencafe	q4 10583,12206 10492,1
 #: XXX_prog BS an der Lynar/Herthastr., sowie an der Koenigsallee, wenn man nach links abbiegen möchte (ansonsten q2 oder q3)
 Herthastr.: Gehweg, Bordsteine	q4 1937,9253 1932,9263
 Fuggerstr.: einige Fußgänger	q1 6128,10319 6020,10351
-Pfalzburger Str.: Gehweg	q2 4905,10069 4910,10135
+Pfalzburger Str.: Gehweg, Radfahrer frei	q2 4905,10069 4910,10135
 Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
 (Tilla-Durieux-Park): Fußgänger, Radfahren nicht erlaubt	q3 8467,11125 8410,11143
 # REMOVED (noch einige enge Stellen vorhanden) --- #: next_check_id: SPREERADWEGEINSTEINUFER-2014 --- #: XXX Bauarbeiten, wird der Weg später breiter sein? --- #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/fahr_rat_20_sitzung.pdf (Verbreiterungen) --- #: last_checked: 2017-08-16 --- #: check_frequency: 14d
@@ -1561,7 +1536,8 @@ Tunnel S-Bhf. Grunewald: Fußgänger, Radfahren nicht erlaubt, ggfs. absteigen	q3 
 enge Kurven	q2 33526,2771 33419,2765 33406,2738
 # REMOVED (Bordsteine sind abgesenkt, aber man kommt trotzdem nicht voran...) --- #: XXX zur Schloßstr. sind die Bordsteine abgesenkt, wie sieht die Kieler aus? --- #: XXX_prog BS
 Kieler Str.: Fußgänger	q3 4998,5817 5030,5800
-Fontanepromenade: enger Gehweg	q2 10781,9697 10760,9646
+#: note: explizit als Gehweg ausgeschildert
+Fontanepromenade: enger Gehweg	q3 10781,9697 10774,9681 10760,9646
 Südstern: Fußgänger	q3 10749,9342 10741,9344 10695,9315 10656,9333 10647,9337
 #: XXX_prog auf der südlichen Seite ist ein relativ flacher Bord, auf der nördlichen Seite eigentlich gut abgeflacht und kein Problem (ansonsten Eintrag entfernen)
 Görlitzer Ufer: Bordsteine	q3 13275,10055 13283,10069
@@ -1675,7 +1651,7 @@ Elbingeroder Weg: hohe Bordsteine	q4 13178,9062 13146,9085
 (An der Apostelkirche - Kurfürstenstr.): Fußgänger, Bordstein	q3 7312,10505 7315,10537
 #: note: eigentlich ausgeschildert als "getrennter ...", aber eine bauliche oder gezeichnete Trennung ist nicht zu erkennen
 Else-Lasker-Schüler-Str.: gemeinsamer Rad- und Gehweg	q1 7281,10510 7315,10537
-Marie-Elisabeth-Lüders-Steg: eng, Fußgänger	q2 8415,12749 8593,12742 8596,12760
+Marie-Elisabeth-Lüders-Steg: eng, Fußgänger	q2 8415,12749 8593,12742 8589,12772
 # REMOVED --- #: XXX_prog BS Bordstein höchstens auf der Westseite, auf der Ostseite abgesenkt, aber Gehweg ist ziemlich kurvig
 #: note: theoretisch q3 möglich
 Kleine Andreasstr.: Gehweg	q4+ 12211,12128 12279,12113
@@ -1809,8 +1785,8 @@ Treseburger Ufer: nur für Fußgänger erlaubt	q4 12301,5783 12453,5844 12507,5860 
 Walter-Nicklitz-Promenade: eng und kurvenreich, Fußgänger	q2 8290,15304 8329,15397 8308,15409 8312,15470
 Gropiusstr.: Fußgänger auf dem Uferweg	q1 8389,16214 8534,16355 8543,16364
 #: note: Radfahren erlaubt, Fußgänger haben Vorrang
-Pankeweg: Fußgänger	q1 8286,14635 8322,14687 8292,14734 8275,14869 8264,14902
-Pankeweg: Fußgänger	q1 8264,14902 8245,15004 8266,15134
+Pankeweg: Fußgänger	q1 8286,14635 8322,14687 8292,14734 8275,14869 8262,14910
+Pankeweg: Fußgänger	q1 8262,14910 8245,15004 8266,15134
 Pankeweg: Fußgänger	q1 8232,15220 8268,15312
 Pankeweg: Fußgänger	q1 8312,15470 8156,15614 8176,15635 8150,15700 8164,15840 8250,16008 8270,16047 8330,16160 8389,16214
 Pankeweg: Fußgänger, eng	q2 8486,16425 8522,16458 8573,16443 8592,16436
@@ -2586,7 +2562,7 @@ Kurt-Weill-Gasse: Fußgänger	q1 23846,14931 23778,14995
 #: note: keine Freigabe für Radfahrer
 Kurt-Weill-Gasse: Fußgängerzone	q4 23993,14797 23961,14841 23918,14876 23882,14904
 (Alt-Hellersdorf - Cottbusser Str.): getrennter Rad/Gehweg	q1 23305,14914 23318,14847 23297,14772
-Clara-Zetkin-Weg: Fußgänger	q1 22572,13025 22591,12959 22612,12966 22681,12985 22693,12970 22775,12984
+Clara-Zetkin-Weg: Fußgänger	q1 22572,13025 22591,12959 22612,12966 22687,12986 22690,12979 22768,13004
 (Clara-Zetkin-Platz - Bansiner Str.): Fußgänger	q1 22612,12966 22623,12944
 Lion-Feuchtwanger-Str.: Fußgänger, Rampe	q2 22538,12955 22562,12944 22591,12959
 #: note: gemeinsamer Geh- und Radweg
@@ -3291,7 +3267,7 @@ Georg-Steger-Weg: Radfahrer sollen schieben	q4 1432,1964 1432,1953 1432,1904 147
 (entlang der Wendeschleife): eng, kurvig	q2 23467,3891 23486,3862 23476,3829
 Schillingstr.: breiter Geh- und Radweg	q0- 11472,12406 11485,12391 11435,12282
 #: osm_watch: way id="1076571010" version="1"
-#: last_checked: 2023-07-27
+#: last_checked: 2023-08-16
 #: check_frequency: 180d
 #: note: früher: breiter Geh- und Radweg	q0-
 Schillingstr.: Engstelle wegen Baustelle	q1- 11435,12282 11417,12243
@@ -3523,7 +3499,7 @@ Nordsternstr.: Feuerwehrzufahrt	q2 6268,8884 6292,8899
 Finckensteinallee: Fußgänger, Bordstein	q3 4115,2726 4140,2706 4170,2727
 Kietzgrabensteg: einige Fußgänger	q1 22514,4632 22531,4605
 Brücke über den Britzer Damm: Rampe, enge Kurven	q2 12638,6307 12630,6326 12605,6322 12619,6310
-# REMOVED (Bauarbeiten; spätere Situation wird vermutlich anders aussehen) ---  #: XXX_prog BS am Wendehammer, ansonsten vielleicht q1 wg. Fußgängern --- Falkenberger Str.: Bordstein	q3 15819,16857 15892,16834
+# REMOVED (Bauarbeiten; spätere Situation wird vermutlich anders aussehen) ---  #: XXX_prog BS am Wendehammer, ansonsten vielleicht q1 wg. Fußgängern --- Falkenberger Str.: Bordstein	q3 15832,16846 15866,16823 15875,16816
 (Mauerstr. - Sternbergpromenade): Fußgänger	q1 -3275,14114 -3187,14116
 #: XXX_prog BS am Wendehammer, ansonsten q1
 (Neuhausweg - Ramin-Park): einige Fußgänger, Bordstein	q2 -3964,14507 -3950,14519
@@ -3800,7 +3776,7 @@ entlang des Friedhofs Heerstr.: Gefälle, Bordstein	q2; 126,12054 112,12026 160,1
 #: by: http://altstadtmanagement-spandau.de/isek-spandau/projekte-und-massnahmen/ (Neugestaltung Rathausvorplatz: Erwähnung der Radwegführung)
 #: by: https://www.berliner-woche.de/spandau/c-bauen/bvg-will-bis-ende-oktober-arbeiten-am-u-bahnhof-rathaus-spandau-abschliessen_a325550
 #: by: https://www.berliner-woche.de/spandau/c-verkehr/die-bvg-benoetigt-fast-zwei-jahre-fuer-den-einbau-des-neuen-aufzugs-am-u-bahnhof-altstadt-spandau_a375155 (vielleicht hängt es von den Aufzugarbeiten ab? Arbeiten bis Ende 2024)
-#: last_checked: 2023-04-21 vvv
+#: last_checked: 2023-08-20 vvv
 #: check_frequency: 150d vvv
 Rathaus Spandau: Bushaltestelle, viel Fußgängerverkehr	q3; -3552,14082 -3517,14218 -3511,14260
 Rathaus Spandau: Bushaltestelle, viel Fußgängerverkehr	q3; -3511,14260 -3517,14218 -3552,14082
@@ -4003,7 +3979,7 @@ Kissinger Str. (Schmargendorf): einige Fußgänger	q2 3219,7987 3206,7988
 #: next_check_id: VIRCHOW-2023
 #: XXX später wiederherstellen: (Südstr., Virchow-Klinikum): Krankenhausgelände, 20km/h-Zone	q2+ 6305,14964 6231,14952
 #: osm_watch: way id="1168244288" version="1"
-#: last_checked: 2023-06-22
+#: last_checked: 2023-08-17
 #: check_frequency: 30d
 Virchow-Klinikum, Südstraße: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 6305,14964 6231,14952
 (Südstr., Virchow-Klinikum): Krankenhausgelände, 20km/h-Zone	q2+ 6231,14952 6159,14921 6104,14937 6030,14924
@@ -4589,7 +4565,7 @@ Waldemarstr.: einige Fußgänger, Bordstein	q3 10464,20390 10475,20355
 #: XXX Bleibt die Ausschilderung der TR4-Routenführung? Laut SGA TK wird die Radroutenführung mit SenMVKU und InfraVelo abgestimmt
 # REMOVED (closed) --- #: osm_watch: note 3390316 1
 #: osm_watch: way id="856982239" version="5"
-#: last_checked: 2023-07-24
+#: last_checked: 2023-08-18
 #: check_frequency: 30d
 Heidelberger Str.: Fahrbahn in Bereich des Schmollerplatzes gesperrt	q3 13234,9426 13202,9455
 # 
@@ -4634,6 +4610,10 @@ Eulerstr.: Fußgängerbereich, Quartierplatz	q4 9465,16464 9493,16481
 (Eva-Strittmatter-Str. - Kastanienallee): einige Fußgänger	q1+ 23536,15252 23550,15261 23661,15282
 # 
 Friedrichstr.: am Checkpoint Charlie öfters Fußgänger auf der Fahrbahn	q1 9492,11209 9478,11317
+# 
+Heinrich-Grüber-Str.: Gehweg	q3 23377,12765 23355,12732
+# 
+Genter Str.: einige Fußgänger	q1 7064,15515 7012,15571
 # 
 ######################### User Contributions #################################
 # 
@@ -4932,6 +4912,7 @@ Hüttenweg: keine abgesenkten Bordsteine an der Kreuzung "Auf dem Grat"	q1 1964,5
 (Mauerweg Forst Spandau): kurvenreich, schmal, manchmal Fußgänger u. Skater	q1 -7254,16954 -7216,16951 -7173,16996 -7151,17330 -6973,17638 -6954,17688 -6961,17722 -6931,17818 -6910,17933 -6847,17983 -6806,18129 -6803,18237 -6770,18301 -6780,18825 -6797,18878 -6796,18932 -6876,19110 -6929,19242 -6939,19305 -7027,19393 -7032,19431 -7044,19640 -7108,19719 -7397,19683 -7440,19731 -7446,19853 -7593,19872
 # REMOVED --- (Mauerweg Forst Spandau): kurvenreich, schmal, manchmal Fußgänger u. Skater	q1 -7032,19431 -7069,19436 -7397,19289 -7703,19147 -7759,19104 -7862,19113 -8011,19059
 (Weverstr. - Gatower Str.): Fußgänger	q1 -4169,12371 -4365,12358
+(Südpark): Fußgänger	q1 -4106,12100 -4063,12104
 (Südpark): Fußgänger	q1 -3708,11686 -3712,11714 -3732,11772 -3818,11919 -3895,11967 -3931,12056 -4012,12111 -4033,12108 -4048,12107 -4063,12104 -4092,12062
 (Südpark): Fußgänger	q1 -4033,11786 -4030,11794 -4029,11803 -4027,11818 -4090,11954 -4095,12006 -4093,12040 -4092,12062 -4106,12100 -4144,12187 -4169,12371
 (Glühwürmchenweg - Pionierstr.): Wohngebiet	q1 -5960,16441 -6018,16250
@@ -5042,7 +5023,9 @@ Bautzener Platz: Fufgänger, Bordsteine	q3 8102,9262 8183,9260
 #: XXX_prog ^^^
 (Danziger Str. - Lilli-Henoch-Str.): Fußgänger	q2 12123,14643 12174,14739 12183,14757 12193,14775 12212,14781 12252,14860 12236,14870 12314,15008
 #: note: gemeinsamer Rad- und Gehweg (am westlichen Ende fehlt das Schild, ansonsten ausgeschildert)
-(Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 11877,15366 11937,15349 12003,15311 12103,15218 12208,15108 12284,15068 12314,15008
+(Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 11877,15366 11937,15349 12003,15311 12103,15218
+# REMOVED --- (Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 12103,15218 12208,15108
+(Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 12208,15108 12284,15068 12314,15008
 (Prenzlauer Allee - Lilly-Henoch-Str.): Fußgänger	q2 11860,15309 11919,15314 11937,15349
 (Verlängerte Diesterwegstr.): Fußgänger	q2 12056,15159 12082,15206 12103,15218
 (Anton-Saefkow-Str. - John-Schehr-Str.): einige Fußgänger, Parkplatz	q1 13088,14469 13031,14390
@@ -5125,12 +5108,13 @@ Schleswiger Ufer: schmal, Fußgänger	q3 5886,12467 5944,12548
 Cuxhavener Str.: stellenweise eng, einige Fußgänger	q3 5931,12399 5904,12417 5886,12467
 # REMOVED (lohnt nicht) --- Holsteiner Ufer: schmal, Fußgänger	q2 6580,12775 6469,12867 6449,12865
 (Zufahrt Parkplätze Bartningallee): schmal, unübersichtlich, Fußgänger	q3 6179,12513 6149,12454
-(Altonaer Str. - Flensburger Str.): Einkaufszentrum, Fußgänger	q2 6173,12396 6149,12454 6137,12532 6160,12681
+#: corrected_by: srt (q2 -> q3 (muss noch geprüft werden!))
+(Altonaer Str. - Flensburger Str.): Einkaufszentrum, Fußgänger	q3 6173,12396 6149,12454 6137,12532 6162,12690
 (Cuxhavener Str. - Altonaer Str.): schmal, Fußgänger	q2 5982,12291 6030,12363 6067,12381 6098,12446
 (Parkweg Ortelsburger Allee): Fußgänger	q2 48,10922 37,11014 23,11137 16,11190
 (Parkweg Kranzallee): Fußgänger	q1 -532,10994 -511,11127
-(Teufelsseechaussee - Waldschulallee): Fußgänger	q1 194,10846 355,10740
-(Teufelsseechaussee - Maikäferpfad): Fußgänger	q1 556,10122 460,10193 304,10305 41,10501
+(Teufelsseechaussee - Waldschulallee): Fußgänger	q1 200,10851 324,10763
+(Teufelsseechaussee - Maikäferpfad): Fußgänger	q1 556,10122 460,10193 335,10284 41,10501
 Gutsmuthsweg: Fußgänger (nur bei Veranstaltungen ein Problem)	q1 -505,11882 -503,11782
 #: XXX_prog BS am südlichen Ende (ansonsten q1)
 Gutsmuthsweg: Fußgänger (nur bei Veranstaltungen ein Problem), Bordstein	q2 -503,11782 -496,11720
@@ -5764,8 +5748,7 @@ Küselstr.: enge Straße	q1 12292,15464 12221,15514 12158,15556 12094,15598 12058,
 #: corrected_by: srt/policy (q1 -> q0-)
 Zillertalstr.: enge Straße	q0- 10807,17193 10498,17192 10228,17191 10198,17196
 # REMOVED --- #: by: Frank Soukup: vvv --- Am Heideberg: enge Straße	q1 -7114,14579 -7115,14663 -7121,14711 --- Am Heideberg: enge Straße	q1 -7149,14768 -7156,14813 -7169,14849 -7209,14937 -7234,15003 -7292,15114 -7326,15145 -7373,15154 ---#: by: ^^^
-#: by: Maria (ferrusac):
-Reinhardtstr. (Tempelhof): enge Straße	q1 9154,6638 9136,6552 9150,6467 9141,6459 9143,6415
+# REMOVED (nicht besonders eng) --- #: by: Maria (ferrusac): --- Reinhardtstr. (Tempelhof): enge Straße	q1 9154,6638 9136,6552 9150,6467 9141,6459 9143,6415
 # REMOVED (srt/policy) --- #: by: Thomas Behle: --- Hackenbergstr.: enge Straße	q1 20428,3786 20380,3855 20329,3928 20280,3996 20253,4034 20248,4040
 #: by: Manon Pfaff:
 Breestpromenade: enge Straße	q1 25761,5613 26059,5631 26199,5643
@@ -6126,8 +6109,8 @@ Bisonweg: enge Straße	q0- -774,22977 -709,22909 -657,22854 -595,22791 -542,22736
 Flatower Str.: enge Straße	q1 -5049,16987 -4999,16971 -4875,16928 -4821,16914 -4758,16910 -4628,16899 -4319,16879 -4151,16857
 #: by: Wolfram Ceder:
 #: note: am südlichen Ende nur ein Fußgängerschild ohne Radfreigabe, aber im Park ist freigegeben
-#: corrected_by: srt/policy (q3 -> q2)
-Kroppenstedtweg: Fußgänger haben Vorrang	q2 1056,14906 1035,14996 998,15094 983,15136 971,15193
+#: corrected_by: srt/policy (q3 -> q1)
+Kroppenstedtweg: Fußgänger haben Vorrang	q1 1056,14906 1035,14996 998,15094 983,15136 971,15193
 #: by: Hermann Weiß vvv
 #: corrected_by: srt/policy (q2 -> q1)
 Rübezahlweg: einige Fußgänger	q1 14743,18839 14698,18967 14664,19057 14622,19123 14571,19172 14507,19214 14375,19296 14241,19379 14119,19455 14030,19510

@@ -360,6 +360,7 @@ Kreisverkehr	Roundabout 25146,78471
 Kreisverkehr	Roundabout -738,-4854
 Kreisverkehr	Roundabout 1368,-1307
 Kreisverkehr	Roundabout 11274,10184
+Kreisverkehr	Roundabout 44085,19049
 #: XXX_prog ^^^
 #: ignore ^^^
 #
@@ -426,7 +427,7 @@ Bus 247	busroute_N 7198,15656 7354,15817 7436,15746
 Bus 101, Bus 106	busroute_N 5368,13406 5351,13238 5328,13019
 Bus 107	busroute_N 9855,26032 9863,26000 9879,25933 9882,25918 9900,25796 9912,25130 9900,24943 9882,24724 9797,24154 9794,23980 9774,23936 9625,23781 9415,23699
 Bus M27	busroute_N 4283,13660 4363,13336 4381,13239
-Bus M27	busroute_N 3556,13200 3583,13313 3642,13548
+Bus M27	busroute_N 3556,13200 3585,13320 3642,13548
 Bus M27	busroute_N 3739,13563 3724,13702 3713,13787 3702,13865 3695,13902
 Bus M21, Bus M27	busroute_N 3005,13728 3320,13796 3695,13902
 Bus M21	busroute_N 3695,13902 3656,14150
@@ -483,7 +484,7 @@ Bus 256	busroute_N 16430,15168 16522,15258 16618,15356 16686,15448 16767,15549 1
 Bus 294	busroute_N 17488,15766 17378,15760 17238,15764 17115,15769 16946,15801 16884,15833
 Bus 256, Bus 294	busroute_N 16884,15833 16819,15912
 Bus 294	busroute_N 17940,15771 18173,15778 18576,15788 18623,15587 18422,15583 18177,15579 18173,15778
-Bus 156	busroute_N 15635,16833 15819,16857
+Bus 156	busroute_N 15636,16821 15832,16846
 Bus 156	busroute_N 12417,15272 12325,15328 12245,15380 11941,15586
 Bus 250	busroute_N 10908,17142 11116,17140 11262,17139 11362,17139 11458,17138 11536,17153 11522,17248 11508,17315 11482,17459 11457,17585 11442,17664 11412,17823 11390,17962 11272,17930 11195,17911 11113,17895 11047,17883 11023,17878 10944,17863 10922,17886
 Bus 250	busroute_N 10904,17288 10758,17288 10502,17286 10298,17299 10252,17357 10214,17401 10207,17448 10203,17478 10179,17772
@@ -1323,7 +1324,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 113
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="7"
-#: last_checked: 2023-07-01
+#: last_checked: 2023-08-11
 #: check_frequency: 60d
 Falkoniergasse: nicht ausgeschildert	CP2; 9939,12174 9909,12261
 ausgeschildert als Falkoniergasse 3, blaues Schild mit Frakturschrift	CP2; 9909,12261 9939,12174
@@ -1441,7 +1442,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_28_2981_3084_online.pdf (Widmungsänderung; auf der westlichen Seite entsteht noch ein Gebäude mit Tiefgarage)
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2023-07-22
+#: last_checked: 2023-08-20
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13397
 # 
@@ -1514,7 +1515,7 @@ Schwarzer Weg geht jenseits der Lärmschutzwand weiter	PI; 17294,7367 17276,7348
 ausgeschildert als "Zugang zum Sportplatz; Saarower Weg 12A, 12B, 12C"	CP2; 31032,3847 31041,3794
 # 
 ausgeschildert nach Eberswalde und Strausberg-Nord	CP2; 41204,17507 41268,17834
-ausgeschildert nach Rehfelde	CP2; 40540,16584 40793,16343
+ausgeschildert nach Rehfelde	CP2; 40528,16613 40793,16343
 ausgeschildert nach Petershagen	CP2; 35225,17557 35196,17190
 ausgeschildert nach Bernau	CP; 32543,18082 32537,18066 32519,18076
 ausgeschildert Sophie-Charlotte-Platz	CP; 3064,11657 3144,11659 3159,11562
@@ -1628,7 +1629,7 @@ beide Geh/Radwege hinter der Einmündung Neukirchstr. können Richtung Am Feucht
 #: next_check_id: HANSPETERSPLATZ-2022
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1128830.php (Benennung eines Platzes nach Hans Peters)
 #: XXX wann wird der Platz ausgeschildert?
-#: last_checked: 2023-06-22
+#: last_checked: 2023-08-17
 #: check_frequency: 45d
 Hans-Peters-Platz: nicht ausgeschildert	CS 7739,14119 7679,14030
 # 
@@ -1798,7 +1799,7 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2023-07-17
+#: last_checked: 2023-08-17
 #: check_frequency: 90d
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
 # 
@@ -1831,8 +1832,9 @@ Gummiweg: nicht ausgeschildert, nicht die ausgebaute Straße zur Hauptstr. 23 d-
 Biesenbrow - Briest: Privatstraße	CS 54508,82572 54307,83141
 # 
 ausgeschildert "Am Juliusturm 66,28"	CP2; -2668,14635 -2800,14566
-ausgeschildert "Am Juliusturm 62"	CP2; -2668,14635 -2570,14661
+ausgeschildert "Am Juliusturm 62"	CP2; -2668,14635 -2618,14654
 ausgeschildert "Am Juliusturm 62,64,66,68"	CP2; -2647,14532 -2652,14559
+ausgeschildert "Wladimir-Gall-Weg"	CP2; -2618,14654 -2570,14661
 # 
 Münsingerpark: Richtung Kemmannweg/Galenstr.	CP2; -3621,14270 -3661,14274
 # 
@@ -1841,7 +1843,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2023-08-04 vvv
+#: last_checked: 2023-08-14 vvv
 #: check_frequency: 60d vvv
 #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand
 Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699 15140,10647 15138,10638
@@ -1869,4 +1871,16 @@ Am Seegraben: nicht ausgeschildert	CP2; 21885,1503 21878,1500
 Paradiesstr.: nicht ausgeschildert	CP2; 21115,271 21171,222
 # 
 ausgeschildert "Jelena-Šantić-Friedenspark"	CP2; 22854,14018 22903,14063
+# 
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_02_0141_0296_online.pdf
+#: add_fragezeichen: Hängen hier mittlerweile Straßenschilder?
+#: last_checked: 2023-08-19
+#: check_frequency: 30d
+# REMOVED --- #: next_check: 2023-02-13
+Zur Märkischen Aue: nicht ausgeschildert	CS 17848,11204 17893,11146 17905,11122 17924,10964 17915,10866 17892,10713 17870,10619 17856,10560 17864,10537
+# 
+Havelwerke	CS -1854,14989 -1945,15018 -2009,15033 -2070,15046
+Havelwerke	CS -1985,14916 -1946,14907 -1937,14955 -1959,14962 -1945,15018
+# 
+ausgeschildert "Scholzplatz"	CP2; -1517,10971 -1558,10970
 # 

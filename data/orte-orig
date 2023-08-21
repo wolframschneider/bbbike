@@ -88,7 +88,7 @@ Neu-Buchhorst	0 33983,1418
 Woltersdorf	2 34521,5351
 Rüdersdorf|bei Berlin	2 36377,7760
 Petershagen|b. Berlin	2 35427,13624
-Strausberg	4 42709,19940
+Strausberg	4 42708,19887
 Altlandsberg	3 32293,18093
 Beeskow	3 68467,-25032
 Niewisch	1 67356,-35639
@@ -245,11 +245,13 @@ Eggersdorf b. Strausberg	2 38394,15299
 # um Oderberg herum
 Hohensaaten	2 59786,52928
 Hohenwutzen	2 58401,49550
+#: note: vermutlich Teil von Hohenwutzen
+Neuglietzen	0 58211,48747
 Neutornow	1 54956,46212
 Schiffmühle	1 53167,45493
 Gabow	1 55418,46718
 Neuenhagen|(Oderbruch)	2 53784,48650
-Altglietzen	1 55403,48222
+Altglietzen	1 56353,48388
 Liepe	1 47975,51325
 Niederfinow	1 45328,48225
 # nördl. von Oranienburg
@@ -423,15 +425,15 @@ Zinndorf	1 45725,11270
 Rehfelde	2 45732,14245
 Dorf Rehfelde	0 43972,12473
 Prötzel	2 49984,26511
-Prädikow	0 51562,25643
+Prädikow	0 51562,25635
 Kähnsdorf|(bei Strausberg)	0 49089,24195
 Sternebeck-Harnekop	2 50141,30438
 Haselberg	1 52842,34058
 Lüdersdorf-Biesdorf	1 56175,33010
-Frankenfelde|b. Wriezen	1 53780,31698
+Frankenfelde|b. Wriezen	1 53770,31762
 Schulzendorf|b. Wriezen	1 57178,32115
 Herzhorn	0 52892,28720
-Bliesdorf	1 61267,33065
+Bliesdorf	1 61241,32838
 Rathsdorf	1 57248,38977
 Platzfelde	0 48887,39276
 Sonnenburg	0 53394,38301

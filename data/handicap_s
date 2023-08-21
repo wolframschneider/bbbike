@@ -18,7 +18,6 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 6835,15412 6815,15398
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6748,15313 6833,15215
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
-Stralauer Str.: Radweg auf schmalen Bürgersteig	q2::inwork; 10951,12249 10830,12279
 Grunerstr.: verschwenkter Radweg	q2 10931,12622 10954,12604 10973,12611
 Grunerstr.: Radweg auf Gehweg	q1 10973,12611 11057,12715
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883 11160,12071
@@ -40,12 +39,10 @@ Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14319,7001 14276,702
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
 Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kann zugeparkt sein	q2::inwork; 12494,8501 12349,8464
 Gustav-Tempel-Str.: Bauarbeiten, Absperrungen, ggfs. auf Bürgersteig ausweichen	q3::inwork 15261,10738 15245,10719 15236,10684
-Margaretenstr.: Fahrbahn zwischen Metastr. und Heinrichstr. gesperrt	q3::inwork 17006,11391 16948,11409
 Eisenacher Str.: Radfahrer müssen Bürgersteig benutzen, Bordsteine	q1::inwork; 21809,15186 21903,15174 22059,15153 22323,15119
 Eisenacher Str.: Radfahrer teilen sich mit Fußgängern den Bürgersteig, Umwege	q2::inwork; 22599,15105 22577,15109 22441,15118 22323,15119 22059,15153 21903,15174 21809,15186 21718,15198 21599,15213
 Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Merler Weg Richtung Süden	q3::inwork; 19181,13485 19198,13272 19180,13219
 Rembrandtstr.: Engstelle an einer Hochbaustelle	q2::inwork 6344,7174 6234,7020
-Winterfeldtplatz/Gleditschstr.: Fahrbahn gesperrt	q3::inwork 7126,9825 7118,9870
 Elßholzstr.: Hochbauarbeiten, Einbahnstraßenregelung	q4::inwork; 7202,9329 7209,9507 7216,9657 7223,9815
 Gleditschstr.: Hochbauarbeiten, Zweirichtungsradweg auf dem westlichen Bürgersteig	q2::inwork; 7122,9517 7126,9825
 Moltkestraßenbrücke: für Fußgänger existiert eine Behelfsbrücke	q3::inwork 3839,4577 3867,4537 3898,4490 3934,4441
@@ -53,7 +50,7 @@ Jablonskistr.: Baustelle an der Kreuzung Winsstr., nur Gehweg ist frei	q3::inwor
 Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg möglich	q3::inwork 13702,13634 13711,13615 13769,13487
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen, Bordsteine	q3::inwork 12375,15615 12556,15518
 Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4::inwork 12556,15518 12605,15491 12621,15482
-Falkenberger Str. - Hansastr: Bauarbeiten, Fahrbahn nur für Linienverkehr frei	q4::inwork 15819,16857 15892,16834
+Falkenberger Str. - Hansastr: Bauarbeiten, Fahrbahn nur für Linienverkehr frei	q4::inwork 15832,16846 15866,16823 15875,16816
 Charlottenburger Str.: Einbahnstraßenregelung zwischen Goethestr. und Friesickestr., offen Richtung Westen	q3:inwork; 12646,16563 12798,16493
 (Buckower Chaussee - Bahnhof): einige Fußgänger	q1 9200,562 9239,461 9254,413
 (Fußgängerbrücke S-Bhf. Buckower Chaussee): Fußgängerbrücke, Bahnsteig	q4 9200,450 9209,417 9210,414 9246,426 9249,421 9254,413
@@ -333,7 +330,7 @@ Rolandufer: Gehweg, viele Fußgänger	q3 10821,12153 10660,12176 10591,12203 10583
 Spreeufer: Gehweg, viele Fußgänger, im Sommer Straßencafe	q4 10583,12206 10492,12289 10417,12378 10416,12394
 Herthastr.: Gehweg, Bordsteine	q4 1937,9253 1932,9263
 Fuggerstr.: einige Fußgänger	q1 6128,10319 6020,10351
-Pfalzburger Str.: Gehweg	q2 4905,10069 4910,10135
+Pfalzburger Str.: Gehweg, Radfahrer frei	q2 4905,10069 4910,10135
 Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
 (Tilla-Durieux-Park): Fußgänger, Radfahren nicht erlaubt	q3 8467,11125 8410,11143
 (Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3370,12725 3396,12741 3416,12738 3445,12733 3507,12725 3586,12697 3643,12671 3748,12627 3836,12614
@@ -356,7 +353,7 @@ zum Tunnel S-Bhf. Grunewald: Fußgänger	q1 693,9129 731,9103
 Tunnel S-Bhf. Grunewald: Fußgänger, Radfahren nicht erlaubt, ggfs. absteigen	q3 731,9103 884,8954
 enge Kurven	q2 33526,2771 33419,2765 33406,2738
 Kieler Str.: Fußgänger	q3 4998,5817 5030,5800
-Fontanepromenade: enger Gehweg	q2 10781,9697 10760,9646
+Fontanepromenade: enger Gehweg	q3 10781,9697 10774,9681 10760,9646
 Südstern: Fußgänger	q3 10749,9342 10741,9344 10695,9315 10656,9333 10647,9337
 Görlitzer Ufer: Bordsteine	q3 13275,10055 13283,10069
 Ruhlsdorfer Str.: Bordstein, Fußgänger	q4 9350,10176 9368,10211
@@ -416,7 +413,7 @@ Erich-Steinfurth-Str.: Fußgänger	q3 12645,11673 12608,11692
 Elbingeroder Weg: hohe Bordsteine	q4 13178,9062 13146,9085
 (An der Apostelkirche - Kurfürstenstr.): Fußgänger, Bordstein	q3 7312,10505 7315,10537
 Else-Lasker-Schüler-Str.: gemeinsamer Rad- und Gehweg	q1 7281,10510 7315,10537
-Marie-Elisabeth-Lüders-Steg: eng, Fußgänger	q2 8415,12749 8593,12742 8596,12760
+Marie-Elisabeth-Lüders-Steg: eng, Fußgänger	q2 8415,12749 8593,12742 8589,12772
 Kleine Andreasstr.: Gehweg	q4 12211,12128 12279,12113
 Fritz-Schiff-Weg: Fußgänger	q1 13457,12505 13476,12461 13448,12340
 (Molkenmarkt - Parochialstr.): Bordstein	q2 10746,12364 10831,12371
@@ -496,8 +493,8 @@ Treseburger Ufer: nur für Fußgänger erlaubt	q4 12301,5783 12453,5844 12507,5860 
 (Friedrichshagener Str. [49A-55] - Bellevuepark): einige Fußgänger, Spielplatz	q2 22514,5534 22534,5552 22574,5554 22717,5591 22787,5582
 Walter-Nicklitz-Promenade: eng und kurvenreich, Fußgänger	q2 8290,15304 8329,15397 8308,15409 8312,15470
 Gropiusstr.: Fußgänger auf dem Uferweg	q1 8389,16214 8534,16355 8543,16364
-Pankeweg: Fußgänger	q1 8286,14635 8322,14687 8292,14734 8275,14869 8264,14902
-Pankeweg: Fußgänger	q1 8264,14902 8245,15004 8266,15134
+Pankeweg: Fußgänger	q1 8286,14635 8322,14687 8292,14734 8275,14869 8262,14910
+Pankeweg: Fußgänger	q1 8262,14910 8245,15004 8266,15134
 Pankeweg: Fußgänger	q1 8232,15220 8268,15312
 Pankeweg: Fußgänger	q1 8312,15470 8156,15614 8176,15635 8150,15700 8164,15840 8250,16008 8270,16047 8330,16160 8389,16214
 Pankeweg: Fußgänger, eng	q2 8486,16425 8522,16458 8573,16443 8592,16436
@@ -1074,7 +1071,7 @@ Fritz-Lang-Str.: Fußgängerzone	q2 23856,14868 23878,14748
 Kurt-Weill-Gasse: Fußgänger	q1 23846,14931 23778,14995
 Kurt-Weill-Gasse: Fußgängerzone	q4 23993,14797 23961,14841 23918,14876 23882,14904
 (Alt-Hellersdorf - Cottbusser Str.): getrennter Rad/Gehweg	q1 23305,14914 23318,14847 23297,14772
-Clara-Zetkin-Weg: Fußgänger	q1 22572,13025 22591,12959 22612,12966 22681,12985 22693,12970 22775,12984
+Clara-Zetkin-Weg: Fußgänger	q1 22572,13025 22591,12959 22612,12966 22687,12986 22690,12979 22768,13004
 (Clara-Zetkin-Platz - Bansiner Str.): Fußgänger	q1 22612,12966 22623,12944
 Lion-Feuchtwanger-Str.: Fußgänger, Rampe	q2 22538,12955 22562,12944 22591,12959
 Lion-Feuchtwanger-Weg: Fußgänger, Bordstein	q3 22516,12946 22493,12999
@@ -2470,6 +2467,8 @@ Eulerstr.: Fußgängerbereich, Quartierplatz	q4 9465,16464 9493,16481
 (Havelländer Ring - Elfriede-Brüning-Str./Eva-Strittmatter-Str.): einige Fußgänger	q1 23404,15324 23418,15234
 (Eva-Strittmatter-Str. - Kastanienallee): einige Fußgänger	q1 23536,15252 23550,15261 23661,15282
 Friedrichstr.: am Checkpoint Charlie öfters Fußgänger auf der Fahrbahn	q1 9492,11209 9478,11317
+Heinrich-Grüber-Str.: Gehweg	q3 23377,12765 23355,12732
+Genter Str.: einige Fußgänger	q1 7064,15515 7012,15571
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11908,19255 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11929,19281
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2587,6 +2586,7 @@ Spinozastr.: eng u. unübersichtlich	q2 3926,6409 3930,6481 3974,6511 4050,6506
 Hüttenweg: keine abgesenkten Bordsteine an der Kreuzung "Auf dem Grat"	q1 1964,5070 2075,5075 2174,5081 2211,5120
 (Mauerweg Forst Spandau): kurvenreich, schmal, manchmal Fußgänger u. Skater	q1 -7254,16954 -7216,16951 -7173,16996 -7151,17330 -6973,17638 -6954,17688 -6961,17722 -6931,17818 -6910,17933 -6847,17983 -6806,18129 -6803,18237 -6770,18301 -6780,18825 -6797,18878 -6796,18932 -6876,19110 -6929,19242 -6939,19305 -7027,19393 -7032,19431 -7044,19640 -7108,19719 -7397,19683 -7440,19731 -7446,19853 -7593,19872
 (Weverstr. - Gatower Str.): Fußgänger	q1 -4169,12371 -4365,12358
+(Südpark): Fußgänger	q1 -4106,12100 -4063,12104
 (Südpark): Fußgänger	q1 -3708,11686 -3712,11714 -3732,11772 -3818,11919 -3895,11967 -3931,12056 -4012,12111 -4033,12108 -4048,12107 -4063,12104 -4092,12062
 (Südpark): Fußgänger	q1 -4033,11786 -4030,11794 -4029,11803 -4027,11818 -4090,11954 -4095,12006 -4093,12040 -4092,12062 -4106,12100 -4144,12187 -4169,12371
 (Glühwürmchenweg - Pionierstr.): Wohngebiet	q1 -5960,16441 -6018,16250
@@ -2644,7 +2644,8 @@ Alice-Salomon-Park: Fußgänger	q1 6771,9458 6724,9457
 Bautzener Platz: Fußgänger, Bordsteine	q3 8182,9240 8100,9240
 Bautzener Platz: Fufgänger, Bordsteine	q3 8102,9262 8183,9260
 (Danziger Str. - Lilli-Henoch-Str.): Fußgänger	q2 12123,14643 12174,14739 12183,14757 12193,14775 12212,14781 12252,14860 12236,14870 12314,15008
-(Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 11877,15366 11937,15349 12003,15311 12103,15218 12208,15108 12284,15068 12314,15008
+(Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 11877,15366 11937,15349 12003,15311 12103,15218
+(Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 12208,15108 12284,15068 12314,15008
 (Prenzlauer Allee - Lilly-Henoch-Str.): Fußgänger	q2 11860,15309 11919,15314 11937,15349
 (Verlängerte Diesterwegstr.): Fußgänger	q2 12056,15159 12082,15206 12103,15218
 (Anton-Saefkow-Str. - John-Schehr-Str.): einige Fußgänger, Parkplatz	q1 13088,14469 13031,14390
@@ -2710,12 +2711,12 @@ Schleswiger Ufer: schmal, Fußgänger	q2 5858,12425 5886,12467
 Schleswiger Ufer: schmal, Fußgänger	q3 5886,12467 5944,12548
 Cuxhavener Str.: stellenweise eng, einige Fußgänger	q3 5931,12399 5904,12417 5886,12467
 (Zufahrt Parkplätze Bartningallee): schmal, unübersichtlich, Fußgänger	q3 6179,12513 6149,12454
-(Altonaer Str. - Flensburger Str.): Einkaufszentrum, Fußgänger	q2 6173,12396 6149,12454 6137,12532 6160,12681
+(Altonaer Str. - Flensburger Str.): Einkaufszentrum, Fußgänger	q3 6173,12396 6149,12454 6137,12532 6162,12690
 (Cuxhavener Str. - Altonaer Str.): schmal, Fußgänger	q2 5982,12291 6030,12363 6067,12381 6098,12446
 (Parkweg Ortelsburger Allee): Fußgänger	q2 48,10922 37,11014 23,11137 16,11190
 (Parkweg Kranzallee): Fußgänger	q1 -532,10994 -511,11127
-(Teufelsseechaussee - Waldschulallee): Fußgänger	q1 194,10846 355,10740
-(Teufelsseechaussee - Maikäferpfad): Fußgänger	q1 556,10122 460,10193 304,10305 41,10501
+(Teufelsseechaussee - Waldschulallee): Fußgänger	q1 200,10851 324,10763
+(Teufelsseechaussee - Maikäferpfad): Fußgänger	q1 556,10122 460,10193 335,10284 41,10501
 Gutsmuthsweg: Fußgänger (nur bei Veranstaltungen ein Problem)	q1 -505,11882 -503,11782
 Gutsmuthsweg: Fußgänger (nur bei Veranstaltungen ein Problem), Bordstein	q2 -503,11782 -496,11720
 Carl-Schuhmann-Weg: Fußgänger (nur bei Veranstaltungen ein Problem)	q1 -503,11782 -750,11740
@@ -2977,7 +2978,6 @@ Großstr.: enge Straße	q0 18574,6401 18487,6469 18462,6495 18429,6582
 Rothariweg: enge Straße	q0 8292,6331 8290,6191 8291,6048
 Küselstr.: enge Straße	q1 12292,15464 12221,15514 12158,15556 12094,15598 12058,15621
 Zillertalstr.: enge Straße	q0 10807,17193 10498,17192 10228,17191 10198,17196
-Reinhardtstr. (Tempelhof): enge Straße	q1 9154,6638 9136,6552 9150,6467 9141,6459 9143,6415
 Breestpromenade: enge Straße	q1 25761,5613 26059,5631 26199,5643
 Zellerfelder Str.: enge Straße	q1 11526,18929 11468,19106
 Burghardweg: enge Straße	q1 21533,14009 21561,14257 21584,14459
@@ -3109,7 +3109,7 @@ Pertisauer Weg: enge Straße	q1 6199,1104 6176,1023 6167,933 6163,822 6186,652
 Chorweilerstr.: enge Straße	q1 20036,-122 20143,-93 20223,-72 20302,-51
 Bisonweg: enge Straße	q0 -774,22977 -709,22909 -657,22854 -595,22791 -542,22736
 Flatower Str.: enge Straße	q1 -5049,16987 -4999,16971 -4875,16928 -4821,16914 -4758,16910 -4628,16899 -4319,16879 -4151,16857
-Kroppenstedtweg: Fußgänger haben Vorrang	q2 1056,14906 1035,14996 998,15094 983,15136 971,15193
+Kroppenstedtweg: Fußgänger haben Vorrang	q1 1056,14906 1035,14996 998,15094 983,15136 971,15193
 Rübezahlweg: einige Fußgänger	q1 14743,18839 14698,18967 14664,19057 14622,19123 14571,19172 14507,19214 14375,19296 14241,19379 14119,19455 14030,19510
 Gebrüder-Grimm-Weg: Fußgänger, querlaufende Ablaufrinnen	q2 14277,18684 14265,18747 14269,18812 14278,18840 14292,18863 14324,18916 14358,18973 14391,19026 14414,19063 14433,19093 14457,19132 14482,19174 14507,19214 14546,19286
 Charles-H.-King-Str.: enge Straße	q1 -1248,2451 -1401,2391 -1604,2324
@@ -3401,13 +3401,12 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden: gegen die Einbahnstraß
 Johannisstr.: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174 9254,13171
 Taubenstr.: Bauarbeiten, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 9207,11880 9138,11872
 (Los-Angeles-Platz): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 5669,10704 5822,10609
-Adele-Schreiber-Krieger-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 8737,12757 8596,12760
+Adele-Schreiber-Krieger-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 8735,12780 8589,12772
 Weinmeisterhornweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; -4798,11231 -4579,11174
 Walter-Friedrich-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 16172,25217 16171,25254
 Neuenhagener Str. (Mahlsdorf): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 24362,11954 24317,11754
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8376,6579 -8354,6590
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8339,6578 -8364,6562
-Marktplatz Adlershof: Fahrbahn gesperrt wegen Umbauarbeiten: gesperrt, ggfs. schieben	q4:inwork::igndisp 20336,3783 20362,3750
 Kreuzung Sewanstr./Am Tierpark	q0::igndisp; 18631,10167 18647,10172
 Am Tierpark, linker Radweg	q0::igndisp; 18647,10172 18715,10003
 Treskowallee, linker Radweg	q0::igndisp; 18715,10003 18748,9922
@@ -3475,3 +3474,5 @@ Invalidenstr.: linker Gehweg bis zur Ampel, ggfs. absteigen	q3::igndisp; 9193,13
 Martin-Luther-Str.: linker Gehweg	q4::igndisp; 6504,9961 6518,9867
 Martin-Luther-Str.: linker Gehweg	q4::igndisp; 6518,9867 6492,9782
 Blissestr.: linker Gehweg	q3::igndisp; 4769,8563 4754,8608
+Hansastr.: linker Gehweg	q3::igndisp; 15866,16823 15917,16858
+Urbanstr. -> Fontanepromenade: frühzeitig auf den linken Gehweg wechseln, Bordsteine	q4::igndisp; 10807,9686 10802,9673 10774,9681

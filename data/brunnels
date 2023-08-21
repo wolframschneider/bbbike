@@ -420,7 +420,7 @@ Badbrücke	Br 8543,16364 8516,16393
 Badbrücke	Br 8544,16365 8518,16394
 Pankstraßenbrücke	Br 8156,15614 8176,15635
 Schönstedtstraßenbrücke	Br 8270,16047 8236,16071
-Schulzendorfer-Straßen-Brücke	Br 8248,14900 8219,14897
+Schulzendorfer-Straßen-Brücke	Br 8248,14909 8219,14908
 Walter-Röber-Brücke	Br 8164,15840 8140,15859
 Osloer-Straßen-Brücke	Br 8721,16689 8759,16684
 Chausseestraßenbrücke	Br 8153,14769 8138,14786
@@ -525,7 +525,7 @@ Adolf-Kiepert-Steg	Br 8687,-766 8659,-712
 Brückenstraßenbrücke	Br 29521,4213 29516,4223
 Hegemeisterbrücke	Br 30081,5231 30081,5220
 Halenseestraßenbrücke	Br 2030,10253 1988,10328
-Halenseestraßenbrücke	Br 2082,10280 2069,10330 2076,10357
+Halenseestraßenbrücke	Br 2082,10280 2069,10330 2071,10357
 Pankgrafenbrücke	Br 13976,23490 13953,23497
 Brücke über das Rudower Fließ	Br 16169,458 16148,458
 Brücke über das Rudower Fließ	Br 16339,830 16333,833
@@ -690,3 +690,5 @@ Brücke über die A10	Br 25253,-10325 25260,-10259
 Brücke über den Finowkanal	Br 9089,51128 9094,51087 9097,51060
 Am Havelblick	Br -12492,-2555 -12447,-2573
 Brücke über den Werbellinkanal	Br 26175,55640 26235,55624
+Most Siekierki-Neurüdnitz	Br 65923,46645 65670,46454
+Europabrücke Neurüdnitz-Siekierki	Br 65572,46380 65304,46186
