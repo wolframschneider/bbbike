@@ -14076,33 +14076,6 @@ sub find_below_rx {
     undef;
 }
 
-# Similar to find_below and find_below_rx, but
-# offer only a list of forbidden item ids
-sub find_below_3 {
-    my($c, $forbidden_item_ids, %args) = @_;
-    my $cxy = delete $args{-cxy};
-    die "ERROR: Unhandled args: " . join(" ", %args) if %args;
-
-    my($cx,$cy);
-    if ($cxy) {
-	($cx, $cy) = @$cxy;
-    } else {
-	my $e = $c->XEvent;
-	($cx, $cy) = ($c->canvasx($e->x), $c->canvasy($e->y));
-    }
-
-    my(@items) = $c->find(overlapping => $cx-1, $cy-1, $cx+1, $cy+1);
-    # Now using "reverse", so top-most items are preferred
- ITEM: for my $item (reverse @items) {
-	for my $forbidden_item_id (@$forbidden_item_ids) {
-	    next ITEM if ($item == $forbidden_item_id);
-	}
-	my(@tags) = $c->gettags($item);
-	return ($item, @tags);
-    }
-    undef;
-}
-
 # Doc pending XXX
 # tag list imcomplete, should be roughly the same like in set_bindings XXX
 sub show_below_str {
@@ -14140,8 +14113,17 @@ sub handle_show_info_url {
 # Zeigt Informationen zum aktuellen Tag.
 ### AutoLoad Sub
 sub show_info {
-    my($x, $y) = @_;
-    my(@tags) = $c->gettags('current');
+    my @tags;
+    {
+	my @forbidden_tags_rxs = ('^show$', '^route$', '-label'); # ignore labels and show marker etc.
+	my $forbidden_tags_qr = join("|", @forbidden_tags_rxs);
+	$forbidden_tags_qr = qr{$forbidden_tags_qr};
+	@tags = $c->gettags('current');
+	if (grep { $_ =~ $forbidden_tags_qr } @tags) {
+	    (undef, @tags) = find_below_rx($c, [q{.}], undef, \@forbidden_tags_rxs);
+	}
+    }
+
     return if !@tags || !defined $tags[0];
     my($base_tag, $is_p);
 

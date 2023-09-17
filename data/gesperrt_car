@@ -885,12 +885,9 @@ Straßenbahntrasse	3nocross::ignrte 21789,4520 21781,4470 21778,4440
 Grünauer Str. -> Rudower Str.: Straßenbahntrasse	3::igndisp 21778,4440 21781,4470 21585,4459
 Rudower Str. -> Köllnischer Pl.: Straßenbahntrasse	3::igndisp 21585,4459 21781,4470 21789,4520
 Kietz	1 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,4470
-Mittelstreifen	3nocross::ignrte 5705,13359 5857,13342 5956,13330
-Turmstr. -> Bremer Str.: Mittelstreifen	3::igndisp 5705,13359 5857,13342 5868,13441
-Bremer Str. -> Turmstr.: Mittelstreifen	3::igndisp 5868,13441 5857,13342 5956,13330
-Mittelstreifen	3nocross::ignrte 6228,13324 6115,13328 6105,13328 6011,13330
-Turmstr. -> Wilhelmshavener Str.: Mittelstreifen	3::igndisp 6011,13330 6105,13328 6104,13530
-Wilhelmshavener Str. -> Turmstr.: Mittelstreifen	3::igndisp 6104,13530 6105,13328 6115,13328
+Mittelstreifen	3nocross::ignrte 6228,13324 6105,13328 6022,13330
+Turmstr. -> Wilhelmshavener Str.: Mittelstreifen	3::igndisp 6022,13330 6105,13328 6104,13530
+Wilhelmshavener Str. -> Turmstr.: Mittelstreifen	3::igndisp 6104,13530 6105,13328 6228,13324
 Straßenbahntrasse	3nocross::ignrte 10935,22174 10999,22195 11073,22225
 Rosenthaler Weg -> Guyotstr.: Straßenbahntrasse	3::igndisp 11073,22225 10999,22195 11056,21978
 Guyotstr. -> Rosenthaler Weg: Straßenbahntrasse	3::igndisp 11056,21978 10999,22195 10935,22174
@@ -1833,8 +1830,8 @@ Witzlebenpl. -> Wundtstr.: Mittelstreifen	3::igndisp 2764,11500 2764,11519 2793,
 Witzlebenpl. -> Danckelmannstr.: Mittelstreifen	3::igndisp 2764,11500 2764,11519 2739,11730
 Revaler Str.	1 13588,11490 13565,11492 13473,11456
 IKEA-Parkplatz	1 7834,7131 7924,7185 8020,7185
-Königsweg: Poller	3 -882,2260 -790,2300 -745,2320
-Königsweg: Poller	3 -745,2320 -790,2300 -882,2260
+Königsweg: Poller	3 -878,2265 -844,2268 -790,2300 -745,2320
+Königsweg: Poller	3 -745,2320 -790,2300 -844,2268 -878,2265
 Hans-Sachs-Str.	1 3141,4023 3214,4066
 Anhaltinerstr.	1 682,2660 720,2718
 Askanischer Platz -> Stresemannstr.	3 8865,10974 8901,11011 8747,11194
@@ -2456,3 +2453,4 @@ Rankestr. -> Breitscheidpl.: Mittelstreifen provisorisch gesperrt	3::igndisp 566
 Breitscheidpl. -> Tauentzienstr.: Mittelstreifen provisorisch gesperrt	3::igndisp 5829,10964 5782,10884 5907,10821
 Breitscheidpl. -> Rankestr.: Mittelstreifen provisorisch gesperrt	3::igndisp 5829,10964 5782,10884 5669,10704
 Stavangerstr.: Einfahrt verboten	1 10886,16893 10883,16824
+Plantagenplatz (Potsdam)	1 -9910,-1626 -9874,-1551

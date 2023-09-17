@@ -17,15 +17,13 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 20381,1390
 #: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/rohrdammbruecke/
 #: by: https://www.berliner-woche.de/siemensstadt/c-verkehr/rohrdammbruecke-wird-saniert_a389916
 #: note: Gilt vermutlich nur für den Radverkehr Richtung Norden (gesonderte Radspur); Richtung Süden weiterhin der alte Hochbordradweg
-#: source_id: viz2021:13.268403,52.52926,04.08.2023,08:00 (bis 18.09.2023, weitere Arbeiten im Anschluss) vvv
-#: source_id: viz2021:13.268403,52.52926,04.08.2023,08:00 (bis 30.11.2023) vvv
-#: next_check: 2023-11-30 vvv
-#: valid: -20231130 vvv
+#: source_id: viz2021:13.268403,52.52926,04.08.2023,08:00 (bis 18.09.2023, weitere Arbeiten im Anschluss) (bis 30.11.2023) (bis 31.10.2023) vvv
+#: next_check: 2023-10-31 vvv
+#: valid: -20231031 vvv
 Rohrdammbrücke: Gegenverkehrsregelung	X::inwork 1170,13521
 Rohrdammbrücke: Gegenverkehrsregelung	X::inwork 1124,13599
 #: valid ^^^
 #: next_check ^^^
-#: source_id ^^^
 #: source_id ^^^
 # 
 # REMOVED --- #: by: https://nitter.net/VIZ_Berlin/status/1683357845155115010#m --- #: by: https://nitter.net/pic/orig/media%2FF1fwqZtXgA4eKSM.jpg --- #: source_id: viz2021:13.541546,52.423078,24.07.2023,09:00 (bis 21.08.2023) (bis 25.08.2023) (inaktiv) --- #: next_check: 2023-08-25 --- #: valid: -20230825 --- Köpenicker Str.: Gegenverkehrsregelung	X::inwork 19933,2078
@@ -54,6 +52,7 @@ Gegenverkehrsregelung	X::inwork 20302,1613
 Am Falkenberg	X::inwork 21497,1042
 # 
 #: next_check_id: SGEHRENSEE-2023
+#: by: https://www.berliner-woche.de/alt-hohenschoenhausen/c-bauen/s-bahnhof-gehrenseestrasse-wird-grunderneuert_a391406
 #: source_id: viz2021:13.525188,52.555419,10.07.2023,04:00 (bis 08.12.2023)
 #: last_checked: 2023-07-08
 #: next_check: 2023-12-08
@@ -63,8 +62,10 @@ Gegenverkehrsregelung	X::inwork 18527,16789
 #: next_check_id: KATHARINAPAULUS-2023
 #: source_id: viz2021:13.367709,52.522369,03.05.2023,09:00 (bis 05.09.2023) (inaktiv)
 #: source_id: viz2021:13.36722,52.52237,05.09.2023,07:20 (bis 05.09.2025)
-#: last_checked: 2023-08-26
-#: check_frequency: 120d
+#: note: möglicherweise im Zusammenhang mit dem Bau des Bundespräsidialamtes
+#: by: https://www.bbr.bund.de/BBR/DE/Bauprojekte/Berlin/Politik/buerogebaeude-bundesbehoerden/neubau.html (Fertigstellung geplant Sommer 2025)
+#: last_checked: 2023-09-16
+#: check_frequency: 180d
 #: next_check: 2025-09-05
 	X::inwork 7873,12927
 # 
@@ -107,7 +108,7 @@ Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
 Gürtelstr./Weserstr.	F::inwork 15016,11431
 # 
 #: next_check_id: KNOTENMARZAHN-2022
-#: last_checked: 2023-05-06 vvv
+#: last_checked: 2023-07-29 (mapillary) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2026-12-31 vvv
 #: XXX_prog gilt nicht für stadteinwärts fahrende Radfahrer auf dem Bürgersteig
@@ -146,14 +147,20 @@ B179/Fichtestr.	X::inwork 26138,-12596
 # REMOVED (vermutlich wegen der Sperrung nicht mehr) --- #: next_check_id: HAEMMERLING-2022 --- #: by: https://www.bahninfo-forum.de/read.php?9,726467,730605#msg-730605 (19.4.2022 - 30.11.2022) --- #: source_id: viz2021:13.572881,52.460427,06.05.2022,08:00 (Gegenverkehrsregelung mit Baustellenampel, bis 10.11.2022) (mittlerweile inaktiv, bereits Ende Juli 2022) (wieder aktiviert, bis 30.9.2022) (bis 10.10.2022) (inaktiv) (bis 23.10.2022) (bis 25.10.2022) (bis 10.11.2022) (bis 30.11.2022) (bis 16.12.2022) (bis 31.1.2023) --- #: by: https://nitter.net/VIZ_Berlin/status/1522508674073350144#m --- #: by: https://nitter.net/pic/media%2FFSEIxVsWQAASuEu.jpg%3Fname%3Dorig --- #: last_checked: 2023-01-15 vvv --- #: next_check: 2023-01-31 vvv --- #: valid: -20230131 vvv --- Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 21984,6317 --- Hämmerlingstr.: Gegenverkehrsregelung	X::inwork 22000,6245 --- #: valid ^^^ --- #: next_check ^^^ --- #: last_checked ^^^
 # REMOVED --- #: by: https://berliner-abendblatt.de/2022/04/27/das-sind-die-aktuellen-staufallen-in-berlin/ (bis Anfang Juni 2022) --- #: source_id: viz2021:13.450705,52.480066,28.04.2022,09:00 (hier: bis 4.7.2022) (mittlerweile bis 30.9.2022) (bis 31.10.2022) (bis 30.11.2022) (bis 18.11.2022) --- #: source_id: viz2021:13.45071,52.48007,28.04.2022,09:00 (zusätzlicher Eintrag) (entfernt) --- #: by: https://nitter.net/VIZ_Berlin/status/1519602332090179585#m (hier: bis Anfang Juni 2022) --- #: by: https://nitter.net/pic/media%2FFRWA3_cWYAAYbnf.jpg%3Fname%3Dorig (südlich der Kreuzung) --- #: last_checked: 2022-11-07 --- #: next_check: 2022-11-18 --- #: valid: -20221118 --- Treptower Str./Werrastr.: Gegenverkehrsregelung	X::inwork 13650,8320
 # 
-# REMOVED --- #: next_check_id: RBAHNHOFKOEPENICK-2022
-# REMOVED --- #: next_check_id: HAEMMERLING-2022
+#: next_check_id: RBAHNHOFKOEPENICK-2022
+#: next_check_id: HAEMMERLING-2022
+#: source_id: viz2021:13.572881,52.460427,14.09.2023,12:00 (bis 27.09.2024) vvv
 # REMOVED --- #: note: Länge der Gegenverkehrsregelung: östlicher Abschnitt ca. 50m, nördlicher Abschnitt ca. 40m
-# REMOVED --- #: last_checked: 2023-08-19
-# REMOVED --- #: next_check: 2023-09-14
-# REMOVED --- #: valid: -20230914
-# REMOVED --- Hämmerlingstr./Am Bahndamm: Gegenverkehrsregelung	X::inwork 21984,6317
+#: last_checked: 2023-08-28 vvv
+#: next_check: 2023-09-13 vvv
+#: valid: -20240927 vvv
+Hämmerlingstr./Am Bahndamm: Gegenverkehrsregelung	X::inwork 21984,6317
+Hämmerlingstr./Friedenstr.: Gegenverkehrsregelung	X::inwork  22033,6144
 # REMOVED (wurde wieder entfernt) --- #: note: Fußgängerampel befindet sich etwas westlich der Einmündung --- #: last_checked: 2023-03-26 --- #: check_frequency: 120d --- Am Bahndamm/Forumszufahrt	F::inwork 22296,6170
+#: valid ^^^
+#: next_check ^^^
+#: last_checked ^^^
+#: source_id ^^^
 # 
 #: note: anstelle des Zebrastreifens, also eigentlich nordöstlich des eingetragenen Punktes
 #: last_checked: 2023-08-06
@@ -176,9 +183,9 @@ Kaulsdorfer Str./Feuersteiner Str.	F::inwork 21708,7981
 #: check_frequency: 120d
 Köpenicker Str./Dubickstr.	F::inwork 21079,8931
 # 
-#: source_id: viz2021:13.560004,52.48297,07.07.2023,11:00 (bis 01.09.2023) (bis 18.09.2023)
-#: next_check: 2023-09-18
-#: valid: -20230918
+#: source_id: viz2021:13.560004,52.48297,07.07.2023,11:00 (bis 01.09.2023) (bis 18.09.2023) (bis 9.10.2023)
+#: next_check: 2023-10-09
+#: valid: -20231009
 Köpenicker Str./Geraldweg: Gegenverkehrsregelung	X::inwork 21072,8742
 # 
 # REMOVED --- #: source_id: viz2021:13.406514,52.51352,16.03.2021,08:00 (bis Ende 2022) (bis Ende 2023) (bis 28.2.2023) (inaktiv) --- #: note: Ampel ist eigentlich südöstlich der Einmündung gelegen --- #: last_checked: 2023-02-16 --- #: check_frequency: 30d --- # REMOVED --- #: next_check: 2023-12-31 --- #: next_check: 2023-02-28 --- Fischerinsel	F::inwork 10578,11969
@@ -188,7 +195,7 @@ Köpenicker Str./Geraldweg: Gegenverkehrsregelung	X::inwork 21072,8742
 #: by: https://www.berliner-woche.de/wedding/c-bauen/virchow-klinikum-wird-standort-fuer-die-spitzenforschung_a346784 (Bauarbeiten bis Ende 2023)
 #: XXX Ampel hängt mit den Bauarbeiten am Forschungsgebäude Si-M zusammen
 #: osm_watch: way id="870502434" version="3"
-#: last_checked: 2023-06-22
+#: last_checked: 2023-09-15 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 Amrumer Str./Brüsseler Str.	X::inwork 6375,15391
@@ -363,7 +370,9 @@ Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 	X 8982,8781
 	X 8594,8777
 	X 8298,8774
+#: off: night (2023-09-14 (Th) 23:00)
 	X 8598,9074
+#: off: night (2023-09-14 (Th) 23:00)
 	X 8389,9087
 	X 8598,9269
 #: note: Anforderung für Radfahrer, die von Yorckstr. links in die Katzbachstr. abbiegen
@@ -890,6 +899,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: linksabbiegen Radfahrer An der Wuhlheide -> Weiskopffstr. müssen an zwei Ampeln warten oder frühzeitig auf die Linksabbiegespur wechseln
 	X 19957,5941
 	X 22467,6135
+#: off: night (seen 2023-09-14 (Th) 23:00)
 	X 7389,8837
 	X 6142,9134
 	X 6059,9118
@@ -1136,6 +1146,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12180,11657
 	X 14639,11512
 	X 14575,11407
+#: off: night (seen 2023-09-14 (Th) 22:55)
 	X 7086,8579
 #: note: Kontaktschleifen in der Nebenstraßenrelation
 	X 6144,7677
@@ -1550,7 +1561,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 16368,11912
 	X 6757,13112
 	X 5975,13256
-	X 5956,13330
+# REMOVED (Ampel wurde bei der Straßenbahnerweiterung abgebaut) ---	X 5956,13330
 	X -1350,14646
 #: note: Anforderung für linksabbiegende Radfahrer (Am Juliusturm -> Daumstr.)
 #: XXX_prog: gilt nicht für geradesausfahrende Radfahrer
@@ -1644,7 +1655,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX provisorische Ampel an der Weichselstr. während der Bauarbeiten
 # REMOVED --- #: osm_watch: node id="7241153386" version="4"
 #: osm_watch: node id="9498243538" version="3"
-#: last_checked: 2023-07-11 (manchmal ausgeschaltet (abends? selten?))
+#: last_checked: 2023-09-15 (manchmal ausgeschaltet, allerdings nur 1-2x gesehen, scheint sehr selten zu sein oder vielleicht eine temporäre Störung)
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-10-08
 	F::inwork 12318,8645
@@ -2596,13 +2607,13 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
 #: XXX evtl. als zwei Ampeln eintragen, falls die Ampelphasen für Radfahrer ungünstig sind
-#: last_checked: 2023-08-24
+#: last_checked: 2023-09-15
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: manchmal ausgeschaltet (gesehen 2022-08-24 13:10)
-#: last_checked: 2023-08-24
+#: last_checked: 2023-09-15
 #: check_frequency: 120d
 	X::inwork 14382,9299
 # 
@@ -2740,6 +2751,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 #: note: keine Anforderungsampel, wahrscheinlich gleichgeschaltet mit der Ampel an der Grunewaldstr.
 	F 4900,5648
 #: note: Anforderungsampel
+#: off: night (seen 2023-09-14 (Th) 22:50)
 	F 6333,7708
 #: note: am Wochenende nicht eingeschaltet
 	X 8868,2061
@@ -3052,6 +3064,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 18042,4667
 	X 18445,2642
 	X 17364,3565
+#: off: night (seen 2023-09-14 (Th) 23:00)
 	F 8053,9123
 	F 6445,8949
 	X 5360,6642
@@ -3278,7 +3291,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2023-08-26 vvv
+#: last_checked: 2023-09-16 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3352,7 +3365,9 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 20927,3292
 #: note: Anforderung für Radfahrer/Fußgänger quer zur Schildhornstr.
 	X 4937,6205
-	F 6115,13328
+#: note: zwei Übergänge, zu beiden Seiten der Wilhelmshavener Str.
+	F 6105,13328
+	F 6022,13330
 # 
 # REMOVED (nein, es bleibt bei einer Fußgängerampel) --- #: next_check_id: TRAMTURM-2021 --- #: XXX wird im Zuge des Straßenbahnnaus zur "richtigen" Ampel --- #: next_check: 2023-07-07
 #: note: Anforderungsampel
@@ -3645,7 +3660,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: XXX erst einmal provisorisch
 #: osm_watch: node id="7041133991" version="2"
 #: note: Anforderungsampel
-#: last_checked: 2023-07-26 (mapillary)
+#: last_checked: 2023-09-02 (mapillary)
 #: check_frequency: 90d
 	X::inwork 8250,14672
 # 
@@ -3870,7 +3885,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -7055,-3120
 # REMOVED (existiert nicht mehr) ---	X -5662,-3583
 	X -9462,-2540
-	X -9734,-1896
+	X -9725,-1892
 	X -9735,-1845
 	X -16026,1044
 	X -10281,-2690
@@ -4579,7 +4594,7 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 #: check_frequency: 90d
 	F0 18517,-4502
 #: osm_watch: node id="1736933178" version="6"
-#: last_checked: 2023-03-17
+#: last_checked: 2023-03-26 (mapillary)
 #: check_frequency: 360d
 	X0 19131,-2145
 #: XXX ^^^

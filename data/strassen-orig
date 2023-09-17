@@ -258,9 +258,10 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11193 (Gebühren für Widerspruchsbescheide)
 #: by: https://berliner-abendblatt.de/2022/08/18/gegen-umbenennung-mohrenstrasse-koennen-nur-anwohner-vorgehen/
 #: by: https://berliner-abendblatt.de/berlin-news/gericht-urteilt-ueber-umbenennung-der-mohrenstrasse-id226365
+#: by: https://berliner-abendblatt.de/berlin-news/geplante-umbenennung-der-mohrenstrasse-zieht-sich-weiter-hin-id231791
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2023-08-22 vvv
+#: last_checked: 2023-09-09 (mapillary) vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 (Mohrenstr.)	N 9042,11839 9075,11756
@@ -904,8 +905,8 @@ Potsdamer Str. (Schöneberg, Tiergarten)	HH 7471,9360 7507,9458 7512,9572 7518,97
 #: XXX wird die Straße zur Fußgängerzone?
 #: XXX laut StefanHRT mittlerweile Verbundsteinpflaster, zumindest an der Einmündung Potsdamer Platz
 #: osm_watch: way id="4597334" version="29"
-#: last_checked: 2023-08-05 (architektur-urbanistik)
-#: check_frequency: 60d
+#: last_checked: 2023-08-31 (daf)
+#: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 Alte Potsdamer Str.	N 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296
 Kulmer Str.	N 7771,9479 7829,9723
@@ -1450,7 +1451,7 @@ Beuthstr. (Mitte)	N 10318,11434 10226,11617 10201,11631
 Spittelmarkt	HH 10240,11740 10299,11786 10314,11804
 Spittelmarkt	HH 10299,11786 10238,11741
 Gertraudenstr.	HH 10314,11804 10349,11847 10376,11879 10391,11898 10423,11936 10460,11979 10478,11999 10512,12039
-Mühlendamm	HH 10512,12039 10574,12131 10625,12206 10646,12234 10662,12255 10697,12303
+Mühlendamm	HH 10512,12039 10556,12105 10574,12131 10625,12206 10646,12234 10662,12255 10697,12303
 # REMOVED --- #: note: früher Hauptverkehrsstraße, jetzt nur noch als Gehweg übrig, wird beim Umbau des Molkenmarkts um/zurückgebaut --- (Molkenmarkt - zur Stralauer Str.)	NN 10736,12285 10772,12288
 Littenstr.	N 11155,12184 11139,12243 11088,12382 11084,12395 11065,12452 10973,12611 10951,12637
 Magazinstr. (Mitte)	N 11562,12597 11329,12497
@@ -1501,6 +1502,7 @@ Friedrichsgracht	N 10207,12055 10227,12013 10301,11899
 Friedrichsgracht	NN 10301,11899 10317,11875
 (Alte Gertraudenbrücke)	NN 10364,11896 10317,11875 10295,11856 10262,11814
 (Fischerinsel, Spreekanalufer)	NN 10364,11896 10329,11842 10373,11781 10439,11772 10515,11785 10599,11819 10662,11863 10672,11870 10680,11875 10776,11942 10824,11992
+(Fischerinsel, Spreeufer)	NN 10742,12033 10755,12053 10699,12089 10619,12103 10599,12089 10598,12104 10579,12089 10556,12105
 Am Zeughaus	NN 9919,12613 9953,12533 9984,12426
 #: oldname: -2009: Am Schinkelplatz
 Schinkelplatz	N 9984,12426 9990,12404 9996,12372 10006,12306 10010,12275 10012,12259 10029,12208
@@ -1842,7 +1844,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: osm_watch: way id="1010731431" version="7"
 #: osm_watch: way id="642581102" version="7"
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2023-08-17
+#: last_checked: 2023-09-16
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -1861,11 +1863,11 @@ Lydia-Rabinowitsch-Str.	N 7820,13994 7930,14060 7973,13991 7959,13982 7865,13924
 Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7781,14238 7697,14187
 (Hedwig-Porschütz-Str. - Uferweg)	NN 7802,14250 7830,14268
 Lisa-Fittko-Str.	N 7734,13944 7820,13994
-George-Stephenson-Str.	N 7487,14472 7452,14415 7500,14333 7569,14217 7679,14030 7734,13944
+George-Stephenson-Str.	N 7487,14472 7446,14403 7529,14274 7569,14209 7614,14136 7679,14030 7734,13944
 #: next_check_id: HANSPETERSPLATZ-2022
 #: XXX zurzeit darf der Platz noch von Fahrzeugen benutzt werden (wegen der Bauarbeiten in der George-Stephenson-Str.?), wird später vermutlich aufgehoben, dann NN ohne osm.highway:service; eigentlich Einbahnstraße, aber der Platz ist breit genug...
 #: osm_watch: way id="977556359" version="11"
-#: last_checked: 2023-08-17
+#: last_checked: 2023-09-16
 #: check_frequency: 90d
 #: osm.highway: service
 Hans-Peters-Platz	N 7739,14119 7679,14030
@@ -2361,7 +2363,7 @@ Landsberger Allee [Nebenfahrbahn]	N 16669,14438 16845,14461
 (Georg-Knorr-Str. - Landsberger Allee)	NN 19150,15009 19152,14999 19133,14987 19156,14987 19157,14979 19163,14981 19171,14984 19175,14968
 (Georg-Knorr-Str. - Frank-Schweitzer-Str.)	NN 19157,14979 19171,14938 19173,14931 19175,14926 19180,14915 19255,14911
 #: next_check_id: KNOTENMARZAHN-2022
-#: last_checked: 2023-05-06
+#: last_checked: 2023-07-29 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2026-12-31
 (Knoten Marzahn, Fußgängerüberweg)	NN 19196,14976 19200,14963
@@ -4370,13 +4372,16 @@ Gotzkowskystr.	N 5328,13019 5351,13238 5368,13406
 Waldstr. (Moabit)	N 5368,13406 5384,13555 5390,13616 5417,13817 5443,14028
 Ottostr.	N 5669,13136 5685,13222 5705,13359
 (Alt-Moabit - Invalidenstr.)	N 7422,13012 7415,13060
-Alt-Moabit	H 5166,13087 5328,13019 5468,13067 5620,13120 5669,13136 5754,13170 5766,13175 5863,13214 5975,13256 6214,13225 6390,13187 6500,13164 6573,13149 6661,13130 6757,13112 6860,13093 6966,13075 7069,13062 7172,13051 7346,13022 7422,13012 7595,12980 7776,12945 7822,12937 7873,12927 7930,12912
+Alt-Moabit	H 5166,13087 5328,13019 5468,13067 5620,13120 5669,13136 5754,13170 5766,13175 5863,13214 5975,13256 6214,13225 6390,13187 6500,13164 6573,13149 6661,13130 6757,13112 6860,13093 6966,13075 7069,13062 7172,13051 7246,13039 7346,13022 7422,13012 7595,12980 7776,12945 7822,12937 7873,12927 7930,12912
 Beusselstr.	H 5166,13087 5199,13247 5202,13266 5248,13434 5238,13714 5231,13843 5220,14043 5212,14154 5205,14253 5086,14504 5051,14606 5043,14671
 Siemensstr. (Moabit)	H 5220,14043 5279,14047 5306,14061
 # REMOVED --- #: next_check_id: ERNASAMUEL-2014 --- #: XXX Degradierung zur Nebenstraße, sobald die Erna-Samuel-Straße vollkommen fertig ist --- #: last_checked: 2014-03-07
 Siemensstr. (Moabit)	N 5306,14061 5322,14044 5443,14028 5647,14067 5708,14077 5746,14090 5786,14106 5808,14114 5956,14168
 Stromstr. (Moabit)	H 6157,12933 6164,12980 6183,13083 6214,13225 6228,13324 6230,13532 6230,13596 6227,13938
-Turmstr.	H 5248,13434 5368,13406 5434,13398 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324 6377,13321 6480,13325 6535,13327 6674,13332 6692,13333 6814,13349 6919,13360 6960,13366 7002,13372 7069,13381
+Turmstr.	H 5248,13434 5368,13406 5434,13398 5560,13382 5569,13381 5705,13359 5857,13342
+Turmstr.	H 5857,13342 5956,13330 6022,13330
+Turmstr.	H 6022,13330 6012,13332 5956,13338 5857,13342
+Turmstr.	H 6022,13330 6105,13328 6228,13324 6377,13321 6480,13325 6535,13327 6674,13332 6692,13333 6756,13341 6814,13349 6919,13360 6960,13366 7002,13372 7069,13381
 #: note: Beleuchtung existiert zum größten Teil (BAMAG-U7)
 (Kleiner Tiergarten)	NN 6573,13149 6564,13260 6535,13327
 #: note: Beleuchtung existiert
@@ -4708,7 +4713,7 @@ Fontanestr. (Wilhelmsruh)	N 7321,20426 7231,20266 7201,20161 7205,20047 7209,199
 #: osm_watch: way id="31428032" version="15"
 #: osm_watch: way id="386544517" version="4"
 #: osm_watch: note 2048562 11
-#: last_checked: 2023-08-02 (mapillary)
+#: last_checked: 2023-09-02 (mapillary)
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-05-01
 (Hertzstr./PankowPark - Bhf. Wilhelmsruh)	NN 7090,19943 7123,19855 7138,19839 7184,19783 7285,19700 7308,19653
@@ -4819,7 +4824,7 @@ Friesenstr. (Niederschönhausen)	NN 8765,19288 8834,19253 8944,19197 9458,18859
 #: XXX Wird der Pankeweg nach den Bauarbeiten hier wieder begradigt?
 #: osm_watch: way id="1046951300" version="2"
 #: osm_watch: way id="1046951302" version="1"
-#: last_checked: 2023-05-21 (mapillary)
+#: last_checked: 2023-09-15 (mapillary)
 #: check_frequency: 120d
 (Pankeweg)	NN 12867,21098 12847,21116 12844,21143 12914,21229
 (Pankeweg)	NN 12914,21229 12980,21411 13031,21538 13078,21754 13141,22018 13206,22290 13110,22313
@@ -5023,7 +5028,7 @@ Scheidemannstr.	H 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420
 Putlitzstr.	N 6204,14220 6212,13944
 Putlitzstr.	N 6226,13951 6264,13995 6267,14184
 (Putlitzstr. - Quitzowstr.)	NN 6267,14184 6267,14232
-Rathenower Str. (Moabit)	H 7172,13051 7187,13126 7161,13190 7131,13261 7084,13352 7069,13381 6988,13539 6976,13563 6935,13645 6817,13862 6730,14021
+Rathenower Str. (Moabit)	H 7172,13051 7187,13126 7131,13261 7084,13352 7069,13381 6988,13539 6976,13563 6935,13645 6817,13862 6730,14021
 Rathenower Str. (Moabit)	N 6730,14021 6719,14047 6677,14219 6656,14311
 Kirchstr. (Moabit)	N 6608,12858 6661,13130
 #: osm.highway: service
@@ -5770,7 +5775,7 @@ Straße am Schaltwerk	N 717,14894 537,14919 510,14923 443,14900 385,14936 182,149
 Heinrich-Hertz-Str.	N 37,15597 59,15518 149,15237
 #: next_check_id: SAATWINKLER-2023
 #: add_fragezeichen: Qualität und Beschaffenheit der Fahrbahn?
-#: next_check: 2023-10-01
+#: next_check: 2023-11-01
 Heinrich-Hertz-Str.	N -159,15486 59,15518
 Elsa-Neumann-Str.	N 149,15237 -159,15486 -213,15529 -218,15558
 #: note: Privatstraße
@@ -9279,7 +9284,7 @@ Schäferstr. (Wannsee)	N -7232,445 -7365,371 -7449,348 -7474,341 -7587,312
 Stölpchenweg	N -7069,-392 -7180,-409 -7239,-423 -7252,-422
 Stölpchenweg	NN -7252,-422 -7275,-357 -7300,-292 -7444,-100 -7460,-33
 Stölpchenweg	N -7460,-33 -7419,47 -7386,200 -7319,304
-Kohlhasenbrücker Str.	H -7232,445 -7180,378 -7167,362 -7123,310 -7078,262 -7067,240 -7050,199 -7050,152 -7067,-36 -7069,-392 -7042,-724 -7066,-840
+Kohlhasenbrücker Str.	H -7232,445 -7180,378 -7167,362 -7123,310 -7078,262 -7067,240 -7050,199 -7050,152 -7067,-36 -7076,-227 -7069,-392 -7042,-724 -7066,-840
 Glienicker Str. (Wannsee)	N -7167,362 -7242,314 -7319,304 -7587,312 -7639,312 -7710,313 -7737,316 -8013,255
 Arnold-Knoblauch-Ring	N -7639,312 -7632,204 -7621,108 -7588,86 -7506,126 -7451,163
 Arnold-Knoblauch-Ring	NN -7451,163 -7401,198 -7386,200
@@ -9288,8 +9293,8 @@ Hempstücken	N -7506,126 -7542,201 -7632,204
 via Tilia	N -7518,-1175 -7520,-1164 -7534,-1111 -7494,-1071 -7326,-1121 -7310,-1131
 Neue Kreisstr.	H -7066,-840 -7145,-961 -7196,-1029 -7310,-1131 -7383,-1211 -7482,-1319 -7575,-1383
 Stubenrauchstr. (Wannsee)	N -7518,-1175 -7418,-1200 -7383,-1211
-Bäkestr. (Wannsee)	NH -7196,-1029 -7162,-1053 -7088,-1074 -7039,-1220
-Machnower Str. (Wannsee)	N -7039,-1220 -7020,-1275 -6998,-1320
+Bäkestr. (Wannsee)	NH -7196,-1029 -7162,-1053 -7088,-1074 -7037,-1225
+Machnower Str. (Wannsee)	N -7037,-1225 -7020,-1275 -6998,-1320
 Kremnitzufer	N -6998,-1320 -6840,-1270 -6761,-1277 -6649,-1315 -6279,-1383 -5890,-1364 -5837,-1357
 Albrechts Teerofen	N -5837,-1357 -5759,-1325 -5546,-1287 -5359,-1298
 #: by: Message-ID: <dpqsm6$vmc$02$1@news.t-online.com> ist die Brücke offen für Fußgänger
@@ -9327,12 +9332,12 @@ Hegauer Weg	NN -35,2470 -22,2484
 (Königsweg - Berlepschstr.)	N -197,2634 -174,2616 -74,2529 -22,2484 57,2404
 (Königsweg - Berlepschstr.)	NN 57,2404 115,2340 120,2334 169,2264
 Königsweg (Wannsee, Nikolassee, Zehlendorf)	N -7342,-1387 -7309,-1387
-Königsweg (Wannsee, Nikolassee, Zehlendorf)	NH -7309,-1387 -7133,-1257 -7039,-1220
-Königsweg (Wannsee, Nikolassee, Zehlendorf)	N -7039,-1220 -6991,-1159 -6928,-1076
-Königsweg (Wannsee, Nikolassee, Zehlendorf)	NN -6928,-1076 -6807,-1093 -6380,-848 -5960,-604 -4256,369 -3506,791 -3413,843 -3096,1026
+Königsweg (Wannsee, Nikolassee, Zehlendorf)	NH -7309,-1387 -7133,-1257 -7037,-1225
+Königsweg (Wannsee, Nikolassee, Zehlendorf)	N -7037,-1225 -6987,-1160 -6919,-1072
+Königsweg (Wannsee, Nikolassee, Zehlendorf)	NN -6919,-1072 -6793,-1085 -6380,-848 -5960,-604 -4256,369 -3506,791 -3413,843 -3096,1026
 Königsweg (Wannsee, Nikolassee, Zehlendorf)	N -3096,1026 -3024,1069 -2813,1188 -2669,1266 -2605,1302
-Königsweg (Wannsee, Nikolassee, Zehlendorf)	NN -2605,1302 -2043,1608 -1950,1659 -1889,1693 -1805,1740 -1724,1785 -1650,1826 -1591,1861 -1309,2017 -1296,2025 -1278,2034 -1082,2140
-Königsweg (Wannsee, Nikolassee, Zehlendorf)	N -1082,2140 -987,2203 -882,2260 -790,2300 -745,2320 -670,2361 -505,2456 -409,2510
+Königsweg (Wannsee, Nikolassee, Zehlendorf)	NN -2605,1302 -2140,1555 -2043,1608 -1950,1659 -1889,1693 -1805,1740 -1724,1785 -1650,1826 -1591,1861 -1309,2017 -1296,2025 -1278,2034 -1082,2140
+Königsweg (Wannsee, Nikolassee, Zehlendorf)	N -1082,2140 -1078,2154 -987,2205 -878,2265 -844,2268 -790,2300 -745,2320 -670,2361 -505,2456 -409,2510
 Königsweg (Wannsee, Nikolassee, Zehlendorf)	NN -409,2510 -298,2577
 Königsweg (Wannsee, Nikolassee, Zehlendorf)	N -298,2577 -197,2634 -155,2658
 Königstr. (Zehlendorf)	N -155,2658 -81,2699 12,2752 104,2802 200,2855 292,2905 431,2984 516,3021 548,3023 630,2998
@@ -9348,7 +9353,7 @@ Rotherstieg	NN 244,2165 163,2091
 Grenzpfad	N 446,2297 271,2129
 Kätchenweg	N -7020,-1275 -6975,-1250
 Kätchenweg	NN -6975,-1250 -6914,-1218
-Dorotheenstr. (Wannsee)	N -6991,-1159 -6914,-1218
+Dorotheenstr. (Wannsee)	N -6987,-1160 -6914,-1218
 (Mauerweg Schönow)	NN 276,22 123,3 118,407 75,715 51,752 31,830 16,950 25,1018 -4,1133
 Camphausenstr.	N 169,2264 244,2165 271,2129 324,2034 345,1977 379,1846
 Dallwitzstr.	N 96,2225 163,2091 146,2073 93,2014 80,1998 18,1928
@@ -12141,8 +12146,9 @@ Allée du Stade	N 3585,16252 3781,16175 4035,16051 4076,16017 4089,15978 4084,158
 #: next_check_id: TEGELERBRUECKE-2021
 #: osm_watch: way id="930770437" version="7"
 #: last_checked: 2023-05-18
-#: check_frequency: 180d
-#: next_check: 2023-12-01
+# REMOVED --- #: check_frequency: 180d
+# REMOVED --- #: next_check: 2023-12-01
+#: next_check: 2024-04-30
 (provisorische Umleitung)	NN -192,16054 -174,16084
 (Am Hohenzollernkanal - Charles-Corcelle-Ring/Dohnagestell)	NN 4369,15950 4620,15919 4723,15907 4799,15891
 An der Mäckeritzbrücke	N 1232,15717 1232,15804 1164,15902 1141,15949 1086,16102 1033,16278
@@ -12483,14 +12489,15 @@ Kirchdorfer Str.	N 19842,9895 19858,9784 19871,9680
 Frauenauer Str.	N 19663,9757 19858,9784
 Patersdorfer Str.	N 19626,9171 19764,9160 19874,9151
 Regener Str.	N 19646,9490 19722,9483 19790,9478 19859,9473 19894,9470 19889,9400 19874,9151
-Viechtacher Str.	N 19657,9666 19727,9672 19801,9680 19871,9680 19923,9682
+Viechtacher Str.	N 19657,9666 19727,9672 19801,9680 19871,9680
+Viechtacher Str.	NN 19871,9680 19923,9682
 Eisensteiner Str.	N 19727,9672 19722,9483
 #: note: Privatstraße
 #: XXX wird hier noch ein verkehrsberuhigter Bereich ausgewiesen?
 #: osm_watch: way id="338124008" version="15"
 #: priority: #C
-#: last_checked: 2023-05-03
-#: check_frequency: 120d
+#: last_checked: 2023-09-13
+#: check_frequency: 180d
 Zachenberger Str.	N 19889,9400 19824,9405 19780,9409
 Teisnacher Str.	N 19871,9680 19859,9473
 Rinchnacher Weg	N 19801,9680 19790,9478
@@ -15515,7 +15522,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2023-08-28
+#: last_checked: 2023-09-13
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15903,7 +15910,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2023-08-28
+#: last_checked: 2023-09-13
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -17245,7 +17252,7 @@ Mendelssohnstr. [Wohngebiet]	NN 11433,13389 11486,13350
 Oertzenweg	N -1248,2488 -1174,2516 -1097,2546 -1013,2579 -839,2651 -692,2705
 (Zum Oertzenweg)	NN -726,2799 -692,2705
 Kramstaweg	N -1174,2516 -1147,2437 -1144,2276 -1012,2276
-Ravenweg	N -1097,2546 -1012,2276 -987,2203
+Ravenweg	N -1097,2546 -1012,2276 -987,2205
 Achenseeweg	N 5909,1187 5868,1002 5867,807 5871,729 5889,618 5907,519 5923,423 5929,394 5910,385 5987,256
 Silzer Weg	N 5688,312 5795,371 5869,416 5923,423
 Silzer Weg	N 5929,394 6130,449
@@ -17491,7 +17498,7 @@ Massower Str.	N 17734,11408 17866,11430 18005,11451 18178,11515
 # REMOVED (Privatstraßenschilder und Schranken stellen mittlerweile) --- #: last_checked: 2013-12-26 vvv --- #: check_frequency: 100d vvv --- #: XXX wird dieser Straßenabschnitt aufgehoben? --- #: XXX str_cont_ausnahme-Eintrag kann dann wohl entfernt werden --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/21re.pdf/file?y=2012 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file?y=2013 --- #: osm_watch: way id="4689178" version="6"
 Massower Str.	N 17866,11430 17879,11378 17970,11391 17979,11358 18013,11360
 Kurze Str. (Friedrichsfelde)	N 18027,11244 18013,11360 18005,11451
-Bredowstr.	N 6011,13330 6008,13529 6005,13734 6006,14024
+Bredowstr.	N 6012,13332 6012,13338 6008,13529 6005,13734 6006,14024
 Heilbronner Str. (Schöneberg)	NN 6132,9246 6144,9295 6140,9338
 Heilbronner Str. (Schöneberg)	N 6140,9338 6123,9544 6101,9720
 Heilbronner Str. (Schöneberg)	NN 6101,9720 6096,9772
@@ -17709,7 +17716,7 @@ Rue Lamartine	N 4437,21775 4497,21694
 (Weg in der Cité Foch)	NN 4596,21629 4636,21648
 (Weg in der Cité Foch)	NN 4650,21466 4634,21457 4589,21525
 (Weg in der Cité Foch - Place Molière)	NN 4510,21506 4455,21482 4414,21476 4382,21493
-Holstweg	N -1013,2579 -882,2260
+Holstweg	N -1013,2579 -878,2265
 (Weg parallel zur S-Bahn)	NN 26890,5858 27096,5828 28517,5605 29159,5517 29450,5435 30038,5338 30077,5331
 (Gelfertstr. - Faradayweg)	NN 2166,4858 2175,4845 2185,4831
 (Landoltwegbrücke)	NN 2280,4941 2292,4927 2302,4914
@@ -17771,7 +17778,7 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-bauen/die-naechsten-schritte-zur-festsetzung-von-bebauungsplaenen-stehen-an_a293341 (Erwähnung)
 #: osm_watch: way id="59573616" version="2"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
-#: last_checked: 2023-04-02 (mapillary)
+#: last_checked: 2023-09-02 (mapillary)
 #: check_frequency: 180d
 (Rhönstr. - Harzburger Str.)	NN 13598,21360 13709,21334
 Eifelstr.	N 13580,21286 13351,21239 13280,21225
@@ -19012,7 +19019,7 @@ Dreysestr.	N 6976,13563 6897,13551 6783,13551 6687,13545
 Bandelstr.	N 6692,13333 6687,13545 6686,13746
 Bugenhagenstr.	N 6230,13532 6104,13530 6008,13529 5964,13535 5882,13548
 Waldenserstr.	N 5882,13548 5725,13566 5580,13587 5390,13616
-Jonasstr. (Moabit)	N 5956,13330 5956,13433 5964,13535
+Jonasstr. (Moabit)	N 5956,13338 5956,13433 5964,13535
 Arminiusstr.	NN 5956,13433 5868,13441
 Dortmunder Str.	N 5749,12834 5897,12748 5922,12734
 Dortmunder Str.	N 5922,12765 5897,12748
@@ -19319,8 +19326,9 @@ Kleine Markusstr.	N 12059,12172 11958,12195 11937,12127
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11016
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/3Ip0mPrtHdHfEEJK92UAk9fSljJVnFBwbl4AUfvB/KGefaPE/54-Anlagen/01/DS0765_VzK_IngeMeysel.pdf
 #: by: https://berliner-abendblatt.de/berlin-news/strasse-wird-nach-schauspielerin-inge-meysel-benannt-id226034
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_40_3909_3968_online.pdf (Benennung: Inge-Meysel-Straße)
 #: XXX Benennung nach Inge Meysel; ist diese Straße gemeint?
-#: last_checked: 2023-08-17
+#: last_checked: 2023-09-16
 #: check_frequency: 90d
 (Zufahrt Str. d. Pariser Kommune)	N 12577,11804 12617,11888 12648,11953
 (Zufahrt Franz-Mehring-Platz)	N 12648,11953 12691,12042 12735,12131
@@ -20487,4 +20495,5 @@ Paul-und-Paula-Promenade	N 14886,10748 14909,10732 14984,10677
 # REMOVED --- #: next_check_id: ROTESRATHAUS-2023 --- #: also_indoor: webcam https://tv-turm.de/wp-content/uploads/webcam/webcam.jpg --- #: last_checked: 2023-07-05 (webcam) --- #: check_frequency: 7d --- (Umleitungsstrecke Rotes Rathaus)	NN 10704,12595 10695,12616 10615,12642 10542,12587
 # 
 (Passage am Tacheles)	NN 9371,13333 9353,13273 9244,13253
+Aaron-Bernstein-Platz	NN 9353,13273 9382,13265 9385,13246 9463,13256 9476,13293
 # 
