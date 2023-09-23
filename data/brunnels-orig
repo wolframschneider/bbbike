@@ -267,7 +267,7 @@ Rathausbrücke	Br 10357,12356 10416,12394
 #: by: https://berliner-abendblatt.de/2022/06/22/muehlendammbruecke-konzept-wurde-ueberarbeitet/
 #: by: https://www.berliner-woche.de/mitte/c-bauen/senat-ueberarbeitet-plaene-fuer-muehlendammbruecke-und-gertraudenbruecke_a350225
 #: XXX Mühlendammbrücke: geplanter Neubau --- wird es zu Einschränkungen für den Radverkehr kommen?
-#: last_checked: 2023-08-25
+#: last_checked: 2023-09-19
 #: next_check: 2024-06-01
 Mühlendammbrücke	Br 10574,12131 10625,12206
 # 
@@ -573,7 +573,7 @@ Persiusbrücke	Br -10198,1173 -10190,1185
 Brücke über den Rossitter Weg	Br -155,12198 -153,12183 -145,12151
 Sportforum-Brücke	Br -212,12095 -247,12117
 Brücke über den Heidekampgraben	Br 15367,7031 15294,7001
-Brücke über den Heidekampgraben	Br 15442,9095 15445,9090 15452,9079
+Brücke über den Heidekampgraben	Br 15440,9098 15445,9090
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1005/nachricht3868.html (Name der Brücke)
 Schönholzer Brücke	Br 9905,18329 9873,18364
 Aalemannsteg	Br -2166,18365 -2170,18273
@@ -655,6 +655,10 @@ Burgwallsteg	Br -3352,13135 -3337,13111
 Brücke im Springpfuhlpark	Br 19567,13858 19565,13893
 Holzbohlenbrücke in Tiefwerder	Br -2914,12223 -2935,12165
 Holzbohlensteg in Tiefwerder	Br -3027,12055 -3088,12040 -3109,12021
+#: note: eröffnet am 2023-09-20
+#: note: Name laut Stelen an der Brücke
+#: alias: Yorckstraßenbrücke 5
+Yorckbrücke 5	Br 8226,9589 8227,9621
 Yorckstraßenbrücke 10	Br 8338,9593 8339,9560
 Yorckstraßenbrücke 11	Br 8394,9570 8395,9544
 Yorckstraßenbrücke 14	Br 8423,9536 8425,9565

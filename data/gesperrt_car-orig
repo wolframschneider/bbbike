@@ -79,7 +79,7 @@ Rudolf-Breitscheid-Str.	1 -10429,-1944 -10360,-1934 -10235,-1916 -9986,-1882 -97
 Bendastr.	1 12689,6905 12702,6846
 Bendastr.	1 12715,6775 12702,6846
 # REMOVED (ist hier keine Einbahnstraße) --- Puschkin/Bulgarische	1 13829,9905 13884,9882 13995,9834 14196,9749
-Puschkin/Bulgarische	1 14196,9749 14271,9712 14318,9688 14389,9656 14495,9609 14556,9581 14809,9466 14879,9433 15383,9191 15407,9151 15442,9095 15445,9090 15452,9079 15534,8943 15591,8848 15558,8820 15378,8668 15166,8489
+Puschkin/Bulgarische	1 14196,9749 14271,9712 14318,9688 14389,9656 14495,9609 14556,9581 14809,9466 14879,9433 15383,9191 15407,9151 15440,9098 15445,9090 15534,8943 15591,8848 15558,8820 15378,8668 15166,8489
 Karl-Marx-Str./Schönstedt	3nocross 12494,8501 12545,8449 12562,8432 12582,8408
 Hoffmannstr./Elsenstr.	3 14077,10016 14289,9870 14323,9913 14405,10027
 Behren/Ebert	3 8861,12125 8743,12099 8737,12098 8595,12066 8577,11896 8571,11846
@@ -1437,7 +1437,7 @@ Jenbacher Weg: für Radfahrer umfahrbare Schranke	3 * 5665,51 *
 Hasenholzer Allee	2:Anlieger 21903,15174 21927,15303
 # 
 #: note: für Fußgänger und Radfahrer existiert eine Überquerungsmöglichkeit etwa 20m nordöstlich des Traberwegs
-Treskowallee: Straßenbahntrasse	3nocross 18406,7760 18471,7862 18577,8033 18633,8126
+Treskowallee: Straßenbahntrasse	3nocross 18406,7760 18471,7862 18577,8033 18626,8114
 # 
 #: note: Radfahrer können entweder die nördlich gelegene Fußgängerampel nutzen oder über die Sperrfläche fahren
 Schierker Str. - Karl-Marx-Str.	3 13003,7316 13034,7319 13030,7346
@@ -1733,7 +1733,7 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: source_id: viz2021:13.409118,52.51693,15.01.2023,18:00 (bis 30.06.2023) (bis 07.07.2023) (bis 17.07.2023) (bis 31.12.2023)
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
 #: note: mittlerweile ist der Fahrbahnbau recht weit fortgeschritten
-#: last_checked: 2023-09-16 vvv
+#: last_checked: 2023-09-20 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2024-06-01 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
@@ -1831,7 +1831,7 @@ Radieschenpfad	1 20582,18475 20635,18381
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1325312.php
 #: osm_watch: way id="24202434" version="26"
 #: XXX Wird der Asphalt ersetzt werden? Wird es Einschränkungen durch die Schrankenanlage geben?
-#: last_checked: 2023-09-12
+#: last_checked: 2023-09-22
 #: check_frequency: 30d
 Dammweg: durch Barrieren für den Autoverkehr gesperrt	2 15869,8355 16388,8821
 # 
@@ -1886,7 +1886,7 @@ Nesselweg: Poller, Durchfahrt für Kfz nicht möglich	2 8587,21218 8605,21248
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/senat-und-bezirksamt-erarbeiten-verkehrskonzept_a359765
 #: source_id: bvg2021:m19#BVG320914_0 (hat die Verlegung der Haltestelle was mit diesem Vorhaben zu tun?)
 #: note: vermutlich seit Mai 2023 provisorisch gesperrt, außerdem Sperrung an der Einmündung Rankestr.
-#: last_checked: 2023-08-25
+#: last_checked: 2023-09-18
 #: check_frequency: 60d
 #: next_check: 2023-10-01
 Rankestr.: Mittelstreifen provisorisch gesperrt	3nocross 5725,10892 5782,10884 5907,10821

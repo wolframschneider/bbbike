@@ -19,7 +19,6 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 6835,15412 6815,15398
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6748,15313 6833,15215
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
-Krausenstr.: Hochbauarbeiten, Fahrbahn zwischen Friedrichstr. und Mauerstr. gesperrt	q4::inwork 9456,11513 9331,11497
 Grunerstr.: Radweg auf Gehweg	q1 10973,12611 11057,12715
 Grunerstr.: Gehweg	q3 10900,12546 10973,12611
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883 11160,12071
@@ -33,7 +32,7 @@ Petriplatz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwo
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9133
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
-Pariser Str./Bundesallee: Bauarbeiten, Durchgang verengt	q3::inwork 5461,9923 5423,9932 5382,9942
+Pariser Str./Bundesallee: Bauarbeiten, Durchgang kann verengt sein	q2::inwork 5461,9923 5423,9932 5382,9942
 Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14319,7001 14276,7021 14246,7042 14236,7058 14196,7086
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
 Flughafenstr.: Radspur zwischen Karl-Marx-Str. und Isarstr. Richtung Westen, kann zugeparkt sein	q2::inwork; 12494,8501 12349,8464
@@ -41,6 +40,8 @@ Ontarioseestr.: Fahrbahn abschnittsweise gesperrt, Bordsteine	q3::inwork 18552,1
 Gustav-Tempel-Str.: Bauarbeiten, Absperrungen, ggfs. auf Bürgersteig ausweichen	q3::inwork 15261,10738 15245,10719 15236,10684
 Eisenacher Str.: Radfahrer müssen Bürgersteig benutzen, Bordsteine	q1::inwork; 21809,15186 21903,15174 22059,15153 22323,15119
 Eisenacher Str.: Radfahrer teilen sich mit Fußgängern den Bürgersteig, Umwege	q2::inwork; 22599,15105 22577,15109 22441,15118 22323,15119 22059,15153 21903,15174 21809,15186 21718,15198 21599,15213
+Eisenacher Str.: Fahrbahn gesperrt, Radfahrer können den Bürgersteig benutzen	q2::inwork 22899,15073 23113,15110
+Gothaer Str.: Fahrbahn gesperrt, Umwege	q2::inwork 22897,15287 22899,15073
 Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Merler Weg Richtung Süden	q3::inwork; 19181,13485 19198,13272 19180,13219
 Rembrandtstr.: Engstelle an einer Hochbaustelle	q2::inwork 6344,7174 6234,7020
 Elßholzstr.: Hochbauarbeiten, Einbahnstraßenregelung	q4::inwork; 7202,9329 7209,9507 7216,9657 7223,9815
@@ -421,8 +422,8 @@ Fritz-Schiff-Weg: Fußgänger	q1 13457,12505 13476,12461 13448,12340
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10364,11896 10329,11842 10373,11781 10439,11772 10515,11785 10599,11819 10662,11863 10672,11870
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10672,11870 10680,11875 10776,11942
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10776,11942 10824,11992
-(Fischerinsel, Spreeufer): Fußgänger	q2 10742,12033 10755,12053 10699,12089 10619,12103 10599,12089
-(Fischerinsel, Spreeufer): Rampe, Bordstein	q3 10599,12089 10598,12104 10579,12089 10556,12105
+(Fischerinsel, Spreeufer): Fußgänger	q2 10824,11992 10827,12044 10748,12061 10699,12089 10600,12102 10578,12083
+(Fischerinsel, Spreeufer): Rampe, Bordstein	q3 10578,12083 10585,12106 10562,12087 10550,12096
 (Baikalstr. - Rummelsburger Str.): Fußgänger, Bordstein	q3 17276,10617 17277,10633
 (Baikalstr. - Rummelsburger Str.): Fußgänger, Rampe	q2 17277,10633 17298,10633
 (Baikalstr. - Rummelsburger Str.): Fußgänger, Radfahren erlaubt	q1 17298,10633 17249,10651
@@ -1513,7 +1514,7 @@ Ackerstr.: einige Fußgänger, Bordstein	q2 -3937,15299 -3869,15333
 Heerstr. - Tiefenwerder: teilweise recht eng	q2 -3217,11570 -3179,11763 -3116,12012
 (Sonnenallee - Aronsstr.): einige Fußgänger	q1 14530,7301 14558,7350 14571,7427
 (Landschaftspark Herzberge, Weg am ehemaligen Zeltlager): einige Fußgänger, kurvenreich	q2 17187,13609 17185,13765 17204,13800 17209,13856 17178,13896 17190,13903 17213,13931 17210,14054 17164,14067 17152,14084
-(Hellweg-Parkplatz): Parkplatzverkehr	q1 8243,9766 8242,9699 8213,9662 8201,9647 8192,9619
+(Hellweg-Parkplatz): Parkplatzverkehr	q1 8243,9766 8239,9754 8247,9699 8213,9662 8201,9647 8192,9619
 (Hellweg-Parkplatz): Parkplatzverkehr	q2 8243,9766 8181,9707 8213,9662
 (Langensalzaer Str. - Gräfentaler Str.): Fußgänger, eng, kurvig	q3 6188,1542 6182,1536 6199,1486 6212,1483 6231,1442
 Lübbener Str.: Fußgänger	q3 12729,10515 12731,10547
@@ -2476,6 +2477,10 @@ Genter Str.: einige Fußgänger	q1 7064,15515 7012,15571
 (Zitadellenpark - Zitadellenweg): einige Fußgänger	q1 -2364,14812 -2340,14834 -2299,14842 -2274,14862 -2246,14857 -2213,14855 -2208,14811 -2193,14799
 Wladimir-Gall-Weg: einige Fußgänger	q1 -2735,15062 -2708,15004 -2738,14961 -2858,14961 -2885,14943 -2900,14896 -2888,14743 -2838,14589 -2800,14566 -2668,14635 -2618,14654 -2570,14661 -2464,14664 -2452,14664 -2430,14675 -2424,14718 -2480,14818 -2412,14800 -2364,14812
 Wickenhagenweg: Grünanlage, einige Fußgänger	q3 -6137,864 -6125,838
+(Straßenbahnhaltestelle - Lea-Grundig-Str): einige Fußgänger	q2 21036,16286 21065,16295 21070,16293
+(Straßenbahnhaltestelle): Straßenbahnübergang, einige Fußgänger	q3 21020,16298 21033,16308 21041,16301 21031,16287 21036,16286
+(Weg am Beerenpfuhlgraben): Grünanlage, einige Fußgänger	q1 23369,14756 23368,14771 23412,14899 23521,14973
+(Weg am Beerenpfuhlgraben - Senftenberger Str.): Grünanlage, einige Fußgänger	q1 23521,14973 23529,14973 23543,14966
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11908,19255 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11929,19281
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -3086,7 +3091,7 @@ Hohenzollernstr. (Zehlendorf): enge Straße	q1 21,2728 58,2710 226,2752 322,2772 
 Hohenzollernstr. (Zehlendorf): enge Straße	q1 487,2815 514,2804 535,2785
 Hohenzollernstr. (Zehlendorf): enge Straße	q1 58,2710 39,2669
 Rosa-Reinglass-Steig	q1 -2878,15304 -2856,15383
-Am Lupinenfeld: enge Straße	q0 24159,13507 24347,13465 24539,13427 24746,13384 24817,13370 24875,13333 25031,13242 25138,13183 25181,13157
+Am Lupinenfeld: enge Straße	q0 24159,13507 24347,13465 24539,13427 24752,13390 24802,13381 24879,13338 25031,13242 25138,13183 25181,13157
 Franzstr. (Lankwitz): enge Straße	q0 5559,3058 5776,3195
 Gluckweg: enge Straße	q1 5853,3050 6039,3275
 Gluckweg: beiderseits parkende Autos	q1 6039,3275 6171,3400

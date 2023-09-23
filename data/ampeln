@@ -2,7 +2,7 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
-Germanenstr.: Gegenverkehrsregelung	X::inwork 20381,1390
+Schönhauser Allee/Kollwitzstr.: provisorische Ampel	F::inwork 10908,13978
 Rohrdammbrücke: Gegenverkehrsregelung	X::inwork 1170,13521
 Rohrdammbrücke: Gegenverkehrsregelung	X::inwork 1124,13599
 Alt-Heiligensee: Gegenverkehrsregelung	X::inwork -3020,21786
@@ -11,15 +11,15 @@ Gegenverkehrsregelung	X::inwork 20302,1613
 Am Falkenberg	X::inwork 21497,1042
 Gegenverkehrsregelung	X::inwork 18527,16789
 	X::inwork 7873,12927
-	F::inwork 8373,12416
 	X::inwork 16328,7005
 Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
 Gürtelstr./Weserstr.	F::inwork 15016,11431
 	F::inwork 18831,14823
 	F::inwork 19196,14976
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
+Parrisiusstr./Borgmannstr.: provisorische Ampel	X::inwork 22531,5871
 Hämmerlingstr./Am Bahndamm: Gegenverkehrsregelung	X::inwork 21984,6317
-Hämmerlingstr./Friedenstr.: Gegenverkehrsregelung	X::inwork 22033,6144
+Hämmerlingstr./südlich Bahnbrücke: Gegenverkehrsregelung	X::inwork 22000,6245
 Gehsener Str./Hoernlestr.	F::inwork 22395,6821
 Kaulsdorfer Str./Wongrowitzer Steig	F::inwork 22035,7146
 Kaulsdorfer Str./Bahrendorfer Str.	F::inwork 21956,7428
@@ -42,6 +42,7 @@ Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen auf den l
 Kastanienallee: Gegenverkehrsregelung, Radfahrer Richtung Osten müssen vom linken Bürgersteig auf die Fahrbahn wechseln	X::inwork 9227,20617
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 	X::inwork 18767,-1343
+	F 18406,7760
 	F 15445,9090
 	F 19757,5169
 	F 10975,16010
@@ -1594,7 +1595,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F -6950,752
 	X 30410,5450
 	F 25028,5756
-	X 22513,5747
+	X 22521,5743
 	X 22292,5774
 	X 22675,6498
 	X 18492,6893
@@ -1636,7 +1637,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -8116,6167
 	X 21982,9017
 	X 18672,8238
-	F 18633,8126
+	F 18626,8114
 	X 18807,9746
 	X 14614,9052
 	X 5350,7554

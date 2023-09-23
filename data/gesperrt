@@ -1469,11 +1469,9 @@ Streustr. -> Berliner Allee: Straßenbahntrasse	3::igndisp 13263,15930 13425,1584
 Gülzower Str.: Mittelstreifen	3 22603,12359 22388,12190 22400,12171
 Mittelstreifen	3nocross::ignrte 5343,21250 5349,21198 5356,21146 5370,21066 5379,21016
 Cyclopstr. -> Oranienburger Str.: Mittelstreifen	3::igndisp 5297,21243 5349,21198 5343,21250
-Straßenbahnhaltestelle	3nocross::ignrte 9225,13389 9293,13366 9371,13333 9415,13315
+Straßenbahnhaltestelle	3nocross::ignrte 9225,13389 9293,13366 9371,13333
 Oranienburger Str. -> Linienstr.: Straßenbahnhaltestelle	3::igndisp 9225,13389 9293,13366 9312,13388
 Linienstr. -> Oranienburger Str.: Straßenbahnhaltestelle	3::igndisp 9312,13388 9293,13366 9371,13333
-Oranienburger Str. -> Passage am Tacheles: Straßenbahnhaltestelle	3::igndisp 9415,13315 9371,13333 9353,13273
-Passage am Tacheles -> Oranienburger Str.: Straßenbahnhaltestelle	3::igndisp 9353,13273 9371,13333 9293,13366
 Brauhausstr. -> Prenzlauer Promenade: Straßenbahntrasse	3 12211,16688 12017,16734 12045,16574
 Mittelstreifen	3nocross::ignrte 16720,6845 16677,6892 16563,7012
 Köpenicker Landstr. -> Güldenhofer Ufer: Mittelstreifen	3::igndisp 16720,6845 16677,6892 16630,6800
@@ -2129,9 +2127,9 @@ Mühlendamm -> Poststr.: unbequemes Passieren des Mittelstreifens	3::igndisp 1064
 Poststr. -> Mühlendamm: unbequemes Passieren des Mittelstreifens	3::igndisp 10629,12293 10662,12255 10697,12303
 Mühlendamm -> Rolandufer: unbequemes Passieren des Mittelstreifens	3::igndisp 10574,12131 10625,12206 10583,12206
 Rolandufer -> Mühlendamm: unbequemes Passieren des Mittelstreifens	3::igndisp 10583,12206 10625,12206 10646,12234
-unbequemes Passieren des Mittelstreifens	3nocross::ignrte 10512,12039 10556,12105 10574,12131
-Mühlendamm -> Fischerinsel, Spreeufer: unbequemes Passieren des Mittelstreifens	3::igndisp 10574,12131 10556,12105 10579,12089
-Fischerinsel, Spreeufer -> Mühlendamm: unbequemes Passieren des Mittelstreifens	3::igndisp 10579,12089 10556,12105 10512,12039
+unbequemes Passieren des Mittelstreifens	3nocross::ignrte 10512,12039 10550,12096 10574,12131
+Mühlendamm -> Fischerinsel, Spreeufer: unbequemes Passieren des Mittelstreifens	3::igndisp 10574,12131 10550,12096 10562,12087
+Fischerinsel, Spreeufer -> Mühlendamm: unbequemes Passieren des Mittelstreifens	3::igndisp 10562,12087 10550,12096 10512,12039
 unbequemes Passieren des Mittelstreifens	3nocross::ignrte 10697,12303 10703,12313 10714,12355 10710,12377
 Spandauer Str. -> Eiergasse: unbequemes Passieren des Mittelstreifens	3::igndisp 10697,12303 10703,12313 10671,12356
 Eiergasse -> Spandauer Str.: unbequemes Passieren des Mittelstreifens	3::igndisp 10671,12356 10703,12313 10714,12355
@@ -2244,8 +2242,8 @@ Mittelstreifen	3nocross::ignrte 12908,11058 12848,11093 12793,11132 12736,11186
 Mühlenstr. -> Planstr. C: Mittelstreifen	3::igndisp 12793,11132 12848,11093 12926,11224
 Planstr. C -> Mühlenstr.: Mittelstreifen	3::igndisp 12926,11224 12848,11093 12908,11058
 Edith-Kiss-Str. -> Mühlenstr.: Mittelstreifen	3::igndisp 12866,11256 12793,11132 12848,11093
-Straßenbahntrasse	3nocross::ignrte 21158,15885 21220,15741 21239,15633
-Raoul-Wallenberg-Str. -> Schönagelstr.: Straßenbahntrasse	3::igndisp 21158,15885 21220,15741 21602,15908
+Straßenbahntrasse	3nocross::ignrte 21180,15846 21220,15741 21239,15633
+Raoul-Wallenberg-Str. -> Schönagelstr.: Straßenbahntrasse	3::igndisp 21180,15846 21220,15741 21602,15908
 Schönagelstr. -> Raoul-Wallenberg-Str.: Straßenbahntrasse	3::igndisp 21602,15908 21220,15741 21239,15633
 Straßenbahntrasse	3nocross::ignrte 26871,-2500 26698,-2322 26286,-1901
 Adlergestell -> Langer See: Straßenbahntrasse	3::igndisp 26286,-1901 26698,-2322 26846,-2176
@@ -2540,8 +2538,8 @@ Geländer am Gehweg	3nocross::ignrte 7628,4521 7667,4549 7690,4563
 unbequemes Überqueren	3nocross::ignrte 6613,3320 6647,3292 6712,3237
 Paul-Schneider-Str. -> Schulstr.: unbequemes Überqueren	3::igndisp 6613,3320 6647,3292 6653,3297
 Schulstr. -> Paul-Schneider-Str.: unbequemes Überqueren	3::igndisp 6653,3297 6647,3292 6712,3237
-unbequemes Passieren (Bordsteine, starker Verkehr, kaum Lücken)	3nocross::ignrte 15383,9191 15407,9151 15442,9095
-Alt-Treptow -> Treptower Park: unbequemes Passieren (Bordsteine, starker Verkehr, kaum Lücken)	3::igndisp 15442,9095 15407,9151 15359,9131
+unbequemes Passieren (Bordsteine, starker Verkehr, kaum Lücken)	3nocross::ignrte 15383,9191 15407,9151 15440,9098
+Alt-Treptow -> Treptower Park: unbequemes Passieren (Bordsteine, starker Verkehr, kaum Lücken)	3::igndisp 15440,9098 15407,9151 15359,9131
 Treptower Park -> Alt-Treptow: unbequemes Passieren (Bordsteine, starker Verkehr, kaum Lücken)	3::igndisp 15359,9131 15407,9151 15383,9191
 unbequemes Passieren (starker Verkehr, kaum Lücken)	3nocross::ignrte 14495,9609 14556,9581 14809,9466
 Mittelstreifen mit Geländer	3nocross::ignrte 8007,15087 7998,15068 7911,15008
@@ -3376,12 +3374,10 @@ Am Werkstor: Bauzäune, Straße gesperrt	2::inwork 18019,5786 18062,5856 18075,588
 Kupferkamp: Bauzäune, Straße gesperrt	2::inwork 17935,5961 18075,5880
 Helga-Hahnemann-Str.: Bauzäune, Straße gesperrt	2::inwork 18260,5746 18062,5856
 Wilhelminenhofstr.: wegen Bauarbeiten am Behrens-Ufer gesperrt	2::inwork 19139,5627 19184,5554
-Hellweg-Parkplatz: wegen Bauarbeiten an der Rampe zur Yorckstraßenbrücke 5 gesperrt	2::inwork 8242,9699 8243,9766
 Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
 Henriette-Herz-Allee: (früherer Vorschlag Georg-Förster-Allee) Wann wird die Straße eröffnet?	2::inwork 20922,18613 20910,18719
 Flughafensee: Brücke gesperrt	2::inwork 2829,18126 2797,18126 2790,18139
 Forumszufahrt: Bahnunterführung wegen Bauarbeiten gesperrt	2::inwork 22280,6128 22296,6170
-Caroline-von-Humboldt-Weg: Hochbauarbeiten, Fahrbahn gesperrt	2::inwork 9961,12094 10050,11942
 (Fahlenbergstr. - Einkaufszentrum Lagunenweg): Bauarbeiten, Straße wird neu gemacht	2::inwork 31971,3170 31788,3192 31762,3202
 An den Eiswerken	2::inwork 15004,10791 14994,10732 14984,10677
 Paul-und-Paula-Promenade	2::inwork 14886,10748 14909,10732 14984,10677
@@ -3449,7 +3445,6 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 Grunerstr.	1::inwork 10849,12557 10838,12496 10807,12451 10746,12364 10697,12303
 Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355,5254
-Uferweg - Carl-Spindler-Str.: noch nicht offiziell geöffnet	2::inwork 21547,5245 21580,5259
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10746,12364 10831,12371
 Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork 10831,12371 10830,12313 10830,12279
 Jüdenstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451

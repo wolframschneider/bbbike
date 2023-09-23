@@ -833,6 +833,8 @@ Radweg der Sympathie: Qualität, genaue Wegführung?	? -8080,16157 -8120,16183 -83
 Triftstr. (Hohen Neuendorf): Qualität?	? 1470,29391 1483,29433 1604,29508 1646,29550 1687,29557 1717,29541
 Waldstr. (Hohen Neuendorf): Qualität des westlichen Abschnitts?	? 1604,29508 1717,29541
 Am Rathaus (Hohen Neuendorf): Qualität?	? 1717,29541 1730,29579 1733,29664
+# added from strassen
+Petersallee (Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5426,16539 5533,16662
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -889,7 +891,6 @@ Gellmersdorf - Stolpe: unpassierbar (Wie ist die Fahrbahnbeschaffenheit hier (as
 Werbelow - Schönwerder: überwiegend Asphalt, einige Betonabschnitte (Ist die Straße nach den Bauarbeiten vollständig asphaltiert?)	? 40045,116809 40009,116727 39165,116170 38662,115923 38720,115773 39259,115457 39384,115027 39168,114713 38881,113150 38762,112839 38769,112714 38717,112568 38586,112384 38471,111856 38342,111572 38165,110063 38464,109293 38644,109058 38762,108738 38586,108244 38354,107611
 Schönfeld - Neuenfeld: vermutlich Plattenweg (wie ist die Qualität östlich der Autobahnbrücke (Plattenweg, asphaltiert, Kopfsteinpflaster...)?)	? 48858,113323 49444,113579 49802,113824
 Am Templiner See: Beton (Beton oder wassergebundene Decke?)	? -14585,-2338 -14725,-2434
-Briesen - Petersdorf: guter bis mäßiger Asphalt (nach den Bauarbeiten (2007-05-10) guter Asphalt?)	? 70549,-5215 71331,-5118 73292,-4598 74238,-3970
 Kliestow - Wüste Kunersdorf: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 86555,-2783 86261,-1514 85834,181 86307,581
 Mühlental - Lebus: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 85662,1959 85885,2842 85956,3025 85940,3299
 Mützlitz: gutes Kopfsteinpflaster (nach Ende der Bauarbeiten (2006-10-06) vielleicht asphaltiert?)	? -50578,15920 -50505,15845 -50271,15917
@@ -928,7 +929,6 @@ Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	?
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
-Dernburgstr. (Ist die Einbahnstraße mittlerweile für Radfahrer geöffnet oder wird das in Zukunft passieren?)	? 2493,10675 2378,10677 2310,10732 2233,11049
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 Verbundsteinpflaster, teilweise schadhaft (Wurzelschäden) (Wird die Qualität des Radwegs nach den Bauarbeiten besser sein?)	? 43162,14428 42996,14793
@@ -959,8 +959,7 @@ L25 (Schmölln - Güstow): hier entsteht ein Radweg (Gibt es einen neuen Radweg im
 # added from bbbike-temp-blockings-optimized
 Spreeuferweg: Bauarbeiten, zwischen Wullenwebersteg und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Mitte Juli 2023: weiterhin Bauarbeiten, aber Weg kann zeitweise offen sein) (Ist der Uferweg noch immer wegen Bauarbeiten gesperrt?)	? 5714,12290 5770,12346 5796,12372 5940,12564
 Spreeuferweg: Bauarbeiten, zwischen Wullenwebersteg und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Mitte Juli 2023: weiterhin Bauarbeiten, aber Weg kann zeitweise offen sein) (Ist der Uferweg noch immer wegen Bauarbeiten gesperrt?)	? 5940,12564 5953,12592 6001,12699 6045,12830 6123,12887 6182,12900
-Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg gesperrt, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet? Wird der Weg neu asphaltiert sein?)	? 20996,16429 20923,16435 20898,16420
 Schleswiger Ufer - Uferweg: Bauarbeiten, Zufahrt zum Uferweg noch nicht offiziell eröffnet [Zugang zum Uferweg] (Wann sind die Bauarbeiten hier fertig?)	? 5800,12361 5796,12372
-Tharsanderweg: Bauarbeiten, Fahrbahn zwischen Pichelsdorfer Str. und Grimnitzseeweg gesperrt, voraussichtlich bis September 2023 (Sind die Bauarbeiten beendet?)	? -3681,11767 -3636,11777 -3524,11980
 Günter-Litfin-Str.: etwa 60m der Fahrbahn gesperrt, ggfs. Bordsteine, Ende der Bauarbeiten unbekannt (Ist die Sperrung der Fahrbahn beendet?)	? 13247,17262 13342,17180
 Straße 3: Bauarbeiten, Straße wird neu gemacht, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten beendet?)	? 18544,19722 18644,19695 18730,19672 18816,19648 19071,19576
+Carl-Weder-Park: Bauarbeiten, verengte und verschwenkte Wege, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten mittlerweile beendet?)	? 12794,6407 12801,6377 12792,6358 12810,6348 12812,6343 12813,6334
