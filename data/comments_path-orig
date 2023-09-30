@@ -316,8 +316,8 @@ Cyclopstr. - Blomberger Weg: Einfahrt zum Parkplatz OSZ Enährungs-, Hauswirtscha
 # REMOVED (stimmt nicht (mehr?)) --- Gürtelstr. - Lehderstr.: Fußgängerampel zum Überqueren der Berliner Allee/Greifswalder Str. benutzen	CP; 13409,15687 13316,15758 13214,15830
 # REMOVED (stimmt nicht (mehr?)) --- Gürtelstr. - Greifswalder Str.: Fußgängerampel zum Linksabbiegen in die Greifswalder Str. benutzen	CP; 13409,15687 13316,15758 13229,15692
 Prenzlauer Promenade - Laudaer Str.: bereits an der Binzstr. die Straßenseite wechseln	PI; 11849,17655 11839,17738 11785,17729
-Arnold-Zweig-Str. - Prenzlauer Promenade: den linken Gehweg bis zur Binzstr. benutzen	CP; 11729,17499 11872,17522 11849,17655
-Prenzlauer Promenade - Arnold-Zweig-Str.: bereits an der Treskowstr. auf den linken Gehweg wechseln	PI; 11893,17397 11872,17522 11729,17499
+Arnold-Zweig-Str. - Prenzlauer Promenade: den linken Gehweg bis zur Binzstr. benutzen	CP; 11729,17499 11843,17517 11872,17522 11849,17655
+Prenzlauer Promenade - Arnold-Zweig-Str.: bereits an der Treskowstr. auf den linken Gehweg wechseln	PI; 11893,17397 11872,17522 11843,17517 11729,17499
 Laudaer Str. - Prenzlauer Promenade: zunächst auf dem linken Geh/Radweg fahren, an der Kissingenstr. die Straßenseite wechseln	CP; 11785,17729 11839,17738 11884,18063
 #: by: Helga Rief (Mittelinsel auf der Scharnweberstr.) vvv
 Seidelstr. - Klixstr.: bereits an der Autobahnbrücke die Straßenseite wechseln	PI; 3570,17938 3628,17935 3706,17931 3833,17929 3871,18144
@@ -524,7 +524,7 @@ Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichsh
 #: XXX wird eventuell im Zuge der Maßnahme Nsw.3 verbessert
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5826 (Verkehrsführung verbessern) (wurde allerdings abgelehnt; die allgemeine Verbesserung der Situation wird aber irgendwann passieren ("Umgestaltung des Bahnhofsvorplatzes")
 #: by: https://www.uvp-verbund.de/documents/ingrid-group_ige-iplug-be/3A22FF18-9B17-4F51-B470-2F50F0C68929/U13-2_Entwurf%20Sterndamm%20und%20Bahnhofsvorplatz_LP-Blatt02.pdf (Linksabbiegemöglichkeit für Radfahrer im Zuge der Umgestaltung am S-Bhf. Schöneweide)
-#: last_checked: 2023-09-12
+#: last_checked: 2023-09-24
 #: check_frequency: 180d
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17747,5452
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115

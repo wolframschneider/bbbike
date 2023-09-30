@@ -355,7 +355,7 @@ Große Präsidentenstr.	1 10105,13004 10220,13098
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_14032017.pdf
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll-2-sitzung.pdf (Ablehnung durch Polizei)
 #: osm_watch: way id="4437134" version="16"
-#: last_checked: 2023-09-20
+#: last_checked: 2023-09-29
 #: check_frequency: 120d
 Duisburger Str.	1 4183,10144 3880,10154
 # 
@@ -417,13 +417,13 @@ Im Amseltal	1 1960,25229 1982,25108
 Gundelfinger Str.	1 18735,9421 18697,9153 18653,8922 18609,8717
 Dorotheenstr.	1 18653,8922 18770,8898
 # 
-#: by: https://www.infravelo.de/projekt/y-trasse/ (Planfeststellung: 2. Quartal 2026)
+#: by: https://www.infravelo.de/projekt/y-trasse/ (Planfeststellung: 2. Quartal 2026) (Planfeststellung: 2. Quartal 2027)
 #: by: https://www.infravelo.de/assets/PDFs/ergebnisbericht-rsv-y-trasse-2020.pdf (Inbetriebnahme möglich?)
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/ergebnisbericht-zur-radschnellverbindung-zwischen-kreuzberg-neukoelln-und-adlershof-liegt-vor_a288769 (nur allgemein zur Y-Trasse)
 #: by: https://www.berliner-woche.de/rudow/c-verkehr/neukoellner-verordnete-fordern-vorfahrt-fuer-radler-auf-der-krokusstrasse-und-linksabbiegespur-auf-der-massantebruecke_a300891
 #: XXX könnte im Zuge der Realisierung "Y-Trasse" wieder in Betrieb genommen werden (Bauphase für den Radschnellweg: mindestens 18 Monate)
-#: last_checked: 2022-09-25
-#: next_check: 2027-12-31
+#: last_checked: 2023-09-23
+#: next_check: 2028-12-31
 Alte Späthbrücke	2 14466,5087 14544,5123
 # 
 # REMOVED (nach temp-blockings verschoben) --- Rutherfordstr.: nicht permanent geöffnet	2 19071,2746 19136,2673 19207,2592
@@ -782,7 +782,7 @@ Kaulsdorfer Str.	1 22075,6967 22049,7085
 #: by: https://fahrradfreundliches-neukoelln.de/blog/kommentar-radfahrender-ausschuss ("zu gefährlich")
 #: by: https://www.berliner-woche.de/buckow/c-verkehr/keine-freie-fahrt-fuer-radler_a228928 (passiert wohl nicht...) (selten prüfen!)
 #: osm_watch: way id="5111625" version="16"
-#: last_checked: 2022-09-25
+#: last_checked: 2023-09-23
 #: check_frequency: 270d
 Steinträgerweg	1s:q4 12987,2220 13023,2093
 # 
@@ -961,7 +961,7 @@ Lindenstr. (Straßenbahntrasse)	3nocross::ignrte 21649,5617 21703,5538 21739,5492
 #: source_id: viz2021:13.56657,52.45535,29.12.2022,09:39 (bis 15.7.2023) (später am Tag wieder entfernt -> inaktiv) (wieder aktiv, bis 15.7.2023) (inaktiv)
 #: source_id: viz2021:13.56657,52.45535,13.07.2023,17:06 (bis 15.07.2023) (inaktiv)
 #: source_id: viz2021:13.566629,52.455193,07.02.2022,14:00 (Brückenneubau, Verengung, bis 09.06.2022) (bis 31.12.2022) (bis 15.7.2023) (bis 31.12.2023)
-#: last_checked: 2023-08-28 vvv
+#: last_checked: 2023-09-20 (mapillary) vvv
 #: check_frequency: 180d vvv
 #: next_check: 2023-12-31 vvv
 Lindenstr./Pyramidenbrücke: Übergang wegen Bauarbeiten gesperrt	2::igndisp 21600,5683 21605,5687
@@ -1017,7 +1017,7 @@ Lankestrand: Privatweg	2 -3689,11291 -3679,11248 -3673,11216
 Joachimstr.	1s:q3 22009,5593 21907,5517 21789,5427
 #: add_fragezeichen: Wird die Einbahnstraße für Radfahrer geöffnet?
 #: XXX Es existiert ein noch durchgestrichenes "Radfahrer frei"-Schild
-#: last_checked: 2023-08-28
+#: last_checked: 2023-09-20 (mapillary)
 Cardinalstr.	1s:q3 21901,5728 21828,5623 21706,5541
 Fuchsbergeweg	1s:q3 20595,9558 20592,9298
 Piesporter Str. - Liebermannstr.	1 15217,17284 15267,17349 15278,17352
@@ -1207,8 +1207,9 @@ Alfred-Kowalke-Str.	1 18229,11256 18202,11253 18061,11240 18027,11244
 Wittenbergplatz	1 6171,10657 6228,10646 6292,10627 6353,10583
 Wittenbergplatz	1 6353,10583 6268,10588 6216,10614 6171,10657
 #: by: https://www.berliner-woche.de/weissensee/c-verkehr/amalienstrasse-einbahnstrasse-in-beide-richtungen-befahrbar_a369287 (BVV-Beschluss)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6273 (Zwischenbericht)
 #: XXX Wird die Einbahnstraßenregelung für Radfahrer aufgehoben?
-#: last_checked: 2023-08-15
+#: last_checked: 2023-09-25
 #: check_frequency: 90d
 Amalienstr.	1s:q3 13794,16773 13722,16843 13653,16907 13581,16968
 Pasedagplatz	1 14099,17195 14127,17237 14151,17234 14167,17215
@@ -1559,6 +1560,9 @@ Pichelsdorfer Str.	1 -3824,13350 -3802,13303
 # 
 Fulhamer Str. (Radweg)	1 13225,4495 13213,4565
 # 
+(Vergissmeinnichtweg - Weidenkätzchenweg)	1s:q3 21503,114 21435,99
+(Weidenkätzchenweg - Buschwindröschenweg)	1s:q3 21435,99 21367,84
+# 
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1771,8 +1775,8 @@ Bernau, Bahnhofstr.	1 22850,30562 22892,30426
 Bernhard-Kellermann-Str. (Werder)	1 -21112,-3787 -21179,-3628 -21266,-3604
 Vorfahrt Flughafen Schönefeld	1 18419,-1418 18429,-1443 18480,-1577 18532,-1717 18401,-1767 18350,-1629 18293,-1472
 Parkplatz Flughafen Schönefeld	1 18480,-1577 18350,-1629
-Mittelstr. B179	1 18368,-1337 18419,-1418
-Mittelstr. B179	1 18293,-1472 18279,-1438 18368,-1337
+Mittelstr. B179	1 18398,-1305 18390,-1338 18419,-1418
+Mittelstr. B179	1 18293,-1472 18279,-1438 18398,-1305
 Lützlow: Gehweg auf gleichem Niveau wie Fahrbahn	1s:q3 52442,94134 52419,94029 52355,93894
 Lindenstr. (Frankfurt/Oder)	1 88960,-6639 88836,-6002
 Carthausplatz (Frankfurt/Oder)	1 88945,-6733 88890,-6691 88960,-6639
@@ -2723,7 +2727,7 @@ unter der S-Bahn-Brücke tragen (5 Stufen)	0:10 3733,18997
 tragen (31 Stufen) oder Aufzug (Storkower Str.)	0:30 14530,13269
 tragen (41 Stufen) oder Aufzug (Storkower Str.)	0:40 14481,13143
 tragen (zum Uferweg an den Treptowers, 24 Stufen)	0:35 14383,10036
-#: note: die beiden Stufengruppen sind so weit entfernt, dass ein Aufsitzen nich lohnt
+#: note: die beiden Stufengruppen sind so weit entfernt, dass ein Aufsitzen nicht lohnt
 tragen (1+3 Stufen)	0:30 13232,12628
 tragen (34 Stufen)	0:40 14763,10987
 tragen (33 Stufen)	0:40 14738,10892
@@ -3631,11 +3635,20 @@ weites Drängelgitter	BNP:2::trailer=7 16369,8836
 Schranke, kann nur auf dem Bürgersteig umfahren werden (Bordstein!)	BNP:5::trailer=15 3135,12101
 Drängelgitter	BNP:3::trailer=10 4067,22066
 Schranke, auf Gehweg umfahren	BNP:2::trailer=4 23537,15247
+Drängelgitter	BNP:3::trailer=10 16271,-522
+Tor	BNP:10 16254,-575
+Drängelgitter/Schranke	BNP:3::trailer=10 11350,2470
+enger Pfad	BNP:0::trailer=no 21548,-1158
 #
 ############################################################################
 #: section temporäre Sperrungen (Baustellen etc.) vvvvvvvvvvvvvvvvvvvvvvvvvv
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# 
+#: last_checked: 2023-09-27
+#: check_frequency: 60d
+#: next_check: 2024-03-31
+Mehlbeerenweg: Bauarbeiten, gesperrt	2::inwork 11993,11978 11940,11982 11909,11985
 # 
 #: next_check_id: ONTARIOSEE-2023
 #: osm_watch: way id="25796640" version="21"
@@ -3649,6 +3662,7 @@ zur Ontarioseestr.: Hochbauarbeiten, komplett gesperrt	2::inwork 18585,10024 186
 #: by: https://www.berliner-woche.de/kreuzberg/c-bauen/quartierspark-ritterstrasse-wird-auf-wunsch-der-anwohner-aufgehuebscht_a346061
 #: by: https://www.berliner-woche.de/kreuzberg/c-bauen/schaeden-im-quartierpark-entdeckt_a355859
 #: note: laut Aushang Bauarbeiten bis 26.9.2023
+#: priority: #C
 #: last_checked: 2023-08-25
 #: next_check: 2023-09-26
 # REMOVED --- #: next_check: 2023-07-15
@@ -3689,7 +3703,7 @@ Helga-Hahnemann-Str.: Bauzäune, Straße gesperrt	2::inwork 18260,5746 18062,5856
 #: last_checked ^^^
 # 
 #: next_check_id: BEHRENSUFER-2023
-#: osm_watch: way id="41340056" version="25"
+#: osm_watch: way id="41340056" version="26"
 #: last_checked: 2023-08-21
 #: check_frequency: 180d
 #: next_check: 2026-12-31
@@ -3704,9 +3718,9 @@ Wilhelminenhofstr.: wegen Bauarbeiten am Behrens-Ufer gesperrt	2::inwork 19139,5
 #: check_frequency: 90d
 Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
 # 
-#: osm_watch: way id="693060662" version="17"
+#: osm_watch: way id="693060662" version="18"
 #: XXX Straße fertiggestellt, durch Bauzäune abgesperrt
-#: last_checked: 2023-09-01 (osm)
+#: last_checked: 2023-09-22 (osm)
 #: check_frequency: 60d
 Henriette-Herz-Allee: (früherer Vorschlag Georg-Förster-Allee) Wann wird die Straße eröffnet?	2::inwork 20922,18613 20910,18719
 # 
@@ -3759,7 +3773,7 @@ Ulrich-Plenzdorf-Str.	2::inwork 14994,10732 15071,10716 15151,10699
 # REMOVED (nicht mehr) --- #: last_checked: 2023-08-21 --- #: check_frequency: 14d --- Ingrid-Reschke-Str.: wegen Bauarbeiten wieder gesperrt	2::inwork 15163,10758 15151,10699
 # 
 #: next_check_id: SONYCENTER-2023
-#: last_checked: 2023-07-27
+#: last_checked: 2023-09-29
 #: check_frequency: 90d
 #: next_check: 2023-12-31
 #: valid: -20240701
@@ -3770,8 +3784,9 @@ Potsdamer Platz - Bellevuestr.: wegen Bauarbeiten am ehemaligen Sony-Center gesp
 #: last_checked: 2023-09-20
 Götelstr.: Einbahnstraßenregelung	1 -3260,12540 -3252,12405 -3255,12338 -3284,12304 -3293,12304
 # 
-#: last_checked: 2023-07-14 (mapillary)
-#: check_frequency: 90d
+#: osm_watch: way id="30441457" version="30"
+#: last_checked: 2023-09-25
+#: check_frequency: 60d
 Mauerweg: Weg gesperrt	2::inwork 10091,15630 10155,15473
 # 
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2023/pressemitteilung.1306507.php (Bauarbeiten: 29. März 2023 - voraussichtlich Ende September 2024)
@@ -3796,7 +3811,7 @@ Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15
 # 
 #: XXX Bauarbeiten am Kanzlerpark
 #: by: https://berliner-abendblatt.de/berlin-news/kein-feierlicher-spatenstich-fuer-kanzleramts-neubau-id223830
-#: last_checked: 2023-08-26 vvv
+#: last_checked: 2023-09-27 vvv
 #: check_frequency: 180d vvv
 #: XXX laut osm gesperrt vvv
 #: osm_watch: way id="256450718" version="7"
@@ -3815,7 +3830,7 @@ Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15
 #: by: https://www.bbr.bund.de/BBR/DE/Bauprojekte/Berlin/Politik/auswaertiges-amt/kurstrasse-33-35.html (Fertigstellung 2027/2028)
 #: also_indoor: traffic (B,W,G)
 #: note: für Fußgänger gibt es mittlerweile einen asphaltierten, nicht geradlinig geführten Notweg im Parkbereich
-#: last_checked: 2023-09-21
+#: last_checked: 2023-09-28
 #: check_frequency: 30d
 Kurstr.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 10230,11839 10122,11913
 # 
@@ -3865,7 +3880,7 @@ Dieselstr. - westlicher Mergenthalerring: Durchfahrt durch Bauzäune versperrt	2 
 # 
 #: by: https://www.deutsches-architekturforum.de/thread/14882-friedrichshain-so-s%C3%BCdl-der-frankfurter-allee-%C3%B6stl-der-warschauer-str/?postID=738701#post738701
 #: by: https://www.buero-sge.de/de/referenzen/12-referenzen/198-simplonstrasse-53-53a-holteistrasse-2
-#: last_checked: 2023-09-22
+#: last_checked: 2023-09-29
 #: check_frequency: 30d
 Holteistr.: Hochbauarbeiten, Einbahnstraßenregelung	1s:q3:inwork 14535,11327 14506,11275
 # 
@@ -3877,13 +3892,13 @@ Holteistr.: Hochbauarbeiten, Einbahnstraßenregelung	1s:q3:inwork 14535,11327 145
 #: by: https://berliner-abendblatt.de/2022/10/12/zwei-jahre-gesperrt-gendarmenmarkt-wird-klimagerecht-saniert/
 #: by: https://www.berliner-woche.de/mitte/c-bauen/nach-13-jahren-stillstand-beginnen-nun-die-bauarbeiten-zur-neugestaltung-des-gendarmenmarkts_a360590
 #: by: https://www.deutsches-architekturforum.de/thread/9726-rund-um-den-gendarmenmarkt/?postID=731755#post731755
-#: last_checked: 2023-08-22 vvv
+#: last_checked: 2023-09-28 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-12-31 vvv
 #: note: nur Durchgang zum Konzerthaus von der Charlottenstr. möglich vvv
 #: osm_watch: way id="766868087" version="9"
 Gendarmenmarkt: Sanierung, Durchgang gesperrt	2::inwork 9523,12019 9656,12031
-#: osm_watch: way id="766868090" version="7"
+#: osm_watch: way id="766868090" version="8"
 Gendarmenmarkt: Sanierung, Durchgang gesperrt	2::inwork 9536,11922 9666,11935
 #: note ^^^
 #: next_check ^^^
@@ -4005,14 +4020,14 @@ Marktplatz Adlershof: Umbauarbeiten, keine Einbahnstraßenregelung	1no 20336,3783
 #: by: https://www.berliner-woche.de/rummelsburg/c-bauen/bebauungsplan-fuer-grundschule_a365015
 #: osm_watch: way id="1086484458" version="2"
 #: osm_watch: way id="36780316" version="11"
-#: last_checked: 2023-08-28
+#: last_checked: 2023-09-24
 #: check_frequency: 90d
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 # REMOVED --- Hauptstr. - Rummelsburger Ufer: gesperrt, möglicherweise dauerhaft	2::inwork 16178,9861 16049,9749
 # 
 #: next_check_id: AUERDREIECK-2022
-#: last_checked: 2023-09-17
-#: check_frequency: 14d
+#: last_checked: 2023-09-27
+#: check_frequency: 7d
 #: next_check: 2023-10-31
 Grünfläche Auerdreieck: Bauarbeiten, Weg ist gesperrt	2::inwork 13232,12628 13091,12563
 # 
@@ -4046,6 +4061,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
 #: XXX Ursprünglich wurde 08/2021 als Beginn geplant, das hat sich aber um einen Monat verschoben --- vielleicht das Ende auch?
 #: by: https://bauprojekte.deutschebahn.com/p/dresdner-bahn/infobauarbeiten?date=20220111 (bis Ende 2023)
 #: by: https://berliner-abendblatt.de/berlin-news/neue-bruecke-ueber-dem-teltowkanal-in-richtiger-position-id231682
+#: by: https://www.berliner-woche.de/mariendorf/c-verkehr/brueckeneinbau-fuer-die-dresdner-bahn-ueber-den-teltowkanal-vollzogen_a392915
 #: note: Fertigstellung EÜ laut Baustellenschild 2023
 #: note: Dieser Eintrag existiert auch noch als aktiver bbbike-temp-blockings-Eintrag.
 #: osm_watch: way id="229990468" version="6"
@@ -4064,7 +4080,7 @@ Barnimer Dörferweg: wegen Bauarbeiten gesperrt	2::inwork 20865,18933 20889,18943
 #: by: https://www.hedwigs-kathedrale.de/umgestaltung/ (Umbauarbeiten bis 1. November 2023 geplant)
 #: by: https://berliner-abendblatt.de/2022/12/16/umbau-der-st-hedwigs-kathedrale-im-zeitplan-aber-teurer/
 #: by: https://www.berliner-woche.de/mitte/c-bauen/katholisches-forum-am-bebelplatz-wird-komplettiert_a385644 (Umbauarbeiten: Kathedrale bis Ende 2024, Bernhard-Lichtenberg-Haus bis Mitte 2025)
-#: last_checked: 2023-08-11
+#: last_checked: 2023-09-28
 #: check_frequency: 360d
 #: next_check: 2024-12-31
 Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 9775,12178 9771,12190 9747,12205 9755,12144
@@ -4074,9 +4090,10 @@ Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 977
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.schmalfuss-immobilien.de/karlshorst (Abschnitt 9 bezugsfertig Anfang August 2022, 7 Anfang September 2022)
-#: last_checked: 2023-09-12 vvv
+#: last_checked: 2023-09-24 vvv
 # REMOVED --- #: next_check: 2022-08-01 vvv
 #: osm_watch: way id="1061057020" version="8"
+#: note: wobei der Gehweg bereits passierbar sein kann
 Georg-Klingenberg-Str.: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17846,8644 17792,8660 17656,8700
 Samuel-Lewin-Str.: noch Baustelle und gesperrt	2::inwork 17773,8588 17792,8660
 # REMOVED (offen) --- Adolf-Wermuth-Allee: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17627,8556 17608,8483
@@ -4113,12 +4130,17 @@ Parkstadt Karlshorst: temporäre Einbahnstraßenregelung	1::inwork 17648,8626 1762
 #: next_check: 2026-09-30
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen	1s:q3:inwork 8266,14346 8442,14456
 # 
-# REMOVED (falsche Ausschilderung: Einbahnstraßenschilder ohne Einfahrt-verboten-Schilder) --- #: next_check_id: PLANSTRASSEC-2019 --- #: last_checked: 2022-04-07 (architektur-urbanistik) --- #: check_frequency: 60d --- (Planstraße C): abschnittsweise Einbahnstraße	1s:q3:inwork 12848,11093 12926,11224
+#: next_check_id: PLANSTRASSEC-2019
+#: note: zwischenzeitlich waren die "Einfahrt verboten"-Schilder an der Mühlenstr. verschwunden
+#: last_checked: 2023-09-26
+#: check_frequency: 60d
+(Planstraße C): Einbahnstraße	1s:q4:inwork 12848,11093 12926,11224
+# 
 # REMOVED (weitgehend offen) -- #: next_check_id: SIEGFRIED-2021 --- #: by: https://www.architektur-urbanistik.berlin/index.php?threads/oderstra%C3%9Fe-188-ecke-siegfriedstr-neubau-einer-apartmentanlage.1058/#post-15273 (Bau einer Apartmentanlage, vielleicht wird dann die Straße öffentlich sein?) --- #: by: https://www.i-live-tempelhof.de/ (Erstbezug Anfang 2023) --- #: priority: #C --- #: last_checked: 2022-09-24 --- #: check_frequency: 120d --- (Verlängerung der Siegfriedstr.): während der Hochbauarbeiten gesperrt	2::inwork 11664,6796 11488,6781
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2023-09-17
+#: last_checked: 2023-09-24
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -4126,7 +4148,7 @@ Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 1637
 # REMOVED --- #: next_check_id: OSTBAHNHOF-2021 --- #: last_checked: 2021-11-03 --- #: check_frequency: 14d --- Erich-Steinfurth-Str., Hermann-Stöhr-Platz: wegen Kranarbeiten gesperrt	2::inwork 12413,11901 12453,11790 12378,11806
 # 
 #: next_check_id: OSTBAHNHOF-2021
-#: last_checked: 2023-08-27
+#: last_checked: 2023-09-27
 #: check_frequency: 120d
 #: next_check: 2026-01-01
 Erich-Steinfurth-Str.: Bauarbeiten, gesperrt	2::inwork 12608,11692 12645,11673
@@ -4238,7 +4260,9 @@ Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 #: by: https://www.berliner-woche.de/johannisthal/c-verkehr/fahrstuhl-in-johannisthal-erst-ab-2024-nutzbar_a368423
 #: by: https://www.berliner-woche.de/johannisthal/c-verkehr/fussgaengerbruecke-am-s-bahnhof-johannisthal-soll-im-herbst-fertig-werden-fahrstuhl-erst-2024_a385887
 #: XXX wenn die alte Treppe wiederhergestellt ist, kann man die provisorische Treppe vermutlich entfernen, siehe strassen-orig und gesperrt-orig
-#: last_checked: 2023-09-12 vvv
+#: osm_watch: way id="1146034287" version="2"
+#: osm_watch: way id="1012523982" version="8"
+#: last_checked: 2023-09-24 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-09-30 vvv
 Fußgängerbrücke Bhf. Johannisthal: südwestlicher Abgang wird zurückgebaut	2::inwork 18621,4675 18636,4660 18642,4654 18664,4673
@@ -4343,11 +4367,11 @@ Cotheniusstr.: Bauarbeiten, Straße existiert nicht mehr	2::inwork 13430,13733 13
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,779064#msg-779064
 #: source_id: viz2021:13.39689,52.386687,25.05.2020,01:30 (bis 30.09.2024)
 #: XXX hier wird eine neue Unterführung gebaut vvv
-#: last_checked: 2023-09-21 (osm) vvv
+#: last_checked: 2023-09-25 (osm) vvv
 #: check_frequency: 180d vvv
 #: next_check: 2024-09-30 vvv
 #: osm_watch: way id="152434836" version="25"
-#: osm_watch: way id="30084962" version="31"
+#: osm_watch: way id="30084962" version="32"
 Prinzessinnenstr./Bahnhofstr. (Lichtenrade): neue Unterführung wird gebaut	2::inwork 10096,-2137 10194,-2138 10228,-2136 10300,-2135
 Pfarrer-Lütkehaus-Platz: Sperrung am ehemaligen Bahnübergang	2::inwork 10228,-2136 10231,-2159
 Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10310,-2136 10300,-2135 10296,-2156 10318,-2156
@@ -4363,7 +4387,7 @@ Pfarrer-Lütkehaus-Platz: Einbahnstraßenregelung	1::inwork 10310,-2136 10300,-213
 #: next_check_id: ELSENBRUECKE-2018
 #: by: mapillary
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22806.pdf (Sperrung des Spreeuferwegs zwischen 2020 und 2028)
-#: last_checked: 2023-08-19
+#: last_checked: 2023-09-23
 #: next_check: 2028-01-01
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 # 
@@ -4418,7 +4442,7 @@ George-Stephenson-Str.: Bauarbeiten, gesperrt	2::inwork 7487,14472 7446,14403 75
 #: by: https://www.deutsches-architekturforum.de/thread/11167-admiralspalast-umbau-und-erweiterung-in-bau/?postID=744785#post744785 (Neubau der Planckstraße, bis IV. Quartal 2024)
 #: XXX wann sind die Bauarbeiten beendet?
 #: XXX mittlerweile bis zur Georgenstr. ausgeweitet, check_frequency deswegen angepasst
-#: last_checked: 2023-08-26
+#: last_checked: 2023-09-19 (mapillary)
 #: check_frequency: 30d
 # REMOVED --- #: check_frequency: 45d
 #: next_check: 2024-12-31
@@ -4433,8 +4457,8 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9441,12670
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/drei-bauphasen-am-gleisdreieck_a354176
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/aenderungen-bei-drei-u-bahnlinien_a354389
 # REMOVED --- #: osm_watch: way id="223707973" version="11"
-#: osm_watch: way id="848716360" version="5"
-#: last_checked: 2023-09-18
+#: osm_watch: way id="848716360" version="6"
+#: last_checked: 2023-09-26
 #: check_frequency: 120d
 #: priority: #A
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
@@ -4466,7 +4490,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: osm_watch: way id="60333311" version="30"
 #: osm_watch: way id="289966097" version="17"
 #: priority: #A
-#: last_checked: 2023-09-21
+#: last_checked: 2023-09-25
 #: check_frequency: 90d
 # REMOVED --- Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10685,12422 10772,12515
 Grunerstr.	1::inwork 10849,12557 10838,12496 10807,12451 10746,12364 10697,12303
@@ -4527,7 +4551,7 @@ Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/molkenmarkt-klosterviertel-bebauungsplan-1-14.52/page-5#post-17149
 #: by: https://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_2209/nachricht7327.html
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2023-09-20
+#: last_checked: 2023-09-25
 #: check_frequency: 90d
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10746,12364 10831,12371
 # 
@@ -4540,17 +4564,17 @@ Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork
 #: next_check_id: MOLKENMARKT-2021
 #: XXX Die Kreuzung Gustav-Böß-Str./Jüdenstr. wird eine neue Ampel bekommen
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
-#: last_checked: 2023-08-24
+#: last_checked: 2023-09-21
 #: check_frequency: 90d
 Jüdenstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2023-09-21
+#: last_checked: 2023-09-27
 #: check_frequency: 90d
 Littenstr.: Anbindung an die Grunerstr. gesperrt	2::inwork 10973,12611 10951,12637
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2023-08-26
+#: last_checked: 2023-09-21
 Grunerstr.: Radweg	1::igndisp 11057,12715 10973,12611
 # REMOVED (Wegführung existiert nicht mehr) --- Grunerstr.: Radweg	1::igndisp 10973,12611 10954,12604 10931,12622
 # 
@@ -4562,7 +4586,7 @@ Grunerstr.: Radweg	1::igndisp 11057,12715 10973,12611
 #: note: laut rbb komplett gesperrt, bis 30.6.2023, mittlerweile bis 30.06.2025, in der Realität weiterhin Einbahnstraße --- mittlerweile manchmal tatsächlich gesperrt (gesperrt: gesehen 2022-10-04; nicht gesperrt: gesehen 2022-10-13)
 #: osm_watch: way id="5096644" version="22"
 #: priority: #C
-#: last_checked: 2023-09-22
+#: last_checked: 2023-09-26
 #: check_frequency: 90d
 #: next_check: 2025-06-30
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	1::inwork 13422,11236 13537,11186 13540,11148
@@ -4571,7 +4595,7 @@ Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komple
 # REMOVED --- #: XXX Wann wird der Kran abgebaut? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2023-08-27
+#: last_checked: 2023-09-27
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2023-06-30
 Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174 9254,13171
@@ -4672,7 +4696,7 @@ Wuhletalbrücke: wird neu gebaut	2::inwork 20843,17745 20798,17664 20768,17609 20
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-15739.pdf (voraussichtlich ab Frühjahr 2024 offen)
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1345344.php
 #: by: https://mein.berlin.de/projekte/freiraumkonzept-bahnhof-schoneweide-2/
-#: last_checked: 2023-09-18 (krickstadt)
+#: last_checked: 2023-09-24
 #: check_frequency: 360d
 #: next_check: 2024-05-01
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
@@ -4696,7 +4720,7 @@ Wuhletalbrücke: wird neu gebaut	2::inwork 20843,17745 20798,17664 20768,17609 20
 #: by: https://www.meinetram.de/de/index.php?section=Downloads&download=78 (Präsentation vom 28.2.2022)
 #: by: http://thomas.krickstadt.de/strassenbahnen/verkehrsloesung-schoeneweide/2022-09-13-verkehrsloesung-schoeneweide/index.html
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-15739.pdf (neues Bauende: Frühjahr 2024)
-#: last_checked: 2023-09-18 (krickstadt) vvv
+#: last_checked: 2023-09-24 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-05-01 vvv
 #: osm_watch: way id="1085382250" version="3"
@@ -4709,6 +4733,7 @@ Wuhletalbrücke: wird neu gebaut	2::inwork 20843,17745 20798,17664 20768,17609 20
 # 
 #: next_check_id: SCHOENEWEIDE-2018
 #: by: https://www.bahninfo-forum.de/read.php?9,726524,726545#msg-726545
+#: by: https://viz.berlin.de/2023/09/bhf-schoeneweide/
 #: source_id: viz2021:13.50984,52.45636,05.08.2022,11:36 (bis 31.03.2023) (inaktiv)
 #: source_id: viz2021:13.509646,52.45627,10.02.2022,10:00 (bis 1.4.2022) (mittlerweile bis 31.5.2022) (mittlerweile bis 5.8.2022) (bis 31.3.2023) (bis 01.09.2023) (bis 02.02.2024)
 #: note: auch als "Verlängerte Brückenstraße" bezeichnet
@@ -4716,7 +4741,7 @@ Wuhletalbrücke: wird neu gebaut	2::inwork 20843,17745 20798,17664 20768,17609 20
 #: XXX Bis wann gehen die Bauarbeiten?
 #: historical_note: früher: Fahrbahn ist gesperrt, Ausweichen auf engen Gehweg, evtl. Buden, Bordsteine
 #: osm_watch: way id="40451054" version="18"
-#: last_checked: 2023-09-18 (krickstadt)
+#: last_checked: 2023-09-24
 #: next_check: 2024-02-02
 # REMOVED --- #: valid: -20230901
 Zufahrt Zentrum Schöneweide: Fahrbahn und Bürgersteig gesperrt	2:inwork 17728,5756 17656,5701
@@ -4750,11 +4775,16 @@ Zufahrt Zentrum Schöneweide: Fahrbahn und Bürgersteig gesperrt	2:inwork 17728,57
 #: by: https://www.glint-berlin.de/ (kein Fertigstellungsdatum)
 #: confirmed_by: srt
 #: XXX wann sind die Bauarbeiten fertig?
-#: last_checked: 2023-08-31 (architektur-urbanistik)
+#: last_checked: 2023-09-28
 #: check_frequency: 60d
 Taubenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9207,11880 9138,11872
 # 
-# REMOVED --- #: note: allerdings war das Einbahnstraßenschild am 2022-01-17 weggedreht; am 2022-03-02 wieder vollständig aktiv; am 2023-02-10 war das Einbahnstraßenschild verschwunden, das Einfahrt-verboten-Schild aber noch da, am 2023-06-15 wieder weggedreht --- #: last_checked: 2023-06-15 --- Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
+#: note: allerdings war das Einbahnstraßenschild am 2022-01-17 weggedreht; am 2022-03-02 wieder vollständig aktiv; am 2023-02-10 war das Einbahnstraßenschild verschwunden, das Einfahrt-verboten-Schild aber noch da, am 2023-06-15 wieder weggedreht, am 2023-09-28 wieder da, möglicherweise bis Ende 2023?
+#: last_checked: 2023-09-28
+#: check_frequency: 60d
+#: next_check: 2023-12-31
+Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
+# 
 # REMOVED --- #: next_check_id: POTSDAMSPEICHERSTADT-2022
 # REMOVED (wurde gelöscht) --- #: osm_watch: way id="496270260" version="7" brb
 # REMOVED (wurde gelöscht) --- #: osm_watch: node id="3453536641" version="5" brb
@@ -4954,6 +4984,7 @@ Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_25_2105_2220_online.pdf (Straßenbenennung)
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/upside-berlin-max-und-moritz.182/
 #: by: https://www.deutsches-architekturforum.de/thread/11490-hochh%C3%A4user-max-und-moritz-upside-berlin-95-86m-in-bau/?postID=747798#post747798 (Insolvenz)
+#: by: https://www.thomas-daily.de/td-morning-news/1558743-berlin-mikare-gibt-wohnturm-projekt-max-auf/
 #: XXX geplante Benennung: Anita-Berber-Platz (fehlt in Berlin.coords.data)
 #: osm_watch: node id="10239151904" version="1"
 #: osm_watch: way id="276821479" version="5"
@@ -5033,7 +5064,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt, mindes
 # 
 #: next_check_id: BER-20XX
 #: XXX möglicherweise bleibt das noch erhalten, solange es Terminal 5 gibt? Es gibt aber Kartenwerke (Pharus, Falk), bei denen die Jürgen-Schumann-Allee durchgängig ist
-#: last_checked: 2023-03-26 (mapillary)
+#: last_checked: 2023-09-24
 # REMOVED --- #: next_check: 2020-10-31
 #: check_frequency: 180d
 # REMOVED (entfernt) --- #: osm_watch: way id="127091100" version="14" brb
@@ -5083,6 +5114,7 @@ Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552
 #: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/loewenbruecke/ (geänderte URL)
 #: by: https://www.bz-berlin.de/berlin/mitte/berlin-bekommt-seine-loewenbruecke-wieder (Bauarbeiten voraussichtlich ab Sommer 2023 + 15 Monate Bauzeit)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1361549.php (Fertigstellung Ende 2024)
+#: by: https://www.berliner-woche.de/tiergarten/c-bauen/loewenbruecke-wird-bis-ende-2024-wieder-aufgebaut_a394430
 #: XXX: existiert nicht mehr, die Brücke wird aber wieder aufgebaut; einer der vier Löwen wurde entfernt
 #: also_indoor: search Löwenbrücke Tiergarten
 #: note: früher bei osm, jetzt komplett entfernt: osm_watch: way id="22792488" version="5"
@@ -5153,12 +5185,12 @@ Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-14
 Erika-Wolf-Str. (Potsdam): während der Bauarbeiten gesperrt	2::inwork -12812,-1490 -12685,-1449 -12628,-1423
 # 
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
-#: last_checked: 2023-09-17
+#: last_checked: 2023-09-29
 #: check_frequency: 360d
 Pariser Platz: Sperrung vor der französischen Botschaft	2 8717,12302 8714,12319 8673,12315
 # 
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
-#: last_checked: 2023-09-17
+#: last_checked: 2023-09-29
 #: check_frequency: 360d
 Pariser Platz: Sperrung vor der amerikanischen Botschaft	2 8641,12227 8643,12208 8705,12217
 # 
@@ -5449,6 +5481,7 @@ Neuenhagener Str. (Mahlsdorf)	1s:q3 24362,11954 24317,11754
 Prenzlauer Promenade: nicht passierbarer Mittelstreifen	3nocross 11950,18529 11984,18771 12003,18896
 Prenzlauer Promenade: Mittelstreifen, Bordsteine	3nocross 11849,17655 11872,17522 11893,17397
 Prenzlauer Promenade: Mittelstreifen	3nocross 11849,17655 11839,17738 11884,18063
+Prenzlauer Promenade: Mittelstreifen	3nocross 11924,17224 11993,16862 12010,16774
 Hindenburgdamm	1 4454,3260 4467,3332 4497,3412 4523,3482 4546,3527 4585,3575
 Hindenburgdamm	1 4585,3575 4580,3514 4566,3461 4514,3329 4454,3260
 tragen (insgesamt 16 Stufen, auf vier Gruppen verteilt)	0:40 14581,16529

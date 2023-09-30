@@ -19,6 +19,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 6835,15412 6815,15398
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6748,15313 6833,15215
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
+Wallstr./Inselstr.: Bauarbeiten im Einmündungsbereich, einige Meter der Fahrbahn sind gesperrt	q1::inwork 10908,11908 11111,12027
 Grunerstr.: Radweg auf Gehweg	q1 10973,12611 11057,12715
 Grunerstr.: Gehweg	q3 10900,12546 10973,12611
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883 11160,12071
@@ -31,6 +32,8 @@ Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweich
 Petriplatz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwork 10418,12016 10460,11979
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9133
+Sigismundstr.: Fahrbahn gesperrt	q3::inwork 7894,11288 7934,11275 8031,11249
+Matthäikirchplatz: Fahrbahn gesperrt	q4::inwork 7970,11396 7934,11275
 Meierottostr.: Einbahnstraßenregelung an der Bundesallee, auf Gehweg ausweichen, Bordsteine	q2::inwork; 5463,9961 5246,10168
 Pariser Str./Bundesallee: Bauarbeiten, Durchgang kann verengt sein	q2::inwork 5461,9923 5423,9932 5382,9942
 Neuköllnische Allee: einige Fußgänger	q2::inwork 14344,7003 14319,7001 14276,7021 14246,7042 14236,7058 14196,7086
@@ -883,7 +886,7 @@ Schattenweg: Fußgänger, spielende Kinder	q2 19928,319 19897,292 19865,263 19806,
 (Sternblütenweg - Grünzug am Falkenberg): telweise recht eng, Fußgänger	q3 21620,372 21621,360 21592,341
 (Grünzug am Falkenberg - Kletterrosenweg): einige Fußgänger	q1 21317,326 21344,300
 (Grünzug am Falkenberg - Kletterrosenweg): einige Fußgänger	q1 21344,300 21350,330
-(Kleine Lindenstr. - Schirmpilzstr.): sehr eng, für Anhänger nicht geeignet	q4 21528,-1134 21570,-1219
+(Kleine Lindenstr. - Schirmpilzstr.): sehr eng	q3 21528,-1134 21548,-1158 21573,-1209
 Fraustadter Weg: enge, unübersichtliche Straße	q1 21885,-483 21940,-542 21934,-617
 Schilfsängersteig: eng	q3 21385,2031 21372,2043
 Hoernlestr.: Rampe oder 10 weite Stufen	q3 22366,6779 22351,6756
@@ -1456,7 +1459,7 @@ Springpfuhlpark: Fußgänger	q2 19524,14474 19534,14459 19535,14448 19545,14290 19
 Dürerplatz: einige Fußgänger, Bordstein	q2 6234,7020 6276,6995
 Straße 17: kurze Rampe	q3 7307,7435 7296,7443
 (Lortzingstr. - Mauerpark): einige Fußgänger	q1 10037,15421 10052,15429 10070,15438 10076,15455 10092,15461 10105,15454 10127,15463 10155,15473 10186,15481
-(Lortzingstr. - Mauerpark): einige Fußgänger	q1 10070,15438 10083,15425 10101,15426 10110,15440 10105,15454
+(Lortzingstr. - Mauerpark): einige Fußgänger	q3 10070,15438 10083,15425 10101,15426 10110,15440 10105,15454
 (Weg im erweiterten Mauerpark - über den Gleimtunnel): einige Fußgänger	q2 10070,15626 10091,15630
 (Lauinger Str. - Biesdorfer Friedhofsweg/Alt-Biesdorf): einige Fußgänger	q1 21221,11398 21311,11528
 Eigerstr.: einige Bodenschwellen, können aber umfahren werden	q0 12825,17870 12882,17895 12902,17933 12945,17958 12994,17986 13036,18010 13043,18126 13042,18152
@@ -1649,7 +1652,7 @@ Weg am ehem. Güteraußenring: Gefälle, Regenablaufrinnen	q3; 7978,-846 8055,-834 
 (Parkweg am Königsgraben): Steigung, Regenablaufrinnen	q3; 8679,-848 8680,-831 8690,-805 8692,-777 8687,-766
 (Parkweg am Königsgraben): Gefälle, Regenablaufrinnen	q3; 8687,-766 8692,-777 8690,-805 8680,-831 8679,-848
 Nuthestr.: Bordstein, Fußgänger	q3 9815,-805 9813,-822
-Hochspannungsweg (Britz): einige Fußgänger	q1 13761,2993 13631,2938 13561,2898 13430,2837 13264,2763 13194,2732 13190,2730 13187,2729 13136,2705 13029,2661 12924,2617 12825,2573 12694,2517 12593,2472 12391,2382 12384,2379 12373,2375 12280,2330 11747,2091 11626,2037 11373,1925 11343,1937
+Hochspannungsweg (Britz): einige Fußgänger	q1 13761,2993 13631,2938 13561,2898 13430,2837 13264,2763 13194,2732 13190,2730 13187,2729 13136,2705 13029,2661 12924,2617 12825,2573 12694,2517 12593,2472 12391,2382 12384,2379 12373,2375 12280,2330 11756,2096 11626,2037 11373,1925 11343,1937
 (Dammweg - Willi-Sänger-Str.): einige Fußgänger	q1 15751,8163 15808,8099 15883,8020
 (Alter Postweg): wenige Fußgänger, Bordstein	q3 -1824,11656 -1833,11665
 (Alter Postweg): wenige Fußgänger	q1 -1833,11665 -1944,11758 -2013,11841 -2027,11884 -2062,11925 -2088,12007 -2088,12071 -2080,12091 -2122,12680 -2024,12969 -2076,13060
@@ -1907,6 +1910,7 @@ Am Lichtenrader Graben: einige Fußgänger	q1 10695,-1515 10615,-1772 10537,-1943 
 Dorotheenstr.: Bordstein, Fußgänger	q3 22926,4123 22949,4136
 Elisabeth-Schiemann-Str.: einige Bodenschwellen, meist umfahrbar	q1 20586,18822 20553,18734 20533,18682 20512,18626 20448,18454 20458,18424
 (Potsdamer Platz - Linkstr.): Bordstein, einige Fußgänger	q3 8474,11350 8481,11447
+Alte Potsdamer Str.: Fußgängerzone	q4 8389,11378 8481,11447 8479,11493
 (Gleisdreieckpark - Möckernkiez): eng	q3 8729,9747 8735,9737
 Möckernkiez: Rampe	q3 8778,9759 8757,9748 8735,9737
 (Fredersdorfer Str. - Hildegard-Jadamowitz-Str.): drei Bodenschwellen	q1 12908,12280 12883,12118 12893,12077 12923,12043
@@ -3375,6 +3379,8 @@ Sinsheimer Weg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 13
 Hannaweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 20938,14066 20923,13953
 Feldrain: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25684,13172 25632,13214 25609,13232 25607,13459
 Oberspreestr. [Nebenfahrbahn]: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 19965,5101 19957,5083 19940,5090
+(Vergissmeinnichtweg - Weidenkätzchenweg): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 21503,114 21435,99
+(Weidenkätzchenweg - Buschwindröschenweg): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 21435,99 21367,84
 Am Krusenick: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 22751,4970 22652,4966 22667,4912 22705,4874
 Josef-Nawrocki-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25796,4683 25796,4823
 Josef-Nawrocki-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25695,4714 25554,4758 25552,4829
@@ -3409,9 +3415,11 @@ Reinickendorfer Str.: Einbahnstraßenregelung im Bereich des Weddingplatzes: gege
 Holteistr.: Hochbauarbeiten, Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 14535,11327 14506,11275
 Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 5522,8011 5520,8132 5573,8197
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 8266,14346 8442,14456
+(Planstraße C): Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 12848,11093 12926,11224
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9441,12670 9429,12728 9402,12792 9386,12833 9375,12911
 Johannisstr.: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174 9254,13171
 Taubenstr.: Bauarbeiten, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 9207,11880 9138,11872
+Mauerstr.: Bauarbeiten, Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 9138,11872 9171,11777
 (Los-Angeles-Platz): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 5669,10704 5822,10609
 Adele-Schreiber-Krieger-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 8735,12780 8589,12772
 Weinmeisterhornweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; -4798,11231 -4579,11174
