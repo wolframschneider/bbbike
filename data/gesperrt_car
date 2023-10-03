@@ -1716,7 +1716,7 @@ Fasanenstr. (Ahrensfelde): Poller	3 22092,19121 22031,19261 21895,19198
 Fasanenstr. (Ahrensfelde): Poller	3 22092,19121 22031,19261 22012,19308
 Fasanenstr. (Ahrensfelde): Poller	3 22092,19121 22031,19261 22049,19268
 Oelder Weg	1 1967,18743 1965,18686
-Bernhard-Lichtenberg-Platz	1 2643,18738 2731,18729 2867,18736
+Bernhard-Lichtenberg-Platz	1 2680,18757 2696,18733 2714,18731 2731,18729 2867,18736
 Fasanenstr.	1 5196,10398 5212,10661 5215,10711 5217,10736 5230,10919 5232,10947 5236,10994 5240,11047 5254,11237 5258,11285
 Straßenbahntrasse	3nocross::ignrte 12030,15968 12061,16091 12075,16144 12090,16199
 Prenzlauer Allee -> Krügerstr.: Straßenbahntrasse	3::igndisp 12061,16091 12075,16144 12013,16120
@@ -2455,3 +2455,9 @@ Breitscheidpl. -> Tauentzienstr.: Mittelstreifen provisorisch gesperrt	3::igndis
 Breitscheidpl. -> Rankestr.: Mittelstreifen provisorisch gesperrt	3::igndisp 5829,10964 5782,10884 5669,10704
 Stavangerstr.: Einfahrt verboten	1 10886,16893 10883,16824
 Plantagenplatz (Potsdam)	1 -9910,-1626 -9874,-1551
+Karl-Marx-Str. (Neuruppin)	1 -31383,56815 -31286,56937
+Karl-Marx-Str. (Neuruppin)	1 -31198,57050 -31117,57152
+Kirchstr. (Rheinsberg): Durchfahrt gesperrt	3 -25723,76533 -25719,76480 -25711,76478
+Kirchstr. (Rheinsberg): Durchfahrt gesperrt	3 -25723,76533 -25719,76480 -25728,76481
+Kirchstr. (Rheinsberg): Durchfahrt gesperrt	3 -25711,76478 -25719,76480 -25723,76533
+Kirchstr. (Rheinsberg): Durchfahrt gesperrt	3 -25728,76481 -25719,76480 -25723,76533

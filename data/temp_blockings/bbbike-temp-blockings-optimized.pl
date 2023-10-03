@@ -1,926 +1,6 @@
-$#temp_blocking = 730;
+$#temp_blocking = 1624;
 push @temp_blocking,
 (
-       {
-         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20201002
-#: by: https://twitter.com/VIZ_Berlin/status/1312229648558850048
-#: by: https://pbs.twimg.com/media/EjX56WOWoAIPRUg?format=png&name=900x900
-#: by: https://www.berlin.de/events/4531106-2229501-schoeneberger-kuerbisfest.html (geplant für 2.+3.10.2021)
-#: by: https://www.eventbrite.com/e/22-schoneberger-kurbisfest-tickets-165249199805
-	2::temp 7001,9291 7012,9222 7035,9161 7101,9027 7201,8870
-	2::temp 6945,9142 7035,9161
-	2::temp 6975,8944 7101,9027 7308,9163
-	2::temp 7012,9222 7124,9226
-',
-         'from' => 1695978000,
-         'id' => 731,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              30,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Schöneberger Kürbisfest, Akazien- und Belziger Str. gesperrt, 30.09.2023 bis 01.10.2023',
-         'type' => 'gesperrt',
-         'until' => 1696197599
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'data' => '#: by: https://www.stadtrand-nachrichten.de/griebnitzsee-steglitz-zehlendorf-berlin/
 	2::temp -8625,-1176 -8700,-997 -8813,-933 -8913,-813 -9116,-737 -9254,-656 -9358,-537 -9375,-502 -9445,-377 -9585,-277 -9795,-230
@@ -1750,7 +830,7 @@ Pestalozzistr.	q4::temp:clock 4101,11233 3981,11232
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2636,11 +1716,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: https://berliner-abendblatt.de/berlin-news/baederbetriebe-investieren-so-viel-wie-nie-id209419
 #: by: https://www.berlin.de/special/sport-und-fitness/adressen/schwimmbad/stadtbad-tiergarten-4f143a00b4fc475f0b8d1000.html (Wiedereröffnung für 2023 geplant)
 #: by: https://www.berliner-woche.de/moabit/c-bauen/anbieter-fuer-die-umkleiden-ausgefallen_a390371 (Fertigstellung im dritten Quartal 2023)
-#: osm_watch: way id="462738551" version="18"
+#: osm_watch: way id="462738551" version="19"
 #: osm_watch: way id="848019125" version="6"
 #: add_fragezeichen: Besteht die Sperrung weiterhin?
-#: last_checked: 2023-08-28 (osm)
-#: next_check: 2023-09-30
+#: last_checked: 2023-09-29 (osm)
+# REMOVED --- #: next_check: 2023-09-30
 	2::inwork 7306,13418 7402,13475
 # REMOVED ---	2::inwork 7402,13475 7422,13487 7451,13504 7630,13584
 ',
@@ -3407,19 +2487,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2019/pressemitteilung.813076.php (ab August 2019)
-#: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/berlins-erste-spielstrasse_a216586 (ab 7. August 2019)
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
-	q4::temp::play 11175,9882 11197,9894 11411,9810
-',
-         'from' => 1680213600,
-         'id' => 3145,
-         'recurring' => 1,
-         'text' => 'Böckhstr.: zwischen Grimmstr. und Graefestr. mittwochs zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.4. bis 30.9.',
-         'type' => 'handicap',
-         'until' => 1696089600
-       },
+       undef,
        undef,
        {
          'data' => '#: tempex: sunset-T08 vvv
@@ -3476,7 +2544,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
        {
          'data' => '#: next_check_id: WRIEZENERPARK-2019
 #: XXX "voraussichtlich ab September 2023 können die neuen Wege genutzt werden", aber weitere Bauarbeiten bis Ende Oktober 2023
-#: last_checked: 2023-09-27 vvv
+#: last_checked: 2023-10-03 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2023-08-31 vvv
 # REMOVED (hier nicht) ---	2::inwork 13172,11651 13239,11567
@@ -3622,21 +2690,7 @@ außerhalb der Arbeitszeiten Zugang möglich, Rampe ist aber noch enger als sonst	
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/an-einem-nachmittag-im-monat-wird-die-gudvanger-strasse-nun-offiziell-gesperrt_a274891 (hier: ab Juli 2020)
-#: by: http://www.spielstrassen.de/initiativen.php?init=Templiner_Str (hier: ab 30.6.2020, Hausnummern 15 bis 19)
-#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/fuer-die-spielstrasse-unterschreiben_a277858
-#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/templiner-strasse-wird-spielstrasse_a276796 (Hausnummern hier vermutlich falsch)
-#: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/templiner-strasse-ist-temporaere-spielstrasse_a392084 (mittlerweile von Mai bis September)
-	q4::temp::play 10670,14116 10716,14195 10739,14228
-',
-         'from' => 1682892000,
-         'id' => 3253,
-         'recurring' => 1,
-         'text' => 'Templiner Str.: zwischen Zionskirchstr. und Schwedter Str. dienstags zwischen 15 Uhr und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 1.5. bis 30.9. (außer Schulferien)',
-         'type' => 'handicap',
-         'until' => 1696089600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3840,7 +2894,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: confirmed_by: srt (Sackgassenschild am nördlichen und südlichen Ende, als Fußgänger und Radfahrer kommt man durch) (mittlerweile sieht es ganz anders aus)
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="29"
-#: osm_watch: way id="165832806" version="32"
+#: osm_watch: way id="165832806" version="33"
 #: last_checked: 2023-09-24
 #: check_frequency: 14d
 	2::inwork 17380,8858 17416,8767 17468,8692 17497,8623 17515,8567 17524,8536 17533,8505 17554,8458 17588,8413
@@ -3961,55 +3015,10 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
-# REMOVED --- #: XXX wird diese Spielstraße verstetigt? --- #: last_checked: 2021-05-13 --- #: next_check: 2022-05-17
-	q4::temp::play 13273,12902 13371,12694
-',
-         'from' => 1682805600,
-         'id' => 3368,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Richard-Sorge-Str.: zwischen Mühsamstr. und Straßmannstr. sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09., außer in den Sommerferien',
-         'type' => 'handicap',
-         'until' => 1696089600
-       },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
-# REMOVED --- #: XXX Spielstraße wurde möglicherweise verstetigt; genaue Geltungszeiten? --- #: last_checked: 2021-05-12 --- #: next_check: 2022-05-12
-	q4::temp::play 14468,11203 14531,11142
-',
-         'from' => 1682805600,
-         'id' => 3369,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Simplonstr.: zwischen Helmerdingstr. und Matkowskystr. mittwochs zwischen 15.30 und 18.30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09., außer in den Sommerferien',
-         'type' => 'handicap',
-         'until' => 1696091400
-       },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
-# REMOVED --- #: XXX Spielstraße wurde verstetigt; genaue Geltungszeiten? --- #: next_check: 2022-05-14
-	q4::temp::play 11258,10682 11334,10527
-',
-         'from' => 1682805600,
-         'id' => 3370,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Dresdener Str.: zwischen Erkelenzdamm und NKZ freitags zwischen 15 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.05. bis 30.09., außer in den Sommerferien',
-         'type' => 'handicap',
-         'until' => 1696089600
-       },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
-# REMOVED (ja, Schilder hängen) --- #: XXX wird diese Spielstraße verstetigt? --- #: next_check: 2022-05-31
-	q4::temp::play 12286,9739 12398,9938
-',
-         'from' => 1685484000,
-         'id' => 3371,
-         'recurring' => 1,
-         'source_id' => 'https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1084386.php',
-         'text' => 'Forster Str.: zwischen Reichenberger Str. und Paul-Lincke-Ufer sonntags zwischen 14 und 18 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, vom 01.06. bis 30.09., außer in den Sommerferien',
-         'type' => 'handicap',
-         'until' => 1696089600
-       },
+       undef,
+       undef,
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -4374,7 +3383,7 @@ Einfahrt Baseler Str.: Fahrbahn gesperrt	q3::inwork 3184,3427 3174,3052
          'data' => '#: next_check_id: SPREEUFER-2022
 #: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
 #: note: Kann außerhalb der Arbeitszeiten offen sein, gesehen am 2022-12-26, 2022-12-28, 2023-02-25 (Sa), 2023-06-11 (So), 2023-06-23 (Fr) gegen 20 Uhr, 2023-07-01 (Sa) vvv
-#: last_checked: 2023-09-25 (osm) vvv
+#: last_checked: 2023-09-30 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-02-12 vvv
 # REMOVED (laut daf freigegeben) --- #: osm_watch: way id="4395450" version="36" ---	2::inwork 7031,12320 6694,12627
@@ -4487,7 +3496,7 @@ Einfahrt Baseler Str.: Fahrbahn gesperrt	q3::inwork 3184,3427 3174,3052
 #: by: https://www.deutsches-architekturforum.de/thread/14587-revitalisierung-b%C3%BCrokomplex-kalle-neuk%C3%B6lln-in-bau/
 #: by: https://www.kalle-neukoelln.com/#architektur (Erstbezüge ab 2022 möglich)
 #: osm_watch: way id="734271970" version="5"
-#: osm_watch: way id="975241319" version="6"
+#: osm_watch: way id="975241319" version="7"
 #: osm_watch: way id="970452276" version="5"
 #: also_indoor: traffic (none)
 #: last_checked: 2023-09-23
@@ -4715,7 +3724,8 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
        undef,
        undef,
        {
-         'data' => '	2::inwork -3475,26523 -3556,26560
+         'data' => '#: note: auch für Fußgänger gesperrt
+	2::inwork -3475,26523 -3556,26560
 ',
          'from' => 1659852000,
          'id' => 3613,
@@ -4878,17 +3888,19 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
 #: osm_watch: way id="8039689" version="17"
 #: XXX Wie lange bleibt das Gelände gesperrt? Bei osm ist der Tunnel als "abandoned" gekennzeichnet. vvv
 #: note: Wachschutz an der Einfahrt "Zum Flughafen Tegel", theoretisch kan man über die Straße zur Luftfracht auf das Gelände gelangen
-#: last_checked: 2023-03-18 vvv
+#: last_checked: 2023-10-03 vvv
 #: check_frequency: 180d vvv
 #: next_check: 2026-12-31 vvv
 	2 2987,16486 2869,16464 2832,16376 2847,16348 2839,16337 2800,16368 2720,16353 2696,16271 2757,16194
 # REMOVED (hier keine Einschränkungen) ---	2::temp 2226,16096 2290,16022 2580,15939 2595,15922 2604,15875 2638,15842 2701,15853 2787,15870
-	2 2787,15870 2828,15903 2880,15884 2787,15870
-	2 2996,15930 2960,15847 2944,15880 2913,15944 2880,15908 2828,15903 2810,15931 2818,15966 2846,15986 2954,16006 2988,15999 3009,15965 2996,15930 2977,15923 2949,15922 2913,15944 2892,15983
-Brückenabriss, Komplettsperrung	2::temp 2892,15983 2809,16143
+# REMOVED (hier nicht mehr) ---	2 2787,15870 2828,15903 2880,15884 2787,15870
+# REMOVED ---	2 2996,15930 2960,15847
+# REMOVED ---	2 2960,15847 2944,15880 2913,15944
+# REMOVED ---	2 2913,15944 2880,15908 2828,15903 2810,15931 2818,15966 2846,15986 2954,16006 2988,15999 3009,15965 2996,15930 2977,15923 2949,15922 2913,15944 2892,15983
+# REMOVED ---	2 2880,15884 2960,15847
+Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 	2 2809,16143 2757,16194 2709,16291 2692,16326 2621,16344 2552,16330 2517,16380 2538,16435 2601,16447 2638,16406 2675,16361 2733,16343 2812,16348 2853,16293 2839,16337
 	2 2809,16143 2853,16293
-	2 2880,15884 2960,15847
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -5010,7 +4022,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 #: add_fragezeichen: Ist die Fahrbahn der Speyerer Str. weiterhin gesperrt?
 #: also_indoor: traffic (ex-B)
 #: osm_watch: way id="1055654058" version="2"
-#: last_checked: 2023-09-20
+#: last_checked: 2023-10-01 (daf)
 #: check_frequency: 150d
 #: next_check: 2025-01-05
 	q3::inwork 6447,9661 6348,9541
@@ -5046,24 +4058,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: SCHOENFLIESSER-2023
-#: by: https://nitter.cz/VIZ_Berlin/status/1592390689735659522#m
-#: by: https://nitter.cz/pic/orig/media%2FFhimJ7cWQAU90M2.jpg (keine Regelung für Radfahrer)
-#: by: https://nitter.cz/pic/orig/media%2FFhimJQXWYAAo6bf.jpg
-#: source_id: viz2021:13.29209,52.64198,15.11.2022,07:30 (bis 07.08.2023) (inaktiv)
-#: source_id: viz2021:13.288823,52.641792,15.11.2022,07:30 (bis 30.09.2023) (inaktiv)
-#: note: Fahrbahn wird neu gemacht
-	q4::inwork 2112,26066 2207,26090 2293,26111
-#: note: Vorbereitungen für Neubau der Fahrbahn
-	q3::inwork 2293,26111 2402,26121
-',
-         'from' => 1668540097,
-         'id' => 3683,
-         'text' => 'Schönfließer Str.: Bauarbeiten zwischen Senheimer Str. und Gollanczstr., bis 30.09.2023',
-         'type' => 'handicap',
-         'until' => 1696086000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -5221,7 +4216,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 #: note: osm watch zu Bauarbeiten am Nachbargrundstück (ehemals Klinik)
 #: osm_watch: way id="156800019" version="5"
 #: also_indoor: traffic (none)
-#: last_checked: 2023-09-15
+#: last_checked: 2023-10-02
 #: check_frequency: 30d
 	2::inwork 12173,15040 12095,14888
 ',
@@ -5546,19 +4541,7 @@ Zugang zum Uferweg	2::inwork 5800,12361 5796,12372
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: note: auch der Radweg ist nicht benutzbar; mittlerweile (2023-09-20) sind zwar noch Absperrungen da, aber die Fahrbahn ist weitgehend nutzbar, bis Ende September 2023 auslaufen lassen
-#: last_checked: 2023-09-20
-#: next_check: 2023-09-30
-	q4::inwork -3681,11767 -3636,11777 -3524,11980
-',
-         'from' => 1662328800,
-         'id' => 3771,
-         'text' => 'Tharsanderweg: Bauarbeiten, Fahrbahn zwischen Pichelsdorfer Str. und Grimnitzseeweg gesperrt, voraussichtlich bis September 2023',
-         'type' => 'handicap',
-         'until' => 1696089600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -5882,7 +4865,7 @@ Gustav-Tempel-Str.	2::inwork 15261,10738 15245,10719 15236,10684 15220,10682 152
        },
        undef,
        {
-         'data' => '#: last_checked: 2023-09-27
+         'data' => '#: last_checked: 2023-10-03
 #: next_check: 2023-10-15
 	q3::inwork 12632,12630 12690,12769
 ',
@@ -5896,7 +4879,7 @@ Gustav-Tempel-Str.	2::inwork 15261,10738 15245,10719 15236,10684 15220,10682 152
        {
          'data' => '#: source_id: viz2021:13.301971,52.571657,21.03.2023,09:00
 #: also_indoor: traffic (H,G,W)
-#: last_checked: 2023-05-18
+#: last_checked: 2023-10-03
 #: check_frequency: 360d
 #: next_check: 2024-12-31
 	q2::inwork 3213,18115 3420,18470
@@ -5909,7 +4892,10 @@ Gustav-Tempel-Str.	2::inwork 15261,10738 15245,10719 15236,10684 15220,10682 152
        },
        {
          'data' => '#: source_id: viz2021:13.298741,52.573871,27.03.2023,09:00
-#: XXX wie groß sind die Einschränkungen hier?
+#: note: außerhalb der Arbeitszeiten (gesehen 2023-10-03) kann die Fahrbahn offen sein
+#: last_checked: 2023-10-03
+#: check_frequency: 360d
+#: next_check: 2024-12-31
 	q2::inwork 3267,18767 3008,18464
 ',
          'from' => 1687609413,
@@ -5967,16 +4953,20 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
 #: by: https://nitter.net/ChBroome/status/1693319948246876425 (Sperrung hat wohl noch nicht begonnen (20.8.2023))
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1367360.php (neuer Zeitraum)
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2023/umleitungsstrecke-radverkehr-kronprinzessinnenweg.pdf?ts=1695129056
+#: by[nocache]: https://nitter.net/VIZ_Berlin/status/1707745207880478781#m (neuer Start: 5.10.2023)
+#: by: https://viz.berlin.de/2023/09/kronprinzessinnenweg/ (2024+2025 kann es auch zu Vollsperrungen abends + am Wochenende kommen)
+#: by: https://www.stadtrand-nachrichten.de/kronprinzessinnenweg-steglitz-zehlendorf-berlin/
+#: by: https://www.berliner-woche.de/zehlendorf/c-verkehr/kronprinzessinnenweg-voll-gesperrt_a394925
 #: osm_watch: way id="50830991" version="25"
 # REMOVED --- #: add_fragezeichen: Wann beginnen die Bauarbeiten im Kronprinzessinnenweg?
 #: last_checked: 2023-09-14 (mapillary)
-#: next_check: 2023-10-02
+#: next_check: 2023-10-05
 	2::inwork -927,6888 -2218,5133 -3296,3686
 ',
          'from' => 1695149689,
          'id' => 3849,
-         'prewarn_days' => 13,
-         'text' => 'Kronprinzessinnenweg: zukünftig Sperrung zwischen Havelchaussee und Hüttenweg, montags bis freitags 7 bis 18 Uhr, Start der Bauarbeiten voraussichtlich am 2.10.2023, Ende der Bauarbeiten am 31.08.2025',
+         'prewarn_days' => 16,
+         'text' => 'Kronprinzessinnenweg: zukünftig Sperrung zwischen Havelchaussee und Hüttenweg, montags bis freitags 7 bis 18 Uhr, Start der Bauarbeiten voraussichtlich am 5.10.2023, Ende der Bauarbeiten am 31.08.2025',
          'type' => 'gesperrt',
          'until' => 1756677599
        },
@@ -6034,9 +5024,9 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
          'from' => 1689487200,
          'id' => 3864,
          'source_id' => 'LS/221-F/23/091',
-         'text' => 'Falkenberg - Berkenbrück: Bauarbeiten, Sperrung, vom 17.07.2023, 08:00 Uhr bis 30.09.2023, 16:00 Uhr',
+         'text' => 'Falkenberg - Berkenbrück: Bauarbeiten, Sperrung, vom 17.07.2023, 08:00 Uhr bis 20.10.2023, 16:00 Uhr',
          'type' => 'gesperrt',
-         'until' => 1696082400
+         'until' => 1697810400
        },
        {
          'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1683787104650682368#m (für vsl. vier Wochen)
@@ -6055,17 +5045,7 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
        },
        undef,
        undef,
-       {
-         'data' => '#: note: nur beim rbb
-#: also_indoor: traffic (G,B,W)
-	q4::inwork 2350,11269 2340,11223 2365,11179
-',
-         'from' => 1690486388,
-         'id' => 3868,
-         'text' => 'Riehlstr.: Bauarbeiten, zwischen Wundtstr. und Dresselstr. gesperrt., evtl. sind auch Radfahrer betroffen, bis 30.09.2023',
-         'type' => 'handicap',
-         'until' => 1696111199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -6107,6 +5087,7 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/erneute-sperrung-der-bahnhofstrasse-am-bahnhof-koepenick-verschaerft-die-verkehrssituation_a390734
 #: by: https://www.berliner-zeitung.de/mensch-metropole/berlin-verkehr-bvg-db-stress-im-osten-so-lange-wird-die-bahnhofstrasse-in-koepenick-gesperrt-li.381296
 #: by: https://viz.berlin.de/2023/08/bahnhofstr/
+#: by: https://www.youtube.com/watch?v=Y73X25IYfTM
 #: XXX nach der Sperrung muss der alte Eintrag (für Radfahrer Richtung Norden gesperrt) wieder aktiviert werden --- kann bereits kurz nach dem 28.8.2023 passieren
 #: source_id: bvg2021:269#BVG326513_0
 #: source_id: bvg2021:63#BVG326792_0
@@ -6215,7 +5196,7 @@ südlicher Weg	2::inwork 10168,10085 10066,10071
        {
          'data' => '#: next_check_id: VIRCHOW-2023
 #: source_id: viz2021:13.342776,52.539414,01.06.2023,08:00 (bis 30.12.2023)
-#: last_checked: 2023-08-17
+#: last_checked: 2023-10-03
 #: check_frequency: 60d
 #: next_check: 2023-12-30
 	2::inwork 6213,14777 6210,14808
@@ -6253,6 +5234,7 @@ südlicher Weg	2::inwork 10168,10085 10066,10071
        {
          'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1360467.php (Erwähnung des SEVs, bis 13.04.2023)
 #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/
+#: by: https://www.youtube.com/watch?v=m7OQ0dpU-FI
 #: source_id: viz2021:13.51409,52.4624,28.08.2023,16:30 (bis 11.04.2024)
 #: last_checked: 2023-09-24
 #: check_frequency: 60d
@@ -6404,14 +5386,18 @@ südlicher Weg	2::inwork 10168,10085 10066,10071
          'until' => 1698444000
        },
        {
-         'data' => '#: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: also_indoor: traffic (none)
-#: last_checked: 2023-09-23
+         'data' => '#: add_fragezeichen: Sind die Bauarbeiten beendet? vvv
+#: also_indoor: traffic (none) vvv
+#: last_checked: 2023-09-23 vvv
 	q4::inwork; 13314,8624 13227,8692 13138,8762
+	q3::inwork 13227,8692 13173,8623
+#: last_checked ^^^
+#: also_indoor ^^^
+#: add_fragezeichen ^^^
 ',
          'from' => undef,
          'id' => 3916,
-         'text' => 'Wildenbruchplatz: Bauarbeiten, Einbahnstraßenregelung',
+         'text' => 'Wildenbruchplatz: Bauarbeiten, Einbahnstraßenregelung; außerdem ist die Anbindung Finowstr. gesperrt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -6497,16 +5483,7 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: viz2021:13.610678,52.514967,26.09.2023,07:00 (Leitungsbaustelle, bis 6.10.2023)
-	q4::inwork 24530,12296 24434,12402 24354,12510
-',
-         'from' => 1695618000,
-         'id' => 3923,
-         'text' => 'Ridbacher Str.: Bauarbeiten zwischen Hönower Str. und Briesener Weg, Sperrung, angeblich sind auch Radfahrer betroffen, vom 26.09.2023 07:00 bis 06.10.2023 17:00',
-         'type' => 'handicap',
-         'until' => 1696604400
-       },
+       undef,
        undef,
        {
          'data' => '#: source_id: viz2021:13.408994,52.511691,25.09.2023,07:00 (bis 30.10.2023, hier fälschlicherweise nur für den Kfz-Verkehr)
@@ -6531,6 +5508,57 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
          'text' => 'Clara-Wieck-Str.: vor der Einmündung Tiergartenstr. Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Ende März 2024',
          'type' => 'handicap',
          'until' => 1711922399
+       },
+       {
+         'data' => '	q4::inwork 3486,12473 3606,12484 3747,12495
+',
+         'from' => 1696150800,
+         'id' => 3927,
+         'source_id' => 'viz2021:13.30431,52.51913,02.10.2023,11:00',
+         'text' => 'Brauhofstr.: Bauarbeiten in Höhe Eosanderstr., evtl. sind auch Radfahrer betroffen, vom 02.10.2023 11:00 bis 30.10.2023 17:00',
+         'type' => 'handicap',
+         'until' => 1698681600
+       },
+       {
+         'data' => '	q4::inwork 13598,13180 13692,13221
+',
+         'from' => 1696309200,
+         'id' => 3928,
+         'source_id' => 'viz2021:13.452867,52.524141,04.10.2023,07:00',
+         'text' => 'Ebelingstr.: Anbindung Ebertystr. gesperrt, vom 04.10.2023 07:00 bis 15.11.2023 17:00',
+         'type' => 'handicap',
+         'until' => 1700064000
+       },
+       {
+         'data' => '	q4::inwork 12349,8464 12494,8501
+',
+         'from' => 1696312800,
+         'id' => 3929,
+         'source_id' => 'viz2021:13.432818,52.481758,04.10.2023,08:00',
+         'text' => 'Flughafenstr.: Anbindung Karl-Marx-Str. gesperrt, auch Radfahrer sind betroffen, vom 04.10.2023 08:00 bis 17.11.2023 17:00',
+         'type' => 'handicap',
+         'until' => 1700236800
+       },
+       {
+         'data' => '	q4::inwork 2702,10006 2687,10053
+',
+         'from' => 1696309200,
+         'id' => 3930,
+         'source_id' => 'viz2021:13.290205,52.497012,04.10.2023,07:00',
+         'text' => 'Georg-Wilhelm-Str.: Anbindung Kurfürstendamm gesperrt, evtl. sind auch Radfahrer betroffen, vom 04.10.2023 07:00 bis 15.11.2023 17:00',
+         'type' => 'handicap',
+         'until' => 1700064000
+       },
+       {
+         'data' => '#: note: Bauarbeiten beginnen etwa 120m östlich der Föhrer Str., keine Bordsteinabsenkung, alter abgesperrter Radweg existiert als mögliche Umfahrung
+#: source_id: viz2021:13.348039,52.538941,25.09.2023,07:00 (hier nur Kfz-Verkehr betroffen, bis 18.09.2024)
+	q2::inwork 6334,14756 6513,14725 6596,14740 6709,14782
+',
+         'from' => 1695531600,
+         'id' => 3931,
+         'text' => 'Nordufer: zwischen Fehmarner Str. und Föhrer Str. Bauarbeiten, Sperrung der Fahrbahn, vom 25.09.2023 07:00 bis 18.09.2024 17:00',
+         'type' => 'handicap',
+         'until' => 1726671600
        }
      
 );
