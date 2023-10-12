@@ -1719,7 +1719,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: osm_watch: way id="462738551" version="19"
 #: osm_watch: way id="848019125" version="6"
 #: add_fragezeichen: Besteht die Sperrung weiterhin?
-#: last_checked: 2023-09-29 (osm)
+#: last_checked: 2023-10-11
 # REMOVED --- #: next_check: 2023-09-30
 	2::inwork 7306,13418 7402,13475
 # REMOVED ---	2::inwork 7402,13475 7422,13487 7451,13504 7630,13584
@@ -2130,20 +2130,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (404) --- #: by: https://pictures.construction.camera/construction-camera/661BerlinAERA/FullHD102570/webcam.jpg (Webcam)
 #: by: https://www.deutsches-architekturforum.de/thread/12710-am-spreebord-ehem-werkbundstadt-areal-charlottenburg/?postID=705260#post705260
 #: by: https://www.berliner-woche.de/charlottenburg/c-bauen/abriss-hat-begonnen_a388837
+#: by: https://www.deutsches-architekturforum.de/thread/15062-bauprojekte-auf-der-mierendorff-insel-und-in-charlottenburg-nord/?postID=749078#post749078
 #: source_id: viz2021:13.30619,52.5212,30.01.2023,13:52 (bis 14.4.2023) (inaktiv)
 #: source_id: viz2021:13.310551,52.521111,01.03.2022,08:00 (hier: zwischen Sömmering- und Darwinstr., Radfahrer frei) (bis 31.3.2023) (bis 14.4.2023) (inaktiv)
 #: source_id: viz2021:13.313479,52.521076,26.06.2023,06:00 (bis 31.12.2023) (inaktiv)
 #: note: bei rbb weiterhin gelistet, bis Ende 2023, mittlerweile bis Ende 2024
-#: last_checked: 2023-07-22
+#: last_checked: 2023-10-08 (daf)
 # REMOVED --- #: check_frequency: 90d
 #: next_check: 2023-12-31
 # REMOVED (hier nicht mehr) ---	q4::inwork 4234,12710 4303,12692
-	q3::inwork 3828,12697 3981,12709 4071,12720
+	q4::inwork 3828,12697 3981,12709 4071,12720
 # REMOVED (hier nicht) ---	q3::inwork 4071,12720 4124,12721
 ',
          'from' => 1687804758,
          'id' => 2961,
-         'text' => 'Am Spreebord: Bauarbeiten, Abschnitte der Fahrbahn gesperrt, Radfahrer können auf den Gehweg ausweichen, voraussichtlich bis Ende 2023',
+         'text' => 'Am Spreebord: Bauarbeiten, Abschnitte der Fahrbahn gesperrt, Radfahrer sollen absteigen, voraussichtlich bis Ende 2023',
          'type' => 'handicap',
          'until' => 1704063599
        },
@@ -2212,7 +2213,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
 #: XXX kaum noch Bauarbeiten, aber die Schilder sind geblieben --- vielleicht permanent?
-#: last_checked: 2023-09-28
+#: last_checked: 2023-10-10
 #: check_frequency: 30d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -2257,7 +2258,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 # REMOVED (zwar steht ein Radfahren-verboten-Schild an der Hönower Str., aber die Radspur bis zur Waldowallee existiert weiterhin und die Ampel funktioniert auch noch) ---	q4::inwork; 18875,9570 18878,9517
 #: last_checked: 2023-08-28
 Treskowallee	q4::inwork; 18878,9517 18867,9464 18834,9256 18809,9133 18790,9018 18770,8898 18737,8686
-#: last_checked: 2023-08-28
+#: last_checked: 2023-10-09
 Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: next_check ^^^
 #: check_frequency ^^^
@@ -2895,14 +2896,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="29"
 #: osm_watch: way id="165832806" version="33"
-#: last_checked: 2023-09-24
+#: last_checked: 2023-10-09
 #: check_frequency: 14d
 	2::inwork 17380,8858 17416,8767 17468,8692 17497,8623 17515,8567 17524,8536 17533,8505 17554,8458 17588,8413
 # REMOVED (hier weitgehend fertig) ---	2::inwork 17588,8413 17617,8363 17652,8349 17707,8328 17753,8290
 ',
          'from' => undef,
          'id' => 3327,
-         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Straßenarbeiten gesperrt sein (Stand Ende September 2023: keine Sperrung)',
+         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Straßenarbeiten gesperrt sein (Stand Anfang Oktober 2023: keine Sperrung)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3255,8 +3256,9 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        {
          'data' => '#: by: https://www.berlinhyp.de/de/media/newsroom/berlin-hyp-baut-neue-unternehmenszentrale-b-one-nach-h%C3%B6chsten-energiestandards (fertig: Ende 2023)
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/b-one-berlin-hyp-ag-neubau.955/#post-17434
+#: by: https://www.deutsches-architekturforum.de/thread/14423-neubau-firmenzentrale-der-berlin-hyp-mitte-in-bau/?postID=749004#post749004
 # REMOVED (no webcam found) --- #: by: https://baustelle.strabag.com/deutschland?tx_ecxsitebaustelle_webcam%5Baction%5D=detail&tx_ecxsitebaustelle_webcam%5Bcontroller%5D=Webcam&tx_ecxsitebaustelle_webcam%5Bday%5D=4&tx_ecxsitebaustelle_webcam%5Bmonth%5D=05&tx_ecxsitebaustelle_webcam%5Buid%5D=300&tx_ecxsitebaustelle_webcam%5Byear%5D=2022&cHash=96b9a3ee3c205301473cfbdb541e9d2a (Webcam)
-#: last_checked: 2023-09-26
+#: last_checked: 2023-10-06 (daf)
 #: check_frequency: 120d
 #: next_check: 2023-12-31
 	q3::inwork; 6626,11178 6549,11015
@@ -3333,37 +3335,14 @@ Einfahrt Baseler Str.: Fahrbahn gesperrt	q3::inwork 3184,3427 3174,3052
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: SPREEUFER-2022
-#: XXX Laut Pressemitteilung dauern die Bauarbeiten zwei Jahre (dieser oder alle Bauabschnitte)? vvv
-#: XXX laut daf wird südlich Flotowstr. erst weitergemacht, wenn die Uferwand saniert ist
-#: add_fragezeichen: Ist der Uferweg noch immer wegen Bauarbeiten gesperrt? vvv
-#: last_checked: 2023-07-22 vvv
-#: check_frequency: 30d vvv
-#: next_check: 2024-02-12 vvv
-#: osm_watch: way id="4993234" version="22"
-	2::inwork 5714,12290 5770,12346 5796,12372 5940,12564
-#: XXX laut osm hier fertiggestellt, aber es sind weiterhin Bauarbeiten und Sperrungen möglich
-#: osm_watch: way id="4410535" version="28"
-	2::inwork 5940,12564 5953,12592 6001,12699 6045,12830 6123,12887 6182,12900
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
-#: add_fragezeichen ^^^
-#: XXX ^^^
-',
-         'from' => 1643583600,
-         'id' => 3507,
-         'source_id' => 'https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2022/pressemitteilung.1172556.php',
-         'text' => 'Spreeuferweg: Bauarbeiten, zwischen Wullenwebersteg und Lessingbrücke kann der Uferweg gesperrt sein, ab Anfang Februar 2022 (Stand Mitte Juli 2023: weiterhin Bauarbeiten, aber Weg kann zeitweise offen sein)',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1346703.php (Bauarbeiten 2023)
 #: by: https://www.berliner-woche.de/lankwitz/c-bauen/gallwitzallee-voll-gesperrt_a388570
-#: source_id: viz2021:13.346141,52.433697,31.07.2023,07:00 (hier: Sperrung der Gallwitzallee, bis 25.10.2023) (bis 10.10.2023)
+#: by: https://viz.berlin.de/2023/10/verkehrsvorschau-101023/
+#: source_id: viz2021:13.346141,52.433697,31.07.2023,07:00 (hier: Sperrung der Gallwitzallee, bis 25.10.2023) (bis 10.10.2023) (inaktiv)
+#: source_id: viz2021:13.346381,52.43193,10.10.2023,07:00 (bis 15.11.2023)
 #: also_indoor: traffic (none)
 #: last_checked: 2023-08-05
 # REMOVED --- #: check_frequency: 90d
@@ -3433,7 +3412,7 @@ Einfahrt Baseler Str.: Fahrbahn gesperrt	q3::inwork 3184,3427 3174,3052
 #: also_indoor: traffic (B,H(unvollständig),G)
 #: osm_watch: way id="1047544509" version="2"
 #: osm_watch: way id="1047544510" version="1"
-#: last_checked: 2023-10-04 vvv
+#: last_checked: 2023-10-11 (mapillary) vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-12-31 vvv
 	q4::inwork 13797,7267 13762,7321
@@ -3827,7 +3806,7 @@ Mellener Str./Löptener Str.	q4::inwork; 10756,-2128 10758,-1949 10906,-1946 1098
 #: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
 #: osm_watch: way id="1094113747" version="1"
 #: also_indoor: traffic (none)
-#: last_checked: 2023-08-20
+#: last_checked: 2023-10-08 (daf)
 #: check_frequency: 180d
 #: next_check: 2024-06-30
 	q4::inwork; 3429,13227 3400,13107
@@ -3917,7 +3896,7 @@ Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
        {
          'data' => '#: by: https://www.bahninfo-forum.de/read.php?9,721782,722126#msg-722126
 #: by: https://www.bahninfo-forum.de/read.php?9,725584,728443#msg-728443 (nur nachts/am Wochenende zu?)
-	2::temp:clock -107,12220 -76,12236 -45,12243
+	2::temp:clock -107,12220 -76,12236 -10,12256
 ',
          'from' => undef,
          'id' => 3644,
@@ -3926,34 +3905,13 @@ Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: next_check_id: MACHANDELWEG-2022
-#: by: https://www.youtube.com/watch?v=-UWvhPunrr8 (Sperrung der Fußgängerbrücke wegen Bauarbeiten ab November 2022)
-#: by: https://www.berliner-woche.de/westend/c-bauen/rohbau-fuer-neues-ausbildungszentrum-fertig_a360518 (Haben die Bauarbeiten hier etwas damit zu tun? Fertigstellung Herbst 2023)
-#: by: https://www.bahninfo-forum.de/read.php?9,690942,747836#msg-747836 (vom 7.11.2022 bis zum 17.3.2023?)
-#: by: https://www.bahninfo-forum.de/read.php?9,748153,748153#msg-748153
-#: by: https://www.berliner-woche.de/westend/c-bauen/bvg-baut-neue-bruecke_a362501
-#: by: https://berliner-abendblatt.de/berlin-news/u2-faehrt-ab-freitag-wieder-bis-ruhleben-id212852
-#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8678 (wird noch immer gebaut?)
-#: source_id[inactive]: bvg2021:u2#BVG311197_0 (bis 17.3.2023)
-#: add_fragezeichen: Wann wird der Durchgang für die Öffentlichkeit möglich sein?
-#: last_checked: 2023-05-29
-#: check_frequency: 120d
-# REMOVED --- #: next_check: 2022-12-31
-	2::inwork -107,12220 -76,12236 -45,12243
-',
-         'from' => 1667689200,
-         'id' => 3645,
-         'text' => 'Rossitter Platz - Machandelweg: der Durchgang ist zurzeit (Stand Ende Mai 2023) nur für BVG-Mitarbeiter offen',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        {
          'data' => '#: note: evtl. außerhalb der Arbeitszeiten problemlos für Radfahrer passierbar, gesehen 2022-10-17 (So)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
 #: also_indoor: traffic (B,H) vvv
-#: last_checked: 2023-09-02 (mapillary) vvv
+#: last_checked: 2023-10-02 (mapillary) vvv
 #: check_frequency: 30d vvv
 nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 # REMOVED (hier nicht mehr) --- nur Gehweg frei	q4::inwork 7630,20698 7616,20633
@@ -3965,7 +3923,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 ',
          'from' => undef,
          'id' => 3647,
-         'text' => 'Uhlandstr.: Fahrbahn zwischen Buchhorster Str. und Friedhof kann wegen Bauarbeiten gesperrt sein',
+         'text' => 'Uhlandstr.: Fahrbahn zwischen Buchhorster Str. und Friedhof kann wegen Bauarbeiten gesperrt sein (Stand: Oktober 2023: nur noch geringe Einschränkungen)',
          'type' => 'handicap',
          'until' => undef
        },
@@ -4058,7 +4016,26 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: next_check_id: SCHOENFLIESSER-2023
+#: by: https://nitter.cz/VIZ_Berlin/status/1592390689735659522#m
+#: by: https://nitter.cz/pic/orig/media%2FFhimJ7cWQAU90M2.jpg (keine Regelung für Radfahrer)
+#: by: https://nitter.cz/pic/orig/media%2FFhimJQXWYAAo6bf.jpg
+#: source_id: viz2021:13.29209,52.64198,15.11.2022,07:30 (bis 07.08.2023) (inaktiv)
+#: source_id: viz2021:13.288823,52.641792,15.11.2022,07:30 (bis 30.09.2023) (inaktiv)
+#: source_id: viz2021:13.288951,52.641822,28.07.2023,07:00 (bis 07.05.2024)
+#: also_indoor: traffic (H,B)
+#: note: Fahrbahn wird neu gemacht
+	q4::inwork 2112,26066 2207,26090 2293,26111
+#: note: Vorbereitungen für Neubau der Fahrbahn
+	q3::inwork 2293,26111 2402,26121
+',
+         'from' => 1668540097,
+         'id' => 3683,
+         'text' => 'Schönfließer Str.: Bauarbeiten zwischen Senheimer Str. und Gollanczstr., bis 07.05.2024',
+         'type' => 'handicap',
+         'until' => 1715094000
+       },
        undef,
        undef,
        undef,
@@ -4169,7 +4146,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
          'data' => '#: also_indoor: traffic (none)
 #: osm_watch: way id="1137576466" version="1"
 #: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
-#: last_checked: 2023-08-27
+#: last_checked: 2023-10-06
 #: check_frequency: 60d
 	q4::inwork; 13086,15907 13214,15830
 ',
@@ -4216,7 +4193,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 #: note: osm watch zu Bauarbeiten am Nachbargrundstück (ehemals Klinik)
 #: osm_watch: way id="156800019" version="5"
 #: also_indoor: traffic (none)
-#: last_checked: 2023-10-02
+#: last_checked: 2023-10-08
 #: check_frequency: 30d
 	2::inwork 12173,15040 12095,14888
 ',
@@ -4306,7 +4283,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1296743.php
 #: by: https://berliner-abendblatt.de/kiez-news/steglitz-zehlendorf/lichterfelde-uferweg-am-teltowkanal-gesperrt-id207815
 #: by: https://wärme.vattenfall.de/energie-news/netzverstaerkung-hindenburgdamm/
-#: osm_watch: way id="46907541" version="13"
+#: osm_watch: way id="46907541" version="14"
 #: note: laut mapillary: Bauarbeiten erst ab November 2023
 #: note: siehe auch Eintrag in gesperrt-orig
 	2::inwork 4064,2293 4209,2641 4247,2652
@@ -4357,9 +4334,9 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 #: REMOVED (offizielle Umleitungsstrecke für Radfahrer) --- XXX Wird vielleicht die Hämmerlingstr. temporär während dieser Zeit geöffnet?
 #: note: eigentlich q4-, wegen des zusätzlichen Umwegs
 #: note: das im Baustellenplan geplante Radfahren-verboten-Schild existierte am 26.3.2023 (noch?) nicht; mittlerweile (seit Montag?) schon
-#: last_checked: 2023-08-28
+#: last_checked: 2023-10-09
 #: check_frequency: 120d
-#: next_check: 2023-10-08
+# REMOVED --- #: next_check: 2023-10-09
 	q4::inwork; 22431,6068 22467,6135
 ',
          'from' => 1696780800,
@@ -4483,20 +4460,7 @@ Parkstr.	q4::inwork 9031,6355 8992,6312 8944,6293
        undef,
        undef,
        undef,
-       {
-         'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten hier fertig? vvv
-#: last_checked: 2023-07-22 vvv
-# REMOVED (Schleswiger Ufer) ---	q3::inwork 5858,12425 5800,12361 5714,12266
-Zugang zum Uferweg	2::inwork 5800,12361 5796,12372
-#: last_checked ^^^
-#: add_fragezeichen ^^^
-',
-         'from' => undef,
-         'id' => 3759,
-         'text' => 'Schleswiger Ufer - Uferweg: Bauarbeiten, Zufahrt zum Uferweg noch nicht offiziell eröffnet',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4532,7 +4496,7 @@ Zugang zum Uferweg	2::inwork 5800,12361 5796,12372
          'data' => '#: next_check_id: GOETEL-2023
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: also_indoor: traffic (none)
-#: last_checked: 2023-09-20
+#: last_checked: 2023-10-11
 	q4::inwork -3269,12406 -3260,12540
 ',
          'from' => undef,
@@ -4579,7 +4543,7 @@ Zugang zum Uferweg	2::inwork 5800,12361 5796,12372
 #: note: laut Baustellenschild der Wasserbetriebe bis 12/2023
 #: XXX wie sieht die Baustelle im weiteren Verlauf aus? vvv
 #: osm_watch: way id="54269295" version="15"
-#: last_checked: 2023-08-28 vvv
+#: last_checked: 2023-10-09 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2023-12-04 vvv
 # REMOVED (hier nicht (mehr?)) --- Hoernlestr.	q4::inwork 22192,6659 22265,6689
@@ -4719,9 +4683,9 @@ Gutshofstr.	q4::inwork 3076,25456 3101,25402
          'data' => '#: note: Einbahnstraßenbereich ist 50m lang
 #: also_indoor: traffic (none)
 #: osm_watch: way id="1177919961" version="1"
-#: last_checked: 2023-07-23
+#: last_checked: 2023-10-06
 #: check_frequency: 90d
-#: next_check: 2023-09-30
+#: next_check: 2024-09-30
 	q3::inwork; 15648,12687 15643,12875
 ',
          'from' => 1685641032,
@@ -4770,7 +4734,7 @@ Cyclopstr.	q4::inwork 4812,21737 4829,21714
 #: note: Weitere Sperrungen sind in gesperrt-orig, dort wo eindeutig nur Baustelle ist
 #: source_id: viz2021:13.472998,52.501877,24.07.2023,07:00 (Straßenbau in Höhe Ingrid-Reschke-Str., bis 25.08.2023) (bis 01.09.2023) (bis 08.09.2023) (inaktiv)
 #: XXX Wann sind die Straßen offen? vvv
-#: last_checked: 2023-09-24 vvv
+#: last_checked: 2023-10-09 vvv
 #: check_frequency: 60d vvv
 Ingrid-Reschke-Str.	2::inwork 15163,10758 15151,10699 15140,10647 15138,10638
 Ulrich-Plenzdorf-Str.	2::inwork 15151,10699 15220,10682
@@ -4794,16 +4758,20 @@ Gustav-Tempel-Str.	2::inwork 15261,10738 15245,10719 15236,10684 15220,10682 152
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10936 (Anfrage)
 #: source_id: bvg2021:190#BVG320324_0
 #: note: Baustellebereich etwa 130m, Halteverbotsschilder bis 29.03.2023, Baustellenschild der Wasserbetriebe bis 10.05.2024
-#: also_indoor: traffic (none)
-#: last_checked: 2023-06-10
-#: check_frequency: 120d
-#: next_check: 2024-05-10
-#: XXX_prog: eigentlich q4+::inwork;
-	q4::inwork 20947,9999 20703,10004
+#: also_indoor: traffic (G)
+#: last_checked: 2023-10-09 vvv
+#: check_frequency: 120d vvv
+#: next_check: 2024-05-10 vvv
+Gleiwitzer Str.	q4::inwork 20947,9999 20703,10004
+#: XXX_prog eigentlich q3+
+Dornacher Str. (Kreuzungsbereiche)	q3::inwork 20948,9847 20947,9999 20947,10137
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 ',
          'from' => 1686407303,
          'id' => 3817,
-         'text' => 'Gleiwitzer Str.: Bauarbeiten, Fahrbahn zwischen Grabensprung und Dornacher Str. gesperrt, voraussichtlich bis 10.05.2024',
+         'text' => 'Gleiwitzer Str.: Bauarbeiten, Fahrbahn zwischen Grabensprung und Dornacher Str. gesperrt, außerdem Kreuzungsbereich Gleiwitzer Str./Dornacher Str. gesperrt, voraussichtlich bis 10.05.2024',
          'type' => 'handicap',
          'until' => 1715378400
        },
@@ -4865,7 +4833,7 @@ Gustav-Tempel-Str.	2::inwork 15261,10738 15245,10719 15236,10684 15220,10682 152
        },
        undef,
        {
-         'data' => '#: last_checked: 2023-10-03
+         'data' => '#: last_checked: 2023-10-11
 #: next_check: 2023-10-15
 	q3::inwork 12632,12630 12690,12769
 ',
@@ -4877,9 +4845,10 @@ Gustav-Tempel-Str.	2::inwork 15261,10738 15245,10719 15236,10684 15220,10682 152
          'until' => undef
        },
        {
-         'data' => '#: source_id: viz2021:13.301971,52.571657,21.03.2023,09:00
+         'data' => '#: next_check_id: U6-2022
+#: source_id: viz2021:13.301971,52.571657,21.03.2023,09:00
 #: also_indoor: traffic (H,G,W)
-#: last_checked: 2023-10-03
+#: last_checked: 2023-10-11 (daf)
 #: check_frequency: 360d
 #: next_check: 2024-12-31
 	q2::inwork 3213,18115 3420,18470
@@ -4891,9 +4860,11 @@ Gustav-Tempel-Str.	2::inwork 15261,10738 15245,10719 15236,10684 15220,10682 152
          'until' => 1735686000
        },
        {
-         'data' => '#: source_id: viz2021:13.298741,52.573871,27.03.2023,09:00
+         'data' => '#: next_check_id: U6-2022
+#: by: https://www.deutsches-architekturforum.de/thread/4128-berliner-stadtverkehr-stra%C3%9Fe-bus-und-bahn-wasserstra%C3%9Fen-geb%C3%A4ude/?postID=749262#post749262
+#: source_id: viz2021:13.298741,52.573871,27.03.2023,09:00
 #: note: außerhalb der Arbeitszeiten (gesehen 2023-10-03) kann die Fahrbahn offen sein
-#: last_checked: 2023-10-03
+#: last_checked: 2023-10-11 (daf)
 #: check_frequency: 360d
 #: next_check: 2024-12-31
 	q2::inwork 3267,18767 3008,18464
@@ -4958,7 +4929,7 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
 #: by: https://www.stadtrand-nachrichten.de/kronprinzessinnenweg-steglitz-zehlendorf-berlin/
 #: by: https://www.berliner-woche.de/zehlendorf/c-verkehr/kronprinzessinnenweg-voll-gesperrt_a394925
 #: source_id: viz2021:13.229039,52.464057,05.10.2023,07:00 (bis 31.08.2025)
-#: osm_watch: way id="50830991" version="25"
+#: osm_watch: way id="50830991" version="26"
 # REMOVED --- #: add_fragezeichen: Wann beginnen die Bauarbeiten im Kronprinzessinnenweg?
 #: last_checked: 2023-09-14 (mapillary)
 #: check_frequency: 120d
@@ -4968,7 +4939,7 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
          'from' => 1695149689,
          'id' => 3849,
          'prewarn_days' => 16,
-         'text' => 'Kronprinzessinnenweg: zukünftig Sperrung zwischen Havelchaussee und Hüttenweg, montags bis freitags 7 bis 18 Uhr, Start der Bauarbeiten voraussichtlich am 5.10.2023, Ende der Bauarbeiten am 31.08.2025',
+         'text' => 'Kronprinzessinnenweg: zukünftig Sperrung zwischen Havelchaussee und Hüttenweg, montags bis freitags 6 bis 18 Uhr, Start der Bauarbeiten voraussichtlich am 5.10.2023, Ende der Bauarbeiten am 31.08.2025',
          'type' => 'gesperrt',
          'until' => 1756677599
        },
@@ -5030,21 +5001,7 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
          'type' => 'gesperrt',
          'until' => 1697810400
        },
-       {
-         'data' => '#: by: https://nitter.net/VIZ_Berlin/status/1683787104650682368#m (für vsl. vier Wochen)
-#: by: https://www.bahninfo-forum.de/read.php?9,774482,776967#msg-776967 (frei ab 31.8.2023?)
-#: source_id: viz2021:13.402041,52.5901,25.07.2023,13:00 (bis 31.08.2023) (bis 20.10.2023)
-#: source_id: bvg2021:m1#BVG327081_0
-#: XXX evtl. kann schon ab dem 31.8.2023 die Straßenbahn wieder fahren, evtl. ist die Straße dann offen
-#: next_check: 2023-08-31
-	q4::inwork 10178,20525 10066,20494
-',
-         'from' => 1690196400,
-         'id' => 3865,
-         'text' => 'Schillerstr.: Wasserrohrbruch, Fahrbahn zwischen B96A/Dietzgenstr. und Heinrich-Böll-Str. gesperrt, vom 25.07.2023 13:00 bis voraussichtlich 20.10.2023 17:00',
-         'type' => 'handicap',
-         'until' => 1697814000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -5053,8 +5010,10 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
        undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2023/pressemitteilung.1352930.php (unklare Instandsetzung)
-#: XXX Ist diese Stelle gemeint? Wann ist der Steg wieder offen?
-#: osm_watch: way id="238032318" version="4"
+#: osm_watch: way id="238032318" version="5"
+#: add_fragezeichen: Wann ist der Steg wieder offen?
+#: last_checked: 2023-10-08
+#: check_frequency: 120d
 	2::inwork 11162,22939 11150,22898
 ',
          'from' => undef,
@@ -5080,7 +5039,17 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: viz2021:13.33522,52.4859,07.08.2023,07:00 (inaktiv)
+#: source_id: viz2021:13.335186,52.487058,10.10.2023,07:00 (bis 16.10.2023)
+	q4::inwork 5782,8828 5783,9060
+',
+         'from' => 1696802400,
+         'id' => 3878,
+         'text' => 'Babelsberger Str.: Bauarbeiten zwischen Badensche Str. und Berliner Str., Fahrbahn gesperrt, vom 10.10.2023 07:00 bis 16.10.2023 17:00',
+         'type' => 'handicap',
+         'until' => 1697468400
+       },
        undef,
        undef,
        {
@@ -5090,26 +5059,30 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
 #: by: https://www.berliner-zeitung.de/mensch-metropole/berlin-verkehr-bvg-db-stress-im-osten-so-lange-wird-die-bahnhofstrasse-in-koepenick-gesperrt-li.381296
 #: by: https://viz.berlin.de/2023/08/bahnhofstr/
 #: by: https://www.youtube.com/watch?v=Y73X25IYfTM
+#: by: https://viz.berlin.de/2023/10/verkehrsvorschau-091023/ ("wird am Abend aufgehoben")
 #: XXX nach der Sperrung muss der alte Eintrag (für Radfahrer Richtung Norden gesperrt) wieder aktiviert werden --- kann bereits kurz nach dem 28.8.2023 passieren
-#: source_id: bvg2021:269#BVG326513_0
-#: source_id: bvg2021:63#BVG326792_0
-#: source_id: viz2021:13.578463,52.457551,28.08.2023,06:00 (für den Kfz-Verkehr Sperrung sogar ab Seelenbinderstr., bis 09.10.2023)
-#: last_checked: 2023-09-17 vvv
-#: next_check: 2023-10-09 vvv
-Bahnbrücke	q4::inwork 22431,6068 22467,6135
-Am Bahndamm	q3::inwork 22467,6135 22365,6149
-Elcknerplatz	q3::inwork; 22431,6068 22478,6048
+#: source_id[inactive]: bvg2021:269#BVG326513_0
+#: source_id[inactive]: bvg2021:63#BVG326792_0
+#: source_id: viz2021:13.578463,52.457551,28.08.2023,06:00 (für den Kfz-Verkehr Sperrung sogar ab Seelenbinderstr., bis 09.10.2023) (inaktiv)
+#: source_id: viz2021:13.578463,52.457551,09.10.2023,18:00 (Folgearbeiten, bis 24.11.2023) (inaktiv)
+#: last_checked: 2023-10-09 vvv
+#: check_frequency: 7d vvv
+#: next_check: 2023-10-11 vvv
+# REMOVED (nicht mehr) --- Bahnbrücke	q4::inwork 22431,6068 22467,6135
+# REMOVED (nicht mehr) --- Am Bahndamm	q3::inwork 22467,6135 22365,6149
+# REMOVED (nicht mehr) --- Elcknerplatz	q3::inwork; 22431,6068 22478,6048
 # REMOVED (hier nicht (mehr?)) --- Elcknerplatz	q3::inwork; 22478,6048 22538,6046
 Parrisiusstr.	q4::inwork; 22358,5918 22531,5871
 Forum Köpenick, auch für Fußgänger	1::inwork 22204,6016 22332,5949 22358,5918
 #: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 ',
          'from' => 1693087200,
          'id' => 3881,
-         'text' => 'Bahnhofstr.: Bauarbeiten im Bereich der Bahnbrücke, Sperrung der Straße, Durchgang durch den Bahnhof Köpenick ist möglich, außerdem Sperrung der Durchfahrt zu Am Bahndamm und Einbahnstraßenregelung im Elcknerplatz, am Forum Köpenick und in der Parrisiusstr., vom 28.08.2023 bis voraussichtlich 09.10.2023',
+         'text' => 'Bahnhof Köpenick: Einbahnstraßenregelung am Forum Köpenick und in der Parrisiusstr., Ende der Einschränkungen unbekannt',
          'type' => 'gesperrt',
-         'until' => 1696867200
+         'until' => undef
        },
        undef,
        {
@@ -5119,7 +5092,7 @@ Forum Köpenick, auch für Fußgänger	1::inwork 22204,6016 22332,5949 22358,5918
 #: confirmed_by: srt
 #: note: mittlerweile auch in einer VIZ-Verkehrsmeldung erwähnt; laut Aushang Vollsperrung für 6 bis 9 Monate
 #: priority: #A vvv
-#: last_checked: 2023-08-28 vvv
+#: last_checked: 2023-10-09 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-02-29 vvv
 #: osm_watch: way id="217297577" version="8"
@@ -5152,8 +5125,9 @@ Wuhlewanderweg	2::inwork 22050,6619 21976,6848 21896,6937
 #: source_id: viz2021:13.483448,52.502169,14.08.2023,08:00 (bis 30.11.2023)
 #: source_id: bvg2021:240#BVG326189_0
 #: also_indoor: traffic (H[ungenau],G,W,B)
+#: osm_watch: way id="198589911" version="16"
 #: note: gesperrter Bereich ist etwa 90m lang
-#: last_checked: 2023-09-12
+#: last_checked: 2023-10-09
 #: next_check: 2023-11-30
 # REMOVED (hier nicht) ---	q4::inwork 16049,10844 15960,10833 15932,10830 15856,10821
 #: note: eigentlich q3-::inwork
@@ -5167,21 +5141,21 @@ Wuhlewanderweg	2::inwork 22050,6619 21976,6848 21896,6937
        },
        undef,
        {
-         'data' => '#: source_id: viz2021:13.56401,52.4134,14.08.2023,06:00
-#: source_id: viz2021:13.563998,52.413404,14.08.2023,10:00 (bis 07.10.2023)
+         'data' => '#: source_id: viz2021:13.56401,52.4134,14.08.2023,06:00 (inaktiv)
+#: source_id: viz2021:13.563998,52.413404,14.08.2023,10:00 (bis 07.10.2023) (bis 27.10.2023)
 #: note: vermutete Sperrung nur im Bereich "Am Falkenberg"
 	q4::inwork 21329,832 21497,1042
 ',
          'from' => 1691899200,
          'id' => 3887,
-         'text' => 'Rosestr.: Bauarbeiten zwischen Am Falkenberg und Preußenstr., evtl. sind auch Radfahrer betroffen, vom 14.08.2023 06:00 bis 07.10.2023 17:00',
+         'text' => 'Rosestr.: Bauarbeiten zwischen Am Falkenberg und Preußenstr., evtl. sind auch Radfahrer betroffen, vom 14.08.2023 06:00 bis 27.10.2023 17:00',
          'type' => 'handicap',
-         'until' => 1696690800
+         'until' => 1698418800
        },
        undef,
        {
          'data' => '#: add_fragezeichen: Sind beide Wege noch immer gesperrt? vvv
-#: last_checked: 2023-09-14 vvv
+#: last_checked: 2023-10-11 vvv
 #: check_frequency: 14d vvv
 nördlicher Weg an der ehemaligen Minigolfanlage	2::inwork 10069,10151 10158,10117
 südlicher Weg	2::inwork 10168,10085 10066,10071
@@ -5191,15 +5165,15 @@ südlicher Weg	2::inwork 10168,10085 10066,10071
 ',
          'from' => undef,
          'id' => 3889,
-         'text' => 'Carl-Herz-Ufer - Brachvogelstr.: beide Wege wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
+         'text' => 'Carl-Herz-Ufer - Brachvogelstr.: beide Wege wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Stand Mitte Oktober 2023: weiterhin gesperrt)',
          'type' => 'gesperrt',
          'until' => undef
        },
        {
          'data' => '#: next_check_id: VIRCHOW-2023
 #: source_id: viz2021:13.342776,52.539414,01.06.2023,08:00 (bis 30.12.2023)
-#: osm_watch: way id="4543436" version="29"
-#: last_checked: 2023-10-03
+#: osm_watch: way id="4543436" version="30"
+#: last_checked: 2023-10-05 (osm)
 #: check_frequency: 60d
 #: next_check: 2023-12-30
 	2::inwork 6213,14777 6210,14808
@@ -5217,21 +5191,7 @@ südlicher Weg	2::inwork 10168,10085 10066,10071
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: source_id: viz2021:13.402799,52.524086,22.08.2023,07:00 (nur Kfz-Verkehr betroffen, bis 15.09.2023) (inaktiv)
-# REMOVED --- #: note: Nur der Linienverkehr ist frei, keine Ausnahmen für Radfahrer, allerdings scheint die Durchfahrt von den Streckenposten geduldet zu werden
-# REMOVED --- #: also_indoor: traffic (G,B,W) --- #: last_checked: 2023-08-27
-#	q4::inwork 10313,13227 10264,13097
-#: by[nocache]: https://nitter.net/VIZ_Berlin/status/1706511412213035418#m (hier: nur Kfz-Verkehr betroffen)
-#: source_id: viz2021:13.403215,52.524732,26.09.2023,06:00 (bis 16.10.2023)
-	q4::inwork; 10313,13227 10321,13259
-',
-         'from' => 1695667405,
-         'id' => 3898,
-         'text' => 'Rosenthaler Str.: Bauarbeiten hinter der Einmündungs Neue Schönhauser Str., auch Radfahrer sind betroffen, vom 26.09.2023 06:00 bis 16.10.2023 17:00',
-         'type' => 'handicap',
-         'until' => 1697468400
-       },
+       undef,
        undef,
        undef,
        {
@@ -5411,8 +5371,9 @@ südlicher Weg	2::inwork 10168,10085 10066,10071
          'until' => 1702681199
        },
        {
-         'data' => '#: last_checked: 2023-09-17
+         'data' => '#: osm_watch: way id="381691526" version="7"
 #: add_fragezeichen: Ist der Weg weiterhin gesperrt? Falls nicht, hat sich die Wegoberfläche geändert?
+#: last_checked: 2023-09-17
 	2::inwork 23305,14914 23318,14847 23297,14772
 ',
          'from' => undef,
@@ -5450,17 +5411,7 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
          'type' => 'gesperrt',
          'until' => 1704063599
        },
-       {
-         'data' => '#: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/ (hier nur 30.9.-2.10.2023, aber vielleicht stimmt das auch für die Tram)
-#: source_id: viz2021:13.409072,52.538016,25.09.2023,07:00 (bis 11.10.2023)
-	q4::inwork; 10723,14772 10643,14639 10618,14598 10600,14568 10578,14531 10530,14452
-',
-         'from' => 1695531600,
-         'id' => 3921,
-         'text' => 'Kastanienallee: Gleisbauarbeiten zwischen Oderberger Str. und Schwedter Str., Richtung Weinbergsweg gesperrt, auch Radfahrer sind betroffen, vom 25.09.2023 07:00 bis 11.10.2023 17:00',
-         'type' => 'handicap',
-         'until' => 1697036400
-       },
+       undef,
        {
          'data' => '#: source_id: viz2021:13.315607,52.487267,25.09.2023,12:15 (geplatzte Wasserleitung, ohne Endedatum)
 #: by[nocache]: https://nitter.net/Berliner_Fw/status/1706288693512687746#m (laut Bild nur der südliche Abschnitt an der Berliner Str. betroffen)
@@ -5524,7 +5475,8 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
          'until' => 1700064000
        },
        {
-         'data' => '#: note: Länge der Sperrung etwa 50m, deshalb q3 statt q4
+         'data' => '#: by: https://www.berliner-woche.de/neukoelln/c-verkehr/flughafenstrasse-ist-sackgasse_a395392
+#: note: Länge der Sperrung etwa 50m, deshalb q3 statt q4
 	q3::inwork 12349,8464 12494,8501
 ',
          'from' => 1696312800,
@@ -5554,6 +5506,78 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
          'text' => 'Nordufer: zwischen Fehmarner Str. und Föhrer Str. Bauarbeiten, Sperrung der Fahrbahn, vom 25.09.2023 07:00 bis 18.09.2024 17:00',
          'type' => 'handicap',
          'until' => 1726671600
+       },
+       {
+         'data' => '	2::inwork 55756,46298 57210,45669 57800,45549
+',
+         'from' => 1696744800,
+         'id' => 3932,
+         'source_id' => 'LS/221-F/23/148',
+         'text' => 'Neuranft - Gabow: Fahrbahnsanierung, Sperrung vom 09.10.2023 - 03.11.2023',
+         'type' => 'gesperrt',
+         'until' => 1699020000
+       },
+       {
+         'data' => '	2::inwork -20042,29724 -21490,30216
+',
+         'from' => 1696316400,
+         'id' => 3933,
+         'source_id' => 'LS/223-P/23/167',
+         'text' => 'Grünefeld - Börnicke: Fahrbahnsanierung, Sperrung vom 04.10.2023 bis 30.04.2024',
+         'type' => 'gesperrt',
+         'until' => 1714485600
+       },
+       {
+         'data' => '#: next_check_id: HANDJERY-2023
+#: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2023/pressemitteilung.1372587.php
+#: XXX Baustelle wandert
+#: next_check: 2023-10-24
+bis Sarrazinstr. (23.-24.10.2023)	q4::inwork 5630,7875 5632,7821 5636,7734 5635,7718 5636,7685 5635,7660
+# bis Albestr. (25.-26.10.2023)	q4::inwork 5635,7660 5636,7540 5640,7435
+# bis Renée-Sintenis-Platz (27.-28.10.2023)	q4::inwork 5640,7435 5641,7332 5642,7255
+# bis Schmiljanstr. (30.10.-01.11.2023)	q4::inwork 5641,7189 5624,7113 5565,7024
+# bis Bundesallee (02.-04.11.2023)	q4::inwork 5565,7024 5478,6959 5357,6932
+',
+         'from' => 1697925600,
+         'id' => 3934,
+         'text' => 'Handjerystr.: Bauarbeiten zur Realisierung der Fahrradstraße, Sperrungen zwischen 7:00 und 18:00 Uhr möglich, vom 23.10.2023 bis 04.11.2023',
+         'type' => 'handicap',
+         'until' => 1699138800
+       },
+       {
+         'data' => '#: source_id: viz2021:13.358017,52.424828,09.10.2023,07:00 (nur Kfz-Verkehr, bis 27.10.2023)
+	q4::inwork 7390,2021 7581,2092
+',
+         'from' => 1696741200,
+         'id' => 3935,
+         'text' => 'Preysingstr.: Bauarbeiten zwischen Weygerweg und Malteserstr., evtl. sind auch Radfahrer betroffen, vom 09.10.2023 07:00 bis 27.10.2023 17:00',
+         'type' => 'handicap',
+         'until' => 1698418800
+       },
+       {
+         'data' => '	q4::inwork; 12063,21991 12122,22185 12165,22323
+',
+         'from' => 1696827600,
+         'id' => 3936,
+         'source_id' => 'viz2021:13.432538,52.605013,10.10.2023,07:00',
+         'text' => 'Hauptstr. : Gleisbauarbeiten zwischen Chamissostr. und Parkstr., Fahrtrichtung gesperrt, evtl. sind auch Radfahrer betroffen, vom 10.10.2023 07:00 bis 04.11.2023 17:00',
+         'type' => 'handicap',
+         'until' => 1699113600
+       },
+       {
+         'data' => '#: next_check_id: U6-2022
+#: by: https://www.deutsches-architekturforum.de/thread/4128-berliner-stadtverkehr-stra%C3%9Fe-bus-und-bahn-wasserstra%C3%9Fen-geb%C3%A4ude/?postID=749262#post749262
+#: add_fragezeichen: Besteht die Sperrung noch immer?
+#: last_checked: 2023-10-11 (daf)
+#: check_frequency: 120d
+#: next_check: 2024-12-31
+	q3::inwork 4335,17642 4392,17777
+',
+         'from' => undef,
+         'id' => 3937,
+         'text' => 'Uranusweg: Fahrbahn unter der U-Bahnbrücke gesperrt, Engstelle',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );

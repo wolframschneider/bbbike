@@ -2539,6 +2539,9 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -13181,2285
 	X -13142,1989
 	F -14457,-1797
+	X -10179,17565
+	F -8519,16853
+	F -9687,17364
 	X -3356,29260
 	B -49659,72791
 	B -53693,82738
@@ -3159,6 +3162,8 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	F 43421,19504
 	B 43192,19730
 	X 43131,19792
+	B 23108,-87201
+	B 90350,-16513
 Aderluch (Oranienburg)	F -435,39823
 André-Pican-Str. / Bernauer Str. (Oranienburg)	X -292,39051
 André-Pican-Str. / Saarlandstr. / Lehnitzstr. (Oranienburg)	X -234,37510
