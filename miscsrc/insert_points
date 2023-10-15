@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998,2003,2004,2012,2013,2017,2018 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998,2003,2004,2012,2013,2017,2018,2023 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -45,15 +45,11 @@ package BBBikeModify;
 
 # Types
 # 0: normal (Strassen.pm)
-# 1: (früher) radwege
 # 2: ampelschaltung.txt
 # 3: comments
-# 4: new radwege (like T_NORMAL, but insert to multiple lines) (not used anymore, now radwege is treated normally!)
 use constant T_NORMAL => 0;
-use constant T_OLD_RADWEGE => 1; # XXX not supported anymore
 use constant T_AMPELSCHALTUNG => 2; # ampelschaltung only, ampeln is T_NORMAL
 use constant T_COMMENTS => 3; # XXX never implemented
-use constant T_RADWEGE => 4; # XXX not supported anymore
 use constant T_TEMPBLOCK => 5;
 use constant T_TEMPBLOCKMAIN => 6;
 use constant T_VORFAHRT => 7;
@@ -72,26 +68,11 @@ use lib ("$FindBin::RealBin/..", "$FindBin::RealBin/../lib",
 	 "$FindBin::RealBin/miscsrc", # in the case it's required from bbbike
 	);
 use BBBikeUtil;
-use BBBikeUtil qw(save_pwd);
+use BBBikeUtil qw(save_pwd first);
 use BBBikeProcUtil qw(double_fork);
 use File::Basename;
 use Strassen::Dataset;
 use Strassen::Core;
-BEGIN {
-    if (!eval q{
-        use List::Util qw(first);
-	1;
-    }) {
-        *first = sub (&@) {
-            my $sub = shift;
-            for my $elem (@_) {
-                local $_ = $elem;
-                return $elem if $sub->($elem);
-            }
-            undef;
-        };
-    }
-}
 use File::Copy qw(cp);
 
 if (eval { require DB_File::Lock; 1 }) {
@@ -105,7 +86,6 @@ my $report;
 my $bbbikerootdir = "..";
 my $tempblockingdir;
 my $verbose = 0;
-my $current_coordsys = '';
 my $n;
 my @custom_check_files;
 my @add_custom_check_files;
@@ -151,7 +131,6 @@ sub _process {
 		    'logfile=s'  => \$logfile,
 		    'tempblockingdir=s' => \$tempblockingdir,
 		    'v!'         => \$verbose,
-		    'coordsys=s' => \$current_coordsys,
 		    'n'          => \$n,
 		    'operation=s' => \$operation,
 		    'file=s@'    => \@custom_check_files,
@@ -195,11 +174,7 @@ sub _process {
 	}
     }
 
-    if ($current_coordsys eq '') {
-	@add_check_files_noorig = glob("$tempblockingdir/*.bbd");
-    } else {
-	@add_check_files_noorig = ();
-    }
+    @add_check_files_noorig = glob("$tempblockingdir/*.bbd");
 
     if (@add_custom_check_files) {
 	push @add_check_files_noorig, @add_custom_check_files;
@@ -329,17 +304,7 @@ sub _process {
     }
 
     my @check_files;
-    my %file2base;
     my @comments_part_files = map { "comments_$_" } @Strassen::Dataset::comments_types;
-
-    my %ignore_files;
-    if (!$orig) {
-	%ignore_files = map{("$_-orig"=>1)} @comments_part_files;
-	$ignore_files{"radwege-orig"} = 1;
-    }
-
-    # These are listed in BASE, but should not be handled...
-    $ignore_files{"relation_gps-orig"} = 1;
 
     if (!@custom_check_files) {
 	chdir $datadir or die "chdir to $datadir failed: $!";
@@ -375,6 +340,7 @@ sub _process {
 		   grenzuebergaenge
 		   culdesac
 		   ../misc/abdeckung.bbd
+		   mudways
 		  );
 	    # Specify files here which are only available as -orig or
 	    # non-orig version:
@@ -386,9 +352,6 @@ sub _process {
 	    # relation_gps herausgenommen (CVS 2004-07-26, RCS ...)
 	    # XXX gehört housenumbers hier rein???
 
-	    # Format von radwege
-	    #@{$check_files[T_OLD_RADWEGE]} = qw(radwege);
-
 	    # Besonderer Code für die Drei-Punkte-Form von comments bei
 	    # insert_points.
 	    # ist für vorfahrt und ampelschaltung_rules.bbd implementiert, XXX für andere auch notwendig?
@@ -397,18 +360,6 @@ sub _process {
 	    push @{$check_files[T_NORMAL]}, @comments_part_files;
 
 	    @{$check_files[T_VORFAHRT]} = qw(vorfahrt ../misc/ampelschaltung_rules.bbd);
-
-	    # radwege is "normal" now
- 	    @{$check_files[T_RADWEGE]} = ();
-# 		($orig ? qw(radwege) : qw(radwege_exact));
-
-# 	    if (!$orig) {
-# 		my $temp_blockings_dir = "$FindBin::RealBin/../data/temp_blockings";
-# 		if (-d $temp_blockings_dir) {
-# 		    push @{$check_files[T_NORMAL]},
-# 			glob("$temp_blockings_dir/*.bbd");
-# 		}
-# 	    }
 
 	    @{$check_files[T_TEMPBLOCK]} =
 		@add_check_files_noorig if @add_check_files_noorig;
@@ -461,37 +412,13 @@ sub _process {
 	    }
 	}
 
-	open(BASE, "BASE") or die "Can't open BASE: $!";
-	while(<BASE>) {
-	    chomp;
-	    my($file, $base) = split(/\s+/, $_);
-	    $file2base{$file} = $base;
-	}
-	close BASE;
-
 	# user defined files
 	%noorig_files = ();
 	$noorig_files{'../misc/ampelschaltung_rules.bbd'} = 1;
+	$noorig_files{'mudways'} = 1;
 
 	if ($operation =~ /^(change|grep)$/) {
-#XXX	    @{$check_files[T_NORMAL]} = grep { !$ignore_files{$_} } keys %file2base;
-# 	    if (!$orig) {
-# 		$file2base{'radwege_exact-orig'} = $file2base{'radwege-orig'};
-# 		delete $file2base{'radwege-orig'};
-# 		push @{$check_files[T_NORMAL]}, "radwege_exact-orig";
-# 	    }
-	    $file2base{'../misc/ampelschaltung.txt'} = 'B'; # XXX aus ../misc/BASE holen
-	    $file2base{'ampelschaltung'} = 'B'; # XXX aus ../misc/BASE holen
 	    @{$check_files[T_AMPELSCHALTUNG]} = ('../misc/ampelschaltung.txt', 'ampelschaltung');
-#	    $noorig_files{'../misc/ampelschaltung-orig.txt'} = 1;
-	}
-
-	## Also handle private .bbd data. As this was not used since
-	## its invention in 2004 I think I can disable it...
-	if (0) {
-	    my @f = glob("$ENV{HOME}/.bbbike/data/*.bbd");
-	    push @{$check_files[T_NORMAL]}, @f;
-	    $noorig_files{$_} = 1 for (@f);
 	}
 
 	for (@add_check_files_noorig) {
@@ -533,13 +460,6 @@ sub _process {
 		}
 	    }
 #	}
-	my %new_file2base;
-	while(my($k,$v) = each %file2base) {
-	    next if $ignore_files{$k};
-	    (my $new_k = $k) =~ s/-orig$//;
-	    $new_file2base{$new_k} = "H"; # everything in "standard" coordinates
-	}
-	%file2base = %new_file2base;
     }
 
     my @change_files;
@@ -560,12 +480,8 @@ sub _process {
 		}
 	    }
 
-	    my $map_char_rx = ($current_coordsys ne ''
-			       ? "($current_coordsys)?"
-			       : '(B)?'
-			      ); # XXX right? ''; # XXX
-	    my $map_from = "$map_char_rx$from";
-	    my $map_to; $map_to = "$map_char_rx$to" if defined $to;
+	    my $map_from = $from;
+	    my $map_to; $map_to = $to if defined $to;
 	    open(F, $file) or do {
 		my $msg = "Can't open file <$file>";
 		warn "$msg.\n";
@@ -577,7 +493,7 @@ sub _process {
 	    close F;
 
 	    if ($operation =~ /^(insert|insertmulti|changeline|grepline)$/) {
-		if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_RADWEGE || $type == T_VORFAHRT) {
+		if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_VORFAHRT) {
 		    if ($verbose) {
 			warn "Check for ($map_from $map_to|$map_to $map_from)\n";
 		    }
@@ -589,25 +505,6 @@ sub _process {
 			    push @{$change_special_flags{$file}}, "endpoint";
 			}
 		    }
-		} elsif ($type == T_OLD_RADWEGE) {
-		    # XXX not supported anymore
-		    if ($verbose) {
-			warn "Check for ($map_from\t$map_to|$map_to\t$map_from)\n";
-		    }
-		    # XXX not necesary anymore???: my @changed = ...
-		    if (grep(/^($map_from\t$map_to|$map_to\t$map_from)\b/, @data)) {
-			if ($operation eq 'changeline') {
-			    my $msg = 'changeline noch nicht für Typ 1 (radwege) implementiert!';
-			    if ($use_tk) {
-				$top->messageBox(-title => $0,
-						 -text => $msg,
-						 -icon => 'error');
-				$my_top->destroy if Tk::Exists($my_top);
-			    }
-			    die $msg;
-			}
-			push @{$change_files[$type]}, $file;
-		    }
 		} elsif ($type == T_COMMENTS) {
 		    # XXX implement!
 		    #my $rx = "P\d.*
@@ -616,22 +513,21 @@ sub _process {
 		    #}
 		}
 	    } elsif ($operation =~ /^(change|grep|delete)$/) {
-		my $map_rx = ($current_coordsys eq '' ? 'B?' : $current_coordsys.'?');
 		# XXX verbose fehlt
-		if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_COMMENTS || $type == T_OLD_RADWEGE || $type == T_RADWEGE || $type == T_VORFAHRT) {
-		    my @changed = grep(/(?:(?<=\s)|^)$map_rx$map_from(\b|$)/, @data);
+		if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_COMMENTS || $type == T_VORFAHRT) {
+		    my @changed = grep(/(?:(?<=\s)|^)$map_from(\b|$)/, @data);
 		    if (@changed) {
 			push @{$change_files[$type]}, $file;
 			push @{$change_names{$file}}, extract_bbd_names(@changed);
-			if (first { /\t\S+\s$map_rx$map_from$/ } @changed) {
+			if (first { /\t\S+\s$map_from$/ } @changed) {
 			    push @{$change_special_flags{$file}}, "single-point";
-			} elsif (first { /(?:\t\S+\s$map_rx$map_from\b|\b$map_rx$map_from$)/ } @changed) {
+			} elsif (first { /(?:\t\S+\s$map_from\b|\b$map_from$)/ } @changed) {
 			    push @{$change_special_flags{$file}}, "endpoint";
 			}
 		    }
 		} elsif ($type == T_AMPELSCHALTUNG) {
 		    #warn "XXX NYI $operation for $file";
-                    if (grep(/^$map_rx$map_from\b/, @data)) {
+                    if (grep(/^$map_from\b/, @data)) {
 			push @{$change_files[$type]}, $file;
 		    }
 		}
@@ -819,23 +715,8 @@ sub _process {
 	for(my $type = 0; $type <= $#check_files; $type++) {
 	    foreach my $file (@{$change_files[$type]}) {
 		push @changed_files, $file;
-		# XXX not used, del?
-		my $map_char = (($file2base{$file}||'') eq $current_coordsys ? '' : $current_coordsys);
-		my $map_char_rx = ($operation =~ /^(insert|insertmulti|changeline)$/
-				   ? ($current_coordsys ne ''
-				      ? "(?:$current_coordsys)?"
-				      : '(?:B)?'
-				     )
-				   : ($current_coordsys ne ''
-				      ? "($current_coordsys)?"
-				      : '(B)?'
-				     )
-				  );
-		if ($type == T_AMPELSCHALTUNG) {
-		    $map_char_rx = '';
-		}
 
-		my $map_from     = "$map_char_rx$from";
+		my $map_from     = $from;
 		my $map_new_from;
 		if ($operation eq 'change') {
 		    $map_new_from = $to;
@@ -843,12 +724,11 @@ sub _process {
 		my @map_middle;
 		my @rev_middle;
 		if ($operation =~ /^insert(multi)?$/) {
-		    @map_middle = map { "$current_coordsys$_" } @middle;
+		    @map_middle = @middle;
 		    @rev_middle = reverse @map_middle;
 		}
-		$map_char_rx = "" if !defined $map_char_rx;
 		my $map_to;
-		$map_to = "$map_char_rx$to" if defined $to;
+		$map_to = $to if defined $to;
 		my $map_new_to;
 		if ($operation eq 'changeline') {
 		    $map_new_to = "$new_to";
@@ -889,43 +769,18 @@ sub _process {
 				last if (s/(\b$map_to )$map_from$/$1$map_middle[-1]/);
 			    }
 			    print W $_;
-			} elsif ($type == T_RADWEGE) {
-			    if (/(?:(?<=\s)|^)$map_from $map_to\b/) {
-				(my $first = $_) =~ s/(?:(?<=\s)|^)($map_from) ($map_to)\b/$1 @map_middle/;
-				(my $second = $_) =~ s/(?:(?<=\s)|^)($map_from) ($map_to)\b/@map_middle $2/;
-				print W "$first$second";
-			    } elsif (/(?:(?<=\s)|^)$map_to $map_from\b/) {
-				(my $first = $_) =~ s/(?:(?<=\s)|^)($map_to) ($map_from)\b/$1 @rev_middle/;
-				(my $second = $_) =~ s/(?:(?<=\s)|^)($map_to) ($map_from)\b/@rev_middle $2/;
-				print W "$first$second";
-			    } else {
-				print W $_;
-			    }
-			} elsif ($type == T_OLD_RADWEGE) {
-			    # XXX not supported anymore
-			    if (/^($map_from)\t($map_to)\b(.*)/) {
-				print W "$1\t@map_middle$3\n";
-				print W "@map_middle\t$2$3\n";
-			    } elsif (/^($map_to)\t($map_from)\b(.*)/) {
-				print W "$1\t@rev_middle$3\n";
-				print W "@rev_middle\t$2$3\n";
-			    } else {
-				print W $_;
-			    }
 			}
 		    } elsif ($operation eq 'changeline') {
-			if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_RADWEGE || $type == T_VORFAHRT) {
+			if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_VORFAHRT) {
 			    if (/(?:(?<=\s)|^)$map_from $map_to\b/) {
 				s/(?:(?<=\s)|^)($map_from) $map_to\b/$1 $map_new_to/;
 			    } elsif (/(?:(?<=\s)|^)$map_to $map_from\b/) {
 				s/(?:(?<=\s)|^)$map_to ($map_from)\b/$map_new_to $1/;
 			    }
 			    print W $_;
-			} elsif ($type == T_OLD_RADWEGE) {
-			    die "NYI!!!";
 			}
 		    } elsif ($operation eq 'delete') {
-			if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_RADWEGE || $type == T_VORFAHRT) {
+			if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_VORFAHRT) {
 			    s/\s*$map_from\b//g;
 			    if (/^[^\t]\t\S+$/) {
 				# remove this record
@@ -936,7 +791,7 @@ sub _process {
 			    die "NYI!";
 			}
 		    } elsif ($operation eq 'change') {
-			if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_RADWEGE || $type == T_VORFAHRT) {
+			if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_VORFAHRT) {
 			    s/(?:(?<=\s)|^)$map_from\b/$1$map_new_from/g;
 			    print W $_;
 			} elsif ($type == T_AMPELSCHALTUNG) {

@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2001,2022 Slaven Rezic. All rights reserved.
+# Copyright (C) 2001,2022,2023 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -13,19 +13,6 @@
 
 package BBBikeEditUtil;
 use strict;
-use vars qw(%file2base);
-
-sub base {
-    my $datadir = shift || $main::datadir;
-    open(BASE, "$datadir/BASE") or die "Can't open $datadir/BASE: $!";
-    while(<BASE>) {
-	chomp;
-	my($file, $base) = split(/\s+/, $_);
-	$file2base{$file} = $base;
-    }
-    close BASE;
-    %file2base;
-}
 
 # XXX maybe should not return just the basenames...
 sub get_orig_files {
@@ -53,7 +40,7 @@ sub get_generated_files {
     opendir(DIR, $datadir) or die "Can't opendir $datadir: $!";
     my $f;
     while(defined(my $f = readdir DIR)) {
-	next if $f =~ /^(\.|.*[Mm]akefile.*|README.*|BASE|datachange\.log)/;
+	next if $f =~ /^(\.|.*[Mm]akefile.*|README.*|datachange\.log)/;
 	next if $f =~ /(-info|\.coords\.data|\.desc|\.st|\.inx|\.inx4|\.lock|~)$/;
 	if (-f "$datadir/$f" && $f !~ /-orig$/) {
 	    push @files, $f;

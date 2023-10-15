@@ -1889,7 +1889,6 @@ use myclassstruct qw(top
 		     str_file
 		     p_file
 		     coord_system
-		     file2base
 		   );
 
 {
@@ -1946,14 +1945,6 @@ sub create {
     $o->str_file(\%main::str_file);
     $o->p_file(\%main::p_file);
     $o->coord_system($main::coord_system_obj);
-    eval {
-	BBBikeEditUtil::base();
-	$o->file2base(\%BBBikeEditUtil::file2base);
-    };
-    if ($@) {
-	# BASE is not really used these days, so just warn... 
-	warn $@;
-    }
     $o;
 }
 
@@ -2277,22 +2268,10 @@ sub click {
 		    $cat  = $initial_cat = $l->[Strassen::CAT];
 		    $coords = $initial_coords = join(" ", @{$l->[Strassen::COORDS]});
 
-		    my $coordsys = $o->coord_system->coordsys;
-		    my $base = $o->file2base->{basename $file};
-		    ## XXX $base is not really used today, so do not warn...
-		    #main::status_message("Can't get base from $file", "error") if !defined $base;
-
-		    # use only coordinates in coordsys and strip coordsys
 		    my @coords;
 		    foreach my $coord (@{$l->[Strassen::COORDS]}) {
-			my($x,$y,$this_base) = @{Strassen::to_koord1_slow($coord)};
-			if (!defined $this_base) {
-			    $this_base = $base;
-			}
-			local $^W = 0;
-			if ($this_base eq $coordsys) {
-			    push @coords, [$x,$y];
-			}
+			my($x,$y) = @{Strassen::to_koord1_slow($coord)};
+			push @coords, [$x,$y];
 		    }
 
 		    main::mark_street
@@ -2675,11 +2654,6 @@ sub addnew {
 	return;
     }
     return if !BBBikeEdit::ask_for_co($top, $file);
-    my $std_prefix = { BBBikeEditUtil::base() }->{basename($file)};
-    my $prefix = "";
-    if ($main::coord_system_obj->coordsys ne $std_prefix) {
-	$prefix = $main::coord_system_obj->coordsys;
-    }
     my $t = $top->Toplevel(-title => M("Neu hinzufügen"));
     $t->transient($top) unless defined $main::transient && !$main::transient;
     $t->Popup(@main::popup_style);
@@ -2798,12 +2772,6 @@ sub insert_point_from_canvas {
 				   @main::ext_selection = ();
 			       });
 	my($middle, $first, $last) = map { join(",", @$_) } @neighbors;
-	if ($SRTShortcuts::force_edit_mode) {
-	    for ($first, $last) {
-		$_ = find_corresponding_orig_point($c, $_);
-	    }
-	    $middle = $main::coord_prefix . join(",", $main::coord_output_sub->(split /,/, $middle));
-	}
 	@main::inslauf_selection = ($first, $middle, $last);
 	warn "insert coords=@main::inslauf_selection\n";
 	if (main::insert_points() && $auto_reload) {
@@ -4531,16 +4499,11 @@ sub add_cross_road_blockings {
 	my $r = shift;
 	for my $p (@{ $r->[Strassen::COORDS()] }) {
 	    my($ox,$oy) = split /,/, $p;
-	    my($prefix) = $ox =~ m/^([^0-9+-]+)/; # stores prefix
-	    $prefix = "" if !defined $prefix;
-	    $ox =~ s/^([^0-9+-]+)//; # removes prefix
-	    my $map = $prefix ? $Karte::map_by_coordsys{$prefix} : $map;
-	    #if (!defined $map) { warn "@$r $p $prefix" }
 	    my($x, $y)  = $map->map2standard($ox,$oy);
 	    my($cx,$cy) = $transpose->($x,$y);
 	    $c->createLine($cx,$cy,$cx,$cy,
 			   -tags => ['pp', "$x,$y",
-				     "ORIG:$prefix$ox,$oy", "pp-$abk"],
+				     "ORIG:$ox,$oy", "pp-$abk"],
 			  );
 	}
     }
@@ -4571,18 +4534,7 @@ sub add_cross_road_blockings {
 	my $maptoken = $args{-map};
 	require Karte;
 	Karte::preload(":all");
-	require BBBikeEditUtil;
 	$map = $Karte::map{$maptoken};
-	my $mapprefix; $mapprefix = $map->coordsys if $map;
-	for my $f (@orig_files) {
-	    my $baseprefix = { BBBikeEditUtil::base() }->{$f};
-	    if (defined $mapprefix && $mapprefix ne $baseprefix) {
-		warn "Ambigous base prefixes ($mapprefix vs $baseprefix)";
-	    } else {
-		$mapprefix = $baseprefix;
-	    }
-	}
-	$map = $Karte::map_by_coordsys{$mapprefix};
 	($s, $nonorig_s);
     }
 
