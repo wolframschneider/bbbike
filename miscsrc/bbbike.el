@@ -210,9 +210,10 @@
       (error "No X selection"))))
 
 (defun bbbike--get-x-selection ()
-  (if (fboundp 'w32-get-clipboard-data)
-      (w32-get-clipboard-data)
-    (x-selection)))
+  (cond
+   ((fboundp 'w32-get-clipboard-data) (w32-get-clipboard-data))
+   ((eq system-type 'darwin) (shell-command-to-string "pbpaste"))
+   (t (x-selection))))
 
 (defun bbbike-toggle-tabular-view ()
   (interactive)
@@ -352,6 +353,8 @@
 
   (setq-local bbbike-mode-load-time (current-time)) ; not really necessary since using auto-revert-mode
   (auto-revert-mode 1)
+
+  (autoload 'org-read-date "org" "Read an Org date." t)
 
   (run-hooks 'bbbike-mode-hook)
   )
@@ -649,12 +652,14 @@
 ;; Otherwise display the output in temporary grep-mode buffer.
 (defun bbbike-grep-with-search-term (search-term &optional is-regexp)
   (let* ((bbbike-rootdir (bbbike-rootdir))
-	 (output (shell-command-to-string
-		  (concat bbbike-rootdir "/miscsrc/bbbike-grep -n"
-			  " --add-file " bbbike-rootdir "/t/cgi-mechanize.t"
-			  " --add-file " bbbike-rootdir "/t/old_comments.t"
-			  (if is-regexp " --rx" " --")
-			  " '" search-term "'")))
+	 (bbbike-datadir (bbbike-datadir))
+	 (bbbike-grep-cmd (concat bbbike-rootdir "/miscsrc/bbbike-grep -n"
+				  " --add-file " bbbike-rootdir "/t/cgi-mechanize.t"
+				  " --add-file " bbbike-rootdir "/t/old_comments.t"
+				  " --reldir " bbbike-datadir
+				  (if is-regexp " --rx" " --")
+				  " '" search-term "'"))
+	 (output (shell-command-to-string bbbike-grep-cmd))
          (lines (split-string output "\n" t))
          (num-lines (length lines)))
     (cond
@@ -665,7 +670,7 @@
              (parts (split-string line ":"))
              (filename (car parts))
              (line-number (string-to-number (cadr parts))))
-        (find-file filename)
+        (find-file (concat bbbike-datadir "/" filename))
         (goto-line line-number)))
      (t
       (let ((buffer (get-buffer-create "*bbbike-grep-output*")))
@@ -676,6 +681,9 @@
             (insert line)
             (insert "\n"))
 	  (grep-mode)
+	  (setq-local compilation-arguments (list bbbike-grep-cmd 'grep-mode nil nil))
+	  (setq-local default-directory bbbike-datadir)
+	  (setq-local compilation-directory (concat bbbike-datadir "/"))
 	  (goto-char (point-min))
 	  )
 	(pop-to-buffer buffer))))))

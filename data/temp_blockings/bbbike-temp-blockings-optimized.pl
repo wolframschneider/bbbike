@@ -1340,7 +1340,7 @@ Kleistpark	2::night 7310,9622 7307,9528
          'from' => undef,
          'id' => 2454,
          'recurring' => 1,
-         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
+         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Winter: 18.00 bis 6.00 Uhr',
          'until' => undef
        },
        {
@@ -4106,11 +4106,9 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1349287.php (ab 24. Juli 2023)
 #: by: https://www.berliner-woche.de/buch/c-bauen/brueckenbau-ueber-die-panke_a389479
 #: source_id: viz2021:13.503115,52.640698,25.07.2023,08:00 (bis 31.12.2023)
-#: last_checked: 2023-07-17 (mapillary)
+#: last_checked: 2023-10-08 (mapillary)
 #: check_frequency: 60d
-#: next_check: 2023-07-24
-#: REMOVED: next_check: 2023-12-31
-#: REMOVED: next_check: 2024-06-30
+#: next_check: 2024-06-30
 	2::inwork 17414,26524 17381,26585 17363,26609 17043,26407 16928,26311 16895,26295 16686,26128 16655,26127 16616,26158 16580,26154
 ',
          'from' => 1690063200,
@@ -4699,9 +4697,10 @@ Gutshofstr.	q4::inwork 3076,25456 3101,25402
        undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1371280.php (Neuasphaltierung der Fahrbahn, 6.11.2023 bis 8.12.2023)
+#: by: https://viz.berlin.de/2023/07/verkehrsvorschau-270723/ (Umbau der Baustelle, Gesamtmaßnahme bis März 2024)
+#: by: https://www.berliner-woche.de/wittenau/c-verkehr/fahrbahn-wird-neu-asphaltiert_a395108
 #: source_id: viz2021:13.325275,52.602903,10.01.2023,08:00 (bis 24.07.2023) (bis 29.03.2024) (bis 27.07.2023) (inaktiv)
 #: source_id: viz2021:13.324746,52.601916,27.07.2023,11:00 (bis 27.10.2023)
-#: by: https://viz.berlin.de/2023/07/verkehrsvorschau-270723/ (Umbau der Baustelle, Gesamtmaßnahme bis März 2024)
 Hermsdorfer Str.	q2::inwork 4778,21633 4805,21715 4812,21737 4887,21944
 #: note: Schranke mit wenig Platz, oder Umweg über Gehweg
 Jean-Jaurès-Str.	q2::inwork 4812,21737 4655,21939
@@ -4833,14 +4832,15 @@ Dornacher Str. (Kreuzungsbereiche)	q3::inwork 20948,9847 20947,9999 20947,10137
        },
        undef,
        {
-         'data' => '#: last_checked: 2023-10-11
-#: next_check: 2023-10-15
+         'data' => '#: source_id: viz2021:13.437884,52.520284,23.06.2023,06:00 (bis 15.10.2023) (inaktiv)
+#: note: laut rbb Sperrung bis 03.11.2023
+#: last_checked: 2023-10-15
+#: next_check: 2023-11-03
 	q3::inwork 12632,12630 12690,12769
 ',
          'from' => 1687406400,
          'id' => 3832,
-         'source_id' => 'viz2021:13.437884,52.520284,23.06.2023,06:00',
-         'text' => 'Koppenstr.: Anbindung Friedenstr. wegen Bauarbeiten gesperrt, Radfahrer sollen schieben, vom 23.06.2023 06:00 bis 15.10.2023 17:00, evtl. wird die Sperrung verlängert',
+         'text' => 'Koppenstr.: Anbindung Friedenstr. wegen Bauarbeiten gesperrt, Radfahrer sollen schieben, vom 23.06.2023 06:00, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5146,7 +5146,7 @@ Wuhlewanderweg	2::inwork 22050,6619 21976,6848 21896,6937
        undef,
        {
          'data' => '#: add_fragezeichen: Sind beide Wege noch immer gesperrt? vvv
-#: last_checked: 2023-10-13 vvv
+#: last_checked: 2023-10-15 vvv
 #: check_frequency: 14d vvv
 nördlicher Weg an der ehemaligen Minigolfanlage	2::inwork 10069,10151 10158,10117
 südlicher Weg	2::inwork 10168,10085 10066,10071
@@ -5164,7 +5164,7 @@ südlicher Weg	2::inwork 10168,10085 10066,10071
          'data' => '#: next_check_id: VIRCHOW-2023
 #: source_id: viz2021:13.342776,52.539414,01.06.2023,08:00 (bis 30.12.2023)
 #: osm_watch: way id="4543436" version="30"
-#: last_checked: 2023-10-05 (osm)
+#: last_checked: 2023-10-06 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2023-12-30
 	2::inwork 6213,14777 6210,14808
@@ -5558,6 +5558,7 @@ bis Sarrazinstr. (23.-24.10.2023)	q4::inwork 5630,7875 5632,7821 5636,7734 5635,
        {
          'data' => '#: next_check_id: U6-2022
 #: by: https://www.deutsches-architekturforum.de/thread/4128-berliner-stadtverkehr-stra%C3%9Fe-bus-und-bahn-wasserstra%C3%9Fen-geb%C3%A4ude/?postID=749262#post749262
+#: note: Gehweg, Radfahrer frei
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: last_checked: 2023-10-11 (daf)
 #: check_frequency: 120d
@@ -5569,6 +5570,19 @@ bis Sarrazinstr. (23.-24.10.2023)	q4::inwork 5630,7875 5632,7821 5636,7734 5635,
          'text' => 'Uranusweg: Fahrbahn unter der U-Bahnbrücke gesperrt, Engstelle',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: BLUMBERGER-2023
+#: source_id: viz2021:13.57491,52.55616,16.10.2023,07:00 (bis 15.12.2023)
+	q4::inwork 21869,16719 21889,16817 21925,16981
+#: source_id: viz2021:13.574645,52.555124,16.10.2023,07:00 (bis 15.12.2023)
+	q4::inwork 21944,16805 21889,16817
+',
+         'from' => 1697346000,
+         'id' => 3938,
+         'text' => 'Blumberger Damm: Bauarbeiten im Kreuzungsbereich Mehrower Allee/Glambecker Ring, Sperrung, evtl. sind auch Radfahrer betroffen, vom 16.10.2023 07:00 bis 15.12.2023 17:00',
+         'type' => 'handicap',
+         'until' => 1702656000
        }
      
 );
