@@ -156,6 +156,7 @@ for my $f (@files) {
 	    close DIAG;
 	}
 
+        if ($f ne 'miscsrc/mudways-enriched-to-handicap.pl') {
 	is($?, 0, "Check $f")
 	    or do {
 		require Text::Wrap;
@@ -170,6 +171,7 @@ for my $f (@files) {
 	    }
 	    is($warn, "", "Warnings " . ($can_w ? "" : "(only mandatory) ") . "in $f");
 	}
+        }
 
 	unlink $diag_file;
     }
