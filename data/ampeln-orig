@@ -41,10 +41,10 @@ Rohrdammbrücke: Gegenverkehrsregelung	X::inwork 1124,13599
 Alt-Heiligensee: Gegenverkehrsregelung	X::inwork -3020,21786
 # 
 #: next_check_id: PISTORIUS-2023
-#: source_id: viz2021:13.44623,52.55365,19.06.2023,08:00 (bis 28.07.2023, Gesamtbaumaßnahme bis Ende 10/2023) (bis 13.08.2023) (bis 14.08.2023) (bis 20.10.2023)
+#: source_id: viz2021:13.44623,52.55365,19.06.2023,08:00 (bis 28.07.2023, Gesamtbaumaßnahme bis Ende 10/2023) (bis 13.08.2023) (bis 14.08.2023) (bis 20.10.2023) (bis 17.11.2023)
 #: last_checked: 2023-07-20
-#: next_check: 2023-10-20
-#: valid: -20231020
+#: next_check: 2023-11-17
+#: valid: -20231117
 Roelckestr./Gäblerstr.	X::inwork 13272,16672
 # 
 #: source_id: viz2021:13.54658,52.41878,11.07.2023,09:00 (bis 30.09.2024)
@@ -88,7 +88,7 @@ Gegenverkehrsregelung	X::inwork 18527,16789
 #: source_id: viz2021:13.492467,52.470057,13.01.2023,12:00 (bis 30.5.2023) (bis 31.8.2023) (bis 30.09.2023) (inaktiv) (bis 27.10.2023)
 #: XXX Möglicherweise im Zusammenhang mit der noch vorhandenen Sperrung der Baumschulenstr. jenseits der Köpenicker Landstraße (Busverkehr wird umgeleitet)
 #: osm_watch: way id="383023440" version="14"
-#: last_checked: 2023-10-04
+#: last_checked: 2023-10-18
 #: next_check: 2023-10-27
 # REMOVED --- #: valid: -20230930
 	X::inwork 16328,7005
@@ -200,10 +200,11 @@ Kaulsdorfer Str./Feuersteiner Str.	F::inwork 21708,7981
 #: check_frequency: 120d
 Köpenicker Str./Dubickstr.	F::inwork 21079,8931
 # 
-#: source_id: viz2021:13.560004,52.48297,07.07.2023,11:00 (bis 01.09.2023) (bis 18.09.2023) (bis 9.10.2023) (bis 17.10.2023)
+#: source_id: viz2021:13.56,52.48267,17.10.2023,15:02 (bis 14.11.2023) (inaktiv)
+#: source_id: viz2021:13.560004,52.48297,07.07.2023,11:00 (bis 01.09.2023) (bis 18.09.2023) (bis 9.10.2023) (bis 17.10.2023) (bis 14.11.2023)
 #: last_checked: 2023-10-09
-#: next_check: 2023-10-17
-#: valid: -20231017
+#: next_check: 2023-11-14
+#: valid: -20231114
 Köpenicker Str./Geraldweg: Gegenverkehrsregelung	X::inwork 21072,8742
 # 
 # REMOVED --- #: source_id: viz2021:13.406514,52.51352,16.03.2021,08:00 (bis Ende 2022) (bis Ende 2023) (bis 28.2.2023) (inaktiv) --- #: note: Ampel ist eigentlich südöstlich der Einmündung gelegen --- #: last_checked: 2023-02-16 --- #: check_frequency: 30d --- # REMOVED --- #: next_check: 2023-12-31 --- #: next_check: 2023-02-28 --- Fischerinsel	F::inwork 10578,11969
@@ -492,11 +493,10 @@ Gegenverkehrsregelung	X::inwork 18767,-1343
 #: related ^^^
 #: related antidromic vvv
 #: note: kann nachts ausgeschaltet sein (gesehen 2014-12, Fr gegen 23:30) vvv
-#: note: mittlerweile auch am Wochenende und an Feiertagen ausgeschaltet (gesehen 2022-12-18 (So) gegen 12:00, 2023-04-02 (So) gegen 14:00, 2023-05-29 (Pfingstmontag) gegen 13:55, 2023-10-14 (Sa) gegen 21:50) vvv
+#: note: mittlerweile auch am Wochenende und an Feiertagen ausgeschaltet, gesehen: 2022-12-18 (So) gegen 12:00, 2023-04-02 (So) gegen 14:00, 2023-05-29 (Pfingstmontag) gegen 13:55, 2023-10-14 (Sa) gegen 21:50), 2023-10-15 (So) vormittags und abends
 	X 11089,9751
-#: note: vermutlich am Wochenende und an Feiertagen ausgeschaltet (gesehen 2023-04-02 (So) gegen 14:00, 2023-05-29 (Pfingstmontag) gegen 13:55, 2023-10-14 (Sa) gegen 21:50)
+#: note: vermutlich am Wochenende und an Feiertagen ausgeschaltet, gesehen: 2023-04-02 (So) gegen 14:00, 2023-05-29 (Pfingstmontag) gegen 13:55, 2023-10-14 (Sa) gegen 21:50
 	X 11141,9732
-#: note ^^^
 #: note ^^^
 #: related ^^^
 	X 11274,9492
@@ -2636,13 +2636,13 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
 #: XXX evtl. als zwei Ampeln eintragen, falls die Ampelphasen für Radfahrer ungünstig sind
-#: last_checked: 2023-09-23
+#: last_checked: 2023-10-18
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: manchmal ausgeschaltet (gesehen 2022-08-24 13:10)
-#: last_checked: 2023-09-24
+#: last_checked: 2023-10-18
 #: check_frequency: 120d
 	X::inwork 14382,9299
 # 
@@ -3322,7 +3322,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2023-10-13 vvv
+#: last_checked: 2023-10-15 (mapillary) vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
