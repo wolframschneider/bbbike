@@ -2510,6 +2510,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
        undef,
        {
          'data' => '#: next_check_id: MARIENFELDERALLEEBAHN-2021
+#: source_id: 2147344558 (bis 10.09.2020) (inaktiv)
 #: source_id: 2147346164 (bis 06.07.2021, Gesamtbaumaßnahme bis 2024) (vielleicht inaktiv)
 #: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
 #: source_id: viz2021:13.373965,52.425564,30.07.2020,09:00 (bis 4.6.2022, Gesamtbaumaßnahme bis 2024) (bis 16.7.2021) (bis 28.10.2022) (bis 31.3.2023) (bis 22.2.2023) (bis 31.05.2023) (bis 23.6.2023) (bis 30.6.2023) (bis 15.12.2023)
@@ -2519,7 +2520,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://viz.berlin.de/2023/06/verkehrsvorschau-300623/ (neue Bauphase)
 #: by: https://nitter.cz/VIZ_Berlin/status/1674654999844995072#m
 #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnp5Mjk4YmFnQUVETTdSLmpwZw==
-#: also_indoor: traffic (G,H)
+#: also_indoor: traffic (ex-G,H,B,W)
 #: last_checked: 2023-07-19 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2023-12-15
@@ -2530,7 +2531,6 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 ',
          'from' => undef,
          'id' => 3151,
-         'source_id' => '2147344558',
          'text' => 'Großbeerenstr. - Daimlerstr.: Überfahrt gesperrt, voraussichtlich bis Mitte Dezember 2023, vielleicht sogar bis 2024',
          'type' => 'gesperrt',
          'until' => 1735660800
@@ -2827,7 +2827,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: viz2021:13.428783,52.478213,06.04.2020,07:00 (bis 31.03.2025)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G,H,B)
-#: last_checked: 2023-08-24
+#: last_checked: 2023-10-15 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -2868,10 +2868,11 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8370
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036831903278/831903278/00399704/04-Anlagen/03/Anlage1_20220225_7-89VE_PAS_OL_11_mitDeckblatt.pdf
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/grundsteinlegung-fuer-gebaeude-ensemble-an-der-passauer-strasse_a365087 (Bauarbeiten noch zwei Jahre (ab Mitte November 2022))
+#: by: https://www.deutsches-architekturforum.de/thread/14542-gesch%C3%A4fts-b%C3%BCrokomplex-p1-am-kadewe-sch%C3%B6neberg-in-bau/?postID=749610#post749610
 #: also_indoor: traffic (ex-H,G)
 #: osm_watch: way id="362719487" version="8"
 #: osm_watch: way id="687428752" version="2"
-#: last_checked: 2023-09-29
+#: last_checked: 2023-10-17 (daf)
 #: check_frequency: 120d
 #: next_check: 2024-11-15
 	q4::inwork 6033,10403 6133,10679
@@ -2879,7 +2880,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
          'from' => undef,
          'id' => 3320,
          'source_id' => 'https://www.deutsches-architekturforum.de/thread/12678-umbau-des-kadewe/?postID=678680#post678680',
-         'text' => 'Passauer Str.: Fahrbahn gesperrt (Stand August 2023), Ende der Bauarbeiten unbekannt',
+         'text' => 'Passauer Str.: Fahrbahn gesperrt (Stand Oktober 2023), Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -2896,14 +2897,14 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="29"
 #: osm_watch: way id="165832806" version="33"
-#: last_checked: 2023-10-09
+#: last_checked: 2023-10-18
 #: check_frequency: 14d
 	2::inwork 17380,8858 17416,8767 17468,8692 17497,8623 17515,8567 17524,8536 17533,8505 17554,8458 17588,8413
 # REMOVED (hier weitgehend fertig) ---	2::inwork 17588,8413 17617,8363 17652,8349 17707,8328 17753,8290
 ',
          'from' => undef,
          'id' => 3327,
-         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Straßenarbeiten gesperrt sein (Stand Anfang Oktober 2023: keine Sperrung)',
+         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Straßenarbeiten gesperrt sein (Stand Mitte Oktober 2023: keine Sperrung)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3252,7 +3253,20 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1375439.php
+#: by: https://www.berliner-woche.de/schmargendorf/c-bauen/fahrbahn-wird-saniert_a396928
+#: source_id: viz2021:13.27859,52.47409,16.10.2023,06:00 (bis 31.10.2023)
+# REMOVED --- #: next_check_id: MESSELSTR-2022 --- #: also_indoor: traffic (H)
+# REMOVED (zwischen Pücklerstr. und Heydenstr.) ---	q4::inwork 2397,6960 2304,7059 2139,7239
+	q4::inwork 1956,7453 2017,7412 2139,7239
+',
+         'from' => 1697478274,
+         'id' => 3499,
+         'text' => 'Messelstr.: zwischen Clayallee und Heydenstr. Bauarbeiten, Sperrung der Fahrbahn, bis 31.10.2023 16:00',
+         'type' => 'handicap',
+         'until' => 1698764400
+       },
        {
          'data' => '#: by: https://www.berlinhyp.de/de/media/newsroom/berlin-hyp-baut-neue-unternehmenszentrale-b-one-nach-h%C3%B6chsten-energiestandards (fertig: Ende 2023)
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/b-one-berlin-hyp-ag-neubau.955/#post-17434
@@ -4733,7 +4747,7 @@ Cyclopstr.	q4::inwork 4812,21737 4829,21714
 #: note: Weitere Sperrungen sind in gesperrt-orig, dort wo eindeutig nur Baustelle ist
 #: source_id: viz2021:13.472998,52.501877,24.07.2023,07:00 (Straßenbau in Höhe Ingrid-Reschke-Str., bis 25.08.2023) (bis 01.09.2023) (bis 08.09.2023) (inaktiv)
 #: XXX Wann sind die Straßen offen? vvv
-#: last_checked: 2023-10-09 vvv
+#: last_checked: 2023-10-18 vvv
 #: check_frequency: 60d vvv
 Ingrid-Reschke-Str.	2::inwork 15163,10758 15151,10699 15140,10647 15138,10638
 Ulrich-Plenzdorf-Str.	2::inwork 15151,10699 15220,10682
@@ -4883,10 +4897,12 @@ Dornacher Str. (Kreuzungsbereiche)	q3::inwork 20948,9847 20947,9999 20947,10137
        {
          'data' => '#: next_check_id: PISTORIUS-2023
 #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG-NAVI-07-23-barrierefrei.pdf (Teilsperrung Pistoriusstraße weiterhin bis Sa, 28.10.(2023))
-#: source_id: viz2021:13.44623,52.55365,19.06.2023,08:00 (bis 28.07.2023, Gesamtbaumaßnahme bis Ende 10/2023) (bis 13.08.2023) (bis 14.08.2023) (bis 20.10.2023)
+#: source_id: viz2021:13.44623,52.55365,19.06.2023,08:00 (bis 28.07.2023, Gesamtbaumaßnahme bis Ende 10/2023) (bis 13.08.2023) (bis 14.08.2023) (bis 20.10.2023) (bis 17.11.2023)
+#: source_id: viz2021:13.44859,52.55298,19.06.2023,08:00 (hier: beide Richtungen, bis 17.11.2023)
 #: note: die VIZ-Meldung erwähnt nur den Kfz-Verkehr, aber es sieht so aus, als ob Radfahrer hier auch betroffen sind; außerdem wird die Gäblerstr. nicht erwähnt
 #: last_checked: 2023-08-04 (mapillary) vvv
-#: next_check: 2023-10-20 vvv
+#: next_check: 2023-10-17 vvv
+# REMOVED --- #: next_check: 2023-11-17 vvv
 Pistoriusstr.	q4::inwork; 13331,16424 13104,16522
 Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
 #: next_check ^^^
@@ -5030,17 +5046,7 @@ Gäblerstr.	q4::inwork; 13272,16672 13315,16548 13347,16447
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: viz2021:13.33522,52.4859,07.08.2023,07:00 (inaktiv)
-#: source_id: viz2021:13.335186,52.487058,10.10.2023,07:00 (bis 16.10.2023)
-	q4::inwork 5782,8828 5783,9060
-',
-         'from' => 1696802400,
-         'id' => 3878,
-         'text' => 'Babelsberger Str.: Bauarbeiten zwischen Badensche Str. und Berliner Str., Fahrbahn gesperrt, vom 10.10.2023 07:00 bis 16.10.2023 17:00',
-         'type' => 'handicap',
-         'until' => 1697468400
-       },
+       undef,
        undef,
        undef,
        {
@@ -5243,17 +5249,7 @@ südlicher Weg	2::inwork 10168,10085 10066,10071
          'type' => 'handicap',
          'until' => 1702656000
        },
-       {
-         'data' => '#: by[nocache]: https://nitter.net/VIZ_Berlin/status/1701456853991841866#m
-	q4::inwork; 9383,13986 9469,14004 9659,14043
-',
-         'from' => 1694408400,
-         'id' => 3906,
-         'source_id' => 'viz2021:13.391903,52.531971,12.09.2023,07:00',
-         'text' => 'Invalidenstr.: Radspur zwischen Gartenstr. und Bergstr. gesperrt, vom 12.09.2023 07:00 bis 17.10.2023 17:00',
-         'type' => 'handicap',
-         'until' => 1697554800
-       },
+       undef,
        undef,
        {
          'data' => '	q3::inwork 8486,16425 8467,16718
@@ -5456,12 +5452,14 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
          'until' => 1698681600
        },
        {
-         'data' => '	q4::inwork 13598,13180 13692,13221
+         'data' => '#: source_id: viz2021:13.452867,52.524141,04.10.2023,07:00 (bis 15.11.2023)
+#: last_checked: 2023-10-16
+#: check_frequency: 14d
+	q4::inwork 13598,13180 13692,13221
 ',
          'from' => 1696309200,
          'id' => 3928,
-         'source_id' => 'viz2021:13.452867,52.524141,04.10.2023,07:00',
-         'text' => 'Ebelingstr.: Anbindung Ebertystr. gesperrt, vom 04.10.2023 07:00 bis 15.11.2023 17:00',
+         'text' => 'Ebelingstr.: Anbindung Ebertystr. gesperrt, vom 04.10.2023 07:00 bis 15.11.2023 17:00 (Stand Mitte Oktober 2023: keine Sperrung der Ebertystr. für Radfahrer)',
          'type' => 'handicap',
          'until' => 1700064000
        },
@@ -5574,8 +5572,12 @@ bis Sarrazinstr. (23.-24.10.2023)	q4::inwork 5630,7875 5632,7821 5636,7734 5635,
        {
          'data' => '#: next_check_id: BLUMBERGER-2023
 #: source_id: viz2021:13.57491,52.55616,16.10.2023,07:00 (bis 15.12.2023)
-	q4::inwork 21869,16719 21889,16817 21925,16981
+# REMOVED (hier laut osm nicht) ---	q4::inwork 21869,16719 21889,16817
+#: osm_watch: way id="1126670512" version="5"
+	q4::inwork 21889,16817 21925,16981
 #: source_id: viz2021:13.574645,52.555124,16.10.2023,07:00 (bis 15.12.2023)
+#: osm_watch: way id="9030384" version="38"
+#: osm_watch: way id="9030545" version="19"
 	q4::inwork 21944,16805 21889,16817
 ',
          'from' => 1697346000,

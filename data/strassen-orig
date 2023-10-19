@@ -575,7 +575,7 @@ Karl-Kunger-Str.	N 13190,9750 13345,9596 13489,9456 13614,9333
 Karl-Kunger-Str.	H 13614,9333 13647,9304 13766,9200
 Plesser Str.	N 13647,9304 13667,9316 13821,9340
 Kiefholzstr.	N 13251,9829 13450,9714 13602,9581 13715,9455 13821,9340 13849,9310
-Kiefholzstr.	NH 13849,9310 14018,9118 14151,8967 14261,8851 14318,8790 14363,8738 14560,8528 14700,8368 14841,8207 14976,8053 15053,7966 15221,7778 15553,7408 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755 16276,6611 16283,6604 16346,6534 16425,6445 16485,6377 16868,5938
+Kiefholzstr.	NH 13849,9310 14018,9118 14151,8967 14261,8851 14318,8790 14341,8763 14363,8738 14560,8528 14700,8368 14841,8207 14976,8053 15053,7966 15221,7778 15553,7408 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755 16276,6611 16283,6604 16346,6534 16425,6445 16485,6377 16868,5938
 Puderstr.	N 14363,8738 14492,8853 14525,8894 14567,8966 14614,9052
 Herkomerstr.	N 14558,9111 14439,8987
 Moosdorfstr.	N 14305,9213 14382,9299
@@ -1344,7 +1344,7 @@ Holzmarktstr. [Rückseite]	N 11515,12293 11488,12225 11736,12097
 #: oldname: Wallnerstr.
 Lichtenberger Str. [Rückseite]	N 11736,12097 11845,12292
 Stralauer Platz	HH 12180,11657 12497,11459
-Andreasstr.	NH 12180,11657 12204,11748 12207,11763 12238,11931 12279,12113 12295,12197 12339,12436 12352,12509
+Andreasstr.	NH 12180,11657 12204,11748 12207,11763 12238,11931 12279,12113 12295,12197 12306,12256 12339,12436 12352,12509
 Kleine Andreasstr.	N 12059,12172 12211,12128
 Kleine Andreasstr.	NN 12211,12128 12279,12113
 (Jannowitzbrücke - Schillingstr.)	NN 11347,12223 11417,12243
@@ -1476,10 +1476,10 @@ Grunerstr.	HH 10849,12557 10783,12502
 #: source_id[expired]: bvg2021:248#BVG324714_0
 #: source_id: viz2021:13.412286,52.519002,17.07.2023,07:00 (bis 25.08.2023) (inaktiv)
 #: XXX nach Fertigstellung des Molkenmarkts entfernen
-#: last_checked: 2023-10-02 (daf) vvv
+#: last_checked: 2023-10-12 (mapillary) vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2023-08-25
-Grunerstr. [provisorischer Radweg]	NN 10973,12611 11057,12715
+Grunerstr. [Gehweg]	NN 10973,12611 11057,12715
 Grunerstr. [Gehweg]	NN 10900,12546 10973,12611
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -1846,7 +1846,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: osm_watch: way id="1010731431" version="7"
 #: osm_watch: way id="642581102" version="8"
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2023-09-18 (daf)
+#: last_checked: 2023-10-06 (mapillary)
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -15490,7 +15490,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2023-10-09
+#: last_checked: 2023-10-18
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15878,7 +15878,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2023-10-09
+#: last_checked: 2023-10-18
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -16229,7 +16229,7 @@ Juchaczweg	N 14126,3225 14180,3334
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8363 (Vorlage zur Beschlussfassung)
 #: XXX Bebauungsplan XIV-132-1: ggfs. wird dieser Abschnitt öffentlich befahrbar werden, inklusive Verlegung der Schranke?
 #: osm_watch: way id="721901188" version="1"
-#: osm_watch: way id="138144497" version="7"
+#: osm_watch: way id="138144497" version="8"
 #: priority: #C
 #: last_checked: 2020-04-18
 #: next_check: 2024-07-01
@@ -16517,7 +16517,7 @@ Mindener Str.	N 3140,13174 3283,13132 3400,13107 3523,13076
 (Richard-Tauber-Damm - Im Eck)	N 9853,1172 9906,1166 10000,1131
 (Richard-Tauber-Damm - Im Eck)	NN 10000,1131 10014,1123
 Im Eck	N 10014,1123 10162,1054
-Mörikestr.	N 16060,6850 15946,6722 15830,6579
+Mörikestr.	N 16060,6850 15946,6722 15884,6653 15830,6579
 Frauenlobstr.	N 15697,6688 15830,6579 15954,6481 16043,6414 16220,6277
 Schopenhauerstr.	N -1902,3290 -1956,3292 -2038,3252 -2167,3161 -2279,3089 -2367,3006 -2464,2914 -2481,2900 -2487,2891 -2593,2764 -2776,2660 -2910,2601 -3190,2467
 Reifträgerweg	N -2367,3006 -2529,3220 -2638,3281 -2763,3359
