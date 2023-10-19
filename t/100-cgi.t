@@ -763,7 +763,7 @@ for my $cgiurl (@urls) {
 
 	my $content = std_get "$action?" .
 	    CGI->new({ start => "invalidenstr",
-		       zielname => "müller-breslau-str",
+		       zielname => "mÃ¼ller-breslau-str",
 		     })->query_string,
 	    testname => "The Mueller-Breslau request";
 	like_html $content, qr{Invalidenstr\..*Ecke.*Müller-Breslau-Str\..*Ecke}s, "'Ecke' for both crossings";
@@ -777,7 +777,7 @@ for my $cgiurl (@urls) {
 
 	my $content = std_get "$action?" .
 	    CGI->new({ start2 => 'Westend (Kolonie)!Westend!14050!935,12882!0', # note: multiple results with "Westend"
-		       via    => 'Weinbergshöhe',
+		       via    => 'WeinbergshÃ¶he',
 		       ziel2  => 'Eiswerder (Insel)!Hakenfelde!13585!-2318,15601!0', # note: multiple results with "Eiswerder"
 		       scope  => 0,
 		     })->query_string,
