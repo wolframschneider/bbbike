@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2003,2006,2014,2015,2017,2020 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2003,2006,2014,2015,2017,2020,2023 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -18,6 +18,8 @@ use strict;
 use BBBikeGlobalVars;
 use vars qw(@gv_old_args $gv_pid $gv_version @gv_version);
 use File::Copy qw();
+
+use BBBikeProcUtil qw(double_forked_exec);
 
 BEGIN {
     if (!defined &M) {
@@ -255,40 +257,15 @@ sub BBBikePrint::print_postscript {
 	}
     } elsif (is_in_path("ghostview")) {
 	return 1 if $check_availability;
-	system("ghostview $file&");
+	double_forked_exec('ghostview', $file);
     } elsif (is_in_path("ggv")) {
 	return 1 if $check_availability;
-	system("ggv $file&");
+	double_forked_exec('ggv', $file);
     } elsif (is_in_path("kghostview")) {
 	return 1 if $check_availability;
-	system("kghostview $file&");
+	double_forked_exec('kghostview', $file);
     } elsif ($^O eq 'darwin') {
-	system("open $file&"); # will call ps to pdf converter
-    } elsif ($os eq 'unix' && $^O ne 'darwin') {
-	# XXX Tk::Ghostscript funktioniert noch nicht so
-	# toll... besser mit gs-5.10 als mit gs-3.53
-	# Tk::Ghostview ist in 800.004 nicht mehr vorhanden
-	my $errmsg = sub {
-	    if ($quiet) {
-		warn $@;
-	    } else {
-		status_message($@, "err");
-	    }
-	};
-	eval {
-	    require Tk::Ghostview;
-	};
-	if ($@) {
-	    return 0 if $check_availability;
-	    $errmsg->();
-	    return;
-	} else {
-	    return 1 if $check_availability;
-	}
-
-	my $t = $top->Toplevel;
-	$t->Ghostview(-file => $file)->pack;
-	last TRY;
+	system("open", $file); # will call ps to pdf converter; runs in background
     } elsif ($os eq 'win') {
         require Win32Util;
 	if ($check_availability) {
@@ -394,9 +371,9 @@ sub BBBikePrint::view_pdf {
 	Win32Util::start_any_viewer($file);
     } else {
     TRY: {
-	    for my $prog (qw(xpdf nautilus acroread acroread5 acroread4 gv ggv atril)) {
+	    for my $prog (qw(evince xpdf nautilus acroread acroread5 acroread4 gv ggv atril)) {
 		if (is_in_path($prog)) {
-		    system("$prog $file &");
+		    double_forked_exec($prog, $file);
 		    last TRY;
 		}
 	    }

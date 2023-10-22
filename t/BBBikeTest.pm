@@ -51,6 +51,7 @@ BEGIN {
 }
 
 use BBBikeBuildUtil qw(get_pmake);
+use BBBikeProcUtil qw(double_forked_exec);
 use BBBikeUtil qw(bbbike_root is_in_path);
 
 @EXPORT = (qw(get_std_opts set_user_agent do_display tidy_check
@@ -211,19 +212,20 @@ sub do_display {
     $imagetype = "" if !defined $imagetype; # avoid warnings
 
     if ($imagetype eq 'svg') {
-	# prefer ImageMagick (needs at least version 6) over Mozilla
 	if (is_in_path("display")) {
-	    system("display $filename &");
-	} elsif (is_in_path("mozilla")) {
-	    system("mozilla -noraise -remote 'openURL(file:$filename,new-tab)' &");
+	    double_forked_exec('display', $filename);
+	} elsif (is_in_path('eog')) {
+	    double_forked_exec('eog', $filename);
 	} else {
 	    warn "Can't display $filename";
 	}
     } elsif ($imagetype eq 'pdf') {
 	if (defined $pdf_prog) {
-	    system("$pdf_prog $filename &");
+	    double_forked_exec($pdf_prog, $filename);
+	} elsif (is_in_path("evince")) {
+	    double_forked_exec('xpdf', $filename);
 	} elsif (is_in_path("xpdf")) {
-	    system("xpdf $filename &");
+	    double_forked_exec('xpdf', $filename);
 	} elsif ($^O eq 'MSWin32') {
 	    system($filename);
 	} elsif ($^O eq 'darwin') {
@@ -259,9 +261,9 @@ sub do_display {
 	}
     } else {
 	if (is_in_path("xv") && $imagetype ne "wbmp") {
-	    system("xv $filename &");
+	    double_forked_exec('xv', $filename);
 	} elsif (is_in_path("display")) {
-	    system("display $filename &");
+	    double_forked_exec('display', $filename);
 	} elsif ($^O eq 'MSWin32') {
 	    system($filename);
 	} else {
