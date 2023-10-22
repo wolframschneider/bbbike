@@ -18,7 +18,7 @@ use strict;
 use FindBin;
 BEGIN {
     if (($ENV{SERVER_NAME}||'') =~ m{\Quser.cs.tu-berlin.de}) {
-	use lib "/home/eserte/lib/site_perl";
+	#use lib "/home/eserte/lib/site_perl";
     }
 }
 use lib (grep { -d }
