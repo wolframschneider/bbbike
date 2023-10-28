@@ -23,8 +23,8 @@
 #: note: Stau gesehen: 2022-08-24 (Mi) gegen 13:00, 2022-08-25 (Do) gegen 14:30, 2022-08-27 (Sa) gegen 17:30, 2022-10-07 (Fr) gegen 13:20, 2023-02-16 (Do) gegen 19:30, 2023-02-17 (Fr) gegen 13:45, 2023-03-02 (Do) gegen 13:05, 2023-03-11 (Sa) gegen 13:50, 2023-03-14 (Di) gegen 12:50, 2023-04-05 (Mi) gegen 13:30 und 14:15, 2023-05-17 (Mi) gegen 13:25, 2023-05-25 (Do) gegen 17:10 (mapillary), 2023-10-04 (Mi) 18:08, 2023-10-12 (Do) 18:23
 #: note: kurzen Stau gesehen (ab Corinthstr.): 2022-09-24 (Sa) gegen 16:40, vermutlich 2022-10-10 (Mo) gegen 13:05, 2022-10-24 (Mo) gegen 16:30, 2022-11-21 (Mo) gegen 13:40, 2023-01-14 (Sa) gegen 13:00, 2023-02-19 (So) gegen 12:40, 2023-04-03 (Mo, Osterferien) gegen 12:45, 2023-05-11 (Do) gegen 12:35, 2023-09-15 (Fr) gegen 13:00
 #: note: ganz kurzen Stau gesehen (Beginn zwischen Corinthstr. und Radweg): 2022-12-04 (So) gegen 15:00, 2022-12-22 (Do) gegen 18:40, 2023-04-10 (Ostermontag) gegen 15:45
-#: note: keinen Stau gesehen: 2022-08-29 (Mo) gegen 18:10, 2022-09-01 (Do) gegen 19:00, 2022-09-03 (Sa) gegen 12:45, 2022-09-04 (So) gegen 15:00, 2022-09-21 (Mi) gegen 19:50, 2022-09-28 (Mi) gegen 11:15, 2022-10-16 (So) gegen 14:40, 2022-10-18 (Di) gegen 17:30, 2022-10-20 (Do) gegen 12:30, 2022-10-23 (So) gegen 15:50, 2022-11-01 (Di) gegen 17:50, 2022-11-08 (Di) gegen 13:50, 2022-11-12 (Sa) gegen 14:00 und 16:00, 2022-11-13 (So) gegen 11:45, 2022-11-18 (Fr) mittags (2x), 2022-11-27 (So) mittags (2x), 2022-12-01 (Do) gegen 13:30, 2022-12-06 (Di) gegen 13:20, 2022-12-08 (Do) gegen 17:30 und 18:00, 2022-12-15 (Do) gegen 12:45, 2022-12-22 (Do) gegen 17:50, 2022-12-28 (Mi) 14:30, 2023-01-04 (Mi) 18:30, 2023-01-10 (Di) gegen 13:15, 2023-01-17 (Di) gegen 11:45 und 12:30, 2023-02-04 (So) gegen 16:00, 2023-03-06 (Mo) gegen 12:40, 2023-04-15 (So) gegen 11:25, 2023-05-11 (Do) gegen 22:30, 2023-05-14 (So) gegen 13:30, 2023-06-05 (Mo) gegen 17:45, 2023-06-09 (Fr) gegen 17:05, 2023-06-14 (Mi) gegen 12:50, 2023-07-02 (So) gegen 12:00, 2023-07-04 (Di) gegen 20:20, 2023-07-05 (Mi) gegen 18:00, 2023-07-21 (Fr) gegen 18:40, 2023-07-24 (Mo) gegen 12:45, 2023-08-05 (Sa) gegen 10:30, 2023-08-07 (Mo) gegen 17:40, 2023-08-14 (Mo) gegen 12:30, 2023-08-19 (Sa) gegen 14:10, 2023-08-21 (Mo) gegen 18:30, 2023-09-22 (Fr) gegen 18:08, 2023-09-23 (Sa) 10:36 und 13:08, 2023-10-07 (Sa) 09:50, 2023-10-17 (Di) 13:04
-#: last_checked: 2023-10-17
+#: note: keinen Stau gesehen: 2022-08-29 (Mo) gegen 18:10, 2022-09-01 (Do) gegen 19:00, 2022-09-03 (Sa) gegen 12:45, 2022-09-04 (So) gegen 15:00, 2022-09-21 (Mi) gegen 19:50, 2022-09-28 (Mi) gegen 11:15, 2022-10-16 (So) gegen 14:40, 2022-10-18 (Di) gegen 17:30, 2022-10-20 (Do) gegen 12:30, 2022-10-23 (So) gegen 15:50, 2022-11-01 (Di) gegen 17:50, 2022-11-08 (Di) gegen 13:50, 2022-11-12 (Sa) gegen 14:00 und 16:00, 2022-11-13 (So) gegen 11:45, 2022-11-18 (Fr) mittags (2x), 2022-11-27 (So) mittags (2x), 2022-12-01 (Do) gegen 13:30, 2022-12-06 (Di) gegen 13:20, 2022-12-08 (Do) gegen 17:30 und 18:00, 2022-12-15 (Do) gegen 12:45, 2022-12-22 (Do) gegen 17:50, 2022-12-28 (Mi) 14:30, 2023-01-04 (Mi) 18:30, 2023-01-10 (Di) gegen 13:15, 2023-01-17 (Di) gegen 11:45 und 12:30, 2023-02-04 (So) gegen 16:00, 2023-03-06 (Mo) gegen 12:40, 2023-04-15 (So) gegen 11:25, 2023-05-11 (Do) gegen 22:30, 2023-05-14 (So) gegen 13:30, 2023-06-05 (Mo) gegen 17:45, 2023-06-09 (Fr) gegen 17:05, 2023-06-14 (Mi) gegen 12:50, 2023-07-02 (So) gegen 12:00, 2023-07-04 (Di) gegen 20:20, 2023-07-05 (Mi) gegen 18:00, 2023-07-21 (Fr) gegen 18:40, 2023-07-24 (Mo) gegen 12:45, 2023-08-05 (Sa) gegen 10:30, 2023-08-07 (Mo) gegen 17:40, 2023-08-14 (Mo) gegen 12:30, 2023-08-19 (Sa) gegen 14:10, 2023-08-21 (Mo) gegen 18:30, 2023-09-22 (Fr) gegen 18:08, 2023-09-23 (Sa) 10:36 und 13:08, 2023-10-07 (Sa) 09:50, 2023-10-17 (Di) 13:04, 2023-10-21 (Sa) 14:46
+#: last_checked: 2023-10-21
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2023-09-30
 	Jam; 14641,10552 14608,10409 14558,10264
@@ -70,9 +70,9 @@ Karl-Marx-Str.	Jam; 12598,8390 12582,8408 12562,8432 12545,8449 12494,8501
 # REMOVED --- #: next_check ^^^ --- #: last_checked ^^^
 #: next_check_id: STRALAUERALLEE-2023
 #: note: Stau zwischen Stralauer Allee und Corinthstr., gesehen: 2023-10-12 (Thu) 18:07 und 18:31, 2023-10-15 (Sun) 18:30
-#: note: kein Stau, gesehen: 2023-10-13 (Fri) 23:04
+#: note: kein Stau, gesehen: 2023-10-13 (Fri) 23:04, 2023-10-20 (Fri) 08:35
 #: source_id: viz2021:13.450662,52.501661,26.09.2023,15:00 (bis 24.10.2023)
-#: last_checked: 2023-10-15
+#: last_checked: 2023-10-20
 #: next_check: 2023-10-24
 Modersohnstr.	Jam; 13919,10583 14011,10812
 # 
@@ -186,8 +186,8 @@ Flughafenstr.	Jam; 12349,8464 12494,8501
 # REMOVED (nicht mehr) --- #: next_check_id: FRIEDRICHSTR-2018 vvv --- Behrenstr.	Jam; 9373,12197 9496,12215 --- Behrenstr.	Jam; 9631,12227 9496,12215 9373,12197 --- Charlottenstr.	Jam; 9496,12215 9489,12263 9475,12365 --- Charlottenstr.	Jam; 9475,12365 9489,12263 9496,12215 --- #: next_check_id ^^^
 # 
 #: next_check_id: L33-2022 vvv
-L33	Jam; 23895,15904 23965,15894 23992,15894 25007,15650 25528,15587 25866,15543 25955,15531 26071,15470 26175,15461
-L33	Jam; 26175,15461 26071,15470 25955,15531 25866,15543 25528,15587 25007,15650 23992,15894 23965,15894 23895,15904
+L33	Jam; 23895,15904 23965,15894 23992,15894 24071,15875 25007,15650 25528,15587 25866,15543 25955,15531 26071,15470 26175,15461
+L33	Jam; 26175,15461 26071,15470 25955,15531 25866,15543 25528,15587 25007,15650 24071,15875 23992,15894 23965,15894 23895,15904
 #: next_check_id ^^^
 # 
 #: note: tagsüber (besonders nachmittags, auch am Wochenende) meistens mit Beeinträchtigungen vvv
@@ -225,6 +225,9 @@ Lindenberger Str./Wartenberger Str.	Jam; 18515,20587 18593,20823 18591,20898 185
 Wexstr.	Jam; 5522,8011 5472,8012 5357,8013
 # 
 Dahlwitzer Landstraße	Jam; 25584,6029 25579,5958
+# 
+Hermannstr.	Jam; 11979,8014 12001,7937 12025,7852 12041,7788 12057,7744 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12185,7381
+Hermannstr.	Jam; 12185,7381 12158,7449 12123,7549 12121,7555 12090,7651 12081,7679 12075,7696 12057,7744 12041,7788 12025,7852 12001,7937 11979,8014
 # 
 ######################################################################
 # Unconfirmed (too few data)

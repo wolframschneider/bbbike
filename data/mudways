@@ -130,9 +130,14 @@ Märchenweg: unbefestigte Straße mit vielen Kuhlen	X 14209,19327 14216,19338 1424
 Hauffallee - Blankenburger Pflasterweg: fester Sandweg	X 14284,19451 14328,19527 14366,19602 14374,19728 14338,19830 14348,19861
 # 
 #: mud: 2020-03-15: viele Pfützen
-#: by: mapillary (2023-04-19)
-#: mud: 2023-04-19: viele Pfützen	h=q3,wet
-Mauerpark, über den Gleimtunnel: Sandweg mit Kuhlen	X 10050,15824 10061,15775 10045,15754 10079,15661 10091,15630 10155,15473
+#: by: mapillary (2023-04-12)
+#: mud: 2023-04-12: viele Pfützen	h=q3,wet
+Mauerpark, über den Gleimtunnel: Sandweg mit Kuhlen	X 10050,15824 10061,15775 10045,15754 10071,15684
+# REMOVED (hier nicht mehr, neues Pflaster) --- Mauerpark, über den Gleimtunnel: Sandweg mit Kuhlen	X 10071,15684 10079,15661
+# 
+#: by: mapillary (2023-04-12)
+#: mud: 2023-04-12: viele Pfützen	h=q3,wet
+Mauerpark, über den Gleimtunnel: Sandweg mit Kuhlen	X 10091,15630 10155,15473
 # 
 #: mud: 2023-04-01: viele große Pfützen, matschig	h=q3-,wet
 (Schwedter Steg - Bärbel-Bohley-Ring/Lichtburgring): wassergebundene Decke, bei Regen große Pfützen	X 10064,15920 9996,15901 9997,15884
@@ -431,6 +436,7 @@ Am Teltowkanal: Feldweg	X 20810,2398 20496,2321
 Am Teltowkanal: Feldweg, holprig	X 20496,2321 20499,2285 20303,2254 20282,2259
 # 
 #: mud: 2021-05-15: matschige Stellen und Pfützen
+#: mud: 2023-10-22: matschige Stellen und Pfützen	h=q3,wet
 Hausvaterweg: unbefestigte Straße	X 20281,18690 20347,18667
 # 
 #: mud: 2021-06-19: trocken, mehrere mittelsandige Stellen
@@ -459,6 +465,7 @@ Hausvaterweg: unbefestigte Straße	X 20281,18690 20347,18667
 # 
 #: mud: 2022-01-28: etwas feuchtere Oberfläche, am Eingang Hermannstr. leicht matschig	h=q1-,wet
 #: mud: 2023-03-11: etwas feuchtere Oberfläche, wenige Pfützen	h=q2+,wet
+#: mud: 2023-10-21: etwas feuchtere Oberfläche, am Eingang Hermannstr. einige Pfützen	h=q2+,wet
 (Weg am Friedhof): Parkweg	X 11608,7267 11687,7284 12185,7381
 # 
 #: mud: 2022-02-02: matschige Stellen und Pfützen	h=q2-,wet
@@ -542,6 +549,7 @@ Mauerweg: wassergebundene Decke	X 11794,550 11928,588 11956,599
 Mariendorfer-Hafen-Weg: unbefestigter Weg, einige Stellen mit Schotter	X 8106,3410 8016,3651 7795,4242
 # 
 #: mud: 2023-03-11: einige Pfützen	h=q2,wet
+#: mud: 2023-10-21: einige Pfützen, insbesondere im westlichen Abschnitt	h=q2,wet
 Kolonie Albrechtshöhe: wassergebundene Decke	X 10260,5953 10215,5959 9955,5993
 # 
 #: mud: 2023-03-26: matschige Oberfläche	h=q3+,wet
@@ -551,6 +559,7 @@ Kolonie Albrechtshöhe: wassergebundene Decke	X 10260,5953 10215,5959 9955,5993
 (Hasselwerderpark, Uferweg an der Spree): wassergebundene Decke	X 18506,5596 18473,5645 18430,5719 18413,5799 18400,5841 18334,5900
 # 
 #: mud: 2023-05-02: weitgehend trocken	h=q0-,wet
+#: mud: 2023-10-19: weitgehend trocken	h=q0-,wet
 Straße 106: fester Sandweg	X 14599,14679 14666,14845 14828,15050
 # 
 #: mud: 2023-05-13: keine Beeinträchtigungen	h=q0
@@ -567,4 +576,16 @@ Glasapfelweg: unbefestigter Weg	X 12883,22615 12820,22518 12825,22486
 # 
 #: mud: 2023-10-08: zahlreiche Pfützen und matschige Stellen	h=q3,wet
 Herrgottsapfelweg: unbefestigte Straße	X 12821,22437 12825,22486 12938,22513 12942,22521 13021,22589 13088,22646 13127,22716 13160,22776 13183,22817
+# 
+#: mud: 2023-10-22: zahlreiche Pfützen	h=q3-,wet
+Am Ahornweg: unbefestigter Weg	X 19071,19576 19019,19396 18947,19168
+# 
+#: mud: 2023-10-22: zahlreiche Pfützen	h=q3-,wet
+Am Lindenweg: unbefestigter Weg	X 19187,19543 19129,19360 19061,19145 18983,18906
+# 
+#: mud: 2023-10-22: einige Pfützen, h=q1,wet
+Am Akazienweg: unbefestigter Weg	X 19248,19525 19190,19340 19125,19130
+# 
+#: mud: 2023-10-22: einige Pfützen, h=q2,wet
+Am Akazienweg: unbefestigter Weg	X 19125,19130 19043,18876
 # 
