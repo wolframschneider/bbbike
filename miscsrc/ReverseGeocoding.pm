@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2009,2014,2019,2020 Slaven Rezic. All rights reserved.
+# Copyright (C) 2009,2014,2019,2020,2023 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -50,7 +50,7 @@ use strict;
     sub _get_area_grid {
 	my $self = shift;
 	if (!$self->{area}) {
-	    $self->{area} = MultiStrassen->new('orte', 'orte2');
+	    $self->{area} = MultiStrassen->new('orte', 'orte2', 'berlin_ortsteile');
 	}
 	$self->{area};
     }
@@ -131,9 +131,8 @@ return 1 if caller;
 {
     require Getopt::Long;
     require FindBin;
-    $FindBin::RealBin = $FindBin::RealBin if 0; # cease -w
     require lib;
-    lib->import("$FindBin::RealBin/../lib");
+    lib->import("$FindBin::RealBin/../lib", "$FindBin::RealBin/..");
     my $type;
     my $module;
     my $debug;
@@ -143,7 +142,12 @@ return 1 if caller;
     }
     die "Expects longitude and latitude" if @ARGV != 2;
     my($px, $py) = @ARGV;
-    print ReverseGeocoding->new($module)->find_closest("$px,$py", $type, ($debug ? (debug => $debug) : ())), "\n";
+    my $res = ReverseGeocoding->new($module)->find_closest("$px,$py", $type, ($debug ? (debug => $debug) : ()));
+    if (!defined $res) {
+	print STDERR "# Nothing found for $px,$py\n";
+    } else {
+	print $res, "\n";
+    }
 }
 
 __END__

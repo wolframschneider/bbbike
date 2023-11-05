@@ -20,7 +20,7 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.98;
+$VERSION = 2.01;
 
 use vars qw(%images);
 
@@ -1098,7 +1098,7 @@ sub show_mapcompare_menu {
 	 -command => sub {
 	     showmap_mapcompare
 		 (maps => [qw(
-				 berlin-historical-2022
+				 berlin-historical-2023
 			    )],
 		  %args,
 		 )
@@ -1112,13 +1112,13 @@ sub show_mapcompare_menu {
 	     # whole of Brandenburg
 	     showmap_mapcompare
 		 (maps => [qw(
+				 berlin-historical-2023
 				 berlin-historical-2022
 				 berlin-historical-2021
 				 lgb-satellite-color
 				 berlin-historical-2019
 				 berlin-historical-2018
 				 berlin-historical-2017
-				 berlin-historical-2016
 				 google-satellite
 			    )],
 		  %args,
@@ -1471,8 +1471,8 @@ sub show_fis_broker_menu {
 	);
     $link_menu->separator;
     $link_menu->command
-	(-label => 'Orthophotos 2022',
-	 -command => sub { showmap_fis_broker(mapId => 'k_luftbild2022_true_rgbi@senstadt', %args) },
+	(-label => 'Orthophotos 2023',
+	 -command => sub { showmap_fis_broker(mapId => 'k_luftbild2023_true_rgbi@senstadt', %args) },
 	);
     $link_menu->separator;
     $link_menu->command
@@ -1729,7 +1729,9 @@ sub showmap_url_viz {
     my($x,$y) = $proj4->forward($args{py}, $args{px});
     $y -= 125; # XXX why? otherwise the selected coordinate is at the bottom of the screen
     my $scale = 11; # XXX hardcoded for now
-    sprintf 'https://viz.berlin.de/wp-content/plugins/masterportal-wordpress/public/portals/berlin/index.html?layerIDs=WebatlasBrandenburg,Baustellen_OCIT&visibility=true,true&transparency=30,0&center=%d,%d&zoomlevel=%d', $x, $y, $scale;
+    # note: when bookmarking then center has additional [...], but it works also without (and less problems regarding escaping or org-mode links)
+    sprintf 'https://viz.berlin.de/site/_masterportal/berlin/index.html?Map/layerIds=basemap_raster_farbe,Verkehrslage,Baustellen_OCIT&visibility=true,true,true&transparency=40,0,0&Map/center=%d,%d&Map/zoomLevel=%d', $x, $y, $scale;
+
 }
 
 sub showmap_viz {

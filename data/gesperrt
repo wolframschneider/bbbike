@@ -122,7 +122,7 @@ Dernburgstr.	1 2493,10675 2378,10677 2310,10732 2233,11049
 Schuckertdamm	1 741,14827 1022,14898 1056,14906 1112,14918 1200,14943 1344,14978
 Am Kleinen Wannsee	1 -5499,1349 -5488,1289 -5541,1214 -5749,1146
 Oberhofer Platz	1 5491,1955 5474,1940 5452,1940 5431,1956 5393,2053 5376,2097 5406,2110 5434,2122 5452,2077 5489,1981 5491,1955
-Scheelestr.	1 5741,1234 5683,1108 5646,1054 5556,984 5488,943 5421,902 5342,845
+Scheelestr.	1 5733,1240 5683,1108 5646,1054 5556,984 5488,943 5421,902 5342,845
 Tibertius-Brücke: Kfz-Straße	2 5672,5751 5574,5819 5377,5961 5335,5991 4937,6205
 An der Schillingbrücke	1 12061,11406 12060,11323
 An der Schillingbrücke	1 12021,11349 12061,11406
@@ -223,7 +223,7 @@ Strausberger Str.	1 12416,13045 12368,13031 12247,12848
 Große Präsidentenstr.	1 10105,13004 10220,13098
 Duisburger Str.	1 4183,10144 3880,10154
 Straße 462	1 4914,17399 5068,17384
-Havensteinstr.	1 6293,2583 6463,2724 6593,2831
+Havensteinstr.	1 6293,2583 6468,2720 6592,2827
 Worpsweder Str.	1 6182,4931 6202,5163
 Wilseder Str.	1 6295,5158 6276,4915
 Dickhardtstr.	1 5806,7205 5827,7187 5824,6974 5826,6871 5811,6833 5752,6751 5604,6709 5533,6753
@@ -1487,9 +1487,9 @@ Straßenbahnhaltestelle	3nocross::ignrte 9225,13389 9293,13366 9371,13333
 Oranienburger Str. -> Linienstr.: Straßenbahnhaltestelle	3::igndisp 9225,13389 9293,13366 9312,13388
 Linienstr. -> Oranienburger Str.: Straßenbahnhaltestelle	3::igndisp 9312,13388 9293,13366 9371,13333
 Brauhausstr. -> Prenzlauer Promenade: Straßenbahntrasse	3 12211,16688 12017,16734 12045,16574
-Mittelstreifen	3nocross::ignrte 16720,6845 16677,6892 16563,7012
+Mittelstreifen	3nocross::ignrte 16720,6845 16677,6892 16627,6945 16563,7012
 Köpenicker Landstr. -> Güldenhofer Ufer: Mittelstreifen	3::igndisp 16720,6845 16677,6892 16630,6800
-Güldenhofer Ufer -> Köpenicker Landstr.: Mittelstreifen	3::igndisp 16630,6800 16677,6892 16563,7012
+Güldenhofer Ufer -> Köpenicker Landstr.: Mittelstreifen	3::igndisp 16630,6800 16677,6892 16627,6945
 Mittelstreifen	3nocross::ignrte 17293,6230 17216,6308 16909,6628 16838,6708
 Rixdorfer Str. -> Schnellerstr.: Mittelstreifen	3::igndisp 17160,6239 17216,6308 16909,6628
 Schnellerstr. -> Rixdorfer Str.: Mittelstreifen	3::igndisp 17293,6230 17216,6308 17160,6239
@@ -3428,6 +3428,8 @@ Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15
 (Joachim-Karnatz-Allee - Ingeborg-Drewitz-Allee): wegen Bauarbeiten gesperrt	2::inwork 7418,12601 7377,12729
 Kurstr.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 10230,11839 10122,11913
 Wateweg: Bauarbeiten, Weg kann gesperrt sein	2::inwork 21131,8739 21124,8792
+Uferweg am Teltowkanal	2::inwork 4209,2641 4220,2664
+Uferweg am Teltowkanal	2::inwork 4209,2641 4247,2652 4272,2704 4274,2717
 Am Generalshof: Hochbauarbeiten, Fahrbahn gesperrt	2::inwork 22056,5314 22140,5392
 Dieselstr. - westlicher Mergenthalerring: Durchfahrt nicht erlaubt	2 14249,8075 14250,8098 14238,8100 14247,8254 14229,8278
 Holteistr.: Hochbauarbeiten, Einbahnstraßenregelung	1s:inwork 14535,11327 14506,11275
@@ -3481,7 +3483,6 @@ Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355
 Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork 10831,12371 10830,12313 10830,12279
 Jüdenstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451
 Littenstr.: Anbindung an die Grunerstr. gesperrt	2::inwork 10973,12611 10951,12637
-Grunerstr.: Radweg	1::igndisp 11057,12715 10973,12611
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	1::inwork 13422,11236 13537,11186 13540,11148
 Johannisstr.: Einbahnstraße	1s:inwork 9588,13174 9385,13174 9254,13171
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7727,4418 7692,4464 7667,4549

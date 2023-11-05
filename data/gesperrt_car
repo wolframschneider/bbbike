@@ -49,7 +49,8 @@ Holtei von N - Boxhagener	3 14676,11572 14639,11512 14684,11456
 Boxhagener von E - Holtei	3 14684,11456 14639,11512 14575,11407
 Bachstr. - 17. Juni (?)	3 5790,12026 5775,11975 5758,11895 5810,11902 5900,11913
 Fasanen - Hertzallee (nur für BVG frei)	3 5456,11742 5356,11512 5352,11502 5587,11397
-Fasanenstr.	1 5192,10241 5196,10398
+Fasanenstr.	1 5191,10190 5192,10241 5196,10398
+Fasanenplatz	1 5192,10241 5223,10243
 Naumannstr. - Kolonnenstr.	3 7713,8600 7709,8777 7642,8815
 Naumannstr. N - H	3 7707,8919 7709,8777 7713,8600
 zum Mariannenplatz	2 11944,11152 11917,11186
@@ -59,7 +60,6 @@ Gormannstr.	1 10459,13760 10445,13675 10406,13543 10390,13493
 Reichenberger Str.	1 11291,10438 11393,10390
 Weserstr.	1 12074,9217 12005,9211 11888,9189
 Friedenstr.	1 12325,13148 12382,13097
-Fasanenstr.	1 5219,9808 5203,9840 5194,9985
 Kopfstr.	1 12478,7878 12327,7847 12220,7822 12176,7811 12041,7788
 Hagelberger - Yorck	3nocross::ignrte 8595,9495 8679,9544 8777,9601
 Yorckstr. -> Hagelberger Str.: Hagelberger - Yorck	3::igndisp 8777,9601 8679,9544 8774,9534
@@ -2146,6 +2146,7 @@ Lausitzer Str. -> Wiener Str.: Wiener Str./Lausitzer Str.	3::igndisp 12048,10097
 Wiener Str. -> Lausitzer Str.: Wiener Str./Lausitzer Str.	3::igndisp 11949,10414 12169,10310 12220,10398
 Wiener Str. -> Lausitzer Str.: Wiener Str./Lausitzer Str.	3::igndisp 12243,10274 12169,10310 12048,10097
 Braunschweiger Str.	1 13919,7707 13858,7617
+Braunschweiger Str.: Poller, Durchfahrt an der Elsterstr. nicht möglich	2 13601,7366 13519,7345
 Fürstenwalder Str.: Poller	2 12243,12604 12242,12594
 Margarete-Steffin-Str.	1 8525,12958 8406,13127 8315,13181
 Jenbacher Weg: für Radfahrer umfahrbare Schranke	3 5418,-98 5665,51 5703,74
@@ -2314,7 +2315,6 @@ Adolf-Menzel-Str.: Poller	3 22096,10090 22110,10090 22177,10082
 Adolf-Menzel-Str.: Poller	3 22177,10082 22110,10090 22096,10090
 Gritznerstr.	1 4511,6318 4555,6403
 Alt-Lankwitz	2:Anlieger 7407,3473 7419,3500 7236,3605 7012,3743
-Abbestr.	2 4674,12076 4698,12124
 Otto-Marquardt-Str. -> Landsberger Allee	3 14888,14280 14954,14119 14964,14123
 Pfarrhufenweg	1 25599,13069 25684,13172
 Hempelsteig	2:Anlieger -472,12961 -525,13034 -724,13120 -787,13147
@@ -2482,3 +2482,5 @@ Stettiner Str./Bellermannstr.: Diagonalsperre	3 9331,16624 9099,16398 9156,16339
 Stettiner Str./Bellermannstr.: Diagonalsperre	3 9156,16339 9099,16398 9331,16624
 Rhenaniastr. -> Daumstr.	3 -1737,16283 -1821,16327 -1816,16111
 (Planstraße C)	1 12848,11093 12926,11224
+Boxhagener Str. -> Wühlischstr.: nur geradeaus erlaubt	3 14752,11369 14771,11345 14759,11339
+Görlitzer Ufer: hier soll ein Fußgänger/Radfahrerbereich eingerichtet werden	2 13216,9983 13155,9907 13136,9883 13086,9825
