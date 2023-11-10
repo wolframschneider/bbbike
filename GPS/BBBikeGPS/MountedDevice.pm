@@ -138,9 +138,15 @@
 		return;
 	    }
 	} elsif ($^O eq 'linux') { ###########################################
-	    my $check_udisksctl = '/usr/bin/udisksctl';
-	    if (-x $check_udisksctl) {
-		$udisksctl = $check_udisksctl;
+	    $udisksctl = _is_in_path('udisksctl');
+	    my $func;
+	    if (defined $udisksctl) {
+		$func = {
+			 parse_status   => \&_parse_udisksctl_status3,
+			 find_mountable => \&_udisksctl_find_mountable,
+			};
+	    }
+	    if ($func) {
 		my $info_dialog_active;
 		my $max_wait = 80; # full etrex 30 device boot until mass storage is available lasts 66-70 seconds
 		my @check_mount_devices;
@@ -150,7 +156,7 @@
 					    '/dev/disk/by-label/GARMIN', '/dev/disk/by-label/Falk', '/dev/disk/by-label/IGS630'
 					   );
 		} elsif ($garmin_disk_type eq 'card') {
-		    my $disks = _parse_udisksctl_status2();
+		    my $disks = $func->{parse_status}->();
 		    my @card_name_defs = ('Garmin GARMIN Card', 'Microsoft SDMMC');
 		    my @errors;
 		    my $seen_disks_diagnostics;
@@ -174,7 +180,7 @@
 			}
 
 			if ($disk_info) {
-			    my $check_mount_device = _udisksctl_find_mountable('/dev/' . $disk_info->{DEVICE});
+			    my $check_mount_device = $func->{find_mountable}->('/dev/' . $disk_info->{DEVICE});
 			    if (!defined $check_mount_device) {
 				push @errors, "Cannot find a mountable filesystem on device '$disk_info->{DEVICE}'";
 			    } else {
@@ -461,7 +467,7 @@
 			    File::Sync::fsync($fh);
 			}
 		    }
-		} elsif (eval { require BBBikeUtil; 1 } && BBBikeUtil::is_in_path('fsync')) {
+		} elsif (_is_in_path('fsync')) {
 		    system('fsync', @sync_files);
 		}
 	    }
@@ -507,11 +513,14 @@
 	}
     }
 
+    ######################################################################
+    # FreeBSD (hal)
+
     # no fallback, return undef if lshal operation not possible
     sub _guess_garmin_mount_device_via_hal {
 	my($garmin_disk_type, $inforef) = @_;
 
-	if (!eval { require BBBikeUtil; 1 } && BBBikeUtil::is_in_path('lshal')) {
+	if (!_is_in_path('lshal')) {
 	    $$inforef = 'cannot detect: lshal unavailable' if $inforef;
 	    return;
 	}
@@ -539,6 +548,9 @@
 	$$inforef = 'disk not found' if $inforef;
 	return;
     }
+
+    ######################################################################
+    # FreeBSD (log fallback)
 
     # with fallback (/dev/da0 or /dev/da1)
     sub _guess_garmin_mount_device_freebsd_via_log {
@@ -572,15 +584,29 @@
 	$mount_device;
     }
 
+    ######################################################################
+    # Linux (udisksctl)
+
     # Use in a one-liner:
     #
     #    perl -I. -MGPS::BBBikeGPS::MountedDevice -MData::Dumper -e 'warn Dumper GPS::BBBikeGPS::MountedDevice::_parse_udisksctl_status()'
     #
     sub _parse_udisksctl_status {
+	my(%opts) = @_;
+	my $infostring = delete $opts{infostring}; # used for testing
+	die "Unhandled options: " . join(" ", %opts) if %opts;
+
 	my %disks;
-	my @cmd = ('/usr/bin/udisksctl', 'status');
-	open my $fh, '-|', @cmd
-	    or die "Error starting '@cmd': $!";
+
+	my $fh;
+	if (defined $infostring) {
+	    open $fh, '<', \$infostring or die $!;
+	} else {
+	    my @cmd = ('/usr/bin/udisksctl', 'status');
+	    open $fh, '-|', @cmd
+		or die "Error starting '@cmd': $!";
+	}
+
 	chomp(my $header = <$fh>);
 	my(@f) = split /(\s+)/, $header;
 	my @field_names = do { my $i; grep { $i++ % 2 == 0 } @f };
@@ -597,7 +623,8 @@
 	    $disks{$f{MODEL}} = \%f;
 	}
 	close $fh
-	    or die "Error running '@cmd': $!";
+	    or die "Error while closing filehandle (probably failure of running udisksctl command): $!";
+
 	\%disks;
     }
 
@@ -649,6 +676,48 @@
 		die "Cannot parse rest '$rest'";
 	    }
 	    $disks{$f{MODEL}} = \%f;
+	}
+	close $fh
+	    or die "Error while closing filehandle (probably failure of running udisksctl command): $!";
+
+	\%disks;
+    }
+
+    sub _parse_udisksctl_status3 {
+	my(%opts) = @_;
+	my $infostring = delete $opts{infostring}; # used for testing
+	die "Unhandled options: " . join(" ", %opts) if %opts;
+
+	my %disks;
+
+	my $fh;
+	if (defined $infostring) {
+	    open $fh, '<', \$infostring or die $!;
+	} else {
+	    my @cmd = ('/usr/bin/udisksctl', 'status');
+	    open $fh, '-|', @cmd
+		or die "Error starting '@cmd': $!";
+	}
+	chomp(my $header = <$fh>);
+	my @field_names = split /\s+/, $header;
+	if ($field_names[0] ne 'MODEL') {
+	    die "Unexpected header in 'udisksctl status' command: first field is not MODEL, but '$field_names[0].";
+	}
+	if (@field_names != 4) {
+	    die "Unexpected header in 'udisksctl status' command: expected four fields, got " . scalar(@field_names) . ".";
+	}
+	scalar <$fh>; # dashed line
+	while(<$fh>) {
+	    chomp;
+	    next if /^-($|\s)/;
+	    s/\s+$//;
+	    if (my @v = $_ =~ /^(.+?)\s+(\S+)\s+(\S+)\s+(\S+)$/) {
+		my %f;
+		@f{@field_names} = @v;
+		$disks{$f{MODEL}} = \%f;
+	    } else {
+		die "Cannot parse line '$_'";
+	    }
 	}
 	close $fh
 	    or die "Error while closing filehandle (probably failure of running udisksctl command): $!";
@@ -713,6 +782,113 @@
 	\%disks;
     }
 
+    ######################################################################
+    # Linux (udevadm)
+    sub _get_linux_disks {
+	my @disks;
+	my $proc_file = '/proc/partitions';
+	if (open my $fh, $proc_file) {
+	    scalar <$fh>; # overread header
+	    while(<$fh>) {
+		chomp;
+		next if /^\s*$/;
+		s/^\s+//;
+		my(@f) = split /\s+/;
+		if ($f[3] !~ /\d$/) { # skip partitions
+		    push @disks, $f[3];
+		}
+	    }
+	} else {
+	    warn "Cannot open $proc_file: $!, cannot get linux disks.\n";
+	}
+	@disks;
+    }
+
+    sub _parse_udevadm_info {
+	my($disk, %opts) = @_;
+	my $compat = delete $opts{compat};
+	die "Unhandled options: " . join(" ", %opts) if %opts;
+
+	$disk = "/dev/$disk" if $disk !~ m{^/};
+	if (!_is_in_path('udevadm')) {
+	    die "Cannot parse disk info using udevadm, utility is not installed.\n";
+	}
+	my @cmd = ('udevadm', 'info', $disk);
+	open my $fh, '-|', @cmd
+	    or die "Error running '@cmd': $!";
+	my $info;
+	while(<$fh>) {
+	    chomp;
+	    if (/^E:\s+(.*?)=(.*)/) {
+		my($key, $val) = ($1, $2);
+		if ($key =~ /_ENC$/) {
+		    $val =~ s/\\x([0-9a-fA-F]{2})/pack("H*", $1)/eg;
+		}
+		$info->{$key} = $val;
+	    }
+	}
+
+	if ($compat) {
+	    if ($compat eq 'udisksctl-status') {
+		(my $model = $info->{ID_MODEL_ENC}) =~ s/\s*$//;
+		my $vendor = $info->{ID_VENDOR};
+		my $vendor_model = (defined $vendor ? "$vendor " : "") . $model;
+		my $short_disk = do {
+		    require File::Basename;
+		    File::Basename::basename($disk);
+		};
+		$info =
+		    {
+		     $vendor_model =>
+		     {
+		      SERIAL   => $info->{ID_SERIAL_SHORT},
+		      MODEL    => $vendor_model,
+		      REVISION => $info->{ID_REVISION},
+		      DEVICE   => $short_disk,
+		     },
+		    };
+	    } else {
+		die "Unhandled compat value '$compat'";
+	    }
+	}
+
+	$info;
+    }
+
+    # Use in a one-liner:
+    #
+    #    perl -I. -MGPS::BBBikeGPS::MountedDevice -MData::Dumper -e 'warn Dumper GPS::BBBikeGPS::MountedDevice::_parse_udevadm_as_udisksctl_status()'
+    #
+    sub _parse_udevadm_as_udisksctl_status {
+	my $info = {};
+	for my $disk (_get_linux_disks()) {
+	    my $add_info = _parse_udevadm_info($disk, compat => 'udisksctl-status');
+	    while(my($k,$v) = each %$add_info) {
+		$info->{$k} = $v;
+	    }
+	}
+	$info;
+    }
+
+    # Use in a one-liner:
+    #
+    #    perl -I. -MGPS::BBBikeGPS::MountedDevice -e 'warn GPS::BBBikeGPS::MountedDevice::_udevadm_find_mountable(shift)' /dev/sdc
+    #
+    sub _udevadm_find_mountable {
+	my $dev_prefix = shift;
+	require File::Glob;
+	my @candidates = File::Glob::bsd_glob($dev_prefix.'*');
+	for my $candidate (@candidates) {
+	    my $info = _parse_udevadm_info($candidate);
+	    if ($info->{ID_FS_USAGE} eq 'filesystem') {
+		return $candidate;
+	    }
+	}
+	undef;
+    }
+
+    ######################################################################
+    # Mac
     sub _diskutil_list {
 	require BBBikePlist;
 	open my $fh, '-|', qw(diskutil list -plist) or die $!;
@@ -740,6 +916,11 @@
 	} # no else
     }
 
+    sub _is_in_path {
+	my $prog = shift;
+	require BBBikeUtil;
+	BBBikeUtil::is_in_path($prog);
+    }
 }
 
 1;

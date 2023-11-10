@@ -2,9 +2,9 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+Kiefholzstr.: Gegenverkehrsregelung	X::inwork 14700,8368
+Brückenstr./Rungestr.: Gegenverkehrsregelung	X::inwork 11291,11876
 Schönhauser Allee/Kollwitzstr.: provisorische Ampel	F::inwork 10908,13978
-Rohrdammbrücke: Gegenverkehrsregelung	X::inwork 1170,13521
-Rohrdammbrücke: Gegenverkehrsregelung	X::inwork 1124,13599
 Alt-Heiligensee: Gegenverkehrsregelung	X::inwork -3020,21786
 Roelckestr./Gäblerstr.	X::inwork 13272,16672
 Gegenverkehrsregelung	X::inwork 20302,1613
@@ -17,7 +17,6 @@ Gürtelstr./Weserstr.	F::inwork 15016,11431
 	F::inwork 18831,14823
 	F::inwork 19196,14976
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
-Parrisiusstr./Borgmannstr.: provisorische Ampel	X::inwork 22531,5871
 Hämmerlingstr./Am Bahndamm: Gegenverkehrsregelung	X::inwork 21984,6317
 Hämmerlingstr./südlich Bahnbrücke: Gegenverkehrsregelung	X::inwork 22000,6245
 Gehsener Str./Hoernlestr.	F::inwork 22395,6821
@@ -32,7 +31,6 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8227,19725
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8311,19458
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8268,19558
 	X::inwork 9868,19023
-	X::inwork -1538,22800
 	F::inwork 9207,11880
 	X::inwork 20891,17572
 	X::inwork 20895,17594
@@ -2407,6 +2405,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 20671,-205
 	F 31967,3238
 	X 10873,12577
+	F 9704,19428
 	X -17127,-554
 	F -12868,-502
 	X -12940,-1625

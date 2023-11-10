@@ -1642,12 +1642,6 @@ if (defined $q->param('begin')) {
 	draw_route();
     }
 } elsif (defined $q->param('create_all_maps')) {
-    # XXX Der Apache 1.3.9/FreeBSD 3.3 lässt den Prozess nach ungefähr
-    # fünf Karten mit "Profiling timer expired" sterben. Mit thttpd
-    # gibt es zwar auch mysteriöse kills, aber es geht im Großen und
-    # Ganzen.
-    #
-    # Mit dem Apache auf bbbike.de gibt es keine Probleme.
     http_header(-type => 'text/plain',
 		@no_cache,
 	       );
@@ -8806,7 +8800,7 @@ my $s_copyright = <<EOF;
 <a class="mobile_link" href="/">home</a> |
 <a href="/help.html">$help</a> |
 <a href="/tools.html" title="BBBike tools and applications">$app</a> |
-<a href="//download.bbbike.org/osm/bbbike/$city_script/" title="OSM and garmin extract">download</a> |
+<a href="https://download.bbbike.org/osm/bbbike/$city_script/" title="OSM and garmin extract">download</a> |
 <a href="$community_link">$donate</a> |
 <a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
 $list_of_all_streets
@@ -8825,14 +8819,13 @@ $permalink_text
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
-(&copy;) 1998-2023 <a href="//CycleRoutePlanner.org">BBBike.org</a> by <a href="https://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+(&copy;) 1998-2023 <a href="https://CycleRoutePlanner.org">BBBike.org</a> by <a href="https://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data (&copy;) <a href="https://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br>
 <a href="/help.html#iphone">iphone</a> -
-<a href="/help.html#android">android</a> -
-<a href="/help.html#windowsphone">windows phone</a> -
+<!-- <a href="/help.html#android">android</a> - -->
 <a href="/tools.html">desktop</a> -
-<a href="//mc.bbbike.org/mc/">map compare</a> -
-<a href="//extract.bbbike.org/">osm extract service</a> -
+<a href="https://mc.bbbike.org/mc/">map compare</a> -
+<a href="https://extract.bbbike.org/">osm extract service</a> -
 <a href="/support.html">@{[ M("commercial support") ]}</a><br>
 
 </div> <!-- copyright -->
@@ -9963,7 +9956,6 @@ Der aktuellen Snapshot der Perl/Tk-Version kann <a href="@{[ $BBBike::BBBIKE_UPD
 Zukünftige BBBike-Features können <a href="$bbbike2_url">hier</a> getestet werden.
 <h4 id="mobile">Mobile Version</h2>
 Unter der Adresse <a href="@{[ $BBBike::BBBIKE_MOBILE ]}">@{[ $BBBike::BBBIKE_MOBILE ]}</a> existiert eine Version von BBBike, die für mobile Geräte optimiert ist.
-<!-- <p> Eine Anregung, wie man BBBike auf dem iPhone verwenden kann, findet man <a href="$bbbike_html/bbbike_tracks_iphone.html">hier</a>. -->
 <h4 id="gpsupload">GPS-Upload</h4>
 Es besteht die experimentelle Möglichkeit, sich <a href="@{[ $bbbike_url ]}?uploadpage=1">GPS-Tracks oder bbr-Dateien</a> anzeigen zu lassen.<p>
 <h4 id="diplom">Diplomarbeit</h4>
