@@ -78,7 +78,7 @@ Wilhelplatz	1 -7064,584 -7081,483 -7122,439 -7180,378
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8374 (Festsetzung)
 #: XXX außerdem Anlage von Radwegen, allerdings nicht benutzungspflichtig
 #: osm_watch: way id="152264786" version="21"
-#: last_checked: 2023-10-21
+#: last_checked: 2023-10-31 (mapillary)
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2021-12-31
 Ella-Barowsky-Str.	1 7499,7880 7268,8008 7193,7950
@@ -164,10 +164,10 @@ Olivaer Platz	1 4239,10358 4172,10406 4157,10418
 Platz S (Hundekehlestr.)	1 2301,7698 2213,7637
 Platz S (Hundekehlestr.)	1 2169,7690 2222,7718 2277,7705
 Platz am Wilden Eber	1 2723,7029 2701,7045 2688,7067 2695,7082 2717,7093 2737,7073 2742,7056 2733,7039 2723,7029
-# gesperrt wegen Tunnel
-Wexstr.	2 6260,8011 5807,7978 5631,8011
+# gesperrt wegen des Tunnels
+Wexstr.	2 6260,8011 5807,7978 5695,8007
 Wexstr.	1 6388,7999 6260,8011
-Wexstr.	1 5631,8011 5801,8031 5911,8042 6154,8070 6261,8058 6409,8026
+Wexstr.	1 5632,8024 5697,8027 5801,8031 5911,8042 6154,8070 6261,8058 6409,8026
 Detmolder Str. (Süd)	1 4711,8013 4572,7936 4353,8035 4323,8119 4280,8188
 Detmolder Str. (Nord)	2 4349,8118 4469,8037 4600,8002 4711,8013
 Detmolder Str. (Nord)	1 4280,8188 4349,8118
@@ -355,7 +355,7 @@ Große Präsidentenstr.	1 10105,13004 10220,13098
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_14032017.pdf
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll-2-sitzung.pdf (Ablehnung durch Polizei)
 #: osm_watch: way id="4437134" version="16"
-#: last_checked: 2023-09-29
+#: last_checked: 2023-11-06
 #: check_frequency: 120d
 Duisburger Str.	1 4183,10144 3880,10154
 # 
@@ -862,8 +862,8 @@ Turmstr. (Straßenbahntrasse)	3nocross::ignrte 5857,13342 5956,13338 6012,13332 6
 #: note ^^^
 # 
 #: note: Bundesplatztunnel, Grünanlage vvv
-Bundesplatz (Richtungsfahrbahn)	1 5346,7860 5331,8012 5304,8088 5304,8144 5354,8236
-Bundesplatz (Richtungsfahrbahn)	1 5354,8236 5363,8170 5376,8104 5357,8013 5350,7915 5346,7860
+Bundesplatz (Richtungsfahrbahn)	1 5346,7860 5325,8023 5304,8088 5304,8144 5354,8236
+Bundesplatz (Richtungsfahrbahn)	1 5354,8236 5363,8170 5376,8104 5363,8024 5350,7915 5346,7860
 #: note ^^^
 #: note: Mittelstreifen mit teilweise dichter Beparkung, sehr breite Straße, Straßentunnel vvv
 Grunerstr. (Richtungsfahrbahn)	1::igndisp 11105,12764 11057,12715
@@ -1175,7 +1175,6 @@ Cyclopstr.	1 5349,21198 5297,21243
 Dietrichinger Weg	1 5037,21659 5136,21738
 An den Fließtalhöfen	1s:q4 4474,23119 4432,23066 4444,22989
 Edelhofdamm	1 3456,25601 3307,25554
-Edelhofdamm	1 3277,25575 3446,25628
 Olbrichweg	1 5787,19326 5879,19352
 Genfer Str.	1 6890,18190 6821,18216 6683,18243
 Am Krummen Weg	1 -7169,14849 -7026,14890
@@ -3675,6 +3674,18 @@ Drängelgitter	BNP:3::trailer=10 3789,18863
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: next_check_id: MUSEUMDERMODERNE-2021
+#: last_checked: 2023-11-08 (daf)
+#: check_frequency: 180d
+#: next_check: 2027-01-0
+Matthäikirchplatz: Durchgang gesperrt	2::inwork 7933,11407 7970,11396 7934,11275
+# 
+#: next_check_id: PLANSTRASSE9-2023
+#: osm_watch: way id="20420585" version="31"
+#: last_checked: 2023-11-05
+#: check_frequency: 60d
+Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,9039 19638,9070 19621,9097
+# 
 #: next_check_id: ANDERSTREUOBSTWIESE-2021
 #: XXX Teilfläche soll eingezogen werden ---laut Amtsblatt 50/2019 ist das so gut wie die gesamte Straße; könnte was mit den Bauvorhaben "An der Streuobstwiese" zu tun haben
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_50_7633_7832_online.pdf
@@ -3810,7 +3821,7 @@ Forumszufahrt: Bahnunterführung wegen Bauarbeiten gesperrt	2::inwork 22280,6128 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: note: Weitere Sperrungen sind in temp blockings, dort wo schon Häuser mit evtl. bezogenen Wohnungen stehen
 #: XXX Wann sind die Straßen offen? vvv
-#: last_checked: 2023-10-26 vvv
+#: last_checked: 2023-11-10 vvv
 #: check_frequency: 60d vvv
 An den Eiswerken	2::inwork 15004,10791 14994,10732 14984,10677
 Paul-und-Paula-Promenade	2::inwork 14886,10748 14909,10732 14984,10677
@@ -3829,6 +3840,7 @@ Potsdamer Platz - Bellevuestr.: wegen Bauarbeiten am ehemaligen Sony-Center gesp
 # 
 #: next_check_id: GOETEL-2023
 #: XXX Bleibt die Einbahnstraßenregelung permanent?
+#: osm_watch: way id="1193389996" version="1"
 #: last_checked: 2023-10-11
 Götelstr.: Einbahnstraßenregelung	1 -3260,12540 -3252,12405 -3255,12338 -3284,12304 -3293,12304
 # 
@@ -3851,7 +3863,7 @@ Mauerpark: Weg gesperrt	2::inwork 10071,15684 10045,15754
 #: XXX Weddingplatz: Umgestaltung
 #: XXX Nach den Bauarbeiten wird hier eine Spielstraße sein
 #: osm_watch: way id="4596985" version="22"
-#: last_checked: 2023-10-03
+#: last_checked: 2023-11-07
 #: check_frequency: 90d
 #: next_check: 2024-09-30
 Reinickendorfer Str.: Einbahnstraßenregelung im Bereich des Weddingplatzes	1s:q3:inwork 7998,15068 8015,15047 8037,14958 8091,14895
@@ -3940,7 +3952,7 @@ Dieselstr. - westlicher Mergenthalerring: Durchfahrt nicht erlaubt	2 14249,8075 
 # 
 #: by: https://www.deutsches-architekturforum.de/thread/14882-friedrichshain-so-s%C3%BCdl-der-frankfurter-allee-%C3%B6stl-der-warschauer-str/?postID=738701#post738701
 #: by: https://www.buero-sge.de/de/referenzen/12-referenzen/198-simplonstrasse-53-53a-holteistrasse-2
-#: last_checked: 2023-10-28
+#: last_checked: 2023-11-08
 #: check_frequency: 30d
 Holteistr.: Hochbauarbeiten, Einbahnstraßenregelung	1s:q3:inwork 14535,11327 14506,11275
 # 
@@ -3978,7 +3990,7 @@ Gendarmenmarkt: Sanierung, Durchgang gesperrt	2::inwork 9536,11922 9666,11935
 #: source_id: viz2021:13.33184,52.48035,31.07.2023,06:00 (Komplettsperrung bis 04.08.2023) (inaktiv)
 #: last_checked: 2023-10-29 (architektur-urbanistik)
 #: check_frequency: 120d
-Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer	1s:q4:inwork 5522,8011 5520,8132 5573,8197
+Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer	1s:q4:inwork 5522,8024 5520,8132 5573,8197
 # 
 #: next_check_id: U6-2022
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11381 (Ersuchen: Durchgang zu den Sportstätten)
@@ -4080,7 +4092,7 @@ Marktplatz Adlershof: Umbauarbeiten, keine Einbahnstraßenregelung	1no 20336,3783
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10099 (Antrag: stärkere Priorisierung)
 #: osm_watch: way id="1086484458" version="2"
 #: osm_watch: way id="36780316" version="11"
-#: last_checked: 2023-10-30
+#: last_checked: 2023-11-05
 #: check_frequency: 90d
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 # REMOVED --- Hauptstr. - Rummelsburger Ufer: gesperrt, möglicherweise dauerhaft	2::inwork 16178,9861 16049,9749
@@ -4178,7 +4190,7 @@ Parkstadt Karlshorst: temporäre Einbahnstraßenregelung	1::inwork 17648,8626 1762
 #: osm_watch: way id="129104626" version="21"
 #: osm_watch: way id="945966258" version="3"
 #: also_indoor: traffic (ex-H,ex-G,ex-B(alle falsch))
-#: last_checked: 2023-10-03
+#: last_checked: 2023-11-07
 #: check_frequency: 120d
 #: next_check: 2026-09-30
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen	1s:q3:inwork 8266,14346 8442,14456
@@ -4187,7 +4199,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2023-10-30
+#: last_checked: 2023-11-05
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -4374,7 +4386,7 @@ Buckower Chaussee: Bahnübergang gesperrt	2::inwork 9123,533 9164,552 9178,556
 # REMOVED (es gibt nun einen besseren Watch) --- #: osm_watch: way id="860287005" version="6"
 #: osm_watch: way id="1095306828" version="6"
 #: also_indoor: traffic (G)
-#: last_checked: 2023-10-18 (osm)
+#: last_checked: 2023-11-09
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2023-02-28
 Cotheniusstr.: Bauarbeiten, Straße existiert nicht mehr	2::inwork 13430,13733 13519,13785
@@ -4417,7 +4429,7 @@ Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht
 #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/dockyard-feiert-richtfest_a396811 (Fertigstellung 2026)
 #: by: https://www.pecan.de/neubau-ketteler-la-roche-schule-im-quartier-neumuehle-2/ (Fertigstellung 4. Quartal 2024)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbrücke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2023-10-30
+#: last_checked: 2023-11-10
 #: check_frequency: 180d
 #: next_check: 2024-12-31
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,10157
@@ -4427,7 +4439,7 @@ Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14361,10259 14462,10206 14480,1015
 #: by: https://www.deutsches-architekturforum.de/thread/11157-agromex-projekt-fanny-zobel-stra%C3%9Fe-treptow-in-bau/?postID=748725#post748725
 #: confirmed_by: srt
 #: also_indoor: webcam https://portal1548.webcam-profi.de/ (Februar+Juli 2023: 401) vvv
-#: last_checked: 2023-10-20 vvv
+#: last_checked: 2023-11-10 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2027-12-31 vvv
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,10152 14373,10046
@@ -4450,9 +4462,10 @@ Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,1015
 #: XXX für den gesperrten Abschnitt wird Asphalt als Fahrbahnoberfläche vermutet (bereits eingetragen)
 #: also_indoor: webcam https://quartier-heidestrasse.contempo-webcam.de/kamera-4.php
 #: also_indoor: webcam https://portal1915.webcam-profi.de/
-#: last_checked: 2023-10-06 (daf)
-#: check_frequency: 30d
-George-Stephenson-Str.: Bauarbeiten, gesperrt	2::inwork 7487,14472 7446,14403 7529,14274 7569,14209 7614,14136 7679,14030
+#: last_checked: 2023-11-07
+#: check_frequency: 45d
+George-Stephenson-Str.: Bauarbeiten, gesperrt	2::inwork 7487,14472 7446,14403 7529,14274 7569,14209 7614,14136
+# REMOVED (offen) --- George-Stephenson-Str.: Bauarbeiten, gesperrt	2::inwork 7614,14136 7679,14030
 # REMOVED (offen) --- #: next_check_id: EUROPACITY-2015 --- #: last_checked: 2022-01-25 --- #: check_frequency: 30d --- Uferweg: wegen Bauarbeiten gesperrt	2::inwork 8057,13923 8086,13862
 # REMOVED (realisiert) --- #: next_check_id: WRIEZENERPARK-2019 --- #: by: https://stadtteilausschuss-kreuzberg.de/projekt19_Wriezener%20Park.htm --- #: by: https://stadtteilausschuss-kreuzberg.de/pdfs/WriezenerPark_Plan.pdf --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruenflaechen/baumassnahmen/artikel.829575.php --- #: XXX auch Verbesserungen an der Rampe etc. geplant; wann fangen die Bauarbeiten an? Wird es Einschränkungen geben? -> ja, siehe temp_blockings-Eintrag --- #: last_checked: 2020-07-09 --- #: check_frequency: 7d --- Wriezener Park: Bauarbeiten, Weg gesperrt	2::inwork 13161,11795 13120,11725 13095,11703
 # REMOVED (hier realisiert) --- Wriezener Park: Baumaßnahmen 2019 geplant, danach vielleicht bessere Wege?	?::projected 13172,11651 13123,11675 13095,11703
@@ -4469,7 +4482,7 @@ George-Stephenson-Str.: Bauarbeiten, gesperrt	2::inwork 7487,14472 7446,14403 75
 #: by: https://www.deutsches-architekturforum.de/thread/11167-admiralspalast-umbau-und-erweiterung-in-bau/?postID=744785#post744785 (Neubau der Planckstraße, bis IV. Quartal 2024)
 #: XXX wann sind die Bauarbeiten beendet?
 #: XXX mittlerweile bis zur Georgenstr. ausgeweitet, check_frequency deswegen angepasst
-#: last_checked: 2023-10-24
+#: last_checked: 2023-10-31 (mapillary)
 #: check_frequency: 30d
 # REMOVED --- #: check_frequency: 45d
 #: next_check: 2024-12-31
@@ -4485,7 +4498,7 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9441,12670
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/aenderungen-bei-drei-u-bahnlinien_a354389
 # REMOVED --- #: osm_watch: way id="223707973" version="11"
 #: osm_watch: way id="848716360" version="6"
-#: last_checked: 2023-10-11
+#: last_checked: 2023-11-06
 #: check_frequency: 120d
 #: priority: #A
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
@@ -4577,6 +4590,7 @@ Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355
 #: by: https://www.berliner-woche.de/mitte/c-bauen/architekten-koennen-bis-november-ihre-entwuerfe-einreichen_a324605
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/molkenmarkt-klosterviertel-bebauungsplan-1-14.52/page-5#post-17149
 #: by: https://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_2209/nachricht7327.html
+#: by: https://www.berliner-woche.de/mitte/c-bauen/stiftung-mitte-berlin-veroeffentlicht-ergebnis-einer-umfrage-zur-gestaltung-der-innenstadt_a398281
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
 #: last_checked: 2023-10-27
 #: check_frequency: 90d
@@ -4584,7 +4598,7 @@ Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355
 # 
 #: next_check_id: MOLKENMARKT-2021
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
-#: last_checked: 2023-10-24 (webcam)
+#: last_checked: 2023-11-07
 #: check_frequency: 90d
 Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork 10831,12371 10830,12313 10830,12279
 # 
@@ -4610,7 +4624,7 @@ Littenstr.: Anbindung an die Grunerstr. gesperrt	2::inwork 10973,12611 10951,126
 #: note: laut rbb komplett gesperrt, bis 30.6.2023, mittlerweile bis 30.06.2025, in der Realität weiterhin Einbahnstraße --- mittlerweile manchmal tatsächlich gesperrt (gesperrt: gesehen 2022-10-04; nicht gesperrt: gesehen 2022-10-13)
 #: osm_watch: way id="5096644" version="22"
 #: priority: #C
-#: last_checked: 2023-11-04
+#: last_checked: 2023-11-06
 #: check_frequency: 90d
 #: next_check: 2025-06-30
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	1::inwork 13422,11236 13537,11186 13540,11148
@@ -4619,7 +4633,7 @@ Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komple
 # REMOVED --- #: XXX Wann wird der Kran abgebaut? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2023-10-27
+#: last_checked: 2023-11-07
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2023-06-30
 Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174 9254,13171
@@ -4638,6 +4652,7 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174 9254,13171
 #: osm_watch: way id="696227207" version="4"
 #: source_id: viz2021:13.3621,52.447308,22.12.2020,10:00 (angrenzende Attilastr., bis 31.7.2022, Gesamtbaumaßnahme bis 2024) (mittlerweile inaktiv)
 #: source_id: viz2021:13.361375,52.44703,01.04.2021,08:44 (angrenzende Attilastr., bis 31.7.2023) (bis 04.09.2023) (bis 18.09.2023) (bis 31.10.2023) (bis 27.11.2023)
+#: source_id: viz2021:13.361171,52.446982,10.11.2023,17:30 (angrenzende Attilastr., Brückenarbeiten, bis 12.11.2023)
 #: add_fragezeichen: Ist der Uferweg weiterhin gesperrt?
 #: last_checked: 2023-09-19 (mapillary)
 #: check_frequency: 120d
@@ -4805,7 +4820,7 @@ Zufahrt Zentrum Schöneweide: Fahrbahn und Bürgersteig gesperrt	2:inwork 17728,57
 Taubenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9207,11880 9138,11872
 # 
 #: note: allerdings war das Einbahnstraßenschild am 2022-01-17 weggedreht; am 2022-03-02 wieder vollständig aktiv; am 2023-02-10 war das Einbahnstraßenschild verschwunden, das Einfahrt-verboten-Schild aber noch da, am 2023-06-15 wieder weggedreht, am 2023-09-28 wieder da, möglicherweise bis Ende 2023?
-#: last_checked: 2023-10-29
+#: last_checked: 2023-11-07
 #: check_frequency: 60d
 #: next_check: 2023-12-31
 Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
@@ -4933,7 +4948,7 @@ Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9138,11872 9171,11777
 #: XXX danach könnte die Qualität der Wege besser sein
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6146.html
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_13_1401_1520_online.pdf (Widmung als Grünanlage)
-#: last_checked: 2023-09-16 vvv
+#: last_checked: 2023-11-07 vvv
 #: check_frequency: 60d vvv
 #: source_id: 2147341188
 #: osm_watch: way id="593108603" version="3"
@@ -5067,7 +5082,7 @@ Valeska-Gert-Str. - Am Postbahnhof: wegen Bauarbeiten gesperrt	2::inwork 12807,1
 #: source_id: viz2021:13.370715,52.524195,15.10.2012,08:00 (bis 31.12.2026)
 #: osm_watch: way id="186329816" version="34"
 #: also_indoor: traffic
-#: last_checked: 2023-10-20 (osm)
+#: last_checked: 2023-11-07
 #: check_frequency: 180d
 #: next_check: 2026-12-31
 # REMOVED --- #: valid: -20221230
@@ -5200,12 +5215,12 @@ Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-14
 Erika-Wolf-Str. (Potsdam): während der Bauarbeiten gesperrt	2::inwork -12812,-1490 -12685,-1449 -12628,-1423
 # 
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
-#: last_checked: 2023-09-29
+#: last_checked: 2023-11-08 (webcam)
 #: check_frequency: 360d
 Pariser Platz: Sperrung vor der französischen Botschaft	2 8717,12302 8714,12319 8673,12315
 # 
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
-#: last_checked: 2023-09-29
+#: last_checked: 2023-11-08 (webcam)
 #: check_frequency: 360d
 Pariser Platz: Sperrung vor der amerikanischen Botschaft	2 8641,12227 8643,12208 8705,12217
 # 
@@ -5261,7 +5276,7 @@ tragen (3 x 10 Stufen)	0:40 4127,5427
 tragen (5 Stufen)	0:10 4061,5418
 Iltisstr.	1 2797,5624 2864,5526
 Bundesallee: Mittelstreifen unbequem zu überqueren	3nocross 5479,9367 5483,9262 5492,8982
-# REMOVED (Richtungsfahrbahnen eingezeichnet) --- Bundesallee: Mittelstreifen, parkende Autos	3nocross 5346,7860 5350,7915 5357,8013
+# REMOVED (Richtungsfahrbahnen eingezeichnet) --- Bundesallee: Mittelstreifen, parkende Autos	3nocross 5346,7860 5350,7915 5363,8024
 Lietzenburger Str.: Mittelstreifen schlecht zu überqueren	3nocross 6494,10440 6403,10424 6276,10401
 # REMOVED (existiert nicht mehr) --- (Kolonieweg a. d. Forkenbeckstr.): tragen (5 Stufen)	0:15 3230,8221
 (Kolonieweg a. d. Forkenbeckstr.): schieben (Rampe 10 Stufen)	0:15 3756,8101
@@ -5271,7 +5286,7 @@ Sterzinger Str.	1 6094,8618 6123,8546
 Bozener Str.	1 5900,8930 5971,8926 6033,8919
 Bozener Str.	1 5971,8926 5974,9100
 Kleiststr.: schwierig zu querender Mittelstreifen	3nocross 6532,10529 6602,10504 6636,10492 6753,10446
-# REMOVED (Richtungsfahrbahnen eingezeichnet) --- Bundesallee: Queren nicht möglich	3nocross 5354,8236 5363,8170 5376,8104 5357,8013
+# REMOVED (Richtungsfahrbahnen eingezeichnet) --- Bundesallee: Queren nicht möglich	3nocross 5354,8236 5363,8170 5376,8104 5363,8024
 (Los-Angeles-Platz)	1s:q3 5669,10704 5822,10609
 Schwingtor zum Spielplatz	BNP:10 11865,13027
 Schwingtor zum Spielplatz	BNP:10 11874,13048

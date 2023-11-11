@@ -10,7 +10,7 @@ Niemannstr.: Bauarbeiten vor der Kreuzung Simplonstr., Abschnitte der Fahrbahn g
 Haasestr.: Bauarbeiten vor der Kreuzung Simplonstr., Abschnitte der Fahrbahn gesperrt, Bordsteine	q3::inwork 14286,11186 14328,11320
 Weserstr.: Hochbauarbeiten, Einbahnstraßenregelung	q3::inwork; 14710,11626 14651,11666
 Bödikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
-Kinzigstr.: Bauarbeiten nördlich und südlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975 14475,11778
+Kinzigstr.: Bauarbeiten nördlich und südlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975
 Schwarnweberstr.: Einbahnstraßenregelung	q3::inwork; 14589,11975 14675,11964
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
 (Straße der Pariser Kommune - Erich-Steinfurth-Str.): einige Fußgänger	q2; 12660,11705 12634,11705 12608,11692
@@ -35,7 +35,6 @@ Petriplatz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwo
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9133
 Sigismundstr.: Fahrbahn gesperrt	q3::inwork 7894,11288 7934,11275 8031,11249
-Matthäikirchplatz: Fahrbahn gesperrt	q4::inwork 7970,11396 7934,11275
 Abbestr.: Bauzaun, Umfahrung notwendig	q4::inwork 4674,12076 4698,12124
 Pariser Str./Bundesallee: Bauarbeiten, Durchgang kann verengt sein	q2::inwork 5461,9923 5423,9932 5382,9942
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
@@ -70,8 +69,9 @@ Neue Promenade: Fußgängerzone, Radfahren erlaubt, aber nur langsam möglich	q4 10
 Neue Promenade: Fußgängerzone, Radfahren erlaubt, aber nur langsam möglich	q4 10264,13097 10263,13047
 Am Zwirngraben: Tische auf der Straße, Fußgänger	q4 10339,13052 10185,12982
 Neue Promenade: Fußgängerzone, Radfahren erlaubt	q2 10185,12982 10132,12941
-Pariser Platz/Brandenburger Tor: Fußgänger	q2 8804,12280 8722,12268 8637,12258 8592,12252 8538,12245
 Pariser Platz: Fußgänger	q2 8637,12258 8641,12227 8643,12208 8705,12217 8728,12220 8722,12268 8717,12302 8714,12319 8673,12315 8630,12310 8637,12258
+Pariser Platz: Fußgänger	q2 8804,12280 8722,12268 8637,12258
+Brandenburger Tor: Fußgänger, Engstelle wegen eines Gerüsts, ggfs. Bordsteine	q3 8637,12258 8592,12252 8538,12245
 Potsdamer Platz: Fußgänger	q3 8542,11502 8442,11555
 Blücherplatz: reger Fußgängerverkehr	q4 9579,10122 9599,10175
 Blücherplatz: Fußgängerverkehr	q4 9599,10175 9631,10142
@@ -3424,7 +3424,7 @@ Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich): gegen die Einba
 Neue Bahnhofstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
 Reinickendorfer Str.: Einbahnstraßenregelung im Bereich des Weddingplatzes: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 7998,15068 8015,15047 8037,14958 8091,14895
 Holteistr.: Hochbauarbeiten, Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 14535,11327 14506,11275
-Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 5522,8011 5520,8132 5573,8197
+Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 5522,8024 5520,8132 5573,8197
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 8266,14346 8442,14456
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9441,12670 9429,12728 9402,12792 9386,12833 9375,12911
 Johannisstr.: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174 9254,13171
@@ -3448,7 +3448,7 @@ Landsberger Allee, linker Gehweg, ggfs. absteigen	q3::igndisp; 12974,13289 13073
 Landsberger Allee, linker Gehweg, ggfs. absteigen	q3::igndisp; 16590,14409 16665,14420
 Landsberger Allee, Fußgängerampel	q3::igndisp; 16590,14386 16590,14409
 Sonnenallee, linker Gehweg, ggfs. absteigen	q4::igndisp; 13474,8060 13457,8069
-Bundesallee, linker Gehweg zur Durlacher Str., ggfs. absteigen	q3::igndisp; 5438,8402 5399,8344
+Bundesallee, linker Gehweg zur Durlacher Str., ggfs. absteigen	q3::igndisp; 5454,8403 5399,8344
 Bundesallee, linker Gehweg zur Straße Am Volkspark, ggfs. absteigen	q3::igndisp; 5399,8344 5419,8415
 Urbanstr.	q0::igndisp; 11888,9189 11861,9183
 Badstr., linker Gehweg, ggfs. absteigen	q3::igndisp; 8534,16355 8486,16412 8486,16425
