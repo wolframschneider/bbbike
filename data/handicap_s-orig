@@ -49,7 +49,7 @@ Haasestr.: Bauarbeiten vor der Kreuzung Simplonstr., Abschnitte der Fahrbahn ges
 # 
 #: also_indoor: traffic (G,W)
 #: note: Wobei vermutlich nur das Radfahrer-frei-Schild fehlt oder verlorengegangen ist, denn das entsprechende Einbahnstraßen-Schild hat so etwas.
-#: last_checked: 2023-10-23
+#: last_checked: 2023-11-13
 Weserstr.: Hochbauarbeiten, Einbahnstraßenregelung	q3::inwork; 14710,11626 14651,11666
 # 
 #: by: https://officehome.de/projekt/pandion-officehome-ostkreuz-campus-b (Fertigstellung Campus B Mitte 2024 (Campus A ein Jahr später?))
@@ -57,7 +57,7 @@ Weserstr.: Hochbauarbeiten, Einbahnstraßenregelung	q3::inwork; 14710,11626 14651
 #: osm_watch: way id="936801541" version="6"
 #: osm_watch: way id="36987812" version="16"
 #: also_indoor: traffic (W,G)
-#: last_checked: 2023-11-05
+#: last_checked: 2023-11-14
 #: check_frequency: 90d
 #: next_check: 2024-07-01
 Bödikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
@@ -200,7 +200,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeu
 ### Treptow ###
 # 
 #: next_check_id: MARGGRAFFBRUECKE-2023
-#: last_checked: 2023-10-30 vvv
+#: last_checked: 2023-11-14 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-04-30 vvv
 Marggraffbrücke: Behelfsbrücke, Engstellen	q2::inwork 16747,6813 16720,6845 16677,6892 16627,6945
@@ -519,10 +519,10 @@ Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 
 # 
 ### Karlshorst ###
 # 
-#: source_id: viz2021:13.526449,52.486646,14.11.2022,07:00 (Marksburgstraße, nur Kfz-Verkehr betroffen, bis 14.12.2022) (bis 31.12.2022) (bis 31.1.2023) (bis 31.7.2023) (bis 31.10.2023) (bis 30.11.2023)
+#: source_id: viz2021:13.526449,52.486646,14.11.2022,07:00 (Marksburgstraße, nur Kfz-Verkehr betroffen, bis 14.12.2022) (bis 31.12.2022) (bis 31.1.2023) (bis 31.7.2023) (bis 31.10.2023) (bis 30.11.2023) (bis 25.11.2023)
 #: last_checked: 2023-10-28
-#: next_check: 2023-11-30
-#: valid: -20231130
+#: next_check: 2023-11-25
+#: valid: -20231125
 Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9133
 # 
 #: next_check_id: WANDLITZ-2021
@@ -769,7 +769,7 @@ Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwor
 Ontarioseestr.: Fahrbahn abschnittsweise gesperrt, Bordsteine	q3::inwork 18552,10135 18585,10024 18411,10037
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
-#: last_checked: 2023-11-05
+#: last_checked: 2023-11-14
 Gustav-Tempel-Str.: Bauarbeiten, Absperrungen, ggfs. auf Bürgersteig ausweichen	q3::inwork 15261,10738 15245,10719 15236,10684
 # 
 # REMOVED (zwar steht hier noch ein Einfahrt-verboten-Schild, aber es gibt keine Verengung der Fahrbahn mehr) --- #: by: https://viz.berlin.de/2023/06/verkehrsvorschau-260623/ (bis 03.07.2023, weitere Bauabschnitte bis Mitte Juli 2023) --- #: by: https://nitter.cz/VIZ_Berlin/status/1673195634050859008#m --- #: source_id: viz2021:13.507611,52.474933,26.06.2023,06:00 (bis 3.7.2023) (bis 10.7.2023) (inaktiv) --- #: note: Halteverbote bis 2023-07-14 --- #: last_checked: 2023-07-11 --- #: next_check: 2023-07-14 --- #: valid: -20230714 --- Am Walde: kurze Einbahnstraßenregelung an der Rummelsburger Landstraße, Bürgersteig existiert	q3::inwork; 17527,7812 17590,7828
@@ -965,7 +965,8 @@ Jablonskistr.: Baustelle an der Kreuzung Winsstr., nur Gehweg ist frei	q3::inwor
 #: by: https://dstrctberlin.com/de/2021/10/18/auf-gute-nachbarschaft/
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/dstrctberlin-ist-bald-bezugsfertig_a338513
 #: XXX nicht der gesamte Abschnitt ist gesperrt, deshalb q3 statt q4
-#: osm_watch: way id="164816805" version="12"
+# REMOVED (keine construction mehr) --- #: osm_watch: way id="164816805" version="12"
+#: osm_watch: node id="1425174760" version="5"
 #: priority: #C
 #: last_checked: 2023-10-16
 #: check_frequency: 30d
@@ -1004,11 +1005,13 @@ Erich-Weinert-Str.: Bauarbeiten in Höhe Hosemannstr., Gehweg benutzen	q4+::inwor
 # 
 # 
 #: by: #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_31_3285_3340_online.pdf (Einziehung von öffentlichen Straßenland)
-#: XXX Bleibt es bei der ausschließlichen Busfreigabe oder entsteht hier eine neue Verbindungsstraße?
+#: XXX Bleibt es bei der ausschließlichen Busfreigabe oder entsteht hier eine neue Verbindungsstraße? Nebenan gibt es ein Baufeld; evtl. gibt es in Zukunft noch weitere Gehwegbeziehungen?
 # REMOVED --- #: osm_watch: way id="519370786" version="5"
 #: osm_watch: way id="1169861688" version="3"
 #: osm_watch: note 3678184 4
-#: last_checked: 2023-10-06
+#: osm_watch: way id="1219613564" version="1"
+#: last_checked: 2023-11-13
+#: check_frequency: 60d
 Falkenberger Str. - Hansastr: Bauarbeiten, Fahrbahn nur für Linienverkehr frei	q4::inwork 15832,16846 15866,16823 15875,16816
 # 
 # REMOVED (fertig) --- #: last_checked: 2020-12-30 --- Charlottenburger Str.: Einbahnstraßenregelung zwischen Tassostr. und Pistoriusplatz, ggfs. auf Gehweg ausweichen	q3:inwork; 13642,16118 13479,16182
@@ -1108,7 +1111,7 @@ Pariser Platz: Fußgänger	q2 8804,12280 8722,12268 8637,12258
 #: by: https://berliner-abendblatt.de/berlin-news/geruestbau-am-brandenburger-tor-wegen-reinigung-id236690 ("Radfahrer-frei"-Zusatzschild durchgestrichen)
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
 #: XXX alle Torbögen können wegen Sanierungsarbeiten gesperrt sein, aber man kann außen herum fahren; kein Endedatum
-#: last_checked: 2023-11-12 (webcam)
+#: last_checked: 2023-11-14 (webcam, zwei-drei Torbögen offen)
 #: check_frequency: 2d
 #: valid: -20231231
 Brandenburger Tor: Fußgänger, Engstelle wegen eines Gerüsts, ggfs. Bordsteine	q3 8637,12258 8592,12252 8538,12245
@@ -3212,8 +3215,7 @@ Karl-Lade-Str.: Fußgänger	q2 14987,13621 15040,13602
 #: note: mittlerweile wurden auf der östlichen Seite mit etwas Asphalt provisorische Auffahrten gemacht
 Magdeburger Platz: Bordsteine	q3 7393,10809 7414,10804
 (Fanny-Zobel-Str. - Uferweg): Fußgänger, eng	q2 14049,10164 14116,10149
-#: XXX_prog BS an der Privatstraße 10 (östliche Seite), anonsten Eintrag entfernen
-(Grünanlage): Bordsteinkante	q1 17185,17384 17006,17473
+# REMOVED (mittlerweile entschärft, oder war das noch nie schlimm?) --- #: XXX_prog BS an der Privatstraße 10 (östliche Seite), ansonsten Eintrag entfernen --- (Grünanlage): Bordsteinkante	q1 17185,17388 17004,17471
 Friedlander Str.: Bodenschwelle	q1 20574,4317 20594,4342
 #: note: Grünanlagen-Schild existiert am südlichen Ende, ohne Zusatzschilder, am nördlichen Ende sind keine Schilder
 (Paul-Junius-Str. - Alfred-Jung-Str.): Fußgänger	q1 15370,13508 15346,13298
@@ -3559,7 +3561,8 @@ Alboinstr. - Paul-Schmidt-Str.: Fußgänger, Bordstein	q3 8242,5427 8200,5510
 (Wartenberger Str. - Harry-Glaß-Str.): einige Fußgänger, Bordstein an der Wartenberger Str.	q2 17504,16489 17544,16463
 (Gutspark Lichtenberg): einige Fußgänger	q1 15746,12967 15749,12995 15717,13001 15612,13069 15526,13056
 Nachtalbenweg: einige Fußgänger	q1 14754,18054 14741,18063 14746,18072
-entlang der Straßenbahn: einige Fußgänger	q1 17486,17266 17790,17126 17861,17099 17886,17072 17788,16926 17625,16695 17497,16506 17424,16407
+#: note: Grünanlagenschild ohne Zusatzschilder
+entlang der Straßenbahn: einige Fußgänger	q1- 17481,17263 17790,17126 17861,17099 17886,17072 17788,16926 17625,16695 17497,16506 17424,16407
 (Lotharstr. - Josef-Höhn-Str.): einige Fußgänger	q1 17908,16792 17882,16811 17863,16815
 #: note: am nördlichen Ende nur ein Grünanlagenschild ohne weitere Zusatzschilder
 #: XXX_prog BS an der Richterstr., ansonsten q2
@@ -4573,7 +4576,7 @@ Waldemarstr.: einige Fußgänger, Bordstein	q3 10464,20390 10475,20355
 #: XXX Bleibt die Ausschilderung der TR4-Routenführung? Laut SGA TK wird die Radroutenführung mit SenMVKU und InfraVelo abgestimmt
 # REMOVED (closed) --- #: osm_watch: note 3390316 1
 #: osm_watch: way id="856982239" version="6"
-#: last_checked: 2023-10-16
+#: last_checked: 2023-11-14
 #: check_frequency: 30d
 Heidelberger Str.: Fahrbahn in Bereich des Schmollerplatzes gesperrt	q3 13234,9426 13202,9455
 # 
@@ -4656,6 +4659,15 @@ Innsbrucker Platz: schmale Radwege, einige Fußgänger	q1 6373,8083 6409,8026
 Gerdsmeyerweg - Marienhöher Weg: einige Fußgänger, Bordstein	q2 8026,5307 7935,5230
 # 
 Straße 3: vier Aufpflasterungen	q1+ 18816,19648 19071,19576
+# 
+#: note: Grünanlagenschild ohne weitere Zusatzschilder vvv
+(Falkenberger Chaussee - Rüdickenstr.): einige Fußgänger	q1- 16938,17500 16992,17472 17004,17471 17064,17515
+(Weg am Rüdickengraben): einige Fußgänger	q1- 17004,17471 17185,17388 17377,17309 17392,17315
+#: note ^^^
+# 
+Straßenbahnübergang	q3 17790,17126 17799,17145
+Straßenbahnübergang	q3 17861,17099 17866,17116
+Straßenbahnhaltestelle	q3 17799,17145 17811,17140 17866,17116
 # 
 ######################### User Contributions #################################
 # 

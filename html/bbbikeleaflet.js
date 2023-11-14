@@ -151,6 +151,14 @@ var notrailerIcon = L.icon({
     iconAnchor: new L.Point(8,8)
 });
 
+var questionMarkIcon = L.icon({
+    iconUrl: bbbikeImagesRoot + "/help.gif",
+    shadowUrl: bbbikeImagesRoot + "/px_1t.gif",
+    iconSize: new L.Point(15,15),
+    shadowSize: new L.Point(1,1),
+    iconAnchor: new L.Point(8,8),
+});
+
 var startMarker, goalMarker, loadingMarker;
 
 var id2marker;
@@ -272,6 +280,8 @@ var stdGeojsonLayerOptions = {
 			    l = L.marker(centerLatLng, { icon: notrailerIcon });
 			} else if (attribs['temp']) { // should be last, as it is sometimes too unspecific
 			    l = L.marker(centerLatLng, { icon: clockIcon });
+			} else if (cat == '?') {
+			    l = L.marker(centerLatLng, { icon: questionMarkIcon });
 			}
 			if (l) {
 			    currentLayer.addLayer(l); // XXX hacky!!! need a better solution!!!
@@ -313,8 +323,11 @@ function doLeaflet() {
     var bbbikeOrgGreenUrl = green_map_url + '/{z}/{x}/{y}.png';
     var bbbikeGreenTileLayer = new L.TileLayer(bbbikeOrgGreenUrl, {maxZoom: 18, attribution: bbbikeAttribution});
 
-    var bbbikeOrgUnknownUrl = unknown_map_url + '/{z}/{x}/{y}.png';
-    var bbbikeUnknownTileLayer = new L.TileLayer(bbbikeOrgUnknownUrl, {maxZoom: 18, attribution: bbbikeAttribution});
+    /* XXX for some reason the layer does not work anymore; but the GeoJSON layer has the advantage about being clickable */
+    //var bbbikeOrgUnknownUrl = unknown_map_url + '/{z}/{x}/{y}.png';
+    //var bbbikeUnknownTileLayer = new L.TileLayer(bbbikeOrgUnknownUrl, {maxZoom: 18, attribution: bbbikeAttribution});
+    var bbbikeUnknownUrl = bbbikeTempRoot + '/geojson/fragezeichen.geojson';
+    var bbbikeUnknownTileLayer = new L.GeoJSON(null, stdGeojsonLayerOptions);
 
     var bbbikeTempBlockingsUrl = bbbikeTempRoot + '/geojson/bbbike-temp-blockings-optimized.geojson';
     var bbbikeTempBlockingsLayer = new L.GeoJSON(null, stdGeojsonLayerOptions);
@@ -414,7 +427,7 @@ function doLeaflet() {
 	,{label:M("Radwege"),         layer:bbbikeCyclewayTileLayer,   abbrev:'RW'}
 	,{label:M("Unbeleuchtet"),    layer:bbbikeUnlitTileLayer,      abbrev:'NL'}
 	,{label:M("Gr\u00fcne Wege"), layer:bbbikeGreenTileLayer,      abbrev:'GR'}
-	,{label:M("Fragezeichen"),    layer:bbbikeUnknownTileLayer,    abbrev:'FZ'}
+	,{label:M("Fragezeichen"),    layer:bbbikeUnknownTileLayer,    abbrev:'FZ', geojsonurl:bbbikeUnknownUrl}
 	,{label:M("temp. Sperrungen"), layer:bbbikeTempBlockingsLayer, abbrev:'TB', geojsonurl:bbbikeTempBlockingsUrl}
 	,{label:M("F\u00e4hrinfos"),  layer:bbbikeCommentsFerryLayer,  abbrev:'CF', geojsonurl:bbbikeCommentsFerryUrl}
     ];
