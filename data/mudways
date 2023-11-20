@@ -81,6 +81,7 @@ Uferweg - Kiehnwerderallee: Waldweg	X 16657,8443 16490,8432
 #: mud: 2023-10-18: keine Beeinträchtigungen	h=q0
 #: mud: 2023-11-11: keine Beeinträchtigungen	h=q0
 #: mud: 2023-11-14: wenige Pfützen	h=q1+,wet
+#: mud: 2023-11-19: einige Pfützen	h=q1,wet
 Hönower Weg: asphaltiert, aber mit einigen Wellen	X 17383,9719 16984,9857 16925,9852 16900,9861
 # 
 # REMOVED (Weg wurde neu gemacht und ist nun asphaltiert) --- #: mud: 2020-03-06: eine "Seenlandschaft" --- Rüdersdorfer Str. - Am Wriezener Bahnhof: unbefestigt, mit vielen großen Kuhlen	X 13173,11788 13089,11708
@@ -106,6 +107,7 @@ Rüdersdorfer Str.: zwar neuer Asphalt, aber mit häufigen Entwässerungsproblemen	
 #: mud: 2023-10-27: keine Pfützen	h=q0
 #: mud: 2023-10-29: tiefe und lange Pfütze, etwa vor dem Fitnessstudio	h=q1,wet
 #: mud: 2023-11-07: keine Pfützen	h=q0
+#: mud: 2023-11-16: keine Pfützen	h=q0
 Rüdersdorfer Str.: zwar neuer Asphalt, aber mit gelegentlichen Entwässerungsproblemen	X; 12891,12008 13052,11867
 # 
 #: mud: 2020-03-07: Wasser in allen Kuhlen, aber problemlos umfahrbar
@@ -315,6 +317,7 @@ Tauernallee - Wildspitzweg (Buga-Eingang): fester Sandweg	X 10716,2597 10775,276
 #: mud: 2022-10-09: keine Beeinträchtigungen	h=q0
 #: mud: 2023-03-24: leicht matschig, einige umfahrbare Pfützen	h=q2+,wet
 #: mud: 2023-08-28: trocken, leicht sandig	h=q1,dry
+#: mud: 2023-11-19: sehr viele Pfützen	h=q3,wet
 (Weg entlang der Bahnstrecke): fester, holpriger Sandweg	X 18278,9818 18445,9887 18703,9997
 # 
 #: mud: 2022-03-06: keine Beeinträchtigungen	h=q0
@@ -468,6 +471,7 @@ Hausvaterweg: unbefestigte Straße	X 20281,18690 20347,18667
 #: mud: 2023-06-22: trocken	h=q0
 #: mud: 2023-10-27: zahlreiche Pfützen	h=q3+,wet
 #: mud: 2023-10-29: zahlreiche Pfützen	h=q3,wet
+#: mud: 2023-11-16: zahlreiche Pfützen	h=q3,wet
 (Am Wriezener Bahnhof - Rüdersdorfer Str.): wassergebundene Decke	X 12944,11760 13052,11867
 # 
 #: mud: 2021-12-11: zahlreiche Pfützen
@@ -563,7 +567,11 @@ Orankestrand: unbefestigter Weg	X 15731,16208 15664,16115 15592,16069 15479,1606
 #: by: mapillary (2023-02-25)
 #: mud: 2023-02-25: zahlreiche Pfützen	h=q3,wet
 #: mud: 2023-05-13: keine Beeinträchtigungen	h=q0
-Mauerweg: wassergebundene Decke	X 11794,550 11928,588 11956,599
+#: mud: 2023-11-18: einige Pfützen und matschige Stellen	h=q2,wet
+Mauerweg: wassergebundene Decke	X 11596,583 11672,554 11794,550 11928,588 11956,599
+# 
+#: mud: 2023-11-18: matschige Stellen	h=q3,wet
+Stuthirtenweg: unbefestigter holpriger Weg	X 13040,1021 13113,1046 13181,1082
 # 
 #: mud: 2023-03-11: leicht matschige Oberfläche, einige teils größere Pfützen	h=q3,wet
 (Seydlitzstr., Verlängerung): wassergebundene Decke	X 6597,2157 6698,2033

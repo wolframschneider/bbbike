@@ -40,7 +40,7 @@ my $sourceids_current = LoadFile(bbbike_root . "/tmp/sourceid-current.yml");
 my $json = `cat /tmp/bvg_checker_disruption_reports.json`;
 my $d = decode_json $json;
 
-my $qr = qr{(U-Bahn U?\d+|(?:Bus|Tram) [MX]?\d+)};
+my $qr = qr{(U-Bahn U?\d+|(?:Bus|Tram) [MXN]?\d+)};
 
 my %combinedRecords;
 if (0) { # until Apr 2023
@@ -162,6 +162,7 @@ sub highlight_words {
 	       |   Aufzug(es)?
 	       |   Kundgebung
 	       |   Veranstaltung
+	       |   Staatsbesuch(es|s)?
 	       |   Sportveranstaltung
 	       |   wegen[ ]zu[ ]hoher[ ]Verkehrsbelastung
 	       |   wegen[ ]eines[ ]Wasserrohrbruches

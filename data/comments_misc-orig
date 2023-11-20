@@ -1443,7 +1443,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_28_2981_3084_online.pdf (Widmungsänderung; auf der westlichen Seite entsteht noch ein Gebäude mit Tiefgarage)
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2023-11-07
+#: last_checked: 2023-11-16
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13397
 # 
@@ -1733,7 +1733,7 @@ Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9724 (Anfrage)
-#: last_checked: 2023-10-18 vvv
+#: last_checked: 2023-11-14 vvv
 Ruth-Baumgarte-Str.: noch nicht ausgeschildert, stattdessen Wegweiser zu fünf Straßen im Wohngebiet	CS 17794,8429 17738,8450
 # REMOVED --- Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17738,8450 17682,8464 17608,8483
 # REMOVED --- Irmtraud-Morgner-Str.: noch nicht ausgeschildert	CS 17524,8536 17627,8556 17755,8519
@@ -1844,7 +1844,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2023-11-08 vvv
+#: last_checked: 2023-11-18 vvv
 #: check_frequency: 60d vvv
 #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand
 Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699 15140,10647 15138,10638
@@ -1875,7 +1875,7 @@ ausgeschildert "Jelena-Šantić-Friedenspark"	CP2; 22854,14018 22903,14063
 # 
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_02_0141_0296_online.pdf
 #: add_fragezeichen: Hängen hier mittlerweile Straßenschilder?
-#: last_checked: 2023-10-28
+#: last_checked: 2023-11-19
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2023-02-13
 Zur Märkischen Aue: nicht ausgeschildert	CS 17848,11204 17893,11146 17905,11122 17924,10964 17915,10866 17892,10713 17870,10619 17856,10560 17864,10537

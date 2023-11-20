@@ -75,7 +75,7 @@ Boxhagener Str. - Warschauer Str.: Fuﬂg‰ngerampel auf der linken Seite zum ‹berq
 #: XXX_prog: RL:ja, GPS:nein (in der Realit‰t kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
 Neue Bahnhofstr./Boxhagener Str.: Fuﬂg‰ngerampel auf der linken Seite benutzen	CP; 14908,11231 14918,11249 14799,11330
 #: XXX_prog: RL:ja, GPS:nein (in der Realit‰t kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
-Neue Bahnhofstr./Boxhagener Str.: Fuﬂg‰ngerampel auf der linken Seite benutzen	CP; 14908,11231 14918,11249 15016,11431
+Neue Bahnhofstr./Boxhagener Str.: Fuﬂg‰ngerampel auf der linken Seite benutzen	CP; 14908,11231 14918,11249 14945,11300 15016,11431
 # 
 #: XXX_prog: RL:ja, GPS:nein (in der Realit‰t kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
 #: XXX eventuell wird es hier in Zukunft Verbesserungen geben, siehe BVV-Beschluss
@@ -622,7 +622,7 @@ Rathausstr. - Frankfurter Allee: Fuﬂg‰ngerampel auf der linken Seite benutzen	CP
 # 
 #: next_check_id: ZUMBETRIEBSBHF-2017 vvv
 #: XXX ‰ndert sich die Ausschilderung? vvv
-#: last_checked: 2023-11-14 vvv
+#: last_checked: 2023-11-19 vvv
 #: note: fr¸her: ausgeschildert "zur Salzmannstraﬂe Huronseestraﬂe"
 nicht ausgeschildert, Richtung Salzmannstr./Huronseestr.	CP2; 16900,9861 16895,9922
 #: note: fr¸her: ausgeschildert "zur Sewanstraﬂe"
