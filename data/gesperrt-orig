@@ -1209,7 +1209,7 @@ Wittenbergplatz	1 6353,10583 6268,10588 6216,10614 6171,10657
 #: by: https://www.berliner-woche.de/weissensee/c-verkehr/amalienstrasse-einbahnstrasse-in-beide-richtungen-befahrbar_a369287 (BVV-Beschluss)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6273 (Zwischenbericht)
 #: XXX Wird die Einbahnstraßenregelung für Radfahrer aufgehoben?
-#: last_checked: 2023-09-25
+#: last_checked: 2023-11-23
 #: check_frequency: 90d
 Amalienstr.	1s:q3 13794,16773 13722,16843 13653,16907 13581,16968
 Pasedagplatz	1 14099,17195 14127,17237 14151,17234 14167,17215
@@ -2299,7 +2299,7 @@ Märkische Allee: Mittelstreifen	3nocross 19900,11697 19924,11890 19934,11977 199
 # REMOVED (neue Ampeln) --- Falkenberger Chaussee: Linksabbiegen wegen Straßenbahn nicht möglich	3nocross 17400,17790 17482,17844 17579,17908 17675,17971 17744,18016 17843,18078
 Falkenberger Chaussee: Straßenbahntrasse	3nocross 18196,18254 18530,18327 18601,18342
 Stralauer Allee: unbequemes Abbiegen	3nocross 13332,10832 13394,10805 13496,10763 13596,10722
-Stralauer Allee: unbequemes Abbiegen	3nocross 13596,10722 13633,10705 13678,10685 13779,10642
+Stralauer Allee: unbequemes Abbiegen	3nocross 13596,10722 13633,10705 13678,10685 13700,10676 13779,10642
 Stralauer Allee: unbequem passierbare Straße	3nocross 14218,10430 14405,10340 14558,10264
 Stralauer Str.: Mittelstreifen	3nocross 11221,12250 11300,12241 11347,12223
 Sonnenallee: Mittelstreifen	3nocross 12152,9015 12078,9055 12012,9092
@@ -3707,8 +3707,9 @@ Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,90
 Straße 171: wegen Bauarbeiten gesperrt	2::inwork 12694,22570 12657,22596 12628,22604
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11239
-#: last_checked: 2023-09-27
-#: check_frequency: 60d
+#: note: Außerdem baustellenbedingte Einbahnstraßenregelung in der Krautstr., offen Richtung Süden sowie offen für Radfahrer
+#: last_checked: 2023-11-23
+#: check_frequency: 90d
 #: next_check: 2024-03-31
 Mehlbeerenweg: Bauarbeiten, gesperrt	2::inwork 11993,11978 11940,11982 11909,11985
 # 
@@ -4209,7 +4210,7 @@ Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 1637
 # REMOVED --- #: next_check_id: OSTBAHNHOF-2021 --- #: last_checked: 2021-11-03 --- #: check_frequency: 14d --- Erich-Steinfurth-Str., Hermann-Stöhr-Platz: wegen Kranarbeiten gesperrt	2::inwork 12413,11901 12453,11790 12378,11806
 # 
 #: next_check_id: OSTBAHNHOF-2021
-#: last_checked: 2023-09-27
+#: last_checked: 2023-11-23
 #: check_frequency: 120d
 #: next_check: 2026-01-01
 Erich-Steinfurth-Str.: Bauarbeiten, gesperrt	2::inwork 12608,11692 12645,11673
@@ -4533,7 +4534,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: osm_watch: way id="60333311" version="31"
 #: osm_watch: way id="289966097" version="21"
 #: priority: #A
-#: last_checked: 2023-11-08 (mapillary)
+#: last_checked: 2023-11-23
 #: check_frequency: 90d
 # REMOVED --- Gustav-Böß-Str.: Bauarbeiten, Komplettsperrung, Straßenführung wird neu gemacht	2::inwork 10685,12422 10772,12515
 Grunerstr.	1::inwork 10849,12557 10838,12496 10807,12451 10746,12364 10697,12303
@@ -4595,25 +4596,25 @@ Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21514,5310 21386,5251 21355
 #: by: https://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_2209/nachricht7327.html
 #: by: https://www.berliner-woche.de/mitte/c-bauen/stiftung-mitte-berlin-veroeffentlicht-ergebnis-einer-umfrage-zur-gestaltung-der-innenstadt_a398281
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2023-11-08 (mapillary)
+#: last_checked: 2023-11-21 (webcam)
 #: check_frequency: 90d
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10746,12364 10831,12371
 # 
 #: next_check_id: MOLKENMARKT-2021
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
-#: last_checked: 2023-11-07
+#: last_checked: 2023-11-21 (webcam)
 #: check_frequency: 90d
 Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork 10831,12371 10830,12313 10830,12279
 # 
 #: next_check_id: MOLKENMARKT-2021
 #: XXX Die Kreuzung Gustav-Böß-Str./Jüdenstr. wird eine neue Ampel bekommen
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
-#: last_checked: 2023-10-27
+#: last_checked: 2023-11-23
 #: check_frequency: 90d
 Jüdenstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2023-11-08 (mapillary)
+#: last_checked: 2023-11-23
 #: check_frequency: 14d
 Littenstr.: Anbindung an die Grunerstr. gesperrt	2::inwork 10973,12611 10951,12637
 # 

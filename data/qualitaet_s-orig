@@ -24,7 +24,7 @@
 # 
 # REMOVED (Umfahrung nicht mehr nutzbar) --- #: next_check_id: DBWERKSTRASSE-2019 --- #: last_checked: 2020-05-02 --- (Umfahrung Baustelle): Verbundsteinpflaster, Asphalt, wassergebundene Decke	Q1- 14717,10855 14692,10867 14667,10904 14485,10959 14477,10941 14397,10966 14390,10984 14314,10998 14287,10892
 # REMOVED (mittlerweile weitgehend hergestellt) --- #: source_id: IM_023718 --- #: source_id: 2147339540 --- #: next_check_id: SONNENALLEE-2014 --- #: last_checked: 2018-09-11 --- Sonnenallee: teilweise unfertige Radwege	Q1 14174,7505 14334,7395 14369,7376 14530,7301
-# REMOVED (mittlerweile wieder der alte Zustand weitgehend wieder hergestellt) --- #: next_check_id: STRALAUERALLEE-2018 --- #: XXX_prog: auf der Fahrbahn (kein benutzungspflichtiger Radweg!) keine Einschränkungen --- #: priority: #B --- #: last_checked: 2018-11-30 --- #: check_frequency: 7d --- Stralauer Allee: asphaltierter Geh/Radweg mit unbefestigten Abschnitten	Q2 13678,10685 13779,10642 13850,10612 13919,10583
+# REMOVED (mittlerweile wieder der alte Zustand weitgehend wieder hergestellt) --- #: next_check_id: STRALAUERALLEE-2018 --- #: XXX_prog: auf der Fahrbahn (kein benutzungspflichtiger Radweg!) keine Einschränkungen --- #: priority: #B --- #: last_checked: 2018-11-30 --- #: check_frequency: 7d --- Stralauer Allee: asphaltierter Geh/Radweg mit unbefestigten Abschnitten	Q2 13678,10685 13700,10676 13779,10642 13850,10612 13865,10606 13919,10583
 # 
 #: next_check_id: BUCKOWERCHAUSSEE-2022
 #: last_checked: 2023-07-03 (baustellen-doku) vvv
@@ -623,7 +623,7 @@ Fürstenberger Str.: Asphalt	Q0 10320,14608 10472,14632
 #: osm_watch: way id="4606258" version="31"
 #: osm_watch: way id="184077626" version="19"
 #: osm_watch: way id="49180827" version="24"
-#: last_checked: 2023-09-25
+#: last_checked: 2023-11-23
 #: check_frequency: 60d
 Kollwitzstr.: Kopfsteinpflaster	Q2 11006,14087 10937,14006
 # 
@@ -992,7 +992,7 @@ Böcklinstr.: Kopfsteinpflaster	Q2 14674,11370 14598,11245
 #: by: http://www.berliner-woche.de/heinersdorf/verkehr/radstreifen-und-neue-querungen-d155368.html
 #: note: bei regem Kfz-Verkehr ist es nicht möglich, den asphaltierten Fahrbahnabschnitt zu benutzen
 #: corrected_by: Fil (vorher Q1-)
-#: osm_watch: way id="266580485" version="23"
+#: osm_watch: way id="266580485" version="25"
 #: last_checked: 2023-11-18 (mapillary)
 #: check_frequency: 90d
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert	Q2 12736,17998 12462,17814
@@ -1127,7 +1127,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/mobilitaetswenderat/22-08-24-mobilitaetswenderat-protokoll_final.pdf (neben der Asphaltierung wird auch ein modaler Filter am Boxhagener Platz erwähnt)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2023-11-16
+#: last_checked: 2023-11-21
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -4510,7 +4510,8 @@ Mahlerstr.: Asphalt	Q0 13665,15840 13623,15954
 Gäblerstr.: Asphalt	Q0 13347,16447 13315,16548 13272,16672
 Hedwigstr. (Weißensee): Asphalt	Q0 13315,16548 13376,16600
 Bundenbacher Weg: mäßiger Asphalt	Q1 13653,16907 13834,17078
-Hunsrückstr.: mäßiger Asphalt	Q1 13722,16843 13914,17016
+#: historical_note: früher: mäßiger Asphalt, Q1
+Hunsrückstr.: Asphalt	Q0 13722,16843 13914,17016
 Hunsrückstr.: Asphalt	Q0 13914,17016 13990,17122 14060,17221
 Soonwaldstr.: Asphalt	Q0 13990,17122 13832,17232
 Große Seestr.: neu gemachter Asphalt	Q0 13754,17133 13834,17078 13914,17016
@@ -9850,7 +9851,9 @@ Am Oder-Spree-Kanal: Asphalt	Q0 30646,-2732 30629,-2817
 #: note: Qualität hat sich verschlechtert (2018-07), früher feiner Schotter
 (Straße zur Krampenburg - Uferweg am Langen See): Schotterweg, teilweise grober Schotter	Q2- 27202,173 27161,156 26666,-54
 (Straße zur Krampenburg - Uferweg am Langen See): Waldweg, zweispurig	Q2- 26666,-54 26488,-131
-Kuglerstr.: Asphalt mit leichten Schäden	Q1+ 11750,16116 11680,16151 11618,16183
+Kuglerstr.: Asphalt mit leichten Schäden	Q1+ 11750,16116 11680,16151
+#: historical_note: bis Herbst 2023: Asphalt mit leichten Schäden, Q1+
+Kuglerstr.: Asphalt	Q0 11680,16151 11618,16183
 Kuglerstr.: Asphalt	Q0 12030,15968 11961,16002 11899,16037 11852,16061
 Kuglerstr.: Asphalt mit leichten Schäden	Q1+ 11852,16061 11750,16116
 (Schönhauser Str. - Rosenthaler Str.): Asphalt	Q0 11858,21541 11889,21543
@@ -11189,7 +11192,7 @@ Alfred-Kowalke-Str. [Mittelstreifen]: Gehwegplatten	Q0- 18200,11269 18202,11253
 #: next_check_id: STADTPARKLICHTENBERG-2022
 #: by: https://www.berliner-woche.de/lichtenberg/c-bauen/gruenanlage-zwischen-moellendorff-und-scheffelstrasse-wird-umgestaltet_a229540 (Anfang 2020 - Ende 2021)
 #: XXX Wird sich nach den Bauarbeiten hier etwas ändern?
-#: last_checked: 2023-09-21
+#: last_checked: 2023-11-23
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2021-12-31
 Stadtpark Lichtenberg: leicht schadhafter Asphalt und Gehwegplatten	Q0- 15454,12519 15433,12686 15424,12732 15395,12762
@@ -12985,8 +12988,13 @@ Mellenseestr. [Wohngebiet]: Beton, einige Hebungen	Q1+ 17633,9898 17633,9793 175
 Mellenseestr. [Wohngebiet]: Beton, einige Schäden	Q1+ 17738,9922 17738,9822 17777,9649
 Mellenseestr. [Wohngebiet]: Beton	Q0- 17838,9956 17868,9823 17920,9698
 Rhenser Str.: Mosaikpflaster	Q1- 19133,9087 19083,9062
+#: XXX Bauarbeiten, im östlichen Abschnitt wurde neu asphaltiert, evtl. wird auch im restlichen Abschnitt noch gearbeitet
+#: source_id: viz2021:13.403481,52.488825,10.11.2023,10:00 (bis 01.12.2023)
+#: last_checked: 2023-11-21
+#: next_check: 2023-12-01
 Bergmannstr.: Asphalt, einige leichte Schäden	Q0- 10123,9233 10547,9233
-Südstern: Asphalt, einige Querrillen	Q0- 10547,9233 10705,9234
+#: historical_note: bis Herbst 2023: Asphalt, einige Querrillen, Q0-
+Südstern: Asphalt	Q0 10547,9233 10705,9234
 #: historical_note: bis August 2023 in Richtung Osten: Asphalt, einige Schäden, Q0-;
 Lückstr.: Asphalt	Q0+; 16153,10818 16300,10753 16313,10747 16468,10695
 (Greifswalder Str. - Ella-Kay-Str.): Verbundsteinpflaster	Q1 12174,14739 12128,14764
@@ -16380,7 +16388,7 @@ Marienstr. (Französisch Buchholz): Asphalt	Q0 11686,21058 12095,20832
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=4928 ("in Aussicht gestellt ... 2014/2015", "... 4 m breiten asphaltierten Geh- und Radweges")
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/buergerbeteiligung/fahrrat-protokoll-29-10-2015.pdf
 #: osm_watch: way id="42689070" version="11"
-#: last_checked: 2023-09-21
+#: last_checked: 2023-11-23
 #: check_frequency: 60d
 Orankeweg: Sandweg im Grünzug, mäßig bis gut	Q2+ 14936,15857 14769,15867 14695,15911 14609,15921
 #: confirmed_by: srt
