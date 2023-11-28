@@ -290,7 +290,7 @@
 	  (bindings--define-key menu-map [center-point]        '(menu-item "Show on BBBike" bbbike-center-point))
 	  (bindings--define-key menu-map [toggle-tabular-view] '(menu-item "Toggle Tabular View" bbbike-toggle-tabular-view))
 	  (bindings--define-key menu-map [search-x-selection]  '(menu-item "Search X Selection" bbbike-search-x-selection))
-	  (bindings--define-key menu-map [grep]                '(menu-item "Grep" bbbike-grep))
+	  (bindings--define-key menu-map [grep]                '(menu-item "Grep" bbbike-grep-with-search-term))
 	  (bindings--define-key menu-map [separator3]          menu-bar-separator)
 	  (bindings--define-key menu-map [toggle-view-url]     '(menu-item "Toggle View URL behavior" bbbike-toggle-view-url))
 	  (bindings--define-key menu-map [view-remote-url]     '(menu-item "View Remote URL" bbbike-view-remote-url))
@@ -627,8 +627,7 @@
 
 (setq bbbike-next-check-id-regexp "^#:[ ]*\\(next_check_id\\):?[ ]*\\([^ \n]+\\)")
 
-(defun bbbike-grep ()
-  (interactive)
+(defun bbbike-grep-next-check-id ()
   (let (search-key search-val dirop)
     (save-excursion
       (beginning-of-line)
@@ -639,9 +638,9 @@
     (if (not search-val)
 	(error "Can't find anything to grep for"))
     (if search-key
-	(bbbike-grep-with-args search-key search-val))))
+	(bbbike-grep-bbd-directive search-key search-val))))
 
-(defun bbbike-grep-with-args (search-key search-val)
+(defun bbbike-grep-bbd-directive (search-key search-val)
   (bbbike-grep-with-search-term (concat "^#:[ ]*" search-key ":?[ ]*" search-val) t))
 
 ;; old, now unused version which just uses the "grep" command
@@ -656,6 +655,7 @@
 ;; new version: if there's only one match, then go directly to the file.
 ;; Otherwise display the output in temporary grep-mode buffer.
 (defun bbbike-grep-with-search-term (search-term &optional is-regexp)
+  (interactive "MString to grep for in bbbike data: ")
   (let* ((search-term (bbbike--string-trim search-term))
 	 (bbbike-rootdir (bbbike-rootdir))
 	 (bbbike-datadir (bbbike-datadir))
@@ -687,18 +687,18 @@
             (insert line)
             (insert "\n"))
 	  (grep-mode)
-	  (setq-local compilation-arguments (list bbbike-grep-cmd 'grep-mode nil nil))
 	  (setq-local default-directory bbbike-datadir)
 	  (setq-local compilation-directory (concat bbbike-datadir "/"))
+	  (setq-local compile-command bbbike-grep-cmd)
 	  (goto-char (point-min))
 	  )
 	(pop-to-buffer buffer))))))
 
-(defun bbbike-grep-button (button)
-  (bbbike-grep))
+(defun bbbike-next-check-id-button (button)
+  (bbbike-grep-next-check-id))
 
-(define-button-type 'bbbike-grep-button
-  'action 'bbbike-grep-button
+(define-button-type 'bbbike-next-check-id-button
+  'action 'bbbike-next-check-id-button
   'follow-link t
   'face 'bbbike-button
   'help-echo "Click button to grep for the same next_check_id")
@@ -825,7 +825,7 @@
 	(if (> (length next-check-id-val) 3)
 	    (setq next-check-id-val (substring next-check-id-val 0 3)))
 	(if (not (string= next-check-id-val "^^^"))
-	    (make-button (match-beginning 1) (match-end 2) :type 'bbbike-grep-button)))
+	    (make-button (match-beginning 1) (match-end 2) :type 'bbbike-next-check-id-button)))
       ))
 
   ;; recognize "#: by" directives which look like a URL in normal bbd files, additionally "#: also_indoor url" directives

@@ -624,7 +624,7 @@ Bus 192	busroute_N 18586,12151 18927,12135 19094,12127 19148,12073 19138,11815 1
 Bus 108, Bus 192	busroute_N 19389,11761 19138,11815
 Bus 108	busroute_N 19138,11815 18934,11796 18853,11780
 Bus 192	busroute_N 20656,12415 20629,12177 20627,12162 20789,12142
-Bus 191	busroute_N 19687,14469 19719,14566 19768,14674 19793,14728 19867,14886 19893,14947 19993,15116 20123,15293 20286,15382 20260,15434 20226,15512
+Bus 191	busroute_N 19687,14469 19719,14566 19768,14674 19793,14728 19867,14886 19893,14947 19997,15122 20123,15293 20286,15382 20260,15434 20226,15512
 # REMOVED (NH!) --- Bus 195	busroute_N 21599,15213 21718,15198 21809,15186 21903,15174 22059,15153 22326,15116 22419,15127 22449,15127 22578,15114 22605,15111 22726,15082 22899,15073
 Bus 191, ...	busroute_N 20226,15512 19960,15337 19875,15324 19768,15361 19681,15405
 Bus X54	busroute_N 18349,17387 18428,17497 18635,17649 18553,17749 18476,17842 18412,17920 18279,18079 18223,18153 18196,18254
@@ -1588,7 +1588,7 @@ Schillerhof: Hausdurchfahrt	CP2; 6928,17154 7069,17204
 # 
 #: next_check_id: MUENSTERBERGERWEG-2019
 #: XXX werden hier noch Straßenschilder aufgestellt?
-#: last_checked: 2023-07-23
+#: last_checked: 2023-11-25
 #: check_frequency: 120d
 Münsterberger Weg: nicht ausgeschildert	CS 24172,11320 24029,11363
 # 
@@ -1733,7 +1733,7 @@ Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9724 (Anfrage)
-#: last_checked: 2023-11-14 vvv
+#: last_checked: 2023-11-26 vvv
 Ruth-Baumgarte-Str.: noch nicht ausgeschildert, stattdessen Wegweiser zu fünf Straßen im Wohngebiet	CS 17794,8429 17738,8450
 # REMOVED --- Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17738,8450 17682,8464 17608,8483
 # REMOVED --- Irmtraud-Morgner-Str.: noch nicht ausgeschildert	CS 17524,8536 17627,8556 17755,8519
@@ -1844,7 +1844,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2023-11-18 vvv
+#: last_checked: 2023-11-26 vvv
 #: check_frequency: 60d vvv
 #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand
 Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699 15140,10647 15138,10638
