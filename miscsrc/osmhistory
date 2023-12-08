@@ -27,12 +27,16 @@ use XML::LibXML;
 
 use BBBikeUtil qw(is_in_path);
 
+use constant STATUS_URL => 'https://prometheus.openstreetmap.org/d/5rTT87FMk/web-site?orgId=1&refresh=1m&from=now-3h&to=now&viewPanel=16';
+
 my $use_pager = -t STDOUT && is_in_path('less');
 my $do_blame;
+my $diff_context = 0;
 
 GetOptions(
 	   'pager!' => \$use_pager,
 	   'blame'  => \$do_blame,
+	   'diff-context=i' => \$diff_context,
 	  )
     or die "usage: $0 [--no-pager] osmobject/id\n";
 
@@ -48,10 +52,10 @@ if ($elem =~ m{((?:way|node|relation)/\d+)}) {
 
 my $history_url = "$api_root_url/$elem/history";
 
-my $ua = LWP::UserAgent->new(keep_alive => 1);
+my $ua = LWP::UserAgent->new(keep_alive => 1, timeout => 10); # normal response times are below 10ms
 my $resp = $ua->get($history_url);
 if (!$resp->is_success) {
-    die "Failed to fetch '$history_url': " . $resp->as_string . "\n";
+    dump_failed_resp($resp);
 }
 
 my $today = localtime->strftime('%F');
@@ -127,7 +131,12 @@ sub history_log {
 	    $older = "/dev/null";
 	    $old_version = "0";
 	}
-	system('diff', "--label=$old_version", "--label=$new_version", '-u', $older, $newer);
+	open my $fh, '-|', 'diff', "--label=$old_version", "--label=$new_version", "--unified=$diff_context", $older, $newer
+	    or die "Error while running diff command: $!";
+	while(<$fh>) {
+	    next if /^\@\@/;
+	    print $_;
+	}
 	print "\n";
     }
 }
@@ -200,7 +209,7 @@ sub get_changeset {
     $changeset{url} = "$api_root_url/changeset/$changeset_id";
     my $changeset_resp = $ua->get($changeset{url});
     if (!$changeset_resp->is_success) {
-	die "Failed to fetch '$changeset{url}': " . $changeset_resp->dump . "\n";
+	dump_failed_resp($changeset_resp);
     }
     my $changeset_dom = XML::LibXML->load_xml(string => $changeset_resp->decoded_content);
     my($changeset_elem) = $changeset_dom->findnodes('/osm/changeset');
@@ -221,6 +230,18 @@ sub get_changeset {
 	}
 	$cached_changeset{$changeset_id};
     }
+}
+
+sub dump_failed_resp {
+    my $resp = shift;
+    my $msg = "Failed to fetch ";
+    if ($resp->request) {
+	$msg .= "'" . $resp->request->url . "'";
+    } else {
+	$msg .= "resource";
+    }
+    $msg .= ":\n" . $resp->dump . "\n\nMore information possibly at:\n\n    " . STATUS_URL . "\n\n";
+    die $msg;
 }
 
 __END__

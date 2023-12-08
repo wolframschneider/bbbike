@@ -475,6 +475,20 @@
   (setq bbbike-addition-for-last-checked "")
   (bbbike-set-date-for-last-checked))
 
+(defun bbbike-set-date-for-last-checked-any ()
+  (interactive)
+  (let* ((command `("perl" "-nle"
+		    "BEGIN { binmode STDOUT, qq{:encoding(utf-8)} } /^#:\\s+last_checked:.*?\\((.*?)\\)/ and $by{$1}++; END { my $i = 0; for my $by (sort { $by{$b}<=>$by{$a} } keys %by) { last if $i++>20; print $by } }"
+		    ,@(directory-files (bbbike-datadir) t ".*-orig$")))
+	 (process-coding-system-alist (cons '("perl" utf-8 . utf-8) process-coding-system-alist))
+	 (completions (split-string
+		       (with-output-to-string
+			 (apply #'call-process (car command) nil standard-output
+				nil (cdr command)))
+		       "\n" t)))
+    (setq bbbike-addition-for-last-checked (concat " (" (completing-read "Choose last-modified appendix: " completions) ")")))
+  (bbbike-set-date-for-last-checked))
+
 (defun bbbike-update-last-checked ()
   (interactive)
   (if (not bbbike-date-for-last-checked)
@@ -557,7 +571,12 @@
 	       (elemid (substring sel (match-beginning 2) (match-end 2)))
 	       (elemversion (substring sel (match-beginning 3) (match-end 3)))
 	       (bbbike-datadir (bbbike-datadir))
-	       (grepcmd (concat "cd " bbbike-datadir " && grep -ns '^#: osm_watch: " elemtype " id=\"" elemid "\"' *-orig temp_blockings/bbbike-temp-blockings.pl"))
+	       (fragezeichen-lowprio (concat (bbbike-aux-bbddir) "/fragezeichen_lowprio.bbd"))
+	       (grepcmd (concat "cd " bbbike-datadir " && grep -ns '^#: osm_watch: " elemtype " id=\"" elemid "\"' "
+				"*-orig "
+				"temp_blockings/bbbike-temp-blockings.pl"
+				(if (file-exists-p fragezeichen-lowprio) (concat " " fragezeichen-lowprio))
+				))
 	       (tempbuf "*bbbike update osm watch*"))
 	  (condition-case nil
 	      (kill-buffer tempbuf)
@@ -570,7 +589,7 @@
 		(error "Strange: can't find a grep result in " tempbuf)
 	      (let ((file (buffer-substring-no-properties (match-beginning 1) (match-end 1)))
 		    (line (string-to-int (buffer-substring-no-properties (match-beginning 2) (match-end 2)))))
-		(find-file (concat bbbike-datadir "/" file))
+		(find-file (concat (if (not (file-name-absolute-p file)) (concat bbbike-datadir "/")) file))
 		(goto-line line)
 		(if (not (search-forward-regexp "version=\"" (line-end-position)))
 		    (error "Cannot find osm watch item in file")

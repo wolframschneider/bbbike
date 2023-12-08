@@ -263,9 +263,9 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: priority: #A vvv
 #: last_checked: 2023-11-16 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
-#: osm_watch: way id="47755711" version="22"
+#: osm_watch: way id="47755711" version="23"
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
-#: osm_watch: way id="1110751835" version="4"
+#: osm_watch: way id="1110751835" version="5"
 (Mohrenstr.)	N 9042,11839 9075,11756
 # REMOVED --- #: next_check ^^^
 #: last_checked ^^^
@@ -488,9 +488,7 @@ Märkisches Ufer	NN 11034,12038 11084,12070
 Märkisches Ufer	N 11160,12071 11275,12055 11325,12021
 Märkischer Platz	NN 11084,12070 11111,12027
 Am Köllnischen Park	N 11155,11750 11185,11883 11160,12071
-Alexandrinenstr.	N 10069,10151 10083,10192 10122,10294 10178,10411 10293,10645 10329,10723 10397,10852 10501,11056 10593,11120 10674,11170 10683,11175
-Alexandrinenstr.	NN 10683,11175 10690,11180
-Alexandrinenstr.	N 10690,11180 10736,11212 10818,11269
+Alexandrinenstr.	N 10069,10151 10083,10192 10122,10294 10178,10411 10293,10645 10329,10723 10397,10852 10501,11056 10593,11120 10674,11170 10683,11175 10690,11180 10736,11212 10818,11269
 Alexandrinenstr. [Nebenstraße]	N 10690,11167 10791,11232
 # REMOVED --- Alexandrinenstr. [Nebenstraße]	NN 10791,11232 10826,11251
 # REMOVED --- #: next_check_id: ALEXANDRINENSTR-2018 --- #: XXX nach den Bauarbeiten entfernen --- #: last_checked: 2019-04-10 --- #: check_frequency: 14d --- (provisorischer Zugang zur neuen Alexandrinenstr.)	NN 10690,11180
@@ -908,7 +906,7 @@ Alte Potsdamer Str.	NN 8479,11493 8481,11447 8389,11378
 #: XXX die Straße wird vermutlich zur Fußgängerzone?
 # REMOVED --- #: XXX laut StefanHRT mittlerweile Verbundsteinpflaster, zumindest an der Einmündung Potsdamer Platz
 # REMOVED (war der andere Abschnitt) --- #: osm_watch: way id="4597334" version="30"
-#: last_checked: 2023-10-29
+#: last_checked: 2023-12-04
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2022-12-31
 Alte Potsdamer Str.	N 8389,11378 8375,11368 8318,11324 8280,11296
@@ -16213,7 +16211,7 @@ Manga-Bell-Platz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,1
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9450
 #: by: https://berliner-abendblatt.de/2022/12/02/strasse-und-platz-in-berlin-nach-freiheitskaempfern-benannt/ (mit Bild)
 #: add_fragezeichen: Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
-#: osm_watch: way id="5199719" version="25"
+#: osm_watch: way id="5199719" version="28"
 #: also_indoor: search Maji-Maji-Allee
 #: last_checked: 2023-10-03
 #: check_frequency: 90d
@@ -17776,10 +17774,12 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berliner-woche.de/blankenburg/c-bauen/neue-plaene-fuer-den-gruenstreifen-zwischen-trift-und-lautentaler-strasse-in-blankenburg_a191653 (außerdem: Erneuerung/Neubau von Triftstr. und Lautentaler Str.)
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2019/pressemitteilung.870634.php
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-bauen/die-naechsten-schritte-zur-festsetzung-von-bebauungsplaenen-stehen-an_a293341 (Erwähnung)
+#: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2023/pressemitteilung.1392285.php (Baubeginn für 2025 geplant)
 #: osm_watch: way id="59573616" version="2"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
 #: last_checked: 2023-11-26 (mapillary)
 #: check_frequency: 180d
+#: next_check: 2025-03-01
 (Rhönstr. - Harzburger Str.)	NN 13598,21360 13709,21334
 Eifelstr.	N 13580,21286 13351,21239 13280,21225
 Vogesenstr.	N 13351,21239 13368,21142
