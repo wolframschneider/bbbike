@@ -1059,7 +1059,10 @@ Rosenthaler Str.: Richtung Kleine Rosenthaler Str.	CP2; 10324,13459 10318,13528
 (Schlitzer Str. - Welzower Steig): ausgeschildert als "Welzower Steig"	CP2; 6162,21938 6257,22005
 #: by: schlafauto ("Möbelweg")
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11064 (kleines Schild -> Ersuchen)
+#: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11850 (Erneuerung der Hinweisschilder im 1. Quartal 2024)
 #: confirmed_by: srt
+#: XXX werden größere Schilder aufgestellt?
+#: next_check: 2024-03-31
 (Finsterwalder Str. - Quickborner Str.): am Bruckstückengraben, "Möbelweg" steht auf "wegweiserartigen" Schildern	CS 6434,22244 6593,22302 6651,22324 6755,22331 6943,22324 7439,22306
 nicht ausgeschildert	CP2; 8501,25358 8584,25371
 nicht ausgeschildert	CP2; 8776,25332 8722,25296
@@ -1844,12 +1847,12 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2023-11-26 vvv
+#: last_checked: 2023-12-07 vvv
 #: check_frequency: 60d vvv
-#: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand
-Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699 15140,10647 15138,10638
-#: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ingrid-Reschke-Str. hängt an der Hauswand
-Ulrich-Plenzdorf-Str.: nicht ausgeschildert	CS 14994,10732 15071,10716 15151,10699 15220,10682
+# REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
+Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
+Ulrich-Plenzdorf-Str.: nicht ausgeschildert	CS 14994,10732 15071,10716
+# REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ingrid-Reschke-Str. hängt an der Hauswand --- Ulrich-Plenzdorf-Str.: nicht ausgeschildert	CS 15071,10716 15151,10699 15220,10682
 Gustav-Tempel-Str.: nicht ausgeschildert	CS 15261,10738 15245,10719 15236,10684 15220,10682 15205,10616 15200,10600
 An den Eiswerken: nicht ausgeschildert	CS 15004,10791 14994,10732 14984,10677
 Paul-und-Paula-Promenade: nicht ausgeschildert	CS 14886,10748 14909,10732 14984,10677

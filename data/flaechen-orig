@@ -369,7 +369,7 @@ Friedhof St. Marien und St. Nikolai/St. Georgen	F:Cemetery 11783,13748 11676,138
 #: alias: Friedhöfe am Mehringdamm
 Friedhöfe vor dem Halleschen Tor	F:Cemetery 9444,9919 9387,9804 9588,9827 9723,9842 9837,9856 9827,10051 9521,10010
 #: alias: Friedhöfe an der Bergmannstraße
-Dreifaltigkeits-Kirchhof/Friedr.-Werder-Kirchhof/Kirchhof Jerusalem und Neue Kirche/Kirchhof der Luisenstädtischen Gemeinde	F:Cemetery 10036,9233 10036,8960 10266,8946 10268,8810 10463,8814 10481,8814 10631,8911 10620,9233 10547,9233 10123,9233
+Dreifaltigkeits-Kirchhof/Friedr.-Werder-Kirchhof/Kirchhof Jerusalem und Neue Kirche/Kirchhof der Luisenstädtischen Gemeinde	F:Cemetery 10036,9233 10036,8960 10266,8946 10268,8810 10463,8814 10481,8814 10631,8911 10620,9233 10547,9233 10366,9233 10250,9233 10123,9233
 Standortfriedhof Lilienthalstr.	F:Cemetery 10713,9178 10748,9054 10675,8940 10661,8914 10640,8832 10638,8796 10763,8797 10928,8838 10995,8878 11065,8956 11049,9118
 Islamischer Friedhof	F:Cemetery|religion:muslim 11030,8416 10911,8457 10859,8476 10796,8498 10691,8532 10644,8363 10803,8251 10962,8104
 Garnisonfriedhof	F:Cemetery 10962,8104 10995,8071 11133,8156 11114,8388 11030,8416
@@ -1001,6 +1001,7 @@ Doktorpark	F:Forest 19877,1132 19940,1265 20086,1114 20059,1054 19934,1102 19877
 # 
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7830
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036209212628/209212628/00100662/62-Anlagen/02/vzb0385_V-B-Plan_XXI-20_Auswertg_fruehz_Beteil.pdf
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11301 (Vorlage zur Kenntnisnahme)
 #: note: bei OSM werden hier noch die KGAs "Am Wuhleteich" und "Gartenfreunde Wuhletal" erwähnt
 KGA Am Kienberg	F:Orchard 22082,14420 22010,14468 22003,14400 22007,14209 22050,14212 22118,13954 22141,13784 22136,13735 22110,13639 22140,13649 22263,13758 22330,13863 22391,13986 22395,14135 22162,14275 22082,14420
 # 
@@ -1418,7 +1419,7 @@ Friedhof Wartenberg	F:Cemetery 18073,18918 18061,18922 18042,18851 18081,18836 1
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_44_4149_4196_online.pdf (Benennung)
 #: osm_watch: way id="51691170" version="10"
 #: XXX "Platz an den Drei Grazien": Werden hier entsprechende Straßenschilder aufgehängt? (bei osm wurde schon der neue Name eingetragen)
-#: last_checked: 2023-10-19
+#: last_checked: 2023-12-07
 	F:P 13434,15045 13516,14997 13536,15033 13455,15078 13434,15045
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2023/pressemitteilung.1330765.php
 Sportplatz am Bildungscampus Schöneberger Linse	F:Sport 7255,8148 7362,8137 7356,8068 7250,8079 7255,8148
@@ -1429,9 +1430,10 @@ Franz-Mehring-Platz	F:P 12822,12067 12758,11915 12788,11898 12891,12008 12822,12
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/m6XQnYpp0v2ScnU9hLkzZvk3T31UcTNiIcfxO8v1/XWonXWU/72-Anlagen/01/1_Version_vom_30_06_2023.pdf
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6708 (Vorlage zur Kenntnisnahme)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/CzHsN2pWsTqjjeO7iTnVu4jkKhVitreZfimJHhfT/kVHIQfhL/33-Anlagen/02/attach_6D91.pdf
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_52_4789_4920_online.pdf (Benennung einer öffentlichen Grünanlage, tatsächlich ohne Bindestrich?)
 #: XXX neuer Name: "Riwne Platz" (tatsächlich ohne Bindestrich?)
-#: last_checked: 2023-11-09
-#: check_frequency: 90d
+#: last_checked: 2023-12-07
+#: check_frequency: 60d
 	F:P 13546,15464 13604,15430 13540,15329 13479,15361 13546,15464
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_30_3225_3284_online.pdf (Widmung als Grünanlage)
 #: note: Am Darßer Graben
@@ -1735,6 +1737,7 @@ Beamtenfriedhof	F:Cemetery 7711,13577 7743,13593 7759,13560 7727,13545 7711,1357
 #: by: https://kleineanfragen.de/berlin/18/19823-kleingartenanlage-lehrter-strasse
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2023/pressemitteilung.1287657.php (Erwähnung des Döberitzer Grünzugs --- sind diese Kleingärten gemeint?)
 #: by: https://berliner-abendblatt.de/2023/01/26/kleingartenanlage-wird-erweitert/
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=12033 (Erwähnung von "von Abrissarbeiten an den Kleingärten" --- hier?)
 #: XXX KGA soll teilweise aufgegeben werden
 #: osm_watch: relation id="2177476" version="3"
 #: last_checked: 2023-10-11

@@ -19612,6 +19612,7 @@ EOF
 #: by: https://berliner-abendblatt.de/2023/01/04/neuer-standort-fuer-maientage-bezirk-prueft-angebot/
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8480 (Anfrage)
 #: by: https://www.tagesspiegel.de/berlin/bezirke/maientage-fallen-aus-volksfest-in-berlin-neukolln-zu-spaterem-zeitpunkt-im-gesprach-9621785.html (vielleicht im Herbst 2023?)
+#: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8873 (Anfrage)
 #: note: 2021 findet es vermutlich auch nicht statt --- am 27.4.2021 war noch nichts vom Rummelplatz zu sehen
 # REMOVED (vermutlich nicht) --- #: XXX vielleicht Verlegung in die zweite Jahreshälfte? --- #: next_check: 2020-07-01
 # REMOVED --- #: tempex: 20180427-T20180521 vvv
@@ -30712,7 +30713,7 @@ EOF
 #: next_check_id: BUNDESALLEE-2019
 # REMOVED (closed) --- #: osm_watch: note 1960975 3
 # REMOVED (laut osm wieder offen, confirmed) --- #: osm_watch: way id="483261580" version="3" --- #: XXX es gibt einen engen Umweg über Meierottostr., theoretisch mit Anrampung, kann aber zugeparkt sein --- #: add_fragezeichen: Wann ist eine Durchfahrt wieder möglich? --- #: priority: #A --- #: last_checked: 2019-12-08 --- #: check_frequency: 30d
-	2::inwork 5382,9942 5423,9932 5461,9923
+	2::inwork 5394,9940 5423,9932 5461,9923
 EOF
      },
      { from  => 1572130800, # 2019-10-27 01:00
@@ -32349,7 +32350,7 @@ Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp:
 Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3316,14169 -3409,14241
 Altstadt Spandau: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask -3150,14631 -3122,14557 -3107,14535 -3054,14498
 #: note ^^^
-Bergmannstr. (Kreuzberg): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252 9793,9241 9880,9233 9973,9232 10001,9234 10123,9233 10547,9233
+Bergmannstr. (Kreuzberg): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252 9793,9241 9880,9233 9973,9232 10001,9234 10123,9233 10250,9233 10366,9233 10547,9233
 Bölschestr.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 25579,5958 25571,5829 25567,5749 25563,5666 25561,5622 25553,5486 25548,5398 25546,5359 25544,5326 25539,5237 25524,5011 25522,4935 25519,4830
 Friedrichstr. (Mitte): Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 9212,13471 9225,13389 9244,13253 9246,13235 9254,13171 9262,13111 9269,13060 9279,12953 9286,12886 9298,12765 9303,12718 9313,12662 9314,12652 9330,12538 9343,12464 9358,12351 9369,12253 9373,12197 9384,12103 9393,12000 9405,11903 9418,11804 9432,11702 9444,11616 9456,11513 9468,11412 9474,11360 9478,11317
 Karl-Marx-Str.: Maskenpflicht gilt möglicherweise auch für Radfahrer	q4::temp::mask 13236,6489 13200,6550 13141,6651 13121,6689 13117,6716 13085,6925 13072,7013 13068,7043 13058,7112 13051,7157 13043,7234 13034,7319 13030,7346 13029,7353 13018,7441 13015,7471 12987,7560 12972,7602 12916,7775 12898,7832 12892,7850 12865,7923 12846,7981 12823,8028 12788,8101 12753,8187 12714,8249 12689,8289 12639,8344 12598,8390 12582,8408 12562,8432 12545,8449 12494,8501 12330,8636 12318,8645 12150,8764 12063,8826 11998,8872 11880,8955 11831,8989
@@ -32592,7 +32593,7 @@ EOF
 #: also_indoor: traffic (ex-H,G)
 #: osm_watch: way id="362719487" version="9"
 #: osm_watch: way id="687428752" version="2"
-#: last_checked: 2023-10-17 (daf)
+#: last_checked: 2023-12-09
 #: check_frequency: 120d
 #: next_check: 2024-11-15
 	q4::inwork 6033,10403 6133,10679
@@ -32671,7 +32672,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Hönower Wiesenweg: Durchfahrt kann wegen Straßenarbeiten gesperrt sein (Stand Ende November 2023: Absperrungen im mittleren Abschnitt, kann außerhalb der Arbeitszeiten umfahren werden)',
+       text  => 'Hönower Wiesenweg: Durchfahrt kann wegen Straßenarbeiten gesperrt sein (Stand Anfang Dezember 2023: zurzeit keine Absperrungen im mittleren Abschnitt)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: PARKSTADTKARLSHORST-2021
@@ -32680,7 +32681,7 @@ EOF
 #: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
 #: osm_watch: way id="26322046" version="30"
 #: osm_watch: way id="165832806" version="34"
-#: last_checked: 2023-11-26
+#: last_checked: 2023-12-07
 #: check_frequency: 14d
 	2::inwork 17380,8858 17416,8767 17468,8692 17497,8623 17515,8567 17524,8536 17533,8505 17554,8458 17588,8413
 # REMOVED (hier weitgehend fertig) ---	2::inwork 17588,8413 17617,8363 17652,8349 17707,8328 17753,8290
@@ -34748,12 +34749,13 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2023-11-13 00:00:00"), # undef, # 
-       until => $isodate2epoch->("2023-12-08 23:59:59"), # 1676574342, # undef, # XXX
+       until => $isodate2epoch->("2024-03-29 23:59:59"), # 1676574342, # undef, # XXX
        #text  => 'Jahnstr./Rungiusstr.: Bauarbeiten im Kreuzungsbereich, Fahrbahn gesperrt (Stand Mitte Januar 2023)',
-       text  => 'Jahnstr.: Bauarbeiten zwischen Rungiusstr. und Mackenroder Weg, Sperrung, evtl. sind auch Radfahrer betroffen, vom 13.11.2023 bis 08.12.2023',
+       text  => 'Jahnstr.: Bauarbeiten zwischen Rungiusstr. und Mackenroder Weg, Sperrung, evtl. sind auch Radfahrer betroffen, vom 13.11.2023 bis 29.03.2024',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: viz2021:13.44079,52.46081,13.11.2023,07:00 (bis 08.12.2023)
+#: source_id: viz2021:13.44079,52.46081,13.11.2023,07:00 (bis 08.12.2023) (inaktiv)
+#: source_id: viz2021:13.43816,52.46045,08.12.2023,00:00 (bis 29.03.2024)
 # REMOVED --- #: also_indoor: traffic (ex-B,G,W)
 # REMOVED --- #: note: am 2022-03-07 noch immer Bauarbeiten und Schild "Durchfahrt verboten", allerdings konnten anscheinend sogar Autos durchfahren; am 2022-04-18, 2022-08-05, 2022-09-03, 2022-09-24, 2022-10-16 ebenso; Halteverbotsschilder bis 14.10.2022
 # REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten bereits beendet? --- #: last_checked: 2023-01-17 (Asphaltierungsarbeiten) --- #: check_frequency: 7d
@@ -36799,7 +36801,7 @@ EOF
 #: by: https://bautagebuch.twentyseven-berlin.de/ (kein Inhalt, nur ein Login)
 #: by: https://fiducia-gruppe.de/investment/ (Fertigstellung: Sommer 2024)
 #: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
-#: osm_watch: way id="1094113747" version="1"
+#: osm_watch: way id="1094113747" version="2"
 #: also_indoor: traffic (none)
 #: last_checked: 2023-10-08 (daf)
 #: check_frequency: 180d
@@ -37687,7 +37689,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Wann wird die Einbahnstraßenregelung aufgehoben?
 #: also_indoor: traffic (W,G)
-#: last_checked: 2023-09-29
+#: last_checked: 2023-12-09
 #: check_frequency: 90d
 	q4::inwork; 5497,10719 5471,10719
 EOF
@@ -37790,7 +37792,7 @@ EOF
 #: also_indoor: traffic (W)
 #: osm_watch: way id="1137576466" version="1"
 #: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
-#: last_checked: 2023-11-23
+#: last_checked: 2023-12-07
 #: check_frequency: 60d
 	q4::inwork; 13086,15907 13214,15830
 EOF
@@ -38730,13 +38732,13 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Götelstr.: Bauarbeiten, Fahrbahn zwischen Betckestr. und Weverstr. gesperrt (Stand Mitte April 2023), Ende der Bauarbeiten unbekannt',
+       text  => 'Götelstr.: Bauarbeiten, Fahrbahn zwischen Betckestr. und Weverstr. gesperrt (Stand Oktober 2023), Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: GOETEL-2023
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: also_indoor: traffic (G)
-#: last_checked: 2023-10-11
+#: last_checked: 2023-12-09 (indoor)
 	q4::inwork -3269,12406 -3260,12540
 EOF
      },
@@ -38926,9 +38928,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Endedatum laut Baustellenschild der Wasserbetriebe
+#: note: bei Bing mittlerweile der südliche Abschnitt der Grabertstr. (ab Karl-Fischer-Weg) gesperrt
 #: osm_watch: way id="1197821336" version="1"
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
-#: also_indoor: traffic (none) vvv
+#: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet? vvv
+#: also_indoor: traffic (B[Grabertstr]) vvv
 #: last_checked: 2023-06-12 vvv
 #: check_frequency: 180d vvv
 #: next_check: 2025-10-31 vvv
@@ -39290,22 +39293,18 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1702053625, # undef, # XXX
        text  => 'Rummelsburger Bucht: neues Wohngebiet, teilweise noch Baustelle, unter Umständen kann das Befahren/Betreten nicht möglich sein',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: note: Weitere Sperrungen sind in gesperrt-orig, dort wo eindeutig nur Baustelle ist
 #: source_id: viz2021:13.472998,52.501877,24.07.2023,07:00 (Straßenbau in Höhe Ingrid-Reschke-Str., bis 25.08.2023) (bis 01.09.2023) (bis 08.09.2023) (inaktiv)
-#: XXX Wann sind die Straßen endgültig offen? vvv
-#: last_checked: 2023-11-26 vvv
-#: check_frequency: 60d vvv
+# REMOVED (mittlerweile sogar teilweise ausgeschildert) --- #: XXX Wann sind die Straßen endgültig offen? vvv --- #: last_checked: 2023-12-07 vvv --- #: check_frequency: 60d vvv
 Ingrid-Reschke-Str.	2::inwork 15163,10758 15151,10699 15140,10647 15138,10638
 Ulrich-Plenzdorf-Str.	2::inwork 15151,10699 15220,10682
 Gustav-Tempel-Str.	2::inwork 15261,10738 15245,10719 15236,10684 15220,10682 15205,10616 15200,10600
-#: check_frequency ^^^
-#: last_checked ^^^
-#: XXX ^^^
+# REMOVED --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: XXX ^^^
 EOF
      },
      { from  => 1686434400, # 2023-06-11 00:00
@@ -39401,7 +39400,8 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: Endedatum laut Baustellenschild der Wasserbetriebe
-#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
+#: note: bei Google ist mittlerweile eine Sperrung in der abgehenden Denkstr. eingetragen
+#: add_fragezeichen: Sind die Bauarbeiten mittlerweile beendet?
 #: also_indoor: traffic (ex-B)
 #: osm_watch: note 3732762 2
 #: last_checked: 2023-06-12
@@ -39443,8 +39443,8 @@ EOF
        until => $isodate2epoch->("2024-05-10 16:00:00"),
        text  => 'Gransee: Sperrung zwischen Oranienburger Str. und Vogelsangstr. vom 19.06.2023, 08:00 Uhr bis 10.05.2024',
        type  => 'gesperrt',
-       source_id => 'LS/221-E/23/077', # bis 10.05.2024 # bis 25.08.2023 # inaktiv # bis 10.05.2024
        data  => <<EOF,
+#: source_id: LS/221-E/23/077 (bis 10.05.2024) (bis 25.08.2023) (inaktiv) (bis 10.05.2024)
 	2::inwork -7332,66101 -7636,65571
 EOF
      },
@@ -39858,7 +39858,7 @@ EOF
        data  => <<EOF,
 #: also_indoor: traffic (B,G[unvollständig],W[unvollständig])
 #: note: Halteverbote bis 17. November 2023; wurden nicht verlängert; im westlichen Abschnitt weitgehend fertig (neu asphaltiert), im östlichen Abschnitt noch aufgebudelt
-#: last_checked: 2023-11-30 (mapillary) vvv
+#: last_checked: 2023-12-05 (mapillary) vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2023-11-17
 	q4::inwork 11618,16183 11680,16151
@@ -40740,19 +40740,17 @@ EOF
 EOF
      },
      { from  => 1696309200, # 2023-10-03 07:00
-       until => $isodate2epoch->("2023-12-20 18:00:00"), # undef, # 1700064000, # 2023-11-15 17:00
+       until => 1702052456, # $isodate2epoch->("2023-12-20 18:00:00"), # undef, # 1700064000, # 2023-11-15 17:00
        text  => 'Ebelingstr.: Anbindung Ebertystr. gesperrt, voraussichtlich bis 20.12.2023',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2023/pressemitteilung.1384104.php (voraussichtlich bis Mitte Dezember 2023)
 #: by[nocache]: https://nitter.net/VIZ_Berlin/status/1731915050880024610#m (neue Verkehrsführung, gilt die Einbahnstraße tatsächlich nicht für Radfahrer?)
 #: source_id: viz2021:13.452867,52.524141,04.10.2023,07:00 (bis 15.11.2023) (kein Endedatum mehr) (bis 5.12.2023) (inaktiv)
-#: source_id: viz2021:13.452891,52.5241,05.12.2023,07:00 (bis 20.12.2023)
+#: source_id: viz2021:13.452891,52.5241,05.12.2023,07:00 (bis 20.12.2023) (bis 31.01.2023)
 #: note: bei rbb bis 17.11.2023 terminiert (dieser Termin kann aber nicht gehalten werden) (mittlerweile bis 20.12.2023, weitere Arbeiten im Anschluss)
-#: add_fragezeichen: Besteht die Sperrung weiterhin?
 #: osm_watch: note 3677859 4
-#: last_checked: 2023-11-16
-#: next_check: 2023-12-05
+# REMOVED (zwei Einbahnstraßenregelungen, Radfahrer frei) --- #: add_fragezeichen: Besteht die Sperrung weiterhin? --- #: last_checked: 2023-11-16 --- #: next_check: 2023-12-05
 	q4::inwork 13598,13180 13692,13221
 EOF
      },
@@ -40785,7 +40783,7 @@ EOF
        data  => <<EOF,
 #: note: Bauarbeiten beginnen etwa 120m östlich der Föhrer Str., keine Bordsteinabsenkung, alter abgesperrter Radweg existiert als mögliche Umfahrung
 #: source_id: viz2021:13.348039,52.538941,25.09.2023,07:00 (hier nur Kfz-Verkehr betroffen, bis 18.09.2024)
-#: osm_watch: way id="4543441" version="38"
+#: osm_watch: way id="4543441" version="39"
 	q2::inwork 6334,14756 6513,14725 6596,14740 6709,14782
 EOF
      },
@@ -40820,7 +40818,7 @@ EOF
 # bis Albestr. (25.-26.10.2023)	q4::inwork 5635,7660 5636,7540 5640,7435
 # bis Renée-Sintenis-Platz (27.-28.10.2023)	q4::inwork 5640,7435 5641,7332 5642,7255
 # bis Schmiljanstr. (30.10.-01.11.2023)	q4::inwork 5641,7189 5624,7113 5565,7024
-bis Bundesallee (02.-04.11.2023)	q4::inwork 5565,7024 5478,6959 5357,6932
+bis Bundesallee (02.-04.11.2023)	q4::inwork 5565,7024 5478,6959 5384,6933 5357,6932
 EOF
      },
      { from  => 1696741200, # 2023-10-08 07:00
@@ -40900,7 +40898,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/wilmersdorf/c-bauen/strasse-wegen-baustelle-gesperrt_a397537
-#: source_id: viz2021:13.31365,52.48412,21.10.2023,07:00 (hier von Barbrücke; bis 08.12.2023)
+#: source_id: viz2021:13.31365,52.48412,21.10.2023,07:00 (hier von Barbrücke; bis 08.12.2023) (inaktiv)
 #: note: außerhalb der Arbeitszeiten kann die Absperrung am nördlichen Ende weggeschoben sein, aber am südlichen Ende muss man trotzdem dann Bordsteine überwinden
 #: note: Halteverbotsschilder bis 17.11.2023
 # REMOVED --- #: last_checked: 2023-10-21 --- #: next_check: 2023-11-17
@@ -41005,11 +41003,12 @@ EOF
      },
      { from  => 1698503309, # 2023-10-28 16:28
        until => 1702681199, # 2023-12-15 23:59
-       text  => 'Wallensteinstr.: ab Ilsestr. etwa 70m der Fahrbahn Richtung Nordwesten gesperrt, voraussichtlich bis Mitte Dezember 2023',
+       text  => 'Wallensteinstr.: ab Ilsestr. etwa 70m der Fahrbahn Richtung Nordwesten gesperrt, voraussichtlich bis Mitte Dezember 2023, vielleicht auch länger',
        type  => 'handicap',
        data  => <<EOF,
+#: also_indoor: traffic (none)
 #: note: auch der rechte Gehweg ist gesperrt, Ausweichen auf linken Gehweg nur inoffiziell möglich
-#: last_checked: 2023-11-26
+#: last_checked: 2023-12-07
 #: check_frequency: 30d
 #: next_check: 2023-12-15
 	q2::inwork; 18037,9195 17549,9529
@@ -41052,7 +41051,7 @@ EOF
 EOF
      },
      { from  => 1693380660, # 2023-08-30 09:31
-       until => 1712847600, # 2024-04-11 17:00
+       until => 1702053267, # 1712847600, # 2024-04-11 17:00
        text  => 'Edisonstr.: Richtung Niederschöneweide zwischen An der Wuhlheide und Siemensstr. ist die Fahrbahn gesperrt, für Radfahrer Führung über den engen Gehweg, bis 11.04.2024 17:00',
        type  => 'handicap',
        data  => <<EOF,
@@ -41060,9 +41059,7 @@ EOF
 #: source_id: viz2021:13.514401,52.468693,31.08.2023,09:31 (bis 11.04.2024) (bis 04.12.2023) (inaktiv)
 #: also_indoor: traffic (ex-H[zu wenig],G,ex-B[zu viel],ex-W[zu viel])
 #: note: bei rbb weiterhin bis 11.04.2024, sogar beide Richtungen
-#: last_checked: 2023-11-26
-#: check_frequency: 30d
-#: next_check: 2023-12-04
+# REMOVED (Fahrbahn nicht mehr gesperrt) --- #: last_checked: 2023-11-26 --- #: check_frequency: 30d --- #: next_check: 2023-12-04
 	q3::inwork; 18010,7133 17934,7029 17919,6978 17919,6968 17945,6788
 EOF
      },
@@ -41335,6 +41332,7 @@ EOF
        data  => <<EOF,
 #: by[nocache]: https://nitter.net/VIZ_Berlin/status/1727203617906843664#m (hier: Wildschutzzaun-Reparatur)
 #: by[nocache]: https://nitter.net/VIZ_Berlin/status/1727355840028660051#m (nun auch hier: Brückenschäden)
+#: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11877 (Anfrage)
 #: source_id: viz2021:13.24577,52.62176,22.11.2023,07:05 (hier: in Höhe Am Eichenhain; bis 29.11.2023) (inaktiv)
 #: source_id: viz2021:13.256929,52.626684,21.11.2023,16:35 (hier: Brückenschäden; bis 01.12.2023) (hier: Vollsperrung nur für Kfz-Verkehr; bis 15.12.2023)
 #: also_indoor: traffic (ex-H,B)
@@ -41350,6 +41348,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.300851,52.527492,22.11.2023,07:00 (bis 13.12.2023)
+#: note: bei rbb "Sperrung in Richtung Tegeler Weg" (aber die Straße führt gar nicht in diese Richtung?)
 	q4::inwork 3310,13253 3351,13411 3371,13501
 EOF
      },
@@ -41423,7 +41422,7 @@ EOF
      },
      { from  => 1701237600, # 2023-11-29 07:00
        until => 1722438000, # 2024-07-31 17:00
-       text  => 'Hufelandstr.: an die Greifswalder Str. ist unterbrochen, evtl. sind auch Radfahrer betroffen, vom 30.11.2023 07:00 bis 31.07.2024 17:00',
+       text  => 'Hufelandstr.: Sperrung der Fahrbahn im Einmündungsbereich Greifswalder Str., gemeinsamer Rad- und Gehweg, vom 30.11.2023 07:00 bis 31.07.2024 17:00',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.429643,52.533151,30.11.2023,07:00 (bis 31.07.2024)
@@ -41440,11 +41439,11 @@ EOF
 EOF
      },
      { from  => 1701756000, # 2023-12-05 07:00
-       until => 1702656000, # 2023-12-15 17:00
-       text  => 'Wilhelm-von-Siemens-Str.: Richtung Hirzerweg zwischen Baumarkt und Fritz-Werner-Str. gesperrt, evtl. sind auch Radfahrer betroffen, vom 06.12.2023 07:00 bis 15.12.2023 17:00',
+       until => $isodate2epoch->("2023-12-11 16:00:00"), # 1702656000, # 2023-12-15 17:00
+       text  => 'Wilhelm-von-Siemens-Str.: Richtung Hirzerweg zwischen Baumarkt und Fritz-Werner-Str. gesperrt, evtl. sind auch Radfahrer betroffen, vom 06.12.2023 07:00 bis 11.12.2023 16:00',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: viz2021:13.380478,52.429466,06.12.2023,07:00 (bis 15.12.2023)
+#: source_id: viz2021:13.380478,52.429466,06.12.2023,07:00 (bis 15.12.2023) (bis 11.12.2023)
 #: note: q3, weil nur Teilstrecke
 	q3::inwork; 8674,2627 9081,2594
 EOF
@@ -41459,7 +41458,7 @@ EOF
 #: by[nocache]: https://nitter.net/polizeiberlin/status/1731961408768573603#m
 #: by[nocache]: https://nitter.net/VIZ_Berlin/status/1731962651792531481#m
 #: by: https://www.berlin.de/polizei/polizeimeldungen/2023/pressemitteilung.1391307.php
-#: source_id: viz2021:13.378787,52.516372,07.12.2023,10:00 (bis 07.12.2023)
+#: source_id: viz2021:13.378787,52.516372,07.12.2023,10:00 (bis 07.12.2023) (inaktiv)
 Wilhelmstr. (Mitte, Kreuzberg)	2::temp 8901,12008 8861,12125 8804,12280
 Wilhelmstr. (Mitte, Kreuzberg)	2::temp 8804,12280 8775,12457
 Cora-Berliner-Str.	2::temp 8783,11959 8737,12098
