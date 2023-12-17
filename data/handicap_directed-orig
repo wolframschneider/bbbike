@@ -400,7 +400,7 @@ Otto-Schmirgal-Str. -> Am Tierpark: Z-Übergang	DH:h=q4,25 18512,10337 18554,1035
 #: source_id: viz2021:13.45316,52.49472,29.07.2021,08:00 (bis 30.06.2023) (inaktiv)
 #: source_id: viz2021:13.458241,52.492038,29.07.2021,08:00 (bis 30.6.2022) (inaktiv) (bis 31.12.2022) (bis 31.7.2023) (bis 22.12.2023)
 #: osm_watch: way id="1005683568" version="13"
-#: last_checked: 2023-12-03 vvv
+#: last_checked: 2023-12-11 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2023-12-22 vvv
 #: note: allerdings spart man hier eine Ampel
@@ -450,14 +450,14 @@ Scharnweberstr.: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:t=2
 # REMOVED --- #: by: https://nitter.cz/VIZ_Berlin/status/1657962005427257344#m --- #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnY3MGk0TlgwQVl4bVBCLmpwZw== --- #: source_id: viz2021:13.473477,52.536115,15.05.2023,07:00 (bis 02.06.2023) (bis 05.06.2023) (inaktiv) --- #: source_id: viz2021:13.473455,52.536108,15.05.2023,07:00 (bis 05.06.2023) (inaktiv) --- #: last_checked: 2023-06-02 vvv --- #: next_check: 2023-06-05 vvv --- #: valid: -20230605 vvv --- Hohenschönhauser Str./Weißenseer Weg: Umweg wegen Gleisbauarbeiten	DH:len=60 14990,14537 15066,14579 15174,14638 --- Hohenschönhauser Str./Weißenseer Weg: Umweg wegen Gleisbauarbeiten	DH:len=60 14990,14537 15066,14579 14959,14752 --- #: valid ^^^ --- #: next_check ^^^ --- #: last_checked ^^^
 # 
 #: source_id: viz2021:13.320363,52.478755,02.06.2023,09:00 (bis 30.06.2023) (bis 01.09.2023) (bis 15.09.2023) (inaktiv) vvv
-#: source_id: viz2021:13.320334,52.478774,02.06.2023,09:00 (bis 31.10.2023) (bis 17.11.2023) (bis 22.12.2023) vvv
+#: source_id: viz2021:13.320334,52.478774,02.06.2023,09:00 (bis 31.10.2023) (bis 17.11.2023) (bis 22.12.2023) (bis 30.01.2024) vvv
 #: by: https://nitter.cz/VIZ_Berlin/status/1671133669078052865#m
 #: by: https://www.tagesspiegel.de/berlin/bezirke/berliner-verkehr-wilmersdorfer-kreuzung-soll-bald-wieder-befahrbar-sein-10802854.html (bis Ende November 2023?)
 #: note: laut rbb bis 29.02.2024; mittlerweile vorzeitig entfernt; mittlerweile ebenfalls bis 17.11.2023
 #: osm_watch: note 3806215 2
 #: last_checked: 2023-07-01 vvv
-#: next_check: 2023-12-22 vvv
-#: valid: -20231222 vvv
+#: next_check: 2024-01-30 vvv
+#: valid: -20240130 vvv
 #: note: alternativ auf der Südseite umfahren
 Detmolder Str.: Umweg über Blissestr.	DH:len=160 4873,8007 4786,8007 4711,8013
 #: valid ^^^
@@ -499,12 +499,12 @@ Minna-Todenhagen-Brücke - Köpenicker Landstr: zusätzliche Ampel	DH:t=20 16834,69
 # REMOVED --- #: valid: -20241231
 Alt-Friedrichsfelde: Umweg über einen asphaltierten Notweg, kurvig	DH:len=34:h=q1,341 19092,11776 19389,11761
 # 
-#: source_id: viz2021:13.492436,52.558772,17.10.2023,07:00 (bis 04.03.2024) (bis 18.04.2024)
+#: source_id: viz2021:13.492436,52.558772,17.10.2023,07:00 (bis 04.03.2024) (bis 18.04.2024) (bis 17.06.2024)
 #: note: außerdem besteht im Baustellenbereich Benutzungspflicht auf dem Radweg Richtung Hohenschönhausen
 #: last_checked: 2023-11-13 vvv
 #: check_frequency: 90d vvv
-#: next_check: 2024-03-04 vvv
-#: valid: -20240304 vvv
+#: next_check: 2024-06-17 vvv
+#: valid: -20240617 vvv
 Hansastr.: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:tl:len=30 16525,17253 16460,17214 16352,17150
 Hansastr.: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:tl:len=30 16296,17114 16139,17017 15986,16922
 #: valid ^^^

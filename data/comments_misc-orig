@@ -1369,7 +1369,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2023-11-14
+#: last_checked: 2023-12-11
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1804,7 +1804,7 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2023-11-23 vvv
+#: last_checked: 2023-12-12 vvv
 #: check_frequency: 90d vvv
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10685,12422
@@ -1850,10 +1850,10 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 #: last_checked: 2023-12-07 vvv
 #: check_frequency: 60d vvv
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
-Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
+# REMOVED (ausgeschildert) --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
 Ulrich-Plenzdorf-Str.: nicht ausgeschildert	CS 14994,10732 15071,10716
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ingrid-Reschke-Str. hängt an der Hauswand --- Ulrich-Plenzdorf-Str.: nicht ausgeschildert	CS 15071,10716 15151,10699 15220,10682
-Gustav-Tempel-Str.: nicht ausgeschildert	CS 15261,10738 15245,10719 15236,10684 15220,10682 15205,10616 15200,10600
+# REMOVED (ausgeschildert) --- Gustav-Tempel-Str.: nicht ausgeschildert	CS 15261,10738 15245,10719 15236,10684 15220,10682 15205,10616 15200,10600
 An den Eiswerken: nicht ausgeschildert	CS 15004,10791 14994,10732 14984,10677
 Paul-und-Paula-Promenade: nicht ausgeschildert	CS 14886,10748 14909,10732 14984,10677
 #: check_frequency ^^^

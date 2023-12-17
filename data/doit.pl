@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2017,2018,2019,2021,2022 Slaven Rezic. All rights reserved.
+# Copyright (C) 2017,2018,2019,2021,2022,2023 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -20,6 +20,7 @@ use Doit::Util qw(copy_stat);
 use File::Basename qw(dirname basename);
 use File::Compare ();
 use File::Glob qw(bsd_glob);
+use File::Spec ();
 use File::Temp qw(tempfile);
 use Getopt::Long;
 use Cwd qw(realpath cwd);
@@ -90,6 +91,22 @@ sub _commit_dest ($$) {
     $d->rename("$f~", $f);
     _make_readonly($d, $f);
 }
+
+# REPO BEGIN
+# REPO NAME slurp /home/e/eserte/src/srezic-repository 
+# REPO MD5 241415f78355f7708eabfdb66ffcf6a1
+sub slurp ($) {
+    my($file) = @_;
+    my $fh;
+    my $buf;
+    open $fh, $file
+	or die "Can't slurp file $file: $!";
+    local $/ = undef;
+    $buf = <$fh>;
+    close $fh;
+    $buf;
+}
+# REPO END
 
 sub action_files_with_tendencies {
     my $d = shift;
@@ -240,6 +257,63 @@ sub action_survey_today {
 		'>', "$dest~",
 	       );
 	_commit_dest $d, $dest;
+    }
+}
+
+sub action_fragezeichen_nextcheck_bbd {
+    my $d = shift;
+    $d->add_component('file');
+    my $dest = "$persistenttmpdir/fragezeichen-nextcheck.bbd";
+    my @srcs = (qw(ampeln-orig
+		   fragezeichen-orig
+		   gesperrt-orig
+		   qualitaet_s-orig
+		   qualitaet_l-orig
+		   handicap_s-orig
+		   handicap_l-orig
+		 ),
+		"$persistenttmpdir/bbbike-temp-blockings-optimized.bbd");
+    my @add_deps = ("$persistenttmpdir/XXX-indoor.bbd", "$persistenttmpdir/XXX-outdoor.bbd");
+    if (_need_daily_rebuild $dest || _need_rebuild $dest, @srcs, @add_deps) {
+	my $processor = sub {
+	    my($ofh, $src, $with_next_last_check, $with_nonextcheck) = @_;
+	    my $relsrc = File::Spec->abs2rel($src);
+	    $ofh->print(<<"EOF");
+############################################################
+# source: $relsrc
+EOF
+	    if (!$with_next_last_check) {
+		$ofh->print(<<'EOF');
+# (without next_check/last_checked)
+EOF
+	    }
+	    if ($with_next_last_check) {
+		$d->run([@grepstrassen, '-directive', 'last_checked~.', '-special', 'nextcheck', $src], '>', '/dev/null');
+		$ofh->print(slurp('/tmp/nextcheck.bbd'));
+		$d->run([@grepstrassen, '-directive', 'next_check~.', '-special', 'nextcheck', $src], '>', '/dev/null');
+		$ofh->print(slurp('/tmp/nextcheck.bbd'));
+	    }
+	    if ($with_nonextcheck) {
+		$ofh->print($d->info_qx(@grepstrassen, '-special', 'nonextcheck', $src));
+	    }
+	};
+	$d->file_atomic_write
+	    ($dest, sub {
+		 my $ofh = shift;
+		 $ofh->print(<<'EOF');
+#: line_dash: 8, 5
+#: line_width: 5
+#:
+EOF
+		 for my $src (@srcs) {
+		     $processor->($ofh, $src, 1, 0);
+		 }
+		 $processor->($ofh, "fragezeichen-orig", 0, 1);
+		 for my $srcfrag (qw(indoor outdoor)) {
+		     $processor->($ofh, "$persistenttmpdir/XXX-$srcfrag.bbd", 1, 1);
+		 }
+	     }
+	    );
     }
 }
 
@@ -437,6 +511,53 @@ sub action_old_bbbike_data {
     }
 }
 
+sub action_bbbgeojsonp_index_html {
+    my $d = shift;
+    $d->add_component('file');
+
+    require Geography::Berlin_DE;
+    my($lon,$lat) = split /,/, Geography::Berlin_DE->new->center_wgs84;
+
+    my @bbbgeojsonp_targets = @ARGV;
+    die "Unexpected: no targets?" if !@bbbgeojsonp_targets;
+    $d->file_atomic_write
+	("$persistenttmpdir/bbbgeojsonp/index.html", sub {
+	     my $ofh = shift;
+	     $ofh->print("<ul>\n");
+	     for my $target (@bbbgeojsonp_targets) {
+		 my $base = basename $target;
+		 (my $label = $base) =~ s/\.bbbgeojsonp$//;
+		 $ofh->print(<<"EOF");
+ <li><a href="/cgi-bin/bbbikeleaflet.cgi?geojsonp_url=/BBBike/tmp/bbbgeojsonp/$base&zoom=12&lat=$lat&lon=$lon">$label</a>
+EOF
+	     }
+	     $ofh->print("</ul>\n");
+	     $ofh->print("Last update: " . strftime('%F %T', localtime) . "\n");
+	 });
+}
+
+sub action_geojson_index_html {
+    my $d = shift;
+    $d->add_component('file');
+
+    my @geojson_targets = @ARGV;
+    die "Unexpected: no targets?" if !@geojson_targets;
+    $d->file_atomic_write
+	("$persistenttmpdir/geojson/index.html", sub {
+	     my $ofh = shift;
+	     $ofh->print("<ul>\n");
+	     for my $target (@geojson_targets) {
+		 my $base = basename $target;
+		 (my $label = $base) =~ s/\.geojson$//;
+		 $ofh->print(<<"EOF");
+ <li><a href="$base">$label</a>
+EOF
+	     }
+	     $ofh->print("</ul>\n");
+	     $ofh->print("Last update: " . strftime('%F %T', localtime) . "\n");
+	 });
+}
+
 ######################################################################
 
 # note: not run in action_all
@@ -459,6 +580,58 @@ sub action_last_checked_vs_next_check {
 	$fails += $file_fails;
     }
     error "Failures seen\n" if $fails;
+}
+
+######################################################################
+
+sub action_forever_until_error {
+    my($d, @argv) = @_;
+
+    require Fcntl;
+    require File::Glob;
+    $d->add_component('git');
+
+    local @ARGV = @argv;
+    my $allowed_errors = 1;
+    my $forever_interval = 30;
+    GetOptions(
+	       "allowed-errors=i" => \$allowed_errors,
+	       "forever-interval=i" => \$forever_interval,
+	      )
+	or die "usage?";
+    my @cmd = @ARGV;
+
+    my $error_count = 0;
+    while() {
+	next if $d->git_current_branch() ne 'master';
+	{
+	    open my $LOCK, '>', ".check_forever.lck"
+		or die "Can't write lock file: $!";
+	    flock $LOCK, &Fcntl::LOCK_EX|&Fcntl::LOCK_NB
+		or die "Can't lock: $!";
+	    # XXX use system() once statusref is implemented
+	    $d->qx({quiet => 0, statusref => \my %status}, @cmd);
+	    exit 2 if ($status{signalnum}||0) == 2;
+	    $error_count++ if $status{exitcode};
+	    exit 1 if $error_count >= $allowed_errors;
+	}
+    } continue {
+	unlink ".check_forever.lck";
+	my $t0 = time;
+	print STDERR "wait...";
+	if ($^O eq q{linux}) {
+	    # XXX use system() once statusref is implemented
+	    $d->qx({quiet => 1, statusref => \my %status},
+		   qw(inotifywait -q -e close_write -t), $forever_interval,
+		   File::Glob::bsd_glob(q{*-orig}), q{temp_blockings/bbbike-temp-blockings.pl},
+		  );
+	    exit 2 if ($status{signalnum}||0) == 2;
+	} else {
+	    sleep $forever_interval;
+	}
+	my $t1 = time;
+	print STDERR "finished after " . ($t1-$t0) . " seconds\n";
+    }
 }
 
 ######################################################################
@@ -490,6 +663,7 @@ sub action_all {
     action_check_handicap_directed($d);
     action_check_connected($d);
     action_survey_today($d);
+    action_fragezeichen_nextcheck_bbd($d);
     action_fragezeichen_nextcheck_home_home_org($d);
     action_fragezeichen_nextcheck_without_osm_watch_org($d);
 }
@@ -497,6 +671,25 @@ sub action_all {
 return 1 if caller;
 
 my $d = Doit->init;
+
+# special actions with own argument/option handling
+my %action_with_own_opt_handling = map{($_,1)}
+    qw(
+	  forever_until_error
+	  bbbgeojsonp_index_html
+	  geojson_index_html
+     );
+if ($action_with_own_opt_handling{($ARGV[0]||'')}) {
+    (my $action = $ARGV[0]) =~ s{[-.]}{_}g;
+    shift;
+    my $sub = "action_$action";
+    if (!defined &$sub) {
+	die "Action '$action' not defined";
+    }
+    no strict 'refs';
+    &$sub($d, @ARGV);
+    exit 0;
+}
 
 GetOptions or die "usage: $0 [--dry-run] action ...\n";
 

@@ -1046,46 +1046,8 @@ ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd:	\
 		> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
 	mv -f ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd
 
-${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd:	\
-		.check_daily \
-		Makefile \
-		ampeln-orig \
-		fragezeichen-orig \
-		gesperrt-orig \
-		qualitaet_s-orig \
-		qualitaet_l-orig \
-		handicap_s-orig \
-		handicap_l-orig \
-		${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd \
-		${PERSISTENTTMPDIR}/XXX-indoor.bbd \
-		${PERSISTENTTMPDIR}/XXX-outdoor.bbd
-	${ECHO_N} > ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	echo "#: line_dash: 8, 5" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	echo "#: line_width: 5" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	echo "#:" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-.for i in ampeln-orig fragezeichen-orig gesperrt-orig qualitaet_s-orig qualitaet_l-orig handicap_s-orig handicap_l-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
-	echo "############################################################" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	echo "# source: $(i)" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	${GREPSTRASSEN} -directive last_checked~. -special nextcheck $(i) > /dev/null
-	cat /tmp/nextcheck.bbd >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	${GREPSTRASSEN} -directive next_check~. -special nextcheck $(i) > /dev/null
-	cat /tmp/nextcheck.bbd >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-.endfor
-	echo "############################################################" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	echo "# source: fragezeichen-orig" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	echo "# (without next_check/last_checked)" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	${GREPSTRASSEN} -special nonextcheck fragezeichen-orig >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-.for i in indoor outdoor
-	echo "############################################################" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	echo "# source: XXX-$(i)" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	${GREPSTRASSEN} -directive last_checked~. -special nextcheck ${PERSISTENTTMPDIR}/XXX-$(i).bbd > /dev/null
-	cat /tmp/nextcheck.bbd >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	${GREPSTRASSEN} -directive next_check~. -special nextcheck ${PERSISTENTTMPDIR}/XXX-$(i).bbd > /dev/null
-	cat /tmp/nextcheck.bbd >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-	${GREPSTRASSEN} -special nonextcheck ${PERSISTENTTMPDIR}/XXX-$(i).bbd >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-.endfor
-	-rm -f /tmp/nextcheck.bbd
-	mv -f ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd
+${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd!
+	${PERL} doit.pl fragezeichen-nextcheck.bbd
 
 ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org:	*-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd .check_daily
 	-@$(WRITEABLE) $@
@@ -1342,18 +1304,9 @@ ${i:S/.bbd$/.bbbgeojsonp/:S/^/${BBBGEOJSONPDIR}\//}: ${MISCDIR}/$i
 # Works only for cgi-bin layout (like on bbbike.de)
 # Once synced, URL will be
 #   http://bbbike.de/BBBike/tmp/bbbgeojsonp/index.html
-# The coordinate in the index file is generated using
-#    perl -MGeography::Berlin_DE -E '$"=","; say Geography::Berlin_DE->new->center_wgs84'
 ${BBBGEOJSONPDIR}/index.html:	${BBBGEOJSONP_TARGETS}
 	@mkdir -p ${BBBGEOJSONPDIR}
-	echo '<ul>' > $@~
-.for i in ${BBBGEOJSONP_TARGETS}
-	echo ' <li><a href="/cgi-bin/bbbikeleaflet.cgi?geojsonp_url=/BBBike/tmp/bbbgeojsonp/${i:T:S/.bbd$//}&zoom=12&lat=52.51617&lon=13.377417">${i:T:S/.bbbgeojsonp//:S/.bbd$//}</a>' >> $@~
-.endfor
-	echo '</ul>' >> $@~
-	echo 'Last update: ' $$(date '+%F %T') >> $@~
-	chmod 644 $@~
-	mv $@~ $@
+	@./doit.pl bbbgeojsonp_index_html ${BBBGEOJSONP_TARGETS}
 
 ######################################################################
 # GEOJSON TARGETS
@@ -1384,21 +1337,12 @@ ${i:S/.bbd$/.geojson/:S/^/${GEOJSONDIR}\//}: ${PERSISTENTTMPDIR}/$i
 #   http://bbbike.de/BBBike/tmp/geojson/index.html
 ${GEOJSONDIR}/index.html:	${GEOJSON_TARGETS}
 	@mkdir -p ${GEOJSONDIR}
-	echo '<ul>' > $@~
-.for i in ${GEOJSON_TARGETS}
-	echo ' <li><a href="${i:T:S/.bbd$//}">${i:T:S/.geojson//:S/.bbd$//}</a>' >> $@~
-.endfor
-	echo '</ul>' >> $@~
-	echo 'Last update: ' $$(date '+%F %T') >> $@~
-	chmod 644 $@~
-	mv $@~ $@
+	@./doit.pl geojson_index_html ${GEOJSON_TARGETS}
 
 ######################################################################
 # CHECKS
 
-# allow one error, and fail if the 2nd one is encountered
-FOREVER_INTERVAL?=	30
-FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -MFile::Glob=bsd_glob -e  '@cmd=@ARGV; while() { next if get_current_branch() ne "master"; { open my $$LOCK, ">", ".check_forever.lck" or die $$!; flock $$LOCK, LOCK_EX|LOCK_NB or die $$!; print STDERR "\rrun... "; system(@cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; } } continue { unlink ".check_forever.lck"; print STDERR "\rwait..."; if ($$^O eq q{linux}) { system qw(inotifywait -e close_write -t), $(FOREVER_INTERVAL), bsd_glob(q{*-orig}), q{temp_blockings/bbbike-temp-blockings.pl}; if (($$? & 127) == 2) { warn qq{Interrupted\n}; exit 1 } elsif ($$? != 0) { warn qq{Probably timeout\n} } } else { sleep $(FOREVER_INTERVAL) } } sub get_current_branch { my $$fh; open $$fh, "<", "../.git/HEAD" and $$_ = <$$fh> and m{refs/heads/(\S+)} and return $$1 }'
+FOREVER_INTERVAL=60
 .if exists($(HOME)/bin/sh/cron-wrapper)
 CRON_WRAPPER=$(HOME)/bin/sh/cron-wrapper
 .else
@@ -1407,8 +1351,10 @@ CRON_WRAPPER=
 
 # Specify ADDITIONAL_CHECK_FOREVER_TARGETS make variable on command
 # line for more things to do...
+# Allow one error, and fail if the 2nd one is encountered
 check-forever:
-	-nice ${FOREVER_TWO_ERRORS} ${CRON_WRAPPER} ${MAKE} check all fragezeichen-outdoor-nextcheck fragezeichen-outdoor ${ADDITIONAL_CHECK_FOREVER_TARGETS}
+	-nice ${PERL} doit.pl forever_until_error --allowed-errors=1 --forever-interval=${FOREVER_INTERVAL} \
+		${CRON_WRAPPER} ${MAKE} check all fragezeichen-outdoor-nextcheck fragezeichen-outdoor ${ADDITIONAL_CHECK_FOREVER_TARGETS}
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "check-forever failed"

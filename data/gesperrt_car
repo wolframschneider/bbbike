@@ -1530,6 +1530,9 @@ Stadtgärten - Saupéweg: Poller	3 11589,21713 11551,21720 11518,21727
 Mittelstreifen	3nocross::ignrte 11872,17522 11893,17397 11920,17245
 Prenzlauer Promenade -> Treskowstr.: Mittelstreifen	3::igndisp 11872,17522 11893,17397 12324,17213
 Treskowstr. -> Prenzlauer Promenade: Mittelstreifen	3::igndisp 12324,17213 11893,17397 11920,17245
+Mittelstreifen	3nocross::ignrte 11893,17397 11920,17245 11924,17224
+Prenzlauer Promenade -> Elsa-Brändström-Str.: Mittelstreifen	3::igndisp 11924,17224 11920,17245 11891,17240
+Elsa-Brändström-Str. -> Prenzlauer Promenade: Mittelstreifen	3::igndisp 11891,17240 11920,17245 11893,17397
 Voigtstr. - Pettenkoferstr.	1 14858,12765 14832,12755
 Gryphius/Boxhagener Str.	3 14550,11732 14513,11657 14496,11620
 Gryphius/Boxhagener Str.	3 14550,11732 14513,11657 14561,11600
@@ -2091,7 +2094,7 @@ Görlitzer Str.	2:Anlieger 12328,10442 12608,10294 12682,10258 12767,10216 12905,
 Wrangelstr.	2:Anlieger 12731,10547 12822,10487 12897,10439 13032,10355 13151,10276 13271,10193
 Lübbener Str.	2:Anlieger 12608,10294 12729,10515
 Sorauer Str.	2:Anlieger 12682,10258 12822,10487
-Oppelner Str.	2:Anlieger 12767,10216 12897,10439 12978,10581
+Oppelner Str.	2:Anlieger 12767,10216 12897,10439 12968,10564 12978,10581
 Falckensteinstr.	2:Anlieger 12905,10143 13032,10355 13136,10535
 Cuvrystr.	2:Anlieger 13035,10076 13132,10239 13151,10276 13197,10355 13249,10445
 Görlitzer Ufer	2:Anlieger 13216,9983 13275,10055
@@ -2436,6 +2439,7 @@ Meyerbeerstr.	1 14086,15892 13904,15818
 Meyerbeerstr.	1 14086,15892 14286,15962
 Gounodstr.	1 14125,15796 13939,15723
 Smetanastr.	1 14125,15796 14133,15773 14195,15604
+Puccinistr.	1 13776,15546 13700,15501
 Stedingerweg	1 13908,14654 13933,14622 13947,14513
 Süderbrokweg	1 13940,14654 13933,14622
 Verlängerte Koloniestr.	1 8918,18159 8957,18124
@@ -2496,3 +2500,9 @@ Otto-Ostrowski-Str.: Durchfahrt durch Barrieren versperrt	3 13702,13634 13711,13
 Otto-Ostrowski-Str.: Durchfahrt durch Barrieren versperrt	3 13769,13487 13711,13615 13702,13634
 Stallschreiberstr.	1 10794,10927 10824,11010 10690,11167
 Bergmannstr.: Sperrung vor der Ferdinand-Freiligrath-Schule	2 10250,9233 10366,9233
+Stadthausstr.: Poller am Archibaldweg	2 15649,10922 15674,10851
+Majakowskiring: Poller	3 10358,18882 10373,18887 10434,18907
+Majakowskiring: Poller	3 10434,18907 10373,18887 10358,18882
+Mittelstreifen, Fußgängerfurt existiert	3nocross::ignrte 6471,10851 6607,10801 6740,10755
+Kurfürstenstr. -> Landgrafenstr.: Mittelstreifen, Fußgängerfurt existiert	3::igndisp 6471,10851 6607,10801 6681,10959
+Landgrafenstr. -> Kurfürstenstr.: Mittelstreifen, Fußgängerfurt existiert	3::igndisp 6681,10959 6607,10801 6740,10755
