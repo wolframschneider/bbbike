@@ -26,6 +26,7 @@ use Getopt::Long;
 use Cwd qw(realpath cwd);
 use POSIX qw(strftime);
 use Time::Local qw(timelocal);
+use BBBikeUtil qw(s2ms);
 
 my $perl = $^X;
 my $valid_date = 'today';
@@ -34,6 +35,7 @@ my $bbbikedir        = realpath "$FindBin::RealBin/..";
 my $miscsrcdir       = "$bbbikedir/miscsrc";
 my $persistenttmpdir = "$bbbikedir/tmp";
 my $datadir          = "$bbbikedir/data";
+my $bbbikeauxdir     = do { my $dir = "$ENV{HOME}/src/bbbike-aux"; -d $dir && $dir };
 
 my $convert_orig_file  = "$miscsrcdir/convert_orig_to_bbd";
 my @convert_orig       = ($perl, $convert_orig_file);
@@ -327,8 +329,6 @@ sub _build_fragezeichen_nextcheck_variant {
 	require Safe;
 	my $config = Safe->new->rdo("$ENV{HOME}/.bbbike/config");
 	my $centerc = $config->{centerc};
-	require BBBikeBuildUtil;
-	my $pmake = BBBikeBuildUtil::get_pmake();
 	_make_writable $d, $dest;
 	$d->run([$perl, "$miscsrcdir/fragezeichen2org.pl",
 		 "--expired-statistics-logfile=$persistenttmpdir/expired-fragezeichen-${variant}.log",
@@ -338,7 +338,7 @@ sub _build_fragezeichen_nextcheck_variant {
 		 "--dist-dbfile=$persistenttmpdir/dist.db",
 		 ($variant eq 'home-home' ? ($centerc ? ("-centerc", $centerc, "-center2c", $centerc) : ()) : ()),
 		 ($variant eq 'without-osm-watch' ? ('--filter', 'without-osm-watch') : ()),
-		 "--compile-command", "cd @{[ cwd ]} && $pmake $dest",
+		 "--compile-command", "cd @{[ cwd ]} && $^X " . __FILE__ . " " . basename($dest),
 		 @srcs], ">", "$dest~");
 	_empty_file_error "$dest~";
 	_commit_dest $d, $dest;
@@ -601,6 +601,12 @@ sub action_forever_until_error {
 	or die "usage?";
     my @cmd = @ARGV;
 
+    my @srcs = (
+		File::Glob::bsd_glob(q{*-orig}),
+		q{temp_blockings/bbbike-temp-blockings.pl},
+		(defined $bbbikeauxdir ? do { my $file = "$bbbikeauxdir/bbd/fragezeichen_lowprio.bbd"; -f $file ? $file : () } : ()),
+	       );
+
     my $error_count = 0;
     while() {
 	next if $d->git_current_branch() ne 'master';
@@ -623,14 +629,14 @@ sub action_forever_until_error {
 	    # XXX use system() once statusref is implemented
 	    $d->qx({quiet => 1, statusref => \my %status},
 		   qw(inotifywait -q -e close_write -t), $forever_interval,
-		   File::Glob::bsd_glob(q{*-orig}), q{temp_blockings/bbbike-temp-blockings.pl},
+		   @srcs,
 		  );
 	    exit 2 if ($status{signalnum}||0) == 2;
 	} else {
 	    sleep $forever_interval;
 	}
 	my $t1 = time;
-	print STDERR "finished after " . ($t1-$t0) . " seconds\n";
+	print STDERR "finished after " . s2ms($t1-$t0) . " minutes (at " . strftime("%F %T", localtime) . ")\n";
     }
 }
 
