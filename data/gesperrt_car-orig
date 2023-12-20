@@ -1951,9 +1951,9 @@ Boxhagener Str. -> Wühlischstr.: nur geradeaus erlaubt	3 14752,11369 14771,11345
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2023/pressemitteilung.1374338.php (Bauarbeiten KW42/2023 bis Ende 2023)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen/mobilitaetswende/artikel.1317595.php
 #: by: https://www.infravelo.de/projekt/goertlitzer-ufer/ (4. Quartal 2023)
-#: osm_watch: way id="148176599" version="14"
+#: osm_watch: way id="148176599" version="15"
 #: XXX zurzeit schon wegen Bauarbeiten für den Fahrzeugverkehr gesperrt, siehe auch handicap- und radwege-Einträge; nach den Bauarbeiten vermutlich zu NN machen
-#: last_checked: 2023-11-24
+#: last_checked: 2023-12-17 (osm)
 #: check_frequency: 30d
 #: next_check: 2023-12-31
 Görlitzer Ufer: hier soll ein Fußgänger/Radfahrerbereich eingerichtet werden	2 13216,9983 13155,9907 13136,9883 13086,9825
@@ -1969,6 +1969,7 @@ Otto-Ostrowski-Str.: Durchfahrt durch Barrieren versperrt	3 * 13711,13615 *
 Otto-Ostrowski-Str.: Durchfahrt durch Barrieren versperrt	3 * 13711,13615 *
 # 
 #: by: osm
+#: confirmed_by: srt
 Stallschreiberstr.	1 10794,10927 10824,11010 10690,11167
 # 
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11295 (Anfrage -> mögliche Verstetigung)
@@ -1983,4 +1984,16 @@ Stadthausstr.: Poller am Archibaldweg	2 15649,10922 15674,10851
 Majakowskiring: Poller	3 * 10373,18887 *
 # 
 Kurfürstenstr.: Mittelstreifen, Fußgängerfurt existiert	3nocross 6471,10851 6607,10801 6740,10755
+# 
+Oberwallstr.	1 9925,11947 9913,12068
+# 
+#: by: https://westnordost.de/p/189569.jpg
+Tucholskystraße/Auguststraße: Diagonalsperre	3 9609,13522 9651,13406 9611,13245
+Tucholskystraße/Auguststraße: Diagonalsperre	3 9611,13245 9651,13406 9609,13522
+Tucholskystraße/Auguststraße: Diagonalsperre	3 9609,13522 9651,13406 9898,13484
+Tucholskystraße/Auguststraße: Diagonalsperre	3 9898,13484 9651,13406 9609,13522
+Tucholskystraße/Auguststraße: Diagonalsperre	3 9898,13484 9651,13406 9415,13315
+Tucholskystraße/Auguststraße: Diagonalsperre	3 9415,13315 9651,13406 9898,13484
+Tucholskystraße/Auguststraße: Diagonalsperre	3 9611,13245 9651,13406 9415,13315
+Tucholskystraße/Auguststraße: Diagonalsperre	3 9415,13315 9651,13406 9611,13245
 # 
