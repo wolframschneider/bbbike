@@ -4349,12 +4349,12 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: XXX "voraussichtlich ab September 2023 können die neuen Wege genutzt werden", aber weitere Bauarbeiten bis Ende Oktober 2023
 #: note: die Sperrung im Mittelteil kann über einen engen und teilweise verwurzelten Trampelpfad umgangen werden, für Radfahrer nur bedingt praktikabel
-#: last_checked: 2023-12-12 vvv
+#: last_checked: 2023-12-21 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2023-08-31 vvv
 # REMOVED (hier nicht) ---	2::inwork 13172,11651 13239,11567
-	2::inwork 13239,11567 13261,11572 13274,11585
-	2::inwork 13261,11572 13308,11515 13323,11497
+# REMOVED (hier nicht mehr) ---	2::inwork 13239,11567 13261,11572 13274,11585
+# REMOVED (hier nicht mehr) ---	2::inwork 13261,11572 13308,11515 13323,11497
 	2::inwork 13324,11529 13308,11515
 # REMOVED (nicht mehr) ---	2::inwork 13323,11497 13407,11416 13417,11416 13442,11400
 # REMOVED (nicht mehr) --- außerhalb der Arbeitszeiten Zugang möglich, Rampe ist aber noch enger als sonst	2::inwork 13513,11351 13442,11400 13416,11425 13427,11431
@@ -4366,7 +4366,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 ',
          'from' => 1677970800,
          'id' => 3159,
-         'text' => 'Wriezener Park: einige Wege wegen Bauarbeiten gesperrt (Stand Ende November 2023: Hauptverbindungsweg ist noch immer gesperrt)',
+         'text' => 'Wriezener Park: einige Wege wegen Bauarbeiten gesperrt (Stand Mitte Dezember 2023: nur eine Anbindung zur Helsingforser Str. ist noch immer gesperrt)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4689,24 +4689,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: PARKSTADTKARLSHORST-2021
-#: by: https://www.deutsches-architekturforum.de/thread/14488-parkstadt-karlshorst-im-bau/?postID=673580#post673580 (ab dem kommenden Jahr, also 2021)
-#: confirmed_by: srt (Sackgassenschild am nördlichen und südlichen Ende, als Fußgänger und Radfahrer kommt man durch) (mittlerweile sieht es ganz anders aus)
-#: add_fragezeichen: Gibt es mittlerweile eine Sperrung für Fußgänger und Radfahrer?
-#: osm_watch: way id="26322046" version="30"
-#: osm_watch: way id="165832806" version="34"
-#: last_checked: 2023-12-07
-#: check_frequency: 14d
-	2::inwork 17380,8858 17416,8767 17468,8692 17497,8623 17515,8567 17524,8536 17533,8505 17554,8458 17588,8413
-# REMOVED (hier weitgehend fertig) ---	2::inwork 17588,8413 17617,8363 17652,8349 17707,8328 17753,8290
-',
-         'from' => undef,
-         'id' => 3327,
-         'text' => 'Hönower Wiesenweg: Durchfahrt kann wegen Straßenarbeiten gesperrt sein (Stand Anfang Dezember 2023: zurzeit keine Absperrungen im mittleren Abschnitt)',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -5039,16 +5022,17 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        {
-         'data' => '#: note: vermutlich nur im Bereich Sybelstr. 14
+         'data' => '#: source_id: viz2021:13.306069,52.502061,01.01.2022,06:00 (mittlerweile inaktiv) (bis 31.12.2023) (inaktiv)
+#: source_id: viz2021:13.305716,52.502767,22.12.2023,15:12 (bis 31.08.2024)
+#: note: vermutlich nur im Bereich Sybelstr. 14
 #: also_indoor: traffic (B)
 	2::inwork 3726,10757 3731,10640 3764,10580 3883,10585
 ',
          'from' => 1640905200,
          'id' => 3495,
-         'source_id' => 'viz2021:13.306069,52.502061,01.01.2022,06:00',
-         'text' => 'Waitzstr.: Baustelle, Fahrbahn gesperrt, vom 01.01.2022 bis 31.12.2023',
+         'text' => 'Waitzstr.: Baustelle, Fahrbahn gesperrt, vom 01.01.2022 bis 31.08.2024',
          'type' => 'gesperrt',
-         'until' => 1704042000
+         'until' => 1725120000
        },
        {
          'data' => '#: source_id: viz2021:13.44079,52.46081,13.11.2023,07:00 (bis 08.12.2023) (inaktiv)
@@ -5189,25 +5173,25 @@ Einfahrt Baseler Str.: Fahrbahn gesperrt	q3::inwork 3184,3427 3174,3052
 #: source_id: viz2021:13.452161,52.471082,21.02.2022,07:00 (bis 31.1.2023) (inaktiv)
 #: source_id: viz2021:13.452161,52.471082,02.02.2023,12:12 (bis 02.06.2023) (inaktiv)
 #: source_id: viz2021:13.452161,52.471082,01.06.2023,20:20 (bis 29.12.2023) (inaktiv)
-#: source_id: viz2021:13.452362,52.470898,21.02.2022,07:00 (bis 31.12.2022) (bis 31.1.2023) (bis 2.6.2023) (bis 31.12.2023)
+#: source_id: viz2021:13.452362,52.470898,21.02.2022,07:00 (bis 31.12.2022) (bis 31.1.2023) (bis 2.6.2023) (bis 31.12.2023) (bis 30.04.2024)
 #: also_indoor: traffic (B,H(unvollständig),G)
 #: osm_watch: way id="1047544509" version="3"
 #: osm_watch: way id="1047544510" version="2"
-#: last_checked: 2023-12-11 vvv
+#: last_checked: 2023-12-20 vvv
 #: check_frequency: 90d vvv
-# REMOVED (keine baldige Fertigstellung absehbar) --- #: next_check: 2023-12-31 vvv
+#: next_check: 2024-04-30 vvv
 	q4::inwork 13797,7267 13762,7321
 	2::inwork 13797,7267 13693,7228 13575,7200
 #: note: evtl. damit zusammenhängend: Einbahnstraßenregelung in der Mierstr. und Teilen des Mittelbuschwegs
 	q4::inwork; 13484,7140 13575,7200 13627,7047
-# REMOVED (keine baldige Fertigstellung absehbar) --- #: next_check ^^^
+#: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 ',
          'dont_check_date' => 1,
          'from' => 1645336800,
          'id' => 3517,
-         'text' => 'Niemetzstr.: Brückenneubau, Sperrung der Fahrbahn, Fußgängerschutztunnel existiert, außerdem kann der Mittelbuschweg vollständig gesperrt sein, vom 21.02.2022 07:00 bis mindestens Ende 2023, vermutlich noch länger',
+         'text' => 'Niemetzstr.: Brückenneubau, Sperrung der Fahrbahn, Fußgängerschutztunnel existiert, außerdem kann der Mittelbuschweg vollständig gesperrt sein, vom 21.02.2022 07:00 bis mindestens Ende April 2024, vermutlich noch länger',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5250,7 +5234,7 @@ Einfahrt Baseler Str.: Fahrbahn gesperrt	q3::inwork 3184,3427 3174,3052
 #: osm_watch: way id="975241319" version="7"
 #: osm_watch: way id="970452276" version="7"
 #: also_indoor: traffic (none)
-#: last_checked: 2023-12-18 (daf)
+#: last_checked: 2023-12-20
 #: check_frequency: 30d
 	q3::inwork; 12805,8194 12873,8218 12911,8232
 # REMOVED ---	q4::inwork 12873,8218 12911,8232
@@ -5268,7 +5252,7 @@ Einfahrt Baseler Str.: Fahrbahn gesperrt	q3::inwork 3184,3427 3174,3052
 #: osm_watch: way id="940399849" version="10"
 #: osm_watch: way id="1203072585" version="1"
 #: note: zwischenzeitlich sollten die Radfahrer absteigen, die Zusatzschilder wurden aber wieder abmontiert (?) (gesehen 2023-08-18 an der Innstraße), aber trotzdem recht eng
-#: last_checked: 2023-12-03
+#: last_checked: 2023-12-20
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2023-07-31
 #: note: eigentlich q3-::inwork
@@ -5589,10 +5573,10 @@ Woelckpromenade: Einbahnstraßenregelung	q4::inwork; 13710,16544 13756,16620 1384
 #: by: https://az-lichtenrade.de/wp-content/uploads/2022/09/220907_ba1_umleitung_karte_komprimiert.pdf
 #: source_id: viz2021:13.40978,52.38751,19.09.2022,11:00 (bis 31.03.2023) (inaktiv)
 #: source_id: viz2021:13.40978,52.38751,30.03.2023,11:51 (Goltzstr., zusätzlicher Eintrag, bis 30.09.2023) (inaktiv)
-#: source_id: viz2021:13.407871,52.386721,19.09.2022,11:00 (bis 31.3.2023) (bis 30.9.2023) (bis 31.12.2023)
+#: source_id: viz2021:13.407871,52.386721,19.09.2022,11:00 (bis 31.3.2023) (bis 30.9.2023) (bis 31.12.2023) (bis 01.04.2024)
 #: add_fragezeichen: Wann ist der erste Bauabschnitt in der Bahnhofstraße fertig? vvv
 #: last_checked: 2023-12-03 (mapillary) vvv
-#: next_check: 2023-12-31 vvv
+#: next_check: 2024-04-01 vvv
 Bahnhofstr.	q4::inwork; 11073,-2037 10983,-2116 10756,-2128
 # REMOVED (hier nicht, hier existiert sogar eine Radspur in Gegenrichtung) --- Mellener Str.	q4::inwork; 10756,-2128 10758,-1949
 Löptener Str.	q4::inwork; 10758,-1949 10906,-1946 10980,-1919
@@ -6361,20 +6345,14 @@ Parkstr.	q4::inwork 9031,6355 8992,6312 8944,6293 8930,6295
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1363126.php (bis Jahresende 2023)
 #: by: https://www.berliner-woche.de/adlershof/c-bauen/umfangreiche-leitungsarbeiten_a393884
 #: source_id: viz2021:13.54378,52.43796,20.11.2023,06:00 (hier zwischen Altheider Str. und Silberberger Str.; bis 31.12.2023)
-#: osm_watch: way id="1172668082" version="11"
-#: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: note: auch laut rbbtext ist der Abschnitt zwischen Altheider Str. und Silberberger Str. betroffen, go with osm
-#: XXX wird bei der Fahrbahnerneuerung das Pflaster ersetzt/neu gemacht?
-#: last_checked: 2023-11-24 (osm)
-# REMOVED --- #: check_frequency: 90d
-#: next_check: 2023-12-31
+# REMOVED --- #: osm_watch: way id="1172668082" version="12" --- #: add_fragezeichen: Sind die Bauarbeiten beendet? --- #: note: auch laut rbbtext ist der Abschnitt zwischen Altheider Str. und Silberberger Str. betroffen, go with osm --- #: XXX wird bei der Fahrbahnerneuerung das Pflaster ersetzt/neu gemacht? --- #: last_checked: 2023-11-24 (osm) --- #: check_frequency: 90d --- #: next_check: 2023-12-31
 	q4::inwork 20159,3623 20073,3734
 ',
          'from' => 1682892000,
          'id' => 3775,
          'text' => 'Florian-Geyer-Str.: Leitungsarbeiten, Sperrung der Fahrbahn zwischen Dörpfeldstr. bis Altheider Str., voraussichtlich bis Ende 2023',
          'type' => 'handicap',
-         'until' => 1704063599
+         'until' => undef
        },
        undef,
        undef,
@@ -6475,7 +6453,7 @@ Hanstedter Weg	q4::inwork 6923,5057 6908,5053 6783,5011
 #: note: am 2023-06-02 sind trotzdem Leute durchgelaufen und durchgefahren; am 2023-07-04 sind die Bauzäune undurchlässiger und erkennbar passieren Bauarbeiten
 #: add_fragezeichen: Ist der Weg noch immer gesperrt?
 #: osm_watch: way id="58182828" version="23"
-#: last_checked: 2023-11-25 (mapillary)
+#: last_checked: 2023-12-22
 #: check_frequency: 30d
 # REMOVED (später Frequenz erhöhen?) --- #: check_frequency: 30d
 	2::inwork 15730,11279 15708,11193 15752,11115 15805,10949
@@ -6828,16 +6806,7 @@ Wuhlewanderweg	2::inwork 22050,6619 21976,6848 21896,6937
          'type' => 'gesperrt',
          'until' => 1709247599
        },
-       {
-         'data' => '	2::inwork -19289,63424 -19675,64106
-',
-         'from' => 1692511200,
-         'id' => 3884,
-         'source_id' => 'LS/223-K/23/078',
-         'text' => 'Lindow: Sperrung der L19 vom 21.08.2023, 08:00 Uhr bis 22.12.2023, 07:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1703224800
-       },
+       undef,
        undef,
        undef,
        {
@@ -6945,16 +6914,7 @@ Gipsstr.	q3::inwork 10341,13376 10199,13446
          'type' => 'handicap',
          'until' => 1725112800
        },
-       {
-         'data' => '#: source_id: LS/221-F/23/118 (bis 15.12.2023) (bis 21.12.2023)
-	2::inwork 34913,13893 35382,13974
-',
-         'from' => 1692511200,
-         'id' => 3903,
-         'text' => 'Petershagen, Bahnhofstr.: Bauarbeiten zwischen Lindenstr. und Am Bahnhof, Sperrung, evtl. sind auch Radfahrer betroffen, 21.08.2023 08:00 Uhr bis 21.12.2023 17:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1703174400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -6994,9 +6954,9 @@ Gipsstr.	q3::inwork 10341,13376 10199,13446
        {
          'data' => '#: also_indoor: traffic (B,G)
 #: note: Endedatum per Halteverbotsschilder (dauert aber länger)
-#: note: zur östlichen Rupprechtstr. sind auch Bauarbeiten, aber zurzeit existiert eine schmale Gasse
+# REMOVED (im Kreuzungsbereich mittlerweile keine Einschränkungen) --- #: note: zur östlichen Rupprechtstr. sind auch Bauarbeiten, aber zurzeit existiert eine schmale Gasse
 #: add_fragezeichen: Wurden die Bauarbeiten beendet? Ist die Fahrbahn wieder frei?
-#: last_checked: 2023-12-13
+#: last_checked: 2023-12-22
 # REMOVED --- #: next_check: 2023-12-01
 	q4::inwork 16273,11113 16227,10991
 ',
@@ -7067,19 +7027,22 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
        },
        undef,
        {
-         'data' => '#: source_id: viz2021:13.315607,52.487267,25.09.2023,12:15 (geplatzte Wasserleitung, ohne Endedatum)
+         'data' => '#: source_id: viz2021:13.315607,52.487267,25.09.2023,12:15 (geplatzte Wasserleitung, ohne Endedatum) (inaktiv)
+#: source_id: viz2021:13.31556,52.48654,22.12.2023,13:46 (bis 12.01.2024)
 #: also_indoor: traffic (G,B,W)
 #: by[nocache]: https://nitter.net/Berliner_Fw/status/1706288693512687746#m (laut Bild nur der südliche Abschnitt an der Berliner Str. betroffen)
 #: note: gesperrter Fahrbahnbereich ist etwa 45m lang (längere Strecke, wenn man bis zur nächsten Bordsteinabsenkung fährt)
 #: add_fragezeichen: Ist die Fahrbahn noch immer gesperrt?
 #: last_checked: 2023-10-21
-#: check_frequency: 60d
+# REMOVED --- #: check_frequency: 60d
+#: next_check: 2024-01-12
 # REMOVED (hier wohl nicht) ---	2::inwork 4467,9163 4446,9138 4447,9082 4449,8999
 	q4::inwork 4449,8999 4451,8874
 ',
+         'dont_check_date' => 1,
          'from' => 1695550500,
          'id' => 3922,
-         'text' => 'Mannheimer Str.: Wasserrohrbruch, Fahrbahn zwischen Berliner Str. und Maxdorfer Steig gesperrt, vom 25.09.2023 12:15',
+         'text' => 'Mannheimer Str.: Wasserrohrbruch, Fahrbahn zwischen Berliner Str. und Maxdorfer Steig gesperrt, vom 25.09.2023 12:15 bis vermutlich 12.01.2024',
          'type' => 'handicap',
          'until' => undef
        },
@@ -7255,23 +7218,38 @@ Bebelplatz: Weihnachtsmarkt, schmaler Durchgang	q3::xmas 9664,12387 9680,12232
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: also_indoor: traffic (G,B,W)
+#: note: auch der rechte Gehweg ist gesperrt, Ausweichen auf linken Gehweg nur inoffiziell möglich
+#: note: Halteverbotsschilder bis 30.01.2024
+#: last_checked: 2023-12-22
+#: check_frequency: 30d
+#: next_check: 2024-01-30
+	q2::inwork; 18037,9195 17549,9529
+',
+         'from' => 1698503309,
+         'id' => 3950,
+         'text' => 'Wallensteinstr.: ab Ilsestr. etwa 70m der Fahrbahn Richtung Nordwesten gesperrt, voraussichtlich bis Ende Januar 2024, vielleicht auch länger',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        {
          'data' => '#: next_check_id: GOERLITZERUFER-2023
 # REMOVED --- #: XXX unklare Verkehrsführung für Radfahrer: teilweise sind provisorische Markierungen auf der Fahrbahn angebracht, aber an der Görlitzer Str. geht die Absperrung über die volle Breite der Fahrbahn
 #: osm_watch: way id="4782403" version="26"
 #: osm_watch: way id="148176599" version="15"
-#: last_checked: 2023-11-24
-#: check_frequency: 30d
-#: next_check: 2023-12-31
+#: last_checked: 2023-12-20
+# REMOVED --- #: check_frequency: 30d
+#: check_frequency: 14d
+# REMOVED --- #: next_check: 2023-12-31
 	q3::inwork 13026,9854 13086,9825 13136,9883 13155,9907 13216,9983
 ',
          'from' => 1699031494,
          'id' => 3952,
-         'text' => 'Görlitzer Ufer: mögliche Einschränkungen durch Bauarbeiten, voraussichtlich bis Ende 2023 (Stand Ende November 2023: alte Radwege sind noch passierbar)',
+         'text' => 'Görlitzer Ufer: mögliche Einschränkungen durch Bauarbeiten, mindestens bis Ende 2023 (Stand Mitte Dezember 2023: zumindest der alte Radweg Richtung Nordosten ist noch passierbar)',
          'type' => 'handicap',
-         'until' => 1704063599
+         'until' => undef
        },
        undef,
        undef,
@@ -7282,7 +7260,7 @@ Bebelplatz: Weihnachtsmarkt, schmaler Durchgang	q3::xmas 9664,12387 9680,12232
 #: source_id: viz2021:13.524565,52.480535,06.11.2023,07:00 (bis 08.12.2023) (bis 19.12.2023) (bis 21.12.2023) (bis 31.01.2024)
 #: by: https://viz.berlin.de/aktuelle-meldungen/verkehrsvorschau/?date=20231105 (explizite Erwähnung des Radverkehrs)
 # REMOVED (ja) --- #: add_fragezeichen: Sind Radfahrer tatsächlich betroffen?
-#: last_checked: 2023-11-11 vvv
+#: last_checked: 2023-12-22 vvv
 #: next_check: 2024-01-31 vvv
 # REMOVED ---	q4::inwork 18704,8427 18627,8475
 # REMOVED ---	q3::inwork 18627,8475 18557,8525
@@ -7292,9 +7270,9 @@ Bebelplatz: Weihnachtsmarkt, schmaler Durchgang	q3::xmas 9664,12387 9680,12232
 ',
          'from' => 1699164000,
          'id' => 3957,
-         'text' => 'Wandlitzstr.: Bauarbeiten zwischen Treskowallee und Wildensteiner Str., Einbahnstraßenregelung, bis 21.12.2023 17:00',
+         'text' => 'Wandlitzstr.: Bauarbeiten zwischen Treskowallee und Wildensteiner Str., Einbahnstraßenregelung, bis 31.01.2024 17:00',
          'type' => 'handicap',
-         'until' => 1703174400
+         'until' => 1706716800
        },
        undef,
        {
@@ -7343,7 +7321,7 @@ Bebelplatz: Weihnachtsmarkt, schmaler Durchgang	q3::xmas 9664,12387 9680,12232
 #: by[nocache]: https://nitter.net/VIZ_Berlin/status/1724382200475353132#m (Verschiebung des Baustarts auf den 20.11.2023)
 #: note: abgesperrter Bereich ist etwa 40-50m lang, allerdings kann es zusätzliche Behinderungen wegen wendender Autofahrer geben
 #: also_indoor: traffic (H,G,B,W)
-#: last_checked: 2023-11-20
+#: last_checked: 2023-12-20
 #: check_frequency: 30d
 #: next_check: 2024-01-31
 	q2::inwork 13860,9861 13704,9691
@@ -7460,16 +7438,7 @@ Hagenstr.: Sperrung im Einmündungsbereich	q3::inwork 16918,12325 16933,12432
          'type' => 'handicap',
          'until' => 1705075200
        },
-       {
-         'data' => '#: source_id: viz2021:13.401194,52.590408,29.11.2023,07:00 (bis 15.12.2023) (bis 21.12.2023) (inaktiv)
-	q4::inwork; 10066,20494 9983,20581
-',
-         'from' => 1701151200,
-         'id' => 3979,
-         'text' => 'Schönhauser Str.: Fahrbahnarbeiten zwischen Dietzgenstr. und Nordendstr., Sperrung, evtl. sich auch Radfahrer betroffen, vom 29.11.2023 07:00 bis 21.12.2023 17:00',
-         'type' => 'handicap',
-         'until' => 1703174400
-       },
+       undef,
        undef,
        undef,
        {
@@ -7485,31 +7454,7 @@ Hagenstr.: Sperrung im Einmündungsbereich	q3::inwork 16918,12325 16933,12432
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9433
-#: by: https://www.berliner-woche.de/lichtenberg/c-verkehr/verordneten-sprechen-sich-mehrheitlich-fuer-das-vorhaben-im-kaskelkiez-aus_a359450
-#: by: https://www.kiezblocks.de/kaskel/
-#: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9433&date=20221126 (Teileinziehung der Stadthausstraße?)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_03_0297_0360_online.pdf
-#: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10056 (Antrag: größerer Tuchollaplatz)
-#: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2023/pressemitteilung.1387776.php (voraussichtlich ab Dezember 2023)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_50_4641_4716_online.pdf (Teileinziehung, Barriere unter der Bahnbrücke)
-#: by: https://www.berliner-woche.de/rummelsburg/c-verkehr/sperrung-der-stadthausstrasse-fuer-ende-dezember-angekuendigt_a402025
-#: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2023/pressemitteilung.1396743.php (Einweihung am 19. Dezember 2023)
-#: osm_watch: way id="198595363" version="13"
-#: osm_watch: way id="1230681052" version="1"
-#: priority: #A
-#: last_checked: 2023-12-13
-#: check_frequency: 7d
-#: next_check: 2023-12-19
-Stadthausstraße: Abschnitt unter der Unterführung wird für den Kfz-Verkehr eingezogen	q3::inwork 15649,10922 15674,10851
-',
-         'from' => undef,
-         'id' => 3986,
-         'text' => 'Stadthausstr.: Barriere über gesamte Breite der Fahrbahn (möglicherweise bis 19.12.2023)',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        {
          'data' => '#: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: osm_watch: way id="1228800161" version="1"
