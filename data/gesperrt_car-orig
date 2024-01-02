@@ -86,7 +86,7 @@ Bendastr.	1 12715,6775 12702,6846
 Puschkin/Bulgarische	1 14196,9749 14271,9712 14318,9688 14389,9656 14495,9609 14556,9581 14809,9466 14879,9433 15383,9191 15407,9151 15440,9098 15445,9090 15534,8943 15591,8848 15558,8820 15378,8668 15166,8489
 Karl-Marx-Str./Schönstedt	3nocross 12494,8501 12545,8449 12562,8432 12582,8408
 Hoffmannstr./Elsenstr.	3 14077,10016 14289,9870 14323,9913 14405,10027
-Behren/Ebert	3 8861,12125 8743,12099 8737,12098 8595,12066 8577,11896 8571,11846
+Behren/Ebert	3 8737,12098 8595,12066 8577,11896
 UdL/Universitätsstr.	3nocross 9475,12365 9613,12381 9664,12387
 Kolonnenstr. -> Hohenfriedbergstr.	3 7709,8777 7795,8765 7791,8882
 Horn - Yorck	3nocross 8777,9601 9002,9731 9047,9750
@@ -884,7 +884,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="21"
-#: last_checked: 2023-10-29
+#: last_checked: 2023-12-30
 #: check_frequency: 60d
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
@@ -1224,7 +1224,7 @@ Scharrenstr. -> Breite Str.: Abbiegen verboten	3 10418,12016 10480,12077 10383,1
 Schmohlstr.	1 13196,17223 13159,17196 13057,17120
 Kiehlufer	1 12913,9353 12901,9340 12895,9323
 # 
-# REMOVED (Sperrung beendet) --- #: osm_watch: way id="454034985" version="5" --- #: next_check_id: DIESEL-2015 --- #: XXX laut osm wieder offen --- #: last_checked: 2018-05-21 --- #: next_check: 2018-05-24 --- Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14484,8044
+# REMOVED (Sperrung beendet) --- #: osm_watch: way id="454034985" version="5" --- #: next_check_id: DIESEL-2015 --- #: XXX laut osm wieder offen --- #: last_checked: 2018-05-21 --- #: next_check: 2018-05-24 --- Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14440,8050 14484,8044
 # REMOVED --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpartner/fahrrat/2016-07-28-prot-fahrratsitzung3.pdf --- #: XXX evtl wird die Straße für Radfahrer geöffnet --- #: osm_watch: way id="12307305" version="4" --- #: last_checked: 2017-08-22 --- #: check_frequency: 60d
 Naumannstr.	1 7709,8777 7707,8919
 Schulenburgring	1 9030,8431 9028,8584 9011,8605
@@ -1736,7 +1736,7 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: source_id: viz2021:13.409118,52.51693,15.01.2023,18:00 (bis 30.06.2023) (bis 07.07.2023) (bis 17.07.2023) (bis 31.12.2023) (bis 30.08.2024)
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
 #: note: mittlerweile ist die Fahrbahn und die Markierungen größtenteils schon fertig
-#: last_checked: 2023-12-21 (webcam) vvv
+#: last_checked: 2023-12-27 (webcam) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2024-08-30 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
@@ -1764,6 +1764,7 @@ Allee der Kosmonauten - Poelchaustr.: Barriere	3 * 20309,14431 *
 #: by: https://www.berliner-woche.de/kreuzberg/c-bauen/fahrradbuegel-auf-strassen_a366953
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10873
 #: by: osm
+#: confirmed_by: srt
 Chamissoplatz: Poller	3 * 9566,9194 *
 Chamissoplatz: Poller	3 * 9589,9093 *
 # 
@@ -1950,12 +1951,13 @@ Boxhagener Str. -> Wühlischstr.: nur geradeaus erlaubt	3 14752,11369 14771,11345
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_28_2981_3084_online.pdf (Einziehung von Straßenland)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2023/pressemitteilung.1374338.php (Bauarbeiten KW42/2023 bis Ende 2023)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen/mobilitaetswende/artikel.1317595.php
-#: by: https://www.infravelo.de/projekt/goertlitzer-ufer/ (4. Quartal 2023)
+#: by: https://www.infravelo.de/projekt/goertlitzer-ufer/ (4. Quartal 2023) (mittlerweile 4. Quartal 2023 - 2. Quartal 2024)
+#: by: https://www.berliner-woche.de/kreuzberg/c-bauen/am-goerlitzer-ufer-wird-gebaut_a403467
 #: osm_watch: way id="148176599" version="15"
 #: XXX zurzeit schon wegen Bauarbeiten für den Fahrzeugverkehr gesperrt, siehe auch handicap- und radwege-Einträge; nach den Bauarbeiten vermutlich zu NN machen
-#: last_checked: 2023-12-20
+#: last_checked: 2023-12-26
 #: check_frequency: 30d
-#: next_check: 2023-12-31
+#: next_check: 2024-06-30
 Görlitzer Ufer: hier soll ein Fußgänger/Radfahrerbereich eingerichtet werden	2 13216,9983 13155,9907 13136,9883 13086,9825
 # 
 #: historical_note: früher Einbahnstraße für alle
@@ -1972,9 +1974,10 @@ Otto-Ostrowski-Str.: Durchfahrt durch Barrieren versperrt	3 * 13711,13615 *
 #: confirmed_by: srt
 Stallschreiberstr.	1 10794,10927 10824,11010 10690,11167
 # 
+#: next_check_id: BERGMANN-2023
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11295 (Anfrage -> mögliche Verstetigung)
 #: osm_watch: way id="1059672152" version="6"
-#: last_checked: 2023-12-09
+#: last_checked: 2023-12-26
 #: check_frequency: 120d
 Bergmannstr.: Sperrung vor der Ferdinand-Freiligrath-Schule	2 10250,9233 10366,9233
 # 
@@ -2014,6 +2017,12 @@ Sanderstr.	1 12074,9689 11917,9663
 Maybachufer: Poller zwischen Bürknerstr. und Zebrastreifen	2 12085,9778 12053,9793
 # 
 Hobrechtbrücke	1 12085,9778 12116,9825
+# 
+Hobrechtstr.: Poller	3 * 11925,9605 *
+# 
+Nansenstr.: Poller zwischen Framstr. und Reuterplatz	2 12270,9362 12248,9320
+# 
+Reuterstr.	1 12150,9545 12148,9426
 #: note ^^^
 ######################################################################
 # 

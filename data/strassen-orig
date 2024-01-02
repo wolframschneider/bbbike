@@ -261,7 +261,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/berlin-news/geplante-umbenennung-der-mohrenstrasse-zieht-sich-weiter-hin-id231791
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2023-12-14 vvv
+#: last_checked: 2023-12-29 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 #: osm_watch: way id="47755711" version="23"
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
@@ -542,7 +542,7 @@ Hermannplatz	HH 11831,8989 11909,9155
 #: XXX_prog: siehe Hobrechtbrücke
 Kottbusser Brücke	HH 11512,10105 11543,10015
 Kottbusser Damm	HH 11543,10015 11623,9841 11673,9720 11710,9628 11745,9541 11757,9509 11785,9437 11803,9390 11888,9189 11909,9155
-Sonnenallee	H 11909,9155 12012,9092 12078,9055 12152,9015 12240,8964 12323,8917 12429,8856 12478,8829 12628,8711 12670,8679 12736,8629 12765,8605 12920,8487 13011,8416 13038,8394 13102,8343 13194,8276 13277,8211 13459,8072 13474,8060 13521,8023 13616,7949 13800,7801 13813,7790 13919,7707 14015,7631 14095,7568 14174,7505 14334,7395 14369,7376 14530,7301 14617,7243 14693,7168 14752,7108 14803,7056 15058,6784 15146,6690 15229,6602 15275,6554 15334,6492 15429,6403 15452,6384 15505,6342 15598,6294 15725,6235 15768,6214
+Sonnenallee	H 11909,9155 12012,9092 12078,9055 12152,9015 12240,8964 12323,8917 12429,8856 12478,8829 12628,8711 12670,8679 12736,8629 12765,8605 12920,8487 13011,8416 13038,8394 13102,8343 13194,8276 13277,8211 13459,8072 13474,8060 13521,8023 13616,7949 13800,7801 13813,7790 13919,7707 14015,7631 14095,7568 14174,7505 14334,7395 14369,7376 14379,7372 14530,7301 14617,7243 14693,7168 14752,7108 14803,7056 15058,6784 15146,6690 15229,6602 15275,6554 15334,6492 15429,6403 15452,6384 15505,6342 15598,6294 15725,6235 15768,6214
 Karl-Marx-Str.	HH 11831,8989 11880,8955 11998,8872 12063,8826 12150,8764 12318,8645 12330,8636 12494,8501 12545,8449 12562,8432 12582,8408 12598,8390 12639,8344 12689,8289 12714,8249 12753,8187 12788,8101 12823,8028 12846,7981 12865,7923 12892,7850 12898,7832 12916,7775 12972,7602 12987,7560 13015,7471 13018,7441 13029,7353 13030,7346 13034,7319 13043,7234 13051,7157 13058,7112 13068,7043 13072,7013 13085,6925 13117,6716 13121,6689 13141,6651 13200,6550 13236,6489
 Erkstr.	H 12598,8390 12765,8435 12902,8470 12920,8487
 Anzengruberstr.	N 12689,8289 12856,8344 13038,8394
@@ -848,7 +848,7 @@ Hohenstaufenstr.	H 6096,9772 5988,9776 5941,9787 5905,9795
 Hauptstr. (Schöneberg, Friedenau)	HH 7471,9360 7388,9199 7382,9187 7363,9152 7354,9135 7308,9041 7268,8960 7201,8870 7105,8788 7009,8705 6989,8687 6912,8617 6765,8480 6687,8385 6608,8277 6560,8219 6460,8093
 #: note: die letzten Meter Richtung Süden sind als "Innsbrucker Platz" ausgeschildert
 Hauptstr. (Schöneberg, Friedenau)	HH 6460,8093 6409,8026
-Hauptstr. (Schöneberg, Friedenau)	HH 6409,8026 6388,7999 6333,7927 6307,7893 6273,7849 6209,7765 6144,7677 6082,7594 5955,7420 5923,7374 5897,7337
+Hauptstr. (Schöneberg, Friedenau)	HH 6409,8026 6388,7999 6333,7927 6307,7893 6273,7849 6209,7765 6144,7677 6082,7594 5955,7420 5923,7374 5881,7314
 Akazienstr. (Schöneberg)	N 7201,8870 7101,9027 7035,9161 7012,9222 7001,9291
 Grunewaldstr. (Schöneberg)	H 7471,9360 7418,9366 7299,9346 7202,9329 7118,9315 7001,9291 6917,9274 6861,9263 6709,9234 6568,9211 6440,9192 6361,9175 6264,9156 6142,9134 6059,9118 5974,9100 5895,9083
 Goltzstr. (Schöneberg)	N 7001,9291 7002,9526 7028,9678 7049,9833 7038,10088
@@ -896,20 +896,8 @@ Am Karlsbad	N 8011,11014 8027,11000 8143,10903 8287,10786
 Am Karlsbad	N 8027,11000 7959,10910
 Potsdamer Str. (Schöneberg, Tiergarten)	HH 7471,9360 7507,9458 7512,9572 7518,9791 7526,9969 7579,10183 7633,10394 7689,10514 7820,10768 7912,10945 7968,11048 7980,11070 8000,11137 8031,11249 8065,11349 8083,11381 8096,11393 8145,11438 8217,11455 8261,11463 8301,11469 8358,11477 8374,11479 8479,11493
 (Potsdamer Platz - Linkstr.)	NN 8474,11350 8481,11447
-Alte Potsdamer Str.	NN 8479,11493 8481,11447 8389,11378
-#: next_check_id: ALTEPOTSDAMER-2022
-#: by: https://www.berliner-zeitung.de/news/shopping-berlin-potsdamer-platz-arkaden-heissen-jetzt-the-playce-li.250487
-#: by: https://www.deutsches-architekturforum.de/thread/5528-rund-um-den-potsdamer-platz/?postID=726648#post726648
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_42_2833_2916_online.pdf (Teileinziehung, Radverkehr wird möglich sein, eingezogener Bereich bis zur Schellingstr.)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_10_0929_1092_online.pdf (Teileinziehung)
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_14_1553_1632_online.pdf (Teileinziehung)
-#: XXX die Straße wird vermutlich zur Fußgängerzone?
-# REMOVED --- #: XXX laut StefanHRT mittlerweile Verbundsteinpflaster, zumindest an der Einmündung Potsdamer Platz
-# REMOVED (war der andere Abschnitt) --- #: osm_watch: way id="4597334" version="30"
-#: last_checked: 2023-12-04
-#: check_frequency: 30d
-# REMOVED --- #: next_check: 2022-12-31
-Alte Potsdamer Str.	N 8389,11378 8375,11368 8318,11324 8280,11296
+#: historical_note: früher (bis etwa 2023) normale Straße (cat=N)
+Alte Potsdamer Str.	NN 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296
 Kulmer Str.	N 7771,9479 7829,9723
 Kulmer Str.	HH 7829,9723 7848,9814 7866,9902
 Bülowstr. (Schöneberg)	NN 7938,9694 7941,9733
@@ -1204,7 +1192,7 @@ Eisackstr.	N 6429,7876 6471,7742 6491,7702
 Ceciliengärten	N 6271,7733 6257,7646 6272,7645 6289,7472 6291,7429 6256,7428 6252,7239
 Ceciliengärten	N 6257,7646 6238,7645 6241,7428 6256,7428
 Ceciliengärten	NN 6356,7479 6289,7472
-Rheinstr.	HH 5897,7337 5853,7274 5817,7223 5806,7205 5644,6936 5604,6870 5533,6753 5424,6584 5370,6486
+Rheinstr.	HH 5881,7314 5853,7274 5817,7223 5806,7205 5644,6936 5604,6870 5533,6753 5424,6584 5370,6486
 Rubensstr. (Schöneberg)	H 6307,7893 6332,7721 6333,7708 6352,7523 6356,7479 6367,7356 6389,7196 6407,7016 6408,7008 6430,6787 6434,6749 6439,6716 6440,6707 6458,6492 6477,6311 6494,6128
 #: note: in Plänen der VIZ als "Kleine Rubensstr." gekennzeichet, auf Straßenschildern existiert dieser Straßenname nicht
 #: by: https://nitter.cz/VIZ_Berlin/status/1668472008542412802#m
@@ -1417,9 +1405,9 @@ Mercedes-Platz	NN 12990,11006 13063,11147
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45-181-136/3Ip0mPrtHdHfEEJK92UAk9fSljJVnFBwbl4AUfvB/NdmfaPE/57-Anlagen/01/DS0766_Vzk_FreiaEisner.pdf
 #: XXX Vorschlag: Freia-Eisner-Straße; mittlerweile tatsächlich als "Planstraße C" offiziell ausgeschildert
 #: note: "Privatgelände"
-#: osm_watch: way id="491906864" version="15"
+#: osm_watch: way id="491906864" version="16"
 #: priority: #C
-#: last_checked: 2023-11-12
+#: last_checked: 2023-12-29
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2023-01-01
 Planstraße C	N 12926,11224 12848,11093
@@ -1477,7 +1465,7 @@ Grunerstr.	HH 10849,12557 10783,12502
 #: source_id[expired]: bvg2021:248#BVG324714_0
 #: source_id: viz2021:13.412286,52.519002,17.07.2023,07:00 (bis 25.08.2023) (inaktiv)
 #: XXX nach Fertigstellung des Molkenmarkts entfernen
-#: last_checked: 2023-12-18 vvv
+#: last_checked: 2023-12-29 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2023-08-25
 Grunerstr. [Gehweg]	NN 10973,12611 11057,12715
@@ -1587,7 +1575,7 @@ Annenstr. (Mitte)	NH 10815,11662 10892,11555 11039,11425 11052,11414 11094,11377
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/artikel.1209145.php (2018-2024)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/schmidtstrasse_lageplan.pdf
 #: XXX Hier soll es eine Einbahnstraßenregelung Radfahrer frei geben; evtl. wird auch die Qualtität besser werden
-#: last_checked: 2023-11-09 (mapillary)
+#: last_checked: 2023-12-23
 #: check_frequency: 180d
 #: next_check: 2024-12-31
 Annenstr. (Mitte) [Wohngebiet]	N 11192,11429 11259,11391 11217,11288
@@ -1849,7 +1837,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: osm_watch: way id="1010731431" version="8"
 #: osm_watch: way id="642581102" version="9"
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2023-11-07
+#: last_checked: 2023-12-23
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -1863,17 +1851,18 @@ Lydia-Rabinowitsch-Str.	N 7820,13994 7930,14060 7973,13991 7959,13982 7865,13924
 #: XXX wie wird diese Straße heißen? Der erste Vorschlag "Annemarie-Renger-Str." wird es wohl nicht werden...
 # REMOVED (mittlerweile: Spielstraße) --- #: XXX wird es Einschränkungen für den Autoverkehr geben? --- es sieht aus nach: Einfahrt verboten, Tiefgarage frei
 #: osm_watch: way id="74868383" version="26"
-#: last_checked: 2023-11-16
+#: last_checked: 2023-12-23
 #: check_frequency: 90d
 (Uferweg - Heidestr.)	N 8057,13923 7997,13892 7910,13848
 Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7781,14238 7697,14187
 (Hedwig-Porschütz-Str. - Uferweg)	NN 7802,14250 7830,14268
-Lisa-Fittko-Str.	N 7734,13944 7820,13994
+Lisa-Fittko-Str.	N 7820,13994 7734,13944
+Lisa-Fittko-Str.	NN 7734,13944 7731,13927 7787,13839 7787,13838 7872,13685
 George-Stephenson-Str.	N 7487,14472 7446,14403 7529,14274 7569,14209 7614,14136 7679,14030 7734,13944
 #: next_check_id: HANSPETERSPLATZ-2022
 #: XXX zurzeit darf der Platz noch von Fahrzeugen benutzt werden (wegen der Bauarbeiten in der George-Stephenson-Str.?), wird später vermutlich aufgehoben, dann NN ohne osm.highway:service; eigentlich Einbahnstraße, aber der Platz ist breit genug...
 #: osm_watch: way id="977556359" version="15"
-#: last_checked: 2023-11-07
+#: last_checked: 2023-12-23
 #: check_frequency: 90d
 #: osm.highway: service
 Hans-Peters-Platz	N 7739,14119 7679,14030
@@ -2209,7 +2198,7 @@ Lohmühlenbrücke	N 12837,9353 12868,9359 12897,9365
 Weichselstr. (Neukölln)	N 12845,9304 12755,9188 12682,9089 12590,8977 12478,8829 12434,8776 12392,8724 12330,8636
 #: alias: Ideal-Passage
 Idealpassage	NN 12434,8776 12582,8651
-Hobrechtstr.	N 11998,8872 12012,9092 12005,9211 11954,9415 11934,9538 11917,9663 11897,9754 11880,9874
+Hobrechtstr.	N 11998,8872 12012,9092 12005,9211 11954,9415 11934,9538 11925,9605 11917,9663 11897,9754 11880,9874
 Sanderstr.	N 11710,9628 11917,9663 12074,9689
 # REMOVED --- #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.1022445.php (BVV beschließt Umbenennung) --- #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2020/pressemitteilung.1024113.php (BA beschließt Umbenennung, wird bis Frühsommer 2021 abgeschlossen) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_55_6227_6354_online.pdf (Umbenennung einer Straße, Wirksamkeit zum 23. April 2021 geplant) --- #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7560 --- #: XXX wann wird die Umbenennung in "Lucy-Lameck-Str." erfolgen? --- #: last_checked: 2021-03-08 --- #: next_check: 2021-04-23
 #: oldname: -202104: Wissmannstr. (Neukölln)
@@ -2850,7 +2839,7 @@ Niflheimweg	N 14643,18550 14553,18525
 Wanensteig	N 14711,18297 14789,18307 14872,18298
 Borner Str.	N 16472,17791 16480,17824 16501,17851 16523,17877 16618,17963 16658,18008 16607,18088
 Barther Str.	N 16677,17678 16697,17695 16900,17841 16955,17836 16981,17855
-Roelckestr.	H 14367,17965 14214,17754 14161,17681 14153,17670 14044,17519 13904,17325
+Roelckestr.	H 14367,17965 14214,17754 14161,17681 14153,17670 14044,17519 13931,17362 13904,17325
 Roelckestr.	NH 13904,17325 13832,17232 13812,17206 13754,17133 13581,16968 13272,16672 13104,16522 13033,16387 12943,16214 12890,16121 12842,16032 12817,15985
 Straße 246	N 13590,17368 13812,17206
 Nüßlerstr.	N 14754,17673 14214,17754
@@ -4038,7 +4027,7 @@ Neue Filandastr.	H 5676,5488 5675,5470 5671,5389 5659,5313 5610,5227 5583,5179
 (Albrechtstr. - Neue Filandastr.)	H 5635,5145 5616,5182 5610,5227
 Albrechtstr. (Steglitz)	H 4861,5581 4991,5531 5080,5498 5088,5495 5183,5437 5256,5392 5382,5312 5397,5302 5416,5289 5527,5217 5583,5179 5635,5145 5689,5109 5716,5090 5764,5059 5870,4992
 Albrechtstr. (Steglitz)	H 6006,4852 6048,4797 6102,4726 6107,4718 6116,4707 6212,4622 6283,4565 6360,4504
-Albrechtstr. (Steglitz)	N 6360,4504 6416,4452 6491,4391 6540,4347 6624,4318 6633,4272
+Albrechtstr. (Steglitz)	N 6360,4504 6416,4452 6491,4391 6540,4347 6617,4324 6635,4297 6633,4272
 Albrechtstr. (Steglitz)	N 5256,5392 5200,5312
 (zur Albrechtstr.)	NN 5920,4976 6006,4852
 Halskestr.	H 6651,4843 6540,4715 6435,4590 6360,4504
@@ -6895,8 +6884,8 @@ Hönower Wiesenweg	N 17856,8162 17793,8225 17753,8290 17707,8328 17652,8349 17617
 (Hönower Wiesenweg - Betriebsbahnhof Rummelsburg)	N 17308,9090 17300,9135 17284,9198
 # 
 #: note: Parkstadt Karlshorst vvv
-Georg-Klingenberg-Str.	N 17846,8644 17792,8660 17668,8696 17656,8700 17468,8692
-Adolf-Wermuth-Allee	N 17656,8700 17640,8627
+Georg-Klingenberg-Str.	N 17846,8644 17792,8660 17668,8696 17659,8698 17468,8692
+Adolf-Wermuth-Allee	N 17659,8698 17640,8627
 Adolf-Wermuth-Allee	N 17668,8696 17648,8626 17627,8556 17608,8483 17588,8413
 Heiner-Müller-Str.	N 17497,8623 17640,8627
 Heiner-Müller-Str.	N 17648,8626 17773,8588
@@ -12494,9 +12483,9 @@ Rudolf-Grosse-Str.	NN 19141,9709 19142,9755
 Rudolf-Grosse-Str.	N 19142,9755 19144,9810
 Hilbertstr.	N 10096,-2137 10173,-2402 10253,-2643 10259,-2660
 Lortzingstr. (Lichtenrade)	N 10050,-2808 10077,-2789 10155,-2739 10259,-2660
-Mozartstr. (Lichtenrade)	N 10259,-2660 10392,-2980 10462,-3149 10470,-3169 10460,-3199
+Mozartstr. (Lichtenrade)	N 10259,-2660 10392,-2980 10462,-3149 10470,-3169 10474,-3186 10467,-3201
 Beethovenstr. (Lichtenrade)	N 10155,-2739 10219,-2895 10272,-3027 10323,-3150
-(Beethovenstr. - Mozartstr., Mauerweg)	NN 10309,-3191 10460,-3199
+(Beethovenstr. - Mozartstr., Mauerweg)	NN 10309,-3191 10467,-3201
 Schivelbeiner Str.	NH 10301,16186 10421,16175 10603,16158 10739,16146 10982,16121
 Arnimplatz	NN 10739,16146 10606,16319
 Seelower Str.	N 10778,16485 10754,16305 10739,16146 10729,16042
@@ -13125,7 +13114,7 @@ Spreeufer	NN 10583,12206 10492,12289 10417,12378 10416,12394
 Klosterstr. (Mitte)	N 10945,12150 10951,12249 10957,12401 10947,12457 10900,12546
 #: next_check_id: MOLKENMARKT-2021
 #: XXX provisorische Anbindung
-#: last_checked: 2023-12-18
+#: last_checked: 2023-12-29
 #: check_frequency: 90d
 Klosterstr. (Mitte)	NN 10900,12546 10873,12577
 (Molkenmarkt - Parochialstr.)	NN 10746,12364 10831,12371
@@ -13507,7 +13496,7 @@ Drübecker Weg	N 13909,8471 13812,8530
 Aronsstr.	N 14758,7373 14650,7500 14593,7584 14583,7623 14611,8029
 Aronsstr. [Richtung Sonnenallee]	N 14571,7427 14579,7576 14593,7584
 (Sonnenallee - Aronsstr.)	NN 14530,7301 14558,7350 14571,7427
-Dieselstr.	N 14850,7855 14777,7921 14679,8006 14642,8022 14611,8029 14484,8044 14425,8052 14384,8056 14366,8058 14326,8062 14249,8075 14236,8077
+Dieselstr.	N 14850,7855 14777,7921 14679,8006 14642,8022 14611,8029 14484,8044 14440,8050 14425,8052 14384,8056 14366,8058 14326,8062 14249,8075 14236,8077
 # REMOVED (existiert nicht mehr) --- #: next_check_id: DIESEL-2015 --- #: last_checked: 2017-07-31 --- #: check_frequency: 60d --- Dieselstr.	NN 14326,8062 14344,8072 14358,8070 14364,8096 14405,8115 14419,8112
 (Mergenthalerring (Kolonie) - Dieselstr.)	NN 14419,8112 14429,8074 14484,8044
 #: osm.highway: service
@@ -14835,6 +14824,7 @@ Boyenstr.	N 7938,14423 8250,14672
 (Kieler Brücke - Heidestr./Sellerstr.)	NN 7740,14409 7661,14398 7634,14406 7617,14420 7566,14404
 (Kieler Brücke - Heidestr.)	NN 7740,14409 7705,14383 7612,14325
 (Hedwig-Porschütz-Str. - Uferweg/Kieler Brücke)	NN 7757,14318 7763,14332 7754,14354 7769,14364
+(Heidestr./Hedwig-Porschütz-Str. - George-Stephenson-Str.)	N 7569,14209 7652,14257
 Hans-Schomburgk-Promenade	NN 5605,14988 5455,15245 5391,15331 5306,15387 5134,15565 5073,15611 5040,15606 5015,15564 5051,15508 5084,15415 5075,15354 5001,15211
 Geißlerpfad	N 1887,14888 1873,14650 1871,14561
 Letterhausweg	N 2087,14078 2111,14235
@@ -15270,8 +15260,8 @@ Klaushager Weg	N 2582,23814 2711,23694 2807,23574 2842,23482 2913,23405 2975,233
 (Stolbergstr. - Manteuffelstr.)	NN 8862,6467 8823,6458
 Liebenowzeile	N 6846,4808 6845,4761 6841,4667 6826,4500 6826,4472 6820,4347
 Brandenburgische Str. (Steglitz)	N 6889,4334 6820,4347 6677,4384 6638,4394 6532,4422
-(Brandenburgische Str. - Albrechtstr.)	N 6638,4394 6632,4361
-(Brandenburgische Str. - Albrechtstr.)	NN 6632,4361 6624,4318
+(Brandenburgische Str. - Albrechtstr.)	N 6638,4394 6629,4361
+(Brandenburgische Str. - Albrechtstr.)	NN 6629,4361 6617,4324
 Buhrowstr.	N 7092,4763 7032,4635 6889,4334
 Denkstr.	N 6841,4667 7032,4635
 Rallenweg	N -2360,20965 -2043,20968
@@ -15283,7 +15273,7 @@ Fregestr.	N 5622,6400 5657,6451 5783,6635 5896,6785 5957,6889 5959,6976 5961,722
 Kameruner Str.	N 6127,15688 6267,15844 6383,15972 6484,16085 6587,16199
 Habsburgerstr.	N 6920,9838 6912,9956 6903,10056
 Kyffhäuserstr.	N 6860,9529 6891,9678 6920,9838
-Niedstr.	N 5364,7330 5641,7332 5810,7337 5897,7337
+Niedstr.	N 5364,7330 5641,7332 5810,7337 5881,7314
 (Niedstr. - Wilhelmshöher Str.)	NN 5364,7330 5310,7325
 Defreggerstr.	N 14786,8737 14676,8852 14567,8966
 Rethelstr.	N 14745,8912 14676,8852 14615,8799
@@ -16218,7 +16208,7 @@ Manga-Bell-Platz	N 5533,16662 5568,16630 5596,16662 5666,16744 5639,16768 5593,1
 #: add_fragezeichen: Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: osm_watch: way id="5199719" version="28"
 #: also_indoor: search Maji-Maji-Allee
-#: last_checked: 2023-10-03
+#: last_checked: 2023-12-19 (taz)
 #: check_frequency: 90d
 Petersallee	N 5426,16539 5533,16662
 #: next_check_id: AFRIKANISCHESVIERTEL-2020

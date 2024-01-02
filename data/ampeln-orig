@@ -19,7 +19,7 @@ Allee der Kosmonauten/Straßenbahn	X::inwork 17778,13438
 #: by: https://www.deutsches-architekturforum.de/thread/14562-b%C3%BCro-und-wohnquartier-elements-mediaspree-in-bau/?postID=750488#post750488
 #: XXX eigentlich zwei Ampeln
 #: osm_watch: way id="124182482" version="9"
-#: last_checked: 2023-12-14 (daf)
+#: last_checked: 2023-12-29
 Michaelbrücke	F::inwork 11676,11839
 # 
 #: next_check_id: STERNDAMM-2023
@@ -34,18 +34,19 @@ Michael-Brückner-Str.	F::inwork 17808,5669
 #: source_id: viz2021:13.379736,52.496265,03.11.2023,10:00 (bis 23.04.2025)
 #: note: gilt auch für Radfahrer (provisorische Radspur Richtung Norden, auch eine Fahrradampel an der Radspur Richtung Süden)
 #: note: etwa 40m nördlich des Punktes
-#: last_checked: 2023-11-21
+#: last_checked: 2023-12-27
 #: check_frequency: 90d
 #: next_check: 2025-04-23
 #: valid: -20250423
 Möckernstr./nördlich. Wartenburgstr.: Gegenverkehrsregelung	X::inwork 8784,9972
 # 
-# REMOVED --- #: source_id: viz2021:13.469544,52.478034,01.11.2023,10:30 (bis 13.11.2023) (bis 24.11.2023) (inaktiv)
-# REMOVED --- #: note: Länge knapp 50m und gilt auch für Radfahrer, Lage ist etwas weiter nordwestlich
-# REMOVED --- #: last_checked: 2023-11-03
+#: source_id: viz2021:13.469544,52.478034,01.11.2023,10:30 (bis 13.11.2023) (bis 24.11.2023) (inaktiv)
+#: note: Länge knapp 50m und gilt auch für Radfahrer, Lage ist etwas weiter nordwestlich
+#: note: bei VIZ entfernt, existiert aber weiterhin
+#: last_checked: 2023-12-30
 # REMOVED --- #: next_check: 2023-11-24
 # REMOVED --- #: valid: -20231124
-# REMOVED --- Kiefholzstr.: Gegenverkehrsregelung	X::inwork 14700,8368
+Kiefholzstr.: Gegenverkehrsregelung	X::inwork 14700,8368
 # 
 # REMOVED --- #: next_check_id: RUNGE-2023
 # REMOVED --- #: source_id: viz2021:13.417345,52.512721,24.10.2023,11:00 (bis 23.11.2023) (inaktiv)
@@ -115,7 +116,7 @@ Gegenverkehrsregelung	X::inwork 18527,16789
 #: source_id: viz2021:13.36722,52.52237,05.09.2023,07:20 (bis 05.09.2025)
 #: note: möglicherweise im Zusammenhang mit dem Bau des Bundespräsidialamtes
 #: by: https://www.bbr.bund.de/BBR/DE/Bauprojekte/Berlin/Politik/buerogebaeude-bundesbehoerden/neubau.html (Fertigstellung geplant Sommer 2025)
-#: last_checked: 2023-12-16
+#: last_checked: 2023-12-29
 #: check_frequency: 180d
 #: next_check: 2025-09-05
 	X::inwork 7873,12927
@@ -145,9 +146,9 @@ Gegenverkehrsregelung	X::inwork 18527,16789
 #: by: https://entwicklungsstadt.de/sony-center-am-potsdamer-platz-investition-und-umbau/ (bis Ende 2023)
 #: XXX Möglicherweise im Zusammenhang mit Bauarbeiten am Sony-Center
 #: note: Länge der Gegenverkehrstrecke ist ca. 80m
-#: last_checked: 2023-12-12
+#: last_checked: 2023-12-29
 #: check_frequency: 90d
-#: next_check: 2023-12-31
+#: next_check: 2024-07-01
 #: valid: -20240701
 Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
 # 
@@ -186,7 +187,7 @@ Gürtelstr./Weserstr.	F::inwork 15016,11431
 # 
 #: next_check_id: IMBROMBEERWINKEL-2023
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
-#: last_checked: 2023-11-11
+#: last_checked: 2023-12-30
 #: check_frequency: 120d
 #: note: Anforderungsampel
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
@@ -196,7 +197,7 @@ Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
 #: osm_watch: node id="7023223791" version="3"
 #: last_checked: 2023-06-12
 #: next_check: 2023-06-27
-#: valid: -20230627
+# REMOVED --- #: valid: -20230627
 B179/Fichtestr.	X::inwork 26138,-12596
 # 
 # REMOVED --- #: source_id: viz2021:13.181825,52.422784,09.02.2022,11:00 (bis 12.7.2022) (nicht verlängert) (bis 28.9.2022) (nicht verlängert) --- #: source_id: viz2021:13.183144,52.423471,27.10.2022,10:00 (bis 23.11.2022) --- #: note: laut rbb bis 28.10.2022 --- #: next_check: 2022-11-23 --- #: valid: -20221123 --- Kronprinzessinnenweg: Gegenverkehrsregelung	X::inwork -4368,1731
@@ -209,7 +210,7 @@ B179/Fichtestr.	X::inwork 26138,-12596
 #: source_id: viz2021:13.572881,52.460427,14.09.2023,12:00 (bis 27.09.2024) (inaktiv) vvv
 #: source_id: viz2021:13.572881,52.460427,14.11.2023,14:00 (bis 27.09.2024)
 # REMOVED --- #: note: Länge der Gegenverkehrsregelung: östlicher Abschnitt ca. 50m, nördlicher Abschnitt ca. 40m
-#: last_checked: 2023-11-02 (okas) vvv
+#: last_checked: 2023-12-18 (okas) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-09-27 vvv
 #: valid: -20240927 vvv
@@ -309,7 +310,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8333,19305
 # 
 #: next_check_id: TAUBEN-2019
 #: note: Ampel ist eigentlich 20m weiter südlich gelegen
-#: last_checked: 2023-12-12
+#: last_checked: 2023-12-29
 #: check_frequency: 60d
 	F::inwork 9207,11880
 # 
@@ -352,7 +353,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8333,19305
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fußgängerampel nordöstlich der Einmündung; Anforderungsampel
-#: last_checked: 2023-09-26
+#: last_checked: 2023-12-29
 #: check_frequency: 90d
 #: next_check: 2026-01-01
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
@@ -496,10 +497,10 @@ Gegenverkehrsregelung	X::inwork 18767,-1343
 #: related ^^^
 #: related antidromic vvv
 #: note: kann nachts ausgeschaltet sein (gesehen 2014-12, Fr gegen 23:30) vvv
-#: note: mittlerweile auch am Wochenende und an Feiertagen ausgeschaltet, gesehen: 2022-12-18 (So) gegen 12:00, 2023-04-02 (So) gegen 14:00, 2023-05-29 (Pfingstmontag) gegen 13:55, 2023-10-14 (Sa) gegen 21:50), 2023-10-15 (So) vormittags und abends
+#: note: mittlerweile auch am Wochenende und an Feiertagen ausgeschaltet, gesehen: 2022-12-18 (So) gegen 12:00, 2023-04-02 (So) gegen 14:00, 2023-05-29 (Pfingstmontag) gegen 13:55, 2023-10-14 (Sa) gegen 21:50), 2023-10-15 (So) vormittags und abends, 2023-12-26 (Mo, Weihnachten) 11:54
 #: note: nicht ausgeschaltet am Wochenende: 2023-10-21 (Sa) 12:40 (zu früh?), 2023-11-04 (Sa) 11:34
 	X 11089,9751
-#: note: vermutlich am Wochenende und an Feiertagen ausgeschaltet, gesehen: 2023-04-02 (So) gegen 14:00, 2023-05-29 (Pfingstmontag) gegen 13:55, 2023-10-14 (Sa) gegen 21:50
+#: note: vermutlich am Wochenende und an Feiertagen ausgeschaltet, gesehen: 2023-04-02 (So) gegen 14:00, 2023-05-29 (Pfingstmontag) gegen 13:55, 2023-10-14 (Sa) gegen 21:50, 2023-12-26 (Mo, Weihnachten) 11:54
 	X 11141,9732
 #: note ^^^
 #: related ^^^
@@ -2643,13 +2644,13 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
 #: XXX evtl. als zwei Ampeln eintragen, falls die Ampelphasen für Radfahrer ungünstig sind
-#: last_checked: 2023-12-20
+#: last_checked: 2023-12-30
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: manchmal ausgeschaltet (gesehen 2022-08-24 13:10)
-#: last_checked: 2023-12-20
+#: last_checked: 2023-12-30
 #: check_frequency: 120d
 	X::inwork 14382,9299
 # 
@@ -3333,7 +3334,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2023-12-14 vvv
+#: last_checked: 2023-12-29 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3341,6 +3342,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: osm_watch: node id="9962315446" version="1"
 #: osm_watch: node id="9962290101" version="3"
 	X::inwork 9286,12886
+#: note: war am 2023-12-23 und 2023-12-29 ausgeschaltet
 #: osm_watch: node id="6583929470" version="1"
 	X::inwork 9475,12365
 # REMOVED (nicht mehr gesehen) --- X::inwork 9343,12464
@@ -3520,7 +3522,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://twitter.com/VIZ_Berlin/status/1301038406156398593 (vermutlich keine Änderung bis Ende Oktober 2020)
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="6"
-#: last_checked: 2023-12-20
+#: last_checked: 2023-12-25
 #: check_frequency: 60d
 	X::inwork 14174,7505
 # 
@@ -3528,7 +3530,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: osm_watch: node id="9804698456" version="1"
 #: osm_watch: node id="6512193990" version="6"
 #: also_indoor: webcam https://portal1828.webcam-profi.de/ 
-#: last_checked: 2023-12-20
+#: last_checked: 2023-12-25
 #: check_frequency: 90d
 	X::inwork 14334,7395
 # 

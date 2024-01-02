@@ -116,12 +116,15 @@ Rüdersdorfer Str.: zwar neuer Asphalt, aber mit gelegentlichen Entwässerungsprob
 Am Betriebsbahnhof Schöneweide: unbefestigt, mit vielen kleinen Kuhlen	X 18160,4940 18107,5011 17822,5409
 # 
 #: mud: 2020-03-14: keine Beeinträchtigungen
+#: mud: 2023-12-26: einige Pfützen	h=q2
 Stadtpark Stegltz: etwas älterer Parkweg	X 5890,4674 5841,4557 5836,4469 5787,4400
 # 
 #: mud: 2020-03-14: keine Beeinträchtigungen
+#: mud: 2023-12-26: einige feuchtere Stellen	h=q1-
 Paul-Schwarz-Promenade: Parkweg	X 5018,3810 4947,3672 4910,3599 4822,3431
 # 
 #: mud: 2020-03-14: etwas feuchtere Oberfläche, aber keine Beeinträchtigungen
+#: mud: 2023-12-26: etwas feuchtere Oberfläche, aber keine Beeinträchtigungen	h=q0
 Parkweg Schloßpark Lichterfelde: Parkweg	X 4910,3599 4858,3613 4815,3615 4754,3651 4723,3681 4694,3702 4657,3711 4617,3706 4611,3705 4603,3704
 # 
 #: mud: 2020-03-15: keine Beeinträchtigungen
@@ -478,6 +481,7 @@ Hausvaterweg: unbefestigte Straße	X 20281,18690 20347,18667
 #: mud: 2023-10-27: zahlreiche Pfützen	h=q3+,wet
 #: mud: 2023-10-29: zahlreiche Pfützen	h=q3,wet
 #: mud: 2023-11-16: zahlreiche Pfützen	h=q3,wet
+#: mud: 2023-12-23: zahlreiche Pfützen	h=q3-,wet
 (Am Wriezener Bahnhof - Rüdersdorfer Str.): wassergebundene Decke	X 12944,11760 13052,11867
 # 
 #: mud: 2021-12-11: zahlreiche Pfützen
@@ -504,6 +508,7 @@ Hausvaterweg: unbefestigte Straße	X 20281,18690 20347,18667
 #: mud: 2023-10-26: feuchte Oberfläche	h=q1,wet
 #: mud: 2023-11-08: leicht feuchtere Oberfläche	h=q0-,wet
 #: mud: 2023-11-10: keine Beeinträchtigungen	h=q0
+#: mud: 2023-12-31: keine Beeinträchtigungen	h=q0
 (Kynaststr. - Paul-und-Paula-Ufer): Parkweg	X 14797,10476 14820,10473 14861,10467
 # 
 #: mud: 2022-02-01: leicht matschig, einige Pfützen	h=q2-,wet
@@ -587,6 +592,7 @@ Mariendorfer-Hafen-Weg: unbefestigter Weg, einige Stellen mit Schotter	X 8106,34
 # 
 #: mud: 2023-03-11: einige Pfützen	h=q2,wet
 #: mud: 2023-10-21: einige Pfützen, insbesondere im westlichen Abschnitt	h=q2,wet
+#: mud: 2023-12-30: einige Pfützen, insbesondere im westlichen Abschnitt	h=q2,wet
 Kolonie Albrechtshöhe: wassergebundene Decke	X 10260,5953 10215,5959 9955,5993
 # 
 #: mud: 2023-03-26: matschige Oberfläche	h=q3+,wet
@@ -642,4 +648,7 @@ Platenhofer Weg: Asphalt	X -1980,23033 -1865,23298
 # 
 #: mud: 2023-11-25: einige Pfützen	h=q2,wet
 Zu den Faltern: unbefestigter Weg	X 21861,10970 21894,10983 21917,10991 21930,10996
+# 
+#: mud: 2023-12-26: eine sehr große Pfütze	h=q3,wet
+Kufsteiner Str.: glatter Parkweg	X 5913,8415 5917,8351 5918,8221
 # 
