@@ -151,7 +151,7 @@ Spreewaldplatz	F:P 12292,10374 12243,10274 12341,10218 12292,10374
 #: by: https://berliner-abendblatt.de/berlin-news/wegner-schlaegt-modellprojekt-zum-goerlitzer-park-vor-id240709
 #: XXX Werden die Wege nachts (genaue Schließzeiten?) abgeschlossen sein? Oder wird das nur situationsbedingt (wann?) passieren?
 #: priority: #A
-#: last_checked: 2023-12-26
+#: last_checked: 2024-01-04
 #: next_check: 2024-03-15
 Görlitzer Park	F:P 13216,9983 13086,9825 12932,9900 12983,10000 12881,10056 12829,9957 12814,9966 12341,10218 12397,10335 12317,10382 12309,10427 12348,10432 13216,9983
 Sportplatz Wiener Straße	F:Sport 12881,10056 12829,9957 12932,9900 12983,10000 12881,10056
@@ -711,7 +711,7 @@ Gipsdreieck	F:P 10134,13474 10135,13506 10159,13523 10142,13556 10049,13528 1002
 #: osm_watch: way id="380356153" version="10"
 #: XXX neuer Name: Susanne-und-Kurt-Crohn-Platz
 #: add_fragezeichen: Hängen bereits Schilder für den Susanne-und-Kurt-Crohn-Platz?
-#: last_checked: 2023-11-09
+#: last_checked: 2024-01-03
 # REMOVED --- #: check_frequency: 30d
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2022-11-23
@@ -1469,6 +1469,11 @@ Cardinalplatz	F:P 21912,5724 21896,5724 21901,5743 21910,5748 21916,5740 21912,5
 #: note: Name wird bei Wikipedia & OSM erwähnt
 Osterwäldchen	F:P 18006,10404 17986,10321 18039,10307 18030,10272 18043,10265 18036,10234 18101,10222 18108,10202 18149,10220 18142,10401 18101,10432 18006,10404
 # 
+#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2024/pressemitteilung.1402282.php
+#: alias: Park am Urnenfriedhof Gerichtstraße
+Grünzug an der Ruheplatzstraße	F:P 7564,15528 7617,15565 7661,15414 7627,15412
+Urnenfriedhof Gerichtstraße	F:Cemetery 7661,15414 7703,15416 7701,15467 7755,15468 7753,15568 7721,15566 7721,15593 7595,15596 7617,15565 7661,15414
+# 
 #############################################################################
 # Plätze (experimentell)
 # XXX_prog: es sollte unterschieden werden zwischen Flächen, die einfach
@@ -1707,7 +1712,7 @@ Güterbahnhof Greifswalder Str.	F:Industrial 12353,15147 12620,14979 12613,14969
 Sportplatz Paul-Heyse-Str.	F:Sport 13585,14117 13456,14313 13252,14179 13385,13992
 Europasportpark Berlin	F:Sport 13385,13992 13449,13892 13519,13785 13635,13605 13854,13701 13835,13729 13585,14117
 #: note: Friedhöfe Georgen-Parochial II und V und St. Petri
-Kirchhöfe Friedrichshain	F:Cemetery 12690,12769 12773,12683 12851,12602 12866,12582 12891,12549 13007,12526 13203,12870 13053,13188 13012,13172 12953,13267 12878,13229 12878,13229 12810,13196 12955,12975 12861,12881 12826,12913
+Kirchhöfe Friedrichshain	F:Cemetery 12690,12769 12773,12683 12859,12593 12866,12582 12891,12549 13007,12526 13203,12870 13053,13188 13012,13172 12953,13267 12878,13229 12878,13229 12810,13196 12955,12975 12861,12881 12826,12913
 Ludwig-Barnay-Platz	F:P 4352,6813 4360,6779 4506,6811 4482,6866
 Althoffplatz	F:P 5673,5664 5587,5655 5588,5622 5588,5579 5675,5573
 Friedhof Koppelweg	F:Cemetery 12249,4565 12251,4446 12355,4445 12411,4443 12412,4387 12448,4387 12447,4529 12483,4526 12483,4640 12132,4631 12132,4559 12249,4565
