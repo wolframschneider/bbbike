@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2012,2013,2016,2017,2018,2019,2020,2021,2022,2023 Slaven Rezic. All rights reserved.
+# Copyright (C) 2012,2013,2016,2017,2018,2019,2020,2021,2022,2023,2024 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -153,9 +153,15 @@ if ($with_searches_weight) {
     require File::Glob;
     require Strassen::StrassenNetz;
     require Strassen::Core;
-    my $monthly_glob = "20??-??_weighted*.bbd";
-    # my $yearly_glob = "20??_weighted*.bbd";
-    ($latest_weighted_bbd) = reverse File::Glob::bsd_glob(bbbike_root . "/tmp/weighted/" . $monthly_glob);
+    my $base_glob;
+    if (0) {
+	# monthly
+	$base_glob = "20??-??_weighted*.bbd";
+    } else {
+	# last 12 months
+	$base_glob = "20??-12_last12months*.bbd";
+    }
+    ($latest_weighted_bbd) = reverse File::Glob::bsd_glob(bbbike_root . "/tmp/weighted/" . $base_glob);
     my $s = Strassen->new($latest_weighted_bbd);
     $searches_weight_net = StrassenNetz->new($s);
     $searches_weight_net->make_net;
@@ -402,7 +408,7 @@ for my $file (@files) {
 	     # Further URLs which work as good as also_indoor directives
 	     # (however, using "#: also_indoor webcam ..." is preferred)
 	     my @urls;
-	     for my $dir_key (qw(by by[nocache])) {
+	     for my $dir_key (qw(by by[nocache])) { # ignore by[removed]
 		 push @urls, @{ $dir->{$dir_key} }
 		     if $dir->{$dir_key};
 	     }

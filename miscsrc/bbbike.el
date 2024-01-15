@@ -1,6 +1,6 @@
 ;;; bbbike.el --- editing BBBike .bbd files in GNU Emacs
 
-;; Copyright (C) 1997-2014,2016-2023 Slaven Rezic
+;; Copyright (C) 1997-2014,2016-2024 Slaven Rezic
 
 ;; To use this major mode, put something like:
 ;;
@@ -708,12 +708,12 @@
 	 (bbbike-rootdir (bbbike-rootdir))
 	 (bbbike-datadir (bbbike-datadir))
 	 (bbbike-grep-cmd (concat bbbike-rootdir "/miscsrc/bbbike-grep -n"
-				  " --add-file " bbbike-rootdir "/t/cgi-mechanize.t"
-				  " --add-file " bbbike-rootdir "/t/old_comments.t"
+				  " --add-file-with-encoding " bbbike-rootdir "/t/cgi-mechanize.t:iso-8859-1"
+				  " --add-file-with-encoding " bbbike-rootdir "/t/old_comments.t:iso-8859-1"
 				  ; XXX experimental: search also in org files (e.g. for Bebauungsplaene)
 				  (if (org-agenda-files)
 				      (concat " "
-					      (mapconcat (lambda (file) (concat "--add-file " file))
+					      (mapconcat (lambda (file) (concat "--add-file-with-encoding " file ":utf-8")) ; assume that org-mode files are encoded using utf-8
 							 (org-agenda-files)
 							 " ")))
 				  " --reldir " bbbike-datadir
@@ -888,7 +888,7 @@
   ;; recognize "#: by" directives which look like a URL in normal bbd files, additionally "#: also_indoor url" directives
   (save-excursion
     (goto-char (point-min))
-    (while (search-forward-regexp "^#:[ ]*\\(?:by\\|by\\[nocache\\]\\|url\\|also_indoor:?[ ]+\\(?:url\\|webcam\\)\\):?[ ]*\\(http[^ \n]+\\)" nil t)
+    (while (search-forward-regexp "^#:[ ]*\\(?:by\\(?:\\[\\(?:nocache\\|removed\\)\\]\\)?\\|url\\|also_indoor:?[ ]+\\(?:url\\|webcam\\)\\):?[ ]*\\(http[^ \n]+\\)" nil t)
       (make-button (match-beginning 1) (match-end 1) :type 'bbbike-url-button)))
 
   (if (string-match "/bbbike-temp-blockings" buffer-file-name)

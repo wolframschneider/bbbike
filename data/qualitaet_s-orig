@@ -171,8 +171,8 @@ Priesterweg: m‰ﬂiges Kopfsteinpflaster	Q2 7227,7352 7229,7188 7222,6458 7222,643
 #: by: https://www.berliner-woche.de/steglitz/c-verkehr/naturschutzbund-kritisiert-routenfuehrung-der-geplanten-radschnellverbindungen-durch-gruenanlagen_a288190 (naher Hans-Baluschek-Park erw‰hnt)
 #: by: https://www.berliner-zeitung.de/mensch-metropole/neue-wege-das-bringt-2021-den-radfahrern-in-berlin-li.131383 (2021)
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpersonen/fahrrat/protokoll_fahrrat_vom_18.02.2021.pdf
-#: by: http://www.infravelo.de/projekt/63b594ddc779a1470cd4bf4a65fe7aaf/ (1. Quartal 2023 - 3. Quartal 2023) (umbenannt)
-#: by: http://www.infravelo.de/projekt/priesterweg-hans-baluschek-park/ (1. Quartal 2024 - 3. Quartal 2024) (Status: Vorgesehen -> in Planung)
+#: by[removed]: http://www.infravelo.de/projekt/63b594ddc779a1470cd4bf4a65fe7aaf/ (1. Quartal 2023 - 3. Quartal 2023) (umbenannt)
+#: by: https://www.infravelo.de/projekt/priesterweg-hans-baluschek-park/ (1. Quartal 2024 - 3. Quartal 2024) (Status: Vorgesehen -> in Planung)
 #: by: https://www.berliner-woche.de/tempelhof-schoeneberg/c-verkehr/strecke-am-s-bahnhof-soll-bald-asphaltiert-werden_a375032 (Fertigstellung bis Ende 2023 mˆglich)
 #: osm_watch: way id="102486250" version="23"
 #: last_checked: 2023-12-26
@@ -193,7 +193,7 @@ Waldemarstr.: Kopfsteinpflaster	Q2- 11328,10957 11290,10972 11150,11030
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erw‰hnung)
 #: XXX Planung eines Asphaltstreifens
-#: last_checked: 2023-12-26
+#: last_checked: 2024-01-07
 #: check_frequency: 360d
 Erkelenzdamm: Kopfsteinpflaster	Q2 11038,10247 11094,10261 11117,10326 11134,10383 11109,10423 11145,10510 11192,10629 11210,10668 11244,10653 11258,10682
 Leuschnerdamm: Kopfsteinpflaster	Q2 11275,10723 11301,10783 11264,10804 11328,10957 11365,11047 11421,11073 11458,11136
@@ -205,7 +205,7 @@ Segitzdamm: asphaltiert	Q0 11159,10769 11133,10704
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erw‰hnung)
 #: XXX Planung eines Asphaltstreifens vvv
-#: last_checked: 2023-12-16 vvv
+#: last_checked: 2024-01-07 vvv
 #: check_frequency: 360d vvv
 Segitzdamm: Kopfsteinpflaster	Q2 11133,10704 11164,10687 11145,10638 11100,10530
 Segitzdamm: Kopfsteinpflaster	Q2- 11100,10530 11065,10443
@@ -297,7 +297,7 @@ Wallensteinstr.: Fahrbahn m‰ﬂiges bis schlechtes Kopfsteinpflaster, Geh/Radweg V
 #: source_id: viz2021:13.516327,52.486802,02.08.2022,07:00 (Bauarbeiten bis 16.12.2022, nur Kfz-Verkehr betroffen) (inaktiv)
 #: source_id[inactive]: bvg2021:396#BVG305961_0 (bis auf Weiteres)
 #: XXX Wird hier irgendwann neu asphaltiert werden?
-#: last_checked: 2023-12-22
+#: last_checked: 2024-01-09
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2022-12-16
 Wallensteinstr.: Asphalt mit einigen Sch‰den	Q1 18037,9195 18092,9141 18134,9080
@@ -490,7 +490,7 @@ Ackerstr.: Kopfsteinpflaster	Q2 9375,14419 9279,14495 9197,14562 9048,14681 8953
 Ackerstr.: Kopfsteinpflaster	Q2- 9804,14071 9750,14132 9627,14229
 Gartenstr.: Asphalt	Q0 8692,14923 8870,14637 8953,14528 9081,14363 9118,14306 9224,14169 9383,13986 9514,13826 9535,13801 9670,13637
 Gartenstr.: Asphalt	Q0 8663,14960 8685,14966 8700,14956 8701,14932 8692,14923 8671,14919 8660,14929 8656,14947 8663,14960
-#: by: http://www.infravelo.de/projekt/gartenstrasse-und-gerichtstrasse-2/ (2. Quartal 2022 - 4. Quartal 2022) (mittlerweile: 2. Quartal 2023 - 4. Quartal 2023) (4. Quartal 2023 - 4. Quartal 2023) (mittlerweile umbenannt)
+#: by[removed]: http://www.infravelo.de/projekt/gartenstrasse-und-gerichtstrasse-2/ (2. Quartal 2022 - 4. Quartal 2022) (mittlerweile: 2. Quartal 2023 - 4. Quartal 2023) (4. Quartal 2023 - 4. Quartal 2023) (mittlerweile umbenannt)
 #: by: https://www.infravelo.de/projekt/gartenstrasse-und-gerichtstrasse/ (4. Quartal 2023) (2. Quartal 2024 - 4. Quartal 2024)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/fahrbahn-und-gehwege-in-der-gerichts-und-gartenstrasse-1046099.php
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/210223_sachstandsbericht.pdf (Asphaltierung, geplante Fertigstellung 2022)
@@ -502,7 +502,7 @@ Gartenstr.: Asphalt	Q0 8663,14960 8685,14966 8700,14956 8701,14932 8692,14923 86
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_32_3341_3408_online.pdf (Teileinziehung)
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2023/pressemitteilung.1377872.php (mˆgliche Fahrradstraﬂe zwischen Grenzstr. und Liesenstr., 2024?)
 #: XXX Kopfsteinpflaster soll durch Asphalt ersetzt werden vvv
-#: last_checked: 2023-12-28 (mapillary) vvv
+#: last_checked: 2024-01-07 (mapillary) vvv
 #: check_frequency: 60d vvv
 #: next_check: 2024-12-31 vvv
 Gartenstr.: Kopfsteinpflaster	Q2 8663,14960 8570,15107
@@ -746,7 +746,7 @@ Stargardtstr.: Asphalt	Q0 7212,17756 7477,17832
 # 
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (Asphaltierung 2019)
 #: by: https://api.fixmyberlin.de/api/plannings/219 (Asphaltierung)
-#: by: http://www.infravelo.de/projekt/windscheidstrasse/ (1. Quartal 2022 - 4. Quartal 2022) (mittlerweile (2021-08) gelˆscht)
+#: by[removed]: http://www.infravelo.de/projekt/windscheidstrasse/ (1. Quartal 2022 - 4. Quartal 2022) (mittlerweile (2021-08) gelˆscht)
 #: XXX: wird die Windscheidstr. asphaltiert?
 # REMOVED (f¸r Radfahrer offen) --- #: XXX ist w‰hrend der Bauarbeiten hier eine Einbahnstraﬂe? Offen in welche Richtung?
 #: osm_watch: way id="4515622" version="27"
@@ -762,7 +762,7 @@ Rˆnnestr.: Asphalt	Q0 2698,10645 2774,10663
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/mobilitaetsgesetz-berlin-bekommt-60-neue-radwege-bis-2020-29512972
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/bauprojekte-fuer-berlin-ueber-diese-aenderungen-koennen-sich-radfahrer-2019-freuen-32425988 (Asphaltierung 2019)
 #: by: https://api.fixmyberlin.de/api/plannings/218 (Asphaltierung)
-#: by: http://www.infravelo.de/projekt/roennestrasse/ (1. Quartal 2022 - 1. Quartal 2024) (mittlerweile 1. Quartal 2023 - 1. Quartal 2024) (3. Quartal 2023 - 4. Quartal 2024) (1. Quartal 2024 - 4. Quartal 2024)
+#: by: https://www.infravelo.de/projekt/roennestrasse/ (1. Quartal 2022 - 1. Quartal 2024) (mittlerweile 1. Quartal 2023 - 1. Quartal 2024) (3. Quartal 2023 - 4. Quartal 2024) (1. Quartal 2024 - 4. Quartal 2024)
 # REMOVED (bereits asphaltierter Kreuzungsbereich) --- #: osm_watch: way id="4480580" version="21"
 # REMOVED (bereits asphaltierter Kreuzungsbereich) --- #: osm_watch: way id="4436949" version="20"
 #: osm_watch: way id="1101189359" version="6"
@@ -923,7 +923,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraﬂe soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2023-11-18
+#: last_checked: 2024-01-13
 #: check_frequency: 120d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -1001,7 +1001,7 @@ Bˆcklinstr.: Kopfsteinpflaster	Q2 14674,11370 14598,11245
 #: note: bei regem Kfz-Verkehr ist es nicht mˆglich, den asphaltierten Fahrbahnabschnitt zu benutzen
 #: corrected_by: Fil (vorher Q1-)
 #: osm_watch: way id="266580485" version="26"
-#: last_checked: 2023-12-05 (mapillary)
+#: last_checked: 2024-01-04 (mapillary)
 #: check_frequency: 90d
 Tino-Schwierzina-Str.: auﬂen Kopfsteinpflaster, Straﬂenbahntrasse asphaltiert	Q2 12736,17998 12462,17814
 # 
@@ -1105,9 +1105,9 @@ Lynarstr.: Asphalt	Q0; 7259,14870 7409,14954
 #: next_check_id: LYNAR-2022
 # REMOVED (noch nicht) --- #: note: Parkstreifen (Senkrechtparken) auf der Nordseite noch immer gepflastert
 #: XXX Es wird noch immer l‰ngs geparkt, wann wird das Senkrechtparken angeordnet?
-#: osm_watch: way id="717490209" version="19"
+#: osm_watch: way id="717490209" version="20"
 #: last_checked: 2023-11-07
-#: check_frequency: 90d
+# REMOVED --- #: check_frequency: 90d
 #: next_check: 2024-12-31
 Lynarstr.: Kopfsteinpflaster	Q2+; 7409,14954 7259,14870
 Lynarstr.: Kopfsteinpflaster	Q2 7409,14954 7461,14986
@@ -1140,7 +1140,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erw‰hnung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/mobilitaetswenderat/22-08-24-mobilitaetswenderat-protokoll_final.pdf (neben der Asphaltierung wird auch ein modaler Filter am Boxhagener Platz erw‰hnt)
 #: XXX auﬂerdem: Einrichtung einer Fahrradstraﬂe zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2024-01-02
+#: last_checked: 2024-01-12
 #: check_frequency: 90d
 G‰rtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1255,13 +1255,13 @@ Jagdschloss Grunewald - westlicher H¸ttenweg: Waldweg	Q1- 878,6651 818,6616 775,
 Jagdschloss Grunewald - westlicher H¸ttenweg: Kopfsteinpflaster, daneben wassergebundene Decke	Q1 698,6592 663,6575 546,6583 369,6594 340,6598
 Jagdschloss Grunewald - westlicher H¸ttenweg: Kopfsteinpflaster	Q3+ 340,6598 218,6571
 #: by: https://api.fixmyberlin.de/api/projects/334 (war fr¸her f‰lschlicherweise zur Bismarckstr. in Steglitz zugeordnet)
-#: by: http://www.infravelo.de/projekt/bismarckstrasse/ (Asphaltierung, in Planung, 4. Quartal 2024 - 4. Quartal 2025) (mittlerweile: 1. Quartal 2025 - 4. Quartal 2026)
+#: by: https://www.infravelo.de/projekt/bismarckstrasse/ (Asphaltierung, in Planung, 4. Quartal 2024 - 4. Quartal 2025) (mittlerweile: 1. Quartal 2025 - 4. Quartal 2026) (1. Quartal 2028 - 4. Quartal 2028)
 #: by: https://www.stadtrand-nachrichten.de/radwegeausbau-steglitz-zehlendorf-berlin/ (Erw‰hnung)
 #: XXX wird hier die Fahrbahnbeschaffenheit verbessert?
 #: osm_watch: way id="4810830" version="44"
 #: last_checked: 2023-12-31 (mapillary)
 #: check_frequency: 720d
-#: next_check: 2026-12-31
+#: next_check: 2028-12-31
 Bismarckstr.: Kopfsteinpflaster	Q2 -4892,1267 -5028,1133 -5092,1130 -5419,897 -5488,833 -5616,780 -6009,559
 # REMOVED (realisiert) --- #: XXX wird asphaltiert --- #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung-und-denkmalschutz/stadtplanung/staedtebauliche-planung/konzepte/bezirkliches_nebenroutennetz.pdf
 Stahnsdorfer Damm: Asphalt	Q0 -4803,1240 -4999,1083
@@ -1715,7 +1715,7 @@ Marienburger Str.: Kopfsteinpflaster	Q2 11572,14452 11821,14317 12077,14186
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4680 (Planung ab 2021)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5720 (Pr¸fung einer Gl‰ttung des Kopfsteinpflasters)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/verkehrsprojekte-im-boetzowviertel_a319036 (Erw‰hnung der Hufelandstraﬂe)
-#: by: http://www.infravelo.de/projekt/hufelandstrasse/ ("ersch¸tterungsarmer Belag", Bauzeitraum 1. Quartal 2022 - 1. Quartal 2023) (mittlerweile: 3. Quartal 2022 - 2. Quartal 2023) (mittlerweile: 2. Quartal 2023 - 2. Quartal 2024) (in API verschwunden, Web ist noch da) (und wieder da) (1. Quartal 2024 - 4. Quartal 2024) (3. Quartal 2024 - 3. Quartal 2025)
+#: by: https://www.infravelo.de/projekt/hufelandstrasse/ ("ersch¸tterungsarmer Belag", Bauzeitraum 1. Quartal 2022 - 1. Quartal 2023) (mittlerweile: 3. Quartal 2022 - 2. Quartal 2023) (mittlerweile: 2. Quartal 2023 - 2. Quartal 2024) (in API verschwunden, Web ist noch da) (und wieder da) (1. Quartal 2024 - 4. Quartal 2024) (3. Quartal 2024 - 3. Quartal 2025)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/hufelandstrasse-wird-fahrradstrasse_a373544 (Entwurfsplanung 2023)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6636 (Antrag) (Erw‰hnung)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/hufelandstrasse-wird-bald-zur-fahrradstrasse_a396418 (f¸r 2025 geplant)
@@ -1894,7 +1894,7 @@ Pankeweg: Beton/Verbundsteinpflaster	Q1 16294,25683 16253,25651 16227,25620 1620
 Pankeweg: gut befestigter Weg	Q1 15998,24887 15820,25003 15810,24981 15643,25090
 Nesselweg: Betonplatten, OK	Q1- 8717,21429 8654,21327 8631,21290 8605,21248 8587,21218 8513,21099
 Schˆnholzer Weg: asphaltiert	Q0 8001,20530 8003,20507
-#: by: http://www.infravelo.de/projekt/schoenholzer-weg/ (Asphaltierung geplant, 3. Quartal 2021 - 1. Quartal 2022) (mittlerweile: 4. Quartal 2022 - 4. Quartal 2023) (mittlerweile: 4. Quartal 2023 - 4. Quartal 2024) (war weg und wieder da) (3. Quartal 2024 - 3. Quartal 2025)
+#: by: https://www.infravelo.de/projekt/schoenholzer-weg/ (Asphaltierung geplant, 3. Quartal 2021 - 1. Quartal 2022) (mittlerweile: 4. Quartal 2022 - 4. Quartal 2023) (mittlerweile: 4. Quartal 2023 - 4. Quartal 2024) (war weg und wieder da) (3. Quartal 2024 - 3. Quartal 2025)
 #: by: https://www.berliner-woche.de/wilhelmsruh/c-bauen/abwasserleitung-wird-erneuert_a303255 (Bauarbeiten des Wasserbetriebe, bis April 2023)
 #: osm_watch: way id="34428911" version="16" vvv
 #: XXX wird hier asphaltiert? vvv
@@ -2513,8 +2513,8 @@ Neue Promenade: unebenes Pflaster	Q2+ 10264,13097 10263,13047
 #: note: teilweise Schotter, teilweise alter Asphalt (?)
 Griebnitzseepromenade: Waldweg	Q1- -7252,-422 -7276,-482 -7337,-515 -7358,-605 -7495,-716 -7585,-736 -7677,-801 -7863,-984 -8053,-1110 -8100,-1170 -8143,-1191 -8231,-1212 -8282,-1129 -8426,-1036 -8566,-967 -8606,-925 -8620,-868 -8698,-735 -8759,-690 -8850,-679 -8901,-618 -8964,-569 -9109,-496 -9171,-478 -9171,-362 -9236,-255 -9375,-117
 (Frankfurter Allee, Nebenfahrbahn): Asphalt	Q0 16865,11931 16837,11920
-(Frankfurter Allee, Nebenfahrbahn): Kopfsteinpflaster, OK	Q1- 16837,11920 16764,11919 16702,11920
-(Frankfurter Allee, Nebenfahrbahn): asphaltiert	Q0 16702,11920 16535,11920
+(Frankfurter Allee, Nebenfahrbahn): Kopfsteinpflaster, OK	Q1- 16837,11920 16764,11919 16702,11916
+(Frankfurter Allee, Nebenfahrbahn): asphaltiert	Q0 16702,11916 16630,11915 16535,11920
 Nalepastr.: Asphalt mit Sch‰den	Q1 17079,8456 17065,8396
 Nalepastr.: unbefestigt	Q2 17065,8396 17057,8235
 Nalepastr.: Kleinsteinpflaster	Q1- 17057,8235 17056,8159
@@ -6439,7 +6439,7 @@ Vereinssteg: unbefestigte Straﬂe	Q2 8340,18984 8321,18954
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/tuchmerweg_lageplan_2021-11-25.pdf
 #: XXX wird neu gemacht, zusammen mit der Straﬂe vor Schˆnholz, danach "Sickerpflaster" (Verbundsteinpflaster?)
 #: osm_watch: way id="173567970" version="9"
-#: last_checked: 2023-12-16 (mapillary)
+#: last_checked: 2024-01-07 (mapillary)
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2022-04-01
 Tuchmacherweg: unbefestigter Weg	Q2 8482,18986 8644,19079
@@ -6652,11 +6652,14 @@ Scharfe Lanke: Asphalt	Q0 -4255,11600 -4246,11438 -4245,11400
 #: by: https://www.berlin.de/b-intern.de/ba/spandau/_assets/politik-und-verwaltung/dokumente/plan_3_folkungerstrasse_gatower_strasse.pdf
 #: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/service-und-organisationseinheiten/finanzen/investitionsplanung/baumassnahmen_tiefbau_2021-2025.pdf (Bauzeit bis 2022, hier: von Wilhemstr. bis Gatower Str.)
 #: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11746 (Anfrage)
+#: source_id: viz2021:13.172174,52.511623,16.08.2023,13:00 (Erdgasleitungssanierung, bis 29.02.2024)
+#: source_id: viz2021:13.17159,52.51104,15.01.2024,09:13 (bis 29.02.2024)
 #: XXX geplanter Straﬂenausbau; evtl. wird dabei die Asphaltierung verbessert
 #: osm_watch: note 3653798 1
 #: last_checked: 2023-04-21
 #: check_frequency: 360d
-#: next_check: 2023-12-31
+# REMOVED --- #: next_check: 2023-12-31
+#: next_check: 2024-02-29
 Weinmeisterhornweg: Asphalt mit Sch‰den	Q1- -5061,11305 -5188,11342 -5202,11347 -5292,11378 -5399,11426
 # 
 Stritteweg: Asphalt	Q0 -5202,11347 -5202,11342 -5224,11248 -5229,11230
@@ -7681,7 +7684,7 @@ Melanchthonstr. (Lankwitz): provisorischer Asphalt ¸ber Kopfsteinpflaster	Q1 692
 M¸hlenstr.: Asphalt	Q0 6914,3093 6842,2995
 # REMOVED (realisiert; die letzten Meter Pflaster bleiben vermutlich) --- #: XXX es wird ein 4m breiter Asphaltstreifen realisiert; auﬂerdem wird es vermutlich einen neuen diagonalen Weg zur Gallwitzallee geben vvv --- #: XXX Baumaﬂnahme GL6.15 (Realisierung nach 2011) vvv --- #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/uebersicht-baubereich-muehlenstrasse-2.pdf --- #: by: https://www.berliner-woche.de/lankwitz/c-verkehr/neubau-des-fernradweges-berlin-leipzig-soll-durch-gruenflaeche-fuehren_a167909 (schon realisiert?) --- #: add_fragezeichen: wurde die M¸hlenstr. bereits asphaltiert? vvv --- #: priority: #A --- #: osm_watch: way id="118635979" version="7" vvv --- #: last_checked: 2018-03-11 vvv --- #: next_check: 2018-06-18 vvv
 M¸hlenstr.: Asphalt	Q0 6842,2995 6763,2879 6745,2848
-#: by: https://www.infravelo.de/projekt/muehlenstrasse-1/ (bis 2. Quartal 2022)
+#: by: https://www.infravelo.de/projekt/muehlenstrasse-1/ (bis 2. Quartal 2022) ("abgeschlossen", tats‰chlich fehlt dieses Teilst¸ck in der Kartendarstellung)
 #: XXX Wird das Kopfsteinpflaster auch hier durch Asphalt ersetzt? Und bedeutet das, dass die Route durch den Gemeindepark nicht realisiert wird?
 #: last_checked: 2023-11-04
 #: check_frequency: 90d
@@ -8050,8 +8053,9 @@ Hirtschulzstr.: schlechtes Kopfsteinpflaster	Q3 24316,12566 24195,12558 24077,12
 #: by: https://www.uvp-verbund.de/trefferanzeige?docuuid=A52708EE-CE1B-417C-AD65-05C9975C940D&plugid=%2Fingrid-group%3Aige-iplug-be&docid=A52708EE-CE1B-417C-AD65-05C9975C940D
 #: by: https://www.uvp-verbund.de/documents/ingrid-group_ige-iplug-be/76160F48-E306-46B2-B99A-450DC406B96F/UL03_Anlage03_Lageplan_Bl_1.pdf
 #: by: https://www.uvp-verbund.de/documents/ingrid-group_ige-iplug-be/76160F48-E306-46B2-B99A-450DC406B96F/UL01_Anlage01_Erlaeuterungsbericht.pdf
+#: by: https://www.bahninfo-forum.de/read.php?9,728116
 #: XXX Straﬂenbahnhaltestelle soll auf die Westseite verlegt werden; gemeinsamer Rad- und Gehweg bis zur Schˆneicher Str.; Kopfsteinpflaster wird durch Asphalt ersetzt; ggfs. eine Signalisierung f¸r die Straﬂenbahn
-#: last_checked: 2023-09-17
+#: last_checked: 2024-01-14 (indoor research)
 #: check_frequency: 120d
 # REMOVED --- #: next_check: 2023-06-30
 Dahlwitzer Landstr.: Kopfsteinpflaster	Q2; 25601,6158 25584,6029
@@ -8430,8 +8434,8 @@ Bebelplatz: gepflastert	Q1 9680,12232 9664,12387
 (Park am Gleisdreieck, Eingang Kurf¸rstenstr.): Beton	Q0 8058,10306 8180,10282 8256,10264
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): wassergebundene Decke	Q1 8264,10192 8276,10079
 #: next_check_id: HELLWEG-2014 vvv
-#: last_checked: 2023-09-23 (mapillary) vvv
-#: check_frequency: 100d vvv
+#: last_checked: 2024-01-07 vvv
+#: check_frequency: 120d vvv
 #: osm_watch: way id="531908445" version="11"
 #: XXX wird hier noch eine wassergebundene Decke erstellt?
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): unbefestigt	Q2 8276,10079 8289,9988
@@ -8923,7 +8927,7 @@ Neue Blumenstr.: Asphalt	Q0- 11712,12614 12006,12464
 (Wriezener Park): Asphalt	Q0 13513,11351 13442,11400 13417,11416 13407,11416 13323,11497
 (Wriezener Park): Beton	Q0- 13323,11497 13308,11515 13261,11572
 (Wriezener Park): Beton	Q1 13261,11572 13239,11567
-(Wriezener Park, Eingang Pillauer Str.): Beton	Q1 13261,11572 13274,11585
+(Wriezener Park, Eingang Pillauer Str.): Betonsteinpflaster	Q0- 13261,11572 13274,11585
 (Wriezener Park): Asphalt	Q0 13239,11567 13172,11651
 (Helsingforser Str. - Wriezener Park): Beton	Q1 13324,11529 13308,11515
 (Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park): unbefestigte Wege, teilweise holprig	Q2- 12986,11699 13002,11705 13042,11749 13095,11703
@@ -9074,9 +9078,10 @@ Gehwegplatten	Q0 21844,238 21963,261 21979,274 21991,273 22008,262
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6453 (Empfehlung zu Verbesserungen in der BVV 2020-06-18 beschlossen)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7231 (Antrag)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7213 (Antrag: Asphaltierung des westlich weiterf¸hrenden Weges)
+#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7231 (Antrag f¸r die Unterquerung)
 #: XXX siehe auch Maﬂnahme Gr.9; auﬂerdem soll die Straﬂe "Am Kanal" asphaltiert werden -> letzteres ist realisiert
 #: note: jemand hat hier Teppiche ausgelegt, um die Lage etwas zu lindern (gesehen: 2018-05-06, 2019-01-02, 2019-10-19, 2020-11-28, 2021-04-24, 2022-06-06, 2022-10-05)
-#: last_checked: 2023-09-12
+#: last_checked: 2024-01-14 (BVV-Drucksache)
 #: check_frequency: 120d
 Unterf¸hrung unter Adlergestell und Bahn: sandig, aber notd¸rftig mit Teppichen ausgelegt	Q3+ 20939,2413 20904,2426 20810,2398
 (Hartriegelstr. - Michael-Br¸ckner-Str.): Verbundsteinpflaster	Q1+ 18695,5076 18622,5049 18514,5028 18425,5032
@@ -9111,7 +9116,7 @@ Georgenstr. (Blankenburg): schlechtes Kopfsteinpflaster	Q3 14304,20682 14236,207
 Georgenstr. (Blankenburg): m‰ﬂiger Asphalt, einige Wurzelhebungen	Q1- 14236,20773 14196,20825 14091,20962
 #: next_check_id: WEGAMFLIESSGRABEN-2023
 #: by: https://www.berliner-woche.de/pankow/c-verkehr/senat-und-bezirk-investieren-in-die-fahrradinfrastruktur_a282286
-#: by: http://www.infravelo.de/projekt/weg-am-fliessgraben/ (Ausbau zum 4m breiten Rad+Gehweg, vielleicht wird auch asphaltiert? in Planung, Bau 4. Quartal 2021 - 2. Quartal 2022) (mittlerweile: 1. Quartal 2022 - 4. Quartal 2022) (mittlerweile 4. Quartal 2022 - 4. Quartal 2023) (mittlerweile: 4. Quartal 2022 - 2. Quartal 2024) (1. Quartal 2023 - 2. Quartal 2024) (3. Quartal 2023 - 2. Quartal 2024)
+#: by: https://www.infravelo.de/projekt/weg-am-fliessgraben/ (Ausbau zum 4m breiten Rad+Gehweg, vielleicht wird auch asphaltiert? in Planung, Bau 4. Quartal 2021 - 2. Quartal 2022) (mittlerweile: 1. Quartal 2022 - 4. Quartal 2022) (mittlerweile 4. Quartal 2022 - 4. Quartal 2023) (mittlerweile: 4. Quartal 2022 - 2. Quartal 2024) (1. Quartal 2023 - 2. Quartal 2024) (3. Quartal 2023 - 2. Quartal 2024)
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2023/pressemitteilung.1285357.php (Asphaltierung, Baubeginn II. Quartal 2023)
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2023/pressemitteilung.1368603.php (Sperrung: 4. Oktober 2023 bis Ende Dezember 2023)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/neubau/artikel.1362724.php (verkehrliche Sperrmaﬂnahmen ... voraussichtlich bis Ende 2023)
@@ -9120,9 +9125,8 @@ Georgenstr. (Blankenburg): m‰ﬂiger Asphalt, einige Wurzelhebungen	Q1- 14236,2077
 #: XXX wird sich hier die Qualit‰t verbessern? laut den Lagepl‰nen wird asphaltiert
 #: XXX laut Plan wird der kurze Abschnitt der Parkstr. asphaltiert, inkl. Kreuzungsbereich
 #: XXX Diskrepanz zwischen Ende bei der BA-Pressemitteilung (Ende 2023) und infravelo (Sommer 2024)
-#: last_checked: 2022-08-26 (mapillary)
-#: next_check: 2023-12-31
-# REMOVED --- #: next_check: 2024-06-30
+#: last_checked: 2024-01-04 (mapillary)
+#: next_check: 2024-06-30
 (Parkstr./Am Flieﬂ - Heinersdorfer Str.): wassergebundene Decke	Q1 13888,20558 13827,20557 13743,20594 13602,20613 13584,20628
 Frau-Elster-Weg: Gras	Q3 13953,18842 13948,18757 14011,18589
 Schneehornpfad: Asphalt	Q0 13497,18087 13619,18222
@@ -10091,7 +10095,10 @@ Lieberoser Str.: Beton	Q0 6356,20910 5929,20882
 Drebkauer Str.: Beton	Q0 6317,20751 6117,20738
 (Weg in der Schˆnholzer Heide): Asphalt	Q0 8304,19475 8237,19501 8193,19555 8117,19605 8042,19629 7988,19680 7968,19704 7871,19698
 (Schˆnholzer Heide - Wilhelmsruher See): Asphalt	Q0 7968,19704 7974,19739
-(Oskar-Ziethen-Krankenhaus): Asphalt	Q0 16541,12071 16556,12180
+(Sana Klinikum Lichtenberg): Asphalt	Q0 16541,12071 16543,12087 16556,12180
+(Sana Klinikum Lichtenberg): Asphalt	Q0 16628,11961 16629,11992 16682,11987 16702,12114 16611,12130 16604,12079 16543,12087
+(Frankfurter Allee - Sana Klinikum Lichtenberg): Asphalt	Q0 16630,11915 16628,11934
+(Frankfurter Allee - Sana Klinikum Lichtenberg): Kopfsteinpflaster	Q2 16628,11934 16628,11961
 John-Sieg-Str.: Beton	Q0- 15434,11846 15504,11809 15532,11753 15660,11695
 (entlang des REWEs): Verbundsteinpflaster	Q1+ 15714,11941 15710,11857
 Frankfurter Allee [Wohngebiet]: Asphalt	Q0 15714,11941 15717,12010 15717,12015
@@ -10540,7 +10547,7 @@ Schweriner Ring [9-19 ungerade]: Beton	Q0- 17444,19115 17259,19121
 (Weg auf dem L‰rmschutzwall): unbefestigter Weg, teilweise Schotter	Q2+ 16665,19021 16699,19090 17197,18473 17275,18356 17564,18010 17585,17963
 #: historical_note: fr¸her: note: die ersten Meter im Norden haben noch eine "vern¸nftige" wassergebundene Decke; Eintrag: unbefestigter Pfad, Q2
 (Zingster Str. - Wartenberger Weg): Asphalt	Q0 16358,18687 16325,18796
-Zingster Str.: Beton	Q0 16358,18687 16445,18571 16534,18457 16583,18386
+Zingster Str.: Beton	Q0 16358,18687 16371,18669 16445,18571 16534,18457 16583,18386
 (entlang der Stadtbahn): Verbundsteinpflaster	Q1- 10117,12973 10004,12966 9930,12947
 Lentzeallee [Stichstraﬂe]: Verbundsteinpflaster	Q1 3165,6939 3190,7047
 # REMOVED (vermutlich nicht) --- #: XXX wird bei den Bauarbeiten vielleicht das Kopfsteinpflaster durch Asphalt ersetzt? --- #: osm_watch: way id="493264400" version="1" --- #: last_checked: 2018-06-30 --- #: check_frequency: 100d
@@ -12657,7 +12664,7 @@ Riedingerstr.: Asphalt	Q0 10512,-1994 10507,-2016 10465,-2129
 (Oststr., Virchow-Klinikum): Asphalt	Q0; 6470,14990 6414,14981
 (Oststr., Virchow-Klinikum): Kleinsteinpflaster	Q1-; 6414,14981 6470,14990
 (S¸dring, Virchow-Klinikum): Asphalt	Q0 6158,14851 6078,14864 6073,14892
-(S¸dring, Virchow-Klinikum): Beton	Q0 6073,14892 6118,14889 6158,14851 6180,14806 6210,14808 6252,14812 6319,14821 6305,14964
+(S¸dring, Virchow-Klinikum): Beton	Q0 6073,14892 6106,14890 6118,14889 6158,14851 6180,14806 6210,14808 6252,14812 6319,14821 6305,14964
 (S¸dring, Virchow-Klinikum): Beton	Q0 6231,14952 6252,14812
 (Virchow-Klinikum, Einfahrt Nordufer/S¸dring): Asphalt mit Sch‰den	Q1 6210,14808 6213,14777
 (S¸dring - Weststr., Virchow-Klinikum): Gehwegplatten	Q0- 6073,14892 6035,14913 6030,14924
@@ -12665,6 +12672,7 @@ Riedingerstr.: Asphalt	Q0 10512,-1994 10507,-2016 10465,-2129
 (Nordring, Virchow-Klinikum): Beton	Q0 6265,15349 6275,15335 6293,15330
 (Nordring, Virchow-Klinikum): Beton	Q0 6275,15335 6262,15323 6272,15249 6249,15237
 (Nordring, Virchow-Klinikum): Asphalt/Beton	Q0 6249,15237 6254,15191
+(S¸dstr. - S¸dring, Virchow-Klinikum): Asphalt	Q0 6104,14937 6106,14890
 # 
 (Lutterbacher Str. - Dahlemer Weg): Gehwegplatten	Q0- 2151,3126 2166,3138 2193,3142
 (Fischtalpark): wassergebundene Decke	Q1- 719,4268 574,4150
@@ -12854,7 +12862,7 @@ Parallelweg am Eichgestell - Wasserwerk Wuhlheide: unbefestigter Weg	Q2+ 19045,6
 Lisa-Fittko-Str.: Asphalt	Q0 7734,13944 7820,13994
 Lisa-Fittko-Str.: Verbundsteinpflaster	Q1+ 7734,13944 7731,13927 7787,13839 7787,13838 7872,13685
 #: next_check_id: EUROPACITY-2015
-#: last_checked: 2023-12-23 vvv
+#: last_checked: 2024-01-08 vvv
 #: check_frequency: 45d vvv
 (Heidestr./Hedwig-Porsch¸tz-Str. - George-Stephenson-Str.): Asphalt, letzte Deckschicht fehlt, Kanaldeckel ragen heraus	Q1- 7569,14209 7652,14257
 George-Stephenson-Str.: Asphalt, letzte Deckschicht fehlt, Kanaldeckel ragen heraus	Q1- 7487,14472 7446,14403 7529,14274 7569,14209 7614,14136
@@ -13024,7 +13032,7 @@ Rhenser Str.: Mosaikpflaster	Q1- 19133,9087 19083,9062
 Bergmannstr.: Asphalt, einige leichte Sch‰den	Q0- 10123,9233 10250,9233
 #: next_check_id: BERGMANN-2023
 #: XXX Sch‰den vor allem am Fahrbahnrand, wo man nun fahren muss, in der Fahrbahnmitte w‰re es Q0-
-#: last_checked: 2023-12-26
+#: last_checked: 2024-01-13
 #: check_frequency: 120d
 Bergmannstr.: Asphalt mit Sch‰den	Q1+ 10250,9233 10366,9233
 #: historical_note: bis Herbst 2023: Asphalt, einige leichte Sch‰den, Q0-
@@ -13386,8 +13394,13 @@ Prenzlauer Promenade [Nebenfahrbahn]: Asphalt	Q0 11951,16914 11993,16862
 Alte Potsdamer Str.: Betonpflaster	Q0- 8280,11296 8318,11324 8375,11368 8389,11378 8481,11447 8479,11493
 # REMOVED (ersetzte) --- Alte Potsdamer Str.: Kleinsteinpflaster	Q1 8389,11378 8375,11368
 # 
+#: by: https://www.infravelo.de/projekt/ollenhauerstrasse/ (1. Quartal 2025 - 4. Quartal 2028)
+#: XXX geplante Sanierung der Fahrbahn, dabei gibt es hier vielleicht auch Verbesserungen; was wird mit den vorhandenen Hochbordabschnitten? vvv
+#: next_check: 2028-12-31 vvv
 Ollenhauerstr.: Radspur mit schadhaftem Asphalt	Q1+; 5243,18162 5301,18447 5324,18560 5345,18675
 Ollenhauerstr.: Radspur mit schadhaftem Asphalt	Q1+; 5324,18560 5301,18447 5243,18162 5225,18070
+#: next_check ^^^
+#: XXX ^^^
 # 
 Marathonallee: Asphalt mit leichten Rissen	Q0- 818,11954 702,11929 589,11953
 Marathonallee: Asphalt mit Sch‰den	Q1+ 589,11953 439,11968
@@ -14539,8 +14552,10 @@ Freizeitpark L¸bars: befestigter Sandweg mittlerer G¸te, teilweise mit stˆrenden
 Freizeitpark L¸bars: Asphalt	Q0 7841,23122 7839,23195
 #: note: die ADFC-Karte sagt hier "m‰ﬂig geeignet":
 #: corrected_by: srt (Betonplatten, Parkfl‰chen schlecht gepflastert, Q2 -> ...) vvv
-Schillerstr.: Asphalt, Parkfl‰chen schlecht gepflastert	Q2+; 10066,20494 10178,20525 10309,20562 10409,20592
-Schillerstr.: Asphalt, abschnittsweise ist der Rand gepflastert	Q1+; 10409,20592 10309,20562 10178,20525 10066,20494
+#: corrected_by: mapillary (Asphalt, Parkfl‰chen schlecht gepflastert, Q2+; -> mˆglicherweise nach Bauarbeiten ge‰ndert)
+Schillerstr.: Asphalt	Q0; 10066,20494 10178,20525 10226,20539
+Schillerstr.: Asphalt, Parkfl‰chen schlecht gepflastert	Q2+; 10226,20539 10309,20562 10409,20592
+Schillerstr.: Asphalt, abschnittsweise ist der Rand gepflastert	Q1+; 10409,20592 10309,20562 10226,20539 10178,20525 10066,20494
 #: corrected_by ^^^
 Schillerstr.: Asphalt, Rand/Parkfl‰chen schlecht gepflastert	Q2+ 10409,20592 10537,20633 10635,20693 10705,20739 10743,20764
 #: corrected_by: srt (Kopfsteinpflaster -> ...)
@@ -18350,7 +18365,7 @@ Mariendorfer-Hafen-Weg: Holzbohlen	Q1 7795,4242 7769,4315
 #: by: Petra Hennecke: vvv
 #: corrected_by: srt (Q0 -> ...)
 Ahrenshooper Str.: Beton	Q1+ 16761,18516 16889,18347 16949,18261 17082,18068
-Ahrenshooper Str.: Beton	Q0 16905,17949 17082,18068 17215,18153
+Ahrenshooper Str.: Beton	Q0 16905,17949 16938,17971 17082,18068 17215,18153
 #: by: ^^^
 # 
 #: by: Kleinke (honda):
@@ -31109,11 +31124,11 @@ Johannes-Zoschke-Str.: m‰ﬂiger Asphalt	Q2+ 19030,9530 19037,9636
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8654 vvv
 #: by: https://www.berliner-woche.de/karlshorst/c-bauen/rheinpfalzallee-wird-ab-2024-saniert_a332567 (Instandsetzung ab 2024) vvv
 #: by: https://www.tagesspiegel.de/berlin/bezirke/700-000-euro-fur-70-meter-strasse-diskussion-um-ausbau-dieser-strasse-in-berlin-10088179.html
-#: by: https://www.berliner-woche.de/karlshorst/c-bauen/ausbau-der-rheinpfalzallee-auf-der-kippe_a387334
+#: by: https://www.berliner-woche.de/karlshorst/c-bauen/ausbau-der-rheinpfalzallee-auf-der-kippe_a387334 (Baubeginn 2025?)
 #: by: https://www.berliner-woche.de/karlshorst/c-verkehr/ausbau-der-rheinpfalzallee-sollte-laut-spd-dringend-in-die-investitionsplanung_a391367
 #: XXX Instandsetzung geplant, danach vielleicht befestigt? vvv
-#: last_checked: 2023-08-28 vvv
-#: next_check: 2024-06-01 vvv
+#: last_checked: 2024-01-09 vvv
+#: next_check: 2025-03-01 vvv
 #: confirmed_by: srt
 Rheinpfalzallee: Sandweg	Q2+ 18865,9608 18931,9629
 #: confirmed_by: srt (added holprig)

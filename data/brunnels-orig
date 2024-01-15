@@ -266,8 +266,10 @@ Rathausbrücke	Br 10357,12356 10416,12394
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1219198.php (Baubeginn 2024, Fertigstellung 2028)
 #: by: https://berliner-abendblatt.de/2022/06/22/muehlendammbruecke-konzept-wurde-ueberarbeitet/
 #: by: https://www.berliner-woche.de/mitte/c-bauen/senat-ueberarbeitet-plaene-fuer-muehlendammbruecke-und-gertraudenbruecke_a350225
+#: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/muehlendammbruecke/ (voraussichtliche Bauzeit: 2024 bis 2028)
+#: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/muehlendammbruecke/verkehrsfuehrung/
 #: XXX Mühlendammbrücke: geplanter Neubau --- wird es zu Einschränkungen für den Radverkehr kommen?
-#: last_checked: 2023-09-25
+#: last_checked: 2024-01-11
 #: next_check: 2024-06-01
 Mühlendammbrücke	Br 10574,12131 10625,12206
 # 
@@ -281,12 +283,13 @@ Eugen-Kleine-Brücke	Br 3698,1450 3766,1389
 #: by: https://www.morgenpost.de/berlin/article234710931/60-Berliner-Bruecken-derzeit-nur-eingeschraenkt-nutzbar.html (hier wird auch die Techowbrücke erwähnt)
 #: by: https://www.berliner-zeitung.de/mensch-metropole/marggraffbruecke-in-berlin-wird-eine-weitere-bruecke-abgerissen-li.207787
 #: by: https://www.berliner-zeitung.de/mensch-metropole/betonkrebs-und-risse-in-berlin-startet-das-naechste-grosse-brueckenbauprojekt-li.315212 (Erwähnung)
-#: by: https://www.wsa-spree-havel.wsv.de/Webs/WSA/Spree-Havel/DE/04_Service/08_Aktuelle_Bauvorhaben/02_Bauvorhaben_Dritter/bauarbeiten_west_berlin.html?nn=3289178 (Stand 1.3.2023)
+#: by[removed]: https://www.wsa-spree-havel.wsv.de/Webs/WSA/Spree-Havel/DE/04_Service/08_Aktuelle_Bauvorhaben/02_Bauvorhaben_Dritter/bauarbeiten_west_berlin.html?nn=3289178 (Stand 1.3.2023)
+#: by: https://www.wsa-spree-havel.wsv.de/Webs/WSA/Spree-Havel/DE/04_Service/09_Aktuelle_Bauvorhaben/02_Bauvorhaben_Dritter/bauarbeiten_west_berlin.html?nn=3289178 (umbenannt, weiterhin Stand 1.3.2023)
 #: by: https://www.wsa-spree-havel.wsv.de/Webs/WSA/Spree-Havel/DE/04_Service/08_Aktuelle_Bauvorhaben/02_Bauvorhaben_Dritter/bauarbeiten_west_berlin.pdf?__blob=publicationFile&v=2 (Stand 1.3.2023, in Planung: Bäkebrücke, aber auch Knesebeckbrücke und Altglienicker Brücke)
 #: by: https://khp.berlin/referenzen/ingenieurbau/planungen/baekebruecke-in-berlin-lichterfelde/
 #: XXX möglicherweise Neubau ab 2022 --- mittlerweile ab 2023?
 #: also_indoor: search Bäkebrücke
-#: last_checked: 2023-10-27 (indoor)
+#: last_checked: 2024-01-07 (indoor)
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2023-01-01
 Bäkebrücke	Br 4587,3097 4659,3065
