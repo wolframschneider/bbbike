@@ -1,6 +1,956 @@
-$#temp_blocking = 1624;
+$#temp_blocking = 727;
 push @temp_blocking,
 (
+       {
+         'data' => '#: by: https://www.berlin.de/events/4390033-2229501-primavera-fruehlingsfest.html (geplanter Termin: 08. bis 09. Mai 2021) (2021 abgesagt)
+#: by: https://www.berlin.de/events/4390033-2229501-fruehlings-und-spargelfest-primavera.html (geplanter Termin: 07. und 08. Mai 2022)
+#: source_id: viz2021:13.3532,52.48982,07.05.2022,06:00
+#: by: https://nitter.net/VIZ_Berlin/status/1522628508719075328#m
+#: by: https://nitter.net/pic/media%2FFSAFp14XwAA4gcp.jpg%3Fname%3Dorig
+	2::temp 7201,8870 7101,9027 7035,9161 7012,9222 7001,9291
+	2::temp 7308,9163 7101,9027 6975,8944
+	2::temp 6945,9142 7035,9161
+	2::temp 7012,9222 7124,9226
+',
+         'from' => 1715292000,
+         'id' => 728,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              24,
+                              'months',
+                              4,
+                              'start',
+                              '2021-10-25T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'http://www.volksfeste-in-deutschland.de/primavera-fruehling-auf-der-akazienstrasse-in-berlin-schoeneberg.html',
+         'text' => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (11.05.2024 und 12.05.2024)',
+         'type' => 'gesperrt',
+         'until' => 1715551199
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/events/4829161-2229501-rudower-fruehlingsmeile.html (geplanter Termin: 07. und 08. Mai 2022)
+#: source_id: viz2021:13.49469,52.42125,06.05.2022,19:00
+	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
+	2::temp 16610,1715 16767,1831
+',
+         'from' => 1714687200,
+         'id' => 952,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              3,
+                              'months',
+                              5,
+                              'start',
+                              '2021-10-25T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.berlin.de/events/4829161-2229501-rudower-fruehlingsmeile.html',
+         'text' => 'Alt-Rudow: Rudower Frühlingsmeile, Straße zwischen Köpenicker Str. und Bildhauerweg, sowie Krokusstr. bis Prieroser Str. gesperrt (4. und 5. Mai 2024)',
+         'type' => 'gesperrt',
+         'until' => 1714946399
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => '#: by: https://www.stadtrand-nachrichten.de/griebnitzsee-steglitz-zehlendorf-berlin/
 	2::temp -8625,-1176 -8700,-997 -8813,-933 -8913,-813 -9116,-737 -9254,-656 -9358,-537 -9375,-502 -9445,-377 -9585,-277 -9795,-230
@@ -1295,6 +2245,35 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
+       {
+         'data' => '#: by: http://www.winzerfest-köpenick.de/ (existiert mittlerweile nicht mehr; siehe unten)
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2020/pressemitteilung.907823.php (fällt 2020 aus)
+#: by: https://www.winzerfest-koepenick.de/?date=20220317 (geplant für 22.04. bis zum 24.04.2022)
+#: by: https://www.winzerfest-koepenick.de/?date=20230322
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1311487.php
+#: by: https://www.winzerfest-koepenick.de/ (19.4. bis 21.4.2024)
+# REMOVED --- #: tempex: 20170421T1400-20170423 vvv
+	2::temp 22138,4642 22111,4562 22093,4499
+	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
+	2::temp 22111,4562 22162,4546 22214,4548
+# REMOVED --- #: tempex ^^^
+',
+         'from' => 1713441600,
+         'id' => 2419,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              18,
+                              'months',
+                              4
+                            ]
+                          ],
+         'text' => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 19.04.2024 bis 21.04.2024',
+         'type' => 'gesperrt',
+         'until' => 1713736799
+       },
        undef,
        undef,
        undef,
@@ -1302,6 +2281,83 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
+       {
+         'data' => '#: by: https://www.berliner-frauenlauf.de/?date=20210404 (geplanter Termin: vom 13. bis 16. Mai 2021)
+#: by: https://www.berlin.de/events/2101687-2229501-avonrunning-berliner-frauenlauf.html (2021 abgesagt)
+#: by: https://viz.berlin.de/2022/05/laufveranstaltungen/
+#: source_id: viz2021:13.37679,52.5163,12.05.2023,20:00 (bis 14.05.2023)
+# REMOVED --- #: tempex: 20170520 vvv
+	2::temp 8055,12186 8119,12414
+	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 6828,12031 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8034,12093 8057,12065 8052,12033 8022,12016 8020,11937 8095,11919 8132,11910 8221,11885 8244,11878 8262,11883 8453,12099 8522,12187 8538,12245
+	2::temp 6809,11979 6984,11859 7058,11809 7163,11738 7373,11594 7418,11566 7504,11512
+	2::temp 6778,11742 6980,11790 7058,11809 7173,11864 7182,11870 7200,11881 7240,11907 7449,11883
+	2::temp 6809,11570 6869,11567 7018,11615 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629 7623,11624 7648,11708 7701,11798 7706,11878 7717,11918 7772,12040 7775,12114
+	2::temp 8026,11764 8016,11770 7793,11878 7717,11918 7658,11947 7634,11920 7559,11888 7449,11883
+	2::temp 8522,12239 8466,12197
+	2::temp 7059,11978 7007,11923 6984,11859 6980,11790 6996,11661 7018,11615 7092,11593 7362,11561 7418,11566 7549,11608 7612,11597 7648,11592 7664,11597
+	2::temp 7600,11513 7664,11597 7693,11627 7732,11660 7796,11681 7901,11684 8014,11753 8026,11764 8140,11850 8167,11865
+	2::temp 8221,11885 8215,12156 8214,12205
+	2::temp 8244,11878 8327,12174 8344,12221
+	3 7429,12070 7383,12095 7031,12320
+	3 7875,12363 7822,12201 7816,12150 7823,12120
+	3 7031,12320 7383,12095 7429,12070
+	3 7823,12120 7816,12150 7822,12201 7875,12363
+	3 8391,12389 8344,12221 8327,12174
+	3 8327,12174 8344,12221 8391,12389
+# REMOVED --- #: tempex ^^^
+',
+         'from' => 1714773600,
+         'id' => 2427,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              5,
+                              'start',
+                              '2021-10-25T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.berliner-frauenlauf.de/der-tag/strecke.html',
+         'text' => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 4. Mai 2023',
+         'type' => 'gesperrt',
+         'until' => 1714881600
+       },
+       undef,
+       undef,
+       undef,
+       {
+         'data' => '# REMOVED (ja) --- #: XXX wird die Veranstaltung noch abgesagt? --- #: next_check: 2020-04-23
+#: by: https://www.volksfeste-in-deutschland.de/kunst-wein-in-lichtenrade.html
+#: by: https://www.family-and-friends-ev.de/?date=20210418 (4.-6. Juni 2021, dann aber vermutlich kein Maientanz")
+#: by: https://www.family-and-friends-ev.de/kunst-trifft-wein-vom-4-6-juni-2021 (2021 verschoben auf 29. April - 1. Mai 2022)
+#: by: https://www.family-and-friends-ev.de/kunst-trifft-wein-2022 (2022: 29. April - 1. Mai 2022)
+#: by: https://www.family-and-friends-ev.de/kunst-trifft-wein-am-idyllischen-dorfteich-lichtenrade
+#: by: https://www.family-and-friends-ev.de/kunst-trifft-wein (2024: 3. bis 5. Mai)
+# REMOVED (müsste korrigiert werden) --- #: tempex: YYYY0429-YYYY0501
+	2::temp 11064,-1597 11054,-1659 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+',
+         'from' => 1714600800,
+         'id' => 2431,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
+                              'months',
+                              4,
+                              'start',
+                              '2021-05-06T00:00:00'
+                            ]
+                          ],
+         'text' => 'Alt-Lichtenrade: Veranstaltung (Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (03.05.2024 bis 05.05.2024)',
+         'type' => 'handicap',
+         'until' => 1714946399
+       },
        undef,
        undef,
        undef,
@@ -1309,13 +2365,36 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.die-classic-days-berlin.de/programm-2/
+#: by: https://www.berlin.de/events/2902692-2229501-classic-days-berlin.html (voraussichtlich 12.+13.6.2021)
+#: by: https://www.die-classic-days-berlin.de/programm-2/ (wird auf 2022 verschoben)
+#: by: https://www.die-classic-days-berlin.de/programm-2/?date=20220416 (geplant: 18. und 19. Juni 2022)
+#: note: kann auch im Juni oder Juli stattfinden
+#: source_id: viz2021:13.325285,52.502859,16.06.2022,12:00
+# REMOVED --- #: tempex: 20170616T0400-20170619T0400
+	q4::temp 5475,10808 5341,10756 5215,10711 5069,10662 4838,10597 4672,10552 4496,10504 4371,10465 4245,10435
+	q4::temp 5072,10701 5069,10662
+',
+         'from' => 1714701600,
+         'id' => 2439,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              6,
+                              'months',
+                              5,
+                              'start',
+                              '2021-06-01T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'IM_025248',
+         'text' => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, 04.05.2024 und 05.05.2024',
+         'type' => 'handicap',
+         'until' => 1714964400
+       },
        undef,
        undef,
        undef,
@@ -1708,32 +2787,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '# REMOVED (offen) --- #: confirmed_by: srt --- #: last_checked: 2015-08-16 --- #: check_frequency: 45d
-#: by: https://www.architektur-urbanistik.berlin/index.php?threads/stadtbad-tiergarten-sanierung-und-neues-au%C3%9Fenbecken.704/
-#: by: https://www.berlinerbaeder.de/baeder/stadtbad-tiergarten/
-#: by: https://www.berlinerbaeder.de/aktuelles/detail/einblicke-in-die-sanierung-des-stadtbades-tiergarten/ (Fertigstellung Mitte 2023)
-#: by: https://www.berliner-woche.de/tiergarten/c-bauen/aussenbecken-im-stadtbad-tiergarten-ist-nicht-ausfinanziert_a369047 (Eröffnung: Spätsommer 2023)
-#: by: https://berliner-abendblatt.de/berlin-news/baederbetriebe-investieren-so-viel-wie-nie-id209419
-#: by: https://www.berlin.de/special/sport-und-fitness/adressen/schwimmbad/stadtbad-tiergarten-4f143a00b4fc475f0b8d1000.html (Wiedereröffnung für 2023 geplant)
-#: by: https://www.berliner-woche.de/moabit/c-bauen/anbieter-fuer-die-umkleiden-ausgefallen_a390371 (Fertigstellung im dritten Quartal 2023)
-#: by: https://www.berliner-woche.de/tiergarten/c-bauen/baederbetriebe-wollen-halle-anfang-2024-eroeffnen_a399828
-#: osm_watch: way id="462738551" version="21"
-#: osm_watch: way id="848019125" version="6"
-#: osm_watch: note 4030867 1
-#: add_fragezeichen: Besteht die Sperrung weiterhin?
-#: XXX laut osm-Notiz Öffnung des Stadtbads am 23.1.2023
-#: last_checked: 2023-12-29
-#: next_check: 2024-01-23
-	2::inwork 7306,13418 7402,13475
-# REMOVED ---	2::inwork 7402,13475 7422,13487 7451,13504 7630,13584
-',
-         'from' => undef,
-         'id' => 2700,
-         'text' => 'Döberitzer Verbindung: wegen Bauarbeiten vor dem Stadtbad Tiergarten gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        {
@@ -2355,7 +3409,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://www.berliner-woche.de/karow/c-verkehr/wasserbetriebe-bauen-am-bahnhof-karow_a359438 (Eröffnung 2023)
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-15236.pdf (Freigabe im 3. Quartal 2024)
 #: by: https://www.berliner-woche.de/karow/c-bauen/strasse-am-bahnhof-karow-wird-tiefer-gelegt_a382636 (voraussichtliche Freigabe im Herbst 2024)
-#: last_checked: 2023-05-13 (mapillary)
+#: last_checked: 2024-01-20 (mapillary)
 #: next_check: 2024-07-08
 	2::inwork 14539,23306 14573,23295 14597,23280
 ',
@@ -2537,7 +3591,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: source_id: 2147344558 (bis 10.09.2020) (inaktiv)
 #: source_id: 2147346164 (bis 06.07.2021, Gesamtbaumaßnahme bis 2024) (vielleicht inaktiv)
 #: source_id: 2147344558 (bis 30.09.2029) (inaktiv)
-#: source_id: viz2021:13.373965,52.425564,30.07.2020,09:00 (bis 4.6.2022, Gesamtbaumaßnahme bis 2024) (bis 16.7.2021) (bis 28.10.2022) (bis 31.3.2023) (bis 22.2.2023) (bis 31.05.2023) (bis 23.6.2023) (bis 30.6.2023) (bis 15.12.2023) (bis 19.01.2023)
+#: source_id: viz2021:13.373965,52.425564,30.07.2020,09:00 (bis 4.6.2022, Gesamtbaumaßnahme bis 2024) (bis 16.7.2021) (bis 28.10.2022) (bis 31.3.2023) (bis 22.2.2023) (bis 31.05.2023) (bis 23.6.2023) (bis 30.6.2023) (bis 15.12.2023) (bis 19.01.2023) (bis 30.04.2023)
 #: by: https://www.berliner-woche.de/marienfelde/c-bauen/projektverantwortliche-geben-ueberblick-ueber-bauhauptleistungen-zur-dresdner-bahn_a233872 (evtl. bis September 2020?)
 #: by: https://www.bahninfo-forum.de/read.php?9,578649,681909#msg-681909 (Brückenabbruch)
 #: by: https://www.baustellen-doku.info/berlin_dresdener-bahn/PFA1_Marienfelde_Attilastrasse-Schichauweg/20210716/
@@ -2547,7 +3601,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: also_indoor: traffic (ex-G,H,B,W)
 #: last_checked: 2023-12-12 (mapillary)
 #: check_frequency: 90d
-#: next_check: 2024-01-19
+#: next_check: 2024-04-30
 # REMOVED --- #: next_check: 2024-01-01
 # REMOVED ---	2::inwork 8602,2377 8552,2243
 	2::inwork 8552,2243 8559,2203 8588,2176
@@ -2571,7 +3625,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: XXX "voraussichtlich ab September 2023 können die neuen Wege genutzt werden", aber weitere Bauarbeiten bis Ende Oktober 2023
 #: note: die Sperrung im Mittelteil kann über einen engen und teilweise verwurzelten Trampelpfad umgangen werden, für Radfahrer nur bedingt praktikabel
-#: last_checked: 2024-01-12 vvv
+#: last_checked: 2024-01-24 vvv
 #: check_frequency: 14d vvv
 # REMOVED --- #: next_check: 2023-08-31 vvv
 # REMOVED (hier nicht) ---	2::inwork 13172,11651 13239,11567
@@ -2588,7 +3642,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 ',
          'from' => 1677970800,
          'id' => 3159,
-         'text' => 'Wriezener Park: einige Wege wegen Bauarbeiten gesperrt (Stand Mitte Januar 2024: nur eine Anbindung zur Helsingforser Str. ist noch immer gesperrt)',
+         'text' => 'Wriezener Park: einige Wege wegen Bauarbeiten gesperrt (Stand Ende Januar 2024: nur eine Anbindung zur Helsingforser Str. ist noch immer gesperrt)',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -2748,7 +3802,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: source_id: viz2021:13.31527,52.44953,29.09.2022,18:39 (bis 7.10.2022) (inaktiv)
 #: source_id: viz2021:13.301624,52.444612,02.05.2022,07:00 (bis 30.6.2022) (inaktiv) (bis 30.11.2022) (bis 1.12.2022, Gesamtzeitraum bis 10/2023) (bis 31.1.2023) (bis 30.11.2023) (bis 20.7.2023, Gesamtzeitraum bis 11/2023) (inaktiv)
 #: source_id[inactive]: bvg2021:188#BVG259885_0
-#: source_id: viz2021:13.306741,52.446776,20.07.2023,07:00 (bis 30.11.2023, zwischen Moltkestr. und Tietzenweg) (inaktiv) (bis 22.12.2023) (bis 05.01.2024) (bis 19.01.2024)
+#: source_id: viz2021:13.306741,52.446776,20.07.2023,07:00 (bis 30.11.2023, zwischen Moltkestr. und Tietzenweg) (inaktiv) (bis 22.12.2023) (bis 05.01.2024) (bis 19.01.2024) (bis 05.02.2024, im Anschluss weitere Arbeiten)
 # REMOVED --- #: priority: #A --- #: last_checked: 2021-09-26 --- #: next_check: 2022-03-18
 #: also_indoor: traffic (H,ex-G,ex-B) vvv
 #: note: früher auch "außerdem Lipaer Str. zwischen Neuchateller Str. und Gardeschützenweg gesperrt"
@@ -2762,7 +3816,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 # REMOVED (beendet?) ---	q4::inwork; 3643,4232 3523,4139
 #: add_fragezeichen: Sind die Bauarbeiten im Gardeschützenweg bereits beendet? vvv
 #: last_checked: 2022-10-24 vvv
-#: next_check: 2024-01-19 vvv
+#: next_check: 2024-02-05 vvv
 	q3::inwork; 4214,4595 4039,4500
 Chlumer Str.: Anbindung gesperrt	q3::inwork 4008,4555 4039,4500
 Tietzenweg: Anbindung gesperrt	q3::inwork 3587,4312 3643,4232 3766,4058
@@ -2778,9 +3832,9 @@ zwischen Moltkestr. und Tietzenweg	q4::inwork; 3934,4441 3643,4232
 ',
          'from' => 1622356200,
          'id' => 3261,
-         'text' => 'Gardeschützenweg: abschnittsweise Sperrungen der Fahrbahn zwischen Hindenburgdamm und Viktoriaplatz (nur Richtung Westen), außerdem Anbindungen Tietzenweg und Chlumer Str. gesperrt, voraussichtlich bis 19. Januar 2024',
+         'text' => 'Gardeschützenweg: abschnittsweise Sperrungen der Fahrbahn zwischen Hindenburgdamm und Viktoriaplatz (nur Richtung Westen), außerdem Anbindungen Tietzenweg und Chlumer Str. gesperrt, voraussichtlich bis 5. Februar 2024, vermutlich noch länger',
          'type' => 'handicap',
-         'until' => 1705680000
+         'until' => undef
        },
        undef,
        undef,
@@ -3840,14 +4894,13 @@ Woelckpromenade: Einbahnstraßenregelung	q4::inwork; 13710,16544 13756,16620 1384
        {
          'data' => '#: source_id: viz2021:13.272377,52.453518,17.08.2022,09:00 (hier nur bis 12.9.2022) (mittlerweile bis 19.9.2022) (inaktiv)
 #: source_id: viz2021:13.272377,52.453518,19.09.2022,12:00 (bis 25.11.2022) (bis 26.1.2023) (bis 3.3.2023) (bis 13.4.2023) (bis 21.4.2023) (inaktiv)
-#: source_id: viz2021:13.270564,52.453869,21.04.2023,09:00 (bis 20.06.2023) (bis 21.7.2023) (bis 22.8.2023) (bis 25.10.2023) (bis 9.12.2023) (bis 9.11.2023, im Anschluss folgen weitere Arbeiten) (bis 6.12.2023 + weitere Arbeiten) (bis 15.1.2024) (inaktiv)
+#: source_id: viz2021:13.270564,52.453869,21.04.2023,09:00 (bis 20.06.2023) (bis 21.7.2023) (bis 22.8.2023) (bis 25.10.2023) (bis 9.12.2023) (bis 9.11.2023, im Anschluss folgen weitere Arbeiten) (bis 6.12.2023 + weitere Arbeiten) (bis 15.1.2024) (inaktiv) (bis 8.3.2024)
 #: by: https://viz.berlin.de/2022/08/verkehrsvorschau-170822/ (bis 2023)
 #: by: https://nitter.cz/VIZ_Berlin/status/1559793397908381696#m
 #: by: https://nitter.cz/pic/media%2FFaSkXFdX0AQFyze.jpg%3Fname%3Dorig
 #: by: https://nitter.cz/pic/media%2FFaSkXFeXEAAqM9x.jpg%3Fname%3Dorig
 #: by: https://nitter.cz/VIZ_Berlin/status/1649298167484014594#m
 #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnVLMUM2VlhzQUVMcm1hLmpwZw==
-#: note: bei VIZ nicht verlängert, laut rbb bis 08.03.2024
 #: add_fragezeichen: Sind die Bauarbeiten hier beendet? Gibt es noch Einschränkungen für Radfahrer?
 #: next_check: 2024-03-08
 	q4::inwork; 1333,5246 1385,5214 1443,5193 1486,5175 1514,5163 1573,5152
@@ -4092,7 +5145,7 @@ Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
          'data' => '#: note: evtl. außerhalb der Arbeitszeiten problemlos für Radfahrer passierbar, gesehen 2022-10-17 (So)
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? vvv
 #: also_indoor: traffic (B,H,G) vvv
-#: last_checked: 2024-01-07 (mapillary) vvv
+#: last_checked: 2024-01-20 (mapillary) vvv
 #: check_frequency: 30d vvv
 nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 # REMOVED (hier nicht mehr) --- nur Gehweg frei	q4::inwork 7630,20698 7616,20633
@@ -4121,14 +5174,15 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
        {
          'data' => '#: by: mapillary
 #: confirmed_by: srt
-#: osm_watch: way id="978727717" version="6"
+#: osm_watch: way id="978727717" version="7"
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet? Wird der Weg neu asphaltiert sein?
-#: last_checked: 2023-10-22
+#: note: am 2024-01-20 (Sa) waren die Absperrungen weggeschoben und man konnte vermutlich passieren
+#: last_checked: 2024-01-20
 	2::inwork 21176,16480 21129,16426 21107,16418 21070,16415 20996,16429 20923,16435 20898,16420
 ',
          'from' => undef,
          'id' => 3658,
-         'text' => 'Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg gesperrt, Ende der Bauarbeiten unbekannt',
+         'text' => 'Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg kann gesperrt sein, Ende der Bauarbeiten unbekannt',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -4159,6 +5213,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/ml48-sch%C3%B6neberg.652/#post-19614
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/11-000-quadratmeter-flaeche-fuer-bueros-wohnen-und-gewerbe_a380464 ("Schöneberger Eck", bis Frühjahr 2025)
 #: by: https://www.tagesspiegel.de/berlin/bezirke/erfolg-fur-berliner-burgerinitiative-gericht-bremst-hochhausprojekt-schoneberger-eck-11038744.html
+#: by: https://www.berliner-woche.de/schoeneberg/c-bauen/hochhaus-am-barbarossadreieck-darf-derzeit-nicht-weitergebaut-werden_a405579
 #: note: Halteverbotsschilder bis 31.12.2023
 #: note: Außerdem Bauschild der Wasserbetriebe, bis November 2023; es gibt auch kleinere Einschränkungen an den Kreuzungen der Barbarossastr. (mittlerweile (Juni 2023) sind diese entfallen)
 #: add_fragezeichen: Ist die Fahrbahn der Speyerer Str. weiterhin gesperrt?
@@ -4183,7 +5238,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
        {
          'data' => '#: next_check_id: AMTREPTOWERPARK-2020
 #: XXX nördlicher Geh- und Radweg wegen Bauarbeiten gesperrt
-#: last_checked: 2024-01-13
+#: last_checked: 2024-01-21
 #: check_frequency: 60d
 	q4::inwork; 14382,9299 14242,9448 14185,9509 14089,9610
 ',
@@ -4331,7 +5386,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
          'data' => '#: also_indoor: traffic (W)
 #: osm_watch: way id="1137576466" version="1"
 #: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
-#: last_checked: 2023-12-07
+#: last_checked: 2024-01-22
 #: check_frequency: 60d
 	q4::inwork; 13086,15907 13214,15830
 ',
@@ -4348,7 +5403,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
 #: osm_watch: way id="1170463986" version="1"
 #: note: kann manchmal (Wochenende, außerhalb der Arbeitszeiten) offen sein
 #: also_indoor: traffic (G,W)
-#: last_checked: 2023-12-28
+#: last_checked: 2024-01-22
 #: check_frequency: 30d
 # REMOVED (kann wohl nicht gehalten werden) --- #: next_check: 2023-12-31
 	q3::inwork 13263,15930 13140,16000
@@ -4380,7 +5435,7 @@ nur Gehweg frei	q4::inwork 7641,20745 7630,20698
          'data' => '#: next_check_id: SCHOENEWEIDE-2018
 #: by: https://www.meinetram.de/de/index.php?section=Downloads&download=78 (Präsentation vom 28.2.2022, Seite 16)
 #: also_indoor: traffic (G[falsch],W[falsch])
-#: last_checked: 2023-12-30
+#: last_checked: 2024-01-21
 #: check_frequency: 120d
 	q4::temp; 17763,5104 17729,5091 17652,5082 17601,5090
 ',
@@ -4899,14 +5954,14 @@ Gleiwitzer Str.	q4::inwork 20947,9999 20703,10004
        {
          'data' => '#: next_check_id: FRIEDENKOPPEN-2023
 #: source_id: viz2021:13.437884,52.520284,23.06.2023,06:00 (bis 15.10.2023) (inaktiv) (bis 31.01.2024, weitere Arbeiten im Anschluss)
-#: last_checked: 2024-01-07
+#: last_checked: 2024-01-23 (mapillary)
 #: next_check: 2024-01-31
 	q3::inwork 12632,12630 12690,12769
 ',
          'dont_check_date' => 1,
          'from' => 1687406400,
          'id' => 3832,
-         'text' => 'Koppenstr.: Anbindung Friedenstr. wegen Bauarbeiten gesperrt, Radfahrer sollen schieben, mindestens bis Ende Januar 2024',
+         'text' => 'Koppenstr.: Anbindung Friedenstr. wegen Bauarbeiten gesperrt, Radfahrer sollen schieben, mindestens bis Ende Januar 2024, vermutlich noch länger',
          'type' => 'handicap',
          'until' => undef
        },
@@ -4959,7 +6014,7 @@ Gleiwitzer Str.	q4::inwork 20947,9999 20703,10004
 #: source_id: viz2021:13.450954,52.489036,12.01.2024,06:00 (bis 16.02.2024)
 #: source_id: bvg2021:m43#BVG340191_0
 # REMOVED --- #: note: Die Umleitungsstrecke geht via Wildenbruchstr. - Kiefholzstr. Halteverbote, geänderte Vorfahrtsregelung.
-#: last_checked: 2024-01-13 vvv
+#: last_checked: 2024-01-19 vvv
 #: check_frequency: 14d vvv 
 #: next_check: 2024-02-16 vvv
 Karl-Kunger-Str.	q4::inwork; 13614,9333 13647,9304
@@ -5196,7 +6251,7 @@ Wuhlewanderweg	2::inwork 22050,6619 21976,6848 21896,6937
 #: by: https://www.bahninfo-forum.de/read.php?9,727655,790304#msg-790304 (Verlängerung bis 08.07.2024)
 #: source_id: viz2021:13.51409,52.4624,28.08.2023,16:30 (bis 11.04.2024)
 #: note: next_check ist hier der erste Ende-Termin (VIZ)
-#: last_checked: 2024-01-06 vvv
+#: last_checked: 2024-01-21 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2024-04-11 vvv
 #: note: Umweg hier (falls man die Wilhelminenhofstr. Richtung Süden überqueren will): 2x60m (Stand Mitte November 2023)
@@ -5268,7 +6323,7 @@ Wuhlewanderweg	2::inwork 22050,6619 21976,6848 21896,6937
 #: note: Endedatum per Halteverbotsschilder (dauert aber länger)
 # REMOVED (im Kreuzungsbereich mittlerweile keine Einschränkungen) --- #: note: zur östlichen Rupprechtstr. sind auch Bauarbeiten, aber zurzeit existiert eine schmale Gasse
 #: add_fragezeichen: Wurden die Bauarbeiten beendet? Ist die Fahrbahn wieder frei?
-#: last_checked: 2024-01-09
+#: last_checked: 2024-01-20
 # REMOVED --- #: next_check: 2023-12-01
 	q4::inwork 16273,11113 16227,10991
 ',
@@ -5279,32 +6334,23 @@ Wuhlewanderweg	2::inwork 22050,6619 21976,6848 21896,6937
          'until' => undef
        },
        undef,
+       undef,
        {
-         'data' => '#: note: Endedatum anhand Halteverbotsschild
-#: add_fragezeichen: Besteht die Sperrung weiterhin? vvv
-#: last_checked: 2023-11-25 vvv
-#: next_check: 2023-12-15 vvv
-	2::inwork 20097,14039 20096,14127 20040,14179
-	2::inwork 20096,14127 20111,14140 20172,14141
-#: next_check ^^^
-#: last_checked ^^^
-#: add_fragezeichen ^^^
-',
-         'from' => 1694958118,
-         'id' => 3917,
-         'text' => 'Allee der Kosmonauten - Murtzaner Ring: Hochbauarbeiten, Straße gesperrt, mindestens bis Mitte Dezember 2023',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
-       {
-         'data' => '#: osm_watch: way id="381691526" version="7"
+         'data' => '#: last_checked: 2024-01-20 vvv
 #: add_fragezeichen: Ist der Weg weiterhin gesperrt? Falls nicht, hat sich die Wegoberfläche geändert?
-#: last_checked: 2023-10-22
+#: osm_watch: way id="381691526" version="8"
 	2::inwork 23305,14914 23318,14847 23297,14772
+#: add_fragezeichen: Ist die Kreuzung weiterhin gesperrt? vvv
+#: note: Halteverbotsschilder bis 2.2.2024 vvv
+	q3::inwork 23222,14809 23297,14772 23369,14756
+	q3::inwork 23288,14719 23297,14772
+#: note ^^^
+#: add_fragezeichen ^^^
+#: last_checked ^^^
 ',
          'from' => undef,
          'id' => 3918,
-         'text' => 'Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt',
+         'text' => 'Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt; außerdem Sperrung der Kreuzung Cottbusser Str./Cottbusser Platz',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -5446,7 +6492,8 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
 # REMOVED (hier laut osm nicht) ---	q4::inwork 21869,16719 21889,16817
 #: osm_watch: way id="1126670512" version="9"
 	q4::inwork 21889,16817 21925,16981
-#: source_id: viz2021:13.574645,52.555124,16.10.2023,07:00 (bis 15.12.2023) (bis 01.03.2024)
+#: source_id: viz2021:13.574645,52.555124,16.10.2023,07:00 (bis 15.12.2023) (bis 01.03.2024) (inaktiv)
+#: source_id: viz2021:13.574844,52.555123,16.10.2023,07:00 (bis 01.03.2024)
 #: osm_watch: way id="9030384" version="38"
 #: osm_watch: way id="9030545" version="19"
 	q4::inwork 21944,16805 21889,16817
@@ -5472,16 +6519,21 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
        {
          'data' => '#: next_check_id: GENDARMENMARKT-2023
 #: osm_watch: way id="35557161" version="25"
-#: osm_watch: note 4045330 1
-#: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
-#: also_indoor: traffic (G,B,W)
-#: last_checked: 2024-01-03
-#: check_frequency: 14d
-	q3::inwork; 9656,12031 9666,11935 9679,11834
+#: osm_watch: note 4045330 3
+#: also_indoor: traffic (G[nur Markgrafen],B,W[nur Markgrafen])
+#: note: außerdem mittlerweile unklare Ausschilderung in der Markgrafenstr. mit Gegenverkehr-Vorfahrtsregelungen, als ob vielleicht die Einbahnstraße wieder aufgehoben werden soll?
+#: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer? vvv
+#: last_checked: 2024-01-18 vvv
+#: check_frequency: 14d vvv
+Markgrafenstr.	q3::inwork; 9656,12031 9666,11935 9679,11834
+Mohrenstr.	q3::inwork; 9679,11834 9547,11819
+#: check_frequency ^^^
+#: last_checked ^^^
+#: add_fragezeichen ^^^
 ',
          'from' => undef,
          'id' => 3942,
-         'text' => 'Markgrafenstr.: Einbahnstraßenregelung zwischen Mohrenstr. und Jägerstr., offen Richtung Norden',
+         'text' => 'Markgrafenstr.: Einbahnstraßenregelung zwischen Mohrenstr. und Jägerstr., offen Richtung Norden, sowie in der Mohrenstr. zwischen Markgrafenstr. und Charlottenstr., offen Richtung Osten',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5514,16 +6566,17 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
          'data' => '#: also_indoor: traffic (G,B,W)
 #: note: auch der rechte Gehweg ist gesperrt, Ausweichen auf linken Gehweg nur inoffiziell möglich
 #: note: Halteverbotsschilder bis 30.01.2024
-#: last_checked: 2024-01-09
+#: note: mittlerweile (21.1.2024) sieht es so aus, als ob der Termin gehalten werden kann
+#: last_checked: 2024-01-21
 #: check_frequency: 30d
 #: next_check: 2024-01-30
 	q2::inwork; 18037,9195 17549,9529
 ',
          'from' => 1698503309,
          'id' => 3950,
-         'text' => 'Wallensteinstr.: ab Ilsestr. etwa 70m der Fahrbahn Richtung Nordwesten gesperrt, voraussichtlich bis Ende Januar 2024, vielleicht auch länger',
+         'text' => 'Wallensteinstr.: ab Ilsestr. etwa 70m der Fahrbahn Richtung Nordwesten gesperrt, voraussichtlich bis Ende Januar 2024',
          'type' => 'handicap',
-         'until' => undef
+         'until' => 1706634000
        },
        undef,
        {
@@ -5531,7 +6584,7 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
 # REMOVED --- #: XXX unklare Verkehrsführung für Radfahrer: teilweise sind provisorische Markierungen auf der Fahrbahn angebracht, aber an der Görlitzer Str. geht die Absperrung über die volle Breite der Fahrbahn
 #: osm_watch: way id="4782403" version="26"
 #: osm_watch: way id="148176599" version="15"
-#: last_checked: 2024-01-04
+#: last_checked: 2024-01-19
 # REMOVED --- #: check_frequency: 30d
 #: check_frequency: 14d
 #: next_check: 2024-06-30
@@ -5539,7 +6592,7 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
 ',
          'from' => 1699031494,
          'id' => 3952,
-         'text' => 'Görlitzer Ufer: mögliche Einschränkungen durch Bauarbeiten (Stand Anfang Januar 2024: die alten Radwege scheinen noch passierbar zu sein)',
+         'text' => 'Görlitzer Ufer: mögliche Einschränkungen durch Bauarbeiten (Stand Mitte Januar 2024: die alten Radwege sind noch passierbar)',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5590,7 +6643,7 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
 #: note: nördlicher Bürgersteig ebenfalls gesperrt; Länge der Sperrung etwa 50m, außerdem ist wegen des Absperrgeländers ein längerer Umweg über die Geschwister-Scholl-Str. notwendig; Halteverbotsschilder bis 31.01.2024
 #: note: allerdings können manchmal (nach der Arbeitszeiten? oder immer?) die Barrieren so offen sein, dass Radfahrer durchkommen
 #: osm_watch: way id="1151064395" version="5"
-#: last_checked: 2024-01-03
+#: last_checked: 2024-01-18
 #: check_frequency: 30d
 #: next_check: 2024-01-31
 	q4::inwork 9533,12925 9375,12911
@@ -5612,8 +6665,9 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
 #: source_id: viz2021:13.452251,52.492574,20.11.2023,06:00 (hier nur Kfz-Verkehr, bis 31.01.2024)
 #: by[nocache]: https://nitter.net/VIZ_Berlin/status/1724382200475353132#m (Verschiebung des Baustarts auf den 20.11.2023)
 #: note: abgesperrter Bereich ist etwa 40-50m lang, allerdings kann es zusätzliche Behinderungen wegen wendender Autofahrer geben
+#: XXX Das Ende der Bauarbeiten zum 31.1.2024 ist unwahrscheinlich (noch tiefe Gruben + Winterwetter).
 #: also_indoor: traffic (H,G,B,W)
-#: last_checked: 2023-12-20
+#: last_checked: 2024-01-19
 #: check_frequency: 30d
 #: next_check: 2024-01-31
 	q2::inwork 13860,9861 13704,9691
@@ -5775,7 +6829,7 @@ Dietlindestr.: Sperrung im Einmündungsbereich	q3::inwork 17056,12304 17088,12506
 #: osm_watch: way id="4525429" version="22"
 #: osm_watch: way id="1212493766" version="4"
 #: osm_watch: note 3916787 2
-#: last_checked: 2023-12-26 (osm) vvv
+#: last_checked: 2024-01-19 (mapillary) vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-03-28 vvv
 Kaiserdamm	q4::inwork; 3069,11551 3159,11562 3320,11583
@@ -5809,6 +6863,7 @@ Fritschestr.	q3::inwork 3339,11433 3320,11583
          'data' => '#: add_fragezeichen: Existiert die Einbahnstraßenregelung in der Landgrafenstraße weiterhin?
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/landgrafenstra%C3%9Fe-3-6-umbau-hotel.1166/
 #: by: https://www.deutsches-architekturforum.de/thread/13804-bauprojekte-an-der-urania-schillstra%C3%9Fe-kurf%C3%BCrstenstra%C3%9Fe/?postID=749605#post749605
+#: by[nocache]: https://nitter.net/VIZ_Berlin/status/1750031927669608944#m (mögliche zusätzliche Einschränkung: Überqueren der Kurfürstenstr. an dieser Stelle möglicherweise nicht mehr möglich)
 #: also_indoor: webcam https://portal1944.webcam-profi.de/
 #: also_indoor: traffic (ex-G[falsch,beide Richtungen],ex-W[falsch,beide Richtungen])
 #: osm_watch: way id="1232322874" version="1"
@@ -5842,7 +6897,7 @@ Fritschestr.	q3::inwork 3339,11433 3320,11583
 #: osm_watch: way id="4612406" version="26"
 #: note: Bei der letzten Fahrt waren noch nicht alle Schilder da, insbesondere haben alle "Fahrrad frei"-Zusatzschilder gefehlt.
 #: add_fragezeichen: Sind die Radfahrer-frei-Schilder mittlerweile da?
-#: last_checked: 2024-01-08
+#: last_checked: 2024-01-23
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2023-12-04
 	q4; 10794,10927 10824,11010 10690,11167
@@ -5915,6 +6970,34 @@ Radwegverbindung	q4::temp:clock 10656,9333 10670,9286
          'text' => 'Wilhelm-Kuhr-Str. - Wollankstr. (ehem. Mauerstreifen): mögliche Sperrung wegen Bauarbeiten',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: add_fragezeichen: Besteht die Sperrung weiterhin?
+#: source_id: viz2021:13.404099,52.525926,12.01.2024,07:00 (bis 31.03.2025)
+#: also_indoor: traffic (G,B)
+#: last_checked: 2024-01-16 (mapillary)
+#: check_frequency: 14d
+#: next_check: 2025-03-01
+	q4::inwork 10385,13348 10341,13376
+',
+         'from' => undef,
+         'id' => 3999,
+         'text' => 'Weinmeisterstr.: Fahrbahn vor der Rosenthaler Str. gesperrt, voraussichtlich bis März 2025',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2024/pressemitteilung.1407667.php
+#: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/bruecke-ueber-das-adlergestell/?date=20240123
+#: by: https://viz.berlin.de/aktuelle-meldungen/am-wochenende-vollsperrung-adlergestell-b96a-fur-das-einheben-der-brucke/
+	2::inwork 19472,3922 19335,4067 19226,4183
+',
+         'from' => 1706223600,
+         'id' => 4001,
+         'text' => 'Adlergestell: Sperrung wegen Einhubs einer Brücke, vom 27. Januar 2024, 03:00 Uhr bis 28. Januar 2024, 12:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1706439600
        }
      
 );

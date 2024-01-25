@@ -3,6 +3,8 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
+Friedenstr.: kurzes Stück der Fahrbahn gesperrt	q3::inwork; 12616,12844 12600,12860
+Friedenstr.: kurzes Stück der Fahrbahn gesperrt	q2::inwork; 12600,12860 12520,12938
 Gubener Str.: Sperrung im Kreuzungsbereich Grünberger Str./Wedekindstr.	q2::inwork 13406,11896 13352,12003
 Müncheberger Str.: schmaler Gehweg, Fußgänger	q4 12558,11920 12617,11888
 Landsberger Allee: Engstelle in Höhe Matthiasstr.	q2::inwork; 12711,13150 12786,13185 12878,13229
@@ -46,11 +48,13 @@ Eisenacher Str.: Radfahrer teilen sich mit Fußgängern den Bürgersteig, Umwege	q2
 Eisenacher Str.: Fahrbahn gesperrt, Radfahrer können den Bürgersteig benutzen	q2::inwork 22899,15073 23113,15110
 Gothaer Str.: Fahrbahn gesperrt, Umwege	q2::inwork 22897,15287 22899,15073
 Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Merler Weg Richtung Süden	q3::inwork; 19181,13485 19198,13272 19180,13219
+Merler Weg: temporäre Einbahnstraßenregelung	q3::inwork; 19180,13219 18852,13269
 Rembrandtstr.: Engstelle an einer Hochbaustelle	q2::inwork 6355,7184 6234,7020
 Elßholzstr.: Hochbauarbeiten, Einbahnstraßenregelung	q4::inwork; 7202,9329 7209,9507 7216,9657 7223,9815
 Gleditschstr.: Hochbauarbeiten, Zweirichtungsradweg auf dem westlichen Bürgersteig	q2::inwork; 7122,9517 7126,9825
 Moltkestraßenbrücke: für Fußgänger existiert eine Behelfsbrücke	q3::inwork 3839,4577 3867,4537 3898,4490 3934,4441
 Jablonskistr.: Baustelle an der Kreuzung Winsstr., nur Gehweg ist frei	q3::inwork 11949,14557 12228,14404
+Lehderstr.: Hochbauarbeiten, einige Meter der Fahrbahn westlich der Roelckestr. sind gesperrt	q2::inwork 12842,16032 12466,16198
 Falkenberger Str. - Hansastr: Bauarbeiten, Fahrbahn nur für Linienverkehr frei	q4::inwork 15832,16846 15866,16823 15875,16816
 Charlottenburger Str.: Bauarbeiten östlich der Gustav-Adolf-Str., Fahrbahn gesperrt	q3:inwork 12646,16563 12560,16602
 (Buckower Chaussee - Bahnhof): einige Fußgänger	q1 9200,562 9239,461 9254,413
@@ -442,6 +446,7 @@ Krughorn - Volkspark Klein-Glienicke: Fußgänger, besonders an schönen Tagen	q1 -
 Moorlake - Pfaueninsel: Fußgänger, besonders an schönen Tagen	q1 -9629,1408 -9619,1478 -9654,1544 -9648,1629 -9632,1672 -9584,1703 -9511,1739 -9444,1820 -9401,1837 -9082,1813 -9002,1797 -8926,1814 -8861,1855 -8707,2062 -8636,2102 -8595,2148
 am Wirtshaus zur Pfaueninsel: Fußgänger, besonders an schönen Tagen	q2 -8595,2148 -8542,2216 -8468,2152
 Karl-Marx-Allee - Kadiner Str.: Fußgänger	q3 13543,12326 13556,12302 13551,12266
+Karl-Marx-Allee - Hildegard-Jadamowitz-Str.: Fußgänger	q3 13448,12340 13430,12320 13421,12284
 (Ludwig-Pick-Str. - Karl-Marx-Allee): einige Fußgänger	q1 13552,12435 13543,12326
 Spreeuferweg - Elisabeth-Abegg-Str.: Rampe	q3 7926,12865 7907,12817
 (südliche Fahrbahn des Sachsendamms - Naturpark Schöneberg): Rampe	q2 7696,7562 7739,7531 7708,7539 7747,7521
@@ -655,8 +660,10 @@ Triniusstr.: zwei Schwellen, können umfahren werden	q1 18417,6775 18339,6660
 Kiautschoustr.: Fußgänger, Bordsteine	q4 6837,14848 6880,14861
 (Warschauer Brücke - Tamara-Danz-Str.): Fußgänger	q4 13454,11119 13483,11143 13498,11136 13524,11204 13514,11208
 (Warschauer Brücke - Tamara-Danz-Str.): Fußgänger, Bordstein	q4 13514,11208 13503,11179 13479,11147
-(Blenheimstr. - Bärensteinstr.): Fußgänger bzw. Parkplatzverkehr	q2 21163,15289 21263,15291 21350,15292
-(Blenheimstr. - Bärensteinstr.): Fußgänger	q2 21350,15292 21369,15252
+(Blenheimstr. - Bärensteinstr.): Fußgänger bzw. Parkplatzverkehr	q2 21163,15289 21263,15291 21350,15292 21361,15270
+(Blenheimstr. - Bärensteinstr.): Fußgänger bzw. Parkplatzverkehr	q2 21163,15289 21195,15271 21262,15271 21361,15270
+(Blenheimstr. - Bärensteinstr.): Fußgänger	q2 21361,15270 21369,15252
+(Aldi/Getränke Hoffmann-Parkplatz): Parkplatzverkehr	q2 20184,14140 20187,14155 20219,14163 20217,14256 20262,14255
 Baruther Str.: gemeinsamer Rad- und Gehweg	q1 9588,9827 9723,9842
 (Aldi/Getränke-Hoffmann-Parkplatz): Parkplatz	q1 13202,11666 13186,11692 13173,11788
 (Schmidstr. - Heinrich-Heine-Str.): Bordsteine, Fußgänger	q3 11233,11510 11174,11554
@@ -1453,7 +1460,8 @@ Ahrensfelder Berge: Fußgänger	q1 22512,16542 22432,16467
 Springpfuhlpark: Fußgänger	q2 19524,14474 19534,14459 19535,14448 19545,14290 19544,14234 19547,14042 19565,13893 19567,13858 19570,13833 19573,13742 19593,13702 19602,13575
 (Geißenweide - Blenheimstr./Bärensteinstr.): Bordstein	q3 21128,14799 21143,14803
 (Geißenweide - Blenheimstr./Bärensteinstr.): Fußgänger	q1 21143,14803 21211,15009 21261,15153 21260,15209
-(Geißenweide - Blenheimstr./Bärensteinstr.): Einkaufszentrum	q4 21260,15209 21263,15291
+(Geißenweide - Blenheimstr./Bärensteinstr.): Einkaufszentrum	q4 21260,15209 21262,15271
+(Geißenweide - Blenheimstr./Bärensteinstr.): Fußgänger bzw. Parkplatzverkehr	q2 21262,15271 21263,15291
 (Am Rosengarten - Lütztalweg): sehr eng	q4 18834,12228 18867,12265 18917,12271
 Dürerplatz: einige Fußgänger, Bordstein	q2 6234,7020 6276,6995
 Straße 17: kurze Rampe	q3 7307,7435 7296,7443
@@ -2469,6 +2477,7 @@ Kuppenheimerstr.: einige Fußgänger, Bordstein an der Wexstr.	q3 5808,8124 5801,8
 (Hans-Schmidt-Str. - Merlitzstr.): einige Fußgänger	q2 19667,3578 19746,3501
 (Passage am Tacheles): Fußgänger	q4 9371,13333 9353,13273 9244,13253
 Aaron-Bernstein-Platz: Fußgänger	q4 9353,13273 9382,13265 9385,13246 9463,13256 9476,13293
+Johannisplatz: Fußgänger	q4 9385,13174 9385,13246
 Eulerstr.: Fußgängerbereich, Quartierplatz	q4 9465,16464 9493,16481
 (Mauerweg - Schönefelder Chaussee): einige Fußgänger	q1 18702,1338 18739,1329 18964,1270 19032,1250 19081,1236 19160,1215 19221,1198
 (Adlergestell/Am Seegraben - Walchenseestr.): schmaler Pfad	q3 21879,1517 21899,1526

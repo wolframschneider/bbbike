@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (c) 1995-2023 Slaven Rezic. All rights reserved.
+# Copyright (c) 1995-2024 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -743,17 +743,7 @@ if ($devel_host && !$public && !grep { "danger" eq $_ } @Strassen::Dataset::comm
 }
 @comments_types = @Strassen::Dataset::comments_types;
 my @used_comments_types;
-foreach my $type (@comments_types) {
-    next if $type =~ /^(cyclepath|mount|route|ferry)$/; # handled elsewhere
-    next if $type eq 'trafficjam'; # currently handled only in SRTShortcuts plugin
-    if (!$advanced) {
-	# kfzverkehr: poor presentation
-	# scenic: almost no data
-	# trafficjam: data collection yet in progress
-	next if $type =~ /^(kfzverkehr|scenic)$/;
-    }
-    push @used_comments_types, $type;
-}
+set_used_comments_types();
 
 apply_tendencies_in_speed(\%qualitaet_s_speed);
 apply_tendencies_in_speed(\%handicap_s_speed);
@@ -4829,6 +4819,21 @@ MainLoop unless $ENV{BBBIKE_TEST_PERFORMANCE};
 
 ##### Subs ### RELOADER_START ############################################
 
+sub set_used_comments_types {
+    @used_comments_types = ();
+    foreach my $type (@comments_types) {
+	next if $type =~ /^(cyclepath|mount|route|ferry)$/; # handled elsewhere
+	next if $type eq 'trafficjam'; # currently handled only in SRTShortcuts plugin
+	if (!$advanced) {
+	    # kfzverkehr: poor presentation
+	    # scenic: almost no data
+	    # trafficjam: data collection yet in progress
+	    next if $type =~ /^(kfzverkehr|scenic)$/;
+	}
+	push @used_comments_types, $type;
+    }
+}
+
 sub update_via_internet {
     if ($devel_host) {
 	status_message("Kein Update auf biokovo/cabulja/vran/cvrsnica/spiff möglich!", "die");
@@ -7322,7 +7327,7 @@ EOF
 		        $c->createImage($x, $y, -image => $p,
 				        -anchor => $anchor,
 					# $abk-img or $abk-fg? set both!
-				        -tags => ["$abk-img", "$xx,$yy", $pointname, ($abk =~ /^L\d+$/ ? ("$abk-fg", "L-fg") : ())],
+				        -tags => ["$abk-img", "$xx,$yy", $pointname, "p-" . $i, ($abk =~ /^L\d+$/ ? ("$abk-fg", "L-fg") : ())],
 				       );
 		        last; # we're done, only label drawing missing
 		    }

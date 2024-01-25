@@ -297,7 +297,7 @@ Wallensteinstr.: Fahrbahn mäßiges bis schlechtes Kopfsteinpflaster, Geh/Radweg V
 #: source_id: viz2021:13.516327,52.486802,02.08.2022,07:00 (Bauarbeiten bis 16.12.2022, nur Kfz-Verkehr betroffen) (inaktiv)
 #: source_id[inactive]: bvg2021:396#BVG305961_0 (bis auf Weiteres)
 #: XXX Wird hier irgendwann neu asphaltiert werden?
-#: last_checked: 2024-01-09
+#: last_checked: 2024-01-21
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2022-12-16
 Wallensteinstr.: Asphalt mit einigen Schäden	Q1 18037,9195 18092,9141 18134,9080
@@ -388,14 +388,15 @@ Lohmühlenbrücke: Asphalt	Q0 12868,9359 12897,9365
 #: XXX wird die Kiefholzstr. asphaltiert?
 #: XXX Baumaßnahme: 9.9 (Realisierung nach 2011)
 #: osm_watch: way id="4686083" version="29"
-#: last_checked: 2024-01-04
+#: last_checked: 2024-01-19
 #: check_frequency: 90d
 Kiefholzstr.: Kopfsteinpflaster	Q2 13602,9581 13450,9714 13251,9829
 # 
 Hirschberger Str.: Asphalt	Q0 14988,11130 15021,11152 15056,11138
 Hirschberger Str.: Kopfsteinpflaster	Q2+ 15056,11138 15102,11120
 Krummhübler Str.: Kopfsteinpflaster	Q2+ 15060,11006 15102,11120
-Marzahner Chaussee: Kopfsteinpflaster	Q2- 18555,12101 18420,11864 18417,11854 18382,11740
+Marzahner Chaussee: Kopfsteinpflaster	Q2 18555,12101 18420,11864 18417,11854
+Marzahner Chaussee: Kopfsteinpflaster	Q2- 18417,11854 18382,11740
 # REMOVED --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4871 (Verbesserung für den Radverkehr?) --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036852138672/852138672/00101938/38-Anlagen/04/B0771SB.pdf (wird nicht geändert)
 Stellingdamm: schlechtes Kopfsteinpflaster auf der Fahrbahn	Q3; 22857,6155 22777,6151 22603,6141 22467,6135
 Stellingdamm: schlechtes Kopfsteinpflaster auf der Fahrbahn, Gehweg mit unebenem Mosaikpflaster für Radfahrer freigegeben	Q1-; 22467,6135 22603,6141 22777,6151 22857,6155
@@ -630,7 +631,7 @@ Fürstenberger Str.: Asphalt	Q0 10320,14608 10472,14632
 #: osm_watch: way id="4606258" version="31"
 #: osm_watch: way id="184077626" version="19"
 #: osm_watch: way id="49180827" version="24"
-#: last_checked: 2023-11-23
+#: last_checked: 2024-01-23 (mapillary)
 #: check_frequency: 60d
 Kollwitzstr.: Kopfsteinpflaster	Q2 11006,14087 10937,14006
 # 
@@ -1140,7 +1141,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/mobilitaetswenderat/22-08-24-mobilitaetswenderat-protokoll_final.pdf (neben der Asphaltierung wird auch ein modaler Filter am Boxhagener Platz erwähnt)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2024-01-12
+#: last_checked: 2024-01-19
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1229,7 +1230,7 @@ Friedrich-Engels-Str.: Asphalt	Q0 9349,19782 9325,19851 9312,19887 9289,19947 92
 #: by: https://www.berliner-woche.de/rosenthal/c-verkehr/zweigleisiger-ausbau-der-m1-ist-von-der-bvg-geplant_a318012 (Straßenbahn ab 2026 zweigleisig)
 #: by: https://www.berliner-woche.de/rosenthal/c-verkehr/durchgangsverkehr-weicht-auf-anwohnerstrassen-aus_a372317
 #: XXX Wird nach der Straßenbaumaßnahme die Straße asphaltiert sein? Werden die Radspuren verlängert? Wie sieht's im weiteren Verlauf bis zum Wilhelmsruher Damm aus? vvv
-#: last_checked: 2023-12-16 (mapillary) vvv
+#: last_checked: 2024-01-20 (mapillary) vvv
 #: check_frequency: 540d vvv
 #: next_check: 2026-12-31 vvv
 Friedrich-Engels-Str.: Kopfsteinpflaster	Q2 9149,20336 9119,20399 9108,20410 9091,20425 9068,20446 8967,20539
@@ -1639,7 +1640,7 @@ Borussenstr.: Asphalt	Q0 -3965,2240 -3938,2287 -3881,2374 -3882,2447
 # REMOVED (nicht mehr der Fall?) --- Bäkestr.: mäßiger Asphalt	Q1 -7088,-1074 -7051,-1221
 Dircksenstr: Kopfsteinpflaster	Q2 10705,13037 10591,13091
 Dircksenstr: Asphalt	Q0 10591,13091 10445,13091 10339,13052
-Hildegard-Jadamowitz-Str.: Kopfsteinpflaster	Q1- 13198,12311 13524,12271
+Hildegard-Jadamowitz-Str.: Kopfsteinpflaster	Q1- 13198,12311 13421,12284 13524,12271
 Hildegard-Jadamowitz-Str.: Asphalt	Q0 13524,12271 13551,12266 13590,12260
 #: note: am Sackgassenende 15m betoniert
 Hildegard-Jadamowitz-Str.: Kopfsteinpflaster	Q2 13590,12260 13657,12167
@@ -2257,11 +2258,11 @@ Landsberger Allee: Asphaltradweg nur mit mäßiger Qualität	Q1 18365,14607 18410,1
 #: source_id: 2147342864 (inaktiv)
 #: source_id: 2147345560 (inaktiv) (Radwegarbeiten)
 #: check_frequency: 120d vvv
-#: last_checked: 2023-09-17 vvv
+#: last_checked: 2024-01-20 vvv
 Landsberger Allee: Beton-Radwege nur mit mäßiger Qualität (Bordsteinkanten!)	Q1; 20260,15434 20532,15564 20580,15586 20733,15657
 Landsberger Allee: Beton-Radwege, mit einigen leichten Schäden	Q0-; 20733,15657 20866,15673 21009,15658 21068,15646 21119,15635 21239,15633
 #: last_checked ^^^
-#: last_checked: 2023-09-17
+#: last_checked: 2024-01-20
 Landsberger Allee: Beton-Radwege, mit einigen leichten Schäden, Bordsteinkanten	Q1 21239,15633 21398,15671 21475,15705 21584,15753 21709,15808
 #: check_frequency ^^^
 #: by: ^^^
@@ -3851,8 +3852,10 @@ Bartelstr.: Asphalt	Q0 11031,13467 10998,13382
 Paul-Zobel-Str.: Asphalt	Q0 15724,13544 15724,13298 15846,13297 15851,13511
 Herzbergstr. [Wohngebiet]: Asphalt	Q0 15851,13511 15896,13512
 Annenstr. (Biesdorf): Asphalt	Q0 20262,14255 20376,14244
-(Blenheimstr. - Bärensteinstr.): Gehwegplatten	Q0- 21163,15289 21263,15291 21350,15292
-(Blenheimstr. - Bärensteinstr.): Gehwegplatten (Gehweg) bzw. Asphalt (Fahrbahn)	Q0 21350,15292 21369,15252
+(Aldi/Getränke Hoffmann-Parkplatz): Verbundsteinpflaster	Q1+ 20184,14140 20187,14155 20219,14163 20217,14256 20262,14255
+(Blenheimstr. - Bärensteinstr.): Gehwegplatten	Q0- 21163,15289 21263,15291 21350,15292 21361,15270
+(Blenheimstr. - Bärensteinstr.): Gehwegplatten	Q0- 21163,15289 21195,15271 21262,15271 21361,15270
+(Blenheimstr. - Bärensteinstr.): Gehwegplatten (Gehweg) bzw. Asphalt (Fahrbahn)	Q0 21361,15270 21369,15252
 Bärensteinstr.: Beton	Q0 21369,15252 21368,15231
 Bärensteinstr.: Asphalt mit einigen Löchern	Q1 21368,15231 21411,15232 21497,15227 21599,15213
 Bärensteinstr.: Asphalt	Q0 21411,15232 21422,15383
@@ -6652,8 +6655,8 @@ Scharfe Lanke: Asphalt	Q0 -4255,11600 -4246,11438 -4245,11400
 #: by: https://www.berlin.de/b-intern.de/ba/spandau/_assets/politik-und-verwaltung/dokumente/plan_3_folkungerstrasse_gatower_strasse.pdf
 #: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/service-und-organisationseinheiten/finanzen/investitionsplanung/baumassnahmen_tiefbau_2021-2025.pdf (Bauzeit bis 2022, hier: von Wilhemstr. bis Gatower Str.)
 #: by: https://www.berlin.de/ba-spandau/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11746 (Anfrage)
+#: source_id: viz2021:13.17159,52.51104,15.01.2024,09:13 (bis 29.02.2024) (inaktiv)
 #: source_id: viz2021:13.172174,52.511623,16.08.2023,13:00 (Erdgasleitungssanierung, bis 29.02.2024)
-#: source_id: viz2021:13.17159,52.51104,15.01.2024,09:13 (bis 29.02.2024)
 #: XXX geplanter Straßenausbau; evtl. wird dabei die Asphaltierung verbessert
 #: osm_watch: note 3653798 1
 #: last_checked: 2023-04-21
@@ -8925,7 +8928,8 @@ Neue Blumenstr.: Beton mit einigen Schden	Q1+ 11613,12408 11712,12614
 Neue Blumenstr.: Asphalt	Q0- 11712,12614 12006,12464
 (Rampe Wriezener Park): Beton	Q0 13427,11431 13416,11425 13442,11400
 (Wriezener Park): Asphalt	Q0 13513,11351 13442,11400 13417,11416 13407,11416 13323,11497
-(Wriezener Park): Beton	Q0- 13323,11497 13308,11515 13261,11572
+(Wriezener Park): Beton	Q0- 13323,11497 13308,11515
+(Wriezener Park): Betonsteinpflaster	Q0- 13308,11515 13261,11572
 (Wriezener Park): Beton	Q1 13261,11572 13239,11567
 (Wriezener Park, Eingang Pillauer Str.): Betonsteinpflaster	Q0- 13261,11572 13274,11585
 (Wriezener Park): Asphalt	Q0 13239,11567 13172,11651
@@ -10826,7 +10830,7 @@ Weg an der Havel: Asphalt	Q0 -3504,13775 -3493,13781 -3460,13828 -3459,13846 -33
 Sophienwerderweg: Asphalt mit Schäden	Q1- -795,13437 -684,13707 -951,13890 -1132,13972
 (Heinrich-Zille-Weg): welliges Verbundsteinpflaster	Q1- 795,12652 969,13290
 (Allee der Kosmonauten - Biesdorfer Promenade): schadhafter Asphalt	Q2+ 19837,13531 19826,13444
-Allee der Kosmonauten [Wohngebiet]: Asphalt	Q0 20249,14143 20172,14141 20111,14140 20096,14127 20097,14039 20081,13993 20080,13941 20082,13835 20111,13795 20112,13781 20114,13762 20120,13675 20036,13593 19898,13586 19848,13587 19827,13607 19827,13684 19856,13721 19859,13765 19856,13794
+Allee der Kosmonauten [Wohngebiet]: Asphalt	Q0 20249,14143 20184,14140 20111,14140 20096,14127 20097,14039 20081,13993 20080,13941 20082,13835 20111,13795 20112,13781 20114,13762 20120,13675 20036,13593 19898,13586 19848,13587 19827,13607 19827,13684 19856,13721 19859,13765 19856,13794
 Geißenweide: leicht schadhafter Beton mit Asphaltflicken	Q0- 21046,14469 21078,14570 21087,14602
 Bärensteinstr.: Asphalt	Q0 21368,15231 21371,15181 21432,15133 21499,15134 21497,15227
 Ahrensfelder Berge: wassergebundene Decke	Q1- 22672,16341 22666,16412 22670,16562 22661,16639 22559,16855 22524,16889 22486,16889 22396,16846 22375,16836
@@ -10861,7 +10865,8 @@ Helene-Weigel-Platz [zum Springpfuhlpark]: Gehwegplatten/Beton	Q0 19602,13575 19
 (Bruno-Baum-Grünzug - Martha-Arendsee-Str.): neue Betonplatten	Q0- 19528,14673 19543,14663
 (Geißenweide - Blenheimstr./Bärensteinstr.): Beton	Q0 21122,14713 21128,14799
 (Geißenweide - Blenheimstr./Bärensteinstr.): Asphalt	Q0 21128,14799 21143,14803 21211,15009 21261,15153 21260,15209
-(Geißenweide - Blenheimstr./Bärensteinstr.): Gehwegplatten	Q0 21260,15209 21263,15291
+(Geißenweide - Blenheimstr./Bärensteinstr.): Gehwegplatten	Q0 21260,15209 21262,15271
+(Geißenweide - Blenheimstr./Bärensteinstr.): Gehwegplatten	Q0- 21262,15271 21263,15291
 Dürerplatz: Verbundsteinpflaster	Q1 6234,7020 6276,6995
 # REMOVED (konnte ich nicht feststellen) --- Loewenhardtdamm: Asphalt mit einigen Schäden	Q1; 8632,8174 8730,8079
 Fischerstr.: Asphaltschäden	Q2+ 16404,10286 16423,10259
@@ -11218,7 +11223,7 @@ Alfred-Kowalke-Str. [Mittelstreifen]: Gehwegplatten	Q0- 18200,11269 18202,11253
 #: next_check_id: STADTPARKLICHTENBERG-2022
 #: by: https://www.berliner-woche.de/lichtenberg/c-bauen/gruenanlage-zwischen-moellendorff-und-scheffelstrasse-wird-umgestaltet_a229540 (Anfang 2020 - Ende 2021)
 #: XXX Wird sich nach den Bauarbeiten hier etwas ändern? vvv
-#: last_checked: 2023-11-23 vvv
+#: last_checked: 2023-12-17 (mapillary) vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2021-12-31
 Stadtpark Lichtenberg: leicht schadhafter Asphalt	Q0- 15454,12519 15433,12686
@@ -13311,7 +13316,7 @@ Ulrich-Plenzdorf-Str.: Asphalt	Q0 15151,10699 15220,10682
 Gustav-Tempel-Str.: Asphalt	Q0 15245,10719 15236,10684 15220,10682 15205,10616 15200,10600
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wie wird der endgültige Belag aussehen? vvv
-#: last_checked: 2023-12-31 vvv
+#: last_checked: 2024-01-21 vvv
 #: check_frequency: 60d vvv
 Ulrich-Plenzdorf-Str.: asphaltiert, letzte Deckschicht fehlt	Q1 14994,10732 15071,10716 15151,10699
 An den Eiswerken: provisorisch asphaltiert	Q1 15004,10791 14994,10732 14984,10677
@@ -13335,6 +13340,7 @@ Nymphenburger Str.: Asphalt mit leichten Schäden	Q0- 6163,8398 6246,8222
 (Passage am Tacheles): glattes Pflaster	Q0 9371,13333 9353,13273 9244,13253
 Aaron-Bernstein-Platz: glattes Pflaster	Q0 9353,13273 9382,13265
 Aaron-Bernstein-Platz: glattes Kleinsteinpflaster	Q1 9382,13265 9385,13246 9463,13256 9476,13293
+Johannisplatz: glattes Kleinsteinpflaster	Q1 9385,13174 9385,13246
 # 
 Ida-Wolff-Platz: Verbundsteinpflaster	Q1 9161,10574 9192,10528
 # 
@@ -16444,6 +16450,7 @@ Marienstr. (Französisch Buchholz): Asphalt	Q0 11686,21058 12095,20832
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=4928 ("in Aussicht gestellt ... 2014/2015", "... 4 m breiten asphaltierten Geh- und Radweges")
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/buergerbeteiligung/fahrrat-protokoll-29-10-2015.pdf
 #: osm_watch: way id="42689070" version="11"
+#: osm_watch: way id="1033468087" version="2"
 #: last_checked: 2023-11-23
 #: check_frequency: 60d
 Orankeweg: Sandweg im Grünzug, mäßig bis gut	Q2+ 14936,15857 14769,15867 14695,15911 14609,15921
@@ -17179,7 +17186,7 @@ Markelstr.: asphaltiert	Q0 4528,6700 4583,6682 4645,6646
 #: by: https://www.berliner-zeitung.de/berlin/verkehr/mobilitaetsgesetz-berlin-bekommt-60-neue-radwege-bis-2020-29512972
 #: by: https://api.fixmyberlin.de/api/plannings/198 (Asphaltstreifen)
 #: XXX wird hier die Fahrbahn verbessert (asphaltiert)?
-#: osm_watch: way id="101290096" version="12"
+#: osm_watch: way id="101290096" version="15"
 #: last_checked: 2023-12-09
 #: check_frequency: 120d
 Markelstr.: glattes Kopfsteinpflaster	Q1 4645,6646 4682,6625 4845,6532 4875,6552

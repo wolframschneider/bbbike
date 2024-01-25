@@ -18,7 +18,7 @@ Dorfstr.: Gegenverkehrsregelung	X::inwork 17728,18985
 #: XXX evtl. wurde die Ampel wegen der Hochbauarbeiten (Schule) eingerichtet
 #: osm_watch: way id="29432246" version="24"
 #: osm_watch: note 3707299 9
-#: last_checked: 2023-11-25
+#: last_checked: 2024-01-20
 #: check_frequency: 90d
 #: next_check: 2024-08-31
 Allee der Kosmonauten/Straßenbahn	X::inwork 17778,13438
@@ -26,13 +26,13 @@ Allee der Kosmonauten/Straßenbahn	X::inwork 17778,13438
 #: by: https://www.deutsches-architekturforum.de/thread/14562-b%C3%BCro-und-wohnquartier-elements-mediaspree-in-bau/?postID=750488#post750488
 #: XXX eigentlich zwei Ampeln
 #: osm_watch: way id="124182482" version="9"
-#: last_checked: 2024-01-15 (daf)
+#: last_checked: 2024-01-18 (mapillary)
 Michaelbrücke	F::inwork 11676,11839
 # 
 #: next_check_id: STERNDAMM-2023
 #: source_id: viz2021:13.509919,52.456406,02.11.2023,06:00 (bis 30.06.2024)
 #: note: etwa 20m südöstlich
-#: last_checked: 2024-01-08 (krickstadt)
+#: last_checked: 2024-01-21
 #: check_frequency: 90d
 #: next_check: 2024-06-30
 #: valid: -20240630
@@ -50,7 +50,7 @@ Möckernstr./nördlich. Wartenburgstr.: Gegenverkehrsregelung	X::inwork 8784,9972
 #: source_id: viz2021:13.469544,52.478034,01.11.2023,10:30 (bis 13.11.2023) (bis 24.11.2023) (inaktiv) (bis 13.02.2024)
 #: note: Länge knapp 50m und gilt auch für Radfahrer, Lage ist etwas weiter nordwestlich
 #: note: bei VIZ entfernt, existiert aber weiterhin
-#: last_checked: 2023-12-30
+#: last_checked: 2024-01-21
 #: next_check: 2024-02-13
 #: valid: -20240213
 Kiefholzstr.: Gegenverkehrsregelung	X::inwork 14700,8368
@@ -63,7 +63,7 @@ Kiefholzstr.: Gegenverkehrsregelung	X::inwork 14700,8368
 # REMOVED --- Brückenstr./Rungestr.: Gegenverkehrsregelung	X::inwork 11291,11876
 # 
 #: next_check_id: METZER-2023
-#: last_checked: 2023-11-23
+#: last_checked: 2024-01-23 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2025-01-02
 #: valid: -20250102
@@ -104,8 +104,8 @@ Gegenverkehrsregelung	X::inwork 20302,1613
 # 
 #: source_id: viz2021:13.564461,52.413197,02.06.2023,07:00 (bis 14.08.2023) (inaktiv)
 #: source_id: viz2021:13.563998,52.413404,14.08.2023,10:00 (bis 07.10.2023) (bis 27.10.2023) (bis 08.12.2023) (bis 06.11.2023) (inaktiv)
+#: source_id: viz2021:13.56243,52.41416,15.01.2024,09:14 (bis 09.02.2024) (inaktiv)
 #: source_id: viz2021:13.563998,52.413404,06.11.2023,10:00 (bis 30.11.2023) (inaktiv) (bis 12.12.2023) (bis 15.01.2024) (bis 09.02.2024)
-#: source_id: viz2021:13.56243,52.41416,15.01.2024,09:14 (bis 09.02.2024)
 #: next_check: 2024-02-09
 #: valid: -20240209
 Am Falkenberg	X::inwork 21497,1042
@@ -145,7 +145,7 @@ Gegenverkehrsregelung	X::inwork 18527,16789
 #: XXX Möglicherweise im Zusammenhang mit der noch vorhandenen Sperrung der Baumschulenstr. jenseits der Köpenicker Landstraße (Busverkehr wird umgeleitet)
 #: note: bei rbb nur bis 29.12.2023
 #: osm_watch: way id="383023440" version="16"
-#: last_checked: 2024-01-06
+#: last_checked: 2024-01-16 (mapillary)
 #: next_check: 2024-02-29
 #: valid: -20240229
 	X::inwork 16328,7005
@@ -166,8 +166,8 @@ Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
 #: by: https://berliner-abendblatt.de/2023/01/24/bauarbeiten-staugefahr-in-der-guertelstrasse/
 #: source_id: viz2021:13.47181,52.50783,24.01.2023,09:00 (bis 03.06.2024) (inaktiv)
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024)
-#: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung; Anforderungsampeln
-#: last_checked: 2024-01-15
+#: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung; Anforderungsampeln; außerdem mittlerweile eine Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
+#: last_checked: 2024-01-21
 #: check_frequency: 120d
 #: next_check: 2024-06-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
@@ -195,7 +195,7 @@ Gürtelstr./Weserstr.	F::inwork 15016,11431
 # 
 #: next_check_id: IMBROMBEERWINKEL-2023
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
-#: last_checked: 2023-12-30
+#: last_checked: 2024-01-21
 #: check_frequency: 120d
 #: note: Anforderungsampel
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
@@ -361,7 +361,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8333,19305
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fußgängerampel nordöstlich der Einmündung; Anforderungsampel
-#: last_checked: 2024-01-11
+#: last_checked: 2024-01-23 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2026-01-01
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
@@ -376,8 +376,12 @@ Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 #: note: Anforderung für Radfahrer in Richtung Nord -> Süd, Richtung Süd -> Nord keine Ampel
 #: osm_watch: node id="1646650915" version="4"
 #: last_checked: 2023-09-24
-#: check_frequency: 120d
+#: check_frequency: 180d
 Gegenverkehrsregelung	X::inwork 18767,-1343
+# 
+#: source_id: viz2021:13.409747,52.562662,22.01.2024,09:00 (bis 28.02.2024)
+#: next_check: 2024-02-28
+Mühlenstr.: Bau einer Fußgängerampel, Gegenverkehrsregelung	X::inwork 10670,17458
 # 
 #: temporary ^^^
 # 
@@ -598,6 +602,7 @@ Gegenverkehrsregelung	X::inwork 18767,-1343
 Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängerampel	X 12878,12430
 #: note: das Linksabbiegen von Stralauer Platz in die Straße der Pariser Kommune kann länger dauern, zusätzliche Wartezeit auf dem Mittelstreifen nötig
 	X 12497,11459
+#: note: Grüner Pfeil (Gürtelstr. -> Frankfurter Allee, S->O)
 	X 15361,12071
 #: XXX_prog: zusammenhängende Ampelanlage vvv
 #: note: Anforderung für Radfahrer aus der Bornitzstr.
@@ -757,6 +762,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10264,13097
 	X 10341,13376
 	X 10177,13766
+#: note: Grüner Pfeil (Schönhauser Allee -> Torstr., N -> W)
 	X 10741,13685
 	X 10923,13156
 	X 10755,13152
@@ -1233,7 +1239,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # XXX	F 8065,11349
 #: note: Anforderungsampel
 #: osm_watch: node id="9858938170" version="1"
-#: last_checked: 2023-11-08 (daf)
+#: last_checked: 2024-01-19 (daf)
 #: check_frequency: 180d
 #: next_check: 2027-01-01
 	F::inwork 8096,11393
@@ -2645,13 +2651,13 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
 #: XXX evtl. als zwei Ampeln eintragen, falls die Ampelphasen für Radfahrer ungünstig sind
-#: last_checked: 2024-01-13
+#: last_checked: 2024-01-21
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: manchmal ausgeschaltet (gesehen 2022-08-24 13:10)
-#: last_checked: 2024-01-13
+#: last_checked: 2024-01-21
 #: check_frequency: 120d
 	X::inwork 14382,9299
 # 
@@ -3335,7 +3341,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2024-01-03 vvv
+#: last_checked: 2024-01-18 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514

@@ -1324,13 +1324,13 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 113
 # 
 (Mariendorfer-Hafen-Weg - Im Marienpark): über Parkplatz	CS 8074,3635 8163,3660
 # 
-#: by: http://www.berliner-zeitung.de/berlin/baumangel-der-boden-hat-nachgegeben,10809148,21701554.html (Fertigestellung Ende 2014)
+#: by: http://www.berliner-zeitung.de/berlin/baumangel-der-boden-hat-nachgegeben,10809148,21701554.html (Fertigstellung Ende 2014)
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2015 (Grundstücksnummerierungen)
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="8"
-#: last_checked: 2023-12-18
-#: check_frequency: 60d
+#: last_checked: 2024-01-18 (mapillary)
+#: check_frequency: 90d
 Falkoniergasse: nicht ausgeschildert	CP2; 9939,12174 9909,12261
 ausgeschildert als Falkoniergasse 3, blaues Schild mit Frakturschrift	CP2; 9909,12261 9939,12174
 # 
@@ -1359,7 +1359,7 @@ ausgeschildert als Michelangelostr. 93-127	CP2; 13760,15187 13801,15256
 # 
 Hausnummern 5-93	CP2; 11394,3814 11438,3637
 # 
-entlang des Rewe-Supermarkts	CS 21163,15289 21263,15291 21350,15292
+entlang des Rewe-Supermarkts	CS 21163,15289 21195,15271 21262,15271 21361,15270 21350,15292 21263,15291 21163,15289
 # 
 Malevkeweg: Privatstraße	CS 24877,10863 24875,10919 24819,10924
 Arturweg: Privatstraße	CS 24949,10956 24948,10815
@@ -1370,7 +1370,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2023-12-27
+#: last_checked: 2024-01-21
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1805,7 +1805,7 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2024-01-11 vvv
+#: last_checked: 2024-01-18 vvv
 #: check_frequency: 90d vvv
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10685,12422
@@ -1848,7 +1848,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2023-12-07 vvv
+#: last_checked: 2024-01-19 vvv
 #: check_frequency: 60d vvv
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
 # REMOVED (ausgeschildert) --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
@@ -1879,7 +1879,7 @@ ausgeschildert "Jelena-Šantić-Friedenspark"	CP2; 22854,14018 22903,14063
 # 
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_02_0141_0296_online.pdf
 #: add_fragezeichen: Hängen hier mittlerweile Straßenschilder?
-#: last_checked: 2023-12-22
+#: last_checked: 2024-01-20
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2023-02-13
 Zur Märkischen Aue: nicht ausgeschildert	CS 17848,11204 17893,11146 17905,11122 17924,10964 17915,10866 17892,10713 17870,10619 17856,10560 17864,10537
@@ -1891,6 +1891,33 @@ ausgeschildert "Scholzplatz"	CP2; -1517,10971 -1558,10970
 # 
 #: note: der Name ist am Eingang Oranienburger Str. im Pflaster sichtbar
 Aaron-Bernstein-Platz: nicht ausgeschildert	CS 9353,13273 9382,13265 9385,13246 9463,13256 9476,13293
+# 
+#: next_check_id: TACHELES-2020
+#: by: http://www.berliner-woche.de/mitte/bauen/erdlawine-rollt-ueber-die-oranienburger-ab-juli-wird-auf-dem-tacheles-areal-die-elf-meter-tiefe-baugrube-ausgehoben-d119088.html (bis 2020)
+#: by: http://www.berliner-woche.de/mitte/bauen/tacheles-areal-wird-ausgebaggert-d160052.html
+# REMOVED (404 für gesamte Domain) --- #: by: http://areal-am-tacheles.de/webcam/webseite/Webcam1.jpg (Webcam)
+# REMOVED --- #: by: http://areal-am-tacheles.de/webcam/webseite/Webcam4.jpg (Webcam)
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10161 (Benennung von Privatplätzen)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_41_5037_5124_online.pdf (Benennung von zwei privaten Stadtplätzen)
+#: by: https://www.architektur-urbanistik.berlin/index.php?attachments/1617229675566-png.6106/ (schematische Karte mit Johannisplatz und Aaron-Bernstein-Platz)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_29_2481_2536_online.pdf (Grundstücksnummerierungen)
+#: by: https://www.berliner-woche.de/mitte/c-bauen/neues-stadtquartier-soll-bis-mitte-2023-fertig-sein_a324308
+#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7042 (angeblich wurde die Helga-Hahnemann-Straße in Mitte niemals benannt --- aber die GoogleMaps-Bilder von 2008/2009 zeigen ein Straßenschild)
+#: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11118 (Antrag)
+#: by: https://berliner-abendblatt.de/kiez-news/mitte/bald-bezugsfertig-stadtquartier-am-tacheles-id217215
+#: by: https://www.deutsches-architekturforum.de/thread/5477-quartier-am-tacheles/?postID=743806#post743806 (Gesamtfertigstellung Q1 2024)
+# REMOVED --- #: XXX im Quartier Am Tacheles werden zwei Privatplätze entstehen und bekommen die Namen (fehlen in Berlin.coords.data): --- #: XXX Johannisplatz (PLZ=10117 laut LOR und DPAG) --- #: XXX laut daf ist der Zugang zum Johannisplatz provisorisch geöffnet; Mosaikpflaster
+# REMOVED --- #: XXX Aaron-Bernstein-Platz (PLZ=10117 laut LOR und DPAG)
+#: XXX noch Bauarbeiten, ein Strang noch gesperrt, wird es Schilder geben?
+#: last_checked: 2024-01-19 (mapillary) vvv
+# REMOVED --- #: check_frequency: 30d vvv
+#: next_check: 2024-03-31 vvv
+#: osm_watch: way id="941599318" version="5"
+Johannisplatz: nicht ausgeschildert	CS 9385,13174 9385,13246
+# REMOVED (eingetragen) --- #: osm_watch: way id="940764588" version="9" --- #: XXX laut osm nun offen --- #: next_check: 2023-09-05 --- Aaron-Bernstein-Platz: in Bau, vermutlich nur für Fußgänger	?::inwork 9353,13273 9382,13265 9385,13246 9463,13256 9476,13293
+#: next_check ^^^
+# REMOVED --- #: check_frequency ^^^
+#: last_checked ^^^
 # 
 ausgeschildert "Landsberger Allee 217a - 217i"	CP2; 16010,14326 16007,14367
 # 
