@@ -402,7 +402,7 @@ Otto-Schmirgal-Str. -> Am Tierpark: Z-Übergang	DH:h=q4,25 18512,10337 18554,1035
 #: source_id: viz2021:13.458241,52.492038,29.07.2021,08:00 (bis 30.6.2022) (inaktiv) (bis 31.12.2022) (bis 31.7.2023) (bis 22.12.2023) (bis 29.02.2024)
 #: osm_watch: way id="1005683568" version="15"
 #: osm_watch: way id="1022420059" version="15"
-#: last_checked: 2024-01-21 vvv
+#: last_checked: 2024-01-28 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-02-29 vvv
 #: note: allerdings spart man hier eine Ampel
@@ -455,7 +455,7 @@ Scharnweberstr.: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:t=2
 #: source_id: viz2021:13.320334,52.478774,02.06.2023,09:00 (bis 31.10.2023) (bis 17.11.2023) (bis 22.12.2023) (bis 30.01.2024) (bis 29.02.2024) vvv
 #: by: https://nitter.cz/VIZ_Berlin/status/1671133669078052865#m
 #: by: https://www.tagesspiegel.de/berlin/bezirke/berliner-verkehr-wilmersdorfer-kreuzung-soll-bald-wieder-befahrbar-sein-10802854.html (bis Ende November 2023?)
-#: note: laut rbb bis 29.02.2024; mittlerweile vorzeitig entfernt; mittlerweile ebenfalls bis 17.11.2023
+#: note: laut rbb bis 29.02.2024; mittlerweile vorzeitig entfernt; mittlerweile ebenfalls bis 17.11.2023; zwischenzeitlich 30.01.2024; nun wieder 29.02.2024
 #: osm_watch: note 3806215 2
 #: last_checked: 2023-07-01 vvv
 #: next_check: 2024-02-29 vvv
@@ -514,14 +514,14 @@ Hansastr.: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:tl:len=30
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
-#: next_check_id: RUSCHEAMPEL-2024
-#: next_check: 2024-05-02 vvv
-#: valid: -20240502 vvv
-Bornitzstr.: Umweg über Netto-Parkplatz	DH:len=100 15747,12880 15950,12886 16073,12883
-Bornitzstr.: Umweg über Gehweg/Parkplatz	DH:len=60:h=q3,60 16073,12883 15950,12886 15747,12880
-Ruschestr. -> Bornitzstr.: über Parkplatz/Gehweg	DH:h=q3,60 15912,13153 15950,12886 16073,12883
-Bornitzstr. -> Ruschestr.: über Gehweg/Parkplatz	DH:h=q3,60 16073,12883 15950,12886 15912,13153
-#: valid ^^^
-#: next_check ^^^
+# REMOVED --- #: next_check_id: RUSCHEAMPEL-2024
+# REMOVED --- #: next_check: 2024-05-02 vvv
+# REMOVED --- #: valid: -20240502 vvv
+# REMOVED --- Bornitzstr.: Umweg über Netto-Parkplatz	DH:len=100 15747,12880 15950,12886 16073,12883
+# REMOVED --- Bornitzstr.: Umweg über Gehweg/Parkplatz	DH:len=60:h=q3,60 16073,12883 15950,12886 15747,12880
+# REMOVED --- Ruschestr. -> Bornitzstr.: über Parkplatz/Gehweg	DH:h=q3,60 15912,13153 15950,12886 16073,12883
+# REMOVED --- Bornitzstr. -> Ruschestr.: über Gehweg/Parkplatz	DH:h=q3,60 16073,12883 15950,12886 15912,13153
+# REMOVED --- #: valid ^^^
+# REMOVED --- #: next_check ^^^
 # 
 #: temporary ^^^

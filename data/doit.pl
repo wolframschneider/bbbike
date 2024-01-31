@@ -37,6 +37,8 @@ my $persistenttmpdir = "$bbbikedir/tmp";
 my $datadir          = "$bbbikedir/data";
 my $bbbikeauxdir     = do { my $dir = "$ENV{HOME}/src/bbbike-aux"; -d $dir && $dir };
 
+chdir $datadir or die "Can't chdir to $datadir: $!";
+
 my $convert_orig_file  = "$miscsrcdir/convert_orig_to_bbd";
 my @convert_orig       = ($perl, $convert_orig_file);
 my @grepstrassen       = ($perl, "$miscsrcdir/grepstrassen");
@@ -46,7 +48,11 @@ my @check_neighbour    = ($perl, "$miscsrcdir/check_neighbour");
 my @check_double       = ($perl, "$miscsrcdir/check_double");
 my @check_connected    = ($perl, "$miscsrcdir/check_connected");
 
-my @orig_files = bsd_glob("$datadir/*-orig");
+my @orig_files = bsd_glob("*-orig");
+my @fragezeichen_lowprio_bbd = defined $bbbikeauxdir ? "$bbbikeauxdir/bbd/fragezeichen_lowprio.bbd" : ();
+#my @additional_sourceid_files = ('routing_helper-orig', @fragezeichen_lowprio_bbd); # XXX use once everything is migrated to doit.pl
+my @additional_sourceid_files;
+my @source_targets_sources;
 
 sub _need_rebuild ($@) {
     my($dest, @srcs) = @_;
@@ -92,6 +98,69 @@ sub _commit_dest ($$) {
     _make_writable($d, $f);
     $d->rename("$f~", $f);
     _make_readonly($d, $f);
+}
+
+sub _repeat_on_changing_sources {
+    my($action, $srcs) = @_;
+
+    my $max_retries = 10; # XXX could be an option?
+
+    my $get_file_modification_times = sub {
+        my %mtimes;
+        for my $file (@$srcs) {
+            my @stat = stat($file);
+            $mtimes{$file} = $stat[9] if @stat;
+        }
+        return %mtimes;
+    };
+
+    for my $retry (1..$max_retries) {
+        my %initial_mtimes = $get_file_modification_times->();
+        eval { $action->() };
+	my $err = $@;
+        my %final_mtimes = $get_file_modification_times->();
+
+        my @changed_files;
+	for my $file (sort keys %final_mtimes) {
+	    if ($initial_mtimes{$file} != $final_mtimes{$file}) {
+                push @changed_files, $file;
+            }
+        }
+
+        if (@changed_files) {
+	    if ($retry < $max_retries) {
+		warning "Files changed during action: @changed_files. Will retry action ($retry/$max_retries).";
+	    } else {
+		error "Files changed during action: @changed_files. Too many retries ($retry), won't repeat anymore.";
+	    }
+        } else {
+	    if ($err) {
+		error $err;
+	    }
+	    last;
+	}
+    }
+}
+
+{
+    my %done;
+    sub _set_make_variable {
+	my($d, $varref, $makevar) = @_;
+	last if $done{$makevar};
+	require BBBikeBuildUtil;
+	my $pmake = BBBikeBuildUtil::get_pmake(canV => 1);
+	chomp(my $varline = $d->info_qx({quiet=>1}, $pmake, "-V$makevar"));
+	@$varref = split /\s+/, $varline;
+	$done{$makevar} = 1;
+    }
+    sub _set_variable_source_targets_sources {
+	my($d) = @_;
+	_set_make_variable($d, \@source_targets_sources, 'SOURCE_TARGETS_SOURCES');
+    }
+    sub _set_variable_additional_sourceid_files {
+	my($d) = @_;
+	_set_make_variable($d, \@additional_sourceid_files, 'ADDITIONAL_SOURCEID_FILES');
+    }
 }
 
 # REPO BEGIN
@@ -319,18 +388,41 @@ EOF
     }
 }
 
+sub action_fragezeichen_nextcheck_org {
+    my $d = shift;
+    my $dest = "$persistenttmpdir/fragezeichen-nextcheck.org";
+    my @srcs = (@orig_files, "$persistenttmpdir/bbbike-temp-blockings-optimized.bbd");
+    if (_need_daily_rebuild $dest || _need_rebuild $dest, @srcs) {
+	_repeat_on_changing_sources(sub {
+	    _make_writable $d, $dest;
+	    $d->run([$perl, "$miscsrcdir/fragezeichen2org.pl", @srcs], '>', "$dest~");
+	    _empty_file_error "$dest~";
+	    _commit_dest $d, $dest;
+	}, \@srcs);
+    }
+}
+
 sub _build_fragezeichen_nextcheck_variant {
     my($d, $dest) = @_;
-    my $variant = ($dest =~ /(home-home|without-osm-watch)/ ? $1 : die "Cannot recognize variant from destination file '$dest'");
+    my $variant = ($dest =~ m{fragezeichen-nextcheck.org$} ? 'exact-dist' :
+		   $dest =~ m{(home-home|without-osm-watch)} ? $1 : die "Cannot recognize variant from destination file '$dest'");
+    my $self_target = ($variant eq 'exact-dist' ? 'fragezeichen-nextcheck.org-exact-dist' :
+		       basename($dest));
     my @srcs = (@orig_files, "$persistenttmpdir/bbbike-temp-blockings-optimized.bbd");
     my $gps_uploads_dir = "$ENV{HOME}/.bbbike/gps_uploads";
     my @gps_uploads_files = bsd_glob("$gps_uploads_dir/*.bbr");
-    if (_need_daily_rebuild $dest || _need_rebuild $dest, @srcs, @gps_uploads_files, $gps_uploads_dir) {
-	require Safe;
-	my $config = Safe->new->rdo("$ENV{HOME}/.bbbike/config");
-	my $centerc = $config->{centerc};
-	_make_writable $d, $dest;
-	$d->run([$perl, "$miscsrcdir/fragezeichen2org.pl",
+    my @all_srcs = (@srcs, @gps_uploads_files, $gps_uploads_dir);
+    # note: the exact-dist variant is always rebuilt, as there are two actions creating the same target (XXX should be fixed!)
+    if ($variant eq 'exact-dist' || _need_daily_rebuild $dest || _need_rebuild $dest, @all_srcs) {
+	my $centerc;
+	if ($variant eq 'home-home') {
+	    require Safe;
+	    my $config = Safe->new->rdo("$ENV{HOME}/.bbbike/config");
+	    $centerc = $config->{centerc};
+	}
+	_repeat_on_changing_sources(sub {
+	    _make_writable $d, $dest;
+	    $d->run([$perl, "$miscsrcdir/fragezeichen2org.pl",
 		 "--expired-statistics-logfile=$persistenttmpdir/expired-fragezeichen-${variant}.log",
 		 (@gps_uploads_files ? "--plan-dir=$gps_uploads_dir" : ()),
 		 "--with-searches-weight",
@@ -338,11 +430,18 @@ sub _build_fragezeichen_nextcheck_variant {
 		 "--dist-dbfile=$persistenttmpdir/dist.db",
 		 ($variant eq 'home-home' ? ($centerc ? ("-centerc", $centerc, "-center2c", $centerc) : ()) : ()),
 		 ($variant eq 'without-osm-watch' ? ('--filter', 'without-osm-watch') : ()),
-		 "--compile-command", "cd @{[ cwd ]} && $^X " . __FILE__ . " " . basename($dest),
+		 "--compile-command", "cd @{[ cwd ]} && $^X " . __FILE__ . " " . $self_target,
 		 @srcs], ">", "$dest~");
-	_empty_file_error "$dest~";
-	_commit_dest $d, $dest;
+	    _empty_file_error "$dest~";
+	    _commit_dest $d, $dest;
+	}, \@all_srcs);
     }
+}
+
+sub action_fragezeichen_nextcheck_org_exact_dist {
+    my $d = shift;
+    my $dest = "$persistenttmpdir/fragezeichen-nextcheck.org";
+    _build_fragezeichen_nextcheck_variant($d, $dest);
 }
 
 sub action_fragezeichen_nextcheck_home_home_org {
@@ -355,6 +454,28 @@ sub action_fragezeichen_nextcheck_without_osm_watch_org {
     my $d = shift;
     my $dest = "$persistenttmpdir/fragezeichen-nextcheck-without-osm-watch.org";
     _build_fragezeichen_nextcheck_variant($d, $dest);
+}
+
+sub action_sourceid {
+    my $d = shift;
+    _set_variable_source_targets_sources($d);
+    _set_variable_additional_sourceid_files($d);
+
+    for my $variant_def (
+        ["sourceid-all.yml",     "bbbike-temp-blockings.bbd"],
+        ["sourceid-current.yml", "bbbike-temp-blockings-optimized.bbd"],
+    ) {
+	my($dest_base, $temp_blockings_base) = @$variant_def;
+	my $dest = "$persistenttmpdir/$dest_base";
+	my @srcs = ("$persistenttmpdir/$temp_blockings_base", @source_targets_sources, @additional_sourceid_files);
+	if (_need_rebuild $dest, @srcs) {
+	    _repeat_on_changing_sources(sub {
+	        $d->run([$perl, "$miscsrcdir/bbd_to_sourceid_exists", @srcs], '>', "$dest~");
+		_empty_file_error "$dest~";
+		_commit_dest $d, $dest;
+	    }, \@srcs);
+	}
+    }
 }
 
 ######################################################################
@@ -565,7 +686,7 @@ sub action_last_checked_vs_next_check {
     require Strassen::Core;
     binmode STDERR, ":utf8"; # XXX "localize" change?
     my $fails = 0;
-    for my $f (bsd_glob("$datadir/*-orig"), "$persistenttmpdir/bbbike-temp-blockings.bbd") {
+    for my $f (bsd_glob("*-orig"), "$persistenttmpdir/bbbike-temp-blockings.bbd") {
 	print STDERR "$f... ";
 	my $file_fails = 0;
 	Strassen->new_stream($f)->read_stream
@@ -674,8 +795,10 @@ sub action_all {
     action_check_connected($d);
     action_survey_today($d);
     action_fragezeichen_nextcheck_bbd($d);
+    #action_fragezeichen_nextcheck_org($d); # collides with action_fragezeichen_nextcheck_org_exact_dist
     action_fragezeichen_nextcheck_home_home_org($d);
     action_fragezeichen_nextcheck_without_osm_watch_org($d);
+    action_sourceid($d);
 }
 
 return 1 if caller;
