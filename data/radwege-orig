@@ -411,7 +411,7 @@ Verbundsteinpflaster	RW1; 11767,9026 11629,9086 11550,9104 11507,9114 11500,9116
 #: XXX ehemalige Radwege nicht mehr nutzbar, Fahrradstraße noch nicht ausgeschildert, vor der Wildenbruchstr. ein paar Meter Verbundsteinpflasterradweg (!), Vorfahrtregelung noch prüfen
 #: osm_watch: way id="940399849" version="10"
 #: osm_watch: way id="1203072585" version="2"
-#: last_checked: 2024-01-28
+#: last_checked: 2024-02-01
 	RW0;RW0 13033,8628 13124,8562 13217,8493
 	RW1;RW1 13217,8493 13384,8354 13566,8212 13724,8090
 Radweg nur aufgemalt	RW1; 13724,8090 13891,7961 13946,7918
@@ -974,7 +974,8 @@ neu asphaltiert, ca. 2,3m breit	RW2; 13543,12326 13785,12292
 # 
 #: note: Strausberger Platz
 neu asphaltiert, breit	RW2; 11976,12595 11988,12546 12028,12519 12083,12518 12114,12546
-	RW2; 12114,12546 12099,12580 12050,12616 12005,12619 11976,12595
+	RW2; 12114,12546 12099,12580 12050,12616
+neu asphaltiert, breit	RW2; 12050,12616 12005,12619 11976,12595
 # 
 # REMOVED (weitgehend fertig) --- #: next_check_id: KARLMARXALLEE-2018 --- #: by: http://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.712659.php --- #: by: http://www.berlin.de/senuvk/bauen/strassenbau/karl-marx-allee/ (Fertigstellung Sommer 2020, mittlerweile Spätsommer 2020) --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2018/pressemitteilung.756300.php (Erstellung einer geschützten Radspur, vermutlich auch im westlichen Abschnitt) --- #: by: https://www.berliner-woche.de/mitte/c-verkehr/erster-geschuetzter-radfahrstreifen-auf-der-holzmarktstrasse-eingeweiht_a188374 --- #: by: http://www.abendblatt-berlin.de/2018/06/21/karl-marx-allee-wird-fuer-zwei-jahre-zur-grossbaustelle/ --- #: by: http://www.abendblatt-berlin.de/2018/07/15/hier-kann-bald-geradelt-werden/ --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.802572.php --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.803251.php --- #: by: https://www.berliner-woche.de/mitte/c-verkehr/zweiter-bauabschnitt-fuer-umbau-der-karl-marx-allee-beginnt_a210106 --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2019/pressemitteilung.872731.php --- #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.872653.php --- #: by: https://www.abendblatt-berlin.de/2019/12/11/berlin-mitte-gruenstreifen-statt-parkplaetze/ --- #: by: https://www.berliner-woche.de/mitte/c-verkehr/mittelstreifen-wird-gruenflaeche-und-bekommt-drei-platzbereiche_a256747 --- #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2020/pressemitteilung.986236.php (abschließende Bauarbeiten bis 27.9.2020) --- #: by: https://www.berliner-woche.de/mitte/c-verkehr/karl-marx-allee-gesperrt_a286249 --- #: source_id: 2147342756 --- #: source_id: 2147346300 --- #: source_id: 2147346384 --- #: XXX zurzeit provisorische Radspuren --- #: priority: #A --- #: last_checked: 2020-09-23 --- #: next_check: 2020-09-27
 # 
@@ -984,7 +985,7 @@ neu asphaltiert, breit	RW2; 11976,12595 11988,12546 12028,12519 12083,12518 1211
 #: next_check_id: METZER-2023
 #: note: später wieder einsetzen: RW4;
 #: XXX Radspur nicht befahrbar, eine gemeinsame Spur für Radfahrer und Autos
-#: last_checked: 2024-01-23 (mapillary)
+#: last_checked: 2024-01-31 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2025-01-02
 	RW0; 10908,13978 10933,14122
@@ -2490,7 +2491,7 @@ für Radfahrer freigegebene Busspur	RW1; 16214,11935 16317,11920 16368,11912
 #
 #: next_check_id: GOERLITZERUFER-2023
 #: XXX wie sieht es nach dem Umbau aus?
-#: last_checked: 2024-01-19 vvv
+#: last_checked: 2024-02-01 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2024-06-30 vvv
 	RW1; 13216,9983 13155,9907
@@ -4359,12 +4360,12 @@ Die letzten 40 Meter sind benutzungspflichtig	RW3; 11383,22369 11279,22316
 	RW2;RW1 18196,18254 18078,18224 17932,18133
 	RW2;RW3 17932,18133 17843,18078
 Gehweg für Radfahrer frei, die letzten 60 Meter sind benutzungspflichtig	RW1; 15662,16649 15437,16491
-Gehweg für Radfahrer frei	RW1; 15662,16649 15735,16698 15776,16721 15875,16816 15917,16858 15986,16922 16139,17017 16296,17114 16318,17128 16352,17150 16460,17214
+Gehweg für Radfahrer frei	RW1; 15662,16649 15735,16698 15776,16721 15875,16816 15929,16870 15986,16922 16139,17017 16296,17114 16318,17128 16352,17150 16460,17214
 neues Verbundsteinpflaster, Gehweg für Radfahrer frei	RW1; 16460,17214 16525,17253 16578,17285
 Verbundsteinpflaster	RW1; 16837,17440 16578,17285 16525,17253
 alter Beton, Radweg nur aufgemalt	RW1; 16525,17253 16460,17214
 #: note: kurze Abschnitte mit Verbundsteinpflasterradweg
-Gehweg für Radfahrer frei	RW1; 16460,17214 16352,17150 16318,17128 16296,17114 16139,17017 15986,16922 15917,16858 15875,16816 15776,16721 15735,16698 15662,16649
+Gehweg für Radfahrer frei	RW1; 16460,17214 16352,17150 16318,17128 16296,17114 16139,17017 15986,16922 15929,16870 15875,16816 15776,16721 15735,16698 15662,16649
 	RW2; 16578,17285 16837,17440
 	RW1;RW2 17400,17790 17159,17631
 	RW2;RW2 17159,17631 16938,17500
@@ -5015,7 +5016,7 @@ neu asphaltiert	RW2; 18657,8163 18672,8238
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1103618.php (Schadstellenbeseitigung, aber wo?)
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/buergerbeteiligung/praesentation-zur-sitzung-vom-09-05-2022.pdf ("keine Mittel")
 #: source_id: 2147342739
-#: last_checked: 2023-11-13 vvv
+#: last_checked: 2024-01-30 (mapillary) vvv
 #: check_frequency: 180d vvv
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20120207.1005.365838.html vvv
 #: note: Darßer Str. Richtung Westen
@@ -5507,8 +5508,8 @@ asphaltierter Bordsteinradweg	RW1; 18884,3752 18856,3783 18826,3816 18779,3866 1
 asphaltierter Bordsteinradweg	RW1; 18042,4667 18239,4453 18374,4307 18541,4125 18739,3909 18779,3866 18826,3816 18856,3783 18884,3752
 #: by ^^^
 	RW2;RW1 17848,14523 17791,14639
-Verbundsteinpflasterradweg	RW1; 17791,14639 17745,14734 17693,14840 17638,14951 17608,15010 17432,15378 17424,15400 17405,15454 17379,15575 17370,15670 17378,15760
-Verbundsteinpflasterradweg, Wurzelhebungen	RW1; 17378,15760 17370,15670 17379,15575 17405,15454 17424,15400 17432,15378 17608,15010 17638,14951 17693,14840 17745,14734 17791,14639
+Verbundsteinpflasterradweg	RW1; 17791,14639 17745,14734 17693,14840 17684,14858 17638,14951 17608,15010 17432,15378 17424,15400 17405,15454 17379,15575 17370,15670 17378,15760
+Verbundsteinpflasterradweg, Wurzelhebungen	RW1; 17378,15760 17370,15670 17379,15575 17405,15454 17424,15400 17432,15378 17608,15010 17638,14951 17684,14858 17693,14840 17745,14734 17791,14639
 	RW4; 17488,15766 17429,15930
 # REMOVED (nein) --- #: XXX zurzeit gibt es hier Bauarbeiten, werden die letzten Meter vielleicht auch noch zur Radspur gemacht? --- #: last_checked: 2018-01-14 --- #: check_frequency: 60d
 die letzten Meter werden als benutzungspflichtiger Radweg auf dem Gehweg geführt	RW4; 17429,15930 17488,15766
@@ -7897,7 +7898,7 @@ Tempo 10	RW6;RW6 -7275,-357 -7300,-292 -7444,-100 -7460,-33
 	RW4; 13330,13468 13228,13615 13225,13620 13166,13707 13100,13803 13037,13897 12975,13990 12901,14093
 	RW4; 12901,14093 12722,14232 12616,14315
 #: XXX wird hier noch ein Radwegschild hingestellt?
-#: last_checked: 2024-01-22
+#: last_checked: 2024-01-30 (mapillary)
 #: check_frequency: 30d
 	RW3; 12616,14315 12522,14385
 Grünbeschichtung	RW3; 12522,14385 12407,14470
@@ -7962,7 +7963,7 @@ Grünbeschichtung	RW4; 17900,6072 17930,6175 17948,6248 17991,6431
 #: source_id: viz2021:13.514401,52.468693,31.08.2023,09:31 (bis 11.04.2024) (bis 04.12.2023) (inaktiv)
 #: XXX wann werden permanente Radspuren entstehen? eventuell (teilweise?) mit Grünbeschichtung? vvv
 # REMOVED --- #: osm_watch: way id="4566067" version="26"
-#: osm_watch: way id="26708088" version="34"
+#: osm_watch: way id="26708088" version="35"
 #: last_checked: 2024-01-27 vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2023-12-04 vvv
@@ -7971,7 +7972,7 @@ provisorische Radspur, benutzungspflichtiger Radweg auf den letzten Metern	RW4; 
 # REMOVED (Radweg temporär eingeführt) --- benutzungspflichtiger Radweg auf den letzten Metern	RW0; 17962,6674 17991,6431
 # REMOVED --- provisorischer getrennter Rad- und Gehweg	RW2; 17962,6674 17991,6431
 # REMOVED --- #: osm_watch: way id="329510232" version="9"
-#: osm_watch: way id="671329664" version="14"
+#: osm_watch: way id="671329664" version="15"
 # REMOVED (Radspur temporär aufgehoben) --- provisorische Radspur	RW4; 17991,6431 17962,6674
 #: note: erste Meter Gehweg für Radfahrer frei, dann Radspur mit Gelbmarkierung, wird aber durchgängig von parkenden Autos ignoriert
 	RW0; 17991,6431 17962,6674
@@ -8058,7 +8059,7 @@ asphaltiert	RW1; 25522,4935 25519,4830
 	RW4; 16485,25516 16414,25575
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.kms-sonne.de/baustellennews?date=20220830 (Fahrbahnaufteilung bleibt über Mitte September 2022 hinaus bestehen)
-#: last_checked: 2023-11-24
+#: last_checked: 2024-02-01
 # REMOVED --- #: check_frequency: 60d
 #: next_check: 2024-03-01
 provisorische Radspur	RW4; 12494,8501 12330,8636 12318,8645
@@ -8768,10 +8769,10 @@ neu asphaltiert	RW2; 651,15091 755,15123 851,15155 971,15193 976,15195 1065,1522
 #: note: Revaler Str. Richtung Westen
 niedrige Protektionselemente, Poller an der Einfahrten	RW4; 14134,11272 13970,11366
 niedrige Protektionselemente, Poller an der Einfahrten	RW3; 13970,11366 13888,11405
-abschnittsweise niedrige Protektionselemente, Poller an der Einfahrten	RW3; 13888,11405 13711,11458
-abschnittsweise niedrige Protektionselemente, Poller an der Einfahrten	RW4; 13711,11458 13588,11490
+abschnittsweise niedrige Protektionselemente, Poller an der Einfahrten	RW4; 13888,11405 13711,11458 13588,11490
 #: note: Revaler Str. Richtung Osten
-niedrige Protektionselemente, Poller an der Einfahrten	RW3; 13588,11490 13711,11458 13888,11405 13970,11366 14134,11272
+niedrige Protektionselemente, Poller an der Einfahrten	RW4; 13588,11490 13711,11458 13888,11405 13970,11366
+niedrige Protektionselemente, Poller an der Einfahrten	RW3; 13970,11366 14134,11272
 # 
 	RW7;RW7 6182,12900 6347,12901 6449,12865 6575,12778 6639,12701
 # 

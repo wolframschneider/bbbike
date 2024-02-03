@@ -1902,12 +1902,13 @@ Nesselweg: Poller, Durchfahrt für Kfz nicht möglich	2 8587,21218 8605,21248
 #: next_check_id: RANKE-2023
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/senat-und-bezirksamt-erarbeiten-verkehrskonzept_a359765
 #: source_id: bvg2021:m19#BVG320914_0 (hat die Verlegung der Haltestelle was mit diesem Vorhaben zu tun?)
-#: source_id: viz2021:13.335684,52.504406,18.10.2023,09:50 (Anbindung Rankestr. gesperrt, bis 31.01.2024)
+#: source_id: viz2021:13.335684,52.504406,18.10.2023,09:50 (Anbindung Rankestr. gesperrt, bis 31.01.2024) (inaktiv)
 #: osm_watch: note 3910207 1
+#: also_indoor: traffic (G,B)
 #: note: vermutlich seit Mai 2023 provisorisch gesperrt
 #: last_checked: 2023-12-09
 #: check_frequency: 60d
-# REMOVED --- #: next_check: 2023-10-01
+#: next_check: 2024-01-31
 Rankestr.: Mittelstreifen provisorisch gesperrt	3nocross 5725,10892 5782,10884 5907,10821
 # 
 Stavangerstr.: Einfahrt verboten	1 10886,16893 10883,16824
@@ -1965,7 +1966,7 @@ Boxhagener Str. -> Wühlischstr.: nur geradeaus erlaubt	3 14752,11369 14771,11345
 #: by: https://www.berliner-woche.de/kreuzberg/c-bauen/am-goerlitzer-ufer-wird-gebaut_a403467
 #: osm_watch: way id="148176599" version="15"
 #: XXX zurzeit schon wegen Bauarbeiten für den Fahrzeugverkehr gesperrt, siehe auch handicap- und radwege-Einträge; nach den Bauarbeiten vermutlich zu NN machen
-#: last_checked: 2024-01-19
+#: last_checked: 2024-02-01
 #: check_frequency: 30d
 #: next_check: 2024-06-30
 Görlitzer Ufer: hier soll ein Fußgänger/Radfahrerbereich eingerichtet werden	2 13216,9983 13155,9907 13136,9883 13086,9825
@@ -2010,6 +2011,9 @@ Tucholskystraße/Auguststraße: Diagonalsperre	3 9898,13484 9651,13406 9415,13315
 Tucholskystraße/Auguststraße: Diagonalsperre	3 9415,13315 9651,13406 9898,13484
 Tucholskystraße/Auguststraße: Diagonalsperre	3 9611,13245 9651,13406 9415,13315
 Tucholskystraße/Auguststraße: Diagonalsperre	3 9415,13315 9651,13406 9611,13245
+# 
+(Ferdinand-Schultze-Str. - Plauener Str. 94-96): Poller	3 17558,14840 17684,14858 *
+(Ferdinand-Schultze-Str. - Plauener Str. 94-96): Poller	3 * 17684,14858 17558,14840
 # 
 ######################################################################
 #: note: Kiezblock Reuterkiez vvv
