@@ -815,7 +815,6 @@ Mühlenstr. (Dallgow-Döberitz): Qualität?	? -14055,13775 -14057,13830 -14060,1388
 Feldstr. (Dallgow-Döberitz): Qualität?	? -14633,14358 -14737,14356 -14821,14299 -14883,14246
 Döberitz - Elstal: Qualität?	? -14821,14299 -15013,14417 -15467,14476 -15733,14666 -15997,14714 -16080,14680 -16152,14690
 Mozartstr.: Qualität des südlichen Abschnitts?	? 8334,26287 8348,26449
-Tegeler Str. (Falkensee): Qualität?	? -10088,17984 -10150,17988 -10292,17929 -10374,17869 -10417,17770
 Trampe - Kruge: Qualität?	? 39683,40892 40258,40191 41298,39991 41731,39846
 Beiersdorf - Beerbaum: Qualität?	? 35980,34322 35977,34619 36085,34994 36096,35327 36200,35854 36214,36208 36215,36497
 Dollgow - Zernikow: Qualität?	? -17141,74157 -16859,74184 -16629,74151 -15730,74428 -14966,74667 -13662,75159
@@ -925,6 +924,8 @@ Ausschilderung nach Luisenthal (?) folgen (Heißt es tatsächlich "Luisenthal"?)	?
 Taubenbogen (Potsdam-Golm): noch nicht ausgeschildert (Sind die Straßen mittlerweile ausgeschildert?)	? -18222,253 -18238,364 -18251,459 -18249,551
 Grasmückenring (Potsdam-Golm): noch nicht ausgeschildert (Sind die Straßen mittlerweile ausgeschildert?)	? -18238,364 -18135,397 -18049,424 -17997,440 -17993,490
 Elsternstr. (Potsdam-Golm): noch nicht ausgeschildert (Sind die Straßen mittlerweile ausgeschildert?)	? -18135,397 -18140,452 -18131,476 -18145,499 -18146,544
+Eidechsenweg: nicht ausgeschildert (Ist der Eidechsenweg bereits ausgeschildert?)	? -7720,13839 -7893,13781
+ausgeschildert "Zu den Häusern Metropolitan Park" (Ist der Eidechsenweg bereits ausgeschildert?)	? -7720,13839 -7893,13781
 # added from comments_route
 F3 (Potsdam) (Wie ist der genaue Verlauf der F3?)	? -26785,5851 -26783,5891 -26689,6111 -26525,6519 -26170,6459 -25898,6447 -25719,6581 -25537,6616 -25318,6593 -25213,6477
 F3 (Potsdam) (Wie ist der genaue Verlauf der F3?)	? -18701,4578 -19392,4605 -19316,4365
@@ -941,8 +942,7 @@ L25 (Schmölln - Güstow): hier entsteht ein Radweg (Gibt es einen neuen Radweg im
 Schönfließer Str., Senheimer Str., Gollanczstr.: Bauarbeiten geplant, kommt es dabei zu Änderungen (z.B. Asphaltierungen?) (Sind die Bauarbeiten in der Schönfließer Straße beendet?)	? 2206,25649 2139,25830 2112,26066 2207,26090 2293,26111 2402,26121 2490,26126 2499,26128 2490,26126 2484,25984 2496,25915 2519,25772 2515,25666
 # added from bbbike-temp-blockings-optimized
 Bahnübergang Ziethener Str. wegen Bauarbeiten gesperrt, voraussichtliche Freigabe Anfang 2024 (Wann sind die Bauarbeiten hier beendet?)	? 10346,-4027 10778,-3988 11338,-3945
-Ringstr.: Bauarbeiten, einige Abschnitte der Fahrbahn gesperrt, Gehwege sind noch frei; außerdem Sperrung der Fahrbahn im Zuge der Baseler Str. [Einfahrt Baseler Str.: Fahrbahn gesperrt] (Sind die Bauarbeiten in der Ringstraße und Baseler Straße beendet?)	? 3184,3427 3174,3052
-Ringstr.: Bauarbeiten, einige Abschnitte der Fahrbahn gesperrt, Gehwege sind noch frei; außerdem Sperrung der Fahrbahn im Zuge der Baseler Str. [östlich Drakestr.] (Sind die Bauarbeiten in der Ringstraße und Baseler Straße beendet?)	? 3558,3688 3507,3654
+Warburgzeile: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Süden, voraussichtlich bis Ende 2024 (Gibt es in der Warburgzeile weiterhin eine Einbahnstraßenregelung?)	? 4032,12167 4101,12356
 Götelstr.: Bauarbeiten, Fahrbahn zwischen Betckestr. und Weverstr. gesperrt (Stand Oktober 2023), Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten beendet?)	? -3269,12406 -3260,12540
-Bürgerpark: Weg von/zur Wilhelm-Kuhr-Str. gesperrt, voraussichtlich bis Dezember 2023, vermutlich noch länger (Sind die Bauarbeiten beendet?)	? 9462,18234 9460,18053
-Wichmannstr.: Leitungsarbeiten, Einbahnstraßenregelung zwischen Landgrafenstr. und Keithstr. (auch für Radfahrer), voraussichtlich bis Ende Januar 2024, vielleicht auch länger (Existiert die Einbahnstraßenregelung in der Wichmannstraße weiterhin?)	? 6549,11015 6681,10959
+Steg am Krugpfuhl gesperrt, Ende der Sperrung unbekannt (Wann ist der Steg wieder offen?)	? 11162,22939 11150,22898
+Uranusweg: Fahrbahn unter der U-Bahnbrücke gesperrt, Engstelle (Besteht die Sperrung noch immer?)	? 4335,17642 4392,17777

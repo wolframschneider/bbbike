@@ -606,7 +606,8 @@ Cardinalstr.	1s 21896,5724 21828,5623 21706,5541
 Fuchsbergeweg	1s 20595,9558 20592,9298
 Piesporter Str. - Liebermannstr.	1 15217,17284 15267,17349 15278,17352
 (Marchlewskistr. - Gubener Str.)	1s 13168,12219 13173,12202 13097,12166
-Alter Schönefelder Weg	1 19599,1557 19636,1609 19653,1671 19669,1729 19743,1804
+Alter Schönefelder Weg	1 19590,1554 19606,1573 19634,1609 19648,1665 19669,1729 19743,1804
+Alter Schönefelder Weg	1 19613,1561 19606,1573
 Südstern	1 10713,9260 10625,9259 10564,9292
 Südstern	1 10564,9292 10615,9300 10639,9304 10670,9286 10713,9260
 Pitschener Str.	1s 21769,-432 21719,-397 21637,-381
@@ -990,6 +991,8 @@ Pichelsdorfer Str.	1 -3824,13350 -3802,13303
 Fulhamer Str. (Radweg)	1 13225,4495 13213,4565
 (Vergissmeinnichtweg - Weidenkätzchenweg)	1s 21503,114 21435,99
 (Weidenkätzchenweg - Buschwindröschenweg)	1s 21435,99 21367,84
+Buschwindröschenweg	1s 21367,84 21354,142
+Weidenkätzchenweg	1s 21435,99 21421,158
 (Seydlitzstr. - Lehrter Str.)	1 7651,13447 7613,13517
 Mittelstreifen	3nocross::ignrte 14853,7451 14775,7385 14758,7373
 Straße 3	1s 18816,19648 18730,19672 18644,19695 18544,19722
@@ -1100,6 +1103,7 @@ Park Sanssouci: auch das Mitführen eines Fahrrads ist nicht erlaubt	2 -14389,-85
 Bahnhofstr.	1s -8417,-2862 -8410,-2884
 Bienenwinkel	1 -13335,1927 -13333,1957 -13227,1962 -13228,1927
 Luisenhof: durch Tore abgesperrt	2 -13558,-2841 -13570,-2795
+Marwitzer Str. (Falkensee)	1 -10239,17791 -10344,17792 -10417,17770
 Osramplatz (Hohen Neuendorf)	1 1261,28406 1229,28298 1198,28265
 Osramplatz (Hohen Neuendorf)	1 1167,28295 1194,28320 1221,28418
 Ruhlsdorfer Platz	1 1492,-697 1495,-747
@@ -1648,8 +1652,6 @@ Cautiusstr. -> Streitstr.: Mittelstreifen	3::igndisp -3019,17129 -3006,17128 -29
 Mittelstreifen	3nocross::ignrte 10769,1111 10829,1135 11012,1210
 Marienfelder Chaussee -> Wingerter Str.: Mittelstreifen	3::igndisp 11012,1210 10829,1135 10845,1026
 Wingerter Str. -> Marienfelder Chaussee: Mittelstreifen	3::igndisp 10845,1026 10829,1135 10769,1111
-Mittelstreifen	3nocross::ignrte 5517,20120 5527,20044 5545,19909 5533,19811
-Oranienburger Str. -> Kirschblütenpl.: Mittelstreifen	3::igndisp 5527,20044 5545,19909 5598,19912
 Bahntrasse	3nocross::ignrte 15875,1796 15835,1747 15799,1690 15729,1573
 Zwickauer Damm -> Feuchtwangerweg: Bahntrasse	3::igndisp 15799,1690 15835,1747 15788,1747
 Feuchtwangerweg -> Zwickauer Damm: Bahntrasse	3::igndisp 15788,1747 15835,1747 15875,1796
@@ -3418,6 +3420,10 @@ weites Drängelgitter	BNP:2:-114:trailer=7 -48996,85026
 Drängelgitter	BNP:3:-236:trailer=10 -53609,82816
 Drängelgitter	BNP:3:-15:trailer=10 3789,18863
 Drängelgitter	BNP:3:-108:trailer=10 21494,10816
+Weg entlang der A100: offiziell noch gesperrt	2::inwork 14341,8763 14326,8747 14325,8682 14299,8436 14310,8335 14350,8228 14409,8102 14440,8050
+Weg an der A100 - Mergenthalerring: gesperrt, Durchfahrt wegen Bauzaun nicht möglich	2::inwork 14409,8102 14419,8112
+Weg entlang der A100: gesperrt, Durchfahrt zumindest an der Sonnenallee wegen Bauzaun nicht möglich	2::inwork 14440,8050 14439,8030 14467,7904 14476,7827 14478,7771 14462,7597 14441,7529 14379,7372
+An der alten Gärtnerei: Baustraße, gesperrt	2::inwork 10888,3787 10898,3865 10922,3917 10981,3937 11022,3921 11046,3895
 Lisa-Fittko-Str.: Hochbauarbeiten, Weg gesperrt (möglicherweiseexistiert er auch noch nicht)	2::inwork 7787,13838 7872,13685
 Matthäikirchplatz: Durchgang gesperrt	2::inwork 7933,11407 7970,11396 7934,11275
 Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,9039 19638,9070 19621,9097

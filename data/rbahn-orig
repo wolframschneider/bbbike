@@ -200,6 +200,7 @@ RB63	R 38317,52908 38464,53273 38650,54555 38485,55382 38375,55910 38227,56637 3
 #: by: https://www.berliner-zeitung.de/mensch-metropole/verkehrswende-bahn-letzte-fahrt-nach-ringenwalde-regionalbahnfahrt-ins-ungewisse-li.239597
 #: by: https://www.berliner-zeitung.de/mensch-metropole/ende-einer-regionalbahnstrecke-im-dezember-ist-schluss-wohl-fuer-immer-brandenburg-rb63-schorfheidebahn-li.279137
 #: by: https://www.berliner-zeitung.de/mensch-metropole/die-letzte-fahrt-steht-bevor-so-wird-gegen-das-ende-der-rb63-protestiert-li.295479
+#: by: https://www.nordkurier.de/regional/uckermark/gutachter-zu-rb-63-richtung-berlin-schaetzen-nutzen-hoeher-ein-als-kostenaufwand-2235454
 #: note: seit 2006-12-10 stillgelegt, Ersatz durch Bus 515 vvv
 #: note: Dezember 2018 bis 2022-12-11 wieder in Betrieb (RB64) vvv
 # Templin Stadt - Abzweig nach Britz
@@ -420,8 +421,9 @@ RB26	R 39654,14564 40259,14530 40496,14524 43033,14393 45640,14267 45740,14260 5
 #: by: https://www.bahninfo.de/artikel/11318/fahrgastsprechtag-regionalverkehr-2023/ (Erwähnung für 2024)
 #: by: https://www.berliner-zeitung.de/mensch-metropole/ostbahn-rb26-warum-eine-wichtige-internationale-verbindung-nach-berlin-unterbrochen-bleibt-kuestrin-kostrtzyn-oderbruecke-li.2152610 (März 2024)
 #: by: https://www.berliner-zeitung.de/mensch-metropole/ostbahn-neb-rb26-db-vbb-bleibt-die-wichtige-strecke-nach-berlin-noch-laenger-unterbrochen-li.2155315 (Mai 2024?)
+#: by: https://www.neb.de/aktuelles/details/nochmals-verzoegerung-beim-bauprojekt-oderbruecke/ (Ende September 2024?)
 #: XXX wegen Bauarbeiten gesperrt, voraussichtlich keine Inbetriebnahme 2022 und auch nicht im Mai 2023 und auch nicht im Dezember 2023
-#: next_check: 2024-03-31
+#: next_check: 2024-09-30
 RB26	RBau 92076,19533 92620,19877 93094,20453 93791,21339 94157,21692 94630,21978
 # Strausberg - Strausberg-Nord
 	R0 39654,14564 40259,14530 40496,14524 40693,14553 41100,14790 41275,15058 41668,16174 41748,16421 42081,17089 42444,17710 42647,17909 42910,18107 43079,18347 43130,18578 43114,19289 43151,19585 43192,19730 43256,19851 43498,20071 44181,20584 44323,20764 44484,21068
@@ -819,6 +821,7 @@ Neubrandenburg - Pasewalk	R -569,128223 -216,128147 3,128126 368,128211 978,1282
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_49_4437_4640_online.pdf (Erörterungstermin)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6740 (Antrag)
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-verkehr/verordnete-sprechen-sich-fuer-endbahnhof-gesundbrunnen-aus_a402061
+#: by: https://www.bahninfo-forum.de/read.php?9,388253,792286#msg-792286 (keine Reaktivierung bis Dez. 2024?)
 #: XXX Reaktivierung geplant --- Strecke im Bereich Wilhelmsruh korrigieren!
 #: XXX neue Halte: Berlin-Wilhelmsruh, PankowPark, Wilhelmsruher Damm, Blankenfelde, Schildow, Schildow Nord, Mühlenbeck und Schönwalde West
 #: XXX bei der Reaktivierung Schranken umtaggen (B0 -> B)

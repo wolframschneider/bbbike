@@ -3,8 +3,6 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
-Friedenstr.: kurzes Stück der Fahrbahn gesperrt	q3::inwork; 12616,12844 12600,12860
-Friedenstr.: kurzes Stück der Fahrbahn gesperrt	q2::inwork; 12600,12860 12520,12938
 Gubener Str.: Sperrung im Kreuzungsbereich Grünberger Str./Wedekindstr.	q2::inwork 13406,11896 13352,12003
 Müncheberger Str.: schmaler Gehweg, Fußgänger	q4 12558,11920 12617,11888
 Landsberger Allee: Engstelle in Höhe Matthiasstr.	q2::inwork; 12711,13150 12786,13185 12878,13229
@@ -24,6 +22,7 @@ Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
 Grunerstr.: Gehweg	q3 10973,12611 11057,12715
 Grunerstr.: Gehweg	q3 10900,12546 10929,12500 10913,12556 10973,12611
+Klosterstr.: Bauarbeiten, Fahrbahn gesperrt, Bordsteine	q3::inwork 10947,12457 10900,12546 10873,12577
 Am Köllnischen Park: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 11185,11883 11160,12071
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8775,12457 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423
@@ -37,6 +36,7 @@ Marksburgstr.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 18697,9153 18809,9
 Sigismundstr.: Fahrbahn gesperrt	q3::inwork 7894,11288 7934,11275 8031,11249
 Rankestr.: Einmündungsbereich Breitscheidplatz wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg, ggfs. Bordsteine	q2::inwork 5669,10704 5782,10884
 Abbestr.: Bauzaun, Umfahrung notwendig	q4::inwork 4674,12076 4698,12124
+Bürgerstr.: Fahrbahn gesperrt, Hochbauarbeiten	q4::inwork 12830,6254 12997,6290
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
 Bornitzstr.: Sperrung der Fahrbahn an der Ruschestr.	q3::inwork 15747,12880 15950,12886
 Ontarioseestr.: Fahrbahn abschnittsweise gesperrt, Bordsteine	q3::inwork 18552,10135 18585,10024 18411,10037
@@ -1520,7 +1520,7 @@ Ackerstr.: einige Fußgänger, Bordstein	q2 -3937,15299 -3869,15333
 (Schulzenstr. - Spekteweg): Fußgänger	q1 -4961,14828 -4945,14883
 (Schulzenstr. - Spekteweg): nur für Fußgänger erlaubt	q4 -4945,14883 -4933,14953 -4932,14964
 Heerstr. - Tiefenwerder: teilweise recht eng	q2 -3217,11570 -3179,11763 -3116,12012
-(Sonnenallee - Aronsstr.): einige Fußgänger	q1 14530,7301 14558,7350 14571,7427
+(Sonnenallee - Aronsstr.): einige Fußgänger	q2 14530,7301 14558,7350 14571,7427
 (Landschaftspark Herzberge, Weg am ehemaligen Zeltlager): einige Fußgänger, kurvenreich	q2 17187,13609 17185,13765 17204,13800 17209,13856 17178,13896 17190,13903 17213,13931 17210,14054 17164,14067 17152,14084
 (Hellweg-Parkplatz): Parkplatzverkehr	q1 8243,9766 8239,9754 8247,9699 8213,9662 8201,9647 8192,9619
 (Hellweg-Parkplatz): Parkplatzverkehr	q2 8243,9766 8181,9707 8213,9662
@@ -1742,7 +1742,7 @@ Stelzenweg, Straße 26a: zahlreiche Bodenschwellen, mit Normalrad gut umfahrbar	q
 Rütli-Campus: einige Fußgänger, Schulgelände	q3 12526,9125 12554,9178 12592,9249
 (Ossastr. - Rütlistr.): einige Fußgänger, Schulgelände	q2 12623,9134 12554,9178
 (Kleiner Tiergarten): Fußgänger	q2 6390,13187 6377,13321
-(Einsteinufer - TU-Mathegebäude): Fußgänger	q2 5128,12149 5106,12129 5141,11816
+(Einsteinufer - TU-Mathegebäude): Fußgänger	q2 5132,12136 5105,12118 5141,11816
 (Mauerpark, über den Gleimtunnel): Fußgänger, einige enge Kurven	q2 10081,15853 10046,15844 10050,15824 10061,15775 10045,15754 10071,15684 10079,15661 10091,15630
 (Mauerpark - Lichtburgring): Fußgänger	q2 10071,15684 10057,15680
 Delbrückstr.: flacher Bordstein, Fußgänger	q2 17123,10844 17141,10838
@@ -1915,7 +1915,7 @@ Am Lichtenrader Graben: einige Fußgänger	q1 10695,-1515 10615,-1772 10537,-1943 
 Dorotheenstr.: Bordstein, Fußgänger	q3 22926,4123 22949,4136
 Elisabeth-Schiemann-Str.: einige Bodenschwellen, meist umfahrbar	q1 20586,18822 20553,18734 20533,18682 20512,18626 20448,18454 20458,18424
 (Potsdamer Platz - Linkstr.): Bordstein, Fußgänger	q4 8474,11350 8481,11447
-Alte Potsdamer Str.: Fußgängerzone, Radfahrer frei	q2 8389,11378 8481,11447 8479,11493
+Alte Potsdamer Str.: Fußgängerzone, Radfahrer frei	q2 8280,11296 8318,11324 8375,11368 8389,11378 8481,11447 8479,11493
 (Gleisdreieckpark - Möckernkiez): eng	q3 8729,9747 8735,9737
 Möckernkiez: Rampe	q3 8778,9759 8757,9748 8735,9737
 (Fredersdorfer Str. - Hildegard-Jadamowitz-Str.): drei Bodenschwellen	q1 12908,12280 12883,12118 12893,12077 12923,12043
@@ -2493,7 +2493,7 @@ Wickenhagenweg: Grünanlage, einige Fußgänger	q3 -6137,864 -6125,838
 (Straßenbahnhaltestelle): Straßenbahnübergang, einige Fußgänger	q3 21020,16298 21033,16308 21041,16301 21031,16287 21036,16286
 (Weg am Beerenpfuhlgraben): Grünanlage, einige Fußgänger	q1 23369,14756 23368,14771 23412,14899 23521,14973
 (Weg am Beerenpfuhlgraben - Senftenberger Str.): Grünanlage, einige Fußgänger	q1 23521,14973 23529,14973 23543,14966
-Singerstr.: Fußgängerzone für Radfahrer frei, höherer Fußgängerfrequenz zum Unterrichtsbeginn	q0 11635,12398 11845,12292
+Singerstr.: Fußgängerzone für Radfahrer frei, höhere Fußgängerfrequenz zum Unterrichtsbeginn	q0 11635,12398 11845,12292
 Staakener Feldstr.: einige Fußgänger	q1 -7647,13985 -7716,14031
 (Glühwürmchenweg - Pionierstr.): einige Fußgänger	q1 -6048,16292 -5959,16235 -5924,16458
 (Seydlitzstr. - Lehrter Str.): eng, wenn BVG-Busse hier parken	q3 7613,13517 7651,13447
@@ -2510,6 +2510,9 @@ Colbestr.: eng durch Zweite-Reihe-Parker	q0 14523,12183 14468,11992
 Colbestr.: eng	q0 14468,11992 14416,11815
 Lisa-Fittko-Str.: einige Fußgänger	q1 7734,13944 7731,13927 7787,13839 7787,13838 7872,13685
 (Schleizer Str. - Plauener Str.): Fußgänger, Wohngebiet	q3 17406,14986 17415,14906
+(Königswalder Str. - Neuzeller Weg): einige Fußgänger, schmal	q2 16807,16726 16772,16852 16751,16931 16723,17004 16692,17080 16658,17142
+Douglasienweg: einige Fußgänger	q1 11563,4099 11594,4107
+(Schönhauser Str. - Zitherstr.): schmal, Bordstein	q3 11599,20973 11657,20915
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11908,19255 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11929,19281
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -3300,7 +3303,7 @@ Verlängerte Schulzendorfer Str.: Fußgänger	q1 2150,22464 2015,22435 1834,22421 1
 (Verlängerung Senheimer Str.): teils enger Weg	q2 2560,26475 2493,26665 2434,26783 2384,26851 2303,26913
 (Ludwig-Lesser-Park, mittlerer Weg): viele Fußgänger	q2 2312,25673 2293,26111
 (Senheimer Str. - Oranienburger Chaussee/Schwarzkittelweg): enger Weg	q2 2540,26280 3013,26458
-(Cardinalplatz - Wuhlewanderweg): schmal	q2 21901,5743 21884,5769 21873,5832 21856,5854
+(Cardinalplatz - Wuhlewanderweg): schmal	q2 21901,5743 21884,5769 21873,5832 21862,5857
 (Cardinalplatz - Wuhlewanderweg): schmal	q2 21873,5832 21938,5866
 Vulkanstr./Landsberger Allee - Altenhofer Str.: schmal	q2 15796,14310 15791,14320 15699,14350
 (Amselhainer Weg - Hirschfelder Weg): Fußgänger	q2 21886,15594 21892,15637
@@ -3411,6 +3414,8 @@ Feldrain: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25684,13
 Oberspreestr. [Nebenfahrbahn]: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 19965,5101 19957,5083 19940,5090
 (Vergissmeinnichtweg - Weidenkätzchenweg): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 21503,114 21435,99
 (Weidenkätzchenweg - Buschwindröschenweg): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 21435,99 21367,84
+Buschwindröschenweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 21367,84 21354,142
+Weidenkätzchenweg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 21435,99 21421,158
 Straße 3: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 18816,19648 18730,19672 18644,19695 18544,19722
 Am Krusenick: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 22751,4970 22652,4966 22667,4912 22705,4874
 Josef-Nawrocki-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25796,4683 25796,4823
@@ -3434,6 +3439,7 @@ Lindenallee: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 1429,
 Alt-Tegel: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 1668,20156 1753,20191 1907,20265
 Alt-Tegel: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 1668,20156 1529,20131 1543,20060 1630,20097 1668,20156
 May-Ayim-Ufer: gegen die Einbahnstraßenrichtung, ggfs. schieben	q1::igndisp; 13206,10651 13077,10747
+Stephanstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 6523,4491 6360,4504
 Atzpodienstr. (Umgehung auf Gehweg möglich): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 16485,12384 16509,12518 16564,12513
 Behrenstr./Bebelplatz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 9798,12267 9737,12238 9730,12238 9680,12232 9631,12227
 Halenseestr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 2163,10024 2110,10101 2030,10253 1988,10328 1939,10446

@@ -269,7 +269,7 @@ Rathausbrücke	Br 10357,12356 10416,12394
 #: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/muehlendammbruecke/ (voraussichtliche Bauzeit: 2024 bis 2028)
 #: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/muehlendammbruecke/verkehrsfuehrung/
 #: XXX Mühlendammbrücke: geplanter Neubau --- wird es zu Einschränkungen für den Radverkehr kommen?
-#: last_checked: 2024-01-11
+#: last_checked: 2024-02-06
 #: next_check: 2024-06-01
 Mühlendammbrücke	Br 10574,12131 10625,12206
 # 
@@ -342,7 +342,7 @@ Corneliusbrücke	Br 6582,11202 6606,11222 6630,11247
 Charlottenburger Brücke	Br 5381,11847 5478,11860
 Untere Freiarchenbrücke	Br 5790,11643 5802,11677
 Untere Schleusenbrücke	Br 5818,11722 5835,11768
-Marchbrücke	Br 5013,12323 4993,12291 4973,12256
+Marchbrücke	Br 5016,12332 4993,12291 4976,12262
 Dovebrücke	Br 4648,12559 4591,12511
 Röntgenbrücke	Br 4303,12692 4290,12569
 Caprivibrücke	Br 3741,12607 3738,12639 3734,12715
@@ -590,7 +590,7 @@ Nonnendammbrücke	Br 2149,13775 2176,13703
 #: XXX Wird es während der Bauarbeiten Sperrungen geben? Wie wird die Situation nach den Bauarbeiten aussehen? (vermutlich unverändert)
 #: also_indoor: search Ernststraßensteg
 #: osm_watch: way id="182526639" version="8"
-#: last_checked: 2024-01-25 (indoor research)
+#: last_checked: 2024-02-07 (indoor research)
 # REMOVED --- #: next_check: 2023-12-31
 Ernststraßensteg	Br 2689,19544 2714,19529 2780,19548 2821,19559
 Brücke über die Erpe	Br 23675,5706 23675,5729

@@ -82,6 +82,7 @@ Uferweg - Kiehnwerderallee: Waldweg	X 16657,8443 16490,8432
 #: mud: 2023-11-11: keine Beeinträchtigungen	h=q0
 #: mud: 2023-11-14: wenige Pfützen	h=q1+,wet
 #: mud: 2023-11-19: einige Pfützen	h=q1,wet
+#: mud: 2024-02-10: einige Pfützen	h=q1-,wet
 Hönower Weg: asphaltiert, aber mit einigen Wellen	X 17383,9719 16984,9857 16925,9852 16900,9861
 # 
 # REMOVED (Weg wurde neu gemacht und ist nun asphaltiert) --- #: mud: 2020-03-06: eine "Seenlandschaft" --- Rüdersdorfer Str. - Am Wriezener Bahnhof: unbefestigt, mit vielen großen Kuhlen	X 13173,11788 13089,11708
@@ -118,6 +119,10 @@ Am Betriebsbahnhof Schöneweide: unbefestigt, mit vielen kleinen Kuhlen	X 18160,4
 #: mud: 2020-03-14: keine Beeinträchtigungen
 #: mud: 2023-12-26: einige Pfützen	h=q2
 Stadtpark Stegltz: etwas älterer Parkweg	X 5890,4674 5841,4557 5836,4469 5787,4400
+# 
+#: mud: 2024-02-07: einige große Pfützen, matschige Stellen	h=q3
+#: note: mittlerweile hat sich eine etwas breitere Spur neben dem eigentlichen Weg gebildet, die sowohl von Fußgängern als auch Radfahrern genutzt wird, sofern der Platz da ist
+Weverpromenade: wassergebundene Decke	X 5787,4400 5738,4361 5541,4305
 # 
 #: mud: 2020-03-14: keine Beeinträchtigungen
 #: mud: 2023-12-26: einige feuchtere Stellen	h=q1-
@@ -651,4 +656,7 @@ Zu den Faltern: unbefestigter Weg	X 21861,10970 21894,10983 21917,10991 21930,10
 # 
 #: mud: 2023-12-26: eine sehr große Pfütze	h=q3,wet
 Kufsteiner Str.: glatter Parkweg	X 5913,8415 5917,8351 5918,8221
+# 
+#: mud: 2024-02-10: matschig	h=q3,wet
+Mohnblütenweg: unbefestigte Straße	X 21712,215 21688,312
 # 

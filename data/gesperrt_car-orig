@@ -730,8 +730,8 @@ Polierweg: Schranke vor dem Malersteig	3 * 13596,3039 13650,3025
 Polierweg	1 13488,3062 13100,3159 13048,3134
 Zantochweg: Poller	3 12328,3831 12266,3863 *
 Zantochweg: Poller	3 * 12266,3863 12328,3831
-Douglasienweg: Poller	3 11633,4117 11563,4099 *
-Douglasienweg: Poller	3 * 11563,4099 11633,4117
+Douglasienweg: Poller	3 11633,4117 11594,4107 11563,4099 *
+Douglasienweg: Poller	3 * 11563,4099 11594,4107 11633,4117
 Goldenes Horn: Poller	3 * 10563,3767 *
 Brusaer Weg: Poller	3 10248,3897 10237,3789 *
 Brusaer Weg: Poller	3 * 10237,3789 10248,3897
@@ -884,7 +884,7 @@ Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,147
 #: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
 #: osm_watch: way id="155071540" version="21"
-#: last_checked: 2024-01-28
+#: last_checked: 2024-02-07
 #: check_frequency: 60d
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
@@ -1737,7 +1737,7 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: source_id: viz2021:13.409118,52.51693,15.01.2023,18:00 (bis 30.06.2023) (bis 07.07.2023) (bis 17.07.2023) (bis 31.12.2023) (bis 30.08.2024)
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
 #: note: mittlerweile ist die Fahrbahn und die Markierungen größtenteils schon fertig
-#: last_checked: 2024-01-28 (webcam) vvv
+#: last_checked: 2024-02-07 (webcam) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2024-08-30 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
@@ -1838,7 +1838,7 @@ Radieschenpfad	1 20582,18475 20635,18381
 #: osm_watch: way id="24202434" version="27"
 #: XXX Wird der Asphalt ersetzt werden?
 #: note: Durch die neue Schrankenanlage scheint es für Radfahrer keine Einschränkungen zu geben.
-#: last_checked: 2024-01-06
+#: last_checked: 2024-02-10
 #: check_frequency: 30d
 Dammweg: durch Barrieren für den Autoverkehr gesperrt	2 15869,8355 16388,8821
 # 
@@ -1903,12 +1903,12 @@ Nesselweg: Poller, Durchfahrt für Kfz nicht möglich	2 8587,21218 8605,21248
 #: by: https://www.berliner-woche.de/charlottenburg/c-verkehr/senat-und-bezirksamt-erarbeiten-verkehrskonzept_a359765
 #: source_id: bvg2021:m19#BVG320914_0 (hat die Verlegung der Haltestelle was mit diesem Vorhaben zu tun?)
 #: source_id: viz2021:13.335684,52.504406,18.10.2023,09:50 (Anbindung Rankestr. gesperrt, bis 31.01.2024) (inaktiv)
-#: osm_watch: note 3910207 1
+#: osm_watch: note 3910207 3
 #: also_indoor: traffic (G,B)
 #: note: vermutlich seit Mai 2023 provisorisch gesperrt
-#: last_checked: 2023-12-09
+#: last_checked: 2024-02-04
 #: check_frequency: 60d
-#: next_check: 2024-01-31
+# REMOVED --- #: next_check: 2024-01-31
 Rankestr.: Mittelstreifen provisorisch gesperrt	3nocross 5725,10892 5782,10884 5907,10821
 # 
 Stavangerstr.: Einfahrt verboten	1 10886,16893 10883,16824
@@ -1966,7 +1966,7 @@ Boxhagener Str. -> Wühlischstr.: nur geradeaus erlaubt	3 14752,11369 14771,11345
 #: by: https://www.berliner-woche.de/kreuzberg/c-bauen/am-goerlitzer-ufer-wird-gebaut_a403467
 #: osm_watch: way id="148176599" version="15"
 #: XXX zurzeit schon wegen Bauarbeiten für den Fahrzeugverkehr gesperrt, siehe auch handicap- und radwege-Einträge; nach den Bauarbeiten vermutlich zu NN machen
-#: last_checked: 2024-02-01
+#: last_checked: 2024-02-06 (mapillary)
 #: check_frequency: 30d
 #: next_check: 2024-06-30
 Görlitzer Ufer: hier soll ein Fußgänger/Radfahrerbereich eingerichtet werden	2 13216,9983 13155,9907 13136,9883 13086,9825
@@ -1985,12 +1985,7 @@ Otto-Ostrowski-Str.: Durchfahrt durch Barrieren versperrt	3 * 13711,13615 *
 #: confirmed_by: srt
 Stallschreiberstr.	1 10794,10927 10824,11010 10690,11167
 # 
-#: next_check_id: BERGMANN-2023
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11295 (Anfrage -> mögliche Verstetigung)
-#: osm_watch: way id="1059672152" version="6"
-#: last_checked: 2024-01-28
-#: check_frequency: 120d
-Bergmannstr.: Sperrung vor der Ferdinand-Freiligrath-Schule	2 10250,9233 10366,9233
+# REMOVED --- #: next_check_id: BERGMANN-2023 --- #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11295 (Anfrage -> mögliche Verstetigung) --- #: osm_watch: way id="1059672152" version="6" --- #: last_checked: 2024-01-28 --- #: check_frequency: 120d --- Bergmannstr.: Sperrung vor der Ferdinand-Freiligrath-Schule	2 10250,9233 10366,9233
 # 
 #: note: Vandalismus möglich, bei dem der mittlere Poller beschädigt wird; mittlerweile eine provisorische Bake aufgestellt
 Stadthausstr.: Poller am Archibaldweg	2 15649,10922 15674,10851
@@ -2001,6 +1996,7 @@ Majakowskiring: Poller	3 * 10373,18887 *
 Kurfürstenstr.: Mittelstreifen, Fußgängerfurt existiert	3nocross 6471,10851 6607,10801 6740,10755
 # 
 Oberwallstr.	1 9925,11947 9913,12068
+Niederwallstr.	1 9925,11947 9991,11903
 # 
 #: by: https://westnordost.de/p/189569.jpg
 Tucholskystraße/Auguststraße: Diagonalsperre	3 9609,13522 9651,13406 9611,13245
@@ -2014,6 +2010,8 @@ Tucholskystraße/Auguststraße: Diagonalsperre	3 9415,13315 9651,13406 9611,13245
 # 
 (Ferdinand-Schultze-Str. - Plauener Str. 94-96): Poller	3 17558,14840 17684,14858 *
 (Ferdinand-Schultze-Str. - Plauener Str. 94-96): Poller	3 * 17684,14858 17558,14840
+# 
+Oranienburger Str.: Mittelstreifen, Fußgängerfurt existiert	3nocross 5527,20044 5545,19909 5533,19811
 # 
 ######################################################################
 #: note: Kiezblock Reuterkiez vvv

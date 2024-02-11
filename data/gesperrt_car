@@ -992,9 +992,9 @@ Französische Str. -> Am Kanal: verboten	3::igndisp -12552,-1233 -12549,-1277 -12
 Joliot-Curie-Str. -> Am Kanal: verboten	3::igndisp -12542,-1305 -12549,-1277 -12666,-1311
 Mittelstr. (Potsdam)	1 -12884,-769 -12697,-729
 Emma-Herwegh-Str.	1 7795,13168 7595,12980
-Margarete-Kühn-Str.: Poller am Salzufer	3 5194,12398 5133,12240 5013,12323
+Margarete-Kühn-Str.: Poller am Salzufer	3 5194,12398 5133,12240 5016,12332
 Margarete-Kühn-Str.: Poller am Salzufer	3 5194,12398 5133,12240 5181,12195
-Margarete-Kühn-Str.: Poller am Salzufer	3 5013,12323 5133,12240 5194,12398
+Margarete-Kühn-Str.: Poller am Salzufer	3 5016,12332 5133,12240 5194,12398
 Margarete-Kühn-Str.: Poller am Salzufer	3 5181,12195 5133,12240 5194,12398
 Eberswalder Str. (Bernau)	1 23109,30968 23103,30923 23084,30893 22917,30635
 Rutnikstr. - Möllendorffstr.: Abbiegen verboten	3 15648,12687 15546,12690 15550,12625
@@ -1295,10 +1295,10 @@ Zantochweg: Poller	3 12328,3831 12266,3863 12250,3839
 Zantochweg: Poller	3 12328,3831 12266,3863 12271,3906
 Zantochweg: Poller	3 12250,3839 12266,3863 12328,3831
 Zantochweg: Poller	3 12271,3906 12266,3863 12328,3831
-Douglasienweg: Poller	3 11633,4117 11563,4099 11547,4127
-Douglasienweg: Poller	3 11633,4117 11563,4099 11567,4085
-Douglasienweg: Poller	3 11547,4127 11563,4099 11633,4117
-Douglasienweg: Poller	3 11567,4085 11563,4099 11633,4117
+Douglasienweg: Poller	3 11633,4117 11594,4107 11563,4099 11547,4127
+Douglasienweg: Poller	3 11633,4117 11594,4107 11563,4099 11567,4085
+Douglasienweg: Poller	3 11547,4127 11563,4099 11594,4107 11633,4117
+Douglasienweg: Poller	3 11567,4085 11563,4099 11594,4107 11633,4117
 Goldenes Horn: Poller	3 10562,3754 10563,3767 10586,4039
 Goldenes Horn: Poller	3 10586,4039 10563,3767 10562,3754
 Brusaer Weg: Poller	3 10248,3897 10237,3789 10048,3806
@@ -2504,7 +2504,6 @@ Otto-Ostrowski-Str.: Durchfahrt durch Barrieren versperrt	3 13769,13487 13711,13
 Otto-Ostrowski-Str.: Durchfahrt durch Barrieren versperrt	3 13702,13634 13711,13615 13769,13487
 Otto-Ostrowski-Str.: Durchfahrt durch Barrieren versperrt	3 13769,13487 13711,13615 13702,13634
 Stallschreiberstr.	1 10794,10927 10824,11010 10690,11167
-Bergmannstr.: Sperrung vor der Ferdinand-Freiligrath-Schule	2 10250,9233 10366,9233
 Stadthausstr.: Poller am Archibaldweg	2 15649,10922 15674,10851
 Majakowskiring: Poller	3 10358,18882 10373,18887 10434,18907
 Majakowskiring: Poller	3 10434,18907 10373,18887 10358,18882
@@ -2512,6 +2511,7 @@ Mittelstreifen, Fußgängerfurt existiert	3nocross::ignrte 6471,10851 6607,10801 6
 Kurfürstenstr. -> Landgrafenstr.: Mittelstreifen, Fußgängerfurt existiert	3::igndisp 6471,10851 6607,10801 6681,10959
 Landgrafenstr. -> Kurfürstenstr.: Mittelstreifen, Fußgängerfurt existiert	3::igndisp 6681,10959 6607,10801 6740,10755
 Oberwallstr.	1 9925,11947 9913,12068
+Niederwallstr.	1 9925,11947 9991,11903
 Tucholskystraße/Auguststraße: Diagonalsperre	3 9609,13522 9651,13406 9611,13245
 Tucholskystraße/Auguststraße: Diagonalsperre	3 9611,13245 9651,13406 9609,13522
 Tucholskystraße/Auguststraße: Diagonalsperre	3 9609,13522 9651,13406 9898,13484
@@ -2524,6 +2524,9 @@ Tucholskystraße/Auguststraße: Diagonalsperre	3 9415,13315 9651,13406 9611,13245
 (Ferdinand-Schultze-Str. - Plauener Str. 94-96): Poller	3 17558,14840 17684,14858 17693,14840
 (Ferdinand-Schultze-Str. - Plauener Str. 94-96): Poller	3 17638,14951 17684,14858 17558,14840
 (Ferdinand-Schultze-Str. - Plauener Str. 94-96): Poller	3 17693,14840 17684,14858 17558,14840
+Mittelstreifen, Fußgängerfurt existiert	3nocross::ignrte 5527,20044 5545,19909 5533,19811
+Oranienburger Str. -> Kirschblütenpl.: Mittelstreifen, Fußgängerfurt existiert	3::igndisp 5527,20044 5545,19909 5598,19912
+Kirschblütenpl. -> Oranienburger Str.: Mittelstreifen, Fußgängerfurt existiert	3::igndisp 5598,19912 5545,19909 5533,19811
 Pflügerstr./Friedelstr.: Diagonalsperre	3 12054,9429 12066,9558 12074,9689
 Pflügerstr./Friedelstr.: Diagonalsperre	3 12074,9689 12066,9558 12054,9429
 Pflügerstr./Friedelstr.: Diagonalsperre	3 12054,9429 12066,9558 12150,9545

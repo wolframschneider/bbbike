@@ -159,7 +159,7 @@ Spreewaldplatz	F:P 12292,10374 12243,10274 12341,10218 12292,10374
 #: by: https://berliner-abendblatt.de/berlin-news/wegner-bekraeftigt-zaunplaene-fuer-goerlitzer-park-id243617
 #: XXX Werden die Wege nachts (genaue Schließzeiten?) abgeschlossen sein? Oder wird das nur situationsbedingt (wann?) passieren?
 #: priority: #A
-#: last_checked: 2024-02-01
+#: last_checked: 2024-02-07
 #: next_check: 2024-07-15
 Görlitzer Park	F:P 13216,9983 13086,9825 12932,9900 12983,10000 12881,10056 12829,9957 12814,9966 12341,10218 12397,10335 12317,10382 12309,10427 12348,10432 13216,9983
 Sportplatz Wiener Straße	F:Sport 12881,10056 12829,9957 12932,9900 12983,10000 12881,10056
@@ -1027,7 +1027,7 @@ KGA Am Kienberg	F:Orchard 22082,14420 22010,14468 22003,14400 22007,14209 22050,
 # 
 	F:P 17268,16526 17251,16497 17293,16469 17304,16485 17312,16498 17268,16526
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/42re.pdf/file?y=2015
-Hangkantenpark	F:P 19223,1859 19204,1809 19279,1779 19582,1690 19601,1747
+Hangkantenpark	F:P 19223,1859 19204,1809 19279,1779 19581,1686 19601,1747
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/50re.pdf/file?y=2015
 	F:P 19271,17438 19216,17372 19695,17205 19657,17083 19725,17053 19586,16650 19647,16633 19845,17235 19796,17256 19542,17344 19271,17438
 #: by: http://www.berliner-zeitung.de/aus-dem-friedhof-rathausstrasse-wird-ein-park-die-60-kriegsgraeber-bleiben-erhalten-17597506
@@ -1112,7 +1112,7 @@ Friedrich-Ebert-Sportanlage	F:Sport 8267,6341 8266,6603 8504,6605 8504,6341
 #: by: http://bi-marienhoehe.de/wir-fragen-politiker/index.html (28.8.2021 --- "von der Räumung weiterhin bedrohte Kolonie")
 #: osm_watch: way id="48990542" version="5"
 #: priority: #C
-#: last_checked: 2023-10-21
+#: last_checked: 2024-02-03
 #: check_frequency: 120d
 # REMOVED --- #: next_check: 2020-12-31
 KGA Eschenallee	F:Orchard 8264,5383 8172,5332 8209,5216 8321,5237 8264,5383
@@ -1495,6 +1495,16 @@ Diana-Eck	F:P 3744,21854 3771,21910 3811,21979 3840,21924 3744,21854
 #: alias: Landschaftspark am Gehrensee
 Gehrenseepark	F:P 21390,18942 21340,18842 21310,18859 21334,18945 21298,19045 21168,19120 21100,19107 21015,19070 21040,19007 21020,19002 20974,19046 20863,19054 20826,19076 20895,19285 21010,19558 21077,19452 21279,19166
 # 
+Brabanter Platz	F:P 4521,8379 4473,8351 4505,8321 4531,8319 4530,8364 4521,8379
+# 
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1413734.php (Benennung am 16.02.2024)
+#: XXX neuer Name: Estrongo-Nachama-Platz
+#: next_check: 2024-02-16
+	F:P 2320,5881 2312,5850 2300,5820 2372,5799 2378,5828 2388,5860 2320,5881
+# 
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_06_0305_0356_online.pdf
+Grünanlage Wartenberger Straße	F:P 18024,17465 17658,17938 17622,17913 17650,17875 17715,17773 17760,17682 17795,17599 18024,17465
+# 
 #############################################################################
 # Plätze (experimentell)
 # XXX_prog: es sollte unterschieden werden zwischen Flächen, die einfach
@@ -1592,6 +1602,8 @@ Grünfeld-Ecke	F:Square 5475,10808 5398,10778 5472,10735 5475,10808
 Werner-Salomon-Platz	F:Square -3457,14189 -3552,14082 -3517,14218 -3511,14260 -3506,14306 -3481,14308 -3457,14189
 #: note: überwiegend frei befahrbar
 (Platz vor dem Kosmos)	F:Square 13448,12340 13464,12407 13549,12394 13543,12326 13448,12340
+#: note: nicht frei befahrbar, Stadtmöbel, Brunnen (allerdings auch unnötig, wegen der Dreiecksform des Platzes)
+Hausvogteiplatz	F:Square 9863,11938 9878,11857 9925,11947 9863,11938
 #: ignore ^^^
 #############################################################################
 # in Potsdam
@@ -1702,7 +1714,7 @@ BSR	F:Industrial 3884,7829 3968,7906 4061,7992 4106,8031 3895,8079
 #: by: https://www.berliner-woche.de/schmargendorf/c-bauen/erster-spatenstich-fuer-gewerbehoefequartier-in-schmargendorf_a372890
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_51_4717_4788_online.pdf (Bebauungsplan IX-55-3B)
 #: note: früher Brendel Leuchten/Reemtsma
-#: last_checked: 2023-07-11 (mapillary)
+#: last_checked: 2024-02-07
 #: next_check: 2026-06-15
 	F:Industrial 3895,8079 3779,8105 3777,7984 3649,7992 3639,7800 3735,7792 3731,7689 3839,7787 3884,7829 3895,8079
 Kraftwerk Wilmersdorf	F:Industrial 3895,8079 4106,8031 4180,8098 3896,8449 3831,8461 3834,8366 3895,8079
@@ -2042,7 +2054,8 @@ Kolonie Zukunft	F:Orchard 3821,1725 3715,1806 3852,2018 3861,2078 3884,2146 3950
 BSR	F:Industrial 5332,3696 5167,3787 5272,3916 5390,3866 5447,3801
 Kraftwerk Steglitz	F:Industrial 5405,4014 5390,4125 5505,4200 5575,4223 5624,4112
 	F:Industrial 5447,3801 5390,3866 5400,3969 5405,4014 5624,4112 5575,4223 5783,4302 5942,4296 6173,4275 6162,4264 6120,4214 6074,4172 6051,4151 6006,4127 5869,4065 5862,4062 5766,4025 5737,4013 5671,3987 5619,3958
-Kraftwerk Lichterfelde	F:Industrial 4007,1993 4103,1933 4169,1847 4184,1886 4242,1867 4354,2097 4311,2207 4239,2207 4206,2137 4132,2149 4040,2117
+#: alias: Kraftwerk Lichterfelde
+Heizkraftwerk Lichterfelde	F:Industrial 4007,1993 4103,1933 4169,1847 4184,1886 4242,1867 4354,2097 4311,2207 4239,2207 4206,2137 4132,2149 4040,2117
 Hafen Lichterfelde	F:Industrial 4132,2149 4206,2137 4239,2207 4297,2376 4306,2486 4220,2523 4263,2428
 # REMOVED (existiert nicht mehr) --- Kolonie Neuer Exerzierplatz	F:Orchard 18,14945 182,14964 266,14955 272,15056 146,15150 16,15277 28,15184 -18,15175
 # REMOVED (größtenteils aufgehoben) --- #: by: https://www.berliner-woche.de/siemensstadt/c-bauen/mit-gruenem-idyll-in-siemensstadt-ist-nun-endgueltig-schluss_a253381 --- #: XXX wird die Kolonie komplett aufgehoben? Oder ist vielleicht (auch) der Teil nordöstlich der S-Bahnlinie gemeint? --- #: XXX laut osm ist der größte Teil nun ein "brownfield", nur ein kleines Stück im Süden ist übriggeblieben --- #: osm_watch: way id="162095689" version="6" --- #: next_check: 2020-06-01
@@ -2062,7 +2075,7 @@ Kolonie Jungfernheide	F:Orchard 3185,15307 3120,15131 3136,15100 3130,14872 3346
 	F:Orchard 14600,5164 14694,5230 14744,5211 14808,5202 14861,5201 14911,5082 14891,5060 14926,4986 14951,5009 14980,4984 15079,5070 15133,5009 15347,5193 15382,5097 15423,4904 15295,4803 15364,4748 15515,4651 15489,4602 15394,4663 15304,4523 14808,4904 14609,5135
 	F:Orchard 15677,4278 15764,4219 15751,4195 16075,3962 16314,4227 16390,4340 16450,4303 16599,4515 16617,4498 16888,4864 16362,5112 16305,5152 16279,5170 16209,5067 16146,4974 16004,4764 15918,4636 15863,4554 15843,4524 15800,4464
 	F:Orchard 16418,3695 16543,3802 16615,3734 16706,3690 16657,3619 16784,3441 16910,3551 17123,3375 17007,3257 16777,3426
-	F:Orchard 14510,8041 14506,7998 14470,8006 14462,7970 14493,7795 14471,7651 14435,7489 14484,7481 14478,7416 14450,7338 14466,7331 14506,7421 14533,7416 14546,7497 14565,8035
+	F:Orchard 14510,8041 14506,7998 14470,8006 14462,7970 14493,7795 14467,7597 14435,7489 14484,7481 14478,7416 14450,7338 14466,7331 14506,7421 14533,7416 14546,7497 14565,8035
 # REMOVED (aufgegeben) --- Kolonie Morgengrauen	F:Orchard 10076,4597 10088,4771 10240,4753 10237,4670 10182,4664 10174,4584
 # REMOVED (aufgegeben) --- Kolonie Morgengrauen	F:Orchard 10374,4770 10367,4714 10340,4712 10331,4660 10372,4648 10428,4745 10374,4770
 	F:Orchard 9955,5993 10260,5953 10265,6060 10368,6054 10390,6166 10436,6167 10451,6260 10277,6297 10280,6389 10294,6440 10036,6477 9971,6114 9955,5993
