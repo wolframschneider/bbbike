@@ -13071,10 +13071,14 @@ sub find_visible_point {
 ### AutoLoad Sub
 sub choose_from_plz {
     my(%args) = @_;
+    my $coord = delete $args{'-coord'}; # may be a single coord (would call mark_point()) or a space-separated string of coords (would call mark_street())
+    my $mark  = delete $args{'-mark'};
+    # XXX should handle all %args and die if there are unhandled arguments
 
-    return if !defined $city || $city ne "Berlin";
+    my $has_plz_file = defined $city && $city eq 'Berlin'; # XXX maybe there should be a plz fallback for osm data?
+    return if !$has_plz_file && !$coord; # XXX actually not entirely correct: would fail with osm data if -str and -coord are both defined
 
-    my $batch = (defined $args{'-str'} || defined $args{'-coord'});
+    my $batch = (defined $args{'-str'} || defined $coord);
     if (!$batch) {
 	if ($toplevel{"chooseplz"} && Tk::Exists($toplevel{"chooseplz"})) {
 	    $toplevel{"chooseplz"}->deiconify;
@@ -13173,13 +13177,19 @@ sub choose_from_plz {
 	return if !@match;
 	$show_sub->($match[0], 1) if !$args{-noshow};
 	return $match[0]->[PLZ::LOOK_COORD()]; # return coords
-    } elsif (defined $args{'-coord'}) { # auf Koordinaten zentrieren
-	return if ($args{'-coord'} eq "");
+    } elsif (defined $coord) { # auf Koordinaten zentrieren
+	return if ($coord eq "");
 	eval {
-	    mark_point(-coords => [[[ transpose(split(/,/, $args{'-coord'})) ]]],
-		       -dont_mark => 1);
+	    if ($coord =~ /\s+/) {
+		my @coords = transpose_all(map { [split /,/ ] } split /\s+/, $coord);
+		mark_street(-coords => [[ @coords ]],
+			    -dont_mark => !$mark);
+	    } else {
+		mark_point(-coords => [[[ transpose(split(/,/, $coord)) ]]],
+			   -dont_mark => !$mark);
+	    }
 	};
-	warn $@ if $@;
+	warn "WARNING: mark_street or mark_point failed: $@" if $@;
     } else { # interaktiv
 	my $t = $top->Toplevel(-title => M"Auswahl aus kompletter Straßenliste",
 			       -class => "Bbbike Extended Chooser");

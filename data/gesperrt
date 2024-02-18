@@ -333,7 +333,7 @@ Planetenstr.	1 15172,7231 15056,7198 14951,7163
 Wustermarker Str.	1 -5097,14599 -5111,14486 -5004,14454 -4981,14442 -4755,14393
 Gartenstr. (Köpenick)	1 22419,4457 22382,4361 22362,4331 22302,4255 22279,4220
 Spitzerstr.	1 22319,4197 22358,4282 22385,4317 22425,4370 22451,4441
-BMW-Betriebswerk	2 -1993,14594 -1768,14605 -1564,14489
+BMW-Betriebswerk	2 -1996,14603 -1768,14605 -1564,14489
 Heimat	1 1032,1325 994,1485 968,1479 941,1603
 Techowpromenade	1 5218,20471 5185,20358 5173,20275 5170,20182
 (Kastanienallee - Schönhauser Allee)	1 10884,14952 10838,14962
@@ -1012,6 +1012,7 @@ An der Müggelspree -> An der Müggelspree: Mittelstreifen	3::igndisp 23420,4930 2
 Mittelstreifen	3nocross::ignrte 5472,8024 5522,8024 5570,8024
 Wexstr. -> Bruchsaler Str.: Mittelstreifen	3::igndisp 5472,8024 5522,8024 5521,8087
 Bruchsaler Str. -> Wexstr.: Mittelstreifen	3::igndisp 5521,8087 5522,8024 5570,8024
+Hausvaterweg [Wohngebiet]	1s 19789,18423 19704,18459
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -2494,9 +2495,9 @@ Mittelstreifen	3nocross::ignrte 7816,13276 7842,13292 7880,13315
 Invalidenstr. -> Weg durch den Geschichtspark: Mittelstreifen	3::igndisp 7816,13276 7842,13292 7822,13323
 Weg durch den Geschichtspark -> Invalidenstr.: Mittelstreifen	3::igndisp 7822,13323 7842,13292 7880,13315
 Invalidenstr.: Mittelstreifen	3::igndisp 7822,13323 7842,13292
-Mittelstreifen	3nocross::ignrte 7880,13315 8003,13374 8098,13419
-Invalidenstr. -> Ella-Trebe-Str.: Mittelstreifen	3::igndisp 8098,13419 8003,13374 7968,13335
-Ella-Trebe-Str. -> Invalidenstr.: Mittelstreifen	3::igndisp 7968,13335 8003,13374 7880,13315
+Straßenbahntrasse und -haltestelle	3nocross::ignrte 7880,13315 8003,13374 8098,13419
+Invalidenstr. -> Ella-Trebe-Str.: Straßenbahntrasse und -haltestelle	3::igndisp 8098,13419 8003,13374 7968,13335
+Ella-Trebe-Str. -> Invalidenstr.: Straßenbahntrasse und -haltestelle	3::igndisp 7968,13335 8003,13374 7880,13315
 Mittelstreifen, hohe Bordsteine und parkende Autos	3nocross::ignrte 7822,12937 7776,12945 7595,12980
 Alt-Moabit -> Ingeborg-Drewitz-Allee: Mittelstreifen, hohe Bordsteine und parkende Autos	3::igndisp 7822,12937 7776,12945 7623,12764
 Ingeborg-Drewitz-Allee -> Alt-Moabit: Mittelstreifen, hohe Bordsteine und parkende Autos	3::igndisp 7623,12764 7776,12945 7595,12980
@@ -3424,7 +3425,7 @@ Weg entlang der A100: offiziell noch gesperrt	2::inwork 14341,8763 14326,8747 14
 Weg an der A100 - Mergenthalerring: gesperrt, Durchfahrt wegen Bauzaun nicht möglich	2::inwork 14409,8102 14419,8112
 Weg entlang der A100: gesperrt, Durchfahrt zumindest an der Sonnenallee wegen Bauzaun nicht möglich	2::inwork 14440,8050 14439,8030 14467,7904 14476,7827 14478,7771 14462,7597 14441,7529 14379,7372
 An der alten Gärtnerei: Baustraße, gesperrt	2::inwork 10888,3787 10898,3865 10922,3917 10981,3937 11022,3921 11046,3895
-Lisa-Fittko-Str.: Hochbauarbeiten, Weg gesperrt (möglicherweiseexistiert er auch noch nicht)	2::inwork 7787,13838 7872,13685
+Lisa-Fittko-Str.: Hochbauarbeiten, Weg existiert im südlichen Abschnitt noch nicht	2::inwork 7787,13838 7872,13685
 Matthäikirchplatz: Durchgang gesperrt	2::inwork 7933,11407 7970,11396 7934,11275
 Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,9039 19638,9070 19621,9097
 Straße 171: wegen Bauarbeiten gesperrt	2::inwork 12694,22570 12657,22596 12628,22604
@@ -3432,7 +3433,7 @@ Mehlbeerenweg: Bauarbeiten, gesperrt	2::inwork 11993,11978 11940,11982 11909,119
 zur Ontarioseestr.: Hochbauarbeiten, komplett gesperrt	2::inwork 18585,10024 18694,10018
 Jakobikirchstr.: gesperrt	2::inwork 10511,10800 10564,10925
 Heinrich-Hertz-Str.: Hochbauarbeiten, gesperrt	2::inwork 37,15597 59,15518 149,15237
-Heinrich-Hertz-Str.: Hochbauarbeiten, gesperrt	2::inwork -159,15486 -45,15503 59,15518
+Heinrich-Hertz-Str.: Hochbauarbeiten, gesperrt	2::inwork -45,15503 59,15518
 Elsa-Neumann-Str.: Hochbauarbeiten, gesperrt	2::inwork 149,15237 -159,15486
 An der Villa Bolle: Bauarbeiten, gesperrt	2::inwork 22668,3125 22477,3109
 Am Werkstor: Bauzäune, Straße gesperrt	2::inwork 18019,5786 18062,5856 18075,5880
@@ -3449,7 +3450,7 @@ Ulrich-Plenzdorf-Str.	2::inwork 14994,10732 15071,10716 15151,10699
 Potsdamer Platz - Bellevuestr.: wegen Bauarbeiten am ehemaligen Sony-Center gesperrt	2::inwork 8542,11502 8442,11555
 Götelstr.: Einbahnstraßenregelung	1 -3260,12540 -3252,12405 -3255,12338 -3284,12304 -3293,12304
 Mauerpark: Weg gesperrt	2::inwork 10091,15630 10155,15473
-Mauerpark: Weg gesperrt	2::inwork 10071,15684 10045,15754
+Mauerpark: Weg gesperrt	2::inwork 10071,15684 10045,15754 10061,15775 10050,15824 10046,15844 10081,15853
 Reinickendorfer Str.: Einbahnstraßenregelung im Bereich des Weddingplatzes	1s:inwork 7998,15068 8015,15047 8037,14958 8091,14895
 Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15844,10894 15856,10821
 (Ingeborg-Drewitz-Allee): wegen Bauarbeiten gesperrt	2::inwork 7789,12764 7649,12764

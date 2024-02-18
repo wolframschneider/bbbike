@@ -467,11 +467,6 @@ sbahnhof:	sbahnhof-orig
 	mv sbahnhof~ sbahnhof
 	-@$(READONLY) $@
 
-## Execute from bbbike root directory (evtl. mehrmals):
-## XXX What for?
-# cp -f data/Berlin.coords.data /tmp
-# perl -Ilib -MObject::Iterate=iterate -MStrassen::Core -MTie::File -e '$s = Strassen->new("sbahnhof"); iterate { $p{$_->[Strassen::NAME]} = $_->[Strassen::COORDS][0] } $s; tie @f, "Tie::File", "/tmp/Berlin.coords.data" or die ; for (@f) { if (/^S-Bhf (.*?)\|.*\|$/ && $p{$1}) { $_ .= $p{$1}; warn "$1 $p{$1}" } }'
-
 RBAHN_CATEGORIES!=	${PERL} -I${BBBIKEDIR} -MStrassen::Cat -e '@cats = Strassen::Cat::get_category_list(q{rbahn}); print "@cats"'
 
 rbahn: rbahn-orig Makefile $(CONVERT_ORIG_FILE)
@@ -505,36 +500,9 @@ ubahnhof:	ubahnhof-orig
 	mv ubahnhof~ ubahnhof
 	-@$(READONLY) $@
 
-## Execute from bbbike root directory (evtl. mehrmals):
-## XXX What for?
-# cp -f data/Berlin.coords.data /tmp
-# perl -Ilib -MObject::Iterate=iterate -MStrassen::Core -MTie::File -e '$s = Strassen->new("ubahnhof"); iterate { $p{$_->[Strassen::NAME]} = $_->[Strassen::COORDS][0] } $s; tie @f, "Tie::File", "/tmp/Berlin.coords.data" or die $!; for (@f) { if (/^U-Bhf (.*?)\|.*\|$/ && $p{$1}) { $_ .= $p{$1}; warn "$1 $p{$1}" } }'
-
 .for i in u s
 $(i)bahnhof_bg:	$(i)bahnhof-orig
-	-@$(WRITEABLE) $@
-# :U modifier does not work with older pmakes, so don't use it,
-# instead use the echo | tr construct...
-	(i_upper=`echo $(i) | tr '[:lower:]' '[:upper:]'`; echo "#: title: Fahrradfreundliche Zugänge bei der $$i_upper-Bahn"; \
-	 [ "$(i)" = "s" ] && echo "#: note: http://www.s-bahn-berlin.de/fahrplanundnetz/sbahnhof_anzeige.php?ID=103"; \
-	 echo "#:") > $@~
-	$(PERL) -I../lib -I.. -MStrassen::Core -MObject::Iterate=iterate -e '\
-	$$s=Strassen->new(shift, UseLocalDirectives => 1);\
-	$$new_s=Strassen->new;\
-	iterate {\
-	    my $$attr = $$s->get_directive($$s->pos)->{attributes};\
-	    if ($$attr) {\
-		$$attr = $$attr->[0]; \
-		if ($$attr =~ s/\s+\((.*)\)//) {\
-	            $$_->[Strassen::NAME] .= ": $$1";\
-		}\
-	        $$_->[Strassen::CAT] = $$attr;\
-	        $$new_s->push($$_);\
-	    }\
-	} $$s;\
-	print $$new_s->as_string' $> >> $@~
-	mv $@~ $@
-	-@$(READONLY) $@
+	${PERL} doit.pl $(i)bahnhof_bg
 .endfor
 
 faehren: faehren-orig
@@ -849,11 +817,10 @@ housenumbers:	housenumbers-orig
 	mv housenumbers~ housenumbers
 	-@$(READONLY) $@
 
-mount:	strassen landstrassen landstrassen2 fragezeichen hoehe gesperrt
+mount:	strassen landstrassen landstrassen2 fragezeichen-cooked hoehe gesperrt
 	-@$(WRITEABLE) $@
-# Earlier -str files have lower precedence --- *strassen* streetnames need to be preferred over fragezeichen streetnames
 	$(STEIGUNG_STAT) -die-on-fatal -minmount 1.0 -commentscompatible -sperre gesperrt \
-		-str fragezeichen -str strassen -str landstrassen -str landstrassen2 -i hoehe -o $@~
+		-str fragezeichen-cooked -str strassen -str landstrassen -str landstrassen2 -i hoehe -o $@~
 	mv $@~ $@
 	-@$(READONLY) $@
 
@@ -1738,22 +1705,8 @@ check-disabled:
 	$(CHECK_DOUBLE) -linesegs brunnels
 	@touch $@
 
-.check_exits:	exits \
-		ubahnhof sbahnhof rbahnhof \
-		.strassen.tmp landstrassen landstrassen2
-	$(PERL) -I../lib -I.. -MStrassen::Core -MObject::Iterate=iterate -e '\
-	$$s=Strassen->new(q{exits});\
-	$$new_s=Strassen->new;\
-	iterate {\
-	    $$_->[Strassen::COORDS] = [@{$$_->[Strassen::COORDS]}[0, -1]];\
-	    $$new_s->push($$_);\
-	} $$s;\
-	print $$new_s->as_string' > /tmp/exits-first-last
-	$(CHECK_POINTS) /tmp/exits-first-last \
-		ubahnhof sbahnhof rbahnhof \
-		.strassen.tmp landstrassen landstrassen2
-	@rm -f /tmp/exits-first-last
-	@touch $@
+.check_exits:	exits               ubahnhof sbahnhof rbahnhof .strassen.tmp landstrassen landstrassen2
+	$(PERL) doit.pl check_exits ubahnhof sbahnhof rbahnhof .strassen.tmp landstrassen landstrassen2
 
 .check_temp_blockings:	temp_blockings/*.bbd $(PERSISTENTTMPDIR)/bbbike-temp-blockings.bbd \
 			strassen landstrassen landstrassen2 faehren
@@ -2011,10 +1964,7 @@ check-nearest-ignore-remove-outdated:
 do-check-nearest:	.check-do-check-nearest
 
 .check-do-check-nearest:	${PERSISTENTTMPDIR}/check_nearest.bbd
-	$(PERL) -I${BBBIKEDIR} -I${BBBIKEDIR}/lib \
-	    -MStrassen -MObject::Iterate=iterate -e \
-	    '$$s = Strassen->new($$ARGV[0]);\
-	     iterate { ($$dist) = $$_->[Strassen::NAME] =~ /^\S+\s+(\d+)/; if ( $$dist < 20 ) { system "head", "${PERSISTENTTMPDIR}/check_nearest.bbd"; die "Distance $$dist m found. Please check and add to ${.CURDIR}/check_nearest_ignore, if necessary."; }; } $$s' ${PERSISTENTTMPDIR}/check_nearest.bbd
+	$(PERL) doit.pl check_do_check_nearest
 
 .if 0
 GNUmakefile: Makefile $(MISCRSRCDIR)/b2gmake

@@ -37,6 +37,9 @@ my $persistenttmpdir = "$bbbikedir/tmp";
 my $datadir          = "$bbbikedir/data";
 my $bbbikeauxdir     = do { my $dir = "$ENV{HOME}/src/bbbike-aux"; -d $dir && $dir };
 
+my $mapfiles_root_dir = "../mapserver/brb"; # note: in original Makefile.mapfiles also relative
+my $mapfiles_data_dir = "$mapfiles_root_dir/data";
+
 chdir $datadir or die "Can't chdir to $datadir: $!";
 
 my $convert_orig_file  = "$miscsrcdir/convert_orig_to_bbd";
@@ -47,6 +50,7 @@ my @replacestrassen    = ($perl, "$miscsrcdir/replacestrassen");
 my @check_neighbour    = ($perl, "$miscsrcdir/check_neighbour");
 my @check_double       = ($perl, "$miscsrcdir/check_double");
 my @check_connected    = ($perl, "$miscsrcdir/check_connected");
+my @check_points       = ($perl, "$miscsrcdir/check_points");
 
 my @orig_files = bsd_glob("*-orig");
 my @fragezeichen_lowprio_bbd = defined $bbbikeauxdir ? "$bbbikeauxdir/bbd/fragezeichen_lowprio.bbd" : ();
@@ -482,6 +486,85 @@ sub action_sourceid {
     }
 }
 
+sub _build_bahnhof_bg {
+    my($d, $dest) = @_;
+    (my $src = $dest) =~ s/_bg$/-orig/;
+    if (_need_rebuild $dest, $src) {
+	require Strassen::Core;
+	# get U/S out of u/sbahnhof
+	my $upperletter = uc((basename($src) =~ /^(.)/)[0]);
+	open my $ofh, '>', "$dest~" or error "Can't write to $dest~: $!";
+	print $ofh "#: title: Fahrradfreundliche Zugänge bei der ${upperletter}-Bahn\n";
+	if ($upperletter eq 'S') {
+	    print $ofh "#: note: http://www.s-bahn-berlin.de/fahrplanundnetz/sbahnhof_anzeige.php?ID=103\n";
+	}
+	print $ofh "#:\n";
+	my $s = Strassen->new_stream($src, UseLocalDirectives => 1);
+	my $new_s = Strassen->new;
+	$s->read_stream(sub {
+	    my($r, $dir) = @_;
+	    if (my $attrs = $dir->{attributes}) {
+		my $attr = $attrs->[0];
+		if ($attr =~ s/\s+\((.*)\)//) {
+	            $r->[Strassen::NAME()] .= ": $1";
+		}
+	        $r->[Strassen::CAT()] = $attr;
+	        $new_s->push($r);
+	    }
+	});
+	if (!$new_s->count) {
+	    error "Unexpected: no bg records found in $src";
+	}
+	print $ofh $new_s->as_string;
+	close $ofh or error $!;
+	_empty_file_error "$dest~";
+	_commit_dest $d, $dest;
+    }
+}
+sub action_ubahnhof_bg {
+    my($d) = @_;
+    _build_bahnhof_bg($d, "ubahnhof_bg");
+}
+sub action_sbahnhof_bg {
+    my($d) = @_;
+    _build_bahnhof_bg($d, "sbahnhof_bg");
+}
+
+sub action_check_exits {
+    my($d, @argv) = @_;
+    my $check_file = '.check_exits';
+    my @srcs = @argv;
+    if (_need_rebuild $check_file, 'exits', @srcs) {
+	require Strassen::Core;
+	my $s = Strassen->new_stream(q{exits});
+	my $new_s = Strassen->new;
+	$s->read_stream(sub {
+	    my $r = shift;
+	    $r->[Strassen::COORDS()] = [@{$r->[Strassen::COORDS()]}[0, -1]];
+	    $new_s->push($r);
+	});
+	my(undef, $exits_first_last_file) = tempfile("exits-first-last_XXXXXXXX", TMPDIR => 1, UNLINK => 1);
+	$new_s->write($exits_first_last_file);
+	$d->run([@check_points, $exits_first_last_file, @srcs]);
+	$d->touch($check_file);
+    }
+}
+
+# run unconditionally
+sub action_check_do_check_nearest {
+    my($d) = @_;
+    require Strassen::Core;
+    my $s = Strassen->new("$persistenttmpdir/check_nearest.bbd");
+    $s->init;
+    my $r = $s->next;
+    my($dist) = $r->[Strassen::NAME()] =~ /^\S+\s+(\d+)m/;
+    if (!defined $dist) { error "Cannot parse " . $r->[Strassen::NAME()] }
+    if ($dist < 20) {
+	warning Strassen::arr2line2($r);
+	error "Distance $dist m found. Please check and add to @{[ cwd() ]}/check_nearest_ignore, if necessary";
+    }
+}
+
 ######################################################################
 
 sub action_old_bbbike_data {
@@ -708,6 +791,46 @@ sub action_last_checked_vs_next_check {
 }
 
 ######################################################################
+# Makefile.mapfiles
+sub action_mapfiles_tmp_gesperrt30 {
+    my($d) = @_;
+    my $dest = "/tmp/gesperrt30";
+    my $src = "gesperrt";
+    if (_need_rebuild $dest, $src) {
+	require Strassen::Core;
+	require Strassen::Util;
+	my $slen = 30;
+	my $shorten = sub {
+	    my(@p) = (split(/,/, $_[0]), split /,/, $_[1]);
+	    my $len = Strassen::Util::strecke([@p[0,1]],[@p[2,3]]);
+	    return () if $len <= $slen;
+	    my $f = 1-($len-$slen)/$len;
+	    return (
+		join(",", map { int } ($p[0]+($p[2]-$p[0])*$f,
+				       $p[1]+($p[3]-$p[1])*$f))
+	    );
+	};
+	my $s = Strassen->new_stream($src);
+	my $news = Strassen->new;
+	$s->read_stream(sub {
+	    my $r = shift;
+	    my @c = @{ $r->[Strassen::COORDS()] };
+	    if (@c >= 2) {
+		splice @c, 0, 1, $shorten->(@c[0,1]);
+	    }
+	    if (@c >= 2) {
+		splice @c, -1, 1, $shorten->(@c[-1,-2]);
+	    }
+	    if (@c >= 2) {
+		$r->[Strassen::COORDS()] = [@c];
+		$news->push($r);
+	    }
+	});
+	$news->write($dest);
+    }
+}
+
+######################################################################
 
 sub action_forever_until_error {
     my($d, @argv) = @_;
@@ -815,6 +938,7 @@ my %action_with_own_opt_handling = map{($_,1)}
 	  forever_until_error
 	  bbbgeojsonp_index_html
 	  geojson_index_html
+	  check_exits
      );
 if ($action_with_own_opt_handling{($ARGV[0]||'')}) {
     (my $action = $ARGV[0]) =~ s{[-.]}{_}g;

@@ -8,7 +8,6 @@ Michael-Brückner-Str.	F::inwork 17808,5669
 Möckernstr./nördlich. Wartenburgstr.: Gegenverkehrsregelung	X::inwork 8784,9972
 Kiefholzstr.: Gegenverkehrsregelung	X::inwork 14700,8368
 Schönhauser Allee/Kollwitzstr.: provisorische Ampel	F::inwork 10908,13978
-Alt-Heiligensee: Gegenverkehrsregelung	X::inwork -3020,21786
 Gegenverkehrsregelung	X::inwork 20302,1613
 Gegenverkehrsregelung	X::inwork 18527,16789
 	X::inwork 7873,12927
@@ -2403,6 +2402,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 31967,3238
 	X 10873,12577
 	F 9704,19428
+	X 14559,13248
 	X -17127,-554
 	F -12868,-502
 	X -12940,-1625
