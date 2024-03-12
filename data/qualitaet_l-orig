@@ -876,7 +876,7 @@ Groß-Köris - Motzen: Verbundsteinpflaster	Q1 23775,-22788 23482,-22742
 #: by: https://www.o-sp.de/download/lbvbrandenburg/193419
 #: by: https://www.o-sp.de/download/lbvbrandenburg/193421 (Lageplan 1)
 #: by: https://www.o-sp.de/download/lbvbrandenburg/193435 (Lageplan 13)
-#: source_id: LS/222-W/24/007 (Baufeldfreimachung, bis 23.02.2024)
+#: source_id: LS/222-W/24/007 (Baufeldfreimachung, bis 23.02.2024) (bis 29.02.2024) (inaktiv)
 #: last_checked: 2023-06-04
 #: next_check: 2024-09-01
 Grünau - Zeuthen: gepflastert	Q1- 26931,-2871 26875,-2993 26787,-3194 26748,-3285 26651,-3554 26636,-3596 26562,-3781 26554,-3814 26482,-4108 26447,-4251 26319,-4776 26228,-5150 26259,-5681 26085,-5839 25996,-5921
@@ -2227,6 +2227,8 @@ Am Pfingstberg: mäßiges Kopfsteinpflaster	Q2-; -12515,1406 -12334,1324
 Johannsenstr.: Asphalt	Q0 -11155,-2006 -11035,-2053
 #: note: von der S-Bahn aus gesehen
 Johannsenstr.: schlechtes Kopfsteinpflaster	Q3 -11035,-2053 -10737,-2011
+#: note: von der Bahn aus gesehen
+Akazienweg: Asphalt	Q0 -18889,-591 -18882,-573 -18833,-562 -18822,-430 -18804,-345 -18785,-247 -18785,-77
 #: by: Thomas
 #: confirmed_by: osm
 Stücken: Kopfsteinpflaster, teilweise Ausweichen auf Gehweg möglich	Q3 -10625,-18482 -10843,-18442 -11001,-18306 -11022,-18113
@@ -2603,9 +2605,9 @@ Humboldtring: Beton	Q1+ -11743,-1546 -11643,-1389 -11611,-1328 -11566,-1263
 (Lotte-Pulewka-Str. - Uferweg): Parkweg	Q1 -11715,-1564 -11722,-1573 -11885,-1596 -11939,-1571
 Uferpromenade im Babelsberger Park: Parkweg, teilweise etwas uneben und mit Schotter	Q1- -9965,-105 -10027,-70 -10301,-68 -10321,-37 -10619,51 -10709,-62 -10782,-42 -10832,-75 -10857,-123 -10855,-161 -10875,-193 -10888,-250 -10948,-307
 Uferpromenade und Hauptweg im Babelsberger Park: asphaltiert	Q1+ -10948,-307 -11055,-461 -11136,-687 -11127,-812 -11040,-887 -11081,-1303 -11084,-1396
-Uferpromenade im Babelsberger Park: Parkweg	Q1 -11136,-687 -11189,-805 -11284,-909 -11307,-893 -11338,-964 -11425,-1001 -11452,-974
-Uferpromenade im Babelsberger Park: Kopfsteinpflaster	Q3+ -11452,-974 -11494,-1014
-Uferpromenade im Babelsberger Park: Asphalt	Q0- -11494,-1014 -11531,-1021 -11597,-989
+Uferpromenade im Babelsberger Park: Parkweg	Q1 -11136,-687 -11190,-813 -11276,-906 -11297,-893 -11338,-964 -11372,-988 -11425,-1001 -11452,-974
+Uferpromenade im Babelsberger Park: Kopfsteinpflaster	Q3+ -11452,-974 -11486,-1008
+Uferpromenade im Babelsberger Park: Asphalt	Q0- -11486,-1008 -11518,-1023 -11597,-989
 Uferpromenade im Babelsberger Park: Asphalt	Q0 -11597,-989 -11657,-1018
 Uferpromenade: Asphalt	Q0 -11657,-1018 -11702,-1078 -11698,-1125 -11771,-1250 -11755,-1322
 #: by: mapillary
@@ -3066,8 +3068,8 @@ Alter Markt: gepflastert	Q2+ -12614,-1487 -12619,-1549 -12624,-1598
 Alter Markt: gepflastert	Q2+ -12583,-1552 -12619,-1549 -12677,-1536 -12719,-1542
 #: next_check_id: AMALTENMARKT-2018
 #: XXX früher provisorisch asphaltiert, jetzt ein provisorischer Weg
-#: osm_watch: way id="760022943" version="9" brb
-#: last_checked: 2024-01-21 (daf)
+#: osm_watch: way id="760022943" version="10" brb
+#: last_checked: 2024-03-07 (osm)
 #: check_frequency: 180d
 Alter Markt: unbefestigt	Q2 -12719,-1542 -12790,-1560
 Schwertfegerstr.: teils schlechtes Kopfsteinpflaster	Q3 -12812,-1490 -12870,-1493
@@ -4251,10 +4253,11 @@ Fliederweg: Verbundsteinpflaster	Q1 -14731,644 -14769,582 -14776,560 -14732,528
 Von-Klitzing-Str.: Verbundsteinpflaster	Q1+ -14395,617 -14457,512
 Heisenbergstr.: Verbundsteinpflaster	Q1+ -14357,591 -14419,487
 Hannes-Meyer-Str.: Asphalt	Q0 -14114,580 -13989,545
-Am Babelsberger Park: Asphalt	Q0 -11056,-1726 -11098,-1616 -11099,-1573 -11090,-1506 -11084,-1396 -11407,-1086 -11494,-1014
+Am Babelsberger Park: Asphalt	Q0 -11056,-1726 -11098,-1616 -11099,-1573 -11090,-1506 -11084,-1396 -11407,-1086 -11454,-1036 -11486,-1008
 Park Babelsberg: wassergebundene Decke	Q1 -10505,-1166 -10519,-1123 -10583,-1072 -10650,-1057 -10713,-1072 -10793,-1139 -10910,-1271 -10994,-1307 -11081,-1303 -11225,-1225 -11332,-1071 -11359,-1069 -11425,-1001
 Park Babelsberg: wassergebundene Decke	Q1 -10583,-1072 -10495,-1069 -10451,-1042
 Park Babelsberg: wassergebundene Decke	Q1 -10519,-1123 -10495,-1069
+(Park Babelsberg, am Havelhaus): unbefestigter Weg	Q2+ -11425,-1001 -11454,-1036
 Wollestr.: Kopfsteinpflaster	Q2 -10984,-1574 -10717,-1227
 Wollestr.: schlechtes Kopfsteinpflaster	Q3+ -10717,-1227 -10648,-1130 -10616,-1089
 (Wollestr. - Mühlenstr.): Verbundsteinpflaster	Q1 -10648,-1130 -10691,-1097 -10730,-1103 -10787,-1162 -10790,-1178
@@ -4569,8 +4572,10 @@ Aldebaranstr. (Schönefeld): Asphalt	Q0 17337,-1848 17167,-1981
 #: by: osm + rj vvv
 #: confirmed_by: srt (nördliches Ende)
 Alt Schönefeld: Kopfsteinpflaster	Q2 17388,-1633 17402,-1649
-Alt Schönefeld: Kopfsteinpflaster	Q1- 17402,-1649 17549,-1722 17574,-1753 17602,-1803
-Alt Schönefeld: Kopfsteinpflaster	Q2 17402,-1649 17446,-1730 17537,-1863
+#: corrected_by: srt (Kopfsteinpflaster -> ...)
+Alt Schönefeld: Kleinsteinpflaster	Q1- 17402,-1649 17549,-1722 17574,-1753 17599,-1797
+#: corrected_by: srt (Q2 -> Q2-)
+Alt Schönefeld: Kopfsteinpflaster	Q2- 17402,-1649 17446,-1730 17537,-1863
 #: by: ^^^
 #: by: osm + rj
 Umgehungsstraße: Asphalt, etwas löchrig	Q1+ 17549,-1722 17890,-1445 17911,-1427 18281,-1132 18444,-996
@@ -5280,7 +5285,9 @@ Elsternstr. (Potsdam-Golm): Asphalt	Q0 -18135,397 -18140,452 -18131,476 -18145,4
 Elsternstr. (Potsdam-Golm): Asphalt	Q0 -18145,499 -18153,473 -18140,452
 In der Feldmark: Asphalt	Q0 -18429,195 -18617,136 -18625,129 -18631,102
 An der Bahn (Potsdam-Golm): Asphalt	Q0 -18617,136 -18633,152 -18609,354
-Marie-Curie-Ring (Potsdam-Golm): Asphalt	Q0 -18609,354 -18549,349 -18520,346 -18451,355 -18406,368 -18416,451 -18416,557 -18521,572
+An der Bahn (Potsdam-Golm): unbefestigter Weg	Q2 -18609,354 -18619,357 -18609,675 -18567,753 -18605,833 -18591,1236 -18482,1343 -18492,1354
+Marie-Curie-Ring (Potsdam-Golm): Asphalt	Q0 -18609,354 -18549,349 -18520,346 -18451,355 -18412,368 -18416,445 -18416,557 -18521,572
+(Marie-Curie-Ring - Taubenbogen): unbefestigter Weg	Q2+ -18416,445 -18251,459
 (In der Feldmark - Marie-Curie-Ring): Asphalt	Q0 -18405,203 -18449,351 -18451,355
 Clara-Immerwahr-Str. (Potsdam-Golm): Asphalt	Q0 -18504,691 -18521,572 -18549,349
 Karl-Liebknecht-Str. (Potsdam-Golm): Asphalt	Q0 -18725,-673 -18726,-501 -18754,-419 -18656,-9 -18631,102

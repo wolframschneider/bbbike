@@ -419,37 +419,37 @@ sub split_street {
 # look().
 sub look_loop {
     my($self, $str, %args) = @_;
-    my $max_agrep;
-    if (defined $args{Agrep} && $args{Agrep} eq 'default') {
-	$max_agrep = 3;
-	# Allow more errors for longer strings:
-	if    (length($str) > 15) { $max_agrep = 4 }
-	elsif (length($str) > 25) { $max_agrep = 5 }
-	# agrep: size of pattern must be greater than number of errors
-	elsif (length($str) < 1)           { $max_agrep = 0 }
-	elsif (length($str) <= $max_agrep) { $max_agrep = length($str)-1 }
-	delete $args{Agrep};
-    } else {
-	$max_agrep = delete $args{Agrep} || 0;
-    }
+
+    my $max_agrep = $self->_get_max_agrep($str, \%args);
 
     my $agrep = 0;
     my @matchref;
+
+    my $_set_info_match_type = sub {
+	if (@matchref) {
+	    warn "DEBUG: look_loop found something using $_[0]\n";
+	}
+    };
+
     # 1. Try unaltered
     @matchref = $self->look($str, %args);
+    $_set_info_match_type->('unaltered') if $DEBUG;
     if (!@matchref) {
 	# 2. Try to strip house number
 	if (my $str0 = _strip_hnr($str)) {
 	    @matchref = $self->look($str0, %args);
+	    $_set_info_match_type->('strip house number') if $DEBUG;
 	}
 	# 3. Try to strip "straße" => "str."
 	# 3b. Strip house number
 	if (!@matchref) {
 	    if (my $str0 = _strip_strasse($str)) {
 		@matchref = $self->look($str0, %args);
+		$_set_info_match_type->('strip strasse') if $DEBUG;
 		if (!@matchref) {
 		    if ($str0 = _strip_hnr($str0)) {
 			@matchref = $self->look($str0, %args);
+			$_set_info_match_type->('strip strasse and house number') if $DEBUG;
 		    }
 		}
 	    }
@@ -459,9 +459,11 @@ sub look_loop {
 	if (!@matchref) {
 	    if (my $str0 = _expand_strasse($str)) {
 		@matchref = $self->look($str0, %args);
+		$_set_info_match_type->('expand strasse on beginning') if $DEBUG;
 		if (!@matchref) {
 		    if ($str0 = _strip_hnr($str0)) {
 			@matchref = $self->look($str0, %args);
+			$_set_info_match_type->('expand strasse on beginning and strip house number') if $DEBUG;
 		    }
 		}
 	    }
@@ -472,6 +474,7 @@ sub look_loop {
 	    delete $args{Agrep};
 	    $args{GrepType} = "grep-inword";
 	    @matchref = $self->look($str, %args);
+	    $_set_info_match_type->('try word match in the middle of the string') if $DEBUG;
 	}
 	# 6. Use increasing approximate match. Try first unaltered, then
 	#    with stripped street, then without house number.
@@ -479,20 +482,25 @@ sub look_loop {
 	    $agrep = 1;
 	    while ($agrep <= $max_agrep) {
 		@matchref = $self->look($str, %args, Agrep => $agrep);
+		$_set_info_match_type->("approximate match agrep=$agrep") if $DEBUG;
 		if (!@matchref && (my $str0 = _strip_strasse($str))) {
 		    @matchref = $self->look($str0, %args, Agrep => $agrep);
+		    $_set_info_match_type->("approximate match agrep=$agrep with stripped strasse") if $DEBUG;
 		}
 		if (!@matchref && (my $str0 = _strip_hnr($str))) {
 		    @matchref = $self->look($str0, %args, Agrep => $agrep);
+		    $_set_info_match_type->("approximate match agrep=$agrep with stripped house number") if $DEBUG;
 		}
 		{
 		    my $str0;
 		    if (!@matchref
 			&& ($str0 = _strip_strasse($str))) {
 			@matchref = $self->look($str0, %args, Agrep => $agrep);
+			$_set_info_match_type->("approximate match agrep=$agrep with stripped strasse") if $DEBUG; # XXX again?
 			if (!@matchref
 			    && ($str0 = _strip_hnr($str0))) {
 			    @matchref = $self->look($str0, %args, Agrep => $agrep);
+			    $_set_info_match_type->("approximate match agrep=$agrep with stripped strasse and house number") if $DEBUG;
 			}
 		    }
 		}
@@ -501,9 +509,11 @@ sub look_loop {
 		    if (!@matchref
 			&& ($str0 = _expand_strasse($str))) {
 			@matchref = $self->look($str0, %args, Agrep => $agrep);
+			$_set_info_match_type->("approximate match agrep=$agrep with expanded strasse") if $DEBUG;
 			if (!@matchref
 			    && ($str0 = _strip_hnr($str0))) {
 			    @matchref = $self->look($str0, %args, Agrep => $agrep);
+			    $_set_info_match_type->("approximate match agrep=$agrep with expanded strasse and stripped house number") if $DEBUG;
 			}
 		    }
 		}
@@ -517,6 +527,24 @@ sub look_loop {
     } else {
 	(\@matchref, $agrep);
     }
+}
+
+sub _get_max_agrep {
+    my(undef, $str, $args_ref) = @_;
+    my $max_agrep;
+    if (defined $args_ref->{Agrep} && $args_ref->{Agrep} eq 'default') {
+	$max_agrep = 3;
+	# Allow more errors for longer strings:
+	if    (length($str) > 15) { $max_agrep = 4 }
+	elsif (length($str) > 25) { $max_agrep = 5 }
+	# agrep: size of pattern must be greater than number of errors
+	elsif (length($str) < 1)           { $max_agrep = 0 }
+	elsif (length($str) <= $max_agrep) { $max_agrep = length($str)-1 }
+	delete $args_ref->{Agrep};
+    } else {
+	$max_agrep = delete $args_ref->{Agrep} || 0;
+    }
+    $max_agrep;
 }
 
 sub _strip_strasse {

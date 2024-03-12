@@ -943,7 +943,7 @@ Nikolaus-Ehlen-Weg: Privatstraße	CS 17308,-36 17215,94 17176,90
 #: XXX Wann ziehen die Gaslaternen um?
 #: osm_watch: note 2969085 5
 #: priority: #C
-#: last_checked: 2024-02-17
+#: last_checked: 2024-02-24
 #: check_frequency: 90d
 Gaslaternen-Freilichtmuseum Berlin	CS 5895,11692 5835,11768 5858,11863 5900,11913
 #: ignore ^^^
@@ -1305,18 +1305,7 @@ zum Tunnel unter dem ICC	CP2; 1928,10728 1960,10710
 Am Grünen Weg (Potsdam-Eiche): nicht ausgeschildert	CP2; -16875,-1050 -16850,-793
 Ecksteinweg (Potsdam-Eiche): nicht ausgeschildert	CP2; -17390,-1092 -17387,-1064
 # 
-#: by: https://www.potsdam.de/sites/default/files/documents/amtsblatt_oktober_2018_web.pdf (Widmung)
-#: add_fragezeichen: Sind die Straßen mittlerweile ausgeschildert? vvv
-#: last_checked: 2019-08-03 vvv
-#: check_frequency: 60d vvv
-# REMOVED --- Zum Großen Herzberg (Potsdam-Golm): noch nicht ausgeschildert	CS -18049,424 -18051,485
-Taubenbogen (Potsdam-Golm): noch nicht ausgeschildert	CS -18222,253 -18238,364 -18251,459 -18249,551
-#: XXX wird vermutlich noch nach Norden und dann nach Westen weitergeführt
-Grasmückenring (Potsdam-Golm): noch nicht ausgeschildert	CS -18238,364 -18135,397 -18049,424 -17997,440 -17993,490
-Elsternstr. (Potsdam-Golm): noch nicht ausgeschildert	CS -18135,397 -18140,452 -18131,476 -18145,499 -18146,544
-#: check_frequency ^^^
-#: last_checked ^^^
-#: add_fragezeichen ^^^
+# REMOVED (alles ausgeschildert) --- #: by: https://www.potsdam.de/sites/default/files/documents/amtsblatt_oktober_2018_web.pdf (Widmung) --- #: add_fragezeichen: Sind die Straßen mittlerweile ausgeschildert? vvv --- #: last_checked: 2019-08-03 vvv --- #: check_frequency: 60d vvv --- Zum Großen Herzberg (Potsdam-Golm): noch nicht ausgeschildert	CS -18049,424 -18051,485 --- Taubenbogen (Potsdam-Golm): noch nicht ausgeschildert	CS -18222,253 -18238,364 -18251,459 -18249,551 --- #: XXX wird vermutlich noch nach Norden und dann nach Westen weitergeführt --- Grasmückenring (Potsdam-Golm): noch nicht ausgeschildert	CS -18238,364 -18135,397 -18049,424 -17997,440 -17993,490 --- Elsternstr. (Potsdam-Golm): noch nicht ausgeschildert	CS -18135,397 -18140,452 -18131,476 -18145,499 -18146,544 --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: add_fragezeichen ^^^
 # 
 Charles-Tellier-Platz: nicht ausgeschildert	CS -14665,481 -14626,465 -14622,440 -14574,431 -14559,460 -14608,485 -14626,465
 # 
@@ -1370,7 +1359,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2024-02-03
+#: last_checked: 2024-03-08
 #: check_frequency: 90d
 Mergenthalerring: nicht ausgeschildert	CP2; 14261,8851 14252,8829
 # 
@@ -1447,7 +1436,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_28_2981_3084_online.pdf (Widmungsänderung; auf der westlichen Seite entsteht noch ein Gebäude mit Tiefgarage)
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2024-02-15
+#: last_checked: 2024-02-18
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13397
 # 
@@ -1729,8 +1718,10 @@ Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9724 (Anfrage)
-#: last_checked: 2024-01-27 vvv
-Ruth-Baumgarte-Str.: noch nicht ausgeschildert, stattdessen Wegweiser zu fünf Straßen im Wohngebiet	CS; 17794,8429 17738,8450
+#: last_checked: 2024-03-05 (daf) vvv
+#: historical_note: bis Januar/Februar 2024: "stattdessen Wegweiser zu fünf Straßen im Wohngebiet"
+Ruth-Baumgarte-Str.: nicht ausgeschildert	CS; 17794,8429 17738,8450
+Georg-Klingenberg-Str.: nicht ausgeschildert	CS; 17846,8644 17792,8660
 # REMOVED --- Ruth-Baumgarte-Str.: noch nicht ausgeschildert	CS 17738,8450 17682,8464 17608,8483
 # REMOVED --- Irmtraud-Morgner-Str.: noch nicht ausgeschildert	CS 17524,8536 17627,8556 17755,8519
 # REMOVED --- Adolf-Wermuth-Allee: noch nicht ausgeschildert	CS 17597,8434 17608,8483 17627,8556
@@ -1797,7 +1788,7 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2024-02-17 vvv
+#: last_checked: 2024-02-23 vvv
 #: check_frequency: 90d vvv
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10685,12422
@@ -1840,7 +1831,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2024-02-14 vvv
+#: last_checked: 2024-03-09 vvv
 #: check_frequency: 60d vvv
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
 # REMOVED (ausgeschildert) --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
@@ -1902,7 +1893,7 @@ Aaron-Bernstein-Platz: nicht ausgeschildert	CS 9353,13273 9382,13265 9385,13246 
 # REMOVED --- #: XXX im Quartier Am Tacheles werden zwei Privatplätze entstehen und bekommen die Namen (fehlen in Berlin.coords.data): --- #: XXX Johannisplatz (PLZ=10117 laut LOR und DPAG) --- #: XXX laut daf ist der Zugang zum Johannisplatz provisorisch geöffnet; Mosaikpflaster
 # REMOVED --- #: XXX Aaron-Bernstein-Platz (PLZ=10117 laut LOR und DPAG)
 #: XXX noch Bauarbeiten, ein Strang noch gesperrt, wird es Schilder geben?
-#: last_checked: 2024-02-04 (mapillary) vvv
+#: last_checked: 2024-02-23 vvv
 # REMOVED --- #: check_frequency: 30d vvv
 #: next_check: 2024-03-31 vvv
 #: osm_watch: way id="941599318" version="5"
@@ -1922,4 +1913,6 @@ ausgeschildert "Siedlung Roedernau"	CP2; 6460,19734 6453,19737
 zur Eitelstr.: in den Weg zwischen Brandmauer und DB/S-Unterführung fahren	CP2; 16759,11579 16717,11604
 # 
 Zitadellenweg: nicht ausgeschildert	CS -2264,14584 -2334,14581 -2594,14571 -2597,14532
+# 
+ausgeschildert "Breitscheidplatz"	CP2; 5652,11004 5716,10978
 # 

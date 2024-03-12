@@ -83,6 +83,7 @@ Uferweg - Kiehnwerderallee: Waldweg	X 16657,8443 16490,8432
 #: mud: 2023-11-14: wenige Pfützen	h=q1+,wet
 #: mud: 2023-11-19: einige Pfützen	h=q1,wet
 #: mud: 2024-02-10: einige Pfützen	h=q1-,wet
+#: mud: 2024-03-09: keine Beeinträchtigungen	h=q0
 Hönower Weg: asphaltiert, aber mit einigen Wellen	X 17383,9719 16984,9857 16925,9852 16900,9861
 # 
 # REMOVED (Weg wurde neu gemacht und ist nun asphaltiert) --- #: mud: 2020-03-06: eine "Seenlandschaft" --- Rüdersdorfer Str. - Am Wriezener Bahnhof: unbefestigt, mit vielen großen Kuhlen	X 13173,11788 13089,11708
@@ -288,6 +289,7 @@ Wiesengrundstr. (Karlshorst): Schotterstraße, teilweise holprig	X 19468,8168 195
 #: mud: 2020-05-19: weitgehend trocken
 #: mud: 2022-04-09: mehrere Pfützen	h=q3,wet
 #: mud: 2022-10-15: trocken	h=q0
+#: mud: 2024-03-01: trocken	h=q0
 Am Jüdischen Museum: alte wassergebundene Decke mit vielen Kuhlen	X 9770,10590 9992,10626
 # 
 #: mud: 2020-06-01: Oberfläche leicht sandig
@@ -515,6 +517,7 @@ Hausvaterweg: unbefestigte Straße	X 20281,18690 20347,18667
 #: mud: 2023-11-08: leicht feuchtere Oberfläche	h=q0-,wet
 #: mud: 2023-11-10: keine Beeinträchtigungen	h=q0
 #: mud: 2023-12-31: keine Beeinträchtigungen	h=q0
+#: mud: 2024-03-04: keine Beeinträchtigungen	h=q0
 (Kynaststr. - Paul-und-Paula-Ufer): Parkweg	X 14797,10476 14820,10473 14861,10467
 # 
 #: mud: 2022-02-01: leicht matschig, einige Pfützen	h=q2-,wet
@@ -528,9 +531,11 @@ Uferweg am Paul-Lincke-Ufer, westlich Hobrechtbrücke	X 11735,10022 11756,9990 11
 #: mud: 2022-04-01: keine Beeinträchtigungen	h=q0
 #: mud: 2023-03-11: viele Pfützen	h=q3,wet
 #: mud: 2023-11-06: drei Pfützen	h=q2-,wet
+#: mud: 2024-03-02: einige matschige Stellen	h=q2,wet
 Uferweg am Paul-Lincke-Ufer, östlich Hobrechtbrücke	X 12116,9825 12165,9786 12280,9728 12432,9652 12596,9587
 # 
 #: mud: 2023-03-25: einige nicht umfahrbare Pfützen	h=q3,wet
+#: mud: 2024-03-02: trocken	h=q0
 (Görlitzer Park, zur Forster Str.): wassergebundene Decke	X 12670,10160 12592,10112 12564,10121
 # 
 #: mud: 2022-02-05: einige leicht matschige Stellen	h=q1-,wet

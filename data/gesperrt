@@ -834,8 +834,8 @@ Gravensteinstr.	1s 12229,22457 12185,22465
 Hauptstr. (Französisch Buchholz)	1s 12199,22367 12229,22457
 Karlplatz	1 8676,12976 8711,12986
 Hundsfelder Str.	1 21898,-303 21811,-409 21700,-537 21688,-589
-Joachim-Karnatz-Allee	1 7175,12630 7184,12602 7418,12601
-Joachim-Karnatz-Allee	1 7419,12584 7144,12580 7139,12589 7131,12615
+Joachim-Karnatz-Allee	1 7175,12630 7184,12602 7368,12601 7418,12601
+Joachim-Karnatz-Allee	1 7419,12584 7368,12583 7144,12580 7139,12589 7131,12615
 Waldkraiburger Str.: Betriebsgelände	2 12283,4971 12468,5000
 (Falkenberger Chaussee - Darßer Str.)	1 16785,17524 16825,17537 16848,17530 16938,17500
 Dankratweg - Am Waldberg: Betriebsgelände	2 20460,9593 20408,9604 20338,9718 20335,9866
@@ -909,8 +909,6 @@ Mittelstreifen, Bordsteine	3nocross::ignrte 12930,10621 12899,10595 12731,10547
 Skalitzer Str. -> Skalitzer Str.: Mittelstreifen, Bordsteine	3::igndisp 12930,10621 12899,10595 12978,10581
 Zufahrt "Gleis Park": durch Tore abgesperrt	2 8367,10745 8350,10662 8335,10518
 Mellenseestr. [Wohngebiet]	1 17587,9655 17633,9793 17633,9898
-Mellenseestr. [Wohngebiet]	1 17777,9649 17738,9822 17738,9922
-Mellenseestr. [Wohngebiet]	1 17920,9698 17868,9823 17838,9956
 Mühsamstr.	1 13818,12897 13830,12907
 Lilli-Henoch-Str.	1s 12357,15020 12388,14926
 (Weydemeyerstr.): durch Tore abgesperrt	2 11933,12701 11971,12785
@@ -3421,13 +3419,18 @@ weites Drängelgitter	BNP:2:-114:trailer=7 -48996,85026
 Drängelgitter	BNP:3:-236:trailer=10 -53609,82816
 Drängelgitter	BNP:3:-15:trailer=10 3789,18863
 Drängelgitter	BNP:3:-108:trailer=10 21494,10816
+Drängelgitter	BNP:3:-233:trailer=10 13656,9079
+Virchow-Klinikum: Zufahrt gesperrt	2::inwork 6213,14777 6210,14808
+Park Babelsberg, Uferweg: wegen Bauarbeiten für das neue Strandbad gesperrt	2::inwork -11486,-1008 -11452,-974
+Magnus-von-Hirschfeld-Ufer: Sperrung in Höhe Kanzlergarten	2::inwork 7772,12694 7521,12581
+(Berolinastr. - Mollstr.): wegen Bauarbeiten gesperrt	2::inwork 11865,13027 11874,13048 11896,13075
 Weg entlang der A100: offiziell noch gesperrt	2::inwork 14341,8763 14326,8747 14325,8682 14299,8436 14310,8335 14350,8228 14409,8102 14440,8050
 Weg an der A100 - Mergenthalerring: gesperrt, Durchfahrt wegen Bauzaun nicht möglich	2::inwork 14409,8102 14419,8112
 Weg entlang der A100: gesperrt, Durchfahrt zumindest an der Sonnenallee wegen Bauzaun nicht möglich	2::inwork 14440,8050 14439,8030 14467,7904 14476,7827 14478,7771 14462,7597 14441,7529 14379,7372
 An der alten Gärtnerei: Baustraße, gesperrt	2::inwork 10888,3787 10898,3865 10922,3917 10981,3937 11022,3921 11046,3895
 Lisa-Fittko-Str.: Hochbauarbeiten, Weg existiert im südlichen Abschnitt noch nicht	2::inwork 7787,13838 7872,13685
 Matthäikirchplatz: Durchgang gesperrt	2::inwork 7933,11407 7970,11396 7934,11275
-Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,9039 19638,9070 19621,9097
+Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,9039 19638,9070
 Straße 171: wegen Bauarbeiten gesperrt	2::inwork 12694,22570 12657,22596 12628,22604
 Mehlbeerenweg: Bauarbeiten, gesperrt	2::inwork 11993,11978 11940,11982 11909,11985
 zur Ontarioseestr.: Hochbauarbeiten, komplett gesperrt	2::inwork 18585,10024 18694,10018
@@ -3441,9 +3444,9 @@ Kupferkamp: Bauzäune, Straße gesperrt	2::inwork 17935,5961 18075,5880
 Helga-Hahnemann-Str.: Bauzäune, Straße gesperrt	2::inwork 18260,5746 18062,5856
 Wilhelminenhofstr.: wegen Bauarbeiten am Behrens-Ufer gesperrt	2::inwork 19139,5627 19184,5554
 Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
-Henriette-Herz-Allee: (früherer Vorschlag Georg-Förster-Allee) Wann wird die Straße eröffnet?	2::inwork 20922,18613 20910,18719
 Forumszufahrt: Bahnunterführung wegen Bauarbeiten gesperrt	2::inwork 22280,6128 22296,6170
-(Fahlenbergstr. - Einkaufszentrum Lagunenweg): Bauarbeiten, Straße wird neu gemacht	2::inwork 31971,3170 31788,3192 31762,3202
+(Clara-Müller-Jahnke-Str. - Einkaufszentrum Lagunenweg): gibt es nach den Bauarbeiten hier eine Durchwegung?	2::inwork 31799,3192 31762,3202
+Clara-Müller-Jahnke-Str.: Straße noch nicht fertig	2::inwork 31800,3091 31810,3009 31965,2999
 An den Eiswerken	2::inwork 15004,10791 14994,10732 14984,10677
 Paul-und-Paula-Promenade	2::inwork 14886,10748 14909,10732 14984,10677
 Ulrich-Plenzdorf-Str.	2::inwork 14994,10732 15071,10716 15151,10699
@@ -3451,7 +3454,6 @@ Potsdamer Platz - Bellevuestr.: wegen Bauarbeiten am ehemaligen Sony-Center gesp
 Götelstr.: Einbahnstraßenregelung	1 -3260,12540 -3252,12405 -3255,12338 -3284,12304 -3293,12304
 Mauerpark: Weg gesperrt	2::inwork 10091,15630 10155,15473
 Mauerpark: Weg gesperrt	2::inwork 10071,15684 10045,15754 10061,15775 10050,15824 10046,15844 10081,15853
-Reinickendorfer Str.: Einbahnstraßenregelung im Bereich des Weddingplatzes	1s:inwork 7998,15068 8015,15047 8037,14958 8091,14895
 Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15844,10894 15856,10821
 (Ingeborg-Drewitz-Allee): wegen Bauarbeiten gesperrt	2::inwork 7789,12764 7649,12764
 (Ingeborg-Drewitz-Allee): wegen Bauarbeiten gesperrt	2::inwork 7588,12734 7819,12729
@@ -3503,14 +3505,13 @@ George-Stephenson-Str.: möglicher Baustellenverkehr, Freigabe noch unklar	2::inw
 (Heidestr./Hedwig-Porschütz-Str. - George-Stephenson-Str.): möglicher Baustellenverkehr, Freigabe noch unklar	2::inwork 7569,14209 7652,14257
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:inwork 9441,12670 9429,12728 9402,12792 9386,12833 9375,12911
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
-Grunerstr.	1::inwork 10849,12557 10838,12496 10807,12451 10746,12364 10697,12303
+Grunerstr.: Straßenzug wird entfernt	2::inwork 10849,12557 10838,12496 10807,12451 10746,12364 10697,12303
 Blütenweißweg: durch Bauzäune abgesperrt	2::inwork 21427,5347 21483,5374
 Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21355,5254 21386,5251 21514,5310
 Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10746,12364 10831,12371
 Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork 10831,12371 10830,12313 10830,12279
 Jüdenstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451
-Littenstr.: Anbindung an die Grunerstr. gesperrt	2::inwork 10973,12611 10951,12637
 Helen-Ernst-Str.: Einbahnstraße wegen Bauarbeiten, kein Gehweg, kann auch komplett gesperrt sein	1::inwork 13422,11236 13537,11186 13540,11148
 Johannisstr.: Einbahnstraße	1s:inwork 9588,13174 9385,13174 9254,13171
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7727,4418 7692,4464 7667,4549
@@ -3518,11 +3519,10 @@ Wuhletalbrücke: wird neu gebaut	2::inwork 20843,17745 20798,17664 20768,17609 20
 (Fußgängertunnel S-Bhf. Schöneweide): kein Durchgang mehr am Cajamarcaplatz möglich	2:inwork 17730,5698 17639,5612
 (Bushaltestelle und Straßenbahnwendeschleife Schöneweide): wegen Bauarbeiten gesperrt	2::inwork 17736,5441 17675,5521 17588,5573 17578,5566
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle): kein Durchgang möglich	2:inwork 17639,5612 17675,5521
-keine Überquerungsmöglichkeit	3nocross::ignrte::inwork 17695,5394 17736,5441 17747,5452 17886,5587
+keine Überquerungsmöglichkeit	3nocross::ignrte::inwork 17695,5394 17736,5441 17747,5452
 Sterndamm -> Ecksteinweg: keine Überquerungsmöglichkeit	3::igndisp::inwork 17747,5452 17736,5441 17762,5408
 Ecksteinweg -> Sterndamm: keine Überquerungsmöglichkeit	3::igndisp::inwork 17762,5408 17736,5441 17695,5394
 Zufahrt Zentrum Schöneweide: Fahrbahn und Bürgersteig gesperrt	2:inwork 17728,5756 17656,5701
-Taubenstr.: Bauarbeiten, Einbahnstraße	1s:inwork 9207,11880 9138,11872
 Mauerstr.: Bauarbeiten, Einbahnstraße	1s:inwork 9138,11872 9171,11777
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
 Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409
@@ -3545,8 +3545,8 @@ Schwingtor	BNP:5:-160:trailer=10 13966,25777
 Schwingtor	BNP:5:-199:trailer=10 14036,25433
 tragen (Treppe)	0:30:-82 2279,5112
 tragen (Treppe)	0:15:-136 2211,5120
-tragen (Treppe)	0:30:-206 17626,-1847
-tragen (Treppe)	0:30:-208 17602,-1803
+tragen (Treppe)	0:30:-205 17628,-1851
+tragen (Treppe)	0:30:-208 17599,-1797
 Drängelgitter	BNP:5:-241 4386,6288
 Drängelgitter	BNP:5:-56 4351,6307
 Heimstättenweg (kein öffentlicher Verkehr)	2 4355,6207 4323,6131 4268,6154

@@ -575,7 +575,7 @@ Hangelsberg - Kienbaum: Qualität?	? 45968,619 47190,2995 47806,4379 48009,5898 4
 Striewitzweg (Teltow): Qualität im südlichen Abschnitt der Straße: wo genau sind die Kopfsteinpflaster- und Betonabschnitte? Ist ein Abschnitt südlich der Potsdamer Str. eine Einbahnstraße?	? 281,-1433 313,-1363 385,-1205 403,-1166 457,-1051 528,-917 598,-757 590,-618
 Altdöbern - Calau: Qualität?	? 55259,-83091 55388,-83077 55768,-82862 54521,-79452 54572,-78865 54600,-77483 53827,-76082
 Börnicke - Staffelde: existieren Radwege zwischen Börnicke und Staffelde?	? -21772,30661 -20747,31713 -19914,32444 -19361,33130 -19129,33814 -18939,34241 -18555,34920 -18212,35362
-Radwegbau in Golmer Chaussee und Wublitzstr.	?::inwork -17646,1636 -18058,1645 -18302,1546 -18522,1325 -18673,1266 -18702,1408 -18673,1785 -18728,2153 -18989,2236 -19243,2246 -19422,2220 -19656,2362 -19721,2368
+Radwegbau in Golmer Chaussee und Wublitzstr.	?::inwork -17646,1636 -18058,1645 -18302,1546 -18492,1354 -18522,1325 -18673,1266 -18702,1408 -18673,1785 -18728,2153 -18989,2236 -19243,2246 -19422,2220 -19656,2362 -19721,2368
 Radweg zwischen Wublitzstr. und Laubenweg: Ist der Radweg bereits fertig? Qualität?	? -19721,2368 -19721,2424 -19891,2447
 Radweg in der Bergstraße: wo genau?	? -17909,7321 -18152,6572
 Zum Bahnhof Pirschheide (Potsdam): Qualität?	? -16157,-3757 -16050,-3982 -15982,-4032
@@ -583,7 +583,6 @@ Am Küssel (Potsdam-Grube): Qualität?	? -19243,2246 -19505,2798
 Zum Mühlenteich (Potsdam-Golm): Qualität? Bereits fertig gebaut? Ist die Straße verkehrsberuhigt?	?::inwork -19022,109 -19192,166
 Schwalbenhof (Potsdam-Golm): Qualität?	? -19279,-106 -19186,-132
 Kossätenweg (Potsdam-Golm) (PLZ=14476): Qualität?	? -19247,-20 -18785,-77
-Akazienweg: Qualität?	? -18889,-591 -18882,-573 -18833,-562 -18822,-430 -18804,-345 -18785,-247 -18785,-77
 Thomas-Müntzer-Str. (Potsdam-Golm): Qualität?	? -18804,-345 -19183,-364
 Falknerstr. (Potsdam-Golm): Qualität?	? -18889,-591 -18889,-641 -18939,-739
 Paarener Dorfstraße (Potsdam-Uetz-Paaren): Qualität?	? -21464,8331 -21412,8481 -21390,8578 -21226,8822 -20996,8861 -20405,9004
@@ -824,6 +823,8 @@ Promenade (Jüterbog): Qualität des südlichen Abschnitts?	? -10165,-45794 -10193,
 Triftstr. (Hohen Neuendorf): Qualität?	? 1470,29391 1483,29433 1604,29508 1646,29550 1687,29557 1717,29541
 Waldstr. (Hohen Neuendorf): Qualität des westlichen Abschnitts?	? 1604,29508 1717,29541
 Am Rathaus (Hohen Neuendorf): Qualität?	? 1717,29541 1730,29579 1733,29664
+# added from strassen
+Petersallee (Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5581,16708 5639,16768 5684,16815 5772,16919
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -912,6 +913,7 @@ Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	?
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
+Cardinalstr. (Wird die Einbahnstraße für Radfahrer geöffnet?)	? 21896,5724 21828,5623 21706,5541
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
 Verbundsteinpflaster, teilweise schadhaft (Wurzelschäden) (Wird die Qualität des Radwegs nach den Bauarbeiten besser sein?)	? 43162,14428 42996,14793
@@ -921,9 +923,6 @@ asphaltiert (geht der Radweg in Richtung Südwesten weiter?)	? 10744,-25036 9478,
 # added from comments_misc
 Tor (Sperrung möglich?) (Ist das Tor permanent geöffnet?)	? 58041,164268 58324,164202 59544,164184
 Ausschilderung nach Luisenthal (?) folgen (Heißt es tatsächlich "Luisenthal"?)	? 41134,76881 41143,76365
-Taubenbogen (Potsdam-Golm): noch nicht ausgeschildert (Sind die Straßen mittlerweile ausgeschildert?)	? -18222,253 -18238,364 -18251,459 -18249,551
-Grasmückenring (Potsdam-Golm): noch nicht ausgeschildert (Sind die Straßen mittlerweile ausgeschildert?)	? -18238,364 -18135,397 -18049,424 -17997,440 -17993,490
-Elsternstr. (Potsdam-Golm): noch nicht ausgeschildert (Sind die Straßen mittlerweile ausgeschildert?)	? -18135,397 -18140,452 -18131,476 -18145,499 -18146,544
 Eidechsenweg: nicht ausgeschildert (Ist der Eidechsenweg bereits ausgeschildert?)	? -7720,13839 -7893,13781
 ausgeschildert "Zu den Häusern Metropolitan Park" (Ist der Eidechsenweg bereits ausgeschildert?)	? -7720,13839 -7893,13781
 # added from comments_route
@@ -941,6 +940,15 @@ L25 (Prenzlau - Güstow): straßenbegleitender Radweg entsteht (Gibt es zwischen P
 L25 (Schmölln - Güstow): hier entsteht ein Radweg (Gibt es einen neuen Radweg im Bereich Schmölln - Autobahnauffahrt?)	? 55977,100103 56030,100076 56188,99924 56268,99856 56856,99683 57042,99574 57512,99290 57634,99199
 Schönfließer Str., Senheimer Str., Gollanczstr.: Bauarbeiten geplant, kommt es dabei zu Änderungen (z.B. Asphaltierungen?) (Sind die Bauarbeiten in der Schönfließer Straße beendet?)	? 2206,25649 2139,25830 2112,26066 2207,26090 2293,26111 2402,26121 2490,26126 2499,26128 2490,26126 2484,25984 2496,25915 2519,25772 2515,25666
 # added from bbbike-temp-blockings-optimized
-Bahnübergang Ziethener Str. wegen Bauarbeiten gesperrt, voraussichtliche Freigabe Anfang 2024 (Wann sind die Bauarbeiten hier beendet?)	? 10346,-4027 10778,-3988 11338,-3945
+Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg kann gesperrt sein, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet? Wird der Weg neu asphaltiert sein?)	? 21176,16480 21129,16426 21107,16418 21070,16415 20996,16429 20923,16435 20898,16420
+Augsburger Str.: Hochbauarbeiten an der Joachimsthaler Str., Einbahnstraße, offen Richtung Osten, Ende der Bauarbeiten unbekannt (Wann wird die Einbahnstraßenregelung aufgehoben?)	? 5497,10719 5471,10719
 Steg am Krugpfuhl gesperrt, Ende der Sperrung unbekannt (Wann ist der Steg wieder offen?)	? 11162,22939 11150,22898
+Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt; außerdem Sperrung der Kreuzung Cottbusser Str./Cottbusser Platz (Ist der Weg weiterhin gesperrt? Falls nicht, hat sich die Wegoberfläche geändert?)	? 23305,14914 23318,14847 23297,14772
+Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt; außerdem Sperrung der Kreuzung Cottbusser Str./Cottbusser Platz (Ist die Kreuzung weiterhin gesperrt?)	? 23222,14809 23297,14772 23369,14756
+Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt; außerdem Sperrung der Kreuzung Cottbusser Str./Cottbusser Platz (Ist die Kreuzung weiterhin gesperrt?)	? 23288,14719 23297,14772
 Uranusweg: Fahrbahn unter der U-Bahnbrücke gesperrt, Engstelle (Besteht die Sperrung noch immer?)	? 4335,17642 4392,17777
+Weidendamm: Bauarbeiten, Sperrung der Fahrbahn, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet?)	? 9533,12925 9375,12911
+Wichmannstr.: Leitungsarbeiten, Einbahnstraßenregelung zwischen Landgrafenstr. und Keithstr. (auch für Radfahrer), Ende der Bauarbeiten unbekannt (Existiert die Einbahnstraßenregelung in der Wichmannstraße weiterhin?)	? 6549,11015 6681,10959
+Landgrafenstr.: Hochbauarbeiten, Einbahnstraßenregelung zwischen Kurfürstenstr. und Wissmannstr., Ende der Bauarbeiten unbekannt (Existiert die Einbahnstraßenregelung in der Landgrafenstraße weiterhin?)	? 6681,10959 6607,10801
+Genthiner Str.: Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Ist die Genthiner Straße weiterhin gesperrt?)	? 7461,11051 7415,10883
+Wilhelm-Kuhr-Str. - Wollankstr. (ehem. Mauerstreifen): Sperrung wegen Bauarbeiten, Ende der Sperrung unbekannt (Ist der Weg entlang des Bahndamms noch gesperrt?)	? 9586,17665 9396,17863

@@ -88,6 +88,7 @@ for my $f (@files) {
 
 	myskip "$f works only with installed Tk", 1
 	    if $f =~ m{/( bbbike_chooser.pl
+		       |  tk-bbbike-grep
 		       |  BBBikeRouteLister.pm
 		       |  trafficlightgraph.pl
 		       )$}x && !eval { require Tk; 1 };
