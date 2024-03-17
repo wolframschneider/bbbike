@@ -760,9 +760,9 @@ An der Güterbahn: Asphalt	Q0 14898,1834 14682,1782
 (Matthäusweg - Friedrich-Kayßler-Weg): Kleinpflaster	Q1 14961,1663 14982,1714 14985,1801 14986,1820 14988,1860 14993,2029
 (Sollmannweg - Matthäusweg): Parkweg	Q1 14961,1663 14898,1834 14895,1842 14888,1869 14865,1952
 Falkensteinstr.: etwas besseres Kopfsteinpflaster	Q2 12905,10143 13032,10355 13136,10535
-Görlitzer Str.: Kopfsteinpflaster auf der Fahrbahn, Radweg Verbundsteinpflaster	Q1; 13216,9983 13035,10076 12905,10143 12767,10216 12682,10258 12608,10294 12328,10442
+Görlitzer Str.: Kopfsteinpflaster auf der Fahrbahn, Radweg Verbundsteinpflaster	Q1; 13220,9980 13035,10076 12905,10143 12767,10216 12682,10258 12608,10294 12328,10442
 Görlitzer Str.: Kopfsteinpflaster	Q2; 12328,10442 12608,10294 12682,10258 12767,10216 12905,10143
-Görlitzer Str.: Kopfsteinpflaster; Schwellen an der Kreuzung Cuvrystr.	Q2; 12905,10143 13035,10076 13216,9983
+Görlitzer Str.: Kopfsteinpflaster; Schwellen an der Kreuzung Cuvrystr.	Q2; 12905,10143 13035,10076 13220,9980
 Landjägerstr.: Asphalt	Q0 22495,4523 22458,4565
 Alter Markt: Kopfsteinpflaster	Q2 22458,4565 22446,4581 22426,4609 22395,4678 22390,4702
 Lüdersstr.: Kopfsteinpflaster	Q2 22390,4702 22388,4737 22377,4836
@@ -1754,7 +1754,7 @@ Fürstenwalder Str.: Kopfsteinpflaster, OK	Q1 12242,12594 12243,12604
 Löwestr.: mäßiges Kopfsteinpflaster	Q2 13202,12790 13273,12649
 Löwestr.: teilweise schlechtes Kopfsteinpflaster	Q3 13273,12649 13357,12473
 Jacobystr.: Beton mit Schäden	Q1 11596,12668 11287,12814
-Jacobystr.: Beton mit Schäden	Q1 11287,12814 11211,12711
+Jacobystr.: Beton mit Schäden	Q1 11287,12814 11234,12742 11221,12725 11211,12711
 Parochialstr.: Asphalt	Q0 10957,12401 11040,12420
 Parochialstr.: Asphalt mit einer leichten Schadstelle	Q0 10831,12371 10957,12401
 Waisenstr.: Asphalt	Q1 11017,12487 11033,12439
@@ -17069,7 +17069,7 @@ Landhausstr.: Kopfsteinpflaster	Q1 5341,8931 5343,8858
 Gasteiner Str.: grobes Kopfsteinpflaster	Q3 4920,9000 4713,8997
 Schrammstr.: grobes Kopfsteinpflaster	Q3 4954,8454 4958,8355
 Eislebender Str. (Wilmersdorf, Charlottenburg): Kopfsteinpflaster	Q2 5654,10485 5568,10535
-Los-Angeles-Platz: Kopfsteinpflaster	Q1 5669,10704 5822,10609
+Los-Angeles-Platz: Kopfsteinpflaster	Q1 5669,10704 5802,10621
 Elisabethkirchstr.: Kleinsteinpflaster	Q1 9936,14085 9901,14197 9856,14204 9769,14175 9750,14132
 Greifenhagener Str.: Asphalt	Q0 11123,15851 11150,15908
 Gethsemanestr.: Asphalt	Q0 11158,15739 11191,15810 11123,15851

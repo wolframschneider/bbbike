@@ -48,8 +48,8 @@ EOF
 
 sub usage_gui (;$) {
     die((defined $_[0] ? $_[0]."\n\n" : '') . <<EOF);
-usage: $0 [--dry-run] gui [--dist debian|ubuntu|...] [--distver bullseye|...] [--src local|github] [--bbbike-args "..."]
-	 [--no-feature-pdf] [-no-feature-remote]
+usage: $0 [--dry-run] gui [--dist debian|ubuntu|...] [--distver bullseye|...] [--src local|github] [--bbbike-args "..."] [--branch ...]
+	 [--no-feature-pdf] [--no-feature-svg] [-no-feature-remote]
 	 [--debug] [--no-install-recommends] [--install-suggests] [--invalidate-apt] [--docker-image owner/name:tag]
 
 Note that --install-suggests would install quite a lot...
@@ -193,6 +193,9 @@ EOF
 	if ($opt{'feature-pdf'}) {
 	    push @packages, qw(libcairo-perl libpango-perl);
 	}
+	if ($opt{'feature-svg'}) {
+	    push @packages, qw(librsvg2-bin);
+	}
 	if ($opt{'feature-remote'}) {
 	    push @packages, qw(libwww-perl libxml-libxml-perl);
 	}
@@ -211,7 +214,11 @@ EOF
 RUN chown $username bbbike
 EOF
 	    }
-	    $docker_cmd = "git clone --depth=1 https://github.com/eserte/bbbike.git && bbbike/bbbike $opt{'bbbike-args'}";
+	    my $branch_args = '';
+	    if ($opt{branch}) {
+		$branch_args = " --branch $opt{branch}";
+	    }
+	    $docker_cmd = "git clone --depth=1 https://github.com/eserte/bbbike.git$branch_args && bbbike/bbbike $opt{'bbbike-args'}";
 	} elsif ($opt{src} eq 'local') {
 	    $docker_cmd = "/bbbike/bbbike $opt{'bbbike-args'}";
 	}
@@ -962,11 +969,13 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       dist    => 'debian',
 	       distver => 'latest',
 	       src     => 'local',
+	       branch  => undef,
 	       debug   => 0,
 	       'bbbike-args' => '',
 	       'install-recommends' => 1,
 	       'install-suggests' => 0,
 	       'feature-pdf' => 1,
+	       'feature-svg' => 1,
 	       'feature-remote' => 1,
 	       'invalidate-apt' => 0,
 	       'docker-image' => undef,
@@ -975,11 +984,13 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       "dist=s",
 	       "distver|distversion=s",
 	       "src=s",
+	       "branch=s",
 	       'debug!',
 	       'bbbike-args=s',
 	       'install-recommends!',
 	       'install-suggests!',
 	       'feature-pdf!',
+	       'feature-svg!',
 	       'feature-remote!',
 	       'invalidate-apt!',
 	       'docker-image=s',

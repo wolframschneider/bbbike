@@ -13,8 +13,6 @@ Gegenverkehrsregelung	X::inwork 18527,16789
 	X::inwork 16328,7005
 Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
 Gürtelstr./Weserstr.	F::inwork 15016,11431
-	F::inwork 18831,14823
-	F::inwork 19196,14976
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
 Südostallee: provisorische Fußgängerampel	F::inwork 17128,5736
 B179/Fichtestr.	X::inwork 26138,-12596
@@ -1078,7 +1076,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12823,8028
 	F 12892,7850
 	F 12846,7981
-	F::inwork 12318,8645
 	X 11154,14985
 	X 12025,14695
 	X 12616,14315

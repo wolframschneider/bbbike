@@ -21,7 +21,7 @@ use strict;
 use vars qw($name $args $VERBOSE $VERSION);
 use Safe;
 
-$VERSION = '1.23';
+$VERSION = '1.24';
 
 #$VERBOSE = 1 if !defined $VERBOSE;
 
@@ -156,6 +156,9 @@ sub create_socket_server {
     CHILD_WTR->autoflush(1);
     PARENT_WTR->autoflush(1);
 
+    my $check_parent_interval = 60; # seconds
+
+    my $parent_pid = $$;
     my $pid = fork;
     if (!$pid) { # child
 	# XXX with this the child process dumps core on exit (as of Tk 800.017)
@@ -188,15 +191,26 @@ sub create_socket_server {
 
 	create_pid();
 
-	my $client;
-	while($client = $h->accept()) {
-	    # XXX evtl. Zugangssperre (auf localhost überprüfen...)
-	    if ($use_inet) {
-		use Data::Dumper; print STDERR "Line " . __LINE__ . ", File: " . __FILE__ . "\n" . Data::Dumper->Dumpxs([gethostbyaddr($client->peeraddr)],[]); # XXX
+	alarm($check_parent_interval);
+	local $SIG{ALRM} = sub {
+	    if (!(kill 0 => $parent_pid)) {
+		warn "ERROR: the bbbike parent process (pid=$parent_pid) does not seem to run anymore, stop the bbbike server process (pid=$$) too...\n";
+		require POSIX;
+		POSIX::_exit(1);
 	    }
-	    my($str) = scalar <$client>;
-	    print PARENT_WTR $str;
-	    close $client;
+	    alarm($check_parent_interval);
+	};
+	while() { # SIGALRM would cause an EINTR, retry again...
+	    my $client;
+	    while($client = $h->accept()) {
+		# XXX evtl. Zugangssperre (auf localhost überprüfen...)
+		if ($use_inet) {
+		    use Data::Dumper; print STDERR "Line " . __LINE__ . ", File: " . __FILE__ . "\n" . Data::Dumper->Dumpxs([gethostbyaddr($client->peeraddr)],[]); # XXX
+		}
+		my($str) = scalar <$client>;
+		print PARENT_WTR $str;
+		close $client;
+	    }
 	}
 	require POSIX;
 	POSIX::_exit(0); # never reached
@@ -239,39 +253,44 @@ sub create_socket_server {
 		     return;
 		 }
 
-		 my %args = @$args;
-		 my $mark = $args{-mark};
-		 if (exists $args{-center}) {
-		     main::choose_from_plz(-str => $args{-center});
-		 }
-		 if (exists $args{-centerc}) {
-		     main::choose_from_plz(-coord => $args{-centerc}, -mark => $mark);
-		 }
-		 if (exists $args{-from}) {
-		     main::set_route_start_street($args{-from});
-		 }
-		 if (exists $args{-to}) {
-		     main::set_route_ziel_street($args{-to});
-		 }
-		 if (exists $args{-routefile} &&
-		     -r $args{-routefile}) {
-		     # This used to check for .bbd explicitely and everything
-		     # else is treated as a route, but it seems that
-		     # plot_additional_layer accepts more formats
-		     # automatically, including gpsman tracks
-		     if ($args{-routefile} =~ m{\.bbr$}) {
-			 warn "Read <$args{-routefile}> ...\n";
-			 $main::center_loaded_route = $main::center_loaded_route if 0; # cease -w
-			 local $main::center_loaded_route = 1;
-			 main::load_save_route(0, $args{-routefile});
-		     } else {
-			 warn "Read <$args{-routefile}> as bbd ...\n";
-			 my $type = 'str';
-			 my $abk = main::plot_additional_layer($type, $args{-routefile});
-			 if ($args{-strlist}) {
-			     main::choose_ort($type, $abk, -rebuild => 1);
+		 eval {
+		     my %args = @$args;
+		     my $mark = $args{-mark};
+		     if (exists $args{-center}) {
+			 main::choose_from_plz(-str => $args{-center});
+		     }
+		     if (exists $args{-centerc}) {
+			 main::choose_from_plz(-coord => $args{-centerc}, -mark => $mark);
+		     }
+		     if (exists $args{-from}) {
+			 main::set_route_start_street($args{-from});
+		     }
+		     if (exists $args{-to}) {
+			 main::set_route_ziel_street($args{-to});
+		     }
+		     if (exists $args{-routefile} &&
+			 -r $args{-routefile}) {
+			 # This used to check for .bbd explicitely and everything
+			 # else is treated as a route, but it seems that
+			 # plot_additional_layer accepts more formats
+			 # automatically, including gpsman tracks
+			 if ($args{-routefile} =~ m{\.bbr$}) {
+			     warn "Read <$args{-routefile}> ...\n";
+			     $main::center_loaded_route = $main::center_loaded_route if 0; # cease -w
+			     local $main::center_loaded_route = 1;
+			     main::load_save_route(0, $args{-routefile});
+			 } else {
+			     warn "Read <$args{-routefile}> as bbd ...\n";
+			     my $type = 'str';
+			     my $abk = main::plot_additional_layer($type, $args{-routefile});
+			     if ($args{-strlist}) {
+				 main::choose_ort($type, $abk, -rebuild => 1);
+			     }
 			 }
 		     }
+		 };
+		 if ($@) {
+		     main::status_message("A bbbikeclient command caused a failure:\n$@\nUsed bbbikeclient args: @$args", "err");
 		 }
 		 $top->deiconify;
 		 $top->raise;

@@ -394,12 +394,13 @@ Otto-Schmirgal-Str. -> Am Tierpark: Z-Übergang	DH:h=q4,25 18512,10337 18554,1035
 # 
 #: next_check_id: AMTREPTOWERPARK-2020
 #: by: https://www.berliner-woche.de/alt-treptow/c-verkehr/strassenbau-am-knotenpunkt-puschkinalleeelsenstrasseam-treptower-park-geht-weiter_a392743
-#: source_id: viz2021:13.454254,52.49393,29.07.2021,08:00 (bis Ende 2021, Gesamtbaumaßnahme bis 30.6.2023) (mittlerweile bis 30.6.2022) (inaktiv)
-#: source_id: viz2021:13.45767,52.49173,29.12.2022,09:41 (bis 31.7.2023) (später am Tag wieder entfernt -> inaktiv)
+#: source_id: viz2021:13.454254,52.49393,29.07.2021,08:00 (bis Ende 2021, Gesamtbaumaßnahme bis 30.06.2023) (mittlerweile bis 30.06.2022) (inaktiv)
+#: source_id: viz2021:13.45767,52.49173,29.12.2022,09:41 (bis 31.07.2023) (später am Tag wieder entfernt -> inaktiv)
 #: source_id: viz2021:13.45767,52.49173,29.07.2021,08:00 (bis 30.06.2023) (inaktiv) (bis 31.07.2023) (inaktiv)
 #: source_id: viz2021:13.45316,52.49472,29.07.2021,08:00 (bis 30.06.2023) (inaktiv)
 #: source_id: viz2021:13.45767,52.49173,20.12.2023,14:17 (bis 29.02.2024) (inaktiv)
-#: source_id: viz2021:13.458241,52.492038,29.07.2021,08:00 (bis 30.6.2022) (inaktiv) (bis 31.12.2022) (bis 31.7.2023) (bis 22.12.2023) (bis 29.02.2024) (inaktiv) (bis 30.04.2024)
+#: source_id: viz2021:13.458241,52.492038,29.07.2021,08:00 (bis 30.06.2022) (inaktiv) (bis 31.12.2022) (bis 31.07.2023) (bis 22.12.2023) (bis 29.02.2024) (inaktiv) (bis 30.04.2024)
+#: source_id: viz2021:13.457474,52.491787,29.07.2021,07:00 (bis 30.04.2024)
 #: osm_watch: way id="1005683568" version="16"
 #: osm_watch: way id="1022420059" version="16"
 #: last_checked: 2024-03-08 vvv
@@ -426,20 +427,23 @@ Südliche Blumberger-Damm-Brücke: Radfahrer müssen den gegenüberliegenden Radweg 
 # 
 #: next_check_id: KNOTENMARZAHN-2022
 #: note: Mindestwartezeit an den Ampeln etwa eine Minute
-#: last_checked: 2023-11-25 vvv
+#: XXX zurzeit sind die Ampeln wegen Sperrung für den Kfz-Verkehr abgeschaltet, siehe valid-Direktive
+#: last_checked: 2024-03-16 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2026-12-31 vvv
+#: valid: 20240617- vvv
 Landsberger Allee	DH:t=50 18553,14678 18831,14823 19013,14905
 Landsberger Allee	DH:t=50 19175,14968 19196,14976 19200,14963
+#: valid: ^^^
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
 #: next_check_id: U6-2022
-#: note: Existenz eines Zweirichtungsradwegs am 18.3.2023 bestätigt; März 2024 wird als Ende der Bauarbeiten angegeben, aber wird es vorher noch zu einer Umstellung der Verkehrsführung kommen (Süd- statt Nordseite)?
+#: note: Existenz eines Zweirichtungsradwegs am 18.3.2023 bestätigt; es wird noch zu einer Umstellung der Verkehrsführung kommen (Süd- statt Nordseite)?
 #: last_checked: 2023-12-11 (mapillary) vvv
 #: check_frequency: 120d vvv
-#: next_check: 2024-03-15 vvv
+#: next_check: 2025-04-15 vvv
 Seidelstr.: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 3429,17987 3570,17938 3628,17935
 Scharnweberstr.: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:t=20 3833,17929 3930,17923 4016,17918
 #: next_check ^^^
@@ -495,10 +499,10 @@ Minna-Todenhagen-Brücke - Köpenicker Landstr: zusätzliche Ampel	DH:t=20 16834,69
 #: source_id: viz2021:13.53005,52.510351,11.08.2023,10:00 (bis 22.09.2023, im Anschluss weitere Arbeiten) (inaktiv)
 #: source_id: viz2021:13.53005,52.510351,25.07.2023,10:00 (bis 06.10.2023) (bis 24.11.2023) (bis 24.05.2024)
 #: note: Luftlinie 307m, Umleitungsstrecke 341m
-#: note: laut Bauschild der Wasserbetriebe bis Frühjahr 2024
+#: note: laut Bauschild der Wasserbetriebe bis Frühjahr 2024, mittlerweile bis Juni 2024
 #: osm_watch: way id="460741797" version="8"
 #: osm_watch: way id="1225572236" version="1"
-#: last_checked: 2024-02-11 (mapillary)
+#: last_checked: 2024-03-13 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2024-05-24
 # REMOVED --- #: valid: -20231006
