@@ -62,7 +62,7 @@ Müllerstr./Kongostr.: Fußgängerampel	DH:len=50:tl 6572,16212 6447,16321 6349,162
 Georg-Wilhelm-Str./Kurfürstendamm: Fußgängerampel	DH:len=15:tl 2687,10053 2702,10006 2770,10024
 # 
 Nassauische Str./Berliner Str.: Fußgängerampel	DH:len=25:tl 5189,8983 5195,8880 5266,8903
-Mehlitzstr./Berliner Str.: Fußgängerampel	DH:len=20:tl 5165,8784 5172,8880 5022,8879
+Mehlitzstr./Berliner Str.: Fußgängerampel	DH:len=20:tl 5164,8771 5172,8880 5022,8879
 # 
 #: XXX_prog BS vvv
 Schwäbische Str./Grunewaldstr.: Bordsteine beim Überqueren der Grunewaldstr.	DH:t=5 6851,9365 6917,9274 7001,9291
@@ -477,7 +477,7 @@ Scharnweberstr.: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:t=2
 # REMOVED --- #: source_id ^^^
 # 
 #: next_check_id: MARGGRAFFBRUECKE-2023
-#: last_checked: 2024-02-10 vvv
+#: last_checked: 2024-03-20 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-04-30 vvv
 # REMOVED --- Marggrafbrücke: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 16747,6813 16720,6845

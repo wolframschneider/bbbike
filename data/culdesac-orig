@@ -136,7 +136,7 @@ Sackgassenende, kroatische Botschaft	culdesac 6871,10590
 	culdesac 5813,7807
 	culdesac 6003,8120
 	culdesac 6491,7702
-	culdesac 6711,7846
+	culdesac 6683,7847
 Zugang zum Gewerbegelände	culdesac_pseudo 8139,8023
 	culdesac 7973,7295
 	culdesac 8945,6873
@@ -351,7 +351,7 @@ nördliches Sackgassenende im südlichen Abschnitt	culdesac 15799,17406
 	culdesac 16074,12778
 	culdesac 6608,7306
 	culdesac 6505,7381
-	culdesac 6499,7535
+	culdesac 6490,7522
 	culdesac_pseudo 6811,7266
 	culdesac 5674,6834
 	culdesac 5650,4809
@@ -885,7 +885,7 @@ Autowaschcenter	culdesac_pseudo 17110,14187
 	culdesac 9482,5557
 Fähranleger	culdesac_pseudo -1989,18378
 #: note: als Radfahrer kann man Richtung Panke oder Reinhardtstr. weiterfahren
-	culdesac_pseudo 9132,13187
+	culdesac_pseudo 9137,13196
 # REMOVED --- #: next_check_id: BND-2014 --- #: XXX wird bei der Verlängerung der Ida-von-Arnim-Str. aufgehoben --- #: last_checked: 2016-11-22 --- #: check_frequency: 90d ---	culdesac 8251,14337
 # REMOVED --- #: next_check_id: SUEDPANKE-2014 --- #: XXX wird bei der Verlängerung des Südpankewegs aufgehoben --- #: last_checked: 2021-05-11 (daf) --- #: check_frequency: 14d ---	culdesac 8271,14222
 Tor	culdesac 8388,13993
@@ -1224,7 +1224,7 @@ nördliches Sackgassenende, BSR-Recyclinghof	culdesac_pseudo 3969,13341
 	culdesac 5015,21036
 	culdesac 13196,2369
 	culdesac 8637,4980
-	culdesac_pseudo 5808,10284
+	culdesac_pseudo 5817,10279
 	culdesac -2396,14245
 #: note: ein Weg mit Stufen zum Ufer scheint zu existieren
 	culdesac_pseudo 6965,4219
@@ -1319,7 +1319,7 @@ südwestliches Ende	culdesac_pseudo 29940,2852
 	culdesac 17877,13562
 	culdesac_pseudo 17925,16695
 	culdesac_pseudo 17964,16677
-nordwestliches Sackgassenende	culdesac 14934,3722
+nordwestliches Sackgassenende	culdesac 14924,3739
 südöstliches Sackgassenende	culdesac 15039,3612
 	culdesac 3218,2123
 Werksgelände	culdesac 2160,19320
@@ -1575,7 +1575,7 @@ ehemalige Luftfracht	culdesac 2226,16096
 	culdesac 6246,2318
 	culdesac 17837,9086
 	culdesac 17626,11131
-Sackgassenende, Wohngebietsparkplatz	culdesac 17612,11541
+Sackgassenende, Wohngebietsparkplatz	culdesac 17647,11573
 	culdesac 3476,25399
 	culdesac 18068,6495
 	culdesac_pseudo 10772,-1748
@@ -1875,7 +1875,7 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac_pseudo 6688,9897
 	culdesac_pseudo 6638,9763
 	culdesac_pseudo 6814,9678
-	culdesac_pseudo 6265,10359
+	culdesac_pseudo 6260,10361
 	culdesac_pseudo 6377,10434
 	culdesac_pseudo 6192,10542
 	culdesac_pseudo 6250,10701

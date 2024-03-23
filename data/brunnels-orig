@@ -71,8 +71,8 @@ Stubenrauchbrücke (Tempelhof)	Br 9188,5333 9196,5272
 Colditzbrücke	Br 9863,5637 9893,5569
 Komturbrücke	Br 10243,5777 10243,5683
 Mussehlbrücke	Br 11128,5782 11196,5851
-Wilhelm-Borgmann-Brücke	Br 12052,5710 12110,5654
-Britzer Brücke	Br 12718,5845 12699,5909
+Wilhelm-Borgmann-Brücke	Br 12052,5710 12136,5628
+Britzer Brücke	Br 12722,5831 12699,5909
 Rungiusbrücke	Br 13064,5953 13077,5893
 Buschkrugbrücke	Br 13430,6086 13483,5973
 Britzer Hafensteg	Br 13949,6192 13993,6221
@@ -410,7 +410,8 @@ Modersohnbrücke	Br 14076,11057 14096,11134
 #: note: offiziell ausgeschildert
 Warschauer Brücke	Br 13454,11119 13476,11174 13493,11217 13541,11355
 Fußgängerbrücke zwischen U-Bhf. und S-Bhf. Warschauer Str.	Br 13498,11136 13524,11204
-Fußgängerbrücke zur Mercedes-Benz Arena	Br 13503,11179 13514,11208
+#: note: früher als "Fußgängerbrücke zur Mercedes-Benz Arena" bezeichnet, seit dem 2024-03-22 wird ein "neutraler" Name verwendet
+Fußgängerbrücke zur Arena am Ostbahnhof	Br 13503,11179 13514,11208
 Mariendorfer-Hafen-Steg	Br 7769,4315 7795,4242
 Klingenbergbrücke	Br 16791,9137 16831,9078
 Rosemeyer-Steg	Br -3852,2730 -3776,2687
