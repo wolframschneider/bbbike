@@ -118,7 +118,7 @@ SKIP: {
 }
 
 {
-    is module_path("BBBikeBuildUtil"), $INC{"BBBikeBuildUtil.pm"}, "module_path of BBBikeBuildUtil";
+    is \&module_path, \&BBBikeUtil::module_path, 'module_path comes from BBBikeUtil'; # comprehensive tests are now in bbbikeutil.t
 }
 
 {

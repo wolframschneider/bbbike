@@ -37,12 +37,11 @@ Alexandrinenstr.: Sperrung der Fahrbahn und des rechten Rad/Gehwegs Richtung Nor
 Sigismundstr.: Fahrbahn gesperrt	q3::inwork 7894,11288 7934,11275 8031,11249
 Rankestr.: Einmündungsbereich Breitscheidplatz wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg, ggfs. Bordsteine	q2::inwork 5669,10704 5782,10884
 Abbestr.: Bauzaun, Umfahrung notwendig	q4::inwork 4674,12076 4698,12124
-Wildenbruchstr.: Wasserrohrbruch, kurzer Abschnitt (30-40m) der Fahrbahn gesperrt, Bordsteine	q2::inwork 13333,9017 13491,9201
 Bürgerstr.: Fahrbahn gesperrt, Hochbauarbeiten	q4::inwork 12830,6254 12997,6290
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
 Bornitzstr.: Sperrung der Fahrbahn an der Ruschestr., Umweg über Gehwege	q3::inwork 15747,12880 15950,12886
 Ontarioseestr.: Fahrbahn abschnittsweise gesperrt, Bordsteine	q3::inwork 18552,10135 18585,10024 18411,10037
-Gustav-Tempel-Str.: Bauarbeiten, Absperrungen, ggfs. auf Bürgersteig ausweichen	q3::inwork 15261,10738 15245,10719 15236,10684
+Gustav-Tempel-Str.: Bauarbeiten, Absperrungen, ggfs. auf Bürgersteig ausweichen	q3::inwork 15261,10738 15245,10719
 Plauener Str.: Fahrbahn noch gesperrt, südlicher Gehweg frei	q3::inwork 17531,14923 17610,14935 17638,14945
 Reichenberger Str.: etwa 80m der Fahrbahn gesperrt	q3::inwork 15937,15134 16075,15069
 Knoten Marzahn: Baustelle, Verschwenkungen und Engstellen	q2::inwork 18831,14823 19013,14905 19175,14968 19196,14976 19200,14963 19214,14966
@@ -68,8 +67,8 @@ Pappelplatz (Mitte): gemeinsamer Fuß- und Radweg	q2 9750,14132 9676,14046
 Otto-Ludwig-Str.: Fußgängerzone	q2 4857,10909 4930,10903
 Mauerstr. (Mitte): Touristen, Bordsteine	q4 9405,11413 9459,11371 9474,11360
 Georgenstr.: Fußgängerzone, Bordstein	q4 9441,12670 9313,12662
-Neue Promenade: Fußgängerzone, Radfahren erlaubt, aber nur langsam möglich	q4 10286,13084 10263,13047 10185,12982
-Neue Promenade: Fußgängerzone, Radfahren erlaubt, aber nur langsam möglich	q4 10264,13097 10263,13047
+Neue Promenade: Fußgängerzone, Radfahren erlaubt, aber nur langsam möglich	q4 10289,13088 10263,13047 10185,12982
+Neue Promenade: Fußgängerzone, Radfahren erlaubt, aber nur langsam möglich	q4 10270,13101 10263,13047
 Am Zwirngraben: Tische auf der Straße, Fußgänger	q4 10339,13052 10185,12982
 Neue Promenade: Fußgängerzone, Radfahren erlaubt	q2 10185,12982 10132,12941
 Pariser Platz: Fußgänger	q2 8637,12258 8641,12227 8643,12208 8705,12217 8728,12220 8722,12268 8717,12302 8714,12319 8673,12315 8630,12310 8637,12258
@@ -344,10 +343,11 @@ Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
 (Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3370,12725 3396,12741 3416,12738 3445,12733 3507,12725 3586,12697 3643,12671 3748,12627 3836,12614
 (Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3836,12614 3867,12616 3888,12618 4131,12641 4340,12578 4441,12578 4529,12570 4642,12491
 (Rad- und Wanderweg an Spree und Landwehrkanal): einige Fußgänger	q1 4642,12491 4817,12366 5045,12243 5144,12146 5259,11995 5349,11941 5373,11907 5372,11888
-Spreeufer: Fußgänger, besonders an schönen Tagen	q3 10166,12777 10105,12855 9977,12912 9944,12921 9930,12947 9900,12942 9724,12992 9716,12971 9707,12974
+Spreeufer: Fußgänger, besonders an schönen Tagen	q3 10166,12777 10105,12855 9955,12915 9944,12921 9930,12947 9900,12942 9724,12992 9716,12971 9707,12974
 Spreeufer: Fußgänger	q2 9707,12974 9557,12992 9538,12993 9508,12991 9279,12953
 Henriette-Herz-Platz: Straßenbahn	q2 10132,12941 10255,12959 10312,12982 10371,13006
-Monbijoupark - Henriette-Herz-Platz: Fußgänger	q2 9977,12912 10132,12941
+Monbijoupark - Henriette-Herz-Platz: Fußgänger	q2 9955,12915 10084,12921 10132,12941
+(Monbijoupark, östlicher Weg): einige Fußgänger	q1 10016,13067 9975,12959
 Monbijoubrücke: Fußgänger	q1 9707,12974 9683,12913 9654,12882
 Garnisonkirchplatz: Straßenbahn	q2 10308,12859 10255,12959
 Fürther Str.: Gehweg	q2 5764,10322 5817,10279
@@ -1182,13 +1182,14 @@ Müggelstr.: einige Fußgänger	q3 14994,12121 14994,12064
 Märkischer Platz: Fußgänger, Radfahren offiziell nicht erlaubt	q4 11034,12038 11084,12070 11111,12027
 (Fischerinsel - Grünstraßenbrücke): Fußgänger, niedriger Bordstein	q2 10474,11843 10515,11785
 (Rampe Wriezener Park): Fußgänger, enge Rampe	q3 13416,11425 13442,11400
-(Wriezener Park): Fußgänger	q2 13513,11351 13442,11400 13417,11416 13407,11416 13323,11497 13308,11515 13261,11572 13239,11567 13172,11651
-(Wriezener Park): Fußgänger	q2 13324,11529 13308,11515
+(Wriezener Park): Fußgänger	q3 13513,11351 13442,11400 13417,11416 13407,11416 13323,11497 13308,11515 13261,11572 13239,11567 13172,11651
+(Wriezener Park): Fußgänger	q3 13324,11529 13308,11515
 Wriezener Park: Fußgänger, Bordstein	q3 13261,11572 13274,11585
+(Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park): Fußgänger	q3 13095,11703 13123,11675 13172,11651 13202,11666
+(Rüdersdorfer Str. - Am Wriezener Bahnhof): Fußgänger	q3 13161,11795 13120,11725 13095,11703
+(Rüdersdorfer Str. - Helsingforser Str./Wriezener Park): Fußgänger	q3 13120,11725 13123,11675
+(Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park): einige Fußgänger	q2 13042,11749 13095,11703
 (Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park): einige Fußgänger, Engstelle	q3 12986,11699 13002,11705 13042,11749
-(Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park): einige Fußgänger	q1 13042,11749 13095,11703 13123,11675 13172,11651 13202,11666
-(Rüdersdorfer Str. - Am Wriezener Bahnhof): einige Fußgänger	q1 13161,11795 13120,11725 13095,11703
-(Rüdersdorfer Str. - Helsingforser Str./Wriezener Park): einige Fußgänger	q1 13120,11725 13123,11675
 Oranienplatz: einige Fußgänger	q1 11264,10804 11227,10821
 Oranienplatz: einige Fußgänger, Grünanlage	q3 11275,10723 11253,10778 11227,10821
 Grüner Weg: einige Fußgänger	q1 13728,3332 13775,3500
@@ -1373,7 +1374,7 @@ Waltershauser Str.: gemeinsamer Rad- und Gehweg, einige Fußgänger	q1 6534,1702 6
 (Genslerstr. - Landsberger Allee): Fußgänger	q2 16669,14438 16665,14420 16644,14401 16632,14390
 Schweriner Ring [9-19 ungerade]: enge Straße	q1 17444,19115 17259,19121
 (Weg auf dem Lärmschutzwall): Rampen, nicht sehr breit	q1 16665,19021 16699,19090 17197,18473 17275,18356 17564,18010 17585,17963
-(entlang der Stadtbahn): Fußgänger, schmal	q3 10117,12973 10004,12966 9930,12947
+(entlang der Stadtbahn): Fußgänger, schmal	q3 10117,12973 10004,12966 9975,12959 9930,12947
 Dievenowstr.: Bordstein, Gehweg	q2 3202,7121 3193,7059
 (Armenische Str. - Schwyzer Str., Schillerpark): Fußgänger	q1 7144,16781 7131,16790 7115,16827 7097,16915 7094,16938
 (Armenische Str. - Schwyzer Str., Schillerpark): Fußgänger	q1 7097,16915 7064,16943
@@ -1637,7 +1638,7 @@ Parkplatz Einkaufszentrum: Parkplatzverkehr	q2 -2195,3564 -2173,3513 -2164,3488
 (Unterführung S-Bhf. Waidmannslust): Fußgänger	q3 4620,22079 4655,22100 4689,22058 4712,22068 4740,22075
 (Wollankstr. - Pankeweg): Fußgänger, Bordstein	q2 9228,17274 9073,17361
 (entlang des REWEs): Fußgänger	q2 15714,11941 15710,11857
-Große Präsidentenstr.: wartende Straßenbahnen	q3 10220,13098 10105,13004
+Große Präsidentenstr.: wartende Straßenbahnen	q3 10219,13102 10105,13004
 Wilhelmine-Gemberg-Weg: einige Fußgänger	q1 11767,11662 11821,11733
 (Zufahrt Debis-Parkhaus): Parkhausverkehr, einige Kurven	q1 8430,10710 8424,10703 8367,10745 8350,10662 8335,10518 8350,10499 8384,10507
 Iranische Str.: einige Fußgänger	q1 7843,16524 7713,16557 7447,16613
@@ -2525,6 +2526,10 @@ Douglasienweg: einige Fußgänger	q1 11563,4099 11594,4107
 (Weg am Moabiter Werder - Elisabeth-Abegg-Str.): schmal, einige Fußgänger	q2 7751,12870 7822,12796
 Hönower Weg: einige Fußgänger	q0 17383,9719 16984,9857 16925,9852 16900,9861
 (Fürstenwalder Damm - Müggelseedamm): einige Fußgänger	q0 24716,5613 24695,5592 24699,5430 24678,5215 24676,5049 24681,4943
+(KGA Grüne Weiden): einige Fußgänger	q2 15456,7516 15268,7344 15214,7307
+(KGA Grüne Weiden - Heidekampgraben): enger Trampelpfad, Steigungen/Gefälle	q4 15214,7307 15175,7301
+(KGA Grüne Weiden - Heidekampgraben): enger Trampelpfad	q3 15214,7307 15190,7344 15171,7338
+Mittelweg: mehrere Bodenschwellen	q1 16061,4285 16180,4461 16203,4495 16258,4578 16293,4630 16327,4680 16354,4720 16407,4800 16436,4844 16549,5015
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11908,19255 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11929,19281
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2577,7 +2582,7 @@ Lothar-Bucher-Str.: enge Straße	q1 5598,6136 5664,6082 5748,6051 5845,6049 6008,
 Gustav-Zahnke-Str.: enge Straße	q1 14439,13600 14417,13517 14337,13541
 Propst-Süßmilch-Weg: Fußgängerzone	q2 856,3188 813,3202 797,3216 727,3231 649,3221
 Zangengasse: parkende Fahrzeuge	q0 5959,20524 5714,20784 5641,20857 5609,20968
-Lintruper Str.: teilweise wegen parkender Autos eng	q1 10324,925 10380,757 10423,636 10506,405 10550,282 10613,108 10665,-200 10729,-386
+Lintruper Str.: teilweise wegen parkender Autos eng	q0 10324,925 10380,757 10423,636 10506,405 10550,282 10613,108 10665,-200 10729,-386
 Spandauer Str.: enge Straße	q1 -6442,14186 -6261,14213
 (Parkplatz Kaufland - Am Steinberg): Fußgänger	q1 12981,17557 12998,17480
 Achenbachstr.: nicht so breite Straße	q1 -3360,14974 -3322,14814
@@ -2865,7 +2870,8 @@ Seefelder Str. (Fußweg): Fußgänger	q1 17325,16189 17362,16189
 Seefelder Str. (Fußweg): Fußgänger, Bordstein	q3 17362,16189 17383,16197
 (Malteserstr. - Hanielweg): Fußgänger	q1 7451,1818 7534,1818 7562,1796
 (An der Kol. Königsgraben, nördl. Parkweg): Fußgänger	q1 7189,1942 7390,2021
-(An der Kol. Königsgraben, südl. Parkweg): Fußgänger	q1 7415,1846 7275,1843 7226,1842 7119,1829
+(An der Kol. Königsgraben, südl. Parkweg): Fußgänger	q3 7415,1846 7275,1843 7226,1842
+(An der Kol. Königsgraben, südl. Parkweg): Fußgänger	q1 7226,1842 7119,1829
 (Kol. Königsgraben, Privatstr.): Fußgänger	q1 7409,1953 7210,1888 7189,1942
 (Kol. Königsgraben, Nord-Süd-Verbindung): Fußgänger	q1 7226,1842 7210,1888
 (Verbindung zum Orlamünder Weg): Fußgänger	q1 7274,1810 7275,1843
@@ -3410,6 +3416,7 @@ Wadzeckstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 11315
 Cantianstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 10855,15283 10887,15287
 (Suermondtstr. - Konrad-Wolf-Str.): gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 16842,15932 16799,15974 16719,16005 16753,16111
 Ferdinandstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 5398,2422 5417,2383
+Kranoldplatz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 5417,2383 5317,2345
 An den Grachten: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 22132,10915 22166,10936 22169,10969 22172,10996 22181,11057 22191,11130
 Am Groen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 22142,11116 22146,11086 22131,11084 22115,11082 22110,11107
 Am Groen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 22146,10995 22137,11033 22131,11084

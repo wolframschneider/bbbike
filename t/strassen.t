@@ -51,7 +51,7 @@ GetOptions(get_std_opts("xxx"),
 	   "doit!" => \$doit,
 	  ) or die "usage";
 
-my $basic_tests = 60;
+my $basic_tests = 75;
 my $doit_tests = 6;
 my $strassen_orig_tests = 5;
 my $zebrastreifen_tests = 4;
@@ -76,6 +76,18 @@ goto XXX if $do_xxx;
     my $ms = MultiStrassen->new($s, $s);
     ok($ms->isa("Strassen"));
     ok($ms->isa("MultiStrassen"), "MultiStrassen isa MultiStrassen");
+}
+
+{
+    my $s;
+
+    $s = eval { Strassen->new("$FindBin::RealBin/../data/this-file-does-not-exist") };
+    like $@, qr{Can't open .*this-file-does-not-exist}, 'error on non-existing strassen file (constructor new)';
+    is $s, undef;
+
+    $s = eval { Strassen->new_stream("$FindBin::RealBin/../data/this-file-does-not-exist") };
+    like $@, qr{Can't open .*this-file-does-not-exist}, 'error on non-existing strassen file (constructor new_stream)';
+    is $s, undef;
 }
 
 {
@@ -141,6 +153,36 @@ EOF
     }
     is_deeply($s->get(4), [undef,[],undef], 'get past end');
     is(scalar @{$s->data}, 3, 'data length unchanged after get past end');
+
+    {
+	# init_for_prev and prev: iterate backwards
+	$s->init_for_prev;
+	my $r;
+	$r = $s->prev;
+	is $r->[Strassen::NAME], 'Mehringdamm', '1st prev call';
+	$s->prev;
+	$r = $s->prev;
+	is $r->[Strassen::NAME], 'Dudenstr.', 'prev call on first element';
+	$r = $s->prev;
+	is_deeply $r->[Strassen::COORDS], [], 'prev beyond first element';
+	is_deeply $r, Strassen::UNDEF_RECORD, 'alternative check for undef record';
+    }
+
+    {
+	# init and next: iterate forwards
+	$s->init;
+	my $r;
+	$r = $s->peek;
+	is $r->[Strassen::NAME], 'Dudenstr.', 'call peek (would not change the pointer)';
+	$r = $s->next;
+	is $r->[Strassen::NAME], 'Dudenstr.', '1st next call';
+	$s->next;
+	$r = $s->next;
+	is $r->[Strassen::NAME], 'Mehringdamm', 'next call on last element';
+	$r = $s->next;
+	is_deeply $r->[Strassen::COORDS], [], 'next beyond last element';
+	is_deeply $r, Strassen::UNDEF_RECORD, 'alternative check for undef record';
+    }
 }
 
 {
@@ -159,6 +201,27 @@ EOF
     my $dir = $s->get_directives;
     is_deeply $dir->{local_directive}, ['yes!'], 'Got local directive';
     is scalar(keys %$dir), 1, 'Only one local directive';
+}
+
+{
+    my $data =<<EOF;
+#:
+#: unclosed_local_directive: yes vvv
+Straße A	? 6353,22515
+EOF
+    my $s = Strassen->new_data_string_stream($data); # , UseLocalDirectives => 1);
+    eval { $s->read_stream(sub{}) };
+    like $@, qr{\QThe following block directives were not closed: 'unclosed_local_directive yes' (start at line 2)\E}, 'unclosed local directive error';
+}
+
+{
+    my $data =<<EOF;
+Straße A	? 6353,22515
+#: stray_local_directive: yes
+EOF
+    my $s = Strassen->new_data_string_stream($data); # , UseLocalDirectives => 1);
+    eval { $s->read_stream(sub{}) };
+    like $@, qr{\QERROR: Stray line directive `stray_local_directive' at end of file\E}, 'stray line directive at end of file error';
 }
 
 {

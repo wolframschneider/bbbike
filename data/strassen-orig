@@ -217,9 +217,10 @@ Grimmstr. [ehemaliges Urbankrankenhaus]	NN 11072,9711 11040,9724 11030,9702 1089
 (Admiralbrücke - Böckhstr.)	NN 11160,9932 11170,9919 11197,9894
 Reichstagufer	N 9286,12886 9209,12795 9171,12758 9117,12705 9098,12687 8892,12576 8766,12541
 Reichstagufer	NN 8766,12541 8667,12555 8596,12576 8554,12593
-(James-Simon-Park - Henriette-Herz-Platz)	NN 9977,12912 10132,12941
-(entlang der Stadtbahn)	NN 10117,12973 10004,12966 9930,12947
-(nördliches Spreeufer)	NN 10166,12777 10105,12855 9977,12912 9944,12921 9930,12947 9900,12942 9724,12992 9716,12971 9707,12974
+(James-Simon-Park - Henriette-Herz-Platz)	NN 9955,12915 10084,12921 10132,12941
+(entlang der Stadtbahn)	NN 10117,12973 10004,12966 9975,12959 9930,12947
+(Monbijoupark, östlicher Weg)	NN 10016,13067 9975,12959
+(nördliches Spreeufer)	NN 10166,12777 10105,12855 9955,12915 9944,12921 9930,12947 9900,12942 9724,12992 9716,12971 9707,12974
 (nördliches Spreeufer)	NN 9707,12974 9557,12992 9538,12993 9508,12991 9279,12953
 #: note: dieser Name wird auch bei Wikipedia (http://de.wikipedia.org/wiki/Spreebogenpark) erwähnt
 (Ludwig-Erhard-Ufer)	NN 7670,12576 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8025,12879 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871
@@ -261,7 +262,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/berlin-news/geplante-umbenennung-der-mohrenstrasse-zieht-sich-weiter-hin-id231791
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2024-03-20 (mapillary) vvv
+#: last_checked: 2024-03-28 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 #: osm_watch: way id="47755711" version="23"
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
@@ -576,7 +577,7 @@ Karl-Kunger-Str.	N 13190,9750 13345,9596 13489,9456 13614,9333
 Karl-Kunger-Str.	H 13614,9333 13647,9304 13766,9200
 Plesser Str.	N 13647,9304 13667,9316 13821,9340
 Kiefholzstr.	N 13251,9829 13450,9714 13602,9581 13715,9455 13821,9340 13849,9310
-Kiefholzstr.	NH 13849,9310 14018,9118 14151,8967 14261,8851 14318,8790 14341,8763 14363,8738 14560,8528 14700,8368 14841,8207 14976,8053 15053,7966 15221,7778 15553,7408 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755 16276,6611 16283,6604 16346,6534 16425,6445 16485,6377 16868,5938
+Kiefholzstr.	NH 13849,9310 14018,9118 14151,8967 14261,8851 14318,8790 14341,8763 14363,8738 14560,8528 14700,8368 14841,8207 14976,8053 15053,7966 15221,7778 15456,7516 15553,7408 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755 16276,6611 16283,6604 16346,6534 16425,6445 16485,6377 16868,5938
 Puderstr.	N 14363,8738 14492,8853 14525,8894 14567,8966 14614,9052
 Herkomerstr.	N 14558,9111 14439,8987
 Moosdorfstr.	N 14305,9213 14382,9299
@@ -593,7 +594,7 @@ Ludwig-Richter-Str.	N 15002,8651 14940,8583
 (Am S-Bahnhof Plänterwald)	N 15303,8343 15242,8263 15256,8247 15284,8214 15357,8286
 (Weg am Heidekampgraben - Kiefholzstr., entlang der S-Bahn)	NN 15204,7236 15306,7251 15350,7272 15422,7265 15468,7291 15579,7316 15609,7347
 (Wohngebiet Heidekampweg - Kiefholzstr.)	NN 15373,7212 15422,7265
-(Am Heidekampgraben)	NN 15053,7966 15030,7928 15025,7860 14975,7665 14989,7574 15042,7513 15054,7474 15132,7402 15176,7330 15168,7269 15187,7240 15204,7236 15262,7172 15270,7138 15322,7063 15367,7031 15408,6949 15470,6886 15489,6839 15532,6794 15615,6610 15595,6569 15587,6497 15578,6471 15557,6458 15516,6357 15505,6342 15496,6314 15437,6227 15403,6145 15397,6129 15393,6112 15358,6022
+(Am Heidekampgraben)	NN 15053,7966 15030,7928 15025,7860 14975,7665 14989,7574 15042,7513 15054,7474 15132,7402 15171,7338 15176,7330 15175,7301 15168,7269 15187,7240 15204,7236 15262,7172 15270,7138 15322,7063 15367,7031 15408,6949 15470,6886 15489,6839 15532,6794 15615,6610 15595,6569 15587,6497 15578,6471 15557,6458 15516,6357 15505,6342 15496,6314 15437,6227 15403,6145 15397,6129 15393,6112 15358,6022
 (Am Heidekampgraben - Dammweg)	NN 15042,7513 15036,7551 15011,7593
 (Am Britzer Verbindungskanal)	NN 15358,6022 15166,6019
 (Am Britzer Verbindungskanal - Chris-Gueffroy-Allee)	NN 15166,6019 15156,6034 15144,6054
@@ -1631,11 +1632,11 @@ Bodestr.	N 9919,12613 9948,12631 10017,12675 10054,12699 10086,12725
 #: note: laut Wikipedia befindet sich die "Museumsstr." hier, aber es gibt keine Straßenschilder...
 (Museumsinsel)	NN 10017,12675 9972,12732 9987,12744 9952,12791
 Friedrichsbrücke	NN 10086,12725 10166,12777
-Monbijouplatz	H 9938,13114 10000,13079 10105,13004
+Monbijouplatz	H 9938,13114 10000,13079 10016,13067 10105,13004
 Monbijouplatz	N 10014,13108 10000,13079
 Kleine Präsidentenstr.	H 10105,13004 10117,12973 10132,12941
-Neue Promenade	NN 10132,12941 10185,12982 10263,13047 10286,13084
-Neue Promenade	NN 10264,13097 10263,13047
+Neue Promenade	NN 10132,12941 10185,12982 10263,13047 10289,13088
+Neue Promenade	NN 10270,13101 10263,13047
 Burgstr.	H 10132,12941 10166,12777
 Anna-Louisa-Karsch-Str.	H 10166,12777 10260,12831 10308,12859 10347,12881 10395,12908 10418,12922
 Behrenstr.	H 8595,12066 8737,12098 8743,12099 8861,12125 9054,12154 9064,12156 9164,12172
@@ -1753,7 +1754,7 @@ Liselotte-Herrmann-Str.	N 12701,13873 12537,13987 12423,14066 12281,14164
 Esmarchstr.	N 12335,14246 12281,14164 12228,14083 12148,13961
 Chodowieckistr.	N 12266,14460 11982,14614 11682,14777
 Saarbrücker Str.	N 11251,13667 11116,13830 11052,13870 10895,13961
-Rosenthaler Str. (Mitte)	H 10264,13097 10313,13227
+Rosenthaler Str. (Mitte)	H 10270,13101 10313,13227
 Rosenthaler Str. (Mitte)	H 10313,13227 10321,13259 10340,13337 10341,13376
 Rosenthaler Str. (Mitte)	H 10341,13376 10324,13459 10302,13525 10263,13594 10220,13694 10177,13766
 Rosenthaler Str. (Mitte)	N 10313,13568 10318,13528 10324,13459
@@ -1780,11 +1781,11 @@ Rosa-Luxemburg-Platz	N 10828,13464 10931,13419
 Torstr.	H 11160,13492 11111,13518 10898,13632
 Torstr.	H 11160,13492 11117,13521 10898,13632
 Torstr.	H 10898,13632 10741,13685 10645,13711 10572,13731 10459,13760 10319,13788 10177,13766 9917,13741 9797,13691 9670,13637 9579,13604 9508,13578 9391,13535 9353,13521 9212,13471
-An der Spandauer Brücke	H 10418,12922 10371,13006 10339,13052 10301,13075
-Hackescher Markt [An der Spandauer Brücke]	H 10301,13075 10286,13084 10264,13097
-Hackescher Markt [Oranienburger Str.]	H 10264,13097 10220,13098
-Oranienburger Str. (Mitte)	H 10220,13098 10074,13103 10014,13108 9938,13114 9786,13178 9771,13182 9611,13245 9476,13293 9415,13315 9371,13333 9293,13366 9225,13389
-Große Präsidentenstr.	N 10220,13098 10105,13004
+An der Spandauer Brücke	H 10418,12922 10371,13006 10339,13052 10303,13078
+Hackescher Markt [An der Spandauer Brücke]	H 10303,13078 10289,13088 10270,13101
+Hackescher Markt [Oranienburger Str.]	H 10270,13101 10248,13110 10219,13102
+Oranienburger Str. (Mitte)	H 10219,13102 10074,13103 10014,13108 9938,13114 9786,13178 9771,13182 9611,13245 9476,13293 9415,13315 9371,13333 9293,13366 9225,13389
+Große Präsidentenstr.	N 10219,13102 10105,13004
 Ebertsbrücke	N 9533,12925 9538,12993
 Tucholskystr.	N 9538,12993 9559,13087 9588,13174 9611,13245 9651,13406 9609,13522 9579,13604
 Gormannstr.	NN 10341,13376 10358,13381
@@ -2900,7 +2901,7 @@ Naugarder Str.	N 12737,15154 12712,15176 12693,15225 12610,15455 12621,15482
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_01_0001_0152_online.pdf (Benennung: Gertrud-Classen-Platz, Wirksamkeit am 6. März 2020)
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2023/pressemitteilung.1374865.php (zur Umgestaltung)
 #: by: https://mein.berlin.de/vorhaben/2023-00780/
-#: last_checked: 2024-03-21 (keine Schilder zu sehen)
+#: last_checked: 2024-03-25 (mapillary) (keine Schilder zu sehen)
 #: check_frequency: 60d
 (Hosemannstr. - Naugarder Str.)	N 12583,15566 12605,15491
 Malchower Chaussee	HH 14832,17867 15152,18115 15181,18137 15569,18492 15600,18551 15610,18596
@@ -3780,7 +3781,10 @@ Marienfelder Allee	H 7668,471 7602,305 7501,83 7427,-69 7404,-110 7397,-123 7199
 #: by: https://www.berliner-woche.de/marienfelde/c-verkehr/weg-wurde-gepflastert-barrierefrei-und-beleuchtet_a383131 (Name)
 #: alias: Marienparkweg
 (Marienfelder Allee - Hildburghauser Str., Grünzug)	NN 7234,237 7216,250 7135,350 7107,397 7083,415 7063,444 7055,498 7021,557 7016,655 7019,694 7023,772 7056,835 7058,844
+#: osm.highway: service
 (Zufahrt Bauhaus)	N 8382,347 8372,175
+#: osm.highway: service
+(Zufahrt)	N 8075,499 8055,343
 Klausenburger Pfad	N 7199,-418 7110,-363 7030,-313 6985,-282 6885,-169 6867,-126
 Bistritzer Pfad	N 7087,-396 7110,-363 7146,-307
 Hermannstadter Weg	N 7005,-354 7030,-313 7090,-225 7143,-136 7201,-39
@@ -3880,6 +3884,8 @@ Malteserstr.	N 7115,3003 7105,3040 7098,3067 7042,3281
 (Malteserstr. - Kamenzer Damm)	NN 7437,1859 7592,1892 7612,1918 7646,2019 7645,2110 7636,2161 7634,2267 7665,2357 7704,2482 7779,2722 7783,2730 7798,2765 7807,2961 7837,2957 7852,3183
 (Halbauer Weg - Parkweg)	NN 7758,2973 7795,2963 7807,2961
 (Hanielweg - Parkweg)	NN 7562,1796 7565,1806 7592,1892
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1432483.php (Name)
+#: alias: Grünzug Döhlauer Pfad
 (Kamenzer Damm - Wunsiedeler Weg)	NN 7776,3163 7769,3264 7784,3369 7800,3435 7788,3551 7737,3598 7694,3623 7555,3632
 Symeonstr.	N 7630,1297 7501,1246
 Kamenzer Damm	H 7115,3003 7487,3089 7535,3101 7720,3148 7776,3163 7852,3183 8036,3253
@@ -9173,7 +9179,12 @@ Neuruppiner Str. (Hellersdorf)	N 23082,15329 23265,15351 23280,15244
 (KGA Alt-Hellersdorf - Neuruppiner Str.)	NN 23263,15162 23257,15223
 (KGA Alt-Hellersdorf - Alt-Hellersdorf)	NN 23271,15164 23285,15104 23283,15061 23265,15054
 Alte Hellersdorfer Str.	H 23181,14371 23084,14472 23088,14579 23104,14827
-Alte Hellersdorfer Str.	N 23104,14827 23117,15081 23113,15110 23109,15140 23101,15198 23082,15329
+#: next_check_id: EISENACHERGOTHAER-2023
+#: XXX nach den Bauarbeiten wieder zu "N" machen
+#: last_checked: 2024-03-27
+#: check_frequency: 90d
+#: next_check: 2025-03-31
+Alte Hellersdorfer Str.	H 23104,14827 23111,14956 23117,15081 23113,15110 23109,15140 23101,15198 23082,15329
 Alte Hellersdorfer Str.	H 23082,15329 23067,15429 23060,15588 23080,15700 23137,15978 23162,16095
 #: osm.highway: service
 Alte Hellersdorfer Str. [Wohngebietsstraße]	N 23101,15198 23222,15219 23221,15226 23213,15297
@@ -13584,6 +13595,9 @@ Mergenthalerring	N 14229,8278 14258,8520 14262,8564 14276,8729 14252,8829 14261,
 (Neuköllnische Wiesen, Wiesenallee)	NN 14962,7934 14990,7904
 #: osm.highway: service
 (Neuköllnische Wiesen, Hauptweg)	N 14903,7997 14968,8046 14976,8053
+(KGA Grüne Weiden)	NN 15456,7516 15268,7344 15214,7307
+(KGA Grüne Weiden - Heidekampgraben)	NN 15214,7307 15175,7301
+(KGA Grüne Weiden - Heidekampgraben)	NN 15214,7307 15190,7344 15171,7338
 Falckensteinstr. (Kreuzberg)	N 12905,10143 13032,10355 13136,10535 13178,10623
 # REMOVED (Berlin.coords.data): Am Nordhafen|Wedding|13353|7694,14581
 # REMOVED --- Am Nordhafen	N 7733,14570
@@ -13664,7 +13678,7 @@ Eisnerstr.	N 9507,-85 9653,-483 9698,-556
 #: next_check_id: BUCKOWERCHAUSSEE-2022
 #: by: https://bauprojekte.deutschebahn.com/media/projects/7281/docs/GR_dresdner_bahn_wegefuehrung_buckower_chaussee_ab_20231010n.pdf (westl. Bahnsteig gesperrt, keine Änderung zur bisherigen Wegführung zu erkennen)
 #: XXX bauzeitliche Umleitung, vermutlich bis 2025 vvv
-#: last_checked: 2023-07-03 (baustellen-doku) vvv
+#: last_checked: 2024-03-26 vvv
 #: check_frequency: 360d vvv
 #: next_check: 2025-12-31 vvv
 #: note: hier auch parallel eine Servicestraße, die zumindest Richtung Süden legal befahren werden kann
@@ -14530,7 +14544,13 @@ Fercher Str. (Hellersdorf)	N 22748,15329 22743,15414
 Kyritzer Str.	N 22599,15105 22603,15188 22570,15233 22571,15397 22579,15407 22743,15414 23067,15429
 Kyritzer Str.	NN 23067,15429 23245,15442 23270,15423
 Kyritzer Str.	NN 22573,15552 22579,15416 22579,15407
-Gothaer Str. (Hellersdorf)	H 23082,15329 22968,15315 22897,15287 22899,15073 22905,14925 22925,14865 22969,14840 23104,14827
+#: next_check_id: EISENACHERGOTHAER-2023
+#: XXX nach den Bauarbeiten wieder zu "H" machen
+#: last_checked: 2024-03-27
+#: check_frequency: 90d
+#: next_check: 2025-03-31
+Gothaer Str. (Hellersdorf)	N 23082,15329 22968,15315 22897,15287 22899,15073
+Gothaer Str. (Hellersdorf)	H 22899,15073 22905,14925 22925,14865 22969,14840 23104,14827
 Glauchauer Str.	N 24041,13795 24050,13855 24031,13903 24041,13979 24055,13984 24187,14052
 Klingenthaler Str.	N 24041,13979 23887,14028 23802,14060 23773,14109 23713,14247
 Kastanienallee (Hellersdorf)	N 23617,15594 23629,15498 23633,15464 23643,15392 23661,15282 23686,15128 23693,15080 23698,15049 23708,14989 23735,14814 23756,14696
@@ -15573,7 +15593,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2024-03-20
+#: last_checked: 2024-03-27
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -15963,7 +15983,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2024-03-20
+#: last_checked: 2024-03-27
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -16131,7 +16151,7 @@ Senftenberger Str. (Hellersdorf)	N 23708,14989 23580,14970 23543,14966
 Senftenberger Str. (Hellersdorf)	N 23580,14970 23594,14886 23517,14873 23531,14781
 (Weg am Beerenpfuhlgraben)	NN 23369,14756 23368,14771 23412,14899 23521,14973
 (Weg am Beerenpfuhlgraben - Senftenberger Str.)	NN 23521,14973 23529,14973 23543,14966
-Alt-Hellersdorf	N 23117,15081 23265,15054 23305,14914
+Alt-Hellersdorf	N 23117,15081 23265,15054 23300,14933 23305,14914
 (Alt-Hellersdorf - Cottbusser Str.)	NN 23305,14914 23318,14847 23297,14772
 Antwerpener Str.	N 6555,15827 6690,15671 6794,15553
 (Antwerpener Str. - Beuth-Hochschule/Luxemburger Str.)	NN 6794,15553 6884,15456 6996,15319
@@ -17711,8 +17731,8 @@ Ellaweg	N 24949,10956 24952,11046
 #: XXX bekommt diese Straße noch einen Namen? vvv
 #: XXX laut osm hier auch "Laraweg"
 #: osm_watch: way id="377388194" version="11"
-#: last_checked: 2023-09-17 vvv
-#: check_frequency: 90d vvv
+#: last_checked: 2024-03-27 vvv
+#: check_frequency: 120d vvv
 (namenslose Straße im Theodorpark)	NN 24899,11044 24904,11044
 (namenslose Straße im Theodorpark)	N 24904,11044 24952,11046
 #: check_frequency ^^^
@@ -20122,8 +20142,8 @@ Gräfentaler Str.	N 6318,1484 6231,1442 6189,1423
 Georgenstr. (Lichterfelde)	N 6130,1399 6029,1357
 Verlängerte Georgenstr.	N 5934,1310 5905,1294 5887,1270 5867,1199
 (Mariannenstr. - Verlängerte Georgenstr.)	NN 6029,1357 5934,1310
-Wallendorfer Weg	N 5777,1433 5825,1322 5848,1286 5887,1270
-Pößnecker Str.	N 5934,1310 5863,1453 5777,1433 5706,1393
+Wallendorfer Weg	N 5778,1429 5825,1322 5848,1286 5887,1270
+Pößnecker Str.	N 5934,1310 5860,1463 5778,1429 5706,1393
 Arnstädter Str.	N 6553,1409 6530,1210 6512,1086 6526,1083 6515,1010
 Wernshauser Str.	N 6621,1407 6597,1201 6584,1074
 Altenburger Str.	N 6715,1318 6681,1300 6668,1192 6651,1063
@@ -20580,4 +20600,7 @@ Paul-und-Paula-Promenade	N 14886,10748 14909,10732 14984,10677
 (Passage am Tacheles)	NN 9371,13333 9353,13273 9244,13253
 Aaron-Bernstein-Platz	NN 9353,13273 9382,13265 9385,13246 9463,13256 9476,13293
 Johannisplatz	NN 9385,13174 9385,13246
+# 
+#: osm.highway: service
+(Zufahrt U-Bahn-Abstellanlage Hönow)	N 25919,14963 25809,14991
 # 

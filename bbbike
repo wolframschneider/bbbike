@@ -4597,15 +4597,6 @@ $sx->grid(-row => 1, -column => 0, -sticky => 'ew');
     $indicator_frame = $status_frame->Frame
 	->grid(-row => 0, -column => $gridx++, -sticky => "ew");
     if ($advanced) {
-	$edit_mode_type = $indicator_frame->Label
-	    (-text => '', -relief => 'sunken')
-		->pack(-side => "left");
-	$edit_mode_indicator = $indicator_frame->$Checkbutton
-	    (-text => 'EDIT',
-	     -variable => \$edit_mode_flag,
-	     -command => sub {
-		 set_edit_mode();
-	     })->pack(-side => "left");
 	gui_set_edit_mode($edit_mode);
     }
     $balloon->configure(-statusbar => $status_label);
@@ -7349,7 +7340,7 @@ EOF
 			        "$abk-" . $rawcategory . "-fg",
 			        $abk."-".$i);
 		    # keine Verwendung von _coord_as_string
-		    $c->createImage
+		    my $image_item = $c->createImage
 		      ($x, $y,
 		       -image => ($rawcategory eq 'B'
 			          ? $andreaskr_photo
@@ -7377,6 +7368,15 @@ EOF
 					    	-image => $use_inwork_photo,
 					    	-tags => [@tags,'attrib-inwork']);
 				}
+			    } elsif ($attrib eq 'alternating') {
+				my($x_left) = $c->bbox($image_item);
+				$c->createText($x_left, $y,
+					       -anchor => 'e',
+					       -text => "\x{21C5}", # up/down arrow
+					       -font => $font{'fix13'},
+					       -tags => [@tags,'attrib-alternating'],
+					       -state => ($scale >= 1.5 ? 'normal' : 'hidden'),
+					      );
 			    }
 			}
 		    }
@@ -10472,9 +10472,12 @@ sub plotstr {
     }
     my $conv = $str->get_conversion(%conv_args);
 
+    my $bench = Tk::Time_So_Far();
+
     eval {
 	# XXX Experiment
-	if ($orientation eq 'landscape' &&
+	if ($slowcpu &&
+	    $orientation eq 'landscape' &&
 	    !$edit_mode &&
 #XXX?	    !$edit_normal_mode &&
 	    !$str_name_draw{$abk} &&
@@ -10534,7 +10537,6 @@ sub plotstr {
 	my $draw_sub = eval $plotstr_draw_sub;
 	string_eval_die($@, $plotstr_draw_sub) if $@;
 
-	my $bench = Tk::Time_So_Far();
 	while (1) {
 	    my $ret = $str->next;
 	    last if !@{$ret->[Strassen::COORDS]};
@@ -10563,10 +10565,11 @@ sub plotstr {
 # XXX Yes: If a bbd file contains a half-valid line (with name and cat, but without coords)
 if ($str->pos != scalar @{$str->{Data}}) { status_message("warning: " . $str->pos . " != " . scalar(@{$str->{Data}}) . "!", "dialog", "err") }
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+      PLOTSTR_CONT:
 	warn sprintf "Plotting streets '$abk' took %.3fs\n", Tk::Time_So_Far()-$bench
 	    if $verbose;
 
-      PLOTSTR_CONT:
 	$c->itemconfigure('pp',
 			  -capstyle => $capstyle_round,
 			  -width => 5,
@@ -12028,8 +12031,11 @@ sub plot_point {
 	}
 	my $conv = $bhf->get_conversion(%conv_args);
 
+	my $bench = Tk::Time_So_Far();
+
 	# XXX Experiment!!!
-	if ($orientation eq 'landscape' &&
+	if ($slowcpu &&
+	    $orientation eq 'landscape' &&
 	    !$edit_mode &&
 #XXX?       !$edit_normal_mode &&
 	    $abk eq 'lsa' &&
@@ -12090,6 +12096,8 @@ sub plot_point {
 	}
 	config_symbol($c, $abk);
       PLOTPOINT_CONT:
+	warn sprintf "Plotting points '$abk' took %.3fs\n", Tk::Time_So_Far()-$bench
+	    if $verbose;
 
 	if (($edit_mode || $edit_normal_mode || $abk eq 'relgps' || $args{FastUpdate})) { # XXX? and !$diffed_str) {
 	    warn "Try to copy original data" if $verbose;
@@ -13440,7 +13448,7 @@ sub plotorte {
 	} else {
 	    # in diesem Fall sollten die größeren Orte _später_ d.h. über
 	    # den kleineren gezeichnet werden
-	    $orte->set_last;
+	    $orte->init_for_prev;
 	    $next_meth = 'prev';
 	    $i = $orte->count; # XXX off by one???
 	    $i_inc = -1;
@@ -13781,9 +13789,23 @@ sub set_coord_system {
     undef %hoehe;
 }
 
+sub maybe_create_edit_mode_widgets {
+    return if $edit_mode_type || $edit_mode_indicator;
+    $edit_mode_type = $indicator_frame->Label
+	(-text => '', -relief => 'sunken')
+	->pack(-side => "left");
+    $edit_mode_indicator = $indicator_frame->$Checkbutton
+	(-text => 'EDIT',
+	 -variable => \$edit_mode_flag,
+	 -command => sub {
+	     set_edit_mode();
+	 })->pack(-side => "left");
+}
+
 # Setzt die GUI für den Edit-Mode
 sub gui_set_edit_mode {
     my($onoff) = @_;
+    maybe_create_edit_mode_widgets();
     if ($onoff) {
 	$edit_mode_indicator->configure(-fg => 'black'); # XXX don't hardcode
 	$edit_mode_type->configure(-text => uc($onoff));
@@ -16490,6 +16512,13 @@ sub scalecanvas_from_canvas_event {
 sub scale_width {
     my($c, $scale, $old_scale) = @_;
 
+    my $is_changing_scale_boundary = sub {
+	my($scale_boundary) = @_;
+	return 1 if $old_scale < $scale_boundary && $scale >= $scale_boundary;
+	return 1 if $old_scale > $scale_boundary && $scale <= $scale_boundary;
+	return 0;
+    };
+
 # XXX scale obst (mehrere Icon-Größen)
     foreach my $type
 	(qw(s-BAB sBAB-BAB s-HH s-B s-H s-NH s-N s-NN
@@ -16567,13 +16596,16 @@ sub scale_width {
     }
 
     foreach (qw(lsa-X lsa-X0 lsa-B lsa-B0 lsa-F lsa-F0 lsa-Zbr rest kn vf-Vf vf-Kz u b), ($XXX_use_old_R_symbol ? () : ('r'))) {
-	$c->itemconfigure($_ . '-fg && !attrib-inwork', -image => get_symbol_scale($_, $scale));
+	$c->itemconfigure($_ . '-fg && !attrib-inwork && !attrib-alternating', -image => get_symbol_scale($_, $scale));
     }
     foreach (qw(u-U0 u-UBau b-S0 b-SBau r-R0 r-RBau r-RP r-RP0 r-Ropeway)) { # overwrite the previous settings of u,b,r
 	$c->itemconfigure($_ . '-fg', -image => get_symbol_scale($_, $scale));
     }
     foreach (qw(attrib-inwork)) {
 	$c->itemconfigure('attrib-inwork', -image => get_symbol_scale($_, $scale));
+    }
+    if ($is_changing_scale_boundary->(1.5)) {
+	$c->itemconfigure('attrib-alternating', -state => ($scale >= 1.5 ? 'normal' : 'hidden'));
     }
     foreach (qw(e comm-tram nl)) {
 	$c->itemconfigure($_ . '-img', -image => get_symbol_scale($_, $scale));

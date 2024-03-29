@@ -9,8 +9,9 @@
 use strict;
 use vars qw($x_delta $y_delta);
 
+use File::Temp qw(tempdir);
 use Test::More;
-my $tk_tests = 29;
+my $tk_tests = 31;
 plan tests => 10 + $tk_tests;
 
 BEGIN {
@@ -48,6 +49,8 @@ use Benchmark;
 
 use BBBikeUtil qw(bbbike_root);
 use BBBikeCanvasUtil qw(draw_bridge draw_tunnel_entrance);
+
+my $tmpdatadir = tempdir("bbbikexs-base-t-XXXXXXXX", TMPDIR => 1, CLEANUP => 1);
 
 my $datadir = bbbike_root . "/data";
 my $imgdir = bbbike_root . "/images";
@@ -143,8 +146,15 @@ SKIP: {
 	$TODO = "Strange behaviour ... perl or Tk problem?" # only seen with SuSE's perl 5.8.1 and a self-compiled Tk 800.025, but not with Tk 804.027
 	    if $Tk::VERSION < 804;
 	for my $abk (qw(B X Zbr)) {
-	    my(@tags) = $c->find(withtag => "lsa-$abk-fg");
-	    ok(scalar @tags > 0, "Tags for $abk");
+	    my(@items) = $c->find(withtag => "lsa-$abk-fg");
+	    cmp_ok(scalar @items, '>', 0, "Tags for $abk");
+	}
+	{
+	    my(@items) = $c->find(withtag => "lsa-X::inwork-fg");
+	    cmp_ok(scalar @items, '==', 0, "Tags don't contain category attributes")
+		or do {
+		    diag "Sample item $items[0] with tags: " . join("; ", $c->gettags($items[0]));
+		};
 	}
     }
 
@@ -196,6 +206,25 @@ SKIP: {
 	my $progress = MyProgress->new;
 	BBBike::fast_plot_str($c, "b", $s, $progress, undef, $category_width);
 	# no: less than 150 items in sbahn, Update(Float) is never called: $progress->update_float_expected;
+    }
+
+    # check possibly problematic data:
+    # * one-point street records
+    # * trailing spaces
+    {
+	my $file = "$tmpdatadir/one-point-records.bbd";
+	open my $ofh, '>>', $file or die $!;
+	print $ofh <<'EOF';
+test place	Pl 8000,8000
+trailing space	H 8050,8050 8150,8050 
+EOF
+	close $ofh or die $!;
+	my $s = Strassen->new($file);
+	my $progress = MyProgress->new;
+	eval {
+	    BBBike::fast_plot_str($c, "s", $s, $progress, undef, {});
+	};
+	is $@, '', 'fast_plot_str should not fail with one point records or hang with trailing spaces';
     }
 
     $top->after(5000, sub { $top->destroy;});
