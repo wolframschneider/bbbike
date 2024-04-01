@@ -31,8 +31,9 @@ if (!eval { require Encode; 1 }) {
     diag "Encode is not available, some failures are expected";
 }
 
-use BBBikeTest qw(gpxlint_string eq_or_diff);
+use BBBikeTest qw(gpxlint_string eq_or_diff xml_eq);
 
+use GPS::GpsmanData::Any;
 use Route;
 
 sub keep_file ($$);
@@ -42,7 +43,7 @@ sub xpath_checks ($$&);
 my $v;
 my @variants = ("XML::LibXML", "XML::Twig");
 my $new_strassen_gpx_tests = 5;
-my $tests_per_variant = 172 + $new_strassen_gpx_tests;
+my $tests_per_variant = 176 + $new_strassen_gpx_tests;
 my $do_long_tests = !!$ENV{BBBIKE_LONG_TESTS};
 my $bbdfile;
 my $bbdfile_with_lines = "comments_scenic";
@@ -277,11 +278,6 @@ for my $use_xml_module (@variants) {
 	    my $xml_res = $s->Strassen::GPX::bbd2gpx;
 	    like($xml_res, qr{^<(\?xml|gpx)}, "Looks like XML");
 
-## Cannot reproduce this anymore, neither with perl5.8.8/XML::Twig 3.26 nor with perl5.10.0/XML::Twig 3.32
-# 	    local $TODO;
-	    # 	    if ($Strassen::GPX::use_xml_module eq 'XML::Twig' && $XML::Twig::VERSION <= 3.32) {
-# 		$TODO = "Possible XML::Twig problem, missing preamble or missing encoding of data";
-# 	    }
 	    gpxlint_string($xml_res, "xmllint for bbd2gpx output ($bbdfile)");
 	}
 
@@ -294,11 +290,6 @@ for my $use_xml_module (@variants) {
 	    my $xml_res = $s->Strassen::GPX::bbd2gpx;
 	    like($xml_res, qr{^<(\?xml|gpx)}, "Looks like XML");
 
-## See above
-# 	    local $TODO;
-# 	    if ($Strassen::GPX::use_xml_module eq 'XML::Twig' && $XML::Twig::VERSION <= 3.32) {
-# 		$TODO = "Possible XML::Twig problem, missing preamble or missing encoding of data";
-# 	    }
 	    gpxlint_string($xml_res, "xmllint for bbd2gpx output ($bbdfile_with_lines)");
 	}
 
@@ -312,11 +303,6 @@ EOF
 	    my $xml_res = $s->Strassen::GPX::bbd2gpx;
 	    like($xml_res, qr{^<(\?xml|gpx)}, "Looks like XML");
 
-## See above
-# 	    local $TODO;
-# 	    if ($Strassen::GPX::use_xml_module eq 'XML::Twig' && $XML::Twig::VERSION <= 3.32) {
-# 		$TODO = "Possible XML::Twig problem, missing preamble or missing encoding of data";
-# 	    }
 	    gpxlint_string($xml_res, "xmllint for bbd2gpx output (string data with unicode > 128 < 256)");
 	    xpath_checks $xml_res, 1,
 		sub {
@@ -326,10 +312,7 @@ EOF
 		};
 	}
 
-    SKIP: {
-	    skip("Too old version of Strassen::GPX", $new_strassen_gpx_tests)
-		if $Strassen::GPX::VERSION < 1.13;
-
+	{
 	    # unicode data > codepoint 255
 	    my $data = <<EOF;
 #: encoding: utf-8
@@ -342,11 +325,6 @@ EOF
 	    my $xml_res = $s->Strassen::GPX::bbd2gpx;
 	    like($xml_res, qr{^<(\?xml|gpx)}, "Looks like XML");
 
-## See above
-# 	    local $TODO;
-# 	    if ($Strassen::GPX::use_xml_module eq 'XML::Twig' && $XML::Twig::VERSION <= 3.32) {
-# 		$TODO = "Possible XML::Twig problem, missing preamble or missing encoding of data";
-# 	    }
 	    gpxlint_string($xml_res, "xmllint for bbd2gpx output (string data with unicode > 255)");
 	    xpath_checks $xml_res, 1,
 		sub {
@@ -641,6 +619,43 @@ EOF
 		    is $trks[0]->findvalue('./name'), 'Track 1', 'expected 1st fallback track name';
 		    is $trks[1]->findvalue('./name'), 'Track 2', 'expected 2nd fallback track name';
 		};
+	}
+
+	{
+	    # bbd2gpx as route with single coordinates per bbd line
+	    my $bbd = <<'EOF';
+#: map: polar
+#:
+Street1	X 13.4,52.5
+Street2	X 13.5,52.6
+Street3	X 13.6,52.7
+EOF
+	    my $s0 = Strassen->new_from_data_string($bbd);
+	    my $s = Strassen::GPX->new($s0);
+	    my $xml_res = $s->bbd2gpx(-as => 'route');
+	    gpxlint_string($xml_res);
+	    xml_eq($xml_res, qq{<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" creator="Strassen::GPX $Strassen::GPX::VERSION __normalized_creator_module__ - http://www.bbbike.de" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"><rte><rtept lat="52.5" lon="13.4"><name>Street1</name></rtept><rtept lat="52.6" lon="13.5"><name>Street2</name></rtept><rtept lat="52.7" lon="13.6"><name>Street3</name></rtept></rte></gpx>},
+		   'bbd2gps as route with single coords',
+		   ignore => ['//*[local-name()="gpx"]/@creator'], # contains implementor module like XML::Twig or XML::LibXML
+		  );
+	}
+
+	{
+	    # bbd2gpx as route with multiple coordinates per bbd line
+	    my $bbd = <<'EOF';
+#: map: polar
+#:
+StreetA	X 13.40,52.50 13.41,52.51 13.42,52.52 13.43,52.53 13.44,52.54 13.45,52.55 13.46,52.56 13.47,52.57 13.48,52.58 13.49,52.59
+StreetB	X 13.6,52.7
+EOF
+	    my $s0 = Strassen->new_from_data_string($bbd);
+	    my $s = Strassen::GPX->new($s0);
+	    my $xml_res = $s->bbd2gpx(-as => 'route');
+	    gpxlint_string($xml_res);
+	    xml_eq($xml_res, qq{<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" creator="Strassen::GPX $Strassen::GPX::VERSION __normalized_creator_module__ - http://www.bbbike.de" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"><rte><rtept lat="52.50" lon="13.40"><name>StreetA01</name></rtept><rtept lat="52.51" lon="13.41"><name>StreetA02</name></rtept><rtept lat="52.52" lon="13.42"><name>StreetA03</name></rtept><rtept lat="52.53" lon="13.43"><name>StreetA04</name></rtept><rtept lat="52.54" lon="13.44"><name>StreetA05</name></rtept><rtept lat="52.55" lon="13.45"><name>StreetA06</name></rtept><rtept lat="52.56" lon="13.46"><name>StreetA07</name></rtept><rtept lat="52.57" lon="13.47"><name>StreetA08</name></rtept><rtept lat="52.58" lon="13.48"><name>StreetA09</name></rtept><rtept lat="52.59" lon="13.49"><name>StreetA10</name></rtept><rtept lat="52.7" lon="13.6"><name>StreetB</name></rtept></rte></gpx>},
+		  'bbd2gps as route with multiple coords',
+		   ignore => ['//*[local-name()="gpx"]/@creator'], # contains implementor module like XML::Twig or XML::LibXML
+		  );
 	}
     }
 }

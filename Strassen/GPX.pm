@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2005,2014,2015,2023 Slaven Rezic. All rights reserved.
+# Copyright (C) 2005,2014,2015,2023,2024 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -15,7 +15,7 @@ package Strassen::GPX;
 
 use strict;
 use vars qw($VERSION @ISA);
-$VERSION = '1.26';
+$VERSION = '1.27';
 
 use Strassen::Core;
 
@@ -345,45 +345,15 @@ sub _bbd2gpx_libxml {
     $meta->{number} = delete $args{-number} if exists $args{-number};
     my $with_trip_extensions = delete $args{-withtripext};
 
-    my $has_encode = eval { require Encode; 1 };
-    if (!$has_encode) {
-	warn "WARN: No Encode.pm module available, non-ascii characters may be broken...\n";
-    }
-
-
-    $self->init;
-    my @wpt;
-    my @trkseg;
-    while(1) {
-	my $r = $self->next;
-	last if !@{ $r->[Strassen::COORDS] };
-	my $name = $r->[Strassen::NAME];
-	if (HAS_UTF8_UPGRADE) {
-	    utf8::upgrade($name); # This smells like an XML::LibXML bug
-	}
-	if (@{ $r->[Strassen::COORDS] } == 1) {
-	    push @wpt,
-		{
-		 name => $name,
-		 coords => [ $xy2longlat->($r->[Strassen::COORDS][0]) ],
-		};
-	} elsif ($as eq 'route') {
-	    my $i = 0;
-	    push @wpt,
-		map {
-		    +{
-		      name => $name.$i++,
-		      coords => [ $xy2longlat->($_) ]
-		     }
-		} @{ $r->[Strassen::COORDS] };
-	} else {
-	    push @trkseg,
-		{
-		 name => $name,
-		 coords => [ map { [ $xy2longlat->($_) ] } @{ $r->[Strassen::COORDS] } ],
-		};
+    my $do_utf8_encode;
+    if ($XML::LibXML::VERSION < 1.63) {
+	$do_utf8_encode = eval { require Encode; 1 };
+	if (!$do_utf8_encode) {
+	    warn "WARN: No Encode.pm module available, non-ascii characters may be broken...\n";
 	}
     }
+
+    my($wpts, $trksegs) = $self->_create_wpt_trkseg(-needutf8hack => HAS_UTF8_UPGRADE, -xy2longlat => $xy2longlat, -as => $as);
 
     my $dom = XML::LibXML::Document->new('1.0', 'utf-8');
     my $gpx = $dom->createElement("gpx");
@@ -415,15 +385,15 @@ sub _bbd2gpx_libxml {
     if ($as eq 'route') {
 	my $rtexml = $gpx->addNewChild(undef, "rte");
 	_add_meta_attrs_libxml($rtexml, $meta);
-	for my $wpt_i (0 .. $#wpt) {
-	    my $wpt = $wpt[$wpt_i];
+	for my $wpt_i (0 .. $#$wpts) {
+	    my $wpt = $wpts->[$wpt_i];
 	    my $rteptxml = $rtexml->addNewChild(undef, "rtept");
 	    $rteptxml->setAttribute("lat", $wpt->{coords}[1]);
 	    $rteptxml->setAttribute("lon", $wpt->{coords}[0]);
 	    $rteptxml->appendTextChild("name", $wpt->{name});
 	    if ($with_trip_extensions) {
 		my $ext = $rteptxml->addNewChild(undef, 'extensions');
-		if ($wpt_i != 0 && $wpt_i != $#wpt) {
+		if ($wpt_i != 0 && $wpt_i != $#$wpts) {
 		    $ext->addNewChild(TRIP_EXT_NS, 'ShapingPoint');
 		} else {
 		    $ext->addNewChild(TRIP_EXT_NS, 'ViaPoint');
@@ -431,19 +401,19 @@ sub _bbd2gpx_libxml {
 	    }
 	}
     } else {
-	for my $wpt (@wpt) {
+	for my $wpt (@$wpts) {
 	    my $wptxml = $gpx->addNewChild(undef, "wpt");
 	    $wptxml->setAttribute("lat", $wpt->{coords}[1]);
 	    $wptxml->setAttribute("lon", $wpt->{coords}[0]);
 	    $wptxml->appendTextChild("name", $wpt->{name});
 	}
 	my $trkseg_counter = 1;
-	while (@trkseg) {
+	while (@$trksegs) {
 	    my $trkxml = $gpx->addNewChild(undef, "trk");
-	    my $name = _get_name_for_trk(\@trkseg, $trkseg_counter, $meta, $as);
+	    my $name = _get_name_for_trk($trksegs, $trkseg_counter, $meta, $as);
 	    _add_meta_attrs_libxml($trkxml, {%$meta, name => $name});
-	    while (@trkseg) {
-		my $trkseg = shift @trkseg; $trkseg_counter++;
+	    while (@$trksegs) {
+		my $trkseg = shift @$trksegs; $trkseg_counter++;
 		my $trksegxml = $trkxml->addNewChild(undef, "trkseg");
 		for my $wpt (@{ $trkseg->{coords} }) {
 		    my $trkptxml = $trksegxml->addNewChild(undef, "trkpt");
@@ -454,7 +424,7 @@ sub _bbd2gpx_libxml {
 	    }
 	}
     }
-    if ($XML::LibXML::VERSION < 1.63 && $has_encode) {
+    if ($do_utf8_encode) {
 	Encode::encode("utf-8", $dom->toString);
     } else {
 	$dom->toString;
@@ -471,37 +441,24 @@ sub _bbd2gpx_twig {
     $meta->{number} = delete $args{-number} if exists $args{-number};
     my $with_trip_extensions = delete $args{-withtripext};
 
-    $self->init;
-    my @wpt;
-    my @trkseg;
-    while(1) {
-	my $r = $self->next;
-	last if !@{ $r->[Strassen::COORDS] };
-	my $name = $r->[Strassen::NAME];
-	if (@{ $r->[Strassen::COORDS] } == 1) {
-	    push @wpt, { name => $name,
-			 coords => [ $xy2longlat->($r->[Strassen::COORDS][0]) ],
-		       };
-	} else {
-	    push @trkseg,
-		{
-		 name => $name,
-		 coords => [ map { [ $xy2longlat->($_) ] } @{ $r->[Strassen::COORDS] } ],
-		};
-	}
+    my $do_utf8_encode = eval { require Encode; 1 };
+    if (!$do_utf8_encode) {
+	warn "WARN: No Encode.pm module available, non-ascii characters may be broken...\n";
     }
 
-    if (!defined $meta->{name} && @trkseg && $as ne 'multi-tracks') {
-	$meta->{name} = make_name_from_trkseg(\@trkseg);
+    my($wpts, $trksegs) = $self->_create_wpt_trkseg(-needutf8hack => 0, -xy2longlat => $xy2longlat, -as => $as);
+
+    if (!defined $meta->{name} && @$trksegs && $as ne 'multi-tracks') {
+	$meta->{name} = make_name_from_trkseg($trksegs);
     }
 
     my $twig = XML::Twig->new(output_encoding => 'utf-8');
     my $gpx = XML::Twig::Elt->new(gpx => { version => "1.1",
 					   creator => "Strassen::GPX $VERSION (XML::Twig $XML::Twig::VERSION) - http://www.bbbike.de",
 					   xmlns => "http://www.topografix.com/GPX/1/1",
-					   #$gpx->setNamespace("http://www.w3.org/2001/XMLSchema-instance","xsi");
-					   #"xsi:schemaLocation" => "http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd",
-					   'xmlns:trp' => TRIP_EXT_NS,
+					   "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance",
+					   "xsi:schemaLocation" => "http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd",
+					   ($with_trip_extensions ? ('xmlns:trp' => TRIP_EXT_NS) : ()),
 					 },
 				 );
     $twig->set_root($gpx);
@@ -523,8 +480,8 @@ sub _bbd2gpx_twig {
 	my $rtexml = XML::Twig::Elt->new("rte");
 	$rtexml->paste(last_child => $gpx);
 	_add_meta_attrs_twig($rtexml, $meta);
-	for my $wpt_i (0 .. $#wpt) {
-	    my $wpt = $wpt[$wpt_i];
+	for my $wpt_i (0 .. $#$wpts) {
+	    my $wpt = $wpts->[$wpt_i];
 	    my $rteptxml = XML::Twig::Elt->new("rtept", {lat => $wpt->{coords}[1],
 							 lon => $wpt->{coords}[0],
 							},
@@ -535,7 +492,7 @@ sub _bbd2gpx_twig {
 	    if ($with_trip_extensions) {
 		my $ext = XML::Twig::Elt->new('extensions');
 		$ext->paste(last_child => $rteptxml);
-		if ($wpt_i != 0 && $wpt_i != $#wpt) {
+		if ($wpt_i != 0 && $wpt_i != $#$wpts) {
 		    my $shppnt = XML::Twig::Elt->new('trp:ShapingPoint');
 		    $shppnt->paste(last_child => $ext);
 		} else {
@@ -545,7 +502,7 @@ sub _bbd2gpx_twig {
 	    }
 	}
     } else {
-	for my $wpt (@wpt) {
+	for my $wpt (@$wpts) {
 	    my $wptxml = XML::Twig::Elt->new("wpt", {lat => $wpt->{coords}[1],
 						     lon => $wpt->{coords}[0],
 						    },
@@ -555,13 +512,13 @@ sub _bbd2gpx_twig {
 	    $namexml->paste(last_child => $wptxml);
 	}
 	my $trkseg_counter = 1;
-	while (@trkseg) {
+	while (@$trksegs) {
 	    my $trkxml = XML::Twig::Elt->new("trk");
-	    my $name = _get_name_for_trk(\@trkseg, $trkseg_counter, $meta, $as);
+	    my $name = _get_name_for_trk($trksegs, $trkseg_counter, $meta, $as);
 	    _add_meta_attrs_twig($trkxml, {%$meta, name => $name});
 	    $trkxml->paste(last_child => $gpx);
-	    while (@trkseg) {
-		my $trkseg = shift @trkseg; $trkseg_counter++;
+	    while (@$trksegs) {
+		my $trkseg = shift @$trksegs; $trkseg_counter++;
 		my $trksegxml = XML::Twig::Elt->new("trkseg");
 		$trksegxml->paste(last_child => $trkxml);
 		for my $wpt (@{ $trkseg->{coords} }) {
@@ -574,12 +531,61 @@ sub _bbd2gpx_twig {
 	    }
 	}
     }
-    my $xml = $twig->sprint;
-    $xml;
+
+    if ($do_utf8_encode) {
+	Encode::encode("utf-8", $twig->sprint);
+    } else {
+	$twig->sprint;
+    }
 }
 
 ######################################################################
 # Helpers
+
+sub _create_wpt_trkseg {
+    my($self, %opts) = @_;
+    my $as = delete $opts{-as} || die "-as option is required";
+    my $xy2longlat = delete $opts{-xy2longlat} || die "-xy2longlat option is required";
+    my $need_utf8_hack = delete $opts{-needutf8hack};
+    die 'Unhandled options: ' . join(' ', %opts) if %opts;
+
+    $self->init;
+    my @wpts;
+    my @trksegs;
+    while(1) {
+	my $r = $self->next;
+	last if !@{ $r->[Strassen::COORDS] };
+	my $name = $r->[Strassen::NAME];
+	if ($need_utf8_hack) {
+	    utf8::upgrade($name); # This smells like an XML::LibXML bug
+	}
+	if (@{ $r->[Strassen::COORDS] } == 1) {
+	    push @wpts,
+		{
+		 name => $name,
+		 coords => [ $xy2longlat->($r->[Strassen::COORDS][0]) ],
+		};
+	} elsif ($as eq 'route') {
+	    my $i = 1;
+	    my $i_len = 1+int(log(@{ $r->[Strassen::COORDS] })/log(10));
+	    push @wpts,
+		map {
+		    +{
+		      name => $name.sprintf("%0${i_len}d", $i++),
+		      coords => [ $xy2longlat->($_) ]
+		     }
+		} @{ $r->[Strassen::COORDS] };
+	} else {
+	    push @trksegs,
+		{
+		 name => $name,
+		 coords => [ map { [ $xy2longlat->($_) ] } @{ $r->[Strassen::COORDS] } ],
+		};
+	}
+    }
+
+    (\@wpts, \@trksegs);
+}
 
 sub latlong2xy {
     my($node) = @_;

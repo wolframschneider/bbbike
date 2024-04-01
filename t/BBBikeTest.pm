@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2004,2006,2008,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2023 Slaven Rezic. All rights reserved.
+# Copyright (C) 2004,2006,2008,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2023,2024 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -56,7 +56,7 @@ use BBBikeUtil qw(bbbike_root is_in_path);
 
 @EXPORT = (qw(get_std_opts set_user_agent do_display tidy_check
 	      libxml_parse_html libxml_parse_html_or_skip
-	      xmllint_string xmllint_file gpxlint_string gpxlint_file kmllint_string
+	      xmllint_string xmllint_file gpxlint_string gpxlint_file kmllint_string xml_eq
 	      validate_bbbikecgires_xml_string validate_bbbikecgires_yaml_string validate_bbbikecgires_json_string validate_bbbikecgires_data
 	      eq_or_diff is_long_data like_long_data unlike_long_data
 	      like_html unlike_html is_float is_number isnt_number using_bbbike_test_cgi using_bbbike_test_data
@@ -483,6 +483,7 @@ sub xmllint_file {
     xmllint_string($string, $test_name, %args);
 }
 
+my $warned_no_XML_LibXML;
 # only usable with Test::More, generates one test
 sub gpxlint_string {
     my($content, $test_name, %args) = @_;
@@ -492,15 +493,21 @@ sub gpxlint_string {
 	$schema_version = delete $args{schema_version};
     } else {
 	# Try to autodetect the GPX schema version.
-	if (eval { require XML::LibXML; 1 }) {
-	    eval {
-		my $root_ns = XML::LibXML->new->parse_string($content)->documentElement->namespaceURI;
-		if ($root_ns =~ m{^\Qhttp://www.topografix.com/GPX/\E(\d+)/(\d+)$}) {
-		    $schema_version = "$1.$2";
-		}
-	    };
-	    if ($@) {
-		warn "WARN: failure while auto-detecting GPX schema version: $@";
+	my $root_ns;
+	if (!eval {
+	    require XML::LibXML;
+	    $root_ns = XML::LibXML->new->parse_string($content)->documentElement->namespaceURI;
+	}) {
+	    my($err) = $@ =~ m{^(.*)}; # only first line;
+	    if (!$warned_no_XML_LibXML) {
+		warn "INFO: cannot detect GPX version using XML::LibXML, using fallback ($err...)\n";
+		$warned_no_XML_LibXML = 1;
+	    }
+	    ($root_ns) = $content =~ m{xmlns="(.*?)"};
+	}
+	if ($root_ns) {
+	    if ($root_ns =~ m{^\Qhttp://www.topografix.com/GPX/\E(\d+)/(\d+)$}) {
+		$schema_version = "$1.$2";
 	    }
 	}
 	if (!defined $schema_version) {
@@ -562,6 +569,30 @@ sub kmllint_string {
 	}
     }
     xmllint_string($content, $test_name, %args, ($kml_schema ? (-schema => $kml_schema) : ()));
+}
+
+# generates one test
+sub xml_eq {
+    my($left, $right, $test_name, %args) = @_;
+    my $ignore = delete $args{ignore};
+    die 'Unhandled arguments: ' . join(' ', %args) if %args;
+
+    local $Test::Builder::Level = $Test::Builder::Level+1;
+ SKIP: {
+	my $no_of_tests = 1;
+	Test::More::skip("Needs XML::LibXML for normalization", $no_of_tests)
+		if !eval { require XML::LibXML; 1 };
+	for ($left, $right) {
+	    my $dom = XML::LibXML->new->parse_string($_);
+	    if ($ignore) {
+		for my $ignore_xpath (@$ignore) {
+		    $_->unbindNode for $dom->findnodes($ignore_xpath);
+		}
+	    }
+	    $_ = $dom->toStringC14N;
+	}
+	eq_or_diff($left, $right, $test_name);
+    }
 }
 
 {
@@ -961,7 +992,21 @@ sub image_ok ($;$) {
 
     my $fails = 0;
 
-    if (0) { # anytopnm does not return with non-zero on problems
+    if (0) { # some png images cannot be read (see t/images.t), wbmp support missing
+    SKIP: {
+	    Test::More::skip("Imager does not handle .wbmp files yet", 2)
+		    if $in =~ /\.wbmp$/;
+	    my $mod = $in =~ /\.xpm$/ ? 'Imager::Image::Xpm' : $in =~ /\.xbm/ ? 'Imager::Image::Xbm' : 'Imager';
+	    Test::More::skip("$mod needed for better image testing", 2)
+		    if !eval qq{ require $mod; 1 };
+	    my $full_testlabel = (ref $in ? "content" : "file '$in'") . "$testlabel";
+	    my $img = $mod->new((ref $in ? (data => $$in) : (file => $in)));
+	    Test::More::ok($img, "load ok - $full_testlabel")
+		    or Test::More::diag(Imager->errstr());
+	    Test::More::skip("image needed for next test", 1) if !$img;
+	    Test::More::cmp_ok($img->getwidth, ">", 0, "image has a width - $full_testlabel");
+	}
+    } elsif (0) { # anytopnm does not return with non-zero on problems
     SKIP: {
 	    Test::More::skip("IPC::Run needed for better image testing", 2)
 		    if !eval { require IPC::Run; 1 };
