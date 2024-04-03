@@ -25,7 +25,7 @@ BEGIN {
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 2.15;
+$VERSION = 2.16;
 
 use File::Glob qw(bsd_glob);
 
@@ -839,6 +839,7 @@ EOF
 		 # don't use draw=>'all' here --- strnames are not displayed very well (sometimes with ... or ???), probably due to coord inaccuracies XXX
 		 -command => sub { current_route_in_bbbike_cgi(imagetype => 'pdf-auto', (map { (draw => $_) } qw(str sbahn ubahn wasser flaechen ampel))) },
 		],
+		'-',
 		[Button => $do_compound->("local bbbikeleaflet.cgi"),
 		 -command => sub { current_route_in_bbbikeleaflet_cgi(live => 0) },
 		],
@@ -848,12 +849,26 @@ EOF
 		[Button => $do_compound->("as selection for live bbbikeleaflet.cgi"),
 		 -command => sub { current_route_in_bbbikeleaflet_cgi(live => 1, selection => 1) },
 		],
+		[Button => $do_compound->("as QRCode for local bbbikeleaflet.cgi"),
+		 -command => sub { current_route_as_qrcode(in => "bbbikeleaflet-local") },
+		],
 		[Button => $do_compound->("as QRCode for live bbbikeleaflet.cgi"),
 		 -command => sub { current_route_as_qrcode(in => "bbbikeleaflet-live") },
+		],
+		'-',
+		[Button => $do_compound->("as QRCode for GPX track with local bbbike.cgi"),
+		 -command => sub { current_route_as_qrcode(in => "bbbike-gpx-track-local") },
 		],
 		[Button => $do_compound->("as QRCode for GPX track with live bbbike.cgi"),
 		 -command => sub { current_route_as_qrcode(in => "bbbike-gpx-track-live") },
 		],
+		[Button => $do_compound->("as QRCode for GPX route with local bbbike.cgi"),
+		 -command => sub { current_route_as_qrcode(in => "bbbike-gpx-route-local") },
+		],
+		[Button => $do_compound->("as QRCode for GPX route with live bbbike.cgi"),
+		 -command => sub { current_route_as_qrcode(in => "bbbike-gpx-route-live") },
+		],
+		'-',
 		[Button => $do_compound->("Windy"),
 		 -command => sub { current_route_in_windy() },
 		],
@@ -2126,34 +2141,44 @@ sub current_route_as_qrcode {
 
     my @search_route = @{ main::get_act_search_route() };
     my($start, $goal) = ($search_route[0]->[0], $search_route[-1]->[0]);
+    my $via;
+    if ($start eq $goal || "@{$main::realcoords[0]}" eq "@{$main::realcoords[-1]}" && @search_route > 2) { # XXX maybe do this also if start and goal are nearby
+	$via = $search_route[$#search_route/2]->[0]; # XXX better would be the farthest point
+    }
 
     my $cgiurl;
     my %params;
+    my %streetlabel_params;
+    $streetlabel_params{startname} = $start if $start;
+    $streetlabel_params{vianame}   = $via   if $via;
+    $streetlabel_params{zielname}  = $goal  if $goal;
 
-    if      ($in eq 'bbbikeleaflet-live') {
-	$cgiurl = 'http://bbbike.de/cgi-bin/bbbikeleaflet.cgi';
-    } elsif ($in eq 'bbbike-gpx-track-live') {
-	$cgiurl = 'http://bbbike.de/cgi-bin/bbbike.cgi';
-#	$cgiurl = 'http://cabulja.herceg.de/bbbike/cgi/bbbike.cgi';
-	%params =
-	    (
-	     output_as => 'gpx-track',
-	     showroutelist => 1,
-	    );
+    my $local_base_url = "http://home/bbbike/cgi";
+    my $live_base_url  = "http://bbbike.de/cgi-bin";
+
+    if      ($in =~ /^bbbikeleaflet-(live|local)$/) {
+	$cgiurl = ($1 eq 'local' ? $local_base_url : $live_base_url) . '/bbbikeleaflet.cgi';
+    } elsif ($in =~ /^bbbike-gpx-track-(live|local)$/) {
+	$cgiurl = ($1 eq 'local' ? $local_base_url : $live_base_url) . '/bbbike.cgi';
+	%params = (output_as => 'gpx-track', showroutelist => 1, %streetlabel_params);
+    } elsif ($in =~ /^bbbike-gpx-route-(live|local)$/) {
+	$cgiurl = ($1 eq 'local' ? $local_base_url : $live_base_url) . '/bbbike.cgi';
+	%params = (output_as => 'gpx-route', showroutelist => 1, %streetlabel_params);
     } else {
-	die "Currently only 'bbbikeleaflet-live' and 'bbbike-gpx-track-live' are allowed for 'in' parameter";
+	die "Currently only 'bbbikeleaflet-live/local', 'bbbike-gpx-track-live/local' and 'bbbike-gpx-route-live/local' are allowed for 'in' parameter";
     }
 
     require BBBikeUtil;
     # Using raw_query here may save some 20% on URL length
     my $url = BBBikeUtil::uri_with_query($cgiurl, [%params], raw_query => [ gple => $gple ]);
 
-    _show_qrcode_for_url($url, start => $start, goal => $goal);
+    _show_qrcode_for_url($url, start => $start, via => $via, goal => $goal);
 }
 
 sub _show_qrcode_for_url {
     my($url, %opts) = @_;
     my $start = delete $opts{start};
+    my $via   = delete $opts{via};
     my $goal  = delete $opts{goal};
 
     require Imager::QRCode;
@@ -2174,6 +2199,7 @@ sub _show_qrcode_for_url {
 	my $info_photo = main::load_photo($t, 'info');
 	my $info_msg = "URL: $url\nLength of URL: " . length($url);
 	if ($start) { $info_msg .= "\nStart: $start" }
+	if ($via)   { $info_msg .= "\nVia:   $via" }
 	if ($goal)  { $info_msg .= "\nGoal:  $goal" }
 	$f->Button(main::image_or_text($info_photo, 'Info'),
 		   -command => sub { main::status_message($info_msg, "infodlg") })->pack(-side => 'right');
@@ -4019,6 +4045,74 @@ sub _lwp_get_with_curl {
 	die $err;
     }
     $resp;
+}
+
+######################################################################
+
+sub generate_gps_route_name {
+    return if !@main::realcoords;
+
+    my $prefix = 'X'; # unspecified
+    my $farthest_coord;
+    if (defined $main::center_on_coord) { # assume home coordinate
+	require Strassen::Util;
+	my $start_dist = Strassen::Util::strecke_s($main::center_on_coord, join(',',@{$main::realcoords[0]}));
+	my $goal_dist  = Strassen::Util::strecke_s($main::center_on_coord, join(',',@{$main::realcoords[-1]}));
+	if ($start_dist < 50 && $goal_dist > 50) {
+	    $prefix = 'V'; # "Vor" (der Arbeit z.B.)
+	    $farthest_coord = $main::realcoords[-1];
+	} elsif ($start_dist > 50 && $goal_dist < 50) {
+	    $prefix = 'N'; # "Nach"
+	    $farthest_coord = $main::realcoords[0];
+	} else {
+	    $prefix = 'X'; # Rundkurs
+
+	    my($max_coord, $max_dist);
+	    for my $coords (@main::realcoords) {
+		my $dist = Strassen::Util::strecke_s($main::center_on_coord, join(',',@$coords));
+		if (!defined $max_dist || $dist > $max_dist) {
+		    $max_coord = $coords;
+		    $max_dist = $dist;
+		}
+	    }
+	    $farthest_coord = $max_coord;
+	}
+    }
+    if (!defined $farthest_coord) {
+	$farthest_coord = $main::realcoords[-1];
+    }
+
+    my $len;
+    if ($main::act_value{Km} && $main::unit_s =~ /^(km|m)$/) { # XXX no support for miles
+	$len = sprintf "%.1f", $main::act_value{Km} / ($main::unit_s eq 'm' ? 1000 : 1);
+    }
+
+    my $time = $main::act_value{Time}->[0];
+    $time =~ s/\s+h$//; # theoretically can also have just seconds, but this may be ignored
+
+    my $place;
+    if (!$main::city_obj->is_osm_source) {
+	# XXX partially taken from miscsrc/trkstats.pl
+	require GPS::GpsmanData;
+	require GPS::GpsmanData::Stats;
+	require Karte::Polar;
+	require Karte::Standard;
+	require Strassen::MultiStrassen;
+	my $areas = MultiStrassen->new("$main::datadir/berlin_ortsteile", "$main::datadir/potsdam");
+	my $places = MultiStrassen->new("$main::datadir/orte", "$main::datadir/orte2");
+	my $g_dummy = GPS::GpsmanMultiData->new;
+	my $stats = GPS::GpsmanData::Stats->new($g_dummy, areas => $areas, places => $places);
+	$stats->_init_areas;
+	$place = $stats->_find_area($Karte::Polar::obj->standard2map(@$farthest_coord));
+    }
+
+    my $route_name;
+    $route_name .= $prefix;
+    $route_name .= "$len " if defined $len;
+    $route_name .= "$time " if defined $time;
+    $route_name .= $place if defined $place;
+
+    $route_name;
 }
 
 ######################################################################

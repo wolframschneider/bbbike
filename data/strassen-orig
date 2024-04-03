@@ -6193,6 +6193,7 @@ Herweghstr. (Johannisthal)	N 17476,4337 17261,4267
 Herrenhausstr.	N 17676,4540 17612,4460 17565,4402
 Trützschlerstr.	N 17471,4570 17612,4460 17748,4349
 Schnellerstr.	HH 16838,6708 16909,6628 17216,6308 17293,6230 17483,6024 17628,5865 17728,5756
+#: note: umgangssprachlich auch Michael-Brückner-Platz genannt
 Schnellerstr.	NN 17728,5756 17807,5730
 Schnellerstr.	NH 17807,5730 17916,5675 18013,5627 18093,5585 18245,5551
 Schnellerstr.	H 18245,5551 18370,5511 18680,5413 18955,5320 19037,5316 19186,5310 19328,5304 19405,5284
@@ -6462,7 +6463,7 @@ Meeraner Str.	N 18382,13492 18407,13548 18462,13560 18489,13593 18486,13819 1847
 Meeraner Str.	N 18626,13820 18486,13819 18198,13816
 Alte Rhinstr.	N 18247,14241 18225,14398 18183,14573
 Dingelstädter Str.	N 18365,14607 18357,14631 18286,14782 18222,14917 18156,15051 18071,15100
-Pyramidenring	N 18166,14277 18247,14241 18354,14195 18382,14183 18483,14139 18685,14184 18710,14212 18610,14521 18591,14573 18553,14678
+Pyramidenring	N 18166,14277 18247,14241 18354,14195 18382,14183 18483,14139 18685,14184 18710,14212 18666,14350 18610,14521 18591,14573 18553,14678
 #: oldname: -20070728: Straße 13
 Frank-Zappa-Str.	N 18591,14573 18896,14649 18868,14745 18938,14768
 Seddiner Str.	H 18215,12123 18296,12115 18411,12100 18555,12101
@@ -16218,7 +16219,7 @@ Apostel-Paulus-Str.	N 6442,9068 6366,9056 6276,9042 6214,9003
 #: XXX mögliche Umbenennung der Straße (z.B. nach Cécile Vogt)
 #: also_indoor: search Robert-Rössle-Straße
 #: osm_watch: way id="10951433" version="27"
-#: last_checked: 2024-03-02 (indoor research)
+#: last_checked: 2024-04-01 (indoor research)
 #: check_frequency: 30d
 Robert-Rössle-Str.	N 16521,24864 16681,24764 16719,24734
 Ernst-Ludwig-Heim-Str.	N 16681,24764 16613,24643 16487,24721
@@ -17880,7 +17881,7 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berliner-woche.de/blankenburg/c-bauen/im-blankenburger-siedlungsgebiet-wird-gebaut_a404616
 #: osm_watch: way id="59573616" version="2"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
-#: last_checked: 2023-11-26 (mapillary)
+#: last_checked: 2024-03-29 (mapillary)
 #: check_frequency: 180d
 #: next_check: 2025-03-01
 (Rhönstr. - Harzburger Str.)	NN 13598,21360 13709,21334
