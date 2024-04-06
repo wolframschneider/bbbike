@@ -907,6 +907,7 @@ Groß Friedenwalde - Flieth: Kopfsteinpflaster (wie schlecht ist das Kopfsteinpfl
 Groß Friedenwalde - Flieth: Asphalt (ist hier tatsächlich asphaltiert?)	? 35894,81782 35998,82265 36009,82890 36430,83497 36578,83835 36590,84086 36693,84235 36676,84495 36696,84495
 Leistenhaus - Neugrimnitz: Schotterweg (Ist hier durchgängig ein Schotterweg?)	? 37515,64395 37608,64317 38095,64055 38327,63933
 # added from handicap_s
+Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1 (Besteht die Sperrung noch immer?)	? 7519,15193 7607,15282
 Charlottenburger Str.: Bauarbeiten östlich der Gustav-Adolf-Str., Fahrbahn gesperrt (Ist die Fahrbahn weiterhin gesperrt?)	? 12646,16563 12560,16602
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
@@ -937,6 +938,5 @@ Schönfließer Str., Senheimer Str., Gollanczstr.: Bauarbeiten geplant, kommt es d
 # added from bbbike-temp-blockings-optimized
 Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg kann gesperrt sein, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet? Wird der Weg neu asphaltiert sein?)	? 21176,16480 21129,16426 21107,16418 21070,16415 20996,16429 20923,16435 20898,16420
 Steg am Krugpfuhl gesperrt, Ende der Sperrung unbekannt (Wann ist der Steg wieder offen?)	? 11162,22939 11150,22898
-Clara-Wieck-Str.: vor der Einmündung Tiergartenstr. Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Ende März 2024 (Existiert die Sperrung noch immer?)	? 7103,11247 7171,11510
 Wilhelm-Kuhr-Str. - Wollankstr. (ehem. Mauerstreifen): Sperrung wegen Bauarbeiten, Ende der Sperrung unbekannt (Ist der Weg entlang des Bahndamms noch gesperrt?)	? 9586,17665 9396,17863
 Pyramidenring: Bauarbeiten, Sperrung der Straße, evtl. sind auch Radfahrer betroffen, vom 02.04.2024 07:00 bis 26.02.2025 17:00 (Ist die Straße tatsächlich für Radfahrer und Fußgänger gesperrt?)	? 18382,14183 18483,14139 18685,14184 18710,14212 18666,14350

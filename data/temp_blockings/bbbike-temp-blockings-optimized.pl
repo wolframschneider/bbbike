@@ -1276,7 +1276,16 @@ Blücherstr. östl. Zossener Str.	2::temp 9827,10051 9922,10010 9950,9987 10006,99
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: source_id: 246600218 (bis 03.06.2024)
+	2::inwork 51046,-73683 51081,-73709 51147,-73755
+',
+         'from' => 1715464800,
+         'id' => 1116,
+         'text' => 'Calau, L52: Sperrung des Bahnübergangs, vom 13.05.2024 bis 03.06.2024',
+         'type' => 'gesperrt',
+         'until' => 1717380000
+       },
        undef,
        undef,
        undef,
@@ -2624,13 +2633,15 @@ Pestalozzistr.	q4::temp:clock 4101,11233 3981,11232
        undef,
        {
          'data' => '#: tempex: (YYYY01,YYYY12) T17:00-T07:30, (YYYY02,YYYY11) T18-T07, (YYYY03,YYYY10) T19-T06, (YYYY04,YYYY09) T20:30-T06:00, (YYYY05,YYYY08) T21:30-T06:00, (YYYY06,YYYY07) T22:30-T06:00 vvv
-(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
+Ein/Ausgang Columbiadamm mit Drehtor	1::night 10691,8532 10644,8363
+(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10644,8363 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10354,8493 10298,8245
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11472,7732 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9474,7182 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10037,8269 10298,8245 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10902,8012 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
-(Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294 9242,7286
+(Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294
+Ein/Ausgang Tempelhofer Damm mit Drehtor	1::night 9242,7286 9302,7294
 (Weg parallel zum Tempelhofer Damm)	2::night  9300,7312 9281,7651 9281,7795
 (Eingang Peter-Strasser-Weg)	2::night 9281,7795 9240,7811
 (Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9362,7616 9281,7651
@@ -2643,7 +2654,8 @@ Pestalozzistr.	q4::temp:clock 4101,11233 3981,11232
 (Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 10204,7680 11279,7768 11388,7777 11430,7781 11460,7802
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
 (Herrfurthstr. - Rundkurs)	2::night 11439,7894 11355,7871
-(Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
+Ein/Ausgang Oderstraße/Herrfurthstraße mit Drehtor	1::night 11472,7899 11458,7897
+(Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11000,8067 10902,8012
 (Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11319,8010 11298,8097 11153,8145 11000,8067 10803,8251 10644,8363 10360,8521
 (Weg parallel zur Oderstr.)	2::night 11458,7897 11490,7737 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
@@ -2651,12 +2663,13 @@ Pestalozzistr.	q4::temp:clock 4101,11233 3981,11232
 (Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11521,7638
 (Flughafen Tempelhof - Eingang Okerstr.)	2::night 11528,7528 11540,7534
 (Flughafen Tempelhof - Eingang Leinestr.)	2::night 11547,7432 11558,7438
-(Flughafen Tempelhof - Eingang Oderstr.)	2::night 11598,7264 11608,7267
 (Eingang Tempelhofer Damm - südliche Landebahn)	2::night 9302,7294 9351,7241 9474,7182
 (Alter Hafen)	2::night 10204,7680 10134,7797 10076,8040 10328,8102 10444,8086 10486,7972 10405,7898 10134,7797
 (Alter Hafen)	2::night 10076,8040 10037,8269
 (südliche Landebahn - Alter Hafen)	2::night 10537,7257 10399,7415 10204,7680
-(Südliche Landebahn - Eingang Oderstr.)	2::night 11555,7314 11596,7280 11608,7267
+(Südliche Landebahn - Eingang Oderstr.)	2::night 11555,7314 11596,7280
+Ein/Ausgang Oderstraße/Crashgate mit Drehtor	1::night 11608,7267 11596,7280
+Ein/Ausgang Oderstraße/Crashgate mit Drehtor	1::night 11608,7267 11598,7264
 (zur nördlichen Landebahn)	2::night 11470,7744 11430,7781
 #: tempex ^^^
 ',
@@ -3207,13 +3220,13 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 	2::temp 8055,12186 8119,12414
 	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
 	2::temp 6828,12031 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8034,12093 8057,12065 8052,12033 8022,12016 8020,11937 8095,11919 8132,11910 8221,11885 8244,11878 8262,11883 8453,12099 8522,12187 8538,12245
-	2::temp 6809,11979 6984,11859 7058,11809 7163,11738 7373,11594 7418,11566 7504,11512
+	2::temp 6809,11979 6984,11859 7058,11809 7163,11738 7373,11594 7418,11566 7463,11538 7504,11512
 	2::temp 6778,11742 6980,11790 7058,11809 7173,11864 7182,11870 7200,11881 7240,11907 7449,11883
 	2::temp 6809,11570 6869,11567 7018,11615 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629 7623,11624 7648,11708 7701,11798 7706,11878 7717,11918 7772,12040 7775,12114
 	2::temp 8026,11764 8016,11770 7793,11878 7717,11918 7658,11947 7634,11920 7559,11888 7449,11883
 	2::temp 8522,12239 8466,12197
 	2::temp 7059,11978 7007,11923 6984,11859 6980,11790 6996,11661 7018,11615 7092,11593 7362,11561 7418,11566 7549,11608 7612,11597 7648,11592 7664,11597
-	2::temp 7600,11513 7664,11597 7693,11627 7732,11660 7796,11681 7901,11684 8014,11753 8026,11764 8140,11850 8167,11865
+	2::temp 7600,11513 7621,11541 7664,11597 7693,11627 7732,11660 7796,11681 7901,11684 8014,11753 8026,11764 8140,11850 8167,11865
 	2::temp 8221,11885 8215,12156 8214,12205
 	2::temp 8244,11878 8327,12174 8344,12221
 	3 7429,12070 7383,12095 7031,12320
@@ -3766,17 +3779,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.313183.php ---	q4::inwork 22145,208 21933,152 21868,139
-#: source_id: viz2021:13.567911,52.405089,11.03.2024,07:00 (bis 05.04.2024)
-	q4::inwork 21933,152 21868,139 21742,115
-',
-         'from' => 1710050400,
-         'id' => 2708,
-         'text' => 'Grottewitzstr.: Baustelle Zur Gartenstadt und Binswangersteig, Fahrbahn gesperrt, evtl. sind auch Radfahrer betroffen, vom 11.03.2024 07:00 bis 05.04.2024 17:00',
-         'type' => 'handicap',
-         'until' => 1712329200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4234,7 +4237,7 @@ Fußgängerschutztunnel	q4::inwork 3828,12697 3981,12709 4071,12720
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
 #: XXX kaum noch Bauarbeiten, aber die Schilder sind geblieben --- vielleicht permanent?
-#: last_checked: 2024-03-15 (mapillary)
+#: last_checked: 2024-04-03
 #: check_frequency: 30d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -4416,6 +4419,10 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: source_id: viz2021:13.376808,52.516209,31.03.2023,06:00 (bis 31.03.2023) (inaktiv)
 #: source_id: viz2021:13.369347,52.515752,31.03.2023,18:00 (bis 03.04.2023) (inaktiv)
 #: source_id: viz2021:13.37086,52.51939,31.03.2023,18:00 (bis 03.04.2023) (inaktiv)
+#: source_id: viz2021:13.36973,52.517661,05.04.2024,18:00 (bis 08.04.2024)
+#: source_id: viz2021:13.376808,52.516209,05.04.2024,06:00 (bis 05.04.2024) (inaktiv)
+#: source_id: viz2021:13.366231,52.515535,05.04.2024,18:00 (bis 08.04.2024)
+#: source_id: viz2021:13.36975,52.51584,05.04.2024,18:00 (bis 08.04.2024)
 	2::temp 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420 8400,12417 8373,12416 8354,12416 8119,12414 8122,12603 8207,12606 8206,12734 8206,12757
 	2::temp 8540,12420 8775,12457
 	2::temp 8309,12758 8306,12609 8207,12606
@@ -4566,6 +4573,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/berlins-erste-spielstrasse_a216586 (ab 7. August 2019)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2024/pressemitteilung.1430940.php (Saisonstart am 3. April 2024)
+#: by: https://www.berliner-woche.de/friedrichshain-kreuzberg/c-umwelt/saison-beginnt-in-boeckhstrasse_a411440
 	q4::temp::play 11175,9882 11197,9894 11411,9810
 ',
          'from' => 1711839600,
@@ -5427,7 +5435,8 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: viz2021:13.305716,52.502767,22.12.2023,15:12 (bis 31.08.2024)
 #: note: vermutlich nur im Bereich Sybelstr. 14
 #: also_indoor: traffic (B)
-	2::inwork 3726,10757 3731,10640 3764,10580 3883,10585
+	2::inwork 3726,10757 3731,10640 3764,10580
+# REMOVED (hier keine Sperrung) ---	2::inwork 3764,10580 3883,10585
 ',
          'from' => 1640905200,
          'id' => 3495,
@@ -6211,13 +6220,14 @@ Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/11-000-quadratmeter-flaeche-fuer-bueros-wohnen-und-gewerbe_a380464 ("Schöneberger Eck", bis Frühjahr 2025)
 #: by: https://www.tagesspiegel.de/berlin/bezirke/erfolg-fur-berliner-burgerinitiative-gericht-bremst-hochhausprojekt-schoneberger-eck-11038744.html
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/hochhaus-am-barbarossadreieck-darf-derzeit-nicht-weitergebaut-werden_a405579
+#: by: https://www.architektur-urbanistik.berlin/index.php?threads/sch%C3%B6neberger-eck.652/page-3#post-22745
 #: note: Halteverbotsschilder bis 31.12.2023
 #: note: Außerdem Bauschild der Wasserbetriebe, bis November 2023; es gibt auch kleinere Einschränkungen an den Kreuzungen der Barbarossastr. (mittlerweile (Juni 2023) sind diese entfallen)
 #: add_fragezeichen: Ist die Fahrbahn der Speyerer Str. weiterhin gesperrt?
 #: also_indoor: traffic (ex-B)
 #: osm_watch: way id="1055654058" version="3"
 #: osm_watch: way id="1182385049" version="1"
-#: last_checked: 2024-03-13
+#: last_checked: 2024-03-29 (architektur-urbanistik)
 #: check_frequency: 150d
 #: next_check: 2025-01-05
 	q3::inwork 6447,9661 6341,9546
@@ -6284,7 +6294,7 @@ Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 #: by: https://www.berliner-woche.de/tegel/c-verkehr/anwohner-einer-privatstrasse-in-saatwinkel-bremsen-rad-raser-aus_a364934
 #: by: https://nitter.net/txtnso/status/1609517082110201857
 # REMOVED (superseded by non-note watch) --- #: osm_watch: note 3442821 2
-#: osm_watch: node id="10202117536" version="8"
+#: osm_watch: node id="10202117536" version="9"
 #: XXX Bleibt der Zaun auch nach Eröffnung der neuen Tegeler Brücke bestehen?
 #: last_checked: 2023-06-02 (mapillary)
 # REMOVED --- #: next_check: 2023-12-01
@@ -6468,13 +6478,15 @@ Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1347368.php (ab KW 30/2023 für voraussichtlich drei Monate, zwischen Bundesallee und Prinzregentenstraße)
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1388333.php (abgeschlossen + neue Bauarbeiten)
 #: by: https://www.berliner-woche.de/wilmersdorf/c-bauen/neue-wege-im-volkspark_a400700
-# REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten im Volkspark Wilmersdorf beendet? --- #: last_checked: 2023-11-06 vvv --- #: check_frequency: 14d vvv --- #: next_check: 2023-10-31 vvv
+#: add_fragezeichen: Sind die Bauarbeiten im Volkspark Wilmersdorf beendet?
+# REMOVED --- #: last_checked: 2023-11-06 vvv --- #: check_frequency: 14d vvv --- #: next_check: 2023-10-31 vvv
 # REMOVED (hier nicht) ---	2::inwork 5651,8218 5730,8207
 # REMOVED (hier vermutlich fertig) ---	2::inwork 5730,8207 5700,8241
 # REMOVED (hier fertig) ---	2::inwork 5700,8241 5687,8280 5699,8308
 # REMOVED (hier fertig) ---	2::inwork 5730,8207 5918,8221
 # REMOVED (hier fertig) ---	2::inwork 5433,8407 5454,8403 5617,8258
-#: next_check: 2024-03-25
+#: last_checked: 2024-04-03
+# REMOVED --- #: next_check: 2024-03-25
 	2::inwork 5166,8467 5212,8602
 # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 ',
@@ -6680,15 +6692,15 @@ Parkstr.	q4::inwork 9031,6355 8992,6312 8944,6293 8930,6295
 #: source_id: viz2021:13.3076,52.50361,28.07.2023,07:00 (bis 31.12.2023) (inaktiv)
 #: source_id: viz2021:13.3076,52.50361,04.12.2023,13:13 (bis 01.04.2024) (vorfristig inaktiv)
 #: source_id: viz2021:13.31347,52.503273,08.01.2024,12:00 (bis 30.03.2024) (inaktiv)
-#: source_id: viz2021:13.3076,52.50361,26.03.2024,11:40 (bis 24.05.2024)
+#: source_id: viz2021:13.3076,52.50361,26.03.2024,11:40 (bis 24.05.2024) (inaktiv)
 #: add_fragezeichen: Besteht die Baustelle noch immer?
 #: historical_note: früher (Sommer 2023?) waren die Gehwege explizit für Radfahrer freigegeben, jetzt (Dezember 2023) stehen explizite Radfahrer-verboten-Schilder
 #: osm_watch: note 3834145 3
 #: osm_watch: note 3834144 1
-#: also_indoor: traffic (ex-H,G,B,W)
-#: last_checked: 2024-03-14 (indoor)
-# REMOVED --- #: check_frequency: 90d
-#: check_frequency: 30d
+#: also_indoor: traffic (ex-H,G,B,ex-W)
+#: last_checked: 2024-04-03
+# REMOVED --- #: check_frequency: 30d
+#: check_frequency: 14d
 #: next_check: 2024-05-24
 	q4::inwork 3869,10760 4267,10724 4393,10712
 ',
@@ -7378,8 +7390,8 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
 #: also_indoor: traffic (G,W)
 #: osm_watch: way id="977478749" version="1"
 #: note: Halteverbotsschilder bis Ende März 2024; Länge des Baustellenbereichs etwa 70m, deshalb q3
-#: last_checked: 2024-02-23 (architektur-urbanistik)
-#: next_check: 2024-03-31
+#: last_checked: 2024-04-03
+# REMOVED --- #: next_check: 2024-03-31
 	q3::inwork 7103,11247 7171,11510
 ',
          'dont_check_date' => 1,
@@ -7494,7 +7506,7 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
 #: note: außerdem mittlerweile unklare Ausschilderung in der Markgrafenstr. mit Gegenverkehr-Vorfahrtsregelungen, als ob vielleicht die Einbahnstraße wieder aufgehoben werden soll? -> mittlerweile auch Sperrung des mittleren Abschnitts
 #: priority: #A vvv
 #: add_fragezeichen: Bestehen die Sperrungen und Einbahnstraßenregelungen noch immer? vvv
-#: last_checked: 2024-03-28 vvv
+#: last_checked: 2024-04-03 vvv
 #: check_frequency: 21d vvv
 #: next_check: 2024-11-01 vvv
 #: osm_watch: way id="35557161" version="25"
@@ -7751,6 +7763,7 @@ Dietlindestr.: Sperrung im Einmündungsbereich	q2::inwork 17056,12304 17088,12506
 #: by: https://viz.berlin.de/aktuelle-meldungen/kaiserdamm-havariebaustelle-vsl-ab-14.12.2023-offen/
 #: by: https://www.berliner-woche.de/charlottenburg/c-bauen/wasserbetriebe-geben-mitte-dezember-vier-spuren-frei_a401282 (komplett fertig im April 2024)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1396238.php
+#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1434212.php
 #: by[nocache]: https://nitter.net/wasserbetriebe/status/1735295013901250926#m
 #: by[nocache]: https://twitter.com/wasserbetriebe/status/1766011951707038018 (ab ~19. April 2024 wieder offen?)
 #: source_id: viz2021:13.297353,52.510969,27.04.2023,15:24 (nur für Kfz-Verkehr gesperrt, kein Endedatum) (inaktiv)
@@ -7765,22 +7778,22 @@ Dietlindestr.: Sperrung im Einmündungsbereich	q2::inwork 17056,12304 17088,12506
 #: osm_watch: way id="176621906" version="27"
 #: osm_watch: way id="4525429" version="22"
 #: osm_watch: way id="1212493766" version="4"
-#: osm_watch: note 3916787 2
-#: last_checked: 2024-01-25 vvv
+#: osm_watch: note 3916787 3
+#: last_checked: 2024-04-03 vvv
 #: check_frequency: 90d vvv
-#: next_check: 2024-03-22 vvv
-Kaiserdamm	q4::inwork; 3069,11551 3159,11562 3320,11583
-Suarezstr.	2::inwork 3152,11529 3159,11562
+#: next_check: 2024-04-19 vvv
+# REMOVED (Radweg existiert mittlerweile) --- Kaiserdamm	q4::inwork; 3069,11551 3159,11562 3320,11583
+Suarezstr.: Umweg über 50m westlich gelegene Fußgängerampel	q4::inwork 3152,11529 3159,11562
 Suarezstr.	q3::inwork 3054,11240 3152,11529
 Windscheidstr.	q4::inwork 3185,11506 3152,11529
-Fritschestr.	q3::inwork 3339,11433 3320,11583
+# REMOVED (hier nicht mehr) --- Fritschestr.	q3::inwork 3339,11433 3320,11583
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 ',
          'from' => undef,
          'id' => 3988,
-         'text' => 'Kaiserdamm: Fahrbahn und Radwege zwischen Witzlebenstr. und Fritschestr. Richtung Osten gesperrt, Anbindung Suarezstr. gesperrt, lange Umwege, voraussichtlich bis Mitte April 2024',
+         'text' => 'Suarezstr. und Windscheidstr.: Anbindung an Kaiserdamm gesperrt, lange Umwege, voraussichtlich bis 19. April 2024',
          'type' => 'handicap',
          'until' => 1713538800
        },
@@ -7916,11 +7929,12 @@ Marshallstr.: Anbindung am Hüttenweg gesperrt	q3::inwork 1385,5214 1319,5100
        },
        {
          'data' => '#: source_id: viz2021:13.299947,52.521326,06.02.2024,00:00 (bis 02.08.2024)
+#: note: explizite Umleitung für Radfahrer vor Ort
 	q4::inwork 3450,12722 3370,12725 3291,12721
 ',
          'from' => 1707087600,
          'id' => 4005,
-         'text' => 'Charlottenburger Ufer: Bauarbeiten zwischen Luisenplatz und Lohmeyerstr., evtl. sind auch Radfahrer betroffen, vom 06.02.2024 00:00 bis 02.08.2024 23:59',
+         'text' => 'Charlottenburger Ufer: Bauarbeiten zwischen Luisenplatz und Lohmeyerstr., Sperrung der Fahrbahn, auch Radfahrer sind betroffen, vom 06.02.2024 00:00 bis 02.08.2024 23:59',
          'type' => 'handicap',
          'until' => 1722635940
        },
@@ -7992,6 +8006,7 @@ Rathenower Str.: Anbindung gesperrt	q4::inwork 6817,13862 6730,14021
        {
          'data' => '#: source_id: viz2021:13.333083,52.492616,22.02.2024,07:00 (bis 03.05.2024)
 #: by[nocache]: https://twitter.com/Aintschie/status/1760940196479062140
+#: by: https://www.berliner-woche.de/wilmersdorf/c-bauen/sperrung-wegen-bauarbeiten_a412256
 	q4::inwork 5618,9607 5627,9362
 ',
          'from' => 1708495200,
@@ -8055,26 +8070,8 @@ Rathenower Str.: Anbindung gesperrt	q4::inwork 6817,13862 6730,14021
          'type' => 'gesperrt',
          'until' => 1714143600
        },
-       {
-         'data' => '#: source_id: 246300586 (bis 03.04.2024)
-	2::inwork -62241,18760 -62229,18971 -62217,19221
-',
-         'from' => 1711274400,
-         'id' => 4019,
-         'text' => 'B102: Sperrung des Bahnübergangs, evtl. sind auch Radfahrer betroffen, 25.03.2024 11:00 Uhr bis 03.04.2024 06:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1712116800
-       },
-       {
-         'data' => '#: source_id: 247200038 (bis 05.04.2024)
-	2::inwork 13095,-20435 12154,-20220
-',
-         'from' => 1711263600,
-         'id' => 4020,
-         'text' => 'B246, Nächst Neuendorf: Bauarbeiten, Sperrung, evtl. sind auch Radfahrer betroffen, 25.03.2024 08:00 Uhr bis 05.04.2024 17:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1712329200
-       },
+       undef,
+       undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2024/pressemitteilung.1425414.php
 #: by: https://igeb.org/pressedienst/igebpresse_20240321.html
@@ -8124,6 +8121,7 @@ Königsheideweg: Bauarbeiten an der Fahrbahn, Gehweg offiziell für Radfahrer frei
 #: source_id: viz2021:13.332033,52.490847,12.03.2024,13:00 (bis 10.05.2024)
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1767537882204434779 (hier nur Kfz-Verkehr)
 #: by: https://www.berliner-woche.de/wilmersdorf/c-verkehr/wasserrohrbruch-fuehrt-zu-sperrung_a411536
+#: by: https://www.berliner-woche.de/wilmersdorf/c-bauen/sperrung-wegen-bauarbeiten_a412256
 #: note: beim rbb wird nur der Kfz-Verkehr erwähnt, Dauer "mehrere Wochen"
 #: note: mittlerweile wird bei viz explizit "absteigen & schieben" gesagt
 	q4::inwork 5627,9362 5479,9367
@@ -8184,16 +8182,7 @@ Winterfeldtstr.: Anbindung zur Martin-Luther-Str. gesperrt, Umwege	q4::inwork 65
          'until' => 1712699940
        },
        undef,
-       {
-         'data' => '#: source_id: 247000128 (bis 04.04.2024)
-	2::inwork -94579,71995 -94274,71791 -93406,71227
-',
-         'from' => 1712088000,
-         'id' => 4030,
-         'text' => 'Perleberg, B5: Sperrung des Bahnüberganges, 03.04.2024 22:00 Uhr bis 04.04.2024 06:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1712203200
-       },
+       undef,
        {
          'data' => '#: note: Ende laut Halteverbotsschilder
 	q4::inwork 6010,1657 6130,1399 6278,1109
@@ -8249,6 +8238,16 @@ Winterfeldtstr.: Anbindung zur Martin-Luther-Str. gesperrt, Umwege	q4::inwork 65
          'text' => 'Stieglitzweg: Anbindung Johannisthaler Chaussee gesperrt, vom 02.04.2024 07:00 bis 01.11.2024 17:00',
          'type' => 'handicap',
          'until' => 1730476800
+       },
+       {
+         'data' => '#: source_id: LS/223-P/23/189 (bis 12.06.2024)
+	2::inwork -23452,18658 -22367,19503 -22236,19745 -22145,19713 -21989,19969 -21864,20015 -21364,20346 -20944,20402 -20850,20447 -20387,21160 -19973,21481 -19431,22888
+',
+         'from' => 1711267200,
+         'id' => 4035,
+         'text' => 'Bredow - Brieselang/Falkensee: Bauarbeiten, Sperrung der Straße, evtl. sind auch Radfahrer betroffen, bis zum 12.06.2024',
+         'type' => 'gesperrt',
+         'until' => 1718200800
        }
      
 );
