@@ -66,10 +66,11 @@ use BBBikeUtil qw(bbbike_root is_in_path);
 	      get_cgi_config selenium_diag noskip_diag
 	      pdfinfo
 	      checkpoint_apache_errorlogs output_apache_errorslogs
+	      my_note
 	    ),
 	   @opt_vars);
 
-$logfile = ($ENV{HOME}||'').'/www/log/bbbike.hosteurope2012/bbbike.de_access.log';
+$logfile = ($ENV{HOME}||'').'/www/log/bbbike.hosteurope2017/bbbike.de_access.log';
 
 my $testdir = dirname(File::Spec->rel2abs(__FILE__));
 
@@ -1169,12 +1170,16 @@ sub get_cgi_config (;@) {
     my $respref = delete $opts{resp};
     die "Unhandled options: " . join(" ", %opts) if %opts;
 
-    require JSON::XS;
+    my $decode_json = eval { require JSON::XS; \&JSON::XS::decode_json };
+    $decode_json    = eval { require JSON::PP; \&JSON::PP::decode_json } if !$decode_json;
+    if (!$decode_json) {
+	die "Neither JSON::XS nor JSON::PP available, cannot decode bbbike.cgi config";
+    }
 
     my $url = $_cgiurl . "?api=config";
     my $resp = $ua->get($url);
     if ($respref) { $$respref = $resp }
-    my $data = JSON::XS::decode_json($resp->decoded_content(charset => 'none'));
+    my $data = $decode_json->($resp->decoded_content(charset => 'none'));
     $data;
 }
 
@@ -1300,6 +1305,15 @@ sub pdfinfo ($) {
 		}
 	    }
 	}
+    }
+}
+
+sub my_note (@) {
+    my(@notes) = @_;
+    if (defined &Test::More::note) {
+	Test::More::note(@notes);
+    } else {
+	Test::More::diag(@notes);
     }
 }
 

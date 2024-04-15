@@ -74,7 +74,7 @@ EOF
 sub usage_cgi (;$) {
     die((defined $_[0] ? $_[0]."\n\n" : '') . <<EOF);
 usage: $0 [--dry-run] cgi [--dist debian|ubuntu|...] [--distver stretch|...] [--test]
-	 [--invalidate-apt] [--[no]mapserver] [--use-bbbike-ppa]
+	 [--invalidate-apt] [--[no]mapserver] [--use-bbbike-ppa] [--force-ipv4]
 EOF
 }
 
@@ -184,7 +184,7 @@ EOF
     if ($^O ne 'MSWin32') {
 	my $uid = $<;
 	$username = (getpwuid($uid))[0];
-	if ($opt{distver} eq 'noble') { # no adduser installed in default ubuntu:24.04 image
+	if ($opt{distver} =~  m{^(noble|24\.04)$}) { # no adduser installed in default ubuntu:24.04 image
 	    $dockerfile .= <<"EOF";
 RUN useradd --non-unique --shell /bin/bash --uid $uid --comment '' --create-home $username
 RUN passwd -d $username
@@ -468,6 +468,7 @@ EOF
 	(my $short_perl_ver = $opt{'perl-ver'}) =~ s{\.\d+$}{};
 	# Probably travis has only perls for ubuntu trusty and precise
 	my $distnumver = { ubuntu => {
+				       noble   => '24.04',
 				       jammy   => '22.04',
 				       focal   => '20.04',
 				       bionic  => '18.04',
@@ -780,6 +781,7 @@ sub cgi {
     my $pwd = save_pwd2;
     chdir bbbike_root or die "Can't chdir: $!";
 
+    my $docker_host = $opt{'force-ipv4'} ? '0.0.0.0' : '';
     my $docker_port = 5000;
 
     my $use_bbbike_ppa;
@@ -922,7 +924,7 @@ EOF
 WORKDIR /bbbike/cgi
 RUN make symlinks fix-permissions
 EXPOSE $docker_port
-CMD starman --listen :$docker_port bbbike.psgi
+CMD starman --listen $docker_host:$docker_port bbbike.psgi
 EOF
     $doit->write_binary("$docker_context_dir/Dockerfile", $dockerfile);
     in_directory {
@@ -1049,7 +1051,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       jobs    => 1,
 	       dist    => 'debian',
 	       distver => 'jessie',
-	       src     => 'github',
+	       src     => 'local',
 	       branch  => undef,
 	       env     => {},
 	       'build-env' => {},
@@ -1105,6 +1107,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       'invalidate-apt' => 0,
 	       mapserver => 0,
 	       'use-bbbike-ppa' => undef,
+	       'force-ipv4' => 0,
 	      );
     GetOptions(\%opt,
 	       "dist=s",
@@ -1113,6 +1116,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       'invalidate-apt!',
 	       'mapserver!',
 	       'use-bbbike-ppa!',
+	       'force-ipv4!',
 	      )
 	or usage_cgi;
     cgi($doit, %opt);
@@ -1139,13 +1143,28 @@ usually need to be done:
 
 =over
 
-=item * install docker and further dependencies
+=item * install docker
 
-    sudo apt-get install docker.io libipc-perl-run
+Depending on your Debian/Ubuntu distribution run
 
-Fur running the C<docker-bbbike ci --src=local> subcommand the following are also needed:
+    sudo apt-get install docker-ce
+
+or
+
+    sudo apt-get install docker.io
+
+or follow the instructions in L<https://docs.docker.com/engine/install/>
+
+=item * install further dependencies
+
+    sudo apt-get install libipc-perl-run
+
+Fur running the C<docker-bbbike ci> with the default setting
+C<--src=local> subcommand the following are also needed:
 
     sudo apt-get install rsync git
+
+This is not needed for C<docker-bbbike ci --src=github>.
 
 =item * make sure you can run docker without C<sudo>
 
@@ -1161,6 +1180,9 @@ logout and login again, or start a new shell.
     git clone --depth=1 https://github.com/eserte/bbbike && cd bbbike
 
 Otherwise just C<cd> into the bbbike source directory.
+
+Some subcommands (C<ci>, C<gui>) can operate from GitHub sources using
+the C<--src=github> option and thus may not need a local git clone.
 
 =back
 

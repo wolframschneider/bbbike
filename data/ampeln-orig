@@ -7,6 +7,11 @@
 # 
 #: temporary vvv
 # 
+#: source_id: viz2021:13.490616,52.463117,15.04.2024,07:30 (bis 12.07.2024)
+#: next_check: 2024-07-12
+#: valid: -20240712
+Kiefholzstr.: Gegenverkehrsregelung	X::inwork::alternating 16425,6445
+# 
 #: XXX Schnellerstraße (Niederschöneweide) in beiden Richtungen zwischen Rudower Straße und Köllnische Straße: Kabelschachtsanierung, Gegenverkehrsregelung durch Baustellenampel, vom 25.03.2024 11:00 bis 03.05.2024 17:00
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1772165269927981192
 #: by: https://pbs.twimg.com/media/GJSQEhiXwAAgVQE?format=jpg&name=large (außerdem Anbindung Rudower Str. (von Süden her) gesperrt)
@@ -74,7 +79,7 @@ Möckernstr./nördlich. Wartenburgstr.: Gegenverkehrsregelung	X::inwork::alternati
 # REMOVED --- #: next_check_id: RUNGE-2023 --- #: source_id: viz2021:13.417345,52.512721,24.10.2023,11:00 (bis 23.11.2023) (inaktiv) --- #: last_checked: 2023-10-31 (mapillary) --- #: next_check: 2023-11-23 --- #: valid: -20231123 --- Brückenstr./Rungestr.: Gegenverkehrsregelung	X::inwork::alternating 11291,11876
 # 
 #: next_check_id: METZER-2023
-#: last_checked: 2024-03-21
+#: last_checked: 2024-04-11 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2025-01-02
 #: valid: -20250102
@@ -114,7 +119,7 @@ Fürstenbrunner Weg: Gegenverkehrsregelung	X::inwork::alternating 1610,13380
 # REMOVED --- Am Falkenberg	X::inwork 21497,1042
 # 
 #: next_check_id: SGEHRENSEE-2023
-#: source_id: viz2021:13.525188,52.555419,10.07.2023,04:00 (bis 08.12.2023) (bis 24.09.2023)
+#: source_id: viz2021:13.525188,52.555419,10.07.2023,04:00 (bis 08.12.2023) (bis 24.09.2024)
 #: note: die dazugehörige S-Bahn-Meldung ist kürzer
 #: last_checked: 2023-07-08
 # REMOVED --- #: next_check: 2024-09-24
@@ -127,7 +132,7 @@ Gegenverkehrsregelung	X::inwork::alternating 18527,16789
 #: source_id: viz2021:13.36722,52.52237,05.09.2023,07:20 (bis 05.09.2025)
 #: note: möglicherweise im Zusammenhang mit dem Bau des Bundespräsidialamtes
 #: by: https://www.bbr.bund.de/BBR/DE/Bauprojekte/Berlin/Politik/buerogebaeude-bundesbehoerden/neubau.html (Fertigstellung geplant Sommer 2025)
-#: last_checked: 2024-03-18
+#: last_checked: 2024-04-12
 #: check_frequency: 180d
 #: next_check: 2025-09-05
 	X::inwork 7873,12927
@@ -140,7 +145,7 @@ Gegenverkehrsregelung	X::inwork::alternating 18527,16789
 #: by: https://entwicklungsstadt.de/sony-center-am-potsdamer-platz-investition-und-umbau/ (bis Ende 2023)
 #: XXX Möglicherweise im Zusammenhang mit Bauarbeiten am Sony-Center
 #: note: Länge der Gegenverkehrstrecke ist ca. 80m
-#: last_checked: 2024-04-03
+#: last_checked: 2024-04-12
 #: check_frequency: 90d
 #: next_check: 2024-07-01
 #: valid: -20240701
@@ -153,7 +158,7 @@ Bellevuestr.: Gegenverkehrsregelung	X::inwork::alternating 8328,11617
 #: source_id: viz2021:13.47181,52.50783,24.01.2023,09:00 (bis 03.06.2024) (inaktiv)
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024)
 #: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung; Anforderungsampeln; außerdem mittlerweile eine Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
-#: last_checked: 2024-04-04
+#: last_checked: 2024-04-10
 #: check_frequency: 120d
 #: next_check: 2024-06-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
@@ -217,7 +222,7 @@ B179/Fichtestr.	X::inwork 26138,-12596
 #: source_id: viz2021:13.57339,52.45923,11.03.2024,00:00 (bis 27.09.2024) (inaktiv)
 #: source_id: viz2021:13.572881,52.460427,11.03.2024,12:00 (bis 27.09.2024)
 # REMOVED --- #: note: Länge der Gegenverkehrsregelung: östlicher Abschnitt ca. 50m, nördlicher Abschnitt ca. 40m
-#: last_checked: 2024-03-26 (okas) vvv
+#: last_checked: 2024-04-10 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-09-27 vvv
 #: valid: -20240927 vvv
@@ -265,7 +270,7 @@ Köpenicker Str./Dubickstr.	F::inwork 21079,8931
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2024-03-25
+#: last_checked: 2024-04-10
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork::alternating 16355,9622
 # 
@@ -276,15 +281,17 @@ Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork::alternating 16355,9
 #: source_id: viz2021:13.37418,52.58681,03.08.2022,12:00 (bis 31.03.2023) (inaktiv) vvv
 #: source_id: viz2021:13.37403,52.58708,03.08.2022,12:00 (zusätzlicher Eintrag, bis 31.05.2023) (inaktiv) vvv
 #: source_id: viz2021:13.374712,52.584761,03.08.2022,12:00 (bis 31.3.2023) (bis 31.5.2023) (bis 3.7.2023) (bis 30.11.2023) (bis 02.02.2024) (bis 29.03.2024) (bis 28.02.2024) (inaktiv) vvv
-# REMOVED (inaktiv) --- #: last_checked: 2024-02-04 (mapillary)
-# REMOVED (inaktiv) --- #: next_check: 2024-02-28
-# REMOVED (inaktiv) --- Germanenstr.: Gegenverkehrsregelung	X::inwork::alternating 8227,19725
 # REMOVED (nicht mehr) --- Germanenstr.: Gegenverkehrsregelung	X::inwork::alternating 8234,19936
 # REMOVED (nicht mehr) --- Germanenstr.: Gegenverkehrsregelung	X::inwork::alternating 8311,19458
 # REMOVED (nicht mehr) --- Germanenstr.: Gegenverkehrsregelung	X::inwork::alternating 8268,19558
 #: source_id: viz2021:13.375938,52.57953,27.02.2024,07:00 (bis 28.03.2024) (bis 24.05.2024)
-#: next_check: 2024-05-24
+#: by: https://www.berliner-woche.de/wilhelmsruh/c-bauen/ende-der-baustelle-endlich-in-sicht_a412148 (Bauarbeiten bis Juni/Juli 2024)
+#: last_checked: 2024-04-14 vvv
+#: next_check: 2024-05-24 vvv
+Germanenstr.: Gegenverkehrsregelung	X::inwork::alternating 8227,19725
 Germanenstr.: Gegenverkehrsregelung	X::inwork::alternating 8333,19305
+#: next_check ^^^
+#: last_checked ^^^
 #: source_id ^^^
 #: source_id ^^^
 #: source_id ^^^
@@ -299,7 +306,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork::alternating 8333,19305
 # REMOVED (closed) --- #: osm_watch: note 2356634 3
 #: osm_watch: node id="9569639494" version="1"
 #: osm_watch: node id="9569639496" version="1"
-#: last_checked: 2023-12-09 (mapillary)
+#: last_checked: 2024-04-14
 #: check_frequency: 60d
 	X::inwork 9868,19023
 # 
@@ -356,7 +363,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork::alternating 8333,19305
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fußgängerampel nordöstlich der Einmündung; Anforderungsampel
-#: last_checked: 2024-03-22 (mapillary)
+#: last_checked: 2024-04-09
 #: check_frequency: 90d
 #: next_check: 2026-01-01
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
@@ -419,9 +426,9 @@ Gegenverkehrsregelung	X::inwork::alternating 18767,-1343
 	F 9570,8715
 #: note: Anforderungsampel (2x, auf dem Mittelstreifen muss neu angefordert werden)
 	F 9225,9038
-	X 9801,8683
+	X 9807,8682
 #: related antidromic vvv
-	X 9793,9241
+	X 9801,9241
 	X 9753,9252
 #: related ^^^
 	X 9233,8597
@@ -994,6 +1001,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10971,16907
 	X 9442,16610
 	X 10228,18196
+#: note: Anforderungsampel für Radfahrer Richtung Süden (2x)
 	X 10680,18380
 #: note: Anforderungsampel für Radfahrer und Fußgänger aus Richtung Neue Schönholzer Str.
 	X 10089,18180
@@ -1180,7 +1188,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4478,10218
 	X 9581,12588
 	X 10951,12249
-#: off: night (seen 2018-02-01 00:20, 2022-06-30 23:15, 2023-11-30 00:25, 2024-01-31 23:15)
+#: off: night (seen 2018-02-01 00:20, 2022-06-30 23:15, 2023-11-30 00:25, 2024-01-31 23:15, 2024-04-12 22:35)
 	X 12295,12197
 #: off: night (seen 2015-01-29 00:45, 2018-02-01 00:20, 2022-04-29 23:55, 2022-06-30 23:15, 2023-11-30 00:25)
 	X 12822,12067
@@ -1220,7 +1228,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: Grüner Pfeil für Radfahrer (Alt-Köpenick -> Lange Brücke, N->W)
 	X 22093,4499
 #: note: Anforderung für linksabbiegende Radfahrer (Lindenstr. -> Bahnhofstr.)
-	X 21954,5229
+	X 21961,5228
 	X 22116,5442
 	X 22431,6068
 	X 18057,14549
@@ -2102,6 +2110,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8759,16684
 	X 9082,16982
 	X 8677,17154
+#: note: Anforderungsampel für Radfahrer aus der Florastr.
 	X 9721,17806
 	X 11630,16623
 # REMOVED (wurde verlegt) ---	F 11548,16079
@@ -3336,7 +3345,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2024-03-28 vvv
+#: last_checked: 2024-04-12 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514

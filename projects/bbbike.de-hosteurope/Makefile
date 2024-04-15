@@ -242,10 +242,10 @@ BBBIKECGI=		bbbike.cgi
 BBBIKECGI=		bbbike2.cgi
 .endif
 
-BBBIKE_CGI_CONFIG=bbbike-hosteurope.cgi.config
-MAPSERVER_BRB_LOCALINC=	mapserver-brb-brb.map-localinc
+BBBIKE_CGI_CONFIG=PLEASE_DEFINE_bbbike.cgi.config
+MAPSERVER_BRB_LOCALINC=	PLEASE_DEFINE_mapserver-brb-brb.map-localinc
 .ifdef TARGET
-.if ${TARGET} == bbbike-pps-jessie || ${TARGET} == lvps83-169-5-248.dedicated.hosteurope.de || ${TARGET} == hosteurope
+.if ${TARGET} == bbbike-pps-jessie || ${TARGET} == hosteurope
 BBBIKE_CGI_CONFIG=	bbbike-hosteurope-jessie.cgi.config
 MAPSERVER_BRB_LOCALINC=	mapserver-brb-brb.map-localinc-jessie
 .endif
@@ -641,8 +641,9 @@ prepare-mapserver-dist-pre:
 prepare-mapserver-dist-main:
 # XXX   Copying and removing the localinc file here is an ugly hack
 	cp -pf etc/${MAPSERVER_BRB_LOCALINC} ${BBBIKE_ROOT_DIR}/mapserver/brb/brb.map-localinc
+# XXX	need SERVER_NAME hack as cgi/bbbike-hosteurope-jessie.cgi.config otherwise does a fallback to the current hostname
 	cd ${BBBIKE_ROOT_DIR}/mapserver/brb && \
-	    ${MAKE} dist-any TARGET=${MAPSERVER_TARGET}
+	    env SERVER_NAME=bbbike.de ${MAKE} dist-any TARGET=${MAPSERVER_TARGET}
 	rm -f ${BBBIKE_ROOT_DIR}/mapserver/brb/brb.map-localinc
 	cp -Rpf /tmp/radzeit_mapserver_dist/* ${CURDIR}/$(HTDOCS)/mapserver/brb/
 	rm -f ${CURDIR}/.not_rsyncable

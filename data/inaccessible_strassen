@@ -35,7 +35,6 @@ Adlergestell	X 21937,1343
 Adlergestell	X 21812,1366
 Adlergestell	X 21837,1340
 An der Villa Bolle	X 22477,3109
-Buckower Chaussee	X 9164,552
 Buckower Chaussee	X 9178,556
 (Hans-Baluschek-Park - Schöneberger Südgelände, Fußgängerbrücke)	X 7621,7105
 (Hans-Baluschek-Park - Schöneberger Südgelände, Fußgängerbrücke)	X 7655,7096
@@ -51,6 +50,7 @@ Halenseestr.	X 1961,10646
 Straße 171	X 12657,22596
 Straße 171	X 12628,22604
 Hebammensteigbrücke	X 13046,21734
+Europaplatz	X 8102,13304
 (BMW-Betriebswerk)	X -1768,14605
 Heinrich-Hertz-Str.	X 59,15518
 Heinrich-Hertz-Str.	X 149,15237
@@ -78,6 +78,11 @@ Spindlersfelder Str.	X 21143,4150
 Spindlersfelder Str.	X 21215,3919
 Am Werkstor	X 18062,5856
 Am Werkstor	X 18075,5880
+Am Alten Flugplatz	X 19754,8809
+Am Alten Flugplatz	X 19778,8823
+Am Alten Flugplatz	X 19815,8844
+Am Alten Flugplatz	X 19891,8887
+Am Alten Flugplatz	X 19949,8920
 Potsdamer Chaussee (Gatow, Wilhelmstadt)	X -6891,9706
 Reichsbahnstr.	X -4648,1334
 Prenzlauer Promenade	X 11990,19741
@@ -101,8 +106,6 @@ Bahnhofstr. (Lichtenrade)	X 10228,-2136
 Bahnhofstr. (Lichtenrade)	X 10194,-2138
 (zu den Depotgebäuden)	X 24733,5553
 Krumpuhler Weg	X 1302,18398
-(Uferweg am Hohenzollernkanal)	X -203,16064
-(Uferweg am Hohenzollernkanal)	X -205,16086
 Feldstr. (Bohnsdorf)	X 21055,-723
 Feldstr. (Bohnsdorf)	X 21209,-734
 (Verlängerung der Zwieseler Str.)	X 19705,9039
@@ -151,7 +154,6 @@ Rudererweg	X -3689,11291
 (Fortsetzung Wandlitzstr.)	X 17743,9116
 (Fortsetzung Wandlitzstr.)	X 17570,9103
 Am Konsulat	X 9990,19644
-Blütenweißweg	X 21427,5347
 Am Kutscherhaus	X 21386,5251
 Röbeler Weg	X 24831,10772
 Röbeler Weg	X 24760,10790

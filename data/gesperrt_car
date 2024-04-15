@@ -827,7 +827,7 @@ Am Rudower Fließ -> Neuköllner Str.: Mittelstreifen	3::igndisp 16650,1356 16698,
 Mittelstreifen	3nocross::ignrte 13148,14850 13107,14873 12807,15045
 Storkower Str. -> Einsteinstr.: Mittelstreifen	3::igndisp 12807,15045 13107,14873 13143,14935
 Einsteinstr. -> Storkower Str.: Mittelstreifen	3::igndisp 13143,14935 13107,14873 13148,14850
-Hönower Wiesenweg: nur für Anlieger und Radfahrer offen	2:Anlieger 17380,8858 17416,8767 17468,8692 17497,8623 17515,8567 17521,8549 17533,8505 17554,8458 17588,8413 17617,8363 17652,8349 17707,8328 17753,8290
+Hönower Wiesenweg: nur für Anlieger und Radfahrer offen	2:Anlieger 17380,8858 17416,8767 17468,8692 17497,8623 17515,8567 17521,8549 17533,8505 17554,8458 17581,8422 17588,8413 17617,8363 17652,8349 17707,8328 17753,8290
 Mittelstreifen	3nocross::ignrte 9248,4904 9239,4980 9206,5193
 Finkenweg -> Mariendorfer Damm: Mittelstreifen	3::igndisp 9360,4996 9239,4980 9248,4904
 Mariendorfer Damm -> Finkenweg: Mittelstreifen	3::igndisp 9206,5193 9239,4980 9360,4996
@@ -1280,8 +1280,8 @@ Neuer Steg	3 8209,19107 8277,19210 8166,19308
 Neuer Steg	3 8209,19107 8277,19210 8337,19160
 Straße 201	1 9366,18669 9511,18785 9529,18815
 Majakowskiring	1 10358,18882 10364,18852 10341,18812 10203,18762 10041,18697 9985,18735 10003,18798 10048,18824 10162,18867 10184,18875 10300,18915 10339,18907 10358,18882
-Killisch-von-Horn-Weg: Poller	3 9590,18082 9707,17941 9730,17927
-Killisch-von-Horn-Weg: Poller	3 9730,17927 9707,17941 9590,18082
+Killisch-von-Horn-Weg: Poller	3 9694,17960 9695,17945 9719,17926
+Killisch-von-Horn-Weg: Poller	3 9719,17926 9695,17945 9694,17960
 Frauenfelder Weg - Markstr.	3 7441,17009 7647,17037 7644,17054
 Kongostr.	1 6349,16213 6447,16321
 Polierweg: Schranke vor dem Malersteig	3 13650,3025 13596,3039 13488,3062
@@ -2190,12 +2190,12 @@ Riemannstr.	2:Anlieger 9767,9386 9650,9404
 Riemannstr.	2:Anlieger 9524,9426 9578,9417
 Lilienthalstr.	2:Anlieger 10713,9260 10705,9234 10709,9192 10748,9054 10675,8940 10481,8814 10291,8810 10269,8770 10209,8661
 Golßener Str.	2:Anlieger 10269,8770 10268,8810 10266,8946
-Jüterboger Str.	2:Anlieger 10266,8946 9951,8965 9799,8962
-Schwiebusser Str.	2:Anlieger 9801,8889 9417,8890 9227,8890
-Fidicinstr.	2:Anlieger 9799,8962 9654,8991 9459,9019 9295,9047 9224,9053
+Jüterboger Str.	2:Anlieger 10266,8946 9951,8965 9804,8963
+Schwiebusser Str.	2:Anlieger 9803,8890 9417,8890 9227,8890
+Fidicinstr.	2:Anlieger 9804,8963 9654,8991 9459,9019 9295,9047 9224,9053
 Fidicinstr.	1 9224,9053 9295,9047 9459,9019 9654,8991
-Willibald-Alexis-Str.	2:Anlieger 9958,9050 9797,9063 9669,9080 9600,9091 9589,9093 9540,9102 9477,9113
-Arndtstr.	2:Anlieger 9966,9151 9795,9162 9674,9179 9614,9186 9566,9194 9553,9196 9487,9209
+Willibald-Alexis-Str.	2:Anlieger 9958,9050 9803,9062 9669,9080 9600,9091 9589,9093 9540,9102 9477,9113
+Arndtstr.	2:Anlieger 9966,9151 9802,9163 9674,9179 9614,9186 9566,9194 9553,9196 9487,9209
 Heimstr.	2:Anlieger 9951,8965 9958,9050 9966,9151 9973,9232
 Heimstr.	1 9973,9232 9966,9151 9958,9050 9951,8965
 Kopischstr.	2:Anlieger 9459,9019 9477,9113
@@ -2380,9 +2380,9 @@ Jüdenstr. -> Jüdenstr.: Gustav-Böß-Str./Grunerstr./Jüdenstr.	3::igndisp 10807,12
 Jüdenstr. -> Gustav-Böß-Str.: Gustav-Böß-Str./Grunerstr./Jüdenstr.	3::igndisp 10807,12451 10783,12502 10685,12422
 Gustav-Böß-Str. -> Jüdenstr.: Gustav-Böß-Str./Grunerstr./Jüdenstr.	3::igndisp 10685,12422 10783,12502 10704,12595
 Grunerstr./Klosterstr.	3nocross::ignrte 10849,12557 10873,12577 10950,12640
-Grunerstr. -> Grunerstr.: Grunerstr./Klosterstr.	3::igndisp 10931,12622 10873,12577 10849,12557
-Grunerstr. -> Klosterstr.: Grunerstr./Klosterstr.	3::igndisp 10931,12622 10873,12577 10900,12546
-Grunerstr. -> Grunerstr.: Grunerstr./Klosterstr.	3::igndisp 10950,12640 10873,12577 10931,12622
+Grunerstr. -> Grunerstr.: Grunerstr./Klosterstr.	3::igndisp 10951,12637 10873,12577 10849,12557
+Grunerstr. -> Klosterstr.: Grunerstr./Klosterstr.	3::igndisp 10951,12637 10873,12577 10900,12546
+Grunerstr. -> Grunerstr.: Grunerstr./Klosterstr.	3::igndisp 10950,12640 10873,12577 10951,12637
 Grunerstr. -> Klosterstr.: Grunerstr./Klosterstr.	3::igndisp 10950,12640 10873,12577 10900,12546
 Klosterstr. -> Grunerstr.: Grunerstr./Klosterstr.	3::igndisp 10900,12546 10873,12577 10849,12557
 Chamissoplatz: Poller	3 9553,9196 9566,9194 9614,9186
@@ -2530,6 +2530,7 @@ Oranienburger Str. -> Kirschblütenpl.: Mittelstreifen, Fußgängerfurt existiert	3
 Kirschblütenpl. -> Oranienburger Str.: Mittelstreifen, Fußgängerfurt existiert	3::igndisp 5598,19912 5545,19909 5533,19811
 Kastanienallee: nur für Tram und Radfahrer	1 10916,15098 10900,15075 10881,15047
 Wallenbergstr.	1 4319,8493 4229,8499 4143,8501
+Cardinalstr.	1 21896,5724 21828,5623 21706,5541
 Pflügerstr./Friedelstr.: Diagonalsperre	3 12054,9429 12066,9558 12074,9689
 Pflügerstr./Friedelstr.: Diagonalsperre	3 12074,9689 12066,9558 12054,9429
 Pflügerstr./Friedelstr.: Diagonalsperre	3 12054,9429 12066,9558 12150,9545

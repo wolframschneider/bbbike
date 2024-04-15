@@ -2,6 +2,7 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+Kiefholzstr.: Gegenverkehrsregelung	X::inwork 16425,6445
 Schnellerstr./Rudower Str.: Gegenverkehrsregelung	X::inwork 18680,5413
 Mariendorfer Weg/Gottlieb-Dunkel-Str./Eschersheimer Str.: Gegenverkehrsregelung	X::inwork 11740,6338
 Allee der Kosmonauten/Straßenbahn	X::inwork 17778,13438
@@ -25,6 +26,7 @@ Kaulsdorfer Str./Bahrendorfer Str.	F::inwork 21956,7428
 Kaulsdorfer Str./Feuersteiner Str.	F::inwork 21708,7981
 Köpenicker Str./Dubickstr.	F::inwork 21079,8931
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
+Germanenstr.: Gegenverkehrsregelung	X::inwork 8227,19725
 Germanenstr.: Gegenverkehrsregelung	X::inwork 8333,19305
 	X::inwork 9868,19023
 	X::inwork 20891,17572
@@ -55,8 +57,8 @@ Gegenverkehrsregelung	X::inwork 18767,-1343
 	X 9395,8726
 	F 9570,8715
 	F 9225,9038
-	X 9801,8683
-	X 9793,9241
+	X 9807,8682
+	X 9801,9241
 	X 9753,9252
 	X 9233,8597
 	X 9229,8718
@@ -701,7 +703,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 21332,4655
 	X 21789,4520
 	X 22093,4499
-	X 21954,5229
+	X 21961,5228
 	X 22116,5442
 	X 22431,6068
 	X 18057,14549

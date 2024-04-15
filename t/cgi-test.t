@@ -12,7 +12,6 @@ BEGIN {
 		    ['HTML::Form'],
 		    ['LWP::UserAgent'],
 		    ['Test::More'],
-		    ['URI::Escape', qw(uri_escape)],
 		   ) {
 	my($mod, @imports) = @$moddef;
 	my $use_code = "use $mod" . (@imports ? ' qw(' . join(' ', @imports) . ')' : '') . '; 1';
@@ -44,6 +43,7 @@ use BBBikeTest qw(get_std_opts like_html unlike_html $cgidir
 		  validate_bbbikecgires_xml_string
 		  validate_bbbikecgires_data
 		  libxml_parse_html_or_skip eq_or_diff
+		  $debug
 		);
 
 sub bbbike_cgi_search ($$;$);
@@ -60,9 +60,9 @@ my $json_xs_tests = 4;
 my $json_xs_2_tests = 5;
 my $yaml_tests = 6;
 #plan 'no_plan';
-plan tests => 209 + $ipc_run_tests + $json_xs_0_tests + $json_xs_tests + $json_xs_2_tests + $yaml_tests;
+plan tests => 213 + $ipc_run_tests + $json_xs_0_tests + $json_xs_tests + $json_xs_2_tests + $yaml_tests;
 
-if (!GetOptions(get_std_opts("cgidir", "simulate-skips"),
+if (!GetOptions(get_std_opts("cgidir", "simulate-skips", "debug"),
 	       )) {
     die "usage!";
 }
@@ -186,10 +186,10 @@ SKIP: {
 }
 
 {
-    my $resp = bbbike_cgi_geocode +{start => 'Kottbusser Damm/Maybachstr.',
-				    ziel => 'Maybachstr./Schinkestr.',
+    my $resp = bbbike_cgi_geocode +{start => 'Kottbusser Damm/Maybachufer',
+				    ziel => 'Maybachufer/Schinkestr.',
 				   }, 'Find streets with crossing notation';
-    on_crossing_pref_page($resp);
+    on_pref_page_without_crossing($resp);
 }
 
 {
@@ -291,7 +291,7 @@ TODO: {
 				   }, 'Inofficial street';
     on_crossing_pref_page($resp);
     my $content = $resp->decoded_content;
-    like $content, qr{\Q(Rosengarten}, 'Found Rosengarten with parenthesis';
+    like_html $content, qr{\Q(Rosengarten}, 'Found Rosengarten with parenthesis';
 }
 
 {
@@ -301,7 +301,7 @@ TODO: {
 				   }, 'oldname';
     not_on_crossing_pref_page($resp);
     my $content = $resp->decoded_content;
-    like $content, qr{Rudi-Dutschke-Str.*alter Name.*Kochstr}, 'Found old name note';
+    like_html $content, qr{Rudi-Dutschke-Str.*alter Name.*Kochstr}, 'Found old name note';
 }
 
 {
@@ -311,7 +311,7 @@ TODO: {
 				   }, 'oldname (English)';
     not_on_crossing_pref_page($resp);
     my $content = $resp->decoded_content;
-    like $content, qr{Rudi-Dutschke-Str.*old name.*Kochstr}, 'Found old name note (English)';
+    like_html $content, qr{Rudi-Dutschke-Str.*old name.*Kochstr}, 'Found old name note (English)';
 }
 
 {
@@ -321,15 +321,15 @@ TODO: {
 				   }, 'oldname (unique)';
     on_crossing_pref_page($resp);
     my $content = $resp->decoded_content;
-    like $content, qr{Mehringdamm.*alter Name.*Belle-Alliance-Str.}, 'Found old name note';
+    like_html $content, qr{Mehringdamm.*alter Name.*Belle-Alliance-Str.}, 'Found old name note';
 }
 
 {
     # multiple cityparts
-    my $resp = bbbike_cgi_geocode +{start => uri_escape('gürtelstr')}, 'multi cityparts';
+    my $resp = bbbike_cgi_geocode +{start => 'gürtelstr'}, 'multi cityparts';
     my $content = $resp->decoded_content;
-    like $content, qr{value="Gürtelstr.!Friedrichshain, Lichtenberg!}, 'first alternative';
-    like $content, qr{value="Gürtelstr.!Prenzlauer Berg, Weißensee!}, 'second alternative';
+    like_html $content, qr{value="Gürtelstr.!Friedrichshain, Lichtenberg!}, 'first alternative';
+    like_html $content, qr{value="Gürtelstr.!Prenzlauer Berg, Weißensee!}, 'second alternative';
  SKIP: {
 	my $doc = libxml_parse_html_or_skip 3, $content;
 	my @radio_nodes = $doc->findnodes('//input[@type="radio" and @name="start2"]');
@@ -780,6 +780,20 @@ SKIP: {
     }
 }
 
+{
+    my %params = (simplify_tolerance => 1,
+		  startname => 'Seumestr.',
+		  vianame   => 'Wühlischstr.',
+		  zielname  => 'Simplonstr.',
+		  showroutelist => 1,
+		  output_as => 'gpx-track',
+		  gple => 'gjn_Im_dqAcGcDgApG|EbBlBqE', # already encoded track
+		 );
+    my $resp = bbbike_cgi_search +{ %params }, "another gpx-track";
+    is $resp->header('content-disposition'), 'attachment; filename=track_wuehlischstr_simplonstr.gpx', 'different start/goal name, but still detected as circular route';
+    gpxlint_string($resp->decoded_content(charset => 'none'));
+}
+
 sub bbbike_cgi_search ($$;$) {
     local $Test::Builder::Level = $Test::Builder::Level + 1;
     _bbbike_cgi_search({lang=>undef},@_);
@@ -824,9 +838,11 @@ sub bbbike_en_cgi_geocode ($$) {
 
 sub _bbbike_cgi_geocode ($$) {
     my($cgiopts, $params, $testname) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
     my $testcgi = _bbbike_lang_cgi $cgiopts;
     $params->{pref_seen} = 0;
     my $url = $testcgi . '?' . CGI->new($params)->query_string;
+    diag "url for _bbbike_cgi_geocode: $url" if $debug;
     my $resp = $ua->get($url);
     ok($resp->is_success, $testname);
     $resp;
@@ -843,16 +859,27 @@ sub _bbbike_lang_cgi ($) {
 
 sub on_crossing_pref_page {
     my($resp) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
     like_html($resp->decoded_content, qr{(?:Genaue Kreuzung angeben|Choose crossing):}, 'On crossing/pref page');
+}
+
+sub on_pref_page_without_crossing {
+    my($resp) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+    my $content = $resp->decoded_content;
+    unlike_html($content, qr{(?:Genaue Kreuzung angeben|Choose crossing):}, 'Crossing is already set');
+    like_html($content, qr{(?:Einstellungen|Preferences)}, 'On pref page');
 }
 
 sub not_on_crossing_pref_page {
     my($resp) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
     unlike_html($resp->decoded_content, qr{(?:Genaue Kreuzung angeben|Choose crossing):}, 'Not on crossing/pref page');
 }
 
 sub on_routelist_page {
     my($resp) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
     like_html($resp->decoded_content, qr{Route von .* bis}, 'On routelist page (title)');
     like_html($resp->decoded_content, qr{Fahrzeit}, 'On routelist page (Fahrzeit)');
 }
