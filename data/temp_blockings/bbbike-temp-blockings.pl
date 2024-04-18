@@ -650,7 +650,7 @@ EOF
        text  => 'Müllerstr. (Wedding) in beiden Richtungen zwischen Londoner Str. und Transvaalstr. Veranstaltung, Straße vollständig gesperrt (bis 17.07.2005 24 Uhr)',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 6005,16712 5931,16777 5894,16810 5772,16919
+	2 6005,16712 5923,16784 5894,16810 5772,16919
 	2 6005,16712 6032,16688 6098,16630
 	2 6098,16630 6201,16538 6304,16447
 EOF
@@ -4262,9 +4262,9 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4::temp 4392,17777 4429,17763 4584,17704
-	q4::temp 4392,17777 4326,17801
+	q4::temp 4392,17777 4320,17805
 	q4::temp 4584,17704 4683,17669
-	q4::temp 4326,17801 4200,17848 4096,17890 4016,17918
+	q4::temp 4320,17805 4200,17848 4096,17890 4016,17918
 EOF
      },
      { from  => 1144706400, # 2006-04-11 00:00
@@ -6952,7 +6952,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004242',
        data  => <<EOF,
-	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7820,17549 7675,17538 7579,17532
+	1::inwork 8206,17594 8094,17578 7998,17564 7915,17557 7841,17551 7820,17549 7675,17538 7579,17532
 EOF
      },
      { from  => 1165266184, # 2006-12-04 22:03
@@ -7672,7 +7672,7 @@ EOF
        text  => 'Vom 20.03. bis voraussichtlich zum 30.04.2007 wird die Fahrbahndecke der Namslaustraße zwischen Berliner Straße und Sterkrader Straße erneuert. Während der Bauzeit wird die Namslaustraße in Richtung Berliner Straße als Einbahnstraße ausgewiesen. ',
        type  => 'gesperrt',
        data  => <<EOF,
-	1::inwork 2690,19099 2585,19091 2460,19083 2098,19058
+	1::inwork 2690,19099 2585,19091 2460,19083 2081,19072
 EOF
      },
      { from  => 1175292000, # 2007-03-31 00:00
@@ -8150,7 +8150,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005465',
        data  => <<EOF,
-	1::inwork 2821,18831 2680,18757 2643,18738 2602,18737 2175,18740 1967,18743 1659,18747 1405,18749 1229,18750
+	1::inwork 2821,18831 2680,18757 2643,18738 2602,18737 2175,18740 1967,18743 1659,18747 1405,18749 1218,18751
 EOF
      },
      { from  => undef, # 
@@ -8622,7 +8622,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005655',
        data  => <<EOF,
-	2::temp 6304,16447 6201,16538 6098,16630 6032,16688 6005,16712 5931,16777 5894,16810 5772,16919
+	2::temp 6304,16447 6201,16538 6098,16630 6032,16688 6005,16712 5923,16784 5894,16810 5772,16919
 EOF
      },
      { from  => 1180783165, # 2007-06-02 13:19
@@ -9140,7 +9140,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004242',
        data  => <<EOF,
-	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7820,17549 7675,17538 7579,17532
+	1::inwork 8206,17594 8094,17578 7998,17564 7915,17557 7841,17551 7820,17549 7675,17538 7579,17532
 EOF
      },
      { from  => undef, # 
@@ -23175,7 +23175,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_020924',
        data  => <<EOF,
-	q4::inwork; 1229,18750 1328,18878 1447,18933 1528,18971
+	q4::inwork; 1218,18751 1314,18871 1447,18933 1528,18971
 EOF
      },
      { from  => undef, # 
@@ -35485,11 +35485,12 @@ EOF
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/markthalle-101-ehemalige-quellekaufhaus.587/#post-17884
 #: by: https://www.deutsches-architekturforum.de/thread/14587-revitalisierung-b%C3%BCrokomplex-kalle-neuk%C3%B6lln-in-bau/
 #: by: https://www.kalle-neukoelln.com/#architektur (Erstbezüge ab 2022 möglich)
+#: by: https://www.berliner-woche.de/neukoelln/c-bauen/kalle-neukoelln-wird-nach-und-nach-bezogen_a413054
 #: osm_watch: way id="734271970" version="6"
 #: osm_watch: way id="975241319" version="7"
 #: osm_watch: way id="970452276" version="7"
 #: also_indoor: traffic (none)
-#: last_checked: 2024-04-01
+#: last_checked: 2024-04-17 (daf)
 #: check_frequency: 30d
 	q3::inwork; 12805,8194 12873,8218 12911,8232
 # REMOVED ---	q4::inwork 12873,8218 12911,8232
@@ -37555,6 +37556,7 @@ EOF
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/hochhaus-am-barbarossadreieck-darf-derzeit-nicht-weitergebaut-werden_a405579
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/sch%C3%B6neberger-eck.652/page-3#post-22745
 #: by: http://www.deal-magazin.com/news/3/133880/Berlin-Bauarbeiten-fuer-Buerohochhaus-Schoeneberger-Eck-gehen-weiter (Fertigstellung nun Mitte 2025)
+#: by: https://www.berliner-woche.de/schoeneberg/c-bauen/barbarossadreieck-bau-geht-weiter_a412889
 #: note: Halteverbotsschilder bis 31.12.2023
 #: note: Außerdem Bauschild der Wasserbetriebe, bis November 2023; es gibt auch kleinere Einschränkungen an den Kreuzungen der Barbarossastr. (mittlerweile (Juni 2023) sind diese entfallen)
 #: add_fragezeichen: Ist die Fahrbahn der Speyerer Str. weiterhin gesperrt?
@@ -38449,7 +38451,7 @@ EOF
 #: osm_watch: way id="37861386" version="26"
 #: last_checked: 2024-03-26 (okas)
 #: check_frequency: 120d
-# REMOVED --- #: next_check: 2023-10-09
+#: next_check: 2024-10-25
 	q4::inwork; 22431,6068 22467,6135
 EOF
      },
@@ -38848,8 +38850,8 @@ EOF
 #: historical_note: früher (Sommer 2023?) waren die Gehwege explizit für Radfahrer freigegeben, jetzt (Dezember 2023) stehen explizite Radfahrer-verboten-Schilder
 #: osm_watch: note 3834145 3
 #: osm_watch: note 3834144 1
-#: also_indoor: traffic (ex-H,G,B,ex-W)
-#: last_checked: 2024-04-03
+#: also_indoor: traffic (ex-H,G,B,W)
+#: last_checked: 2024-04-16 (traffic)
 # REMOVED --- #: check_frequency: 30d
 #: check_frequency: 14d
 #: next_check: 2024-05-24
@@ -39696,14 +39698,15 @@ EOF
      },
      { from  => 1687406400, # 2023-06-22 06:00
        until => $isodate2epoch->("2024-06-30 17:00:00"), # dont_check_date => 1, until => undef, # 1693494000, # 2023-08-31 17:00
-       text  => 'Koppenstr.: Anbindung Friedenstr. wegen Bauarbeiten gesperrt, Radfahrer sollen schieben, mindestens bis Ende Juni 2024',
+       text  => 'Koppenstr.: Anbindung Friedenstr. wegen Bauarbeiten gesperrt, Radfahrer sollen schieben, voraussichtlich bis Ende Juni 2024',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: FRIEDENKOPPEN-2023
-#: source_id: viz2021:13.437884,52.520284,23.06.2023,06:00 (bis 15.10.2023) (inaktiv) (bis 31.01.2024, weitere Arbeiten im Anschluss) (bis 29.02.2024) (bis 02.04.2024) (bis 30.06.2024)
+#: source_id: viz2021:13.437884,52.520284,23.06.2023,06:00 (bis 15.10.2023) (inaktiv) (bis 31.01.2024, weitere Arbeiten im Anschluss) (bis 29.02.2024) (bis 02.04.2024) (bis 30.06.2024) (bis 18.04.2024)
 #: osm_watch: note 4161500 2
-#: last_checked: 2024-04-14
-#: next_check: 2024-06-30
+#: last_checked: 2024-04-17
+# REMOVED --- #: next_check: 2024-06-30
+#: next_check: 2024-04-18
 	q3::inwork 12632,12630 12690,12769
 EOF
      },
@@ -40692,7 +40695,7 @@ EOF
      { from  => 1669791600, # 2022-11-30 08:00
        until => $isodate2epoch->("2024-11-30 18:00:00"), # 1711897200, # 2024-03-31 17:00
        #text  => 'Koloniestr.: Bauarbeiten an der Osloer Str., etwa 70m der Fahrbahn sind gesperrt, vom 01.12.2022 08:00 bis 31.03.2024 17:00',
-       text  => 'Koloniestr.: Bauarbeiten an der Osloer Str., etwa 70m der Fahrbahn sind gesperrt, voraussichtlich bis Ende November 2024',
+       text  => 'Koloniestr.: Bauarbeiten an der Osloer Str., Radwegführung auf dem Gehweg, voraussichtlich bis Ende November 2024',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.377083,52.55627,01.12.2022,08:00 (bis 31.03.2024) (inaktiv)
@@ -40700,6 +40703,7 @@ EOF
 #: note: Baustellenbereich ist etwa 70m lang, Radwegführung auf dem Gehweg fängt bereits früher an, insgesamt ca. 170m
 #: note: bei rbb bis 30.11.2024; bei Bing bis 8.4.2024, mittlerweile auch bis November 2024
 #: add_fragezeichen: Sind die Bauarbeiten in der Koloniestr. beendet?
+#: last_checked: 2024-04-17
 #: next_check: 2024-11-30
 	q3::inwork 8486,16425 8467,16718
 EOF
@@ -40842,7 +40846,7 @@ EOF
 #: next_check_id: METZER-2023
 #: source_id: viz2021:13.413286,52.532546,01.08.2023,07:00 (bis 2.1.2025)
 #: osm_watch: way id="23121446" version="32"
-#: last_checked: 2024-04-11 (mapillary) vvv
+#: last_checked: 2024-04-17 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2025-01-02 vvv
 # REMOVED (mittlerweile wurde das Radfahren-verboten-Schild entfernt, und Radfahrer benutzen auch die Fahrbahn --- oder das Schild existiert noch, ist aber dauerhaft umgedreht) ---	q4::inwork; 10908,13978 10933,14122
@@ -41080,7 +41084,7 @@ EOF
 #: by: https://www.deutsches-architekturforum.de/thread/4128-berliner-stadtverkehr-stra%C3%9Fe-bus-und-bahn-wasserstra%C3%9Fen-geb%C3%A4ude/?postID=749262#post749262
 #: note: Gehweg, Radfahrer frei
 #: add_fragezeichen: Besteht die Sperrung noch immer?
-#: last_checked: 2024-03-18 (okas)
+#: last_checked: 2024-04-17
 #: check_frequency: 120d
 #: next_check: 2024-12-31
 	q3::inwork 4335,17642 4392,17777
@@ -41194,14 +41198,15 @@ EOF
      { from  => 1699225200, # 2023-11-06 00:00
        until => undef, # 1703285999, # 2023-12-22 23:59
        #text  => 'Stegeweg: Fahrbahninstandsetzung, evtl. gibt es Einschränkungen für Radfahrer, vom 06. November 2023 bis zum 22. Dezember 2023',
-       text  => 'Stegeweg: Fahrbahninstandsetzung, evtl. gibt es Einschränkungen für Radfahrer, Ende der Bauarbeiten unbekannt',
+       text  => 'Stegeweg: Bauarbeiten, Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: STEGEWEG-2023
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=12146 (Anfrage)
-#: last_checked: 2024-02-15 (Pressemitteilung)
+#: last_checked: 2024-04-17
 #: check_frequency: 90d
-	q4::inwork 6869,18721 6879,18737 6910,18861 6960,19047
+	q4::inwork 6869,18721 6879,18737 6910,18861
+# REMOVED (hier fertig) ---	q4::inwork 6910,18861 6960,19047
 EOF
      },
      { from  => 1698051600, # 2023-10-23 11:00
@@ -42260,14 +42265,15 @@ EOF
 # 
      { from  => 1709576392, # 2024-03-04 19:19
        until => 1748728800, # 2025-06-01 00:00
-       text  => 'Spreeradweg: Bauarbeiten, Sperrung im Bereich Iburger Ufer, möglicherweise bis Mai 2025',
+       text  => 'Spreeradweg: Bauarbeiten, Sperrung im Bereich Iburger Ufer, voraussichtlich bis 31. Mai 2025',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: SPREERADWEGIBURGER-2024
 #: note: 2. Bauabschnitt, 1. Teilabschnitt; später wird östlich des Siemensstegs weitergebaut
+#: by: https://www.deutsches-architekturforum.de/thread/10386-gr%C3%BCne-wege-in-berlin-neu-oder-erneuert/?postID=759660#post759660
 #: last_checked: 2024-03-04 (daf)
 #: check_frequency: 90d
-#: next_check: 2025-05-01
+#: next_check: 2025-05-31
 	2::inwork 3867,12616 3888,12618 4131,12641
 EOF
      },
@@ -42430,6 +42436,7 @@ EOF
 #: by: https://viz.berlin.de/aktuelle-meldungen/verkehrsvorschau/?date=20240410 (westliche Seite)
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1778275531894686173 (westliche Seite)
 #: by: https://pbs.twimg.com/media/GKy422UWIAIeE_t?format=jpg
+#: by[nocache]: https://twitter.com/SaskiaEllenbeck/status/1780312309820235976 (zur Umgestaltung)
 #: last_checked: 2024-04-09 vvv
 # REMOVED --- #: check_frequency: 7d vvv
 # REMOVED --- #: next_check: 2024-04-11 vvv
@@ -42569,6 +42576,7 @@ EOF
 #: by: https://www.tagesspiegel.de/berlin/mietshaus-in-berlin-schoneberg-evakuiert-absenkungen-risse-in-den-wanden-einsturzgefahr-11494301.html
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1778682517517631737 (voraussichtlich bis Ende April 2024)
 #: by: https://berliner-abendblatt.de/berlin-news/risse-an-fassade-von-schoeneberger-wohnhaus-einsturzgefahr-id249463
+#: by: https://berliner-abendblatt.de/berlin-news/stahlkonstruktion-soll-schoeneberger-wohnhaus-abstuetzen-id249921
 #: source_id: viz2021:13.360095,52.490517,10.04.2024,13:36 (inaktiv)
 #: source_id: viz2021:13.35319,52.48988,12.04.2024,08:59 (bis 30.04.2024)
 #: source_id: bvg2021:n7#BVG346248_0
@@ -42594,12 +42602,15 @@ EOF
 	2::inwork -9031,-54801 -7465,-53204
 EOF
      },
-     { from  => 1700564400, # 2023-11-21 12:00
+     { from  => 1713246879,
        until => 1719846000, # 2024-07-01 17:00
-       text  => 'Erkstr.: Anbindung zur Karl-Marx-Str. unterbrochen, evtl. sind auch Radfahrer betroffen, bis 01.07.2024 17:00',
+       text  => 'Erkstr.: Anbindung zur Karl-Marx-Str. unterbrochen, evtl. sind auch Radfahrer betroffen, voraussichtlich ab Ende April 2024 bis 01.07.2024 17:00',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.434335,52.481525,21.11.2023,12:00 (bis 01.07.2024)
+#: add_fragezeichen: Gibt es hier überhaupt eine Sperrung?
+#: by: https://www.kms-sonne.de/baustellennews?date=20240416 (voraussichtlich ab Ende 2024 bis April 2025)
+#: by: https://www.kms-sonne.de/assets/2024/04/Baustellenuebersicht-A4-04-2024-v3-Web.pdf
 #: also_indoor: traffic (none)
 #: next_check: 2024-04-16
 	q4::inwork 12765,8435 12598,8390
@@ -42612,6 +42623,15 @@ EOF
        data  => <<EOF,
 #: by: rbb
 	q4::inwork 20388,3100 20478,3156 20717,3310
+EOF
+     },
+     { from  => undef,
+       until => $isodate2epoch->("2025-01-31 17:00:00"),
+       text  => 'Schönerlinde - Mühlenbeck: Bauarbeiten, Sperrung der Brücke, evtl. sind auch Radfahrer betreoffen, bis 31.01.2025 17:00 Uhr',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: source_id: LS/221-E/23/175 (bis 10.01.2024)
+	2::inwork 11448,28068 12126,27740
 EOF
      },
     );

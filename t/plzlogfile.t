@@ -13,8 +13,12 @@ use PLZ;
 use PLZ::Multi;
 use Getopt::Long;
 use CGI;
+use BBBikeCGI::Util;
 use BBBikeTest;
 use Strassen::Strasse;
+
+use Encode qw(decode);
+use I18N::Langinfo qw(langinfo CODESET);
 
 BEGIN {
     if (!eval q{
@@ -37,6 +41,17 @@ my $potsdam = 1;
 my $extern = 1;
 my $forward = 0;
 my $v;
+
+my $codeset;
+if ($ENV{LC_ALL} eq 'C') { # C is often just set to force non-unicode semantics, not really denoting the terminal characteristics
+    $codeset = 'UTF-8';
+} else {
+    $codeset = langinfo(CODESET());
+}
+$codeset = lc $codeset; # 'UTF-8' is not recognized by emacs, but 'utf-8' is
+binmode STDOUT, ":encoding($codeset)";
+binmode STDERR, ":encoding($codeset)";
+$_ = decode($codeset, $_) for @ARGV;
 
 GetOptions("doit!" => \$doit,
 	   "hnr!"  => \$hnr,
@@ -126,6 +141,7 @@ my $lastdate;
 	next if m{"BBBike-Test/\d};
 	chomp;
 	my $q = CGI->new($1);
+	BBBikeCGI::Util::decode_possible_utf8_params($q);
 	my($thisdate, $thistime) = $_ =~ m{\[(\d{2}/.{3}/\d{4}):([0-9:]+)};
 	if (!defined $lastdate || $lastdate ne $thisdate) {
 	    print "# $thisdate " . ("#"x60) . "\n";
