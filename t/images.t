@@ -37,6 +37,7 @@ chdir "$FindBin::RealBin/../images" or die $!;
 for (glob("*.*")) {
     next if /\.(svg|xcf)$/;
     next if /\.xpm$/; # XXX xpmtoppm cannot handle the color "opaque"
+    next if /osmand-.*contours/; # iCCP: known incorrect sRGB profile
     image_ok($_, $_);
 }
 
