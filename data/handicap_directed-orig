@@ -403,7 +403,7 @@ Otto-Schmirgal-Str. -> Am Tierpark: Z-Übergang	DH:h=q4,25 18512,10337 18554,1035
 #: source_id: viz2021:13.457474,52.491787,29.07.2021,07:00 (bis 30.04.2024)
 #: osm_watch: way id="1005683568" version="16"
 #: osm_watch: way id="1022420059" version="16"
-#: last_checked: 2024-04-01 vvv
+#: last_checked: 2024-04-18 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-04-30 vvv
 #: note: allerdings spart man hier eine Ampel
@@ -480,12 +480,12 @@ Scharnweberstr.: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:t=2
 #: last_checked: 2024-04-07 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-04-30 vvv
-# REMOVED --- Marggrafbrücke: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 16747,6813 16720,6845
-# REMOVED --- Marggrafbrücke: Radfahrer müssen auf den gegenüberliegenden Radweg verlassen	DH:t=20 16720,6845 16677,6892
+# REMOVED --- Marggraffbrücke: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20 16747,6813 16720,6845
+# REMOVED --- Marggraffbrücke: Radfahrer müssen auf den gegenüberliegenden Radweg verlassen	DH:t=20 16720,6845 16677,6892
 #: note: eine Anforderungsampel, die aber recht flott grün wird
-Marggrafbrücke: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20:len=30 16563,7012 16627,6945 16677,6892
+Marggraffbrücke: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	DH:t=20:len=30 16563,7012 16627,6945 16677,6892
 #: note: zwei Ampeln müssen genommen werden
-Marggrafbrücke: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:t=40:len=30 16720,6845 16747,6813 16805,6747
+Marggraffbrücke: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:t=40:len=30 16720,6845 16747,6813 16805,6747
 #: note: nach dem Umweg gleicher Weg wie oben
 Güldenhofer Ufer - Köpenicker Landstr.: Umweg zurück zur Ampel	DH:t=20:len=175:h=q3,75 16630,6800 16677,6892 16720,6845
 Minna-Todenhagen-Brücke - Köpenicker Landstr: zusätzliche Ampel	DH:t=20 16834,6910 16747,6813 16805,6747
@@ -532,5 +532,13 @@ Hansastr.: Radfahrer müssen den gegenüberliegenden Radweg verlassen	DH:tl:len=30
 # REMOVED --- Bornitzstr. -> Ruschestr.: über Gehweg/Parkplatz	DH:h=q3,60 16073,12883 15950,12886 15912,13153
 # REMOVED --- #: valid ^^^
 # REMOVED --- #: next_check ^^^
+# 
+#: next_check_id: FRIEDENAUERHOEHE-2024
+#: by[nocache]: https://twitter.com/VIZ_Berlin/status/1782634252464541935
+#: by: https://pbs.twimg.com/media/GLx3xtUW4AAMd5N?format=jpg&name=large
+#: source_id: viz2021:13.34261,52.477362,23.04.2024,07:00 (bis 28.06.2024)
+#: next_check: 2024-06-28
+#: valid: -20240628
+Hauptstr. -> Rubensstr.: Umweg über Baustellenampel	DH:len=50 6333,7927 6293,7875 6306,7864
 # 
 #: temporary ^^^

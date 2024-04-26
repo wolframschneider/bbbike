@@ -202,7 +202,7 @@ Karlshof - Güstebieser Loose: Qualität?	? 68093,39134 68446,39421 68893,39887 69
 Karlshof - Kerstenbruch: Qualität?	? 68093,39134 68259,38696 68318,38518 68345,38270 68285,37992
 Wustrow - Ferdinandshof - Oder: Qualität?	? 64975,40490 65067,40569 65237,40581 65676,41496 65965,41684 66146,41809 66289,42176 66556,42862 67337,43609
 Neukarlshof: Qualität?	? 68259,38696 68394,38613 68679,38563 68988,38584 69411,38780 69512,38788 69787,38943 70449,39700
-Neulewin - Karlsbiese - Oder: Qualität?	? 69283,37114 69460,37260 70368,37656 70600,37870 70856,38491 71039,39113 71179,39606 71425,40109 71672,40472 71946,40655
+Neulewin - Karlsbiese - Oder: Qualität?	? 69283,37114 69460,37260 70368,37656 70600,37870 70856,38491 71039,39113 71179,39606 71425,40109 71447,40211 71699,40506 71924,40628 71966,40734
 Neulewin - Altlewin: Qualität?	? 69283,37114 69369,36858 69351,36547 68906,36291 68705,35895 68516,35134 68004,34549
 Wriezen - Altlewin: Qualität?	? 62495,36127 63972,35777 64776,35577 65743,35343 67382,34942 68004,34549
 Thöringswerder - Beauregard: Qualität?	? 64776,35577 64982,36412 64972,36830 65115,37105 65212,37167 65191,37260 64712,37668
@@ -319,7 +319,6 @@ L15 - Neuthymen: Qualität (zumindest am südlichen Ende asphaltiert)?	? -4847,880
 Gartenstr. (Elstal): Qualität?	? -18164,14194 -18107,14301 -18017,14480 -17979,14574 -17937,14727 -17871,14855 -17821,14925 -17763,15004
 Spechthausener Str. (Eberswalde): Qualität?	? 34335,48744 34378,48552 34354,48308 34372,48205 34451,47693 34518,47449 34475,47425
 Zoostr. (Eberswalde): Qualität?	? 34475,47425 34603,47145 34622,46834 34939,46907 35014,47009 35182,47081
-Oderfähre: ab 2007-06-30 in Betrieb	? 71946,40655 72361,41057
 Battinsthal - Penkun: Qualität? zumindest am nördlichen Ende asphaltiert; laut osm asphaltiert	? 65975,103506 65883,103056 66039,102017 66127,101413
 Am Luftschiffhafen - R1/Uferweg: existiert eine Verbindung für Radfahrer? Qualität?	? -15729,-3566 -15596,-3719
 Krugsdorfer Damm - Rothenburg: Qualität vor der Ortschaft?	? 53255,124438 53217,125181 53023,125365
@@ -336,7 +335,6 @@ Neues Bollwerk (Ueckermünde): Qualität?	? 51665,148848 51605,148764
 Lassan - Anklam: Qualität?	? 37809,172428 37577,172172 37273,171892 37090,171843 36870,171794 35652,171197 34689,170722 33482,169795 32836,169296 31739,168418 31093,167906 30231,167202
 Murchin - Daugzin: Qualität?	? 30231,167202 30045,167370 29826,167541 29631,167516 29521,167650 29302,167394 28814,167333 28522,167382 27912,167626 27766,167711 27473,167763 27303,167797
 Libnow - Lassan: Qualität (möglicherweise nur ein Feldweg)?	? 31996,167054 32020,167181 32132,167279 32157,167349 32145,167413 31739,168418
-Freest - Peenemünde, Fähre (Telefon 038371-20829 oder 0170-1607371): Wann fährt hier die Fähre?	? 28887,192995 29771,193403 30250,193525 30746,192592 31301,192513 31355,192739 31413,192783
 Mückendorf/B96 - Richtung Teupitz: Qualität? Wie geht es in Richtung Teupitz weiter?	? 18001,-35985 18101,-35914 18479,-35645 18936,-35316 19344,-35036 19826,-34707 20021,-34512 20246,-34268 20338,-34165 20618,-33964 20661,-33854
 Marquardter Str. (Schwarzer Weg): Qualität? Wie lautet der Straßenname?	? -18370,4354 -18387,4354 -18620,4569
 Garz - Korswandt: Qualität? Sind Teile der Strecke für Autos gesperrt?	? 59381,165027 59305,165173 59262,165310 59177,165487 59174,165716 59208,165863
@@ -591,7 +589,7 @@ Kirschweg (Potsdam-Uetz-Paaren): Qualität?	? -20914,8535 -20996,8861
 Laubenweg (Potsdam-Grube): Qualität?	? -19987,2459 -19891,2447
 Schwarzer Weg (Potsdam-Grube): Qualität?	? -19422,2220 -19433,2155 -19691,2134 -19924,2119 -20031,2094
 Schmidtshof (Potsdam-Grube): Qualität?	? -19691,2134 -19689,2191 -19927,2193 -19927,2216 -20053,2244
-Zum Wasserturm: Spielstraße? Können Radfahrer direkt zur Friedrich-Engels-Str. fahren?	? -11834,-2191 -11830,-2053
+Zum Wasserturm: Spielstraße? Können Radfahrer direkt zur Friedrich-Engels-Str. fahren?	? -11834,-2213 -11834,-2191 -11830,-2053
 Am Golmer Weinberg (Potsdam-Golm): Qualität?	? -19197,-348 -19180,-292 -19175,-237
 Ritterstr. (Potsdam-Golm): Qualität? Genaue Lage	? -19180,-292 -19101,-318
 Am Gutstor (Groß Glienicke): Qualität?	? -9429,7137 -9445,7199 -9506,7421
@@ -875,6 +873,7 @@ Gellmersdorf - Stolpe: unpassierbar (Wie ist die Fahrbahnbeschaffenheit hier (as
 Werbelow - Schönwerder: überwiegend Asphalt, einige Betonabschnitte (Ist die Straße nach den Bauarbeiten vollständig asphaltiert?)	? 40045,116809 40009,116727 39165,116170 38662,115923 38720,115773 39259,115457 39384,115027 39168,114713 38881,113150 38762,112839 38769,112714 38717,112568 38586,112384 38471,111856 38342,111572 38165,110063 38464,109293 38644,109058 38762,108738 38586,108244 38354,107611
 Schönfeld - Neuenfeld: vermutlich Plattenweg (wie ist die Qualität östlich der Autobahnbrücke (Plattenweg, asphaltiert, Kopfsteinpflaster...)?)	? 48858,113323 49444,113579 49802,113824
 Am Templiner See: Beton (Beton oder wassergebundene Decke?)	? -14585,-2338 -14725,-2434
+Briesen - Petersdorf: guter bis mäßiger Asphalt (nach den Bauarbeiten guter Asphalt? Gibt es hier mittlerweile einen Radweg?)	? 70549,-5215 71331,-5118 73292,-4598 74238,-3970
 Kliestow - Wüste Kunersdorf: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 86555,-2783 86261,-1514 85834,181 86307,581
 Mühlental - Lebus: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 85662,1959 85885,2842 85956,3025 85940,3299
 Mützlitz: gutes Kopfsteinpflaster (nach Ende der Bauarbeiten (2006-10-06) vielleicht asphaltiert?)	? -50578,15920 -50505,15845 -50271,15917
@@ -936,5 +935,7 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 L25 (Schmölln - Güstow): hier entsteht ein Radweg (Gibt es einen neuen Radweg im Bereich Schmölln - Autobahnauffahrt?)	? 55977,100103 56030,100076 56188,99924 56268,99856 56856,99683 57042,99574 57512,99290 57634,99199
 Schönfließer Str., Senheimer Str., Gollanczstr.: Bauarbeiten geplant, kommt es dabei zu Änderungen (z.B. Asphaltierungen?) (Sind die Bauarbeiten in der Schönfließer Straße beendet?)	? 2206,25649 2139,25830 2112,26066 2207,26090 2293,26111 2402,26121 2490,26126 2499,26128 2490,26126 2484,25984 2496,25915 2519,25772 2515,25666
 # added from bbbike-temp-blockings-optimized
+Berliner Allee: Bauarbeiten zwischen Rennbahnstr. und Buschallee, evtl. sind auch Radfahrer betroffen, außerdem Einbahnstraßenregelung in der südlichen Parkstr., vom 24. April 2024 bis 26. Januar 2025 (Gibt es tatsächlich Einschränkungen für Radfahrer?)	? 14558,16907 14608,16772 14622,16674 14624,16659 14619,16551
+Lehderstr.: Einbahnstraßenregelung zwischen Börnestr. und Behaimstr., offen Richtung Westen, Ende der Bauarbeiten unbekannt (Besteht die Einbahnstraßenregelung noch immer?)	? 13086,15907 13214,15830
 Steg am Krugpfuhl gesperrt, Ende der Sperrung unbekannt (Wann ist der Steg wieder offen?)	? 11162,22939 11150,22898
-Erkstr.: Anbindung zur Karl-Marx-Str. unterbrochen, evtl. sind auch Radfahrer betroffen, voraussichtlich ab Ende April 2024 bis 01.07.2024 17:00 (Gibt es hier überhaupt eine Sperrung?)	? 12765,8435 12598,8390
+Dietlindestr.: Sperrung an der Rüdigerstr., möglicherweise bis September 2024 [Dietlindestr.: Sperrung im Einmündungsbereich] (Gibt es weiterhin eine Einbahnstraßenregelung bzw. Sperrung?)	? 17056,12304 17088,12506

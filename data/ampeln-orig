@@ -15,9 +15,9 @@ Kiefholzstr.: Gegenverkehrsregelung	X::inwork::alternating 16425,6445
 #: XXX Schnellerstraße (Niederschöneweide) in beiden Richtungen zwischen Rudower Straße und Köllnische Straße: Kabelschachtsanierung, Gegenverkehrsregelung durch Baustellenampel, vom 25.03.2024 11:00 bis 03.05.2024 17:00
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1772165269927981192
 #: by: https://pbs.twimg.com/media/GJSQEhiXwAAgVQE?format=jpg&name=large (außerdem Anbindung Rudower Str. (von Süden her) gesperrt)
-#: source_id: viz2021:13.526211,52.452649,25.03.2024,11:00 (bis 03.05.2024)
-#: next_check: 2024-05-03
-#: valid: -20240503
+#: source_id: viz2021:13.526211,52.452649,25.03.2024,11:00 (bis 03.05.2024) (bis 24.05.2024)
+#: next_check: 2024-05-24
+#: valid: -20240524
 Schnellerstr./Rudower Str.: Gegenverkehrsregelung	X::inwork::alternating 18680,5413
 # 
 #: XXX Mariendorfer Weg/Gottlieb-Dunkel-Straße (Neukölln) in beiden Richtungen Höhe Eschersheimer Straße: Fernwärmeleitungsbau, Gegenverkehrsregelung mit Baustellenampel, Anbindung Eschersheimer Straße gesperrt, vom 06.03.2024 12:00 bis 25.10.2024 17:00
@@ -53,7 +53,7 @@ Allee der Kosmonauten/Straßenbahn	X::inwork 17778,13438
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/michaelkirchstra%C3%9Fe-22-23.408/post-22461
 #: XXX eigentlich zwei Ampeln
 #: osm_watch: way id="124182482" version="9"
-#: last_checked: 2024-04-03
+#: last_checked: 2024-04-21
 Michaelbrücke	F::inwork 11676,11839
 # 
 #: next_check_id: SCHOENEWEIDE-2018
@@ -158,10 +158,17 @@ Bellevuestr.: Gegenverkehrsregelung	X::inwork::alternating 8328,11617
 #: source_id: viz2021:13.47181,52.50783,24.01.2023,09:00 (bis 03.06.2024) (inaktiv)
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024)
 #: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung; Anforderungsampeln; außerdem mittlerweile eine Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
-#: last_checked: 2024-04-10
+#: last_checked: 2024-04-21
 #: check_frequency: 120d
 #: next_check: 2024-06-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
+# 
+#: note: Halteverbotsschilder bis 31.12.2025
+#: note: Anforderungsampel; außerdem Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
+#: last_checked: 2024-04-21
+#: check_frequency: 120d
+#: next_check: 2025-12-31
+Gürtelstr.	F::inwork 15153,11691
 # 
 #: next_check_id: KNOTENMARZAHN-2022
 #: last_checked: 2024-04-06 vvv
@@ -222,7 +229,7 @@ B179/Fichtestr.	X::inwork 26138,-12596
 #: source_id: viz2021:13.57339,52.45923,11.03.2024,00:00 (bis 27.09.2024) (inaktiv)
 #: source_id: viz2021:13.572881,52.460427,11.03.2024,12:00 (bis 27.09.2024)
 # REMOVED --- #: note: Länge der Gegenverkehrsregelung: östlicher Abschnitt ca. 50m, nördlicher Abschnitt ca. 40m
-#: last_checked: 2024-04-10 vvv
+#: last_checked: 2024-04-20 (okas) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-09-27 vvv
 #: valid: -20240927 vvv
@@ -270,7 +277,7 @@ Köpenicker Str./Dubickstr.	F::inwork 21079,8931
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2024-04-10
+#: last_checked: 2024-04-20
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork::alternating 16355,9622
 # 
@@ -3346,7 +3353,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2024-04-12 vvv
+#: last_checked: 2024-04-21 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514

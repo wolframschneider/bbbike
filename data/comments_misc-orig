@@ -220,6 +220,8 @@ Kreisverkehr	Roundabout -18722,5775
 Kreisverkehr	Roundabout -18598,5444
 Kreisverkehr	Roundabout 17183,14358
 #: by: mapillary vvv
+Kreisverkehr	Roundabout -8821,-3036
+Kreisverkehr	Roundabout -8782,-2910
 Kreisverkehr	Roundabout 33877,6922
 Kreisverkehr	Roundabout 56616,-2062
 Kreisverkehr	Roundabout 52886,20049
@@ -1713,11 +1715,11 @@ Büxensteinallee: diagonal über die Straßenbahngleise, erst dahinter ist ausge
 # 
 Am Weingarten: an der Einmündung Sigridstr. den linken Strang benutzen	CP2; 13867,14507 13765,14665
 # 
-Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17956,10372
+Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17960,10378
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9724 (Anfrage)
-#: last_checked: 2024-03-05 (daf) vvv
+#: last_checked: 2024-04-20 vvv
 #: check_frequency: 60d vvv
 #: historical_note: bis Januar/Februar 2024: "stattdessen Wegweiser zu fünf Straßen im Wohngebiet"
 Ruth-Baumgarte-Str.: nicht ausgeschildert	CS; 17794,8429 17738,8450
@@ -1790,7 +1792,7 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2024-04-12 vvv
+#: last_checked: 2024-04-21 vvv
 #: check_frequency: 90d vvv
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10685,12422
@@ -1833,7 +1835,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2024-04-10 vvv
+#: last_checked: 2024-04-20 vvv
 #: check_frequency: 60d vvv
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
 # REMOVED (ausgeschildert) --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
@@ -1865,10 +1867,10 @@ ausgeschildert "Jelena-Šantić-Friedenspark"	CP2; 22854,14018 22903,14063
 # 
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_02_0141_0296_online.pdf
 #: add_fragezeichen: Hängen hier mittlerweile Straßenschilder?
-#: last_checked: 2024-03-27
+#: last_checked: 2024-04-20
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2023-02-13
-Zur Märkischen Aue: nicht ausgeschildert	CS 17848,11204 17893,11146 17905,11122 17924,10964 17915,10866 17892,10713 17870,10619 17856,10560 17864,10537
+Zur Märkischen Aue: nicht ausgeschildert	CS 17848,11204 17893,11146 17905,11122 17924,10964 17915,10866 17900,10730 17892,10713 17870,10619 17856,10560 17864,10537
 # 
 Havelwerke	CS -1854,14989 -1945,15018 -2009,15033 -2070,15046
 Havelwerke	CS -1985,14916 -1946,14907 -1937,14955 -1959,14962 -1945,15018
@@ -1896,10 +1898,10 @@ Aaron-Bernstein-Platz: nicht ausgeschildert	CS 9353,13273 9382,13265 9385,13246 
 # REMOVED --- #: XXX im Quartier Am Tacheles werden zwei Privatplätze entstehen und bekommen die Namen (fehlen in Berlin.coords.data): --- #: XXX Johannisplatz (PLZ=10117 laut LOR und DPAG) --- #: XXX laut daf ist der Zugang zum Johannisplatz provisorisch geöffnet; Mosaikpflaster
 # REMOVED --- #: XXX Aaron-Bernstein-Platz (PLZ=10117 laut LOR und DPAG)
 #: XXX noch Bauarbeiten, ein Strang noch gesperrt, wird es Schilder geben?
-#: last_checked: 2024-03-21 (architektur-urbanistik) vvv
+#: last_checked: 2024-04-18 (daf) vvv
 # REMOVED --- #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2024-03-31 vvv
-#: osm_watch: way id="941599318" version="6"
+#: osm_watch: way id="941599318" version="7"
 Johannisplatz: nicht ausgeschildert	CS 9385,13174 9385,13246
 # REMOVED (eingetragen) --- #: osm_watch: way id="940764588" version="9" --- #: XXX laut osm nun offen --- #: next_check: 2023-09-05 --- Aaron-Bernstein-Platz: in Bau, vermutlich nur für Fußgänger	?::inwork 9353,13273 9382,13265 9385,13246 9463,13256 9476,13293
 # REMOVED --- #: next_check ^^^

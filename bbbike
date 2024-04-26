@@ -2093,9 +2093,11 @@ unless($skip_features{"strassen"}) {
 				require BBBikeAdvanced;
 				search_anything();
 			    });
-	     $plzmcmd = $ausm->command
-		 (-label => M"Komplette Straßenliste",
-		  -command => sub { choose_from_plz(-interactive => 1) });
+	     if (!$city_obj->is_osm_source) {
+		 $plzmcmd = $ausm->command
+		     (-label => M"Komplette Straßenliste",
+		      -command => sub { choose_from_plz(-interactive => 1) });
+	     }
 	 },
 	);
     $strcm->separator;
@@ -13134,6 +13136,10 @@ sub choose_from_plz {
 		my(@pos) = $s->choose_street($street, $bezirk);
 		if (!@pos || !defined $pos[0]) {
 
+		    if (!defined $plz_nr || $plz_nr eq '') { # no postal code -> no fallback possible
+			die Mfmt('"%s" nicht gefunden', $street);
+		    }
+
 		    # PLZ-Gebiet markieren
 		    $z->init;
 		    while(1) {
@@ -21907,7 +21913,8 @@ sub load_photo {
 		if (file_name_is_absolute($file)) {
 		    $path = $file;
 		} else {
-		    for my $try_file ((-d "$datadir/images" ? "$datadir/images/$file" : ()),
+		    for my $try_file ((defined $experimental_images_dir && -d $experimental_images_dir ? "$experimental_images_dir/$file" : ()),
+				      (-d "$datadir/images" ? "$datadir/images/$file" : ()),
 				      "$FindBin::RealBin/images/$file",
 				     ) {
 			my $try_path = try_image_suffix($try_file);
