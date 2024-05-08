@@ -3,7 +3,6 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
-Gubener Str.: Sperrung im Kreuzungsbereich Grünberger Str./Wedekindstr.	q2::inwork 13406,11896 13352,12003
 Müncheberger Str.: schmaler Gehweg, Fußgänger, Bordstein	q4 12558,11920 12617,11888
 Koppenstr.: Bauarbeiten an der Karl-Marx-Allee, einige Meter der Fahrbahn sind gesperrt	q3::inwork 12573,12227 12592,12472
 Bödikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
@@ -18,7 +17,6 @@ Antwerpener Str.: Baustelle vor der Seestr., einige Meter muss geschoben werden	
 Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 6835,15412 6815,15398
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6748,15313 6833,15215
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
-Oranienburger Str.: schmale Radfurt entlang einer Gleisbaustelle, vereinzelt Fußgänger auf dem Radweg	q2::inwork 10219,13102 10074,13103
 Dorotheenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8775,12457 8904,12489 8999,12498
 Schadowstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8999,12498 9011,12423 9028,12307
 Mittelstr.: Bauarbeiten, Abschnitt der Fahrbahn gesperrt	q3::inwork 9011,12423 9131,12438
@@ -56,8 +54,11 @@ Merler Weg: temporäre Einbahnstraßenregelung	q3::inwork; 19180,13219 18852,13269
 Eisenacher Str.: Bauarbeiten Höhe Hohenstaufenstr., Engstellen	q2::inwork 6747,9912 6753,9814 6743,9678
 Elßholzstr.: Hochbauarbeiten, Einbahnstraßenregelung	q4::inwork; 7202,9329 7209,9507 7216,9657 7223,9815
 Gleditschstr.: Hochbauarbeiten, Zweirichtungsradweg auf dem westlichen Bürgersteig	q2::inwork; 7122,9517 7126,9825
-Moltkestraßenbrücke: für Fußgänger existiert eine Behelfsbrücke	q3::inwork 3839,4577 3867,4537 3898,4490 3934,4441
+Königsweg: Bauarbeiten, nur enger Gehweg ist passierbar	q3::inwork -298,2577 -197,2634 -155,2658
+Schlettstadter Str.: Fahrbahn teilweise wegen Bauarbeiten gesperrt	q3::inwork 1077,3753 1422,3637 1485,3630
+Moltkestraßenbrücke: Fußgänger, verschwenkte Wegführung	q4::inwork 3839,4577 3867,4537 3898,4490 3934,4441
 Jablonskistr.: Baustelle an der Kreuzung Winsstr., nur Gehweg ist frei	q3::inwork 11949,14557 12228,14404
+Börnestr.: Bauarbeiten, einige Meter der Fahrbahn sind gesperrt	q3::inwork 13214,15830 13263,15930
 Lehderstr.: Hochbauarbeiten, einige Meter der Fahrbahn westlich der Roelckestr. sind gesperrt	q2::inwork 12842,16032 12466,16198
 (Buckower Chaussee - Bahnhof): einige Fußgänger	q1 9200,562 9239,461 9254,413
 (Fußgängerbrücke S-Bhf. Buckower Chaussee): Fußgängerbrücke, Bahnsteig	q4 9200,450 9209,417 9210,414 9246,426 9249,421 9254,413
@@ -832,7 +833,8 @@ KGA Plötzensee: einige Fußgänger	q1 4963,15259 4883,15289 4777,15398 4675,15529 
 Hauptweg - Uferweg: einige Fußgänger	q1 4777,15398 4754,15388
 (Am Hohenzollernkanal): einige Fußgänger	q0 4754,15388 4664,15491 4459,15723 4284,15739 4224,15779 4216,15799 4295,15852 4344,15888 4378,15922 4381,15931 4369,15950 4131,16017 4089,15978
 (Am Hohenzollernkanal): einige Fußgänger	q0 4084,15859 4055,15795 3960,15786 3924,15768 3775,15768 3371,15777 3308,15773 3252,15781 3005,15780 1737,15789
-(Am Hohenzollernkanal): einige Fußgänger	q0 1349,15797 1232,15804 1201,15804 364,15810 44,15897 -192,16054 -203,16064 -213,16059 -256,16093 -257,16103 -822,16535 -910,16608
+(Am Hohenzollernkanal): einige Fußgänger	q0 1349,15797 1232,15804 1201,15804 364,15810 44,15897 -192,16054 -213,16059 -256,16093 -257,16103 -822,16535 -910,16608
+(Am Hohenzollernkanal - Bernauer Str.): einige Fußgänger	q0 -192,16054 -206,16066 -207,16083 -215,16088 -257,16103
 Saatwinkler Steg, Rohrbruchwiesen: einige Fußgänger	q1 -993,16682 -992,16688 -995,16701 -1073,16610 -1096,16597 -1159,16563 -1321,16543
 Maselakepark: Fußgänger	q1 -2391,16607 -2418,16609 -2445,16610 -2504,16558 -2510,16357
 Maselakepark: Fußgänger	q1 -2587,16600 -2632,16347
@@ -1241,7 +1243,7 @@ Mutter-Mochow-Weg: Fußgänger	q1 -1849,2043 -1802,1919
 Ronnebypromenade: Fußgänger	q2 -4905,1514 -4943,1439 -5002,1382 -5067,1400
 (Ronnebypromenade - Königstr.): Fußgänger, Rampe	q3 -5067,1400 -5127,1392 -5135,1377
 (Paul-Krause-Str. - Borussenstr.): steil, eng	q3 -3983,2280 -3966,2291 -3972,2265 -3955,2283 -3938,2287
-Rehsprung: Fußgänger	q1 -3521,1681 -3300,1663 -3236,1776 -3153,1837 -3126,1858 -3098,1922 -3112,2106 -3156,2134 -3177,2205 -3284,2323 -3290,2420
+Rehsprung: Fußgänger	q1 -3521,1681 -3408,1671 -3358,1683 -3311,1665 -3281,1682 -3245,1769 -3153,1837 -3126,1858 -3098,1922 -3112,2106 -3156,2134 -3177,2205 -3284,2323 -3290,2420
 (Weg an der Kolonie am Nordgraben): eng, Fußgänger	q4 5833,20273 5912,20308 5977,20337 6040,20364 6097,20398 6152,20452 6176,20482 6165,20517 6176,20545
 Am Lehnshof: enge Straße	q1; 4202,23034 4264,22992 4291,22986
 Am Lehnshof: enge Straße	q1 4291,22986 4336,22984 4403,22981 4444,22989
@@ -2554,6 +2556,10 @@ Lugierring: einige Fußgänger	q2 20116,836 20142,824
 (Ziekowstr. - Wilhelm-Blume-Allee): schmaler Weg, mäßiger Fußgängerverkehr	q1 2570,20837 2469,20812
 Ruth-Baumgarte-Str. (Mittelstreifen): einige Fußgänger	q2 17608,8483 17599,8485
 Heiner-Müller-Str. (Mittelstreifen): einige Fußgänger	q2 17640,8627 17648,8626
+Degnerstr.: Tramzufahrt, auf Bürgersteig ausweichen	q3; 16449,15604 16445,15590
+Borkumstr.: Schulgelände	q2 11335,17807 11412,17823
+Karl-Schmidt-Rottluff-Weg: einige Fußgänger, Bordsteine	q2 1787,3905 1781,3807 1796,3765 1817,3732 1868,3626
+Anna- und Hermann-Muthesius-Steig: einige Fußgänger, Bäume auf dem Weg	q2 -3126,1798 -3087,1734
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11908,19255 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11929,19281
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -2714,9 +2720,10 @@ Brüder-Grimm-Gasse: Fußgänger	q2 8351,11163 8343,11133
 (zum Anhalter Steg): Fußgänger	q2 8668,10219 8668,10236 8715,10314
 (zum Anhalter Steg): Fußgänger, im Kurvenbereich unübersichtlich	q3 8715,10314 8711,10322
 (Anhalter Steg): Fußgänger	q1 8711,10322 8726,10351 8760,10408 8773,10429
-(Anhalter Steg - Anhalter Bahnhof): Fußgänger	q1 8773,10429 8776,10548 8808,10598 8853,10708
+(Anhalter Steg - Anhalter Bahnhof): Fußgänger, Grünanlage	q3 8773,10429 8776,10548 8808,10598
+(Anhalter Steg - Anhalter Bahnhof): Fußgänger	q1 8808,10598 8853,10708
 (Anhalter Steg - Anhalter Bahnhof): Fußgänger, Grünanlage	q3 8853,10708 8912,10846 8938,10872
-(Weg im Elise-Tilse-Park): Fußgänger	q1 8776,10548 8778,10578 8812,10662
+(Weg im Elise-Tilse-Park): Fußgänger	q3 8776,10548 8778,10578 8812,10662
 Fontaneplatz: Fußgänger, Bordsteinkante	q4 8474,11350 8427,11365
 (Fontaneplatz - Alte Potsdamer Str.): Fußgänger, schmal	q4 8427,11365 8389,11378
 Voxstr.: Fußgänger, Restaurantbetrieb	q4 8309,11390 8375,11368
@@ -3498,7 +3505,6 @@ Am Wriezener Bahnhof: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, 
 Wriezener Karree: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 12959,11631 12728,11850
 Holteistr.: Hochbauarbeiten, Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 14535,11327 14506,11275
 Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 5522,8024 5521,8087
-Marktplatz Adlershof: Einbahnstraßenregelung wegen Umbauarbeiten: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 20290,3756 20336,3783
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 8266,14346 8442,14456
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9441,12670 9429,12728 9402,12792 9386,12833 9375,12911
 Johannisstr.: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174 9254,13171
@@ -3584,3 +3590,4 @@ Streitstr.: linker Gehweg	q4::igndisp; -3009,17090 -3019,17129
 Grunerstr./Alexanderstr. -> Jacobystr.: linker Gehweg	q3::igndisp; 11141,12806 11184,12774 11234,12742
 Jacobystr. -> Alexanderstr.: linker Gehweg bis zur Ampel	q4::igndisp; 11221,12725 11256,12647
 Ferdinand-Schultze-Str. -> Rhinstr./Marzahner Str.: linker Gehweg bis zur Ampel	q3::igndisp; 17486,15736 17488,15766
+Potsdamer Chaussee: linker Gehweg bis zur Ampel	q3::igndisp; -3040,1763 -3019,1774 -3011,1761

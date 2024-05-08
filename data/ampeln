@@ -2,6 +2,7 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+Rudower Str.: Gegenverkehrsregelung zwischen Dorothea-Viehmann-Str. und Alter Schönefelder Weg	X::inwork 19564,1871
 Kiefholzstr.: Gegenverkehrsregelung	X::inwork 16425,6445
 Schnellerstr./Rudower Str.: Gegenverkehrsregelung	X::inwork 18680,5413
 Mariendorfer Weg/Gottlieb-Dunkel-Str./Eschersheimer Str.: Gegenverkehrsregelung	X::inwork 11740,6338
@@ -10,7 +11,6 @@ Michaelbrücke	F::inwork 11676,11839
 Michael-Brückner-Str.	F::inwork 17808,5669
 Möckernstr./nördlich. Wartenburgstr.: Gegenverkehrsregelung	X::inwork 8784,9972
 Schönhauser Allee/Kollwitzstr.: provisorische Ampel	F::inwork 10908,13978
-Fürstenbrunner Weg: Gegenverkehrsregelung	X::inwork 1610,13380
 Gegenverkehrsregelung	X::inwork 18527,16789
 	X::inwork 7873,12927
 Bellevuestr.: Gegenverkehrsregelung	X::inwork 8328,11617
@@ -696,7 +696,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 15058,6784
 	F 16274,6929
 	F 16058,6629
-	X 18245,5551
+	X 18236,5548
 	X 18013,5627
 	X 17960,5511
 	X 17728,5756
@@ -1757,7 +1757,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 4437,5335
 	X 7085,12610
 	F 1800,3903
-	F 1847,3620
+	F 1868,3626
 	F 5182,8880
 	F 5297,9579
 	F 5907,10821
@@ -2336,6 +2336,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 7973,13743
 	F 5824,2621
 	F 5187,22601
+	F -215,16088
 	F 3273,14738
 	F 14810,10832
 	X 7171,5831
@@ -2458,6 +2459,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -12318,-2192
 	X -13062,-2901
 	X -11104,-1913
+	F -11076,-1881
 	X -11125,-1954
 	X -10327,-2262
 	X -10418,-2624

@@ -436,7 +436,7 @@ Emser Str.	1 13051,7157 12872,7134
 Stuthirtenweg: Gitter	3 * 13542,1268 *
 # REMOVED --- Grunerstr.: Mittelstreifen	3nocross 10697,12303 10746,12364 10804,12461 10838,12496 10849,12557 10954,12635
 Bayernring	1 8616,8605 8454,8574 8380,8545
-Georg-Hermann-Allee (Potsdam): (teilweise) Einbahnstraße	1 -13429,1069 -13424,1290 -13422,1383 -13420,1478 -13418,1576 -13418,1668
+# REMOVED --- Georg-Hermann-Allee (Potsdam): (teilweise) Einbahnstraße	1 -13429,1069 -13424,1290 -13422,1383 -13420,1478 -13418,1576 -13418,1668
 Ruhlebener Str.: Mittelstreifen	3nocross -3002,13442 -2977,13424 -2967,13417 -2937,13399 -2725,13287
 An der Wuhlheide: Brückenauffahrt	3nocross 18492,6893 18404,6946 18225,7004 18010,7133
 #: note: Fußgängerfurt existiert auf der südöstlichen Seite der Kreuzung
@@ -848,7 +848,7 @@ Töpferweg: Poller	3 13238,2521 13309,2410 *
 Hoppestr.	1 8610,18309 8475,18283
 Straße 134: Poller	3 * 9276,20745 *
 Straßenbahntrasse	3nocross 10976,13229 11012,13278 11070,13357
-Hasselwerderstr	1 18260,5746 18164,5701 18013,5627
+Hasselwerderstr	1 18257,5743 18164,5701 18013,5627
 Haagstr.	1 -2920,2472 -2882,2373 -3030,2349
 Borussenstr.: außer Linienverkehr; für den Radverkehr gibt es einen linksseitigen Radweg	1 -3746,2849 -3756,2790 -3776,2687
 Teutonenstr. (Nikolassee)	1 -3519,2180 -3610,2237 -3740,2295
@@ -881,11 +881,12 @@ Gartenstr. (Schwedt)	1 68940,73310 68884,73376 68854,73406
 Krumme Str.	1 4032,12167 3999,12050 3976,11869
 Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,14749
 #: by: http://www.flickr.com/photos/lapidarium42/7708833948/in/pool-gwb
-#: XXX wird hier in eine "echte Einbahnstraße" umgewandelt?
+#: XXX wird hier in eine "echte Einbahnstraße" umgewandelt? laut osm mittweile ja (aber eine Anfrage läuft noch)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2017/beschluss_v_116_17.pdf
-#: osm_watch: way id="155071540" version="21"
+#: osm_watch: way id="155071540" version="23"
 #: last_checked: 2024-04-13
 #: check_frequency: 60d
+# REMOVED --- #: next_check: 2024-04-24
 #: priority: #D
 Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8478,8776
 Scharnhorststr.: Poller	3 7877,14504 7804,14445 *
@@ -1064,8 +1065,9 @@ Dennewitzplatz	1 7906,10098 7869,9917
 #: note: ab 2014-10-01 für Radfahrer offen
 Buolstr.	1 559,15342 429,15284
 Liepnitzstr.: nur für Anlieger und Radfahrer	2:Anlieger 17856,8162 17803,8079 17808,8042 17793,8012 17762,7931 17771,7880 17678,7850 17590,7828 17527,7812
-#: note: zurzeit (2014-12, wegen Bauarbeiten) ist die Einbahnstraßenregelung im westlichen Abschnitt umgedreht und gilt eigentlich für alle Verkehrsteilnehmer
-Behlertstr.	1 -12370,-354 -12514,-340 -12621,-359 -12821,-417
+# REMOVED --- #: note: zurzeit (2014-12, wegen Bauarbeiten) ist die Einbahnstraßenregelung im westlichen Abschnitt umgedreht und gilt eigentlich für alle Verkehrsteilnehmer
+Behlertstr.	1 -12370,-354 -12510,-339 -12621,-359
+Behlertstr.	1 -12821,-417 -12621,-359
 Schadowstr. - Unter den Linden	3 9011,12423 9028,12307 9141,12320
 Unter den Linden	3nocross 9858,12410 9934,12420 9984,12426 10024,12431
 Richardstr.	1 13103,7889 13085,7904 13045,7938
@@ -1738,7 +1740,7 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: source_id: viz2021:13.410565,52.516096,15.01.2023,18:00 (bis 30.08.2024)
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
 #: note: mittlerweile ist die Fahrbahn und die Markierungen größtenteils schon fertig
-#: last_checked: 2024-04-21 vvv
+#: last_checked: 2024-05-02 (webcam) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2024-08-30 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
@@ -1839,7 +1841,7 @@ Radieschenpfad	1 20582,18475 20635,18381
 #: osm_watch: way id="24202434" version="27"
 #: XXX Wird der Asphalt ersetzt werden?
 #: note: Durch die neue Schrankenanlage scheint es für Radfahrer keine Einschränkungen zu geben.
-#: last_checked: 2024-04-07
+#: last_checked: 2024-05-06
 #: check_frequency: 30d
 Dammweg: per Schranke für den Autoverkehr gesperrt	2 15869,8355 16388,8821
 # 
@@ -1992,6 +1994,8 @@ Wallenbergstr.	1 4319,8493 4229,8499 4143,8501
 # 
 # REMOVED --- #: add_fragezeichen: Wird die Einbahnstraße für Radfahrer geöffnet? --- #: osm_watch: way id="57356015" version="18" --- #: XXX Es existiert ein noch durchgestrichenes "Radfahrer frei"-Schild --- #: last_checked: 2024-03-13 (mapillary)
 Cardinalstr.	1 21896,5724 21828,5623 21706,5541
+# 
+Schloßstr. - Feuerbachstr.: vorgeschrieben Fahrtrichtung geradeaus	3 5269,6305 5244,6261 5390,6299
 # 
 ######################################################################
 #: note: Kiezblock Reuterkiez vvv

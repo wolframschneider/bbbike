@@ -53,7 +53,6 @@ Hebammensteigbrücke	X 13046,21734
 Europaplatz	X 8102,13304
 (BMW-Betriebswerk)	X -1768,14605
 Heinrich-Hertz-Str.	X 59,15518
-Heinrich-Hertz-Str.	X 149,15237
 (Bushaltestelle und Straßenbahnwendeschleife Schöneweide)	X 17675,5521
 (Bushaltestelle und Straßenbahnwendeschleife Schöneweide)	X 17588,5573
 (Fußgängertunnel S-Bhf. Schöneweide)	X 17639,5612
@@ -109,8 +108,10 @@ Feldstr. (Bohnsdorf)	X 21209,-734
 (Verlängerung der Zwieseler Str.)	X 19705,9039
 (Unterführung unter der Elsenbrücke)	X 14509,9997
 (Unterführung unter der Elsenbrücke)	X 14432,10059
+(Unterführung unter der Elsenbrücke)	X 14373,10046
 (Uferweg an den Treptowers)	X 14202,10152
 (Uferweg an den Treptowers)	X 14126,10176
+(Treppe zum Allianz-Gebäude)	X 14383,10036
 (am ehem. Osthafen)	X 14462,10206
 (am ehem. Osthafen)	X 14480,10157
 (Dieselstr. - westlicher Mergenthalerring)	X 14250,8098
@@ -153,8 +154,10 @@ Rudererweg	X -3689,11291
 (Fortsetzung Wandlitzstr.)	X 17570,9103
 Am Konsulat	X 9990,19644
 Am Kutscherhaus	X 21386,5251
+Römerweg	X 18421,9764
 Röbeler Weg	X 24831,10772
 Röbeler Weg	X 24760,10790
+(Römerweg - Weg entlang der Bahnstrecke)	X 18436,9842
 (Elisabeth-Abegg-Str. - Weg am Moabiter Werder)	X 7801,12910
 (Elisabeth-Abegg-Str. - Weg am Moabiter Werder)	X 7788,12907
 (Dankratweg - Am Waldberg)	X 20408,9604
@@ -175,7 +178,6 @@ Wiebestr.	X 4495,13107
 Thüringerallee	X 1342,11020
 (nördliches Spreeufer)	X 5346,12845
 (An der Ostbahn - S-Bhf. Warschauer Str.)	X 13546,11280
-Jakobikirchstr.	X 10564,10925
 (ehemalige Hollmannstr.)	X 9869,10672
 (Südring, Virchow-Klinikum)	X 6118,14889
 Am Kaniswall	X 32823,-149

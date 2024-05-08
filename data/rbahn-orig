@@ -181,7 +181,7 @@ RE7	R -18869,-14274 -19761,-15032
 # "Seddiner Kreuz": Caputh/Beelitz Stadt - Seddin
 RB37	RC -19116,-14563 -18869,-14274
 # Potsdam Stadt - "Seddiner Kreuz"
-RB33	RC -14975,-1918 -15260,-2136 -15367,-2338 -15664,-3292 -15974,-4147 -16318,-5028 -16849,-5673 -17069,-5899 -17752,-6678 -17834,-6837 -17949,-7079 -18000,-7269 -18002,-7679 -18002,-7720 -18188,-8017 -18485,-8274 -18590,-8530 -18461,-9099 -18480,-9440 -18459,-9847 -18520,-10231 -18710,-10573 -18899,-11214 -19020,-11863 -19043,-11944 -19101,-12221 -19186,-12573 -19692,-13651 -19734,-14105
+RB33	RC -14975,-1918 -15260,-2136 -15367,-2338 -15664,-3292 -15982,-4173 -16318,-5028 -16849,-5673 -17069,-5899 -17752,-6678 -17834,-6837 -17949,-7079 -18000,-7269 -18002,-7679 -18002,-7720 -18188,-8017 -18485,-8274 -18590,-8530 -18461,-9099 -18480,-9440 -18459,-9847 -18520,-10231 -18710,-10573 -18899,-11214 -19020,-11863 -19043,-11944 -19101,-12221 -19186,-12573 -19692,-13651 -19734,-14105
 # Wilhelmshorst - Michendorf
 RE7,RB37	RC -13899,-9791 -14536,-10396
 # Michendorf - Neuseddin
@@ -423,8 +423,9 @@ RB26	R 39654,14564 40259,14530 40496,14524 43033,14393 45640,14267 45740,14260 5
 #: by: https://www.berliner-zeitung.de/mensch-metropole/ostbahn-neb-rb26-db-vbb-bleibt-die-wichtige-strecke-nach-berlin-noch-laenger-unterbrochen-li.2155315 (Mai 2024?)
 #: by: https://www.neb.de/aktuelles/details/nochmals-verzoegerung-beim-bauprojekt-oderbruecke/ (Ende September 2024?)
 #: by: https://www.berliner-zeitung.de/mensch-metropole/ostbahn-berlin-polen-fertigstellung-oderbruecke-neuer-termin-li.2188014
+#: by: https://www.msn.com/de-de/nachrichten/panorama/oderbr%C3%BCcke-nach-k%C3%BCstrin-kostrzyn-berlin-erh%C3%A4lt-eine-internationale-bahnverbindung-zur%C3%BCck/ar-AA1nTSd2 (Inbetriebnahme: 29.07.2024)
 #: XXX wegen Bauarbeiten gesperrt, voraussichtlich keine Inbetriebnahme 2022 und auch nicht im Mai 2023 und auch nicht im Dezember 2023
-#: next_check: 2024-09-30
+#: next_check: 2024-07-29
 RB26	RBau 92076,19533 92620,19877 93094,20453 93791,21339 94157,21692 94630,21978
 # Strausberg - Strausberg-Nord
 	R0 39654,14564 40259,14530 40496,14524 40693,14553 41100,14790 41275,15058 41668,16174 41748,16421 42081,17089 42444,17710 42647,17909 42910,18107 43079,18347 43130,18578 43114,19289 43151,19585 43192,19730 43256,19851 43498,20071 44181,20584 44323,20764 44484,21068
@@ -612,7 +613,7 @@ Draisinenstrecke Tiefensee - Sternebeck	R0 38906,30514 39258,30800 39771,31291 4
 #	R0 3909 2849 2810 2811 2812 2813 2814
 # Pirschheide - Golm
 #: note: Pirschheide wird hier nicht angefahren und der Bahnhof Bergholz ist stillgelegt
-RB22	RC -8229,-9316 -8595,-9253 -8916,-9167 -11212,-7688 -13651,-6042 -17328,-3096 -18028,-2531
+RB22	RC -8229,-9316 -8595,-9253 -8916,-9167 -11212,-7688 -13651,-6042 -15982,-4173 -17328,-3096 -18028,-2531
 	RG -18028,-2531 -18480,-2247 -18951,-2019 -19463,-1976 -20080,-2063 -20599,-1997
 # Verbindung: Genshagener Kreuz - Blankenfelde
 RE8 Süd	RC 10901,-6258 11063,-6246 11166,-6279 11264,-6368 11325,-6508 11371,-6779 11511,-7138
@@ -748,8 +749,9 @@ Parkeisenbahn Wuhlheide	RP 19890,6017 19884,6063 19887,6106 19958,6302 19988,640
 Parkeisenbahn Wuhlheide	RP 20319,6937 20383,7059 20430,7122 20453,7130 20529,7174 20533,7199 20550,7225 20577,7230 20636,7186 20712,7135
 # Betriebsbahnhof, jetzt außer Betrieb (Schienen liegen noch, aber Schienen an den Bahnübergängen sind mittlerweile verfüllt)
 #: by: https://www.bahninfo-forum.de/read.php?9,796166,797754#msg-797754 (wird am 1.5.2024 wieder in Betrieb genommen)
-#: next_check: 2024-05-01
-Parkeisenbahn Wuhlheide	RP0 20124,7111 20051,7110 19972,7035 19895,6872 19822,6725 19799,6660 19810,6634 19992,6513 19997,6434
+#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2024/pressemitteilung.1442341.php (Wiederinbetriebnahme)
+# REMOVED --- #: next_check: 2024-05-01
+Parkeisenbahn Wuhlheide	RP 20124,7111 20051,7110 19972,7035 19895,6872 19822,6725 19799,6660 19810,6634 19992,6513 19997,6434
 # Freilichtbühne - Betriebswerk
 Parkeisenbahn Wuhlheide	RP 19887,6106 19849,6065 19791,6061
 Gleisanschluss Messegelände	RG 795,11039 1025,10898 1206,10665 1369,10556

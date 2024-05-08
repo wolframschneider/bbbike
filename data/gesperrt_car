@@ -802,7 +802,6 @@ Emser Str.	1 13051,7157 12872,7134
 Stuthirtenweg: Gitter	3 13450,1222 13542,1268 13580,1300
 Stuthirtenweg: Gitter	3 13580,1300 13542,1268 13450,1222
 Bayernring	1 8616,8605 8454,8574 8380,8545
-Georg-Hermann-Allee (Potsdam): (teilweise) Einbahnstraße	1 -13429,1069 -13424,1290 -13422,1383 -13420,1478 -13418,1576 -13418,1668
 Mittelstreifen	3nocross::ignrte -3002,13442 -2977,13424 -2967,13417 -2937,13399 -2725,13287
 Ruhlebener Str. -> Tiefwerderweg: Mittelstreifen	3::igndisp -2937,13399 -2967,13417 -2974,13188
 Tiefwerderweg -> Ruhlebener Str.: Mittelstreifen	3::igndisp -2974,13188 -2967,13417 -2977,13424
@@ -1477,7 +1476,7 @@ Alex-Wedding-Str. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 11085,13
 Alex-Wedding-Str. -> Hirtenstr.: Straßenbahntrasse	3::igndisp 11085,13239 11012,13278 10925,13322
 Hirtenstr. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 10925,13322 11012,13278 11070,13357
 Hirtenstr. -> Alex-Wedding-Str.: Straßenbahntrasse	3::igndisp 10925,13322 11012,13278 11085,13239
-Hasselwerderstr	1 18260,5746 18164,5701 18013,5627
+Hasselwerderstr	1 18257,5743 18164,5701 18013,5627
 Haagstr.	1 -2920,2472 -2882,2373 -3030,2349
 Borussenstr.: außer Linienverkehr; für den Radverkehr gibt es einen linksseitigen Radweg	1 -3746,2849 -3756,2790 -3776,2687
 Teutonenstr. (Nikolassee)	1 -3519,2180 -3610,2237 -3740,2295
@@ -1789,7 +1788,8 @@ Berliner Allee -> Falkenberger Str.: nur für BVG frei	3 14608,16772 14622,16674 
 Dennewitzplatz	1 7906,10098 7869,9917
 Buolstr.	1 559,15342 429,15284
 Liepnitzstr.: nur für Anlieger und Radfahrer	2:Anlieger 17856,8162 17803,8079 17808,8042 17793,8012 17762,7931 17771,7880 17678,7850 17590,7828 17527,7812
-Behlertstr.	1 -12370,-354 -12514,-340 -12621,-359 -12821,-417
+Behlertstr.	1 -12370,-354 -12510,-339 -12621,-359
+Behlertstr.	1 -12821,-417 -12621,-359
 Schadowstr. - Unter den Linden	3 9011,12423 9028,12307 9141,12320
 Unter den Linden	3nocross::ignrte 9858,12410 9934,12420 9984,12426 10024,12431
 Niederlagstr. -> Unter den Linden: Unter den Linden	3::igndisp 9943,12364 9934,12420 9858,12410
@@ -2531,6 +2531,7 @@ Kirschblütenpl. -> Oranienburger Str.: Mittelstreifen, Fußgängerfurt existiert	3
 Kastanienallee: nur für Tram und Radfahrer	1 10916,15098 10900,15075 10881,15047
 Wallenbergstr.	1 4319,8493 4229,8499 4143,8501
 Cardinalstr.	1 21896,5724 21828,5623 21706,5541
+Schloßstr. - Feuerbachstr.: vorgeschrieben Fahrtrichtung geradeaus	3 5269,6305 5244,6261 5390,6299
 Pflügerstr./Friedelstr.: Diagonalsperre	3 12054,9429 12066,9558 12074,9689
 Pflügerstr./Friedelstr.: Diagonalsperre	3 12074,9689 12066,9558 12054,9429
 Pflügerstr./Friedelstr.: Diagonalsperre	3 12054,9429 12066,9558 12150,9545
