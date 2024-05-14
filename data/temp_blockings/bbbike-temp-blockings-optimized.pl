@@ -826,36 +826,7 @@ Blücherstr. östl. Zossener Str.	2::temp 9827,10051 9922,10010 9950,9987 10006,99
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/events/4390033-2229501-primavera-fruehlingsfest.html (geplanter Termin: 08. bis 09. Mai 2021) (2021 abgesagt)
-#: by: https://www.berlin.de/events/4390033-2229501-fruehlings-und-spargelfest-primavera.html (geplanter Termin: 07. und 08. Mai 2022)
-#: source_id: viz2021:13.3532,52.48982,07.05.2022,06:00
-#: by: https://nitter.net/VIZ_Berlin/status/1522628508719075328#m
-#: by: https://nitter.net/pic/media%2FFSAFp14XwAA4gcp.jpg%3Fname%3Dorig
-	2::temp 7201,8870 7101,9027 7029,9156 7007,9220 6994,9288
-	2::temp 7308,9163 7101,9027 6958,8941
-	2::temp 6936,9138 7029,9156
-	2::temp 7007,9220 7124,9226
-',
-         'from' => 1715292000,
-         'id' => 728,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              24,
-                              'months',
-                              4,
-                              'start',
-                              '2021-10-25T00:00:00'
-                            ]
-                          ],
-         'source_id' => 'http://www.volksfeste-in-deutschland.de/primavera-fruehling-auf-der-akazienstrasse-in-berlin-schoeneberg.html',
-         'text' => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (11.05.2024 und 12.05.2024)',
-         'type' => 'gesperrt',
-         'until' => 1715551199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2373,7 +2344,7 @@ Pestalozzistr.	q4::temp:clock 4101,11233 3981,11232
 #: XXX Prüfen: wird die Marktfläche in der Koppenstr. jemals genutzt? Am 2024-04-21 (So) gegen 12:15 Uhr keine Nutzung. Vielleicht nur auf der Platzfläche? Am 2024-05-05 kein Markt, möglicherweise in Karlshorst gewesen.
 #: last_checked: 2024-05-05
 #: check_frequency: 120d
-#: next_check: 2024-05-12
+#: next_check: 2024-05-19
 	q4::temp:clock 12378,11806 12413,11901
 #: tempex ^^^
 ',
@@ -4166,7 +4137,7 @@ Fußgängerschutztunnel	q4::inwork 3828,12697 3981,12709 4071,12720
          'data' => '#: next_check_id: LEIPZIGERPRIVAT-2020
 #: note: früher Verbotsschild an beiden Einfahrten, mittlerweile (seit ca. 2020-02) nur an der östlichen Einfahrt
 #: XXX kaum noch Bauarbeiten, aber die Schilder sind geblieben --- vielleicht permanent?
-#: last_checked: 2024-05-07
+#: last_checked: 2024-05-13
 #: check_frequency: 30d
 	q4::inwork 9896,11760 9910,11755 10079,11765 10114,11789 10132,11810
 ',
@@ -5433,32 +5404,37 @@ Jahnstr.: Einbahnstraße schon 60m vor Mackenroder Weg	q3::inwork; 12644,6087 128
        {
          'data' => '#: next_check_id: NIEMETZ-2022
 #: by: https://viz.berlin.de/2022/02/verkehrsvorschau-21022022/ (für Fußgänger offen)
+#: by[nocache]: https://twitter.com/VIZ_Berlin/status/1789884274977444028
+#: by: https://pbs.twimg.com/media/GNOrZk9WYAAt6bo?format=jpg&name=large (Umleitungen)
 #: XXX evtl. nach handicap_s-orig übertragen
 #: source_id: viz2021:13.452161,52.471082,21.02.2022,07:00 (bis 31.1.2023) (inaktiv)
 #: source_id: viz2021:13.452161,52.471082,02.02.2023,12:12 (bis 02.06.2023) (inaktiv)
 #: source_id: viz2021:13.452161,52.471082,01.06.2023,20:20 (bis 29.12.2023) (inaktiv)
-#: source_id: viz2021:13.452362,52.470898,21.02.2022,07:00 (bis 31.12.2022) (bis 31.1.2023) (bis 2.6.2023) (bis 31.12.2023) (bis 30.04.2024) (bis 13.05.2024)
+#: source_id: viz2021:13.452362,52.470898,21.02.2022,07:00 (bis 31.12.2022) (bis 31.1.2023) (bis 2.6.2023) (bis 31.12.2023) (bis 30.04.2024) (bis 13.05.2024) (inaktiv)
+#: source_id: viz2021:13.452181,52.471098,13.05.2024,07:00 (bis 11.12.2025)
+#: source_id: viz2021:13.452222,52.471093,13.05.2024,07:00 (bis 11.12.2025)
 #: also_indoor: traffic (B,H(unvollständig),G)
 #: osm_watch: way id="1047544509" version="3"
 #: osm_watch: way id="1047544510" version="2"
 #: osm_watch: note 3065138 11
-#: last_checked: 2024-05-01 vvv
+#: last_checked: 2024-05-12 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-05-13 vvv
-Niemetzstr.	q4::inwork 13797,7267 13762,7321
+#: historical_note: bis 2024-05-13 nur q4
+Niemetzstr.	2::inwork 13797,7267 13762,7321
 Mittelbuschweg: südlicher Gehweg ist frei	q4::inwork 13797,7267 13693,7228
+Saalestr.	2::inwork 13648,7284 13762,7321 13794,7333
 # REMOVED (frei) ---	2::inwork 13693,7228 13575,7200
 # REMOVED (mittlerweile frei) --- #: note: evtl. damit zusammenhängend: Einbahnstraßenregelung in der Mierstr. und Teilen des Mittelbuschwegs ---	q4::inwork; 13484,7140 13575,7200 13627,7047
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 ',
-         'dont_check_date' => 1,
          'from' => 1645336800,
          'id' => 3517,
-         'text' => 'Niemetzstr.: Brückenneubau, Sperrung der Fahrbahn, Fußgängerschutztunnel existiert, außerdem ist die Fahrbahn des Mittelbuschwegs gesperrt, vom 21.02.2022 07:00 bis mindestens Mitte Mai 2024, vermutlich noch länger',
+         'text' => 'Niemetzstr. und Saalestr.: Brückenneubau, Sperrung, auch für Fußgänger und Radfahrer; außerdem ist die Fahrbahn des Mittelbuschwegs gesperrt, vom 13.05.2024 07:00 bis Dezember 2025',
          'type' => 'handicap',
-         'until' => undef
+         'until' => 1765468800
        },
        undef,
        undef,
@@ -5500,7 +5476,7 @@ Mittelbuschweg: südlicher Gehweg ist frei	q4::inwork 13797,7267 13693,7228
 #: osm_watch: way id="975241319" version="7"
 #: osm_watch: way id="970452276" version="7"
 #: also_indoor: traffic (none)
-#: last_checked: 2024-04-17 (daf)
+#: last_checked: 2024-05-12
 #: check_frequency: 30d
 	q3::inwork; 12805,8194 12873,8218 12911,8232
 # REMOVED ---	q4::inwork 12873,8218 12911,8232
@@ -5517,8 +5493,8 @@ Mittelbuschweg: südlicher Gehweg ist frei	q4::inwork 13797,7267 13693,7228
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2023/pressemitteilung.1349592.php (ab Winter 2023 auch Bauarbeiten im Abschnitt zwischen Fulda- und Wildenbruchstraße)
 #: osm_watch: way id="1246171055" version="1"
 #: osm_watch: note 4090527 4
-#: last_checked: 2024-04-18
-#: check_frequency: 30d
+#: last_checked: 2024-05-12
+#: check_frequency: 21d
 zwischen Wildenbruchstr. und Elbestr.	q3::inwork 13033,8628 12881,8750
 # REMOVED (hier noch nicht) --- zwischen Elbestr. und Fuldastr.	q3::inwork 12881,8750 12740,8862
 # REMOVED --- #: next_check: 2023-07-31
@@ -5527,7 +5503,7 @@ zwischen Wildenbruchstr. und Elbestr.	q3::inwork 13033,8628 12881,8750
 ',
          'from' => 1690668000,
          'id' => 3538,
-         'text' => 'Weserstr.: Bauarbeiten zwischen Wildenbruchstr. und Elbestr.., Fahrbahn gesperrt, enger gemeinsamer Rad- und Gehweg auf dem Hochbord (Stand Anfang Februar 2024)',
+         'text' => 'Weserstr.: Bauarbeiten zwischen Wildenbruchstr. und Elbestr.., Fahrbahn gesperrt, enger gemeinsamer Rad- und Gehweg auf dem Hochbord (Stand Mai 2024)',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5535,7 +5511,18 @@ zwischen Wildenbruchstr. und Elbestr.	q3::inwork 13033,8628 12881,8750
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
+#: confirmed_by: srt (am 2022-05-03 gesehen)
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2024/pressemitteilung.1445054.php (2024)
+	q4::temp::play 14946,11697 14986,11760
+',
+         'from' => 1717365600,
+         'id' => 3543,
+         'text' => 'Jessnerstr.: zwischen Travestr. und Oderstr. dienstags zwischen 15:30 und 18:30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, im Juni 2024',
+         'type' => 'handicap',
+         'until' => 1719331200
+       },
        undef,
        undef,
        undef,
@@ -5561,13 +5548,14 @@ zwischen Wildenbruchstr. und Elbestr.	q3::inwork 13033,8628 12881,8750
 #: by: https://bauprojekte.deutschebahn.com/media/projects/6790/docs/PR_berlin-frankfurt-oder-bundesgrenze-d-pl_umbau_koepenick_bf_20230531.pdf (bis 11.7.2023)
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/erneute-sperrung-der-bahnhofstrasse-am-bahnhof-koepenick-verschaerft-die-verkehrssituation_a390734 (rechtzeitig zur Sperrung der Bahnhofstr. offen?)
 #: by: https://phoenix1554.wordpress.com/2023/08/20/umbau-bahnhof-berlin-kopenick-20-08-2023/ (Freigabe am 28.8.2023?)
+#: by: https://www.deutsches-architekturforum.de/thread/15143-neubau-regionalbahnhof-k%C3%B6penick/?postID=760886#post760886
 #: by[nocache]: https://nitter.perennialte.ch/VIZ_Berlin/status/1758065960009744712#m (auch Fußgänger sind betroffen!)
 #: by[nocache]: https://nitter.perennialte.ch/pic/orig/media%2FGGXnOu2XcAAADii.jpg (Detailkarte der Sperrung)
 #: by[nocache]: https://nitter.perennialte.ch/pic/orig/media%2FGGXnOxmWwAAhC4Z.png (Umleitung für Radfahrer)
 #: note: anscheinend Schubertstr. auch für Fußgänger gesperrt, hier gibt es keinen Gehweg (noch immer?); außerhalb der Arbeitszeiten ggfs. passierbar (gesehen So 2023-03-26, Sa 2023-05-13, Mo 2023-06-19 am Abend (unsicher), Sa 2023-10-28 nachmittags, Sa 2024-02-10 mittags (zumindest das östliche Ende sah offen aus), Mi 2024-03-20 vormittags (durchfahrenden Radfahrer gesehen), Mi 2024-04-10 vormittags: offiziell gesperrt, möglicherweise passierbar)
 #: also_indoor: traffic (G,B,W)
 # REMOVED --- #: priority: #A
-#: last_checked: 2024-04-20 (okas) vvv
+#: last_checked: 2024-05-10 (daf) vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2024-03-11 vvv
 # REMOVED --- #: next_check: 2023-08-27 vvv
@@ -6782,42 +6770,21 @@ Hauffstr.: nur Anlieger zum Spielplatz frei	2::inwork 15578,11241 15620,11210 15
        undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/spielstrassen-988767.php (Haus Nr. 18-22)
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2024/pressemitteilung.1445054.php (2024)
 #: XXX außerdem nach den Sommerferien: 1. bis 22. September 2023
 #: note: Länge des Spielstraßenbereichs etwas weniger als 100m; Bordsteine
-#: last_checked: 2023-07-02
-#: next_check: 2024-06-01
+# REMOVED --- #: last_checked: 2023-07-02
+#: next_check: 2024-08-22
 	q4::temp::play 14208,12235 14055,11964
 ',
-         'from' => 1718402400,
+         'from' => 1719439200,
          'id' => 3815,
-         'text' => 'Niederbarnimstr.: zwischen Frankfurter Allee und Boxhagener Str. freitags zwischen 15:00 und 19:00 Uhr temporäre Spielstraße, genaue Termine 2024 stehen noch nicht fest',
+         'text' => 'Niederbarnimstr.: zwischen Frankfurter Allee und Boxhagener Str. freitags zwischen 15:00 und 19:00 Uhr temporäre Spielstraße, 28. Juni 2024 bis 19. Juli 2024',
          'type' => 'handicap',
-         'until' => 1722184200
+         'until' => 1721406600
        },
        undef,
-       {
-         'data' => '#: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0523_Doppelseiten_web.pdf (15.5.2023 für ein Jahr)
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10935 (Antrag)
-#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10936 (Anfrage)
-#: source_id: bvg2021:190#BVG320324_0
-#: note: Baustellebereich etwa 130m, Halteverbotsschilder bis 29.03.2023, Baustellenschild der Wasserbetriebe bis 10.05.2024
-#: also_indoor: traffic (G)
-#: last_checked: 2024-03-30 vvv
-#: check_frequency: 120d vvv
-#: next_check: 2024-05-10 vvv
-# REMOVED (hier nicht mehr) --- Gleiwitzer Str.	q4::inwork 20947,9999 20703,10004
-Gleiwitzer Str., Anbindung Dornacher Str.	q2::inwork 20947,9999 21146,9988
-# REMOVED (nicht mehr gesperrt) --- #: XXX_prog eigentlich q3+ --- Dornacher Str. (Kreuzungsbereiche)	q3::inwork 20948,9847 20947,9999 20947,10137
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
-',
-         'from' => 1686407303,
-         'id' => 3817,
-         'text' => 'Gleiwitzer Str.: Bauarbeiten, Fahrbahn vor der Dornacher Str. gesperrt, voraussichtlich bis 10.05.2024',
-         'type' => 'handicap',
-         'until' => 1715378400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -6907,8 +6874,8 @@ Gleiwitzer Str., Anbindung Dornacher Str.	q2::inwork 20947,9999 21146,9988
 #: osm_watch: way id="50830991" version="26"
 # REMOVED --- #: add_fragezeichen: Wann beginnen die Bauarbeiten im Kronprinzessinnenweg?
 #: note: Stand Mitte Februar 2024 waren Bauarbeiten nur zwischen Fischerhüttenweg und Havelchaussee
-#: note: Anfang März 2024: freitags kann man anscheinend auch schon früher (um 17h) hier langfahren
-#: last_checked: 2024-03-08 (mapillary)
+#: note: Anfang März 2024: freitags kann man anscheinend auch schon früher (um 17h) hier langfahren; Mai 2025: donnerstags bereits um 16:40 Uhr
+#: last_checked: 2024-05-09 (mapillary)
 #: check_frequency: 120d
 #: next_check: 2025-08-31
 	2::inwork -927,6888 -2218,5133 -3296,3686
@@ -7159,7 +7126,7 @@ Wuhlewanderweg	2::inwork 22050,6619 21976,6848
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/infos-rund-um-die-karl-marx-strasse_a411332
 #: note: Halteverbotsschilder sogar bis Ende März 2026
 #: note: Länge der Einbahnstraßenregelung: 100m; mittlerweile anscheinend wieder Komplettsperrung
-#: last_checked: 2024-03-13
+#: last_checked: 2024-05-12
 #: check_frequency: 120d
 #: next_check: 2024-12-29
 	q4::inwork 12407,8177 12545,8209
@@ -7310,7 +7277,7 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
 #: note: außerdem mittlerweile unklare Ausschilderung in der Markgrafenstr. mit Gegenverkehr-Vorfahrtsregelungen, als ob vielleicht die Einbahnstraße wieder aufgehoben werden soll? -> mittlerweile auch Sperrung des mittleren Abschnitts
 #: priority: #A vvv
 #: add_fragezeichen: Bestehen die Sperrungen und Einbahnstraßenregelungen noch immer? vvv
-#: last_checked: 2024-04-28 (osm) vvv
+#: last_checked: 2024-05-13 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2024-11-01 vvv
 #: next_check: 2024-09-30 vvv
@@ -7419,7 +7386,8 @@ Charlottenstr.	q3::inwork 9523,12019 9509,12117
 # REMOVED (hier nicht) ---	q2::inwork 13704,9691 13642,9624
 #: note Baustellenschild der Wasserbetriebe: bis Mai 2024; Halteverbotsschilder bis 26.04.2024 (mittlerweile abgelaufen und nicht erneuert)
 #: also_indoor: traffic (B,W)
-#: last_checked: 2024-05-02
+#: add_fragezeichen: Ist die Bouchéstr. weiterhin wegen Bauarbeiten gesperrt?
+#: last_checked: 2024-05-12
 # REMOVED --- #: check_frequency: 14d
 # REMOVED --- #: next_check: 2024-04-26
 #: next_check: 2024-05-31
@@ -7807,7 +7775,7 @@ Winterfeldtstr.: östliche Anbindung zur Martin-Luther-Str. gesperrt, Umwege	q4::
        {
          'data' => '#: add_fragezeichen: Besteht die Sperrung der Fahrbahn weiterhin? vvv
 #: also_indoor: traffic (B) vvv
-#: last_checked: 2024-04-13 (mapillary) vvv
+#: last_checked: 2024-05-10 (mapillary) vvv
 #: check_frequency: 60d vvv
 	q4::inwork 7948,15802 8048,15829 8140,15859 8187,15965
 	q4::inwork 8164,15840 8140,15859
@@ -7882,15 +7850,16 @@ Winterfeldtstr.: östliche Anbindung zur Martin-Luther-Str. gesperrt, Umwege	q4::
 #: by: https://berliner-abendblatt.de/berlin-news/stahlkonstruktion-soll-schoeneberger-wohnhaus-abstuetzen-id249921
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/grunewaldstrasse-gesperrt_a413459
 #: by: https://berliner-abendblatt.de/berlin-news/aufbau-der-stahlstuetzen-an-schoeneberger-haus-soll-beginnen-id250477
+#: by: https://berliner-abendblatt.de/berlin-news/stuetzung-an-wohnhaus-freigegeben-mieter-koennen-zurueck-id251880
 #: source_id: viz2021:13.360095,52.490517,10.04.2024,13:36 (inaktiv)
 #: source_id: viz2021:13.35319,52.48988,12.04.2024,08:59 (bis 30.04.2024) (inaktiv)
 #: source_id: viz2021:13.353178,52.489857,12.04.2024,08:59 (bis 21.05.2024)
 #: source_id: bvg2021:n7#BVG346248_0
-#: also_indoor: traffic (B,ex-H,G,W)
+#: also_indoor: traffic (ex-B,ex-H,G,W)
 #: add_fragezeichen: Wann wird die Sperrung wieder aufgehoben? vvv
 #: note: bei rbb "bis auf weiteres"; mittlerweile bis 31.05.2024
 #: last_checked: 2024-05-04 vvv
-#: next_check: 2024-05-21 vvv
+#: next_check: 2024-05-08 vvv
 	q4::inwork 7007,9220 6994,9288
 	q3::inwork 6994,9288 7118,9315
 	q3::inwork 7002,9526 6994,9288
@@ -7905,42 +7874,28 @@ Winterfeldtstr.: östliche Anbindung zur Martin-Luther-Str. gesperrt, Umwege	q4::
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: LS/222-W/24/026 (bis 17.05.2024)
-	2::inwork -9031,-54801 -7465,-53204
-',
-         'from' => 1713074400,
-         'id' => 4039,
-         'text' => 'Langenlipsdorf - Hohenalsdorf: Bauarbeiten, Sperrung, 15.04.2024 08:00 Uhr bis 17.05.2024 16:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1715954400
-       },
+       undef,
        {
          'data' => '#: source_id: viz2021:13.434335,52.481525,21.11.2023,12:00 (bis 01.07.2024)
 # REMOVED --- #: add_fragezeichen: Gibt es hier überhaupt eine Sperrung?
 #: by: https://www.kms-sonne.de/baustellennews?date=20240416 (voraussichtlich ab Ende April 2024 bis April 2025) (mittlerweile Beginn auf Ende Mai 2024 verschoben)
 #: by: https://www.kms-sonne.de/assets/2024/04/Baustellenuebersicht-A4-04-2024-v3-Web.pdf
+#: XXX außerdem: Baustellenampel an der Kreuzung Donaustr./Anzengruberstr.
 #: also_indoor: traffic (none)
-# REMOVED --- #: last_checked: 2024-05-01 (noch immer keine Sperrung angekündigt)
-#: next_check: 2024-05-29
-	q4::inwork 12765,8435 12598,8390
+#: last_checked: 2024-05-12 vvv
+#: next_check: 2024-05-29 vvv
+Erkstr.	q4::inwork 12765,8435 12598,8390
+Anzengruberstr.: Einbahnstraßenregelung	q4::inwork; 12856,8344 12689,8289
+#: next_check ^^^
+#: last_checked ^^^
 ',
          'from' => 1717020000,
          'id' => 4040,
-         'text' => 'Erkstr.: Anbindung zur Karl-Marx-Str. unterbrochen, evtl. sind auch Radfahrer betroffen, möglicherweise ab Ende Mai 2024 bis April 2025',
+         'text' => 'Erkstr.: Anbindung zur Karl-Marx-Str. unterbrochen, evtl. sind auch Radfahrer betroffen; außerdem Einbahnstraßenregelung in der Anzengruberstr.; möglicherweise ab Ende Mai 2024 bis April 2025',
          'type' => 'handicap',
          'until' => 1746028800
        },
-       {
-         'data' => '#: by: rbb
-	q4::inwork 20388,3100 20478,3156 20717,3310
-',
-         'from' => 1713204639,
-         'id' => 4041,
-         'text' => 'Otto-Franke-Str.: zwischen Anna-Seghers-Str. und Nipkowstr. Sperrung, evtl. sind auch Radfahrer betroffen, bis 10.05.2024',
-         'type' => 'handicap',
-         'until' => 1715378400
-       },
+       undef,
        {
          'data' => '#: source_id: LS/221-E/23/175 (bis 10.01.2024)
 	2::inwork 11448,28068 12126,27740
@@ -8020,6 +7975,7 @@ Winterfeldtstr.: östliche Anbindung zur Martin-Luther-Str. gesperrt, Umwege	q4::
        },
        {
          'data' => '#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1443204.php
+#: by: https://www.berliner-woche.de/lankwitz/c-bauen/parkwege-werden-erneuert_a415111
 	2::inwork 7562,1796 7565,1806 7592,1892 7612,1918 7646,2019 7645,2110 7636,2161 7634,2267 7665,2357 7704,2482 7779,2722 7783,2730 7798,2765 7807,2961
 ',
          'from' => 1714514400,
@@ -8054,7 +8010,8 @@ Winterfeldtstr.: östliche Anbindung zur Martin-Luther-Str. gesperrt, Umwege	q4::
          'until' => undef
        },
        {
-         'data' => '#: by: https://viz.berlin.de/aktuelle-meldungen/vollsperrung-strasse-des-17-juni-bis-ende-juli/ (6.5.2024 - 26.7.2024)
+         'data' => '#: next_check_id: EM-2024
+#: by: https://viz.berlin.de/aktuelle-meldungen/vollsperrung-strasse-des-17-juni-bis-ende-juli/ (6.5.2024 - 26.7.2024)
 #: by: https://berliner-abendblatt.de/berlin-news/fanmeile-und-veranstaltungen-strasse-des-17-juni-gesperrt-id251516
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1787175928923099290 (hier auch: Heinrich-von-Gagern-Str., Otto-von Bismarck-Allee, Paul-Löbe-Allee)
 #: by[nocache]: https://twitter.com/BA_Mitte_Berlin/status/1787472473597813136
@@ -8064,16 +8021,14 @@ Winterfeldtstr.: östliche Anbindung zur Martin-Luther-Str. gesperrt, Umwege	q4::
 Straße des 17. Juni	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
 Kleine Querallee, Überquerung	3 8391,12389 8344,12221 8327,12174
 Kleine Querallee, Überquerung	3 8327,12174 8344,12221 8391,12389
-Ebertstr.	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-Yitzhak-Rabin-Str.	2::temp 8119,12414 8055,12186
+Ebertstr.	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
+# REMOVED (hier noch passierbar) --- Ebertstr.	2::temp 8600,12165 8595,12066
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
-#: last_checked: 2024-05-08 (webcam)
+#: last_checked: 2024-05-13
 #: check_frequency: 3d
 Brandenburger Tor	q4::temp 8538,12245 8592,12252 8637,12258
-zum Bremer Weg	3 8592,12252 8538,12245 8522,12239
-zum Bremer Weg	3 8522,12239 8538,12245 8592,12252
-zum Ahornsteig	3 8592,12252 8538,12245 8522,12187
-zum Ahornsteig	3 8522,12187 8538,12245 8592,12252
+Bremer Weg - Brandenburger Tor	2::temp 8466,12197 8522,12239 8538,12245
+Ahornsteig - Brandenburger Tor	2::temp 8522,12187 8538,12245
 ',
          'from' => 1714860000,
          'id' => 4053,
@@ -8082,33 +8037,23 @@ zum Ahornsteig	3 8522,12187 8538,12245 8592,12252
          'until' => 1722031200
        },
        {
-         'data' => '#: by: https://viz.berlin.de/aktuelle-meldungen/vollsperrung-strasse-des-17-juni-bis-ende-juli/ (13.5.2024 - 26.7.2024)
+         'data' => '#: next_check_id: EM-2024
+#: by: https://viz.berlin.de/aktuelle-meldungen/vollsperrung-strasse-des-17-juni-bis-ende-juli/ (13.5.2024 - 26.7.2024)
 #: by: https://berliner-abendblatt.de/berlin-news/fanmeile-und-veranstaltungen-strasse-des-17-juni-gesperrt-id251516
-#: XXX wird auch der gesamte Tiergarten gesperrt? oder vielleicht nur an Veranstaltungstagen?
-#: next_check: 2024-05-13
-John-Foster-Dulles-Allee, Scheidemannstr. und Dorotheenstr.	2::temp 7031,12320 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420 8775,12457
+#: source_id: viz2021:13.365723,52.517491,13.05.2024,06:00 (bis 26.07.2024)
+# REMOVED --- #: XXX wird auch der gesamte Tiergarten gesperrt? oder vielleicht nur an Veranstaltungstagen? --- #: next_check: 2024-05-13
+# REMOVED (Radweg scheint passierbar zu bleiben) --- John-Foster-Dulles-Allee	2::temp 7031,12320 7215,12295 7437,12368
+John-Foster-Dulles-Allee, Scheidemannstr. und Dorotheenstr.: für Kfz-Verkehr gesperrt	2::temp 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414 8354,12416 8373,12416 8400,12417 8540,12420 8775,12457
+Yitzhak-Rabin-Str.: für Kfz-Verkehr gesperrt	2::temp 8119,12414 8055,12186
+Heinrich-von-Gagern-Str. - Annemarie-Renger-Str.: Fahrbahn gesperrt	q4::temp 8119,12414 8122,12603 8207,12606 8206,12734 8206,12757
 ',
          'from' => 1715464800,
          'id' => 4054,
-         'text' => 'John-Foster-Dulles-Allee, Scheidemannstr. und Dorotheenstr.: Sperrung wegen Veranstaltungen (EM und weitere), vom 13.5.2024 bis 26.7.2024',
+         'text' => 'John-Foster-Dulles-Allee, Scheidemannstr., Dorotheenstr., Yitzhak-Rabin-Str., Heinrich-von-Gagern-Str.: Sperrung wegen Veranstaltungen (EM und weitere), Sperrungen möglich, vom 13.5.2024 bis 26.7.2024',
          'type' => 'gesperrt',
          'until' => 1722031200
        },
-       {
-         'data' => '#: note: laut rbb
-#: by[nocache]: https://twitter.com/VIZ_Berlin/status/1787427025860399586 (Gleissanierung, nur eine Sperrung für den Kfz-Verkehr wird erwähnt)
-#: by: https://pbs.twimg.com/media/GM43HeoWoAA3oFf?format=jpg&name=large
-#: by[nocache]: https://twitter.com/VIZ_Berlin/status/1788065037354955072
-#: by: https://pbs.twimg.com/media/GNAFqsWWsAIOcOj?format=jpg&name=medium (auch Fußgänger)
-#: source_id: viz2021:13.552425,52.469822,08.05.2024,08:00 (bis 14.05.2024)
-	2::inwork 20653,7289 20616,7292 20510,7325
-',
-         'from' => 1715032800,
-         'id' => 4055,
-         'text' => 'Rudolf-Rühl-Allee: Sperrung des Bahnübergangs am S-Bahnhof Wuhlheide, auch Fußgänger und Radfahrer sind betroffen, vom 08.05.2024 08:00 Uhr bis 14.05.2024 17:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1715698800
-       },
+       undef,
        {
          'data' => '#: source_id: viz2021:13.50175,52.509076,19.04.2024,07:00 (bis 06.09.2024)
 	q4::inwork; 17096,11585 16915,11634
@@ -8128,13 +8073,14 @@ John-Foster-Dulles-Allee, Scheidemannstr. und Dorotheenstr.	2::temp 7031,12320 7
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1788060004194341063
 #: by: https://pbs.twimg.com/media/GM-T_ItXAAEbotS?format=jpg&name=large (Sterndamm)
 #: by: https://pbs.twimg.com/media/GM-UPCQXoAAPE8L?format=jpg&name=large (Winckelmannstr.)
+#: note: laut Baustellenplakat (siehe bahninfo-forum) nur bis 05.07.2024, oder gibt es da nur eine Änderung der Verkehrsführung?
 #: source_id: viz2021:13.505693,52.445739,08.05.2024,07:00 (Sterndamm und Anbindungen, bis 08.08.2024)
-#: source_id: viz2021:13.50508,52.44526,08.05.2024,07:00 (bis 08.05.2024)
+#: source_id: viz2021:13.50508,52.44526,08.05.2024,07:00 (bis 08.05.2024) (inaktiv)
 Sterndamm: gemeinsamer Rad- und Gehweg	q3::inwork; 17387,4446 17428,4503 17471,4570 17516,4657
 Winckelmannstr. am Sterndamm	q4::inwork 17428,4503 17476,4337
 Trützschlerstr.	q2::inwork 17471,4570 17612,4460
 #: source_id: viz2021:13.506038,52.441227,08.05.2024,07:00 (Winckelmannstr., bis 08.08.2024)
-#: source_id: viz2021:13.5056,52.44039,08.05.2024,07:00 (bis 08.05.2024)
+#: source_id: viz2021:13.5056,52.44039,08.05.2024,07:00 (bis 08.05.2024) (inaktiv)
 Winckelmannstr.	q4::inwork 17503,4148 17498,4078 17468,3979
 ',
          'from' => 1715058000,
@@ -8142,6 +8088,42 @@ Winckelmannstr.	q4::inwork 17503,4148 17498,4078 17468,3979
          'text' => 'Sterndamm: Gleisarbeiten zwischen Winckelmannstr. und Königsheideweg, Sperrung der Fahrbahn, gemeinsamer Geh- und Radweg mit Umwegen, außerdem sind die Anbindung Trützschlerstr. und Abschnitte der Winckelmannstr. gesperrt, vom 08.05.2024 07:00 bis 08.08.2024 17:00',
          'type' => 'handicap',
          'until' => 1723129200
+       },
+       {
+         'data' => '#: by: https://www.berliner-woche.de/wilhelmstadt/c-verkehr/pichelsdorfer-strasse-mit-sechsmontiger-verspaetung-beginnt-der-dritte-abschnitt-des-umbaus_a410089
+#: by: http://wilhelmstadt-bewegt.de/category/baustellen-ticker-pichelsdorfer-strasse/
+#: by: https://wilhelmstadt-bewegt.de/ba3-weissenburger-adamstrasse/?proj=Umbau%20der%20Pichelsdorfer%20Stra%C3%9Fe&singlec=baustellen-ticker-pichelsdorfer-strasse (März bis Herbst 2024)
+#: by: https://wilhelmstadt-bewegt.de/wp-content/uploads/2024/02/230720_BA3_Infoflyer-Ausschnitt-1024x269.jpg (hier allerdings keine Sackgasse zu sehen)
+#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2024/pressemitteilung.1428086.php (18.03.2024 bis Herbst 2024)
+#: source_id: viz2021:13.197854,52.522094,02.05.2024,10:00 (bis 31.08.2024)
+Franzstr.: Anbindung zur Pichelsdorfer Str. gesperrt	q4::inwork -3637,12668 -3446,12728
+Weißenburger Str.: Anbindung zur Pichelsdorfer Str. gesperrt	q4::inwork -3650,12762 -3739,12756
+',
+         'from' => 1714550400,
+         'id' => 4058,
+         'text' => 'Pichelsdorfer Str.: Anbindungen westliche Weißenburger Str. und Franzstr. gesperrt, vom 02.05.2024 10:00 bis 31.08.2024 17:00',
+         'type' => 'gesperrt',
+         'until' => 1725116400
+       },
+       {
+         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2024/pressemitteilung.1445054.php (2024)
+	q4::temp::play 10685,10483 10857,10411
+',
+         'from' => 1719957600,
+         'id' => 4059,
+         'text' => 'Wassertorplatz: in Höhe Kastanienplatz donnerstags zwischen 15:00 und 19:00 Uhr temporäre Spielstraße, 04. Juli 2024 bis 25. Juli 2024',
+         'type' => 'handicap',
+         'until' => 1721926800
+       },
+       {
+         'data' => '#: source_id: viz2021:13.565575,52.531868,12.05.2024,10:30 (bis 07.06.2024)
+	q4::inwork; 21378,14490 21342,14096 21358,13909
+',
+         'from' => 1715416200,
+         'id' => 4060,
+         'text' => 'Blumberger Damm: Richtung Süden zwischen Elisabethstr. und Cecilienstr. wegen eines gesperrt, gegenüberliegender Gehweg ist frei, vom 12.05.2024 10:30 bis 07.06.2024 17:00',
+         'type' => 'handicap',
+         'until' => 1717772400
        }
      
 );
