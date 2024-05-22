@@ -175,8 +175,8 @@ Heinrichshof	OS 70031,89844
 Heinrichshof	OS 70368,90270
 # 
 Gartz|(Oder)	OS 73713,90988
-#: XXX geschätzte Position
-Gartz|(Oder)	OS 74369,90701
+#: by: mapillary
+Gartz|(Oder)	OS 74346,90622
 Gartz|(Oder)	OS 76662,91006
 # 
 #: linked: Friedrichsthal|(bei Gartz) vvv
@@ -2245,6 +2245,8 @@ Immenheim	OHT 27755,88677
 Templin	OS 17426,80173
 Templin	OS 13789,77521
 Templin	OS 16404,80916
+#: by: mapillary
+Templin	OS 13750,79021
 # 
 Schmidtshof	OHT 16776,81216
 # 

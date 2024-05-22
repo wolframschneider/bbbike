@@ -207,6 +207,7 @@ Zweirichtungsradweg, Verbundsteinpflaster	RW1;RW8? -3368,-4430 -2566,-4599
 #: confirmed_by: mapillary
 Asphalt	RW8;RW2 8310,-7300 8373,-7328 9170,-7708 9994,-8220
 #: by: mapillary vvv
+Gehweg für Radfahrer frei, Verbundsteinpflaster	RW1;RW1 -11205,15994 -11920,16276
 Verbundsteinpflaster	RW1;RW1 9994,-8220 10115,-8276
 teilweise Verbundsteinpflaster, teilweise Asphalt	RW1;RW1 10115,-8276 11115,-8466
 Verbundsteinpflaster	RW2;RW 11115,-8466 11247,-8513
@@ -235,6 +236,7 @@ breiter Verbundsteinpflasterradweg	RW8;RW2 34990,2148 35088,2160 35453,2207 3633
 Gehweg für Radfahrer frei	RW1;RW 37364,2132 37449,1992 37870,1620 38164,1564 38543,1750 38642,1798 38732,1821 39212,1762
 #: source_id: LS/221-F/23/086 (bis 11.08.2023) (inaktiv)
 #: XXX Sanierung des Radwegs, ist der Radweg danach asphaltiert?
+#: osm_watch: way id="209222181" version="4"
 #: next_check: 2023-08-11
 Verbundsteinpflasterradweg für beide Richtungen, etwas abseits der Straße	RW8;RW2 36719,2420 36771,2581 37084,2693 37712,2659 38023,2687 38308,2636 38512,2600
 Gehweg für Radfahrer frei, Verbundsteinpflaster	RW1;RW1 38512,2600 38636,2578 39044,2686 39243,2759
@@ -1423,7 +1425,14 @@ Gehwegplatten	RW8;RW2 16187,80684 16015,80500 15699,80294
 	RW3;RW3 15687,79466 15751,79428 15779,79412
 Gehweg für Radfahrer frei	RW1;RW1 15201,79780 15170,79840
 Verbundsteinpflaster	RW2;RW8 15361,80057 15314,80016 15133,79941
+Verbundsteinpflaster	RW8;RW2 15170,79840 15117,79832 14950,79874
+Asphalt	RW2;RW8 13750,79021 13847,79079
+Verbundsteinpflaster	RW2;RW8 13847,79079 14215,79301 14950,79874
 ######################### User Contributions #################################
+#: by: https://www.potsdam.de/sites/default/files/documents/amtsblatt_oktober_2018_web.pdf (Fahrradstraße geplant)
+#: by: mapillary, osm
+	RW7;RW7 -11672,-2958 -11322,-3332 -11162,-3502 -11097,-3570 -11036,-3654 -10963,-3762 -10899,-3866 -10795,-3996 -10748,-4065
+# 
 #: by: Johannes (...schmeisser...)
 #: confirmed_by: mapillary
 gemeinsamer Geh- und Radweg	RW2; -7917,-4792 -7969,-4828 -8021,-4937
@@ -1636,7 +1645,7 @@ asphaltiert	RW2;RW8 4704,-4447 4827,-4124 5036,-3707 5283,-3278 5399,-3049
 #: by: bergmann (...beuth...) vvv
 #: by: mapillary (Qualität)
 Gehweg für Radfahrer frei, Schotterweg	RW9;RW1 11065,-5338 11020,-5223
-Gehweg für Radfahrer frei, asphaltiert	RW9;RW1 11020,-5223 10980,-5185 10518,-4820 10182,-4527
+Gehweg für Radfahrer frei, asphaltiert	RW9;RW1 11020,-5223 11002,-5206 10518,-4820 10182,-4527
 #: by ^^^
 #: note: bergmann meint "neuer Fußweg wird allgemein widerrechtlich von Radfahrern genutzt"
 # REMOVED (korrigiert) --- #: XXX_osm: aber osm meint bicycle=designated

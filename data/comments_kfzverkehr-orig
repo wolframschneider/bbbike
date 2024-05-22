@@ -364,7 +364,7 @@ Dianastr.	+1 3744,21854 3771,21910 3855,22055 3970,22215 3985,22236 4032,22374 4
 Dannenwalder Str.	+2 6279,20587 6375,20579 6408,20603 6439,20632 6445,20636 6904,20692 7080,20713 7171,20729 7255,20793 7280,20895 7251,21202
 # REMOVED (-> NH) --- Kaulsdorfer Str./Am Bahndamm	+1 22049,7085 22075,6967 22186,6672 22192,6659 22279,6470 22325,6385 22365,6149 22467,6135
 Am Bahndamm: Zufahrt zum Parkhaus des Forums Köpenick	+1 22365,6149 22296,6170
-Lehrter Str.: starker Verkehr	+1 7759,13246 7651,13447 7647,13461 7653,13480 7660,13506 7655,13539 7630,13584 7535,13754 7468,13876 7452,13904 7438,13930 7366,14067 7331,14132 7180,14419
+Lehrter Str.: starker Verkehr	+1 7759,13246 7651,13447 7647,13461 7653,13480 7660,13506 7655,13539 7630,13584 7535,13754 7468,13876 7452,13904 7438,13930 7366,14067 7331,14132 7303,14185 7180,14419
 Rudolf-Rühl-Allee: starker Verkehr, Tempo 60, keine Radwege	+1 21303,5826 21243,6046 21239,6063 20722,6971
 Rudolf-Rühl-Allee: starker Verkehr	+1 20722,6971 20640,7122 20603,7189 20653,7289
 #: note: insbesondere im südlichen Abschnitt (ohne Radstreifen) unangenehm zu fahren
@@ -400,7 +400,7 @@ Neue Grottkauer Str. - Am Rosenhag	+1 23021,13982 23125,13961 23240,13938 23397,
 Margarete-Steffin-Str.: starker Schleichverkehr	+1 8559,12912 8631,12848 8700,12810 8732,12804
 Torstr.	+1 10177,13766 10319,13788 10459,13760 10572,13731 10645,13711 10741,13685 10898,13632 11111,13518 11160,13492
 Torstr.	+1 11160,13492 11117,13521 10898,13632
-Mügellandstr./Kirsteinstr.	+1 27804,1337 27999,1570 28052,1606 28128,1621 28205,1630 28369,1616 28495,1575 28632,1469
+Mügellandstr./Kirsteinstr.	+1 27804,1337 27999,1570 28050,1609 28122,1625 28205,1630 28369,1616 28495,1575 28632,1469
 Odernheimer Str.	+1 29414,2373 29115,2015 29077,1973 28978,1864 28904,1781 28817,1679 28632,1469 28591,1421 28545,1373 28488,1307 28348,1147 28225,1009
 Kablower Weg	+1 23225,192 22976,-176 22815,37 22695,209 22504,425 22298,494 22251,574 22120,886
 Dahmestr.	+1 22815,37 22697,-27 22596,-82 22440,-175 22190,-228 22048,-261 22023,-269 21944,-297 21898,-303 21877,-307 21847,-303 21648,-276 21534,-262
@@ -475,12 +475,13 @@ Ortnitstr.	+1 14048,18279 14156,18349 14228,18361 14382,18387 14517,18410 14533,
 #: by: https://www.berliner-woche.de/heinersdorf/c-verkehr/gehweg-des-wischbergewegs-ist-eine-pfuetze_a369485
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6601 (Antrag)
 #: by: https://www.berliner-woche.de/heinersdorf/c-verkehr/ideen-fuer-eine-ruhigere-strasse_a402930
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5794 (Sackgasse am nördlichen Ende, Umsetzung 2024)
 #: XXX Keine baulichen Maßnahmen bislang. 2022-10-22 (Sa) gegen 14:30: etwas erhöhter MIV, gezählt 4+2 Fahrzeuge; bei Mapillary sind auch verstärkt einbiegende Fahrzeuge zu sehen.
 #: source_id: viz2021:13.448433,52.564797,12.07.2022,09:37 (Baustelle bis 26.7.2022 --- vielleicht wird hier ein modaler Filter oder so gebaut?) (inaktiv)
 #: last_checked: 2024-05-11 (mapillary)
 # REMOVED --- #: check_frequency: 180d
 #: check_frequency: 60d
-# REMOVED --- #: next_check: 2022-07-26
+#: next_check: 2024-12-31
 Wischbergeweg	+1 13300,17726 13313,17775 13617,18045
 # 
 #: note: möglicher Schleichverkehr
@@ -495,4 +496,6 @@ Cecilienstr.	+1 21358,13909 21261,13922 21061,13940 20923,13953 20830,13960
 # 
 Wilmersdorfer Str.	+1 3813,10435 3870,10510 3883,10585 3881,10699 3869,10760 3847,10865 3835,10915 3820,10987
 Krumme Str.	+1 3820,10987 3942,11010 3975,11087
+# 
+Heideläuferweg	+1 13089,1351 13075,1559 13070,1642 13043,1984 13010,2085
 # 

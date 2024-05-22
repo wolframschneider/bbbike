@@ -84,6 +84,7 @@ Uferweg - Kiehnwerderallee: Waldweg	X 16657,8443 16490,8432
 #: mud: 2023-11-19: einige Pfützen	h=q1,wet
 #: mud: 2024-02-10: einige Pfützen	h=q1-,wet
 #: mud: 2024-03-09: keine Beeinträchtigungen	h=q0
+#: mud: 2024-05-15: keine Beeinträchtigungen	h=q0
 Hönower Weg: asphaltiert, aber mit einigen Wellen	X 17383,9719 16984,9857 16925,9852 16900,9861
 # 
 # REMOVED (Weg wurde neu gemacht und ist nun asphaltiert) --- #: mud: 2020-03-06: eine "Seenlandschaft" --- Rüdersdorfer Str. - Am Wriezener Bahnhof: unbefestigt, mit vielen großen Kuhlen	X 13173,11788 13089,11708
@@ -141,23 +142,19 @@ Gebrüder-Grimm-Weg: fester Sandweg	X 14277,18684 14265,18747 14269,18812 14278,1
 Reineke-Fuchs-Weg: Sandweg mit einigen Kuhlen	X 14359,18896 14324,18916 14189,19000 14059,19079 13971,19125 13936,19132 13909,19133
 # 
 #: mud: 2020-03-15: keine Beeinträchtigungen	h=q0
-#: by: mapillary (2024-03-25)
-#: mud: 2024-03-25: etwas feuchtere Oberfläche	h=q1,wet
+#: mud: 2024-03-25: etwas feuchtere Oberfläche	h=q1,wet	by=mapillary
 Hauffallee: fester Sandweg	X 13903,18979 13964,18985 14020,19033 14059,19079 14094,19134 14126,19188 14150,19226 14168,19256 14191,19294 14209,19327
 # 
 #: mud: 2020-03-15: keine Pfützen in den Kuhlen
-#: by: mapillary (2024-03-25)
-#: mud: 2024-03-25: viele Pfützen	h=q3,wet
+#: mud: 2024-03-25: viele Pfützen	h=q3,wet	by=mapillary
 Märchenweg: unbefestigte Straße mit vielen Kuhlen	X 14209,19327 14216,19338 14241,19379 14284,19451
 # 
 #: mud: 2020-03-15: keine Beeinträchtigungen	h=q0
-#: by: mapillary (2024-03-25)
-#: mud: 2024-03-25: wenige leicht matschige Stellen oder Pfützen, überwiegend trocken	h=q1,wet
+#: mud: 2024-03-25: wenige leicht matschige Stellen oder Pfützen, überwiegend trocken	h=q1,wet	by=mapillary
 Hauffallee - Blankenburger Pflasterweg: fester Sandweg	X 14284,19451 14328,19527 14366,19602 14374,19728 14338,19830 14348,19861
 # 
 #: mud: 2020-03-15: viele Pfützen
-#: by: mapillary (2023-04-12)
-#: mud: 2023-04-12: viele Pfützen	h=q3,wet
+#: mud: 2023-04-12: viele Pfützen	h=q3,wet	by=mapillary
 Mauerpark, über den Gleimtunnel: Sandweg mit Kuhlen	X 10050,15824 10061,15775 10045,15754 10071,15684
 # REMOVED (hier nicht mehr, neues Pflaster) --- Mauerpark, über den Gleimtunnel: Sandweg mit Kuhlen	X 10071,15684 10079,15661
 # 
@@ -260,6 +257,7 @@ KGA Erpetal - S-Bhf. Hirschgartenstr: unbefestigter Weg	X 24060,6059 23951,6063
 #: mud: 2022-12-13: keine Beeinträchtigungen (Eis in den Kuhlen haben nicht gestört)	h=q0
 #: mud: 2023-11-05: etwas feuchtere Oberfläche (Wasser in den Kuhlen hat nicht gestört)	h=q1,wet
 #: mud: 2024-03-20: trocken, leicht sandig	h=q1,dry
+#: mud: 2024-05-15: trocken, leicht sandig	h=q1,dry
 Schwarzer Weg: unbefestigter Weg, einige Kuhlen	X 17286,7173 17297,7196 17295,7328
 # 
 #: mud: 2020-03-28: keine Beeinträchtigungen, einige sandige Stellen, aber noch unproblematisch	h=q0-,dry
@@ -268,6 +266,7 @@ Schwarzer Weg: unbefestigter Weg, einige Kuhlen	X 17286,7173 17297,7196 17295,73
 #: mud: 2023-07-17: Oberfläche leicht sandig	h=q0-,dry
 #: mud: 2023-10-18: keine Beeinträchtigungen	h=q0
 #: mud: 2023-11-05: störende Pfützen in den Kuhlen, ansonsten etwas feuchtere Oberfläche	h=q3,wet
+#: mud: 2024-04-15: einige sandige Stellen	h=q1-,dry
 Schwarzer Weg: unbefestigter Weg, sehr viele Kuhlen	X 17301,7754 17305,8105 17311,8123
 # 
 #: mud: 2020-04-13: keine Beeinträchtigungen	h=q0
@@ -292,10 +291,9 @@ Köpenicker Allee: holpriger Fahrweg mit asphaltierten Stellen	X 19898,8410 19990
 #: mud: 2023-10-28: viele Pfützen	h=q3,wet
 Wiesengrundstr. (Karlshorst): Schotterstraße, teilweise holprig	X 19468,8168 19550,8230 19599,8256 19639,8278 19698,8310 19713,8319 19740,8332 19782,8354 19832,8378 19898,8410
 # 
-#: by: mapillary (2022-04-09)
 #: mud: 2020-05-12: mehrere Pfützen
 #: mud: 2020-05-19: weitgehend trocken
-#: mud: 2022-04-09: mehrere Pfützen	h=q3,wet
+#: mud: 2022-04-09: mehrere Pfützen	h=q3,wet	by=mapillary
 #: mud: 2022-10-15: trocken	h=q0
 #: mud: 2024-03-01: trocken	h=q0
 #: mud: 2024-05-04: trocken	h=q0
@@ -386,7 +384,7 @@ Tiergarten, Bellevueallee - Floraplatz: Parkweg	X 8016,11770 8020,11937 8022,120
 (Parkweg entlang der Tiergartenstr.): Parkweg	X 8172,11679 8141,11685 8006,11648 7890,11610 7838,11603 7813,11589 7783,11573 7713,11553
 # 
 #: mud: 2024-04-03: feuchte Oberfläche, einige Pfützen	h=q1-,wet
-(Parkweg entlang der Tiergartenstr.): Parkweg	X 7713,11553 7621,11541 7463,11538 7220,11542 7111,11524 7080,11508 6966,11490 6844,11496 6826,11479
+(Parkweg entlang der Tiergartenstr.): Parkweg	X 7713,11553 7621,11541 7463,11538 7359,11538 7220,11542 7111,11524 7080,11508 6966,11490 6844,11496 6826,11479
 # 
 #: mud: 2021-02-20: sehr matschig
 (Jenbacher Weg - Mauerweg): unbefestigter Feldweg, recht festgetrampelt	X 6233,412 6256,363
@@ -419,8 +417,7 @@ Am Alten Fenn: Feinschotterweg	X 17060,4848 17119,4931 17246,5089 17266,5134 172
 (Hohenschönhauser Str. - Falkenberger Krugwiesen): Feinschotter	X 18993,17630 18965,17675 18937,17738
 # 
 #: mud: 2021-03-06: weitgehend trocken
-#: by: mapillary
-#: mud: 2024-05-07: trocken	h=q0
+#: mud: 2024-05-07: trocken	h=q0	by=mapillary
 (Weg durch die Falkenberger Krugwiesen): wassergebundene Decke	X 18644,17349 18650,17367 18708,17415 18737,17482 18756,17498 18784,17525 18831,17663 18937,17738 18991,17776 19045,17832 19097,17869 19110,18015 19127,18091 19213,18195 19236,18223
 # 
 #: mud: 2021-03-07: weitgehend trocken
@@ -515,10 +512,8 @@ Hausvaterweg: unbefestigte Straße	X 20281,18690 20347,18667
 (Am Wriezener Bahnhof - Rüdersdorfer Str.): wassergebundene Decke	X 12944,11760 13052,11867
 # 
 #: mud: 2021-12-11: zahlreiche Pfützen
-#: by: mapillary (next)
-#: mud: 2024-04-06: zahlreiche Pfützen	h=q3,wet
-#: by: mapillary (next)
-#: mud: 2024-05-10: keine Beeinträchtigungen	h=q0
+#: mud: 2024-04-06: zahlreiche Pfützen	h=q3,wet	by=mapillary
+#: mud: 2024-05-10: keine Beeinträchtigungen	h=q0	by=mapillary
 (Walter-Nicklitz-Promenade): wassergebundene Decke	X 8290,15304 8329,15397
 # 
 #: mud: 2022-01-05: keine Beeinträchtigungen, nur im Bereich der Schranken leicht matschig	h=q1,wet
@@ -553,9 +548,8 @@ Hausvaterweg: unbefestigte Straße	X 20281,18690 20347,18667
 #: mud: 2022-04-01: keine Beeinträchtigungen	h=q0
 Uferweg am Paul-Lincke-Ufer, westlich Hobrechtbrücke	X 11735,10022 11756,9990 11948,9895 12045,9843
 # 
-#: by: mapillary (2020-03-04 + 2020-09-14)
-#: mud: 2020-03-04: viele Pfützen	h=q3,wet
-#: mud: 2020-09-14: trocken	h=q0
+#: mud: 2020-03-04: viele Pfützen	h=q3,wet	by=mapillary
+#: mud: 2020-09-14: trocken	h=q0	by=mapillary
 #: mud: 2022-02-11: Pfützen und matschig	h=q3,wet
 #: mud: 2022-04-01: keine Beeinträchtigungen	h=q0
 #: mud: 2023-03-11: viele Pfützen	h=q3,wet
@@ -611,15 +605,15 @@ Orankestrand: unbefestigter Weg, etwas Schotter	X 15813,16319 15782,16277 15731,
 #: mud: 2023-01-06: einigen Pfützen, etwas matschig	h=q2,wet
 Orankestrand: unbefestigter Weg	X 15731,16208 15664,16115 15592,16069 15479,16060
 # 
-#: by: mapillary (2023-02-25)
-#: mud: 2023-02-25: zahlreiche Pfützen	h=q3,wet
+#: mud: 2023-02-25: zahlreiche Pfützen	h=q3,wet	by=mapillary
 #: mud: 2023-05-13: keine Beeinträchtigungen	h=q0
+#: mud: 2024-05-18: keine Beeinträchtigungen	h=q0
 (Mauerweg - Gerlinger Str.): wassergebundene Decke	X 11928,588 12016,781 11997,874
 # 
-#: by: mapillary (2023-02-25)
-#: mud: 2023-02-25: zahlreiche Pfützen	h=q3,wet
+#: mud: 2023-02-25: zahlreiche Pfützen	h=q3,wet	by=mapillary
 #: mud: 2023-05-13: keine Beeinträchtigungen	h=q0
 #: mud: 2023-11-18: einige Pfützen und matschige Stellen	h=q2,wet
+#: mud: 2024-05-18: leicht sandig	h=q1+,dry
 Mauerweg: wassergebundene Decke	X 11596,583 11672,554 11794,550 11928,588 11956,599
 # 
 #: mud: 2023-11-18: matschige Stellen	h=q3,wet
@@ -654,8 +648,7 @@ Straße 106: fester Sandweg	X 14599,14679 14666,14845 14828,15050
 (Waldweg nördlich des Schwarzen Grabens): Waldweg, Schotter	X 3213,18115 3161,18100 3133,18109 3087,18147 2864,18175 2804,18189 2771,18157
 # 
 #: mud: 2023-06-26: zahlreiche Pfützen	h=q3,wet
-#: by: mapillary
-#: mud: 2024-05-07: trocken	h=q0
+#: mud: 2024-05-07: trocken	h=q0	by=mapillary
 (Rhönstr. - Harzburger Str.): unbefestigter Pfad	X 13598,21360 13709,21334
 # 
 #: mud: 2023-10-08: zahlreiche Pfützen und matschige Stellen	h=q3,wet
@@ -682,13 +675,13 @@ Am Akazienweg: unbefestigter Weg	X 19125,19130 19043,18876
 # 
 #: mud: 2023-11-03: einige Pfützen, Umfahrung auf unangenehm zu fahrenden Rasengittersteinen möglich	h=q2-,wet
 (Rosenweg (KGA Baumfreunde)): wassergebundene Decke	X 15343,5687 15337,5730
-#
+# 
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11725
-#: mud: 2023-06-17: Überschwemmung der Straße	h=q4,wet
-#: mud: 2023-06-23: Überschwemmung der Straße	h=q4,wet
-#: mud: 2023-06-26: Überschwemmung der Straße	h=q4,wet
-#: mud: 2023-07-24: Überschwemmung der Straße	h=q4,wet
-#: mud: 2023-07-29: Überschwemmung der Straße	h=q4,wet
+#: mud: 2023-06-17: Überschwemmung der Straße	h=q4,wet	by=BVV_Drucksache
+#: mud: 2023-06-23: Überschwemmung der Straße	h=q4,wet	by=BVV_Drucksache
+#: mud: 2023-06-26: Überschwemmung der Straße	h=q4,wet	by=BVV_Drucksache
+#: mud: 2023-07-24: Überschwemmung der Straße	h=q4,wet	by=BVV_Drucksache
+#: mud: 2023-07-29: Überschwemmung der Straße	h=q4,wet	by=BVV_Drucksache
 Platenhofer Weg: Asphalt	X -1980,23033 -1865,23298
 # 
 #: mud: 2023-11-25: einige Pfützen	h=q2,wet
