@@ -797,6 +797,9 @@ Promenade (Jüterbog): Qualität des südlichen Abschnitts?	? -10165,-45794 -10193,
 Triftstr. (Hohen Neuendorf): Qualität?	? 1470,29391 1483,29433 1604,29508 1646,29550 1687,29557 1717,29541
 Waldstr. (Hohen Neuendorf): Qualität des westlichen Abschnitts?	? 1604,29508 1717,29541
 Am Rathaus (Hohen Neuendorf): Qualität?	? 1717,29541 1730,29579 1733,29664
+# added from strassen
+Petersallee (Wurde die Umbenennung zu "Maji-Maji-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5426,16539 5533,16662
+Petersallee (Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?)	? 5581,16708 5639,16768 5684,16815 5772,16919
 # added from landstrassen
 zur Fähre Liepnitzsee (Wegbeschaffenheit?)	? 17636,38832 17671,38736 17650,38659 17464,38558 17358,38415 17391,38405
 ehem. B1/B5: Berlin - Müncheberg (Ist dieser Abschnitt für den Kfz-Verkehr gesperrt?)	? 41650,8965 43293,8953
@@ -907,11 +910,15 @@ F3.4 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.5 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from fragezeichen
+Kurpromenade: wird die Fahrbahn hier erneuert? (Wurde die Fahrbahn in der Kurpromenade erneuert?)	? -8917,5986 -8871,6289 -8862,6375 -8860,6439 -8859,6540 -8868,6798 -8804,6818 -8732,6840 -8656,6864 -8567,6893
 Schönfließer Str., Senheimer Str., Gollanczstr.: Bauarbeiten geplant, kommt es dabei zu Änderungen (z.B. Asphaltierungen?) (Sind die Bauarbeiten in der Schönfließer Straße beendet?)	? 2206,25649 2139,25830 2112,26066 2207,26090 2293,26111 2402,26121 2490,26126 2499,26128 2490,26126 2484,25984 2496,25915 2519,25772 2515,25666
 Mühlenstr.: Bau einer Fußgängerampel (Ist die Fußgängerampel bereits fertig?)	? 10672,17428 10679,17441 10686,17453
 # added from bbbike-temp-blockings-optimized
 Bitterfelder Brücke - Max-Hermann-Str.: Bauarbeiten, Weg kann gesperrt sein, Ende der Bauarbeiten unbekannt (Wann sind die Bauarbeiten beendet? Wird der Weg neu asphaltiert sein?)	? 21176,16480 21129,16426 21107,16418 21070,16415 20996,16429 20923,16435 20898,16420
+Mommsenstr.: Bauarbeiten in Höhe Leibnizstr., Fahrbahn gesperrt, keine Gehwegfreigabe für Radfahrer, voraussichtlich bis 24.05.2024 (Besteht die Baustelle noch immer?)	? 3869,10760 4267,10724 4393,10712
 Steg am Krugpfuhl gesperrt, Ende der Sperrung unbekannt (Wann ist der Steg wieder offen?)	? 11162,22939 11150,22898
-Clara-Wieck-Str.: vor der Einmündung Tiergartenstr. Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis Ende März 2024, evtl. länger (Existiert die Sperrung noch immer?)	? 7103,11247 7171,11510
-Wichmannstr.: Leitungsarbeiten, Einbahnstraßenregelung zwischen Landgrafenstr. und Keithstr. (auch für Radfahrer), voraussichtlich bis Mitte Mai 2024, vielleicht auch länger (Existiert die Einbahnstraßenregelung in der Wichmannstraße weiterhin?)	? 6549,11015 6681,10959
-Wiesendamm: zwischen Spandauer Damm und Sophienwerderweg Bauarbeiten, Einbahnstraßenregelung, offen Richtung Spandauer Damm, evtl. sind auch Radfahrer betroffen, vom 29.04.2024 07:00 bis 31.07.2025 17:00 (Sind Radfahrer tatsächlich von der Einbahnstraßenregelung betroffen?)	? -795,13437 -729,13415 -346,13349 -309,13268 -278,13094 -264,13009
+Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt; außerdem Sperrung der Kreuzung Cottbusser Str./Cottbusser Platz (Ist der Weg weiterhin gesperrt? Falls nicht, hat sich die Wegoberfläche geändert?)	? 23305,14914 23318,14847 23297,14772
+Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt; außerdem Sperrung der Kreuzung Cottbusser Str./Cottbusser Platz (Ist die Kreuzung weiterhin gesperrt?)	? 23222,14809 23297,14772 23369,14756
+Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt; außerdem Sperrung der Kreuzung Cottbusser Str./Cottbusser Platz (Ist die Kreuzung weiterhin gesperrt?)	? 23288,14719 23297,14772
+Bürgerpark: Weg von/zur Wilhelm-Kuhr-Str. gesperrt, Ende der Bauarbeiten unbekannt (Stand Anfang Mai 2024: Sperrung besteht weiterhin) (Sind die Bauarbeiten beendet?)	? 9462,18234 9460,18053
+Wilhelm-Kuhr-Str. - Wollankstr. (ehem. Mauerstreifen): Sperrung wegen Bauarbeiten, Ende der Sperrung unbekannt (Ist der Weg entlang des Bahndamms noch gesperrt?)	? 9586,17665 9396,17863

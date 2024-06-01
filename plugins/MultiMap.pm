@@ -20,9 +20,9 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 2.12;
+$VERSION = 2.15;
 
-use BBBikeUtil qw(bbbike_aux_dir module_exists);
+use BBBikeUtil qw(bbbike_aux_dir module_exists deg2rad);
 
 use vars qw(%images);
 
@@ -174,6 +174,12 @@ sub register {
 	      callback_3 => sub { show_fis_broker_menu(@_) },
 	      ($images{FIS_Broker} ? (icon => $images{FIS_Broker}) : ()),
 	    };
+	$main::info_plugins{__PACKAGE__ . '_VIZ'} =
+	    { name => 'VIZ Berlin',
+	      callback => sub { showmap_viz(@_) },
+	      callback_3_std => sub { showmap_url_viz(@_) },
+	      ($images{VIZ} ? (icon => $images{VIZ}) : ()),
+	    };
 	$main::info_plugins{__PACKAGE__ . "_LGB"} =
 	    { name => "LGB Brandenburg Topo DTK10 (via mc)",
 	      callback => sub { showmap_mapcompare(@_, maps => 'lgb-topo-10') },
@@ -186,11 +192,11 @@ sub register {
 	      callback_3 => sub { show_bbviewer_menu(@_) },
 	      ($images{BRB} ? (icon => $images{BRB}) : ()),
 	    };
-	$main::info_plugins{__PACKAGE__ . '_VIZ'} =
-	    { name => 'VIZ Berlin',
-	      callback => sub { showmap_viz(@_) },
-	      callback_3_std => sub { showmap_url_viz(@_) },
-	      ($images{VIZ} ? (icon => $images{VIZ}) : ()),
+	$main::info_plugins{__PACKAGE__ . "_RadverkehrsatlasBRB"} =
+	    { name => "Radverkehrsatlas Brandenburg",
+	      callback => sub { showmap_radverkehrsatlas(@_) },
+	      callback_3_std => sub { showmap_url_radverkehrsatlas(@_) },
+	      ($images{BRB} ? (icon => $images{BRB}) : ()),
 	    };
 	$main::info_plugins{__PACKAGE__ . '_BerlinRadverkehr'} =
 	    { name => 'Radverkehrsnetz Berlin',
@@ -204,12 +210,6 @@ sub register {
 	  callback => sub { showmap_bkg(@_) },
 	  callback_3_std => sub { showmap_url_bkg(@_) },
 	  ($images{BKG} ? (icon => $images{BKG}) : ()),
-	};
-    $main::info_plugins{__PACKAGE__ . 'QwantMaps'} =
-	{ name => 'Qwant Maps',
-	  callback => sub { showmap_qwantmaps(@_) },
-	  callback_3_std => sub { showmap_url_qwantmaps(@_) },
-	  ($images{QwantMaps} ? (icon => $images{QwantMaps}) : ()),
 	};
     $main::info_plugins{__PACKAGE__ . 'Mapillary'} =
 	{ name => 'Mapillary',
@@ -247,6 +247,11 @@ sub register {
 	  callback => sub { showmap_streckeninfo(@_) },
 	  callback_3_std => sub { showmap_url_streckeninfo(@_) },
 	  ($images{DB} ? (icon => $images{DB}) : ()),
+	};
+    $main::info_plugins{__PACKAGE__ . 'travic'} =
+	{ name => 'travic',
+	  callback => sub { showmap_travic(@_) },
+	  callback_3_std => sub { showmap_url_travic(@_) },
 	};
     if ($is_berlin) {
 	$main::info_plugins{__PACKAGE__ . '_HierBautBerlin'} =
@@ -584,46 +589,6 @@ AAALEwAACxMBAJqcGAAAAAd0SU1FB+EGCxMzFc5bjNQAAACWSURBVAjXY/j//1Wx2dz//xn+/w4x
 NlbuBzIWKCsbKXH8Z/ijagwEhvMZPjIwMAoIMvIz/N69a+aafe/vMUxgVOtevfcGB8Pp3TPCT5xS
 1GDYzKB5vDrB2Jxhcc1inQZlZQ2G24VcW4WVjbUZPpgeFzVSNrJj+LPL0JiJ2Wg9yApjZWVxoF2/
 lJWNjUGW/n+Zltb7/z8ADMI7t51Q4A0AAAAASUVORK5CYII=
-EOF
-    }
-
-    if (!defined $images{QwantMaps}) {
-	# Created with:
-	#   lwp-request 'https://www.qwant.com/maps/statics/images/favicon.png' | convert -resize 16x16 png:- png:- | base64
-	$images{QwantMaps} = $main::top->Photo
-	    (-format => 'png',
-	     -data => <<EOF);
-iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
-AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACalBMVEUAAAD53R2Dynb83Bj7
-3Bplzudlzuf82xeFyWdWsuN+x2xGmuvd2C1Loer4pixLour/O0r/O0r/O0r/PEKvJ8yvJ8x2bd36
-3Bz53h/53yH33yTn3S/R2T2/1kix01Cdz1xxxoj73Br63Rz63h7t3CiLymSJymZ5y5tfz/z92xf8
-3Bn73Rulz1SGyWaFyWeHyWaHyWaHyWZ1zKpkzuplzuf/2xL92xb83Bisz0+EyGiGyWaHyWaHyWaI
-yWSDx293yJplzuhlzudlzuf+2xT92xbS1jWKymRhwn9Uq9dVtOpdwOllzudlzuf+2hTF0z4Agf8x
-du1Opuplzuf+2xP33BvV1jJKoOpPqOplz+f3uSn8yB/4oS5LoupLoeplzufmTWn+WEH/NExLoupL
-oepkzOfLLZ//Okr/O0pLoupLoupiyOeyKMfbMoT/O0n/O0tLoupLoupQqulgxuisJtG2KcH9O0z/
-PEb/PTxLoupLoupLoupPqepgxui3Kb+uJ86zKMbsNmj3OVf6OlLzOF7RL5W4KL4rv/1LoupMo+pX
-tumvJ8yuJ82uJ83GLafAK7C2KcGwJ8vPAMRKpOpLoupLoupLouqvJ8yvJ8yvJ82uJ86vJ8ywJswA
-//9LoupLouqvJ8yvJ8yvJ8yvJ8yvJ8yvJ8yvJ8yvJ8xLoupLoupLoupLourA1ESbzVuNymKLymTo
-2imHyWTy2yFpzdf83Bhlzef92xX32xxbvehlzuf92xVhx+f92hZYuOn+czhSren5N1VQqur/O0lL
-ourgM3xLourPL5hLoupLouq0KMPAK7CuJ86uJ82vJ83///8pouhQAAAAq3RSTlMAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAMxg7/Y2L6CMAMQe+H+/uF9ERKg/P3ozc7p/vyiEgOD/emBLBERLoTr/YMD
-O+bqUwECV+zmO5ODAQKIkM7qMDTsyuXSFBfW4OTUFhnY3cnuOT3xvIr+lQUHmvx2Mt/zbQcBbPXP
-IgF0+vShSCQlGQKanQMLjPf25OerCTrr3zQJYcz380cBnKgAGlqSraeIKzWmrZsiOjZlAAAAAWJL
-R0TNbdCjRQAAAAlwSFlzAAAASAAAAEgARslrPgAAAAd0SU1FB+QCEBMzEnJq/poAAAEJSURBVBjT
-Y2BgYBSXkJSSlpGVk1dgYmBgYGZRVFJWWb1m7TpVNXUNVjYGdk0t7fU6unr6BoYbjIxN2BhMzcw3
-WlhaWdvY2tlvcnB0YnB22ezq5s7BwMDp4em1xduHwXfrNj9/LqBhDNwBgdt3BDEE7wwJ5WEAA96w
-8F0RDJG7o6L5IAL8MbF74hji9yYkCkAFkpL3pTCk7k9LF4Tw+TMyD2QxZOcczM0TAgvkFxwqLGIo
-LjlcWlYuDORXVFYdqa5hqK2rP9rQ2NTc0trWfux4RyeDSFd3z4mTvX39EyZOmnxsylQGBtFp02fM
-PHX6zKzZc+YeOzYPaJjo/AULFy1esnSZ2PIVK1cBAAwnVGegVDmDAAAAJXRFWHRkYXRlOmNyZWF0
-ZQAyMDIwLTAyLTE2VDIwOjUxOjE4KzAxOjAwlB3o6QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0w
-Mi0xNlQyMDo1MToxOCswMTowMOVAUFUAAABGdEVYdHNvZnR3YXJlAEltYWdlTWFnaWNrIDYuNy44
-LTkgMjAxNC0wNS0xMiBRMTYgaHR0cDovL3d3dy5pbWFnZW1hZ2ljay5vcmfchu0AAAAAGHRFWHRU
-aHVtYjo6RG9jdW1lbnQ6OlBhZ2VzADGn/7svAAAAGHRFWHRUaHVtYjo6SW1hZ2U6OmhlaWdodAAx
-OTIPAHKFAAAAF3RFWHRUaHVtYjo6SW1hZ2U6OldpZHRoADE5MtOsIQgAAAAZdEVYdFRodW1iOjpN
-aW1ldHlwZQBpbWFnZS9wbmc/slZOAAAAF3RFWHRUaHVtYjo6TVRpbWUAMTUzMDgwOTAxNDogfPoA
-AAAPdEVYdFRodW1iOjpTaXplADBCQpSiPuwAAABWdEVYdFRodW1iOjpVUkkAZmlsZTovLy9tbnRs
-b2cvZmF2aWNvbnMvMjAxOC0wNy0wNS8yZTE4YTc2YzgwZmQxMzY0MGJhODY5NDlmMWJiYmQ4Zi5p
-Y28ucG5nNVBWxQAAAABJRU5ErkJggg==
 EOF
     }
 
@@ -1747,28 +1712,6 @@ sub showmap_berlinerlinien {
 }
 
 ######################################################################
-# Qwant Maps
-sub showmap_url_qwantmaps {
-    my(%args) = @_;
-
-    my $px = $args{px};
-    my $py = $args{py};
-
-    my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
-    if ($map_compare_use_bbbike_org) {
-	$scale = 20 if $scale > 20;
-    }
-
-    sprintf 'https://map.qwant.com/#map=%.2f/%f/%f', $scale, $py, $px;
-}
-
-sub showmap_qwantmaps {
-    my(%args) = @_;
-    my $url = showmap_url_qwantmaps(%args);
-    start_browser($url);
-}
-
-######################################################################
 # BKG (Bundesamt für Kartographie und Geodäsie)
 
 sub showmap_url_bkg {
@@ -1962,6 +1905,39 @@ sub show_bbviewer_menu {
 }
 
 ######################################################################
+# Radverkehrsatlas
+
+sub showmap_url_radverkehrsatlas {
+    my(%args) = @_;
+    my $px = $args{px};
+    my $py = $args{py};
+    my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
+    sprintf "https://radverkehrsatlas.de/regionen/bb-kampagne?v=1&map=%.1f/%s/%s", $scale, $py, $px;
+}
+
+sub showmap_radverkehrsatlas {
+    my(%args) = @_;
+    my $url = showmap_url_radverkehrsatlas(%args);
+    start_browser($url);
+}
+
+######################################################################
+# travic
+
+sub showmap_url_travic {
+    my(%args) = @_;
+    my($x, $y) = _wgs84_to_pseudo_mercator($args{px}, $args{py});
+    my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
+    sprintf "https://travic.app/?z=%d&x=%.1f&y=%.1f", $scale, $x, $y;
+}
+
+sub showmap_travic {
+    my(%args) = @_;
+    my $url = showmap_url_travic(%args);
+    start_browser($url);
+}
+
+######################################################################
 
 sub show_all_traffic_maps {
     my(%args) = @_;
@@ -2045,6 +2021,22 @@ sub _wgs84_to_utm_ze {
     require Karte::UTM;
     my($utm_ze, $utm_zn, $utm_x, $utm_y) = Karte::UTM::DegreesToUTM($y, $x, "WGS 84", ze => $ze);
     ($utm_x,$utm_y);
+}
+
+# target is EPSG:3857
+sub _wgs84_to_pseudo_mercator {
+    my($lon,$lat) = @_;
+
+    # Earth's radius in meters (WGS84)
+    my $R = 6378137;
+    
+    my $lambda_rad = deg2rad($lon);
+    my $phi_rad = deg2rad($lat);
+
+    my $x = $R * $lambda_rad;
+    my $y = $R * log(Math::Trig::tan(Math::Trig::pi() / 4.0 + $phi_rad / 2.0));
+
+    ($x, $y);
 }
 
 ######################################################################
