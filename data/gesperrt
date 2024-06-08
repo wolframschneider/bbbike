@@ -1012,6 +1012,7 @@ Hausvaterweg [Wohngebiet]	1s 19789,18423 19704,18459
 (Zufahrt U-Bahn-Abstellanlage Hönow): üblicherweise durch ein Tor versperrt	2 25919,14963 25809,14991
 Bahnhofsplatz S-Bhf. Hermsdorf	1 3624,23540 3610,23527 3590,23541 3581,23557 3596,23581
 Daimler-Parkplatz: Zufahrt Köpenicker Str. oft (immer?) gesperrt, auch an Werktagen	2 18471,2166 18448,2182 18320,2195
+Cotheniusstr.: Schulgelände, gesperrt	2 13430,13733 13519,13785
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1943,10 +1944,6 @@ Fußgängerbrücke -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::ign
 Fußgängerbrücke -> Robert-Uhrig-Str.: nicht passierbarer Mittelstreifen	3::igndisp 17746,11767 17746,11748 17744,11703
 nicht passierbarer Mittelstreifen	3nocross::ignrte 18626,11742 18696,11754 18853,11780 19004,11780 19092,11776 19389,11761 19661,11746 19726,11743 19907,11734 19985,11727 20114,11719 20161,11715 20375,11694
 Gensinger Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 18934,11796 18853,11780 19004,11780
-Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19092,11776 19004,11780 19005,11767
-Gensinger Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 19005,11767 19004,11780 18853,11780
-Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19389,11761 19092,11776 19110,11705
-Gensinger Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 19110,11705 19092,11776 19004,11780
 Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19092,11776 19389,11761 19138,11815
 Alt-Friedrichsfelde -> Waldbacher Weg: nicht passierbarer Mittelstreifen	3::igndisp 19389,11761 19661,11746 19631,11899
 Waldbacher Weg -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 19631,11899 19661,11746 19726,11743
@@ -2880,7 +2877,6 @@ tragen (eine Stufe) oder wilden Pfad benutzen	0:5:-215 21660,5424
 tragen oder Aufzug benutzen (Treppe, 49 Stufen)	0:45:78 -10,12256
 tragen (Treppe, 14 Stufen)	0:25:24 -1667,16828
 tragen (Treppe, 31 Stufen)	0:30:-213 17983,8960
-Schranke	BNP:3:-213:trailer=10 13081,14090
 tragen (Treppe, 5 Stufen)	0:10:-30 10290,12742
 tragen (8 weite Stufen)	0:30:-164 18121,10314
 tragen (insgesamt 61 Stufen)	0:60:-34 -3126,1798
@@ -3443,6 +3439,8 @@ Drängelgitter	BNP:3:-115:trailer=10 17457,94793
 Drängelgitter	BNP:3:-171:trailer=10 15646,93690
 Schranke über die gesamte Fahrbahnbreite, ggfs. auf Gehweg umfahren	BNP:5:-207:trailer=15 18471,2166
 Drängelgitter	BNP:3:-207:trailer=10 3550,810
+Schwingtor	BNP:5:-94:trailer=10 25136,10768
+Schranke	BNP:3:-213:trailer=10 13081,14090
 (Römerweg - Weg entlang der Bahnstrecke): Hochbauarbeiten, Weg gesperrt	2::inwork 18452,9755 18421,9764 18436,9842 18445,9887
 Am Köllnischen Park: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 11185,11883 11160,12071
 Am alten Flugplatz: Straße gesperrt	2::inwork 19697,8776 19754,8809 19778,8823 19815,8844 19891,8887 19949,8920 19972,8935
@@ -3450,6 +3448,7 @@ Reinickendorfer Str.: Bauarbeiten im Bereich des Weddingplatzes	1s:inwork 7998,1
 Am Wriezener Bahnhof: Einbahnstraßenregelung	1s:inwork 12758,11915 12788,11898
 Am Wriezener Bahnhof: Einbahnstraßenregelung	1s:inwork 12788,11898 12944,11760 12993,11717 12986,11699 12959,11631
 Wriezener Karree: Einbahnstraßenregelung	1s:inwork 12959,11631 12728,11850
+Alt-Friedrichsfelde: Sperrung des Radwegs	1::inwork 19389,11761 19092,11776 19004,11780 18853,11780
 Virchow-Klinikum: Zufahrt gesperrt	2::inwork 6213,14777 6210,14808
 Park Babelsberg, Uferweg: wegen Bauarbeiten für das neue Strandbad gesperrt	2::inwork -11486,-1008 -11452,-974
 Magnus-von-Hirschfeld-Ufer: Sperrung in Höhe Kanzlergarten	2::inwork 7772,12694 7521,12581
@@ -3463,7 +3462,6 @@ Matthäikirchplatz: Durchgang gesperrt	2::inwork 7933,11407 7970,11396 7934,11275
 Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,9039 19638,9070
 Straße 171: wegen Bauarbeiten gesperrt	2::inwork 12694,22570 12657,22596 12628,22604
 zur Ontarioseestr.: Hochbauarbeiten, komplett gesperrt	2::inwork 18585,10024 18694,10018
-Heinrich-Hertz-Str.: Hochbauarbeiten, gesperrt	2::inwork 37,15597 59,15518 149,15237
 Heinrich-Hertz-Str.: Hochbauarbeiten, gesperrt	2::inwork -45,15503 59,15518
 An der Villa Bolle: Bauarbeiten, gesperrt	2::inwork 22668,3125 22477,3109
 Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
@@ -3518,7 +3516,6 @@ Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 Am Betriebsbahnhof Schönweide: Straße mit Bauzaun abgesperrt	2::inwork 18254,4817 18306,4753 18331,4744 18497,4529
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9473,-92 9271,323 9253,370 9178,556
 Buckower Chaussee: Bahnübergang gesperrt	2::inwork 9123,533 9178,556 9200,562
-Cotheniusstr.: Bauarbeiten, Straße existiert nicht mehr	2::inwork 13430,13733 13519,13785
 Prinzessinnenstr./Bahnhofstr. (Lichtenrade): neue Unterführung wird gebaut	2::inwork 10096,-2137 10194,-2138 10228,-2136 10300,-2135
 Pfarrer-Lütkehaus-Platz: Sperrung am ehemaligen Bahnübergang	2::inwork 10228,-2136 10231,-2159
 Pfarrer-Lütkehaus-Platz: Bauarbeiten, Sperrung	2::inwork 10296,-2156 10300,-2135
@@ -3533,7 +3530,7 @@ George-Stephenson-Str.: möglicher Baustellenverkehr, Freigabe noch unklar	2::inw
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:inwork 9441,12670 9429,12728 9402,12792 9386,12833 9375,12911
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
 Grunerstr.: Straßenzug wird entfernt	2::inwork 10746,12364 10807,12451 10838,12496 10849,12557
-Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21355,5254 21386,5251 21514,5310
+Am Kutscherhaus: durch Bauzäune abgesperrt	2::inwork 21355,5254 21386,5251
 Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10746,12364 10831,12371
 Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork 10831,12371 10830,12313 10830,12279

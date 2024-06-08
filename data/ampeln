@@ -2,10 +2,12 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
+Danziger Str./Hans-Otto-Str.: provisorische Ampel	X::inwork 12722,14232
 Anzengruberstr./Donaustr.: Bauampel	X::inwork 12856,8344
 Zabel-Krüger-Damm/Alt-Lübars: Gegenverkehrsregelung	X::inwork 6805,23554
 Marzahner Chaussee: Gegenverkehrsregelung	X::inwork 18555,12101
 Salvador-Allende-Str.: Gegenverkehrsregelung	X::inwork 23445,4596
+Rudower Str.: Gegenverkehrsregelung zwischen Dorothea-Viehmann-Str. und Alter Schönefelder Weg	X::inwork 19564,1871
 Kiefholzstr.: Gegenverkehrsregelung	X::inwork 16425,6445
 Mariendorfer Weg/Gottlieb-Dunkel-Str./Eschersheimer Str.: Gegenverkehrsregelung	X::inwork 11740,6338
 Allee der Kosmonauten/Straßenbahn	X::inwork 17778,13438
@@ -36,6 +38,7 @@ Germanenstr.: Gegenverkehrsregelung	X::inwork 8227,19725
 	X::inwork 10096,-2137
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 Gegenverkehrsregelung	X::inwork 18767,-1343
+	F 10679,17441
 	F 11913,13077
 	F 18406,7760
 	F 15445,9090
@@ -740,8 +743,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10412,4552
 	X 10291,4353
 	X 10800,5203
-	X 11266,5097
-	X 11386,5107
+	X 11302,5098
+	X 11376,5102
 	X 6780,3497
 	X 6996,3762
 	X 7159,4023
@@ -2323,7 +2326,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 7292,17316
 	X 20262,14255
 	X 23810,7946
-	X 24801,11261
+	X 24806,11261
 	F 9274,13963
 	X 9148,13944
 	F 10462,3765

@@ -85,6 +85,7 @@ Uferweg - Kiehnwerderallee: Waldweg	X 16657,8443 16490,8432
 #: mud: 2024-02-10: einige Pfützen	h=q1-,wet
 #: mud: 2024-03-09: keine Beeinträchtigungen	h=q0
 #: mud: 2024-05-15: keine Beeinträchtigungen	h=q0
+#: mud: 2024-06-07: keine Beeinträchtigungen	h=q0
 Hönower Weg: asphaltiert, aber mit einigen Wellen	X 17383,9719 16984,9857 16925,9852 16900,9861
 # 
 # REMOVED (Weg wurde neu gemacht und ist nun asphaltiert) --- #: mud: 2020-03-06: eine "Seenlandschaft" --- Rüdersdorfer Str. - Am Wriezener Bahnhof: unbefestigt, mit vielen großen Kuhlen	X 13173,11788 13089,11708
@@ -311,6 +312,7 @@ Am Jüdischen Museum: alte wassergebundene Decke mit vielen Kuhlen	X 9770,10590 9
 #: mud: 2022-11-05: leicht feuchtere Oberfläche	h=q0-,wet
 #: mud: 2023-03-26: einige Pfützen und teils erheblich matschige Stellen	h=q3,wet
 #: mud: 2023-08-06: gemischt leicht feuchtere Oberfläche und leicht sandig	h=q1,wet
+#: mud: 2024-06-02: wenige sehr leicht sandige Stellen	h=q0-,dry
 (Mittelheide, Nord-Süd-Weg): Waldweg	X 24293,7698 24275,7550 24185,6880
 # 
 #: mud: 2020-08-15: keine Beeinträchtigungen	h=q0

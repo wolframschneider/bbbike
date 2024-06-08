@@ -436,7 +436,7 @@ Bus M27	busroute_N 3556,13200 3585,13320 3642,13548
 Bus M27	busroute_N 3739,13563 3724,13702 3713,13787 3702,13865 3695,13902
 Bus M21, Bus M27	busroute_N 3005,13728 3320,13796 3695,13902
 Bus M21	busroute_N 3695,13902 3656,14150
-Bus 123	busroute_N 3408,14741 3418,14661 3431,14586 3443,14535 3455,14460 3464,14407 3472,14366 3421,14318 3269,14316 3184,14265 3169,14256 3126,14216 3106,14195
+Bus 123	busroute_N 3408,14741 3418,14661 3431,14586 3443,14535 3455,14460 3464,14407 3472,14366 3459,14337 3434,14323 3269,14316 3184,14265 3169,14256 3126,14216 3106,14195
 Bus 123	busroute_N 4291,14947 4172,15098 4148,15205 4148,15220 4150,15304 4080,15458 3992,15664
 Bus 123	busroute_N 2673,14756 2671,14653 2657,14486 2591,14296 2526,14252 2378,14249 2371,14392 2362,14582 2207,14576 2142,14573 2081,14570 2009,14567 1974,14565 1871,14561 1881,14425 1361,14431 1361,14384
 Bus 123	busroute_N 1232,15717 1232,15804 1164,15902
@@ -477,7 +477,7 @@ Bus 296	busroute_N 18737,8686 18865,8740 18899,8754 18988,8792 19073,8828 19116,
 Bus 296	busroute_N 19536,9853 19459,9842 19450,9728 19236,9710 19141,9709 19042,9708 18994,9707 18823,9708
 Bus 296	busroute_N 18740,9907 18843,9952 18881,9865 18934,9826 19005,9816 19100,9811 19144,9810 19242,9815 19398,9833 19459,9842
 Bus 296	busroute_N 19536,9853 19669,9876
-Bus 296	busroute_N 17725,11228 17730,11330 17732,11374 17734,11408 17609,11467 17341,11595 17275,11626 17208,11658 17169,11677
+Bus 296	busroute_N 17725,11228 17730,11340 17732,11374 17734,11408 17609,11467 17341,11595 17275,11626 17208,11658 17169,11677
 Bus 296, Bus 396	busroute_N 18718,8583 18787,8540 18846,8616 18778,8663 18737,8686
 Bus 240, Bus 296	busroute_N 17169,11677 17020,11748 16977,11769 16958,11778
 Bus 194, ...	busroute_N 17848,11204 17807,11219 17725,11228 17719,11092
@@ -680,9 +680,9 @@ Bus 136	busroute_N -2937,19008 -2904,19019 -2810,19014
 #: ignore vvv
 #: by: https://www.morgenpost.de/bezirke/mitte/article230905682/Lichter-der-Vergangenheit-die-Gaslaternen-im-Tiergarten.html
 #: XXX Wann ziehen die Gaslaternen um?
-#: osm_watch: note 2969085 5
+#: osm_watch: note 2969085 6
 #: priority: #C
-#: last_checked: 2024-05-27
+#: last_checked: 2024-06-02
 #: check_frequency: 90d
 Gaslaternen-Freilichtmuseum Berlin	CS 5895,11692 5835,11768 5858,11863 5900,11913
 #: ignore ^^^
@@ -1331,7 +1331,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 113
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="9"
-#: last_checked: 2024-05-31
+#: last_checked: 2024-06-06
 #: check_frequency: 90d
 Falkoniergasse: nicht ausgeschildert	CP2; 9939,12174 9909,12261
 ausgeschildert als Falkoniergasse 3, blaues Schild mit Frakturschrift	CP2; 9909,12261 9939,12174
@@ -1450,7 +1450,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19214,14966 19244,14
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_28_2981_3084_online.pdf (Widmungsänderung; auf der westlichen Seite entsteht noch ein Gebäude mit Tiefgarage)
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2024-05-17
+#: last_checked: 2024-05-31 (mapillary)
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13397
 # 
@@ -1805,7 +1805,7 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2024-05-31 vvv
+#: last_checked: 2024-06-02 vvv
 #: check_frequency: 90d vvv
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10685,12422
@@ -1848,7 +1848,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2024-05-27 vvv
+#: last_checked: 2024-06-07 vvv
 #: check_frequency: 60d vvv
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
 # REMOVED (ausgeschildert) --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
@@ -1880,7 +1880,7 @@ ausgeschildert "Jelena-Šantić-Friedenspark"	CP2; 22854,14018 22903,14063
 # 
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_02_0141_0296_online.pdf
 #: add_fragezeichen: Hängen hier mittlerweile Straßenschilder?
-#: last_checked: 2024-04-20
+#: last_checked: 2024-06-07
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2023-02-13
 Zur Märkischen Aue: nicht ausgeschildert	CS 17848,11204 17893,11146 17905,11122 17924,10964 17915,10866 17900,10730 17892,10713 17870,10619 17856,10560 17864,10537
@@ -1911,7 +1911,7 @@ Aaron-Bernstein-Platz: nicht ausgeschildert	CS 9353,13273 9382,13265 9385,13246 
 # REMOVED --- #: XXX im Quartier Am Tacheles werden zwei Privatplätze entstehen und bekommen die Namen (fehlen in Berlin.coords.data): --- #: XXX Johannisplatz (PLZ=10117 laut LOR und DPAG) --- #: XXX laut daf ist der Zugang zum Johannisplatz provisorisch geöffnet; Mosaikpflaster
 # REMOVED --- #: XXX Aaron-Bernstein-Platz (PLZ=10117 laut LOR und DPAG)
 #: XXX noch Bauarbeiten, ein Strang noch gesperrt, wird es Schilder geben? mittlerweile sind die Bauarbeiten weitgehend vorbei, aber nicht ganz (die Johannisstr. ist noch Einbahnstraße)
-#: last_checked: 2024-05-30 (mapillary) vvv
+#: last_checked: 2024-06-05 vvv
 # REMOVED --- #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2024-03-31 vvv
 #: osm_watch: way id="941599318" version="7"
