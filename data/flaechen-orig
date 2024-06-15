@@ -171,10 +171,13 @@ Spreewaldplatz	F:P 12292,10374 12243,10274 12341,10218 12292,10374
 #: by: https://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2024/pressemitteilung.1431505.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11444 (Anfrage)
 #: by: https://berliner-abendblatt.de/berlin-news/wegner-zum-zaun-um-den-goerli-das-ausschreibeverfahren-laeuft-id251347 (kein Datum)
+#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2024/pressemitteilung.1455033.php
+#: by: https://berliner-abendblatt.de/berlin-news/zaun-um-goerlitzer-park-bezirk-klagt-gegen-senat-id254571
+#: by: https://berliner-abendblatt.de/berlin-news/wegner-zu-klage-wegen-goerlitzer-park-wir-arbeiten-weiter-id254675
 #: XXX Werden die Wege nachts (genaue Schließzeiten?) abgeschlossen sein? Oder wird das nur situationsbedingt (wann?) passieren?
 #: XXX Neue Lampen werden geplant -> nolighting-Einträge ggfs. prüfen.
 #: priority: #A
-#: last_checked: 2024-05-29
+#: last_checked: 2024-06-14
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2024-07-15
 Görlitzer Park	F:P 13220,9980 13162,9904 13139,9880 13086,9825 12932,9900 12983,10000 12881,10056 12829,9957 12814,9966 12341,10218 12397,10335 12317,10382 12309,10427 12348,10432 13220,9980
@@ -1765,7 +1768,7 @@ Strandbad Orankesee	F:Sport 15691,16123 15680,16135 15731,16208 15793,16162 1586
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_51_4717_4788_online.pdf (Bebauungsplan IX-55-3B)
 #: by: https://www.deutsches-architekturforum.de/thread/14333-gowest-areal-ehemalige-tabakfabrik/?postID=757051#post757051
 #: note: früher Brendel Leuchten/Reemtsma
-#: last_checked: 2024-05-21 (architektur-urbanistik)
+#: last_checked: 2024-06-12
 #: next_check: 2026-06-15
 	F:Industrial 3895,8079 3779,8105 3777,7984 3649,7992 3639,7800 3735,7792 3731,7689 3839,7787 3884,7829 3895,8079
 #: alias: Heizkraftwerk Wilmersdorf
@@ -1840,7 +1843,7 @@ Blankensteinpark	F:P 14130,12926 14211,13150 14355,13109 14289,12876
 	F:P 13926,13090 14067,13050 14166,13024 14180,13064 14152,13072 14086,13090 14035,13104 13943,13129 13926,13090
 	F:P 14411,12951 14632,12888 14640,12914 14419,12978 14411,12951
 	F:P 15248,12087 15278,11925 15300,11965 15361,12071
-Kolonie am Hohenzollerndamm	F:Orchard 3689,8866 3701,8849 3751,8796 3822,8718 3952,8980 3831,9052 3816,9052 3760,9052 3756,8922
+Kolonie am Hohenzollerndamm	F:Orchard 3689,8866 3701,8849 3751,8796 3822,8718 3952,8980 3831,9052 3816,9052 3760,9052 3757,8964 3756,8922
 Kolonie am Fenn	F:Orchard 4319,8417 4456,8417 4453,8490 4319,8493
 Poststadion	F:Sport 7213,13679 7285,13657 7324,13675 7420,13523 7560,13599 7418,13867 7460,13890 7433,13940 7396,13919 7378,13955 7135,13827
 Stadtbad Tiergarten	F:Sport 7501,13458 7457,13543 7420,13523 7324,13675 7285,13657 7213,13679 7203,13617 7356,13509 7334,13456 7296,13436 7322,13379 7262,13350 7263,13331 7287,13342 7332,13367 7426,13420

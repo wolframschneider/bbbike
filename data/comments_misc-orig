@@ -83,7 +83,7 @@ Hegelstr.: Ausweichmöglichkeit auf Nebenstraße mit Kopfsteinpflaster oder grü
 # 
 #: by: Marita:
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
-Privatstraße der DB	CS 5817,7824 6273,7849
+Privatstraße der DB	CS 6147,7840 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
 # REMOVED (nur auf der östlichen Seite ist ein Tor; deshalb ist es eigentlich unwahrscheinlich, dass hier geschlossen wird) ---  (Weg über das Sportgelände): evtl. nachts geschlossen	CS 13252,14179 13385,13992
 # REMOVED (Bodenschwellen existieren nicht mehr; außerdem ist dieser Eintrag sowieso in handicap_s-orig gedoppelt) --- Borgmannstr.: zwei Bodenschwellen, rechs vorbei fahren	CS 22513,5747 22531,5871
@@ -1372,7 +1372,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2024-06-08
+#: last_checked: 2024-06-10
 #: check_frequency: 90d
 Mergenthalerring: Straße nicht ausgeschildert, Richtung "Elbekies" fahren	CP2; 14261,8851 14252,8829
 # 
@@ -1805,7 +1805,7 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2024-06-02 vvv
+#: last_checked: 2024-06-13 (webcam) vvv
 #: check_frequency: 90d vvv
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10685,12422
@@ -1848,7 +1848,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2024-06-07 vvv
+#: last_checked: 2024-06-09 vvv
 #: check_frequency: 60d vvv
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
 # REMOVED (ausgeschildert) --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
@@ -1938,4 +1938,6 @@ ausgeschildert "Kita"	CP2; 25991,14926 25932,14955
 # 
 #: note: Richtung Osten ist dieses Straßenstück allerdings als Namslaustr. ausgeschildert
 bereits vor der Einmündung als "Neheimer Str." ausgeschildert	CP2; 1735,19045 1704,19043
+# 
+Lichtenberger Str. [Wohngebiet]: nicht ausgeschildert	CP2; 11947,12494 11867,12284
 # 

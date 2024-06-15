@@ -216,10 +216,11 @@ my @req_table =
    'Für das Parsen des ESRI-Shapefile-Formats'],
   [qw/XBase	0	all	0	base/,
    'Ebenfalls für das Parsen des ESRI-Shapefile-Formats'],
-  [qw/Geo::GDAL	0	all	0	base/,
-   'Für das Parsen des ESRI-Projection-Formats'],
-  [qw/Geo::Proj4	0	all	0	base/,
-   'Für das Konvertieren von ESRI-Shapefiles'],
+  ($] >= 5.014 ? # does not build with older perls
+   [qw/Geo::LibProj::FFI	0	all	0	base/,
+    'Für das Konvertieren von ESRI-Shapefiles']
+   : ()
+  ),
   [qw/Tie::IxHash	1.23	all	0|4	base/, # 1.23 for Clear method
    'Damit Direktiven in Straßen-Daten geordnet bleiben'],
   [qw/CDB_File		0	all	0|4	base/,
@@ -456,9 +457,7 @@ sub build_prereq {
 	       ) {
 		next if $_->[REQTABLE_MODNAME] =~ m{^(
 							Image::Magick # needs exact matching imagemagick library version
-						    |   Geo::GDAL     # dito
 						    )$}x;
-		next if $_->[REQTABLE_MODNAME] eq 'Geo::Proj4' && !-f "/usr/include/proj_api.h"; # may be missing, currently on travis/precise instances
 	    }
 	    if (($ENV{TRAVIS}||'') eq 'true' && $ENV{USE_MODPERL}) {
 		# Don't install exclusive Plack dependencies for a modperl testing environment
