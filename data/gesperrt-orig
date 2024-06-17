@@ -184,7 +184,7 @@ Steinplatz	1 5153,11357 5113,11305 5080,11328 5043,11354 5085,11413
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX Einbahnstraße ggfs. wiederherstellen (es sei denn, der Radweg auf der Nordseite wurde mittlerweile fertiggestellt, wonach es aussieht, dann nur nach gesperrt_car verschieben)
 #: XXX früher: Am Treptower Park (Umfahrung auf Gehweg ist möglich)	1
-#: last_checked: 2024-06-14
+#: last_checked: 2024-06-15
 #: check_frequency: 90d
 #: next_check: 2024-12-31
 Am Treptower Park	1no 14089,9610 13860,9861
@@ -1623,6 +1623,8 @@ Daimler-Parkplatz: Zufahrt Köpenicker Str. oft (immer?) gesperrt, auch an Werkta
 Cotheniusstr.: Schulgelände, gesperrt	2 13430,13733 13519,13785
 # 
 Lichtenberger Str. [Wohngebiet]	1 11947,12494 11867,12284
+# 
+Hauptstr.: Mittelstreifen mit Gitter	3nocross 7268,8960 7239,8907 7201,8870
 # 
 #: section ^^^
 ######################################################################
@@ -3783,7 +3785,7 @@ Schranke	BNP:3::trailer=10 13081,14090
 #: historical_note: früher: Bauarbeiten, Einbahnstraßenregelung, q3::inwork;
 #: osm_watch: note 4211143 1
 #: also_indoor: traffic (none)
-#: last_checked: 2024-06-11
+#: last_checked: 2024-06-16
 #: check_frequency: 30d
 #: next_check: 2025-06-30
 Am Köllnischen Park: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 11185,11883 11160,12071
@@ -3804,7 +3806,7 @@ Am alten Flugplatz: Straße gesperrt	2::inwork 19697,8776 19754,8809 19778,8823 1
 #: XXX Weddingplatz: Umgestaltung
 #: XXX Nach den Bauarbeiten wird hier eine Spielstraße sein
 #: historical_note: am Anfang Einbahnstraße, offen Richtung Norden (1s:q3:inwork), später komplett zu (q4::inwork in handicap_s-orig), dann wieder (laut osm) Einbahnstraße
-#: osm_watch: way id="4596985" version="27"
+#: osm_watch: way id="4596985" version="28"
 #: last_checked: 2024-05-02 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2024-09-30
@@ -4064,7 +4066,7 @@ Ulrich-Plenzdorf-Str.	2::inwork 14994,10732 15071,10716 15151,10699
 # REMOVED (nicht mehr) --- #: last_checked: 2023-08-21 --- #: check_frequency: 14d --- Ingrid-Reschke-Str.: wegen Bauarbeiten wieder gesperrt	2::inwork 15163,10758 15151,10699
 # 
 #: next_check_id: SONYCENTER-2023
-#: last_checked: 2024-05-31
+#: last_checked: 2024-06-16
 #: check_frequency: 90d
 #: next_check: 2024-07-01
 #: valid: -20240701
@@ -4120,7 +4122,7 @@ Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15
 #: also_indoor: traffic (B,W,G)
 #: note: für Fußgänger gibt es mittlerweile einen asphaltierten, nicht geradlinig geführten Notweg im Parkbereich
 #: osm_watch: way id="1163350372" version="2"
-#: last_checked: 2024-06-11
+#: last_checked: 2024-06-16
 #: check_frequency: 30d
 Kurstr.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 10230,11839 10122,11913
 # 
@@ -4747,7 +4749,8 @@ George-Stephenson-Str.: möglicher Baustellenverkehr, Freigabe noch unklar	2::inw
 #: XXX wann sind die Bauarbeiten beendet?
 #: XXX mittlerweile bis zur Georgenstr. ausgeweitet, check_frequency deswegen angepasst
 #: XXX evtl. wird die Qualität nach den Bauarbeiten besser sein (vielleicht keine Straßenbahnschienen mehr, neuer Asphalt?)
-#: osm_watch: note 3954448 2
+#: osm_watch: note 3954448 3
+#: osm_watch: way id="195397561" version="20"
 #: last_checked: 2024-05-29 (mapillary)
 #: check_frequency: 30d
 # REMOVED --- #: check_frequency: 45d
@@ -4764,8 +4767,8 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9441,12670
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/aenderungen-bei-drei-u-bahnlinien_a354389
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-18170.pdf (Neubau der Brücke: vsl. 2027 bis 2029)
 # REMOVED --- #: osm_watch: way id="223707973" version="11"
-#: osm_watch: way id="848716360" version="8"
-#: last_checked: 2024-04-23
+#: osm_watch: way id="848716360" version="9"
+#: last_checked: 2024-05-29 (osm)
 #: check_frequency: 120d
 #: next_check: 2029-12-31
 #: priority: #A
@@ -4877,7 +4880,7 @@ Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
 # 
 #: next_check_id: MOLKENMARKT-2021
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
-#: last_checked: 2024-06-13 (webcam)
+#: last_checked: 2024-06-16
 #: check_frequency: 60d
 Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork 10831,12371 10830,12313 10830,12279
 # 
@@ -5263,7 +5266,7 @@ Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14
 #: osm_watch: node id="10239151904" version="1"
 #: osm_watch: way id="276821479" version="5"
 #: osm_watch: note 3748854 1
-#: last_checked: 2024-05-30
+#: last_checked: 2024-06-15
 #: check_frequency: 180d
 #: next_check: 2025-09-20
 Valeska-Gert-Str. - Am Postbahnhof: wegen Bauarbeiten gesperrt	2::inwork 12807,11287 12713,11372
@@ -5603,7 +5606,7 @@ Kniprodestr.: schlecht zu querender Mittelstreifen (Bordsteine, Verkehr)	3nocros
 (Treppe zur Putlitzbrücke): tragen, ca. 35 Stufen	0:40 6253,14184
 #: by: rjoop
 (Treppe zur Putlitzbrücke): tragen, 35 Stufen	0:40 6209,14245
-An der Putlitzbrücke: Mittelstreifen schlecht zu überqueren	3nocross 6226,13951 6228,14077 6230,14184 6230,14246 6231,14308
+An der Putlitzbrücke: Mittelstreifen schlecht zu überqueren	3nocross 6226,13951 6228,14077 6230,14184 6230,14212 6230,14246 6231,14308
 #: historical_note: früher: schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)
 Rathenower Str.: Straßenbahntrasse	3nocross 7172,13051 7187,13126 7131,13261
 schieben - einzelne Stufen	0:20 1372,8011

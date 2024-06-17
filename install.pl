@@ -2,26 +2,28 @@
 # -*- perl -*-
 
 #
-# $Id: install.pl,v 4.15 2007/07/07 20:15:33 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1999-2001,2007 Slaven Rezic. All rights reserved.
+# Copyright (C) 1999-2001,2007,2024 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
-# Mail: slaven@rezic.de
-# WWW:  http://bbbike.de
+# WWW:  https://github.com/eserte/bbbike
 #
 
+use strict;
+use warnings;
 use FindBin;
 use lib ("$FindBin::Bin", "$FindBin::Bin/lib"); # XXX necessary???
+
 use Config;
 use File::Path;
 use File::Basename;
 use File::Copy;
-use strict;
 use Getopt::Long;
 use Cwd;
+
+use BBBikeUtil qw(save_pwd2 bbbike_root);
 
 BEGIN {
     if (!eval '
@@ -62,7 +64,6 @@ BEGIN {
     );
 }
 
-use strict;
 use vars values %config_vars;
 use vars qw($is_bbbike);
 $is_bbbike = 1;
@@ -86,7 +87,7 @@ $debuginstall = 0 if defined $debug_switch;
 my $auto = 0;
 my $perlbat;
 my $os;
-my $Print_indent = "";
+my $Print_indent = 0;
 my $debug = 0;
 
 my $start_program;
@@ -116,6 +117,26 @@ my $root_or_user_sub = sub {
 	if $arg !~ /^(none|root|user|best)$/;
     $$var = $arg;
 };
+
+eval {
+    use Encode qw(decode);
+    use I18N::Langinfo qw(langinfo CODESET);
+    my $codeset = langinfo(CODESET());
+    $codeset = lc $codeset; # 'UTF-8' is not recognized by emacs, but 'utf-8' is
+    # XXX Possible problems: if an ASCII-like codeset is selected
+    # (e.g. with LC_ALL=C XXX ansi_x3.4-1968 is used), then it seems
+    # that a loop is generated when umlauts are printed (umlaut not
+    # possible to output -> generate a warning, maybe using the
+    # problematic umlaut in the diagnostics?). It seems to be safe to
+    # switch encoding only for utf-8, and don't do anything for
+    # latin1, ascii, and everything else.
+    if ($codeset =~ /utf.*8/i) {
+	binmode STDOUT, ":encoding($codeset)";
+	binmode STDERR, ":encoding($codeset)";
+    }
+    $_ = decode($codeset, $_) for @ARGV;
+};
+warn "WARNING: failure while setting up encoding correctly: $@" if $@;
 
 my @options =
   ('kdeinstall=s' => sub { $root_or_user_sub->(\$kde_install, @_) },
@@ -224,6 +245,7 @@ if ($use_tk) {
 	$gridy++;
     }
     my $wait = 0;
+    my $do_cancel;
     my $ff = $f->Frame->grid(-column => 0, -columnspan => 2,
 			     -row => $gridy, -sticky => "ew");
     my $ib = $ff->Button(-text => M"Installieren",
@@ -231,7 +253,7 @@ if ($use_tk) {
 			)->pack(-side => "left", -expand => 1);
     $ib->focus;
     $ff->Button(-text => M"Abbrechen",
-		-command => sub { Tk::exit() },
+		-command => sub { $do_cancel = $wait = 1 },
 	       )->pack(-side => "left", -expand => 1);
 
     if ($auto) {
@@ -240,6 +262,10 @@ if ($use_tk) {
 
     $f->waitVariable(\$wait);
     $f->destroy;
+
+    if ($do_cancel) {
+	exit 1;
+    }
 
     # to prevent segfaults:
     $top->protocol('WM_DELETE_WINDOW' => sub { $top->destroy });
@@ -383,7 +409,7 @@ sub Win32Install {
 	$public = 1;
     }
 
-    my($realbin, $perlexe, $wperlexe);
+    my($realbin, $perlexe);
     if ($networkinstall) {
 	$realbin = Win32Util::path2unc($FindBin::Bin);
 	$perlexe = Win32Util::path2unc($^X);
@@ -1445,34 +1471,33 @@ sub my_die {
 }
 
 sub load_Makefile_PL {
-    my $file = "$FindBin::Bin/Makefile.PL";
+    my $bbbike_root = bbbike_root;
+    my $file = "$bbbike_root/Makefile.PL";
     return unless -r $file;
 
-    $INC{"ExtUtils/MakeMaker.pm"} = "__cheat__";
-    package ExtUtils::MakeMaker;
-    use vars qw($Makefile_PL @EXPORT @ISA);
-    require Exporter;
-    @ISA = qw(Exporter);
-    @EXPORT = qw(WriteMakefile);
+    my $Makefile_PL;
 
-    sub WriteMakefile {
-	$Makefile_PL = { @_ };
+    require ExtUtils::MakeMaker;
+    {
+	no warnings 'redefine', 'once';
+	*ExtUtils::MakeMaker::WriteMakefile = sub {
+	    $Makefile_PL = { @_ };
+	}
+    };
+
+    {
+	my $save_pwd = save_pwd2;
+	chdir $bbbike_root or die "Can't chdir to $bbbike_root: $!";
+	do $file;
     }
 
-    package main;
-
-    my $origcwd = getcwd();
-    chdir $FindBin::Bin || warn "Can't chdir to $FindBin::Bin: $!";
-    do $file;
-    chdir $origcwd || warn "Can't change back to $origcwd: $!";
-
-    my $h = $ExtUtils::MakeMaker::Makefile_PL->{INSTALLER};
+    my $h = $Makefile_PL->{INSTALLER};
     if ($h) {
 
 	while(my($k,$v) = each %config_vars) {
 
 	    if ($debug) {
-		print STDERR "  from Makefile.PL: $k => $v\n";
+		print STDERR "  from Makefile.PL: $k => $v (value '$h->{$k}')\n";
 	    }
 	    next if eval 'defined ' . $v;
 	    next unless exists $h->{$k};
@@ -1488,10 +1513,12 @@ sub load_Makefile_PL {
 	    warn $@ if $@;
 
 	}
+    } else {
+	warn "WARNING: INSTALLER in Makefile.PL did not return anything.\n";
     }
 
     # Sonderfälle
-    $h = $ExtUtils::MakeMaker::Makefile_PL;
+    $h = $Makefile_PL;
     if (!defined $program_title && exists $h->{NAME}) {
 	$program_title = $h->{NAME};
     }

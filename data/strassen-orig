@@ -262,7 +262,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/berlin-news/geplante-umbenennung-der-mohrenstrasse-zieht-sich-weiter-hin-id231791
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2024-06-06 vvv
+#: last_checked: 2024-06-16 vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 #: osm_watch: way id="47755711" version="23"
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
@@ -823,7 +823,7 @@ Langenbeckstr. (Friedrichshain)	N 13151,13367 13081,13457
 Kolonnenstr.	H 8209,8773 8145,8773 8078,8772 8014,8771 8008,8771 7795,8765 7709,8777 7642,8815 7563,8871 7548,8879 7497,8916 7360,8918 7315,8941 7307,8945 7268,8960
 # REMOVED --- #: next_check_id: KAISERWILHELMPLATZ-2022 --- #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7886 (Antrag) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_29_2481_2536_online.pdf (Umbenennung) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_45_4009_4092_online.pdf (Widerspruch) --- #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1186684.php (am 24.3.2022) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_11_0657_0712_online.pdf (Umbenennung eines Platzes) --- #: by: https://berliner-abendblatt.de/2022/03/21/kaiser-wilhelm-platz-wird-umbenannt/ --- #: XXX wird am 18.10.2021 zum Richard-von-Weizsäcker-Platz umbenannt --- verzögert sich wegen Widerspruchs --- #: also_indoor: search Richard-von-Weizsäcker-Platz --- #: priority: #A --- #: last_checked: 2022-03-08 (indoor) --- # REMOVED --- #: check_frequency: 14d --- #: next_check: 2022-03-24
 #: oldname: -20220324: Kaiser-Wilhelm-Platz
-Richard-von-Weizsäcker-Platz	NN 7201,8870 7307,8945
+Richard-von-Weizsäcker-Platz	NN 7239,8907 7307,8945
 Herbertstr. (Schöneberg)	N 7360,8918 7389,8837 7402,8783 7395,8761
 Feurigstr.	N 6807,8309 7012,8511 7086,8579 7346,8817 7389,8837 7467,8863 7497,8916
 Ebersstr.	N 7395,8761 7313,8661 7288,8635
@@ -854,7 +854,7 @@ Hohenstaufenstr.	H 7049,9833 6920,9838 6753,9814 6632,9792 6492,9782 6237,9772
 Hohenstaufenstr.	H 6237,9772 6209,9773 6096,9772
 Hohenstaufenstr.	H 6096,9772 6209,9772 6237,9772
 Hohenstaufenstr.	H 6096,9772 5988,9776 5941,9787 5905,9795
-Hauptstr. (Schöneberg, Friedenau)	HH 7471,9360 7430,9281 7388,9199 7382,9187 7363,9152 7354,9135 7308,9041 7299,9022 7268,8960 7201,8870 7105,8788 7005,8701 6986,8683 6912,8617 6765,8480 6733,8441 6687,8385 6608,8277 6560,8219 6460,8093
+Hauptstr. (Schöneberg, Friedenau)	HH 7471,9360 7430,9281 7388,9199 7382,9187 7363,9152 7354,9135 7308,9041 7299,9022 7268,8960 7239,8907 7201,8870 7105,8788 7005,8701 6986,8683 6912,8617 6765,8480 6733,8441 6687,8385 6608,8277 6560,8219 6460,8093
 #: note: die letzten Meter Richtung Süden sind als "Innsbrucker Platz" ausgeschildert
 Hauptstr. (Schöneberg, Friedenau)	HH 6460,8093 6409,8026
 Hauptstr. (Schöneberg, Friedenau)	HH 6409,8026 6388,7999 6333,7927 6293,7875 6273,7849 6209,7765 6144,7677 6082,7594 5955,7420 5923,7374 5881,7314
@@ -1433,7 +1433,7 @@ Uber-Platz	NN 12990,11006 13067,11145
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="16"
 #: priority: #C
-#: last_checked: 2024-05-31
+#: last_checked: 2024-06-15
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2023-01-01
 Planstraße C	N 12926,11224 12848,11093
@@ -2489,7 +2489,7 @@ Schulzendorfer Str. (Gesundbrunnen)	N 8057,14876 8091,14895 8219,14908 8248,1490
 Grenzstr. (Gesundbrunnen)	N 8412,14923 8570,15107 8614,15156 8634,15178 8654,15201 8735,15295
 Perleberger Str.	H 6230,13596 6366,13716 6493,13822 6646,13951 6730,14021 6818,14102 6992,14251 7123,14367 7180,14419 7368,14573
 Föhrer Str.	H 6626,15104 6561,15041 6528,15000 6504,14969 6445,14893 6334,14756
-An der Putlitzbrücke	H 6334,14756 6288,14661 6281,14630 6231,14308 6230,14246 6230,14184 6228,14077 6226,13951 6227,13938
+An der Putlitzbrücke	H 6334,14756 6288,14661 6281,14630 6231,14308 6230,14246 6230,14212 6230,14184 6228,14077 6226,13951 6227,13938
 Torfstr.	N 6626,15104 6652,15073 6739,14969 6837,14848 6849,14831
 Amrumer Str.	H 6626,15104 6562,15177 6474,15278 6375,15391 6348,15423 6239,15553
 Augustenburger Platz	N 6561,15041 6545,15116 6537,15156 6562,15177
@@ -16372,7 +16372,7 @@ Petersallee	N 5426,16539 5533,16662
 #: add_fragezeichen: Wurde die Umbenennung zu "Anna-Mungunda-Allee" schon durchgeführt? Hängen schon die neuen Straßenschilder?
 #: osm_watch: way id="47347069" version="20"
 #: also_indoor: search Anna-Mungunda-Allee
-#: last_checked: 2024-06-05
+#: last_checked: 2024-06-16
 #: check_frequency: 21d
 # REMOVED --- #: check_frequency: 90d
 Petersallee	N 5581,16708 5639,16768 5684,16815 5772,16919
