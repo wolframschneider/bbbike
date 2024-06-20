@@ -5034,7 +5034,17 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# REMOVED (frühere Sperrung) --- #: source_id: LS/721-E/21/116 (inaktiv) ---	2::inwork 32854,37244 31663,37734
+#: source_id: LS/221-F/24/076 (inaktiv) (bis 12.07.2024)
+	2::inwork 31613,37843 31663,37734 32854,37244 33877,36906
+',
+         'from' => 1715464800,
+         'id' => 3460,
+         'text' => 'Grüntal - Gratze: Sperrung wegen Deckenerneuerung, 13.05.2024 bis 12.07.2024',
+         'type' => 'gesperrt',
+         'until' => 1720792800
+       },
        {
          'data' => '# REMOVED --- #: next_check_id: CORONA-2020 --- #: XXX seit Corona ist der Markt auch auf der Arndtstr. --- bleibt das so? vvv --- #: last_checked: 2023-03-25 vvv --- #: check_frequency: 90d vvv
 #: note: Marktzeiten sind wohl 9 bis 15 Uhr, Parkverbote (und mögliche Sperrung/Beeinträchtigung) aber länger
@@ -6170,7 +6180,7 @@ Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 #: note: eigentlich q4-, wegen des zusätzlichen Umwegs
 #: note: das im Baustellenplan geplante Radfahren-verboten-Schild existierte am 26.3.2023 (noch?) nicht; mittlerweile (seit Montag?) schon
 #: osm_watch: way id="37861386" version="26"
-#: last_checked: 2024-05-15
+#: last_checked: 2024-06-19
 #: check_frequency: 120d
 #: next_check: 2024-10-25
 	q4::inwork; 22431,6068 22467,6135
@@ -6487,7 +6497,30 @@ Hauffstr.: nur Anlieger zum Spielplatz frei	2::inwork 15578,11241 15620,11210 15
          'until' => 1721406600
        },
        undef,
-       undef,
+       {
+         'data' => '#: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0523_Doppelseiten_web.pdf (15.5.2023 für ein Jahr)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10935 (Antrag)
+#: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10936 (Anfrage)
+#: source_id[inactive]: bvg2021:190#BVG320324_0
+# REMOVED --- #: note: Baustellebereich etwa 130m, Halteverbotsschilder bis 29.03.2023, Baustellenschild der Wasserbetriebe bis 10.05.2024
+#: also_indoor: traffic (ex-G)
+#: last_checked: 2024-06-19 vvv
+# REMOVED --- #: check_frequency: 120d vvv
+# REMOVED --- #: next_check: 2024-05-10 vvv
+# REMOVED (hier nicht mehr) --- Gleiwitzer Str.	q4::inwork 20947,9999 20703,10004
+# REMOVED (hier nicht mehr) --- Gleiwitzer Str., Anbindung Dornacher Str.	q2::inwork 20947,9999 21146,9988
+Gleiwitzer Str. zwischen Dornacher Str. und Köpenicker Str.	q4::inwork 20947,9999 21146,9988
+# REMOVED (nicht mehr gesperrt) --- #: XXX_prog eigentlich q3+ --- Dornacher Str. (Kreuzungsbereiche)	q3::inwork 20948,9847 20947,9999 20947,10137
+# REMOVED --- #: next_check ^^^
+# REMOVED --- #: check_frequency ^^^
+#: last_checked ^^^
+',
+         'from' => 1686407303,
+         'id' => 3817,
+         'text' => 'Gleiwitzer Str.: Bauarbeiten, Fahrbahn zwischen Dornacher Str. und Köpenicker Str. gesperrt, Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
        undef,
        undef,
        undef,
@@ -6685,7 +6718,7 @@ Einfahrt von der Stahlheimer Str. möglich, Sackgasse	q3::inwork 11618,16183 1168
 #: source_id[inactive]: bvg2021:63#BVG326792_0
 #: source_id: viz2021:13.578463,52.457551,28.08.2023,06:00 (für den Kfz-Verkehr Sperrung sogar ab Seelenbinderstr., bis 09.10.2023) (inaktiv)
 #: source_id: viz2021:13.578463,52.457551,09.10.2023,18:00 (Folgearbeiten, bis 24.11.2023) (inaktiv)
-#: last_checked: 2024-05-15 vvv
+#: last_checked: 2024-06-19 vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2023-10-11 vvv
 # REMOVED (nicht mehr) --- Bahnbrücke	q4::inwork 22431,6068 22467,6135
@@ -7238,14 +7271,15 @@ Marshallstr.: Anbindung am Hüttenweg gesperrt	q3::inwork 1385,5214 1319,5100
        },
        {
          'data' => '#: source_id: viz2021:13.299947,52.521326,06.02.2024,00:00 (bis 02.08.2024)
+#: source_id: viz2021:13.2998,52.52136,18.06.2024,07:00 (bis 09.08.2024)
 #: note: explizite Umleitung für Radfahrer vor Ort
 	q4::inwork 3450,12722 3370,12725 3291,12721
 ',
          'from' => 1707087600,
          'id' => 4005,
-         'text' => 'Charlottenburger Ufer: Bauarbeiten zwischen Luisenplatz und Lohmeyerstr., Sperrung der Fahrbahn, auch Radfahrer sind betroffen, vom 06.02.2024 00:00 bis 02.08.2024 23:59',
+         'text' => 'Charlottenburger Ufer: Bauarbeiten zwischen Luisenplatz und Lohmeyerstr., Sperrung der Fahrbahn, auch Radfahrer sind betroffen, vom 06.02.2024 00:00 bis 09.08.2024',
          'type' => 'handicap',
-         'until' => 1722635940
+         'until' => 1723219200
        },
        undef,
        undef,
@@ -7495,15 +7529,20 @@ Martin-Luther-Str.: linker Gehweg -> Winterfeldtstr.	3::inwork 6518,9867 6504,99
        undef,
        {
          'data' => '#: source_id: viz2021:13.30279,52.51551,08.04.2024,07:00 (bis 21.06.2024) (am nächsten Tag schon inaktiv)
-#: also_indoor: traffic (H,G,B,W)
-#: note: bei rbb wieder aktiv
-	q4::inwork 3493,12228 3495,12185 3507,12076
+#: source_id: viz2021:13.30305,52.51725,18.06.2024,07:00 (falsche Ortsangabe, bis 31.07.2024)
+#: source_id: viz2021:13.30263,52.5165,18.06.2024,07:00 (falsche Ortsangabe, bis 31.07.2024)
+# REMOVED --- #: also_indoor: traffic (H,G,B,W)
+#: also_indoor: traffic (H,G,B[teilweise],T[teilweise])
+# REMOVED --- #: note: bei rbb wieder aktiv
+# REMOVED (hier nicht mehr) ---	q4::inwork 3493,12228 3495,12185 3507,12076
+Behaimstr.	q4::inwork 3495,12185 3630,12201
+Schustehrusstr.	q4::inwork 3528,12276 3623,12284
 ',
-         'from' => 1712466000,
+         'from' => 1718733032,
          'id' => 4037,
-         'text' => 'Gierkezeile: Bauarbeiten zwischen Haubachstr. und Gierkeplatz, Sperrung, evtl. sind auch Radfahrer betroffen, vom 08.04.2024 07:00 bis 21.06.2024 16:00',
+         'text' => 'Behaimstr. und Schustehrusstr.: Bauarbeiten zwischen Wilmersdorfer Str. und Gierkezeile bzw. Gierkeplatz, evtl. sind auch Radfahrer betroffen, bis 31.07.2024',
          'type' => 'handicap',
-         'until' => 1718978400
+         'until' => 1722434400
        },
        undef,
        undef,
@@ -7520,20 +7559,7 @@ Martin-Luther-Str.: linker Gehweg -> Winterfeldtstr.	3::inwork 6518,9867 6504,99
          'until' => 1738339200
        },
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2024/pressemitteilung.1439363.php
-#: source_id: bvg2021:234#BVG345341_0
-#: by: https://www.berliner-woche.de/kladow/c-verkehr/sperrung-wegen-neuer-fahrbahn_a413546
-#: XXX: die BVG-Verkehrsmeldung geht bis Ende August
-#: next_check: 2024-08-31
-	q4::inwork -7529,4853 -7582,4850 -7643,4846 -7797,4850 -8098,4899
-',
-         'from' => 1713650400,
-         'id' => 4044,
-         'text' => 'Krampnitzer Weg: Bauarbeiten, Erneuerung der Fahrbahn, vom 22.04.2024 bis 05.07.2024',
-         'type' => 'handicap',
-         'until' => 1720216800
-       },
+       undef,
        {
          'data' => '	q4::temp::play 9570,10566 9556,10666
 ',
@@ -7634,7 +7660,7 @@ Behrenstr.: Fahrbahn gesperrt	q4::temp 8737,12098 8595,12066
 # REMOVED (hier noch passierbar) --- Ebertstr.	2::temp 8600,12165 8595,12066
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
 #: note: siehe auch Routing-Helper-Eintrag für Wegführung zum Bremer Weg und entlang des Brandenburger Tors
-#: last_checked: 2024-06-12
+#: last_checked: 2024-06-19
 #: check_frequency: 7d
 # REMOVED --- #: next_check: 2024-06-12
 Brandenburger Tor	2::temp 8538,12245 8592,12252 8637,12258
@@ -7805,10 +7831,11 @@ Weißenburger Str.: Anbindung zur Pichelsdorfer Str. gesperrt	q4::inwork -3650,12
        },
        {
          'data' => '#: next_check_id: A117-2024
-#: osm_watch: way id="153260813" version="3"
-#: osm_watch: note 4162190 4
+#: osm_watch: way id="153260813" version="4"
+#: osm_watch[closed]: note 4162190 4
 #: by: https://gemeinde-schoenefeld.de/news/aktuelles/bau-der-anschlussstelle-hubertus-radweg-wird-gesperrt/ (Sperrung ab 3. Juni 2024 (voraussichtlich))
-#: XXX laut osm-Notiz wird der Weg ab Ostern 2024 für ca. 1 Jahr gesperrt (Ostern ist aber schon vorbei...)
+#: by: https://gemeinde-schoenefeld.de/wp-content/uploads/2024/03/2024-05-22_Anwohnerbrief.pdf (bis Ende 2025)
+#: XXX Vermutlich schon gesperrt, dokumentieren!
 #: add_fragezeichen: Ist der Weg tatsächlich gesperrt?
 #: last_checked: 2024-04-07
 # REMOVED --- #: check_frequency: 30d
@@ -7818,31 +7845,32 @@ Kleine Waldstr. - Waldstr.	2::inwork 21510,-1724 21509,-1790 21531,-1819 21590,-
 ',
          'from' => 1717279200,
          'id' => 4068,
-         'text' => 'Kleine Waldstr. - Waldstr.: während der Bauarbeiten zur neuen A117-Anschlussstelle vermutlich gesperrt, voraussichtlich ab 3. Juni 2024 bis Juni 2025',
+         'text' => 'Kleine Waldstr. - Waldstr.: während der Bauarbeiten zur neuen A117-Anschlussstelle vermutlich gesperrt, voraussichtlich ab 3. Juni 2024 bis Ende 2025',
          'type' => 'gesperrt',
-         'until' => 1748901600
+         'until' => 1767221999
        },
        {
          'data' => '#: by: https://berliner-abendblatt.de/berlin-news/wasserrohrbruch-auf-der-sonnenallee-strassensperrung-id253457
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1795325596953624776
 #: by[nocache]: https://x.com/BerlinNkl/status/1795429185839940060
 #: by: https://berliner-abendblatt.de/berlin-news/verkehrseinschraenkungen-in-neukoelln-id253562
-#: source_id: viz2021:13.453052,52.47529,28.05.2024,06:25 (kein Endedatum) (mittlerweile Linienverkehr frei)
+#: source_id: viz2021:13.453052,52.47529,28.05.2024,06:25 (kein Endedatum) (mittlerweile Linienverkehr frei) (inaktiv)
 #: source_id: bvg2024:m41#39e57683-42fd-46a2-8af0-35d2a4cc3609
 #: source_id[inactive]: bvg2024:m41#c9a06eb3-b906-473f-a7f7-43ec4931555d
+#: source_id: viz2021:13.454632,52.474502,28.05.2024,06:25 (Fahrbahneinengung in der Sonnenallee)
 #: also_indoor: traffic (ex-H,G,re-B[nur_Braunschweiger],W[nur_noch_Sonnenallee],T[nur_Braunschweiger])
 #: add_fragezeichen: Bestehen die Sperrungen in Sonnenallee und Braunschweiger Str. noch immer?
-#: note: laut rbb mittlerweile Richtung Südosten wieder eingeschränkt offen (stimmt aber nicht) (wurde mittlerweile wieder korrigiert)
-#: last_checked: 2024-06-14 (traffic) vvv
-#: check_frequency: 3d vvv
+#: note: laut rbb mittlerweile Richtung Südosten wieder eingeschränkt offen (stimmt aber nicht) (wurde mittlerweile wieder korrigiert) (mittlerweile ist in der Realität die Sonnenallee offen, aber bei rbb noch immer als gesperrt markiert)
+#: last_checked: 2024-06-18 vvv
+#: check_frequency: 14d vvv
 Braunschweiger Str.: nordwestlicher Gehweg ist frei, eng	q4::inwork 13858,7617 13919,7707
-Sonnenallee: für Fußgänger existiert ein Durchgang auf der südwestlichen Fahrbahn, nicht offiziell für Radfahrer freigegeben	q4::inwork; 13919,7707 14015,7631
+# REMOVED (eine Spur mittlerweile frei, Radfahrüberholverbot) --- Sonnenallee: für Fußgänger existiert ein Durchgang auf der südwestlichen Fahrbahn, nicht offiziell für Radfahrer freigegeben	q4::inwork; 13919,7707 14015,7631
 #: check_frequency ^^^
 #: last_checked ^^^
 ',
          'from' => undef,
          'id' => 4069,
-         'text' => 'Sonnenallee/Braunschweiger Str.: mögliche Einschränkungen wegen eines Wasserrohrbruchs',
+         'text' => 'Braunschweiger Str.: Wasserrohrbruch, nur ein enger Gehweg offen',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -7859,26 +7887,7 @@ Sonnenallee: für Fußgänger existiert ein Durchgang auf der südwestlichen Fahrbah
          'type' => 'handicap',
          'until' => 1719068400
        },
-       {
-         'data' => '#: by[nocache]: https://x.com/VIZ_Berlin/status/1796409264266936344 (Dauer ca. drei Wochen)
-#: source_id[inactive]: bvg2024:108#HIM_FREETEXT_224826 (hier nur bis 9.6.2024)
-#: source_id[inactive]: bvg2024:108#HIM_FREETEXT_225358 (bis 30.06.2024)
-#: source_id[inactive]: bvg2024:108#HIM_FREETEXT_225921
-#: source_id: viz2021:13.589973,52.480143,31.05.2024,01:30 (bis 14.06.2024) (inaktiv)
-#: source_id: viz2021:13.589683,52.480279,31.05.2024,01:30 (bis 25.06.2024)
-#: also_indoor: traffic (H,B,G)
-#: note: bei rbb bis Mitte Juni (2024); mittlerweile bis 25.06.2024
-#: note: gesperrter Bereich nur etwa 60m
-# REMOVED --- #: last_checked: 2024-06-02 --- #: next_check: 2024-06-09
-	q3::inwork 23012,8575 23118,8495
-# REMOVED (hier nicht) ---	q4::inwork 23118,8495 23207,8421
-',
-         'from' => undef,
-         'id' => 4071,
-         'text' => 'Kohlisstr.: Wasserrohrbruch, Sperrung der Fahrbahn zwischen Klopstockstr. und Wielandstr., voraussichtlich bis 25.6.2024',
-         'type' => 'handicap',
-         'until' => 1719327600
-       },
+       undef,
        {
          'data' => '	q4::temp::play 7177,16715 7150,16760 7144,16781 7147,16800
 ',
@@ -7898,16 +7907,7 @@ Sonnenallee: für Fußgänger existiert ein Durchgang auf der südwestlichen Fahrbah
          'until' => 1721426399
        },
        undef,
-       {
-         'data' => '#: source_id: viz2021:13.543945,52.454049,03.06.2024,07:00 (bis 21.06.2024) (bis 19.06.2024)
-	q4::inwork 20435,5460 20348,5509 20065,5534 19814,5512
-',
-         'from' => 1717304400,
-         'id' => 4075,
-         'text' => 'Bruno-Bürgel-Weg: Bauarbeiten in Höhe Stadion, Sperrung, evtl. sind auch Radfahrer betroffen, vom 03.06.2024 07:00 bis 19.06.2024 15:00',
-         'type' => 'handicap',
-         'until' => 1718802000
-       },
+       undef,
        {
          'data' => '#: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2024/pressemitteilung.1452894.php
 #: by: https://www.berliner-woche.de/mitte/c-bauen/uferpromenade-gesperrt_a417283
@@ -7922,15 +7922,15 @@ Sonnenallee: für Fußgänger existiert ein Durchgang auf der südwestlichen Fahrbah
          'until' => 1725141599
        },
        {
-         'data' => '#: source_id: viz2021:13.55316,52.43396,04.06.2024,14:11 (bis 18.06.2024)
+         'data' => '#: source_id: viz2021:13.55316,52.43396,04.06.2024,14:11 (bis 18.06.2024) (bis 18.07.2024)
 #: note: bei rbb "bis auf weiteres", mittlerweile auch bis 18.6.2024
 	q4::inwork 20717,3310 20478,3156
 ',
          'from' => 1717416660,
          'id' => 4077,
-         'text' => 'Otto-Franke-Str.: Bauarbeiten zwischen Nipkowstr. und Moissistr.: geplatzte Wasserleitung, evtl. sind auch Radfahrer betroffen, vom 04.06.2024 14:11 bis 18.06.2024 05:00',
+         'text' => 'Otto-Franke-Str.: Bauarbeiten zwischen Nipkowstr. und Moissistr.: geplatzte Wasserleitung, evtl. sind auch Radfahrer betroffen, vom 04.06.2024 14:11 bis 18.07.2024 05:00',
          'type' => 'handicap',
-         'until' => 1718679600
+         'until' => 1721271600
        },
        undef,
        {
@@ -8011,15 +8011,17 @@ Sonnenallee: für Fußgänger existiert ein Durchgang auf der südwestlichen Fahrbah
        undef,
        {
          'data' => '#: source_id: viz2021:13.546579,52.418724,12.06.2024,08:00 (bis 12.07.2024)
+#: note: bei rbb mittlerweile bis 30.09.2024, go with rbb
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1800742824524259711
 #: by: https://pbs.twimg.com/media/GPzFCzlWcAAoKgR?format=jpg&name=large
 	q3::inwork 20302,1613 20366,1479
 ',
+         'dont_check_date' => 1,
          'from' => 1718085600,
          'id' => 4086,
-         'text' => 'Keltensteig: Einmündung an der Grünauer Str. gesperrt, vom 12.06.2024 08:00 bis 12.07.2024 17:00',
+         'text' => 'Keltensteig: Einmündung an der Grünauer Str. gesperrt, vom 12.06.2024 08:00 bis 12.07.2024 17:00, evtl. auch bis September 2024',
          'type' => 'handicap',
-         'until' => 1720796400
+         'until' => 1727708400
        },
        {
          'data' => '#: note: Halteverbotsschilder bis 06.09.2024
@@ -8064,6 +8066,31 @@ Sonnenallee: für Fußgänger existiert ein Durchgang auf der südwestlichen Fahrbah
          'text' => 'Am Stener Berg: Bauarbeiten, Richtung Osten gesperrt,, vom 17.06.2024 08:00 bis 06.09.2024 17:00',
          'type' => 'handicap',
          'until' => 1725634800
+       },
+       {
+         'data' => '#: also_indoor: traffic (B,T)
+#: last_checked: 2024-06-18 vvv
+	q4::inwork; 13474,8060 13478,8095 13510,8138
+Stuttgarter Str. Ost	q4::inwork 13554,8101 13510,8138
+#: note: relativ zum Straßenabschnitt kurzer Abschnitt, deshalb q3 statt q4
+Stuttgarter Str. West	q3::inwork 13510,8138 13331,8283
+#: last_checked ^^^
+',
+         'from' => undef,
+         'id' => 4091,
+         'text' => 'Treptower Str.: zwischen Sonnenallee und Stuttgarter Str. Bauarbeiten, Fahrtrichtung gesperrt, außerdem Sperrung der Anbindung Stuttgarter Str. (beide Seiten), Ende der Bauarbeiten unbekannt',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: source_id: viz2021:13.30616,52.52644,18.06.2024,07:00 (bis 30.09.2024)
+	q4::inwork; 3710,13290 3719,13346 3737,13429 3741,13495 3739,13563
+',
+         'from' => 1718600400,
+         'id' => 4092,
+         'text' => 'Lise-Meitner-Str.: Bauarbeiten zwischen Mierendorffplatz und Olbersstr./ Gaußstr., Sperrung Richtung Norden, evtl. sind auch Radfahrer betroffen, vom 18.06.2024 07:00 bis 30.09.2024 23:59',
+         'type' => 'handicap',
+         'until' => 1727733540
        }
      
 );
