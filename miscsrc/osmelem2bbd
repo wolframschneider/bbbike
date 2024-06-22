@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2019 Slaven Rezic. All rights reserved.
+# Copyright (C) 2019,2024 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -25,22 +25,26 @@ use Strassen::Core;
 
 sub get_node ($);
 sub get_way  ($);
+sub get_relation ($);
+sub get_geom_for_feature ($$);
 
 my $api_root_url = 'https://api.openstreetmap.org/api/0.6';
+my $overpass_api_url = 'https://overpass-api.de/api/interpreter';
 
-GetOptions
-    or die "usage: $0 osmURL ...\n";
+sub usage () { die "usage: $0 [--full-features] osmURL ...\n" }
+
+GetOptions(
+    "full-feature|full-features!" => \my $do_full_features,
+)
+    or usage;
 
 my @in_urls = @ARGV
-    or die "usage: $0 osmURL ...\n";
+    or usage;
 
 my @elems;
 for my $in_url (@in_urls) {
     if ($in_url =~ m{(node|way|relation)/(\d+)}) {
 	my($type, $id) = ($1, $2);
-	if ($type !~ m{^(node|way)$}) {
-	    die "Sorry, no support yet for '$type'";
-	}
 	push @elems, [$type, $id];
     } else {
 	die "Cannot parse '$in_url'";
@@ -52,18 +56,31 @@ $s->set_global_directive(map => 'polar');
 $s->set_global_directive(encoding => 'utf-8');
 
 my $ua = LWP::UserAgent->new;
+
 for my $elem (@elems) {
     my($type, $id) = @$elem;
     if      ($type eq 'node') {
 	my $node = get_node $id;
 	$s->push([$node->{name}, [$node->{pos}], 'X']);
-    } elsif ($type eq 'way') {
-	my $way = get_way $id;
-	my $first_node_id = $way->{node_ids}->[0];
-	my $node = get_node $first_node_id;
-	$s->push([$way->{name}, [$node->{pos}], 'X']); # XXX it would be better to get all nodes' coordinates --- how to do this most efficiently?
     } else {
-	die "SHOULD NEVER HAPPEN: unhandled type $type";
+	my @coords = get_geom_for_feature($type, $id);
+	if ($type eq 'way') {
+	    my $way = get_way $id;
+	    if (!$do_full_features) {
+		$s->push([$way->{name}, [@coords[$#coords/2]], 'X']);
+	    } else {
+		$s->push([$way->{name}, [@coords], 'X']);
+	    }
+	} elsif ($type eq 'relation') {
+	    my $relation = get_relation $id;
+	    if (!$do_full_features) {
+		$s->push([$relation->{name}, [@coords[$#coords/2]], 'X']);
+	    } else {
+		$s->push([$relation->{name}, [@coords], 'X']);
+	    }
+	} else {
+	    die "SHOULD NEVER HAPPEN: unhandled type $type";
+	}
     }
 }
 
@@ -126,4 +143,95 @@ sub get_way ($) {
     }
 }
 
+# just return name, no coordinates
+sub get_relation ($) {
+    my $id = shift;
+    my $api_url = "$api_root_url/relation/$id";
+    my $resp = $ua->get($api_url);
+    if ($resp->is_success) {
+	my $data = $resp->decoded_content(charset => 'none');
+	my $dom = XML::LibXML->load_xml(string => $data);
+	my $root = $dom->documentElement;
+	my($elem) = $root->findnodes('/osm/*');
+	my $name = _get_name($elem);
+	return {
+		name => $name,
+	       };
+    } else {
+	die "Failed to fetch $api_url: " . $resp->as_string;
+    }
+}
+
+sub get_geom_for_feature ($$) {
+    my($type, $id) = @_;
+    $type =~ m{^(way|relation)$}
+	or die "Only way or relation allowed";
+    $id =~ m{^\d+$}
+	or die "id does not look like a number";
+    my $query = <<"EOF";
+[out:xml];
+$type($id);
+(._;>;);
+out geom;
+EOF
+    my $resp = $ua->post($overpass_api_url, { data => $query });
+    if (!$resp->is_success) {
+	die "ERROR: while fetching $overpass_api_url:\n" . $resp->dump(maxlength => 4) . "\n" . $resp->decoded_content;
+    }
+
+    my @coords;
+
+    my $root = XML::LibXML->new->parse_string($resp->decoded_content)->documentElement;
+    for my $node ($root->findnodes('/osm/node')) {
+	my($lat,$lon) = ($node->findvalue('./@lat'), $node->findvalue('./@lon'));
+	push @coords, "$lon,$lat";
+    }
+
+    @coords;
+}
+
 __END__
+
+=head1 NAME
+
+osmelem2bbd - download OSM features and convert into bbd format
+
+=head1 SYNOPSIS
+
+    osmelem2bbd [--full-features] https://www.openstreetmap.org/node/1234 https://www.openstreetmap.org/way/5678 https://www.openstreetmap.org/relation/9012
+
+=head1 DESCRIPTION
+
+Download name and coordinates of the specified openstreetmap features
+(nodes, ways, or relations). Feature specification may be a full or
+partial URL, that is, both C<https://www.openstreetmap.org/node/1234>
+and C<node/1234> is recognized.
+
+By default, only the only (nodes) or middle (ways) or a random one
+(relations) coordinate is used. With option C<--full-features> the
+generated output contains all feature coordinates.
+
+=head2 BUGS
+
+With C<--full-features>, a centroid should probably be used instead of
+a random coordinate for relation features.
+
+With C<--full-features>, all coordinates are connected for relation
+features, even between unconnected child features.
+
+=head2 EXAMPLES
+
+Download some sights in Berlin, convert them to a GPX waypoints file,
+and upload to a GPS device:
+
+    (
+    TARGET_GPX=/tmp/berlin_sights.gpx
+    ./miscsrc/osmelem2bbd https://www.openstreetmap.org/way/518071791 https://www.openstreetmap.org/node/2418372191 https://www.openstreetmap.org/relation/2198410 | ./miscsrc/bbd2gpx - > $TARGET_GPX
+    ./miscsrc/gps-mount.pl --gpx-cp $TARGET_GPX
+    )
+
+=head1 SEE ALSO
+
+L<gps-mount.pl>.
+
+=cut
