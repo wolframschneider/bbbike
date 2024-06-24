@@ -2494,8 +2494,10 @@ Ein/Ausgang Tempelhofer Damm mit Drehtor	1::night 9242,7286 9302,7294
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9562,7796 9372,7798 9281,7795
 (Rundkurs/nˆrdliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9522,7624 9471,7703 9372,7798
 (Rundkurs auf dem Flughafen Tempelhof - s¸dliche Landebahn)	2::night 9545,7426 9592,7330 9712,7215
-(S¸dliche Landebahn)	2::night 9474,7182 9528,7205 9712,7215 10537,7257 11332,7305 11518,7314 11555,7314 11593,7314
-(S¸dliche Landebahn - Rundkurs)	2::night 11332,7305 11438,7371 11460,7447
+(Rundkurs auf dem Flughafen Tempelhof, innerer Ring)	2::night 11078,7009 11374,7224 11366,7307 11366,7326 11279,7768 11264,7882
+(innerer Ring - ‰uﬂerer Ring)	2::night 11374,7224 11407,7198
+(S¸dliche Landebahn)	2::night 9474,7182 9528,7205 9712,7215 10537,7257 11332,7305 11366,7307 11518,7314 11555,7314 11593,7314
+(S¸dliche Landebahn - Rundkurs)	2::night 11332,7305 11366,7326 11438,7371 11460,7447
 (Nˆrdliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 10204,7680 11279,7768 11388,7777 11430,7781 11460,7802
 (Nˆrdliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
 (Herrfurthstr. - Rundkurs)	2::night 11439,7894 11355,7871
@@ -4413,7 +4415,7 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: also_indoor: traffic (G)
 #: note: hier etwa 120m der Fahrbahn gesperrt (eigentlich q4+::inwork)
 #: add_fragezeichen: Sind die Bauarbeiten in der Lauenburger Str. beendet?
-#: last_checked: 2024-05-29
+#: last_checked: 2024-06-22
 	q4::inwork 6009,5691 5993,5422
 ',
          'from' => 1587765600,
@@ -4541,11 +4543,11 @@ Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 # REMOVED (hier nicht) ---	q4::inwork 3934,4441 4039,4500
 # REMOVED (beendet?) ---	q4::inwork; 3643,4232 3523,4139
 #: add_fragezeichen: Sind die Bauarbeiten im Gardesch¸tzenweg bereits beendet? vvv
-#: last_checked: 2024-05-05 vvv
+#: last_checked: 2024-06-22 vvv
 #: next_check: 2024-07-05 vvv
 # REMOVED (hier nicht mehr) ---	q3::inwork; 4214,4595 4039,4500
 # REMOVED (hier nicht mehr) --- Chlumer Str.: Anbindung gesperrt	q3::inwork 4008,4555 4039,4500
-Tietzenweg: Anbindung gesperrt	q3::inwork 3587,4312 3643,4232 3766,4058
+# REMOVED (hier nicht mehr) --- Tietzenweg: Anbindung gesperrt	q3::inwork 3587,4312 3643,4232 3766,4058
 zwischen Moltkestr. und Tietzenweg	q4::inwork; 3934,4441 3643,4232
 #: next_check ^^^
 #: last_checked ^^^
@@ -4641,7 +4643,7 @@ Havelstr.: Fuﬂg‰ngerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: source_id: viz2021:13.428783,52.478213,06.04.2020,07:00 (bis 31.03.2025)
 #: XXX: Wann sind die Bauarbeiten beendet? Laut rbb ebenfalls bis 31.03.2025
 #: also_indoor: traffic (G,H,B)
-#: last_checked: 2024-06-14
+#: last_checked: 2024-06-23
 #: check_frequency: 120d
 #: next_check: 2025-03-31
 	q4::inwork 12162,8053 12147,8117
@@ -5167,10 +5169,10 @@ Havelstr.: Fuﬂg‰ngerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 # REMOVED --- Rungiusstr. (s¸dlicher Teil)	q2::inwork 13064,5953 13027,6168
 # REMOVED --- Rungiusstr. (nˆrdlicher Teil)	q3::inwork 13027,6168 12997,6290
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/jahnstr-52.1326/ (Hochbauarbeiten hier, ist das der Grund f¸r die Sperrung?)
-#: note: Halteverbotsschilder mittlerweile bis 07.06.2024
+#: note: Halteverbotsschilder mittlerweile bis 07.06.2024, nun bis 28.06.2024
 #: add_fragezeichen: Existiert die Einbahnstraﬂenregelung noch immer? vvv
-#: last_checked: 2024-06-01 (mapillary) vvv
-#: next_check: 2024-06-07 vvv
+#: last_checked: 2024-06-22 vvv
+#: next_check: 2024-06-28 vvv
 Jahnstr.	q4::inwork; 12833,6127 13027,6168
 Jahnstr.: Einbahnstraﬂe schon 60m vor Mackenroder Weg	q3::inwork; 12644,6087 12833,6127
 #: next_check ^^^
@@ -5180,7 +5182,7 @@ Jahnstr.: Einbahnstraﬂe schon 60m vor Mackenroder Weg	q3::inwork; 12644,6087 128
          'dont_check_date' => 1,
          'from' => 1699830000,
          'id' => 3496,
-         'text' => 'Jahnstr.: Bauarbeiten zwischen Rungiusstr. und Mackenroder Weg, Einbahnstraﬂe, offen Richtung Westen, vom 13.11.2023 bis voraussichtlich 07.06.2024',
+         'text' => 'Jahnstr.: Bauarbeiten zwischen Rungiusstr. und Mackenroder Weg, Einbahnstraﬂe, offen Richtung Westen, vom 13.11.2023 bis voraussichtlich 28.06.2024',
          'type' => 'handicap',
          'until' => undef
        },
@@ -5324,7 +5326,7 @@ Saalestr.: Fahrbahn abschnittsweise gesperrt, Bordsteine, Umwege	q4::inwork 1364
 #: osm_watch: way id="970452276" version="7"
 #: note: Halteverbotsschilder bis 31.12.2024
 #: also_indoor: traffic (none)
-#: last_checked: 2024-06-20 (daf)
+#: last_checked: 2024-06-23
 #: check_frequency: 30d
 	q3::inwork; 12805,8194 12873,8218 12911,8232
 # REMOVED ---	q4::inwork 12873,8218 12911,8232
@@ -5340,7 +5342,7 @@ Saalestr.: Fahrbahn abschnittsweise gesperrt, Bordsteine, Umwege	q4::inwork 1364
 # REMOVED (hier nicht mehr) --- #: by: https://www.kms-sonne.de/projekte/weserstrasse/ (Austausch einer Abwasserdruckleitung zwischen Innstraﬂe und Treptower Straﬂe, hier: ab Februar 2022) --- #: XXX Bis wann gehen die Bauarbeiten? Haben die Bauarbeiten etwas mit der Umgestaltung der Weserstraﬂe zu tun? vvv --- #: osm_watch: way id="799282063" version="8" --- #: osm_watch: way id="36738531" version="34" --- #: also_indoor: traffic (G) vvv --- #: last_checked: 2022-05-01 vvv --- #: check_frequency: 30d vvv ---	q4::inwork; 13217,8493 13384,8354 --- #: note: Radweg existiert noch, aber etwas enger durch Baustellenabsperrungen --- q2::inwork; 13384,8354 13217,8493 --- # REMOVED --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: also_indoor ^^^ --- #: XXX ^^^
 #: by: https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2023/pressemitteilung.1349592.php (ab Winter 2023 auch Bauarbeiten im Abschnitt zwischen Fulda- und Wildenbruchstraﬂe)
 #: osm_watch: way id="1246171055" version="1"
-#: last_checked: 2024-06-15 vvv
+#: last_checked: 2024-06-23 vvv
 #: check_frequency: 14d vvv
 #: osm_watch: note 4090527 5
 zwischen Wildenbruchstr. und Elbestr.	q3::inwork 13033,8628 12881,8750
@@ -5806,7 +5808,7 @@ Gerstnerweg	q4::inwork; 10303,-1954 10409,-1954 10513,-1954
 #: by: https://berliner-abendblatt.de/2023/01/11/senat-plant-auszug-der-fluechtlinge-aus-terminals-in-tegel/ (bis Mitte M‰rz 2023; allerdings bleibt Terminal C mˆglicherweise weiterhin als Unterkunft erhalten)
 #: XXX Wie lange bleibt das Gel‰nde gesperrt? Bei osm ist der Tunnel als "abandoned" gekennzeichnet. vvv
 #: note: Wachschutz an der Einfahrt "Zum Flughafen Tegel", theoretisch kan man ¸ber die Straﬂe zur Luftfracht auf das Gel‰nde gelangen
-#: last_checked: 2023-10-03 vvv
+#: last_checked: 2024-03-08 (Luftbilder) vvv
 #: check_frequency: 180d vvv
 #: next_check: 2026-12-31 vvv
 #: osm_watch: way id="272993611" version="7"
@@ -5950,7 +5952,7 @@ Br¸ckenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 # REMOVED (superseded by non-note watch) --- #: osm_watch: note 3442821 2
 #: osm_watch: node id="10202117536" version="9"
 #: XXX Bleibt der Zaun auch nach Erˆffnung der neuen Tegeler Br¸cke bestehen?
-#: last_checked: 2023-06-02 (mapillary)
+#: last_checked: 2024-03-08 (Luftbilder)
 # REMOVED --- #: next_check: 2023-12-01
 #: next_check: 2024-04-30
 	2 -784,16658 -719,16608
@@ -6121,7 +6123,7 @@ Br¸ckenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 #: osm_watch[closed]: note 3631207 6
 #: osm_watch[closed]: note 3631209 6
 #: note: siehe auch Eintrag in gesperrt-orig (zurzeit auskommentiert)
-#: last_checked: 2024-05-29 vvv
+#: last_checked: 2024-06-22 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-12-31 vvv
 #: osm_watch: way id="46907541" version="16"
@@ -6135,7 +6137,7 @@ Br¸ckenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 ',
          'from' => 1697320800,
          'id' => 3727,
-         'text' => 'Uferweg am Teltowkanal: zwischen Kˆnigsberger Str. und Kleingartenanlage Zukunft Leitungsarbeiten, Weg kann bis Dezember 2024 gesperrt sein (Stand Ende Mai 2024: Weg ist offen)',
+         'text' => 'Uferweg am Teltowkanal: zwischen Kˆnigsberger Str. und Kleingartenanlage Zukunft Leitungsarbeiten, Weg kann bis Dezember 2024 gesperrt sein (Stand Juni 2024: Weg ist offen)',
          'type' => 'gesperrt',
          'until' => 1735664400
        },
@@ -6197,12 +6199,13 @@ Br¸ckenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 # REMOVED (nein) --- #: XXX laut osm-Notiz https://www.openstreetmap.org/note/3730985 wieder offen --- ist auch schon asphaltiert?
 #: also_indoor: traffic (G,W) vvv
 #: osm_watch: way id="151353924" version="14"
-#: last_checked: 2024-05-04 vvv
+#: last_checked: 2024-06-22 vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2023-06-11 vvv
 # REMOVED (hier nicht mehr, ohne dass sich was ge‰ndert hat)	q4::inwork 9031,6355 8995,6473 8961,6490
 # REMOVED (hier nicht mehr) ---	q2::inwork 8961,6490 8949,6644
 # REMOVED (hier nicht mehr) --- Blumenthalstr.	q4::inwork 8944,6293 8971,6154
+Parkstr.: gesperrt, Umwege	q4::inwork 9078,6360 9031,6355
 Parkstr.	q4::inwork 9031,6355 8992,6312 8944,6293 8930,6295
 # REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
@@ -6212,7 +6215,7 @@ Parkstr.	q4::inwork 9031,6355 8992,6312 8944,6293 8930,6295
 ',
          'from' => undef,
          'id' => 3735,
-         'text' => 'Parkstr.: Bauarbeiten, Fahrbahn gesperrt',
+         'text' => 'Parkstr.: Bauarbeiten, Fahrbahn gesperrt, Umwege an der Dorfkirche',
          'type' => 'handicap',
          'until' => undef
        },
@@ -6347,14 +6350,14 @@ Parkstr.	q4::inwork 9031,6355 8992,6312 8944,6293 8930,6295
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
 #: note: Halteverbotsschilder in der Umgebung bis 04.10.2024
 #: also_indoor: traffic (re-G)
-#: last_checked: 2024-02-17
+#: last_checked: 2024-03-08 (Luftbilder)
 #: check_frequency: 120d
 #: next_check: 2024-10-04
 	q4::inwork -3269,12406 -3260,12540
 ',
          'from' => undef,
          'id' => 3770,
-         'text' => 'Gˆtelstr.: Bauarbeiten, Fahrbahn zwischen Betckestr. und Weverstr. gesperrt (Stand Februar 2024), Bauarbeiten mˆglicherweise bis Oktober 2024',
+         'text' => 'Gˆtelstr.: Bauarbeiten, Fahrbahn zwischen Betckestr. und Weverstr. gesperrt (Stand M‰rz 2024), Bauarbeiten mˆglicherweise bis Oktober 2024',
          'type' => 'handicap',
          'until' => undef
        },
@@ -7241,7 +7244,7 @@ Radwegverbindung	q4::temp:clock 10656,9333 10670,9286
 #: source_id: viz2021:13.404099,52.525926,12.01.2024,07:00 (bis 31.03.2025)
 #: note: eigentlich q4+::inwork;
 #: also_indoor: traffic (G,B)
-#: last_checked: 2024-06-05
+#: last_checked: 2024-06-22
 #: check_frequency: 90d
 #: next_check: 2025-03-01
 	q4::inwork 10385,13348 10341,13376
@@ -7421,14 +7424,14 @@ Rathenower Str.: Anbindung gesperrt	q4::inwork 6817,13862 6730,14021
        },
        undef,
        {
-         'data' => '#: source_id: viz2021:13.296893,52.528484,18.03.2024,07:00 (bis 29.06.2024)
+         'data' => '#: source_id: viz2021:13.296893,52.528484,18.03.2024,07:00 (bis 29.06.2024) (bis 17.08.2024)
 	q4::inwork 3066,13514 3159,13492
 ',
          'from' => 1710655200,
          'id' => 4025,
-         'text' => 'Brahestr.: Bauarbeiten zwischen Tegeler Weg und Fabriciusstr., evtl. sind auch Radfahrer betroffen, vom 18.03.2024 07:00 bis 29.06.2024 20:00',
+         'text' => 'Brahestr.: Bauarbeiten zwischen Tegeler Weg und Fabriciusstr., evtl. sind auch Radfahrer betroffen, vom 18.03.2024 07:00 bis 17.08.2024 20:00',
          'type' => 'handicap',
-         'until' => 1719684000
+         'until' => 1723917600
        },
        undef,
        undef,
@@ -7620,14 +7623,16 @@ Schustehrusstr.	q4::inwork 3528,12276 3623,12284
        },
        {
          'data' => '#: also_indoor: traffic (G[falsch?],B)
-#: note: nur Umleitungsschilder f¸r Radfahrer gesehen
+# REMOVED --- #: note: nur Umleitungsschilder f¸r Radfahrer gesehen
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: last_checked: 2024-05-29
-	q4::inwork 5466,5523 5555,5508 5676,5488
+#: last_checked: 2024-06-22
+#: check_frequency: 10d
+	q4::inwork 5466,5523 5555,5508
+# REMOVED (hier nicht (mehr?)) ---	q4::inwork 5555,5508 5676,5488
 ',
          'from' => undef,
          'id' => 4052,
-         'text' => 'S¸dendstr.: Bauarbeiten zwischen Kˆrnerstr. und Filandastr., vermutlich sind Radfahrer betroffen, Ende der Bauarbeiten unbekannt',
+         'text' => 'S¸dendstr.: Bauarbeiten zwischen Kˆrnerstr. und Plantagenstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -7852,19 +7857,7 @@ Braunschweiger Str.: nordwestlicher Gehweg ist frei, eng	q4::inwork 13858,7617 1
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1451042.php
-#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/up_onkel-tom-strasse.jpg
-#: by: https://www.berliner-woche.de/zehlendorf/c-bauen/fahrbahn-wird-erneuert_a417244 (Gehweg ist nicht betroffen: deshalb 2 -> q4)
-#: source_id: viz2021:13.247352,52.462076,10.06.2024,06:00 (bis 22.06.2024)
-	q4::inwork -138,6681 -150,6168 -119,5885 40,5606 67,5404
-',
-         'from' => 1717884000,
-         'id' => 4070,
-         'text' => 'Onkel-Tom-Str.: Bauarbeiten zwischen Fenngraben und H¸ttenweg, Sperrung der Fahrbahn, vom 10.06.2024 bis 22.06.2024',
-         'type' => 'handicap',
-         'until' => 1719054000
-       },
+       undef,
        undef,
        {
          'data' => '	q4::temp::play 7177,16715 7150,16760 7144,16781 7147,16800
@@ -7963,11 +7956,12 @@ Braunschweiger Str.: nordwestlicher Gehweg ist frei, eng	q4::inwork 13858,7617 1
        {
          'data' => '#: source_id: viz2021:13.299377,52.44785,10.06.2024,07:00 (bis 09.08.2024)
 #: also_indoor: traffic (W)
-	q3::inwork 3185,4894 3425,4541
+#: note: 210m des Abschnitts ist betroffen, deshalb q1 (eher q1-), ansonsten q2
+	q1::inwork 3185,4894 3425,4541
 ',
          'from' => 1717909200,
          'id' => 4083,
-         'text' => 'Fabeckstr.: Anbindung Unter den Eichen gesperrt, evtl. sind auch Radfahrer betroffen, vom 10.06.2024 07:00 bis 09.08.2024 17:00',
+         'text' => 'Fabeckstr.: Anbindung Unter den Eichen gesperrt, Gehweg f¸r Radfahrer frei, vom 10.06.2024 07:00 bis 09.08.2024 17:00',
          'type' => 'handicap',
          'until' => 1723215600
        },
@@ -8046,9 +8040,10 @@ Braunschweiger Str.: nordwestlicher Gehweg ist frei, eng	q4::inwork 13858,7617 1
          'until' => 1725634800
        },
        {
-         'data' => '#: also_indoor: traffic (B,T)
-#: last_checked: 2024-06-18 vvv
+         'data' => '#: also_indoor: traffic (B[falsch],T[falsch],G[falsch],W[falsch])
+#: last_checked: 2024-06-22 vvv
 	q4::inwork; 13474,8060 13478,8095 13510,8138
+Treptower Str., Rechtsabbieger zur Sonnenallee	q4::inwork 13478,8095 13459,8072
 Stuttgarter Str. Ost	q4::inwork 13554,8101 13510,8138
 #: note: relativ zum Straﬂenabschnitt kurzer Abschnitt, deshalb q3 statt q4
 Stuttgarter Str. West	q3::inwork 13510,8138 13331,8283

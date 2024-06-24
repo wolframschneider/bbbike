@@ -112,6 +112,7 @@ Rüdersdorfer Str.: zwar neuer Asphalt, aber mit häufigen Entwässerungsproblemen	
 #: mud: 2023-10-29: tiefe und lange Pfütze, etwa vor dem Fitnessstudio	h=q1,wet
 #: mud: 2023-11-07: keine Pfützen	h=q0
 #: mud: 2023-11-16: keine Pfützen	h=q0
+#: mud: 2024-06-22: tiefe und lange Pfütze, etwa vor dem Fitnessstudio	h=q1,wet
 Rüdersdorfer Str.: zwar neuer Asphalt, aber mit gelegentlichen Entwässerungsproblemen	X; 12891,12008 13052,11867
 # 
 #: mud: 2020-03-07: Wasser in allen Kuhlen, aber problemlos umfahrbar
@@ -123,10 +124,12 @@ Am Betriebsbahnhof Schöneweide: unbefestigt, mit vielen kleinen Kuhlen	X 18160,4
 #: mud: 2020-03-14: keine Beeinträchtigungen	h=q0
 #: mud: 2023-12-26: einige Pfützen	h=q2
 #: mud: 2024-05-29: einige Pfützen	h=q2+
+#: mud: 2024-06-22: einige Pfützen	h=q2+
 Stadtpark Steglitz: etwas älterer Parkweg	X 5890,4674 5841,4557 5836,4469 5787,4400
 # 
 #: mud: 2024-02-07: einige große Pfützen, matschige Stellen	h=q3
 #: mud: 2024-05-29: einige große Pfützen	h=q2
+#: mud: 2024-06-22: einige große Pfützen	h=q2
 #: note: mittlerweile hat sich eine etwas breitere Spur neben dem eigentlichen Weg gebildet, die sowohl von Fußgängern als auch Radfahrern genutzt wird, sofern der Platz da ist
 Weverpromenade: wassergebundene Decke	X 5787,4400 5738,4361 5541,4305
 # 
@@ -553,7 +556,7 @@ Hausvaterweg: unbefestigte Straße	X 20281,18690 20347,18667
 #: mud: 2024-03-04: keine Beeinträchtigungen	h=q0
 #: mud: 2024-03-15: keine Beeinträchtigungen	h=q0
 #: mud: 2024-03-27: keine Beeinträchtigungen	h=q0
-#: mud: 2024-06-27: keine Beeinträchtigungen	h=q0
+#: mud: 2024-05-27: keine Beeinträchtigungen	h=q0
 (Kynaststr. - Paul-und-Paula-Ufer): Parkweg	X 14797,10476 14820,10473 14861,10467
 # 
 #: mud: 2022-02-01: leicht matschig, einige Pfützen	h=q2-,wet

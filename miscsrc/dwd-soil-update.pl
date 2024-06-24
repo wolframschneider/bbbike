@@ -15,25 +15,15 @@
 use strict;
 use warnings;
 use FindBin;
+use File::Basename qw(basename);
 use File::Path qw(make_path);
 use Getopt::Long;
+use LWP::UserAgent;
 
 use lib "$FindBin::RealBin/..";
 
 use BBBikeUtil qw(bbbike_root bbbike_aux_dir);
 
-my $soil_dwd_dir;
-if (bbbike_aux_dir) {
-    $soil_dwd_dir = bbbike_aux_dir . "/data/soil_dwd";
-} else {
-    $soil_dwd_dir = bbbike_root . "/tmp/soil_dwd";
-    for my $subdir (qw(recent historical)) {
-	if (!-d "$soil_dwd_dir/$subdir") {
-	    warn "INFO: create $soil_dwd_dir/$subdir directory...";
-	    make_path "$soil_dwd_dir/$subdir";
-	}
-    }
-}
 # XXX make list of stations configurable?
 my %stations = qw(
     400 Buch
@@ -47,8 +37,24 @@ my %stations = qw(
 # but observations stopped at 20210502.
 
 my $q;
-GetOptions("q|quiet" => \$q)
-    or die "usage: $0 [-q]\n";
+my $soil_dwd_dir;
+GetOptions(
+    "q|quiet" => \$q,
+    "soil-dwd-dir=s" => \$soil_dwd_dir,
+)
+    or die "usage: $0 [-q] [--soil-dwd-dir /path/to/directory]\n";
+
+if (bbbike_aux_dir) {
+    $soil_dwd_dir = bbbike_aux_dir . "/data/soil_dwd";
+} else {
+    $soil_dwd_dir = bbbike_root . "/tmp/soil_dwd";
+    for my $subdir (qw(recent historical)) {
+	if (!-d "$soil_dwd_dir/$subdir") {
+	    warn "INFO: create $soil_dwd_dir/$subdir directory...";
+	    make_path "$soil_dwd_dir/$subdir";
+	}
+    }
+}
 
 my $pm = do {
     if (eval { require Parallel::ForkManager; 1 }) {
@@ -58,13 +64,16 @@ my $pm = do {
     }
 };
 
+my $ua = LWP::UserAgent->new;
+
 chdir "$soil_dwd_dir/recent" or die "Can't chdir to $soil_dwd_dir/recent: $!";
 FETCH_LOOP: for my $station (sort {$a<=>$b} keys %stations) {
     my $pid = $pm and $pm->start and next FETCH_LOOP;
     warn "INFO: update station $station ($stations{$station})...\n" unless $q;
-    my @cmd = ('wget', '--quiet', '-N', "https://opendata.dwd.de/climate_environment/CDC/derived_germany/soil/daily/recent/derived_germany_soil_daily_recent_$station.txt.gz");
-    system @cmd;
-    if ($? != 0) { die "Command '@cmd' failed" }
+    my $url = "https://opendata.dwd.de/climate_environment/CDC/derived_germany/soil/daily/recent/derived_germany_soil_daily_recent_v2_$station.txt.gz";
+    my $resp = $ua->mirror($url, basename($url));
+    $resp->code < 400
+	or die "Mirroring $url failed: " . $resp->dump;
     $pm and $pm->finish;
 }
 $pm and $pm->wait_all_children;
@@ -72,7 +81,7 @@ $pm and $pm->wait_all_children;
 chdir "$soil_dwd_dir/historical" or die "Can't chdir to $soil_dwd_dir/historical: $!";
 FETCH_HISTORICAL_LOOP: for my $station (sort {$a<=>$b} keys %stations) {
     print STDERR "INFO: check for historical data from station $station ($stations{$station})... " unless $q;
-    my $historical_file = "derived_germany_soil_daily_historical_${station}.txt.gz";
+    my $historical_file = "derived_germany_soil_daily_historical_v2_${station}.txt.gz";
     my $need_update;
     if (!-e $historical_file) {
 	print STDERR " historical file does not exist -> need update\n";
@@ -94,19 +103,25 @@ FETCH_HISTORICAL_LOOP: for my $station (sort {$a<=>$b} keys %stations) {
     }
     if ($need_update) {
 	my $pid = $pm and $pm->start and next FETCH_HISTORICAL_LOOP;
-	my @cmd = ('curl', '--silent', '-O', "https://opendata.dwd.de/climate_environment/CDC/derived_germany/soil/daily/historical/derived_germany_soil_daily_historical_${station}.txt.gz");
-	system @cmd;
-	if ($? != 0) { die "Command '@cmd' failed" }
+	my $url = "https://opendata.dwd.de/climate_environment/CDC/derived_germany/soil/daily/historical/$historical_file";
+	my $resp = $ua->get($url, ':content_file' => basename($url));
+	$resp->is_success
+	    or die "Fetching $url failed: " . $resp->dump;
 	$pm and $pm->finish;
     }
 }
 $pm and $pm->wait_all_children;
 
+# Note:
+# - for v1 files the BF10 field (index 11) was printed
+# - for v2 files the BFGL01_AG field (index 12) is printed
+my $date_index = 1;
+my $bf_index = 12;
 chdir "$soil_dwd_dir/recent" or die "Can't chdir to $soil_dwd_dir/recent: $!";
 for my $station (sort {$a<=>$b} keys %stations) {
-    chomp(my $last_line = `gunzip -c derived_germany_soil_daily_recent_${station}.txt.gz | tail -1`);
+    chomp(my $last_line = `gunzip -c derived_germany_soil_daily_recent_v2_${station}.txt.gz | tail -1`);
     my @f = split /;/, $last_line;
-    printf "%-12s: %s %s\n", $stations{$station}||$station, $f[1], $f[11];
+    printf "%-12s: %s %s\n", $stations{$station}||$station, $f[$date_index], $f[$bf_index];
 }
 
 __END__
