@@ -2540,7 +2540,200 @@ Ein/Ausgang Oderstraße/Crashgate mit Drehtor	1::night 11608,7267 11598,7264
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://csd-berlin.de/event-info-en/
+#: by: https://viz.berlin.de/home/-/asset_publisher/ZQE04eyJSiIC/content/gesamte-innenstadt-verkehrseinschrankungen-zum-christopher-street-day
+#: by: https://csd-berlin.de/ (24.7.2021, Route steht noch nicht fest)
+#: by: https://csd-berlin.de/csd-berlin-2021/demo-route-2/
+#: by: https://csd-berlin.de/demo-route-finale-2022/
+#: by: https://berliner-abendblatt.de/2022/07/13/hunderttausende-bei-csd-parade-am-23-juli-erwartet/
+#: by: https://csd-berlin.de/csd-berlin-2023/route-finale
+#: by: https://csd-berlin.de/route-finale
+#: source_id: viz2021:13.3899,52.51036,21.07.2023,19:32 (bis 22.07.2023) (inaktiv)
+	2::temp 10213,11728 10133,11708 10000,11691 9991,11690 9905,11680 9701,11656 9569,11631 9444,11616 9268,11590 9058,11564 8834,11536 8747,11525 8740,11524 8596,11508 8542,11502 8479,11493 8374,11479 8358,11477 8301,11469 8261,11463 8217,11455 8145,11438 8096,11393 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7536,10199 7413,10244 7238,10299 7131,10331 7033,10396
+	2::temp 7033,10396 6937,10407 6851,10416 6753,10446 6636,10492 6602,10504 6532,10529 6685,10690 6740,10755 6824,10904
+# Route via Karl-Heinrich-Ulrichs-Str.	2::temp 7033,10396 7003,10513 6982,10610 6972,10665 6929,10852 6918,10858 6824,10904
+Route via An der Urania	2::temp 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6826,11479 6809,11570 6778,11742 6744,11936 6809,11979 6828,12031 6787,12099 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954
+	2::temp 8722,12268 8637,12258 8592,12252 8538,12245 8546,12279 8570,12302
+	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8600,12165
+	3 8573,11404 8542,11502 8548,11571
+	3 8573,11404 8542,11502 8442,11555
+	3 9997,11713 10000,11691 9992,11682
+	3 8743,11489 8740,11524 8736,11557
+	3 7103,11247 6851,11346 6692,11365
+	3 6716,11439 6826,11479 6914,11487
+	3 6716,11439 6826,11479 6750,11550
+	3 9456,11513 9444,11616 9432,11702
+	3 8119,12414 8055,12186 8049,12140
+	3 8049,12140 8055,12186 8119,12414
+	3 8630,12310 8637,12258 8641,12227 8643,12208
+	3 6841,11114 6880,11110 7004,11168 7115,11220
+	3 6742,11099 6873,11011 7002,11034
+	3 8232,11414 8217,11455 8172,11679
+	3 8548,11571 8542,11502 8442,11555
+	3 8548,11571 8542,11502 8573,11404
+	3 7444,10479 7633,10394 7744,10372
+	3 7698,10147 7579,10183 7526,9969
+	3 8327,12174 8344,12221 8391,12389
+	3 7002,11034 6873,11011 6742,11099
+	3 8643,12208 8641,12227 8637,12258 8630,12310
+	3 7744,10372 7633,10394 7444,10479
+	3 9581,11523 9569,11631 9559,11715
+	3 9331,11497 9268,11590 9234,11683
+	3 9000,11727 9058,11564 9155,11283
+	3 6164,11947 6642,12010 6550,11954
+	3 8522,12239 8538,12245 8522,12187
+	3 8104,11037 7980,11070 7747,11075
+	3 7031,12320 7383,12095 7429,12070
+	3 9155,11283 9058,11564 9000,11727
+	3 7963,10716 7820,10768 7534,10850
+	3 7534,10850 7820,10768 7963,10716
+	3 8102,11099 8000,11137 7828,11133
+	3 6540,11754 6778,11742 6980,11790
+	3 8592,11541 8596,11508 8599,11474
+	3 7822,12201 7816,12150 7823,12120
+	3 8442,11555 8542,11502 8548,11571
+	3 8442,11555 8542,11502 8573,11404
+	3 7033,10328 7033,10396 6937,10407
+	3 7033,10328 7033,10396 7227,10489
+# Karl-Heinrich-Ulrichs-Str./Kurfürstenstr.	3 7110,10613 6972,10665 6818,10725
+# Karl-Heinrich-Ulrichs-Str./Kurfürstenstr.	3 6818,10725 6972,10665 7110,10613
+An der Urania/Kurfürstenstr.	3 6607,10801 6740,10755 6818,10725
+An der Urania/Kurfürstenstr.	3 6818,10725 6740,10755 6607,10801
+Eisenacher Str./Courbièrestr.	3 6719,10347 6753,10446 6743,10615
+Eisenacher Str./Courbièrestr.	3 6743,10615 6753,10446 6719,10347
+# Wichmannstr./Schillstr.	3 6681,10959 6824,10904 6740,10755
+# Wichmannstr./Schillstr.	3 6740,10755 6824,10904 6681,10959
+Wichmannstr./Lützowplatz	3 6681,10959 6824,10904 6918,10858
+Wichmannstr./Lützowplatz	3 6918,10858 6824,10904 6681,10959
+	3 7429,10366 7413,10244 7384,10127
+	3 7429,12070 7383,12095 7031,12320
+	3 7384,10127 7413,10244 7429,10366
+	3 6750,11550 6826,11479 6716,11439
+	3 6750,11550 6826,11479 6914,11487
+	3 7849,10488 7689,10514 7478,10612
+	3 7115,11220 7004,11168 6880,11110 6841,11114
+	3 8391,12389 8344,12221 8327,12174
+	3 8736,11557 8740,11524 8743,11489
+	3 6980,11790 6778,11742 6540,11754
+	3 6679,11602 6809,11570 6869,11567
+	3 7823,12120 7816,12150 7822,12201
+	3 7828,11133 8000,11137 8102,11099
+	3 9559,11715 9569,11631 9581,11523
+	3 7526,9969 7579,10183 7698,10147
+	3 8522,12187 8538,12245 8522,12239
+	3 6692,11365 6851,11346 7103,11247
+	3 9234,11683 9268,11590 9331,11497
+	3 7209,10205 7238,10299 7275,10418
+	3 7275,10418 7238,10299 7209,10205
+	3 8599,11474 8596,11508 8592,11541
+	3 7478,10612 7689,10514 7849,10488
+	3 7747,11075 7980,11070 8104,11037
+	3 6937,10407 7033,10396 7033,10328
+	3 6937,10407 7033,10396 7227,10489
+	3 6914,11487 6826,11479 6750,11550
+	3 6914,11487 6826,11479 6716,11439
+	3 9992,11682 10000,11691 9997,11713
+	3 6869,11567 6809,11570 6679,11602
+	3 6550,11954 6642,12010 6164,11947
+	3 8172,11679 8217,11455 8232,11414
+	3 9692,11732 9701,11656 9702,11647
+	3 9432,11702 9444,11616 9456,11513
+	3 7227,10489 7033,10396 6937,10407
+	3 7227,10489 7033,10396 7033,10328
+	3 9702,11647 9701,11656 9692,11732
+# REMOVED ---	2::temp 6744,11936 6809,11979 6828,12031 6787,12099 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954 6744,11936 6778,11742 6809,11570 6826,11479 6851,11346 6880,11110 6882,11061 6873,11011 6824,10904 6740,10755 6685,10690 6532,10529 6494,10440
+# REMOVED ---	2::temp 10213,11728 10133,11708 10000,11691 9991,11690 9905,11680 9701,11656 9569,11631 9444,11616 9268,11590 9058,11564 8834,11536 8747,11525 8740,11524 8596,11508 8542,11502 8548,11571 8553,11630 8553,11638 8562,11744 8567,11799 8571,11846 8577,11896 8595,12066 8600,12165 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+# REMOVED ---	3 8592,11541 8596,11508 8599,11474
+# REMOVED ---	3 9992,11682 10000,11691 9997,11713
+# REMOVED ---	3 6841,11114 6880,11110 7004,11168 7115,11220
+# REMOVED ---	3 9234,11683 9268,11590 9331,11497
+# REMOVED ---	3 6550,11954 6642,12010 6164,11947
+# REMOVED ---	3 7002,11034 6873,11011 6742,11099
+# REMOVED ---	3 7031,12320 7383,12095 7429,12070
+# REMOVED ---	3 8481,11638 8553,11638 8743,11663
+# REMOVED ---	3 6869,11567 6809,11570 6679,11602
+# REMOVED ---	3 9331,11497 9268,11590 9234,11683
+# REMOVED ---	3 8599,11474 8596,11508 8592,11541
+# REMOVED ---	3 6540,11754 6778,11742 6980,11790
+# REMOVED ---	3 6750,11550 6826,11479 6914,11487
+# REMOVED ---	3 6750,11550 6826,11479 6716,11439
+# REMOVED ---	3 9432,11702 9444,11616 9456,11513
+# REMOVED ---	3 6742,11099 6873,11011 7002,11034
+# REMOVED ---	3 8327,12174 8344,12221 8391,12389
+# REMOVED ---	3 8546,12279 8538,12245 8592,12252
+# REMOVED ---	3 8546,12279 8538,12245 8522,12239
+# REMOVED ---	3 8546,12279 8538,12245 8522,12187
+# REMOVED ---	3 7823,12120 7816,12150 7822,12201
+# REMOVED ---	3 8119,12414 8055,12186 8049,12140
+# REMOVED ---	3 7429,12070 7383,12095 7031,12320
+# REMOVED ---	3 8391,12389 8344,12221 8327,12174
+# REMOVED ---	3 6980,11790 6778,11742 6540,11754
+# REMOVED ---	3 8743,11663 8553,11638 8481,11638
+# REMOVED ---	3 8442,11555 8542,11502 8479,11493
+# REMOVED ---	3 8442,11555 8542,11502 8573,11404
+# REMOVED ---	3 9702,11647 9701,11656 9692,11732
+# REMOVED ---	3 7115,11220 7004,11168 6880,11110 6841,11114
+# REMOVED ---	3 7822,12201 7816,12150 7823,12120
+# REMOVED ---	3 6692,11365 6851,11346 7103,11247
+# REMOVED ---	3 6607,10801 6740,10755 6818,10725
+# REMOVED ---	3 6679,11602 6809,11570 6869,11567
+# REMOVED ---	3 7103,11247 6851,11346 6692,11365
+# REMOVED ---	3 6918,10858 6824,10904 6681,10959
+# REMOVED ---	3 9581,11523 9569,11631 9559,11715
+# REMOVED ---	3 6636,10492 6602,10504 6532,10529 6468,10550
+# REMOVED ---	3 9456,11513 9444,11616 9432,11702
+# REMOVED ---	3 8736,11557 8740,11524 8743,11489
+# REMOVED ---	3 8743,11489 8740,11524 8736,11557
+# REMOVED ---	3 8489,11782 8571,11846 8501,11815
+# REMOVED ---	3 8522,12187 8538,12245 8522,12239
+# REMOVED ---	3 8522,12187 8538,12245 8592,12252
+# REMOVED ---	3 8522,12187 8538,12245 8546,12279
+# REMOVED ---	3 8522,12239 8538,12245 8522,12187
+# REMOVED ---	3 8522,12239 8538,12245 8592,12252
+# REMOVED ---	3 8522,12239 8538,12245 8546,12279
+# REMOVED ---	3 8573,11404 8542,11502 8442,11555
+# REMOVED ---	3 8573,11404 8542,11502 8479,11493
+# REMOVED ---	3 8479,11493 8542,11502 8442,11555
+# REMOVED ---	3 8479,11493 8542,11502 8573,11404
+# REMOVED ---	3 8501,11815 8571,11846 8489,11782
+# REMOVED ---	3 6681,10959 6824,10904 6918,10858
+# REMOVED ---	3 9559,11715 9569,11631 9581,11523
+# REMOVED ---	3 9000,11727 9058,11564 9155,11283
+# REMOVED ---	3 9155,11283 9058,11564 9000,11727
+# REMOVED ---	3 6914,11487 6826,11479 6750,11550
+# REMOVED ---	3 6914,11487 6826,11479 6716,11439
+# REMOVED ---	3 9997,11713 10000,11691 9992,11682
+# REMOVED ---	3 6818,10725 6740,10755 6607,10801
+# REMOVED ---	3 8592,12252 8538,12245 8546,12279
+# REMOVED ---	3 8592,12252 8538,12245 8522,12239
+# REMOVED ---	3 8592,12252 8538,12245 8522,12187
+# REMOVED ---	3 6164,11947 6642,12010 6550,11954
+# REMOVED ---	3 6468,10550 6532,10529 6602,10504 6636,10492
+# REMOVED ---	3 9692,11732 9701,11656 9702,11647
+# REMOVED ---	3 8049,12140 8055,12186 8119,12414
+# REMOVED ---	3 6716,11439 6826,11479 6750,11550
+# REMOVED ---	3 6716,11439 6826,11479 6914,11487
+',
+         'from' => 1721944800,
+         'id' => 2083,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              6,
+                              'start',
+                              '2020-07-30T00:00:00'
+                            ]
+                          ],
+         'source_id' => 'https://www.berlin.de/events/2096878-2229501-csd-christopher-street-day.html',
+         'text' => 'CSD am 27. Juli 2024',
+         'type' => 'gesperrt',
+         'until' => 1722117599
+       },
        undef,
        undef,
        undef,
@@ -3023,11 +3216,14 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        {
          'data' => '#: source_id: IM_019584 (alter Eintrag von 2013, inaktiv)
 #: source_id: viz2021:13.601091,52.451791,25.06.2024,07:00 (bis 26.08.2024, auch Radverkehr betroffen)
-	q4::inwork; 23942,5338 24049,5380 24162,5424 24285,5472 24366,5504 24471,5544 24700,5633
+# REMOVED (hier nicht) ---	q4::inwork; 23942,5338 24049,5380 24162,5424 24285,5472 24366,5504 24471,5544
+Fürstenwalder Damm, linker Gehweg existiert	q4::inwork; 24471,5544 24700,5633
+Jastrower Weg: Einbahnstraße	q4::inwork; 23877,5503 23866,5515 23863,5549 23845,5558 23696,5529 23657,5467
+Stillerzeile: Einbahnstraße	q4::inwork; 25015,5751 24977,5880 24798,5891 24629,5831 24506,5780 24429,5749 24387,5672 24362,5635 24320,5621 24236,5594 24125,5547 24126,5521
 ',
          'from' => 1719205200,
          'id' => 2417,
-         'text' => 'Fürstenwalder Damm: Leitungsarbeiten zwischen Müggelseedamm und Mühlweg, Richtung Bölschestr. gesperrt, vom 25.06.2024 07:00 bis 26.08.2024 17:00',
+         'text' => 'Fürstenwalder Damm: Leitungsarbeiten zwischen Liebstadter Gang und Mühlweg, Richtung Bölschestr. gesperrt, außerdem Einbahnstraßenregelung im Straßenzug Jastrower Weg - Stillerzeile, vom 25.06.2024 07:00 bis 26.08.2024 17:00',
          'type' => 'handicap',
          'until' => 1724684400
        },
@@ -4056,7 +4252,7 @@ Fußgängerschutztunnel	q4::inwork 3828,12697 3981,12709 4071,12720
 #: last_checked: 2024-05-06
 Treskowallee	q4::inwork; 18878,9517 18867,9464 18834,9256 18809,9133 18790,9018 18770,8898 18737,8686
 #: osm_watch: way id="4549817" version="29"
-#: last_checked: 2024-05-15
+#: last_checked: 2024-06-26
 Andernacher Str.	q3::inwork; 19000,8509 18949,8437
 #: next_check ^^^
 #: check_frequency ^^^
@@ -4708,7 +4904,7 @@ Havelstr.: Fußgängerzone	q4::temp:clock -3150,14631 -3122,14557 -3107,14535 -305
 #: osm_watch: way id="362719487" version="11"
 #: osm_watch: way id="687428752" version="2"
 #: add_fragezeichen: Sind die Bauarbeiten in der Passauer Straße beendet?
-#: last_checked: 2024-06-16
+#: last_checked: 2024-06-25
 #: check_frequency: 120d
 	q4::inwork 6021,10405 6116,10688
 ',
@@ -5211,7 +5407,7 @@ Jahnstr.: Einbahnstraße schon 60m vor Mackenroder Weg	q3::inwork; 12644,6087 128
 #: by: https://www.deutsches-architekturforum.de/thread/14423-neubau-firmenzentrale-der-berlin-hyp-mitte-in-bau/?postID=749004#post749004
 # REMOVED (no webcam found) --- #: by: https://baustelle.strabag.com/deutschland?tx_ecxsitebaustelle_webcam%5Baction%5D=detail&tx_ecxsitebaustelle_webcam%5Bcontroller%5D=Webcam&tx_ecxsitebaustelle_webcam%5Bday%5D=4&tx_ecxsitebaustelle_webcam%5Bmonth%5D=05&tx_ecxsitebaustelle_webcam%5Buid%5D=300&tx_ecxsitebaustelle_webcam%5Byear%5D=2022&cHash=96b9a3ee3c205301473cfbdb541e9d2a (Webcam)
 #: by: https://www.berlinhyp.de/de/%C3%BCber-uns/neubauvorhaben (Fertigstellung voraussichtlich 2024)
-#: last_checked: 2024-04-29 (daf)
+#: last_checked: 2024-06-25
 #: check_frequency: 90d
 #: next_check: 2024-12-31
 	q3::inwork; 6626,11178 6549,11015
@@ -5397,18 +5593,7 @@ zwischen Elbestr. und Fuldastr.	q3::inwork 12881,8750 12740,8862
          'type' => 'handicap',
          'until' => 1722524400
        },
-       {
-         'data' => '#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1198000.php
-#: confirmed_by: srt (am 2022-05-03 gesehen)
-#: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2024/pressemitteilung.1445054.php (2024)
-	q4::temp::play 14946,11697 14986,11760
-',
-         'from' => 1717365600,
-         'id' => 3543,
-         'text' => 'Jessnerstr.: zwischen Travestr. und Oderstr. dienstags zwischen 15:30 und 18:30 Uhr temporäre Spielstraße, unter Umständen nur Schrittgeschwindigkeit möglich, im Juni 2024',
-         'type' => 'handicap',
-         'until' => 1719331200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -5441,7 +5626,7 @@ zwischen Elbestr. und Fuldastr.	q3::inwork 12881,8750 12740,8862
 #: note: anscheinend Schubertstr. auch für Fußgänger gesperrt, hier gibt es keinen Gehweg (noch immer?); außerhalb der Arbeitszeiten ggfs. passierbar (gesehen So 2023-03-26, Sa 2023-05-13, Mo 2023-06-19 am Abend (unsicher), Sa 2023-10-28 nachmittags, Sa 2024-02-10 mittags (zumindest das östliche Ende sah offen aus), Mi 2024-03-20 vormittags (durchfahrenden Radfahrer gesehen), Mi 2024-04-10 vormittags: offiziell gesperrt, möglicherweise passierbar)
 #: also_indoor: traffic (G,B,W)
 # REMOVED --- #: priority: #A
-#: last_checked: 2024-05-10 (daf) vvv
+#: last_checked: 2024-06-26 vvv
 #: check_frequency: 90d vvv
 # REMOVED --- #: next_check: 2024-03-11 vvv
 # REMOVED --- #: next_check: 2023-08-27 vvv
@@ -5518,7 +5703,7 @@ Schubertstr.	2::inwork 21984,6317 21856,6390
        undef,
        undef,
        {
-         'data' => '#: source_id: viz2021:13.38435,52.532054,01.07.2022,07:00 (bis 30.04.2024, hier nur Kfz-Verkehr) (bis 31.07.2024)
+         'data' => '#: source_id: viz2021:13.38435,52.532054,01.07.2022,07:00 (bis 30.04.2024, hier nur Kfz-Verkehr) (bis 31.07.2024) (bis 31.08.2024)
 #: osm_watch: way id="364468604" version="14"
 #: note: Radfahrer sind von der Einbahnstraßenregelung nicht ausgenommen (gesehen: 2022-07-14)
 	q4::inwork; 9011,14019 8870,13926
@@ -5526,9 +5711,9 @@ Schubertstr.	2::inwork 21984,6317 21856,6390
          'from' => 1656651600,
          'id' => 3559,
          'source_id' => 'viz2021:13.38248,52.53138,13.06.2022,07:00',
-         'text' => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, offen Richtung Osten, bis 31.07.2024 17:00',
+         'text' => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, offen Richtung Osten, bis 31.08.2024 17:00',
          'type' => 'handicap',
-         'until' => 1722438000
+         'until' => 1725116400
        },
        undef,
        undef,
@@ -5923,13 +6108,13 @@ Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/barbarossadreieck-bau-geht-weiter_a412889
 #: by: https://www.deutsches-architekturforum.de/thread/15363-bv-sch%C3%B6neberger-eck-hochhaus-barbarossadreieck/?pageNo=1
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_25_1539_1734_online.pdf (Grundstücksnummerierungen)
-#: note: Halteverbotsschilder bis 31.12.2023
+#: note: Halteverbotsschilder bis 31.12.2023, mittlerweile bis Juli 2024
 #: note: Außerdem Bauschild der Wasserbetriebe, bis November 2023; es gibt auch kleinere Einschränkungen an den Kreuzungen der Barbarossastr. (mittlerweile (Juni 2023) sind diese entfallen)
 #: add_fragezeichen: Ist die Fahrbahn der Speyerer Str. weiterhin gesperrt?
 #: also_indoor: traffic (ex-B)
 #: osm_watch: way id="1055654058" version="3"
 #: osm_watch: way id="1182385049" version="1"
-#: last_checked: 2024-05-28
+#: last_checked: 2024-06-25
 #: check_frequency: 150d
 #: next_check: 2025-07-01
 	q3::inwork 6447,9661 6341,9546
@@ -6102,7 +6287,7 @@ Brückenabriss, Komplettsperrung	2::inwork 2892,15983 2809,16143
 #: by: https://www.meinetram.de/de/index.php?section=Downloads&download=78 (Präsentation vom 28.2.2022, Seite 16)
 #: also_indoor: traffic (G[falsch],W[falsch])
 #: note: Einbahnstraßenschilder fehlen mittlerweile am Sterndamm, aber am anderen Ende sind weiterhin die Einfahrt-verboten-Schilder da
-#: last_checked: 2024-05-22
+#: last_checked: 2024-06-26
 #: check_frequency: 90d
 #: next_check: 2024-07-18
 	q4::temp; 17763,5104 17729,5091 17652,5082 17601,5090
@@ -6957,7 +7142,7 @@ Metzer Str.: Fahrbahn gesperrt	q3::inwork; 10933,14122 11006,14087
 #: also_indoor: traffic (ex-G,ex-W)
 #: osm_watch: way id="977478749" version="1"
 #: note: Halteverbotsschilder bis Ende März 2024; Länge des Baustellenbereichs etwa 70m, deshalb q3; mittlerweile Halteverbotsschilder bis 31.07.2024
-#: last_checked: 2024-05-28
+#: last_checked: 2024-06-25
 #: next_check: 2024-07-31
 	q3::inwork 7103,11247 7171,11510
 ',
@@ -7193,7 +7378,7 @@ Charlottenstr. (Einbahnstraßenabschnitt etwa 60m)	q2::inwork; 21099,14300 20895,
 #: note: Halteverbotsschilder bis 31.01.2024, wurden trotz Baustelle nicht verlängert, mittlerweile bis 17.05.2024; wurde nicht verlängert, aber Einbahnstraße noch immer nicht offen für Radfahrer
 #: note: Ein traffic-Watcher lohnt nicht, weil hier für Autos immer eine Einbahnstraßenregelung gilt
 #: osm_watch: way id="150513369" version="16"
-#: last_checked: 2024-05-28
+#: last_checked: 2024-06-25
 # REMOVED --- #: next_check: 2024-05-17
 	q4::inwork; 6549,11015 6681,10959
 ',
@@ -7255,7 +7440,8 @@ Radwegverbindung	q4::temp:clock 10656,9333 10670,9286
 #: osm_watch: way id="1149640630" version="3"
 #: osm_watch: way id="1244101968" version="3"
 #: add_fragezeichen: Ist der Weg entlang des Bahndamms noch gesperrt?
-#: last_checked: 2024-06-16
+#: last_checked: 2024-06-24 (okas)
+#: check_frequency: 45d
 	2::inwork 9586,17665 9396,17863
 # REMOVED (nur der südliche Abschnitt ist laut osm gesperrt) ---	2::inwork 9396,17863 9363,17868 9348,17885 9341,17917 9314,17943 9303,17965
 ',
@@ -7285,21 +7471,7 @@ Radwegverbindung	q4::temp:clock 10656,9333 10670,9286
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: viz2021:13.271402,52.453716,21.04.2023,09:00 (bis 08.03.2024) (bis 27.03.2024) (bis 27.05.2024) (bis 27.03.2024) (inaktiv)
-#: source_id: viz2021:13.270887,52.453816,27.03.2024,10:00 (bis 27.05.2024) (bis 05.08.2024)
-#: by[nocache]: https://twitter.com/VIZ_Berlin/status/1772908920014614884
-#: by: https://pbs.twimg.com/media/GJnVMrXWsAAKIn1?format=jpg&name=large
-#: note: außerdem Gegenverkehrsregelung im Hüttenweg
-# REMOVED (in der neuen Verkehrsmeldung entfernt) --- Am Waldfriedhof: Anbindung am Hüttenweg gesperrt	q4::inwork 1139,5308 1212,5353
-Marshallstr.: Anbindung am Hüttenweg gesperrt	q3::inwork 1385,5214 1319,5100
-',
-         'from' => 1681974000,
-         'id' => 4004,
-         'text' => 'Marshallstr.: Anbindung am Hüttenweg gesperrt, auch Radfahrer sind betroffen, bis 05.08.2024 17:00',
-         'type' => 'handicap',
-         'until' => 1722870000
-       },
+       undef,
        {
          'data' => '#: source_id: viz2021:13.299947,52.521326,06.02.2024,00:00 (bis 02.08.2024)
 #: source_id: viz2021:13.2998,52.52136,18.06.2024,07:00 (bis 09.08.2024) (inaktiv)
@@ -7471,7 +7643,7 @@ Rathenower Str.: Anbindung gesperrt	q4::inwork 6817,13862 6730,14021
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1778275531894686173 (westliche Seite)
 #: by: https://pbs.twimg.com/media/GKy422UWIAIeE_t?format=jpg
 #: by[nocache]: https://twitter.com/SaskiaEllenbeck/status/1780312309820235976 (zur Umgestaltung)
-#: last_checked: 2024-05-28 vvv
+#: last_checked: 2024-06-25 vvv
 # REMOVED --- #: check_frequency: 7d vvv
 # REMOVED --- #: next_check: 2024-04-11 vvv
 #: next_check: 2024-06-28 vvv
@@ -7684,7 +7856,7 @@ Behrenstr.: Fahrbahn gesperrt	q4::temp 8737,12098 8595,12066
 # REMOVED (hier noch passierbar) --- Ebertstr.	2::temp 8600,12165 8595,12066
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
 #: note: siehe auch Routing-Helper-Eintrag für Wegführung zum Bremer Weg und entlang des Brandenburger Tors
-#: last_checked: 2024-06-19
+#: last_checked: 2024-06-25
 #: check_frequency: 7d
 # REMOVED --- #: next_check: 2024-06-12
 Brandenburger Tor	2::temp 8538,12245 8592,12252 8637,12258
@@ -7805,16 +7977,16 @@ Winckelmannstr.	q4::inwork 17503,4148 17498,4078 17468,3979
 #: source_id: viz2021:13.466508,52.508736,21.05.2024,07:00 (nur Kfz-Verkehr, bis 03.06.2024) (inaktiv)
 # REMOVED --- #: note: Länge des gesperrten Abschnitts etwa 35m ---	q3::inwork; 14639,11512 14676,11572
 #: source_id[inactive]: bvg2024:m13#HIM_FREETEXT_223856 (8.6.2024-11.6.2024)
-#: source_id: viz2021:13.465797,52.508211,21.05.2024,07:00 (hier nur Kfz-Verkehr, bis 03.06.2024, im Anschluss weitere Arbeiten) (bis 27.06.2024)
+#: source_id: viz2021:13.465797,52.508211,21.05.2024,07:00 (hier nur Kfz-Verkehr, bis 03.06.2024, im Anschluss weitere Arbeiten) (bis 27.06.2024) (bis 02.07.2024)
 #: also_indoor: traffic (B)
 #: note: bei rbb in beiden Richtungen gesperrt (stimmt aber nicht)
 	q4::inwork; 14639,11512 14575,11407
 ',
          'from' => 1716181200,
          'id' => 4063,
-         'text' => 'Holteistr.: Gleisbauarbeiten zwischen Boxhagener Str. und Wühlischstr., Fahrtrichtung gesperrt, bis 27.06.2024 17:00',
+         'text' => 'Holteistr.: Gleisbauarbeiten zwischen Boxhagener Str. und Wühlischstr., Fahrtrichtung gesperrt, bis 02.07.2024 10:00',
          'type' => 'gesperrt',
-         'until' => 1719500400
+         'until' => 1719907200
        },
        {
          'data' => '#: source_id: 236320002 (bis 30.06.2024) (bis 02.08.2024) (bis 30.08.2024)
@@ -7840,23 +8012,16 @@ Winckelmannstr.	q4::inwork 17503,4148 17498,4078 17468,3979
        },
        {
          'data' => '#: next_check_id: A117-2024
-#: osm_watch: way id="153260813" version="4"
-#: osm_watch[closed]: note 4162190 4
-#: by: https://gemeinde-schoenefeld.de/news/aktuelles/bau-der-anschlussstelle-hubertus-radweg-wird-gesperrt/ (Sperrung ab 3. Juni 2024 (voraussichtlich))
-#: by: https://gemeinde-schoenefeld.de/wp-content/uploads/2024/03/2024-05-22_Anwohnerbrief.pdf (bis Ende 2025)
-#: XXX Vermutlich schon gesperrt, dokumentieren!
-#: add_fragezeichen: Ist der Weg tatsächlich gesperrt?
-#: last_checked: 2024-04-07
-# REMOVED --- #: check_frequency: 30d
-# REMOVED --- #: check_frequency: 120d
-#: next_check: 2024-06-03
+#: add_fragezeichen: Ist der Weg noch immer gesperrt?
+#: note: gesperrt-orig-Eintrag existiert, bis Ende 2025 gültig
+#: next_check: 2025-12-31
 Kleine Waldstr. - Waldstr.	2::inwork 21510,-1724 21509,-1790 21531,-1819 21590,-1810 21645,-1741 21657,-1726
 ',
          'from' => 1717279200,
          'id' => 4068,
-         'text' => 'Kleine Waldstr. - Waldstr.: während der Bauarbeiten zur neuen A117-Anschlussstelle vermutlich gesperrt, voraussichtlich ab 3. Juni 2024 bis Ende 2025',
+         'text' => 'Kleine Waldstr. - Waldstr.: während der Bauarbeiten zur neuen A117-Anschlussstelle gesperrt, voraussichtlich bis Ende 2025',
          'type' => 'gesperrt',
-         'until' => 1767221999
+         'until' => undef
        },
        {
          'data' => '#: by: https://berliner-abendblatt.de/berlin-news/wasserrohrbruch-auf-der-sonnenallee-strassensperrung-id253457
@@ -8116,6 +8281,8 @@ Stuttgarter Str. West	q3::inwork 13510,8138 13331,8283
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=12227 (Anfrage)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/8zzfJDFOpujRSzpRpuAKoOiyEE5LqVAeWvsxgUFr/NTHepxW/54-Anlagen/02/GA_1290_VI.pdf (Beginn Juni 2024 (Antwort vom Februar 2024))
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2024/pressemitteilung.1459217.php (Bauarbeiten ab 26. Juni 2024 bis III. Quartal 2027, Sperrung auch für Radfahrer)
+#: by[nocache]: https://x.com/VIZ_Berlin/status/1805830095908532353
+#: source_id: viz2021:13.398583,52.510008,26.06.2024,07:00 (bis 01.07.2027)
 #: XXX Im Endzustand: für den Kfz-Verkehr Einbahnstraßenregelung zwischen Markgrafenstr. und Jerusalemer Str. (offen Richtung Westen), offen für Radfahrer
 #: last_checked: 2024-06-20
 #: next_check: 2024-06-26
@@ -8126,6 +8293,83 @@ Stuttgarter Str. West	q3::inwork 13510,8138 13331,8283
          'text' => 'Krausenstr.: Bauarbeiten zwischen Axel-Springer-Str. und Jerusalemer Str. (Süd), Sperrung der Fahrbahn, ab 26.6.2024',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '#: by[nocache]: https://x.com/VIZ_Berlin/status/1802568353367924911 (keine genaueren Infos)
+#: source_id: viz2021:13.396751,52.524035,17.06.2024,07:00 (bis 28.06.2024) (bis 27.06.2024)
+#: last_checked: 2024-06-25
+	q4::inwork; 9938,13114 9786,13178
+',
+         'from' => undef,
+         'id' => 4095,
+         'text' => 'Oranienburger Str.: Gleisbauarbeiten, Fahrtrichtung gesperrt, kann auch für Radfahrer relevant sein, bis 27.06.2024',
+         'type' => 'handicap',
+         'until' => 1719468000
+       },
+       {
+         'data' => '#: source_id: bvg2024:n8#HIM_FREETEXT_229164 (hier bis 31.08.2024)
+#: by[nocache]: https://x.com/VIZ_Berlin/status/1805852486105722903 (hier für eine Woche)
+#: also_indoor: traffic (H,B,T)
+#: last_checked: 2024-06-25 vvv
+#: check_frequency: 7d vvv
+#: next_check: 2024-06-27 vvv
+#: source_id: viz2021:13.417885,52.514531,26.06.2024,08:27 (bis 27.06.2024)
+	q4::inwork; 11347,12223 11343,12182
+#: source_id: viz2021:13.41771,52.51389,27.06.2024,15:00 (bis 03.07.2024)
+	q3::inwork; 11325,12021 11291,11876
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
+',
+         'from' => undef,
+         'id' => 4096,
+         'text' => 'Jannowitzbrücke/Brückenstr.: kurze Abschnitte Richtung Süden gesperrt, voraussichtlich bis zum 03.07.2024',
+         'type' => 'handicap',
+         'until' => 1720018800
+       },
+       {
+         'data' => '#: source_id: viz2021:13.301956,52.432374,26.06.2024,07:00 (hier auch Radverkehr, bis 30.08.2024)
+Finckensteinallee (trotz Radweg?)	q4::inwork; 3456,2835 3641,2827 3738,2821
+Potsdamer Str. (Sackgasse)	q4::inwork 3644,2937 3641,2827
+',
+         'from' => 1719291600,
+         'id' => 4097,
+         'text' => 'Finckensteinallee: Leitungsarbeiten in Höhe Potsdamer Str., Richtung Osten gesperrt, evtl. sind auch Radfahrer betroffen, vom 26.06.2024 07:00 bis 30.08.2024 17:00',
+         'type' => 'handicap',
+         'until' => 1725030000
+       },
+       {
+         'data' => '#: source_id: viz2021:13.287936,52.432816,26.06.2024,07:00 (hier nur Kfz-Verkehr, bis 31.08.2024)
+	q4::inwork; 2625,2850 2737,2866 3019,2858
+',
+         'from' => 1719291600,
+         'id' => 4098,
+         'text' => 'Finckensteinallee: Bauarbeiten zwischen Carstennstr. und Berner Str., Richtung Osten gesperrt, evtl. sind auch Radfahrer betroffen, vom 26.06.2024 07:00 bis 31.08.2024 17:00',
+         'type' => 'handicap',
+         'until' => 1725116400
+       },
+       {
+         'data' => '#: source_id: viz2021:13.284226,52.432806,26.06.2024,07:00 (bis 31.08.2024)
+	q4::inwork 2290,2864 2570,2844 2625,2850
+',
+         'from' => 1719291600,
+         'id' => 4099,
+         'text' => 'Finckensteinallee: Bauarbeiten zwischen Schottmüllerstr. und Ringstr., Sperrung, evtl. sind auch Radfahrer betroffen, vom 26.06.2024 07:00 bis 31.08.2024 17:00',
+         'type' => 'handicap',
+         'until' => 1725116400
+       },
+       {
+         'data' => '#: by[nocache]: https://x.com/VIZ_Berlin/status/1805829089292665128
+#: by: https://pbs.twimg.com/media/GQ7a054WMAE2aSX?format=jpg&name=large
+#: source_id: viz2021:13.415011,52.515786,26.06.2024,07:00 (bis 28.02.2025)
+	q4::inwork; 11273,12301 11300,12241
+	q3::inwork; 11300,12241 11273,12301
+',
+         'from' => 1719382667,
+         'id' => 4100,
+         'text' => 'Dircksenstr.: Anbindung Stralauer Str. wegen Bauarbeiten gesperrt, voraussichtlich bis Ende Februar 2025',
+         'type' => 'handicap',
+         'until' => 1740783599
        }
      
 );
