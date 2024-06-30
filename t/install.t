@@ -17,6 +17,8 @@ use BBBikeUtil qw(bbbike_root);
 
 if ($^O eq 'MSWin32') {
     plan skip_all => 'install.pl currently may not work on Windows systems (investigation needed)';
+} elsif ($ENV{BBBIKE_TEST_ORG}) {
+    plan skip_all => 'install.pl not running for bbbike.org)';
 } else {
     plan 'no_plan';
 }
