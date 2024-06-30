@@ -20,14 +20,14 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 2.18;
+$VERSION = 2.19;
 
 use BBBikeUtil qw(bbbike_aux_dir module_exists deg2rad);
 
 use vars qw(%images);
 
 my $map_compare_use_bbbike_org = 1;
-my $newest_berlin_aerial = 'berlin-historical-2023';
+my $newest_berlin_aerial = 'berlin-historical-2024';
 
 $main::devel_host = $main::devel_host if 0; # cease -w
 
@@ -79,6 +79,7 @@ sub register {
 	  },
 	  ($images{OpenStreetMap} ? (icon => $images{OpenStreetMap}) : ()),
 	  order => 'first',
+	  tags => [qw(pubtrans bicycle)],
 	};
     $main::info_plugins{__PACKAGE__ . "_MapCompare"} =
 	{ name => "Map Compare (Google/OSM)",
@@ -105,6 +106,7 @@ sub register {
 		  callback => sub { showmap_mapcompare(@_, profile => "berlin-satellite") },
 		  callback_3 => sub { show_mapcompare_menu(@_) },
 		  ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
+		  tags => [qw(aerial)],
 		};
 	} else {
 	    $main::info_plugins{__PACKAGE__ . "_MapCompare_Satellite"} =
@@ -112,6 +114,7 @@ sub register {
 		  callback => sub { showmap_mapcompare(@_, profile => "satellite") },
 		  callback_3 => sub { show_mapcompare_menu(@_) },
 		  ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
+		  tags => [qw(aerial)],
 		};
 	}
 	$main::info_plugins{__PACKAGE__ . "_MapCompare_Traffic"} =
@@ -119,6 +122,7 @@ sub register {
 	      callback => sub { showmap_mapcompare(@_, profile => "traffic") },
 	      callback_3_std => sub { showmap_url_mapcompare(@_, profile => "traffic") },
 	      ($images{_MapCompare} ? (icon => $images{_MapCompare}) : ()),
+	      tags => [qw(traffic)],
 	    };
     }
     if ($is_berlin) {
@@ -127,12 +131,14 @@ sub register {
      	      callback => sub { showmap_bvgstadtplan(@_) },
      	      callback_3 => sub { show_bvgstadtplan_menu(@_) },
      	      ($images{BvgStadtplan} ? (icon => $images{BvgStadtplan}) : ()),
+	      tags => [qw(pubtrans)],
      	    };
 	$main::info_plugins{__PACKAGE__ . "_SBahnBerlin"} =
 	    { name => "S-Bahn Berlin (Stadtplan)",
      	      callback => sub { showmap_sbahnberlin(@_) },
      	      callback_3_std => sub { showmap_url_sbahnberlin(@_) },
      	      ($main::sbahn_photo ? (icon => $main::sbahn_photo) : ()),
+	      tags => [qw(pubtrans)],
      	    };
     }
     $main::info_plugins{__PACKAGE__ . "_BikeMapNet"} =
@@ -140,6 +146,7 @@ sub register {
 	  callback => sub { showmap_bikemapnet(@_) },
 	  callback_3_std => sub { showmap_url_bikemapnet(@_) },
 	  ($images{BikeMapNet} ? (icon => $images{BikeMapNet}) : ()),
+	  tags => [qw(bicycle)],
 	};
     $main::info_plugins{__PACKAGE__ . "_CriticalMaps"} =
 	{ name => "Critical Maps",
@@ -147,6 +154,7 @@ sub register {
 	  callback_3_std => sub { showmap_url_criticalmaps(@_) },
 	  ($images{CriticalMaps} ? (icon => $images{CriticalMaps}) : ()),
 	  order => 8700,
+	  tags => [qw(bicycle)],
 	};
     $main::info_plugins{__PACKAGE__ . "_Geocaching"} =
 	{ name => "geocaching.com",
@@ -160,18 +168,21 @@ sub register {
 	  callback => sub { showmap_bing_street(@_) },
 	  callback_3 => sub { show_bing_menu(@_) },
 	  ($images{Bing} ? (icon => $images{Bing}) : ()),
+	  tags => [qw(traffic)],
 	};
     $main::info_plugins{__PACKAGE__ . "_TomTom"} =
 	{ name => "tomtom",
 	  callback => sub { showmap_tomtom(@_) },
 	  callback_3_std => sub { showmap_url_tomtom(@_) },
 	  ($images{TomTom} ? (icon => $images{TomTom}) : ()),
+	  tags => [qw(traffic)],
 	};
     $main::info_plugins{__PACKAGE__ . "_Waze"} =
 	{ name => "Waze",
 	  callback => sub { showmap_waze(@_) },
 	  callback_3_std => sub { showmap_url_waze(@_) },
 	  ($images{Waze} ? (icon => $images{Waze}) : ()),
+	  tags => [qw(traffic)],
 	};
     if ($is_berlin) {
 	$main::info_plugins{__PACKAGE__ . "_FIS_Broker_1_5000"} =
@@ -185,6 +196,7 @@ sub register {
 	      callback => sub { showmap_viz(@_) },
 	      callback_3_std => sub { showmap_url_viz(@_) },
 	      ($images{VIZ} ? (icon => $images{VIZ}) : ()),
+	      tags => [qw(traffic)],
 	    };
 	$main::info_plugins{__PACKAGE__ . "_LGB"} =
 	    { name => "LGB Brandenburg Topo DTK10 (via mc)",
@@ -197,18 +209,21 @@ sub register {
 	      callback => sub { showmap_bbviewer(@_, layers => 'verkehrsstaerke-2021') },
 	      callback_3 => sub { show_bbviewer_menu(@_) },
 	      ($images{BRB} ? (icon => $images{BRB}) : ()),
+	      tags => [qw(traffic)],
 	    };
 	$main::info_plugins{__PACKAGE__ . "_RadverkehrsatlasBRB"} =
 	    { name => "Radverkehrsatlas Brandenburg",
 	      callback => sub { showmap_radverkehrsatlas(@_) },
 	      callback_3_std => sub { showmap_url_radverkehrsatlas(@_) },
 	      ($images{BRB} ? (icon => $images{BRB}) : ()),
+	      tags => [qw(bicycle)],
 	    };
 	$main::info_plugins{__PACKAGE__ . '_BerlinRadverkehr'} =
 	    { name => 'Radverkehrsnetz Berlin',
 	      callback => sub { showmap_gdi_berlin(layers => 'radverkehrsnetz', @_) },
 	      callback_3_std => sub { showmap_url_gdi_berlin(layers => 'radverkehrsnetz', @_) },
 	      ($images{Berlin} ? (icon => $images{Berlin}) : ()),
+	      tags => [qw(bicycle)],
 	    };
     }
     $main::info_plugins{__PACKAGE__ . "_BKG"} =
@@ -223,18 +238,21 @@ sub register {
 	  callback_3 => sub { show_mapillary_menu(@_) },
 	  allmaps_cb => sub { showmap_url_mapillary(@_) },
 	  ($images{Mapillary} ? (icon => $images{Mapillary}) : ()),
+	  tags => [qw(streetview)],
 	};
     $main::info_plugins{__PACKAGE__ . 'KartaView'} =
 	{ name => 'KartaView',
 	  callback => sub { showmap_kartaview(@_) },
 	  callback_3_std => sub { showmap_url_kartaview(@_) },
 	  ($images{KartaView} ? (icon => $images{KartaView}) : ()),
+	  tags => [qw(streetview)],
 	};
     $main::info_plugins{__PACKAGE__ . 'BerlinerLinien'} =
 	{ name => 'berliner-linien.de (VBB)',
 	  callback => sub { showmap_berlinerlinien(@_) },
 	  callback_3_std => sub { showmap_url_berlinerlinien(@_) },
 	  ($images{BerlinerLinien} ? (icon => $images{BerlinerLinien}) : ()),
+	  tags => [qw(pubtrans)],
 	};
     $main::info_plugins{__PACKAGE__ . 'F4map'} =
 	{ name => 'F4map',
@@ -247,17 +265,21 @@ sub register {
 	  callback => sub { showmap_sentinelhub(@_) },
 	  callback_3_std => sub { showmap_url_sentinelhub(@_) },
 	  ($images{SentinelHub} ? (icon => $images{SentinelHub}) : ()),
+	  tags => [qw(aerial)],
 	};
     $main::info_plugins{__PACKAGE__ . 'StreckenInfo'} =
 	{ name => 'strecken.info',
 	  callback => sub { showmap_streckeninfo(@_) },
 	  callback_3_std => sub { showmap_url_streckeninfo(@_) },
 	  ($images{DB} ? (icon => $images{DB}) : ()),
+	  tags => [qw(pubtrans)],
 	};
     $main::info_plugins{__PACKAGE__ . 'travic'} =
 	{ name => 'travic',
 	  callback => sub { showmap_travic(@_) },
 	  callback_3_std => sub { showmap_url_travic(@_) },
+	  ($images{Travic} ? (icon => $images{Travic}) : ()),
+	  tags => [qw(pubtrans)],
 	};
     if ($is_berlin) {
 	$main::info_plugins{__PACKAGE__ . '_HierBautBerlin'} =
@@ -266,6 +288,7 @@ sub register {
 	      callback_3_std => sub {showmap_url_hierbautberlin(@_) },
 	      ($images{HierBautBerlin} ? (icon => $images{HierBautBerlin}) : ()),
 	      order => 7500,
+	      tags => [qw(construction)],
 	    };
 	$main::info_plugins{__PACKAGE__ . "_DAF"} =
 	    { name => "Deutsches Architektur-Forum",
@@ -273,6 +296,7 @@ sub register {
 	      callback_3_std => sub { showmap_url_daf_berlin(@_) },
 	      ($images{DAF} ? (icon => $images{DAF}) : ()),
 	      order => 7501,
+	      tags => [qw(construction)],
 	    };
 	$main::info_plugins{__PACKAGE__ . "_ArchitekturUrbanistik"} =
 	    { name => "Berliner Architektur & Urbanistik",
@@ -280,6 +304,7 @@ sub register {
 	      callback_3_std => sub { showmap_url_architektur_urbanistik(@_) },
 	      # no icon (yet)
 	      order => 7502,
+	      tags => [qw(construction)],
 	    };
     }
     if ($is_berlin && $main::devel_host) {
@@ -894,6 +919,21 @@ NyswMTowMHlDTeAAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMTEtMjBUMTg6MzQ6MDcrMDE6MDAI
 HvVcAAAAAElFTkSuQmCC
 EOF
     }
+
+    if (!defined $images{Travic}) {
+	# Created with:
+	#   wget https://travic.app/static/icon.png
+	#   convert -resize 16x16 icon.png icon16.png
+	#   pngcrush -brute -reduce -rem allb -m 0 icon16.png icon16_2.png
+	#   base64 icon16_2.png 
+	$images{Travic} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAABGdBTUEAALGPC/xhBQAAAGBJREFU
+GFdj8EADDEDsDgcQAa+oGCgIAgu4R91+9+bN69dv3nyY5QoX+Pb/7zuYAEhL5Nr/b/OioVpAhjov
+/v862hVmKBC4Lvn/OgbEpamAW9myWUHIAh5uLq4QBkwAAQDfD2Si0ao6dwAAAABJRU5ErkJggg==
+EOF
+    }
 }
 
 ######################################################################
@@ -1189,13 +1229,13 @@ sub show_mapcompare_menu {
 	     # whole of Brandenburg
 	     showmap_mapcompare
 		 (maps => [qw(
+				 berlin-historical-2024
 				 berlin-historical-2023
 				 berlin-historical-2022
 				 berlin-historical-2021
 				 lgb-satellite-color
 				 berlin-historical-2019
 				 berlin-historical-2018
-				 berlin-historical-2017
 				 google-satellite
 			    )],
 		  %args,

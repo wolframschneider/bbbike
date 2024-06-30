@@ -14167,6 +14167,8 @@ sub handle_show_info_url {
     substr($show_info_url, $offset, $maxbytes);
 }
 
+my $current_tag_filter = undef;
+
 # Zeigt Informationen zum aktuellen Tag.
 ### AutoLoad Sub
 sub show_info {
@@ -14343,8 +14345,128 @@ sub show_info {
 	}
     }
 
-    my $show_info_sub = sub {
-	my($name, $good_link_for_strname, $outside_berlin, $important_txt_and_tag, $unimportant_txt_and_tag) = @_;
+    my @important_txt_and_tag;
+    my @info_txt_and_tag;
+    my @internal_canvas_tags;
+
+ FIND_INFO: {
+	if (defined $str_file{$base_tag} && $str_file{$base_tag} =~ /\.shp$/) {
+	    (my $dbf_file = $str_file{$base_tag}) =~ s/\.shp$/.dbf/;
+	    require BBBikeAdvanced;
+	    my $index;
+	    for (@tags) {
+		if (/^$base_tag-(\d+)/) {
+		    $index = $1;
+		    last;
+		}
+	    }
+	    if (defined $index) {
+		my $dbf_info = get_dbf_info($dbf_file, $index);
+		if (defined $dbf_info) {
+		    if (@tags > 3) {
+			my $text = splice @tags, 2, 1;
+			unshift @tags, $text, "";
+		    }
+		    push @important_txt_and_tag, "$dbf_info\n", undef;
+		    push @internal_canvas_tags, join("\n", @tags), undef;
+		    last FIND_INFO;
+		}
+	    }
+	}
+
+	my(%info, $info_file);
+	eval {
+	    require DB_File;
+	    require Fcntl;
+	    if (!$is_p) {
+		if ($str_file{$base_tag} !~ m|^/|) {
+		    $str_file{$base_tag} = "$datadir/$str_file{$base_tag}";
+		}
+		$info_file = $str_file{$base_tag} . "-info";
+	    } else {
+		if ($p_file{$base_tag} !~ m|^/|) {
+		    $p_file{$base_tag} = "$datadir/$p_file{$base_tag}";
+		}
+		$info_file = $p_file{$base_tag} . "-info";
+	    }
+	}; warn $@ if $@;
+
+	if ($info_file && tie %info, 'DB_File', $info_file, &Fcntl::O_RDONLY) {
+	    warn "Use $info_file ...\n";
+	TRY: {
+		foreach my $i (1 .. 4) {
+		    if (defined $tags[$i]) {
+			if (defined $info{$tags[$i]}) {
+			    push @info_txt_and_tag, $info{$tags[$i]}, undef;
+			    last TRY;
+			}
+			if ($tags[$i] =~ /^L\d+-(\d+)/) {
+			    my $id = $1;
+			    foreach my $type (qw(s p)) {
+				if (defined $info{"$type-$id"}) {
+				    push @info_txt_and_tag, $info{"$type-$id"}, undef;
+				    last TRY;
+				}
+			    }
+			    if (defined $info{$id}) {
+				push @info_txt_and_tag, $info{$id}, undef;
+				last TRY;
+			    }
+			}
+		    }
+		}
+	    }
+	    push @internal_canvas_tags, join("\n", @tags), undef;
+	    untie %info;
+	    last FIND_INFO;
+	}
+
+	if ($advanced) {
+	    if (@tags > 3) {
+		my $text = splice @tags, 2, 1;
+		unshift @tags, $text, "";
+	    }
+
+	    # XXX slightly hackish: link to the OSM node/way/... browser
+	    # XXX and a tag for osm_watch
+	    {
+		my $osm_version;
+		my $osm_type;
+		my $osm_id;
+		for (@tags) {
+		    if (my($_type,$_id) = $_ =~ m{^osm-(node|way|relation)-(\d+)$}) {
+			push @tags, "https://www.openstreetmap.org/$_type/$_id";
+			push @tags, "https://osm.mapki.com/history/$_type/$_id";
+			($osm_type, $osm_id) = ($_type, $_id);
+		    } elsif ($_ =~ m{\bversion=(\d+)}) {
+			$osm_version = $1;
+		    }
+		}
+		if ($osm_version && $osm_id && $osm_type) {
+		    push @tags, qq{#: osm_watch: $osm_type id="$osm_id" version="$osm_version"};
+		}
+	    }
+
+	    push @internal_canvas_tags, map { ($_, undef) } @tags;
+	}
+    }
+
+    if (@internal_canvas_tags) {
+	unshift @internal_canvas_tags, M("Interne Canvas-Tags").":\n", "bold";
+    }
+    if (@above_tags) {
+	push @internal_canvas_tags, "\n".M("Oben liegende interne Canvas-Tags").":\n", "bold";
+    }
+    if (@info_txt_and_tag) {
+	unshift @info_txt_and_tag, M("Info").":\n", "bold";
+    }
+
+    my $show_info_sub;
+    $show_info_sub = sub {
+	my $name = $strname;
+	my $important_txt_and_tag = [ @important_txt_and_tag, @info_txt_and_tag ];
+	my $unimportant_txt_and_tag = [ @internal_canvas_tags ];
+
 	#my $tl_tag = "info-$base_tag"; # one window per canvas type
 	my $tl_tag = "info"; # one window for all
 	my $info_top = redisplay_top($top, $tl_tag,
@@ -14357,6 +14479,20 @@ sub show_info {
 	    $info_top->Button(Name => 'close',
 			      -command => sub { $info_top->destroy },
 			     )->pack(-fill => "x");
+	    $info_text->tagConfigure(
+		'tag', 
+		-borderwidth => 1,
+		-relief => 'solid',
+		-font => $font{'small'},
+	    );
+	    $info_text->tagConfigure(
+		'tagactive',
+		-background => 'yellow',
+	    );
+	    $info_text->tagConfigure(
+		'taginactive',
+		-background => 'grey80',
+	    );
 	    toplevel_checker($info_top);
 	} else {
 	    $info_top = $toplevel{$tl_tag};
@@ -14378,14 +14514,18 @@ sub show_info {
 	    (-label => M"Link kopieren",
 	     -command => sub { $copy_link->() },
 	    );
+	my $open_url = sub {
+	    my $url = shift;
+	    $url = ref $url eq 'CODE' ? $url->() : $url;
+	    require WWWBrowser;
+	    main::status_message("URL: $url", "info");
+	    WWWBrowser::start_browser($url);
+	};
 	my $show_url = sub {
 	    my($linkcount, $url, $my_link_menu) = @_;
 	    $info_text->tagBind
 		("link$linkcount", "<ButtonRelease-1>" => sub {
-		     my $url = ref $url eq 'CODE' ? $url->() : $url;
-		     require WWWBrowser;
-		     main::status_message("URL: $url", "info");
-		     WWWBrowser::start_browser($url);
+		     $open_url->($url);
 		 }
 		);
 	    if (!$my_link_menu) {
@@ -14444,9 +14584,7 @@ sub show_info {
 		    $www_link_menu->command
 			(-label => M"Allgemeine Google-Suche",
 			 -command => sub {
-			     require WWWBrowser;
-			     main::status_message("URL: $common_url", "info");
-			     WWWBrowser::start_browser($common_url);
+			     $open_url->($common_url);
 			 }
 		     );
 		}
@@ -14513,6 +14651,10 @@ sub show_info {
 	}
 
 	$info_text->insert("end", "Links\n", "bold");
+	$info_text->markSet('taglist', 'end-2c');
+
+	my %builtin_links;
+	my @builtin_links_order;
 
 	if ($city_obj->cityname eq 'Berlin') { # only bbbike.de links for Berlin data (XXX but maybe bbbike.org links could be done instead?)
 	    my @bbbike_cgi_def = ([$BBBike::BBBIKE_DIRECT_WWW, "BBBike im WWW"]);
@@ -14609,16 +14751,15 @@ sub show_info {
 
 	my($mapscale_scale) = $mapscale =~ /:\s*(\d+)/;
 
+	# BBBikeLeaflet
 	{
 	    if (!$bbbike_leaflet_photo) {
 		$bbbike_leaflet_photo = load_photo($top, 'bbbike_leaflet_16');
 	    }
-	    my $need_indentation;
-	    if (!$bbbike_leaflet_photo) {
-		$need_indentation = 1;
-	    }
-	    my $show_leaflet_url = sub {
-		my($baseurl, $linkcount) = @_;
+
+	    # 
+	    my $prepare_leaflet_urls = sub {
+		my($baseurl) = @_;
 
 		my($marker_url, $normal_url, $privfz_url);
 		{
@@ -14674,9 +14815,7 @@ sub show_info {
 		$leaflet_menu->command
 		    (-label => M"BBBike Leaflet mit Marker",
 		     -command => sub {
-			 require WWWBrowser;
-			 main::status_message("URL: $marker_url", "info");
-			 WWWBrowser::start_browser($marker_url);
+			 $open_url->($marker_url);
 		     }
 		    );
 		$leaflet_menu->command
@@ -14686,45 +14825,62 @@ sub show_info {
 		$leaflet_menu->command
 		    (-label => M"Private Fragezeichen",
 		     -command => sub {
-			 require WWWBrowser;
-			 main::status_message("URL: $privfz_url", "info");
-			 WWWBrowser::start_browser($privfz_url);
+			 $open_url->($privfz_url);
 		     },
 		    );
 
-		$show_url->($linkcount, $normal_url, $leaflet_menu);
+		($normal_url, $leaflet_menu);
 	    };
 
+	    my @bbbike_leaflet_defs;
 	    if ($devel_host) {
-		if ($bbbike_leaflet_photo) {
-		    $info_text->imageCreate('end', -image => $bbbike_leaflet_photo,
-					    -align => "bottom", -padx => 2, -pady => 1);
-		}
-		$info_text->insert("end", "BBBike Leaflet (local)",
-				   ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-		$show_leaflet_url->("http://localhost/bbbike/cgi/bbbikeleaflet.cgi", $linkcount);
-		$info_text->insert("end", "\n");
-		$linkcount++;
+		push @bbbike_leaflet_defs, [
+		    'http://localhost/bbbike/cgi/bbbikeleaflet.cgi',
+		    'BBBike Leaflet (local)',
+		    '_local',
+		];
 	    }
+	    push @bbbike_leaflet_defs, [
+		$BBBike::BBBIKE_LEAFLET_CGI_URL,
+		'BBBike Leaflet',
+		'_public',
+	    ];
 
-	    if ($bbbike_leaflet_photo) {
-		$info_text->imageCreate('end', -image => $bbbike_leaflet_photo,
-					-align => "bottom", -padx => 2, -pady => 1);
+	    for my $def (@bbbike_leaflet_defs) {
+		my($base_url, $label, $key_suffix) = @$def;
+
+		my $key = 'bbbike_leaflet' . $key_suffix;
+		push @builtin_links_order, $key;
+
+		my($normal_url, $leaflet_menu) = $prepare_leaflet_urls->($base_url);
+
+		$builtin_links{$key} = {
+		    name => $label,
+		    callback => sub { $open_url->($normal_url) },
+		    callback_3 => sub {
+			my(%args) = @_;
+			my $w = $args{widget};
+			my $e = $w->XEvent;
+			$leaflet_menu->Post($e->X, $e->Y);
+			Tk->break;
+		    },
+		    ($bbbike_leaflet_photo ? (icon => $bbbike_leaflet_photo) : ()),
+		};
 	    }
-	    $info_text->insert("end", "BBBike Leaflet",
-			       ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-	    $show_leaflet_url->($BBBike::BBBIKE_LEAFLET_CGI_URL, $linkcount);
-	    $info_text->insert("end", "\n");
-	    $linkcount++;
 	}
 
 	# Mapserver
 	if ($city_obj->cityname eq 'Berlin') { # only mapserver links for Berlin data
 	    # Mapserver XXX move to function for creating URL
 	    my @mapserver_def = ([$BBBike::BBBIKE_MAPSERVER_ADDRESS_URL,
-				  "BBBike Mapserver"]);
+				  "BBBike Mapserver",
+				  '',
+				  '_public']);
 	    if ($devel_host) {
-		push @mapserver_def, [defined $ENV{BBBIKE_TEST_CGIDIR} ? "$ENV{BBBIKE_TEST_CGIDIR}/mapserver_address.cgi" : "http://localhost/bbbike/cgi/mapserver_address.cgi", "Lokaler Mapserver", "is_local"];
+		push @mapserver_def, [defined $ENV{BBBIKE_TEST_CGIDIR} ? "$ENV{BBBIKE_TEST_CGIDIR}/mapserver_address.cgi" : "http://localhost/bbbike/cgi/mapserver_address.cgi",
+				      "Lokaler Mapserver",
+				      "is_local",
+				      '_local'];
 	    }
 
 	    my @mapext = $c->get_corners;
@@ -14751,48 +14907,56 @@ sub show_info {
 	    push @layers, "route"; # the "mark" is also in the "route" layer
 
 	    my $mapserver_logo_photo = load_photo($top, 'mapserver_logo', -persistent => 1);
-	    my $need_indentation = !$mapserver_logo_photo;
+
 	    for my $def (@mapserver_def) {
-		my($mapserver_url, $mapserver_label, $is_local) = @$def;
+		my($mapserver_url, $mapserver_label, $is_local, $key_suffix) = @$def;
+
+		my $key = 'mapillary' . $key_suffix;
+		push @builtin_links_order, $key;
+
 		my $url = "$mapserver_url/coords=" . $real_coords;
 		$url .= "/mapext=" . join(",",@mapext);
 		if (@layers) {
 		    $url .= "/" . join("/", map { "layer=$_" } @layers);
 		}
-		if ($mapserver_logo_photo) {
-		    $info_text->imageCreate("end", -image => $mapserver_logo_photo,
-					    -align => "bottom", -padx => 2, -pady => 1);
-		}
-		$info_text->insert("end", $mapserver_label, ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-		$show_url->($linkcount, $url);
-		$info_text->insert("end", "\n");
-		$linkcount++;
+
+		$builtin_links{$key} = {
+		    name => $mapserver_label,
+		    callback => sub { $open_url->($url) },
+		    callback_3_std => sub { $url },
+		    ($mapserver_logo_photo ? (icon => $mapserver_logo_photo) : ()),
+		};
 
 		if ($advanced && !$is_local) {
-		    if ($mapserver_logo_photo) {
-			$info_text->imageCreate("end", -image => $mapserver_logo_photo,
-						-align => "bottom", -padx => 2, -pady => 1);
-		    }
-		    $info_text->insert("end", $mapserver_label . " (kurzer Link)",
-				       ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-		    $show_url->($linkcount, sub {
-				    if (exists $long_url_to_short_url{$url}) {
-					return $long_url_to_short_url{$url};
-				    }
-				    if (!eval { require WWW::Shorten; WWW::Shorten->import(); 1 }) {
-					status_message("Das Modul WWW::Shorten ist nicht vorhanden.", "die");
-				    }
-				    my $short_url = makeashorterlink($url);
-				    $long_url_to_short_url{$url} = $short_url;
-				    $short_url;
-				});
-		    $info_text->insert("end", "\n");
-		    $linkcount++;
+		    my $key = 'mapillary' . $key_suffix . '_shortlink';
+		    push @builtin_links_order, $key;
+
+		    my $create_short_url = sub {
+			if (exists $long_url_to_short_url{$url}) {
+			    return $long_url_to_short_url{$url};
+			}
+			if (!eval { require WWW::Shorten; WWW::Shorten->import(); 1 }) {
+			    status_message("Das Modul WWW::Shorten ist nicht vorhanden.", "die");
+			}
+			my $short_url = makeashorterlink($url);
+			$long_url_to_short_url{$url} = $short_url;
+			$short_url;
+		    };
+
+		    $builtin_links{$key} = {
+			name => $mapserver_label . " (kurzer Link)",
+			callback => sub { $open_url->($create_short_url->()) },
+			callback_3_std => sub { $create_short_url->() },
+			($mapserver_logo_photo ? (icon => $mapserver_logo_photo) : ()),
+		    };
 		}
 	    }
 	}
 
 	{
+	    my $key = 'wikipedia';
+	    push @builtin_links_order, $key;
+
 	    if (!$wikipedia_photo) {
 		$wikipedia_photo = load_photo($top, 'wikipedia');
 	    }
@@ -14807,19 +14971,12 @@ sub show_info {
 	    $url .= '&params=' . join("_", @y, @x) .
 		($city_obj->cityname eq 'Berlin' ? '_region:DE-BE_type:city&pagename=Berlin' : '');
 
-	    my $need_indentation;
-	    if ($wikipedia_photo) {
-		$info_text->imageCreate("end", -image => $wikipedia_photo,
-					-align => "bottom", -padx => 2, -pady => 1);
-	    } else {
-		$need_indentation = 1;
-	    }
-
-	    $info_text->insert("end", "Wikipedia Mapsources",
-			       ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-	    $show_url->($linkcount, $url);
-	    $info_text->insert("end", "\n");
-	    $linkcount++;
+	    $builtin_links{$key} = {
+		name => 'Wikipedia Mapsources',
+		callback => sub { $open_url->($url) },
+		callback_3_std => sub { $url },
+		($wikipedia_photo ? (icon => $wikipedia_photo) : ()),
+	    };
 	}
 
 	if ($devel_host) {
@@ -14827,61 +14984,57 @@ sub show_info {
 		$bbbike_google_photo = load_photo($top, 'bbbike_google');
 	    }
 	    my @bbbike_google_map_defs = (($devel_host
-					   ? ["lokal: Google Maps (BBBike)", "http://localhost/bbbike/cgi/bbbikegooglemap.cgi"]
+					   ? ["lokal: Google Maps (BBBike)", "http://localhost/bbbike/cgi/bbbikegooglemap.cgi", '_local']
 					   : ()
 					  ),
-					  ["Google Maps (BBBike)", $BBBike::BBBIKE_GOOGLEMAP_URL],
+					  ["Google Maps (BBBike)", $BBBike::BBBIKE_GOOGLEMAP_URL, '_public'],
 					 );
 	    for my $def (@bbbike_google_map_defs) {
-		my($label, $baseurl) = @$def;
-		my $need_indentation;
-		if ($bbbike_google_photo) {
-		    $info_text->imageCreate("end", -image => $bbbike_google_photo,
-					    -align => "bottom", -padx => 2, -pady => 1);
-		} else {
-		    $need_indentation = 1;
-		}
-		$info_text->insert("end", $label,
-				   ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-		$show_url->($linkcount, sub {
-				my $center = "$px,$py";
-				my $zoom;
-				if ($mapscale_scale < 2000) {
-				    $zoom = 18;
-				} elsif ($mapscale_scale < 4000) {
-				    $zoom = 17;
-				} elsif ($mapscale_scale < 8000) {
-				    $zoom = 16;
-				} elsif ($mapscale_scale < 16000) {
-				    $zoom = 15;
-				} else {
-				    $zoom = 14;
-				}
-				BBBikeUtil::uri_with_query($baseurl,
-							   [center => $center,
-							    zoom => $zoom,
-							    autosel => 1,
-							    maptype => "hybrid",
-							    coordsystem => "polar",
-							    mapmode => "addroute"]);
-			    });
-		$info_text->insert("end", "\n");
-		$linkcount++;
+		my($label, $baseurl, $key_suffix) = @$def;
+
+		my $key = 'bbbike_google_' . $key_suffix;
+		push @builtin_links_order, $key;
+
+		my $url = do {
+		    my $center = "$px,$py";
+		    my $zoom;
+		    if ($mapscale_scale < 2000) {
+			$zoom = 18;
+		    } elsif ($mapscale_scale < 4000) {
+			$zoom = 17;
+		    } elsif ($mapscale_scale < 8000) {
+			$zoom = 16;
+		    } elsif ($mapscale_scale < 16000) {
+			$zoom = 15;
+		    } else {
+			$zoom = 14;
+		    }
+		    BBBikeUtil::uri_with_query($baseurl,
+					       [center => $center,
+						zoom => $zoom,
+						autosel => 1,
+						maptype => "hybrid",
+						coordsystem => "polar",
+						mapmode => "addroute"]);
+		};
+
+		$builtin_links{$key} = {
+		    name => $label,
+		    callback => sub { $open_url->($url) },
+		    callback_3_std => sub { $url },
+		    ($bbbike_google_photo ? (icon => $bbbike_google_photo) : ()),
+		    tags => [qw(aerial)],
+		};
 	    }
 	}
 
 	{
-	    my $need_indentation;
+	    my $key = 'google';
+	    push @builtin_links_order, $key;
+
 	    if (!$google_photo) {
 		$google_photo = load_photo($top, 'google');
 	    }
-	    if ($google_photo) {
-		$info_text->imageCreate("end", -image => $google_photo,
-					-align => "bottom", -padx => 2, -pady => 1);
-	    } else {
-		$need_indentation = 1;
-	    }
-
 	    my $normal_url = do {
 		my $scale = int(17 - log(($mapscale_scale)/2907)/log(2) + 0.5);
 		"http://www.google.com/maps/\@$py,$px,${scale}z";
@@ -14894,26 +15047,35 @@ sub show_info {
 		$googlemaps_menu->command
 		    (-label => $label,
 		     -command => sub {
-			 require WWWBrowser;
-			 main::status_message("URL: $url", "info");
-			 WWWBrowser::start_browser($url);
+			 $open_url->($url);
 		     },
 		    );
 	    };
 	    $googlemaps_show_url_menu_item->("Aerial",  "$normal_url/data=!3m1!1e3");
 	    $googlemaps_show_url_menu_item->("Traffic", "$normal_url/data=!5m1!1e1");
 	    $googlemaps_show_url_menu_item->("Bicycle", "$normal_url/data=!5m1!1e3");
+	    $googlemaps_show_url_menu_item->('Street View', sprintf('https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=%s,%s',$py,$px));
 	    $googlemaps_menu->separator;
 	    $googlemaps_menu->command
 		(-label => M"Link kopieren",
 		 -command => sub { $copy_link->($normal_url) },
 		);
 
-	    $info_text->insert("end", "Google Maps" . ($devel_host ? " (Original)" : ""),
-			       ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-	    $show_url->($linkcount, $normal_url, $googlemaps_menu);
-	    $info_text->insert("end", "\n");
-	    $linkcount++;
+	    $builtin_links{$key} = {
+		name => 'Google Maps' . ($devel_host ? ' (Original)' : ''),
+		callback => sub {
+		    $open_url->($normal_url);
+		},
+		callback_3 => sub {
+		    my(%args) = @_;
+		    my $w = $args{widget};
+		    my $e = $w->XEvent;
+		    $googlemaps_menu->Post($e->X, $e->Y);
+		    Tk->break;
+		},		    
+		($google_photo ? (icon => $google_photo) : ()),
+		tags => [qw(aerial streetview bicycle)],
+	    };
 	}
 
 	my($px0,$py0,$px1,$py1) = get_current_bbox_as_wgs84();
@@ -14930,8 +15092,21 @@ sub show_info {
 	    }
 	} keys %info_plugins;
 
-	for my $key (@sorted_info_plugins) {
-	    my $plugin = $info_plugins{$key};
+	my %seen_tags;
+
+	for my $plugin (
+	    (map { $builtin_links{$_} } @builtin_links_order),
+	    (map { $info_plugins{$_} } @sorted_info_plugins),
+	) {
+	    my @tags = @{ $plugin->{tags} || [] };
+	    if (@tags) {
+		for my $tag (@tags) {
+		    $seen_tags{$tag} = 1;
+		}
+	    }
+	    if (defined $current_tag_filter) {
+		next if !first { $_ eq $current_tag_filter} @tags;
+	    }
 
 	    my @args = (coords => $real_coords,
 			street => $strname,
@@ -14944,7 +15119,7 @@ sub show_info {
 			mapscale_scale => $mapscale_scale,
 			tags => \@tags,
 		       );
-	    if ($name =~ /last checked: (\d{4}-\d{2}-\d{2})/) {
+	    if (($name||'') =~ /last checked: (\d{4}-\d{2}-\d{2})/) {
 		push @args, last_checked => $1;
 	    }
 	    if ($plugin->{visibility} && !$plugin->{visibility}->(@args)) {
@@ -14988,6 +15163,28 @@ sub show_info {
 		     });
 	    }
 	    $linkcount++;
+	}
+
+	{
+	    my @tags_for_list = grep { $seen_tags{$_} } qw(traffic pubtrans bicycle aerial osmedit);
+	    if (@tags_for_list) {
+		$info_text->markSet('insert', 'taglist');
+		my $tagcount = 0;
+		for my $tag ('all', @tags_for_list) {
+		    my $tagactivetag = (!defined $current_tag_filter && $tag eq 'all') || (defined $current_tag_filter && $tag eq $current_tag_filter) ? 'tagactive' : 'taginactive';
+		    $info_text->insert('insert', ' ');
+		    $info_text->insert('insert', " $tag ", ['tag', $tagactivetag, "tag$tagcount"]);
+		    $info_text->tagBind("tag$tagcount", "<ButtonRelease-1>" => sub {
+					    if ($tag eq 'all') {
+						$current_tag_filter = undef;
+					    } else {
+						$current_tag_filter = $tag;
+					    }
+					    $show_info_sub->();
+					});
+		    $tagcount++;
+		}
+	    }
 	}
 
 	{
@@ -15115,132 +15312,7 @@ EOF
 
     };
 
-    my @important_txt_and_tag;
-    my @info_txt_and_tag;
-    my @internal_canvas_tags;
-
- FIND_INFO: {
-	if (defined $str_file{$base_tag} && $str_file{$base_tag} =~ /\.shp$/) {
-	    (my $dbf_file = $str_file{$base_tag}) =~ s/\.shp$/.dbf/;
-	    require BBBikeAdvanced;
-	    my $index;
-	    for (@tags) {
-		if (/^$base_tag-(\d+)/) {
-		    $index = $1;
-		    last;
-		}
-	    }
-	    if (defined $index) {
-		my $dbf_info = get_dbf_info($dbf_file, $index);
-		if (defined $dbf_info) {
-		    if (@tags > 3) {
-			my $text = splice @tags, 2, 1;
-			unshift @tags, $text, "";
-		    }
-		    push @important_txt_and_tag, "$dbf_info\n", undef;
-		    push @internal_canvas_tags, join("\n", @tags), undef;
-		    last FIND_INFO;
-		}
-	    }
-	}
-
-	my(%info, $info_file);
-	eval {
-	    require DB_File;
-	    require Fcntl;
-	    if (!$is_p) {
-		if ($str_file{$base_tag} !~ m|^/|) {
-		    $str_file{$base_tag} = "$datadir/$str_file{$base_tag}";
-		}
-		$info_file = $str_file{$base_tag} . "-info";
-	    } else {
-		if ($p_file{$base_tag} !~ m|^/|) {
-		    $p_file{$base_tag} = "$datadir/$p_file{$base_tag}";
-		}
-		$info_file = $p_file{$base_tag} . "-info";
-	    }
-	}; warn $@ if $@;
-
-	if ($info_file && tie %info, 'DB_File', $info_file, &Fcntl::O_RDONLY) {
-	    warn "Use $info_file ...\n";
-	TRY: {
-		foreach my $i (1 .. 4) {
-		    if (defined $tags[$i]) {
-			if (defined $info{$tags[$i]}) {
-			    push @info_txt_and_tag, $info{$tags[$i]}, undef;
-			    last TRY;
-			}
-			if ($tags[$i] =~ /^L\d+-(\d+)/) {
-			    my $id = $1;
-			    foreach my $type (qw(s p)) {
-				if (defined $info{"$type-$id"}) {
-				    push @info_txt_and_tag, $info{"$type-$id"}, undef;
-				    last TRY;
-				}
-			    }
-			    if (defined $info{$id}) {
-				push @info_txt_and_tag, $info{$id}, undef;
-				last TRY;
-			    }
-			}
-		    }
-		}
-	    }
-	    push @internal_canvas_tags, join("\n", @tags), undef;
-	    untie %info;
-	    last FIND_INFO;
-	}
-
-	if ($advanced) {
-	    if (@tags > 3) {
-		my $text = splice @tags, 2, 1;
-		unshift @tags, $text, "";
-	    }
-
-	    # XXX slightly hackish: link to the OSM node/way/... browser
-	    # XXX and a tag for osm_watch
-	    {
-		my $osm_version;
-		my $osm_type;
-		my $osm_id;
-		for (@tags) {
-		    if (my($_type,$_id) = $_ =~ m{^osm-(node|way|relation)-(\d+)$}) {
-			push @tags, "https://www.openstreetmap.org/$_type/$_id";
-			push @tags, "https://osm.mapki.com/history/$_type/$_id";
-			($osm_type, $osm_id) = ($_type, $_id);
-		    } elsif ($_ =~ m{\bversion=(\d+)}) {
-			$osm_version = $1;
-		    }
-		}
-		if ($osm_version && $osm_id && $osm_type) {
-		    push @tags, qq{#: osm_watch: $osm_type id="$osm_id" version="$osm_version"};
-		}
-	    }
-
-	    push @internal_canvas_tags, map { ($_, undef) } @tags;
-	}
-    }
-
-    if (@internal_canvas_tags) {
-	unshift @internal_canvas_tags, M("Interne Canvas-Tags").":\n", "bold";
-    }
-    if (@above_tags) {
-	push @internal_canvas_tags, "\n".M("Oben liegende interne Canvas-Tags").":\n", "bold";
-    }
-    if (@info_txt_and_tag) {
-	unshift @info_txt_and_tag, M("Info").":\n", "bold";
-    }
-    $show_info_sub->($strname,
-		     $good_link_for_strname,
-		     $outside_berlin,
-		     [
-		      @important_txt_and_tag,
-		      @info_txt_and_tag,
-		     ],
-		     [
-		      @internal_canvas_tags,
-		     ],
-		    );
+    $show_info_sub->();
 }
 
 # Used for mapping bbbike perl/tk layers to mapserver or leaflet layers
@@ -20998,6 +21070,13 @@ sub show_logo { # und About
 		$os_info .= " (Real OS, maybe: $real_os)";
 	    }
 	}
+	eval {
+	    require Doit;
+	    my $os_release = Doit::Util::get_os_release();
+	    if ($os_release->{PRETTY_NAME}) {
+		$os_info .= "\n" . $os_release->{PRETTY_NAME};
+	    }
+	};
 	$f->Label(-text => "perl $]\nTk $Tk::VERSION\n$os_info",
 		  -font => $font{'small'},
 		  -justify => 'left',
