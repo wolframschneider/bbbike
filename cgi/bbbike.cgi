@@ -1088,7 +1088,7 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = '11.012';
+$VERSION = '11.013';
 
 use vars qw($delim $font);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
@@ -5311,6 +5311,18 @@ sub display_route {
 	    }
 	    @path = $r->path_list;
 	}
+	my $maybe_use_coordssession_query = sub {
+	    my($q) = @_;
+	    my $qs = $q->query_string;
+	    if ($sess && $apache_session_module eq 'Apache::Session::Counted') {
+		if (length($qs) > 7500) { # probably there's a 8k limit
+		    $q->delete('coords');
+		    $q->param('coordssession' => $sess->{_session_id});
+		    $qs = $q->query_string;
+		}
+	    }
+	    $qs;
+	};
 
 	my($next_entf, $ges_entf_s, $next_winkel, $next_richtung, $next_richtung_html, $next_extra)
 	    = (0, "", undef, "", "", undef);
@@ -9346,8 +9358,6 @@ sub show_routelist_from_file {
     die $err;
 }
 
-# XXX should also implement coordssession param
-#
 # XXX gple is implemented but due to floating point inaccuracies
 # XXX coordinates are not exactly as expected, so mapping to
 # XXX streets only works partially. Best is to use gple only for
@@ -9369,6 +9379,15 @@ sub show_routelist_from_coords {
 	for my $gple (@gple) {
 	    my @polyline = Algorithm::GooglePolylineEncoding::decode_polyline($gple);
 	    push @coords, map { join ',', convert_wgs84_to_data($_->{lon}, $_->{lat}) } @polyline;
+	}
+    }
+    my $coordssession = scalar $q->param('coordssession');
+    if ($coordssession) {
+	if (my $sess = tie_session(scalar $q->param('coordssession'))) {
+	    @coords = $sess->{routestringrep};
+	    # XXX In draw_route @cache=@weak_cache is set. Can we do something similar here?
+	} else {
+	    return show_session_expired_error();
 	}
     }
     if (!@coords) {

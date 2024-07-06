@@ -615,7 +615,7 @@ Wilhelm-von-Siemens-Str.	1s 9284,2624 9437,2649
 Saaleckplatz	1 5204,1057 5187,1059 5162,1098 5162,1110
 Saaleckplatz	1s 5162,1110 5178,1123
 Saaleckplatz	1 5178,1123 5190,1114 5212,1074 5204,1057
-Meyerinckplatz	1 4030,10575 4007,10559 3981,10590 3997,10607
+Meyerinckplatz	1 3997,10607 4017,10585 4030,10575 4007,10559 3981,10590 3997,10607
 Upsalaer Str.	1 11369,16744 11364,16887
 Fritz-Erpenbeck-Ring	1 9717,19692 9697,19758 9708,19779 9785,19807 9864,19793
 Am Konsulat: Privatstraße, mit Toren versperrt	2 9962,19757 9990,19644 9916,19625
@@ -954,6 +954,8 @@ Südring, Virchow-Klinikum	1 6252,14812 6231,14952
 Südring, Virchow-Klinikum	1 6158,14851 6078,14864 6073,14892
 Südring, Virchow-Klinikum	1 6073,14892 6106,14890
 Südring, Virchow-Klinikum	2::inwork 6106,14890 6118,14889 6158,14851 6180,14806 6210,14808 6252,14812
+(Westring, Virchow-Klinikum): Bauarbeiten, gesperrt	2::inwork 5926,14997 5935,14948 5940,14911 6030,14924
+(Westring, Virchow-Klinikum): Bauarbeiten, gesperrt	2::inwork 5879,14981 5893,14945 5935,14948
 Am Feuchten Winkel	1 12020,19333 11937,19175
 Mittelstreifen, unbequemes Überqueren	3nocross::ignrte 15261,10738 15163,10758 15081,10775 15004,10791
 Hauptstr. -> Ingrid-Reschke-Str.: Mittelstreifen, unbequemes Überqueren	3::igndisp 15261,10738 15163,10758 15151,10699
@@ -2152,6 +2154,9 @@ Bödikerstr. -> Stralauer Allee: unbequem passierbare Straße	3::igndisp 14447,104
 Mittelstreifen	3nocross::ignrte 11221,12250 11300,12241 11347,12223
 Stralauer Str. -> Dircksenstr.: Mittelstreifen	3::igndisp 11221,12250 11300,12241 11273,12301
 Dircksenstr. -> Stralauer Str.: Mittelstreifen	3::igndisp 11273,12301 11300,12241 11347,12223
+Mittelstreifen	3nocross::ignrte 14379,7372 14430,7348 14530,7301
+Sonnenallee -> Neucölln Carree, Parkpl.zufahrt: Mittelstreifen	3::igndisp 14530,7301 14430,7348 14423,7333
+Neucölln Carree, Parkpl.zufahrt -> Sonnenallee: Mittelstreifen	3::igndisp 14423,7333 14430,7348 14379,7372
 Mittelstreifen	3nocross::ignrte 12152,9015 12078,9055 12012,9092
 Sonnenallee -> Friedelstr.: Mittelstreifen	3::igndisp 12012,9092 12078,9055 12074,9217
 Friedelstr. -> Sonnenallee: Mittelstreifen	3::igndisp 12074,9217 12078,9055 12152,9015
@@ -2621,6 +2626,8 @@ abgeschlossenes Tor	3 14556,409 14701,0 14710,-25
 abgeschlossenes Tor	3 14710,-25 14701,0 14556,409
 abgeschlossenes Tor	3 20555,15 20561,17 20685,52
 abgeschlossenes Tor	3 20685,52 20561,17 20555,15
+Zaun, Durchfahrt für Radfahrer nicht möglich	3 -719,16608 -761,16641 -784,16658
+Zaun, Durchfahrt für Radfahrer nicht möglich	3 -784,16658 -761,16641 -719,16608
 tragen (ca. 33 Stufen)	0:30:-86 20661,12140
 tragen	0:30:5 20657,12101
 tragen (16 Stufen)	0:25:-233 20330,12025
@@ -2837,7 +2844,6 @@ tragen (36 Stufen)	0:45:-124 1667,3232
 tragen (31 Stufen)	0:35:-114 1715,3257
 tragen (Treppe)	0:30:-97 6172,12878
 tragen (Treppe)	0:40:68 2915,13610
-tragen (Treppe)	0:40:-262 3016,13615
 tragen (Treppe, 32 Stufen)	0:40:-7 3054,13638
 tragen (Treppe, 19 Stufen)	0:25:41 20939,2389
 tragen (Treppe)	0:30:-45 -633,12739
@@ -3181,7 +3187,7 @@ steiler Weg	BNP:0:-233:trailer=no -2046,12036
 steiler Weg	BNP:0:29:trailer=no -1431,12284
 enger Pfad	BNP:0:80:trailer=no 17952,16675
 enges Drängelgitter	BNP:5:-206:trailer=no 30862,3816
-Schranke, Durchfahrtsbreite nur 60cm	BNP:3:-232:trailer=no -784,16658
+Schranke, Durchfahrtsbreite nur 60cm	BNP:3:-233:trailer=no -784,16658
 Drängelgitter	BNP:3:-12:trailer=10 -992,16688
 Drängelgitter	BNP:2:-266:trailer=5 18583,2972
 Drängelgitter	BNP:2:90:trailer=5 18390,2972
@@ -3487,7 +3493,7 @@ Gendarmenmarkt: Sanierung, Durchgang gesperrt	2::inwork 9536,11922 9666,11935
 Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer	1s:inwork 5522,8024 5521,8087
 U-Bhf. Scharnweberstr.: Durchgang gesperrt	2::inwork 3987,17808 3997,17840
 Wuhlesteg: gesperrt	2::inwork 22171,12965 22196,12961
-Neue Fahlenbergbrücke	2::inwork 31009,19 31080,-19
+Neue Fahlenbergbrücke (Ersatzbrücke)	2::inwork 30926,-53 31103,-142
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 Mittelheide: umgefallene Baumstämme	2 24356,7644 24275,7550
 Storkower Straße (Königs Wusterhausen): Neubau der Eisenbahnbrücke, Sperrung	2::inwork 26327,-11708 26395,-11699
@@ -3512,16 +3518,12 @@ Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 Am Betriebsbahnhof Schönweide: Straße mit Bauzaun abgesperrt	2::inwork 18254,4817 18306,4753 18331,4744 18497,4529
 Weg S-Bhf. Buckower Chaussee - Eisnerstr./Dörfelweg: gesperrt wegen Bauarbeiten	2::inwork 9473,-92 9271,323 9253,370 9178,556
 Buckower Chaussee: Bahnübergang gesperrt	2::inwork 9123,533 9178,556 9200,562
-Pfarrer-Lütkehaus-Platz: Sperrung am ehemaligen Bahnübergang	2::inwork 10228,-2136 10231,-2159
-Pfarrer-Lütkehaus-Platz: Bauarbeiten, Sperrung	2::inwork 10296,-2156 10300,-2135
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 Treppe zum Uferweg: Zugang nicht möglich	2::inwork 14373,10046 14383,10036 14405,10027
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14480,10157 14462,10206 14361,10259
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,10152 14373,10046
 (Hoffmannstr. - Uferweg an den Treptowers): wegen Bauarbeiten gesperrt	2::inwork 14116,10149 14126,10176
 George-Stephenson-Str.: Hochbauarbeiten, gesperrt	2::inwork 7487,14472 7446,14403 7529,14274
-George-Stephenson-Str.: möglicher Baustellenverkehr, Freigabe noch unklar	2::inwork 7529,14274 7569,14209 7614,14136
-(Heidestr./Hedwig-Porschütz-Str. - George-Stephenson-Str.): möglicher Baustellenverkehr, Freigabe noch unklar	2::inwork 7569,14209 7652,14257
 Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:inwork 9441,12670 9429,12728 9402,12792 9386,12833 9375,12911
 Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperrt	2::inwork 8237,10418 8278,10384
 Grunerstr.: Straßenzug wird entfernt	2::inwork 10746,12364 10807,12451 10838,12496 10849,12557
@@ -4140,3 +4142,4 @@ Jacobystr. -> Alexanderstr.: linker Gehweg bis zur Ampel	1::igndisp 11256,12647 
 Ferdinand-Schultze-Str. -> Rhinstr./Marzahner Str.: linker Gehweg bis zur Ampel	1::igndisp 17488,15766 17486,15736
 Potsdamer Chaussee: linker Gehweg bis zur Ampel	1::igndisp -3011,1761 -3019,1774 -3040,1763
 Richard-von-Weizsäcker-Platz: Gehweg bis Akazienstr.	1::igndisp 7201,8870 7242,8902 7307,8945
+Sonnenallee: linker Gehweg bis zur Ampel	1::igndisp 14334,7395 14423,7333

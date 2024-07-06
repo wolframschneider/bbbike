@@ -226,7 +226,7 @@ Landsberger Allee: Straßenbahn	3nocross 21398,15671 21475,15705 21584,15753 2170
 Topsstr.	1 10598,15150 10865,15244
 #: note: eigentlich gilt das Einfahrtverbot für alle, aber es handelt sich hier nur um ein sehr kurzes Stück
 Topsstr.	1 10883,15251 10865,15244
-Schönhauser Allee	3nocross 10902,15422 10917,15525 10941,15697
+Schönhauser Allee	3nocross 10902,15422 10917,15525 10925,15581 10941,15697
 Am Kupfergraben	1 9754,12775 9815,12705 9870,12657 9900,12643 9919,12613
 Uthmannstr.	1 13156,7839 12916,7775
 Herrnhuter Str.	1 12898,7832 13103,7889
@@ -712,7 +712,9 @@ Berliner Str.: Mittelstreifen und Straßennbahntrasse	3nocross 10849,17848 10853,
 Hundekehlestr.: Mittelstreifen	3nocross 2346,7684 2460,7658 2565,7637
 Lietzenburger Str.	3nocross 5047,10381 5196,10398 5313,10420
 Sybelstr.	1 3981,10590 3883,10585
-Giesebrechtstr.	1 3912,10699 3997,10607 4017,10585 4030,10575 4153,10453 4157,10418
+Giesebrechtstr.	1 3912,10699 3997,10607
+# REMOVED (im Bereich des Meyerinckplatzes auch für Radfahrer gültig -> gesperrt-orig) --- Giesebrechtstr.	1 3997,10607 4017,10585 4030,10575
+Giesebrechtstr.	1 4030,10575 4153,10453 4157,10418
 Clausewitzstr.	1 3971,10381 4007,10559
 #: note ^^^
 Greifswalder Str.: Straßenbahntrasse	3nocross 12228,14404 12188,14350 12177,14335 12172,14328 12077,14186
@@ -1147,6 +1149,7 @@ Groß-Berliner Damm: Straßenbahntrasse	3nocross 18374,4307 18239,4453 18042,4667
 Fahlandgasse	1 7675,17430 7675,17475 7675,17538
 Heidestr.: Mittelstreifen	3nocross 7820,13994 7865,13924 7910,13848 7973,13743
 Heidestr.: Mittelstreifen	3nocross 7652,14257 7697,14187 7732,14131
+Heidestr.: Mittelstreifen	3nocross 7652,14257 7612,14325 7566,14404
 Klosterstr.: Mittelstreifen	3nocross -3789,13519 -3764,13613 -3716,13724
 Karl-Marx-Platz	1 12972,7602 13100,7626
 Leonhardyweg	1 9033,8029 9035,7810 9040,7648
@@ -1755,7 +1758,7 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: source_id: viz2021:13.410565,52.516096,15.01.2023,18:00 (bis 30.08.2024)
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
 #: note: mittlerweile ist die Fahrbahn und die Markierungen größtenteils schon fertig
-#: last_checked: 2024-06-25 vvv
+#: last_checked: 2024-06-30 (mapillary) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2024-08-30 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
@@ -2036,4 +2039,12 @@ Gartenstr.: Poller	2 9514,13826 9535,13801
 Heiner-Müller-Str.: schwarz-weiße Einfahrt-verboten-Schilder	1 17497,8623 17640,8627
 Irmtraud-Morgner-Str.: schwarz-weiße Einfahrt-verboten-Schilder	1 17521,8549 17619,8558
 #: XXX_prog ^^^
+# 
+Straßmannstr.	1 13835,13149 13741,13107
+Hausburgstr.	1 13895,13017 13835,13149
+Hausburgstr.	1 13742,13376 13835,13149
+Hausburgstr.	1 13742,13376 13706,13460 13635,13605
+Kochhannstr.	1 13644,13332 13742,13376
+# 
+Neucölln Carree - Grenzallee: nur Rechtsabbiegen erlaubt	3 14378,7236 14507,7146 14617,7243
 # 

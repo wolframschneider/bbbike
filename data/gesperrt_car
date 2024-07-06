@@ -274,8 +274,6 @@ Landsberger Allee -> Fritz-Riedel-Str.: Straßenbahn	3::igndisp 13543,13568 13635
 Landsberger Allee -> Hausburgstr.: Straßenbahn	3::igndisp 13702,13634 13635,13605 13706,13460
 Fritz-Riedel-Str. -> Landsberger Allee: Straßenbahn	3::igndisp 13519,13785 13635,13605 13702,13634
 Fritz-Riedel-Str. -> Hausburgstr.: Straßenbahn	3::igndisp 13519,13785 13635,13605 13706,13460
-Hausburgstr. -> Landsberger Allee: Straßenbahn	3::igndisp 13706,13460 13635,13605 13543,13568
-Hausburgstr. -> Fritz-Riedel-Str.: Straßenbahn	3::igndisp 13706,13460 13635,13605 13519,13785
 Straßenbahn	3nocross::ignrte 21398,15671 21475,15705 21584,15753 21709,15808
 Landsberger Allee -> Pöhlbergstr. [zur/von Landsberger Allee]: Straßenbahn	3::igndisp 21584,15753 21475,15705 21491,15671
 Pöhlbergstr. [zur/von Landsberger Allee] -> Landsberger Allee: Straßenbahn	3::igndisp 21491,15671 21475,15705 21398,15671
@@ -283,12 +281,12 @@ Landsberger Allee -> Schönagelstr.: Straßenbahn	3::igndisp 21475,15705 21584,157
 Schönagelstr. -> Landsberger Allee: Straßenbahn	3::igndisp 21602,15908 21584,15753 21709,15808
 Topsstr.	1 10598,15150 10865,15244
 Topsstr.	1 10883,15251 10865,15244
-Schönhauser Allee	3nocross::ignrte 10902,15422 10917,15525 10941,15697
+Schönhauser Allee	3nocross::ignrte 10902,15422 10917,15525 10925,15581 10941,15697
 Schönhauser Allee -> Milastr.: Schönhauser Allee	3::igndisp 10902,15422 10917,15525 10768,15534
-Schönhauser Allee -> Buchholzer Str.: Schönhauser Allee	3::igndisp 10941,15697 10917,15525 11055,15504
+Schönhauser Allee -> Buchholzer Str.: Schönhauser Allee	3::igndisp 10925,15581 10917,15525 11055,15504
 Buchholzer Str. -> Schönhauser Allee: Schönhauser Allee	3::igndisp 11055,15504 10917,15525 10902,15422
 Buchholzer Str. -> Milastr.: Schönhauser Allee	3::igndisp 11055,15504 10917,15525 10768,15534
-Milastr. -> Schönhauser Allee: Schönhauser Allee	3::igndisp 10768,15534 10917,15525 10941,15697
+Milastr. -> Schönhauser Allee: Schönhauser Allee	3::igndisp 10768,15534 10917,15525 10925,15581
 Milastr. -> Buchholzer Str.: Schönhauser Allee	3::igndisp 10768,15534 10917,15525 11055,15504
 Am Kupfergraben	1 9754,12775 9815,12705 9870,12657 9900,12643 9919,12613
 Uthmannstr.	1 13156,7839 12916,7775
@@ -1245,7 +1243,8 @@ Lietzenburger Str. -> Fasanenstr.: Lietzenburger Str.	3::igndisp 5313,10420 5196
 Fasanenstr. -> Lietzenburger Str.: Lietzenburger Str.	3::igndisp 5212,10661 5196,10398 5313,10420
 Fasanenstr. -> Fasanenstr.: Lietzenburger Str.	3::igndisp 5212,10661 5196,10398 5192,10241
 Sybelstr.	1 3981,10590 3883,10585
-Giesebrechtstr.	1 3912,10699 3997,10607 4017,10585 4030,10575 4153,10453 4157,10418
+Giesebrechtstr.	1 3912,10699 3997,10607
+Giesebrechtstr.	1 4030,10575 4153,10453 4157,10418
 Clausewitzstr.	1 3971,10381 4007,10559
 Straßenbahntrasse	3nocross::ignrte 12228,14404 12188,14350 12177,14335 12172,14328 12077,14186
 Greifswalder Str. -> Pasteurstr.: Straßenbahntrasse	3::igndisp 12228,14404 12188,14350 12335,14246
@@ -1907,6 +1906,13 @@ Hedwig-Porschütz-Str. -> Heidestr.: Mittelstreifen	3::igndisp 7781,14238 7697,14
 Hedwig-Porschütz-Str. -> George-Stephenson-Str.: Mittelstreifen	3::igndisp 7781,14238 7697,14187 7614,14136
 George-Stephenson-Str. -> Heidestr.: Mittelstreifen	3::igndisp 7614,14136 7697,14187 7652,14257
 George-Stephenson-Str. -> Hedwig-Porschütz-Str.: Mittelstreifen	3::igndisp 7614,14136 7697,14187 7781,14238
+Mittelstreifen	3nocross::ignrte 7652,14257 7612,14325 7566,14404
+Heidestr. -> George-Stephenson-Str.: Mittelstreifen	3::igndisp 7652,14257 7612,14325 7529,14274
+Heidestr. -> Kieler Brücke: Mittelstreifen	3::igndisp 7566,14404 7612,14325 7705,14383
+George-Stephenson-Str. -> Heidestr.: Mittelstreifen	3::igndisp 7529,14274 7612,14325 7566,14404
+George-Stephenson-Str. -> Kieler Brücke: Mittelstreifen	3::igndisp 7529,14274 7612,14325 7705,14383
+Kieler Brücke -> Heidestr.: Mittelstreifen	3::igndisp 7705,14383 7612,14325 7652,14257
+Kieler Brücke -> George-Stephenson-Str.: Mittelstreifen	3::igndisp 7705,14383 7612,14325 7529,14274
 Mittelstreifen	3nocross::ignrte -3789,13519 -3764,13613 -3716,13724
 Klosterstr. -> Diedenhofener Str.: Mittelstreifen	3::igndisp -3716,13724 -3764,13613 -3672,13597
 Diedenhofener Str. -> Klosterstr.: Mittelstreifen	3::igndisp -3672,13597 -3764,13613 -3789,13519
@@ -2552,3 +2558,9 @@ Reuterstr.	1 12150,9545 12148,9426
 Gartenstr.: Poller	2 9514,13826 9535,13801
 Heiner-Müller-Str.: schwarz-weiße Einfahrt-verboten-Schilder	1 17497,8623 17640,8627
 Irmtraud-Morgner-Str.: schwarz-weiße Einfahrt-verboten-Schilder	1 17521,8549 17619,8558
+Straßmannstr.	1 13835,13149 13741,13107
+Hausburgstr.	1 13895,13017 13835,13149
+Hausburgstr.	1 13742,13376 13835,13149
+Hausburgstr.	1 13742,13376 13706,13460 13635,13605
+Kochhannstr.	1 13644,13332 13742,13376
+Neucölln Carree - Grenzallee: nur Rechtsabbiegen erlaubt	3 14378,7236 14507,7146 14617,7243
