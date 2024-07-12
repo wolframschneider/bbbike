@@ -137,7 +137,7 @@ Pannierstr.: Asphalt	Q0 12240,8964 12198,8887
 # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2018/pressemitteilung.710754.php (Bauarbeiten 2019)
 #: osm_watch: way id="65707583" version="19"
-#: last_checked: 2024-06-30 (mapillary)
+#: last_checked: 2024-07-05 (mapillary)
 #: check_frequency: 60d
 Donaustr.: Kopfsteinpflaster	Q2 12884,8305 12911,8232
 #: by: ^^^
@@ -301,7 +301,7 @@ Wallensteinstr.: Fahrbahn mäßiges bis schlechtes Kopfsteinpflaster, Geh/Radweg V
 #: source_id: viz2021:13.516327,52.486802,02.08.2022,07:00 (Bauarbeiten bis 16.12.2022, nur Kfz-Verkehr betroffen) (inaktiv)
 #: source_id[inactive]: bvg2021:396#BVG305961_0 (bis auf Weiteres)
 #: XXX Wird hier irgendwann neu asphaltiert werden?
-#: last_checked: 2024-07-06
+#: last_checked: 2024-07-10
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2022-12-16
 Wallensteinstr.: Asphalt mit einigen Schäden	Q1 18037,9195 18092,9141 18134,9080
@@ -398,7 +398,7 @@ Lohmühlenbrücke: Asphalt	Q0 12868,9359 12897,9365
 #: XXX wird die Kiefholzstr. asphaltiert?
 #: XXX Baumaßnahme: 9.9 (Realisierung nach 2011)
 #: osm_watch: way id="4686083" version="29"
-#: last_checked: 2024-07-04
+#: last_checked: 2024-07-10
 #: check_frequency: 90d
 Kiefholzstr.: Kopfsteinpflaster	Q2 13602,9581 13450,9714 13251,9829
 # 
@@ -408,8 +408,8 @@ Krummhübler Str.: Kopfsteinpflaster	Q2+ 15060,11006 15102,11120
 Marzahner Chaussee: Kopfsteinpflaster	Q2 18555,12101 18420,11864 18417,11854
 Marzahner Chaussee: Kopfsteinpflaster	Q2- 18417,11854 18382,11740
 # REMOVED --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4871 (Verbesserung für den Radverkehr?) --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036852138672/852138672/00101938/38-Anlagen/04/B0771SB.pdf (wird nicht geändert)
-Stellingdamm: schlechtes Kopfsteinpflaster auf der Fahrbahn	Q3; 22857,6155 22777,6151 22603,6141 22467,6135
-Stellingdamm: schlechtes Kopfsteinpflaster auf der Fahrbahn, Gehweg mit unebenem Mosaikpflaster für Radfahrer freigegeben	Q1-; 22467,6135 22603,6141 22777,6151 22857,6155
+Stellingdamm: schlechtes Kopfsteinpflaster auf der Fahrbahn	Q3; 22857,6155 22777,6151 22700,6138 22656,6142 22467,6135
+Stellingdamm: schlechtes Kopfsteinpflaster auf der Fahrbahn, Gehweg mit unebenem Mosaikpflaster für Radfahrer freigegeben	Q1-; 22467,6135 22656,6142 22700,6138 22777,6151 22857,6155
 Stellingdamm: Asphalt mit Schäden	Q1; 22857,6155 23011,6181
 Stellingdamm: Asphalt	Q0; 23011,6181 22857,6155
 Stellingdamm: Asphalt	Q0 23011,6181 23131,6237 23222,6276
@@ -513,10 +513,13 @@ Gartenstr.: Asphalt	Q0 8663,14960 8685,14966 8700,14956 8701,14932 8692,14923 86
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_32_3341_3408_online.pdf (Teileinziehung)
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2023/pressemitteilung.1377872.php (mögliche Fahrradstraße zwischen Grenzstr. und Liesenstr., 2024?)
 #: XXX Kopfsteinpflaster soll durch Asphalt ersetzt werden vvv
-#: last_checked: 2024-05-13 (mapillary) vvv
+#: osm_watch: note 3954718 1 (Fahrradstraße?)
+#: last_checked: 2024-05-15 (mapillary) vvv
 #: check_frequency: 60d vvv
 #: next_check: 2025-12-31 vvv
+#: osm_watch: way id="169459736" version="14"
 Gartenstr.: Kopfsteinpflaster	Q2 8663,14960 8570,15107
+#: osm_watch: way id="25278674" version="23"
 Gerichstr.: Kopfsteinpflaster	Q2 8456,15235 8570,15107
 #: next_check ^^^
 #: check_frequency ^^^
@@ -938,7 +941,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2024-06-15
+#: last_checked: 2024-07-10
 #: check_frequency: 120d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -1156,7 +1159,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/mobilitaetswenderat/22-08-24-mobilitaetswenderat-protokoll_final.pdf (neben der Asphaltierung wird auch ein modaler Filter am Boxhagener Platz erwähnt)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2024-06-28
+#: last_checked: 2024-07-08
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1406,7 +1409,7 @@ Wuhlewanderweg: Asphalt, einige Wurzelschäden	Q0- 22027,6608 22097,6414 22146,63
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103656581769/56581769/00081671/71-Anlagen/06/B0159ZB3.pdf (Planung 2016)
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.494722.php
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4258 (fehlerhafter Schlussbericht)
-#: last_checked: 2024-06-26 vvv
+#: last_checked: 2024-07-10 vvv
 #: check_frequency: 90d vvv
 #: osm_watch: way id="317233618" version="8"
 Wuhlewanderweg: guter Verbundsteinbelag	Q0 22246,6133 22204,6016 22162,5919 22122,5884 22097,5879 22084,5877
@@ -3880,14 +3883,17 @@ Grüne Trift (Köpenick) [Wohngebiet]: Beton	Q1 23036,3929 23088,4001 23257,3884 2
 #: next_check_id: GRUENETRIFTAMWALDE-2024
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2024/pressemitteilung.1417685.php (Baumfällungen bis 29. Februar 2024, später Erneuerung)
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2024/pressemitteilung.1453468.php (siehe auch temp blockings)
-#: last_checked: 2024-05-15 vvv
+#: last_checked: 2024-07-10 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-08-03 vvv
-Grüne Trift am Walde: Asphalt mit erheblichen Wurzelhebungen	Q1- 23337,3762 23402,3779 23657,3508
-Grüne Trift am Walde: Asphalt mit Wurzelhebungen	Q1+ 23657,3508 23740,3418 24102,3055 24179,2977
+Grüne Trift am Walde: Asphalt mit Wurzelhebungen	Q1+ 23740,3418 24102,3055 24179,2977
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
+#: historical_note: bis Sommer 2024: Asphalt mit erheblichen Wurzelhebungen, Q1-
+Grüne Trift am Walde: Asphalt	Q0 23337,3762 23402,3779 23657,3508
+#: historical_note: bis Sommer 2024: Asphalt mit Wurzelhebungen, Q1+
+Grüne Trift am Walde: Asphalt	Q0 23657,3508 23740,3418
 Kienappelweg: Beton	Q0 24102,3055 24101,3447
 #: note: westlicher Abschnitt ist extrapoliert
 (Bukesweg - Grüne Trift am Walde): Schotterstraße	Q2 23668,2792 23799,2823 23845,2846 23943,2853 24010,2865 24074,2904 24179,2977
@@ -5493,7 +5499,7 @@ Am Maria-Jankowski-Park: Verbundsteinpflaster	Q1 22090,5402 22006,5460
 #: by: https://www.berliner-woche.de/koepenick/c-verkehr/platz-des-23-april-soll-mit-neuen-wegen-aufgewertet-werden_a333485 (Bauarbeiten 2023 und 2024)
 #: XXX Ändert sind bei den Bauarbeiten etwas am Belag? Wird es während der Bauarbeiten zu Sperrungen kommen?
 #: osm_watch: way id="45478588" version="15"
-#: last_checked: 2024-06-19
+#: last_checked: 2024-07-10
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2023-04-01
 (Lindenstr. - Bahnhofstr.): Mosaikpflaster	Q1 22023,5160 22035,5217 22055,5279 22057,5305 22056,5350
@@ -7137,10 +7143,16 @@ Waldsassener Str.: Asphalt	Q0 7014,203 6982,88 6705,-61
 Lechtaler Weg: Verbundsteinpflaster	Q1 6446,584 6437,794 6358,795
 Weygerweg: Kleinsteinpflaster	Q2+ 7423,1905 7514,1930 7561,1959 7597,2026 7581,2092
 (Malteserstr. - Kamenzer Damm): Parkweg, etwas gröberer Schotter	Q2+ 7437,1859 7592,1892 7612,1918 7646,2019 7645,2110
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1464465.php ("Wegedecke mit einer hellen Deckschicht" --- asphaltähnlich?)
+#: XXX ist die Qualität hier besser geworden?
+#: alias: Grünzug Pappritz-Wichura-Straße
 (Malteserstr. - Kamenzer Damm): Parkweg	Q1 7645,2110 7636,2161 7634,2267 7665,2357 7704,2482 7779,2722 7783,2730 7798,2765 7807,2961 7837,2957
 (Malteserstr. - Kamenzer Damm): Parkweg, etwas holprig	Q1- 7837,2957 7852,3183
 (Halbauer Weg - Parkweg): Parkweg	Q1 7758,2973 7795,2963 7807,2961
 (Hanielweg - Parkweg): Parkweg	Q2 7562,1796 7565,1806 7592,1892
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1464465.php ("Wegedecke mit einer hellen Deckschicht" --- asphaltähnlich?)
+#: XXX ist die Qualität hier besser geworden? (allerdings scheint es noch Kleinpflaster-Abschnitte zu geben)
+#: alias: Grünzug Döhlauer Pfad
 (Kamenzer Damm - Wunsiedeler Weg): Parkweg	Q1 7776,3163 7769,3264 7784,3369 7800,3435 7788,3551 7737,3598 7694,3623 7555,3632
 Felgentreustr.: Asphalt	Q0- 8129,2390 8030,2423 7934,2471
 Felgentreustr.: Beton	Q1 7934,2471 7801,2527
@@ -13491,7 +13503,7 @@ Wilhelminenhofstr.: Kleinsteinpflaster	Q1 19010,5833 19017,5815
 # 
 An der Villa Bolle: Asphalt	Q0 22790,3135 22668,3125
 #: next_check_id: MARIENUFER-2023
-#: last_checked: 2024-05-22
+#: last_checked: 2024-07-10
 #: check_frequency: 120d
 #: next_check: 2025-12-31
 An der Villa Bolle: Baustraße	Q2 22668,3125 22477,3109
@@ -13641,6 +13653,10 @@ Töpchiner Weg [40-48]: Verbundsteinpflaster	Q1+ 11950,1275 11918,1211
 (Gerlinger Str. - Warmensteinacher Str.): unbefestigter Weg	Q2 11918,1149 11918,1211
 # 
 (Neucölln Carree, Parkplatzzufahrt): Asphalt	Q0 14430,7348 14423,7333 14378,7236 14507,7146
+# 
+(Uferweg): asphaltähnliche Decke	Q0- 11821,11733 11957,11603
+# 
+Fulhamer Allee: Asphalt, letzte Meter Verbundsteinpflaster	Q0 13213,4565 13225,4495
 # 
 ######################### User Contributions #################################
 #: section: User Contributions (anonymous) vvv 
@@ -20643,10 +20659,12 @@ Allee der Kosmonauten - Biesdorfer Promenade: Asphalt	Q0 19873,13129 20068,13036
 #: by: ^^^
 # 
 #: by: Rainer Mischke: vvv
+#: confirmed_by: srt vvv
 Niebergallstr.: mäßiges Kopfsteinpflaster	Q2 23102,1637 23144,1439
 Niebergallstr.: Asphalt	Q0; 23144,1439 23158,1379
 Niebergallstr.: mäßiges Kopfsteinpflaster	Q2; 23158,1379 23144,1439
 Niebergallstr.: mäßiges Kopfsteinpflaster	Q2 23158,1379 23168,1335 23202,1192
+#: confirmed_by ^^^
 #: by: ^^^
 # 
 #: by: Liesbet (m-...):
@@ -29465,7 +29483,7 @@ Weydemeyerstr.: Asphalt	Q0- 12039,12675 12064,12673
 #: corrected_by: srt (Gehwegplatten -> ...)
 #: note: nur einige Meter am westlichen Ende neu asphaltiert, dort besser
 (Berolinastr.): unebener Asphalt	Q1 11987,12946 11921,12990 11870,13024
-(Berolinastr.): Gehwegplatten	Q0 11870,13024 11815,13045 11719,13088
+(Berolinastr.): Gehwegplatten	Q0 11870,13024 11862,13027 11857,13014 11825,13029 11829,13039 11815,13045 11719,13088
 (Berolinastr. - Mollstr.): Betonsteinpflaster	Q0 11870,13024 11878,13046 11896,13075
 #: confirmed_by: srt (but splitted)
 (Berolinastr. - Mollstr.): Beton und kurz gepflastert	Q1- 11609,12986 11656,13100

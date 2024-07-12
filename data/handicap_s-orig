@@ -29,12 +29,13 @@
 #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/schulneubau-genehmigt_a411137
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11464 (Anfrage)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_20_1183_1234_online.pdf (Einziehung einer Gr¸nanlage (nˆrdlich dieser Stelle))
+#: by: https://www.berliner-woche.de/friedrichshain/c-bauen/howoge-legt-grundstein-fuer-modernes-heinrich-hertz-gymnasium_a420359 (Erˆffnung im Herbst 2026)
 #: osm_watch: way id="1054730129" version="8"
 #: osm_watch: way id="295548381" version="9"
 #: XXX Bleibt es beim Gehweg, oder wird es nach den Bauarbeiten eine andere Lˆsung geben?
 #: last_checked: 2024-06-09
 #: check_frequency: 90d
-#: next_check: 2026-08-01
+#: next_check: 2026-08-22
 M¸ncheberger Str.: schmaler Gehweg, Fuﬂg‰nger, Bordstein	q4+::inwork 12558,11920 12617,11888
 # 
 # REMOVED (Einschr‰nkungen weitgehend aufgehoben) --- #: XXX Landsberger Allee (Friedrichshain) stadtausw‰rts in Hˆhe Matthiasstraﬂe: Baustelle, Fahrbahn auf einen Fahrstreifen verengt, Matthiasstraﬂe gesperrt, vom 07.11.2023 10:54 bis 01.12.2023 17:00 --- #: note: eigentlich Gehweg f¸r Radfahrer frei, somit kˆnnten Radfahrer theoretisch auf der Fahrbahn fahren, aber hier gibt's keinen guten Zugang und die Fahrbahn ist mˆglicherweise auch zugestaut --- #: source_id: viz2021:13.438586,52.523696,07.11.2023,10:54 (bis 01.12.2023) (bis 29.12.2023) (inaktiv) --- #: source_id: viz2021:13.439714,52.523759,27.11.2023,15:27 (bis 26.01.2024) (bis 09.02.2024) (bis 16.02.2024) (inaktiv) --- #: also_indoor: traffic (ex-G,ex-B,ex-W) --- #: last_checked: 2024-02-13 (mapillary) vvv --- #: check_frequency: 14d vvv --- #: next_check: 2024-02-16 vvv --- #: valid: -20231229 vvv --- Landsberger Allee: Engstelle in Hˆhe Matthiasstr.	q2::inwork; 12711,13150 12786,13185 12878,13229 --- Matthiasstr.: Sperrung im Einm¸ndungsbereich Landsberger Allee	q2::inwork 12786,13185 12842,13070 --- #: valid ^^^ --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
@@ -43,7 +44,7 @@ M¸ncheberger Str.: schmaler Gehweg, Fuﬂg‰nger, Bordstein	q4+::inwork 12558,11920
 #: next_check_id: KARLMARXALLEE-2023
 #: source_id: viz2021:13.436148,52.517611,18.08.2023,08:00 (bis 01.11.2023) (inaktiv) (bis 01.12.2023) (inaktiv) (bis 29.03.2024) (bis 27.03.2024) (inaktiv)
 #: source_id: viz2021:13.436487,52.517601,19.04.2024,06:00 (bis 07.05.2024) (bis 24.05.2024) (inaktiv)
-#: last_checked: 2024-07-05
+#: last_checked: 2024-07-08
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2024-05-24
 Koppenstr.: Bauarbeiten an der Karl-Marx-Allee, einige Meter der Fahrbahn sind gesperrt	q3::inwork 12573,12227 12592,12472
@@ -326,7 +327,7 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607
 #: next_check_id: DOROTHEEN-2018
 #: add_fragezeichen: Wann sind die Bauarbeiten hier beendet? vvv
 #: also_indoor: traffic (G,W[teilweise]) vvv
-#: last_checked: 2024-06-25 vvv
+#: last_checked: 2024-07-09 (daf) vvv
 #: check_frequency: 60d vvv
 #: osm_watch: way id="24242892" version="40"
 Dorotheenstr.: Bauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 8775,12457 8904,12489 8999,12498
@@ -353,7 +354,7 @@ Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
 #: also_indoor: traffic (H,B)
 #: note: Die H‰lfte der Container ist mittlerweile weg, aber es ist weiterhin die gesamte Breite der Fahrbahn gesperrt.
-#: last_checked: 2024-07-05
+#: last_checked: 2024-07-09
 Parochialstr.: Fahrbahn zwischen J¸denstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 # 
 # REMOVED --- #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large --- #: last_checked: 2022-12-27 --- #: check_frequency: 60d --- (Grunerstr. - Gustav-Bˆﬂ-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10868,12572 10772,12515
@@ -361,6 +362,7 @@ Parochialstr.: Fahrbahn zwischen J¸denstr. und Klosterstr. gesperrt (Baucontaine
 # 
 #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=632731&postcount=1072
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/arch%C3%A4ologisches-haus-besucherzentrum-am-petriplatz.789/#post-14039
+#: by: https://www.berliner-woche.de/mitte/c-bauen/schluesseluebergabe-fuers-haus-petri_a420407
 #: by: https://www.berlin.de/sen/sbw/presse/pressemeldungen/pressemitteilung.1461126.php
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: XXX verursachende Bauarbeiten sind die am Arch‰ologischen Haus
@@ -826,7 +828,7 @@ Schˆnstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwor
 #: by: https://www.kms-sonne.de/assets/2024/05/Baustellenuebersicht-05-2024-web.pdf
 #: note: Die Absperrung beginnt 50m vor dem Einm¸ndungsbereich.
 #: also_indoor: traffic (none)
-#: last_checked: 2024-06-15 vvv
+#: last_checked: 2024-07-10 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2025-04-30 vvv
 #: valid: -20250430 vvv
@@ -1018,7 +1020,7 @@ Reichenberger Str.: etwa 80m der Fahrbahn gesperrt	q3-::inwork 15937,15134 16075
 #: last_checked: 2024-06-23 (osm) vvv
 #: check_frequency: 90d vvv
 #: next_check: 2025-07-31 vvv
-#: osm_watch: way id="175916583" version="10"
+#: osm_watch: way id="175916583" version="11"
 Eisenacher Str.: Radfahrer m¸ssen B¸rgersteig benutzen, Bordsteine	q1-::inwork; 21809,15186 21903,15174 22059,15153 22323,15119
 #: osm_watch: way id="26692569" version="17"
 Eisenacher Str.: Radfahrer teilen sich mit Fuﬂg‰ngern den B¸rgersteig, Umwege	q2+::inwork; 22599,15105 22577,15109 22441,15118 22323,15119 22059,15153 21903,15174 21809,15186 21718,15198 21599,15213
@@ -1036,7 +1038,7 @@ Gothaer Str.: Fahrbahn gesperrt, Umwege	q2::inwork 22897,15287 22899,15073
 #: by: https://www.berliner-woche.de/marzahn/c-bauen/richtfeste-fuer-290-wohnungen_a417760
 #: also_indoor: traffic (G,H,B)
 #: add_fragezeichen: Bis wann gibt es diese Einschr‰nkung?
-#: last_checked: 2024-06-02 vvv
+#: last_checked: 2024-07-03 (mapillary) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-12-31 vvv
 #: valid: -20241231 vvv
@@ -1121,15 +1123,15 @@ Schlettstadter Str.: Fahrbahn teilweise wegen Bauarbeiten gesperrt	q3::inwork 10
 #: by: https://www.deutsches-architekturforum.de/thread/11177-entwicklungsgebiet-ernst-th%C3%A4lmann-park-prenzlauer-berg/?postID=762233#post762233
 #: by: https://entwicklungsstadt.de/prenzlauer-berg-neubau-fuer-gefluechtete-an-der-froebelstrasse/
 #: osm_watch: way id="156800019" version="6"
-#: last_checked: 2024-06-20
+#: last_checked: 2024-07-09
 #: check_frequency: 60d
 Diesterwegstr.: Hochbauarbeiten, Sperrung der Fahrbahn	q3::inwork 12060,15141 11995,15012
 # 
 #: osm_watch: way id="1047231711" version="3"
 #: note: Halteverbotsschilder bis Juli 2024
-#: last_checked: 2024-06-07 (mapillary)
+#: last_checked: 2024-07-09
 #: check_frequency: 60d
-#: next_check: 2024-07-01
+# REMOVED --- #: next_check: 2024-07-01
 Jablonskistr.: Baustelle an der Kreuzung Winsstr., nur Gehweg ist frei	q3::inwork 11949,14557 12228,14404
 # 
 # REMOVED (mittlerweile wurde die Sperrung entfernt und die provisorische Asphaltdecke zur H‰lfte zur¸ckgebaut) --- #: by: https://www.deutsches-architekturforum.de/thread/6013-entwicklungsgebiet-alter-schlachthof-prenzlauer-berg/?postID=677220#post677220 --- #: by: https://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2021/pressemitteilung.1119011.php (Erw‰hnung) --- #: by: https://dstrctberlin.com/de/2021/10/18/auf-gute-nachbarschaft/ --- #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/dstrctberlin-ist-bald-bezugsfertig_a338513 --- #: XXX nicht der gesamte Abschnitt ist gesperrt, deshalb q3 statt q4 --- # REMOVED (keine construction mehr) --- #: osm_watch: way id="164816805" version="12" --- #: osm_watch: node id="1425174760" version="5" --- #: priority: #C --- #: last_checked: 2023-10-16 --- #: check_frequency: 30d --- Otto-Ostrowski-Str.: Hochbauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg mˆglich	q3::inwork 13702,13634 13711,13615 13769,13487
@@ -1145,15 +1147,16 @@ Jablonskistr.: Baustelle an der Kreuzung Winsstr., nur Gehweg ist frei	q3::inwor
 ### Weiﬂensee ###
 # 
 #: note: Endedatum laut Halteverbotsschilder
-#: last_checked: 2024-06-05
+#: last_checked: 2024-07-09
 #: next_check: 2024-07-15
+#: valid: -20240715
 Bˆrnestr.: Bauarbeiten, einige Meter der Fahrbahn sind gesperrt	q3::inwork 13214,15830 13263,15930
 # 
 #: also_indoor: traffic (G,B,W)
 #: note: Endedatum laut Halteverbotsschilder; L‰nge ca. 50-60m
 #: osm_watch: way id="1170355847" version="1"
 #: osm_watch: way id="1170355851" version="1"
-#: last_checked: 2024-06-07 (mapillary)
+#: last_checked: 2024-07-09
 #: check_frequency: 120d
 #: next_check: 2024-12-20
 #: valid: -20241220
@@ -5001,6 +5004,8 @@ Jungfernheidesteg: enge Br¸cke, einige Fuﬂg‰nger	q2 2906,13610 2921,13618 3003,1
 (Blockdammweg - Adolf-Wermuth-Allee): einige Fuﬂg‰nger, kein direkter Zugang zur Georg-Klingenberg-Str.	q3 17674,8738 17659,8698
 (Blockdammweg - Adolf-Wermuth-Allee): einige Fuﬂg‰nger, kein direkter Zugang zur Georg-Klingenberg-Str.	q3 17674,8738 17668,8696
 # 
+(Uferweg): einige Fuﬂg‰nger	q2 11821,11733 11957,11603
+# 
 ######################### User Contributions #################################
 #: section: User Contributions vvv
 #: by: Michael Kiekbusch vvv
@@ -5369,7 +5374,7 @@ Bissingzeile: einspurig, eng bei Gegenverkehr	q0- 7959,10910 8119,10797
 #: note: fr¸her "q2", rechtliche Lage unklar
 (Berolinastr.): Fuﬂg‰nger, Bordstein	q3 11815,13045 11719,13088
 #: note: explizites Radfahren-verboten-Schild
-(Berolinastr.): Spielplatz, Gr¸nanlage, Radfahren nicht erlaubt	q4+ 11870,13024 11815,13045
+(Berolinastr.): Spielplatz, Gr¸nanlage, Radfahren nicht erlaubt	q4+ 11870,13024 11862,13027 11857,13014 11825,13029 11829,13039 11815,13045
 #: XXX_prog BS (zur Mollstr. hin) (ansonsten -> q2)
 (Berolinastr. - Mollstr.): Fuﬂg‰nger, Bordstein	q3 11870,13024 11878,13046 11896,13075
 #: XXX_prog BS (zur Mollstr. hin)

@@ -264,15 +264,18 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: by: https://berliner-abendblatt.de/berlin-news/gericht-urteilt-ueber-umbenennung-der-mohrenstrasse-id226365
 #: by: https://berliner-abendblatt.de/berlin-news/geplante-umbenennung-der-mohrenstrasse-zieht-sich-weiter-hin-id231791
 #: by: https://www.tagesspiegel.de/berlin/bezirke/fast-vier-jahre-nach-dem-beschluss-umbenennung-der-mohrenstrasse-in-berlin-mitte-verzogert-sich-weiter-11863142.html
+#: by: https://berliner-abendblatt.de/berlin-news/umbenennung-mohrenstrasse-weiter-offen-warten-aufs-gericht-id257025
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
 #: last_checked: 2024-06-19 (mapillary) vvv
+#: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 #: osm_watch: way id="47755711" version="23"
 Mohrenstr.	N 9000,11727 9075,11756 9171,11777 9220,11781 9418,11804 9547,11819 9679,11834 9878,11857
 #: osm_watch: way id="1110751835" version="5"
 (Mohrenstr.)	N 9042,11839 9075,11756
 # REMOVED --- #: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 #: priority ^^^
 #: XXX ^^^
@@ -1323,6 +1326,7 @@ Blumenthalstr. (Tempelhof)	N 8976,6094 8996,5956
 Schulenburgring	N 8926,8682 8972,8643 9011,8605 9028,8584 9030,8431 9032,8254
 Wilhelmine-Gemberg-Weg	N 11715,11522 11767,11662
 Wilhelmine-Gemberg-Weg	NN 11767,11662 11821,11733
+(Uferweg)	NN 11821,11733 11957,11603
 Köpenicker Str. (Kreuzberg, Mitte)	N 11155,11750 11250,11715
 Köpenicker Str. (Kreuzberg, Mitte)	H 11250,11715 11324,11689 11569,11587 11715,11522 11808,11482 11947,11398 12021,11349 12060,11323 12124,11280 12314,11152 12416,11084 12509,11025 12521,11016 12532,11008 12683,10896 12879,10750 12985,10665
 Eisenbahnstr.	N 12509,11025 12363,10781 12294,10663
@@ -5812,6 +5816,7 @@ Heinrich-Hertz-Str.	N 37,15597 59,15518 149,15237
 Heinrich-Hertz-Str.	NN -45,15503 59,15518
 Elsa-Neumann-Str.	NN -159,15486 -45,15503
 Elsa-Neumann-Str.	N 149,15237 -159,15486 -213,15529 -218,15558
+(Am Bahndamm - Elsa-Neumann-Str.)	NN 168,15220 149,15237
 #: note: Privatstraße
 (entlang der Siemensbahn)	N 778,14713 739,14723 547,14880 537,14919
 Paulsternstr.	H -344,15200 -343,15113 -315,14933 -284,14738 -278,14532
@@ -11937,7 +11942,7 @@ Am Waldhang	N 31063,2191 31362,2284
 #: note: ^^^
 (Pelzlake)	NN 32245,1914 32155,1863 32121,1850 32052,1866 31893,1768 31202,2022 31107,2094 31092,2162 31063,2191
 Schönhorster Str.	N 29414,2373 29558,2261 29902,2379 30003,2406 30081,2317 30188,2266 30436,2282 30944,2166 31063,2191
-Stellingdamm	N 22467,6135 22603,6141 22777,6151 22857,6155 23011,6181 23131,6237 23222,6276
+Stellingdamm	N 22467,6135 22656,6142 22700,6138 22777,6151 22857,6155 23011,6181 23131,6237 23222,6276
 Schmausstr.	N 23242,6308 23353,6384 23489,6463 23577,6504
 (Mittelheide - Waldesruher Str.)	NN 24185,6880 24593,7455
 (Mittelheide)	NN 23577,6504 23954,6721 24185,6880 24602,7169 24823,7341 24978,7527 25228,7462 25262,7433
@@ -15660,7 +15665,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2024-07-06
+#: last_checked: 2024-07-10
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -16050,7 +16055,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2024-07-06
+#: last_checked: 2024-07-10
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: "Agnes-Kraus-Weg", allerdings existiert keine Ausschilderung (2012-09)
@@ -16416,8 +16421,9 @@ Juchaczweg	N 14126,3225 14180,3334
 #: osm_watch: way id="721901188" version="1"
 #: osm_watch: way id="138144497" version="9"
 #: priority: #C
-#: last_checked: 2024-04-07
-#: next_check: 2024-07-01
+#: last_checked: 2024-07-10
+#: check_frequency: 180d
+# REMOVED --- #: next_check: 2024-07-01
 (Klinikum Neukölln)	N 14180,3334 14227,3438
 #: note: Abschnitt nur für Rettungsfahrzeuge und Radfahrer
 (Klinikum Neukölln)	NN 14227,3438 14323,3648
@@ -17053,7 +17059,7 @@ Hüttendorfer Weg	N 21466,-281 21402,-116
 #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/stadtplanungsamt/ag2/downloads-b-plaene/planungsvariante_1.pdf?start&ts=1392044607&file=planungsvariante_1.pdf
 #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/stadtplanungsamt/ag2/downloads-b-plaene/planungsvariante_2.pdf?start&ts=1392044611&file=planungsvariante_2.pdf
 #: osm_watch: way id="147717012" version="5"
-#: last_checked: 2024-04-07
+#: last_checked: 2024-07-10
 #: check_frequency: 360d
 (Am Gartenstadtweg - S-Bhf. Altglienicke/Paradiesstr.)	N 21527,547 21368,478 21275,389
 (Am Gartenstadtweg - S-Bhf. Altglienicke/Paradiesstr.)	NN 21275,389 21262,375
@@ -18626,7 +18632,7 @@ Berolinastr.	N 11476,13052 11590,12995 11609,12986 11659,12962 11673,12955 11771
 Berolinastr.	N 11771,12909 11716,12803 11678,12727
 Berolinastr.	N 11541,12886 11590,12995
 (Berolinastr.)	NN 11888,12910 11906,12947 11921,12990 11987,12946
-(Berolinastr.)	NN 11921,12990 11870,13024 11815,13045 11719,13088
+(Berolinastr.)	NN 11921,12990 11870,13024 11862,13027 11857,13014 11825,13029 11829,13039 11815,13045 11719,13088
 (Berolinastr.)	NN 11847,12927 11888,12910 11957,12876
 (Berolinastr. - Mollstr.)	NN 11870,13024 11878,13046 11896,13075
 #: osm.highway: service
@@ -20662,9 +20668,11 @@ Am Kaniswall	N 32823,-149 32817,4 32872,128
 (Umleitungsstrecke im Tiergarten)	NN 6164,11947 6132,11984 6024,11978 5925,11943 5900,11913
 # 
 #: next_check_id: PYRAMIDENBRUECKE-2022
+#: osm_watch: way id="1277899794" version="1"
 #: last_checked: 2024-06-19
 #: check_frequency: 180d
 (südliche Behelfsbrücke an der Pyramidenbrücke)	NN 21519,5767 21545,5738 21553,5698 21581,5670 21630,5600 21649,5617
+#: osm_watch: way id="1156287321" version="2"
 #: last_checked: 2024-06-19
 #: check_frequency: 180d
 (nördliche Behelfsbrücke an der Pyramidenbrücke)	NN 21618,5699 21591,5728 21522,5771
