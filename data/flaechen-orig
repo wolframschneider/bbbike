@@ -70,7 +70,9 @@ Karl-Marx-Platz	F:P 12972,7602 12987,7560 13100,7626
 Richardplatz	F:P 13174,7644 13179,7613 13295,7627 13392,7648 13417,7654 13424,7680 13416,7712 13378,7695 13288,7653
 Siegfried-Aufhäuser-Platz	F:P 13952,7497 13941,7522 13953,7548 13980,7548
 Hertzbergplatz	F:P 13474,8060 13478,8095 13510,8138 13554,8101 13633,8036 13663,8011 13616,7949
-#: note: eventuell auch "Wildenbruchpark" (vmz detailnetz)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_29_1999_2054_online.pdf (Erwähnung des Namens "Wildenbruchpark")
+#: note: "Wildenbruchpark" auch im VMZ-Detailnetz
+#: alias: Wildenbruchpark
 Wildenbruchplatz	F:P 13193,8832 13138,8762 13227,8692 13314,8624 13368,8689
 #: note: OpenStreetMap bezeichnet die Grünfläche als "Weichselpark", aber im Netz findet man nur wenige Referenzen dazu
 Weichselplatz	F:P 12755,9188 12845,9304 12862,9312 12918,9089 12902,9066
@@ -176,6 +178,7 @@ Spreewaldplatz	F:P 12292,10374 12243,10274 12341,10218 12292,10374
 #: by: https://berliner-abendblatt.de/berlin-news/wegner-zu-klage-wegen-goerlitzer-park-wir-arbeiten-weiter-id254675
 #: by: https://berliner-abendblatt.de/berlin-news/im-goerlitzer-park-nun-bus-fuer-drogenkonsum-postiert-id256663 (Bau der Eingangstore ab Ende September 2024)
 #: by: https://berliner-abendblatt.de/berlin-news/zaun-um-goerlitzer-park-bezirk-scheitert-vor-gericht-id257192
+#: by: https://www.berliner-woche.de/kreuzberg/c-bauen/klage-gegen-zaun-gescheitert_a420802
 #: XXX Werden die Wege nachts (genaue Schließzeiten?) abgeschlossen sein? Oder wird das nur situationsbedingt (wann?) passieren?
 #: XXX Neue Lampen werden geplant -> nolighting-Einträge ggfs. prüfen.
 #: priority: #A
@@ -1229,7 +1232,7 @@ Hochbergplatz	F:P 4803,2280 4796,2271 4803,2257 4813,2256 4824,2266 4818,2279 48
 Grünanlage Stralsunder Str./Erdmännchenweg	F:P 26152,12815 26187,12789 26194,12798 26171,12817 26371,13060 26357,13065 26152,12815
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_46_5233_5356_online.pdf
 Hellersdorfer Graben	F:P 24834,14983 24894,15000 24913,14997 25031,15027 25228,15035 25242,15050 25319,15052 25298,15072 25025,15062 24832,15007 24832,14998 24834,14983
-Borsigwerke	F:Industrial 1596,19636 1640,19645 1606,19775 1886,19835 1896,19801 1903,19775 2245,19838 2282,19892 2325,19819 2394,19697 2436,19606 2477,19520 2423,19407 2268,19397 2193,19392 2200,19322 2160,19320 2169,19193 2057,19184 2073,19111 2081,19072 1735,19045 1713,19073 1719,19093 1738,19169 1734,19224 1578,19301 1624,19431 1596,19636
+Borsigwerke	F:Industrial 1596,19636 1640,19645 1606,19775 1886,19835 1896,19801 1903,19775 2245,19838 2282,19892 2325,19819 2394,19697 2436,19606 2477,19520 2423,19407 2268,19397 2193,19392 2200,19322 2160,19320 2169,19193 2057,19184 2075,19111 2083,19078 1735,19045 1713,19073 1719,19093 1738,19169 1734,19224 1578,19301 1624,19431 1596,19636
 #: note: ehemaliger Friedhof, wird nun als Park genutzt
 Friedhof Gotlindestr.	F:Cemetery 16147,12621 16284,12616 16409,12612 16413,12744 16149,12744
 Breitenbachplatz	F:P 3925,6604 3983,6599 4034,6642 4074,6681 4021,6729 3938,6651 3925,6604
