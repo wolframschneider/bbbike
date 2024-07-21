@@ -634,7 +634,7 @@ nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5
 nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz rechts abbiegen	CP; 5068,17384 5109,17507 5198,17433
 nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5068,17384 5109,17507 5034,17535
 auf der Verbundsteinpflasterstraße bleiben, nicht der Ausschilderung nach Glambeck folgen	CS; -16343,58851 -16043,58884
-ausgeschildert mit einem blauen Schild "Krumme Straße"	CP2; 22168,-484 22167,-471
+ausgeschildert mit einem blauen Schild "Krumme Straße"	CP2; 22168,-487 22167,-471
 ausgeschildert nach Königs Wusterhausen	CP; 20187,-20230 20738,-20432 20707,-20261
 ausgeschildert Köriser Str.	CP2; 23482,-22742 23775,-22788
 (Tangermünder Str. - Stendaler Str.): Rampe benutzen, um Treppen zu vermeiden	CP2; 24169,15497 24076,15481
@@ -768,8 +768,8 @@ Rewe/Penny/Kik-Parkplatz	CP2; 17503,10544 17422,10571
 Bleckmannweg: nicht ausgeschildert	CP2; 15886,12190 15756,12212
 Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
-Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
-Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10685,12422
+Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10722,12349 10716,12382 10687,12421 10646,12470
+Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10687,12421
 ausgeschildert "Zu den Häusern Zur Marktflagge 33-59"	CP2; 14152,13072 14200,13213
 Zur Marktflagge: nicht ausgeschildert	CP2; 14200,13213 14152,13072
 Boveristr.: nicht ausgeschildert	CS 19053,2890 19069,2904 19146,2975
@@ -804,7 +804,8 @@ Am Seegraben: nicht ausgeschildert	CP; 21171,222 21115,271 21025,176
 Am Seegraben: nicht ausgeschildert	CP2; 21885,1503 21878,1500
 Paradiesstr.: nicht ausgeschildert	CP2; 21115,271 21171,222
 ausgeschildert "Jelena-Santic-Friedenspark"	CP2; 22854,14018 22903,14063
-Zur Märkischen Aue: nicht ausgeschildert	CS 17848,11204 17893,11146 17905,11122 17924,10964 17915,10866 17900,10730 17892,10713 17870,10619 17856,10560 17864,10537
+Agnes-Kraus-Weg: nicht ausgeschildert, entlang des Tränkegrabens	CS 17156,10164 17157,10173 17143,10186 17144,10297 17163,10374 17239,10632 17249,10651 17255,10662 17249,10702 17310,10714 17415,10694 17527,10640 17625,10615
+Agnes-Kraus-Weg: nicht ausgeschildert, entlang des Tränkegrabens	CS 17999,10584 18034,10567 18059,10556 18150,10543
 Havelwerke	CS -1854,14989 -1945,15018 -2009,15033 -2070,15046
 Havelwerke	CS -1985,14916 -1946,14907 -1937,14955 -1959,14962 -1945,15018
 ausgeschildert "Scholzplatz"	CP2; -1517,10971 -1558,10970
@@ -822,3 +823,4 @@ Lichtenberger Str. [Wohngebiet]: nicht ausgeschildert	CP2; 11947,12494 11867,122
 Straße am Güterbahnhof Wilmersdorf: nicht ausgeschildert	CS 6147,7840 6273,7849
 Hirzerweg: nicht ausgeschildert	CS 9359,3083 9392,2923 9386,2882 9416,2781
 Bansiner Str.: nicht ausgeschildert	CP2; 22896,12827 22924,12833
+Clara-Müller-Jahnke-Str.: nicht ausgeschildert	CS 31971,3170 31799,3192 31800,3091 31810,3009 31965,2999

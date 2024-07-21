@@ -20,7 +20,7 @@ Wilhelminenhofstr./Schillerpromenade	X::inwork 18191,6363
 Wiesbadener Str./Sodener Str.: provisorische Ampel	X::inwork 3703,7324
 # 
 #: next_check_id: SCHOENEWEIDE-2018
-#: last_checked: 2024-07-06
+#: last_checked: 2024-07-17
 #: next_check: 2024-08-15
 Sterndamm/Schöneweide: provisorische Ampel	F::inwork 17736,5441
 # 
@@ -56,14 +56,14 @@ Marzahner Chaussee: Gegenverkehrsregelung	X::inwork::alternating 18555,12101
 #: valid: -20240812
 Salvador-Allende-Str.: Gegenverkehrsregelung	X::inwork::alternating 23445,4596
 # 
-#: source_id: viz2021:13.533233,52.421662,28.02.2024,12:14 (bis 31.05.2024) (inaktiv)
-#: source_id: viz2021:13.53226,52.421897,17.06.2024,10:00 (bis 15.07.2024) (bis 16.07.2024)
-#: by[nocache]: https://x.com/VIZ_Berlin/status/1802597047226581013
-#: by: https://pbs.twimg.com/media/GQCNH8OWIAAiTlR?format=jpg&name=large
-#: note: bei rbb bis 01.07.2024 verlängert, mittlerweile entfernt
-#: next_check: 2024-07-16
-#: valid: -20240716
-Rudower Str.: Gegenverkehrsregelung östlich der Dorothea-Viehmann-Str.	X::inwork::alternating 19266,1968
+# REMOVED --- #: source_id: viz2021:13.533233,52.421662,28.02.2024,12:14 (bis 31.05.2024) (inaktiv)
+# REMOVED --- #: source_id: viz2021:13.53226,52.421897,17.06.2024,10:00 (bis 15.07.2024) (bis 16.07.2024) (inaktiv)
+# REMOVED --- #: by[nocache]: https://x.com/VIZ_Berlin/status/1802597047226581013
+# REMOVED --- #: by: https://pbs.twimg.com/media/GQCNH8OWIAAiTlR?format=jpg&name=large
+# REMOVED --- #: note: bei rbb bis 01.07.2024 verlängert, mittlerweile entfernt
+# REMOVED --- #: next_check: 2024-07-16
+# REMOVED --- #: valid: -20240716
+# REMOVED --- Rudower Str.: Gegenverkehrsregelung östlich der Dorothea-Viehmann-Str.	X::inwork::alternating 19266,1968
 # 
 #: source_id: viz2021:13.546579,52.418724,12.06.2024,08:00 (bis 25.07.2024)
 #: note: Die VIZ-Meldung erwähnt nur die Keltenstr., aber möglicherweise hängen die beiden Baustellen zusammen.
@@ -73,7 +73,7 @@ Rudower Str.: Gegenverkehrsregelung östlich der Dorothea-Viehmann-Str.	X::inwork
 Grünauer Str./Werderstr.: Gegenverkehrsregelung	X::inwork::alternating 20028,1673
 # 
 #: source_id: viz2021:13.490616,52.463117,15.04.2024,07:30 (bis 12.07.2024) (bis 24.07.2024)
-#: last_checked: 2024-07-11 (mapillary)
+#: last_checked: 2024-07-17
 #: next_check: 2024-07-24
 #: valid: -20240724
 Kiefholzstr.: Gegenverkehrsregelung	X::inwork::alternating 16425,6445
@@ -114,6 +114,7 @@ Mariendorfer Weg/Gottlieb-Dunkel-Str./Eschersheimer Str.: Gegenverkehrsregelung	
 #: by: https://www.berliner-woche.de/bezirk-lichtenberg/c-bauen/lichtenberg-baut-schulen-und-sporthallen_a408641 (Eröffnung der Schule zum Schuljahr 2024/25)
 #: by: https://www.deutsches-architekturforum.de/thread/11104-neubauprojekte-in-marzahn-hellersdorf/?postID=761767#post761767
 #: by: https://entwicklungsstadt.de/lichtenberg-berlins-groesster-schulneubau-abgeschlossen/
+#: by: https://www.nd-aktuell.de/artikel/1183759.verkehrssicherheit-kinder-im-strassenverkehr-im-zickzack-zur-riesenschule.html
 #: XXX evtl. wurde die Ampel wegen der Hochbauarbeiten (Schule) eingerichtet
 #: osm_watch: way id="29432246" version="25"
 #: osm_watch: node id="603053800" version="7"
@@ -229,14 +230,14 @@ Bellevuestr.: Gegenverkehrsregelung	X::inwork::alternating 8328,11617
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024) (inaktiv)
 #: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung; Anforderungsampeln; außerdem mittlerweile eine Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
 #: note: Halteverbotsschilder bis 30.09.2025
-#: last_checked: 2024-07-14
+#: last_checked: 2024-07-20
 #: check_frequency: 120d
 #: next_check: 2025-09-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
 # 
 #: note: Halteverbotsschilder bis 31.12.2025
 #: note: Anforderungsampel; außerdem Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
-#: last_checked: 2024-07-14
+#: last_checked: 2024-07-20
 #: check_frequency: 120d
 #: next_check: 2025-12-31
 Gürtelstr.	F::inwork 15153,11691
@@ -268,14 +269,14 @@ Gürtelstr.	F::inwork 15153,11691
 #: next_check_id: IMBROMBEERWINKEL-2023
 #: next_check_id: STERNDAMM-2023
 #: XXX siehe auch Planung eines Zebrastreifens an dieser Stelle
-#: last_checked: 2024-07-11 (mapillary)
+#: last_checked: 2024-07-17
 #: check_frequency: 120d
 #: note: Anforderungsampel
 Südostallee/Im Brombeerwinkel: provisorische Fußgängerampel	F::inwork 17482,5464
 # 
 #: next_check_id: STERNDAMM-2023
 #: XXX evtl. wegen der halbseitigen Sperrung des Sterndamms?
-#: last_checked: 2024-07-11 (mapillary)
+#: last_checked: 2024-07-17
 #: next_check: 2024-08-15
 Südostallee: provisorische Fußgängerampel	F::inwork 17128,5736
 # 
@@ -319,15 +320,15 @@ Hämmerlingstr./südlich Bahnbrücke: Gegenverkehrsregelung	X::inwork::alternating 
 #: check_frequency: 120d
 Gehsener Str./Hoernlestr.	F::inwork 22395,6821
 #: note: anstelle des Zebrastreifens, also eigentlich nördlich des eingetragenen Punktes
-#: last_checked: 2024-06-19
+#: last_checked: 2024-07-20
 #: check_frequency: 120d
 Kaulsdorfer Str./Wongrowitzer Steig	F::inwork 22035,7146
 #: note: anstelle des Zebrastreifens, also eigentlich nördlich des eingetragenen Punktes
-#: last_checked: 2024-06-19
+#: last_checked: 2024-07-20
 #: check_frequency: 120d
 Kaulsdorfer Str./Bahrendorfer Str.	F::inwork 21956,7428
 #: note: anstelle des Zebrastreifens, also eigentlich nördlich des eingetragenen Punktes
-#: last_checked: 2024-06-19
+#: last_checked: 2024-07-20
 #: check_frequency: 120d
 Kaulsdorfer Str./Feuersteiner Str.	F::inwork 21708,7981
 #: note: anstelle des Zebrastreifens, also eigentlich nördlich des eingetragenen Punktes
@@ -822,7 +823,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9358,12351
 	X 10213,11728
 	X 10512,12039
-	X 10685,12422
+	X 10687,12421
 	X 10697,12303
 	X 11347,12223
 #: note: eventuell im gleichen Zyklus wie die benachbarte Ampel?
@@ -831,7 +832,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11094,11377
 	X 10431,12709
 	F 10515,12780
-	X 10601,12521
+	X 10599,12526
 #: related vvv
 	X 11141,12806
 	F 11105,12764
@@ -2744,7 +2745,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: selten ausgeschaltet (gesehen 2022-08-24 Wed 13:10, 2024-05-12 Sun 16:40, 2024-05-16 Thu 18:50)
-#: last_checked: 2024-07-10
+#: last_checked: 2024-07-17
 #: check_frequency: 120d
 	X::inwork 14382,9299
 # 
@@ -3055,6 +3056,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11256,12647
 	F 18170,-449
 	X 17855,1629
 	X 21789,5427
+#: note: Anforderung für linksabbiegende Radfahrer Köpenicker Str. -> Zimmermannstr.
 	X 21088,9178
 #: note: Anforderungsampel
 	F 4650,18817

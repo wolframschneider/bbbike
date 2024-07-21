@@ -220,6 +220,7 @@ Kreisverkehr	Roundabout -18722,5775
 Kreisverkehr	Roundabout -18598,5444
 Kreisverkehr	Roundabout 17183,14358
 #: by: mapillary vvv
+Kreisverkehr	Roundabout 1717,29541
 Kreisverkehr	Roundabout 938,28349
 Kreisverkehr	Roundabout -8821,-3036
 Kreisverkehr	Roundabout -8782,-2910
@@ -1376,7 +1377,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 (Enckestr. - Friedrichstr.): entlang taz-Gebäude und Besselpark	CS; 9666,10848 9537,10837
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2024-07-11 (mapillary)
+#: last_checked: 2024-07-17
 #: check_frequency: 90d
 Mergenthalerring: Straße nicht ausgeschildert, Richtung "Elbekies" fahren	CP2; 14261,8851 14252,8829
 # 
@@ -1397,7 +1398,7 @@ Eigene Scholle: nicht ausgeschildert	CS 8912,21308 8825,21246 8729,21185
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_06_0673_0824_online.pdf (Eingruppierung in die Straßenreinigungsverzeichnisse)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_54_4961_5184_online.pdf (Eingruppierung in die Straßenreinigungsverzeichnisse)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_21_1235_1274_online.pdf (Grundstücksnummerierungen)
-#: last_checked: 2024-05-15 vvv
+#: last_checked: 2024-07-17 vvv
 #: check_frequency: 120d vvv
 # REMOVED --- An der Dahme: nicht ausgeschildert	CS 22270,2549 22358,2460
 # REMOVED --- Gaffelsteig: nicht ausgeschildert	CS 22287,2431 22221,2520
@@ -1509,7 +1510,7 @@ nicht ausgeschildert, an der Kreuzung Kurt-Schumacher-Platz links abbiegen	CP; 5
 # 
 auf der Verbundsteinpflasterstraße bleiben, nicht der Ausschilderung nach Glambeck folgen	CS; -16343,58851 -16043,58884
 # 
-ausgeschildert mit einem blauen Schild "Krumme Straße"	CP2; 22168,-484 22167,-471
+ausgeschildert mit einem blauen Schild "Krumme Straße"	CP2; 22168,-487 22167,-471
 # 
 ausgeschildert nach Königs Wusterhausen	CP; 20187,-20230 20738,-20432 20707,-20261
 # 
@@ -1533,7 +1534,7 @@ ausgeschildert nach Bernau	CP; 32543,18082 32537,18066 32519,18076
 ausgeschildert Sophie-Charlotte-Platz	CP; 3064,11657 3144,11659 3159,11562
 # 
 #: next_check_id: WASSERSTADTSPINDLERSFELD-2019
-#: last_checked: 2024-01-06 vvv
+#: last_checked: 2024-07-20 vvv
 #: check_frequency: 180d vvv
 # REMOVED (wieder da) --- #: note: hier ist das Schild wohl verloren gegangen? --- Henriette-Lustig-Str.: nicht ausgeschildert	CS 21476,5048 21611,5119
 Henriette-Lustig-Str.: nicht ausgeschildert	CS 21611,5119 21631,5079
@@ -1735,7 +1736,7 @@ Upstallweg: nicht ausgeschildert	CP2; 17915,10350 17960,10378
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9724 (Anfrage)
-#: last_checked: 2024-06-19 vvv
+#: last_checked: 2024-07-20 vvv
 #: check_frequency: 60d vvv
 #: historical_note: bis Januar/Februar 2024: "stattdessen Wegweiser zu fünf Straßen im Wohngebiet"
 Ruth-Baumgarte-Str.: nicht ausgeschildert	CS; 17794,8429 17738,8450
@@ -1809,10 +1810,10 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2024-07-15 vvv
+#: last_checked: 2024-07-18 vvv
 #: check_frequency: 90d vvv
-Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10714,12355 10710,12377 10685,12422 10644,12469
-Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10685,12422
+Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10722,12349 10716,12382 10687,12421 10646,12470
+Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10687,12421
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
@@ -1852,7 +1853,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2024-07-14 vvv
+#: last_checked: 2024-07-20 vvv
 #: check_frequency: 60d vvv
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
 # REMOVED (ausgeschildert) --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
@@ -1882,12 +1883,11 @@ Paradiesstr.: nicht ausgeschildert	CP2; 21115,271 21171,222
 # 
 ausgeschildert "Jelena-Šantić-Friedenspark"	CP2; 22854,14018 22903,14063
 # 
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_02_0141_0296_online.pdf
-#: add_fragezeichen: Hängen hier mittlerweile Straßenschilder?
-#: last_checked: 2024-06-07
-#: check_frequency: 45d
-# REMOVED --- #: next_check: 2023-02-13
-Zur Märkischen Aue: nicht ausgeschildert	CS 17848,11204 17893,11146 17905,11122 17924,10964 17915,10866 17900,10730 17892,10713 17870,10619 17856,10560 17864,10537
+# REMOVED (mittlerweile ausgeschildert) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_02_0141_0296_online.pdf --- #: add_fragezeichen: Hängen hier mittlerweile Straßenschilder? --- #: last_checked: 2024-07-20 --- #: check_frequency: 45d --- # REMOVED --- #: next_check: 2023-02-13 --- Zur Märkischen Aue: nicht ausgeschildert	CS 17848,11204 17893,11146 17905,11122 17924,10964 17915,10866 17900,10730 17892,10713 17870,10619 17856,10560 17864,10537
+# 
+Agnes-Kraus-Weg: nicht ausgeschildert, entlang des Tränkegrabens	CS 17156,10164 17157,10173 17143,10186 17144,10297 17163,10374 17239,10632 17249,10651 17255,10662 17249,10702 17310,10714 17415,10694 17527,10640 17625,10615
+# REMOVED (in Höhe Zur Märkischen Aue hängen Schilder) --- Agnes-Kraus-Weg: nicht ausgeschildert, entlang des Tränkegrabens	CS 17625,10615 17705,10621 17847,10629 17870,10619 17897,10607 17999,10584
+Agnes-Kraus-Weg: nicht ausgeschildert, entlang des Tränkegrabens	CS 17999,10584 18034,10567 18059,10556 18150,10543
 # 
 Havelwerke	CS -1854,14989 -1945,15018 -2009,15033 -2070,15046
 Havelwerke	CS -1985,14916 -1946,14907 -1937,14955 -1959,14962 -1945,15018
@@ -1950,4 +1950,25 @@ Straße am Güterbahnhof Wilmersdorf: nicht ausgeschildert	CS 6147,7840 6273,784
 Hirzerweg: nicht ausgeschildert	CS 9359,3083 9392,2923 9386,2882 9416,2781
 # 
 Bansiner Str.: nicht ausgeschildert	CP2; 22896,12827 22924,12833
+# 
+#: next_check_id: CLARAMUELLERJAHNKE-2023
+#: by: http://tk.gis-broker.de/metadata/bplan/pdf/XVI-58.pdf
+#: by: https://www.berliner-woche.de/koepenick/c-bauen/400-neue-wohnungen-in-hessenwinkel_a297521 (nicht 100%ig klar, ob dieses Gelände gemeint ist; geplante Fertigstellung: 2023)
+#: by: https://www.architektur-urbanistik.berlin/index.php?threads/f%C3%BCrstenwalder-allee-324-hessenwinkel.1005/#post-14173
+#: by: https://www.berliner-woche.de/koepenick/c-bauen/baumfaellungen-in-hessenwinkel_a301341
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_42_3793_3876_online.pdf (Grundstücksnummerierungen)
+#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7010 (Straßenbenennung der Planstraße 5811)
+#: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/z18ZZXy3J2ZHtmAHncHKlckhWz5jf80zxBKviUyW/yXbAPpYA/66-Anlagen/01/DRS0017VK.pdf
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_51_4697_4784_online.pdf (Straßenbenennung, mit Lageplan)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2022_04_0173_0236_online.pdf (Grundstücksnummerierungen)
+#: by: https://www.degewo.de/presse/pressemitteilungen/presse/baustart-fuer-35-mehrfamilienhaeuser-im-suedosten-berlins/ (Fertigstellung 2023)
+# REMOVED --- #: XXX außerdem muss die Grünfläche (oder eher Brache hier) verkleinert werden --- #: XXX Bebauungsplan XVI-58: Planstraße --- #: XXX Privatstraße; Name: Clara-Müller-Jahnke-Str. (Berlin.coords.data-Eintrag fehlt, PLZ=12589) --- #: XXX bei osm bereits eingetragen
+# REMOVED (die anderen Watches sind besser) --- #: osm_watch: way id="264953674" version="8"
+# REMOVED (deleted) --- #: osm_watch: way id="1066944414" version="6"
+#: osm_watch: way id="1111504176" version="6"
+#: osm_watch: way id="1259033757" version="3"
+#: last_checked: 2024-07-14 (mapillary)
+#: check_frequency: 60d
+# REMOVED --- #: next_check: 2023-12-31
+Clara-Müller-Jahnke-Str.: nicht ausgeschildert	CS 31971,3170 31799,3192 31800,3091 31810,3009 31965,2999
 # 
