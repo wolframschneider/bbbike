@@ -193,7 +193,7 @@ Steinplatz	1 5153,11357 5113,11305 5080,11328 5043,11354 5085,11413
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX Einbahnstraﬂe ggfs. wiederherstellen (es sei denn, der Radweg auf der Nordseite wurde mittlerweile fertiggestellt, wonach es aussieht, dann nur nach gesperrt_car verschieben)
 #: XXX fr¸her: Am Treptower Park (Umfahrung auf Gehweg ist mˆglich)	1
-#: last_checked: 2024-07-19
+#: last_checked: 2024-07-24
 #: check_frequency: 90d
 #: next_check: 2024-12-31
 Am Treptower Park	1no 14089,9610 13860,9861
@@ -3849,7 +3849,7 @@ Am Kˆllnischen Park: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 11185,
 #: by: https://www.deutsches-architekturforum.de/thread/10517-wohnpark-gartenstadt-karlshorst-und-umgebung/?postID=758952#post758952
 #: osm_watch: way id="618834389" version="15"
 #: osm_watch: way id="43619494" version="8"
-#: also_indoor: traffic (G)
+#: also_indoor: traffic (G,H[ungenau])
 #: priority: #C
 #: last_checked: 2024-04-30 (osm)
 #: check_frequency: 90d
@@ -3890,8 +3890,8 @@ Wriezener Karree: Einbahnstraﬂenregelung	1s:q4:inwork 12959,11631 12728,11850
 #: next_check_id: ALTFRIEDRICHSFELDE-2024
 #: last_checked: 2024-06-07
 #: check_frequency: 90d
-#: next_check: 2024-08-16
-#: valid: -20240816
+#: next_check: 2024-08-31
+#: valid: -20240831
 Alt-Friedrichsfelde: Sperrung des Radwegs	1::inwork 19389,11761 19092,11776 19004,11780 18853,11780
 # 
 #: next_check_id: VIRCHOW-2023
@@ -4054,7 +4054,7 @@ An der Villa Bolle: Bauarbeiten, gesperrt	2::inwork 22668,3125 22477,3109
 #: osm_watch: note 3977175 9
 #: osm_watch: way id="212107363" version="6"
 #: osm_watch: way id="212107362" version="6"
-#: last_checked: 2024-07-17 (mapillary)
+#: last_checked: 2024-07-24
 #: check_frequency: 120d
 Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
 # 
@@ -4144,7 +4144,7 @@ Kurstr.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 10230,11839 10122,
 #: XXX angrenzend Hochbauarbeiten f¸r "Kleinstwohnanlage f¸r das betreute Einzelwohnen f¸r psychisch kranke Erwachsene, Wateweg 36/38"
 #: XXX wird dieser Abschnitt in Zukunft befahrbar bleiben?
 #: XXX kann auch offen sein, evtl. nur w‰hrend Arbeitszeiten gesperrt?
-#: osm_watch: way id="26190195" version="18"
+#: osm_watch: way id="26190195" version="19"
 #: osm_watch: way id="1157662852" version="2"
 #: priority: #C
 #: last_checked: 2024-02-10
@@ -4798,7 +4798,7 @@ Gleisdreieckpark: Querverbindung unter Hochbahnviadukt wegen Bauarbeiten gesperr
 #: osm_watch: way id="60333311" version="34"
 #: osm_watch: way id="289966097" version="24"
 #: priority: #A
-#: last_checked: 2024-06-20
+#: last_checked: 2024-07-24
 #: check_frequency: 90d
 # REMOVED --- Gustav-Bˆﬂ-Str.: Bauarbeiten, Komplettsperrung, Straﬂenf¸hrung wird neu gemacht	2::inwork 10685,12422 10772,12515
 # REMOVED (existiert nicht mehr) --- Grunerstr.: Straﬂenzug wird entfernt	2::inwork 10697,12303 10746,12364
@@ -4881,7 +4881,7 @@ J¸denstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork
 #: next_check_id: MOLKENMARKT-2021
 #: XXX Die Kreuzung Gustav-Bˆﬂ-Str./J¸denstr. wird eine neue Ampel bekommen
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
-#: last_checked: 2024-07-15
+#: last_checked: 2024-07-24
 #: check_frequency: 60d
 J¸denstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451
 # 
@@ -5441,7 +5441,7 @@ Bhf. Blankenfelde: Bahn¸bergang gesperrt, neue Unterf¸hrung wird gebaut	2::inwor
 #: XXX Kaiserstr. -> Anna-Fl¸gge-Straﬂe (PLZ: 14467)
 #: XXX Schlossstraﬂe (ˆstlicher Verlauf) -> Anna-Zielenziger-Straﬂe (PLZ: 14467) (siehe auch handicap_l-Eintrag)
 #: XXX Schwertfegerstraﬂe (ˆstlicher Verlauf) -> Erika-Wolf-Straﬂe (bereits eingetragen)
-#: osm_watch: way id="534669300" version="11" brb
+#: osm_watch: way id="534669300" version="12" brb
 #: last_checked: 2024-07-08 (daf)
 # REMOVED --- #: next_check: 2020-09-01
 #: check_frequency: 60d
@@ -5453,8 +5453,8 @@ Staudenhof (Potsdam): kein Durchgang mehr wegen Bauarbeiten	2::inwork -12685,-14
 #: by: https://www.potsdam.de/sites/default/files/documents/amtsblatt_potsdam_07_2019_final_0.pdf
 #: by: https://www.deutsches-architekturforum.de/thread/10252-potsdam-wiederherstellung-historische-mitte-projekte-news/?postID=643086#post643086
 #: XXX die derzeitige Straﬂe ist asphaltiert, bleibt das so?
-#: osm_watch: way id="765539341" version="17" brb
-#: osm_watch: way id="1285592463" version="1" brb
+# REMOVED --- #: osm_watch: way id="765539341" version="17" brb
+#: osm_watch: way id="1285592463" version="2" brb
 #: last_checked: 2024-07-08 (daf)
 # REMOVED --- #: next_check: 2020-09-01
 #: check_frequency: 60d
@@ -5465,18 +5465,18 @@ Erika-Wolf-Str. (Potsdam): w‰hrend der Bauarbeiten gesperrt	2::inwork -12812,-14
 #: by: https://www.potsdam.de/sites/default/files/documents/san-p_18_planzeichnung_3ter_entwurf-190126.pdf
 #: by: https://www.potsdam.de/sites/default/files/documents/amtsblatt_potsdam_04_2019_ansicht.pdf
 #: XXX hier wird eine neue "Schloﬂstr." entstehen --- bei osm "Anna-Zielenziger-Str."
-#: osm_watch: way id="760022943" version="13" brb
-#: last_checked: 2024-07-08 (daf)
+#: osm_watch: way id="760022943" version="14" brb
+#: last_checked: 2024-07-24 (osm)
 #: check_frequency: 60d
 Alter Markt (Potsdam): w‰hrend der Bauarbeiten gesperrt	2::inwork -12790,-1560 -12719,-1542
 # 
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
-#: last_checked: 2024-07-21 (webcam)
+#: last_checked: 2024-07-24
 #: check_frequency: 360d
 Pariser Platz: Sperrung vor der franzˆsischen Botschaft	2 8717,12302 8714,12319 8673,12315
 # 
 #: also_indoor: webcam https://www.feratel.com/en/webcams/germany/berlin-hotel-adlon.html
-#: last_checked: 2024-07-21 (webcam)
+#: last_checked: 2024-07-24
 #: check_frequency: 360d
 Pariser Platz: Sperrung vor der amerikanischen Botschaft	2 8641,12227 8643,12208 8705,12217
 # 
