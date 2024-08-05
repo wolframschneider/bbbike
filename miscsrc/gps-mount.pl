@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2018,2019,2021,2023 Slaven Rezic. All rights reserved.
+# Copyright (C) 2018,2019,2021,2023,2024 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -35,6 +35,7 @@ my $garmin_disk_type;
 my $device;
 my $cd;
 my $do_gpx_copy;
+my $gpx_copy_force;
 my $debug;
 my $without_tty;
 
@@ -52,6 +53,7 @@ GetOptions
      'device|prefer-device=s' => \$device,
      'cd:s'               => \$cd,
      'gpxcp|gpx-cp|gpx-copy' => \$do_gpx_copy,
+     'force|f'            => \$gpx_copy_force,
      'debug'              => \$debug,
      'without-tty'        => \$without_tty,
      'help|?'             => sub { usage(1) },
@@ -84,11 +86,13 @@ if ($do_gpx_copy) {
 	}
 	if ($^O eq 'MSWin32') {
 	    for my $file (@files) {
+		warn "DEBUG: cp '$file' to '$dest'\n" if $debug;
 		cp($file, $dest)
 		    or die "Failed top copy '$file' to '$dest': $!";
 	    }
 	} else {
-	    my @cmd = ('cp', '-i', @files, $dest);
+	    my @cmd = ('cp', ($gpx_copy_force ? '-f' : '-i'), @files, $dest);
+	    warn "DEBUG: run '@cmd'\n" if $debug;
 	    system @cmd;
 	    if ($? != 0) {
 		die "Running '@cmd' failed";
@@ -200,7 +204,16 @@ Garmin supported). Example:
 
    gps-mount.pl --gpx-cp file.gpx
 
+Note that by default an interactive C<cp> is used on Unix systems,
+unless C<--force> (see below) is used.
+
 Aliases: C<--gpx-copy> and C<--gpxcp>.
+
+=item C<--force>
+
+With C<--gpx-cp>, use the C<cp -f> when copying the file.
+
+Alias: C<-f>
 
 =item C<--device> I<devicename>
 
