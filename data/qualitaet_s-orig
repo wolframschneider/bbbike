@@ -197,7 +197,7 @@ Waldemarstr.: Kopfsteinpflaster	Q2- 11328,10957 11290,10972 11150,11030
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens
-#: last_checked: 2024-07-03
+#: last_checked: 2024-08-05
 #: check_frequency: 360d
 Erkelenzdamm: Kopfsteinpflaster	Q2 11038,10247 11094,10261 11117,10326 11134,10383 11109,10423 11145,10510 11192,10629 11210,10668 11244,10653 11258,10682
 Leuschnerdamm: Kopfsteinpflaster	Q2 11275,10723 11301,10783 11264,10804 11328,10957 11365,11047 11421,11073 11458,11136
@@ -209,7 +209,7 @@ Segitzdamm: asphaltiert	Q0 11159,10769 11133,10704
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens vvv
-#: last_checked: 2024-05-30 vvv
+#: last_checked: 2024-08-05 vvv
 #: check_frequency: 360d vvv
 Segitzdamm: Kopfsteinpflaster	Q2 11133,10704 11164,10687 11145,10638 11100,10530
 Segitzdamm: Kopfsteinpflaster	Q2- 11100,10530 11065,10443
@@ -1259,7 +1259,7 @@ Jagdschloss Grunewald - westlicher Hüttenweg: Kopfsteinpflaster	Q3+ 340,6598 218
 #: by: https://www.stadtrand-nachrichten.de/radwegeausbau-steglitz-zehlendorf-berlin/ (Erwähnung)
 #: XXX wird hier die Fahrbahnbeschaffenheit verbessert?
 #: osm_watch: way id="4810830" version="44"
-#: last_checked: 2024-05-05
+#: last_checked: 2024-08-09
 #: check_frequency: 720d
 #: next_check: 2028-12-31
 Bismarckstr.: Kopfsteinpflaster	Q2 -4892,1267 -5028,1133 -5092,1130 -5419,897 -5488,833 -5616,780 -6009,559
@@ -11803,6 +11803,8 @@ Ottomar-Geschke-Str. [Nebenfahrbahn]: Asphalt	Q0 21279,4567 21196,4392 21171,433
 #: note: einige kürzere Verbundsteinpflasterabschnitte
 In den Leonorengärten: Asphalt	Q0 6295,4017 6363,4047 6428,4076 6493,4105
 In den Leonorengärten: Verbundsteinpflaster	Q1+ 6428,4076 6452,4024 6517,4051 6493,4105
+#: XXX Ist die Qualität zwischen Morsbronner Weg und Kollostr. nach den Bauarbeiten besser geworden?
+#: next_check: 2024-08-16
 Westphalweg: Asphalt, einige Schlaglöcher	Q0- 9310,4407 9428,4419 9562,4412 9668,4403
 # REMOVED (nicht perfekt, Richtung Westen noch immer etwas wellig, aber keine Schlaglöcher mehr) --- #: XXX verschwinden die Schlaglöcher nach den Bauarbeiten? --- #: source_id: 2147345133 (bis 21.1.2021) (mittlerweile inaktiv) --- #: last_checked: 2020-08-29 --- #: next_check: 2021-01-21 --- #: next_check: 2020-12-17
 Westphalweg: Asphalt	Q0 9668,4403 9877,4386
@@ -13422,6 +13424,7 @@ Bahamasbogen: Verbundsteinpflaster	Q1+ -2759,18843 -2621,18840 -2482,18836 -2485
 #: next_check_id: SCHLESISCHERBUSCH-2023
 #: XXX bleibt der unbefestigte Abschnitt?
 #: osm_watch: way id="993271092" version="2"
+#: priority: #C
 #: last_checked: 2024-05-12
 #: check_frequency: 90d
 (Mauerweg - Lohmühlenstr.): unbefestigt/Verbundsteinpflaster	Q2+ 13128,9726 13156,9702
@@ -26183,6 +26186,7 @@ Röbellweg: schlechtes Kopfsteinpflaster, Radfahrer werden auf dem Gehweg gedulde
 Kreuztaler Weg: guter Beton	Q0 2220,18554 2416,18598
 # 
 #: by: Janine (jdg):
+#: confirmed_by: srt
 Reuterpfad: guter Asphalt	Q0 1839,7890 1843,8059
 # 
 #: by: H(eidrun) Mueller: vvv
@@ -29405,7 +29409,7 @@ Ersteiner Str.: Beton	Q1 1604,3770 1781,3807 1935,3827
 #: XXX Sanierung ab 2024
 #: note: Laut Baustellenschild der Wasserbetriebe bis Mai 2024
 #: add_fragezeichen: Sind die Bauarbeiten abgeschlossen?
-#: last_checked: 2024-05-05
+#: last_checked: 2024-08-09
 #: check_frequency: 90d
 Schlettstadter Str.: Asphalt	Q1 1077,3753 1422,3637 1485,3630
 Schlettstadter Str.: Beton	Q0 1485,3630 1817,3732 1926,3758 1935,3827 1939,3893
