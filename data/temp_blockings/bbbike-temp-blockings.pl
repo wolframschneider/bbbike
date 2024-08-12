@@ -29776,7 +29776,7 @@ EOF
      },
      { from  => $isodate2epoch->("2021-09-03 14:00:00"), # undef, # 
        until => undef, # $isodate2epoch->("2021-09-06 04:00:00"), # 1570116625, # 1680364800, # 2023-04-01 18:00
-       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt (Stand April 2024: Durchfahrt ist gesperrt)', # , von Sonnabend, den 04.09.2021, 14:00 Uhr, bis Montag, den 06.09.2021, 4:00 Uhr',
+       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt (Stand August 2024: Durchfahrt ist gesperrt)', # , von Sonnabend, den 04.09.2021, 14:00 Uhr, bis Montag, den 06.09.2021, 4:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2021
@@ -29785,11 +29785,11 @@ EOF
 #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/umfahrung-fuer-radfahrer-zu-lang_a231574
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1122586.php (Abriss des östlichen Brückenteils, Sperrung 2021-09-04 - 2021-09-06)
 #: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/blumberger-damm-bruecke/ (Begradigung des Wuhlgartenwegs)
-#: osm_watch: way id="8655276" version="51"
+#: osm_watch: way id="8655276" version="52"
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2024-06-09 (osm)
+#: last_checked: 2024-08-11 (osm)
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -30623,8 +30623,8 @@ EOF
 #: by: https://viz.berlin.de/2023/06/verkehrsvorschau-300623/ (neue Bauphase)
 #: by: https://nitter.cz/VIZ_Berlin/status/1674654999844995072#m
 #: by: https://nitter.cz/pic/orig/enc/bWVkaWEvRnp5Mjk4YmFnQUVETTdSLmpwZw==
-#: also_indoor: traffic (ex-G,H,B,W)
-#: last_checked: 2024-04-15 (okas)
+#: also_indoor: traffic (re-G,ex-H,B,T,W)
+#: last_checked: 2024-08-12 (traffic)
 #: check_frequency: 120d
 #: next_check: 2024-11-30
 # REMOVED --- #: next_check: 2024-01-01
@@ -31896,7 +31896,8 @@ EOF
 # REMOVED --- #: XXX prüfen, ob die Sperrung tatsächlich erfolgt vvv
 # REMOVED --- #: add_fragezeichen: Bis wann gehen die Bauarbeiten?
 # REMOVED --- #: next_check: 2020-07-01 vvv
-	2::inwork 9178,556 9253,370 9271,323 9473,-92 9507,-85
+# REMOVED (aus strassen-orig entfernt) ---	2::inwork 9178,556 9253,370 9271,323
+	2::inwork 9271,323 9473,-92 9507,-85
 # REMOVED ---	2::inwork 9507,-85 9473,-92 9271,323 9253,370 9178,556 9218,458 9178,556
 # REMOVED ---	2::inwork 9271,323 9296,335 9249,434 9218,458
 EOF
@@ -37186,7 +37187,7 @@ EOF
 #: source_id[inactive]: bvg2021:396#BVG323890_0
 #: source_id: bvg2021:396#BVG339330_0 (bis 31.08.2024)
 #: osm_watch[closed]: note 4052359 1
-#: osm_watch: way id="1117348911" version="9"
+#: osm_watch: way id="1117348911" version="10"
 #: also_indoor: traffic (G,ex-B[zu viel])
 # REMOVED --- #: XXX Barrieren sowie Durchfahrtsverbotsschilder existieren --- #: note: Barrieren geöffnet, Durchfahrt zumindest für Radfahrer möglich: 2022-09-18 (Sonntag), 2022-10-16 (Sonntag), 2022-11-05 (Samstag) gegen 10:00 --- #: note: Barrieren geschlossen, Durchfahrt nur auf dem Gehweg möglich: 2022-09-25 (Sonntag), 2022-09-26 (Montag) gegen 13:00 --- 
 # REMOVED --- #: add_fragezeichen: Besteht die Sperrung im Archibaldweg weiterhin? --- #: also_indoor: traffic (G) --- #: note: Halteverbot bis 24.7.2023 17h --- #: last_checked: 2023-07-24 --- #: check_frequency: 14d --- #: next_check: 2023-07-25
@@ -37194,7 +37195,7 @@ EOF
 #: by: https://bauprojekte.deutschebahn.com/media/projects/13075/docs/HZ_berlin-lichtenberg_eue_20230630ne.pdf (alte Sperrung, bis 24.07.2023 17:00)
 #: note: Halteverbotsschilder gelten bis zum 30.06.2024; am Haltestellenaushang steht "für etwa 6 Monate" (ab Anfang Januar 2024)
 #: priority: #B
-#: last_checked: 2024-08-03
+#: last_checked: 2024-08-11 (osm)
 #: check_frequency: 30d
 #: next_check: 2024-08-31
 	2::inwork 15777,10897 15820,10916 15870,10938
@@ -39602,12 +39603,12 @@ EOF
 #: note: Hauffstr.: Halteverbotsschilder an der Ecke Hauffstr./Spittastr. bis 31.10.2024; Durchgang bis zum Sporplatz+Spielplatz ist zurzeit vom Spittastr.-Ende noch möglich
 #: by: https://bauprojekte.deutschebahn.com/p/berlin-lichtenberg-eue (hier: bis September 2024)
 #: add_fragezeichen: Ist der Weg noch immer gesperrt?
-#: last_checked: 2024-08-03
+#: last_checked: 2024-08-11 (osm)
 #: check_frequency: 30d
 #: next_check: 2024-10-31
 #: osm_watch: way id="58182828" version="27"
 # REMOVED (hier nicht mehr) --- Am Alten Lokschuppen	2::inwork 15730,11279 15708,11193 15752,11115 15805,10949
-#: osm_watch: way id="1025826786" version="10"
+#: osm_watch: way id="1025826786" version="11"
 Hauffstr.: nur Anlieger zum Spielplatz frei	2::inwork 15578,11241 15620,11210 15700,11128 15747,11030 15763,10963
 EOF
      },
@@ -39619,7 +39620,7 @@ EOF
 #: note: Einbahnstraßenbereich ist 50m lang
 #: also_indoor: traffic (none)
 #: osm_watch: way id="1177919961" version="1"
-#: last_checked: 2024-07-16
+#: last_checked: 2024-08-12
 #: check_frequency: 90d
 #: next_check: 2024-09-30
 	q3::inwork; 15648,12687 15643,12875
@@ -40862,7 +40863,7 @@ EOF
 #: XXX * 10. August 2024 - 20. Oktober 2024: Sperrung der östlichen Wilhelminenhofstr. (nur die Fahrbahn oder auch der Radweg? und dafür alles andere wieder frei?)
 #: also_indoor: traffic (H,G,B,W)
 #: priority: #A vvv
-#: last_checked: 2024-07-30 (bahninfo-forum) vvv
+#: last_checked: 2024-08-11 (krickstadt) vvv
 #: check_frequency: 60d vvv
 #: next_check: 2024-08-17 vvv
 #: note: Umweg hier (falls man die Wilhelminenhofstr. Richtung Süden überqueren will): 2x60m (Stand Mitte November 2023)
@@ -42557,7 +42558,7 @@ EOF
        text  => 'Malchower Teichweg: Anbindung an die B2 kann wegen Bauarbeiten gesperrt sein, vom 04.03.2024 07:00 bis 12.08.2024 17:00',
        type  => 'gesperrt',
        data  => <<EOF,
-#: source_id: viz2021:13.483344,52.583136,04.03.2024,07:00 (bis 26.04.2024) (bis 07.05.2024) (bis 17.05.2024) (bis 07.06.2024) (bis 21.06.2024) (bis 05.07.2024) (bis 31.07.2024) (bis 12.08.2024)
+#: source_id: viz2021:13.483344,52.583136,04.03.2024,07:00 (bis 26.04.2024) (bis 07.05.2024) (bis 17.05.2024) (bis 07.06.2024) (bis 21.06.2024) (bis 05.07.2024) (bis 31.07.2024) (bis 12.08.2024) (inaktiv)
 #: note: Gehweg nur auf der westlichen Seite, für Radfahrer in beiden Richtungen frei, 2 Ampeln zum Überqueren
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1764537508510216685
 #: by: https://pbs.twimg.com/media/GHmMbjuXYAAbLcY?format=jpg&name=large
@@ -43138,8 +43139,8 @@ EOF
 EOF
      },
      { from  => 1715058000, # 2024-05-07 07:00
-       until => $isodate2epoch->("2024-08-15 17:00:00"), # 1723129200, # 2024-08-08 17:00
-       text  => 'Sterndamm: Gleisarbeiten zwischen Winckelmannstr. und Königsheideweg, Sperrung der Fahrbahn, gemeinsamer Geh- und Radweg mit Umwegen, außerdem sind die Anbindung Trützschlerstr. und Abschnitte der Winckelmannstr. gesperrt, vom 08.05.2024 07:00 bis 15.08.2024 17:00',
+       until => $isodate2epoch->("2024-08-20 17:00:00"), # 1723129200, # 2024-08-08 17:00
+       text  => 'Sterndamm: Gleisarbeiten zwischen Winckelmannstr. und Königsheideweg, Sperrung der Fahrbahn, gemeinsamer Geh- und Radweg mit Umwegen, außerdem sind die Anbindung Trützschlerstr. und Abschnitte der Winckelmannstr. gesperrt, vom 08.05.2024 07:00 bis voraussichtlich 20.08.2024 17:00',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: STERNDAMM-2024
@@ -43153,12 +43154,12 @@ EOF
 #: note: laut Baustellenplakat (siehe bahninfo-forum) nur bis 05.07.2024, oder gibt es da nur eine Änderung der Verkehrsführung?
 #: note: laut rbb bis 15.8.2024 (go with it)
 #: note: bei VIZ seit dem 8.8.2024 inaktiv (zu früh?)
-#: source_id: viz2021:13.505693,52.445739,08.05.2024,07:00 (Sterndamm und Anbindungen, bis 08.08.2024) (inaktiv)
+#: source_id: viz2021:13.505693,52.445739,08.05.2024,07:00 (Sterndamm und Anbindungen, bis 08.08.2024) (inaktiv) (bis 20.08.2024)
 #: source_id: viz2021:13.50508,52.44526,08.05.2024,07:00 (bis 08.05.2024) (inaktiv)
 Sterndamm: gemeinsamer Rad- und Gehweg	q3::inwork; 17387,4446 17428,4503 17471,4570 17516,4657
 Winckelmannstr. am Sterndamm	q4::inwork 17428,4503 17476,4337
 Trützschlerstr.	q2::inwork 17471,4570 17612,4460
-#: source_id: viz2021:13.506038,52.441227,08.05.2024,07:00 (Winckelmannstr., bis 08.08.2024) (inaktiv)
+#: source_id: viz2021:13.506038,52.441227,08.05.2024,07:00 (Winckelmannstr., bis 08.08.2024) (inaktiv) (bis 20.08.2024)
 #: source_id: viz2021:13.5056,52.44039,08.05.2024,07:00 (bis 08.05.2024) (inaktiv)
 Winckelmannstr.	q4::inwork 17503,4148 17498,4078 17468,3979 17465,3768
 #: by: krickstadt
@@ -43537,16 +43538,17 @@ EOF
 EOF
      },
      { from  => 1718085600, # 2024-06-11 08:00
-       until => $isodate2epoch->("2024-09-30 17:00:00"), # 1720796400, # 2024-07-12 17:00
+       until => 1723441837, # $isodate2epoch->("2024-09-30 17:00:00"), # 1720796400, # 2024-07-12 17:00
        dont_check_date => 1,
        text  => 'Keltensteig: Einmündung an der Grünauer Str. gesperrt, vom 12.06.2024 08:00 bis 12.08.2024 17:00, evtl. auch bis September 2024',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: viz2021:13.546579,52.418724,12.06.2024,08:00 (bis 12.07.2024) (bis 25.07.2024) (bis 12.08.2024)
+#: source_id: viz2021:13.546579,52.418724,12.06.2024,08:00 (bis 12.07.2024) (bis 25.07.2024) (bis 12.08.2024) (inaktiv)
 #: note: bei rbb mittlerweile bis 30.09.2024, go with rbb
 #: note: Länge der Baustelle: etwa 40m
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1800742824524259711
 #: by: https://pbs.twimg.com/media/GPzFCzlWcAAoKgR?format=jpg&name=large
+#: by: https://pbs.twimg.com/media/GUh0blsWoAAR-uT?format=jpg&name=large (nicht mehr gesperrt)
 	q3::inwork 20302,1613 20366,1479
 EOF
      },
@@ -43794,7 +43796,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.51055,52.44458,02.07.2024,17:07 (bis 15.08.2024) (inaktiv)
-#: source_id: viz2021:13.508246,52.445764,02.07.2024,07:00 (hier nur Kfz-Verkehr, bis 15.08.2024)
+#: source_id: viz2021:13.508246,52.445764,02.07.2024,07:00 (hier nur Kfz-Verkehr, bis 15.08.2024) (bis 20.08.2024)
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1808152802205503982 (hier auch nur Kfz-Verkehr)
 # REMOVED (Anlieger frei, keine Bauarbeiten erkennbar) --- #: add_fragezeichen: Sind Radfahrer von der Sperrung betroffen?
 	q4::inwork; 17794,4443 17676,4540 17516,4657
@@ -44127,10 +44129,52 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.382396,52.530372,09.08.2024,16:02 (nur der Radverkehr wird umgeleitet! bis 30.09.2024)
-#: source_id: viz2021:13.3794,52.52949,09.08.2024,17:31 (bis 30.09.2024)
+#: source_id: viz2021:13.3794,52.52949,09.08.2024,17:31 (bis 30.09.2024) (inaktiv)
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1821911366766084588
 #: by: https://pbs.twimg.com/media/GUi6qtgW4AAgG3O?format=jpg&name=large
 	q4::inwork; 8685,13728 8841,13800 8935,13844
+EOF
+     },
+     { from  => 1723352400, # 2024-08-11 07:00
+       until => 1725634800, # 2024-09-06 17:00
+       text  => 'Marzahner Promenade: Bauarbeiten zwischen Landsberger Allee und Märkische Allee, evtl. sind auch Radfahrer betroffen, vom 12.08.2024 07:00 bis 06.09.2024 17:00',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: viz2021:13.545904,52.542197,12.08.2024,07:00 (bis 06.09.2024)
+#: by[nocache]: https://x.com/VIZ_Berlin/status/1822847981323981227
+#: by: https://pbs.twimg.com/media/GUh9Zq3XwAALRml?format=jpg&name=medium (laut Verkehrszeichenplan keine Ausnahme für Radfahrer, kleinerer Bereich)
+# REMOVED (hier nicht) ---	q4::inwork 20226,15512 19960,15337
+	q4::inwork 19960,15337 19875,15324 19768,15361
+# REMOVED (hier nicht) ---	q4::inwork 19768,15361 19681,15405
+EOF
+     },
+     { from  => 1723413600, # 2024-08-12 00:00
+       until => 1724450400, # 2024-08-24 00:00
+       text  => 'Siegfriedstr.: Bauarbeiten zwischen Rüdigerstr. und Bornitzstr., Richtung Norden gemeinsamer Geh- und Radweg, mögliche Engstellen, bis 23.08.2024 17:00 Uhr',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check_id: SIEGFRIED-2024
+#: source_id: viz2021:13.499212,52.517894,12.08.2024,07:00 (bis 24.08.2024)
+#: note: (noch) keine Einschränkung in der Rüdigerstr.
+	q2; 16820,12339 16831,12419 16857,12600 16859,12613 16860,12861
+EOF
+     },
+     { from  => 1723960800, # 2024-08-18 08:00
+       until => 1730386800, # 2024-10-31 16:00
+       text  => 'B2 bei Mescherin: Deckenerneuerung, Sperrung, evtl. sind auch Radfahrer betroffen, 19.08.2024 08:00 Uhr bis 31.10.2024 16:00 Uhr',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: source_id: LS/221-E/24/116 (bis 31.10.2024)
+	2::inwork 76863,101305 76791,101034 76787,98891 76787,98838
+EOF
+     },
+     { from  => 1723348800, # 2024-08-11 06:00
+       until => 1738342800, # 2025-01-31 18:00
+       text  => 'Tannenbergallee: Baustelle in Höhe Hohensteinallee, evtl. sind auch Radfahrer von der Sperrung betroffen, vom 12.08.2024 06:00 bis 31.01.2025 18:00',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: viz2021:13.24754,52.50541,12.08.2024,06:00 (bis 31.01.2025)
+	q4::inwork -45,10912 -220,10893 -466,10860
 EOF
      },
     );
