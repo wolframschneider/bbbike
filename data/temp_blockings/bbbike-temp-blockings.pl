@@ -1210,7 +1210,7 @@ EOF
        text  => 'L 33; (Berliner Str.); OL Altlandsberg Vollsp. Vollsperrung 14.10.2004-16.10.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-	q4 32096,18020 32003,17810 31917,17597 31908,17520 31887,17453
+	q4 32096,18020 32028,17866 32003,17810 31917,17597 31908,17520 31887,17453
 EOF
      },
      { from  => 1138133685, # 2006-01-24 21:14
@@ -3918,8 +3918,8 @@ EOF
        text  => 'Die Kaulsdorfer Brücke ist ab Montag 06.03.2006, 6.00 Uhr bis voraussichtlich Herbst 2007 gesperrt.',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 22688,12007 22684,12016 22669,12049
-	2::inwork 22669,12049 22693,12084
+	2::inwork 22688,12007 22674,12016 22669,12049
+	2::inwork 22669,12049 22673,12076 22693,12084
 EOF
      },
      { from  => 1141765672, # 2006-03-07 22:07
@@ -4685,13 +4685,17 @@ EOF
 	2 11979,8014 12001,7937 12025,7852 12041,7788 12057,7744 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12185,7381
 EOF
      },
-     { from  => $isodate2epoch->("2023-07-07 00:00:00"), # 1148565600, # 2006-05-25 16:00
-       until => $isodate2epoch->("2023-07-09 10:00:00"), #1153087200, # 2006-07-17 00:00
-       text  => 'Straße des 17. Juni: Veranstaltung (Rave the planet), Straße gesperrt, am 08.07.2023', # 'Vom 26.05.2006, 16:00 Uhr bis 16.07.2006 wird die Straße des 17. Juni zwischen Siegessäule und Brandenburger Tor komplett gesperrt. Grund sind die geplante WM-Fanmeile sowie mehrere Festveranstaltungen (u.a. Love Parade).',
+     { from  => $isodate2epoch->("2024-08-16 00:00:00"), # 1148565600, # 2006-05-25 16:00
+       until => $isodate2epoch->("2024-08-18 10:00:00"), # 1153087200, # 2006-07-17 00:00
+       text  => 'Straße des 17. Juni: Veranstaltung (Rave the planet), Straße gesperrt, am 17.08.2024', # 'Vom 26.05.2006, 16:00 Uhr bis 16.07.2006 wird die Straße des 17. Juni zwischen Siegessäule und Brandenburger Tor komplett gesperrt. Grund sind die geplante WM-Fanmeile sowie mehrere Festveranstaltungen (u.a. Love Parade).',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://viz.berlin.de/2023/07/rave-the-planet-parade/
 #: by: https://berliner-abendblatt.de/berlin-news/rave-the-planet-findet-laut-veranstalter-statt-id226463
+#: by: https://berliner-abendblatt.de/berlin-news/rave-the-planet-300-000-menschen-laut-polizei-angemeldet-id260300
+#: by[nocache]: https://x.com/VIZ_Berlin/status/1823248945088270542
+#: by: https://viz.berlin.de/aktuelle-meldungen/am-wochenende-rave-the-planet-auf-der-strasse-des-17-juni-in-tiergarten/
+#: by: https://www.ravetheplanet.com/demoroute-2024/
 #: source_id: viz2021:13.376834,52.516206,07.07.2023,14:00 (Ebertstr., bis 09.07.2023) (inaktiv)
 #: note: Sperrung des Pariser Platzes auf Webcam gesehen
 Pariser Platz, Brandenburger Tor	2::temp 8722,12268 8637,12258 8592,12252 8538,12245
@@ -6584,7 +6588,7 @@ EOF
        text  => 'L 303 Eggersdorfer Weg zw. Abzw. Altlandsberg und OE Eggersdorf Deckenerneuerung Vollsperrung 18.10.2006-20.10.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 40528,16613 39400,15803
+	2::inwork 40528,16613 39853,16128 39803,16092 39715,16029 39602,15948 39500,15875 39400,15803
 EOF
      },
      { from  => 1161208800, # 2006-10-19 00:00
@@ -7143,7 +7147,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004489',
        data  => <<EOF,
-	2::inwork 22688,12007 22684,12016 22669,12049 22693,12084
+	2::inwork 22688,12007 22674,12016 22669,12049 22673,12076 22693,12084
 EOF
      },
      { from  => undef, # 2007-01-15 22:59 1168898369
@@ -15135,7 +15139,7 @@ EOF
 #: source_id: viz2021:13.359683,52.447679,07.07.2024,12:30 (kein Endedatum) (bis 1.10.2024) (bis 30.08.2024) (bis 14.09.2024)
 #: source_id: viz2021:13.360599,52.446803,11.07.2024,14:26 (Einschränkung in der anderen Richtung, bis 01.10.2024) (inaktiv)
 #: source_id[inactive]: bvg2024:282#HIM_FREETEXT_230698 (bis 31.08.2024) (bis 11.07.2024)
-#: source_id: bvg2024:282#HIM_FREETEXT_230965 (bis 31.08.2024)
+# REMOVED (ist etwas anderes) --- #: source_id: bvg2024:282#HIM_FREETEXT_230965 (bis 31.08.2024)
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1810569256909607224 (voraussichtlich zwei Monate)
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1470949.php
 #: also_indoor: traffic (H,G,B,T,W)
@@ -20473,18 +20477,21 @@ EOF
 	2::inwork 872,24330 865,24114 793,24070 736,24068 601,24192 237,24374 195,24389 160,24390 132,24390 78,24364 -406,23934
 EOF
      },
-     { from  => $isodate2epoch->("2023-09-14 00:00:00"), # PERIODISCH, ca. 2. Wochenende im September
-       until => $isodate2epoch->("2023-09-18 23:59:59"),
+     { from  => $isodate2epoch->("2024-09-19 00:00:00"), # PERIODISCH, ca. 2. Wochenende im September
+       until => $isodate2epoch->("2024-09-22 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 13, months => 9, start => "2020-10-25T00:00:00"]],
-       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 15.09.2023 bis 17.09.2023',
+       #text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 15.09.2023 bis 17.09.2023',
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße gesperrt zwischen An der Vogelweide und Mönchmühler Str., 20.09.2024 bis 22.09.2024',
        type  => 'handicap',
        source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2019',
        data  => <<EOF,
 #: by: https://www.laubinger.de/event/47-rosenthaler-herbst/ (geplant: 18.09.2021 - 19.09.2021)
 #: by: https://www.berliner-woche.de/rosenthal/c-kultur/feiern-mit-abstand-und-einschraenkungen_a321188
 #: by: https://dorf-rosenthal.de/programmheft
-	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
+#: by: https://www.laubinger.de/event/47-rosenthaler-herbst/?date=20240814
+# REMOVED ---	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
+Hauptstr. 155 - 171	q4::temp 8568,21863 8556,21918 8400,22010
 EOF
      },
      { from  => 1316088000, # 2011-09-15 14:00
@@ -28712,8 +28719,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2024-08-30 18:00:00"), # $isodate2epoch->("2020-12-18 23:59:59"), # 1588348800, # 2020-05-01 18:00
-       text  => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Hönower Str. für Radfahrer explizit verboten (außer Anlieger), bis Ende August 2024; außerdem Einbahnstraßenregelung in der Andernacher Str.',
+       until => $isodate2epoch->("2024-09-27 18:00:00"), # $isodate2epoch->("2020-12-18 23:59:59"), # 1588348800, # 2020-05-01 18:00
+       text  => 'Treskowallee: während der Bauarbeiten ist die Fahrbahn Richtung Süden ab Hönower Str. für Radfahrer explizit verboten (außer Anlieger), bis Ende September 2024; außerdem Einbahnstraßenregelung in der Andernacher Str.',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: TRESKOWALLEE-2023
@@ -28730,7 +28737,8 @@ EOF
 #: by: https://www.berliner-woche.de/karlshorst/c-bauen/treskowallee-bekommt-neuen-asphalt_a414176
 #: source_id: 2147342174 (inaktiv)
 #: source_id: viz2021:13.528029,52.490354,25.08.2022,07:00 (bis 12.9.2022) (bis 23.9.2022) (inaktiv)
-#: source_id: viz2021:13.527268,52.487826,23.09.2022,15:00 (bis 21.8.2023, Umleitung für Radfahrer Richtung Norden) (bis 24.11.2023) (bis 16.03.2024) (bis 30.08.2024)
+#: source_id: viz2021:13.527268,52.487826,23.09.2022,15:00 (bis 21.8.2023, Umleitung für Radfahrer Richtung Norden) (bis 24.11.2023) (bis 16.03.2024) (bis 30.08.2024) (bis 27.09.2024)
+#: source_id: viz2021:13.52779,52.49067,14.08.2024,14:30 (bis 27.09.2024)
 #: note: Gehweg-Radfahrer-frei-Schilder Richtung Norden an der Rheinsteinstr. bis Waldowallee
 #: note: von der Marksburgstr. und Godesberger Str. ist nur das Rechtsabbiegen Richtung Norden möglich (oder man nimmt die Fußgängerampeln)
 #: note: Einbahnstraßenregelung in der Marksburgstr. zwischen Gundelfinger Str. und Treskowallee aufgehoben
@@ -28739,7 +28747,7 @@ EOF
 #: note: laut Schild der Wasserbetriebe gehen die Bauarbeiten bis November 2023
 #: priority: #B vvv
 #: check_frequency: 60d vvv
-#: next_check: 2024-08-30 vvv
+#: next_check: 2024-09-27 vvv
 # REMOVED --- #: next_check_id: TRESKOWALLEE-2017
 # REMOVED (nein, keine Schilder gesehen) --- #: add_fragezeichen: ist die Fahrbahn in Richtung Norden ebenso für Radfahrer verboten?
 # REMOVED (Umleitung über Hentigstr.) --- #: XXX geht das Verbot nur Dönhoffstr. (und ab dort ist der Gehweg für Radfahrer frei)? wie ist genau die Umleitungsempfehlung?
@@ -29776,7 +29784,7 @@ EOF
      },
      { from  => $isodate2epoch->("2021-09-03 14:00:00"), # undef, # 
        until => undef, # $isodate2epoch->("2021-09-06 04:00:00"), # 1570116625, # 1680364800, # 2023-04-01 18:00
-       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt (Stand August 2024: Durchfahrt ist gesperrt)', # , von Sonnabend, den 04.09.2021, 14:00 Uhr, bis Montag, den 06.09.2021, 4:00 Uhr',
+       text  => 'Wuhlgartenweg: wegen Bauarbeiten an der Südlichen Blumberger-Damm-Brücke möglicherweise gesperrt (Stand Mitte August 2024: Durchfahrt ist gesperrt)', # , von Sonnabend, den 04.09.2021, 14:00 Uhr, bis Montag, den 06.09.2021, 4:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: SUEDLBLUMBERGERDAMMBRUECKE-2021
@@ -29789,7 +29797,7 @@ EOF
 #: also_indoor: search Blumberger-Damm-Brücke
 #: priority: #A
 #: add_fragezeichen: Ist der Weg mittlerweile wieder offen?
-#: last_checked: 2024-08-11 (osm)
+#: last_checked: 2024-08-14
 #: check_frequency: 60d
 	2::inwork 20823,12139 21101,12132 21135,12127 21169,12113 21282,12115
 # REMOVED (hier normalerweise noch offen) ---	2::inwork 21282,12115 21307,12132
@@ -30582,8 +30590,8 @@ EOF
 #: last_checked: 2020-10-03
 #: check_frequency: 90d
 #: next_check: 2020-12-31
-# REMOVED (hier fertig) ---	q4::inwork 40166,16723 39983,16747
-	q4::inwork 39983,16747 39839,16849 39780,16893 39447,17131 39287,17231 39235,17255
+# REMOVED (hier fertig) ---	q4::inwork 40173,16723 39983,16747
+	q4::inwork 39983,16747 39839,16849 39780,16893 39447,17131 39393,17172 39287,17231 39235,17255
 EOF
      },
      { from  => 1567288800, # 2019-09-01 00:00
@@ -32992,7 +33000,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: WOLTERSDORFSTOLPKANAL-2022
-#: source_id: LS/721-F/21/021
+#: source_id: LS/721-F/21/021 (inaktiv)
 #: source_id: LS/721-F/21/220 (bis 31.12.2024)
 	2::inwork 35479,7051 35482,7099
 EOF
@@ -35122,6 +35130,7 @@ EOF
 #: by: https://www.deutsches-architekturforum.de/thread/14423-neubau-firmenzentrale-der-berlin-hyp-mitte-in-bau/?postID=749004#post749004
 # REMOVED (no webcam found) --- #: by: https://baustelle.strabag.com/deutschland?tx_ecxsitebaustelle_webcam%5Baction%5D=detail&tx_ecxsitebaustelle_webcam%5Bcontroller%5D=Webcam&tx_ecxsitebaustelle_webcam%5Bday%5D=4&tx_ecxsitebaustelle_webcam%5Bmonth%5D=05&tx_ecxsitebaustelle_webcam%5Buid%5D=300&tx_ecxsitebaustelle_webcam%5Byear%5D=2022&cHash=96b9a3ee3c205301473cfbdb541e9d2a (Webcam)
 #: by: https://www.berlinhyp.de/de/%C3%BCber-uns/neubauvorhaben (Fertigstellung voraussichtlich 2024)
+#: by: https://www.berliner-feuerwehr.de/aktuelles/einsaetze/brandbekaempfung-in-tiergarten-4585/
 #: last_checked: 2024-06-25
 #: check_frequency: 90d
 #: next_check: 2024-12-31
@@ -36042,12 +36051,12 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2022-07-01 07:00:00"), # 1655010000, # 2022-06-12 07:00
-       until => $isodate2epoch->("2024-08-31 17:00:00"), # 1656514800, # 2022-06-29 17:00
-       text  => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, offen Richtung Osten, bis 31.08.2024 17:00',
+       until => $isodate2epoch->("2024-10-31 17:00:00"), # 1656514800, # 2022-06-29 17:00
+       text  => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, offen Richtung Osten, bis 31.10.2024 17:00',
        type  => 'handicap',
        source_id => 'viz2021:13.38248,52.53138,13.06.2022,07:00',
        data  => <<EOF,
-#: source_id: viz2021:13.38435,52.532054,01.07.2022,07:00 (bis 30.04.2024, hier nur Kfz-Verkehr) (bis 31.07.2024) (bis 31.08.2024)
+#: source_id: viz2021:13.38435,52.532054,01.07.2022,07:00 (bis 30.04.2024, hier nur Kfz-Verkehr) (bis 31.07.2024) (bis 31.08.2024) (bis 31.10.2024)
 #: osm_watch: way id="364468604" version="14"
 #: note: Radfahrer sind von der Einbahnstraßenregelung nicht ausgenommen (gesehen: 2022-07-14)
 	q4::inwork; 9011,14019 8870,13926
@@ -37195,7 +37204,7 @@ EOF
 #: by: https://bauprojekte.deutschebahn.com/media/projects/13075/docs/HZ_berlin-lichtenberg_eue_20230630ne.pdf (alte Sperrung, bis 24.07.2023 17:00)
 #: note: Halteverbotsschilder gelten bis zum 30.06.2024; am Haltestellenaushang steht "für etwa 6 Monate" (ab Anfang Januar 2024)
 #: priority: #B
-#: last_checked: 2024-08-11 (osm)
+#: last_checked: 2024-08-14
 #: check_frequency: 30d
 #: next_check: 2024-08-31
 	2::inwork 15777,10897 15820,10916 15870,10938
@@ -37465,6 +37474,7 @@ EOF
 #: source_id: viz2021:13.429184,52.556411,11.10.2022,09:00 (bis 2.6.2023) (bis 14.7.2023) (bis 21.7.2023) (bis 25.8.2023) (bis 10.8.2023) (inaktiv)
 #: source_id: viz2021:13.429109,52.55666,17.06.2024,07:00 (bis 01.08.2024) (bis 02.09.2024)
 #: source_id: viz2021:13.43258,52.55758,04.07.2024,10:00 (bis 16.08.2024) (inaktiv)
+#: source_id: viz2021:13.432539,52.557626,05.07.2024,12:00 (bis 23.08.2024)
 #: note: außerdem unklare Regelung für Radfahrer auf der Prenzlauer Promenade Richtung Norden
 	q3::inwork; 12010,16774 12230,16915
 # REMOVED --- #: note: hier u.U. Umwege erforderlich
@@ -38311,7 +38321,7 @@ EOF
 #: by: https://nitter.net/VIZ_Berlin/status/1683714580856311808#m
 #: by: https://www.bahninfo-forum.de/read.php?9,727655,776539#msg-776539
 #: source_id: viz2021:13.51407,52.46244,18.08.2022,07:00 (beide Richtungen, bis 28.08.2023) (inaktiv)
-#: source_id: viz2021:13.513875,52.463639,25.07.2023,12:00 (bis 01.09.2023, weitere Arbeiten im Anschluss) (bis 11.04.2024) (bis 12.12.2024)
+#: source_id: viz2021:13.513875,52.463639,25.07.2023,12:00 (bis 01.09.2023, weitere Arbeiten im Anschluss) (bis 11.04.2024) (bis 12.12.2024) (bis 14.11.2024)
 # REMOVED --- #: also_indoor: traffic (H,G,W) --- #: priority: #B --- #: last_checked: 2023-08-28
 # REMOVED (kann nicht gehalten werden) --- #: next_check: 2023-08-28
 	q4::inwork 17962,6674 17991,6431
@@ -38502,7 +38512,7 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2023-11-26 00:00:00"), # $isodate2epoch->("2023-07-23 00:00:00"), # 1676329200, # 2023-02-14 00:00
-       until => $isodate2epoch->("2024-05-31 18:00:00"), # 1700765306, # $isodate2epoch->("2023-11-30 23:59:59"), # $isodate2epoch->("2023-10-31 18:00:00"), # undef, # 1681595999, # 2023-04-15 23:59
+       until => 1723574354, # $isodate2epoch->("2024-05-31 18:00:00"), # 1700765306, # $isodate2epoch->("2023-11-30 23:59:59"), # $isodate2epoch->("2023-10-31 18:00:00"), # undef, # 1681595999, # 2023-04-15 23:59
        #text  => 'Volkspark Wilmersdorf: Weg zwischen Bundesallee und Prinzregentenstr. wird saniert, Komplettsperrung, voraussichtlich bis Ende Oktober 2023, evtl. wird verlängert (Stand Anfang November Oktober 2023: noch immer gesperrt)',
        text  => 'Volkspark Wilmersdorf: Weg zwischen Livländische Str. und Schoelerpark wird saniert, Stand Mai 2024: Weg ist gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
@@ -38513,15 +38523,15 @@ EOF
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1347368.php (ab KW 30/2023 für voraussichtlich drei Monate, zwischen Bundesallee und Prinzregentenstraße)
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1388333.php (abgeschlossen + neue Bauarbeiten)
 #: by: https://www.berliner-woche.de/wilmersdorf/c-bauen/neue-wege-im-volkspark_a400700
-#: add_fragezeichen: Sind die Bauarbeiten im Volkspark Wilmersdorf beendet?
+#: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1475931.php
+# REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten im Volkspark Wilmersdorf beendet?
 # REMOVED --- #: last_checked: 2023-11-06 vvv --- #: check_frequency: 14d vvv --- #: next_check: 2023-10-31 vvv
 # REMOVED (hier nicht) ---	2::inwork 5651,8218 5730,8207
 # REMOVED (hier vermutlich fertig) ---	2::inwork 5730,8207 5700,8241
 # REMOVED (hier fertig) ---	2::inwork 5700,8241 5687,8280 5699,8308
 # REMOVED (hier fertig) ---	2::inwork 5730,8207 5918,8221
 # REMOVED (hier fertig) ---	2::inwork 5433,8407 5454,8403 5617,8258
-#: last_checked: 2024-05-04
-#: check_frequency: 45d
+# REMOVED --- #: last_checked: 2024-05-04 --- #: check_frequency: 45d
 # REMOVED --- #: next_check: 2024-03-25
 	2::inwork 5166,8467 5212,8602
 # REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
@@ -39085,7 +39095,7 @@ EOF
 #: osm_watch: note 3834145 4
 #: osm_watch: note 3834144 2
 #: also_indoor: traffic (ex-H,re-G,B,re-W,T)
-#: last_checked: 2024-08-07 (traffic)
+#: last_checked: 2024-08-13 (traffic)
 # REMOVED --- #: check_frequency: 30d
 #: check_frequency: 7d
 # REMOVED --- #: next_check: 2024-05-24
@@ -39603,7 +39613,7 @@ EOF
 #: note: Hauffstr.: Halteverbotsschilder an der Ecke Hauffstr./Spittastr. bis 31.10.2024; Durchgang bis zum Sporplatz+Spielplatz ist zurzeit vom Spittastr.-Ende noch möglich
 #: by: https://bauprojekte.deutschebahn.com/p/berlin-lichtenberg-eue (hier: bis September 2024)
 #: add_fragezeichen: Ist der Weg noch immer gesperrt?
-#: last_checked: 2024-08-11 (osm)
+#: last_checked: 2024-08-14
 #: check_frequency: 30d
 #: next_check: 2024-10-31
 #: osm_watch: way id="58182828" version="27"
@@ -40856,8 +40866,10 @@ EOF
 #: by: https://nachgefragt.bvg.de/wp-content/uploads/BVG_Informationsveranstaltung_Baumassnahmen-Schoeneweide-2024.pdf (Bauarbeiten bis 20. Oktober 2024)
 #: by: https://www.bahninfo-forum.de/read.php?9,413132,797608#msg-797608 (Ende der Bauarbeiten am 20.10.2024)
 #: by: https://nachgefragt.bvg.de/schoeneweide/ (Verlängerung der aktuellen Bauphase: bis 05.07.2024) (aktuelle Bauphase bis voraussichtlich 17.08.2024)
-#: source_id: viz2021:13.51409,52.4624,28.08.2023,16:30 (bis 11.04.2024) (bis 12.12.2024)
+#: source_id: viz2021:13.51409,52.4624,28.08.2023,16:30 (bis 11.04.2024) (bis 12.12.2024) (bis 14.11.2024)
+#: source_id: viz2021:13.513875,52.463639,25.07.2023,12:00 (bis 14.11.2024)
 #: source_id: bvg2024:365#HIM_FREETEXT_230808 (bis 31.08.2024)
+#: source_id: bvg2024:m17#HIM_FREETEXT_235135 (ab 2024-08-17, ohne Endedatum)
 #: XXX zukünftige Einschränkungen (mittlerweile: der Bauzustand wird vermutlich erst am 17.07.2024 gewechselt):
 #: XXX * 29. Juni 2024 - 09. August 2024: Sperrung von Edisonstr. und östlicher Wilhelminenhofstr. (dafür vielleicht die beiden anderen Stränge wieder frei?)
 #: XXX * 10. August 2024 - 20. Oktober 2024: Sperrung der östlichen Wilhelminenhofstr. (nur die Fahrbahn oder auch der Radweg? und dafür alles andere wieder frei?)
@@ -41070,15 +41082,15 @@ EOF
      { from  => undef, # 
        until => undef, # XXX
        #text  => 'Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt; außerdem Sperrung der Kreuzung Cottbusser Str./Cottbusser Platz',
-       text  => 'Alt-Hellersdorf - Cottbusser Str.: Bauarbeiten, Weg ist gesperrt, Ende der Bauarbeiten unbekannt',
+       text  => 'Alt-Hellersdorf - Cottbusser Str.: Weg ist noch offiziell gesperrt (Stand Mitte August 2024), Durchfahrt ist nach Ende der Asphaltierung unter Umständen bereits möglich',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2024-06-02 vvv
-#: check_frequency: 60d vvv
-#: add_fragezeichen: Ist der Weg weiterhin gesperrt? Falls nicht, hat sich die Wegoberfläche geändert?
-#: osm_watch: way id="381691526" version="10"
+#: last_checked: 2024-08-14 vvv
+#: check_frequency: 14d vvv
+#: add_fragezeichen: Ist der Weg nun offiziell geöffnet?
+#: osm_watch: way id="381691526" version="11"
 	2::inwork 23305,14914 23318,14847 23297,14772
-# REMOVED (offen) --- #: add_fragezeichen: Ist die Kreuzung weiterhin gesperrt? vvv --- #: note: Halteverbotsschilder bis 2.2.2024, mittlerweile Halteverbotsschilder bis 26.4.2024 vvv --- #: also_indoor: traffic (ex-B,G) ---	q3::inwork 23222,14809 23297,14772 23369,14756 --- 	q3::inwork 23288,14719 23297,14772 --- #: note ^^^ --- #: add_fragezeichen ^^^
+# REMOVED (offen) --- #: add_fragezeichen: Ist die Kreuzung weiterhin gesperrt? vvv --- #: note: Halteverbotsschilder bis 2.2.2024, mittlerweile Halteverbotsschilder bis 26.4.2024 vvv --- #: also_indoor: traffic (ex-B,G) ---	q3::inwork 23222,14809 23297,14772 23369,14756 ---	q3::inwork 23288,14719 23297,14772 --- #: note ^^^ --- #: add_fragezeichen ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 EOF
@@ -41171,17 +41183,21 @@ EOF
        until => $isodate2epoch->("2024-09-01 17:00:00"), # 1699476063, # undef, # 1698681600, # 2023-10-30 17:00
        dont_check_date => 1,
        #text  => 'Neue Roßstr.: Bauarbeiten, Richtung Annenstr. zwischen Wallstr. und Alte/Neue Jakobstr. gesperrt, auch Radfahrer sind betroffen, vom 25.09.2023 07:00 bis 30.10.2023 17:00, evtl. wird verlängert',
-       text  => 'Neue Roßstr.: Bauarbeiten, kurzer Abschnitt Richtung Annenstr. zwischen Wallstr. und Alte/Neue Jakobstr. gesperrt, auch Radfahrer sind betroffen, bis 01.09.2024',
+       #text  => 'Neue Roßstr.: Bauarbeiten, kurzer Abschnitt Richtung Annenstr. zwischen Wallstr. und Alte/Neue Jakobstr. gesperrt, auch Radfahrer sind betroffen, bis 01.09.2024',
+       text  => 'Neue Roßstr.: Bauarbeiten, kurzer Abschnitt Richtung Fischerinsel zwischen Alte/Neue Jakobstr. und Wallstr. gesperrt, auch Radfahrer sind betroffen, bis 01.09.2024',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.408994,52.511691,25.09.2023,07:00 (bis 30.10.2023, hier fälschlicherweise nur für den Kfz-Verkehr) (inaktiv)
-#: source_id: viz2021:13.408894,52.511858,29.07.2024,08:00 (bis 23.08.2024) (bis 01.09.2024)
+#: source_id: viz2021:13.408894,52.511858,29.07.2024,08:00 (bis 23.08.2024) (bis 01.09.2024) (inaktiv)
+#: source_id: viz2021:13.410127,52.510579,29.07.2024,08:00 (bis 01.09.2024)
+#: source_id: bvg2024:165#HIM_FREETEXT_235145 (kein Endedatum)
+#: source_id: bvg2024:147#HIM_FREETEXT_235146 (kein Endedatum)
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1817777068144468443
 #: by: https://pbs.twimg.com/media/GTaZL-gWwAEJYDd?format=jpg&name=large
 # REMOVED (alte Notizen) --- #: note: bei VIZ inaktiv, tatsächlich noch aktiv --- #: note: etwa 1/3 der Strecke sind gesperrt, deshalb q3
 # REMOVED (bei mapillary nicht mehr gesehen) --- #: last_checked: 2023-11-07 --- #: check_frequency: 14d
 #: note: relativ kurzer Abschnitt (~50-80m) ist betroffen, deshalb q4 -> q3
-	q3::inwork; 10722,11816 10815,11662
+	q3::inwork; 10815,11662 10722,11816
 EOF
      },
      { from  => 1695746966, # 2023-09-26 18:49
@@ -41463,7 +41479,7 @@ EOF
 EOF
      },
      { from  => undef, # 1698051600, # 2023-10-23 11:00
-       until => undef, # 1700780340, # 2023-11-23 23:59
+       until => 1723526964, # undef, # 1700780340, # 2023-11-23 23:59
        #text  => 'Rungestr.: Anbindung Brückenstr. wegen Bauarbeiten gesperrt, vom 24.10.2023 11:00 bis 23.11.2023 23:59',
        text  => 'Rungestr.: Anbindung Brückenstr. wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
@@ -41471,8 +41487,8 @@ EOF
 #: next_check_id: RUNGE-2023
 #: source_id: viz2021:13.417345,52.512721,24.10.2023,11:00 (bis 23.11.2023) (inaktiv)
 # REMOVED --- #: note: Ampeleintrag beachten! (-> REMOVED)
-#: note: etwa 40 Meter gesperrt; möglicher Bordstein; mittlerweile (2024-08-02) offiziell noch Durchfahrt verboten, aber eine Fahrgasse kann offen sein
-#: last_checked: 2024-08-02 (mapillary)
+#: note: etwa 40 Meter gesperrt; möglicher Bordstein; mittlerweile (2024-08-02) offiziell noch Durchfahrt verboten, aber eine Fahrgasse kann offen sein; mittlerweile sind die Verbotsschilder weggedreht
+#: last_checked: 2024-08-09 (mapillary)
 	q3::inwork 11291,11876 11185,11883
 EOF
      },
@@ -42251,7 +42267,7 @@ EOF
 #: source_id: viz2021:13.404099,52.525926,12.01.2024,07:00 (bis 31.03.2025)
 #: note: eigentlich q4+::inwork;
 #: also_indoor: traffic (G,B)
-#: last_checked: 2024-07-08
+#: last_checked: 2024-08-09 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2025-03-01
 	q4::inwork 10385,13348 10341,13376
@@ -43154,12 +43170,12 @@ EOF
 #: note: laut Baustellenplakat (siehe bahninfo-forum) nur bis 05.07.2024, oder gibt es da nur eine Änderung der Verkehrsführung?
 #: note: laut rbb bis 15.8.2024 (go with it)
 #: note: bei VIZ seit dem 8.8.2024 inaktiv (zu früh?)
-#: source_id: viz2021:13.505693,52.445739,08.05.2024,07:00 (Sterndamm und Anbindungen, bis 08.08.2024) (inaktiv) (bis 20.08.2024)
+#: source_id: viz2021:13.505693,52.445739,08.05.2024,07:00 (Sterndamm und Anbindungen, bis 08.08.2024) (inaktiv) (bis 20.08.2024) (bis 15.08.2024, im Anschluss weitere Arbeiten)
 #: source_id: viz2021:13.50508,52.44526,08.05.2024,07:00 (bis 08.05.2024) (inaktiv)
 Sterndamm: gemeinsamer Rad- und Gehweg	q3::inwork; 17387,4446 17428,4503 17471,4570 17516,4657
 Winckelmannstr. am Sterndamm	q4::inwork 17428,4503 17476,4337
 Trützschlerstr.	q2::inwork 17471,4570 17612,4460
-#: source_id: viz2021:13.506038,52.441227,08.05.2024,07:00 (Winckelmannstr., bis 08.08.2024) (inaktiv) (bis 20.08.2024)
+#: source_id: viz2021:13.506038,52.441227,08.05.2024,07:00 (Winckelmannstr., bis 08.08.2024) (inaktiv) (bis 20.08.2024) (bis 19.08.2024, im Anschluss weitere Arbeiten)
 #: source_id: viz2021:13.5056,52.44039,08.05.2024,07:00 (bis 08.05.2024) (inaktiv)
 Winckelmannstr.	q4::inwork 17503,4148 17498,4078 17468,3979 17465,3768
 #: by: krickstadt
@@ -43417,6 +43433,7 @@ EOF
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2024/pressemitteilung.1452894.php
 #: by: https://www.berliner-woche.de/mitte/c-bauen/uferpromenade-gesperrt_a417283
 #: XXX Wirken sich die Bauarbeiten auf die Wegbeschaffenheit aus? Stimmt q2 eigentlich noch?
+#: last_checked: 2024-08-13
 #: next_check: 2024-08-31
 	2::inwork 9538,12993 9508,12991 9279,12953
 EOF
@@ -43511,7 +43528,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1723571819, # undef, # XXX
        #text  => 'Wallstr.: Bauarbeiten, zwischen Inselstr. und Neue Roßstr. Richtung Westen gesperrt, vermutlich bis Mitte Juli 2024, evtl. wird verlängert',
        text  => 'Wallstr.: Bauarbeiten, zwischen Inselstr. und Neue Roßstr. Richtung Westen gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
@@ -43519,9 +43536,7 @@ EOF
 #: note: Länge der Einbahnstraßenregelung etwa 80m; außerdem ist auch die Inselstraße Einbahnstraße, hier aber für Radfahrer frei
 #: note: Halteverbotsschilder bis 17.07.2024; wurde trotz Bauarbeiten nicht verlängert
 #: note: mittlerweile (Ende Juli/Anfang August 2024) wurde die Einbahnstraßenregelung bis zur Neue Roßstr. verlängert, deshalb q3 -> q4
-#: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer?
-#: last_checked: 2024-08-05
-#: check_frequency: 14d
+# REMOVED (mittlerweile für Radfahrer in beiden Richtungen frei) --- #: add_fragezeichen: Besteht die Einbahnstraßenregelung noch immer? --- #: last_checked: 2024-08-13 --- #: check_frequency: 14d
 # REMOVED --- #: check_frequency: 30d
 # REMOVED --- #: next_check: 2024-07-17
 	q4::inwork; 10908,11908 10722,11816
@@ -43649,7 +43664,7 @@ EOF
 #: by: https://www.berliner-woche.de/mitte/c-bauen/bauarbeiten-in-der-friedrichstadt-ziehen-sich-bis-2027-hin_a420056
 #: source_id: viz2021:13.398583,52.510008,26.06.2024,07:00 (bis 01.07.2027)
 #: XXX Im Endzustand: für den Kfz-Verkehr Einbahnstraßenregelung zwischen Markgrafenstr. und Jerusalemer Str. (offen Richtung Westen), offen für Radfahrer
-#: last_checked: 2024-08-06 vvv
+#: last_checked: 2024-08-13 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2027-07-01 vvv
 Krausenstr. (erster Bauabschnitt)	q4::inwork 10176,11593 10001,11577
@@ -43796,7 +43811,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.51055,52.44458,02.07.2024,17:07 (bis 15.08.2024) (inaktiv)
-#: source_id: viz2021:13.508246,52.445764,02.07.2024,07:00 (hier nur Kfz-Verkehr, bis 15.08.2024) (bis 20.08.2024)
+#: source_id: viz2021:13.508246,52.445764,02.07.2024,07:00 (hier nur Kfz-Verkehr, bis 15.08.2024) (bis 20.08.2024) (bis 15.08.2024)
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1808152802205503982 (hier auch nur Kfz-Verkehr)
 # REMOVED (Anlieger frei, keine Bauarbeiten erkennbar) --- #: add_fragezeichen: Sind Radfahrer von der Sperrung betroffen?
 	q4::inwork; 17794,4443 17676,4540 17516,4657
@@ -43826,16 +43841,20 @@ EOF
 EOF
      },
      { from  => 1720908000, # 2024-07-14 00:00
-       until => 1733007600, # 2024-12-01 00:00
-       text  => 'Quermatenweg: Sanierung zwischen Ithweg und Wasserkäfersteig, abschnittsweise Sperrung der Fahrbahn, vom 15.07.2024 bis 30.11.2024',
+       until => $isodate2epoch->("2024-10-31 18:00:00"), # 1733007600, # 2024-12-01 00:00
+       text  => 'Quermatenweg: Sanierung zwischen Ithweg und Wasserkäfersteig, abschnittsweise Sperrung der Fahrbahn, vom 15.07.2024 bis 31.10.2024',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1463120.php
 #: by: https://www.berliner-woche.de/zehlendorf/c-bauen/quermatenweg-wird-saniert_a420563
-#: next_check: 2024-09-02
-zwischen Ithweg und und Ottmachauer Steig bis zum 02.09.2024	q4::inwork -326,5042 -473,5002 -670,4903
-#zwischen Ottmachauer Steig bis Hirschhorner Weg bis zum 17.10.2024	q4::inwork -670,4903 -820,4772
-#zwischen Hirschhorner Weg bis Wasserkäfersteig bis zum 29.11.2024	q4::inwork -820,4772 -857,4725 -927,4638
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1476212.php
+#: next_check: 2024-08-18
+#: historical_note: ursprünglich bis zum 02.09.2024
+zwischen Ithweg und und Ottmachauer Steig 15.07.2024 - 18.08.2024	q4::inwork -326,5042 -473,5002 -670,4903
+# #: historical_note: ursprünglich bis zum 17.10.2024
+#zwischen Ottmachauer Steig bis Hirschhorner Weg 19.08.2024 - 18.09.2024	q4::inwork -670,4903 -820,4772
+# #: historical_note: ursprünglich bis zum 29.11.2024
+#zwischen Hirschhorner Weg bis Wasserkäfersteig 19.09.2024 - 31.10.2024	q4::inwork -820,4772 -857,4725 -927,4638
 EOF
      },
      { from  => 1718628480, # 2024-06-17 14:48
@@ -44035,7 +44054,8 @@ EOF
        text  => 'Britz - Golzow: Deckenerneuerung, Sperrung, vom 12.08.2024 08:00 Uhr bis 31.08.2024 16:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-#: source_id: LS/221-E/24/100 (bis 31.08.2024)
+#: source_id: LS/221-E/24/100 (bis 31.08.2024) (inaktiv)
+#: source_id: LS/221-E/24/100.1 (bis 31.08.2024)
 	2::inwork 36914,54197 36647,55090 36576,55996 36535,56402 36621,56807
 EOF
      },
@@ -44125,14 +44145,17 @@ EOF
      },
      { from  => 1723125720, # 2024-08-08 16:02
        until => 1727708400, # 2024-09-30 17:00
-       text  => 'Invalidenstr.: Sperrung für Radfahrer zwischen Hessische Str. und Chausseestr., vom 09.08.2024 16:02 bis 30.09.2024 17:00',
+       text  => 'Invalidenstr.: Engstelle zwischen Hessische Str. und Chausseestr., vom 09.08.2024 16:02 bis 30.09.2024 17:00',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.382396,52.530372,09.08.2024,16:02 (nur der Radverkehr wird umgeleitet! bis 30.09.2024)
 #: source_id: viz2021:13.3794,52.52949,09.08.2024,17:31 (bis 30.09.2024) (inaktiv)
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1821911366766084588
 #: by: https://pbs.twimg.com/media/GUi6qtgW4AAgG3O?format=jpg&name=large
-	q4::inwork; 8685,13728 8841,13800 8935,13844
+#: note: kein Verbot für Radfahrer, Gehweg für Radfahrer frei, also ist die Fahrbahn erlaubt, Umleitung über Hessische Str. und Chausseestr. ausgeschildert
+#: note: in diesem Abschnitt etwa 40m betroffen, hier noch nicht ganz so eng, davor verlegte Straßenbahnhaltestelle
+	q2::inwork; 8685,13728 8841,13800
+	q4+::inwork; 8841,13800 8935,13844
 EOF
      },
      { from  => 1723352400, # 2024-08-11 07:00
@@ -44175,6 +44198,28 @@ EOF
        data  => <<EOF,
 #: source_id: viz2021:13.24754,52.50541,12.08.2024,06:00 (bis 31.01.2025)
 	q4::inwork -45,10912 -220,10893 -466,10860
+EOF
+     },
+     { from  => 1715637600, # 2024-05-14 00:00
+       until => 1733007599, # 2024-11-30 23:59
+       text  => 'Buchholz - Wegendorf: Bauarbeiten, Sperrung, voraussichtlich bis Ende November 2024',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: https://www.altlandsberg.de/wirtschaft-stadtentwicklung/stadtentwicklung/aktuelle-massnahmen/baumassnahme-ortsverbindung-wegendorf-bucholz-alte-k6427/
+#: last_checked: 2024-08-14
+#: next_check: 2024-11-30
+	2::inwork 34460,22169 34901,21638 36198,20464
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Cecilienplatz: Wochenmarkt, Mo, Mi, Fr 09:00-18:00',
+       type  => 'handicap',
+       recurring => 1,
+       data  => <<EOF,
+#: by: https://www.mercalisto.com/de/markt/78/wochenmarkt-cecilienplatz-ernst-bloch-strasse
+#: tempex: mo,mi,fr T09-T18
+	q4::temp:clock 23028,13062 23022,13133 22977,13148
 EOF
      },
     );

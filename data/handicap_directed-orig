@@ -204,8 +204,8 @@ Rudower Str. - Köllnischer Platz: linker Gehweg	DH:h=q3,30 21585,4459 21781,4470
 # 
 Bahnhofstr. - Platz des 23. April: linker Gehweg	DH:h=q3,100 22116,5442 22090,5402 22065,5364 22056,5350 22057,5305
 # 
-Lidl-Parkplatz - Alt-Kaulsdorf: linker Gehweg	DH:h=q3,60 22982,11157 22996,11264 22937,11265
-Alt-Kaulsdorf - Lidl-Parkplatz: linker Gehweg	DH:h=q3,90 23113,11262 22996,11264 22982,11157
+Lidl-Parkplatz - Alt-Kaulsdorf: linker Gehweg	DH:h=q3,60 22982,11157 22994,11251 22996,11264 22937,11265
+Alt-Kaulsdorf - Lidl-Parkplatz: linker Gehweg	DH:h=q3,90 23113,11262 22996,11264 22994,11251 22982,11157
 # 
 Husemannstr. - Danziger Str.: Umweg zur Fußgängerampel	DH:len=110:tl 11265,14756 11285,14958 11154,14985
 Danziger Str. - Husemannstr.: linker Gehweg	DH:h=q3,55 11339,14946 11325,14949 11285,14958 11265,14756
@@ -490,7 +490,7 @@ Minna-Todenhagen-Brücke - Köpenicker Landstr: zusätzliche Ampel	DH:t=20 16834,69
 #: note: laut Bauschild der Wasserbetriebe bis Frühjahr 2024, mittlerweile bis Juni 2024
 #: osm_watch: way id="460741797" version="8"
 #: osm_watch: way id="1225572236" version="1"
-#: last_checked: 2024-06-07
+#: last_checked: 2024-08-08 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2024-08-31
 # REMOVED --- #: valid: -20231006
@@ -506,7 +506,7 @@ Alt-Friedrichsfelde: Umweg über einen asphaltierten Notweg, kurvig	DH:len=34:h=q
 #: source_id: viz2021:13.34261,52.477362,23.04.2024,07:00 (bis 28.06.2024) (bis 02.08.2024, im Anschluss weitere Arbeiten) (bis 04.10.2024, im Anschluss weitere Arbeiten)
 #: source_id: viz2021:13.34245,52.47724,27.06.2024,14:25 (bis 02.07.2024) (inaktiv)
 #: source_id: viz2021:13.34245,52.47724,02.07.2024,09:00 (bis 02.08.2024) (inaktiv)
-#: last_checked: 2024-06-15
+#: last_checked: 2024-08-09 (mapillary)
 #: next_check: 2024-10-04
 #: valid: -20241004
 Hauptstr. -> Rubensstr.: Umweg über Baustellenampel	DH:len=80 6333,7927 6293,7875 6306,7864

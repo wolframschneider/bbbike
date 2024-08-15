@@ -1016,6 +1016,7 @@ Lichtenberger Str. [Wohngebiet]	1 11947,12494 11867,12284
 Mittelstreifen mit Gitter	3nocross::ignrte 7268,8960 7239,8907 7201,8870
 Richard-von-Weizsäcker-Pl. -> Hauptstr.: Mittelstreifen mit Gitter	3::igndisp 7307,8945 7239,8907 7201,8870
 Hauptstr. -> Richard-von-Weizsäcker-Pl.: Mittelstreifen mit Gitter	3::igndisp 7268,8960 7239,8907 7307,8945
+Eilenburger Str.	1s 25743,15118 25752,15219 25578,15238
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -1119,6 +1120,8 @@ Georg-Hermann-Allee -> Hans-Paasche-Str.: Straßenbahntrasse	3::igndisp -13420,14
 Hans-Paasche-Str. -> Georg-Hermann-Allee: Straßenbahntrasse	3::igndisp -13263,1394 -13422,1383 -13424,1290
 Georg-Hermann-Allee -> Peter-Huchel-Str.: Straßenbahntrasse	3::igndisp -13422,1383 -13424,1290 -13253,1310
 Peter-Huchel-Str. -> Georg-Hermann-Allee: Straßenbahntrasse	3::igndisp -13253,1310 -13424,1290 -13429,1069
+Heinrich-Dorrenbach-Str.	1s 39533,14774 39578,14967
+Mahlsdorfer Str. [zur Böhlener Str.]	1 26014,15039 26093,15098
 Trebbiner Str.	2 11065,-5338 11040,-5252 11091,-5242 11107,-5326 11119,-5326
 Marwitzer Str. (Falkensee)	1 -10239,17791 -10344,17792 -10417,17770
 Osramplatz (Hohen Neuendorf)	1 1261,28406 1229,28298 1198,28265
@@ -1287,7 +1290,7 @@ B104: Neubrandenburg -> Feldstr.: Mittelstreifen nicht überquerbar	3::igndisp -9
 Feldstr. -> Pasewalk: Mittelstreifen nicht überquerbar	3::igndisp -719,128043 -724,127995 6,127935
 Am Neuen Friedhof -> B104: Neubrandenburg: Mittelstreifen nicht überquerbar	3::igndisp -27,127909 6,127935 -724,127995
 B104 - Am Neuen Friedhof	1 6,127935 -27,127909
-Einbahnstraßen in Altlandsberg	1 32206,18073 32185,17995 32096,18020 32125,18092 32206,18073
+Einbahnstraßen in Altlandsberg	1 32214,18070 32185,17995 32096,18020 32125,18092 32214,18070
 Korswandt - Ahlbeck: für Radfahrer gesperrt	2 59081,169443 59316,169501 59514,169815 59738,170055 59924,170158 60059,170169 60186,170284 60245,170509 60347,170633 60601,170748 60636,170816
 Bansin	1 57181,174881 57031,174737
 Bansin	1 57181,174881 57341,175031 57406,175093
@@ -1611,6 +1614,8 @@ Alt-Kaulsdorf [Nebenfahrbahn] -> Alt-Kaulsdorf: Mittelstreifen	3::igndisp 23382,
 Alt-Kaulsdorf -> Finkenwalder Weg: Mittelstreifen	3::igndisp 23362,11263 23447,11264 23449,11281
 Finkenwalder Weg -> Alt-Kaulsdorf: Mittelstreifen	3::igndisp 23449,11281 23447,11264 23648,11265
 Mittelstreifen	3nocross::ignrte 22937,11265 22996,11264 23113,11262
+Lidl-Parkpl. -> Alt-Kaulsdorf: Mittelstreifen	3::igndisp 22994,11251 22996,11264 22937,11265
+Alt-Kaulsdorf -> Lidl-Parkpl.: Mittelstreifen	3::igndisp 23113,11262 22996,11264 22994,11251
 Mittelstreifen	3nocross::ignrte 24175,11265 24019,11264 23848,11264 23648,11265
 Alt-Mahlsdorf -> Gielsdorfer Str.: Mittelstreifen	3::igndisp 23848,11264 24019,11264 24019,11286
 Gielsdorfer Str. -> Alt-Mahlsdorf: Mittelstreifen	3::igndisp 24019,11286 24019,11264 24175,11265
@@ -1950,6 +1955,10 @@ Fußgängerbrücke -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::ign
 Fußgängerbrücke -> Robert-Uhrig-Str.: nicht passierbarer Mittelstreifen	3::igndisp 17746,11767 17746,11748 17744,11703
 nicht passierbarer Mittelstreifen	3nocross::ignrte 18626,11742 18696,11754 18853,11780 19004,11780 19092,11776 19389,11761 19661,11746 19726,11743 19907,11734 19985,11727 20114,11719 20161,11715 20375,11694
 Gensinger Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 18934,11796 18853,11780 19004,11780
+Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19092,11776 19004,11780 19005,11767
+Gensinger Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 19005,11767 19004,11780 18853,11780
+Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19389,11761 19092,11776 19110,11705
+Gensinger Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 19110,11705 19092,11776 19004,11780
 Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19092,11776 19389,11761 19138,11815
 Alt-Friedrichsfelde -> Waldbacher Weg: nicht passierbarer Mittelstreifen	3::igndisp 19389,11761 19661,11746 19631,11899
 Waldbacher Weg -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 19631,11899 19661,11746 19726,11743
@@ -2530,9 +2539,6 @@ Stadion Buschallee -> Hansastr.: Straßenbahntrasse	3::igndisp 15759,16671 15735,
 Falkenberger Str. -> Hansastr.: Straßenbahntrasse	3::igndisp 15866,16823 15875,16816 15929,16870
 Hansastr. -> Falkenberger Str.: Straßenbahntrasse	3::igndisp 15776,16721 15875,16816 15866,16823
 Mittelstreifen	3nocross::ignrte -3255,14685 -3209,14662 -3150,14631
-Mittelstreifen	3nocross::ignrte 22883,13013 22924,12833 22967,12647
-Hellersdorfer Str. -> Bansiner Str.: Mittelstreifen	3::igndisp 22967,12647 22924,12833 22896,12827
-Bansiner Str. -> Hellersdorfer Str.: Mittelstreifen	3::igndisp 22896,12827 22924,12833 22883,13013
 Mittelstreifen	3nocross::ignrte 12564,4308 12637,4014 12655,3882
 Mittelstreifen	3nocross::ignrte 6048,4797 6003,4857 6029,4902 6048,4952
 Albrechtstr. -> zur Albrechtstr.: Mittelstreifen	3::igndisp 6048,4797 6003,4857 5926,4966
@@ -2707,7 +2713,7 @@ tragen (8 Stufen)	0:10:-231 15865,10965
 tragen (15 Stufen)	0:25:38 27728,-3146
 tragen (2 Stufen)	0:5:-180 3431,1987
 tragen	0:35:-120 3580,4309
-tragen (ca. 34 Stufen)	0:35:-138 22675,12008
+tragen (ca. 34 Stufen)	0:35:-146 22670,12004
 tragen (13+14 Stufen)	0:30:-177 22859,12059
 tragen (12+13 Stufen)	0:30:-174 22857,12014
 tragen (20 Stufen)	0:30:-75 -1887,16673
@@ -2888,6 +2894,7 @@ tragen (Treppe, 31 Stufen)	0:30:-213 17983,8960
 tragen (Treppe, 5 Stufen)	0:10:-30 10290,12742
 tragen (8 weite Stufen)	0:30:-164 18121,10314
 tragen (insgesamt 61 Stufen)	0:60:-34 -3126,1798
+tragen (Treppe, 33 Stufen)	0:35:-81 10110,15678
 Schranke	BNP:3:-130:trailer=10 18638,11479
 Schranke	BNP:10:-180:trailer=30 18965,11706
 Schranke	BNP:3:-164:trailer=10 17793,10382
@@ -3451,6 +3458,7 @@ Schwingtor	BNP:5:-94:trailer=10 25136,10768
 Schranke	BNP:3:-213:trailer=10 13081,14090
 weites Drängelgitter	BNP:2:-78:trailer=7 7157,18810
 weites Drängelgitter	BNP:2:-215:trailer=7 1772,42835
+(Aldi/Rewe-Parkplatz): mit Bauzäunen abgesperrt, Neubau des Einkaufszentrums	2::inwork 23163,11113 23131,11124 23113,11262
 Zum Feldrain (Schulzendorf): wegen Hochbauarbeiten gesperrt	2::inwork 22927,-4974 22942,-4983 22922,-5098 22869,-5132 22860,-5130
 Milanstr. (Schulzendorf): wegen Hochbauarbeiten gesperrt	2::inwork 22854,-5002 22814,-5119
 Reiherhorst (Schulzendorf): wegen Hochbauarbeiten gesperrt	2::inwork 22814,-5119 22860,-5130 22848,-5176
@@ -3463,7 +3471,6 @@ Reinickendorfer Str.: Bauarbeiten im Bereich des Weddingplatzes	1s:inwork 7998,1
 Am Wriezener Bahnhof: Einbahnstraßenregelung	1s:inwork 12758,11915 12788,11898
 Am Wriezener Bahnhof: Einbahnstraßenregelung	1s:inwork 12788,11898 12944,11760 12993,11717 12986,11699 12959,11631
 Wriezener Karree: Einbahnstraßenregelung	1s:inwork 12959,11631 12728,11850
-Alt-Friedrichsfelde: Sperrung des Radwegs	1::inwork 19389,11761 19092,11776 19004,11780 18853,11780
 Virchow-Klinikum: Zufahrt gesperrt	2::inwork 6213,14777 6210,14808
 Park Babelsberg, Uferweg: wegen Bauarbeiten für das neue Strandbad gesperrt	2::inwork -11486,-1008 -11452,-974
 Magnus-von-Hirschfeld-Ufer: Sperrung in Höhe Kanzlergarten	2::inwork 7772,12694 7521,12581
@@ -3475,7 +3482,8 @@ An der alten Gärtnerei: Baustraße, gesperrt	2::inwork 10888,3787 10898,3865 1092
 Lisa-Fittko-Str.: Hochbauarbeiten, Weg existiert im südlichen Abschnitt noch nicht	2::inwork 7787,13838 7872,13685
 Matthäikirchplatz: Durchgang gesperrt	2::inwork 7933,11407 7970,11396 7934,11275
 Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,9039 19638,9070
-Straße 171: wegen Bauarbeiten gesperrt	2::inwork 12694,22570 12657,22596 12628,22604
+An der Streuobstwiese: kann noch durch Bauzäune abgesperrt sein	2::inwork 12628,22604 12668,22537
+Straße 171: wegen Bauarbeiten gesperrt	2::inwork 12694,22570 12657,22596
 zur Ontarioseestr.: Hochbauarbeiten, komplett gesperrt	2::inwork 18585,10024 18694,10018
 An der Villa Bolle: Bauarbeiten, gesperrt	2::inwork 22668,3125 22477,3109
 Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
@@ -3485,6 +3493,7 @@ Ulrich-Plenzdorf-Str.	2::inwork 14994,10732 15071,10716 15151,10699
 Potsdamer Platz - Bellevuestr.: wegen Bauarbeiten am ehemaligen Sony-Center gesperrt	2::inwork 8542,11502 8442,11555
 Götelstr.: Einbahnstraßenregelung	1 -3260,12540 -3252,12405 -3255,12338 -3284,12304 -3293,12304
 Mauerpark: Weg gesperrt	2::inwork 10071,15684 10045,15754 10061,15775 10050,15824 10046,15844 10081,15853
+Falkplatz: Weg gesperrt	2::inwork 10228,15488 10170,15659
 Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15844,10894 15856,10821
 (Ingeborg-Drewitz-Allee): wegen Bauarbeiten gesperrt	2::inwork 7789,12764 7649,12764
 (Ingeborg-Drewitz-Allee): wegen Bauarbeiten gesperrt	2::inwork 7588,12734 7819,12729
@@ -4152,3 +4161,5 @@ Richard-von-Weizsäcker-Platz: Gehweg bis Akazienstr.	1::igndisp 7201,8870 7242,8
 Sonnenallee: linker Gehweg bis zur Ampel	1::igndisp 14334,7395 14423,7333
 Blockdammweg: linker Gehweg bis zum Fußgängerbereich in der Parkstadt Karlshorst	1::igndisp 17699,8843 17729,8850
 Orankeweg -> Hansastr./Orankeweg: linker Gehweg bis zur Überquerungsmöglichkeit, Bordstein	1::igndisp 14967,15885 14906,15859
+Lidl-Parkplatz - Alt-Kaulsdorf: linker Gehweg bis zur Ampel "Am Feldberg"	1::igndisp 22937,11265 22994,11251
+Alt-Kaulsdorf - Lidl-Parkplatz: linker Gehweg ab Ampel Myslowitzer Str.	1::igndisp 22994,11251 23113,11262
