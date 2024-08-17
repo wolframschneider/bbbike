@@ -1175,7 +1175,10 @@ Am Bahnhof Wuhlheide: nicht ausgeschildert	CP2; 20640,7122 20654,7136
 Lindenschwärmerweg: Privatstraße	CS 21308,11075 21294,11097 21187,11132
 Fechinger Weg: Privatstraße	CS 21409,11941 21411,11863 21456,11825
 Wischbergweg: im Kleingartenbereich nicht ausgeschildert	CP2; 13617,18045 13733,18161
-ausgeschildert "Zur Bansiner Str."	CP2; 22896,12827 22906,12766
+# 
+zusätzlich ausgeschildert "Zur Bansiner Str."	CP2; 22896,12827 22906,12766
+Bansiner Str.: nicht ausgeschildert	CP2; 22896,12827 22933,12837
+# 
 #: note: mit Kette an der Stadtgrenze, kann aber umfahren werden
 Waldstr.: Privatstraße	CS 24736,8093 24768,8087
 Waldstr.: Anlieger frei	CS 24768,8087 24796,8245
@@ -1952,8 +1955,6 @@ Straße am Güterbahnhof Wilmersdorf: nicht ausgeschildert	CS 6147,7840 6273,784
 # 
 Hirzerweg: nicht ausgeschildert	CS 9359,3083 9392,2923 9386,2882 9416,2781
 # 
-Bansiner Str.: nicht ausgeschildert	CP2; 22896,12827 22933,12837
-# 
 #: next_check_id: CLARAMUELLERJAHNKE-2023
 #: by: http://tk.gis-broker.de/metadata/bplan/pdf/XVI-58.pdf
 #: by: https://www.berliner-woche.de/koepenick/c-bauen/400-neue-wohnungen-in-hessenwinkel_a297521 (nicht 100%ig klar, ob dieses Gelände gemeint ist; geplante Fertigstellung: 2023)
@@ -1974,4 +1975,6 @@ Bansiner Str.: nicht ausgeschildert	CP2; 22896,12827 22933,12837
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2023-12-31
 Clara-Müller-Jahnke-Str.: nicht ausgeschildert	CS 31971,3170 31799,3192 31800,3091 31810,3009 31965,2999
+# 
+(Konrad-Wolf-Allee - Gaußstr.): entlang der Straßenbahntrasse	CS -7189,-4365 -7142,-4288 -7104,-4204 -7084,-4122 -7094,-3976 -7081,-3952
 # 
