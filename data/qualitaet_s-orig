@@ -301,7 +301,7 @@ Wallensteinstr.: Fahrbahn mäßiges bis schlechtes Kopfsteinpflaster, Geh/Radweg V
 #: source_id: viz2021:13.516327,52.486802,02.08.2022,07:00 (Bauarbeiten bis 16.12.2022, nur Kfz-Verkehr betroffen) (inaktiv)
 #: source_id[inactive]: bvg2021:396#BVG305961_0 (bis auf Weiteres)
 #: XXX Wird hier irgendwann neu asphaltiert werden?
-#: last_checked: 2024-08-03
+#: last_checked: 2024-08-28
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2022-12-16
 Wallensteinstr.: Asphalt mit einigen Schäden	Q1 18037,9195 18092,9141 18134,9080
@@ -498,7 +498,7 @@ Gartenstr.: Asphalt	Q0 8663,14960 8685,14966 8700,14956 8701,14932 8692,14923 86
 #: last_checked: 2024-08-21 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2025-12-31 vvv
-#: osm_watch: way id="169459736" version="14"
+#: osm_watch: way id="169459736" version="15"
 Gartenstr.: Kopfsteinpflaster	Q2 8663,14960 8570,15107
 #: osm_watch: way id="25278674" version="23"
 Gerichstr.: Kopfsteinpflaster	Q2 8456,15235 8570,15107
@@ -607,7 +607,7 @@ Swinemünder Str.: Kopfsteinpflaster	Q2 10228,14564 10311,14391
 #: by: https://www.berliner-woche.de/mitte/c-bauen/drei-bauvorhaben-beginnen-jetzt_a335114
 #: by: https://www.berliner-woche.de/wedding/c-verkehr/brunnenviertel-ev-will-baumfaellungen-stoppen_a336818
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/220111-sachstandsbericht.pdf (bis Oktober 2023)
-#: by: https://www.infravelo.de/projekt/swinemuender-strasse/ (2. Quartal 2023 - 4. Quartal 2024) (3. Quartal 2023 - 3. Quartal 2025) (4. Quartal 2023 - 3. Quartal 2025)
+#: by: https://www.infravelo.de/projekt/swinemuender-strasse/ (2. Quartal 2023 - 4. Quartal 2024) (3. Quartal 2023 - 3. Quartal 2025) (4. Quartal 2023 - 3. Quartal 2025) (4. Quartal 2024 - 3. Quartal 2025)
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11695 (Antrag zur Swinemünder Brücke)
 #: by: https://www.deutsches-architekturforum.de/thread/4128-berliner-stadtverkehr-stra%C3%9Fe-bus-und-bahn-wasserstra%C3%9Fen-geb%C3%A4ude/?postID=749723#post749723 (Umbau hat begonnen)
 #: by: https://www.brunnenviertel-brunnenstrasse.de/390-so-wird-die-swinemuender-umgebaut
@@ -750,7 +750,7 @@ Stargardtstr.: Asphalt	Q0 7212,17756 7477,17832
 #: XXX: wird die Windscheidstr. asphaltiert?
 # REMOVED (für Radfahrer offen) --- #: XXX ist während der Bauarbeiten hier eine Einbahnstraße? Offen in welche Richtung?
 #: osm_watch: way id="4515622" version="27"
-#: last_checked: 2024-02-24
+#: last_checked: 2024-08-30
 #: check_frequency: 360d
 # REMOVED --- #: next_check: 2022-12-31
 Windscheidstr.: Kopfsteinpflaster, OK	Q1- 3283,11097 3340,10888
@@ -1727,8 +1727,9 @@ Marienburger Str.: Kopfsteinpflaster	Q2 11572,14452 11821,14317 12077,14186
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/hufelandstrasse-wird-umgestaltet_a408782 (2025 Fahrradstraße; Umgestaltung des Dreiecksplatzes)
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-verkehr/anwohner-gegen-durchgangsverkehr_a409202
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2024/pressemitteilung.1478174.php (zu Kiezblöcken, u.a. Bötzow-Kiez)
+#: by: https://www.berliner-woche.de/bezirk-pankow/c-verkehr/kiezblocks-in-pruefung-winsviertel-boetzowkiez-und-gruene-stadt_a423747
 #: osm_watch: way id="4615063" version="36"
-#: last_checked: 2024-08-03
+#: last_checked: 2024-08-27
 #: check_frequency: 180d
 #: next_check: 2027-09-30
 Hufelandstr.: Kopfsteinpflaster	Q2 12077,14186 12228,14083 12361,13985 12478,13903 12579,13840 12578,13800
@@ -3872,6 +3873,7 @@ Grüne Trift (Köpenick) [Wohngebiet]: Beton	Q1 23036,3929 23088,4001 23257,3884 2
 #: next_check_id: GRUENETRIFTAMWALDE-2024
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2024/pressemitteilung.1417685.php (Baumfällungen bis 29. Februar 2024, später Erneuerung)
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2024/pressemitteilung.1453468.php (siehe auch temp blockings)
+#: osm_watch: note 4327758 1
 #: last_checked: 2024-07-10 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-08-03 vvv
@@ -9372,17 +9374,17 @@ Ferdinand-Buisson-Str.: Asphalt	Q0 12332,20962 12458,21013 12562,21055 12619,210
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/ferdinand-buisson-strasse_gp_2021-03-19-blatt-2.pdf
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/ferdinand-buisson-strasse_gp_2021-03-19-blatt-3.pdf
 #: osm_watch: way id="23121641" version="15"
-#: last_checked: 2024-06-01 (mapillary)
+#: last_checked: 2024-08-24 (mapillary)
 #: check_frequency: 270d
-Ferdinand-Buisson-Str.: schlechtes Kopfsteinpflaster, teilweise mit Sandbanketten	Q3 12629,21083 12762,21140 12837,21229
+Ferdinand-Buisson-Str.: schlechtes Kopfsteinpflaster, teilweise mit Sandbanketten	Q3 12629,21083 12762,21140 12837,21229 12885,21282
 # 
-Ferdinand-Buisson-Str.: unbefestigte Straße	Q2 12837,21229 12885,21282 12939,21345 12948,21421 12953,21502 12994,21719
+Ferdinand-Buisson-Str.: unbefestigte Straße	Q2 12885,21282 12939,21345 12948,21421 12953,21502 12994,21719
 (Ferdinand-Buisson-Str. - Ludwig-Quidde-Str.): asphaltiert	Q0- 12619,21079 12611,21138
 Bananenapfelweg: unbefestigte Straße	Q2 12994,21719 13008,21783 13050,21994
 # 
 #: XXX wird hier die Fahrbahnoberfläche verbessert werden?
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036258275901/258275901/00180981/81-Anlagen/01/PraesentationEinwohnerversammlung07_01_2019.pdf
-#: last_checked: 2024-06-01 (mapillary)
+#: last_checked: 2024-08-24 (mapillary)
 #: check_frequency: 720d
 Straße 55: schlechtes Kopfsteinpflaster	Q3 12837,21229 12696,21342
 # 
@@ -16705,7 +16707,7 @@ Marienstr. (Französisch Buchholz): Asphalt	Q0 11686,21058 12095,20832
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/buergerbeteiligung/fahrrat-protokoll-29-10-2015.pdf
 #: osm_watch: way id="42689070" version="11"
 #: osm_watch: way id="1033468087" version="2"
-#: last_checked: 2024-08-12
+#: last_checked: 2024-08-30
 #: check_frequency: 60d
 Orankeweg: Sandweg im Grünzug, mäßig bis gut	Q2+ 14936,15857 14906,15859 14769,15867 14695,15911 14609,15921
 #: confirmed_by: srt
@@ -17106,19 +17108,21 @@ Lemkestr.: Kopfsteinpflaster	Q2+; 25801,13101 25872,13191 25961,13304
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11464 (Anfrage)
 #: by: https://alles-mahlsdorf.de/sanierung-der-lemkestrasse-soll-im-fruehjahr-weitergehen/
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1461970.php (Bauarbeiten ab 15.7.2024 zwischen Lenbachstr. und Hausnr. 44; anscheinend bleibt die halbe Fahrbahn frei; kein Endedatum)
-#: by: https://alles-mahlsdorf.de/lemkestrasse-zweiter-bauabschnitt-beginnt-mitte-juli/
+#: by: https://alles-mahlsdorf.de/lemkestrasse-zweiter-bauabschnitt-beginnt-mitte-juli/ (ab 11.07.2024 für zwei Jahre)
+#: by: https://www.die-hellersdorfer.berlin/2024/07/02/mitte-juli-geht-die-sanierung-der-lemkestra%C3%9Fe-weiter/
 #: source_id: bvg2024:395#HIM_FREETEXT_232017
+#: XXX auf https://www.instagram.com/marzahn_hellersdorf_live/p/C_D3h_Xis-R/?img_index=1 ist ein Zeichen 250 zu sehen, ohne Ausnahmen -> siehe temp blockings-Eintrag
 #: also_indoor: search Lemkestraße vvv
-#: last_checked: 2024-07-02 (Pressemitteilung) vvv
-#: check_frequency: 45d vvv
-# REMOVED --- #: next_check: 2021-07-30
+#: check_frequency: 60d vvv
+#: next_check: 2026-07-30 vvv
 #: osm_watch: way id="593503609" version="9"
+#: last_checked: 2024-08-24 (marzahn_hellersdorf_live @ insta)
 Lemkestr.: schlechtes Kopfsteinpflaster	Q3 25801,13101 25706,12982 25663,12927 25534,12763 25363,12553
 #: osm_watch: way id="24204822" version="29"
 #: last_checked: 2024-08-14
 Lemkestr.: schlechtes Kopfsteinpflaster	Q3 25191,12343 25149,12266 25109,12196
+#: next_check ^^^
 #: check_frequency ^^^
-#: last_checked ^^^
 #: also_indoor ^^^
 #: corrected_by: srt (schlechtes Kopfsteinpflaster, Q3 -> ..., neu gemacht)
 Lemkestr.: Asphalt	Q0  25363,12553 25191,12343
@@ -18712,7 +18716,9 @@ Buriger Weg: Beton	Q0- 30132,4281 30192,4487 30254,4692
 (Spreeuferweg): Parkweg	Q2 4478,12537 4441,12559 4321,12566
 # 
 #: by: Ulrich Scheel: vvv
-Uhlandstr. (Rosenthal, Wilhelmsruh): extrem schlechtes Kopfsteinpflaster	Q3 7468,20009 7506,20170 7533,20275 7577,20450
+Uhlandstr. (Rosenthal, Wilhelmsruh): extrem schlechtes Kopfsteinpflaster	Q3 7468,20009 7506,20170 7533,20275
+#: corrected_by: mapillary (extrem schlechtes Kopfsteinpflaster, Q3 -> ..., August 2024 neu gemacht)
+Uhlandstr. (Rosenthal, Wilhelmsruh): Asphalt	Q0 7533,20275 7577,20450
 #: confirmed_by: srt
 Schillerstr. (Wilhelmsruh, Rosenthal): extrem schlechtes Kopfsteinpflaster	Q3 7137,20270 7231,20266 7533,20275 7640,20304 7735,20262 7832,20219
 #: by: ^^^
@@ -33293,5 +33299,6 @@ Einmündungsbereich asphaltiert	Q0 8944,6293
 Einmündungsbereich mit Kopfsteinpflaster	Q2 3539,11784
 Einmündungsbereich mit Kopfsteinpflaster	Q2 8735,15295
 Platzbereich asphaltiert	Q0 10046,15844
+Kreuzungsbereich mit schlechtem Kopfsteinpflaster	Q3 7533,20275
 #: ignore ^^^
 #: section ^^^

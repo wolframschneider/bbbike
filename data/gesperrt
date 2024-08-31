@@ -1398,12 +1398,12 @@ Heiligegeistgasse -> Karl-Liebknecht-Str.: unbequemes Überqueren	3::igndisp 1035
 Karl-Liebknecht-Str. -> Heiligegeistgasse: unbequemes Überqueren	3::igndisp 10300,12587 10359,12634 10351,12646
 Mittelstreifen	3nocross::ignrte 19894,-835 19996,-740 20205,-548
 Schützenstr. -> Am Seegraben: Mittelstreifen	3::igndisp 19978,-712 19996,-740 20205,-548
-Mittelstreifen, Autobahnausfahrt	3nocross::ignrte 2037,11122 2102,11307 2095,11440
+Mittelstreifen, Autobahnausfahrt	3nocross::ignrte 2037,11122 2061,11191 2102,11307 2095,11440
 Messedamm -> an der BMW-Niederlassung: Mittelstreifen, Autobahnausfahrt	3::igndisp 2095,11440 2102,11307 2180,11318
-Messedamm -> Bredtschneiderstr.: Mittelstreifen, Autobahnausfahrt	3::igndisp 2037,11122 2102,11307 1975,11291
+Messedamm -> Bredtschneiderstr.: Mittelstreifen, Autobahnausfahrt	3::igndisp 2061,11191 2102,11307 1975,11291
 Bredtschneiderstr. -> Messedamm: Mittelstreifen, Autobahnausfahrt	3::igndisp 1975,11291 2102,11307 2095,11440
 Bredtschneiderstr. -> an der BMW-Niederlassung: Mittelstreifen, Autobahnausfahrt	3::igndisp 1975,11291 2102,11307 2180,11318
-an der BMW-Niederlassung -> Messedamm: Mittelstreifen, Autobahnausfahrt	3::igndisp 2180,11318 2102,11307 2037,11122
+an der BMW-Niederlassung -> Messedamm: Mittelstreifen, Autobahnausfahrt	3::igndisp 2180,11318 2102,11307 2061,11191
 an der BMW-Niederlassung -> Bredtschneiderstr.: Mittelstreifen, Autobahnausfahrt	3::igndisp 2180,11318 2102,11307 1975,11291
 Straßenbahnhaltestelle	3nocross::ignrte 10908,17142 10917,17088 10927,17022
 Berliner Str. -> Berliner Str. (Pankow, Prenzlauer Berg) [zur Tiroler Str.]: Straßenbahnhaltestelle	3::igndisp 10927,17022 10917,17088 10891,17088
@@ -3622,6 +3622,7 @@ Wormser Str. -> Lietzenburger Str.: Mittelstreifen schlecht zu überqueren	3::ign
 tragen (2 x 10 Stufen)	0:40:18 1666,4637
 tragen (2 x 10 Stufen)	0:40:21 1689,4630
 Sterzinger Str.	1 6094,8618 6123,8546
+Am Mühlenberg	1 6001,8624 6094,8618
 Bozener Str.	1 5900,8930 5971,8926 6033,8919
 Bozener Str.	1 5971,8926 5974,9100
 schwierig zu querender Mittelstreifen	3nocross::ignrte 6532,10529 6602,10504 6636,10492 6753,10446

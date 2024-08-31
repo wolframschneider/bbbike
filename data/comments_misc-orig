@@ -1344,7 +1344,7 @@ Wadzeckstr. - Mollstr.: über das Gelände des Hampton-Hotels	CS 11315,13210 113
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="9"
-#: last_checked: 2024-08-19
+#: last_checked: 2024-08-27
 #: check_frequency: 90d
 Falkoniergasse: nicht ausgeschildert	CP2; 9939,12174 9909,12261
 ausgeschildert als Falkoniergasse 3, blaues Schild mit Frakturschrift	CP2; 9909,12261 9939,12174
@@ -1463,7 +1463,7 @@ ausgeschildert zur Georg-Knorr-Str. (Industriegebiet)	CP2;  19200,14963 19244,14
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2020_50_5703_5822_online.pdf (hier: Stichstraße Invalidenstraße)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_28_2981_3084_online.pdf (Widmungsänderung; auf der westlichen Seite entsteht noch ein Gebäude mit Tiefgarage)
 #: XXX wann wird die Straße ausgeschildert?
-#: last_checked: 2024-08-10
+#: last_checked: 2024-08-30
 #: check_frequency: 60d
 Hilda-Geiringer-Weg: westliche Einfahrt nicht ausgeschildert	CP2; 8167,13457 8174,13397
 # 
@@ -1649,7 +1649,7 @@ beide Geh/Radwege hinter der Einmündung Neukirchstr. können Richtung Am Feucht
 #: next_check_id: HANSPETERSPLATZ-2022
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2021/pressemitteilung.1128830.php (Benennung eines Platzes nach Hans Peters)
 #: XXX wann wird der Platz ausgeschildert?
-#: last_checked: 2024-07-05
+#: last_checked: 2024-08-29
 #: check_frequency: 45d
 Hans-Peters-Platz: nicht ausgeschildert	CS 7739,14119 7679,14030
 # 
@@ -1818,7 +1818,7 @@ Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: last_checked: 2024-08-21 vvv
+#: last_checked: 2024-08-28 (webcam) vvv
 #: check_frequency: 90d vvv
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10662,12255 10697,12303 10703,12313 10722,12349 10716,12382 10687,12421 10646,12470
 Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10687,12421
@@ -1861,7 +1861,7 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2024-08-21 vvv
+#: last_checked: 2024-08-28 vvv
 #: check_frequency: 60d vvv
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
 # REMOVED (ausgeschildert) --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638

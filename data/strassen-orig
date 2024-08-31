@@ -268,7 +268,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: osm_watch: note 4168370 2
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2024-08-05 vvv
+#: last_checked: 2024-08-29 vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 #: osm_watch: way id="47755711" version="23"
@@ -1444,9 +1444,9 @@ Uber-Platz	NN 12990,11006 13067,11145
 #: XXX Vorschlag: Freia-Eisner-Straße; mittlerweile tatsächlich als "Planstraße C" offiziell ausgeschildert
 #: note: "Privatgelände"
 #: osm_watch: way id="491906864" version="17"
-#: osm_watch: note 3982085 7
+#: osm_watch: note 3982085 8
 #: priority: #B
-#: last_checked: 2024-08-02
+#: last_checked: 2024-08-27
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2023-01-01
 Planstraße C	N 12926,11224 12848,11093
@@ -1515,7 +1515,7 @@ Grunerstr.	HH 10849,12557 10783,12502
 # REMOVED --- #: last_checked ^^^
 Breite Str. (Mitte)	H 10512,12039 10480,12077 10383,12191 10285,12306
 Rathausstr. (Mitte)	N 10357,12356 10416,12394 10475,12438 10580,12513 10599,12526 10696,12601
-Rathausstr. (Mitte)	NN 10696,12601 10923,12779
+Rathausstr. (Mitte)	NN 10696,12601 10723,12613 10923,12779
 Jüdenstr. (Mitte)	N 10696,12601 10783,12502 10807,12451
 Jüdenstr. (Mitte)	N 10807,12451 10831,12371 10830,12313 10830,12279
 Neue Jüdenstr.	N 10830,12279 10823,12178 10821,12153
@@ -1879,7 +1879,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: osm_watch: way id="1010731431" version="8"
 #: osm_watch: way id="642581102" version="10"
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2024-08-10
+#: last_checked: 2024-08-29
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2022-12-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -1893,7 +1893,7 @@ Lydia-Rabinowitsch-Str.	N 7820,13994 7930,14060 7973,13991 7959,13982 7865,13924
 #: XXX wie wird diese Straße heißen? Der erste Vorschlag "Annemarie-Renger-Str." wird es wohl nicht werden...
 # REMOVED (mittlerweile: Spielstraße) --- #: XXX wird es Einschränkungen für den Autoverkehr geben? --- es sieht aus nach: Einfahrt verboten, Tiefgarage frei
 #: osm_watch: way id="74868383" version="27"
-#: last_checked: 2024-07-05
+#: last_checked: 2024-08-29
 #: check_frequency: 90d
 (Uferweg - Heidestr.)	N 8057,13923 7997,13892 7910,13848
 Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7781,14238 7697,14187
@@ -1901,8 +1901,8 @@ Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7
 #: next_check_id: EUROPACITY-2015
 #: XXX Bekommt diese Verbindung einen Straßennamen?
 #: osm_watch[closed]: note 3892438 3
-#: osm_watch: way id="1255643497" version="3"
-#: last_checked: 2024-07-05
+#: osm_watch: way id="1255643497" version="4"
+#: last_checked: 2024-08-29
 #: check_frequency: 60d
 (Hedwig-Porschütz-Str. - George-Stephenson-Str.)	NN 7697,14187 7614,14136
 #: next_check_id: EUROPACITY-2015
@@ -1910,7 +1910,7 @@ Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7
 #: note: ggfs. qualitaet/handicap-Einträge anpassen
 #: also_indoor: webcam https://quartier-heidestrasse.contempo-webcam.de/kamera-4.php
 #: osm_watch: way id="645343614" version="8"
-#: last_checked: 2024-07-05
+#: last_checked: 2024-08-29
 #: check_frequency: 90d
 (Heidestr./Kieler Brücke - George-Stephenson-Str.)	NN 7612,14325 7529,14274
 Lisa-Fittko-Str.	N 7820,13994 7734,13944
@@ -1919,7 +1919,7 @@ George-Stephenson-Str.	N 7487,14472 7446,14403 7529,14274 7569,14209 7614,14136 
 #: next_check_id: HANSPETERSPLATZ-2022
 #: XXX zurzeit darf der Platz noch von Fahrzeugen benutzt werden (wegen der Bauarbeiten in der George-Stephenson-Str.?), wird später vermutlich aufgehoben, dann NN ohne osm.highway:service; eigentlich Einbahnstraße, aber der Platz ist breit genug...
 #: osm_watch: way id="977556359" version="16"
-#: last_checked: 2024-07-05
+#: last_checked: 2024-08-29
 #: check_frequency: 90d
 #: osm.highway: service
 Hans-Peters-Platz	N 7739,14119 7679,14030
@@ -4303,7 +4303,7 @@ Am Westkreuz	N 2104,10494 2117,10495 2157,10497 2170,10497 2203,10455
 (Zufahrt zum Rasthof Avus)	N 1692,10348 1723,10289 1847,10323 1882,10356 1870,10406
 (Zufahrt zur Autobahn)	N 1723,10289 1725,10242 1742,10220
 # REMOVED (Baustelle, City Cube Berlin, wird wahrscheinlich nicht mehr existieren) --- #: XXX Straßenland wird eingezogen --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/50re.pdf/file?y=2011 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/25re.pdf/file?y=2012 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/38re.pdf/file?y=2012 --- (Parkplatz Deutschlandhalle)	N 1398,10201 1471,10368
-Messedamm	HH 2095,11440 2102,11307 2037,11122 2011,11046 1928,10728
+Messedamm	HH 2095,11440 2102,11307 2061,11191 2037,11122 2011,11046 1928,10728
 Messedamm	H 1928,10728 1847,10697 1817,10657 1557,10306 1457,10168
 Messedamm	NH 1457,10168 1344,10012
 Waldschulallee	N 1344,10012 1318,10031 1274,10063 1212,10109 1205,10114 1159,10149 1047,10225 967,10285 863,10363 775,10426 643,10524 564,10584 452,10669 324,10763
@@ -19523,7 +19523,7 @@ Kleine Markusstr.	N 12059,12172 11958,12195 11937,12127
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_40_3909_3968_online.pdf (Benennung: Inge-Meysel-Straße)
 #: XXX Benennung nach Inge Meysel; ist diese Straße gemeint?
 #: XXX Laut DPAG 12/2023: Inge-Meysel-Str., PLZ=10243
-#: last_checked: 2024-06-09
+#: last_checked: 2024-08-31
 #: check_frequency: 90d
 (Zufahrt Str. d. Pariser Kommune)	N 12577,11804 12617,11888 12648,11953
 (Zufahrt Franz-Mehring-Platz)	N 12648,11953 12691,12042 12735,12131
@@ -20695,7 +20695,13 @@ Gustav-Tempel-Str.	NN 15205,10616 15200,10600
 An den Eiswerken	N 15004,10791 14994,10732 14984,10677
 Paul-und-Paula-Promenade	N 14886,10748 14909,10732 14984,10677
 # 
-# REMOVED --- #: next_check_id: ROTESRATHAUS-2023 --- #: also_indoor: webcam https://tv-turm.de/wp-content/uploads/webcam/webcam.jpg --- #: last_checked: 2023-07-05 (webcam) --- #: check_frequency: 7d --- (Umleitungsstrecke Rotes Rathaus)	NN 10696,12601 10695,12616 10615,12642 10542,12587
+#: next_check_id: ROTESRATHAUS-2023
+#: also_indoor: webcam https://www.parkinn-berlin.de/en/panorama-terrace/
+#: last_checked: 2024-08-29
+#: check_frequency: 3d
+#: next_check: 2024-09-06
+#: valid: -20240906
+(Umleitungsstrecke Rotes Rathaus)	NN 10723,12613 10681,12616 10615,12642 10542,12587
 # 
 (Passage am Tacheles)	NN 9371,13333 9353,13273 9244,13253
 Aaron-Bernstein-Platz	NN 9353,13273 9382,13265 9385,13246 9463,13256 9476,13293
