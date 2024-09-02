@@ -16664,8 +16664,8 @@ EOF
      { from  => $isodate2epoch->("2022-09-16 11:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2022-09-18 20:00:00"),
        periodic => 1,
-       recurrences => [['yearly', days => 14, months => 9, start => "2023-10-25T00:00:00"]], # findet 2023 nicht stat
-       recurrence_prewarn_days => 14,
+       recurrences => [['yearly', days => 14, months => 9, start => "2023-10-25T00:00:00"]], # findet 2023 nicht statt
+       recurrence_prewarn_days => 7,
        text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (17.09.2022 bis 18.09.2022)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -18714,7 +18714,7 @@ EOF
        data  => <<EOF,
 #: note: allerdings keine Hinweise auf eine verbotene Durchfahrt gesehen
 #: note: nördliches Tor verschlossen, gesehen am 2019-09-07 (Sa)
-#: note: südliches Tor verschlossen, gesehen am 2020-10-24 (Sa)
+#: note: südliches Tor verschlossen, gesehen am 2020-10-24 (Sa), 2024-09-01 (So)
 #: tempex: volatile vvv
 (Gewerbegebiet)	2 21617,3287 21826,3129 21865,3095
 (Gewerbegebiet)	2 21826,3129 21770,2936
@@ -33246,9 +33246,10 @@ EOF
 # REMOVED --- #: osm_watch: node id="8599852570" version="2"
 # REMOVED --- #: osm_watch: node id="8599852571" version="1"
 #: osm_watch: way id="1060570985" version="2"
+#: osm_watch: note 3914565 9
 #: last_checked: 2024-07-27 (kartaview)
 #: check_frequency: 120d
-#: next_check: 2024-09-01
+#: next_check: 2024-09-22
 	2::inwork 10346,-4027 10366,-4011 10778,-3988 11338,-3945
 EOF
      },
@@ -35086,10 +35087,10 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: source_id: viz2021:13.306069,52.502061,01.01.2022,06:00 (mittlerweile inaktiv) (bis 31.12.2023) (inaktiv)
-#: source_id: viz2021:13.305716,52.502767,22.12.2023,15:12 (bis 31.08.2024)
+#: source_id: viz2021:13.305716,52.502767,22.12.2023,15:12 (bis 31.08.2024) (inaktiv)
 #: by: https://www.deutsches-architekturforum.de/thread/8117-wilmersdorfer-stra%C3%9Fe-neubauprojekte/?postID=760723#post760723 (Abriss Hotel Panorama)
 #: note: vermutlich nur im Bereich Sybelstr. 14
-#: also_indoor: traffic (H,G,B,T,W)
+#: also_indoor: traffic (ex-H,ex-G,ex-B,ex-T,ex-W)
 #: XXX Wann sind die Bauarbeiten beendet?
 #: last_checked: 2024-08-30
 	2::inwork 3726,10757 3731,10640 3764,10580
@@ -35921,10 +35922,10 @@ EOF
 #: by[nocache]: https://nitter.perennialte.ch/pic/orig/media%2FGGXnOxmWwAAhC4Z.png (Umleitung für Radfahrer)
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2024/pressemitteilung.1479228.php (nächste Sperrung der Hämmerlingstr.: 23.9.2024-2.10.2024)
 #: by: https://bauprojekte.deutschebahn.com/p/berlin-frankfurt-oder-grenze/infobauarbeiten (weitere Sperrung der Hämmerlingstr.: 28.7.2025-8.8.2025)
-#: note: anscheinend Schubertstr. auch für Fußgänger gesperrt, hier gibt es keinen Gehweg (noch immer?); außerhalb der Arbeitszeiten ggfs. passierbar (gesehen So 2023-03-26, Sa 2023-05-13, Mo 2023-06-19 am Abend (unsicher), Sa 2023-10-28 nachmittags, Sa 2024-02-10 mittags (zumindest das östliche Ende sah offen aus), Mi 2024-03-20 vormittags (durchfahrenden Radfahrer gesehen), Mi 2024-04-10 vormittags: offiziell gesperrt, möglicherweise passierbar)
+#: note: anscheinend Schubertstr. auch für Fußgänger gesperrt, hier gibt es keinen Gehweg (noch immer?); außerhalb der Arbeitszeiten ggfs. passierbar (gesehen So 2023-03-26, Sa 2023-05-13, Mo 2023-06-19 am Abend (unsicher), Sa 2023-10-28 nachmittags, Sa 2024-02-10 mittags (zumindest das östliche Ende sah offen aus), Mi 2024-03-20 vormittags (durchfahrenden Radfahrer gesehen), Mi 2024-04-10 vormittags: offiziell gesperrt, möglicherweise passierbar, So 2024-09-01 mittags möglicherweise passierbar)
 #: also_indoor: traffic (G,B,W)
 #: priority: #A
-#: last_checked: 2024-07-10 vvv
+#: last_checked: 2024-09-01 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-09-21 vvv
 # REMOVED --- #: note: Unterführung passierbar: 2023-02-19 mittags, 2023-05-13 (Union-Spiel!)
@@ -38751,7 +38752,7 @@ EOF
 #: by: https://www.infravelo.de/projekt/parkstrasse-und-blumenthalstrasse-1/ (Zeitraum Bau: 1. Quartal 2021 - 2. Quartal 2023) (mittlerweile Start: 3. Quartal 2022) (existiert nicht mehr) (wieder da) (2. Quartal 2023 - 4. Quartal 2023) (2. Quartal 2023 - 1. Quartal 2024) (2. Quartal 2023 - 4. Quartal 2024)
 #: add_fragezeichen: Bis wann gehen die Bauarbeiten? vvv
 # REMOVED (nein) --- #: XXX laut osm-Notiz https://www.openstreetmap.org/note/3730985 wieder offen --- ist auch schon asphaltiert?
-#: also_indoor: traffic (G,W) vvv
+#: also_indoor: traffic (ex-G,ex-W) vvv
 #: osm_watch: way id="151353924" version="14"
 #: last_checked: 2024-08-18 vvv
 #: check_frequency: 30d vvv
@@ -39140,7 +39141,7 @@ EOF
 #: osm_watch: note 3834145 4
 #: osm_watch: note 3834144 2
 #: also_indoor: traffic (ex-H,re-G,B,re-W,T)
-#: last_checked: 2024-08-26 (traffic)
+#: last_checked: 2024-08-31 (traffic)
 # REMOVED --- #: check_frequency: 30d
 #: check_frequency: 7d
 # REMOVED --- #: next_check: 2024-05-24
@@ -39827,7 +39828,7 @@ EOF
        #text  => 'Gleiwitzer Str.: Bauarbeiten, Fahrbahn zwischen Grabensprung und Dornacher Str. gesperrt, außerdem Kreuzungsbereich Gleiwitzer Str./Dornacher Str. gesperrt, voraussichtlich bis 10.05.2024',
        #text  => 'Gleiwitzer Str.: Bauarbeiten, Fahrbahn zwischen Grabensprung und Dornacher Str. gesperrt, voraussichtlich bis 10.05.2024',
        #text  => 'Gleiwitzer Str.: Bauarbeiten, Fahrbahn vor der Dornacher Str. gesperrt, voraussichtlich bis 10.05.2024',
-       text  => 'Gleiwitzer Str.: Bauarbeiten, Fahrbahn zwischen Dornacher Str. und Köpenicker Str. gesperrt, Ende der Bauarbeiten unbekannt',
+       text  => 'Gleiwitzer Str.: Bauarbeiten, Fahrbahn zwischen Dornacher Str. und Köpenicker Str. gesperrt, voraussichtlich bis Ende September 2024, vielleich wird wieder verlängert',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.bvg.de/dam/jcr:a54bebf7-9fd9-4844-acb7-3ef6680854ac/BVG_NAVI_0523_Doppelseiten_web.pdf (15.5.2023 für ein Jahr)
@@ -39839,14 +39840,14 @@ EOF
 #: note: Baustellenschild der Wasserbetriebe bis 10.05.2024 (wurde nicht aktualisiert)
 #: also_indoor: traffic (ex-G)
 #: add_fragezeichen: Sind die Bauarbeiten in der Gleiwitzer Str. beendet?
-#: last_checked: 2024-07-20 vvv
+#: last_checked: 2024-09-01 vvv
 # REMOVED --- #: check_frequency: 120d vvv
-# REMOVED --- #: next_check: 2024-05-10 vvv
+#: next_check: 2024-09-30 vvv
 # REMOVED (hier nicht mehr) --- Gleiwitzer Str.	q4::inwork 20947,9999 20703,10004
 # REMOVED (hier nicht mehr) --- Gleiwitzer Str., Anbindung Dornacher Str.	q2::inwork 20947,9999 21146,9988
 Gleiwitzer Str. zwischen Dornacher Str. und Köpenicker Str.	q4::inwork 20947,9999 21146,9988
 # REMOVED (nicht mehr gesperrt) --- #: XXX_prog eigentlich q3+ --- Dornacher Str. (Kreuzungsbereiche)	q3::inwork 20948,9847 20947,9999 20947,10137
-# REMOVED --- #: next_check ^^^
+#: next_check ^^^
 # REMOVED --- #: check_frequency ^^^
 #: last_checked ^^^
 EOF
@@ -40059,7 +40060,7 @@ EOF
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1828834678851199380
 #: by: https://pbs.twimg.com/media/GWFGT27XQAAwuc3?format=jpg&name=4096x4096
 #: also_indoor: webcam https://www.parkinn-berlin.de/en/panorama-terrace/
-#: last_checked: 2024-08-29
+#: last_checked: 2024-08-31 (webcam)
 #: check_frequency: 3d
 #: next_check: 2024-09-06
 	2::temp 10696,12601 10599,12526
@@ -40073,7 +40074,7 @@ EOF
 #: next_check_id: BUERGER-2023
 # REMOVED --- #: also_indoor: traffic (G,B,W)
 #: source_id: viz2021:13.434679,52.461938,14.08.2023,07:00 (bis 31.05.2024) (inaktiv)
-#: source_id: viz2021:13.434909,52.461299,14.08.2023,07:00 (nur Kfz-Verkehr, Bürgerstr. vom Britzer Damm abgehängt, bis 07.01.2024) (bis 31.05.2024) (keine Erwähnung der Bürgerstr., bis 31.08.2024)
+#: source_id: viz2021:13.434909,52.461299,14.08.2023,07:00 (nur Kfz-Verkehr, Bürgerstr. vom Britzer Damm abgehängt, bis 07.01.2024) (bis 31.05.2024) (keine Erwähnung der Bürgerstr., bis 31.08.2024) (inaktiv)
 #: source_id: bvg2021:m44#BVG326176_0
 #: by: https://nitter.net/VIZ_Berlin/status/1690957168931913729#m
 # REMOVED --- #: add_fragezeichen: Ist die Einbahnstraßenregelung mittlerweile aufgehoben?
@@ -41336,6 +41337,7 @@ EOF
 #: note: Bauarbeiten beginnen etwa 120m östlich der Föhrer Str., keine Bordsteinabsenkung, alter abgesperrter Radweg existiert als mögliche Umfahrung; mittlerweile (Juni 2024) Bauarbeiten ab Föhrer Str.
 #: source_id: viz2021:13.348039,52.538941,25.09.2023,07:00 (hier nur Kfz-Verkehr betroffen, bis 18.09.2024)
 #: osm_watch: way id="4543441" version="41"
+#: also_indoor: traffic (H,G,B,T,W)
 #: priority: #A vvv
 #: last_checked: 2024-08-10 vvv
 #: check_frequency: 120d vvv
@@ -42846,7 +42848,7 @@ EOF
 #: add_fragezeichen: Besteht die Sperrung der Fahrbahn weiterhin? vvv
 #: note: laut Schild der Wasserbetriebe bis August 2024
 #: also_indoor: traffic (B,G,T) vvv
-#: last_checked: 2024-08-18 (osm) vvv
+#: last_checked: 2024-08-31 (mapillary) vvv
 #: check_frequency: 60d vvv
 #: osm_watch: way id="1156267450" version="7"
 Wiesenstr.: nur ein Abschnitt betroffen	q3::inwork 7948,15802 8048,15829
@@ -43054,9 +43056,9 @@ EOF
 #: by: https://www.deutsches-architekturforum.de/thread/11158-entwicklungsquartier-andreasstra%C3%9Fe-lxk-campus/?postID=753016#post753016 (LXK Campus)
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/bebauungsplan-v-52-block-krautstra%C3%9Fe-lange-stra%C3%9Fe-andreasstra%C3%9Fe-stadtbahn.545/page-6#post-23532
 #: by: https://www.lxk-berlin.de/ (2026 bezugsfertig)
-#: source_id: viz2021:13.42701,52.51181,27.08.2024,06:00 (bis 31.08.2024)
+#: source_id: viz2021:13.42701,52.51181,27.08.2024,06:00 (bis 31.08.2024) (inaktiv)
 #: note: Halteverbotsschilder bis 31.03.2026
-#: also_indoor: traffic (G,B,T)
+#: also_indoor: traffic (ex-G,ex-B,ex-T)
 #: last_checked: 2024-08-27
 #: check_frequency: 30d
 #: next_check: 2024-08-31
@@ -43113,6 +43115,7 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: by: https://www.tagesspiegel.de/berlin/bezirke/wochenmarkt-vor-der-markthalle-erweiterung-fur-markthalle-neun-in-berlin-kreuzberg-genehmigt-10575601.html (befristet bis 13. September 2024)
+#: by: https://markthalleneun.de/m%C3%A4rkte/
 #: next_check: 2024-09-13
 	q4::temp:clock 12294,10663 12363,10781
 EOF
@@ -43488,6 +43491,7 @@ EOF
 #: source_id: viz2021:13.361199,52.446973,07.06.2024,20:00 (bis 08.06.2024) (inaktiv)
 #: source_id: viz2021:13.36063,52.44674,07.06.2024,20:00 (bis 08.06.2024) (inaktiv)
 #: source_id: viz2021:13.361243,52.446979,30.08.2024,20:00 (bis 01.09.2024)
+#: source_id: viz2021:13.36206,52.4473,30.08.2024,20:00 (bis 01.09.2024)
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1796572352206995565
 #: by: https://pbs.twimg.com/media/GO5sEElW4AAGByb?format=jpg
 #: by: https://www.youtube.com/watch?v=YI1O5phpGiE
@@ -43545,11 +43549,11 @@ EOF
      },
      { from  => $isodate2epoch->("2024-06-05 00:00:00"),
        until => $isodate2epoch->("2024-10-31 17:00:00"),
-       text  => 'Jessnerstr.: Fahrbahn zwischen Frankfurter Allee und Scharnweberstr. gesperrt, vom 05.06.2024 07:00 bis 31.10.2024 17:00',
+       text  => 'Jessnerstr.: Fahrbahn zwischen Frankfurter Allee und Scharnweberstr. offiziell gesperrt, meist ist eine Fahrgasse offen, vom 05.06.2024 07:00 bis 31.10.2024 17:00',
        data  => <<EOF,
 #: source_id: viz2021:13.473127,52.513022,05.06.2024,07:00 (hier nur Kfz-Verkehr, bis 31.10.2024)
 #: note: keine Freigabe der Gehwege für Radfahrer
-#: note: Absperrungen können teilweise weggeschoben sein und die Fahrbahn ist nur in der Mitte aufgebuddelt (Stand Mitte Juni 2024, Ende Juli 2024, Anfang August 2024)
+#: note: der östliche Teil der Fahrbahn ist meistens (immer?) offen (Stand Mitte Juni 2024, Ende Juli 2024, Anfang August 2024, Ende August 2024)
 	q4::inwork 15077,11910 15110,12107
 EOF
      },
@@ -44011,7 +44015,7 @@ EOF
        text  => 'Heckelberg - Brunow: Bauarbeiten, Sperrung, 15.07.2024 08:00 Uhr bis 31.08.2024 16:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-#: source_id: LS/221-F/24/131 (bis 31.08.2024)
+#: source_id: LS/221-F/24/131 (bis 31.08.2024) (inaktiv)
 	2::inwork 41624,36648 39488,37315
 EOF
      },
@@ -44134,7 +44138,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: source_id: LS/221-E/24/100 (bis 31.08.2024) (inaktiv)
-#: source_id: LS/221-E/24/100.1 (bis 31.08.2024)
+#: source_id: LS/221-E/24/100.1 (bis 31.08.2024) (inaktiv)
 	2::inwork 36914,54197 36647,55090 36576,55996 36535,56402 36621,56807
 EOF
      },
@@ -44197,7 +44201,7 @@ EOF
        text  => 'Hiroshimastr.: Einbahnstraßenregelung, offen Richtung Süden, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: also_indoor: traffic (B,T)
+#: also_indoor: traffic (ex-B,ex-T,H)
 #: add_fragezeichen: Gibt es die Baustelle noch immer?
 #: note: Die Länge der Einengung beträgt etwa 40m, deshalb q3. Durch den Wasserrohrbruch in der Tiergartenstr. erhöhter Kfz-Verkehr in der Gegenrichtung.
 #: last_checked: 2024-08-05
@@ -44285,7 +44289,9 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.altlandsberg.de/wirtschaft-stadtentwicklung/stadtentwicklung/aktuelle-massnahmen/baumassnahme-ortsverbindung-wegendorf-bucholz-alte-k6427/
-#: last_checked: 2024-08-14
+#: osm_watch: note 4383533 2
+#: osm_watch: way id="37948631" version="9"
+#: last_checked: 2024-08-31 (mapillary)
 #: next_check: 2024-11-30
 	2::inwork 34460,22169 34901,21638 36198,20464
 EOF
@@ -44491,7 +44497,7 @@ EOF
        data  => <<EOF,
 #: by: https://www.berliner-woche.de/neukoelln/c-bauen/eingaenge-an-der-oderstrasse-werden-breiter-und-ein-neues-drehkreuz-an-der-kienitzer-entsteht_a423438
 #: by: https://www.tempelhoferfeld.de/eingangssituation-teilbereich-oderstrasse/
-#: XXX andere Eingänge an der Oderstr. folgende
+#: XXX an anderen Eingängen an der Oderstr. werden auch noch Bauarbeiten folgen
 #: last_checked: 2024-08-30 (website)
 #: check_frequency: 10d
 	2::inwork 11521,7638 11507,7647
@@ -44518,6 +44524,29 @@ EOF
 #: check_frequency: 90d
 #: next_check: 2025-01-19
 Marburger Str.	q3::inwork 5802,10621 5907,10821
+EOF
+     },
+     { from  => undef, # 
+       until => undef, #
+       text  => 'Weserstr.: Abschnitt der Fahrbahn zwischen Jessnerstr. und Gürtelstr. gesperrt, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: add_fragezeichen: Sind die Bauarbeiten beendet?
+#: also_indoor: traffic (B,T)
+#: last_checked: 2024-08-31
+#: check_frequency: 10d
+	q3::inwork 14949,11474 14849,11539
+EOF
+     },
+     { from  => 1725141600, # 2024-09-01 00:00
+       until => 1726092000, # 2024-09-12 00:00
+       text  => 'Regierungsviertel: Vorbereitungen für das Bürgerfest zum 75-jährigen Bestehen des Deutschen Bundestages, Straßensperrungen, evtl. sind auch Radfahrer betroffen, vom 2.9.2024 bis 11.9.2024',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: http://viz.berlin.de/aktuelle-meldungen/verkehrsvorschau/?date=20240901 ("schrittweise", Bürgerfest findet am 06.+07.09.2024 statt)
+	2::inwork 8306,12609 8369,12609 8399,12610 8485,12612 8554,12593 8540,12420
+	2::inwork 8415,12749 8309,12758 8306,12609 8207,12606
+	2::inwork 8766,12541 8667,12555 8596,12576
 EOF
      },
     );
