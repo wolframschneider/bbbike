@@ -148,14 +148,14 @@ Eichborndamm	1 4223,18982 4211,18882 4163,18676 4102,18298 4059,18107 4016,17918
 # REMOVED --- #: XXX später könnte man den Abschnitt bis Kupferkamp mit 1s:q4 versehen
 # REMOVED --- #: last_checked: 2024-08-11 (krickstadt)
 # REMOVED --- #: next_check: 2024-08-16
-# REMOVED --- Spreestr.	1no 17900,6072 17939,5968 17935,5961 17877,5860
+Spreestr.	1 17900,6072 17939,5968 17935,5961 17877,5860
 Spreestr.	1 17877,5860 17810,5736 17807,5730 17782,5698
 Buckower Chaussee	1 8742,475 8972,498 9002,471
 # REMOVED (nein, wird nicht) --- #: XXX evtl. wird die Einbahnstraßenregelung aufgehoben --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6025 --- #: last_checked: 2015-05-05 --- #: check_frequency: 30d
 Archibaldweg	1s:q4 15674,10851 15777,10897 15820,10916 15870,10938
 #: by: https://www.infravelo.de/projekt/lueckstrasse/ (1. Quartal 2026 - 4. Quartal 2026)
 #: XXX Umbau der Kreuzung sowie Aufhebung der Einbahnstraßenregelung für Radfahrer vvv
-#: last_checked: 2024-08-28 vvv
+#: last_checked: 2024-09-08 vvv
 #: next_check: 2026-12-31 vvv
 Nöldnerplatz	1s:q4 15870,10938 15903,10906
 Nöldnerplatz	1 15903,10906 16049,10844
@@ -2056,8 +2056,8 @@ Waldweg	1s 25496,2429 25116,2529
 Neue Schönhauser Str.	1s:q3 10527,13257 10423,13215 10313,13227
 Kirchhofstr.	1s:q3 13179,7613 13173,7567 13117,7471 13029,7353
 # REMOVED --- #: next_check: 2013-10-30 --- #: XXX von 1s:q3 -> 1s:q4 degradiert, weil wegen der Umleitung hier mehr Verkehr ist - später wieder aufheben
-Björnsonstr	1s:q1 10209,16674 10197,16528
-Ibsenstr.	1s:q1 10295,16667 10209,16674
+Björnsonstr	1s:q3 10209,16674 10197,16528
+Ibsenstr.	1s:q3 10295,16667 10209,16674
 Eichhornstr.	1s:q3 8232,11414 8253,11306 8280,11296
 #: add_fragezeichen: Ist die Einbahnstraße mittlerweile für Radfahrer offen? vvv
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll_16_sitzung.pdf vvv
@@ -2099,6 +2099,7 @@ Neue Bahnhofstr.	1s:q3 14908,11231 14918,11249
 # REMOVED (keine Einschränkungen mehr) --- #: XXX evtl. ist die Einbahnstraßenregelung temporär --- #: by: https://www.berliner-woche.de/westend/c-verkehr/auch-wenn-es-nicht-so-aussieht-der-zob-umbau-laeuft-wie-geplant_a223429 (ZOB-Umbau bis 2022) --- #: by: https://www.berliner-woche.de/westend/c-verkehr/rechnungshof-ruegt-senat-fuer-mangelhafte-umsetzung-des-bauprojektes_a310611 --- #: add_fragezeichen: gibt es die Einbahnstraßenregelung in der Soorstr. noch? --- #: source_id: 2147347063 --- #: osm_watch: way id="4708164" version="16" --- #: last_checked: 2021-05-24 --- #: check_frequency: 90d --- #: next_check: 2021-09-17 --- #: valid: 20210901- --- Soorstr.	1s:q3 1861,11284 1884,11126
 # 
 Einkaufszentrum am Gesundbrunnen	1 9291,15740 9363,15738
+Dolgenseestr.	1s:q4 17774,9934 17761,9971 17559,10024
 # 
 #: section ^^^
 ####################################################################
@@ -2977,7 +2978,7 @@ tragen, langgezogene Stufen (13 Stufen)	0:25 20704,1383
 #: osm_watch: way id="43205335" version="3"
 # REMOVED --- #: last_checked: 2019-10-26 (wosch) (keine Anzeichen für Bauarbeiten) --- #: check_frequency: 14d
 # REMOVED --- #: next_check: 2021-01-01
-#: last_checked: 2024-07-06 (mapillary)
+#: last_checked: 2024-09-02 (mapillary)
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2023-06-30
 tragen (31 Stufen oder Kinderwagenrampe)	0:40 13168,21706
@@ -3131,7 +3132,7 @@ Drängelgitter	BNP:3::trailer=10 18707,3074
 Drängelgitter	BNP:3::trailer=10 18724,3091
 Drängelgitter	BNP:3::trailer=10 18822,3188
 Drängelgitter	BNP:3::trailer=10 19725,-51
-Drängelgitter	BNP:3::trailer=10 19774,-187
+Drängelgitter	BNP:3::trailer=10 19769,-189
 Drängelgitter	BNP:3::trailer=10 19734,-45
 Schranke	BNP:3::trailer=10 22041,-313
 Schranke (Umfahrung auf dem Gehweg)	BNP:5::trailer=15 -12413,-789
@@ -3813,6 +3814,10 @@ Drängelgitter	BNP:3::trailer=10 25515,54428
 Drängelgitter	BNP:3::trailer=10 26718,56454
 Drängelgitter	BNP:3::trailer=10 26803,56547
 Tor	BNP:10 33926,63348
+#: note: Tor geht nach Westen auf, vermutlich verliert man Richtung Osten mehr Zeit als Richtung Westen (hier nur ~10s?)
+Tor	BNP:20 20127,1538
+#: note: unnötigerweise auch für Radfahrer eng gehalten
+Barriere	BNP:3::trailer=10 10628,16644
 #
 #: section ^^^
 ############################################################################
@@ -3821,6 +3826,7 @@ Tor	BNP:10 33926,63348
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
 #: by: mapillary
+#: add_fragezeichen: Ist die Straße noch wegen Bauarbeiten gesperrt?
 #: last_checked: 2024-08-10
 Slatan-Dudow-Str. (Potsdam): gesperrt wegen Bauarbeiten	2::inwork -7476,-4673 -7353,-4785
 # 
@@ -3875,7 +3881,7 @@ Kleine Waldstr. - Waldstr.: Sperrung wegen Bauarbeiten an der A117	2::inwork 215
 #: osm_watch: note 4211143 3
 #: osm_watch: way id="4612427" version="21"
 #: also_indoor: traffic (G,W)
-#: last_checked: 2024-08-29
+#: last_checked: 2024-09-03
 #: check_frequency: 30d
 #: next_check: 2025-06-30
 Am Köllnischen Park: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 11185,11883 11160,12071
@@ -3898,7 +3904,7 @@ Am alten Flugplatz: Straße gesperrt	2::inwork 19697,8776 19754,8809 19778,8823 1
 #: XXX Nach den Bauarbeiten wird hier eine Spielstraße sein
 #: historical_note: am Anfang Einbahnstraße, offen Richtung Norden (1s:q3:inwork), später komplett zu (q4::inwork in handicap_s-orig), dann wieder (laut osm) Einbahnstraße
 #: osm_watch: way id="4596985" version="29"
-#: last_checked: 2024-08-21
+#: last_checked: 2024-09-07
 #: check_frequency: 90d
 #: next_check: 2024-09-30
 Reinickendorfer Str.: Bauarbeiten im Bereich des Weddingplatzes	1s:q3:inwork 7998,15068 8015,15047 8037,14958 8091,14895
@@ -3932,11 +3938,11 @@ Wriezener Karree: Einbahnstraßenregelung	1s:q4:inwork 12959,11631 12728,11850
 #: by: https://viz.berlin.de/aktuelle-meldungen/verkehrsvorschau-fur-das-wochenende/?date=20240223
 #: also_indoor: traffic (G,W)
 #: osm_watch: way id="1106303945" version="8"
-#: osm_watch: way id="4543436" version="35"
+#: osm_watch: way id="4543436" version="36"
 #: osm_watch: way id="176338611" version="20"
 #: osm_watch: note 4126450 4
 #: XXX bei osm nun teilweise als wieder offen gekennzeichnet, aber das ist wohl ein StreetComplete-Unfall
-#: last_checked: 2024-08-10
+#: last_checked: 2024-09-06 (osm)
 #: check_frequency: 360d
 #: next_check: 2028-12-31
 # REMOVED (Süd/Westseite ist weiterhin frei für Radfahrer/Fußgänger) --- Nordufer/Sylter Str.: Sperrung, angeblich auch für Fußgänger und Radfahrer	? 6334,14756 6213,14777 5984,14819 5848,14977
@@ -4098,7 +4104,7 @@ zur Ontarioseestr.: Hochbauarbeiten, komplett gesperrt	2::inwork 18585,10024 186
 # 
 #: next_check_id: MARIENUFER-2023
 #: osm_watch: way id="1272560911" version="2"
-#: last_checked: 2024-09-01
+#: last_checked: 2024-09-04
 #: check_frequency: 120d
 #: next_check: 2026-12-31
 An der Villa Bolle: Bauarbeiten, gesperrt	2::inwork 22668,3125 22477,3109
@@ -4128,7 +4134,7 @@ Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: note: Weitere Sperrungen sind in temp blockings, dort wo schon Häuser mit evtl. bezogenen Wohnungen stehen
 #: XXX Wann sind die Straßen offen? vvv
-#: last_checked: 2024-08-21 vvv
+#: last_checked: 2024-09-08 vvv
 #: check_frequency: 60d vvv
 An den Eiswerken	2::inwork 15004,10791 14994,10732 14984,10677
 Paul-und-Paula-Promenade	2::inwork 14886,10748 14909,10732 14984,10677
@@ -4172,7 +4178,7 @@ Falkplatz: Weg gesperrt	2::inwork 10228,15488 10170,15659
 #: XXX Scheint Baustellenfläche für die Arbeiten an den Bahnbrücken zu sein.
 #: source_id: viz2021:13.483448,52.502169,22.06.2024,16:00 (benachbarte Nöldnerstr., bis 31.10.2024)
 #: priority: #C
-#: last_checked: 2024-08-28
+#: last_checked: 2024-09-08
 #: check_frequency: 60d
 Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15844,10894 15856,10821
 # 
@@ -4268,7 +4274,7 @@ Dieselstr. - westlicher Mergenthalerring: Durchfahrt auf der südlichen Seite dur
 #: by: https://www.deutsches-architekturforum.de/thread/9726-rund-um-den-gendarmenmarkt/?postID=731755#post731755
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1391568.php (Hauptarbeiten bis Ende 2024)
 #: by: https://entwicklungsstadt.de/berlin-mitte-sichtbarer-fortschritt-beim-umbau-des-gendarmenmarktes/
-#: last_checked: 2024-08-20 (osm) vvv
+#: last_checked: 2024-09-02 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-12-31 vvv
 #: note: nur Durchgang zum Konzerthaus von der Charlottenstr. möglich vvv
@@ -4391,9 +4397,9 @@ Neue Fahlenbergbrücke (Ersatzbrücke)	2::inwork 30926,-53 31103,-142
 #: by: https://www.wista.de/aktuelles/news/marktplatz-doerpfeldstrasse-wird-zur-gruenen-mitte-von-adlershof (mit Karte)
 #: by: https://www.wista.de/fileadmin/_processed_/8/c/csm_marktplatz_Adlershof_f75006337a.webp
 #: XXX laut osm Baustelle
-#: osm_watch: way id="20554168" version="24"
+#: osm_watch: way id="20554168" version="25"
 #: osm_watch: way id="1155308749" version="1"
-#: last_checked: 2024-08-22 (osm)
+#: last_checked: 2024-09-06 (osm)
 #: check_frequency: 90d
 #: next_check: 2025-07-01
 Marktplatz Adlershof: möglicherweise wird die nördliche Fahrbahn dauerhaft eingezogen	2::inwork 20336,3783 20290,3756
@@ -4602,7 +4608,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, gesperrt	2::inwork 12608,11692 12645,11673
 #: source_id: viz2021:13.447029,52.600595,04.01.2023,08:00 (Neubau, bis 30.6.2023) (inaktiv)
 #: source_id: viz2021:13.447029,52.600595,22.04.2024,10:00 (Neubau, bis 12.06.2024) (schon am nächsten Tag inaktiv)
 #: XXX Rampen auf Westseite mit Verbundsteinpflaster, auf Ostseite mit welligen Asphalt, parallel zur Autobahn
-#: last_checked: 2024-08-24 (mapillary)
+#: last_checked: 2024-09-02 (mapillary)
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2023-06-30
 Hebammensteigbrücke	2::inwork 13168,21706 13046,21734 13008,21783
@@ -4643,7 +4649,9 @@ Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 
 #: osm_watch: way id="830757933" version="2"
 #: osm_watch: way id="610818155" version="5"
 #: osm_watch: way id="1171090939" version="4"
-#: last_checked: 2024-08-28
+#: source_id: viz2021:13.49479,52.50059,14.05.2024,07:00 (Stromnetzarbeiten in der angrenzenden Lückstr., bis 05.09.2024) (inaktiv)
+#: source_id: viz2021:13.496223,52.500189,14.05.2024,07:00 (bis 05.09.2024) (inaktiv)
+#: last_checked: 2024-09-07
 #: check_frequency: 180d
 #: next_check: 2025-12-31
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
@@ -4664,7 +4672,7 @@ Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
 # 
 # REMOVED --- #: next_check_id: BHFJOHANNISTHAL-2022 --- #: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (Umbau der Brücke 2021) --- #: by: https://www.bahninfo-forum.de/read.php?9,413132,659869#msg-659869 (Sperrung am Wochenende) --- #: by: https://www.bahninfo-forum.de/read.php?9,413132,659884#msg-659884 ("in Kürze ... saniert") --- #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-24531.pdf ("Verbesserung ... nach 2024 diskutiert") --- #: by: https://www.facebook.com/larsduesterhoeft1981/posts/2656989284551902 (Bauarbeiten Dezember 2020 bis Ende 2021) --- #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6697 (Antrag) --- #: by: https://www.berliner-woche.de/johannisthal/c-verkehr/umbenennung-des-betriebsbahnhofs-schoeneweide-zum-fahrplanwechsel_a286993 --- #: by: https://twitter.com/Technologiepark/status/1337402031569580032 (Sanierung der Brücke bis 10.12.2021) --- #: by: https://www.deutsches-architekturforum.de/thread/14514-square-1-johannisthal/ (Erwähnung) --- #: by: https://www.berliner-woche.de/johannisthal/c-verkehr/betriebsbahnhof-schoeneweide-ist-geschichte_a296360 (bis Ende 2021) --- #: by: https://www.facebook.com/larsduesterhoeft1981/posts/2986916781559149 (provisorische Treppe wurde geöffnet) --- #: by: http://thomas.krickstadt.de/s-bahn/2021-12-15-johannisthal/10-2021-12-15-22.html (Fertigstellung Mitte 2022) --- #: by: https://www.berliner-woche.de/johannisthal/c-verkehr/zugang-zum-s-bahnhof-johannisthal-endlich-moeglich-doch-nicht-barrierefrei_a331697 --- #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-14186.pdf (Aufzug im III. Quartal 2024) --- #: by: https://www.berliner-woche.de/johannisthal/c-verkehr/fahrstuhl-in-johannisthal-erst-ab-2024-nutzbar_a368423 --- #: by: https://www.berliner-woche.de/johannisthal/c-verkehr/fussgaengerbruecke-am-s-bahnhof-johannisthal-soll-im-herbst-fertig-werden-fahrstuhl-erst-2024_a385887 --- #: XXX wenn die alte Treppe wiederhergestellt ist, kann man die provisorische Treppe vermutlich entfernen, siehe strassen-orig und gesperrt-orig --- #: osm_watch: way id="1146034287" version="2" --- #: osm_watch: way id="1012523982" version="8" --- #: last_checked: 2023-09-24 vvv --- #: check_frequency: 90d vvv --- #: next_check: 2023-09-30 vvv --- Fußgängerbrücke Bhf. Johannisthal: südwestlicher Abgang wird zurückgebaut	2::inwork 18621,4675 18636,4660 18642,4654 18653,4663 18664,4673 --- # REMOVED (hier offen, siehe http://thomas.krickstadt.de/s-bahn/2022-08-14-johannisthal/4-2022-08-14-12-xxl.jpg) --- Gustav-Hertz-Platz: wegen Brückenarbeiten gesperrt	2::inwork 18722,4628 18656,4687 --- Gustav-Hertz-Platz: wegen Brückenarbeiten gesperrt	2::inwork 18691,4601 18654,4636 18661,4645 18639,4670 --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
-#: last_checked: 2024-06-09
+#: last_checked: 2024-09-04
 #: check_frequency: 90d
 Am Betriebsbahnhof Schönweide: Straße mit Bauzaun abgesperrt	2::inwork 18254,4817 18306,4753 18331,4744 18497,4529
 # 
@@ -4743,7 +4751,7 @@ Buckower Chaussee: Bahnübergang gesperrt	2::inwork 9123,533 9178,556 9200,562
 #: next_check_id: ELSENBRUECKE-2018
 #: by: mapillary
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22806.pdf (Sperrung des Spreeuferwegs zwischen 2020 und 2028)
-#: last_checked: 2024-08-28 vvv
+#: last_checked: 2024-09-07 vvv
 #: next_check: 2028-01-01 vvv
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 Treppe zum Uferweg: Zugang nicht möglich	2::inwork 14373,10046 14383,10036 14405,10027
@@ -4755,7 +4763,7 @@ Treppe zum Uferweg: Zugang nicht möglich	2::inwork 14373,10046 14383,10036 14405
 #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/dockyard-feiert-richtfest_a396811 (Fertigstellung 2026)
 #: by: https://www.pecan.de/neubau-ketteler-la-roche-schule-im-quartier-neumuehle-2/ (Fertigstellung 4. Quartal 2024)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbrücke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2024-08-28
+#: last_checked: 2024-09-07
 #: check_frequency: 90d
 #: next_check: 2024-12-31
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14480,10157 14462,10206 14361,10259
@@ -4791,7 +4799,7 @@ Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,1015
 #: XXX für den gesperrten Abschnitt wird Asphalt als Fahrbahnoberfläche vermutet (bereits eingetragen)
 #: also_indoor: webcam https://quartier-heidestrasse.contempo-webcam.de/kamera-4.php
 #: also_indoor: webcam https://portal1915.webcam-profi.de/
-#: last_checked: 2024-08-29
+#: last_checked: 2024-09-07
 #: check_frequency: 90d
 George-Stephenson-Str.: Hochbauarbeiten, gesperrt	2::inwork 7487,14472 7446,14403 7529,14274
 # REMOVED (offen) --- #: note: hier stehen Wachhäuschen, die aber nicht immer besetzt sind, außerdem gibt es Schranken --- #: last_checked: 2024-06-30 (daf) vvv --- #: check_frequency: 45d vvv --- George-Stephenson-Str.: möglicher Baustellenverkehr, Freigabe noch unklar	2::inwork 7529,14274 7569,14209 7614,14136 --- (Heidestr./Hedwig-Porschütz-Str. - George-Stephenson-Str.): möglicher Baustellenverkehr, Freigabe noch unklar	2::inwork 7569,14209 7652,14257 --- #: check_frequency ^^^ --- #: last_checked ^^^
@@ -4816,7 +4824,7 @@ George-Stephenson-Str.: Hochbauarbeiten, gesperrt	2::inwork 7487,14472 7446,1440
 #: XXX evtl. wird die Qualität nach den Bauarbeiten besser sein (vielleicht keine Straßenbahnschienen mehr, neuer Asphalt?)
 #: osm_watch: note 3954448 4
 #: osm_watch: way id="195397561" version="20"
-#: last_checked: 2024-08-13
+#: last_checked: 2024-09-02
 #: check_frequency: 30d
 # REMOVED --- #: check_frequency: 45d
 #: next_check: 2024-12-31
@@ -4832,8 +4840,8 @@ Planckstr.: Einbahnstraßenregelung, offen Richtung Süden	1s:q3:inwork 9441,12670
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/aenderungen-bei-drei-u-bahnlinien_a354389
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-18170.pdf (Neubau der Brücke: vsl. 2027 bis 2029)
 # REMOVED --- #: osm_watch: way id="223707973" version="11"
-#: osm_watch: way id="848716360" version="10"
-#: last_checked: 2024-08-05
+#: osm_watch: way id="848716360" version="11"
+#: last_checked: 2024-09-01 (osm)
 #: check_frequency: 120d
 #: next_check: 2029-12-31
 #: priority: #A
@@ -4941,20 +4949,20 @@ Wäscherinnenweg: durch Bauzäune abgesperrt	2::inwork 21444,5112 21358,5072
 #: by: https://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_2209/nachricht7327.html
 #: by: https://www.berliner-woche.de/mitte/c-bauen/stiftung-mitte-berlin-veroeffentlicht-ergebnis-einer-umfrage-zur-gestaltung-der-innenstadt_a398281
 #: XXX evtl. wird hier wieder ein Gehweg entstehen, aber ohne Überquerungsmöglichkeit an der künftigen Straße "Molkenmarkt"
-#: last_checked: 2024-08-31 (webcam)
+#: last_checked: 2024-09-03
 #: check_frequency: 90d
 (Molkenmarkt - Parochialstr.): wegen Bauarbeiten komplett eingezäunt und gesperrt	2::inwork 10746,12364 10831,12371
 # 
 #: next_check_id: MOLKENMARKT-2021
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
-#: last_checked: 2024-08-31 (webcam)
+#: last_checked: 2024-09-02
 #: check_frequency: 30d
 Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork 10831,12371 10830,12313 10830,12279
 # 
 #: next_check_id: MOLKENMARKT-2021
-#: XXX Die Kreuzung Gustav-Böß-Str./Jüdenstr. wird eine neue Ampel bekommen
+#: XXX Die Kreuzung Gustav-Böß-Str./Jüdenstr. wird eine neue Ampel bekommen, die Masten stehen schon.
 #: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
-#: last_checked: 2024-08-31 (webcam)
+#: last_checked: 2024-09-03
 #: check_frequency: 60d
 Jüdenstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451
 # 
@@ -5069,7 +5077,7 @@ Wuhletalbrücke: wird neu gebaut	2::inwork 20843,17745 20798,17664 20768,17609 20
 #: XXX Bis wann gehen die Bauarbeiten?
 #: historical_note: früher: Fahrbahn ist gesperrt, Ausweichen auf engen Gehweg, evtl. Buden, Bordsteine
 #: osm_watch: way id="40451054" version="23"
-#: last_checked: 2024-08-26 (krickstadt)
+#: last_checked: 2024-09-04
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2024-08-17
 # REMOVED --- #: next_check: 2024-02-02
@@ -5223,7 +5231,7 @@ Zufahrt Zentrum Schöneweide: Fahrbahn und Bürgersteig gesperrt	2:inwork 17728,57
 #: XXX danach könnte die Qualität der Wege besser sein
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1608/nachricht6146.html
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_13_1401_1520_online.pdf (Widmung als Grünanlage)
-#: last_checked: 2024-08-29 vvv
+#: last_checked: 2024-09-07 vvv
 #: check_frequency: 60d vvv
 #: source_id: 2147341188
 #: osm_watch: way id="593108603" version="3"
@@ -5305,7 +5313,7 @@ Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14
 #: osm_watch: node id="10239151904" version="1"
 #: osm_watch: way id="276821479" version="5"
 #: osm_watch: note 3748854 1
-#: last_checked: 2024-08-27
+#: last_checked: 2024-09-05
 #: check_frequency: 180d
 #: next_check: 2025-09-20
 Valeska-Gert-Str. - Am Postbahnhof: wegen Bauarbeiten gesperrt	2::inwork 12807,11287 12713,11372
@@ -5360,7 +5368,7 @@ Valeska-Gert-Str. - Am Postbahnhof: wegen Bauarbeiten gesperrt	2::inwork 12807,1
 #: source_id: viz2021:13.370715,52.524195,15.10.2012,08:00 (bis 31.12.2026)
 #: osm_watch: way id="186329816" version="40"
 #: also_indoor: traffic
-#: last_checked: 2024-08-30 vvv
+#: last_checked: 2024-09-07 vvv
 #: check_frequency: 180d vvv
 #: next_check: 2026-12-31 vvv
 # REMOVED --- #: valid: -20221230
@@ -5401,9 +5409,9 @@ B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich de
 #: XXX Anschluss an der Gotzkowskybrücke ist noch nicht fertig
 #: osm_watch: way id="501191631" version="7"
 #: osm_watch: way id="1085168609" version="2"
-#: osm_watch: way id="1297686366" version="2"
+#: osm_watch: way id="1297686366" version="3"
 #: osm_watch: note 4173331 6
-#: last_checked: 2024-08-21
+#: last_checked: 2024-08-27 (osm)
 # REMOVED --- #: check_frequency: 90d
 # REMOVED --- #: check_frequency: 45d
 # REMOVED --- #: next_check: 2021-09-01
@@ -5434,11 +5442,14 @@ Wikingerufer: neuer Uferweg ist noch nicht freigegeben	2:inwork 5354,12552 5366,
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1361549.php (Fertigstellung Ende 2024)
 #: by: https://www.berliner-woche.de/tiergarten/c-bauen/loewenbruecke-wird-bis-ende-2024-wieder-aufgebaut_a394430
 #: by: https://www.deutsches-architekturforum.de/thread/6927-rund-um-die-siegess%C3%A4ule-gro%C3%9Fer-tiergarten/?postID=763239#post763239 (Fertigstellung Q1 2025)
+#: by: https://www.morgenpost.de/bezirke/mitte/article407169185/neubau-der-loewenbruecke-im-tiergarten-endlich-gehtE28098s-voran.html (bis Anfang 2025)
+#: by[nocache]: https://archive.is/qXWGQ
 #: XXX: existiert nicht mehr, die Brücke wird aber wieder aufgebaut; einer der vier Löwen wurde entfernt
 #: also_indoor: search Löwenbrücke Tiergarten
 #: note: früher bei osm, jetzt komplett entfernt: osm_watch: way id="22792488" version="5"
 #: osm_watch: node id="245006076" version="6"
 #: osm_watch: node id="245006075" version="7"
+#: osm_watch: way id="1272587928" version="1"
 #: last_checked: 2024-06-25 (daf)
 # REMOVED --- #: check_frequency: 720d
 #: next_check: 2025-03-31
