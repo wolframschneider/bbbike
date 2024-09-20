@@ -303,7 +303,7 @@ Naturtheater Hasenheide	F:SW|IMG:theater 11323,8695 11324,8663 11302,8665 11277,
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11357 (Antrag)
 #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/buergerinitiative-will-abriss-des-sez-verhindern_a424419
 #: also_indoor: search SEZ Berlin
-#: last_checked: 2024-08-27
+#: last_checked: 2024-09-16
 #: check_frequency: 360d
 SEZ	F:SW 13225,13585 13258,13526 13256,13514 13276,13494 13267,13455 13240,13462 13204,13426 13156,13403 13136,13427 13172,13450 13169,13460 13196,13473 13188,13512 13210,13518 13179,13581 13218,13589
 # 
@@ -372,6 +372,7 @@ Rathauspassagen	F:Shop 10929,12644 10883,12703 10894,12716 10884,12729 10726,125
 Tegel-Center	F:Shop 2158,20343 2274,20361 2270,20388 2243,20455 2196,20448 2207,20379 2154,20369
 Hohenschönhauser Tor	F:Shop 15146,14504 15201,14535 15211,14559 15180,14616 15124,14590 15115,14556
 #: by: https://www.berliner-woche.de/alt-treptow/c-bauen/teile-des-park-centers-treptow-sollen-fuer-geplante-neubauten-abgerissen-werden_a372392
+#: by: https://www.architektur-urbanistik.berlin/index.php?threads/park-center-treptow.1231/#post-23739
 #: XXX Bleibt das Einkaufszentrum?
 #: last_checked: 2024-08-02
 #: check_frequency: 360d
@@ -734,7 +735,7 @@ St. Antonius	SW|IMG:church 18118,6735
 Lutherkirche	SW|IMG:church 7874,10059
 Christophoruskirche	SW|IMG:church 25569,5288
 Trudelturm	SW 19112,3039
-Trinitaskirche	SW|IMG:church 4055,11293
+Trinitatiskirche	SW|IMG:church 4055,11293
 Jungfernmühle in Buckow	SW 14939,3006
 St. Marien am Behnitz	SW|IMG:church -2995,14593
 St. Petrus	SW|IMG:church 4008,6826

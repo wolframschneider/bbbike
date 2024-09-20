@@ -7,7 +7,6 @@ An der Wuhlheide/Steffelbauerstr.: Baustellenampel östlich der Einmündung	F::inw
 Wendenschloßstr.: Gegenverkehrsregelung	X::inwork 22791,4457
 Wilhelminenhofstr./Schillerpromenade	X::inwork 18191,6363
 Wiesbadener Str./Sodener Str.: provisorische Ampel	X::inwork 3703,7324
-Danziger Str./Hans-Otto-Str.: provisorische Ampel	X::inwork 12722,14232
 Anzengruberstr./Donaustr.: Bauampel	X::inwork 12856,8344
 Salvador-Allende-Str.: Gegenverkehrsregelung	X::inwork 23445,4596
 Mariendorfer Weg/Gottlieb-Dunkel-Str./Eschersheimer Str.: Gegenverkehrsregelung	X::inwork 11740,6338
@@ -1828,7 +1827,7 @@ Industriebahn	B0 -2410,13746
 	X 19574,3186
 	X -6482,5711
 	F -6170,6016
-	F -5877,6308
+	F -5881,6313
 	F 8831,13973
 	X 8870,13926
 	X 8442,14456
@@ -2402,6 +2401,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	F 9704,19428
 	X 14559,13248
 	X 17754,5460
+	F -6349,5846
 	X -17127,-554
 	F -12868,-502
 	X -12940,-1625
@@ -2771,6 +2771,7 @@ geschlossen bei Bedarf	Zbr 27649,-11766
 	B 13280,-18317
 	B 13295,-18620
 	B 13412,-20513
+	B 13467,-21298
 	B 13528,-21855
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich	B 40259,14530
 Bahn kommt ca. halbstündlich	B 43081,77252
