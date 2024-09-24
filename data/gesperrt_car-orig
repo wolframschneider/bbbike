@@ -1095,7 +1095,7 @@ Behlertstr.	1 -12370,-354 -12510,-339 -12621,-359
 Behlertstr.	1 -12821,-417 -12621,-359
 Schadowstr. - Unter den Linden	3 9011,12423 9028,12307 9141,12320
 Unter den Linden	3nocross 9858,12410 9934,12420 9984,12426 10024,12431
-Richardstr.	1 13103,7889 13085,7904 13045,7938
+Richardstr.	1 13103,7889 13081,7907 13045,7938
 Bergstr.	3 9135,14317 9182,14281 9272,14208
 Bergstr.	3 9272,14208 9182,14281 9135,14317
 Mangerstr. (Potsdam)	1 -12054,-274 -12123,-294 -12265,-418
@@ -1767,7 +1767,7 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: source_id: viz2021:13.409654,52.516544,15.07.2024,08:00 (bis 30.09.2024) (bis 31.12.2024)
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
 #: note: mittlerweile ist die Fahrbahn und die Markierungen eigentlich schon fertig
-#: last_checked: 2024-09-19 vvv
+#: last_checked: 2024-09-22 (webcam) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2024-12-31 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
