@@ -1767,7 +1767,7 @@ Kaulsdorfer Str. - Mahlsdorfer Str. (BVG frei)	3 22325,6385 22534,6249 22645,643
 #: source_id: viz2021:13.409654,52.516544,15.07.2024,08:00 (bis 30.09.2024) (bis 31.12.2024)
 # REMOVED --- #: XXX außerdem: Jüdenstr. wird zur Einbahnstraße für Autofahrer; Radfahrer bekommen bauliche getrennte Wege in beide Richtungen; vermutlich wird es auch eine Ampel an der Kreuzung Grunerstr./Jüdenstr. geben
 #: note: mittlerweile ist die Fahrbahn und die Markierungen eigentlich schon fertig
-#: last_checked: 2024-09-22 (webcam) vvv
+#: last_checked: 2024-09-24 vvv
 #: check_frequency: 14d vvv
 #: next_check: 2024-12-31 vvv
 Stralauer Str.: Einbahnstraße wegen Bauarbeiten	1::inwork 10830,12279 10772,12288 10697,12303
@@ -2105,4 +2105,10 @@ Elsa-Neumann-Str. - Saatwinkler Damm: Linksabbiegen verboten	3 -213,15529 -218,1
 # 
 Zeestower Weg: Poller	3 * -7408,15219 *
 Zeestower Weg: Poller	3 * -7636,15309 *
+# 
+#: by: https://www.berliner-woche.de/weissensee/c-verkehr/amalienstrasse-einbahnstrasse-in-beide-richtungen-befahrbar_a369287 (BVV-Beschluss)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6273 (Zwischenbericht)
+#: note: seit 2024 für Radfahrer frei
+# REMOVED --- #: osm_watch: way id="23008657" version="18" --- #: XXX Wird die Einbahnstraßenregelung für Radfahrer aufgehoben? --- #: last_checked: 2024-06-13 --- #: check_frequency: 90d
+Amalienstr.	1 13794,16773 13722,16843 13653,16907 13581,16968
 # 

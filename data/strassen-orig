@@ -193,8 +193,9 @@ Blücherplatz	NN 9599,10175 9631,10142
 (Blücherplatz - Zossener Str.)	NN 9702,10129 9827,10051
 (Blücherplatz - Waterloo-Ufer)	NN 9631,10142 9687,10180
 (Blücherplatz - Johanniterstr.)	NN 9702,10129 9816,10119 9837,10117
-Baerwaldstr.	N 10123,9233 10198,9405 10306,9640 10361,9755 10357,9807
-Baerwaldstr.	N 10361,9755 10405,9795
+Baerwaldstr.	N 10123,9233 10198,9405
+Baerwaldstr.	NH 10198,9405 10306,9640 10361,9755 10357,9807
+Baerwaldstr.	NH 10361,9755 10405,9795
 Baerwaldstr.	H 10357,9807 10424,9958 10467,10051 10500,10081
 Baerwaldstr.	H 10405,9795 10480,9949 10513,10038 10500,10081
 Geibelstr. (Kreuzberg)	N 10564,9755 10627,9912
@@ -234,8 +235,8 @@ Reichstagufer	NN 8766,12541 8667,12555 8596,12576 8554,12593
 (Washingtonplatz - Elisabeth-Abegg-Str.)	NN 7926,12865 7907,12817
 (nördliches Spreeufer - Elisabeth-Abegg-Str.)	NN 7945,12878 7907,12817 7867,12765 7819,12729
 Magnus-Hirschfeld-Ufer	NN 7945,12878 7908,12804 7856,12746 7772,12694 7521,12581 7447,12520 7314,12419 7217,12383 7183,12372 7122,12384 7051,12426
-(Spreeufer - Otto-von-Bismarck-Allee)	NN 8473,12753 8445,12755 8415,12749
-Marie-Elisabeth-Lüders-Steg	NN 8415,12749 8593,12742 8589,12772
+(Spreeufer - Otto-von-Bismarck-Allee)	NN 8473,12753 8445,12755 8433,12753
+Marie-Elisabeth-Lüders-Steg	NN 8433,12753 8442,12741 8593,12742 8589,12772
 Schiffbauerdamm	N 9279,12953 9239,12923 9193,12875 9102,12790 9056,12743 9025,12727 8870,12647 8752,12647
 Schiffbauerdamm	N 8544,12772 8514,12877 8503,12895
 Adele-Schreiber-Krieger-Str.	N 8735,12780 8589,12772 8544,12772
@@ -1870,12 +1871,13 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: by: https://www.berliner-woche.de/moabit/c-bauen/golda-meir-steg-verbindet-jetzt-moabit-mit-mitte_a330725
 #: by: https://www.deutsches-architekturforum.de/thread/11524-bv-%C3%B6stlich-der-heidestra%C3%9Fe-und-otto-weidt-platz-europacity/?postID=750664#post750664
 #: by: https://www.nachhaltige-erneuerung.berlin/tiergarten-nordring-heidestrasse/otto-weidt-platz
+#: by: https://moabitonline.de/41262 (Fertigstellung bis Oktober 2024 geplant)
 #: osm_watch: way id="1010731431" version="8"
 #: osm_watch: way id="642581102" version="10"
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
 #: last_checked: 2024-09-17 (daf)
 #: check_frequency: 45d
-# REMOVED --- #: next_check: 2022-12-31
+#: next_check: 2024-10-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
 (Golda-Meir-Steg - südliches Otto-Weidt-Platz)	NN 7861,14133 7850,14100
 Golda-Meir-Steg	NN 7861,14133 7899,14157 7962,14198 7973,14195
@@ -4800,11 +4802,13 @@ Neue Schönholzer Str.	N 10179,17772 10141,18030 10089,18180
 Schützenstr. (Niederschönhausen, Reinickendorf)	N 8891,18545 8839,18504 8789,18476
 Am Bürgerpark	N 8839,18504 9229,18178 9310,18108 9343,18080 9365,18062 9410,18021
 (Am Bürgerpark - Wilhelm-Kuhr-Str.)	N 9365,18062 9366,17997
-Schulzestr.	N 9618,17693 9343,17985
+Schulzestr.	N 9618,17693 9494,17824 9343,17985
+(Schulzestr. - S-Bhf. Wollankstr.)	NN 9494,17824 9461,17795
+(Personnentunnel S-Bhf. Wollankstr.)	NN 9434,17823 9383,17757
 Wilhelm-Kuhr-Str.	N 9160,17656 9193,17763 9236,17907
 Wilhelm-Kuhr-Str.	NN 9236,17907 9303,17965 9343,17985
 Wilhelm-Kuhr-Str.	N 9343,17985 9366,17997 9410,18021 9460,18053 9590,18082 9803,18131 9831,18181 9893,18179 10027,18165
-(Wilhelm-Kuhr-Str. - Wollankstr.)	NN 9303,17965 9314,17943 9341,17917 9348,17885 9363,17868 9396,17863 9586,17665
+(Wilhelm-Kuhr-Str. - Wollankstr.)	NN 9303,17965 9314,17943 9341,17917 9348,17885 9363,17868 9396,17863 9434,17823 9461,17795 9586,17665
 Killisch-von-Horn-Weg	N 9590,18082 9694,17960 9695,17945 9719,17926
 Pichelswerderstr. (Pankow)	N 9787,17880 9719,17926
 Hermann-Hesse-Str.	H 8891,18545 9214,18666 9279,18724 9458,18859 9487,18887 9681,19179 9811,19302 9859,19283
@@ -11155,7 +11159,8 @@ Goltzstr. (Lichtenrade)	N 10983,-2116 10763,-2276 10642,-2371 10563,-2432 10454,
 Rehagener Str.	N 10657,-2639 10648,-2547 10638,-2452 10642,-2371 10631,-2130 10629,-1931 10644,-1875 10697,-1847 10765,-1860
 Klausdorfer Weg	N 10505,-2552 10648,-2547 10833,-2544 10989,-2543
 Rohrbachstr.	N 9658,-2640 9658,-2419 9650,-2135
-Wolziger Zeile	N 10382,-2598 10365,-2603 10307,-2633 10287,-2644
+# REMOVED (früher bis 1.7.2024 Bahnübergang) --- Wolziger Zeile	N 10382,-2598 10365,-2603 10307,-2633
+Wolziger Zeile	N 10307,-2633 10287,-2644
 Wolziger Zeile	N 10259,-2660 10287,-2644 10253,-2643 10085,-2643 9969,-2643 9872,-2642 9762,-2642 9658,-2640 9608,-2642
 Hohenzollernstr. (Lichtenrade)	N 9559,-2417 9658,-2419 9756,-2415 9864,-2411 9967,-2408 10069,-2405 10173,-2402
 Bahnhofstr. (Lichtenrade)	H 10983,-2116 10756,-2128 10631,-2130 10509,-2128 10465,-2129 10310,-2136 10300,-2135 10258,-2135 10228,-2136 10191,-2135
@@ -12633,7 +12638,7 @@ Eisensteiner Str.	N 19727,9672 19722,9483
 #: XXX wird hier noch ein verkehrsberuhigter Bereich ausgewiesen?
 #: osm_watch: way id="338124008" version="15"
 #: priority: #C
-#: last_checked: 2024-03-29 (mapillary)
+#: last_checked: 2024-09-28
 #: check_frequency: 180d
 Zachenberger Str.	N 19889,9400 19824,9405 19780,9409
 Teisnacher Str.	N 19871,9680 19859,9473
@@ -13782,7 +13787,7 @@ Eisnerstr.	N 9507,-85 9653,-483 9698,-556
 #: XXX Gehweg wird vermutlich verlegt
 #: by: http://www.baustellen-doku.info/berlin_dresdener-bahn/PFA1_Marienfelde_Attilastrasse-Schichauweg/20200424/ (Bild 31)
 #: historical_note: früher als "(Eisnerstr. - S-Bhf Buckower Chaussee)" bezeichnet
-#: last_checked: 2024-07-03
+#: last_checked: 2024-09-21 (youtube)
 #: check_frequency: 180d
 (ehemaliger Weg zum S-Bhf Buckower Chaussee)	NN 9507,-85 9473,-92 9271,323
 # 
@@ -14361,7 +14366,7 @@ Leykestr.	N 12335,7770 12075,7696
 Kronprinzenbrücke	NH 8503,12895 8424,12853
 Konrad-Adenauer-Str.	NH 8424,12853 8309,12758
 Konrad-Adenauer-Str.	N 8309,12758 8306,12609
-Otto-von-Bismarck-Allee	N 8415,12749 8309,12758
+Otto-von-Bismarck-Allee	N 8433,12753 8309,12758
 Otto-von-Bismarck-Allee	NH 8309,12758 8252,12757 8206,12757
 Otto-von-Bismarck-Allee	N 8206,12757 8120,12756
 # REMOVED --- #: note: laut osm "Willy-Brandt-Str." --- aber vor Ort existieren keine Straßenschilder? vvv --- #: by: http://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/ii-200ib/index.shtml (dieser Abschnitt der Straße bleibt erhalten) --- #: note: "Umfahrung Kanzleramt"
@@ -15708,7 +15713,7 @@ Salzmannstr.	N 16847,10092 16855,10127 16887,10271 16941,10487
 #: XXX Benennung zu "Zum Betriebsbahnhof" geplant, evtl. auch mit entsprechender Ausschilderung (Berlin.coords.data-Eintrag!)
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf (Benennung von Wegen)
 #: osm_watch: way id="38776757" version="16"
-#: last_checked: 2024-09-07
+#: last_checked: 2024-09-28
 (Salzmannstr. - Betriebsbhf. Rummelsburg)	NN 16847,10092 16835,10052 16830,10030 16841,9997 16895,9922 16900,9861
 (Salzmannstr. - Zobtener Str.)	NN 16841,9997 16811,9937
 (Betriebsbhf. Rummelsburg - Am Kraatzgraben)	NN 16895,9922 16886,9982 16894,10003 16899,10020 16912,10054
@@ -16098,7 +16103,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf (Benennung von Wegen)
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2024-09-07
+#: last_checked: 2024-09-28
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: entlang des Tränkegrabens
@@ -17698,7 +17703,8 @@ Am Klarpfuhl	N 18085,137 18249,-114 18232,-228 18195,-277 18205,-297
 (Am Klarpfuhl - Mauerweg)	NN 18205,-297 18218,-325
 Schrimmer Weg	N 17949,180 17879,127
 Schrimmer Weg	NN 17879,127 17818,93
-Cotheniusstr.	N 13228,13615 13430,13733 13519,13785
+Cotheniusstr.	N 13228,13615 13430,13733
+Cotheniusstr.	NN 13430,13733 13519,13785
 Boothstr.	N 4967,3231 5116,3146 5253,3066 5493,2931
 #: XXX_osm bei osm falsch geschrieben (str statt weg)
 Hochbergweg	N 4902,2058 4839,2195 4813,2256
@@ -18694,7 +18700,7 @@ Joseph-von-Eichendorff-Gasse	N 8449,11277 8404,11290
 Rudolf-von-Gneist-Gasse	N 8278,11257 8354,11230
 Rudolf-von-Gneist-Gasse	N 8430,11211 8382,11224
 #: osm.highway: service
-(Eichhornstr. - Reichpietschufer)	N 8232,11414 8205,11401 8199,11152
+(Eichhornstr. - Reichpietschufer)	N 8232,11414 8205,11401 8215,11274 8199,11152
 #: osm.highway: service
 (Eichhornstr. - Reichpietschufer)	N 8199,11152 8102,11099
 (Eichhornstr. - Reichpietschufer)	NN 8289,11205 8234,11173 8199,11152
@@ -19073,7 +19079,7 @@ Bertolt-Brecht-Platz	N 9193,12875 9153,12928
 #: XXX oder eventuell wird das eine Einbahnstraße, wenn die Bauarbeiten an der Pankebrücke beendet sind (Schilder hängen schon, obwohl es eine Sackgasse ist?!)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_19_2765_2928_online.pdf
 #: osm_watch: way id="327518240" version="10"
-#: last_checked: 2024-08-13
+#: last_checked: 2024-09-25
 #: check_frequency: 90d
 (Straße vor dem Berliner Ensemble)	N 9212,12969 9153,12928
 Karlplatz	N 8711,12986 8676,12976
@@ -19528,7 +19534,7 @@ Kleine Markusstr.	N 12059,12172 11958,12195 11937,12127
 #: by: https://berliner-abendblatt.de/berlin-news/strasse-wird-nach-schauspielerin-inge-meysel-benannt-id226034
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_40_3909_3968_online.pdf (Benennung: Inge-Meysel-Straße)
 #: XXX Benennung nach Inge Meysel; laut DPAG 12/2023: Inge-Meysel-Str., PLZ=10243 vvv
-#: last_checked: 2024-09-03 vvv
+#: last_checked: 2024-09-24 vvv
 #: check_frequency: 90d vvv
 (Zufahrt Str. d. Pariser Kommune)	N 12577,11804 12617,11888 12648,11953
 (Zufahrt Franz-Mehring-Platz)	N 12648,11953 12691,12042 12735,12131

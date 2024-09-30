@@ -239,7 +239,6 @@ Mariabrunner Weg	1 6841,17781 6909,17796 6985,17812
 Gustav-Müller-Platz	1 7644,8560 7606,8598 7643,8634 7682,8598 7644,8560
 Niederlagstr.	1s 9943,12364 9934,12420
 Kolk/Behnitz	1 -3042,14682 -3025,14644 -2950,14624 -2944,14652 -2942,14666
-Karl-Marx-Platz	1 13100,7626 12987,7560
 Olympischer Platz	1 -157,11943 -505,11882 -514,11991 -272,12039 -193,12051 -110,12019
 Florapromenade	1 10207,17448 10284,17458 10320,17487 10311,17764
 Takustr.	1 3273,5214 3226,5227 3179,5267 3079,5411
@@ -753,7 +752,6 @@ Alfred-Kowalke-Str.	1 18027,11244 18059,11256 18179,11278 18200,11269 18229,1125
 Alfred-Kowalke-Str.	1 18229,11256 18202,11253 18061,11240 18027,11244
 Wittenbergplatz	1 6171,10657 6228,10646 6292,10627 6335,10589
 Wittenbergplatz	1 6335,10589 6268,10588 6216,10614 6171,10657
-Amalienstr.	1s 13794,16773 13722,16843 13653,16907 13581,16968
 Pasedagplatz	1 14099,17195 14127,17237 14151,17234 14167,17215
 (Vorfahrt am Bahnhof Friedrichstr.)	1 9303,12718 9171,12758
 Aristotelessteig	1s 18435,9639 18496,9628 18527,9623 18660,9599
@@ -2960,7 +2958,7 @@ Drängelgitter (2x)	BNP:5:2:trailer=10 22187,13304
 Drängelgitter	BNP:5:-128:trailer=10 13940,23486
 Drängelgitter	BNP:5:-128:trailer=10 13963,23505
 Tor	BNP:3:-123:trailer=5 68508,72337
-Tor	BNP:3:-108:trailer=5 68373,72348
+Tor	BNP:3:-121:trailer=5 68373,72348
 Barriere	BNP:5:-254:trailer=10 7422,10368
 Drängelgitter	BNP:3:-145:trailer=10 5029,19945
 Drängelgitter	BNP:3:-174:trailer=10 -12262,-393
@@ -3507,7 +3505,6 @@ Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,90
 An der Streuobstwiese: kann noch durch Bauzäune abgesperrt sein	2::inwork 12628,22604 12668,22537
 Straße 171: wegen Bauarbeiten gesperrt	2::inwork 12694,22570 12657,22596
 zur Ontarioseestr.: Hochbauarbeiten, komplett gesperrt	2::inwork 18585,10024 18694,10018
-Heinrich-Hertz-Str.: Hochbauarbeiten, Abschnitt der Straße mit Bauzäunen abgesperrt	2::inwork 59,15518 149,15237
 An der Villa Bolle: Bauarbeiten, gesperrt	2::inwork 22668,3125 22477,3109
 Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
 An den Eiswerken	2::inwork 15004,10791 14994,10732 14984,10677
