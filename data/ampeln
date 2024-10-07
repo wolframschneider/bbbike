@@ -10,7 +10,6 @@ Wilhelminenhofstr./Schillerpromenade	X::inwork 18191,6363
 Wiesbadener Str./Sodener Str.: provisorische Ampel	X::inwork 3703,7324
 Anzengruberstr./Donaustr.: Bauampel	X::inwork 12856,8344
 Salvador-Allende-Str.: Gegenverkehrsregelung	X::inwork 23445,4596
-Mariendorfer Weg/Gottlieb-Dunkel-Str./Eschersheimer Str.: Gegenverkehrsregelung	X::inwork 11740,6338
 Michaelbrücke	F::inwork 11676,11839
 Möckernstr./nördlich. Wartenburgstr.: Gegenverkehrsregelung	X::inwork 8784,9972
 Schönhauser Allee/Kollwitzstr.: provisorische Ampel	F::inwork 10908,13978
@@ -3010,6 +3009,8 @@ nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 	X 22690,30909
 	X 39873,102249
 	X 39715,101866
+	X 40168,102237
+	F 40544,102437
 	X 39344,101920
 	X 39682,101543
 	X 39962,101085
@@ -3081,6 +3082,7 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	X 20802,-4032
 	X 21013,-4308
 	X 69236,73732
+	X 69472,73461
 	B 52205,72352
 	B -13075,-51085
 	B -12427,-53107

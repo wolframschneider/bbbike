@@ -845,8 +845,6 @@ Götschendorf - Böckenberg: schlechte Qualität, teilweise Sand (wie ist die Quali
 (bei Götschendorf): mäßige Qualität (wie ist die Qualität des Weges hier?)	? 30027,76566 29951,76969 29769,77099 29507,77428 29458,77597
 Groß Friedenwalde - Flieth: Kopfsteinpflaster (wie schlecht ist das Kopfsteinpflaster hier?)	? 35740,80983 35815,81168 35815,81518 35894,81782
 Groß Friedenwalde - Flieth: Asphalt (ist hier tatsächlich asphaltiert?)	? 35894,81782 35998,82265 36009,82890 36430,83497 36578,83835 36590,84086 36693,84235 36676,84495 36696,84495
-# added from handicap_s
-Uhlandstr.: Fahrbahn wegen Asphaltierungsarbeiten gesperrt (Sind die Bauarbeiten beendet?)	? 7533,20275 7577,20450
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
@@ -875,4 +873,5 @@ Brauerstr.: evtl. wird hier die Einbahnstraßenregelung für Radfahrer aufgehoben 
 # added from bbbike-temp-blockings-optimized
 Gleiwitzer Str.: Bauarbeiten, Fahrbahn zwischen Dornacher Str. und Köpenicker Str. gesperrt, voraussichtlich bis Ende September 2024, vielleich wird wieder verlängert [Gleiwitzer Str. zwischen Dornacher Str. und Köpenicker Str.] (Sind die Bauarbeiten in der Gleiwitzer Str. beendet?)	? 20947,9999 21146,9988
 Alt-Hellersdorf - Cottbusser Str.: Weg ist noch offiziell gesperrt (Stand Mitte August 2024), Durchfahrt ist nach Ende der Asphaltierung unter Umständen bereits möglich (Ist der Weg nun offiziell geöffnet?)	? 23305,14914 23318,14847 23297,14772
+Nordufer: zwischen Fehmarner Str. und Föhrer Str. Bauarbeiten, Sperrung der Fahrbahn, vom 25.09.2023 07:00 bis 07.10.2024 17:00, evtl. wird verlängert (Sind die Bauarbeiten beendet?)	? 6334,14756 6513,14725
 Mauerweg: Bauarbeiten zwischen Japaneck und Lichterfelder Allee, Sperrung, voraussichtlich ab dem IV. Quartal 2024 (Haben die Bauarbeiten bereits begonnen?)	? 4406,-910 4081,-425 4038,-362 4046,-299 4034,-255 3982,-181 3941,-127 3908,-117 3842,-6 3788,26 3767,66 3689,182 3607,283 3480,441 3412,534
