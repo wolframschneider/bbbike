@@ -37,6 +37,7 @@ Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork 16355,9622
 	X::inwork 10096,-2137
 Straﬂe der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
 Gegenverkehrsregelung	X::inwork 18767,-1343
+	F 6776,5553
 	F 10679,17441
 	F 11913,13077
 	F 18406,7760
@@ -1125,7 +1126,7 @@ Etwa 40 Meter nˆrdlich in der Straﬂe der Pariser Kommune eine weitere Fuﬂg‰ngera
 	X 6718,2443
 	F 6844,1813
 	X 6937,671
-	X 7318,759
+	X 7316,773
 	X 8683,6326
 	X 11308,-2535
 	F 10617,452
@@ -2536,6 +2537,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X -13181,2285
 	X -13142,1989
 	F -14457,-1797
+	X 31512,7971
 	X 67175,74764
 	X 66217,75636
 	X 66530,75352
