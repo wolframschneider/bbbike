@@ -2203,10 +2203,10 @@ unbequemes Passieren des Mittelstreifens	3nocross::ignrte 10512,12039 10550,1209
 Mühlendamm -> Fischerinsel, Spreeufer: unbequemes Passieren des Mittelstreifens	3::igndisp 10574,12131 10550,12096 10562,12087
 Fischerinsel, Spreeufer -> Mühlendamm: unbequemes Passieren des Mittelstreifens	3::igndisp 10562,12087 10550,12096 10512,12039
 unbequemes Passieren des Mittelstreifens	3nocross::ignrte 10697,12303 10703,12313 10722,12349 10716,12382
-Spandauer Str. -> Eiergasse: unbequemes Passieren des Mittelstreifens	3::igndisp 10697,12303 10703,12313 10671,12356
-Eiergasse -> Spandauer Str.: unbequemes Passieren des Mittelstreifens	3::igndisp 10671,12356 10703,12313 10722,12349
-Spandauer Str. -> Spandauer Str. (Mitte) [Gehweg]: unbequemes Passieren des Mittelstreifens	3::igndisp 10703,12313 10722,12349 10665,12413
-Spandauer Str. (Mitte) [Gehweg] -> Spandauer Str.: unbequemes Passieren des Mittelstreifens	3::igndisp 10665,12413 10722,12349 10716,12382
+Mühlendamm -> Eiergasse: unbequemes Passieren des Mittelstreifens	3::igndisp 10697,12303 10703,12313 10671,12356
+Eiergasse -> Mühlendamm: unbequemes Passieren des Mittelstreifens	3::igndisp 10671,12356 10703,12313 10722,12349
+Mühlendamm -> Spandauer Str. (Mitte) [Gehweg]: unbequemes Passieren des Mittelstreifens	3::igndisp 10703,12313 10722,12349 10665,12413
+Spandauer Str. (Mitte) [Gehweg] -> Mühlendamm: unbequemes Passieren des Mittelstreifens	3::igndisp 10665,12413 10722,12349 10716,12382
 unbequemes Passieren des Mittelstreifens (Bordsteine)	3nocross::ignrte 5215,10711 5341,10756 5475,10808
 Kurfürstendamm -> Meinekestr.: unbequemes Passieren des Mittelstreifens (Bordsteine)	3::igndisp 5475,10808 5341,10756 5313,10420
 Meinekestr. -> Kurfürstendamm: unbequemes Passieren des Mittelstreifens (Bordsteine)	3::igndisp 5313,10420 5341,10756 5215,10711
@@ -3475,6 +3475,7 @@ Drängelgitter	BNP:3:-12:trailer=10 26803,56547
 Tor	BNP:10:-140 33926,63348
 Tor	BNP:20:-74 20127,1538
 Barriere	BNP:3:-85:trailer=10 10628,16644
+Weg im Grünzug Kraatzgraben: gesperrt, Leitungsarbeiten	2::inwork 17161,9921 17257,9869
 Uferweg am Otto-Weidt-Platz: wegen Bauarbeiten an der Treppenanlage gesperrt	2::inwork 7912,14160 7875,14204
 Fuß- und Radwegbrücke: noch nicht offiziell freigegeben	2::inwork 19162,3935 19268,4037 19263,4048 19240,4049 19237,4058 19252,4069 19300,4018 19358,4077 19403,4119 19428,4095 19428,4081 19416,4080 19401,4094 19389,4094 19383,4077 19363,4057 19353,4047
 Slatan-Dudow-Str. (Potsdam): gesperrt wegen Bauarbeiten	2::inwork -7476,-4673 -7353,-4785
@@ -3500,7 +3501,6 @@ Weg entlang der A100, westliche Seite: gesperrt, Durchfahrt wegen Bauzaun nicht 
 Weg entlang der A100, westliche Seite: gesperrt, Durchfahrt wegen Bauzaun nicht möglich	2::inwork 14375,8057 14406,8003 14410,7986 14430,7891 14434,7707 14388,7549
 An der alten Gärtnerei: Baustraße, gesperrt	2::inwork 10888,3787 10898,3865 10922,3917 10981,3937 11022,3921 11046,3895
 Lisa-Fittko-Str.: Hochbauarbeiten, Weg existiert im südlichen Abschnitt noch nicht	2::inwork 7787,13838 7872,13685
-Matthäikirchplatz: Durchgang gesperrt	2::inwork 7933,11407 7970,11396 7934,11275
 Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,9039 19638,9070
 An der Streuobstwiese: kann noch durch Bauzäune abgesperrt sein	2::inwork 12628,22604 12668,22537
 Straße 171: wegen Bauarbeiten gesperrt	2::inwork 12694,22570 12657,22596
@@ -3625,7 +3625,7 @@ Wormser Str. -> Lietzenburger Str.: Mittelstreifen schlecht zu überqueren	3::ign
 (Kolonieweg a. d. Forkenbeckstr.): schieben (Rampe 10 Stufen)	0:15:-78 3756,8101
 tragen (2 x 10 Stufen)	0:40:18 1666,4637
 tragen (2 x 10 Stufen)	0:40:21 1689,4630
-Sterzinger Str.	1 6094,8618 6123,8546
+Sterzinger Str.	1 6094,8618 6129,8558
 Am Mühlenberg	1 6001,8624 6094,8618
 Bozener Str.	1 5900,8930 5971,8926 6033,8919
 Bozener Str.	1 5971,8926 5974,9100

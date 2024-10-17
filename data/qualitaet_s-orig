@@ -14,7 +14,7 @@
 #: XXX und außerdem auch schauen, ob es wieder zum Mergenthalerring wieder ein Tor gibt und dieses ein Schloss hat
 # REMOVED --- #: osm_watch: way id="524560334" version="5"
 #: osm_watch: way id="524560332" version="7"
-#: last_checked: 2024-08-17 vvv
+#: last_checked: 2024-10-12 (mapillary) vvv
 #: check_frequency: 60d vvv
 (Mergenthalerring - Dieselstr.): Asphalt	Q0 14419,8112 14429,8074
 #: osm_watch: way id="680579631" version="8"
@@ -198,7 +198,7 @@ Waldemarstr.: Kopfsteinpflaster	Q2- 11328,10957 11290,10972 11150,11030
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens
-#: last_checked: 2024-09-07
+#: last_checked: 2024-10-15
 #: check_frequency: 360d
 Erkelenzdamm: Kopfsteinpflaster	Q2 11038,10247 11094,10261 11117,10326 11134,10383 11109,10423 11145,10510 11192,10629 11210,10668 11244,10653 11258,10682
 Leuschnerdamm: Kopfsteinpflaster	Q2 11275,10723 11301,10783 11264,10804 11328,10957 11365,11047 11421,11073 11458,11136
@@ -210,7 +210,7 @@ Segitzdamm: asphaltiert	Q0 11159,10769 11133,10704
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens vvv
-#: last_checked: 2024-10-09 vvv
+#: last_checked: 2024-10-15 vvv
 #: check_frequency: 360d vvv
 Segitzdamm: Kopfsteinpflaster	Q2 11133,10704 11164,10687 11145,10638 11100,10530
 Segitzdamm: Kopfsteinpflaster	Q2- 11100,10530 11065,10443
@@ -302,7 +302,7 @@ Wallensteinstr.: Fahrbahn mäßiges bis schlechtes Kopfsteinpflaster, Geh/Radweg V
 #: source_id: viz2021:13.516327,52.486802,02.08.2022,07:00 (Bauarbeiten bis 16.12.2022, nur Kfz-Verkehr betroffen) (inaktiv)
 #: source_id[inactive]: bvg2021:396#BVG305961_0 (bis auf Weiteres)
 #: XXX Wird hier irgendwann neu asphaltiert werden?
-#: last_checked: 2024-09-28
+#: last_checked: 2024-10-11
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2022-12-16
 Wallensteinstr.: Asphalt mit einigen Schäden	Q1 18037,9195 18092,9141 18134,9080
@@ -754,7 +754,7 @@ Stargardtstr.: Asphalt	Q0 7212,17756 7477,17832
 #: XXX: wird die Windscheidstr. asphaltiert?
 # REMOVED (für Radfahrer offen) --- #: XXX ist während der Bauarbeiten hier eine Einbahnstraße? Offen in welche Richtung?
 #: osm_watch: way id="4515622" version="27"
-#: last_checked: 2024-08-30
+#: last_checked: 2024-10-16
 #: check_frequency: 360d
 # REMOVED --- #: next_check: 2022-12-31
 Windscheidstr.: Kopfsteinpflaster, OK	Q1- 3283,11097 3340,10888
@@ -771,7 +771,7 @@ Rönnestr.: Asphalt	Q0 2698,10645 2774,10663
 # REMOVED (bereits asphaltierter Kreuzungsbereich) --- #: osm_watch: way id="4436949" version="20"
 #: osm_watch: way id="1101189359" version="6"
 #: osm_watch: way id="1101189360" version="5"
-#: last_checked: 2024-01-25
+#: last_checked: 2024-10-16
 #: check_frequency: 270d
 #: next_check: 2025-12-31
 Rönnestr.: Kopfsteinpflaster	Q2+ 2774,10663 3041,10732 3295,10831 3291,10853
@@ -1043,7 +1043,7 @@ Tiergartenufer: Parkweg	Q1 6186,11466 6079,11524 5919,11633 5895,11692 5835,1176
 Rosa-Luxemburg-Steg: Holzbohlen	Q1- 6289,11440 6247,11390
 Rosa-Luxemburg-Steg - Gartenufer: Verbundsteinpflaster	Q1 6247,11390 6200,11417
 Fasanerieallee: Kleinsteinpflaster	Q1 6428,11610 6450,11641
-Fasanerieallee: Parkweg	Q1 6450,11641 6540,11754 6685,11954
+Fasanerieallee: Parkweg	Q1 6450,11641 6540,11754 6633,11882 6685,11954
 Großer Weg: Parkweg	Q1 5900,11913 5907,11874 5933,11775 6022,11757 6154,11798 6296,11756 6353,11730 6411,11678 6450,11641 6512,11608 6679,11602 6809,11570 6869,11567 7018,11615 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629
 (Großer Weg - Klingelhöferstr./Tiergartenstr.): Parkweg	Q1 6679,11602 6750,11550 6826,11479
 Großer Weg: asphaltiert	Q0 7606,11629 7623,11624 7664,11597 7711,11558 7713,11553 7717,11540
@@ -1144,7 +1144,7 @@ Paul-Junius-Str.: Kopfsteinpflaster	Q2 15098,12849 15096,12974
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php (Erwähnung)
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/mobilitaetswenderat/22-08-24-mobilitaetswenderat-protokoll_final.pdf (neben der Asphaltierung wird auch ein modaler Filter am Boxhagener Platz erwähnt)
 #: XXX außerdem: Einrichtung einer Fahrradstraße zwischen Frankfurter Allee und Revaler Str.
-#: last_checked: 2024-09-08
+#: last_checked: 2024-10-12
 #: check_frequency: 90d
 Gärtnerstr. (Friedrichshain): Kopfsteinpflaster	Q2 14211,11552 14247,11681 14272,11775 14306,11889
 #: note: relativ schlechter als Simplonstr. oder Samariterstr.
@@ -1725,7 +1725,7 @@ Prühßstr.: schlechtes Kopfsteinpflaster	Q3 9346,4144 9465,4173
 Prühßstr.: mäßiges bis schlechtes Kopfsteinpflaster	Q2- 9465,4173 9580,4201 9869,4271
 Marienburger Str.: Kopfsteinpflaster	Q2 11572,14452 11821,14317 12077,14186
 #: XXX Asphaltierung & Fahrradstraße geplant
-#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4680 (Planung ab 2021)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4680 (Planung ab 2021) (BPU 2025, Haushaltsmittel 2026)
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5720 (Prüfung einer Glättung des Kopfsteinpflasters)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-verkehr/verkehrsprojekte-im-boetzowviertel_a319036 (Erwähnung der Hufelandstraße)
 #: by: https://www.infravelo.de/projekt/hufelandstrasse/ ("erschütterungsarmer Belag", Bauzeitraum 1. Quartal 2022 - 1. Quartal 2023) (mittlerweile: 3. Quartal 2022 - 2. Quartal 2023) (2. Quartal 2023 - 2. Quartal 2024) (1. Quartal 2024 - 4. Quartal 2024) (3. Quartal 2024 - 3. Quartal 2025) (3. Quartal 2025 - 3. Quartal 2026) (4. Quartal 2026 - 3. Quartal 2027)
@@ -1738,7 +1738,7 @@ Marienburger Str.: Kopfsteinpflaster	Q2 11572,14452 11821,14317 12077,14186
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2024/pressemitteilung.1478174.php (zu Kiezblöcken, u.a. Bötzow-Kiez)
 #: by: https://www.berliner-woche.de/bezirk-pankow/c-verkehr/kiezblocks-in-pruefung-winsviertel-boetzowkiez-und-gruene-stadt_a423747
 #: osm_watch: way id="4615063" version="37"
-#: last_checked: 2024-08-27
+#: last_checked: 2024-10-11 (mapillary)
 #: check_frequency: 180d
 #: next_check: 2027-09-30
 Hufelandstr.: Kopfsteinpflaster	Q2 12077,14186 12228,14083 12361,13985 12478,13903 12579,13840 12578,13800
@@ -1982,7 +1982,7 @@ Ella-Kay-Str.: guter Asphalt	Q0 12095,14888 12060,14827 12050,14808 11998,14709
 #: confirmed_by: srt
 Ella-Kay-Str.: Beton	Q0 12250,15123 12217,15123 12208,15108 12195,15083 12173,15040 12095,14888
 #: by ^^^^^^^^^^^^^^^
-(Greifswalder Str. - Ella-Kay-Str.): Verbundsteinpflaster	Q1 12371,14615 12224,14707 12213,14742 12183,14757 12060,14827
+(Greifswalder Str. - Ella-Kay-Str.): Verbundsteinpflaster	Q1- 12371,14615 12224,14707 12213,14742 12183,14757 12060,14827
 Landecker Str.: Kopfsteinpflaster	Q2 3137,8538 2966,8586
 Kufsteiner Str.: glatter Parkweg	Q1 5913,8415 5917,8351 5918,8221
 Rolandufer: Asphalt	Q0 11278,12185 11155,12184
@@ -9046,8 +9046,9 @@ Neue Jakobstr. [Wohngebiet]: Asphalt	Q0 11081,11614 11017,11658 10963,11695
 (Wohngebiet): Beton und Verbundsteinpflaster	Q1+ 11166,11664 11080,11712 11017,11658
 Fischerinsel [Wohngebiet]: Beton mit einigen Schäden	Q1+ 10604,11941 10474,11843 10435,11813 10376,11879
 (Fischerinsel - Grünstraßenbrücke): Gehwegplatten	Q0 10474,11843 10515,11785
-(Fischerinsel, Spreeufer): wassergebundene Decke	Q1 10824,11992 10827,12044 10748,12061 10699,12089 10600,12102 10578,12083
+(Fischerinsel, Spreeufer): wassergebundene Decke	Q1 10824,11992 10827,12044 10734,12064 10699,12089 10600,12102 10578,12083
 (Fischerinsel, Spreeufer): Betonpflaster	Q0- 10578,12083 10585,12106 10562,12087 10550,12096
+(Fischerinsel): wassergebundene Decke	Q1 10746,12036 10734,12064
 Neue Blumenstr.: Beton mit einigen Schäden	Q1 11613,12408 11712,12614
 #: note: einige Meter glattes Kopfsteinpflaster vor der Lichtenberger Str.
 Neue Blumenstr.: Asphalt	Q0- 11712,12614 11947,12494 12006,12464
@@ -11329,6 +11330,11 @@ Helsingforser Platz: Betonpflaster	Q0- 13473,11456 13427,11431
 Ritterlandweg [Wohngebiet]: schlechtes Kopfsteinpflaster	Q3 8315,17079 8346,17148
 Ritterlandweg [Wohngebiet]: Verbundsteinpflaster	Q1 8346,17148 8363,17192
 Alfred-Siggel-Weg: Verbundsteinpflaster	Q1 19406,7886 19550,7780 19500,7719
+#: by: https://www.berliner-woche.de/fennpfuhl/c-umwelt/gruenzug-wird-umgestaltet_a413057
+#: vy; https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10502 (Antrag)
+#: XXX wie sieht die Wegoberfläche nach den Sanierungsarbeiten aus?
+#: last_checked: 2024-10-13
+#: check_frequency: 60d
 (Rudolf-Seiffert-Str./Storkower Str. - Paul-Junius-Str.): Beton mit einigen Hebungen	Q1- 14871,13135 14889,13150 14909,13223 14941,13283 14978,13289 15084,13276
 Rudolf-Seiffert-Str.: Asphalt mit einigen Rissen und Schäden	Q1 14790,13639 14769,13569 14731,13576 14658,13283 14644,13223
 Röblingstr.: Verbundsteinpflaster	Q1 7598,5926 7606,5939
@@ -11368,7 +11374,7 @@ Alfred-Kowalke-Str. [Mittelstreifen]: Gehwegplatten	Q0- 18200,11269 18202,11253
 #: next_check_id: STADTPARKLICHTENBERG-2022
 #: by: https://www.berliner-woche.de/lichtenberg/c-bauen/gruenanlage-zwischen-moellendorff-und-scheffelstrasse-wird-umgestaltet_a229540 (Anfang 2020 - Ende 2021)
 #: XXX Wird sich nach den Bauarbeiten hier etwas ändern? vvv
-#: last_checked: 2024-09-07 vvv
+#: last_checked: 2024-10-11 vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2021-12-31
 Stadtpark Lichtenberg: leicht schadhafter Asphalt	Q0- 15454,12519 15433,12686
@@ -13170,8 +13176,8 @@ Dernburgstr.: Verbundsteinpflaster	Q1+ 2673,10670 2596,10663
 Cecilienstr.: Asphalt, einige Schäden	Q0- 20281,14012 20348,14005 20447,13995 20567,13983 20690,13972 20830,13960
 Johanneskirchplatz: gepflastert	Q2 3030,3276 3056,3290 3067,3319 3059,3339
 Lauterplatz: Verbundsteinpflaster	Q1+ 5799,7880 5707,7878
-(Zufahrt zum Lauterplatz): Asphalt	Q0 5632,7821 5800,7826
-(Zufahrt zum Lauterplatz): Verbundsteinpflaster	Q1+ 5800,7826 5799,7880
+Hannah-Höch-Weg: Asphalt	Q0 5632,7821 5800,7826
+Lauterplatz: Betonsteinpflaster	Q0- 5800,7826 5799,7880
 Chaukenstr. [21-37]: Verbundsteinpflaster	Q1+ 20207,789 20270,760
 Chaukenstr. [21-37]: Verbundsteinpflaster	Q1+ 20255,722 20270,760 20278,780
 Altglienicker Grund [Wohngebiet]: Beton	Q0- 19243,450 19225,384 19202,306
@@ -13729,6 +13735,10 @@ Hilde-Archenhold-Brücke: Asphalt	Q0 19300,4018 19358,4077
 (zur Hilde-Archenhold-Brücke): Asphalt	Q0 19358,4077 19403,4119 19428,4095 19428,4081 19416,4080 19401,4094 19389,4094 19383,4077 19363,4057 19353,4047
 # 
 Ungarnstr.: Fahrbahn betoniert und Radweg mit Verbundsteinpflaster, beide mit Schäden und Unebenheiten	Q1 7666,16879 7583,16872 7394,16836 7267,16784 7177,16715 7106,16646 7056,16587
+# 
+Friedenauer Höhe: Asphalt	Q0 6293,7875 6263,7894 6178,7899
+Friedenauer Höhe: Betonsteinpflaster	Q0- 6178,7899 6126,7917 6011,7911 5799,7880
+# 
 ######################### User Contributions #################################
 #: section: User Contributions (anonymous) vvv 
 #: by: anonymous vvv
@@ -16675,7 +16685,7 @@ Wandlitzstr.: Asphalt mit leichten Schäden	Q0- 18627,8475 18557,8525 18494,8569 
 #: osm_watch: way id="1009279082" version="5"
 #: XXX neue Häuser geplant (zwischen Liepnitzstr. und Stühlinger Str., Bebauungsplan 11-57a), vielleicht wird nach Fertigstellung die Fahrbahn saniert?
 #: also_indoor: traffic (ex-G)
-#: last_checked: 2024-07-06
+#: last_checked: 2024-10-11
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2023-12-31
 Wandlitzstr.: mäßiger Asphalt, z. T. mit Kopfsteinpflaster durchbrochen	Q2 18448,8602 18401,8636 18331,8685 18301,8707 18272,8764
@@ -25619,7 +25629,7 @@ Küstriner Str.: Asphalt	Q0 15799,14674 15878,14761 15944,14836
 #: XXX hier evtl. Umbau bis Sommer 2021? vvv
 #: confirmed_by: srt
 #: osm_watch: way id="593504821" version="8"
-#: last_checked: 2024-07-16
+#: last_checked: 2024-10-13
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2021-06-01
 Küstriner Str.: mäßiges Kleinsteinpflaster	Q2 16314,15223 16357,15328 16406,15452
@@ -28658,6 +28668,10 @@ Birkenstr. (Köpenick): Kopfsteinpflaster	Q2 23947,4673 23869,4733
 #: by: ruth heinrich:
 #: note: "kurvenreich", q0 ignoriert
 #: corrected_by: srt (mäßiges Kopfsteinpflaster -> Kleinsteinpflaster)
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1492778.php (Sanierung bis 24.01.2025)
+#: note: zu wenig BBBike-Traffic für einen temp-blockings-Eintrag (<1/Monat)
+#: XXX Bleibt es nach der Sanierung beim Kleinsteinpflaster?
+#: next_check: 2025-01-2024
 Dallwitzstr.: Kleinsteinpflaster	Q1- 96,2225 163,2091 146,2073 93,2014 80,1998 18,1928
 #
 #: by: oliver (icebear...)
@@ -29542,7 +29556,7 @@ Hüninger Str.: Kopfsteinpflaster	Q2 2019,4027 2039,4128 2047,4162 2054,4190 2096
 Mörchinger Str.: Kopfsteinpflaster	Q1- 1453,3085 1393,3183 1499,3251
 #: note: hier teilweise auch verkehrsberuhigter Bereich
 Mörchinger Str.: Verbundsteine	Q0- 1918,3511 2091,3597
-Am Mühlenberg: Gehwegplatten	Q0 6094,8618 6100,8681 6101,8732
+Am Mühlenberg: Gehwegplatten	Q0- 6094,8618 6100,8681 6101,8732
 #: confirmed_by: srt
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2021/pressemitteilung.1094397.php (Sanierung KW 24-26/2001)
 #: by: https://www.berliner-woche.de/schoeneberg/c-bauen/kalckreuthstrasse-voll-gesperrt_a313914
@@ -33395,5 +33409,6 @@ Kreuzungsbereich mit schadhaftem Asphalt	Q1 5489,1981
 Einmündungsbereich asphaltiert	Q0- 5452,2077
 Einmündungsbereich mit Kopfsteinpflaster	Q2 5434,2122
 Kreuzungsbereich asphaltiert	Q0 5936,2977
+Kreuzungsbereich asphaltiert	Q0 13217,11936
 #: ignore ^^^
 #: section ^^^

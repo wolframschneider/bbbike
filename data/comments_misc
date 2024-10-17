@@ -769,8 +769,8 @@ Rewe/Penny/Kik-Parkplatz	CP2; 17503,10544 17422,10571
 Bleckmannweg: nicht ausgeschildert	CP2; 15886,12190 15756,12212
 Straße 106: nicht ausgeschildert	CP2; 14580,14636 14599,14679
 Liselotte-Herrmann-Str.: Hausdurchfahrt	CP2; 12701,13873 12537,13987
-Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10697,12303 10703,12313 10722,12349 10716,12382 10687,12421 10646,12470
-Molkenmarkt: rund um den Molkenmarkt fehlen Straßenschilder	CS 10783,12502 10687,12421
+Molkenmarkt: rund um den Molkenmarkt fehlen einige Straßenschilder	CS 10697,12303 10703,12313 10722,12349
+Molkenmarkt: rund um den Molkenmarkt fehlen einige Straßenschilder	CS 10783,12502 10687,12421
 ausgeschildert "Zu den Häusern Zur Marktflagge 33-59"	CP2; 14152,13072 14200,13213
 Zur Marktflagge: nicht ausgeschildert	CP2; 14200,13213 14152,13072
 Boveristr.: nicht ausgeschildert	CS 19053,2890 19069,2904 19146,2975
@@ -821,6 +821,7 @@ ausgeschildert "Breitscheidplatz"	CP2; 5652,11004 5716,10978
 ausgeschildert "Kita"	CP2; 25991,14926 25932,14955
 bereits vor der Einmündung als "Neheimer Str." ausgeschildert	CP2; 1735,19045 1704,19043
 Lichtenberger Str. [Wohngebiet]: nicht ausgeschildert	CP2; 11947,12494 11867,12284
+Friedenauer Höhe: nicht ausgeschildert	CS 6293,7875 6263,7894 6178,7899 6126,7917 6011,7911 5799,7880
 Straße am Güterbahnhof Wilmersdorf: nicht ausgeschildert	CS 6147,7840 6273,7849
 Hirzerweg: nicht ausgeschildert	CS 9359,3083 9392,2923 9386,2882 9416,2781
 Clara-Müller-Jahnke-Str.: nicht ausgeschildert	CS 31971,3170 31799,3192 31800,3091 31810,3009 31965,2999
@@ -836,3 +837,5 @@ Rhinstr.: nicht ausgeschildert	CP2; 18140,11932 18160,11938
 Anglerweg: nicht ausgeschildert	CP2; 2649,15783 2648,15827
 ausgeschildert als "Schneidemühler Straße"	CP2; 59722,89735 59540,89674
 ausgeschildert: Tramper Tanger	CP2; 57259,107134 57288,107014
+Ella-Kay-Str.: nicht ausgeschildert	CS 12250,15123 12217,15123 12208,15108 12195,15083
+Ella-Kay-Str.: nicht ausgeschildert	CP2; 12195,15083 12173,15040

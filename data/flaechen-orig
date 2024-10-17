@@ -111,7 +111,7 @@ Gatower Heide	F:Forest -7426,8804 -7459,8858 -7720,8521 -7429,8300 -7289,8287 -7
 Volkspark am Weinberg	F:P 10002,14092 10063,13979 10103,13998 10252,13953 10263,13977 10370,14158 10282,14212 10205,14052 10173,14073 10194,14099 10167,14163
 Monbijoupark	F:P 9975,12959 9950,12935 9912,12915 9769,12959 9702,12965 9707,12974 9714,12995 9724,12992 9762,12981 9789,13060 9762,13069 9778,13116 9754,13124 9771,13182 9786,13178 9938,13114 10000,13079 10016,13067 9975,12959
 James-Simon-Park	F:P 9938,12907 9971,12919 10129,12946 10166,12777 10156,12771 10104,12845 9938,12907
-Rudolph-Wilde-Park	F:P 6454,8653 6455,8613 6458,8472 6368,8472 6313,8471 6263,8456 6163,8398 6060,8334 5918,8221 5831,8358 5913,8415 5995,8477 6123,8546 6230,8602 6313,8638
+Rudolph-Wilde-Park	F:P 6454,8653 6455,8613 6458,8472 6368,8472 6313,8471 6263,8456 6163,8398 6060,8334 5918,8221 5831,8358 5913,8415 5995,8477 6129,8558 6230,8602 6313,8638
 Heinrich-Lassen-Park	F:P 6604,8759 6666,8651 6707,8606 6772,8662 6800,8631 6830,8661 6854,8637 6873,8659 6795,8751 6736,8726 6694,8801 6664,8787 6644,8780 6604,8759
 Ev. Friedhof Alt-Schöneberg	F:Cemetery 6604,8759 6552,8734 6628,8603 6739,8509 6768,8539 6707,8606 6666,8651 6604,8759
 Volkspark Wilmersdorf	F:P 5913,8415 5831,8358 5918,8221 5909,8184 5808,8124 5794,8125 5791,8197 5730,8207 5651,8218 5611,8252 5438,8402 5433,8407 5427,8412 5419,8415 5320,8456 5166,8467 4954,8454 4772,8513 4769,8563 4892,8624 5066,8630 5212,8602 5331,8581 5405,8549 5469,8524 5476,8521 5533,8478 5648,8369 5660,8366 5680,8355 5761,8339 5806,8350
@@ -189,7 +189,7 @@ Spreewaldplatz	F:P 12292,10374 12243,10274 12341,10218 12292,10374
 #: XXX Werden die Wege nachts (genaue Schließzeiten?) abgeschlossen sein? Oder wird das nur situationsbedingt (wann?) passieren?
 #: XXX Neue Lampen werden geplant -> nolighting-Einträge ggfs. prüfen.
 #: priority: #A
-#: last_checked: 2024-10-09
+#: last_checked: 2024-10-16
 #: check_frequency: 90d
 #: next_check: 2025-04-01
 Görlitzer Park	F:P 13220,9980 13162,9904 13139,9880 13086,9825 12932,9900 12983,10000 12881,10056 12829,9957 12814,9966 12341,10218 12397,10335 12317,10382 12309,10427 12348,10432 13220,9980
@@ -214,7 +214,9 @@ Ernst-Thälmann-Park	F:P 12324,15061 12382,15025 12400,14965 12547,14873 12528,1
 Ernst-Thälmann-Park	F:P 12244,15190 12139,15242 12074,15161 11856,15299 11897,15438 12032,15351 12196,15279 12266,15248 12244,15190
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6728 (Antrag: Benennung zu "Ashkelon Platz" (ohne Bindestrich?))
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6908 (Vorlage zur Kenntnisnahme: Benennungsabsicht)
-#: last_checked: 2024-07-03 (BVV, vertagt)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/RwVzirf1IMlETphjLEaxIntIfnlBhqYMk7gNl8iL/hNpCZeQs/97-Dateien/image003.png
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6970 (Vorlage zur Kenntnisnahme, hier mit Bindestrich: Ashkelon-Platz)
+#: last_checked: 2024-09-17 (BA)
 #: check_frequency: 120d
 	F:P 12025,14775 11896,14840 11864,14781 11998,14709 12025,14775
 Mauerpark	F:P 9935,15620 10075,15637 9997,15884 9996,15901 10064,15920 10081,15853 10105,15752 10123,15681 10130,15653 10186,15481 10188,15474 10228,15488 10234,15490 10403,15007 10271,14950
@@ -598,6 +600,10 @@ Grünfläche am Rudower Fließ	F:P 16536,970 16513,1023 16537,1050 16632,1247 16
 Lohmühleninsel	F:P 13241,9949 13339,10097 13457,10255 13487,10227 13547,10173 13484,10102 13392,9960 13241,9949
 Einstein-Park	F:P 13163,14924 13233,15043 13192,15069 13171,15032 13128,15063 13061,15019 13024,14964 13095,14923 13112,14952
 #: by: https://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2020/pressemitteilung.881393.php (Name wird erwähnt)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6937 (Vorlage zur Kenntnisnahme: Umbenennung in "Emmi-und Wilhelm-Blank-Platz")
+#: XXX Wann wird die Umbenennung passieren? Wird es Straßenschilder geben? Korrekte Schreibweise? Emmi-und Wilhelm-Blank-Platz oder Emmi-und-Wilhelm-Blank-Platz?
+#: last_checked: 2024-09-18 (BVV)
+#: check_frequency: 90d
 Storkower Platz	F:P 13143,14935 13107,14873 13148,14850 13185,14912 13163,14924 13143,14935
 Jochen-Klepper-Park	F:P 6933,5098 6962,5140 6924,5175 6840,5223 6818,5212 6857,5181
 Andreas-Hofer-Platz	F:P 10497,17095 10495,17022 10493,16960 10490,16914 10569,16910 10655,16904 10656,17018 10654,17091
@@ -1498,7 +1504,7 @@ Friedhof Wartenberg	F:Cemetery 18073,18918 18061,18922 18042,18851 18081,18836 1
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_44_4149_4196_online.pdf (Benennung)
 #: osm_watch: way id="51691170" version="10"
 #: XXX "Platz an den Drei Grazien": Werden hier entsprechende Straßenschilder aufgehängt? (bei osm wurde schon der neue Name eingetragen)
-#: last_checked: 2024-09-07
+#: last_checked: 2024-10-12
 Generationenpark	F:P 13434,15045 13516,14997 13548,14980 13556,14993 13524,15009 13536,15033 13455,15078 13434,15045
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2023/pressemitteilung.1330765.php
 Sportplatz am Bildungscampus Schöneberger Linse	F:Sport 7255,8148 7362,8137 7356,8068 7250,8079 7255,8148
@@ -1512,7 +1518,7 @@ Franz-Mehring-Platz	F:P 12822,12067 12758,11915 12788,11898 12891,12008 12822,12
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_52_4789_4920_online.pdf (Benennung einer öffentlichen Grünanlage, tatsächlich ohne Bindestrich?)
 #: osm_watch: way id="759545001" version="4"
 #: XXX neuer Name: "Riwne Platz" (tatsächlich ohne Bindestrich?); bei osm schon eingetragen mit start_date:name=2023-11-24, hier mit Bindestrich
-#: last_checked: 2024-09-07
+#: last_checked: 2024-10-12
 #: check_frequency: 60d
 	F:P 13546,15464 13604,15430 13540,15329 13479,15361 13546,15464
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_30_3225_3284_online.pdf (Widmung als Grünanlage)
@@ -1579,6 +1585,12 @@ Friedhof Hohenschönhausen	F:Cemetery 17370,15670 17405,15677 17437,15617 17493,
 # 
 Borsigplatz	F:P -957,23810 -967,23798 -1007,23835 -983,23859 -943,23824 -957,23810
 # 
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6940 (Vorlage zur Kenntnisnahme: Benennungsabsicht)
+#: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/RwVzirf1IMlETphjLEaxIntIfnlBhqYMk7gNl8iL/NQdabeQs/67-Dateien/image004.png
+#: XXX vorgeschlagener Name: Rapoport Park (ohne Bindestrich?)
+#: last_checked: 2024-09-18 (BVV)
+#: check_frequency: 90d
+	F:P 9785,19807 9864,19793 9878,19741 9813,19721 9785,19807
 #############################################################################
 # Plätze (experimentell)
 # XXX_prog: es sollte unterschieden werden zwischen Flächen, die einfach
@@ -1686,15 +1698,17 @@ Hausvogteiplatz	F:Square 9863,11938 9878,11857 9925,11947 9863,11938
 Leopoldplatz	F:Square 7251,15710 7198,15656 7277,15586 7329,15638 7251,15710
 #: note: überwiegend frei befahrbar, gleiche Pflasterung wie die angrenzende Straße
 Stadtplatz Gut Hellersdorf	F:Square 23362,15021 23314,15008 23305,15054 23350,15071 23362,15021
-#: note: Zugang nur über Treppen
+#: note: Zugang über Rampen
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_35_2547_2610_online.pdf (wirksam am 1. Oktober 2024)
 #: by: https://www.morgenpost.de/bezirke/mitte/article232563779/Ein-Platz-in-Gedenken-an-das-Ehepaar-Arnhold.html (vermutlich die "Piazetta")
 #: by: https://www.tagesspiegel.de/kultur/erinnerung-ans-verlorene-tiergartenviertel-4258168.html
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_42_3163_3214_online.pdf (Grundstücksnummerierungen)
 #: osm_watch: note 4449548 1
-#: XXX neuer Name: Johanna-und-Eduard-Arnhold-Platz (auch in plaetze-orig eintragen; fehlt in Berlin.coords.data)
-#: next_check: 2024-10-01
+#: XXX neuer Name: Johanna-und-Eduard-Arnhold-Platz (auch in plaetze-orig eintragen; fehlt in Berlin.coords.data); vor Ort nicht ausgeschildert
+#: last_checked: 2024-10-16
 (Piazetta)	F:Square 7842,11414 7900,11395 7921,11369 7933,11407 7952,11458 7927,11467 7925,11460 7912,11418 7892,11426 7907,11466 7925,11460 7927,11467 7863,11484 7861,11479 7842,11414
+#: note: überwiegend frei befahrbar
+Gertrud-Classen-Platz	F:Square 12583,15566 12556,15518 12605,15491 12583,15566
 #: ignore ^^^
 #############################################################################
 # in Potsdam
