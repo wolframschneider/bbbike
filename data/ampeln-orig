@@ -31,7 +31,7 @@ Wendenschloßstr.: Gegenverkehrsregelung	X::inwork::alternating 22791,4457
 #: next_check_id: KOENIGSPLATZ-2024
 #: last_checked: 2024-10-16
 #: check_frequency: 30d
-# REMOVED --- #: next_check: 2024-10-17
+#: next_check: 2024-11-25
 #: valid: -20241212
 Wilhelminenhofstr./Schillerpromenade	X::inwork 18191,6363
 # 
@@ -131,7 +131,7 @@ Möckernstr./nördlich. Wartenburgstr.: Gegenverkehrsregelung	X::inwork::alternati
 # REMOVED --- #: next_check_id: RUNGE-2023 --- #: source_id: viz2021:13.417345,52.512721,24.10.2023,11:00 (bis 23.11.2023) (inaktiv) --- #: last_checked: 2023-10-31 (mapillary) --- #: next_check: 2023-11-23 --- #: valid: -20231123 --- Brückenstr./Rungestr.: Gegenverkehrsregelung	X::inwork::alternating 11291,11876
 # 
 #: next_check_id: METZER-2023
-#: last_checked: 2024-10-05 (mapillary)
+#: last_checked: 2024-10-17 (mapillary)
 #: check_frequency: 90d
 #: next_check: 2025-01-02
 #: valid: -20250102
@@ -184,14 +184,14 @@ Bellevuestr.: Gegenverkehrsregelung	X::inwork::alternating 8328,11617
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024) (inaktiv)
 #: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung; Anforderungsampeln; außerdem mittlerweile eine Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
 #: note: Halteverbotsschilder bis 30.09.2025
-#: last_checked: 2024-10-11
+#: last_checked: 2024-10-17
 #: check_frequency: 120d
 #: next_check: 2025-09-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
 # 
 #: note: Halteverbotsschilder bis 31.12.2025
 #: note: Anforderungsampel; außerdem Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
-#: last_checked: 2024-10-13
+#: last_checked: 2024-10-17
 #: check_frequency: 120d
 #: next_check: 2025-12-31
 Gürtelstr.	F::inwork 15153,11691
@@ -256,7 +256,7 @@ B179/Fichtestr.	X::inwork 26138,-12596
 #: source_id: viz2021:13.57339,52.45923,11.03.2024,00:00 (bis 27.09.2024) (inaktiv) (bis 04.10.2024) (inaktiv)
 #: source_id: viz2021:13.572881,52.460427,11.03.2024,12:00 (bis 27.09.2024) (bis 20.12.2024)
 # REMOVED --- #: note: Länge der Gegenverkehrsregelung: östlicher Abschnitt ca. 50m, nördlicher Abschnitt ca. 40m
-#: last_checked: 2024-09-04 vvv
+#: last_checked: 2024-10-12 (okas) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2024-12-20 vvv
 #: valid: -20241220 vvv
@@ -402,7 +402,7 @@ Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork::alternating 16355,9
 # 
 #: next_check_id: OSTBAHNHOF-2021
 #: note: eigentlich nur Fußgängerampel nordöstlich der Einmündung; Anforderungsampel
-#: last_checked: 2024-10-15
+#: last_checked: 2024-10-18
 #: check_frequency: 90d
 #: next_check: 2026-01-01
 Straße der Pariser Kommune/Am Ostbahnhof: Baustellenampel	F::inwork 12543,11521
@@ -2704,7 +2704,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
 #: XXX evtl. als zwei Ampeln eintragen, falls die Ampelphasen für Radfahrer ungünstig sind
-#: last_checked: 2024-10-12 (mapillary)
+#: last_checked: 2024-10-18
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
