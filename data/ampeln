@@ -2,7 +2,6 @@
 #: title: Ampeln, Bahnübergänge und Zugbrücken
 #: note: XXX_* categorization done 2008-01-26
 #:
-Michaelkirchplatz: Gegenverkehrsreglung	X::inwork 11349,11227
 Lehrter Str./Kruppstr.: provisorische Ampel	X::inwork 7331,14132
 An der Wuhlheide/Rathenaustr.: Baustellenampel	X::inwork 19245,6379
 An der Wuhlheide/Steffelbauerstr.: Baustellenampel östlich der Einmündung	F::inwork 19594,6155
@@ -1318,7 +1317,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8511,4336
 	X 8615,4151
 	F 6102,4726
-	X 6212,4622
+	X 6203,4630
 	X 7236,5685
 	X 5377,5961
 	X 5335,5991
