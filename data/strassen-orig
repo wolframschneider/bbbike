@@ -269,7 +269,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: osm_watch: note 4168370 2
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2024-10-20 vvv
+#: last_checked: 2024-11-01 vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 #: osm_watch: way id="47755711" version="23"
@@ -1865,9 +1865,9 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: osm_watch: way id="1010731431" version="8"
 #: osm_watch: way id="642581102" version="10"
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2024-09-17 (daf)
+#: last_checked: 2024-11-03
 #: check_frequency: 45d
-#: next_check: 2024-10-31
+# REMOVED --- #: next_check: 2024-10-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
 (Golda-Meir-Steg - südliches Otto-Weidt-Platz)	NN 7861,14133 7850,14100
 Golda-Meir-Steg	NN 7861,14133 7899,14157 7962,14198 7973,14195
@@ -1879,7 +1879,7 @@ Lydia-Rabinowitsch-Str.	N 7820,13994 7930,14060 7973,13991 7959,13982 7865,13924
 #: XXX wie wird diese Straße heißen? Der erste Vorschlag "Annemarie-Renger-Str." wird es wohl nicht werden...
 # REMOVED (mittlerweile: Spielstraße) --- #: XXX wird es Einschränkungen für den Autoverkehr geben? --- es sieht aus nach: Einfahrt verboten, Tiefgarage frei
 #: osm_watch: way id="74868383" version="27"
-#: last_checked: 2024-09-07
+#: last_checked: 2024-11-03
 #: check_frequency: 90d
 (Uferweg - Heidestr.)	N 8057,13923 7997,13892 7910,13848
 Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7781,14238 7697,14187
@@ -1888,7 +1888,7 @@ Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7
 #: XXX Bekommt diese Verbindung einen Straßennamen?
 #: osm_watch[closed]: note 3892438 3
 #: osm_watch: way id="1255643497" version="8"
-#: last_checked: 2024-09-07
+#: last_checked: 2024-11-03
 #: check_frequency: 60d
 (Hedwig-Porschütz-Str. - George-Stephenson-Str.)	NN 7697,14187 7614,14136
 #: next_check_id: EUROPACITY-2015
@@ -1896,7 +1896,7 @@ Hedwig-Porschütz-Str.	N 7652,14257 7735,14305 7757,14318 7769,14300 7802,14250 7
 #: note: ggfs. qualitaet/handicap-Einträge anpassen
 #: also_indoor: webcam https://quartier-heidestrasse.contempo-webcam.de/kamera-4.php
 #: osm_watch: way id="645343614" version="8"
-#: last_checked: 2024-09-07
+#: last_checked: 2024-11-03
 #: check_frequency: 90d
 (Heidestr./Kieler Brücke - George-Stephenson-Str.)	NN 7612,14325 7529,14274
 Lisa-Fittko-Str.	N 7820,13994 7734,13944
@@ -1914,7 +1914,7 @@ Hannoversche Str.	H 9212,13471 9047,13446 8892,13498 8853,13539 8824,13569 8775,
 Hannoversche Str.	N 8775,13606 8674,13593
 Hannoversche Str.	N 8601,13584 8548,13577
 Chausseestr. (Mitte, Wedding, Gesundbrunnen)	H 9212,13471 9207,13493 9094,13641 9042,13707 8935,13844 8870,13926 8831,13973 8732,14098 8607,14253 8570,14299 8490,14397 8442,14456 8406,14507 8336,14586 8323,14599 8286,14635 8250,14672 8234,14686 8153,14769
-Reinhardtstr. (Mitte)	NH 9262,13111 9118,13070 8997,13037 8985,13034 8715,12956 8693,12951 8559,12912 8503,12895
+Reinhardtstr. (Mitte)	NH 9262,13111 9118,13070 9058,13054 8997,13037 8985,13034 8715,12956 8693,12951 8559,12912 8503,12895
 Liesenstr.	N 8336,14586 8423,14667 8653,14899 8671,14919
 Müllerstr. (Wedding, Gesundbrunnen)	H 8153,14769 8138,14786 8131,14794 8057,14876
 Müllerstr. (Wedding, Gesundbrunnen)	HH 8057,14876 7911,15008 7845,15066 7745,15160 7669,15227 7607,15282 7464,15409 7393,15476 7277,15586 7198,15656 7129,15717 7024,15810 6936,15888 6914,15908 6851,15964 6781,16026 6712,16087 6659,16133 6587,16199 6572,16212 6447,16321 6440,16327 6429,16337 6304,16447 6201,16538 6098,16630 6032,16688 6005,16712 5923,16784 5894,16810 5772,16919 5589,17081 5490,17173 5411,17242
@@ -3167,7 +3167,7 @@ Douglasienweg	N 11594,4107 11633,4117
 #: oldname ^^^
 Wochenendweg	N 11401,4198 11408,4190 11444,4153 11547,4127
 Am Bergpfuhl	N 11817,4355 11838,4248 11831,4231 11814,4227 11790,4226 11780,4235 11752,4351
-Buckower Damm	H 12564,4308 12637,4014 12655,3882 12663,3762 12673,3627 12673,3619 12684,3406 12687,3319 12701,2955 12695,2789 12693,2746 12694,2570 12694,2544 12694,2517 12703,2454 12712,2378 12738,2162 12817,2031 12911,1815 12940,1547 12939,1469 12938,1348 12941,1256 12984,1011
+Buckower Damm	H 12564,4308 12637,4014 12655,3882 12663,3762 12673,3627 12673,3619 12684,3406 12687,3319 12701,2955 12695,2789 12694,2758 12694,2570 12694,2544 12694,2517 12703,2454 12712,2378 12738,2162 12817,2031 12911,1815 12940,1547 12939,1469 12938,1348 12941,1256 12984,1011
 Alt-Britz	NN 12564,4308 12594,4324
 Alt-Britz	N 12594,4324 12678,4389 12836,4649 12916,4757 13018,5071 13045,5119 13239,5203 13250,5234
 Pätzer Str.	N 12885,5205 12963,5199 13045,5119
@@ -3349,6 +3349,7 @@ Fritz-Erler-Allee	H 13775,3500 13917,3335 14023,3276 14126,3225 14205,3187 14274
 Käthe-Dorsch-Ring	N 15525,2299 15518,2184 15527,2150 15578,2124 15700,2127 15731,2148 15738,2190 15745,2294
 Löwensteinring	N 14812,2661 14703,2553 14682,2532 14599,2451 14497,2486 14477,2505 14471,2509 14411,2568 14408,2708 14407,2746 14500,2864
 Walter-May-Weg	N 14599,2451 14676,2375
+(Wildmeisterdamm - Walter-May-Weg)	NN 14628,2304 14686,2366 14676,2375
 Kerschensteinerweg	N 14477,2505 14455,2469 14454,2367
 Gansbergsteig	NN 14676,2375 14776,2474 14703,2553
 Anna-Siemsen-Weg	N 14411,2568 14328,2564 14254,2566
@@ -5335,7 +5336,7 @@ Seydlitzstr. (Lankwitz)	N 6511,2284 6567,2194 6597,2157
 #: osm.highway: service
 (Retzowstr. - Seydlitzstr.)	N 6391,2200 6511,2284
 Ingridpfad	N 6182,2737 6304,2825 6359,2875
-Saarburger Str.	N 6529,3480 6635,3520
+Saarburger Str.	N 6529,3480 6647,3523
 Charlottenstr. (Lankwitz)	N 5774,2785 5936,2977 6044,3110 6129,3203 6218,3302 6426,3425 6529,3480
 Elisabethstr. (Lankwitz)	N 5774,2785 5933,2859 6022,2901 6138,3022 6224,3112 6308,3204
 Amalienstr. (Lankwitz)	N 5831,2624 5774,2785
@@ -5346,7 +5347,8 @@ Brigittenstr.	N 6044,3110 6138,3022 6208,2954
 Brigittenstr.	NN 6208,2954 6222,2940
 Brigittenstr.	N 6222,2940 6244,2910 6304,2825
 Cecilienstr. (Lankwitz)	N 5933,2859 6002,2723
-Annastr.	N 5863,2825 5930,2671
+Annastr.	N 5863,2825 5920,2693
+Annastr.	NN 5920,2693 5930,2671
 Thaliaweg	N 6638,3138 6482,3004
 Dillgesstr.	N 6218,3302 6308,3204 6401,3113 6456,3038 6482,3004 6514,2961 6592,2827
 Sibyllenstr.	N 6535,3243 6484,3292 6429,3286 6359,3256 6308,3204
@@ -11459,7 +11461,7 @@ Lauterplatz	NN 5799,7880 5707,7878
 #: last_checked: 2024-10-16 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2027-06-30 vvv
-#: osm_watch: way id="1254710366" version="6"
+#: osm_watch: way id="1254710366" version="7"
 #: note: Privatstraße vvv
 #: XXX bleibt es bei der "Fahrradzone" hier?
 Friedenauer Höhe	N 6293,7875 6263,7894 6178,7899
@@ -13166,7 +13168,7 @@ Am Buschfeld	N 14171,1634 14124,1857
 #: XXX ändert sich durch die (teilweise?) Straßenlandwidmung etwas?
 #: osm_watch: way id="156346093" version="9"
 #: osm_watch: way id="23106203" version="15"
-#: last_checked: 2024-05-18
+#: last_checked: 2024-10-30
 #: check_frequency: 150d
 Stuthirtenweg	NN 12984,1011 13040,1021 13113,1046 13181,1082 13241,1113
 #: note: Auf Brandenburger Seite verläuft gleich nebenan der Grenzweg
@@ -13188,7 +13190,7 @@ Leonberger Ring	N 12286,2065 12283,2102 12348,2265 12384,2274 12561,2192 12582,2
 # REMOVED (vermutlich) --- #: XXX bleibt diese Verbindung erhalten? --- #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_53_6049_6152_online.pdf --- #: by: http://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2018_07_0897_1044_online.pdf --- #: next_check: 2018-03-01
 (Hochspannungsweg - Leonberger Ring)	NN 12384,2379 12348,2265
 Rohrlegerweg	N 12738,2162 12864,2191 12987,2220 13103,2271 13309,2410
-Steinträgerweg	N 13023,2093 12987,2220 12963,2365 12948,2484 12937,2575 12924,2617 12907,2660 12849,2751 12810,2751 12693,2746
+Steinträgerweg	N 13023,2093 12987,2220 12963,2365 12948,2484 12937,2575 12924,2617 12907,2660 12849,2751 12810,2751 12694,2758
 Dachdeckerweg	N 13103,2271 13089,2354 13064,2499 13029,2661 12854,2950 12807,2958 12701,2955
 Töpferweg	N 13238,2521 13309,2410 13367,2322
 Heimsbrunner Str.	N 11824,2036 11850,2056 12283,2102
@@ -13295,7 +13297,7 @@ Straße 184 (Rudow)	N 17232,-559 17147,-573 17065,-589
 #: note: nachts beleuchtet
 Anna-Nemitz-Weg	N 13943,2284 13905,2381 13885,2377 13872,2497 13891,2518 13898,2582 13924,2604
 Wildmeisterdamm	N 13104,2143 13157,2116 13176,2106 13336,2151 13462,2186 13534,2204
-Wildmeisterdamm	NN 13534,2204 13552,2204 13559,2205 13568,2208 13640,2229 13827,2280 13943,2284 14082,2289 14237,2292 14276,2293 14362,2294 14744,2308 15143,2315 15159,2334
+Wildmeisterdamm	NN 13534,2204 13552,2204 13559,2205 13568,2208 13640,2229 13827,2280 13943,2284 14082,2289 14237,2292 14276,2293 14362,2294 14628,2304 14744,2308 15143,2315 15159,2334
 Wildmeisterdamm	NN 15143,2315 15207,2313
 (Johannisthaler Chaussee - Wildmeisterdamm)	N 13045,2107 13064,2090 13157,2116
 Wermuthweg	N 13661,2207 13672,2221 13816,2258 13827,2280 13838,2310 13835,2354 13721,2535
@@ -19119,9 +19121,11 @@ Bertolt-Brecht-Platz	N 9193,12875 9153,12928
 #: XXX oder eventuell wird das eine Einbahnstraße, wenn die Bauarbeiten an der Pankebrücke beendet sind (Schilder hängen schon, obwohl es eine Sackgasse ist?!)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_19_2765_2928_online.pdf
 #: osm_watch: way id="327518240" version="10"
-#: last_checked: 2024-09-25
+#: last_checked: 2024-11-01
 #: check_frequency: 90d
 (Straße vor dem Berliner Ensemble)	N 9212,12969 9153,12928
+(Reinhardtstr. - Am Zirkus)	NN 9058,13054 9090,13009
+(Am Zirkus - Bertolt-Brecht-Platz)	NN 9090,13009 9153,12928
 Karlplatz	N 8711,12986 8676,12976
 Charitéstr.	N 8693,12951 8676,12976 8632,13037
 Margarete-Steffin-Str.	N 8315,13181 8406,13127 8525,12958 8559,12912 8631,12848 8700,12810 8732,12804
@@ -19574,7 +19578,7 @@ Kleine Markusstr.	N 12059,12172 11958,12195 11937,12127
 #: by: https://berliner-abendblatt.de/berlin-news/strasse-wird-nach-schauspielerin-inge-meysel-benannt-id226034
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_40_3909_3968_online.pdf (Benennung: Inge-Meysel-Straße)
 #: XXX Benennung nach Inge Meysel; laut DPAG 12/2023: Inge-Meysel-Str., PLZ=10243 vvv
-#: last_checked: 2024-10-23 vvv
+#: last_checked: 2024-11-01 vvv
 #: check_frequency: 90d vvv
 (Zufahrt Str. d. Pariser Kommune)	N 12577,11804 12617,11888 12648,11953
 (Zufahrt Franz-Mehring-Platz)	N 12648,11953 12691,12042 12735,12131
@@ -19680,7 +19684,7 @@ Mollergasse	N 9892,12596 9894,12564
 Panoramastr.	N 10801,12901 10739,12844
 Poststr.	NN 10475,12438 10536,12355 10553,12333 10569,12311 10607,12268 10629,12293 10662,12255
 Nikolaikirchplatz	NN 10639,12394 10671,12356 10625,12315 10595,12328 10569,12311
-Eiergasse	NN 10671,12356 10703,12313
+Eiergasse	NN 10671,12356 10700,12316 10703,12313
 Am Nußbaum	NN 10646,12470 10626,12455 10611,12444 10597,12405 10611,12378
 (Am Nußbaum)	NN 10597,12405 10536,12355
 Kreuzstr. (Mitte)	N 10236,11945 10209,11918
@@ -20728,7 +20732,7 @@ Am Kaniswall	N 32823,-149 32817,4 32872,128
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2021_23_1913_2052_online.pdf (Eingruppierung in Straßenreinigungsverzeichnisse)
 #: note: provisorisch asphaltiert, provisorisch beleuchtet, gelbe Begrenzungslinie zwischen Rad- und Gehwegbereich
 #: source_id: viz2021:13.338005,52.51368,16.03.2021,08:00 (hier: Einschränkungen an der Gegenfahrbahn, bis 10.1.2025)
-#: last_checked: 2024-10-16
+#: last_checked: 2024-10-30
 #: check_frequency: 180d
 #: next_check: 2025-01-10
 (Umleitungsstrecke im Tiergarten)	NN 6164,11947 6132,11984 6024,11978 5925,11943 5900,11913

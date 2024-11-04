@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1999,2001,2004,2008,2010,2011,2014,2016,2017,2019 Slaven Rezic. All rights reserved.
+# Copyright (C) 1999,2001,2004,2008,2010,2011,2014,2016,2017,2019,2024 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -15,17 +15,19 @@ package VectorUtil;
 
 use strict;
 use vars qw($VERSION $VERBOSE @ISA @EXPORT_OK);
-$VERSION = 1.27;
+$VERSION = 1.28;
 
 require Exporter;
 @ISA = 'Exporter';
 
 @EXPORT_OK = qw(vector_in_grid project_point_on_line distance_point_line
-		distance_point_rectangle get_polygon_center
+		distance_point_rectangle
+		get_polygon_center get_polygon_center_best
 		point_in_grid point_in_polygon move_point_orthogonal
 		intersect_rectangles enclosed_rectangle normalize_rectangle
 		azimuth offset_line bbox_of_polygon combine_bboxes
 		triangle_area triangle_area_by_lengths
+		flatten_polygon xy_polygon
 	       );
 
 sub pi () { 4 * atan2(1, 1) } # 3.141592653
@@ -240,7 +242,12 @@ sub distance_point_rectangle {
     $dist;
 }
 
+######################################################################
+
 # See https://de.wikipedia.org/wiki/Geometrischer_Schwerpunkt#Polygon
+# Calculates the centroid of the given polygon (flat coordinates)
+# However, the result may be *outside* of the polygon. See
+# get_polygon_center_forceinside and get_polygon_center_medialaxis for alternatives.
 sub get_polygon_center {
     my(@coords) = @_;
 
@@ -268,6 +275,102 @@ sub get_polygon_center {
 	undef;
     }
 }
+
+# Get the centroid of the given polygon (flat coordinates).
+# If the centroid is outside of the polygon then fallback
+# to returning the middle point of the polygon outline.
+# See get_polygon_center_medialaxis for a better alternative.
+sub get_polygon_center_fallbackoutline {
+    my(@coords) = @_;
+
+    my($xs,$ys) = get_polygon_center(@coords);
+    my @xy_polygon = xy_polygon(@coords);
+    return ($xs,$ys) if point_in_polygon([$xs,$ys], \@xy_polygon);
+
+    my $middle = int $#xy_polygon/2;
+    return ($xy_polygon[$middle][0],$xy_polygon[$middle][1]);
+}
+
+# Get the centroid of the given polygon (flat coordinates).
+# If the centroid is outside of the polygon then project
+# this point in the direction of the nearest polygon corner point
+# into the middle of this polygon span.
+sub get_polygon_center_projectcentroidinside {
+    my(@coords) = @_;
+
+    my($xs,$ys) = get_polygon_center(@coords);
+    my @xy_polygon = xy_polygon(@coords);
+    return ($xs,$ys) if point_in_polygon([$xs,$ys], \@xy_polygon);
+    _project_point_inside_polygon([$xs,$ys], \@xy_polygon);
+}
+
+sub _project_point_inside_polygon {
+    my($point, $polygon) = @_;
+    my($x, $y) = @$point;
+
+    my $distance = sub {
+	my ($x1, $y1, $x2, $y2) = @_;
+	return sqrt(($x2 - $x1)**2 + ($y2 - $y1)**2);
+    };
+
+    my $line_intersection = sub {
+	my ($x1, $y1, $x2, $y2, $x3, $y3, $x4, $y4) = @_;
+	my $denom = ($y4 - $y3) * ($x2 - $x1) - ($x4 - $x3) * ($y2 - $y1);
+	return undef if $denom == 0;  # Lines are parallel
+
+	my $ua = (($x4 - $x3) * ($y1 - $y3) - ($y4 - $y3) * ($x1 - $x3)) / $denom;
+	my $ub = (($x2 - $x1) * ($y1 - $y3) - ($y2 - $y1) * ($x1 - $x3)) / $denom;
+
+	return [$x1 + $ua * ($x2 - $x1), $y1 + $ua * ($y2 - $y1)] if $ua >= 0 && $ua <= 1 && $ub >= 0 && $ub <= 1;
+	return undef;
+    };
+
+    # Find the nearest corner point
+    my $nearest_corner = (sort { $distance->($x, $y, @$a) <=> $distance->($x, $y, @$b) } @$polygon)[0];
+
+    # Project the line to the other side of the polygon
+    my ($cx, $cy) = @$nearest_corner;
+    my $dx = $x - $cx;
+    my $dy = $y - $cy;
+    my $far_point = [$cx - $dx * 1000, $cy - $dy * 1000];  # Extend line far beyond polygon
+
+    # Find intersection with polygon edges
+    my $intersection;
+    for my $i (0 .. $#$polygon) {
+        my $j = ($i + 1) % @$polygon;
+        my $int = $line_intersection->($cx, $cy, $far_point->[0], $far_point->[1],
+				       $polygon->[$i][0], $polygon->[$i][1],
+				       $polygon->[$j][0], $polygon->[$j][1]);
+        if ($int) {
+            $intersection = $int;
+            last;
+        }
+    }
+
+    if ($intersection) {
+	return (($cx + $intersection->[0]) / 2, ($cy + $intersection->[1]) / 2);
+    } else {
+	return ($cx, $cy);
+    }
+}
+
+# Use the best available implementation for calculating the
+# polygon center.
+{
+    my $IMPLEMENTATION;
+    sub get_polygon_center_best {
+	if (!defined $IMPLEMENTATION) {
+	    if (1) {
+		$IMPLEMENTATION = \&get_polygon_center_projectcentroidinside;
+	    } else {
+		$IMPLEMENTATION = \&get_polygon_center_fallbackoutline;
+	    }
+	}
+	goto $IMPLEMENTATION;
+    }
+}
+
+######################################################################
 
 # only for parallel rectangles, does not check for enclosed rectangles
 sub intersect_rectangles {
@@ -584,6 +687,22 @@ sub triangle_area_by_lengths {
     my($a, $b, $c) = @_;
     my $s = ($a + $b + $c) / 2;
     sqrt($s * ($s-$a) * ($s-$b) * ($s-$c));
+}
+
+# flatten a polygon consisting of ([$x0,$y0],...) into ($x0,$y0,....)
+sub flatten_polygon {
+    my(@xy) = @_;
+    map { @$_ } @xy;
+}
+
+# make a flat polygon consisting of ($x0,$y0,...) into ([$x0,$y0],...)
+sub xy_polygon {
+    my(@coords) = @_;
+    my @xy;
+    for(my $i=0; $i<$#coords; $i+=2) {
+	push @xy, [$coords[$i], $coords[$i+1]];
+    }
+    @xy;
 }
 
 # Protect from floating point inaccuracies

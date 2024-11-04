@@ -3079,6 +3079,7 @@ Feuchtwangerweg: Kleinpflaster	Q1 15835,1747 15788,1747
 Försterweg: Asphalt	Q0 13462,2186 13485,2007
 Wildmeisterdamm: Verbundsteinpflaster	Q1 13640,2229 13568,2208 13559,2205 13552,2204 13534,2204
 Wildmeisterdamm: Asphalt	Q0 13534,2204 13462,2186 13336,2151 13176,2106 13157,2116 13104,2143
+(Wildmeisterdamm - Walter-May-Weg): Gehwegplatten	Q1 14628,2304 14686,2366 14676,2375
 Steinträgerweg: Beton	Q0 13023,2093 12987,2220
 Steinträgerweg: Beton	Q0 12987,2220 12963,2365
 Rohrlegerweg: Beton	Q0 12738,2162 12864,2191 12987,2220 13103,2271 13309,2410
@@ -6443,7 +6444,7 @@ Alt-Buckow: Kopfsteinpflaster	Q3 12561,1931 12545,1918
 Turfweg: unbefestigte Straße	Q2 13336,2151 13357,2031
 Wildmeisterdamm: Verbundsteinpflaster	Q1 13640,2229 13827,2280
 Wildmeisterdamm: Verbundsteinpflaster	Q1 13827,2280 13943,2284 14082,2289 14237,2292 14276,2293 14362,2294
-Wildmeisterdamm: Verbundsteinpflaster	Q1 14362,2294 14744,2308 15143,2315 15159,2334
+Wildmeisterdamm: Verbundsteinpflaster	Q1 14362,2294 14628,2304 14744,2308 15143,2315 15159,2334
 Wildmeisterdamm: Verbundsteinpflaster	Q1 15143,2315 15207,2313
 (U Johannisthaler Chaussee - U Lipschitzallee): Verbundsteinpflaster	Q1 14362,2294 14515,2212
 (U Johannisthaler Chaussee - U Lipschitzallee): Verbundsteinpflaster	Q1 14079,2504 14224,2368 14259,2317 14276,2293
@@ -9893,6 +9894,8 @@ Alexanderplatz: Pflasterung mit Schäden	Q1 11030,12741 11087,12780
 (Zufahrt Debis-Parkhaus und "Gleis Park"): Asphalt	Q0 8430,10710 8424,10703 8367,10745
 (Zufahrt "Gleis Park"): Asphalt	Q0 8371,10769 8367,10745 8350,10662 8335,10518 8350,10499 8384,10507
 (Am Zirkus - Bertolt-Brecht-Platz): Betonpflaster	Q0 9212,12969 9153,12928
+(Reinhardtstr. - Am Zirkus): Gehwegplatten	Q0 9058,13054 9090,13009
+(Am Zirkus - Bertolt-Brecht-Platz): Gehwegpflasterung	Q0 9090,13009 9153,12928
 Südpark: wassergebundene Decke	Q1 -3989,12223 -3993,12166 -4012,12111
 Südpark: wassergebundene Decke	Q1 -3993,12166 -3931,12056 -3786,11913
 Südpark: wassergebundene Decke	Q1 -4095,12006 -4021,11924 -3890,11775
@@ -16281,7 +16284,7 @@ Leobschützer Str.: Asphalt	Q0 14776,23612 14756,23622 14646,23673 14550,23712
 Eschenallee (Rosenthal): guter Beton	Q0 9461,20635 9479,20535 9498,20435
 Breddiner Weg: Asphalt	Q0 -8312,15151 -8229,15505
 Straße 49 (Heinersdorf): guter Asphalt	Q0 12780,17318 12609,17405 12500,17460 12392,17517
-Steinträgerweg: Asphalt	Q0 12963,2365 12948,2484 12937,2575 12924,2617 12907,2660 12849,2751 12810,2751 12693,2746
+Steinträgerweg: Asphalt	Q0 12963,2365 12948,2484 12937,2575 12924,2617 12907,2660 12849,2751 12810,2751 12694,2758
 Steinmetzstr. (Lichtenrade): schlechte Fahrbahnqualität (Feldstein-Belag)	Q3 10573,-2891 10679,-2842 10770,-2796 10828,-2774 10884,-2795
 Falckensteinstr. (Lichtenrade): schlechte Fahrbahnqualität (Feldstein-Belag)	Q3 10638,-2638 10638,-2735 10679,-2842 10751,-3030 10769,-3064
 Paplitzer Str.: schlechte Fahrbahnqualität (Feldstein-Belag)	Q3 10735,-3142 10769,-3064 10783,-3033 10831,-2919 10884,-2795 10900,-2756 10927,-2687 10949,-2635
@@ -16721,9 +16724,10 @@ Ruthstr.: mäßiger Asphalt	Q1 6372,2959 6332,3007
 (Marienhöhe): Asphalt	Q0 8069,5328 8075,5307 8116,5276 8115,5245 8052,5154 8105,5098
 (Attilastr. - Marienhöher Weg): Kleinsteinpflaster	Q1 8014,4832 8002,4903 7986,4984
 Reginenweg: Asphalt	Q0 6484,3292 6482,3327 6431,3417 6426,3425
-Annastr.: schlechtes Kopfsteinpflaster	Q3 5863,2825 5930,2671
+Annastr.: schlechtes Kopfsteinpflaster	Q3 5863,2825 5920,2693
+Annastr.: Mosaikpflaster	Q1 5920,2693 5930,2671
 Ruthstr.: mäßiges Kopfsteinpflaster	Q2 6129,3203 6224,3112
-Saarburger Str.: guter Beton	Q0 6529,3480 6635,3520
+Saarburger Str.: guter Beton	Q0 6529,3480 6647,3523
 Gerdsmeyerweg - Marienhöher Weg: Asphalt, etwas uneben	Q1 8026,5307 7935,5230
 Tschaikowskistr.: guter Asphalt	Q0 9487,18887 9620,18935 9868,19023 9958,19053 10090,19097 10115,19105 10249,19148
 (Königsheide - Johannisthaler Chaussee): Waldweg, einige sandige Stellen	Q1 16673,5488 16564,5381 16497,5323 16316,5192 16279,5170
@@ -17243,7 +17247,7 @@ Zaberner Str.: Beton	Q0 1276,3892 1252,3821
 Isenheimer Weg: Beton	Q0 1389,3900 1387,3821
 Forbacher Str.: Beton	Q1 1474,3688 1607,3708 1604,3770 1603,3909
 Ersteiner Str.: Beton	Q1 1604,3770 1781,3807 1935,3827
-Schlettstadter Str.: Asphalt	Q1 1077,3753 1422,3637 1485,3630
+Schlettstadter Str.: Asphalt	Q0 1077,3753 1422,3637 1485,3630
 Schlettstadter Str.: Beton	Q0 1485,3630 1817,3732 1926,3758 1935,3827 1939,3893
 Buchsweilerstr.: Kopfsteinpflaster	Q2 2160,3854 2191,3992 2203,4045 2212,4089 2233,4156
 Markircher Weg: Kopfsteinpflaster	Q2 2154,4103 2212,4089
@@ -17998,7 +18002,7 @@ Panoramastr.: Asphalt	Q0 10801,12901 10739,12844
 Spandauer Str. [Gehweg]: Gehwegplatten	Q0 10580,12513 10626,12455 10665,12413 10722,12349
 Poststr.: Kopfsteinpflaster	Q2 10475,12438 10536,12355 10553,12333 10569,12311 10607,12268 10629,12293 10662,12255
 Nikolaikirchplatz: Kopfsteinpflaster	Q2 10639,12394 10671,12356 10625,12315 10595,12328 10569,12311
-Eiergasse: Gehwegplatten	Q0 10671,12356 10703,12313
+Eiergasse: Gehwegplatten	Q0 10671,12356 10700,12316 10703,12313
 Am Nußbaum: Verbundsteine	Q1 10646,12470 10626,12455 10611,12444 10597,12405 10611,12378
 (Am Nußbaum): Verbundsteine	Q1 10597,12405 10536,12355
 Jägerstr. (Mitte): Asphalt	Q0 9656,12031 9913,12068 9961,12094 10003,12113

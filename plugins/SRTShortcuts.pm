@@ -25,7 +25,7 @@ BEGIN {
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 2.16;
+$VERSION = 2.18;
 
 use File::Glob qw(bsd_glob);
 
@@ -874,9 +874,6 @@ EOF
 	      ],
 	      [Button => $do_compound->("Fragezeichen on route"),
 	       -command => sub { fragezeichen_on_route() },
-	      ],
-	      [Button => $do_compound->('Mapillary tracks', $MultiMap::images{Mapillary}),
-	       -command => sub { select_and_show_mapillary_tracks() },
 	      ],
 	      [Cascade => $do_compound->("Development"), -menuitems =>
 	       [
@@ -3595,207 +3592,6 @@ sub show_diffs_since_last_deployment {
 }
 
 ######################################################################
-# Mapillary tracks
-
-sub select_and_show_mapillary_tracks {
-    require Tk::DateEntry;
-    require POSIX;
-    my $t = $main::top->Toplevel(-title => "Select Mapillary tracks");
-    $t->transient($main::top) if $main::transient;
-    my $date_since = POSIX::strftime("%Y-%m-%d", localtime);
-    my $date_until = POSIX::strftime("%Y-%m-%d", localtime);
-    my $bbox = 'berlin';
-    {
-	my $f = $t->Frame->pack(-fill => 'x', -anchor => 'w');
-	$f->Label(-text => 'Since:')->pack(-side => 'left');
-	$f->DateEntry
-	    (-dateformat => 2,
-	     -todaybackground => "yellow",
-	     -weekstart => 1,
-	     -daynames => 'locale',
-	     -textvariable => \$date_since,
-	     -formatcmd => sub {
-		 my($year,$month,$day) = @_;
-		 sprintf "%04d-%02d-%02d", $year, $month, $day;
-	     },
-	    )->pack(-side => 'left');
-    }
-    {
-	my $f = $t->Frame->pack(-fill => 'x', -anchor => 'w');
-	$f->Label(-text => 'Until:')->pack(-side => 'left');
-	$f->DateEntry
-	    (-dateformat => 2,
-	     -todaybackground => "yellow",
-	     -weekstart => 1,
-	     -daynames => 'locale',
-	     -textvariable => \$date_until,
-	     -formatcmd => sub {
-		 my($year,$month,$day) = @_;
-		 sprintf "%04d-%02d-%02d", $year, $month, $day;
-	     },
-	    )->pack(-side => 'left');
-    }
-    {
-	my $f = $t->Frame(-borderwidth => 1, -relief => 'solid')->pack(-fill => 'x', -anchor => 'w', -padx => 1, -pady => 1);
-	$f->Label(-text => 'Bbox:')->pack(-anchor => 'w');
-	$f->Radiobutton(-text => 'Berlin', -value => 'berlin', -variable => \$bbox)->pack(-anchor => 'w');
-	$f->Radiobutton(-text => 'Current region', -value => 'current-region', -variable => \$bbox)->pack(-anchor => 'w');
-    }
-
-    $t->Button(-text => 'Show',
-	       -command => sub {
-		   show_mapillary_tracks(-since => $date_since, -until => $date_until, -bbox => $bbox);
-		   $t->destroy;
-	       },
-	      )->pack;
-}
-
-sub show_mapillary_tracks {
-    my(%args) = @_;
-    my $since = delete $args{-since};
-    my $until = delete $args{-until};
-    my $bbox = delete $args{-bbox} || 'berlin';
-    die "Unhandled arguments: " . join(" ", %args) if %args;
-
-    require Strassen::Mapillary;
-    require File::Temp;
-    require Geography::Berlin_DE;
-    
-    my @bbox;
-    if ($bbox eq 'berlin') {
-	@bbox = @{ Geography::Berlin_DE->new->bbox_wgs84 };
-    } elsif ($bbox eq 'current-region') {
-	@bbox = main::get_current_bbox_as_wgs84();
-    } else {
-	die "Unexpected value for \$bbox: '$bbox'";
-    }
-
-    my $sm = Strassen::Mapillary->new;
-    $sm->fetch_sequences(
-			 {
-			  bbox => \@bbox,
-			  ($since ? (start_time => $since) : ()),
-			  ($until ? (end_time   => $until) : ()),
-			 },
-			 {
-			  verbose => 1,
-			  msgs => \my @msgs,
-			 }
-			);
-
-    my(undef, $tmpfile) = File::Temp::tempfile(UNLINK => 1, SUFFIX => ($since ? "_$since" : "") . "_mapillary.bbd");
-    $sm->write($tmpfile);
-
-    plot_and_choose_mapillary_tracks($tmpfile);
-}
-
-sub plot_and_choose_mapillary_tracks {
-    my($bbdfile) = @_;
-
-    my $done = load_mapillary_done_file();
-    my %new_done;
-
-    my $layer = main::plot_additional_layer("str", $bbdfile, -temporaryfile => 1);
-
-    my $token = 'mapillary-show';
-    my $t = main::redisplay_top($main::top, $token, -title => 'Mapillary tracks');
-    if (!$t) {
-	$t = $main::toplevel{$token};
-	$_->destroy for ($t->children);
-    } else {
-	$t->geometry('340x200');
-    }
-    $t->OnDestroy(sub {
-		      main::delete_layer($layer);
-		  });
-
-    my $f;
-    my $hide_seen;
-    {
-	my $ff = $t->Frame->pack(-fill => 'x');
-	$ff->Checkbutton(-text => "Hide seen",
-			 -variable => \$hide_seen,
-			 -command => sub {
-			     my $hl = $f->Subwidget("Listbox");
-			     if ($hide_seen) {
-				 for ($hl->info("children")) {
-				     if ($hl->itemCget($_, 1, "-text") =~ /\x{2714}/) {
-					 $hl->hide("entry", $_);
-				     }
-				 }
-			     } else {
-				 for ($hl->info("children")) {
-				     $hl->show("entry", $_);
-				 }
-			     }
-			 })->pack(-anchor => "w", -side => 'left');
-	$ff->Button(-text => "Mark done",
-		    -command => sub {
-			my $ans = $t->messageBox(-message => "Mark all mapillary tracks as done?",
-						 -type => "YesNo",
-						 -icon => 'question',
-						);
-			if ($ans =~ m{yes}i) {
-			    for my $new_done (keys %new_done) {
-				$done->{$new_done} = 1;
-			    }
-			    save_mapillary_done_file($done);
-			    $t->destroy;
-			}
-		    })->pack(-anchor => 'e', -side => 'right');
-    }
-    $f = $t->Frame->pack(-fill => "both", -expand => 1);
-
-    main::choose_ort("str", $layer,
-		     -splitter => sub {
-			 my($line) = @_;
-			 my $seen = $done->{$line} ? "\x{2714}" : " ";
-			 $new_done{$line} = 1;
-			 ($line, $seen);
-		     },
-		     -columnwidths => [310,30],
-		     -container => $f,
-		     -showcenter => 'begin',
-		     -ondestroy => sub { $t->destroy },
-		    );
-}
-
-# The "done" files for mapillary tracks
-use vars qw($mapillary_done_file);
-$mapillary_done_file = do {
-    no warnings 'once';
-    "$main::bbbike_configdir/mapillary_done";
-};
-
-sub load_mapillary_done_file {
-    my %done;
-    if (-r $mapillary_done_file) {
-	open my $fh, $mapillary_done_file
-	    or main::status_message("Cannot load existing file $mapillary_done_file: $!", "die");
-	while(<$fh>) {
-	    chomp;
-	    $done{$_} = 1;
-	}
-    } else {
-	warn "INFO: $mapillary_done_file does not exist yet\n";
-    }
-    \%done;
-}
-
-sub save_mapillary_done_file {
-    my($done_ref) = @_;
-    open my $ofh, ">", "$mapillary_done_file~"
-	or main::status_message("Cannot write to $mapillary_done_file~: $!", "die");
-    for my $done (sort keys %$done_ref) {
-	print $ofh "$done\n";
-    }
-    close $ofh
-	or main::status_message("Error while closing $mapillary_done_file~: $!", "die");
-    rename "$mapillary_done_file~", $mapillary_done_file
-	or main::status_message("Error while renaming $mapillary_done_file~ to $mapillary_done_file: $!", "die");
-}
-
-######################################################################
 
 sub todays_gps_tracks {
     require BBBikeGPS;
@@ -3971,17 +3767,19 @@ sub _generate_date_range_regex {
 
 ######################################################################
 
-sub fetch_fis_broker_wms_map {
+sub fetch_fis_broker_wms_map { # currently using gdi.berlin.de
     my($px0,$py0,$px1,$py1) = main::get_current_bbox_as_wgs84();
     ($py0,$py1)=($py1,$py0) if $py0 > $py1;
     my($w,$h) = ($main::c->width, $main::c->height);
     require LWP::UserAgent;
     #require MIME::Base64;
     require File::Temp;
-    my $origfile = File::Temp->new(SUFFIX => '.png', TMPDIR => 1);
+    my $origfile = File::Temp->new(SUFFIX => '.png', TMPDIR => 1, UNLINK => 1);
     my $ua = LWP::UserAgent->new;
-    my $layer = 'k_radverkehrsnetz';
-    my $url = 'https://fbinter.stadt-berlin.de/fb/wms/senstadt/k_radverkehrsnetz?service=WMS&request=GetMap&version=1.3.0&bbox='.$py0.','.$px0.','.$py1.','.$px1.'&width='.$w.'&height='.$h.'&format=image/png&layers='.$layer.'&styles=gdi_default&crs=EPSG:4326&transparent=true';
+    #my $layer = 'k_radverkehrsnetz';
+    #my $url = 'https://fbinter.stadt-berlin.de/fb/wms/senstadt/k_radverkehrsnetz?service=WMS&request=GetMap&version=1.3.0&bbox='.$py0.','.$px0.','.$py1.','.$px1.'&width='.$w.'&height='.$h.'&format=image/png&layers='.$layer.'&styles=gdi_default&crs=EPSG:4326&transparent=true';
+    my $layer = 'radverkehrsnetz';
+    my $url = 'https://gdi.berlin.de/services/wms/radverkehrsnetz?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&LAYERS='.$layer.'&SINGLETILE=true&CRS=EPSG%3A4326&STYLES=&WIDTH='.$w.'&HEIGHT='.$h.'&BBOX='.$py0.'%2C'.$px0.'%2C'.$py1.'%2C'.$px1;
     warn "Fetch $url...\n";
     # XXX For some reason fetching does not work with LWP. Use Net::Curl instead.
     my $resp = _lwp_get_with_curl($ua, $url);
@@ -3995,11 +3793,13 @@ sub fetch_fis_broker_wms_map {
     print $ofh $resp->content;
     $ofh->close or die $!;
 
-    # XXX somehow coordinates to not fit, try to rotate a little bit
-    my $rotfile = File::Temp->new(SUFFIX => '.png', TMPDIR => 1);
-    my @cmd = ('convert', $origfile, '-distort', 'SRT', '-2.3', $rotfile);
-    system @cmd;
-    if ($? != 0) { die "Command @cmd failed" }
+#    # XXX somehow coordinates to not fit, try to rotate a little bit
+#    my $rotfile = File::Temp->new(SUFFIX => '.png', TMPDIR => 1);
+#    my @cmd = ('convert', $origfile, '-distort', 'SRT', '-2.3', $rotfile);
+#    warn "Run @cmd...\n";
+#    system @cmd;
+#    if ($? != 0) { die "Command @cmd failed" }
+    my $rotfile = $origfile;
 
     my $img = $main::c->Photo(-file => "$rotfile", -format => 'png');
     my($x0,$y0) = $main::c->get_corners;
