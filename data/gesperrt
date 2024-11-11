@@ -1022,6 +1022,7 @@ durchgezogene Linie	3nocross::ignrte -1336,14786 -1299,14797 -1258,14846
 Gartenfelder Str. -> Faucherweg: durchgezogene Linie	3::igndisp -1258,14846 -1299,14797 -1282,14789
 Faucherweg -> Gartenfelder Str.: durchgezogene Linie	3::igndisp -1282,14789 -1299,14797 -1336,14786
 Berthold-Schwarz-Str.	1s -784,14940 -834,15053
+Adlergestell [Sonnenallee - Neltestraße]	1:igndisp 19486,3934 19367,4061 19348,4080
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Görlitzer Park	1::igndisp 12464,10153 12504,10172
@@ -2363,8 +2364,8 @@ Mittelstreifen	3nocross::ignrte 19676,3705 19633,3751 19587,3801
 Adlergestell -> Husstr.: Mittelstreifen	3::igndisp 19587,3801 19633,3751 19736,3858
 Husstr. -> Adlergestell: Mittelstreifen	3::igndisp 19736,3858 19633,3751 19676,3705
 Mittelstreifen	3nocross::ignrte 19472,3922 19353,4047 19335,4067 19226,4183 18725,4715 18457,5000
-Adlergestell -> Sonnenallee: Mittelstreifen	3::igndisp 19226,4183 19335,4067 19345,4077
-Sonnenallee -> Adlergestell: Mittelstreifen	3::igndisp 19345,4077 19335,4067 19353,4047
+Adlergestell -> Sonnenallee: Mittelstreifen	3::igndisp 19226,4183 19335,4067 19348,4080
+Sonnenallee -> Adlergestell: Mittelstreifen	3::igndisp 19348,4080 19335,4067 19353,4047
 Fußgängerbrücke Bhf. Johannisthal -> Adlergestell: Mittelstreifen	3::igndisp 18739,4728 18725,4715 19226,4183
 Adlergestell -> Fußgängerbrücke Bhf. Johannisthal: Mittelstreifen	3::igndisp 18457,5000 18725,4715 18739,4728
 Silberberger -> Adlergestell: Abbiegen verboten	3 19804,3697 19735,3643 19806,3567
@@ -2522,13 +2523,13 @@ Zimmerstr. -> Wilhelmstr.: Mittelstreifen	3::igndisp -3942,12957 -3967,12976 -40
 Straßenbahntrasse	3nocross::ignrte 9148,13944 9189,13953 9274,13963
 Invalidenstr. -> Eichendorffstr.: Straßenbahntrasse	3::igndisp 9274,13963 9189,13953 9193,13942
 Eichendorffstr. -> Invalidenstr.: Straßenbahntrasse	3::igndisp 9193,13942 9189,13953 9148,13944
-Mittelstreifen	3nocross::ignrte 7816,13276 7842,13292 7880,13315
+Mittelstreifen	3nocross::ignrte 7816,13276 7842,13292 7901,13324
 Invalidenstr. -> Weg durch den Geschichtspark: Mittelstreifen	3::igndisp 7816,13276 7842,13292 7822,13323
-Weg durch den Geschichtspark -> Invalidenstr.: Mittelstreifen	3::igndisp 7822,13323 7842,13292 7880,13315
+Weg durch den Geschichtspark -> Invalidenstr.: Mittelstreifen	3::igndisp 7822,13323 7842,13292 7901,13324
 Invalidenstr.: Mittelstreifen	3::igndisp 7822,13323 7842,13292
-Straßenbahntrasse und -haltestelle	3nocross::ignrte 7880,13315 8003,13374 8057,13400 8098,13419
+Straßenbahntrasse und -haltestelle	3nocross::ignrte 7901,13324 8003,13374 8057,13400 8098,13419
 Invalidenstr. -> Ella-Trebe-Str.: Straßenbahntrasse und -haltestelle	3::igndisp 8057,13400 8003,13374 7968,13335
-Ella-Trebe-Str. -> Invalidenstr.: Straßenbahntrasse und -haltestelle	3::igndisp 7968,13335 8003,13374 7880,13315
+Ella-Trebe-Str. -> Invalidenstr.: Straßenbahntrasse und -haltestelle	3::igndisp 7968,13335 8003,13374 7901,13324
 Invalidenstr. -> Europapl. [Nord]: Straßenbahntrasse und -haltestelle	3::igndisp 8003,13374 8057,13400 8010,13450
 Europapl. [Nord] -> Invalidenstr.: Straßenbahntrasse und -haltestelle	3::igndisp 8010,13450 8057,13400 8098,13419
 Mittelstreifen, hohe Bordsteine und parkende Autos	3nocross::ignrte 7822,12937 7776,12945 7595,12980
@@ -2602,9 +2603,9 @@ Berliner Str. -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9490,23531 95
 Mittelstreifen	3nocross::ignrte 9528,23240 9747,22694 9973,22133
 Blankenfelder Chaussee -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9469,22606 9747,22694 9528,23240
 Blankenfelder Chaussee -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9973,22133 9747,22694 9469,22606
-Straßenbahnhaltestelle	3nocross::ignrte 17729,8850 17701,8851 17380,8858
-Blockdammweg -> Adolf-Wermuth-Allee: Straßenbahnhaltestelle	3::igndisp 17729,8850 17701,8851 17699,8843
-Adolf-Wermuth-Allee -> Blockdammweg: Straßenbahnhaltestelle	3::igndisp 17699,8843 17701,8851 17380,8858
+Straßenbahnhaltestelle	3nocross::ignrte 17736,8850 17720,8854 17702,8855 17380,8858
+Blockdammweg -> Adolf-Wermuth-Allee: Straßenbahnhaltestelle	3::igndisp 17720,8854 17702,8855 17699,8843
+Adolf-Wermuth-Allee -> Blockdammweg: Straßenbahnhaltestelle	3::igndisp 17699,8843 17702,8855 17380,8858
 Geländer am Gehweg	3nocross::ignrte 7628,4521 7667,4549 7690,4563
 unbequemes Überqueren	3nocross::ignrte 6613,3320 6647,3292 6712,3237
 Paul-Schneider-Str. -> Schulstr.: unbequemes Überqueren	3::igndisp 6613,3320 6647,3292 6653,3297
@@ -3477,12 +3478,18 @@ Tor	BNP:10:-140 33926,63348
 Tor	BNP:20:-74 20127,1538
 Barriere	BNP:3:-85:trailer=10 10628,16644
 Schwingtor	BNP:5:72:trailer=10 10051,15916
+weites Drängelgitter	BNP:2:12:trailer=7 15448,10397
+weites Drängelgitter	BNP:2:-118:trailer=7 15610,10212
+weites Drängelgitter	BNP:2:54:trailer=7 15813,9961
+weites Drängelgitter	BNP:2:-144:trailer=7 16026,9821
+weites Drängelgitter	BNP:2:45:trailer=7 16261,9663
+Delbrückstr.: Baustelle, Sperrung	2::inwork 17085,10855 17123,10844 17141,10838
 Am Wiesenrain: Einbahnstraßenregelung	1s:inwork 23931,5992 24122,6007
 Mittelheide - S-Bhf. Hirschgarten: Baustraße, gesperrt für öffentlichen Verkehr	2::inwork 24089,6144 24060,6059 23951,6063
 Erpetal - S-Bhf. Hirschgarten: Baustraße, gesperrt für öffentlichen Verkehr	2::inwork 24120,6090 24060,6059
 Weg im Grünzug Kraatzgraben: gesperrt, Leitungsarbeiten	2::inwork 17161,9921 17257,9869
 Uferweg am Otto-Weidt-Platz: wegen Bauarbeiten an der Treppenanlage gesperrt	2::inwork 7912,14160 7875,14204
-Fuß- und Radwegbrücke: noch nicht offiziell freigegeben	2::inwork 19162,3935 19268,4037 19263,4048 19240,4049 19237,4058 19252,4069 19300,4018 19358,4077 19403,4119 19428,4095 19428,4081 19416,4080 19401,4094 19389,4094 19383,4077 19363,4057 19353,4047
+Fuß- und Radwegbrücke: noch nicht freigegeben	2::inwork 19162,3935 19268,4037 19263,4048 19240,4049 19237,4058 19252,4069 19300,4018 19358,4077 19403,4119 19428,4095 19428,4081 19416,4080 19401,4094 19389,4094 19383,4077 19367,4061 19353,4047
 Slatan-Dudow-Str. (Potsdam): gesperrt wegen Bauarbeiten	2::inwork -7476,-4673 -7353,-4785
 (Aldi/Rewe-Parkplatz): mit Bauzäunen abgesperrt, Neubau des Einkaufszentrums	2::inwork 23163,11113 23131,11124 23113,11262
 Zum Feldrain (Schulzendorf): wegen Hochbauarbeiten gesperrt	2::inwork 22927,-4974 22942,-4983 22922,-5098 22869,-5132 22860,-5130
@@ -3533,7 +3540,6 @@ U-Bhf. Scharnweberstr.: Durchgang gesperrt	2::inwork 3987,17808 3997,17840
 Weg am Kienhorstgraben: Durchgang zur Seidelstr. gesperrt	2::inwork 3706,17931 3723,17979
 Wuhlesteg: gesperrt	2::inwork 22171,12965 22196,12961
 Neue Fahlenbergbrücke (Ersatzbrücke)	2::inwork 30926,-53 31103,-142
-Marktplatz Adlershof: möglicherweise wird die nördliche Fahrbahn dauerhaft eingezogen	2::inwork 20336,3783 20290,3756
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 Mittelheide: umgefallene Baumstämme	2 24356,7644 24275,7550
 Storkower Straße (Königs Wusterhausen): Neubau der Eisenbahnbrücke, Sperrung	2::inwork 26300,-11727 26327,-11708 26395,-11699
@@ -3574,7 +3580,6 @@ Dircksenstr.: Einbahnstraßenregelung	1s:inwork 11138,12604 11202,12426
 Johannisstr.: Einbahnstraße	1s:inwork 9588,13174 9385,13174 9254,13171
 Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwork 7727,4418 7692,4464 7667,4549
 Wuhletalbrücke: wird neu gebaut	2::inwork 20843,17745 20798,17664 20768,17609 20717,17516
-Zufahrt Zentrum Schöneweide: Fahrbahn und Bürgersteig gesperrt	2:inwork 17728,5756 17656,5701
 Nordhafenpark West: mit Bauzaun gesperrt, kein Zugang unter der Brücke	2::inwork 7661,14398 7636,14414 7612,14449 7551,14464
 Zuwegung Kieler Brücke: gesperrt, wird neu erstellt	2::inwork 7566,14404 7617,14420 7634,14406 7661,14398 7740,14409
 Valeska-Gert-Str. - Am Postbahnhof: wegen Bauarbeiten gesperrt	2::inwork 12807,11287 12713,11372
@@ -3585,7 +3590,7 @@ Wikingerufer: neuer Uferweg ist noch nicht freigegeben	2:inwork 5354,12552 5366,
 Löwenbrücke: gesperrt	2:inwork 6417,11796 6438,11784
 (Güterbahnhof Greifswalder Str.): Brücke gesperrt	2 12602,15006 12649,14977
 (Güterbahnhof Greifswalder Str.): kann bei Veranstaltungen gesperrt sein	2:temp 12520,15057 12602,15006
-Bhf. Blankenfelde: Bahnübergang gesperrt, neue Unterführung wird gebaut	2::inwork 11667,-7536 11601,-7560 11551,-7599
+Bhf. Blankenfelde: Bahnübergang existiert nicht mehr, neue Unterführung wird gebaut	2::inwork 11667,-7536 11601,-7560 11551,-7599
 Erika-Wolf-Str. (Potsdam): während der Bauarbeiten gesperrt	2::inwork -12708,-1445 -12628,-1423
 Alter Markt (Potsdam): während der Bauarbeiten gesperrt	2::inwork -12790,-1560 -12719,-1542
 Pariser Platz: Sperrung vor der französischen Botschaft	2 8717,12302 8714,12319 8673,12315
@@ -4157,7 +4162,7 @@ Greifswalder Str., linker Gehweg	1::igndisp 12563,14860 12584,14928
 Greifswalder Str.: linker Gehweg bis zur Naugarder Str., ggfs. absteigen	1::igndisp 12712,15176 12704,15105
 Buschkrugallee, linker Radweg	1::igndisp 14119,4153 14111,4181
 Michelangelostr., linker Gehweg	1::igndisp 13647,14912 13758,15009 13854,15129
-Adlergestell, linker Gehweg	1::igndisp 19472,3922 19345,4077
+Adlergestell, linker Gehweg	1::igndisp 19472,3922 19348,4080
 Bundesallee/Spichernplatz, linker Gehweg bis Pariser Str.	1::igndisp 5423,9932 5435,9859
 Bundesallee/Spichernplatz, Radweg bis Nachodstr.	1::igndisp 5487,9864 5491,9935
 Buschkrugallee, linker Gehweg ab Fußgängerampel bis zur Bürgerstr.	1::igndisp 13283,6354 13316,6320
@@ -4181,7 +4186,7 @@ Ferdinand-Schultze-Str. -> Rhinstr./Marzahner Str.: linker Gehweg bis zur Ampel	
 Potsdamer Chaussee: linker Gehweg bis zur Ampel	1::igndisp -3011,1761 -3019,1774 -3040,1763
 Richard-von-Weizsäcker-Platz: Gehweg bis Akazienstr.	1::igndisp 7201,8870 7242,8902 7307,8945
 Sonnenallee: linker Gehweg bis zur Ampel	1::igndisp 14334,7395 14423,7333
-Blockdammweg: linker Gehweg bis zum Fußgängerbereich in der Parkstadt Karlshorst	1::igndisp 17699,8843 17729,8850
+Blockdammweg: linker Gehweg bis zum Fußgängerbereich in der Parkstadt Karlshorst	1::igndisp 17699,8843 17736,8850
 Orankeweg -> Hansastr./Orankeweg: linker Gehweg bis zur Überquerungsmöglichkeit, Bordstein	1::igndisp 14967,15885 14906,15859
 Lidl-Parkplatz - Alt-Kaulsdorf: linker Gehweg bis zur Ampel "Am Feldberg"	1::igndisp 22937,11265 22994,11251
 Alt-Kaulsdorf - Lidl-Parkplatz: linker Gehweg ab Ampel Myslowitzer Str.	1::igndisp 22994,11251 23113,11262

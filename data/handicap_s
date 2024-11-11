@@ -21,6 +21,8 @@ Marggraffbrücke: Behelfsbrücke, Engstellen	q2::inwork 16747,6813 16720,6845 1667
 Güldenhofer Ufer: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 16630,6800 16677,6892
 (Hoffmannstr. - Uferweg an den Treptowers): Baustraße, enger Gehweg ist noch offen	q4::inwork 14077,10016 14116,10149
 (Mergenthalerring - Dieselstr.): Bordstein	q3 14429,8074 14484,8044
+Marktplatz Adlershof: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 20336,3783 20290,3756
+Marktplatz Adlershof: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 20290,3756 20285,3739 20304,3714
 Reinickendorfer Str.: Bauarbeiten im Bereich des Weddingplatzes	q4::inwork 7998,15068 8015,15047 8037,14958 8091,14895
 Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 6835,15412 6815,15398
 (Lütticher Str. - Luxemburger Str. (über das Gelände der Beuth-Hochschule)): Engstelle wegen Bauarbeiten	q2::inwork 6748,15313 6833,15215
@@ -32,7 +34,7 @@ Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
 Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
 Petriplatz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwork 10418,12016 10460,11979
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
-Blockdammweg: Fahrbahn gesperrt, schmaler Gehweg für Radfahrer frei	q2; 17380,8858 17701,8851 17729,8850
+Blockdammweg: Fahrbahn gesperrt, schmaler Gehweg für Radfahrer frei	q2; 17380,8858 17702,8855 17720,8854 17736,8850
 Mellenseestr.: Bauarbeiten, Abschnitte der Fahrbahn gesperrt	q3::inwork 17868,9823 17838,9956
 Mellenseestr.: Bauarbeiten, Abschnitte der Fahrbahn gesperrt	q3::inwork 17774,9934 17838,9956 17958,10012
 Alexandrinenstr.: gemeinsamer Rad- und Gehweg im Baustellenbereich	q2::inwork; 10178,10411 10122,10294
@@ -62,6 +64,7 @@ Friedenauer Höhe: Baustellenverkehr	q1 6293,7875 6263,7894 6178,7899
 Friedenauer Höhe: gemeinsamer Rad- und Gehweg	q1 6178,7899 6126,7917 6011,7911 5799,7880
 Königsweg: Bauarbeiten, nur enger Gehweg ist passierbar	q3::inwork -298,2577 -197,2634 -155,2658
 Lehderstr.: Hochbauarbeiten, einige Meter der Fahrbahn westlich der Roelckestr. sind gesperrt	q2::inwork 12842,16032 12466,16198
+Grabensprung: einige Meter der Fahrbahn gesperrt	q3::inwork 20518,11346 20515,11275
 (Buckower Chaussee - Bahnhof): einige Fußgänger	q1 9200,562 9239,461 9254,413
 (Fußgängerbrücke S-Bhf. Buckower Chaussee): Fußgängerbrücke, Bahnsteig	q4 9200,450 9209,417 9210,414 9246,426 9249,421 9254,413
 (Buckower Chaussee - Bahnhof): einige Fußgänger	q1 9123,533 9160,460 9200,450
@@ -399,9 +402,9 @@ Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8842,8561 8759,8458 8720,8
 Am Rummelsburger See: Fußgänger, kurvenreich, Grünanlage	q3 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142 15253,10171
 Am Rummelsburger See: Fußgänger, Grünanlage	q3 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411
 Am Rummelsburger See: Fußgänger, kurvenreich	q1 14892,10411 14864,10451 14861,10467 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15138,10638 15200,10600 15249,10564
-Am Rummelsburger See: teilweise enge Kurven, Fußgänger an schönen Tagen	q2 15453,10419 15457,10342 15496,10277 15518,10234 15604,10204 15606,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15910,9860 15931,9846
+Am Rummelsburger See: teilweise enge Kurven, Fußgänger an schönen Tagen	q2 15453,10419 15448,10397 15457,10342 15496,10277 15518,10234 15599,10206 15606,10179 15645,10147 15713,10035 15786,9957 15781,9933 15828,9875 15910,9860 15931,9846
 Am Rummelsburger See: Fußgänger an schönen Tagen	q1 15931,9846 16002,9787 16049,9749 16119,9689 16125,9678 16120,9653
-Am Rummelsburger See: Fußgänger an schönen Tagen	q2 16120,9653 16182,9591 16268,9670
+Am Rummelsburger See: Fußgänger an schönen Tagen	q2 16120,9653 16182,9591 16261,9663 16268,9670
 Am Teltowkanal: kurverreich und recht eng	q1 3766,1389 3710,1317 3635,1215 3419,1049 3381,1022 3366,1007
 Körnerpark: Fußgänger, Bordsteine	q3 12703,7370 12722,7261
 Weisestr.: Bordsteine	q3 11767,8330 11770,8292
@@ -1411,15 +1414,18 @@ Koseler Weg: einige Fußgänger, Bordstein	q2 9850,6135 9679,6160
 (Krautstr./Blumenstr. - Strausberger Platz): Fußgänger, Hausdurchfahrt	q4 12125,12490 12134,12540
 Gleisdreieckpark: flache Bordsteine, Spielplatz	q3 8296,10438 8237,10418
 Gleisdreieckpark: flache Bordsteine	q1 8145,10090 8211,10083
-Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8328,10831 8318,10738 8270,10613 8264,10460 8257,10440 8237,10418 8192,10354 8180,10282 8145,10090
-Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8358,10782 8350,10774 8341,10721 8328,10585 8296,10438 8278,10384 8265,10348 8261,10337 8252,10308 8256,10264 8264,10192 8211,10083
-Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8350,10774 8338,10765 8318,10738
-Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8328,10831 8338,10765 8341,10721
-Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8199,10634 8236,10623 8270,10613 8328,10585
-Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8384,10507 8377,10502 8361,10491 8328,10485 8322,10451 8296,10438
-Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8159,10430 8199,10424 8237,10418 8278,10384 8309,10368 8315,10347 8333,10167 8360,10133 8338,9971
-Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8058,10306 8180,10282 8256,10264
-Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q0 8042,10084 8145,10090
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8211,10083 8276,10079
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8315,10347 8265,10348
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8328,10831 8318,10738 8270,10613 8264,10460 8257,10440 8237,10418 8192,10354 8180,10282 8145,10090
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8358,10782 8350,10774 8341,10721 8328,10585 8296,10438 8278,10384 8265,10348 8261,10337 8252,10308 8256,10264 8264,10192 8276,10079
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8264,10192 8211,10083
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8350,10774 8338,10765 8318,10738
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8328,10831 8338,10765 8341,10721
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8199,10634 8236,10623 8270,10613 8328,10585
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8384,10507 8377,10502 8361,10491 8328,10485 8322,10451 8296,10438
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8159,10430 8199,10424 8237,10418 8278,10384 8309,10368 8315,10347 8333,10167 8360,10133 8338,9971
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8058,10306 8180,10282 8256,10264
+Gleisdreieckpark: besonders an schönen Tagen Fußgänger	q1 8042,10084 8145,10090
 (Hansastr. - Gartenstr.): Fußgänger, Radfahren nicht erlaubt	q3 15194,16186 15143,16210 15104,16218 14806,16279 14665,16294
 (Hansastr. - Gartenstr.): Fußgänger, Radfahren nicht erlaubt	q3 14806,16279 14717,16355
 (Dohnagestell - Tangastr.): Fußgänger	q2 5802,15399 5889,15457 5961,15562
@@ -1515,7 +1521,7 @@ Cajamarcaplatz: viele Fußgänger	q4 17698,5727 17766,5659
 (zum Fußgängertunnel S-Bhf. Schöneweide): Fußgänger, schieben	q4 17728,5756 17698,5727 17667,5697 17696,5665
 (zum Fußgängertunnel S-Bhf. Schöneweide): Fußgänger, schieben	q4 17765,5469 17634,5607
 (Ella-Trebe-Str. - Invalidenstr.): einige Fußgänger	q1 7938,13302 7968,13335 8003,13374
-Europaplatz: einige Fußgänger	q1 7880,13315 7938,13302
+Europaplatz: einige Fußgänger	q1 7901,13324 7938,13302
 Wuhlestr. [Wohngebiet]: Fußgänger	q1 21580,13583 21430,13602
 (oberer Wuhlewanderweg): einige Fußgänger	q1 22317,13521 22472,13698 22479,13734 22550,13821 22638,13902 22783,14034 22855,14114 22872,14175 22872,14224 22860,14440 22868,14477 22873,14498 22864,14556
 (oberer Wuhlewanderweg): Fußgänger, Kinderspielplätze	q1 22864,14556 22851,14603 22756,14787 22702,14880 22690,14915 22643,14977 22599,15030 22588,15056 22577,15109
@@ -1793,7 +1799,7 @@ Földerichplatz: Fußgängerzone	q3 -3942,12559 -3940,12377
 (Marzahner Promenade - Landsberger Allee [Wohngebiet]): Fußgänger	q1 20759,15740 20789,15736
 (Wasserweg - Treptower Park): einige Fußgänger, Bordstein, Zugang kann zugeparkt sein	q3 15678,8911 15617,8924
 Monumentenplatz: einige Fußgänger, Spielplatz	q2 8385,8923 8362,9007 8358,9068
-(Minna-Cauer-Str. - Lehrter Str.): Fußgänger, Radfahren offiziell verboten	q4 7879,13438 7837,13499 7775,13540
+(Minna-Cauer-Str. - Lehrter Str.): Fußgänger, Radfahren offiziell verboten	q4 7895,13415 7837,13499 7775,13540
 (Minna-Cauer-Str. - Lehrter Str.): einige Fußgänger, schmale Straße	q1 7775,13540 7666,13479 7653,13480
 Andreas-Hofer-Platz: einige Fußgänger, Bordsteine	q3 10490,16914 10493,16960
 Schlosspark Schönhausen: einige Fußgänger, Pflasterreihen	q1 10496,18704 10518,18750 10513,18854 10497,18883 10507,18959 10529,19055 10584,19132 10600,19225
@@ -2172,7 +2178,7 @@ Einstein-Park: einige Fußgänger	q2 13163,14924 13207,14998 13204,15062
 (Hoppendorfer Str. - Wuhlewanderweg): einige Fußgänger, niedriger Bordstein	q3 21592,7640 21609,7579
 (Innovationspark Wuhlheide - Wuhlewanderweg): einige Fußgänger	q1 21491,7182 21547,7208
 (Innovationspark Wuhlheide - Wuhlewanderweg): einige Fußgänger, eng	q2 21547,7208 21542,7246 21569,7252
-(Weg im erweiterten Mauerpark): Fußgänger	q2 10235,14934 10215,14977 10192,14967
+(Weg im erweiterten Mauerpark): Fußgänger	q2 10235,14934 10208,14922 10192,14967
 (Weg im erweiterten Mauerpark): Fußgänger	q2 10274,15024 10297,14961
 (Weg im erweiterten Mauerpark): Fußgänger	q1 10192,14967 10129,15130 10075,15307 10052,15429 10044,15487 10009,15618 10070,15626 10127,15463 10233,15147 10274,15024
 (Weg im erweiterten Mauerpark): Fußgänger	q2 10274,15024 10209,14996 10215,14977
@@ -2592,7 +2598,7 @@ Köllnische Heide: schmaler Weg, kurvig	q3 20511,4781 20589,4795 20651,4854 20689
 (Neucölln Carree, Parkplatzzufahrt): Parkplatzverkehr	q2 14430,7348 14423,7333 14378,7236 14507,7146
 (Uferweg - Vor den Toren): enger Weg	q3 2649,15783 2648,15827
 Jungfernheidesteg: enge Brücke, einige Fußgänger	q2 2906,13610 2921,13618 3003,13634 3053,13646 3054,13638
-(Blockdammweg - Adolf-Wermuth-Allee): einige Fußgänger	q1 17701,8851 17699,8843 17674,8738
+(Blockdammweg - Adolf-Wermuth-Allee): einige Fußgänger	q1 17702,8855 17699,8843 17674,8738
 (Blockdammweg - Adolf-Wermuth-Allee): einige Fußgänger, kein direkter Zugang zur Georg-Klingenberg-Str.	q3 17674,8738 17659,8698
 (Blockdammweg - Adolf-Wermuth-Allee): einige Fußgänger, kein direkter Zugang zur Georg-Klingenberg-Str.	q3 17674,8738 17668,8696
 (Uferweg): einige Fußgänger	q2 11821,11733 11957,11603
@@ -3227,7 +3233,7 @@ Hohenzollernstr. (Zehlendorf): enge Straße	q1 21,2728 58,2710 226,2752 322,2772 
 Hohenzollernstr. (Zehlendorf): enge Straße	q1 487,2815 514,2804 535,2785
 Hohenzollernstr. (Zehlendorf): enge Straße	q1 58,2710 39,2669
 Rosa-Reinglass-Steig	q1 -2878,15304 -2856,15383
-Am Lupinenfeld: enge Straße	q0 24159,13507 24347,13465 24539,13427 24752,13390 24802,13381 24879,13338 25031,13242 25138,13183 25181,13157
+Am Lupinenfeld: enge Straße	q0 24159,13507 24347,13465 24539,13427 24752,13390 24802,13381 24879,13338 25031,13242 25138,13183
 Franzstr. (Lankwitz): enge Straße	q0 5559,3058 5776,3195
 Gluckweg: enge Straße	q1 5853,3050 6039,3275
 Gluckweg: beiderseits parkende Autos	q1 6039,3275 6171,3400
@@ -3621,7 +3627,7 @@ Greifswalder Str., linker Gehweg	q3::igndisp; 12584,14928 12563,14860
 Greifswalder Str.: linker Gehweg bis zur Naugarder Str., ggfs. absteigen	q3::igndisp; 12704,15105 12712,15176
 Buschkrugallee, linker Radweg	q1::igndisp; 14111,4181 14119,4153
 Michelangelostr., linker Gehweg	q3::igndisp; 13854,15129 13758,15009 13647,14912
-Adlergestell, linker Gehweg	q2::igndisp; 19345,4077 19472,3922
+Adlergestell, linker Gehweg	q2::igndisp; 19348,4080 19472,3922
 Bundesallee/Spichernplatz, linker Gehweg bis Pariser Str.	q2::igndisp; 5435,9859 5423,9932
 Bundesallee/Spichernplatz, Radweg bis Nachodstr.	q0::igndisp; 5491,9935 5487,9864
 Buschkrugallee, linker Gehweg ab Fußgängerampel bis zur Bürgerstr.	q4::igndisp; 13316,6320 13283,6354
@@ -3645,7 +3651,7 @@ Ferdinand-Schultze-Str. -> Rhinstr./Marzahner Str.: linker Gehweg bis zur Ampel	
 Potsdamer Chaussee: linker Gehweg bis zur Ampel	q3::igndisp; -3040,1763 -3019,1774 -3011,1761
 Richard-von-Weizsäcker-Platz: Gehweg bis Akazienstr.	q3::igndisp; 7307,8945 7242,8902 7201,8870
 Sonnenallee: linker Gehweg bis zur Ampel	q4::igndisp; 14423,7333 14334,7395
-Blockdammweg: linker Gehweg bis zum Fußgängerbereich in der Parkstadt Karlshorst	q4::igndisp; 17729,8850 17699,8843
+Blockdammweg: linker Gehweg bis zum Fußgängerbereich in der Parkstadt Karlshorst	q4::igndisp; 17736,8850 17699,8843
 Orankeweg -> Hansastr./Orankeweg: linker Gehweg bis zur Überquerungsmöglichkeit, Bordstein	q3::igndisp; 14906,15859 14967,15885
 Lidl-Parkplatz - Alt-Kaulsdorf: linker Gehweg bis zur Ampel "Am Feldberg"	q3::igndisp; 22994,11251 22937,11265
 Alt-Kaulsdorf - Lidl-Parkplatz: linker Gehweg ab Ampel Myslowitzer Str.	q3::igndisp; 23113,11262 22994,11251

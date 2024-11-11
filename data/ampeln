@@ -3,8 +3,6 @@
 #: note: XXX_* categorization done 2008-01-26
 #:
 Lehrter Str./Kruppstr.: provisorische Ampel	X::inwork 7331,14132
-An der Wuhlheide/Rathenaustr.: Baustellenampel	X::inwork 19245,6379
-An der Wuhlheide/Steffelbauerstr.: Baustellenampel östlich der Einmündung	F::inwork 19594,6155
 Wendenschloßstr.: Gegenverkehrsregelung	X::inwork 22791,4457
 Wilhelminenhofstr./Schillerpromenade	X::inwork 18191,6363
 Wiesbadener Str./Sodener Str.: provisorische Ampel	X::inwork 3703,7324
@@ -1810,7 +1808,7 @@ Industriebahn	B0 -2410,13746
 	X 4819,10355
 	F 11285,14515
 	F 11909,15477
-	X 7880,13315
+	X 7901,13324
 	X 7696,7771
 	X 8019,13650
 	F 12204,13719
@@ -2403,6 +2401,8 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 	X 14559,13248
 	X 17754,5460
 	F -6349,5846
+	X 15950,12886
+provisorische Fußgängerampel	F 17720,8854
 	X -17127,-554
 	F -12868,-502
 	X -12940,-1625

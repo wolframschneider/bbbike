@@ -339,7 +339,7 @@ Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115
 Indira-Gandhi-Str. - Orankeweg: bereits an der Fußgängerampel Gounodstr. auf den linken Gehweg wechseln	PI; 14597,15970 14609,15921 14695,15911
 Köthener Brücke - Gleisdreieckpark: ab der Ampel den linken Gehweg benutzen	PI; 8430,10710 8371,10769 8358,10782 8350,10774
-Richtung Blockdammwegbrücke fahren	PI; 17729,8850 17754,8863 17760,8853
+Richtung Blockdammwegbrücke fahren	PI; 17736,8850 17754,8863 17762,8855
 Podbielskiallee - Pacelliallee: Fußgängerampel zum Linksabbiegen benutzen	CP; 2953,6743 2723,7029 2714,6857
 Armenische Str.: vor dem Sackgassenhammer links halten	CP; 7150,16760 7144,16781 7131,16790
 Schillerpark: im Park halblinks halten	CP; 7115,16827 7097,16915 7064,16943
@@ -448,7 +448,7 @@ Schulzendorfer Str./Waltersdorfer Str. -> Grottewitzstr.: ggfs. linke Fußgängera
 Behrenstr. - Ebertstr.: zum Linksabbiegen die linke Fußgängerampel benutzen	PI; 8737,12098 8595,12066 8577,11896
 Auf dem Grat: nördliche Fahrbahn	CP; 1640,5383 1652,5426 1803,5397
 Auf dem Grat: südliche Fahrbahn	CP; 1652,5426 1640,5383 1807,5355
-Bernauer Str. - Mauerpark: ggfs. schon an der Ampel Bernauer Str./Wolliner Str. auf die linke Seite wechseln	PI; 10170,14905 10235,14934 10215,14977
+Bernauer Str. - Mauerpark: ggfs. schon an der Ampel Bernauer Str./Wolliner Str. auf die linke Seite wechseln	PI; 10170,14905 10208,14922 10235,14934 10215,14977
 Otto-von-Simson-Str - Thielallee: Überquerungsmöglichkeit ca. 30m zur rechten Seite	CP; 2627,5095 2560,5044 2577,4959
 Stahlheimer Str. - Rodenbergstr.: nicht auf das Straßenbahnkap fahren, links abbiegen dort nicht möglich	PI; 11477,15969 11492,15993 11358,16067
 Weißenhöher Str. - Stawesdamm: auf der Fahrbahn bleiben, links abbiegen wegen Bushaltestelle nicht möglich	PI; 20521,11494 20569,11492 20616,11490 20627,11552
