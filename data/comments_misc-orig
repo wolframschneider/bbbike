@@ -1588,7 +1588,7 @@ Charles-Tellier-Platz: nicht ausgeschildert	CS -14665,481 -14626,465 -14622,440 
 #: note: laut fis-broker 1:5000 ist das tatsächlich die Falkoniergasse
 #: XXX wird hier noch ausgeschildert?
 #: osm_watch: way id="546927052" version="9"
-#: last_checked: 2024-11-15
+#: last_checked: 2024-11-21
 #: check_frequency: 90d
 Falkoniergasse: nicht ausgeschildert	CP2; 9939,12174 9909,12261
 ausgeschildert als Falkoniergasse 3, blaues Schild mit Frakturschrift	CP2; 9909,12261 9939,12174
@@ -1624,7 +1624,7 @@ Waldpromenade: nicht ausgeschildert	CS 23473,8114 23376,8186 23261,8274 23149,83
 # 
 (Friedrichstr. - Enckestr.): ausgeschildert Friedrichstrasse 23 23A 23B; entlang taz-Gebäude und Besselpark	CP2; 9537,10837 9666,10848
 # 
-#: last_checked: 2024-11-02
+#: last_checked: 2024-11-20
 #: check_frequency: 90d
 Mergenthalerring: Straße nicht ausgeschildert, Richtung "Elbekies" fahren	CP2; 14261,8851 14252,8829
 # 
@@ -2017,15 +2017,16 @@ Grünow - Alexanderhof: nicht Alexanderhof	CP2; 42911,101207 43003,101043
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX Wann sind die Straßen ausgeschildert? vvv
-#: last_checked: 2024-11-09 vvv
-#: check_frequency: 60d vvv
+#: last_checked: 2024-11-22 vvv
+#: check_frequency: 30d vvv
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ulrich-Plenzdorf-Str. hängt an der Hauswand --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15163,10758 15151,10699
 # REMOVED (ausgeschildert) --- Ingrid-Reschke-Str.: nicht ausgeschildert	CS 15151,10699 15140,10647 15138,10638
-Ulrich-Plenzdorf-Str.: nicht ausgeschildert	CS 14994,10732 15071,10716
+# REMOVED (ausgeschildert) --- Ulrich-Plenzdorf-Str.: nicht ausgeschildert	CS 14994,10732 15071,10716
 # REMOVED (ausgeschildert) --- #: note: nur ein kleines provisorisches Papierschild an der Kreuzung Ingrid-Reschke-Str. hängt an der Hauswand --- Ulrich-Plenzdorf-Str.: nicht ausgeschildert	CS 15071,10716 15151,10699 15220,10682
 Gustav-Tempel-Str.: nicht ausgeschildert	CS; 15261,10738 15245,10719
 # REMOVED (ausgeschildert) --- Gustav-Tempel-Str.: nicht ausgeschildert	CS 15245,10719 15236,10684 15220,10682 15205,10616 15200,10600
-An den Eiswerken: nicht ausgeschildert	CS 15004,10791 14994,10732 14984,10677
+An den Eiswerken: nicht ausgeschildert	CP2; 15004,10791 14994,10732
+# REMOVED (ausgeschildert) --- An den Eiswerken: nicht ausgeschildert	CS 14994,10732 14984,10677
 Paul-und-Paula-Promenade: nicht ausgeschildert	CS 14886,10748 14909,10732 14984,10677
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -2103,7 +2104,7 @@ bereits vor der Einmündung als "Neheimer Str." ausgeschildert	CP2; 1735,19045 1
 Lichtenberger Str. [Wohngebiet]: nicht ausgeschildert	CP2; 11947,12494 11867,12284
 # 
 #: next_check_id: FRIEDENAUERHOEHE-2024
-#: last_checked: 2024-10-16
+#: last_checked: 2024-11-18 (daf)
 #: check_frequency: 90d
 #: next_check: 2027-06-30
 Friedenauer Höhe: nicht ausgeschildert	CS 6293,7875 6263,7894 6178,7899 6126,7917 6011,7911 5799,7880

@@ -269,7 +269,7 @@ An der Kolonnade	N 8825,11773 8969,11814
 #: osm_watch: note 4168370 2
 #: XXX Umbenennung zu "Anton-Wilhelm-Amo-Str." vvv
 #: priority: #A vvv
-#: last_checked: 2024-11-15 vvv
+#: last_checked: 2024-11-21 vvv
 #: check_frequency: 60d vvv
 # REMOVED --- #: next_check: 2021-10-01 vvv
 #: osm_watch: way id="47755711" version="23"
@@ -589,7 +589,7 @@ Karl-Kunger-Str.	N 13190,9750 13345,9596 13489,9456 13614,9333
 Karl-Kunger-Str.	H 13614,9333 13647,9304 13766,9200
 Plesser Str.	N 13647,9304 13667,9316 13821,9340
 Kiefholzstr.	N 13251,9829 13450,9714 13602,9581 13715,9455 13821,9340 13849,9310
-Kiefholzstr.	NH 13849,9310 14018,9118 14151,8967 14261,8851 14318,8790 14341,8763 14363,8738 14560,8528 14700,8368 14841,8207 14976,8053 15053,7966 15221,7778 15456,7516 15553,7408 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755 16276,6611 16283,6604 16346,6534 16398,6475 16425,6445 16485,6377 16868,5938
+Kiefholzstr.	NH 13849,9310 14018,9118 14137,8983 14151,8967 14261,8851 14318,8790 14341,8763 14363,8738 14560,8528 14700,8368 14841,8207 14976,8053 15053,7966 15221,7778 15456,7516 15553,7408 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755 16276,6611 16283,6604 16346,6534 16398,6475 16425,6445 16485,6377 16868,5938
 #: osm.highway: service
 Kiefholzstr. [Wohngebiet]	N 16398,6475 16448,6498 16495,6565
 Puderstr.	N 14363,8738 14492,8853 14525,8894 14567,8966 14614,9052
@@ -680,8 +680,15 @@ Heidelberger Str.	N 13202,9455 13058,9572
 Laskerstr.	N 14675,10693 14541,10735
 Bödikerstr.	N 14541,10735 14490,10610 14447,10491 14405,10340
 Markgrafendamm	H 14558,10264 14608,10409 14641,10552 14675,10693 14671,10751 14680,10837 14717,10855
-Hauptstr. (Rummelsburg)	H 14717,10855 14810,10832 14904,10812 14927,10807 15004,10791 15081,10775 15163,10758 15261,10738 15307,10701 15372,10655 15404,10633 15639,10469 15831,10329 16004,10204 16090,10141 16117,10120 16138,10105 16187,10033 16257,9929 16302,9865 16374,9760
-Hauptstr. (Rummelsburg) [Wohngebiet]	N 15404,10633 15358,10562 15334,10528
+Hauptstr. (Rummelsburg)	H 14717,10855 14810,10832 14904,10812 14927,10807 15004,10791 15081,10775 15163,10758 15261,10738
+Hauptstr. (Rummelsburg)	H 15261,10738 15307,10701 15372,10655
+Hauptstr. (Rummelsburg)	H 15372,10655 15308,10704 15261,10738
+Hauptstr. (Rummelsburg)	H 15372,10655 15404,10633 15639,10469 15831,10329 16004,10204 16090,10141 16117,10120 16138,10105 16187,10033 16257,9929 16302,9865 16374,9760
+Hauptstr. (Rummelsburg) [Wohngebiet]	N 15404,10633 15392,10615 15358,10562 15334,10528
+Hauptstr. (Rummelsburg) [parallel zur Emma-Ihrer-Str.]	N 15538,10368 15566,10411 15600,10465
+Hauptstr. (Rummelsburg) [Nebenfahrbahn]	N 15298,10682 15332,10657 15392,10615 15600,10465
+#: note: nicht direkt beleuchtet, aber nahe genug an der Hauptstr.
+(Hauptstr. - Gustav-Tempel-Str.)	NN 15298,10682 15245,10719
 (Hauptstr. - Rummelsburger Ufer)	NN 15334,10528 15322,10513
 (Unterführung S-Bhf. Rummelsburg)	NN 15372,10655 15409,10709 15433,10765
 Saganer Str.	N 16187,10033 16206,10047
@@ -734,19 +741,20 @@ Bartholomäusufer	NN 15347,9922 15465,9860 15561,9809 15626,9710
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/33re.pdf/file?y=2011
 Zillepromenade	NN 15200,10600 15249,10564 15322,10513 15453,10419 15448,10397 15457,10342 15496,10277
 Bolleufer	NN 15496,10277 15518,10234 15599,10206 15606,10179 15645,10147 15713,10035 15786,9957 15781,9933 15828,9875 15910,9860 15931,9846 16002,9787 16049,9749 16119,9689
-(Rummelsburger Ufer - Emma-Ihrer-Str.)	NN 15453,10419 15550,10361
+(Rummelsburger Ufer - Emma-Ihrer-Str.)	NN 15453,10419 15538,10368 15556,10357
 (Rummelsburger Ufer - Hauptstr.)	NN 16049,9749 16178,9861 16257,9929
 Hansa-Ufer (Friedrichshain)	NN 15626,9710 15621,9704 15659,9647 15708,9607 15739,9583 15749,9558 15819,9430 15813,9378 15793,9334
 (Strela-Platz)	NN 15400,9742 15465,9860
 Nöldnerstr.	H 15272,10790 15388,10758 15433,10765 15681,10801 15793,10814 15856,10821 15932,10830 15960,10833 16049,10844
 Schlichtallee	H 15639,10469 15758,10578 15880,10680 15970,10755 16038,10818 16049,10844
 Emma-Ihrer-Str.	NN 15496,10277 15513,10298
-Emma-Ihrer-Str.	N 15513,10298 15550,10361 15583,10399 15623,10449 15639,10469
-An der Bucht	N 15358,10562 15430,10508 15493,10460 15583,10399 15652,10348 15716,10303 15788,10252 15858,10202 15952,10134
+Emma-Ihrer-Str.	N 15513,10298 15556,10357 15583,10399 15623,10449 15639,10469
+An der Bucht	N 15358,10562 15430,10508 15493,10460 15566,10411 15583,10399 15652,10348 15716,10303 15788,10252 15858,10202 15952,10134
 An den Knabenhäusern	NN 15513,10298 15578,10250 15621,10217 15643,10201 15711,10149
 (Rummelsburger Ufer - An den Knabenhäusern)	NN 15599,10206 15610,10212 15621,10217
 Alice-und-Hella-Hirsch-Ring	N 15823,10300 15788,10252 15711,10149 15753,10117 15779,10097 15858,10202 15894,10251
 Lina-Morgenstern-Str.	N 15643,10201 15716,10303 15753,10353
+(Hauptstr. [Nebenfahrbahn] - Vicki-Baum-Str.)	NN 15600,10465 15623,10449
 Vicki-Baum-Str.	N 15990,10185 15894,10251 15823,10300 15753,10353 15688,10400 15633,10442
 Vicki-Baum-Str.	NN 15633,10442 15623,10449
 Charlotte-Salomon-Hain	N 15753,10117 15716,10065
@@ -1867,7 +1875,7 @@ Otto-Weidt-Platz	NN 7739,14119 7825,14173 7875,14204
 #: osm_watch: way id="1010731431" version="8"
 #: osm_watch: way id="642581102" version="10"
 #: add_fragezeichen: Wie lange wird es den provisorischen Weg geben?
-#: last_checked: 2024-11-13 (mapillary)
+#: last_checked: 2024-11-21
 #: check_frequency: 45d
 # REMOVED --- #: next_check: 2024-10-31
 (provisorischer Weg zum Golda-Meir-Steg)	NN 7825,14173 7861,14133
@@ -4870,7 +4878,8 @@ Friesenstr. (Niederschönhausen)	NN 8765,19288 8834,19253 9052,19144 9142,19064 9
 #: last_checked: 2024-06-23 (mapillary)
 #: check_frequency: 120d
 (Pankeweg)	NN 12867,21098 12847,21116 12844,21143 12914,21229
-(Pankeweg)	NN 12914,21229 12980,21411 13031,21538 13078,21754 13141,22018 13206,22290 13110,22313
+(Pankeweg)	NN 12914,21229 12980,21411 13031,21538 13075,21740 13078,21754 13141,22018 13206,22290 13110,22313
+(Hebammensteigbrücke - Pankeweg)	NN 13008,21783 13049,21743 13075,21740
 #: oldname: -2014: Am Graben (KGA Gravenstein)
 #: ignore_oldname_file: yes
 Weinapfelweg	N 12940,21738 12963,21835 12968,21848 12996,21953 13025,21984 13050,21994 13060,22043 13075,22130 13091,22220 13110,22313 13117,22337 13136,22397 13162,22480 13180,22539 13202,22605 13221,22667 13219,22689 13200,22766 13183,22817 13156,22889
@@ -4989,7 +4998,7 @@ Hebammensteigbrücke	NN 13193,21700 13168,21706 13135,21715 13121,21678 13124,217
 #: by: http://www.berlin.de/imperia/md/content/bapankow/pressestelle/ba-beschluesse/11.12.2012_benennung_eines_oeffentlichen_weges_im_ortsteil_franzoesisch_buchholz_in_hembammensteig.pdf?start&ts=1355910058&file=11.12.2012_benennung_eines_oeffentlichen_weges_im_ortsteil_franzoesisch_buchholz_in_hembammensteig.pdf
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/54re.pdf/file?y=2012
 #: note: Beleuchtung existiert
-Hebammensteig	NN 13046,21734 13008,21783 12968,21848
+Hebammensteig	NN 13046,21734 13014,21775 13008,21783 12968,21848
 (Bucher Str. - Am Brendegraben)	N 13012,23424 13121,23311 13043,23212 13194,23100 13149,23024 13203,22892 13231,22880
 Am Brendegraben	N 13231,22880 13273,22857 13292,22838 13312,22765 13303,22732 13283,22668
 #: oldname: -2014: Petunienweg (KGA Gravenstein) vvv
@@ -6258,7 +6267,7 @@ Schnellerstr.	NN 17728,5756 17807,5730
 Schnellerstr.	NH 17807,5730 17916,5675 18013,5627 18093,5585 18236,5548
 Schnellerstr.	H 18236,5548 18370,5511 18680,5413 18955,5320 19037,5316 19186,5310 19328,5304 19405,5284
 #: osm.highway: service
-(Zufahrt Zentrum Schöneweide)	N 17728,5756 17656,5701 17412,5951 17483,6024
+(Zufahrt Zentrum Schöneweide)	N 17728,5756 17656,5701 17612,5746 17412,5951 17483,6024
 Flutstr.	N 18019,5786 17980,5721 17931,5695 17916,5675
 Fließstr. (Niederschöneweide)	N 18164,5701 18019,5786 17877,5860
 Hainstr.	N 18370,5511 18370,5647 18349,5744 18312,5824
@@ -11465,7 +11474,7 @@ Lauterplatz	NN 5799,7880 5707,7878
 # REMOVED (eingetragen) --- #: XXX Friedenauer Höhe (Privatstraße) -> im Amtsblatt, PLZ=12159, laut LOR PLZ=10827+12159
 # REMOVED (eingetragen) --- #: XXX Lauterplatz -> im Amtsblatt, PLZ=12159
 # REMOVED (eingetragen) --- #: XXX Hannah-Höch-Weg (evtl. ohne "h") -> laut Amtsblatt mit "h", bei DPAG ebenso, PLZ=12159
-#: last_checked: 2024-10-16 vvv
+#: last_checked: 2024-11-18 (daf) vvv
 #: check_frequency: 90d vvv
 #: next_check: 2027-06-30 vvv
 #: osm_watch: way id="1254710366" version="7"
@@ -16154,7 +16163,7 @@ Baikalstr.	N 17210,10350 17255,10510 17276,10617
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_43_4845_4908_online.pdf (Benennung von Wegen)
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2019/pressemitteilung.861540.php (außerdem: Umgestaltung der Grünanlage, bis Ende 2021)
 #: osm_watch: way id="51230057" version="18"
-#: last_checked: 2024-11-09
+#: last_checked: 2024-11-16
 (entlang des Tränkegrabens)	NN 16900,9861 17005,9953 17041,9985 17078,10038 17138,10109 17156,10164
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110204.1135.329767.html
 #: note: entlang des Tränkegrabens
@@ -16527,7 +16536,9 @@ Klingsorplatz	N 4760,4075 4760,4112 4787,4133 4818,4125 4834,4102
 Flotowstr. (Lichterfelde)	N 4515,4581 4651,4638
 Neltestr.	N 19472,3922 19486,3934 19596,4035 19723,4175 19756,4245
 (Kattunsteig)	NN 19765,4876 19710,4760 19710,4682 19715,4479 19717,4404 19723,4348 19766,4288 19807,4248
-(Kattunsteig - Neltestr.)	NN 19766,4288 19754,4266 19760,4256 19756,4245
+(Kattunsteig - Neltestr.)	NN 19766,4288 19750,4260
+(Sonnenallee - Neltestr.)	NN 19610,4394 19750,4260
+(Sonnenallee/Kattunsteig - Neltestr.)	NN 19750,4260 19759,4251 19756,4245
 (Kattunsteig - Hartriegelstr.)	NN 19723,4348 19661,4414 19651,4424 19306,4791 19301,4814 19250,4830 19251,4879
 #: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2023/pressemitteilung.1314018.php (Birkenwäldchen: ehemaliger Sportplatz wird zum Biotop)
 #: note: möglicherweise "Birkenweg", aber vor Ort keine Schilder (früherer Eintrag in Berlin.coords.data: Birkenweg|Adlershof|12439|19864,4607)
@@ -18025,7 +18036,7 @@ Rhönstr.	N 13598,21360 13415,21442 13371,21462
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6844 (Vorlage zur Kenntnisnahme)
 #: osm_watch: way id="59573616" version="4"
 #: XXX im Zuge des Bebauungsplans 3-67 VE wird eine neue Planstraße entstehen (vermutlich müssen alle abhängigen Einträge - qualitaet, handicap, nolighting, green - neu evaluiert werden)
-#: last_checked: 2024-06-01 (mapillary)
+#: last_checked: 2024-11-18 (mapillary)
 #: check_frequency: 180d
 #: next_check: 2025-03-01
 (Rhönstr. - Harzburger Str.)	NN 13598,21360 13709,21334
@@ -19589,7 +19600,7 @@ Kleine Markusstr.	N 12059,12172 11958,12195 11937,12127
 #: by: https://berliner-abendblatt.de/berlin-news/strasse-wird-nach-schauspielerin-inge-meysel-benannt-id226034
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_40_3909_3968_online.pdf (Benennung: Inge-Meysel-Straße)
 #: XXX Benennung nach Inge Meysel; laut DPAG 12/2023: Inge-Meysel-Str., PLZ=10243 vvv
-#: last_checked: 2024-11-15 vvv
+#: last_checked: 2024-11-21 vvv
 #: check_frequency: 90d vvv
 (Zufahrt Str. d. Pariser Kommune)	N 12577,11804 12617,11888 12648,11953
 (Zufahrt Franz-Mehring-Platz)	N 12648,11953 12691,12042 12735,12131

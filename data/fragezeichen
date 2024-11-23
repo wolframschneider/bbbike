@@ -299,7 +299,6 @@ Werbelow - Brietzig: Qualität? existiert eine Ausschilderung für die Berlin-Used
 Brietzig - Wilsikow: Qualität?	? 41855,119411 40856,120094 40697,120118 40015,120435 39844,120447 39686,120350
 Demnitz - Altwigshagen: Qualität?	? 35047,144242 35170,144280 35505,144226 35871,144207 35920,144152 36828,144640 36901,144823 37114,144939
 Barkhausenstr.: Qualität?	? -11630,16445 -11783,16506
-K 6315 (B188-Nennhausen) zw. Nennhausen u. Kotzen: Qualität? (bis Ende 2005 bei der LBVS als "schlechte Straße" gekennzeichnet; evtl. ab Juni 2009 gut befahrbar)	? -50149,24689 -50048,24475 -49945,24243 -50123,23630 -50271,23531 -50389,22734 -51061,21342
 Radweg Lychen - Himmelpfort: Qualität (Am Anfang bei Lychen noch asphaltiert)?	? 234,89271 213,89085 188,88982 80,88883 -15,88653 -133,88520 -334,88568 -902,88315 -1764,87733 -2399,87248 -2422,86944 -2709,86901 -3001,86675 -3291,86302
 L15 - Neuthymen: Qualität (zumindest am südlichen Ende asphaltiert)?	? -4847,88034 -5332,88826 -5429,89137 -5457,89570 -5493,89713
 Gartenstr. (Elstal): Qualität?	? -18164,14194 -18107,14301 -18017,14480 -17979,14574 -17937,14727 -17871,14855 -17821,14925 -17763,15004
@@ -845,13 +844,10 @@ Götschendorf - Böckenberg: schlechte Qualität, teilweise Sand (wie ist die Quali
 (bei Götschendorf): mäßige Qualität (wie ist die Qualität des Weges hier?)	? 30027,76566 29951,76969 29769,77099 29507,77428 29458,77597
 Groß Friedenwalde - Flieth: Kopfsteinpflaster (wie schlecht ist das Kopfsteinpflaster hier?)	? 35740,80983 35815,81168 35815,81518 35894,81782
 Groß Friedenwalde - Flieth: Asphalt (ist hier tatsächlich asphaltiert?)	? 35894,81782 35998,82265 36009,82890 36430,83497 36578,83835 36590,84086 36693,84235 36676,84495 36696,84495
-# added from handicap_s
-Uhlandstr.: Fahrbahn wegen Asphaltierungsarbeiten gesperrt (Sind die Bauarbeiten beendet?)	? 7506,20170 7533,20275
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
 Lindenallee (Ist die Einbahnstraße mittlerweile für Radfahrer offen?)	? 1429,11528 1403,11428
-Weg im Grünzug Kraatzgraben: gesperrt, Leitungsarbeiten (Sind die Bauarbeiten beendet?)	? 17161,9921 17257,9869
 Slatan-Dudow-Str. (Potsdam): gesperrt wegen Bauarbeiten (Ist die Straße noch wegen Bauarbeiten gesperrt?)	? -7476,-4673 -7353,-4785
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
 # added from comments_cyclepath
@@ -875,8 +871,12 @@ F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 Marianne-Foerster-Str.: zurzeit Baustraße, wie wird die Qualität nach der Fertigstellung sein? (Sind die Straßen fertiggestellt?)	? 12257,18649 12381,18897
 Beate-Hahn-Str.: zurzeit Baustraße, wie wird die Qualität nach der Fertigstellung sein? (Sind die Straßen fertiggestellt?)	? 12363,18596 12481,18838
 # added from bbbike-temp-blockings-optimized
-Lynarstr.: wegen Bauarbeiten gesperrt, mindestens bis Mitte November 2024 (Ist der Straßenabschnitt zwischen Tegeler Str. und Sparrstr. weiterhin gesperrt?)	? 7259,14870 7409,14954
 Gleiwitzer Str.: Bauarbeiten, Abschnitt der Fahrbahn zwischen Dornacher Str. und Köpenicker Str. gesperrt, voraussichtlich bis Mitte November 2024, vielleich wird wieder verlängert [Gleiwitzer Str. zwischen Dornacher Str. und Köpenicker Str.] (Sind die Bauarbeiten in der Gleiwitzer Str. beendet?)	? 20947,9999 21146,9988
+Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Wilhelminenhofstr. (West)] (Sind die Sperrungen aufgehoben?)	? 17826,6495 17991,6431
+Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Wilhelminenhofstr. (Ost)] (Sind die Sperrungen aufgehoben?)	? 18191,6363 17991,6431
+Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Edisonstr. (Süd)] (Sind die Sperrungen aufgehoben?)	? 17948,6248 17991,6431
+Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Edisonstr. (Süd)] (Sind die Sperrungen aufgehoben?)	? 17991,6431 17948,6248
+Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Edisonstr. (Nord): Länge des gesperrten Abschnitts etwa 80m] (Sind die Sperrungen aufgehoben?)	? 17991,6431 17962,6674
 Weverpromenade/Stadtpark Steglitz: Bauarbeiten, mögliche Sperrungen, vom 08.07.2024 bis voraussichtlich Mitte Oktober 2024, evtl. wird verlängert [Weverpromenade] (Sind die Bauarbeiten beendet? Ist die Qualität der Wegoberfläche besser geworden?)	? 5787,4400 5738,4361 5721,4356
 Weverpromenade/Stadtpark Steglitz: Bauarbeiten, mögliche Sperrungen, vom 08.07.2024 bis voraussichtlich Mitte Oktober 2024, evtl. wird verlängert [Stadtpark Steglitz] (Sind die Bauarbeiten beendet? Ist die Qualität der Wegoberfläche besser geworden?)	? 5836,4469 5787,4400
 Mauerweg: Bauarbeiten zwischen Japaneck und Lichterfelder Allee, Sperrung, voraussichtlich ab dem IV. Quartal 2024 (Haben die Bauarbeiten bereits begonnen?)	? 4406,-910 4081,-425 4038,-362 4046,-299 4034,-255 3982,-181 3941,-127 3908,-117 3842,-6 3788,26 3767,66 3689,182 3607,283 3480,441 3412,534

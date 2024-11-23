@@ -342,7 +342,7 @@ asphaltiert	RW2; 13850,10612 13865,10606 13919,10583
 # REMOVED --- #: next_check_id: STRALAUER-2019 --- #: note: laut rbb bis 30.9.2022, allerdings ist hier von "ab Ehrenbergstr." die Rede --- #: note: mittlerweile ist die provisorische Radspur bis etwa 80m vor Bödikerstr. verlängert --- #: XXX hier wird ein asphaltierter Bürgersteigradweg entstehen --- #: last_checked: 2022-11-07 --- #: check_frequency: 7d --- #: next_check: 2022-12-16
 #: next_check_id: STRALAUER-2019
 #: XXX wird hier noch ein Radwegschild aufgestellt? vvv
-#: last_checked: 2024-11-15 vvv
+#: last_checked: 2024-11-22 vvv
 #: check_frequency: 30d vvv
 # REMOVED --- #: next_check: 2022-12-27
 #: historical_note: früher: Gehweg für Radfahrer frei, einige Schäden im Asphalt, RW1;
@@ -976,7 +976,7 @@ teilweise mit Leitboys geschützt	RW4; 14523,12183 14582,12174 14621,12168 14709,
 #: source_id: viz2021:13.468303,52.514356,27.02.2023,10:00 (bis 21.04.2023) (bis 5.5.2023) (bis 8.5.2023) (bis 9.6.2023)
 #: source_id: viz2021:13.472849,52.513853,13.06.2023,06:00 (Leitungsbaustelle, bis 28.07.2023) (bis 31.08.2023) (bis 15.09.2023) (inaktiv)
 #: XXX wird hier auch eine Radspur entstehen?
-#: last_checked: 2024-11-13
+#: last_checked: 2024-11-18
 #: check_frequency: 60d
 # REMOVED --- #: next_check: 2023-02-24
 	RW2; 14994,12121 15110,12107 15361,12071
@@ -1316,7 +1316,7 @@ im Bereich der Bushaltestelle wird der Radweg auf dem Gehweg geführt	RW4; 14196,
 #: XXX wann kommt die nächste Verkehrsumstellung?
 #: note: während der Sperrung vom 9.-11.2.2024 war zumindest am Sa die östliche Radspur für Radfahrer in beiden Richtungen frei
 #: priority: #A
-#: last_checked: 2024-11-09 vvv
+#: last_checked: 2024-11-22 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2028-01-01 vvv
 geschützte Radspur	RW4; 14558,10264 14501,10169 14405,10027 14323,9913
@@ -2239,12 +2239,10 @@ asphaltierter Radweg	RW1; 11226,12945 11141,12806
 #: note: kein Radweg, allerdings kann man die parallel führende Parkplatzstraße benutzen
 	RW0; 9268,11590 9058,11564
 Verbundsteinpflaster	RW1;RW1 9935,11067 10103,10989
-Gehweg für Radfahrer frei	RW1; 15261,10738 15307,10701
-#: note: außerdem existiert hier eine asphaltierte Nebenfahrbahn
-Gehweg für Radfahrer frei	RW1; 15307,10701 15372,10655 15404,10633 15639,10469
-Gehweg für Radfahrer frei	RW1; 15639,10469 15404,10633 15372,10655 15307,10701
+Gehweg für Radfahrer frei	RW1; 15261,10738 15307,10701 15372,10655 15404,10633 15639,10469
+Gehweg für Radfahrer frei	RW1; 15639,10469 15404,10633 15372,10655 15308,10704
 #: note: frühere Benutzungspflicht wurde aufgehoben, aber eine Radfahrampel existiert noch immer
-Gehweg für Radfahrer frei	RW1; 15307,10701 15261,10738
+Gehweg für Radfahrer frei	RW1; 15308,10704 15261,10738
 Gehweg für Radfahrer frei	RW1; 15639,10469 15831,10329
 gemeinsamer Rad- und Gehweg	RW2; 16004,10204 15831,10329 15639,10469
 Gehweg für Radfahrer frei	RW1; 15831,10329 16004,10204
@@ -2277,7 +2275,7 @@ neu asphaltiert	RW1; 17527,7812 17619,7679 17681,7589 17769,7465
 #: by: https://www.berliner-woche.de/oberschoeneweide/c-verkehr/radweg-auf-der-rummelsburger-landstrasse-weiter-im-wartemodus_a364244
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036/WgMHJpYzbvb3tm7aTotsve5Kk4WGN2FNMENAra9e/hQGKffwY/90-Anlagen/04/B0234ZB1.pdf (1. Zwischenbericht)
 #: XXX bei vmz/rbb fälschlicherweise nicht mehr gelistet
-#: last_checked: 2024-11-06 vvv
+#: last_checked: 2024-11-16 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2025-12-31 vvv
 provisorische geschützte Radspur	RW3; 17681,7589 17619,7679 17527,7812 17311,8123 17292,8151 17202,8391 17188,8431 17143,8565
@@ -2302,7 +2300,7 @@ alter Asphalt, kein Unterstreifen gegen parkende Autos	RW1; 18010,7133 18225,700
 die letzten 50 Meter sind benutzungspflichtiger Radweg	RW4; 18225,7004 18010,7133
 Asphalt mit einigen Brüchen	RW1; 9321,8607 9364,8640 9395,8726
 	RW3;RW3 13821,9340 13849,9310
-	RW4;RW4 13849,9310 14018,9118 14151,8967
+	RW4;RW4 13849,9310 14018,9118 14137,8983 14151,8967
 # 
 # REMOVED --- #: next_check_id: KIEFHOLZ-2015 --- #: XXX wann wird die alte Radspur wieder hergestellt? --- #: by: http://www.abendblatt-berlin.de/2018/11/23/kiefholzstrasse-die-luecke-wird-bald-geschlossen/ (Richtungsfahrbahn Nord voraussichtlich im Februar 2019 fertig) --- #: by: https://www.berliner-woche.de/alt-treptow/c-verkehr/mathilde-rathenau-bruecke-ueber-die-a-100-uebergeben_a202954 --- #: by: https://www.bahninfo-forum.de/read.php?9,442687,750179#msg-750179 (Rückverschwenkung der S-Bahn) --- #: source_id: 2147342958 --- #: source_id: viz2021:13.458778,52.485562,28.11.2022,06:00 (bis 16.12.2022) (inaktiv) -- #: also_indoor: traffic (H[unvollständig],G,B) --- #: last_checked: 2022-12-08 --- #: check_frequency: 60d --- #: next_check: 2022-12-16 --- ab der provisorischen Brücke als Gehwegradweg geführt
 	RW4; 14261,8851 14151,8967
@@ -2902,7 +2900,7 @@ Fahrradschleuse	RW3; 12143,11574 12180,11657
 	RW3; 12180,11657 12143,11574 12092,11475
 #: by: https://www.infravelo.de/projekt/andreasstrasse/ (2. bis 3. Quartal 2022) (mittlerweile 2. Quartal 2024 - 3. Quartal 2024) (2. Quartal 2027 - 3. Quartal 2027) vvv
 #: XXX Verbreiterung und Protektion vvv
-#: last_checked: 2024-11-15 vvv
+#: last_checked: 2024-11-21 vvv
 #: next_check: 2027-09-30 vvv
 #: note: Andreasstr., Richtung Norden
 	RW4; 12180,11657 12204,11748 12207,11763 12238,11931 12279,12113 12295,12197
@@ -3066,11 +3064,12 @@ die ersten 20 Meter werden auf dem Gehweg geführt	RW3; 14558,10264 14608,10409
 #: source_id: viz2021:13.46568,52.499,22.11.2021,12:01 (bis 28.02.2023) (inaktiv)
 #: source_id: viz2021:13.465194,52.498114,20.11.2021,11:55 (bis 31.03.2023) (bis 31.5.2023) (bis 31.7.2023) (bis 31.8.2023) (bis 30.09.2023) (inaktiv) (bis 15.12.2023) (bis 30.06.2024) (vorfristig inaktiv)
 #: source_id[inactive]: bvg2021:m43#BVG315176_0
-#: source_id: bvg2024:m43#HIM_FREETEXT_222564
+#: source_id[inactive]: bvg2024:m43#HIM_FREETEXT_222564
+#: source_id[inactive]: bvg2024:HIM_FREETEXT_247779
 #: source_id: viz2021:13.465013,52.498062,11.03.2024,07:00 (bis 11.02.2026)
 #: note: bei rbb nur bis 23.01.2024, mittlerweile vorfristig (wie bei VIZ) entfernt
 #: note: mittlerweile gibt es etwa 50m hinter der Corinthstr. wieder eine provisorische Radspur (für eine anderen Baustelle)
-#: last_checked: 2024-11-09
+#: last_checked: 2024-11-22
 #: check_frequency: 90d
 #: next_check: 2026-02-11
 Radspur aufgehoben, teilweise Tempo 20 und Radfahrüberholverbot	RW0; 14641,10552 14608,10409 14558,10264
@@ -3097,7 +3096,7 @@ Busspur ist immer gültig, Be/Entladen Mo-Fr 9-14 Uhr frei; die letzten 20 Meter 
 #: note ^^^
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX früherer Eintrag, wird vielleicht wieder hergestellt: Radwegauffahrt existiert, aber dahinter gibt es keine Markierungen mehr	RW0;
-#: last_checked: 2024-10-30
+#: last_checked: 2024-11-18
 #: check_frequency: 60d
 #: next_check: 2024-12-31
 provisorischer Radweg auf dem Hochbord, endet einige Meter vor der Ampel Beermannstr., Baken vor der Abfahrt	RW2; 14089,9610 13973,9465
@@ -6424,7 +6423,7 @@ asphaltiert	RW2; 17775,5083 17763,5104 17726,5166 17705,5223 17700,5232 17648,53
 #: source_id: viz2021:13.51214,52.454886,08.11.2023,14:00 (nur für Kfz-Verkehr gesperrt, bis 30.06.2024) (bis 15.08.2024) (bis 11.10.2024) (bis 31.12.2024)
 #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7609 (Antrag)
 #: by: https://nachgefragt.bvg.de/schoeneweide/?date=20240820 (bis Mitte Oktober für Kfz-Verkehr gesperrt)
-#: last_checked: 2024-11-06
+#: last_checked: 2024-11-20
 #: check_frequency: 90d
 #: next_check: 2024-12-31
 provisorische Radspur	RW4; 17886,5587 17822,5524 17765,5469 17754,5460 17736,5441
@@ -7904,7 +7903,7 @@ wenige Meter Radweg am Anfang	RW0; 3337,12855 3400,13107
 #: osm_watch: way id="278197510" version="8"
 #: XXX Baucontainer stehen auf dem Radweg, trotzdem ist die Einbahnstraße noch offen für Radfahrer; mittlerweile per Gelbmarkierung auch relativ offiziell
 #: XXX früher: asphaltiert	RW2; 13588,11490 13565,11492 13473,11456
-#: last_checked: 2024-11-14
+#: last_checked: 2024-11-18
 #: check_frequency: 90d
 asphaltierter Radweg ist größtenteils nicht nutzbar	RW0; 13588,11490 13565,11492 13473,11456
 asphaltiert	RW1; 13565,11492 13588,11490
@@ -9175,4 +9174,8 @@ Tempo 10	RW6;RW6 -7523,14969 -7387,14951
 	RW6;RW6 5799,7880 5800,7826
 # 
 	RW7;RW7 12564,7467 12585,7357 12601,7284 12613,7236 12634,7151 12648,7080
+# 
+	RW7;RW7 7259,14870 7409,14954 7461,14986 7624,15083 7694,15125 7745,15160
+# 
+	RW7;RW7 10530,14452 10567,14337 10629,14299
 # 

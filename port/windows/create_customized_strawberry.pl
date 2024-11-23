@@ -198,6 +198,8 @@ sub action_add_bbbike_bundle {
 			    "$strawberry_dir\\c\\bin",
 			    "$ENV{PATH}"
 			   );
+    # may be used to activate distroprefs files
+    local $ENV{BBBIKE_DIST_BUILD} = 1;
     save_pwd {
 	# For some reason CPAN.pm may not create the
 	# build directory itself (if used like below?)
@@ -272,6 +274,15 @@ sub action_add_bbbike_bundle {
 		    or die "Can't chdir to task directory: $!";
 		if ($try_ppm) {
 		    system($perl_exe, "$portwindir/preinstall_with_ppm.pl", "-v");
+		}
+		my $task_dest = "$strawberry_dir/perl/site/lib/Task/BBBike/windist.pm";
+		if (!-e $task_dest) {
+		    print STDERR "$task_dest does not exist yet.\n";
+		} elsif (-M $task_dest > -M "windist.pm") {
+		    print STDERR "Installed $task_dest is older than windist.pm, removing...\n";
+		    unlink $task_dest;
+		} else {
+		    print STDERR "$task_dest exists, but is newer than windist.pm, keeping...\n";
 		}
 		system(@cpan_cmd, '.');
 		$assert_module_installed->('Task::BBBike::windist');

@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2013,2015,2016,2018 Slaven Rezic. All rights reserved.
+# Copyright (C) 2013,2015,2016,2018,2024 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -26,7 +26,7 @@ my $username = $ENV{USERNAME};
 my $do_snapshot;
 my $do_continue;
 my $do_bbbike_update = 1;
-my $strawberry_ver = '5.26.1.1';
+my $strawberry_ver = '5.32.1.1';
 my $strawberry_opts;
 my $bbbike_git_remote = 'origin';
 my $bbbike_git_branch = 'master';
@@ -130,10 +130,6 @@ if ($do_bbbike_update) {
     $? == 0 or die "Previous command failed";
 }
 
-## - copy stripped down gpsbabel distro into \cygwin\home\eserte\bbbikewindist\gpsbabel
-##     cd ~/work/bbbike/port/windows && make make-gpsbabel-dist
-#exec_cygwin_cmd('cd ' . $bbbike_cygwin_path . '/port/windows && make make-gpsbabel-dist');
-
 # - run dist-making rules
 #     cd ~/work/bbbike && perl Makefile.PL
 #    cd port/windows && make bbbike-strawberry-dist make-bbbike-dist
@@ -147,13 +143,21 @@ exec_cmd("cd $bbbike_dos_path\\port\\windows && gmake $bbbike_strawberry_dist_ta
     # Run ISS to create the installer:
     my $iss_file = $do_snapshot ? "bbbike-snapshot-" . strftime("%Y%m%d", localtime) . ".iss" : "bbbike.iss";
     my $cmd;
-    my $iscc = 'C:\Program Files\Inno Setup 5\ISCC.exe';
-    if (-x $iscc) {
-	$cmd = qq{cd $bbbike_dos_path\\port\\windows && "$iscc" $iss_file};
-	print STDERR "Run command: $cmd...\n";
-    } else {
+ CHECK_INNO: {
+	for my $dir (
+	    'C:\Program Files (x86)\Inno Setup 6',
+	    'C:\Program Files\Inno Setup 5',
+	) {
+	    my $iscc = $dir . '\ISCC.exe';
+	    if (-x $iscc) {
+		$cmd = qq{cd $bbbike_dos_path\\port\\windows && "$iscc" $iss_file};
+		print STDERR "Run command: $cmd...\n";
+		last CHECK_INNO;
+	    }
+	}
+	# fallback, assume that the file suffix is enough to start ISS
 	$cmd = "cd $bbbike_dos_path\\port\\windows && $iss_file";
-	print STDERR "Start ISS ($cmd)... please press the green 'play' button!\n";
+	print STDERR "Start Inno Setup ($cmd)... please press the 'play' button manually!\n";
     }
     system $cmd;
     $? == 0 or die "Previous command failed";

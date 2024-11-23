@@ -23,20 +23,6 @@ Pariser Platz	X 8714,12319
 George-Stephenson-Str.	X 7446,14403
 (Landsberger Allee - Frank-Schweitzer-Str.)	X 19160,14935
 Waldkraiburger Str.	X 12283,4971
-(zur Hilde-Archenhold-Brücke)	X 19268,4037
-(zur Hilde-Archenhold-Brücke)	X 19263,4048
-(zur Hilde-Archenhold-Brücke)	X 19240,4049
-(zur Hilde-Archenhold-Brücke)	X 19237,4058
-(zur Hilde-Archenhold-Brücke)	X 19252,4069
-(zur Hilde-Archenhold-Brücke)	X 19300,4018
-Hilde-Archenhold-Brücke	X 19358,4077
-(zur Hilde-Archenhold-Brücke)	X 19403,4119
-(zur Hilde-Archenhold-Brücke)	X 19428,4095
-(zur Hilde-Archenhold-Brücke)	X 19428,4081
-(zur Hilde-Archenhold-Brücke)	X 19416,4080
-(zur Hilde-Archenhold-Brücke)	X 19401,4094
-(zur Hilde-Archenhold-Brücke)	X 19389,4094
-(zur Hilde-Archenhold-Brücke)	X 19383,4077
 An der alten Gärtnerei	X 10898,3865
 An der alten Gärtnerei	X 10922,3917
 An der alten Gärtnerei	X 10981,3937
@@ -62,10 +48,12 @@ Cordesstr.	X 1563,9769
 Cordesstr.	X 1672,9836
 Halenseestr.	X 1961,10646
 Straße 171	X 12657,22596
+Hebammensteigbrücke	X 13168,21706
 Hebammensteigbrücke	X 13135,21715
 Hebammensteigbrücke	X 13121,21678
 Hebammensteigbrücke	X 13124,21718
 Hebammensteigbrücke	X 13046,21734
+Hebammensteig	X 13014,21775
 Europaplatz	X 8102,13304
 (BMW-Betriebswerk)	X -1768,14605
 (Am Betriebsbahnhof Schöneweide)	X 18497,4529
@@ -164,6 +152,7 @@ Großer Spreering	X -1002,14162
 Großer Spreering	X -792,14258
 Großer Spreering	X -650,14355
 Großer Spreering	X -495,14311
+(An der Nordbahn)	X 7466,19492
 Wateweg	X 21124,8792
 Mariendorfer-Hafen-Weg	X 7692,4464
 (Unterführung Nordhafenbrücke)	X 7661,14398
@@ -226,9 +215,9 @@ Am Kaniswall	X 32872,128
 (Kaniswall - Streitwall/Spree)	X 33373,558
 (Kaniswall - Gosen)	X 32420,-260
 (Kaniswall - Gosen)	X 32329,-380
-Ulrich-Plenzdorf-Str.	X 14994,10732
-Ulrich-Plenzdorf-Str.	X 15071,10716
 An den Eiswerken	X 14984,10677
+Paul-und-Paula-Promenade	X 14909,10732
+Rummelsburger Seeblick	X 14918,10769
 (Zufahrt U-Bahn-Abstellanlage Hönow)	X 25919,14963
 (Zufahrt U-Bahn-Abstellanlage Hönow)	X 25809,14991
 Flughafen BER - Terminal 5	X 18401,-1767

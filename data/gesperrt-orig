@@ -87,6 +87,7 @@ Wilhelplatz	1 -7064,584 -7081,483 -7122,439 -7180,378
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2024/pressemitteilung.1495468.php
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/aemter/stadtentwicklungsamt/zukunft-planen/stadtumbau-west/artikel.359321.php
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_48_3491_3534_online.pdf (minimale Erweiterung des B-Plans)
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_49_3535_3590_online.pdf (Bebauungsplan 7-100 VE)
 #: XXX außerdem Anlage von Radwegen, allerdings nicht benutzungspflichtig
 #: osm_watch: way id="152264786" version="22"
 #: last_checked: 2024-11-04 (mapillary)
@@ -162,7 +163,7 @@ Buckower Chaussee	1 8742,475 8972,498 9002,471
 Archibaldweg	1s:q4 15674,10851 15777,10897 15820,10916 15870,10938
 #: by: https://www.infravelo.de/projekt/lueckstrasse/ (1. Quartal 2026 - 4. Quartal 2026)
 #: XXX Umbau der Kreuzung sowie Aufhebung der Einbahnstraßenregelung für Radfahrer vvv
-#: last_checked: 2024-11-09 vvv
+#: last_checked: 2024-11-16 vvv
 #: next_check: 2026-12-31 vvv
 Nöldnerplatz	1s:q4 15870,10938 15903,10906
 Nöldnerplatz	1 15903,10906 16049,10844
@@ -199,7 +200,7 @@ Steinplatz	1 5153,11357 5113,11305 5080,11328 5043,11354 5085,11413
 # 
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX Einbahnstraße ggfs. wiederherstellen (es sei denn, der Radweg auf der Nordseite wird fertiggestellt oder die temporäre Verkehrsführung bleibt dauerhaft): Am Treptower Park (Umfahrung auf Gehweg ist möglich)	1s:q4 14089,9610 14031,9673 13860,9861
-#: last_checked: 2024-10-30
+#: last_checked: 2024-11-20
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2024-12-31
 Am Treptower Park	1no 14089,9610 14031,9673 13860,9861
@@ -280,14 +281,18 @@ Dittersbacher Weg	1 7855,3355 7852,3183
 #: by: https://www.nalepaland.de/
 #: XXX Nalepastr. wird in Zukunft wieder geöffnet (Sackgasse für Autos, Durchfahrtmöglichkeit für Radfahrer)
 #: XXX Maßnahme Osw.10, außerdem ein "fahrradfreundlicher Belag" im weiteren Verlauf der Nalepastraße
-#: note: ab und zu kann zumindest das nördliche Tor offen sein (gesehen 2023-01-13, 2023-11-08, 2024-05-22, 2024-08-17), aber das südliche Tor ist immer zu -> mittlerweile ist nur das südliche Tor als gesperrt markiert
+#: note: ab und zu kann zumindest das nördliche Tor offen sein (gesehen 2023-01-13, 2023-11-08, 2024-05-22, 2024-08-17), aber nicht immer (gesehen 2024-11-16 Sat); das südliche Tor ist immer zu
 #: osm_watch: way id="207757723" version="6"
 #: osm_watch: way id="275795707" version="3"
 #: osm_watch: node id="2804650438" version="3"
-#: last_checked: 2024-08-17
-#: check_frequency: 90d
-# REMOVED --- Nalepastr. am Rundfunkgebäude	2 17065,8396 17057,8235 17056,8159
+#: last_checked: 2024-11-16 vvv
+#: check_frequency: 90d vvv
+#: note: kann offen sein, aber nicht immer
+Nalepastr., nördliches Tor am Rundfunkgebäude	2 17069,8411 17065,8396
+#: note: dauerhaft gesperrt
 Nalepastr., südliches Tor am Rundfunkgebäude	2 17056,8159 17059,8097
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 Kirchstr.	1 22196,4847 22240,4768 22246,4711 22284,4653
 Kietzer Str.	1s:q3 22372,4496 22383,4470
@@ -296,7 +301,7 @@ Kietzer Str.	1s:q3 22372,4496 22383,4470
 #: next_check_id: ONTARIOSEE-2023
 #: XXX nach den Bauarbeiten die Einbahnstraßenregelung wiederherstellen: Ontarioseestr.	1 18585,10024 18411,10037
 #: note: Ende laut Halteverbotsschilder (früher Oktober 2024, nun Juni 2025)
-#: last_checked: 2024-11-09
+#: last_checked: 2024-11-16
 #: check_frequency: 90d
 #: next_check: 2025-06-06
 Ontarioseestr.	1no 18585,10024 18411,10037
@@ -874,6 +879,13 @@ Mollstr. (Richtungsfahrbahn)	1::igndisp 11984,13081 11964,13076 11913,13077 1189
 Mollstr. (Straßenbahntrasse)	3nocross::ignrte 11984,13081 11964,13076 11913,13077 11896,13075 11840,13085 11739,13131 11723,13139
 #: note ^^^
 # 
+#: note: Straßenbahntrasse vvv
+Hauptstr. (Richtungsfahrbahn)	1::igndisp 15372,10655 15307,10701
+Hauptstr. (Richtungsfahrbahn): linker Bürgersteig	1s:q4::igndisp 15307,10701 15261,10738
+Hauptstr. (Richtungsfahrbahn)	1::igndisp 15261,10738 15308,10704 15372,10655
+Hauptstr. (Straßenbahntrasse)	3nocross::ignrte 15261,10738 15308,10704 15372,10655
+#: note ^^^
+# 
 #: note: Absperrgitter vvv
 Yorckstr.	1::igndisp 8192,9619 8358,9568 8595,9495
 Yorckstr.	1::igndisp 8595,9495 8358,9567 8192,9619
@@ -991,12 +1003,12 @@ Lindenstr. (Straßenbahntrasse)	3nocross::ignrte 21649,5617 21703,5538 21739,5492
 #: source_id: viz2021:13.567832,52.454403,23.01.2023,08:00 (bis 30.1.2023) (inaktiv)
 #: source_id: viz2021:13.56657,52.45535,29.12.2022,09:39 (bis 15.7.2023) (später am Tag wieder entfernt -> inaktiv) (wieder aktiv, bis 15.7.2023) (inaktiv)
 #: source_id: viz2021:13.56657,52.45535,13.07.2023,17:06 (bis 15.07.2023) (inaktiv)
-#: source_id: viz2021:13.566629,52.455193,07.02.2022,14:00 (Brückenneubau, Verengung, bis 09.06.2022) (bis 31.12.2022) (bis 15.7.2023) (bis 31.12.2023) (bis 31.12.2027)
+#: source_id: viz2021:13.566629,52.455193,07.02.2022,14:00 (Brückenneubau, Verengung, bis 09.06.2022) (bis 31.12.2022) (bis 15.7.2023) (bis 31.12.2023) (bis 31.12.2027) (bis 30.06.2027)
 #: source_id: viz2021:13.566839,52.455334,11.03.2024,21:00 (nur Kfz-Verkehr, bis 12.03.2024) (inaktiv)
 #: osm_watch: way id="428260957" version="8"
 #: last_checked: 2024-11-04 (mapillary) vvv
 #: check_frequency: 180d vvv
-#: next_check: 2027-12-31 vvv
+#: next_check: 2027-06-30 vvv
 Lindenstr./Pyramidenbrücke: Übergang wegen Bauarbeiten gesperrt	2::igndisp 21600,5683 21605,5687
 Lindenstr. (Straßenbahntrasse)	3nocross::ignrte 21706,5541 21623,5661 21605,5687 21600,5694
 Wuhlewanderweg: wegen Baustelleneinrichtung gesperrt	2::inwork 21600,5683 21581,5670
@@ -1676,6 +1688,8 @@ Berthold-Schwarz-Str.	1s:q4 -784,14940 -834,15053
 # 
 #: note: (noch?) nicht explizit als Einbahnstraße gekennzeichnet, ist aber vermutlich nur für Radfahrer aus der Sonnenallee oder zur Neltestraße gedacht
 Adlergestell [Sonnenallee - Neltestraße]	1:igndisp 19486,3934 19367,4061 19348,4080
+# 
+Hauptstr. (Rummelsburg) [Nebenfahrbahn]	1s:q4 15332,10657 15298,10682
 # 
 #: section ^^^
 ######################################################################
@@ -3019,8 +3033,10 @@ tragen (8 weite Stufen)	0:30 18121,10314
 tragen (insgesamt 61 Stufen)	0:60 -3126,1798
 tragen (Treppe, 33 Stufen)	0:35 10110,15678
 tragen (Treppe) oder Aufzug benutzen	0:30 39964,102370
-tragen (Treppe)	0:20 14918,10769
+tragen (Treppe, 6 Stufen)	0:15 14918,10769
 tragen (Treppe, 4 Stufen)	0:10 7733,5893
+#: note: außerdem noch ein Bordstein am Wendehammer
+tragen (3 weite Stufen) oder wilde Rampe benutzen	0:15 19756,4245
 #
 #: section ^^^
 ###################################################################
@@ -3838,12 +3854,19 @@ weites Drängelgitter	BNP:2::trailer=7 15813,9961
 weites Drängelgitter	BNP:2::trailer=7 16026,9821
 weites Drängelgitter	BNP:2::trailer=7 16261,9663
 Drängelgitter/Barriere	BNP:3::trailer=10 17130,18771
+#: by: mapillary
+Drängelgitter	BNP:3::trailer=10 13014,21775
 #
 #: section ^^^
 ############################################################################
 #: section temporäre Sperrungen (Baustellen etc.) vvvvvvvvvvvvvvvvvvvvvvvvvv
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# 
+#: next_check_id: HEIDEKRAUTBAHN-2021
+#: last_checked: 2024-11-18 (mapillary)
+#: check_frequency: 90d
+Weg am Bhf. Wilhelmsruh: wegen Bauarbeiten gesperrt, möglicherweise dauerhaft	2::inwork 7504,19459 7466,19492 7236,19689
 # 
 #: next_check_id: MUSEUMDERMODERNE-2021
 #: osm_watch: way id="1332697425" version="1"
@@ -3883,66 +3906,15 @@ Erpetal - S-Bhf. Hirschgarten: Baustraße, gesperrt für öffentlichen Verkehr	2::i
 #: last_checked ^^^
 # 
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: last_checked: 2024-10-24
-#: check_frequency: 21d
+#: last_checked: 2024-11-16
+#: check_frequency: 30d
 Weg im Grünzug Kraatzgraben: gesperrt, Leitungsarbeiten	2::inwork 17161,9921 17257,9869
 # 
 #: by: https://www.deutsches-architekturforum.de/thread/11524-bv-%C3%B6stlich-der-heidestra%C3%9Fe-und-otto-weidt-platz-europacity/?postID=766898#post766898
 #: by: https://moabitonline.de/41262 (Fertigstellung bis Oktober 2024 geplant)
-#: last_checked: 2024-11-13 (mapillary)
+#: last_checked: 2024-11-21
 # REMOVED --- #: next_check: 2024-10-31
 Uferweg am Otto-Weidt-Platz: wegen Bauarbeiten an der Treppenanlage gesperrt	2::inwork 7912,14160 7875,14204
-# 
-#: next_check_id: HILDEARCHENHOLDBR-2024
-#: by: http://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2016/pressemitteilung.445338.php
-#: XXX Gleislinse in Adlershof: Bebauungsplan 9-60
-#: by: http://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/9-60/index.shtml
-#: by: http://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/9-60/download/Bebauungsplan_9-60_oeA.pdf
-#: XXX auch Maßnahme Jt.7
-# REMOVED (-> strassen-orig) --- #: last_checked: 2020-04-13 --- #: check_frequency: 90d --- Gustav-Hertz-Platz: geplant, verkehrsberuhigt	?::inwork 18596,4517 18674,4585 18685,4595 18722,4628
-# REMOVED (-> strassen-orig) --- #: XXX laut Schild Bauarbeiten der Wasserbetriebe bis November 2019 --- #: by: https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6269 (Benennung: ...-Allee, nicht ...-Str.) --- #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2019_24_3577_3708_online.pdf (Benennung: ...-Allee, nicht ...-Str.) --- #: note: Privatstraße --- #: osm_watch: way id="206889085" version="9" --- Wagner-Régeny-Allee: Verlängerung in Bau, vermutlich asphaltiert	?::inwork 19162,3935 19130,3969 18596,4517 18487,4638 18296,4850
-# REMOVED (-> strassen-orig) --- #: last_checked: 2020-03-07 --- #: check_frequency: 60d --- Fuß- und Radweg: geplant	?::projected 18296,4850 18254,4817
-#: by: http://www.adlershof-johannisthal.de/#sec9 ("2019-2021") (mittlerweile: "2021-2023") (mittlerweile: "2023-2025")
-#: by: https://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/massnahmenkatalog-abrechnung-sept-2015.pdf (Ah.6)
-#: by: https://www.adlershof.de/news/zwei-neue-fuss-und-radwegbruecken/ (2023?)
-#: by: https://www.bahninfo-forum.de/embed_images/4a3/087/a0b/7fd/842/19c/940/b69/090/1b8/40_1200x920.jpg
-#: by: https://www.berlin.de/sen/uvk/verkehr/infrastruktur/brueckenbau/bruecke-ueber-das-adlergestell/ (Bauzeit Frühjahr 2022 - 2023, außerdem Ertüchtigung der Sonnenallee sowie Anbindung an die Neltestr.)
-#: by: https://www.berlin.de/sen/uvk/_assets/verkehr/infrastruktur/brueckenbau/bruecke-ueber-das-adlergestell/maxsize_3c8171100b38c2379aee26e9ea6e5d40_kreuzungsbauwerk-mit-rampen-bild_igs.png
-#: by: https://www.aktives-adlershof.de/fileadmin/Bilder_Redakteure/2021_NEWSletter/2021-01_Newsletter_digital.pdf?fbclid=IwAR06vnMT56ZWNbaBwuChQZNaNj3Mlxr4rvI6I7X9olxdM97_a_Dc-PfEwAA
-#: by: https://www.berliner-woche.de/adlershof/c-bauen/2022-beginnen-die-bauarbeiten-fuer-eine-neue-bruecke-uebers-adlergestell_a307746 (Frühjahr 2022 - Ende 2023)
-#: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-27038.pdf (Bauzeit zwei Jahre)
-#: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-13539.pdf (Inbetriebnahme für Mitte 2024 vorgesehen)
-#: by: https://www.berliner-woche.de/adlershof/c-bauen/erste-massnahmen-fuer-den-bau-einer-neuen-bruecke-ueber-das-adlergestell_a363026 (Inbetriebnahme Mitte 2024)
-#: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1271772.php (bis Sommer 2024)
-#: by: https://www.berlin.de/sen/sbw/presse/pressemeldungen/2022/pressemitteilung.1271762.php
-#: by: https://berliner-abendblatt.de/2022/12/05/baubeginn-fuer-neue-bruecke-ueber-das-adlergestell/
-#: by: https://sbahn.berlin/fahren/bauen-stoerung/detail/estw-s9-sued-bauvorhaben-tramtunnel-in-schoeneweide-neubau-fussgaengerbruecke-ueber-das-adlergestell/
-#: by: http://thomas.krickstadt.de/s-bahn/2023-10-03-johannisthal/index.html
-#: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-17430.pdf (Aufbau Fuß- und Radwegbrücke am 27./28.1.2024)
-#: by: https://www.wista-plan.de/projekte/adlershof/fuss-und-radwegbruecke
-#: by: https://www.adlershof.de/news/74-m-lange-aluminiumbruecke-ueber-dem-adlergestell-erfolgreich-eingehoben (Verkehrsfreigabe: 3. Quartal 2024)
-#: by: https://www.berlin.de/sen/sbw/presse/pressemeldungen/2024/pressemitteilung.1412094.php
-#: by: https://www.berliner-woche.de/treptow-koepenick/c-bauen/neuer-fuss-und-radweg-verbindet-ab-herbst-zwei-ortsteile_a406560
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_12_0655_0742_online.pdf (Benennung einer Geh- und Radwegbrücke)
-#: by: https://www.adlershof.de/news/brueckenschlag
-#: by: https://www.architektur-urbanistik.berlin/index.php?threads/hilde-archenhold-br%C3%BCcke-fu%C3%9F-und-radwegbr%C3%BCcke-%C3%BCber-adlergestell.1449/#post-23709
-#: by: https://emag.berliner-woche.de/titles/berlinerwochenblatt/14489/publications/855/pages/1 (Eröffnung Anfang November 2024)
-#: by: https://www.berliner-zeitung.de/news/johannisthal-berlins-erste-aluminiumbruecke-fuer-fussgaenger-und-radfahrer-oeffnet-bald-li.2271078
-#: by: https://www.deutsches-architekturforum.de/thread/4128-berliner-stadtverkehr-stra%C3%9Fe-bus-bahn-wasserwege-geb%C3%A4ude/?postID=769591#post769591 (Eröffnung am 18.11.2024)
-#: by: https://entwicklungsstadt.de/innovativinnovativ-nachhaltig-berlins-erste-aluminiumbruecke-in-adlershof/
-#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_48_3491_3534_online.pdf (Widmung von öffentlichem Straßenland: Fuß- und Radwegebrücke E 9431)
-#: source_id: viz2021:13.532612,52.441405,15.06.2023,07:00 (Einschränkungen auf dem Adlergestell im Zuge des Brückenbaus, bis 28.06.2023) (bis 30.09.2023) (inaktiv)
-#: source_id: viz2021:13.532262,52.441543,26.10.2023,09:00 (Einschränkungen auf dem Adlergestell im Zuge des Brückenbaus, bis 26.10.2023) (inaktiv)
-#: osm_watch: way id="1243659419" version="4"
-#: osm_watch: way id="333621366" version="7"
-#: osm_watch: way id="206889088" version="10"
-#: osm_watch: note 3601643 7
-#: XXX Kann manchmal offen sein, zuletzt gesehen 2024-11-06: Bauzäune versperren den Zugang am Adlergestell
-#: XXX Eröffnung am 18.11.2024 um 10 Uhr
-#: last_checked: 2024-11-06
-# REMOVED --- #: check_frequency: 14d
-#: next_check: 2024-11-18
-Fuß- und Radwegbrücke: noch nicht freigegeben	2::inwork 19162,3935 19268,4037 19263,4048 19240,4049 19237,4058 19252,4069 19300,4018 19358,4077 19403,4119 19428,4095 19428,4081 19416,4080 19401,4094 19389,4094 19383,4077 19367,4061 19353,4047
 # 
 #: by: mapillary
 #: add_fragezeichen: Ist die Straße noch wegen Bauarbeiten gesperrt?
@@ -3950,7 +3922,7 @@ Fuß- und Radwegbrücke: noch nicht freigegeben	2::inwork 19162,3935 19268,4037 19
 Slatan-Dudow-Str. (Potsdam): gesperrt wegen Bauarbeiten	2::inwork -7476,-4673 -7353,-4785
 # 
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/kleinere-projekte-in-marzahn-hellersdorf.42/page-7#post-23307
-#: osm_watch: way id="1306238147" version="1"
+#: osm_watch: way id="1306238147" version="2"
 #: osm_watch: way id="25795669" version="13"
 #: last_checked: 2024-11-09
 #: check_frequency: 120d
@@ -4003,7 +3975,7 @@ Kleine Waldstr. - Waldstr.: Sperrung wegen Bauarbeiten an der A117	2::inwork 215
 #: osm_watch: note 4211143 3
 #: osm_watch: way id="4612427" version="21"
 #: also_indoor: traffic (G,W)
-#: last_checked: 2024-11-15
+#: last_checked: 2024-11-21
 #: check_frequency: 30d
 #: next_check: 2025-06-30
 Am Köllnischen Park: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 11185,11883 11160,12071
@@ -4075,10 +4047,10 @@ Magnus-von-Hirschfeld-Ufer: Sperrung in Höhe Kanzlergarten	2::inwork 7772,12694 
 #: next_check_id: BAB100-2022
 #: XXX Radweg auf der östlichen Seite führt mindestens bis zur Sonnenallee, wahrscheinlich irgendwann mal zur Neuköllnischen Allee oder sogar Grenzallee; auf der westlichen Seite existiert auch ein Weg; Richtung Treptower Park wird es wohl zumindest einen Weg (auf der westlichen Seite?) geben
 #: note: manchmal ist der Bauzaun auf einer Seite offen, aber auf der anderen Seite weiterhin zu
-#: note: manchmal auf einer Seite offen und auf der anderen Seite nicht geprüft, gesehen 2024-09-30 (Mo) 17:53 (nordöstliche Seite)
+#: note: manchmal auf einer Seite offen und auf der anderen Seite nicht geprüft, gesehen 2024-09-30 (Mo) 17:53 (nordöstliche Seite), 2024-11-19 (Di) 08:03 (nordöstliche Seite)
 #: note: manchmal aber sogar auf beiden Seiten offen, gesehen: 2024-08-17 (Sa) 11:00 (nordöstlicher Abschnitt), 2024-10-14 (Mo) 12:17 (mindestens nordöstlicher Abschnitt)
 #: note: Bauzaun wieder geschlossen: 2024-10-23 (Mi) 18:12 (nordöstliche Seite), 2024-10-28 (Mo) abends (Sonnenallee), 2024-11-02 (Sa) abends (alles an der Kiefholzstr.)
-#: last_checked: 2024-11-02 vvv
+#: last_checked: 2024-11-20 vvv
 #: osm_watch: way id="1199463691" version="3"
 #: osm_watch: way id="1199463688" version="3"
 Weg entlang der A100: gesperrt, Durchfahrt wegen Bauzaun nicht möglich	2::inwork 14341,8763 14326,8747 14325,8682 14299,8436 14310,8335 14350,8228 14409,8102 14440,8050
@@ -4179,7 +4151,7 @@ Straße 171: wegen Bauarbeiten gesperrt	2::inwork 12694,22570 12657,22596
 #: by: https://www.studentkompanie.com/projekte/ (Fertigstellung 2024)
 #: osm_watch: way id="25796640" version="27"
 #: osm_watch: way id="176946641" version="12"
-#: last_checked: 2024-11-09
+#: last_checked: 2024-11-16
 #: check_frequency: 90d
 #: next_check: 2025-06-06
 zur Ontarioseestr.: Hochbauarbeiten, komplett gesperrt	2::inwork 18585,10024 18694,10018
@@ -4232,13 +4204,21 @@ Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
 # REMOVED --- #: osm_watch: way id="1195364871" version="3" --- #: note: am 2023-04-25 gab es einen recht schmalen Durchgang, mit einem Fahrrad ist man noch gerade so durchgekommen; am 2023-05-04 auch der gleiche schmale Durchgang, aber ein davor geparktes Auto hätte vielleicht einiges an Rangierarbeit verursacht; am 2023-05-16 existiert wieder ein schmaler Durchgang -> von gesperrt nach handicap_s verschoben, am 2023-06-15 kein Kran mehr, aber nun wieder komplett gesperrt --- #: last_checked: 2023-09-21 --- Caroline-von-Humboldt-Weg: Hochbauarbeiten, Fahrbahn gesperrt	2::inwork 9961,12094 10050,11942
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
+#: note: Danach mit Mapillary abfahren!
+#: priority: #C
+#: last_checked: 2024-11-22
+#: check_frequency: 14d
+Rummelsburger Seeblick: noch nicht freigegeben	2::inwork 14927,10807 14918,10769 14909,10732
+# 
+#: next_check_id: RUMMELSBURGERBUCHT-2021
 #: note: Weitere Sperrungen sind in temp blockings, dort wo schon Häuser mit evtl. bezogenen Wohnungen stehen
 #: XXX Wann sind die Straßen offen? vvv
-#: last_checked: 2024-10-24 vvv
-#: check_frequency: 60d vvv
-An den Eiswerken	2::inwork 15004,10791 14994,10732 14984,10677
+#: last_checked: 2024-11-22 vvv
+#: check_frequency: 30d vvv
+# REMOVED (offen) --- An den Eiswerken	2::inwork 15004,10791 14994,10732
+An den Eiswerken: mit Bauzaun abgesperrt	2::inwork 14994,10732 14984,10677
 Paul-und-Paula-Promenade	2::inwork 14886,10748 14909,10732 14984,10677
-Ulrich-Plenzdorf-Str.	2::inwork 14994,10732 15071,10716 15151,10699
+# REMOVED (offen) --- Ulrich-Plenzdorf-Str.	2::inwork 14994,10732 15071,10716 15151,10699
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -4273,7 +4253,7 @@ Falkplatz: Weg gesperrt	2::inwork 10228,15488 10170,15659
 #: XXX Scheint Baustellenfläche für die Arbeiten an den Bahnbrücken zu sein.
 #: source_id: viz2021:13.483448,52.502169,22.06.2024,16:00 (benachbarte Nöldnerstr., bis 31.10.2024) (bis 18.11.2024) (bis 15.12.2024)
 #: priority: #C
-#: last_checked: 2024-11-09
+#: last_checked: 2024-11-18
 #: check_frequency: 60d
 Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15844,10894 15856,10821
 # 
@@ -4301,7 +4281,7 @@ Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15
 #: also_indoor: traffic (B,W,G)
 #: note: für Fußgänger gibt es mittlerweile einen asphaltierten, nicht geradlinig geführten Notweg im Parkbereich
 #: osm_watch: way id="1163350372" version="2"
-#: last_checked: 2024-11-15
+#: last_checked: 2024-11-21
 #: check_frequency: 30d
 Kurstr.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 10230,11839 10122,11913
 # 
@@ -4369,7 +4349,7 @@ Dieselstr. - westlicher Mergenthalerring: Durchfahrt auf der südlichen Seite dur
 #: by: https://www.deutsches-architekturforum.de/thread/9726-rund-um-den-gendarmenmarkt/?postID=731755#post731755
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1391568.php (Hauptarbeiten bis Ende 2024)
 #: by: https://entwicklungsstadt.de/berlin-mitte-sichtbarer-fortschritt-beim-umbau-des-gendarmenmarktes/
-#: last_checked: 2024-11-15 vvv
+#: last_checked: 2024-11-21 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2024-12-31 vvv
 #: note: nur Durchgang zum Konzerthaus von der Charlottenstr. möglich vvv
@@ -4510,7 +4490,7 @@ Neue Fahlenbergbrücke (Ersatzbrücke)	2::inwork 30926,-53 31103,-142
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10456 (Vorlage zur Kenntnisnahme)
 #: osm_watch: way id="1086484458" version="3"
 #: osm_watch: way id="36780316" version="11"
-#: last_checked: 2024-10-24
+#: last_checked: 2024-11-16
 #: check_frequency: 90d
 Hauptstr. - Rummelsburger Ufer: wegen Hochbauarbeiten gesperrt	2::inwork 16257,9929 16178,9861
 # REMOVED --- Hauptstr. - Rummelsburger Ufer: gesperrt, möglicherweise dauerhaft	2::inwork 16178,9861 16049,9749
@@ -4573,9 +4553,10 @@ Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer	2::inwork 7673,4223 7769,4
 #: by: https://www.berliner-woche.de/mitte/c-bauen/katholisches-forum-am-bebelplatz-wird-komplettiert_a385644 (Umbauarbeiten: Kathedrale bis Ende 2024, Bernhard-Lichtenberg-Haus bis Mitte 2025)
 #: by: https://www.rbb24.de/panorama/beitrag/2024/03/sankt-hedwigs-kathedrale-sanierung-wiedereroeffnung-umbau-24-november-berlin-mitte.html (Eröffnung der Kathedrale am 24.11.2024)
 #: by: https://berliner-abendblatt.de/berlin-news/sankt-hedwigs-kathedrale-oeffnet-nach-langer-sanierung-id248135
-#: last_checked: 2024-11-15
-#: check_frequency: 360d
-#: next_check: 2024-11-24
+#: by: https://berliner-abendblatt.de/berlin-news/sankt-hedwigs-kathedrale-wird-nach-sanierung-wieder-eroeffnet-id270349 (Bernhard-Lichtenberg-Haus frühestens Ende 2025 fertig)
+#: last_checked: 2024-11-21
+#: check_frequency: 90d
+#: next_check: 2025-12-31
 Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 9775,12178 9771,12190 9747,12205 9755,12144
 # 
 # REMOVED --- #: by: mapillary --- #: last_checked: 2022-02-05 (mapillary) --- #: check_frequency: 90d --- Ackerstr. (Schulzendorf): Hochbauarbeiten, Straße gesperrt	2::inwork 22996,-4983 22962,-5193
@@ -4619,7 +4600,7 @@ An der Waldsiedlung: noch nicht fertig gebaut	2::inwork 17682,8464 17652,8349
 #: last_checked: 2024-10-24
 #: XXX Asphaltierung der Fahrbahn -> qualitaet_s anpassen!
 Trautenauer Str.: Bauarbeiten, Fahrbahn gesperrt, Umwege, Bordsteine	2s:q4:inwork 17753,8290 17771,8349 17794,8429 17813,8508 17830,8578 17838,8611 17846,8644 17851,8662 17879,8773
-#: last_checked: 2024-10-11
+#: last_checked: 2024-11-16
 Georg-Klingenberg-Str.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 17792,8660 17846,8644
 #: last_checked: 2024-10-11
 Ruth-Baumgarte-Str.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 17738,8450 17794,8429
@@ -4635,7 +4616,7 @@ Ruth-Baumgarte-Str.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 17738,
 #: osm_watch: way id="129104626" version="22"
 #: osm_watch: way id="945966258" version="3"
 #: also_indoor: traffic (ex-H,ex-G,ex-B(alle falsch))
-#: last_checked: 2024-09-18
+#: last_checked: 2024-11-21
 #: check_frequency: 120d
 #: next_check: 2026-09-30
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen	1s:q3:inwork 8266,14346 8442,14456
@@ -4644,7 +4625,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraß
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2024-11-06
+#: last_checked: 2024-11-16
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 
@@ -4688,11 +4669,12 @@ Erich-Steinfurth-Str.: Bauarbeiten, gesperrt	2::inwork 12608,11692 12645,11673
 #: source_id: viz2021:13.447029,52.600595,04.01.2023,08:00 (Neubau, bis 30.6.2023) (inaktiv)
 #: source_id: viz2021:13.447029,52.600595,22.04.2024,10:00 (Neubau, bis 12.06.2024) (schon am nächsten Tag inaktiv)
 #: XXX Rampen auf Westseite mit Verbundsteinpflaster, auf Ostseite mit welligen Asphalt, parallel zur Autobahn
-#: last_checked: 2024-09-29 (mapillary)
-#: check_frequency: 60d
+#: XXX mittlerweile (Nov 2024) noch nicht offiziell freigegeben, aber u.U. befahrbar
+#: last_checked: 2024-11-18 (mapillary)
+#: check_frequency: 30d
 # REMOVED --- #: next_check: 2023-06-30
-Hebammensteigbrücke	2::inwork 13168,21706 13135,21715 13121,21678 13124,21718 13046,21734 13008,21783
-# REMOVED (wieder offen) --- Radweg an der Panke	2::inwork 13031,21538 13078,21754
+Hebammensteigbrücke	2::inwork 13193,21700 13168,21706 13135,21715 13121,21678 13124,21718 13046,21734 13014,21775 13008,21783
+# REMOVED (wieder offen) --- Radweg an der Panke	2::inwork 13031,21538 13075,21740 13078,21754
 # 
 # REMOVED (keine Einbahnstraße mehr) --- #: XXX Bis wann bleibt die Einbahnstraße bestehen? Siehe auch anderen Eintrag zur möglichen Asphaltierung. --- #: osm_watch: way id="4045220" version="49" --- #: osm_watch: way id="938037386" version="3" --- #: osm_watch: way id="868103791" version="3" --- #: last_checked: 2023-03-24 --- #: check_frequency: 60d --- Hönower Str.: temporäre Einbahnstraße	1s:q4:inwork 18735,9421 18765,9426 18846,9532
 # REMOVED (laut osm wieder offen) --- #: next_check_id: TEGELERBRUECKE-2021 --- #: by: https://www.berliner-woche.de/tegel/c-verkehr/ab-31-august-2023-rollt-der-verkehr-ueber-die-neue-tegeler-bruecke_a389844 (Abschluss bis Jahresende (2023)?) --- #: by: https://www.berliner-woche.de/tegel/c-verkehr/auf-der-neuen-bruecke-zwischen-tegel-und-siemensstadt-fliesst-der-verkehr_a391961 (Sperrung bis April 2024) --- #: by: https://www.deutsches-architekturforum.de/thread/14128-das-neue-gartenfeld-auf-insel-in-spandau-siemensstadt/?postID=746926#post746926 --- #: osm_watch: way id="930890136" version="22" --- #: last_checked: 2024-04-03 --- #: check_frequency: 180d --- #: next_check: 2023-12-01 --- #: next_check: 2024-04-30 --- Uferweg am Hohenzollernkanal: Bauarbeiten an der Tegeler Brücke, komplett gesperrt	2::inwork -192,16054 -203,16064 -213,16059 -256,16093 -257,16103
@@ -4733,7 +4715,7 @@ Umleitungsstrecke: Radweg nur in eine Richtung	1::igndisp 5900,11913 5925,11943 
 #: osm_watch: way id="1171090939" version="4"
 #: source_id: viz2021:13.49479,52.50059,14.05.2024,07:00 (Stromnetzarbeiten in der angrenzenden Lückstr., bis 05.09.2024) (inaktiv)
 #: source_id: viz2021:13.496223,52.500189,14.05.2024,07:00 (bis 05.09.2024) (inaktiv)
-#: last_checked: 2024-11-09
+#: last_checked: 2024-11-16
 #: check_frequency: 180d
 #: next_check: 2025-12-31
 Lückstr. - Fischerstr.: mit einem Bauzaun abgesperrt	2 16601,10650 16587,10613
@@ -4833,7 +4815,7 @@ Buckower Chaussee: Bahnübergang gesperrt	2::inwork 9123,533 9178,556 9200,562
 #: next_check_id: ELSENBRUECKE-2018
 #: by: mapillary
 #: by: http://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/S18-22806.pdf (Sperrung des Spreeuferwegs zwischen 2020 und 2028)
-#: last_checked: 2024-11-06 vvv
+#: last_checked: 2024-11-20 vvv
 #: next_check: 2028-01-01 vvv
 Unterführung unter der Elsenbrücke: gesperrt, teilweise existiert der Steg nicht mehr	2::inwork 14373,10046 14432,10059 14509,9997 14464,9927
 Treppe zum Uferweg: Zugang nicht möglich	2::inwork 14373,10046 14383,10036 14405,10027
@@ -4845,7 +4827,7 @@ Treppe zum Uferweg: Zugang nicht möglich	2::inwork 14373,10046 14383,10036 14405
 #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/dockyard-feiert-richtfest_a396811 (Fertigstellung 2026)
 #: by: https://www.pecan.de/neubau-ketteler-la-roche-schule-im-quartier-neumuehle-2/ (Fertigstellung 4. Quartal 2024)
 #: XXX hat evtl. auch mit den Bauarbeiten an der Elsenbrücke zu tun, oder ist es vielleicht ein anderes Baufeld?
-#: last_checked: 2024-11-06
+#: last_checked: 2024-11-20
 #: check_frequency: 90d
 #: next_check: 2024-12-31
 Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14480,10157 14462,10206 14361,10259
@@ -4856,7 +4838,7 @@ Am Osthafen: mit Bauzaun abgesperrt	2::inwork 14480,10157 14462,10206 14361,1025
 #: by: https://dielinke.berlin/start/det/nachfrage-zur-beantwortung-der-schriftlichen-anfrage-scha-ix-0495-bauprojekt-fanny-zobel-strasse/ (weiterhin: Gesamtmaßnahme bis 2027)
 #: confirmed_by: srt
 #: also_indoor: webcam https://portal1548.webcam-profi.de/ (Februar+Juli 2023 + Juli 2024: 401) vvv
-#: last_checked: 2024-10-30 vvv
+#: last_checked: 2024-11-20 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2027-12-31 vvv
 Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,10152 14373,10046
@@ -4865,6 +4847,13 @@ Uferweg: wegen Bauarbeiten gesperrt	2::inwork 13918,10240 14126,10176 14202,1015
 #: check_frequency ^^^
 #: last_checked ^^^
 #: also_indoor ^^^
+# 
+#: next_check_id: LAKEGRUND-2024
+#: XXX beide Wege gesperrt, nördlicher komplett und südlicher teilweise
+#: last_checked: 2024-11-20
+#: check_frequency: 90d
+#: next_check: 2026-12-31
+Lakegrund: wegen Bauarbeiten gesperrt	2::inwork 16368,7425 16195,7398
 # 
 # REMOVED (offener Bauzaun heute, nur noch wenige Bauarbeiten) --- #: next_check_id: EUROPACITY-2015 --- #: last_checked: 2022-04-19 --- #: check_frequency: 30d --- Lydia-Rabinowitsch-Str. - Hamburger Bahnhof: direkter Durchgang wegen Bauarbeiten gesperrt	2::inwork 7959,13982 7997,13892 8025,13835
 # REMOVED (Schranke wird nicht genutzt?) --- #: next_check_id: EUROPACITY-2015 --- #: XXX laut osm mittlerweile offen --- #: last_checked: 2021-02-05 --- #: check_frequency: 60d --- #: next_check: 2021-02-14 --- Lisa-Fittko-Str.: wegen Hochbauarbeiten gesperrt	2::inwork 7734,13944 7820,13994
