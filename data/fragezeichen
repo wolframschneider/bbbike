@@ -593,6 +593,7 @@ Heinz-Rühmann-Weg (Potsdam): Qualität?	? -8870,-2074 -8913,-2279 -8902,-2292
 An der Jubelitz (Potsdam-Fahrland): Qualität?	? -17173,7182 -17268,7122 -17170,7038 -17057,7062
 Havelwelle: genaue Lage der Straße? Qualität?	? -14725,-2389 -14618,-2295 -14585,-2338
 Müllerweg (Potsdam-Fahrland): Qualität? Genauer Verlauf?	? -15503,6422 -15392,6371
+Gutschmidtstr.: werden die Radwege asphaltiert oder saniert?	? 13775,3500 13710,3522 13623,3523 13526,3519
 Alter Torfweg (Potsdam): Qualität? Existieren Straßenschilder?	? -10836,-5477 -10829,-5608 -10917,-5739 -11089,-5909
 Ahlimbswalde: ist die gesamte Straße asphaltiert?	? 30962,71971 31251,71954 31669,72016 31857,72102 32370,71986 32613,71643
 Vogelsangsruh: ist die gesamte Straße asphaltiert?	? 66431,84540 66638,84513
@@ -763,8 +764,6 @@ Dollgow - Zernikow: Qualität?	? -17141,74157 -16859,74184 -16629,74151 -15730,74
 Leipziger Str. (Schöneiche): wie ist die Qualität im mittleren Abschnitt? ebenfalls unbefestigt oder Kopfsteinpflaster?	? 32156,6405 32056,6607
 Technologiepark KW - Funkerberg: Qualität der Verbindung?	? 24452,-10414 24518,-10498 24950,-10965 25233,-11257 25366,-11396 25528,-11392
 Promenade (Jüterbog): Qualität des südlichen Abschnitts?	? -10165,-45794 -10193,-46048
-Triftstr. (Hohen Neuendorf): Qualität?	? 1470,29391 1483,29433 1604,29508 1646,29550 1687,29557 1717,29541
-Am Rathaus (Hohen Neuendorf): Qualität?	? 1717,29541 1730,29579 1733,29664
 Mauerweg, Unterführung Dresdener Bahn: Wurden alle Radroutenschilder (insbesondere Berlin-Leipzig) bereits angepasst?	? 10467,-3201 10491,-3208 10577,-3245 10621,-3252 10668,-3268 10687,-3270
 Seilerstr. (Gramzow): Qualität?	? 49787,90264 49854,90252 49851,90216 49968,90211 50031,90234
 # added from landstrassen
@@ -816,6 +815,7 @@ Kliestow - Wüste Kunersdorf: Feldwege (Qualität des Feldwegs mäßig und nicht sch
 Mühlental - Lebus: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 85662,1959 85885,2842 85956,3025 85940,3299
 Mützlitz: gutes Kopfsteinpflaster (nach Ende der Bauarbeiten (2006-10-06) vielleicht asphaltiert?)	? -50578,15920 -50505,15845 -50271,15917
 Woddow - Löcknitz: Beton (Ist die Qualität nach den Bauarbeiten (bis Juni 2024) besser geworden?)	? 61986,111674 61965,111953 61822,112359 61832,112509 61820,112556
+Westkorso, Zeuthen: Kleinkopfsteinpflaster (Sind die Bauarbeiten beendet? Besteht die Fahrbahn weiterhin aus Kleinkopfsteinpflaster?)	? 26033,-7207 26328,-7191 26430,-7173 26609,-7136
 Herzfelde - Wichmannsdorf: schlechtes Kopfsteinpflaster (Wird das Kopfsteinpflaster bei den Bauarbeiten durch Asphalt ersetzt werden?)	? 22537,87990 22643,87937
 Weg am Flughafen - Rotberg: Feldweg (Ist der südöstliche Abschnitt des Weges ein Schotterweg? Oder nur ein unbefestigter Feldweg?)	? 17162,-6465 17910,-6981
 Eichendorffstr. (Schwanebeck-West): unbefestigte Straße (Wurde die Eichendorffstr. mittlerweile befestigt?)	? 17638,24756 17584,24703
@@ -868,15 +868,10 @@ F3.4 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.5 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from fragezeichen
-Marianne-Foerster-Str.: zurzeit Baustraße, wie wird die Qualität nach der Fertigstellung sein? (Sind die Straßen fertiggestellt?)	? 12257,18649 12381,18897
-Beate-Hahn-Str.: zurzeit Baustraße, wie wird die Qualität nach der Fertigstellung sein? (Sind die Straßen fertiggestellt?)	? 12363,18596 12481,18838
+Marianne-Foerster-Str.: Qualität? (Sind die Straßen fertiggestellt?)	? 12257,18649 12381,18897
+Beate-Hahn-Str.: Qualität? (Sind die Straßen fertiggestellt?)	? 12363,18596 12481,18838
 # added from bbbike-temp-blockings-optimized
+S-Bhf. Schichauweg: Unterführung an der Nordseite wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Ist die Unterführung noch immer gesperrt?)	? 9699,-600 9562,-619
 Gleiwitzer Str.: Bauarbeiten, Abschnitt der Fahrbahn zwischen Dornacher Str. und Köpenicker Str. gesperrt, voraussichtlich bis Mitte November 2024, vielleich wird wieder verlängert [Gleiwitzer Str. zwischen Dornacher Str. und Köpenicker Str.] (Sind die Bauarbeiten in der Gleiwitzer Str. beendet?)	? 20947,9999 21146,9988
-Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Wilhelminenhofstr. (West)] (Sind die Sperrungen aufgehoben?)	? 17826,6495 17991,6431
-Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Wilhelminenhofstr. (Ost)] (Sind die Sperrungen aufgehoben?)	? 18191,6363 17991,6431
-Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Edisonstr. (Süd)] (Sind die Sperrungen aufgehoben?)	? 17948,6248 17991,6431
-Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Edisonstr. (Süd)] (Sind die Sperrungen aufgehoben?)	? 17991,6431 17948,6248
-Wilhelminenhofstr./Edisonstr.: Bauarbeiten, alle Zufahrten zur Kreuzung sind gesperrt, Umwege, voraussichtlich bis Dezember 2024 [Edisonstr. (Nord): Länge des gesperrten Abschnitts etwa 80m] (Sind die Sperrungen aufgehoben?)	? 17991,6431 17962,6674
-Weverpromenade/Stadtpark Steglitz: Bauarbeiten, mögliche Sperrungen, vom 08.07.2024 bis voraussichtlich Mitte Oktober 2024, evtl. wird verlängert [Weverpromenade] (Sind die Bauarbeiten beendet? Ist die Qualität der Wegoberfläche besser geworden?)	? 5787,4400 5738,4361 5721,4356
-Weverpromenade/Stadtpark Steglitz: Bauarbeiten, mögliche Sperrungen, vom 08.07.2024 bis voraussichtlich Mitte Oktober 2024, evtl. wird verlängert [Stadtpark Steglitz] (Sind die Bauarbeiten beendet? Ist die Qualität der Wegoberfläche besser geworden?)	? 5836,4469 5787,4400
+Bürgerstr.: Bauarbeiten, Einbahnstraßenregelung zwischen Buschkrugallee und Rungiusstr., Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten beendet? Wurde die Einbahnstraßenregelung aufgehoben?)	? 12997,6290 13239,6344 13283,6354
 Mauerweg: Bauarbeiten zwischen Japaneck und Lichterfelder Allee, Sperrung, voraussichtlich ab dem IV. Quartal 2024 (Haben die Bauarbeiten bereits begonnen?)	? 4406,-910 4081,-425 4038,-362 4046,-299 4034,-255 3982,-181 3941,-127 3908,-117 3842,-6 3788,26 3767,66 3689,182 3607,283 3480,441 3412,534

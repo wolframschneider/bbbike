@@ -30,7 +30,7 @@ Wendenschloßstr.: Gegenverkehrsregelung	X::inwork::alternating 22791,4457
 #: next_check_id: KOENIGSPLATZ-2024
 #: last_checked: 2024-11-03 (krickstadt)
 #: check_frequency: 30d
-#: next_check: 2024-11-25
+#: next_check: 2024-12-12
 #: valid: -20241212
 Wilhelminenhofstr./Schillerpromenade	X::inwork 18191,6363
 # 
@@ -49,8 +49,8 @@ Wiesbadener Str./Sodener Str.: provisorische Ampel	X::inwork 3703,7324
 # REMOVED --- Danziger Str./Hans-Otto-Str.: provisorische Ampel	X::inwork 12722,14232
 # 
 #: next_check_id: KARLMARXSTR-2018
-#: last_checked: 2024-10-19 (mapillary)
-#: check_frequency: 30d
+#: last_checked: 2024-11-26
+#: check_frequency: 45d
 #: next_check: 2025-04-30
 #: valid: -20250430
 Anzengruberstr./Donaustr.: Bauampel	X::inwork 12856,8344
@@ -120,11 +120,11 @@ Anzengruberstr./Donaustr.: Bauampel	X::inwork 12856,8344
 #: source_id: viz2021:13.379736,52.496265,03.11.2023,10:00 (bis 23.04.2025)
 #: note: gilt auch für Radfahrer (provisorische Radspur Richtung Norden, auch eine Fahrradampel an der Radspur Richtung Süden)
 #: note: etwa 40m nördlich des Punktes
-#: last_checked: 2024-11-15
+#: last_checked: 2024-11-28
 #: check_frequency: 90d
 #: next_check: 2025-04-23
 #: valid: -20250423
-Möckernstr./nördlich. Wartenburgstr.: Gegenverkehrsregelung	X::inwork::alternating 8784,9972
+Möckernstr./nördlich Wartenburgstr.: Gegenverkehrsregelung	X::inwork::alternating 8784,9972
 # 
 # REMOVED --- #: source_id: viz2021:13.469544,52.478034,01.11.2023,10:30 (bis 13.11.2023) (bis 24.11.2023) (inaktiv) (bis 13.02.2024) (bis 20.02.2024) (bis 28.02.2024) (inaktiv) --- #: note: Länge knapp 50m und gilt auch für Radfahrer, Lage ist etwas weiter nordwestlich --- #: note: bei VIZ entfernt, existiert aber weiterhin --- #: last_checked: 2024-02-22 --- #: next_check: 2024-02-28 --- #: valid: -20240228 --- Kiefholzstr.: Gegenverkehrsregelung	X::inwork::alternating 14700,8368
 # REMOVED --- #: next_check_id: RUNGE-2023 --- #: source_id: viz2021:13.417345,52.512721,24.10.2023,11:00 (bis 23.11.2023) (inaktiv) --- #: last_checked: 2023-10-31 (mapillary) --- #: next_check: 2023-11-23 --- #: valid: -20231123 --- Brückenstr./Rungestr.: Gegenverkehrsregelung	X::inwork::alternating 11291,11876
@@ -183,14 +183,14 @@ Bellevuestr.: Gegenverkehrsregelung	X::inwork::alternating 8328,11617
 #: source_id: viz2021:13.471924,52.508017,24.01.2023,09:00 (bis 30.06.2024) (inaktiv)
 #: note: eigentlich zwei Ampeln, nördlich und südlich der Einmündung; Anforderungsampeln; außerdem mittlerweile eine Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
 #: note: Halteverbotsschilder bis 30.09.2025
-#: last_checked: 2024-11-13
+#: last_checked: 2024-11-27
 #: check_frequency: 120d
 #: next_check: 2025-09-30
 Gürtelstr./Weserstr.	F::inwork 15016,11431
 # 
 #: note: Halteverbotsschilder bis 31.12.2025
 #: note: Anforderungsampel; außerdem Engstelle ohne Radspuren, dafür Tempo 20 + Radfahrüberholverbot
-#: last_checked: 2024-11-13
+#: last_checked: 2024-11-27
 #: check_frequency: 120d
 #: next_check: 2025-12-31
 Gürtelstr.	F::inwork 15153,11691
@@ -213,8 +213,9 @@ Gürtelstr.	F::inwork 15153,11691
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
+#: next_check_id: ZIEGEL-2024
 # REMOVED (entfernt) --- #: next_check_id: ORANIENBURGERTORTRAM-2022 --- #: note: am 19.7.2023 ausgeschaltet (laut mapillary) --- 
-#: last_checked: 2024-11-13 (mapillary)
+#: last_checked: 2024-11-23 (mapillary)
 # REMOVED --- #: check_frequency: 30d
 #: next_check: 2024-12-20
 #: valid: -20241220
@@ -309,7 +310,7 @@ Köpenicker Str./Dubickstr.	F::inwork 21079,8931
 # REMOVED --- #: XXX Bleibt diese Ampel permanent, oder steht sie in Zusammenhang mit den Bauarbeiten in der Französischen Str.? --- #: last_checked: 2022-03-02 --- #: check_frequency: 90d --- Friedrichstr./Behrenstr.	X::inwork 9373,12197
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
-#: last_checked: 2024-11-16
+#: last_checked: 2024-11-23
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: Gegenverkehrsregelung	X::inwork::alternating 16355,9622
 # 
@@ -1452,6 +1453,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: Kontaktschleifen quer zur Sewanstr.
 	X 17605,10199
 #: XXX_prog für Radfahrer Richtung Norden nicht relevant
+#: XXX_prog: aus der Sewanstr. Rechtsabbiegeampel für alle
 	X 18631,10167
 	X 21124,11462
 	X 21199,12258
@@ -2039,6 +2041,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: Anforderungsampel
 	F 5689,5109
 	X 5583,5179
+#: note: Anforderungsampel
+	F 5616,5182
+#: note: Anforderungsampel
 	F 5675,5470
 #: note: Anforderungsampel
 	F 5482,4965
@@ -2453,7 +2458,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX_prog gilt nicht in Fahrtrichtung Nordwest
 	X 14614,9052
 	X 5350,7554
-	X 5783,9060
+	X 5770,9055
 	X 5176,9398
 	X 4957,9437
 	F 5799,6841
@@ -2713,13 +2718,13 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX zurzeit keine Ampel, aber neue Masten stehen schon und werden vermutlich für die Anschlussstelle neue Ampeln tragen
 #: XXX evtl. als zwei Ampeln eintragen, falls die Ampelphasen für Radfahrer ungünstig sind
-#: last_checked: 2024-11-20
+#: last_checked: 2024-11-27
 #: check_frequency: 120d
 	X0 14185,9509
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX provisorische Ampel, vermutlich damit nach Südosten fahrende Radfahrer wieder auf die andere Straße kommen? Nicht relevant für Radfahrer, die auf der Nebenstraße fahren.
 #: note: selten ausgeschaltet (gesehen 2022-08-24 Wed 13:10, 2024-05-12 Sun 16:40, 2024-05-16 Thu 18:50)
-#: last_checked: 2024-11-19
+#: last_checked: 2024-11-26
 #: check_frequency: 120d
 	X::inwork 14382,9299
 # 
@@ -3415,7 +3420,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 # 
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2024-11-05 vvv
+#: last_checked: 2024-11-23 (mapillary) vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="4"
 	X::inwork 9121,12514
@@ -3603,7 +3608,7 @@ provisorische Ampel, die es schon ewig gibt	F 12415,8106
 #: by: https://twitter.com/VIZ_Berlin/status/1301038406156398593 (vermutlich keine Änderung bis Ende Oktober 2020)
 #: XXX Wird hier eine permanente Ampel entstehen?
 #: osm_watch: node id="4006030833" version="6"
-#: last_checked: 2024-11-18
+#: last_checked: 2024-11-24
 #: check_frequency: 60d
 	X::inwork 14174,7505
 # 

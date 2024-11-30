@@ -3811,9 +3811,9 @@ if (!$MM_DRAG_IS_OBSOLETE) {
 		     'GPS direkt',
 		     [M('Route auf GPS-Gerät kopieren (Massenspeicher)'), 'BBBikeGPS::MountedDevice'],
 		     [M('Route auf GPS-Gerät kopieren (MTP, z.B. Fitnessuhren)'), 'BBBikeGPS::MTP'],
-		     ($devel_host ? [M("Route auf Massenspeicher simulieren"), 'BBBikeGPS::MountedDevice_Test'] : ()),
-		     [M('Route zu einem Garmin senden (seriell/USB)'), 'DirectGarmin'],
-		     [M('Senden der Route zu einem Garmin simulieren'), 'DirectGarmin_Test'],
+		     [M("Senden der Route auf ein GPS-Gerät (Massenspeicher) simulieren"), 'BBBikeGPS::MountedDevice_Test'],
+		     [M('Route zu einem alten Garmin-Gerät senden (seriell/USB)'), 'DirectGarmin'],
+		     [M('Senden der Route zu einem alten Garmin-Gerät simulieren'), 'DirectGarmin_Test'],
 		     ($devel_host ? [M("Route mit gpsbabel senden"), "GpsbabelSend"] : ()),
 		     ($devel_host ? [M("Route mit MapSource senden"), "MapSourceSend"] : ()),
 		    ) {
@@ -20937,6 +20937,13 @@ sub show_logo { # und About
     if ($as_about && -r "$FindBin::RealBin/miscsrc/BBBikeGit.pm") {
 	require "$FindBin::RealBin/miscsrc/BBBikeGit.pm";
 	%git_info = BBBikeGit::git_info();
+    }
+    if (!%git_info && -r "$FindBin::RealBin/.gitinfo") {
+	eval {
+	    require BBBikeYAML;
+	    %git_info = %{ BBBikeYAML::LoadFile("$FindBin::RealBin/.gitinfo") };
+	};
+	warn "Cannot load .gitinfo: $@" if $@;
     }
 
     $logotop->optionAdd("*" . substr($logotop->PathName, 1)

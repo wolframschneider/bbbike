@@ -55,7 +55,6 @@ Plauener Str.: Fahrbahn noch nicht freigegeben	q3::inwork 17531,14923 17610,1493
 Reichenberger Str.: etwa 80m der Fahrbahn gesperrt	q3::inwork 15937,15134 16075,15069
 Eisenacher Str.: Radfahrer teilen sich mit Fußgängern den Bürgersteig, Umwege	q2::inwork; 22899,15073 22726,15082 22599,15105 22577,15109
 Eisenacher Str.: Umweg über Nebenfahrbahn	q2::inwork; 22726,15082 22899,15073
-Gothaer Str.: Fahrbahn gesperrt, mögliche Umwege	q2::inwork 22899,15073 22905,14925
 Marzahner Chaussee: Sperrung der Fahrbahn zwischen Allee der Kosmonauten und Merler Weg Richtung Süden	q3::inwork; 19181,13485 19198,13272 19180,13219
 Merler Weg: temporäre Einbahnstraßenregelung	q3::inwork; 19180,13219 18852,13269
 Elßholzstr.: Hochbauarbeiten, Einbahnstraßenregelung	q4::inwork; 7202,9329 7209,9507 7216,9657 7223,9815
@@ -316,7 +315,7 @@ Gotenstr./Cheruskerstr. - Kolonnenstr.: Fußgänger	q2 7485,8777 7531,8848
 Gotenstr./Cheruskerstr. - Kolonnenstr.: Fußgänger	q3 7531,8848 7563,8871
 Nettelbeckplatz: Fußgänger	q2 8024,15401 7974,15418 7891,15417
 Nettelbeckplatz: Fußgänger	q2 7929,15355 7974,15418
-Volkspark Wilmersdorf: kombinierter Rad- und Fußweg	q1 5913,8415 5831,8358 5806,8350 5761,8339 5680,8355 5660,8366 5533,8478 5476,8521
+Volkspark Wilmersdorf: kombinierter Rad- und Fußweg	q1 5913,8415 5831,8358 5818,8354 5782,8344 5761,8339 5680,8355 5660,8366 5533,8478 5476,8521
 Volkspark Wilmersdorf: einige Fußgänger	q1 5917,8351 5831,8358
 Volkspark Wilmersdorf: einige Fußgänger	q1 5680,8355 5699,8308
 zum Volksparksteg: kombinierter Rad- und Fußweg, enge Kurven	q3 5533,8478 5531,8458
@@ -398,9 +397,9 @@ Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8842,8561 8759,8458 8720,8
 (Fritz-Bräuning-Promenade): Bordstein, Fußgänger	q3 8731,8020 8623,8018
 (Teltowkanal, Nordufer): Fußgänger (eigentlich für Radfahrer verboten)	q2 8750,5173 9118,5328 9145,5323 9188,5333
 (Kynaststr. - Paul-und-Paula-Ufer): Fußgänger	q1 14797,10476 14820,10473 14861,10467
-Am Rummelsburger See: Fußgänger, kurvenreich, Grünanlage	q3 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142
+Am Rummelsburger See: Fußgänger, kurvenreich, Grünanlage	q2 15793,9334 15813,9378 15819,9430 15749,9558 15739,9583 15708,9607 15659,9647 15621,9704 15626,9710 15561,9809 15465,9860 15347,9922 15296,10000 15295,10022 15260,10048 15283,10087 15289,10092 15289,10097 15311,10127 15306,10142
 Am Rummelsburger See: einige Fußgänger	q2 15306,10142 15253,10171
-Am Rummelsburger See: Fußgänger, Grünanlage	q3 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411
+Am Rummelsburger See: Fußgänger, Grünanlage	q2 15253,10171 15199,10211 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411
 Am Rummelsburger See: Fußgänger, kurvenreich	q1 14892,10411 14864,10451 14861,10467 14884,10497 14911,10587 14937,10598 14994,10576 15056,10625 15101,10640 15138,10638 15200,10600 15249,10564
 Am Rummelsburger See: teilweise enge Kurven, Fußgänger an schönen Tagen	q2 15453,10419 15448,10397 15457,10342 15496,10277 15518,10234 15599,10206 15606,10179 15645,10147 15713,10035 15786,9957 15781,9933 15828,9875 15910,9860 15931,9846
 Am Rummelsburger See: Fußgänger an schönen Tagen	q1 15931,9846 16002,9787 16049,9749 16119,9689 16125,9678 16120,9653
@@ -499,13 +498,15 @@ Am Friedhof: recht enger Radweg	q1 6377,17854 6375,17755 6370,17696 6347,17381
 Gerlachsheimer Weg: Fußgänger	q2 13150,7924 13187,7927 13236,7970
 Jan-Hus-Weg/Kirchgasse: Fußgänger	q2 13081,7907 13121,7945 13150,7924
 Wanzlikpfad: eng und kurvig, Fußgänger	q3 13269,7806 13309,7911
-(Tunnelstr. - Uferweg): Fußgänger, Grünanlage	q3 15662,9501 15749,9558
-(Spreeufer): Fußgänger, Grünanlage	q3 14569,10055 14599,10039 14690,9993 14776,9949 15000,9820
-Caroline-Tübbecke-Ufer: Fußgänger, Grünanlage	q3 15000,9820 15043,9790 15367,9691
-(Wendenwiese): Fußgänger, Grünanlage	q3 15367,9691 15405,9675 15466,9633 15497,9644 15498,9681 15505,9688
-(Wendenwiese): Fußgänger, Grünanlage	q3 15436,9731 15405,9675
+(Tunnelstr. - Uferweg): Fußgänger, Grünanlage	q2 15662,9501 15749,9558
+(Spreeufer): Fußgänger, Grünanlage	q2 14569,10055 14599,10039 14690,9993 14776,9949 15000,9820
+Caroline-Tübbecke-Ufer: Fußgänger, Grünanlage	q2 15000,9820 15043,9790 15367,9691
+(Wendenwiese): Fußgänger, Grünanlage	q2 15367,9691 15405,9675 15466,9633 15497,9644 15498,9681 15505,9688
+(Wendenwiese): Fußgänger, Grünanlage	q2 15436,9731 15405,9675
 (Alt-Stralau - Spreeufer): Fußgänger, Grünanlage, kurze Rampe	q3 15031,9876 15000,9820
-(Strela-Platz): Fußgänger, Grünanlage	q3 15400,9742 15465,9860
+(Strela-Platz): Fußgänger, Grünanlage	q2 15400,9742 15465,9860
+Regatta-Ufer: Fußgänger, Radfahren nicht erlaubt	q3 15682,9472 15632,9430 15741,9326 15778,9311 15793,9334
+Am Schwanenberg: einige Fußgänger	q1 15752,9385 15793,9334
 Hildburghauser Str.: Bahnunterführung für Fußgänger	q1 4595,1387 4514,1402
 (zur Pfaueninselfähre): an schönen Tagen viele Fußgänger	q3 -8542,2216 -8561,2236 -8564,2276
 (Unterführung am S-Bhf. Kaulsdorf): Fußgänger	q3 22857,12014 22859,12059
@@ -622,7 +623,7 @@ Dathepromenade: Fußgänger	q1 18394,10348 18320,10318 18302,10289 18314,10260 181
 Dathepromenade: Fußgänger	q1 18094,10167 18091,10112 17995,10070
 (Dathepromenade - Sewanstr.): Bordsteine	q3 17970,10132 17905,10122
 Rheingoldpark: Fußgänger haben Vorrang	q1 19073,8828 19145,8659
-Schloßinsel Köpenick: Fußgänger	q4 22093,4499 22076,4422
+Schloßinsel Köpenick: Fußgänger	q4 22093,4499 22087,4470 22084,4455 22076,4422
 Braunschweiger Ufer: Fußgänger	q1 12722,5831 13077,5893 13483,5973
 Begasstr. - Riemenschneiderweg: teilweise mit Fußgängern zu rechnen	q2 6513,7005 6650,7017
 Begasstr. - Riemenschneiderweg: teilweise mit Fußgängern zu rechnen, kurze Rampe	q2 6650,7017 6770,7027
@@ -1542,8 +1543,6 @@ Seydlitzstr.: einige Fußgänger	q1 6511,2284 6454,2366
 Trabener Steg: abgeflachte Treppenstufen, Fußgänger	q2 2142,10027 2131,10014 2128,9999
 Trabener Steg: abgeflachte Treppenstufen, Fußgänger	q2 2224,10083 2245,10092
 Wilhelm-Stolze-Str.: Fußgänger	q3 13267,13167 13233,13242
-Regatta-Ufer: Fußgänger, Radfahren nicht erlaubt	q4 15682,9472 15632,9430 15741,9326 15778,9311 15793,9334
-Am Schwanenberg: einige Fußgänger	q1 15752,9385 15793,9334
 (Edeka-Parkplatz): Parkplatzverkehr, Fußgänger	q2 16058,6629 16138,6548
 (Siemensstr./Deulstr. - Wilhelminenhofstr.): einige Fußgänger, Aufpflasterungen	q2 17852,6589 17826,6495
 Straße 77: einige Fußgänger, Bordsteine	q2 15320,12375 15408,12394
@@ -2623,6 +2622,9 @@ Annastr.: einige Fußgänger	q3 5920,2693 5930,2671
 (Zingster Str. - Am Berl): Grünanlage, einige Fußgänger	q3 16534,18689 16607,18709 16656,18742
 (Hauptstr. [Nebenfahrbahn] - Vicki-Baum-Str.): Fußgänger, niedrige Bordsteine	q2 15600,10465 15623,10449
 Hebammensteigbrücke: Fußgänger	q3 13193,21700 13168,21706 13135,21715 13121,21678 13124,21718 13046,21734 13014,21775 13008,21783
+(Weg am Jacob-und-Wilhelm-Grimm-Zentrum): Fußgänger, Radfahrer absteigen	q4 9435,12698 9561,12723
+(Babelsberger Str. - Volkspark Wilmersdorf): Bordstein, einige Fußgänger	q3 5799,8356 5782,8344
+(Babelsberger Str. - Volkspark Wilmersdorf): Bordstein, einige Fußgänger	q3 5799,8356 5818,8354
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11908,19255 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11929,19281
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -3570,9 +3572,9 @@ Am Wiesenrain: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. s
 Am Wriezener Bahnhof: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 12758,11915 12788,11898
 Am Wriezener Bahnhof: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 12788,11898 12944,11760 12993,11717 12986,11699 12959,11631
 Wriezener Karree: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4:inwork::igndisp; 12959,11631 12728,11850
-Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 5522,8024 5521,8087
+Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 5521,8087 5522,8024
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 8266,14346 8442,14456
-Planckstr.: Einbahnstraßenregelung, offen Richtung Süden: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9441,12670 9429,12728 9402,12792 9386,12833 9375,12911
+Planckstr.: Einbahnstraßenregelung, offen Richtung Süden: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9441,12670 9435,12698 9429,12728 9402,12792 9386,12833 9375,12911
 Dircksenstr.: Einbahnstraßenregelung: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 11138,12604 11202,12426
 Johannisstr.: Einbahnstraße: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3:inwork::igndisp; 9588,13174 9385,13174 9254,13171
 (Los-Angeles-Platz): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 5669,10704 5802,10621
@@ -3581,7 +3583,8 @@ Walter-Friedrich-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::ignd
 Neuenhagener Str. (Mahlsdorf): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 24362,11954 24317,11754
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8376,6579 -8354,6590
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8339,6578 -8364,6562
-Trautenauer Str.: Bauarbeiten, Fahrbahn gesperrt, Umwege, Bordsteine: gesperrt, ggfs. schieben	q4:inwork::igndisp 17753,8290 17771,8349 17794,8429 17813,8508 17830,8578 17838,8611 17846,8644 17851,8662 17879,8773
+Trautenauer Str.: Bauarbeiten, Fahrbahn gesperrt, Umwege, Bordsteine: gesperrt, ggfs. schieben	q3:inwork::igndisp 17753,8290 17771,8349 17794,8429
+Trautenauer Str.: Bauarbeiten, Fahrbahn gesperrt, Umwege, Bordsteine: gesperrt, ggfs. schieben	q4:inwork::igndisp 17794,8429 17813,8508 17830,8578 17838,8611 17846,8644 17851,8662 17879,8773
 Kreuzung Sewanstr./Am Tierpark	q0::igndisp; 18631,10167 18647,10172
 Am Tierpark, linker Radweg	q0::igndisp; 18647,10172 18715,10003
 Treskowallee, linker Radweg	q0::igndisp; 18715,10003 18748,9922
