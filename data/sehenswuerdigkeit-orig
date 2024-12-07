@@ -34,6 +34,8 @@ Deutsches Historisches Museum	F:SW|IMG:museum 9849,12501 9860,12412 9976,12427 9
 Pei-Bau (Deutsches Historisches Museum)	F:SW|IMG:museum 9850,12514 9936,12526 9909,12605 9845,12551
 Auswärtiges Amt	F:SW 9988,12163 10066,12192 10159,12004 10074,11968
 Altes Museum	F:SW|IMG:museum 10005,12588 9975,12632 10051,12682 10079,12637
+#: alias: Humboldt-Forum
+#: note: laut Wikipedia "Eigenschreibweise: Humboldt Forum"
 Berliner Stadtschloss	F:SW 10329,12395 10184,12290 10117,12382 10263,12488
 Berliner Dom	F:SW|IMG:sehenswuerdigkeit_img/berliner_dom|ANCHOR:s 10132,12594 10171,12537 10224,12573 10186,12631
 Bodemuseum	F:SW|IMG:sehenswuerdigkeit_img/bodemuseum_klein 9830,12878 9755,12812 9705,12860 9702,12887 9731,12900 9783,12894
@@ -306,7 +308,7 @@ Naturtheater Hasenheide	F:SW|IMG:theater 11323,8695 11324,8663 11302,8665 11277,
 #: by: https://www.berliner-woche.de/friedrichshain/c-bauen/ddr-spassbad-zwangsgeraeumt_a426466
 #: by: https://berliner-abendblatt.de/berlin-news/bausenator-sieht-keine-chance-fuer-erhalt-des-sez-id265545
 #: also_indoor: search SEZ Berlin
-#: last_checked: 2024-10-12
+#: last_checked: 2024-11-30
 #: check_frequency: 360d
 SEZ	F:SW 13225,13585 13258,13526 13256,13514 13276,13494 13267,13455 13240,13462 13204,13426 13156,13403 13136,13427 13172,13450 13169,13460 13196,13473 13188,13512 13210,13518 13179,13581 13218,13589
 # 

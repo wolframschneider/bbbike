@@ -154,7 +154,7 @@ Wuhletal-Wanderweg	NL 22124,13606 22082,13542 22060,13446 22058,13366 22067,1333
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4350&options=4
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4507 (Antrag auf Umwidmung als Straßenland, aber seit Mai 2013 keine Bewegung bei der Drucksache)
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5749 (neue Drucksache)
-#: last_checked: 2024-09-01
+#: last_checked: 2024-12-04
 #: check_frequency: 150d
 (Wuhlewanderweg, östliches Ufer)	NL 22204,6016 22162,5919 22122,5884 22097,5879 22084,5877
 (Wuhlewanderweg, östliches Ufer)	NL 22084,5877 22070,5876 21938,5866 21862,5857 21744,5804 21651,5730 21618,5699 21605,5687 21600,5683 21581,5670 21507,5620
@@ -1196,7 +1196,7 @@ Vierlingpark	NL -717,4115 -759,4239 -713,4426 -706,4465
 Vierlingpark	NL -713,4426 -735,4407 -755,4387
 Zinnowweg	NL -420,4159 -388,4119 -376,4102 -343,4056 -162,3827 -92,3724
 Ringelsteinweg - Kleinmachnower Weg	NL 910,278 934,130
-	NL 8584,320 8579,153 8626,107 8671,118 8695,188 8769,266
+	NL 8584,320 8583,310 8583,301 8579,153 8626,107 8671,118 8695,188 8769,266
 	NL 8579,153 8561,-180 8574,-207 8585,-231
 (Schillingweg - zum Arkenberger Kiessee)	NL 11516,24272 11490,24278 11345,24085 11285,23983 11259,23928
 (Möllersfelder Weg - Schillingweg)	NL 10799,24194 11105,23704
@@ -1382,7 +1382,7 @@ Uferweg am Salzhof	NL -1923,15684 -1927,15716 -1938,15782 -1935,15826 -1948,1586
 Schlosspark Buch	NL 16580,26154 16586,26087 16565,26056 16436,26008 16376,25965 16326,25814 16276,25747 16251,25733 16220,25716
 Schlosspark Buch	NL 16326,25814 16273,25812 16222,25829
 (Hebammensteigbrücke - Pankeweg)	NL 13008,21783 13049,21743 13075,21740
-Pankeweg	NL 13206,22290 13141,22018 13078,21754 13075,21740 13031,21538 12980,21411 12914,21229 12844,21143 12847,21116 12867,21098 12807,20944 12753,20884 12553,20757
+Pankeweg	NL 13206,22290 13141,22018 13078,21754 13075,21740 13031,21538 12980,21411 12914,21229 12867,21098 12807,20944 12753,20884 12553,20757
 Pankeweg	NL 12578,20749 12505,20702 12386,20636 12363,20582 12310,20523 12266,20467 12235,20380 12216,20344 12154,20325 11995,19759
 Pankeweg	NL 8303,15298 8260,15226 8266,15134
 Pankeweg	NL 8286,14635 8322,14687 8292,14734 8275,14869 8262,14910
@@ -1526,7 +1526,7 @@ Mauerpark	NL 10155,15473 10186,15481
 #: next_check_id: MAUERPARK-2022
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4186 (Installierung einer Beleuchtung bis 2020)
 #: by: https://www.berliner-woche.de/prenzlauer-berg/c-bauen/gruenes-projekt-mauerpark-laeuft-weiter_a305502 (Erwähnung von neuen Laternen, ab 2022, insgesamt vier Jahre Bauzeit für alle Maßnahmen)
-#: last_checked: 2024-11-05
+#: last_checked: 2024-11-30
 #: check_frequency: 180d
 Mauerpark	NL 10130,15653 10186,15481 10188,15474 10210,15407 10240,15318 10319,15090 10354,14987
 Mauerpark	NL 10050,15824 10061,15775 10045,15754 10071,15684 10079,15661 10091,15630 10092,15627 10155,15473
