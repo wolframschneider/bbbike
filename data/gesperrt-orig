@@ -119,22 +119,33 @@ Alt-Köpenick	1no 22144,4660 22175,4730 22198,4800 22196,4847
 Wuhletalstr.	1 20691,17463 20727,17558 20769,17650 20855,17807 20912,17872
 #: next_check_id: KNOTENMARZAHN-2022
 #: XXX früher Einbahnstraßen
-#: last_checked: 2024-10-19 vvv
+#: last_checked: 2024-12-08 vvv
 #: check_frequency: 120d vvv
 #: next_check: 2026-12-31 vvv
 Knoten Märkische/Landsberger Allee	2::inwork 19013,14905 19175,14968
 Knoten Märkische/Landsberger Allee	1no 19175,14968 19196,14976
 Knoten Märkische/Landsberger Allee	1no 19200,14963 19156,14953 19013,14905
+#: osm_watch: way id="4696052" version="29"
+Knoten Märkische/Landsberger Allee	1no 19254,15000 19309,15023 19364,15045 19512,15092 19565,15106 19694,15141 19852,15201
+Knoten Märkische/Landsberger Allee	1 19254,15000 19200,14963
+Knoten Märkische/Landsberger Allee	2::inwork 19408,15007 19350,14997 19214,14966 19200,14963
+#: osm_watch: way id="30884033" version="22"
+Knoten Märkische/Landsberger Allee	2::inwork 19452,14807 19464,14971 19408,15007
+#: osm_watch: way id="4696050" version="22"
+Knoten Märkische/Landsberger Allee	2::inwork 19852,15201 19744,15128 19614,15061 19408,15007
+#: osm_watch: way id="30884034" version="23"
+Knoten Märkische/Landsberger Allee	2::inwork 19516,14993 19551,14961 19615,14960 19643,15025 19614,15061
+Knoten Märkische/Landsberger Allee: nur Rechtsabbiegen erlaubt	3 19644,15320 19512,15092 19565,15106
+#: note: Radfahrer dürfen und sollen den Bürgersteig in beiden Richtungen benutzen
+Knoten Märkische/Landsberger Allee	1no 19512,15092 19644,15320
+#: note: Radfahrer dürfen und sollen den Bürgersteig in beiden Richtungen benutzen
+Knoten Märkische/Landsberger Allee	1no 19196,14976 19205,14980 19254,15000
+Frank-Schweitzer-Str.	1no 19318,14984 19176,14921 19111,14894 19117,14875 19207,14895 19256,14906
 #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
-Knoten Märkische/Landsberger Allee	1 19196,14976 19205,14980 19364,15045 19502,15089 19565,15106 19694,15141 19852,15201
-Knoten Märkische/Landsberger Allee	1 19852,15201 19744,15128 19614,15061 19408,15007 19350,14997 19214,14966 19200,14963
-Knoten Märkische/Landsberger Allee	1 19452,14807 19464,14971 19408,15007
-Knoten Märkische/Landsberger Allee	1 19516,14993 19551,14961 19615,14960 19643,15025 19614,15061
 Knoten Märkische/Landsberger Allee	1 19694,15141 19707,15206 19654,15219 19577,15166
-Knoten Märkische/Landsberger Allee	1 19502,15089 19604,15227
 Alt-Blankenburg	1 13576,20849 13562,20913 13662,20917 13712,20919 13909,20928
 Alt-Blankenburg	1 13909,20928 13677,20873 13576,20849
 Seestr.	1 5043,14671 5255,14757 5311,14786 5437,14844
@@ -398,7 +409,7 @@ Große Präsidentenstr.	1 10105,13004 10219,13102
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/protokoll-2-sitzung.pdf (Ablehnung durch Polizei)
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1818150528448118831
 #: by: https://pbs.twimg.com/media/GTqgmAvWEAMTCD_?format=jpg&name=medium
-#: source_id: viz2021:13.312025,52.498061,30.07.2024,07:00 (Sackgasse, bis 28.02.2025)
+#: source_id: viz2021:13.312025,52.498061,30.07.2024,07:00 (Sackgasse, bis 28.02.2025) (keine Erwähnung der Sackgasse mehr, bis 30.04.2025)
 #: osm_watch: way id="4437134" version="17"
 #: last_checked: 2024-09-21
 # REMOVED --- #: check_frequency: 120d
@@ -816,7 +827,6 @@ Blumenstr.	1 12125,12490 12306,12459 12305,12440
 Friedensplatz	1 8971,6154 8994,6144 9003,6121 8996,6106 8976,6094 8952,6109 8944,6127 8955,6147 8971,6154
 #: by: anonymous and public imagery
 Westhafenstr.: Tor kann geschlossen sein; Unbefugten ist das Betreten nicht gestattet	2 6083,14564 6025,14539 6015,14516 5997,14444 5920,14422 5205,14253
-Frank-Schweitzer-Str.	1 19350,14997 19175,14926 19113,14901 19117,14875 19255,14911
 (Schulze-Boysen-Str. - Wilhelm-Guddorf-Str.)	1 15413,11690 15489,11735 15639,11653
 # REMOVED (zurzeit keine Einbahnstraße) --- #: XXX laut osm ist hier keine Einbahnstraße --- Hufelandweg	1s:q3 8632,13155 8618,13306 8582,13355
 Sauerbruchweg	1s:q3 8490,13354 8632,13155
@@ -2361,7 +2371,8 @@ Bundesallee	3nocross::ignrte 5463,9961 5461,9923 5467,9866
 Bundesallee	1::igndisp 5467,9866 5461,9923 5463,9961
 Bundesallee	1::igndisp 5463,9961 5464,9934 5467,9866
 #: note ^^^
-Marzahner Kreuz: Linksabbiegen nicht möglich	3nocross 19681,15405 19664,15366 19644,15320 19619,15262 19604,15227 19577,15166 19516,14993 19452,14807 19425,14655
+# REMOVED (aus technischen Gründen entfernt) --- Marzahner Kreuz: Linksabbiegen nicht möglich	3nocross 19681,15405 19664,15366 19644,15320
+Marzahner Kreuz: Linksabbiegen nicht möglich	3nocross 19644,15320 19619,15262 19604,15227 19577,15166 19516,14993 19452,14807 19425,14655
 Zossener Str.: unbequem passierbarer Mittelstreifen	3nocross 9865,10227 9858,10199 9837,10117
 #: note: Tunnel, nicht überquerbar (am Rudeloffweg theoretisch über Mittelstreifen passierbar, aber die Tunnelrampe ist hier noch nah) vvv
 Unter den Eichen: Straßentunnelrampe	3nocross 2723,4093 2815,4162 2941,4245 3048,4305
@@ -3996,11 +4007,33 @@ Kleine Waldstr. - Waldstr.: Sperrung wegen Bauarbeiten an der A117	2::inwork 215
 # 
 #: next_check_id: KNOTENMARZAHN-2022
 #: XXX an dieser Stelle wird es alternativ eine Rampe geben
-#: osm_watch: note 4298701 1
+#: osm_watch: note 4298701 2
 #: osm_watch: way id="1297589176" version="1"
-#: last_checked: 2024-10-19
+#: last_checked: 2024-12-08
+#: check_frequency: 180d
 #: next_check: 2026-12-31
 (Landsberger Allee - Frank-Schweitzer-Str.): abgesperrt	2::inwork 19156,14953 19160,14935 19171,14938
+# 
+#: next_check_id: KNOTENMARZAHN-2022
+#: osm_watch: way id="4696062" version="28"
+#: last_checked: 2024-12-08
+#: check_frequency: 180d
+#: next_check: 2026-12-31
+(Landsberger Allee - Frank-Schweitzer-Str.): wird zurückgebaut	2::inwork 19330,15006 19400,15027
+# 
+#: next_check_id: KNOTENMARZAHN-2022
+#: osm_watch: way id="26244466" version="24"
+#: last_checked: 2024-12-08
+#: check_frequency: 180d
+#: next_check: 2026-12-31
+Frank-Schweitzer-Str.: unterhalb des Marzahner Knotens gesperrt	2::inwork 19414,15132 19424,15068 19400,15027 19339,14930
+# 
+#: next_check_id: KNOTENMARZAHN-2022
+#: osm_watch: note 4547152 3
+#: last_checked: 2024-12-08
+#: check_frequency: 180d
+#: next_check: 2026-12-31
+(Georg-Knorr-Str. - Frank-Schweitzer-Str.): Unterführung gesperrt	2::inwork 19157,14979 19171,14938 19173,14931 19176,14921
 # 
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2024/pressemitteilung.1415395.php (Bauarbeiten voraussichtlich bis zum zweiten Quartal 2026)
 #: by: https://www.berliner-woche.de/karlshorst/c-bildung/start-fuer-den-bau-einer-integrierten-sekundarschule_a411179
@@ -4019,7 +4052,7 @@ Kleine Waldstr. - Waldstr.: Sperrung wegen Bauarbeiten an der A117	2::inwork 215
 #: osm_watch: note 4211143 3
 #: osm_watch: way id="4612427" version="21"
 #: also_indoor: traffic (G,W)
-#: last_checked: 2024-11-21
+#: last_checked: 2024-12-09
 #: check_frequency: 30d
 #: next_check: 2025-06-30
 Am Köllnischen Park: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 11185,11883 11160,12071
@@ -4307,7 +4340,7 @@ Nöldnerplatz [am Skatepark]: wegen Bauarbeiten gesperrt	2::inwork 15820,10916 15
 #: XXX Bauarbeiten am Kanzlerpark
 #: by: https://berliner-abendblatt.de/berlin-news/kein-feierlicher-spatenstich-fuer-kanzleramts-neubau-id223830
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=12521 (Anfrage)
-#: last_checked: 2024-07-30 (mapillary) vvv
+#: last_checked: 2024-12-07 vvv
 #: check_frequency: 180d vvv
 #: XXX laut osm gesperrt vvv
 #: osm_watch: way id="256450718" version="7"
@@ -4662,7 +4695,7 @@ Ruth-Baumgarte-Str.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 17738,
 #: osm_watch: way id="129104626" version="22"
 #: osm_watch: way id="945966258" version="3"
 #: also_indoor: traffic (ex-H,ex-G,ex-B(alle falsch))
-#: last_checked: 2024-11-23 (mapillary)
+#: last_checked: 2024-12-11
 #: check_frequency: 120d
 #: next_check: 2026-09-30
 Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraße, offen Richtung Westen	1s:q3:inwork 8266,14346 8442,14456
@@ -4731,7 +4764,7 @@ Hebammensteigbrücke	2::inwork 13193,21700 13168,21706 13135,21715 13121,21678 13
 # REMOVED --- #: next_check_id: NKZ-2020 --- #: last_checked: 2022-01-03 --- #: check_frequency: 30d --- (Zufahrt am NKZ): Fußgänger, unübersichtlich, Bauarbeiten, Gerüst, kaum ein Durchkommen	2::inwork 11344,10507 11392,10520 11411,10515
 # 
 #: next_check_id: STRD17JUNI-2021
-#: last_checked: 2024-10-30 vvv
+#: last_checked: 2024-12-07 vvv
 #: check_frequency: 180d vvv
 #: next_check: 2026-08-31 vvv
 Straße des 17. Juni: Radweg gesperrt	1::igndisp 6164,11947 5900,11913
@@ -4944,7 +4977,7 @@ George-Stephenson-Str.: Hochbauarbeiten, gesperrt	2::inwork 7487,14472 7446,1440
 #: XXX evtl. wird die Qualität nach den Bauarbeiten besser sein (vielleicht keine Straßenbahnschienen mehr, neuer Asphalt?)
 #: osm_watch: note 3954448 4
 #: osm_watch: way id="195397561" version="20"
-#: last_checked: 2024-11-23 (mapillary)
+#: last_checked: 2024-12-07
 #: check_frequency: 30d
 # REMOVED --- #: check_frequency: 45d
 #: next_check: 2024-12-31
@@ -5081,7 +5114,7 @@ Jüdenstr.: zwischen Parochialstr. und Stralauer Str. komplett gesperrt	2::inwork
 Jüdenstr.: Mittelteil komplett gesperrt	2::inwork 10783,12502 10807,12451
 # 
 #: osm_watch: note 4480556 3
-#: last_checked: 2024-11-11 (mapillary)
+#: last_checked: 2024-12-11
 Dircksenstr.: Einbahnstraßenregelung	1s:q3:inwork 11057,12715 11138,12604 11202,12426
 # 
 # REMOVED --- #: next_check_id: MOLKENMARKT-2021
@@ -5098,7 +5131,7 @@ Dircksenstr.: Einbahnstraßenregelung	1s:q3:inwork 11057,12715 11138,12604 11202,
 # REMOVED --- #: XXX Wann wird der Kran abgebaut? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: XXX Wann wird die Einbahnstraßenregelung wieder aufgehoben? (vermutlich zusammenhängend mit den Bauarbeiten am Tacheles)
 #: also_indoor: traffic
-#: last_checked: 2024-12-06
+#: last_checked: 2024-12-11
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2024-03-31
 Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174 9254,13171
@@ -5142,13 +5175,14 @@ Mariendorfer-Hafen-Weg: wegen Bauarbeiten an der Dresdner Bahn gesperrt	2::inwor
 #: by: https://www.berliner-woche.de/marzahn/c-bauen/der-abriss-der-wuhletalbruecke-hat-begonnen_a338111
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11321 (Antrag)
 #: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/wuhletalbruecke/ (voraussichtliche Bauzeit: 2022 bis 2025)
+#: by: https://www.luftbildsuche.de/info/luftbilder/baustelle-zum-sanierung-instandsetzung-autobahn-brckenbauwerk-wuhletalbrcke-ortsteil-marzahn-berlin-deutschland-656406.html
 #: source_id: viz2021:13.55807,52.56199,29.12.2022,09:42 (bis 30.6.2024) (später am Tag wieder entfernt -> inaktiv)
 #: source_id: viz2021:13.55807,52.56199,29.12.2022,09:42 (bis 30.06.2024) (inaktiv)
 #: source_id: viz2021:13.557685,52.561638,03.06.2019,12:00 (bis Ende 2022) (bis 30.6.2024) (bis 31.3.2025)
 #: source_id: viz2021:13.558565,52.562687,03.06.2019,12:00 (bis Ende 2022) (bis 30.6.2024) (bis 31.3.2025) (inaktiv)
 #: source_id: viz2021:13.55807,52.56199,27.06.2024,15:13 (bis 31.03.2025) (inaktiv)
 #: XXX Wann wird die Brücke wieder eröffnet?
-#: last_checked: 2024-10-08 (mapillary)
+#: last_checked: 2024-11-30 (luftbildsuche)
 #: check_frequency: 360d
 #: next_check: 2025-06-30
 #: valid: 20190603-20250630
@@ -5469,7 +5503,7 @@ Valeska-Gert-Str. - Am Postbahnhof: wegen Bauarbeiten gesperrt	2::inwork 12807,1
 #: source_id: viz2021:13.370715,52.524195,15.10.2012,08:00 (bis 31.12.2026)
 #: osm_watch: way id="186329816" version="41"
 #: also_indoor: traffic
-#: last_checked: 2024-11-25 (osm) vvv
+#: last_checked: 2024-12-07 vvv
 #: check_frequency: 180d vvv
 #: next_check: 2026-12-31 vvv
 # REMOVED --- #: valid: -20221230
@@ -5603,11 +5637,14 @@ Pariser Platz: Sperrung vor der amerikanischen Botschaft	2 8641,12227 8643,12208
 # 
 #: by: https://www.welt.de/vermischtes/article253583690/Carolabruecke-Dresdner-Baubuergermeister-angezeigt-Loeste-Temperatursturz-den-Einsturz-aus.html ("Mit einer Wiedereröffnung der übrigen Brückenzüge sei vorerst nicht zu rechnen.")
 #: by: https://www.dresden.de/de/stadtraum/zentrale-projekte/carolabruecke.php (Abrißarbeiten bis voraussichtlich Ende 2024)
+#: by: https://www.deutsches-architekturforum.de/thread/15410-dresden-carolabr%C3%BCcke-st-petersburger-stra%C3%9Fe-carolaplatz/?postID=771348#post771348
+#: by: https://www.dnn.de/lokales/dresden/carolabruecke-dresden-abriss-oder-erhalt-entscheidung-steht-STJQBOHKEJBS3CV72CDHOFCSCY.html (vermutlich Komplettabriss)
 #: osm_watch: way id="4214231" version="39"
 #: osm_watch: way id="10368500" version="45"
 #: also_indoor: search Carolabrücke
-#: last_checked: 2024-10-07 (okas)
-#: next_check: 2024-12-31
+#: last_checked: 2024-12-10 (Pressebericht)
+#: check_frequency: 120d
+# REMOVED -- #: next_check: 2024-12-31
 Carolabrücke (Dresden): Brücke teilweise eingestürzt, der Rest ist gesperrt	2::inwork 36969,-149635 37090,-149991
 # 
 #: section ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -5776,7 +5813,7 @@ Ingeborg-Drewitz-Allee	1 7365,12775 7386,12749
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/erweiterungsbau-bundesministerium-des-innern.562/#post-22257
 #: osm_watch: way id="257432926" version="11"
 #: XXX wegen Bauarbeiten gesperrt (nur für Baufahrzeuge), vielleicht auch dauerhaft (Teileinziehung, wird für öffentlichen Autoverkehr gesperrt)
-#: last_checked: 2024-08-15 (daf)
+#: last_checked: 2024-12-07
 #: check_frequency: 180d
 Ingeborg-Drewitz-Allee	2::inwork 7386,12749 7541,12754 7556,12763
 # REMOVED (während der Bauarbeiten vermutlich aufgehoben; außerdem Gehweg für Radfahrer frei) --- Ingeborg-Drewitz-Allee	1 7541,12754 7542,12736 7377,12729 7362,12731
