@@ -220,7 +220,7 @@ Steinplatz	1 5153,11357 5113,11305 5080,11328 5043,11354 5085,11413
 # 
 #: next_check_id: AMTREPTOWERPARK-2020
 #: XXX Einbahnstraﬂe ggfs. wiederherstellen (es sei denn, der Radweg auf der Nordseite wird fertiggestellt oder die tempor‰re Verkehrsf¸hrung bleibt dauerhaft): Am Treptower Park (Umfahrung auf Gehweg ist mˆglich)	1s:q4 14089,9610 14031,9673 13860,9861
-#: last_checked: 2024-12-05
+#: last_checked: 2024-12-12
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2024-12-31
 Am Treptower Park	1no 14089,9610 14031,9673 13860,9861
@@ -1589,7 +1589,7 @@ S¸dring, Virchow-Klinikum	1 6073,14892 6106,14890
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/herzzentrum-wedding.533/#post-23580
 #: XXX wegen Bauarbeiten komplett gesperrt --- vermutlich wird die Straﬂe dauerhaft zur¸ckgebaut
 #: XXX fr¸herer Eintrag: S¸dring, Virchow-Klinikum	1 6106,14890 6118,14889 6158,14851
-#: last_checked: 2024-09-18 vvv
+#: last_checked: 2024-12-13 (daf) vvv
 #: check_frequency: 360d vvv
 #: next_check: 2028-12-31 vvv
 S¸dring, Virchow-Klinikum	2::inwork 6106,14890 6118,14889 6158,14851 6180,14806 6210,14808 6252,14812
@@ -3902,7 +3902,7 @@ Rolandufer: unter der M¸hlendammbr¸cke wegen Abrissarbeiten gesperrt	2::inwork 1
 #: next_check_id: WOLLANK-2024
 #: XXX vermutlich wegen der Bauarbeiten an der Br¸cke Wollankstraﬂe vvv
 #: note: siehe auch Kattegatstr. --- hier muss die Einbahnstraﬂenregelung umgedreht werden
-#: last_checked: 2024-11-30 (mapillary) vvv
+#: last_checked: 2024-12-09 (mapillary) vvv
 #: next_check: 2025-06-15 vvv
 #: osm_watch: way id="1199394070" version="3"
 Sternstr.: tempor‰re Einbahnstraﬂenregelung	1::inwork 9323,17667 9383,17757
@@ -3961,7 +3961,7 @@ Erpetal - S-Bhf. Hirschgarten: Baustraﬂe, gesperrt f¸r ˆffentlichen Verkehr	2::i
 #: last_checked ^^^
 # 
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: last_checked: 2024-11-16
+#: last_checked: 2024-12-13
 #: check_frequency: 30d
 Weg im Gr¸nzug Kraatzgraben: gesperrt, Leitungsarbeiten	2::inwork 17161,9921 17257,9869
 # 
@@ -4041,7 +4041,7 @@ Frank-Schweitzer-Str.: unterhalb des Marzahner Knotens gesperrt	2::inwork 19414,
 #: osm_watch: way id="1272701939" version="5"
 #: XXX Nebau: Integrierte Sekundarschule (ISS) in Karlshorst
 #: XXX laut osm opening_date 2026-08-24 (ohne Quelle)
-#: last_checked: 2024-10-24
+#: last_checked: 2024-12-13
 #: check_frequency: 180d
 #: next_check: 2026-06-30
 (Rˆmerweg - Weg entlang der Bahnstrecke): Hochbauarbeiten, Weg gesperrt	2::inwork 18452,9755 18421,9764 18436,9842 18445,9887
@@ -4061,10 +4061,10 @@ Am Kˆllnischen Park: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 11185,
 #: osm_watch: way id="618834389" version="16"
 #: osm_watch: way id="43619494" version="8"
 #: also_indoor: traffic (G,ex-H[ungenau])
-#: note: Siehe auch bauzeitliche Umleitung Regener Str. - Biesenhorster Weg
+#: note: Siehe auch bauzeitliche Umleitung Regener Str. - Biesenhorster Weg; mittlerweile (2024-12-13) ist die Straﬂe kaum noch erkennbar
 #: priority: #C
-#: last_checked: 2024-10-14 (daf)
-#: check_frequency: 90d
+#: last_checked: 2024-12-13
+#: check_frequency: 180d
 Am alten Flugplatz: Straﬂe gesperrt	2::inwork 19697,8776 19754,8809 19778,8823 19815,8844 19891,8887 19949,8920 19972,8935
 # 
 #: next_check_id: AMWIEZENERBAHNHOF-2024
@@ -4175,7 +4175,7 @@ Lisa-Fittko-Str.: Hochbauarbeiten, Weg existiert im s¸dlichen Abschnitt noch nic
 # 
 #: next_check_id: PLANSTRASSE9-2023
 #: osm_watch: way id="20420585" version="36"
-#: last_checked: 2024-11-23
+#: last_checked: 2024-12-13
 #: check_frequency: 60d
 Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19705,9039 19638,9070
 # REMOVED (hier nicht mehr) --- Zwieseler Str. - Regener Str.: Bauarbeiten, Fahrbahn gesperrt	2::inwork 19638,9070 19621,9097
@@ -4284,15 +4284,15 @@ Vor dem Reichstag: Bauarbeiten, gesperrt	2::inwork 8373,12416 8369,12609
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: note: Danach mit Mapillary abfahren!
 #: priority: #C
-#: last_checked: 2024-12-04
-#: check_frequency: 14d
+#: last_checked: 2024-12-13
+#: check_frequency: 30d
 # REMOVED (hier offen) --- Rummelsburger Seeblick: noch nicht freigegeben	2::inwork 14927,10807 14918,10769
 Rummelsburger Seeblick: noch nicht freigegeben	2::inwork 14918,10769 14909,10732
 # 
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: note: Weitere Sperrungen sind in temp blockings, dort wo schon H‰user mit evtl. bezogenen Wohnungen stehen
 #: XXX Wann sind die Straﬂen offen? vvv
-#: last_checked: 2024-12-04 vvv
+#: last_checked: 2024-12-13 vvv
 #: check_frequency: 30d vvv
 # REMOVED (offen) --- An den Eiswerken	2::inwork 15004,10791 14994,10732
 An den Eiswerken: mit Bauzaun abgesperrt	2::inwork 14994,10732 14984,10677
@@ -4330,7 +4330,7 @@ Falkplatz: Weg gesperrt	2::inwork 10228,15488 10170,15659
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=9901 (Erw‰hnung)
 #: by: https://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10071 (Erw‰hnung (tempor‰re Entfernung))
 #: XXX Scheint Baustellenfl‰che f¸r die Arbeiten an den Bahnbr¸cken zu sein.
-#: source_id: viz2021:13.483448,52.502169,22.06.2024,16:00 (benachbarte Nˆldnerstr., bis 31.10.2024) (bis 18.11.2024) (bis 15.12.2024) (bis 31.01.2025 + weitere Arbeiten)
+#: source_id: viz2021:13.483448,52.502169,22.06.2024,16:00 (benachbarte Nˆldnerstr., bis 31.10.2024) (bis 18.11.2024) (bis 15.12.2024) (bis 31.01.2025 + weitere Arbeiten) (bis 31.03.2025)
 #: priority: #C
 #: last_checked: 2024-11-23
 #: check_frequency: 60d
@@ -4423,9 +4423,10 @@ Dieselstr. - westlicher Mergenthalerring: Durchfahrt auf der s¸dlichen Seite dur
 #: by: https://www.deutsches-architekturforum.de/thread/9726-rund-um-den-gendarmenmarkt/?postID=731755#post731755
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2023/pressemitteilung.1391568.php (Hauptarbeiten bis Ende 2024)
 #: by: https://entwicklungsstadt.de/berlin-mitte-sichtbarer-fortschritt-beim-umbau-des-gendarmenmarktes/
+#: by: https://www.tagesspiegel.de/kultur/classic-open-air-auf-dem-gendarmenmarkt-neustart-mit-anna-netrebko-12869530.html (Wiedererˆffnung am 17. Juli 2025)
 #: last_checked: 2024-11-21 vvv
 #: check_frequency: 90d vvv
-#: next_check: 2024-12-31 vvv
+#: next_check: 2025-07-17 vvv
 #: note: nur Durchgang zum Konzerthaus von der Charlottenstr. mˆglich vvv
 #: osm_watch: way id="766868087" version="14"
 Gendarmenmarkt: Sanierung, Durchgang gesperrt	2::inwork 9523,12019 9656,12031
@@ -4488,12 +4489,13 @@ Weg am Kienhorstgraben: Durchgang zur Seidelstr. gesperrt	2::inwork 3706,17931 3
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2023/pressemitteilung.1312741.php
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10953 (Antrag)
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11443 (Antrag)
+#: by: https://www.berliner-woche.de/hellersdorf/c-bauen/senat-fehlen-personal-und-finanzmittel-fuer-die-auftragsvergabe_a431449 (Sperrung mindestens bis 2026 (Anfang oder Ende?))
 #: XXX: Wird mˆglicherweise zur¸ckgebaut. Ob es einen neuen Steg geben wird, ist noch nicht entschieden.
 #: XXX: laut osm opening_date=2025-12-31 (Quelle fehlt)
 #: osm_watch: way id="27944267" version="20"
 #: last_checked: 2024-10-19
 #: check_frequency: 360d
-#: next_check: 2025-12-31
+#: next_check: 2026-01-01
 Wuhlesteg: gesperrt	2::inwork 22171,12965 22196,12961
 # 
 #: next_check_id: FAHLENBERGBRUECKE-2022
@@ -4672,17 +4674,16 @@ An der Waldsiedlung: noch nicht fertig gebaut	2::inwork 17682,8464 17652,8349
 #: note: Halteverbotsschilder bis 31.12.2024
 #: check_frequency: 90d vvv
 #: next_check: 2024-12-31 vvv
-#: last_checked: 2024-11-23
+#: last_checked: 2024-12-13
 #: XXX Asphaltierung der Fahrbahn -> qualitaet_s anpassen!
 #: note: Durchfahrt offiziell noch nicht erlaubt, aber hier parken schon Autos in der Parktaschen: q4 -> q3
 Trautenauer Str.: Bauarbeiten, Fahrbahn gesperrt, Umwege, Bordsteine	2s:q3:inwork 17753,8290 17771,8349 17794,8429
-#: last_checked: 2024-11-23
+#: last_checked: 2024-12-13
 #: XXX Asphaltierung der Fahrbahn -> qualitaet_s anpassen!
 Trautenauer Str.: Bauarbeiten, Fahrbahn gesperrt, Umwege, Bordsteine	2s:q4:inwork 17794,8429 17813,8508 17830,8578 17838,8611 17846,8644 17851,8662 17879,8773
-#: last_checked: 2024-11-16
-Georg-Klingenberg-Str.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 17792,8660 17846,8644
-#: last_checked: 2024-10-11
-Ruth-Baumgarte-Str.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 17738,8450 17794,8429
+#: last_checked: 2024-12-13
+Georg-Klingenberg-Str.: Bauarbeiten, Fahrbahn und Gehwege offiziell gesperrt	2::inwork 17792,8660 17846,8644
+# REMOVED --- #: last_checked: 2024-10-11 --- Ruth-Baumgarte-Str.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2::inwork 17738,8450 17794,8429
 #: next_check ^^^
 #: check_frequency ^^^
 # 
@@ -4704,7 +4705,7 @@ Ida-von-Arnim-Str.: Bauarbeiten zwischen Pankeweg und Chausseestr., Einbahnstraﬂ
 # 
 #: next_check_id: ZURALTENFLUSSBADEANSTALT-2021
 #: XXX nach den Bauarbeiten Kreisverkehrregelung herstellen
-#: last_checked: 2024-12-04
+#: last_checked: 2024-12-13
 #: check_frequency: 60d
 Zur Alten Flussbadeanstalt: wegen Bauarbeiten gesperrt	2::inwork 16355,9603 16376,9602 16388,9614 16389,9633
 # 

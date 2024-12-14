@@ -201,7 +201,7 @@ Waldemarstr.: Kopfsteinpflaster	Q2- 11328,10957 11290,10972 11150,11030
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1064093.php
 #: by: https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/gremien/verkehrswenderat/dokumente/artikel.1011645.php (Erwähnung)
 #: XXX Planung eines Asphaltstreifens
-#: last_checked: 2024-11-28
+#: last_checked: 2024-12-12
 #: check_frequency: 360d
 Erkelenzdamm: Kopfsteinpflaster	Q2 11038,10247 11094,10261 11117,10326 11134,10383 11109,10423 11145,10510 11192,10629 11210,10668 11244,10653 11258,10682
 Leuschnerdamm: Kopfsteinpflaster	Q2 11275,10723 11301,10783 11264,10804 11328,10957 11365,11047 11421,11073 11458,11136
@@ -852,9 +852,11 @@ Düppelstr.: Asphalt	Q0 5054,5620 4991,5531
 Königstr.: Asphalt	Q0 630,2998 548,3023 516,3021 431,2984
 Königstr.: Asphalt	Q0 548,3023 595,3067
 Königstr.: Kleinsteinpflaster	Q1 595,3067 669,3119
-Königstr.: schlechtes Kopfsteinpflaster	Q3 431,2984 292,2905 200,2855 104,2802 12,2752 -81,2699 -155,2658 -197,2634
-Königstr.: schlechtes Kopfsteinpflaster	Q3; -197,2634 -298,2577
-Königstr.: schlechtes Kopfsteinpflaster, provisorischer Asphaltstreifen	Q2-; -298,2577 -197,2634
+Königstr.: schlechtes Kopfsteinpflaster	Q3 431,2984 292,2905 200,2855 104,2802 12,2752 -81,2699 -155,2658
+#: historical_note: früher (bis etwa Herbst 2024) schlechtes Kopfsteinpflaster Q3
+Königstr.: Asphalt	Q0 -155,2658 -197,2634
+#: historical_note: früher (bis etwa Herbst 2024) schlechtes Kopfsteinpflaster Q3, Richtung NO mit einem provisorischen Asphaltstreifen, hier Q2-
+Königstr.: Asphalt	Q0 -197,2634 -298,2577
 Königsweg: Beton	Q0 -3096,1026 -3024,1069 -2813,1188 -2669,1266 -2605,1302
 Königsweg: Waldweg, mäßig bis OK	Q2+ -3096,1026 -3413,843
 Königsweg: Kleinsteinpflaster	Q1- -3413,843 -3506,791
@@ -936,7 +938,7 @@ Rollbergstr.: Asphalt	Q0 11963,8074 12147,8117
 #: next_check_id: KARLMARXSTR-2018
 #: by: https://www.berliner-woche.de/neukoelln/c-verkehr/demonstration-gegen-umleitungsverkehr-auf-der-rollbergstrasse_a176441 ("Die Rollbergstraße soll geteert werden", nach Abschluss der Bauarbeiten in der KMS)
 #: by: http://www.abendblatt-berlin.de/2019/05/04/neukoelln-neues-von-der-mammut-baustelle/ (Fugenverguss fertiggestellt) (stimmt aber nicht!)
-#: last_checked: 2024-11-26
+#: last_checked: 2024-12-12
 #: check_frequency: 120d
 Rollbergstr.: Kopfsteinpflaster	Q2 12295,8154 12327,8161 12407,8177 12545,8209 12714,8249
 # 
@@ -2469,7 +2471,7 @@ Werrastr.: Asphalt mit einigen Schäden	Q1+ 13697,8279 13650,8320
 #: by: https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2019/pressemitteilung.794639.php (ab 2021)
 #: by: https://www.luisenstadt-mitte.de/projekte/rungestrasse-strasse-am-koellnischen-park-0 (kein konkretes Datum; "Asphaltierung der Fahrgassen")
 #: XXX Neugestaltung geplant, vielleicht verschwindet dabei das Pflaster?
-#: last_checked: 2024-12-04 (mapillary)
+#: last_checked: 2024-12-12
 #: check_frequency: 90d
 Rungestr.: Kopfsteinpflaster	Q2- 11185,11883 11291,11876 11380,11863 11507,11860
 # 
@@ -13309,7 +13311,7 @@ Adolf-Wermuth-Allee: Asphalt	Q0 17639,8627 17619,8558 17599,8485 17581,8422
 # REMOVED --- #: next_check_id: PARKSTADTKARLSHORST-2021 --- #: last_checked: 2023-12-07 --- #: check_frequency: 14d
 Adolf-Wermuth-Allee: Asphalt	Q0 17668,8696 17648,8626 17628,8556 17608,8483 17588,8413
 #: next_check_id: PARKSTADTKARLSHORST-2021
-#: last_checked: 2024-11-23
+#: last_checked: 2024-12-13
 #: check_frequency: 90d
 An der Waldsiedlung: Baustraße	Q2- 17682,8464 17652,8349
 (Blockdammweg - Adolf-Wermuth-Allee): Betonpflastersteine	Q0- 17702,8855 17699,8843 17674,8738 17659,8698
@@ -14829,7 +14831,7 @@ Egestorffstr.: Asphalt	Q0 9155,-1017 9139,-1350 9093,-1670
 #: confirmed_by: srt
 Dorotheenstr.: Asphalt	Q0 22643,4058 22831,4070 22926,4123
 #: corrected_by: srt (Asphalt, Q0 -> ...)
-Loreleystr.: Asphalt mit Unebenheiten	Q1 19171,8280 19228,8350 19275,8419 19321,8486
+Loreleystr.: Asphalt mit Unebenheiten	Q1- 19171,8280 19228,8350 19275,8419 19321,8486
 Görresstr.: Asphalt	Q0 5318,7424 5273,7460 5194,7540 5073,7660
 #: corrected_by: srt (schlechtes Kopfsteinpflaster -> )
 Presselstr.: mäßiges Kopfsteinpflaster	Q2+ 6107,4718 6186,4783
@@ -16787,7 +16789,7 @@ Wandlitzstr.: Asphalt mit leichten Schäden	Q0- 18627,8475 18557,8525 18494,8569 
 #: osm_watch: way id="1009279082" version="5"
 #: XXX neue Häuser geplant (zwischen Liepnitzstr. und Stühlinger Str., Bebauungsplan 11-57a), vielleicht wird nach Fertigstellung die Fahrbahn saniert?
 #: also_indoor: traffic (ex-G)
-#: last_checked: 2024-10-11
+#: last_checked: 2024-12-13
 #: check_frequency: 90d
 # REMOVED --- #: next_check: 2023-12-31
 Wandlitzstr.: mäßiger Asphalt, z. T. mit Kopfsteinpflaster durchbrochen	Q2 18448,8602 18401,8636 18331,8685 18301,8707 18272,8764
@@ -23410,8 +23412,8 @@ Sandhofweg: gutes Verbundsteinpflaster	Q1 5848,272 5795,371 5757,434 5688,402 56
 Hielscherstr.: Asphalt/Beton	Q0 7522,19804 7556,19882
 #: XXX Bauarbeiten im November 2024, vielleicht danach bessere Qualität?
 #: confirmed_by: mapillary
-#: last_checked: 2024-11-18 (mapillary)
-#: next_check: 2024-11-22
+#: last_checked: 2024-12-09 (mapillary)
+# REMOVED --- #: next_check: 2024-11-22
 Hielscherstr.: teilweise mit Asphalt überdecktes großsteiniges Kopfsteinpflaster	Q2- 7556,19882 7604,19988 7695,20175
 #: corrected_by: mapillary
 Hielscherstr.: Asphalt	Q0 7695,20175 7735,20262
@@ -23603,13 +23605,15 @@ Schlehdornsteig: Wechsel zwischen Kopfsteinpflaster und Verbundsteinpflaster	Q1-
 Mittelstr. (Zehlendorf): schlechtes Kopfsteinpflaster	Q3 104,2802 50,3031
 # 
 #: by: Fabian Jakob: vvv
-#: corrected_by: srt (schlechtes Kopfsteinpflaster -> Kopfsteinpflaster	Q2-; bzw. unbefestigte Straße	Q2;)
+#: corrected_by: srt (schlechtes Kopfsteinpflaster -> Kopfsteinpflaster	Q2-; bzw. unbefestigte Straße, Q2;)
 #: corrected_by: srt (neu gemacht)
-Trautenauer Str.: Asphalt, letzte Deckschicht fehlt	Q1 17753,8290 17771,8349 17794,8429
-#: confirmed_by: srt (schlechtes Kopfsteinpflaster -> ...)
-Trautenauer Str.: Kopfsteinpflaster	Q2- 17794,8429 17813,8508
-#: corrected_by: srt (schlechtes Kopfsteinpflaster -> ...)
-Trautenauer Str.: Kopfsteinpflaster, mäßiger Asphaltstreifen in der Mitte	Q2 17813,8508 17830,8578
+Trautenauer Str.: Asphalt	Q0 17753,8290 17771,8349 17794,8429
+#: confirmed_by: srt (schlechtes Kopfsteinpflaster -> Kopfsteinpflaster, Q2-)
+#: corrected_by: srt (neu gemacht)
+Trautenauer Str.: Asphalt	Q0 17794,8429 17813,8508
+#: corrected_by: srt (schlechtes Kopfsteinpflaster -> Kopfsteinpflaster, mäßiger Asphaltstreifen in der Mitte, Q2)
+#: corrected_by: srt (neu gemacht)
+Trautenauer Str.: Asphalt	Q0 17813,8508 17830,8578
 #: corrected_by: srt (neuer Asphalt seit Juni 2013)
 Trautenauer Str.: Asphalt	Q0 17830,8578 17838,8611 17846,8644 17851,8662 17879,8773 17910,8881 17915,8900
 #: by: ^^^
@@ -32555,7 +32559,7 @@ Einmündungsbereich asphaltiert	Q0 546,2850
 Einmündungsbereich asphaltiert	Q0 535,2785
 Einmündungsbereich asphaltiert	Q0 543,2755
 Einmündungsbereich asphaltiert	Q0 578,2704
-Kreuzungsbereich mit schlechtem Kopfsteinpflaster	Q3 -155,2658
+# REMOVED (seit der Asphaltierung möglicherweise nicht mehr) --- Kreuzungsbereich mit schlechtem Kopfsteinpflaster	Q3 -155,2658
 Kreuzungsbereich mit schlechtem Kopfsteinpflaster	Q3 17632,6930
 Kreuzungsbereich mit schlechtem Kopfsteinpflaster	Q3 17062,11130
 Kreuzungsbereich mit Kopfsteinpflaster	Q2 16874,11188
