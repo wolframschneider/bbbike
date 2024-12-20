@@ -1171,7 +1171,7 @@ Bus 172, Bus 373	busroute_N 14120,1991 14231,1952
 Bus 373	busroute_N 14231,1952 14252,1945 14523,1847 14549,1922 14587,2032
 Bus 172	busroute_N 14231,1952 14224,1925 14203,1873 14124,1857 14062,1846 14008,1835 13890,1817 13794,1799 13679,1782 13614,1772 13657,1587 13708,1383
 Bus M44, ...	busroute_N 13708,1383 13634,1371 13413,1363 13300,1359 13194,1355 13089,1351 12938,1348
-Bus 172	busroute_N 12938,1348 12785,1308 12617,1121 12538,1075 12403,1011 12307,964 12107,898
+Bus 172	busroute_N 12938,1348 12790,1302 12657,1154 12588,1103 12538,1075 12403,1011 12307,964 12107,898
 Bus 172	busroute_N 10266,-1473 10460,-1471 10496,-1486 10508,-1511 10531,-1633 10539,-1689 10537,-1785 10513,-1954 10512,-1994 10507,-2016 10465,-2129
 Bus 172	busroute_N 10021,-1918 9959,-1918 9982,-1818
 Bus 175	busroute_N 9959,-1918 9853,-1921 9750,-1925 9648,-1928 9534,-1926 9428,-1892 9431,-1800 9443,-1626 9445,-1460 9457,-1329 9456,-1271 9379,-935
@@ -1269,6 +1269,19 @@ Bus 398	busroute_N 25138,11215 25137,11297 25199,11531 25239,11657 25254,11706 2
 Bus 398	busroute_N 25276,11779 25526,11703 25735,11639 25783,11759 25827,11867 25863,11965 25617,12035
 Bus 395, Bus 398	busroute_N 24575,11932 24739,11968 24727,12027 24936,12071 25072,12107
 Bus 136	busroute_N -2937,19008 -2904,19019 -2810,19014
+# 
+#: by: https://www.bahninfo-forum.de/read.php?9,813796,814580#msg-814580
+#: by: https://www.berliner-woche.de/blankenburg/c-verkehr/siedlungsgebiete-werden-bald-besser-erschlossen-sein_a413603
+#: by: https://media04.berliner-woche.de/article/2024/04/21/5/471695_XXL.jpg
+#: by: https://www.bvg.de/dam/jcr:e79bb0cc-3463-4960-b7f3-dce7e52e6a46/Angebots%C3%A4nderungen%2015.%20Dezember%202024.pdf
+#: by: https://www.tagesspiegel.de/berlin/bezirke/mit-eineinhalb-jahrzehnten-verspatung-diese-neue-buslinie-verkehrt-ab-montag-durch-berlin-12845717.html
+#: by: https://www.berliner-woche.de/blankenburg/c-verkehr/ab-16-dezember-ist-der-kiezbus-unterwegs_a431883
+#: note: Kiezbus Blankenburg
+# REMOVED --- #: XXX neue Buslinie 358; als "busroute" eintragen --- #: last_checked: 2024-11-18 (mapillary) vvv --- #: next_check: 2024-12-15 vvv
+Bus 358	busroute_N 13909,20928 13931,20764 13929,20745 14304,20682 14499,20649 14509,20728 14529,20807 14532,20820 14554,20891 14577,20966 14631,21136 14679,21285 14509,21337 14461,21372 14304,21399 14257,21411 14226,21419 14157,21442 14069,21471 13978,21496 13884,21524 13938,21700 13887,21714 13825,21730 13720,21761 13622,21464 13598,21360 13580,21286 13547,21162 13524,21053 13562,20913
+Bus 358	busroute_N 12814,20648 12835,20670 12865,20684 13165,21144 13204,21203 13255,21282 13371,21462 13413,21528 13479,21633 13545,21738 13601,21826 13643,21901 13687,21993 13748,22093 13766,22119 13780,22141 13695,22210 13613,22250 13541,22300 13476,22345 13404,22384 13394,22373 13354,22327 13316,22273 13267,22090 13249,22003 13315,21969 13270,21870 13220,21761 13193,21700 13182,21639 13177,21595 13171,21532 13158,21471 13345,21468 13371,21462
+# REMOVED --- #: next_check ^^^ --- #: last_checked ^^^
+# 
 #: ignore ^^^
 #: section ^^^
 # 
@@ -1518,7 +1531,7 @@ ausgeschildert nach Heinersdorf	CP2; 63464,78555 63559,78397
 # REMOVED --- Lyonstr.: noch nicht ausgeschildert	CS 12188,21330 12204,21327 12322,21378 12443,21439
 # REMOVED --- Marseillestr.: noch nicht ausgeschildert	CS 12402,21537 12404,21532 12411,21515 12443,21439
 # REMOVED --- Toulonstr.: noch nicht ausgeschildert	CS 12404,21532 12480,21560
-Kleine Querallee: nicht ausgeschildert	CS 8172,11679 8210,11775 8244,11878 8327,12174 8344,12221
+Kleine Querallee: nicht ausgeschildert	CS 8172,11679 8189,11722 8210,11775 8244,11878 8327,12174 8344,12221
 # REMOVED (Schild existiert) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/03re.pdf/file?y=2015 --- #: XXX kommen hier offizielle Straßenschilder? Eventuell auch im südlichen Abschnitt? --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20150320.1240.401484.html (feierliche Benennung) --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20150325.1600.401546.html --- #: last_checked: 2015-02-15 --- #: next_check: 2015-03-25 --- Zur alten Börse: nicht ausgeschildert	CS 18736,13080 18712,12853 18682,12599 18649,12371
 Hochspannungsweg: nicht ausgeschildert	CP2; 13761,2993 13631,2938
 # REMOVED (Schilder existieren) --- #: last_checked: 2015-04-11 --- #: check_frequency: 100d --- Darguner Str.: noch nicht ausgeschildert	CS 17566,18680 17635,18591
@@ -2166,5 +2179,15 @@ ausgeschildert LEG Brandenburg	CP2; -8634,9626 -8595,9582
 #: last_checked: 2024-11-13
 #: check_frequency: 90d
 Neben dem Dorfteich: nichts ausgeschildert	CS 17757,18991 17748,18956 17766,18949 17759,18916
+# 
+#: next_check_id: BUCKOWERFELDER-2024
+#: last_checked: 2024-12-18 vvv
+#: check_frequency: 90d vvv
+#: next_check: 2026-03-31 vvv
+Gensweg: nicht ausgeschildert	CS 12657,1154 12673,1140 12704,1102 12716,1088 12727,1074 12772,1019 12809,969
+Am Mühlanger: nicht ausgeschildert	CP2; 12673,1140 12738,1213
+#: next_check ^^^
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: section ^^^

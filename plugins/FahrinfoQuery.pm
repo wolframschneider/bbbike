@@ -17,7 +17,7 @@ package FahrinfoQuery;
 
 use strict;
 use vars qw($VERSION @ISA);
-$VERSION = '2024.09';
+$VERSION = '2024.12';
 
 use BBBikePlugin;
 push @ISA, 'BBBikePlugin';
@@ -61,9 +61,9 @@ my $bbbike_root = bbbike_root;
 
 ######################################################################
 # configurable
-my $openvbb_download_size = '67MB';
+my $openvbb_download_size = '71MB';
 my $openvbb_year = 2024;
-my $openvbb_index = 2;
+my $openvbb_index = 3;
 my $openvbb_data_url = 'https://www.vbb.de/vbbgtfs';
 ######################################################################
 
@@ -371,7 +371,7 @@ Die VBB-Haltestellendaten werden vom
 VBB Verkehrsverbund Berlin-Brandenburg GmbH
 bereitgestellt und werden von www.vbb.de heruntergeladen.
 
-Siehe auch: http://daten.berlin.de/kategorie/verkehr
+Siehe auch: https://daten.berlin.de/datensaetze/vbb-fahrplandaten-via-gtfs
 EOF
 }
 

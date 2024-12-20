@@ -161,7 +161,8 @@ Tiergarten: Rampe, eng	q3 8091,12011 8091,12023 8099,12022
 Tiergarten: Parkweg	q1 8099,12022 8102,12043 8099,12058 8107,12068 8122,12147
 Tiergarten: Parkweg	q1 8016,11770 8020,11937 8022,12016
 Tiergarten: Parkweg	q1 8034,12093 8057,12065 8052,12033 8022,12016 7999,12040 8004,12074 8034,12093 8049,12140 8055,12186
-Tiergarten: Parkweg	q1 8214,12205 8215,12156 8221,11885 8221,11876 8210,11775 8221,11690
+Tiergarten: Parkweg	q1 8214,12205 8215,12156 8221,11885 8221,11876 8210,11775
+Tiergarten: Parkweg	q1 8189,11722 8221,11690
 Tiergarten: Parkweg	q1 8005,11627 8006,11648 8014,11753 8016,11770
 Tiergarten: Parkweg	q1 7658,11947 7634,11920 7559,11888 7449,11883 7240,11907 7200,11881 7182,11870 7173,11864 7058,11809 6980,11790 6778,11742 6540,11754
 Tiergarten: Parkweg	q1 7816,12150 7823,12120 7832,12036 7822,11952 7793,11878 7795,11823 7777,11787 7765,11737 7768,11736 7773,11731 7796,11681 7813,11589 7816,11571
@@ -170,7 +171,7 @@ Tiergarten: Parkweg, Bordstein	q3 7514,12387 7529,12361
 Tiergarten: Parkweg	q1 7529,12361 7544,12346 7564,12337 7587,12340 7603,12353
 Tiergarten: Parkweg, Bordstein	q3 7603,12353 7627,12380
 Tiergarten: einige Fußgänger	q1 8571,11846 8501,11815 8244,11878 8221,11885 8132,11910 8095,11919 8020,11937
-Tiergarten: einige Fußgänger	q1 8172,11679 8210,11775 8244,11878 8327,12174 8344,12221 8391,12389 8400,12417
+Tiergarten: einige Fußgänger	q1 8172,11679 8189,11722 8210,11775 8244,11878 8327,12174 8344,12221 8391,12389 8400,12417
 Tiergarten: einige Fußgänger	q1 7765,11737 7733,11713 7682,11703 7648,11708 7575,11748 7522,11799 7423,11812 7230,11845 7200,11881
 (Parkweg entlang der Tiergartenstr.): einige Fußgänger, einige Bäume auf dem Weg	q1 8172,11679 8141,11685 8006,11648 7890,11610 7838,11603 7813,11589 7783,11573 7713,11553 7621,11541 7463,11538 7359,11538 7220,11542 7111,11524 7080,11508 6966,11490 6844,11496 6826,11479
 (Bremer Weg - Fasanerieallee): einige Fußgänger	q1 6337,11887 6379,11843 6395,11806 6417,11796 6438,11784 6540,11754
@@ -342,6 +343,7 @@ Rosa-Luxemburg-Str.: Fußgänger, Bordsteine	q3 10695,12933 10685,12966
 Lehniner Platz/Damaschkestr.: Gehweg, Bordsteine	q4 3562,10264 3492,10307
 Brücke Schönfließer Str.: Fußgänger	q3 10593,16037 10592,15968 10575,15968
 (Kolonie Bornholm 1 und 2): Fußgänger, enger Weg, Radfahren nicht erlaubt, ggfs. schieben	q3 10209,16674 10190,16930
+(Mühlendamm - Rolandufer): Gehweg, Bordstein	q4 10625,12206 10583,12206
 (zum Rolandufer): Gehweg, niedriger Bordstein	q3 11347,12223 11278,12185
 Rolandufer: Gehweg, viele Fußgänger	q3 10821,12153 10660,12176 10591,12203 10583,12206
 Spreeufer: Gehweg, viele Fußgänger, im Sommer Straßencafe	q4 10583,12206 10492,12289 10417,12378 10416,12394
@@ -920,7 +922,6 @@ Filehner Str.: zwei Bodenschwellen	q0 22395,6821 22428,6874 22448,6957 22474,706
 Wongrowitzer Steig: Bodenschwelle	q0 22474,7065 22358,7093
 Wirsitzer Weg: Bodenschwelle	q0 22448,6957 22641,6918
 (Valeska-Gert-Str. - Am Postbahnhof): Fußgänger	q1 12807,11287 12713,11372
-Fritzi-Massary-Str: Bordsteine	q3 15428,6355 15452,6384
 (Rotkehlchenweg - Kormoranweg): eng, einige Fußgänger, Bordsteine	q3 14099,3772 14189,3732
 Dürtenstr.: Fußgänger	q2 13785,4839 13825,4850 13874,4867 13914,4877
 Angelikaweg: Fußgänger	q2 15459,2921 15537,3026
@@ -1794,7 +1795,7 @@ Földerichplatz: Fußgängerzone	q3 -3942,12559 -3940,12377
 (Marzahner Promenade - Landsberger Allee [Wohngebiet]): Fußgänger	q1 20759,15740 20789,15736
 (Wasserweg - Treptower Park): einige Fußgänger, Bordstein, Zugang kann zugeparkt sein	q3 15678,8911 15617,8924
 Monumentenplatz: einige Fußgänger, Spielplatz	q2 8385,8923 8362,9007 8358,9068
-(Minna-Cauer-Str. - Lehrter Str.): Fußgänger, Radfahren offiziell verboten	q4 7895,13415 7837,13499 7795,13528 7775,13540
+(Minna-Cauer-Str. - Lehrter Str.): Fußgänger, Radfahren offiziell verboten	q4 7895,13415 7873,13448 7837,13499 7795,13528 7775,13540
 (Minna-Cauer-Str. - Lehrter Str.): einige Fußgänger, schmale Straße	q1 7775,13540 7666,13479 7653,13480
 Andreas-Hofer-Platz: einige Fußgänger, Bordsteine	q3 10490,16914 10493,16960
 Schlosspark Schönhausen: einige Fußgänger, Pflasterreihen	q1 10496,18704 10518,18750 10513,18854 10497,18883 10507,18959 10529,19055 10584,19132 10600,19225
@@ -2622,6 +2623,19 @@ Hebammensteigbrücke: Fußgänger	q3 13193,21700 13168,21706 13135,21715 13121,2167
 (Babelsberger Str. - Volkspark Wilmersdorf): Bordstein, einige Fußgänger	q3 5799,8356 5782,8344
 (Babelsberger Str. - Volkspark Wilmersdorf): Bordstein, einige Fußgänger	q3 5799,8356 5818,8354
 Tourcoingstr.: Baumstämme als Barrieren	q4 3796,16202 3781,16175
+Am Mühlanger/Knyphausenweg: Stadtplatz, einige Fußgänger	q1 12868,1315 12902,1321 12904,1299
+Am Teltowkanal: zahlreiche Temposchwellen, abwechselnd rechts und links umfahrbar	q0 15338,4341 15331,4371 14967,4641
+(Döberitzer Grünzug): einige Fußgänger	q1 7837,13499 7812,13549
+(Döberitzer Grünzug): einige Fußgänger	q1 7812,13549 7821,13559 7811,13590 7785,13595
+(Döberitzer Grünzug): einige Fußgänger	q1 7785,13595 7748,13628
+(Döberitzer Grünzug): einige Fußgänger	q1 7748,13628 7733,13622
+(Döberitzer Grünzug): einige Fußgänger	q1 7733,13622 7716,13676 7731,13691
+(Döberitzer Grünzug): einige Fußgänger	q1 7731,13691 7642,13815 7599,13891 7554,13949 7517,14019 7451,14111 7432,14157 7400,14207
+(Quartiersplatz Schleicherareal): einige Fußgänger, Spielplätze	q2 7400,14207 7303,14185
+(Döberitzer Grünzug - Klara-Franke-Str.): einige Fußgänger	q1 7451,14111 7443,14107
+(Döberitzer Grünzug - Klara-Franke-Str.): einige Fußgänger	q1 7554,13949 7547,13946
+(Döberitzer Grünzug - Klara-Franke-Str.): einige Fußgänger	q1 7642,13815 7630,13810
+(Döberitzer Grünzug - KGA Lehrter Str.): einige Fußgänger	q1 7812,13549 7795,13528
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11908,19255 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11929,19281
 Ebersstr.: Gehweg entlang des Schulhofs, Radfahren verboten, ggfs. schieben	q4 7242,8586 7270,8616 7288,8635
@@ -3580,6 +3594,7 @@ Walter-Friedrich-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::ignd
 Neuenhagener Str. (Mahlsdorf): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 24362,11954 24317,11754
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8376,6579 -8354,6590
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8339,6578 -8364,6562
+Buswendestelle Gensweg: gesperrt, ggfs. schieben	q4::igndisp 12673,1140 12609,1088 12588,1103
 Trautenauer Str.: Bauarbeiten, Fahrbahn gesperrt, Umwege, Bordsteine: gesperrt, ggfs. schieben	q3:inwork::igndisp 17753,8290 17771,8349 17794,8429
 Trautenauer Str.: Bauarbeiten, Fahrbahn gesperrt, Umwege, Bordsteine: gesperrt, ggfs. schieben	q4:inwork::igndisp 17794,8429 17813,8508 17830,8578 17838,8611 17846,8644 17851,8662 17879,8773
 Kreuzung Sewanstr./Am Tierpark	q0::igndisp; 18631,10167 18647,10172
@@ -3666,3 +3681,4 @@ Gartenfelder Str.: linker Gehweg bis Ampel	q3::igndisp; -1282,14789 -1336,14786
 Molkenmarkt - Eiergasse: linker Gehweg	q4::igndisp; 10697,12303 10700,12316
 Nahmitzer Damm: linker Gehweg bis Parkweg im Fresepark	q4::igndisp; 8736,337 8583,301
 Nahmitzer Damm: linker Gehweg bis Ampel	q4::igndisp; 8583,301 8470,310 8382,347
+Minna-Cauer-Str.: linker Gehweg	q4::igndisp; 7901,13324 7873,13448

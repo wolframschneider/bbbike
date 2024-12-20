@@ -19,7 +19,6 @@ Jüdenstr. (Mitte)	X 10830,12313
 (entlang der Hedwigskathedrale)	X 9775,12178
 (entlang der Hedwigskathedrale)	X 9771,12190
 Pariser Platz	X 8643,12208
-Pariser Platz	X 8714,12319
 George-Stephenson-Str.	X 7446,14403
 Landsberger Allee	X 19214,14966
 Landsberger Allee	X 19350,14997
@@ -112,6 +111,14 @@ Straße 33 (Rahnsdorf)	X 29662,3038
 Straße 33 (Rahnsdorf)	X 29441,3109
 Straße 33 (Rahnsdorf)	X 29284,3234
 Schützenstr. (Altglienicke)	X 19678,-817
+Gensweg	X 12716,1088
+Gensweg	X 12727,1074
+Gensweg	X 12772,1019
+Gensweg	X 12809,969
+Dyrekeweg	X 12860,1082
+Dyrekeweg	X 12879,1000
+Knyphausenweg	X 12933,1101
+Knyphausenweg	X 12946,1027
 (Mittelheide - S-Bhf. Hirschgarten)	X 24060,6059
 (zu den Depotgebäuden)	X 24733,5553
 Krumpuhler Weg	X 1302,18398
@@ -123,6 +130,7 @@ Feldstr. (Bohnsdorf)	X 21209,-734
 (Kleine Waldstr. - Waldstr.)	X 21645,-1741
 (Verlängerung der Zwieseler Str.)	X 19705,9039
 Rolandufer	X 10660,12176
+Rolandufer	X 10591,12203
 (Unterführung unter der Elsenbrücke)	X 14509,9997
 (Unterführung unter der Elsenbrücke)	X 14432,10059
 (Unterführung unter der Elsenbrücke)	X 14373,10046

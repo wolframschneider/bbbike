@@ -316,7 +316,7 @@ Wanderweg Erkner - Hessenwinkel	NL 33526,2771 33419,2765 33406,2738 33255,2762 3
 #: XXX wird hier eine Beleuchtung entstehen? Wird hier asphaltiert werden?
 #: by: https://fahrradfreundliches-neukoelln.de/blog/ausschusssitzung-strassen-gruenflaechen-und-ordnung-am-9-januar-2019
 #: by: https://api.fixmyberlin.de/api/projects/75 (Asphaltierung)
-#: osm_watch: way id="13853634" version="39"
+#: osm_watch: way id="13853634" version="40"
 #: last_checked: 2024-11-18
 #: check_frequency: 60d
 Kirchhofweg	NL 11608,7267 11687,7284 12185,7381
@@ -1154,7 +1154,8 @@ Wriezener Park - Am Wriezener Bahnhof	NL 13202,11666 13172,11651 13123,11675 130
 Straße 148	NL 17188,-46 17141,-41 17122,-41
 	NL 17158,182 17111,169 17092,164
 	NL 17042,340 17018,321 17009,305
-	NL 16339,830 16333,833 16327,834 16316,841 16287,908
+	NL 16339,830 16333,833 16327,834 16318,837 16287,908
+(Rudower Fließ - Groß-Ziethener Chaussee/Eilenburger Weg)	NL 16318,837 16294,827 16249,837 16221,872
 (Groß-Ziethener Chaussee - Am Rudower Fließ)	NL 16490,955 16464,1014
 (Am Rudower Fließ - Buchbinderweg)	NL 16464,1014 16458,1023 16429,1065
 (Am Rudower Fließ)	NL 16464,1014 16500,1042 16513,1053 16547,1111 16567,1142 16596,1188 16617,1278 16650,1356 16698,1392
@@ -1774,7 +1775,7 @@ Am Bullengraben	NL -6272,13472 -6265,13475 -6209,13499 -6076,13583 -6020,13598 -
 (Ludwig-Lesser-Park, westlicher Weg)	NL 2312,25673 2247,25796 2237,25837 2207,26090
 (Ludwig-Lesser-Park - Am Poloplatz)	NL 2207,26090 2204,26290 2199,26440 2199,26450
 (Senheimer Str. - Oranienburger Chaussee/Schwarzkittelweg)	NL 2540,26280 3013,26458
-(Minna-Cauer-Str. - Lehrter Str.)	NL 7895,13415 7837,13499 7795,13528 7775,13540
+(Minna-Cauer-Str. - Lehrter Str.)	NL 7895,13415 7873,13448 7837,13499 7795,13528 7775,13540
 (Uferweg - Bocksfeldstr.)	NL -3928,11526 -3909,11596 -3872,11619
 (Uferweg)	NL -4245,11400 -4234,11408 -4204,11432 -4181,11458 -4106,11519 -4028,11533 -3928,11526 -3824,11499 -3782,11458 -3772,11406 -3742,11409
 Ernst-Liesegang-Ufer	NL -6366,5215 -6280,5176 -6037,5371 -5932,5556 -5924,5602 -5911,5619 -5853,5674 -5828,5739 -5737,5814 -5382,5948
@@ -2056,7 +2057,7 @@ Uferweg	NL 21730,5267 21754,5221 21822,5153
 Severingstr. - Otto-Wels-Ring	NL 13692,3024 13724,3026 13747,3016 13763,3015 13787,3017 13854,3016
 (Hönower Weiherkette - Torgauer Str.)	NL 25234,15577 25216,15462 25215,15413
 (Waldweg)	NL 25175,7953 25191,7918 25207,7908
-Am Teltowkanal	NL 14796,4770 14967,4641 15338,4341 15571,4168
+Am Teltowkanal	NL 14796,4770 14967,4641 15331,4371 15338,4341 15576,4173
 Am Teltowkanal	NL 15594,4152 15585,4139 15695,4051 15859,3924 15878,3936 16066,3799 16175,3715 16233,3671 16292,3626 16344,3586 16503,3464 16674,3331
 (Straße 79 - Mauerweg)	NL 7793,19346 7784,19332 7763,19318
 (Straße 78 - Mauerweg)	NL 7715,19408 7704,19366
@@ -2121,3 +2122,16 @@ Biesenhorster Weg (Karlshorst)	NL 19972,8935 19983,8861 20002,8730 20006,8706 20
 (zur Kohlhasenbrücker Str.)	NL -6998,-1320 -6946,-1418 -6879,-1504
 #: note: das Jüdische Museum kann theoretisch beleuchtet werden, mit einigen Strahlern zum Weg hin gerichtet, aber die Beleuchtung ist zurzeit ausgeschaltet (gesehen 2024-12-09 Mon 17:20)
 Am Jüdischen Museum	NL 9770,10590 9992,10626
+# 
+(Döberitzer Grünzug)	NL 7837,13499 7812,13549
+(Döberitzer Grünzug)	NL 7812,13549 7821,13559 7811,13590 7785,13595
+(Döberitzer Grünzug)	NL 7785,13595 7748,13628
+(Döberitzer Grünzug)	NL 7748,13628 7733,13622
+(Döberitzer Grünzug)	NL 7733,13622 7716,13676 7731,13691
+(Döberitzer Grünzug)	NL 7731,13691 7642,13815 7599,13891 7554,13949 7517,14019 7451,14111 7432,14157 7400,14207
+(Quartiersplatz Schleicherareal)	NL 7400,14207 7303,14185
+(Döberitzer Grünzug - Klara-Franke-Str.)	NL 7451,14111 7443,14107
+(Döberitzer Grünzug - Klara-Franke-Str.)	NL 7554,13949 7547,13946
+(Döberitzer Grünzug - Klara-Franke-Str.)	NL 7642,13815 7630,13810
+(Döberitzer Grünzug - KGA Lehrter Str.)	NL 7812,13549 7795,13528
+# 
