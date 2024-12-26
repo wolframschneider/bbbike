@@ -853,7 +853,7 @@ Zitadellenpark	F:P -2188,14859 -2196,14735 -2350,14722 -2351,14607 -2349,14581 -
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_31_3285_3340_online.pdf (Bebauungsplan XIII-237)
 #: XXX KGA soll aufgegeben werden
 #: osm_watch: way id="19744578" version="19"
-#: last_checked: 2024-11-24
+#: last_checked: 2024-12-25
 #: check_frequency: 270d
 Hansakorso	F:Orchard 8272,7332 8137,7355 8139,7572 8182,7571 8182,7552 8224,7549 8228,7452 8293,7404 8272,7332
 Branitzer Platz	F:P 1338,12055 1381,12064 1405,12094 1396,12137 1366,12168 1325,12157 1302,12125 1303,12084 1338,12055
@@ -1604,6 +1604,7 @@ Grünanlage Treue-Herzen-Pfuhl	F:P 17608,19054 17654,19052 17659,19175 17547,191
 Weddingplatz	F:P 8037,14958 8005,14924 8057,14876 8091,14895 8037,14958
 #: note: eröffnet im Dezember 2024
 Döberitzer Grünzug	F:P 7443,14107 7406,14181 7424,14191 7504,14070 7618,13902 7718,13756 7777,13669 7831,13564 7812,13557 7755,13620 7733,13622 7705,13686 7713,13708 7630,13810 7547,13946 7443,14107
+Walslebener Platz	F:P 20272,10448 20262,10317 20261,10307 20352,10304 20357,10445 20272,10448
 #############################################################################
 # Plätze (experimentell)
 # XXX_prog: es sollte unterschieden werden zwischen Flächen, die einfach
@@ -1793,8 +1794,7 @@ Ruth-Andreas-Friedrich-Park	F:P 4096,5335 4143,5367 4170,5330 4185,5349 4222,536
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2020/pressemitteilung.999626.php (KGA bleibt)
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8425
 #: by: https://www.berliner-woche.de/wilmersdorf/c-umwelt/nachbarschaftsgarten-zur-zwischennutzung-freigegeben_a415921 (Zwischennutzung bis Ende 2024)
-#: XXX wird (oder wurde) dieser Teil der KGA aufgegeben?
-#: next_check: 2024-12-31
+# REMOVED (Block I bis III bleiben erstmal (bis 2030), Block IV (nicht bei BBBike eingezeichnet) wird aufgegeben) --- #: XXX wird (oder wurde) dieser Teil der KGA aufgegeben? --- #: osm_watch: way id="42508439" version="11" --- #: next_check: 2024-12-31
 KGA Am Stadtpark	F:Orchard 5903,8739 5855,8741 5858,8609 5907,8610
 KGA Am Stadtpark	F:Orchard 5818,8354 5831,8358 5913,8415 5909,8509 5786,8609 5790,8523 5720,8520 5724,8461 5793,8464 5799,8356 5818,8354
 #: alias ^^^
@@ -1828,7 +1828,8 @@ Strandbad Orankesee	F:Sport 15691,16123 15680,16135 15731,16208 15793,16162 1586
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_51_4717_4788_online.pdf (Bebauungsplan IX-55-3B)
 #: by: https://www.deutsches-architekturforum.de/thread/14333-gowest-areal-ehemalige-tabakfabrik/?postID=757051#post757051
 #: note: früher Brendel Leuchten/Reemtsma
-#: last_checked: 2024-10-17 (daf)
+#: last_checked: 2024-12-25 (daf)
+#: check_frequency: 360d
 #: next_check: 2026-06-15
 	F:Industrial 3895,8079 3779,8105 3777,7984 3649,7992 3639,7800 3735,7792 3731,7689 3839,7787 3884,7829 3895,8079
 #: alias: Heizkraftwerk Wilmersdorf

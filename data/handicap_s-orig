@@ -10,15 +10,10 @@
 # 
 ### Friedrichshain ###
 # 
-#: source_id: viz2021:13.457875,52.512862,28.11.2024,14:29 (bis 13.12.2024) (inaktiv)
-#: XXX zu früh bei der VIZ gemeldet? -> aktuell läuft wohl die Umsetzung (auch wenn man vor Ort außer ein paar Halteverbotsschildern nicht viel sieht) -> mittlerweile stehen teilweise Verbotsschilder, ggfs. kommen noch ein physikalische Sperren -> mittlerweile stehen die ersten Poller
-#: last_checked: 2024-12-19
-#: check_frequency: 7d
-# REMOVED --- #: next_check: 2024-12-13
-Niederbarnimstr.: Bauarbeiten, Fahrbahn gesperrt	q4+::inwork 14073,11995 14055,11964
+# REMOVED --- #: source_id: viz2021:13.457875,52.512862,28.11.2024,14:29 (bis 13.12.2024) (inaktiv) --- #: XXX zu früh bei der VIZ gemeldet? -> aktuell läuft wohl die Umsetzung (auch wenn man vor Ort außer ein paar Halteverbotsschildern nicht viel sieht) -> mittlerweile stehen teilweise Verbotsschilder, ggfs. kommen noch ein physikalische Sperren -> mittlerweile stehen die ersten Poller --- #: last_checked: 2024-12-24 --- #: check_frequency: 7d --- # REMOVED --- #: next_check: 2024-12-13 --- Niederbarnimstr.: Bauarbeiten, Fahrbahn gesperrt	q4+::inwork 14073,11995 14055,11964
 # 
 #: note: Halteverbotsschilder bis 30.06.2025
-#: last_checked: 2024-12-17
+#: last_checked: 2024-12-24
 #: check_frequency: 60d
 #: next_check_id: 2025-06-30
 Dirschauer Str.: Hochbauarbeiten, Einbahnstraßenregelung	q3::inwork; 14031,11569 13970,11366
@@ -51,7 +46,7 @@ Virchowstr.: Anbindung zur Kniprodestr. gesperrt	q3::inwork 12640,13814 12707,13
 #: note: für Radfahrer existiert eine offizielle Fahrgasse, allerdings schmal und mit kurzen Bordsteinrampen
 #: osm_watch: way id="1072662716" version="11"
 #: osm_watch: way id="1072662717" version="13"
-#: last_checked: 2024-12-21
+#: last_checked: 2024-12-24
 #: check_frequency: 90d
 #: next_check: 2026-12-31
 Gubener Str.: Engstelle an der Warschauer Str.	q3::inwork 13568,11560 13603,11538
@@ -60,7 +55,7 @@ Gubener Str.: Engstelle an der Warschauer Str.	q3::inwork 13568,11560 13603,1153
 #: osm_watch: way id="1327235572" version="3"
 #: osm_watch: way id="1146013233" version="6"
 #: osm_watch: way id="1134071039" version="8"
-#: last_checked: 2024-12-19 vvv
+#: last_checked: 2024-12-24 vvv
 #: check_frequency: 14d vvv
 Gubener Str./Comeniusplatz: Bauarbeiten im Einmündungsbereich	q3::inwork 13352,12003 13406,11896 13467,11778
 Comeniusplatz/Gubener Str.: Bauarbeiten im Einmündungsbereich	q3::inwork 13275,11830 13406,11896
@@ -115,7 +110,7 @@ Müncheberger Str.: schmaler Gehweg, Fußgänger, Bordstein	q4+::inwork 12558,11920
 #: osm_watch: way id="936801541" version="6"
 #: osm_watch: way id="36987812" version="17"
 #: also_indoor: traffic (W,G)
-#: last_checked: 2024-12-13
+#: last_checked: 2024-12-24
 #: check_frequency: 60d
 # REMOVED --- #: check_frequency: 90d
 # REMOVED --- #: next_check: 2024-07-01
@@ -139,12 +134,13 @@ Kinzigstr.: Bauarbeiten an der Einmündung Frankfurter Allee, Fahrbahn gesperrt	q
 #: next_check_id: OSTBAHNHOF-2021
 #: by: https://bauprojekte.deutschebahn.com/p/berlin-ostbahnhof (bis 2025?)
 #: by: https://www.berliner-zeitung.de/mensch-metropole/friedrichshain-ploetzlich-wurde-es-hell-was-passiert-eigentlich-im-berliner-ostbahnhof-li.418658 (bis 2026)
+#: by: https://www.berliner-woche.de/friedrichshain/c-bauen/bahn-beendet-dachsanierung-am-ostbahnhof_a432168
 #: XXX Wann sind die Bauarbeiten beendet?
 #: XXX Nach Ende der Bauarbeiten prüfen, ob der Markt hier wieder zurückkommt; dann den existierenden temp-blockings-Eintrag reaktivieren.
 #: osm_watch: way id="272512103" version="9"
 #: osm_watch: way id="767674684" version="1"
 #: last_checked: 2024-12-06 vvv
-#: check_frequency: 120d vvv
+#: check_frequency: 90d vvv
 #: next_check: 2026-01-01 vvv
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
 (Straße der Pariser Kommune - Erich-Steinfurth-Str.): einige Fußgänger	q2; 12660,11705 12634,11705 12608,11692
@@ -449,17 +445,6 @@ Bunsenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 8904,12489 8892,12576
 # REMOVED (explizit für Radfahrer frei) --- #: next_check_id: VOLTAIRE-2019 --- #: by: http://www.dafmap.de/d/berlin.html?id=3731&mt=0&zoom=18 --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1906/nachricht6759.html (Fertigstellung des Grandaire für III/2020 geplant) --- #: also_indoor: traffic (G) --- #: XXX Fußgängerschutztunnel auf dem südlichen Gehweg --- #: last_checked: 2020-09-23 --- #: check_frequency: 14d --- Voltairestr.: wegen Baustelle kann die Fahrbahn gesperrt sein, Ausweichen auf Gehweg	q3::inwork 11329,12497 11209,12430
 # REMOVED (beendet) --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet? --- #: also_indoor: traffic --- #: last_checked: 2021-05-28 --- #: check_frequency: 7d --- Dircksenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 11209,12430 11156,12581
 # REMOVED (Fahrbahn offen) --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2016/5_2016_anlage2_b_plan_1_43a_erneuter_beschluss.pdf --- #: by: http://www.dafmap.de/d/berlin.html?id=3220&mt=0&zoom=16 --- #: by: http://www.dafmap.de/d/berlin.html?id=3730&mt=0&zoom=16 --- #: by: https://www.architektur-urbanistik.berlin/index.php?threads/volt-berlin-baufeld-e3a.312/page-8#post-14027 --- #: XXX Bebauungsplanentwurf I-43a "Südliche Alexanderstraße": entsteht hier eine Planstraße? --- #: XXX mittlerweile existiert hier schon eine teilweise asphaltierte Straße, Fahrbahn ist noch abgesperrt --- #: last_checked: 2022-08-12 --- #: check_frequency: 60d --- (zwischen VoltAir und The Student Hotel): Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwork 11240,12368 11344,12410
-# 
-#: next_check_id: MOLKENMARKT-2021
-#: osm_watch: way id="751595931" version="5"
-#: also_indoor: webcam https://molkenmarkt02.hi-res-cam.com/
-#: also_indoor: traffic (H,B)
-#: note: Die Hälfte der Container ist mittlerweile weg, aber es ist weiterhin die gesamte Breite der Fahrbahn gesperrt.
-#: XXX Container sind abgebaut: wie sieht die Situation in der Straße nun aus?
-#: last_checked: 2024-12-17
-#: next_check: 2024-12-19
-Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontainer)	q2::inwork 10831,12371 10957,12401
-# 
 # REMOVED --- #: by: https://pbs.twimg.com/media/FDQLQ1eXsAQEkQY?format=jpg&name=large --- #: last_checked: 2022-12-27 --- #: check_frequency: 60d --- (Grunerstr. - Gustav-Böß-Str.): Radweg wegen Bauarbeiten abgesperrt	q4::inwork 10868,12572 10772,12515
 # REMOVED --- #: by: wosch --- #: confirmed_by: srt --- #: XXX wann sind die Bauarbeiten beendet? --- #: last_checked: 2020-03-30 --- #: check_frequency: 10d --- Friedrichsgracht: direkter Zugang zum Werderschen Markt wegen Bauarbeiten versperrt, Umweg (ca. 150m), Bordsteine	q4+::inwork 10109,12238 10129,12200 10207,12055
 # REMOVED (Bauarbeiten beendet) --- #: by: https://www.deutsches-architektur-forum.de/forum/showpost.php?p=632731&postcount=1072 --- #: by: https://www.architektur-urbanistik.berlin/index.php?threads/arch%C3%A4ologisches-haus-besucherzentrum-am-petriplatz.789/#post-14039 --- #: by: https://www.berliner-woche.de/mitte/c-bauen/schluesseluebergabe-fuers-haus-petri_a420407 --- #: by: https://www.berlin.de/sen/sbw/presse/pressemeldungen/pressemitteilung.1461126.php --- #: add_fragezeichen: Wann sind die Bauarbeiten beendet? --- #: XXX verursachende Bauarbeiten sind die am Archäologischen Haus --- #: last_checked: 2024-07-09 (mapillary) --- #: check_frequency: 60d --- Scharrenstr. und Kleine Gertraudenstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3-::inwork 10364,11896 10332,11929 10392,11991
@@ -471,7 +456,7 @@ Parochialstr.: Fahrbahn zwischen Jüdenstr. und Klosterstr. gesperrt (Baucontaine
 #: note: laut rbb Bauarbeiten bis 2028-03-31
 #: XXX verursachende Bauarbeiten sind die am House of One
 #: osm_watch: way id="194079586" version="5"
-#: last_checked: 2024-12-17
+#: last_checked: 2024-12-23
 #: check_frequency: 90d
 #: next_check: 2028-03-31
 Petriplatz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwork 10418,12016 10460,11979
@@ -551,7 +536,7 @@ Petriplatz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg	q4::inwo
 #: by: https://checkpoint.tagesspiegel.de/langmeldung/5LtzlX5KtAu8WD6maa4oZ (geplanter Baubeginn für die Straßensanierung 2026 (!))
 #: also_indoor: traffic
 #: priority: #B vvv
-#: last_checked: 2024-12-19 (mapillary) vvv
+#: last_checked: 2024-12-23 vvv
 #: check_frequency: 30d vvv
 #: next_check: 2026-06-30 vvv
 #: osm_watch: way id="153698394" version="16"
@@ -684,8 +669,10 @@ Mellenseestr.: Bauarbeiten, Abschnitte der Fahrbahn gesperrt	q3::inwork 17774,99
 # 
 #: note: Halteverbotsschilder bis 23.12.2024
 #: also_indoor: traffic (H,B,T)
-#: last_checked: 2024-12-04
-#: next_check: 2024-12-23
+#: add_fragezeichen: Sind die Bauarbeiten beendet?
+#: last_checked: 2024-12-24
+#: check_frequency: 14d
+# REMOVED --- #: next_check: 2024-12-23
 # REMOVED --- #: valid: -20241223
 Sangeallee: Bauarbeiten, Abschnitt der Fahrbahn gesperrt, Engstelle	q3::inwork 18134,9080 18247,9158
 # 
@@ -964,7 +951,7 @@ Erkstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg, Umwege	q4::inwo
 # REMOVED (kein Hindernis mehr) --- #: next_check_id: RICHARDSTR-2014 vvv --- #: XXX bis wann ist die Baustelle fertig? vvv --- #: last_checked: 2014-10-31 vvv --- #: check_frequency: 14d vvv --- Richardstr.: Bauarbeiten, schmale Gasse für Fußgänger	q4::inwork 13081,7907 13045,7938
 # REMOVED --- #: note: nur teilweise --- Richardstr.: Bauarbeiten, auf Gehweg ausweichen	q3::inwork 13150,7845 13103,7889
 # REMOVED (mittlerweile existiert eine Fahrgasse) --- #: last_checked: 2014-09-26 --- #: check_frequency: 30d --- Maybachufer: Bauarbeiten an der Kreuzung Friedelstr., Ausweichen über Gehweg	q3::inwork 12088,9775 12250,9691
-# REMOVED --- #: next_check_id: PLATZHOF-2014 --- #: by: http://www.aktion-kms.de/projekte/#Platz-der-Stadt-Hof --- #: by: http://www.aktion-kms.de/files/p23.v_l01_120809.pdf --- #: by: http://www.aktion-kms.de/files/pl_d_std_hof_flyer_5.pdf --- #: XXX die Straße wird irgendwann für den Autoverkehr gesperrt werden --- #: XXX unter Umständen wird die Fertigstellung erst 2015 sein, siehe http://www.aktion-kms.de/files/120427_bauphasen_karl-marx-strasse_bau_2012-2020_kl.pdf --- #: XXX ... oder Ende 2013, siehe http://www.aktion-kms.de/projekte/umbau-platz-der-stadt-hof/ --- #: last_checked: 2014-04-11 vvv --- #: check_frequency: 15d vvv --- Richardstr.: Baurbeiten, Ausweichen auf Gehweg	q2::inwork 12870,8087 12797,8168 12779,8188 --- #: check_frequency ^^^ --- #: last_checked ^^^
+# REMOVED --- #: next_check_id: PLATZHOF-2014 --- #: by: http://www.aktion-kms.de/projekte/#Platz-der-Stadt-Hof --- #: by: http://www.aktion-kms.de/files/p23.v_l01_120809.pdf --- #: by: http://www.aktion-kms.de/files/pl_d_std_hof_flyer_5.pdf --- #: XXX die Straße wird irgendwann für den Autoverkehr gesperrt werden --- #: XXX unter Umständen wird die Fertigstellung erst 2015 sein, siehe http://www.aktion-kms.de/files/120427_bauphasen_karl-marx-strasse_bau_2012-2020_kl.pdf --- #: XXX ... oder Ende 2013, siehe http://www.aktion-kms.de/projekte/umbau-platz-der-stadt-hof/ --- #: last_checked: 2014-04-11 vvv --- #: check_frequency: 15d vvv --- Richardstr.: Bauarbeiten, Ausweichen auf Gehweg	q2::inwork 12870,8087 12797,8168 12779,8188 --- #: check_frequency ^^^ --- #: last_checked ^^^
 # REMOVED (fertig, noch immer KS) --- #: next_check_id: FRIEDEL-2014 --- #: XXX: eventuell wird mit den Bauarbeiten an den Wasserleitungen auch die Fahrbahn neu gemacht? --- #: last_checked: 2014-12-12 --- #: check_frequency: 60d --- Friedelstr.: Bauarbeiten, Einbahnstraße Richtung Süden	q3::inwork; 12066,9558 12074,9689 12088,9775
 # 
 ### Lichtenberg ###
@@ -981,9 +968,9 @@ Am Stadtpark: Baustelleneinrichtung, Fahrbahn gesperrt	q2::inwork 15357,12813 15
 # REMOVED (nicht mehr) --- #: next_check_id: RUSCHEAMPEL-2024 --- #: XXX siehe auch vorbereiteten Eintrag in handicap_directed, vielleicht wird diese Verkehrsführung in einer späteren Phase realisiert? --- #: last_checked: 2024-05-02 vvv --- #: check_frequency: 30d vvv --- #: next_check: 2024-06-14 vvv --- #: valid: -20240614 vvv --- # REMOVED (hier nicht mehr) --- Bornitzstr.: Sperrung der Fahrbahn an der Ruschestr., Umweg über Gehwege	q3::inwork 15747,12880 15950,12886 --- Bornitzstr.: Sperrung der Fahrbahn an der Ruschestr., Umweg über Gehwege	q3::inwork 15950,12886 16073,12883 --- #: valid ^^^ --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
 #: next_check_id: ONTARIOSEE-2023
-#: osm_watch: way id="42701160" version="38"
-#: osm_watch: way id="1193560283" version="7"
-#: last_checked: 2024-11-23
+#: osm_watch: way id="42701160" version="39"
+#: osm_watch: way id="1193560283" version="8"
+#: last_checked: 2024-12-24
 #: check_frequency: 90d
 #: next_check: 2025-06-06
 Ontarioseestr.: Fahrbahn abschnittsweise gesperrt, Bordsteine	q3::inwork 18552,10135 18585,10024 18411,10037
@@ -991,7 +978,7 @@ Ontarioseestr.: Fahrbahn abschnittsweise gesperrt, Bordsteine	q3::inwork 18552,1
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX wird es noch eine offizielle Verbindung zwischen Hauptstr. und Radweg bzw. Gustav-Tempel-Str. geben?
 #: XXX mittlerweile gibt es auch eine unbefestigte Verbindung, ist aber bei Regenwetter ziemlich matschig
-#: last_checked: 2024-12-13
+#: last_checked: 2024-12-24
 Gustav-Tempel-Str.: kurzes Stück Bürgersteig	q3::inwork 15261,10738 15245,10719
 # REMOVED (hier nicht mehr) --- Gustav-Tempel-Str.: Bauarbeiten, Absperrungen, ggfs. auf Bürgersteig ausweichen	q3::inwork 15245,10719 15236,10684
 # 
@@ -1276,7 +1263,7 @@ Lehderstr.: Hochbauarbeiten, einige Meter der Fahrbahn westlich der Roelckestr. 
 ### Biesdorf ###
 # 
 #: also_indoor: traffic (T,G,B)
-#: last_checked: 2024-12-14 (traffic)
+#: last_checked: 2024-12-23 (traffic)
 #: check_frequency: 10d
 Grabensprung: einige Meter der Fahrbahn gesperrt	q3::inwork 20518,11346 20515,11275
 # 
@@ -1916,7 +1903,7 @@ Oppelner Str.: Bodenschwellen	q0- 12897,10439 12968,10564 12978,10581
 #: XXX nach den Bauarbeiten wiederherstellen: Martin-Hoffmann-Str.: Bodenschwellen (2x)	q1 14077,10016 14289,9870
 #: source_id: viz2021:13.460697,52.49394,15.10.2024,07:00 (bis 15.12.2024) (bis 15.03.2025)
 #: also_indoor: traffic (none)
-#: last_checked: 2024-12-20
+#: last_checked: 2024-12-25
 # REMOVED --- #: check_frequency: 14d
 #: check_frequency: 30d
 #: next_check: 2025-03-15
@@ -2583,7 +2570,7 @@ Kaunstr.: Fußgänger	q1 -999,2726 -984,2692
 Brascheweg: enge Straße	q1 18881,9865 18810,9850
 #: XXX_prog BS an der östlichen Seite, sonst wäre es q2
 Brascheweg: Fußgänger, Bordstein	q3 18810,9850 18769,9839
-Rudolf-Grosse-Str.: Fußgänger	q1 19141,9709 19142,9755
+Rudolf-Grosse-Str.: Fußgänger	q1 19137,9706 19142,9755
 Nebelsteig: enge Straße	q1+ 23561,10572 23534,10446
 Heuetsteig: enge Straße	q1+ 23561,10572 23681,10552
 Hornungweg: enge Straße	q1+ 23792,10926 23750,10797 23715,10665 23681,10552 23638,10408
@@ -3628,8 +3615,8 @@ Georg-Steger-Weg: Radfahrer sollen schieben	q4 1432,1964 1432,1953 1432,1904 147
 (entlang der Wendeschleife): eng, kurvig	q2 23467,3891 23486,3862 23476,3829
 Schillingstr.: breiter Geh- und Radweg	q0- 11472,12406 11485,12391 11435,12282
 #: osm_watch: way id="1076571010" version="1"
-#: last_checked: 2024-12-19
-#: check_frequency: 90d
+#: last_checked: 2024-12-23
+#: check_frequency: 60d
 #: note: früher: breiter Geh- und Radweg	q0-
 Schillingstr.: Engstelle wegen Baustelle	q1- 11435,12282 11417,12243
 Schillingstr.: breiter Geh- und Radweg	q0- 11417,12243 11388,12202
@@ -4702,7 +4689,7 @@ Golda-Meir-Steg: Fußgänger	q2 7861,14133 7899,14157 7962,14198
 #: XXX_prog: BS an beiden Enden, ansonsten trotzdem q3
 (Holzmarktstr. - Ifflandstr.): Fußgänger, Bordsteine	q3 11515,12293 11584,12258 11589,12296
 #: note: Gehweg, Radfahrer frei
-Johannes-Zoschke-Str.: einige Fußgänger	q1 19037,9636 19042,9708
+Johannes-Zoschke-Str.: einige Fußgänger	q1 19037,9636 19042,9702
 #: note: Gehweg, nicht freigegeben, aber eher geringe Fußgängerfrequenz
 Brodenbacher Weg: einige Fußgänger	q2 15278,17152 15308,17166
 #: note: Grünanlage, Zusatzschild existiert, aber nicht erkennbar vvv
@@ -6805,7 +6792,7 @@ Dualastr.: enge Straße	q1 6019,15841 5848,15685
 # 
 #: by: hannes Peters:
 #: corrected_by: srt/policy (q3 -> q1)
-(Horterweg - Römerweg): einige Fußgänger	q1 19005,9816 19003,9800 18994,9707
+(Horterweg - Römerweg): einige Fußgänger	q1 19005,9816 19003,9800 18999,9701
 # 
 #: by: Markus Brandt:
 Kissingenplatz: Bordsteine	q4 11405,17985 11390,17962
