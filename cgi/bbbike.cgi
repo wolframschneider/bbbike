@@ -1088,7 +1088,7 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = '11.013';
+$VERSION = '11.014';
 
 use vars qw($delim $font);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
@@ -1405,7 +1405,7 @@ foreach my $type (qw(start via ziel)) {
 	for my $old_param (BBBikeCGI::Util::my_multi_param($q, $type . 'c_wgs84')) {
 	    my($lon,$lat) = split /,/, $old_param;
 	    if ($lon == 0 && $lat == 0) {
-		send_error(reason => "Highly probably wrong coordinate $lon/$lat in '$type', refusing to continue work.");
+		send_error(reason => "Highly probably wrong coordinate $lon/$lat in '$type', refusing to continue work.", tag => 'wrongcoord');
 	    }
 	    my($x,$y) = convert_wgs84_to_data($lon,$lat);
 	    push @new_params, "$x,$y";
@@ -1585,7 +1585,7 @@ if ($use_file_cache) {
 		    warn "DEBUG: Cache hit for " . $q->query_string . "\n";
 		    http_req_logging();
 		}
-		http_header(@{ $meta->{headers} || [] }, '-X-bbbike-file-cache' => 'HIT');
+		http_header(@{ $meta->{headers} || [] }, '-X-bbbike-file-cache' => 'HIT', -x_tag => 'fc.hit');
 		$cache_entry->stream_content;
 		my_exit(0);
 	    }
@@ -2417,7 +2417,7 @@ sub choose_form {
 
     my %header_args = @weak_cache;
     $header_args{-expires} = '+1d';
-    http_header(%header_args);
+    http_header(%header_args, -x_tag => 'rm.chooseform');
     my @extra_headers;
 
     if ($bi->{'can_javascript'}) {
@@ -3401,7 +3401,7 @@ sub choose_ch_form {
 	$per_char_filtering = 1;
     }
 
-    http_header(@weak_cache);
+    http_header(@weak_cache, -x_tag => 'rm.choosechform');
     header();
 
     print "<b>" . M($printtype) . "</b>";
@@ -3747,7 +3747,7 @@ sub get_kreuzung {
 	# my_exit(0);
     }
 
-    http_header(@weak_cache);
+    http_header(@weak_cache, -x_tag => 'rm.crossing');
     my %header_args;
     $header_args{-script} = bbbike_result_js();
     $header_args{-result} = M("Kreuzung");
@@ -5049,6 +5049,7 @@ sub display_route {
 	http_header
 	    (-type => "application/x-palm-database",
 	     -Content_Disposition => "attachment; filename=$filename",
+	     -x_tag => 'rm.route.palm',
 	    );
 	print BBBikePalm::route2palm(-net => $net, -route => $r,
 				     -startname => $startname,
@@ -5075,7 +5076,7 @@ sub display_route {
 	    (-type => "application/gpx+xml",
 	     -Content_Disposition => "attachment; filename=$filename",
 	    );
-	http_header(@headers);
+	http_header(@headers, -x_tag => 'rm.route.gpxtrack');
 	my $s = $route_to_strassen_object->();
 	if ($q->param('simplify_tolerance')) {
 	    my $simplify_tolerance = int($q->param('simplify_tolerance'));
@@ -5101,7 +5102,7 @@ sub display_route {
 	     -Content_Disposition => "attachment; filename=$filename",
 	     @weak_cache,
 	    );
-	http_header(@headers);
+	http_header(@headers, -x_tag => 'rm.route.kmltrack');
 	my $s = $route_to_strassen_object->();
 	my $s_kml = Strassen::KML->new($s);
 	$s_kml->{"GlobalDirectives"}->{"map"}[0] = "polar" if $data_is_wgs84;
@@ -5696,6 +5697,7 @@ sub display_route {
 		(-type => "text/plain",
 		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
+		 -x_tag => 'rm.route.perldump',
 		);
 	    print Data::Dumper->new([$res], ['route'])->Dump;
 	} elsif ($output_as =~ /^yaml(.*)/) {
@@ -5707,6 +5709,7 @@ sub display_route {
 		(-type => "application/x-yaml",
 		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
+		 -x_tag => 'rm.route.yaml',
 		);
 	    if ($is_short) {
 		my $short_res = {LongLatPath => $res->{LongLatPath}};
@@ -5722,7 +5725,7 @@ sub display_route {
 		 @weak_cache,
 		 cors_handling(),
 		);
-	    http_header(@headers);
+	    http_header(@headers, -x_tag => 'rm.route.json');
 	    my $json_output;
 	    if ($is_short) {
 		my $short_res = {LongLatPath => $res->{LongLatPath}};
@@ -5745,6 +5748,7 @@ sub display_route {
 		(-type => "application/json",
 		 @weak_cache,
 		 cors_handling(),
+		 -x_tag => 'rm.route.geojson',
 		);
 	    require BBBikeGeoJSON;
 	    print BBBikeGeoJSON::bbbikecgires_to_geojson_json($res, short => $is_short);
@@ -5781,6 +5785,7 @@ sub display_route {
 		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
 		 cors_handling(),
+		 -x_tag => 'rm.route.xml',
 		);
 	    my $new_res = {};
 	    while(my($k,$v) = each %$res) {
@@ -5826,6 +5831,7 @@ sub display_route {
 
     http_header(@weak_cache,
 		-cookie => $cookie,
+		-x_tag => 'rm.route.html',
 	       );
     my %header_args;
 ##XXX die Idee hierbei war: table.background ist bei Netscape der Hintergrund
@@ -7248,7 +7254,7 @@ sub draw_route {
 	    $cache_file = $cache_entry->get_content_filename;
 	    $cache_entry->put_content(undef, {_additional_filecache_info($q), headers => \@headers});
 	}
-	http_header(@headers);
+	http_header(@headers, -x_tag => 'rm.drawroute.pdf');
 
 	if (defined $bbbikedraw_pdf_module && !$bbbikedraw_args{Module}) {
 	    $bbbikedraw_args{Module} = $bbbikedraw_pdf_module;
@@ -7286,6 +7292,7 @@ sub draw_route {
 	if (!$header_written) {
 	    http_header(-type => 'text/html',
 			@no_cache,
+			-x_tag => 'error.drawroute',
 		       );
 	    print "<body>$err</body>";
 	} # else just die
@@ -7293,10 +7300,12 @@ sub draw_route {
     }
 
     if (!$header_written && !$draw->module_handles_all_cgi) {
+	(my $tagval = $draw->suffix) =~ s/[^A-Za-z]//g;
 	http_header
 	    (-type => $draw->mimetype,
 	     @header_args,
 	     -Content_Disposition => "inline; filename=bbbike.".$draw->suffix,
+	     -x_tag => "rm.drawroute.$tagval",
 	    );
     }
 
@@ -7446,7 +7455,7 @@ sub create_map {
 
 sub draw_map {
     my(%args) = @_;
-    http_header(@weak_cache);
+    http_header(@weak_cache, -x_tag => 'rm.map');
 
     my %res = create_map(%args);
     my($img_url) = @res{qw(imgurl)};
@@ -8014,7 +8023,7 @@ sub fix_coords {
 		 $$varref eq ''    or
 		 exists $net->{Net}{$$varref});
 	if ($$varref !~ /,/) {
-	    send_error(reason => "Invalid coordinate format in '$$varref', missing comma", quiet => 1);
+	    send_error(reason => "Invalid coordinate format in '$$varref', missing comma", quiet => 1, tag => 'wrongfmt');
 	}
 	if (!defined $kr) {
 	    new_kreuzungen();
@@ -8925,7 +8934,7 @@ sub window_open {
 }
 
 sub call_bikepower {
-    http_header(@no_cache);
+    http_header(@no_cache, -x_tag => 'rm.bikepower');
     eval q{
 	require BikePower::HTML;
 	# XXX no support for css in BikePower::HTML
@@ -9431,7 +9440,7 @@ sub draw_route_from_fh {
 	$q->delete('routefile_submit');
 	draw_route();
     } else {
-	http_header(@no_cache);
+	http_header(@no_cache, -x_tag => 'rm.drawroutefh');
 	header();
 	print "Dateiformat nicht erkannt: $err";
 	upload_button_html();
@@ -9442,7 +9451,7 @@ sub draw_route_from_fh {
 }
 
 sub upload_button {
-    http_header(@no_cache); # wegen dummy
+    http_header(@no_cache, -x_tag => 'rm.upload'); # wegen dummy
     header();
     upload_button_html();
     footer();
@@ -9835,6 +9844,7 @@ sub http_req_logging {
 sub send_error {
     my(%args) = @_;
     my $reason = delete $args{reason} || 'Unknown error';
+    my $tag = delete $args{tag} || 'unknown';
     my $quiet = delete $args{quiet};
     die "Unhandled args: " . join(" ", %args) if %args;
     my $output_as = $q->param('output_as');
@@ -9843,6 +9853,7 @@ sub send_error {
 	http_header
 	    (-type => "application/json",
 	     @weak_cache,
+	     -x_tag => "error.$tag",
 	    );
 	print JSON::XS->new->utf8->allow_blessed(1)->encode({error => $reason});
     } else {
@@ -9850,6 +9861,7 @@ sub send_error {
 	    (-type => "text/plain",
 	     -status => "400 Bad Request",
 	     @weak_cache,
+	     -x_tag => "error.$tag",
 	    );
 	print "Error: $reason\n";
     }
@@ -9864,6 +9876,7 @@ sub show_session_expired_error {
     http_header
 	(-type => 'text/html',
 	 @no_cache,
+	 -x_tag => 'error.sessionexpired',
 	);
     header(-title => M('Fehler: Sitzung ist abgelaufen'));
     print <<EOF;
@@ -9878,7 +9891,7 @@ EOF
 # Information
 #
 sub show_info {
-    http_header(@weak_cache);
+    http_header(@weak_cache, -x_tag => 'rm.info');
     header(-from => 'info');
     my $perl_url = "https://www.perl.org/";
     my $cpan = "https://www.cpan.org/";
