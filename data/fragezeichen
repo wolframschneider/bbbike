@@ -295,7 +295,6 @@ Werbelow - Brietzig: existiert eine Ausschilderung für die Berlin-Usedom-Alterna
 Werbelow - Brietzig: Qualität? existiert eine Ausschilderung für die Berlin-Usedom-Alternative?	? 40624,117961 41087,118619 41514,119034 41758,119326 41855,119411 42221,119716
 Brietzig - Wilsikow: Qualität?	? 41855,119411 40856,120094 40697,120118 40015,120435 39844,120447 39686,120350
 Demnitz - Altwigshagen: Qualität?	? 35047,144242 35170,144280 35505,144226 35871,144207 35920,144152 36828,144640 36901,144823 37114,144939
-Barkhausenstr.: Qualität?	? -11630,16445 -11783,16506
 Radweg Lychen - Himmelpfort: Qualität (Am Anfang bei Lychen noch asphaltiert)?	? 234,89271 213,89085 188,88982 80,88883 -15,88653 -133,88520 -334,88568 -902,88315 -1764,87733 -2399,87248 -2422,86944 -2709,86901 -3001,86675 -3291,86302
 L15 - Neuthymen: Qualität (zumindest am südlichen Ende asphaltiert)?	? -4847,88034 -5332,88826 -5429,89137 -5457,89570 -5493,89713
 Gartenstr. (Elstal): Qualität?	? -18164,14194 -18107,14301 -18017,14480 -17979,14574 -17937,14727 -17871,14855 -17821,14925 -17763,15004
@@ -844,7 +843,6 @@ Groß Friedenwalde - Flieth: Asphalt (ist hier tatsächlich asphaltiert?)	? 35894,
 # added from brunnels
 B404 (was ist hier oben?)	? -197853,130794 -197527,130848
 # added from gesperrt
-Dernburgstr. (Ist die Einbahnstraße mittlerweile für Radfahrer geöffnet oder wird das in Zukunft passieren?)	? 2493,10675 2378,10677 2310,10732 2233,11049
 Lindenallee (Ist die Einbahnstraße mittlerweile für Radfahrer offen?)	? 1429,11528 1403,11428
 Slatan-Dudow-Str. (Potsdam): gesperrt wegen Bauarbeiten (Ist die Straße noch wegen Bauarbeiten gesperrt?)	? -7476,-4673 -7353,-4785
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
@@ -870,9 +868,9 @@ Marianne-Foerster-Str.: Qualität? (laut osm Verbundsteinpflaster) (Sind die Stra
 Beate-Hahn-Str.: Qualität? (laut osm Asphalt) (Sind die Straßen fertiggestellt?)	? 12363,18596 12481,18838
 # added from bbbike-temp-blockings-optimized
 Bahnübergang Ziethener Str. wegen Bauarbeiten gesperrt, voraussichtliche Freigabe 2024 (Wann sind die Bauarbeiten hier beendet?)	? 10346,-4027 10366,-4011 10778,-3988 11338,-3945
-Tauroggener Str.: Bauarbeiten, Einbahnstraßenregelung, offen Richtung Norden, Ende der Bauarbeiten unbekannt (Besteht die Einbahnstraßenregelung noch immer?)	? 3429,13227 3400,13107
 Bhf. Wilhelmsruh - Hertzstr.: möglicherweise wegen Bauarbeiten gesperrt, Ende der Bauarbeiten unbekannt (Ist die Wegverbindung noch gesperrt?)	? 7090,19943 7123,19855 7138,19839 7184,19783 7285,19700 7308,19653
 Uranusweg: Fahrbahn unter der U-Bahnbrücke gesperrt, Engstelle (Besteht die Sperrung noch immer?)	? 4335,17642 4392,17777
+Südendstr.: Bauarbeiten zwischen Plantagenstr. und Filandastr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten beendet?)	? 5555,5508 5676,5488
 Stadtpark Steglitz: Bauarbeiten, mögliche Sperrung, Ende der Bauarbeiten unbekannt [Stadtpark Steglitz] (Sind die Bauarbeiten beendet? Ist die Qualität der Wegoberfläche besser geworden?)	? 5836,4469 5787,4400
 Teltowkanaluferweg/Bäkebrücke: Komplettsperrung des Uferweges, außerdem Sperrung der Fahrbahn im Bereich der Bäkebrücke, bis 16.12.2024, evtl. wird verlängert [Bäkestr.: etwa 50m der Fahrbahn gesperrt] (Ist der Teltowkanaluferweg weiterhin komplett gesperrt?)	? 4411,3180 4587,3097
 Teltowkanaluferweg/Bäkebrücke: Komplettsperrung des Uferweges, außerdem Sperrung der Fahrbahn im Bereich der Bäkebrücke, bis 16.12.2024, evtl. wird verlängert [Bäkebrücke: Fahrbahn gesperrt] (Ist der Teltowkanaluferweg weiterhin komplett gesperrt?)	? 4587,3097 4659,3065
@@ -880,5 +878,4 @@ Teltowkanaluferweg/Bäkebrücke: Komplettsperrung des Uferweges, außerdem Sperrung
 Teltowkanaluferweg/Bäkebrücke: Komplettsperrung des Uferweges, außerdem Sperrung der Fahrbahn im Bereich der Bäkebrücke, bis 16.12.2024, evtl. wird verlängert [Teltowkanaluferweg: komplette Sperrung, auch für Fußgänger] (Ist der Teltowkanaluferweg weiterhin komplett gesperrt?)	? 4587,3097 4692,3225
 Mauerweg: Bauarbeiten zwischen Japaneck und Lichterfelder Allee, Sperrung, voraussichtlich ab dem IV. Quartal 2024 (Haben die Bauarbeiten bereits begonnen?)	? 4406,-910 4081,-425 4038,-362 4046,-299 4034,-255 3982,-181 3941,-127 3908,-117 3842,-6 3788,26 3767,66 3689,182 3607,283 3480,441 3412,534
 Am Eichgarten: Bauarbeiten zwischen Stindestr. und Siemensstr., Sperrung des Weges, geplant bis Anfang Dezember 2024 (Ist der Weg noch immer gesperrt?)	? 6007,4340 6147,4329 6210,4325
-Fasanerieallee: Bauarbeiten, Zugang am Großen Stern gesperrt, auch für Fußgänger, Ende der Bauarbeiten unbekannt (Sind die Bauarbeiten beendet?)	? 6633,11882 6685,11954
 Hegemeisterbrücke: Neubau geplant, während der Bauzeit Sperrung der Brücke (Ist die Hegemeisterbrücke schon wegen Bauarbeiten gesperrt?)	? 30081,5231 30081,5220

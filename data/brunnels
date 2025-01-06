@@ -134,7 +134,7 @@ Spanische Allee, Autobahnbrücke	Br -3861,2837 -3746,2849
 Schönerlinder Str., Autobahnbrücke	Br 11980,24276 11959,24220
 Lindenhofbrücke	Br 12108,24547 12136,24607
 Bucher Str., Autobahnbrücke	Br 12882,23312 12915,23337
-Bucher Str., S-Bahnbrücke	Br 13045,23465 13080,23508
+Östliche Bucher-Straßen-Brücke	Br 13045,23465 13080,23508
 Bucher Str., Autobahnbrücke	Br 14217,24999 14182,24940
 Friedrichsbrücke	Br 10166,12777 10086,12725
 Wiesenbrücke	Br 8596,15427 8679,15347
@@ -177,7 +177,7 @@ Kaiserin-Augusta-Brücke	Br 4295,13234 4381,13239
 Spandauer-Damm-Brücke	Br 2279,12412 2192,12402 2151,12397
 Knobelsdorffbrücke	Br 2446,11776 2330,11762
 Goerdelersteg	Br 3656,14150 3634,14187 3625,14230 3601,14284 3595,14267
-Gotzkowskybrücke	Br 5244,12864 5287,12900 5298,12910
+Gotzkowskybrücke	Br 5244,12864 5287,12900 5305,12916
 Schloßbrücke	Br 3291,12721 3300,12751 3327,12818
 Weltlingerbrücke	Br 2905,14754 2956,14752
 Mäckeritzbrücke	Br 1232,15804 1232,15717
@@ -325,6 +325,7 @@ Freybrücke	Br -3404,11589 -3381,11583 -3173,11520
 B96a	Br 21656,989 21613,923
 Adlergestell/B96a	Br 21812,1366 21837,1340
 Putlitzbrücke	Br 6226,13951 6228,14077 6230,14184 6230,14212 6230,14246 6231,14308 6281,14630
+Brücke zum Treppenaufgang Putzlitzbrücke	Br 6252,14207 6230,14212
 Föhrer Brücke	Br 6288,14661 6334,14756
 Torfstraßensteg	Br 6824,14821 6847,14735
 Karl-Theodor-Schmitz-Brücke	Br 8552,2243 8559,2203 8588,2176
@@ -355,7 +356,7 @@ Hiroshimasteg	Br 7252,11188 7248,11143
 Anhalter Steg	Br 8711,10322 8726,10351 8760,10408
 Karl-Heinrich-Brücke	Br -3255,14685 -3209,14662
 Wallbrücke	Br -3316,14169 -3370,14115
-Brücke im Südpark	Br -4092,12062 -4063,12104 -4048,12107 -4033,12108 -4012,12111
+Südparkbrücke	Br -4048,12107 -4033,12108
 Moritzbrücke	Br -3440,14498 -3410,14479
 Stephanbrücke	Br -3481,14308 -3444,14310
 Carl-Schurz-Brücke	Br -3409,14241 -3457,14189
@@ -452,7 +453,7 @@ Waldemarbrücke	Br 11328,10957 11290,10972
 Brücke am Grunewaldsee	Br 1168,7473 1197,7457
 Knoten am Flughafen Tegel	Br 2954,16006 2846,15986
 Brücke über die Spektelake	Br -7228,15504 -7182,15524
-Brücke über die Wuhle	Br 22171,12965 22196,12961
+Fußgängersteg am Stadion Wuhletal	Br 22171,12965 22196,12961
 Brücke über die Wuhle	Br 22263,6185 22238,6195
 Brücke über die Wuhle	Br 22050,6619 22027,6608
 Cecilienbrücke	Br 22295,13530 22246,13551

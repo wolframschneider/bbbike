@@ -280,6 +280,11 @@ for my $file (@files) {
 		 }
 	     }
 
+	     my $is_researchable_item;
+	     if ($dir->{last_checked} && $dir->{last_checked}[0] =~ /\b(website|research|indoor|traffic)\b/) {
+		 $is_researchable_item = 1;
+	     }
+
 	     # The "subject" of the record, usually the bbd record
 	     # name. For some file types (radwege, ampeln, see above)
 	     # the street or crossing name is prepended.
@@ -478,6 +483,8 @@ for my $file (@files) {
 	     # BBBike Leaflet URL
 	     push @extra_url_defs, ['BBBike-Leaflet', 'http://www.bbbike.de/cgi-bin/bbbikeleaflet.cgi?zoom=16&coords=' . join('!', @{ $r->[Strassen::COORDS] })];
 
+	     # Apple Maps URL
+	     push @extra_url_defs, ['Apple', sprintf('https://maps.apple.com/?ll=%s,%s&z=20&t=m',$py,$px)]; # interesting details like cycle lanes visible from zoom level 20 (assumed), however Apple Maps on iOS does not zoom that far initially
 
 	     # Getting priority
 	     my $prio;
@@ -557,11 +564,12 @@ for my $file (@files) {
 	     # build first the org-mode headline, and then the
 	     # complete org-mode item ($body)
 	     my $todo_state = @planned_route_files ? 'PLAN' : 'TODO'; # make sure all states have four characters
+	     my $extra_mark = ($expiration_by_nextcheck ? '[!] ' : $is_researchable_item ? '[R] ' : '');
 	     my $headline =
 		 "** $todo_state "
 		 . (defined $nextcheck_date  ? "<$nextcheck_date $nextcheck_wd> " : "                ")
 		 . ($prio                    ? "[$prio] "                         : "") # "     ")
-		 . ($expiration_by_nextcheck ? "[!] "                             : "") # "    ")
+		 . $extra_mark
 		 . $subject
 		 ;
 	     if ($dir->{osm_watch}) {

@@ -13,13 +13,13 @@
 # REMOVED --- #: source_id: viz2021:13.457875,52.512862,28.11.2024,14:29 (bis 13.12.2024) (inaktiv) --- #: XXX zu früh bei der VIZ gemeldet? -> aktuell läuft wohl die Umsetzung (auch wenn man vor Ort außer ein paar Halteverbotsschildern nicht viel sieht) -> mittlerweile stehen teilweise Verbotsschilder, ggfs. kommen noch ein physikalische Sperren -> mittlerweile stehen die ersten Poller --- #: last_checked: 2024-12-24 --- #: check_frequency: 7d --- # REMOVED --- #: next_check: 2024-12-13 --- Niederbarnimstr.: Bauarbeiten, Fahrbahn gesperrt	q4+::inwork 14073,11995 14055,11964
 # 
 #: note: Halteverbotsschilder bis 30.06.2025
-#: last_checked: 2024-12-24
+#: last_checked: 2025-01-05
 #: check_frequency: 60d
 #: next_check_id: 2025-06-30
 Dirschauer Str.: Hochbauarbeiten, Einbahnstraßenregelung	q3::inwork; 14031,11569 13970,11366
 # 
 #: next_check_id: PETERSBURGER-2024
-#: last_checked: 2024-12-08 vvv
+#: last_checked: 2024-12-30 vvv
 #: next_check: 2027-09-30 vvv
 #: source_id: viz2021:13.452029,52.520542,23.08.2024,07:00 (bis 30.09.2027)
 Mühsamstr.: Überquerung der Baustelle Petersburger Str. über schmale Fußgängerfurt	q2::inwork 13622,12806 13818,12897
@@ -33,7 +33,7 @@ Kochhannstr.: Überquerung der Baustelle Petersburger Str. über schmale Fußgänger
 #: next_check_id: KNIPRODE-2024
 #: add_fragezeichen: Sind hier noch immer Bauarbeiten?
 #: also_indoor: traffic (B,T)
-#: last_checked: 2024-11-30
+#: last_checked: 2024-12-30
 #: check_frequency: 30d
 #: next_check: 2025-09-30
 Virchowstr.: Anbindung zur Kniprodestr. gesperrt	q3::inwork 12640,13814 12707,13706
@@ -46,7 +46,7 @@ Virchowstr.: Anbindung zur Kniprodestr. gesperrt	q3::inwork 12640,13814 12707,13
 #: note: für Radfahrer existiert eine offizielle Fahrgasse, allerdings schmal und mit kurzen Bordsteinrampen
 #: osm_watch: way id="1072662716" version="11"
 #: osm_watch: way id="1072662717" version="13"
-#: last_checked: 2024-12-26
+#: last_checked: 2025-01-04
 #: check_frequency: 90d
 #: next_check: 2026-12-31
 Gubener Str.: Engstelle an der Warschauer Str.	q3::inwork 13568,11560 13603,11538
@@ -55,7 +55,7 @@ Gubener Str.: Engstelle an der Warschauer Str.	q3::inwork 13568,11560 13603,1153
 #: osm_watch: way id="1327235572" version="3"
 #: osm_watch: way id="1146013233" version="6"
 #: osm_watch: way id="1134071039" version="8"
-#: last_checked: 2024-12-26 vvv
+#: last_checked: 2025-01-05 vvv
 #: check_frequency: 14d vvv
 Gubener Str./Comeniusplatz: Bauarbeiten im Einmündungsbereich	q3::inwork 13352,12003 13406,11896 13467,11778
 Comeniusplatz/Gubener Str.: Bauarbeiten im Einmündungsbereich	q3::inwork 13275,11830 13406,11896
@@ -76,7 +76,7 @@ Comeniusplatz/Gubener Str.: Bauarbeiten im Einmündungsbereich	q3::inwork 13275,1
 #: osm_watch: way id="1054730129" version="8"
 #: osm_watch: way id="295548381" version="9"
 #: XXX Bleibt es beim Gehweg, oder wird es nach den Bauarbeiten eine andere Lösung geben?
-#: last_checked: 2024-12-20
+#: last_checked: 2025-01-02
 #: check_frequency: 90d
 #: next_check: 2026-08-22
 Müncheberger Str.: schmaler Gehweg, Fußgänger, Bordstein	q4+::inwork 12558,11920 12617,11888
@@ -117,7 +117,7 @@ Müncheberger Str.: schmaler Gehweg, Fußgänger, Bordstein	q4+::inwork 12558,11920
 Bödikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
 # 
 #: also_indoor: traffic (none)
-#: last_checked: 2024-12-28
+#: last_checked: 2025-01-01
 #: check_frequency: 14d
 Kinzigstr.: Bauarbeiten an der Einmündung Frankfurter Allee, Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975
 # REMOVED (hier mittlerweile offen) --- Kinzigstr.: Bauarbeiten nördlich und südlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14589,11975 14475,11778 --- Schwarnweberstr.: Einbahnstraßenregelung	q3::inwork; 14589,11975 14675,11964 --- #: check_frequency ^^^ --- #: last_checked ^^^
@@ -139,7 +139,7 @@ Kinzigstr.: Bauarbeiten an der Einmündung Frankfurter Allee, Fahrbahn gesperrt	q
 #: XXX Nach Ende der Bauarbeiten prüfen, ob der Markt hier wieder zurückkommt; dann den existierenden temp-blockings-Eintrag reaktivieren.
 #: osm_watch: way id="272512103" version="9"
 #: osm_watch: way id="767674684" version="1"
-#: last_checked: 2024-12-06 vvv
+#: last_checked: 2025-01-02 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2026-01-01 vvv
 Erich-Steinfurth-Str.: Bauarbeiten, Einbahnstraßenregelung (außer für Baufahrzeuge)	q3::inwork; 12378,11806 12453,11790 12608,11692 12634,11705 12660,11705
@@ -352,10 +352,10 @@ Limburger Str.: Engstelle wegen eines Containers auf der Fahrbahn	q3 6869,15441 
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=10655 (Abriss?)
 #: by: https://weddingweiser.de/schrotthaus-blockiert-strasse/
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=12522 (Anfrage)
-#: osm_watch: way id="549316654" version="34"
+#: osm_watch: way id="549316654" version="35"
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: also_indoor: traffic (G,ex-H)
-#: last_checked: 2024-12-09 (osm)
+#: last_checked: 2025-01-04 (osm)
 #: check_frequency: 60d
 #: valid: 20171026-
 Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7519,15193 7607,15282
@@ -910,7 +910,7 @@ Bürgerstr.: Fahrbahn gesperrt, Hochbauarbeiten	q4::inwork 12830,6254 12997,6290
 #: by: https://www.kms-sonne.de/baustellennews?date=20230915 (bis Herbst 2024?)
 #: source_id: viz2021:13.434335,52.481525,21.11.2023,12:00 (bis 01.07.2024) (bis 30.04.2025)
 #: osm_watch: way id="640465875" version="14"
-#: last_checked: 2024-12-12
+#: last_checked: 2025-01-05
 #: check_frequency: 120d
 #: next_check: 2025-04-30
 Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwork 12643,8533 12545,8449
@@ -927,7 +927,7 @@ Schönstedtstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg	q4::inwor
 #: by: https://www.kms-sonne.de/assets/2024/05/Baustellenuebersicht-05-2024-web.pdf
 #: note: Die Absperrung beginnt 50m vor dem Einmündungsbereich.
 #: also_indoor: traffic (none)
-#: last_checked: 2024-12-12 vvv
+#: last_checked: 2025-01-05 vvv
 #: check_frequency: 60d vvv
 #: next_check: 2025-04-30 vvv
 #: valid: -20250430 vvv
@@ -985,8 +985,8 @@ Ontarioseestr.: Fahrbahn abschnittsweise gesperrt, Bordsteine	q3::inwork 18552,1
 #: next_check_id: RUMMELSBURGERBUCHT-2021
 #: XXX wird es noch eine offizielle Verbindung zwischen Hauptstr. und Radweg bzw. Gustav-Tempel-Str. geben?
 #: XXX mittlerweile gibt es auch eine unbefestigte Verbindung, ist aber bei Regenwetter ziemlich matschig
-#: last_checked: 2024-12-27
-Gustav-Tempel-Str.: kurzes Stück Bürgersteig	q3::inwork 15261,10738 15245,10719
+#: last_checked: 2025-01-03
+Gustav-Tempel-Str.: kurzes Stück Bürgersteig	q3 15261,10738 15245,10719
 # REMOVED (hier nicht mehr) --- Gustav-Tempel-Str.: Bauarbeiten, Absperrungen, ggfs. auf Bürgersteig ausweichen	q3::inwork 15245,10719 15236,10684
 # 
 # REMOVED (zwar steht hier noch ein Einfahrt-verboten-Schild, aber es gibt keine Verengung der Fahrbahn mehr) --- #: by: https://viz.berlin.de/2023/06/verkehrsvorschau-260623/ (bis 03.07.2023, weitere Bauabschnitte bis Mitte Juli 2023) --- #: by: https://nitter.cz/VIZ_Berlin/status/1673195634050859008#m --- #: source_id: viz2021:13.507611,52.474933,26.06.2023,06:00 (bis 3.7.2023) (bis 10.7.2023) (inaktiv) --- #: note: Halteverbote bis 2023-07-14 --- #: last_checked: 2023-07-11 --- #: next_check: 2023-07-14 --- #: valid: -20230714 --- Am Walde: kurze Einbahnstraßenregelung an der Rummelsburger Landstraße, Bürgersteig existiert	q3::inwork; 17527,7812 17590,7828
@@ -1090,6 +1090,7 @@ Reichenberger Str.: etwa 80m der Fahrbahn gesperrt	q3-::inwork 15937,15134 16075
 #: by: https://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=11496 (Anfrage)
 #: by: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2024/pressemitteilung.1448969.php (zum Ersatzneubau der Hellersdorfer Brücken)
 #: by: https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/brueckenbau/hellersdorfer-bruecken/
+#: by: https://www.berlin.de/sen/uvk/verkehr/infrastruktur/brueckenbau/hellersdorfer-bruecken/ (alternative URL)
 #: by: https://www.berliner-woche.de/marzahn-hellersdorf/c-bauen/der-senat-stellt-planungen-fuer-ersatzbauwerk-ueber-die-wuhle-vor_a416776 (Sperrung 2025, Hilfsbrücke für Fußgänger+Radfahrer, Bauarbeiten bis Ende 2025)
 #: by: http://viz.berlin.de/aktuelle-meldungen/verkehrsvorschau/?date=20240724 (Umstellung der Verkehrsführung, weiterhin Sperrung bis Mitte 2025)
 #: by[nocache]: https://x.com/VIZ_Berlin/status/1816390896482398274
@@ -1163,15 +1164,15 @@ Merler Weg: temporäre Einbahnstraßenregelung	q3::inwork; 19180,13219 18852,13269
 #: by: https://www.deutsches-architekturforum.de/thread/11061-tempelhof-sch%C3%B6neberg-s%C3%BCdlich-der-hohenstaufen-pallas-und-goebenstra%C3%9Fe-kleinere-p/?postID=757023#post757023
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/am-winterfeldt-pallasstra%C3%9Fe-24-26.492/page-2#post-20080
 #: by: https://www.deutsches-architekturforum.de/thread/15362-bv-am-winterfeldt-sch%C3%B6neberg/?postID=760855#post760855
-#: last_checked: 2024-11-17 (architektur-urbanistik) vvv
-#: check_frequency: 90d vvv
-#: next_check: 2025-01-05 vvv
+#: last_checked: 2025-01-02 vvv
+#: check_frequency: 60d vvv
+# REMOVED --- #: next_check: 2025-01-05 vvv
 Elßholzstr.: Hochbauarbeiten, Einbahnstraßenregelung	q4::inwork; 7202,9329 7209,9507 7216,9657 7223,9815
 #: osm_watch: way id="51196438" version="25"
 #: note: der Zweirichtungsradweg-Abschnitt ist etwa 100m lang
 #: note: Halteverbot bis Anfang Januar 2025 (5.1.2025?)
 Gleditschstr.: Hochbauarbeiten, Zweirichtungsradweg auf dem westlichen Bürgersteig	q2::inwork; 7122,9517 7126,9825
-#: next_check ^^^
+# REMOVED --- #: next_check ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
@@ -1191,7 +1192,7 @@ Gleditschstr.: Hochbauarbeiten, Zweirichtungsradweg auf dem westlichen Bürgerste
 ### Friedenau ###
 # 
 #: next_check_id: FRIEDENAUERHOEHE-2024
-#: last_checked: 2024-12-26 (architektur-urbanistik) vvv
+#: last_checked: 2025-01-02 vvv
 #: check_frequency: 90d vvv
 #: next_check: 2027-06-30 vvv
 Friedenauer Höhe: Baustellenverkehr	q1 6293,7875 6263,7894 6178,7899
@@ -1269,9 +1270,11 @@ Lehderstr.: Hochbauarbeiten, einige Meter der Fahrbahn westlich der Roelckestr. 
 # 
 ### Biesdorf ###
 # 
-#: also_indoor: traffic (T,G,B)
-#: last_checked: 2024-12-23 (traffic)
-#: check_frequency: 10d
+#: by: https://pascalgrothe.de/grabensprung-wiedereroeffnung-steht-bevor/ (veröffentlicht am 28.12.2024, Freigabe "in Kürze")
+#: also_indoor: traffic (T,ex-G,B)
+#: also_indoor: url https://pascalgrothe.de/kiezblog/
+#: last_checked: 2025-01-05 (traffic)
+#: check_frequency: 7d
 Grabensprung: einige Meter der Fahrbahn gesperrt	q3::inwork 20518,11346 20515,11275
 # 
 # REMOVED --- #: by: https://www.berliner-woche.de/biesdorf/c-verkehr/wegen-arbeiten-der-wasserbetriebe-wird-die-linie-190-bis-1-april-umgeleitet_a337988 --- #: source_id: bvg2021:190#BVG291273_0 (kein Endedatum) --- # REMOVED --- #: source_id: bvg2021:190#BVG297363_0 (kein Endedatum) --- #: XXX Laut Baustellenschild der Wasserbetriebe bis April 2022 --- #: last_checked: 2022-04-16 (indoor) vvv --- #: check_frequency: 7d vvv --- #: next_check: 2022-04-30 vvv
@@ -1306,10 +1309,10 @@ Grabensprung: einige Meter der Fahrbahn gesperrt	q3::inwork 20518,11346 20515,11
 # 
 ### Lankwitz ###
 # 
-#: also_indoor: traffic (B,G,ex-H,T)
+#: also_indoor: traffic (B,G,re-H,T)
 #: note: Halteverbotsschilder bis 23.10.2024
 #: add_fragezeichen: Sind die Bauarbeiten beendet? vvv
-#: last_checked: 2024-12-26 (traffic) vvv
+#: last_checked: 2025-01-04 (traffic) vvv
 #: check_frequency: 10d vvv
 # REMOVED --- #: next_check: 2024-10-23 vvv
 # REMOVED --- #: valid: -20241023 vvv
@@ -1744,7 +1747,7 @@ Nikolsburger Platz: Fußgänger	q2 5374,9619 5291,9675
 #: note: hier kein Zeichen "Gehweg, Radfahrer frei"
 Nikolsburger Platz: Fußgänger	q3 5291,9675 5297,9579
 #: XXX_prog BS (an der Lewishamstr., ansonsten unbekannter qX-Wert)
-zur Sybelstr.: Bordsteine	q4 3712,10566 3738,10574
+zur Sybelstr.: Bordsteine	q4 3705,10581 3725,10598
 #: XXX_prog BS (an der Lewishamstr., ansonsten unbekannter qX-Wert)
 (Waitzstr. - Lewishamstr.): Bordsteine	q4 3764,10580 3753,10578
 #: XXX_prog BS
@@ -1769,7 +1772,7 @@ Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
 (Tilla-Durieux-Park): Fußgänger, Radfahren nicht erlaubt	q3 8467,11125 8410,11143
 # REMOVED (noch einige enge Stellen vorhanden) --- #: next_check_id: SPREERADWEGEINSTEINUFER-2014 --- #: XXX Bauarbeiten, wird der Weg später breiter sein? --- #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/fahr_rat_20_sitzung.pdf (Verbreiterungen) --- #: last_checked: 2017-08-16 --- #: check_frequency: 14d
 (Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3370,12725 3396,12741 3416,12738 3445,12733 3507,12725 3586,12697 3643,12671 3748,12627 3836,12614
-(Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3836,12614 3867,12616 3888,12618 4131,12641 4340,12578 4441,12578 4529,12570 4642,12491
+(Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3836,12614 3867,12616 3888,12618 4078,12637 4131,12641 4162,12638 4299,12590 4340,12578 4441,12578 4529,12570 4575,12542 4642,12491
 (Rad- und Wanderweg an Spree und Landwehrkanal): einige Fußgänger	q1 4642,12491 4817,12366 5045,12243 5144,12146 5259,11995 5349,11941 5373,11907 5372,11888
 #: note: Radfahren erlaubt, Fußgänger haben Vorrang
 Spreeufer: Fußgänger, besonders an schönen Tagen	q3 10166,12777 10105,12855 9955,12915 9944,12921 9930,12947 9900,12942 9724,12992 9716,12971 9707,12974
@@ -1913,7 +1916,7 @@ Oppelner Str.: Bodenschwellen	q0- 12897,10439 12968,10564 12978,10581
 #: XXX nach den Bauarbeiten wiederherstellen: Martin-Hoffmann-Str.: Bodenschwellen (2x)	q1 14077,10016 14289,9870
 #: source_id: viz2021:13.460697,52.49394,15.10.2024,07:00 (bis 15.12.2024) (bis 15.03.2025)
 #: also_indoor: traffic (none)
-#: last_checked: 2024-12-27
+#: last_checked: 2025-01-05
 # REMOVED --- #: check_frequency: 14d
 #: check_frequency: 30d
 #: next_check: 2025-03-15
@@ -2056,6 +2059,7 @@ Langhoffstr.: enge Straße, Gegenverkehr	q1 19817,14371 19818,14064
 #: by: https://berliner-abendblatt.de/2022/05/05/bahnhof-lichtenberg-enhaltestelle-der-strassenbahn-wird-verlegt/
 #: by: https://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2022/pressemitteilung.1212005.php (Bauarbeiten nicht vor 2025)
 #: by: https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-15226.pdf
+#: by: https://www.nd-aktuell.de/artikel/1187963.bvg-oepnv-in-berlin-tram-in-der-investitionsfalle.html (2028/2029?)
 #: osm_watch: way id="223184082" version="8"
 #: last_checked: 2024-12-28
 # REMOVED --- #: check_frequency: 90d
@@ -3625,7 +3629,7 @@ Georg-Steger-Weg: Radfahrer sollen schieben	q4 1432,1964 1432,1953 1432,1904 147
 (entlang der Wendeschleife): eng, kurvig	q2 23467,3891 23486,3862 23476,3829
 Schillingstr.: breiter Geh- und Radweg	q0- 11472,12406 11485,12391 11435,12282
 #: osm_watch: way id="1076571010" version="1"
-#: last_checked: 2024-12-26
+#: last_checked: 2025-01-04
 #: check_frequency: 60d
 #: note: früher: breiter Geh- und Radweg	q0-
 Schillingstr.: Engstelle wegen Baustelle	q1- 11435,12282 11417,12243
@@ -5233,6 +5237,8 @@ Am Teltowkanal: zahlreiche Temposchwellen, abwechselnd rechts und links umfahrba
 #: XXX_prog ^^^
 (Döberitzer Grünzug - KGA Lehrter Str.): einige Fußgänger	q1 7819,13559 7795,13528
 # 
+Ulsterstr.: enge Straße	q0- 13575,8378 13641,8470
+# 
 ######################### User Contributions #################################
 #: section: User Contributions vvv
 #: by: Michael Kiekbusch vvv
@@ -5652,11 +5658,11 @@ Bautzener Platz: Fufgänger, Bordsteine	q3 8102,9262 8183,9260
 #: XXX_prog ^^^
 (Danziger Str. - Lilli-Henoch-Str.): Fußgänger	q2 12123,14643 12174,14739 12183,14757 12193,14775 12212,14781 12252,14860 12236,14870 12314,15008
 #: note: gemeinsamer Rad- und Gehweg (am westlichen Ende fehlt das Schild, ansonsten ausgeschildert)
-(Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 11877,15366 11937,15349 12003,15311 12103,15218
-# REMOVED --- (Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 12103,15218 12208,15108
+(Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 11877,15366 11937,15349 12003,15311 12097,15223 12124,15197
+# REMOVED --- (Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 12124,15197 12208,15108
 (Prenzlauer Allee - Lilli-Henoch-Str.): Fußgänger	q2 12208,15108 12284,15068 12314,15008
 (Prenzlauer Allee - Lilly-Henoch-Str.): Fußgänger	q2 11860,15309 11919,15314 11937,15349
-(Verlängerte Diesterwegstr.): Fußgänger	q2 12056,15159 12082,15206 12103,15218
+(Verlängerte Diesterwegstr.): Fußgänger	q2 12056,15159 12075,15191 12097,15223
 (Anton-Saefkow-Str. - John-Schehr-Str.): einige Fußgänger, Parkplatz	q1 13088,14469 13031,14390
 #: XXX_prog: BS
 #: note: beim Überqueren des Mittelstreifens müssen insgesamt vier Bordsteine überquert werden
@@ -5767,7 +5773,7 @@ Siemenssteg: Fußgänger, schmal, Bordstein	q2 4129,12619 4128,12637 4124,12706 41
 #: note: Grünanlagenschild mit "Radfahren verboten"-Zusatzschild am nordöstlichen Ende
 #: note: früher q2
 (Müllerstr. - Gerichtstr.): Fußgänger	q3 7607,15282 7723,15417
-(südliches Spreeufer): Fußgänger	q2 5550,12238 5573,12242 5604,12244 5643,12253 5714,12290 5770,12346 5796,12372 5940,12564 5953,12592 6001,12699 6045,12830 6123,12887
+(südliches Spreeufer): Fußgänger	q2 5550,12238 5573,12242 5604,12244 5643,12253 5714,12290 5770,12346 5796,12372 5927,12546 5940,12564 5953,12592 6001,12699 6045,12830 6123,12887
 #: note: unter der Brücke ausgeschildert: Gehweg, Radfahrer frei
 (südliches Spreeufer): Fußgänger	q2 6123,12887 6182,12900
 (nördliches Spreeufer): Fußgänger	q1 6122,12971 6064,12950 6019,12923 5962,12854 5921,12663 5890,12602 5871,12595
@@ -5777,7 +5783,7 @@ Siemenssteg: Fußgänger, schmal, Bordstein	q2 4129,12619 4128,12637 4124,12706 41
 (nördliches Spreeufer): Fußgänger	q2 5607,12307 5550,12305 5484,12320 5411,12380 5362,12469 5356,12494 5372,12538
 #: note: Grünanlagenschild ohne weitere Zusatzschilder bzgl. Radfahren
 (Hansa-Ufer - nördliches Spreeufer): Fußgänger	q2 5657,12339 5607,12307
-(nördliches Spreeufer): Fußgänger	q1 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
+(nördliches Spreeufer): Fußgänger	q1 5354,12552 5366,12665 5369,12721 5362,12787 5346,12845 5305,12916
 Machandelweg: Fußgänger, schmal	q2 -248,12718 -217,12778 -190,12825
 Merowingerweg: Fußgänger, schmal	q2 1041,11169 1070,11226
 Wandalenallee: Fußgänger	q1 736,11206 711,11199

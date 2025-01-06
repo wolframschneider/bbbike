@@ -191,7 +191,7 @@ Spreewaldplatz	F:P 12292,10374 12243,10274 12341,10218 12292,10374
 #: XXX Werden die Wege nachts (genaue Schließzeiten?) abgeschlossen sein? Oder wird das nur situationsbedingt (wann?) passieren?
 #: XXX Neue Lampen werden geplant -> nolighting-Einträge ggfs. prüfen.
 #: priority: #A
-#: last_checked: 2024-12-21
+#: last_checked: 2025-01-05
 #: check_frequency: 90d
 #: next_check: 2025-04-01
 Görlitzer Park	F:P 13220,9980 13162,9904 13139,9880 13086,9825 12932,9900 12983,10000 12881,10056 12829,9957 12814,9966 12341,10218 12397,10335 12317,10382 12309,10427 12348,10432 13220,9980
@@ -220,7 +220,7 @@ Ernst-Thälmann-Park	F:P 12244,15190 12139,15242 12074,15161 11856,15299 11897,1
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6970 (Vorlage zur Kenntnisnahme, hier mit Bindestrich: Ashkelon-Platz)
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_50_3591_3794_online.pdf (Benennung einer öffentlichen Grün- und Erholungsanlage)
 #: XXX wird zu Ashkelon-Platz benannt --- wird es hier Schilder geben?
-#: last_checked: 2024-12-16
+#: last_checked: 2024-12-30
 #: check_frequency: 30d
 Park an der Diesterwegstraße	F:P 12025,14775 11896,14840 11864,14781 11998,14709 12025,14775
 Mauerpark	F:P 9935,15620 10075,15637 9997,15884 9996,15901 10051,15916 10064,15920 10081,15853 10105,15752 10123,15681 10130,15653 10186,15481 10188,15474 10228,15488 10234,15490 10403,15007 10271,14950
@@ -461,7 +461,7 @@ Städtischer Friedhof	F:Cemetery 13064,5953 13451,6041 13430,6086 13382,6182 131
 Parkfriedhof Tempelhof	F:Cemetery 10210,5255 10821,5252 10887,5412 10230,5498
 Neuer St.-Michael-Kirchhof	F:Cemetery 11302,5098 11271,5221 10965,5274 10839,5296 10821,5252 10800,5203
 #: note: Wiese vor dem Reichstag
-Platz der Republik	F:P 8399,12610 8369,12609 8306,12609 8207,12606 8122,12603 8119,12414 8354,12416 8373,12416 8400,12417
+Platz der Republik	F:P 8369,12609 8306,12609 8207,12606 8122,12603 8119,12414 8354,12416 8373,12416 8369,12609
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/14re.pdf/file?y=2013 (Name)
 #: by: https://de.wikipedia.org/wiki/Elise-Tilse-Park
 #: alias: Park auf dem Anhalter Bahnhof
@@ -597,7 +597,7 @@ Betty-Hirsch-Platz	F:P 2213,7637 2169,7690 2222,7718 2277,7705 2301,7698
 #: alias: Grünzug Gervinusstr.
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110826.1105.356351.html (Name seit 2011-09-06)
 Margarete-und-Arthur-Eloesser-Park	F:P 3378,10759 3532,10811 3548,10764 3395,10704 3378,10759
-Kracauerplatz	F:P 3013,10553 3123,10504 3108,10548 3093,10594 3013,10553
+Kracauerplatz	F:P 3013,10553 3123,10504 3106,10554 3093,10594 3013,10553
 Medaillonplatz	F:P 15788,10252 15711,10149 15753,10117 15779,10097 15858,10202
 Grünfläche am Rudower Fließ	F:P 15655,-245 15652,-168 15631,-140 15733,-49 15895,128 16029,306 16135,473 16140,549 16190,579 16178,610 16234,696 16215,753 16264,783 16221,872 16287,908 16349,932 16390,939 16333,827 16325,790 16388,752 16295,601 16290,569 16257,537 16266,503 16205,462 16179,426 16184,390 16146,346 16165,300 16130,239 16055,153 15966,52 15949,53 15834,-28 15812,-65 15784,-91 15694,-178
 Grünfläche am Rudower Fließ	F:P 16537,967 16513,1023 16537,1050 16632,1247 16667,1291 16735,1350 16698,1392 16643,1460 16459,1680 16450,1691 16413,1664 16540,1509 16549,1480 16547,1439 16545,1426 16616,1406 16612,1363 16590,1363 16531,1151 16481,1164 16471,1157 16457,1129 16429,1065 16378,1027 16390,939 16451,950 16490,955
@@ -1830,7 +1830,7 @@ Strandbad Orankesee	F:Sport 15691,16123 15680,16135 15731,16208 15793,16162 1586
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2023_51_4717_4788_online.pdf (Bebauungsplan IX-55-3B)
 #: by: https://www.deutsches-architekturforum.de/thread/14333-gowest-areal-ehemalige-tabakfabrik/?postID=757051#post757051
 #: note: früher Brendel Leuchten/Reemtsma
-#: last_checked: 2024-12-25 (daf)
+#: last_checked: 2025-01-02
 #: check_frequency: 360d
 #: next_check: 2026-06-15
 	F:Industrial 3895,8079 3779,8105 3777,7984 3649,7992 3639,7800 3735,7792 3731,7689 3839,7787 3884,7829 3895,8079
