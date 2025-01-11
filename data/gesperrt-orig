@@ -93,7 +93,7 @@ Wilhelplatz	1 -7064,584 -7081,483 -7122,439 -7180,378
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanung/bebauungsplaene-im-verfahren/b-plan-7-100ve/7-100-ve_3-2_vorhabenbezogener-bebauungsplan.pdf
 #: XXX außerdem Anlage von Radwegen, allerdings nicht benutzungspflichtig
 #: osm_watch: way id="152264786" version="22"
-#: last_checked: 2024-11-27 (mapillary)
+#: last_checked: 2025-01-08
 #: check_frequency: 180d
 # REMOVED --- #: next_check: 2021-12-31
 Ella-Barowsky-Str.	1 7499,7880 7268,8008 7193,7950
@@ -4016,12 +4016,12 @@ Delbrückstr.: Baustelle, Sperrung	2::inwork 17085,10855 17123,10844 17141,10838
 #: XXX 2024-08-05 - 2024-10-18: Sperrung zwischen Hausnummern 16A und 19 für Kfz, Radfahrer können wohl über der Randbereich ausweichen (evtl. mit q3-Einschränkung?)
 #: XXX 2024-10-18 - 2026-10-29: Einbahnstraßenregelung an dieser Stelle, offen Richtung Osten, zum Radverkehr keine Information
 #: also_indoor: traffic (G)
-#: last_checked: 2024-11-04 (mapillary)
+#: last_checked: 2024-12-01 (youtube)
 #: check_frequency: 180d
 #: next_check: 2026-10-29
 Am Wiesenrain: Einbahnstraßenregelung	1s:q3:inwork 23931,5992 24122,6007
 #: XXX evtl. muss mudways hier nach den Bauarbeiten neu evaluiert werden?
-#: last_checked: 2024-10-24 vvv
+#: last_checked: 2024-12-01 (youtube) vvv
 #: check_frequency: 180d vvv
 #: next_check: 2026-12-31 vvv
 #: osm_watch: way id="37452317" version="6"
@@ -4042,7 +4042,7 @@ Weg im Grünzug Kraatzgraben: gesperrt, Leitungsarbeiten	2::inwork 17161,9921 172
 #: by: https://moabitonline.de/41262 (Fertigstellung bis Oktober 2024 geplant)
 #: osm_watch[closed]: note 4551219 3
 #: osm_watch: way id="1009956629" version="11"
-#: last_checked: 2024-12-26
+#: last_checked: 2025-01-09 (daf)
 # REMOVED --- #: next_check: 2024-10-31
 Uferweg am Otto-Weidt-Platz: wegen Bauarbeiten an der Treppenanlage gesperrt	2::inwork 7912,14160 7875,14204
 # 
@@ -4543,12 +4543,13 @@ Bruchsaler Str.: Hochbauarbeiten, Einbahnstraße auch für Radfahrer	1s:q3:inwork 
 #: osm_watch: node id="1736425250" version="5"
 #: last_checked: 2024-08-20 (okas)
 # REMOVED --- #: check_frequency: 360d
-#: next_check: 2025-04-15
+#: next_check: 2026-10-01
 U-Bhf. Scharnweberstr.: Durchgang gesperrt	2::inwork 3987,17808 3997,17840
 #
 #: next_check_id: U6-2022
 #: last_checked: 2024-08-20 (okas)
-#: next_check: 2025-04-15
+#: check_frequency: 120d
+#: next_check: 2026-10-01
 Weg am Kienhorstgraben: Durchgang zur Seidelstr. gesperrt	2::inwork 3706,17931 3723,17979
 # 
 # REMOVED (kein Gerüst mehr) --- #: next_check_id: U6-2022 --- #: XXX Wie sieht die Situation nach den Bauarbeiten aus? --- #: last_checked: 2022-09-26 (mapillary) --- #: next_check: 2022-11-30 --- Seidelstraßenbrücke: Überqueren wegen eines Gerüsts nicht möglich	3nocross 3570,17938 3706,17931 3833,17929
@@ -4700,7 +4701,7 @@ Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	1s
 #: note: Fertigstellung EÜ laut Baustellenschild 2023
 #: note: Dieser Eintrag existiert auch noch als aktiver bbbike-temp-blockings-Eintrag.
 #: osm_watch: way id="229990468" version="7"
-#: last_checked: 2024-10-12 (mapillary)
+#: last_checked: 2025-01-08
 #: check_frequency: 120d
 #: next_check: 2025-12-31
 Teltowkanalweg zwischen Ringstr. und Maulbronner Ufer	2::inwork 7673,4223 7769,4315
@@ -4725,16 +4726,17 @@ Hedwigskathedrale: Durchgang wegen Bauarbeiten gesperrt	2::inwork 9808,12182 977
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.schmalfuss-immobilien.de/karlshorst (Abschnitt 9 bezugsfertig Anfang August 2022, 7 Anfang September 2022)
 #: by: https://www.luftbildsuche.de/info/luftbilder/baustelle-zum-neubau-mehrfamilienhaus-wohnanlage-parkstadt-karlshorst-berlin-deutschland-637598.html
-#: last_checked: 2024-12-13 vvv
 # REMOVED --- #: next_check: 2022-08-01 vvv
 # REMOVED (offen) --- #: osm_watch: way id="1061057020" version="10" --- #: note: wobei der Gehweg bereits passierbar sein kann --- Georg-Klingenberg-Str.: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17846,8644 17792,8660 17668,8696 17659,8698
 # REMOVED (offen) --- Samuel-Lewin-Str.: noch Baustelle und gesperrt	2::inwork 17773,8588 17792,8660
 # REMOVED (offen) --- Adolf-Wermuth-Allee: noch Baustelle, gesperrt bzw. noch nicht ganz fertiggestellt	2::inwork 17628,8556 17608,8483
 #: osm_watch: way id="1084269868" version="16"
+#: last_checked: 2025-01-05 (osm)
 Adolf-Wermuth-Allee: noch nicht freigegeben	2::inwork 17608,8483 17588,8413
 # REMOVED (nördlicher Übergang schon offen, südlicher noch gesperrt) --- Ruth-Baumgarte-Str. (Mittelstreifen): noch nicht fertig	2::inwork 17608,8483 17599,8485
 # REMOVED (sieht fertig aus) --- Heiner-Müller-Str. (Mittelstreifen): noch nicht fertig	2::inwork 17639,8627 17648,8626
 #: osm_watch: way id="1061057025" version="11"
+#: last_checked: 2024-12-13
 #: check_frequency: 90d
 An der Waldsiedlung: noch nicht fertig gebaut	2::inwork 17682,8464 17652,8349
 # REMOVED --- #: osm_watch: way id="1090655354" version="14" --- Adolf-Wermuth-Allee: noch nicht fertig	2::inwork 17639,8627 17619,8558 --- Adolf-Wermuth-Allee: nur der Gehweg ist freigegeben	2s:q4:inwork 17619,8558 17599,8485 17581,8422
@@ -4750,7 +4752,6 @@ An der Waldsiedlung: noch nicht fertig gebaut	2::inwork 17682,8464 17652,8349
 # REMOVED (hier nicht mehr) --- Parkstadt Karlshorst: temporäre Einbahnstraßenregelung	1::inwork 17755,8519 17628,8556
 # REMOVED (hier nicht mehr) --- #: osm_watch: way id="1061057021" version="10" --- Parkstadt Karlshorst: temporäre Einbahnstraßenregelung	1::inwork 17773,8588 17648,8626
 # REMOVED (vermutlich nicht mehr) --- #: osm_watch: way id="1061057024" version="10" --- Parkstadt Karlshorst: temporäre Einbahnstraßenregelung	1::inwork 17608,8483 17682,8464 17738,8450
-#: last_checked ^^^
 # 
 #: next_check_id: PARKSTADTKARLSHORST-2021
 #: by: https://www.berliner-woche.de/karlshorst/c-bauen/arbeiten-fuer-parkstadt-karlshorst-gehen-voran_a418592 (bis Ende 2024)
@@ -4830,7 +4831,7 @@ Erich-Steinfurth-Str.: Bauarbeiten, gesperrt	2::inwork 12608,11692 12645,11673
 #: source_id: viz2021:13.447029,52.600595,22.04.2024,10:00 (Neubau, bis 12.06.2024) (schon am nächsten Tag inaktiv)
 #: XXX Rampen auf Westseite mit Verbundsteinpflaster, auf Ostseite mit welligen Asphalt, parallel zur Autobahn
 #: XXX mittlerweile (Nov 2024) noch nicht offiziell freigegeben, aber u.U. befahrbar
-#: last_checked: 2024-11-30 (mapillary)
+#: last_checked: 2025-01-06 (mapillary)
 #: check_frequency: 30d
 # REMOVED --- #: next_check: 2023-06-30
 Hebammensteigbrücke	2::inwork 13193,21700 13168,21706 13135,21715 13121,21678 13124,21718 13046,21734 13014,21775 13008,21783
@@ -5251,7 +5252,7 @@ Johannisstr.: Einbahnstraße	1s:q3:inwork 9588,13174 9385,13174 9254,13171
 #: source_id: viz2021:13.361375,52.44703,01.04.2021,08:44 (angrenzende Attilastr., bis 31.7.2023) (bis 04.09.2023) (bis 18.09.2023) (bis 31.10.2023) (bis 27.11.2023) (bis 05.08.2024) (bis 31.12.2024) (bis 30.04.2025)
 #: source_id: viz2021:13.361226,52.446957,15.12.2023,20:00 (angrenzende Attilastr., bis 17.12.2023) (inaktiv)
 #: add_fragezeichen: Ist der Uferweg weiterhin gesperrt?
-#: last_checked: 2024-11-27
+#: last_checked: 2025-01-08
 #: check_frequency: 120d
 # REMOVED --- #: next_check: 2024-08-05
 #: next_check: 2025-12-31
@@ -5743,6 +5744,13 @@ Pariser Platz: Sperrung vor der amerikanischen Botschaft	2 8641,12227 8643,12208
 #: check_frequency: 120d
 # REMOVED -- #: next_check: 2024-12-31
 Carolabrücke (Dresden): Brücke teilweise eingestürzt, der Rest ist gesperrt	2::inwork 36969,-149635 37090,-149991
+# 
+#: by: https://www.berliner-zeitung.de/news/sachsen-naechste-bruecke-muss-abgerissen-werden-li.2282916
+#: by: https://www.lasuv.sachsen.de/b-101-grossenhain-8358.html (wird abgerissen)
+#: osm_watch: way id="779202212" version="6"
+#: last_checked: 2024-12-18 (berliner-zeitung)
+#: check_frequency: 180d
+B101 südlich von Großenhain: Brücke gesperrt	2::inwork 21254,-125506 21046,-125633
 # 
 #: section ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #: temporary ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

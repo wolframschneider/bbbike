@@ -10,6 +10,14 @@
 # 
 ### Friedrichshain ###
 # 
+#: also_indoor: traffic (B,T)
+#: note: Halteverbotsschilder bis 30.06.2025, vermutlich Hochbauarbeiten
+#: last_checked: 2025-01-10
+#: check_frequency: 60d
+#: next_check: 2025-06-30
+#: valid: -20250630
+Gryphiusstr.: Fahrbahn an der Boxhagener Str. gesperrt, Ausweichen auf Bürgersteig, Bordsteine	q4::inwork 14513,11657 14550,11732
+# 
 # REMOVED --- #: source_id: viz2021:13.457875,52.512862,28.11.2024,14:29 (bis 13.12.2024) (inaktiv) --- #: XXX zu früh bei der VIZ gemeldet? -> aktuell läuft wohl die Umsetzung (auch wenn man vor Ort außer ein paar Halteverbotsschildern nicht viel sieht) -> mittlerweile stehen teilweise Verbotsschilder, ggfs. kommen noch ein physikalische Sperren -> mittlerweile stehen die ersten Poller --- #: last_checked: 2024-12-24 --- #: check_frequency: 7d --- # REMOVED --- #: next_check: 2024-12-13 --- Niederbarnimstr.: Bauarbeiten, Fahrbahn gesperrt	q4+::inwork 14073,11995 14055,11964
 # 
 #: note: Halteverbotsschilder bis 30.06.2025
@@ -19,7 +27,7 @@
 Dirschauer Str.: Hochbauarbeiten, Einbahnstraßenregelung	q3::inwork; 14031,11569 13970,11366
 # 
 #: next_check_id: PETERSBURGER-2024
-#: last_checked: 2024-12-30 vvv
+#: last_checked: 2025-01-06 vvv
 #: next_check: 2027-09-30 vvv
 #: source_id: viz2021:13.452029,52.520542,23.08.2024,07:00 (bis 30.09.2027)
 Mühsamstr.: Überquerung der Baustelle Petersburger Str. über schmale Fußgängerfurt	q2::inwork 13622,12806 13818,12897
@@ -44,18 +52,18 @@ Virchowstr.: Anbindung zur Kniprodestr. gesperrt	q3::inwork 12640,13814 12707,13
 # 
 #: next_check_id: REVALER-2024
 #: note: für Radfahrer existiert eine offizielle Fahrgasse, allerdings schmal und mit kurzen Bordsteinrampen
-#: osm_watch: way id="1072662716" version="11"
-#: osm_watch: way id="1072662717" version="13"
-#: last_checked: 2025-01-04
+#: osm_watch: way id="1072662716" version="12"
+#: osm_watch: way id="1072662717" version="14"
+#: last_checked: 2025-01-08
 #: check_frequency: 90d
 #: next_check: 2026-12-31
 Gubener Str.: Engstelle an der Warschauer Str.	q3::inwork 13568,11560 13603,11538
 # 
 #: osm_watch: note 4452740 1
-#: osm_watch: way id="1327235572" version="3"
-#: osm_watch: way id="1146013233" version="6"
-#: osm_watch: way id="1134071039" version="8"
-#: last_checked: 2025-01-05 vvv
+#: osm_watch: way id="1327235572" version="4"
+#: osm_watch: way id="1146013233" version="7"
+#: osm_watch: way id="1134071039" version="9"
+#: last_checked: 2025-01-06 (osm) vvv
 #: check_frequency: 14d vvv
 Gubener Str./Comeniusplatz: Bauarbeiten im Einmündungsbereich	q3::inwork 13352,12003 13406,11896 13467,11778
 Comeniusplatz/Gubener Str.: Bauarbeiten im Einmündungsbereich	q3::inwork 13275,11830 13406,11896
@@ -117,7 +125,7 @@ Müncheberger Str.: schmaler Gehweg, Fußgänger, Bordstein	q4+::inwork 12558,11920
 Bödikerstr.: zwischen Laskerstr. und Persiusstr. ist die Fahrbahn wegen Hochbauarbeiten gesperrt	q4::inwork 14541,10735 14490,10610
 # 
 #: also_indoor: traffic (none)
-#: last_checked: 2025-01-01
+#: last_checked: 2025-01-07
 #: check_frequency: 14d
 Kinzigstr.: Bauarbeiten an der Einmündung Frankfurter Allee, Fahrbahn gesperrt	q3::inwork 14621,12168 14589,11975
 # REMOVED (hier mittlerweile offen) --- Kinzigstr.: Bauarbeiten nördlich und südlich des Kreuzungsbereichs Scharnweberstr., Fahrbahn gesperrt	q3::inwork 14589,11975 14475,11778 --- Schwarnweberstr.: Einbahnstraßenregelung	q3::inwork; 14589,11975 14675,11964 --- #: check_frequency ^^^ --- #: last_checked ^^^
@@ -302,7 +310,8 @@ Güldenhofer Ufer: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 16630,6800 16677,689
 #: by: https://www.tagesspiegel.de/berlin/bezirke/eroffnung-mit-burgerfest-geplant-endspurt-fur-den-neuen-marktplatz-in-adlershof-12604670.html (Eröffnung Mai 2025)
 #: by[nocache]: https://archive.is/tLaeV
 #: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2024_55_4355_4442_online.pdf (Teileinziehung (wo genau?))
-#: XXX möglicherweise wird die nördliche Fahrbahn dauerhaft eingezogen
+#: by: https://www.berlin.de/landesverwaltungsamt/_assets/logistikservice/amtsblatt-fuer-berlin/abl_2025_02_0117_0156_online.pdf (Teileinziehung: korrekte Planskizze; es ist der nördliche Strang)
+#: XXX der nördliche Strang soll dauerhaft eingezogen werden
 #: osm_watch: way id="20554168" version="26"
 #: osm_watch: way id="1155308749" version="1"
 #: last_checked: 2024-11-20 vvv
@@ -661,8 +670,8 @@ Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 
 ### Friedrichsfelde ###
 # 
 #: note: Halteverbote bis 2024-06-07, Bauarbeiten dauern vermutlich viel länger; mittlerweile Halteverbote bis 2024-07-31; mittlerweile bis 2024-08-19; mittlerweile bis 2024-08-29; mittlerweile bis 2024-09-06 sowie mögliche Verlängerung bis 11.10.2024 (mit Verlagerung der Baustelle?); ja, Baustelle wurde verlagert; nun Halteverbote bis 2024-11-30; nun Halteverbote bis 10.01.2025
-#: also_indoor: traffic (G,B,T)
-#: last_checked: 2024-12-01 vvv
+#: also_indoor: traffic (ex-G,B,T)
+#: last_checked: 2025-01-10 (traffic) vvv
 # REMOVED --- #: check_frequency: 30d vvv
 #: next_check: 2025-01-10 vvv
 # REMOVED --- Mellenseestr.: Bauarbeiten, Fahrbahn abschnittsweise gesperrt	q2::inwork 17838,9956 17774,9934 17738,9922 17633,9898
@@ -675,9 +684,9 @@ Mellenseestr.: Bauarbeiten, Abschnitte der Fahrbahn gesperrt	q3::inwork 17774,99
 #: last_checked ^^^
 # 
 #: note: Halteverbotsschilder bis 23.12.2024
-#: also_indoor: traffic (H,B,T)
+#: also_indoor: traffic (ex-H,B,T,G)
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: last_checked: 2024-12-27
+#: last_checked: 2025-01-10 (traffic)
 #: check_frequency: 14d
 # REMOVED --- #: next_check: 2024-12-23
 # REMOVED --- #: valid: -20241223
@@ -760,7 +769,7 @@ Sangeallee: Bauarbeiten, Abschnitt der Fahrbahn gesperrt, Engstelle	q3::inwork 1
 #: osm_watch: note 3913793 9
 #: osm_watch[closed]: note 4157644 3
 #: osm_watch: way id="1283287449" version="3"
-#: last_checked: 2024-11-29 (architektur-urbanistik)
+#: last_checked: 2025-01-02 (mapillary)
 #: check_frequency: 60d
 #: next_check: 2026-12-31
 (Jean-Monnet-Str. - Europaplatz Nord): Engstellen durch Baustelleneinrichtungen	q2 7995,13537 7963,13489
@@ -964,7 +973,7 @@ Erkstr.: Sackgasse an der Karl-Marx-Str., Ausweichen auf Gehweg, Umwege	q4::inwo
 ### Lichtenberg ###
 # 
 #: next_check_id: SCHEFFEL-2024
-#: last_checked: 2024-12-02
+#: last_checked: 2025-01-06
 #: check_frequency: 45d
 #: next_check: 2025-05-31
 Am Stadtpark: Baustelleneinrichtung, Fahrbahn gesperrt	q2::inwork 15357,12813 15395,12762
@@ -1132,7 +1141,7 @@ Eisenacher Str.: Umweg über Nebenfahrbahn	q2::inwork; 22726,15082 22899,15073
 #: by: https://www.berliner-woche.de/marzahn/c-bauen/richtfeste-fuer-290-wohnungen_a417760
 #: also_indoor: traffic (G,H,B)
 #: add_fragezeichen: Bis wann gibt es diese Einschränkung?
-#: last_checked: 2024-12-16 (mapillary) vvv
+#: last_checked: 2025-01-07 (mapillary) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2025-02-06 vvv
 #: valid: -2025-02-06 vvv
@@ -1273,7 +1282,7 @@ Lehderstr.: Hochbauarbeiten, einige Meter der Fahrbahn westlich der Roelckestr. 
 #: by: https://pascalgrothe.de/grabensprung-wiedereroeffnung-steht-bevor/ (veröffentlicht am 28.12.2024, Freigabe "in Kürze")
 #: also_indoor: traffic (T,ex-G,B)
 #: also_indoor: url https://pascalgrothe.de/kiezblog/
-#: last_checked: 2025-01-05 (traffic)
+#: last_checked: 2025-01-10 (traffic)
 #: check_frequency: 7d
 Grabensprung: einige Meter der Fahrbahn gesperrt	q3::inwork 20518,11346 20515,11275
 # 
@@ -2145,7 +2154,7 @@ Edenkobener Steg: Fußgänger	q1 6618,4191 6633,4272
 #: by: https://www.infravelo.de/projekt/teltowkanalroute/ (1. Quartal 2026: Einreichung der Planfeststellungsunterlagen) (2. Quartal 2029 - 3. Quartal 2031) (3. Quartal 2030 - 4. Quartal 2032)
 #: by: https://www.infravelo.de/assets/PDFs/ergebnisbericht-rsv-teltowkanalroute-2020.pdf (Rampen unter der Königsberger Str. geplant)
 #: osm_watch: way id="77098244" version="19"
-#: last_checked: 2024-10-09
+#: last_checked: 2025-01-08
 #: check_frequency: 360d
 #: next_check: 2026-03-31
 Teltowkanalpromenade: enge und kurvige Unterführung, steile Abschnitte	q4 4274,2717 4272,2704 4247,2652 4209,2641
@@ -5239,6 +5248,8 @@ Am Teltowkanal: zahlreiche Temposchwellen, abwechselnd rechts und links umfahrba
 # 
 Ulsterstr.: enge Straße	q0- 13575,8378 13641,8470
 # 
+(Gotenstr. - Ella-Barowsky-Str.): Fußgänger, Lieferverkehr	q3 7497,7761 7551,7851
+# 
 ######################### User Contributions #################################
 #: section: User Contributions vvv
 #: by: Michael Kiekbusch vvv
@@ -5315,9 +5326,9 @@ Begasstr.: eng	q1 6276,6995 6408,7008
 #: by: Martina Urban: vvv
 Friedrichsruher Str.: sehr eng	q1 6629,5946 6508,5931 6326,5912 6124,5894 6007,5882 5935,5874 5851,5863 5694,5845 5679,5853
 #: corrected_by: srt/policy
-Schönhauser Str.: eng	q0- 5809,6383 5824,6240 5834,6142 5845,6049 5847,5961 5851,5863 5850,5765
+Schönhauser Str.: eng	q0- 5809,6383 5824,6240 5836,6138 5845,6049 5847,5961 5851,5863 5850,5765
 #: corrected_by: srt/policy
-Jeverstr.: eng	q0- 5682,5798 5679,5853 5677,5868 5674,5901 5699,5949 5748,6051 5776,6118 5834,6142
+Jeverstr.: eng	q0- 5682,5798 5679,5853 5677,5868 5674,5901 5699,5949 5748,6051 5776,6118 5836,6138
 #: by: ^^^
 # 
 #: by: Hanswalter Schramm:

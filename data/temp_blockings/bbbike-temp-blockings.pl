@@ -31437,7 +31437,7 @@ EOF
 #: note: Laut Baustellenschild der Wasserbetriebe bis Dezember 2024, Halteverbotsschilder bis 15.12.2024
 #: also_indoor: traffic (B,T)
 #: add_fragezeichen: Sind die Bauarbeiten beendet? vvv
-#: last_checked: 2025-01-05 (traffic) vvv
+#: last_checked: 2025-01-10 (traffic) vvv
 #: check_frequency: 7d vvv
 # REMOVED --- #: next_check: 2024-12-15 vvv
 Münsterberger Weg	2::inwork 24029,11363 24172,11320
@@ -34698,7 +34698,7 @@ EOF
 #: by: https://www.dresdnerbahn.de/mediathek/file/371/XuemcxFdBKgO2ODB13RfVD6NGI-aMFPmtCRyf_fgMuk/Downloads/20210604_DrB_virtuelle_Buergerinfo_online.pdf
 #: note: Dieser Eintrag ist nun zusätzlich in gesperrt-orig.
 #: add_fragezeichen: Ist hier noch immer gesperrt?
-#: last_checked: 2024-10-12 (mapillary)
+#: last_checked: 2025-01-08
 #: check_frequency: 120d
 #: next_check: 2025-12-31
 	2::inwork 7673,4223 7769,4315
@@ -36294,6 +36294,8 @@ EOF
 #: by[nocache]: https://twitter.com/VIZ_Berlin/status/1782997647063699803
 #: by: https://pbs.twimg.com/media/GL21lA-XwAASF5a?format=jpg&name=medium (Umleitungsstrecke für Radfahrer)
 #: by: https://bauprojekte.deutschebahn.com/p/berlin-gesundbrunnen-bernau?date=20241218 (Inbetriebnahme 2027)
+#: by[nocache]: https://x.com/VIZ_Berlin/status/1876878754120925633
+#: by: https://pbs.twimg.com/media/Ggsmd-aWMAAlsTV?format=jpg&name=medium
 #: source_id: bvg2021:150#BVG300484_0
 #: source_id: viz2021:13.492858,52.63663,09.05.2022,11:58 (inaktiv)
 #: source_id: viz2021:13.491292,52.637683,09.09.2022,09:00 (bis 24.10.2022) (inaktiv)
@@ -36304,9 +36306,10 @@ EOF
 #: source_id: viz2021:13.493726,52.636024,21.07.2023,14:00 (nur Kfz-Verkehr, bis 31.01.2024) (inaktiv)
 #: source_id: viz2021:13.492699,52.636637,16.06.2023,10:00 (nur Kfz-Verkehr, bis 14.07.2023) (bis 21.07.2023) (bis 25.07.2023) (inaktiv)
 #: source_id: viz2021:13.493726,52.636024,25.07.2023,14:00 (bis 31.01.2024) (bis 06.12.2023) (inaktiv)
-#: source_id: viz2021:13.493571,52.636166,24.04.2024,06:00 (bis 29.07.2024) (bis 01.11.2024) (bis 30.10.2024) (bis 06.12.2024) (bis 31.12.2024) (bis 08.01.2025) (bis 28.02.2025)
+#: source_id: viz2021:13.493571,52.636166,24.04.2024,06:00 (bis 29.07.2024) (bis 01.11.2024) (bis 30.10.2024) (bis 06.12.2024) (bis 31.12.2024) (bis 08.01.2025) (bis 28.02.2025) (inaktiv)
 #: source_id: viz2021:13.492748,52.636622,19.11.2024,07:00 (für Kfz-Verkehr, beide Richtungen, bis 22.11.2024) (inaktiv)
 #: source_id: viz2021:13.492718,52.636649,09.12.2024,07:00 (Vollsperrung für einen Tag, bis 10.12.2024) (inaktiv)
+#: source_id: viz2021:13.493025,52.636399,24.04.2024,06:00 (bis 28.02.2025)
 #: also_indoor: traffic (H,ex-G,ex-B,W)
 # REMOVED --- #: last_checked: 2023-12-06 (mapillary) --- #: check_frequency: 14d --- #: next_check: 2024-04-23
 # REMOVED (ein Bürgersteig ist gesperrt) --- #: note: keine Sperrung für Fußgänger
@@ -36419,9 +36422,9 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2022-07-01 07:00:00"), # 1655010000, # 2022-06-12 07:00
-       until => undef, # $isodate2epoch->("2024-12-31 17:00:00"), # 1656514800, # 2022-06-29 17:00
+       until => undef, # $isodate2epoch->("2025-01-08 18:00:00"), # undef, # $isodate2epoch->("2024-12-31 17:00:00"), # 1656514800, # 2022-06-29 17:00
 #      text  => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, offen Richtung Osten, geplant bis 31.12.2024, evtl. wird verlängert',
-       text  => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, offen Richtung Osten, Ende der Bauarbeiten unbekannt',
+       text  => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, offen Richtung Osten, voraussichtlich bis 8.1.2025, evtl. wird verlängert',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: viz2021:13.38248,52.53138,13.06.2022,07:00 (inaktiv)
@@ -36429,9 +36432,11 @@ EOF
 #: osm_watch: way id="364468604" version="14"
 #: also_indoor: traffic (ex-H,ex-B,ex-T,ex-W)
 #: note: Radfahrer sind von der Einbahnstraßenregelung nicht ausgenommen (gesehen: 2022-07-14)
+#: note: nach Rücksprache mit der VIZ: Verlängerung bis 8.1.2025
 #: add_fragezeichen: Wurde die Einbahnstraßenregelung aufgehoben?
-#: last_checked: 2025-01-04
-#: check_frequency: 30d
+#: last_checked: 2025-01-10 (traffic)
+#: check_frequency: 1d
+# REMOVED --- #: next_check: 2025-01-08
 	q4::inwork; 9011,14019 8870,13926
 EOF
      },
@@ -36674,8 +36679,9 @@ EOF
 #: last_checked: 2024-10-17 (mapillary)
 #: next_check: 2025-10-01
 Storkower Straße (Königs Wusterhausen): Neubau der Eisenbahnbrücke, Sperrung	2::inwork 26327,-11708 26395,-11699
+#: note: laut Mail ist der Kreisverkehr noch bis 31.01.2025 gesperrt; möglicherweise gibt es also diese Einschränkung weiterhin
 #: last_checked: 2024-10-17 (mapillary)
-#: next_check: 2024-12-31
+#: next_check: 2025-01-31
 #: note: eigentlich 1s:q3
 Maxim-Gorki-Str. (Königs Wusterhausen): Einbahnstraßenregelung wegen des SEVs	q3::inwork; 26300,-11727 26301,-11824 26300,-11864
 EOF
@@ -38955,8 +38961,9 @@ Semmelweisstr.: Fahrbahn gesperrt	q4::inwork 19198,2163 19019,2217
 EOF
      },
      { from  => $isodate2epoch->("2023-10-15 00:00:00"), # 1677452400, # 2023-02-27 00:00
-       until => $isodate2epoch->("2025-09-30 18:00:00"), # 1735685999, # 2024-12-31 23:59
-       text  => 'Uferweg am Teltowkanal: zwischen Königsberger Str. und Kleingartenanlage Zukunft Leitungsarbeiten, Weg kann bis Spätsommer 2025 gesperrt sein (Stand Anfang Oktober 2024: Weg ist noch offen)',
+       until => $isodate2epoch->("2025-10-30 18:00:00"), # 1735685999, # 2024-12-31 23:59
+#      text  => 'Uferweg am Teltowkanal: zwischen Königsberger Str. und Kleingartenanlage Zukunft Leitungsarbeiten, Weg kann bis Spätsommer 2025 gesperrt sein (Stand Anfang Januar 2025: Weg ist noch offen)',
+       text  => 'Uferweg am Teltowkanal: zwischen Königsberger Str. und Engadiner Weg Leitungsarbeiten, Weg ist vom 13.01.2025 bis Ende Oktober 2025 gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: TELTOWKANALUFERWEG-2023
@@ -38965,15 +38972,18 @@ EOF
 #: by: https://wärme.vattenfall.de/energie-news/netzverstaerkung-hindenburgdamm/
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1480288.php (zurzeit offen, neue Sperrung 2025 bis zum Spätsommer 2025)
 #: by: https://www.berliner-woche.de/lichterfelde/c-bauen/spielplatz-ist-wieder-offen_a424125
+#: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2025/pressemitteilung.1518885.php (Arbeiten ab 13.01.2025 bis voraussichtlich Ende Oktober 2025)
+#: by: https://www.bew.berlin/aktuelles-und-presse/bauvorhaben-hindenburgdamm/
 #: osm_watch[closed]: note 3951936 1
 #: osm_watch[closed]: note 3947464 1
 #: osm_watch[closed]: note 3631207 6
 #: osm_watch[closed]: note 3631209 6
+#: osm_watch: note 4556342 1
 #: note: siehe auch Eintrag in gesperrt-orig (zurzeit auskommentiert)
 #: priority: #A
-#: last_checked: 2024-10-09 vvv
+#: last_checked: 2025-01-08 vvv
 #: check_frequency: 90d vvv
-#: next_check: 2025-09-30 vvv
+#: next_check: 2025-10-31 vvv
 #: osm_watch: way id="46907541" version="16"
 #: osm_watch: way id="1116849053" version="4"
 	2::inwork 3980,2102 4064,2293 4209,2641 4220,2664
@@ -41410,7 +41420,7 @@ EOF
        text  => 'Koloniestr.: Bauarbeiten an der Schwedenstr., Abschnitt der Fahrbahn ist gesperrt, Radwegführung auf dem Gehweg, voraussichtlich bis Anfang Januar 2025',
        type  => 'handicap',
        data  => <<EOF,
-#: source_id: viz2021:13.377083,52.55627,01.12.2022,08:00 (bis 31.03.2024) (inaktiv) (bis 30.11.2024) (bis 01.11.2024) (bis 03.01.2025) (bis 28.02.2025)
+#: source_id: viz2021:13.377083,52.55627,01.12.2022,08:00 (bis 31.03.2024) (inaktiv) (bis 30.11.2024) (bis 01.11.2024) (bis 03.01.2025) (bis 28.02.2025) (inaktiv)
 #: also_indoor: traffic (B)
 #: note: Baustellenbereich ist etwa 70m lang, Radwegführung auf dem Gehweg fängt bereits früher an, insgesamt ca. 170m; mittlerweile (Juni 2024) ist der gesamte Abschnitt betroffen; mittlerweile (2024-06) ist die Baustelle nach Süden gewandert und nicht sehr lang (q3 -> q2); mittlerweile: Richtung Norden wird man für ca. 180m auf dem Hochbord geführt
 #: note: bei rbb bis 30.11.2024; bei Bing bis 8.4.2024, mittlerweile auch bis November 2024
@@ -41561,7 +41571,7 @@ EOF
 #: source_id: viz2021:13.413286,52.532546,01.08.2023,07:00 (bis 2.1.2025) (bis 19.12.2025 + Gesamtbaumaßnahme bis 06/2029)
 #: source_id: viz2021:13.412618,52.532649,01.08.2023,07:00 (bis 19.12.2025 + Gesamtbaumaßnahme bis 06/2029)
 #: source_id: viz2021:13.41278,52.53261,01.08.2023,07:00 (bis 19.12.2025)
-#: source_id: viz2021:13.41245,52.53267,02.01.2025,06:43 (bis 19.12.2025)
+#: source_id: viz2021:13.41245,52.53267,02.01.2025,06:43 (bis 19.12.2025) (inaktiv)
 #: osm_watch: way id="23121446" version="34"
 #: note: Ein Radfahren-verboten-Schild steht an der Schönhauser Allee Richtung Norden, aber bezieht sich das auf die abgesperrte Radspur oder auch die Fahrbahn? Manchmal ist das Schild auch umgedreht (siehe Mapillary 2024-06-01), manchmal nicht (gesehen: 2024-05-17, 2024-09-18, 2024-09-29, 2024-11-03, 2024-12-11). Radfahrer benutzen hier die Fahrbahn.
 #: last_checked: 2024-12-14 (osm) vvv
@@ -41815,7 +41825,7 @@ EOF
 #: add_fragezeichen: Besteht die Sperrung noch immer?
 #: last_checked: 2024-08-10
 #: check_frequency: 120d
-#: next_check: 2024-12-31
+#: next_check: 2026-10-01
 	q3::inwork 4335,17642 4392,17777
 EOF
      },
@@ -42861,9 +42871,10 @@ EOF
 #: source_id: viz2021:13.299947,52.521326,06.02.2024,00:00 (bis 02.08.2024) (bis 31.12.2024) (inaktiv)
 #: source_id: viz2021:13.2998,52.52136,18.06.2024,07:00 (bis 09.08.2024) (inaktiv)
 #: source_id: viz2021:13.302665,52.521272,12.08.2024,07:00 (bis 30.06.2025) (vorfristig inaktiv)
+#: source_id: viz2021:13.30625,52.52024,06.01.2025,06:46 (bis 30.06.2025)
 #: also_indoor: traffic (G,B,T,W)
 #: note: explizite Umleitung für Radfahrer vor Ort
-#: note: bei rbb zurzeit zwei Meldungen, eine bis zum 2.8.2024, die andere bis zum 9.8.2024; jetzt nur noch eine bis zum 2.8.2024, nun auch (wie bei VIZ) bis 31.12.2024, mittlerweile verlängert bis 30.06.2025, mittlerweile vorfristig entfernt
+#: note: bei rbb zurzeit zwei Meldungen, eine bis zum 2.8.2024, die andere bis zum 9.8.2024; jetzt nur noch eine bis zum 2.8.2024, nun auch (wie bei VIZ) bis 31.12.2024, mittlerweile verlängert bis 30.06.2025, mittlerweile vorfristig entfernt, mittlerweile wieder da
 	q4::inwork 3450,12722 3370,12725 3291,12721
 EOF
      },
@@ -42905,7 +42916,7 @@ EOF
 #: by: https://www.berlin-live.de/berlin/verkehr/berlin-zwei-jahre-grossbaustelle-autofahrer-perleberger-strasse-moabit-sperrung-i-id107848.html
 #: add_fragezeichen: Sind die Anbindungen Wilsnacker Str. und Rathenower Str. noch immer gesperrt? vvv
 #: priority: #B vvv
-#: last_checked: 2024-09-29 (mapillary) vvv
+#: last_checked: 2025-01-06 (osm) vvv
 #: check_frequency: 120d vvv
 #: next_check: 2025-09-23 vvv
 #: osm_watch: way id="375991056" version="17"
@@ -42915,8 +42926,8 @@ EOF
 Wilsnacker Str.: Anbindung gesperrt	q4::inwork 6646,13951 6746,13826
 #: note: Ampel ist zumindest Richtung Nordosten ausgeschaltet, allerdings gibt's dafür eine Fußgängerampel etwa 50m weiter nordöstlich
 #: note: mittlerweile Änderung laut VMZ, evtl. nur noch eine Fahrtrichtung betroffen (stimmt aber nicht)
-#: osm_watch: way id="417687029" version="16"
-#: osm_watch: way id="1143843161" version="5"
+#: osm_watch: way id="417687029" version="17"
+#: osm_watch: way id="1143843161" version="6"
 Rathenower Str.: Anbindung gesperrt	q4::inwork 6730,14021 6817,13862
 #: next_check ^^^
 #: check_frequency ^^^
@@ -43614,7 +43625,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # 1722545841, # undef, # XXX
+       until => 1736340083, # undef, # 1722545841, # undef, # XXX
 #      text  => 'Südendstr.: Bauarbeiten zwischen Körnerstr. und Plantagenstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
        text  => 'Südendstr.: Bauarbeiten zwischen Plantagenstr. und Filandastr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
@@ -43622,9 +43633,7 @@ EOF
 #: also_indoor: traffic (ex-H,ex-B[falsche Position?],ex-T[falsche Position?])
 #: osm_watch: note 4465412 3
 #: note: es existiert eine Umleitungsstrecke für Radfahrer
-#: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: last_checked: 2024-12-23 (traffic)
-#: check_frequency: 7d
+# REMOVED --- #: add_fragezeichen: Sind die Bauarbeiten beendet? --- #: last_checked: 2024-12-23 (traffic) --- #: check_frequency: 7d
 # REMOVED (hier wohl nicht mehr) ---	q4::inwork 5466,5523 5555,5508
 	q4::inwork 5555,5508 5676,5488
 EOF
@@ -44053,11 +44062,11 @@ EOF
        text  => 'Jessnerstr.: Abschnitt der Fahrbahn zwischen Frankfurter Allee und Scharnweberstr. gesperrt, vom 05.06.2024 07:00 bis voraussichtlich 28.03.2025 17:00',
        data  => <<EOF,
 #: source_id: viz2021:13.473127,52.513022,05.06.2024,07:00 (hier nur Kfz-Verkehr, bis 31.10.2024) (bis 31.12.2024) (bis 28.03.2025)
-#: osm_watch: note 4452464 2
+#: osm_watch: note 4452464 3
 #: note: keine Freigabe der Gehwege für Radfahrer
-#: note: Halteverbotsschilder bis 31.12.2024, laut Vattenfall-Schild bis 01.2025
+#: note: Halteverbotsschilder bis 31.12.2024, laut Vattenfall-Schild bis 01.2025, mittlerweile Halteverbotsschilder bis 28.03.2025
 #: note: der östliche Teil der Fahrbahn ist meistens (immer?) offen (Stand Mitte Juni 2024, Ende Juli 2024, Anfang August 2024, Ende August 2024, Anfang September 2024); mittlerweile ist die gesamte Breite der Fahrbahn an der Frankfurter Allee gesperrt (gesehen Mitte September 2024, Anfang Oktober 2024)
-#: last_checked: 2025-01-01
+#: last_checked: 2025-01-10
 #: next_check: 2025-03-28
 	q4::inwork 15077,11910 15110,12107
 EOF
@@ -44404,14 +44413,19 @@ EOF
 EOF
      },
      { from  => 1719941867, # 2024-07-02 19:37
-       until => 1735686000, # 2025-01-01 00:00
-       text  => 'Uferweg zwischen Sickingenbrücke und Bahnbrücke: Bauarbeiten, Sperrung, bis Dezember 2024',
+       until => $isodate2epoch->("2025-10-31 18:00:00"), # 1735686000, # 2025-01-01 00:00
+       text  => 'Uferweg zwischen Sickingenbrücke und Bahnbrücke: Bauarbeiten, Sperrung, voraussichtlich bis Oktober 2025',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1462140.php
 #: by: https://mierendorffinsel.org/projekte/aktuelle-projekte/insel-rundweg/
+#: by: https://mierendorffinsel.org/2024/07/umgestaltung-eines-teilbereiches-der-mierendorff-insel-inselrundweg-teilweise-gesperrt/
+#: by: https://www.deutsches-architekturforum.de/thread/9771-neue-und-erneuerte-parks-und-gr%C3%BCnfl%C3%A4chen/?postID=772392#post772392 (bis Oktober 2025)
 #: note: 2024-09-18: Bauzäune sind weggeschoben
 #: osm_watch: way id="746470210" version="3"
+#: last_checked: 2025-01-05 (daf)
+#: check_frequency: 120d
+#: next_check: 2025-10-31
 	2::inwork 4151,13961 4156,13914 4186,13710
 EOF
      },
@@ -44445,10 +44459,10 @@ EOF
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1462538.php (Widerspruch: "nie vollständig gesperrt" & "temporäre Umleitung", Dauer 3 Monate)
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/weverpromenade-wird-erneuert_a420569
 #: XXX Nach den Bauarbeiten vielleicht bessere Qualität
-#: XXX: Der mudways-Eintrag in der Weverpromenade wurde bereits entfernt; im Stadtpark muss man nach den Bauarbeiten prüfen.
+#: XXX: Der mudways-Eintrag in der Weverpromenade wurde bereits entfernt; im Stadtpark muss man nach den Bauarbeiten prüfen -> hier auch schon entfernt
 #: add_fragezeichen: Sind die Bauarbeiten beendet? Ist die Qualität der Wegoberfläche besser geworden? vvv
 #: priority: #A vvv
-#: last_checked: 2024-11-27 vvv
+#: last_checked: 2025-01-08 vvv
 #: check_frequency: 14d vvv
 #: osm_watch: way id="26158804" version="25"
 # REMOVED (hier mittlerweile auch offen; zwar neu gemacht, aber (noch?) ziemlich wellig) --- Weverpromenade	2::inwork 5787,4400 5738,4361 5721,4356
@@ -44476,7 +44490,7 @@ zwischen Hirschhorner Weg bis Wasserkäfersteig 19.09.2024 - 31.10.2024	q4::inwor
 EOF
      },
      { from  => 1718628480, # 2024-06-17 14:48
-       until => undef, # $isodate2epoch->("2024-08-30 17:00:00"), # undef, # XXX
+       until => 1736339573, # undef, # $isodate2epoch->("2024-08-30 17:00:00"), # undef, # XXX
        text  => 'Teltowkanaluferweg/Bäkebrücke: Komplettsperrung des Uferweges, außerdem Sperrung der Fahrbahn im Bereich der Bäkebrücke, bis 16.12.2024, evtl. wird verlängert',
        type  => 'handicap',
        data  => <<EOF,
@@ -44493,15 +44507,12 @@ EOF
 #: by: https://www.facebook.com/groups/274489925939434/posts/7611685488886471 (in einem Kommentar steht, dass Fußgänger rüberkommen)
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1464257.php (Fußgänger können passieren, Radfahrer sollen eine Umleitung fahren; Ersatzneubau 2025-2027)
 #: by: https://www.berliner-woche.de/steglitz/c-bauen/baekebruecke-wird-erneuert_a421024
-#: XXX möglicherweise Neubau ab 2022 --- mittlerweile ab 2023?
+# REMOVED --- #: XXX möglicherweise Neubau ab 2022 --- mittlerweile ab 2023?
 #: source_id: viz2021:13.316447,52.434463,18.06.2024,14:48 (ohne Endedatum) (bis 30.08.2024) (inaktiv) (bis 31.10.2024) (bis 16.12.2024) (inaktiv)
 #: also_indoor: search Bäkebrücke
 #: note: traffic natürlich nur die Bäkebrücke betreffend
 #: also_indoor: traffic (ex-G,ex-B,ex-T,ex-W)
-#: add_fragezeichen: Ist der Teltowkanaluferweg weiterhin komplett gesperrt? vvv
-#: last_checked: 2024-11-27 vvv
-#: check_frequency: 30d vvv
-#: next_check: 2024-12-16 vvv
+# REMOVED --- #: add_fragezeichen: Ist der Teltowkanaluferweg weiterhin komplett gesperrt? vvv --- #: last_checked: 2024-11-27 vvv --- #: check_frequency: 30d vvv --- #: next_check: 2024-12-16 vvv
 #: osm_watch: way id="1328520572" version="1"
 Bäkestr.: etwa 50m der Fahrbahn gesperrt	q2::inwork 4411,3180 4587,3097
 #: osm_watch: way id="5363433" version="25"
@@ -44511,10 +44522,7 @@ Bäkebrücke: Fahrbahn gesperrt	q3::inwork 4587,3097 4659,3065
 #: osm_watch: way id="1332159946" version="1"
 Bäkestr.: etwa 50m der Fahrbahn gesperrt	q2::inwork 4659,3065 4832,2975
 Teltowkanaluferweg: komplette Sperrung, auch für Fußgänger	2::inwork 4587,3097 4692,3225
-#: next_check ^^^
-#: check_frequency ^^^
-#: last_checked ^^^
-#: add_fragezeichen ^^^
+# REMOVED --- #: next_check ^^^ --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: add_fragezeichen ^^^
 EOF
      },
      { from  => undef, # 
@@ -44592,6 +44600,7 @@ EOF
 #: by: https://www.berliner-woche.de/hermsdorf/c-verkehr/arbeiten-an-der-schildower-strasse-dauern-18-monate_a421648
 #: by: https://www.berliner-woche.de/hermsdorf/c-verkehr/durchgangsverkehr-weicht-in-nebenstrassen-im-waldseeviertel-aus_a425864
 #: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=12916 (Einwohneranfrage)
+#: by: https://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=12985 (Einwohneranfrage)
 #: XXX Gesamtbauzeit 18 Monate; zwei Bauabschnitte, nächster Bauabschnitt ist Gertrudstr. - Landesgrenze
 #: next_check: 2025-04-30 vvv
 Schildower Str. zwischen Elsestr. und Gertrudstr.: nur die letzten 15-20m sind gesperrt	q3::inwork 4683,24275 4614,24233
@@ -44727,8 +44736,8 @@ EOF
        text  => 'Heubuder Brücke: wegen Bauschäden gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: osm_watch: way id="27457006" version="21"
-#: last_checked: 2024-12-07 (osm)
+#: osm_watch: way id="27457006" version="22"
+#: last_checked: 2025-01-08 (osm)
 #: check_frequency: 180d
 	2::inwork 9017,17290 8982,17299
 EOF
@@ -45027,18 +45036,15 @@ EOF
 EOF
      },
      { from  => 1725141600, # 2024-09-01 00:00
-       dont_check_date => 1,
-       until => undef, # 1734303599, # 2024-12-15 23:59
+#      dont_check_date => 1,
+       until => 1736289574, # undef, # 1734303599, # 2024-12-15 23:59
        text  => 'Am Eichgarten: Bauarbeiten zwischen Stindestr. und Siemensstr., Sperrung des Weges, geplant bis Anfang Dezember 2024',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: https://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2024/pressemitteilung.1480271.php
 #: by: https://www.infravelo.de/projekt/am-eichgarten/ (3. Quartal 2024 - 4. Quartal 2024)
-#: XXX Dabei werden die Flächen für Rad- und Fußverkehr getrennt. Für den Radverkehr entsteht ein 3m breiter Weg (für beide Richtungen).
-#: add_fragezeichen: Ist der Weg noch immer gesperrt?
-#: last_checked: 2024-11-27
-#: check_frequency: 30d
-#: next_check: 2024-12-31
+#: osm_watch[closed]: note 4471939 3
+# REMOVED (laut osm fertig) --- #: XXX Dabei werden die Flächen für Rad- und Fußverkehr getrennt. Für den Radverkehr entsteht ein 3m breiter Weg (für beide Richtungen). --- #: add_fragezeichen: Ist der Weg noch immer gesperrt? --- #: last_checked: 2024-11-27 --- #: check_frequency: 30d --- #: next_check: 2024-12-31
 	2::inwork 6007,4340 6147,4329 6210,4325
 EOF
      },
@@ -45484,9 +45490,9 @@ EOF
 #: source_id[inactive]: bvg2024:147#HIM_FREETEXT_242095
 #: source_id: viz2021:13.406257,52.513682,30.09.2024,23:00 (bis 17.01.2025)
 #: source_id: bvg2024:147#HIM_FREETEXT_248518
-#: also_indoor: traffic (ex-B,ex-T,G)
+#: also_indoor: traffic (re-B,re-T,G,H,W)
 #: note: anscheinend ist die Radspur aufgehoben, Tempo 20 + Radfahrüberholverbot ist angeordnet, keine Sperrung; mittlerweile doch gesperrt
-#: last_checked: 2024-12-26 vvv
+#: last_checked: 2025-01-08 (traffic) vvv
 #: check_frequency: 14d vvv
 #: next_check: 2025-01-17 vvv
 Fischerinsel: gesperrt	q4::inwork; 10578,11969 10512,12039
@@ -45591,12 +45597,12 @@ EOF
 EOF
      },
      { from  => 1729486800, # 2024-10-21 07:00
-       until => $isodate2epoch->("2025-01-10 17:00:00"), # $isodate2epoch->("2025-01-07 17:00:00"), # 1731945600, # 2024-11-18 17:00
-       text  => 'Gudrunstr.: Bauarbeiten Richtung Frankfurter Allee zwischen Fanningerstr. und Hagenstr., auch Radfahrer sind betroffen, vom 22.10.2024 07:00 bis 10.01.2025 17:00',
+       until => $isodate2epoch->("2025-01-24 17:00:00"), # $isodate2epoch->("2025-01-07 17:00:00"), # 1731945600, # 2024-11-18 17:00
+       text  => 'Gudrunstr.: Bauarbeiten Richtung Frankfurter Allee zwischen Fanningerstr. und Hagenstr., auch Radfahrer sind betroffen, vom 22.10.2024 07:00 bis 24.01.2025 17:00',
        type  => 'handicap',
        data  => <<EOF,
 #: next_check_id: GUDRUN-2024
-#: source_id: viz2021:13.501934,52.513066,22.10.2024,07:00 (bis 18.11.2024) (bis 26.11.2024) (bis 07.01.2025) (bis 10.01.2025)
+#: source_id: viz2021:13.501934,52.513066,22.10.2024,07:00 (bis 18.11.2024) (bis 26.11.2024) (bis 07.01.2025) (bis 10.01.2025) (bis 24.01.2025)
 	q4::inwork; 17139,12100 17088,12069 16975,12000 16865,11931
 EOF
      },
@@ -45683,8 +45689,9 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2024-09-12 00:00:00"),
-       until => $isodate2epoch->("2025-01-07 23:59:59"), # 1738364340, # 2025-01-31 23:59
-       text  => 'Grunewaldstr.: Wasserrohrbruch zwischen Lepsiusstr. und Rothenburgstr., Fahrbahn auf 80m Länge gesperrt, vom 12.09.2024 bis 07.01.2025',
+       until => undef, # $isodate2epoch->("2025-01-07 23:59:59"), # 1738364340, # 2025-01-31 23:59
+#      text  => 'Grunewaldstr.: Wasserrohrbruch zwischen Lepsiusstr. und Rothenburgstr., Fahrbahn auf 80m Länge gesperrt, vom 12.09.2024 bis 07.01.2025',
+       text  => 'Grunewaldstr.: Wasserrohrbruch zwischen Lepsiusstr. und Rothenburgstr., Fahrbahn auf 80m Länge gesperrt, mindestens bis 31.01.2025, voraussichtlich wird verlängert',
        type  => 'handicap',
        data  => <<EOF,
 #: by: https://www.tagesspiegel.de/berlin/nach-wasserrohrbruch-in-berlin-grunewaldstrasse-bleibt-tagelang-gesperrt--65-wohnungen-ohne-wasser-12349757.html
@@ -45694,10 +45701,12 @@ EOF
 #: by[nocache]: https://x.com/Aintschie/status/1833937985588650466 (etwa 100m betroffen?)
 #: source_id: viz2021:13.3156,52.4588,12.09.2024,07:28 (bis 18.10.2024) (bis 20.12.2024) (inaktiv)
 #: source_id: bvg2024:x83#HIM_FREETEXT_238226
-#: source_id: viz2021:13.3156,52.4588,22.10.2024,18:34 (bis 31.01.2025) (bis 07.01.2025)
+#: source_id: viz2021:13.3156,52.4588,22.10.2024,18:34 (bis 31.01.2025) (bis 07.01.2025) (bis 10.01.2025 + weitere Arbeiten) (bis 31.01.2025 + ...)
 #: osm_watch: note 4441243 4
 #: osm_watch: note 4441280 1
+#: also_indoor: traffic (H,G,B,T,W)
 #: note: etwa 80m der Fahrbahn sind gesperrt, nur der nordöstliche Bürgersteig ist offen
+#: next_check: 2025-01-31
 	q4::inwork 4671,5697 4520,5793
 EOF
      },
@@ -45882,7 +45891,7 @@ EOF
 #: by: https://www.berliner-woche.de/kreuzberg/c-verkehr/temporaere-schulstrasse_a429945
 #: by: https://www.tagesspiegel.de/berlin/bezirke/platzmangel-an-schule-in-kreuzberg-strasse-wird-zum-pausenhof-12747659.html (laut Foto nur Verbot für Kfz? trotzdem kann es vielleicht zu Einschränkungen kommen: q4 -> q3)
 #: note: Schranken sind gut umfahrbar, Sackgasse nicht für Fußgänger/Radfahrer, kein Verbot für Radfahrer
-#: last_checked: 2024-12-09
+#: last_checked: 2025-01-08
 #: next_check: 2025-05-31
 	q3::temp 10032,9456 10004,9268
 EOF
@@ -45896,10 +45905,10 @@ EOF
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2024/pressemitteilung.1504881.php
 #: by: https://www.architektur-urbanistik.berlin/index.php?threads/stadtquartier-s%C3%BCdkreuz-tempelhofer-weg-sch%C3%B6neberger-linse.898/page-3#post-24229
 #: also_indoor: traffic (B,T)
-#: last_checked: 2024-12-12 (architektur-urbanistik)
+#: last_checked: 2025-01-08
 #: check_frequency: 90d
 #: next_check: 2026-11-30
-	q4::inwork; 7696,7771 7632,7807 7621,7813 7537,7859 7499,7880
+	q4::inwork; 7696,7771 7632,7807 7621,7813 7551,7851 7537,7859 7499,7880
 EOF
      },
      { from  => 1732172400, # 2024-11-21 08:00
@@ -46043,9 +46052,9 @@ EOF
        text  => 'Neustrelitzer Str.: Bauarbeiten, Fahrbahn gesperrt, Engstelle auf dem Bürgersteig, Ende der Bauarbeiten unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: also_indoor: traffic (T,B,G)
+#: also_indoor: traffic (T,B,ex-G)
 #: add_fragezeichen: Sind die Bauarbeiten beendet?
-#: last_checked: 2024-12-28 (traffic)
+#: last_checked: 2025-01-10 (traffic)
 #: check_frequency: 14d
 	q4::inwork 16668,14765 16750,14747
 EOF
@@ -46110,6 +46119,39 @@ EOF
 #: last_checked: 2025-01-04
 #: check_frequency: 25d
 	q3::inwork 5069,10662 5047,10381
+EOF
+     },
+     { from  => 1739682000, # 2025-02-16 06:00
+       until => 1740157200, # 2025-02-21 18:00
+       text  => 'Bernau - Blumberg: Sperrung des Bahnübergangs, evtl. sind auch Radfahrer betroffen, vom 17.02.2025 06:00 Uhr bis 21.02.2025 18:00 Uhr',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: source_id: 246002279 (bis 21.02.2025)
+	2::inwork 24749,22618 24719,22727
+	2::inwork 24718,22731 24761,23151
+EOF
+     },
+     { from  => 1736343075, # 2025-01-08 14:31
+       until => 1753999200, # 2025-08-01 00:00
+       text  => 'Loewenhardtdamm: Bauarbeiten ab Badener Ring, Fahrbahn gesperrt, vermutlich bis 31.07.2025',
+       type  => 'handicap',
+       data  => <<EOF,
+#: also_indoor: traffic (G,T,B)
+#: note: Ende der Abschnitts unklar: entweder Bayernring oder General-Pape-Str.
+#: last_checked: 2025-01-08
+#: check_frequency: 120d
+#: next_check: 2025-07-31
+	q4::inwork; 8482,8364 8380,8545 8334,8655 8306,8722
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Bayernring: Bauarbeiten zwischen Manfred-von-Richthofen-Str. und Mussehlstr., Fahrbahn gesperrt, Ende der Bauarbeiten unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: also_indoor: traffic (H,T,B)
+#: last_checked: 2025-01-08
+	q4::inwork 8842,8561 8916,8511
 EOF
      },
     );
